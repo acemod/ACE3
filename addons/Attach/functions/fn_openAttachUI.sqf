@@ -53,7 +53,7 @@ _attachables = items _unit;
 [
   _actions,
   {
-    [AGM_player, _this] call AGM_Attach_fnc_attach;
+    [AGM_player, _this] call FUNC(attach);
     call AGM_Interaction_fnc_hideMenu;
   },
   {

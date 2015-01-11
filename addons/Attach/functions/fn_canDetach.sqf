@@ -14,4 +14,4 @@ private "_unit";
 
 _unit = _this select 0;
 
-canStand _unit && {_unit getVariable ["AGM_AttachedItemName", ""] != ""}
+canStand _unit && {_unit getVariable [QGVAR(ItemName), ""] != ""}

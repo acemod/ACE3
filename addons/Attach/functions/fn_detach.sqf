@@ -13,7 +13,7 @@ none
 private ["_unit", "_itemName", "_count", "_attachedItem"];
 
 _unit = _this select 0;
-_itemName = _unit getVariable ["AGM_AttachedItemName", ""];
+_itemName = _unit getVariable [QGVAR(ItemName), ""];
 
 // Check if unit has an attached item
 if (_itemName == "") exitWith {};
@@ -27,7 +27,7 @@ if ((count items _unit) + (count magazines _unit) <= _count) exitWith {
 
 if (_itemName == "B_IR_Grenade" or _itemName == "O_IR_Grenade" or _itemName == "I_IR_Grenade") then {
   // Hack for dealing with X_IR_Grenade effect not dissapearing on deleteVehicle
-  [_unit getVariable "AGM_AttachedItem", _unit] spawn {
+  [_unit getVariable QGVAR(Item), _unit] spawn {
     _attachedItem = _this select 0;
     _unit = _this select 1;
     detach _attachedItem;
@@ -39,12 +39,12 @@ if (_itemName == "B_IR_Grenade" or _itemName == "O_IR_Grenade" or _itemName == "
 else
 {
   // Delete attached item
-  deleteVehicle (_unit getVariable "AGM_AttachedItem");
+  deleteVehicle (_unit getVariable QGVAR(Item));
 };
 
 // Reset unit variables
-_unit setVariable ["AGM_AttachedItemName","", true];
-_unit setVariable ["AGM_AttachedItem",nil, true];
+_unit setVariable [QGVAR(ItemName),"", true];
+_unit setVariable [QGVAR(Item),nil, true];
 
 // Display message
 switch true do {

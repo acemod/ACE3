@@ -17,7 +17,7 @@ _unit = _this select 0;
 _itemName = _this select 1;
 
 // Check if unit has an attached item
-if (_unit getVariable ["AGM_AttachedItemName", ""] != "") exitWith {};
+if (_unit getVariable [QGVAR(ItemName), ""] != "") exitWith {};
 
 // Check if the unit still has the item
 if !((_itemName in items _unit) or (_itemName in magazines _unit)) exitWith {};
@@ -56,5 +56,5 @@ switch true do {
 
 // Remove item
 _unit removeItem _itemName;
-_unit setVariable ["AGM_AttachedItemName", _itemName, true];
+_unit setVariable [QGVAR(ItemName), _itemName, true];
 _unit setVariable ["AGM_AttachedItem", _attachedItem, true];

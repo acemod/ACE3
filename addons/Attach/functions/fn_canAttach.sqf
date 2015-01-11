@@ -16,4 +16,4 @@ private ["_unit", "_item"];
 _unit = _this select 0;
 _item = _this select 1;
 
-canStand _unit && {_unit getVariable ["AGM_AttachedItemName", ""] == ""} && {_item in (magazines _unit + items _unit + [""])}
+canStand _unit && {_unit getVariable [QGVAR(ItemName), ""] == ""} && {_item in (magazines _unit + items _unit + [""])}

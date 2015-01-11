@@ -1,5 +1,5 @@
 class CfgPatches {
-  class AGM_Attach {
+  class ADDON {
     units[] = {};
     weapons[] = {"AGM_IR_Strobe_Item"};
     requiredVersion = 0.60;
@@ -13,9 +13,9 @@ class CfgPatches {
 };
 
 class CfgFunctions {
-  class AGM_Attach {
-    class AGM_Attach {
-      file = "AGM_Attach\functions";
+  class ADDON {
+    class ADDON {
+      file = PATHTOF(functions);
       class attach;
       class canAttach;
       class canDetach;
@@ -35,24 +35,24 @@ class CfgVehicles {
   class CAManBase: Man {
     class AGM_SelfActions {
       class AGM_Equipment {
-        class AGM_Attach {
+        class ADDON {
           displayName = "$STR_AGM_Attach_AttachDetach";
-          condition = "[_player, ''] call AGM_Attach_fnc_canAttach";
-          statement = "[_player] call AGM_Attach_fnc_openAttachUI;";
+          condition = QUOTE( [_player, ''] call FUNC(canAttach) );
+          statement = QUOTE( [_player] call FUNC(openAttachUI); );
           exceptions[] = {"AGM_Drag_isNotDragging"};
           showDisabled = 0;
           priority = 5;
-          icon = "\AGM_Attach\UI\attach_ca.paa";
+          icon = PATHTOF(UI\attach_ca.paa);
           hotkey = "T";
         };
-        class AGM_Attach_Detach {
+        class GVAR(Detach) {
           displayName = "$STR_AGM_Attach_Detach";
-          condition = "[_player] call AGM_Attach_fnc_canDetach";
-          statement = "[_player] call AGM_Attach_fnc_detach";
+          condition = QUOTE( [_player] call FUNC(canDetach );
+          statement = QUOTE( [_player] call FUNC(detach) );
           exceptions[] = {"AGM_Drag_isNotDragging"};
           showDisabled = 0;
           priority = 5;
-          icon = "\AGM_Attach\UI\detach_ca.paa";
+          icon = PATHTOF(UI\detach_ca.paa);
           hotkey = "T";
         };
       };
@@ -138,7 +138,7 @@ class CfgWeapons {
     displayName = "$STR_AGM_IrStrobe_Name";
     descriptionShort = "$STR_AGM_IrStrobe_Description";
     model = "\A3\weapons_F\ammo\mag_univ.p3d";
-    picture = "\AGM_Attach\UI\irstrobe_item.paa";
+    picture = PATHTOF(UI\irstrobe_item.paa);
     scope = 2;
     AGM_attachable = 1;
     class ItemInfo: InventoryItem_Base_F {
