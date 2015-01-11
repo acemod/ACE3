@@ -20,7 +20,7 @@ class CfgPatches {
 class CfgFunctions {
   class AGM_Interaction {
     class AGM_Interaction {
-      file = "\AGM_interaction\functions";
+      file = PATHOF(functions);
       class addInteraction;
       class addInteractionSelf;
       class AddSelectableItem;
@@ -185,7 +185,7 @@ class CfgVehicles {
     function = "AGM_Interaction_fnc_moduleInteraction";
     scope = 2;
     isGlobal = 1;
-    icon = "\AGM_Interaction\UI\IconInteraction_ca.paa";
+    icon = PATHTOF(UI\IconInteraction_ca.paa);
     class Arguments {
       class EnableTeamManagement {
         displayName = "Enable Team Management";
@@ -205,11 +205,11 @@ class CfgVehicles {
       class AGM_TeamManagement {
         displayName = "$STR_AGM_Interaction_TeamManagement";
         distance = 4;
-        condition = "alive _target && {!isPlayer _target} && {_target in units group _player} && {AGM_Interaction_EnableTeamManagement}";
+        condition = QUOTE( alive _target && {!isPlayer _target} && {_target in units group _player} && {GVAR(EnableTeamManagement)} );
         statement = "";
         showDisabled = 0;
         priority = 3.2;
-        icon = "\AGM_Interaction\UI\team\team_management_ca.paa";
+        icon = PATHOF(UI\team\team_management_ca.paa);
         subMenu[] = {"AGM_TeamManagement", 0};
         hotkey = "M";
         enableInside = 1;
@@ -217,10 +217,10 @@ class CfgVehicles {
         class AGM_JoinTeamRed {
           displayName = "$STR_AGM_Interaction_JoinTeamRed";
           distance = 4;
-          condition = "alive _target && {!isPlayer _target} && {_target in units group _player}";
-          statement = "[_target, 'RED'] call AGM_Interaction_fnc_joinTeam";
+          condition = QUOTE( alive _target && {!isPlayer _target} && {_target in units group _player} );
+          statement = QUOTE( [_target, 'RED'] call FUNC(joinTeam) );
           showDisabled = 1;
-          icon = "\AGM_Interaction\UI\team\team_red_ca.paa";
+          icon = PATHOF(UI\team\team_red_ca.paa);
           priority = 2.4;
           hotkey = "R";
           enableInside = 1;
@@ -228,10 +228,10 @@ class CfgVehicles {
         class AGM_JoinTeamGreen {
           displayName = "$STR_AGM_Interaction_JoinTeamGreen";
           distance = 4;
-          condition = "alive _target && {!isPlayer _target} && {_target in units group _player}";
-          statement = "[_target, 'GREEN'] call AGM_Interaction_fnc_joinTeam";
+          condition = QUOTE( alive _target && {!isPlayer _target} && {_target in units group _player} );
+          statement = QUOTE( [_target, 'GREEN'] call FUNC(joinTeam) );
           showDisabled = 1;
-          icon = "\AGM_Interaction\UI\team\team_green_ca.paa";
+          icon = PATHOF(UI\team\team_green_ca.paa);
           priority = 2.3;
           hotkey = "G";
           enableInside = 1;
@@ -239,10 +239,10 @@ class CfgVehicles {
         class AGM_JoinTeamBlue {
           displayName = "$STR_AGM_Interaction_JoinTeamBlue";
           distance = 4;
-          condition = "alive _target && {!isPlayer _target} && {_target in units group _player}";
-          statement = "[_target, 'BLUE'] call AGM_Interaction_fnc_joinTeam";
+          condition = QUOTE( alive _target && {!isPlayer _target} && {_target in units group _player} );
+          statement = QUOTE( [_target, 'BLUE'] call FUNC(joinTeam) );
           showDisabled = 1;
-          icon = "\AGM_Interaction\UI\team\team_blue_ca.paa";
+          icon = PATHOF(UI\team\team_blue_ca.paa);
           priority = 2.2;
           hotkey = "B";
           enableInside = 1;
@@ -250,10 +250,10 @@ class CfgVehicles {
         class AGM_JoinTeamYellow {
           displayName = "$STR_AGM_Interaction_JoinTeamYellow";
           distance = 4;
-          condition = "alive _target && {!isPlayer _target} && {_target in units group _player}";
-          statement = "[_target, 'YELLOW'] call AGM_Interaction_fnc_joinTeam";
+          condition = QUOTE( alive _target && {!isPlayer _target} && {_target in units group _player} );
+          statement = QUOTE( [_target, 'YELLOW'] call FUNC(joinTeam) );
           showDisabled = 1;
-          icon = "\AGM_Interaction\UI\team\team_yellow_ca.paa";
+          icon = PATHOF(UI\team\team_yellow_ca.paa);
           priority = 2.1;
           hotkey = "Y";
           enableInside = 1;
@@ -262,10 +262,10 @@ class CfgVehicles {
         class AGM_LeaveTeam {
           displayName = "$STR_AGM_Interaction_LeaveTeam";
           distance = 4;
-          condition = "alive _target && {!isPlayer _target} && {_target in units group _player} && {assignedTeam _player != 'MAIN'}";
-          statement = "[_target, 'MAIN'] call AGM_Interaction_fnc_joinTeam";
+          condition = QUOTE( alive _target && {!isPlayer _target} && {_target in units group _player} && {assignedTeam _player != 'MAIN'} );
+          statement = QUOTE( [_target, 'MAIN'] call FUNC(joinTeam) );
           showDisabled = 1;
-          icon = "\AGM_Interaction\UI\team\team_white_ca.paa";
+          icon = PATHOF(UI\team\team_white_ca.paa);
           priority = 2.5;
           hotkey = "N";
           enableInside = 1;
@@ -275,8 +275,8 @@ class CfgVehicles {
       class AGM_TapShoulder {
         displayName = "$STR_AGM_Interaction_TapShoulder";
         distance = 4;
-        condition = "[_player, _target] call AGM_Interaction_fnc_canTapShoulder";
-        statement = "[_player, _target] call AGM_Interaction_fnc_tapShoulder";
+        condition = QUOTE( [_player, _target] call FUNC(canTapShoulder) );
+        statement = QUOTE( [_player, _target] call FUNC(tapShoulder) );
         showDisabled = 1;
         priority = 2.8;
         hotkey = "Q";
@@ -285,11 +285,11 @@ class CfgVehicles {
       class AGM_JoinGroup {
         displayName = "$STR_AGM_Interaction_JoinGroup";
         distance = 4;
-        condition = "side group _player == side group _target && {group _player != group _target}";
-        statement = "[_player] joinSilent group _target;";
+        condition = QUOTE( side group _player == side group _target && {group _player != group _target} );
+        statement = QUOTE( [_player] joinSilent group _target; );
         showDisabled = 0;
         priority = 2.6;
-        icon = "\AGM_Interaction\UI\team\team_management_ca.paa";
+        icon = PATHOF(UI\team\team_management_ca.paa);
         hotkey = "J";
         enableInside = 1;
       };
@@ -297,24 +297,24 @@ class CfgVehicles {
       class AGM_GetDown {
         displayName = "$STR_AGM_Interaction_GetDown";
         distance = 4;
-        condition = "[_target] call AGM_Interaction_fnc_canInteractWith";
-        statement = "[_target] call AGM_Interaction_fnc_getDown";
+        condition = QUOTE( [_target] call FUNC(canInteractWith) );
+        statement = QUOTE( [_target] call FUNC(getDown) );
         showDisabled = 0;
         priority = 2.2;
       };
       class AGM_SendAway {
         displayName = "$STR_AGM_Interaction_SendAway";
         distance = 4;
-        condition = "[_target] call AGM_Interaction_fnc_canInteractWith";
-        statement = "[_target] call AGM_Interaction_fnc_sendAway";
+        condition = QUOTE( [_target] call FUNC(canInteractWith) );
+        statement = QUOTE( [_target] call FUNC(sendAway) );
         showDisabled = 0;
         priority = 2.0;
       };
       class AGM_Pardon {
         displayName = "$STR_AGM_Interaction_Pardon";
         distance = 4;
-        condition = "rating _target < -2000 && {alive _target} && {side group _player == side group _target}";
-        statement = "[_target, '{_this addRating -rating _this}', _target] call AGM_Core_fnc_execRemoteFnc";
+        condition = QUOTE( rating _target < -2000 && {alive _target} && {side group _player == side group _target} );
+        statement = QUOTE( [_target, '{_this addRating -rating _this}', _target] call EFUNC(core,execRemoteFnc) );
         showDisabled = 0;
         priority = 2.5;
         enableInside = 1;
@@ -324,84 +324,84 @@ class CfgVehicles {
     class AGM_SelfActions {
       class AGM_TeamManagement {
         displayName = "$STR_AGM_Interaction_TeamManagement";
-        condition = "AGM_Interaction_EnableTeamManagement";
+        condition = QUOTE( GVAR(EnableTeamManagement) );
         statement = "";
         showDisabled = 1;
         priority = 3.2;
-        icon = "\AGM_Interaction\UI\team\team_management_ca.paa";
+        icon = PATHOF(UI\team\team_management_ca.paa);
         subMenu[] = {"AGM_TeamManagement", 1};
         enableInside = 1;
         hotkey = "M";
 
         class AGM_JoinTeamRed {
           displayName = "$STR_AGM_Interaction_JoinTeamRed";
-          condition = "true";
-          statement = "[_player, 'RED'] call AGM_Interaction_fnc_joinTeam";
+          condition = QUOTE( true );
+          statement = QUOTE( [_player, 'RED'] call FUNC(joinTeam) );
           showDisabled = 1;
           priority = 2.4;
-          icon = "\AGM_Interaction\UI\team\team_red_ca.paa";
+          icon = PATHOF(UI\team\team_red_ca.paa);
           enableInside = 1;
           hotkey = "R";
         };
         class AGM_JoinTeamGreen {
           displayName = "$STR_AGM_Interaction_JoinTeamGreen";
-          condition = "true";
-          statement = "[_player, 'GREEN'] call AGM_Interaction_fnc_joinTeam";
+          condition = QUOTE( true );
+          statement = QUOTE( [_player, 'GREEN'] call FUNC(joinTeam) );
           showDisabled = 1;
           priority = 2.3;
-          icon = "\AGM_Interaction\UI\team\team_green_ca.paa";
+          icon = PATHOF(UI\team\team_green_ca.paa);
           enableInside = 1;
           hotkey = "G";
         };
         class AGM_JoinTeamBlue {
           displayName = "$STR_AGM_Interaction_JoinTeamBlue";
-          condition = "true";
-          statement = "[_player, 'BLUE'] call AGM_Interaction_fnc_joinTeam";
+          condition = QUOTE( true );
+          statement = QUOTE( [_player, 'BLUE'] call FUNC(joinTeam) );
           showDisabled = 1;
           priority = 2.2;
-          icon = "\AGM_Interaction\UI\team\team_blue_ca.paa";
+          icon = PATHOF(UI\team\team_blue_ca.paa);
           enableInside = 1;
           hotkey = "B";
         };
         class AGM_JoinTeamYellow {
           displayName = "$STR_AGM_Interaction_JoinTeamYellow";
-          condition = "true";
-          statement = "[_player, 'YELLOW'] call AGM_Interaction_fnc_joinTeam";
+          condition = QUOTE( true );
+          statement = QUOTE( [_player, 'YELLOW'] call FUNC(joinTeam) );
           showDisabled = 1;
           priority = 2.1;
-          icon = "\AGM_Interaction\UI\team\team_yellow_ca.paa";
+          icon = PATHOF(UI\team\team_yellow_ca.paa);
           enableInside = 1;
           hotkey = "Y";
         };
 
         class AGM_LeaveTeam {
           displayName = "$STR_AGM_Interaction_LeaveTeam";
-          condition = "assignedTeam _player != 'MAIN'";
-          statement = "[_player, 'MAIN'] call AGM_Interaction_fnc_joinTeam";
+          condition = QUOTE( assignedTeam _player != 'MAIN' );
+          statement = QUOTE( [_player, 'MAIN'] call FUNC(joinTeam) );
           showDisabled = 1;
           priority = 2.5;
-          icon = "\AGM_Interaction\UI\team\team_white_ca.paa";
+          icon = PATHOF(UI\team\team_white_ca.paa);
           enableInside = 1;
           hotkey = "N";
         };
 
         class AGM_BecomeLeader {
           displayName = "$STR_AGM_Interaction_BecomeLeader";
-          condition = "count (units group _player) > 1 && {leader group _player != _player}";
-          statement = "_newGroup = createGroup side group _player; (units group _player) joinSilent _newGroup; _newGroup selectLeader _player;";
+          condition = QUOTE( count (units group _player) > 1 && {leader group _player != _player} );
+          statement = QUOTE( _newGroup = createGroup side group _player; (units group _player) joinSilent _newGroup; _newGroup selectLeader _player; );
           showDisabled = 1;
           priority = 1.0;
-          icon = "\AGM_Interaction\UI\team\team_white_ca.paa";
+          icon = PATHOF(UI\team\team_white_ca.paa);
           enableInside = 1;
           hotkey = "L";
         };
         class AGM_LeaveGroup {
           displayName = "$STR_AGM_Interaction_LeaveGroup";
-          condition = "count (units group _player) > 1";
-          statement = "_oldGroup = units group _player; _newGroup = createGroup side _player; [_player] joinSilent _newGroup; {_player reveal _x} forEach _oldGroup;";
+          condition = QUOTE( count (units group _player) > 1 );
+          statement = QUOTE( _oldGroup = units group _player; _newGroup = createGroup side _player; [_player] joinSilent _newGroup; {_player reveal _x} forEach _oldGroup; );
           showDisabled = 1;
           priority = 1.2;
-          icon = "\AGM_Interaction\UI\team\team_management_ca.paa";
+          icon = PATHOF(UI\team\team_management_ca.paa);
           enableInside = 1;
           hotkey = "M";
         };
@@ -580,8 +580,8 @@ class CfgVehicles {
       class AGM_Push {
         displayName = "$STR_AGM_Interaction_Push";
         distance = 4;
-        condition = "getMass _target < 1000 and alive _target";
-        statement = "[_target, [2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5]] call AGM_Interaction_fnc_push;";
+        condition = QUOTE( getMass _target < 1000 and alive _target );
+        statement = QUOTE( [_target, [2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5]] call FUNC(push); );
         showDisabled = 0;
         priority = -1;
       };
@@ -615,8 +615,8 @@ class CfgWeapons {
   class AGM_CableTie: AGM_ItemCore {
     displayName = "$STR_AGM_Interaction_CableTie_Name";
     descriptionShort = "$STR_AGM_Interaction_CableTie_Description";
-    model = "\AGM_Interaction\agm_cabletie.p3d";
-    picture = "\AGM_Interaction\UI\agm_cabletie_x_ca.paa";
+    model = PATHOF(agm_cabletie.p3d);
+    picture = PATHOF(UI\agm_cabletie_x_ca.paa);
     scope = 2;
     class ItemInfo: InventoryItem_Base_F {
       mass = 1;
