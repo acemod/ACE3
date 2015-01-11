@@ -2,7 +2,7 @@
 
 // Self Interaction Menu not available if player is unconscious
 #define ACE_INTERACT_ALIVE (alive player)
-#define ACE_INTERACT_UNCON (player call ace_sys_wounds_fnc_isUncon)
+#define ACE_INTERACT_UNCON (player call ace_wounds_fnc_isUncon)
 
 // Player is Player Vehicle
 #define ACE_INTERACT_PLAYER (player == vehicle player || (player != vehicle player && player in assignedCargo vehicle player))
@@ -21,7 +21,7 @@
 #define ACE_ASSEMBLE (getNumber(configFile >> "CfgActions" >> "Assemble" >> "show") == 0)
 #define ACE_DISASSEMBLE (getNumber(configFile >> "CfgActions" >> "DisAssemble" >> "show") == 0)
 #define ACE_PIPEDEFAULT (getNumber(configFile >> "CfgMagazines" >> "PipeBomb" >> "useAction") == 0)
-#define ACE_IDENTITYDEFAULT (isClass(configFile >> "CfgPatches" >> "ace_sys_combatdeaf"))
-#define ACE_RUCKDEFAULT (isClass(configFile >> "CfgPatches" >> "ace_sys_stamina"))
+#define ACE_IDENTITYDEFAULT (isClass(configFile >> "CfgPatches" >> "ace_combatdeaf"))
+#define ACE_RUCKDEFAULT (isClass(configFile >> "CfgPatches" >> "ace_stamina"))
 
-#define ACE_KNOWN2PLAYER (if (name _target in (player getVariable ["ace_sys_recognize_knownnames",[]])) then { name _target } else { " " })
+#define ACE_KNOWN2PLAYER (if (name _target in (player getVariable ["ace_recognize_knownnames",[]])) then { name _target } else { " " })

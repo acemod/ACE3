@@ -100,7 +100,7 @@
 
 #define ACE_BWC ace_bwc = 1
 
-#define ACE_wind	([] call ace_sys_ballistic_fnc_wind)
+#define ACE_wind	([] call ace_ballistic_fnc_wind)
 
 
 // SCRIPTING MACROS
@@ -130,7 +130,7 @@
 #define RING ace_common_fx_fnc_ring
 
 // Stamina 
-#define INC_MASS ace_sys_stamina_fnc_inc_mass
+#define INC_MASS ace_stamina_fnc_inc_mass
 
 // Does this work, due to BWC_CONFIG(NAME) ?
 #undef BWC_CONFIG
