@@ -17,6 +17,9 @@
 
 	Example:
 */
+
+#include "script_component.hpp"
+
 private ["_container", "_displayName", "_picture", "_data", "_index"];
 
 _container = _this select 0;
@@ -25,10 +28,10 @@ _picture = _this select 2;
 _data = _this select 3;
 
 if (_picture == "" || _picture == "PictureThing") then {
-	_picture = "AGM_Interaction\UI\dot_ca.paa";
+	_picture = PATHTOF(UI\dot_ca.paa);
 };
 
-if ((profileNamespace getVariable ["AGM_Interaction_FlowMenu", false])) then {
+if ((profileNamespace getVariable [QGVAR(FlowMenu), false])) then {
 	//[_displayName, _statement, _condition, _priority, _subMenu, _icon, _tooltip, _conditionShow, _exceptions, _distance, _hotkey]
 	_container pushBack [_displayName, nil, {true},0,[], _picture, "", {true}, [], 4, "", _data];
 }else{

@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 private ["_unit", "_message"];
 
@@ -8,13 +9,13 @@ _target = _this select 1;
 if (_target != AGM_player) exitWith {
   addCamShake [4, 0.5, 5];
   if !(local _target) then {
-    [[_tapper, _target], "AGM_Interaction_fnc_tapShoulder", _target] call AGM_Core_fnc_execRemoteFnc;
+    [[_tapper, _target], QUOTE(FUNC(tapShoulder)), _target] call EFUNC(execRemoteFnc);
   };
 };
 
 addCamShake [4, 0.5, 5];
 
-//_message = format ["%1 tapped you on your shoulder.", [_unit] call AGM_Core_fnc_getName];
+//_message = format ["%1 tapped you on your shoulder.", [_unit] call EFUNC(core,getName)];
 _message = localize "STR_AGM_Interaction_YouWereTapped";
 
-[_message] call AGM_Core_fnc_displayTextStructured;
+[_message] call EFUNC(core,displayTextStructured);

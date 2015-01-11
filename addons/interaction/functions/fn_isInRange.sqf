@@ -2,14 +2,15 @@
  * Author: commy2
  *
  * Check if the vehicle is in range of the player.
- * 
+ *
  * Argument:
  * 0: Vehicke (Object)
  * 1: Distance in meters (Number)
- * 
+ *
  * Return value:
  * (Bool)
  */
+#include "script_component.hpp"
 
 private ["_vehicle", "_distance", "_player"];
 
@@ -44,6 +45,6 @@ _position1 set [2, (_position1 select 2) - (getTerrainHeightASL _position1 min 0
 if (_vehicle in lineIntersectsWith [_position0, _position1] || {_player distance _vehicle < _distance}) then {
 	true
 } else {
-	["Not in Range"] call AGM_Interaction_fnc_addToTooltip;
+	["Not in Range"] call FUNC(addToTooltip);
 	false
 }

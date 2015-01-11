@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 private ["_distance", "_position0", "_position1", "_intersections", "_count", "_house", "_door", "_index", "_id"];
 

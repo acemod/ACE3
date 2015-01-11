@@ -1,12 +1,12 @@
 /*
 	Name: AGM_Interaction_fnc_GetActions
-	
+
 	Author:
 		commy2
 		Garth de Wet (LH)
-	
+
 	Description:
-	
+
 	Parameters:
 		0: OBJECT - target
 		1: ARRAY - Parents of the target object
@@ -16,16 +16,18 @@
 		5: BOOL - Is mission config file?
 		6: STRING - Classname ("AGM_Actions"/"AGM_SelfActions")
 		7: STRING - Sub-class
-	
+
 	Returns:
 		Nothing
-	
+
 	Example:
 		[player, [configfile >> "CfgVehicles" >> typeOf player, true] call BIS_fnc_returnParents, [], [],configfile >> "CfgVehicles", false, "AGM_Actions"] call AGM_Interaction_fnc_GetActions;
-		
+
 		[player, [configfile >> "CfgVehicles" >> typeOf player, true] call BIS_fnc_returnParents, [], [],configfile >> "CfgVehicles", false, "AGM_SelfActions"] call AGM_Interaction_fnc_GetActions;
 */
-#define DEFAULT_ICON "\AGM_Interaction\UI\dot_ca.paa"
+#include "script_component.hpp"
+
+#define DEFAULT_ICON PATHTOF(UI\dot_ca.paa)
 private ["_target", "_parents", "_actions", "_patches", "_baseConfig", "_actionType", "_i","_index", "_missionConfig", "_stdConfig"];
 _target = _this select 0;
 _parents = _this select 1;
@@ -54,7 +56,7 @@ for "_i" from 0 to (_count - 1) do {
 			private ["_action", "_displayName", "_distance","_condition","_statement","_showDisabled", "_priority", "_tooltip", "_hotkey",
 				"_subMenu", "_conditionShow", "_exceptions", "_icon", "_actionToCache", "_cacheActions", "_cache", "_indexCache", "_configName"];
 			_action = if (_missionConfig) then {_config select _index} else {_stdConfig >> configName (_config select _index)};
-			_cache = missionNamespace getVariable ["AGM_Interaction_MenuCache", [[], [], []]];
+			_cache = missionNamespace getVariable [QGVAR(MenuCache), [[], [], []]];
 
 			if (count _action > 0) then {
 				_configName = configName _action;
@@ -77,7 +79,7 @@ for "_i" from 0 to (_count - 1) do {
 					_condition = getText (_action >> "condition");
 					if (_condition == "") then {_condition = "true"};
 
-					_condition = _condition + format [" && {%1 call AGM_Core_canInteract} && {[AGM_player, AGM_Interaction_Target] call AGM_Core_fnc_canInteractWith}", getArray (_action >> "exceptions")];
+					_condition = _condition + format [QUOTE( && {%1 call EGVAR(core,canInteract)} && {[AGM_player, GVAR(Target)] call EFUNC(core,canInteractWith)} ), getArray (_action >> "exceptions")];
 					if (_enableInside != 1) then {_condition = _condition + " && {_player == _vehicle}"};
 
 					_condition = compile _condition;
@@ -98,11 +100,11 @@ for "_i" from 0 to (_count - 1) do {
 					_statement = getText (_action >> "statement");
 					_statement = compile _statement;
 
-					if (profileNamespace getVariable ["AGM_Interaction_FlowMenu", false]) then {
+					if (profileNamespace getVariable [QGVAR(FlowMenu), false]) then {
 						_statement = if (getText (_action >> "statement") == "" && {count _subMenu > 1}) then {
-							compile format ["call AGM_Interaction_fnc_hideMenu;if(%2 == 1)then{['%1'] call AGM_Interaction_fnc_openSubMenuSelf;}else{['%1'] call AGM_Interaction_fnc_openSubMenu;};", _subMenu select 0, _subMenu select 1];
+							compile format [QUOTE( call FUNC(hideMenu);if(%2 == 1)then{['%1'] call FUNC(openSubMenuSelf);}else{['%1'] call FUNC(openSubMenu);}; ), _subMenu select 0, _subMenu select 1];
 						} else {
-							compile ("call AGM_Interaction_fnc_hideMenu;" + getText (_action >> "statement"));
+							compile (QUOTE( call FUNC(hideMenu); ) + getText (_action >> "statement"));
 						};
 					};
 
@@ -114,7 +116,7 @@ for "_i" from 0 to (_count - 1) do {
 
 					_actionToCache = [_displayName, _statement, _condition, _priority, _subMenu, _icon, _tooltip, _conditionShow, _exceptions, _distance, _hotkey];
 
-					if (!(_configName in _patches) && {_showDisabled || {[_object, _player] call _condition}} && {_distance == 0 || {[_object, _distance] call AGM_Interaction_fnc_isInRange}}) then {
+					if (!(_configName in _patches) && {_showDisabled || {[_object, _player] call _condition}} && {_distance == 0 || {[_object, _distance] call FUNC(isInRange)}}) then {
 						_actions pushBack _actionToCache;
 						_patches pushBack _configName;
 					};
@@ -129,9 +131,9 @@ for "_i" from 0 to (_count - 1) do {
 					_cacheIndices pushBack _indexCache;
 
 					_cache = [_cacheConfigs, _cacheActions, _cacheIndices];
-					["InteractionMenu", _action, {format ["%1 loaded into cache", _this]}] call AGM_Debug_fnc_log;
+					["InteractionMenu", _action, {format ["%1 loaded into cache", _this]}] call EFUNC(debug, log);
 				} else {
-					["InteractionMenu", _action, {format ["%1 loaded from cache", _this]}] call AGM_Debug_fnc_log;
+					["InteractionMenu", _action, {format ["%1 loaded from cache", _this]}] call EFUNC(debug, log);
 
 					_cachedAction = _cacheActions select (_cacheIndices select _indexCache);
 
@@ -140,14 +142,14 @@ for "_i" from 0 to (_count - 1) do {
 						_showDisabled = [_object, _player] call (_cachedAction select 7);
 					};
 
-					if (!(_configName in _patches) && {_showDisabled || {[_object, _player] call (_cachedAction select 2)}} && {[_object, (_cachedAction select 9)] call AGM_Interaction_fnc_isInRange || {(_cachedAction select 9) == 0}}) then {
+					if (!(_configName in _patches) && {_showDisabled || {[_object, _player] call (_cachedAction select 2)}} && {[_object, (_cachedAction select 9)] call FUNC(isInRange) || {(_cachedAction select 9) == 0}}) then {
 						_actions pushBack _cachedAction;
 						_patches pushBack _configName;
 					};
 				};
 			};
 
-			AGM_Interaction_MenuCache = _cache;
+			GVAR(MenuCache) = _cache;
 		};
 	};
 };

@@ -1,14 +1,15 @@
 /*
  * Author: KoffeinFlummi
- * 
+ *
  * Forces a civilian to the ground. (chance of failure).
- * 
+ *
  * Arguments:
  * 0: Unit to be sent away (Object)
  *
  * Return value:
  * none
  */
+#include "script_component.hpp"
 
 #define RADIUS 10
 

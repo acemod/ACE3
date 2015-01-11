@@ -1,4 +1,5 @@
 // commy2
+#include "script_component.hpp"
 
 private ["_object", "_config", "_type", "_actions", "_configs"];
 
@@ -12,7 +13,7 @@ _configs = "_object isKindOf configName _x" configClasses (_config >> _type);
 // cache
 private ["_cache", "_cacheConfigs", "_cacheActions", "_cacheIndices"];
 
-_cache = uiNamespace getVariable ["AGM_Interaction_MenuCache", [[], [], []]];
+_cache = uiNamespace getVariable [QGVAR(MenuCache), [[], [], []]];
 _cacheConfigs = _cache select 0;
 _cacheActions = _cache select 1;
 _cacheIndices = _cache select 2;
@@ -44,7 +45,7 @@ _cacheIndices = _cache select 2;
 			_condition = getText (_action >> "condition");
 			if (_condition == "") then {_condition = "true"};
 
-			_condition = _condition + format [" && {%1 call AGM_Core_canInteract} && {[AGM_player, AGM_Interaction_Target] call AGM_Core_fnc_canInteractWith}", getArray (_action >> "exceptions")];
+			_condition = _condition + format [QUOTE( && {%1 call EFUNC(core,canInteract)} && {[AGM_player, GVAR(Target)] call FUNC(canInteractWith)} ), getArray (_action >> "exceptions")];
 			if (_enableInside != 1) then {_condition = _condition + " && {_player == _vehicle}"};
 
 			_condition = compile _condition;
@@ -67,9 +68,9 @@ _cacheIndices = _cache select 2;
 
 			if (profileNamespace getVariable ["AGM_Interaction_FlowMenu", false]) then {
 				_statement = if (getText (_action >> "statement") == "" && {count _subMenu > 1}) then {
-					compile format ["call AGM_Interaction_fnc_hideMenu;if(%2 == 1)then{['%1'] call AGM_Interaction_fnc_openSubMenuSelf;}else{['%1'] call AGM_Interaction_fnc_openSubMenu;};", _subMenu select 0, _subMenu select 1];
+					compile format [QUOTE( call FUNC(hideMenu);if(%2 == 1)then{['%1'] call FUNC(openSubMenuSelf);}else{['%1'] call FUNC(openSubMenu);}; ), _subMenu select 0, _subMenu select 1];
 				} else {
-					compile ("call AGM_Interaction_fnc_hideMenu;" + getText (_action >> "statement"));
+					compile (QUOTE( call FUNC(hideMenu); ) + getText (_action >> "statement"));
 				};
 			};
 
@@ -82,7 +83,7 @@ _cacheIndices = _cache select 2;
 			private "_actionToCache";
 			_actionToCache = [_displayName, _statement, _condition, _priority, _subMenu, _icon, _tooltip, _conditionShow, _exceptions, _distance, _hotkey];
 
-			if ((_showDisabled || {[_object, _player] call _condition}) && {_distance == 0 || {[_object, _distance] call AGM_Interaction_fnc_isInRange}}) then {
+			if ((_showDisabled || {[_object, _player] call _condition}) && {_distance == 0 || {[_object, _distance] call FUNC(isInRange)}}) then {
 				_actions pushBack _actionToCache;
 			};
 
@@ -96,9 +97,9 @@ _cacheIndices = _cache select 2;
 			_cacheIndices pushBack _indexCache;
 
 			_cache = [_cacheConfigs, _cacheActions, _cacheIndices];
-			["InteractionMenu", _action, {format ["%1 loaded into cache", _this]}] call AGM_Debug_fnc_log;
+			["InteractionMenu", _action, {format ["%1 loaded into cache", _this]}] call EFUNC(debug, log);
 		} else {
-			["InteractionMenu", _action, {format ["%1 loaded from cache", _this]}] call AGM_Debug_fnc_log;
+			["InteractionMenu", _action, {format ["%1 loaded from cache", _this]}] call EFUNC(debug, log);
 
 			private ["_cachedAction", "_showDisabled"];
 			_cachedAction = _cacheActions select (_cacheIndices select _indexCache);
@@ -108,13 +109,13 @@ _cacheIndices = _cache select 2;
 				_showDisabled = [_object, _player] call (_cachedAction select 7);
 			};
 
-			if ((_showDisabled || {[_object, _player] call (_cachedAction select 2)}) && {[_object, (_cachedAction select 9)] call AGM_Interaction_fnc_isInRange || {(_cachedAction select 9) == 0}}) then {
+			if ((_showDisabled || {[_object, _player] call (_cachedAction select 2)}) && {[_object, (_cachedAction select 9)] call FUNC(isInRange) || {(_cachedAction select 9) == 0}}) then {
 				_actions pushBack _cachedAction;
 			};
 		};
 	} forEach _configActions;	//Actions of this CfgVehicles class
 } forEach _configs;	//CfgVehicles class
 
-uiNamespace setVariable ["AGM_Interaction_MenuCache", _cache];
+uiNamespace setVariable [QGVAR(MenuCache), _cache];
 
 _actions

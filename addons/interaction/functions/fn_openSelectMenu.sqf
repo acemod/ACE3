@@ -23,21 +23,23 @@
 
 	Example:
 */
-if (!(profileNamespace getVariable ["AGM_Interaction_FlowMenu", false])) then {
-	AGM_Interaction_SelectAccept = _this select 1;
-	AGM_Interaction_SelectCancel = _this select 2;
-	buttonSetAction [8855, "call AGM_Interaction_SelectCancel;"]; // cancel
-	buttonSetAction [8860, "(call compile (lbData [8866, lbCurSel 8866])) call AGM_Interaction_SelectAccept;"]; // accept
+#include "script_component.hpp"
+
+if (!(profileNamespace getVariable [QGVAR(FlowMenu), false])) then {
+	GVAR(SelectAccept) = _this select 1;
+	GVAR(SelectCancel) = _this select 2;
+	buttonSetAction [8855, QUOTE( call GVAR(SelectCancel); )]; // cancel
+	buttonSetAction [8860, QUOTE( (call compile (lbData [8866, lbCurSel 8866])) call GVAR(SelectAccept); )]; // accept
 	lbSetCurSel [8866, 0];
 }else{
 	_customActions = _this select 0;
 	_count = count _customActions;
 	if (_count == 0) exitWith {};
-	_customActions call AGM_Interaction_fnc_sortOptionsByPriority;
+	_customActions call FUNC(sortOptionsByPriority);
 	for "_i" from 0 to _count -1 do {
 		_action = _customActions select _i;
 		_action set [1, (_this select 1)];
 	};
-	AGM_Interaction_Buttons = _customActions;
-	[(_this select 2), true, true, false, AGM_player] call AGM_Interaction_fnc_initialiseInteraction;
+	GVAR(Buttons) = _customActions;
+	[(_this select 2), true, true, false, AGM_player] call FUNC(initialiseInteraction);
 };

@@ -1,5 +1,7 @@
 // by commy2
 
+#include "script_component.hpp"
+
 private ["_unit", "_target"];
 
 _unit = _this select 0;

@@ -10,12 +10,13 @@
  * Return Value:
  * None
  */
+#include "script_component.hpp"
 
 _boat = _this select 0;
 _velocity = _this select 1;
 
 if !(local _boat) exitWith {
-  [_this, "AGM_Interaction_fnc_push", _boat] call AGM_Core_fnc_execRemoteFnc;
+  [_this, QUOTE(FUNC(push)), _boat] call EFUNC(core,execRemoteFnc);
 };
 
 _boat setVelocity _velocity;

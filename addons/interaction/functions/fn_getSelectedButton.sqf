@@ -1,10 +1,11 @@
 // by commy2
+#include "script_component.hpp"
 
 #define MIN_DISTANCE 0.0065
 
 private ["_position", "_distance", "_angle"];
 
-_position = uiNamespace getVariable ['AGM_Interaction_CursorPosition', [0.5, 0.5, 0]];
+_position = uiNamespace getVariable [QGVAR(CursorPosition), [0.5, 0.5, 0]];
 
 _position = [((_position select 1) - 0.5) / safezoneH, ((_position select 2) - 0.5) / safezoneW, 0];
 

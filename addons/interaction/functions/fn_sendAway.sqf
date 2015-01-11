@@ -1,14 +1,15 @@
 /*
  * Author: KoffeinFlummi
- * 
+ *
  * Sends a civilian crowd away (chance of failure).
- * 
+ *
  * Arguments:
  * 0: Unit to be sent away (Object)
  *
  * Return value:
  * none
 */
+#include "script_component.hpp"
 
 #define DISTANCE 50
 #define RADIUS 10

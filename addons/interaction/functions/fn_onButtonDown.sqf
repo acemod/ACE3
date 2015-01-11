@@ -1,14 +1,15 @@
 // by commy2
+#include "script_component.hpp"
 
 if (dialog) exitWith {
 	closeDialog 0;
 };
 
 if (isNull (findDisplay 1713999)) then {
-	if (AGM_player == vehicle AGM_player) then {"" call AGM_Interaction_fnc_openMenu} else {[AGM_player, vehicle AGM_player] call AGM_Interaction_fnc_openMenuSelectUI};
+	if (AGM_player == vehicle AGM_player) then {"" call FUNC(openMenu)} else {[AGM_player, vehicle AGM_player] call FUNC(openMenuSelectUI)};
 	setMousePosition [0.5, 0.5];
 } else {
 	(findDisplay 1713999) closeDisplay 1;
 };
 
-[_player, "interactionMenuOpened", [_player, AGM_Interaction_Target, 0]] call AGM_Core_fnc_callCustomEventHandlers;
+[_player, "interactionMenuOpened", [_player, GVAR(Target), 0]] call EFUNC(core,callCustomEventHandlers);
