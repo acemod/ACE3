@@ -1,5 +1,7 @@
+#include "script_component.hpp"
+
 class CfgPatches {
-  class AGM_Interaction {
+  class ADDON {
     units[] = {};
     weapons[] = {};
     requiredVersion = 0.60;
@@ -12,6 +14,9 @@ class CfgPatches {
   };
 };
 
+#include "CfgEventHandlers.hpp"
+
+/*
 class CfgFunctions {
   class AGM_Interaction {
     class AGM_Interaction {
@@ -69,28 +74,7 @@ class CfgFunctions {
     };
   };
 };
-
-class Extended_PostInit_EventHandlers {
-  class AGM_Interaction {
-    clientInit = "call compile preprocessFileLineNumbers '\AGM_Interaction\clientInit.sqf'";
-  };
-};
-
-class Extended_GetIn_EventHandlers {
-  class All {
-    class AGM_AutoCloseMenu {
-      clientGetIn = "if (_this select 2 == AGM_player && {!isNull (findDisplay 1713999)}) then {(findDisplay 1713999) closeDisplay 1}";
-    };
-  };
-};
-
-class Extended_GetOut_EventHandlers {
-  class All {
-    class AGM_AutoCloseMenu {
-      clientGetOut = "if (_this select 2 == AGM_player && {!isNull (findDisplay 1713999)}) then {(findDisplay 1713999) closeDisplay 1}";
-    };
-  };
-};
+*/
 
 class AGM_Core_Default_Keys {
   class openInteractionMenuNew {
