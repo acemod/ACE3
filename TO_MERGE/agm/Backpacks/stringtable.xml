@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2014-12-21 -->
+<Project name="AGM">
+  <Package name="Backpacks">
+    <Key ID="STR_AGM_Backpacks_BackpackVentralTake">
+      <English>Take (Ventral)</English>
+      <German>Aufnehmen (Am Bauch)</German>
+      <Spanish>Coger (Mochila delantera)</Spanish>
+      <Polish>Załóż (brzuch)</Polish>
+      <Czech>Vzít (ventrální)</Czech>
+      <French>Prendre (Ventral)</French>
+      <Russian>Взять рюкзак (передний)</Russian>
+      <Hungarian>Felvétel (előre)</Hungarian>
+      <Portuguese>Pegar (Mochila Ventral)</Portuguese>
+      <Italian>Prendi</Italian>
+    </Key>
+    <Key ID="STR_AGM_Backpacks_BackpackVentralPut">
+      <English>Take Off Backpack</English>
+      <German>Rucksack ablegen</German>
+      <Spanish>Dejar mochila</Spanish>
+      <Polish>Zdejmij (brzuch)</Polish>
+      <Czech>Odložit batoh</Czech>
+      <French>Enlever (Ventral)</French>
+      <Russian>Снять рюкзак (передний)</Russian>
+      <Hungarian>Táska levétele</Hungarian>
+      <Portuguese>Retirar Mochila</Portuguese>
+      <Italian>Togliere zaino</Italian>
+    </Key>
+    <Key ID="STR_AGM_Backpacks_LockBackpack">
+      <English>Lock Backpack</English>
+      <German>Rucksack verschließen</German>
+      <French>Verrouiller le sac à dos</French>
+      <Spanish>Bloquear mochila</Spanish>
+      <Czech>Zamknout batoh</Czech>
+      <Polish>Zablokuj plecak</Polish>
+      <Hungarian>Táska zárolása</Hungarian>
+      <Russian>Запереть рюкзак</Russian>
+    </Key>
+    <Key ID="STR_AGM_Backpacks_UnlockBackpack">
+      <English>Unlock Backpack</English>
+      <German>Rucksack aufschließen</German>
+      <French>Déverouiller le sac à dos</French>
+      <Spanish>Desbloquear mochila</Spanish>
+      <Czech>Odemknout batoh</Czech>
+      <Polish>Odblokuj plecak</Polish>
+      <Hungarian>Táska nyitása</Hungarian>
+      <Russian>Отпереть рюкзак</Russian>
+    </Key>
+    <Key ID="STR_AGM_Backpacks_BackpackLocked">
+      <English>Backpack of %1 is locked</English>
+      <German>Der Rucksack von %1 ist verschlossen</German>
+      <French>Le sac à dos de %1 est verroullé</French>
+      <Spanish>La mochila de %1 está bloqueada</Spanish>
+      <Czech>%1 má zamčený batoh</Czech>
+      <Polish>Plecak %1 jest zablokowany</Polish>
+      <Hungarian>%1 táskája zárolva</Hungarian>
+      <Russian>Рюкзак %1 заперт</Russian>
+    </Key>
+    <Key ID="STR_AGM_Backpacks_InventoryLocked">
+      <English>Inventory is locked</English>
+      <German>Das Inventar ist verschlossen</German>
+      <French>L'inventaire est verrouillé</French>
+      <Spanish>Inventario bloqueado</Spanish>
+      <Czech>Inventář je zamčený</Czech>
+      <Polish>Ekwipunek jest zablokowany</Polish>
+      <Hungarian>Felszerelés zárolt</Hungarian>
+      <Russian>Инвентарь заперт</Russian>
+    </Key>
+  </Package>
+</Project>

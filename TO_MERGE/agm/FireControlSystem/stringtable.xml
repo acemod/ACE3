@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2014-12-19 -->
+<Project name="AGM">
+  <Package name="FireControlSystem">
+    <Key ID="STR_AGM_FireControlSystem_LaseTarget">
+      <English>Lase Target / Measure Distance</English>
+      <German>Ziel anlasern / Entfernung Messen</German>
+      <French>Télémétrer la cible</French>
+      <Polish>Naświetl cel / Zmierz odległość</Polish>
+      <Czech>Označit cíl / Změřit vzdálenost</Czech>
+      <Spanish>Iluminar objetivo / Medir distancia</Spanish>
+      <!-- Outdated
+      <Russian>Установить зероинг</Russian>
+      <Hungarian>Lézeres célmegjelölés</Hungarian>
+      <Portuguese>Marcar Alvo</Portuguese>
+      <Italian>Designatore Laser</Italian>
+      -->
+      <Russian>Подсветить цель / Измерить расстояние</Russian>
+    </Key>
+    <Key ID="STR_AGM_FireControlSystem_ZeroedTo">
+      <English>Zeroed To</English>
+      <German>Haltepunkt</German>
+      <Spanish>Fijado a</Spanish>
+      <Polish>Wyzerowany na</Polish>
+      <Czech>Nastaveno na</Czech>
+      <French>Zéroté à</French>
+      <Russian>Зероинг</Russian>
+      <Hungarian>Nullázás</Hungarian>
+      <Portuguese>Fixado em</Portuguese>
+      <Italian>Azzeramento a</Italian>
+    </Key>
+    <Key ID="STR_AGM_FireControlSystem_AdjustRangeUp">
+      <English>Adjust FCS Range (Up)</English>
+      <German>Entfernung des FLS erhöhen</German>
+      <Polish>Zwiększ zasięg FCS</Polish>
+      <Spanish>Ajustar distancia del FCS (arriba)</Spanish>
+      <Czech>Nastavit FCS Náměr (nahoru)</Czech>
+      <French>Augmenter la distance du SCT</French>
+      <Hungarian>FCS tartomány állítása (Fel)</Hungarian>
+      <Portuguese>Ajustar distância do FCS (Acima)</Portuguese>
+      <Italian>Aumentare la distanza dell'FCS</Italian>
+      <Russian>Диапазон СУО (Выше)</Russian>
+    </Key>
+    <Key ID="STR_AGM_FireControlSystem_AdjustRangeDown">
+      <English>Adjust FCS Range (Down)</English>
+      <German>Entfernung des FLS verringern</German>
+      <Polish>Zmniejsz zasięg FCS</Polish>
+      <Spanish>Ajustar distancia del FCS (abajo)</Spanish>
+      <Czech>Nastavit FCS Náměr (dolů)</Czech>
+      <French>Réduire la distance du SCT</French>
+      <Hungarian>FCS tartomány állítása (Le)</Hungarian>
+      <Portuguese>Ajustar distância do FCS (Abaixo)</Portuguese>
+      <Italian>Ridurre la distanza dell'FCS</Italian>
+      <Russian>Диапазон СУО (Ниже)</Russian>
+    </Key>
+    <Key ID="STR_AGM_FireControlSystem_ResetFCS">
+      <English>Reset FCS</English>
+      <German>FLS zurücksetzen</German>
+      <Spanish>Reiniciar FCS</Spanish>
+      <French>Réinitialiser le SCT</French>
+      <Polish>Resetuj FCS</Polish>
+      <Czech>Resetovat FCS</Czech>
+      <Hungarian>FCS visszaállítása</Hungarian>
+      <Portuguese>Reiniciar FCS</Portuguese>
+      <Italian>Azzeramento dell'FCS</Italian>
+      <Russian>Обнулить СУО</Russian>
+    </Key>
+    <Key ID="STR_AGM_FireControlSystem_HasBeenReset">
+      <English>FCS has been reset.</English>
+      <German>FLS wurde zurückgesetzt.</German>
+      <Spanish>FCS reiniciado</Spanish>
+      <French>SCT réinitialisé.</French>
+      <Polish>FCS został zresetowany.</Polish>
+      <Czech>FCS byl resetován.</Czech>
+      <Hungarian>Az FCS visszaállítva</Hungarian>
+      <Portuguese>FCS reiniciado.</Portuguese>
+      <Italian>L'FCS è stato azzerato</Italian>
+      <Russian>СУО обнулен</Russian>
+    </Key>
+  </Package>
+</Project>

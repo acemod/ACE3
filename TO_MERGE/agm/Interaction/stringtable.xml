@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2014-12-20 -->
+<Project name="AGM">
+  <Package name="Interaction">
+    <Key ID="STR_AGM_Interaction_InteractionMenu">
+      <English>Interaction Menu</English>
+      <German>Interaktionsmenü</German>
+      <Spanish>Menú de interacción</Spanish>
+      <Polish>Menu interakcji</Polish>
+      <Czech>Menu interakce</Czech>
+      <French>Menu d'interaction</French>
+      <Russian>Меню взаимодействия</Russian>
+      <Hungarian>Interakció</Hungarian>
+      <Portuguese>Menu de Interação</Portuguese>
+      <Italian>Menù Interattivo</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_InteractionMenuSelf">
+      <English>Interaction Menu (Self)</English>
+      <German>Interaktionsmenü (Selbst)</German>
+      <Spanish>Menú de interacción (Propia)</Spanish>
+      <Polish>Menu interakcji (na siebie)</Polish>
+      <Czech>Menu interakce (vlastní)</Czech>
+      <French>Menu d'interaction (Perso)</French>
+      <Russian>Меню взаимодействия (с собой)</Russian>
+      <Hungarian>Interakció (saját) </Hungarian>
+      <Portuguese>Menu de Interação (Individual)</Portuguese>
+      <Italian>Menù Interattivo (Individuale)</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_OpenDoor">
+      <English>Open / Close Door</English>
+      <German>Tür öffnen / schließen</German>
+      <Spanish>Abrir / Cerrar puerta</Spanish>
+      <Polish>Otwórz / Zamknij drzwi</Polish>
+      <Czech>Otevřít / Zavřít dveře</Czech>
+      <French>Ouvrir / Fermer Portes</French>
+      <Russian>Открыть / Закрыть двери</Russian>
+      <Hungarian>Ajtó nyitás / zárás</Hungarian>
+      <Portuguese>Abrir / Fechar Porta</Portuguese>
+      <Italian>Apri / Chiudi la porta</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_LockDoor">
+      <English>Lock Door</English>
+      <German>Tür sperren</German>
+      <Spanish>Bloquear puerta</Spanish>
+      <French>Verrouiller Porte</French>
+      <Italian>Blocca la porta</Italian>
+      <Russian>Заблокировать дверь</Russian>
+      <Portuguese>Trancar Porta</Portuguese>
+      <Hungarian>Ajtó bezárása</Hungarian>
+      <Polish>Zablokuj drzwi</Polish>
+      <Czech>Zamknout dveře</Czech>
+    </Key>
+    <Key ID="STR_AGM_Interaction_UnlockDoor">
+      <English>Unlock Door</English>
+      <German>Tür entsperren</German>
+      <Spanish>Desbloquear puerta</Spanish>
+      <French>Déverrouiller Porte</French>
+      <Italian>Sblocca la porta</Italian>
+      <Russian>Разблокировать дверь</Russian>
+      <Portuguese>Destrancar Porta</Portuguese>
+      <Hungarian> Zár kinyitása</Hungarian>
+      <Polish>Odblokuj drzwi</Polish>
+      <Czech>Odemknout dveře</Czech>
+    </Key>
+    <Key ID="STR_AGM_Interaction_LockedDoor">
+      <English>Locked Door</English>
+      <German>Tür gesperrt</German>
+      <Spanish>Puerta bloqueada</Spanish>
+      <French>Porte Verrouillée</French>
+      <Italian>Porta bloccata</Italian>
+      <Russian>Дверь заблокирована</Russian>
+      <Portuguese>Porta Trancada</Portuguese>
+      <Hungarian>Zárt ajtó</Hungarian>
+      <Polish>Zablokowano drzwi</Polish>
+      <Czech>Zamčené dveře</Czech>
+    </Key>
+    <Key ID="STR_AGM_Interaction_UnlockedDoor">
+      <English>Unlocked Door</English>
+      <German>Tür entsperrt</German>
+      <Spanish>Puerta desbloqueada</Spanish>
+      <French>Porte Déverrouillée</French>
+      <Italian>Porta sbloccata</Italian>
+      <Russian>Дверь разблокирована</Russian>
+      <Portuguese>Porta Destrancada</Portuguese>
+      <Hungarian>Nyitott ajtó</Hungarian>
+      <Polish>Odblokowano drzwi</Polish>
+      <Czech>Odemčené dveře</Czech>
+    </Key>
+    <Key ID="STR_AGM_Interaction_JoinGroup">
+      <English>Join group</English>
+      <German>Gruppe beitreten</German>
+      <Spanish>Unirse al grupo</Spanish>
+      <Polish>Dołącz do grupy</Polish>
+      <Czech>Přidat se do skupiny</Czech>
+      <French>Rejoindre Groupe</French>
+      <Russian>Вступить в группу</Russian>
+      <Hungarian>Csatlakozás</Hungarian>
+      <Portuguese>Unir-se ao grupo</Portuguese>
+      <Italian>Unisciti alla squadra</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_LeaveGroup">
+      <English>Leave Group</English>
+      <German>Gruppe verlassen</German>
+      <Spanish>Dejar grupo</Spanish>
+      <Polish>Opuść grupę</Polish>
+      <Czech>Odejít ze skupiny</Czech>
+      <French>Quitter Groupe</French>
+      <Russian>Выйти из группы</Russian>
+      <Hungarian>Csoport elhagyása</Hungarian>
+      <Portuguese>Deixar grupo</Portuguese>
+      <Italian>Lascia la squadra</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_BecomeLeader">
+      <English>Become Leader</English>
+      <German>Grp.-führung übern.</German>
+      <Spanish>Asumir el liderazgo</Spanish>
+      <Polish>Przejmij dowodzenie</Polish>
+      <Czech>Stát se velitelem</Czech>
+      <French>Devenir Leader</French>
+      <Russian>Стать лидером</Russian>
+      <Hungarian>Vezetés átvétele</Hungarian>
+      <Portuguese>Tornar-se Líder</Portuguese>
+      <Italian>Prendi il comando</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Dance">
+      <English>DANCE!</English>
+      <German>TANZEN!</German>
+      <Spanish>BAILAR!</Spanish>
+      <Polish>TAŃCZ!</Polish>
+      <Czech>TANČIT!</Czech>
+      <French>Danse!</French>
+      <Russian>ТАНЦЕВАТЬ!</Russian>
+      <Hungarian>TÁNC!</Hungarian>
+      <Portuguese>DANCE!</Portuguese>
+      <Italian>Balla!</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_StopDancing">
+      <English>Stop Dancing</English>
+      <German>Tanzen abbrechen</German>
+      <Spanish>Dejar de bailar</Spanish>
+      <Polish>Przestań tańczyć</Polish>
+      <Czech>Přestat tancovat</Czech>
+      <French>Arrêter de danser</French>
+      <Russian>Прекратить танцевать</Russian>
+      <Hungarian>Tánc abbahagyása</Hungarian>
+      <Portuguese>Parar de dançar</Portuguese>
+      <Italian>Smetti di ballare</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Back">
+      <English>&lt;&lt; Back</English>
+      <German>&lt;&lt; Zurück</German>
+      <Spanish>&lt;&lt; Atrás</Spanish>
+      <Polish>&lt;&lt; Wstecz</Polish>
+      <Czech>&lt;&lt; Zpět</Czech>
+      <French>&lt;&lt; Retour</French>
+      <Russian>&lt;&lt; Назад</Russian>
+      <Hungarian>&lt;&lt; Vissza</Hungarian>
+      <Portuguese>&lt;&lt; Voltar</Portuguese>
+      <Italian>&lt;&lt; Indietro</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Gestures">
+      <English>Gestures &gt;&gt;</English>
+      <German>Gesten &gt;&gt;</German>
+      <Spanish>Gestos &gt;&gt;</Spanish>
+      <Polish>Gesty &gt;&gt;</Polish>
+      <Czech>Gesta &gt;&gt;</Czech>
+      <French>Signaux &gt;&gt;</French>
+      <Russian>Жесты &gt;&gt;</Russian>
+      <Hungarian>Kézjelek &gt;&gt;</Hungarian>
+      <Portuguese>Gestos &gt;&gt;</Portuguese>
+      <Italian>Segnali gestuali &gt;&gt;</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Gestures_Attack">
+      <English>Attack</English>
+      <German>Angreifen</German>
+      <Spanish>Atacar</Spanish>
+      <Polish>Do ataku</Polish>
+      <Czech>Zaútočit</Czech>
+      <French>Attaquer</French>
+      <Russian>Атаковать</Russian>
+      <Hungarian>Támadás</Hungarian>
+      <Portuguese>Atacar</Portuguese>
+      <Italian>Attaccare</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Gestures_Advance">
+      <English>Advance</English>
+      <German>Vordringen</German>
+      <Spanish>Avanzar</Spanish>
+      <Polish>Naprzód</Polish>
+      <Czech>Postoupit</Czech>
+      <French>Avancer</French>
+      <Russian>Продвигаться</Russian>
+      <Hungarian>Előre</Hungarian>
+      <Portuguese>Avançar</Portuguese>
+      <Italian>Avanzare</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Gestures_Go">
+      <English>Go</English>
+      <German>Los</German>
+      <Spanish>Adelante</Spanish>
+      <Polish>Szybko</Polish>
+      <Czech>Jít</Czech>
+      <French>Aller</French>
+      <Russian>Идти</Russian>
+      <Hungarian>Mozgás</Hungarian>
+      <Portuguese>Mover-se</Portuguese>
+      <Italian>Muoversi</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Gestures_Follow">
+      <English>Follow</English>
+      <German>Folgen</German>
+      <Spanish>Seguirme</Spanish>
+      <Polish>Za mną</Polish>
+      <Czech>Následovat</Czech>
+      <French>Suivre</French>
+      <Russian>Следовать</Russian>
+      <Hungarian>Utánam</Hungarian>
+      <Portuguese>Seguir</Portuguese>
+      <Italian>Seguire</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Gestures_Point">
+      <English>Point</English>
+      <German>Zeigen</German>
+      <Spanish>Señalar</Spanish>
+      <Polish>Wskazać</Polish>
+      <Czech>Ukázat</Czech>
+      <French>Pointer</French>
+      <Russian>Точка</Russian>
+      <Hungarian>Mutat</Hungarian>
+      <Portuguese>Apontar</Portuguese>
+      <Italian>Puntare a</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Gestures_Up">
+      <English>Up</English>
+      <German>Aufstehen</German>
+      <Spanish>Arriba</Spanish>
+      <Polish>Do góry</Polish>
+      <Czech>Vztyk</Czech>
+      <French>Debout</French>
+      <Russian>Вверх</Russian>
+      <Hungarian>Fel</Hungarian>
+      <Portuguese>Acima</Portuguese>
+      <Italian>Alzarsi</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Gestures_Cover">
+      <English>Cover</English>
+      <German>Deckung</German>
+      <Spanish>Cubrirse</Spanish>
+      <Polish>Do osłony</Polish>
+      <Czech>Krýt se</Czech>
+      <French>A couvert</French>
+      <Russian>Укрыться</Russian>
+      <Hungarian>Fedezékbe</Hungarian>
+      <Portuguese>Proteger-se</Portuguese>
+      <Italian>Copertura</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Gestures_Cease_Fire">
+      <English>Cease Fire</English>
+      <German>Feuer einstellen</German>
+      <Spanish>Alto el fuego</Spanish>
+      <Polish>Wstrzymać ogień</Polish>
+      <Czech>Zastavit palbu</Czech>
+      <French>Halte au feu</French>
+      <Russian>Прекратить огонь</Russian>
+      <Hungarian>Tüzet szüntess</Hungarian>
+      <Portuguese>Cessar Fogo</Portuguese>
+      <Italian>Cessare il Fuoco</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Gestures_Freeze">
+      <English>Freeze</English>
+      <German>Keine Bewegung</German>
+      <Spanish>Alto</Spanish>
+      <Polish>Stać</Polish>
+      <Czech>Stát</Czech>
+      <French>Halte</French>
+      <Russian>Замереть</Russian>
+      <Hungarian>Állj</Hungarian>
+      <Portuguese>Alto</Portuguese>
+      <Italian>Fermi</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Gestures_Hi">
+      <English>Hi</English>
+      <German>Hallo</German>
+      <Spanish>Hola</Spanish>
+      <Polish>Witaj</Polish>
+      <Czech>Ahoj</Czech>
+      <French>Salut</French>
+      <Russian>Привет</Russian>
+      <Hungarian>Szeva</Hungarian>
+      <Portuguese>Olá</Portuguese>
+      <Italian>Ciao</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Gestures_Yes">
+      <English>Yes</English>
+      <German>Ja</German>
+      <Spanish>Si</Spanish>
+      <Polish>Tak</Polish>
+      <Czech>Ano</Czech>
+      <French>Oui</French>
+      <Russian>Да</Russian>
+      <Hungarian>Igen</Hungarian>
+      <Portuguese>Sim</Portuguese>
+      <Italian>Si</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Gestures_No">
+      <English>No</English>
+      <German>Nein</German>
+      <Spanish>No</Spanish>
+      <Polish>Nie</Polish>
+      <Czech>Ne</Czech>
+      <French>Non</French>
+      <Russian>Нет</Russian>
+      <Hungarian>Nem</Hungarian>
+      <Portuguese>Não</Portuguese>
+      <Italian>No</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_WeaponOnBack">
+      <English>Put weapon on back</English>
+      <German>Waffe wegstecken</German>
+      <Spanish>Arma a la espalda</Spanish>
+      <Polish>Umieść broń na plecach</Polish>
+      <Czech>Dát zbraň na záda</Czech>
+      <French>Arme à la bretelle</French>
+      <Russian>Повесить оружие на спину</Russian>
+      <Hungarian>Fegyvert hátra</Hungarian>
+      <Portuguese>Colocar arma nas costas</Portuguese>
+      <Italian>Metti l'arma in spalla</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_TapShoulder">
+      <English>Tap Shoulder</English>
+      <German>Auf Schulter klopfen</German>
+      <Spanish>Tocar el hombro</Spanish>
+      <Polish>Klepnij w ramię</Polish>
+      <Czech>Poklepat na rameno</Czech>
+      <French>Taper sur l'épaule</French>
+      <Russian>Похлопать по плечу</Russian>
+      <Hungarian>Vállveregetés</Hungarian>
+      <Portuguese>Tocar ombro</Portuguese>
+      <Italian>Dai un colpetto</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_YouWereTapped">
+      <English>You were tapped on the shoulder.</English>
+      <German>Dir wurde auf die Schulter geklopft</German>
+      <Spanish>Te tocaron el hombro.</Spanish>
+      <French>On te tape sur l'épaule.</French>
+      <Polish>Zostałeś klepnięty po ramieniu</Polish>
+      <Hungarian>Vállonveregettek</Hungarian>
+      <Czech>Někdo tě poklepal na rameno.</Czech>
+      <Russian>Вас похлопали по плечу</Russian>
+      <Portuguese>Você foi tocado no ombro.</Portuguese>
+      <Italian>Ti è stato dato un colpetto sulla spalla</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_CancelSelection">
+      <English>Cancel</English>
+      <German>Abbrechen</German>
+      <Spanish>Cancelar</Spanish>
+      <Polish>Anuluj</Polish>
+      <French>Annuler</French>
+      <Czech>Zrušit</Czech>
+      <Italian>Annulla</Italian>
+      <Russian>Отменить</Russian>
+      <Portuguese>Cancelar</Portuguese>
+      <Hungarian>Mégse</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_MakeSelection">
+      <English>Select</English>
+      <German>Wählen</German>
+      <Spanish>Seleccionar</Spanish>
+      <Polish>Wybierz</Polish>
+      <French>Sélectionner</French>
+      <Czech>Zvolit</Czech>
+      <Italian>Seleziona</Italian>
+      <Russian>Выбрать</Russian>
+      <Portuguese>Selecionar</Portuguese>
+      <Hungarian>Kiválaszt</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_SendAway">
+      <English>Go Away!</English>
+      <German>Geh Weg!</German>
+      <Spanish>Aléjate!</Spanish>
+      <Polish>Odejdź!</Polish>
+      <Czech>Jděte pryč!</Czech>
+      <French>Allez-vous-en!</French>
+      <Russian>Уходите отсюда!</Russian>
+      <Hungarian>Tűnés!</Hungarian>
+      <Portuguese>Vá Embora!</Portuguese>
+      <Italian>Via di qui!</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_GetDown">
+      <English>Get Down!</English>
+      <German>Auf Den Boden!</German>
+      <Spanish>Al suelo!</Spanish>
+      <Polish>Padnij!</Polish>
+      <Czech>K zemi!</Czech>
+      <French>A terre!</French>
+      <Hungarian>A földre!</Hungarian>
+      <Russian>Ложись!</Russian>
+      <Portuguese>Abaixe-se!</Portuguese>
+      <Italian>A Terra!</Italian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_TeamManagement">
+      <English>Team Management &gt;&gt;</English>
+      <German>Team Management &gt;&gt;</German>
+      <Spanish>Gestión de equipo &gt;&gt;</Spanish>
+      <French>Gestion d'équipe &gt;&gt;</French>
+      <Polish>Zarządzanie oddziałem &gt;&gt;</Polish>
+      <Czech>Správa týmu &gt;&gt;</Czech>
+      <Russian>Управление группой &gt;&gt;</Russian>
+      <Portuguese>Gerenciamento de Equipe &gt;&gt;</Portuguese>
+      <Italian>Organizzazione Squadra &gt;&gt;</Italian>
+      <Hungarian>Csapat kezelés &gt;&gt;</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_TeamRED">
+      <English>Red</English>
+      <German>Rot</German>
+      <Spanish>Rojo</Spanish>
+      <French>Rouge</French>
+      <Polish>Czerwony</Polish>
+      <Czech>Červený</Czech>
+      <Russian>Красный</Russian>
+      <Portuguese>Vermelha</Portuguese>
+      <Italian>Rosso</Italian>
+      <Hungarian>Piros</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_TeamGREEN">
+      <English>Green</English>
+      <German>Grün</German>
+      <Spanish>Verde</Spanish>
+      <French>Vert</French>
+      <Polish>Zielony</Polish>
+      <Czech>Zelený</Czech>
+      <Russian>Зеленый</Russian>
+      <Portuguese>Verde</Portuguese>
+      <Italian>Verde</Italian>
+      <Hungarian>Zöld</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_TeamBLUE">
+      <English>Blue</English>
+      <German>Blau</German>
+      <Spanish>Azul</Spanish>
+      <French>Bleu</French>
+      <Polish>Niebieski</Polish>
+      <Czech>Modrý</Czech>
+      <Russian>Синий</Russian>
+      <Portuguese>Azul</Portuguese>
+      <Italian>Blu</Italian>
+      <Hungarian>Kék</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_TeamYELLOW">
+      <English>Yellow</English>
+      <German>Gelb</German>
+      <Spanish>Amarillo</Spanish>
+      <French>Jaune</French>
+      <Polish>Żółty</Polish>
+      <Czech>Žlutý</Czech>
+      <Russian>Желтый</Russian>
+      <Portuguese>Amarela</Portuguese>
+      <Italian>Giallo</Italian>
+      <Hungarian>Sárga</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_JoinTeamRed">
+      <English>Join Team Red</English>
+      <German>Team Rot beitreten</German>
+      <Spanish>Unirse al equipo rojo</Spanish>
+      <French>Rejoindre Rouge</French>
+      <Polish>Dołącz do drużyny czerwonej</Polish>
+      <Czech>Připojit do Červeného Týmu</Czech>
+      <Russian>Присоединиться к красной группе</Russian>
+      <Portuguese>Unir-se à Equipe Vermelha</Portuguese>
+      <Italian>Entra nella Squadra Rossa</Italian>
+      <Hungarian>Csatlakozás a piros csapathoz</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_JoinTeamGreen">
+      <English>Join Team Green</English>
+      <German>Team Grün beitreten</German>
+      <Spanish>Unirse al equipo verde</Spanish>
+      <French>Rejoindre Verte</French>
+      <Polish>Dołącz do drużyny zielonej</Polish>
+      <Czech>Připojit do Zeleného Týmu</Czech>
+      <Russian>Присоединиться к зеленой группе</Russian>
+      <Portuguese>Unir-se à Equipe Verde</Portuguese>
+      <Italian>Entra nella Squadra Verde</Italian>
+      <Hungarian>Csatlakozás a zöld csapathoz</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_JoinTeamBlue">
+      <English>Join Team Blue</English>
+      <German>Team Blau beitreten</German>
+      <Spanish>Unirse al equipo azul</Spanish>
+      <French>Rejoindre Bleue</French>
+      <Polish>Dołącz do drużyny niebieskiej</Polish>
+      <Czech>Připojit do Modrého Týmu</Czech>
+      <Russian>Присоединиться к синей группе</Russian>
+      <Portuguese>Unir-se à Equipe Azul</Portuguese>
+      <Italian>Entra nella Squadra Blu</Italian>
+      <Hungarian>Csatlakozás a kék csapathoz</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_JoinTeamYellow">
+      <English>Join Team Yellow</English>
+      <German>Team Gelb beitreten</German>
+      <Spanish>Unirse al equipo amarillo</Spanish>
+      <French>Rejoindre Jaune</French>
+      <Polish>Dołącz do drużyny żółtej</Polish>
+      <Czech>Připojit do Žlutého Týmu</Czech>
+      <Russian>Присоединиться к желтой группе</Russian>
+      <Portuguese>Unir-se à Equipe Amarela</Portuguese>
+      <Italian>Entra nella Squadra Gialla</Italian>
+      <Hungarian>Csatlakozás a sárga csapathoz</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_JoinedTeam">
+      <English>You joined Team %1</English>
+      <German>Du bist Team %1 beigetreten</German>
+      <Spanish>Te has unido al equipo %1</Spanish>
+      <French>Tu as rejoint l'équipe %1</French>
+      <Polish>Dołączyłeś do drużyny %1</Polish>
+      <Czech>Připojil ses do Týmu %1</Czech>
+      <Russian>Вы присоединились к группе %1</Russian>
+      <Portuguese>Você uniu-se à Equipe %1</Portuguese>
+      <Italian>Sei entrato nella Squadra %1</Italian>
+      <Hungarian>Csatlakoztál a %1 csapathoz</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_LeaveTeam">
+      <English>Leave Team</English>
+      <German>Team verlassen</German>
+      <Spanish>Dejar equipo</Spanish>
+      <French>Quitter l'équipe</French>
+      <Polish>Opuść drużynę</Polish>
+      <Czech>Opustit tým</Czech>
+      <Russian>Покинуть группу</Russian>
+      <Portuguese>Deixar Equipe</Portuguese>
+      <Italian>Lascia la Squadra</Italian>
+      <Hungarian>Csapat elhagyása</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_LeftTeam">
+      <English>You left the Team</English>
+      <German>Du hast das Team verlassen</German>
+      <Spanish>Has dejado el equipo</Spanish>
+      <French>Tu as quitté l'équipe</French>
+      <Polish>Opuściłeś drużynę</Polish>
+      <Czech>Opustil si tým</Czech>
+      <Russian>Вы покинули группу</Russian>
+      <Portuguese>Você deixou a Equipe</Portuguese>
+      <Italian>Hai lasciato la squadra</Italian>
+      <Hungarian>Elhagytad a csapatot</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Pardon">
+      <English>Pardon</English>
+      <German>Begnadigen</German>
+      <Spanish>Perdonar</Spanish>
+      <Polish>Przebacz</Polish>
+      <French>Pardon</French>
+      <Czech>Pardon</Czech>
+      <Russian>Извините</Russian>
+      <Portuguese>Perdão</Portuguese>
+      <Italian>Perdona</Italian>
+      <Hungarian>Megbocsátás</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_FlowMenu">
+      <English>Flow Menu</English>
+      <German>Mausradmenü</German>
+      <Polish>Flow Menu</Polish>
+      <Spanish>Menú desplegable</Spanish>
+      <French>Menu Déroulant</French>
+      <Czech>Flow Menu</Czech>
+      <Russian>Выпадающее меню</Russian>
+      <Portuguese>Flow Menu</Portuguese>
+      <Italian>Menù a Scorrimento</Italian>
+      <Hungarian>Legördülő menü</Hungarian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_ScrollHint">
+      <English>Scroll</English>
+      <German>Scrollen</German>
+      <Polish>Przewiń</Polish>
+      <French>Défilement</French>
+      <Spanish>Desplazar</Spanish>
+      <Russian>Пролистать</Russian>
+      <Portuguese>Rolar</Portuguese>
+      <Italian>Scorri</Italian>
+      <Hungarian>Görgetés</Hungarian>
+      <Czech>Otáčení</Czech>
+    </Key>
+    <Key ID="STR_AGM_Interaction_ModifierKey">
+      <English>Modifier Key</English>
+      <German>Modifikator</German>
+      <Polish>Modyfikator</Polish>
+      <French>Modifier la touche</French>
+      <Spanish>Tecla modificadora</Spanish>
+      <Russian>клавиша-модификатор</Russian>
+      <Portuguese>Tecla Modificadora</Portuguese>
+      <Italian>Modifica Tasto</Italian>
+      <Hungarian>Módosító billentyű</Hungarian>
+      <Czech>Modifikátor</Czech>
+    </Key>
+    <Key ID="STR_AGM_Interaction_NotInRange">
+      <English>Not in Range</English>
+      <German>Außer Reichweite</German>
+      <French>Hors de portée.</French>
+      <Spanish>Fuera de rango</Spanish>
+      <Russian>Слишком далеко</Russian>
+      <Portuguese>Fora do Alcançe</Portuguese>
+      <Hungarian>Hatótávolságon kívül</Hungarian>
+      <Polish>Poza zasięgiem</Polish>
+      <Czech>Mimo dosah</Czech>
+    </Key>
+    <Key ID="STR_AGM_Interaction_AutoCloseMenu">
+      <English>Close Menu on Key Release</English>
+      <German>Menü nach Loslassen schließen</German>
+      <Polish>Zamknij menu automatycznie</Polish>
+      <French>Fermer le menu en relâchant la touche</French>
+      <Spanish>Cerrar menú al soltar la tecla</Spanish>
+      <Hungarian>Menü bezárása a billentyű elengedésekor</Hungarian>
+      <Russian>Закрывать меню при отжатии клавиши</Russian>
+      <Czech>Menu interakce (Na držení)</Czech>
+    </Key>
+    <Key ID="STR_AGM_Interaction_AutoCenterCursor">
+      <English>Auto Center Cursor</English>
+      <German>Mauszeiger automatisch zentrieren</German>
+      <Spanish>Auto-centrar cursor</Spanish>
+      <Polish>Automatycznie centruj kursor </Polish>
+      <Czech>Vycentrování kurzoru</Czech>
+      <Hungarian>Egér auto-centrírozása</Hungarian>
+      <Russian>Автоцентрирование курсора</Russian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Equipment">
+      <English>Equipment &gt;&gt;</English>
+      <German>Ausrüstung &gt;&gt;</German>
+      <Spanish>Equipamiento &gt;&gt;</Spanish>
+      <French>Équipment &gt;&gt;</French>
+      <Polish>Ekwipunek &gt;&gt;</Polish>
+      <Czech>Vybavení &gt;&gt;</Czech>
+      <Hungarian>Felszerelés &gt;&gt;</Hungarian>
+      <Russian>Снаряжение &gt;&gt;</Russian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Push">
+      <English>Push</English>
+      <German>Schieben</German>
+      <Spanish>Empujar</Spanish>
+      <French>Pousser</French>
+      <Polish>Pchnij</Polish>
+      <Czech>Odstrčit</Czech>
+      <Hungarian>Tolás</Hungarian>
+      <Russian>Толкать</Russian>
+    </Key>
+    <Key ID="STR_AGM_Interaction_Interact">
+      <English>Interact</English>
+      <German>Interagiere</German>
+      <Czech>Interakce</Czech>
+      <Russian>Взаимодействовать</Russian>
+      <Polish>Interakcja</Polish>
+      <Spanish>Interactuar</Spanish>
+    </Key>
+  </Package>
+</Project>
