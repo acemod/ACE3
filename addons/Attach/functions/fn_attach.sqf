@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 /*
 Author: eRazeri and CAA-Picard
 

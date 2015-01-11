@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 /*
   Name: AGM_Attach_fnc_openAttachUI
   

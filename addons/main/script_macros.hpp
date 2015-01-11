@@ -168,3 +168,7 @@
 #define ACE_TEXT_RED(Text) ("<t color='#FF0000'>" + ##Text + "</t>")
 #define ACE_TEXT_GREEN(Text) ("<t color='#00FF00'>" + ##Text + "</t>")
 #define ACE_TEXT_YELLOW(Text) ("<t color='#FFFF00'>" + ##Text + "</t>")
+
+
+#define PREPF(fncName) FUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
+#define PREP_MODULE(folder) [] call compile preprocessFileLineNumbers QUOTE(PATHTOF(folder\__PREP__.sqf))

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 class CfgPatches {
   class ADDON {
     units[] = {};
@@ -12,6 +14,9 @@ class CfgPatches {
   };
 };
 
+#include "CfgEventHandlers.hpp"
+
+/*
 class CfgFunctions {
   class ADDON {
     class ADDON {
@@ -24,6 +29,7 @@ class CfgFunctions {
     };
   };
 };
+*/
 
 #define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
   name = #ITEM; \
