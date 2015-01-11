@@ -1,0 +1,5 @@
+#define MAJOR 1
+#define MINOR 0
+#define PATCHLVL 0
+#define BUILD 1
+#define BUILDDATE 2015-01-10 21:26:00.000000
