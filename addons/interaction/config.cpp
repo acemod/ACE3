@@ -78,9 +78,9 @@ class AGM_Core_Default_Keys {
   class openInteractionMenuNew {
     displayName = "$STR_AGM_Interaction_InteractionMenu";
     condition = "true";
-    statement = "call AGM_Interaction_fnc_onButtonDown";
-    conditionUp = "!isNull (findDisplay 1713999) && {profileNamespace getVariable ['AGM_Interaction_AutoCloseMenu', false]}";
-    statementUp = "if (AGM_Interaction_MenuType mod 2 == 0) then {call AGM_Interaction_fnc_onButtonUp};";
+    statement = QUOTE( call FUNC(onButtonDown) );
+    conditionUp = QUOTE( !isNull (findDisplay 1713999) && {profileNamespace getVariable [QUOTE(QGVAR(AutoCloseMenu)), false]} );
+    statementUp = QUOTE( if (GVAR(MenuType) mod 2 == 0) then {call FUNC(onButtonUp)}; );
     exceptions[] = {"AGM_Drag_isNotDragging", "AGM_Medical_canTreat", "AGM_Interaction_isNotEscorting", "AGM_Interaction_isNotSwimming"};
     key = 219;
     shift = 0;
@@ -90,9 +90,9 @@ class AGM_Core_Default_Keys {
   class openInteractionMenuSelfNew {
     displayName = "$STR_AGM_Interaction_InteractionMenuSelf";
     condition = "true";
-    statement = "call AGM_Interaction_fnc_onButtonDownSelf";
-    conditionUp = "!isNull (findDisplay 1713999) && {profileNamespace getVariable ['AGM_Interaction_AutoCloseMenu', false]}";
-    statementUp = "if (AGM_Interaction_MenuType mod 2 == 1) then {call AGM_Interaction_fnc_onButtonUp};";
+    statement = QUOTE( call FUNC(onButtonDownSelf) );
+    conditionUp = QUOTE( !isNull (findDisplay 1713999) && {profileNamespace getVariable [QUOTE(QGVAR(AutoCloseMenu)), false]} );
+    statementUp = QUOTE( if (EGVAR(interaction,MenuType) mod 2 == 1) then {call FUNC(onButtonUp)}; );
     exceptions[] = {"AGM_Drag_isNotDragging", "AGM_Medical_canTreat", "AGM_Interaction_isNotEscorting", "AGM_Interaction_isNotSwimming", "AGM_Core_notOnMap"};
     key = 219;
     shift = 0;
@@ -101,10 +101,10 @@ class AGM_Core_Default_Keys {
   };
   class openDoor {
     displayName = "$STR_AGM_Interaction_OpenDoor";
-    condition = "!AGM_Interaction_isOpeningDoor && {[2] call AGM_Interaction_fnc_getDoor select 1 != ''}";
-    statement = "call AGM_Interaction_fnc_openDoor";
-    conditionUp = "AGM_Interaction_isOpeningDoor";
-    statementUp = "AGM_Interaction_isOpeningDoor = false";
+    condition = QUOTE( !GVAR(isOpeningDoor) && {[2] call FUNC(getDoor) select 1 != ''} );
+    statement = QUOTE( call AGM_Interaction_fnc_openDoor );
+    conditionUp = QUOTE( GVAR(isOpeningDoor) );
+    statementUp = QUOTE( GVAR(isOpeningDoor) = false;);
     key = 57;
     shift = 0;
     control = 1;
@@ -112,8 +112,8 @@ class AGM_Core_Default_Keys {
   };
   class tapShoulder {
     displayName = "$STR_AGM_Interaction_TapShoulder";
-    condition = "[_player, cursorTarget] call AGM_Interaction_fnc_canTapShoulder";
-    statement = "[_player, cursorTarget] call AGM_Interaction_fnc_tapShoulder";
+    condition = QUOTE( [_player, cursorTarget] call FUNC(canTapShoulder) );
+    statement = QUOTE( [_player, cursorTarget] call FUNC(tapShoulder); );
     key = 20;
     shift = 1;
     control = 0;
@@ -122,9 +122,9 @@ class AGM_Core_Default_Keys {
   class modifierKey {
     displayName = "$STR_AGM_Interaction_ModifierKey";
     condition = "";
-    statement = "AGM_Modifier = 1;";
+    statement = QUOTE( GVAR(Modifier) = 1; );
     conditionUp = "";
-    statementUp = "AGM_Modifier = 0;";
+    statementUp = QUOTE( GVAR(Modifier) = 0; );
     exceptions[] = {"AGM_Drag_isNotDragging"};
     key = 29;
     shift = 0;
@@ -157,16 +157,16 @@ class AGM_Parameters_Boolean {
 
 class AGM_Core_canInteractConditions {
   class AGM_Interaction_isNotEscorting {
-    condition = "!(_player getVariable ['AGM_isEscorting', false])";
+    condition = QUOTE( !(_player getVariable ['AGM_isEscorting', false]) );
   };
   class AGM_Interaction_isNotCaptive {
-    condition = "!(_player getVariable ['AGM_isCaptive', false])";
+    condition = QUOTE( !(_player getVariable ['AGM_isCaptive', false]) );
   };
   class AGM_Interaction_isNotSurrendering {
-    condition = "!(_player getVariable ['AGM_isSurrender', false])";
+    condition = QUOTE( !(_player getVariable ['AGM_isSurrender', false]) );
   };
   class AGM_Interaction_isNotSwimming {
-    condition = "!underwater _player";
+    condition = QUOTE( !underwater _player );
   };
 };
 
