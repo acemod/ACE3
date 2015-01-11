@@ -29,12 +29,12 @@ switch true do {
   case (_itemName == "AGM_IR_Strobe_Item") : {
     _attachedItem = "AGM_IR_Strobe_Effect" createVehicle [0,0,0];
     _attachedItem attachTo [_unit,[0,-0.11,0.16],"pilot"];//makes it attach to the head a bit better, shoulder is not good for visibility - eRazeri
-    [localize "STR_AGM_Attach_IrStrobe_Attached"] call AGM_Core_fnc_displayTextStructured;
+    [localize "STR_AGM_Attach_IrStrobe_Attached"] call EFUNC(core,displayTextStructured);
   };
   case (_itemName == "B_IR_Grenade") : {
     _attachedItem = "B_IRStrobe" createVehicle [0,0,0];
     _attachedItem attachTo [_unit,[-0.05,0,0.12],"rightshoulder"];
-    [localize "STR_AGM_Attach_IrGrenade_Attached"] call AGM_Core_fnc_displayTextStructured;
+    [localize "STR_AGM_Attach_IrGrenade_Attached"] call EFUNC(core,displayTextStructured);
   };
   case (_itemName == "O_IR_Grenade") : {
     _attachedItem = "O_IRStrobe" createVehicle [0,0,0];
@@ -59,4 +59,4 @@ switch true do {
 // Remove item
 _unit removeItem _itemName;
 _unit setVariable [QGVAR(ItemName), _itemName, true];
-_unit setVariable ["AGM_AttachedItem", _attachedItem, true];
+_unit setVariable [QGVAR(Item), _attachedItem, true];

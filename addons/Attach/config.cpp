@@ -41,7 +41,7 @@ class CfgVehicles {
   class CAManBase: Man {
     class AGM_SelfActions {
       class AGM_Equipment {
-        class ADDON {
+        class GVAR(Attach) {
           displayName = "$STR_AGM_Attach_AttachDetach";
           condition = QUOTE( [_player, ''] call FUNC(canAttach) );
           statement = QUOTE( [_player] call FUNC(openAttachUI); );
