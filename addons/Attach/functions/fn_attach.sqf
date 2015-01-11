@@ -39,17 +39,17 @@ switch true do {
   case (_itemName == "O_IR_Grenade") : {
     _attachedItem = "O_IRStrobe" createVehicle [0,0,0];
     _attachedItem attachTo [_unit,[-0.05,0,0.12],"rightshoulder"];
-    [localize "STR_AGM_Attach_IrGrenade_Attached"] call AGM_Core_fnc_displayTextStructured;
+    [localize "STR_AGM_Attach_IrGrenade_Attached"] call EFUNC(core,displayTextStructured);
   };
   case (_itemName == "I_IR_Grenade") : {
     _attachedItem = "I_IRStrobe" createVehicle [0,0,0];
     _attachedItem attachTo [_unit,[-0.05,0,0.12],"rightshoulder"];
-    [localize "STR_AGM_Attach_IrGrenade_Attached"] call AGM_Core_fnc_displayTextStructured;
+    [localize "STR_AGM_Attach_IrGrenade_Attached"] call EFUNC(core,displayTextStructured);
   };
   case (_itemName == "Chemlight_blue" or {_itemName == "Chemlight_green"} or {_itemName == "Chemlight_red"} or {_itemName == "Chemlight_yellow"}) : {
     _attachedItem = _itemName createVehicle [0,0,0];
     _attachedItem attachTo [_unit,[-0.05,0,0.12],"rightshoulder"];
-    [localize "STR_AGM_Attach_Chemlight_Attached"] call AGM_Core_fnc_displayTextStructured;
+    [localize "STR_AGM_Attach_Chemlight_Attached"] call EFUNC(core,displayTextStructured);;
   };
   default {
     if (true) exitWith {};
