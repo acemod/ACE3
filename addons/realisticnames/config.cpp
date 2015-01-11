@@ -1,5 +1,7 @@
+#include "script_component.hpp"
+
 class CfgPatches {
-  class AGM_RealisticNames {
+  class ADDON {
     units[] = {};
     weapons[] = {};
     requiredVersion = 0.60;
