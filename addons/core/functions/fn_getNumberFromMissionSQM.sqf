@@ -12,6 +12,6 @@
 
 private "_number";
 
-_number = _this call GVAR(fnc_getStringFromMissionSQM);
+_number = _this call FUNC(getStringFromMissionSQM);
 
 parseNumber _number;

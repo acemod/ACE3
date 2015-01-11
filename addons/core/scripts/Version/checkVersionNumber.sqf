@@ -131,7 +131,7 @@ if (!isServer) then {
     _error = _error call _fnc_cutComma;
 
     diag_log text _error;
-    [_error, "{systemChat _this}"] call GVAR(fnc_execRemoteFnc);
+    [_error, "{systemChat _this}"] call FUNC(execRemoteFnc);
   };
 
   _missingAddonServer = false;
@@ -148,7 +148,7 @@ if (!isServer) then {
     _error = _error call _fnc_cutComma;
 
     diag_log text _error;
-    [_error, "{systemChat _this}"] call GVAR(fnc_execRemoteFnc);
+    [_error, "{systemChat _this}"] call FUNC(execRemoteFnc);
   };
 
   _oldVersionClient = false;
@@ -165,7 +165,7 @@ if (!isServer) then {
     _error = _error call _fnc_cutComma;
 
     diag_log text _error;
-    [_error, "{systemChat _this}"] call GVAR(fnc_execRemoteFnc);
+    [_error, "{systemChat _this}"] call FUNC(execRemoteFnc);
   };
 
   _oldVersionServer = false;
@@ -182,7 +182,7 @@ if (!isServer) then {
     _error = _error call _fnc_cutComma;
 
     diag_log text _error;
-    [_error, "{systemChat _this}"] call GVAR(fnc_execRemoteFnc);
+    [_error, "{systemChat _this}"] call FUNC(execRemoteFnc);
   };
 
   AGM_Version_ClientErrors = [_missingAddon, _missingAddonServer, _oldVersionClient, _oldVersionServer];

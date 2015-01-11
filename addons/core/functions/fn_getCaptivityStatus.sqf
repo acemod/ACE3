@@ -16,7 +16,7 @@ _unit = _this select 0;
 
 _captivityReasons = missionNamespace getVariable ["AGM_captivityReasons", []];
 
-_unitCaptivityStatus = [captiveNum _unit, count _captivityReasons] call GVAR(fnc_binarizeNumber);
+_unitCaptivityStatus = [captiveNum _unit, count _captivityReasons] call FUNC(binarizeNumber);
 
 _unitCaptivityReasons = [];
 {

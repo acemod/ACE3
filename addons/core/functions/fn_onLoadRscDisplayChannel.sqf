@@ -1,5 +1,5 @@
 /*
-  Name: GVAR(fnc_onLoadRscDisplayChannel)
+  Name: FUNC(onLoadRscDisplayChannel)
 
   Author: Pabst Mirror, commy2
 

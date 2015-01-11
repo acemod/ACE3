@@ -1,5 +1,5 @@
 /*
-Name: GVAR(fnc_getUavControlPosition)
+Name: FUNC(getUavControlPosition)
 
 Author: Pabst Mirror
 
@@ -16,7 +16,7 @@ Returns:
   STRING - Position in the UAV that is currently being controled by the unit.
 
 Example:
-  [AGM_Player] call GVAR(fnc_getUavControlPosition)
+  [AGM_Player] call FUNC(getUavControlPosition)
 */
 
 private ["_unit", "_uav", "_positionArray", "_playerIndex"];

@@ -1,5 +1,5 @@
 /*
-Name: GVAR(fnc_applyForceWalkStatus)
+Name: FUNC(applyForceWalkStatus)
 
 Author: Pabst Mirror
 
@@ -13,7 +13,7 @@ Returns:
   None
 
 Example:
-  [AGM_Player] call GVAR(fnc_applyForceWalkStatus)
+  [AGM_Player] call FUNC(applyForceWalkStatus)
 */
 
 private ["_unit", "_forceWalkNumber"];

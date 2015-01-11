@@ -35,5 +35,5 @@ _logic = "Logic" createVehicleLocal [0,0,0];
 _logic setVariable ["Action", _mode];
 _logic setVariable ["CheckAll", _checkAll];
 _logic setVariable ["Whitelist", _whitelist];
-[_logic, [], true] call GVAR(fnc_moduleCheckPBOs);
+[_logic, [], true] call FUNC(moduleCheckPBOs);
 deleteVehicle _logic;

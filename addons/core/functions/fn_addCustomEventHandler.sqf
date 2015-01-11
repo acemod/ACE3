@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  *
- * Add a custom event to a unit. The event scripts are called by GVAR(fnc_callCustomEventHandlers).
+ * Add a custom event to a unit. The event scripts are called by FUNC(callCustomEventHandlers).
  *
  * Argument:
  * 0: Object the event should be assigned to or namespace (Object OR Namespace)

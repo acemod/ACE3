@@ -17,7 +17,7 @@ _unit = _this select 0;
 if (isNull _unit || {!alive _unit}) exitWith {};
 
 if (_unit isKindOf "CAManBase") then {
-  _name = [name _unit, true] call GVAR(fnc_sanitizeString);
+  _name = [name _unit, true] call FUNC(sanitizeString);
 
   //if (_name != _unit getVariable ["AGM_Name", ""]) then {
     _unit setVariable ["AGM_Name", _name, true];

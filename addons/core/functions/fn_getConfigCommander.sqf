@@ -15,6 +15,6 @@ private ["_vehicle", "_config", "_turret"];
 _vehicle = _this select 0;
 
 _config = configFile >> "CfgVehicles" >> _vehicle;
-_turret = [_vehicle] call GVAR(fnc_getTurretCommander);
+_turret = [_vehicle] call FUNC(getTurretCommander);
 
-[_config, _turret] call GVAR(fnc_getTurretConfigPath)
+[_config, _turret] call FUNC(getTurretConfigPath)

@@ -25,7 +25,7 @@ _name = _this select 3;
 ["Remote", [_arguments, _this select 1, _name], {format ["%1 call %2 id: %3", _this select 0, _this select 1, _this select 2]}, false] call AGM_Debug_fnc_log;
 
 // execute function on every currently connected machine
-[[_arguments, _unit], _this select 1, 2] call GVAR(fnc_execRemoteFnc);
+[[_arguments, _unit], _this select 1, 2] call FUNC(execRemoteFnc);
 
 // save persistent function for JIP
 private ["_persistentFunctions", "_index"];

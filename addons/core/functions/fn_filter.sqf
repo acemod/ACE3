@@ -11,7 +11,7 @@
  * Final array
  *
  * Usage:
- * [[0,1,2,3,4], {_this > 2}] call GVAR(fnc_filter) ==> [3,4]
+ * [[0,1,2,3,4], {_this > 2}] call FUNC(filter) ==> [3,4]
  */
 
 private ["_array", "_code", "_newArray", "_index"];

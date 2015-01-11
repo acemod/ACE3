@@ -9,7 +9,7 @@ _alt =_this select 4;
 
 if (_key in FORBIDDEN_KEYS) exitWith {true};
 
-_keyCode = [_key, _shft, _ctrl, _alt] call GVAR(fnc_convertKeyCode);
+_keyCode = [_key, _shft, _ctrl, _alt] call FUNC(convertKeyCode);
 
 _keyIndex = floor _keyCode;
 _time = time;

@@ -12,4 +12,4 @@
  * None.
  */
 
-[_this, "GVAR(fnc_callCustomEventHandlers)", 2] call GVAR(fnc_execRemoteFnc);
+[_this, QUOTE(FUNC(callCustomEventHandlers)), 2] call FUNC(execRemoteFnc);

@@ -8,7 +8,7 @@ for "_index" from 0 to (_count - 1) do {
 
   _name = configName _x;
   _value = _x call bis_fnc_getcfgdata;
-  [_name, _value] call GVAR(fnc_setParameter);
+  [_name, _value] call FUNC(setParameter);
 };
 
 _config = configFile >> "AGM_Parameters_Numeric";
@@ -18,7 +18,7 @@ for "_index" from 0 to (_count - 1) do {
 
   _name = configName _x;
   _value = _x call bis_fnc_getcfgdata;
-  [_name, _value] call GVAR(fnc_setParameter);
+  [_name, _value] call FUNC(setParameter);
 };
 
 _config = configFile >> "AGM_Parameters_Boolean";
@@ -28,7 +28,7 @@ for "_index" from 0 to (_count - 1) do {
 
   _name = configName _x;
   _value = _x call bis_fnc_getcfgdata;
-  [_name, _value > 0] call GVAR(fnc_setParameter);
+  [_name, _value > 0] call FUNC(setParameter);
 };
 
 
@@ -40,7 +40,7 @@ for "_index" from 0 to (_count - 1) do {
 
   _name = configName _x;
   _value = _x call bis_fnc_getcfgdata;
-  [_name, _value] call GVAR(fnc_setParameter);
+  [_name, _value] call FUNC(setParameter);
 };
 
 _config = missionConfigFile >> "AGM_Parameters_Numeric";
@@ -50,7 +50,7 @@ for "_index" from 0 to (_count - 1) do {
 
   _name = configName _x;
   _value = _x call bis_fnc_getcfgdata;
-  [_name, _value] call GVAR(fnc_setParameter);
+  [_name, _value] call FUNC(setParameter);
 };
 
 _config = missionConfigFile >> "AGM_Parameters_Boolean";
@@ -60,5 +60,5 @@ for "_index" from 0 to (_count - 1) do {
 
   _name = configName _x;
   _value = _x call bis_fnc_getcfgdata;
-  [_name, _value > 0] call GVAR(fnc_setParameter);
+  [_name, _value > 0] call FUNC(setParameter);
 };

@@ -11,7 +11,7 @@
  * Final array
  *
  * Usage:
- * [["2", "gobblecock", "25"], {parseNumber _this}] call GVAR(fnc_map) ==> [2, 0, 25]
+ * [["2", "gobblecock", "25"], {parseNumber _this}] call FUNC(map) ==> [2, 0, 25]
  */
 
 private ["_array", "_code"];

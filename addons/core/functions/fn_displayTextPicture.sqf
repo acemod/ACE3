@@ -26,4 +26,4 @@ _text = composeText [
   _text
 ];
 
-[_text] call GVAR(fnc_displayTextStructured);
+[_text] call FUNC(displayTextStructured);

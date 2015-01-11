@@ -26,6 +26,6 @@ try {
   };
 } catch {
   if (stance _unit != "PRONE") then {
-    [_unit, _exception] call GVAR(fnc_doAnimation);
+    [_unit, _exception] call FUNC(doAnimation);
   };
 };

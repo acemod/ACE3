@@ -21,9 +21,9 @@ if (_unit == driver _vehicle) then {
   _action = getText (_config >> "driverAction");
   _inAction = getText (_config >> "driverInAction");
 } else {
-  _turretIndex = [_unit] call GVAR(fnc_getTurretIndex);
+  _turretIndex = [_unit] call FUNC(getTurretIndex);
 
-  _config = [_config, _turretIndex] call GVAR(fnc_getTurretConfigPath);
+  _config = [_config, _turretIndex] call FUNC(getTurretConfigPath);
 
   _action = getText (_config >> "gunnerAction");
   _inAction = getText (_config >> "gunnerInAction");

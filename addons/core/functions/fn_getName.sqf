@@ -23,10 +23,10 @@ if (isNil "_showEffective") then {
 _name = "";
 
 if (_unit isKindOf "CAManBase") then {
-  _name = _unit getVariable ["AGM_Name", localize "STR_GVAR(Unknown)"];
+  _name = _unit getVariable ["AGM_Name", localize QUOTE(DOUBLES(STR,GVAR(Unknown)))];
 } else {
   if (_showEffective) then {
-    _name = [effectiveCommander _unit] call GVAR(fnc_getName);
+    _name = [effectiveCommander _unit] call FUNC(getName);
   } else {
     _name = getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
   };

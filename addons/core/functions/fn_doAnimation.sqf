@@ -37,7 +37,7 @@ if (count _this > 3) then {
 // don't overwrite more important animations
 if (_unit getVariable ["AGM_isUnconscious", false] && {!_force}) exitWith {
   if (_animation != "Unconscious") then {
-    [_unit, "Unconscious", 2] call GVAR(fnc_doAnimation);
+    [_unit, "Unconscious", 2] call FUNC(doAnimation);
   };
 };
 
@@ -46,29 +46,29 @@ if (_animation == "Unconscious" && {!(_unit getVariable ["AGM_isUnconscious", fa
 
 // switchMove "" no longer works in dev 1.37
 if (_animation == "") then {
-  _animation = [_unit] call GVAR(fnc_getDefaultAnim);
+  _animation = [_unit] call FUNC(getDefaultAnim);
 };
 
 switch (_priority) do {
   case 0 : {
     if (_unit == vehicle _unit) then {
-      [_unit, format ["{_this playMove '%1'}", _animation], _unit] call GVAR(fnc_execRemoteFnc);
+      [_unit, format ["{_this playMove '%1'}", _animation], _unit] call FUNC(execRemoteFnc);
     } else {
       // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have no global effects when executed on remote machines inside vehicles.
-      [_unit, format ["{_this playMove '%1'}", _animation]] call GVAR(fnc_execRemoteFnc);
+      [_unit, format ["{_this playMove '%1'}", _animation]] call FUNC(execRemoteFnc);
     };
   };
   case 1 : {
     if (_unit == vehicle _unit) then {
-      [_unit, format ["{_this playMoveNow '%1'}", _animation], _unit] call GVAR(fnc_execRemoteFnc);
+      [_unit, format ["{_this playMoveNow '%1'}", _animation], _unit] call FUNC(execRemoteFnc);
     } else {
       // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have no global effects when executed on remote machines inside vehicles.
-      [_unit, format ["{_this playMoveNow '%1'}", _animation]] call GVAR(fnc_execRemoteFnc);
+      [_unit, format ["{_this playMoveNow '%1'}", _animation]] call FUNC(execRemoteFnc);
     };
   };
   case 2 : {
     // Execute on all machines. SwitchMove has local effects.
-    [_unit, format ["{_this switchMove '%1'}", _animation]] call GVAR(fnc_execRemoteFnc);
+    [_unit, format ["{_this switchMove '%1'}", _animation]] call FUNC(execRemoteFnc);
   };
   default {};
 };

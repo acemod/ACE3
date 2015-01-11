@@ -8,10 +8,10 @@ _index1 = GVAR(OptionNamesNew) find _name;
 _state = if (_index1 == -1) then {_index1 = count GVAR(OptionNamesNew); !(profileNamespace getVariable _name)} else {!(GVAR(OptionStatesNew) select _index1)};
 
 disableSerialization;
-_dlgMenuDialog = uiNamespace getVariable "GVAR(MenuDialog)";
+_dlgMenuDialog = uiNamespace getVariable QGVAR(MenuDialog);
 
 _control = _dlgMenuDialog displayCtrl (300 + _index);
-_control ctrlSetText format ["\AGM_Core\UI\box_%1checked_ca.paa", ["un", ""] select _state];
+_control ctrlSetText format [PATHTOF(UI\box_%1checked_ca.paa", ["un", ")] select _state];
 
 GVAR(OptionNamesNew) set [_index1, _name];
 GVAR(OptionStatesNew) set [_index1, _state];

@@ -17,7 +17,7 @@
 #define DEFAULT_DELAY 2
 #define DEFAULT_PRIORITY 0
 
-if (isNil "GVAR(lastHint)") then {
+if (isNil QGVAR(lastHint)) then {
   GVAR(lastHint) = [0, 0];
 };
 

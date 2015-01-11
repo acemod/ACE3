@@ -39,20 +39,20 @@ if (typeName _unit == "SCALAR") exitWith {
       if (isServer) then {
         _arguments call _function;
       } else {
-        publicVariableServer "GVAR(remoteFnc)";
+        publicVariableServer QGVAR(remoteFnc);
       };
     };
     case 2 : {
       _arguments call _function;
 
       GVAR(remoteFnc) set [2, 0];
-      publicVariable "GVAR(remoteFnc)";
+      publicVariable QGVAR(remoteFnc);
     };
     case 3 : {
       if (isDedicated) then {
         _arguments call _function;
       } else {
-        if (!isServer) then {publicVariableServer "GVAR(remoteFnc)"};
+        if (!isServer) then {publicVariableServer QGVAR(remoteFnc)};
       };
     };
   };
@@ -63,8 +63,8 @@ if (local _unit) then {
 } else {
   if (isServer) then {
     _id = owner _unit;
-    _id publicVariableClient "GVAR(remoteFnc)";
+    _id publicVariableClient QGVAR(remoteFnc);
   } else {
-    publicVariableServer "GVAR(remoteFnc)";
+    publicVariableServer QGVAR(remoteFnc);
   };
 };

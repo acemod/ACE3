@@ -4,7 +4,7 @@
 #define OFFSET_2 200
 
 closeDialog 0;
-createDialog "GVAR(OptionsMenu_Dialog)";
+createDialog QGVAR(OptionsMenu_Dialog);
 
 GVAR(keyNew) = [];
 GVAR(keySet) = -1;
@@ -16,12 +16,12 @@ GVAR(OptionNamesNew) = [];
 GVAR(OptionStatesNew) = [];
 
 disableSerialization;
-_dlgMenuDialog = uiNamespace getVariable "GVAR(MenuDialog)";
+_dlgMenuDialog = uiNamespace getVariable QGVAR(MenuDialog);
 
 _ehid_keydown = _dlgMenuDialog displayAddEventHandler ["KeyDown", "_this select 1 > 1"];
 _ehid_keyup = _dlgMenuDialog displayAddEventHandler ["KeyUp", "_this select 1 > 1"];
 
-_config = configFile >> "GVAR(Default_Keys)";
+_config = configFile >> QGVAR(Default_Keys);
 _count = count _config;
 
 _countPages = ceil (_count / 20) + 1;
@@ -34,7 +34,7 @@ for "_index" from 0 to (_count - 1 min 19) do {
   _isDisabled = getNumber (_configFile >> "disabled") == 1;
 
   _keyCode = profileNamespace getVariable format ["AGM_Key_%1", _keyName];
-  _description = [_keyCode] call GVAR(fnc_revertKeyCodeLocalized);
+  _description = [_keyCode] call FUNC(revertKeyCodeLocalized);
 
   _control1 = _dlgMenuDialog displayCtrl (OFFSET_1 + _index);
   _control2 = _dlgMenuDialog displayCtrl (OFFSET_2 + _index);
@@ -83,12 +83,12 @@ if (GVAR(keySave) == 1) then {
 
   if (_count0 > 0 || {_count1 > 0}) then {
     saveProfileNamespace;
-    [localize "STR_GVAR(ProfileSaved)"] call GVAR(fnc_displayTextStructured);
+    [localize QUOTE(DOUBLES(STR,GVAR(ProfileSaved)))] call FUNC(displayTextStructured);
   } else {
-    [localize "STR_GVAR(ProfileNotSaved)"] call GVAR(fnc_displayTextStructured);
+    [localize QUOTE(DOUBLES(STR,GVAR(ProfileNotSaved)))] call FUNC(displayTextStructured);
   };
 } else {
-  [localize "STR_GVAR(ProfileNotSaved)"] call GVAR(fnc_displayTextStructured);
+  [localize QUOTE(DOUBLES(STR,GVAR(ProfileNotSaved)))] call FUNC(displayTextStructured);
 };
 
 GVAR(keyNewTemp) = nil;

@@ -126,7 +126,7 @@ class CfgFunctions {
   };
   class AGM_Debug {
     class AGM_Debug {
-      file = "AGM_Core\functions\Debug";
+      file = PATHTOF(functions\Debug);
       class exportConfig;
       class getChildren;
       class getDisplayConfigName;
@@ -139,7 +139,7 @@ class CfgFunctions {
   };
   class AGM_CuratorFix {
     class AGM_CuratorFix {
-      file = "AGM_Core\functions\CuratorFix";
+      file = PATHTOF(functions\CuratorFix);
       class addUnloadEventhandler;
       class fixCrateContent;
     };

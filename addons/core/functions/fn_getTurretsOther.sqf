@@ -14,13 +14,13 @@ private ["_vehicle", "_turrets", "_turret", "_config"];
 
 _vehicle = _this select 0;
 
-_turrets = [_vehicle] call GVAR(fnc_getTurrets);
+_turrets = [_vehicle] call FUNC(getTurrets);
 
 _turret = [];
 {
   _config = configFile >> "CfgVehicles" >> _vehicle;
 
-  _config = [_config, _x] call GVAR(fnc_getTurretConfigPath);
+  _config = [_config, _x] call FUNC(getTurretConfigPath);
 
   if (  getNumber (_config >> "isCopilot") != 1
     && {getNumber (_config >> "primaryGunner") != 1}

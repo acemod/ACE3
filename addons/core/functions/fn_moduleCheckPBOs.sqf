@@ -24,7 +24,7 @@ if (isNil "_whitelist") then {
   _whitelist = [];
 };
 
-_whitelist = [_whitelist, {toLower _this}] call GVAR(fnc_map);
+_whitelist = [_whitelist, {toLower _this}] call FUNC(map);
 
 AGM_Version_CheckAll = _checkAll;
 AGM_Version_Whitelist = _whitelist;
@@ -67,7 +67,7 @@ if (!isServer) then {
         _error = _error + "Newer version; ";
       };
 
-      //[_error, "{systemChat _this}"] call GVAR(fnc_execRemoteFnc);
+      //[_error, "{systemChat _this}"] call FUNC(execRemoteFnc);
       diag_log text _error;
 
       _text = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _text]];
@@ -87,7 +87,7 @@ if (!isServer) then {
       if (_mode == 2) then {
         sleep 10;
         waitUntil {alive player};
-        [player] call GVAR(fnc_adminKick);
+        [player] call FUNC(adminKick);
       };
     };
   };

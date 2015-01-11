@@ -23,7 +23,7 @@ private "_hitpointClasses";
 _hitpointClasses = [_config >> "HitPoints"];
 {
 	private "_class";
-	_class = ([_config, _x] call GVAR(fnc_getTurretConfigPath)) >> "HitPoints";
+	_class = ([_config, _x] call FUNC(getTurretConfigPath)) >> "HitPoints";
 
 	if (isClass _class) then {
 		_hitpointClasses pushBack _class;

@@ -11,7 +11,7 @@
  */
 
   /*
-  Name: GVAR(fnc_getDoorTurrets)
+  Name: FUNC(getDoorTurrets)
   
   Author(s):
     bux578
@@ -30,13 +30,13 @@ private ["_vehicleType", "_turrets", "_doorTurrets", "_config"];
 
 _vehicleType = _this select 0;
 
-_turrets = [_vehicleType] call GVAR(fnc_getTurrets);
+_turrets = [_vehicleType] call FUNC(getTurrets);
 
 _doorTurrets = [];
 
 {
   _config = configFile >> "CfgVehicles" >> _vehicleType;
-  _config = [_config, _x] call GVAR(fnc_getTurretConfigPath);
+  _config = [_config, _x] call FUNC(getTurretConfigPath);
 
   if ((getNumber (_config >> "isCopilot") == 0) && count (getArray (_config >> "weapons")) > 0 ) then {
     _doorTurrets pushBack _x;

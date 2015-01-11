@@ -366,7 +366,7 @@ class AGM_Core_OptionsMenu_Dialog {
       idc = 300;
       //type = 0;
       style = 48;
-      text = "\AGM_Core\UI\box_unchecked_ca.paa";
+      text = PATHTOF(UI\box_unchecked_ca.paa);
       colorBackground[] = {0, 0, 0, 0};
       colorText[] = {1, 1, 1, 1};
       x = (HSPACE2 + 3 * 0.1) * safezoneW + safezoneX;

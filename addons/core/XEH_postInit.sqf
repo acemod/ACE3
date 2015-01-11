@@ -1,11 +1,11 @@
 // BWA3 Realism - Core
 // (C) 2013 KoffeinFlummi. See LICENSE.
 
-"GVAR(remoteFnc)" addPublicVariableEventHandler {
-  (_this select 1) call GVAR(fnc_execRemoteFnc);
+QGVAR(remoteFnc) addPublicVariableEventHandler {
+  (_this select 1) call FUNC(execRemoteFnc);
 };
 
-[missionNamespace] call GVAR(fnc_executePersistent);
+[missionNamespace] call FUNC(executePersistent);
 
 // check previous version number from profile
 _currentVersion = getText (configFile >> "CfgPatches" >> "AGM_Core" >> "version");
@@ -17,22 +17,22 @@ if (_currentVersion != _previousVersion) then {
   profileNamespace setVariable ["AGM_VersionNumberString", _currentVersion];
 };
 
-0 spawn compile preprocessFileLineNumbers "\AGM_core\scripts\Version\checkVersionNumber.sqf";
+0 spawn compile preprocessFileLineNumbers PATHTOF(scripts\Version\checkVersionNumber.sqf);
 
 // everything that only player controlled machines need, goes below this
 if (!hasInterface) exitWith {};
 
-call compile preprocessFileLineNumbers "\AGM_core\scripts\assignedItemFix.sqf";
+call compile preprocessFileLineNumbers PATHTOF(scripts\assignedItemFix.sqf);
 
-GVAR(keyInput)  = compile preprocessFileLineNumbers "\AGM_core\scripts\keyInput.sqf";
-GVAR(keyRelease)  = compile preprocessFileLineNumbers "\AGM_core\scripts\keyRelease.sqf";
-GVAR(editKey)   = compile preprocessFileLineNumbers "\AGM_core\scripts\editKey.sqf";
-GVAR(openMenu)  = compile preprocessFileLineNumbers "\AGM_core\scripts\openMenu.sqf";
-GVAR(closeMenu) = compile preprocessFileLineNumbers "\AGM_core\scripts\closeMenu.sqf";
-GVAR(nextKeys) = compile preprocessFileLineNumbers "\AGM_core\scripts\nextKeys.sqf";
-GVAR(toggleState) = compile preprocessFileLineNumbers "\AGM_core\scripts\toggleState.sqf";
+GVAR(keyInput)  = compile preprocessFileLineNumbers PATHTOF(scripts\keyInput.sqf);
+GVAR(keyRelease)  = compile preprocessFileLineNumbers PATHTOF(scripts\keyRelease.sqf);
+GVAR(editKey)   = compile preprocessFileLineNumbers PATHTOF(scripts\editKey.sqf);
+GVAR(openMenu)  = compile preprocessFileLineNumbers PATHTOF(scripts\openMenu.sqf);
+GVAR(closeMenu) = compile preprocessFileLineNumbers PATHTOF(scripts\closeMenu.sqf);
+GVAR(nextKeys) = compile preprocessFileLineNumbers PATHTOF(scripts\nextKeys.sqf);
+GVAR(toggleState) = compile preprocessFileLineNumbers PATHTOF(scripts\toggleState.sqf);
 
-[false] call GVAR(fnc_setKeyDefault);
+[false] call FUNC(setKeyDefault);
 
 GVAR(keyStates) = [];
 GVAR(keyTimes) = [];
@@ -41,9 +41,9 @@ for "_index" from 0 to 300 do {
   GVAR(keyTimes) set [_index, -1];
 };
 
-call compile preprocessFileLineNumbers "\AGM_core\scripts\KeyInput\initCanInteractFunction.sqf";
-call compile preprocessFileLineNumbers "\AGM_core\scripts\KeyInput\initKeys.sqf";
-call compile preprocessFileLineNumbers "\AGM_core\scripts\KeyInput\initScrollWheel.sqf";
+call compile preprocessFileLineNumbers PATHTOF(scripts\KeyInput\initCanInteractFunction.sqf);
+call compile preprocessFileLineNumbers PATHTOF(scripts\KeyInput\initKeys.sqf);
+call compile preprocessFileLineNumbers PATHTOF(scripts\KeyInput\initScrollWheel.sqf);
 
 0 spawn {
   while {true} do {
@@ -51,11 +51,11 @@ call compile preprocessFileLineNumbers "\AGM_core\scripts\KeyInput\initScrollWhe
     findDisplay 46 displayAddEventHandler ["KeyDown", "_this call GVAR(onKeyDown)"];
     findDisplay 46 displayAddEventHandler ["KeyUp", "_this call GVAR(onKeyUp)"];
     findDisplay 46 displayAddEventHandler ["MouseZChanged", "_this call GVAR(onScrollWheel)"];
-    [false] call GVAR(fnc_disableUserInput);
+    [false] call FUNC(disableUserInput);
     waitUntil {isNull (findDisplay 46)};
   };
 };
 
 enableCamShake true;
 
-[missionNamespace, "playerChanged", "{if (alive (_this select 0)) then {[_this select 0] call GVAR(fnc_setName)}; if (alive (_this select 1)) then {[_this select 1] call GVAR(fnc_setName)};}"] call GVAR(fnc_addCustomEventhandler);
+[missionNamespace, "playerChanged", "{if (alive (_this select 0)) then {[_this select 0] call FUNC(setName)}; if (alive (_this select 1)) then {[_this select 1] call FUNC(setName)};}"] call FUNC(addCustomEventhandler);

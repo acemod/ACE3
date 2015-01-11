@@ -16,7 +16,7 @@ _overwrite = _this select 0;
 
 _saveProfile = false;
 
-_config = configFile >> "GVAR(Default_Keys)";
+_config = configFile >> QGVAR(Default_Keys);
 _count = count _config;
 
 for "_index" from 0 to (_count - 1) do {
@@ -30,14 +30,14 @@ for "_index" from 0 to (_count - 1) do {
     _ctrl = getNumber (_configFile >> "Control") == 1;
     _alt = getNumber (_configFile >> "Alt") == 1;
 
-    _keyCode = [_key, _shft, _ctrl, _alt] call GVAR(fnc_convertKeyCode);
+    _keyCode = [_key, _shft, _ctrl, _alt] call FUNC(convertKeyCode);
 
     profileNamespace setVariable [_name, _keyCode];
     _saveProfile = true;
   };
 };
 
-_config = configFile >> "GVAR(Options)";
+_config = configFile >> QGVAR(Options);
 _count = count _config;
 
 for "_index" from 0 to (_count - 1) do {

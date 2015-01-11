@@ -32,7 +32,7 @@ class CfgVehicles {
     function = "AGM_Core_fnc_moduleCheckPBOs";
     scope = 2;
     isGlobal = 1;
-    icon = "\AGM_Core\UI\IconCheckPBO_ca.paa";
+    icon = PATHTOF(UI\IconCheckPBO_ca.paa);
     class Arguments {
       class Action {
         displayName = "Action";

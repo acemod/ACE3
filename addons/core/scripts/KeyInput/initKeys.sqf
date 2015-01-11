@@ -1,9 +1,9 @@
 // by commy2
 
-_config = configFile >> "GVAR(Default_Keys)";
+_config = configFile >> QGVAR(Default_Keys);
 _count = count _config;
 
-_header = "_keyCode = [_this select 1, _this select 2, _this select 3, _this select 4] call GVAR(fnc_convertKeyCode); _keyIndex = floor _keyCode; if (_keyIndex == 0) exitWith {false}; if (!(profileNamespace getVariable ['AGM_enableNumberHotkeys', true]) && {_keyIndex < 12} && {_keyIndex > 1} && {_keyCode mod 1 == 0}) exitWith {false}; _time = time; _player = AGM_player; _vehicle = vehicle _player; _isInput = false;";
+_header = "_keyCode = [_this select 1, _this select 2, _this select 3, _this select 4] call FUNC(convertKeyCode); _keyIndex = floor _keyCode; if (_keyIndex == 0) exitWith {false}; if (!(profileNamespace getVariable ['AGM_enableNumberHotkeys', true]) && {_keyIndex < 12} && {_keyIndex > 1} && {_keyCode mod 1 == 0}) exitWith {false}; _time = time; _player = AGM_player; _vehicle = vehicle _player; _isInput = false;";
 _headerUp = "_keyCode = _this select 1; _keyIndex = _keyCode; if (_keyIndex == 0) exitWith {false}; _time = time; _player = AGM_player; _vehicle = vehicle _player;";
 
 _handleDoubleTap = "if (_time < (GVAR(keyTimes) select _keyIndex) + 0.5 && {_keyIndex == _keyCode}) then {_keyCode = _keyIndex + 0.8};";
@@ -56,7 +56,7 @@ for "_index" from 0 to (_count - 1) do {
 };
 
 _halt = "if (!(_allowHold) || {_disallowHold}) then {GVAR(keyStates) set [_keyIndex, (GVAR(keyStates) select _keyIndex) + 1]; GVAR(keyTimes) set [_keyIndex, _time];};";
-_haltUp = "GVAR(keyStates) set [_keyIndex, 0];";
+_haltUp = QGVAR(keyStates) set [_keyIndex, 0];;
 
 //_return = "_isInput";
 _return = "if (profileNamespace getVariable ['AGM_enableNumberHotkeys', true] && {_keyIndex < 12} && {_keyIndex > 1}) then {true} else {_isInput}";

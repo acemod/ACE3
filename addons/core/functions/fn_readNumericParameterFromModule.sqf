@@ -30,4 +30,4 @@ if (typeName _value == "STRING") then {
 };
 
 // Set the parameter
-[_agmParameterName, _value] call GVAR(fnc_setParameter);
+[_agmParameterName, _value] call FUNC(setParameter);

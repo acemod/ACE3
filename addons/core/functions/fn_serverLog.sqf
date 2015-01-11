@@ -3,5 +3,5 @@
 if (isServer) then {
   diag_log _this;
 } else {
-  [_this, "GVAR(fnc_serverLog)", 1] call GVAR(fnc_execRemoteFnc);
+  [_this, QUOTE(FUNC(serverLog)), 1] call FUNC(execRemoteFnc);
 };

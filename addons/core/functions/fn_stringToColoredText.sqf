@@ -17,11 +17,11 @@ _string = format ["%1", _this select 0];
 _color = _this select 1;
 
 _color = (
-  [255 * (_color select 0), 2] call GVAR(fnc_toHex)
+  [255 * (_color select 0), 2] call FUNC(toHex)
 ) + (
-  [255 * (_color select 1), 2] call GVAR(fnc_toHex)
+  [255 * (_color select 1), 2] call FUNC(toHex)
 ) + (
-  [255 * (_color select 2), 2] call GVAR(fnc_toHex)
+  [255 * (_color select 2), 2] call FUNC(toHex)
 );
 
 parseText format ["<t align='center' color='#%2' >%1</t>", _string, _color];

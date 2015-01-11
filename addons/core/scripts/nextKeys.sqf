@@ -6,7 +6,7 @@
 #define OFFSET_4 400
 #define OFFSET_5 500
 
-_config = configFile >> "GVAR(Default_Keys)";
+_config = configFile >> QGVAR(Default_Keys);
 _count = count _config;
 
 _countPages = ceil (_count / 20) + 1;
@@ -17,7 +17,7 @@ if (GVAR(MenuPage) == - 1) then {GVAR(MenuPage) = _countPages - 1};
 if (GVAR(MenuPage) > _countPages - 1) then {GVAR(MenuPage) = 0};
 
 disableSerialization;
-_dlgMenuDialog = uiNamespace getVariable "GVAR(MenuDialog)";
+_dlgMenuDialog = uiNamespace getVariable QGVAR(MenuDialog);
 
 (_dlgMenuDialog displayCtrl 14) ctrlSetText format ["%1/%2", GVAR(MenuPage) + 1, _countPages];
 
@@ -25,7 +25,7 @@ if (GVAR(MenuPage) == _countPages - 1) then {
   for "_index" from OFFSET_1 to (OFFSET_1 + 19) do {(_dlgMenuDialog displayCtrl _index) ctrlShow false};
   for "_index" from OFFSET_2 to (OFFSET_2 + 19) do {(_dlgMenuDialog displayCtrl _index) ctrlShow false};
 
-  _config = configFile >> "GVAR(Options)";
+  _config = configFile >> QGVAR(Options);
   _count = count _config;
 
   _offset = 0;
@@ -40,7 +40,7 @@ if (GVAR(MenuPage) == _countPages - 1) then {
     _control2 = _dlgMenuDialog displayCtrl (OFFSET_4 + _index);
     _control3 = _dlgMenuDialog displayCtrl (OFFSET_5 + _index);
 
-    _control1 ctrlSetText format ["\AGM_Core\UI\box_%1checked_ca.paa", ["un", ""] select _state];
+    _control1 ctrlSetText format [PATHTOF(UI\box_%1checked_ca.paa", ["un", ")] select _state];
     _control2 ctrlSetText _displayName;
 
     _control1 ctrlShow true;
@@ -96,7 +96,7 @@ if (GVAR(MenuPage) == _countPages - 1) then {
       _updateKeys select _indexUpdate;
     };
 
-    _description = [_keyCode] call GVAR(fnc_revertKeyCodeLocalized);
+    _description = [_keyCode] call FUNC(revertKeyCodeLocalized);
 
     _control1 = _dlgMenuDialog displayCtrl (OFFSET_1 + _index);
     _control2 = _dlgMenuDialog displayCtrl (OFFSET_2 + _index);

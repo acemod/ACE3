@@ -29,7 +29,7 @@ if !(_reason in _captivityReasons) then {
 };
 
 // get reasons why the unit is captive already and update to the new status
-_unitCaptivityReasons = [_unit] call GVAR(fnc_getCaptivityStatus);
+_unitCaptivityReasons = [_unit] call FUNC(getCaptivityStatus);
 
 _captivityReasonsBooleans = [];
 {
@@ -38,7 +38,7 @@ _captivityReasonsBooleans = [];
 
 _captivityReasonsBooleans set [_captivityReasons find _reason, _status];
 
-_bitmask = _captivityReasonsBooleans call GVAR(fnc_toBitmask);
+_bitmask = _captivityReasonsBooleans call FUNC(toBitmask);
 
 // actually apply the setCaptive command globaly
-[[_unit, _bitmask], "{(_this select 0) setCaptive (_this select 1)}", _unit] call GVAR(fnc_execRemoteFnc);
+[[_unit, _bitmask], "{(_this select 0) setCaptive (_this select 1)}", _unit] call FUNC(execRemoteFnc);

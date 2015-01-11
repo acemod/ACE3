@@ -1,5 +1,5 @@
 /*
-  Name: GVAR(fnc_toNumber)
+  Name: FUNC(toNumber)
 
   Author(s):
     Garth de Wet (LH)
@@ -14,7 +14,7 @@
     NUMBER
 
   Example:
-    _number = ["102"] call GVAR(fnc_toNumber);
+    _number = ["102"] call FUNC(toNumber);
 */
 if (TYPENAME(_this select 0) == "SCALAR")exitWith {
   (_this select 0)

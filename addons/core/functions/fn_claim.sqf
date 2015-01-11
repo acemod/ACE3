@@ -18,9 +18,9 @@ _target setVariable ["AGM_isUsedBy", _unit, true];
 
 if (_lockTarget) then {
   if (!isNull _unit) then {
-    [_target, "{_locked = locked _this; _this setVariable ['AGM_lockStatus', _locked]; _this lock 2}", _target] call GVAR(fnc_execRemoteFnc);
+    [_target, "{_locked = locked _this; _this setVariable ['AGM_lockStatus', _locked]; _this lock 2}", _target] call FUNC(execRemoteFnc);
   } else {
-    [_target, "{_this lock (_this getVariable ['AGM_lockStatus', locked _this])}", _target] call GVAR(fnc_execRemoteFnc);
+    [_target, "{_this lock (_this getVariable ['AGM_lockStatus', locked _this])}", _target] call FUNC(execRemoteFnc);
   };
 };
 

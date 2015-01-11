@@ -11,4 +11,4 @@
  * Bool: is unit a player?
  */
 
-isPlayer (_this select 0) || {_this select 0 == call GVAR(fnc_player)}
+isPlayer (_this select 0) || {_this select 0 == call FUNC(player)}

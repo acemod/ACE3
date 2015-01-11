@@ -1,5 +1,5 @@
 /*
-  Name: GVAR(fnc_isEOD)
+  Name: FUNC(isEOD)
   
   Author: Garth de Wet (LH)
   
@@ -16,7 +16,7 @@
     BOOLEAN
   
   Example:
-    _isSpecialist = [player] call GVAR(fnc_isEOD);
+    _isSpecialist = [player] call FUNC(isEOD);
 */
 
 private "_unit";

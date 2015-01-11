@@ -68,10 +68,10 @@ switch (_position) do {
 
   case "gunner" : {
     private "_turretConfig";
-    _turret = [typeOf _vehicle] call GVAR(fnc_getTurretGunner);
+    _turret = [typeOf _vehicle] call FUNC(getTurretGunner);
     if (_turret isEqualTo []) exitWith {false};
 
-    _turretConfig = [_config, _turret] call GVAR(fnc_getTurretConfigPath);
+    _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
 
     _radius = getNumber (_config >> "getInRadius");
     _selectionPosition = _vehicle selectionPosition (getText (_turretConfig >> "memoryPointsGetInGunner"));
@@ -81,10 +81,10 @@ switch (_position) do {
 
   case "commander" : {
     private "_turretConfig";
-    _turret = [typeOf _vehicle] call GVAR(fnc_getTurretCommander);
+    _turret = [typeOf _vehicle] call FUNC(getTurretCommander);
     if (_turret isEqualTo []) exitWith {false};
 
-    _turretConfig = [_config, _turret] call GVAR(fnc_getTurretConfigPath);
+    _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
 
     _radius = getNumber (_config >> "getInRadius");
     _selectionPosition = _vehicle selectionPosition (getText (_turretConfig >> "memoryPointsGetInGunner"));
@@ -94,10 +94,10 @@ switch (_position) do {
 
   case "copilot" : {
     private "_turretConfig";
-    _turret = [typeOf _vehicle] call GVAR(fnc_getTurretCopilot);
+    _turret = [typeOf _vehicle] call FUNC(getTurretCopilot);
     if (_turret isEqualTo []) exitWith {false};
 
-    _turretConfig = [_config, _turret] call GVAR(fnc_getTurretConfigPath);
+    _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
 
     _radius = getNumber (_config >> "getInRadius");
     _selectionPosition = _vehicle selectionPosition (getText (_turretConfig >> "memoryPointsGetInGunner"));
@@ -107,12 +107,12 @@ switch (_position) do {
 
   case "turret" : {
     private ["_turrets", "_turretConfig"];
-    _turrets = [typeOf _vehicle] call GVAR(fnc_getTurretsOther);
+    _turrets = [typeOf _vehicle] call FUNC(getTurretsOther);
 
     if (_index != -1 && {_turret = _turrets select _index;
       CANGETINTURRETINDEX
     }) then {
-      _turretConfig = [_config, _turret] call GVAR(fnc_getTurretConfigPath);
+      _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
 
       _radius = getNumber (_config >> "getInRadius");
       _selectionPosition = _vehicle selectionPosition (getText (_turretConfig >> "memoryPointsGetInGunner"));
@@ -122,7 +122,7 @@ switch (_position) do {
       for "_index" from 0 to (count _turrets - 1) do {
         _turret = _turrets select _index;
         if (CANGETINTURRETINDEX) exitWith {
-          _turretConfig = [_config, _turret] call GVAR(fnc_getTurretConfigPath);
+          _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
 
           _radius = getNumber (_config >> "getInRadius");
           _selectionPosition = _vehicle selectionPosition (getText (_turretConfig >> "memoryPointsGetInGunner"));
@@ -135,12 +135,12 @@ switch (_position) do {
 
   case "ffv" : {
     private ["_turrets", "_turretConfig"];
-    _turrets = [typeOf _vehicle] call GVAR(fnc_getTurretsFFV);
+    _turrets = [typeOf _vehicle] call FUNC(getTurretsFFV);
 
     if (_index != -1 && {_turret = _turrets select _index;
       CANGETINTURRETINDEX
     }) then {
-      _turretConfig = [_config, _turret] call GVAR(fnc_getTurretConfigPath);
+      _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
 
       _radius = getNumber (_config >> "getInRadius");
       _selectionPosition = _vehicle selectionPosition (getText (_turretConfig >> "memoryPointsGetInGunner"));
@@ -150,7 +150,7 @@ switch (_position) do {
       for "_index" from 0 to (count _turrets - 1) do {
         _turret = _turrets select _index;
         if (CANGETINTURRETINDEX) exitWith {
-          _turretConfig = [_config, _turret] call GVAR(fnc_getTurretConfigPath);
+          _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
 
           _radius = getNumber (_config >> "getInRadius");
           _selectionPosition = _vehicle selectionPosition (getText (_turretConfig >> "memoryPointsGetInGunner"));
@@ -163,7 +163,7 @@ switch (_position) do {
 
   case "codriver" : {
     private "_positions";
-    _positions = [typeOf _vehicle] call GVAR(fnc_getVehicleCodriver);
+    _positions = [typeOf _vehicle] call FUNC(getVehicleCodriver);
 
     {
       if (alive _x) then {_positions deleteAt (_positions find (_vehicle getCargoIndex _x))};
@@ -198,7 +198,7 @@ switch (_position) do {
 
   case "cargo" : {
     private "_positions";
-    _positions = [typeOf _vehicle] call GVAR(fnc_getVehicleCargo);
+    _positions = [typeOf _vehicle] call FUNC(getVehicleCargo);
 
     {
       if (alive _x) then {_positions deleteAt (_positions find (_vehicle getCargoIndex _x))};
@@ -253,7 +253,7 @@ _fnc_isInRange = {
 // if you want into the cargo and you can't, then check ffv turrets aswell
 if (_position == "cargo") exitWith {
   if (_return && {!_checkDistance || {_vehicle == vehicle _unit} || _fnc_isInRange}) then {true} else {
-    [_unit, _vehicle, "ffv", _checkDistance] call GVAR(fnc_canGetInPosition);
+    [_unit, _vehicle, "ffv", _checkDistance] call FUNC(canGetInPosition);
   }
 };
 

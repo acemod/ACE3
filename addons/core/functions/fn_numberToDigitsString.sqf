@@ -13,7 +13,7 @@
 
 private ["_digits", "_count", "_string", "_index"];
 
-_digits = _this call GVAR(fnc_numberToDigits);
+_digits = _this call FUNC(numberToDigits);
 
 _count = count _digits;
 

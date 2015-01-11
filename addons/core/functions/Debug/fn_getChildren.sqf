@@ -6,5 +6,5 @@ _name = _this select 0;
 _cfgClass = _this select 1;
 
 _classes = format ["configName inheritsFrom _x == '%1'", _name] configClasses (configFile >> _cfgClass);
-_classes = [_classes, {configName _this}] call GVAR(fnc_map);
+_classes = [_classes, {configName _this}] call FUNC(map);
 _classes

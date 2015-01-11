@@ -3,7 +3,7 @@
 terminate (missionNamespace getVariable ["AGM_waitForAnimationHandle", scriptNull]);
 
 AGM_waitForAnimationHandle = _this spawn {
-	waitUntil {!([_this select 0] call GVAR(fnc_inTransitionAnim))};
+	waitUntil {!([_this select 0] call FUNC(inTransitionAnim))};
 
-	_this call GVAR(fnc_doAnimation);
+	_this call FUNC(doAnimation);
 };

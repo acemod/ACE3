@@ -14,7 +14,7 @@ private ["_weapon", "_type", "_index"];
 
 _weapon = _this select 0;
 
-_type = [getNumber (configFile >> "CfgWeapons" >> _weapon >> "type")] call GVAR(fnc_binarizeNumber);
+_type = [getNumber (configFile >> "CfgWeapons" >> _weapon >> "type")] call FUNC(binarizeNumber);
 
 _index = 0;
 while {!(_type select _index) && {_index < 16}} do {

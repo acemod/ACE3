@@ -11,7 +11,7 @@ if (hasInterface) then {
 			AGM_player = missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player];
 			uiNamespace setVariable ["AGM_player", AGM_player];
 
-			[missionNamespace, "playerChanged", [AGM_player, _this]] call GVAR(fnc_callCustomEventHandlers);
+			[missionNamespace, "playerChanged", [AGM_player, _this]] call FUNC(callCustomEventHandlers);
 		};
 	}] call BIS_fnc_addStackedEventHandler;
 };

@@ -10,4 +10,4 @@
  * This mission has automatic wind? (Bool)
  */
 
-["Mission", "Intel", "windForced"] call GVAR(fnc_getNumberFromMissionSQM) != 1
+["Mission", "Intel", "windForced"] call FUNC(getNumberFromMissionSQM) != 1

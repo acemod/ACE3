@@ -15,7 +15,7 @@
  */
 
 closeDialog 0;
-createDialog "GVAR(ProgressBar_Dialog)";
+createDialog QGVAR(ProgressBar_Dialog);
 
 _this spawn {
   _time = _this select 0;
@@ -25,8 +25,8 @@ _this spawn {
   _function2 = call compile (_this select 4);
 
   disableSerialization;
-  _ctrlProgressBar = uiNamespace getVariable "GVAR(ctrlProgressBar)";
-  _ctrlProgressBarTitle = uiNamespace getVariable "GVAR(ctrlProgressBarTitle)";
+  _ctrlProgressBar = uiNamespace getVariable QGVAR(ctrlProgressBar);
+  _ctrlProgressBarTitle = uiNamespace getVariable QGVAR(ctrlProgressBarTitle);
 
   _ctrlProgressBar ctrlSetPosition [
     safezoneX + 0.1 * safezoneW,
@@ -42,7 +42,7 @@ _this spawn {
   _time = time + _time;
   waitUntil {
     //make sure the progressBar is still open, not just any dialog
-    (isNull (uiNamespace getVariable ["GVAR(ctrlProgressBar)", controlNull])) || {!alive AGM_player} || {time > _time}
+    (isNull (uiNamespace getVariable [QGVAR(ctrlProgressBar), controlNull])) || {!alive AGM_player} || {time > _time}
   };
 
   closeDialog 0;
@@ -51,7 +51,7 @@ _this spawn {
   if (time > _time) then {
     _arguments call _function;
   } else {
-    [localize "STR_GVAR(ActionAborted)"] call GVAR(fnc_displayTextStructured);
+    [localize QOUTE(DOUBLES(STR,GVAR(ActionAborted)))] call FUNC(displayTextStructured);
     if (!isNil "_function2") then {
       _progress = 1 - ((_time - time) / (_this select 0)) max 0 min 1;
       _arguments call _function2;

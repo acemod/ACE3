@@ -19,6 +19,6 @@ if (isNull _unit) exitWith {};
 _speaker = speaker _unit;
 if (_speaker == "AGM_NoVoice") exitWith {};
 
-[0, "{(_this select 1) setSpeaker 'AGM_NoVoice'}", _unit, "AGM_Speaker"] call GVAR(fnc_execPersistentFnc);
+[0, "{(_this select 1) setSpeaker 'AGM_NoVoice'}", _unit, "AGM_Speaker"] call FUNC(execPersistentFnc);
 
 _unit setVariable ["AGM_OriginalSpeaker", _speaker, true];

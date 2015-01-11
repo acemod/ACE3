@@ -1,5 +1,5 @@
 /*
-Name: GVAR(fnc_setForceWalkStatus)
+Name: FUNC(setForceWalkStatus)
 
 Author: Pabst Mirror (from captivity by commy2)
 
@@ -16,7 +16,7 @@ Returns:
   None
 
 Example:
-  [AGM_Player, "BrokenLeg", true] call GVAR(fnc_setForceWalkStatus)
+  [AGM_Player, "BrokenLeg", true] call FUNC(setForceWalkStatus)
 */
 
 private ["_unit", "_reason", "_status", "_forceWalkReasons", "_unitForceWalkReasons", "_forceWalkReasonsBooleans", "_bitmaskNumber"];
@@ -35,7 +35,7 @@ if !(_reason in _forceWalkReasons) then {
 };
 
 // get reasons why the unit is forceWalking already and update to the new status
-_unitForceWalkReasons = [_unit] call GVAR(fnc_getForceWalkStatus);
+_unitForceWalkReasons = [_unit] call FUNC(getForceWalkStatus);
 
 _forceWalkReasonsBooleans = [];
 {
@@ -44,9 +44,9 @@ _forceWalkReasonsBooleans = [];
 
 _forceWalkReasonsBooleans set [_forceWalkReasons find _reason, _status];
 
-_bitmaskNumber = _forceWalkReasonsBooleans call GVAR(fnc_toBitmask);
+_bitmaskNumber = _forceWalkReasonsBooleans call FUNC(toBitmask);
 
 _unit setVariable ["AGM_forceWalkStatusNumber", _bitmaskNumber, true];
 
 // actually apply the forceWalk command globaly
-[[_unit], "GVAR(fnc_applyForceWalkStatus)", _unit] call GVAR(fnc_execRemoteFnc);
+[[_unit], QUOTE(FUNC(applyForceWalkStatus)), _unit] call FUNC(execRemoteFnc);

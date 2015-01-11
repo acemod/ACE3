@@ -63,7 +63,7 @@ switch (_position) do {
   };
 
   case "gunner" : {
-    _turret = [typeOf _vehicle] call GVAR(fnc_getTurretGunner);
+    _turret = [typeOf _vehicle] call FUNC(getTurretGunner);
 
     if (CANGETINTURRETINDEX) then {
       _script = [
@@ -74,7 +74,7 @@ switch (_position) do {
   };
 
   case "commander" : {
-    _turret = [typeOf _vehicle] call GVAR(fnc_getTurretCommander);
+    _turret = [typeOf _vehicle] call FUNC(getTurretCommander);
 
     if (CANGETINTURRETINDEX) then {
       _script = [
@@ -85,7 +85,7 @@ switch (_position) do {
   };
 
   case "copilot" : {
-    _turret = [typeOf _vehicle] call GVAR(fnc_getTurretCopilot);
+    _turret = [typeOf _vehicle] call FUNC(getTurretCopilot);
 
     if (CANGETINTURRETINDEX) then {
       _script = [
@@ -99,7 +99,7 @@ switch (_position) do {
 
   case "turret" : {
     private "_turrets";
-    _turrets = [typeOf _vehicle] call GVAR(fnc_getTurretsOther);
+    _turrets = [typeOf _vehicle] call FUNC(getTurretsOther);
 
     if (_index != -1 && {_turret = _turrets select _index; CANGETINTURRETINDEX}) then {
       _script = [
@@ -126,7 +126,7 @@ switch (_position) do {
 
   case "ffv" : {
     private "_turrets";
-    _turrets = [typeOf _vehicle] call GVAR(fnc_getTurretsFFV);
+    _turrets = [typeOf _vehicle] call FUNC(getTurretsFFV);
 
     if (_index != -1 && {_turret = _turrets select _index; CANGETINTURRETINDEX}) then {
       _script = [
@@ -153,7 +153,7 @@ switch (_position) do {
 
   case "codriver" : {
     private "_positions";
-    _positions = [typeOf _vehicle] call GVAR(fnc_getVehicleCodriver);
+    _positions = [typeOf _vehicle] call FUNC(getVehicleCodriver);
 
     {
       if (alive _x) then {_positions deleteAt (_positions find (_vehicle getCargoIndex _x))};
@@ -182,7 +182,7 @@ switch (_position) do {
 
   case "cargo" : {
     private "_positions";
-    _positions = [typeOf _vehicle] call GVAR(fnc_getVehicleCargo);
+    _positions = [typeOf _vehicle] call FUNC(getVehicleCargo);
 
     {
       if (alive _x) then {_positions deleteAt (_positions find (_vehicle getCargoIndex _x))};
@@ -230,7 +230,7 @@ _fnc_getInEH = {
 // if you want into the cargo and you can't, then check ffv turrets aswell
 if (_position == "cargo") exitWith {
   if (_script isEqualTo {}) then {
-    [_unit, _vehicle, "ffv"] call GVAR(fnc_getInPosition);
+    [_unit, _vehicle, "ffv"] call FUNC(getInPosition);
   } else {
     call _script;
   };
