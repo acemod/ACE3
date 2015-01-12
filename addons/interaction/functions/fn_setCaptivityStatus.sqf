@@ -1,3 +1,4 @@
 // by commy2
+#include "script_component.hpp"
 
-_this call AGM_Core_fnc_setCaptivityStatus;
+_this call EFUNC(core,setCaptivityStatus);

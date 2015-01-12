@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 disableSerialization;
 _ctrl = ctrlParent (_this select 0) displayCtrl 40;

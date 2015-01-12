@@ -1,3 +1,5 @@
 // by commy2
 
-AGM_Interaction_CurrentTooltip pushBack (_this select 0);
+#include "script_component.hpp"
+
+QGVAR(CurrentTooltip) pushBack (_this select 0);

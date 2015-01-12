@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 private ["_house", "_door", "_animations", "_lockedVariable"];
 

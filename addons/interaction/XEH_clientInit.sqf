@@ -1,12 +1,13 @@
 // by commy2 and CAA-Picard
 
+#include "script_component.hpp"
+
 if (!hasInterface) exitWith {};
 
-AGM_Interaction_isOpeningDoor = false;
-AGM_Dancing = false;
+GVAR(isOpeningDoor) = false;
 
 // restore global fire teams for JIP
 {
-  _team = _x getVariable ["AGM_assignedFireTeam", ""];
+  _team = _x getVariable [QGVAR(assignedFireTeam), ""];
   if (_team != "") then {_x assignTeam _team};
 } forEach allUnits;

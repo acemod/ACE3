@@ -1,16 +1,16 @@
 // by commy2
-
+#include "script_component.hpp"
 private ["_player", "_vehicle", "_target", "_count", "_index", "_action", "_subMenu", "_statement", "_condition", "_conditionShow", "_exceptions", "_distance"];
 
-_player = AGM_player;
+_player = ACE_player;
 _vehicle = vehicle _player;
-_target = [AGM_Interaction_Target, _player] select (AGM_Interaction_MenuType % 2 == 1);
+_target = [GVAR(Target), _player] select (GVAR(MenuType) % 2 == 1);
 
-_count = count AGM_Interaction_Buttons;
-_index = _this; //call AGM_Interaction_fnc_getSelectedButton;
+_count = count GVAR(Buttons);
+_index = _this;
 
 _action = if (_index != -1 && {_index < _count}) then {
-	AGM_Interaction_Buttons select _index
+	GVAR(Buttons) select _index
 } else {
 	["", {}, {false}, 0, [], "", "", {false}, [], 0]
 };
@@ -19,7 +19,7 @@ _subMenu = _action select 4;
 
 // back
 if (_index == -1) exitWith {
-	call AGM_Interaction_MainButton;
+	call FUNC(MainButton);
 };
 
 if (count _subMenu < 2) then {
@@ -32,13 +32,13 @@ if (count _subMenu < 2) then {
 	_exceptions = _action select 8;//
 	_distance = _action select 9;
 
-	if ((_distance == 0 || {[AGM_Interaction_Target, _distance] call AGM_Interaction_fnc_isInRange}) && {[_target, _player] call _condition} && {[_target, _player] call _conditionShow}) then {
+	if ((_distance == 0 || {[GVAR(Target), _distance] call FUNC(isInRange)}) && {[_target, _player] call _condition} && {[_target, _player] call _conditionShow}) then {
 		[_target, _player] call _statement;
 	};
 } else {
 	if (_subMenu select 1 < 1) then {
-		[_subMenu select 0] call AGM_Interaction_fnc_openSubMenu;
+		[_subMenu select 0] call FUNC(openSubMenu);
 	} else {
-		[_subMenu select 0] call AGM_Interaction_fnc_openSubMenuSelf;
+		[_subMenu select 0] call FUNC(openSubMenuSelf);
 	};
 };
