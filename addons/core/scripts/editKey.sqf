@@ -1,4 +1,5 @@
 // by commy2
+#include "\z\ace\addons\core\script_component.hpp"
 
 #define GRAY [0.25, 0.25, 0.25, 1]
 #define WHITE [1, 1, 1, 1]
@@ -15,9 +16,9 @@ disableSerialization;
 _dlgMenuDialog = uiNamespace getVariable QGVAR(MenuDialog);
 _ctrlMenuDialog = _dlgMenuDialog displayCtrl (OFFSET_2 + (_this select 0));
 _action = GVAR(keyNames) select (_this select 0);
-_displayName = getText (configFile >> QGVAR(Default_Keys)" >> _action >> "displayName);
+_displayName = getText (configFile >> QGVAR(Default_Keys) >> _action >> "displayName");
 
-_keyCode = profileNamespace getVariable [format ["AGM_Key_%1", _action], 0];//
+_keyCode = profileNamespace getVariable [format ["ACE_Key_%1", _action], 0];//
 for "_index1" from 0 to (count GVAR(keyNew) - 1) do {
   if (_action == (GVAR(keyNew) select _index1) select 0) then {
     _keyCode = (GVAR(keyNew) select _index1) select 1;

@@ -3,7 +3,7 @@ class CfgVehicles {
   class CAManBase: Man {
     // @todo
     class UserActions {
-      class AGM_Fire {
+      class ACE_Fire {
         displayName = "";
         priority = -99;
         available = 1;
@@ -14,8 +14,8 @@ class CfgVehicles {
         showIn3D = 0;
         onlyForPlayer = 1;
         shortcut = "DefaultAction";
-        condition = "call AGM_Core_UserActionFireCondition";
-        statement = "call AGM_Core_UserActionFire";
+        condition = "call ACE_Core_UserActionFireCondition";
+        statement = "call ACE_Core_UserActionFire";
         userActionID = 100;
       };
     };
@@ -25,11 +25,11 @@ class CfgVehicles {
   //#include <DefaultItems.hpp>
 
   class Module_F;
-  class AGM_ModuleCheckPBOs: Module_F {
-    author = "$STR_AGM_Core_AGMTeam";
-    category = "AGM";
+  class ACE_ModuleCheckPBOs: Module_F {
+    author = "$STR_ACE_Core_ACETeam";
+    category = "ACE";
     displayName = "Check PBOs";
-    function = "AGM_Core_fnc_moduleCheckPBOs";
+    function = "ACE_Core_fnc_moduleCheckPBOs";
     scope = 2;
     isGlobal = 1;
     icon = PATHTOF(UI\IconCheckPBO_ca.paa);
@@ -55,7 +55,7 @@ class CfgVehicles {
       };
       class CheckAll {
         displayName = "Check all addons";
-        description = "Check all addons instead of only those of AGM?";
+        description = "Check all addons instead of only those of ACE?";
         typeName = "BOOL";
         class values {
           class WarnOnce {
@@ -80,11 +80,11 @@ class CfgVehicles {
     };
   };
 
-  class AGM_ModuleLSDVehicles: Module_F {
-    author = "$STR_AGM_Core_AGMTeam";
-    category = "AGM";
+  class ACE_ModuleLSDVehicles: Module_F {
+    author = "$STR_ACE_Core_ACETeam";
+    category = "ACE";
     displayName = "LSD Vehicles";
-    function = "AGM_Core_fnc_moduleLSDVehicles";
+    function = "ACE_Core_fnc_moduleLSDVehicles";
     scope = 2;
     isGlobal = 1;
     class Arguments {
@@ -92,9 +92,9 @@ class CfgVehicles {
   };
 
   class Box_NATO_Support_F;
-  class AGM_Box_Misc: Box_NATO_Support_F {
-    author = "$STR_AGM_Core_AGMTeam";
-    displayName = "$STR_AGM_Core_MiscItems";
+  class ACE_Box_Misc: Box_NATO_Support_F {
+    author = "$STR_ACE_Core_ACETeam";
+    displayName = "$STR_ACE_Core_MiscItems";
     transportMaxWeapons = 9001;
     transportMaxMagazines = 9001;
     transportMaxItems = 9001;

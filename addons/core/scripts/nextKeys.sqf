@@ -1,4 +1,5 @@
 // by commy2
+#include "\z\ace\addons\core\script_component.hpp"
 
 #define OFFSET_1 100
 #define OFFSET_2 200
@@ -34,13 +35,13 @@ if (GVAR(MenuPage) == _countPages - 1) then {
     _configFile = _config select _index + _offset;
     _configName = configName _configFile;
     _displayName = getText (_configFile >> "displayName");
-    _state = profileNamespace getVariable format ["AGM_%1", _configName];
+    _state = profileNamespace getVariable format ["ACE_%1", _configName];
 
     _control1 = _dlgMenuDialog displayCtrl (OFFSET_3 + _index);
     _control2 = _dlgMenuDialog displayCtrl (OFFSET_4 + _index);
     _control3 = _dlgMenuDialog displayCtrl (OFFSET_5 + _index);
 
-    _control1 ctrlSetText format [PATHTOF(UI\box_%1checked_ca.paa", ["un", ")] select _state];
+    _control1 ctrlSetText format [QUOTE(PATHTOF(UI\box_%1checked_ca.paa)), ["un", ""] select _state];
     _control2 ctrlSetText _displayName;
 
     _control1 ctrlShow true;
@@ -91,7 +92,7 @@ if (GVAR(MenuPage) == _countPages - 1) then {
 
     _indexUpdate = _updateNames find _keyName;
     _keyCode = if (_indexUpdate == -1) then {
-      profileNamespace getVariable format ["AGM_Key_%1", _keyName];
+      profileNamespace getVariable format ["ACE_Key_%1", _keyName];
     } else {
       _updateKeys select _indexUpdate;
     };

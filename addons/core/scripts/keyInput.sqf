@@ -1,4 +1,5 @@
 // by commy2
+#include "\z\ace\addons\core\script_component.hpp"
 
 #define FORBIDDEN_KEYS [42, 54, 29, 157, 56, 184, 0, 183, 197, 1]
 

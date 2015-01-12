@@ -29,7 +29,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
     };
 
     class LadderCivilStatic: StandBase {
-      AGM_isLadder = 1;
+      ACE_isLadder = 1;
     };
   };
 };

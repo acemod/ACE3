@@ -1,5 +1,5 @@
-// BWA3 Realism - Core
-// (C) 2013 KoffeinFlummi. See LICENSE.
+// ACE - Core
+#include "script_component.hpp"
 
 QGVAR(remoteFnc) addPublicVariableEventHandler {
   (_this select 1) call FUNC(execRemoteFnc);
@@ -8,29 +8,29 @@ QGVAR(remoteFnc) addPublicVariableEventHandler {
 [missionNamespace] call FUNC(executePersistent);
 
 // check previous version number from profile
-_currentVersion = getText (configFile >> "CfgPatches" >> "AGM_Core" >> "version");
-_previousVersion = profileNamespace getVariable ["AGM_VersionNumberString", ""];
+_currentVersion = getText (configFile >> "CfgPatches" >> "ACE_Core" >> "version");
+_previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
 
 if (_currentVersion != _previousVersion) then {
   // do something
 
-  profileNamespace setVariable ["AGM_VersionNumberString", _currentVersion];
+  profileNamespace setVariable ["ACE_VersionNumberString", _currentVersion];
 };
 
-0 spawn compile preprocessFileLineNumbers PATHTOF(scripts\Version\checkVersionNumber.sqf);
+0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber);
 
 // everything that only player controlled machines need, goes below this
 if (!hasInterface) exitWith {};
 
-call compile preprocessFileLineNumbers PATHTOF(scripts\assignedItemFix.sqf);
+call COMPILE_FILE(scripts\assignedItemFix);
 
-GVAR(keyInput)  = compile preprocessFileLineNumbers PATHTOF(scripts\keyInput.sqf);
-GVAR(keyRelease)  = compile preprocessFileLineNumbers PATHTOF(scripts\keyRelease.sqf);
-GVAR(editKey)   = compile preprocessFileLineNumbers PATHTOF(scripts\editKey.sqf);
-GVAR(openMenu)  = compile preprocessFileLineNumbers PATHTOF(scripts\openMenu.sqf);
-GVAR(closeMenu) = compile preprocessFileLineNumbers PATHTOF(scripts\closeMenu.sqf);
-GVAR(nextKeys) = compile preprocessFileLineNumbers PATHTOF(scripts\nextKeys.sqf);
-GVAR(toggleState) = compile preprocessFileLineNumbers PATHTOF(scripts\toggleState.sqf);
+GVAR(keyInput)    = COMPILE_FILE(scripts\keyInput);
+GVAR(keyRelease)  = COMPILE_FILE(scripts\keyRelease);
+GVAR(editKey)     = COMPILE_FILE(scripts\editKey);
+GVAR(openMenu)    = COMPILE_FILE(scripts\openMenu);
+GVAR(closeMenu)   = COMPILE_FILE(scripts\closeMenu);
+GVAR(nextKeys)    = COMPILE_FILE(scripts\nextKeys);
+GVAR(toggleState) = COMPILE_FILE(scripts\toggleState);
 
 [false] call FUNC(setKeyDefault);
 
@@ -41,16 +41,16 @@ for "_index" from 0 to 300 do {
   GVAR(keyTimes) set [_index, -1];
 };
 
-call compile preprocessFileLineNumbers PATHTOF(scripts\KeyInput\initCanInteractFunction.sqf);
-call compile preprocessFileLineNumbers PATHTOF(scripts\KeyInput\initKeys.sqf);
-call compile preprocessFileLineNumbers PATHTOF(scripts\KeyInput\initScrollWheel.sqf);
+call COMPILE_FILE(scripts\KeyInput\initCanInteractFunction);
+call COMPILE_FILE(scripts\KeyInput\initKeys);
+call COMPILE_FILE(scripts\KeyInput\initScrollWheel);
 
 0 spawn {
   while {true} do {
     waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
-    findDisplay 46 displayAddEventHandler ["KeyDown", "_this call GVAR(onKeyDown)"];
-    findDisplay 46 displayAddEventHandler ["KeyUp", "_this call GVAR(onKeyUp)"];
-    findDisplay 46 displayAddEventHandler ["MouseZChanged", "_this call GVAR(onScrollWheel)"];
+    findDisplay 46 displayAddEventHandler ["KeyDown", QUOTE( _this call GVAR(onKeyDown) )];
+    findDisplay 46 displayAddEventHandler ["KeyUp", QUOTE( _this call GVAR(onKeyUp) )];
+    findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call GVAR(onScrollWheel) )];
     [false] call FUNC(disableUserInput);
     waitUntil {isNull (findDisplay 46)};
   };
@@ -58,4 +58,12 @@ call compile preprocessFileLineNumbers PATHTOF(scripts\KeyInput\initScrollWheel.
 
 enableCamShake true;
 
-[missionNamespace, "playerChanged", "{if (alive (_this select 0)) then {[_this select 0] call FUNC(setName)}; if (alive (_this select 1)) then {[_this select 1] call FUNC(setName)};}"] call FUNC(addCustomEventhandler);
+// Set the name for the current player
+[missionNamespace, "playerChanged", {
+  if (alive (_this select 0)) then {
+    [_this select 0] call FUNC(setName)
+  };
+  if (alive (_this select 1)) then {
+    [_this select 1] call FUNC(setName)
+  };
+}] call FUNC(addCustomEventhandler);

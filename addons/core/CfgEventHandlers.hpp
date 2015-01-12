@@ -1,14 +1,14 @@
 class Extended_PreInit_EventHandlers {
   class ADDON {
-    init = QUOTE(call compile preprocessFileLineNumbers PATHTOF(XEH_preInit.sqf) );
-    serverInit = QUOTE(call compile preprocessFileLineNumbers PATHTOF(scripts\readParameters.sqf) );
+    init = QUOTE(call COMPILE_FILE(XEH_preInit) );
+    serverInit = QUOTE(call COMPILE_FILE(scripts\readParameters) );
     disableModuload = true;
   };
 };
 
 class Extended_PostInit_EventHandlers {
   class ADDON {
-    init = QUOTE(call compile preprocessFileLineNumbers PATHTOF(XEH_postInit.sqf) );
+    init = QUOTE(call COMPILE_FILE(XEH_postInit) );
     disableModuload = true;
   };
 };

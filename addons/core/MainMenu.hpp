@@ -1,5 +1,5 @@
 
-class AGM_Tile_Base {
+class ACE_Tile_Base {
 	class Attributes {
 		font = "PuristaMedium";
 		color = "#E5E5E5";
@@ -29,7 +29,7 @@ class AGM_Tile_Base {
 		right = 0;
 		bottom = 0;
 	};
-	action = "(findDisplay 49) closeDisplay 0; 0 spawn AGM_Core_openMenu;";
+	action = "(findDisplay 49) closeDisplay 0; 0 spawn ACE_Core_openMenu;";
 	animTextureDefault = "#(argb,8,8,3)color(1,1,1,1)";
 	animTextureDisabled = "#(argb,8,8,3)color(1,1,1,1)";
 	animTextureFocused = "#(argb,8,8,3)color(1,1,1,1)";
@@ -61,7 +61,7 @@ class AGM_Tile_Base {
 	soundEscape[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEscape",0.09,1};
 	soundPush[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundPush",0.09,1};
 	style = "0x02 + 0xC0";
-	text = "$STR_AGM_Core_Options";
+	text = "$STR_ACE_Core_Options";
 	textureNoShortcut = "#(argb,8,8,3)color(0,0,0,0)";
 	tooltip = "";
 	tooltipColorBox[] = {1,1,1,1};
@@ -78,26 +78,26 @@ class RscStandardDisplay;
 
 /*class RscDisplayMain: RscStandardDisplay {
 	class controls {
-		class AGM_Tile : AGM_Tile_Base {};
+		class ACE_Tile : ACE_Tile_Base {};
 	};
 };*/
 class RscDisplayMPInterrupt: RscStandardDisplay {
 	class controls {
-		class AGM_Tile : AGM_Tile_Base {};
+		class ACE_Tile : ACE_Tile_Base {};
 	};
 };
 class RscDisplayInterrupt: RscStandardDisplay {
 	class controls {
-		class AGM_Tile : AGM_Tile_Base {};
+		class ACE_Tile : ACE_Tile_Base {};
 	};
 };
 class RscDisplayInterruptEditor3D: RscStandardDisplay {
 	class controls {
-		class AGM_Tile : AGM_Tile_Base {};
+		class ACE_Tile : ACE_Tile_Base {};
 	};
 };
 class RscDisplayInterruptEditorPreview: RscStandardDisplay {
 	class controls {
-		class AGM_Tile : AGM_Tile_Base {};
+		class ACE_Tile : ACE_Tile_Base {};
 	};
 };
