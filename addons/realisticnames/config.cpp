@@ -5,11 +5,11 @@ class CfgPatches {
     units[] = {};
     weapons[] = {};
     requiredVersion = 0.60;
-    requiredAddons[] = {AGM_Core};
+    requiredAddons[] = {ace_core};
     version = "0.95";
     versionStr = "0.95";
     versionAr[] = {0,95,0};
-    author[] = {"KoffeinFlummi", "TaoSensai"};
+    author[] = {"KoffeinFlummi", "TaoSensai", "commy2"};
     authorUrl = "https://github.com/KoffeinFlummi/";
   };
 };
@@ -19,94 +19,94 @@ class CfgVehicles {
   // static weapons
   class StaticMGWeapon;
   class HMG_01_base_F: StaticMGWeapon {
-    displayName = "$STR_AGM_RealisticNames_HMG_01_Name";
+    displayName = "$STR_ACE_RealisticNames_HMG_01_Name";
   };
   class HMG_01_A_base_F: HMG_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_HMG_01_A_Name";
+    displayName = "$STR_ACE_RealisticNames_HMG_01_A_Name";
   };
   class HMG_01_high_base_F: HMG_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_HMG_01_high_Name";
+    displayName = "$STR_ACE_RealisticNames_HMG_01_high_Name";
   };
 
   class AT_01_base_F;
   class B_static_AT_F: AT_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_static_AT_Name";
+    displayName = "$STR_ACE_RealisticNames_static_AT_Name";
   };
   class O_static_AT_F: AT_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_static_AT_Name";
+    displayName = "$STR_ACE_RealisticNames_static_AT_Name";
   };
   class I_static_AT_F: AT_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_static_AT_Name";
+    displayName = "$STR_ACE_RealisticNames_static_AT_Name";
   };
 
   class AA_01_base_F;
   class B_static_AA_F: AA_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_static_AA_Name";
+    displayName = "$STR_ACE_RealisticNames_static_AA_Name";
   };
   class O_static_AA_F: AA_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_static_AA_Name";
+    displayName = "$STR_ACE_RealisticNames_static_AA_Name";
   };
   class I_static_AA_F: AA_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_static_AA_Name";
+    displayName = "$STR_ACE_RealisticNames_static_AA_Name";
   };
 
   class GMG_TriPod;
   class GMG_01_base_F: GMG_TriPod {
-    displayName = "$STR_AGM_RealisticNames_GMG_01_Name";
+    displayName = "$STR_ACE_RealisticNames_GMG_01_Name";
   };
   class GMG_01_A_base_F: GMG_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_GMG_01_A_Name";
+    displayName = "$STR_ACE_RealisticNames_GMG_01_A_Name";
   };
   class GMG_01_high_base_F: GMG_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_GMG_01_high_Name";
+    displayName = "$STR_ACE_RealisticNames_GMG_01_high_Name";
   };
 
   // M-ATV
   class MRAP_01_base_F;
   class B_MRAP_01_F: MRAP_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_MRAP_01_Name";
+    displayName = "$STR_ACE_RealisticNames_MRAP_01_Name";
   };
 
   class MRAP_01_gmg_base_F: MRAP_01_base_F {};
   class B_MRAP_01_gmg_F: MRAP_01_gmg_base_F {
-    displayName = "$STR_AGM_RealisticNames_MRAP_01_gmg_Name";
+    displayName = "$STR_ACE_RealisticNames_MRAP_01_gmg_Name";
   };
 
   class MRAP_01_hmg_base_F: MRAP_01_gmg_base_F {};
   class B_MRAP_01_hmg_F: MRAP_01_hmg_base_F {
-    displayName = "$STR_AGM_RealisticNames_MRAP_01_hmg_Name";
+    displayName = "$STR_ACE_RealisticNames_MRAP_01_hmg_Name";
   };
 
   // punisher
   class MRAP_02_base_F;
   class O_MRAP_02_F: MRAP_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_MRAP_02_Name";
+    displayName = "$STR_ACE_RealisticNames_MRAP_02_Name";
   };
 
   class MRAP_02_hmg_base_F: MRAP_02_base_F {};
   class O_MRAP_02_hmg_F: MRAP_02_hmg_base_F {
-    displayName = "$STR_AGM_RealisticNames_MRAP_02_hmg_Name";
+    displayName = "$STR_ACE_RealisticNames_MRAP_02_hmg_Name";
   };
 
   class MRAP_02_gmg_base_F: MRAP_02_hmg_base_F {};
   class O_MRAP_02_gmg_F: MRAP_02_gmg_base_F {
-    displayName = "$STR_AGM_RealisticNames_MRAP_02_gmg_Name";
+    displayName = "$STR_ACE_RealisticNames_MRAP_02_gmg_Name";
   };
 
   // strider
   class MRAP_03_base_F;
   class I_MRAP_03_F: MRAP_03_base_F {
-    displayName = "$STR_AGM_RealisticNames_MRAP_03_Name";
+    displayName = "$STR_ACE_RealisticNames_MRAP_03_Name";
   };
 
   class MRAP_03_hmg_base_F: MRAP_03_base_F {};
   class I_MRAP_03_hmg_F: MRAP_03_hmg_base_F {
-    displayName = "$STR_AGM_RealisticNames_MRAP_03_hmg_Name";
+    displayName = "$STR_ACE_RealisticNames_MRAP_03_hmg_Name";
   };
 
   class MRAP_03_gmg_base_F: MRAP_03_hmg_base_F {};
   class I_MRAP_03_gmg_F: MRAP_03_gmg_base_F {
-    displayName = "$STR_AGM_RealisticNames_MRAP_03_gmg_Name";
+    displayName = "$STR_ACE_RealisticNames_MRAP_03_gmg_Name";
   };
 
   // merkava derivates
@@ -114,24 +114,24 @@ class CfgVehicles {
   class B_MBT_01_base_F: MBT_01_base_F {};
 
   class B_MBT_01_cannon_F: B_MBT_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_MBT_01_cannon_Name";
+    displayName = "$STR_ACE_RealisticNames_MBT_01_cannon_Name";
   };
   class B_MBT_01_TUSK_F: B_MBT_01_cannon_F {
-    displayName = "$STR_AGM_RealisticNames_MBT_01_TUSK_Name";
+    displayName = "$STR_ACE_RealisticNames_MBT_01_TUSK_Name";
   };
 
   class MBT_01_arty_base_F: MBT_01_base_F {};
   class B_MBT_01_arty_base_F: MBT_01_arty_base_F {};
 
   class B_MBT_01_arty_F: B_MBT_01_arty_base_F {
-    displayName = "$STR_AGM_RealisticNames_MBT_01_arty_Name";
+    displayName = "$STR_ACE_RealisticNames_MBT_01_arty_Name";
   };
 
   class MBT_01_mlrs_base_F: MBT_01_base_F {};
   class B_MBT_01_mlrs_base_F: MBT_01_mlrs_base_F {};
 
   class B_MBT_01_mlrs_F: B_MBT_01_mlrs_base_F {
-    displayName = "$STR_AGM_RealisticNames_MBT_01_mlrs_Name"; // Fictional name, (probably wrong) hebrew translation of storm.
+    displayName = "$STR_ACE_RealisticNames_MBT_01_mlrs_Name"; // Fictional name, (probably wrong) hebrew translation of storm.
   };
 
   // T100 derivates
@@ -139,303 +139,303 @@ class CfgVehicles {
   class O_MBT_02_base_F: MBT_02_base_F {};
 
   class O_MBT_02_cannon_F: O_MBT_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_MBT_02_cannon_Name";
+    displayName = "$STR_ACE_RealisticNames_MBT_02_cannon_Name";
   };
 
   class MBT_02_arty_base_F: MBT_02_base_F {};
   class O_MBT_02_arty_base_F: MBT_02_arty_base_F {};
 
   class O_MBT_02_arty_F: O_MBT_02_arty_base_F {
-    displayName = "$STR_AGM_RealisticNames_MBT_02_arty_Name";
+    displayName = "$STR_ACE_RealisticNames_MBT_02_arty_Name";
   };
 
   // leopard sg
   class I_MBT_03_base_F;
   class I_MBT_03_cannon_F: I_MBT_03_base_F {
-    displayName = "$STR_AGM_RealisticNames_MBT_03_cannon_Name";
+    displayName = "$STR_ACE_RealisticNames_MBT_03_cannon_Name";
   };
 
   // tracked apcs
   class B_APC_Tracked_01_base_F;
   class B_APC_Tracked_01_rcws_F: B_APC_Tracked_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_APC_Tracked_01_rcws_Name";
+    displayName = "$STR_ACE_RealisticNames_APC_Tracked_01_rcws_Name";
   };
 
   class B_APC_Tracked_01_AA_F: B_APC_Tracked_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_APC_Tracked_01_AA_Name"; // Fictional name, (probably wrong) hebrew translation of cheetah.
+    displayName = "$STR_ACE_RealisticNames_APC_Tracked_01_AA_Name"; // Fictional name, (probably wrong) hebrew translation of cheetah.
   };
 
   class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_APC_Tracked_01_CRV_Name";
+    displayName = "$STR_ACE_RealisticNames_APC_Tracked_01_CRV_Name";
   };
 
   class O_APC_Tracked_02_base_F;
   class O_APC_Tracked_02_cannon_F: O_APC_Tracked_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_APC_Tracked_02_cannon_Name";
+    displayName = "$STR_ACE_RealisticNames_APC_Tracked_02_cannon_Name";
   };
 
   class O_APC_Tracked_02_AA_F: O_APC_Tracked_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_APC_Tracked_02_AA_Name";
+    displayName = "$STR_ACE_RealisticNames_APC_Tracked_02_AA_Name";
   };
 
   class I_APC_tracked_03_base_F;
   class I_APC_tracked_03_cannon_F: I_APC_tracked_03_base_F {
-    displayName = "$STR_AGM_RealisticNames_APC_tracked_03_cannon_Name";
+    displayName = "$STR_ACE_RealisticNames_APC_tracked_03_cannon_Name";
   };
 
   // wheeled apcs
   class B_APC_Wheeled_01_base_F;
   class B_APC_Wheeled_01_cannon_F: B_APC_Wheeled_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_APC_Wheeled_cannon_Name";
+    displayName = "$STR_ACE_RealisticNames_APC_Wheeled_cannon_Name";
   };
 
   class O_APC_Wheeled_02_base_F;
   class O_APC_Wheeled_02_rcws_F: O_APC_Wheeled_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_APC_Wheeled_02_rcws_Name";
+    displayName = "$STR_ACE_RealisticNames_APC_Wheeled_02_rcws_Name";
   };
 
   class I_APC_Wheeled_03_base_F;
   class I_APC_Wheeled_03_cannon_F: I_APC_Wheeled_03_base_F {
-    displayName = "$STR_AGM_RealisticNames_APC_Wheeled_03_cannon_Name";
+    displayName = "$STR_ACE_RealisticNames_APC_Wheeled_03_cannon_Name";
   };
 
   // trucks
   class Truck_01_base_F;
   class B_Truck_01_transport_F: Truck_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_01_transport_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_01_transport_Name";
   };
   class B_Truck_01_covered_F: B_Truck_01_transport_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_01_covered_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_01_covered_Name";
   };
   class B_Truck_01_mover_F: B_Truck_01_transport_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_01_mover_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_01_mover_Name";
   };
   class B_Truck_01_box_F: B_Truck_01_mover_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_01_box_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_01_box_Name";
   };
   class B_Truck_01_medical_F: B_Truck_01_transport_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_01_medical_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_01_medical_Name";
   };
   class B_Truck_01_ammo_F: B_Truck_01_mover_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_01_ammo_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_01_ammo_Name";
   };
   class B_Truck_01_fuel_F: B_Truck_01_mover_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_01_fuel_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_01_fuel_Name";
   };
   class B_Truck_01_Repair_F: B_Truck_01_mover_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_01_Repair_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_01_Repair_Name";
   };
 
   class Truck_02_base_F;
   class O_Truck_02_transport_F: Truck_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_02_transport_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_02_transport_Name";
   };
   class O_Truck_02_covered_F: Truck_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_02_covered_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_02_covered_Name";
   };
   class O_Truck_02_ammo_F: Truck_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_02_ammo_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_02_ammo_Name";
   };
   class O_Truck_02_fuel_F: Truck_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_02_fuel_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_02_fuel_Name";
   };
   class O_Truck_02_box_F: Truck_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_02_box_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_02_box_Name";
   };
   class O_Truck_02_medical_F: O_Truck_02_box_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_02_medical_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_02_medical_Name";
   };
 
   class I_Truck_02_transport_F: Truck_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_02_transport_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_02_transport_Name";
   };
   class I_Truck_02_covered_F: Truck_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_02_covered_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_02_covered_Name";
   };
   class I_Truck_02_ammo_F: Truck_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_02_ammo_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_02_ammo_Name";
   };
   class I_Truck_02_fuel_F: Truck_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_02_fuel_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_02_fuel_Name";
   };
   class I_Truck_02_box_F: Truck_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_02_box_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_02_box_Name";
   };
   class I_Truck_02_medical_F: I_Truck_02_box_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_02_medical_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_02_medical_Name";
   };
 
   class Truck_03_base_F;
   class O_Truck_03_transport_F: Truck_03_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_03_transport_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_03_transport_Name";
   };
   class O_Truck_03_covered_F: Truck_03_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_03_covered_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_03_covered_Name";
   };
   class O_Truck_03_device_F: Truck_03_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_03_device_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_03_device_Name";
   };
   class O_Truck_03_ammo_F: Truck_03_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_03_ammo_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_03_ammo_Name";
   };
   class O_Truck_03_fuel_F: Truck_03_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_03_fuel_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_03_fuel_Name";
   };
   class O_Truck_03_repair_F: Truck_03_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_03_repair_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_03_repair_Name";
   };
   class O_Truck_03_medical_F: Truck_03_base_F {
-    displayName = "$STR_AGM_RealisticNames_Truck_03_medical_Name";
+    displayName = "$STR_ACE_RealisticNames_Truck_03_medical_Name";
   };
 
   // helicopters
   class Heli_Attack_01_base_F;
   class B_Heli_Attack_01_F: Heli_Attack_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_Heli_Attack_01_Name";
+    displayName = "$STR_ACE_RealisticNames_Heli_Attack_01_Name";
   };
 
   class Heli_Light_01_base_F;
   class B_Heli_Light_01_F: Heli_Light_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_Heli_Light_01_Name";
+    displayName = "$STR_ACE_RealisticNames_Heli_Light_01_Name";
   };
 
   class Heli_Light_01_armed_base_F;
   class B_Heli_Light_01_armed_F: Heli_Light_01_armed_base_F {
-    displayName = "$STR_AGM_RealisticNames_Heli_Light_01_armed_Name";
+    displayName = "$STR_ACE_RealisticNames_Heli_Light_01_armed_Name";
   };
 
   class Heli_Light_01_civil_base_F: Heli_Light_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_Heli_Light_01_civil_Name";
+    displayName = "$STR_ACE_RealisticNames_Heli_Light_01_civil_Name";
   };
 
   class B_Heli_Transport_03_base_F;
   class B_Heli_Transport_03_F: B_Heli_Transport_03_base_F {
-    displayName = "$STR_AGM_RealisticNames_Heli_Transport_03_Name";
+    displayName = "$STR_ACE_RealisticNames_Heli_Transport_03_Name";
   };
 
   class B_Heli_Transport_03_unarmed_base_F: B_Heli_Transport_03_base_F {};
   class B_Heli_Transport_03_unarmed_F: B_Heli_Transport_03_unarmed_base_F {
-    displayName = "$STR_AGM_RealisticNames_Heli_Transport_03_unarmed_Name";
+    displayName = "$STR_ACE_RealisticNames_Heli_Transport_03_unarmed_Name";
   };
 
   class Heli_Light_02_base_F;
   class O_Heli_Light_02_F: Heli_Light_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_Heli_Light_02_Name";
+    displayName = "$STR_ACE_RealisticNames_Heli_Light_02_Name";
   };
   class O_Heli_Light_02_unarmed_F: Heli_Light_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_Heli_Light_02_unarmed_Name";
+    displayName = "$STR_ACE_RealisticNames_Heli_Light_02_unarmed_Name";
   };
 
   class I_Heli_light_03_base_F;
   class I_Heli_light_03_F: I_Heli_light_03_base_F {
-    displayName = "$STR_AGM_RealisticNames_Heli_light_03_Name";
+    displayName = "$STR_ACE_RealisticNames_Heli_light_03_Name";
   };
 
   class I_Heli_light_03_unarmed_base_F;
   class I_Heli_light_03_unarmed_F: I_Heli_light_03_unarmed_base_F {
-    displayName = "$STR_AGM_RealisticNames_Heli_light_03_unarmed_Name";
+    displayName = "$STR_ACE_RealisticNames_Heli_light_03_unarmed_Name";
   };
 
   class Heli_Transport_02_base_F;
   class I_Heli_Transport_02_F: Heli_Transport_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_Heli_Transport_02_Name";
+    displayName = "$STR_ACE_RealisticNames_Heli_Transport_02_Name";
   };
 
   // planes
   class Plane_CAS_01_base_F;
   class B_Plane_CAS_01_F: Plane_CAS_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_Plane_CAS_01_Name";
+    displayName = "$STR_ACE_RealisticNames_Plane_CAS_01_Name";
   };
 
   class Plane_CAS_02_base_F;
   class O_Plane_CAS_02_F: Plane_CAS_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_Plane_CAS_02_Name";
+    displayName = "$STR_ACE_RealisticNames_Plane_CAS_02_Name";
   };
 
   class Plane_Fighter_03_base_F;
   class I_Plane_Fighter_03_CAS_F: Plane_Fighter_03_base_F {
-    displayName = "$STR_AGM_RealisticNames_Plane_Fighter_03_CAS_Name";
+    displayName = "$STR_ACE_RealisticNames_Plane_Fighter_03_CAS_Name";
   };
 
   class I_Plane_Fighter_03_AA_F: I_Plane_Fighter_03_CAS_F {
-    displayName = "$STR_AGM_RealisticNames_Plane_Fighter_03_AA_Name";
+    displayName = "$STR_ACE_RealisticNames_Plane_Fighter_03_AA_Name";
   };
 
   // uavs
   class UAV_02_base_F;
   class B_UAV_02_F: UAV_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_UAV_02_Name";
+    displayName = "$STR_ACE_RealisticNames_UAV_02_Name";
   };
   class O_UAV_02_F: UAV_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_UAV_02_Name";
+    displayName = "$STR_ACE_RealisticNames_UAV_02_Name";
   };
   class I_UAV_02_F: UAV_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_UAV_02_Name";
+    displayName = "$STR_ACE_RealisticNames_UAV_02_Name";
   };
 
   class UAV_02_CAS_base_F: UAV_02_base_F {};
   class B_UAV_02_CAS_F: UAV_02_CAS_base_F {
-    displayName = "$STR_AGM_RealisticNames_UAV_02_CAS_Name";
+    displayName = "$STR_ACE_RealisticNames_UAV_02_CAS_Name";
   };
   class O_UAV_02_CAS_F: UAV_02_CAS_base_F {
-    displayName = "$STR_AGM_RealisticNames_UAV_02_CAS_Name";
+    displayName = "$STR_ACE_RealisticNames_UAV_02_CAS_Name";
   };
   class I_UAV_02_CAS_F: UAV_02_CAS_base_F {
-    displayName = "$STR_AGM_RealisticNames_UAV_02_CAS_Name";
+    displayName = "$STR_ACE_RealisticNames_UAV_02_CAS_Name";
   };
 
   // pistols
   class Pistol_Base_F;
   class Weapon_hgun_P07_F: Pistol_Base_F {
-    displayName = "$STR_AGM_RealisticNames_hgun_P07_Name";
+    displayName = "$STR_ACE_RealisticNames_hgun_P07_Name";
   };
 
   class Weapon_hgun_Rook40_F: Pistol_Base_F {
-    displayName = "$STR_AGM_RealisticNames_hgun_Rook40_Name";
+    displayName = "$STR_ACE_RealisticNames_hgun_Rook40_Name";
   };
 
   class Weapon_hgun_ACPC2_F: Pistol_Base_F {
-    displayName = "$STR_AGM_RealisticNames_hgun_ACPC2_Name";
+    displayName = "$STR_ACE_RealisticNames_hgun_ACPC2_Name";
   };
 
   class Weapon_hgun_Pistol_heavy_01_F: Pistol_Base_F {
-    displayName = "$STR_AGM_RealisticNames_hgun_Pistol_heavy_01_Name";
+    displayName = "$STR_ACE_RealisticNames_hgun_Pistol_heavy_01_Name";
   };
 
   class Weapon_hgun_Pistol_heavy_02_F: Pistol_Base_F {
-    displayName = "$STR_AGM_RealisticNames_hgun_Pistol_heavy_02_Name";
+    displayName = "$STR_ACE_RealisticNames_hgun_Pistol_heavy_02_Name";
   };
 
   class Weapon_hgun_Pistol_Signal_F: Pistol_Base_F {
-    displayName = "$STR_AGM_RealisticNames_hgun_Pistol_Signal_Name";
+    displayName = "$STR_ACE_RealisticNames_hgun_Pistol_Signal_Name";
   };
 
   // rocket launchers
   class Launcher_Base_F;
   class Weapon_launch_NLAW_F: Launcher_Base_F {
-    displayName = "$STR_AGM_RealisticNames_launch_NLAW_Name";
+    displayName = "$STR_ACE_RealisticNames_launch_NLAW_Name";
   };
 
   class Weapon_launch_RPG32_F: Launcher_Base_F {
-    displayName = "$STR_AGM_RealisticNames_launch_RPG32_Name";
+    displayName = "$STR_ACE_RealisticNames_launch_RPG32_Name";
   };
 
   class Weapon_launch_Titan_F: Launcher_Base_F {
-    displayName = "$STR_AGM_RealisticNames_launch_Titan_Name";
+    displayName = "$STR_ACE_RealisticNames_launch_Titan_Name";
   };
 
   class Weapon_launch_Titan_short_F: Launcher_Base_F {
-    displayName = "$STR_AGM_RealisticNames_launch_Titan_short_Name";
+    displayName = "$STR_ACE_RealisticNames_launch_Titan_short_Name";
   };
 
   class Weapon_launch_B_Titan_F: Launcher_Base_F {
-    displayName = "$STR_AGM_RealisticNames_launch_Titan_Name";
+    displayName = "$STR_ACE_RealisticNames_launch_Titan_Name";
   };
   //class Weapon_launch_I_Titan_F: Weapon_launch_B_Titan_F {};
   //class Weapon_launch_O_Titan_F: Weapon_launch_B_Titan_F {};
 
   class Weapon_launch_launch_B_Titan_short_F: Launcher_Base_F {
-    displayName = "$STR_AGM_RealisticNames_launch_Titan_short_Name";
+    displayName = "$STR_ACE_RealisticNames_launch_Titan_short_Name";
   };
   //class Weapon_launch_I_Titan_short_F: Weapon_launch_launch_B_Titan_short_F {};
   //class Weapon_launch_O_Titan_short_F: Weapon_launch_launch_B_Titan_short_F {};
@@ -445,125 +445,125 @@ class CfgVehicles {
   // MX
   class Weapon_Base_F;
   class Weapon_arifle_MX_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MX_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MX_Name";
   };
 
   class Weapon_arifle_MXC_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MXC_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MXC_Name";
   };
 
   class Weapon_arifle_MX_GL_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MX_GL_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MX_GL_Name";
   };
 
   class Weapon_arifle_MX_SW_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MX_SW_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MX_SW_Name";
   };
 
   class Weapon_arifle_MXM_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MXM_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MXM_Name";
   };
 
   // Katiba
   class Weapon_arifle_Katiba_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Katiba_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Katiba_Name";
   };
 
   class Weapon_arifle_Katiba_C_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Katiba_C_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Katiba_C_Name";
   };
 
   class Weapon_arifle_Katiba_GL_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Katiba_GL_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Katiba_GL_Name";
   };
 
   // F2000
   class Weapon_arifle_Mk20_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Mk20_Name";
   };
 
   class Weapon_arifle_Mk20_plain_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_plain_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Mk20_plain_Name";
   };
 
   class Weapon_arifle_Mk20C_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Mk20C_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Mk20C_Name";
   };
 
   class Weapon_arifle_Mk20C_plain_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Mk20C_plain_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Mk20C_plain_Name";
   };
 
   class Weapon_arifle_Mk20_GL_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_GL_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Mk20_GL_Name";
   };
 
   class Weapon_arifle_Mk20_GL_plain_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_GL_plain_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Mk20_GL_plain_Name";
   };
 
   // TAR-21
   class Weapon_arifle_TRG21_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_TRG21_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_TRG21_Name";
   };
 
   class Weapon_arifle_TRG20_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_TRG20_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_TRG20_Name";
   };
 
   class Weapon_arifle_TRG21_GL_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_TRG21_GL_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_TRG21_GL_Name";
   };
 
   // sub machine guns
   class Weapon_SMG_01_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_SMG_01_Name";
+    displayName = "$STR_ACE_RealisticNames_SMG_01_Name";
   };
 
   class Weapon_SMG_02_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_SMG_02_Name";
+    displayName = "$STR_ACE_RealisticNames_SMG_02_Name";
   };
 
   class Weapon_hgun_PDW2000_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_hgun_PDW2000_Name";
+    displayName = "$STR_ACE_RealisticNames_hgun_PDW2000_Name";
   };
 
   class Weapon_arifle_SDAR_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_SDAR_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_SDAR_Name";
   };
 
   // machine guns
   class Weapon_LMG_Mk200_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_LMG_Mk200_Name";
+    displayName = "$STR_ACE_RealisticNames_LMG_Mk200_Name";
   };
 
   class Weapon_LMG_Zafir_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_LMG_Zafir_Name";
+    displayName = "$STR_ACE_RealisticNames_LMG_Zafir_Name";
   };
 
   // sniper rifles
   class Weapon_srifle_EBR_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_srifle_EBR_Name";
+    displayName = "$STR_ACE_RealisticNames_srifle_EBR_Name";
   };
 
   class Weapon_srifle_GM6_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_srifle_GM6_Name";
+    displayName = "$STR_ACE_RealisticNames_srifle_GM6_Name";
   };
 
   class Weapon_srifle_GM6_camo_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_srifle_GM6_camo_Name";
+    displayName = "$STR_ACE_RealisticNames_srifle_GM6_camo_Name";
   };
 
   class Weapon_srifle_LRR_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_srifle_LRR_Name";
+    displayName = "$STR_ACE_RealisticNames_srifle_LRR_Name";
   };
 
   class Weapon_srifle_LRR_camo_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_srifle_LRR_camo_Name";
+    displayName = "$STR_ACE_RealisticNames_srifle_LRR_camo_Name";
   };
 
   class Weapon_srifle_DMR_01_F: Weapon_Base_F {
-    displayName = "$STR_AGM_RealisticNames_srifle_DMR_01_Name";
+    displayName = "$STR_ACE_RealisticNames_srifle_DMR_01_Name";
   };
 };
 
@@ -576,189 +576,189 @@ class CfgWeapons {
   // MX
   class arifle_MX_Base_F;
   class arifle_MX_F: arifle_MX_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MX_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MX_Name";
   };
   class arifle_MX_Black_F: arifle_MX_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MX_Black_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MX_Black_Name";
   };
 
   class arifle_MXC_F: arifle_MX_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MXC_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MXC_Name";
   };
   class arifle_MXC_Black_F: arifle_MXC_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MXC_Black_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MXC_Black_Name";
   };
 
   class arifle_MX_GL_F: arifle_MX_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MX_GL_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MX_GL_Name";
   };
   class arifle_MX_GL_Black_F: arifle_MX_GL_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MX_GL_Black_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MX_GL_Black_Name";
   };
 
   class arifle_MX_SW_F: arifle_MX_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MX_SW_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MX_SW_Name";
   };
   class arifle_MX_SW_Black_F: arifle_MX_SW_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MX_SW_Black_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MX_SW_Black_Name";
   };
 
   class arifle_MXM_F: arifle_MX_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MXM_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MXM_Name";
   };
   class arifle_MXM_Black_F: arifle_MXM_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_MXM_Black_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_MXM_Black_Name";
   };
 
   // Katiba
   class arifle_katiba_Base_F;
   class arifle_Katiba_F: arifle_katiba_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Katiba_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Katiba_Name";
   };
   class arifle_Katiba_GL_F: arifle_katiba_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Katiba_GL_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Katiba_GL_Name";
   };
   class arifle_Katiba_C_F: arifle_katiba_Base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Katiba_C_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Katiba_C_Name";
   };
 
   // SDAR
   class SDAR_base_F;
   class arifle_SDAR_F: SDAR_base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_SDAR_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_SDAR_Name";
   };
 
   // TAR-21
   class Tavor_base_F;
   class arifle_TRG21_F: Tavor_base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_TRG21_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_TRG21_Name";
   };
   class arifle_TRG21_GL_F: arifle_TRG21_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_TRG21_GL_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_TRG21_GL_Name";
   };
   class arifle_TRG20_F: Tavor_base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_TRG20_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_TRG20_Name";
   };
 
   // F2000
   class mk20_base_F;
   class arifle_Mk20_F: mk20_base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Mk20_Name";
   };
   class arifle_Mk20_plain_F: arifle_Mk20_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_plain_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Mk20_plain_Name";
   };
 
   class arifle_Mk20C_F: mk20_base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Mk20C_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Mk20C_Name";
   };
   class arifle_Mk20C_plain_F: arifle_Mk20C_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Mk20C_plain_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Mk20C_plain_Name";
   };
 
   class arifle_Mk20_GL_F: mk20_base_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_GL_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Mk20_GL_Name";
   };
   class arifle_Mk20_GL_plain_F: arifle_Mk20_GL_F {
-    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_GL_plain_Name";
+    displayName = "$STR_ACE_RealisticNames_arifle_Mk20_GL_plain_Name";
   };
 
   // Vector
   class SMG_01_Base;
   class SMG_01_F: SMG_01_Base {
-    displayName = "$STR_AGM_RealisticNames_SMG_01_Name";
+    displayName = "$STR_ACE_RealisticNames_SMG_01_Name";
   };
 
   // Scorpion
   class SMG_02_base_F;
   class SMG_02_F: SMG_02_base_F {
-    displayName = "$STR_AGM_RealisticNames_SMG_02_Name";
+    displayName = "$STR_ACE_RealisticNames_SMG_02_Name";
   };
 
   // PDW 2000
   class pdw2000_base_F;
   class hgun_pdw2000_F: pdw2000_base_F {
-    displayName = "$STR_AGM_RealisticNames_hgun_PDW2000_Name";
+    displayName = "$STR_ACE_RealisticNames_hgun_PDW2000_Name";
   };
 
   // pistols
   class Pistol_Base_F;
   class hgun_P07_F: Pistol_Base_F {
-    displayName = "$STR_AGM_RealisticNames_hgun_P07_Name";
+    displayName = "$STR_ACE_RealisticNames_hgun_P07_Name";
   };
 
   class hgun_Rook40_F: Pistol_Base_F {
-    displayName = "$STR_AGM_RealisticNames_hgun_Rook40_Name";
+    displayName = "$STR_ACE_RealisticNames_hgun_Rook40_Name";
   };
 
   class hgun_ACPC2_F: Pistol_Base_F {
-    displayName = "$STR_AGM_RealisticNames_hgun_ACPC2_Name";
+    displayName = "$STR_ACE_RealisticNames_hgun_ACPC2_Name";
   };
 
   class hgun_Pistol_heavy_01_F: Pistol_Base_F {
-    displayName = "$STR_AGM_RealisticNames_hgun_Pistol_heavy_01_Name";
+    displayName = "$STR_ACE_RealisticNames_hgun_Pistol_heavy_01_Name";
   };
 
   class hgun_Pistol_heavy_02_F: Pistol_Base_F {
-    displayName = "$STR_AGM_RealisticNames_hgun_Pistol_heavy_02_Name";
+    displayName = "$STR_ACE_RealisticNames_hgun_Pistol_heavy_02_Name";
   };
 
   class hgun_Pistol_Signal_F: Pistol_Base_F {
-    displayName = "$STR_AGM_RealisticNames_hgun_Pistol_Signal_Name";
+    displayName = "$STR_ACE_RealisticNames_hgun_Pistol_Signal_Name";
   };
 
   // machine guns
   class Rifle_Long_Base_F;
   class LMG_Mk200_F: Rifle_Long_Base_F {
-    displayName = "$STR_AGM_RealisticNames_LMG_Mk200_Name";
+    displayName = "$STR_ACE_RealisticNames_LMG_Mk200_Name";
   };
 
   class LMG_Zafir_F: Rifle_Long_Base_F {
-    displayName = "$STR_AGM_RealisticNames_LMG_Zafir_Name";
+    displayName = "$STR_ACE_RealisticNames_LMG_Zafir_Name";
   };
 
   // sniper rifles
   class EBR_base_F;
   class srifle_EBR_F: EBR_base_F {
-    displayName = "$STR_AGM_RealisticNames_srifle_EBR_Name";
+    displayName = "$STR_ACE_RealisticNames_srifle_EBR_Name";
   };
 
   class LRR_base_F;
   class srifle_LRR_F: LRR_base_F {
-    displayName = "$STR_AGM_RealisticNames_srifle_LRR_Name";
+    displayName = "$STR_ACE_RealisticNames_srifle_LRR_Name";
   };
   class srifle_LRR_camo_F: srifle_LRR_F {
-    displayName = "$STR_AGM_RealisticNames_srifle_LRR_camo_Name";
+    displayName = "$STR_ACE_RealisticNames_srifle_LRR_camo_Name";
   };
 
   class GM6_base_F;
   class srifle_GM6_F: GM6_base_F {
-    displayName = "$STR_AGM_RealisticNames_srifle_GM6_Name";
+    displayName = "$STR_ACE_RealisticNames_srifle_GM6_Name";
   };
   class srifle_GM6_camo_F: srifle_GM6_F {
-    displayName = "$STR_AGM_RealisticNames_srifle_GM6_camo_Name";
+    displayName = "$STR_ACE_RealisticNames_srifle_GM6_camo_Name";
   };
 
   class DMR_01_base_F;
   class srifle_DMR_01_F: DMR_01_base_F {
-    displayName = "$STR_AGM_RealisticNames_srifle_DMR_01_Name";
+    displayName = "$STR_ACE_RealisticNames_srifle_DMR_01_Name";
   };
 
   // launchers
   class Launcher_Base_F;
   class launch_RPG32_F: Launcher_Base_F {
-    displayName = "$STR_AGM_RealisticNames_launch_RPG32_Name";
+    displayName = "$STR_ACE_RealisticNames_launch_RPG32_Name";
   };
 
   class launch_Titan_base: Launcher_Base_F {
-    displayName = "$STR_AGM_RealisticNames_launch_Titan_Name";
+    displayName = "$STR_ACE_RealisticNames_launch_Titan_Name";
   };
   class launch_Titan_short_base: launch_Titan_base {
-    displayName = "$STR_AGM_RealisticNames_launch_Titan_short_Name";
+    displayName = "$STR_ACE_RealisticNames_launch_Titan_short_Name";
   };
 
   class launch_NLAW_F: Launcher_Base_F {
-    displayName = "$STR_AGM_RealisticNames_launch_NLAW_Name";
+    displayName = "$STR_ACE_RealisticNames_launch_NLAW_Name";
   };
 
   // vehicle weapons
@@ -985,11 +985,11 @@ class CfgWeapons {
     displayName = "PKT";
   };
 
-  class AGM_LMG_coax_MBT_01: LMG_coax {
+  class ACE_LMG_coax_MBT_01: LMG_coax {
     displayName = "MAG 58";
   };
 
-  class AGM_LMG_coax_APC_Tracked_03: LMG_coax {
+  class ACE_LMG_coax_APC_Tracked_03: LMG_coax {
     displayName = "L94A1";
   };
 
@@ -1389,61 +1389,61 @@ class CfgMagazines {
   class CA_Magazine;
   // http://en.wikipedia.org/wiki/M15_mine
   class ATMine_Range_Mag: CA_Magazine {
-    displayName = "$STR_AGM_RealisticNames_ATMine_Name";
+    displayName = "$STR_ACE_RealisticNames_ATMine_Name";
   };
   // http://en.wikipedia.org/wiki/VS-50_mine
   class APERSMine_Range_Mag: ATMine_Range_Mag {
-    displayName = "$STR_AGM_RealisticNames_APERSMine_Name";
+    displayName = "$STR_ACE_RealisticNames_APERSMine_Name";
   };
   // https://www.buymilsurp.com/us-m26-antipersonnel-bounding-mine-p-5419.html
   class APERSBoundingMine_Range_Mag: ATMine_Range_Mag {
-    displayName = "$STR_AGM_RealisticNames_APERSBoundingMine_Name";
+    displayName = "$STR_ACE_RealisticNames_APERSBoundingMine_Name";
   };
   // http://en.wikipedia.org/wiki/PMR-3_mine
   class APERSTripMine_Wire_Mag: ATMine_Range_Mag {
-    displayName = "$STR_AGM_RealisticNames_APERSTripwireMine_Name";
+    displayName = "$STR_ACE_RealisticNames_APERSTripwireMine_Name";
   };
   // the following ones can be found here: http://www.dtic.mil/dtic/tr/fulltext/u2/a567897.pdf
   class SLAMDirectionalMine_Wire_Mag: ATMine_Range_Mag {
-    displayName = "$STR_AGM_RealisticNames_SLAM_Name";
+    displayName = "$STR_ACE_RealisticNames_SLAM_Name";
   };
 
   // claymore
   class ClaymoreDirectionalMine_Remote_Mag: CA_Magazine {
-    displayName = "$STR_AGM_RealisticNames_Claymore_Name";
+    displayName = "$STR_ACE_RealisticNames_Claymore_Name";
   };
 
   // satchels
   class SatchelCharge_Remote_Mag: CA_Magazine {
-    displayName = "$STR_AGM_RealisticNames_SatchelCharge_Name";
+    displayName = "$STR_ACE_RealisticNames_SatchelCharge_Name";
   };
   class DemoCharge_Remote_Mag: SatchelCharge_Remote_Mag {
-    displayName = "$STR_AGM_RealisticNames_DemoCharge_Name";
+    displayName = "$STR_ACE_RealisticNames_DemoCharge_Name";
   };
 
   // hand grenades
   class HandGrenade: CA_Magazine {
-    displayName = "$STR_AGM_RealisticNames_HandGrenade_Name";
+    displayName = "$STR_ACE_RealisticNames_HandGrenade_Name";
   };
   class SmokeShell: HandGrenade {
-    displayName = "$STR_AGM_RealisticNames_SmokeShell_Name";
+    displayName = "$STR_ACE_RealisticNames_SmokeShell_Name";
   };
   class SmokeShellBlue: SmokeShell {
-    displayName = "$STR_AGM_RealisticNames_SmokeShellBlue_Name";
+    displayName = "$STR_ACE_RealisticNames_SmokeShellBlue_Name";
   };
   class SmokeShellGreen: SmokeShell {
-    displayName = "$STR_AGM_RealisticNames_SmokeShellGreen_Name";
+    displayName = "$STR_ACE_RealisticNames_SmokeShellGreen_Name";
   };
   class SmokeShellOrange: SmokeShell {
-    displayName = "$STR_AGM_RealisticNames_SmokeShellOrange_Name";
+    displayName = "$STR_ACE_RealisticNames_SmokeShellOrange_Name";
   };
   class SmokeShellPurple: SmokeShell {
-    displayName = "$STR_AGM_RealisticNames_SmokeShellPurple_Name";
+    displayName = "$STR_ACE_RealisticNames_SmokeShellPurple_Name";
   };
   class SmokeShellRed: SmokeShell {
-    displayName = "$STR_AGM_RealisticNames_SmokeShellRed_Name";
+    displayName = "$STR_ACE_RealisticNames_SmokeShellRed_Name";
   };
   class SmokeShellYellow: SmokeShell {
-    displayName = "$STR_AGM_RealisticNames_SmokeShellYellow_Name";
+    displayName = "$STR_ACE_RealisticNames_SmokeShellYellow_Name";
   };
 };
