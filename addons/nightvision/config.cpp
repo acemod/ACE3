@@ -14,6 +14,7 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
 
 class ACE_Core_Default_Keys {
   class increaseNVGBrightness {

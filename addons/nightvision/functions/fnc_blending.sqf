@@ -62,7 +62,7 @@ _darkness = 1 - (call EFUNC(common,ambientBrightness));
 _visibleFire = _darkness * _visibleFireCoef * _visibleFire * _nvgBrightnessCoef / 10 min 1;
 _visibleFireTime = _darkness * _visibleFireTimeCoef * _visibleFireTime * _nvgBrightnessCoef / 10 min 0.5;
 
-["NightVision", [_visibleFire, _visibleFireTime], {format ["visibleFire: %1 - visibleFireTime: %2", _this select 0, _this select 1]}] call AGM_Debug_fnc_log;
+// ["NightVision", [_visibleFire, _visibleFireTime], {format ["visibleFire: %1 - visibleFireTime: %2", _this select 0, _this select 1]}] call AGM_Debug_fnc_log;  //todo
 
 GVAR(ppEffectMuzzleFlash) ppEffectAdjust [1, 1, _visibleFire, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
 GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;

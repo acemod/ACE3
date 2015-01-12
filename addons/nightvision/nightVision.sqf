@@ -1,7 +1,6 @@
 //by commy2
 #include "script_component.hpp"
 
-xxx =5;
 
 private ["_currentVehicle", "_currentTurret", "_currentHMD", "_grainSetting", "_blurSetting"];
 
@@ -57,9 +56,9 @@ while {true} do {
 
       // on foot or in vehicle using hmd
       if ((_currentVehicle == ACE_player) || _fnc_isUsingHMD) then {
-        _grainSetting = getNumber (configFile >> "CfgWeapons" >> _currentHMD >> "AGM_NightVision_grain");
-        _blurSetting = getNumber (configFile >> "CfgWeapons" >> _currentHMD >> "AGM_NightVision_blur");
-        _radBlurSetting = getNumber (configFile >> "CfgWeapons" >> _currentHMD >> "AGM_NightVision_radBlur");
+        _grainSetting = getNumber (configFile >> "CfgWeapons" >> _currentHMD >> "ACE_NightVision_grain");
+        _blurSetting = getNumber (configFile >> "CfgWeapons" >> _currentHMD >> "ACE_NightVision_blur");
+        _radBlurSetting = getNumber (configFile >> "CfgWeapons" >> _currentHMD >> "ACE_NightVision_radBlur");
 
         GVAR(ppEffectFilmGrain) ppEffectAdjust [0.25, 2.5, 2.5, _grainSetting, _grainSetting, false];
         GVAR(ppEffectFilmGrain) ppEffectCommit 0;
@@ -70,9 +69,10 @@ while {true} do {
 
       // in vehicle and not using hmd
       } else {
-        _grainSetting = _currentVehicle getVariable ["AGM_NightVision_grain", getNumber (_config >> "AGM_NightVision_grain")];
-        _blurSetting = _currentVehicle getVariable ["AGM_NightVision_blur", getNumber (_config >> "AGM_NightVision_blur")];
-        _radBlurSetting = _currentVehicle getVariable ["AGM_NightVision_radBlur", getNumber (_config >> "AGM_NightVision_radBlur")];
+
+        _grainSetting = _currentVehicle getVariable ["ACE_NightVision_grain", getNumber (_config >> "ACE_NightVision_grain")];
+        _blurSetting = _currentVehicle getVariable ["ACE_NightVision_blur", getNumber (_config >> "ACE_NightVision_blur")];
+        _radBlurSetting = _currentVehicle getVariable ["ACE_NightVision_radBlur", getNumber (_config >> "ACE_NightVision_radBlur")];
 
         GVAR(ppEffectFilmGrain) ppEffectAdjust [0.25, 2.5, 2.5, _grainSetting, _grainSetting, false];
         GVAR(ppEffectFilmGrain) ppEffectCommit 0;
