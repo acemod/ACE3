@@ -14,12 +14,14 @@
     VOID
 */
 
+#include "script_component.hpp"
+
 private ["_unit"];
 
 _unit = _this select 0;
 
-!([_unit] call AGM_Core_fnc_isPlayer 
+!([_unit] call EFUNC(Core, isPlayer)
 || {_unit in playableUnits}
 || {vehicle _unit != _unit} 
-|| {_unit getVariable ["AGM_SwitchUnits_IsPlayerUnit", false]} 
-|| {_unit getVariable ["AGM_SwitchUnits_IsPlayerControlled", false]})
+|| {_unit getVariable [QGVAR(IsPlayerUnit), false]} 
+|| {_unit getVariable [QGVAR(IsPlayerControlled), false]})

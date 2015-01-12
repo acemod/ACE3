@@ -15,6 +15,8 @@
     VOID
 */
 
+#include "script_component.hpp"
+
 private ["_sidesToShow"];
 _sidesToShow = _this select 0;
 
@@ -34,10 +36,10 @@ _sidesToShow spawn {
 
     // create markers
     {
-      if (([_x] call AGM_SwitchUnits_fnc_isValidAi && (side group _x in _sides)) || (_x getVariable ["AGM_SwitchUnits_IsPlayerControlled", false])) then {
+      if (([_x] call FUNC(isValidAi) && (side group _x in _sides)) || (_x getVariable [QGVAR(IsPlayerControlled), false])) then {
         private ["_markerName", "_marker", "_markerColor"];
 
-        //_markerName = format ["%1", [_x] call AGM_Core_fnc_getName];
+        //_markerName = format ["%1", [_x] call EFUNC(Core, getName)];
         _markerName = str _x;
 
         _marker = createMarkerLocal [_markerName, position _x];
@@ -49,9 +51,9 @@ _sidesToShow spawn {
         // commy's one liner magic
         _markerColor = format ["Color%1", side group _x];
         
-        if ((_x getVariable ["AGM_SwitchUnits_IsPlayerControlled", false])) then {
+        if ((_x getVariable [QGVAR(IsPlayerControlled), false])) then {
           _markerName setMarkerColorLocal "ColorOrange";
-          _markerName setMarkerTextLocal (_x getVariable ["AGM_SwitchUnits_PlayerControlledName",""]);
+          _markerName setMarkerTextLocal (_x getVariable [QGVAR(PlayerControlledName),""]);
         } else {
           _markerName setMarkerColorLocal _markerColor;
           _markerName setMarkerTextLocal (getText (configFile >> "CfgVehicles" >> typeOf _x >> "displayName"));

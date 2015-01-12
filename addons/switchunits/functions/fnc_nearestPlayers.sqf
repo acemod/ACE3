@@ -15,6 +15,8 @@
     ARRAY<OBJECT> - Player units
 */
 
+#include "script_component.hpp"
+
 private ["_position", "_radius", "_nearestPlayers"];
 
 _position = _this select 0;
@@ -23,7 +25,7 @@ _radius = _this select 1;
 _nearestPlayers = [];
 
 {
-  if ([_x] call AGM_Core_fnc_isPlayer && {alive _x}) then {
+  if ([_x] call EFUNC(Core, isPlayer) && {alive _x}) then {
     _nearestPlayers pushBack _x;
   };
 } forEach (nearestObjects [_position, ["Man"], _radius]);

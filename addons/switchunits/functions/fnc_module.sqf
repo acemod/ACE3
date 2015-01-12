@@ -16,6 +16,8 @@
     BOOLEAN (Good practice to include one)
 */
 
+#include "script_component.hpp"
+
 if !(isServer) exitWith {};
 
 _logic = _this select 0;
@@ -23,16 +25,16 @@ _activated = _this select 2;
 
 if !(_activated) exitWith {};
 
-AGM_SwitchUnits_Module = true;
+GVAR(Module) = true;
 
-["AGM_SwitchUnits_EnableSwitchUnits", true] call AGM_Core_fnc_setParameter;
+[QGVAR(EnableSwitchUnits), true] call EFUNC(Core, setParameter);
 
-[_logic, "AGM_SwitchUnits_SwitchToWest", "SwitchToWest"] call AGM_Core_fnc_readBooleanParameterFromModule;
-[_logic, "AGM_SwitchUnits_SwitchToEast", "SwitchToEast"] call AGM_Core_fnc_readBooleanParameterFromModule;
-[_logic, "AGM_SwitchUnits_SwitchToIndependent", "SwitchToIndependent"] call AGM_Core_fnc_readBooleanParameterFromModule;
-[_logic, "AGM_SwitchUnits_SwitchToCivilian", "SwitchToCivilian"] call AGM_Core_fnc_readBooleanParameterFromModule;
+[_logic, QGVAR(SwitchToWest), "SwitchToWest"] call EFUNC(Core, readBooleanParameterFromModule);
+[_logic, QGVAR(SwitchToEast), "SwitchToEast"] call EFUNC(Core, readBooleanParameterFromModule);
+[_logic, QGVAR(SwitchToIndependent), "SwitchToIndependent"] call EFUNC(Core, readBooleanParameterFromModule);
+[_logic, QGVAR(SwitchToCivilian), "SwitchToCivilian"] call EFUNC(Core, readBooleanParameterFromModule);
+         
+[_logic, QGVAR(EnableSafeZone), "EnableSafeZone"] call EFUNC(Core, readBooleanParameterFromModule);
+[_logic, QGVAR(SafeZoneRadius), "SafeZoneRadius"] call EFUNC(Core, readNumericParameterFromModule);
 
-[_logic, "AGM_SwitchUnits_EnableSafeZone", "EnableSafeZone"] call AGM_Core_fnc_readBooleanParameterFromModule;
-[_logic, "AGM_SwitchUnits_SafeZoneRadius", "SafeZoneRadius"] call AGM_Core_fnc_readNumericParameterFromModule;
-
-diag_log text "[AGM]: SwitchUnits Module Initialized.";
+diag_log text "[ACE]: SwitchUnits Module Initialized.";
