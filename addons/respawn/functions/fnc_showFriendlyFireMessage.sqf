@@ -1,4 +1,21 @@
-// by commy2
+/*
+  Name: ACE_Respawn_fnc_showFriendlyFireMessages
+  
+  Author(s):
+    commy2
+  
+  Description:
+    shows a message in system chat of who killed who
+  
+  Parameters:
+    0: OBJECT - unit
+    1: OBJECT - killer
+  
+  Returns:
+    VOID
+*/
+
+#include "script_component.hpp"
 
 private ["_unit", "_killer"];
 

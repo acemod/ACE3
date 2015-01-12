@@ -1,4 +1,21 @@
-// by commy2
+/*
+  Name: ACE_Respawn_fnc_canMoveRallypoint
+  
+  Author(s):
+    commy2
+  
+  Description:
+    checks if a unit can move a rally point
+  
+  Parameters:
+    0: OBJECT - unit
+    1: OBJECT - side
+  
+  Returns:
+    BOOLEAN
+*/
+
+#include "script_component.hpp"
 
 private ["_unit", "_side"];
 

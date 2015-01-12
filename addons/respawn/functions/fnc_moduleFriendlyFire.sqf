@@ -1,14 +1,22 @@
 /*
- * Author: commy2
- *
- * Initializes the Friendly Fire Messages module.
- *
- * Arguments:
- * Whatever the module provides. (I dunno.)
- *
- * Return Value:
- * None
- */
+  Name: ACE_Respawn_fnc_moduleFriendlyFire
+  
+  Author(s):
+    commy2
+  
+  Description:
+    initializes the Friendly Fire Messages module
+  
+  Parameters:
+    0: OBJECT - logic
+    1: ARRAY<OBJECT> - synced units
+    2: BOOLEAN - activated
+  
+  Returns:
+    VOID
+*/
+
+#include "script_component.hpp"
 
 _this spawn {
   _logic = _this select 0;

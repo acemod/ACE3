@@ -1,4 +1,20 @@
-// by commy2
+/*
+  Name: ACE_Respawn_fnc_removeDisconnectedPlayer
+  
+  Author(s):
+    commy2
+  
+  Description:
+    handles the disconnected event
+  
+  Parameters:
+    0: BOOLEAN - forceRemove // not used atm
+  
+  Returns:
+    VOID
+*/
+
+#include "script_component.hpp"
 
 private ["_forceRemove", "_body"];
 

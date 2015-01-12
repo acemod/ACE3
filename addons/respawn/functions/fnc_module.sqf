@@ -1,14 +1,23 @@
-/*
- * Author: KoffeinFlummi, bux578, CAA-Picard, commy2
- *
- * Initializes the respawn module.
- *
- * Arguments:
- * Whatever the module provides. (I dunno.)
- *
- * Return Value:
- * None
- */
+ /*
+  Name: ACE_Respawn_fnc_module
+  
+  Author(s):
+    KoffeinFlummi, bux578, CAA-Picard, commy2
+  
+  Description:
+    initializes the respawn module
+  
+  Parameters:
+    0: OBJECT - logic
+    1: ARRAY<OBJECT> - synced units
+    2: BOOLEAN - activated
+  
+  Returns:
+    VOID
+*/
+
+#include "script_component.hpp"
+
 if !(isServer) exitWith {};
 
 _logic = _this select 0;

@@ -1,15 +1,22 @@
 /*
- * Author: bux578
- *
- * removes the body
- *
- * Arguments:
- * The body
- *
- * Return Value:
- * None
- */
+  Name: ACE_Respawn_fnc_removeBody
+  
+  Author(s):
+    bux578
+  
+  Description:
+    removes a given body
+  
+  Parameters:
+    0: OBJECT - body
+    1: BOOLEAN - forceRemove // not used atm
+  
+  Returns:
+    VOID
+*/
 
+#include "script_component.hpp"
+ 
 private ["_body", "_forceRemove", "_bodyRemoveTimer"];
 
 _body = _this select 0;

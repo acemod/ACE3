@@ -1,15 +1,21 @@
 /*
-Author: bux578
-
-Description:
-Restores previously saved gear
-
-Arguments:
-A player object, an array containing all gear
-
-Return value:
-An array containing all inventory items
+  Name: ACE_Respawn_fnc_removeBody
+  
+  Author(s):
+    bux578
+  
+  Description:
+    Restores previously saved gear
+  
+  Parameters:
+    0: OBJECT - unit
+    1: ARRAY<STRING> - Array containing all gear
+  
+  Returns:
+    VOID
 */
+
+#include "script_component.hpp"
 
 private ["_unit", "_allGear", "_headgear", "_goggles", "_uniform", "_uniformitems", "_vest", "_vestitems", "_backpack", "_backpackitems", "_primaryweapon", "_primaryweaponitems", "_primaryweaponmagazine", "_handgunweapon", "_handgunweaponitems", "_handgunweaponmagazine", "_assigneditems", "_binocular"];
 

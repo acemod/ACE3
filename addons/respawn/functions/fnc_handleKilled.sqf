@@ -15,6 +15,8 @@
     VOID
 */
 
+#include "script_component.hpp"
+
 private ["_killedUnit"];
 
 _killedUnit = _this select 0;

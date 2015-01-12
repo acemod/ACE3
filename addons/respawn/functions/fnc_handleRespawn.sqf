@@ -1,5 +1,5 @@
 /*
-  Name: AGM_Respawn_fnc_handleRespawn
+  Name: ACE_Respawn_fnc_handleRespawn
   
   Author(s):
     bux578
@@ -14,6 +14,8 @@
   Returns:
     VOID
 */
+
+#include "script_component.hpp"
 
 private ["_respawnedUnit"];
 

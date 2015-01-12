@@ -1,4 +1,22 @@
-// by commy2
+/*
+  Name: ACE_Respawn_fnc_teleportToRallypoint
+  
+  Author(s):
+    commy2
+  
+  Description:
+    teleports a unit to a rallypoint
+  
+  Parameters:
+    0: OBJECT - unit
+    1: OBJECT - side
+    2: BOOLEAN - teleport to base
+  
+  Returns:
+    VOID
+*/
+
+#include "script_component.hpp"
 
 private ["_unit", "_side", "_toBase", "_rallypoint"];
 

@@ -1,15 +1,20 @@
 /*
-Author: bux578
-
-Description:
-Returns an array containing all items of a given unit
-
-Arguments:
-A player object
-
-Return value:
-An array containing all inventory items
+  Name: ACE_Respawn_fnc_getAllGear
+  
+  Author(s):
+    bux578
+  
+  Description:
+    returns an array containing all items of a given unit
+  
+  Parameters:
+    0: OBJECT - unit
+  
+  Returns:
+    ARRAY
 */
+
+#include "script_component.hpp"
 
 private ["_unit", "_allGear"];
 

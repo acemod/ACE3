@@ -1,15 +1,23 @@
 /*
- * Author: commy2
- *
- * Initializes the Rallypoint module.
- *
- * Arguments:
- * Whatever the module provides. (I dunno.)
- *
- * Return Value:
- * None
- */
+  Name: ACE_Respawn_fnc_moduleRallypoint
+  
+  Author(s):
+    commy2
+  
+  Description:
+    initializes the Rallypoint module
+  
+  Parameters:
+    0: OBJECT - logic
+    1: ARRAY<OBJECT> - synced units
+    2: BOOLEAN - activated
+  
+  Returns:
+    VOID
+*/
 
+ #include "script_component.hpp"
+ 
 _logic = _this select 0;
 _units = _this select 1;
 _activated = _this select 2;

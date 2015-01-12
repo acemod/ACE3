@@ -1,4 +1,21 @@
-// by commy2
+/*
+  Name: ACE_Respawn_fnc_moveRallypoint
+  
+  Author(s):
+    commy2
+  
+  Description:
+    Moves a rallypoint to the player's location
+  
+  Parameters:
+    0: OBJECT - unit
+    1: OBJECT - side
+  
+  Returns:
+    VOID
+*/
+
+#include "script_component.hpp"
 
 _this spawn {
   _unit = _this select 0;
