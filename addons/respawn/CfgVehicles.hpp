@@ -102,7 +102,7 @@ class CfgVehicles {
         displayName = "Teleport to Rallypoint";
         distance = 4;
         condition = QUOTE( side group _player == east );
-        statement = QUOTE( [_player, side group _player, false] call FUNC(teleportToRallypoint); )";
+        statement = QUOTE( [_player, side group _player, false] call FUNC(teleportToRallypoint); );
         showDisabled = 1;
         priority = 1;
       };
@@ -122,7 +122,7 @@ class CfgVehicles {
         displayName = "Teleport to Rallypoint";
         distance = 4;
         condition = QUOTE( side group _player == independent );
-        statement = QUOTE( [_player, side group _player, false] call FUNC(teleportToRallypoint); )";
+        statement = QUOTE( [_player, side group _player, false] call FUNC(teleportToRallypoint); );
         showDisabled = 1;
         priority = 1;
       };
