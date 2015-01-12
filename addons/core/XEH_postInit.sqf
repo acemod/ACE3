@@ -17,20 +17,20 @@ if (_currentVersion != _previousVersion) then {
   profileNamespace setVariable ["ACE_VersionNumberString", _currentVersion];
 };
 
-0 spawn COMPILE_FILE2(scripts\Version\checkVersionNumber);
+0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber);
 
 // everything that only player controlled machines need, goes below this
 if (!hasInterface) exitWith {};
 
-call COMPILE_FILE2(scripts\assignedItemFix.sqf);
+call COMPILE_FILE(scripts\assignedItemFix);
 
-GVAR(keyInput)  = COMPILE_FILE2(scripts\keyInput.sqf);
-GVAR(keyRelease)  = COMPILE_FILE2(scripts\keyRelease.sqf);
-GVAR(editKey)   = COMPILE_FILE2(scripts\editKey.sqf);
-GVAR(openMenu)  = COMPILE_FILE2(scripts\openMenu.sqf);
-GVAR(closeMenu) = COMPILE_FILE2(scripts\closeMenu.sqf);
-GVAR(nextKeys) = COMPILE_FILE2(scripts\nextKeys.sqf);
-GVAR(toggleState) = COMPILE_FILE2(scripts\toggleState.sqf);
+GVAR(keyInput)    = COMPILE_FILE(scripts\keyInput);
+GVAR(keyRelease)  = COMPILE_FILE(scripts\keyRelease);
+GVAR(editKey)     = COMPILE_FILE(scripts\editKey);
+GVAR(openMenu)    = COMPILE_FILE(scripts\openMenu);
+GVAR(closeMenu)   = COMPILE_FILE(scripts\closeMenu);
+GVAR(nextKeys)    = COMPILE_FILE(scripts\nextKeys);
+GVAR(toggleState) = COMPILE_FILE(scripts\toggleState);
 
 [false] call FUNC(setKeyDefault);
 
@@ -41,9 +41,9 @@ for "_index" from 0 to 300 do {
   GVAR(keyTimes) set [_index, -1];
 };
 
-call COMPILE_FILE2(scripts\KeyInput\initCanInteractFunction.sqf);
-call COMPILE_FILE2(scripts\KeyInput\initKeys.sqf);
-call COMPILE_FILE2(scripts\KeyInput\initScrollWheel.sqf);
+call COMPILE_FILE(scripts\KeyInput\initCanInteractFunction);
+call COMPILE_FILE(scripts\KeyInput\initKeys);
+call COMPILE_FILE(scripts\KeyInput\initScrollWheel);
 
 0 spawn {
   while {true} do {
