@@ -24,11 +24,11 @@ if (GVAR(pfeh_running)) then {
 private ["_mag", "_setup", "_player"];
 _setup = GVAR(Setup);
 GVAR(Setup) = objNull;
-[GVAR(placer), "ACE_Explosives", false] call EFUNC(Core,setForceWalkStatus);
+[GVAR(placer), "ACE_Explosives", false] call EFUNC(Common,setForceWalkStatus);
 GVAR(placer) = objNull;
 _player = ACE_player;
-[_player, "DefaultAction", _player getVariable [QGVAR(Place), -1]] call EFUNC(Core,removeActionEventHandler);
-[_player, "MenuBack", _player getVariable [QGVAR(Cancel), -1]] call EFUNC(Core,removeActionEventHandler);
+[_player, "DefaultAction", _player getVariable [QGVAR(Place), -1]] call EFUNC(Common,removeActionEventHandler);
+[_player, "MenuBack", _player getVariable [QGVAR(Cancel), -1]] call EFUNC(Common,removeActionEventHandler);
 call EFUNC(Interaction,hideMouseHint);
 if ((_setup getVariable [QGVAR(Class), ""]) != "") then {
 	_dir = (getDir _setup);
@@ -73,7 +73,7 @@ if ((_setup getVariable [QGVAR(Class), ""]) != "") then {
 					if (!isNull (_this select 1)) then {
 						_explosive attachTo [(_this select 1)];
 						_dir = _dir - (getDir (_this select 1));
-						[[_explosive, _dir, 0], QUOTE(FUNC(setPosition))] call EFUNC(Core,execRemoteFnc);
+						[[_explosive, _dir, 0], QUOTE(FUNC(setPosition))] call EFUNC(Common,execRemoteFnc);
 					};
 				};
 			};

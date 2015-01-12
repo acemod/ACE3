@@ -36,7 +36,7 @@ _detonators = [_unit] call FUNC(getDetonators);
 if (count _detonators == 0) then {
 	call EFUNC(Interaction,hideMenu);
 	"ACE_Explosives" call EFUNC(Interaction,openMenuSelf);
-	[format[localize "STR_ACE_Explosives_NoTriggersAvailable", "player"]] call EFUNC(Core,displayTextStructured);
+	[format[localize "STR_ACE_Explosives_NoTriggersAvailable", "player"]] call EFUNC(Common,displayTextStructured);
 }else{
 	[
 		_actions,

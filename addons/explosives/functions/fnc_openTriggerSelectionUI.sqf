@@ -47,7 +47,7 @@ _count = 0;
 if (_count == 0) then {
 	[ACE_player] call FUNC(openPlaceUI);
 	[format[localize "STR_ACE_Explosives_NoTriggersAvailable",
-		getText(configFile >> "CfgMagazines" >> _magazine >> "DisplayName")]] call EFUNC(Core,displayTextStructured);
+		getText(configFile >> "CfgMagazines" >> _magazine >> "DisplayName")]] call EFUNC(Common,displayTextStructured);
 }else{
 	[
 		_actions,

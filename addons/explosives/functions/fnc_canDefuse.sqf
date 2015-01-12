@@ -19,7 +19,7 @@
 private "_unit";
 _unit = _this select 0;
 if (vehicle _unit != _unit || {!("ACE_DefusalKit" in (items _unit))}) exitWith {false};
-_isSpecialist = [_unit] call EFUNC(Core,isEOD);
+_isSpecialist = [_unit] call EFUNC(Common,isEOD);
 
 if (GVAR(RequireSpecialist) && {!_isSpecialist}) exitWith {false};
 

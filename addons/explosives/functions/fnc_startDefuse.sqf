@@ -41,10 +41,10 @@ if (STANCE _unit == "Prone") then {
 if (ACE_player != _unit) then {
   // If the unit is a player, call the function on the player.
   if (isPlayer _unit) then {
-    [[_unit, _target], QUOTE(FUNC(startDefuse)), _unit] call EFUNC(Core,execRemoteFnc);
+    [[_unit, _target], QUOTE(FUNC(startDefuse)), _unit] call EFUNC(Common,execRemoteFnc);
   } else {
     // TODO: use scheduled delay execution
-    [_unit, _target, [[_unit] call EFUNC(Core,isEOD), _target] call _fnc_DefuseTime] spawn {
+    [_unit, _target, [[_unit] call EFUNC(Common,isEOD), _target] call _fnc_DefuseTime] spawn {
       (_this select 0) playActionNow _actionToPlay;
       (_this select 0) disableAI "MOVE";
       (_this select 0) disableAI "TARGET";
@@ -57,12 +57,12 @@ if (ACE_player != _unit) then {
 } else {
   _unit playActionNow _actionToPlay;
   if (GVAR(RequireSpecialist)) then {
-    if ([_unit] call EFUNC(Core,isEOD)) then {
+    if ([_unit] call EFUNC(Common,isEOD)) then {
       [[true, _target] call _fnc_DefuseTime, [_unit,_target],
-        QUOTE(FUNC(defuseExplosive)), localize "STR_ACE_Explosives_DefusingExplosive"] call EFUNC(Core,progressBar);
+        QUOTE(FUNC(defuseExplosive)), localize "STR_ACE_Explosives_DefusingExplosive"] call EFUNC(Common,progressBar);
     };
   } else {
-    [[([_unit] call EFUNC(Core,isEOD)), _target] call _fnc_DefuseTime, [_unit,_target],
-    QUOTE(FUNC(defuseExplosive)), localize "STR_ACE_Explosives_DefusingExplosive"] call EFUNC(Core,progressBar);
+    [[([_unit] call EFUNC(Common,isEOD)), _target] call _fnc_DefuseTime, [_unit,_target],
+    QUOTE(FUNC(defuseExplosive)), localize "STR_ACE_Explosives_DefusingExplosive"] call EFUNC(Common,progressBar);
   };
 };

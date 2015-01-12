@@ -28,8 +28,8 @@ GVAR(Setup) = objNull;
 if (isNil {GVAR(placer)}) then {
 	GVAR(placer) = objNull;
 };
-[GVAR(placer), "ACE_Explosives", false] call EFUNC(Core,setForceWalkStatus);
+[GVAR(placer), "ACE_Explosives", false] call EFUNC(Common,setForceWalkStatus);
 GVAR(placer) = objNull;
 call EFUNC(Interaction,hideMouseHint);
-[ACE_player, "DefaultAction", ACE_player getVariable [QGVAR(Place),  -1]] call EFUNC(Core,removeActionEventHandler);
-[ACE_player, "MenuBack",      ACE_player getVariable [QGVAR(Cancel), -1]] call EFUNC(Core,removeActionEventHandler);
+[ACE_player, "DefaultAction", ACE_player getVariable [QGVAR(Place),  -1]] call EFUNC(Common,removeActionEventHandler);
+[ACE_player, "MenuBack",      ACE_player getVariable [QGVAR(Cancel), -1]] call EFUNC(Common,removeActionEventHandler);

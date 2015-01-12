@@ -57,6 +57,6 @@ if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_tr
 	call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {_explosive};
 if (_setDir) then {
 	[[_explosive, _dir, getNumber (_magazineTrigger >> "pitch")], QUOTE(FUNC(setPosition))]
-		call EFUNC(Core,execRemoteFnc);
+		call EFUNC(Common,execRemoteFnc);
 };
 _explosive

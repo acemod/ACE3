@@ -22,7 +22,7 @@ GVAR(PlacedCount) = 0;
 GVAR(Setup) = objNull;
 GVAR(pfeh_running) = false;
 
-[{(_this select 0) call FUNC(handleScrollWheel);}] call FUNC(Core,addScrollWheelEventHandler);
+[{(_this select 0) call FUNC(handleScrollWheel);}] call EFUNC(Common,addScrollWheelEventHandler);
 player addEventHandler ["Killed", {
 	private "_deadman";
 	call FUNC(place_Cancel);
