@@ -16,7 +16,7 @@
 	Example:
 		["SatchelCharge_Remote_Mag","Timer"] call ACE_Explosives_fnc_selectTrigger;
 */
-#include "script_component.hpp"
+#include "\z\ace\explosives\script_component.hpp"
 private ["_magazine","_trigger"];
 closeDialog 0;
 _magazine = _this select 0;

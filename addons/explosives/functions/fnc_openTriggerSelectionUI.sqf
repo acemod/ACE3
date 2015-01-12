@@ -15,7 +15,7 @@
 	Example:
 		[lbData [8866, lbCurSel 8866]] call ACE_Explosives_fnc_openTriggerSelectionUI;
 */
-#include "script_component.hpp"
+#include "\z\ace\explosives\script_component.hpp"
 private ["_magazine", "_hasRequiredItems","_triggerTypes", "_actions", "_detonators", "_required", "_magTriggers"];
 _magazine = _this select 0;
 _detonators = [ACE_player] call FUNC(getDetonators);

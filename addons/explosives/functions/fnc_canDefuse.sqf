@@ -15,7 +15,7 @@
   Example:
     [player] call ACE_Explosives_fnc_CanDefuse;
 */
-#include "script_component.hpp"
+#include "\z\ace\explosives\script_component.hpp"
 private "_unit";
 _unit = _this select 0;
 if (vehicle _unit != _unit || {!("ACE_DefusalKit" in (items _unit))}) exitWith {false};

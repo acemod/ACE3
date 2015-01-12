@@ -15,7 +15,7 @@
 	Example:
 		[player] call ACE_Explosives_fnc_openTransmitterUI;
 */
-#include "script_component.hpp"
+#include "\z\ace\explosives\script_component.hpp"
 private ["_items", "_unit", "_count", "_actions", "_config"];
 _unit = _this select 0;
 _items = (items _unit);
@@ -45,7 +45,7 @@ if (count _detonators == 0) then {
 		},
 		{
 			call EFUNC(Interaction,hideMenu);
-			if !(profileNamespace getVariable ["ACE_Interaction_AutoCloseMenu", false]) then {
+			if !(profileNamespace getVariable [QUOTE( EGVAR(Interaction, AutoCloseMenu) ), false]) then {
 				"ACE_Explosives" call EFUNC(Interaction,openMenuSelf);
 			};
 		}

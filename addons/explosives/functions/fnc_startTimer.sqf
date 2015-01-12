@@ -17,7 +17,7 @@
 	Example:
 		[_explosive, 10] call ACE_Explosives_fnc_startTimer;
 */
-#include "script_component.hpp"
+#include "\z\ace\explosives\script_component.hpp"
 _this spawn { // TODO: use scheduled delay execution
 	private ["_explosive", "_timer"];
 	_explosive = _this select 0;

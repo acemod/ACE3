@@ -11,7 +11,7 @@ class CfgWeapons {
     scope = 2;
     displayName = $STR_ACE_Explosives_clacker_displayName;
     descriptionShort = $STR_ACE_Explosives_clacker_description;
-    picture = "\ACE_Explosives\Data\UI\Clacker.paa";
+    picture = QUOTE( PATHTOF(Data\UI\Clacker.paa) );
     model = "\A3\weapons_F\ammo\mag_univ.p3d";
     ACE_Range = 250;
     ACE_Detonator = 1;
@@ -23,14 +23,14 @@ class CfgWeapons {
   };
   class ACE_M26_Clacker: ACE_Clacker {
     displayName = $STR_ACE_Explosives_M26_displayName;
-    picture = "\ACE_Explosives\Data\UI\MK26_Transmitter_ca.paa";
+    picture = QUOTE( PATHTOF(Data\UI\MK26_Transmitter_ca.paa) );
     ACE_Range = 5000;
   };
   class ACE_DefusalKit: ACE_ItemCore {
     scope = 2;
     displayName = $STR_ACE_Explosives_DefusalKit_displayName;
     descriptionShort = $STR_ACE_Explosives_DefusalKit_description;
-    picture = "\ACE_Explosives\Data\UI\Pliers.paa";
+    picture = QUOTE( PATHTOF(Data\UI\Pliers.paa) );
     model = "\A3\Structures_F\Items\Tools\Pliers_F.p3d";
 
     class ItemInfo: ACE_ExplosiveItem {
@@ -42,7 +42,7 @@ class CfgWeapons {
     scope = 2;
     displayName = $STR_ACE_Explosives_DeadManSwitch_displayName;
     descriptionShort = $STR_ACE_Explosives_DeadManSwitch_description;
-    picture = "\ACE_Explosives\Data\UI\DeadmanSwitch.paa";
+    picture = QUOTE( PATHTOF(Data\UI\DeadmanSwitch.paa) );
     model = "\A3\weapons_F\ammo\mag_univ.p3d";
     ACE_Range = 100;
     ACE_Detonator = 1;

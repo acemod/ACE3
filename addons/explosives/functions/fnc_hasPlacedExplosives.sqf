@@ -15,5 +15,5 @@
 	Example:
 		_hasPLacedExplosives = [player] call ACE_Explosives_fnc_hasPlacedExplosives;
 */
-#include "script_component.hpp"
+#include "\z\ace\explosives\script_component.hpp"
 (count (_this call FUNC(getPlacedExplosives)) > 0)

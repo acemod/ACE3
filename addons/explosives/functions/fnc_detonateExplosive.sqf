@@ -21,7 +21,7 @@
 		// Clacker
 		[player, 100, [Explosive, 1]] call ACE_Explosives_fnc_detonateExplosive;
 */
-#include "script_component.hpp"
+#include "\z\ace\explosives\script_component.hpp"
 private ["_item","_result", "_ignoreRange", "_unit", "_range"];
 _unit = _this select 0;
 _range = _this select 1;

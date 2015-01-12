@@ -15,7 +15,7 @@
 	Example:
 		[player] call ACE_Explosives_fnc_openPlaceUI;
 */
-#include "script_component.hpp"
+#include "\z\ace\explosives\script_component.hpp"
 private ["_unit","_mags", "_item", "_index", "_actions"];
 _unit = _this select 0;
 call FUNC(place_Cancel);
@@ -53,7 +53,7 @@ _actions = [localize "STR_ACE_Explosives_PlaceMenu", localize "STR_ACE_Explosive
 	},
 	{
 		call EFUNC(Interaction,hideMenu);
-		if !(profileNamespace getVariable ["ACE_Interaction_AutoCloseMenu", false]) then {
+		if !(profileNamespace getVariable [QUOTE( EGVAR(Interaction, AutoCloseMenu) ), false]) then {
 			"ACE_Explosives" call EFUNC(Interaction,openMenuSelf);
 		};
 	}

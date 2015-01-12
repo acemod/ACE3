@@ -16,7 +16,7 @@
  	Example:
 		1.2 call ACE_Explosives_fnc_HandleScrollWheel;
 */
-#include "script_component.hpp"
+#include "\z\ace\explosives\script_component.hpp"
 private ["_obj"];
 if (isNull(GVAR(Setup)) || {ACE_Modifier == 0} || !GVAR(pfeh_running)) exitWith {false};
 _this = _this * 5;

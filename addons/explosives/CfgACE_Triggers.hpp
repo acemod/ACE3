@@ -10,28 +10,28 @@ class CfgACE_Triggers {
   */
   class Command {
     displayName = $STR_ACE_Explosives_clacker_displayName;
-    picture = "\ACE_Explosives\Data\UI\Clacker.paa";
+    picture = QUOTE( PATHTOF(Data\UI\Clacker.paa) );
     onPlace = QUOTE( _this call FUNC(AddClacker);false );
     requires[] = {"ACE_Clacker"};
   };
   class MK16_Transmitter:Command {
     displayName = $STR_ACE_Explosives_MK16_displayName;
-    picture = "\ACE_Explosives\Data\UI\MK16_Reciever_ca.paa";
+    picture = QUOTE( PATHTOF(Data\UI\MK16_Reciever_ca.paa) );
     requires[] = {"ACE_M26_Clacker"};
   };
   class DeadManSwitch:Command {
     displayName = $STR_ACE_Explosives_DeadManSwitch_displayName;
-    picture = "\ACE_Explosives\Data\UI\DeadmanSwitch.paa";
+    picture = QUOTE( PATHTOF(Data\UI\DeadmanSwitch.paa) );
     requires[] = {"ACE_DeadManSwitch"};
   };
   class PressurePlate {
     displayName = $STR_ACE_Explosives_PressurePlate;
-    picture = "ACE_Explosives\data\UI\PressurePlate.paa";
+    picture = QUOTE( PATHTOF(Data\UI\PressurePlate.paa) );
     onPlace = "_dist=GetNumber(ConfigFile >> 'CfgMagazines' >> (_this select 2) >> 'ACE_Triggers' >> 'PressurePlate' >> 'digDistance');_ex=_this select 1;_ex setPosATL ((getPosATL _ex) vectorDiff ((VectorUp _ex) vectorCrossProduct [0,0,_dist]));false";
   };
   class IRSensor {
     displayName = $STR_ACE_Explosives_IRSensor;
-    picture = "ACE_Explosives\data\UI\PressurePlate.paa";
+    picture = QUOTE( PATHTOF(Data\UI\PressurePlate.paa) );
     onPlace = "false";
   };
   class Timer {
@@ -42,7 +42,7 @@ class CfgACE_Triggers {
   };
   class Tripwire {
     displayName = $STR_ACE_Explosives_TripWire;
-    picture = "ACE_Explosives\data\UI\Tripwire.paa";
+    picture = QUOTE( PATHTOF(Data\UI\Tripwire.paa) );
     onPlace = "false";
   };
 };

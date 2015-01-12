@@ -15,7 +15,7 @@ class CfgVehicles {
         exceptions[] = {"ACE_Interaction_isNotSwimming"}; \
         showDisabled = 1;
         priority = 4;
-        icon = "ACE_Explosives\UI\Explosives_Menu_ca.paa";
+        icon = QUOTE( PATHTOF(UI\Explosives_Menu_ca.paa) );
         subMenu[] = {"ACE_Explosives", 1};
         hotkey = "X";
         //Sub-menu items
@@ -25,7 +25,7 @@ class CfgVehicles {
           statement = QUOTE( [_player] call FUNC(openTransmitterUI); );
           exceptions[] = {"ACE_Interaction_isNotSwimming"}; \
           showDisabled = 1;
-          icon = "ACE_Explosives\UI\Explosives_Menu_ca.paa";
+          icon = QUOTE( PATHTOF(UI\Explosives_Menu_ca.paa) );
           priority = 2;
           hotkey = "T";
         };
@@ -35,7 +35,7 @@ class CfgVehicles {
           statement = QUOTE( [_player] call FUNC(openPlaceUI); );
           exceptions[] = {"ACE_Interaction_isNotSwimming"}; \
           showDisabled = 1;
-          icon = "ACE_Explosives\UI\Place_Explosive_ca.paa";
+          icon = QUOTE( PATHTOF(UI\Place_Explosive_ca.paa) );
           priority = 1;
           hotkey = "P";
         };
@@ -45,7 +45,7 @@ class CfgVehicles {
           statement = QUOTE( [_player, EGVAR(Interaction, Target)] call FUNC(startDefuse); );
           exceptions[] = {"ACE_Interaction_isNotSwimming"}; \
           showDisabled = 0;
-          icon = "ACE_Explosives\UI\Defuse_ca.paa";
+          icon = QUOTE( PATHTOF(UI\Defuse_ca.paa) );
           priority = 0.8;
           hotkey = "F";
         };

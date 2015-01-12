@@ -16,7 +16,7 @@
 	Example:
 		call ACE_Explosives_fnc_Place_Cancel;
 */
-#include "script_component.hpp"
+#include "\z\ace\explosives\script_component.hpp"
 if (GVAR(pfeh_running)) then {
 	[QGVAR(Placement),"OnEachFrame"] call BIS_fnc_removeStackedEventHandler;
 	GVAR(pfeh_running) = false;

@@ -19,7 +19,7 @@
   Example:
     [player, "SatchelCharge_Remote_Mag", "Command"] call ACE_Explosives_fnc_SetupExplosive;
 */
-#include "script_component.hpp"
+#include "\z\ace\explosives\script_component.hpp"
 private ["_unit", "_class", "_config", "_timer"];
 _unit = _this select 0;
 _class = _this select 1;

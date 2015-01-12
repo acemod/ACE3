@@ -6,7 +6,7 @@ class ACE_ModuleExplosive: Module_F {
   function = QUOTE( FUNC(module) );
   scope = 2;
   isGlobal = 1;
-  icon = "\ACE_Explosives\UI\IconExplosives_ca.paa";
+  icon = QUOTE( PATHTOF(UI\IconExplosives_ca.paa) );
   class Arguments {
     class RequireSpecialist {
       displayName = "Require specialists?";

@@ -16,7 +16,7 @@
 	Example:
 		[player, "ACE_M26_Clacker"] call ACE_Explosives_fnc_openDetonateUI;
 */
-#include "script_component.hpp"
+#include "\z\ace\explosives\script_component.hpp"
 private ["_unit","_result", "_item"];
 call EFUNC(Interaction,hideMenu);
 _unit = _this select 0;
