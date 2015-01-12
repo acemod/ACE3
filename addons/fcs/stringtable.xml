@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-19 -->
-<Project name="AGM">
-  <Package name="FireControlSystem">
-    <Key ID="STR_AGM_FireControlSystem_LaseTarget">
+<Project name="ACE">
+  <Package name="FCS">
+    <Key ID="STR_ACE_FCS_LaseTarget">
       <English>Lase Target / Measure Distance</English>
       <German>Ziel anlasern / Entfernung Messen</German>
       <French>Télémétrer la cible</French>
@@ -17,7 +17,7 @@
       -->
       <Russian>Подсветить цель / Измерить расстояние</Russian>
     </Key>
-    <Key ID="STR_AGM_FireControlSystem_ZeroedTo">
+    <Key ID="STR_ACE_FCS_ZeroedTo">
       <English>Zeroed To</English>
       <German>Haltepunkt</German>
       <Spanish>Fijado a</Spanish>
@@ -29,7 +29,7 @@
       <Portuguese>Fixado em</Portuguese>
       <Italian>Azzeramento a</Italian>
     </Key>
-    <Key ID="STR_AGM_FireControlSystem_AdjustRangeUp">
+    <Key ID="STR_ACE_FCS_AdjustRangeUp">
       <English>Adjust FCS Range (Up)</English>
       <German>Entfernung des FLS erhöhen</German>
       <Polish>Zwiększ zasięg FCS</Polish>
@@ -41,7 +41,7 @@
       <Italian>Aumentare la distanza dell'FCS</Italian>
       <Russian>Диапазон СУО (Выше)</Russian>
     </Key>
-    <Key ID="STR_AGM_FireControlSystem_AdjustRangeDown">
+    <Key ID="STR_ACE_FCS_AdjustRangeDown">
       <English>Adjust FCS Range (Down)</English>
       <German>Entfernung des FLS verringern</German>
       <Polish>Zmniejsz zasięg FCS</Polish>
@@ -53,7 +53,7 @@
       <Italian>Ridurre la distanza dell'FCS</Italian>
       <Russian>Диапазон СУО (Ниже)</Russian>
     </Key>
-    <Key ID="STR_AGM_FireControlSystem_ResetFCS">
+    <Key ID="STR_ACE_FCS_ResetFCS">
       <English>Reset FCS</English>
       <German>FLS zurücksetzen</German>
       <Spanish>Reiniciar FCS</Spanish>
@@ -65,7 +65,7 @@
       <Italian>Azzeramento dell'FCS</Italian>
       <Russian>Обнулить СУО</Russian>
     </Key>
-    <Key ID="STR_AGM_FireControlSystem_HasBeenReset">
+    <Key ID="STR_ACE_FCS_HasBeenReset">
       <English>FCS has been reset.</English>
       <German>FLS wurde zurückgesetzt.</German>
       <Spanish>FCS reiniciado</Spanish>

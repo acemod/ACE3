@@ -16,6 +16,7 @@
  * offset from the current angle necessary to hit the target
  */
 
+#include "script_component.hpp"
 #define PRECISION 0.1
 
 private ["_distance","_angleTarget","_maxElev","_initSpeed","_airFriction","_timeToLive","_timeToLive","_simulationStep","_angle","_posTargetX","_posTargetY","_posX","_posY","_velocityX","_velocityY","_velocityMagnitude"];
@@ -30,7 +31,7 @@ _simulationStep = _this select 6;
 
 if (_simulationStep == 0) exitWith {_angleTarget};
 
-AGM_FCS_traceBullet = {
+FUNC(traceBullet) = {
   private ["_distance", "_angleTarget", "_maxElev", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_angle", "_posTargetX", "_posTargetY", "_posX", "_posY", "_velocityX", "_velocityY", "_velocityMagnitude"];
 
   _distance       = _this select 0;
@@ -67,17 +68,17 @@ AGM_FCS_traceBullet = {
   _posY - _posTargetY
 };
 
-if ((_this + [_maxElev]) call AGM_FCS_traceBullet < 0) exitWith {_maxElev - _angleTarget};
+if ((_this + [_maxElev]) call FUNC(traceBullet) < 0) exitWith {_maxElev - _angleTarget};
 
 // Newton Method / Secand Method
 _angle1 = _angleTarget;
 _angle2 = _maxElev;
 _it2 = 0;
-_f1 = (_this + [_angle1]) call AGM_FCS_traceBullet;
+_f1 = (_this + [_angle1]) call FUNC(traceBullet);
 
 if ((abs _f1) <= PRECISION) exitWith {0};
 while {(abs _f1) > PRECISION} do {
-  _f2 = (_this + [_angle2]) call AGM_FCS_traceBullet;
+  _f2 = (_this + [_angle2]) call FUNC(traceBullet);
   _temp = _angle2-_f2*(_angle2-_angle1)/(_f2-_f1);
   _angle1 = _angle2;
   _angle2 = _temp;
