@@ -53,7 +53,7 @@ class CfgVehicles {
         };
         class GVAR(Detach) {
           displayName = "$STR_AGM_Attach_Detach";
-          condition = QUOTE( [_player] call FUNC(canDetach );
+          condition = QUOTE( [_player] call FUNC(canDetach) );
           statement = QUOTE( [_player] call FUNC(detach) );
           exceptions[] = {"AGM_Drag_isNotDragging"};
           showDisabled = 0;
