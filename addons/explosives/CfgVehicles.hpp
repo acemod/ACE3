@@ -10,9 +10,9 @@ class CfgVehicles {
     class ACE_SelfActions {
       class GVAR(Explosives) {
         displayName = $STR_ACE_Explosives_Menu;
-        condition = QUOTE( !(_player getVariable [ARR_2(QGVAR(PlantingExplosive), false)]) );
+        condition = QUOTE( !(_player getVariable [ARR_2('ace_explosives_PlantingExplosive', false)]) );
         statement = "";
-        exceptions[] = {"ACE_Interaction_isNotSwimming"}; \
+        exceptions[] = {"ACE_Interaction_isNotSwimming"};
         showDisabled = 1;
         priority = 4;
         icon = QUOTE( PATHTOF(UI\Explosives_Menu_ca.paa) );
@@ -21,9 +21,9 @@ class CfgVehicles {
         //Sub-menu items
         class ACE_Detonate {
           displayName = $STR_ACE_Explosives_Detonate;
-          condition = QUOTE( [_player] call FUNC(hasPlacedExplosives) AND ) and {count ([_player] call FUNC(getDetonators)) > 0} );
+          condition = QUOTE( [_player] call FUNC(canDetonate) );
           statement = QUOTE( [_player] call FUNC(openTransmitterUI); );
-          exceptions[] = {"ACE_Interaction_isNotSwimming"}; \
+          exceptions[] = {"ACE_Interaction_isNotSwimming"};
           showDisabled = 1;
           icon = QUOTE( PATHTOF(UI\Explosives_Menu_ca.paa) );
           priority = 2;
@@ -33,7 +33,7 @@ class CfgVehicles {
           displayName = $STR_ACE_Explosives_Place;
           condition = QUOTE( (vehicle _player == _player) and {[_player] call FUNC(hasExplosives)} );
           statement = QUOTE( [_player] call FUNC(openPlaceUI); );
-          exceptions[] = {"ACE_Interaction_isNotSwimming"}; \
+          exceptions[] = {"ACE_Interaction_isNotSwimming"};
           showDisabled = 1;
           icon = QUOTE( PATHTOF(UI\Place_Explosive_ca.paa) );
           priority = 1;
@@ -43,7 +43,7 @@ class CfgVehicles {
           displayName = $STR_ACE_Explosives_Defuse;
           condition = QUOTE( [_player] call FUNC(canDefuse) );
           statement = QUOTE( [ARR_2(_player, EGVAR(Interaction, Target))] call FUNC(startDefuse); );
-          exceptions[] = {"ACE_Interaction_isNotSwimming"}; \
+          exceptions[] = {"ACE_Interaction_isNotSwimming"};
           showDisabled = 0;
           icon = QUOTE( PATHTOF(UI\Defuse_ca.paa) );
           priority = 0.8;

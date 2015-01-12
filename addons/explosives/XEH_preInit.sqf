@@ -20,6 +20,7 @@ None
 
 PREP(addClacker);
 PREP(canDefuse);
+PREP(canDetonate);
 PREP(defuseExplosive);
 PREP(detonateExplosive);
 

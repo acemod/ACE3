@@ -6,9 +6,9 @@ class CfgPatches {
     weapons[] = {"ACE_Clacker", "ACE_DefusalKit", "ACE_M26_Clacker", "ACE_DeadManSwitch"};
     requiredVersion = 0.60;
     requiredAddons[] = {ace_common, ace_interaction};
-    version = "0.95";
-    versionStr = "0.95";
-    versionAr[] = {0,95,0};
+    version = QUOTE(VERSION);
+    versionStr = QUOTE(VERSION);
+    versionAr[] = {VERSION_AR};
     author[] = {"Garth 'L-H' de Wet"};
     authorUrl = "http://garth.snakebiteink.co.za/";
   };
