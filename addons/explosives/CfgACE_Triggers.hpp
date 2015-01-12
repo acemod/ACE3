@@ -37,7 +37,7 @@ class CfgACE_Triggers {
   class Timer {
     displayName = $STR_ACE_Explosives_timerName;
     picture = "ACE_Explosives\data\UI\Timer.paa";
-    onPlace = QUOTE( [_this select 1, (_this select 3) select 0] call FUNC(startTimer);false );
+    onPlace = QUOTE( [ARR_2(_this select 1, (_this select 3) select 0)] call FUNC(startTimer);false );
     onSetup = QUOTE( _this call FUNC(openTimerSetUI);true );
   };
   class Tripwire {
