@@ -17,7 +17,7 @@ class CfgVehicles {
 				class ViewOptics;
 			};
 		};
-	}
+	};
 
 	class ACE_M47_Static: ACE_M47_Static_Base {
 		scope = 1; // Hide it for now
