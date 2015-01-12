@@ -370,4 +370,4 @@ class CfgAmmo {
   };
 };
 
-#include <Optics.hpp>
+#include <CfgOptics.hpp>
