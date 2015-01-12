@@ -83,7 +83,7 @@ class CfgVehicles {
   class Car: LandVehicle {
     class ACE_SelfActions {
       class ResetFCS {
-        displayName = $STR_AGM_FireControlSystem_ResetFCS;
+        displayName = $STR_ACE_FireControlSystem_ResetFCS;
         enableInside = 1;
         condition = QUOTE((count (_vehicle getVariable [QGVAR(Magazines), []]) > 1) and (_player == gunner _vehicle));
         statement = QUOTE([vehicle _player] call FUNC(reset););
@@ -137,7 +137,7 @@ class CfgVehicles {
     GVAR(Enabled) = 1; // all tracked vehicles get one by default
     class ACE_SelfActions {
       class ResetFCS {
-        displayName = $STR_AGM_FireControlSystem_ResetFCS;
+        displayName = $STR_ACE_FireControlSystem_ResetFCS;
         enableInside = 1;
         condition = QUOTE((count (_vehicle getVariable [QGVAR(Magazines), []]) > 1) and (_player == gunner _vehicle));
         statement = QUOTE([vehicle _player] call FUNC(reset););
@@ -255,7 +255,7 @@ class CfgVehicles {
   class Helicopter: Air {
     class ACE_SelfActions {
       class ResetFCS {
-        displayName = $STR_AGM_FireControlSystem_ResetFCS;
+        displayName = $STR_ACE_FireControlSystem_ResetFCS;
         enableInside = 1;
         condition = QUOTE((count (_vehicle getVariable [QGVAR(Magazines), []]) > 1) and (_player == gunner _vehicle));
         statement = QUOTE([vehicle _player] call FUNC(reset););
