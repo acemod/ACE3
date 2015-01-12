@@ -47,7 +47,7 @@
 #define ACE_NOGRIP handAnim[] = {}
 #define ACE_DISTANCE_DEFAULT distanceZoomMin = 300; distanceZoomMax = 300
 
-#include "script_macros_optics.hpp"
+// #include "script_macros_optics.hpp" //ToDo
 
 #define ACE_NOZEROING discreteDistance[] = {}; \
 			discreteDistanceInitIndex = 0; \
