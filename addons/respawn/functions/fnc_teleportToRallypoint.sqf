@@ -6,22 +6,24 @@ _unit = _this select 0;
 _side = _this select 1;
 _toBase = _this select 2;
 
+// rallypoint names are defined in CfgVehicles.hpp
+
 _rallypoint = ([
   [
     objNull,
-    missionNamespace getVariable ["AGM_RallypointExit_West", objNull],
-    missionNamespace getVariable ["AGM_RallypointExit_East", objNull],
-    missionNamespace getVariable ["AGM_RallypointExit_Independent", objNull]
+    missionNamespace getVariable ["ACE_RallypointExit_West", objNull],
+    missionNamespace getVariable ["ACE_RallypointExit_East", objNull],
+    missionNamespace getVariable ["ACE_RallypointExit_Independent", objNull]
   ],
   [
     objNull,
-    missionNamespace getVariable ["AGM_Rallypoint_West", objNull],
-    missionNamespace getVariable ["AGM_Rallypoint_East", objNull],
-    missionNamespace getVariable ["AGM_Rallypoint_Independent", objNull]
+    missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
+    missionNamespace getVariable ["ACE_Rallypoint_East", objNull],
+    missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]
   ]
 ] select _toBase) select ([west, east, independent] find _side) + 1;
 
 if (isNull _rallypoint) exitWith {};
 
 _unit setPosASL (getPosASL _rallypoint);
-[["Teleported to Rallypoint", "Teleported to Base"] select _toBase] call AGM_Core_fnc_displayTextStructured;
+[[localize "STR_ACE_Respawn_TeleportedToRallypoint", localize "STR_ACE_Respawn_TeleportedToBase"] select _toBase] call EFUNC(Core, displayTextStructured);

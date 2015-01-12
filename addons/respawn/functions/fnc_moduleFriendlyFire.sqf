@@ -18,11 +18,11 @@ _this spawn {
   if !(_activated) exitWith {};
 
   if (isServer) then {
-    _varName = "AGM_showFriendlyFireMessage";
+    _varName = QGVAR(showFriendlyFireMessage);
 
     missionNamespace setVariable [_varName, true];
     publicVariable _varName;
   };
 
-  diag_log text "[AGM]: Friendly Fire Messages Module Initialized.";
+  diag_log text "[ACE]: Friendly Fire Messages Module Initialized.";
 };

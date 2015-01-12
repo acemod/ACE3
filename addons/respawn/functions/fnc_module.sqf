@@ -16,28 +16,28 @@ _activated = _this select 2;
 
 if !(_activated) exitWith {};
 
-AGM_Respawn_Module = true;
+GVAR(Module) = true;
 
-[_logic, "AGM_Respawn_SavePreDeathGear", "SavePreDeathGear"] call AGM_Core_fnc_readBooleanParameterFromModule;
-[_logic, "AGM_Respawn_RemoveDeadBodiesDisonncected", "RemoveDeadBodiesDisonncected"] call AGM_Core_fnc_readBooleanParameterFromModule;
+[_logic, QGVAR(SavePreDeathGear),             "SavePreDeathGear"]             call EFUNC(Core, readBooleanParameterFromModule);
+[_logic, QGVAR(RemoveDeadBodiesDisonncected), "RemoveDeadBodiesDisonncected"] call EFUNC(Core, readBooleanParameterFromModule);
 
 if (isServer) then {
-	if (AGM_Respawn_RemoveDeadBodiesDisonncected) then {
-		_fnc_deleteDisconnected = {
-			_this spawn {
-				_unit = _this select 0;
+  if (GVAR(RemoveDeadBodiesDisonncected)) then {
+    _fnc_deleteDisconnected = {
+      _this spawn {
+        _unit = _this select 0;
 
-				sleep 4;
+        sleep 4;
 
-				if (!alive _unit) then {
-					deleteVehicle _unit;
-				};
-			};
-			false
-		};
+        if (!alive _unit) then {
+          deleteVehicle _unit;
+        };
+      };
+      false
+    };
 
-		addMissionEventHandler ["HandleDisconnect", _fnc_deleteDisconnected];
-	};
+    addMissionEventHandler ["HandleDisconnect", _fnc_deleteDisconnected];
+  };
 };
 
-diag_log text "[AGM]: Respawn Module Initialized.";
+diag_log text "[ACE]: Respawn Module Initialized.";

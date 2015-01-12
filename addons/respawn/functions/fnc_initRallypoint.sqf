@@ -13,5 +13,5 @@ if (isNil _name) then {
   publicVariable _name;
 } else {
   deleteVehicle _rallypoint;
-  diag_log text "[AGM] Respawn: ERROR Multiple Rallypoints of same type.";
+  diag_log text "[ACE] Respawn: ERROR Multiple Rallypoints of same type.";
 };

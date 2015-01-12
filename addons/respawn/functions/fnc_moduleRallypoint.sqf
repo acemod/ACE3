@@ -16,10 +16,8 @@ _activated = _this select 2;
 
 if !(_activated) exitWith {};
 
-//_mode = parseNumber (_logic getVariable "Action");
-
 {
-  _x setVariable ["AGM_canMoveRallypoint", true];
+  _x setVariable ["ACE_canMoveRallypoint", true];
 } forEach _units;
 
-diag_log text "[AGM]: Rallypoint Module Initialized.";
+diag_log text "[ACE]: Rallypoint Module Initialized.";

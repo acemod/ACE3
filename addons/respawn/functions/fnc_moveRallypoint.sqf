@@ -4,11 +4,13 @@ _this spawn {
   _unit = _this select 0;
   _side = _this select 1;
 
+  // rallypoint names are defined in CfgVehicles.hpp
+  
   _rallypoint = [
     objNull,
-    missionNamespace getVariable ["AGM_RallypointExit_West", objNull],
-    missionNamespace getVariable ["AGM_RallypointExit_East", objNull],
-    missionNamespace getVariable ["AGM_RallypointExit_Independent", objNull]
+    missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
+    missionNamespace getVariable ["ACE_RallypointExit_East", objNull],
+    missionNamespace getVariable ["ACE_RallypointExit_Independent", objNull]
   ] select ([west, east, independent] find _side) + 1;
 
   if (isNull _rallypoint) exitWith {};
@@ -19,7 +21,7 @@ _this spawn {
 
   _position set [2, 0];
 
-  ["Deploy in 5 seconds ..."] call AGM_Core_fnc_displayTextStructured;
+  [localize "STR_ACE_Respawn_Deploy"] call EFUNC(Core, displayTextStructured);
 
   sleep 5;
   _rallypoint setPosATL _position;
@@ -31,5 +33,5 @@ _this spawn {
   _marker setMarkerTextLocal format ["%1:%2", [date select 3, 2, 0] call CBA_fnc_FORMATNumber, [date select 4, 2, 0] call CBA_fnc_FORMATNumber];
   */
 
-  ["Rallypoint deployed"] call AGM_Core_fnc_displayTextStructured;
+  [localize "STR_ACE_Respawn_Deploy"] call EFUNC(Core, displayTextStructured);
 };
