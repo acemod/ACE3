@@ -387,55 +387,55 @@ class CfgVehicles {
   // pistols
   class Pistol_Base_F;
   class Weapon_hgun_P07_F: Pistol_Base_F {
-    displayName = "P99";
+    displayName = "$STR_AGM_RealisticNames_hgun_P07_Name";
   };
 
   class Weapon_hgun_Rook40_F: Pistol_Base_F {
-    displayName = "MP-443 Grach";
+    displayName = "$STR_AGM_RealisticNames_hgun_Rook40_Name";
   };
 
   class Weapon_hgun_ACPC2_F: Pistol_Base_F {
-    displayName = "ACP-C2";
+    displayName = "$STR_AGM_RealisticNames_hgun_ACPC2_Name";
   };
 
   class Weapon_hgun_Pistol_heavy_01_F: Pistol_Base_F {
-    displayName = "FNX-45 Tactical";
+    displayName = "$STR_AGM_RealisticNames_hgun_Pistol_heavy_01_Name";
   };
 
   class Weapon_hgun_Pistol_heavy_02_F: Pistol_Base_F {
-    displayName = "Chiappa Rhino 60DS";
+    displayName = "$STR_AGM_RealisticNames_hgun_Pistol_heavy_02_Name";
   };
 
   class Weapon_hgun_Pistol_Signal_F: Pistol_Base_F {
-    displayName = "Taurus Judge";
+    displayName = "$STR_AGM_RealisticNames_hgun_Pistol_Signal_Name";
   };
 
   // rocket launchers
   class Launcher_Base_F;
   class Weapon_launch_NLAW_F: Launcher_Base_F {
-    displayName = "NLAW";
+    displayName = "$STR_AGM_RealisticNames_launch_NLAW_Name";
   };
 
   class Weapon_launch_RPG32_F: Launcher_Base_F {
-    displayName = "RPG-32";
+    displayName = "$STR_AGM_RealisticNames_launch_RPG32_Name";
   };
 
   class Weapon_launch_Titan_F: Launcher_Base_F {
-    displayName = "Mini-Spike (AA)";
+    displayName = "$STR_AGM_RealisticNames_launch_Titan_Name";
   };
 
   class Weapon_launch_Titan_short_F: Launcher_Base_F {
-    displayName = "Mini-Spike (AT)";
+    displayName = "$STR_AGM_RealisticNames_launch_Titan_short_Name";
   };
 
   class Weapon_launch_B_Titan_F: Launcher_Base_F {
-    displayName = "Mini-Spike (AA)";
+    displayName = "$STR_AGM_RealisticNames_launch_Titan_Name";
   };
   //class Weapon_launch_I_Titan_F: Weapon_launch_B_Titan_F {};
   //class Weapon_launch_O_Titan_F: Weapon_launch_B_Titan_F {};
 
   class Weapon_launch_launch_B_Titan_short_F: Launcher_Base_F {
-    displayName = "Mini-Spike (AT)";
+    displayName = "$STR_AGM_RealisticNames_launch_Titan_short_Name";
   };
   //class Weapon_launch_I_Titan_short_F: Weapon_launch_launch_B_Titan_short_F {};
   //class Weapon_launch_O_Titan_short_F: Weapon_launch_launch_B_Titan_short_F {};
@@ -445,125 +445,125 @@ class CfgVehicles {
   // MX
   class Weapon_Base_F;
   class Weapon_arifle_MX_F: Weapon_Base_F {
-    displayName = "MX";
+    displayName = "$STR_AGM_RealisticNames_arifle_MX_Name";
   };
 
   class Weapon_arifle_MXC_F: Weapon_Base_F {
-    displayName = "MXC";
+    displayName = "$STR_AGM_RealisticNames_arifle_MXC_Name";
   };
 
   class Weapon_arifle_MX_GL_F: Weapon_Base_F {
-    displayName = "MX 3GL";
+    displayName = "$STR_AGM_RealisticNames_arifle_MX_GL_Name";
   };
 
   class Weapon_arifle_MX_SW_F: Weapon_Base_F {
-    displayName = "MX LSW";
+    displayName = "$STR_AGM_RealisticNames_arifle_MX_SW_Name";
   };
 
   class Weapon_arifle_MXM_F: Weapon_Base_F {
-    displayName = "MXM";
+    displayName = "$STR_AGM_RealisticNames_arifle_MXM_Name";
   };
 
   // Katiba
   class Weapon_arifle_Katiba_F: Weapon_Base_F {
-    displayName = "KT2002 Katiba";
+    displayName = "$STR_AGM_RealisticNames_arifle_Katiba_Name";
   };
 
   class Weapon_arifle_Katiba_C_F: Weapon_Base_F {
-    displayName = "KT2002C Katiba";
+    displayName = "$STR_AGM_RealisticNames_arifle_Katiba_C_Name";
   };
 
   class Weapon_arifle_Katiba_GL_F: Weapon_Base_F {
-    displayName = "KT2002 Katiba KGL";
+    displayName = "$STR_AGM_RealisticNames_arifle_Katiba_GL_Name";
   };
 
   // F2000
   class Weapon_arifle_Mk20_F: Weapon_Base_F {
-    displayName = "F2000 (Camo)";
+    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_Name";
   };
 
   class Weapon_arifle_Mk20_plain_F: Weapon_Base_F {
-    displayName = "F2000";
+    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_plain_Name";
   };
 
   class Weapon_arifle_Mk20C_F: Weapon_Base_F {
-    displayName = "F2000 Tactical (Camo)";
+    displayName = "$STR_AGM_RealisticNames_arifle_Mk20C_Name";
   };
 
   class Weapon_arifle_Mk20C_plain_F: Weapon_Base_F {
-    displayName = "F2000 Tactical";
+    displayName = "$STR_AGM_RealisticNames_arifle_Mk20C_plain_Name";
   };
 
   class Weapon_arifle_Mk20_GL_F: Weapon_Base_F {
-    displayName = "F2000 EGLM (Camo)";
+    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_GL_Name";
   };
 
   class Weapon_arifle_Mk20_GL_plain_F: Weapon_Base_F {
-    displayName = "F2000 EGLM";
+    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_GL_plain_Name";
   };
 
   // TAR-21
   class Weapon_arifle_TRG21_F: Weapon_Base_F {
-    displayName = "TAR-21";
+    displayName = "$STR_AGM_RealisticNames_arifle_TRG21_Name";
   };
 
   class Weapon_arifle_TRG20_F: Weapon_Base_F {
-    displayName = "CTAR-21";
+    displayName = "$STR_AGM_RealisticNames_arifle_TRG20_Name";
   };
 
   class Weapon_arifle_TRG21_GL_F: Weapon_Base_F {
-    displayName = "TAR-21 EGLM";
+    displayName = "$STR_AGM_RealisticNames_arifle_TRG21_GL_Name";
   };
 
   // sub machine guns
   class Weapon_SMG_01_F: Weapon_Base_F {
-    displayName = "Vector SMG";
+    displayName = "$STR_AGM_RealisticNames_SMG_01_Name";
   };
 
   class Weapon_SMG_02_F: Weapon_Base_F {
-    displayName = "Scorpion Evo 3 A1";
+    displayName = "$STR_AGM_RealisticNames_SMG_02_Name";
   };
 
   class Weapon_hgun_PDW2000_F: Weapon_Base_F {
-    displayName = "CPW";
+    displayName = "$STR_AGM_RealisticNames_hgun_PDW2000_Name";
   };
 
   class Weapon_arifle_SDAR_F: Weapon_Base_F {
-    displayName = "RFB SDAR";
+    displayName = "$STR_AGM_RealisticNames_arifle_SDAR_Name";
   };
 
   // machine guns
   class Weapon_LMG_Mk200_F: Weapon_Base_F {
-    displayName = "Stoner 99 LMG";
+    displayName = "$STR_AGM_RealisticNames_LMG_Mk200_Name";
   };
 
   class Weapon_LMG_Zafir_F: Weapon_Base_F {
-    displayName = "Negev NG7";
+    displayName = "$STR_AGM_RealisticNames_LMG_Zafir_Name";
   };
 
   // sniper rifles
   class Weapon_srifle_EBR_F: Weapon_Base_F {
-    displayName = "Mk14 Mod 1 EBR";
+    displayName = "$STR_AGM_RealisticNames_srifle_EBR_Name";
   };
 
   class Weapon_srifle_GM6_F: Weapon_Base_F {
-    displayName = "GM6 Lynx";
+    displayName = "$STR_AGM_RealisticNames_srifle_GM6_Name";
   };
 
   class Weapon_srifle_GM6_camo_F: Weapon_Base_F {
-    displayName = "GM6 Lynx (Camo)";
+    displayName = "$STR_AGM_RealisticNames_srifle_GM6_camo_Name";
   };
 
   class Weapon_srifle_LRR_F: Weapon_Base_F {
-    displayName = "M200 Intervention";
+    displayName = "$STR_AGM_RealisticNames_srifle_LRR_Name";
   };
 
   class Weapon_srifle_LRR_camo_F: Weapon_Base_F {
-    displayName = "M200 Intervention (Camo)";
+    displayName = "$STR_AGM_RealisticNames_srifle_LRR_camo_Name";
   };
 
   class Weapon_srifle_DMR_01_F: Weapon_Base_F {
-    displayName = "VS-121";
+    displayName = "$STR_AGM_RealisticNames_srifle_DMR_01_Name";
   };
 };
 
@@ -576,189 +576,189 @@ class CfgWeapons {
   // MX
   class arifle_MX_Base_F;
   class arifle_MX_F: arifle_MX_Base_F {
-    displayName = "MX";
+    displayName = "$STR_AGM_RealisticNames_arifle_MX_Name";
   };
   class arifle_MX_Black_F: arifle_MX_F {
-    displayName = "MX (Black)";
+    displayName = "$STR_AGM_RealisticNames_arifle_MX_Black_Name";
   };
 
   class arifle_MXC_F: arifle_MX_Base_F {
-    displayName = "MXC";
+    displayName = "$STR_AGM_RealisticNames_arifle_MXC_Name";
   };
   class arifle_MXC_Black_F: arifle_MXC_F {
-    displayName = "MXC (Black)";
+    displayName = "$STR_AGM_RealisticNames_arifle_MXC_Black_Name";
   };
 
   class arifle_MX_GL_F: arifle_MX_Base_F {
-    displayName = "MX 3GL";
+    displayName = "$STR_AGM_RealisticNames_arifle_MX_GL_Name";
   };
   class arifle_MX_GL_Black_F: arifle_MX_GL_F {
-    displayName = "MX 3GL (Black)";
+    displayName = "$STR_AGM_RealisticNames_arifle_MX_GL_Black_Name";
   };
 
   class arifle_MX_SW_F: arifle_MX_Base_F {
-    displayName = "MX LSW";
+    displayName = "$STR_AGM_RealisticNames_arifle_MX_SW_Name";
   };
   class arifle_MX_SW_Black_F: arifle_MX_SW_F {
-    displayName = "MX LSW (Black)";
+    displayName = "$STR_AGM_RealisticNames_arifle_MX_SW_Black_Name";
   };
 
   class arifle_MXM_F: arifle_MX_Base_F {
-    displayName = "MXM";
+    displayName = "$STR_AGM_RealisticNames_arifle_MXM_Name";
   };
   class arifle_MXM_Black_F: arifle_MXM_F {
-    displayName = "MXM (Black)";
+    displayName = "$STR_AGM_RealisticNames_arifle_MXM_Black_Name";
   };
 
   // Katiba
   class arifle_katiba_Base_F;
   class arifle_Katiba_F: arifle_katiba_Base_F {
-    displayName = "KT2002 Katiba";
+    displayName = "$STR_AGM_RealisticNames_arifle_Katiba_Name";
   };
   class arifle_Katiba_GL_F: arifle_katiba_Base_F {
-    displayName = "KT2002 Katiba KGL";
+    displayName = "$STR_AGM_RealisticNames_arifle_Katiba_GL_Name";
   };
   class arifle_Katiba_C_F: arifle_katiba_Base_F {
-    displayName = "KT2002C Katiba";
+    displayName = "$STR_AGM_RealisticNames_arifle_Katiba_C_Name";
   };
 
   // SDAR
   class SDAR_base_F;
   class arifle_SDAR_F: SDAR_base_F {
-    displayName = "RFB SDAR";
+    displayName = "$STR_AGM_RealisticNames_arifle_SDAR_Name";
   };
 
   // TAR-21
   class Tavor_base_F;
   class arifle_TRG21_F: Tavor_base_F {
-    displayName = "TAR-21";
+    displayName = "$STR_AGM_RealisticNames_arifle_TRG21_Name";
   };
   class arifle_TRG21_GL_F: arifle_TRG21_F {
-    displayName = "TAR-21 EGLM";
+    displayName = "$STR_AGM_RealisticNames_arifle_TRG21_GL_Name";
   };
   class arifle_TRG20_F: Tavor_base_F {
-    displayName = "CTAR-21";
+    displayName = "$STR_AGM_RealisticNames_arifle_TRG20_Name";
   };
 
   // F2000
   class mk20_base_F;
   class arifle_Mk20_F: mk20_base_F {
-    displayName = "F2000 (Camo)";
+    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_Name";
   };
   class arifle_Mk20_plain_F: arifle_Mk20_F {
-    displayName = "F2000";
+    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_plain_Name";
   };
 
   class arifle_Mk20C_F: mk20_base_F {
-    displayName = "F2000 Tactical (Camo)";
+    displayName = "$STR_AGM_RealisticNames_arifle_Mk20C_Name";
   };
   class arifle_Mk20C_plain_F: arifle_Mk20C_F {
-    displayName = "F2000 Tactical";
+    displayName = "$STR_AGM_RealisticNames_arifle_Mk20C_plain_Name";
   };
 
   class arifle_Mk20_GL_F: mk20_base_F {
-    displayName = "F2000 EGLM (Camo)";
+    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_GL_Name";
   };
   class arifle_Mk20_GL_plain_F: arifle_Mk20_GL_F {
-    displayName = "F2000 EGLM";
+    displayName = "$STR_AGM_RealisticNames_arifle_Mk20_GL_plain_Name";
   };
 
   // Vector
   class SMG_01_Base;
   class SMG_01_F: SMG_01_Base {
-    displayName = "Vector SMG";
+    displayName = "$STR_AGM_RealisticNames_SMG_01_Name";
   };
 
   // Scorpion
   class SMG_02_base_F;
   class SMG_02_F: SMG_02_base_F {
-    displayName = "Scorpion Evo 3 A1";
+    displayName = "$STR_AGM_RealisticNames_SMG_02_Name";
   };
 
   // PDW 2000
   class pdw2000_base_F;
   class hgun_pdw2000_F: pdw2000_base_F {
-    displayName = "CPW";
+    displayName = "$STR_AGM_RealisticNames_hgun_PDW2000_Name";
   };
 
   // pistols
   class Pistol_Base_F;
   class hgun_P07_F: Pistol_Base_F {
-    displayName = "P99";
+    displayName = "$STR_AGM_RealisticNames_hgun_P07_Name";
   };
 
   class hgun_Rook40_F: Pistol_Base_F {
-    displayName = "MP-443 Grach";
+    displayName = "$STR_AGM_RealisticNames_hgun_Rook40_Name";
   };
 
   class hgun_ACPC2_F: Pistol_Base_F {
-    displayName = "ACP-C2";
+    displayName = "$STR_AGM_RealisticNames_hgun_ACPC2_Name";
   };
 
   class hgun_Pistol_heavy_01_F: Pistol_Base_F {
-    displayName = "FNX-45 Tactical";
+    displayName = "$STR_AGM_RealisticNames_hgun_Pistol_heavy_01_Name";
   };
 
   class hgun_Pistol_heavy_02_F: Pistol_Base_F {
-    displayName = "Chiappa Rhino 60DS";
+    displayName = "$STR_AGM_RealisticNames_hgun_Pistol_heavy_02_Name";
   };
 
   class hgun_Pistol_Signal_F: Pistol_Base_F {
-    displayName = "Taurus Judge";
+    displayName = "$STR_AGM_RealisticNames_hgun_Pistol_Signal_Name";
   };
 
   // machine guns
   class Rifle_Long_Base_F;
   class LMG_Mk200_F: Rifle_Long_Base_F {
-    displayName = "Stoner 99 LMG";
+    displayName = "$STR_AGM_RealisticNames_LMG_Mk200_Name";
   };
 
   class LMG_Zafir_F: Rifle_Long_Base_F {
-    displayName = "Negev NG7";
+    displayName = "$STR_AGM_RealisticNames_LMG_Zafir_Name";
   };
 
   // sniper rifles
   class EBR_base_F;
   class srifle_EBR_F: EBR_base_F {
-    displayName = "Mk14 Mod 1 EBR";
+    displayName = "$STR_AGM_RealisticNames_srifle_EBR_Name";
   };
 
   class LRR_base_F;
   class srifle_LRR_F: LRR_base_F {
-    displayName = "M200 Intervention";
+    displayName = "$STR_AGM_RealisticNames_srifle_LRR_Name";
   };
   class srifle_LRR_camo_F: srifle_LRR_F {
-    displayName = "M200 Intervention (Camo)";
+    displayName = "$STR_AGM_RealisticNames_srifle_LRR_camo_Name";
   };
 
   class GM6_base_F;
   class srifle_GM6_F: GM6_base_F {
-    displayName = "GM6 Lynx";
+    displayName = "$STR_AGM_RealisticNames_srifle_GM6_Name";
   };
   class srifle_GM6_camo_F: srifle_GM6_F {
-    displayName = "GM6 Lynx (Camo)";
+    displayName = "$STR_AGM_RealisticNames_srifle_GM6_camo_Name";
   };
 
   class DMR_01_base_F;
   class srifle_DMR_01_F: DMR_01_base_F {
-    displayName = "VS-121";
+    displayName = "$STR_AGM_RealisticNames_srifle_DMR_01_Name";
   };
 
   // launchers
   class Launcher_Base_F;
   class launch_RPG32_F: Launcher_Base_F {
-    displayName = "RPG-32";
+    displayName = "$STR_AGM_RealisticNames_launch_RPG32_Name";
   };
 
   class launch_Titan_base: Launcher_Base_F {
-    displayName = "Mini-Spike (AA)";
+    displayName = "$STR_AGM_RealisticNames_launch_Titan_Name";
   };
   class launch_Titan_short_base: launch_Titan_base {
-    displayName = "Mini-Spike (AT)";
+    displayName = "$STR_AGM_RealisticNames_launch_Titan_short_Name";
   };
 
   class launch_NLAW_F: Launcher_Base_F {
-    displayName = "NLAW";
+    displayName = "$STR_AGM_RealisticNames_launch_NLAW_Name";
   };
 
   // vehicle weapons
