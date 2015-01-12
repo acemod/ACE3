@@ -140,14 +140,14 @@ PREP(fixCrateContent);
 // Loop to update the ACE_player variable
 ACE_player = player;
 if (hasInterface) then {
-	["ACE_CheckForPlayerChange", "onEachFrame", {
-		if !(ACE_player isEqualTo (missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player])) then {
-			_this = ACE_player;
+    ["ACE_CheckForPlayerChange", "onEachFrame", {
+        if !(ACE_player isEqualTo (missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player])) then {
+            _this = ACE_player;
 
-			ACE_player = missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player];
-			uiNamespace setVariable ["ACE_player", ACE_player];
+            ACE_player = missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player];
+            uiNamespace setVariable ["ACE_player", ACE_player];
 
-			[missionNamespace, "playerChanged", [ACE_player, _this]] call FUNC(callCustomEventHandlers);
-		};
-	}] call BIS_fnc_addStackedEventHandler;
+            [missionNamespace, "playerChanged", [ACE_player, _this]] call FUNC(callCustomEventHandlers);
+        };
+    }] call BIS_fnc_addStackedEventHandler;
 };
