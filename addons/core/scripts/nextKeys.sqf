@@ -41,7 +41,7 @@ if (GVAR(MenuPage) == _countPages - 1) then {
     _control2 = _dlgMenuDialog displayCtrl (OFFSET_4 + _index);
     _control3 = _dlgMenuDialog displayCtrl (OFFSET_5 + _index);
 
-    _control1 ctrlSetText format [PATHTOF(UI\box_%1checked_ca.paa", ["un", ")] select _state];
+    _control1 ctrlSetText format [QUOTE(PATHTOF(UI\box_%1checked_ca.paa)), ["un", ""] select _state];
     _control2 ctrlSetText _displayName;
 
     _control1 ctrlShow true;

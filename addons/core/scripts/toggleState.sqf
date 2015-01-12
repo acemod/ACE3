@@ -12,7 +12,7 @@ disableSerialization;
 _dlgMenuDialog = uiNamespace getVariable QGVAR(MenuDialog);
 
 _control = _dlgMenuDialog displayCtrl (300 + _index);
-_control ctrlSetText format [PATHTOF(UI\box_%1checked_ca.paa", ["un", ")] select _state];
+_control ctrlSetText format [QUOTE(PATHTOF(UI\box_%1checked_ca.paa)), ["un", ""] select _state];
 
 GVAR(OptionNamesNew) set [_index1, _name];
 GVAR(OptionStatesNew) set [_index1, _state];

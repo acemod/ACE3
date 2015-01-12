@@ -4,14 +4,14 @@
 _config = configFile >> QGVAR(Default_Keys);
 _count = count _config;
 
-_header = "_keyCode = [_this select 1, _this select 2, _this select 3, _this select 4] call FUNC(convertKeyCode); _keyIndex = floor _keyCode; if (_keyIndex == 0) exitWith {false}; if (!(profileNamespace getVariable ['ACE_enableNumberHotkeys', true]) && {_keyIndex < 12} && {_keyIndex > 1} && {_keyCode mod 1 == 0}) exitWith {false}; _time = time; _player = ACE_player; _vehicle = vehicle _player; _isInput = false;";
-_headerUp = "_keyCode = _this select 1; _keyIndex = _keyCode; if (_keyIndex == 0) exitWith {false}; _time = time; _player = ACE_player; _vehicle = vehicle _player;";
+_header = format ["_keyCode = [_this select 1, _this select 2, _this select 3, _this select 4] call %1; _keyIndex = floor _keyCode; if (_keyIndex == 0) exitWith {false}; if (!(profileNamespace getVariable ['ACE_enableNumberHotkeys', true]) && {_keyIndex < 12} && {_keyIndex > 1} && {_keyCode mod 1 == 0}) exitWith {false}; _time = time; _player = ACE_player; _vehicle = vehicle _player; _isInput = false;", QUOTE(FUNC(convertKeyCode))];
+_headerUp = format ["_keyCode = _this select 1; _keyIndex = _keyCode; if (_keyIndex == 0) exitWith {false}; _time = time; _player = ACE_player; _vehicle = vehicle _player;"];
 
-_handleDoubleTap = "if (_time < (GVAR(keyTimes) select _keyIndex) + 0.5 && {_keyIndex == _keyCode}) then {_keyCode = _keyIndex + 0.8};";
-_handleHold = "_allowHold = false; _disallowHold = false; if (GVAR(keyStates) select _keyIndex > 1) exitWith {false}; if (GVAR(keyStates) select _keyIndex > 0) then {_keyCode = _keyIndex + 0.9};";
-_handleHoldUp = "if (GVAR(keyStates) select _keyIndex > 1) then {_keyCode = _keyIndex + 0.9};";
+_handleDoubleTap = QUOTE(if (_time < (GVAR(keyTimes) select _keyIndex) + 0.5 && {_keyIndex == _keyCode}) then {_keyCode = _keyIndex + 0.8};);
+_handleHold = QUOTE(_allowHold = false; _disallowHold = false; if (GVAR(keyStates) select _keyIndex > 1) exitWith {false}; if (GVAR(keyStates) select _keyIndex > 0) then {_keyCode = _keyIndex + 0.9};);
+_handleHoldUp = QUOTE(if (GVAR(keyStates) select _keyIndex > 1) then {_keyCode = _keyIndex + 0.9};);
 
-_debug = "if (!isNil 'ACE_Debug' && {'Keys' in ACE_Debug}) then {systemChat (str _keyCode + ' ' + str (GVAR(keyStates) select _keyIndex))};";
+_debug = format ["if (!isNil 'ACE_Debug' && {'Keys' in ACE_Debug}) then {systemChat (str _keyCode + ' ' + str (%1 select _keyIndex))};", QGVAR(keyStates)];
 
 _onKeyDown = "" + _debug;
 _onKeyUp = "" + _debug;
@@ -56,8 +56,8 @@ for "_index" from 0 to (_count - 1) do {
   };
 };
 
-_halt = "if (!(_allowHold) || {_disallowHold}) then {GVAR(keyStates) set [_keyIndex, (GVAR(keyStates) select _keyIndex) + 1]; GVAR(keyTimes) set [_keyIndex, _time];};";
-_haltUp = QGVAR(keyStates) set [_keyIndex, 0];;
+_halt = format ["if (!(_allowHold) || {_disallowHold}) then {%1 set [_keyIndex, (%1 select _keyIndex) + 1]; %2 set [_keyIndex, _time];};", QGVAR(keyStates), QGVAR(keyTimes)];
+_haltUp = format ["%1 set [_keyIndex, 0];", QGVAR(keyStates)];
 
 //_return = "_isInput";
 _return = "if (profileNamespace getVariable ['ACE_enableNumberHotkeys', true] && {_keyIndex < 12} && {_keyIndex > 1}) then {true} else {_isInput}";
