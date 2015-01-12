@@ -1,2 +1,4 @@
 *.pbo
-
+texHeaders.bin
+*.swp
+*.swo
