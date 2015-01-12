@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 private ["_actions", "_count", "_index", "_actionN", "_actionM"];
 

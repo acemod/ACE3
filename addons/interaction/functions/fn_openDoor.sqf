@@ -1,15 +1,16 @@
 // by commy2
+#include "script_component.hpp"
 
 private ["_info", "_house", "_door", "_animations", "_lockedVariable"];
 
-_info = [2] call AGM_Interaction_fnc_getDoor;
+_info = [2] call FUNC(getDoor);
 
 _house = _info select 0;
 _door = _info select 1;
 
 if (isNull _house) exitWith {};
 
-_animations = [_house, _door] call AGM_Interaction_fnc_getDoorAnimations;
+_animations = [_house, _door] call FUNC(getDoorAnimations);
 
 _lockedVariable = _animations select 1;
 _animations = _animations select 0;
@@ -21,15 +22,15 @@ if (_house animationPhase (_animations select 0) <= 0 && {_house getVariable [_l
 	_lockedVariable spawn compile preprocessFileLineNumbers "\A3\Structures_F\scripts\LockedDoor_open.sqf";
 };
 
-AGM_Interaction_isOpeningDoor = true;
-playSound "AGM_Sound_Click";
+GVAR(isOpeningDoor) = true;
+playSound "ACE_Sound_Click";
 
 [_house, _animations] spawn {
 	_house = _this select 0;
 	_animations = _this select 1;
 
 	_phase = _house animationPhase (_animations select 0);
-	_position = getPosASL AGM_player;
+	_position = getPosASL ACE_player;
 
 	_time = time + 0.2;
 	_usedMouseWheel = false;
@@ -43,7 +44,7 @@ playSound "AGM_Sound_Click";
 
 		{_house animate [_x, _phase]} forEach _animations;
 
-		!AGM_Interaction_isOpeningDoor || {getPosASL AGM_player distance _position > 1}
+		!GVAR(isOpeningDoor) || {getPosASL ACE_player distance _position > 1}
 	};
 
 	if (!_usedMouseWheel && {time < _time}) then {
@@ -52,5 +53,5 @@ playSound "AGM_Sound_Click";
 		{_house animate [_x, _phase]} forEach _animations;
 	};
 
-	AGM_Interaction_isOpeningDoor = false;
+	GVAR(isOpeningDoor) = false;
 };

@@ -1,14 +1,15 @@
 /*
  * Author: KoffeinFlummi
- * 
+ *
  * Forces a civilian to the ground. (chance of failure).
- * 
+ *
  * Arguments:
  * 0: Unit to be sent away (Object)
  *
  * Return value:
  * none
  */
+#include "script_component.hpp"
 
 #define RADIUS 10
 
@@ -16,9 +17,9 @@ private ["_unit", "_chance", "_x"];
 
 _unit = _this select 0;
 
-AGM_player playActionNow "GestureGo"; // put something else here.
+ACE_player playActionNow "GestureGo"; // put something else here.
 
-if (count (weapons AGM_player) > 0) then {
+if (count (weapons ACE_player) > 0) then {
   _chance = 0.8;
 } else {
   _chance = 0.5;
