@@ -52,7 +52,7 @@ _this spawn {
   if (time > _time) then {
     _arguments call _function;
   } else {
-    [localize QOUTE(DOUBLES(STR,GVAR(ActionAborted)))] call FUNC(displayTextStructured);
+    [localize QUOTE(DOUBLES(STR,GVAR(ActionAborted)))] call FUNC(displayTextStructured);
     if (!isNil "_function2") then {
       _progress = 1 - ((_time - time) / (_this select 0)) max 0 min 1;
       _arguments call _function2;

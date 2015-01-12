@@ -48,9 +48,9 @@ call COMPILE_FILE2(scripts\KeyInput\initScrollWheel.sqf);
 0 spawn {
   while {true} do {
     waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
-    findDisplay 46 displayAddEventHandler ["KeyDown", QUOTE( _this call QUOTE(QGVAR(onKeyDown)) )];
-    findDisplay 46 displayAddEventHandler ["KeyUp", QUOTE( _this call QUOTE(QGVAR(onKeyUp)) )];
-    findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call QUOTE(QGVAR(onScrollWheel)) )];
+    findDisplay 46 displayAddEventHandler ["KeyDown", QUOTE( _this call GVAR(onKeyDown) )];
+    findDisplay 46 displayAddEventHandler ["KeyUp", QUOTE( _this call GVAR(onKeyUp) )];
+    findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call GVAR(onScrollWheel) )];
     [false] call FUNC(disableUserInput);
     waitUntil {isNull (findDisplay 46)};
   };
