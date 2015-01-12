@@ -6,11 +6,11 @@ class CfgPatches {
     weapons[] = {};
     requiredVersion = 0.60;
     requiredAddons[] = {"ace_core"};
-    version = "0.95";
-    versionStr = "0.95";
-    versionAr[] = {0,95,0};
-    author[] = {""};
-    authorUrl = "";
+    version = QUOTE(VERSION);
+    versionStr = QUOTE(VERSION);
+    versionAr[] = {VERSION_AR};
+    author[] = {"bux578"};
+    authorUrl = "https://github.com/bux578/";
   };
 };
 
