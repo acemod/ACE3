@@ -1,2 +1,0 @@
-version = QUOTE(VERSION);
-text = QUOTE(UOMODS VERSION);
