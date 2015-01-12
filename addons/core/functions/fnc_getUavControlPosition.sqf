@@ -18,7 +18,7 @@ Returns:
 Example:
   [ACE_Player] call FUNC(getUavControlPosition)
 */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_unit", "_uav", "_positionArray", "_playerIndex"];
 

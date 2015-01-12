@@ -9,6 +9,6 @@
  * Return value:
  * This mission has automatic wind? (Bool)
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 ["Mission", "Intel", "windForced"] call FUNC(getNumberFromMissionSQM) != 1

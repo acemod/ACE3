@@ -1,5 +1,5 @@
 // by commy2
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 if (isNil "ACE_itemFix") then {
   ACE_isMapEnabled     = call {_config = missionConfigFile >> "showMap";     !isNumber _config || {getNumber _config == 1}};

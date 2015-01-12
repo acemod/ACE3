@@ -1,5 +1,5 @@
 // by CAA-Picard
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 // Read ACE_Parameters from config and set them on the mission namespace
 _config = configFile >> "ACE_Parameters_Numeric";

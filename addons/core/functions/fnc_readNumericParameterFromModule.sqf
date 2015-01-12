@@ -11,7 +11,7 @@
  * Return Value:
  * None
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
  private ["_logic", "_parameterName", "_moduleParameterName", "_value"];
 

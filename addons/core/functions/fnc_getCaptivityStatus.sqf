@@ -9,7 +9,7 @@
  * Return value:
  * Reasons, why the unit is a captive. An empty array is returned if the unit is not a captive (Array of Strings)
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_unit", "_captivityReasons", "_unitCaptivityStatus", "_unitCaptivityReasons"];
 

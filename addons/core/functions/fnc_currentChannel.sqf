@@ -9,7 +9,7 @@
  * Return value:
  * The current channel. Can be "group", "side", "global", "command", "vehicle" or "direct" (String)
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 #define CHANNELS ["group", "side", "global", "command", "vehicle", "direct"]
 #define CHANNELS_LOCALIZED [localize "str_channel_group", localize "str_channel_side", localize "str_channel_global", localize "str_channel_command", localize "str_channel_vehicle", localize "str_channel_direct"]

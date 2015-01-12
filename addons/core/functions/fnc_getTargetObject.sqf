@@ -9,7 +9,7 @@
  * Return value:
  * Nearest object directly in line of sight, if none objNull (Object)
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_maxDistance", "_position", "_laser", "_intersects"];
 

@@ -12,7 +12,7 @@
  * Return value:
  * ID of the action (used to remove it later).
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_unit", "_action", "_condition", "_statement", "_name", "_actionsVar", "_actionID", "_actions", "_id", "_actionIDs"];
 

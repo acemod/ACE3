@@ -18,7 +18,7 @@ Returns:
 Example:
   [ACE_Player, "BrokenLeg", true] call FUNC(setForceWalkStatus)
 */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_unit", "_reason", "_status", "_forceWalkReasons", "_unitForceWalkReasons", "_forceWalkReasonsBooleans", "_bitmaskNumber"];
 

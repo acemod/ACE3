@@ -17,20 +17,20 @@ if (_currentVersion != _previousVersion) then {
   profileNamespace setVariable ["ACE_VersionNumberString", _currentVersion];
 };
 
-0 spawn compile preprocessFileLineNumbers PATHTOF(scripts\Version\checkVersionNumber.sqf);
+0 spawn COMPILE_FILE2(scripts\Version\checkVersionNumber);
 
 // everything that only player controlled machines need, goes below this
 if (!hasInterface) exitWith {};
 
-call compile preprocessFileLineNumbers PATHTOF(scripts\assignedItemFix.sqf);
+call COMPILE_FILE2(scripts\assignedItemFix.sqf);
 
-GVAR(keyInput)  = compile preprocessFileLineNumbers PATHTOF(scripts\keyInput.sqf);
-GVAR(keyRelease)  = compile preprocessFileLineNumbers PATHTOF(scripts\keyRelease.sqf);
-GVAR(editKey)   = compile preprocessFileLineNumbers PATHTOF(scripts\editKey.sqf);
-GVAR(openMenu)  = compile preprocessFileLineNumbers PATHTOF(scripts\openMenu.sqf);
-GVAR(closeMenu) = compile preprocessFileLineNumbers PATHTOF(scripts\closeMenu.sqf);
-GVAR(nextKeys) = compile preprocessFileLineNumbers PATHTOF(scripts\nextKeys.sqf);
-GVAR(toggleState) = compile preprocessFileLineNumbers PATHTOF(scripts\toggleState.sqf);
+GVAR(keyInput)  = COMPILE_FILE2(scripts\keyInput.sqf);
+GVAR(keyRelease)  = COMPILE_FILE2(scripts\keyRelease.sqf);
+GVAR(editKey)   = COMPILE_FILE2(scripts\editKey.sqf);
+GVAR(openMenu)  = COMPILE_FILE2(scripts\openMenu.sqf);
+GVAR(closeMenu) = COMPILE_FILE2(scripts\closeMenu.sqf);
+GVAR(nextKeys) = COMPILE_FILE2(scripts\nextKeys.sqf);
+GVAR(toggleState) = COMPILE_FILE2(scripts\toggleState.sqf);
 
 [false] call FUNC(setKeyDefault);
 
@@ -41,9 +41,9 @@ for "_index" from 0 to 300 do {
   GVAR(keyTimes) set [_index, -1];
 };
 
-call compile preprocessFileLineNumbers PATHTOF(scripts\KeyInput\initCanInteractFunction.sqf);
-call compile preprocessFileLineNumbers PATHTOF(scripts\KeyInput\initKeys.sqf);
-call compile preprocessFileLineNumbers PATHTOF(scripts\KeyInput\initScrollWheel.sqf);
+call COMPILE_FILE2(scripts\KeyInput\initCanInteractFunction.sqf);
+call COMPILE_FILE2(scripts\KeyInput\initKeys.sqf);
+call COMPILE_FILE2(scripts\KeyInput\initScrollWheel.sqf);
 
 0 spawn {
   while {true} do {

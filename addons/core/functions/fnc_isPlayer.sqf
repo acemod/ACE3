@@ -10,6 +10,6 @@
  * Return Value:
  * Bool: is unit a player?
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 isPlayer (_this select 0) || {_this select 0 == call FUNC(player)}

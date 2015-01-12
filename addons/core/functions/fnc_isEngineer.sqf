@@ -9,7 +9,7 @@
  * Return Value:
  * Bool: is the unit an engineer?
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private "_unit";
 

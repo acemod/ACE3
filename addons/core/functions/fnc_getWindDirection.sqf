@@ -9,7 +9,7 @@
  * Return value:
  * Wind direction. (String)
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 switch (round (windDir / 360 * 16)) do {
   case 1 :  {localize QUOTE(DOUBLES(STR,GVAR(SSW)))};

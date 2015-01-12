@@ -13,7 +13,7 @@
  * Return value:
  * Nothing
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 closeDialog 0;
 createDialog QGVAR(ProgressBar_Dialog);

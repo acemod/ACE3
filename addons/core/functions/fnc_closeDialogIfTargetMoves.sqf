@@ -10,7 +10,7 @@
  * Return Value:
  * None
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 _this spawn {
   _target = _this select 0;

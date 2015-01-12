@@ -12,7 +12,7 @@
  * Return value:
  * Nothing
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 #define DEFAULT_PLAY_SOUND false
 #define DEFAULT_DELAY 2

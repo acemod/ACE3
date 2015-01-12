@@ -11,7 +11,7 @@
  * Return value:
  * Nothing.
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_unit", "_varName", "_value", "_respawnVariables"];
 

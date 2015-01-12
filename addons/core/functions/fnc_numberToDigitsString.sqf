@@ -10,7 +10,7 @@
  * Return value:
  * Digits. The maximum length is six digits. (String)
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_digits", "_count", "_string", "_index"];
 

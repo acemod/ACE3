@@ -15,7 +15,7 @@ Returns:
 Example:
   [ACE_Player] call FUNC(getForceWalkStatus)
 */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_unit", "_forceWalkReasons", "_unitForceWalkNumber", "_unitForceWalkStatus", "_unitForceWalkReasons"];
 

@@ -9,7 +9,7 @@
  * Return value:
  * All turret index arrays of the vehicle. E.g: [[0], [0,0]] (Array)
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_type", "_config", "_turrets", "_fnc_addTurret"];
 

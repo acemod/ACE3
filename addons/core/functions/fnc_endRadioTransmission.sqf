@@ -10,7 +10,7 @@
  * None.
  *
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 // ACRE
 if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {

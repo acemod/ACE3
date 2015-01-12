@@ -10,7 +10,7 @@
  * Return Value:
  * Sanitized string
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_string", "_removeTags", "_array", "_arrayNew"];
 

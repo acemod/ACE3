@@ -1,5 +1,5 @@
 // by commy2
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 _index = _this select 0;
 

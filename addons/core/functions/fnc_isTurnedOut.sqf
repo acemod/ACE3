@@ -9,7 +9,7 @@
  * Return value:
  * Is the unit turned out or not? Will return false if there is no option to turn out in the first place. (Bool)
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_unit", "_vehicle", "_config", "_animation", "_action", "_inAction", "_turretIndex"];
 

@@ -9,7 +9,7 @@
  * Return value:
  * Vehicle codriver positions. (Array)
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_vehicle", "_config", "_cargo", "_codrivers"];
 

@@ -11,7 +11,7 @@
  * Return value:
  * None.
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_object", "_type", "_id", "_name", "_actionsVar", "_currentId", "_actionIDs", "_actions"];
 

@@ -9,7 +9,7 @@
  * Return Value:
  * Marker Type (string)
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 _group = _this select 0;
 _leader = leader _group;

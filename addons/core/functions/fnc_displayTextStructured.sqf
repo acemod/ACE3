@@ -10,7 +10,7 @@
  * Return value:
  * Nothing
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_text", "_size", "_isShown", "_ctrlHint"];
 

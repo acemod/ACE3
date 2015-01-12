@@ -9,7 +9,7 @@
  * Return value:
  * Turret indexes of the door gunner. Empty array means no gunner position. (Array)
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_vehicleType", "_turrets", "_doorTurrets", "_config"];
 

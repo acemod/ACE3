@@ -10,7 +10,7 @@ A number
 Return Value:
 A binary number, String
 */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_number", "_minLength", "_sign", "_bin", "_rest"];
 

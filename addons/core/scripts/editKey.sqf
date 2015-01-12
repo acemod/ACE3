@@ -1,5 +1,5 @@
 // by commy2
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 #define GRAY [0.25, 0.25, 0.25, 1]
 #define WHITE [1, 1, 1, 1]

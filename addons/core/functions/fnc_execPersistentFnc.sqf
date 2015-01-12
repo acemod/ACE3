@@ -12,7 +12,7 @@
  * Return value:
  * Nothing.
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_arguments", "_function", "_unit", "_name"];
 

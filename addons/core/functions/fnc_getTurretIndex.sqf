@@ -9,7 +9,7 @@
  * Return value:
  * Turret index array or config path. E.g: [0] for gunner or [0,0] for commander. Returns empty array if unit is not in a turret. (Array)
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_unit", "_vehicle", "_turrets", "_units", "_index"];
 

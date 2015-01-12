@@ -1,5 +1,5 @@
 // by commy2
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 #define OFFSET_1 100
 #define OFFSET_2 200

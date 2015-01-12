@@ -9,7 +9,7 @@
  * Return value:
  * ID of the event script (used to remove it later).
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\core\script_component.hpp"
 
 private ["_statement", "_actionsVar", "_id", "_actionIDs", "_actions"];
 
