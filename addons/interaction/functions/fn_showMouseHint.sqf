@@ -1,6 +1,4 @@
 /*
-	Name: AGM_Interaction_fnc_showMouseHint
-
 	Author(s):
 		Garth de Wet (LH)
 
@@ -16,7 +14,7 @@
 		Nothing
 
 	Example:
-		["Place Explosive", "Cancel"] call AGM_Interaction_fnc_showMouseHint;
+		["Place Explosive", "Cancel"] call FUNC(showMouseHint);
 */
 #include "script_component.hpp"
 
@@ -32,7 +30,7 @@ if (count _this > 2) then {
 
 (QGVAR(InteractionHelper) call BIS_fnc_rscLayer) cutRsc [QGVAR(InteractionHelper), "PLAIN",0.5, false];
 disableSerialization;
-_display = uiNamespace getVariable ["AGM_Helper_Display", objNull];
+_display = uiNamespace getVariable ["ACE_Helper_Display", objNull];
 if (isNull _display) exitWith{};
 
 (_display displayCtrl 1000) ctrlSetText _leftClick;

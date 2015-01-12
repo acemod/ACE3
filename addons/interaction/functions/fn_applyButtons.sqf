@@ -27,7 +27,7 @@ _ctrlInteractionDialog = _dlgInteractionDialog displayCtrl 3;
 GVAR(MainButton) = "(findDisplay 1713999) closeDisplay 1;";
 
 if (_object isKindOf "Man") then {
-	_ctrlInteractionDialog ctrlSetText (if (alive _object) then {name _object} else {_object getVariable ["AGM_Name", "Unknown"]});
+	_ctrlInteractionDialog ctrlSetText (if (alive _object) then {name _object} else {_object getVariable ["ACE_Name", "Unknown"]});
 } else {
 	_ctrlInteractionDialog ctrlSetText (getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName"));
 };

@@ -1,6 +1,4 @@
 /*
-	Name: AGM_Interaction_fnc_openSelectMenu
-
 	Author: Garth de Wet (LH)
 
 	Description:
@@ -41,5 +39,5 @@ if (!(profileNamespace getVariable [QGVAR(FlowMenu), false])) then {
 		_action set [1, (_this select 1)];
 	};
 	GVAR(Buttons) = _customActions;
-	[(_this select 2), true, true, false, AGM_player] call FUNC(initialiseInteraction);
+	[(_this select 2), true, true, false, ACE_player] call FUNC(initialiseInteraction);
 };

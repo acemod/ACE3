@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  *
- * Remove an AGM action from an object. Note: This function is global.
+ * Remove an ACE action from an object. Note: This function is global.
  *
  * Argument:
  * 0: Object (Object)

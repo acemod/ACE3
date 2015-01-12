@@ -23,14 +23,14 @@ if (_house animationPhase (_animations select 0) <= 0 && {_house getVariable [_l
 };
 
 GVAR(isOpeningDoor) = true;
-playSound "AGM_Sound_Click";
+playSound "ACE_Sound_Click";
 
 [_house, _animations] spawn {
 	_house = _this select 0;
 	_animations = _this select 1;
 
 	_phase = _house animationPhase (_animations select 0);
-	_position = getPosASL AGM_player;
+	_position = getPosASL ACE_player;
 
 	_time = time + 0.2;
 	_usedMouseWheel = false;
@@ -44,7 +44,7 @@ playSound "AGM_Sound_Click";
 
 		{_house animate [_x, _phase]} forEach _animations;
 
-		!GVAR(isOpeningDoor) || {getPosASL AGM_player distance _position > 1}
+		!GVAR(isOpeningDoor) || {getPosASL ACE_player distance _position > 1}
 	};
 
 	if (!_usedMouseWheel && {time < _time}) then {

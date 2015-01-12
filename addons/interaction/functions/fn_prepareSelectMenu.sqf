@@ -1,6 +1,4 @@
 /*
-	Name: AGM_Interaction_fnc_prepareSelectMenu
-
 	Author: Garth de Wet (LH)
 
 	Description:
@@ -14,7 +12,7 @@
 		ARRAY/NUMBER - container object for use with AddSelectableItem.
 
 	Example:
-		["Select Explosive", "Place"] call AGM_Interaction_fnc_prepareSelectMenu;
+		["Select Explosive", "Place"] call FUNC(prepareSelectMenu);
 */
 #include "script_component.hpp"
 
@@ -24,9 +22,9 @@ if (!(profileNamespace getVariable [QGVAR(FlowMenu), false])) exitWith {
 	_header = _this select 0;
 	_buttonText = _this select 1;
 	if (isNil "_buttonText" or {_buttonText == ""}) then {
-		_buttonText = localize "STR_AGM_Interaction_MakeSelection";
+		_buttonText = localize "STR_ACE_Interaction_MakeSelection";
 	};
-	createDialog "RscAGM_SelectAnItem";
+	createDialog "RscACE_SelectAnItem";
 	ctrlSetText [8860, _buttonText];
 	ctrlSetText [8870, _header];
 

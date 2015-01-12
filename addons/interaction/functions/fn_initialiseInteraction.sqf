@@ -1,6 +1,4 @@
 /*
-	Name: AGM_Interaction_fnc_initialiseInteraction
-
 	Author:
 		commy2
 		Garth de Wet (LH)
@@ -19,7 +17,7 @@
 		Nothing
 
 	Example:
-		[{"Default" call AGM_Interaction_fnc_openMenu;}, true, (profileNamespace getVariable [QGVAR(FlowMenu), false]), GVAR(Target)] call AGM_Interaction_fnc_initialiseInteraction;
+		[{"Default" call FUNC(openMenu);}, true, (profileNamespace getVariable [QGVAR(FlowMenu), false]), GVAR(Target)] call FUNC(initialiseInteraction);
 */
 #include "script_component.hpp"
 
@@ -29,7 +27,7 @@ _subMenu = _this select 1;
 _selfMenu = _this select 3;
 _target = _this select 4;
 
-_player = AGM_player;
+_player = ACE_player;
 _vehicle = vehicle _player;
 //_object = [GVAR(Target), _player] select (GVAR(MenuType) % 2 == 1);
 
@@ -40,16 +38,16 @@ GVAR(Shortcuts) = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
 // Flow menu
 if (_this select 2) then {
 	(QGVAR(FlowMenu) call BIS_fnc_rscLayer) cutRsc [QGVAR(FlowMenu), "PLAIN",0.5, false];
-	AGM_Interaction_SelectedButton = 0;
+	ACE_Interaction_SelectedButton = 0;
 	(findDisplay 1713999) closeDisplay 1;
-	if (_player getVariable ["AGM_AcceptAction", -1] == -1) then {
+	if (_player getVariable ["ACE_AcceptAction", -1] == -1) then {
 		[{if(isNil {GVAR(MainButton)} || {!(profileNamespace getVariable [QGVAR(FlowMenu), false])})exitWith{false};(-(_this select 0) / 1.2) call FUNC(MoveDown);true}] call EFUNC(core,addScrollWheelEventHandler);
 
-		_player setVariable ["AGM_AcceptAction", [_player, "DefaultAction", {(!isNil {GVAR(MainButton)}) && {(profileNamespace getVariable [QGVAR(FlowMenu), false])}}, {_action = GVAR(Buttons) select AGM_Interaction_SelectedButton;_target = GVAR(Target);_player = AGM_player;_vehicle = vehicle _player;if ([_target, _player] call (_action select 2)) then {call FUNC(hideMenu);if(count _action == 12) then{(_action select 11) call (_action select 1);}else{[_target, _player] call (_action select 1);};};}] call EFUNC(core,addActionEventHandler)];
-		_player setVariable ["AGM_AcceptAction", [_player, "menuBack", {(!isNil {GVAR(MainButton)}) && {(profileNamespace getVariable [QGVAR(FlowMenu), false])}}, {call GVAR(MainButton);}] call EFUNC(core,addActionEventHandler)];
+		_player setVariable ["ACE_AcceptAction", [_player, "DefaultAction", {(!isNil {GVAR(MainButton)}) && {(profileNamespace getVariable [QGVAR(FlowMenu), false])}}, {_action = GVAR(Buttons) select ACE_Interaction_SelectedButton;_target = GVAR(Target);_player = ACE_player;_vehicle = vehicle _player;if ([_target, _player] call (_action select 2)) then {call FUNC(hideMenu);if(count _action == 12) then{(_action select 11) call (_action select 1);}else{[_target, _player] call (_action select 1);};};}] call EFUNC(core,addActionEventHandler)];
+		_player setVariable ["ACE_AcceptAction", [_player, "menuBack", {(!isNil {GVAR(MainButton)}) && {(profileNamespace getVariable [QGVAR(FlowMenu), false])}}, {call GVAR(MainButton);}] call EFUNC(core,addActionEventHandler)];
 	};
 	0 call FUNC(moveDown);
-	[localize "STR_AGM_Interaction_MakeSelection", if (_subMenu)then{localize "STR_AGM_Interaction_Back"}else{""}, localize "STR_AGM_Interaction_ScrollHint"] call FUNC(showMouseHint);
+	[localize "STR_ACE_Interaction_MakeSelection", if (_subMenu)then{localize "STR_ACE_Interaction_Back"}else{""}, localize "STR_ACE_Interaction_ScrollHint"] call FUNC(showMouseHint);
 	((uiNamespace getVariable QGVAR(Flow_Display)) displayCtrl (1210)) ctrlShow _subMenu;
 }else{ // Rose
 	if (!isNull(uiNamespace getVariable QGVAR(Flow_Display))) then {
@@ -73,7 +71,7 @@ if (_this select 2) then {
 	if !(_subMenu) then {
 		_ctrlInteractionDialog ctrlSetText ([_target] call EFUNC(core,getName));
 	} else {
-		_ctrlInteractionDialog ctrlSetText localize "STR_AGM_Interaction_Back";
+		_ctrlInteractionDialog ctrlSetText localize "STR_ACE_Interaction_Back";
 	};
 
 	_buttons = GVAR(Buttons);
@@ -116,7 +114,7 @@ if (_this select 2) then {
 		_dlgMenu = uiNamespace getVariable [QGVAR(Dialog), displayNull];
 		_ctrlTooltip = _dlgMenu displayCtrl 40;
 
-		_player = AGM_player;
+		_player = ACE_player;
 		_vehicle = vehicle _player;
 		_target = [GVAR(Target), _player] select (GVAR(MenuType) % 2 == 1);
 
@@ -142,7 +140,7 @@ if (_this select 2) then {
 				GVAR(Tooltips) set [_forEachIndex, GVAR(CurrentTooltip)];
 
 				// apply conditional tooltips
-				/*if (_forEachIndex == call AGM_Interaction_fnc_getSelectedButton) then {
+				/*if (_forEachIndex == call ACE_Interaction_fnc_getSelectedButton) then {
 					_tooltip = _x select 6;
 
 					_showTooltip = _tooltip != "";

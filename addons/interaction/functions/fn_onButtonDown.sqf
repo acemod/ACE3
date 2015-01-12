@@ -6,7 +6,7 @@ if (dialog) exitWith {
 };
 
 if (isNull (findDisplay 1713999)) then {
-	if (AGM_player == vehicle AGM_player) then {"" call FUNC(openMenu)} else {[AGM_player, vehicle AGM_player] call FUNC(openMenuSelectUI)};
+	if (ACE_player == vehicle ACE_player) then {"" call FUNC(openMenu)} else {[ACE_player, vehicle ACE_player] call FUNC(openMenuSelectUI)};
 	setMousePosition [0.5, 0.5];
 } else {
 	(findDisplay 1713999) closeDisplay 1;

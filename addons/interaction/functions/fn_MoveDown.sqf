@@ -1,6 +1,4 @@
 /*
-	Name: AGM_Interaction_fnc_MoveDown
-
 	Author: Garth de Wet (LH)
 
 	Description:
@@ -13,8 +11,8 @@
 		Nothing
 
 	Example:
-		1 call AGM_Interaction_fnc_MoveDown;
-		-1 call AGM_Interaction_fnc_MoveDown;
+		1 call FUNC(MoveDown);
+		-1 call FUNC(MoveDown);
 */
 #include "script_component.hpp"
 
@@ -25,7 +23,7 @@ _count = (count GVAR(Buttons))- 1;
 GVAR(SelectedButton) = CLAMP(GVAR(SelectedButton) + _this, 0, _count);
 
 _target = GVAR(Target);
-_player = AGM_player;
+_player = ACE_player;
 _vehicle = vehicle _player;
 
 disableSerialization;

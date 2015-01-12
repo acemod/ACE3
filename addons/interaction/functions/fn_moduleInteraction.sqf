@@ -18,4 +18,4 @@ if !(_activated) exitWith {};
 
 [_logic, QGVAR(EnableTeamManagement), "EnableTeamManagement"] call EFUNC(core,readBooleanParameterFromModule);
 
-diag_log text "[AGM]: Interaction Module Initialized.";
+diag_log text "[ACE]: Interaction Module Initialized.";

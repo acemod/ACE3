@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  *
- * Add an AGM self action to the player. Execute this on the local machine of the player.
+ * Add an ACE self action to the player. Execute this on the local machine of the player.
  *
  * Argument:
  * 0: Name of the action shown in the menu (String)
@@ -42,7 +42,7 @@ if (isNil "_priority") then {
 	_priority = 0;
 };
 
-_actionsVar = AGM_player getVariable [QGVAR(InteractionsSelf), [-1, [], []]];
+_actionsVar = ACE_player getVariable [QGVAR(InteractionsSelf), [-1, [], []]];
 
 _id = (_actionsVar select 0) + 1;
 _actionIDs = _actionsVar select 1;
@@ -51,5 +51,5 @@ _actions = _actionsVar select 2;
 _actionIDs pushBack _id;
 _actions pushBack [_displayName, _condition, _statement, _showDisabled, _priority];
 
-AGM_player setVariable [QGVAR(InteractionsSelf), [_id, _actionIDs, _actions], false];
+ACE_player setVariable [QGVAR(InteractionsSelf), [_id, _actionIDs, _actions], false];
 _id

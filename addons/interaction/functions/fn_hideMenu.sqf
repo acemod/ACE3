@@ -1,6 +1,4 @@
 /*
-	Name: AGM_Interaction_fnc_hideMenu
-
 	Author: Garth de Wet (LH)
 
 	Description:
@@ -13,7 +11,7 @@
 		Nothing
 
 	Example:
-		call AGM_Interaction_fnc_hideMenu;
+		call FUNC(hideMenu);
 */
 #include "script_component.hpp"
 

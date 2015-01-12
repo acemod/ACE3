@@ -5,7 +5,7 @@ class CfgPatches {
     units[] = {};
     weapons[] = {};
     requiredVersion = 0.60;
-    requiredAddons[] = {AGM_Core};
+    requiredAddons[] = {ACE_Core};
     version = "0.95";
     versionStr = "0.95";
     versionAr[] = {0,95,0};
@@ -16,93 +16,35 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 
-/*
-class CfgFunctions {
-  class AGM_Interaction {
-    class AGM_Interaction {
-      file = PATHOF(functions);
-      class addInteraction;
-      class addInteractionSelf;
-      class AddSelectableItem;
-      class addToTooltip;
-      class applyButtons;
-      class canInteractWith;
-      class canTapShoulder;
-      class getActions2;
-      class GetActions;
-      class getDoor;
-      class getDoorAnimations;
-      class getDown;
-      class getSelectedButton;
-      class hideMenu;
-      class hideMouseHint;
-      class initialiseInteraction;
-      class isInRange;
-      class joinTeam;
-      class menuKeyInput;
-      class moduleInteraction;
-      class moveDown;
-      class onButtonDown;
-      class onButtonDownSelf;
-      class onButtonUp;
-      class onClick;
-      class onSelectMenuDblClick;
-      class openDoor;
-      class openMenu;
-      class openMenuSelectUI;
-      class openMenuSelf;
-      class openSelectMenu;
-      class openSubMenu;
-      class openSubMenuSelf;
-      class prepareSelectMenu;
-      class push;
-      class removeInteraction;
-      class removeInteractionSelf;
-      class removeTag;
-      class sendAway;
-      class showMenu;
-      class showMouseHint;
-      class sortOptionsByPriority;
-      class tapShoulder;
-      class updateTooltipPosition;
-
-      // backwards compatibility, remove in some patches
-      class getCaptivityStatus;
-      class setCaptivityStatus;
-    };
-  };
-};
-*/
-
-class AGM_Core_Default_Keys {
+class ACE_Core_Default_Keys {
   class openInteractionMenuNew {
-    displayName = "$STR_AGM_Interaction_InteractionMenu";
+    displayName = "$STR_ACE_Interaction_InteractionMenu";
     condition = "true";
     statement = QUOTE( call FUNC(onButtonDown) );
     conditionUp = QUOTE( !isNull (findDisplay 1713999) && {profileNamespace getVariable [QUOTE(QGVAR(AutoCloseMenu)), false]} );
     statementUp = QUOTE( if (GVAR(MenuType) mod 2 == 0) then {call FUNC(onButtonUp)}; );
-    exceptions[] = {"AGM_Drag_isNotDragging", "AGM_Medical_canTreat", "AGM_Interaction_isNotEscorting", "AGM_Interaction_isNotSwimming"};
+    exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Medical_canTreat", "ACE_Interaction_isNotEscorting", "ACE_Interaction_isNotSwimming"};
     key = 219;
     shift = 0;
     control = 0;
     alt = 0;
   };
   class openInteractionMenuSelfNew {
-    displayName = "$STR_AGM_Interaction_InteractionMenuSelf";
+    displayName = "$STR_ACE_Interaction_InteractionMenuSelf";
     condition = "true";
     statement = QUOTE( call FUNC(onButtonDownSelf) );
     conditionUp = QUOTE( !isNull (findDisplay 1713999) && {profileNamespace getVariable [QUOTE(QGVAR(AutoCloseMenu)), false]} );
     statementUp = QUOTE( if (EGVAR(interaction,MenuType) mod 2 == 1) then {call FUNC(onButtonUp)}; );
-    exceptions[] = {"AGM_Drag_isNotDragging", "AGM_Medical_canTreat", "AGM_Interaction_isNotEscorting", "AGM_Interaction_isNotSwimming", "AGM_Core_notOnMap"};
+    exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Medical_canTreat", "ACE_Interaction_isNotEscorting", "ACE_Interaction_isNotSwimming", "ACE_Core_notOnMap"};
     key = 219;
     shift = 0;
     control = 1;
     alt = 0;
   };
   class openDoor {
-    displayName = "$STR_AGM_Interaction_OpenDoor";
+    displayName = "$STR_ACE_Interaction_OpenDoor";
     condition = QUOTE( !GVAR(isOpeningDoor) && {[2] call FUNC(getDoor) select 1 != ''} );
-    statement = QUOTE( call AGM_Interaction_fnc_openDoor );
+    statement = QUOTE( call ACE_Interaction_fnc_openDoor );
     conditionUp = QUOTE( GVAR(isOpeningDoor) );
     statementUp = QUOTE( GVAR(isOpeningDoor) = false;);
     key = 57;
@@ -111,7 +53,7 @@ class AGM_Core_Default_Keys {
     alt = 0;
   };
   class tapShoulder {
-    displayName = "$STR_AGM_Interaction_TapShoulder";
+    displayName = "$STR_ACE_Interaction_TapShoulder";
     condition = QUOTE( [_player, cursorTarget] call FUNC(canTapShoulder) );
     statement = QUOTE( [_player, cursorTarget] call FUNC(tapShoulder); );
     key = 20;
@@ -120,12 +62,12 @@ class AGM_Core_Default_Keys {
     alt = 0;
   };
   class modifierKey {
-    displayName = "$STR_AGM_Interaction_ModifierKey";
+    displayName = "$STR_ACE_Interaction_ModifierKey";
     condition = "";
     statement = QUOTE( GVAR(Modifier) = 1; );
     conditionUp = "";
     statementUp = QUOTE( GVAR(Modifier) = 0; );
-    exceptions[] = {"AGM_Drag_isNotDragging"};
+    exceptions[] = {"ACE_Drag_isNotDragging"};
     key = 29;
     shift = 0;
     control = 0;
@@ -133,39 +75,39 @@ class AGM_Core_Default_Keys {
   };
 };
 
-class AGM_Core_Options {
+class ACE_Core_Options {
   class Interaction_FlowMenu {
-    displayName = "$STR_AGM_Interaction_FlowMenu";
+    displayName = "$STR_ACE_Interaction_FlowMenu";
     default = 0;
   };
   class Interaction_AutoCloseMenu {
-    displayName = "$STR_AGM_Interaction_AutoCloseMenu";
+    displayName = "$STR_ACE_Interaction_AutoCloseMenu";
     default = 0;
   };
   class Interaction_AutoCenterCursor {
-    displayName = "$STR_AGM_Interaction_AutoCenterCursor";
+    displayName = "$STR_ACE_Interaction_AutoCenterCursor";
     default = 1;
   };
 };
 
-class AGM_Parameters {
-  AGM_Modifier = 0;
+class ACE_Parameters {
+  ACE_Modifier = 0;
 };
-class AGM_Parameters_Boolean {
-  AGM_Interaction_EnableTeamManagement = 1;
+class ACE_Parameters_Boolean {
+  ACE_Interaction_EnableTeamManagement = 1;
 };
 
-class AGM_Core_canInteractConditions {
-  class AGM_Interaction_isNotEscorting {
-    condition = QUOTE( !(_player getVariable ['AGM_isEscorting', false]) );
+class ACE_Core_canInteractConditions {
+  class ACE_Interaction_isNotEscorting {
+    condition = QUOTE( !(_player getVariable ['ACE_isEscorting', false]) );
   };
-  class AGM_Interaction_isNotCaptive {
-    condition = QUOTE( !(_player getVariable ['AGM_isCaptive', false]) );
+  class ACE_Interaction_isNotCaptive {
+    condition = QUOTE( !(_player getVariable ['ACE_isCaptive', false]) );
   };
-  class AGM_Interaction_isNotSurrendering {
-    condition = QUOTE( !(_player getVariable ['AGM_isSurrender', false]) );
+  class ACE_Interaction_isNotSurrendering {
+    condition = QUOTE( !(_player getVariable ['ACE_isSurrender', false]) );
   };
-  class AGM_Interaction_isNotSwimming {
+  class ACE_Interaction_isNotSwimming {
     condition = QUOTE( !underwater _player );
   };
 };
@@ -178,11 +120,11 @@ class AGM_Core_canInteractConditions {
 class CfgVehicles {
 
   class Module_F;
-  class AGM_ModuleInteraction: Module_F {
-    author = "$STR_AGM_Core_AGMTeam";
-    category = "AGM";
+  class ACE_ModuleInteraction: Module_F {
+    author = "$STR_ACE_Core_ACETeam";
+    category = "ACE";
     displayName = "Interaction System";
-    function = "AGM_Interaction_fnc_moduleInteraction";
+    function = "ACE_Interaction_fnc_moduleInteraction";
     scope = 2;
     isGlobal = 1;
     icon = PATHTOF(UI\IconInteraction_ca.paa);
@@ -201,21 +143,21 @@ class CfgVehicles {
 
   class Man;
   class CAManBase: Man {
-    class AGM_Actions {
-      class AGM_TeamManagement {
-        displayName = "$STR_AGM_Interaction_TeamManagement";
+    class ACE_Actions {
+      class ACE_TeamManagement {
+        displayName = "$STR_ACE_Interaction_TeamManagement";
         distance = 4;
         condition = QUOTE( alive _target && {!isPlayer _target} && {_target in units group _player} && {GVAR(EnableTeamManagement)} );
         statement = "";
         showDisabled = 0;
         priority = 3.2;
         icon = PATHOF(UI\team\team_management_ca.paa);
-        subMenu[] = {"AGM_TeamManagement", 0};
+        subMenu[] = {"ACE_TeamManagement", 0};
         hotkey = "M";
         enableInside = 1;
 
-        class AGM_JoinTeamRed {
-          displayName = "$STR_AGM_Interaction_JoinTeamRed";
+        class ACE_JoinTeamRed {
+          displayName = "$STR_ACE_Interaction_JoinTeamRed";
           distance = 4;
           condition = QUOTE( alive _target && {!isPlayer _target} && {_target in units group _player} );
           statement = QUOTE( [_target, 'RED'] call FUNC(joinTeam) );
@@ -225,8 +167,8 @@ class CfgVehicles {
           hotkey = "R";
           enableInside = 1;
         };
-        class AGM_JoinTeamGreen {
-          displayName = "$STR_AGM_Interaction_JoinTeamGreen";
+        class ACE_JoinTeamGreen {
+          displayName = "$STR_ACE_Interaction_JoinTeamGreen";
           distance = 4;
           condition = QUOTE( alive _target && {!isPlayer _target} && {_target in units group _player} );
           statement = QUOTE( [_target, 'GREEN'] call FUNC(joinTeam) );
@@ -236,8 +178,8 @@ class CfgVehicles {
           hotkey = "G";
           enableInside = 1;
         };
-        class AGM_JoinTeamBlue {
-          displayName = "$STR_AGM_Interaction_JoinTeamBlue";
+        class ACE_JoinTeamBlue {
+          displayName = "$STR_ACE_Interaction_JoinTeamBlue";
           distance = 4;
           condition = QUOTE( alive _target && {!isPlayer _target} && {_target in units group _player} );
           statement = QUOTE( [_target, 'BLUE'] call FUNC(joinTeam) );
@@ -247,8 +189,8 @@ class CfgVehicles {
           hotkey = "B";
           enableInside = 1;
         };
-        class AGM_JoinTeamYellow {
-          displayName = "$STR_AGM_Interaction_JoinTeamYellow";
+        class ACE_JoinTeamYellow {
+          displayName = "$STR_ACE_Interaction_JoinTeamYellow";
           distance = 4;
           condition = QUOTE( alive _target && {!isPlayer _target} && {_target in units group _player} );
           statement = QUOTE( [_target, 'YELLOW'] call FUNC(joinTeam) );
@@ -259,8 +201,8 @@ class CfgVehicles {
           enableInside = 1;
         };
 
-        class AGM_LeaveTeam {
-          displayName = "$STR_AGM_Interaction_LeaveTeam";
+        class ACE_LeaveTeam {
+          displayName = "$STR_ACE_Interaction_LeaveTeam";
           distance = 4;
           condition = QUOTE( alive _target && {!isPlayer _target} && {_target in units group _player} && {assignedTeam _player != 'MAIN'} );
           statement = QUOTE( [_target, 'MAIN'] call FUNC(joinTeam) );
@@ -272,8 +214,8 @@ class CfgVehicles {
         };
       };
 
-      class AGM_TapShoulder {
-        displayName = "$STR_AGM_Interaction_TapShoulder";
+      class ACE_TapShoulder {
+        displayName = "$STR_ACE_Interaction_TapShoulder";
         distance = 4;
         condition = QUOTE( [_player, _target] call FUNC(canTapShoulder) );
         statement = QUOTE( [_player, _target] call FUNC(tapShoulder) );
@@ -282,8 +224,8 @@ class CfgVehicles {
         hotkey = "Q";
         enableInside = 1;
       };
-      class AGM_JoinGroup {
-        displayName = "$STR_AGM_Interaction_JoinGroup";
+      class ACE_JoinGroup {
+        displayName = "$STR_ACE_Interaction_JoinGroup";
         distance = 4;
         condition = QUOTE( side group _player == side group _target && {group _player != group _target} );
         statement = QUOTE( [_player] joinSilent group _target; );
@@ -294,24 +236,24 @@ class CfgVehicles {
         enableInside = 1;
       };
 
-      class AGM_GetDown {
-        displayName = "$STR_AGM_Interaction_GetDown";
+      class ACE_GetDown {
+        displayName = "$STR_ACE_Interaction_GetDown";
         distance = 4;
         condition = QUOTE( [_target] call FUNC(canInteractWith) );
         statement = QUOTE( [_target] call FUNC(getDown) );
         showDisabled = 0;
         priority = 2.2;
       };
-      class AGM_SendAway {
-        displayName = "$STR_AGM_Interaction_SendAway";
+      class ACE_SendAway {
+        displayName = "$STR_ACE_Interaction_SendAway";
         distance = 4;
         condition = QUOTE( [_target] call FUNC(canInteractWith) );
         statement = QUOTE( [_target] call FUNC(sendAway) );
         showDisabled = 0;
         priority = 2.0;
       };
-      class AGM_Pardon {
-        displayName = "$STR_AGM_Interaction_Pardon";
+      class ACE_Pardon {
+        displayName = "$STR_ACE_Interaction_Pardon";
         distance = 4;
         condition = QUOTE( rating _target < -2000 && {alive _target} && {side group _player == side group _target} );
         statement = QUOTE( [_target, '{_this addRating -rating _this}', _target] call EFUNC(core,execRemoteFnc) );
@@ -321,20 +263,20 @@ class CfgVehicles {
       };
     };
 
-    class AGM_SelfActions {
-      class AGM_TeamManagement {
-        displayName = "$STR_AGM_Interaction_TeamManagement";
+    class ACE_SelfActions {
+      class ACE_TeamManagement {
+        displayName = "$STR_ACE_Interaction_TeamManagement";
         condition = QUOTE( GVAR(EnableTeamManagement) );
         statement = "";
         showDisabled = 1;
         priority = 3.2;
         icon = PATHOF(UI\team\team_management_ca.paa);
-        subMenu[] = {"AGM_TeamManagement", 1};
+        subMenu[] = {"ACE_TeamManagement", 1};
         enableInside = 1;
         hotkey = "M";
 
-        class AGM_JoinTeamRed {
-          displayName = "$STR_AGM_Interaction_JoinTeamRed";
+        class ACE_JoinTeamRed {
+          displayName = "$STR_ACE_Interaction_JoinTeamRed";
           condition = QUOTE( true );
           statement = QUOTE( [_player, 'RED'] call FUNC(joinTeam) );
           showDisabled = 1;
@@ -343,8 +285,8 @@ class CfgVehicles {
           enableInside = 1;
           hotkey = "R";
         };
-        class AGM_JoinTeamGreen {
-          displayName = "$STR_AGM_Interaction_JoinTeamGreen";
+        class ACE_JoinTeamGreen {
+          displayName = "$STR_ACE_Interaction_JoinTeamGreen";
           condition = QUOTE( true );
           statement = QUOTE( [_player, 'GREEN'] call FUNC(joinTeam) );
           showDisabled = 1;
@@ -353,8 +295,8 @@ class CfgVehicles {
           enableInside = 1;
           hotkey = "G";
         };
-        class AGM_JoinTeamBlue {
-          displayName = "$STR_AGM_Interaction_JoinTeamBlue";
+        class ACE_JoinTeamBlue {
+          displayName = "$STR_ACE_Interaction_JoinTeamBlue";
           condition = QUOTE( true );
           statement = QUOTE( [_player, 'BLUE'] call FUNC(joinTeam) );
           showDisabled = 1;
@@ -363,8 +305,8 @@ class CfgVehicles {
           enableInside = 1;
           hotkey = "B";
         };
-        class AGM_JoinTeamYellow {
-          displayName = "$STR_AGM_Interaction_JoinTeamYellow";
+        class ACE_JoinTeamYellow {
+          displayName = "$STR_ACE_Interaction_JoinTeamYellow";
           condition = QUOTE( true );
           statement = QUOTE( [_player, 'YELLOW'] call FUNC(joinTeam) );
           showDisabled = 1;
@@ -374,8 +316,8 @@ class CfgVehicles {
           hotkey = "Y";
         };
 
-        class AGM_LeaveTeam {
-          displayName = "$STR_AGM_Interaction_LeaveTeam";
+        class ACE_LeaveTeam {
+          displayName = "$STR_ACE_Interaction_LeaveTeam";
           condition = QUOTE( assignedTeam _player != 'MAIN' );
           statement = QUOTE( [_player, 'MAIN'] call FUNC(joinTeam) );
           showDisabled = 1;
@@ -385,8 +327,8 @@ class CfgVehicles {
           hotkey = "N";
         };
 
-        class AGM_BecomeLeader {
-          displayName = "$STR_AGM_Interaction_BecomeLeader";
+        class ACE_BecomeLeader {
+          displayName = "$STR_ACE_Interaction_BecomeLeader";
           condition = QUOTE( count (units group _player) > 1 && {leader group _player != _player} );
           statement = QUOTE( _newGroup = createGroup side group _player; (units group _player) joinSilent _newGroup; _newGroup selectLeader _player; );
           showDisabled = 1;
@@ -395,8 +337,8 @@ class CfgVehicles {
           enableInside = 1;
           hotkey = "L";
         };
-        class AGM_LeaveGroup {
-          displayName = "$STR_AGM_Interaction_LeaveGroup";
+        class ACE_LeaveGroup {
+          displayName = "$STR_ACE_Interaction_LeaveGroup";
           condition = QUOTE( count (units group _player) > 1 );
           statement = QUOTE( _oldGroup = units group _player; _newGroup = createGroup side _player; [_player] joinSilent _newGroup; {_player reveal _x} forEach _oldGroup; );
           showDisabled = 1;
@@ -408,120 +350,120 @@ class CfgVehicles {
       };
 
       /* DANCE ANIMATION DOESN'T WORK :(
-      class AGM_Dance {
-        displayName = "$STR_AGM_Interaction_Dance";
-        condition = "isClass (configFile >> 'CfgPatches' >> 'AGM_Movement') and !AGM_Dancing";
-        statement = "AGM_Dancing = true; [-2, {_this switchMove 'TestDance';}, player] call CBA_fnc_globalExecute;";
+      class ACE_Dance {
+        displayName = "$STR_ACE_Interaction_Dance";
+        condition = "isClass (configFile >> 'CfgPatches' >> 'ACE_Movement') and !ACE_Dancing";
+        statement = "ACE_Dancing = true; [-2, {_this switchMove 'TestDance';}, player] call CBA_fnc_globalExecute;";
         showDisabled = 0;
         priority = -1.2;
       };
-      class AGM_StopDancing {
-        displayName = "$STR_AGM_Interaction_StopDancing";
-        condition = "AGM_Dancing";
-        statement = "AGM_Dancing = false; [-2, {_this switchMove '';}, player] call CBA_fnc_globalExecute;";
+      class ACE_StopDancing {
+        displayName = "$STR_ACE_Interaction_StopDancing";
+        condition = "ACE_Dancing";
+        statement = "ACE_Dancing = false; [-2, {_this switchMove '';}, player] call CBA_fnc_globalExecute;";
         showDisabled = 0;
         priority = -1.2;
       };
       */
 
-      class AGM_Gestures {
-        displayName = "$STR_AGM_Interaction_Gestures";
+      class ACE_Gestures {
+        displayName = "$STR_ACE_Interaction_Gestures";
         condition = "canStand _target";
         statement = "";
         showDisabled = 1;
         priority = 3.5;
-        subMenu[] = {"AGM_Gestures", 1};
-        icon = "AGM_Interaction\UI\gestures_ca.paa";
+        subMenu[] = {"ACE_Gestures", 1};
+        icon = "ACE_Interaction\UI\gestures_ca.paa";
         hotkey = "G";
 
-        /*class AGM_Gesture_Advance {
-          displayName = "$STR_AGM_Interaction_Gestures_Attack";
+        /*class ACE_Gesture_Advance {
+          displayName = "$STR_ACE_Interaction_Gestures_Attack";
           condition = "canStand _target";
           statement = "_target playActionNow 'gestureAttack';";
           showDisabled = 1;
           priority = 2.0;
         };*/
-        class AGM_Gesture_Advance {
-          displayName = "$STR_AGM_Interaction_Gestures_Advance";
+        class ACE_Gesture_Advance {
+          displayName = "$STR_ACE_Interaction_Gestures_Advance";
           condition = "canStand _target";
           statement = "_target playActionNow 'gestureAdvance';";
           showDisabled = 1;
           priority = 1.9;
           hotkey = "1";
         };
-        class AGM_Gesture_Go {
-          displayName = "$STR_AGM_Interaction_Gestures_Go";
+        class ACE_Gesture_Go {
+          displayName = "$STR_ACE_Interaction_Gestures_Go";
           condition = "canStand _target";
           statement = "_target playActionNow (['gestureGo', 'gestureGoB'] select (floor random 2));";
           showDisabled = 1;
           priority = 1.8;
           hotkey = "2";
         };
-        class AGM_Gesture_Follow {
-          displayName = "$STR_AGM_Interaction_Gestures_Follow";
+        class ACE_Gesture_Follow {
+          displayName = "$STR_ACE_Interaction_Gestures_Follow";
           condition = "canStand _target";
           statement = "_target playActionNow 'gestureFollow';";
           showDisabled = 1;
           priority = 1.7;
           hotkey = "3";
         };
-        /*class AGM_Gesture_Point {
-          displayName = "$STR_AGM_Interaction_Gestures_Point";
+        /*class ACE_Gesture_Point {
+          displayName = "$STR_ACE_Interaction_Gestures_Point";
           condition = "canStand _target";
           statement = "_target playActionNow 'gesturePoint';";
           showDisabled = 1;
           priority = 1.6;
         };*/
-        class AGM_Gesture_Up {
-          displayName = "$STR_AGM_Interaction_Gestures_Up";
+        class ACE_Gesture_Up {
+          displayName = "$STR_ACE_Interaction_Gestures_Up";
           condition = "canStand _target";
           statement = "_target playActionNow 'gestureUp';";
           showDisabled = 1;
           priority = 1.5;
           hotkey = "4";
         };
-        class AGM_Gesture_Cover {
-          displayName = "$STR_AGM_Interaction_Gestures_Cover";
+        class ACE_Gesture_Cover {
+          displayName = "$STR_ACE_Interaction_Gestures_Cover";
           condition = "canStand _target";
           statement = "_target playActionNow 'gestureCover';";
           showDisabled = 1;
           priority = 1.4;
           hotkey = "5";
         };
-        class AGM_Gesture_CeaseFire {
-          displayName = "$STR_AGM_Interaction_Gestures_Cease_Fire";
+        class ACE_Gesture_CeaseFire {
+          displayName = "$STR_ACE_Interaction_Gestures_Cease_Fire";
           condition = "canStand _target";
           statement = "_target playActionNow 'gestureCeaseFire';";
           showDisabled = 1;
           priority = 1.3;
           hotkey = "6";
         };
-        class AGM_Gesture_Freeze {
-          displayName = "$STR_AGM_Interaction_Gestures_Freeze";
+        class ACE_Gesture_Freeze {
+          displayName = "$STR_ACE_Interaction_Gestures_Freeze";
           condition = "canStand _target";
           statement = "_target playActionNow 'gestureFreeze';";
           showDisabled = 1;
           priority = 1.2;
           hotkey = "7";
         };
-        class AGM_Gesture_Yes {
-          displayName = "$STR_AGM_Interaction_Gestures_Yes";
+        class ACE_Gesture_Yes {
+          displayName = "$STR_ACE_Interaction_Gestures_Yes";
           condition = "canStand _target";
           statement = "_target playActionNow (['gestureYes', 'gestureNod'] select (floor random 2));";
           showDisabled = 1;
           priority = 1.1;
           hotkey = "8";
         };
-        class AGM_Gesture_No {
-          displayName = "$STR_AGM_Interaction_Gestures_No";
+        class ACE_Gesture_No {
+          displayName = "$STR_ACE_Interaction_Gestures_No";
           condition = "canStand _target";
           statement = "_target playActionNow 'gestureNo';";
           showDisabled = 1;
           priority = 1.0;
           hotkey = "9";
         };
-        class AGM_Gesture_Hi {
-          displayName = "$STR_AGM_Interaction_Gestures_Hi";
+        class ACE_Gesture_Hi {
+          displayName = "$STR_ACE_Interaction_Gestures_Hi";
           condition = "canStand _target";
           statement = "_target playActionNow (['gestureHi', 'gestureHiB', 'gestureHiC'] select (floor random 3));";
           showDisabled = 1;
@@ -530,24 +472,24 @@ class CfgVehicles {
         };
       };
 
-      class AGM_Equipment {
-        displayName = "$STR_AGM_Interaction_Equipment";
+      class ACE_Equipment {
+        displayName = "$STR_ACE_Interaction_Equipment";
         condition = "true";
         statement = "";
         showDisabled = 1;
         priority = 4.5;
         icon = "";  // @todo
-        subMenu[] = {"AGM_Equipment", 1};
+        subMenu[] = {"ACE_Equipment", 1};
         enableInside = 1;
         hotkey = "E";
 
-        class AGM_Dummy {
+        class ACE_Dummy {
           displayName = "";
           condition = "false";
           statement = "";
           showDisabled = 1;
           priority = -99;
-          icon = "AGM_Core\UI\blank_CO.paa";
+          icon = PATHOF(UI\blank_CO.paa);
           enableInside = 1;
         };
       };
@@ -556,29 +498,29 @@ class CfgVehicles {
 
   class LandVehicle;
   class Car: LandVehicle {
-    class AGM_Actions {};
-    class AGM_SelfActions {};
+    class ACE_Actions {};
+    class ACE_SelfActions {};
   };
   class Tank: LandVehicle {
-    class AGM_Actions {};
-    class AGM_SelfActions {};
+    class ACE_Actions {};
+    class ACE_SelfActions {};
   };
 
   class Air;
   class Helicopter: Air {
-    class AGM_Actions {};
-    class AGM_SelfActions {};
+    class ACE_Actions {};
+    class ACE_SelfActions {};
   };
   class Plane: Air {
-    class AGM_Actions {};
-    class AGM_SelfActions {};
+    class ACE_Actions {};
+    class ACE_SelfActions {};
   };
 
   class Ship;
   class Ship_F: Ship {
-    class AGM_Actions {
-      class AGM_Push {
-        displayName = "$STR_AGM_Interaction_Push";
+    class ACE_Actions {
+      class ACE_Push {
+        displayName = "$STR_ACE_Interaction_Push";
         distance = 4;
         condition = QUOTE( getMass _target < 1000 and alive _target );
         statement = QUOTE( [_target, [2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5]] call FUNC(push); );
@@ -586,37 +528,37 @@ class CfgVehicles {
         priority = -1;
       };
     };
-    class AGM_SelfActions {};
+    class ACE_SelfActions {};
   };
 
   class StaticWeapon: LandVehicle {
-    class AGM_Actions {};
-    class AGM_SelfActions {};
+    class ACE_Actions {};
+    class ACE_SelfActions {};
   };
 
   class StaticMortar;
   class Mortar_01_base_F: StaticMortar {
-    class AGM_Actions {};
-    class AGM_SelfActions {};
+    class ACE_Actions {};
+    class ACE_SelfActions {};
   };
 
   class Box_NATO_Support_F;
-  class AGM_Box_Misc: Box_NATO_Support_F {
+  class ACE_Box_Misc: Box_NATO_Support_F {
     class TransportItems {
-      MACRO_ADDITEM(AGM_CableTie,24)
+      MACRO_ADDITEM(ACE_CableTie,24)
     };
   };
 };
 
 class CfgWeapons {
-  class AGM_ItemCore;
+  class ACE_ItemCore;
   class InventoryItem_Base_F;
 
-  class AGM_CableTie: AGM_ItemCore {
-    displayName = "$STR_AGM_Interaction_CableTie_Name";
-    descriptionShort = "$STR_AGM_Interaction_CableTie_Description";
-    model = PATHOF(agm_cabletie.p3d);
-    picture = PATHOF(UI\agm_cabletie_x_ca.paa);
+  class ACE_CableTie: ACE_ItemCore {
+    displayName = "$STR_ACE_Interaction_CableTie_Name";
+    descriptionShort = "$STR_ACE_Interaction_CableTie_Description";
+    model = PATHOF(ACE_cabletie.p3d);
+    picture = PATHOF(UI\ACE_cabletie_x_ca.paa);
     scope = 2;
     class ItemInfo: InventoryItem_Base_F {
       mass = 1;

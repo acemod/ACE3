@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  *
- * Add an AGM action to an object. Note: This function is global.
+ * Add an ACE action to an object. Note: This function is global.
  *
  * Argument:
  * 0: Object the action should be assigned to (Object)

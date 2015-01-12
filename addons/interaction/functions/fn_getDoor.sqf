@@ -23,10 +23,3 @@ _intersections = [_house, "GEOM"] intersect [_position0, _position1];
 _door = _intersections select 0 select 0;
 if (isNil "_door") exitWith {[_house, ""]};
 [_house, _door]
-
-/*
-_house = cursorTarget;
-_actions = "true" configClasses (configFile >> "CfgVehicles" >> typeOf _house >> "UserActions");
-_actions = [_actions, {getText (_x >> "statement")}] call AGM_Core_fnc_map;
-_actions
-*/

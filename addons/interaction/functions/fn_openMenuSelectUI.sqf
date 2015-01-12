@@ -16,7 +16,7 @@ GVAR(InteractionMenu_Crew) = _cargo;
 
 // prepare: add header and "OK" button to select menu
 private "_actions";
-_actions = [localize "STR_AGM_Interaction_InteractionMenu", localize "STR_AGM_Interaction_Interact"] call FUNC(prepareSelectMenu);
+_actions = [localize "STR_ACE_Interaction_InteractionMenu", localize "STR_ACE_Interaction_Interact"] call FUNC(prepareSelectMenu);
 
 // prepare: add all cargo units as options to select menu
 {

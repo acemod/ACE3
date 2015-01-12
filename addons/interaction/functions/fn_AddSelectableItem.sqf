@@ -1,6 +1,4 @@
 /*
-	Name: AGM_Interaction_fnc_AddSelectableItem
-
 	Author: Garth de Wet (LH)
 
 	Description:

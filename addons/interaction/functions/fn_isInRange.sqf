@@ -17,7 +17,7 @@ private ["_vehicle", "_distance", "_player"];
 _vehicle = _this select 0;
 _distance = _this select 1;
 
-_player = AGM_player;
+_player = ACE_player;
 
 if (_vehicle isKindOf "Man") exitWith {_player distance _vehicle < _distance};
 

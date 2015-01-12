@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 private ["_player", "_vehicle", "_target", "_count", "_index", "_action", "_subMenu", "_statement", "_condition", "_conditionShow", "_exceptions", "_distance"];
 
-_player = AGM_player;
+_player = ACE_player;
 _vehicle = vehicle _player;
 _target = [GVAR(Target), _player] select (GVAR(MenuType) % 2 == 1);
 

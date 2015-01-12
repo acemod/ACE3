@@ -1,6 +1,4 @@
 /*
-	Name: AGM_Interaction_fnc_GetActions
-
 	Author:
 		commy2
 		Garth de Wet (LH)
@@ -14,16 +12,16 @@
 		3: ARRAY - Patches
 		4: CONFIG - Parent config (ConfigFile >> "CfgVehicles"/MissionConfigFile >> "CfgVehicles")
 		5: BOOL - Is mission config file?
-		6: STRING - Classname ("AGM_Actions"/"AGM_SelfActions")
+		6: STRING - Classname ("ACE_Actions"/"ACE_SelfActions")
 		7: STRING - Sub-class
 
 	Returns:
 		Nothing
 
 	Example:
-		[player, [configfile >> "CfgVehicles" >> typeOf player, true] call BIS_fnc_returnParents, [], [],configfile >> "CfgVehicles", false, "AGM_Actions"] call AGM_Interaction_fnc_GetActions;
+		[player, [configfile >> "CfgVehicles" >> typeOf player, true] call BIS_fnc_returnParents, [], [],configfile >> "CfgVehicles", false, "ACE_Actions"] call ACE_Interaction_fnc_GetActions;
 
-		[player, [configfile >> "CfgVehicles" >> typeOf player, true] call BIS_fnc_returnParents, [], [],configfile >> "CfgVehicles", false, "AGM_SelfActions"] call AGM_Interaction_fnc_GetActions;
+		[player, [configfile >> "CfgVehicles" >> typeOf player, true] call BIS_fnc_returnParents, [], [],configfile >> "CfgVehicles", false, "ACE_SelfActions"] call ACE_Interaction_fnc_GetActions;
 */
 #include "script_component.hpp"
 
@@ -79,7 +77,7 @@ for "_i" from 0 to (_count - 1) do {
 					_condition = getText (_action >> "condition");
 					if (_condition == "") then {_condition = "true"};
 
-					_condition = _condition + format [QUOTE( && {%1 call EGVAR(core,canInteract)} && {[AGM_player, GVAR(Target)] call EFUNC(core,canInteractWith)} ), getArray (_action >> "exceptions")];
+					_condition = _condition + format [QUOTE( && {%1 call EGVAR(core,canInteract)} && {[ACE_player, GVAR(Target)] call EFUNC(core,canInteractWith)} ), getArray (_action >> "exceptions")];
 					if (_enableInside != 1) then {_condition = _condition + " && {_player == _vehicle}"};
 
 					_condition = compile _condition;

@@ -5,7 +5,7 @@ private ["_object", "_config", "_type", "_actions", "_configs"];
 
 _object = _this select 0;
 _config = _this select 1;	// configFile, missionConfigFile
-_type = _this select 2;		// "AGM_CfgInteractions", "AGM_CfgInteractionsSelf"
+_type = _this select 2;		// "ACE_CfgInteractions", "ACE_CfgInteractionsSelf"
 _actions = _this select 3;	// [];
 
 _configs = "_object isKindOf configName _x" configClasses (_config >> _type);
@@ -45,7 +45,7 @@ _cacheIndices = _cache select 2;
 			_condition = getText (_action >> "condition");
 			if (_condition == "") then {_condition = "true"};
 
-			_condition = _condition + format [QUOTE( && {%1 call EFUNC(core,canInteract)} && {[AGM_player, GVAR(Target)] call FUNC(canInteractWith)} ), getArray (_action >> "exceptions")];
+			_condition = _condition + format [QUOTE( && {%1 call EFUNC(core,canInteract)} && {[ACE_player, GVAR(Target)] call FUNC(canInteractWith)} ), getArray (_action >> "exceptions")];
 			if (_enableInside != 1) then {_condition = _condition + " && {_player == _vehicle}"};
 
 			_condition = compile _condition;
@@ -66,7 +66,7 @@ _cacheIndices = _cache select 2;
 			_statement = getText (_action >> "statement");
 			_statement = compile _statement;
 
-			if (profileNamespace getVariable ["AGM_Interaction_FlowMenu", false]) then {
+			if (profileNamespace getVariable ["ACE_Interaction_FlowMenu", false]) then {
 				_statement = if (getText (_action >> "statement") == "" && {count _subMenu > 1}) then {
 					compile format [QUOTE( call FUNC(hideMenu);if(%2 == 1)then{['%1'] call FUNC(openSubMenuSelf);}else{['%1'] call FUNC(openSubMenu);}; ), _subMenu select 0, _subMenu select 1];
 				} else {

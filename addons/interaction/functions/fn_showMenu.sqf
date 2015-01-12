@@ -1,6 +1,4 @@
 /*
-	Name: AGM_Interaction_fnc_showMenu
-
 	Author:
 		commy2
 		Garth de Wet (LH)
@@ -17,17 +15,17 @@
 		Nothing
 
 	Example:
-		[0, GVAR(Target)] call AGM_Interaction_fnc_showMenu;
-		[1, player] call AGM_Interaction_fnc_showMenu;
-		[2, GVAR(Target), "AGM_Explosives"] call AGM_Interaction_fnc_showMenu;
-		[3, player, "AGM_Explosives"] call AGM_Interaction_fnc_showMenu;
+		[0, GVAR(Target)] call FUNC(showMenu);
+		[1, player] call FUNC(showMenu);
+		[2, GVAR(Target), "ACE_Explosives"] call FUNC(showMenu);
+		[3, player, "ACE_Explosives"] call FUNC(showMenu);
 */
 #include "script_component.hpp"
 
 private ["_player", "_vehicle", "_mainButtonAction", "_object", "_index", "_actions", "_result", "_menuType"];
 #define DEFAULT_ICON PATHOF(UI\dot_ca.paa)
 #define DEFAULT_DISTANCE 4 // seems to be 4
-_player = AGM_player;
+_player = ACE_player;
 _vehicle = vehicle _player;
 
 GVAR(MenuType) = _this select 0;	// 0 Interaction, 1 Self Interaction
@@ -50,14 +48,14 @@ if !([_player, _object] call EFUNC(core,canInteractWith)) exitWith {};
 
 // add actions or self actions of GVAR(Target)
 _parents = [configFile >> "CfgVehicles" >> typeOf _object, true] call BIS_fnc_returnParents;
-_result = [_object, _parents, [], [], missionConfigFile >> "CfgVehicles", true, ["AGM_Actions", "AGM_SelfActions"] select _menuType, _this select 2] call FUNC(GetActions);
-_actions = ([_object, _parents, _result select 0, _result select 1,configFile >> "CfgVehicles", false, ["AGM_Actions", "AGM_SelfActions"] select _menuType, _this select 2] call FUNC(GetActions) select 0);
+_result = [_object, _parents, [], [], missionConfigFile >> "CfgVehicles", true, ["ACE_Actions", "ACE_SelfActions"] select _menuType, _this select 2] call FUNC(GetActions);
+_actions = ([_object, _parents, _result select 0, _result select 1,configFile >> "CfgVehicles", false, ["ACE_Actions", "ACE_SelfActions"] select _menuType, _this select 2] call FUNC(GetActions) select 0);
 
 // add self actions of vehicle _player
 if (_menuType == 1 && {_player != _vehicle}) then {
 	_parents = [configFile >> "CfgVehicles" >> typeOf _vehicle, true] call BIS_fnc_returnParents;
-	_result = [_vehicle, _parents, [], [], missionConfigFile >> "CfgVehicles", true, ["AGM_Actions", "AGM_SelfActions"] select _menuType, _this select 2] call FUNC(GetActions);
-	_actions = _actions + (([_vehicle, _parents, _result select 0, _result select 1,configFile >> "CfgVehicles", false, ["AGM_Actions", "AGM_SelfActions"] select _menuType, _this select 2] call FUNC(GetActions) select 0));
+	_result = [_vehicle, _parents, [], [], missionConfigFile >> "CfgVehicles", true, ["ACE_Actions", "ACE_SelfActions"] select _menuType, _this select 2] call FUNC(GetActions);
+	_actions = _actions + (([_vehicle, _parents, _result select 0, _result select 1,configFile >> "CfgVehicles", false, ["ACE_Actions", "ACE_SelfActions"] select _menuType, _this select 2] call FUNC(GetActions) select 0));
 };
 
 // custom defined actions, stored in variable instead of cfg like above
@@ -66,11 +64,11 @@ if (GVAR(MenuType) < 2) then {
 	private ["_customActions", "_customAction", "_displayName", "_distance","_condition","_statement","_showDisabled", "_priority"];
 
 	// add interactions or self interactions of GVAR(Target)
-	_customActions = (_object getVariable [[QGVAR(Interactions), QGVAR(AGM_InteractionsSelf)] select _menuType, [-1, [], []]]) select 2;
+	_customActions = (_object getVariable [[QGVAR(Interactions), QGVAR(ACE_InteractionsSelf)] select _menuType, [-1, [], []]]) select 2;
 
 	// add self interactions of vehicle _player
 	if (_menuType == 1 && {_player != _vehicle}) then {
-		_customActions = _customActions + ((_vehicle getVariable [[QGVAR(Interactions), QGVAR(AGM_InteractionsSelf)] select _menuType, [-1, [], []]]) select 2);
+		_customActions = _customActions + ((_vehicle getVariable [[QGVAR(Interactions), QGVAR(ACE_InteractionsSelf)] select _menuType, [-1, [], []]]) select 2);
 	};
 
 	if(_menuType==0) then {

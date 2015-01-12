@@ -1,6 +1,4 @@
 /*
-	Name: AGM_Interaction_fnc_hideMouseHint
-
 	Author(s):
 		Garth de Wet (LH)
 
@@ -14,11 +12,11 @@
 		Nothing
 
 	Example:
-		call AGM_Interaction_fnc_hideMouseHint;
+		call FUNC(hideMouseHint);
 */
 #include "script_component.hpp"
 
-if (isNull (uiNamespace getVariable ["AGM_Helper_Display", objNull])) exitWith{};
+if (isNull (uiNamespace getVariable ["ACE_Helper_Display", objNull])) exitWith{};
 
-("AGM_InteractionHelper" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+("ACE_InteractionHelper" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 showHUD true;
