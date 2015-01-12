@@ -75,7 +75,7 @@ class CfgVehicles {
     vehicleClass = QGVAR(Rallypoints);
 
     class EventHandlers {
-      init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_nato_CO.paa'; _this call FUNC(initRallypoint);
+      init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_nato_CO.paa'; _this call FUNC(initRallypoint));
     };
     class ACE_Actions: ACE_Actions {
       class ACE_Teleport {
@@ -95,7 +95,7 @@ class CfgVehicles {
     vehicleClass = QGVAR(Rallypoints);
 
     class EventHandlers {
-      init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_CSAT_CO.paa'; _this call FUNC(initRallypoint);
+      init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_CSAT_CO.paa'; _this call FUNC(initRallypoint));
     };
     class ACE_Actions: ACE_Actions {
       class ACE_Teleport {
@@ -115,7 +115,7 @@ class CfgVehicles {
     vehicleClass = QGVAR(Rallypoints);
 
     class EventHandlers {
-      init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_AAF_CO.paa'; _this call FUNC(initRallypoint);
+      init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_AAF_CO.paa'; _this call FUNC(initRallypoint));
     };
     class ACE_Actions: ACE_Actions {
       class ACE_Teleport {
@@ -136,7 +136,7 @@ class CfgVehicles {
     vehicleClass = QGVAR(Rallypoints);
 
     class EventHandlers {
-      init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_nato_CO.paa'; _this call FUNC(initRallypoint);
+      init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_nato_CO.paa'; _this call FUNC(initRallypoint));
     };
     class ACE_Actions: ACE_Actions {
       class ACE_Teleport {
@@ -156,7 +156,7 @@ class CfgVehicles {
     vehicleClass = QGVAR(Rallypoints);
 
     class EventHandlers {
-      init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_CSAT_CO.paa'; _this call FUNC(initRallypoint);
+      init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_CSAT_CO.paa'; _this call FUNC(initRallypoint));
     };
     class ACE_Actions: ACE_Actions {
       class ACE_Teleport {
@@ -176,7 +176,7 @@ class CfgVehicles {
     vehicleClass = QGVAR(Rallypoints);
 
     class EventHandlers {
-      init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_AAF_CO.paa'; _this call FUNC(initRallypoint);
+      init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_AAF_CO.paa'; _this call FUNC(initRallypoint));
     };
     class ACE_Actions: ACE_Actions {
       class ACE_Teleport {
