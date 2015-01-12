@@ -14,19 +14,7 @@ class CfgPatches {
   };
 };
 
-class Extended_PostInit_EventHandlers {
-  class ADDON {
-    clientInit = QUOTE(call compile preprocessFileLineNumbers PATHTOF(XEH_clientInit.sqf));
-  };
-};
-
-class Extended_Init_EventHandlers {
-  class AllVehicles {
-    class ADDON {
-      clientInit = QUOTE(_this call FUNC(vehicleInit));
-    };
-  };
-};
+#include "CfgEventHandlers.hpp"
 
 class EGVAR(Core, Default_Keys) {
   class laseTarget {
