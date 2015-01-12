@@ -1,10 +1,11 @@
-// PATCH CONFIG
+#include "script_component.hpp"
+
 class CfgPatches {
-  class AGM_Thermals {
+  class ADDON {
     units[] = {};
     weapons[] = {};
     requiredVersion = 0.60;
-    requiredAddons[] = {AGM_Core};
+    requiredAddons[] = {ace_core};
     version = "0.95";
     versionStr = "0.95";
     versionAr[] = {0,95,0};
