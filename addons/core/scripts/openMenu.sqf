@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 #define OFFSET_1 100
 #define OFFSET_2 200
@@ -33,7 +34,7 @@ for "_index" from 0 to (_count - 1 min 19) do {
   _displayName = getText (_configFile >> "displayName");
   _isDisabled = getNumber (_configFile >> "disabled") == 1;
 
-  _keyCode = profileNamespace getVariable format ["AGM_Key_%1", _keyName];
+  _keyCode = profileNamespace getVariable format ["ACE_Key_%1", _keyName];
   _description = [_keyCode] call FUNC(revertKeyCodeLocalized);
 
   _control1 = _dlgMenuDialog displayCtrl (OFFSET_1 + _index);
@@ -69,7 +70,7 @@ if (GVAR(keySave) == 1) then {
     _keyName = _key select 0;
     _keyCode = _key select 1;
 
-    profileNamespace setVariable [format ["AGM_Key_%1", _keyName], _keyCode];
+    profileNamespace setVariable [format ["ACE_Key_%1", _keyName], _keyCode];
   };
 
   _count1 = count GVAR(OptionNamesNew);

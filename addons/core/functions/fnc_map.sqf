@@ -13,6 +13,7 @@
  * Usage:
  * [["2", "gobblecock", "25"], {parseNumber _this}] call FUNC(map) ==> [2, 0, 25]
  */
+#include "script_component.hpp"
 
 private ["_array", "_code"];
 
@@ -20,7 +21,7 @@ _array = + _this select 0;
 _code = _this select 1;
 
 if (isNil "_array") exitWith {
-  diag_log text format ["[AGM] ERROR: No array for function map in %1", _fnc_scriptNameParent];
+  diag_log text format ["[ACE] ERROR: No array for function map in %1", _fnc_scriptNameParent];
   []
 };
 

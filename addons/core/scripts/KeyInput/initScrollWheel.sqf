@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 GVAR(ScrollWheelFrame) = diag_frameno;
 
@@ -10,5 +11,5 @@ GVAR(onScrollWheel) = {
 
   {
     [_scroll] call _x;
-  } count ((missionNamespace getVariable ["AGM_EventHandler_ScrollWheel", [-1, [], []]]) select 2);
+  } count ((missionNamespace getVariable ["ACE_EventHandler_ScrollWheel", [-1, [], []]]) select 2);
 };

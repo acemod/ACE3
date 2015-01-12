@@ -1,7 +1,8 @@
 // by CAA-Picard
+#include "script_component.hpp"
 
-// Read AGM_Parameters from config and set them on the mission namespace
-_config = configFile >> "AGM_Parameters";
+// Read ACE_Parameters from config and set them on the mission namespace
+_config = configFile >> "ACE_Parameters_Numeric";
 _count = count _config;
 for "_index" from 0 to (_count - 1) do {
   _x = _config select _index;
@@ -11,17 +12,7 @@ for "_index" from 0 to (_count - 1) do {
   [_name, _value] call FUNC(setParameter);
 };
 
-_config = configFile >> "AGM_Parameters_Numeric";
-_count = count _config;
-for "_index" from 0 to (_count - 1) do {
-  _x = _config select _index;
-
-  _name = configName _x;
-  _value = _x call bis_fnc_getcfgdata;
-  [_name, _value] call FUNC(setParameter);
-};
-
-_config = configFile >> "AGM_Parameters_Boolean";
+_config = configFile >> "ACE_Parameters_Boolean";
 _count = count _config;
 for "_index" from 0 to (_count - 1) do {
   _x = _config select _index;
@@ -32,8 +23,8 @@ for "_index" from 0 to (_count - 1) do {
 };
 
 
-// Read AGM_Parameters from mission and set them on the mission namespace, replacing defaults if necesary
-_config = missionConfigFile >> "AGM_Parameters";
+// Read ACE_Parameters from mission and set them on the mission namespace, replacing defaults if necesary
+_config = missionConfigFile >> "ACE_Parameters";
 _count = count _config;
 for "_index" from 0 to (_count - 1) do {
   _x = _config select _index;
@@ -43,7 +34,7 @@ for "_index" from 0 to (_count - 1) do {
   [_name, _value] call FUNC(setParameter);
 };
 
-_config = missionConfigFile >> "AGM_Parameters_Numeric";
+_config = missionConfigFile >> "ACE_Parameters_Numeric";
 _count = count _config;
 for "_index" from 0 to (_count - 1) do {
   _x = _config select _index;
@@ -53,7 +44,7 @@ for "_index" from 0 to (_count - 1) do {
   [_name, _value] call FUNC(setParameter);
 };
 
-_config = missionConfigFile >> "AGM_Parameters_Boolean";
+_config = missionConfigFile >> "ACE_Parameters_Boolean";
 _count = count _config;
 for "_index" from 0 to (_count - 1) do {
   _x = _config select _index;

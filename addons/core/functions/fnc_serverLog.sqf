@@ -1,4 +1,5 @@
 // by CAA-Picard
+#include "script_component.hpp"
 
 if (isServer) then {
   diag_log _this;

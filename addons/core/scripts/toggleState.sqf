@@ -1,8 +1,9 @@
 // by commy2
+#include "script_component.hpp"
 
 _index = _this select 0;
 
-_name = format ["AGM_%1", GVAR(OptionNames) select _index];
+_name = format ["ACE_%1", GVAR(OptionNames) select _index];
 
 _index1 = GVAR(OptionNamesNew) find _name;
 _state = if (_index1 == -1) then {_index1 = count GVAR(OptionNamesNew); !(profileNamespace getVariable _name)} else {!(GVAR(OptionStatesNew) select _index1)};

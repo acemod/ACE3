@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 private ["_unit", "_anim", "_stance"];
 

@@ -2,7 +2,7 @@
 class RadioProtocolBase {
   class Words;
 };
-class AGM_RadioProtocolNoRadio: RadioProtocolBase {
+class ACE_RadioProtocolNoRadio: RadioProtocolBase {
   class CuratorWaypointPlaced;
   class CuratorWaypointPlacedAttack;
   class CuratorObjectPlaced;
@@ -205,23 +205,23 @@ class AGM_RadioProtocolNoRadio: RadioProtocolBase {
 };
 
 class CfgVoice {
-  class AGM_NoVoice {
-    author = "$STR_AGM_Core_AGMTeam";
-    protocol = "AGM_RadioProtocolNoRadio";
+  class ACE_NoVoice {
+    author = "$STR_ACE_Core_ACETeam";
+    protocol = "ACE_RadioProtocolNoRadio";
     variants[] = {1};
     directories[] = {"",""};
     identityTypes[] = {"Default"};
     scope = 2;
     voiceType = "";
     icon = "\a3\Ui_f\data\Map\Markers\Flags\nato_ca.paa";
-    displayName = "$STR_AGM_Core_NoVoice";
+    displayName = "$STR_ACE_Core_NoVoice";
   };
 };
 class CfgVoiceTypes {
-  class AGM_NoVoice {
-    name = "$STR_AGM_Core_NoVoice";
-    voices[] = {"AGM_NoVoice","AGM_NoVoice","AGM_NoVoice"};
-    preview = "AGM_NoVoice";
+  class ACE_NoVoice {
+    name = "$STR_ACE_Core_NoVoice";
+    voices[] = {"ACE_NoVoice","ACE_NoVoice","ACE_NoVoice"};
+    preview = "ACE_NoVoice";
     alternative = "";
   };
 };

@@ -1,6 +1,7 @@
 // by commy2
+#include "script_component.hpp"
 
-if ((_this select 0) in (missionNamespace getVariable ["AGM_Debug", []])) then {
+if ((_this select 0) in (missionNamespace getVariable ["ACE_Debug", []])) then {
   private ["_type", "_argument", "_function", "_showInGame"];
 
   _this resize 4;
@@ -25,5 +26,5 @@ if ((_this select 0) in (missionNamespace getVariable ["AGM_Debug", []])) then {
     systemChat format ["%1", _result];
   };
 
-  diag_log text format ["[AGM] Debug: %1 : %2 - %3 : %4", _type, diag_frameno, _fnc_scriptNameParent, _result];
+  diag_log text format ["[ACE] Debug: %1 : %2 - %3 : %4", _type, diag_frameno, _fnc_scriptNameParent, _result];
 };

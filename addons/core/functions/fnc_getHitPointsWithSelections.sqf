@@ -9,6 +9,7 @@
  * Return Value:
  * The hitpoints with selections. Format: [hitpoints, selections]. They correspond by index. (Array)
  */
+#include "script_component.hpp"
 
 private ["_vehicle", "_config", "_hitpoints", "_selections"];
 

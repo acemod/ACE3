@@ -9,12 +9,13 @@
  * Return value:
  * None.
  */
+#include "script_component.hpp"
 
 private ["_id", "_actionsVar", "_currentId", "_actionIDs", "_actions"];
 
 _id = _this select 0;
 
-_actionsVar = missionNamespace getVariable ["AGM_onLoadInventory", [-1, [], []]];
+_actionsVar = missionNamespace getVariable ["ACE_onLoadInventory", [-1, [], []]];
 
 _currentId = _actionsVar select 0;
 _actionIDs = _actionsVar select 1;
@@ -27,4 +28,4 @@ if (_id == -1) exitWith {};
 _actionIDs deleteAt _id;
 _actions deleteAt _id;
 
-missionNamespace setVariable ["AGM_onLoadInventory", [_currentId, _actionIDs, _actions]];
+missionNamespace setVariable ["ACE_onLoadInventory", [_currentId, _actionIDs, _actions]];

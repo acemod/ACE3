@@ -2,13 +2,14 @@
  * Author: commy2
  *
  * Get the nearest object the player is looking at. Used for laser designator instead of cursorTarget.
- * 
+ *
  * Argument:
  * 0: Maximal distance to search. (Number)
- * 
+ *
  * Return value:
  * Nearest object directly in line of sight, if none objNull (Object)
  */
+#include "script_component.hpp"
 
 private ["_maxDistance", "_position", "_laser", "_intersects"];
 

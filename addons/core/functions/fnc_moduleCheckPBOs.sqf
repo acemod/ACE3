@@ -9,6 +9,7 @@
  * Return Value:
  * None
  */
+#include "script_component.hpp"
 
 _logic = _this select 0;
 _units = _this select 1;
@@ -26,8 +27,8 @@ if (isNil "_whitelist") then {
 
 _whitelist = [_whitelist, {toLower _this}] call FUNC(map);
 
-AGM_Version_CheckAll = _checkAll;
-AGM_Version_Whitelist = _whitelist;
+ACE_Version_CheckAll = _checkAll;
+ACE_Version_Whitelist = _whitelist;
 
 if (!isServer) then {
   [_mode, _checkAll, _whitelist] spawn {
@@ -37,18 +38,18 @@ if (!isServer) then {
 
     waitUntil {
       sleep 1;
-      !isNil "AGM_Version_ClientErrors"
+      !isNil "ACE_Version_ClientErrors"
     };
 
-    _missingAddon = AGM_Version_ClientErrors select 0;
-    _missingAddonServer = AGM_Version_ClientErrors select 1;
-    _oldVersionClient = AGM_Version_ClientErrors select 2;
-    _oldVersionServer = AGM_Version_ClientErrors select 3;
+    _missingAddon = ACE_Version_ClientErrors select 0;
+    _missingAddonServer = ACE_Version_ClientErrors select 1;
+    _oldVersionClient = ACE_Version_ClientErrors select 2;
+    _oldVersionServer = ACE_Version_ClientErrors select 3;
 
     // Display error message.
     if (_missingAddon || {_missingAddonServer} || {_oldVersionClient} || {_oldVersionServer}) then {
-      _text = "[AGM] Version mismatch:<br/><br/>";
-      _error = format ["AGM version mismatch: %1: ", profileName];
+      _text = "[ACE] Version mismatch:<br/><br/>";
+      _error = format ["ACE version mismatch: %1: ", profileName];
 
       if (_missingAddon) then {
         _text = _text + "Detected missing addon on client<br/>";
@@ -72,11 +73,11 @@ if (!isServer) then {
 
       _text = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _text]];
 
-      _rscLayer = "AGM_RscErrorHint" call BIS_fnc_rscLayer;
-      _rscLayer cutRsc ["AGM_RscErrorHint", "PLAIN", 0, true];
+      _rscLayer = "ACE_RscErrorHint" call BIS_fnc_rscLayer;
+      _rscLayer cutRsc ["ACE_RscErrorHint", "PLAIN", 0, true];
 
       disableSerialization;
-      _ctrlHint = uiNamespace getVariable "AGM_ctrlErrorHint";
+      _ctrlHint = uiNamespace getVariable "ACE_ctrlErrorHint";
       _ctrlHint ctrlSetStructuredText _text;
 
       if (_mode == 0) then {
@@ -93,4 +94,4 @@ if (!isServer) then {
   };
 };
 
-diag_log text format ["[AGM]: Check-PBOs Module Initialized. Mode: %1.", _mode];
+diag_log text format ["[ACE]: Check-PBOs Module Initialized. Mode: %1.", _mode];

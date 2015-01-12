@@ -9,6 +9,7 @@
  * Return value:
  * ID of the event script (used to remove it later).
  */
+#include "script_component.hpp"
 
 private ["_statement", "_actionsVar", "_id", "_actionIDs", "_actions"];
 
@@ -18,7 +19,7 @@ if (typeName _statement == "STRING") then {
   _statement = compile _statement;
 };
 
-_actionsVar = missionNamespace getVariable ["AGM_EventHandler_ScrollWheel", [-1, [], []]];
+_actionsVar = missionNamespace getVariable ["ACE_EventHandler_ScrollWheel", [-1, [], []]];
 
 _id = (_actionsVar select 0) + 1;
 _actionIDs = _actionsVar select 1;
@@ -27,6 +28,6 @@ _actions = _actionsVar select 2;
 _actionIDs pushBack _id;
 _actions pushBack _statement;
 
-missionNamespace setVariable ["AGM_EventHandler_ScrollWheel", [_id, _actionIDs, _actions]];
+missionNamespace setVariable ["ACE_EventHandler_ScrollWheel", [_id, _actionIDs, _actions]];
 
 _id

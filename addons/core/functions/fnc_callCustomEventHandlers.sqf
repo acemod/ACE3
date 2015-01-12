@@ -11,6 +11,7 @@
  * Return value:
  * None.
  */
+#include "script_component.hpp"
 
 private ["_object", "_type", "_argument", "_name", "_actions"];
 
@@ -20,7 +21,7 @@ _argument = _this select 2;
 
 if (isNil "_argument") then {_argument = [_object]};
 
-_name = format ["AGM_CustomEventHandlers_%1", _type];
+_name = format ["ACE_CustomEventHandlers_%1", _type];
 
 _actions = (_object getVariable [_name, [-1, [], []]]) select 2;
 

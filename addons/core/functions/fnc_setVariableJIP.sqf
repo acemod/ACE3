@@ -11,6 +11,7 @@
  * Return value:
  * Nothing.
  */
+#include "script_component.hpp"
 
 private ["_unit", "_varName", "_value", "_respawnVariables"];
 
@@ -18,11 +19,11 @@ _unit = _this select 0;
 _varName = _this select 1;
 _value = _this select 2;
 
-_respawnVariables = _unit getVariable ["AGM_respawnVariables", []];
+_respawnVariables = _unit getVariable ["ACE_respawnVariables", []];
 
 if !(_varName in _respawnVariables) then {
   _respawnVariables pushBack _varName;
-  _unit setVariable ["AGM_respawnVariables", _respawnVariables, true];
+  _unit setVariable ["ACE_respawnVariables", _respawnVariables, true];
 };
 
 _unit setVariable [_varName, _value, true];

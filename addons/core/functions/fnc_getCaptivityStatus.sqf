@@ -9,12 +9,13 @@
  * Return value:
  * Reasons, why the unit is a captive. An empty array is returned if the unit is not a captive (Array of Strings)
  */
+#include "script_component.hpp"
 
 private ["_unit", "_captivityReasons", "_unitCaptivityStatus", "_unitCaptivityReasons"];
 
 _unit = _this select 0;
 
-_captivityReasons = missionNamespace getVariable ["AGM_captivityReasons", []];
+_captivityReasons = missionNamespace getVariable ["ACE_captivityReasons", []];
 
 _unitCaptivityStatus = [captiveNum _unit, count _captivityReasons] call FUNC(binarizeNumber);
 

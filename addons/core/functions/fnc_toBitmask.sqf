@@ -9,6 +9,7 @@
  * Return value:
  * Bitmask (Number)
  */
+#include "script_component.hpp"
 
 private ["_array", "_result"];
 

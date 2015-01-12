@@ -2,13 +2,14 @@
  * Author: commy2
  *
  * Get the gunner config of a vehicles turret.
- * 
+ *
  * Argument:
  * 0: vehicle type (String)
- * 
+ *
  * Return value:
  * Gunner config (Config)
  */
+#include "script_component.hpp"
 
 private ["_vehicle", "_config", "_turret"];
 

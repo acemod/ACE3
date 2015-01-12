@@ -10,8 +10,9 @@
  * Return Value:
  * Sanitized string
  */
+#include "script_component.hpp"
 
- private ["_string", "_removeTags", "_array", "_arrayNew"];
+private ["_string", "_removeTags", "_array", "_arrayNew"];
 
 _string = _this select 0;
 _removeTags = _this select 1;

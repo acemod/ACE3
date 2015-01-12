@@ -9,6 +9,7 @@
  * Return Value:
  * The hitpoints (Array)
  */
+#include "script_component.hpp"
 
 private ["_vehicle", "_config", "_hitpoints"];
 

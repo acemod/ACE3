@@ -10,6 +10,7 @@
  * Return value:
  * Nothing
  */
+#include "script_component.hpp"
 
 private ["_text", "_image"];
 

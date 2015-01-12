@@ -10,6 +10,7 @@
  * Return value:
  * Crew (Array)
  */
+#include "script_component.hpp"
 
 private ["_vehicle", "_types", "_crew"];
 

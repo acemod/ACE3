@@ -14,6 +14,7 @@
  * Return value:
  * None.
  */
+#include "script_component.hpp"
 
 private ["_mode", "_checkAll", "_whitelist", "_logic"];
 

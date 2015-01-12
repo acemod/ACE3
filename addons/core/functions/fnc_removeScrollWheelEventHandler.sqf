@@ -9,12 +9,13 @@
  * Return value:
  * None.
  */
+#include "script_component.hpp"
 
 private ["_id", "_actionsVar", "_currentId", "_actionIDs", "_actions"];
 
 _id = _this select 0;
 
-_actionsVar = missionNamespace getVariable ["AGM_EventHandler_ScrollWheel", [-1, [], []]];
+_actionsVar = missionNamespace getVariable ["ACE_EventHandler_ScrollWheel", [-1, [], []]];
 
 _currentId = _actionsVar select 0;
 _actionIDs = _actionsVar select 1;
@@ -30,4 +31,4 @@ _actionIDs = _actionIDs - [-1];
 _actions set [_id, []];//{}
 _actions = _actions - [[]];//[{}]
 
-missionNamespace setVariable ["AGM_EventHandler_ScrollWheel", [_currentId, _actionIDs, _actions]];
+missionNamespace setVariable ["ACE_EventHandler_ScrollWheel", [_currentId, _actionIDs, _actions]];

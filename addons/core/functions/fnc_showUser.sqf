@@ -1,9 +1,10 @@
 // by commy2
+#include "script_component.hpp"
 
 private "_object";
 
-AGM_Debug_Object = _this select 0;
+GVAR(Debug_Object) = _this select 0;
 
 onEachFrame {
-  hintSilent str (AGM_Debug_Object getVariable ["AGM_isUsedBy", objNull]);
+  hintSilent str (GVAR(Debug_Object) getVariable ["ACE_isUsedBy", objNull]);
 };

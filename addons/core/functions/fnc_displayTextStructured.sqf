@@ -10,6 +10,7 @@
  * Return value:
  * Nothing
  */
+#include "script_component.hpp"
 
 private ["_text", "_size", "_isShown", "_ctrlHint"];
 
@@ -22,12 +23,12 @@ if (typeName _text != "TEXT") then {
   _text = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _text]];
 };
 
-_isShown = ctrlShown (uiNamespace getVariable ["AGM_ctrlHint", controlNull]);
+_isShown = ctrlShown (uiNamespace getVariable ["ACE_ctrlHint", controlNull]);
 
-("AGM_RscHint" call BIS_fnc_rscLayer) cutRsc ["AGM_RscHint", "PLAIN", 0, true];
+("ACE_RscHint" call BIS_fnc_rscLayer) cutRsc ["ACE_RscHint", "PLAIN", 0, true];
 
 disableSerialization;
-_ctrlHint = uiNamespace getVariable "AGM_ctrlHint";
+_ctrlHint = uiNamespace getVariable "ACE_ctrlHint";
 
 _ctrlHint ctrlSetPosition [
   safeZoneW + safeZoneX - 0 * safezoneW,

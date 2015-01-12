@@ -9,6 +9,7 @@
  * Return value:
  * Is the unit in a building? (Bool)
  */
+#include "script_component.hpp"
 
 #define DISTANCE 10
 

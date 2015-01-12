@@ -1,7 +1,7 @@
 /*
  * Author: CAA-Picard
  *
- * Sets the value of an AGM_Parameter and makes it public.
+ * Sets the value of an ACE_Parameter and makes it public.
  *
  * Arguments:
  * 0: Parameter name (string)
@@ -10,6 +10,7 @@
  * Return Value:
  * None
  */
+#include "script_component.hpp"
 
  private ["_name", "_value"];
 

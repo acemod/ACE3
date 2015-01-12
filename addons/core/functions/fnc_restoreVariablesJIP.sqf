@@ -9,15 +9,16 @@
  * Return value:
  * Nothing.
  */
+#include "script_component.hpp"
 
 private ["_unit", "_respawnVariables"];
 
 _unit = _this select 0;
 
-_respawnVariables = _unit getVariable ["AGM_respawnVariables", []];
+_respawnVariables = _unit getVariable ["ACE_respawnVariables", []];
 
 // yes those
-_respawnVariables pushBack "AGM_PersistentFunctions";
+_respawnVariables pushBack "ACE_PersistentFunctions";
 
 {
   _unit setVariable [_x, _unit getVariable _x, true];

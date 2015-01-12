@@ -9,6 +9,7 @@
  * Return Value:
  * Marker Type (string)
  */
+#include "script_component.hpp"
 
 _group = _this select 0;
 _leader = leader _group;
@@ -34,8 +35,8 @@ if (
     (getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "transportRepair") > 0) or
     (getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "transportFuel") > 0) or
     (getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "transportAmmo") > 0) or
-    (getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "AGM_canRepair") > 0) or
-    (getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "AGM_fuelCapacityCargo") > 0)
+    (getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "ACE_canRepair") > 0) or
+    (getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "ACE_fuelCapacityCargo") > 0)
     ) exitWith {
   ["n_maint", "b_maint", "o_maint"] select ((["GUER", "WEST", "EAST"] find (str _side)) max 0)
 };

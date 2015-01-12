@@ -11,6 +11,7 @@
  * Return value:
  * None.
  */
+#include "script_component.hpp"
 
 private ["_unit", "_action", "_id", "_name", "_actionsVar", "_currentID", "_actionIDs", "_actions", "_actionID", "_nameVar"];
 
@@ -20,7 +21,7 @@ _id = _this select 2;
 
 if (_id == -1) exitWith {};
 
-_name = format ["AGM_ActionMenu_%1", _action];
+_name = format ["ACE_ActionMenu_%1", _action];
 
 _actionsVar = _unit getVariable [_name, [-1, [-1, [], []]]];
 

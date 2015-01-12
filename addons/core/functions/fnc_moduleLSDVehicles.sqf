@@ -9,6 +9,7 @@
  * Return Value:
  * None
  */
+#include "script_component.hpp"
 
 _logic = _this select 0;
 _units = _this select 1;
@@ -43,4 +44,4 @@ if !(_activated) exitWith {};
   };
 } count _units;
 
-diag_log text "[AGM]: WEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE.";
+diag_log text "[ACE]: WEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE.";

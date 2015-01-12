@@ -14,6 +14,7 @@
  * Return value:
  * Nothing
  */
+#include "script_component.hpp"
 
 private ["_unit", "_animation", "_priority", "_force"];
 
@@ -24,7 +25,7 @@ _force = False;
 
 // no animation given
 if (isNil "_animation") exitWith {
-  diag_log format ["[AGM] ERROR: No animation specified in %1", _fnc_scriptNameParent];
+  diag_log format ["[ACE] ERROR: No animation specified in %1", _fnc_scriptNameParent];
 };
 
 if (isNil "_priority") then {
@@ -35,14 +36,14 @@ if (count _this > 3) then {
 };
 
 // don't overwrite more important animations
-if (_unit getVariable ["AGM_isUnconscious", false] && {!_force}) exitWith {
+if (_unit getVariable ["ACE_isUnconscious", false] && {!_force}) exitWith {
   if (_animation != "Unconscious") then {
     [_unit, "Unconscious", 2] call FUNC(doAnimation);
   };
 };
 
 // don't go unconscious if the unit isn't unconscious
-if (_animation == "Unconscious" && {!(_unit getVariable ["AGM_isUnconscious", false])}) exitWith {};
+if (_animation == "Unconscious" && {!(_unit getVariable ["ACE_isUnconscious", false])}) exitWith {};
 
 // switchMove "" no longer works in dev 1.37
 if (_animation == "") then {
@@ -73,4 +74,4 @@ switch (_priority) do {
   default {};
 };
 
-["Anim", [_priority, _animation]] call AGM_Debug_fnc_log;
+["Anim", [_priority, _animation]] call FUNC(log);

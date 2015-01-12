@@ -16,7 +16,9 @@
   Example:
     _number = ["102"] call FUNC(toNumber);
 */
-if (TYPENAME(_this select 0) == "SCALAR")exitWith {
+#include "script_component.hpp"
+
+if (typeName (_this select 0) == "SCALAR") exitWith {
   (_this select 0)
 };
 

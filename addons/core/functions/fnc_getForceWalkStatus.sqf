@@ -13,16 +13,17 @@ Returns:
   ARRAY(of strings) - Reason why the unit is force walking
 
 Example:
-  [AGM_Player] call FUNC(getForceWalkStatus)
+  [ACE_Player] call FUNC(getForceWalkStatus)
 */
+#include "script_component.hpp"
 
 private ["_unit", "_forceWalkReasons", "_unitForceWalkNumber", "_unitForceWalkStatus", "_unitForceWalkReasons"];
 
 _unit = _this select 0;
 
-_forceWalkReasons = missionNamespace getVariable ["AGM_forceWalkReasons", []];
+_forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
 
-_unitForceWalkNumber = _unit getVariable ["AGM_forceWalkStatusNumber", 0];
+_unitForceWalkNumber = _unit getVariable ["ACE_forceWalkStatusNumber", 0];
 
 _unitForceWalkStatus = [_unitForceWalkNumber, count _forceWalkReasons] call FUNC(binarizeNumber);
 

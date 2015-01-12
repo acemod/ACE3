@@ -16,6 +16,7 @@
  * Return value:
  * ID of the action (used to remove it later).
  */
+#include "script_component.hpp"
 
 private ["_unit", "_displayName", "_action", "_condition", "_statement", "_condition2", "_statement2", "_priority", "_name", "_actionsVar", "_id", "_actionIDs", "_actions", "_nameVar", "_addAction", "_actionID"];
 
@@ -46,7 +47,7 @@ if (typeName _statement2 == "STRING") then {
   _statement2 = compile _statement2;
 };
 
-_name = format ["AGM_ActionMenu_%1", _action];
+_name = format ["ACE_ActionMenu_%1", _action];
 
 _actionsVar = _unit getVariable [_name, [-1, [], []]];
 
@@ -68,7 +69,7 @@ _addAction = call compile format [
     false,
     true,
     '%1',
-    ""if (_this != AGM_player || {vehicle _this != _target}) exitWith {false}; [_target, _this] call (%3 select 0)""
+    ""if (_this != ACE_player || {vehicle _this != _target}) exitWith {false}; [_target, _this] call (%3 select 0)""
   ]",
   _action,
   _displayName,

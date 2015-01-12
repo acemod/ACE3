@@ -10,6 +10,7 @@
  * Return value:
  * The name.
  */
+#include "script_component.hpp"
 
 private ["_unit", "_showEffective", "_name"];
 
@@ -23,7 +24,7 @@ if (isNil "_showEffective") then {
 _name = "";
 
 if (_unit isKindOf "CAManBase") then {
-  _name = _unit getVariable ["AGM_Name", localize QUOTE(DOUBLES(STR,GVAR(Unknown)))];
+  _name = _unit getVariable ["ACE_Name", localize QUOTE(DOUBLES(STR,GVAR(Unknown)))];
 } else {
   if (_showEffective) then {
     _name = [effectiveCommander _unit] call FUNC(getName);

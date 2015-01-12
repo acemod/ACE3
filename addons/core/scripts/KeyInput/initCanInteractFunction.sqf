@@ -1,8 +1,9 @@
 // by commy2
+#include "script_component.hpp"
 
 private ["_function", "_configFile", "_count", "_index", "_config", "_configName", "_condition"];
 
-_function = "private '_exceptions'; _exceptions = _this; alive AGM_player";
+_function = "private '_exceptions'; _exceptions = _this; alive ACE_player";
 
 _configFile = configFile >> QGVAR(canInteractConditions);
 _count = count _configFile;

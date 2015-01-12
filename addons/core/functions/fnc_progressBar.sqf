@@ -13,6 +13,7 @@
  * Return value:
  * Nothing
  */
+#include "script_component.hpp"
 
 closeDialog 0;
 createDialog QGVAR(ProgressBar_Dialog);
@@ -42,7 +43,7 @@ _this spawn {
   _time = time + _time;
   waitUntil {
     //make sure the progressBar is still open, not just any dialog
-    (isNull (uiNamespace getVariable [QGVAR(ctrlProgressBar), controlNull])) || {!alive AGM_player} || {time > _time}
+    (isNull (uiNamespace getVariable [QGVAR(ctrlProgressBar), controlNull])) || {!alive ACE_player} || {time > _time}
   };
 
   closeDialog 0;

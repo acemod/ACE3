@@ -11,6 +11,7 @@
  * Return value:
  * None.
  */
+#include "script_component.hpp"
 
 private ["_object", "_type", "_id", "_name", "_actionsVar", "_currentId", "_actionIDs", "_actions"];
 
@@ -18,7 +19,7 @@ _object = _this select 0;
 _type = _this select 1;
 _id = _this select 2;
 
-_name = format ["AGM_CustomEventHandlers_%1", _type];
+_name = format ["ACE_CustomEventHandlers_%1", _type];
 
 _actionsVar = _object getVariable [_name, [-1, [], []]];
 

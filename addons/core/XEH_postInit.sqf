@@ -1,5 +1,5 @@
-// BWA3 Realism - Core
-// (C) 2013 KoffeinFlummi. See LICENSE.
+// ACE - Core
+#include "script_component.hpp"
 
 QGVAR(remoteFnc) addPublicVariableEventHandler {
   (_this select 1) call FUNC(execRemoteFnc);
@@ -8,13 +8,13 @@ QGVAR(remoteFnc) addPublicVariableEventHandler {
 [missionNamespace] call FUNC(executePersistent);
 
 // check previous version number from profile
-_currentVersion = getText (configFile >> "CfgPatches" >> "AGM_Core" >> "version");
-_previousVersion = profileNamespace getVariable ["AGM_VersionNumberString", ""];
+_currentVersion = getText (configFile >> "CfgPatches" >> "ACE_Core" >> "version");
+_previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
 
 if (_currentVersion != _previousVersion) then {
   // do something
 
-  profileNamespace setVariable ["AGM_VersionNumberString", _currentVersion];
+  profileNamespace setVariable ["ACE_VersionNumberString", _currentVersion];
 };
 
 0 spawn compile preprocessFileLineNumbers PATHTOF(scripts\Version\checkVersionNumber.sqf);
@@ -48,9 +48,9 @@ call compile preprocessFileLineNumbers PATHTOF(scripts\KeyInput\initScrollWheel.
 0 spawn {
   while {true} do {
     waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
-    findDisplay 46 displayAddEventHandler ["KeyDown", "_this call GVAR(onKeyDown)"];
-    findDisplay 46 displayAddEventHandler ["KeyUp", "_this call GVAR(onKeyUp)"];
-    findDisplay 46 displayAddEventHandler ["MouseZChanged", "_this call GVAR(onScrollWheel)"];
+    findDisplay 46 displayAddEventHandler ["KeyDown", QUOTE( _this call QUOTE(QGVAR(onKeyDown)) )];
+    findDisplay 46 displayAddEventHandler ["KeyUp", QUOTE( _this call QUOTE(QGVAR(onKeyUp)) )];
+    findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call QUOTE(QGVAR(onScrollWheel)) )];
     [false] call FUNC(disableUserInput);
     waitUntil {isNull (findDisplay 46)};
   };
@@ -58,4 +58,12 @@ call compile preprocessFileLineNumbers PATHTOF(scripts\KeyInput\initScrollWheel.
 
 enableCamShake true;
 
-[missionNamespace, "playerChanged", "{if (alive (_this select 0)) then {[_this select 0] call FUNC(setName)}; if (alive (_this select 1)) then {[_this select 1] call FUNC(setName)};}"] call FUNC(addCustomEventhandler);
+// Set the name for the current player
+[missionNamespace, "playerChanged", {
+  if (alive (_this select 0)) then {
+    [_this select 0] call FUNC(setName)
+  };
+  if (alive (_this select 1)) then {
+    [_this select 1] call FUNC(setName)
+  };
+}] call FUNC(addCustomEventhandler);

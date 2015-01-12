@@ -9,9 +9,10 @@
  * Return Value:
  * Bool: is the unit an engineer?
  */
+#include "script_component.hpp"
 
 private "_unit";
 
 _unit = _this select 0;
 
-_unit getVariable ["AGM_IsEngineer", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer") == 1]
+_unit getVariable ["ACE_IsEngineer", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer") == 1]

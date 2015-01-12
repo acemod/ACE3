@@ -1,10 +1,10 @@
 // by commy2
-
 /*
 	usage:
 
-	(configFile >> "CfgAmmo") call AGM_Debug_fnc_exportConfig;
+	(configFile >> "CfgAmmo") call FUNC(exportConfig);
 */
+#include "script_component.hpp"
 
 private "_fnc_logEntries";
 

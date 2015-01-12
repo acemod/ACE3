@@ -2,8 +2,8 @@
 
 class CfgPatches {
   class ADDON {
-    units[] = {"AGM_Box_Misc"};
-    weapons[] = {"AGM_ItemCore", "AGM_FakePrimaryWeapon"};
+    units[] = {"ACE_Box_Misc"};
+    weapons[] = {"ACE_ItemCore", "ACE_FakePrimaryWeapon"};
     requiredVersion = 0.60;
     requiredAddons[] = {
 		"ace_main"
@@ -17,7 +17,6 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgFunctions.hpp"
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
@@ -30,7 +29,7 @@ class CfgFactionClasses {
   };
 };
 
-class AGM_Rsc_Display_Base {
+class ACE_Rsc_Display_Base {
   idd = -1;
   type = 0;
   style = 48;
@@ -44,7 +43,7 @@ class AGM_Rsc_Display_Base {
   colorText[] = {1, 1, 1, 1};
 };
 
-class AGM_Rsc_Control_Base {
+class ACE_Rsc_Control_Base {
   idc = 1;
   type = 0;
   style = 48;
@@ -71,7 +70,7 @@ class GVAR(canInteractConditions) {
 
 class GVAR(Options) {
   class enableNumberHotkeys {
-    displayName = "$STR_AGM_Core_EnableNumberHotkeys";
+    displayName = "$STR_ACE_Core_EnableNumberHotkeys";
     default = 1;
   };
 };
@@ -82,9 +81,9 @@ class GVAR(Options) {
 #include <HintConfig.hpp>
 
 /*
-class RscControlsGroupNoScrollbars; 
+class RscControlsGroupNoScrollbars;
 class RscAttributeInventory: RscControlsGroupNoScrollbars {
-  onSetFocus = "[_this,""RscAttributeInventory"",'CuratorCommon'] call (uinamespace getvariable ""BIS_fnc_initCuratorAttribute""); _this select 0 call AGM_CuratorFix_fnc_addUnloadEventhandler;";
+  onSetFocus = "[_this,""RscAttributeInventory"",'CuratorCommon'] call (uinamespace getvariable ""BIS_fnc_initCuratorAttribute""); _this select 0 call ACE_CuratorFix_fnc_addUnloadEventhandler;";
 };
 */
 

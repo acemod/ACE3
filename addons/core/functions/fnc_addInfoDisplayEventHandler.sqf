@@ -10,10 +10,11 @@
  * Return value:
  * ID of the event script (used to remove it later).
  */
+#include "script_component.hpp"
 
 private ["_type", "_statement", "_actionsVar", "_id", "_actionIDs", "_actions"];
 
-_type = format ["AGM_onLoadInfo%1", _this select 0];
+_type = format ["ACE_onLoadInfo%1", _this select 0];
 _statement = _this select 1;
 
 if (typeName _statement == "STRING") then {

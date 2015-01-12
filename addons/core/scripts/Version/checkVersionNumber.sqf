@@ -1,24 +1,25 @@
 // by commy2
+#include "script_component.hpp"
 
 sleep 1;  //wait for module
 
 _files = [];
 
-if (missionNamespace getVariable ["AGM_Version_CheckAll", false]) then {
+if (missionNamespace getVariable ["ACE_Version_CheckAll", false]) then {
   {
-    if (toLower _x find "a3_" != 0 && {!(toLower _x in (missionNamespace getVariable ["AGM_Version_Whitelist", []]))}) then {
+    if (toLower _x find "a3_" != 0 && {!(toLower _x in (missionNamespace getVariable ["ACE_Version_Whitelist", []]))}) then {
       _files pushBack _x;
     };
   } forEach activatedAddons;
 } else {
   {
-    if (toLower _x find "agm_" == 0) then {
+    if (toLower _x find "ACE_" == 0) then {
       _files pushBack _x;
     };
   } forEach activatedAddons;
 };
 
-_versionMain = parseNumber getText (configFile >> "CfgPatches" >> "AGM_Core" >> "version");
+_versionMain = parseNumber getText (configFile >> "CfgPatches" >> "ACE_Core" >> "version");
 
 _versions = [];
 {
@@ -27,32 +28,32 @@ _versions = [];
 } forEach _files;
 
 if (isServer) then {
-  diag_log text format ["[AGM] Server: agm_core is Version %1.", _versionMain];
+  diag_log text format ["[ACE] Server: ACE_core is Version %1.", _versionMain];
 
   {
-    if (toLower _x find "agm_" == 0) then {//
+    if (toLower _x find "ACE_" == 0) then {//
       _version = _versions select _forEachIndex;
       if (_version != _versionMain) then {
-        diag_log text format ["[AGM] Server: %1 is Version %2.", _x, _version];
+        diag_log text format ["[ACE] Server: %1 is Version %2.", _x, _version];
       };
     };
   } forEach _files;
 
-  AGM_Version_ServerVersions = [_files, _versions];
-  publicVariable "AGM_Version_ServerVersions";
+  ACE_Version_ServerVersions = [_files, _versions];
+  publicVariable "ACE_Version_ServerVersions";
 } else {
-  diag_log text format ["[AGM] Client: agm_core is Version %1.", _versionMain];
+  diag_log text format ["[ACE] Client: ACE_core is Version %1.", _versionMain];
 
   {
-    if (toLower _x find "agm_" == 0) then {//
+    if (toLower _x find "ACE_" == 0) then {//
       _version = _versions select _forEachIndex;
       if (_version != _versionMain) then {
-        diag_log text format ["[AGM] Client: %1 is Version %2.", _x, _version];
+        diag_log text format ["[ACE] Client: %1 is Version %2.", _x, _version];
       };
     };
   } forEach _files;
 
-  AGM_Version_ClientVersions = [_files, _versions];
+  ACE_Version_ClientVersions = [_files, _versions];
 };
 
 // Begin client version check
@@ -60,16 +61,16 @@ if (!isServer) then {
   // Wait for server to send the servers files and version numbers
   waitUntil {
     sleep 1;
-    !isNil "AGM_Version_ClientVersions" && {!isNil "AGM_Version_ServerVersions"}
+    !isNil "ACE_Version_ClientVersions" && {!isNil "ACE_Version_ServerVersions"}
   };
 
   _client = profileName;
 
-  _files = AGM_Version_ClientVersions select 0;
-  _versions = AGM_Version_ClientVersions select 1;
+  _files = ACE_Version_ClientVersions select 0;
+  _versions = ACE_Version_ClientVersions select 1;
 
-  _serverFiles = AGM_Version_ServerVersions select 0;
-  _serverVersions = AGM_Version_ServerVersions select 1;
+  _serverFiles = ACE_Version_ServerVersions select 0;
+  _serverVersions = ACE_Version_ServerVersions select 1;
 
   // Compare client and server files and versions
   _missingAddons = [];
@@ -121,7 +122,7 @@ if (!isServer) then {
   if (count _missingAddons > 0) then {
     _missingAddon = true;
 
-    _error = format ["[AGM] %1: ERROR missing addon(s): ", _client];
+    _error = format ["[ACE] %1: ERROR missing addon(s): ", _client];
     {
       _error = _error + format ["%1, ", _x];
 
@@ -138,7 +139,7 @@ if (!isServer) then {
   if (count _missingAddonsServer > 0) then {
     _missingAddonServer = true;
 
-    _error = format ["[AGM] %1: ERROR missing server addon(s): ", _client];
+    _error = format ["[ACE] %1: ERROR missing server addon(s): ", _client];
     {
       _error = _error + format ["%1, ", _x];
 
@@ -155,7 +156,7 @@ if (!isServer) then {
   if (count _oldVersionsClient > 0) then {
     _oldVersionClient = true;
 
-    _error = format ["[AGM] %1: ERROR outdated addon(s): ", _client];
+    _error = format ["[ACE] %1: ERROR outdated addon(s): ", _client];
     {
       _error = _error + format ["%1 (client: %2, server: %3), ", _x select 0, _x select 1, _x select 2];
 
@@ -172,7 +173,7 @@ if (!isServer) then {
   if (count _oldVersionsServer > 0) then {
     _oldVersionServer = true;
 
-    _error = format ["[AGM] %1: ERROR outdated server addon(s): ", _client];
+    _error = format ["[ACE] %1: ERROR outdated server addon(s): ", _client];
     {
       _error = _error + format ["%1 (client: %2, server: %3), ", _x select 0, _x select 1, _x select 2];
 
@@ -185,5 +186,5 @@ if (!isServer) then {
     [_error, "{systemChat _this}"] call FUNC(execRemoteFnc);
   };
 
-  AGM_Version_ClientErrors = [_missingAddon, _missingAddonServer, _oldVersionClient, _oldVersionServer];
+  ACE_Version_ClientErrors = [_missingAddon, _missingAddonServer, _oldVersionClient, _oldVersionServer];
 };

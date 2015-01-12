@@ -16,8 +16,9 @@ Returns:
   STRING - Position in the UAV that is currently being controled by the unit.
 
 Example:
-  [AGM_Player] call FUNC(getUavControlPosition)
+  [ACE_Player] call FUNC(getUavControlPosition)
 */
+#include "script_component.hpp"
 
 private ["_unit", "_uav", "_positionArray", "_playerIndex"];
 

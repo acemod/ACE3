@@ -1,8 +1,9 @@
 // by commy2
+#include "script_component.hpp"
 
-terminate (missionNamespace getVariable ["AGM_Debug_MonitorFnc", scriptNull]);
+terminate (missionNamespace getVariable [QGVAR(MonitorFnc), scriptNull]);
 
-AGM_Debug_MonitorFnc = _this spawn {
+GVAR(MonitorFnc) = _this spawn {
   waitUntil {
     hintSilent str (call _this);
     false

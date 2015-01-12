@@ -12,6 +12,7 @@
  * Return value:
  * Nothing.
  */
+#include "script_component.hpp"
 
 private ["_arguments", "_function", "_unit", "_name"];
 
@@ -22,7 +23,7 @@ _function = call compile (_this select 1);
 _unit = _this select 2;
 _name = _this select 3;
 
-["Remote", [_arguments, _this select 1, _name], {format ["%1 call %2 id: %3", _this select 0, _this select 1, _this select 2]}, false] call AGM_Debug_fnc_log;
+["Remote", [_arguments, _this select 1, _name], {format ["%1 call %2 id: %3", _this select 0, _this select 1, _this select 2]}, false] call FUNC(log);
 
 // execute function on every currently connected machine
 [[_arguments, _unit], _this select 1, 2] call FUNC(execRemoteFnc);
@@ -30,7 +31,7 @@ _name = _this select 3;
 // save persistent function for JIP
 private ["_persistentFunctions", "_index"];
 
-_persistentFunctions = _unit getVariable ["AGM_PersistentFunctions", []];
+_persistentFunctions = _unit getVariable ["ACE_PersistentFunctions", []];
 
 // find index to overwrite function with the same name, add to end otherwise
 _index = count _persistentFunctions;
@@ -45,8 +46,8 @@ _persistentFunctions set [_index, [_arguments, _function, _name]];
 
 // broadcast variable
 if (typeName _unit == "NAMESPACE") then {
-  AGM_PersistentFunctions = _persistentFunctions;
-  publicVariable "AGM_PersistentFunctions";
+  ACE_PersistentFunctions = _persistentFunctions;
+  publicVariable "ACE_PersistentFunctions";
 } else {
-  _unit setVariable ["AGM_PersistentFunctions", _persistentFunctions, true];
+  _unit setVariable ["ACE_PersistentFunctions", _persistentFunctions, true];
 };

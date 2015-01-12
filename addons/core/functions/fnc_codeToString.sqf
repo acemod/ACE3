@@ -2,13 +2,14 @@
  * Author: commy2
  *
  * Removes the brackets around a code and returns the code as a string. It does nothing if the code is already a string.
- * 
+ *
  * Argument:
  * 0: Code (Code or String)
- * 
+ *
  * Return value:
  * Code (String)
  */
+#include "script_component.hpp"
 
 private "_function";
 

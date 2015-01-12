@@ -2,14 +2,15 @@
  * Author: commy2
  *
  * Get players viewing direction and slope
- * 
+ *
  * Argument:
  * None.
- * 
+ *
  * Return value:
  * 0: Azimuth (Number)
  * 1: Inclination or 'slope' (Number)
  */
+#include "script_component.hpp"
 
 private ["_position", "_direction", "_azimuth", "_inclination"];
 

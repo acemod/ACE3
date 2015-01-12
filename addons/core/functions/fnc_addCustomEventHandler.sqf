@@ -11,6 +11,7 @@
  * Return value:
  * ID of the event script (used to remove it later).
  */
+#include "script_component.hpp"
 
 private ["_object", "_type", "_statement", "_name", "_actionsVar", "_id", "_actionIDs", "_actions"];
 
@@ -22,7 +23,7 @@ if (typeName _statement == "STRING") then {
   _statement = compile _statement;
 };
 
-_name = format ["AGM_CustomEventHandlers_%1", _type];
+_name = format ["ACE_CustomEventHandlers_%1", _type];
 
 _actionsVar = _object getVariable [_name, [-1, [], []]];
 

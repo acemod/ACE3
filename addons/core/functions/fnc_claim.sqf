@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 private ["_unit", "_target", "_lockTarget", "_owner"];
 
@@ -8,20 +9,20 @@ _lockTarget = _this select 2;
 
 if (isNil "_lockTarget") then {_lockTarget = false};
 
-_owner = _target getVariable ["AGM_isUsedBy", objNull];
+_owner = _target getVariable ["ACE_isUsedBy", objNull];
 
 if (!isNull _owner && {!isNull _unit} && {_unit != _owner}) then {
-  diag_log text "[AGM] ERROR: Claiming already owned object.";
+  diag_log text "[ACE] ERROR: Claiming already owned object.";
 };
 
-_target setVariable ["AGM_isUsedBy", _unit, true];
+_target setVariable ["ACE_isUsedBy", _unit, true];
 
 if (_lockTarget) then {
   if (!isNull _unit) then {
-    [_target, "{_locked = locked _this; _this setVariable ['AGM_lockStatus', _locked]; _this lock 2}", _target] call FUNC(execRemoteFnc);
+    [_target, "{_locked = locked _this; _this setVariable ['ACE_lockStatus', _locked]; _this lock 2}", _target] call FUNC(execRemoteFnc);
   } else {
-    [_target, "{_this lock (_this getVariable ['AGM_lockStatus', locked _this])}", _target] call FUNC(execRemoteFnc);
+    [_target, "{_this lock (_this getVariable ['ACE_lockStatus', locked _this])}", _target] call FUNC(execRemoteFnc);
   };
 };
 
-//systemChat str locked _target; systemChat str (_target getVariable ['AGM_lockStatus', locked _target]);
+//systemChat str locked _target; systemChat str (_target getVariable ['ACE_lockStatus', locked _target]);

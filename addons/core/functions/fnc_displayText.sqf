@@ -12,6 +12,7 @@
  * Return value:
  * Nothing
  */
+#include "script_component.hpp"
 
 #define DEFAULT_PLAY_SOUND false
 #define DEFAULT_DELAY 2
@@ -42,7 +43,7 @@ _this spawn {
   _time = time;
   if (_time > _lastHintTime + _delay || {_priority >= _lastHintPriority}) then {
     hintSilent _text;
-    if (_sound) then {playSound "AGM_Sound_Click"};
+    if (_sound) then {playSound "ACE_Sound_Click"};
     GVAR(lastHint) set [0, _time];
     GVAR(lastHint) set [1, _priority];
 

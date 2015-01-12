@@ -9,6 +9,7 @@
  * Return value:
  * Nothing
  */
+#include "script_component.hpp"
 
 private ["_state", "_dlg"];
 
@@ -18,13 +19,13 @@ if (_state) then {
   disableSerialization;
 
   if (!isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull])) exitWith {};
-  if ("AGM_DisableUserInput" in ([BIS_stackedEventHandlers_onEachFrame, {_this select 0}] call FUNC(map))) exitWith {};
+  if ("ACE_DisableUserInput" in ([BIS_stackedEventHandlers_onEachFrame, {_this select 0}] call FUNC(map))) exitWith {};
 
   // end TFAR and ACRE2 radio transmissions
   0 spawn FUNC(endRadioTransmission);
 
   // Close map
-  if (visibleMap && {!(player getVariable ["AGM_canSwitchUnits", false])}) then {openMap false};
+  if (visibleMap && {!(player getVariable ["ACE_canSwitchUnits", false])}) then {openMap false};
 
   closeDialog 0;
   createDialog QGVAR(DisableMouse_Dialog);
@@ -63,9 +64,9 @@ if (_state) then {
 
     if (_key in actionKeys "TeamSwitch"       && {teamSwitchEnabled})                                then {(uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0; teamSwitch};//_acc = accTime; teamSwitch; setAccTime _acc};
     if (_key in actionKeys "CuratorInterface" && {getAssignedCuratorLogic player in allCurators})    then {(uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0; openCuratorInterface};
-    if (_key in actionKeys "ShowMap"          && {player getVariable ["AGM_canSwitchUnits", false]}) then {(uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0; openMap true};
+    if (_key in actionKeys "ShowMap"          && {player getVariable ["ACE_canSwitchUnits", false]}) then {(uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0; openMap true};
 
-    if (serverCommandAvailable "#missions" || {player getVariable ["AGM_isUnconscious", false] && {(call FUNC(player)) getVariable ["AGM_Medical_AllowChatWhileUnconscious", missionNamespace getVariable ["AGM_Medical_AllowChatWhileUnconscious", false]]}})  then {
+    if (serverCommandAvailable "#missions" || {player getVariable ["ACE_isUnconscious", false] && {(call FUNC(player)) getVariable [QEGVAR(medical,AllowChatWhileUnconscious), missionNamespace getVariable [QEGVAR(medical,AllowChatWhileUnconscious), false]]}})  then {
       if (!(_key in (actionKeys "DefaultAction" + actionKeys "Throw")) && {_key in (actionKeys "Chat" + actionKeys "PrevChannel" + actionKeys "NextChannel")}) then {
         _key = 0;
       };
@@ -75,15 +76,15 @@ if (_state) then {
   }];
   _dlg displayAddEventHandler ["KeyUp", {true}];
 
-  ["AGM_DisableUserInput", "onEachFrame", {
+  ["ACE_DisableUserInput", "onEachFrame", {
     if (isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) && {!visibleMap && isNull findDisplay 49 && isNull findDisplay 312 && isNull findDisplay 632}) then {
-      ["AGM_DisableUserInput", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+      ["ACE_DisableUserInput", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
       [true] call FUNC(disableUserInput);
     };
   }] call BIS_fnc_addStackedEventHandler;
 } else {
-  if ("AGM_DisableUserInput" in ([BIS_stackedEventHandlers_onEachFrame, {_this select 0}] call FUNC(map))) then {
-    ["AGM_DisableUserInput", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+  if ("ACE_DisableUserInput" in ([BIS_stackedEventHandlers_onEachFrame, {_this select 0}] call FUNC(map))) then {
+    ["ACE_DisableUserInput", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
   };
 
   (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;

@@ -9,6 +9,7 @@
  * Return value:
  * None.
  */
+#include "script_component.hpp"
 
 private ["_overwrite", "_saveProfile", "_config", "_count", "_index", "_configFile", "_name", "_key", "_shft", "_ctrl", "_alt", "_keyCode", "_state"];
 
@@ -21,7 +22,7 @@ _count = count _config;
 
 for "_index" from 0 to (_count - 1) do {
   _configFile = _config select _index;
-  _name = format ["AGM_Key_%1", configName _configFile];
+  _name = format ["ACE_Key_%1", configName _configFile];
   _key = profileNamespace getVariable _name;
 
   if (isNil "_key" || {_overwrite}) then {
@@ -42,7 +43,7 @@ _count = count _config;
 
 for "_index" from 0 to (_count - 1) do {
   _configFile = _config select _index;
-  _name = format ["AGM_%1", configName _configFile];
+  _name = format ["ACE_%1", configName _configFile];
   _state = profileNamespace getVariable _name;
 
   if (isNil "_state" || {_overwrite}) then {
@@ -55,12 +56,12 @@ for "_index" from 0 to (_count - 1) do {
 
 if (_overwrite) then {
     saveProfileNamespace;
-    diag_log text "[AGM]: Profile settings overwritten.";
+    diag_log text "[ACE]: Profile settings overwritten.";
 } else {
   if (_saveProfile) then {
     saveProfileNamespace;
-    diag_log text "[AGM]: Encountered missing variable in profile namespace. Profile saved.";
+    diag_log text "[ACE]: Encountered missing variable in profile namespace. Profile saved.";
   } else {
-    diag_log text "[AGM]: No missing variables encountered in profile namespace.";
+    diag_log text "[ACE]: No missing variables encountered in profile namespace.";
   };
 };

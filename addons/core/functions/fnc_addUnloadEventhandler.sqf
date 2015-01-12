@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 private "_dlg";
 
@@ -7,6 +8,6 @@ _dlg = ctrlParent _this;
 
 _dlg displayAddEventHandler ["unload", {
   if (_this select 1 == 1) then {
-    [missionnamespace getvariable ["BIS_fnc_initCuratorAttributes_target", objNull]] call AGM_CuratorFix_fnc_fixCrateContent;
+    [missionnamespace getvariable ["BIS_fnc_initCuratorAttributes_target", objNull]] call FUNC(fixCrateContent);
   };
 }];

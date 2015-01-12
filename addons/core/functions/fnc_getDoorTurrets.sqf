@@ -2,30 +2,15 @@
  * Author: bux578
  *
  * Gets the turret index of door gunners
- * 
+ *
  * Argument:
  * 0: Vehicle type (String)
- * 
+ *
  * Return value:
  * Turret indexes of the door gunner. Empty array means no gunner position. (Array)
  */
+#include "script_component.hpp"
 
-  /*
-  Name: FUNC(getDoorTurrets)
-  
-  Author(s):
-    bux578
-  
-  Description:
-    Returns the turret indices of door gunners
-  
-  Parameters:
-    0: STRING - vehicle type
-  
-  Returns:
-    ARRAY<NUMBER>
-*/
- 
 private ["_vehicleType", "_turrets", "_doorTurrets", "_config"];
 
 _vehicleType = _this select 0;

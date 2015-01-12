@@ -10,6 +10,7 @@
  * Return value:
  * Text
  */
+#include "script_component.hpp"
 
 private ["_string", "_color"];
 

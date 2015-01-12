@@ -16,8 +16,9 @@ Returns:
   None
 
 Example:
-  [AGM_Player, "BrokenLeg", true] call FUNC(setForceWalkStatus)
+  [ACE_Player, "BrokenLeg", true] call FUNC(setForceWalkStatus)
 */
+#include "script_component.hpp"
 
 private ["_unit", "_reason", "_status", "_forceWalkReasons", "_unitForceWalkReasons", "_forceWalkReasonsBooleans", "_bitmaskNumber"];
 
@@ -25,13 +26,13 @@ _unit = _this select 0;
 _reason = _this select 1;
 _status = _this select 2;
 
-_forceWalkReasons = missionNamespace getVariable ["AGM_forceWalkReasons", []];
+_forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
 
 // register new reason (these reasons are shared publicly, since units can change ownership, but keep their forceWalk status)
 if !(_reason in _forceWalkReasons) then {
   _forceWalkReasons pushBack _reason;
-  AGM_forceWalkReasons = _forceWalkReasons;
-  publicVariable "AGM_forceWalkReasons";
+  ACE_forceWalkReasons = _forceWalkReasons;
+  publicVariable "ACE_forceWalkReasons";
 };
 
 // get reasons why the unit is forceWalking already and update to the new status
@@ -46,7 +47,7 @@ _forceWalkReasonsBooleans set [_forceWalkReasons find _reason, _status];
 
 _bitmaskNumber = _forceWalkReasonsBooleans call FUNC(toBitmask);
 
-_unit setVariable ["AGM_forceWalkStatusNumber", _bitmaskNumber, true];
+_unit setVariable ["ACE_forceWalkStatusNumber", _bitmaskNumber, true];
 
 // actually apply the forceWalk command globaly
 [[_unit], QUOTE(FUNC(applyForceWalkStatus)), _unit] call FUNC(execRemoteFnc);

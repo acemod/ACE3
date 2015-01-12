@@ -12,6 +12,7 @@
  * Return value:
  * None.
  */
+#include "script_component.hpp"
 
 private ["_projectile", "_adjustDir", "_adjustUp", "_adjustSpeed", "_vdir", "_dir", "_up", "_l", "_r", "_vup", "_vel"];
 
@@ -24,7 +25,7 @@ if (isNil "_adjustSpeed") then {
   _adjustSpeed = 0;
 };
 
-["CPD", [_fnc_scriptNameParent, _adjustDir, _adjustUp, _adjustSpeed], nil, false] call AGM_Debug_fnc_log;
+["CPD", [_fnc_scriptNameParent, _adjustDir, _adjustUp, _adjustSpeed], nil, false] call FUNC(log);
 
 // get old direction vector
 _vdir = vectorDir _projectile;
@@ -41,7 +42,7 @@ _vdir = [
 ];
 
 // get best up vector
-_l = sqrt ((_vdir select 0) ^ 2 + (_vdir select 1) ^ 2); if (_l == 0) then {diag_log text format ["[AGM] ERROR: %1, %2, %3, %4, %5, %6, %7", _projectile, _adjustDir, _adjustUp, vectorDir _projectile, _vdir, _dir, _up]};
+_l = sqrt ((_vdir select 0) ^ 2 + (_vdir select 1) ^ 2); if (_l == 0) then {diag_log text format ["[ACE] ERROR: %1, %2, %3, %4, %5, %6, %7", _projectile, _adjustDir, _adjustUp, vectorDir _projectile, _vdir, _dir, _up]};
 _r = -(_vdir select 2) / _l;
 
 _vup = [

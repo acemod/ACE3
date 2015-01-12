@@ -13,6 +13,7 @@
  * Usage:
  * [[0,1,2,3,4], {_this > 2}] call FUNC(filter) ==> [3,4]
  */
+#include "script_component.hpp"
 
 private ["_array", "_code", "_newArray", "_index"];
 
@@ -20,7 +21,7 @@ _array = _this select 0;
 _code = _this select 1;
 
 if (isNil "_array") exitWith {
-  diag_log text format ["[AGM] ERROR: No array for function filter in %1", _fnc_scriptNameParent];
+  diag_log text format ["[ACE] ERROR: No array for function filter in %1", _fnc_scriptNameParent];
   []
 };
 

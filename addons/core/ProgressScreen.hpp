@@ -1,8 +1,8 @@
 
-class AGM_Core_ProgressBar_Dialog {
+class ACE_Core_ProgressBar_Dialog {
   idd = -1;
   movingEnable = false;
-  onLoad = "uiNamespace setVariable ['AGM_Core_ctrlProgressBar', (_this select 0) displayCtrl 1]; uiNamespace setVariable ['AGM_Core_ctrlProgressBarTitle', (_this select 0) displayCtrl 2];";
+  onLoad = "uiNamespace setVariable ['ACE_Core_ctrlProgressBar', (_this select 0) displayCtrl 1]; uiNamespace setVariable ['ACE_Core_ctrlProgressBarTitle', (_this select 0) displayCtrl 2];";
   objects[] = {};
 
   class controlsBackground {
@@ -66,10 +66,10 @@ class AGM_Core_ProgressBar_Dialog {
   };
 };
 
-class AGM_Core_DisableMouse_Dialog {
+class ACE_Core_DisableMouse_Dialog {
   idd = -1;
   movingEnable = false;
-  onLoad = "uiNamespace setVariable ['AGM_Core_dlgDisableMouse', _this select 0];";
+  onLoad = "uiNamespace setVariable ['ACE_Core_dlgDisableMouse', _this select 0];";
   objects[] = {};
   class controlsBackground {
     class Background {

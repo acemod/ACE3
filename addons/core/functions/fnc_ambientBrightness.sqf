@@ -9,5 +9,6 @@
  * Return value:
  * Ambient brightness (Number)
  */
+#include "script_component.hpp"
 
 sunOrMoon * sunOrMoon + moonIntensity/5 min 1

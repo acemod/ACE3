@@ -9,6 +9,7 @@
  * Return value:
  * Vehicle codriver positions. (Array)
  */
+#include "script_component.hpp"
 
 private ["_vehicle", "_config", "_cargo", "_codrivers"];
 

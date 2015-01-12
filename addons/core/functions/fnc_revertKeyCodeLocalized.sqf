@@ -9,6 +9,7 @@
  * Return value:
  * What input will result in the given key code? (String)
  */
+#include "script_component.hpp"
 
 private ["_keyCode", "_key", "_alt", "_ctrl", "_shft"];
 

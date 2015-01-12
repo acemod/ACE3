@@ -11,6 +11,7 @@
  * Return Value:
  * String when successfull / False when not
  */
+#include "script_component.hpp"
 
 _string = _this select 0;
 _index = _this select 1;

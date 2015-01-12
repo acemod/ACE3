@@ -9,6 +9,7 @@
  * Return value:
  * Turret index of the vehicles commander. Empty array means no observer position. (Array)
  */
+#include "script_component.hpp"
 
 private ["_vehicle", "_turrets", "_turret", "_config"];
 

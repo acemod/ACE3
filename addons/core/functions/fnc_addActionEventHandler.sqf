@@ -12,6 +12,7 @@
  * Return value:
  * ID of the action (used to remove it later).
  */
+#include "script_component.hpp"
 
 private ["_unit", "_action", "_condition", "_statement", "_name", "_actionsVar", "_actionID", "_actions", "_id", "_actionIDs"];
 
@@ -28,7 +29,7 @@ if (typeName _statement == "STRING") then {
   _statement = compile _statement;
 };
 
-_name = format ["AGM_Action_%1", _action];
+_name = format ["ACE_Action_%1", _action];
 
 _actionsVar = _unit getVariable [_name, [-1, [-1, [], []]]];
 
@@ -55,7 +56,7 @@ if (_actionID == -1) then {
       false,
       true,
       '%1',
-      ""if (_this != AGM_player || {vehicle _this != _target}) exitWith {false}; _actions = (_this getVariable '%2') select 1 select 2; _count = count _actions; _index = 0; _return = false; while {_index < _count && {!_return}} do {_return = [_target, _this] call ((_actions select _index) select 0); _index = _index + 1}; _return""
+      ""if (_this != ACE_player || {vehicle _this != _target}) exitWith {false}; _actions = (_this getVariable '%2') select 1 select 2; _count = count _actions; _index = 0; _return = false; while {_index < _count && {!_return}} do {_return = [_target, _this] call ((_actions select _index) select 0); _index = _index + 1}; _return""
     ]",
     _action,
     _name

@@ -10,6 +10,7 @@
  * Return Value:
  * None
  */
+#include "script_component.hpp"
 
 _this spawn {
   _target = _this select 0;
@@ -17,21 +18,21 @@ _this spawn {
   if (isNil "_ignoreDead") then {_ignoreDead = false};
 
   _vehicleTarget = vehicle _target;
-  _vehiclePlayer = vehicle AGM_player;
+  _vehiclePlayer = vehicle ACE_player;
   _inVehicle = _target != _vehicleTarget;
 
   _position = getPosASL _target;
 
   _fnc_check = {
     // either unit changed vehicles
-    if (_vehiclePlayer != vehicle AGM_player) exitWith {True};
+    if (_vehiclePlayer != vehicle ACE_player) exitWith {True};
     if (_vehicleTarget != vehicle _target) exitWith {True};
 
     // target died
     if (!alive _target && {!_ignoreDead}) exitWith {True};
 
     // player fell unconscious
-    if (AGM_player getVariable ["AGM_isUnconscious", False]) exitWith {True};
+    if (ACE_player getVariable ["ACE_isUnconscious", False]) exitWith {True};
 
     // target moved (outside of vehicle)
     (!_inVehicle && {getPosASL _target distanceSqr _position > 1})
@@ -40,8 +41,8 @@ _this spawn {
   waitUntil {
     if (call _fnc_check) then {
       closeDialog 0;
-      call AGM_Interaction_fnc_hideMenu;
+      call ACE_Interaction_fnc_hideMenu;
     };
-    (isNil "AGM_Interaction_MainButton" && !dialog) || {!isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull])} //Exit loop if DisableMouse dialog open
+    (isNil "ACE_Interaction_MainButton" && !dialog) || {!isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull])} //Exit loop if DisableMouse dialog open
   };
 };

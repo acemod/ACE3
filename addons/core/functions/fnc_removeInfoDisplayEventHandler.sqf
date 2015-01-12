@@ -10,10 +10,11 @@
  * Return value:
  * None.
  */
+#include "script_component.hpp"
 
 private ["_type", "_id", "_actionsVar", "_currentId", "_actionIDs", "_actions"];
 
-_type = format ["AGM_onLoadInfo%1", _this select 0];
+_type = format ["ACE_onLoadInfo%1", _this select 0];
 _id = _this select 1;
 
 _actionsVar = missionNamespace getVariable [_type, [-1, [], []]];

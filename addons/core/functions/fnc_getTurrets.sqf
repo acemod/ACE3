@@ -9,12 +9,13 @@
  * Return value:
  * All turret index arrays of the vehicle. E.g: [[0], [0,0]] (Array)
  */
+#include "script_component.hpp"
 
 private ["_type", "_config", "_turrets", "_fnc_addTurret"];
 
 _type = _this select 0;
 
-_varName = format ["AGM_CachedTurrets_%1", _type];
+_varName = format ["ACE_CachedTurrets_%1", _type];
 _turrets = + (uiNamespace getVariable _varName);
 
 if (!isNil "_turrets") exitWith {_turrets};
