@@ -15,7 +15,7 @@
 	Example:
 		[player] call ACE_Explosives_fnc_openTransmitterUI;
 */
-#include "\z\ace\explosives\script_component.hpp"
+#include "script_component.hpp"
 private ["_items", "_unit", "_count", "_actions", "_config"];
 _unit = _this select 0;
 _items = (items _unit);

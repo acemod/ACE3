@@ -15,7 +15,7 @@
 	Example:
 		[player] call ACE_Explosives_fnc_openPlaceUI;
 */
-#include "\z\ace\explosives\script_component.hpp"
+#include "script_component.hpp"
 private ["_unit","_mags", "_item", "_index", "_actions"];
 _unit = _this select 0;
 call FUNC(place_Cancel);

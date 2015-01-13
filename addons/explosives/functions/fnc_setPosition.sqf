@@ -18,7 +18,7 @@
 	Example:
 		[_explosive, 150, 90] call ACE_Explosives_fnc_SetPos;
 */
-#include "\z\ace\explosives\script_component.hpp"
+#include "script_component.hpp"
 private "_ex";
 _ex=_this select 0;
 _ex setDir (_this select 1);

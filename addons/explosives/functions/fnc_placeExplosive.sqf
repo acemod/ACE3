@@ -21,7 +21,7 @@
 	Example:
 		_explosive = [player, player modelToWorld [0,0.5, 0.1], 134, "SatchelCharge_Remote_Mag", "Command", []] call ACE_Explosives_fnc_PlaceExplosive;
 */
-#include "\z\ace\explosives\script_component.hpp"
+#include "script_component.hpp"
 private ["_pos", "_dir", "_magazineClass", "_ammo", "_triggerSpecificVars", "_unit", "_triggerConfig", "_explosive"];
 _unit = _this select 0;
 _pos = _this select 1;

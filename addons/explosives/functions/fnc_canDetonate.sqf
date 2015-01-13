@@ -15,7 +15,7 @@ BOOLEAN - if the unit has explosives and detonators.
 Example:
 [player] call ACE_Explosives_fnc_canDetonate;
 */
-#include "\z\ace\explosives\script_component.hpp"
+#include "script_component.hpp"
 private "_unit";
 _unit = _this select 0;
 

@@ -16,7 +16,7 @@
   Example:
     [player, ACE_Interaction_Target] call ACE_Explosives_fnc_StartDefuse;
 */
-#include "\z\ace\explosives\script_component.hpp"
+#include "script_component.hpp"
 private ["_unit","_target"];
 _unit = _this select 0;
 _target = _this select 1;

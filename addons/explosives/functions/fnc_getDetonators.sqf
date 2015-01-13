@@ -16,7 +16,7 @@
 	Example:
 		_detonators = [player] call ACE_Explosives_fnc_getDetonators;
 */
-#include "\z\ace\explosives\script_component.hpp"
+#include "script_component.hpp"
 private ["_unit", "_items", "_result", "_config"];
 _unit = _this select 0;
 _items = (items _unit);

@@ -17,7 +17,7 @@
 		_allExplosives = [player] call ACE_Explosives_fnc_getPlacedExplosives;
 		_deadmanExplosives = [player, "DeadManSwitch"] call ACE_Explosives_fnc_getPlacedExplosives;
 */
-#include "\z\ace\explosives\script_component.hpp"
+#include "script_component.hpp"
 private ["_unit", "_clackerList", "_adjustedList", "_list", "_filter"];
 _unit = _this select 0;
 _filter = nil;

@@ -15,7 +15,7 @@
 	Example:
 		_hasExplosives = [player] call ACE_Explosives_fnc_hasExplosives;
 */
-#include "\z\ace\explosives\script_component.hpp"
+#include "script_component.hpp"
 private ["_unit", "_result", "_magazines"];
 _result = false;
 _unit = _this select 0;

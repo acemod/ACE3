@@ -15,7 +15,7 @@
 	Example:
 		[player] call ACE_Explosives_fnc_openTimerSetUI;
 */
-#include "\z\ace\explosives\script_component.hpp"
+#include "script_component.hpp"
 private ["_mag"];
 _mag = _this select 0;
 createDialog "RscACE_SelectTimeUI";

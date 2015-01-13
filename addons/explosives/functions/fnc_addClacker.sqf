@@ -19,7 +19,7 @@
 	Example:
 		[_unit, _explosive, "SatchelCharge_Remote_Mag", [ConfigFile >> "CfgACE_Triggers" >> "Command"]] call ACE_Explosives_fnc_AddClacker;
 */
-#include "\z\ace\explosives\script_component.hpp"
+#include "script_component.hpp"
 private ["_unit", "_explosive", "_clacker", "_config", "_magazineClass", "_requiredItems", "_hasRequired"];
 _unit = _this select 0;
 _explosive = _this select 1;

@@ -16,7 +16,7 @@
 	Example:
 		_supports = ["SatchelCharge_Remote_Mag"] call ACE_Explosives_fnc_TriggerType;
 */
-#include "\z\ace\explosives\script_component.hpp"
+#include "script_component.hpp"
 private "_result";
 _result = [];
 _config = getArray (ConfigFile >> "CfgMagazines" >> (_this select 0) >> "ACE_Triggers" >> "SupportedTriggers");

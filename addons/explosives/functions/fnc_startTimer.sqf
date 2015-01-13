@@ -17,7 +17,7 @@
 	Example:
 		[_explosive, 10] call ACE_Explosives_fnc_startTimer;
 */
-#include "\z\ace\explosives\script_component.hpp"
+#include "script_component.hpp"
 [{
 	private ["_explosive"];
 	_explosive = _this select 0;
