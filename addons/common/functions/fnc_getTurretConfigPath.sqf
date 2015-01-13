@@ -10,7 +10,7 @@
  * Return value:
  * Turret config (Config)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_config", "_turretIndex", "_index", "_offset", "_config2", "_foundClasses"];
 

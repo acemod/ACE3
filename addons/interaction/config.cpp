@@ -160,7 +160,7 @@ class CfgVehicles {
           displayName = "$STR_ACE_Interaction_JoinTeamRed";
           distance = 4;
           condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
-          statement = QUOTE([ARR2(_target,'RED')] call DFUNC(joinTeam));
+          statement = QUOTE([ARR_2(_target,'RED')] call DFUNC(joinTeam));
           showDisabled = 1;
           icon = PATHTOF(UI\team\team_red_ca.paa);
           priority = 2.4;

@@ -16,7 +16,7 @@
   Example:
     _number = ["102"] call FUNC(toNumber);
 */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 if (typeName (_this select 0) == "SCALAR") exitWith {
   (_this select 0)

@@ -11,7 +11,7 @@
  * Return value:
  * None.
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_unit", "_reason", "_status", "_captivityReasons", "_unitCaptivityReasons", "_captivityReasonsBooleans", "_bitmask"];
 
