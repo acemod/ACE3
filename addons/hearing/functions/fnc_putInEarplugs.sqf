@@ -17,11 +17,11 @@ private "_player";
 _player = _this select 0;
 
 // Buds in inventory, putting them in
-_player removeItem "AGM_EarBuds";
+_player removeItem "ACE_EarBuds";
 
-_player setVariable ["AGM_hasEarPlugsIn", true, true];
+_player setVariable ["ACE_hasEarPlugsIn", true, true];
 
-[localize "STR_AGM_Hearing_Earbuds_Are_On"] call EFUNC(common,displayTextStructured);
+[localize "STR_ACE_Hearing_Earbuds_Are_On"] call EFUNC(common,displayTextStructured);
 
 /*// No Ear Buds in inventory, telling user
-[localize "STR_AGM_Hearing_NoBuds"] call EFUNC(common,displayTextStructured);*/
+[localize "STR_ACE_Hearing_NoBuds"] call EFUNC(common,displayTextStructured);*/
