@@ -34,7 +34,7 @@ _offset = 0;
   };
 } forEach _FCSMagazines;
 
-[_round, (_unit getVariable QGVAR(Azimuth)), _offset, 0] call EFUNC(core, changeProjectileDirection);
+[_round, (_unit getVariable QGVAR(Azimuth)), _offset, 0] call EFUNC(common,changeProjectileDirection);
 
 // Air burst missile
 // may need to get rewritten

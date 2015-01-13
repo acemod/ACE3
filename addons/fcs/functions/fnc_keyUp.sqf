@@ -5,7 +5,6 @@
  *
  * Arguments:
  * 0: The vehicle
- * 1: Range Override (Optional)
  *
  * Return Value:
  * none
@@ -16,7 +15,9 @@
 private ["_ammoType", "_viewDiff", "_posArrival", "_airFriction", "_timeToLive", "_maxElev", "_vehicle", "_posTarget", "_distance", "_simulationStep", "_posX", "_velocityMagnitude", "_magazines", "_movingAzimuth", "_FCSElevation", "_velocityX", "_velocityY", "_weaponDirection", "_velocityTarget", "_FCSAzimuth", "_FCSMagazines", "_dirArrival", "_i", "_magazineType", "_angleTarget", "_offset", "_timeToTarget", "_initSpeed"];
 
 _vehicle = _this select 0;
-_distance = _this select 1;
+_distance = call FUNC(getRange);
+
+if !(GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
 
 _magazines = magazines _vehicle;
 
@@ -25,7 +26,7 @@ if (_distance == 0) then {
     getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(DistanceInterval)),
     getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(MaxDistance)),
     getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(MinDistance))
-  ] call EFUNC(core, getTargetDistance); // maximum distance: 5000m, 5m precision
+  ] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision
 };
 
 _weaponDirection = _vehicle weaponDirection currentWeapon _vehicle;
@@ -159,4 +160,4 @@ GVAR(backgroundCalculation) = [_vehicle, _magazines, _distance, _angleTarget, _F
   _vehicle setVariable [QGVAR(Elevation), _FCSElevation, true];
 };
 
-[format ["%1: %2", localize "STR_ACE_FireControlSystem_ZeroedTo", _distance]] call EFUNC(core, displayTextStructured);
+[format ["%1: %2", localize "STR_ACE_FCS_ZeroedTo", _distance]] call EFUNC(common,displayTextStructured);

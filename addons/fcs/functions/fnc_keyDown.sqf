@@ -4,7 +4,7 @@
  * Starts watching the target for sideways correction.
  *
  * Arguments:
- * none
+ * 0: Vehicle
  *
  * Return Value:
  * none
@@ -15,13 +15,15 @@
 private ["_vehicle", "_distance", "_weaponDirection"];
 
 _vehicle = _this select 0;
-_distance = _this select 1;
+_distance = call FUNC(getRange);
+
+if !(call FUNC(canUseFCS)) exitWith {};
 
 GVAR(Enabled) = true;
 GVAR(Time) = time;
 
 if (_distance == 0) then {
-  _distance = [5, 5000, 0] call EFUNC(core, getTargetDistance); // maximum distance: 5000m, 5m precision
+  _distance = [5, 5000, 0] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision
 };
 
 _weaponDirection = _vehicle weaponDirection currentWeapon _vehicle;

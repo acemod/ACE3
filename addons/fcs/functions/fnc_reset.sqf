@@ -21,4 +21,4 @@ _vehicle setVariable [QGVAR(Magazines), [], true];
 _vehicle setVariable [QGVAR(Elevation), 0, true];
 _vehicle setVariable [QGVAR(Azimuth), 0, true];
 
-[localize "STR_ACE_FireControlSystem_HasBeenReset"] call EFUNC(core, displayTextStructured);
+[localize "STR_ACE_FCS_HasBeenReset"] call EFUNC(common,displayTextStructured);

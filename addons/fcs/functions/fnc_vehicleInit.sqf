@@ -10,6 +10,8 @@
  * none
  */
 
+#include "script_component.hpp"
+
 private ["_gunBeg", "_gunnerView", "_gunBegPos", "_gunnerViewPos", "_viewDiff"];
 
 if (getNumber (configFile >> "CfgVehicles" >> (typeOf (_this select 0)) >> QGVAR(Enabled)) == 1) then {

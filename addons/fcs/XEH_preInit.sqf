@@ -1,12 +1,13 @@
 #include "script_component.hpp"
 
-PREPF(adjustRange)
-PREPF(canUseFCS)
-PREPF(canUseRangefinder)
-PREPF(firedEH)
-PREPF(getAngle)
-PREPF(getRange)
-PREPF(keyDown)
-PREPF(keyUp)
-PREPF(reset)
-PREPF(vehicleInit)
+PREP(adjustRange);
+PREP(canResetFCS);
+PREP(canUseFCS);
+PREP(canUseRangefinder);
+PREP(firedEH);
+PREP(getAngle);
+PREP(getRange);
+PREP(keyDown);
+PREP(keyUp);
+PREP(reset);
+PREP(vehicleInit);
