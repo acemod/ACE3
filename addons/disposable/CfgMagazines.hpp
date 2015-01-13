@@ -4,7 +4,7 @@ class CfgMagazines {
     author = "$STR_ACE_Common_ACETeam";
     scope = 1;
     displayName = "$STR_ACE_Disposable_PreloadedMissileDummy";
-    picture = "\AGM_Core\UI\blank_CO.paa";
+    picture = PATHTOEF(common,UI\blank_CO.paa);
     weaponPoolAvailable = 0;
     mass = 0;
   };

@@ -15,14 +15,14 @@
 private ["_player", "_display"];
 
 _player = _this select 0;
+if (!local _player) exitWith {};
 
 _player removeMagazines "ACE_PreloadedMissileDummy";
 _player removeMagazines "ACE_FiredMissileDummy";
 
 disableSerialization;
-_display = _this select 1;
-
-if (isNull _display) exitWith {};
+_display = findDisplay 602;
+if (isNull _display) exitWith {systemChat "null";};
 
 private ["_launcher", "_control", "_config"];
 

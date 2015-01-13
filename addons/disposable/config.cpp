@@ -8,7 +8,7 @@ class CfgPatches {
     requiredAddons[] = {"ace_common"};
     author[] = {"commy2"};
     authorUrl = "https://github.com/commy2/";
-    VERSION_CONFIG
+    // VERSION_CONFIG @todo
   };
 };
 
