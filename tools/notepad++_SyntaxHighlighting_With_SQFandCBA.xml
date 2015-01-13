@@ -31,7 +31,7 @@
             <Keywords name="Keywords5">blufor west opfor east indfor independent resistance civilian</Keywords>
             <Keywords name="Keywords6">_</Keywords>
             <Keywords name="Keywords7">#define #undef #ifdef #else #endif #include</Keywords>
-            <Keywords name="Keywords8">GVAR QGVAR EGVAR QEGVAR FUNC EFUNC DFUNC DEFUNC QFUNC QEFUNC CALLSTACK CALLSTACK_NAMED QUOTE</Keywords>
+            <Keywords name="Keywords8">GVAR QGVAR EGVAR QEGVAR FUNC EFUNC DFUNC DEFUNC QFUNC QEFUNC CALLSTACK CALLSTACK_NAMED QUOTE PATHTOF PREP PREPMAIN FUNC_INNER DISPLAY CONTROL</Keywords>
             <Keywords name="Delimiters">00&quot; 00&apos; 01 02&quot; 02&apos; 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23</Keywords>
         </KeywordLists>
         <Styles>
