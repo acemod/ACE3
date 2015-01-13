@@ -134,7 +134,7 @@ PREP(monitor);
 PREP(showUser);
 
 // ACE_CuratorFix
-PREP(addUnloadEventhandler);
+PREP(addCuratorUnloadEventhandler);
 PREP(fixCrateContent);
 
 // Loop to update the ACE_player variable

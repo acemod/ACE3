@@ -30,7 +30,7 @@ class CfgVehicles {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
     displayName = "Check PBOs";
-    function = "ACE_Common_fnc_moduleCheckPBOs";
+    function = QFUNC(moduleCheckPBOs);
     scope = 2;
     isGlobal = 1;
     icon = QUOTE(PATHTOF(UI\IconCheckPBO_ca.paa));
