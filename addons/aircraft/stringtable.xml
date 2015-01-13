@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-12 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="Aircraft">
-    <Key ID="STR_AGM_Aircraft_CMFlareLauncher_Burst_Name">
+    <Key ID="STR_ACE_Aircraft_CMFlareLauncher_Burst_Name">
       <English>Burst</English>
       <German>Feuerstoß</German>
       <Spanish>Ráfaga</Spanish>
@@ -14,7 +14,7 @@
       <Portuguese>Rajada</Portuguese>
       <Italian>Raffica</Italian>
     </Key>
-    <Key ID="STR_AGM_Aircraft_OpenCargoRamp">
+    <Key ID="STR_ACE_Aircraft_OpenCargoRamp">
       <English>Open Cargo Door</English>
       <German>Laderampe öffnen</German>
       <Spanish>Abrir compuerta de carga</Spanish>
@@ -24,7 +24,7 @@
       <Hungarian>Rámpát kinyitni</Hungarian>
       <Russian>Открыть грузовой отсек</Russian>
     </Key>
-    <Key ID="STR_AGM_Aircraft_CloseCargoRamp">
+    <Key ID="STR_ACE_Aircraft_CloseCargoRamp">
       <English>Close Cargo Door</English>
       <German>Laderampe schließen</German>
       <Spanish>Cerrar compuerta de carga</Spanish>
