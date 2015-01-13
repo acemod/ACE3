@@ -16,6 +16,6 @@ _activated = _this select 2;
 
 if !(_activated) exitWith {};
 
-[_logic, QGVAR(EnableTeamManagement), "EnableTeamManagement"] call EFUNC(core,readBooleanParameterFromModule);
+[_logic, QGVAR(EnableTeamManagement), "EnableTeamManagement"] call EFUNC(common,readBooleanParameterFromModule);
 
 diag_log text "[ACE]: Interaction Module Initialized.";

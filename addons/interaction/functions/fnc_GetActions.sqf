@@ -25,7 +25,7 @@
 */
 #include "script_component.hpp"
 
-#define DEFAULT_ICON PATHTOF(UI\dot_ca.paa)
+#define DEFAULT_ICON QUOTE(PATHTOF(UI\dot_ca.paa))
 private ["_target", "_parents", "_actions", "_patches", "_baseConfig", "_actionType", "_i","_index", "_missionConfig", "_stdConfig"];
 _target = _this select 0;
 _parents = _this select 1;
@@ -77,7 +77,7 @@ for "_i" from 0 to (_count - 1) do {
 					_condition = getText (_action >> "condition");
 					if (_condition == "") then {_condition = "true"};
 
-					_condition = _condition + format [QUOTE( && {%1 call EGVAR(core,canInteract)} && {[ACE_player, GVAR(Target)] call EFUNC(core,canInteractWith)} ), getArray (_action >> "exceptions")];
+					_condition = _condition + format [QUOTE( && {%1 call EGVAR(core,canInteract)} && {[ACE_player, GVAR(Target)] call EFUNC(common,canInteractWith)} ), getArray (_action >> "exceptions")];
 					if (_enableInside != 1) then {_condition = _condition + " && {_player == _vehicle}"};
 
 					_condition = compile _condition;
@@ -129,9 +129,9 @@ for "_i" from 0 to (_count - 1) do {
 					_cacheIndices pushBack _indexCache;
 
 					_cache = [_cacheConfigs, _cacheActions, _cacheIndices];
-					["InteractionMenu", _action, {format ["%1 loaded into cache", _this]}] call EFUNC(debug, log);
+					["InteractionMenu", _action, {format ["%1 loaded into cache", _this]}] call EFUNC(debug,log);
 				} else {
-					["InteractionMenu", _action, {format ["%1 loaded from cache", _this]}] call EFUNC(debug, log);
+					["InteractionMenu", _action, {format ["%1 loaded from cache", _this]}] call EFUNC(debug,log);
 
 					_cachedAction = _cacheActions select (_cacheIndices select _indexCache);
 

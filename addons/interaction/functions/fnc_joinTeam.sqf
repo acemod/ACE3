@@ -7,7 +7,7 @@ _unit = _this select 0;
 _team = _this select 1;
 
 _unit setVariable [QGVAR(assignedFireTeam), _team, true];
-[_unit, format ["{_this assignTeam '%1'}", _team]] call EFUNC(core,execRemoteFnc);
+[_unit, format ["{_this assignTeam '%1'}", _team]] call EFUNC(common,execRemoteFnc);
 
 if (_unit == ACE_player) then {
 	_message = if (_team == "MAIN") then {
@@ -17,5 +17,5 @@ if (_unit == ACE_player) then {
 		format [localize "STR_ACE_Interaction_JoinedTeam", _team];
 	};
 
-	[_message] call EFUNC(core,displayTextStructured);
+	[_message] call EFUNC(common,displayTextStructured);
 };

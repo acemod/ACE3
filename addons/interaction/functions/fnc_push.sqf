@@ -16,7 +16,7 @@ _boat = _this select 0;
 _velocity = _this select 1;
 
 if !(local _boat) exitWith {
-  [_this, QUOTE(FUNC(push)), _boat] call EFUNC(core,execRemoteFnc);
+  [_this, QUOTE(FUNC(push)), _boat] call EFUNC(common,execRemoteFnc);
 };
 
 _boat setVelocity _velocity;
