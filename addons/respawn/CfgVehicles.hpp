@@ -4,7 +4,7 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "Respawn System";
-        function = FUNC(module);
+        function = QFUNC(module);
         scope = 2;
         isGlobal = 1;
         icon = QUOTE(PATHTOF(UI\IconSwitchUnits_ca.paa));
@@ -34,10 +34,10 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "Friendly Fire Messages";
-        function = FUNC(moduleFriendlyFire);
+        function = QFUNC(moduleFriendlyFire);
         scope = 2;
         isGlobal = 1;
-        icon = PATHTOF(UI\Icon_Module_FriendlyFire_ca.paa);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_FriendlyFire_ca.paa));
         class Arguments {
         };
     };
@@ -46,7 +46,7 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "Rallypoint System";
-        function = FUNC(moduleRallypoint);
+        function = QFUNC(moduleRallypoint);
         scope = 2;
         isGlobal = 1;
         icon = QUOTE(PATHTOF(UI\IconSwitchUnits_ca.paa));
