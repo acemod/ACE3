@@ -18,7 +18,7 @@ if (_weapon in _jammedWeapons) then {
     private "_id";
 
     _id = _unit getVariable [QGVAR(JammingActionID), -1];
-    [_unit, "DefaultAction", _id] call EFUNC(core,removeActionEventHandler);
+    [_unit, "DefaultAction", _id] call EFUNC(common,removeActionEventHandler);
     _unit setVariable [QGVAR(JammingActionID), -1];
   };
 
@@ -34,5 +34,5 @@ if (_weapon in _jammedWeapons) then {
     _unit playActionNow _clearJamAction;
   };
 
-  [localize "STR_ACE_Overheating_WeaponUnjammed"] call EFUNC(core,displayTextStructured);
+  [localize "STR_ACE_Overheating_WeaponUnjammed"] call EFUNC(common,displayTextStructured);
 };

@@ -17,7 +17,7 @@ _this spawn {
   // Calculate cooling
   _temperature = [_temperature, _barrelMass, time - _time] call FUNC(cooldown);
 
-  ["Overheating", _temperature, {format ["Temperature: %1 °C", _this]}] call EFUNC(core,log);
+  ["Overheating", _temperature, {format ["Temperature: %1 °C", _this]}] call EFUNC(common,log);
 
   // Store new temperature
   _time = time;
@@ -46,7 +46,7 @@ _this spawn {
   for "_a" from 1 to _count do {
     _string = _string + "|";
   };
-  _text = [_string, _color] call EFUNC(core,stringToColoredText);
+  _text = [_string, _color] call EFUNC(common,stringToColoredText);
 
   _string = "";
   for "_a" from (_count + 1) to 12 do {
@@ -55,10 +55,10 @@ _this spawn {
 
   _text = composeText [
     _text,
-    [_string, [0.5, 0.5, 0.5]] call EFUNC(core,stringToColoredTex)t
+    [_string, [0.5, 0.5, 0.5]] call EFUNC(common,stringToColoredTex)t
   ];
 
   _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
 
-  [_text, _picture] call EFUNC(core,displayTextPicture);
+  [_text, _picture] call EFUNC(common,displayTextPicture);
 };

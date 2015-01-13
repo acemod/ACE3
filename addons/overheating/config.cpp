@@ -19,7 +19,7 @@ class CfgPatches {
 class ACE_Core_Default_Keys {
     class clearJam {
         displayName = "$STR_ACE_Overheating_UnjamWeapon";
-        condition = QUOTE( [_player] call EFUNC(core,canUseWeapon) && {currentWeapon _player in (_player getVariable [QUOTE(QGVAR(jammedWeapons)), []])} );
+        condition = QUOTE( [_player] call EFUNC(common,canUseWeapon) && {currentWeapon _player in (_player getVariable [QUOTE(QGVAR(jammedWeapons)), []])} );
         statement = QUOTE( [_player, currentMuzzle _player, false] call FUNC(clearJam); );
         key = 19;
         shift = 1;

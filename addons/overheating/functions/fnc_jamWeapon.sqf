@@ -29,7 +29,7 @@ _unit setVariable [QGVAR(jammedWeapons), _jammedWeapons];
     waitUntil {_frame < diag_frameno};
 
     _unit setAmmo [_weapon, _ammo];
-    //[localize "STR_ACE_Overheating_WeaponJammed"] call EFUNC(core,displayTextStructured);
+    //[localize "STR_ACE_Overheating_WeaponJammed"] call EFUNC(common,displayTextStructured);
   };
 };
 
@@ -40,7 +40,7 @@ if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
   private ["_condition", "_statement", "_condition2", "_statement2", "_id"];
 
   _condition = {
-    [_this select 1] call EFUNC(core,canUseWeapon)
+    [_this select 1] call EFUNC(common,canUseWeapon)
     && {currentMuzzle (_this select 1) in ((_this select 1) getVariable [QGVAR(jammedWeapons), []])}
     && {!(currentMuzzle (_this select 1) in ((_this select 1) getVariable [QEGVAR(safemode,safedWeapons), []]))}
   };
@@ -49,7 +49,7 @@ if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
     playSound3D ["a3\sounds_f\weapons\Other\dry9.wss", _this select 0];
 
     if (!(missionNamespace getVariable [QGVAR(knowAboutJam), false]) && {(_this select 1) ammo currentWeapon (_this select 1) > 0}) then {
-      [localize "STR_ACE_Overheating_WeaponJammed"] call EFUNC(core,displayTextStructured);
+      [localize "STR_ACE_Overheating_WeaponJammed"] call EFUNC(common,displayTextStructured);
       GVAR(knowAboutJam) = true;
     };
   };
@@ -62,8 +62,8 @@ if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
     [_this select 1, currentWeapon (_this select 1), false] call FUNC(clearJam);
   };
 
-  //_id = [_unit, format ["<t color=""#FFFF00"" >%1</t>", localize "STR_ACE_Overheating_UnjamWeapon"], "DefaultAction", _condition, _statement, _condition2, _statement2, 10] call EFUNC(core,addActionMenuEventHandler);
-  _id = [_unit, "DefaultAction", _condition, _statement] call EFUNC(core,addActionEventHandler);
+  //_id = [_unit, format ["<t color=""#FFFF00"" >%1</t>", localize "STR_ACE_Overheating_UnjamWeapon"], "DefaultAction", _condition, _statement, _condition2, _statement2, 10] call EFUNC(common,addActionMenuEventHandler);
+  _id = [_unit, "DefaultAction", _condition, _statement] call EFUNC(common,addActionEventHandler);
 
   _unit setVariable [QGVAR(JammingActionID), _id];
 };

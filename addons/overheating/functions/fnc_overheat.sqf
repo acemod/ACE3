@@ -102,7 +102,7 @@ _dispersion = getArray (configFile >> "CfgWeapons" >> _weapon >> "ACE_Overheatin
 
 _count = count _dispersion;
 if (_count > 0) then {
-  _dispersion = ([_dispersion, (_count - 1) * _scaledTemperature] call EFUNC(core,interpolateFromArray)) max 0;
+  _dispersion = ([_dispersion, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray)) max 0;
 } else {
   _dispersion = 0;
 };
@@ -111,12 +111,12 @@ _slowdownFactor = getArray (configFile >> "CfgWeapons" >> _weapon >> "ACE_Overhe
 
 _count = count _slowdownFactor;
 if (_count > 0) then {
-  _slowdownFactor = ([_slowdownFactor, (_count - 1) * _scaledTemperature] call EFUNC(core,interpolateFromArray)) max 0;
+  _slowdownFactor = ([_slowdownFactor, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray)) max 0;
 } else {
   _slowdownFactor = 1;
 };
 
-[_projectile, _dispersion - 2 * random _dispersion, _dispersion - 2 * random _dispersion, (_slowdownFactor - 1) * vectorMagnitude _velocity] call EFUNC(core,changeProjectileDirection);
+[_projectile, _dispersion - 2 * random _dispersion, _dispersion - 2 * random _dispersion, (_slowdownFactor - 1) * vectorMagnitude _velocity] call EFUNC(common,changeProjectileDirection);
 
 
 // jamming
@@ -130,7 +130,7 @@ if (_count == 0) then {
   _count = 1;
 };
 
-_jamChance = [_jamChance, (_count - 1) * _scaledTemperature] call EFUNC(core,interpolateFromArray);
+_jamChance = [_jamChance, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray);
 
 // increase jam chance on dusty grounds if prone
 if (stance _unit == "PRONE") then {
@@ -148,7 +148,7 @@ if ("Jam" in (missionNamespace getvariable ["ACE_Debug", []])) then {
   _jamChance = 0.5;
 };
 
-["Overheating", [_temperature, _jamChance], {format ["Temperature: %1 - JamChance: %2", _this select 0, _this select 1]}] call EFUNC(core,log);
+["Overheating", [_temperature, _jamChance], {format ["Temperature: %1 - JamChance: %2", _this select 0, _this select 1]}] call EFUNC(common,log);
 
 if (random 1 < _jamChance) then {
   [_unit, _weapon] call FUNC(jamWeapon);
