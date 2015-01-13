@@ -45,7 +45,7 @@ if (count _detonators == 0) then {
 		},
 		{
 			call EFUNC(Interaction,hideMenu);
-			if !(profileNamespace getVariable [QUOTE( EGVAR(Interaction, AutoCloseMenu) ), false]) then {
+			if !(profileNamespace getVariable [QUOTE( EGVAR(Interaction,AutoCloseMenu) ), false]) then {
 				"ACE_Explosives" call EFUNC(Interaction,openMenuSelf);
 			};
 		}

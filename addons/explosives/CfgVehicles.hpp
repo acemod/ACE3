@@ -42,7 +42,7 @@ class CfgVehicles {
         class ACE_Defuse {
           displayName = $STR_ACE_Explosives_Defuse;
           condition = QUOTE( [_player] call FUNC(canDefuse) );
-          statement = QUOTE( [ARR_2(_player, EGVAR(Interaction, Target))] call FUNC(startDefuse); );
+          statement = QUOTE( [ARR_2(_player, EGVAR(Interaction,Target))] call FUNC(startDefuse); );
           exceptions[] = {"ACE_Interaction_isNotSwimming"};
           showDisabled = 0;
           icon = QUOTE( PATHTOF(UI\Defuse_ca.paa) );
