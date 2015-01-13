@@ -77,7 +77,7 @@ for "_i" from 0 to (_count - 1) do {
 					_condition = getText (_action >> "condition");
 					if (_condition == "") then {_condition = "true"};
 
-					_condition = _condition + format [QUOTE( && {%1 call EGVAR(core,canInteract)} && {[ACE_player, GVAR(Target)] call EFUNC(common,canInteractWith)} ), getArray (_action >> "exceptions")];
+					_condition = _condition + format [QUOTE( && {%1 call EGVAR(core,canInteract)} && {[ARR_2(ACE_player, GVAR(Target))] call EFUNC(common,canInteractWith)} ), getArray (_action >> "exceptions")];
 					if (_enableInside != 1) then {_condition = _condition + " && {_player == _vehicle}"};
 
 					_condition = compile _condition;

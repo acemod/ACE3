@@ -522,8 +522,8 @@ class CfgVehicles {
       class ACE_Push {
         displayName = "$STR_ACE_Interaction_Push";
         distance = 4;
-        condition = QUOTE( getMass _target < 1000 and alive _target );
-        //statement = QUOTE( [_target, [2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5]] call FUNC(push); );
+        condition = QUOTE(getMass _target < 1000 && {alive _target});
+        statement = QUOTE([ARR_2(_target, [ARR_3(2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5)])] call FUNC(push););
         showDisabled = 0;
         priority = -1;
       };

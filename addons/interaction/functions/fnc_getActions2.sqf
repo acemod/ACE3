@@ -45,7 +45,7 @@ _cacheIndices = _cache select 2;
 			_condition = getText (_action >> "condition");
 			if (_condition == "") then {_condition = "true"};
 
-			_condition = _condition + format [QUOTE(&& {%1 call EFUNC(common,canInteract)} && {[ACE_player, GVAR(Target)] call FUNC(canInteractWith)}), getArray (_action >> "exceptions")];
+			_condition = _condition + format [QUOTE(&& {%1 call EFUNC(common,canInteract)} && {[ARR_2(ACE_player, GVAR(Target))] call FUNC(canInteractWith)}), getArray (_action >> "exceptions")];
 			if (_enableInside != 1) then {_condition = _condition + " && {_player == _vehicle}"};
 
 			_condition = compile _condition;

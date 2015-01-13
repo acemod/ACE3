@@ -48,7 +48,7 @@ _newUnit spawn {
   // should switch locality
   // This doesn't work anymore, because one's now able to switch to units from a different side
   //[_unit] joinSilent group player;
-  [[_unit, player], QUOTE({(_this select 0) setVariable [QGVAR(OriginalOwner), owner (_this select 0), true]; (_this select 0) setOwner owner (_this select 1)}), 1] call EFUNC(common,execRemoteFnc);
+  [[_unit, player], QUOTE({(_this select 0) setVariable [ARR_3(QUOTE(QGVAR(OriginalOwner)), owner (_this select 0), true)]; (_this select 0) setOwner owner (_this select 1)}), 1] call EFUNC(common,execRemoteFnc);
   
   _oldUnit = player;
   waitUntil {sleep 0.2; local _unit};
