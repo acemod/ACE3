@@ -10,18 +10,19 @@
  * Return Value:
  * none
  */
+#include "\z\ace\addons\hearing\script_component.hpp"
 
 private "_player";
 
 _player = _this select 0;
 
-if !(_player canAdd "AGM_EarBuds") exitWith { // inventory full
-  [localize "STR_AGM_Hearing_Inventory_Full"] call AGM_Core_fnc_displayTextStructured;
+if !(_player canAdd "ACE_EarBuds") exitWith { // inventory full
+  [localize "STR_ACE_Hearing_Inventory_Full"] call EFUNC(common,displayTextStructured);
 };
 
 // Buds already in and removing them.
-_player addItem "AGM_EarBuds";
+_player addItem "ACE_EarBuds";
 
-_player setVariable ["AGM_hasEarPlugsIn", false, true];
+_player setVariable ["ACE_hasEarPlugsIn", false, true];
 
-[localize "STR_AGM_Hearing_Earbuds_Are_Off"] call AGM_Core_fnc_displayTextStructured;
+[localize "STR_ACE_Hearing_Earbuds_Are_Off"] call EFUNC(common,displayTextStructured);

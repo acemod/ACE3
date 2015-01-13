@@ -9,6 +9,7 @@
  * Return Value:
  * none
  */
+#include "\z\ace\addons\hearing\script_component.hpp"
 
 private ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_silencer", "_audibleFireCoef", "_loudness", "_strength"];
 
@@ -21,7 +22,7 @@ _mode = _this select 5;
 _ammo = _this select 6;
 
 if (_weapon in ["Throw", "Put"]) exitWith {};
-if (_unit != vehicle _unit && {!([_unit] call AGM_Core_fnc_isTurnedOut)}) exitWith {};
+if (_unit != vehicle _unit && {!([_unit] call EFUNC(common,isTurnedOut))}) exitWith {};
 
 _silencer = switch (_weapon) do {
   case (primaryWeapon _unit) : {primaryWeaponItems _unit select 0};
@@ -47,5 +48,5 @@ if (_strength < 0.01) exitWith {};
 
 [_unit, _strength] spawn {
   sleep 0.2;
-  _this call AGM_Hearing_fnc_earRinging;
+  _this call FUNC(earRinging);
 };
