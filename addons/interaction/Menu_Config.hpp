@@ -3,9 +3,9 @@
 #define VSPACE 0.5-0.3/9/2
 
 class RscStructuredText;
-class AGM_Interaction_Button_Base {
+class ACE_Interaction_Button_Base {
   tooltip = "";
-  //action = "AGM_Interaction_isMousePressed = true;(findDisplay 1713999) closeDisplay 1;_action = AGM_Interaction_Buttons select AGM_Interaction_SelectedButton;AGM_Interaction_SelectedButton = -1; if (call (_action select 2)) then {call (_action select 1)};";
+  //action = "ACE_Interaction_isMousePressed = true;(findDisplay 1713999) closeDisplay 1;_action = ACE_Interaction_Buttons select ACE_Interaction_SelectedButton;ACE_Interaction_SelectedButton = -1; if (call (_action select 2)) then {call (_action select 1)};";
   action = "";
 
   idc = -1;
@@ -46,14 +46,14 @@ class AGM_Interaction_Button_Base {
 #define ICON_BORDER 0.05
 
 // Old command rose
-class AGM_Interaction_Dialog {
+class ACE_Interaction_Dialog {
   idd = 1713999;
   enableSimulation = 1;
   movingEnable = 0;
-  onLoad = "_dlgInteractionDialog = _this select 0; for '_a' from 10 to 19 do {(_dlgInteractionDialog displayCtrl _a) ctrlShow false}; uiNamespace setVariable ['AGM_Interaction_Dialog', _dlgInteractionDialog];";
+  onLoad = "_dlgInteractionDialog = _this select 0; for '_a' from 10 to 19 do {(_dlgInteractionDialog displayCtrl _a) ctrlShow false}; uiNamespace setVariable ['ACE_Interaction_Dialog', _dlgInteractionDialog];";
   objects[] = {};
   class controls {
-    class Interaction_BackgroundMain: AGM_Interaction_Button_Base {
+    class Interaction_BackgroundMain: ACE_Interaction_Button_Base {
       type = 0;
       style = 2;
       idc = 2;
@@ -65,8 +65,8 @@ class AGM_Interaction_Dialog {
       h = "0.55 / 9 * safezoneH";
     };
 
-    class Interaction_ButtonMain: AGM_Interaction_Button_Base {
-      action = "-1 call AGM_Interaction_fnc_onClick;";
+    class Interaction_ButtonMain: ACE_Interaction_Button_Base {
+      action = "-1 call ACE_Interaction_fnc_onClick;";
       style = 2;
       tooltip = "";
       text = "Interaction Menu";
@@ -82,7 +82,7 @@ class AGM_Interaction_Dialog {
       h = "0.55 / 9 * safezoneH";
     };
 
-    class Interaction_Background0: AGM_Interaction_Button_Base {
+    class Interaction_Background0: ACE_Interaction_Button_Base {
       type = 0;
       style = 2;
       idc = 40;
@@ -157,7 +157,7 @@ class AGM_Interaction_Dialog {
       h = "0.3 / 9 * safezoneH";
     };
 
-    class Interaction_Icon0: AGM_Interaction_Button_Base {
+    class Interaction_Icon0: ACE_Interaction_Button_Base {
       tooltip = "";
       text = "";
       idc = 20;
@@ -233,7 +233,7 @@ class AGM_Interaction_Dialog {
       h = (0.3-ICON_BORDER) / 9 * safezoneH;
     };
 
-    class Interaction_Shortcut0: AGM_Interaction_Button_Base {
+    class Interaction_Shortcut0: ACE_Interaction_Button_Base {
       tooltip = "";
       text = "";
       idc = 30;
@@ -317,8 +317,8 @@ class AGM_Interaction_Dialog {
       h = "0.3 / 9 * safezoneH";
     };
 
-    class Interaction_Button0: AGM_Interaction_Button_Base {
-      action = "0 call AGM_Interaction_fnc_onClick;";
+    class Interaction_Button0: ACE_Interaction_Button_Base {
+      action = "0 call ACE_Interaction_fnc_onClick;";
       style = 2;
       tooltip = "";
       text = "";
@@ -333,7 +333,7 @@ class AGM_Interaction_Dialog {
       h = "0.3 / 9 * safezoneH";
     };
     class Interaction_Button1: Interaction_Button0 {
-      action = "1 call AGM_Interaction_fnc_onClick;";
+      action = "1 call ACE_Interaction_fnc_onClick;";
       idc = 11;
       x = "(0.5-2.0/16/2 + 1.0 * 0.1) * safezoneW + safezoneX";
       y = "(0.5-0.3/9/2 - 1.5 * 0.04) * safezoneH + safezoneY";
@@ -341,7 +341,7 @@ class AGM_Interaction_Dialog {
       h = "0.3 / 9 * safezoneH";
     };
     class Interaction_Button2: Interaction_Button0 {
-      action = "2 call AGM_Interaction_fnc_onClick;";
+      action = "2 call ACE_Interaction_fnc_onClick;";
       idc = 12;
       x = "(0.5-2.0/16/2 + 1.25 * 0.1) * safezoneW + safezoneX";
       y = "(0.5-0.3/9/2 - 0.5 * 0.04) * safezoneH + safezoneY";
@@ -349,7 +349,7 @@ class AGM_Interaction_Dialog {
       h = "0.3 / 9 * safezoneH";
     };
     class Interaction_Button3: Interaction_Button0 {
-      action = "3 call AGM_Interaction_fnc_onClick;";
+      action = "3 call ACE_Interaction_fnc_onClick;";
       idc = 13;
       x = "(0.5-2.0/16/2 + 1.25 * 0.1) * safezoneW + safezoneX";
       y = "(0.5-0.3/9/2 + 0.5 * 0.04) * safezoneH + safezoneY";
@@ -357,7 +357,7 @@ class AGM_Interaction_Dialog {
       h = "0.3 / 9 * safezoneH";
     };
     class Interaction_Button4: Interaction_Button0 {
-      action = "4 call AGM_Interaction_fnc_onClick;";
+      action = "4 call ACE_Interaction_fnc_onClick;";
       idc = 14;
       x = "(0.5-2.0/16/2 + 1.0 * 0.1) * safezoneW + safezoneX";
       y = "(0.5-0.3/9/2 + 1.5 * 0.04) * safezoneH + safezoneY";
@@ -365,7 +365,7 @@ class AGM_Interaction_Dialog {
       h = "0.3 / 9 * safezoneH";
     };
     class Interaction_Button5: Interaction_Button0 {
-      action = "5 call AGM_Interaction_fnc_onClick;";
+      action = "5 call ACE_Interaction_fnc_onClick;";
       idc = 15;
       x = "(0.5-2.0/16/2 + 0 * 0.1) * safezoneW + safezoneX";
       y = "(0.5-0.3/9/2 + 2.5 * 0.04) * safezoneH + safezoneY";
@@ -373,7 +373,7 @@ class AGM_Interaction_Dialog {
       h = "0.3 / 9 * safezoneH";
     };
     class Interaction_Button6: Interaction_Button0 {
-      action = "6 call AGM_Interaction_fnc_onClick;";
+      action = "6 call ACE_Interaction_fnc_onClick;";
       idc = 16;
       x = "(0.5-2.0/16/2 - 1.0 * 0.1) * safezoneW + safezoneX";
       y = "(0.5-0.3/9/2 + 1.5 * 0.04) * safezoneH + safezoneY";
@@ -381,7 +381,7 @@ class AGM_Interaction_Dialog {
       h = "0.3 / 9 * safezoneH";
     };
     class Interaction_Button7: Interaction_Button0 {
-      action = "7 call AGM_Interaction_fnc_onClick;";
+      action = "7 call ACE_Interaction_fnc_onClick;";
       idc = 17;
       x = "(0.5-2.0/16/2 - 1.25 * 0.1) * safezoneW + safezoneX";
       y = "(0.5-0.3/9/2 + 0.5 * 0.04) * safezoneH + safezoneY";
@@ -389,7 +389,7 @@ class AGM_Interaction_Dialog {
       h = "0.3 / 9 * safezoneH";
     };
     class Interaction_Button8: Interaction_Button0 {
-      action = "8 call AGM_Interaction_fnc_onClick;";
+      action = "8 call ACE_Interaction_fnc_onClick;";
       idc = 18;
       x = "(0.5-2.0/16/2 - 1.25 * 0.1) * safezoneW + safezoneX";
       y = "(0.5-0.3/9/2 - 0.5 * 0.04) * safezoneH + safezoneY";
@@ -397,7 +397,7 @@ class AGM_Interaction_Dialog {
       h = "0.3 / 9 * safezoneH";
     };
     class Interaction_Button9: Interaction_Button0 {
-      action = "9 call AGM_Interaction_fnc_onClick;";
+      action = "9 call ACE_Interaction_fnc_onClick;";
       idc = 19;
       x = "(0.5-2.0/16/2 - 1.0 * 0.1) * safezoneW + safezoneX";
       y = "(0.5-0.3/9/2 - 1.5 * 0.04) * safezoneH + safezoneY";
@@ -412,7 +412,7 @@ class IGUIBack;
 class RscText;
 #define X_OFFSET 0.2
 
-class RscAGM_SelectAnItem {
+class RscACE_SelectAnItem {
   idd = 8854;
   movingEnable = 0;
   class controls {
@@ -433,7 +433,7 @@ class RscAGM_SelectAnItem {
       text = "";
     };
     class itemList:RscListBox {
-      onMouseButtonDblClick = "_this call AGM_Interaction_fnc_onSelectMenuDblClick";
+      onMouseButtonDblClick = "_this call ACE_Interaction_fnc_onSelectMenuDblClick";
       idc = 8866;
       x = X_OFFSET + 0.005;
       w = 0.59;
@@ -441,7 +441,7 @@ class RscAGM_SelectAnItem {
       y = 0.06;
     };
 
-    class cancelBtnBackground: AGM_Interaction_Button_Base {
+    class cancelBtnBackground: ACE_Interaction_Button_Base {
       type = 0;
       style = 2;
       idc = -1;
@@ -452,7 +452,7 @@ class RscAGM_SelectAnItem {
       h = 0.1;
       y = 0.605;
     };
-    class approveBtnBackground: AGM_Interaction_Button_Base {
+    class approveBtnBackground: ACE_Interaction_Button_Base {
       type = 0;
       style = 2;
       idc = -1;
@@ -464,29 +464,29 @@ class RscAGM_SelectAnItem {
       w = 0.15;
     };
 
-    class cancelBtn: AGM_Interaction_Button_Base {
+    class cancelBtn: ACE_Interaction_Button_Base {
       idc = 8855;
       x = X_OFFSET + 0.005;
       w = 0.15;
       h = 0.1;
       y = 0.605;
       style = 2;
-      text = $STR_AGM_Interaction_Back; //$STR_AGM_Interaction_CancelSelection;
-      action = "call AGM_Interaction_fnc_hideMenu;";   //'Default' call AGM_Interaction_fnc_openMenu;    'Default' call AGM_Interaction_fnc_openMenuSelf;
+      text = $STR_ACE_Interaction_Back; //$STR_ACE_Interaction_CancelSelection;
+      action = "call ACE_Interaction_fnc_hideMenu;";   //'Default' call ACE_Interaction_fnc_openMenu;    'Default' call ACE_Interaction_fnc_openMenuSelf;
       colorBackground[] = {0,0,0,0};
       colorBackgroundDisabled[] = {0,0,0,0};
       colorBackgroundActive[] = {1,1,1,0.2};
       colorFocused[] = {0,0,0,0};
     };
-    class approveBtn: AGM_Interaction_Button_Base {
+    class approveBtn: ACE_Interaction_Button_Base {
       idc = 8860;
       x = X_OFFSET + 0.445;
       y = 0.605;
       h = 0.1;
       w = 0.15;
       style = 2;
-      text = $STR_AGM_Interaction_MakeSelection;
-      action = "call AGM_Interaction_fnc_hideMenu;";
+      text = $STR_ACE_Interaction_MakeSelection;
+      action = "call ACE_Interaction_fnc_hideMenu;";
       colorBackground[] = {0,0,0,0};
       colorBackgroundDisabled[] = {0,0,0,0};
       colorBackgroundActive[] = {1,1,1,0.2};
@@ -518,19 +518,19 @@ class RscInteractionText: RscText{
   h = 1.5 * GUI_GRID_H;
 };
 class RscTitles {
-  class AGM_FlowMenu {
+  class ACE_FlowMenu {
     idd = 9920;
     enableSimulation = 1;
     movingEnable = 0;
     fadeIn=0.5;
     fadeOut=0.5;
     duration = 10e10;
-    onLoad = "uiNamespace setVariable ['AGM_Flow_Display', _this select 0];";
+    onLoad = "uiNamespace setVariable ['ACE_Flow_Display', _this select 0];";
 
     class controls {
       class RearIcon: RscInteractionIcon{
         idc = 999;
-        text = "AGM_interaction\UI\CenterIcon_ca.paa";
+        text = "ACE_interaction\UI\CenterIcon_ca.paa";
         x = 17.9 * GUI_GRID_W;
         y = 10 * GUI_GRID_H;
         w = 3.7 * GUI_GRID_H;
@@ -570,7 +570,7 @@ class RscTitles {
       };
       class BackIcon: RscInteractionIcon{
         idc = 1210;
-        text = "AGM_interaction\UI\backArrow_ca.paa";
+        text = "ACE_interaction\UI\backArrow_ca.paa";
         x = 18.25 * GUI_GRID_W;
         y = 12.69 * GUI_GRID_H;
         w = 0.5 * GUI_GRID_W;
@@ -587,45 +587,45 @@ class RscTitles {
       };
     };
   };
-  class AGM_InteractionHelper {
+  class ACE_InteractionHelper {
     idd = 9930;
     enableSimulation = 1;
     movingEnable = 0;
     fadeIn=0.5;
     fadeOut=0.5;
     duration = 10e10;
-    onLoad = "uiNamespace setVariable ['AGM_Helper_Display', _this select 0];";
+    onLoad = "uiNamespace setVariable ['ACE_Helper_Display', _this select 0];";
 
     class controls {
       class SelectIcon: RscInteractionHelperIcon{
         idc = 1200;
-        text = "AGM_interaction\UI\mouse_left_ca.paa";
+        text = "ACE_interaction\UI\mouse_left_ca.paa";
         y = 17.5 * GUI_GRID_H;
       };
       class SelectText: RscInteractionText{
         idc = 1000;
         y = 17 * GUI_GRID_H;
-        text = $STR_AGM_Interaction_MakeSelection;
+        text = $STR_ACE_Interaction_MakeSelection;
       };
       class GoBackIcon: RscInteractionHelperIcon{
         idc = 1201;
-        text = "AGM_interaction\UI\mouse_right_ca.paa";
+        text = "ACE_interaction\UI\mouse_right_ca.paa";
         y = 19.5 * GUI_GRID_H;
       };
       class GoBackText: RscInteractionText{
         idc = 1001;
         y = 19 * GUI_GRID_H;
-        text = $STR_AGM_Interaction_Back;
+        text = $STR_ACE_Interaction_Back;
       };
       class ScrollIcon: RscInteractionHelperIcon{
         idc = 1202;
-        text = "AGM_interaction\UI\mouse_scroll_ca.paa";
+        text = "ACE_interaction\UI\mouse_scroll_ca.paa";
         y = 18.5 * GUI_GRID_H;
       };
       class ScrollText: RscInteractionText{
         idc = 1002;
         y = 18 * GUI_GRID_H;
-        text = $STR_AGM_Interaction_ScrollHint;
+        text = $STR_ACE_Interaction_ScrollHint;
       };
     };
   };

@@ -1,7 +1,7 @@
+class Mode_SemiAuto;
 class CfgWeapons {
 	class CannonCore;
 	class LauncherCore;
-	class Mode_SemiAuto;
 	
 	class RocketPods: LauncherCore {
 		canLock = 1;

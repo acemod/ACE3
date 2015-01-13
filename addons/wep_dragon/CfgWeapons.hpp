@@ -20,13 +20,13 @@ class CfgWeapons {
 	class M47Launcher_EP1: Launcher {
 		displayName = "M47 Dragon";
 		canlock = 0;
-		model = PATHTOF(models\ace_m47_magazine.p3d);
-		picture = PATHTOF(textures\m47_dragon_item_ca.paa);
+		model = QUOTE(PATHTOF(models\ace_m47_magazine.p3d));
+		picture = QUOTE(PATHTOF(textures\m47_dragon_item_ca.paa));
 	};
 	class ACE_M47_Daysight: M47Launcher_EP1 {
 		displayName = $STR_DN_ACE_DRAGONSUP36;	// Stay next to tubes in gear dialogs
-		model = PATHTOF(models\ace_m47_optic.p3d);
-		picture = PATHTOF(textures\m47_daysight_item_ca.paa);
+		model = QUOTE(PATHTOF(models\ace_m47_optic.p3d));
+		picture = QUOTE(PATHTOF(textures\m47_daysight_item_ca.paa));
 		optics = 1;
 		weaponInfoType = "RscWeaponEmpty";
 		modelOptics = "\ca\Weapons_e\optics_m47";

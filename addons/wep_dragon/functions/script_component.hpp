@@ -1,0 +1,1 @@
+#include "\z\ace\addons\wep_dragon\script_component.hpp"

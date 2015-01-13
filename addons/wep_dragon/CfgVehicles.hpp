@@ -17,11 +17,11 @@ class CfgVehicles {
 				class ViewOptics;
 			};
 		};
-	}
+	};
 
 	class ACE_M47_Static: ACE_M47_Static_Base {
 		scope = 1; // Hide it for now
-		model = PATHTOF(models\ace_m47_static.p3d);
+		model = QUOTE(PATHTOF(models\ace_m47_static.p3d));
 		displayName = "M47 Dragon";
 		class Turrets: Turrets {
 			class MainTurret: MainTurret {
