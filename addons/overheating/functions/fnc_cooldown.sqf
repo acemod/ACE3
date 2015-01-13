@@ -11,6 +11,7 @@
  * Return value:
  * New temperature (number)
  */
+#include "script_component.hpp"
 
 private ["_temperature", "_barrelMass", "_totalTime", "_barrelSurface", "_time", "_deltaTime"];
 
@@ -40,7 +41,7 @@ while {true} do {
   if (_temperature < 1) exitWith {0};
 
   if (isNil "_temperature") exitWith {
-    diag_log text format ["[AGM] ERROR: _totalTime = %1; _time = %2; _deltaTime = %3;", _totalTime, _time, _deltaTime];
+    diag_log text format ["[ACE] ERROR: _totalTime = %1; _time = %2; _deltaTime = %3;", _totalTime, _time, _deltaTime];
     0
   };
 
