@@ -15,8 +15,8 @@ class CfgVehicles {
         showIn3D = 0;
         onlyForPlayer = 1;
         shortcut = "DefaultAction";
-        condition = "call ACE_Common_UserActionFireCondition";
-        statement = "call ACE_Common_UserActionFire";
+        condition = QUOTE(call GVAR(UserActionFireCondition));
+        statement = QUOTE(call GVAR(UserActionFire));
         userActionID = 100;
       };
     };
