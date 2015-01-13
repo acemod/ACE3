@@ -7,7 +7,7 @@ class CfgVehicles {
     function = FUNC(module);
     scope = 2;
     isGlobal = 1;
-    icon = PATHTOF(UI\Icon_Module_Respawn_ca.paa);
+    icon = QUOTE(PATHTOF(UI\IconSwitchUnits_ca.paa));
     class Arguments {
       class SavePreDeathGear {
         displayName = "Save Gear?";
@@ -49,7 +49,7 @@ class CfgVehicles {
     function = FUNC(moduleRallypoint);
     scope = 2;
     isGlobal = 1;
-    icon = PATHTOF(UI\Icon_Module_Rallypoint_ca.paa);
+    icon = QUOTE(PATHTOF(UI\IconSwitchUnits_ca.paa));
     class Arguments {
     };
   };
