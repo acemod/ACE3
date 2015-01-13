@@ -4,7 +4,7 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "Name Tags";
-        function = FUNC(moduleNameTags);
+        function = QFUNC(moduleNameTags);
         scope = 2;
         isGlobal = 1;
         icon = QUOTE(PATHTOF(UI\IconNameTags_ca.paa));
