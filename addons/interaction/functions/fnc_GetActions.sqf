@@ -129,9 +129,9 @@ for "_i" from 0 to (_count - 1) do {
 					_cacheIndices pushBack _indexCache;
 
 					_cache = [_cacheConfigs, _cacheActions, _cacheIndices];
-					["InteractionMenu", _action, {format ["%1 loaded into cache", _this]}] call EFUNC(debug,log);
+					["InteractionMenu", _action, {format ["%1 loaded into cache", _this]}] call EFUNC(common,log);
 				} else {
-					["InteractionMenu", _action, {format ["%1 loaded from cache", _this]}] call EFUNC(debug,log);
+					["InteractionMenu", _action, {format ["%1 loaded from cache", _this]}] call EFUNC(common,log);
 
 					_cachedAction = _cacheActions select (_cacheIndices select _indexCache);
 
