@@ -49,7 +49,7 @@ if (ACE_player != _unit) then {
       (_this select 0) disableAI "MOVE";
       (_this select 0) disableAI "TARGET";
       sleep (_this select 2);
-      [(_this select 0), (_this select 1)] call Func(defuseExplosive);
+      [(_this select 0), (_this select 1)] call FUNC(defuseExplosive);
       (_this select 0) enableAI "MOVE";
       (_this select 0) enableAI "TARGET";
     };
@@ -59,10 +59,10 @@ if (ACE_player != _unit) then {
   if (GVAR(RequireSpecialist)) then {
     if ([_unit] call EFUNC(Common,isEOD)) then {
       [[true, _target] call _fnc_DefuseTime, [_unit,_target],
-        QUOTE(FUNC(defuseExplosive)), localize "STR_ACE_Explosives_DefusingExplosive"] call EFUNC(Common,progressBar);
+        QFUNC(defuseExplosive), localize "STR_ACE_Explosives_DefusingExplosive"] call EFUNC(Common,progressBar);
     };
   } else {
     [[([_unit] call EFUNC(Common,isEOD)), _target] call _fnc_DefuseTime, [_unit,_target],
-    QUOTE(FUNC(defuseExplosive)), localize "STR_ACE_Explosives_DefusingExplosive"] call EFUNC(Common,progressBar);
+    QFUNC(defuseExplosive), localize "STR_ACE_Explosives_DefusingExplosive"] call EFUNC(Common,progressBar);
   };
 };

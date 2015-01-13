@@ -30,7 +30,7 @@ GVAR(placer) = _unit;
 // Would require custom config entries (ACE_ExplosiveSpecialist/ACE_Specialist) which excludes custom mods.
 //if (ACE_Explosives_RequireSpecialist && {!([_unit] call ACE_Core_fnc_isEOD)}) exitWith {};
 if (isNil "_config") then {
-  _config = getArray(ConfigFile >> "CfgMagazines" >> _class >> "ACE_Triggers" >> "ACE_Triggers") select 0;
+  _config = getArray(ConfigFile >> "CfgMagazines" >> _class >> "ACE_Triggers" >> "SupportedTriggers") select 0;
 };
 
 GVAR(Setup) = getText(ConfigFile >> "CfgMagazines" >> _class >> "ACE_SetupObject") createVehicleLocal [0,0,-10000];
@@ -49,7 +49,7 @@ GVAR(TweakedAngle) = 180;
   private "_player";
   _player = ACE_player;
   if (GVAR(placer) != _player) exitWith {
-    call Func(place_Cancel);
+    call FUNC(place_Cancel);
   };
   GVAR(pfeh_running) = true;
   _pos = (ASLtoATL eyePos _player) vectorAdd (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]);
@@ -62,6 +62,6 @@ GVAR(TweakedAngle) = 180;
 [localize "STR_ACE_Explosives_PlaceAction", localize "STR_ACE_Explosives_CancelAction",
   localize "STR_ACE_Explosives_ScrollAction"] call EFUNC(Interaction,showMouseHint);
 _unit setVariable [QGVAR(Place), [_unit, "DefaultAction",
-  {GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call Func(place_Approve);}] call EFUNC(Core,AddActionEventHandler)];
+  {GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call FUNC(place_Approve);}] call EFUNC(Core,AddActionEventHandler)];
 _unit setVariable [QGVAR(Cancel), [_unit, "MenuBack",
-  {GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call Func(place_Cancel);}] call EFUNC(Core,AddActionEventHandler)];
+  {GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call FUNC(place_Cancel);}] call EFUNC(Core,AddActionEventHandler)];
