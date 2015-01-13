@@ -5,7 +5,7 @@ class CfgPatches {
     units[] = {};
     weapons[] = {"AGM_IR_Strobe_Item"};
     requiredVersion = 0.60;
-    requiredAddons[] = {AGM_Core, AGM_Interaction};
+    requiredAddons[] = {"ace_common", "ace_interaction"};
     version = "0.95";
     versionStr = "0.95";
     versionAr[] = {0,95,0};
@@ -53,7 +53,7 @@ class CfgVehicles {
         };
         class GVAR(Detach) {
           displayName = "$STR_AGM_Attach_Detach";
-          condition = QUOTE( [_player] call FUNC(canDetach );
+          condition = QUOTE( [_player] call FUNC(canDetach) );
           statement = QUOTE( [_player] call FUNC(detach) );
           exceptions[] = {"AGM_Drag_isNotDragging"};
           showDisabled = 0;

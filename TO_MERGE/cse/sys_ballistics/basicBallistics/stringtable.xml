@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Project name="Combat Space Enhancement"> 
+	<Package name="cse_sys_winddeflection">
+		<Container ID="Weather_Meter">
+			<Key ID="STR_CSE_WEATHER_METER_WIND_CATEGORY"> 
+				<Original>Wind Information</Original>
+				<English>Wind Information</English>
+				<Polish>Informacje o wietrze</Polish>
+				<Spanish>Información del viento</Spanish>
+			</Key>
+			<Key ID="STR_CSE_WEATHER_METER_WIND_DIRECTION">
+				<Original>Direction: %1</Original>
+				<English>Direction: %1</English>
+				<Polish>Kierunek: %1</Polish>
+				<Spanish>Dirección: %1</Spanish>
+			</Key>
+			<Key ID="STR_CSE_WEATHER_METER_WIND_SPEED">
+				<Original>Speed: %1 m/s</Original>
+				<English>Speed: %1 m/s</English>
+				<Polish>Prędkość: %1</Polish>
+				<Spanish>Velocidad: %1 m/s</Spanish>
+			</Key>
+			<Key ID="STR_CSE_WEATHER_METER_WEATHER_CATEGORY">
+				<Original>Weather Information</Original>
+				<English>Weather Information</English>
+				<Polish>Informacje o pogodzie</Polish>
+				<Spanish>Información Meteorológica</Spanish>
+			</Key>
+			<Key ID="STR_CSE_WEATHER_METER_WEATHER_HUMIDITY">
+				<Original>Humidity: %1%</Original>
+				<English>Humidity: %1%</English>
+				<Polish>Wilgotność: %1</Polish>
+				<Spanish>Humedad: %1%</Spanish>
+			</Key>
+		</Container>
+	</Package> 
+</Project>

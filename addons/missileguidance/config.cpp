@@ -5,7 +5,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = { "uo_main", "ace__laser", "a3_ui_f" };
+		requiredAddons[] = { "ace_common", "ace_laser" };
 		version = VERSION;
 	};
 };

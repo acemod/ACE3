@@ -1,11 +1,12 @@
 #include "script_component.hpp"
+
 class CfgPatches {
-	class ADDON {
-		units[] = {};
-		weapons[] = {};
-		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = {
-			     "a3_air_f",
+  class ADDON {
+    units[] = {};
+    weapons[] = {};
+    requiredVersion = REQUIRED_VERSION;
+    requiredAddons[] = {
+      "a3_air_f",
       "a3_air_f_beta",
       "a3_air_f_beta_heli_attack_01",
       "a3_air_f_beta_heli_attack_02",
@@ -491,48 +492,48 @@ class CfgPatches {
       "a3_weapons_f_vests",
       "a3data",
       "extended_eventhandlers", "CBA_UI", "CBA_XEH", "CBA_XEH_A3"
-		};
-		author[] = {"ACE Team"};
-		authorUrl = "";
-		versionDesc = "A.C.E.";
-		versionAct = "['MAIN',_this] execVM '\z\ace\addons\main\about.sqf';";
-		VERSION_CONFIG;
-	};
+    };
+    author[] = {"ACE Team"};
+    authorUrl = "";
+    versionDesc = "A.C.E.";
+    versionAct = "['MAIN',_this] execVM '\z\ace\addons\main\about.sqf';";
+    VERSION_CONFIG;
+  };
 };
 
 class CfgMods {
-	class PREFIX {
-		dir = "@ACE";
-		name = "Core - Advanced Combat Environment";
-		picture = "A3\Ui_f\data\Logos\arma3_expansion_alpha_ca";
-		hidePicture = "true";
-		hideName = "true";
-		actionName = "Website";
-		action = "http://ace.dev-heaven.net";
-		description = "Bugtracker: ";
-	};
+  class PREFIX {
+    dir = "@ACE";
+    name = "Core - Advanced Combat Environment";
+    picture = "A3\Ui_f\data\Logos\arma3_expansion_alpha_ca";
+    hidePicture = "true";
+    hideName = "true";
+    actionName = "Website";
+    action = "http://ace.dev-heaven.net";
+    description = "Bugtracker: ";
+  };
 };
 
 class CfgSettings {
-	class CBA {
-		class Versioning {
-			class PREFIX {
-				level = DEFAULT_VERSIONING_LEVEL;
-				handler = "ace_common_fnc_mismatch";
-				class Dependencies {
-					CBA[]={"cba_main", {1,0,0}, "true"};
-					XEH[]={"cba_xeh", {1,0,0}, "true"};
-				};
-			};
-		};
+  class CBA {
+    class Versioning {
+      class PREFIX {
+        level = DEFAULT_VERSIONING_LEVEL;
+        handler = "ace_common_fnc_mismatch";
+        class Dependencies {
+          CBA[]={"cba_main", {1,0,0}, "true"};
+          XEH[]={"cba_xeh", {1,0,0}, "true"};
+        };
+      };
+    };
 /*
-		class Registry {
-			class PREFIX {
-				removed[] = {};
-			};
-		};
+    class Registry {
+      class PREFIX {
+        removed[] = {};
+      };
+    };
 */
-	};
+  };
 };
 
 #include "CfgModuleCategories.hpp"

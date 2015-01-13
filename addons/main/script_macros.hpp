@@ -47,7 +47,7 @@
 #define ACE_NOGRIP handAnim[] = {}
 #define ACE_DISTANCE_DEFAULT distanceZoomMin = 300; distanceZoomMax = 300
 
-#include "script_macros_optics.hpp"
+// #include "script_macros_optics.hpp" //ToDo
 
 #define ACE_NOZEROING discreteDistance[] = {}; \
 			discreteDistanceInitIndex = 0; \
@@ -177,6 +177,10 @@
 #define DGVAR(varName)	if(isNil "ACE_DEBUG_NAMESPACE") then { ACE_DEBUG_NAMESPACE = []; }; if(!(QUOTE(GVAR(varName)) in ACE_DEBUG_NAMESPACE)) then { PUSH(ACE_DEBUG_NAMESPACE, QUOTE(GVAR(varName))); }; GVAR(varName)
 #define DVAR(varName) 	if(isNil "ACE_DEBUG_NAMESPACE") then { ACE_DEBUG_NAMESPACE = []; }; if(!(QUOTE(varName) in ACE_DEBUG_NAMESPACE)) then { PUSH(ACE_DEBUG_NAMESPACE, QUOTE(varName)); }; varName
 #define DFUNC(var1) TRIPLES(ADDON,fnc,var1)
+#define DEFUNC(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)
+
+#define QFUNC(var1) QUOTE(DFUNC(var1))
+#define QEFUNC(var1,var2) QUOTE(DEFUNC(var1,var2))
 
 #ifdef DISABLE_COMPILE_CACHE
 	#define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
