@@ -23,5 +23,5 @@ _respawnedUnit = _this select 0;
 
 // Restores the gear when the player respawns
 if (GVAR(SavePreDeathGear)) then {
-  [_respawnedUnit, GVAR(unitGear)] call FUNC(restoreGear);
+    [_respawnedUnit, GVAR(unitGear)] call FUNC(restoreGear);
 };

@@ -27,18 +27,18 @@ _toBase = _this select 2;
 // rallypoint names are defined in CfgVehicles.hpp
 
 _rallypoint = ([
-  [
-    objNull,
-    missionNamespace getVariable ["ACE_RallypointExit_West", objNull],
-    missionNamespace getVariable ["ACE_RallypointExit_East", objNull],
-    missionNamespace getVariable ["ACE_RallypointExit_Independent", objNull]
-  ],
-  [
-    objNull,
-    missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
-    missionNamespace getVariable ["ACE_Rallypoint_East", objNull],
-    missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]
-  ]
+    [
+        objNull,
+        missionNamespace getVariable ["ACE_RallypointExit_West", objNull],
+        missionNamespace getVariable ["ACE_RallypointExit_East", objNull],
+        missionNamespace getVariable ["ACE_RallypointExit_Independent", objNull]
+    ],
+    [
+        objNull,
+        missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
+        missionNamespace getVariable ["ACE_Rallypoint_East", objNull],
+        missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]
+    ]
 ] select _toBase) select ([west, east, independent] find _side) + 1;
 
 if (isNull _rallypoint) exitWith {};

@@ -30,8 +30,8 @@ if (_forceRemove) then {
 };
 
 [_body, _bodyRemoveTimer] spawn {
-  sleep (_this select 1);
-  // hideBody takes ~20s till body is fully underground
-  // a better hideBody would make this more aesthetic
-  deleteVehicle (_this select 0);
+    sleep (_this select 1);
+    // hideBody takes ~20s till body is fully underground
+    // a better hideBody would make this more aesthetic
+    deleteVehicle (_this select 0);
 };

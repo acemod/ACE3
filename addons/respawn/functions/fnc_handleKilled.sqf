@@ -25,9 +25,9 @@ _killedUnit = _this select 0;
 GVAR(unitGear) = [];
 
 if (GVAR(SavePreDeathGear)) then {
-  GVAR(unitGear) = [_killedUnit] call FUNC(getAllGear);
+    GVAR(unitGear) = [_killedUnit] call FUNC(getAllGear);
 };
 
 if (missionNamespace getVariable [QGVAR(showFriendlyFireMessage), false]) then {
-  [_this, FUNC(showFriendlyFireMessage), 2] call EFUNC(Core, execRemoteFnc);
+    [_this, FUNC(showFriendlyFireMessage), 2] call EFUNC(Core,execRemoteFnc);
 };
