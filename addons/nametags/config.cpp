@@ -5,11 +5,11 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = 0.60;
-        requiredAddons[] = {"ace_main", "ace_common", "ace_interaction"};
+        requiredAddons[] = { "ace_main", "ace_common", "ace_interaction" };
         version = QUOTE(VERSION);
         versionStr = QUOTE(VERSION);
-        versionAr[] = {VERSION_AR};
-        author[] = {"commy2", "CAA-Picard"};
+        versionAr[] = { VERSION_AR };
+        author[] = { "commy2", "CAA-Picard" };
         authorUrl = "https://github.com/commy2/";
     };
 };
@@ -21,7 +21,7 @@ class ACE_Core_Default_Keys {
     class showNames {
         displayName = "$STR_ACE_NameTags_ShowNames";
         condition = "true";
-        statement = QUOTE( GVAR(ShowNamesTime) = time; if (call FUNC(canShow)) then {call FUNC(doShow);}; );
+        statement = QUOTE(GVAR(ShowNamesTime) = time; if (call FUNC(canShow)) then{ call FUNC(doShow); };);
         key = 29;
         shift = 0;
         control = 0;

@@ -4,7 +4,7 @@
 #define ST_LEFT 0
 
 class RscTitles {
-    titles[]={"ACE_CrewInfo_dialog"};
+    titles[] = { "ACE_CrewInfo_dialog" };
     class ACE_CrewInfo_dialog {
         idd = -1;
         movingEnable = 1;
@@ -12,7 +12,7 @@ class RscTitles {
         fadein = 0;
         fadeout = 999999;
         name = "ACE_CrewInfo_dialog";
-        controlsBackground[] = {"ACE_CrewInfo_text"};
+        controlsBackground[] = { "ACE_CrewInfo_text" };
         onLoad = "uiNamespace setVariable ['ACE_CrewInfo_dialog', _this select 0]";
         onUnload = "uiNamespace setVariable ['ACE_CrewInfo_dialog', objNull]";
 
@@ -32,7 +32,7 @@ class RscTitles {
                 "(profilenamespace getvariable ['IGUI_TEXT_RGB_B',1])",
                 "(profilenamespace getvariable ['IGUI_TEXT_RGB_A',0.8])"
             };
-            text="";
+            text = "";
             class Attributes {
                 align = right;
             };
