@@ -16,7 +16,7 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 
-class ACE_Core_Default_Keys {
+class ACE_Default_Keys {
   class openInteractionMenuNew {
     displayName = "$STR_ACE_Interaction_InteractionMenu";
     condition = "true";
@@ -75,7 +75,7 @@ class ACE_Core_Default_Keys {
   };
 };
 
-class ACE_Core_Options {
+class ACE_Options {
   class Interaction_FlowMenu {
     displayName = "$STR_ACE_Interaction_FlowMenu";
     default = 0;
@@ -97,7 +97,7 @@ class ACE_Parameters_Boolean {
   ACE_Interaction_EnableTeamManagement = 1;
 };
 
-class ACE_Core_canInteractConditions {
+class ACE_canInteractConditions {
   class ACE_Interaction_isNotEscorting {
     condition = QUOTE( !(_player getVariable ['ACE_isEscorting', false]) );
   };
