@@ -30,8 +30,8 @@ _data = [_type] call FUNC(getVehicleData);
 _isAir = _data select 0;
 _data = _data select 1;
 
-_turretUnits = [_data, { _vehicle turretUnit (_x select 0) } ] call EFUNC(Core,map);
-_turretRoles = [_data, { _x select 1 } ] call EFUNC(Core,map);
+_turretUnits = [_data, { _vehicle turretUnit (_x select 0) } ] call EFUNC(common,map);
+_turretRoles = [_data, { _x select 1 } ] call EFUNC(common,map);
 
 
 _roleType = CARGO;
@@ -78,7 +78,7 @@ _roleImages = ROLE_IMAGES;
 {   
     _unit = _x select 0;
     _roleType = _x select 1;
-    _text = _text + format["<t size='1.5' shadow='true'>%1</t> <t size='1.3'><img image='%2'></t><br/>", [_unit] call EFUNC(Core,getName), _roleImages select _roleType];
+    _text = _text + format["<t size='1.5' shadow='true'>%1</t> <t size='1.3'><img image='%2'></t><br/>", [_unit] call EFUNC(common,getName), _roleImages select _roleType];
 } forEach _toShow;
 
 

@@ -44,7 +44,7 @@ _color = if !(group _target == group _player) then {
     [[1, 1, 1, _alpha], [1, 0, 0, _alpha], [0, 1, 0, _alpha], [0, 0, 1, _alpha], [1, 1, 0, _alpha]] select (["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find (if (_target == _player) then {0} else {assignedTeam _target})) max 0
 };
 
-_name = [_target, true] call EFUNC(Core,getName);
+_name = [_target, true] call EFUNC(common,getName);
 
 _rank = TEXTURES_RANKS select ((["PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"] find rank _target) + 1);
 _size = [0, 1] select (profileNamespace getVariable ["ACE_showPlayerRanks", true]);

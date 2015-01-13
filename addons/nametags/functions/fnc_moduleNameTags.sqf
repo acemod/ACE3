@@ -22,8 +22,8 @@ if !(_activated) exitWith {};
 
 GVAR(Module) = true;
 
-[_logic, QGVAR(PlayerNamesViewDistance),  "PlayerNamesViewDistance"     ] call EFUNC(Core,readNumericParameterFromModule);
-[_logic, QGVAR(ShowNamesForAI),           "ShowNamesForAI"              ] call EFUNC(Core,readBooleanParameterFromModule);
-[_logic, QGVAR(CrewInfoVisibility),       "Visibility"                  ] call EFUNC(Core,readNumericParameterFromModule);
+[_logic, QGVAR(PlayerNamesViewDistance),  "PlayerNamesViewDistance"     ] call EFUNC(common,readNumericParameterFromModule);
+[_logic, QGVAR(ShowNamesForAI),           "ShowNamesForAI"              ] call EFUNC(common,readBooleanParameterFromModule);
+[_logic, QGVAR(CrewInfoVisibility),       "Visibility"                  ] call EFUNC(common,readNumericParameterFromModule);
 
 diag_log text "[ACE]: NameTags Module Initialized.";
