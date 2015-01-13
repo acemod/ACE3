@@ -33,7 +33,7 @@ class CfgVehicles {
     function = "ACE_Common_fnc_moduleCheckPBOs";
     scope = 2;
     isGlobal = 1;
-    icon = PATHTOF(UI\IconCheckPBO_ca.paa);
+    icon = QUOTE(PATHTOF(UI\IconCheckPBO_ca.paa));
     class Arguments {
       class Action {
         displayName = "Action";

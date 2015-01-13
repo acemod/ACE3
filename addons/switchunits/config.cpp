@@ -5,7 +5,7 @@ class CfgPatches {
     units[] = {};
     weapons[] = {};
     requiredVersion = 0.60;
-    requiredAddons[] = {"ace_core"};
+    requiredAddons[] = {"ace_main", "ace_common"};
     version = QUOTE(VERSION);
     versionStr = QUOTE(VERSION);
     versionAr[] = {VERSION_AR};
