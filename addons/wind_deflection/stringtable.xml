@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+<Package name="sys_wind_deflection">
+<Container name="STR_ACE_MENU">
+<Key ID="STR_ACE_MENU_MEASUREWIND">
+<German>Wind schätzen</German>
+<English>Measure wind</English>
+<Italian>Measure wind</Italian>
+<Spanish>Measure wind</Spanish>
+<French>Mesurer vent</French>
+<Czech>Změřit sílu větru</Czech>
+<Russian>Измерить ветер</Russian>
+<Polish>Pomiar wiatru</Polish>
+<Hungarian>Szél mérés</Hungarian>
+</Key>
+</Container>
+</Package>
+</Project>
