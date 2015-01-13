@@ -27,8 +27,8 @@ if !(_activated) exitWith {};
 
 GVAR(Module) = true;
 
-[_logic, QGVAR(SavePreDeathGear),             "SavePreDeathGear"]             call EFUNC(Core,readBooleanParameterFromModule);
-[_logic, QGVAR(RemoveDeadBodiesDisonncected), "RemoveDeadBodiesDisonncected"] call EFUNC(Core,readBooleanParameterFromModule);
+[_logic, QGVAR(SavePreDeathGear),             "SavePreDeathGear"]             call EFUNC(common,readBooleanParameterFromModule);
+[_logic, QGVAR(RemoveDeadBodiesDisonncected), "RemoveDeadBodiesDisonncected"] call EFUNC(common,readBooleanParameterFromModule);
 
 if (isServer) then {
     if (GVAR(RemoveDeadBodiesDisonncected)) then {

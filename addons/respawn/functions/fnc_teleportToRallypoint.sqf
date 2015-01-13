@@ -44,4 +44,4 @@ _rallypoint = ([
 if (isNull _rallypoint) exitWith {};
 
 _unit setPosASL (getPosASL _rallypoint);
-[[localize "STR_ACE_Respawn_TeleportedToRallypoint", localize "STR_ACE_Respawn_TeleportedToBase"] select _toBase] call EFUNC(Core, displayTextStructured);
+[[localize "STR_ACE_Respawn_TeleportedToRallypoint", localize "STR_ACE_Respawn_TeleportedToBase"] select _toBase] call EFUNC(common,displayTextStructured);

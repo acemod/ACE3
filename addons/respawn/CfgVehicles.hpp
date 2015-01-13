@@ -1,7 +1,7 @@
 class CfgVehicles {
     class Module_F;
     class ACE_ModuleRespawn : Module_F {
-        author = "$STR_ACE_Core_ACETeam";
+        author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "Respawn System";
         function = FUNC(module);
@@ -31,7 +31,7 @@ class CfgVehicles {
     };
 
     class ACE_ModuleFriendlyFire : Module_F {
-        author = "$STR_ACE_Core_ACETeam";
+        author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "Friendly Fire Messages";
         function = FUNC(moduleFriendlyFire);
@@ -43,7 +43,7 @@ class CfgVehicles {
     };
 
     class ACE_ModuleRallypoint : Module_F {
-        author = "$STR_ACE_Core_ACETeam";
+        author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "Rallypoint System";
         function = FUNC(moduleRallypoint);
@@ -70,7 +70,7 @@ class CfgVehicles {
 
     // static
     class ACE_Rallypoint_West : Flag_NATO_F {
-        author = "$STR_ACE_Core_ACETeam";
+        author = "$STR_ACE_Common_ACETeam";
         displayName = "Rallypoint West Base";
         vehicleClass = QGVAR(Rallypoints);
 
@@ -90,7 +90,7 @@ class CfgVehicles {
     };
 
     class ACE_Rallypoint_East : Flag_CSAT_F {
-        author = "$STR_ACE_Core_ACETeam";
+        author = "$STR_ACE_Common_ACETeam";
         displayName = "Rallypoint East Base";
         vehicleClass = QGVAR(Rallypoints);
 
@@ -110,7 +110,7 @@ class CfgVehicles {
     };
 
     class ACE_Rallypoint_Independent : Flag_AAF_F {
-        author = "$STR_ACE_Core_ACETeam";
+        author = "$STR_ACE_Common_ACETeam";
         displayName = "Rallypoint Independent Base";
         vehicleClass = QGVAR(Rallypoints);
 
@@ -131,7 +131,7 @@ class CfgVehicles {
 
     // moveable
     class ACE_RallypointExit_West : Flag_NATO_F {
-        author = "$STR_ACE_Core_ACETeam";
+        author = "$STR_ACE_Common_ACETeam";
         displayName = "Rallypoint West";
         vehicleClass = QGVAR(Rallypoints);
 
@@ -151,7 +151,7 @@ class CfgVehicles {
     };
 
     class ACE_RallypointExit_East : Flag_CSAT_F {
-        author = "$STR_ACE_Core_ACETeam";
+        author = "$STR_ACE_Common_ACETeam";
         displayName = "Rallypoint East";
         vehicleClass = QGVAR(Rallypoints);
 
@@ -171,7 +171,7 @@ class CfgVehicles {
     };
 
     class ACE_RallypointExit_Independent : Flag_AAF_F {
-        author = "$STR_ACE_Core_ACETeam";
+        author = "$STR_ACE_Common_ACETeam";
         displayName = "Rallypoint Independent";
         vehicleClass = QGVAR(Rallypoints);
 

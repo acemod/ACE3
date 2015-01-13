@@ -38,7 +38,7 @@ _this spawn {
 
     _position set [2, 0];
 
-    [localize "STR_ACE_Respawn_Deploy"] call EFUNC(Core,displayTextStructured);
+    [localize "STR_ACE_Respawn_Deploy"] call EFUNC(common,displayTextStructured);
 
     sleep 5;
     _rallypoint setPosATL _position;
@@ -50,5 +50,5 @@ _this spawn {
     _marker setMarkerTextLocal format ["%1:%2", [date select 3, 2, 0] call CBA_fnc_FORMATNumber, [date select 4, 2, 0] call CBA_fnc_FORMATNumber];
     */
 
-    [localize "STR_ACE_Respawn_Deploy"] call EFUNC(Core,displayTextStructured);
+    [localize "STR_ACE_Respawn_Deploy"] call EFUNC(common,displayTextStructured);
 };
