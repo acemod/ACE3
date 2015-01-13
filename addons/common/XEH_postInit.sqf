@@ -8,7 +8,7 @@ QGVAR(remoteFnc) addPublicVariableEventHandler {
 [missionNamespace] call FUNC(executePersistent);
 
 // check previous version number from profile
-_currentVersion = getText (configFile >> "CfgPatches" >> "ACE_Common" >> "version");
+_currentVersion = getText (configFile >> "CfgPatches" >> ADDON >> "version");
 _previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
 
 if (_currentVersion != _previousVersion) then {

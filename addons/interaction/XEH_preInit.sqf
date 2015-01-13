@@ -2,13 +2,13 @@
 
 PREP(addInteraction);
 PREP(addInteractionSelf);
-PREP(AddSelectableItem);
+PREP(addSelectableItem);
 PREP(addToTooltip);
 PREP(applyButtons);
 PREP(canInteractWith);
 PREP(canTapShoulder);
+PREP(getActions);
 PREP(getActions2);
-PREP(GetActions);
 PREP(getDoor);
 PREP(getDoorAnimations);
 PREP(getDown);

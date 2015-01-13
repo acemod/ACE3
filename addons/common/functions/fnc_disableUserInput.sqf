@@ -9,7 +9,7 @@
  * Return value:
  * Nothing
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_state", "_dlg"];
 

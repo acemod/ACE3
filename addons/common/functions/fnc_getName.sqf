@@ -10,7 +10,7 @@
  * Return value:
  * The name.
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_unit", "_showEffective", "_name"];
 

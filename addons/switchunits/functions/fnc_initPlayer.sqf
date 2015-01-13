@@ -30,7 +30,7 @@ if (vehicle _playerUnit == _playerUnit) then {
   _playerUnit allowDamage false;
 
   GVAR(OriginalUnit) = _playerUnit;
-  GVAR(OriginalName) = [_playerUnit] call EFUNC(Core, getName);
+  GVAR(OriginalName) = [_playerUnit] call EFUNC(common,getName);
   GVAR(OriginalGroup) = group _playerUnit;
 
   // remove all starting gear of a player
@@ -44,7 +44,7 @@ if (vehicle _playerUnit == _playerUnit) then {
   _playerUnit linkItem  "ItemMap";
   removeUniform _playerUnit;
 
-  [_playerUnit, "ACE_SwitchUnits", true] call EFUNC(Core, setForceWalkStatus);
+  [_playerUnit, "ACE_SwitchUnits", true] call EFUNC(common,setForceWalkStatus);
 
-  [_playerUnit, _sides] call AFUNC(addMapFunction);
+  [_playerUnit, _sides] call FUNC(addMapFunction);
 };

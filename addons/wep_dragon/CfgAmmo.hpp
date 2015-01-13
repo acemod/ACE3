@@ -48,7 +48,7 @@ class CfgAmmo {
 	};
 	
 	class ace_missile_dragon : M_47_AT_EP1 {
-		model = PATHTOF(models\dragon.p3d);
+		model = QUOTE(PATHTOF(models\dragon.p3d));
 		maxSpeed = 120;
 		thrust = 0;
 		initTime = 0;

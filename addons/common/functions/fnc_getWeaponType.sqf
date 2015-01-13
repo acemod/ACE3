@@ -9,7 +9,7 @@
  * Return value:
  * Slot index of the given class name, 1: primary, 2: secondary, 3: handgun, else: -1 (Number)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_weapon", "_type", "_index"];
 
