@@ -10,12 +10,14 @@
  * Nothing
  */
 
+#include "script_component.hpp"
+
 private ["_player", "_display"];
 
 _player = _this select 0;
 
-_player removeMagazines "AGM_PreloadedMissileDummy";
-_player removeMagazines "AGM_FiredMissileDummy";
+_player removeMagazines "ACE_PreloadedMissileDummy";
+_player removeMagazines "ACE_FiredMissileDummy";
 
 disableSerialization;
 _display = _this select 1;
@@ -26,7 +28,7 @@ private ["_launcher", "_control", "_config"];
 
 _launcher = secondaryWeapon _player;
 
-if (_launcher == "" || {getText (configFile >> "CfgWeapons" >> _launcher >> "AGM_UsedTube") == ""}) then {
+if (_launcher == "" || {getText (configFile >> "CfgWeapons" >> _launcher >> "ACE_UsedTube") == ""}) then {
   _control = _display displayCtrl 627;
   _config = configFile >> "RscDisplayInventory" >> "controls" >> "SlotSecondaryMagazine";
   _control ctrlSetPosition [getNumber (_config >> "x"), getNumber (_config >> "y"), getNumber (_config >> "w"), getNumber (_config >> "h")];

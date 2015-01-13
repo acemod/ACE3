@@ -9,13 +9,16 @@
  * Return value:
  * Nothing
  */
+ 
+#include "script_component.hpp"
 
 private ["_unit", "_tube", "_projectile"];
 
 _unit = _this select 0;
-_tube = getText (configFile >> "CfgWeapons" >> _this select 1 >> "AGM_UsedTube");
+_tube = getText (configFile >> "CfgWeapons" >> (_this select 1) >> "ACE_UsedTube");
 _projectile = _this select 6;
 
+if (!local _unit) exitWith {};
 if (_tube == "") exitWith {};
 
 private "_items";
@@ -29,7 +32,7 @@ _unit selectWeapon _tube;
 } forEach _items;
 
 // AI
-if !([_unit] call AGM_Core_fnc_isPlayer) then {
+if !([_unit] call EFUNC(common,isPlayer)) then {
   [_unit, _tube, _projectile] spawn {
     _unit = _this select 0;
     _tube = _this select 1;

@@ -10,6 +10,8 @@
  * Nothing
  */
 
+#include "script_component.hpp"
+
 private ["_unit", "_launcher", "_config"];
 
 _unit = _this select 0;
@@ -17,7 +19,7 @@ _launcher = _this select 1;
 
 _config = configFile >> "CfgWeapons" >> _launcher;
 
-if (isClass _config && {getText (_config >> "AGM_UsedTube") != ""} && {getNumber (_config >> "AGM_isUsedLauncher") != 1} && {count secondaryWeaponMagazine _unit == 0}) then {
+if (isClass _config && {getText (_config >> "ACE_UsedTube") != ""} && {getNumber (_config >> "ACE_isUsedLauncher") != 1} && {count secondaryWeaponMagazine _unit == 0}) then {
   private ["_magazine", "_isLauncherSelected"];
 
   _magazine = getArray (_config >> "magazines") select 0;
