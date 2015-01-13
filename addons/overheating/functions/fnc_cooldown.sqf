@@ -11,7 +11,7 @@
  * Return value:
  * New temperature (number)
  */
-#include "script_component.hpp"
+#include "\z\ace\addons\overheating\script_component.hpp"
 
 private ["_temperature", "_barrelMass", "_totalTime", "_barrelSurface", "_time", "_deltaTime"];
 

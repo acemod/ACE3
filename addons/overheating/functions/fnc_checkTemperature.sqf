@@ -1,5 +1,5 @@
 // by commy2 and CAA-Picard
-#include "script_component.hpp"
+#include "\z\ace\addons\overheating\script_component.hpp"
 
 _this spawn {
   _player = _this select 0;

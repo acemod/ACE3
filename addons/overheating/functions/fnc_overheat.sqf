@@ -1,5 +1,5 @@
 // by commy2 and CAA-Picard
-#include "script_component.hpp"
+#include "\z\ace\addons\overheating\script_component.hpp"
 
 private ["_unit", "_weapon", "_ammo", "_projectile", "_velocity", "_variableName", "_overheat", "_temperature", "_time", "_energyIncrement", "_barrelMass", "_scaledTemperature"];
 

@@ -1,5 +1,5 @@
 // by commy2
-#include "script_component.hpp"
+#include "\z\ace\addons\overheating\script_component.hpp"
 
 private ["_unit", "_weapon", "_skipAnim", "_jammedWeapons"];
 

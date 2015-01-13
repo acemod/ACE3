@@ -1,5 +1,5 @@
 // based on KK_fnc_playerWeaponMulfunction from KillzoneKid
-#include "script_component.hpp"
+#include "\z\ace\addons\overheating\script_component.hpp"
 
 private ["_unit", "_weapon", "_jammedWeapons"];
 
