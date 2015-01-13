@@ -8,7 +8,6 @@ _weapon = _this select 1;
 _ammo = _this select 4;
 _magazine = _this select 5;
 
-// if (_this select 0 == vehicle ACE_player && {currentVisionMode (_this select 0) == 1}) then {_this call AGM_NightVision_fnc_blending};
 if ((_vehicle != (vehicle ACE_player)) || {(currentVisionMode _vehicle) != 1}) exitWith {};
 
 _player = ACE_player;

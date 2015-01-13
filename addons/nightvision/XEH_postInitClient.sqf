@@ -28,4 +28,11 @@ GVAR(ppEffectMuzzleFlash) ppEffectForceInNVG true;
 GVAR(ppEffectMuzzleFlash) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
 GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 
-0 spawn COMPILE_FILE(nightVision); //ToDo
+//Setup global variables for the ppEffectUpdater
+GVAR(lastFrameView) = "";
+GVAR(lastFrameVehicle) = objNull;
+GVAR(lastFrameTurret) = [-1];
+GVAR(lastFrameHMD) = "";
+GVAR(currentMode) = 0;
+
+[FUNC(updatePPEffectsEachFrame), 0, []] call CBA_fnc_addPerFrameHandler;
