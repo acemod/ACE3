@@ -23,6 +23,6 @@ private "_ex";
 _ex=_this select 0;
 _ex setDir (_this select 1);
 if ((_this select 2) != 0) then {
-	[_ex, _this select 2, 0] call BIS_fnc_setPitchBank;
+	[_ex, _this select 2, 0] call CALLSTACK(BIS_fnc_setPitchBank);
 };
 //_ex setVectorUp (surfaceNormal _pos);

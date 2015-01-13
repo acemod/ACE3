@@ -58,7 +58,7 @@ GVAR(TweakedAngle) = 180;
   if (ACE_Modifier == 0) then {
     GVAR(Setup) setDir (GVAR(TweakedAngle) + getDir _player);
   };
-}] call BIS_fnc_addStackedEventHandler;
+}] call CALLSTACK(BIS_fnc_addStackedEventHandler);
 [localize "STR_ACE_Explosives_PlaceAction", localize "STR_ACE_Explosives_CancelAction",
   localize "STR_ACE_Explosives_ScrollAction"] call EFUNC(Interaction,showMouseHint);
 _unit setVariable [QGVAR(Place), [_unit, "DefaultAction",

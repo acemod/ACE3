@@ -18,13 +18,10 @@
 		[_explosive, 10] call ACE_Explosives_fnc_startTimer;
 */
 #include "\z\ace\explosives\script_component.hpp"
-_this spawn { // TODO: use scheduled delay execution
-	private ["_explosive", "_timer"];
+[{
+	private ["_explosive"];
 	_explosive = _this select 0;
-	_timer = _this select 1;
-
-	sleep _timer;
 	if (!isNull _explosive) then {
 		[_explosive, -1, [_explosive, 0], true] call FUNC(detonateExplosive);
 	};
-};
+},_this select 1, _this] call CALLSTACK(CBA_fnc_addPerFrameHandler);

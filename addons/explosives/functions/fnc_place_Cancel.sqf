@@ -18,7 +18,7 @@
 */
 #include "\z\ace\explosives\script_component.hpp"
 if (GVAR(pfeh_running)) then {
-	[QGVAR(Placement),"OnEachFrame"] call BIS_fnc_removeStackedEventHandler;
+	[QGVAR(Placement),"OnEachFrame"] call CALLSTACK(BIS_fnc_removeStackedEventHandler);
 	GVAR(pfeh_running) = false;
 };
 if (!isNull (GVAR(Setup))) then {
