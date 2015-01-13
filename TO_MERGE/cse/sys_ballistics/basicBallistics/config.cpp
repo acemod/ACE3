@@ -1,26 +1,24 @@
+#include "script_component.hpp"
+
 class CfgPatches {
-	class cse_sys_winddeflection {
+	class ADDON {
 		units[] = {};
 		weapons[] = {};
-		requiredVersion = 1.0;
-		requiredAddons[] = {"cse_f_eh","cse_main"};
-		versionDesc = "CSE Wind Deflection";
-		version = "0.10.0_rc";
-		author[] = {"Combat Space Enhancement"};
+		requiredVersion = REQUIRED_VERSION;
+		requiredAddons[] = {"ACE_main"};
+		versionDesc = "ACE Wind Deflection";
+		version = VERSION;
+		author[] = {$STR_ACE_Core_ACETeam};
 		authorUrl = "http://csemod.com";
 	};
 };
 
-class cse_sys_winddeflection {
+class ADDON {
     class PreloadAddons {
-       class cse_sys_winddeflection {
-          list[] = {"cse_sys_winddeflection"};
+       class ADDON {
+          list[] = {QUOTE(ADDON)};
        };
     };
 };
-#include "CfgAmmo.h"
+
 #include "CfgVehicles.h"
-#include "CfgMagazines.h"
-#include "CfgFunctions.h"
-#include "Combat_Space_Enhancement.h"
-#include "GUI.h"
