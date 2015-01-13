@@ -16,7 +16,9 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 
-class ACE_Core_Default_Keys {
+
+// class EGVAR(common,Default_Keys) {  //???
+class ACE_common_Default_Keys {
   class increaseNVGBrightness {
     displayName = "$STR_ACE_NightVision_IncreaseNVGBrightness";
     condition = QUOTE( currentVisionMode _player == 1 );
