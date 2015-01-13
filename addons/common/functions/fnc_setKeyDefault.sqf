@@ -17,7 +17,7 @@ _overwrite = _this select 0;
 
 _saveProfile = false;
 
-_config = configFile >> QGVAR(Default_Keys);
+_config = configFile >> "ACE_Default_Keys";
 _count = count _config;
 
 for "_index" from 0 to (_count - 1) do {
@@ -38,7 +38,7 @@ for "_index" from 0 to (_count - 1) do {
   };
 };
 
-_config = configFile >> QGVAR(Options);
+_config = configFile >> "ACE_Options";
 _count = count _config;
 
 for "_index" from 0 to (_count - 1) do {

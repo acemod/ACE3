@@ -39,8 +39,8 @@ class CfgFunctions {
 class CfgVehicles {
   class Man;
   class CAManBase: Man {
-    class AGM_SelfActions {
-      class AGM_Equipment {
+    class ACE_SelfActions {
+      class ACE_Equipment {
         class GVAR(Attach) {
           displayName = "$STR_AGM_Attach_AttachDetach";
           condition = QUOTE( [_player, ''] call FUNC(canAttach) );

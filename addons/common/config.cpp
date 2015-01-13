@@ -51,13 +51,13 @@ class ACE_Rsc_Control_Base {
     h = 0;
 };
 
-class GVAR(canInteractConditions) {
+class ACE_canInteractConditions {
     class GVAR(notOnMap) {
         condition = "!visibleMap";
     };
 };
 
-class GVAR(Options) {
+class ACE_Options {
     class enableNumberHotkeys {
         displayName = "$STR_ACE_Common_EnableNumberHotkeys";
         default = 1;
@@ -72,7 +72,7 @@ class GVAR(Options) {
 /*
 class RscControlsGroupNoScrollbars;
 class RscAttributeInventory: RscControlsGroupNoScrollbars {
-    onSetFocus = "[_this,""RscAttributeInventory"",'CuratorCommon'] call (uinamespace getvariable ""BIS_fnc_initCuratorAttribute""); _this select 0 call ACE_CuratorFix_fnc_addUnloadEventhandler;";
+    onSetFocus = "[_this,""RscAttributeInventory"",'CuratorCommon'] call (uinamespace getvariable ""BIS_fnc_initCuratorAttribute""); _this select 0 call ACE_Common_fnc_addCuratorUnloadEventhandler;";
 };
 */
 

@@ -1,7 +1,7 @@
 // by commy2
 #include "\z\ace\addons\common\script_component.hpp"
 
-_config = configFile >> QGVAR(Default_Keys);
+_config = configFile >> "ACE_Default_Keys";
 _count = count _config;
 
 _header = format ["_keyCode = [_this select 1, _this select 2, _this select 3, _this select 4] call %1; _keyIndex = floor _keyCode; if (_keyIndex == 0) exitWith {false}; if (!(profileNamespace getVariable ['ACE_enableNumberHotkeys', true]) && {_keyIndex < 12} && {_keyIndex > 1} && {_keyCode mod 1 == 0}) exitWith {false}; _time = time; _player = ACE_player; _vehicle = vehicle _player; _isInput = false;", QUOTE(FUNC(convertKeyCode))];
@@ -26,7 +26,7 @@ for "_index" from 0 to (_count - 1) do {
   _statement = getText (_configFile >> "statement");
 
   _exceptions = getArray (_configFile >> "exceptions");
-  _canInteract = format ["%1 call GVAR(canInteract)", _exceptions];
+  _canInteract = format [QUOTE(%1 call GVAR(canInteract)), _exceptions];
 
   _conditionName = format ["ACE_Key_%1_Condition", _keyName];
   _statementName = format ["ACE_Key_%1_Statement", _keyName];

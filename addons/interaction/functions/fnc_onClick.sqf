@@ -19,7 +19,7 @@ _subMenu = _action select 4;
 
 // back
 if (_index == -1) exitWith {
-	call FUNC(MainButton);
+	call GVAR(MainButton);
 };
 
 if (count _subMenu < 2) then {
