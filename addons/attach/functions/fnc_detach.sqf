@@ -16,6 +16,7 @@ private ["_unit", "_itemName", "_count", "_attachedItem"];
 
 _unit = _this select 0;
 _itemName = _unit getVariable [QGVAR(ItemName), ""];
+_attachedItem = _unit getVariable [QGVAR(Item), objNull];
 
 // Check if unit has an attached item
 if (_itemName == "") exitWith {};
@@ -29,19 +30,13 @@ if ((count items _unit) + (count magazines _unit) <= _count) exitWith {
 
 if (_itemName == "B_IR_Grenade" or _itemName == "O_IR_Grenade" or _itemName == "I_IR_Grenade") then {
   // Hack for dealing with X_IR_Grenade effect not dissapearing on deleteVehicle
-  [_unit getVariable QGVAR(Item), _unit] spawn {
-    _attachedItem = _this select 0;
-    _unit = _this select 1;
-    detach _attachedItem;
-    _attachedItem setPos [getPos _unit select 0, getPos _unit select 1, (getPos _unit select 2) -1000];
-    sleep 0.5;
-    deleteVehicle _attachedItem;
-  };
-}
-else
-{
+  detach _attachedItem;
+  _attachedItem setPos [getPos _unit select 0, getPos _unit select 1, ((getPos _unit select 2) - 1000)];
+  // Delete attached item after 0.5 seconds
+  [FUNC(detachFix), 0.5, [_attachedItem, (time + 0.5)]] call CBA_fnc_addPerFrameHandler;
+} else {
   // Delete attached item
-  deleteVehicle (_unit getVariable QGVAR(Item));
+  deleteVehicle _attachedItem;
 };
 
 // Reset unit variables
