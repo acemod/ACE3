@@ -7,7 +7,7 @@ _unit = _this select 0;
 _vehicle = _this select 1;
 
 // allow interaction with all cargo slots and all ffv slots
-_cargo = [_vehicle, ["cargo", "ffv"], true] call EFUNC(core,getVehicleCrew);
+_cargo = [_vehicle, ["cargo", "ffv"], true] call EFUNC(common,getVehicleCrew);
 
 // you can only interact if you are in cargo or ffv yourself. exit otherwise
 if !(_unit in _cargo) exitWith {};
@@ -23,8 +23,8 @@ _actions = [localize "STR_ACE_Interaction_InteractionMenu", localize "STR_ACE_In
   if (_x != _unit) then {
     _actions = [
       _actions,
-      [_x] call EFUNC(core,getName),
-      PATHOD(UI\dot_ca.paa),
+      [_x] call EFUNC(common,getName),
+      QUOTE(PATHTOF(UI\dot_ca.paa)),
       _forEachIndex
     ] call FUNC(AddSelectableItem);
   };

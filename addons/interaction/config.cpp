@@ -5,7 +5,7 @@ class CfgPatches {
     units[] = {};
     weapons[] = {};
     requiredVersion = 0.60;
-    requiredAddons[] = {ACE_Core};
+    requiredAddons[] = {"ace_common"};
     version = "0.95";
     versionStr = "0.95";
     versionAr[] = {0,95,0};
@@ -16,7 +16,7 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 
-class ACE_Core_Default_Keys {
+class ACE_Default_Keys {
   class openInteractionMenuNew {
     displayName = "$STR_ACE_Interaction_InteractionMenu";
     condition = "true";
@@ -75,7 +75,7 @@ class ACE_Core_Default_Keys {
   };
 };
 
-class ACE_Core_Options {
+class ACE_Options {
   class Interaction_FlowMenu {
     displayName = "$STR_ACE_Interaction_FlowMenu";
     default = 0;
@@ -97,7 +97,7 @@ class ACE_Parameters_Boolean {
   ACE_Interaction_EnableTeamManagement = 1;
 };
 
-class ACE_Core_canInteractConditions {
+class ACE_canInteractConditions {
   class ACE_Interaction_isNotEscorting {
     condition = QUOTE( !(_player getVariable ['ACE_isEscorting', false]) );
   };
@@ -522,8 +522,8 @@ class CfgVehicles {
       class ACE_Push {
         displayName = "$STR_ACE_Interaction_Push";
         distance = 4;
-        condition = QUOTE( getMass _target < 1000 and alive _target );
-        //statement = QUOTE( [_target, [2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5]] call FUNC(push); );
+        condition = QUOTE(getMass _target < 1000 && {alive _target});
+        statement = QUOTE([ARR_2(_target, [ARR_3(2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5)])] call FUNC(push););
         showDisabled = 0;
         priority = -1;
       };

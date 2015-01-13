@@ -5,7 +5,7 @@ class CfgPatches {
     units[] = {};
     weapons[] = {"AGM_IR_Strobe_Item"};
     requiredVersion = 0.60;
-    requiredAddons[] = {AGM_Core, AGM_Interaction};
+    requiredAddons[] = {"ace_common", "ace_interaction"};
     version = "0.95";
     versionStr = "0.95";
     versionAr[] = {0,95,0};

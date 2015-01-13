@@ -23,7 +23,7 @@
 #include "script_component.hpp"
 
 private ["_player", "_vehicle", "_mainButtonAction", "_object", "_index", "_actions", "_result", "_menuType"];
-#define DEFAULT_ICON PATHOF(UI\dot_ca.paa)
+#define DEFAULT_ICON QUOTE(PATHOF(UI\dot_ca.paa))
 #define DEFAULT_DISTANCE 4 // seems to be 4
 _player = ACE_player;
 _vehicle = vehicle _player;
@@ -44,7 +44,7 @@ GVAR(Target) = _this select 1;
 _object = GVAR(Target);
 
 if (_menuType == 0 && {(isNull (_object) || {!([_object, 4] call FUNC(isInRange))})}) exitWith {};
-if !([_player, _object] call EFUNC(core,canInteractWith)) exitWith {};
+if !([_player, _object] call EFUNC(common,canInteractWith)) exitWith {};
 
 // add actions or self actions of GVAR(Target)
 _parents = [configFile >> "CfgVehicles" >> typeOf _object, true] call BIS_fnc_returnParents;

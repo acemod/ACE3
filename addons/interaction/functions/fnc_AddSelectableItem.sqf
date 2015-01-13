@@ -26,7 +26,7 @@ _picture = _this select 2;
 _data = _this select 3;
 
 if (_picture == "" || _picture == "PictureThing") then {
-	_picture = PATHTOF(UI\dot_ca.paa);
+	_picture = QUOTE(PATHTOF(UI\dot_ca.paa));
 };
 
 if ((profileNamespace getVariable [QGVAR(FlowMenu), false])) then {

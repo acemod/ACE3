@@ -9,13 +9,13 @@ _target = _this select 1;
 if (_target != ACE_player) exitWith {
   addCamShake [4, 0.5, 5];
   if !(local _target) then {
-    [[_tapper, _target], QUOTE(FUNC(tapShoulder)), _target] call EFUNC(execRemoteFnc);
+    [[_tapper, _target], QUOTE(DFUNC(tapShoulder)), _target] call EFUNC(common,execRemoteFnc);
   };
 };
 
 addCamShake [4, 0.5, 5];
 
-//_message = format ["%1 tapped you on your shoulder.", [_unit] call EFUNC(core,getName)];
+//_message = format ["%1 tapped you on your shoulder.", [_unit] call EFUNC(common,getName)];
 _message = localize "STR_ACE_Interaction_YouWereTapped";
 
-[_message] call EFUNC(core,displayTextStructured);
+[_message] call EFUNC(common,displayTextStructured);

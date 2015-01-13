@@ -12,4 +12,4 @@ if (isNull (findDisplay 1713999)) then {
 	(findDisplay 1713999) closeDisplay 1;
 };
 
-[_player, "interactionMenuOpened", [_player, GVAR(Target), 0]] call EFUNC(core,callCustomEventHandlers);
+[_player, "interactionMenuOpened", [_player, GVAR(Target), 0]] call EFUNC(common,callCustomEventHandlers);
