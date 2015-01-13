@@ -20,9 +20,9 @@ class ACE_Default_Keys {
   class openInteractionMenuNew {
     displayName = "$STR_ACE_Interaction_InteractionMenu";
     condition = "true";
-    statement = QUOTE( call FUNC(onButtonDown) );
-    conditionUp = QUOTE( !isNull (findDisplay 1713999) && {profileNamespace getVariable [QUOTE(QGVAR(AutoCloseMenu)), false]} );
-    statementUp = QUOTE( if (GVAR(MenuType) mod 2 == 0) then {call FUNC(onButtonUp)}; );
+    statement = QUOTE(call FUNC(onButtonDown));
+    conditionUp = QUOTE(!isNull (findDisplay 1713999) && {profileNamespace getVariable [ARR_2(QUOTE(QGVAR(AutoCloseMenu)), false)]});
+    statementUp = QUOTE(if (GVAR(MenuType) mod 2 == 0) then {call FUNC(onButtonUp)};);
     exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Medical_canTreat", "ACE_Interaction_isNotEscorting", "ACE_Interaction_isNotSwimming"};
     key = 219;
     shift = 0;
@@ -32,9 +32,9 @@ class ACE_Default_Keys {
   class openInteractionMenuSelfNew {
     displayName = "$STR_ACE_Interaction_InteractionMenuSelf";
     condition = "true";
-    statement = QUOTE( call FUNC(onButtonDownSelf) );
-    conditionUp = QUOTE( !isNull (findDisplay 1713999) && {profileNamespace getVariable [QUOTE(QGVAR(AutoCloseMenu)), false]} );
-    statementUp = QUOTE( if (EGVAR(interaction,MenuType) mod 2 == 1) then {call FUNC(onButtonUp)}; );
+    statement = QUOTE(call FUNC(onButtonDownSelf));
+    conditionUp = QUOTE(!isNull (findDisplay 1713999) && {profileNamespace getVariable [ARR_2(QUOTE(QGVAR(AutoCloseMenu)), false)]});
+    statementUp = QUOTE(if (EGVAR(interaction,MenuType) mod 2 == 1) then {call FUNC(onButtonUp)};);
     exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Medical_canTreat", "ACE_Interaction_isNotEscorting", "ACE_Interaction_isNotSwimming", "ACE_Core_notOnMap"};
     key = 219;
     shift = 0;
@@ -43,8 +43,8 @@ class ACE_Default_Keys {
   };
   class openDoor {
     displayName = "$STR_ACE_Interaction_OpenDoor";
-    condition = QUOTE( !GVAR(isOpeningDoor) && {[2] call FUNC(getDoor) select 1 != ''} );
-    statement = QUOTE( call ACE_Interaction_fnc_openDoor );
+    condition = QUOTE(!GVAR(isOpeningDoor) && {[2] call FUNC(getDoor) select 1 != ''});
+    statement = QUOTE(call ACE_Interaction_fnc_openDoor);
     conditionUp = QUOTE( GVAR(isOpeningDoor) );
     statementUp = QUOTE( GVAR(isOpeningDoor) = false;);
     key = 57;
@@ -54,8 +54,8 @@ class ACE_Default_Keys {
   };
   class tapShoulder {
     displayName = "$STR_ACE_Interaction_TapShoulder";
-    condition = QUOTE( [_player, cursorTarget] call FUNC(canTapShoulder) );
-    statement = QUOTE( [_player, cursorTarget] call FUNC(tapShoulder); );
+    condition = QUOTE([_player, cursorTarget] call FUNC(canTapShoulder));
+    statement = QUOTE([_player, cursorTarget] call FUNC(tapShoulder););
     key = 20;
     shift = 1;
     control = 0;
@@ -64,9 +64,9 @@ class ACE_Default_Keys {
   class modifierKey {
     displayName = "$STR_ACE_Interaction_ModifierKey";
     condition = "";
-    statement = QUOTE( GVAR(Modifier) = 1; );
+    statement = QUOTE(GVAR(Modifier) = 1;);
     conditionUp = "";
-    statementUp = QUOTE( GVAR(Modifier) = 0; );
+    statementUp = QUOTE(GVAR(Modifier) = 0;);
     exceptions[] = {"ACE_Drag_isNotDragging"};
     key = 29;
     shift = 0;
