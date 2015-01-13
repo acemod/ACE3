@@ -17,9 +17,9 @@ _anim = [_this, 1, "",[""]] call BIS_fnc_Param;
 if (!local _unit) then {
 	if (count _this >2) then {
 		_persistent = [_this, 2, false, [false]] call BIS_fnc_Param;
-		[[_unit,_anim], QUOTE(FUNC(playMoveNow)), _unit, _persistent] spawn BIS_fnc_MP;
+		[[_unit,_anim], QUOTE(FUNC(playMoveNow)), _unit, _persistent] spawn EFUNC(common,execRemoteFnc);
 	} else {
-		[[_unit,_anim], QUOTE(FUNC(playMoveNow)), _unit, false] spawn BIS_fnc_MP;
+		[[_unit,_anim], QUOTE(FUNC(playMoveNow)), _unit, false] spawn EFUNC(common,execRemoteFnc);
 	};
 } else {
 	[_unit,_anim] call FUNC(playMoveNow);

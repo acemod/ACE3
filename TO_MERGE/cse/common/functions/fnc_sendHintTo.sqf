@@ -17,7 +17,7 @@ _message = _this select 1;
 
 if (isPlayer _reciever) then {
 	if (!local _reciever) then {
-		[_this, QUOTE(FUNC(sendHintTo)), _reciever, false] spawn BIS_fnc_MP;
+		[_this, QUOTE(FUNC(sendHintTo)), _reciever, false] spawn EFUNC(common,execRemoteFnc);
 	} else {
 		 hintsilent format ["%1",_message];
 	};

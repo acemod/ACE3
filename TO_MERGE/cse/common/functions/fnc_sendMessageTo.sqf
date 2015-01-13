@@ -17,7 +17,7 @@ _message = _this select 1;
 
 if (isPlayer _reciever) then {
 	if (!local _reciever) then {
-	[_this, QUOTE(FUNC(sendMessageTo)), _reciever, false] spawn BIS_fnc_MP;
+	[_this, QUOTE(FUNC(sendMessageTo)), _reciever, false] spawn EFUNC(common,execRemoteFnc);
 	} else {
 		GVAR(LOGIC_OBJECT) globalChat format ["%1",_message];
 	};

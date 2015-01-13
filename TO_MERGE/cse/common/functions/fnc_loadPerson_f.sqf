@@ -35,6 +35,6 @@ if (!isNull _vehicle) then {
 	[_unit, true, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide_f);
 	[_caller,objNull] call FUNC(carryObj);
 	[_unit,objNull] call FUNC(carryObj);
-	[[_unit, _vehicle,_caller], QUOTE(FUNC(loadPersonLocal_F)), _unit, false] spawn BIS_fnc_MP;
+	[[_unit, _vehicle,_caller], QUOTE(FUNC(loadPersonLocal_F)), _unit, false] spawn EFUNC(common,execRemoteFnc);
 };
 _vehicle

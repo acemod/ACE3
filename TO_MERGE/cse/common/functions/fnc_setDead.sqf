@@ -19,7 +19,7 @@ if (count _this >= 2) then {
 
 if (!alive _unit) exitwith{};
 if (!local _unit) exitwith {
-	[[_unit, _force], QUOTE(FUNC(setDead)), _unit, false] spawn BIS_fnc_MP;
+	[[_unit, _force], QUOTE(FUNC(setDead)), _unit, false] spawn EFUNC(common,execRemoteFnc);
 	diag_log format["WARNING: ace_common_fnc_setDead triggered on non local unit %1", _unit];
 };
 if (isnil QGVAR(ENABLE_REVIVE_F)) then {

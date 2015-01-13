@@ -15,7 +15,7 @@ _unit = _this select 0;
 _dAnim = ([_unit] call FUNC(getDeathAnim));
 if !([_unit] call FUNC(canGoUnconsciousState)) exitwith{};
 if (!local _unit) exitwith {
-	[[_unit], QUOTE(FUNC(setUnconsciousState)), _unit, false] spawn BIS_fnc_MP;
+	[[_unit], QUOTE(FUNC(setUnconsciousState)), _unit, false] spawn EFUNC(common,execRemoteFnc);
 };
 
 // get rid of the object we are carrying, before we go unconscious.

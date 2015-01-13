@@ -22,7 +22,7 @@ if (!isnil "_info") then {
 	_requestMessage = _info select 3;
 	_callBack = _info select 4;
 	_replyParams = [_info, _accepted];
-	[_replyParams, QUOTE(FUNC(requestCallback)), _caller, false] spawn BIS_fnc_MP;
+	[_replyParams, QUOTE(FUNC(requestCallback)), _caller, false] spawn EFUNC(common,execRemoteFnc);
 	_unit setvariable [_id, nil];
 };
 
