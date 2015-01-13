@@ -5,25 +5,28 @@
  *
  * Arguments:
  * 0: The vehicle
- * 1: Range Override (Optional)
  *
  * Return Value:
  * none
  */
 
+#include "script_component.hpp"
+
 private ["_ammoType", "_viewDiff", "_posArrival", "_airFriction", "_timeToLive", "_maxElev", "_vehicle", "_posTarget", "_distance", "_simulationStep", "_posX", "_velocityMagnitude", "_magazines", "_movingAzimuth", "_FCSElevation", "_velocityX", "_velocityY", "_weaponDirection", "_velocityTarget", "_FCSAzimuth", "_FCSMagazines", "_dirArrival", "_i", "_magazineType", "_angleTarget", "_offset", "_timeToTarget", "_initSpeed"];
 
 _vehicle = _this select 0;
-_distance = _this select 1;
+_distance = call FUNC(getRange);
+
+if !(GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
 
 _magazines = magazines _vehicle;
 
 if (_distance == 0) then {
   _distance = [
-    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "AGM_FCSDistanceInterval"),
-    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "AGM_FCSMaxDistance"),
-    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "AGM_FCSMinDistance")
-  ] call AGM_Core_fnc_getTargetDistance; // maximum distance: 5000m, 5m precision
+    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(DistanceInterval)),
+    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(MaxDistance)),
+    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(MinDistance))
+  ] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision
 };
 
 _weaponDirection = _vehicle weaponDirection currentWeapon _vehicle;
@@ -33,13 +36,13 @@ if (count _this > 2) then {
   _distance = _this select 2;
 };
 
-if (!(isNil "AGM_FCS_backgroundCalculation") and {!(scriptDone AGM_FCS_backgroundCalculation)}) then {
-  terminate AGM_FCS_backgroundCalculation;
+if (!(isNil QGVAR(backgroundCalculation)) and {!(scriptDone GVAR(backgroundCalculation))}) then {
+  terminate GVAR(backgroundCalculation);
 };
 
 // MOVING TARGETS
 _movingAzimuth = 0;
-if (time - AGM_FCSTime > 1 and AGM_FCSTime != -1 and count _this < 3) then {
+if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
   // calculate speed of target
   _posTarget = [
     (getPos _vehicle select 0) + _distance * (_weaponDirection select 0),
@@ -47,9 +50,9 @@ if (time - AGM_FCSTime > 1 and AGM_FCSTime != -1 and count _this < 3) then {
     (getPos _vehicle select 2) + _distance * (_weaponDirection select 2)
   ];
   _velocityTarget = [
-    ((_posTarget select 0) - (AGM_FCSPosition select 0)) / (time - AGM_FCSTime),
-    ((_posTarget select 1) - (AGM_FCSPosition select 1)) / (time - AGM_FCSTime),
-    ((_posTarget select 2) - (AGM_FCSPosition select 2)) / (time - AGM_FCSTime)
+    ((_posTarget select 0) - (GVAR(position) select 0)) / (time - GVAR(time)),
+    ((_posTarget select 1) - (GVAR(position) select 1)) / (time - GVAR(time)),
+    ((_posTarget select 2) - (GVAR(position) select 2)) / (time - GVAR(time))
   ];
 
   // estimate time to target
@@ -92,11 +95,11 @@ if (time - AGM_FCSTime > 1 and AGM_FCSTime != -1 and count _this < 3) then {
     _distance = floor (_posArrival distance (getPos _vehicle));
   };
 };
-AGM_FCSEnabled = false;
-AGM_FCSTime = -1;
+GVAR(enabled) = false;
+GVAR(time) = -1;
 
 // CALCULATE AZIMUTH CORRECTION
-_viewDiff = _vehicle getVariable "AGM_FCSViewDiff";
+_viewDiff = _vehicle getVariable QGVAR(ViewDiff);
 _FCSAzimuth = _movingAzimuth;
 if (_viewDiff != 0) then {
   _FCSAzimuth = (atan (_distance / _viewDiff) - (abs _viewDiff / _viewDiff) * 90) + _movingAzimuth;
@@ -115,19 +118,19 @@ if !(getText (configFile >> "CfgAmmo" >> _ammoType >> "simulation") == "shotMiss
   _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "timeToLive");
   _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "simulationStep");
 
-  _offset = [_distance, _angleTarget, _maxElev, _initSpeed, _airFriction, _timeToLive, _simulationStep] call AGM_FCS_fnc_getAngle;
+  _offset = [_distance, _angleTarget, _maxElev, _initSpeed, _airFriction, _timeToLive, _simulationStep] call FUNC(getAngle);
 
   _FCSMagazines = _FCSMagazines + [_magazineType];
   _FCSElevation = _FCSElevation + [_offset];
 };
 
-_vehicle setVariable ["AGM_FCSDistance",  _distance,     true];
-_vehicle setVariable ["AGM_FCSMagazines", _FCSMagazines, true];
-_vehicle setVariable ["AGM_FCSElevation", _FCSElevation, true];
-_vehicle setVariable ["AGM_FCSAzimuth",   _FCSAzimuth,   true];
+_vehicle setVariable [QGVAR(Distance),  _distance,     true];
+_vehicle setVariable [QGVAR(Magazines), _FCSMagazines, true];
+_vehicle setVariable [QGVAR(Elevation), _FCSElevation, true];
+_vehicle setVariable [QGVAR(Azimuth),   _FCSAzimuth,   true];
 
 // CALCULATE OFFSETS FOR OTHER WEAPONS IN THE BACKGROUND
-AGM_FCS_backgroundCalculation = [_vehicle, _magazines, _distance, _angleTarget, _FCSMagazines, _FCSElevation] spawn {
+GVAR(backgroundCalculation) = [_vehicle, _magazines, _distance, _angleTarget, _FCSMagazines, _FCSElevation] spawn {
   _vehicle      = _this select 0;
   _magazines    = _this select 1;
   _distance     = _this select 2;
@@ -145,7 +148,7 @@ AGM_FCS_backgroundCalculation = [_vehicle, _magazines, _distance, _angleTarget, 
         _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "timeToLive");
         _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "simulationStep");
 
-        _offset = [_distance, _angleTarget, _maxElev, _initSpeed, _airFriction, _timeToLive, _simulationStep] call AGM_FCS_fnc_getAngle;
+        _offset = [_distance, _angleTarget, _maxElev, _initSpeed, _airFriction, _timeToLive, _simulationStep] call FUNC(getAngle);
 
         _FCSMagazines = _FCSMagazines + [_x];
         _FCSElevation = _FCSElevation + [_offset];
@@ -153,8 +156,8 @@ AGM_FCS_backgroundCalculation = [_vehicle, _magazines, _distance, _angleTarget, 
     };
   } forEach _magazines;
 
-  _vehicle setVariable ["AGM_FCSMagazines", _FCSMagazines, true];
-  _vehicle setVariable ["AGM_FCSElevation", _FCSElevation, true];
+  _vehicle setVariable [QGVAR(Magazines), _FCSMagazines, true];
+  _vehicle setVariable [QGVAR(Elevation), _FCSElevation, true];
 };
 
-[format ["%1: %2", localize "STR_AGM_FireControlSystem_ZeroedTo", _distance]] call AGM_Core_fnc_displayTextStructured;
+[format ["%1: %2", localize "STR_ACE_FCS_ZeroedTo", _distance]] call EFUNC(common,displayTextStructured);
