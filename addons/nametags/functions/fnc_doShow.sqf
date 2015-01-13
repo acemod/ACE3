@@ -12,7 +12,7 @@
 */
 
 #include "script_component.hpp"
-#include QUOTE(PATHTOF(functions\common.sqf));
+#include "common.hpp";
 
 private["_roleImages", "_player", "_vehicle", "_type", "_config", "_text", "_data", "_isAir", "_turretUnits", "_turretRoles", "_index", "_roleType", "_unit", "_toShow"];
 

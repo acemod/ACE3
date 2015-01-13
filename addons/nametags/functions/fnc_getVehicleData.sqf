@@ -17,7 +17,7 @@
 */
 
 #include "script_component.hpp"
-#include QUOTE(PATHTOF(functions\common.sqf));
+#include "common.hpp";
 
 
 private ["_type", "_varName", "_data"];
