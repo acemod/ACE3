@@ -1,25 +1,26 @@
-#define _ARMA_
-class CfgPatches
-{
- class cse_gui
- {
-  units[] = {};
-  weapons[] = {};
-  requiredVersion = 0.1;
-  requiredAddons[] = {"a3_ui_f", "cse_main"};
-  version = "0.10.0_rc";
-  author[] = {"Combat Space Enhancement"};
-  authorUrl = "http://csemod.com";
- };
+
+#include "script_component.hpp"
+
+class CfgPatches {
+  class ADDON {
+    units[] = {};
+    weapons[] = {};
+    requiredVersion = REQUIRED_VERSION;
+    requiredAddons[] = {"ACE_main"};
+    version = VERSION;
+    author[] = {$STR_ACE_Core_ACETeam};
+    authorUrl = "http://csemod.com"; // TODO website link?
+  };
 };
 class CfgAddons {
     class PreloadAddons {
-       class cse_gui {
-          list[] = {"cse_gui"};
+       class ADDON {
+          list[] = {QUOTE(ADDON)};
        };
     };
 };
 
-#include "CfgFunctions.h"
-#include "Combat_Space_Enhancement.h"
-#include "GUI.h"
+#include "CfgEventHandlers.hpp"
+
+// TODO Port over the UI defines
+#include "GUI.hpp"
