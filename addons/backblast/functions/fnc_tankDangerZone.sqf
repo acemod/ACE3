@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 #define BARREL_MUZZLE "usti hlavne"
 
@@ -7,11 +8,11 @@ _vehicle = vehicle (_this select 1);
 _distance = _this select 2;
 _weapon = _this select 3;
 
-if (vehicle _unit != _unit || {!([gunner _firer] call AGM_Core_fnc_isPlayer)}) exitWith {};
+if (vehicle _unit != _unit || {!([gunner _firer] call EFUNC(common,isPlayer))}) exitWith {};
 
-_dangerZoneAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> "AGM_DangerZone_Angle") / 2;
-_dangerZoneRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> "AGM_DangerZone_Range");
-_dangerZoneDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> "AGM_DangerZone_Damage");
+_dangerZoneAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_DangerZone_Angle") / 2;
+_dangerZoneRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_DangerZone_Range");
+_dangerZoneDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_DangerZone_Damage");
 
 _position = ATLToASL (_vehicle modelToWorld (_vehicle selectionPosition BARREL_MUZZLE));
 _direction = _vehicle weaponDirection _weapon;
@@ -36,16 +37,18 @@ if (_unit != _vehicle) then {
     _beta = sqrt (1 - _angle / _dangerZoneAngle);
 
     _damage = 2 * _alpha * _beta * _dangerZoneDamage;
-    if (_unit == AGM_player) then {[_damage * 100] call BIS_fnc_bloodEffect};
+    if (_unit == ACE_player) then {[_damage * 100] call BIS_fnc_bloodEffect};
 
-    if (isClass (configFile >> "CfgPatches" >> "AGM_Medical")) then {
-      [_unit, "HitBody", ([_unit, "", ((_unit getHitPointDamage "HitBody") + _damage), objNull, objNull] call AGM_Medical_fnc_handleDamage)] call AGM_Medical_fnc_setHitPointDamage;
+    // TODO: Sort this interaction with medical
+    if (isClass (configFile >> "CfgPatches" >> "ACE_Medical")) then {
+      [_unit, "HitBody", ([_unit, "", ((_unit getHitPointDamage "HitBody") + _damage), objNull, objNull] call EFUNC(medical,handleDamage))] call EFUNC(medical,setHitPointDamage);
       _unit spawn {
         sleep 0.5;
-        [_this, "", 0, objNull, objNull] call AGM_Medical_fnc_handleDamage;
+        [_this, "", 0, objNull, objNull] call EFUNC(medical,handleDamage);
       };
     } else {
       _unit setDamage (damage _unit + _damage);
     };
+
   };
 };

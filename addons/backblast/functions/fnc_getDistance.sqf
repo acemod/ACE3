@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 private ["_position", "_direction", "_maxDistance", "_distance", "_iteration", "_laser", "_line"];
 

@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 _wall = _this select 0;
 
@@ -8,5 +9,5 @@ if (local _wall) then {
 	_paper attachTo [_wall, [0,-0.02,0.6]];
 	_paper setDir getDir _wall;
 
-	_paper setObjectTextureGlobal [0, "\AGM_Ballistics\textures\target_ca.paa"];
+	_paper setObjectTextureGlobal [0, QUOTE(PATHTOF(textures\target_ca.paa))];
 };
