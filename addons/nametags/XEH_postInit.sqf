@@ -1,7 +1,6 @@
 #include "script_component.hpp"
 
 // by commy2 and CAA-Picard
-
 if (!hasInterface) exitWith {};
 
 GVAR(ShowNamesTime) = -10;

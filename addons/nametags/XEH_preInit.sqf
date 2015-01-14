@@ -1,5 +1,6 @@
 #include "script_component.hpp"
 
+
 PREP(canShow);
 PREP(doShow);
 PREP(drawNameTagIcon);
