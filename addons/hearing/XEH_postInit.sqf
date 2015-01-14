@@ -1,4 +1,6 @@
 // by commy2 and CAA-Picard
+#include "script_component.hpp"
+
 #define STRENGHTODEAFNESS 3
 #define MAXDEAFNESS 1.1
 
