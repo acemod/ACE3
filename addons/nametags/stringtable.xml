@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-17 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="NameTags">
-    <Key ID="STR_AGM_NameTags_ShowNames">
+    <Key ID="STR_ACE_NameTags_ShowNames">
       <English>Show Names</English>
       <German>Namen anzeigen</German>
       <Spanish>Mostrar nombres</Spanish>
@@ -12,7 +12,7 @@
       <Hungarian>Nevek mutatása</Hungarian>
       <Russian>Показать имена</Russian>
     </Key>
-    <Key ID="STR_AGM_NameTags_ShowPlayerNames">
+    <Key ID="STR_ACE_NameTags_ShowPlayerNames">
       <English>Show player names</English>
       <German>Spielernamen anzeigen</German>
       <Spanish>Mostrar nombres de jugadores</Spanish>
@@ -24,7 +24,7 @@
       <Italian>Mostra i nomi dei giocatori</Italian>
       <Russian>Показать имена игроков</Russian>
     </Key>
-    <Key ID="STR_AGM_NameTags_ShowPlayerNamesOnlyOnCursor">
+    <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnCursor">
       <English>Show player name only on cursor (requires player names)</English>
       <Polish>Pokaż nazwę gracza tylko pod kursorem</Polish>
       <Spanish>Mostrar nombres solo en el cursor (requiere Mostrar nombres de jugadores)</Spanish>
@@ -36,7 +36,7 @@
       <Hungarian>Játékosok nevének mutatása (névcímke szükséges)</Hungarian>
       <Russian>Показать имена игроков только под курсором (требует имен игроков)</Russian>
     </Key>
-    <Key ID="STR_AGM_NameTags_ShowPlayerNamesOnlyOnKeyPress">
+    <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnKeyPress">
       <English>Show player name only on keypress (requires player names)</English>
       <German>Spielernamen nur auf Tastendruck anzeigen (benötigt Spielernamen)</German>
       <Spanish>Mostrar nombres solo al pulsar (requiere Mostrar nombres de jugadores)</Spanish>
@@ -46,7 +46,7 @@
       <Hungarian>Játékosnevek mutatása gombnyomásra(névcíme szükséges)</Hungarian>
       <Russian>Показать имена игроков только по нажатию клавиши (требует имен игроков)</Russian>
     </Key>
-    <Key ID="STR_AGM_NameTags_ShowPlayerRanks">
+    <Key ID="STR_ACE_NameTags_ShowPlayerRanks">
       <English>Show player ranks (requires player names)</English>
       <German>Spielerränge anzeigen (benötig Spielernamen)</German>
       <Polish>Pokaż rangi graczy (wymaga nazw graczy)</Polish>
@@ -60,7 +60,7 @@
     </Key>
   </Package>
   <Package name="CrewInfo">
-    <Key ID="STR_AGM_CrewInfo_ShowVehicleCrewInfo">
+    <Key ID="STR_ACE_CrewInfo_ShowVehicleCrewInfo">
       <English>Show vehicle crew info</English>
       <German>Zeige Fahrzeugbesatzung</German>
       <Spanish>Mostrar tripulantes</Spanish>
