@@ -187,14 +187,14 @@
 
 #define GETVAR_SYS(var1,var2) getVariable [ARR_2(QUOTE(var1),var2)]
 #define SETVAR_SYS(var1,var2) setVariable [ARR_2(QUOTE(var1),var2)]
-#define SETGVAR_SYS(var1,var2) setVariable [ARR_3(QUOTE(var1),var2,true)]
+#define SETPVAR_SYS(var1,var2) setVariable [ARR_3(QUOTE(var1),var2,true)]
 
 #define GETVAR(var1,var2,var3) (var1 GETVAR_SYS(var2,var3))
 #define GETMVAR(var1,var2) (missionNamespace GETVAR_SYS(var1,var2))
 #define GETUVAR(var1,var2) (uiNamespace GETVAR_SYS(var1,var2))
 
 #define SETVAR(var1,var2,var3) (var1 SETVAR_SYS(var2,var3))
-#define SETGVAR(var1,var2,var3) (var1 SETGVAR_SYS(var2,var3))
+#define SETPVAR(var1,var2,var3) (var1 SETPVAR_SYS(var2,var3))
 #define SETMVAR(var1,var2) (missionNamespace SETVAR_SYS(var1,var2))
 #define SETUVAR(var1,var2) (uiNamespace SETVAR_SYS(var1,var2))
 
