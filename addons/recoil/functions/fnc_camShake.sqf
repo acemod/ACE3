@@ -1,7 +1,9 @@
 // TMR: Small Arms - Recoil initialization and functions
 // (C) 2013 Ryan Schultz. See LICENSE.
-// Edited prefixes for compatability in AGM_Realism by KoffeinFlummi
+// Edited for compatability in ACE by KoffeinFlummi
 // Edited by commy2
+
+#include "script_component.hpp"
 
 #define BASE_POWER 0.40
 #define BASE_TIME 0.19
@@ -25,8 +27,8 @@ _freqMod = 0;
 
 _powerCoef = 0;
 if (_unit != vehicle _unit) then {
-  _powerCoef = getNumber (configFile >> "CfgWeapons" >> _weapon >> "AGM_Recoil_shakeMultiplier");
-  _powerCoef = _powerCoef * getNumber (configFile >> "CfgAmmo" >> _ammo >> "AGM_Recoil_shakeMultiplier");
+  _powerCoef = getNumber (configFile >> "CfgWeapons" >> _weapon >> QUOTE(GVAR(shakeMultiplier)));
+  _powerCoef = _powerCoef * getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(GVAR(shakeMultiplier)));
 } else {
   private ["_type", "_config", "_recoil"];
 
@@ -46,8 +48,8 @@ if (_unit != vehicle _unit) then {
   _powerCoef = (call compile format ["%1", _powerCoef]) * RECOIL_COEF;
 };
 
-if (_unit getVariable ["AGM_weaponRested", false]) then {_powerMod = _powerMod - 0.07};
-if (_unit getVariable ["AGM_bipodDeployed", false]) then {_powerMod = _powerMod - 0.11};
+if (_unit getVariable [QUOTE(EGVAR(resting,weaponRested)), false]) then {_powerMod = _powerMod - 0.07};
+if (_unit getVariable [QUOTE(EGVAR(resting,bipodDeployed)), false]) then {_powerMod = _powerMod - 0.11};
 
 private "_camshake";
 _camshake = [
@@ -55,7 +57,5 @@ _camshake = [
   BASE_TIME + _timeMod max 0,
   BASE_FREQ + _freqMod max 0
 ];
-
-["CamShake", _camshake, {copyToClipboard format ["addCamShake %1;", _this]; _this}] call AGM_Debug_fnc_log;
 
 addCamShake _camshake;

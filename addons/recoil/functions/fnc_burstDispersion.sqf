@@ -1,7 +1,9 @@
 // TMR: Small Arms - Recoil initialization and functions
 // (C) 2013 Ryan Schultz. See LICENSE.
-// Edited prefixes for compatability in AGM_Realism by KoffeinFlummi
+// Edited for compatability in ACE by KoffeinFlummi
 // Edited by commy2
+
+#include "script_component.hpp"
 
 private ["_unit", "_weapon", "_projectile"];
 
@@ -13,13 +15,13 @@ if (_weapon in ["Throw", "Put"]) exitWith {};
 
 private ["_lastFired", "_burst"];
 
-_lastFired = _unit getVariable ["AGM_Recoil_lastFired", -1];
-_burst = _unit getVariable ["AGM_Recoil_Burst", 0];
+_lastFired = _unit getVariable [QUOTE(GVAR(lastFired)), -1];
+_burst = _unit getVariable [QUOTE(GVAR(burst)), 0];
 
 if (time - _lastFired < 0.45) then {
   private "_startDisperse";
   _burst = _burst + 1;
-  _unit setVariable ["AGM_Recoil_Burst", _burst, false];
+  _unit setVariable [QUOTE(GVAR(burst)), _burst, false];
 
   _startDisperse = [1, 3] select (cameraView == "GUNNER");
 
@@ -39,8 +41,8 @@ if (time - _lastFired < 0.45) then {
     // Maximum possible dispersion (without _sightsBurst mod)
     _maxBurst = 50;
 
-    if (_unit getVariable ["AGM_weaponRested", false]) then {_maxBurst = 25};
-    if (_unit getVariable ["AGM_bipodDeployed", false]) then {_maxBurst = 18};
+    if (_unit getVariable [QUOTE(EGVAR(resting,weaponRested)), false]) then {_maxBurst = 25};
+    if (_unit getVariable [QUOTE(EGVAR(resting,bipodDeployed)), false]) then {_maxBurst = 18};
 
     // Cap the dispersion
     _burst = (_burst min _maxBurst) + _sightsBurst;
@@ -49,14 +51,12 @@ if (time - _lastFired < 0.45) then {
     _elevAngle = (_burst / 300) - random (_burst / 300) * 2;
     _travAngle = (_burst / 260) - random (_burst / 260) * 2;
 
-    ["Burst", [_travAngle, _elevAngle]] call AGM_Debug_fnc_log;
-
-    [_projectile, _travAngle, _elevAngle] call AGM_Core_fnc_changeProjectileDirection;
+    [_projectile, _travAngle, _elevAngle] call EFUNC(common,changeProjectileDirection);
   };
 } else {
 
   // Long enough delay, reset burst
-  _unit setVariable ["AGM_Recoil_Burst", 0, false];
+  _unit setVariable [QUOTE(GVAR(burst)), 0, false];
 };
 
-_unit setVariable ["AGM_Recoil_lastFired", time, false];
+_unit setVariable [QUOTE(GVAR(lastFired)), time, false];
