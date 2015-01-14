@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-11 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="Vector">
-    <Key ID="STR_AGM_Vector_VectorName">
+    <Key ID="STR_ACE_Vector_VectorName">
       <English>Vector IV</English>
       <German>Vector IV</German>
       <Spanish>Vector IV</Spanish>
@@ -14,7 +14,7 @@
       <Portuguese>Vector IV</Portuguese>
       <Russian>Vector IV</Russian>
     </Key>
-    <Key ID="STR_AGM_Vector_VectorDescription">
+    <Key ID="STR_ACE_Vector_VectorDescription">
       <English>Rangefinder</English>
       <German>Laserentfernungsmesser</German>
       <Spanish>Telémetro</Spanish>
@@ -26,7 +26,7 @@
       <Portuguese>Telêmetro</Portuguese>
       <Russian>Дальномер</Russian>
     </Key>
-    <Key ID="STR_AGM_Vector_AzimuthKey">
+    <Key ID="STR_ACE_Vector_AzimuthKey">
       <English>Vector - Azimuth Key</English>
       <German>Vector - Azimuth-Taste</German>
       <Spanish>Vector - Tecla de acimut</Spanish>
@@ -38,7 +38,7 @@
       <Hungarian>Vector - Irányszög gomb</Hungarian>
       <Russian>Vector – Азимут</Russian>
     </Key>
-    <Key ID="STR_AGM_Vector_DistanceKey">
+    <Key ID="STR_ACE_Vector_DistanceKey">
       <English>Vector - Distance Key</English>
       <German>Vector - Entfernungs-Taste</German>
       <Spanish>Vector - Tecla de distancia</Spanish>

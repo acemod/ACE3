@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 private["_dlgVector", "_ctrlVectorCenter", "_ctrlDigit1", "_ctrlDigit2", "_ctrlDigit3", "_ctrlDigit4", "_ctrlDigit5", "_ctrlDigit6", "_ctrlDigit7", "_ctrlDigit8", "_direction", "_azimuth", "_exit", "_distance", "_digits", "_inclination", "_height", "_lenght"];
 

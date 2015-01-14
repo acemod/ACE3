@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 #define MIN_DISTANCE 10
 #define MAX_DISTANCE ([6000, 9000] select (AGM_vectorSettings select 3))
