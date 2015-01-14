@@ -14,6 +14,8 @@
  
 private ["_mode", "_hint"];
 
+if (!([ACE_player] call EFUNC(common,canUseWeapon))) exitWith {false};
+
 _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
 
 if (_mode == 4) then {
@@ -38,3 +40,4 @@ _hint = [
 [_hint] call EFUNC(common,displayTextStructured);
 
 GVAR(currentThrowMode) = _mode;
+
