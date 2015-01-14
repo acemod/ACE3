@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-16 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="Disposable">
-    <Key ID="STR_AGM_Disposable_UsedTube">
+    <Key ID="STR_ACE_Disposable_UsedTube">
       <English>Used Tube</English>
       <German>Benutze Einwegwaffe</German>
       <French>Tube utilisé</French>
@@ -12,7 +12,7 @@
       <Hungarian>Használt cső</Hungarian>
       <Russian>Отстрелянная труба</Russian>
     </Key>
-    <Key ID="STR_AGM_Disposable_UsedTubeDescription">
+    <Key ID="STR_ACE_Disposable_UsedTubeDescription">
       <English>Used disposable rocket launcher</English>
       <German>Benutzter Einweg-Raketenwerfer</German>
       <French>Lance-roquette à usage unique utilisé</French>
@@ -22,7 +22,7 @@
       <Hungarian>Használt rakétavető</Hungarian>
       <Russian>Отстрелянная одноразовая пусковая установка</Russian>
     </Key>
-    <Key ID="STR_AGM_Disposable_PreloadedMissileDummy">
+    <Key ID="STR_ACE_Disposable_PreloadedMissileDummy">
       <English>Preloaded Missile Dummy</English>
       <German>Preloaded Missile Dummy</German>
       <French>Preloaded Missile Dummy</French>
