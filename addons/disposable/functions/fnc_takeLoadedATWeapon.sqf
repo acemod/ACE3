@@ -17,8 +17,6 @@ private ["_unit", "_launcher", "_config"];
 _unit = _this select 0;
 _launcher = secondaryWeapon _unit;
 
-systemChat format ["Take %1 - %2", _unit, _launcher];
-
 if (!local _unit) exitWith {};
 
 _config = configFile >> "CfgWeapons" >> _launcher;

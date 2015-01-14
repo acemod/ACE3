@@ -33,6 +33,6 @@ _unit selectWeapon _tube;
 
 // AI
 if !([_unit] call EFUNC(common,isPlayer)) then {
-  //waits until _projectile is null, so random 0-2 seconds after that
+  //waits until _projectile is null, so random 0-2 tickTime seconds after that
   [FUNC(aiDropWeaponCallback), 2, [_unit, _tube, _projectile]] call CBA_fnc_addPerFrameHandler;
 };
