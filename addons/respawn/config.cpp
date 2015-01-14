@@ -21,5 +21,5 @@ class CfgPatches {
 
 class ACE_Parameters_Boolean {
     GVAR(SavePreDeathGear) = 0;
-    GVAR(RemoveDeadBodiesDisonncected) = 1;
+    GVAR(RemoveDeadBodiesDisconnected) = 1;
 };

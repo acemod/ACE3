@@ -28,10 +28,10 @@ if !(_activated) exitWith {};
 GVAR(Module) = true;
 
 [_logic, QGVAR(SavePreDeathGear),             "SavePreDeathGear"]             call EFUNC(common,readBooleanParameterFromModule);
-[_logic, QGVAR(RemoveDeadBodiesDisonncected), "RemoveDeadBodiesDisonncected"] call EFUNC(common,readBooleanParameterFromModule);
+[_logic, QGVAR(RemoveDeadBodiesDisconnected), "RemoveDeadBodiesDisconnected"] call EFUNC(common,readBooleanParameterFromModule);
 
 if (isServer) then {
-    if (GVAR(RemoveDeadBodiesDisonncected)) then {
+    if (GVAR(RemoveDeadBodiesDisconnected)) then {
         _fnc_deleteDisconnected = {
             _this spawn {
                 _unit = _this select 0;

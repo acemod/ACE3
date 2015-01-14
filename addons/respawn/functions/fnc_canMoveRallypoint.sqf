@@ -24,7 +24,7 @@ _side = _this select 1;
 
 // rallypoint names are defined in CfgVehicles.hpp
 
-_unit getVariable ["ACE_canMoveRallypoint"), false]
+_unit getVariable ["ACE_canMoveRallypoint", false]
 && {!isNull ([
     objNull,
     missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
