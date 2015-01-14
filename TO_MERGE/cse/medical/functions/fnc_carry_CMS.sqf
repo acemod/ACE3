@@ -12,6 +12,8 @@
 	Executes: spawn
 */
 
+#include "script_component.hpp"
+
 private ["_caller", "_unit", "_positionUnit", "_killOnDrop"];
 _caller = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _unit = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
@@ -23,7 +25,7 @@ if (call FUNC(isSetTreatmentMutex_CMS)) exitwith {};
 if (!(_unit isKindOf "CaManBase") || !(_caller isKindOf "CaManBase")) exitwith{ [_caller,"release"] call FUNC(treatmentMutex_CMS); };
 if (vehicle _caller != _caller || vehicle _unit != _unit) exitwith { [_caller,"release"] call FUNC(treatmentMutex_CMS);};
 
-if (!([_caller] call cse_fnc_canInteract) || {_caller == _unit} || {(([_unit] call EFUNC(common,isAwake)))}) exitwith {
+if (!([_caller] call EFUNC(common,canInteract)) || {_caller == _unit} || {(([_unit] call EFUNC(common,isAwake)))}) exitwith {
 	["FUNC(drag_CMS) call failed condition: canInteract, equal, is awake"] call EFUNC(common,debug);
 	[_caller,"release"] call FUNC(treatmentMutex_CMS);
 };

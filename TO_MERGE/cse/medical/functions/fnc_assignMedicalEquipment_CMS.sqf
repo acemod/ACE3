@@ -12,21 +12,22 @@
 
 
 // TODO add amount of to defines
-#define BASIC_BANDAGES 		"cse_bandage_basic"
-#define PACKING_BANDAGES 	"cse_packing_bandage"
+#define BASIC_BANDAGES 		"ACE_bandage_basic"
+#define PACKING_BANDAGES 	"ACE_packing_bandage"
 
+#include "script_component.hpp"
 
 private ["_logic","_setting","_objects", "_medicsLoadout", "_nonMedics", "_code"];
 _logic = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if (!isNull _logic) then {
 	_setting = _logic getvariable ["equipment",0];
-	waituntil {!isnil "cse_gui"}; // ensure the player unit is available.
+	waituntil {!isnil "ACE_gui"}; // ensure the player unit is available.
 	waituntil {time>0};
 
 	_start = diag_tickTime;
-	waituntil {(["cse_sys_medical"] call EFUNC(common,isModuleEnabled_F)) || (diag_tickTime - _start > 10000)};
+	waituntil {(["ACE_sys_medical"] call EFUNC(common,isModuleEnabled_F)) || (diag_tickTime - _start > 10000)};
 
-	if (!(["cse_sys_medical"] call EFUNC(common,isModuleEnabled_F))) exitwith {};
+	if (!(["ACE_sys_medical"] call EFUNC(common,isModuleEnabled_F))) exitwith {};
 	// TODO Create functions for adding multiple magazines to a unit
 	// TODO Check if unit can store more magazines (ie backpack/vest/uniform are not full)
 
@@ -36,13 +37,13 @@ if (!isNull _logic) then {
 			player addItem PACKING_BANDAGES;
 		};
 		for "_i" from 1 to 3 do	{
-			player addItem  "cse_tourniquet";
+			player addItem  "ACE_tourniquet";
 		};
 		for "_i" from 1 to 3 do	{
-			player addItem  "cse_morphine";
+			player addItem  "ACE_morphine";
 		};
 		for "_i" from 1 to 2 do	{
-			player addItem  "cse_epinephrine";
+			player addItem  "ACE_epinephrine";
 		};
 	};
 
@@ -50,8 +51,8 @@ if (!isNull _logic) then {
 		for "_i" from 1 to 3 do	{
 			player addItem BASIC_BANDAGES;
 		};
-		player addItem  "cse_tourniquet";
-		player addItem  "cse_morphine";
+		player addItem  "ACE_tourniquet";
+		player addItem  "ACE_morphine";
 	};
 
 

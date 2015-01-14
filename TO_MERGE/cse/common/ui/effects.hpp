@@ -53,4 +53,22 @@ class RscTitles{
 			};
 		};
 	};
+	class GVAR(ScreenEffectsPain) {
+		duration = 1;
+		idd = 1111;
+		movingenable = 0;
+		onLoad = QUOTE(uiNamespace setVariable [QGVAR(ScreenEffectsPain), _this select 0];);
+
+		class controlsBackground {
+			class painScreen: cse_gui_backgroundBase {
+				text = QUOTE(PATHTOF(data\painScreen.paa));
+				colorText[] = {1, 1, 1, 0.5};
+				idc = 11115;
+				x = safezoneX;
+				y = safezoneY;
+				w = safezoneW;
+				h = safezoneH;
+			};
+		};
+	};
 };

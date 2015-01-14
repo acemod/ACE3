@@ -1,7 +1,7 @@
 class CfgFactionClasses
 {
 	class NO_CATEGORY;
-	class cse_medical: NO_CATEGORY {
-		displayName = "CSE Medical";
+	class ACE_medical: NO_CATEGORY {
+		displayName = "ACE Medical";
 	};
 };

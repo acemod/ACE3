@@ -8,10 +8,11 @@
  * @PublicAPI: true
  */
 
-if (isnil "cseDisplayingPainEffect") then {
-	cseDisplayingPainEffect = false;
+if (isnil QGVAR(DisplayingPainEffect)) then {
+	GVAR(DisplayingPainEffect) = false;
 };
-if (cseDisplayingPainEffect) exitwith {};
+
+if (GVAR(DisplayingPainEffect)) exitwith {};
 _this spawn {
 	private ["_ratio","_time"];
 	_ratio = _this select 0;
@@ -20,8 +21,8 @@ _this spawn {
 	if (_time <1.5) then {
 		_time = 1.5;
 	};
-	cseDisplayingPainEffect = true;
-	46 cutRsc ["RscCSEScreenEffectsPain","PLAIN"];
+	GVAR(DisplayingPainEffect) = true;
+	46 cutRsc [QGVAR(ScreenEffectsPain),"PLAIN"];
 	sleep _time;
-	cseDisplayingPainEffect = false;
+	GVAR(DisplayingPainEffect) = false;
 };

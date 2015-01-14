@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_interactionTarget"];
 _interactionTarget = objNull;
 if (count _this > 0) then {
@@ -29,4 +31,4 @@ if (isNull _interactionTarget) then {
 
 [format["INTERACTION WITH: %1",_interactionTarget]] call EFUNC(common,debug);
 GVAR(INTERACTION_TARGET) = _interactionTarget;
-createDialog QGVAR(medicalMenuIDD);
+createDialog QGVAR(medicalMenu);

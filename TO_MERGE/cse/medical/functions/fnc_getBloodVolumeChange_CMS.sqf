@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 /*
 	IV Change per second calculation:
 	250ml should take 60 seconds to fill. 250/60 = 4.166.

@@ -147,10 +147,10 @@ class CfgWeapons {
 			type=201;
 		};
 	};
-	class ACE_plasma_iv_500: cse_plasma_iv {
+	class ACE_plasma_iv_500: ACE_plasma_iv {
 		displayName = $STR_ACE_MAG_PLASMA_IV_500;
 	};
-	class ACE_plasma_iv_250: cse_plasma_iv_500 {
+	class ACE_plasma_iv_250: ACE_plasma_iv_500 {
 		displayName = $STR_ACE_MAG_PLASMA_IV_250;
 	};
 	class ACE_blood_iv: ItemCore	{
@@ -168,10 +168,10 @@ class CfgWeapons {
 			type=201;
 		};
 	};
-	class ACE_blood_iv_500: cse_blood_iv {
+	class ACE_blood_iv_500: ACE_blood_iv {
 		displayName = $STR_ACE_MAG_BLOOD_IV_500;
 	};
-	class ACE_blood_iv_250: cse_blood_iv_500 {
+	class ACE_blood_iv_250: ACE_blood_iv_500 {
 		displayName = $STR_ACE_MAG_BLOOD_IV_250;
 	};
 	class ACE_saline_iv: ItemCore {
@@ -188,10 +188,10 @@ class CfgWeapons {
 			type=201;
 		};
 	};
-	class ACE_saline_iv_500: cse_saline_iv {
+	class ACE_saline_iv_500: ACE_saline_iv {
 		displayName = $STR_ACE_MAG_SALINE_IV_500;
 	};
-	class ACE_saline_iv_250: cse_saline_iv_500 {
+	class ACE_saline_iv_250: ACE_saline_iv_500 {
 		displayName = $STR_ACE_MAG_SALINE_IV_250;
 	};
 	class ACE_quikclot: ItemCore {

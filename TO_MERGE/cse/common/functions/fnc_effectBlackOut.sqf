@@ -8,12 +8,12 @@
  * @PublicAPI: true
  */
 
-private ["_displayEffect","_CSEFadingBlackUI"];
+private ["_displayEffect","_effect"];
 _displayEffect = [_this, 0, false,[false]] call bis_fnc_param;
 disableSerialization;
-_CSEFadingBlackUI = uiNamespace getVariable "CSEFadingBlackUI";
+_effect = uiNamespace getVariable QGVAR(ScreenEffectsBlack);
 if (_displayEffect) then {
-	(_CSEFadingBlackUI displayCtrl 11112) ctrlSetTextColor [0.0,0.0,0.0,0.9];
+	(_effect displayCtrl 11112) ctrlSetTextColor [0.0,0.0,0.0,0.9];
 } else {
-	(_CSEFadingBlackUI displayCtrl 11112) ctrlSetTextColor [0.0,0.0,0.0,0.0];
+	(_effect displayCtrl 11112) ctrlSetTextColor [0.0,0.0,0.0,0.0];
 };

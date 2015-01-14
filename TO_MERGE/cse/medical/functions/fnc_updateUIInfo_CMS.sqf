@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_targetObj","_bodyPartText","_bodyPartN","_openWounds","_bandagedWounds","_fractures","_listOfWounds","_listOfBandagedWounds","_listOfFractures","_counter","_nameEntry","_untreatedWounds" ,"_remainder", "_numberOf", "_airwayStatus", "_airwayTreated"];
 _targetObj = _this select 0;
@@ -20,9 +21,6 @@ _openWounds = [_targetObj,QGVAR(openWounds)] call EFUNC(common,getDefinedVariabl
 _bandagedWounds = [_targetObj,QGVAR(bandagedWounds)] call EFUNC(common,getDefinedVariable);
 _fractures = [_targetObj,QGVAR(fractures)] call EFUNC(common,getDefinedVariable);
 _airwayStatus = [_targetObj,QGVAR(airway)] call EFUNC(common,getDefinedVariable);
-/*_openWounds = [_targetObj,QGVAR(openWounds)] call cse_fnc_getMonitoredVariableValue;
-_bandagedWounds = [_targetObj,QGVAR(bandagedWounds)] call cse_fnc_getMonitoredVariableValue;
-_fractures = [_targetObj,QGVAR(fractures)] call cse_fnc_getMonitoredVariableValue;*/
 
 if (count _this > 1) then {
 	switch (_this select 1) do {

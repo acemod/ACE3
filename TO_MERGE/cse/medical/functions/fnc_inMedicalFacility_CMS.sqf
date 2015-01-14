@@ -8,6 +8,8 @@
  * @PublicAPI: true
  */
 
+#include "script_component.hpp"
+
 private ["_unit","_eyePos","_objects","_isInBuilding","_medicalFacility"];
 _unit = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_Param;
 

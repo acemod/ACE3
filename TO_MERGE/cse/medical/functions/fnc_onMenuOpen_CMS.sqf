@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 if (isnil QGVAR(LatestDisplayOptionMenu)) then {
 	GVAR(LatestDisplayOptionMenu) = "triage";
 } else {
@@ -30,7 +32,7 @@ if (isnil QGVAR(INTERACTION_TARGET_PREVIOUS)) then {
 
 // 11 till 18
 disableSerialization;
-_display = uiNamespace getVariable QGVAR(medicalMenuIDD);
+_display = uiNamespace getVariable QGVAR(medicalMenu);
 (_display displayCtrl 11) ctrlSetTooltip localize "STR_ACE_UI_VIEW_TRIAGE_CARD";
 (_display displayCtrl 12) ctrlSetTooltip localize "STR_ACE_UI_EXAMINE_PATIENT";
 (_display displayCtrl 13) ctrlSetTooltip localize "STR_ACE_UI_BANDAGE_FRACTURES";

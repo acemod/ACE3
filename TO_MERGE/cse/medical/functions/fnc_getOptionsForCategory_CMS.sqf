@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_target", "_category", "_return", "_allow", "_resultsOfEH"];
 _target = _this select 0;
 _category = _this select 1;

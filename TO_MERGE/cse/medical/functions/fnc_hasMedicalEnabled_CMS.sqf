@@ -8,13 +8,14 @@
  * @PublicAPI: true
  */
 
+#include "script_component.hpp"
 
 private ["_unit", "_medicalEnabled"];
 _unit = _this select 0;
 
-_medicalEnabled = _unit getvariable "cse_sys_medical_enabled";
+_medicalEnabled = _unit getvariable QGVAR(enableMedical);
 if (isnil "_medicalEnabled") then {
-	(((GVAR(setting_enableForUnits) == 0 && (isPlayer _unit || (_unit getvariable ["cse_isDeadPlayer", false])))) || (GVAR(setting_enableForUnits) == 1));
+	(((GVAR(setting_enableForUnits) == 0 && (isPlayer _unit || (_unit getvariable [QEGVAR(common,isDeadPlayer), false])))) || (GVAR(setting_enableForUnits) == 1));
 } else {
 	_medicalEnabled;
 };

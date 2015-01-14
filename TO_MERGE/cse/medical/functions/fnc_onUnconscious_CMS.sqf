@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 
 private ["_unit", "_state"];
 _unit = _this select 0;

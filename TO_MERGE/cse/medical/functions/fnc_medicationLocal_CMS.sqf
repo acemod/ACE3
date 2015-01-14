@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_treatingPerson","_injuredPerson","_selectionName","_removeItem","_patient","_attributes","_value"];
 _injuredPerson = _this select 0;
@@ -16,16 +17,16 @@ _selectionName = _this select 2;
 _removeItem = _this select 3;
 
 _attributes = switch (_removeItem) do {
-	case "cse_morphine": {
+	case "ACE_morphine": {
 		[QGVAR(givenMorphine),1,"Morphine"]
 	};
-	case "cse_atropine": {
+	case "ACE_atropine": {
 		[QGVAR(givenAtropine),1,"Atropine"]
 	};
-	case "cse_epinephrine": {
+	case "ACE_epinephrine": {
 		[QGVAR(givenEpinephrine),1,"Epinephrine"]
 	};
-	case "cse_antiBiotics": {
+	case "ACE_antiBiotics": {
 		[]
 	};
 	default {[]};
@@ -94,7 +95,7 @@ if (count _attributes > 1) then {
 
 
 	switch (_removeItem) do {
-		case "cse_atropine": {
+		case "ACE_atropine": {
 
 			_heartRate = [_injuredPerson, QGVAR(heartRate)] call EFUNC(common,getDefinedVariable);
 			//_heartRate = [_injuredPerson, QGVAR(heartRate)] call EFUNC(common,getDefinedVariable);
@@ -116,7 +117,7 @@ if (count _attributes > 1) then {
 				[_injuredPerson,(_attributes select 0),5] call _usedMedication;
 			};
 		};
-		case "cse_epinephrine": {
+		case "ACE_epinephrine": {
 			_heartRate = [_injuredPerson, QGVAR(heartRate)] call EFUNC(common,getDefinedVariable);
 			if (alive _injuredPerson) then {
 				if (_heartRate > 0) then {
@@ -135,7 +136,7 @@ if (count _attributes > 1) then {
 				[_injuredPerson,(_attributes select 0),3] call _usedMedication;
 			};
 		};
-		case "cse_morphine": {
+		case "ACE_morphine": {
 			private ["_usedMorphine"];
 			_pain = [_injuredPerson, QGVAR(amountOfPain)] call EFUNC(common,getDefinedVariable);
 			_pain = 0;

@@ -4,8 +4,8 @@ class CfgPatches
 {
  class ADDON
  {
-  units[] = {"cse_medical_supply_crate_cms", "cse_bandage_basicItem","cse_packing_bandageItem","cse_bandageElasticItem","cse_tourniquetItem","cse_splintItem","cse_morphineItem","cse_atropineItem","cse_epinephrineItem","cse_plasma_ivItem","cse_plasma_iv_500Item","cse_plasma_iv250Item","cse_blood_ivItem","cse_blood_iv_500Item","cse_blood_iv_250Item","cse_saline_ivItem","cse_saline_iv_500Item","cse_saline_iv_250Item","cse_quikclotItem","cse_nasopharyngeal_tubeItem","cse_opaItem","cse_liquidSkinItem","cse_chestsealItem","cse_personal_aid_kitItem"};
-  weapons[] = {"cse_surgical_kit"};
+  units[] = {"ACE_medical_supply_crate_cms", "ACE_bandage_basicItem","ACE_packing_bandageItem","ACE_bandageElasticItem","ACE_tourniquetItem","ACE_splintItem","ACE_morphineItem","ACE_atropineItem","ACE_epinephrineItem","ACE_plasma_ivItem","ACE_plasma_iv_500Item","ACE_plasma_iv250Item","ACE_blood_ivItem","ACE_blood_iv_500Item","ACE_blood_iv_250Item","ACE_saline_ivItem","ACE_saline_iv_500Item","ACE_saline_iv_250Item","ACE_quikclotItem","ACE_nasopharyngeal_tubeItem","ACE_opaItem","ACE_liquidSkinItem","ACE_chestsealItem","ACE_personal_aid_kitItem"};
+  weapons[] = {"ACE_surgical_kit"};
   requiredVersion = REQUIRED_VERSION;
   requiredAddons[] = {"ACE_gui","ACE_main"};
   version = VERSION;
@@ -20,6 +20,8 @@ class CfgAddons {
        };
     };
 };
+
+#include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgSounds.hpp"

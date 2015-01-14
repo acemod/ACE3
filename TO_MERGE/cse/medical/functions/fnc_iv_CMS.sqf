@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_treatingPerson","_injuredPerson","_selectionName","_removeItem","_attributes","_patient", "_continue", "_prevAnim"];
 _injuredPerson = _this select 0;
@@ -19,7 +20,6 @@ if (call FUNC(isSetTreatmentMutex_CMS)) exitwith {};
 [_treatingPerson,"set"] call FUNC(treatmentMutex_CMS);
 
 if (!([_treatingPerson, _injuredPerson, _removeItem] call FUNC(hasEquipment_CMS))) exitwith { [_treatingPerson,"release"] call FUNC(treatmentMutex_CMS); };
-
 
 _prevAnim = "";
 if (vehicle _treatingPerson == _treatingPerson && (vehicle _injuredPerson == _injuredPerson) && !(stance _treatingPerson == "PRONE")) then {

@@ -8,6 +8,8 @@
  * @PublicAPI: true
  */
 
+#include "script_component.hpp"
+
 private ["_veh"];
 _veh = _this select 0;
 

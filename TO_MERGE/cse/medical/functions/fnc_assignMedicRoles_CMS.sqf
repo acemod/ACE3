@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_logic","_setting","_objects"];
 _logic = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 
@@ -34,9 +36,6 @@ if (!isNull _logic) then {
 	_setting = _logic getvariable ["class",0];
     _objects = synchronizedObjects _logic;
     if (!(_objects isEqualTo []) && _parsedList isEqualTo []) then {
-    	/*
-			This has been enabled again to allow backwards compatability for older CSE missions.
-    	*/
     	[["synchronizedObjects for the 'Assign Medic Role' Module is deprecated. Please use the enable for list instead!"], 1] call EFUNC(common,debug);
     	{
 	    	if (!isnil "_x") then {

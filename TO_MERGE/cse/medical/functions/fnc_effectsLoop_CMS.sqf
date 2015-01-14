@@ -8,13 +8,12 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_unit","_bloodLoss","_bloodStatus","_painStatus"];
 _unit = player;
 if (!hasInterface || !isPlayer _unit || !local _unit) exitwith{};
-45 cutRsc ["RscCSEScreenEffectsBlack","PLAIN"];
-cseDisplayingBleedingEffect = false;
-cseDisplayingPainEffect = false;
-cseDisplayingUnconiciousEffect = false;
+45 cutRsc [QEGVAR(common,ScreenEffectsBlack),"PLAIN"];
 
 _hb_effect = {
 	_heartRate = _this select 0;
@@ -54,19 +53,19 @@ while {true} do {
 
 		if (_bloodLoss >0) then {
 			//["cse_sys_medical_isBleeding", true, "cse\cse_sys_medical\data\icons\icon_bleeding.paa", [1,1,1,1]] call EFUNC(gui,displayIcon);
-			[_bloodLoss] spawn FUNC(effectBleeding);
+			[_bloodLoss] spawn EFUNC(common,effectBleeding);
 		} else {
 			//["cse_sys_medical_isBleeding", false, "cse\cse_sys_medical\data\icons\icon_bleeding.paa", [1,1,1,1]] call EFUNC(gui,displayIcon);
 		};
 		sleep 0.25 +(random(2));
 		if (_painStatus > 0) then {
-			[_painStatus] spawn FUNC(effectPain);
+			[_painStatus] spawn EFUNC(common,effectPain);
 		};
 		sleep 0.25 +(random(1));
 		_heartRate = [_unit,QGVAR(heartRate),70] call EFUNC(common,getDefinedVariable);
 		[_heartRate] spawn _hb_effect;
 	} else {
-		cseDisplayingBleedingEffect = false;
+		EGVAR(common,DisplayingBleedingEffect = false;
 	};
 };
 

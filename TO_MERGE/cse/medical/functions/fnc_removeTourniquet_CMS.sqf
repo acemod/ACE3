@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_caller","_unit","_part","_selectionName","_removeItem","_tourniquets"];
 _unit = _this select 0;
 _caller = _this select 1;
@@ -35,7 +37,7 @@ _tourniquets = [_unit,QGVAR(tourniquets)] call EFUNC(common,getDefinedVariable);
 _tourniquets set[_part,0];
 [_unit,QGVAR(tourniquets),_tourniquets] call EFUNC(common,setDefinedVariable);
 
-_caller addMagazine "cse_tourniquet";
+_caller addMagazine "ACE_tourniquet";
 [_caller,"release"] call FUNC(treatmentMutex_CMS);
 
 [_unit,"treatment",format["%1 removed a tourniquet on %2",[_caller] call EFUNC(common,getName),_selectionName]] call FUNC(addActivityToLog_CMS);

@@ -8,12 +8,13 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 [] spawn {
 	_log = [GVAR(INTERACTION_TARGET)] call FUNC(getActivityLog_CMS);
 	_counter = 0;
 	lbclear 214;
 	{
-
 		//[_caller,_moment,_activity,_type]
 		lbadd[214, _x select 1]; // moment
 		lbadd[214, _x select 0]; // name, caller

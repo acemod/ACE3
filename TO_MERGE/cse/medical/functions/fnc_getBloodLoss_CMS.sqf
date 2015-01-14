@@ -8,6 +8,8 @@
  * @PublicAPI: true
  */
 
+#include "script_component.hpp"
+
 #define BLOODLOSS_SMALL_WOUNDS		0.025
 #define BLOODLOSS_MEDIUM_WOUNDS		0.05
 #define BLOODLOSS_LARGE_WOUNDS		0.1

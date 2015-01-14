@@ -77,7 +77,7 @@ if (isnil QGVAR(damageThreshold_Players)) then {
 			GVAR(setting_aidKitMedicsOnly) = _x select 1;
 		};
 		if (_x select 0 == "bandageTime") exitwith {
-			CSE_BANDAGE_WAITING_TIME_CMS = _x select 1;
+			GVAR(setting_bandageWaitingTime) = _x select 1;
 		};
 		if (_x select 0 == "vehCrashes") exitwith {
 			GVAR(setting_allowVehicleCrashInjuries) = _value;
@@ -141,7 +141,7 @@ GVAR(cms_taskLoop_trigger) setTriggerStatements["call ACE_cms_taskLoopCode", "",
 if (!hasInterface) exitwith{};
 [player] spawn {
 	disableSerialization;
-	_CMSFadingBlackUI = uiNamespace getVariable "CMSFadingBlackUI";
+	_CMSFadingBlackUI = uiNamespace getVariable QGVAR(ScreenEffectsBlack);
 	if (!isnil "_CMSFadingBlackUI") then {
 		_ctrlFadingBlackUI = _CMSFadingBlackUI displayCtrl 11112;
 		2 fadeSound 1;

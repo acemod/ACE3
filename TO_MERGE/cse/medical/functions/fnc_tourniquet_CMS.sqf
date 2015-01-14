@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_caller","_unit","_part","_selectionName","_removeItem", "_tourniquets", "_continue"];
 _unit = _this select 0;

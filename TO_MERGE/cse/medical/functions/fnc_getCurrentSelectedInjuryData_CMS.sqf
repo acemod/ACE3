@@ -8,8 +8,9 @@
  * @PublicAPI: false
  */
 
-private ["_return", "_current"];
+#include "script_component.hpp"
 
+private ["_return", "_current"];
 _return = "";
 if (dialog) then {
 	_current = lbCurSel 213;

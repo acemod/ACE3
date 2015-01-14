@@ -1,7 +1,7 @@
-class cse_sys_medicalMenu {
+class GVAR(medicalMenu) {
 	idd = 314412;
 	movingEnable = true;
-	onLoad = QUOTE(uiNamespace setVariable [ARR_2(QGVAR(medicalMenuIDD), _this select 0)]; [ARR_2(QGVAR(id), true)] call EFUNC(gui,blurScreen); [_this select 0] spawn FUNC(onMenuOpen_CMS););
+	onLoad = QUOTE(uiNamespace setVariable [ARR_2(QGVAR(medicalMenu), _this select 0)]; [ARR_2(QGVAR(id), true)] call EFUNC(gui,blurScreen); [_this select 0] spawn FUNC(onMenuOpen_CMS););
 	onUnload = QUOTE([ARR_2(QGVAR(id), false)] call EFUNC(gui,blurScreen); [ARR_2(QGVAR(onMenuOpen), 'onEachFrame')] call BIS_fnc_removeStackedEventHandler;);
 	class controlsBackground {
 		class HeaderBackground: ACE_gui_backgroundBase{

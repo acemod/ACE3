@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_unit","_handler"];
 _unit = _this select 0;
 if (!local _unit) exitwith {[format["UNIT IS NOT LOCAL: %1",_this]] call EFUNC(common,debug);};
@@ -15,7 +17,7 @@ if !(_unit isKindOf "CAManBase") exitwith{[format["UNIT IS NOT CAManBase: %1",_t
 if (isPlayer _unit) then {
 	[_unit] spawn {
 		disableSerialization;
-		_CMSFadingBlackUI = uiNamespace getVariable "CMSFadingBlackUI";
+		_CMSFadingBlackUI = uiNamespace getVariable QGVAR(ScreenEffectsBlack);
 		if (!isnil "_CMSFadingBlackUI") then {
 			_ctrlFadingBlackUI = _CMSFadingBlackUI displayCtrl 11112;
 			2 fadeSound 1;

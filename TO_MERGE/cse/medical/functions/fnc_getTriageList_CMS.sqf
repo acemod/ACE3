@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private["_unit"];
 _unit = _this select 0;
 _log = [_unit,QGVAR(triageCard)] call EFUNC(common,getDefinedVariable);

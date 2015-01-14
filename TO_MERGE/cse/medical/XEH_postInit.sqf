@@ -9,6 +9,4 @@
  */
 
 #include "script_component.hpp"
-
-#include "functions.sqf"
 #include "variable_defines.sqf"

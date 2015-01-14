@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_unit","_selectionName","_amountOfDamage","_sourceOfDamage", "_typeOfProjectile","_bodyPartn","_newDamage","_typeOfDamage","_caliber", "_hitPointName", "_returnDamage", "_varCheck"];
 _unit = _this select 0;
 _selectionName = _this select 1;
@@ -17,7 +19,6 @@ _typeOfProjectile = _this select 4;
 _returnDamage = _amountOfDamage;
 
 _bodyPartn = [_selectionName] call FUNC(getBodyPartNumber_CMS);
-
 
 // Check for vehicle crash
 if (vehicle _unit != _unit && {_bodyPartn < 0} && {isNull _sourceOfDamage} && {_typeOfProjectile == ""} && {_selectionName == ""}) then {

@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_unit","_bloodVolume","_bloodPressure","_heartRate","_bloodPressureL","_bloodPressureH","_bloodLoss"];
 _unit = _this select 0;

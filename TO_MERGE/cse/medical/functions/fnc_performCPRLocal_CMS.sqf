@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_caller","_unit"];
 _unit = _this select 0;
@@ -23,11 +24,11 @@ if (vehicle _caller == _caller) then {
 };
 
 [_this, QUOTE(FUNC(performCPRProvider_CMS)), _caller, false] spawn BIS_fnc_MP;
-_n = _unit getvariable ["CSE_ENABLE_REVIVE_COUNTER",0];
+_n = _unit getvariable [QEGVAR(ENABLE_REVIVE_COUNTER),0];
 if (_n > 0) then {
 	_n = _n - random(20);
 	if (_n < 0) then {
 		_n = 0;
 	};
-	_unit setvariable ["CSE_ENABLE_REVIVE_COUNTER", _n];
+	_unit setvariable [QEGVAR(ENABLE_REVIVE_COUNTER), _n];
 };

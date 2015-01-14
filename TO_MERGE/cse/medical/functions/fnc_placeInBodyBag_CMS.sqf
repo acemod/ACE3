@@ -8,13 +8,15 @@
  * @PublicAPI: true
  */
 
+#include "script_component.hpp"
+
 private ["_unit","_caller"];
 _unit = _this select 0;
 _caller = _this select 1;
 
-if !([_caller, "cse_itemBodyBag"] call EFUNC(common,hasItem)) exitwith {};
+if !([_caller, "ACE_itemBodyBag"] call EFUNC(common,hasItem)) exitwith {};
 
-[_caller, "cse_itemBodyBag"] call EFUNC(common,useItem);
+[_caller, "ACE_itemBodyBag"] call EFUNC(common,useItem);
 
 _nameOfUnit = [_unit] call EFUNC(common,getName);
 if (alive _unit) then {
@@ -25,7 +27,7 @@ _onPosition = getPos _unit;
 _allVariables = [_unit] call EFUNC(common,getAllDefinedSetVariables);
 deleteVehicle _unit;
 
-_bodyBagCreated = createVehicle ["cse_bodyBag", _onPosition, [], 0, "NONE"];
+_bodyBagCreated = createVehicle ["ACE_bodyBag", _onPosition, [], 0, "NONE"];
 _bodyBagCreated setvariable [QEGVAR(common,nameOfBody), _nameOfUnit, true];
 
 {

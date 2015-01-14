@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_treatingPerson","_injuredPerson","_selectionName","_removeItem","_patient","_attributes","_value", "_prevAnim"];
 _injuredPerson = _this select 0;
@@ -22,16 +23,16 @@ if (!([_treatingPerson, _injuredPerson, _removeItem] call FUNC(hasEquipment_CMS)
 
 
 _attributes = switch (_removeItem) do {
-	case "cse_morphine": {
+	case "ACE_morphine": {
 		[QGVAR(givenMorphine),1,"Morphine"]
 	};
-	case "cse_atropine": {
+	case "ACE_atropine": {
 		[QGVAR(givenAtropine),1,"Atropine"]
 	};
-	case "cse_epinephrine": {
+	case "ACE_epinephrine": {
 		[QGVAR(givenEpinephrine),1,"Epinephrine"]
 	};
-	case "cse_antiBiotics": {
+	case "ACE_antiBiotics": {
 		[]
 	};
 	default {[]};
@@ -46,7 +47,7 @@ if (count _attributes > 1) then {
 		[_treatingPerson,"AinvPknlMstpSlayWrflDnon_medic"] call EFUNC(common,localAnim);
 	};
 
-	["cse_sys_medical_treatment", true, "cse\cse_sys_medical\data\icons\medication_small.paa", [1,1,1,1]] call EFUNC(gui,displayIcon);
+	[QGVAR(treatmentIconID), true, QUOTE(PATHTOF(data\icons\medication_small.paa)), [1,1,1,1]] call EFUNC(gui,displayIcon);
 
 	GVAR(ORIGINAL_POSITION_PLAYER) = getPos _treatingPerson;
 	if ([2,{((vehicle player != player) ||((getPos player) distance GVAR(ORIGINAL_POSITION_PLAYER)) < 1)}, {},{hint "Action aborted. You moved away";}] call EFUNC(gui,loadingBar)) then {
@@ -57,6 +58,6 @@ if (count _attributes > 1) then {
 	if (_prevAnim != "") then {
 		_treatingPerson switchMove _prevAnim;
 	};
-	["cse_sys_medical_treatment", false, "cse\cse_sys_medical\data\icons\medication_small.paa", [1,1,1,1]] call EFUNC(gui,displayIcon);
+	[QGVAR(treatmentIconID), false, QUOTE(PATHTOF(data\icons\medication_small.paa)), [1,1,1,1]] call EFUNC(gui,displayIcon);
 };
 [_treatingPerson,"release"] call FUNC(treatmentMutex_CMS);

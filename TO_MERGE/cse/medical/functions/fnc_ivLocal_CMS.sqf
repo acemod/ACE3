@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_treatingPerson","_injuredPerson","_selectionName","_removeItem","_attributes","_patient", "_value"];
 _injuredPerson = _this select 0;
@@ -15,21 +16,16 @@ _treatingPerson = _this select 1;
 _selectionName = _this select 2;
 _removeItem = _this select 3;
 
-
-
 _attributes = switch (_removeItem) do {
-	case "cse_blood_iv": {[QGVAR(bloodIVVolume),1000,"Blood IV"]};
-	case "cse_saline_iv": {[QGVAR(salineIVVolume),1000,"Saline IV"]};
-	case "cse_plasma_iv": {[QGVAR(plasmaIVVolume),1000,"Plasma IV"]};
-
-	case "cse_blood_iv_500": {[QGVAR(bloodIVVolume),500,"Blood IV"]};
-	case "cse_saline_iv_500": {[QGVAR(salineIVVolume),500,"Saline IV"]};
-	case "cse_plasma_iv_500": {[QGVAR(plasmaIVVolume),500,"Plasma IV"]};
-
-	case "cse_blood_iv_250": {[QGVAR(bloodIVVolume),250,"Blood IV"]};
-	case "cse_saline_iv_250": {[QGVAR(salineIVVolume),250,"Saline IV"]};
-	case "cse_plasma_iv_250": {[QGVAR(plasmaIVVolume),250,"Plasma IV"]};
-
+	case "ACE_blood_iv": {[QGVAR(bloodIVVolume),1000,"Blood IV"]};
+	case "ACE_saline_iv": {[QGVAR(salineIVVolume),1000,"Saline IV"]};
+	case "ACE_plasma_iv": {[QGVAR(plasmaIVVolume),1000,"Plasma IV"]};
+	case "ACE_blood_iv_500": {[QGVAR(bloodIVVolume),500,"Blood IV"]};
+	case "ACE_saline_iv_500": {[QGVAR(salineIVVolume),500,"Saline IV"]};
+	case "ACE_plasma_iv_500": {[QGVAR(plasmaIVVolume),500,"Plasma IV"]};
+	case "ACE_blood_iv_250": {[QGVAR(bloodIVVolume),250,"Blood IV"]};
+	case "ACE_saline_iv_250": {[QGVAR(salineIVVolume),250,"Saline IV"]};
+	case "ACE_plasma_iv_250": {[QGVAR(plasmaIVVolume),250,"Plasma IV"]};
 	default {[]};
 };
 if (count _attributes > 1) then {

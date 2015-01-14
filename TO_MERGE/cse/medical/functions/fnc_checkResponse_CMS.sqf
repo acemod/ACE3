@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_caller","_unit"];
 _caller = _this select 0;
 _unit = _this select 1;

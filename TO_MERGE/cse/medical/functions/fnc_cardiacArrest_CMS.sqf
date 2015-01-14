@@ -8,6 +8,7 @@
  * @PublicAPI: true
  */
 
+#include "script_component.hpp"
 
 private ["_unit", "_modifier","_timer","_counter", "_heartRate"];
 _unit = _this select 0;

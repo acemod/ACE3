@@ -8,11 +8,11 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_unit","_return","_status"];
 _unit = _this select 0;
-//_status = [_unit,QGVAR(triageLevel)] call EFUNC(common,getDefinedVariable);
- _status = _unit getvariable [QGVAR(triageLevel), -1];
-
+_status = _unit getvariable [QGVAR(triageLevel), -1];
 _return = switch (_status) do {
 	case 0: {["None",0,[0,0,0,0.7]]}; // none
 	case 1: {["Minor",1,[0,0.5,0,0.7]]};
@@ -21,5 +21,4 @@ _return = switch (_status) do {
 	case 4: {["Deceased",4,[0,0,0,0.7]]};
 	default {["None",0,[0,0,0,0.7]]};
 };
-
 _return

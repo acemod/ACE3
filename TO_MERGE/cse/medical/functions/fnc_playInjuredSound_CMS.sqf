@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_unit","_amountOfDamage","_bodyPartStatus","_availableSounds_A","_availableSounds_B","_availableSounds_C","_sound"];
 _unit = _this select 0;

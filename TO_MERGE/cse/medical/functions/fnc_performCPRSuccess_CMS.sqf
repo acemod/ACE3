@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_caller","_unit"];
 _unit = _this select 0;
@@ -18,4 +19,4 @@ _caller = _this select 1;
 
 // setting this to waken up unconscious revivable units
 [_unit, QEGVAR(common,ENABLE_REVIVE_SETDEAD_F), 0] call EFUNC(common,setDefinedVariable);
-[_unit, "CSE_ENABLE_REVIVE_COUNTER", 0] call EFUNC(common,setDefinedVariable);
+[_unit, QEGVAR(ENABLE_REVIVE_COUNTER), 0] call EFUNC(common,setDefinedVariable);

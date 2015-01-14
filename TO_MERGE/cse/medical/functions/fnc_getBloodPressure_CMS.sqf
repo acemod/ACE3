@@ -8,6 +8,8 @@
  * @PublicAPI: true
  */
 
+#include "script_component.hpp"
+
 /*
 	Value is taken because with cardic output and resistance at default values, it will put blood pressure High at 120.
 */

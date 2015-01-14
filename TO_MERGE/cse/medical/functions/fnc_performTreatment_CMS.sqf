@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_unit","_caller","_treatment","_removeOnSuccess","_params"];
 _caller = _this select 0;
@@ -18,7 +19,7 @@ _removeOnSuccess = _this select 3;
 CMS_PERFORMING_TREATMENT = true;
 if (!isnil "_removeOnSuccess") then {
 
-	if (([_caller,_removeOnSuccess] call cse_fnc_hasMagazine)) then {
+	if (([_caller,_removeOnSuccess] call EFUNC(common,hasMagazine))) then {
 		_params = [_unit,_caller, (call FUNC(getSelectedBodyPart_CMS)),_removeOnSuccess];
 		[_params, _treatment, _unit, false] spawn BIS_fnc_MP;
 	};

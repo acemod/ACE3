@@ -8,11 +8,12 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_return","_nameOfUnit","_unit"];
 _return = [];
 
 if (hasInterface) then {
-	//_unit = [player] call cse_fnc_getInteractionTarget;
 	_unit = GVAR(INTERACTION_TARGET);
 	if (!isNull _unit) then {
 		if (_unit != player && (_unit isKindOf "CaManBase")) then {

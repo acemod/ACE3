@@ -9,10 +9,10 @@
  */
 
 private ["_handle"];
-if (isnil "cseDisplayingBleedingEffect") then {
-	cseDisplayingBleedingEffect = false;
+if (isnil QGVAR(DisplayingBleedingEffect)) then {
+	GVAR(DisplayingBleedingEffect) = false;
 };
-if (cseDisplayingBleedingEffect) exitwith {};
+if (GVAR(DisplayingBleedingEffect)) exitwith {};
 _handle = _this spawn {
 	private ["_unit","_bloodLoss","_time"];
 	_bloodLoss = _this select 0;
@@ -21,10 +21,10 @@ _handle = _this spawn {
 	if (_time <1.5) then {
 		_time = 1.5;
 	};
-	cseDisplayingBleedingEffect = true;
-	47 cutRsc ["RscCSEScreenEffectsBleeding","PLAIN"];
+	GVAR(DisplayingBleedingEffect) = true;
+	47 cutRsc [QGVAR(ScreenEffectsBleeding),"PLAIN"];
 	sleep _time;
-	cseDisplayingBleedingEffect = false;
+	GVAR(DisplayingBleedingEffect) = false;
 };
 
 _handle

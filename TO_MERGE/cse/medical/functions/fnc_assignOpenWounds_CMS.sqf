@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_unit", "_amountOfDamage", "_typeOfInjury", "_bodyPartn","_sizeOfWound","_amountOfNewWounds", "_return"];
 _unit = _this select 0;

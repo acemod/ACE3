@@ -8,6 +8,8 @@
  * @PublicAPI: true
  */
 
+#include "script_component.hpp"
+
 private ["_logic","_setting","_objects"];
 _logic = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if (!isNull _logic) then {

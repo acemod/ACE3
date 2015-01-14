@@ -8,6 +8,8 @@
  * @PublicAPI: true
  */
 
+#include "script_component.hpp"
+
 private ["_target", "_caller", "_accessLevel", "_return"];
 _target = _this select 0;
 _caller = _this select 1;

@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 #define DEFAULT_DAMAGE_THRESHOLD 1
 
 private ["_unit","_part","_damageThreshold"];

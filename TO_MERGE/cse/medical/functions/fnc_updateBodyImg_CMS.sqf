@@ -8,12 +8,14 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_unit", "_interactionDialog", "_openWounds", "_part", "_total", "_amountOfWoundsSmall", "_amountOfWoundsMedium", "_amountOfWoundsLarge", "_bandagedWounds","_alphaLevel"];
 _openWounds = _this select 0;
 _bandagedWounds = _this select 1;
 
 disableSerialization;
-_interactionDialog = uiNamespace getvariable QGVAR(medicalMenuIDD);
+_interactionDialog = uiNamespace getvariable QGVAR(medicalMenu);
 _colorCalculationsOpenWounds = {
 	if (_total >0) then {
 		_green = 0.9;

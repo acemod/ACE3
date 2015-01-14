@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 #define CFG_DEFAULT_WAITING_TIME 900 + random(120)
 #define WAITINGTIME 1
 #define RATIO 2
@@ -22,10 +24,10 @@ _item = _this select 4;
 
 // classname, waiting time until wound opens, ratio in which it start bleeding again, chance of the wound ever opening up //
 _config = [
-	["cse_bandage_basic", 900 + random (120), 0.75, 0.4],
-	["cse_packing_bandage", 1200 + random (120), 0.5, 0.6],
-	["cse_bandageElastic", 900 + random (900), 0.75, 0.2],
-	["cse_quikclot", 1, 0.1, 0]
+	["ACE_bandage_basic", 900 + random (120), 0.75, 0.4],
+	["ACE_packing_bandage", 1200 + random (120), 0.5, 0.6],
+	["ACE_bandageElastic", 900 + random (900), 0.75, 0.2],
+	["ACE_quikclot", 1, 0.1, 0]
 ];
 _found = false;
 {

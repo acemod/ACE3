@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_selectionName","_part"];
 _selectionName = _this select 0;

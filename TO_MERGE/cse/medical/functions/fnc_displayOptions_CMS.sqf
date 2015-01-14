@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 #define START_IDC 			20
 #define END_IDC 			27
 #define AMOUNT_OF_ENTRIES 	(count _entries)
@@ -28,7 +30,7 @@ _entries = switch (_name) do {
 };
 
 disableSerialization;
-_display = uiNamespace getVariable QGVAR(medicalMenuIDD);
+_display = uiNamespace getVariable QGVAR(medicalMenu);
 if ((_name == "toggle")) exitwith {
 
 	if (GVAR(INTERACTION_TARGET) != player) then {

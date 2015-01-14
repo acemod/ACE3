@@ -8,45 +8,46 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_caller","_unit","_bloodPressure","_bloodPressureHigh","_bloodPressureLow","_title","_content"];
 _caller = _this select 0;
 _unit = _this select 1;
 
+_bloodPressure = [_unit] call FUNC(getBloodPressure_CMS);
+if (!alive _unit) then {
+	_bloodPressure = [0,0];
+};
 
-	_bloodPressure = [_unit] call FUNC(getBloodPressure_CMS);
-	if (!alive _unit) then {
-		_bloodPressure = [0,0];
-	};
-
-	_bloodPressureHigh = _bloodPressure select 1;
-	_bloodPressureLow = _bloodPressure select 0;
-	_output = "";
+_bloodPressureHigh = _bloodPressure select 1;
+_bloodPressureLow = _bloodPressure select 0;
+_output = "";
 _logOutPut = "";
-	if ([_caller] call FUNC(medicClass_CMS)) then {
-		_output = "STR_ACE_CMS_CHECK_BLOODPRESSURE_OUTPUT_1";
-		_logOutPut = format["%1/%2",round(_bloodPressureHigh),round(_bloodPressureLow)];
-	} else {
-		if (_bloodPressureHigh > 20) then {
-			_output = "STR_ACE_CMS_CHECK_BLOODPRESSURE_OUTPUT_2";
-			_logOutPut = "Low";
-			if (_bloodPressureHigh > 100) then {
-				_output = "STR_ACE_CMS_CHECK_BLOODPRESSURE_OUTPUT_3";
-				_logOutPut = "Normal";
-				if (_bloodPressureHigh > 160) then {
-					_output = "STR_ACE_CMS_CHECK_BLOODPRESSURE_OUTPUT_4";
-					_logOutPut = "High";
-				};
+if ([_caller] call FUNC(medicClass_CMS)) then {
+	_output = "STR_ACE_CMS_CHECK_BLOODPRESSURE_OUTPUT_1";
+	_logOutPut = format["%1/%2",round(_bloodPressureHigh),round(_bloodPressureLow)];
+} else {
+	if (_bloodPressureHigh > 20) then {
+		_output = "STR_ACE_CMS_CHECK_BLOODPRESSURE_OUTPUT_2";
+		_logOutPut = "Low";
+		if (_bloodPressureHigh > 100) then {
+			_output = "STR_ACE_CMS_CHECK_BLOODPRESSURE_OUTPUT_3";
+			_logOutPut = "Normal";
+			if (_bloodPressureHigh > 160) then {
+				_output = "STR_ACE_CMS_CHECK_BLOODPRESSURE_OUTPUT_4";
+				_logOutPut = "High";
+			};
 
-			};
+		};
+	} else {
+		if (random(10) > 3) then {
+			_output = "STR_ACE_CMS_CHECK_BLOODPRESSURE_OUTPUT_5";
+			_logOutPut = "No Blood Pressure";
 		} else {
-			if (random(10) > 3) then {
-				_output = "STR_ACE_CMS_CHECK_BLOODPRESSURE_OUTPUT_5";
-				_logOutPut = "No Blood Pressure";
-			} else {
-				_output = "STR_ACE_CMS_CHECK_BLOODPRESSURE_OUTPUT_6";
-			};
+			_output = "STR_ACE_CMS_CHECK_BLOODPRESSURE_OUTPUT_6";
 		};
 	};
+};
 
 _title = format["STR_ACE_CMS_CHECK_BLOODPRESSURE"];
 _content = ["STR_ACE_CMS_CHECK_BLOODPRESSURE_CHECKED_MEDIC", _output];

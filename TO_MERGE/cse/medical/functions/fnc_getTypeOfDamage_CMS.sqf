@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_typeOfProjectile","_typeOfInjury"];
 _typeOfProjectile = _this select 0;

@@ -9,6 +9,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 // OLD ALGHORIM
 private ["_unit","_bloodVolume","_bloodPressure","_bloodPressureLow","_bloodPressureHigh","_heartRate","_totalBloodLoss","_hrIncrease","_bpIncreaseHigh","_bpIncreaseLow","_speed","_ivVolume","_painStatus","_showedHint", "_modifier"];
@@ -26,7 +27,6 @@ _bpIncreaseHigh = 0;
 _bpIncreaseLow = 0;
 
 //	_totalBloodLoss affecting Heart Rate and bloodpressure
-
 	if (_totalBloodLoss >0.0) then {
 		if (_totalBloodLoss <0.5) then {
 			if (_heartRate < 126) then {

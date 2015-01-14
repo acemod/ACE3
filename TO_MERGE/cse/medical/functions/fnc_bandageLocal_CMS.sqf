@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_treatingPerson","_injuredPerson","_part","_selectionName","_openWounds","_woundsArray","_highest_amount","_highestSpot","_collectiveImpact", "_highestTotal","_totalNumber", "_selectedData"];
 _injuredPerson = _this select 0;
 _treatingPerson = _this select 1;
@@ -24,11 +26,11 @@ if (_treatingPerson != _injuredPerson) then {
 
 [_injuredPerson,_removeItem] call FUNC(addToTriageList_CMS);
 _collectiveImpact =	switch (_removeItem) do	{
-		case "cse_packing_bandage":	{[1.0, 1.5, 1.2]};
-		case "cse_bandageElastic": 	{[1.3, 0.9, 0.9]};
-		case "cse_bandage_basic": 	{[1.5, 1.0, 0.6]};
-		case "cse_stitching": 		{[2.0, 2.0, 2.0]};
-		case "cse_quikclot": 		{[0.9, 0.3, 0.3]};
+		case "ACE_packing_bandage":	{[1.0, 1.5, 1.2]};
+		case "ACE_bandageElastic": 	{[1.3, 0.9, 0.9]};
+		case "ACE_bandage_basic": 	{[1.5, 1.0, 0.6]};
+		case "ACE_stitching": 		{[2.0, 2.0, 2.0]};
+		case "ACE_quikclot": 		{[0.9, 0.3, 0.3]};
 		default						{[0.9, 0.5, 0.5]};
 	};
 	_part =	[_selectionName] call FUNC(getBodyPartNumber_CMS);

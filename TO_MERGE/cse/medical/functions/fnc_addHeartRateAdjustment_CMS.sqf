@@ -8,6 +8,8 @@
  * @PublicAPI: true
  */
 
+#include "script_component.hpp"
+
 private ["_unit", "_value", "_time", "_adjustment", "_callBack"];
 _unit = [_this, 0, objNull, [objNull]] call BIS_fnc_Param;
 _value = [_this, 1, 0, [0]] call BIS_fnc_Param;

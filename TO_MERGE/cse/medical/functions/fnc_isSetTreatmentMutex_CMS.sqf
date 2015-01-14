@@ -8,8 +8,9 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 if (isnil QGVAR(PerformingTreatmentMutex)) then {
 	GVAR(PerformingTreatmentMutex) = false;
 };
-
 GVAR(PerformingTreatmentMutex)

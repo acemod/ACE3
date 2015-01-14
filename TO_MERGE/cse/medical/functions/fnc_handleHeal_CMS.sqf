@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_unit",'_healer'];
 _unit = _this select 0;
 _healer = _this select 1;

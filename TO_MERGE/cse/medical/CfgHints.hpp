@@ -3,7 +3,7 @@ class CfgHints
     class Combat_Space_Enhancement
     {
         displayName = "Combat Space Enhancement";
-    	class CSE_CMS_Module
+    	class ACE_CMS_Module
     	{
 		displayName = "Combat Medical System";
 		displayNameShort = "Combat Medical System";
@@ -23,7 +23,7 @@ class CfgHints
             image = "";
             noImage = true;
        };
-          
+
         class Bleeding
         {
             displayName = "Bandaging a wound";
@@ -33,6 +33,6 @@ class CfgHints
             arguments[] = {};
             image = "";
             noImage = true;
-       };        
+       };
 	};
 };

@@ -8,9 +8,11 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_display","_startIDC","_idc","_options","_name","_amount"];
 disableSerialization;
-_display = uiNamespace getVariable QGVAR(medicalMenuIDD);
+_display = uiNamespace getVariable QGVAR(medicalMenu);
 _startIDC = 111;
 
 _options = ["triage" , "examine", "bandage", "medication", "airway", "advanced", "drag", "toggle"];

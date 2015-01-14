@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 #define HEART_RATE_MODIFIER 0.02
 

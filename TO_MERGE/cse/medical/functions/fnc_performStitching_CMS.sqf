@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 #define WAITING_TIME_SMALL 2.5
 #define WAITING_TIME_MEDIUM 3.5
 #define WAITING_TIME_LARGE 4.5
@@ -42,12 +44,12 @@ _totalWoundsCount = (_allWounds select 0) + (_allWounds select 1) + (_allWounds 
 _totalTime = ((_allWounds select 0) * 2.5) + ((_allWounds select 1) * 3.5) + ((_allWounds select 2) * 4.5);
 
 GVAR(ORIGINAL_POSITION_PLAYER) = getPos _treatingPerson;
-CSE_CONDITION_STITCHING_CMS = {((vehicle player != player) ||((getPos player) distance GVAR(ORIGINAL_POSITION_PLAYER)) < 1)};
+GVAR(conditionStitchingTreatment) = {((vehicle player != player) ||((getPos player) distance GVAR(ORIGINAL_POSITION_PLAYER)) < 1)};
 GVAR(runningStitchingTreatment) = true;
 
 _startTimeOfStitching = diag_tickTime;
 _totalTime spawn {
-	GVAR(runningStitchingTreatment) = [_this, CSE_CONDITION_STITCHING_CMS, {},{[player, "STR_ACE_CMS_CANCELED", ["STR_ACE_CMS_ACTION_CANCELED","STR_ACE_CMS_YOU_MOVED_AWAY"]] call EFUNC(common,sendDisplayInformationTo);}] call EFUNC(gui,loadingBar);
+	GVAR(runningStitchingTreatment) = [_this, GVAR(conditionStitchingTreatment), {},{[player, "STR_ACE_CMS_CANCELED", ["STR_ACE_CMS_ACTION_CANCELED","STR_ACE_CMS_YOU_MOVED_AWAY"]] call EFUNC(common,sendDisplayInformationTo);}] call EFUNC(gui,loadingBar);
 };
 
 _indexStitch = 0;

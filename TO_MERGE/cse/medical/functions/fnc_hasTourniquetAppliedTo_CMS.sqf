@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_unit","_part","_selectionName","_tourniquets"];
 _unit = _this select 0;
 _selectionName = _this select 1;

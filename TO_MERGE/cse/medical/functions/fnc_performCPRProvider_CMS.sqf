@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_caller","_unit","_timer","_succesValueCPR"];
 _unit = _this select 0;

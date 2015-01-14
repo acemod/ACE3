@@ -8,6 +8,8 @@
  * @PublicAPI: true
  */
 
+#include "script_component.hpp"
+
 private "_openWounds";
 _openWounds = [_this select 0,QGVAR(openWounds)] call EFUNC(common,getDefinedVariable);
 

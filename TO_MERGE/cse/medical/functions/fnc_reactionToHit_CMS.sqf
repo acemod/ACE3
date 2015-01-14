@@ -8,6 +8,8 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
+
 private ["_unit","_amountOfDamage"];
 _unit			= _this select 0;
 _amountOfDamage = _this select 1;
@@ -33,17 +35,17 @@ if (_amountOfDamage > 0.2) then {
 	};
 	if (_amountOfDamage > 0.6) then {
 		if (random(1)>0.6) then {
-			[_unit] call cse_fnc_setProne;
+			[_unit] call EFUNC(common,setProne);
 		};
 	};
 	if (isPlayer _unit) then {
-		76 cutRsc ["RscCSEScreenEffectsHit","PLAIN"];
+		76 cutRsc [QEGVAR(common,ScreenEffectsHit),"PLAIN"];
 		addCamShake [3, 5, _amountOfDamage + random 10];
 	};
 } else {
 	if (_amountOfDamage > 0) then {
 		if (isPlayer _unit) then {
-			76 cutRsc ["RscCSEScreenEffectsHit","PLAIN"];
+			76 cutRsc [QEGVAR(common,ScreenEffectsHit),"PLAIN"];
 		};
 	};
 };

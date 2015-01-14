@@ -8,6 +8,8 @@
  * @PublicAPI: true
  */
 
+#include "script_component.hpp"
+
 private ["_unit", "_bodyPart", "_type", "_openWounds", "_selection", "_amount", "_newAmount"];
 _unit = _this select 0;
 _bodyPart = _this select 1;

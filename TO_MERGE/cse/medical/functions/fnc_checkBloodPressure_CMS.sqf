@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
 private ["_caller","_unit","_bloodPressure","_bloodPressureHigh","_bloodPressureLow"];
 _caller = _this select 0;
