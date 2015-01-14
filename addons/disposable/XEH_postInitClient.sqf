@@ -8,6 +8,6 @@ if (isNil QGVAR(UpdateInventoryDisplay_EHID)) then {
   GVAR(UpdateInventoryDisplay_EHID) = [{
     _player = ACE_player;
     [_player, secondaryWeapon _player] call FUNC(takeLoadedATWeapon);
-    [_player, _this select 0] spawn FUNC(updateInventoryDisplay);
+    [_player, (_this select 0)] call FUNC(updateInventoryDisplay);
   }] call EFUNC(common,addInventoryDisplayLoadedEventHandler);
 };

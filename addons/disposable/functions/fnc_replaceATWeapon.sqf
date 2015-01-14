@@ -33,19 +33,6 @@ _unit selectWeapon _tube;
 
 // AI
 if !([_unit] call EFUNC(common,isPlayer)) then {
-  [_unit, _tube, _projectile] spawn {
-    _unit = _this select 0;
-    _tube = _this select 1;
-    _projectile = _this select 2;
-
-    waitUntil {isNull _projectile};
-    sleep 1;
-
-    if (secondaryWeapon _unit == _tube) then {
-      _logic = createVehicle ["GroundWeaponHolder", position _unit, [], 0, "CAN_COLLIDE"];
-      _logic addWeaponCargoGlobal [_tube, 1];  // @todo secondary weapon items
-
-      _unit removeWeapon _tube;
-    };
-  };
+  //waits until _projectile is null, so random 0-2 seconds after that
+  [FUNC(aiDropWeaponCallback), 2, [_unit, _tube, _projectile]] call CBA_fnc_addPerFrameHandler;
 };

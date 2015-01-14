@@ -9,20 +9,19 @@
  * Return value:
  * Nothing
  */
-
+ 
 #include "script_component.hpp"
 
 private ["_player", "_display"];
 
 _player = _this select 0;
-if (!local _player) exitWith {};
 
 _player removeMagazines "ACE_PreloadedMissileDummy";
 _player removeMagazines "ACE_FiredMissileDummy";
 
 disableSerialization;
-_display = findDisplay 602;
-if (isNull _display) exitWith {systemChat "null";};
+_display = [_this, 1, (findDisplay 602)] call BIS_fnc_param;
+if (isNull _display) exitWith {};
 
 private ["_launcher", "_control", "_config"];
 
