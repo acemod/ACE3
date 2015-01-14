@@ -2,12 +2,12 @@
 #define MACRO_ADDMAGAZINE(MAGAZINE,COUNT) class _xx_##MAGAZINE { \
   magazine = #MAGAZINE; \
   count = COUNT; \
-};
+}
 
 #define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
   name = #ITEM; \
   count = COUNT; \
-};
+}
 
 class CfgVehicles {
     #include <FixUniforms.hpp>

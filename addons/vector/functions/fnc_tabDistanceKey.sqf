@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 #define DELAY 0.3
 
