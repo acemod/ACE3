@@ -1,11 +1,12 @@
 // by commy2 and CAA-Picard
+#include "\z\ace\addons\overheating\script_component.hpp"
 
 _this spawn {
   _player = _this select 0;
   _weapon = _this select 1;
 
   // Calculate cool down of weapon since last shot
-  _string = format ["AGM_Overheating_%1", _weapon];
+  _string = format [QGVAR(%1), _weapon];
   _overheat = _player getVariable [_string, [0, 0]];
   _temperature = _overheat select 0;
   _time = _overheat select 1;
@@ -14,9 +15,9 @@ _this spawn {
   _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
 
   // Calculate cooling
-  _temperature = [_temperature, _barrelMass, time - _time] call AGM_Overheating_fnc_cooldown;
+  _temperature = [_temperature, _barrelMass, time - _time] call FUNC(cooldown);
 
-  ["Overheating", _temperature, {format ["Temperature: %1 °C", _this]}] call AGM_Debug_fnc_log;
+  ["Overheating", _temperature, {format ["Temperature: %1 °C", _this]}] call EFUNC(common,log);
 
   // Store new temperature
   _time = time;
@@ -24,7 +25,7 @@ _this spawn {
   _scaledTemperature = (_temperature / 1000) min 1;
 
   // Play animation and report temperature
-  _action = getText (configFile >> "CfgWeapons" >> _weapon >> "AGM_checkTemperatureAction");
+  _action = getText (configFile >> "CfgWeapons" >> _weapon >> "ACE_checkTemperatureAction");
 
   if (_action == "") then {
     _action = "Gear";
@@ -45,7 +46,7 @@ _this spawn {
   for "_a" from 1 to _count do {
     _string = _string + "|";
   };
-  _text = [_string, _color] call AGM_Core_fnc_stringToColoredText;
+  _text = [_string, _color] call EFUNC(common,stringToColoredText);
 
   _string = "";
   for "_a" from (_count + 1) to 12 do {
@@ -54,10 +55,10 @@ _this spawn {
 
   _text = composeText [
     _text,
-    [_string, [0.5, 0.5, 0.5]] call AGM_Core_fnc_stringToColoredText
+    [_string, [0.5, 0.5, 0.5]] call EFUNC(common,stringToColoredTex)t
   ];
 
   _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
 
-  [_text, _picture] call AGM_Core_fnc_displayTextPicture;
+  [_text, _picture] call EFUNC(common,displayTextPicture);
 };
