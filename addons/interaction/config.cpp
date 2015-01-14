@@ -39,7 +39,7 @@ class ACE_Default_Keys {
     statement = QUOTE(call FUNC(onButtonDownSelf));
     conditionUp = QUOTE(!isNull (findDisplay 1713999) && {profileNamespace getVariable [ARR_2(QUOTE(QGVAR(AutoCloseMenu)), false)]});
     statementUp = QUOTE(if (EGVAR(interaction,MenuType) mod 2 == 1) then {call FUNC(onButtonUp)};);
-    exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Medical_canTreat", "ACE_Interaction_isNotEscorting", "ACE_Interaction_isNotSwimming", "ACE_Core_notOnMap"};
+    exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Medical_canTreat", "ACE_Interaction_isNotEscorting", "ACE_Interaction_isNotSwimming", "ACE_Common_notOnMap"};
     key = 219;
     shift = 0;
     control = 1;

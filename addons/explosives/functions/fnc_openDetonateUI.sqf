@@ -48,8 +48,8 @@ if (_count > 0) then {
 		{
 			[
 				ACE_player,
-				[_this select 1] call EFUNC(Core,toNumber),
-				(ACE_player getVariable [QGVAR(Clackers), []]) select ([_this select 0] call EFUNC(Core,toNumber)),
+				[_this select 1] call EFUNC(common,toNumber),
+				(ACE_player getVariable [QGVAR(Clackers), []]) select ([_this select 0] call EFUNC(common,toNumber)),
 				false
 			] call FUNC(detonateExplosive);
 			call EFUNC(Interaction,hideMenu);
@@ -59,5 +59,5 @@ if (_count > 0) then {
 }else{
 	call EFUNC(Interaction,hideMenu);
 	[ACE_player] call FUNC(openTransmitterUI);
-	[localize "STR_ACE_Explosives_NoExplosivesAvailable"] call EFUNC(Core,displayTextStructured);
+	[localize "STR_ACE_Explosives_NoExplosivesAvailable"] call EFUNC(common,displayTextStructured);
 };

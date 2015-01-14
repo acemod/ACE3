@@ -7,7 +7,7 @@ class CfgVehicles {
 
   class Module_F;
   class ACE_ModuleInteraction: Module_F {
-    author = "$STR_ACE_Core_ACETeam";
+    author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
     displayName = "Interaction System";
     function = "ACE_Interaction_fnc_moduleInteraction";
