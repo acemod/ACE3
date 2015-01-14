@@ -4,7 +4,7 @@
 
 	(configFile >> "CfgAmmo") call FUNC(exportConfig);
 */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private "_fnc_logEntries";
 

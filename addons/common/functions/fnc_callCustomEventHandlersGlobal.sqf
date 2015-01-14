@@ -11,6 +11,6 @@
  * Return value:
  * None.
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 [_this, QUOTE(FUNC(callCustomEventHandlers)), 2] call FUNC(execRemoteFnc);

@@ -9,7 +9,7 @@
  * Return value:
  * What input will result in the given key code? (String)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_keyCode", "_key", "_alt", "_ctrl", "_shft"];
 

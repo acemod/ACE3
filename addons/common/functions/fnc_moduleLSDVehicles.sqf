@@ -9,7 +9,7 @@
  * Return Value:
  * None
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 _logic = _this select 0;
 _units = _this select 1;

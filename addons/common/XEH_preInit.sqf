@@ -134,8 +134,18 @@ PREP(monitor);
 PREP(showUser);
 
 // ACE_CuratorFix
-PREP(addUnloadEventhandler);
+PREP(addCuratorUnloadEventhandler);
 PREP(fixCrateContent);
+
+//ACE events global variables
+GVAR(netEvents) = [[],[]];
+
+PREP(globalEvent);
+PREP(_handleNetEvent);
+PREP(addNetEventHandler);
+PREP(targetEvent);
+PREP(serverEvent);
+
 
 // Loop to update the ACE_player variable
 ACE_player = player;

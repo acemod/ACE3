@@ -1,8 +1,8 @@
 
-class ACE_Common_ProgressBar_Dialog {
+class GVAR(ProgressBar_Dialog) {
     idd = -1;
     movingEnable = false;
-    onLoad = "uiNamespace setVariable ['ACE_Common_ctrlProgressBar', (_this select 0) displayCtrl 1]; uiNamespace setVariable ['ACE_Common_ctrlProgressBarTitle', (_this select 0) displayCtrl 2];";
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlProgressBar)),(_this select 0) displayCtrl 1)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlProgressBarTitle)),(_this select 0) displayCtrl 2)];);
     objects[] = {};
 
     class controlsBackground {
@@ -66,10 +66,10 @@ class ACE_Common_ProgressBar_Dialog {
     };
 };
 
-class ACE_Common_DisableMouse_Dialog {
+class GVAR(DisableMouse_Dialog) {
     idd = -1;
     movingEnable = false;
-    onLoad = "uiNamespace setVariable ['ACE_Common_dlgDisableMouse', _this select 0];";
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(dlgDisableMouse)),_this select 0)];);
     objects[] = {};
     class controlsBackground {
         class Background {

@@ -9,7 +9,7 @@
  * Return value:
  * Is the unit in a building? (Bool)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 #define DISTANCE 10
 

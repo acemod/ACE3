@@ -12,7 +12,7 @@
  * Return value:
  * None.
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_projectile", "_adjustDir", "_adjustUp", "_adjustSpeed", "_vdir", "_dir", "_up", "_l", "_r", "_vup", "_vel"];
 

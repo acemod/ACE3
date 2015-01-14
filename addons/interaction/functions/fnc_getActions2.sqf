@@ -45,7 +45,7 @@ _cacheIndices = _cache select 2;
 			_condition = getText (_action >> "condition");
 			if (_condition == "") then {_condition = "true"};
 
-			_condition = _condition + format [QUOTE(&& {%1 call EFUNC(common,canInteract)} && {[ACE_player, GVAR(Target)] call FUNC(canInteractWith)}), getArray (_action >> "exceptions")];
+			_condition = _condition + format [QUOTE(&& {%1 call EFUNC(common,canInteract)} && {[ARR_2(ACE_player, GVAR(Target))] call FUNC(canInteractWith)}), getArray (_action >> "exceptions")];
 			if (_enableInside != 1) then {_condition = _condition + " && {_player == _vehicle}"};
 
 			_condition = compile _condition;
@@ -97,9 +97,9 @@ _cacheIndices = _cache select 2;
 			_cacheIndices pushBack _indexCache;
 
 			_cache = [_cacheConfigs, _cacheActions, _cacheIndices];
-			["InteractionMenu", _action, {format ["%1 loaded into cache", _this]}] call EFUNC(debug,log);
+			["InteractionMenu", _action, {format ["%1 loaded into cache", _this]}] call EFUNC(common,log);
 		} else {
-			["InteractionMenu", _action, {format ["%1 loaded from cache", _this]}] call EFUNC(debug,log);
+			["InteractionMenu", _action, {format ["%1 loaded from cache", _this]}] call EFUNC(common,log);
 
 			private ["_cachedAction", "_showDisabled"];
 			_cachedAction = _cacheActions select (_cacheIndices select _indexCache);

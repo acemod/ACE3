@@ -14,7 +14,7 @@
  * Return Value:
  * Nothing
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 #define CANGETINDRIVER      (isNull (driver _vehicle)             || {!alive driver _vehicle})               && {!lockedDriver _vehicle}           && {getNumber (_config >> "isUav") != 1}
 #define CANGETINTURRETINDEX (isNull (_vehicle turretUnit _turret) || {!alive (_vehicle turretUnit _turret)}) && {!(_vehicle lockedTurret _turret)} && {getNumber (_config >> "isUav") != 1}
