@@ -149,6 +149,18 @@ PREP(localEvent);
 PREP(removeEventHandler);
 PREP(removeAlLEventHandlers);
 
+// hashes
+PREP(hashCreate);
+PREP(hashSet);
+PREP(hashGet);
+PREP(hashHasKey);
+PREP(hashRem);
+PREP(hashListCreateList);
+PREP(hashListCreateHash);
+PREP(hashListSelect);
+PREP(hashListSet);
+PREP(hashListPush);
+
 
 // Loop to update the ACE_player variable
 ACE_player = player;
@@ -164,3 +176,8 @@ if (hasInterface) then {
         };
     }] call BIS_fnc_addStackedEventHandler;
 };
+
+
+
+
+
