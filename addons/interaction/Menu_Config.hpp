@@ -587,7 +587,7 @@ class RscTitles {
       };
     };
   };
-  class ACE_InteractionHelper {
+  class GVAR(InteractionHelper) {
     idd = 9930;
     enableSimulation = 1;
     movingEnable = 0;

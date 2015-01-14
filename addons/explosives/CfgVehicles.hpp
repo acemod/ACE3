@@ -8,7 +8,7 @@ class CfgVehicles {
 
   class CAManBase: Man {
     class ACE_SelfActions {
-      class GVAR(Explosives) {
+      class ACE_Explosives {
         displayName = $STR_ACE_Explosives_Menu;
         condition = QUOTE( !(_player getVariable [ARR_2('ace_explosives_PlantingExplosive',false)]) );
         statement = "";

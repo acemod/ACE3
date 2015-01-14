@@ -18,8 +18,6 @@ class CfgPatches {
 
 #include "CfgVehicles.hpp"
 
-#include "CfgWeapons.hpp"
-
 #include <Menu_Config.hpp>
 
 class ACE_Default_Keys {
