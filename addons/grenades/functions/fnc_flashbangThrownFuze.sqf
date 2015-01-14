@@ -15,6 +15,6 @@ if (alive _projectile) then {
 
   _affected = _projectile nearEntities ["CAManBase", 50];
   {
-    [QGVAR(flashbangExplosionEvent), [_x, _projectile]] call EFUNC(common,globalEvent);
+    [QGVAR(flashbangExplosionEvent), [_x], [_x, _projectile]] call EFUNC(common,targetEvent);
   } forEach _affected;
 };
