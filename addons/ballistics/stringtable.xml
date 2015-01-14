@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-15 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="Ballistics">
     <!-- MX -->
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_mag_Tracer_DimName">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimName">
       <English>6.5mm 30Rnd Tracer IR-DIM Mag</English>
       <Hungarian>6,5 mm Nyomjelző IR-DIM 30-as Tár</Hungarian>
       <German>6,5 mm 30-Schuss-Magazin Leuchtspur IR-DIM</German>
@@ -15,7 +15,7 @@
       <Italian>Caricatore 6.5mm 30Rnd Traccianti IR-DIM</Italian>
       <Russian>Магазин из 30-и 6.5 мм трассирующих под ПНВ</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_mag_Tracer_DimNameShort">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimNameShort">
       <English>6.5mm IR-DIM</English>
       <Hungarian>6,5 mm IR-DIM</Hungarian>
       <German>6,5mm IR-DIM</German>
@@ -27,7 +27,7 @@
       <Italian>6.5 IR-DIM</Italian>
       <Russian>6.5 мм трассирущие под ПНВ</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_mag_Tracer_DimDescription">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimDescription">
       <English>Caliber: 6.5x39 mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
       <Hungarian>Kaliber: 6,5x39 mm Nyomjelző IR-DIM&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
       <German>Kaliber: 6,5x39 mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MX/C/M/SW/3GL</German>
@@ -39,7 +39,7 @@
       <Italian>Calibro: 6.5x39 mm Traccianti IR-DIM &lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MX/C/M/SW/3GL</Italian>
       <Russian>Калибр: 6.5x39 мм трассирующие под ПНВ&lt;br /&gt;Патронов: 30&lt;br /&gt;Применимы в: MX/C/M/SW/3GL</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_mag_SDName">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_SDName">
       <English>6.5mm 30Rnd SD Mag</English>
       <Hungarian>6,5 mm Hangtompítós 30-as Tár</Hungarian>
       <German>6,5 mm 30-Schuss-Magazin SD</German>
@@ -51,7 +51,7 @@
       <Italian>Caricatore 6.5mm 30Rnd Sil.</Italian>
       <Russian>Магазин из 30-и 6.5 мм дозвуковых</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_mag_SDNameShort">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_SDNameShort">
       <English>6.5mm SD</English>
       <Hungarian>6,5 mm Hangtompítós</Hungarian>
       <German>6,5mm SD</German>
@@ -63,7 +63,7 @@
       <Italian>6.5mm Sil.</Italian>
       <Russian>6.5 мм дозвуковые</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_mag_SDDescription">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_SDDescription">
       <English>Caliber: 6.5x39 mm SD&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
       <Hungarian>Kaliber: 6,5x39 mm Hangtompítós&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
       <German>Kaliber: 6,5x39 mm SD&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MX/C/M/SW/3GL</German>
@@ -75,7 +75,7 @@
       <Italian>Calibro: 6.5x39 mm Sil.&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MX/C/M/SW/3GL </Italian>
       <Russian>Калибр: 6.5x39 мм дозвуковые&lt;br /&gt;Патронов: 30&lt;br /&gt;Применимы в: MX/C/M/SW/3GL</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_mag_APName">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_APName">
       <English>6.5mm 30Rnd AP Mag</English>
       <Hungarian>6,5 mm Páncéltörő 30-as Tár</Hungarian>
       <German>6,5 mm 30-Schuss-Magazin AP</German>
@@ -87,7 +87,7 @@
       <Italian>Caricatore 6.5mm 30Rnd AP</Italian>
       <Russian>Магазин из 30-и 6.5 мм бронебойных</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_mag_APNameShort">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_APNameShort">
       <English>6.5mm AP</English>
       <Hungarian>6,5 mm Páncéltörő</Hungarian>
       <German>6,5mm AP</German>
@@ -99,7 +99,7 @@
       <Italian>6.5mm AP</Italian>
       <Russian>6.5 мм бронебойные</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_mag_APDescription">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_APDescription">
       <English>Caliber: 6.5x39 mm AP&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
       <Hungarian>Kaliber: 6,5x39 mm Páncéltörő&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
       <German>Kaliber: 6,5x39 mm AP&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MX/C/M/SW/3GL</German>
@@ -112,7 +112,7 @@
       <Russian>Калибр: 6.5x39 мм бронебойные&lt;br /&gt;Патронов: 30&lt;br /&gt;Применимы в: MX/C/M/SW/3GL</Russian>
     </Key>
     <!-- KATIBA -->
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_green_mag_Tracer_DimName">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_Tracer_DimName">
       <English>6.5mm 30Rnd Tracer IR-DIM Mag</English>
       <Hungarian>6,5mm IR-DIM Nyomjelző 30-as Tár</Hungarian>
       <German>6,5 mm 30-Schuss-Magazin Leuchtspur IR-DIM</German>
@@ -124,7 +124,7 @@
       <Italian>Caricatore 6.5mm 30Rnd Traccianti IR-DIM</Italian>
       <Russian>Магазин из 30-и 6.5 мм трассирующих под ПНВ</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_green_mag_Tracer_DimNameShort">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_Tracer_DimNameShort">
       <English>6.5mm IR-DIM</English>
       <Hungarian>6,5mm IR-DIM</Hungarian>
       <German>6,5mm IR-DIM</German>
@@ -136,7 +136,7 @@
       <Italian>6.5mm IR-DIM</Italian>
       <Russian>6.5 мм трассирущие под ПНВ</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_green_mag_Tracer_DimDescription">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_Tracer_DimDescription">
       <English>Caliber: 6.5x39 mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
       <Hungarian>Kaliber: 6,5x39 mm Nyomjelző IR-DIM&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
       <German>Kaliber: 6,5x39 mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Katiba</German>
@@ -148,7 +148,7 @@
       <Italian>Calibro: 6.5x39 mm Tracciant IR-DIM&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: Katiba</Italian>
       <Russian>Калибр: 6.5x39 мм трассирующие под ПНВ&lt;br /&gt;Патронов: 30&lt;br /&gt;Применимы в: Katiba</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_green_mag_SDName">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_SDName">
       <English>6.5mm 30Rnd SD Mag</English>
       <Hungarian>6,5 mm Hangtompítós 30-as Tár</Hungarian>
       <German>6,5 mm 30-Schuss-Magazin SD</German>
@@ -160,7 +160,7 @@
       <Italian>Caricatore 6.5mm 30Rnd Sil.</Italian>
       <Russian>Магазин из 30-и 6.5 мм дозвуковых</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_green_mag_SDNameShort">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_SDNameShort">
       <English>6.5mm SD</English>
       <Hungarian>6,5 mm Hangtompítós</Hungarian>
       <German>6,5mm SD</German>
@@ -172,7 +172,7 @@
       <Italian>6.5mm Sil.</Italian>
       <Russian>6.5 мм дозвуковые</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_green_mag_SDDescription">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_SDDescription">
       <English>Caliber: 6.5x39 mm SD&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
       <Hungarian>Kaliber: 6,5x39 mm Hangtompítós&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
       <German>Kaliber: 6,5x39 mm SD&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Katiba</German>
@@ -184,7 +184,7 @@
       <Italian>Calibro: 6.5x39 mm Sil.&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: Katiba</Italian>
       <Russian>Калибр: 6.5x39 мм дозвуковые&lt;br /&gt;Патронов: 30&lt;br /&gt;Применимы в: Katiba</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_green_mag_APName">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_APName">
       <English>6.5mm 30Rnd AP Mag</English>
       <Hungarian>6,5 mm Páncéltörő 30-as Tár</Hungarian>
       <German>6,5 mm 30-Schuss-Magazin AP</German>
@@ -196,7 +196,7 @@
       <Italian>Caricatore 6.5mm 30Rnd AP</Italian>
       <Russian>Магазин из 30-и 6.5 мм бронебойных</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_green_mag_APNameShort">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_APNameShort">
       <English>6.5mm AP</English>
       <Hungarian>6,5 mm Páncéltörő</Hungarian>
       <German>6,5mm AP</German>
@@ -208,7 +208,7 @@
       <Italian>6.5mm AP</Italian>
       <Russian>6.5 мм бронебойные</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_65x39_caseless_green_mag_APDescription">
+    <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_APDescription">
       <English>Caliber: 6.5x39 mm AP&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
       <Hungarian>Kaliber: 6,5x39 mm Páncéltörő&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
       <German>Kaliber: 6,5x39 mm AP&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Katiba</German>
@@ -221,7 +221,7 @@
       <Russian>Калибр: 6.5x39 мм бронебойные&lt;br /&gt;Патронов: 30&lt;br /&gt;Применимы в: Katiba</Russian>
     </Key>
     <!-- 5.56x45mm -->
-    <Key ID="STR_AGM_30Rnd_556x45_mag_Tracer_DimName">
+    <Key ID="STR_ACE_30Rnd_556x45_mag_Tracer_DimName">
       <English>5.56mm 30rnd Tracer IR-DIM Mag</English>
       <Hungarian>5,56 mm Nyomjelző IR-DIM 30-as Tár</Hungarian>
       <German>5,56 mm 30-Schuss-Magazin Leuchtspur IR-DIM</German>
@@ -233,7 +233,7 @@
       <Italian>Caricatore 5.56mm 30rnd Traccianti IR-DIM</Italian>
       <Russian>Магазин из 30-и 5.56 мм трассирующих под ПНВ</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_556x45_mag_Tracer_DimNameShort">
+    <Key ID="STR_ACE_30Rnd_556x45_mag_Tracer_DimNameShort">
       <English>5.56mm IR-DIM</English>
       <Hungarian>5,56 mm IR-DIM</Hungarian>
       <German>5,56mm IR-DIM</German>
@@ -245,7 +245,7 @@
       <Italian>5.56mm IR-DIM</Italian>
       <Russian>5.56 мм трассирущие под ПНВ</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_556x45_mag_Tracer_DimDescription">
+    <Key ID="STR_ACE_30Rnd_556x45_mag_Tracer_DimDescription">
       <English>Caliber: 5.56x45 mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</English>
       <Hungarian>Kaliber: 5,56x45 mm Nyomjelző IR-DIM&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Hungarian>
       <German>Kaliber: 5,56x45 mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</German>
@@ -257,7 +257,7 @@
       <Italian>Calibro: 5.56x45 mm Traccianti IR-DIM&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Italian>
       <Russian>Калибр: 5.56x45 мм трассирующие под ПНВ&lt;br /&gt;Патронов: 30&lt;br /&gt;Применимы в: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_556x45_mag_SDName">
+    <Key ID="STR_ACE_30Rnd_556x45_mag_SDName">
       <English>5.56mm 30Rnd SD Mag</English>
       <Hungarian>5,56 mm Hangtompítós 30-as Tár</Hungarian>
       <German>5,56 mm 30-Schuss-Magazin SD</German>
@@ -269,7 +269,7 @@
       <Italian>Caricatore 5.56mm 30Rnd Sil.</Italian>
       <Russian>Магазин из 30-и 5.56 мм дозвуковых</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_556x45_mag_SDNameShort">
+    <Key ID="STR_ACE_30Rnd_556x45_mag_SDNameShort">
       <English>5.56mm SD</English>
       <Hungarian>5,56 mm Hangtompítós</Hungarian>
       <German>5,56mm SD</German>
@@ -281,7 +281,7 @@
       <Italian>5.56 Sil.</Italian>
       <Russian>5.56 мм дозвуковые</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_556x45_mag_SDDescription">
+    <Key ID="STR_ACE_30Rnd_556x45_mag_SDDescription">
       <English>Caliber: 5.56x45 mm SD&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</English>
       <Hungarian>Kaliber: 5,56x45 mm Hangtompítós&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Hungarian>
       <German>Kaliber: 5,56x45 mm SD&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</German>
@@ -293,7 +293,7 @@
       <Italian>Calibro: 5.56x45 mm Sil.&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Italian>
       <Russian>Калибр: 5.56x45 мм дозвуковые&lt;br /&gt;Патронов: 30&lt;br /&gt;Применимы в: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_556x45_mag_APName">
+    <Key ID="STR_ACE_30Rnd_556x45_mag_APName">
       <English>5.56mm 30Rnd AP Mag</English>
       <Hungarian>5,56 mm Páncéltörő 30-as Tár</Hungarian>
       <German>5,56 mm 30-Schuss-Magazin AP</German>
@@ -305,7 +305,7 @@
       <Italian>Caricatore 5.56mm 30Rnd AP</Italian>
       <Russian>Магазин из 30-и 5.56 мм бронебойных</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_556x45_mag_APNameShort">
+    <Key ID="STR_ACE_30Rnd_556x45_mag_APNameShort">
       <English>5.56mm AP</English>
       <Hungarian>5,56 mm Páncéltörő</Hungarian>
       <German>5,56mm AP</German>
@@ -317,7 +317,7 @@
       <Italian>5.56mm AP</Italian>
       <Russian>5.56 мм бронебойные</Russian>
     </Key>
-    <Key ID="STR_AGM_30Rnd_556x45_mag_APDescription">
+    <Key ID="STR_ACE_30Rnd_556x45_mag_APDescription">
       <English>Caliber: 5.56x45 mm AP&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</English>
       <Hungarian>Kaliber: 5,56x45 mm Páncéltörő&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Hungarian>
       <German>Kaliber: 5,56x45 mm AP&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</German>
@@ -330,7 +330,7 @@
       <Russian>Калибр: 5.56x45 мм бронебойные&lt;br /&gt;Патронов: 30&lt;br /&gt;Применимы в: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Russian>
     </Key>
     <!-- 7.62x51mm -->
-    <Key ID="STR_AGM_20Rnd_762x51_mag_TracerName">
+    <Key ID="STR_ACE_20Rnd_762x51_mag_TracerName">
       <English>7.62mm 20rnd Tracer Mag</English>
       <Hungarian>7,62 mm Nyomjelző IR-DIM 20-as Tár</Hungarian>
       <German>7,62 mm 20-Schuss-Magazin Leuchtspur</German>
@@ -342,7 +342,7 @@
       <Italian>Caricatore 7.62mm 20Rnd Traccianti</Italian>
       <Russian>Магазин из 20-и 7.62 мм трассирующих</Russian>
     </Key>
-    <Key ID="STR_AGM_20Rnd_762x51_mag_TracerNameShort">
+    <Key ID="STR_ACE_20Rnd_762x51_mag_TracerNameShort">
       <English>7.62mm Tracer</English>
       <Hungarian>7,62 mm Nyomjelző</Hungarian>
       <German>7,62mm Leuchtspur</German>
@@ -354,7 +354,7 @@
       <Italian>7.62mm Traccianti</Italian>
       <Russian>7.62 мм трассирущие</Russian>
     </Key>
-    <Key ID="STR_AGM_20Rnd_762x51_mag_TracerDescription">
+    <Key ID="STR_ACE_20Rnd_762x51_mag_TracerDescription">
       <English>Caliber: 7.62x51 mm Tracer&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
       <Hungarian>Kaliber: 7,62x51 mm Nyomjelző&lt;br /&gt;Lőszerek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
       <German>Kaliber: 7,62x51 mm Leuchtspur&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
@@ -366,7 +366,7 @@
       <Italian>Calibro: 7.62x51 mm Traccianti&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
       <Russian>Калибр: 7.62x51 мм трассирующие&lt;br /&gt;Патронов: 20&lt;br /&gt;Применимы в: Mk18 ABR</Russian>
     </Key>
-    <Key ID="STR_AGM_20Rnd_762x51_mag_Tracer_DimName">
+    <Key ID="STR_ACE_20Rnd_762x51_mag_Tracer_DimName">
       <English>7.62mm 20rnd Tracer IR-DIM Mag</English>
       <Hungarian>7,62 mm Nyomjelző IR-DIM 20-as Tár</Hungarian>
       <German>7,62 mm 20-Schuss-Magazin Leuchtspur IR-DIM</German>
@@ -378,7 +378,7 @@
       <Italian>Caricatore 7.62mm 20rnd Traccianti IR-DIM</Italian>
       <Russian>Магазин из 20-и 7.62 мм трассирующих под ПНВ</Russian>
     </Key>
-    <Key ID="STR_AGM_20Rnd_762x51_mag_Tracer_DimNameShort">
+    <Key ID="STR_ACE_20Rnd_762x51_mag_Tracer_DimNameShort">
       <English>7.62mm IR-DIM</English>
       <Hungarian>7,62 mm IR-DIM</Hungarian>
       <German>7,62mm IR-DIM</German>
@@ -390,7 +390,7 @@
       <Italian>7.62mm IR-DIM</Italian>
       <Russian>7.62 мм трассирущие под ПНВ</Russian>
     </Key>
-    <Key ID="STR_AGM_20Rnd_762x51_mag_Tracer_DimDescription">
+    <Key ID="STR_ACE_20Rnd_762x51_mag_Tracer_DimDescription">
       <English>Caliber: 7.62x51 mm Tracer IR-DIM&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
       <Hungarian>Kaliber: 7,62x51 mm Nyomjelző IR-DIM&lt;br /&gt;Lőszerek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
       <German>Kaliber: 7,62x51 mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
@@ -402,7 +402,7 @@
       <Italian>Calibro: 7.62x51 mm Traccianti IR-DIM&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
       <Russian>Калибр: 7.62x51 мм трассирующие под ПНВ&lt;br /&gt;Патронов: 20&lt;br /&gt;Применимы в: Mk18 ABR</Russian>
     </Key>
-    <Key ID="STR_AGM_20Rnd_762x51_mag_SDName">
+    <Key ID="STR_ACE_20Rnd_762x51_mag_SDName">
       <English>7.62mm 20Rnd SD Mag</English>
       <Hungarian>7,62 mm Hangtompítós 20-as Tár</Hungarian>
       <German>7,62 mm 20-Schuss-Magazin SD</German>
@@ -414,7 +414,7 @@
       <Italian>Caricatore 7.62mm 20Rnd Sil.</Italian>
       <Russian>Магазин из 20-и 7.62 мм дозвуковых</Russian>
     </Key>
-    <Key ID="STR_AGM_20Rnd_762x51_mag_SDNameShort">
+    <Key ID="STR_ACE_20Rnd_762x51_mag_SDNameShort">
       <English>7.62mm SD</English>
       <Hungarian>7,62 mm Hangtompítós</Hungarian>
       <German>7,62mm SD</German>
@@ -426,7 +426,7 @@
       <Italian>7.62mm Sil.</Italian>
       <Russian>7.62 мм дозвуковые</Russian>
     </Key>
-    <Key ID="STR_AGM_20Rnd_762x51_mag_SDDescription">
+    <Key ID="STR_ACE_20Rnd_762x51_mag_SDDescription">
       <English>Caliber: 7.62x51 mm SD&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
       <Hungarian>Kaliber: 7,62x51 mm Hangtompítós&lt;br /&gt;Lőszerek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
       <German>Kaliber: 7,62x51 mm SD&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
@@ -438,7 +438,7 @@
       <Italian>Calibro: 7.62x51 mm Sil.&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
       <Russian>Калибр: 7.62x51 мм дозвуковые&lt;br /&gt;Патронов: 20&lt;br /&gt;Применимы в: Mk18 ABR</Russian>
     </Key>
-    <Key ID="STR_AGM_20Rnd_762x51_mag_APName">
+    <Key ID="STR_ACE_20Rnd_762x51_mag_APName">
       <English>7.62mm 20Rnd AP Mag</English>
       <Hungarian>7,62 mm Páncéltörő 20-as Tár</Hungarian>
       <German>7,62 mm 20-Schuss-Magazin AP</German>
@@ -450,7 +450,7 @@
       <Italian>Caricatore 7.62mm 20Rnd AP</Italian>
       <Russian>Магазин из 20-и 7.62 мм бронебойных</Russian>
     </Key>
-    <Key ID="STR_AGM_20Rnd_762x51_mag_APNameShort">
+    <Key ID="STR_ACE_20Rnd_762x51_mag_APNameShort">
       <English>7.62mm AP</English>
       <Hungarian>7,62 mm Páncéltörő</Hungarian>
       <German>7,62mm AP</German>
@@ -462,7 +462,7 @@
       <Italian>7.62mm AP</Italian>
       <Russian>7.62 мм бронебойные</Russian>
     </Key>
-    <Key ID="STR_AGM_20Rnd_762x51_mag_APDescription">
+    <Key ID="STR_ACE_20Rnd_762x51_mag_APDescription">
       <English>Caliber: 7.62x51 mm AP&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
       <Hungarian>Kaliber: 7,62x51 mm Páncéltörő&lt;br /&gt;Lőszerek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
       <German>Kaliber: 7,62x51 mm AP&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
@@ -474,7 +474,7 @@
       <Italian>Calibro: 7.62x51 mm AP&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
       <Russian>Калибр: 7.62x51 мм дозвуковые&lt;br /&gt;Патронов: 20&lt;br /&gt;Применимы в: Mk18 ABR</Russian>
     </Key>
-    <Key ID="STR_AGM_Ballistics_20Rnd_762x51_Mag_Description">
+    <Key ID="STR_ACE_Ballistics_20Rnd_762x51_Mag_Description">
       <English>Caliber: 7.62x51mm M118LR&lt;br /&gt;Rounds: 20&lt;br /&gt;Type: M14</English>
       <Hungarian>Kaliber: 7,62x51 mm M118LR&lt;br /&gt;Lőszerek: 20&lt;br /&gt;Típus: M14</Hungarian>
       <German>Kaliber: 7,62x51mm M118LR&lt;br /&gt;Schuss: 20&lt;br /&gt;Typ: M14</German>
@@ -487,7 +487,7 @@
       <Italian>Calibro: 7.62x51mm M118LR&lt;br /&gt;Munizioni:20&lt;br /&gt;In uso su: M14</Italian>
     </Key>
     <!-- Flash suppressors -->
-    <Key ID="STR_AGM_muzzle_mzls_H">
+    <Key ID="STR_ACE_muzzle_mzls_H">
       <English>Flash Suppressor (6.5 mm)</English>
       <Hungarian>Lángrejtő (6,5 mm)</Hungarian>
       <German>Mündungsfeuerdämpfer (6,5 mm)</German>
@@ -499,7 +499,7 @@
       <Russian>Пламегаситель (6,5 мм)</Russian>
       <Spanish>Supresor (6,5 mm)</Spanish>
     </Key>
-    <Key ID="STR_AGM_muzzle_mzls_B">
+    <Key ID="STR_ACE_muzzle_mzls_B">
       <English>Flash Suppressor (7.62 mm)</English>
       <Hungarian>Lángrejtő (7,62 mm)</Hungarian>
       <German>Mündungsfeuerdämpfer (7,62 mm)</German>
@@ -511,7 +511,7 @@
       <Russian>Пламегаситель (7,62 мм)</Russian>
       <Spanish>Supresor (7,62 mm)</Spanish>
     </Key>
-    <Key ID="STR_AGM_muzzle_mzls_L">
+    <Key ID="STR_ACE_muzzle_mzls_L">
       <English>Flash Suppressor (5.56 mm)</English>
       <Hungarian>Lángrejtő (5,56 mm)</Hungarian>
       <German>Mündungsfeuerdämpfer (5,56 mm)</German>
@@ -523,7 +523,7 @@
       <Russian>Пламегаситель (5,56 мм)</Russian>
       <Spanish>Supresor (5,56 mm)</Spanish>
     </Key>
-    <Key ID="STR_AGM_muzzle_mzls_smg_01">
+    <Key ID="STR_ACE_muzzle_mzls_smg_01">
       <English>Flash Suppressor (.45 ACP)</English>
       <Hungarian>Lángrejtő (.45 ACP)</Hungarian>
       <German>Mündungsfeuerdämpfer (.45 ACP)</German>
@@ -535,7 +535,7 @@
       <Russian>Пламегаситель (.45 ACP)</Russian>
       <Spanish>Supresor (.45 ACP)</Spanish>
     </Key>
-    <Key ID="STR_AGM_muzzle_mzls_smg_02">
+    <Key ID="STR_ACE_muzzle_mzls_smg_02">
       <English>Flash Suppressor (9 mm)</English>
       <Hungarian>Lángrejtő (9 mm)</Hungarian>
       <German>Mündungsfeuerdämpfer (9 mm)</German>
