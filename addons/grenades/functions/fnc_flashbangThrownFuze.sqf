@@ -15,7 +15,6 @@ if (alive _projectile) then {
 
   _affected = _projectile nearEntities ["CAManBase", 50];
   {
-    // [[_x, _projectile], "ACE_Grenades_fnc_flashbangEffect", _x] call ACE_Core_fnc_execRemoteFnc;
     [QGVAR(flashbangExplosionEvent), [_x, _projectile]] call EFUNC(common,globalEvent);
   } forEach _affected;
 };

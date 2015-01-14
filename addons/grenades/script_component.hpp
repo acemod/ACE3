@@ -12,3 +12,8 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define EFFECT_STAGE_RESETAI 0
+#define EFFECT_STAGE_DELETELIGHT 1
+#define EFFECT_STAGE_PARTIALRECOVERY 2
+#define EFFECT_STAGE_FULLRECOVERY 3

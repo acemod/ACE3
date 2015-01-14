@@ -41,3 +41,4 @@ _hint = [
 
 GVAR(currentThrowMode) = _mode;
 
+true

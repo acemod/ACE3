@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-PREP(flashbangEffect);
+PREP(flashbangEffectStages);
 PREP(flashbangExplosionEH);
 PREP(flashbangThrownFuze);
 PREP(nextMode);
