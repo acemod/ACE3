@@ -25,5 +25,5 @@ if !([(2 + round(random(4))),{((vehicle player != player) ||((getPos player) dis
 		[_caller,"release"] call FUNC(treatmentMutex_CMS);
 };
 
-[_this, "FUNC(checkBloodPressureLocal_CMS)", _unit, false] spawn BIS_fnc_MP;
+[_this, QUOTE(FUNC(checkBloodPressureLocal_CMS)), _unit, false] spawn BIS_fnc_MP;
 [_caller,"release"] call FUNC(treatmentMutex_CMS);

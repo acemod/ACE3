@@ -26,6 +26,7 @@ class CfgWeapons {
 		type = 16;
 		displayName = $STR_ACE_MAG_PACKING_BANDAGE_DISPLAY;
 		picture = QUOTE(PATHTOF(equipment\img\packing_bandage.paa));
+		model = QUOTE(PATHTOF(equipment\bandages\packingbandage.p3d));
 		descriptionShort = $STR_ACE_MAG_PACKING_BANDAGE_DESC_SHORT;
 		descriptionUse = $STR_ACE_MAG_PACKING_BANDAGE_DESC_USE;
 		class ItemInfo: InventoryItem_Base_F
@@ -33,7 +34,6 @@ class CfgWeapons {
 			mass=1;
 			type=201;
 		};
-		model = QUOTE(PATHTOF(equipment\bandages\packingbandage.p3d));
 	};
 	class ACE_bandageElastic: ItemCore {
 		scope = 2;
@@ -42,7 +42,7 @@ class CfgWeapons {
 		type = 16;
 		displayName = $STR_ACE_MAG_BANDAGE_ELASTIC_DISPLAY;
 		picture = QUOTE(PATHTOF(equipment\img\bandageElastic.paa));
-		model = "\A3\Structures_F_EPA\Items\Medical\Bandage_F.p3d));
+		model = "\A3\Structures_F_EPA\Items\Medical\Bandage_F.p3d";
 		descriptionShort = $STR_ACE_MAG_BANDAGE_ELASTIC_DESC_SHORT;
 		descriptionUse = $STR_ACE_MAG_BANDAGE_ELASTIC_DESC_USE;
 		class ItemInfo: InventoryItem_Base_F
@@ -157,7 +157,7 @@ class CfgWeapons {
 		scope = 2;
 		value = 1;
 		count = 1;
-		model = "\A3\Structures_F_EPA\Items\Medical\BloodBag_F.p3d));
+		model = "\A3\Structures_F_EPA\Items\Medical\BloodBag_F.p3d";
 		displayName = $STR_ACE_MAG_BLOOD_IV;
 		picture = QUOTE(PATHTOF(equipment\img\bloodbag.paa));
 		descriptionShort = $STR_ACE_MAG_BLOOD_IV_DESC_SHORT;

@@ -9,8 +9,8 @@
  */
 
 
-	if (isnil "CSE_SELECTED_BODY_PART_CMS") then {
-		CSE_SELECTED_BODY_PART_CMS = "head";
+	if (isnil QGVAR(selectedBodyPart)) then {
+		GVAR(selectedBodyPart) = "head";
 	};
 
-CSE_SELECTED_BODY_PART_CMS
+GVAR(selectedBodyPart)

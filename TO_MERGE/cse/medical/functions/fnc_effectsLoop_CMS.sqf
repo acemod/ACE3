@@ -19,14 +19,14 @@ cseDisplayingUnconiciousEffect = false;
 _hb_effect = {
 	_heartRate = _this select 0;
 	if (_heartRate < 0.1) exitwith {};
-	_hbSoundsFast = ["cse_heartbeat_fast_1", "cse_heartbeat_fast_2", "cse_heartbeat_fast_3", "cse_heartbeat_norm_1", "cse_heartbeat_norm_2"];
-	_hbSoundsNorm = ["cse_heartbeat_norm_1", "cse_heartbeat_norm_2"];
-	_hbSoundsSlow = ["cse_heartbeat_slow_1", "cse_heartbeat_slow_2", "cse_heartbeat_norm_1", "cse_heartbeat_norm_2"];
-	if (isnil "CSE_PLAYING_HB_SOUND") then {
-		CSE_PLAYING_HB_SOUND = false;
+	_hbSoundsFast = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "ACE_heartbeat_fast_3", "ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
+	_hbSoundsNorm = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
+	_hbSoundsSlow = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2", "ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
+	if (isnil QGVAR(playingHeartBeatSound)) then {
+		GVAR(playingHeartBeatSound) = false;
 	};
-	if (CSE_PLAYING_HB_SOUND) exitwith {};
-	CSE_PLAYING_HB_SOUND = true;
+	if (GVAR(playingHeartBeatSound)) exitwith {};
+	GVAR(playingHeartBeatSound) = true;
 
 	_sleep = 60 / _heartRate;
 	if (_heartRate < 60) then {
@@ -41,7 +41,7 @@ _hb_effect = {
 			sleep _sleep;
 		};
 	};
-	CSE_PLAYING_HB_SOUND = false;
+	GVAR(playingHeartBeatSound) = false;
 };
 
 while {true} do {
@@ -54,13 +54,13 @@ while {true} do {
 
 		if (_bloodLoss >0) then {
 			//["cse_sys_medical_isBleeding", true, "cse\cse_sys_medical\data\icons\icon_bleeding.paa", [1,1,1,1]] call EFUNC(gui,displayIcon);
-			[_bloodLoss] spawn cse_fnc_effectBleeding;
+			[_bloodLoss] spawn FUNC(effectBleeding);
 		} else {
 			//["cse_sys_medical_isBleeding", false, "cse\cse_sys_medical\data\icons\icon_bleeding.paa", [1,1,1,1]] call EFUNC(gui,displayIcon);
 		};
 		sleep 0.25 +(random(2));
 		if (_painStatus > 0) then {
-			[_painStatus] spawn cse_fnc_effectPain;
+			[_painStatus] spawn FUNC(effectPain);
 		};
 		sleep 0.25 +(random(1));
 		_heartRate = [_unit,QGVAR(heartRate),70] call EFUNC(common,getDefinedVariable);

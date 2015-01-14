@@ -13,7 +13,7 @@ _unit = _this select 0;
 _newItem = _this select 1;
 
 if (!local _unit) exitwith {
-	[_this, "FUNC(addToTriageList_CMS)", _unit, false] spawn BIS_fnc_MP;
+	[_this, QUOTE(FUNC(addToTriageList_CMS)), _unit, false] spawn BIS_fnc_MP;
 };
 
 _log = [_unit,QGVAR(triageCard)] call EFUNC(common,getDefinedVariable);

@@ -70,7 +70,7 @@ lbSetColor [213, _numberOf, [0.27, 0.40, 0.26, 1]];
 //[] spawn FUNC(updateActivityLog_CMS);
 _numberOf = _numberOf + 1;
 
-if (GVAR(ALLOW_AIRWAY_INJURIES)) then {
+if (GVAR(setting_allowAirwayInjuries)) then {
 	_airwayTreated = _targetObj getvariable [QGVAR(airwayTreated), false];
 
 	if (_airwayStatus > 0) then {
@@ -81,7 +81,7 @@ if (GVAR(ALLOW_AIRWAY_INJURIES)) then {
 			default {localize "STR_ACE_UI_NO_BREATHING"};
 		};
 
-		if (!(alive _targetObj) || (_targetObj getvariable ["cse_isDead", false])) then {
+		if (!(alive _targetObj) || (_targetObj getvariable [QEGVAR(common,isDead), false])) then {
 			lbadd[213,format["%1",localize "STR_ACE_UI_NO_BREATHING"]];
 		} else {
 			lbadd[213,format["%1",_nameEntry]];
@@ -89,7 +89,7 @@ if (GVAR(ALLOW_AIRWAY_INJURIES)) then {
 		lbSetData [213, _numberOf, ""];
 		_numberOf = _numberOf + 1;
 	} else {
-		if (!(alive _targetObj) || (_targetObj getvariable ["cse_isDead", false])) then {
+		if (!(alive _targetObj) || (_targetObj getvariable [QEGVAR(common,isDead), false])) then {
 			lbadd[213,format["%1",localize "STR_ACE_UI_NO_BREATHING"]];
 			lbSetData [213, _numberOf, ""];
 			_numberOf = _numberOf + 1;
@@ -130,7 +130,6 @@ if (([_targetObj, _bodyPartText] call FUNC(hasTourniquetAppliedTo_CMS))) then {
 _counter = 0;
 {
 	if (_x > 0) then {
-
 		_untreatedWounds = floor _x;
 		_remainder = _x - (floor _x);
 

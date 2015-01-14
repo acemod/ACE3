@@ -13,6 +13,8 @@ _target = _this select 0;
 _category = _this select 1;
 _return = _this select 2;
 
+// TODO might require a new eventhandler system for this.
+/*
 _resultsOfEH = [[_target],_category] call EFUNC(common,customEventHandler_F);
 {
 	{
@@ -29,5 +31,5 @@ _resultsOfEH = [[_target],_category] call EFUNC(common,customEventHandler_F);
 		};
 	}foreach _x;
 }foreach _resultsOfEH;
-
+*/
 _return

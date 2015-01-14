@@ -37,7 +37,7 @@ if (_part == 0 || _part == 1) then {
 				[_treatingPerson,"release"] call FUNC(treatmentMutex_CMS);
 		};
 
-		[_this, "FUNC(treatmentAirwayLocal_CMS)", _injuredPerson, false] spawn BIS_fnc_MP;
+		[_this, QUOTE(FUNC(treatmentAirwayLocal_CMS)), _injuredPerson, false] spawn BIS_fnc_MP;
 		[_treatingPerson,"release"] call FUNC(treatmentMutex_CMS);
 } else {
 	hintSilent "Cannot apply item on this body part";

@@ -8,29 +8,29 @@
  * @PublicAPI: false
  */
 
-if (isnil "CSE_LATEST_DISPLAY_OPTION_MENU_CMS") then {
-	CSE_LATEST_DISPLAY_OPTION_MENU_CMS = "triage";
+if (isnil QGVAR(LatestDisplayOptionMenu)) then {
+	GVAR(LatestDisplayOptionMenu) = "triage";
 } else {
-	if (CSE_LATEST_DISPLAY_OPTION_MENU_CMS == "toggle") then {
-		CSE_LATEST_DISPLAY_OPTION_MENU_CMS = "triage";
-		GVAR(INTERACTION_TARGET) = GVAR(INTERACTION_TARGET)_PREVIOUS;
+	if (GVAR(LatestDisplayOptionMenu) == "toggle") then {
+		GVAR(LatestDisplayOptionMenu) = "triage";
+		GVAR(INTERACTION_TARGET) = GVAR(INTERACTION_TARGET_PREVIOUS);
 	};
 };
 
 private ["_display","_target"];
 _target = GVAR(INTERACTION_TARGET);
 GVAR(INTERACTION_TARGET) = _target;
-if (isnil "GVAR(INTERACTION_TARGET)_PREVIOUS") then {
-	GVAR(INTERACTION_TARGET)_PREVIOUS = _target;
+if (isnil QGVAR(INTERACTION_TARGET_PREVIOUS)) then {
+	GVAR(INTERACTION_TARGET_PREVIOUS) = _target;
 };
-[CSE_LATEST_DISPLAY_OPTION_MENU_CMS] call FUNC(displayOptions_CMS);
+[GVAR(LatestDisplayOptionMenu)] call FUNC(displayOptions_CMS);
 
 [] call FUNC(updateActivityLog_CMS);
 [_target] call FUNC(updateUIInfo_CMS);
 
 // 11 till 18
 disableSerialization;
-_display = uiNamespace getVariable 'cse_sys_medicalMenu';
+_display = uiNamespace getVariable QGVAR(medicalMenuIDD);
 (_display displayCtrl 11) ctrlSetTooltip localize "STR_ACE_UI_VIEW_TRIAGE_CARD";
 (_display displayCtrl 12) ctrlSetTooltip localize "STR_ACE_UI_EXAMINE_PATIENT";
 (_display displayCtrl 13) ctrlSetTooltip localize "STR_ACE_UI_BANDAGE_FRACTURES";
@@ -52,14 +52,14 @@ _display = uiNamespace getVariable 'cse_sys_medicalMenu';
 (_display displayCtrl 1) ctrlSetText format["%1",[_target] call EFUNC(common,getName)];
 setMousePosition [ 0.4, 0.4];
 
-["cse_onMenuOpen_CMS", "onEachFrame", {
+[QGVAR(onMenuOpen), "onEachFrame", {
 	_display = _this select 0;
 	if (isNull GVAR(INTERACTION_TARGET)) then {
 		GVAR(INTERACTION_TARGET) = player;
 	};
 	[GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo_CMS);
 	[] call FUNC(updateActivityLog_CMS);
-	[CSE_LATEST_DISPLAY_OPTION_MENU_CMS] call FUNC(displayOptions_CMS);
+	[GVAR(LatestDisplayOptionMenu)] call FUNC(displayOptions_CMS);
 	_status = [GVAR(INTERACTION_TARGET)] call FUNC(getTriageStatus_CMS);
 	(_display displayCtrl 2000) ctrlSetText (_status select 0);
 	(_display displayCtrl 2000) ctrlSetBackgroundColor (_status select 2);

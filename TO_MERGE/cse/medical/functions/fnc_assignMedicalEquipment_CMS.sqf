@@ -24,9 +24,9 @@ if (!isNull _logic) then {
 	waituntil {time>0};
 
 	_start = diag_tickTime;
-	waituntil {(["cse_sys_medical"] call cse_fnc_isModuleEnabled_F) || (diag_tickTime - _start > 10000)};
+	waituntil {(["cse_sys_medical"] call EFUNC(common,isModuleEnabled_F)) || (diag_tickTime - _start > 10000)};
 
-	if (!(["cse_sys_medical"] call cse_fnc_isModuleEnabled_F)) exitwith {};
+	if (!(["cse_sys_medical"] call EFUNC(common,isModuleEnabled_F))) exitwith {};
 	// TODO Create functions for adding multiple magazines to a unit
 	// TODO Check if unit can store more magazines (ie backpack/vest/uniform are not full)
 

@@ -51,7 +51,7 @@ if (count _attributes > 1) then {
 	GVAR(ORIGINAL_POSITION_PLAYER) = getPos _treatingPerson;
 	if ([2,{((vehicle player != player) ||((getPos player) distance GVAR(ORIGINAL_POSITION_PLAYER)) < 1)}, {},{hint "Action aborted. You moved away";}] call EFUNC(gui,loadingBar)) then {
 		[_treatingPerson, _injuredPerson,_removeItem] call FUNC(useEquipment_CMS);
-		[_this, "FUNC(medicationLocal_CMS)", _injuredPerson, false] spawn BIS_fnc_MP;
+		[_this, QUOTE(FUNC(medicationLocal_CMS)), _injuredPerson, false] spawn BIS_fnc_MP;
 	};
 
 	if (_prevAnim != "") then {

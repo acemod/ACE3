@@ -28,7 +28,7 @@ _entries = switch (_name) do {
 };
 
 disableSerialization;
-_display = uiNamespace getVariable 'cse_sys_medicalMenu';
+_display = uiNamespace getVariable QGVAR(medicalMenuIDD);
 if ((_name == "toggle")) exitwith {
 
 	if (GVAR(INTERACTION_TARGET) != player) then {
@@ -45,7 +45,7 @@ if ((_name == "toggle")) exitwith {
 	};
 };
 
-CSE_LATEST_DISPLAY_OPTION_MENU_CMS = _name;
+GVAR(LatestDisplayOptionMenu) = _name;
 lbClear 212;
 if (_name == "triage") then {
 	ctrlEnable[212,true];
@@ -78,7 +78,7 @@ for [{_x=START_IDC},{_x <= END_IDC},{_x=_x+1}] do {
 	_ctrl = (_display displayCtrl (START_IDC + _foreachIndex));
 	if (!(_foreachIndex > AMOUNT_OF_ENTRIES)) then {
  		_ctrl ctrlSetText (_x select 0);
- 		_code = format["[GVAR(INTERACTION_TARGET),PLAYER] spawn { %1 };",(_x select 1),GVAR(INTERACTION_TARGET),player];
+ 		_code = format[QUOTE([GVAR(INTERACTION_TARGET),PLAYER] spawn { %1 };),(_x select 1),GVAR(INTERACTION_TARGET),player];
 		_ctrl ctrlSetEventHandler ["ButtonClick", _code];
 		_ctrl ctrlSetTooltip (_x select 2);
 		_ctrl ctrlShow true;

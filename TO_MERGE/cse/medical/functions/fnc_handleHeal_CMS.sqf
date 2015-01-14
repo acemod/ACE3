@@ -12,7 +12,7 @@ private ["_unit",'_healer'];
 _unit = _this select 0;
 _healer = _this select 1;
 
-if (!(isPlayer _healer) && CSE_ALLOW_AI_FULL_HEAL_CMS && !([_unit] call EFUNC(common,isUnconscious))) then {
+if (!(isPlayer _healer) && GVAR(setting_allowAIFullHeal) && !([_unit] call EFUNC(common,isUnconscious))) then {
 	[_unit, QGVAR(openWounds),[[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]]] call EFUNC(common,setDefinedVariable);
 	[_unit, QGVAR(bandagedWounds),[[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]]] call EFUNC(common,setDefinedVariable);
 

@@ -67,7 +67,7 @@ _bpIncreaseLow = 0;
 	};
 
 	//	affecting Heart Rate
-	if !(_unit getvariable ["cse_cardiacArrest",false]) then {
+	if !(_unit getvariable [QGVAR(inCardiacArrest),false]) then {
 		if (_bloodPressureLow > 50 && _bloodPressureHigh < 130) then {
 			if (_bloodPressureHigh > 70 && _bloodPressureHigh < 190) then {
 				_speed = abs(speed _unit);
@@ -118,7 +118,7 @@ _bpIncreaseLow = 0;
 	if (_totalBloodLoss >0) then {
 		if !(_unit getvariable [QGVAR(isBleeding),false]) then {
 			[_unit, QGVAR(isBleeding),true] call EFUNC(common,setDefinedVariable);
-			if (CSE_DISPLAY_ADDITIONAL_HINTS_CMS) then {
+			if (GVAR(DISPLAY_ADDITIONAL_HINTS)) then {
 				_showedHint = true;
 				[_unit,"Injured","You are bleeding!",1] call EFUNC(common,sendDisplayMessageTo);
 			};
@@ -131,7 +131,7 @@ _bpIncreaseLow = 0;
 	if (_painStatus > 0) then {
 		if !(_unit getvariable [QGVAR(hasPain),false]) then {
 			[_unit, QGVAR(hasPain),true] call EFUNC(common,setDefinedVariable);
-			if (CSE_DISPLAY_ADDITIONAL_HINTS_CMS && !_showedHint) then {
+			if (GVAR(DISPLAY_ADDITIONAL_HINTS) && !_showedHint) then {
 				[_unit,"Injured","You are in Pain!",1] call EFUNC(common,sendDisplayMessageTo);
 			};
 		};

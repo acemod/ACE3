@@ -32,7 +32,7 @@ _attributes = switch (_removeItem) do {
 };
 
 if (count _attributes > 1) then {
-	[_injuredPerson] spawn cse_fnc_unitLoop_CMS;
+	[_injuredPerson] spawn FUNC(unitLoop_CMS);
 	_value = [_injuredPerson,(_attributes select 0)] call EFUNC(common,getDefinedVariable);
 	_value = _value + (_attributes select 1);
 	[_injuredPerson,(_attributes select 0),_value] call EFUNC(common,setDefinedVariable);

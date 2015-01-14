@@ -9,7 +9,7 @@ class CfgPatches
   requiredVersion = REQUIRED_VERSION;
   requiredAddons[] = {"ACE_gui","ACE_main"};
   version = VERSION;
-  author[] = {$STR_ACE_Core_ACETeam};
+  author[] = {$STR_ACE_Core_ACETeam, "Glowbal"};
   authorUrl = "http://csemod.com"; // TODO website link?
  };
 };

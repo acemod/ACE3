@@ -21,7 +21,7 @@ _bodyPartn = [_selectionName] call FUNC(getBodyPartNumber_CMS);
 
 // Check for vehicle crash
 if (vehicle _unit != _unit && {_bodyPartn < 0} && {isNull _sourceOfDamage} && {_typeOfProjectile == ""} && {_selectionName == ""}) then {
-	if (CSE_ALLOW_VEH_CRASH_INJURIES_CMS) then {
+	if (GVAR(setting_allowVehicleCrashInjuries)) then {
 		_bodyPartn = if (random(1)>=0.5) then { 0 } else { 1 };
 		_typeOfProjectile = "VehicleCrash";
 	};
@@ -52,7 +52,7 @@ if (local _unit && {([_unit] call FUNC(hasMedicalEnabled_CMS))}) then {
 	};
 
 	//[_unit,_newDamage,_typeOfDamage,_bodyPartn] call FUNC(assignFractures_CMS);
-	if (GVAR(ALLOW_AIRWAY_INJURIES)) then {
+	if (GVAR(setting_allowAirwayInjuries)) then {
 		[_unit, _amountOfDamage, _typeOfDamage, _bodyPartn] call FUNC(assignAirwayStatus_CMS);
 	};
 	[_unit,_newDamage,_bodyPartn] call FUNC(increasePain_CMS);
@@ -61,7 +61,7 @@ if (local _unit && {([_unit] call FUNC(hasMedicalEnabled_CMS))}) then {
 		[_unit] call FUNC(setDead_CMS);
 		_returnDamage = 1;
 	} else {
-		[_unit] call cse_fnc_unitLoop_CMS;
+		[_unit] call FUNC(unitLoop_CMS);
 		if ([_unit, _bodyPartn] call FUNC(determineIfUnconscious_CMS)) then {
 			[_unit] call EFUNC(common,setUnconsciousState);
 		} else {

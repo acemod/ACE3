@@ -17,7 +17,7 @@ _removeItem = _this select 3;
 
 [_injuredPerson,"treatment",format["%1 applied a tourniquet on %2",[_treatingPerson] call EFUNC(common,getName),_selectionName]] call FUNC(addActivityToLog_CMS);
 [_injuredPerson,_removeItem] call FUNC(addToTriageList_CMS);
-[_injuredPerson] spawn cse_fnc_unitLoop_CMS;
+[_injuredPerson] spawn FUNC(unitLoop_CMS);
 _part =	[_selectionName] call FUNC(getBodyPartNumber_CMS);
 _tourniquets = [_injuredPerson,QGVAR(tourniquets)] call EFUNC(common,getDefinedVariable);
 _applyingTo = (_tourniquets select _part) +1 + round(random(100));

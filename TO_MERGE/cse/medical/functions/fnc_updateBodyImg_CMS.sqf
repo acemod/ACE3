@@ -13,7 +13,7 @@ _openWounds = _this select 0;
 _bandagedWounds = _this select 1;
 
 disableSerialization;
-_interactionDialog = uiNamespace getvariable "cse_sys_medicalMenu";
+_interactionDialog = uiNamespace getvariable QGVAR(medicalMenuIDD);
 _colorCalculationsOpenWounds = {
 	if (_total >0) then {
 		_green = 0.9;

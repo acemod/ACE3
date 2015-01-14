@@ -14,7 +14,7 @@ _unit = _this select 0;
 
 _medicalEnabled = _unit getvariable "cse_sys_medical_enabled";
 if (isnil "_medicalEnabled") then {
-	(((CSE_ENABLE_SETTING_FORUNITS_CMS == 0 && (isPlayer _unit || (_unit getvariable ["cse_isDeadPlayer", false])))) || (CSE_ENABLE_SETTING_FORUNITS_CMS == 1));
+	(((GVAR(setting_enableForUnits) == 0 && (isPlayer _unit || (_unit getvariable ["cse_isDeadPlayer", false])))) || (GVAR(setting_enableForUnits) == 1));
 } else {
 	_medicalEnabled;
 };

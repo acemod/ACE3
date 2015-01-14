@@ -10,7 +10,7 @@ Affects: n/a
 Executes:
 */
 
-cse_fnc_unitLoop_CMS = {
+FUNC(unitLoop_CMS) = {
 	_unit = _this select 0;
 	if !(local _unit) exitwith{};
 	if !(_unit getvariable[QGVAR(addedToUnitLoop),false]) then{
@@ -18,16 +18,16 @@ cse_fnc_unitLoop_CMS = {
 	};
 
 	if ([_unit] call FUNC(hasMedicalEnabled_CMS)) then {
-		if (isnil "CSE_MEDICAL_COMBINED_LOOP_CMS") then {
-			CSE_MEDICAL_COMBINED_LOOP_CMS = [];
+		if (isnil QGVAR(injuredUnitCollection)) then {
+			GVAR(injuredUnitCollection) = [];
 		};
-		if (_unit in CSE_MEDICAL_COMBINED_LOOP_CMS) exitwith {};
-		CSE_MEDICAL_COMBINED_LOOP_CMS pushback _unit;
+		if (_unit in GVAR(injuredUnitCollection)) exitwith {};
+		GVAR(injuredUnitCollection) pushback _unit;
 		[format["Added %1 to unitLoop",_unit]] call EFUNC(common,debug);
 	};
 };
 
-cse_fnc_onBodySwitch_CMS = {
+FUNC(onBodySwitch_CMS) = {
 	private ["_unit","_newUnit"];
 	_unit = _this select 0;
 	_newUnit = _this select 1;
@@ -37,7 +37,7 @@ cse_fnc_onBodySwitch_CMS = {
 	};
 };
 
-cse_eh_killed_CMS = {
+FUNC(eh_killed_CMS) = {
 	private["_unit"];
 	_unit = _this select 0;
 	if (!local _unit) exitwith {};
@@ -50,14 +50,14 @@ cse_eh_killed_CMS = {
 	};
 };
 
-cse_eh_local_CMS = {
+FUNC(eh_local_CMS) = {
 	private["_unit"];
 	_unit = _this select 0;
 	_local = _this  select 1;
 	[format["Locality changed for: %1",_this]] call EFUNC(common,debug);
 	if (_local) then {
 		if (_unit getvariable[QGVAR(addedToUnitLoop),false]) then {
-			[_unit] call cse_fnc_unitLoop_CMS;
+			[_unit] call FUNC(unitLoop_CMS);
 		};
 	};
 };

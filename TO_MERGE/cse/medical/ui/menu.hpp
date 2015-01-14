@@ -1,12 +1,10 @@
 class cse_sys_medicalMenu {
 	idd = 314412;
 	movingEnable = true;
-	onLoad = "uiNamespace setVariable ['cse_sys_medicalMenu', _this select 0]; ['cse_sys_medical', true] call EFUNC(gui,blurScreen); [_this select 0] spawn FUNC(onMenuOpen_CMS);";
-	onUnload = " ['cse_sys_medical', false] call EFUNC(gui,blurScreen); ['cse_onMenuOpen_CMS', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;";
-
+	onLoad = QUOTE(uiNamespace setVariable [ARR_2(QGVAR(medicalMenuIDD), _this select 0)]; [ARR_2(QGVAR(id), true)] call EFUNC(gui,blurScreen); [_this select 0] spawn FUNC(onMenuOpen_CMS););
+	onUnload = QUOTE([ARR_2(QGVAR(id), false)] call EFUNC(gui,blurScreen); [ARR_2(QGVAR(onMenuOpen), 'onEachFrame')] call BIS_fnc_removeStackedEventHandler;);
 	class controlsBackground {
-
-		class HeaderBackground: cse_gui_backgroundBase{
+		class HeaderBackground: ACE_gui_backgroundBase{
 			idc = -1;
 			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 			x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
@@ -14,17 +12,10 @@ class cse_sys_medicalMenu {
 			w = "38 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			text = "#(argb,8,8,3)color(0,0,0,0)";
-			//moving = 1;
 		};
 		class CenterBackground: HeaderBackground {
-			/*x = 0.138;
-			y = 0.17;
-			w = 1.2549;
-			h = 0.836601;*/
 			y = "2.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			h = "16 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			//text = "#(argb,8,8,3)color(0,0,0,0.65)";
-			//text = "cse\cse_sys_medical\data\ui_background.paa";
 			text = "#(argb,8,8,3)color(0,0,0,0.8)";
 			colorText[] = {0, 0, 0, "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.9])"};
 			colorBackground[] = {0,0,0,"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.9])"};
@@ -51,15 +42,14 @@ class cse_sys_medicalMenu {
 			text = "";
 		};
 
-		class IconsBackGroundBar: cse_gui_backgroundBase{
+		class IconsBackGroundBar: ACE_gui_backgroundBase{
 			idc = -1;
 			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 			x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			y = "2.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "38 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "3.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			//text = "#(argb,8,8,3)color(0,0,0,0.4)";
-			text ="cse\cse_sys_medical\data\cse_background_img.paa";
+			text = QUOTE(PATHTOF(data\cse_background_img.paa);
 			colorText[] = {1, 1, 1, 0.0};
 			//moving = 1;
 		};
@@ -69,7 +59,6 @@ class cse_sys_medicalMenu {
 			w = "12.33 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			style = ST_CENTER;
-			//colorText[] = {0.6, 0.7, 1.0, 1};
 			colorText[] = {1, 1, 1.0, 0.9};
 			colorBackground[] = {0,0,0,0};
 			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
@@ -83,7 +72,7 @@ class cse_sys_medicalMenu {
 			x = "25.66 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			text = $STR_ACE_UI_OVERVIEW;
 		};
-		class Line: cse_gui_backgroundBase {
+		class Line: ACE_gui_backgroundBase {
 			idc = -1;
 			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 			x = "1.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
@@ -93,7 +82,7 @@ class cse_sys_medicalMenu {
 			text = "#(argb,8,8,3)color(1,1,1,0.5)";
 		};
 
-		class iconImg1: cse_gui_backgroundBase {
+		class iconImg1: ACE_gui_backgroundBase {
 			idc = 111;
 			x = "1.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			y = "3.73 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
@@ -104,46 +93,46 @@ class cse_sys_medicalMenu {
 			colorBackground[] = {0,0,0,1};
 			colorPicture[] = {1,1,1,1};
 			colorText[] = {1,1,1,1};
-			text = "cse\cse_sys_medical\data\icons\triage_card_small.paa";
+			text = QUOTE(PATHTOF(data\icons\triage_card_small.paa));
 		};
 		class iconImg2: iconImg1 {
 			idc = 112;
 			x = "3 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			text = "cse\cse_sys_medical\data\icons\examine_patient_small.paa";
+			text = QUOTE(PATHTOF(data\icons\examine_patient_small.paa));
 		};
 		class iconImg3: iconImg1 {
 			idc = 113;
 			x = "4.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			text = "cse\cse_sys_medical\data\icons\bandage_fracture_small.paa";
+			text = QUOTE(PATHTOF(data\icons\bandage_fracture_small.paa));
 		};
 		class iconImg4: iconImg1 {
 			idc = 114;
 			x = "6 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			text = "cse\cse_sys_medical\data\icons\medication_small.paa";
+			text = QUOTE(PATHTOF(data\icons\medication_small.paa));
 		};
 		class iconImg5: iconImg1 {
 			idc = 115;
 			x = "7.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			text = "cse\cse_sys_medical\data\icons\airway_management_small.paa";
+			text = QUOTE(PATHTOF(data\icons\airway_management_small.paa));
 		};
 		class iconImg6: iconImg1 {
 			idc = 116;
 			x = "9 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			text = "cse\cse_sys_medical\data\icons\advanced_treatment_small.paa";
+			text = QUOTE(PATHTOF(data\icons\advanced_treatment_small.paa));
 		};
 		class iconImg7: iconImg1 {
 			idc = 117;
 			x = "10.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			text = "cse\cse_sys_medical\data\icons\icon_carry.paa"; // to be replaced later on!
+			text = QUOTE(PATHTOF(data\icons\icon_carry.paa));
 		};
 		class iconImg8: iconImg1 {
 			idc = 118;
 			x = "12 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			text = "cse\cse_sys_medical\data\icons\toggle_self_small.paa";
+			text = QUOTE(PATHTOF(data\icons\toggle_self_small.paa));
 		};
 
 
-		class BtnIconLeft1: cse_gui_buttonBase {
+		class BtnIconLeft1: ACE_gui_buttonBase {
 			idc = 11;
 			x = "1.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			y = "3.73 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
@@ -151,59 +140,51 @@ class cse_sys_medicalMenu {
 			h = "1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.4)";
 			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.1)";
-			/*animTextureNormal = "#(argb,8,8,3)color(0,0,0,0.3)";
-			animTextureDisabled = "#(argb,8,8,3)color(0,0,0,0.1)";
-			animTextureOver = "#(argb,8,8,3)color(0,0,0,0.9)";
-			animTextureFocused = "#(argb,8,8,3)color(0,0,0,0.95)";
-			animTexturePressed = "#(argb,8,8,3)color(0,0,0,0.2)";
-			animTextureDefault = "#(argb,8,8,3)color(0,0,0,0.3)";*/
-
 			animTextureNormal = "#(argb,8,8,3)color(0,0,0,0.0)";
 			animTextureDisabled = "#(argb,8,8,3)color(0,0,0,0.0)";
 			animTextureOver = "#(argb,8,8,3)color(0,0,0,0.0)";
 			animTextureFocused = "#(argb,8,8,3)color(0,0,0,0.0)";
 			animTexturePressed = "#(argb,8,8,3)color(0,0,0,0.0)";
 			animTextureDefault = "#(argb,8,8,3)color(0,0,0,0.0)";
-			action = "['triage'] call FUNC(displayOptions_CMS);";
+			action = QUOTE(['triage'] call FUNC(displayOptions_CMS););
 		};
 		class BtnIconLeft2: BtnIconLeft1 {
 			idc = 12;
 			x = "3 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			action = "['examine'] call FUNC(displayOptions_CMS);";
+			action = QUOTE(['examine'] call FUNC(displayOptions_CMS););
 		};
 		class BtnIconLeft3: BtnIconLeft1 {
 			idc = 13;
 			x = "4.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			action = "['bandage'] call FUNC(displayOptions_CMS);";
+			action = QUOTE(['bandage'] call FUNC(displayOptions_CMS););
 		};
 		class BtnIconLeft4: BtnIconLeft1 {
 			idc = 14;
 			x = "6 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			action = "['medication'] call FUNC(displayOptions_CMS);";
+			action = QUOTE(['medication'] call FUNC(displayOptions_CMS););
 		};
 		class BtnIconLeft5: BtnIconLeft1 {
 			idc = 15;
 			x = "7.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			action = "['airway'] call FUNC(displayOptions_CMS);";
+			action = QUOTE(['airway'] call FUNC(displayOptions_CMS););
 		};
 		class BtnIconLeft6: BtnIconLeft1 {
 			idc = 16;
 			x = "9 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			action = "['advanced'] call FUNC(displayOptions_CMS);";
+			action = QUOTE(['advanced'] call FUNC(displayOptions_CMS););
 		};
 		class BtnIconLeft7: BtnIconLeft1 {
 			idc = 17;
 			x = "10.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			action = "['drag'] call FUNC(displayOptions_CMS);";
+			action = QUOTE(['drag'] call FUNC(displayOptions_CMS););
 		};
 		class BtnIconLeft8: BtnIconLeft1 {
 			idc = 18;
 			x = "12 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			action = "['toggle'] call FUNC(displayOptions_CMS);";
+			action = QUOTE(['toggle'] call FUNC(displayOptions_CMS););
 		};
 
-
-		class TriageCardList: cse_gui_listBoxBase {
+		class TriageCardList: ACE_gui_listBoxBase {
 			idc = 212;
 			x = "1.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			y = "5.4 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
@@ -219,7 +200,6 @@ class cse_sys_medicalMenu {
 			colorSelectBackground[] = {0, 0, 0, 0.0};
 			colorSelectBackground2[] = {0.0, 0.0, 0.0, 0.0};
 		};
-
 
 	// Left side
 		class BtnMenu1: BtnIconLeft1 {
@@ -244,13 +224,6 @@ class cse_sys_medicalMenu {
 			colorFocused[] = {0,0,0,1};
   			periodFocus = 1;
  			periodOver = 1;
-			/*animTextureNormal = "cse\cse_sys_medical\data\cse_background_img.paa";
-			animTextureDisabled = "cse\cse_sys_medical\data\cse_background_img.paa";
-			animTextureOver = "cse\cse_sys_medical\data\cse_background_img.paa";
-			animTextureFocused = "cse\cse_sys_medical\data\cse_background_img.paa";
-			animTexturePressed = "cse\cse_sys_medical\data\cse_background_img.paa";
-			animTextureDefault = "cse\cse_sys_medical\data\cse_background_img.paa";*/
-
 			action = "";
 		};
 		class BtnMenu2: BtnMenu1 {
@@ -288,12 +261,9 @@ class cse_sys_medicalMenu {
 			y = "13.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			text = "";
 		};
-
-
-
 	// center
 
-		class bodyImgBackground: cse_gui_backgroundBase {
+		class bodyImgBackground: ACE_gui_backgroundBase {
 			idc = -1;
 			x = "13.33 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			y = "3.73 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
@@ -303,7 +273,7 @@ class cse_sys_medicalMenu {
 			colorBackground[] = {1,1,1,1};
 			colorPicture[] = {1,1,1,1};
 			colorText[] = {1,1,1,1};
-			text = "cse\cse_sys_medical\data\body_background.paa";
+			text = QUOTE(PATHTOF(data\body_background.paa));
 		};
 		class bodyImgHead: bodyImgBackground {
 			idc = 50;
@@ -315,32 +285,32 @@ class cse_sys_medicalMenu {
 			colorBackground[] = {1,1,1,1};
 			colorPicture[] = {1,1,1,1};
 			colorText[] = {1,1,1,1};
-			text = "cse\cse_sys_medical\data\body_head.paa";
+			text = QUOTE(PATHTOF(data\body_head.paa));
 		};
 
 		class bodyImgTorso: bodyImgHead {
 			idc = 51;
-			text = "cse\cse_sys_medical\data\body_torso.paa";
+			text = QUOTE(PATHTOF(data\body_torso.paa));
 		};
 		class bodyImgArms_l: bodyImgHead {
 			idc = 52;
-			text = "cse\cse_sys_medical\data\body_arm_left.paa";
+			text = QUOTE(PATHTOF(data\body_arm_left.paa));
 		};
 		class bodyImgArms_r: bodyImgHead {
 			idc = 53;
-			text = "cse\cse_sys_medical\data\body_arm_right.paa";
+			text = QUOTE(PATHTOF(data\body_arm_right.paa));
 		};
 		class bodyImgLegs_l: bodyImgHead {
 			idc = 54;
-			text = "cse\cse_sys_medical\data\body_leg_left.paa";
+			text = QUOTE(PATHTOF(data\body_leg_left.paa));
 		};
 		class bodyImgLegs_r: bodyImgHead {
 			idc = 55;
-			text = "cse\cse_sys_medical\data\body_leg_right.paa";
+			text = QUOTE(PATHTOF(data\body_leg_right.paa));
 		};
 
 
-		class selectHead: cse_gui_buttonBase {
+		class selectHead: ACE_gui_buttonBase {
 			idc = 301;
 			x = "18.8 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			y = "3.9 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
@@ -348,20 +318,13 @@ class cse_sys_medicalMenu {
 			h = "1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.4)";
 			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.1)";
-			/*animTextureNormal = "#(argb,8,8,3)color(0,0,0,0.4)";
-			animTextureDisabled = "#(argb,8,8,3)color(0,0,0,0.4)";
-			animTextureOver = "#(argb,8,8,3)color(0,0,0,0.99)";
-			animTextureFocused = "#(argb,8,8,3)color(0,0,0,0.99)";
-			animTexturePressed = "#(argb,8,8,3)color(0,0,0,0.4)";
-			animTextureDefault = "#(argb,8,8,3)color(0,0,0,0.4)";*/
-
 			animTextureNormal = "#(argb,8,8,3)color(0,0,0,0.0)";
 			animTextureDisabled = "#(argb,8,8,3)color(0,0,0,0.0)";
 			animTextureOver = "#(argb,8,8,3)color(0,0,0,0.0)";
 			animTextureFocused = "#(argb,8,8,3)color(0,0,0,0.0)";
 			animTexturePressed = "#(argb,8,8,3)color(0,0,0,0.0)";
 			animTextureDefault = "#(argb,8,8,3)color(0,0,0,0.0)";
-			action = "CSE_SELECTED_BODY_PART_CMS = 'head'; [GVAR(INTERACTION_TARGET)] spawn FUNC(updateUIInfo_CMS);";
+			action = QUOTE(GVAR(selectedBodyPart) = 'head'; [GVAR(INTERACTION_TARGET)] spawn FUNC(updateUIInfo_CMS););
 		};
 		class selectTorso : selectHead {
 			idc = 302;
@@ -369,7 +332,7 @@ class cse_sys_medicalMenu {
 			y = "5.4 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "2.2 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "4.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			action = "CSE_SELECTED_BODY_PART_CMS = 'body'; [GVAR(INTERACTION_TARGET)] spawn FUNC(updateUIInfo_CMS);";
+			action = QUOTE(GVAR(selectedBodyPart) = 'body'; [GVAR(INTERACTION_TARGET)] spawn FUNC(updateUIInfo_CMS););
 		};
 		class selectLeftArm: selectHead{
 			idc = 303;
@@ -377,12 +340,12 @@ class cse_sys_medicalMenu {
 			y = "5.9 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "1.1 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "4.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			action = "CSE_SELECTED_BODY_PART_CMS = 'hand_r'; [GVAR(INTERACTION_TARGET)] spawn FUNC(updateUIInfo_CMS);";
+			action = QUOTE(GVAR(selectedBodyPart) = 'hand_r'; [GVAR(INTERACTION_TARGET)] spawn FUNC(updateUIInfo_CMS););
 		};
 		class selectRightArm: selectLeftArm{
 			idc = 304;
 			x = "20.6 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			action = "CSE_SELECTED_BODY_PART_CMS = 'hand_l'; [GVAR(INTERACTION_TARGET)] spawn FUNC(updateUIInfo_CMS);";
+			action = QUOTE(GVAR(selectedBodyPart) = 'hand_l'; [GVAR(INTERACTION_TARGET)] spawn FUNC(updateUIInfo_CMS););
 		};
 		class selectLeftLeg :selectHead {
 			idc = 305;
@@ -390,12 +353,12 @@ class cse_sys_medicalMenu {
 			y = "9.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "1.1 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "6 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			action = "CSE_SELECTED_BODY_PART_CMS = 'leg_r'; [GVAR(INTERACTION_TARGET)] spawn FUNC(updateUIInfo_CMS);";
+			action = QUOTE(GVAR(selectedBodyPart) = 'leg_r'; [GVAR(INTERACTION_TARGET)] spawn FUNC(updateUIInfo_CMS););
 		};
 		class selectRightLeg :selectLeftLeg {
 			idc = 306;
 			x = "19.6 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			action = "CSE_SELECTED_BODY_PART_CMS = 'leg_l'; [GVAR(INTERACTION_TARGET)] spawn FUNC(updateUIInfo_CMS);";
+			action = QUOTE(GVAR(selectedBodyPart) = 'leg_l'; [GVAR(INTERACTION_TARGET)] spawn FUNC(updateUIInfo_CMS););
 		};
 
 
@@ -412,11 +375,8 @@ class cse_sys_medicalMenu {
 			text = "";
 		};
 
-
-
 	// Right side
-
-		class InjuryList: cse_gui_listBoxBase {
+		class InjuryList: ACE_gui_listBoxBase {
 			idc = 213;
 			x = "25.66 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			y = "5.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
@@ -432,10 +392,7 @@ class cse_sys_medicalMenu {
 			colorSelectBackground[] = {0, 0, 0, 0.0};
 			colorSelectBackground2[] = {0.0, 0.0, 0.0, 0.5};
 		};
-
 	// bottom
-
-		// activity log
 
 		class ActivityLogHeader: CatagoryLeft {
 			x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
@@ -455,7 +412,7 @@ class cse_sys_medicalMenu {
 		class LineBottomHeaders: Line {
 			y = "19.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 		};
-		class ActivityLog:  InjuryList {
+		class ActivityLog: InjuryList {
 			idc = 214;
 			style = 16;
 			type = 102;
@@ -477,7 +434,7 @@ class cse_sys_medicalMenu {
 			idcRight = -1;
 		};
 
-		class QuikViewLog:  InjuryList {
+		class QuikViewLog: InjuryList {
 			idc = 215;
 			style = 16;
 			type = 102;
@@ -500,7 +457,7 @@ class cse_sys_medicalMenu {
 			idcRight = -1;
 		};
 
-		class selectTriageStatus: cse_gui_buttonBase {
+		class selectTriageStatus: ACE_gui_buttonBase {
 			idc = 2001;
 			x = "13.33 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			y = "16.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
@@ -515,7 +472,7 @@ class cse_sys_medicalMenu {
 			animTextureFocused = "#(argb,8,8,3)color(0,0,0,0.0)";
 			animTexturePressed = "#(argb,8,8,3)color(0,0,0,0.0)";
 			animTextureDefault = "#(argb,8,8,3)color(0,0,0,0.0)";
-			action = "[] call FUNC(dropDownTriageCard_CMS);";
+			action = QUOTE([] call FUNC(dropDownTriageCard_CMS););
 		};
 		class selectTriageStatusNone: selectTriageStatus {
 			idc = 2002;
@@ -533,7 +490,7 @@ class cse_sys_medicalMenu {
 			animTextureFocused = "#(argb,8,8,3)color(0,0,0,0.9)";
 			animTexturePressed = "#(argb,8,8,3)color(0,0,0,0.9)";
 			animTextureDefault = "#(argb,8,8,3)color(0,0,0,0.9)";
-			action = "[] call FUNC(dropDownTriageCard_CMS); [GVAR(INTERACTION_TARGET),0] call FUNC(setTriageStatus_CMS);";
+			action = QUOTE([] call FUNC(dropDownTriageCard_CMS); [ARR_2(GVAR(INTERACTION_TARGET),0)] call FUNC(setTriageStatus_CMS););
 		};
 
 		class selectTriageStatusMinor: selectTriageStatus {
@@ -552,7 +509,7 @@ class cse_sys_medicalMenu {
 			animTextureFocused = "#(argb,8,8,3)color(0,0.5,0,0.9)";
 			animTexturePressed = "#(argb,8,8,3)color(0,0.5,0,0.9)";
 			animTextureDefault = "#(argb,8,8,3)color(0,0.5,0,0.9)";
-			action = "[] call FUNC(dropDownTriageCard_CMS); [GVAR(INTERACTION_TARGET),1] call FUNC(setTriageStatus_CMS);";
+			action = QUOTE([] call FUNC(dropDownTriageCard_CMS); [ARR_2(GVAR(INTERACTION_TARGET),1)] call FUNC(setTriageStatus_CMS););
 		};
 		class selectTriageStatusDelayed: selectTriageStatus {
 			idc = 2004;
@@ -570,7 +527,7 @@ class cse_sys_medicalMenu {
 			animTextureFocused = "#(argb,8,8,3)color(0.77,0.51,0.08,0.9)";
 			animTexturePressed = "#(argb,8,8,3)color(0.77,0.51,0.08,0.9)";
 			animTextureDefault = "#(argb,8,8,3)color(0.77,0.51,0.08,0.9)";
-			action = "[] call FUNC(dropDownTriageCard_CMS); [GVAR(INTERACTION_TARGET),2] call FUNC(setTriageStatus_CMS);";
+			action = QUOTE([] call FUNC(dropDownTriageCard_CMS); [ARR_2(GVAR(INTERACTION_TARGET),2)] call FUNC(setTriageStatus_CMS););
 		};
 		class selectTriageStatusImmediate: selectTriageStatus {
 			idc = 2005;
@@ -588,7 +545,7 @@ class cse_sys_medicalMenu {
 			animTextureFocused = "#(argb,8,8,3)color(1,0.2,0.2,0.9)";
 			animTexturePressed = "#(argb,8,8,3)color(1,0.2,0.2,0.9)";
 			animTextureDefault = "#(argb,8,8,3)color(1,0.2,0.2,0.9)";
-			action = "[] call FUNC(dropDownTriageCard_CMS); [GVAR(INTERACTION_TARGET),3] call FUNC(setTriageStatus_CMS);";
+			action = QUOTE([] call FUNC(dropDownTriageCard_CMS); [ARR_2(GVAR(INTERACTION_TARGET),3)] call FUNC(setTriageStatus_CMS););
 		};
 		class selectTriageStatusDeceased: selectTriageStatus {
 			idc = 2006;
@@ -606,7 +563,7 @@ class cse_sys_medicalMenu {
 			animTextureFocused = "#(argb,8,8,3)color(0,0,0,0.9)";
 			animTexturePressed = "#(argb,8,8,3)color(0,0,0,0.9)";
 			animTextureDefault = "#(argb,8,8,3)color(0,0,0,0.9)";
-			action = "[] call FUNC(dropDownTriageCard_CMS); [GVAR(INTERACTION_TARGET),4] call FUNC(setTriageStatus_CMS);";
+			action = QUOTE([] call FUNC(dropDownTriageCard_CMS); [ARR_2(GVAR(INTERACTION_TARGET),4)] call FUNC(setTriageStatus_CMS););
 		};
 	};
 };

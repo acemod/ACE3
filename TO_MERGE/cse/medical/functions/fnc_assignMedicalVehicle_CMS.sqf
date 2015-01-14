@@ -38,7 +38,7 @@ if (!isNull _logic) then {
 		// assign the medical vehicle role for non man type objects that are local only.
 		if !(_x isKindOf "CAManBase") then {
 	    	if (local _x) then {
-	    		_x setvariable ["cse_medicalVehicle_CMS", _setting, true];
+	    		_x setvariable [QGVAR(isMedicalVehicle), _setting, true];
 	    	};
     	};
 	}foreach _objects;
@@ -49,7 +49,7 @@ if (!isNull _logic) then {
    				// assign the medical vehicle role for non man type objects that are local only.
    				if !(_x isKindOf "CAManBase") then {
 			    	if (local _x) then {
-			    		_x setvariable ["cse_medicalVehicle_CMS", _setting, true];
+			    		_x setvariable [QGVAR(isMedicalVehicle), _setting, true];
 			    	};
 		    	};
 	    	};

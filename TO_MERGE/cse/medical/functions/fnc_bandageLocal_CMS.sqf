@@ -16,7 +16,7 @@ _removeItem = _this select 3;
 _selectedData = [_this, 4, "", [""]] call BIS_fnc_Param;
 
 if (!local _injuredPerson) exitwith{["fnc_bandageLocal called on non local machine",3] call EFUNC(common,debug); };
-[_injuredPerson] spawn cse_fnc_unitLoop_CMS;
+[_injuredPerson] spawn FUNC(unitLoop_CMS);
 if (_treatingPerson != _injuredPerson) then {
 	[_injuredPerson,"STR_ACE_CMS_BANDAGING", "STR_ACE_CMS_IS_BANDAGING_YOU", 0, [[_treatingPerson] call EFUNC(common,getName)]] call EFUNC(common,sendDisplayMessageTo);
 };
@@ -55,7 +55,7 @@ _collectiveImpact =	switch (_removeItem) do	{
 		};
 	};
 
-	if (_highest_amount == 0 && CSE_BANDAGING_AID_CMS) then {
+	if (_highest_amount == 0 && GVAR(setting_enableBandagingAid)) then {
 		_highestTotal = 0;
 		{
 			_totalNumber = 0;
@@ -97,10 +97,10 @@ _collectiveImpact =	switch (_removeItem) do	{
 	_woundsArray set[_highestSpot, _wounds];
 	_openWounds set [_part, _woundsArray];
 	[_injuredPerson,QGVAR(openWounds),_openWounds] call EFUNC(common,setDefinedVariable);
-	if (isnil "CSE_ADVANCED_WOUNDS_SETTING_CMS") then {
-		CSE_ADVANCED_WOUNDS_SETTING_CMS = true;
+	if (isnil QGVAR(setting_advancedWoundsSetting)) then {
+		GVAR(setting_advancedWoundsSetting) = true;
 	};
-	if (_amountOfInpact > 0.0 && CSE_ADVANCED_WOUNDS_SETTING_CMS) then {
+	if (_amountOfInpact > 0.0 && GVAR(setting_advancedWoundsSetting)) then {
 		_bandagedWounds = [_injuredPerson,QGVAR(bandagedWounds)] call EFUNC(common,getDefinedVariable);
 		_bandagedPart = _bandagedWounds select _part;
 		if (_highestSpot > 0) then {

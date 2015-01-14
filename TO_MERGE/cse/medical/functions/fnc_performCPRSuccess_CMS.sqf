@@ -17,5 +17,5 @@ _caller = _this select 1;
 [_unit, QGVAR(bloodPressure),[50,70]] call EFUNC(common,setDefinedVariable);
 
 // setting this to waken up unconscious revivable units
-[_unit, "CSE_ENABLE_REVIVE_SETDEAD_F", 0] call EFUNC(common,setDefinedVariable);
+[_unit, QEGVAR(common,ENABLE_REVIVE_SETDEAD_F), 0] call EFUNC(common,setDefinedVariable);
 [_unit, "CSE_ENABLE_REVIVE_COUNTER", 0] call EFUNC(common,setDefinedVariable);

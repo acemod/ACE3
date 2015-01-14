@@ -15,27 +15,27 @@ Executes: call
 private ["_args"];
 _args = _this;
 
-CSE_ADVANCED_LEVEL_CMS = 2;
-CSE_ALLOW_INSTANT_DEAD_CMS = true;
-CSE_ADVANCED_WOUNDS_SETTING_CMS = true;
-CSE_ADVANCED_MEDICAL_ROLES_CMS = false;
-CSE_BANDAGING_AID_CMS = false;
-CSE_ALLOW_AI_FULL_HEAL_CMS = false;
-GVAR(ALLOW_AIRWAY_INJURIES) = false;
-CSE_AID_KIT_REMOVED_UPON_USAGE_CMS = false;
-CSE_ENABLE_SETTING_FORUNITS_CMS = 1;
-CSE_AID_KIT_RESTRICTIONS_CMS = 0;
-CSE_AIDKITMEDICSONLY_CMS = false;
-CSE_ALLOW_VEH_CRASH_INJURIES_CMS = true;
-CSE_STITCHING_ALLOW_CMS = 0;
+GVAR(setting_AdvancedLevel) = 2;
+GVAR(setting_allowInstantDead) = true;
+GVAR(setting_advancedWoundsSetting) = true;
+GVAR(setting_advancedMedicRoles) = false;
+GVAR(setting_enableBandagingAid) = false;
+GVAR(setting_allowAIFullHeal) = false;
+GVAR(setting_allowAirwayInjuries) = false;
+GVAR(setting_removeAidKitOnUse) = false;
+GVAR(setting_enableForUnits) = 1;
+GVAR(setting_aidKitRestrictions) = 0;
+GVAR(setting_aidKitMedicsOnly) = false;
+GVAR(setting_allowVehicleCrashInjuries) = true;
+GVAR(setting_allowStitching) = 0;
 
 // Damage thresholds only in case the damge threshold module hasn't been placed down.
-if (isnil "CSE_DAMAGE_THRESHOLD_AI_DMG") then {
-	CSE_DAMAGE_THRESHOLD_AI_DMG = 1;
+if (isnil QGVAR(damageThreshold_AI)) then {
+	GVAR(damageThreshold_AI) = 1;
 };
 
-if (isnil "CSE_DAMAGE_THRESHOLD_PLAYERS_DMG") then {
-	CSE_DAMAGE_THRESHOLD_PLAYERS_DMG = 1;
+if (isnil QGVAR(damageThreshold_Players)) then {
+	GVAR(damageThreshold_Players) = 1;
 };
 
 
@@ -44,66 +44,64 @@ if (isnil "CSE_DAMAGE_THRESHOLD_PLAYERS_DMG") then {
 	_value = _x select 1;
 	if (!isnil "_value") then {
 		if (_x select 0 == "advancedLevel") exitwith {
-			CSE_ADVANCED_LEVEL_CMS = _x select 1;
+			GVAR(setting_AdvancedLevel) = _x select 1;
 		};
 		if (_x select 0 == "openingOfWounds") exitwith {
-			CSE_ADVANCED_WOUNDS_SETTING_CMS = _x select 1;
+			GVAR(setting_advancedWoundsSetting) = _x select 1;
 		};
 		if (_x select 0 == "medicSetting") exitwith {
-			CSE_ADVANCED_MEDICAL_ROLES_CMS = _x select 1;
+			GVAR(setting_advancedMedicRoles) = _x select 1;
 		};
 		if (_x select 0 == "difficultySetting") exitwith {
-			CSE_MEDICAL_DIFFICULTY = _x select 1;
+			GVAR(setting_medicalDifficulty) = _x select 1;
 		};
 		if (_x select 0 == "bandagingAid") exitwith {
-			CSE_BANDAGING_AID_CMS = _x select 1;
+			GVAR(setting_enableBandagingAid) = _x select 1;
 		};
 		if (_x select 0 == "allowAIFullHeal") exitwith {
-			CSE_ALLOW_AI_FULL_HEAL_CMS = _x select 1;
+			GVAR(setting_allowAIFullHeal) = _x select 1;
 		};
 		if (_x select 0 == "enableFor") exitwith {
-			CSE_ENABLE_SETTING_FORUNITS_CMS = _x select 1;
+			GVAR(setting_enableForUnits) = _x select 1;
 		};
 		if (_x select 0 == "enableAirway") exitwith {
-			GVAR(ALLOW_AIRWAY_INJURIES) = (_x select 1) == 1;
+			GVAR(setting_allowAirwayInjuries) = (_x select 1) == 1;
 		};
 		if (_x select 0 == "aidKitRestrictions") exitwith {
-			CSE_AID_KIT_RESTRICTIONS_CMS = _x select 1;
+			GVAR(setting_aidKitRestrictions) = _x select 1;
 		};
 		if (_x select 0 == "aidKitUponUsage") exitwith {
-			CSE_AID_KIT_REMOVED_UPON_USAGE_CMS = _x select 1;
+			GVAR(setting_removeAidKitOnUse) = _x select 1;
 		};
 		if (_x select 0 == "aidKitMedicsOnly") exitwith {
-			CSE_AIDKITMEDICSONLY_CMS = _x select 1;
+			GVAR(setting_aidKitMedicsOnly) = _x select 1;
 		};
 		if (_x select 0 == "bandageTime") exitwith {
 			CSE_BANDAGE_WAITING_TIME_CMS = _x select 1;
 		};
 		if (_x select 0 == "vehCrashes") exitwith {
-			CSE_ALLOW_VEH_CRASH_INJURIES_CMS = _value;
+			GVAR(setting_allowVehicleCrashInjuries) = _value;
 		};
 		if (_x select 0 == "stitchingMedicsOnly") exitwith {
-			CSE_STITCHING_ALLOW_CMS = _value;
+			GVAR(setting_allowStitching) = _value;
 		};
 	};
 }foreach _args;
 
-if (CSE_ADVANCED_LEVEL_CMS == -1) exitwith{};
-call compile preprocessFile "cse\cse_sys_medical\functions.sqf";
-CSE_SYS_MEDICAL_SYSTEM_ENABLED_TAGS = true;
-
-#include "variable_defines.sqf"
+if (GVAR(setting_AdvancedLevel) == -1) exitwith{};
+call compile preprocessFile QUOTE(PATHTOF(functions.sqf));
+GVAR(isEnabled) = true;
 
 [
 	{(([_this select 0,QGVAR(heartRate)] call EFUNC(common,getDefinedVariable)) < 20)},
 	{(([_this select 0,QGVAR(bloodVolume)] call EFUNC(common,getDefinedVariable)) < 65)},
 	{(([_this select 0,QGVAR(amountOfPain)] call EFUNC(common,getDefinedVariable)) > 48)}
-] call cse_fnc_registerUnconsciousCondition;
+] call EFUNC(common,registerUnconsciousCondition);
 
-if (GVAR(ALLOW_AIRWAY_INJURIES)) then {
+if (GVAR(setting_allowAirwayInjuries)) then {
 	[
 		{(([_this select 0,QGVAR(airway)] call EFUNC(common,getDefinedVariable)) > 2)}
-	] call cse_fnc_registerUnconsciousCondition;
+	] call EFUNC(common,registerUnconsciousCondition);
 };
 cse_sys_medical = true;
 
@@ -112,7 +110,7 @@ waituntil{!isnil "ace_gui"};
 GVAR(MEDICAL_COMBINED_LOOP) = [];
 waituntil{!isnil "ace_gui" && !isnil "ace_main"};
 GVAR(task_pool_lastTime) = time;
-_cms_taskLoop = '
+ACE_cms_taskLoopCode = {
 	if ((time - GVAR(task_pool_lastTime)) >= 1 || true) then {
 		GVAR(task_pool_lastTime) = time;
 		{
@@ -134,11 +132,11 @@ _cms_taskLoop = '
 		}foreach GVAR(MEDICAL_COMBINED_LOOP);
 		GVAR(MEDICAL_COMBINED_LOOP) = GVAR(MEDICAL_COMBINED_LOOP) - [ObjNull];
 	};
- false; ';
+ false; };
 
 GVAR(cms_taskLoop_trigger) = createTrigger["EmptyDetector", [0,0,0]];
 GVAR(cms_taskLoop_trigger) setTriggerActivation ["NONE", "PRESENT", true];
-GVAR(cms_taskLoop_trigger) setTriggerStatements[_cms_taskLoop, "", ""];
+GVAR(cms_taskLoop_trigger) setTriggerStatements["call ACE_cms_taskLoopCode", "", ""];
 
 if (!hasInterface) exitwith{};
 [player] spawn {

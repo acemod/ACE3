@@ -16,7 +16,7 @@ _type = _this select 1;
 _message = _this select 2;
 _lastNumber = date select 4;
 if (!local _unit) exitwith {
-	[_this, "FUNC(addToQuickViewLog_CMS)", _unit, false] spawn BIS_fnc_MP;
+	[_this, QUOTE(FUNC(addToQuickViewLog_CMS)), _unit, false] spawn BIS_fnc_MP;
 };
 _moment = format["%1:%2",date select 3, _lastNumber];
 if (_lastNumber < 10) then {

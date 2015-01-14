@@ -15,7 +15,7 @@ _treatingPerson = _this select 1;
 _selectionName = _this select 2;
 _removeItem = _this select 3;
 if (!local _injuredPerson) exitwith{["FUNC(treatmentAirwayLocal_CMS) called on non local machine",3] call EFUNC(common,debug); };
-[_injuredPerson] spawn cse_fnc_unitLoop_CMS;
+[_injuredPerson] spawn FUNC(unitLoop_CMS);
 if (_treatingPerson == _injuredPerson) exitwith {};
 
 

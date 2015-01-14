@@ -43,11 +43,11 @@ if (alive _unit) then {
 	[_unit,QGVAR(givenEpinephrine),0] call EFUNC(common,setDefinedVariable);
 
 	[_unit,QGVAR(bodyPartStatus),[0,0,0,0,0,0]] call EFUNC(common,setDefinedVariable);
-	[_unit,"CSE_ENABLE_REVIVE_SETDEAD_F", 0] call EFUNC(common,setDefinedVariable);
+	[_unit,QEGVAR(common,ENABLE_REVIVE_SETDEAD_F), 0] call EFUNC(common,setDefinedVariable);
 	[_unit,"CSE_ENABLE_REVIVE_COUNTER", 0] call EFUNC(common,setDefinedVariable);
 
 	_unit setDamage 0;
-	if (!CSE_ALLOW_INSTANT_DEAD_CMS) then {
+	if (!GVAR(setting_allowInstantDead)) then {
 		[_unit, QGVAR(noInstantDeath), false] call EFUNC(common,setDefinedVariable);
 	};
 

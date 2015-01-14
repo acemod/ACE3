@@ -36,9 +36,9 @@ if (_bloodVolume < 100.0) then {
 		_bloodVolumeChange = _bloodVolumeChange + BLOOD_CHANGE_PER_SECOND;
 		_ivVolume = (_unit getvariable [QGVAR(salineIVVolume), 0]) + IV_CHANGE_PER_SECOND;
 		_unit setvariable [QGVAR(salineIVVolume),_ivVolume];
-		if (["cse_sys_field_rations"] call cse_fnc_isModuleEnabled_F) then {
-			if ([_unit] call cse_fnc_canDrink_FR) then {
-				_unit setvariable ["cse_drink_status_fr", (_unit getvariable ["cse_drink_status_fr", 100]) + 0.2];
+		if ([QEGVAR(fieldRations,module)] call EFUNC(common,isModuleEnabled_F)) then {
+			if ([_unit] call EFUNC(fieldRations,canDrink)) then {
+				_unit setvariable [QEGVAR(fieldRations,drinkStatus), (_unit getvariable [QEGVAR(fieldRations,drinkStatus), 100]) + 0.2];
 			};
 		};
 	};

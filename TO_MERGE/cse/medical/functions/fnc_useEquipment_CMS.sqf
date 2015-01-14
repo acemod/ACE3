@@ -13,17 +13,17 @@ _medic = _this select 0;
 _patient = _this select 1;
 _item = _this select 2;
 
-if (isnil "CSE_ALLOW_SHARED_EQUIPMENT_CMS") then {
-	CSE_ALLOW_SHARED_EQUIPMENT_CMS = true;
+if (isnil QGVAR(setting_allowSharedEquipment)) then {
+	GVAR(setting_allowSharedEquipment) = true;
 };
 
-if (CSE_ALLOW_SHARED_EQUIPMENT_CMS && {[_patient, _item] call cse_fnc_hasItem}) exitwith {
-	[[_patient, _item], "cse_fnc_useItem", _patient] call BIS_fnc_MP;
+if (GVAR(setting_allowSharedEquipment) && {[_patient, _item] call EFUNC(common,hasItem)}) exitwith {
+	[[_patient, _item], QUOTE(EFUNC(common,useItem)), _patient] call BIS_fnc_MP;
 	true;
 };
 
-if ([_medic, _item] call cse_fnc_hasItem) exitwith {
-	[[_medic, _item], "cse_fnc_useItem", _medic] call BIS_fnc_MP;
+if ([_medic, _item] call EFUNC(common,hasItem)) exitwith {
+	[[_medic, _item], QUOTE(EFUNC(common,useItem)), _medic] call BIS_fnc_MP;
 	true;
 };
 
@@ -31,9 +31,9 @@ _return = false;
 if ([vehicle _medic] call FUNC(isMedicalVehicle_CMS) && {vehicle _medic != _medic}) then {
 	_crew = crew vehicle _medic;
 	{
-		if ([_x, _medic] call FUNC(canAccessMedicalEquipment_CMS) && {([_x, _item] call cse_fnc_hasItem)}) exitwith {
+		if ([_x, _medic] call FUNC(canAccessMedicalEquipment_CMS) && {([_x, _item] call EFUNC(common,hasItem))}) exitwith {
 			_return = true;
-			[[_x, _item], "cse_fnc_useItem", _x] call BIS_fnc_MP;
+			[[_x, _item], QUOTE(EFUNC(common,useItem)), _x] call BIS_fnc_MP;
 		};
 	}foreach _crew;
 };

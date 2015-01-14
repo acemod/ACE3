@@ -41,7 +41,7 @@ if ([CSE_BANDAGE_WAITING_TIME_CMS,{((vehicle player != player) ||((getPos player
 
 	[_treatingPerson, _injuredPerson, _removeItem] call FUNC(useEquipment_CMS);
 
-	[_this, "FUNC(bandageLocal_CMS)", _injuredPerson, false] spawn BIS_fnc_MP;
+	[_this, QUOTE(FUNC(bandageLocal_CMS)), _injuredPerson, false] spawn BIS_fnc_MP;
 };
 
 if (_prevAnim != "") then {

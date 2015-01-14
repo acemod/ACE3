@@ -10,7 +10,7 @@
 
 private ["_display","_pos","_ctrl","_curPos","_idc"];
 disableSerialization;
-_display = uiNamespace getVariable 'cse_sys_medicalMenu';
+_display = uiNamespace getVariable QGVAR(medicalMenuIDD);
 _pos = [ 0,0,0,0];
 _curPos = ctrlPosition (_display displayCtrl 2002);
 if ((_curPos select 0) == 0 && (_curPos select 1) == 0) then {

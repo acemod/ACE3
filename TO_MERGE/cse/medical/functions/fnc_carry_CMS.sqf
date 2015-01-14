@@ -28,7 +28,7 @@ if (!([_caller] call cse_fnc_canInteract) || {_caller == _unit} || {(([_unit] ca
 	[_caller,"release"] call FUNC(treatmentMutex_CMS);
 };
 
-if (([_caller] call EFUNC(common,getCarriedObj)) != _unit && !(isNull ([_caller] call EFUNC(common,getCarriedObj))) || {!isNull(_unit getvariable ["cse_beingDragged_CMS",objNull]) || !isNull(_caller getvariable ["cse_dragging_CMS",objNull])} || {!isNull(_unit getvariable [QGVAR(beingCarried),objNull]) || !isNull(_caller getvariable [QGVAR(carrying),objNull])}) exitwith {
+if (([_caller] call EFUNC(common,getCarriedObj)) != _unit && !(isNull ([_caller] call EFUNC(common,getCarriedObj))) || {!isNull(_unit getvariable [QGVAR(beingDragged),objNull]) || !isNull(_caller getvariable [QGVAR(dragging),objNull])} || {!isNull(_unit getvariable [QGVAR(beingCarried),objNull]) || !isNull(_caller getvariable [QGVAR(carrying),objNull])}) exitwith {
 	[_caller,"release"] call FUNC(treatmentMutex_CMS);
 	 ["carryobj reset"] call EFUNC(common,debug);
 	[_caller,objNull] call EFUNC(common,carryObj);
@@ -51,7 +51,7 @@ _caller selectWeapon (primaryWeapon _caller);
 _unit attachTo [_caller, [0.1, -0.1, -1.25], "LeftShoulder"];
 [_unit,"AinjPfalMstpSnonWnonDf_carried_dead",true] call EFUNC(common,broadcastAnim);
 
-if (!isnil "GVAR(DROP_ADDACTION)") then {
+if (!isnil QGVAR(DROP_ADDACTION)) then {
 	_caller removeAction GVAR(DROP_ADDACTION);
 	GVAR(DROP_ADDACTION) = nil;
 };

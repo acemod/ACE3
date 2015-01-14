@@ -13,7 +13,7 @@ _oldBody = _this select 0;
 _caller = _this select 1;
 
 	if (alive _oldBody) exitwith {};
-	_name = _oldBody getvariable ["cse_name","unknown"];
+	_name = _oldBody getvariable [QEGVAR(common,name),"unknown"];
 	_class = typeof _oldBody;
 	_side = side _caller;
 	_group = createGroup _side;
@@ -30,14 +30,14 @@ _caller = _this select 1;
 	{
 		[_newUnit,_x select 0, _x select 2] call EFUNC(common,setDefinedVariable);
 	}foreach _allVariables;
-	_newUnit setVariable ["cse_name",_name,true];
+	_newUnit setVariable [QEGVAR(common,name),_name,true];
 
 	_newUnit disableAI "TARGET";
 	_newUnit disableAI "AUTOTARGET";
 	_newUnit disableAI "MOVE";
 	_newUnit disableAI "ANIM";
 	_newUnit disableAI "FSM";
-	_newUnit setvariable ["cse_isDead",true,true];
+	_newUnit setvariable [QEGVAR(common,isDead),true,true];
 
 	_newUnit setvariable [QGVAR(heartRate), 0];
 	_newUnit setvariable [QGVAR(bloodPressure), [0,0]];

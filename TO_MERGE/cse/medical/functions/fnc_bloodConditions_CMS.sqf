@@ -15,7 +15,7 @@ _bloodVolume = _this select 1;
 _bloodPressure = _this select 2;
 _heartRate = _this select 3;
 
-if ((_unit getvariable["CSE_ENABLE_REVIVE_SETDEAD_F",0]) == 0) then {
+if ((_unit getvariable[QEGVAR(common,ENABLE_REVIVE_SETDEAD_F),0]) == 0) then {
 	_bloodPressureL = _bloodPressure select 0;
 	_bloodPressureH = _bloodPressure select 1;
 	if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {

@@ -11,5 +11,5 @@
 private ["_veh"];
 _veh = _this select 0;
 
-if !(_veh getvariable ["cse_medicalVehicle_CMS", true]) exitwith {false}; // exit in case the false is set.
-((getNumber(configFile >> "CfgVehicles" >> typeOf _veh >> "cse_medicalVehicle") == 1) || (_veh getvariable ["cse_medicalVehicle_CMS", false]));
+if !(_veh getvariable [QGVAR(isMedicalVehicle), true]) exitwith {false}; // exit in case the false is set.
+((getNumber(configFile >> "CfgVehicles" >> typeOf _veh >> QGVAR(isMedicalVehicle)) == 1) || (_veh getvariable [QGVAR(isMedicalVehicle), false]));

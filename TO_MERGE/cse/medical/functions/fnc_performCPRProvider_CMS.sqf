@@ -13,13 +13,13 @@ private ["_caller","_unit","_timer","_succesValueCPR"];
 _unit = _this select 0;
 _caller = _this select 1;
 
-cse_playerIsProvidingCPR_CMS = true;
+GVAR(playerIsProvidingCPR) = true;
 _timer = 0;
 _succesValueCPR = 0;
 
 [_caller,"You start providing CPR"] call EFUNC(common,sendHintTo);
 
-while {cse_playerIsProvidingCPR_CMS} do {
+while {GVAR(playerIsProvidingCPR)} do {
 	// [_caller,"Acts_TreatingWounded01"] call EFUNC(common,localAnim);
 	if (vehicle _caller == _caller) then {
 		_caller playMove "AinvPknlMstpSnonWrflDr_medic0";
@@ -37,16 +37,16 @@ while {cse_playerIsProvidingCPR_CMS} do {
 	};
 	_timer = _timer + 1;
 	sleep 0.1;
-	if (_succesValueCPR > 20 && ((_unit getvariable ["CSE_ENABLE_REVIVE_SETDEAD_F",0]) == 0)) exitwith {
+	if (_succesValueCPR > 20 && ((_unit getvariable [QEGVAR(common,ENABLE_REVIVE_SETDEAD_F),0]) == 0)) exitwith {
 		_succesValueCPR = 40;
 	};
-	if (_succesValueCPR > 35 && ((_unit getvariable ["CSE_ENABLE_REVIVE_SETDEAD_F",0]) > 0)) exitwith {
+	if (_succesValueCPR > 35 && ((_unit getvariable [QEGVAR(common,ENABLE_REVIVE_SETDEAD_F),0]) > 0)) exitwith {
 		_succesValueCPR = 40;
 	};
 
 	if (_timer > 160) exitwith{_succesValueCPR = 0;};
 };
-cse_playerIsProvidingCPR_CMS = nil;
+GVAR(playerIsProvidingCPR) = nil;
 if (vehicle _caller == _caller) then {
 	[_caller,"AinvPknlMstpSnonWrflDnon_medicEnd"] call EFUNC(common,localAnim);
 };
@@ -55,7 +55,7 @@ if (vehicle _caller == _caller) then {
 if (_succesValueCPR > 20 && alive _unit) then {
 	_unit setvariable [QGVAR(inCardiacArrest), nil, true];
 	[_caller,"CPR Success"] call EFUNC(common,sendHintTo);
-	[_this, "FUNC(performCPRSuccess_CMS)", _unit, false] spawn BIS_fnc_MP;
+	[_this, QUOTE(FUNC(performCPRSuccess_CMS)), _unit, false] spawn BIS_fnc_MP;
 } else {
 	[_caller,"You stopped giving CPR"] call EFUNC(common,sendHintTo);
 };

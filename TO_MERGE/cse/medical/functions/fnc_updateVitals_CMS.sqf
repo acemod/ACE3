@@ -56,9 +56,9 @@ if (_painStatus > 0) then {
 };
 
 
-if (GVAR(ALLOW_AIRWAY_INJURIES)) then {
+if (GVAR(setting_allowAirwayInjuries)) then {
 	_airwayStatus = _unit getvariable [QGVAR(airwayStatus), 100];
-	if (((_unit getvariable [QGVAR(airwayOccluded), false]) || (_unit getvariable [QGVAR(airwayCollapsed), false])) && !((_unit getvariable ["cse_airwaySecured", false]))) then {
+	if (((_unit getvariable [QGVAR(airwayOccluded), false]) || (_unit getvariable [QGVAR(airwayCollapsed), false])) && !((_unit getvariable [QGVAR(airwaySecured), false]))) then {
 		if (_airwayStatus >= 0.5) then {
 			_unit setvariable [QGVAR(airwayStatus), _airwayStatus - 0.5];
 		};

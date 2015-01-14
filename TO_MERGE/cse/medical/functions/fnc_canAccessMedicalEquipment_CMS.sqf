@@ -12,7 +12,7 @@ private ["_target", "_caller", "_accessLevel", "_return"];
 _target = _this select 0;
 _caller = _this select 1;
 
-_accessLevel = _target getvariable ["cse_allowSharedEquipmentAccess_CMS", -1];
+_accessLevel = _target getvariable [QGVAR(allowSharedEquipmentAccess), -1];
 
 _return = false;
 

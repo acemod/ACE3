@@ -40,4 +40,4 @@ _selection set [ _type, _newAmount];
 _openWounds set [ _bodyPart , _selection];
 [_unit, QGVAR(openWounds),_openWounds] call EFUNC(common,setDefinedVariable);
 
-[_unit] call cse_fnc_unitLoop_CMS;
+[_unit] call FUNC(unitLoop_CMS);

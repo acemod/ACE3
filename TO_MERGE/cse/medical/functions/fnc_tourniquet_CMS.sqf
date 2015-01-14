@@ -42,6 +42,6 @@ if !([5,{((vehicle player != player) ||((getPos player) distance GVAR(ORIGINAL_P
 ["Now uses the magazine"] call EFUNC(common,debug);
 [_caller, _unit,_removeItem] call FUNC(useEquipment_CMS);
 
-[_this, "FUNC(tourniquetLocal_CMS)", _unit, false] spawn BIS_fnc_MP;
+[_this, QUOTE(FUNC(tourniquetLocal_CMS)), _unit, false] spawn BIS_fnc_MP;
 [_caller,"release"] call FUNC(treatmentMutex_CMS);
 true

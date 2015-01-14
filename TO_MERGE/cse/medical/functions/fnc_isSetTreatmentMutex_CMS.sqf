@@ -8,8 +8,8 @@
  * @PublicAPI: false
  */
 
-if (isnil "CSE_PERFORMING_TREATMENT_CMS_MUTEX") then {
-	CSE_PERFORMING_TREATMENT_CMS_MUTEX = false;
+if (isnil QGVAR(PerformingTreatmentMutex)) then {
+	GVAR(PerformingTreatmentMutex) = false;
 };
 
-CSE_PERFORMING_TREATMENT_CMS_MUTEX
+GVAR(PerformingTreatmentMutex)

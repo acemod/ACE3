@@ -34,7 +34,7 @@ if !([5,{((vehicle player != player) ||((getPos player) distance GVAR(ORIGINAL_P
 };
 
 [_treatingPerson, _injuredPerson,_removeItem] call FUNC(useEquipment_CMS);
-[_this, "FUNC(ivLocal_CMS)", _injuredPerson, false] spawn BIS_fnc_MP;
+[_this, QUOTE(FUNC(ivLocal_CMS)), _injuredPerson, false] spawn BIS_fnc_MP;
 
 if (_prevAnim != "") then {
 	_treatingPerson switchMove _prevAnim;

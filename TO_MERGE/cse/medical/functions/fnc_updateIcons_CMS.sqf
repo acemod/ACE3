@@ -10,7 +10,7 @@
 
 private ["_display","_startIDC","_idc","_options","_name","_amount"];
 disableSerialization;
-_display = uiNamespace getVariable 'cse_sys_medicalMenu';
+_display = uiNamespace getVariable QGVAR(medicalMenuIDD);
 _startIDC = 111;
 
 _options = ["triage" , "examine", "bandage", "medication", "airway", "advanced", "drag", "toggle"];

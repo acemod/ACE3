@@ -14,6 +14,6 @@ _unit = _this select 0;
 _status = _this select 1;
 
 if (!local _unit) exitwith {
-	[_this, "FUNC(setTriageStatus_CMS)", _unit, false] spawn BIS_fnc_MP;
+	[_this, QUOTE(FUNC(setTriageStatus_CMS)), _unit, false] spawn BIS_fnc_MP;
 };
 [_unit,QGVAR(triageLevel),_status] call EFUNC(common,setDefinedVariable);

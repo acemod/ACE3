@@ -12,18 +12,18 @@
 private ["_caller","_unit"];
 _unit = _this select 0;
 _caller = _this select 1;
-if (isnil "cse_playerIsProvidingCPR_CMS") then {
-	cse_playerIsProvidingCPR_CMS = false;
+if (isnil QGVAR(playerIsProvidingCPR)) then {
+	GVAR(playerIsProvidingCPR) = false;
 };
 
 [_this] call EFUNC(common,debug);
-if (call FUNC(isSetTreatmentMutex_CMS)) exitwith {cse_playerIsProvidingCPR_CMS = false;};
+if (call FUNC(isSetTreatmentMutex_CMS)) exitwith {GVAR(playerIsProvidingCPR) = false;};
 [_caller] call FUNC(treatmentMutex_CMS);
 
-if (cse_playerIsProvidingCPR_CMS) exitwith {
+if (GVAR(playerIsProvidingCPR)) exitwith {
 	[_caller,"You are already providing CPR"] call EFUNC(common,sendHintTo);
 	[_caller,"release"] call FUNC(treatmentMutex_CMS);
-	cse_playerIsProvidingCPR_CMS = false; // stop giving CPR
+	GVAR(playerIsProvidingCPR) = false; // stop giving CPR
 };
 
 if (_unit == _caller) exitwith{[_caller,"You cannot give yourself CPR"] call EFUNC(common,sendHintTo); [_caller,"release"] call FUNC(treatmentMutex_CMS);};
@@ -31,4 +31,4 @@ if (_unit == _caller) exitwith{[_caller,"You cannot give yourself CPR"] call EFU
 	//_name = _unit getvariable ["cse_nameUnit",[_unit] call EFUNC(common,getName)];
 [_caller,"You start providing CPR"] call EFUNC(common,sendHintTo);
 
-[_this, "FUNC(performCPRLocal_CMS)", _unit, false] spawn BIS_fnc_MP;
+[_this, QUOTE(FUNC(performCPRLocal_CMS)), _unit, false] spawn BIS_fnc_MP;

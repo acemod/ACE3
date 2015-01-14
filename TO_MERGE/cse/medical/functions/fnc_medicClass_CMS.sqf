@@ -11,11 +11,11 @@
 private ["_unit","_class","_return"];
 _unit = [_this, 0, objNull,[ObjNull]] call BIS_fnc_Param;
 
-if (isnil "CSE_ADVANCED_MEDICAL_ROLES_CMS") exitwith {
+if (isnil QGVAR(setting_advancedMedicRoles)) exitwith {
 	true;
 };
 
-if (CSE_ADVANCED_MEDICAL_ROLES_CMS) then {
+if (GVAR(setting_advancedMedicRoles)) then {
 	_class = [_unit,QGVAR(medicClass)] call EFUNC(common,getDefinedVariable);
 	_return = switch (_class) do {
 		case 0: {false};

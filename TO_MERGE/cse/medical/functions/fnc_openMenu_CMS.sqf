@@ -23,17 +23,10 @@ if (count _this > 0) then {
 	};
 };
 
-if (isNull _interactionTarget) then { // _interactionTarget undefined here. WTF?
+if (isNull _interactionTarget) then {
 	_interactionTarget = player;
 };
 
 [format["INTERACTION WITH: %1",_interactionTarget]] call EFUNC(common,debug);
-[player,_interactionTarget] call cse_fnc_registerInteractingWith;
 GVAR(INTERACTION_TARGET) = _interactionTarget;
-createDialog "cse_sys_medicalMenu";
-//[player,"release"] call FUNC(treatmentMutex_CMS); // Do we want to force release the treatment event, to prefent deadlock within the CMS Module?
-
-[_interactionTarget] spawn {
-	waituntil {sleep 0.1; !dialog};
-	[player,_this select 0] call cse_fnc_unregisterInteractingWith;
-};
+createDialog QGVAR(medicalMenuIDD);
