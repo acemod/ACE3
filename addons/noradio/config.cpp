@@ -5,12 +5,10 @@ class CfgPatches {
     units[] = {};
     weapons[] = {};
     requiredVersion = REQUIRED_VERSION;
-    requiredAddons[] = {AGM_Core};
-    version = "0.95";
-    versionStr = "0.95";
-    versionAr[] = {0,95,0};
+    requiredAddons[] = {"ace_common"};
     author[] = {"commy2"};
     authorUrl = "https://github.com/commy2/";
+    VERSION_CONFIG;
   };
 };
 
