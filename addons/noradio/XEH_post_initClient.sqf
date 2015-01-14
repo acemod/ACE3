@@ -1,5 +1,7 @@
 // by commy2
 
+#include "script_component.hpp"
+
 0 spawn {
 	waitUntil {!isNull AGM_player};
 

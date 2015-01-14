@@ -1,5 +1,7 @@
 // by commy2
 
+#include "script_component.hpp"
+
 addMissionEventHandler ["HandleDisconnect", {
 	if !((_this select 0) getVariable ["AGM_isUnconscious", false]) then {
 		_this call AGM_Core_fnc_unmuteUnit;
