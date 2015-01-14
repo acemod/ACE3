@@ -9,6 +9,7 @@
  * Return Value:
  * none
  */
+#include "script_component.hpp"
 
 private ["_unit", "_damage", "_strength"];
 
@@ -20,5 +21,5 @@ if (_strength < 0.01) exitWith {};
 
 [_unit, _strength] spawn {
   sleep 0.2;
-  _this call AGM_Hearing_fnc_earRinging;
+  _this call FUNC(earRinging);
 };
