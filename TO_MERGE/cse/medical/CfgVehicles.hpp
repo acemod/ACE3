@@ -7,14 +7,14 @@ class CfgVehicles
 	};
 	class ACE_moduleCombatMedicalSystem: Module_F	{
 		scope = 2;
-		displayName = "Combat Medical System [CSE]";
-		icon = "\cse\cse_main\data\cse_medical_module.paa";
-		category = "cse_medical";
-		function = "cse_fnc_initalizeModule_F";
+		displayName = "Combat Medical System [ACE]";
+		icon = QUOTE(PATHTOF(data\ACE_medical_module.paa));
+		category = "ACE_medical";
+		function = QUOTE(FUNC(initalizeModule));
 		functionPriority = 1;
 		isGlobal = 1;
 		isTriggerActivated = 0;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		class Arguments	{
 			class openingOfWounds {
 				displayName = "Advanced Wounds";
@@ -22,7 +22,7 @@ class CfgVehicles
 				typeName = "BOOL";
 				defaultValue = 1;
 			};
-			class medicSetting {
+			class mediACEtting {
 				displayName = "Advanced Medic roles";
 				description = "Medics only are able to view the detailed information";
 				typeName = "BOOL";
@@ -161,17 +161,17 @@ class CfgVehicles
 			sync[] = {};
 		};
 	};
-	class ACE_assignMedicRoles_CMS: Module_F {
+	class ACE_moduleAssignMedicRoles_CMS: Module_F {
 		scope = 2;
-		displayName = "Set Medic Class [CSE]";
-		icon = "\cse\cse_main\data\cse_medical_module.paa";
-		category = "cse_medical";
-		function = "FUNC(assignMedicRoles_CMS)";
+		displayName = "Set Medic Class [ACE]";
+		icon = QUOTE(PATHTOF(data\ACE_medical_module.paa));
+		category = "ACE_medical";
+		function = QUOTE(FUNC(assignMedicRoles_CMS));
 		functionPriority = 10;
 		isGlobal = 2;
 		isTriggerActivated = 0;
 		isDisposable = 0;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		class Arguments	{
 			class EnableList {
 				displayName = "List";
@@ -186,22 +186,22 @@ class CfgVehicles
 			};
 		};
 		class ModuleDescription {
-			description = "Assigns the CSE medic class to a unit"; // Short description, will be formatted as structured text
+			description = "Assigns the ACE medic class to a unit"; // Short description, will be formatted as structured text
 			sync[] = {};
 		};
 	};
 
-	class ACE_assignMedicalVehicle_CMS: Module_F {
+	class ACE_moduleAssignMedicalVehicle_CMS: Module_F {
 		scope = 2;
-		displayName = "set Medical Vehicle [CSE]";
-		icon = "\cse\cse_main\data\cse_medical_module.paa";
-		category = "cse_medical";
-		function = "FUNC(assignMedicalVehicle_CMS)";
+		displayName = "set Medical Vehicle [ACE]";
+		icon = QUOTE(PATHTOF(data\ACE_medical_module.paa));
+		category = "ACE_medical";
+		function = QUOTE(FUNC(assignMedicalVehicle_CMS));
 		functionPriority = 10;
 		isGlobal = 2;
 		isTriggerActivated = 0;
 		isDisposable = 0;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		class Arguments	{
 			class EnableList {
 				displayName = "List";
@@ -216,22 +216,22 @@ class CfgVehicles
 			};
 		};
 		class ModuleDescription {
-			description = "Assigns the CSE medical vehicle class to a vehicle.";
+			description = "Assigns the ACE medical vehicle class to a vehicle.";
 			sync[] = {};
 		};
 	};
 
-	class ACE_assignMedicalFacility_CMS: Module_F {
+	class ACE_moduleAssignMedicalFacility_CMS: Module_F {
 		scope = 2;
-		displayName = "Set Medical Facility [CSE]";
-		icon = "\cse\cse_main\data\cse_medical_module.paa";
-		category = "cse_medical";
-		function = "FUNC(assignMedicalFacility_CMS)";
+		displayName = "Set Medical Facility [ACE]";
+		icon = QUOTE(PATHTOF(data\ACE_medical_module.paa));
+		category = "ACE_medical";
+		function = QUOTE(FUNC(assignMedicalFacility_CMS));
 		functionPriority = 10;
 		isGlobal = 2;
 		isTriggerActivated = 0;
 		isDisposable = 0;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		class Arguments	{
 			class class {
 				displayName = "Is Medical Facility";
@@ -244,16 +244,16 @@ class CfgVehicles
 			sync[] = {};
 		};
 	};
-	class ACE_assignMedicalEquipment_CMS: Module_F {
+	class ACE_moduleAssignMedicalEquipment_CMS: Module_F {
 		scope = 2;
-		displayName = "Assign Medical Equipment [CSE]";
-		icon = "\cse\cse_main\data\cse_medical_module.paa";
-		category = "cse_medical";
-		function = "FUNC(assignMedicalEquipment_CMS)";
+		displayName = "Assign Medical Equipment [ACE]";
+		icon = QUOTE(PATHTOF(data\ACE_medical_module.paa));
+		category = "ACE_medical";
+		function = QUOTE(FUNC(assignMedicalEquipment_CMS));
 		functionPriority = 1;
 		isGlobal = 1;
 		isTriggerActivated = 0;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		class Arguments	{
 			class equipment {
 				displayName = "Assign Equipment";
@@ -284,7 +284,7 @@ class CfgVehicles
 	class ACE_bodyBag: MapBoard_altis_F {
 		scope = 1;
 		side = -1;
-		model = "\cse\cse_sys_medical\equipment\bodybag.p3d";
+		model = QUOTE(PATHTOF(equipment\bodybag.p3d));
 		icon = "";
 		displayName = $STR_ACE_MAG_BODYBAG_DISPLAY;
 	};
@@ -295,13 +295,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_BANDAGE_BASIC_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_bandage_basic
 			{
-				name = "cse_bandage_basic";
+				name = "ACE_bandage_basic";
 				count = 1;
 			};
 		};
@@ -310,13 +310,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_PACKING_BANDAGE_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_packing_bandage
 			{
-				name = "cse_packing_bandage";
+				name = "ACE_packing_bandage";
 				count = 1;
 			};
 		};
@@ -325,13 +325,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_BANDAGE_ELASTIC_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_bandageElastic
 			{
-				name = "cse_bandageElastic";
+				name = "ACE_bandageElastic";
 				count = 1;
 			};
 		};
@@ -340,13 +340,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_TOURNIQUET_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_tourniquet
 			{
-				name = "cse_tourniquet";
+				name = "ACE_tourniquet";
 				count = 1;
 			};
 		};
@@ -355,13 +355,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_SPLINT_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_splint
 			{
-				name = "cse_splint";
+				name = "ACE_splint";
 				count = 1;
 			};
 		};
@@ -370,13 +370,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_MORPHINE_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_morphine
 			{
-				name = "cse_morphine";
+				name = "ACE_morphine";
 				count = 1;
 			};
 		};
@@ -385,13 +385,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_ATROPINE_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_atropine
 			{
-				name = "cse_atropine";
+				name = "ACE_atropine";
 				count = 1;
 			};
 		};
@@ -400,13 +400,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_EPINEPHRINE_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_epinephrine
 			{
-				name = "cse_epinephrine";
+				name = "ACE_epinephrine";
 				count = 1;
 			};
 		};
@@ -415,13 +415,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_PLASMA_IV;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_plasma_iv
 			{
-				name = "cse_plasma_iv";
+				name = "ACE_plasma_iv";
 				count = 1;
 			};
 		};
@@ -430,13 +430,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_PLASMA_IV_500;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_plasma_iv_500
 			{
-				name = "cse_plasma_iv_500";
+				name = "ACE_plasma_iv_500";
 				count = 1;
 			};
 		};
@@ -445,13 +445,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_PLASMA_IV_250;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_plasma_iv_250
 			{
-				name = "cse_plasma_iv_250";
+				name = "ACE_plasma_iv_250";
 				count = 1;
 			};
 		};
@@ -460,13 +460,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_BLOOD_IV;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_blood_iv
 			{
-				name = "cse_blood_iv";
+				name = "ACE_blood_iv";
 				count = 1;
 			};
 		};
@@ -475,13 +475,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_BLOOD_IV_500;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_blood_iv_500
 			{
-				name = "cse_blood_iv_500";
+				name = "ACE_blood_iv_500";
 				count = 1;
 			};
 		};
@@ -490,13 +490,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_BLOOD_IV_250;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_blood_iv_250
 			{
-				name = "cse_blood_iv_250";
+				name = "ACE_blood_iv_250";
 				count = 1;
 			};
 		};
@@ -505,13 +505,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_SALINE_IV;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_saline_iv
 			{
-				name = "cse_saline_iv";
+				name = "ACE_saline_iv";
 				count = 1;
 			};
 		};
@@ -520,13 +520,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_SALINE_IV_500;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_saline_iv_500
 			{
-				name = "cse_saline_iv_500";
+				name = "ACE_saline_iv_500";
 				count = 1;
 			};
 		};
@@ -535,13 +535,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_SALINE_IV_250;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_saline_iv_250
 			{
-				name = "cse_saline_iv_250";
+				name = "ACE_saline_iv_250";
 				count = 1;
 			};
 		};
@@ -550,13 +550,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_QUIKCLOT_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_quikclot
 			{
-				name = "cse_quikclot";
+				name = "ACE_quikclot";
 				count = 1;
 			};
 		};
@@ -565,13 +565,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_NPA_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_nasopharyngeal_tube
 			{
-				name = "cse_nasopharyngeal_tube";
+				name = "ACE_nasopharyngeal_tube";
 				count = 1;
 			};
 		};
@@ -580,13 +580,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_OPA_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_opa
 			{
-				name = "cse_opa";
+				name = "ACE_opa";
 				count = 1;
 			};
 		};
@@ -595,13 +595,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_LIQUID_SKIN_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_liquidSkin
 			{
-				name = "cse_liquidSkin";
+				name = "ACE_liquidSkin";
 				count = 1;
 			};
 		};
@@ -610,13 +610,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_CHEST_SEAL_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_chestseal
 			{
-				name = "cse_chestseal";
+				name = "ACE_chestseal";
 				count = 1;
 			};
 		};
@@ -625,13 +625,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_AID_KIT_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_personal_aid_kit
 			{
-				name = "cse_personal_aid_kit";
+				name = "ACE_personal_aid_kit";
 				count = 1;
 			};
 		};
@@ -640,13 +640,13 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = $STR_ACE_MAG_BODYBAG_DISPLAY;
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		vehicleClass = "Items";
 		class TransportItems
 		{
 			class ACE_itemBodyBag
 			{
-				name = "cse_itemBodyBag";
+				name = "ACE_itemBodyBag";
 				count = 1;
 			};
 		};
@@ -657,104 +657,104 @@ class CfgVehicles
 	class ACE_medical_supply_crate_cms : NATO_Box_Base {
 		scope = 2;
 		accuracy = 1000;
-		displayName = "Medical Supply Crate (CSE)";
+		displayName = "Medical Supply Crate [ACE]";
 		model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
-		author = $STR_ACE_Core_ACETeam;
+		author = "Glowbal";
 		class TransportItems {
 			class ACE_bandage_basic {
-				name = "cse_bandage_basic";
+				name = "ACE_bandage_basic";
 				count = 25;
 			};
 			class ACE_packing_bandage {
-				name = "cse_packing_bandage";
+				name = "ACE_packing_bandage";
 				count = 25;
 			};
 			class ACE_tourniquet {
-				name = "cse_tourniquet";
+				name = "ACE_tourniquet";
 				count = 25;
 			};
 			class ACE_splint {
-				name = "cse_splint";
+				name = "ACE_splint";
 				count = 25;
 			};
 			class ACE_plasma_iv {
-				name = "cse_plasma_iv";
+				name = "ACE_plasma_iv";
 				count = 25;
 			};
 			class ACE_plasma_iv_500 {
-				name = "cse_plasma_iv_500";
+				name = "ACE_plasma_iv_500";
 				count = 25;
 			};
 			class ACE_plasma_iv_250 {
-				name = "cse_plasma_iv_250";
+				name = "ACE_plasma_iv_250";
 				count = 25;
 			};
 			class ACE_blood_iv {
-				name = "cse_blood_iv";
+				name = "ACE_blood_iv";
 				count = 25;
 			};
 			class ACE_blood_iv_500 {
-				name = "cse_blood_iv_500";
+				name = "ACE_blood_iv_500";
 				count = 25;
 			};
 			class ACE_blood_iv_250 {
-				name = "cse_blood_iv_250";
+				name = "ACE_blood_iv_250";
 				count = 25;
 			};
 			class ACE_saline_iv {
-				name = "cse_saline_iv";
+				name = "ACE_saline_iv";
 				count = 25;
 			};
 			class ACE_saline_iv_500 {
-				name = "cse_saline_iv_500";
+				name = "ACE_saline_iv_500";
 				count = 25;
 			};
 			class ACE_saline_iv_250 {
-				name = "cse_saline_iv_250";
+				name = "ACE_saline_iv_250";
 				count = 25;
 			};
 			class ACE_morphine {
-				name = "cse_morphine";
+				name = "ACE_morphine";
 				count = 25;
 			};
 			class ACE_epinephrine {
-				name = "cse_epinephrine";
+				name = "ACE_epinephrine";
 				count = 25;
 			};
 			class ACE_atropine {
-				name = "cse_atropine";
+				name = "ACE_atropine";
 				count = 25;
 			};
 			class ACE_quikclot {
-				name = "cse_quikclot";
+				name = "ACE_quikclot";
 				count = 25;
 			};
 			class ACE_nasopharyngeal_tube {
-				name = "cse_nasopharyngeal_tube";
+				name = "ACE_nasopharyngeal_tube";
 				count = 25;
 			};
 			class ACE_bandageElastic {
-				name = "cse_bandageElastic";
+				name = "ACE_bandageElastic";
 				count = 25;
 			};
 			class ACE_liquidSkin {
-				name = "cse_liquidSkin";
+				name = "ACE_liquidSkin";
 				count = 25;
 			};
 			class ACE_chestseal {
-				name = "cse_chestseal";
+				name = "ACE_chestseal";
 				count = 25;
 			};
 			class ACE_personal_aid_kit {
-				name = "cse_personal_aid_kit";
+				name = "ACE_personal_aid_kit";
 				count = 25;
 			};
 			class ACE_surgical_kit {
-				name = "cse_surgical_kit";
+				name = "ACE_surgical_kit";
 				count = 25;
 			};
 			class ACE_itemBodyBag {
-				name = "cse_itemBodyBag";
+				name = "ACE_itemBodyBag";
 				count = 5;
 			};
 		};
