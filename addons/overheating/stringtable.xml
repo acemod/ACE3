@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-17 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="Overheating">
-    <Key ID="STR_AGM_Overheating_SpareBarrelName">
+    <Key ID="STR_ACE_Overheating_SpareBarrelName">
       <English>Spare barrel</English>
       <German>Ersatzlauf</German>
       <Spanish>Cañón de repuesto</Spanish>
@@ -14,7 +14,7 @@
       <Portuguese>Cano Reserva</Portuguese>
       <Italian>Canna di ricambio</Italian>
     </Key>
-    <Key ID="STR_AGM_Overheating_SpareBarrelDescription">
+    <Key ID="STR_ACE_Overheating_SpareBarrelDescription">
       <English>Use to swap barrel.</English>
       <German>Benutzen, um Lauf zu wechseln.</German>
       <Spanish>Permite intercambiar el cañón</Spanish>
@@ -26,7 +26,7 @@
       <Portuguese>Use para trocar o cano/estriamento.</Portuguese>
       <Italian>Usata per cambiare la canna.</Italian>
     </Key>
-    <Key ID="STR_AGM_Overheating_WeaponJammed">
+    <Key ID="STR_ACE_Overheating_WeaponJammed">
       <English>Weapon jammed!</English>
       <German>Ladehemmung!</German>
       <Spanish>Arma encasquillada!</Spanish>
@@ -38,7 +38,7 @@
       <Portuguese>Arma travada!</Portuguese>
       <Italian>Arma inceppata!</Italian>
     </Key>
-    <Key ID="STR_AGM_Overheating_UnjamWeapon">
+    <Key ID="STR_ACE_Overheating_UnjamWeapon">
       <English>Clear jam</English>
       <German>Ladehemmung beheben</German>
       <Spanish>Desencasquillar el arma</Spanish>
@@ -50,7 +50,7 @@
       <Portuguese>Destravar arma</Portuguese>
       <Italian>Ripulisci l'arma</Italian>
     </Key>
-    <Key ID="STR_AGM_Overheating_WeaponUnjammed">
+    <Key ID="STR_ACE_Overheating_WeaponUnjammed">
       <English>Jam cleared</English>
       <German>Ladehemmung behoben</German>
       <Spanish>Arma desencasquillada</Spanish>
@@ -62,7 +62,7 @@
       <Portuguese>Arma destravada</Portuguese>
       <Italian>Arma pronta al fuoco</Italian>
     </Key>
-    <Key ID="STR_AGM_Overheating_SwapBarrel">
+    <Key ID="STR_ACE_Overheating_SwapBarrel">
       <English>Swap barrel</English>
       <German>Lauf wechseln</German>
       <Spanish>Cambiar el cañón</Spanish>
@@ -74,7 +74,7 @@
       <Portuguese>Substituir cano</Portuguese>
       <Italian>Sostiuisci la canna</Italian>
     </Key>
-    <Key ID="STR_AGM_Overheating_SwappingBarrel">
+    <Key ID="STR_ACE_Overheating_SwappingBarrel">
       <English>Swapping barrel...</English>
       <German>Lauf wird gewechselt...</German>
       <Spanish>Cambiando el cañón...</Spanish>
@@ -86,7 +86,7 @@
       <Portuguese>Substituindo cano...</Portuguese>
       <Italian>Sto sostituendo la canna ...</Italian>
     </Key>
-    <Key ID="STR_AGM_Overheating_SwappedBarrel">
+    <Key ID="STR_ACE_Overheating_SwappedBarrel">
       <English>Swapped barrel</English>
       <German>Lauf gewechselt</German>
       <Spanish>Cañón cambiado</Spanish>
@@ -98,7 +98,7 @@
       <Portuguese>Cano substituído</Portuguese>
       <Italian>Canna sostituita</Italian>
     </Key>
-    <Key ID="STR_AGM_Overheating_CheckTemperature">
+    <Key ID="STR_ACE_Overheating_CheckTemperature">
       <English>Check weapons temperature</English>
       <German>Temperatur der Waffe prüfen</German>
       <Spanish>Verificar temperatura del arma</Spanish>
@@ -110,7 +110,7 @@
       <Italian>Controlla la temperatura della canna</Italian>
       <Russian>Проверить температуру оружия</Russian>
     </Key>
-    <Key ID="STR_AGM_Overheating_CheckTemperatureShort">
+    <Key ID="STR_ACE_Overheating_CheckTemperatureShort">
       <English>Check temperature</English>
       <German>Temperatur prüfen</German>
       <Spanish>Verificar temperatura</Spanish>
@@ -122,7 +122,7 @@
       <Italian>Controlla la temperatura</Italian>
       <Russian>Проверить температуру</Russian>
     </Key>
-    <Key ID="STR_AGM_Overheating_CheckingTemperature">
+    <Key ID="STR_ACE_Overheating_CheckingTemperature">
       <English>Checking temperature ...</English>
       <German>Prüfe Temperatur ...</German>
       <Spanish>Verificando temperatura ...</Spanish>
@@ -134,7 +134,7 @@
       <Italian>Sto controllando la temperatura ...</Italian>
       <Russian>Проверка температуры ...</Russian>
     </Key>
-    <Key ID="STR_AGM_Overheating_Temperature">
+    <Key ID="STR_ACE_Overheating_Temperature">
       <English>Temperature</English>
       <German>Temperatur</German>
       <Spanish>Temperatura</Spanish>

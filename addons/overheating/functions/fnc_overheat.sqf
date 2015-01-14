@@ -1,4 +1,5 @@
 // by commy2 and CAA-Picard
+#include "\z\ace\addons\overheating\script_component.hpp"
 
 private ["_unit", "_weapon", "_ammo", "_projectile", "_velocity", "_variableName", "_overheat", "_temperature", "_time", "_energyIncrement", "_barrelMass", "_scaledTemperature"];
 
@@ -9,7 +10,7 @@ _projectile = _this select 6;
 _velocity = velocity _projectile;
 
 // each weapon has it's own variable. Can't store the temperature in the weapon since they are not objects unfortunately.
-_variableName = format ["AGM_Overheating_%1", _weapon];
+_variableName = format [QGVAR(%1), _weapon];
 
 // get old values
 _overheat = _unit getVariable [_variableName, [0, 0]];
@@ -17,7 +18,7 @@ _temperature = _overheat select 0;
 _time = _overheat select 1;
 
 // Get physical parameters
-_bulletMass = getNumber (configFile >> "CfgAmmo" >> _ammo >> "AGM_BulletMass");
+_bulletMass = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_BulletMass");
 if (_bulletMass == 0) then {
   // If the bullet mass is not configured, estimate it
   _bulletMass = 3.4334 + 0.5171 * (getNumber (configFile >> "CfgAmmo" >> _ammo >> "hit") + getNumber (configFile >> "CfgAmmo" >> _ammo >> "caliber"));
@@ -26,7 +27,7 @@ _energyIncrement = 0.75 * 0.0005 * _bulletMass * (vectorMagnitudeSqr _velocity);
 _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
 
 // Calculate cooling
-_temperature = [_temperature, _barrelMass, time - _time] call AGM_Overheating_fnc_cooldown;
+_temperature = [_temperature, _barrelMass, time - _time] call FUNC(cooldown);
 // Calculate heating
 _temperature = _temperature + _energyIncrement / (_barrelMass * 466); // Steel Heat Capacity = 466 J/(Kg.K)
 
@@ -97,31 +98,31 @@ if (_intensity > 0) then {
 // dispersion and bullet slow down
 private ["_dispersion", "_slowdownFactor", "_count"];
 
-_dispersion = getArray (configFile >> "CfgWeapons" >> _weapon >> "AGM_Overheating_Dispersion");
+_dispersion = getArray (configFile >> "CfgWeapons" >> _weapon >> "ACE_Overheating_Dispersion");
 
 _count = count _dispersion;
 if (_count > 0) then {
-  _dispersion = ([_dispersion, (_count - 1) * _scaledTemperature] call AGM_Core_fnc_interpolateFromArray) max 0;
+  _dispersion = ([_dispersion, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray)) max 0;
 } else {
   _dispersion = 0;
 };
 
-_slowdownFactor = getArray (configFile >> "CfgWeapons" >> _weapon >> "AGM_Overheating_slowdownFactor");
+_slowdownFactor = getArray (configFile >> "CfgWeapons" >> _weapon >> "ACE_Overheating_slowdownFactor");
 
 _count = count _slowdownFactor;
 if (_count > 0) then {
-  _slowdownFactor = ([_slowdownFactor, (_count - 1) * _scaledTemperature] call AGM_Core_fnc_interpolateFromArray) max 0;
+  _slowdownFactor = ([_slowdownFactor, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray)) max 0;
 } else {
   _slowdownFactor = 1;
 };
 
-[_projectile, _dispersion - 2 * random _dispersion, _dispersion - 2 * random _dispersion, (_slowdownFactor - 1) * vectorMagnitude _velocity] call AGM_Core_fnc_changeProjectileDirection;
+[_projectile, _dispersion - 2 * random _dispersion, _dispersion - 2 * random _dispersion, (_slowdownFactor - 1) * vectorMagnitude _velocity] call EFUNC(common,changeProjectileDirection);
 
 
 // jamming
 private "_jamChance";
 
-_jamChance = getArray (configFile >> "CfgWeapons" >> _weapon >> "AGM_Overheating_jamChance");
+_jamChance = getArray (configFile >> "CfgWeapons" >> _weapon >> "ACE_Overheating_jamChance");
 
 _count = count _jamChance;
 if (_count == 0) then {
@@ -129,7 +130,7 @@ if (_count == 0) then {
   _count = 1;
 };
 
-_jamChance = [_jamChance, (_count - 1) * _scaledTemperature] call AGM_Core_fnc_interpolateFromArray;
+_jamChance = [_jamChance, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray);
 
 // increase jam chance on dusty grounds if prone
 if (stance _unit == "PRONE") then {
@@ -143,12 +144,12 @@ if (stance _unit == "PRONE") then {
   };
 };
 
-if ("Jam" in (missionNamespace getvariable ["AGM_Debug", []])) then {
+if ("Jam" in (missionNamespace getvariable ["ACE_Debug", []])) then {
   _jamChance = 0.5;
 };
 
-["Overheating", [_temperature, _jamChance], {format ["Temperature: %1 - JamChance: %2", _this select 0, _this select 1]}] call AGM_Debug_fnc_log;
+["Overheating", [_temperature, _jamChance], {format ["Temperature: %1 - JamChance: %2", _this select 0, _this select 1]}] call EFUNC(common,log);
 
 if (random 1 < _jamChance) then {
-  [_unit, _weapon] call AGM_Overheating_fnc_jamWeapon;
+  [_unit, _weapon] call FUNC(jamWeapon);
 };
