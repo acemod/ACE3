@@ -9,7 +9,7 @@
  * Return value:
  * Boolean (Bool)
  */
-#include "\z\ace\addons\hearing\script_component.hpp"
+#include "script_component.hpp"
 
 private "_unit";
 

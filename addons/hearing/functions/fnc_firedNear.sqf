@@ -9,7 +9,7 @@
  * Return Value:
  * none
  */
-#include "\z\ace\addons\hearing\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_silencer", "_audibleFireCoef", "_loudness", "_strength"];
 

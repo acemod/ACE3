@@ -30,7 +30,7 @@ class Extended_FiredNear_EventHandlers {
 class Extended_Explosion_EventHandlers {
     class CAManBase {
         class GVAR(ExplosionNear) {
-            clientExplosion = QUOTE( if (_this select 0 == #CE_player) then {_this call FUNC(explosionNear)}; );
+            clientExplosion = QUOTE( if (_this select 0 == ACE_player) then {_this call FUNC(explosionNear)}; );
         };
     };
 };

@@ -9,7 +9,7 @@
  * Return Value:
  * none
  */
-#include "\z\ace\addons\hearing\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_unit", "_damage", "_strength"];
 

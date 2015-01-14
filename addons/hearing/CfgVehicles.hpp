@@ -15,7 +15,7 @@ class CfgVehicles {
                     statement = QUOTE( [_player] call FUNC(putInEarPlugs) );
                     showDisabled = 0;
                     priority = 2.5;
-                    icon = QUOTE(PATHOF(UI\ACE_earplugs_x_ca.paa));
+                    icon = QUOTE(PATHTOF(UI\ACE_earplugs_x_ca.paa));
                     hotkey = "E";
                     enableInside = 1;
                 };
@@ -25,7 +25,7 @@ class CfgVehicles {
                     statement = QUOTE( [_player] call FUNC(removeEarPlugs) );
                     showDisabled = 0;
                     priority = 2.5;
-                    icon = QUOTE(PATHOF(UI\ACE_earplugs_x_ca.paa));
+                    icon = QUOTE(PATHTOF(UI\ACE_earplugs_x_ca.paa));
                     hotkey = "E";
                     enableInside = 1;
                 };
