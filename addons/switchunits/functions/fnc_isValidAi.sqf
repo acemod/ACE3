@@ -1,5 +1,5 @@
 /*
-  Name: AGM_SwitchUnits_fnc_isValidAi
+  Name: ACE_SwitchUnits_fnc_isValidAi
   
   Author(s):
     bux578

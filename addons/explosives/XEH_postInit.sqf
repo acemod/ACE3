@@ -38,7 +38,7 @@ player addEventHandler ["Take", {
 	_giver = _this select 1;
 
 	_config = ConfigFile >> "CfgWeapons" >> _item;
-	if (isClass _config && {getNumber(_config >> "AGM_Detonator") == 1}) then {
+	if (isClass _config && {getNumber(_config >> "ACE_Detonator") == 1}) then {
 		private ["_clackerItems"];
 		_clackerItems = _giver getVariable [QGVAR(Clackers), []];
 		_getter SetVariable [QGVAR(Clackers), (_getter getVariable [QGVAR(Clackers), []]) + _clackerItems, true];
@@ -56,7 +56,7 @@ player addEventHandler ["Put", {
 	_giver = _this select 0;
 
 	_config = ConfigFile >> "CfgWeapons" >> _item;
-	if (isClass _config && {getNumber(_config >> "AGM_Detonator") == 1}) then {
+	if (isClass _config && {getNumber(_config >> "ACE_Detonator") == 1}) then {
 		private ["_clackerItems"];
 		_clackerItems = _giver getVariable [QGVAR(Clackers), []];
 		_getter SetVariable [QGVAR(Clackers), (_getter getVariable [QGVAR(Clackers), []]) + _clackerItems, true];
