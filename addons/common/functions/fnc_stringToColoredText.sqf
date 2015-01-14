@@ -10,7 +10,7 @@
  * Return value:
  * Text
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_string", "_color"];
 

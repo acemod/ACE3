@@ -182,6 +182,8 @@
 #define QFUNC(var1) QUOTE(DFUNC(var1))
 #define QEFUNC(var1,var2) QUOTE(DEFUNC(var1,var2))
 
+#define PATHTOEF(var1,var2) PATHTOF_SYS(PREFIX,var1,var2)
+
 #ifdef DISABLE_COMPILE_CACHE
 	#define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
 #else

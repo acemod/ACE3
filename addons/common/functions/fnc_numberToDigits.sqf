@@ -10,7 +10,7 @@
  * Return value:
  * Digits. The maximum count is six digits. (Array)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_number", "_minLength", "_length", "_digits", "_index", "_count"];
 

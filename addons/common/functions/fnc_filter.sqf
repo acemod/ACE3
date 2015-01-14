@@ -13,7 +13,7 @@
  * Usage:
  * [[0,1,2,3,4], {_this > 2}] call FUNC(filter) ==> [3,4]
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_array", "_code", "_newArray", "_index"];
 

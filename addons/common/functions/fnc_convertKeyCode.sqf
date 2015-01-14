@@ -12,7 +12,7 @@
  * Return value:
  * Key code (Number)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 #define KEY_MODIFIERS [42, 54, 29, 157, 56, 184]
 

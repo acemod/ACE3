@@ -15,8 +15,8 @@ class CfgVehicles {
         showIn3D = 0;
         onlyForPlayer = 1;
         shortcut = "DefaultAction";
-        condition = "call ACE_Common_UserActionFireCondition";
-        statement = "call ACE_Common_UserActionFire";
+        condition = QUOTE(call GVAR(UserActionFireCondition));
+        statement = QUOTE(call GVAR(UserActionFire));
         userActionID = 100;
       };
     };
@@ -30,10 +30,10 @@ class CfgVehicles {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
     displayName = "Check PBOs";
-    function = "ACE_Common_fnc_moduleCheckPBOs";
+    function = QFUNC(moduleCheckPBOs);
     scope = 2;
     isGlobal = 1;
-    icon = PATHTOF(UI\IconCheckPBO_ca.paa);
+    icon = QUOTE(PATHTOF(UI\IconCheckPBO_ca.paa));
     class Arguments {
       class Action {
         displayName = "Action";

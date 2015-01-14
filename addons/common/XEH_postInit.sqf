@@ -8,7 +8,7 @@ QGVAR(remoteFnc) addPublicVariableEventHandler {
 [missionNamespace] call FUNC(executePersistent);
 
 // check previous version number from profile
-_currentVersion = getText (configFile >> "CfgPatches" >> "ACE_Common" >> "version");
+_currentVersion = getText (configFile >> "CfgPatches" >> ADDON >> "version");
 _previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
 
 if (_currentVersion != _previousVersion) then {
@@ -18,6 +18,10 @@ if (_currentVersion != _previousVersion) then {
 };
 
 0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber);
+
+//add network event handlers
+"ACEg" addPublicVariableEventHandler { _this call FUNC(_handletNetEvent); };
+"ACEc" addPublicVariableEventHandler { _this call FUNC(_handletNetEvent); };
 
 // everything that only player controlled machines need, goes below this
 if (!hasInterface) exitWith {};
@@ -67,3 +71,5 @@ enableCamShake true;
         [_this select 1] call FUNC(setName)
     };
 }] call FUNC(addCustomEventhandler);
+
+

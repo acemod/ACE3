@@ -10,7 +10,7 @@
  * 0: Azimuth (Number)
  * 1: Inclination or 'slope' (Number)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_weapon", "_direction", "_azimuth", "_inclination"];
 

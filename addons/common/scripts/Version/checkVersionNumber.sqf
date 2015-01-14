@@ -1,5 +1,5 @@
 // by commy2
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 sleep 1;  //wait for module
 
@@ -19,7 +19,7 @@ if (missionNamespace getVariable ["ACE_Version_CheckAll", false]) then {
   } forEach activatedAddons;
 };
 
-_versionMain = parseNumber getText (configFile >> "CfgPatches" >> "ACE_Common" >> "version");
+_versionMain = parseNumber getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
 
 _versions = [];
 {

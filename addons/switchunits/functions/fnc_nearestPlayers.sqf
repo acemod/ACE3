@@ -25,7 +25,7 @@ _radius = _this select 1;
 _nearestPlayers = [];
 
 {
-  if ([_x] call EFUNC(Core, isPlayer) && {alive _x}) then {
+  if ([_x] call EFUNC(common,isPlayer) && {alive _x}) then {
     _nearestPlayers pushBack _x;
   };
 } forEach (nearestObjects [_position, ["Man"], _radius]);
