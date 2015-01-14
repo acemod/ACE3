@@ -15,15 +15,15 @@ private ["_eventName", "_eventCode", "_eventNames", "_eventFunctions", "_eventNa
 _eventName = _this select 0;
 _eventCode = _this select 1;
 
-_eventNames = GVAR(netEvents) select 0;
+_eventNames = GVAR(events) select 0;
 _eventFunctions = [];
 _eventIndex = _eventNames find _eventName;
 if(_eventIndex != -1) then {
-    _eventFunctions = (GVAR(netEvents) select 1) select _eventIndex;
+    _eventFunctions = (GVAR(events) select 1) select _eventIndex;
 } else {
     _eventNameCount = count _eventNames;
     _eventNames set[_eventNameCount, _eventName];
-    (GVAR(netEvents) select 1) set[_eventNameCount, _eventFunctions];
+    (GVAR(events) select 1) set[_eventNameCount, _eventFunctions];
 };
 
 _eventFunctionCount = count _eventFunctions;

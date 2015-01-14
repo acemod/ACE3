@@ -13,9 +13,9 @@
 private ["_eventName", "_eventNames", "_eventFunctions", "_eventIndex"];
 _eventName = _this select 0;
 
-_eventNames = GVAR(netEvents) select 0;
+_eventNames = GVAR(events) select 0;
 _eventFunctions = [];
 _eventIndex = _eventNames find _eventName;
 if(_eventIndex != -1) then {
-    (GVAR(netEvents) select 1) set[_eventIndex, []];
+    (GVAR(events) select 1) set[_eventIndex, []];
 };
