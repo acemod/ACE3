@@ -17,7 +17,7 @@ _direction = _firer weaponDirection currentWeapon _firer;
 
 if (_unit == _firer) then {
   _distance = [_position, _direction, _backblastRange] call FUNC(getDistance);
-
+  hint format ["%1", _distance];
   if (_distance < _backblastRange) then {
     _alpha = sqrt (1 - _distance / _backblastRange);
     _beta = sqrt 0.5;
