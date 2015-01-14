@@ -10,9 +10,11 @@
  * Nothing
  */
 
+#include "script_component.hpp"
+ 
 private ["_mode", "_hint"];
 
-_mode = missionNamespace getVariable ["AGM_Grenades_Mode", 0];
+_mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
 
 if (_mode == 4) then {
   _mode = 0;
@@ -26,13 +28,13 @@ if (_mode == 3) then {
 };
 
 _hint = [
-  localize "STR_AGM_Grenades_NormalThrow",
-  localize "STR_AGM_Grenades_HighThrow",
-  localize "STR_AGM_Grenades_PreciseThrow",
-  localize "STR_AGM_Grenades_RollGrenade",
-  localize "STR_AGM_Grenades_DropGrenade"
+  localize "STR_ACE_Grenades_NormalThrow",
+  localize "STR_ACE_Grenades_HighThrow",
+  localize "STR_ACE_Grenades_PreciseThrow",
+  localize "STR_ACE_Grenades_RollGrenade",
+  localize "STR_ACE_Grenades_DropGrenade"
 ] select _mode;
 
-[_hint] call AGM_Core_fnc_displayTextStructured;
+[_hint] call EFUNC(common,displayTextStructured);
 
-AGM_Grenades_Mode = _mode;
+GVAR(currentThrowMode) = _mode;

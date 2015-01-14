@@ -11,6 +11,8 @@
  * None
  */
 
+#include "script_component.hpp"
+
 _this spawn {
   _unit = _this select 0;
   _grenade = _this select 1;
@@ -45,8 +47,8 @@ _this spawn {
   };
 
   // beeeeeeeeeeeeeeeeeeeeeeeeeeeeep
-  if (isClass (configFile >> "CfgPatches" >> "AGM_Hearing") and _strength > 0) then {
-    [_unit, 0.5 + (_strength / 2)] call AGM_Hearing_fnc_earRinging;
+  if (isClass (configFile >> "CfgPatches" >> "ACE_Hearing") and _strength > 0) then {
+    [_unit, 0.5 + (_strength / 2)] call ACE_Hearing_fnc_earRinging;
   };
 
   // account for people looking away by slightly
@@ -73,9 +75,9 @@ _this spawn {
 
   // blind player
   if (_strength > 0.1) then {
-    AGM_Flashbang_CC ppEffectEnable true;
-    AGM_Flashbang_CC ppEffectAdjust [1,1,(0.8 + _strength) min 1,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
-    AGM_Flashbang_CC ppEffectCommit 0.01;
+    GVAR(flashbangPPEffectCC) ppEffectEnable true;
+    GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,(0.8 + _strength) min 1,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
+    GVAR(flashbangPPEffectCC) ppEffectCommit 0.01;
   };
 
   sleep 0.1;
@@ -83,11 +85,11 @@ _this spawn {
   sleep (7 * _strength);
 
   if (_strength > 0.1) then {
-    AGM_Flashbang_CC ppEffectAdjust [1,1,0,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
-    AGM_Flashbang_CC ppEffectCommit (10 * _strength);
+    GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,0,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
+    GVAR(flashbangPPEffectCC) ppEffectCommit (10 * _strength);
 
     sleep (10 * _strength);
 
-    AGM_Flashbang_CC ppEffectEnable false;
+    GVAR(flashbangPPEffectCC) ppEffectEnable false;
   };
 };
