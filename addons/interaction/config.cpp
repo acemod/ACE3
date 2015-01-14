@@ -6,9 +6,9 @@ class CfgPatches {
     weapons[] = {};
     requiredVersion = 0.60;
     requiredAddons[] = {"ace_common"};
-    version = "0.95";
-    versionStr = "0.95";
-    versionAr[] = {0,95,0};
+    version = QUOTE(VERSION);
+    versionStr = QUOTE(VERSION);
+    versionAr[] = { VERSION_AR };
     author[] = {"commy2", "KoffeinFlummi", "CAA-Picard", "bux578"};
     authorUrl = "https://github.com/commy2/";
   };

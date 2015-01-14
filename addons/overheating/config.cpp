@@ -4,13 +4,11 @@ class CfgPatches {
     class ADDON {
         units[] = {};
         weapons[] = {"ACE_SpareBarrel"};
-        requiredVersion = 0.60;
-        requiredAddons[] = {ace_common, ace_interaction};
-        version = "0.95";
-        versionStr = "0.95";
-        versionAr[] = {0,95,0};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {"ace_common", "ace_interaction"};
         author[] = {"commy2", "KoffeinFlummi", "CAA-Picard"};
         authorUrl = "https://github.com/commy2/";
+        VERSION_CONFIG;
     };
 };
 
