@@ -59,10 +59,10 @@ if (_this select 2) then {
 
 		(findDisplay 46) createDisplay QGVAR(Dialog);
 		// Add eventhandlers
-		(findDisplay 1713999) displayAddEventHandler ["KeyDown", QUOTE( _this call EFUNC(common,onKeyDown) )];
-		(findDisplay 1713999) displayAddEventHandler ["KeyUp", QUOTE( _this call EFUNC(common,onKeyUp) )];
+		(findDisplay 1713999) displayAddEventHandler ["KeyDown", QUOTE(_this call EGVAR(common,onKeyDown))];
+		(findDisplay 1713999) displayAddEventHandler ["KeyUp", QUOTE(_this call EGVAR(common,onKeyUp))];
 
-		(findDisplay 1713999) displayAddEventHandler ["KeyDown", QUOTE( _this call FUNC(menuKeyInput) )];
+		(findDisplay 1713999) displayAddEventHandler ["KeyDown", QUOTE(_this call FUNC(menuKeyInput))];
 	};
 	disableSerialization;
 	_dlgInteractionDialog = uiNamespace getVariable QGVAR(Dialog);

@@ -10,6 +10,6 @@
  * Return Value:
  * Player controlled unit (object)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", player]

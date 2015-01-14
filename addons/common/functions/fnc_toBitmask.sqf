@@ -9,7 +9,7 @@
  * Return value:
  * Bitmask (Number)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_array", "_result"];
 

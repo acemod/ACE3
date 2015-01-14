@@ -9,7 +9,7 @@
  * Return Value:
  * The hitpoints (Array)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_vehicle", "_config", "_hitpoints"];
 

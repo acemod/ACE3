@@ -1,5 +1,5 @@
 // by commy2
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 _config = configFile >> "ACE_Default_Keys";
 _count = count _config;

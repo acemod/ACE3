@@ -10,7 +10,7 @@
  * Return value:
  * Booleans (Array)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_number", "_minLength", "_array", "_index", "_rest"];
 

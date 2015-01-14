@@ -9,7 +9,7 @@
  * Return value:
  * Turret index of the vehicles gunner. Empty array means no gunner position. (Array)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_vehicle", "_turrets", "_turret", "_config"];
 

@@ -9,7 +9,7 @@
  * Return value:
  * Value of the entry. Note: If the entry does not exist, it might return 0 or an entry with the same name of another class! (Number)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private "_number";
 

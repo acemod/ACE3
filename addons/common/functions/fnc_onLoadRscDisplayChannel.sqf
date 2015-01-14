@@ -13,7 +13,7 @@
   Returns:
     Nothing
 */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 uiNamespace setVariable ["ACE_ctrlChannel", (_this select 0) displayCtrl 101];
 

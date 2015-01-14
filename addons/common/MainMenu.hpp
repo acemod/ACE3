@@ -29,7 +29,7 @@ class ACE_Tile_Base {
         right = 0;
         bottom = 0;
     };
-    action = "(findDisplay 49) closeDisplay 0; 0 spawn ACE_Common_openMenu;";
+    action = QUOTE((findDisplay 49) closeDisplay 0; 0 spawn GVAR(openMenu););
     animTextureDefault = "#(argb,8,8,3)color(1,1,1,1)";
     animTextureDisabled = "#(argb,8,8,3)color(1,1,1,1)";
     animTextureFocused = "#(argb,8,8,3)color(1,1,1,1)";

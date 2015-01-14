@@ -9,7 +9,7 @@
  * Return value:
  * None.
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_overwrite", "_saveProfile", "_config", "_count", "_index", "_configFile", "_name", "_key", "_shft", "_ctrl", "_alt", "_keyCode", "_state"];
 

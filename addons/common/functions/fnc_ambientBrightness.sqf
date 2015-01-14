@@ -9,6 +9,6 @@
  * Return value:
  * Ambient brightness (Number)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 sunOrMoon * sunOrMoon + moonIntensity/5 min 1
