@@ -55,7 +55,7 @@ if (_mode != 0) then {
 };
 
 if (typeOf _projectile == "ACE_G_M84") then {
-  // _fuzeTime = (configFile >> "CfgAmmo" >> typeOf _projectile >> "fuseDistance");
-  _fuzeTime = (configFile >> "CfgAmmo" >> typeOf _projectile >> "explosionTime");  //@toDo pretty sure this should be explosionTime not fuseDistance
+  _fuzeTime = getNumber (configFile >> "CfgAmmo" >> typeOf _projectile >> "fuseDistance");
+  // _fuzeTime = getNumber (configFile >> "CfgAmmo" >> typeOf _projectile >> "explosionTime");  //@toDo pretty sure this should be explosionTime not fuseDistance
   [FUNC(flashbangThrownFuze), 0, [_projectile, (time + _fuzeTime)]] call CBA_fnc_addPerFrameHandler;
 };

@@ -44,8 +44,8 @@ class CfgMagazines {
     displayname = "$STR_ACE_Grenades_M84_Name";
     descriptionshort = "$STR_ACE_Grenades_M84_Description";
     displayNameShort = "M84";
-    model = PATHTOF(\models\ACE_m84.p3d);
-    picture = PATHTOF(\UI\ACE_m84_x_ca.paa);
+    model = PATHTOF(models\ACE_m84.p3d);
+    picture = PATHTOF(UI\ACE_m84_x_ca.paa);
   };
 
   class 3Rnd_UGL_FlareGreen_F;
