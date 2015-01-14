@@ -26,7 +26,7 @@ if (missionNamespace getVariable [QGVAR(isEarRingingPlaying), false]) exitWith {
 
 _fnc_removeEarRinging = {
   // Skip first execution
-  if (diag_tickTime > 1 + ((_this select 0) select 0)) exitWith {};
+  if (diag_tickTime < 1 + ((_this select 0) select 0)) exitWith {};
 
   GVAR(isEarRingingPlaying) = false;
   [(_this select 1)] call cba_fnc_removePerFrameHandler;
