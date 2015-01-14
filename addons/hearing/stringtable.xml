@@ -98,5 +98,9 @@
       <Hungarian>Nincs több hely</Hungarian>
       <Russian>Нет места в инвентаре</Russian>
     </Key>
+    <Key ID="STR_ACE_Hearing_DisableEarRinging">
+      <English>Disable ear ringing</English>
+      <Spanish>Desactivar zumbido de oídos</Spanish>
+    </Key>
   </Package>
 </Project>

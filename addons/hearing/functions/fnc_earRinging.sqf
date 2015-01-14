@@ -32,6 +32,8 @@ _fnc_removeEarRinging = {
   [(_this select 1)] call cba_fnc_removePerFrameHandler;
 };
 
+if (profileNamespace getVariable [QGVAR(DisableEarRinging), false]) exitWith {};
+
 if (_strength > 0.75) exitWith {
   playSound "ACE_EarRinging_Heavy";
   GVAR(isEarRingingPlaying) = true;
