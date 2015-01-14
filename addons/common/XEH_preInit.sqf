@@ -138,13 +138,16 @@ PREP(addCuratorUnloadEventhandler);
 PREP(fixCrateContent);
 
 //ACE events global variables
-GVAR(netEvents) = [[],[]];
+GVAR(events) = [[],[]];
 
 PREP(globalEvent);
 PREP(_handleNetEvent);
-PREP(addNetEventHandler);
+PREP(addEventHandler);
 PREP(targetEvent);
 PREP(serverEvent);
+PREP(localEvent);
+PREP(removeEventHandler);
+PREP(removeAlLEventHandlers);
 
 
 // Loop to update the ACE_player variable

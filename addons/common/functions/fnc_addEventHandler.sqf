@@ -1,14 +1,14 @@
 /*
  * Author: Nou
  *
- * Add a network event handler.
+ * Add a event handler.
  *
  * Argument:
  * 0: Event name (string)
  * 1: Event code (code)
  *
  * Return value:
- * Event handler ID number (for use with fnc_removeNetEventHandler)
+ * Event handler ID number (for use with fnc_removeEventHandler)
  */
 #include "script_component.hpp"
 private ["_eventName", "_eventCode", "_eventNames", "_eventFunctions", "_eventNameCount", "_eventIndex", "_eventFunctionCount"];
