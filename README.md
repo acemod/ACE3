@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/KoffeinFlummi/ACE3/master/extras/logo.png" height="150px" /><br />
+  <img src="https://raw.githubusercontent.com/KoffeinFlummi/ACE3/new-readme/extras/logo.png?token=ACU2mWeJUeshQIVc52XPoNiPpc3PzTauks5Uv24rwA%3D%3D" height="150px" /><br />
   <a href="https://github.com/KoffeinFlummi/ACE3/releases">
     <img src="http://img.shields.io/badge/release-3.0-green.svg?style=flat" alt="ACE version">
   </a>
