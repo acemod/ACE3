@@ -6,7 +6,7 @@ class CfgWeapons {
         displayname = "$STR_ACE_Overheating_SpareBarrelName";
         descriptionshort = "$STR_ACE_Overheating_SpareBarrelDescription";
         //model = "";
-        picture = QUOTE(PATHOF(UI\spare_barrel_ca.paa));
+        picture = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
             mass = 50;

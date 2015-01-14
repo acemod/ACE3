@@ -6,7 +6,7 @@ _this spawn {
   _weapon = _this select 1;
 
   // Calculate cool down of weapon since last shot
-  _string = format [GVAR(%1), _weapon];
+  _string = format [QGVAR(%1), _weapon];
   _overheat = _player getVariable [_string, [0, 0]];
   _temperature = _overheat select 0;
   _time = _overheat select 1;

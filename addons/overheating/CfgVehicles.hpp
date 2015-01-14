@@ -15,17 +15,17 @@ class CfgVehicles {
                     statement = QUOTE( [_player, currentWeapon _player] call FUNC(swapBarrel); );
                     showDisabled = 0;
                     priority = 3;
-                    icon = QUOTE(PATHOF(UI\spare_barrel_ca.paa));
+                    icon = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
                     hotkey = "B";
                 };
             };
             class ACE_CheckTemperature {
                 displayName = "$STR_ACE_Overheating_CheckTemperatureShort";
-                condition = QUOTE( currentWeapon _player in [primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player] );
-                statement = QUOTE( [_player, currentWeapon _player] call FUNC(CheckTemperature); );
+                condition = QUOTE( currentWeapon _player in [ARR_3(primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player)] );
+                statement = QUOTE( [ARR_2(_player, currentWeapon _player)] call FUNC(CheckTemperature); );
                 showDisabled = 0;
                 priority = 3.1;
-                icon = QUOTE(PATHOF(UI\temp_ca.paa));
+                icon = QUOTE(PATHTOF(UI\temp_ca.paa));
                 hotkey = "P";
             };
         };
