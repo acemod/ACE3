@@ -21,7 +21,7 @@ This mod is entirely **open-source**, and everyone is free to propose changes or
 
 The mod is **built modularly** — almost any PBO can be removed, thus a team can maintain its own tailored version of ACE, which excludes a select number of components that they don't like, or which conflict with other add-ons. Components themselves, like e.g. the medical system, also include various customization options, allowing mission designers to tweak the overall experience.
 
-More information on the purpose of the different components of AGM and which ones they rely on can be found [here](https://github.com/KoffeinFlummi/ACE3/wiki#features).
+More information on the purpose of the different components of ACE and which ones they rely on can be found [here](https://github.com/KoffeinFlummi/ACE3/wiki#features).
 
 ### Features
 *   Improved medical system
@@ -45,9 +45,9 @@ If you want to help put with the ongoing development, you can do so by looking f
 
 To report a bug, propose a feature, or suggest a change to the existing one — please, use our [Issue Tracker](https://github.com/KoffeinFlummi/ACE3/issues).
 
-For detailed information on how to make your weapons or vehicles compatible with AGM — read [this article](https://github.com/KoffeinFlummi/ACE3/wiki/For-Addon-Makers).
+For detailed information on how to make your weapons or vehicles compatible with ACE — read [this article](https://github.com/KoffeinFlummi/ACE3/wiki/For-Addon-Makers).
 
 #### Testing & Building
 If you want to help us test the latest development changes, feel free to download our master branch, using either git — if familiar with the process — or directly, by following [this link](https://github.com/KoffeinFlummi/ACE3/archive/master.zip).
 
-To find out how to build a version of AGM for testing, follow [these instructions](https://github.com/KoffeinFlummi/ACE3/wiki/Developers-::-Setting-up-your-development-environment).
+To find out how to build a version of ACE for testing, follow [these instructions](https://github.com/KoffeinFlummi/ACE3/wiki/Developers-::-Setting-up-your-development-environment).
