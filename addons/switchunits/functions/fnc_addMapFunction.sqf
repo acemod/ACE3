@@ -1,5 +1,5 @@
 /*
-  Name: AGM_SwitchUnits_fnc_addMapFunction
+  Name: ACE_SwitchUnits_fnc_addMapFunction
   
   Author(s):
     bux578

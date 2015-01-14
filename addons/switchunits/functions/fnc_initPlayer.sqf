@@ -1,5 +1,5 @@
 /*
-  Name: AGM_SwitchUnits_fnc_initPlayer
+  Name: ACE_SwitchUnits_fnc_initPlayer
   
   Author(s):
     bux578

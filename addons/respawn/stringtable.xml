@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+  <Package name="Interaction">
+    <Key ID="STR_ACE_Respawn_Deploy">
+      <English>Deploy in 5 seconds ...</English>
+      <German>Wird in 5 Sekunden errichtet ...</German>
+    </Key>
+    <Key ID="STR_ACE_Respawn_Deployed">
+      <English>Rallypoint deployed</English>
+      <German>Rallypoint errichtet</German>
+    </Key>
+    <Key ID="STR_ACE_Respawn_TeleportedToBase">
+      <English>Teleported to Base</English>
+      <German>Zur Basis teleportiert</German>
+    </Key>
+    <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
+      <English>Teleported to Rallypoint</English>
+      <German>Zum Rallypoint teleportiert</German>
+    </Key>
+  </Package>
+</Project>

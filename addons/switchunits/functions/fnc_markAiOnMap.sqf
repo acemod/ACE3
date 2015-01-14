@@ -1,5 +1,5 @@
 /*
-  Name: AGM_SwitchUnits_fnc_markAiOnMap
+  Name: ACE_SwitchUnits_fnc_markAiOnMap
   
   Author(s):
     bux578

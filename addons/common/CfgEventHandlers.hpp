@@ -1,15 +1,15 @@
 
 class Extended_PreInit_EventHandlers {
     class ADDON {
-        init = QUOTE(call COMPILE_FILE(XEH_preInit) );
-        serverInit = QUOTE(call COMPILE_FILE(scripts\readParameters) );
+        init = QUOTE(call COMPILE_FILE(XEH_preInit));
+        serverInit = QUOTE(call COMPILE_FILE(scripts\readParameters));
         disableModuload = true;
     };
 };
 
 class Extended_PostInit_EventHandlers {
     class ADDON {
-        init = QUOTE(call COMPILE_FILE(XEH_postInit) );
+        init = QUOTE(call COMPILE_FILE(XEH_postInit));
         disableModuload = true;
     };
 };
@@ -17,15 +17,15 @@ class Extended_PostInit_EventHandlers {
 class Extended_InitPost_EventHandlers {
     class All {
         class GVAR(executePersistent) {
-            init = QUOTE([_this select 0] call FUNC(executePersistent) );
+            init = QUOTE([_this select 0] call FUNC(executePersistent));
         };
     };
     class CAManBase {
         class GVAR(setName) {
-            init = QUOTE(if (local (_this select 0)) then { _this call FUNC(setName) }; );
+            init = QUOTE(if (local (_this select 0)) then {_this call FUNC(setName)};);
         };
         class GVAR(forceWalk) {
-            init = QUOTE(if (local (_this select 0)) then { _this call FUNC(applyForceWalkStatus); }; );
+            init = QUOTE(if (local (_this select 0)) then {_this call FUNC(applyForceWalkStatus);};);
         };
     };
 };
@@ -33,10 +33,10 @@ class Extended_InitPost_EventHandlers {
 class Extended_Respawn_EventHandlers {
     class All {
         class GVAR(restoreVariablesJIP) {
-            respawn = QUOTE(_this call FUNC(restoreVariablesJIP) );
+            respawn = QUOTE(_this call FUNC(restoreVariablesJIP));
         };
         class GVAR(setName) {
-            respawn = QUOTE(_this call FUNC(setName) );
+            respawn = QUOTE(_this call FUNC(setName));
         };
     };
 };

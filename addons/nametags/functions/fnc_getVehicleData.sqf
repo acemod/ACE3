@@ -24,7 +24,7 @@ private ["_type", "_varName", "_data"];
 
 _type = _this select 0;
 
-_varName = format ["AGM_CrewInfo_Cache_%1", _type];
+_varName = format ["ACE_CrewInfo_Cache_%1", _type];
 _data = + (uiNamespace getVariable _varName);
 
 if (!isNil "_data") exitWith {
