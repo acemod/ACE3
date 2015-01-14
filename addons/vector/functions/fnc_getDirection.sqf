@@ -1,12 +1,12 @@
 // by commy2
 #include "script_component.hpp"
 
-private "_dlgVectorOptics";
+private "_dlgVector";
 
 disableSerialization;
-_dlgVectorOptics = uiNamespace getVariable ['AGM_dlgVectorOptics', displayNull];
+_dlgVector = uiNamespace getVariable ["AGM_dlgVector", displayNull];
 
 [
-  round parseNumber ctrlText (_dlgVectorOptics displayCtrl 156),
-  round parseNumber ctrlText (_dlgVectorOptics displayCtrl 182)
+  round parseNumber ctrlText (_dlgVector displayCtrl 156),
+  round parseNumber ctrlText (_dlgVector displayCtrl 182)
 ]
