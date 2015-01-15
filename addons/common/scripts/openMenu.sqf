@@ -22,7 +22,7 @@ _dlgMenuDialog = uiNamespace getVariable QGVAR(MenuDialog);
 _ehid_keydown = _dlgMenuDialog displayAddEventHandler ["KeyDown", "_this select 1 > 1"];
 _ehid_keyup = _dlgMenuDialog displayAddEventHandler ["KeyUp", "_this select 1 > 1"];
 
-_config = configFile >> QGVAR(Default_Keys);
+_config = configFile >> "ACE_Default_Keys";
 _count = count _config;
 
 _countPages = ceil (_count / 20) + 1;

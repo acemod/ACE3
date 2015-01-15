@@ -26,7 +26,7 @@ if (GVAR(MenuPage) == _countPages - 1) then {
   for "_index" from OFFSET_1 to (OFFSET_1 + 19) do {(_dlgMenuDialog displayCtrl _index) ctrlShow false};
   for "_index" from OFFSET_2 to (OFFSET_2 + 19) do {(_dlgMenuDialog displayCtrl _index) ctrlShow false};
 
-  _config = configFile >> QGVAR(Options);
+  _config = configFile >> "ACE_Options";
   _count = count _config;
 
   _offset = 0;
