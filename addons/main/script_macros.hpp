@@ -198,8 +198,8 @@
 #define SETMVAR(var1,var2) missionNamespace SETVAR_SYS(var1,var2)
 #define SETUVAR(var1,var2) uiNamespace SETVAR_SYS(var1,var2)
 
-#define GETVARD(var1,var2) GETMVAR(GVAR(var1),var2)
-#define GETEVARD(var1,var2,var3) GETMVAR(EGVAR(var1,var2),var3)
+#define GETGVAR(var1,var2) GETMVAR(GVAR(var1),var2)
+#define GETEGVAR(var1,var2,var3) GETMVAR(EGVAR(var1,var2),var3)
 
 
 #ifdef DISABLE_COMPILE_CACHE
