@@ -22,6 +22,7 @@ PREP(onKeyDown);
 PREP(onKeyHold);
 PREP(onKeyUp);
 PREP(showAzimuth);
+PREP(showAzimuthInclination);
 PREP(showCenter);
 PREP(showDistance);
 

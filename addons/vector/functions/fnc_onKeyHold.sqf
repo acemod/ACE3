@@ -67,6 +67,22 @@ switch (_this select 0) do {
         };
 
     };
+
+    case ("azimuth+inclination"): {
+
+        [false] call FUNC(showCenter);
+
+        call FUNC(showAzimuthInclination);
+
+        if (!GVAR(isKeyDownAzimuth)) then {
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+            if (GVAR(holdKeyHandler) > -1) then {
+                GVAR(holdKeyHandler) = -1;
+            };
+        };
+
+    };
 };
 
 systemChat str (_this select 0);//
