@@ -1,10 +1,20 @@
-// by commy2
+/*
+ * Author: Commy2
+ *
+ * Check if the weapon has a bipod
+ *
+ * Arguments:
+ * 0: weapon
+ *
+ * Return Values:
+ * Boolean
+ *
+ */
 #include "script_component.hpp"
 
-private ["_weapon", "_config"];
+EXPLODE_1_PVT(_this,_weapon);
 
-_weapon = _this select 0;
-
+private ["_config"];
 _config = configFile >> "CfgWeapons" >> _weapon;
 
 getNumber (_config >> "ACE_Bipod") == 1 ||
