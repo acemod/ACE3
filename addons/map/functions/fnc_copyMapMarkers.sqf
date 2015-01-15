@@ -15,7 +15,7 @@ _lineMarkers = _this;
 {
   _marker = _x;
 
-  if (({(_x select 0) == (_marker select 0)} count AGM_Map_lineMarkers) == 0) then {
-    _marker call AGM_Map_fnc_addLineMarker;
+  if (({(_x select 0) == (_marker select 0)} count GVAR(lineMarkers)) == 0) then {
+    _marker call FUNC(addLineMarker);
   };
 } forEach _lineMarkers;

@@ -55,18 +55,18 @@ if (!hasInterface) exitWith{};
 
 [] spawn {
   // Init variables
-  AGM_Map_mapToolsShown = 0;
+  GVAR(mapToolsShown) = 0;
   AGM_Map_pos = [0,0];
   AGM_Map_angle = 0;
-  AGM_Map_dragging = false;
-  AGM_Map_rotating = false;
+  GVAR(mapToolDragging) = false;
+  GVAR(mapToolRotating) = false;
   AGM_Map_mapGpsShow = true;
-  AGM_Map_drawing = false;
-  AGM_Map_tempLineMarker = [];
-  AGM_Map_lineMarkers = [];
+  GVAR(drawing) = false;
+  GVAR(tempLineMarker) = [];
+  GVAR(lineMarkers) = [];
 
   AGM_Map_drawColor = "ColorBlack";
-  AGM_Map_drawingControls = [36732, 36733, 36734, 36735, 36736, 36737];
+  GVAR(drawing)Controls = [36732, 36733, 36734, 36735, 36736, 36737];
 
   AGM_Map_fnc_installEvents = {
     _d = _this;
@@ -86,7 +86,7 @@ if (!hasInterface) exitWith{};
 
   if (isNull findDisplay 12) then {
     // Install event handlers on the map control of the briefing screen (control = 51)
-    AGM_Map_syncMarkers = true;
+    GVAR(syncMarkers) = true;
     if (!isNull findDisplay 52) then {
       52 call AGM_Map_fnc_installEvents;
     } else {
@@ -98,16 +98,16 @@ if (!hasInterface) exitWith{};
     };
   } else {
     // Briefing screen was skipped; the player is JIP, create the markers defined during the briefing
-    AGM_Map_syncMarkers = false;
+    GVAR(syncMarkers) = false;
     {
-      _x call AGM_Map_fnc_addLineMarker;
-    } forEach AGM_Map_serverLineMarkers;
+      _x call FUNC(addLineMarker);
+    } forEach GVAR(serverLineMarkers);
   };
 
   // Wait until the main map display is detected (display = 12)
   waitUntil { !isNull findDisplay 12 };
   // Install event handlers on the map control and display (control = 51)
-  AGM_Map_syncMarkers = false;
+  GVAR(syncMarkers) = false;
   12 call AGM_Map_fnc_installEvents;
 
   // Update the size and rotation of map tools
@@ -125,11 +125,11 @@ if (!hasInterface) exitWith{};
     [] spawn {
       while {visibleMap} do {
         // Show/Hide draw buttons
-        if ("AGM_MapTools" in items player) then {
-          { ((finddisplay 12) displayctrl _x) ctrlShow true; } forEach AGM_Map_drawingControls;
+        if ("ACE_MapTools" in items player) then {
+          { ((finddisplay 12) displayctrl _x) ctrlShow true; } forEach GVAR(drawing)Controls;
         } else {
-          { ((finddisplay 12) displayctrl _x) ctrlShow false; } forEach AGM_Map_drawingControls;
-          if (AGM_Map_drawing) then {
+          { ((finddisplay 12) displayctrl _x) ctrlShow false; } forEach GVAR(drawing)Controls;
+          if (GVAR(drawing)) then {
             call AGM_Map_fnc_cancelDrawing;
           };
         };
@@ -142,10 +142,10 @@ if (!hasInterface) exitWith{};
     // Hide GPS
     [false] call AGM_Map_fnc_openMapGps;
     // Hide Map tools
-    deleteMarkerLocal "AGM_MapToolFixed";
-    deleteMarkerLocal "AGM_MapToolRotatingNormal";
-    deleteMarkerLocal "AGM_MapToolRotatingSmall";
-    AGM_Map_mapToolFixed = nil;
+    deleteMarkerLocal MARKERNAME_MAPTOOL_FIXED;
+    deleteMarkerLocal MARKERNAME_MAPTOOL_ROTATINGNORMAL;
+    deleteMarkerLocal MARKERNAME_MAPTOOL_ROTATINGSMALL;
+    GVAR(mapToolFixed) = nil;
     AGM_Map_mapToolRotatingNormal = nil;
     AGM_Map_mapToolRotatingSmall = nil;
     // Cancel drawing

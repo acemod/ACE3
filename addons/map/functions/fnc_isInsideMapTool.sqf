@@ -16,8 +16,8 @@
 #define DIST_TOP_TO_CENTER_PERC      0.65
 #define DIST_LEFT_TO_CENTER_PERC     0.30
 
-if (AGM_Map_mapToolsShown == 0) exitWith {false};
-_textureWidth = [TEXTURE_WIDTH_IN_M, TEXTURE_WIDTH_IN_M / 2] select (AGM_Map_mapToolsShown - 1);
+if (GVAR(mapToolsShown) == 0) exitWith {false};
+_textureWidth = [TEXTURE_WIDTH_IN_M, TEXTURE_WIDTH_IN_M / 2] select (GVAR(mapToolsShown) - 1);
 
 _pos = [_this select 0, _this select 1, 0];
 _relPos = _pos vectorDiff [AGM_Map_pos select 0, AGM_Map_pos select 1, 0];

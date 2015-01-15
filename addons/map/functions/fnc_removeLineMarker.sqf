@@ -15,15 +15,15 @@
  deleteMarkerLocal _name;
 {
   if ((_x select 0) == _name) exitWith {
-    AGM_Map_lineMarkers = AGM_Map_lineMarkers - [_x];
+    GVAR(lineMarkers) = GVAR(lineMarkers) - [_x];
   };
-} forEach AGM_Map_lineMarkers;
+} forEach GVAR(lineMarkers);
 
-if (isServer && AGM_Map_syncMarkers) then {
+if (isServer && GVAR(syncMarkers)) then {
   {
     if ((_x select 0) == _name) exitWith {
-      AGM_Map_serverLineMarkers = AGM_Map_serverLineMarkers - [_x];
-      publicVariable "AGM_Map_serverLineMarkers";
+      GVAR(serverLineMarkers) = GVAR(serverLineMarkers) - [_x];
+      publicVariable "GVAR(serverLineMarkers)";
     };
-  } forEach AGM_Map_serverLineMarkers;
+  } forEach GVAR(serverLineMarkers);
 };

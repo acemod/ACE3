@@ -10,4 +10,4 @@
  * Return
  */
 
-[AGM_Map_lineMarkers, "AGM_Map_fnc_copyMapMarkers", _this] call AGM_Core_fnc_execRemoteFnc;
+[GVAR(lineMarkers), "AGM_Map_fnc_copyMapMarkers", _this] call AGM_Core_fnc_execRemoteFnc;

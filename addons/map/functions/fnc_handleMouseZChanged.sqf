@@ -20,7 +20,7 @@ diag_log _this;
 _handled   = false;
 
 // If drawing, change line color
-if (count AGM_Map_tempLineMarker > 0) then {
+if (count GVAR(tempLineMarker) > 0) then {
   AGM_Map_drawColor = if (_dir > 0) then {AGM_Map_drawColor + 1} else {AGM_Map_drawColor - 1};
   if (AGM_Map_drawColor >= count AGM_Map_drawColors) then {
     AGM_Map_drawColor = AGM_Map_drawColor - count AGM_Map_drawColors;
@@ -28,8 +28,8 @@ if (count AGM_Map_tempLineMarker > 0) then {
   if (AGM_Map_drawColor < 0) then {
     AGM_Map_drawColor = AGM_Map_drawColor + count AGM_Map_drawColors;
   };
-  AGM_Map_tempLineMarker set [3, AGM_Map_drawColor];
-  AGM_Map_tempLineMarker call AGM_Map_fnc_updateLineMarker;
+  GVAR(tempLineMarker) set [3, AGM_Map_drawColor];
+  GVAR(tempLineMarker) call AGM_Map_fnc_updateLineMarker;
   
   _handled = true;
 };

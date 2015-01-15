@@ -27,9 +27,9 @@ _handled   = false;
 if (_button != 0) exitWith {};
 
 // If releasing
-if (_dir != 1 && (AGM_Map_dragging or AGM_Map_rotating)) exitWith {
-  AGM_Map_dragging = false;
-  AGM_Map_rotating = false;
+if (_dir != 1 && (GVAR(mapToolDragging) or GVAR(mapToolRotating))) exitWith {
+  GVAR(mapToolDragging) = false;
+  GVAR(mapToolRotating) = false;
   _handled = true;
   _handled
 };
@@ -37,44 +37,44 @@ if (_dir != 1 && (AGM_Map_dragging or AGM_Map_rotating)) exitWith {
 // If clicking
 if (_dir == 1) exitWith {
 
-  if !(call AGM_Map_fnc_canDraw) exitWith {_handled = false;};
+  if !(call FUNC(canDraw)) exitWith {_handled = false;};
 
   // Transform mouse screen position to coordinates
   _pos  = _control ctrlMapScreenToWorld _screenPos;
   _pos set [count _pos, 0];
 
-  if (AGM_Map_drawing) exitWith {
+  if (GVAR(drawing)) exitWith {
     // Already drawing -> Add tempLineMarker to permanent list
-    if (AGM_Map_syncMarkers) then {
-      deleteMarkerLocal (AGM_Map_tempLineMarker select 0);
-      [AGM_Map_tempLineMarker, "AGM_Map_fnc_addLineMarker", 2] call AGM_Core_fnc_execRemoteFnc;
+    if (GVAR(syncMarkers)) then {
+      deleteMarkerLocal (GVAR(tempLineMarker) select 0);
+      [GVAR(tempLineMarker), "FUNC(addLineMarker)", 2] call AGM_Core_fnc_execRemoteFnc;
       // Log who drew on the briefing screen
       (text format ["[AGM] Server: Player %1 drew on the briefing screen", name player]) call AGM_Core_fnc_serverLog;
     } else {
-      AGM_Map_tempLineMarker call AGM_Map_fnc_updateLineMarker;
-      AGM_Map_lineMarkers pushBack (+AGM_Map_tempLineMarker);
+      GVAR(tempLineMarker) call AGM_Map_fnc_updateLineMarker;
+      GVAR(lineMarkers) pushBack (+GVAR(tempLineMarker));
     };
-    AGM_Map_tempLineMarker = [];
-    AGM_Map_drawing = false;
+    GVAR(tempLineMarker) = [];
+    GVAR(drawing) = false;
     _handled = true;
   };
 
   if (_altKey) exitWith {
     // Start drawing
-    AGM_Map_drawing = true;
+    GVAR(drawing) = true;
     // Create tempLineMarker
     _gui = format ["%1%2%3%4", random (100), random (100), random (100), random (100)];
-    AGM_Map_tempLineMarker = [_gui, + _pos, + _pos, AGM_Map_drawColor];
+    GVAR(tempLineMarker) = [_gui, + _pos, + _pos, AGM_Map_drawColor];
     _marker = createMarkerLocal [_gui, [0,0]];
-    AGM_Map_tempLineMarker call AGM_Map_fnc_updateLineMarker;
+    GVAR(tempLineMarker) call AGM_Map_fnc_updateLineMarker;
     _handled = true;
   };
 
-  AGM_Map_dragging = false;
-  AGM_Map_rotating = false;
+  GVAR(mapToolDragging) = false;
+  GVAR(mapToolRotating) = false;
 
   // If no map tool marker then exit
-  if (isNil "AGM_Map_mapToolFixed") exitWith {_handled = false;};
+  if (isNil QGVAR(mapToolFixed)) exitWith {_handled = false;};
 
   // Check if clicking the maptool
   if (_pos call AGM_Map_fnc_isInsideMapTool) exitWith {
@@ -86,10 +86,10 @@ if (_dir == 1) exitWith {
       AGM_Map_startAngle = + AGM_Map_angle;
       AGM_Map_startDragAngle = (180 + ((AGM_Map_startDragPos select 0) - (AGM_Map_startPos select 0)) atan2 ((AGM_Map_startDragPos select 1) - (AGM_Map_startPos select 1)) mod 360);
       // Start rotating
-      AGM_Map_rotating = true;
+      GVAR(mapToolRotating) = true;
     } else {
       // Start dragging
-      AGM_Map_dragging = true;
+      GVAR(mapToolDragging) = true;
     };
     _handled = true;
   };

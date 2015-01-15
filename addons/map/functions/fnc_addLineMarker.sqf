@@ -32,9 +32,9 @@ if (_mag > 0) then {
   _name setMarkerDirLocal 0;
 };
 
-AGM_Map_lineMarkers pushBack (+_this);
+GVAR(lineMarkers) pushBack (+_this);
 
-if (isServer && AGM_Map_syncMarkers) then {
-  AGM_Map_serverLineMarkers pushBack (+_this);
-  publicVariable "AGM_Map_serverLineMarkers";
+if (isServer && GVAR(syncMarkers)) then {
+  GVAR(serverLineMarkers) pushBack (+_this);
+  publicVariable QGVAR(serverLineMarkers);
 };
