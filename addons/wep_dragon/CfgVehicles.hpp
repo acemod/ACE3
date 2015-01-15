@@ -27,7 +27,7 @@ class CfgVehicles {
 			class MainTurret: MainTurret {
 				gunnerAction = "LowKORD_Gunner";
 				GVAR(tracker) = "TOWLauncherSingle";
-				gunnerOpticsModel = "\ca\Weapons_e\optics_m47";
+				gunnerOpticsModel = QUOTE(PATHTOF(models\optics_m47));
 				weapons[] = {"ACE_M47StaticLauncher"};
 				magazines[] = {};
 				class ViewOptics : ViewOptics {
