@@ -1,6 +1,6 @@
 /**
  * fn_effectBleeding.sqf
- * @Descr: Displays the CSE Bleeding effect
+ * @Descr: Displays the ACE Bleeding effect
  * @Author: Glowbal
  *
  * @Arguments: [bloodLoss NUMBER]

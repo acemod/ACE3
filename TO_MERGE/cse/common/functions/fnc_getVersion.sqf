@@ -1,6 +1,6 @@
 /**
  * fn_getVersion.sqf
- * @Descr: Get the version number of the current CSE Build
+ * @Descr: Get the version number of the current ACE Build
  * @Author: Glowbal
  *
  * @Arguments: []

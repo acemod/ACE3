@@ -10,14 +10,14 @@
 
 #include "script_component.hpp"
 
-[QGVAR(ENABLE_REVIVE_COUNTER), 0, false, QGVAR(variables)] call FUNC(defineVariable);
-[QGVAR(inReviveState), false, true, QGVAR(variables)] call FUNC(defineVariable);
-[QGVAR(isDead),false,true,"cse"] call FUNC(defineVariable);
-[QGVAR(isDeadPlayer), false, true, "cse"] call FUNC(defineVariable);
-[QGVAR(StateArrested),false,true,"cse"] call FUNC(defineVariable);
-[QGVAR(StateUnconscious),false,true,"cse"] call FUNC(defineVariable);
-[QGVAR(ENABLE_REVIVE_SETDEAD_F),0,false,"cse"] call FUNC(defineVariable);
-[QGVAR(carriedBy),objNull,false,"cse"] call FUNC(defineVariable);
+[QGVAR(ENABLE_REVIVE_COUNTER), 0, false, QGVAR(ADDON)] call FUNC(defineVariable);
+[QGVAR(inReviveState), false, true, QGVAR(ADDON)] call FUNC(defineVariable);
+[QGVAR(isDead),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
+[QGVAR(isDeadPlayer), false, true, QUOTE(ADDON)] call FUNC(defineVariable);
+[QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
+[QGVAR(StateUnconscious),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
+[QGVAR(ENABLE_REVIVE_SETDEAD_F),0,false,QUOTE(ADDON)] call FUNC(defineVariable);
+[QGVAR(carriedBy),objNull,false,QUOTE(ADDON)] call FUNC(defineVariable);
 
 if (isNil QGVAR(ENABLE_REVIVE_F)) then {
 	GVAR(ENABLE_REVIVE_F) = 0;
@@ -31,8 +31,8 @@ if (hasInterface) then{
 		player addEventHandler ["respawn", {_this call FUNC(resetAllDefaults_F);}];
 
 		// For the icons functions top right
-		//11401 cutRsc ["cse_gui_iconsDisplay","PLAIN"];
-		45 cutRsc ["RscCSEScreenEffectsBlack","PLAIN"];
+		//11401 cutRsc [QEGVAR(gui,iconsDisplay),"PLAIN"];
+		45 cutRsc [QGVAR(ScreenEffectsBlack),"PLAIN"];
 	};
 };
 

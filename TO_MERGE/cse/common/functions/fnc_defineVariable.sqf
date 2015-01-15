@@ -1,6 +1,6 @@
 /**
  * fn_defineVariable.sqf
- * @Descr: Define a variable for the CSE variable framework
+ * @Descr: Define a variable for the ACE variable framework
  * @Author: Glowbal
  *
  * @Arguments: [name STRING, defaultValue ANY, publicFlag BOOL, category STRING, type NUMBER, persistentFlag BOOL]

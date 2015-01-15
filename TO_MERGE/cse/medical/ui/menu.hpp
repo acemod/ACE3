@@ -49,7 +49,7 @@ class GVAR(medicalMenu) {
 			y = "2.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "38 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "3.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			text = QUOTE(PATHTOF(data\cse_background_img.paa);
+			text = QUOTE(PATHTOF(data\background_img.paa);
 			colorText[] = {1, 1, 1, 0.0};
 			//moving = 1;
 		};

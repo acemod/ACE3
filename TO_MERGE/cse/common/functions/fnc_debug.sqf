@@ -1,6 +1,6 @@
 /**
  * fn_debug.sqf
- * @Descr: Print logging messages through the CSE framework.
+ * @Descr: Print logging messages through the ACE framework.
  * @Author: Glowbal
  *
  * @Arguments: [message ANY, level NUMBER (Optional)]

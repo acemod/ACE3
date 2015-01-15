@@ -29,7 +29,6 @@ if (GVAR(playerIsProvidingCPR)) exitwith {
 
 if (_unit == _caller) exitwith{[_caller,"You cannot give yourself CPR"] call EFUNC(common,sendHintTo); [_caller,"release"] call FUNC(treatmentMutex_CMS);};
 
-	//_name = _unit getvariable ["cse_nameUnit",[_unit] call EFUNC(common,getName)];
 [_caller,"You start providing CPR"] call EFUNC(common,sendHintTo);
 
 [_this, QUOTE(FUNC(performCPRLocal_CMS)), _unit, false] spawn BIS_fnc_MP;

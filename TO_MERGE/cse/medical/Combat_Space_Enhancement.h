@@ -2,27 +2,27 @@
 #define ACTION_KEYBINDING 2
 #define CLIENT_SETTING 3
 
-class Combat_Space_Enhancement {
+class Advanced_Combat_Enviroment {
 	class cfgModules {
-		class cse_sys_medical {
-			init = "call compile preprocessFile 'cse\cse_sys_medical\init_sys_medical.sqf';";
+		class ADDON {
+			init = "";
 			name = "Combat Medical System";
 			class EventHandlers {
 				class CAManBase {
-					init = "_this call FUNC(initForUnit_CMS);";
-					handleDamage = "_this call FUNC(handleDamage_CMS);"; 
-					handleHeal = "_this call FUNC(handleHeal_CMS);"; 
-					killed = "_this call cse_eh_killed_CMS;";
-					local = "_this call cse_eh_local_CMS;";
+					init = QUOTE(_this call FUNC(initForUnit_CMS););
+					handleDamage = QUOTE(_this call FUNC(handleDamage_CMS);); 
+					handleHeal = QUOTE(_this call FUNC(handleHeal_CMS);); 
+					killed = QUOTE(_this call ACE_eh_killed_CMS;);
+					local = QUOTE(_this call ACE_eh_local_CMS;);
 				};
 			};
 			class Configurations {
-				class combat_medical_system_openMenu {
+				class ADDON_openMenuKey {
 					type = MENU_KEYBINDING;
 					title = $STR_OPEN_CMS_MENU_TITLE;
 					description = $STR_OPEN_CMS_MENU_DESC;
 					value[] = {0,0,0,0};
-					onPressed = "[] call FUNC(openMenu_CMS)";
+					onPressed = QUOTE([] call FUNC(openMenu_CMS));
 					idd = 314412;
 				};
 			};
@@ -41,8 +41,8 @@ class Combat_Space_Enhancement {
 		class onCarryInjured {};		// [_caller, _unit]
 
 		class setUnconsciousState {
-			class cse_sys_medical_onUnconscious {
-				onCall = "_this call cse_fnc_onUnconscious_CMS;";
+			class ADDON_onUnconscious {
+				onCall = QUOTE(_this call FUNC(onUnconscious_CMS;));
 			};
 		};
 	};	

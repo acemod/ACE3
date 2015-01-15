@@ -13,12 +13,12 @@ _this spawn {
 
 	_vehicle = _this select 0;
 	_maxSpeed = _this select 1;
-	if ((_vehicle getvariable ["cse_f_limitSpeed",false])) then {
-		_vehicle setvariable ["cse_f_limitSpeed",nil,true];
+	if ((_vehicle getvariable [QGVAR(limitSpeed_f),false])) then {
+		_vehicle setvariable [QGVAR(limitSpeed_f),nil,true];
 	};
 
 	if (_maxSpeed < 0) exitwith {};
-	_vehicle setvariable ["cse_f_limitSpeed",true,true];
+	_vehicle setvariable [QGVAR(limitSpeed_f),true,true];
 
 	waitUntil {
 		_speed = speed _vehicle;
@@ -33,6 +33,6 @@ _this spawn {
 			_newVelocity = [_x - (_x * _percentage), _y - (_y * _percentage), _z - (_z * _percentage)];
 			_vehicle setVelocity _newVelocity;
 		};
-		!(_vehicle getvariable ["cse_f_limitSpeed",false])
+		!(_vehicle getvariable [QGVAR(limitSpeed_f),false])
 	};
 };

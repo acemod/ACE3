@@ -7,7 +7,7 @@
  * @Return:
  * @PublicAPI: true
  *
- * @Example ["myID", true, CSE_ICON_PATH + "icon_group.paa", [1,1,1,1]] call cse_fnc_gui_displayIcon;
+ * @Example ["myID", true, QUOTE(PATHTOF(data\icon_group.paa)), [1,1,1,1]] call ace_gui_fnc_displayIcon;
  */
 
 #include "script_component.hpp"

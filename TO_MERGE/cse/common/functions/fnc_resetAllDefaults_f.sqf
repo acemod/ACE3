@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_oldUnit","_sets","_CSEFadingBlackUI","_ctrlFadingBlackUI"];
+private ["_unit","_oldUnit","_sets"];
 _unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _oldUnit = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
 

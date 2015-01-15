@@ -52,10 +52,7 @@ while {true} do {
 		_painStatus = [_unit,QGVAR(amountOfPain),0] call EFUNC(common,getDefinedVariable);
 
 		if (_bloodLoss >0) then {
-			//["cse_sys_medical_isBleeding", true, "cse\cse_sys_medical\data\icons\icon_bleeding.paa", [1,1,1,1]] call EFUNC(gui,displayIcon);
 			[_bloodLoss] spawn EFUNC(common,effectBleeding);
-		} else {
-			//["cse_sys_medical_isBleeding", false, "cse\cse_sys_medical\data\icons\icon_bleeding.paa", [1,1,1,1]] call EFUNC(gui,displayIcon);
 		};
 		sleep 0.25 +(random(2));
 		if (_painStatus > 0) then {

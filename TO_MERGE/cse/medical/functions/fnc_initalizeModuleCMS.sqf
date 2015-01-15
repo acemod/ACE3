@@ -103,14 +103,14 @@ if (GVAR(setting_allowAirwayInjuries)) then {
 		{(([_this select 0,QGVAR(airway)] call EFUNC(common,getDefinedVariable)) > 2)}
 	] call EFUNC(common,registerUnconsciousCondition);
 };
-cse_sys_medical = true;
 
 waituntil{!isnil "ace_gui"};
 
 GVAR(MEDICAL_COMBINED_LOOP) = [];
 waituntil{!isnil "ace_gui" && !isnil "ace_main"};
 GVAR(task_pool_lastTime) = time;
-ACE_cms_taskLoopCode = {
+
+FUNC(taskLoopCode) = {
 	if ((time - GVAR(task_pool_lastTime)) >= 1 || true) then {
 		GVAR(task_pool_lastTime) = time;
 		{
@@ -136,7 +136,7 @@ ACE_cms_taskLoopCode = {
 
 GVAR(cms_taskLoop_trigger) = createTrigger["EmptyDetector", [0,0,0]];
 GVAR(cms_taskLoop_trigger) setTriggerActivation ["NONE", "PRESENT", true];
-GVAR(cms_taskLoop_trigger) setTriggerStatements["call ACE_cms_taskLoopCode", "", ""];
+GVAR(cms_taskLoop_trigger) setTriggerStatements[QUOTE(call FUNC(taskLoopCode)), "", ""];
 
 if (!hasInterface) exitwith{};
 [player] spawn {

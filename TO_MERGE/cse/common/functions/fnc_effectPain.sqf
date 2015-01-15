@@ -1,6 +1,6 @@
 /**
  * fn_effectPain.sqf
- * @Descr: Displays the CSE Pain effect
+ * @Descr: Displays the ACE Pain effect
  * @Author: Glowbal
  *
  * @Arguments: [painRatio NUMBER]
