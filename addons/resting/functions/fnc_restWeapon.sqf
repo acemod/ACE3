@@ -10,6 +10,7 @@
  * None
  *
  */
+#include "script_component.hpp"
 
 #define RESTEDRECOIL 0.6
 #define BIPODRECOIL 0.3
@@ -35,37 +36,37 @@ _fnc_unRestWeapon = {
   private "_animation";
   _animation = animationState _unit;
 
-  if (_unit getVariable ["AGM_bipodDeployed", false]) then {
+  if (_unit getVariable ["ACE_bipodDeployed", false]) then {
     _unit setUnitRecoilCoefficient (unitRecoilCoefficient _unit / BIPODRECOIL);
-    if (_animation find "_agm_deploy" != -1) then {
-      //[_unit, [_animation, "_agm_deploy", ""] call CBA_fnc_replace, 2] call AGM_Core_fnc_doAnimation;
-      _unit switchMove ([_animation, "_agm_deploy", ""] call CBA_fnc_replace);
+    if (_animation find "_ace_deploy" != -1) then {
+      //[_unit, [_animation, "_ace_deploy", ""] call CBA_fnc_replace, 2] call EFUNC(common,doAnimation);
+      _unit switchMove ([_animation, "_ace_deploy", ""] call CBA_fnc_replace);
     };
 
     private "_picture";
     _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
-    [localize "STR_AGM_Resting_BipodUndeployed", _picture] call AGM_Core_fnc_displayTextPicture;
+    [localize "STR_ACE_Resting_BipodUndeployed", _picture] call EFUNC(common,displayTextPicture);
 
   } else {
     _unit setUnitRecoilCoefficient (unitRecoilCoefficient _unit / RESTEDRECOIL);
-    if (_animation find "_agm_rested" != -1) then {
-      //[_unit, [_animation, "_agm_rested", ""] call CBA_fnc_replace, 2] call AGM_Core_fnc_doAnimation;
-      _unit switchMove ([_animation, "_agm_rested", ""] call CBA_fnc_replace);
+    if (_animation find "_ace_rested" != -1) then {
+      //[_unit, [_animation, "_ace_rested", ""] call CBA_fnc_replace, 2] call EFUNC(common,doAnimation);
+      _unit switchMove ([_animation, "_ace_rested", ""] call CBA_fnc_replace);
     };
 
     private "_picture";
     _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
-    [localize "STR_AGM_Resting_WeaponLifted", _picture] call AGM_Core_fnc_displayTextPicture;
+    [localize "STR_ACE_Resting_WeaponLifted", _picture] call EFUNC(common,displayTextPicture);
   };
 
-  _unit setVariable ["AGM_weaponRested", false];
-  _unit setVariable ["AGM_bipodDeployed", false];
+  _unit setVariable ["ACE_weaponRested", false];
+  _unit setVariable ["ACE_bipodDeployed", false];
 };
 
-if (_unit getVariable ["AGM_weaponRested", false]) exitWith {call _fnc_unRestWeapon};
+if (_unit getVariable ["ACE_weaponRested", false]) exitWith {call _fnc_unRestWeapon};
 
 // exit if this is not an available animation
-if (!isClass (configFile >> "CfgMovesMaleSdr" >> "States" >> format ["%1_agm_deploy", animationState _unit])) exitWith {};
+if (!isClass (configFile >> "CfgMovesMaleSdr" >> "States" >> format ["%1_ace_deploy", animationState _unit])) exitWith {};
 
 // PREPARE INTERSECTS
 private "_fnc_getIntersection";
@@ -131,7 +132,7 @@ private "_intersects";
 _intersects = call _fnc_getIntersection;
 
 if (true in _intersects) then {
-  _unit setVariable ["AGM_weaponRested", true];
+  _unit setVariable ["ACE_weaponRested", true];
 
   private "_restedPosition";
   _restedPosition = getPosASL _unit;
@@ -139,27 +140,27 @@ if (true in _intersects) then {
   // REST THE WEAPON
   addCamShake CAMSHAKE;
 
-  if ([_weapon] call AGM_Resting_fnc_hasBipod && {_intersects select 3}) then {
-    _unit setVariable ["AGM_bipodDeployed", true];
+  if ([_weapon] call FUNC(hasBipod) && {_intersects select 3}) then {
+    _unit setVariable ["ACE_bipodDeployed", true];
 
     _unit setUnitRecoilCoefficient (BIPODRECOIL * unitRecoilCoefficient _unit);
-    //[_unit, format ["%1_agm_deploy", animationState _unit], 2] call AGM_Core_fnc_doAnimation;
-    _unit switchMove format ["%1_agm_deploy", animationState _unit];
+    //[_unit, format ["%1_ace_deploy", animationState _unit], 2] call EFUNC(common,doAnimation);
+    _unit switchMove format ["%1_ace_deploy", animationState _unit];
 
     private "_picture";
     _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
-    [localize "STR_AGM_Resting_BipodDeployed", _picture] call AGM_Core_fnc_displayTextPicture;
+    [localize "STR_ACE_Resting_BipodDeployed", _picture] call EFUNC(common,displayTextPicture);
 
   } else {
-    _unit setVariable ["AGM_bipodDeployed", false];
+    _unit setVariable ["ACE_bipodDeployed", false];
 
     _unit setUnitRecoilCoefficient (RESTEDRECOIL * unitRecoilCoefficient _unit);
-    //[_unit, format ["%1_agm_rested", animationState _unit], 2] call AGM_Core_fnc_doAnimation;
-    _unit switchMove format ["%1_agm_rested", animationState _unit];
+    //[_unit, format ["%1_ace_rested", animationState _unit], 2] call EFUNC(common,doAnimation);
+    _unit switchMove format ["%1_ace_rested", animationState _unit];
 
     private "_picture";
     _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
-    [localize "STR_AGM_Resting_WeaponRested", _picture] call AGM_Core_fnc_displayTextPicture;
+    [localize "STR_ACE_Resting_WeaponRested", _picture] call EFUNC(common,displayTextPicture);
   };
 
   // CHECK FOR PLAYER MOVING AWAY, CHANGING WEAPONS ETC
@@ -171,11 +172,11 @@ if (true in _intersects) then {
     _fnc_getIntersection = _this select 4;
     _restedPosition = _this select 5;
 
-    while {_unit getVariable ["AGM_weaponRested", false]} do {
+    while {_unit getVariable ["ACE_weaponRested", false]} do {
       _intersects = call _fnc_getIntersection;
 
       if (
-        _unit != AGM_player
+        _unit != ACE_player
         || {_vehicle != vehicle _unit}
         || {inputAction "reloadMagazine" != 0}
         || {weaponLowered _unit}
