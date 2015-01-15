@@ -45,21 +45,20 @@ if (GVAR(DIRECT_TAG_DISTANCE) < 1) exitwith {};
 addMissionEventHandler ["Draw3D", FUNC(drawNameTags)];
 
 if (GVAR(ENABLE_SOUNDWAVES)) then {
-
 	GVAR(SOUNDWAVE_ICONS) = [QUOTE(PATHTOF(data\soundwaves\soundwave1.paa)),QUOTE(PATHTOF(data\soundwaves\soundwave2.paa)), QUOTE(PATHTOF(data\soundwaves\soundwave3.paa)), QUOTE(PATHTOF(data\soundwaves\soundwave4.paa)), QUOTE(PATHTOF(data\soundwaves\soundwave5.paa)), QUOTE(PATHTOF(data\soundwaves\soundwave6.paa)), QUOTE(PATHTOF(data\soundwaves\soundwave7.paa)), QUOTE(PATHTOF(data\soundwaves\soundwave8.paa)), QUOTE(PATHTOF(data\soundwaves\soundwave9.paa)), QUOTE(PATHTOF(data\soundwaves\soundwave_silent.paa))];
 
 	// TODO Implement function for checking if an addon is loaded
-	//if (["task_force_radio"] call ace_fnc_isModLoaded_F) then {
+	if (["task_force_radio"] call EFUNC(common,isModLoaded_F)) then {
 		if (isnil "TFAR_fnc_isSpeaking") then {
 			TFAR_fnc_isSpeaking = { if (!isnil "TF_tangent_lr_pressed") then {(TF_tangent_lr_pressed || TF_tangent_sw_pressed || TF_tangent_dd_pressed)} else { false }; };
 		};
-	//};
+	};
 
 	// TODO Move to unscheduled environment with PFH
 	[] spawn {
 		waituntil{
-			waituntil {alive player};
-			/*ACE_player*/ player call FUNC(handleSpeaking);
+			waituntil {alive ACE_player};
+			ACE_player call FUNC(handleSpeaking);
 			!GVAR(ENABLE_SOUNDWAVES); // exit when the soundwaves have been disabled
 		};
 	};

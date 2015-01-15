@@ -15,7 +15,7 @@
 private ["_playerAnimationState", "_canDeployBipod"];
 
 if (weaponLowered player) exitWith {};
-if (!([player] call cse_fnc_canInteract)) exitWith {};
+if (!([player] call EFUNC(common,canInteract))) exitWith {};
 if (player getVariable [QGVAR(isWeaponDeployed), false]) exitWith {};
 
 _playerAnimationState = (([animationState player, "_"] call BIS_fnc_splitString) select 0);

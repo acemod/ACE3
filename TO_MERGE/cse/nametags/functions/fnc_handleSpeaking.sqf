@@ -17,12 +17,9 @@
 private ["_unit"];
 _unit = _this select 0;
 
-if (_unit != player /* _unit != ACE_Player */) exitwith {};
+if (_unit != ACE_Player) exitwith {};
 
 // TODO check mod loaded function
-/*if (["task_force_radio"] call FUNC(isModLoaded_F)) then {
-	waituntil {!isnil "TF_tangent_lr_pressed"};
-};*/
 
 waituntil {
 	if (ACTION_TFAR_RADIO_ACTIVE || ACTION_PUSH_TO_TALK_PRESSED || ACTION_ACRE_RADIO_ACTIVE) then {
@@ -34,7 +31,7 @@ waituntil {
 			_unit setvariable [QGVAR(isSpeaking), false, true];
 		};
 	};
-	!(alive _unit) /* _unit != ACE_Player */
+	(!(alive _unit) || (_unit != ACE_Player))
 };
 
 _unit setvariable [QGVAR(isSpeaking),nil,true];

@@ -13,7 +13,7 @@
 private ["_cursor","_soundWaves", "_nameOfUnit","_pos","_color", "_nearbyUnits", "_iconOptions", "_iconSets", "_unit", "_colorOfIcon", "_nearObj"];
 if (visibleMap || !GVAR(DRAW_TAG_ICONS)) exitwith {};
 
-_nearObj = if (isNull curatorCamera) then {/* ACE_player */	if (isNull (missionnamespace getvariable ["bis_fnc_moduleRemoteControl_unit",objnull])) then { player} else {(missionnamespace getvariable ["bis_fnc_moduleRemoteControl_unit",objnull]) };	} else { curatorCamera };
+_nearObj = if (isNull curatorCamera) then {ACE_player} else {curatorCamera};
 
 if (GVAR(ENABLE_INDIRECT)) then {
 	{
@@ -52,15 +52,15 @@ if (_cursor == _cursor && isTouchingGround _cursor) then {
 		};
 		_color = +GVAR(TAG_DISPLAY_COLOR);
 
-		_nameOfUnit = name _cursor; //[_cursor] call FUNC(getName); // TODO Implement a getName function
-		// TODO implement module checking
-		/*if (ACE_NameTags_SYS_MEDICAL_SYSTEM_ENABLED_TAGS) then {
+		_nameOfUnit = [_cursor] call EFUNC(common,getName);
+
+		if (missionnamespace getvariable [QEGVAR(medical,isEnabled), false]) then {
 			_status = [_cursor] call FUNC(getTriageStatus_CMS);
 			if ((_status select 1) >0) then {
 				_nameOfUnit = _nameOfUnit  + " ["+ (_status select 0) + "]";
-				_color = _status select 2;
 			};
-		};*/
+		};
+
 		_iconDrawn = QUOTE(PATHTOF(data\empty.paa));
 		if (_unit getvariable [QGVAR(isSpeaking),false] && GVAR(SHOW_SOUNDWAVES)) then {
 			_iconDrawn = (GVAR(SOUNDWAVE_ICONS) select ((round(random (count GVAR(SOUNDWAVE_ICONS) - 1)))));

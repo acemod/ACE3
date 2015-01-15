@@ -36,5 +36,5 @@ player setUnitRecoilCoefficient DEPLOYED_RECOIL;
 		if ((_canDeployBipod select 1) vectorDistance _pivotPosition > 0.30) exitWith {};
 		sleep 0.1;
 	};
-	call cse_fnc_undeployWeapon_WR;
+	call FUNC(undeployWeapon);
 };

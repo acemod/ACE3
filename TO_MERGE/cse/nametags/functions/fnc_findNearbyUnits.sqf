@@ -18,9 +18,9 @@ if (alive player) then {
 		if (_x != _this && (vehicle _x == _x) && isTouchingGround _X) then {
 			if (lineIntersects [eyePos _this, eyePos _x, _x, _this]) exitwith{};
 			if ((side _x) call FUNC(allowSide) && !(_x == cursortarget)) then {
-				_nameOfUnit = name _x;
-				if (_x getvariable ["ACE_isDead",false]) then { // TODO, how do we check for dead units?
-					_nameOfUnit = _unit getvariable ["ACE_name","Unknown"]; // TODO is there are function to get the name of a unit?
+				_nameOfUnit = [_x] call EFUNC(common,getName);
+				if (_x getvariable ["ACE_isDead",false]) then {
+					_nameOfUnit = _unit getvariable ["ACE_name", _nameOfUnit];
 				};
 				_pos = visiblePositionASL _x;
 
@@ -45,13 +45,12 @@ if (alive player) then {
 				_isTalking = (_x getvariable [QGVAR(isSpeaking),false]);
 
 				// TODO implement module checking
-				/*if (ACE_NameTags_SYS_MEDICAL_SYSTEM_ENABLED_TAGS) then {
+				if (missionnamespace getvariable [QEGVAR(medical,isEnabled), false]) then {
 					_status = [_x] call FUNC(getTriageStatus_CMS;
 					if ((_status select 1) >0) then {
 						_nameOfUnit = _nameOfUnit  + " ["+ (_status select 0) + "]";
-						_color = _status select 2;
 					};
-				};*/
+				};
 				if (GVAR(DISPLAY_RANK)) then {
 					_nameOfUnit = (rank _x) + " " + _nameOfUnit;
 				};
