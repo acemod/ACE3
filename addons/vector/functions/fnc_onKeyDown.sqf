@@ -31,6 +31,10 @@ switch (_this select 0) do {
         GVAR(keyDownTimeAzimuth) = diag_tickTime;
 
         if (diag_tickTime > GVAR(keyDownTimeDistance) + 0.5) then {
+            if (GETVARD(isKeyDownDistance,false)) exitWith {
+                hint "P1 relative distance mode";
+            };
+
             ["distance"] call FUNC(clearDisplay);
             "azimuth" call _fnc_setPFH;
         } else {
@@ -52,6 +56,10 @@ switch (_this select 0) do {
         GVAR(keyDownTimeDistance) = diag_tickTime;
 
         if (diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.5) then {
+            if (GETVARD(isKeyDownAzimuth,false)) exitWith {
+                hint "P1 relative azimuth + non-slope distance mode";
+            };
+
             ["azimuth"] call FUNC(clearDisplay);
             "distance" call _fnc_setPFH;
         } else {
