@@ -10,9 +10,9 @@
 
  #include "script_component.hpp"
 
-_cseBipod = getNumber(configFile >> "CfgWeapons" >> primaryWeapon player >> "cse_bipod") == 1;
+_isBipod = getNumber(configFile >> "CfgWeapons" >> primaryWeapon player >> "ACE_bipod") == 1;
 _weaponModeBipod = ["bipod", currentWeaponMode player, false] call BIS_fnc_inString || ["bp", currentWeaponMode player, false] call BIS_fnc_inString;
 
 // TODO: Also check for asdg and kao bipods
 
-_cseBipod || _weaponModeBipod
+_isBipod || _weaponModeBipod

@@ -24,3 +24,4 @@ class CfgAddons {
 #include "CfgSounds.hpp"
 #include "CfgMovesBasic.hpp"
 #include "CfgMovesMaleSdr.hpp"
+#include "CFgWeapons.hpp"
