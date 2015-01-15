@@ -22,7 +22,7 @@ closeDialog 0;
 _magazine = _this select 0;
 _trigger = _this select 1;
 _config = ConfigFile >> "CfgACE_Triggers" >> _trigger;
-call EFUNC(Interaction,hideMenu);
+call EFUNC(interaction,hideMenu);
 
 // If the onSetup function returns true, it is handled elsewhere
 if (isText(_config >> "onSetup") && {[_magazine] call compile getText (_config >> "onSetup")}) exitWith {};

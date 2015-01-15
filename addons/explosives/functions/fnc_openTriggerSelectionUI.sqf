@@ -23,7 +23,7 @@ _detonators = [ACE_player] call FUNC(getDetonators);
 _triggerTypes = [_magazine] call FUNC(triggerType);
 _magTriggers = ConfigFile >> "CfgMagazines" >> _magazine >> "ACE_Triggers";
 _actions = [localize "STR_ACE_Explosives_TriggerMenu", localize "STR_ACE_Explosives_SelectTrigger"]
-	call EFUNC(Interaction,prepareSelectMenu);
+	call EFUNC(interaction,prepareSelectMenu);
 _count = 0;
 {
 	_required = getArray (_x >> "requires");
@@ -39,7 +39,7 @@ _count = 0;
 			if(isText(_magTriggers >> configName _x >> "displayName"))then{getText(_magTriggers >> configName _x >> "displayName")}else{getText(_x >> "displayName")},
 			if(isText(_magTriggers >> configName _x >> "picture"))then{getText(_magTriggers >> configName _x >> "picture")}else{getText(_x >> "picture")},
 			[configName _x, _magazine]
-		] call EFUNC(Interaction,addSelectableItem);
+		] call EFUNC(interaction,addSelectableItem);
 		_count = _count + 1;
 	};
 } count _triggerTypes;
@@ -55,5 +55,5 @@ if (_count == 0) then {
 			[_this select 1, _this select 0] call FUNC(selectTrigger);
 		},
 		{[ACE_player] call FUNC(openPlaceUI);}
-	] call EFUNC(Interaction,openSelectMenu);
+	] call EFUNC(interaction,openSelectMenu);
 };
