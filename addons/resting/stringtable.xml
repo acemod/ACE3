@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="AGM">
+<Project name="ACE">
   <Package name="Resting">
 
-    <Key ID="STR_AGM_Resting_RestWeapon">
+    <Key ID="STR_ACE_Resting_RestWeapon">
       <English>Rest Weapon</English>
       <German>Waffe auflegen</German>
       <Spanish>Apoyar el arma</Spanish>
@@ -15,7 +15,7 @@
       <Italian>Appoggia l'arma</Italian>
     </Key>
 
-    <Key ID="STR_AGM_Resting_BipodDeployed">
+    <Key ID="STR_ACE_Resting_BipodDeployed">
       <English>Bipod deployed</English>
       <German>Zweibein ausgeklappt</German>
       <Spanish>Bípode desplegado</Spanish>
@@ -27,7 +27,7 @@
       <Portuguese>Bipé apoiado</Portuguese>
       <Italian>Bipiede appoggiato</Italian>
     </Key>
-    <Key ID="STR_AGM_Resting_WeaponRested">
+    <Key ID="STR_ACE_Resting_WeaponRested">
       <English>Weapon rested</English>
       <German>Waffe aufgelegt</German>
       <Spanish>Arma apoyada</Spanish>
@@ -40,7 +40,7 @@
       <Italian>Arma appoggiata</Italian>
     </Key>
 
-    <Key ID="STR_AGM_Resting_BipodUndeployed">
+    <Key ID="STR_ACE_Resting_BipodUndeployed">
       <English>Bipod undeployed</English>
       <German>Zweibein eingeklappt</German>
       <Spanish>Bípode plegado</Spanish>
@@ -52,7 +52,7 @@
       <Portuguese>Bipé recolhido</Portuguese>
       <Italian>Bipiede richiuso</Italian>
     </Key>
-    <Key ID="STR_AGM_Resting_WeaponLifted">
+    <Key ID="STR_ACE_Resting_WeaponLifted">
       <English>Weapon lifted</English>
       <German>Waffe gehoben</German>
       <Spanish>Arma levantada</Spanish>
