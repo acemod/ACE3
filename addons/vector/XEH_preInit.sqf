@@ -25,6 +25,7 @@ PREP(showAzimuth);
 PREP(showCenter);
 PREP(showDistance);
 
+GVAR(holdKeyHandler) = -1;
 GVAR(isKeyDownAzimuth) = false;
 GVAR(isKeyDownDistance) = false;
 GVAR(keyDownTimeAzimuth) = -1;
