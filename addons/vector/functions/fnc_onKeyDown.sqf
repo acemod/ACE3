@@ -46,7 +46,7 @@ switch (_this select 0) do {
         GVAR(isKeyDownDistance) = true;
 
         if (diag_tickTime < GVAR(keyDownTimeDistance) + 0.5) exitWith {
-            //"azimuth+inclination" call _fnc_setPFH;
+            "height+distance" call _fnc_setPFH;
         };
 
         GVAR(keyDownTimeDistance) = diag_tickTime;
