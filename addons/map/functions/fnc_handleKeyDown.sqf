@@ -14,6 +14,8 @@
  * Boolean, true if event was handled
  */
 
+#include "script_component.hpp"
+
 private ["_dir", "_params", "_control", "_button", "_screenPos", "_shiftKey", "_ctrlKey", "_handled", "_pos"];
 
 _display  = _this select 0;
@@ -28,15 +30,15 @@ _handled   = false;
 
 // If pressed Esc while drawing
 if (_code == DIK_ESCAPE) exitWith {
-  if (GVAR(drawing)) then {
-    call AGM_Map_fnc_cancelDrawing;
+  if (GVAR(drawing_isDrawing)) then {
+    call FUNC(cancelDrawing);
     _handled = true;
   };
 };
 
 if (_code == DIK_DELETE) exitWith {
-  if (GVAR(drawing)) then {
-    call AGM_Map_fnc_cancelDrawing;
+  if (GVAR(drawing_isDrawing)) then {
+     call FUNC(cancelDrawing);
     _handled = true;
   } else {
 
@@ -57,16 +59,16 @@ if (_code == DIK_DELETE) exitWith {
       _lambdaTrasAbs = vectorMagnitude (_relPos vectorDiff (_diffVector vectorMultiply _lambdaLong));
       if (_lambdaLong >= 0 && _lambdaLong <= _magDiffVector && _lambdaTrasAbs <= 5) exitWith {
         // Delete the line marker
-        if (GVAR(syncMarkers)) then {
-          [[_x select 0], "AGM_Map_fnc_removeLineMarker", 2] call AGM_Core_fnc_execRemoteFnc;
+        if (GVAR(drawing_syncMarkers)) then {
+          [[_x select 0], QFUNC(removeLineMarker), 2] call EFUNC(common,execRemoteFnc);
         } else {
           deleteMarkerLocal (_x select 0);
-          GVAR(lineMarkers) = GVAR(lineMarkers) - [_x];
+          GVAR(drawing_lineMarkers) = GVAR(drawing_lineMarkers) - [_x];
         };
         _handled = true;
 
       };
-    } forEach GVAR(lineMarkers);
+    } forEach GVAR(drawing_lineMarkers);
   };
 };
 

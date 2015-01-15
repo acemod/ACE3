@@ -13,6 +13,8 @@
  * Return
  */
 
+#include "script_component.hpp"
+
  _name     = _this select 0;
  _startPos = _this select 1;
  _difPos   = (_this select 2) vectorDiff _startPos ;
@@ -20,7 +22,7 @@
  
 _name setMarkerShapeLocal "RECTANGLE";
 _name setMarkerAlphaLocal 1;
-_name setMarkerColorLocal AGM_Map_drawColor;
+_name setMarkerColorLocal GVAR(drawing_drawColor);
 _name setMarkerPosLocal (_startPos vectorAdd (_difPos vectorMultiply 0.5));
 _mag = vectorMagnitude _difPos;
 if (_mag > 0) then {

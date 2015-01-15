@@ -13,6 +13,8 @@
  * Return
  */
 
+#include "script_component.hpp"
+
  _name     = _this select 0;
  _startPos = _this select 1;
  _difPos   = (_this select 2) vectorDiff _startPos ;
@@ -32,9 +34,9 @@ if (_mag > 0) then {
   _name setMarkerDirLocal 0;
 };
 
-GVAR(lineMarkers) pushBack (+_this);
+GVAR(drawing_lineMarkers) pushBack (+_this);
 
-if (isServer && GVAR(syncMarkers)) then {
-  GVAR(serverLineMarkers) pushBack (+_this);
-  publicVariable QGVAR(serverLineMarkers);
+if (isServer && GVAR(drawing_syncMarkers)) then {
+  GVAR(drawing_serverLineMarkers) pushBack (+_this);
+  publicVariable QGVAR(drawing_serverLineMarkers);
 };

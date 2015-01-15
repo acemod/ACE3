@@ -10,4 +10,6 @@
  * Return
  */
 
-[GVAR(lineMarkers), "AGM_Map_fnc_copyMapMarkers", _this] call AGM_Core_fnc_execRemoteFnc;
+#include "script_component.hpp"
+
+[GVAR(drawing_lineMarkers), QFUNC(copyMapMarkers), _this] call EFUNC(common,execRemoteFnc);

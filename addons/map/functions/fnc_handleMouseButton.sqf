@@ -11,6 +11,8 @@
  * Boolean, true if event was handled
  */
 
+#include "script_component.hpp"
+
 private ["_dir", "_params", "_control", "_button", "_screenPos", "_shiftKey", "_ctrlKey", "_handled", "_pos"];
 
 _dir       = _this select 0;
@@ -27,9 +29,9 @@ _handled   = false;
 if (_button != 0) exitWith {};
 
 // If releasing
-if (_dir != 1 && (GVAR(mapToolDragging) or GVAR(mapToolRotating))) exitWith {
-  GVAR(mapToolDragging) = false;
-  GVAR(mapToolRotating) = false;
+if (_dir != 1 && (GVAR(mapTool_isDragging) or GVAR(mapTool_isRotating))) exitWith {
+  GVAR(mapTool_isDragging) = false;
+  GVAR(mapTool_isRotating) = false;
   _handled = true;
   _handled
 };
@@ -43,53 +45,53 @@ if (_dir == 1) exitWith {
   _pos  = _control ctrlMapScreenToWorld _screenPos;
   _pos set [count _pos, 0];
 
-  if (GVAR(drawing)) exitWith {
+  if (GVAR(drawing_isDrawing)) exitWith {
     // Already drawing -> Add tempLineMarker to permanent list
-    if (GVAR(syncMarkers)) then {
-      deleteMarkerLocal (GVAR(tempLineMarker) select 0);
-      [GVAR(tempLineMarker), "FUNC(addLineMarker)", 2] call AGM_Core_fnc_execRemoteFnc;
+    if (GVAR(drawing_syncMarkers)) then {
+      deleteMarkerLocal (GVAR(drawing_tempLineMarker) select 0);
+      [GVAR(drawing_tempLineMarker), "FUNC(addLineMarker)", 2] call EFUNC(common,execRemoteFnc);
       // Log who drew on the briefing screen
-      (text format ["[AGM] Server: Player %1 drew on the briefing screen", name player]) call AGM_Core_fnc_serverLog;
+      (text format ["[ACE] Server: Player %1 drew on the briefing screen", name player]) call EFUNC(common,serverLog);
     } else {
-      GVAR(tempLineMarker) call AGM_Map_fnc_updateLineMarker;
-      GVAR(lineMarkers) pushBack (+GVAR(tempLineMarker));
+      GVAR(drawing_tempLineMarker) call FUNC(updateLineMarker);
+      GVAR(drawing_lineMarkers) pushBack (+GVAR(drawing_tempLineMarker));
     };
-    GVAR(tempLineMarker) = [];
-    GVAR(drawing) = false;
+    GVAR(drawing_tempLineMarker) = [];
+    GVAR(drawing_isDrawing) = false;
     _handled = true;
   };
 
   if (_altKey) exitWith {
     // Start drawing
-    GVAR(drawing) = true;
+    GVAR(drawing_isDrawing) = true;
     // Create tempLineMarker
     _gui = format ["%1%2%3%4", random (100), random (100), random (100), random (100)];
-    GVAR(tempLineMarker) = [_gui, + _pos, + _pos, AGM_Map_drawColor];
+    GVAR(drawing_tempLineMarker) = [_gui, + _pos, + _pos, GVAR(drawing_drawColor)];
     _marker = createMarkerLocal [_gui, [0,0]];
-    GVAR(tempLineMarker) call AGM_Map_fnc_updateLineMarker;
+    GVAR(drawing_tempLineMarker) call FUNC(updateLineMarker);
     _handled = true;
   };
 
-  GVAR(mapToolDragging) = false;
-  GVAR(mapToolRotating) = false;
+  GVAR(mapTool_isDragging) = false;
+  GVAR(mapTool_isRotating) = false;
 
   // If no map tool marker then exit
-  if (isNil QGVAR(mapToolFixed)) exitWith {_handled = false;};
+  if (isNil QGVAR(mapTool_markerRotatingFixed)) exitWith {_handled = false;};
 
   // Check if clicking the maptool
-  if (_pos call AGM_Map_fnc_isInsideMapTool) exitWith {
+  if (_pos call FUNC(isInsideMapTool)) exitWith {
     // Store data for dragging
-    AGM_Map_startPos = + AGM_Map_pos;
-    AGM_Map_startDragPos = + _pos;
+    GVAR(mapTool_startPos) = + GVAR(mapTool_pos);
+    GVAR(mapTool_startDragPos) = + _pos;
     if (_ctrlKey) then {
       // Store data for rotating
-      AGM_Map_startAngle = + AGM_Map_angle;
-      AGM_Map_startDragAngle = (180 + ((AGM_Map_startDragPos select 0) - (AGM_Map_startPos select 0)) atan2 ((AGM_Map_startDragPos select 1) - (AGM_Map_startPos select 1)) mod 360);
+      GVAR(mapTool_startAngle) = + GVAR(mapTool_angle);
+      GVAR(mapTool_startDragAngle) = (180 + ((GVAR(mapTool_startDragPos) select 0) - (GVAR(mapTool_startPos) select 0)) atan2 ((GVAR(mapTool_startDragPos) select 1) - (GVAR(mapTool_startPos) select 1)) mod 360);
       // Start rotating
-      GVAR(mapToolRotating) = true;
+      GVAR(mapTool_isRotating) = true;
     } else {
       // Start dragging
-      GVAR(mapToolDragging) = true;
+      GVAR(mapTool_isDragging) = true;
     };
     _handled = true;
   };

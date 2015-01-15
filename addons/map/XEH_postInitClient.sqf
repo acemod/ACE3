@@ -1,5 +1,7 @@
 // by CAA-Picard
 
+#include "script_component.hpp"
+
 if (!hasInterface) exitWith{};
 
 [] spawn {
@@ -7,20 +9,20 @@ if (!hasInterface) exitWith{};
     sleep 5;
     _markers = [];
 
-    while {AGM_Map_BFT_Enabled and {(!isNil "AGM_player") and {alive AGM_player}}} do {
+    while {GVAR(BFT_Enabled) and {(!isNil "ACE_player") and {alive ACE_player}}} do {
 
       _groups = [];
-      _playerSide = call AGM_Core_fnc_playerSide;
+      _playerSide = call EFUNC(common,playerSide);
 
-      if (AGM_Map_BFT_HideAiGroups) then {
-        _groups = [allGroups, {side _this == _playerSide}] call AGM_Core_fnc_filter;
+      if (GVAR(BFT_HideAiGroups)) then {
+        _groups = [allGroups, {side _this == _playerSide}] call EFUNC(common,filter);
       } else {
         _groups = [allGroups, {
           _anyPlayers = {
-            [_x] call AGM_Core_fnc_isPlayer
+            [_x] call EFUNC(common,isPlayer);
           } count units _this;
           (side _this == _playerSide) && _anyPlayers > 0
-        }] call AGM_Core_fnc_filter;
+        }] call EFUNC(common,filter);
       };
 
       {
@@ -31,11 +33,11 @@ if (!hasInterface) exitWith{};
       for "_i" from 0 to (count _groups - 1) do {
         _group1 = _groups select _i;
 
-        _markerType = [_group1] call AGM_Core_fnc_getMarkerType;
+        _markerType = [_group1] call EFUNC(common,getMarkerType);
 
         _colour = format ["Color%1", side _group1];
 
-        _marker = createMarkerLocal [format ["AGM_BFT_%1", _i], [(getPos leader _group1) select 0, (getPos leader _group1) select 1]];
+        _marker = createMarkerLocal [format ["ACE_BFT_%1", _i], [(getPos leader _group1) select 0, (getPos leader _group1) select 1]];
         _marker setMarkerTypeLocal _markerType;
         _marker setMarkerColorLocal _colour;
         _marker setMarkerTextLocal (groupID _group1);
@@ -43,7 +45,7 @@ if (!hasInterface) exitWith{};
         _markers pushBack _marker;
       };
 
-      sleep AGM_Map_BFT_Interval;
+      sleep GVAR(BFT_Interval);
     };
 
     // Delete markers as soon as the player dies
@@ -55,27 +57,28 @@ if (!hasInterface) exitWith{};
 
 [] spawn {
   // Init variables
-  GVAR(mapToolsShown) = 0;
-  AGM_Map_pos = [0,0];
-  AGM_Map_angle = 0;
-  GVAR(mapToolDragging) = false;
-  GVAR(mapToolRotating) = false;
-  AGM_Map_mapGpsShow = true;
-  GVAR(drawing) = false;
-  GVAR(tempLineMarker) = [];
-  GVAR(lineMarkers) = [];
+  GVAR(mapTool_Shown) = 0;
+  GVAR(mapTool_pos) = [0,0];
+  GVAR(mapTool_angle) = 0;
+  GVAR(mapTool_isDragging) = false;
+  GVAR(mapTool_isRotating) = false;
+  
+  GVAR(mapGpsShow) = true;
+  
+  GVAR(drawing_isDrawing) = false;
+  GVAR(drawing_tempLineMarker) = [];
+  GVAR(drawing_lineMarkers) = [];
+  GVAR(drawing_drawColor) = "ColorBlack";
+  GVAR(drawing_controls) = [36732, 36733, 36734, 36735, 36736, 36737];
 
-  AGM_Map_drawColor = "ColorBlack";
-  GVAR(drawing)Controls = [36732, 36733, 36734, 36735, 36736, 36737];
-
-  AGM_Map_fnc_installEvents = {
+  _fnc_installMapEvents = {
     _d = _this;
     diag_log format ["Installing EH in display %1", _d];
-    ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["MouseMoving", {_this call AGM_Map_fnc_handleMouseMove;}];
-    ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["MouseButtonDown", {[1, _this] call AGM_Map_fnc_handleMouseButton;}];
-    ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["MouseButtonUp", {[0, _this] call AGM_Map_fnc_handleMouseButton}];
-    ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["Draw", {[] call AGM_Map_fnc_updateMapToolMarkers;}];
-    (finddisplay _d) displayAddEventHandler ["KeyDown", {_this call AGM_Map_fnc_handleKeyDown;}];
+    ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["MouseMoving", {_this call FUNC(handleMouseMove);}];
+    ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["MouseButtonDown", {[1, _this] call FUNC(handleMouseButton);}];
+    ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["MouseButtonUp", {[0, _this] call FUNC(handleMouseButton)}];
+    ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["Draw", {[] call FUNC(updateMapToolMarkers);}];
+    (finddisplay _d) displayAddEventHandler ["KeyDown", {_this call FUNC(handleKeyDown);}];
   };
 
   // Wait until the briefing map is detected
@@ -86,51 +89,51 @@ if (!hasInterface) exitWith{};
 
   if (isNull findDisplay 12) then {
     // Install event handlers on the map control of the briefing screen (control = 51)
-    GVAR(syncMarkers) = true;
+    GVAR(drawing_syncMarkers) = true;
     if (!isNull findDisplay 52) then {
-      52 call AGM_Map_fnc_installEvents;
+      52 call _fnc_installMapEvents;
     } else {
       if (!isNull findDisplay 53) then {
-        53 call AGM_Map_fnc_installEvents;
+        53 call _fnc_installMapEvents;
       } else {
-        37 call AGM_Map_fnc_installEvents;
+        37 call _fnc_installMapEvents;
       };
     };
   } else {
     // Briefing screen was skipped; the player is JIP, create the markers defined during the briefing
-    GVAR(syncMarkers) = false;
+    GVAR(drawing_syncMarkers) = false;
     {
       _x call FUNC(addLineMarker);
-    } forEach GVAR(serverLineMarkers);
+    } forEach GVAR(drawing_serverLineMarkers);
   };
 
   // Wait until the main map display is detected (display = 12)
   waitUntil { !isNull findDisplay 12 };
   // Install event handlers on the map control and display (control = 51)
-  GVAR(syncMarkers) = false;
-  12 call AGM_Map_fnc_installEvents;
+  GVAR(drawing_syncMarkers) = false;
+  12 call _fnc_installMapEvents;
 
   // Update the size and rotation of map tools
-  [] call AGM_Map_fnc_updateMapToolMarkers;
+  [] call FUNC(updateMapToolMarkers);
 
   while {true} do {
     waitUntil {visibleMap};
 
     // Show and update map tools if required
-    [] call AGM_Map_fnc_updateMapToolMarkers;
+    [] call FUNC(updateMapToolMarkers);
     // Show GPS if required
-    [AGM_Map_mapGpsShow] call AGM_Map_fnc_openMapGps;
+    [GVAR(mapGpsShow)] call FUNC(openMapGps);
 
     // Update visibility of maptools and gps, handling inventory changes
     [] spawn {
       while {visibleMap} do {
         // Show/Hide draw buttons
         if ("ACE_MapTools" in items player) then {
-          { ((finddisplay 12) displayctrl _x) ctrlShow true; } forEach GVAR(drawing)Controls;
+          { ((finddisplay 12) displayctrl _x) ctrlShow true; } forEach GVAR(drawing_controls);
         } else {
-          { ((finddisplay 12) displayctrl _x) ctrlShow false; } forEach GVAR(drawing)Controls;
-          if (GVAR(drawing)) then {
-            call AGM_Map_fnc_cancelDrawing;
+          { ((finddisplay 12) displayctrl _x) ctrlShow false; } forEach GVAR(drawing_controls);
+          if (GVAR(drawing_isDrawing)) then {
+            call FUNC(cancelDrawing);
           };
         };
         sleep 1;
@@ -140,15 +143,15 @@ if (!hasInterface) exitWith{};
     waitUntil {!visibleMap};
 
     // Hide GPS
-    [false] call AGM_Map_fnc_openMapGps;
+    [false] call FUNC(openMapGps);
     // Hide Map tools
     deleteMarkerLocal MARKERNAME_MAPTOOL_FIXED;
     deleteMarkerLocal MARKERNAME_MAPTOOL_ROTATINGNORMAL;
     deleteMarkerLocal MARKERNAME_MAPTOOL_ROTATINGSMALL;
-    GVAR(mapToolFixed) = nil;
-    AGM_Map_mapToolRotatingNormal = nil;
-    AGM_Map_mapToolRotatingSmall = nil;
+    GVAR(mapTool_markerRotatingFixed) = nil;
+    GVAR(mapTool_markerRotatingNormal) = nil;
+    GVAR(mapTool_markerRotatingSmall) = nil;
     // Cancel drawing
-    call AGM_Map_fnc_cancelDrawing;
+    call FUNC(cancelDrawing);
   };
 };

@@ -19,7 +19,7 @@ class RscTitles {
     duration = 3600;
     fadein = 0;
     fadeout = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QGVAR(mapGpsDisplay), _this select 0)];);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QGVAR(ui_mapGpsDisplay), _this select 0)];);
     //onUnLoad = "_this call onRscLoad";
     class controls {
       class back:RscPicture {

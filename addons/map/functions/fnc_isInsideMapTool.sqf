@@ -11,6 +11,8 @@
  * Boolean
  */
 
+#include "script_component.hpp"
+
 #define TEXTURE_WIDTH_IN_M           6205
 #define DIST_BOTTOM_TO_CENTER_PERC  -0.33
 #define DIST_TOP_TO_CENTER_PERC      0.65
@@ -20,8 +22,8 @@ if (GVAR(mapToolsShown) == 0) exitWith {false};
 _textureWidth = [TEXTURE_WIDTH_IN_M, TEXTURE_WIDTH_IN_M / 2] select (GVAR(mapToolsShown) - 1);
 
 _pos = [_this select 0, _this select 1, 0];
-_relPos = _pos vectorDiff [AGM_Map_pos select 0, AGM_Map_pos select 1, 0];
-_dirVector = [sin(AGM_Map_angle), cos(AGM_Map_angle), 0];
+_relPos = _pos vectorDiff [GVAR(mapTool_pos) select 0, GVAR(mapTool_pos) select 1, 0];
+_dirVector = [sin(GVAR(mapTool_angle)), cos(GVAR(mapTool_angle)), 0];
 
 // Projection of the relative position over the longitudinal axis of the map tool
 _lambdaLong = _dirVector vectorDotProduct _relPos;

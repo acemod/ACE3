@@ -10,20 +10,22 @@
  * Return
  */
 
+#include "script_component.hpp"
+
  _name     = _this select 0;
 
  deleteMarkerLocal _name;
 {
   if ((_x select 0) == _name) exitWith {
-    GVAR(lineMarkers) = GVAR(lineMarkers) - [_x];
+    GVAR(drawing_lineMarkers) = GVAR(drawing_lineMarkers) - [_x];
   };
-} forEach GVAR(lineMarkers);
+} forEach GVAR(drawing_lineMarkers);
 
-if (isServer && GVAR(syncMarkers)) then {
+if (isServer && GVAR(drawing_syncMarkers)) then {
   {
     if ((_x select 0) == _name) exitWith {
-      GVAR(serverLineMarkers) = GVAR(serverLineMarkers) - [_x];
-      publicVariable "GVAR(serverLineMarkers)";
+      GVAR(drawing_serverLineMarkers) = GVAR(drawing_serverLineMarkers) - [_x];
+      publicVariable QGVAR(drawing_serverLineMarkers);
     };
-  } forEach GVAR(serverLineMarkers);
+  } forEach GVAR(drawing_serverLineMarkers);
 };

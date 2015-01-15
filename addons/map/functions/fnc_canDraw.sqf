@@ -1,4 +1,6 @@
 // by CAA-Picard
 
-(missionNameSpace getVariable [QGVAR(syncMarkers), true] && {GVAR(EveryoneCanDrawOnBriefing)}) ||
+#include "script_component.hpp"
+
+(missionNameSpace getVariable [QGVAR(drawing_syncMarkers), true] && {GVAR(EveryoneCanDrawOnBriefing)}) ||
 {(!isNull player) && {"ACE_MapTools" in items player}}
