@@ -7,31 +7,32 @@
  * @Return: nil
  * @PublicAPI: false
  */
- 
- 
+
+ #include "script_component.hpp"
+
 #define ALLOWED_ANIMATION_STATES ["amovpercmstpsraswrfldnon","aadjpercmstpsraswrfldup","aadjpercmstpsraswrflddown","aadjpknlmstpsraswrfldup","amovpknlmstpsraswrfldnon","aadjpknlmstpsraswrflddown","aadjppnemstpsraswrfldup","amovppnemstpsraswrfldnon","aadjpknlmstpsraswrfldright","aadjpknlmstpsraswrfldleft","aadjpercmstpsraswrfldright","aadjpercmstpsraswrfldleft","aadjppnemstpsraswrfldright","aadjppnemstpsraswrfldleft","aadjppnemstpsraswrflddown"]
 
 private ["_playerAnimationState", "_canDeployBipod"];
 
 if (weaponLowered player) exitWith {};
 if (!([player] call cse_fnc_canInteract)) exitWith {};
-if (player getVariable ["cse_isWeaponDeployed_WR", false]) exitWith {};
+if (player getVariable [QGVAR(isWeaponDeployed), false]) exitWith {};
 
 _playerAnimationState = (([animationState player, "_"] call BIS_fnc_splitString) select 0);
 if (!(_playerAnimationState in ALLOWED_ANIMATION_STATES)) exitWith {};
 
 // not deployed -> try to deploy now
-_canDeployBipod = call cse_fnc_canDeployBipod_WR;
+_canDeployBipod = call FUNC(canDeployBipod);
 if (_canDeployBipod select 0) then {
-	if (player getVariable ["cse_isWeaponRested_WR", false]) then {
-		call cse_fnc_unrestWeapon_WR;
+	if (player getVariable [QGVAR(isWeaponRested), false]) then {
+		call FUNC(unrestWeapon);
 	};
-	(_canDeployBipod select 1) call cse_fnc_deployWeapon_WR;
+	(_canDeployBipod select 1) call FUNC(deployWeapon);
 };
 
-if (!(player getVariable ["cse_isWeaponRested_WR", false]) && !(player getVariable ["cse_isWeaponDeployed_WR", false])) then {
+if (!(player getVariable [QGVAR(isWeaponRested), false]) && !(player getVariable [QGVAR(isWeaponDeployed), false])) then {
 	// not deployed and not rested -> try to rest now
-	if (call cse_fnc_canRestWeapon_WR) then {
-		call cse_fnc_restWeapon_WR;
+	if (call FUNC(canRestWeapon)) then {
+		call FUNC(restWeapon);
 	};
 };

@@ -7,8 +7,9 @@
  * @Return: BOOL weapon has bipod.
  * @PublicAPI: true
  */
- 
- 
+
+ #include "script_component.hpp"
+
 _cseBipod = getNumber(configFile >> "CfgWeapons" >> primaryWeapon player >> "cse_bipod") == 1;
 _weaponModeBipod = ["bipod", currentWeaponMode player, false] call BIS_fnc_inString || ["bp", currentWeaponMode player, false] call BIS_fnc_inString;
 

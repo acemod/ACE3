@@ -8,6 +8,7 @@
  * @PublicAPI: false
  */
 
+#include "script_component.hpp"
 
-player setVariable ["cse_isWeaponRested_WR", false, false];
-player setVariable ["cse_isWeaponDeployed_WR", false, false];
+player setVariable [QGVAR(isWeaponRested), false, false];
+player setVariable [QGVAR(isWeaponDeployed), false, false];
