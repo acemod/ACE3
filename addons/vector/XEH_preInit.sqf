@@ -3,8 +3,6 @@
 PREP(abort);
 PREP(config);
 PREP(convertFOS);
-PREP(modeDistanceAzimuth);
-PREP(modeDistanceHeight);
 PREP(modeFallOfShort);
 PREP(modeRelativeAzimuthDistance);
 PREP(modeRelativeDistance);
@@ -18,12 +16,14 @@ PREP(convertToTexturesDegree);
 PREP(convertToTexturesDistance);
 PREP(getDirection);
 PREP(getDistance);
+PREP(getHeightDistance);
 PREP(onKeyDown);
 PREP(onKeyHold);
 PREP(onKeyUp);
 PREP(showAzimuth);
 PREP(showAzimuthInclination);
 PREP(showCenter);
+PREP(showHeightDistance);
 PREP(showDistance);
 
 GVAR(holdKeyHandler) = -1;

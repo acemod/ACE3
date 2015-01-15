@@ -83,6 +83,29 @@ switch (_this select 0) do {
         };
 
     };
+
+    case ("height+distance"): {
+
+        private "_isReady";
+        _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
+
+        [_isReady] call FUNC(showCenter);
+
+        if (!GVAR(isKeyDownDistance)) then {
+            if (_isReady) then {
+                call FUNC(showHeightDistance);
+                [false] call FUNC(showCenter);
+            };
+
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+            if (GVAR(holdKeyHandler) > -1) then {
+                GVAR(holdKeyHandler) = -1;
+            };
+        };
+
+    };
+
 };
 
 systemChat str (_this select 0);//
