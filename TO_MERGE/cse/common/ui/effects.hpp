@@ -6,7 +6,7 @@ class RscTitles{
 		onLoad = QUOTE(uiNamespace setVariable [QGVAR(ScreenEffectsBlack), _this select 0];);
 
 		class controlsBackground {
-			class blackScreen: ace_gui_backgroundBase {
+			class blackScreen: ACE_gui_backgroundBase {
 				text = QUOTE(PATHTOF(data\black_out.paa));
 				colorText[] = {0.0, 0.0, 0.0, 0.0};
 				idc = 11112;
@@ -24,7 +24,7 @@ class RscTitles{
 		onLoad = QUOTE(uiNamespace setVariable [QGVAR(ScreenEffectsBleeding), _this select 0];);
 
 		class controlsBackground {
-			class bleedingScreen: ace_gui_backgroundBase {
+			class bleedingScreen: ACE_gui_backgroundBase {
 				text = QUOTE(PATHTOF(data\bleeding.paa));
 				colorText[] = {0.9, 0.2, 0.2, 0.6};
 				idc = 11113;
@@ -42,7 +42,7 @@ class RscTitles{
 		onLoad = QUOTE(uiNamespace setVariable [QGVAR(ScreenEffectsHit), _this select 0];);
 
 		class controlsBackground {
-			class effectHit: ace_gui_backgroundBase {
+			class effectHit: ACE_gui_backgroundBase {
 				text = QUOTE(PATHTOF(data\hit.paa));
 				colorText[] = {0.7, 0.2, 0.2, 0.4};
 				idc = 11113;
@@ -60,7 +60,7 @@ class RscTitles{
 		onLoad = QUOTE(uiNamespace setVariable [QGVAR(ScreenEffectsPain), _this select 0];);
 
 		class controlsBackground {
-			class painScreen: cse_gui_backgroundBase {
+			class painScreen: ACE_gui_backgroundBase {
 				text = QUOTE(PATHTOF(data\painScreen.paa));
 				colorText[] = {1, 1, 1, 0.5};
 				idc = 11115;

@@ -13,7 +13,7 @@
 private["_disable"];
 _disable = [_this, 0, false, [false]] call BIS_fnc_Param;
 if (!hasInterface) exitwith {};
-CSE_DISABLE_KEY_INPUT_F = _disable;
+GVAR(isDisabledKeyInput_F) = _disable;
 
 [format["Disable Key input: %1",_disable]] call FUNC(debug);
 if (_disable) then {

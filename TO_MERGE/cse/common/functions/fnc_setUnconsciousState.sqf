@@ -36,7 +36,7 @@ if (isPlayer _unit) then {
 	_unit setUnitPos "DOWN";
 	[_unit, true] call FUNC(disableAI_F);
 };
-[_unit, true, "QGVAR(cse_unconsciousState)", side group _unit] call FUNC(switchToGroupSide_f);
+[_unit, true, QGVAR(StateUnconscious), side group _unit] call FUNC(switchToGroupSide_f);
 
 _captiveSwitch = [_unit, true] call FUNC(setCaptiveSwitch);
 _unit setUnconscious true;
@@ -64,7 +64,7 @@ _unit setUnconscious true;
 		[_unit, false] call FUNC(setCaptiveSwitch);
 	};
 	_unit setUnconscious false;
-	[_unit, false, "QGVAR(cse_unconsciousState)", side group _unit] call FUNC(switchToGroupSide_f);
+	[_unit, false, QGVAR(StateUnconscious), side group _unit] call FUNC(switchToGroupSide_f);
 
 	if (isPlayer _unit) then {
 		[false] call FUNC(effectBlackOut);

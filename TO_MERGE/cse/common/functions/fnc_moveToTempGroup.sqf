@@ -16,12 +16,12 @@ if (_moveTo) then {
 	_previousGroup = group _unit;
 	_newGroup = createGroup (side _previousGroup);
 	[_unit] joinSilent _newGroup;
-	_unit setvariable ["cse_previous_group_f",_previousGroup];
+	_unit setvariable [QGVAR(previousGroup_F),_previousGroup];
 } else {
-	_previousGroup = _unit getvariable "cse_previous_group_f";
+	_previousGroup = _unit getvariable QGVAR(previousGroup_F);
 	if (!isnil "_previousGroup") then {
 		_currentGroup = group _unit;
-		_unit setvariable ["cse_previous_group_f",nil];
+		_unit setvariable [QGVAR(previousGroup_F),nil];
 		[_unit] joinSilent _previousGroup;
 		if (count units _currentGroup == 0) then {
 			deleteGroup _currentGroup;

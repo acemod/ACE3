@@ -14,7 +14,7 @@ private ["_arguments","_handle","_ehCfg","_eventHandlerCollection","_eventHandle
 _arguments = _this select 0;
 _handle = _this select 1;
 
-_eventHandlerName = ("cse_f_custom_results_eventhandler_" + _handle);
+_eventHandlerName = ("ace_f_custom_results_eventhandler_" + _handle);
 _eventHandlerCollection = missionNamespace getvariable _eventHandlerName;
 if (isnil "_eventHandlerCollection") then {
 	_eventHandlerCollection = [];

@@ -89,7 +89,6 @@ if (((GVAR(ENABLE_REVIVE_F) == 1 && isPlayer _unit) || (GVAR(ENABLE_REVIVE_F) ==
 	};
 } else {
 	[format["INSTANT KILL %1",_unit]] call FUNC(debug);
-	_unit setvariable ["cse_isUnconscious", true, true];
 	if (isPlayer _unit) then {
 		titleText ["You died..","PLAIN DOWN"];
 	};

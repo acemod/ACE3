@@ -4,7 +4,7 @@ class GVAR(empty_screen) {
 	onLoad = QUOTE(uiNamespace setVariable [QGVAR(empty_screen), _this select 0];);
 	onUnload = QUOTE(if (missionNamespace getvariable [QGVAR(DISABLE_USER_INPUT_SCREEN), false]) then { createDialog QGVAR(empty_screen);};);
 	class controlsBackground {
-		class background : ace_gui_backgroundBase {
+		class background : ACE_gui_backgroundBase {
 			idc = 1;
 			x = safezoneX;
 			y = safezoneY;

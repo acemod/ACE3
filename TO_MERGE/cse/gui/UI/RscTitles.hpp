@@ -16,7 +16,7 @@ class RscTitles {
     movingenable = 0;
     onLoad = QUOTE(uiNamespace setVariable [QGVAR(iconsDisplay), _this select 0];);
     class controlsBackground {
-      class icon_1: ace_gui_backgroundBase {
+      class icon_1: ACE_gui_backgroundBase {
         text = "";
         colorText[] = {0.0,1.0,0.0,0.4};
         idc = 10501;
@@ -55,7 +55,7 @@ class RscTitles {
     fadeout = 0;
     duration = 10e10;
     class Controls {
-      class background: ace_gui_backgroundBase {
+      class background: ACE_gui_backgroundBase {
         idc = -1;
         colorBackground[] = {0,0,0,1};
         colorText[] = {1, 1, 1, 1};
@@ -66,7 +66,7 @@ class RscTitles {
         text = "#(argb,8,8,3)color(0,0,0,0.4)";
       };
 
-      class Progress: ace_gui_RscProgress {
+      class Progress: ACE_gui_RscProgress {
         idc = 6;
         x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
         y = "29 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
@@ -87,7 +87,7 @@ class RscTitles {
     onLoad = QUOTE(uiNamespace setVariable [QGVAR(RSC_DISPLAY_MESSAGE), _this select 0];);
     fadein = 0;
     class controlsBackground {
-      class header: ace_gui_staticBase {
+      class header: ACE_gui_staticBase {
         idc = 1;
         type = CT_STATIC;
         x = "safezoneX + (safezoneW / 10)";
@@ -119,7 +119,7 @@ class RscTitles {
     onLoad = QUOTE(uiNamespace setVariable [QGVAR(RSC_DISPLAY_MESSAGE), _this select 0];);
     fadein = 0;
     class controlsBackground {
-      class header: ace_gui_staticBase {
+      class header: ACE_gui_staticBase {
         idc = 1;
         type = CT_STATIC;
         x = "safezoneX + (safezoneW / 10)";
@@ -159,7 +159,7 @@ class RscTitles {
       };
 
 
-      class icon: ace_gui_backgroundBase {
+      class icon: ACE_gui_backgroundBase {
         type = CT_STATIC;
         idc = 10;
         style = ST_PICTURE;

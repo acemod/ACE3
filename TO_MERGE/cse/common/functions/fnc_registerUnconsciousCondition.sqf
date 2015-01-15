@@ -9,14 +9,13 @@
  */
 
 
-if (isnil "CSE_UNCONSCIOUS_CONDITIONS_F") then {
-	CSE_UNCONSCIOUS_CONDITIONS_F = [];
+if (isnil QGVAR(unconsciousConditions_F)) then {
+	GVAR(unconsciousConditions_F) = [];
 };
 if (typeName _this == typeName []) then {
 	{
 		if (typeName _x == typeName {}) then {
-			CSE_UNCONSCIOUS_CONDITIONS_F pushback _x;
+			GVAR(unconsciousConditions_F) pushback _x;
 		};
 	}foreach _this;
-} else {
 };

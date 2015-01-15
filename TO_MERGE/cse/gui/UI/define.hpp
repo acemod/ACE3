@@ -82,7 +82,7 @@
 #define LB_MULTI          0x20
 #define FontCSE       "PuristaMedium"
 
-class ace_gui_backgroundBase {
+class ACE_gui_backgroundBase {
   type = CT_STATIC;
   idc = -1;
   style = ST_PICTURE;
@@ -92,7 +92,7 @@ class ace_gui_backgroundBase {
   text = "";
   sizeEx = 0.032;
 };
-class ace_gui_editBase
+class ACE_gui_editBase
 {
     access = 0;
     type = 2;
@@ -139,7 +139,7 @@ class ace_gui_editBase
 
 
 
-class ace_gui_buttonBase {
+class ACE_gui_buttonBase {
   idc = -1;
   type = 16;
   style = ST_LEFT;
@@ -208,7 +208,7 @@ class ace_gui_buttonBase {
   };
 };
 
-class ace_gui_RscProgress {
+class ACE_gui_RscProgress {
   type = 8;
   style = 0;
   colorFrame[] = {1,1,1,0.7};
@@ -221,7 +221,7 @@ class ace_gui_RscProgress {
 };
 
 
-class ace_gui_staticBase {
+class ACE_gui_staticBase {
   idc = -1;
   type = CT_STATIC;
   x = 0.0;
@@ -237,7 +237,7 @@ class ace_gui_staticBase {
 };
 
 class RscListBox;
-class ace_gui_listBoxBase : RscListBox{
+class ACE_gui_listBoxBase : RscListBox{
   type = CT_LISTBOX;
   style = ST_MULTI;
   font = FontCSE;
@@ -289,7 +289,7 @@ class ace_gui_listBoxBase : RscListBox{
 };
 
 
-class ace_gui_listNBox {
+class ACE_gui_listNBox {
   access = 0;
   type = CT_LISTNBOX;// 102;
   style =ST_MULTI;
@@ -355,7 +355,7 @@ class ace_gui_listNBox {
 
 
 class RscCombo;
-class ace_gui_comboBoxBase: RscCombo {
+class ACE_gui_comboBoxBase: RscCombo {
  idc = -1;
  type = 4;
  style = "0x10 + 0x200";
@@ -412,7 +412,7 @@ class ace_gui_comboBoxBase: RscCombo {
 
 
 
-class ace_gui_mapBase {
+class ACE_gui_mapBase {
  moveOnEdges = 1;
  x = "SafeZoneXAbs";
  y = "SafeZoneY + 1.5 *           (     (     ((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
