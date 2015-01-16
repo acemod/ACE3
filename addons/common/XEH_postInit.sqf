@@ -83,15 +83,15 @@ GVAR(OldZeusDisplayIsOpen) = !(isNull findDisplay 312);
 
     // "playerInventoryChanged" event
     _newPlayerInventory = ACE_player call FUNC(getAllGear);
-    if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) exitWith {
+    if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
         // Raise ACE event locally
         GVAR(OldPlayerInventory) = _newPlayerInventory;
         ["playerInventoryChanged", [ACE_player, _newPlayerInventory]] call FUNC(localEvent);
     };
 
     // "playerVisionModeChanged" event
-    _newVisionMode = currentVisionMode ACE_player;
-    if !(_newPlayerVisionMode isEqualTo GVAR(OldPlayerVisionMode)) exitWith {
+    _newPlayerVisionMode = currentVisionMode ACE_player;
+    if !(_newPlayerVisionMode isEqualTo GVAR(OldPlayerVisionMode)) then {
         // Raise ACE event locally
         GVAR(OldPlayerVisionMode) = _newPlayerVisionMode;
         ["playerVisionModeChanged", [ACE_player, _newPlayerVisionMode]] call FUNC(localEvent);
@@ -99,7 +99,7 @@ GVAR(OldZeusDisplayIsOpen) = !(isNull findDisplay 312);
 
     // "zeusDisplayChanged" event
     _newZeusDisplayIsOpen = !(isNull findDisplay 312);
-    if !(_newZeusDisplayIsOpen isEqualTo GVAR(OldZeusDisplayIsOpen)) exitWith {
+    if !(_newZeusDisplayIsOpen isEqualTo GVAR(OldZeusDisplayIsOpen)) then {
         // Raise ACE event locally
         GVAR(OldZeusDisplayIsOpen) = _newZeusDisplayIsOpen;
         ["zeusDisplayChanged", [ACE_player, _newZeusDisplayIsOpen]] call FUNC(localEvent);
