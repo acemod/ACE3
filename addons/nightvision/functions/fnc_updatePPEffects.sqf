@@ -34,7 +34,7 @@ _fnc_isUsingHMD = {
 
     if (isClass _turretConfigOpticsIn) then {
         for "_index" from 0 to (count _turretConfig - 1) do {
-            if ("NVG" in getArray (_turretConfig select _index >> "visionMode")) exitWith {_result = false};
+            if ("NVG" in getArray (_turretConfigOpticsIn select _index >> "visionMode")) exitWith {_result = false};
         };
     } else {
         //No OpticsIn usualy means RCWS, still need to test on more vehicles
