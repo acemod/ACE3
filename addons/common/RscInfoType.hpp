@@ -22,7 +22,7 @@ class RscInGameUI {
 };
 
 class RscDisplayInventory {
-    onLoad = "[""onLoad"",_this,""RscDisplayInventory"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; {_this call _x} forEach ((missionNamespace getVariable ['ACE_onLoadInventory', [-1, [], []]]) select 2);";
+    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDisplayInventory"",'IGUI')] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; [ARR_2('inventoryDisplayLoaded', _this)] call FUNC(localEvent););
 };
 
 class RscDisplayChannel {
