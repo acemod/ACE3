@@ -17,7 +17,7 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 
-class ACE_Common_Default_Keys {
+class ACE_Default_Keys {
     class showNames {
         displayName = "$STR_ACE_NameTags_ShowNames";
         condition = "true";
@@ -30,7 +30,7 @@ class ACE_Common_Default_Keys {
     };
 };
 
-class ACE_Common_Options {
+class ACE_Options {
     class showPlayerNames {
         displayName = "$STR_ACE_NameTags_ShowPlayerNames";
         default = 1;
