@@ -38,6 +38,7 @@ PREP(execRemoteFnc);
 PREP(executePersistent);
 PREP(filter);
 PREP(fixLoweredRifleAnimation);
+PREP(getAllGear);
 PREP(getCaptivityStatus);
 PREP(getConfigCommander);
 PREP(getConfigGunner);
