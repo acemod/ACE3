@@ -33,7 +33,7 @@ _fnc_isUsingHMD = {
     _turretConfigOpticsIn = _turretConfig >> "OpticsIn";
 
     if (isClass _turretConfigOpticsIn) then {
-        for "_index" from 0 to (count _turretConfig - 1) do {
+        for "_index" from 0 to (count _turretConfigOpticsIn - 1) do {
             if ("NVG" in getArray (_turretConfigOpticsIn select _index >> "visionMode")) exitWith {_result = false};
         };
     } else {
