@@ -27,7 +27,8 @@ class controls {
     colorBackground[] = {0.2,0.2,0.2,1};
     colorBackgroundActive[] = {0,0,0,1};
     colorFocused[] = {0,0,0,1};
-    onButtonClick = QUOTE(missionNamespace setVariable [ARR_2(QGVAR(drawing_drawColor), "ColorBlack")]);
+    onButtonClick = "missionNamespace setVariable [""ACE_Map_drawing_drawColor"", ""ColorBlack""]";
+    // onButtonClick = QUOTE(missionNamespace setVariable [ARR_2(QGVAR(drawing_drawColor),"ColorBlack")]);
   };
   class ColorRed: RscButton {
     idc = 36733;
@@ -38,8 +39,8 @@ class controls {
     colorBackground[] = {0.8,0.2,0.2,1};
     colorBackgroundActive[] = {1,0,0,1};
     colorFocused[] = {1,0,0,1};
-    // onButtonClick = "missionNamespace setVariable [""AGM_Map_drawColor"", ""ColorRed""]";
-    onButtonClick = QUOTE(missionNamespace setVariable [ARR_2(QGVAR(drawing_drawColor), "ColorRed")]);
+    onButtonClick = "missionNamespace setVariable [""ACE_Map_drawing_drawColor"", ""ColorRed""]";
+    // onButtonClick = QUOTE(missionNamespace setVariable [ARR_2(QGVAR(drawing_drawColor),QUOTE(ColorRed))]);
   };
   class ColorGreen: RscButton {
     idc = 36734;
@@ -50,8 +51,8 @@ class controls {
     colorBackground[] = {0.2,0.8,0.2,1};
     colorBackgroundActive[] = {0,1,0,1};
     colorFocused[] = {0,1,0,1};
-    // onButtonClick = "missionNamespace setVariable [""AGM_Map_drawColor"", ""ColorGreen""]";
-    onButtonClick = QUOTE(missionNamespace setVariable [ARR_2(QGVAR(drawing_drawColor), "ColorGreen")]);
+    onButtonClick = "missionNamespace setVariable [""ACE_Map_drawing_drawColor"", ""ColorGreen""]";
+    // onButtonClick = QUOTE(missionNamespace setVariable [ARR_2(QGVAR(drawing_drawColor),"ColorGreen")]);
   };
   class ColorBlue: RscButton {
     idc = 36735;
@@ -62,8 +63,8 @@ class controls {
     colorBackground[] = {0.2,0.2,0.8,1};
     colorBackgroundActive[] = {0,0,1,1};
     colorFocused[] = {0,0,1,1};
-    // onButtonClick = "missionNamespace setVariable [""AGM_Map_drawColor"", ""ColorBlue""]";
-    onButtonClick = QUOTE(missionNamespace setVariable [ARR_2(QGVAR(drawing_drawColor), "ColorBlue")]);
+    onButtonClick = "missionNamespace setVariable [""ACE_Map_drawing_drawColor"", ""ColorBlue""]";
+    // onButtonClick = QUOTE(missionNamespace setVariable [ARR_2(QGVAR(drawing_drawColor), "ColorBlue")]);
   };
   class ColorYellow: RscButton {
     idc = 36736;
@@ -74,8 +75,8 @@ class controls {
     colorBackground[] = {0.8,0.8,0.2,1};
     colorBackgroundActive[] = {1,1,0,1};
     colorFocused[] = {1,1,0,1};
-    // onButtonClick = "missionNamespace setVariable [""AGM_Map_drawColor"", ""ColorYellow""]";
-    onButtonClick = QUOTE(missionNamespace setVariable [ARR_2(QGVAR(drawing_drawColor), "ColorYellow")]);
+    onButtonClick = "missionNamespace setVariable [""ACE_Map_drawing_drawColor"", ""ColorYellow""]";
+    // onButtonClick = QUOTE(missionNamespace setVariable [ARR_2(QGVAR(drawing_drawColor), "ColorYellow")]);
   };
   class ColorWhite: RscButton {
     idc = 36737;
@@ -86,7 +87,7 @@ class controls {
     colorBackground[] = {0.8,0.8,0.8,1};
     colorBackgroundActive[] = {1,1,1,1};
     colorFocused[] = {1,1,1,1};
-    // onButtonClick = "missionNamespace setVariable [""AGM_Map_drawColor"", ""ColorWhite""]";
-    onButtonClick = QUOTE(missionNamespace setVariable [ARR_2(QGVAR(drawing_drawColor), "ColorWhite")]);
+    onButtonClick = "missionNamespace setVariable [""ACE_Map_drawing_drawColor"", ""ColorWhite""]";
+    // onButtonClick = QUOTE(missionNamespace setVariable [ARR_2(QGVAR(drawing_drawColor), "ColorWhite")]);
   };
 };

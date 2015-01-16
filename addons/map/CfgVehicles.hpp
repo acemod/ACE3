@@ -132,13 +132,13 @@ class CfgVehicles {
 
   class Module_F;
   class ACE_ModuleBlueForceTracking: Module_F {
-    author = "ACE Team";
+    author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
     displayName = "Blue Force Tracking";
     function = "ACE_Map_fnc_blueForceTracking";
     scope = 2;
     isGlobal = 1;
-    icon = "\ACE_Map\UI\IconBFTracking_ca.paa";
+    icon = PATHTOF(UI\IconBFTracking_ca.paa);
     class Arguments {
       class Interval {
         displayName = "Interval";

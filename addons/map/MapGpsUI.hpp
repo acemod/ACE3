@@ -27,7 +27,7 @@ class RscTitles {
         y = Y_gps;
         w = W_gps;
         h = H_gps;
-        text = PATHTOF(\UI\mapGps.paa);
+        text = PATHTOF(UI\mapGps.paa);
         colorBackground[] = {1, 1, 1, 1};
       };
       class heading: RscText{

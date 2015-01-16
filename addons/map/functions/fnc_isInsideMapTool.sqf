@@ -18,8 +18,8 @@
 #define DIST_TOP_TO_CENTER_PERC      0.65
 #define DIST_LEFT_TO_CENTER_PERC     0.30
 
-if (GVAR(mapToolsShown) == 0) exitWith {false};
-_textureWidth = [TEXTURE_WIDTH_IN_M, TEXTURE_WIDTH_IN_M / 2] select (GVAR(mapToolsShown) - 1);
+if (GVAR(mapTool_Shown) == 0) exitWith {false};
+_textureWidth = [TEXTURE_WIDTH_IN_M, TEXTURE_WIDTH_IN_M / 2] select (GVAR(mapTool_Shown) - 1);
 
 _pos = [_this select 0, _this select 1, 0];
 _relPos = _pos vectorDiff [GVAR(mapTool_pos) select 0, GVAR(mapTool_pos) select 1, 0];
