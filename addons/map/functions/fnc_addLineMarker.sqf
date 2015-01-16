@@ -15,6 +15,8 @@
 
 #include "script_component.hpp"
 
+systemChat "new global marker";
+
  _name     = _this select 0;
  _startPos = _this select 1;
  _difPos   = (_this select 2) vectorDiff _startPos ;

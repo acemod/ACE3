@@ -60,8 +60,11 @@ if (_code == DIK_DELETE) exitWith {
       if (_lambdaLong >= 0 && _lambdaLong <= _magDiffVector && _lambdaTrasAbs <= 5) exitWith {
         // Delete the line marker
         if (GVAR(drawing_syncMarkers)) then {
-          [[_x select 0], QFUNC(removeLineMarker), 2] call EFUNC(common,execRemoteFnc);
+          // [[_x select 0], QFUNC(removeLineMarker), 2] call EFUNC(common,execRemoteFnc);
+		  systemChat "global";
+          ["drawing_removeLineMarker", [_x select 0]] call ace_common_fnc_globalEvent;
         } else {
+			systemChat "local";
           deleteMarkerLocal (_x select 0);
           GVAR(drawing_lineMarkers) = GVAR(drawing_lineMarkers) - [_x];
         };

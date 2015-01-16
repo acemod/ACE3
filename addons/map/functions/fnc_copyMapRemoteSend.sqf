@@ -12,4 +12,6 @@
 
 #include "script_component.hpp"
 
-[GVAR(drawing_lineMarkers), QFUNC(copyMapMarkers), _this] call EFUNC(common,execRemoteFnc);
+PARAMS_1(_requester);
+
+["drawing_sendbackMarkers", _requester, [GVAR(drawing_lineMarkers)]] call EFUNC(common,targetEvent);
