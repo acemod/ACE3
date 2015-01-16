@@ -11,9 +11,9 @@
  * Return value:
  * Nothing
  */
+#include "script_component.hpp"
 
 #define COUNT_BARS 12
-
 
 private ["_unit", "_vehicle"];
 
@@ -82,7 +82,7 @@ if (_unit != _vehicle && !(_vehicle isKindOf "StaticWeapon")) then {
     for "_a" from 1 to _count do {
       _string = _string + "|";
     };
-    _text = [_string, _color] call AGM_Core_fnc_stringToColoredText;
+    _text = [_string, _color] call EFUNC(common,stringToColoredText);
 
     _string = "";
     for "_a" from (_count + 1) to (_maxRounds min COUNT_BARS) do {
@@ -91,11 +91,11 @@ if (_unit != _vehicle && !(_vehicle isKindOf "StaticWeapon")) then {
 
     composeText [
       _text,
-      [_string, [0.5, 0.5, 0.5]] call AGM_Core_fnc_stringToColoredText
+      [_string, [0.5, 0.5, 0.5]] call EFUNC(common,stringToColoredText)
     ]
   };
 
   _picture = getText (configFile >> "CfgMagazines" >> _magazine >> "picture");
 
-  [_text, _picture] call AGM_Core_fnc_displayTextPicture;
+  [_text, _picture] call EFUNC(common,displayTextPicture);
 };
