@@ -105,59 +105,28 @@ if (_viewDiff != 0) then {
     _FCSAzimuth = (atan (_distance / _viewDiff) - (abs _viewDiff / _viewDiff) * 90) + _movingAzimuth;
 };
 
-// CALCULATE OFFSET FOR CURRENT WEAPON
+// CALCULATE OFFSET
 _FCSMagazines = [];
 _FCSElevation = [];
 
-_magazineType   = currentMagazine _vehicle;
-_ammoType       = getText   (configFile >> "CfgMagazines" >> _magazineType >> "ammo");
-if !(getText (configFile >> "CfgAmmo" >> _ammoType >> "simulation") == "shotMissile") then {
-    _maxElev        = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "Turrets" >> "MainTurret" >> "maxElev");
-    _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _magazineType >> "initSpeed");
-    _airFriction    = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
-    _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "timeToLive");
-    _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "simulationStep");
+{
+    _ammoType = getText   (configFile >> "CfgMagazines" >> _x >> "ammo");
+    if !(getText (configFile >> "CfgAmmo" >> _ammoType >> "simulation") == "shotMissile") then {
+        _maxElev        = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "Turrets" >> "MainTurret" >> "maxElev");
+        _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _x >> "initSpeed");
+        _airFriction    = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
 
-    _offset = [_distance, _angleTarget, _maxElev, _initSpeed, _airFriction, _timeToLive, _simulationStep] call FUNC(getAngle);
+        _offset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, _angleTarget, _distance];
+        _offset = parseNumber _offset;
 
-    _FCSMagazines = _FCSMagazines + [_magazineType];
-    _FCSElevation = _FCSElevation + [_offset];
-};
+        _FCSMagazines = _FCSMagazines + [_x];
+        _FCSElevation = _FCSElevation + [_offset];
+    };
+} forEach _magazines;
 
 _vehicle setVariable [QGVAR(Distance),  _distance,     true];
 _vehicle setVariable [QGVAR(Magazines), _FCSMagazines, true];
 _vehicle setVariable [QGVAR(Elevation), _FCSElevation, true];
 _vehicle setVariable [QGVAR(Azimuth),   _FCSAzimuth,   true];
-
-// CALCULATE OFFSETS FOR OTHER WEAPONS IN THE BACKGROUND
-GVAR(backgroundCalculation) = [_vehicle, _magazines, _distance, _angleTarget, _FCSMagazines, _FCSElevation] spawn {
-    _vehicle      = _this select 0;
-    _magazines    = _this select 1;
-    _distance     = _this select 2;
-    _angleTarget  = _this select 3;
-    _FCSMagazines = _this select 4;
-    _FCSElevation = _this select 5;
-
-    {
-        if !(_x in _FCSMagazines) then {
-            _ammoType       = getText   (configFile >> "CfgMagazines" >> _x >> "ammo");
-            if !(getText (configFile >> "CfgAmmo" >> _ammoType >> "simulation") == "shotMissile") then {
-                _maxElev        = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "Turrets" >> "MainTurret" >> "maxElev");
-                _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _x >> "initSpeed");
-                _airFriction    = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
-                _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "timeToLive");
-                _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "simulationStep");
-
-                _offset = [_distance, _angleTarget, _maxElev, _initSpeed, _airFriction, _timeToLive, _simulationStep] call FUNC(getAngle);
-
-                _FCSMagazines = _FCSMagazines + [_x];
-                _FCSElevation = _FCSElevation + [_offset];
-            };
-        };
-    } forEach _magazines;
-
-    _vehicle setVariable [QGVAR(Magazines), _FCSMagazines, true];
-    _vehicle setVariable [QGVAR(Elevation), _FCSElevation, true];
-};
 
 [format ["%1: %2", localize "STR_ACE_FCS_ZeroedTo", _distance]] call EFUNC(common,displayTextStructured);
