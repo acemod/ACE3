@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-17 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="MagazineRepack">
-    <Key ID="STR_AGM_MagazineRepack_RepackMagazines">
+    <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
       <English>Repack Magazines</English>
       <German>Magazine umpacken</German>
       <Spanish>Reorganizar cargadores</Spanish>
@@ -14,7 +14,7 @@
       <Hungarian>Újratárazás</Hungarian>
       <Russian>Перепаковать магазины</Russian>
     </Key>
-    <Key ID="STR_AGM_MagazineRepack_SelectMagazineMenu">
+    <Key ID="STR_ACE_MagazineRepack_SelectMagazineMenu">
       <English>Select Magazine Menu</English>
       <German>Magazinauswahlmenü</German>
       <Spanish>Menú de selección de cargador</Spanish>
@@ -26,7 +26,7 @@
       <Hungarian>Fegyvertár menü kiválasztás</Hungarian>
       <Russian>Меню выбора магазинов</Russian>
     </Key>
-    <Key ID="STR_AGM_MagazineRepack_SelectMagazine">
+    <Key ID="STR_ACE_MagazineRepack_SelectMagazine">
       <English>Select Mag</English>
       <German>Magazin auswählen</German>
       <Spanish>Seleccionar cargador</Spanish>
@@ -38,7 +38,7 @@
       <Hungarian>Tár kiválasztása</Hungarian>
       <Russian>Выбрать магазин</Russian>
     </Key>
-    <Key ID="STR_AGM_MagazineRepack_RepackingMagazine">
+    <Key ID="STR_ACE_MagazineRepack_RepackingMagazine">
       <English>Repacking Magazines ...</English>
       <German>Magazine umpacken ...</German>
       <Spanish>Reorganizando cargadores ...</Spanish>
@@ -50,7 +50,7 @@
       <Hungarian>Újratárazás ...</Hungarian>
       <Russian>Перепаковка магазинов ...</Russian>
     </Key>
-    <Key ID="STR_AGM_MagazineRepack_RepackedMagazines">
+    <Key ID="STR_ACE_MagazineRepack_RepackedMagazines">
       <English>Repacked Magazines</English>
       <German>Magazine umgepackt</German>
       <Spanish>Cargadores reorganizados</Spanish>
@@ -62,7 +62,7 @@
       <Hungarian>Újratárazott tárak</Hungarian>
       <Russian>Магазины перепакованы</Russian>
     </Key>
-    <Key ID="STR_AGM_MagazineRepack_RepackedMagazinesDetail">
+    <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesDetail">
       <English>%1 full mag(s) and %2 extra round(s)</English>
       <German>%1 volle(s) Magazin(e) und %2 übrig gebliebene Patrone(n)</German>
       <Spanish>%1 cargador(es) completo(s) y %2 bala(s) extra(s)</Spanish>
