@@ -76,9 +76,11 @@ enableCamShake true;
 
 GVAR(OldPlayerInventory) = ACE_player call FUNC(getAllGear);
 GVAR(OldPlayerVisionMode) = currentVisionMode ACE_player;
+GVAR(OldZeusDisplayIsOpen) = !(isNull findDisplay 312);
 
 // PFH to raise varios events
 [{
+
     // "playerInventoryChanged" event
     _newPlayerInventory = ACE_player call FUNC(getAllGear);
     if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) exitWith {
@@ -95,5 +97,12 @@ GVAR(OldPlayerVisionMode) = currentVisionMode ACE_player;
         ["playerVisionModeChanged", [ACE_player, _newPlayerVisionMode]] call FUNC(localEvent);
     };
 
+    // "zeusDisplayChanged" event
+    _newZeusDisplayIsOpen = !(isNull findDisplay 312);
+    if !(_newZeusDisplayIsOpen isEqualTo GVAR(OldZeusDisplayIsOpen)) exitWith {
+        // Raise ACE event locally
+        GVAR(OldZeusDisplayIsOpen) = _newZeusDisplayIsOpen;
+        ["zeusDisplayChanged", [ACE_player, _newZeusDisplayIsOpen]] call FUNC(localEvent);
+    };
 
 }, 0, []] call cba_fnc_addPerFrameHandler;
