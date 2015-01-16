@@ -177,7 +177,7 @@ if (hasInterface) then {
             // Raise custom event. @todo, remove
             [missionNamespace, "playerChanged", [ACE_player, _oldPlayer]] call FUNC(callCustomEventHandlers);
             // Raise ACE event
-            ["playerChanged", [ACE_player, _oldPlayer]]] call FUNC(localEvent);
+            ["playerChanged", [ACE_player, _oldPlayer]] call FUNC(localEvent);
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };

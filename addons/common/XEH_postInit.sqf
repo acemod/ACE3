@@ -63,13 +63,15 @@ call COMPILE_FILE(scripts\KeyInput\initScrollWheel);
 enableCamShake true;
 
 // Set the name for the current player
-[missionNamespace, "playerChanged", {
-    if (alive (_this select 0)) then {
-        [_this select 0] call FUNC(setName)
+["playerChanged", {
+    EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
+
+    if (alive _newPlayer) then {
+        [_newPlayer] call FUNC(setName)
     };
-    if (alive (_this select 1)) then {
-        [_this select 1] call FUNC(setName)
+    if (alive _oldPlayer) then {
+        [_oldPlayer] call FUNC(setName)
     };
-}] call FUNC(addCustomEventhandler);
+}] call FUNC(addEventhandler);
 
 
