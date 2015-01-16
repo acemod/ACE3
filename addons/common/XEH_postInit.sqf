@@ -74,4 +74,15 @@ enableCamShake true;
     };
 }] call FUNC(addEventhandler);
 
+GVAR(OldPlayerInventory) = ACE_player call FUNC(getAllGear);
 
+// PFH to raise "playerInventoryChanged" event
+[{
+    _newPlayerInventory = ACE_player call FUNC(getAllGear);
+
+    if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) exitWith {
+        // Raise ACE event
+        GVAR(OldPlayerInventory) = _newPlayerInventory;
+        ["playerInventoryChanged", [ACE_player, _newPlayerInventory]] call FUNC(localEvent);
+    };
+}, 0, []] call cba_fnc_addPerFrameHandler;
