@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-09-09 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="Reload">
-    <Key ID="STR_AGM_Reload_checkAmmo">
+    <Key ID="STR_ACE_Reload_checkAmmo">
       <English>Check Ammo</English>
       <German>Munition prüfen</German>
       <Spanish>Verificar munición</Spanish>
@@ -14,7 +14,7 @@
       <Portuguese>Conferir munições</Portuguese>
       <Russian>Kонтроль Боеприпасы</Russian>
     </Key>
-    <Key ID="STR_AGM_Reload_Ammo">
+    <Key ID="STR_ACE_Reload_Ammo">
       <English>Ammo</English>
       <German>Munition</German>
       <Spanish>Munición</Spanish>
