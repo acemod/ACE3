@@ -11,33 +11,35 @@
  * Can adjustment be done? (Bool)
  */
 
+#include "script_component.hpp"
+
 private ["_unit", "_weapons", "_zeroing", "_optic", "_maxHorizontal", "_maxVertical"];
 
 _unit = _this select 0;
 
 _weapons = [
-  primaryWeapon _unit,
-  secondaryWeapon _unit,
-  handgunWeapon _unit
+    primaryWeapon _unit,
+    secondaryWeapon _unit,
+    handgunWeapon _unit
 ];
 
 if !(currentWeapon _unit in _weapons) exitWith {false};
 
-if (isNil "AGM_Scopes_Adjustment") then {
-  AGM_Scopes_Adjustment = [[0,0], [0,0], [0,0]];
+if (isNil QGVAR(Adjustment)) then {
+    GVAR(Adjustment) = [[0,0], [0,0], [0,0]];
 };
 
 if (isNil "AGM_Scopes_Optics") then {
-  AGM_Scopes_Optics = ["", "", ""];
+    GVAR(Optics) = ["", "", ""];
 };
 
-_zeroing = AGM_Scopes_Adjustment select (_weapons find (currentWeapon _unit));
+_zeroing = GVAR(Adjustment) select (_weapons find (currentWeapon _unit));
 _zeroX = (_zeroing select 0) + (_this select 1);
 _zeroY = (_zeroing select 1) + (_this select 2);
 
-_optic = AGM_Scopes_Optics select (_weapons find (currentWeapon _unit));
-_maxHorizontal = getArray (configFile >> "CfgWeapons" >> _optic >> "AGM_ScopeAdjust_Horizontal");
-_maxVertical = getArray (configFile >> "CfgWeapons" >> _optic >> "AGM_ScopeAdjust_Vertical");
+_optic = GVAR(Optics) select (_weapons find (currentWeapon _unit));
+_maxHorizontal = getArray (configFile >> "CfgWeapons" >> _optic >> "ACE_ScopeAdjust_Horizontal");
+_maxVertical = getArray (configFile >> "CfgWeapons" >> _optic >> "ACE_ScopeAdjust_Vertical");
 if ((count _maxHorizontal < 2) or (count _maxVertical < 2)) exitWith {false};
 if ((_maxHorizontal isEqualTo [0,0]) or (_maxVertical isEqualTo [0,0])) exitWith {false};
 
