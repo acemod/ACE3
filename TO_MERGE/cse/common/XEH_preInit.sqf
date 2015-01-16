@@ -138,3 +138,4 @@ PREP(makeCopyOfBodyLocal_F);
 PREP(unloadPerson_F);
 PREP(cleanUpCopyOfBody_F);
 
+ADDON = true;

@@ -12,22 +12,10 @@ Executes: call
 
 #include "script_component.hpp"
 
-private ["_args"];
-_args = _this;
+private ["_logic"];
+_logic = _this select 0;
 
-GVAR(setting_AdvancedLevel) = 2;
-GVAR(setting_allowInstantDead) = true;
-GVAR(setting_advancedWoundsSetting) = true;
-GVAR(setting_advancedMedicRoles) = false;
-GVAR(setting_enableBandagingAid) = false;
-GVAR(setting_allowAIFullHeal) = false;
-GVAR(setting_allowAirwayInjuries) = false;
-GVAR(setting_removeAidKitOnUse) = false;
-GVAR(setting_enableForUnits) = 1;
-GVAR(setting_aidKitRestrictions) = 0;
-GVAR(setting_aidKitMedicsOnly) = false;
-GVAR(setting_allowVehicleCrashInjuries) = true;
-GVAR(setting_allowStitching) = 0;
+if (isNull _logic) exitwith {};
 
 // Damage thresholds only in case the damge threshold module hasn't been placed down.
 if (isnil QGVAR(damageThreshold_AI)) then {
@@ -38,58 +26,23 @@ if (isnil QGVAR(damageThreshold_Players)) then {
 	GVAR(damageThreshold_Players) = 1;
 };
 
-
-// TODO implement this into a switch structure.
-{
-	_value = _x select 1;
-	if (!isnil "_value") then {
-		if (_x select 0 == "advancedLevel") exitwith {
-			GVAR(setting_AdvancedLevel) = _x select 1;
-		};
-		if (_x select 0 == "openingOfWounds") exitwith {
-			GVAR(setting_advancedWoundsSetting) = _x select 1;
-		};
-		if (_x select 0 == "medicSetting") exitwith {
-			GVAR(setting_advancedMedicRoles) = _x select 1;
-		};
-		if (_x select 0 == "difficultySetting") exitwith {
-			GVAR(setting_medicalDifficulty) = _x select 1;
-		};
-		if (_x select 0 == "bandagingAid") exitwith {
-			GVAR(setting_enableBandagingAid) = _x select 1;
-		};
-		if (_x select 0 == "allowAIFullHeal") exitwith {
-			GVAR(setting_allowAIFullHeal) = _x select 1;
-		};
-		if (_x select 0 == "enableFor") exitwith {
-			GVAR(setting_enableForUnits) = _x select 1;
-		};
-		if (_x select 0 == "enableAirway") exitwith {
-			GVAR(setting_allowAirwayInjuries) = (_x select 1) == 1;
-		};
-		if (_x select 0 == "aidKitRestrictions") exitwith {
-			GVAR(setting_aidKitRestrictions) = _x select 1;
-		};
-		if (_x select 0 == "aidKitUponUsage") exitwith {
-			GVAR(setting_removeAidKitOnUse) = _x select 1;
-		};
-		if (_x select 0 == "aidKitMedicsOnly") exitwith {
-			GVAR(setting_aidKitMedicsOnly) = _x select 1;
-		};
-		if (_x select 0 == "bandageTime") exitwith {
-			GVAR(setting_bandageWaitingTime) = _x select 1;
-		};
-		if (_x select 0 == "vehCrashes") exitwith {
-			GVAR(setting_allowVehicleCrashInjuries) = _value;
-		};
-		if (_x select 0 == "stitchingMedicsOnly") exitwith {
-			GVAR(setting_allowStitching) = _value;
-		};
-	};
-}foreach _args;
+GVAR(setting_allowInstantDead) = _logic getvariable["setting_allowInstantDead", true];
+GVAR(setting_AdvancedLevel) = _logic getvariable["advancedLevel", 2];
+GVAR(setting_advancedWoundsSetting) = _logic getvariable["openingOfWounds", true];
+GVAR(setting_advancedMedicRoles) = _logic getvariable["medicSetting", false];
+GVAR(setting_medicalDifficulty) = _logic getvariable["difficultySetting", ];
+GVAR(setting_enableBandagingAid) = _logic getvariable["bandagingAid", 0];
+GVAR(setting_allowAIFullHeal) = _logic getvariable["allowAIFullHeal", false];
+GVAR(setting_enableForUnits) = _logic getvariable["enableFor", 1];
+GVAR(setting_allowAirwayInjuries) = _logic getvariable["enableAirway", false];
+GVAR(setting_aidKitRestrictions) = _logic getvariable["aidKitRestrictions", 0];
+GVAR(setting_removeAidKitOnUse) = _logic getvariable["aidKitUponUsage", false];
+GVAR(setting_aidKitMedicsOnly) = _logic getvariable["aidKitMedicsOnly", false];
+GVAR(setting_bandageWaitingTime) = _logic getvariable["bandageTime", 5];
+GVAR(setting_allowVehicleCrashInjuries) = _logic getvariable["vehCrashes", true];
+GVAR(setting_allowStitching) = _logic getvariable["stitchingMedicsOnly", 0];
 
 if (GVAR(setting_AdvancedLevel) == -1) exitwith{};
-call compile preprocessFile QUOTE(PATHTOF(functions.sqf));
 GVAR(isEnabled) = true;
 
 [
@@ -104,11 +57,9 @@ if (GVAR(setting_allowAirwayInjuries)) then {
 	] call EFUNC(common,registerUnconsciousCondition);
 };
 
-waituntil{!isnil "ace_gui"};
-
-GVAR(MEDICAL_COMBINED_LOOP) = [];
-waituntil{!isnil "ace_gui" && !isnil "ace_main"};
+waituntil{!isnil "ACE_gui" && !isnil "ACE_common"};
 GVAR(task_pool_lastTime) = time;
+GVAR(MEDICAL_COMBINED_LOOP) = [];
 
 FUNC(taskLoopCode) = {
 	if ((time - GVAR(task_pool_lastTime)) >= 1 || true) then {

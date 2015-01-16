@@ -15,3 +15,5 @@ PREP(displayInformation);
 PREP(displayMessage);
 PREP(blurScreen);
 PREP(displayIcon);
+
+ADDON = true;

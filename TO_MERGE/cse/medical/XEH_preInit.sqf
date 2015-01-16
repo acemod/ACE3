@@ -177,3 +177,5 @@ FUNC(eh_local_CMS) = {
 		};
 	};
 };
+
+ADDON = true;
