@@ -8,8 +8,9 @@ _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
 private ["_distance", "_digits"];
 
-_distance = call FUNC(getDistance);
+_distance = call FUNC(getRelativeDistance);
 
+// relative slope distance
 _digits = [_distance] call FUNC(convertToTexturesDistance);
 
 (_dlgVector displayCtrl 1311) ctrlSetText (_digits select 0);

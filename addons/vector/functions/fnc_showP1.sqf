@@ -2,7 +2,7 @@
 
 by commy2
 
-Shows or hides the vectors center square thingy.
+Shows or hides the 1-P text line.
 
 */
 #include "script_component.hpp"

@@ -10,7 +10,7 @@ _azimuth = _direction select 0;
 _inclination = _direction select 1;
 
 if (_distance < -999) exitWith {
-    [-1000,-1000]    // return
+    [-1000, -1000]    // return
 };
 
 [sin _inclination * _distance, cos _inclination * _distance]
