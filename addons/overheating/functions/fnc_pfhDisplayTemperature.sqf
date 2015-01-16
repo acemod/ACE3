@@ -1,4 +1,16 @@
-// by commy2 and CAA-Picard
+/*
+ * Author: Commy2 and CAA-Picard
+ *
+ * PFH that displays the weapon temperature after a slight delay
+ *
+ * Arguments:
+ * 0: _player
+ * 1: _weapon
+ *
+ * Return Values:
+ * None
+ *
+ */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
 EXPLODE_2_PVT(_this,_params,_pfhId);

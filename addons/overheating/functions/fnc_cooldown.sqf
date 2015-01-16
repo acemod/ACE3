@@ -13,15 +13,12 @@
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-private ["_temperature", "_barrelMass", "_totalTime", "_barrelSurface", "_time", "_deltaTime"];
-
-_temperature = _this select 0;
-_barrelMass  = _this select 1;
-_totalTime   = _this select 2;
+EXPLODE_3_PVT(_this,_temperature,_barrelMass,_totalTime);
 
 // If a long time passed since the last shot, there's no need to calculate anything; the weapon should be cool
 if (_totalTime > 1800) exitWith {0};
 
+private ["_barrelSurface", "_time", "_deltaTime"];
 _barrelSurface = _barrelMass / 7850 / 0.003;
 
 _time = 0;

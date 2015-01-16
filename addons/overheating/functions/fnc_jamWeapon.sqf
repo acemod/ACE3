@@ -1,14 +1,23 @@
-// based on KK_fnc_playerWeaponMulfunction from KillzoneKid
+/*
+ * Author: Commy2, based on KK_fnc_playerWeaponMulfunction from KillzoneKid
+ *
+ * Jam the weapon
+ *
+ * Argument:
+ * 0: unit
+ * 1: weapon
+ *
+ * Return value:
+ * None
+ */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-private ["_unit", "_weapon", "_jammedWeapons"];
-
-_unit = _this select 0;
-_weapon = _this select 1;
+EXPLODE_2_PVT(_this,_unit,_weapon);
 
 // don't jam a weapon with no rounds left
 if (_unit ammo _weapon == 0) exitWith {};
 
+private ["_jammedWeapons"];
 _jammedWeapons = _unit getVariable [QGVAR(jammedWeapons), []];
 _jammedWeapons pushBack _weapon;
 

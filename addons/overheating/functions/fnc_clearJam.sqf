@@ -1,12 +1,21 @@
-// by commy2
+/*
+ * Author: Commy2
+ *
+ * Clears the jam from a weapon
+ *
+ * Argument:
+ * 0: Last temperature (number)
+ * 1: Barrel mass (number)
+ * 2: Time (number)
+ *
+ * Return value:
+ * New temperature (number)
+ */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-private ["_unit", "_weapon", "_skipAnim", "_jammedWeapons"];
+EXPLODE_3_PVT(_this,_unit,_weapon,_skipAnim);
 
-_unit = _this select 0;
-_weapon = _this select 1;
-_skipAnim = _this select 2;
-
+private ["_jammedWeapons"];
 _jammedWeapons = _unit getVariable [QGVAR(jammedWeapons), []];
 
 if (_weapon in _jammedWeapons) then {
