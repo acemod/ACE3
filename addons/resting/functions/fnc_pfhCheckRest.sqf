@@ -37,5 +37,5 @@ if (
   || {!(true in _intersects)}
 ) exitWith {
   [_pfhId] call cba_fnc_removePerFrameHandler;
-  [_unit, _vehicle, _weapon] call FUNC(unRestWeapon)
+  [_unit, _vehicle, _weapon] call FUNC(unRestWeapon);
 };
