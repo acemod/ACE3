@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-12 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="Attach">
-    <Key ID="STR_AGM_Attach_AttachDetach">
+    <Key ID="STR_ACE_Attach_AttachDetach">
       <English>Attach item &gt;&gt;</English>
       <German>Gegenstand befestigen &gt;&gt;</German>
       <Spanish>Acoplar objeto &gt;&gt;</Spanish>
@@ -14,7 +14,7 @@
       <Hungarian>Tárgy hozzácsatolása &gt;&gt;</Hungarian>
       <Russian>Добавить приспособления</Russian>
     </Key>
-    <Key ID="STR_AGM_Attach_Attach">
+    <Key ID="STR_ACE_Attach_Attach">
       <English>Attach</English>
       <German>Befestigen</German>
       <Spanish>Acoplar</Spanish>
@@ -26,7 +26,7 @@
       <Hungarian>Hozzácsatolás</Hungarian>
       <Russian>Присоединить</Russian>
     </Key>
-    <Key ID="STR_AGM_Attach_Detach">
+    <Key ID="STR_ACE_Attach_Detach">
       <English>Detach item</English>
       <German>Gegenstand entfernen</German>
       <Spanish>Quitar objeto</Spanish>
@@ -38,7 +38,7 @@
       <Hungarian>Tárgy lecsatolása</Hungarian>
       <Russian>Отсоединить</Russian>
     </Key>
-    <Key ID="STR_AGM_Attach_IrStrobe_Attached">
+    <Key ID="STR_ACE_Attach_IrStrobe_Attached">
       <English>IR Strobe Attached</English>
       <German>IR-Stroboskop befestigt</German>
       <Spanish>Marcador IR acoplado</Spanish>
@@ -50,7 +50,7 @@
       <Hungarian>Infravörös jeladó hozzácsatolva</Hungarian>
       <Russian>ИК строб присоединён</Russian>
     </Key>
-    <Key ID="STR_AGM_Attach_IrStrobe_Detached">
+    <Key ID="STR_ACE_Attach_IrStrobe_Detached">
       <English>IR Strobe Detached</English>
       <German>IR-Stroboskop entfernt</German>
       <Spanish>Marcador IR quitado</Spanish>
@@ -62,7 +62,7 @@
       <Hungarian>Infravörös jeladó lecsatolva</Hungarian>
       <Russian>ИК строб отсоединён</Russian>
     </Key>
-    <Key ID="STR_AGM_Attach_IrGrenade_Attached">
+    <Key ID="STR_ACE_Attach_IrGrenade_Attached">
       <English>IR Grenade Attached</English>
       <German>IR-Granate befestigt</German>
       <Spanish>Granada IR acoplada</Spanish>
@@ -74,7 +74,7 @@
       <Hungarian>Infravörös gránát hozzácsatolva</Hungarian>
       <Russian>ИК граната присоединена</Russian>
     </Key>
-    <Key ID="STR_AGM_Attach_IrGrenade_Detached">
+    <Key ID="STR_ACE_Attach_IrGrenade_Detached">
       <English>IR Grenade Detached</English>
       <German>IR-Granate entfernt</German>
       <Spanish>Granada IR quitada</Spanish>
@@ -86,7 +86,7 @@
       <Hungarian>Infravörös gránát lecsatolva</Hungarian>
       <Russian>ИК граната отсоединена</Russian>
     </Key>
-    <Key ID="STR_AGM_Attach_Chemlight_Attached">
+    <Key ID="STR_ACE_Attach_Chemlight_Attached">
       <English>Chemlight Attached</English>
       <German>Leuchtstab befestigt</German>
       <Spanish>Barra de luz acoplada</Spanish>
@@ -98,7 +98,7 @@
       <Hungarian>Chemlight hozzácsatolva</Hungarian>
       <Russian>Химсвет присоединён</Russian>
     </Key>
-    <Key ID="STR_AGM_Attach_Chemlight_Detached">
+    <Key ID="STR_ACE_Attach_Chemlight_Detached">
       <English>Chemlight Detached</English>
       <German>Leuchtstab entfernt</German>
       <Spanish>Barra de luz quitada</Spanish>
@@ -110,7 +110,7 @@
       <Hungarian>Chemlight hozzácsatolva</Hungarian>
       <Russian>Химсвет отсоединён</Russian>
     </Key>
-    <Key ID="STR_AGM_Attach_Inventory_Full">
+    <Key ID="STR_ACE_Attach_Inventory_Full">
       <English>No inventory space</English>
       <German>Kein Platz im Inventar</German>
       <Spanish>Sin espacio en inventario</Spanish>
@@ -122,7 +122,7 @@
       <Hungarian>Nincs több hely</Hungarian>
       <Russian>В инвентаре нет места</Russian>
     </Key>
-    <Key ID="STR_AGM_IrStrobe_Name">
+    <Key ID="STR_ACE_IrStrobe_Name">
       <English>IR Strobe</English>
       <German>IR-Stroboskop</German>
       <Spanish>Marcador IR</Spanish>
@@ -134,7 +134,7 @@
       <Hungarian>Infravörös jeladó</Hungarian>
       <Russian>ИК строб</Russian>
     </Key>
-    <Key ID="STR_AGM_IrStrobe_Description">
+    <Key ID="STR_ACE_IrStrobe_Description">
       <English>IR Strobe allows you to signal your position through a pulsating beacon only visible with NVGs.</English>
       <German>Das IR-Stroboskop erlaubt es dir deine Position mit einem blinkenden Leuchtfeuer zu signalisieren, welches nur mit Nachtsichtgerät zu erkennen ist.</German>
       <Polish>Stroboskop światła podczerwieni umożliwia oznaczenie swojej pozycji pulsacyjnym światłem widocznym tylko przez optykę noktowizyjną i gogle noktowizyjne.</Polish>

@@ -9,12 +9,14 @@
  * Return value:
  * Turret index array or config path. E.g: [0] for gunner or [0,0] for commander. Returns empty array if unit is not in a turret. (Array)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_unit", "_vehicle", "_turrets", "_units", "_index"];
 
 _unit = _this select 0;
 _vehicle = vehicle _unit;
+
+if (_unit == _vehicle) exitWith {[]};
 
 //_turrets = [typeOf _vehicle] call FUNC(getTurrets);
 _turrets = allTurrets [_vehicle, true];

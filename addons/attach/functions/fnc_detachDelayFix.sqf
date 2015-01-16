@@ -1,6 +1,4 @@
 /*
-  Name: ACE_attach_fnc_detachFix
-
   Author: Pabst Mirror
 
   Description:

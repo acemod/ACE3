@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-20 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="SwitchUnits">
-    <Key ID="STR_AGM_SwitchUnits_SwitchedUnit">
+    <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
       <English>Switched unit</English>
       <German>Einheit gewechselt</German>
       <Russian>Юнит переключен</Russian>
@@ -10,7 +10,7 @@
       <Polish>Przełącz jednostkę</Polish>
       <Spanish>Cambiado de unidad</Spanish>
     </Key>
-    <Key ID="STR_AGM_SwitchUnits_TooCloseToEnemy">
+    <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
       <English>This unit is too close to the enemy.</English>
       <German>Diese Einheit ist zu nah am Feind.</German>
       <Russian>Юнит слишком близок к противнику</Russian>

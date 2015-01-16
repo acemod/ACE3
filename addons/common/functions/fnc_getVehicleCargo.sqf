@@ -9,7 +9,7 @@
  * Return value:
  * Vehicle cargo positions. (Array)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_vehicle", "_config", "_cargo", "_codrivers"];
 

@@ -8,7 +8,7 @@ QGVAR(remoteFnc) addPublicVariableEventHandler {
 [missionNamespace] call FUNC(executePersistent);
 
 // check previous version number from profile
-_currentVersion = getText (configFile >> "CfgPatches" >> "ACE_Common" >> "version");
+_currentVersion = getText (configFile >> "CfgPatches" >> ADDON >> "version");
 _previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
 
 if (_currentVersion != _previousVersion) then {
@@ -18,6 +18,10 @@ if (_currentVersion != _previousVersion) then {
 };
 
 0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber);
+
+//add network event handlers
+"ACEg" addPublicVariableEventHandler { _this call FUNC(_handletNetEvent); };
+"ACEc" addPublicVariableEventHandler { _this call FUNC(_handletNetEvent); };
 
 // everything that only player controlled machines need, goes below this
 if (!hasInterface) exitWith {};
@@ -59,15 +63,77 @@ call COMPILE_FILE(scripts\KeyInput\initScrollWheel);
 enableCamShake true;
 
 // Set the name for the current player
-[missionNamespace, "playerChanged", {
-    if (alive (_this select 0)) then {
-        [_this select 0] call FUNC(setName)
-    };
-    if (alive (_this select 1)) then {
-        [_this select 1] call FUNC(setName)
-    };
-}] call FUNC(addCustomEventhandler);
+["playerChanged", {
+    EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
 
+    if (alive _newPlayer) then {
+        [_newPlayer] call FUNC(setName)
+    };
+    if (alive _oldPlayer) then {
+        [_oldPlayer] call FUNC(setName)
+    };
+
+}] call FUNC(addEventhandler);
+
+GVAR(OldPlayerInventory) = ACE_player call FUNC(getAllGear);
+GVAR(OldPlayerVisionMode) = currentVisionMode ACE_player;
+GVAR(OldZeusDisplayIsOpen) = !(isNull findDisplay 312);
+GVAR(OldCameraView) = cameraView;
+GVAR(OldPlayerVehicle) = vehicle ACE_player;
+GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
+
+// PFH to raise varios events
+[{
+
+    // "playerInventoryChanged" event
+    _newPlayerInventory = ACE_player call FUNC(getAllGear);
+    if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
+        // Raise ACE event locally
+        GVAR(OldPlayerInventory) = _newPlayerInventory;
+        ["playerInventoryChanged", [ACE_player, _newPlayerInventory]] call FUNC(localEvent);
+    };
+
+    // "playerVisionModeChanged" event
+    _newPlayerVisionMode = currentVisionMode ACE_player;
+    if !(_newPlayerVisionMode isEqualTo GVAR(OldPlayerVisionMode)) then {
+        // Raise ACE event locally
+        GVAR(OldPlayerVisionMode) = _newPlayerVisionMode;
+        ["playerVisionModeChanged", [ACE_player, _newPlayerVisionMode]] call FUNC(localEvent);
+    };
+
+    // "zeusDisplayChanged" event
+    _newZeusDisplayIsOpen = !(isNull findDisplay 312);
+    if !(_newZeusDisplayIsOpen isEqualTo GVAR(OldZeusDisplayIsOpen)) then {
+        // Raise ACE event locally
+        GVAR(OldZeusDisplayIsOpen) = _newZeusDisplayIsOpen;
+        ["zeusDisplayChanged", [ACE_player, _newZeusDisplayIsOpen]] call FUNC(localEvent);
+    };
+
+    // "cameraViewChanged" event
+    _newCameraView = cameraView;
+    if !(_newCameraView isEqualTo GVAR(OldCameraView)) then {
+        // Raise ACE event locally
+        GVAR(OldCameraView) = _newCameraView;
+        ["cameraViewChanged", [ACE_player, _newCameraView]] call FUNC(localEvent);
+    };
+
+    // "playerVehicleChanged" event
+    _newPlayerVehicle = vehicle ACE_player;
+    if !(_newPlayerVehicle isEqualTo GVAR(OldPlayerVehicle)) then {
+        // Raise ACE event locally
+        GVAR(OldPlayerVehicle) = _newPlayerVehicle;
+        ["playerVehicleChanged", [ACE_player, _newPlayerVehicle]] call FUNC(localEvent);
+    };
+
+    // "playerTurretChanged" event
+    [ACE_player] call FUNC(getTurretIndex);
+    if !(_newPlayerTurret isEqualTo GVAR(OldPlayerTurret)) then {
+        // Raise ACE event locally
+        GVAR(OldPlayerTurret) = _newPlayerTurret;
+        ["playerTurretChanged", [ACE_player, _newPlayerTurret]] call FUNC(localEvent);
+    };
+
+}, 0, []] call cba_fnc_addPerFrameHandler;
 
 
 [QGVAR(ENABLE_REVIVE_COUNTER), 0, false, QGVAR(ADDON)] call FUNC(defineVariable);
@@ -82,4 +148,3 @@ enableCamShake true;
 if (isNil QGVAR(ENABLE_REVIVE_F)) then {
     GVAR(ENABLE_REVIVE_F) = 0;
 };
-

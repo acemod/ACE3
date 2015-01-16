@@ -97,9 +97,9 @@ _cacheIndices = _cache select 2;
 			_cacheIndices pushBack _indexCache;
 
 			_cache = [_cacheConfigs, _cacheActions, _cacheIndices];
-			["InteractionMenu", _action, {format ["%1 loaded into cache", _this]}] call EFUNC(debug,log);
+			["InteractionMenu", _action, {format ["%1 loaded into cache", _this]}] call EFUNC(common,log);
 		} else {
-			["InteractionMenu", _action, {format ["%1 loaded from cache", _this]}] call EFUNC(debug,log);
+			["InteractionMenu", _action, {format ["%1 loaded from cache", _this]}] call EFUNC(common,log);
 
 			private ["_cachedAction", "_showDisabled"];
 			_cachedAction = _cacheActions select (_cacheIndices select _indexCache);

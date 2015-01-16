@@ -27,7 +27,7 @@ if (!(profileNamespace getVariable [QGVAR(FlowMenu), false])) then {
 	GVAR(SelectAccept) = _this select 1;
 	GVAR(SelectCancel) = _this select 2;
 	buttonSetAction [8855, QUOTE( call GVAR(SelectCancel); )]; // cancel
-	buttonSetAction [8860, QUOTE( (call compile (lbData [8866, lbCurSel 8866])) call GVAR(SelectAccept); )]; // accept
+	buttonSetAction [8860, QUOTE( (call compile (lbData [ARR_2(8866, lbCurSel 8866)])) call GVAR(SelectAccept); )]; // accept
 	lbSetCurSel [8866, 0];
 }else{
 	_customActions = _this select 0;

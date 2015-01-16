@@ -5,8 +5,8 @@
     #define DEBUG_MODE_FULL
 #endif
 
-#ifdef DEBUG_ENABLED_THERMALS
-    #define DEBUG_SETTINGS DEBUG_ENABLED_THERMALS
+#ifdef DEBUG_SETTINGS_THERMALS
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_THERMALS
 #endif
 
 #include "\z\ace\Addons\main\script_macros.hpp"

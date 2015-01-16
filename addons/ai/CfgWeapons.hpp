@@ -114,7 +114,7 @@ class CfgWeapons {
     //class arifle_MX_F: arifle_MX_Base_F {};
     //class arifle_MX_GL_F: arifle_MX_Base_F {};
 
-    // MX machine gun
+    // MX sniper rifle
     class arifle_MXM_F: arifle_MX_Base_F {
         class Single: Single {
             minRange = 120;       // 2;
@@ -141,11 +141,13 @@ class CfgWeapons {
         };
     };
 
-    // MX sniper rifle
+    // MX machine gun
     class arifle_MX_SW_F: arifle_MX_Base_F {
         aiDispersionCoefY = 24.0;
         aiDispersionCoefX = 21.0;
-        modes[] += {"AGM_Burst_far"};
+        // Shit is still broken
+        //modes[] += {"AGM_Burst_far"};
+        modes[] = {"Single","manual","close","short","medium","far_optic1","far_optic2","AGM_Burst_far"};
 
         class Single: Mode_SemiAuto {
             minRange = 120;             // 2;

@@ -18,5 +18,5 @@
 
 if (isNull (uiNamespace getVariable ["ACE_Helper_Display", objNull])) exitWith{};
 
-("ACE_InteractionHelper" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+(QGVAR(InteractionHelper) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 showHUD true;

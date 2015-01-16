@@ -1,5 +1,5 @@
 /*
-  Name: AGM_SwitchUnits_fnc_handleMapClick
+  Name: ACE_SwitchUnits_fnc_handleMapClick
   
   Author(s):
     bux578

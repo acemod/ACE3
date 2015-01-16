@@ -72,7 +72,7 @@ class ACE_Options {
 /*
 class RscControlsGroupNoScrollbars;
 class RscAttributeInventory: RscControlsGroupNoScrollbars {
-    onSetFocus = "[_this,""RscAttributeInventory"",'CuratorCommon'] call (uinamespace getvariable ""BIS_fnc_initCuratorAttribute""); _this select 0 call ACE_CuratorFix_fnc_addUnloadEventhandler;";
+    onSetFocus = QUOTE([ARR_3(_this,""RscAttributeInventory"",'CuratorCommon')] call (uinamespace getvariable ""BIS_fnc_initCuratorAttribute""); _this select 0 call DFUNC(addCuratorUnloadEventhandler););
 };
 */
 

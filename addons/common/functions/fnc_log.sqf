@@ -1,5 +1,5 @@
 // by commy2
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 if ((_this select 0) in (missionNamespace getVariable ["ACE_Debug", []])) then {
   private ["_type", "_argument", "_function", "_showInGame"];

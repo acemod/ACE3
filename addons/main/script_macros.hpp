@@ -182,6 +182,26 @@
 #define QFUNC(var1) QUOTE(DFUNC(var1))
 #define QEFUNC(var1,var2) QUOTE(DEFUNC(var1,var2))
 
+#define PATHTOEF(var1,var2) PATHTOF_SYS(PREFIX,var1,var2)
+
+
+#define GETVAR_SYS(var1,var2) getVariable [ARR_2(QUOTE(var1),var2)]
+#define SETVAR_SYS(var1,var2) setVariable [ARR_2(QUOTE(var1),var2)]
+#define SETPVAR_SYS(var1,var2) setVariable [ARR_3(QUOTE(var1),var2,true)]
+
+#define GETVAR(var1,var2,var3) var1 GETVAR_SYS(var2,var3)
+#define GETMVAR(var1,var2) missionNamespace GETVAR_SYS(var1,var2)
+#define GETUVAR(var1,var2) uiNamespace GETVAR_SYS(var1,var2)
+
+#define SETVAR(var1,var2,var3) var1 SETVAR_SYS(var2,var3)
+#define SETPVAR(var1,var2,var3) var1 SETPVAR_SYS(var2,var3)
+#define SETMVAR(var1,var2) missionNamespace SETVAR_SYS(var1,var2)
+#define SETUVAR(var1,var2) uiNamespace SETVAR_SYS(var1,var2)
+
+#define GETGVAR(var1,var2) GETMVAR(GVAR(var1),var2)
+#define GETEGVAR(var1,var2,var3) GETMVAR(EGVAR(var1,var2),var3)
+
+
 #ifdef DISABLE_COMPILE_CACHE
 	#define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
 #else
@@ -208,3 +228,16 @@
 #define EFUNC(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)
 
 #endif
+
+
+#define HASH_CREATE					([] call EFUNC(common,hashCreate))
+#define HASH_SET(hash, key, val)	([hash, key, val, __FILE__, __LINE__] call EFUNC(common,hashSet))
+#define HASH_GET(hash, key)			([hash, key, __FILE__, __LINE__] call EFUNC(common,hashGet))
+#define HASH_REM(hash, key)			([hash, key, __FILE__, __LINE__] call EFUNC(common,hashRem))
+#define HASH_HASKEY(hash, key)		([hash, key, __FILE__, __LINE__] call EFUNC(common,hashHasKey))
+
+#define HASHLIST_CREATELIST(keys)				([keys] call EFUNC(common,hashListCreateList))
+#define HASHLIST_CREATEHASH(hashList)			([hashList] call EFUNC(common,hashListCreateHash))
+#define HASHLIST_SELECT(hashList, index)		([hashList, index, __FILE__, __LINE__] call EFUNC(common,hashListSelect))
+#define HASHLIST_SET(hashList, index, value)	([hashList, index, value, __FILE__, __LINE__] call EFUNC(common,hashListSet))
+#define HASHLIST_PUSH(hashList, value)			([hashList, value, __FILE__, __LINE__] call EFUNC(common,hashListPush))

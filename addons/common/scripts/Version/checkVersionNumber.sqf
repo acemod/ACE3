@@ -1,5 +1,5 @@
 // by commy2
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 sleep 1;  //wait for module
 
@@ -13,13 +13,13 @@ if (missionNamespace getVariable ["ACE_Version_CheckAll", false]) then {
   } forEach activatedAddons;
 } else {
   {
-    if (toLower _x find "ACE_" == 0) then {
+    if (toLower _x find "ace_" == 0) then {
       _files pushBack _x;
     };
   } forEach activatedAddons;
 };
 
-_versionMain = parseNumber getText (configFile >> "CfgPatches" >> "ACE_Common" >> "version");
+_versionMain = parseNumber getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
 
 _versions = [];
 {
@@ -31,7 +31,7 @@ if (isServer) then {
   diag_log text format ["[ACE] Server: ACE_Common is Version %1.", _versionMain];
 
   {
-    if (toLower _x find "ACE_" == 0) then {//
+    if (toLower _x find "ace_" == 0) then {//
       _version = _versions select _forEachIndex;
       if (_version != _versionMain) then {
         diag_log text format ["[ACE] Server: %1 is Version %2.", _x, _version];
@@ -45,7 +45,7 @@ if (isServer) then {
   diag_log text format ["[ACE] Client: ACE_Common is Version %1.", _versionMain];
 
   {
-    if (toLower _x find "ACE_" == 0) then {//
+    if (toLower _x find "ace_" == 0) then {//
       _version = _versions select _forEachIndex;
       if (_version != _versionMain) then {
         diag_log text format ["[ACE] Client: %1 is Version %2.", _x, _version];

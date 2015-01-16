@@ -13,7 +13,7 @@
  * Return Value:
  * None
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_object", "_aroundX", "_aroundY", "_aroundZ", "_dirX", "_dirY", "_dirZ", "_upX", "_upY", "_upZ", "_dir", "_up", "_dirXTemp", "_upXTemp"];
 
