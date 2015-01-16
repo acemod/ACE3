@@ -75,14 +75,25 @@ enableCamShake true;
 }] call FUNC(addEventhandler);
 
 GVAR(OldPlayerInventory) = ACE_player call FUNC(getAllGear);
+GVAR(OldPlayerVisionMode) = currentVisionMode ACE_player;
 
-// PFH to raise "playerInventoryChanged" event
+// PFH to raise varios events
 [{
+    // "playerInventoryChanged" event
     _newPlayerInventory = ACE_player call FUNC(getAllGear);
-
     if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) exitWith {
-        // Raise ACE event
+        // Raise ACE event locally
         GVAR(OldPlayerInventory) = _newPlayerInventory;
         ["playerInventoryChanged", [ACE_player, _newPlayerInventory]] call FUNC(localEvent);
     };
+
+    // "playerVisionModeChanged" event
+    _newVisionMode = currentVisionMode ACE_player;
+    if !(_newPlayerVisionMode isEqualTo GVAR(OldPlayerVisionMode)) exitWith {
+        // Raise ACE event locally
+        GVAR(OldPlayerVisionMode) = _newPlayerVisionMode;
+        ["playerVisionModeChanged", [ACE_player, _newPlayerVisionMode]] call FUNC(localEvent);
+    };
+
+
 }, 0, []] call cba_fnc_addPerFrameHandler;
