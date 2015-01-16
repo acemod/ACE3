@@ -90,11 +90,15 @@ case (MODE_NVG_ON): {
   };
 case (MODE_NVG_ONZEUS): {
     if (isNull findDisplay 312) then {
-      GVAR(currentMode) = MODE_NVG_ON;
-      GVAR(ppEffectFilmGrain) ppEffectEnable true;
-      GVAR(ppEffectBlur) ppEffectEnable true;
-      GVAR(ppEffectRadialBlur) ppEffectEnable true;
-      GVAR(ppEffectNVGBrightness) ppEffectEnable true;
+      if ((currentVisionMode ACE_player) == 0) then {
+        GVAR(currentMode) = MODE_NVG_OFF;
+      } else {
+        GVAR(currentMode) = MODE_NVG_ON;
+        GVAR(ppEffectFilmGrain) ppEffectEnable true;
+        GVAR(ppEffectBlur) ppEffectEnable true;
+        GVAR(ppEffectRadialBlur) ppEffectEnable true;
+        GVAR(ppEffectNVGBrightness) ppEffectEnable true;
+      };
     };
   };
 };
