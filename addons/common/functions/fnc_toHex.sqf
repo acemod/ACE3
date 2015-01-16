@@ -10,7 +10,7 @@ A number
 Return Value:
 A hexadecimal number, String
 */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_number", "_minLength", "_sign", "_hex", "_rest"];
 

@@ -1,5 +1,5 @@
 // by commy2
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 #define OFFSET_1 100
 #define OFFSET_2 200
@@ -7,7 +7,7 @@
 #define OFFSET_4 400
 #define OFFSET_5 500
 
-_config = configFile >> QGVAR(Default_Keys);
+_config = configFile >> "ACE_Default_Keys";
 _count = count _config;
 
 _countPages = ceil (_count / 20) + 1;
@@ -26,7 +26,7 @@ if (GVAR(MenuPage) == _countPages - 1) then {
   for "_index" from OFFSET_1 to (OFFSET_1 + 19) do {(_dlgMenuDialog displayCtrl _index) ctrlShow false};
   for "_index" from OFFSET_2 to (OFFSET_2 + 19) do {(_dlgMenuDialog displayCtrl _index) ctrlShow false};
 
-  _config = configFile >> QGVAR(Options);
+  _config = configFile >> "ACE_Options";
   _count = count _config;
 
   _offset = 0;

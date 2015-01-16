@@ -11,7 +11,7 @@
  * Return Value:
  * Hadamard Product
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 _vector1 = _this select 0;
 _vector2 = _this select 1;

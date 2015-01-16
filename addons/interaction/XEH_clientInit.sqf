@@ -2,6 +2,8 @@
 
 #include "script_component.hpp"
 
+ACE_Modifier = 0;
+
 if (!hasInterface) exitWith {};
 
 GVAR(isOpeningDoor) = false;

@@ -134,20 +134,55 @@ PREP(monitor);
 PREP(showUser);
 
 // ACE_CuratorFix
-PREP(addUnloadEventhandler);
+PREP(addCuratorUnloadEventhandler);
 PREP(fixCrateContent);
 
-// Loop to update the ACE_player variable
+//ACE events global variables
+GVAR(events) = [[],[]];
+
+PREP(globalEvent);
+PREP(_handleNetEvent);
+PREP(addEventHandler);
+PREP(targetEvent);
+PREP(serverEvent);
+PREP(localEvent);
+PREP(removeEventHandler);
+PREP(removeAlLEventHandlers);
+
+// hashes
+PREP(hashCreate);
+PREP(hashSet);
+PREP(hashGet);
+PREP(hashHasKey);
+PREP(hashRem);
+PREP(hashListCreateList);
+PREP(hashListCreateHash);
+PREP(hashListSelect);
+PREP(hashListSet);
+PREP(hashListPush);
+
+
+
 ACE_player = player;
+
 if (hasInterface) then {
-	["ACE_CheckForPlayerChange", "onEachFrame", {
-		if !(ACE_player isEqualTo (missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player])) then {
-			_this = ACE_player;
+    // PFH to update the ACE_player variable
+    [{
+        if !(ACE_player isEqualTo (missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player])) then {
+            _oldPlayer = ACE_player;
 
-			ACE_player = missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player];
-			uiNamespace setVariable ["ACE_player", ACE_player];
+            ACE_player = missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player];
+            uiNamespace setVariable ["ACE_player", ACE_player];
 
-			[missionNamespace, "playerChanged", [ACE_player, _this]] call FUNC(callCustomEventHandlers);
-		};
-	}] call BIS_fnc_addStackedEventHandler;
+            // Raise custom event. @todo, remove
+            [missionNamespace, "playerChanged", [ACE_player, _oldPlayer]] call FUNC(callCustomEventHandlers);
+            // Raise ACE event
+            ["playerChanged", [ACE_player, _oldPlayer]] call FUNC(localEvent);
+        };
+    }, 0, []] call cba_fnc_addPerFrameHandler;
 };
+
+
+
+
+

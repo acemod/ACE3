@@ -10,7 +10,7 @@
  * Return value:
  * Crew (Array)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_vehicle", "_types", "_crew"];
 

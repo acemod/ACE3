@@ -1,5 +1,5 @@
 // by CAA-Picard
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 if (isServer) then {
   diag_log _this;

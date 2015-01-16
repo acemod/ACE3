@@ -1,13 +1,13 @@
 class CfgVehicles {
   class Module_F;
   class ACE_ModuleSwitchUnits: Module_F {
-    author = "$STR_ACE_Core_ACETeam";
+    author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
     displayName = "SwitchUnits System";
     function = FUNC(module);
     scope = 2;
     isGlobal = 1;
-    icon = PATHTOF(UI\IconSwitchUnits_ca.paa);
+    icon = QUOTE(PATHTOF(UI\IconSwitchUnits_ca.paa));
     class Arguments {
       class SwitchToWest {
         displayName = "Switch to West?";

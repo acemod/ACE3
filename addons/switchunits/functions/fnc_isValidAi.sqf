@@ -1,5 +1,5 @@
 /*
-  Name: AGM_SwitchUnits_fnc_isValidAi
+  Name: ACE_SwitchUnits_fnc_isValidAi
   
   Author(s):
     bux578
@@ -20,7 +20,7 @@ private ["_unit"];
 
 _unit = _this select 0;
 
-!([_unit] call EFUNC(Core, isPlayer)
+!([_unit] call EFUNC(common,isPlayer)
 || {_unit in playableUnits}
 || {vehicle _unit != _unit} 
 || {_unit getVariable [QGVAR(IsPlayerUnit), false]} 

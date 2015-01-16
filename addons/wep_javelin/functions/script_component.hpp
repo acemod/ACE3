@@ -1,0 +1,1 @@
+#include "\z\ace\addons\wep_javelin\script_component.hpp"

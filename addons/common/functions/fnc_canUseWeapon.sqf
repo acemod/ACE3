@@ -1,5 +1,5 @@
 // by commy2
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 // returns true if the unit is on foot or in a ffv position
 

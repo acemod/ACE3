@@ -1,5 +1,5 @@
 // by commy2
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 #define GRAY [0.25, 0.25, 0.25, 1]
 #define WHITE [1, 1, 1, 1]
@@ -35,23 +35,25 @@ for "_index1" from 10 to 13 do {(_dlgMenuDialog displayCtrl _index1) ctrlEnable 
 (_dlgMenuDialog displayCtrl 30) ctrlSetText _displayName;
 
 GVAR(keysetDefault) = compile format [
-  "_configFile = configFile >> 'GVAR(Default_Keys)' >> '%1';
+  "_configFile = configFile >> 'ACE_Default_Keys' >> '%1';
   _key = getNumber (_configFile >> 'Key');
   _shft = getNumber (_configFile >> 'Shift') == 1;
   _ctrl = getNumber (_configFile >> 'Control') == 1;
   _alt = getNumber (_configFile >> 'Alt') == 1;
 
-  _keyCode = [_key, _shft, _ctrl, _alt] call FUNC(convertKeyCode);
+  _keyCode = [_key, _shft, _ctrl, _alt] call %2;
 
-  GVAR(keyNewTemp) = [_key, [_shft, _ctrl, _alt], _keyCode];",
-  _action
+  %3 = [_key, [_shft, _ctrl, _alt], _keyCode];",
+  _action,
+  QFUNC(convertKeyCode),
+  QGVAR(keyNewTemp)
 ];
 
 _description = ctrlText _ctrlMenuDialog;
 //_ctrlMenuDialog ctrlSetText "..";
 
-_ehid_keydown = _dlgMenuDialog displayAddEventHandler ["KeyDown", "_this call GVAR(keyInput)"];
-_ehid_keyup = _dlgMenuDialog displayAddEventHandler ["KeyUp", "_this call GVAR(keyRelease)"];
+_ehid_keydown = _dlgMenuDialog displayAddEventHandler ["KeyDown", QUOTE( _this call GVAR(keyInput) )];
+_ehid_keyup = _dlgMenuDialog displayAddEventHandler ["KeyUp", QUOTE( _this call GVAR(keyRelease) )];
 
 waitUntil {
   if (count GVAR(keyNewTemp) > 0) then {

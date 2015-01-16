@@ -1,5 +1,5 @@
 /*
-  Name: AGM_SwitchUnits_fnc_nearestPlayers
+  Name: ACE_SwitchUnits_fnc_nearestPlayers
   
   Author(s):
     bux578
@@ -25,7 +25,7 @@ _radius = _this select 1;
 _nearestPlayers = [];
 
 {
-  if ([_x] call EFUNC(Core, isPlayer) && {alive _x}) then {
+  if ([_x] call EFUNC(common,isPlayer) && {alive _x}) then {
     _nearestPlayers pushBack _x;
   };
 } forEach (nearestObjects [_position, ["Man"], _radius]);

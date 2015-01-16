@@ -1,5 +1,5 @@
 /*
-  Name: AGM_SwitchUnits_fnc_markAiOnMap
+  Name: ACE_SwitchUnits_fnc_markAiOnMap
   
   Author(s):
     bux578
@@ -39,7 +39,7 @@ _sidesToShow spawn {
       if (([_x] call FUNC(isValidAi) && (side group _x in _sides)) || (_x getVariable [QGVAR(IsPlayerControlled), false])) then {
         private ["_markerName", "_marker", "_markerColor"];
 
-        //_markerName = format ["%1", [_x] call EFUNC(Core, getName)];
+        //_markerName = format ["%1", [_x] call EFUNC(common,getName)];
         _markerName = str _x;
 
         _marker = createMarkerLocal [_markerName, position _x];

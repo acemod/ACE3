@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Project name="Combat Space Enhancement"> 
+	<Package name="cse_f_states">
+		<Container ID="States">
+		</Container>
+	</Package> 
+</Project>
