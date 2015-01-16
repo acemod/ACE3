@@ -198,6 +198,9 @@
 #define SETMVAR(var1,var2) missionNamespace SETVAR_SYS(var1,var2)
 #define SETUVAR(var1,var2) uiNamespace SETVAR_SYS(var1,var2)
 
+#define GETGVAR(var1,var2) GETMVAR(GVAR(var1),var2)
+#define GETEGVAR(var1,var2,var3) GETMVAR(EGVAR(var1,var2),var3)
+
 
 #ifdef DISABLE_COMPILE_CACHE
 	#define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))

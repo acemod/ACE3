@@ -20,7 +20,7 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
-
+#include "CfgACE_Triggers.hpp"
 #include "ExplosivesUI.hpp"
 
 class CfgActions {

@@ -162,19 +162,24 @@ PREP(hashListSet);
 PREP(hashListPush);
 
 
-// Loop to update the ACE_player variable
+
 ACE_player = player;
+
 if (hasInterface) then {
-    ["ACE_CheckForPlayerChange", "onEachFrame", {
+    // PFH to update the ACE_player variable
+    [{
         if !(ACE_player isEqualTo (missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player])) then {
-            _this = ACE_player;
+            _oldPlayer = ACE_player;
 
             ACE_player = missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player];
             uiNamespace setVariable ["ACE_player", ACE_player];
 
-            [missionNamespace, "playerChanged", [ACE_player, _this]] call FUNC(callCustomEventHandlers);
+            // Raise custom event. @todo, remove
+            [missionNamespace, "playerChanged", [ACE_player, _oldPlayer]] call FUNC(callCustomEventHandlers);
+            // Raise ACE event
+            ["playerChanged", [ACE_player, _oldPlayer]] call FUNC(localEvent);
         };
-    }] call BIS_fnc_addStackedEventHandler;
+    }, 0, []] call cba_fnc_addPerFrameHandler;
 };
 
 

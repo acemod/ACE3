@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  *
- * Set all keys from the 'GVAR(Default_Keys)' base class that are missing in the current user profile.
+ * Set all keys from the 'ACE_Default_Keys' base class that are missing in the current user profile.
  *
  * Argument:
  * 1: Overwrite existing key binds? (Bool)

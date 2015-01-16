@@ -1,36 +1,48 @@
-// based on KK_fnc_playerWeaponMulfunction from KillzoneKid
+/*
+ * Author: Commy2, based on KK_fnc_playerWeaponMulfunction from KillzoneKid
+ *
+ * Jam the weapon
+ *
+ * Argument:
+ * 0: unit
+ * 1: weapon
+ *
+ * Return value:
+ * None
+ */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-private ["_unit", "_weapon", "_jammedWeapons"];
-
-_unit = _this select 0;
-_weapon = _this select 1;
+EXPLODE_2_PVT(_this,_unit,_weapon);
 
 // don't jam a weapon with no rounds left
 if (_unit ammo _weapon == 0) exitWith {};
 
+private ["_jammedWeapons"];
 _jammedWeapons = _unit getVariable [QGVAR(jammedWeapons), []];
 _jammedWeapons pushBack _weapon;
 
 _unit setVariable [QGVAR(jammedWeapons), _jammedWeapons];
 
+
 // this is to re-activate the 'DefaultAction', so you can jam a weapon while full auto shooting
-[_unit, _weapon] spawn {
-  _unit = _this select 0;
-  _weapon = _this select 1;
+_fnc_stopCurrentBurst = {
+  EXPLODE_2_PVT(_this,_params,_pfhId);
+  EXPLODE_4_PVT(_params,_unit,_weapon,_ammo,_startFrame);
 
-  _ammo = _unit ammo _weapon;
+  // Skip the first execution of the PFH
+  if (diag_frameno == _startFrame) exitWith {};
 
-  _frame = diag_frameno;
+  // Remove the PFH on the second execution
+  [_pfhId] call cba_fnc_removePerFrameHandler;
 
-  if (_ammo > 0) then {
+  _unit setAmmo [_weapon, _ammo];
+};
+
+// Stop current burst
+_ammo = _unit ammo _weapon;
+if (_ammo > 0) then {
     _unit setAmmo [_weapon, 0];
-
-    waitUntil {_frame < diag_frameno};
-
-    _unit setAmmo [_weapon, _ammo];
-    //[localize "STR_ACE_Overheating_WeaponJammed"] call EFUNC(common,displayTextStructured);
-  };
+    [_fnc_stopCurrentBurst, 0, [_unit, _weapon, _ammo, diag_frameno]] call cba_fnc_addPerFrameHandler;
 };
 
 // only display the hint once, after you try to shoot an already jammed weapon

@@ -13,6 +13,8 @@ _dlgVector = GETUVAR(ACE_dlgVector, displayNull);
 ]
 */
 
+#define MAX_ABSINCLINATION 45
+
 private ["_position", "_direction", "_azimuth", "_inclination"];
 
 _position = ATLToASL positionCameraToWorld [0,0,0];
@@ -22,5 +24,6 @@ _azimuth = ((_direction select 0) - (_position select 0)) atan2 ((_direction sel
 _inclination = asin ((_direction select 2) - (_position select 2));
 
 if (_azimuth < 0) then {_azimuth = _azimuth + 360};
+if (abs _inclination > MAX_ABSINCLINATION) then {_inclination = -1000};
 
 [_azimuth, _inclination]

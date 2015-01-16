@@ -29,7 +29,7 @@ GVAR(placer) = objNull;
 _player = ACE_player;
 [_player, "DefaultAction", _player getVariable [QGVAR(Place), -1]] call EFUNC(Common,removeActionEventHandler);
 [_player, "MenuBack", _player getVariable [QGVAR(Cancel), -1]] call EFUNC(Common,removeActionEventHandler);
-call EFUNC(Interaction,hideMouseHint);
+call EFUNC(interaction,hideMouseHint);
 if ((_setup getVariable [QGVAR(Class), ""]) != "") then {
 	_dir = (getDir _setup);
 	if (_dir > 180) then {

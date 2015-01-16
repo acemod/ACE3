@@ -1,13 +1,29 @@
-// by commy2 and CAA-Picard
+/*
+ * Author: Commy2 and CAA-Picard
+ *
+ * Heat up the weapon
+ *
+ * Argument:
+ * 0: unit
+ * 1: weapon
+ * 2: ammo
+ * 3: projectile
+ * 4: velocity
+ *
+ * Return value:
+ * None
+ */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-private ["_unit", "_weapon", "_ammo", "_projectile", "_velocity", "_variableName", "_overheat", "_temperature", "_time", "_energyIncrement", "_barrelMass", "_scaledTemperature"];
-
+private ["_unit", "_weapon", "_ammo", "_projectile"];
 _unit = _this select 0;
 _weapon = _this select 1;
 _ammo = _this select 4;
 _projectile = _this select 6;
+
 _velocity = velocity _projectile;
+
+private ["_variableName", "_overheat", "_temperature", "_time", "_energyIncrement", "_barrelMass", "_scaledTemperature"];
 
 // each weapon has it's own variable. Can't store the temperature in the weapon since they are not objects unfortunately.
 _variableName = format [QGVAR(%1), _weapon];

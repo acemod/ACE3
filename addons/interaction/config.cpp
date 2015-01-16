@@ -68,9 +68,9 @@ class ACE_Default_Keys {
   class modifierKey {
     displayName = "$STR_ACE_Interaction_ModifierKey";
     condition = "";
-    statement = QUOTE(GVAR(Modifier) = 1;);
+    statement = QUOTE(ACE_Modifier = 1;);
     conditionUp = "";
-    statementUp = QUOTE(GVAR(Modifier) = 0;);
+    statementUp = QUOTE(ACE_Modifier = 0;);
     exceptions[] = {"ACE_Drag_isNotDragging"};
     key = 29;
     shift = 0;
@@ -94,9 +94,6 @@ class ACE_Options {
   };
 };
 
-class ACE_Parameters {
-  ACE_Modifier = 0;
-};
 class ACE_Parameters_Boolean {
   ACE_Interaction_EnableTeamManagement = 1;
 };

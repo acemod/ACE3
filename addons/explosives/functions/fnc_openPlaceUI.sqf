@@ -36,14 +36,14 @@ _itemCount = [];
 	};
 } forEach _mags;
 _actions = [localize "STR_ACE_Explosives_PlaceMenu", localize "STR_ACE_Explosives_Place"]
-	call EFUNC(Interaction,prepareSelectMenu);
+	call EFUNC(interaction,prepareSelectMenu);
 {
 	_actions = [
 		_actions,
 		format [getText(_x >> "displayName") + " (%1)", _itemCount select _foreachIndex],
 		getText(_x >> "picture"),
 		configName _x
-	] call EFUNC(Interaction,AddSelectableItem);
+	] call EFUNC(interaction,AddSelectableItem);
 } foreach _list;
 
 [
@@ -52,9 +52,9 @@ _actions = [localize "STR_ACE_Explosives_PlaceMenu", localize "STR_ACE_Explosive
 		[_this] call FUNC(openTriggerSelectionUI);
 	},
 	{
-		call EFUNC(Interaction,hideMenu);
-		if !(profileNamespace getVariable [QUOTE( EGVAR(Interaction,AutoCloseMenu) ), false]) then {
-			"ACE_Explosives" call EFUNC(Interaction,openMenuSelf);
+		call EFUNC(interaction,hideMenu);
+		if !(profileNamespace getVariable [EGVAR(interaction,AutoCloseMenu), false]) then {
+			"ACE_Explosives" call EFUNC(interaction,openMenuSelf);
 		};
 	}
-] call EFUNC(Interaction,openSelectMenu);
+] call EFUNC(interaction,openSelectMenu);
