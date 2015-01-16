@@ -67,3 +67,19 @@ enableCamShake true;
         [_this select 1] call FUNC(setName)
     };
 }] call FUNC(addCustomEventhandler);
+
+
+
+[QGVAR(ENABLE_REVIVE_COUNTER), 0, false, QGVAR(ADDON)] call FUNC(defineVariable);
+[QGVAR(inReviveState), false, true, QGVAR(ADDON)] call FUNC(defineVariable);
+[QGVAR(isDead),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
+[QGVAR(isDeadPlayer), false, true, QUOTE(ADDON)] call FUNC(defineVariable);
+[QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
+[QGVAR(StateUnconscious),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
+[QGVAR(ENABLE_REVIVE_SETDEAD_F),0,false,QUOTE(ADDON)] call FUNC(defineVariable);
+[QGVAR(carriedBy),objNull,false,QUOTE(ADDON)] call FUNC(defineVariable);
+
+if (isNil QGVAR(ENABLE_REVIVE_F)) then {
+    GVAR(ENABLE_REVIVE_F) = 0;
+};
+

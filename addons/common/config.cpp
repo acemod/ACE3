@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {"ACE_Box_Misc"};
         weapons[] = {"ACE_ItemCore","ACE_FakePrimaryWeapon"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_main"};
+        requiredAddons[] = {"ace_main", "ace_gui"};
         author[] = {"KoffeinFlummi"};
         authorUrl = "https://github.com/KoffeinFlummi/";
         VERSION_CONFIG;
@@ -80,3 +80,4 @@ class RscAttributeInventory: RscControlsGroupNoScrollbars {
 #include <FixPickup.hpp>
 #include <FixAnimations.hpp>
 #include <NoVoice.hpp>
+
