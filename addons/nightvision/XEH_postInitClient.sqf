@@ -3,10 +3,10 @@
 
 if (!hasInterface) exitWith {};
 
-GVAR(ppEffectBlur) = ppEffectCreate ["dynamicBlur", 1234];  
+GVAR(ppEffectBlur) = ppEffectCreate ["dynamicBlur", 1234];
 GVAR(ppEffectBlur) ppEffectForceInNVG true;
-GVAR(ppEffectBlur) ppEffectAdjust [0]; 
-GVAR(ppEffectBlur) ppEffectCommit 0;  
+GVAR(ppEffectBlur) ppEffectAdjust [0];
+GVAR(ppEffectBlur) ppEffectCommit 0;
 
 GVAR(ppEffectRadialBlur) = ppEffectCreate ["radialBlur", 1238];
 GVAR(ppEffectRadialBlur) ppEffectForceInNVG true;
@@ -28,11 +28,10 @@ GVAR(ppEffectMuzzleFlash) ppEffectForceInNVG true;
 GVAR(ppEffectMuzzleFlash) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
 GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 
-//Setup global variables for the ppEffectUpdater
-GVAR(lastFrameView) = "";
-GVAR(lastFrameVehicle) = objNull;
-GVAR(lastFrameTurret) = [-1];
-GVAR(lastFrameHMD) = "";
-GVAR(currentMode) = 0;
-
-[FUNC(updatePPEffectsEachFrame), 0, []] call CBA_fnc_addPerFrameHandler;
+// Setup the event handlers
+["playerInventoryChanged",  FUNC(updatePPEffects)] call EFUNC(common,addEventHandler);
+["playerVisionModeChanged", FUNC(updatePPEffects)] call EFUNC(common,addEventHandler);
+["zeusDisplayChanged",      FUNC(updatePPEffects)] call EFUNC(common,addEventHandler);
+["cameraViewChanged",       FUNC(updatePPEffects)] call EFUNC(common,addEventHandler);
+["playerVehicleChanged",    FUNC(updatePPEffects)] call EFUNC(common,addEventHandler);
+["playerTurretChanged",     FUNC(updatePPEffects)] call EFUNC(common,addEventHandler);
