@@ -17,38 +17,38 @@
 #define CONSTANT_SCALE        0.2
 
 // If markers exist and they should'nt, delete them
-if (!("ACE_MapTools" in items player) || {GVAR(mapTool_Shown) == 0}) then {
+if (!("ACE_MapTools" in items ACE_player) || {GVAR(mapTool_Shown) == 0}) then {
   // If markers exist, delete them
   if (!isNil QGVAR(mapTool_markerRotatingFixed)) then {
     deleteMarkerLocal MARKERNAME_MAPTOOL_FIXED;
     GVAR(mapTool_markerRotatingFixed) = nil;
   };
 };
-if (!("ACE_MapTools" in items player) || {GVAR(mapTool_Shown) != 1}) then {
-  if (!isNil "GVAR(mapTool_markerRotatingNormal)") then {
+if (!("ACE_MapTools" in items ACE_player) || {GVAR(mapTool_Shown) != 1}) then {
+  if (!isNil QGVAR(mapTool_markerRotatingNormal)) then {
     deleteMarkerLocal MARKERNAME_MAPTOOL_ROTATINGNORMAL;
     GVAR(mapTool_markerRotatingNormal) = nil;
   };
 };
-if (!("ACE_MapTools" in items player) || {GVAR(mapTool_Shown) != 2}) then {
-  if (!isNil "GVAR(mapTool_markerRotatingSmall)") then {
+if (!("ACE_MapTools" in items ACE_player) || {GVAR(mapTool_Shown) != 2}) then {
+  if (!isNil QGVAR(mapTool_markerRotatingSmall)) then {
     deleteMarkerLocal MARKERNAME_MAPTOOL_ROTATINGSMALL;
     GVAR(mapTool_markerRotatingSmall) = nil;
   };
 };
 
-if (!("ACE_MapTools" in items player)|| {GVAR(mapTool_Shown) == 0}) exitWith {};
+if (!("ACE_MapTools" in items ACE_player)|| {GVAR(mapTool_Shown) == 0}) exitWith {};
 
 // If markers don't exist and should, create them
 if (isNil QGVAR(mapTool_markerRotatingFixed)) then {
   GVAR(mapTool_markerRotatingFixed) = createMarkerLocal [MARKERNAME_MAPTOOL_FIXED, GVAR(mapTool_pos)];
   MARKERNAME_MAPTOOL_FIXED setMarkerType MARKERNAME_MAPTOOL_FIXED;
 };
-if ((isNil "GVAR(mapTool_markerRotatingNormal)") && {GVAR(mapTool_Shown) == 1}) then {
+if ((isNil QGVAR(mapTool_markerRotatingNormal)) && {GVAR(mapTool_Shown) == 1}) then {
   GVAR(mapTool_markerRotatingNormal) = createMarkerLocal [MARKERNAME_MAPTOOL_ROTATINGNORMAL, GVAR(mapTool_pos)];
   MARKERNAME_MAPTOOL_ROTATINGNORMAL setMarkerType MARKERNAME_MAPTOOL_ROTATINGNORMAL;
 };
-if ((isNil "GVAR(mapTool_markerRotatingSmall)") && {GVAR(mapTool_Shown) == 2}) then {
+if ((isNil QGVAR(mapTool_markerRotatingSmall)) && {GVAR(mapTool_Shown) == 2}) then {
   GVAR(mapTool_markerRotatingSmall) = createMarkerLocal [MARKERNAME_MAPTOOL_ROTATINGSMALL, GVAR(mapTool_pos)];
   MARKERNAME_MAPTOOL_ROTATINGSMALL setMarkerType MARKERNAME_MAPTOOL_ROTATINGSMALL;
 };

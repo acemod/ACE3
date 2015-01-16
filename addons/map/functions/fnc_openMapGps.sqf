@@ -1,42 +1,24 @@
 /*
- * Author: CAA-Picard
- *
- * Opens or closes the gps on the map screen, showing coordinates
- *
- * Argument:
- * 0: Open GPS? (Boolean)
- *
- * Return value:
- * Nothing
- */
+* Author: CAA-Picard
+*
+* Opens or closes the gps on the map screen, showing coordinates
+*
+* Argument:
+* 0: Open GPS? (Boolean)
+*
+* Return value:
+* Nothing
+*/
 
 #include "script_component.hpp"
 
-_open = _this select 0;
+_shouldOpenGps = _this select 0;
 _isOpen = !(isNull (uiNamespace getVariable [QGVAR(ui_mapGpsDisplay), displayNull]));
 
-if (_open && {"ItemGPS" in assignedItems player} && {!_isOpen}) then {
+if (_shouldOpenGps && {"ItemGPS" in assignedItems ACE_player} && {!_isOpen}) then {
   ("RscACE_MapGps" call BIS_fnc_rscLayer) cutRsc ["RscACE_MapGps","PLAIN"];
 
-  // Spawn a thread to update gps display
-  [] spawn {
-    disableSerialization;
-    while {!(isNull (uiNamespace getVariable [QGVAR(ui_mapGpsDisplay), displayNull]))} do {
-      if !("ItemGPS" in assignedItems player) exitWith {};
-
-      _mapGpsDisplay = uiNamespace getVariable [QGVAR(ui_mapGpsDisplay), displayNull];
-      _ctrl = _mapGpsDisplay displayCtrl 913590;
-      _ctrl ctrlSetText str(round(getDir player));
-      _ctrl = _mapGpsDisplay displayCtrl 913591;
-      _ctrl ctrlSetText str(round((getPosASL player) select 2));
-      _ctrl = _mapGpsDisplay displayCtrl 913592;
-      _ctrl ctrlSetText mapGridPosition player;
-
-      sleep 0.5;
-    };
-    ("RscACE_MapGps" call BIS_fnc_rscLayer) cutText ["","PLAIN"];
-  };
-
+  [FUNC(openMapGpsUpdate), 0.5, []] call CBA_fnc_addPerFrameHandler;  //update bearing/altitude every 0.5 sec (ticktime)
 } else {
   ("RscACE_MapGps" call BIS_fnc_rscLayer) cutText ["","PLAIN"];
 };

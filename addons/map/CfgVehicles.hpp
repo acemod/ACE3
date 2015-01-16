@@ -20,8 +20,8 @@ class CfgVehicles {
 
         class ACE_MapToolsHide {
           displayName = "$STR_ACE_Map_MapToolsHide";
-          condition = "(call ACE_Map_fnc_canUseMapTools) && {ACE_Map_mapToolsShown > 0}";
-          statement = "ACE_Map_mapToolsShown = 0; [] call ACE_Map_fnc_updateMapToolMarkers";
+          condition = "(call ACE_Map_fnc_canUseMapTools) && {ACE_Map_mapTool_Shown > 0}";
+          statement = "ACE_Map_mapTool_Shown = 0; [] call ACE_Map_fnc_updateMapToolMarkers";
           exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Core_notOnMap"};
           showDisabled = 1;
           priority = 5;
@@ -29,8 +29,8 @@ class CfgVehicles {
         };
         class ACE_MapToolsShowNormal {
           displayName = "$STR_ACE_Map_MapToolsShowNormal";
-          condition = "(call ACE_Map_fnc_canUseMapTools) && {ACE_Map_mapToolsShown != 1}";
-          statement = "ACE_Map_mapToolsShown = 1; [] call ACE_Map_fnc_updateMapToolMarkers";
+          condition = "(call ACE_Map_fnc_canUseMapTools) && {ACE_Map_mapTool_Shown != 1}";
+          statement = "ACE_Map_mapTool_Shown = 1; [] call ACE_Map_fnc_updateMapToolMarkers";
           exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Core_notOnMap"};
           showDisabled = 1;
           priority = 4;
@@ -38,8 +38,8 @@ class CfgVehicles {
         };
         class ACE_MapToolsShowSmall {
           displayName = "$STR_ACE_Map_MapToolsShowSmall";
-          condition = "(call ACE_Map_fnc_canUseMapTools) && {ACE_Map_mapToolsShown != 2}";
-          statement = "ACE_Map_mapToolsShown = 2; [] call ACE_Map_fnc_updateMapToolMarkers";
+          condition = "(call ACE_Map_fnc_canUseMapTools) && {ACE_Map_mapTool_Shown != 2}";
+          statement = "ACE_Map_mapTool_Shown = 2; [] call ACE_Map_fnc_updateMapToolMarkers";
           exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Core_notOnMap"};
           showDisabled = 1;
           priority = 3;
@@ -47,7 +47,7 @@ class CfgVehicles {
         };
         class ACE_MapToolsAlignNorth {
           displayName = "$STR_ACE_Map_MapToolsAlignNorth";
-          condition = "(call ACE_Map_fnc_canUseMapTools) && {ACE_Map_mapToolsShown != 0}";
+          condition = "(call ACE_Map_fnc_canUseMapTools) && {ACE_Map_mapTool_Shown != 0}";
           statement = "ACE_Map_angle = 0; [] call ACE_Map_fnc_updateMapToolMarkers";
           exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Core_notOnMap"};
           showDisabled = 1;
@@ -56,7 +56,7 @@ class CfgVehicles {
         };
         class ACE_MapToolsAlignCompass {
           displayName = "$STR_ACE_Map_MapToolsAlignCompass";
-          condition = "(call ACE_Map_fnc_canUseMapTools) && {ACE_Map_mapToolsShown != 0} && {(""ItemCompass"" in assignedItems player) || {""ItemGPS"" in assignedItems player}}";
+          condition = "(call ACE_Map_fnc_canUseMapTools) && {ACE_Map_mapTool_Shown != 0} && {(""ItemCompass"" in assigneditems ACE_player) || {""ItemGPS"" in assigneditems ACE_player}}";
           statement = "ACE_Map_angle = getDir player; [] call ACE_Map_fnc_updateMapToolMarkers";
           exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Core_notOnMap"};
           showDisabled = 1;
@@ -87,7 +87,7 @@ class CfgVehicles {
     class ACE_Actions {
       class ACE_CopyMap {
         displayName = "$STR_ACE_Map_CopyMap";
-        condition = "isPlayer ACE_Interaction_Target && {""ItemMap"" in assignedItems player} && {""ACE_MapTools"" in items player} && {""ItemMap"" in assignedItems ACE_Interaction_Target}";
+        condition = "isPlayer ACE_Interaction_Target && {""ItemMap"" in assigneditems ACE_player} && {""ACE_MapTools"" in items ACE_player} && {""ItemMap"" in assignedItems ACE_Interaction_Target}";
         statement = "[player, ""ACE_Map_fnc_sendMapMarkers"", ACE_Interaction_Target] call ACE_Core_fnc_execRemoteFnc";
         showDisabled = 0;
         priority = -1;
@@ -135,7 +135,7 @@ class CfgVehicles {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
     displayName = "Blue Force Tracking";
-    function = "ACE_Map_fnc_blueForceTracking";
+    function = QFUNC(blueForceTrackingModule);
     scope = 2;
     isGlobal = 1;
     icon = PATHTOF(UI\IconBFTracking_ca.paa);

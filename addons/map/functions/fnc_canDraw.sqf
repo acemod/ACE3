@@ -3,4 +3,4 @@
 #include "script_component.hpp"
 
 (missionNameSpace getVariable [QGVAR(drawing_syncMarkers), true] && {GVAR(EveryoneCanDrawOnBriefing)}) ||
-{(!isNull player) && {"ACE_MapTools" in items player}}
+{(!isNull ACE_player) && {"ACE_MapTools" in items ACE_player}}

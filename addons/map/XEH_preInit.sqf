@@ -1,7 +1,8 @@
 #include "script_component.hpp"
 
 PREP(addLineMarker);
-PREP(blueForceTracking);
+PREP(blueForceTrackingModule);
+PREP(blueForceTrackingUpdate);
 PREP(calculateMapScale);
 PREP(cancelDrawing);
 PREP(canDraw);
@@ -13,7 +14,9 @@ PREP(handleMouseButton);
 PREP(handleMouseMove);
 PREP(handleMouseZChanged);
 PREP(isInsideMapTool);
+PREP(mapStateUpdater);
 PREP(openMapGps);
+PREP(openMapGpsUpdate);
 PREP(removeLineMarker);
 PREP(sendMapMarkers);
 PREP(updateMapToolMarkers);
