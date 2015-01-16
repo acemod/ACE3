@@ -33,7 +33,7 @@ if (_silencer != "") then {
 _visibleFire = getNumber (configFile >> "CfgAmmo" >> _ammo >> "visibleFire");
 _visibleFireTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "visibleFireTime");
 
-_nvgBrightnessCoef = 1 + (_player getVariable [QUOTE( GVAR(NVGBrightness) ), 0]) / 4;
+_nvgBrightnessCoef = 1 + (_player getVariable [QGVAR(NVGBrightness), 0]) / 4;
 
 _fnc_isTracer = {
   private ["_indexShot", "_lastRoundsTracer", "_tracersEvery"];
