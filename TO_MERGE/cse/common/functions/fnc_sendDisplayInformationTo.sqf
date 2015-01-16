@@ -19,7 +19,7 @@ _parameters = [_this, 4, [], [[]]] call BIS_fnc_Param;
 
 if (isPlayer _reciever) then {
 	if (!local _reciever) then {
-		[_this, QUOTE(FUNC(sendDisplayInformationTo)), _reciever, false] spawn EFUNC(common,execRemoteFnc);
+		[_this, QUOTE(FUNC(sendDisplayInformationTo)), _reciever, false] call EFUNC(common,execRemoteFnc);
 	} else {
 
 		if (isLocalized _title) then {
