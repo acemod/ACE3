@@ -41,7 +41,12 @@ switch (_this select 0) do {
                 "azimuth" call _fnc_setPFH;
             };
         } else {
-            "azimuth+distance" call _fnc_setPFH;
+            if (GETGVAR(isKeyDownDistance,false)) then {
+                "azimuth+distance" call _fnc_setPFH;
+            } else {
+                ["distance"] call FUNC(clearDisplay);
+                "azimuth" call _fnc_setPFH;
+            };
         };
 
     };
@@ -50,6 +55,11 @@ switch (_this select 0) do {
 
         // prevent additinal modifier input if advanced mode it set, spaghetti
         if (GETGVAR(isKeyDownAzimuth,false) && {GETGVAR(currentMode,"") in ["relative_azimuth+distance", "fall_of_short"]}) exitWith {};
+
+        // toggle fos values
+        if (GETGVAR(currentMode,"") == "fall_of_short") exitWith {
+            [!(GETGVAR(FOSState,true))] call FUNC(showFallOfShort);
+        };
 
         ["distance"] call FUNC(clearDisplay);
 
@@ -65,10 +75,15 @@ switch (_this select 0) do {
         if (diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.5) then {
             if !(GETGVAR(isKeyDownAzimuth,false)) then {
                 ["azimuth"] call FUNC(clearDisplay);
-                "distance" call _fnc_setPFH; 
+                "distance" call _fnc_setPFH;
             };
         } else {
-            "azimuth+distance" call _fnc_setPFH;
+            if (GETGVAR(isKeyDownAzimuth,false)) then {
+                "azimuth+distance" call _fnc_setPFH;
+            } else {
+                ["azimuth"] call FUNC(clearDisplay);
+                "distance" call _fnc_setPFH;
+            };
         };
 
     };

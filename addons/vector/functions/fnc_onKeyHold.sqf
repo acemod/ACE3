@@ -10,9 +10,14 @@ PFH executed while holding a vector key down.
 switch (_this select 0) do {
     case ("azimuth"): {
 
+        private "_isReady";
+        _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.2;
+
         [false] call FUNC(showCenter);
 
-        call FUNC(showAzimuth);
+        if (_isReady) then {
+            call FUNC(showAzimuth);
+        };
 
         if (!GVAR(isKeyDownAzimuth)) then {
             [_this select 1] call CBA_fnc_removePerFrameHandler;
@@ -186,7 +191,8 @@ switch (_this select 0) do {
 
         if (!GVAR(isKeyDownAzimuth) && {!GVAR(isKeyDownDistance)}) then {
             if (_isReady) then {
-                call FUNC(showFallOfShort);
+                GVAR(FOSData) = call FUNC(getFallOfShort);//
+                [false] call FUNC(showFallOfShort);
             };
             [false] call FUNC(showCenter);
             [false] call FUNC(showP1);
@@ -202,4 +208,4 @@ switch (_this select 0) do {
 
 };
 
-systemChat str (_this select 0);//
+//systemChat str (_this select 0);
