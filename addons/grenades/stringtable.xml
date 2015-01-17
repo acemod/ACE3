@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-09-11 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="Grenades">
-    <Key ID="STR_AGM_Grenades_SwitchGrenadeMode">
+    <Key ID="STR_ACE_Grenades_SwitchGrenadeMode">
       <English>Switch Grenade Mode</English>
       <German>Granaten-Modus wechseln</German>
       <Spanish>Cambiar modo de granada</Spanish>
@@ -14,7 +14,7 @@
       <Italian>Cambia tipo di granata</Italian>
       <Portuguese>Alternar Modo de Granada</Portuguese>
     </Key>
-    <Key ID="STR_AGM_Grenades_NormalThrow">
+    <Key ID="STR_ACE_Grenades_NormalThrow">
       <English>Normal Throw</English>
       <German>Normaler Wurf</German>
       <Spanish>Lanzamiento normal</Spanish>
@@ -26,7 +26,7 @@
       <Italian>Lancio normale</Italian>
       <Portuguese>Arremesso Normal</Portuguese>
     </Key>
-    <Key ID="STR_AGM_Grenades_HighThrow">
+    <Key ID="STR_ACE_Grenades_HighThrow">
       <English>High Throw</English>
       <German>Hoher Wurf</German>
       <Spanish>Lanzamiento alto</Spanish>
@@ -38,7 +38,7 @@
       <Italian>Lancio verso l'alto</Italian>
       <Portuguese>Arremesso Alto</Portuguese>
     </Key>
-    <Key ID="STR_AGM_Grenades_PreciseThrow">
+    <Key ID="STR_ACE_Grenades_PreciseThrow">
       <English>Precise Throw</English>
       <German>Präziser Wurf</German>
       <Spanish>Lanzamiento preciso</Spanish>
@@ -50,7 +50,7 @@
       <Italian>Lancio preciso</Italian>
       <Portuguese>Arremesso Preciso</Portuguese>
     </Key>
-    <Key ID="STR_AGM_Grenades_RollGrenade">
+    <Key ID="STR_ACE_Grenades_RollGrenade">
       <English>Roll Grenade</English>
       <German>Granate rollen</German>
       <Spanish>Rodar granada</Spanish>
@@ -62,7 +62,7 @@
       <Italian>Fai rotolare la granata</Italian>
       <Portuguese>Rolar Granada</Portuguese>
     </Key>
-    <Key ID="STR_AGM_Grenades_DropGrenade">
+    <Key ID="STR_ACE_Grenades_DropGrenade">
       <English>Drop Grenade</English>
       <German>Granate fallenlassen</German>
       <Spanish>Soltar granada</Spanish>
@@ -74,7 +74,7 @@
       <Italian>Lascia la granata</Italian>
       <Portuguese>Largar Granada</Portuguese>
     </Key>
-    <Key ID="STR_AGM_Grenades_M84_Name">
+    <Key ID="STR_ACE_Grenades_M84_Name">
       <English>M84 Stun Grenade</English>
       <German>M84 Blendgranate</German>
       <Spanish>Granada aturdidora M84</Spanish>
@@ -86,7 +86,7 @@
       <Italian>Granata Stordente M84</Italian>
       <Portuguese>M84 granada de atordoamento</Portuguese>
     </Key>
-    <Key ID="STR_AGM_Grenades_M84_Description">
+    <Key ID="STR_ACE_Grenades_M84_Description">
       <English>Also known as flashbang. Causes immediate flash blindness, deafness, tinnitus, and inner ear disturbance.</English>
       <German>Verursacht temporäre Blind- und Taubheit.</German>
       <Spanish>Produce de manera inmediata ceguera, sordera, tinitus y afecta el oído interior.</Spanish>
@@ -98,7 +98,7 @@
       <Italian>Anche conosciuta come flashbang. Causa accecamento immediato, sensazioni di sposatezza, mancanza d'equilibrio e disturbi al timpano.</Italian>
       <Portuguese>Um tipo de granada não-letal destinado a confundir, desorientar e distrair uma potencial ameaça.</Portuguese>
     </Key>
-    <Key ID="STR_AGM_Grenades_M127A1_White_Name">
+    <Key ID="STR_ACE_Grenades_M127A1_White_Name">
       <English>M127A1 Hand Held Signal (White)</English>
       <German>M127A1 Leuchtmittel (Weiß)</German>
       <Czech> M127A1 Světlice (Bílá)</Czech>
@@ -110,7 +110,7 @@
       <Spanish>Bengala M127A1 (Blanca)</Spanish>
       <French>M127A1 Feux à main (Blanc)</French>
     </Key>
-    <Key ID="STR_AGM_Grenades_M127A1_Red_Name">
+    <Key ID="STR_ACE_Grenades_M127A1_Red_Name">
       <English>M127A1 Hand Held Signal (Red)</English>
       <German>M127A1 Leuchtmittel (Rot)</German>
       <Czech>M127A1 Světlice (Červená)</Czech>
@@ -122,7 +122,7 @@
       <Spanish>Bengala M127A1 (Roja)</Spanish>
       <French>M127A1 Feux à main (Rouge)</French>
     </Key>
-    <Key ID="STR_AGM_Grenades_M127A1_Green_Name">
+    <Key ID="STR_ACE_Grenades_M127A1_Green_Name">
       <English>M127A1 Hand Held Signal (Green)</English>
       <German>M127A1 Leuchtmittel (Grün)</German>
       <Czech>M127A1 Světlice (Zelená)</Czech>
@@ -134,7 +134,7 @@
       <Spanish>Bengala M127A1 (Verde)</Spanish>
       <French>M127A1 Feux à main (Vert)</French>
     </Key>
-    <Key ID="STR_AGM_Grenades_M127A1_Yellow_Name">
+    <Key ID="STR_ACE_Grenades_M127A1_Yellow_Name">
       <English>M127A1 Hand Held Signal (Yellow)</English>
       <German>M127A1 Leuchtmittel (Gelb)</German>
       <Czech>M127A1 Světlice (Žlutá)</Czech>
@@ -146,7 +146,7 @@
       <Spanish>Bengala M127A1 (Amarilla)</Spanish>
       <French>M127A1 Feux à main (Jaune)</French>
     </Key>
-    <Key ID="STR_AGM_Grenades_M127A1_White_Description">
+    <Key ID="STR_ACE_Grenades_M127A1_White_Description">
       <English>White Hand Flare</English>
       <German>Weiße Leuchtkugel, wird wie eine Granate geworfen.</German>
       <Czech>Světlice (Bílá)</Czech>
@@ -158,7 +158,7 @@
       <Spanish>Bengala (Blanca)</Spanish>
       <French>Feux à main (Blanc)</French>
     </Key>
-    <Key ID="STR_AGM_Grenades_M127A1_Red_Description">
+    <Key ID="STR_ACE_Grenades_M127A1_Red_Description">
       <English>Red Hand Flare</English>
       <German>Rote Leuchtkugel, wird wie eine Granate geworfen.</German>
       <Czech>Světlice (Červená)</Czech>
@@ -170,7 +170,7 @@
       <Spanish>Bengala (Roja)</Spanish>
       <French>Feux à main (Rouge)</French>
     </Key>
-    <Key ID="STR_AGM_Grenades_M127A1_Green_Description">
+    <Key ID="STR_ACE_Grenades_M127A1_Green_Description">
       <English>Green Hand Flare</English>
       <German>Grüne Leuchtkugel, wird wie eine Granate geworfen.</German>
       <Czech>Světlice (Zelená)</Czech>
@@ -182,7 +182,7 @@
       <Spanish>Bengala (Verde)</Spanish>
       <French>Feux à main (Vert)</French>
     </Key>
-    <Key ID="STR_AGM_Grenades_M127A1_Yellow_Description">
+    <Key ID="STR_ACE_Grenades_M127A1_Yellow_Description">
       <English>Yellow Hand Flare</English>
       <German>Gelbe Leuchtkugel, wird wie eine Granate geworfen.</German>
       <Czech>Světlice Žlutá</Czech>
@@ -194,7 +194,7 @@
       <Spanish>Bengala (Amarilla)</Spanish>
       <French>Feux à main (Jaune)</French>
     </Key>
-    <Key ID="STR_AGM_Grenades_M127A1_White_NameShort">
+    <Key ID="STR_ACE_Grenades_M127A1_White_NameShort">
       <English>M127A1 (White)</English>
       <German>M127A1 (Weiß)</German>
       <Czech>M127A1 (Bílá)</Czech>
@@ -206,7 +206,7 @@
       <Russian>M127A1 (Белый)</Russian>
       <Spanish>M127A1 (Blanca)</Spanish>
     </Key>
-    <Key ID="STR_AGM_Grenades_M127A1_Red_NameShort">
+    <Key ID="STR_ACE_Grenades_M127A1_Red_NameShort">
       <English>M127A1 (Red)</English>
       <German>M127A1 (Rot)</German>
       <Czech>M127A1 (Červená)</Czech>
@@ -218,7 +218,7 @@
       <Russian>M127A1 (Красный)</Russian>
       <Spanish>M127A1 (Roja)</Spanish>
     </Key>
-    <Key ID="STR_AGM_Grenades_M127A1_Green_NameShort">
+    <Key ID="STR_ACE_Grenades_M127A1_Green_NameShort">
       <English>M127A1 (Green)</English>
       <German>M127A1 (Grün)</German>
       <Czech>M127A1 (Zelená)</Czech>
@@ -230,7 +230,7 @@
       <Russian>M127A1 (Зелёный)</Russian>
       <Spanish>M127A1 (Verde)</Spanish>
     </Key>
-    <Key ID="STR_AGM_Grenades_M127A1_Yellow_NameShort">
+    <Key ID="STR_ACE_Grenades_M127A1_Yellow_NameShort">
       <English>M127A1 (Yellow)</English>
       <German>M127A1 (Gelb)</German>
       <Czech>M127A1 (Žlutá)</Czech>
