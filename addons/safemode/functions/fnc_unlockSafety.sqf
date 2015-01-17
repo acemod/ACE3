@@ -1,25 +1,23 @@
 // by commy2
+#include "script_component.hpp"
 
-private ["_unit", "_weapon", "_muzzle", "_safedWeapons"];
+EXPLODE_3_PVT(_this,_unit,_weapon,_muzzle);
 
-_unit = _this select 0;
-_weapon = _this select 1;
-_muzzle = _this select 2;
-
-_safedWeapons = _unit getVariable ["AGM_SafeMode_safedWeapons", []];
+private ["_safedWeapons"];
+_safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
 
 if (_weapon in _safedWeapons) then {
   _safedWeapons = _safedWeapons - [_weapon];
 
-  _unit setVariable ["AGM_SafeMode_safedWeapons", _safedWeapons];
+  _unit setVariable [QGVAR(safedWeapons), _safedWeapons];
 
   if (count _safedWeapons == 0) then {
     private "_id";
-    _id = _unit getVariable ["AGM_SafeWeapon_actionID", -1];
+    _id = _unit getVariable [QGVAR(actionID), -1];
 
-    //[_unit, "DefaultAction", _id] call AGM_Core_fnc_removeActionMenuEventHandler;
-    [_unit, "DefaultAction", _id] call AGM_Core_fnc_removeActionEventHandler;
-    _unit setVariable ["AGM_SafeWeapon_actionID", -1];
+    //[_unit, "DefaultAction", _id] call EFUNC(common,removeActionMenuEventHandler);
+    [_unit, "DefaultAction", _id] call EFUNC(common,removeActionEventHandler);
+    _unit setVariable [QGVAR(actionID), -1];
   };
 };
 
@@ -53,12 +51,12 @@ if (inputAction "nextWeapon" > 0) then {
   };
 } else {
   // play fire mode selector sound
-  [_unit, _weapon, _muzzle] call AGM_SafeMode_fnc_playChangeFiremodeSound;
+  [_unit, _weapon, _muzzle] call FUNC(playChangeFiremodeSound);
 };
 
 // player hud
-[true] call AGM_SafeMode_fnc_setSafeModeVisual;
+[true] call FUNC(setSafeModeVisual);
 
 private "_picture";
 _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
-[localize "STR_AGM_SafeMode_TookOffSafety", _picture] call AGM_Core_fnc_displayTextPicture;
+[localize "STR_ACE_SafeMode_TookOffSafety", _picture] call EFUNC(common,displayTextPicture);
