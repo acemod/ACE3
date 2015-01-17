@@ -27,7 +27,7 @@ if (!local _unit) exitwith {
 [_unit, ObjNull, [0,0,0]] call FUNC(carryObj);
 
 // Set the unit in the unconscious state.
-_unit setvariable [QGVAR(StateUnconscious),true,true];
+_unit setvariable ["ACE_isUnconscious",true,true];
 _unit setUnconscious true;
 
 // If a unit has the launcher out, it will sometimes start selecting the primairy weapon while unconscious,
@@ -51,7 +51,7 @@ if (isPlayer _unit) then {
 };
 
 // So the AI does not get stuck, we are moving the unit to a temp group on its own.
-[_unit, true, QGVAR(StateUnconscious), side group _unit] call FUNC(switchToGroupSide_f);
+[_unit, true, "ACE_isUnconscious", side group _unit] call FUNC(switchToGroupSide_f);
 
 _captiveSwitch = [_unit, true] call FUNC(setCaptiveSwitch);
 [_unit, [_unit] call FUNC(getDeathAnim), 1, true] call FUNC(doAnimation);
@@ -112,7 +112,7 @@ _minWaitingTime = (round(random(10)+5));
 			_unit setUnconscious false;
 
 			// Swhich the unit back to its original group
-			[_unit, false, QGVAR(StateUnconscious), side group _unit] call FUNC(switchToGroupSide_f);
+			[_unit, false, "ACE_isUnconscious", side group _unit] call FUNC(switchToGroupSide_f);
 
 			// Reset any visual and audio effects for players, or enable everything again for AI.
 			if (isPlayer _unit) then {
@@ -125,7 +125,7 @@ _minWaitingTime = (round(random(10)+5));
 			};
 
 			// Move unit out of unconscious state
-			_unit setvariable [QGVAR(StateUnconscious), false, true];
+			_unit setvariable ["ACE_isUnconscious", false, true];
 			[format["%1 Unit no longer unconsicous"], _unit] call FUNC(debug);
 		};
 	};

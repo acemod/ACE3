@@ -10,4 +10,4 @@
 
 #include "script_component.hpp"
 
-((_this select 0) getvariable [QGVAR(StateUnconscious),false]);
+((_this select 0) getvariable ["ACE_isUnconscious",false]);
