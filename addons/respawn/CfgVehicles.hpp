@@ -82,7 +82,7 @@ class CfgVehicles {
                 displayName = "Teleport to Rallypoint";
                 distance = 4;
                 condition = QUOTE(side group _player == west);
-                statement = QUOTE([_player, side group _player, false] call FUNC(teleportToRallypoint));
+                statement = QUOTE([ARR_3(_player, side group _player, false)] call FUNC(teleportToRallypoint));
                 showDisabled = 1;
                 priority = 1;
             };
@@ -102,7 +102,7 @@ class CfgVehicles {
                 displayName = "Teleport to Rallypoint";
                 distance = 4;
                 condition = QUOTE(side group _player == east);
-                statement = QUOTE([_player, side group _player, false] call FUNC(teleportToRallypoint));
+                statement = QUOTE([ARR_3(_player, side group _player, false)] call FUNC(teleportToRallypoint));
                 showDisabled = 1;
                 priority = 1;
             };
@@ -122,7 +122,7 @@ class CfgVehicles {
                 displayName = "Teleport to Rallypoint";
                 distance = 4;
                 condition = QUOTE(side group _player == independent);
-                statement = QUOTE([_player, side group _player, false] call FUNC(teleportToRallypoint));
+                statement = QUOTE([ARR_3(_player, side group _player, false)] call FUNC(teleportToRallypoint));
                 showDisabled = 1;
                 priority = 1;
             };
@@ -143,7 +143,7 @@ class CfgVehicles {
                 displayName = "Teleport to Base";
                 distance = 4;
                 condition = QUOTE(side group _player == west);
-                statement = QUOTE([_player, side group _player, true] call FUNC(teleportToRallypoint));
+                statement = QUOTE([ARR_3(_player, side group _player, true)] call FUNC(teleportToRallypoint));
                 showDisabled = 1;
                 priority = 1;
             };
@@ -163,7 +163,7 @@ class CfgVehicles {
                 displayName = "Teleport to Base";
                 distance = 4;
                 condition = QUOTE(side group _player == east);
-                statement = QUOTE([_player, side group _player, true] call FUNC(teleportToRallypoint));
+                statement = QUOTE([ARR_3(_player, side group _player, true)] call FUNC(teleportToRallypoint));
                 showDisabled = 1;
                 priority = 1;
             };
@@ -183,7 +183,7 @@ class CfgVehicles {
                 displayName = "Teleport to Base";
                 distance = 4;
                 condition = QUOTE(side group _player == independent);
-                statement = QUOTE([_player, side group _player, true] call FUNC(teleportToRallypoint));
+                statement = QUOTE([ARR_3(_player, side group _player, true)] call FUNC(teleportToRallypoint));
                 showDisabled = 1;
                 priority = 1;
             };
@@ -196,8 +196,8 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_MoveRallypoint {
                 displayName = "Move Rallypoint";
-                condition = QUOTE([_player, side group _player] call FUNC(canMoveRallypoint));
-                statement = QUOTE([_player, side group _player] call FUNC(moveRallypoint));
+                condition = QUOTE([ARR_2(_player, side group _player)] call FUNC(canMoveRallypoint));
+                statement = QUOTE([ARR_2(_player, side group _player)] call FUNC(moveRallypoint));
                 showDisabled = 0;
                 priority = -0.5;
             };

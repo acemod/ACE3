@@ -19,9 +19,8 @@ if (_currentVersion != _previousVersion) then {
 
 0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber);
 
-//add network event handlers
-"ACEg" addPublicVariableEventHandler { _this call FUNC(_handletNetEvent); };
-"ACEc" addPublicVariableEventHandler { _this call FUNC(_handletNetEvent); };
+"ACEg" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
+"ACEc" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
 
 // everything that only player controlled machines need, goes below this
 if (!hasInterface) exitWith {};
@@ -74,4 +73,62 @@ enableCamShake true;
     };
 }] call FUNC(addEventhandler);
 
+GVAR(OldPlayerInventory) = ACE_player call FUNC(getAllGear);
+GVAR(OldPlayerVisionMode) = currentVisionMode ACE_player;
+GVAR(OldZeusDisplayIsOpen) = !(isNull findDisplay 312);
+GVAR(OldCameraView) = cameraView;
+GVAR(OldPlayerVehicle) = vehicle ACE_player;
+GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
 
+// PFH to raise varios events
+[{
+
+    // "playerInventoryChanged" event
+    _newPlayerInventory = ACE_player call FUNC(getAllGear);
+    if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
+        // Raise ACE event locally
+        GVAR(OldPlayerInventory) = _newPlayerInventory;
+        ["playerInventoryChanged", [ACE_player, _newPlayerInventory]] call FUNC(localEvent);
+    };
+
+    // "playerVisionModeChanged" event
+    _newPlayerVisionMode = currentVisionMode ACE_player;
+    if !(_newPlayerVisionMode isEqualTo GVAR(OldPlayerVisionMode)) then {
+        // Raise ACE event locally
+        GVAR(OldPlayerVisionMode) = _newPlayerVisionMode;
+        ["playerVisionModeChanged", [ACE_player, _newPlayerVisionMode]] call FUNC(localEvent);
+    };
+
+    // "zeusDisplayChanged" event
+    _newZeusDisplayIsOpen = !(isNull findDisplay 312);
+    if !(_newZeusDisplayIsOpen isEqualTo GVAR(OldZeusDisplayIsOpen)) then {
+        // Raise ACE event locally
+        GVAR(OldZeusDisplayIsOpen) = _newZeusDisplayIsOpen;
+        ["zeusDisplayChanged", [ACE_player, _newZeusDisplayIsOpen]] call FUNC(localEvent);
+    };
+
+    // "cameraViewChanged" event
+    _newCameraView = cameraView;
+    if !(_newCameraView isEqualTo GVAR(OldCameraView)) then {
+        // Raise ACE event locally
+        GVAR(OldCameraView) = _newCameraView;
+        ["cameraViewChanged", [ACE_player, _newCameraView]] call FUNC(localEvent);
+    };
+
+    // "playerVehicleChanged" event
+    _newPlayerVehicle = vehicle ACE_player;
+    if !(_newPlayerVehicle isEqualTo GVAR(OldPlayerVehicle)) then {
+        // Raise ACE event locally
+        GVAR(OldPlayerVehicle) = _newPlayerVehicle;
+        ["playerVehicleChanged", [ACE_player, _newPlayerVehicle]] call FUNC(localEvent);
+    };
+
+    // "playerTurretChanged" event
+    [ACE_player] call FUNC(getTurretIndex);
+    if !(_newPlayerTurret isEqualTo GVAR(OldPlayerTurret)) then {
+        // Raise ACE event locally
+        GVAR(OldPlayerTurret) = _newPlayerTurret;
+        ["playerTurretChanged", [ACE_player, _newPlayerTurret]] call FUNC(localEvent);
+    };
+
+}, 0, []] call cba_fnc_addPerFrameHandler;

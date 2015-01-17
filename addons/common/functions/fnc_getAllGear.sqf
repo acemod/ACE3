@@ -1,26 +1,21 @@
 /*
-  Name: ACE_Respawn_fnc_getAllGear
-  
-  Author(s):
-    bux578
-  
-  Description:
-    returns an array containing all items of a given unit
-  
-  Parameters:
-    0: OBJECT - unit
-  
-  Returns:
-    ARRAY
-*/
-
+ * Author: bux578
+ *
+ * Returns an array containing all items of a given unit
+ *
+ * Argument:
+ * 0: Unit (Object)
+ *
+ * Return value:
+ * Array with all the gear
+ */
 #include "script_component.hpp"
 
-private ["_unit", "_allGear"];
+EXPLODE_1_PVT(_this,_unit);
 
-_unit = _this select 0;
+if (isNull _unit) exitWith {[]};
 
-_allGear = [
+[
     (headgear _unit),
     (goggles _unit),
     (uniform _unit),
@@ -40,6 +35,4 @@ _allGear = [
     (handgunMagazine _unit),
     (assignedItems _unit),
     (binocular _unit)
-];
-
-_allGear
+]

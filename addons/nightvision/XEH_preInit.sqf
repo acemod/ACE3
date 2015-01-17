@@ -3,4 +3,4 @@
 PREP(blending);
 PREP(decreaseNVGBrightness);
 PREP(increaseNVGBrightness);
-PREP(updatePPEffectsEachFrame);
+PREP(updatePPEffects);

@@ -46,4 +46,4 @@ AGM_WeaponSelect_AllMagazines =     uiNamespace getVariable "AGM_WeaponSelect_Al
 
 // hide grenade count if none is selected
 [uiNamespace getVariable "AGM_dlgSoldier", false] call AGM_WeaponSelect_fnc_toggleGrenadeCount;
-["Soldier", {[_this select 0, call AGM_WeaponSelect_fnc_getSelectedGrenade != ""] call AGM_WeaponSelect_fnc_toggleGrenadeCount}] call AGM_Core_fnc_addInfoDisplayEventHandler;
+["Soldier", {[_this select 0, call AGM_WeaponSelect_fnc_getSelectedGrenade != ""] call AGM_WeaponSelect_fnc_toggleGrenadeCount}] call AGM_Core_fnc_addInfoDisplayEventHandler;  //@todo addEventHandler infoDisplayChanged with select 1 == "Soldier"
