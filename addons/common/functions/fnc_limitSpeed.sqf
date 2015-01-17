@@ -21,7 +21,7 @@ if ((_vehicle getvariable [QGVAR(limitSpeed_f),false])) then {
 if (_maxSpeed < 0) exitwith {};
 _vehicle setvariable [QGVAR(limitSpeed_f),true,true];
 
-{
+[{
 	private["_vehicle","_maxSpeed","_speed","_x","_y","_z", "_diff","_percentage","_newVelocity","_velocity"];
 	_vehicle = (_this select 0) select 0;
 	_maxSpeed = (_this select 0) select 1;

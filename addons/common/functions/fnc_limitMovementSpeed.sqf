@@ -17,25 +17,25 @@ if (count _this > 1) then {
 	_fallDown = _this select 1;
 };
 
-if ((_vehicle getvariable [QGVAR(limitMovementSpeed),false])) exitwith {
-	_vehicle setvariable [QGVAR(limitMovementSpeed),nil,true];
+if ((_unit getvariable [QGVAR(limitMovementSpeed),false])) exitwith {
+	_unit setvariable [QGVAR(limitMovementSpeed),nil,true];
 };
 
-{
+[{
 	private["_unit","_fallDown","_carriedObj"];
 	_unit = (_this select 0) select 0;
 	_fallDown = (_this select 0) select 1;
 
-	_carriedObj = [_unit] call FUNC(getCarriedObj)
+	_carriedObj = [_unit] call FUNC(getCarriedObj);
 
-	if !(_vehicle getvariable [QGVAR(limitMovementSpeed),false]) exitwith {
+	if !(_unit getvariable [QGVAR(limitMovementSpeed),false]) exitwith {
 		[(_this select 1)] call cba_fnc_removePerFrameHandler;
 	};
 	if !((!isNull _carriedObj) && (alive _unit)) exitwith {
 		[(_this select 1)] call cba_fnc_removePerFrameHandler;
 	};
 
-	if (speed _unit > 12 && vehicle _unit == _unit && isTouchingGround) then {
+	if (speed _unit > 12 && vehicle _unit == _unit && isTouchingGround _unit) then {
 
 		_unit setVelocity [0,0,0];
 
