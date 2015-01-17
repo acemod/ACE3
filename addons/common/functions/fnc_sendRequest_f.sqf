@@ -19,8 +19,8 @@ _callBack = _this select 4;
 
 if (isPlayer _target) then {
 	// Pass request on to target locality for player accept/decline.
-	[[_caller, _target, _requestID, _requestMessage, _callBack], QUOTE(FUNC(receiveRequest)), _target, false] spawn EFUNC(common,execRemoteFnc);
+	[[_caller, _target, _requestID, _requestMessage, _callBack], QUOTE(FUNC(receiveRequest)), _target, false] call EFUNC(common,execRemoteFnc);
 } else {
 	// accept it, since it's an AI.
-	[_caller, _target, true] spawn compile _callBack;
+	[_caller, _target, true] call compile _callBack;
 };
