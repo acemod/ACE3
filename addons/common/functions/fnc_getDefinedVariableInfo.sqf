@@ -8,4 +8,4 @@
  * @PublicAPI: false
  */
 #include "script_component.hpp"
-+(missionNamespace getvariable ["GVAR(OBJECT_VARIABLES_STORAGE)_" + (_this select 0),[]])
++(missionNamespace getvariable [QGVAR(OBJECT_VARIABLES_STORAGE_) + (_this select 0),[]])
