@@ -49,14 +49,12 @@ if (_dir == 1) exitWith {
   if (GVAR(drawing_isDrawing)) exitWith {
     // Already drawing -> Add tempLineMarker to permanent list
     if (GVAR(drawing_syncMarkers)) then {
-	systemChat "global";
       deleteMarkerLocal (GVAR(drawing_tempLineMarker) select 0);
       // [GVAR(drawing_tempLineMarker), "FUNC(addLineMarker)", 2] call EFUNC(common,execRemoteFnc);
-       ["drawing_addLineMarker", GVAR(drawing_tempLineMarker)] call EFUNC(common,globalEvent);
+      ["drawing_addLineMarker", GVAR(drawing_tempLineMarker)] call EFUNC(common,globalEvent);
       // Log who drew on the briefing screen
       (text format ["[ACE] Server: Player %1 drew on the briefing screen", name player]) call EFUNC(common,serverLog);
     } else {
-		systemChat "local";
       GVAR(drawing_tempLineMarker) call FUNC(updateLineMarker);
       GVAR(drawing_lineMarkers) pushBack (+GVAR(drawing_tempLineMarker));
     };

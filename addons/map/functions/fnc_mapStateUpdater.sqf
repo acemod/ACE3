@@ -31,6 +31,7 @@ if (GVAR(mapVisableLastFrame) && (!visibleMap)) then {
 
 //When Map is Opened:
 if ((!GVAR(mapVisableLastFrame)) && (visibleMap)) then {
+  //todo:  "mapOpened" Event????
   GVAR(mapVisableLastFrame) = true;
   // Show and update map tools if required
   [] call FUNC(updateMapToolMarkers);

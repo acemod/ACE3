@@ -20,7 +20,7 @@ GVAR(drawing_lineMarkers) = [];
 GVAR(drawing_drawColor) = "ColorBlack";
 GVAR(drawing_controls) = [36732, 36733, 36734, 36735, 36736, 36737];
 
-//This is a one and done spawn, probably ok??
+//Probably need this spawn, because CBA_fnc_addPerFrameHandler doesn't work durring breifing.
 [] spawn {
 	_fnc_installMapEvents = {
 		_d = _this;
