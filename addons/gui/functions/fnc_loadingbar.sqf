@@ -10,39 +10,55 @@
 
 #include "script_component.hpp"
 
-private ["_timeToWait","_cond","_onfailure","_onSuccess","_args","_dialog","_ctrl","_newStatus","_start","_return"];
+private ["_timeToWait","_cond","_onfailure","_onSuccess","_args"];
 _timeToWait = _this select 0;
 _cond = [_this, 1, {true}, [{true}]] call BIS_fnc_Param;
 _onSuccess = [_this, 2, {}, [{}]] call BIS_fnc_Param;
 _onfailure = [_this, 3, {}, [{}]] call BIS_fnc_Param;
 _args = [_this, 4, [], [[]]] call BIS_fnc_Param;
 
-if (_timeToWait > 0) then {
+
+if (_timeToWait > 0) exitwith {
+	GVAR(LOADING_BAR_STATUS) = 0;
 	disableSerialization;
 	1534 cutRsc [QGVAR(RSC_PROGRESSBAR_LOADING),"plain"];
-	_dialog = uiNamespace getvariable QGVAR(RSC_PROGRESSBAR_LOADING);
-	_ctrl = _dialog displayCtrl 6;
-	_newStatus = 0;
-	_start = diag_tickTime;
-	while {(_newStatus <= 1.00 && (call _cond))} do {
-		uisleep 0.01;
-		_ctrl progressSetPosition _newStatus;
-		_newStatus = (diag_tickTime - _start) / _timeToWait;
-	};
-	1534 cutText ["","plain"];
-	_return = false;
-	if (_newStatus >= 1.00) then {
-		_return = true;
-		_args call _onSuccess;
-	} else {
-		_args call _onfailure;
-	};
-} else {
-	if ((call _cond)) then {
-		_return = true;
-		_args call _onSuccess;
-	} else {
-		_args call _onfailure;
-	};
+	[{
+		private ["_args","_timeToWait","_start","_cond","_onSuccess","_onfailure","_params"];
+		_args = _this select 0;
+
+		_start = _args select 0;
+		_timeToWait = _args select 1;
+		_cond = _args select 2;
+		_onSuccess = _args select 3;
+		_onfailure = _args select 4;
+		_params = _args  select 5;
+
+		if !(_params call _cond) exitwith {
+			[(_this select 1)] call cba_fnc_removePerFrameHandler;
+			1534 cutText ["","plain"];
+			_args call _onfailure;
+		};
+
+		if (GVAR(LOADING_BAR_STATUS) >= 1) exitwith {
+			[(_this select 1)] call cba_fnc_removePerFrameHandler;
+			1534 cutText ["","plain"];
+			_args call _onSuccess;
+		};
+		private "_dialog";
+		disableSerialization;
+		_dialog = uiNamespace getvariable QGVAR(RSC_PROGRESSBAR_LOADING);
+
+		GVAR(LOADING_BAR_STATUS) = (diag_tickTime - _start) / _timeToWait;
+		(_dialog displayCtrl 6) progressSetPosition GVAR(LOADING_BAR_STATUS);
+
+	}, 0, [diag_tickTime, _timeToWait, _cond, _onSuccess, _onfailure, _args]] call CBA_fnc_addPerFrameHandler;
+	true;
 };
-_return
+
+if (_args call _cond) exitwith {
+	_args call _onSuccess;
+	true;
+};
+
+_args call _onfailure;
+false;
