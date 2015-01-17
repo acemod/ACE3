@@ -9,6 +9,7 @@
  * Return value:
  * All firing modes (Array)
  */
+#include "script_component.hpp"
 
 private ["_weapon", "_modes"];
 
@@ -16,11 +17,14 @@ _weapon = _this select 0;
 
 _modes = [];
 {
-  if (getNumber (configFile >> "CfgWeapons" >> _weapon >> _x >> "showToPlayer") == 1) then {
-    _modes pushBack _x;
-  };
-  if (_x == "this") then {
-    _modes pushBack _weapon;
-  };
+    if (getNumber (configFile >> "CfgWeapons" >> _weapon >> _x >> "showToPlayer") == 1) then {
+        _modes pushBack _x;
+    };
+
+    if (_x == "this") then {
+        _modes pushBack _weapon;
+    };
+
 } forEach getArray (configfile >> "CfgWeapons" >> _weapon >> "modes");
+
 _modes

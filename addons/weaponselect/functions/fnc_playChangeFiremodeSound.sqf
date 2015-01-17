@@ -1,4 +1,5 @@
 // by commy2
+#include "script_component.hpp"
 
 private ["_unit", "_weapon", "_sound"];
 
@@ -11,12 +12,12 @@ if (count _sound == 0) exitWith {};
 
 // add file extension
 if call {
-  {
-    if (toLower (_sound select 0) find _x == count toArray (_sound select 0) - count toArray _x - 1) exitWith {false};
-    true
-  } forEach [".wav", ".ogg", ".wss"];
+    {
+        if (toLower (_sound select 0) find _x == count toArray (_sound select 0) - count toArray _x - 1) exitWith {false};
+        true
+    } forEach [".wav", ".ogg", ".wss"];
 } then {
-  _sound set [0, (_sound select 0) + ".wss"];
+    _sound set [0, (_sound select 0) + ".wss"];
 };
 
 // add default volume, pitch and distance

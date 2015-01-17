@@ -9,11 +9,12 @@
  * Return value:
  * None.
  */
+#include "script_component.hpp"
 
-private "_player";
+private "_unit";
 
-_player = _this select 0;
+_unit = _this select 0;
 
-[_player] call AGM_Core_fnc_fixLoweredRifleAnimation;
+[_unit] call EFUNC(common,fixLoweredRifleAnimation);
 
-_player action ["SwitchWeapon", _player, _player, 99];
+_unit action ["SwitchWeapon", _unit, _unit, 99];

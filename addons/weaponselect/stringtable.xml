@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-20 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="WeaponSelect">
-    <Key ID="STR_AGM_WeaponSelect_SelectPistol">
+    <Key ID="STR_ACE_WeaponSelect_SelectPistol">
       <English>Select Pistol</English>
       <German>Pistole auswählen</German>
       <Spanish>Seleccionar pistola</Spanish>
@@ -14,7 +14,7 @@
       <Portuguese>Selecionar Pistola</Portuguese>
       <Italian>Seleziona la Pistola</Italian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_SelectRifle">
+    <Key ID="STR_ACE_WeaponSelect_SelectRifle">
       <English>Select Rifle</English>
       <German>Gewehr auswählen</German>
       <Spanish>Seleccionar fusil</Spanish>
@@ -26,7 +26,7 @@
       <Portuguese>Selecionar Rifle</Portuguese>
       <Italian>Seleziona il Fucile</Italian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_SelectLauncher">
+    <Key ID="STR_ACE_WeaponSelect_SelectLauncher">
       <English>Select Launcher</English>
       <German>Raketenwerfer auswählen</German>
       <Spanish>Seleccionar lanzador</Spanish>
@@ -38,7 +38,7 @@
       <Portuguese>Selecionar Lançador</Portuguese>
       <Italian>Seleziona il Lanciatore</Italian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_SelectRifleMuzzle">
+    <Key ID="STR_ACE_WeaponSelect_SelectRifleMuzzle">
       <English>Select Grenade Launcher</English>
       <German>Granatwerfer auswählen</German>
       <Spanish>Seleccionar lanzador de granadas</Spanish>
@@ -50,7 +50,7 @@
       <Portuguese>Selecionar Lança-Granadas</Portuguese>
       <Italian>Seleziona il Lanciagranate</Italian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_SelectBinocular">
+    <Key ID="STR_ACE_WeaponSelect_SelectBinocular">
       <English>Select Binoculars</English>
       <German>Fernglas auswählen</German>
       <Spanish>Seleccionar prismáticos</Spanish>
@@ -62,7 +62,7 @@
       <Portuguese>Selecionar Binóculos</Portuguese>
       <Italian>Seleziona il Binocolo</Italian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_HolsterWeapon">
+    <Key ID="STR_ACE_WeaponSelect_HolsterWeapon">
       <English>Holster Weapon</English>
       <German>Waffe holstern</German>
       <Spanish>Enfundar el arma</Spanish>
@@ -74,7 +74,7 @@
       <Portuguese>Guardar Arma</Portuguese>
       <Italian>Nascondi l'arma</Italian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_EngineOn">
+    <Key ID="STR_ACE_WeaponSelect_EngineOn">
       <English>Engine on</English>
       <German>Motor an</German>
       <Spanish>Encender motor</Spanish>
@@ -86,7 +86,7 @@
       <Italian>Motore acceso</Italian>
       <Russian>Включить двигатель</Russian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_EngineOff">
+    <Key ID="STR_ACE_WeaponSelect_EngineOff">
       <English>Engine off</English>
       <German>Motor aus</German>
       <Spanish>Apagar motor</Spanish>
@@ -98,7 +98,7 @@
       <Italian>Motore spento</Italian>
       <Russian>Выключить двигатель</Russian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_SelectMainGun">
+    <Key ID="STR_ACE_WeaponSelect_SelectMainGun">
       <English>Select Main Gun</English>
       <German>Hauptgeschütz auswählen</German>
       <Spanish>Seleccionar arma principal</Spanish>
@@ -110,7 +110,7 @@
       <Italian>Seleziona Arma Primaria</Italian>
       <Russian>Выбрать основное оружие</Russian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_SelectMachineGun">
+    <Key ID="STR_ACE_WeaponSelect_SelectMachineGun">
       <English>Select Machine Gun</English>
       <German>Maschinengewehr auswählen</German>
       <Spanish>Seleccionar ametralladora</Spanish>
@@ -122,7 +122,7 @@
       <Italian>Seleziona Mitragliatrice</Italian>
       <Russian>Выбрать пулемёт</Russian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_SelectMissiles">
+    <Key ID="STR_ACE_WeaponSelect_SelectMissiles">
       <English>Select Missiles</English>
       <German>Raketen auswählen</German>
       <Spanish>Seleccionar misiles</Spanish>
@@ -134,7 +134,7 @@
       <Italian>Seleziona Missili</Italian>
       <Russian>Выбрать ракеты</Russian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_LoadGrenade">
+    <Key ID="STR_ACE_WeaponSelect_LoadGrenade">
       <English>Grenade %1</English>
       <German>Granate %1</German>
       <Spanish>Granada %1</Spanish>
@@ -143,7 +143,7 @@
       <Hungarian>Gránát Kiválasztása</Hungarian>
       <Russian>Граната %1</Russian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_ReadyGrenade">
+    <Key ID="STR_ACE_WeaponSelect_ReadyGrenade">
       <English>Ready Grenade</English>
       <German>Granate nehmen</German>
       <Spanish>Granada lista</Spanish>
@@ -152,7 +152,7 @@
       <Hungarian>Kész Gránát</Hungarian>
       <Russian>Подготовить гранату</Russian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_SelectGrenadeFrag">
+    <Key ID="STR_ACE_WeaponSelect_SelectGrenadeFrag">
       <English>Select Frag Grenade</English>
       <German>Explosive Granate auswählen</German>
       <Spanish>Seleccionar granada de fragmenación</Spanish>
@@ -164,7 +164,7 @@
       <Italian>Seleziona Granata a Frammentazione</Italian>
       <Russian>Выбрать осколочную гранату</Russian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_SelectGrenadeOther">
+    <Key ID="STR_ACE_WeaponSelect_SelectGrenadeOther">
       <English>Select Non-Frag Grenade</English>
       <German>Nichtexplosive Granate auswählen</German>
       <Spanish>Seleccionar granada de no fragmentación</Spanish>
@@ -176,7 +176,7 @@
       <Italian>Seleziona Altre Granate</Italian>
       <Russian>Выбрать гранату</Russian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_ThrowGrenade">
+    <Key ID="STR_ACE_WeaponSelect_ThrowGrenade">
       <English>Throw Selected Grenade</English>
       <German>Gewählte Granate werfen</German>
       <Spanish>Arrojar granada seleccionada</Spanish>
@@ -188,7 +188,7 @@
       <Italian>Lancia la Granata Selezionata</Italian>
       <Russian>Бросить выбранную гранату</Russian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_NoGrenadesLeft">
+    <Key ID="STR_ACE_WeaponSelect_NoGrenadesLeft">
       <English>No grenades left</English>
       <German>Keine Granaten übrig</German>
       <Spanish>No quedan granadas</Spanish>
@@ -198,7 +198,7 @@
       <Hungarian>Nincs több gránát</Hungarian>
       <Russian>Гранат не осталось</Russian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_NoFragsLeft">
+    <Key ID="STR_ACE_WeaponSelect_NoFragsLeft">
       <English>No frags left</English>
       <German>Keine explosiven Granaten übrig</German>
       <Spanish>Sin granadas de fragmentación</Spanish>
@@ -210,7 +210,7 @@
       <Italian>Nessuna granata a frammentazione rimanente</Italian>
       <Russian>Осколочныких гранат нет</Russian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_NoMiscGrenadeLeft">
+    <Key ID="STR_ACE_WeaponSelect_NoMiscGrenadeLeft">
       <English>No misc. grenades left</English>
       <German>Keine nichtexplosiven Granaten übrig</German>
       <Spanish>Sin granadas de varias</Spanish>
@@ -222,7 +222,7 @@
       <Italian>Nessun'altra granata rimanente.</Italian>
       <Russian>Невзрывоопасные гранаты закончились</Russian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_NoGrenadeSelected">
+    <Key ID="STR_ACE_WeaponSelect_NoGrenadeSelected">
       <English>No grenade selected</English>
       <German>Keine Granate ausgewählt</German>
       <Spanish>Granada no seleccionada</Spanish>
@@ -234,7 +234,7 @@
       <Italian>Nessuna granata selezionata</Italian>
       <Russian>Нет выбранной гранаты</Russian>
     </Key>
-    <Key ID="STR_AGM_WeaponSelect_FireSmokeLauncher">
+    <Key ID="STR_ACE_WeaponSelect_FireSmokeLauncher">
       <English>Fire Smoke Launcher</English>
       <German>Rauchwand abfeuern</German>
       <Spanish>Disparar lanzador de humo</Spanish>
