@@ -176,11 +176,11 @@ class RscTitles {
     };
   };
 
-  class ACE_common_ScreenEffectsBlack {
+  class GVAR(ScreenEffectsBlack) {
     duration = 10e10;
     idd = 1111;
     movingenable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(ACE_common_ScreenEffectsBlack)), _this select 0)]);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(GVAR(ScreenEffectsBlack))), _this select 0)]);
 
     class controlsBackground {
       class blackScreen: ACE_gui_backgroundBase {
@@ -194,11 +194,11 @@ class RscTitles {
       };
     };
   };
-  class ACE_common_ScreenEffectsBleeding {
+  class GVAR(ScreenEffectsBleeding) {
     duration = 1;
     idd = 1111;
     movingenable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(ACE_common_ScreenEffectsBleeding)), _this select 0)]);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(GVAR(ScreenEffectsBleeding))), _this select 0)]);
 
     class controlsBackground {
       class bleedingScreen: ACE_gui_backgroundBase {
@@ -212,11 +212,11 @@ class RscTitles {
       };
     };
   };
-  class ACE_common_ScreenEffectsHit {
+  class GVAR(ScreenEffectsHit) {
     duration = 1.1;
     idd = 1111;
     movingenable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(ACE_common_ScreenEffectsHit)), _this select 0)]);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(GVAR(ScreenEffectsHit))), _this select 0)]);
 
     class controlsBackground {
       class effectHit: ACE_gui_backgroundBase {
@@ -230,11 +230,11 @@ class RscTitles {
       };
     };
   };
-  class ACE_common_ScreenEffectsPain {
+  class GVAR(ScreenEffectsPain) {
     duration = 1;
     idd = 1111;
     movingenable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(ACE_common_ScreenEffectsPain)), _this select 0)]);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(GVAR(ScreenEffectsPain))), _this select 0)]);
 
     class controlsBackground {
       class painScreen: ACE_gui_backgroundBase {

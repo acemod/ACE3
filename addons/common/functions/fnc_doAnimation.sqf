@@ -36,14 +36,14 @@ if (count _this > 3) then {
 };
 
 // don't overwrite more important animations
-if (_unit getVariable ["ACE_isUnconscious", false] && {!_force}) exitWith {
+if (_unit getVariable [/*"ACE_isUnconscious"*/ QGVAR(StateUnconscious), false] && {!_force}) exitWith {
   if (_animation != "Unconscious") then {
     [_unit, "Unconscious", 2] call FUNC(doAnimation);
   };
 };
 
 // don't go unconscious if the unit isn't unconscious
-if (_animation == "Unconscious" && {!(_unit getVariable ["ACE_isUnconscious", false])}) exitWith {};
+if (_animation == "Unconscious" && {!(_unit getVariable [/*"ACE_isUnconscious"*/ QGVAR(StateUnconscious), false])}) exitWith {};
 
 // switchMove "" no longer works in dev 1.37
 if (_animation == "") then {
