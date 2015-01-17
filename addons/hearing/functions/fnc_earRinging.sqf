@@ -38,7 +38,7 @@ if (_strength > 0.5) exitWith {
   playSound "ACE_EarRinging_Medium";
   GVAR(isEarRingingPlaying) = true;
   [
-    {GVAR(isEarRingingPlaying) = false;}, [], 7.0, 0.25
+    {GVAR(isEarRingingPlaying) = false;}, [], 5.0, 0.25
   ] call EFUNC(common,waitAndExecute);
 };
 if (_strength > 0.2) exitWith {
@@ -46,6 +46,6 @@ if (_strength > 0.2) exitWith {
   GVAR(isEarRingingPlaying) = true;
     GVAR(isEarRingingPlaying) = true;
   [
-    {GVAR(isEarRingingPlaying) = false;}, [], 7.0, 0.25
+    {GVAR(isEarRingingPlaying) = false;}, [], 3.0, 0.25
   ] call EFUNC(common,waitAndExecute);
 };
