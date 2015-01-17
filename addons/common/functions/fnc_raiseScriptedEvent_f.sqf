@@ -1,5 +1,5 @@
 /**
- * fn_customEventHandler_f.sqf
+ * fn_raiseScriptedEvent_f.sqf
  * @Descr: Execute a custom defined eventhandler.
  * @Author: Glowbal
  *
