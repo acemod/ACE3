@@ -13,4 +13,5 @@
 
 #define AVERAGEDURATION 6
 #define INTERVAL 0.20
-#define MAXVIRTUALG 5.4
+#define MAXVIRTUALG 5.0
+#define MINVIRTUALG 2.5
