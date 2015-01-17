@@ -1,7 +1,7 @@
 /*
  * Author: Commy2 and CAA-Picard
  *
- * PFH that displays the weapon temperature after a slight delay
+ * Displays the weapon temperature
  *
  * Arguments:
  * 0: _player
@@ -13,14 +13,7 @@
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-EXPLODE_2_PVT(_this,_params,_pfhId);
-EXPLODE_3_PVT(_params,_player,_weapon,_startTime);
-
-// Skip the first execution of the PFH
-if (diag_tickTime < _startTime + 0.5) exitWith {};
-
-// Remove the PFH on the second execution
-[_pfhId] call cba_fnc_removePerFrameHandler;
+EXPLODE_2_PVT(_this,_player,_weapon);
 
 // Calculate cool down of weapon since last shot
 private ["_string", "_overheat", "_temperature", "_time", "_barrelMass"];

@@ -119,6 +119,7 @@ PREP(toBitmask);
 PREP(toHex);
 PREP(toNumber);
 PREP(unmuteUnit);
+PREP(waitAndExecute);
 
 // ACE_Debug
 PREP(exportConfig);

@@ -3,8 +3,8 @@
 PREP(checkTemperature);
 PREP(clearJam);
 PREP(cooldown);
+PREP(displayTemperature);
 PREP(jamWeapon);
 PREP(overheat);
-PREP(pfhDisplayTemperature);
 PREP(swapBarrel);
 PREP(swapBarrelCallback);
