@@ -20,7 +20,6 @@ if (isPlayer _unit) then {
 	[true] call FUNC(setVolume_f);
 	[false] call FUNC(disableKeyInput_f);
 	[false] call EFUNC(GUI,effectBlackOut);
-	[player, -1] call FUNC(limitSpeed);
 
 	if !(isnil QGVAR(DISABLE_USER_INPUT_COLLECTION_F)) then {
 		// clear all disable user input

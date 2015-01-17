@@ -249,7 +249,6 @@ PREP(canGoUnconsciousState);
 PREP(setWeaponsCorrectUnconscious);
 
 PREP(limitMovementSpeed);
-PREP(limitSpeed);
 PREP(setArrestState);
 PREP(isArrested);
 PREP(loadPerson_F);
