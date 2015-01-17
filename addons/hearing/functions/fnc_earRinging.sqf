@@ -24,31 +24,28 @@ GVAR(newStrength) = GVAR(newStrength) max _strength;
 
 if (missionNamespace getVariable [QGVAR(isEarRingingPlaying), false]) exitWith {};
 
-_fnc_removeEarRinging = {
-  EXPLODE_2_PVT(_this,_params,_pfhId);
-  EXPLODE_2_PVT(_params,_startTime,_duration);
-
-  // Exit if the delay is not met yet
-  if (time < _startTime + _duration) exitWith {};
-
-  GVAR(isEarRingingPlaying) = false;
-  [_pfhId] call cba_fnc_removePerFrameHandler;
-};
 
 if (profileNamespace getVariable [QGVAR(DisableEarRinging), false]) exitWith {};
 
 if (_strength > 0.75) exitWith {
   playSound "ACE_EarRinging_Heavy";
   GVAR(isEarRingingPlaying) = true;
-  [_fnc_removeEarRinging, 0.25, [time, 7.0] ] call CBA_fnc_addPerFrameHandler;
+  [
+    {GVAR(isEarRingingPlaying) = false;}, [], 7.0, 0.25
+  ] call EFUNC(common,waitAndExecute);
 };
 if (_strength > 0.5) exitWith {
   playSound "ACE_EarRinging_Medium";
   GVAR(isEarRingingPlaying) = true;
-  [_fnc_removeEarRinging, 0.25, [time, 5.0] ] call CBA_fnc_addPerFrameHandler;
+  [
+    {GVAR(isEarRingingPlaying) = false;}, [], 7.0, 0.25
+  ] call EFUNC(common,waitAndExecute);
 };
 if (_strength > 0.2) exitWith {
   playSound "ACE_EarRinging_Weak";
   GVAR(isEarRingingPlaying) = true;
-  [_fnc_removeEarRinging, 0.25, [time, 3.0] ] call CBA_fnc_addPerFrameHandler;
+    GVAR(isEarRingingPlaying) = true;
+  [
+    {GVAR(isEarRingingPlaying) = false;}, [], 7.0, 0.25
+  ] call EFUNC(common,waitAndExecute);
 };
