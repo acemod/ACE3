@@ -25,8 +25,8 @@ if (count _this > 4) then {
 	};
 };
 
-if (typeName _name != typeName "") then {
-	throw "IllegalArgument";
+if (typeName _name != typeName "") exitwith {
+	[format["Tried to the deinfe a variable with an invalid name: %1 Arguments: %2", _name, _this]] call FUNC(debug);
 };
 
 if (isnil QGVAR(OBJECT_VARIABLES_STORAGE)) then {
