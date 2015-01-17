@@ -1,6 +1,6 @@
 /**
- * fn_sendMessageTo.sqf
- * @Descr: Sends a chat message to player unit across the network
+ * fn_sendHintTo.sqf
+ * @Descr: Sends a hint to player unit across network
  * @Author: Glowbal
  *
  * @Arguments: [reciever OBJECT, message STRING]
@@ -14,11 +14,13 @@ private ["_reciever","_message"];
 _reciever = _this select 0;
 _message = _this select 1;
 
-
 if (isPlayer _reciever) then {
 	if (!local _reciever) then {
-	[_this, QUOTE(FUNC(sendMessageTo)), _reciever, false] spawn EFUNC(common,execRemoteFnc);
+		[_this, QUOTE(FUNC(sendHintTo)), _reciever, false] call EFUNC(common,execRemoteFnc);
 	} else {
-		GVAR(LOGIC_OBJECT) globalChat format ["%1",_message];
+		if (isLocalized _message) then {
+			_message = localize _message;
+		};
+		hintsilent format ["%1",_message];
 	};
 };

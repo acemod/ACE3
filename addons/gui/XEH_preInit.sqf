@@ -20,5 +20,9 @@ PREP(displayIcon);
 PREP(effectPain);
 PREP(effectBleeding);
 PREP(effectBlackOut);
+PREP(sendHintTo);
+PREP(sendMessageTo);
+PREP(sendDisplayInformationTo);
+PREP(sendDisplayMessageTo);
 
 ADDON = true;
