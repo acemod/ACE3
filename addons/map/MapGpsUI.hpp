@@ -13,13 +13,14 @@
 #define Y_gps safeZoneY + safeZoneH - 1.2 * H_gps
 
 class RscTitles {
-  class RscAGM_MapGps {
+  class RscACE_MapGps {
     idd = 9855;
     movingEnable = 1;
     duration = 3600;
     fadein = 0;
     fadeout = 0;
-    onLoad = "uiNamespace setVariable ['AGM_Map_mapGpsDisplay', _this select 0];";
+    // onLoad = QUOTE(uiNamespace setVariable [ARR_2(QGVAR(ui_mapGpsDisplay), _this select 0)];); 
+    onLoad = "uiNamespace setVariable ['ACE_map_ui_mapGpsDisplay', _this select 0];";  //@todo cbaify this 
     //onUnLoad = "_this call onRscLoad";
     class controls {
       class back:RscPicture {
@@ -27,7 +28,7 @@ class RscTitles {
         y = Y_gps;
         w = W_gps;
         h = H_gps;
-        text = "\AGM_Map\UI\mapGps.paa";
+        text = PATHTOF(UI\mapGps.paa);
         colorBackground[] = {1, 1, 1, 1};
       };
       class heading: RscText{

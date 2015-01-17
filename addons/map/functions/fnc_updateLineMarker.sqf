@@ -1,7 +1,7 @@
 /*
  * Author: CAA-Picard
  *
- * Add the line marker
+ * Updates the line marker position and scale
  *
  * Argument:
  * 0: Marker Name (string)
@@ -13,15 +13,16 @@
  * Return
  */
 
+#include "script_component.hpp"
+
  _name     = _this select 0;
  _startPos = _this select 1;
  _difPos   = (_this select 2) vectorDiff _startPos ;
  _color    = _this select 3;
-
-_marker = createMarkerLocal [_name, _startPos];
+ 
 _name setMarkerShapeLocal "RECTANGLE";
 _name setMarkerAlphaLocal 1;
-_name setMarkerColorLocal _color;
+_name setMarkerColorLocal GVAR(drawing_drawColor);
 _name setMarkerPosLocal (_startPos vectorAdd (_difPos vectorMultiply 0.5));
 _mag = vectorMagnitude _difPos;
 if (_mag > 0) then {
@@ -30,11 +31,4 @@ if (_mag > 0) then {
 } else {
   _name setMarkerSizeLocal [5, 5];
   _name setMarkerDirLocal 0;
-};
-
-AGM_Map_lineMarkers pushBack (+_this);
-
-if (isServer && AGM_Map_syncMarkers) then {
-  AGM_Map_serverLineMarkers pushBack (+_this);
-  publicVariable "AGM_Map_serverLineMarkers";
 };

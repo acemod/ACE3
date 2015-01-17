@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-22 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="Map">
-    <Key ID="STR_AGM_MapTools_Name">
+    <Key ID="STR_ACE_MapTools_Name">
       <English>Map Tools</English>
       <Spanish>Herramientas de mapa</Spanish>
       <French>Outils de navigation</French>
@@ -14,7 +14,7 @@
       <Hungarian>Térképészeti eszközök</Hungarian>
       <Russian>Инструменты карты</Russian>
     </Key>
-    <Key ID="STR_AGM_MapTools_Description">
+    <Key ID="STR_ACE_MapTools_Description">
       <English>The Map Tools allow you to measure distances and angles on the map.</English>
       <Spanish>Las herramientas de mapa permiten medir distancias y ángulos en el mapa.</Spanish>
       <French>Les outils de navigation permettent de mesurer des distances et des angles sur la carte.</French>
@@ -26,7 +26,7 @@
       <Hungarian>A térképészeti eszközökkel távolságokat és szögeket tud mérni a térképen.</Hungarian>
       <Russian>Картографические инструменты позволяют измерять расстояния и углы на карте.</Russian>
     </Key>
-    <Key ID="STR_AGM_Map_MapTools_Menu">
+    <Key ID="STR_ACE_Map_MapTools_Menu">
       <English>Map Tools &gt;&gt;</English>
       <Spanish>Herramientas de mapa &gt;&gt;</Spanish>
       <French>Outils de navigation &gt;&gt;</French>
@@ -38,7 +38,7 @@
       <Hungarian>Térképészeti eszközök &gt;&gt;</Hungarian>
       <Russian>Инструменты карты &gt;&gt;</Russian>
     </Key>
-    <Key ID="STR_AGM_Map_MapToolsHide">
+    <Key ID="STR_ACE_Map_MapToolsHide">
       <English>Hide Map Tool</English>
       <German>Verstecke Kartenwerkzeug</German>
       <Spanish>Ocultar herr. de mapa</Spanish>
@@ -50,7 +50,7 @@
       <Czech>Schovat pomůcku k mapě</Czech>
       <Russian>Скрыть инструменты</Russian>
     </Key>
-    <Key ID="STR_AGM_Map_MapToolsShowNormal">
+    <Key ID="STR_ACE_Map_MapToolsShowNormal">
       <English>Show Normal Map Tool</English>
       <German>Zeige Kartenwerkzeug (normal)</German>
       <Spanish>Mostrar herr. de mapa normal</Spanish>
@@ -62,7 +62,7 @@
       <Czech>Zobrazit normální pomůcku k mapě</Czech>
       <Russian>Показать инструменты (средн. размер)</Russian>
     </Key>
-    <Key ID="STR_AGM_Map_MapToolsShowSmall">
+    <Key ID="STR_ACE_Map_MapToolsShowSmall">
       <English>Show Small Map Tool</English>
       <German>Zeige Kartenwerkzeug (klein)</German>
       <Spanish>Mostrar herr. de mapa pequeñas</Spanish>
@@ -74,7 +74,7 @@
       <Czech>Zobrazit malou pomůcku k mapě</Czech>
       <Russian>Показать инструменты (малый размер)</Russian>
     </Key>
-    <Key ID="STR_AGM_Map_MapToolsAlignNorth">
+    <Key ID="STR_ACE_Map_MapToolsAlignNorth">
       <English>Align Map Tool to North</English>
       <German>Kartenwerkzeug nach Norden ausrichten</German>
       <Spanish>Alinear herr. de mapa al norte</Spanish>
@@ -86,7 +86,7 @@
       <Czech>Srovnat pomůcku k mapě na sever</Czech>
       <Russian>Выровнять инструменты на север</Russian>
     </Key>
-    <Key ID="STR_AGM_Map_MapToolsAlignCompass">
+    <Key ID="STR_ACE_Map_MapToolsAlignCompass">
       <English>Align Map Tool to Compass</English>
       <German>Kartenwerkzeug am Kompass ausrichten</German>
       <Spanish>Alinear herr. de mapa a la brújula</Spanish>
@@ -98,7 +98,7 @@
       <Czech>Srovnat pomůcku k mapě ke kompasu</Czech>
       <Russian>Выровнять инструменты по компасу</Russian>
     </Key>
-    <Key ID="STR_AGM_Map_MapGpsShow">
+    <Key ID="STR_ACE_Map_MapGpsShow">
       <English>Show GPS on Map</English>
       <German>Zeige GPS auf der Karte</German>
       <Spanish>Mostrar el GPS sobre el mapa</Spanish>
@@ -110,7 +110,7 @@
       <Czech>Zobrazit GPS na mapě</Czech>
       <Russian>Показать GPS на карте</Russian>
     </Key>
-    <Key ID="STR_AGM_Map_MapGpsHide">
+    <Key ID="STR_ACE_Map_MapGpsHide">
       <English>Hide GPS on Map</English>
       <German>Verstecke GPS auf der Karte</German>
       <Spanish>Ocultar el GPS del mapa</Spanish>
@@ -122,7 +122,7 @@
       <Czech>Schovat GPS na mapě</Czech>
       <Russian>Скрыть GPS на карте</Russian>
     </Key>
-    <Key ID="STR_AGM_Map_CopyMap">
+    <Key ID="STR_ACE_Map_CopyMap">
       <English>Copy Map</English>
       <German>Karte kopieren</German>
       <Spanish>Copiar mapa</Spanish>
@@ -134,7 +134,7 @@
       <Hungarian>Térkép másolása</Hungarian>
       <Portuguese>Copiar Mapa</Portuguese>
     </Key>
-    <Key ID="STR_AGM_Map_MarkerDirection">
+    <Key ID="STR_ACE_Map_MarkerDirection">
       <English>Direction: %1°</English>
       <German>Drehung: %1°</German>
       <French>Direction: %1°</French>
