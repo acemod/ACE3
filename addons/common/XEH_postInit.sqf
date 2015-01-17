@@ -136,7 +136,7 @@ GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
 }, 0, []] call cba_fnc_addPerFrameHandler;
 
 
-[QGVAR(ENABLE_REVIVE_COUNTER), 0, false, QGVAR(ADDON)] call FUNC(defineVariable);
+[QGVAR(reviveCounter_f), 0, false, QGVAR(ADDON)] call FUNC(defineVariable);
 [QGVAR(inReviveState), false, true, QGVAR(ADDON)] call FUNC(defineVariable);
 [QGVAR(isDead),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
 [QGVAR(isDeadPlayer), false, true, QUOTE(ADDON)] call FUNC(defineVariable);
@@ -148,3 +148,8 @@ GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
 if (isNil QGVAR(ENABLE_REVIVE_F)) then {
     GVAR(ENABLE_REVIVE_F) = 0;
 };
+
+
+[
+    {((_this select 0) getvariable [QGVAR(inReviveState), false])}
+] call EFUNC(common,registerUnconsciousCondition);
