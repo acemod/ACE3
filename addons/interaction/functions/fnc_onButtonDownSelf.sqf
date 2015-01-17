@@ -12,4 +12,7 @@ if (isNull (findDisplay 1713999)) then {
 	(findDisplay 1713999) closeDisplay 1;
 };
 
+// Raise custom event. @todo: remove
 [_player, "interactionMenuOpened", [_player, GVAR(Target), 1]] call EFUNC(common,callCustomEventHandlers);
+// Raise ACE localEvent
+["interactionMenuOpened", [_player, GVAR(Target), 1]] call EFUNC(common,localEvent);

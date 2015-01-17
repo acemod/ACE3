@@ -1,7 +1,6 @@
 #include "script_component.hpp"
 
 PREP(canMoveRallypoint);
-PREP(getAllGear);
 PREP(handleKilled);
 PREP(handleRespawn);
 PREP(initRallypoint);

@@ -2,24 +2,27 @@
 class RscInGameUI {
     class RscUnitInfo;
     class RscUnitInfoSoldier: RscUnitInfo {
-        onLoad = "uiNamespace setVariable ['ACE_dlgSoldier',   _this select 0]; {_this call _x} forEach ((missionNamespace getVariable ['ACE_onLoadInfoSoldier',   [-1, [], []]]) select 2); {_this call _x} forEach ((missionNamespace getVariable ['ACE_onLoadInfoAny', [-1, [], []]]) select 2); [""onLoad"",_this,""RscUnitInfo"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""";
+        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; uiNamespace setVariable [ARR_2('ACE_dlgSoldier',   _this select 0)]; [ARR_2('infoDisplayChanged', [ARR_2(_this select 0, 'Soldier')])]   call FUNC(localEvent););
     };
     class RscUnitInfoTank: RscUnitInfo {
-        onLoad = "uiNamespace setVariable ['ACE_dlgVehicle',   _this select 0]; {_this call _x} forEach ((missionNamespace getVariable ['ACE_onLoadInfoVehicle',   [-1, [], []]]) select 2); {_this call _x} forEach ((missionNamespace getVariable ['ACE_onLoadInfoAny', [-1, [], []]]) select 2); [""onLoad"",_this,""RscUnitInfo"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""";
+        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; uiNamespace setVariable [ARR_2('ACE_dlgVehicle',   _this select 0)]; [ARR_2('infoDisplayChanged', [ARR_2(_this select 0, 'Vehicle')])]   call FUNC(localEvent););
     };
     class RscUnitInfoAir: RscUnitInfo {
-        onLoad = "uiNamespace setVariable ['ACE_dlgAircraft',  _this select 0]; {_this call _x} forEach ((missionNamespace getVariable ['ACE_onLoadInfoAircraft',  [-1, [], []]]) select 2); {_this call _x} forEach ((missionNamespace getVariable ['ACE_onLoadInfoAny', [-1, [], []]]) select 2); [""onLoad"",_this,""RscUnitInfo"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""";
+        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; uiNamespace setVariable [ARR_2('ACE_dlgAircraft',  _this select 0)]; [ARR_2('infoDisplayChanged', [ARR_2(_this select 0, 'Aircraft')])]  call FUNC(localEvent););
+    };
+    class RscUnitInfoSubmarine: RscUnitInfo {
+        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; uiNamespace setVariable [ARR_2('ACE_dlgSubmarine', _this select 0)]; [ARR_2('infoDisplayChanged', [ARR_2(_this select 0, 'Submarine')])] call FUNC(localEvent););
     };
     class RscUnitInfoShip: RscUnitInfo {
-        onLoad = "uiNamespace setVariable ['ACE_dlgShip',      _this select 0]; {_this call _x} forEach ((missionNamespace getVariable ['ACE_onLoadInfoShip',      [-1, [], []]]) select 2); {_this call _x} forEach ((missionNamespace getVariable ['ACE_onLoadInfoAny', [-1, [], []]]) select 2); [""onLoad"",_this,""RscUnitInfo"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""";
+        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; uiNamespace setVariable [ARR_2('ACE_dlgShip',      _this select 0)]; [ARR_2('infoDisplayChanged', [ARR_2(_this select 0, 'Ship')])]      call FUNC(localEvent););
     };
     class RscUnitInfoParachute: RscUnitInfo {
-        onLoad = "uiNamespace setVariable ['ACE_dlgParachute', _this select 0]; {_this call _x} forEach ((missionNamespace getVariable ['ACE_onLoadInfoParachute', [-1, [], []]]) select 2); {_this call _x} forEach ((missionNamespace getVariable ['ACE_onLoadInfoAny', [-1, [], []]]) select 2); [""onLoad"",_this,""RscUnitInfo"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""";
+        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; uiNamespace setVariable [ARR_2('ACE_dlgParachute', _this select 0)]; [ARR_2('infoDisplayChanged', [ARR_2(_this select 0, 'Parachute')])] call FUNC(localEvent););
     };
 };
 
 class RscDisplayInventory {
-    onLoad = "[""onLoad"",_this,""RscDisplayInventory"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; {_this call _x} forEach ((missionNamespace getVariable ['ACE_onLoadInventory', [-1, [], []]]) select 2);";
+    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDisplayInventory"",'IGUI')] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; [ARR_2('inventoryDisplayLoaded', _this)] call FUNC(localEvent););
 };
 
 class RscDisplayChannel {

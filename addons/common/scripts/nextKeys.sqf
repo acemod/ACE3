@@ -7,7 +7,7 @@
 #define OFFSET_4 400
 #define OFFSET_5 500
 
-_config = configFile >> QGVAR(Default_Keys);
+_config = configFile >> "ACE_Default_Keys";
 _count = count _config;
 
 _countPages = ceil (_count / 20) + 1;
