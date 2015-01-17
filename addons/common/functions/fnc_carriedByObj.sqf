@@ -10,8 +10,4 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_to"];
-_to = _this select 0;
-_unit = _this select 1;
-
-([_to] call FUNC(getCarriedBy) == [_unit] call FUNC(getCarriedBy));
+([(_this select 0)] call FUNC(getCarriedBy) == [(_this select 1)] call FUNC(getCarriedBy));
