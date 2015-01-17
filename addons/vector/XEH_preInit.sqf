@@ -23,6 +23,7 @@ PREP(getDistance);
 PREP(getHeightDistance);
 PREP(getRelativeAzimuthDistance);
 PREP(getRelativeDistance);
+PREP(getRelativeHeightLength);
 
 PREP(showAzimuth);
 PREP(showAzimuthInclination);
@@ -30,6 +31,8 @@ PREP(showHeightDistance);
 PREP(showDistance);
 PREP(showRelativeAzimuthDistance);
 PREP(showRelativeDistance);
+PREP(showRelativeHeightLength);
+PREP(showFallOfShort);
 
 GVAR(holdKeyHandler) = -1;
 GVAR(isKeyDownAzimuth) = false;

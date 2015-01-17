@@ -21,7 +21,8 @@ _fnc_setPFH = {
 switch (_this select 0) do {
     case ("azimuth"): {
 
-        if (GETGVAR(isKeyDownDistance,false) && {GETGVAR(currentMode,"") in ["relative_distance"]}) exitWith {};
+        // prevent additinal modifier input if advanced mode it set, spaghetti
+        if (GETGVAR(isKeyDownDistance,false) && {GETGVAR(currentMode,"") in ["relative_distance", "relative_height+length"]}) exitWith {};
 
         ["azimuth"] call FUNC(clearDisplay);
 
@@ -47,7 +48,8 @@ switch (_this select 0) do {
 
     case ("distance"): {
 
-        if (GETGVAR(isKeyDownAzimuth,false) && {GETGVAR(currentMode,"") in ["relative_azimuth+distance"]}) exitWith {};
+        // prevent additinal modifier input if advanced mode it set, spaghetti
+        if (GETGVAR(isKeyDownAzimuth,false) && {GETGVAR(currentMode,"") in ["relative_azimuth+distance", "fall_of_short"]}) exitWith {};
 
         ["distance"] call FUNC(clearDisplay);
 

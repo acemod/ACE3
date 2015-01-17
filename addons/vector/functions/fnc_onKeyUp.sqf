@@ -24,12 +24,23 @@ switch (_this select 0) do {
         GVAR(isKeyDownAzimuth) = false;
 
         if (GVAR(isKeyDownDistance)) then {
-            if (GVAR(currentMode) == "distance") then {
-                ["azimuth"] call FUNC(clearDisplay);
-                [true] call FUNC(showP1);
-                GVAR(pData) = [call FUNC(getDistance), call FUNC(getDirection)];
-                "relative_distance" call _fnc_setPFH;
+
+            switch (GVAR(currentMode)) do {
+                case ("distance"): {
+                    ["azimuth"] call FUNC(clearDisplay);
+                    [true] call FUNC(showP1);
+                    GVAR(pData) = [call FUNC(getDistance), call FUNC(getDirection)];
+                    "relative_distance" call _fnc_setPFH;
+                };
+
+                case ("height+distance"): {
+                    ["azimuth"] call FUNC(clearDisplay);
+                    [true] call FUNC(showP1);
+                    GVAR(pData) = [call FUNC(getDistance), call FUNC(getDirection)];
+                    "relative_height+length" call _fnc_setPFH;
+                };
             };
+
         };
 
     };
@@ -39,12 +50,23 @@ switch (_this select 0) do {
         GVAR(isKeyDownDistance) = false;
 
         if (GVAR(isKeyDownAzimuth)) then {
-            if (GVAR(currentMode) == "azimuth") then {
-                ["distance"] call FUNC(clearDisplay);
-                [true] call FUNC(showP1);
-                GVAR(pData) = [call FUNC(getDistance), call FUNC(getDirection)];
-                "relative_azimuth+distance" call _fnc_setPFH;
+
+            switch (GVAR(currentMode)) do {
+                case ("azimuth"): {
+                    ["distance"] call FUNC(clearDisplay);
+                    [true] call FUNC(showP1);
+                    GVAR(pData) = [call FUNC(getDistance), call FUNC(getDirection)];
+                    "relative_azimuth+distance" call _fnc_setPFH;
+                };
+
+                case ("azimuth+inclination"): {
+                    ["distance"] call FUNC(clearDisplay);
+                    [true] call FUNC(showP1);
+                    GVAR(pData) = [call FUNC(getDistance), call FUNC(getDirection)];
+                    "fall_of_short" call _fnc_setPFH;
+                };
             };
+
         };
 
     };
