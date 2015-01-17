@@ -544,7 +544,7 @@ class CfgWeapons {
     /* Flash suppressors */
 
     class ACE_muzzle_mzls_H: ItemCore {
-        author = "$STR_ACE_Core_AGMTeam";
+        author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_muzzle_mzls_H";
         htMin = 1;
         htMax = 600;
@@ -597,7 +597,7 @@ class CfgWeapons {
     };
 
     class ACE_muzzle_mzls_B: ACE_muzzle_mzls_H {
-        author = "$STR_ACE_Core_AGMTeam";
+        author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_muzzle_mzls_B";
         displayName = "$STR_ACE_muzzle_mzls_B";
         picture = "\A3\weapons_F\Data\UI\gear_acca_mzls_h_ca.paa";
@@ -643,7 +643,7 @@ class CfgWeapons {
     };
 
     class ACE_muzzle_mzls_L: ACE_muzzle_mzls_H {
-        author = "$STR_ACE_Core_AGMTeam";
+        author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_muzzle_mzls_L";
         displayName = "$STR_ACE_muzzle_mzls_L";
         picture = "\A3\weapons_F\Data\UI\gear_acca_mzls_l_ca.paa";
@@ -689,7 +689,7 @@ class CfgWeapons {
     };
 
     class ACE_muzzle_mzls_smg_01: ACE_muzzle_mzls_H {
-        author = "$STR_ACE_Core_AGMTeam";
+        author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_muzzle_mzls_smg_01";
         displayName = "$STR_ACE_muzzle_mzls_smg_01";
         picture = "\A3\weapons_F\Data\UI\gear_acca_mzls_l_ca.paa";
@@ -735,7 +735,7 @@ class CfgWeapons {
     };
 
     class ACE_muzzle_mzls_smg_02: ACE_muzzle_mzls_H {
-        author = "$STR_ACE_Core_AGMTeam";
+        author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_muzzle_mzls_smg_02";
         displayName = "$STR_ACE_muzzle_mzls_smg_02";
         picture = "\A3\weapons_F\Data\UI\gear_acca_mzls_l_ca.paa";

@@ -1,10 +1,18 @@
-// by commy2
+/*
+ * Author: Commy2
+ *
+ * Swap barrel callback
+ *
+ * Argument:
+ * 0: unit
+ * 1: weapon
+ *
+ * Return value:
+ * None
+ */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-private ["_player", "_weapon"];
-
-_player = _this select 0;
-_weapon = _this select 1;
+EXPLODE_2_PVT(_this,_player,_weapon);
 
 // don't consume the barrel, but rotate through them.
 [localize "STR_ACE_Overheating_SwappedBarrel", QUOTE(PATHTOF(UI\spare_barrel_ca.paa))] call EFUNC(common,displayTextPicture);

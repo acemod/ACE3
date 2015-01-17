@@ -29,7 +29,7 @@ GVAR(placer) = objNull;
 _player = ACE_player;
 [_player, "DefaultAction", _player getVariable [QGVAR(Place), -1]] call EFUNC(Common,removeActionEventHandler);
 [_player, "MenuBack", _player getVariable [QGVAR(Cancel), -1]] call EFUNC(Common,removeActionEventHandler);
-call EFUNC(Interaction,hideMouseHint);
+call EFUNC(interaction,hideMouseHint);
 if ((_setup getVariable [QGVAR(Class), ""]) != "") then {
 	_dir = (getDir _setup);
 	if (_dir > 180) then {
@@ -73,7 +73,7 @@ if ((_setup getVariable [QGVAR(Class), ""]) != "") then {
 					if (!isNull (_this select 1)) then {
 						_explosive attachTo [(_this select 1)];
 						_dir = _dir - (getDir (_this select 1));
-						[[_explosive, _dir, 0], QUOTE(FUNC(setPosition))] call EFUNC(Common,execRemoteFnc);
+						[[_explosive, _dir, 0], QFUNC(setPosition)] call EFUNC(common,execRemoteFnc);
 					};
 				};
 			};

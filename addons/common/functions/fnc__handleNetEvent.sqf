@@ -12,10 +12,10 @@ if(_eventType == "ACEg") then {
     _eventName = _event select 0;
     _eventArgs = _event select 1;
     
-    _eventNames = GVAR(netEvents) select 0;
+    _eventNames = GVAR(events) select 0;
     _eventIndex = _eventNames find _eventName;
     if(_eventIndex != -1) then {
-        _events = (GVAR(netEvents) select 1) select _eventIndex;
+        _events = (GVAR(events) select 1) select _eventIndex;
         {
             if(!isNil "_x") then {
                 _eventArgs call CALLSTACK_NAMED(_x, format[ARR_3("Net Event %1 ID: %2",_eventName,_forEachIndex)]);

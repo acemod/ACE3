@@ -3,10 +3,10 @@ class ACE_ModuleExplosive: Module_F {
   author = "ACE Team";
   category = "ACE";
   displayName = "Explosive System";
-  function = QUOTE( FUNC(module) );
+  function = QUOTE(FUNC(module));
   scope = 2;
   isGlobal = 1;
-  icon = QUOTE( PATHTOF(UI\IconExplosives_ca.paa) );
+  icon = PATHTOF(UI\IconExplosives_ca.paa);
   class Arguments {
     class RequireSpecialist {
       displayName = "Require specialists?";

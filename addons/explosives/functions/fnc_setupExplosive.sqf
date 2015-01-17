@@ -43,7 +43,7 @@ if (!isNil "_timer") then {
   GVAR(Setup) setVariable [QGVAR(Timer), _timer];
 };
 
-[_unit, "ACE_Explosives", true] call EFUNC(Core,setForceWalkStatus);
+[_unit, "ACE_Explosives", true] call EFUNC(common,setForceWalkStatus);
 GVAR(TweakedAngle) = 180;
 [QGVAR(Placement),"OnEachFrame", {
   private "_player";
@@ -60,8 +60,8 @@ GVAR(TweakedAngle) = 180;
   };
 }] call CALLSTACK(BIS_fnc_addStackedEventHandler);
 [localize "STR_ACE_Explosives_PlaceAction", localize "STR_ACE_Explosives_CancelAction",
-  localize "STR_ACE_Explosives_ScrollAction"] call EFUNC(Interaction,showMouseHint);
+  localize "STR_ACE_Explosives_ScrollAction"] call EFUNC(interaction,showMouseHint);
 _unit setVariable [QGVAR(Place), [_unit, "DefaultAction",
-  {GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call FUNC(place_Approve);}] call EFUNC(Core,AddActionEventHandler)];
+  {GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call FUNC(place_Approve);}] call EFUNC(common,AddActionEventHandler)];
 _unit setVariable [QGVAR(Cancel), [_unit, "MenuBack",
-  {GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call FUNC(place_Cancel);}] call EFUNC(Core,AddActionEventHandler)];
+  {GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call FUNC(place_Cancel);}] call EFUNC(common,AddActionEventHandler)];

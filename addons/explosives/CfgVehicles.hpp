@@ -8,44 +8,44 @@ class CfgVehicles {
 
   class CAManBase: Man {
     class ACE_SelfActions {
-      class GVAR(Explosives) {
+      class ACE_Explosives {
         displayName = $STR_ACE_Explosives_Menu;
-        condition = QUOTE( !(_player getVariable [ARR_2('ace_explosives_PlantingExplosive',false)]) );
+        condition = QUOTE(!(_player getVariable [ARR_2('ace_explosives_PlantingExplosive',false)]));
         statement = "";
         exceptions[] = {"ACE_Interaction_isNotSwimming"};
         showDisabled = 1;
         priority = 4;
-        icon = QUOTE( PATHTOF(UI\Explosives_Menu_ca.paa) );
+        icon = PATHTOF(UI\Explosives_Menu_ca.paa);
         subMenu[] = {"ACE_Explosives", 1};
         hotkey = "X";
         //Sub-menu items
         class ACE_Detonate {
           displayName = $STR_ACE_Explosives_Detonate;
-          condition = QUOTE( [_player] call FUNC(canDetonate) );
-          statement = QUOTE( [_player] call FUNC(openTransmitterUI); );
+          condition = QUOTE([_player] call FUNC(canDetonate));
+          statement = QUOTE([_player] call FUNC(openTransmitterUI););
           exceptions[] = {"ACE_Interaction_isNotSwimming"};
           showDisabled = 1;
-          icon = QUOTE( PATHTOF(UI\Explosives_Menu_ca.paa) );
+          icon = PATHTOF(UI\Explosives_Menu_ca.paa);
           priority = 2;
           hotkey = "T";
         };
         class ACE_Place {
           displayName = $STR_ACE_Explosives_Place;
-          condition = QUOTE( (vehicle _player == _player) and {[_player] call FUNC(hasExplosives)} );
-          statement = QUOTE( [_player] call FUNC(openPlaceUI); );
+          condition = QUOTE((vehicle _player == _player) and {[_player] call FUNC(hasExplosives)});
+          statement = QUOTE([_player] call FUNC(openPlaceUI););
           exceptions[] = {"ACE_Interaction_isNotSwimming"};
           showDisabled = 1;
-          icon = QUOTE( PATHTOF(UI\Place_Explosive_ca.paa) );
+          icon = PATHTOF(UI\Place_Explosive_ca.paa);
           priority = 1;
           hotkey = "P";
         };
         class ACE_Defuse {
           displayName = $STR_ACE_Explosives_Defuse;
-          condition = QUOTE( [_player] call FUNC(canDefuse) );
-          statement = QUOTE( [ARR_2(_player,EGVAR(Interaction,Target))] call FUNC(startDefuse); );
+          condition = QUOTE([_player] call FUNC(canDefuse));
+          statement = QUOTE([ARR_2(_player,EGVAR(Interaction,Target))] call FUNC(startDefuse););
           exceptions[] = {"ACE_Interaction_isNotSwimming"};
           showDisabled = 0;
-          icon = QUOTE( PATHTOF(UI\Defuse_ca.paa) );
+          icon = PATHTOF(UI\Defuse_ca.paa);
           priority = 0.8;
           hotkey = "F";
         };

@@ -31,10 +31,10 @@ _distBase = _unit distance _mineBase;
 _distance = 10;
 if (_distCore < _distBase) then {
   _distance = _distCore;
-  EGVAR(Interaction,Target) = _timeBombCore;
+  EGVAR(interaction,Target) = _timeBombCore;
 }else{
   _distance = _distBase;
-  EGVAR(Interaction,Target) = _mineBase;
+  EGVAR(interaction,Target) = _mineBase;
 };
 if (isNil "_distance") exitWith {false};
 _distance < 4

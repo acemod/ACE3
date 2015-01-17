@@ -22,78 +22,78 @@ if !(GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
 _magazines = magazines _vehicle;
 
 if (_distance == 0) then {
-  _distance = [
-    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(DistanceInterval)),
-    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(MaxDistance)),
-    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(MinDistance))
-  ] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision
+    _distance = [
+        getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(DistanceInterval)),
+        getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(MaxDistance)),
+        getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(MinDistance))
+    ] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision
 };
 
 _weaponDirection = _vehicle weaponDirection currentWeapon _vehicle;
 _angleTarget = asin (_weaponDirection select 2);
 
 if (count _this > 2) then {
-  _distance = _this select 2;
+    _distance = _this select 2;
 };
 
 if (!(isNil QGVAR(backgroundCalculation)) and {!(scriptDone GVAR(backgroundCalculation))}) then {
-  terminate GVAR(backgroundCalculation);
+    terminate GVAR(backgroundCalculation);
 };
 
 // MOVING TARGETS
 _movingAzimuth = 0;
 if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
-  // calculate speed of target
-  _posTarget = [
-    (getPos _vehicle select 0) + _distance * (_weaponDirection select 0),
-    (getPos _vehicle select 1) + _distance * (_weaponDirection select 1),
-    (getPos _vehicle select 2) + _distance * (_weaponDirection select 2)
-  ];
-  _velocityTarget = [
-    ((_posTarget select 0) - (GVAR(position) select 0)) / (time - GVAR(time)),
-    ((_posTarget select 1) - (GVAR(position) select 1)) / (time - GVAR(time)),
-    ((_posTarget select 2) - (GVAR(position) select 2)) / (time - GVAR(time))
-  ];
+    // calculate speed of target
+    _posTarget = [
+        (getPos _vehicle select 0) + _distance * (_weaponDirection select 0),
+        (getPos _vehicle select 1) + _distance * (_weaponDirection select 1),
+        (getPos _vehicle select 2) + _distance * (_weaponDirection select 2)
+    ];
+    _velocityTarget = [
+        ((_posTarget select 0) - (GVAR(position) select 0)) / (time - GVAR(time)),
+        ((_posTarget select 1) - (GVAR(position) select 1)) / (time - GVAR(time)),
+        ((_posTarget select 2) - (GVAR(position) select 2)) / (time - GVAR(time))
+    ];
 
-  // estimate time to target
-  _magazineType = currentMagazine _vehicle;
-  _ammoType       = getText   (configFile >> "CfgMagazines" >> _magazineType >> "ammo");
-  _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _magazineType >> "initSpeed");
-  _airFriction    = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
-  _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "timeToLive");
-  _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "simulationStep");
+    // estimate time to target
+    _magazineType = currentMagazine _vehicle;
+    _ammoType       = getText   (configFile >> "CfgMagazines" >> _magazineType >> "ammo");
+    _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _magazineType >> "initSpeed");
+    _airFriction    = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
+    _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "timeToLive");
+    _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "simulationStep");
 
-  if (_simulationStep != 0) then {
-    _posX = 0;
-    _velocityX = _initSpeed;
-    _velocityY = 0;
-    _timeToTarget = 0;
-    for "_i" from 1 to ((floor (_timeToLive / _simulationStep)) + 1) do {
-      _posX = _posX + _velocityX * _simulationStep;
-      if (_posX >= _distance) exitWith { // bullet passed the target
-        _timeToTarget = _i * _simulationStep;
-      };
-      _velocityMagnitude = sqrt (_velocityX^2 + _velocityY^2);
-      _velocityX = _velocityX + _velocityX * _velocityMagnitude * _airFriction * _simulationStep;
-      _velocityY = _velocityY + _velocityY * _velocityMagnitude * _airFriction * _simulationStep - 9.81 * _simulationStep;
+    if (_simulationStep != 0) then {
+        _posX = 0;
+        _velocityX = _initSpeed;
+        _velocityY = 0;
+        _timeToTarget = 0;
+        for "_i" from 1 to ((floor (_timeToLive / _simulationStep)) + 1) do {
+            _posX = _posX + _velocityX * _simulationStep;
+            if (_posX >= _distance) exitWith { // bullet passed the target
+                _timeToTarget = _i * _simulationStep;
+            };
+            _velocityMagnitude = sqrt (_velocityX^2 + _velocityY^2);
+            _velocityX = _velocityX + _velocityX * _velocityMagnitude * _airFriction * _simulationStep;
+            _velocityY = _velocityY + _velocityY * _velocityMagnitude * _airFriction * _simulationStep - 9.81 * _simulationStep;
+        };
+
+        // calculate offsets
+        _posArrival = [
+            (_posTarget select 0) + (_velocityTarget select 0) * _timeToTarget,
+            (_posTarget select 1) + (_velocityTarget select 1) * _timeToTarget,
+            (_posTarget select 2) + (_velocityTarget select 2) * _timeToTarget
+        ];
+        _dirArrival = [
+            ((_posArrival select 0) - (getPos _vehicle select 0)) / (_posArrival distance (getPos _vehicle)),
+            ((_posArrival select 1) - (getPos _vehicle select 1)) / (_posArrival distance (getPos _vehicle)),
+            ((_posArrival select 2) - (getPos _vehicle select 2)) / (_posArrival distance (getPos _vehicle))
+        ];
+
+        _movingAzimuth = ((_dirArrival select 0) atan2 (_dirArrival select 1)) - ((_weaponDirection select 0) atan2 (_weaponDirection select 1));
+        _angleTarget = asin (_dirArrival select 2);
+        _distance = floor (_posArrival distance (getPos _vehicle));
     };
-
-    // calculate offsets
-    _posArrival = [
-      (_posTarget select 0) + (_velocityTarget select 0) * _timeToTarget,
-      (_posTarget select 1) + (_velocityTarget select 1) * _timeToTarget,
-      (_posTarget select 2) + (_velocityTarget select 2) * _timeToTarget
-    ];
-    _dirArrival = [
-      ((_posArrival select 0) - (getPos _vehicle select 0)) / (_posArrival distance (getPos _vehicle)),
-      ((_posArrival select 1) - (getPos _vehicle select 1)) / (_posArrival distance (getPos _vehicle)),
-      ((_posArrival select 2) - (getPos _vehicle select 2)) / (_posArrival distance (getPos _vehicle))
-    ];
-
-    _movingAzimuth = ((_dirArrival select 0) atan2 (_dirArrival select 1)) - ((_weaponDirection select 0) atan2 (_weaponDirection select 1));
-    _angleTarget = asin (_dirArrival select 2);
-    _distance = floor (_posArrival distance (getPos _vehicle));
-  };
 };
 GVAR(enabled) = false;
 GVAR(time) = -1;
@@ -102,7 +102,7 @@ GVAR(time) = -1;
 _viewDiff = _vehicle getVariable QGVAR(ViewDiff);
 _FCSAzimuth = _movingAzimuth;
 if (_viewDiff != 0) then {
-  _FCSAzimuth = (atan (_distance / _viewDiff) - (abs _viewDiff / _viewDiff) * 90) + _movingAzimuth;
+    _FCSAzimuth = (atan (_distance / _viewDiff) - (abs _viewDiff / _viewDiff) * 90) + _movingAzimuth;
 };
 
 // CALCULATE OFFSET FOR CURRENT WEAPON
@@ -112,16 +112,16 @@ _FCSElevation = [];
 _magazineType   = currentMagazine _vehicle;
 _ammoType       = getText   (configFile >> "CfgMagazines" >> _magazineType >> "ammo");
 if !(getText (configFile >> "CfgAmmo" >> _ammoType >> "simulation") == "shotMissile") then {
-  _maxElev        = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "Turrets" >> "MainTurret" >> "maxElev");
-  _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _magazineType >> "initSpeed");
-  _airFriction    = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
-  _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "timeToLive");
-  _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "simulationStep");
+    _maxElev        = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "Turrets" >> "MainTurret" >> "maxElev");
+    _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _magazineType >> "initSpeed");
+    _airFriction    = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
+    _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "timeToLive");
+    _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "simulationStep");
 
-  _offset = [_distance, _angleTarget, _maxElev, _initSpeed, _airFriction, _timeToLive, _simulationStep] call FUNC(getAngle);
+    _offset = [_distance, _angleTarget, _maxElev, _initSpeed, _airFriction, _timeToLive, _simulationStep] call FUNC(getAngle);
 
-  _FCSMagazines = _FCSMagazines + [_magazineType];
-  _FCSElevation = _FCSElevation + [_offset];
+    _FCSMagazines = _FCSMagazines + [_magazineType];
+    _FCSElevation = _FCSElevation + [_offset];
 };
 
 _vehicle setVariable [QGVAR(Distance),  _distance,     true];
@@ -131,33 +131,33 @@ _vehicle setVariable [QGVAR(Azimuth),   _FCSAzimuth,   true];
 
 // CALCULATE OFFSETS FOR OTHER WEAPONS IN THE BACKGROUND
 GVAR(backgroundCalculation) = [_vehicle, _magazines, _distance, _angleTarget, _FCSMagazines, _FCSElevation] spawn {
-  _vehicle      = _this select 0;
-  _magazines    = _this select 1;
-  _distance     = _this select 2;
-  _angleTarget  = _this select 3;
-  _FCSMagazines = _this select 4;
-  _FCSElevation = _this select 5;
+    _vehicle      = _this select 0;
+    _magazines    = _this select 1;
+    _distance     = _this select 2;
+    _angleTarget  = _this select 3;
+    _FCSMagazines = _this select 4;
+    _FCSElevation = _this select 5;
 
-  {
-    if !(_x in _FCSMagazines) then {
-      _ammoType       = getText   (configFile >> "CfgMagazines" >> _x >> "ammo");
-      if !(getText (configFile >> "CfgAmmo" >> _ammoType >> "simulation") == "shotMissile") then {
-        _maxElev        = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "Turrets" >> "MainTurret" >> "maxElev");
-        _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _x >> "initSpeed");
-        _airFriction    = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
-        _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "timeToLive");
-        _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "simulationStep");
+    {
+        if !(_x in _FCSMagazines) then {
+            _ammoType       = getText   (configFile >> "CfgMagazines" >> _x >> "ammo");
+            if !(getText (configFile >> "CfgAmmo" >> _ammoType >> "simulation") == "shotMissile") then {
+                _maxElev        = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "Turrets" >> "MainTurret" >> "maxElev");
+                _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _x >> "initSpeed");
+                _airFriction    = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
+                _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "timeToLive");
+                _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "simulationStep");
 
-        _offset = [_distance, _angleTarget, _maxElev, _initSpeed, _airFriction, _timeToLive, _simulationStep] call FUNC(getAngle);
+                _offset = [_distance, _angleTarget, _maxElev, _initSpeed, _airFriction, _timeToLive, _simulationStep] call FUNC(getAngle);
 
-        _FCSMagazines = _FCSMagazines + [_x];
-        _FCSElevation = _FCSElevation + [_offset];
-      };
-    };
-  } forEach _magazines;
+                _FCSMagazines = _FCSMagazines + [_x];
+                _FCSElevation = _FCSElevation + [_offset];
+            };
+        };
+    } forEach _magazines;
 
-  _vehicle setVariable [QGVAR(Magazines), _FCSMagazines, true];
-  _vehicle setVariable [QGVAR(Elevation), _FCSElevation, true];
+    _vehicle setVariable [QGVAR(Magazines), _FCSMagazines, true];
+    _vehicle setVariable [QGVAR(Elevation), _FCSElevation, true];
 };
 
 [format ["%1: %2", localize "STR_ACE_FCS_ZeroedTo", _distance]] call EFUNC(common,displayTextStructured);

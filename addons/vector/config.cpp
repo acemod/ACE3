@@ -16,29 +16,30 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 
-/*class AGM_Default_Keys {
+class ACE_Default_Keys {
     class vectorAzimuth {
-        displayName = "$STR_AGM_Vector_AzimuthKey";
-        condition = "currentWeapon player == 'AGM_Vector' && {_vehicle == player} && {cameraView == 'Gunner'}";
-        statement = "AGM_vectorKey set [0, true]; if (AGM_isVectorReady) then {AGM_isVectorReady = false; AGM_Vector_scriptHandle = 0 spawn AGM_Vector_fnc_tabAzimuthKey; 0 spawn AGM_Vector_fnc_abort;};";
-        conditionUp = "true";
-        statementUp = "AGM_vectorKey set [0, false];";
+        displayName = "$STR_ACE_Vector_AzimuthKey";
+        condition = QUOTE(currentWeapon player == 'ACE_Vector' && {_vehicle == player} && {cameraView == 'GUNNER'});
+        statement = QUOTE(['azimuth'] call FUNC(onKeyDown));
+        conditionUp = QUOTE(true);
+        statementUp = QUOTE(['azimuth'] call FUNC(onKeyUp));
         key = 15;
         shift = 0;
         control = 0;
         alt = 0;
     };
+
     class vectorDistance {
-        displayName = "$STR_AGM_Vector_DistanceKey";
-        condition = "currentWeapon player == 'AGM_Vector' && {_vehicle == player} && {cameraView == 'Gunner'}";
-        statement = "AGM_vectorKey set [1, true]; if (AGM_isVectorReady) then {AGM_isVectorReady = false; AGM_Vector_scriptHandle = 0 spawn AGM_Vector_fnc_tabDistanceKey; 0 spawn AGM_Vector_fnc_abort;};";
-        conditionUp = "true";
-        statementUp = "AGM_vectorKey set [1, false];";
+        displayName = "$STR_ACE_Vector_DistanceKey";
+        condition = QUOTE(currentWeapon player == 'ACE_Vector' && {_vehicle == player} && {cameraView == 'GUNNER'});
+        statement = QUOTE(['distance'] call FUNC(onKeyDown));
+        conditionUp = QUOTE(true);
+        statementUp = QUOTE(['distance'] call FUNC(onKeyUp));
         key = 19;
         shift = 0;
         control = 0;
         alt = 0;
     };
-};*/
+};
 
 #include "RscInGameUI.hpp"

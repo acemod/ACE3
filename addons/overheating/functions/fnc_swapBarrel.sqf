@@ -1,10 +1,18 @@
-// by commy2
+/*
+ * Author: Commy2
+ *
+ * Make a unit start swapping it's barrel
+ *
+ * Argument:
+ * 0: unit
+ * 1: weapon
+ *
+ * Return value:
+ * None
+ */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-private ["_player", "_weapon"];
-
-_player = _this select 0;
-_weapon = _this select 1;
+EXPLODE_2_PVT(_this,_player,_weapon);
 
 if (stance _player != "PRONE") then {
   [_player, "amovpknlmstpsraswrfldnon", 1] call EFUNC(common,doAnimation);

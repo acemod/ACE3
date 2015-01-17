@@ -21,7 +21,7 @@ _unit = _this select 0;
 _items = (items _unit);
 
 _actions = [localize "STR_ACE_Explosives_TriggerMenu", localize "STR_ACE_Explosives_SelectTrigger"]
-	call EFUNC(Interaction,prepareSelectMenu);
+	call EFUNC(interaction,prepareSelectMenu);
 _detonators = [_unit] call FUNC(getDetonators);
 {
 	_config = ConfigFile >> "CfgWeapons" >> _x;
@@ -30,12 +30,12 @@ _detonators = [_unit] call FUNC(getDetonators);
 		getText(_config >> "displayName"),
 		getText(_config >> "picture"),
 		_x
-	] call EFUNC(Interaction,addSelectableItem);
+	] call EFUNC(interaction,addSelectableItem);
 } count _detonators;
 
 if (count _detonators == 0) then {
-	call EFUNC(Interaction,hideMenu);
-	"ACE_Explosives" call EFUNC(Interaction,openMenuSelf);
+	call EFUNC(interaction,hideMenu);
+	"ACE_Explosives" call EFUNC(interaction,openMenuSelf);
 	[format[localize "STR_ACE_Explosives_NoTriggersAvailable", "player"]] call EFUNC(Common,displayTextStructured);
 }else{
 	[
@@ -44,10 +44,10 @@ if (count _detonators == 0) then {
 			[ACE_player, _this] call FUNC(openDetonateUI);
 		},
 		{
-			call EFUNC(Interaction,hideMenu);
-			if !(profileNamespace getVariable [QUOTE( EGVAR(Interaction,AutoCloseMenu) ), false]) then {
-				"ACE_Explosives" call EFUNC(Interaction,openMenuSelf);
+			call EFUNC(interaction,hideMenu);
+			if !(profileNamespace getVariable [QUOTE(EGVAR(interaction,AutoCloseMenu)), false]) then {
+				"ACE_Explosives" call EFUNC(interaction,openMenuSelf);
 			};
 		}
-	] call EFUNC(Interaction,openSelectMenu);
+	] call EFUNC(interaction,openSelectMenu);
 };

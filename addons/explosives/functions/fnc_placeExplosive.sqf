@@ -56,7 +56,7 @@ _explosive = createVehicle [_ammo, _pos, [], 0, "NONE"];
 if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_triggerSpecificVars]
 	call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {_explosive};
 if (_setDir) then {
-	[[_explosive, _dir, getNumber (_magazineTrigger >> "pitch")], QUOTE(FUNC(setPosition))]
-		call EFUNC(Common,execRemoteFnc);
+	[[_explosive, _dir, getNumber (_magazineTrigger >> "pitch")], QFUNC(setPosition)]
+		call EFUNC(common,execRemoteFnc);
 };
 _explosive
