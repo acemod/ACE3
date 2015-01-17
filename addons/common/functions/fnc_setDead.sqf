@@ -70,7 +70,7 @@ if (((GVAR(ENABLE_REVIVE_F) == 1 && isPlayer _unit) || (GVAR(ENABLE_REVIVE_F) ==
 						[_unit,QGVAR(isDeadPlayer),true,true] call FUNC(setDefinedVariable);
 					};
 					_unit setdamage 1;
-					[[_unit, true],"killed"] call FUNC(customEventHandler_F);
+					[[_unit, true],"killed"] call FUNC(raiseScriptedEvent_f);
 				};
 				sleep 1;
 				_unit setvariable [QGVAR(ENABLE_REVIVE_COUNTER),_counter + 1];
@@ -84,7 +84,7 @@ if (((GVAR(ENABLE_REVIVE_F) == 1 && isPlayer _unit) || (GVAR(ENABLE_REVIVE_F) ==
 			};
 			[_unit,QGVAR(isDead),true,true] call FUNC(setDefinedVariable);
 			_unit setdamage 1;
-			[[_unit, false],"killed"] call FUNC(customEventHandler_F);
+			[[_unit, false],"killed"] call FUNC(raiseScriptedEvent_f);
 		};
 	};
 } else {
@@ -98,5 +98,5 @@ if (((GVAR(ENABLE_REVIVE_F) == 1 && isPlayer _unit) || (GVAR(ENABLE_REVIVE_F) ==
 	_unit setdamage 1;
 	[_unit,QGVAR(isDead),true,true] call FUNC(setDefinedVariable);
 
-	[[_unit, false],"killed"] call FUNC(customEventHandler_F);
+	[[_unit, false],"killed"] call FUNC(raiseScriptedEvent_f);
 };

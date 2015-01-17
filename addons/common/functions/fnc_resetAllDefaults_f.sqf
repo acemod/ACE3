@@ -29,7 +29,7 @@ _unit setvariable [QGVAR(stateUnconscious), nil, true];
 if (isPlayer _unit) then {
 	[true] call FUNC(setVolume_f);
 	[false] call FUNC(disableKeyInput_f);
-	[false] call FUNC(effectBlackOut);
+	[false] call EFUNC(GUI,effectBlackOut);
 	[player, -1] call FUNC(limitSpeed);
 	if (isnil QGVAR(DISABLE_USER_INPUT_COLLECTION_F)) then {
 		GVAR(DISABLE_USER_INPUT_COLLECTION_F) = [];
@@ -50,4 +50,4 @@ if ((count _sets) > 0) then {
 } else {
 	["No defaults have been set"] call FUNC(debug);
 };
-[[_unit],"resetToDefaults"] call FUNC(customEventHandler_F);
+[[_unit],"resetToDefaults"] call FUNC(raiseScriptedEvent_f);

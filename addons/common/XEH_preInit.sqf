@@ -199,11 +199,7 @@ PREP(sendHintTo);
 PREP(sendMessageTo);
 PREP(sendDisplayInformationTo);
 PREP(sendDisplayMessageTo);
-PREP(broadcastAnim);
 PREP(getDeathAnim);
-PREP(switchAnim);
-PREP(playMoveNow);
-PREP(localAnim);
 PREP(insertionSort);
 PREP(uniqueElementsOnly);
 PREP(sortAlphabeticallyBy);
@@ -223,6 +219,7 @@ PREP(setDead);
 PREP(isAwake);
 PREP(setProne);
 
+PREP(raiseScriptedEvent_f);
 PREP(disableUserInput_f);
 
 PREP(dropWeapon_f);
@@ -232,7 +229,6 @@ PREP(closeAllDialogs_f);
 PREP(disableAI_f);
 PREP(moduleBasicRevive);
 PREP(switchToGroupSide_f);
-PREP(hasItem_f);
 PREP(getFirstObjectIntersection);
 PREP(getFirstTerrainIntersection);
 PREP(setHearingCapability);
@@ -255,9 +251,7 @@ PREP(setCaptiveSwitch);
 PREP(moveToTempGroup);
 PREP(canGoUnconsciousState);
 PREP(setWeaponsCorrectUnconscious);
-PREP(effectPain);
-PREP(effectBleeding);
-PREP(effectBlackOut);
+
 PREP(limitMovementSpeed);
 PREP(limitSpeed);
 PREP(setArrestState);

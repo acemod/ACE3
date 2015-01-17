@@ -45,4 +45,4 @@ if (_setVolume) then {
 
 };
 
-[[_setVolume],"setVolume"] call FUNC(customEventHandler_F);
+[[_setVolume],"setVolume"] call FUNC(raiseScriptedEvent_f);

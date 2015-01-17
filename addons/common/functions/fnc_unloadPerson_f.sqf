@@ -39,7 +39,7 @@ if (!([_unit] call FUNC(isAwake))) then {
 		_unit = _this select 0;
 		_vehicle = _this select 1;
 		waituntil {vehicle _unit != _vehicle};
-		[_unit,([_unit] call FUNC(getDeathAnim))] call FUNC(broadcastAnim);
+		[_unit,([_unit] call FUNC(getDeathAnim)), 1, true] call FUNC(doAnimation);
 		[format["Unit should move into death anim: %1", _unit]] call FUNC(debug);
 	};
 } else {
@@ -48,7 +48,7 @@ if (!([_unit] call FUNC(isAwake))) then {
 			_unit = _this select 0;
 			_vehicle = _this select 1;
 			waituntil {vehicle _unit != _vehicle};
-			[_unit,"UnaErcPoslechVelitele2",true] call FUNC(broadcastAnim);
+			[_unit,"UnaErcPoslechVelitele2", 1] call FUNC(doAnimation);
 			[format["Unit should move into arrested anim: %1", _unit]] call FUNC(debug);
 		};
 	} else {

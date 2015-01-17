@@ -30,7 +30,7 @@ if (!([_unit] call FUNC(isAwake))) then {
 		_vehicle = _this select 1;
 		waituntil {vehicle _unit == _vehicle};
 		sleep 0.5;
-		[_unit,([_unit] call FUNC(getDeathAnim))] call FUNC(broadcastAnim);
+		[_unit,([_unit] call FUNC(getDeathAnim)), 1] call FUNC(doAnimation);
 	};
 } else {
 	if ([_unit] call FUNC(isArrested)) then {

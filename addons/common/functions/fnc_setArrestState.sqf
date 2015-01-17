@@ -19,7 +19,7 @@ if (_setArrest) then {
 
 	if ([_unit] call FUNC(isAwake)) then {
 		if (vehicle _unit == _unit) then {
-			[_unit,"UnaErcPoslechVelitele2",true] call FUNC(broadcastAnim);
+			[_unit,"UnaErcPoslechVelitele2",1] call FUNC(doAnimation);
 		};
 	};
 	if (IsPlayer _unit) then {
@@ -32,7 +32,7 @@ if (_setArrest) then {
 
 	if ([_unit] call FUNC(isAwake)) then {
 		if (vehicle _unit == _unit) then {
-			[_unit,"",true] call FUNC(broadcastAnim);
+			[_unit,"",1] call FUNC(doAnimation);
 		};
 		_unit enableAI "Move";
 		_unit enableAI "ANIM";
@@ -42,4 +42,4 @@ if (_setArrest) then {
 	};
 };
 
-[[_unit, _setArrest],"setArrestState"] call FUNC(customEventHandler_F);
+[[_unit, _setArrest],"setArrestState"] call FUNC(raiseScriptedEvent_f);

@@ -40,7 +40,7 @@ if (((typeName _to) == "OBJECT" && (isNull ([_unit] call FUNC(getCarriedObj)))) 
 				[format["fnc_carryObj - UNIT: %1 TO %2 - Script expects external handling of attachTo Command. Exiting",_unit,_to],2] call FUNC(debug);
 			};
 
-			[[_unit, _to, _fallDown],"carryObject"] call FUNC(customEventHandler_F);
+			[[_unit, _to, _fallDown],"carryObject"] call FUNC(raiseScriptedEvent_f);
 
 		};
 	} else {
@@ -59,13 +59,13 @@ if (((typeName _to) == "OBJECT" && (isNull ([_unit] call FUNC(getCarriedObj)))) 
 				_positionUnit set [2, ((getPosASL _unit) select 2) + 0.1];
 				_carriedObj setPosASL _positionUnit;
 			};
-			[[_unit, _carriedObj],"carryObjectDropped"] call FUNC(customEventHandler_F);
+			[[_unit, _carriedObj],"carryObjectDropped"] call FUNC(raiseScriptedEvent_f);
 
 			[[_unit] call FUNC(getCarriedObj), objNull] call FUNC(setCarriedBy);
 			_unit setvariable [QGVAR(carriedObj),_to,true];
 			_return = true;
 
-			[[_unit, _to, _fallDown],"carryObject"] call FUNC(customEventHandler_F);
+			[[_unit, _to, _fallDown],"carryObject"] call FUNC(raiseScriptedEvent_f);
 		};
 	};
 } else {

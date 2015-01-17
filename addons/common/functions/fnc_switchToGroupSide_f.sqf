@@ -63,4 +63,4 @@ if (_switch) then {
 	_unit setvariable [QGVAR(previousGroupSwitchTo_F), _previousGroupsList, true];
 };
 
-[[_unit, _switch, _id, _side],"switchToGroupSide"] call FUNC(customEventHandler_F);
+[[_unit, _switch, _id, _side],"switchToGroupSide"] call FUNC(raiseScriptedEvent_f);
