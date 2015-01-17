@@ -99,16 +99,16 @@ class ACE_Parameters_Boolean {
 };
 
 class ACE_canInteractConditions {
-  class ACE_Interaction_isNotEscorting {
+  class GVAR(isNotEscorting) {
     condition = QUOTE( !(_player getVariable ['ACE_isEscorting', false]) );
   };
-  class ACE_Interaction_isNotCaptive {
+  class GVAR(isNotCaptive) {
     condition = QUOTE( !(_player getVariable ['ACE_isCaptive', false]) );
   };
-  class ACE_Interaction_isNotSurrendering {
+  class GVAR(isNotSurrendering) {
     condition = QUOTE( !(_player getVariable ['ACE_isSurrender', false]) );
   };
-  class ACE_Interaction_isNotSwimming {
+  class GVAR(isNotSwimming) {
     condition = QUOTE( !underwater _player );
   };
 };
