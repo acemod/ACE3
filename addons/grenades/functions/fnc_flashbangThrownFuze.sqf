@@ -12,9 +12,7 @@ if (_waitUntilTime > time) exitWith {};
 
 if (alive _projectile) then {
   playSound3D ["A3\Sounds_F\weapons\Explosion\explosion_mine_1.wss", _projectile, false, getPosASL _projectile, 5, 1.2, 400];
-
+  
   _affected = _projectile nearEntities ["CAManBase", 50];
-  {
-    [QGVAR(flashbangExplosionEvent), [_x], [_x, _projectile]] call EFUNC(common,targetEvent);
-  } forEach _affected;
+  ["flashbangExplosion", _affected, [_projectile]] call EFUNC(common,targetEvent);
 };

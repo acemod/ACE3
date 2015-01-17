@@ -6,4 +6,4 @@ PREP(flashbangThrownFuze);
 PREP(nextMode);
 PREP(throwGrenade);
 
-[QGVAR(flashbangExplosionEvent), { _this call DFUNC(flashbangExplosionEH) }] call EFUNC(common,addEventHandler);
+["flashbangExplosion", { _this call DFUNC(flashbangExplosionEH) }] call EFUNC(common,addEventHandler);
