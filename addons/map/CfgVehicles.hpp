@@ -10,9 +10,9 @@ class CfgVehicles {
 
       class ACE_MapTools {
         displayName = "$STR_ACE_Map_MapTools_Menu";
-        condition = QUOTE(call FUNC(canUseMapTools) || {call FUNC(canUseMapGPS)});
+        condition = QUOTE((call FUNC(canUseMapTools) || {call FUNC(canUseMapGPS)}));
         statement = "";
-        exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Core_notOnMap"};
+        exceptions[] = {"ACE_Drag_isNotDragging", QEGVAR(common,notOnMap)};
         showDisabled = 0;
         priority = 100;
         subMenu[] = {"ACE_MapTools", 1};
@@ -20,63 +20,63 @@ class CfgVehicles {
 
         class ACE_MapToolsHide {
           displayName = "$STR_ACE_Map_MapToolsHide";
-          condition = QUOTE(call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0});
+          condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0}));
           statement = QUOTE(GVAR(mapTool_Shown) = 0; [] call FUNC(updateMapToolMarkers));
-          exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Core_notOnMap"};
+          exceptions[] = {"ACE_Drag_isNotDragging", QEGVAR(common,notOnMap)};
           showDisabled = 1;
           priority = 5;
           enableInside = 1;
         };
         class ACE_MapToolsShowNormal {
           displayName = "$STR_ACE_Map_MapToolsShowNormal";
-          condition = QUOTE(call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 1});
+          condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 1}));
           statement = QUOTE(GVAR(mapTool_Shown) = 1; [] call FUNC(updateMapToolMarkers));
-          exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Core_notOnMap"};
+          exceptions[] = {"ACE_Drag_isNotDragging", QEGVAR(common,notOnMap)};
           showDisabled = 1;
           priority = 4;
           enableInside = 1;
         };
         class ACE_MapToolsShowSmall {
           displayName = "$STR_ACE_Map_MapToolsShowSmall";
-          condition = QUOTE(call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 2});
+          condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 2}));
           statement = QUOTE(GVAR(mapTool_Shown) = 2; [] call FUNC(updateMapToolMarkers));
-          exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Core_notOnMap"};
+          exceptions[] = {"ACE_Drag_isNotDragging", QEGVAR(common,notOnMap)};
           showDisabled = 1;
           priority = 3;
           enableInside = 1;
         };
         class ACE_MapToolsAlignNorth {
           displayName = "$STR_ACE_Map_MapToolsAlignNorth";
-          condition = QUOTE(call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0});
+          condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0}));
           statement = QUOTE(GVAR(mapTool_angle) = 0; [] call FUNC(updateMapToolMarkers));
-          exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Core_notOnMap"};
+          exceptions[] = {"ACE_Drag_isNotDragging", QEGVAR(common,notOnMap)};
           showDisabled = 1;
           priority = 2;
           enableInside = 1;
         };
         class ACE_MapToolsAlignCompass {
           displayName = "$STR_ACE_Map_MapToolsAlignCompass";
-          condition = QUOTE(call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0} && {('ItemCompass' in assigneditems ACE_player) || {'ItemCompass' in assigneditems ACE_player}});
+          condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0} && {('ItemCompass' in assigneditems ACE_player) || {'ItemCompass' in assigneditems ACE_player}}));
           statement = QUOTE(GVAR(mapTool_angle) = getDir ACE_player; [] call FUNC(updateMapToolMarkers));
-          exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Core_notOnMap"};
+          exceptions[] = {"ACE_Drag_isNotDragging", QEGVAR(common,notOnMap)};
           showDisabled = 1;
           priority = 1;
           enableInside = 1;
         };
         class ACE_MapGpsShow {
           displayName = "$STR_ACE_Map_MapGpsShow";
-          condition = QUOTE(call FUNC(canUseMapGPS) && {!GVAR(mapGpsShow)});
+          condition = QUOTE((call FUNC(canUseMapGPS) && {!GVAR(mapGpsShow)}));
           statement = QUOTE(GVAR(mapGpsShow) = true; [GVAR(mapGpsShow)] call FUNC(openMapGps));
-          exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Core_notOnMap"};
+          exceptions[] = {"ACE_Drag_isNotDragging", QEGVAR(common,notOnMap)};
           showDisabled = 0;
           priority = 0;
           enableInside = 1;
         };
         class ACE_MapGpsHide {
           displayName = "$STR_ACE_Map_MapGpsHide";
-          condition = QUOTE(call FUNC(canUseMapGPS) && {GVAR(mapGpsShow)});
+          condition = QUOTE((call FUNC(canUseMapGPS) && {GVAR(mapGpsShow)}));
           statement = QUOTE(GVAR(mapGpsShow) = false; [GVAR(mapGpsShow)] call FUNC(openMapGps));
-          exceptions[] = {"ACE_Drag_isNotDragging", "ACE_Core_notOnMap"};
+          exceptions[] = {"ACE_Drag_isNotDragging", QEGVAR(common,notOnMap)};
           showDisabled = 0;
           priority = 0;
           enableInside = 1;
@@ -87,8 +87,8 @@ class CfgVehicles {
     class ACE_Actions {
       class ACE_CopyMap {
         displayName = "$STR_ACE_Map_CopyMap";
-        condition = QUOTE([_target] call EFUNC(common,isPlayer) && {'ItemMap' in assigneditems _player} && {'ACE_MapTools' in items _player} && {'ItemMap' in assignedItems _target});
-        statement = QUOTE([ARR_2(_player,_target)] call FUNC(copyMapStart)); 
+        condition = QUOTE(([_target] call EFUNC(common,isPlayer) && {'ItemMap' in assigneditems _player} && {'ACE_MapTools' in items _player} && {'ItemMap' in assignedItems _target}));
+        statement = QUOTE([ARR_2(_player,_target)] call FUNC(copyMapStart));
         showDisabled = 0;
         priority = -1;
       };
