@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-20 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="SafeMode">
-    <Key ID="STR_AGM_SafeMode_SafeMode">
+    <Key ID="STR_ACE_SafeMode_SafeMode">
       <English>Safe Mode</English>
       <German>Waffe sichern</German>
       <Spanish>Seguro puesto</Spanish>
@@ -11,7 +11,7 @@
       <Hungarian>Veszélytelenités</Hungarian>
       <Russian>Предохранитель</Russian>
     </Key>
-    <Key ID="STR_AGM_SafeMode_TakeOffSafety">
+    <Key ID="STR_ACE_SafeMode_TakeOffSafety">
       <English>Take off Safety</English>
       <German>Waffe entsichern</German>
       <Spanish>Quitar seguro</Spanish>
@@ -20,7 +20,7 @@
       <Hungarian>Veszélyesités</Hungarian>
       <Russian>Снять с предохранителя</Russian>
     </Key>
-    <Key ID="STR_AGM_SafeMode_PutOnSafety">
+    <Key ID="STR_ACE_SafeMode_PutOnSafety">
       <English>Put on Safety</English>
       <German>Waffe gesichert</German>
       <Spanish>Poner seguro</Spanish>
@@ -29,7 +29,7 @@
       <Hungarian>Veszélytelenitve</Hungarian>
       <Russian>Поставить на предохранитель</Russian>
     </Key>
-    <Key ID="STR_AGM_SafeMode_TookOffSafety">
+    <Key ID="STR_ACE_SafeMode_TookOffSafety">
       <English>Took off Safety</English>
       <German>Waffe entsichert</German>
       <Spanish>Seguro quitado</Spanish>

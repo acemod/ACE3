@@ -1,14 +1,13 @@
 // by commy2
+#include "script_component.hpp"
 
-private ["_unit", "_weapon", "_sound"];
+EXPLODE_2_PVT(_this,_unit,_weapon);
 
-_unit = _this select 0;
-_weapon = _this select 1;
-
+private ["_sound"];
 _sound = getArray (configFile >> "CfgWeapons" >> _weapon >> "changeFiremodeSound");
 
 if (count _sound == 0) exitWith {
-  playSound "AGM_Sound_Click";
+  playSound "ACE_Sound_Click";
 };
 
 // add file extension
@@ -27,7 +26,6 @@ if (count _sound < 3) then {_sound pushBack 1};
 if (count _sound < 4) then {_sound pushBack 0};
 
 private "_position";
-
 _position = _unit modelToWorld (_unit selectionPosition "RightHand");
 _position set [2, (_position select 2) + ((getPosASLW _unit select 2) - (getPosATL _unit select 2) max 0)];
 

@@ -1,11 +1,12 @@
 // by commy2
+#include "script_component.hpp"
 
-private ["_show", "_control"];
-
-_show = _this select 0;
+EXPLODE_1_PVT(_this,_show);
 
 disableSerialization;
-_control = (uiNamespace getVariable ["AGM_dlgSoldier", displayNull]) displayCtrl 187;
+
+private ["_control"];
+_control = (uiNamespace getVariable ["ACE_dlgSoldier", displayNull]) displayCtrl 187;
 
 if (isNull _control) exitWith {};
 
