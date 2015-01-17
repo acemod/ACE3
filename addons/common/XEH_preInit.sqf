@@ -31,6 +31,7 @@ PREP(displayTextPicture);
 PREP(displayTextStructured);
 PREP(doAnimation);
 PREP(endRadioTransmission);
+PREP(execNextFrame);
 PREP(execPersistentFnc);
 PREP(execRemoteFnc);
 PREP(executePersistent);
