@@ -17,5 +17,8 @@ PREP(displayInformation);
 PREP(displayMessage);
 PREP(blurScreen);
 PREP(displayIcon);
+PREP(effectPain);
+PREP(effectBleeding);
+PREP(effectBlackOut);
 
 ADDON = true;
