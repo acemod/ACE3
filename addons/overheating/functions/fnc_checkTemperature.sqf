@@ -25,4 +25,4 @@ if (_action == "") then {
 _player playActionNow _action;
 
 // Launch a PFH that waits a sec before displaying the temperature
-[FUNC(pfhDisplayTemperature), 1.0, [_player, _weapon, diag_tickTime]] call CBA_fnc_addPerFrameHandler;
+[FUNC(displayTemperature), [_player, _weapon], 1.0, 0] call EFUNC(common,waitAndExecute);
