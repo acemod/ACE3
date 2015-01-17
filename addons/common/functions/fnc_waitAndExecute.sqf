@@ -4,7 +4,7 @@
  * Executes a code once with a given game time delay, using a PFH
  *
  * Argument:
- * 0: Code to execute (Code or String)
+ * 0: Code to execute (Code)
  * 1: Parameters to run the code with (Array)
  * 2: Delay in seconds before executing the code (Number)
  * 3: Interval of time in which the execution is evaluated, 0 means every frame (Number)
@@ -27,11 +27,6 @@ EXPLODE_4_PVT(_this,_func,_params,_delay,_interval);
 
         // Remove the PFH
         [_pfhId] call cba_fnc_removePerFrameHandler;
-
-        // Compile the function if necesary
-        if (typeName _func == "STRING") then {
-            _func = compile _func;
-        };
 
         // Execute the function
         _funcParams call _func;
