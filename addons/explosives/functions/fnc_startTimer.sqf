@@ -17,21 +17,21 @@
 */
 #include "script_component.hpp"
 [{
-    private ["_explosive", "_params", "_pfhId", "_placeTime", "_fuseTime"];
-    _params = _this select 0;
-    _pfhId = _this select 1;
+    EXPLODE_2_PVT(_this,_params,_pfhId);
 
+    private ["_placeTime", "_fuseTime", "_explosive"];
     _placeTime = _params select 1;
     _fuseTime = _params select 0 select 1;
 
-    // Skip first execution
-    if (diag_tickTime < _placeTime + _fuseTime / 2) exitWith {};
+    // Exit if it's not time to detonate yet
+    if (time < _placeTime + _fuseTime) exitWith {};
+
+    // Remove the PFH
+    [_pfhId] call cba_fnc_removePerFrameHandler;
 
     _explosive = (_params select 0) select 0;
     if (!isNull _explosive) then {
         [_explosive, -1, [_explosive, 0], true] call FUNC(detonateExplosive);
     };
 
-    // Remove the PFH
-    [_pfhId] call cba_fnc_removePerFrameHandler;
-},_this select 1, [_this, diag_tickTime]] call CBA_fnc_addPerFrameHandler;
+},0, [_this, time]] call CBA_fnc_addPerFrameHandler;
