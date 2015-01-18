@@ -9,6 +9,9 @@
  * Return Value:
  * None
  */
+
+#include "script_component.hpp"
+
 GVAR(fadeScript) = scriptNull;
 
 // show overlay after changing weapon/optic

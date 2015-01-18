@@ -4,7 +4,7 @@ class RscTitles {
         movingEnable = 0;
         enableSimulation = 1;
         enableDisplay = 1;
-        onLoad = QUOTE(_this spawn COMPILE_FILE(PATHTOF(scripts\zeroingOnLoad.sqf)); uiNamespace setVariable[QGVAR(Debug), _this];);
+        onLoad = QUOTE(_this spawn compile preprocessFileLineNumbers 'z\ace\scopes\scripts\zeroingOnLoad.sqf'; uiNamespace setVariable [ARR_2('ACE_Scopes_Debug', _this)];);
         duration = 1e+011;
         fadein = 0;
         fadeout = 0;
@@ -12,7 +12,7 @@ class RscTitles {
         class RscPicture;
         class RscText;
         class controls {
-            class ACE_Scope_Zeroing_BG : RscPicture {
+            class ACE_Scopes_Zeroing_BG : RscPicture {
                 idc = 925001;
                 type = 0;
                 text = PATHTOF(UI\scopes_bg.paa);
@@ -29,7 +29,7 @@ class RscTitles {
                 w = 0.4 * safezoneW;
                 h = 0.3 * safezoneH;
             };
-            class ACE_Scope_Zeroing_Vertical : RscText {
+            class ACE_Scopes_Zeroing_Vertical : RscText {
                 idc = 925002;
                 type = 0;
                 style = 2;
@@ -46,7 +46,7 @@ class RscTitles {
                 w = 0.04 * safezoneW;
                 h = 0.025 * safezoneH;
             };
-            class ACE_Scope_Zeroing_Horizontal : RscText {
+            class ACE_Scopes_Zeroing_Horizontal : RscText {
                 idc = 925003;
                 type = 0;
                 style = 0;
@@ -70,6 +70,7 @@ class RscTitles {
 class RscInGameUI {
     class RscUnitInfo;
     class RscWeaponZeroing : RscUnitInfo {
-        onLoad = QUOTE(["onLoad", _this, "RscUnitInfo", "IGUI"] call COMPILE_FILE(PATHTOF(A3\ui_f\scripts\initDisplay.sqf)); uiNamespace setVariable["ACE_dlgWeaponZeroing", _this select 0];);
+        onLoad = QUOTE([ARR_4('onLoad',_this,'RscUnitInfo','IGUI')] call compile preprocessfilelinenumbers 'A3\ui_f\scripts\initDisplay.sqf'; uiNamespace setVariable [ARR_2('ACE_dlgWeaponZeroing', _this select 0)]; );
+        //onLoad = "[""onLoad"",_this,""RscUnitInfo"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; uiNamespace setVariable ['ACE_dlgWeaponZeroing', _this select 0];";
     };
 };

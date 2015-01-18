@@ -27,7 +27,7 @@ _weapons = [
 ];
 if !(_weaponType in _weapons) exitWith {};
 
-_zeroing = QGVAR(Adjustment) select (_weapons find _weaponType);
+_zeroing = GVAR(Adjustment) select (_weapons find _weaponType);
 
 // convert zeroing from mils to degrees
 _zeroing = [_zeroing, {_this * 0.05625}] call EFUNC(common,map);
