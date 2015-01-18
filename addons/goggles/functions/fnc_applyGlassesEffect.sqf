@@ -32,6 +32,9 @@ if (_postProcessTintAmount != 0 && {GVAR(UsePP)}) then {
 	GVAR(PostProcess) ppEffectAdjust[0.9, 1.1, 0.004, _postProcessColour, [0,0,0,1],[0,0,0,0]];
 	GVAR(PostProcess) ppEffectCommit 0;
 	GVAR(PostProcess) ppEffectEnable true;
+	_postProcessColour set [3, _postProcessTintAmount/250];
+	GVAR(PostProcess) ppEffectAdjust[0.9, 1.1, 0.004, _postProcessColour, [0,0,0,1],[0,0,0,0]];
+	GVAR(PostProcess) ppEffectCommit 30;
 };
 
 _glassImagePath = getText(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_Overlay");
