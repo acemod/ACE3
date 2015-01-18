@@ -1,29 +1,29 @@
 /*
-	Name: ACE_Goggles_fnc_DustHandler
-	
+	fnc_DustHandler.sqf
+
 	Author: Garth de Wet (LH)
-	
+
 	Description:
 	Determines whether to place dust on the goggles, based on calibre of weapon fired and other requirements.
-	
-	Parameters: 
+
+	Parameters:
 	0: Object - unit - eventhandler was attached to.			(Used)
 	1: String - weapon - Weapon fired							(Used)
-	
+
 	Returns:
 	Nothing
-	
+
 	Example:
-	player addEventHandler ["Fired", {[_this select 0, _this select 1] call ACE_Goggles_fnc_DustHandler;}];
+	ace_player addEventHandler ["Fired", {[_this select 0, _this select 1] call FUNC(DustHandler;}];
 	See http://community.bistudio.com/wiki/ArmA_3:_Event_Handlers#Fired
 */
-#include "\ACE_Goggles\script.sqf"
+#include "script_component.hpp"
 
 private ["_bullets", "_position", "_surface", "_found", "_weapon", "_cloudType"];
 _weapon = _this select 1;
 _cloudType = "";
 
-if ((_this select 0) != player) exitWith {true};
+if ((_this select 0) != ace_player) exitWith {true};
 
 if (isClass(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "FirstEffect")) then {
 	_cloudType = getText(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "FirstEffect" >> "effectName");
@@ -35,9 +35,9 @@ if (isClass(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "FirstEff
 
 if (_cloudType == "") exitWith {true};
 if (rain > 0.1) exitWith {true};
-if ((stance player) != "PRONE") exitWith {true};
+if ((stance ace_player) != "PRONE") exitWith {true};
 
-_position = getPosATL player;
+_position = getPosATL ace_player;
 
 if (surfaceIsWater _position) exitWith {};
 if ((_position select 2) > 0.2) exitWith {};
@@ -69,7 +69,7 @@ if (GETDUSTT(DAMOUNT) < 2) then {
 
 	if (_bulletsRequired <= _bullets) then {
 		SETDUST(DACTIVE,true);
-		call ACE_Goggles_fnc_ApplyDust;
+		call FUNC(applyDust);
 	};
 };
 true

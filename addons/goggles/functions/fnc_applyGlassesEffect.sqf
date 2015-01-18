@@ -1,37 +1,37 @@
 /*
-	Name: ACE_Goggles_fnc_ApplyGlassesEffect
-	
+	Name: fnc_ApplyGlassesEffect.sqf
+
 	Author: Garth de Wet (LH)
-	
+
 	Description:
 	Sets screen tint for glasses.
 	Sets screen overlay for glasses. (broken/fixed)
 	Sets dirt/rain overlay for glasses.
-	
-	Parameters: 
+
+	Parameters:
 	0: STRING - Glasses class name to be applied.
-	
+
 	Returns:
 	Nothing
-	
+
 	Example:
-	(goggles player) call ACE_Goggles_fnc_ApplyGlassesEffect;
+	(goggles ace_player) call FUNC(ApplyGlassesEffect);
 */
-#include "\ACE_Goggles\script.sqf"
+#include "script_component.hpp"
 private["_postProcessColour", "_postProcessTintAmount", "_glassesClassname", "_glassImagePath"];
 
 _glassesClassname = _this;
 _postProcessColour = getArray(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_Color");
 _postProcessTintAmount = getNumber(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_TintAmount");
 
-call ACE_Goggles_fnc_RemoveGlassesEffect;
-ACE_Goggles_EffectsActive = true;
+call FUNC(removeGlassesEffect);
+GVAR(EffectsActive) = true;
 
-if (_postProcessTintAmount != 0 && {ACE_Goggles_UsePP}) then {
+if (_postProcessTintAmount != 0 && {GVAR(UsePP)}) then {
 	_postProcessColour set [3, _postProcessTintAmount/100];
-	ACE_Goggles_PostProcess ppEffectAdjust[0.9, 1.1, 0.004, _postProcessColour, [0,0,0,1],[0,0,0,0]];
-	ACE_Goggles_PostProcess ppEffectCommit 0;
-	ACE_Goggles_PostProcess ppEffectEnable true;
+	GVAR(PostProcess) ppEffectAdjust[0.9, 1.1, 0.004, _postProcessColour, [0,0,0,1],[0,0,0,0]];
+	GVAR(PostProcess) ppEffectCommit 0;
+	GVAR(PostProcess) ppEffectEnable true;
 };
 
 _glassImagePath = getText(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_Overlay");
@@ -44,10 +44,10 @@ if (_glassImagePath != "") then {
 };
 
 if GETDIRT then {
-	call ACE_Goggles_fnc_ApplyDirtEffect;
+	call FUNC(applyDirtEffect);
 };
 
 if GETDUSTT(DACTIVE) then {
 	SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
-	call ACE_Goggles_fnc_ApplyDust;
+	call FUNC(applyDust);
 };

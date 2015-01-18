@@ -1,20 +1,21 @@
 /*
-	Name: ACE_Goggles_fnc_isDivingGoggles
-	
+	fnc_isDivingGoggles.sqf
+
 	Author: Garth de Wet (LH)
-	
+
 	Description:
 	Determines whether current goggles worn by passed unit is diving goggles or a variant of them.
-	
-	Parameters: 
+
+	Parameters:
 	0: String - Glasses classname
-	
+
 	Returns:
 	Boolean - whether diving goggles are worn
-	
+
 	Example:
-	(goggles player) call ACE_Goggles_fnc_isDivingGoggles;
+	(goggles ace_player) call FUNC(isDivingGoggles);
 */
+#include "script_component.hpp"
 private ["_result", "_glasses"];
 _glasses = _this;
 _result = _glasses == "G_Diving";

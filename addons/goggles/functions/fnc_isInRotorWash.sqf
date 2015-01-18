@@ -1,24 +1,25 @@
 /*
-	Name: ACE_Goggles_fnc_isInRotorWash
-	
+	fnc_isInRotorWash.sqf
+
 	Author: Garth de Wet (LH)
-	
+
 	Description:
 	Checks for nearby helicopters (within 15m)
-	
+
 	Parameters:
 	0: Object - Unit
 	1: NUMBER - (optional) Radius to check for helicopter Default: 15
-	
+
 	Returns:
 	Array:
 		0 - boolean - If in rotorwash
 		1 - number - Amount of rotor wash.
-	
+
 	Example:
-		if (([player, 10] call ACE_Goggles_fnc_isInRotorWash) select 0) then { hint "Rotor wash"; };
-		if (([player] call ACE_Goggles_fnc_isInRotorWash) select 0) then { hint "Rotor wash"; };
+		if (([ace_player, 10] call FUNC(isInRotorWash)) select 0) then { hint "Rotor wash"; };
+		if (([ace_player] call FUNC(isInRotorWash)) select 0) then { hint "Rotor wash"; };
 */
+#include "script_component.hpp"
 private ["_heli", "_unit", "_result", "_radius"];
 _unit = _this select 0;
 _radius = 15;
@@ -41,6 +42,7 @@ _heli = (getPosATL _unit) nearEntities [["Helicopter"], _radius];
 			};
 		};
 	};
+	false
 } count _heli;
 
 _result

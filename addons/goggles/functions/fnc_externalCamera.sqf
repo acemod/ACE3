@@ -1,19 +1,20 @@
 /*
-	Name: ACE_Goggles_fnc_ExternalCamera
-	
+	fnc_ExternalCamera.sqf
+
 	Author: Garth de Wet (LH)
-	
+
 	Description:
 	Returns if the camera is external or not.
-	
-	Parameters: 
+
+	Parameters:
 	Nothing
-	
+
 	Returns:
 	Boolean - whether the camera is in external view or not.
-	
+
 	Example:
-	call ACE_Goggles_fnc_ExternalCamera;
+	call FUNC(ExternalCamera);
 */
-if (profileNamespace getVariable ["ACE_showInThirdPerson", false]) exitWith { false };
+#include "script_component.hpp"
+if (GETVAR(profileNamespace,ACE_showInThirdPerson,false)) exitWith { false };
 (cameraView == "External")

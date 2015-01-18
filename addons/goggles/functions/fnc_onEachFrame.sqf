@@ -1,0 +1,80 @@
+/*
+	fnc_onEachFrame.sqf
+
+	Author: Garth de Wet (LH)
+
+	Description:
+	Runs every frame checking for helicopters.
+
+	Parameters:
+	Nothing
+
+	Returns:
+	Nothing
+
+	Example:
+	["ACE_Goggles_RotorWash", "OnEachFrame", "call FUNC(OnEachFrame);"] call BIS_fnc_addStackedEventHandler;
+*/
+#include "script_component.hpp"
+if (isNull(ace_player)) then {
+	[QGVAR(RotorWash), "OnEachFrame"] call CALLSTACK(BIS_fnc_removeStackedEventHandler);
+};
+GVAR(FrameEvent) set [0, !(GVAR(FrameEvent) select 0)];
+if (GVAR(FrameEvent) select 0) exitWith {
+	if (vehicle ace_player != ace_player && {!([ace_player] call EFUNC(common,isTurnedOut))}) exitWith {(GVAR(FrameEvent) select 1) set [0, false]; };
+	GVAR(FrameEvent) set [1, ([ace_player] call FUNC(isInRotorWash))];
+};
+private ["_rotorWash","_safe"];
+_rotorWash = GVAR(FrameEvent) select 1;
+_safe = false;
+if !(_rotorWash select 0) exitWith {
+	if (GVAR(PostProcessEyes_Enabled)) then {
+		GVAR(PostProcessEyes_Enabled) = false;
+		if (!scriptDone (GVAR(DustHandler))) then {
+			terminate GVAR(DustHandler);
+		};
+		GVAR(DustHandler) = [] spawn {
+			GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0,0,0,0], [0,0,0,1],[1,1,1,0]];
+			GVAR(PostProcessEyes) ppEffectCommit 2;
+			sleep 2;
+			GVAR(PostProcessEyes) ppEffectEnable false;
+		};
+	};
+};
+if ((headgear ace_player) != "") then {
+	_safe = (getNumber (ConfigFile >> "CfgWeapons" >> (headgear ace_player) >> "ACE_Protection") == 1);
+};
+if !(_safe) then {
+	if !(ace_player call FUNC(isGogglesVisible)) exitWith{};
+	if (GETDUSTT(DAMOUNT) < 2) then {
+		if (!GETDUSTT(DACTIVE)) then {
+			SETDUST(DACTIVE,true);
+			call FUNC(ApplyDust);
+		} else {
+			if ((_rotorWash select 1) > 0.5) then {
+				call FUNC(ApplyDust);
+			};
+		};
+	};
+	_safe = (getNumber (ConfigFile >> "CfgGlasses" >> GVAR(Current) >> "ACE_Protection") == 1);
+};
+if (_safe) exitWith {};
+if ((_rotorWash select 1) <= 15) then {
+	private "_scale";
+	_scale = 0.7;
+	if ((_rotorWash select 1) != 0) then {
+		_scale = CLAMP(0.3*(_rotorWash select 1),0.1,0.3);
+	} else {
+		_scale = 0.1;
+	};
+	_scale = 1 - _scale;
+	if (!scriptDone (GVAR(DustHandler))) then {
+		terminate GVAR(DustHandler);
+	};
+	if !(ace_player getVariable ["ACE_EyesDamaged", false]) then {
+		GVAR(PostProcessEyes_Enabled) = true;
+		GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0,0,0,0], [_scale,_scale,_scale,_scale],[1,1,1,0]];
+		GVAR(PostProcessEyes) ppEffectCommit 0.5;
+		GVAR(PostProcessEyes) ppEffectEnable true;
+	};
+};

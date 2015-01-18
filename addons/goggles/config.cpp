@@ -1,21 +1,22 @@
+#include "script_component.hpp"
+
 #define COLOUR 8.0
 class CfgPatches {
-  class ACE_Goggles {
+  class ADDON {
     units[] = {};
     weapons[] = {};
-    requiredVersion = 0.60;
-    requiredAddons[] = {ACE_Core};
-    version = "0.95";
-    versionStr = "0.95";
-    versionAr[] = {0,95,0};
+    requiredVersion = REQUIRED_VERSION;
+    requiredAddons[] = {"ace_common"};
     author[] = {"Garth 'L-H' de Wet"};
-    authorUrl = "https://github.com/CorruptedHeart";
+    authorUrl = "http://garth.snakebiteink.co.za/";
+    VERSION_CONFIG;
   };
 };
 
-#include "CfgFunctions.hpp"
-#define COMBAT_GOGGLES 		ACE_Overlay="ACE_Goggles\textures\HUD\CombatGoggles.paa"; \
-		ACE_OverlayCracked = "ACE_Goggles\textures\HUD\CombatGogglesCracked.paa"; \
+#include "CfgEventHandlers.hpp"
+
+#define COMBAT_GOGGLES 		ACE_Overlay = QUOTE(PATHTOF(textures\HUD\CombatGoggles.paa)); \
+		ACE_OverlayCracked = QUOTE(PATHTOF(textures\HUD\CombatGogglesCracked.paa)); \
 		ACE_Resistance = 2; \
 		ACE_Protection = 1;
 
@@ -25,10 +26,10 @@ class CfgGlasses {
 		ACE_TintAmount=0;
 		ACE_Overlay = "";
 		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
-		ACE_OverlayCracked = "ACE_Goggles\textures\HUD\Cracked.paa";
+		ACE_OverlayCracked = QUOTE(PATHTOF(textures\HUD\Cracked.paa));
 		ACE_Resistance = 0;
 		ACE_Protection = 0;
-		ACE_DustPath = "ACE_Goggles\textures\fx\dust\%1.paa";
+		ACE_DustPath = QUOTE(PATHTOF(textures\fx\dust\%1.paa));
 	};
 
 	class G_Combat:None {
@@ -36,8 +37,8 @@ class CfgGlasses {
 	};
 
 	class G_Diving {
-		ACE_Overlay="ACE_Goggles\textures\HUD\DivingGoggles.paa";
-		ACE_OverlayCracked = "ACE_Goggles\textures\HUD\DivingGogglesCracked.paa";
+		ACE_Overlay = QUOTE(PATHTOF(textures\HUD\DivingGoggles.paa));
+		ACE_OverlayCracked = QUOTE(PATHTOF(textures\HUD\DivingGogglesCracked.paa));
 		ACE_Resistance = 2;
 		ACE_Protection = 1;
 	};
@@ -167,19 +168,19 @@ class CfgGlasses {
 	class AV_ESS_blk:None{
 		COMBAT_GOGGLES
 	};
-	
+
 	class G_Balaclava_blk;
-	
+
 	class G_Balaclava_combat:G_Balaclava_blk {
 		COMBAT_GOGGLES
 	};
-	
+
 	class G_Balaclava_lowprofile:G_Balaclava_blk {
 		ACE_TintAmount=COLOUR*2;
 		ACE_Resistance = 2;
 		ACE_Protection = 1;
 	};
-	
+
 	class G_Bandanna_blk;
 	class G_Bandanna_shades:G_Bandanna_blk {
 		ACE_TintAmount=COLOUR*2;
@@ -202,28 +203,23 @@ class CfgGlasses {
 
 #include "RscTitles.hpp"
 
-class CfgMovesBasic
-{
-	class ManActions
-	{
+class CfgMovesBasic {
+	class ManActions {
 		GestureWipeFace[] = {"GestureWipeFace", "gesture"};
 	};
 };
 
-class CfgGesturesMale
-{
-	class States
-	{
+class CfgGesturesMale {
+	class States {
 		class GestureFreezeStand;
-		class GestureWipeFace: GestureFreezeStand
-		{
-			file = "\ACE_Goggles\anim\WipeGlasses.rtm";
+		class GestureWipeFace: GestureFreezeStand {
+			file = QUOTE(PATHTOF(anim\WipeGlasses.rtm));
 			canPullTrigger = 0;
 		};
 	};
 };
 
-class CfgWeapons{
+class CfgWeapons {
 	class H_HelmetB;
 
 	class H_CrewHelmetHeli_B:H_HelmetB {
@@ -247,11 +243,12 @@ class SniperCloud {
 	ACE_Goggles_BulletCount = 1;
 };
 
-class ACE_Core_Default_Keys {
+class ACE_Default_Keys {
 	class wipeGlasses {
 		displayName = $STR_ACE_Goggles_WipeGlasses;
-		condition = "!(player getVariable['ACE_isUnconscious', false])";
-		statement = "call ACE_Goggles_fnc_ClearGlasses;";
+		//condition = QUOTE(!(GETVAR(ace_player,isUnconscious,false)));
+    condition = "true";
+		statement = QUOTE(call FUNC(clearGlasses););
 		key = 20; // T
 		shift = 1;
 		control = 1;
@@ -259,7 +256,7 @@ class ACE_Core_Default_Keys {
 	};
 };
 
-class ACE_Core_Options {
+class ACE_Options {
 	class showInThirdPerson {
 		displayName = $STR_ACE_Goggles_ShowInThirdPerson;
 		default = 0;
