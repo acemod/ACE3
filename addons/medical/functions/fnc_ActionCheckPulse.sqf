@@ -28,7 +28,7 @@ _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
         private ["_caller","_target"];
         _caller = _this select 0;
         _target = _this select 1;
-        [_this, QUOTE(FUNC(actionCheckPulseLocal)), _target] call EFUNC(common,execRemoteFnc);
+        [[_caller, _target], QUOTE(FUNC(actionCheckPulseLocal)), _target] call EFUNC(common,execRemoteFnc);
         [_caller,false] call FUNC(treatmentMutex);
     }, // on success
     {
@@ -37,3 +37,5 @@ _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
     },    // on failure
     [_caller, _target] // arguments
 ] call EFUNC(gui,loadingBar);
+
+systemChat format["actionCheckPulse: %1", _this];

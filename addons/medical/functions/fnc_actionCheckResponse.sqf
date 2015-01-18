@@ -30,16 +30,16 @@ _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
         _target = _this select 1;
 
         _output = "";
-        if ([_unit] call EFUNC(common,isAwake)) then {
-            _output = format[localize "STR_ACE_CHECK_REPONSE_RESPONSIVE",[_unit] call EFUNC(common,getName)];
+        if ([_target] call EFUNC(common,isAwake)) then {
+            _output = format[localize "STR_ACE_CHECK_REPONSE_RESPONSIVE",[_target] call EFUNC(common,getName)];
         } else {
-            _output = format[localize "STR_ACE_CHECK_REPONSE_UNRESPONSIVE",[_unit] call EFUNC(common,getName)];
+            _output = format[localize "STR_ACE_CHECK_REPONSE_UNRESPONSIVE",[_target] call EFUNC(common,getName)];
         };
 
         _title = format["STR_ACE_CHECK_RESPONSE"];
-        _content = [format[localize "STR_ACE_CHECK_REPONSE_YOU_CHECKED",[_unit] call EFUNC(common,getName)],_output];
+        _content = [format[localize "STR_ACE_CHECK_REPONSE_YOU_CHECKED",[_target] call EFUNC(common,getName)],_output];
         [_caller, _title, _content] call EFUNC(gui,sendDisplayInformationTo);
-        [_unit,"examine",_output] call FUNC(addToQuickViewLog);
+        [_target,"examine",_output] call FUNC(addToQuickViewLog);
 
         [_caller,false] call FUNC(treatmentMutex);
     }, // on success

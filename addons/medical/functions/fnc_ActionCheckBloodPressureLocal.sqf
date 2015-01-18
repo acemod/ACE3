@@ -23,7 +23,7 @@ _bloodPressureHigh = _bloodPressure select 1;
 _bloodPressureLow = _bloodPressure select 0;
 _output = "";
 _logOutPut = "";
-if ([_caller] call FUNC(medicClass)) then {
+if ([_caller] call FUNC(isMedic)) then {
     _output = "STR_ACE_CHECK_BLOODPRESSURE_OUTPUT_1";
     _logOutPut = format["%1/%2",round(_bloodPressureHigh),round(_bloodPressureLow)];
 } else {
