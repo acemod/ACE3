@@ -22,7 +22,7 @@ private "_dirtImage";
 GVAR(Effects) set [DIRT, true];
 
 if (ace_player call FUNC(isGogglesVisible)) then{
-	_dirtImage = getText(ConfigFile >> "CfgGlasses" >> goggles ace_player >> "ACE_OverlayDirt");
+	_dirtImage = getText(ConfigFile >> "CfgGlasses" >> (goggles ace_player) >> "ACE_OverlayDirt");
 	if (_dirtImage != "") then {
 		100 cutRsc["RscACE_GogglesEffects", "PLAIN",0.1, false];
 

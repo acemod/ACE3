@@ -18,7 +18,6 @@
 	See http://community.bistudio.com/wiki/ArmA_3:_Event_Handlers#Fired
 */
 #include "script_component.hpp"
-
 private ["_bullets", "_position", "_surface", "_found", "_weapon", "_cloudType"];
 _weapon = _this select 1;
 _cloudType = "";
@@ -52,13 +51,13 @@ if (!_found) exitWith {};
 
 _bullets = GETDUSTT(DBULLETS);
 
-if ((time - GETDUSTT(DTIME)) > 1) then {
+if ((diag_tickTime - GETDUSTT(DTIME)) > 1) then {
 	_bullets = 0;
 };
 
 _bullets = _bullets + 1;
 SETDUST(DBULLETS,_bullets);
-SETDUST(DTIME,time);
+SETDUST(DTIME,diag_tickTime);
 
 if (GETDUSTT(DAMOUNT) < 2) then {
 	private "_bulletsRequired";

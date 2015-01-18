@@ -16,9 +16,7 @@
 	["ACE_Goggles_RotorWash", "OnEachFrame", "call FUNC(OnEachFrame);"] call BIS_fnc_addStackedEventHandler;
 */
 #include "script_component.hpp"
-if (isNull(ace_player)) then {
-	[QGVAR(RotorWash), "OnEachFrame"] call CALLSTACK(BIS_fnc_removeStackedEventHandler);
-};
+if (isNull(ace_player)) exitWith {};
 GVAR(FrameEvent) set [0, !(GVAR(FrameEvent) select 0)];
 if (GVAR(FrameEvent) select 0) exitWith {
 	if (vehicle ace_player != ace_player && {!([ace_player] call EFUNC(common,isTurnedOut))}) exitWith {(GVAR(FrameEvent) select 1) set [0, false]; };

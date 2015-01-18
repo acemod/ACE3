@@ -243,19 +243,6 @@ class SniperCloud {
 	ACE_Goggles_BulletCount = 1;
 };
 
-class ACE_Default_Keys {
-	class wipeGlasses {
-		displayName = $STR_ACE_Goggles_WipeGlasses;
-		//condition = QUOTE(!(GETVAR(ace_player,isUnconscious,false)));
-    condition = "true";
-		statement = QUOTE(call FUNC(clearGlasses););
-		key = 20; // T
-		shift = 1;
-		control = 1;
-		alt = 0;
-	};
-};
-
 class ACE_Options {
 	class showInThirdPerson {
 		displayName = $STR_ACE_Goggles_ShowInThirdPerson;

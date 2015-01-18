@@ -33,37 +33,26 @@ _amount = 1 - (GETDUSTT(DAMOUNT) * 0.125);
 GVAR(PostProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [_amount,_amount,_amount,_amount],[1,1,1,0]];
 GVAR(PostProcessEyes) ppEffectCommit 1;
 GVAR(PostProcessEyes) ppEffectEnable true;
-if !(scriptDone GVAR(DustHandler)) then {
-	terminate GVAR(DustHandler);
+if (GVAR(DustHandler) != -1) then { // should be fixed in dev CBA
+	[GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
 };
 SETDUST(DBULLETS,0);
-GVAR(DustHandler) = [3] spawn {
-	private ["_loop", "_timeToSleep"];
-	_timeToSleep = _this select 0;
-	_loop = true;
-	while {_loop} do {
-		sleep _timeToSleep;
-		_timeToSleep = GETDUSTT(DTIME);
-
-		if(_timeToSleep >= (time - 2.5)) then {
-			_timeToSleep = time - _timeToSleep;
-		} else {
-			SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
-			private "_amount";
-			_amount = 1 - (GETDUSTT(DAMOUNT) * 0.125);
-			if !(ace_player getVariable ["ACE_EyesDamaged", false]) then {
-				GVAR(PostProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [_amount,_amount,_amount,_amount],[1,1,1,0]];
-				GVAR(PostProcessEyes) ppEffectCommit 1;
-				sleep 1;
-			};
-			if (GETDUSTT(DAMOUNT) <= 0) then {
-				GVAR(PostProcessEyes) ppEffectEnable false;
-				SETDUST(DACTIVE,false);
-				SETDUST(DBULLETS,0);
-				_loop = false;
-			};
-			SETDUST(DTIME,time);
-			_timeToSleep = 3;
+GVAR(DustHandler) = [{
+	EXPLODE_2_PVT(_this select 0,_sleep,_startTime);
+	if (diag_tickTime >= GETDUSTT(DTIME) + 3) then {
+		SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
+		private "_amount";
+		_amount = 1 - (GETDUSTT(DAMOUNT) * 0.125);
+		if !(ace_player getVariable ["ACE_EyesDamaged", false]) then {
+			GVAR(PostProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [_amount,_amount,_amount,_amount],[1,1,1,0]];
+			GVAR(PostProcessEyes) ppEffectCommit 0.5;
+		};
+		if (GETDUSTT(DAMOUNT) <= 0) then {
+			GVAR(PostProcessEyes) ppEffectEnable false;
+			SETDUST(DACTIVE,false);
+			SETDUST(DBULLETS,0);
+			[GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
+			GVAR(DustHandler) = -1;
 		};
 	};
-};
+},0,[]] call CALLSTACK(cba_fnc_addPerFrameHandler);

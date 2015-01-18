@@ -20,3 +20,4 @@ if (!isNull (GVAR(RainDrops))) then {
 	deleteVehicle (GVAR(RainDrops));
 };
 GVAR(RainActive) = false;
+GVAR(RainLastLevel) = 0;
