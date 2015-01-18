@@ -147,3 +147,111 @@ if !(hasInterface) exitWith {};
     false,
     "keydown"
 ] call cba_fnc_registerKeybind;
+
+["ACE3",
+    localize "STR_ACE_WeaponSelect_EngineOn",
+    {
+        // Conditions: canInteract
+        _exceptions = [];
+        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+        // Conditions: specific
+        if !(ACE_player != vehicle ACE_player && {ACE_player == driver vehicle ACE_player} && {!isEngineOn vehicle ACE_player}) exitWith {false};
+
+        // Statement
+        (vehicle ACE_player) engineOn true;
+        true
+    },
+    [3, [false, false, false]],
+    false,
+    "keydown"
+] call cba_fnc_registerKeybind;
+
+["ACE3",
+    localize "STR_ACE_WeaponSelect_EngineOff",
+    {
+        // Conditions: canInteract
+        _exceptions = [];
+        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+        // Conditions: specific
+        if !(ACE_player != vehicle ACE_player && {ACE_player == driver vehicle ACE_player} && {isEngineOn vehicle ACE_player}) exitWith {false};
+
+        // Statement
+        (vehicle ACE_player) engineOn false;
+        true
+    },
+    [2, [false, false, false]],
+    false,
+    "keydown"
+] call cba_fnc_registerKeybind;
+
+["ACE3",
+    localize "STR_ACE_WeaponSelect_SelectMainGun",
+    {
+        // Conditions: canInteract
+        _exceptions = [];
+        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+        // Conditions: specific
+        if !(ACE_player != vehicle ACE_player) exitWith {false};
+
+        // Statement
+        [ACE_player, vehicle ACE_player, 0] call FUNC(selectWeaponVehicle);
+        true
+    },
+    [4, [false, false, false]],
+    false,
+    "keydown"
+] call cba_fnc_registerKeybind;
+
+["ACE3",
+    localize "STR_ACE_WeaponSelect_SelectMachineGun",
+    {
+        // Conditions: canInteract
+        _exceptions = [];
+        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+        // Conditions: specific
+        if !(ACE_player != vehicle ACE_player) exitWith {false};
+
+        // Statement
+        [ACE_player, vehicle ACE_player, 1] call FUNC(selectWeaponVehicle);
+        true
+    },
+    [5, [false, false, false]],
+    false,
+    "keydown"
+] call cba_fnc_registerKeybind;
+
+["ACE3",
+    localize "STR_ACE_WeaponSelect_SelectMissiles",
+    {
+        // Conditions: canInteract
+        _exceptions = [];
+        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+        // Conditions: specific
+        if !(ACE_player != vehicle ACE_player) exitWith {false};
+
+        // Statement
+        [ACE_player, vehicle ACE_player, 2] call FUNC(selectWeaponVehicle);
+        true
+    },
+    [6, [false, false, false]],
+    false,
+    "keydown"
+] call cba_fnc_registerKeybind;
+
+["ACE3",
+    localize "STR_ACE_WeaponSelect_FireSmokeLauncher",
+    {
+        // Conditions: canInteract
+        _exceptions = [];
+        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+        // Conditions: specific
+        if !(ACE_player != vehicle ACE_player && {ACE_player == commander vehicle ACE_player}) exitWith {false};
+
+        // Statement
+        [vehicle ACE_player] call FUNC(fireSmokeLauncher);
+        true
+    },
+    [10, [false, false, false]],
+    false,
+    "keydown"
+] call cba_fnc_registerKeybind;
