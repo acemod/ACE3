@@ -1,4 +1,6 @@
 *.pbo
+*.dll
+*.so
 texHeaders.bin
 *.swp
 *.swo
