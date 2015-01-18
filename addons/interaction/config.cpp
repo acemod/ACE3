@@ -4,13 +4,11 @@ class CfgPatches {
   class ADDON {
     units[] = {};
     weapons[] = {};
-    requiredVersion = 0.60;
+    requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {"ace_common"};
-    version = QUOTE(VERSION);
-    versionStr = QUOTE(VERSION);
-    versionAr[] = { VERSION_AR };
     author[] = {"commy2", "KoffeinFlummi", "CAA-Picard", "bux578"};
     authorUrl = "https://github.com/commy2/";
+    VERSION_CONFIG;
   };
 };
 
@@ -99,16 +97,16 @@ class ACE_Parameters_Boolean {
 };
 
 class ACE_canInteractConditions {
-  class ACE_Interaction_isNotEscorting {
+  class GVAR(isNotEscorting) {
     condition = QUOTE( !(_player getVariable ['ACE_isEscorting', false]) );
   };
-  class ACE_Interaction_isNotCaptive {
+  class GVAR(isNotCaptive) {
     condition = QUOTE( !(_player getVariable ['ACE_isCaptive', false]) );
   };
-  class ACE_Interaction_isNotSurrendering {
+  class GVAR(isNotSurrendering) {
     condition = QUOTE( !(_player getVariable ['ACE_isSurrender', false]) );
   };
-  class ACE_Interaction_isNotSwimming {
+  class GVAR(isNotSwimming) {
     condition = QUOTE( !underwater _player );
   };
 };

@@ -4,13 +4,11 @@ class CfgPatches {
     class ADDON {
         units[] = {};
         weapons[] = {};
-        requiredVersion = 0.6;
-        requiredAddons[] = {ace_common};
-        version = VERSION;
-        versionStr = VERSION;
-        versionAr[] = {VERSIONAR};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {"ace_common"};
         author[] = {"Pabst Mirror"};
         authorUrl = "https://github.com/PabstMirror/";
+        VERSION_CONFIG;
     };
 };
 

@@ -29,9 +29,9 @@ GVAR(ppEffectMuzzleFlash) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [
 GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 
 // Setup the event handlers
-["playerInventoryChanged",  FUNC(updatePPEffects)] call EFUNC(common,addEventHandler);
-["playerVisionModeChanged", FUNC(updatePPEffects)] call EFUNC(common,addEventHandler);
-["zeusDisplayChanged",      FUNC(updatePPEffects)] call EFUNC(common,addEventHandler);
-["cameraViewChanged",       FUNC(updatePPEffects)] call EFUNC(common,addEventHandler);
-["playerVehicleChanged",    FUNC(updatePPEffects)] call EFUNC(common,addEventHandler);
-["playerTurretChanged",     FUNC(updatePPEffects)] call EFUNC(common,addEventHandler);
+["playerInventoryChanged",  {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+["playerVisionModeChanged", {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+["zeusDisplayChanged",      {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+["cameraViewChanged",       {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+["playerVehicleChanged",    {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+["playerTurretChanged",     {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);

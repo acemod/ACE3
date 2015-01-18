@@ -6,7 +6,7 @@ class CfgPatches {
 		weapons[] = { "ACE_M47StaticLauncher", "M47Launcher_EP1", "ACE_M47_Daysight" };
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = { "ace_main", "ace_common" };
-		version = VERSION;
+		VERSION_CONFIG;
 	};
 };
 

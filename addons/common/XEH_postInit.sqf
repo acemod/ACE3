@@ -19,9 +19,8 @@ if (_currentVersion != _previousVersion) then {
 
 0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber);
 
-//add network event handlers
-"ACEg" addPublicVariableEventHandler { _this call FUNC(_handletNetEvent); };
-"ACEc" addPublicVariableEventHandler { _this call FUNC(_handletNetEvent); };
+"ACEg" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
+"ACEc" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
 
 // everything that only player controlled machines need, goes below this
 if (!hasInterface) exitWith {};
@@ -98,6 +97,14 @@ GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
         // Raise ACE event locally
         GVAR(OldPlayerVisionMode) = _newPlayerVisionMode;
         ["playerVisionModeChanged", [ACE_player, _newPlayerVisionMode]] call FUNC(localEvent);
+    };
+
+    // "inventoryDisplayChanged" event
+    _newInventoryDisplayIsOpen = !(isNull findDisplay 602);
+    if !(_newInventoryDisplayIsOpen isEqualTo GVAR(OldInventoryDisplayIsOpen)) then {
+        // Raise ACE event locally
+        GVAR(OldInventoryDisplayIsOpen) = _newInventoryDisplayIsOpen;
+        ["inventoryDisplayChanged", [ACE_player, _newInventoryDisplayIsOpen]] call FUNC(localEvent);
     };
 
     // "zeusDisplayChanged" event

@@ -6,7 +6,7 @@ class CfgPatches {
 		weapons[] = {};
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = { "ace_common" };
-		version = VERSION;
+		VERSION_CONFIG;
 	};
 };
 
