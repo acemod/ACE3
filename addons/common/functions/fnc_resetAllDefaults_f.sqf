@@ -24,7 +24,7 @@ if (isPlayer _unit) then {
 	if !(isnil QGVAR(DISABLE_USER_INPUT_COLLECTION_F)) then {
 		// clear all disable user input
 		{
-			[_X, false] call FUNC(disableUserInput_f);
+			[_X, false] call FUNC(setDisableUserInputStatus);
 		}foreach GVAR(DISABLE_USER_INPUT_COLLECTION_F);
 	};
 };

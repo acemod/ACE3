@@ -216,7 +216,7 @@ PREP(isAwake);
 PREP(setProne);
 
 PREP(raiseScriptedEvent_f);
-PREP(disableUserInput_f);
+PREP(setDisableUserInputStatus);
 
 PREP(dropWeapon_f);
 PREP(inWater_f);

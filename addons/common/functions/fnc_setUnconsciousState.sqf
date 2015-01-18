@@ -43,7 +43,7 @@ _originalPos = unitPos _unit;
 if (isPlayer _unit) then {
 	[] call FUNC(closeAllDialogs_f);
 	[true] call EFUNC(GUI,effectBlackOut);
-	["unconscious", true] call FUNC(disableUserInput_f);
+	["unconscious", true] call FUNC(setDisableUserInputStatus);
 	[false] call FUNC(setVolume_f);
 } else {
 	_unit setUnitPos "DOWN";
@@ -118,7 +118,7 @@ _minWaitingTime = (round(random(10)+5));
 			if (isPlayer _unit) then {
 				[false] call EFUNC(GUI,effectBlackOut);
 				[true] call FUNC(setVolume_f);
-				["unconscious", false] call FUNC(disableUserInput_f);
+				["unconscious", false] call FUNC(setDisableUserInputStatus);
 			} else {
 				[_unit, false] call FUNC(disableAI_F);
 				_unit setUnitPos _originalPos;	// This is not position but stance (DOWN, MIDDLE, UP)

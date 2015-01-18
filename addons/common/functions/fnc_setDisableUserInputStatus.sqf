@@ -1,5 +1,5 @@
 /**
- * fn_disableUserInput_f.sqf
+ * fn_setDisableUserInputStatus.sqf
  * @Descr: Disables the user input. Works stacked.
  * @Author: Glowbal
  *
