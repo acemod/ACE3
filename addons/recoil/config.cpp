@@ -4,13 +4,11 @@ class CfgPatches {
     class ADDON {
         units[] = {};
         weapons[] = {};
-        requiredVersion = 0.60;
-        requiredAddons[] = {ace_common};
-        version = QUOTE(VERSION);
-        versionStr = QUOTE(VERSION);
-        versionAr[] = {VERSION_AR};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {"ace_common"};
         author[] = {"KoffeinFlummi", "TaoSensai", "commy2"};
         authorUrl = "https://github.com/Taosenai/tmr";
+        VERSION_CONFIG;
     };
 };
 
