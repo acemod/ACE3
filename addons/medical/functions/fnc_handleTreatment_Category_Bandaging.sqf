@@ -31,8 +31,17 @@ if (vehicle _caller == _caller && (vehicle _target == _target) && !(stance _call
 };
 
 if (ACE_player == _caller) then {
-    [_caller, "STR_ACE_BANDAGING", "STR_ACE_APPLY_BANDAGE", 0, [[_target] call EFUNC(common,getName), _selectionName]] call EFUNC(gui,sendDisplayMessageTo);
+    switch (_removeItem) do {
+        case "ACE_tourniquet": {
 
+        };
+        case "ACE_splint": {
+
+        };
+        default {
+            [_caller, "STR_ACE_BANDAGING", "STR_ACE_APPLY_BANDAGE", 0, [[_target] call EFUNC(common,getName), _selectionName]] call EFUNC(gui,sendDisplayMessageTo);
+        };
+    };
     // Displaying the treatment icon action
     [QGVAR(treatmentIconID), true, QUOTE(PATHTOF(data\icons\bandage_fracture_small.paa)), [1,1,1,1]] call EFUNC(gui,displayIcon);
 };
@@ -55,7 +64,7 @@ if (isnil QGVAR(setting_bandageWaitingTime)) then {
 
         switch (_removeItem) do {
             case "ACE_tourniquet": {
-                [_caller, _target, _selectionName, _removeItem] call FUNC(handleTreatment_Action_Tourniquet);
+                [_caller, _target, _selectionName, _removeItem] call FUNC(handleTreatment_Action_tourniquet);
             };
             case "ACE_splint": {
                 // TODO implement splints

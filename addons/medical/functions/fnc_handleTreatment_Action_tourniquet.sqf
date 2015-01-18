@@ -16,6 +16,8 @@ _target = _this select 1;
 _selectionName = _this select 2;
 _removeItem = _this select 3;
 
+systemChat format["fnc_handleTreatment_Action_tourniquet %1", _this];
+
 _part =    [_selectionName] call FUNC(getBodyPartNumber);
 if (_part == 0 || _part == 1) exitwith {
     [_caller,"You cannot apply a CAT on this body part!"] call EFUNC(common,sendHintTo);
@@ -31,6 +33,6 @@ if ((_tourniquets select _part) > 0) exitwith {
 };
 
 [_caller, _unit,_removeItem] call FUNC(useEquipment);
-[[_caller, _target, _selectionName, _removeItem], QUOTE(FUNC(tourniquetLocal)), _unit] call EFUNC(common,execRemoteFnc);
+[[_caller, _target, _selectionName, _removeItem], QUOTE(FUNC(handleTreatment_Action_TourniquetLocal)), _unit] call EFUNC(common,execRemoteFnc);
 
 true
