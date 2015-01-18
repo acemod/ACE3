@@ -20,8 +20,9 @@
 
 private "_broken";
 _broken = GETBROKEN;
-GVAR(Effects) = GLASSESDEFAULT;
-GVAR(Effects) set [BROKEN, _broken];
+_effects = GLASSESDEFAULT;
+_effects set [BROKEN, _broken];
+SETGLASSES(ace_player,_effects);
 
 if ((stance ace_player) != "PRONE") then {
 	ace_player playActionNow "gestureWipeFace";

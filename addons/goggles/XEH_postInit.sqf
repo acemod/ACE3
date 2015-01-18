@@ -35,7 +35,7 @@ GVAR(PostProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [0,0,0,1],[1,1,1,0]];
 GVAR(PostProcessEyes) ppEffectCommit 0;
 GVAR(PostProcessEyes) ppEffectEnable false;
 GVAR(EffectsActive) = false;
-GVAR(Effects) = GLASSESDEFAULT;
+SETGLASSES(ace_player,GLASSESDEFAULT);
 GVAR(Current) = "None";
 GVAR(EyesDamageScript) = 0 spawn {};
 GVAR(FrameEvent) = [false, [false,20]];
@@ -58,7 +58,9 @@ player addEventHandler ["Explosion", {
     if (GETBROKEN) exitWith {};
     if (((_this select 1) call FUNC(GetExplosionIndex)) < getNumber(ConfigFile >> "CfgGlasses" >> GVAR(Current) >> "ACE_Resistance")) exitWith {};
     if !(ace_player call FUNC(isGogglesVisible)) exitWith {["GlassesCracked",[ace_player]] call EFUNC(common,localEvent);};
-    GVAR(Effects) set [BROKEN, true];
+    _effects = GETGLASSES(ace_player,GLASSESDEFAULT);
+    _effects set [BROKEN, true];
+    SETGLASSES(ace_player,_effects);
     if (getText(ConfigFile >> "CfgGlasses" >> GVAR(Current) >> "ACE_OverlayCracked") != "" && {cameraOn == ace_player}) then {
       if (call FUNC(ExternalCamera)) exitWith {};
       if (isNull(GLASSDISPLAY)) then {
@@ -71,7 +73,7 @@ player addEventHandler ["Explosion", {
 }];
 player addEventHandler ["Killed",{
   GVAR(PostProcessEyes) ppEffectEnable false;
-  GVAR(Effects) = GLASSESDEFAULT;
+  SETGLASSES(ace_player,GLASSESDEFAULT);
   call FUNC(removeGlassesEffect);
   GVAR(EffectsActive)=false;
   ace_player setVariable ["ACE_EyesDamaged", false];
@@ -84,7 +86,7 @@ player AddEventHandler ["Take",{call FUNC(checkGlasses);}];
 player AddEventHandler ["Put", {call FUNC(checkGlasses);}];
 
 ["GlassesChanged",{
-  GVAR(Effects) = GLASSESDEFAULT;
+  SETGLASSES(ace_player,GLASSESDEFAULT);
 
   if (call FUNC(ExternalCamera)) exitWith {call FUNC(RemoveGlassesEffect)};
 

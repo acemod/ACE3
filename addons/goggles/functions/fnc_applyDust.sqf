@@ -38,7 +38,6 @@ if (GVAR(DustHandler) != -1) then { // should be fixed in dev CBA
 };
 SETDUST(DBULLETS,0);
 GVAR(DustHandler) = [{
-	EXPLODE_2_PVT(_this select 0,_sleep,_startTime);
 	if (diag_tickTime >= GETDUSTT(DTIME) + 3) then {
 		SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
 		private "_amount";
@@ -48,7 +47,14 @@ GVAR(DustHandler) = [{
 			GVAR(PostProcessEyes) ppEffectCommit 0.5;
 		};
 		if (GETDUSTT(DAMOUNT) <= 0) then {
-			GVAR(PostProcessEyes) ppEffectEnable false;
+			GVAR(PostProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [1,1,1,1],[1,1,1,0]];
+			GVAR(PostProcessEyes) ppEffectCommit 2;
+			[{
+				if (diag_tickTime >= ((_this select 0) select 0)) then {
+					GVAR(PostProcessEyes) ppEffectEnable false;
+					[(_this select 1)] call CALLSTACK(cba_fnc_removePerFrameHandler);
+				};
+			},0.5,[diag_tickTime+2]] call CALLSTACK(cba_fnc_addPerFrameHandler);
 			SETDUST(DACTIVE,false);
 			SETDUST(DBULLETS,0);
 			[GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);

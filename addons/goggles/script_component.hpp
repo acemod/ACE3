@@ -13,16 +13,19 @@
 
 // MACROS
 #define GLASSESDEFAULT [false,[false,0,0,0],false]
+#define GETGLASSES(unit) GETVAR(unit,GVAR(Condition),GLASSESDEFAULT)
+#define SETGLASSES(unit,value) SETVAR(unit,GVAR(Condition),value)
+
 #define DIRT 0
 #define DUST 1
 #define BROKEN 2
 
-#define GETDIRT (GVAR(Effects) select DIRT)
-#define GETDUST (GVAR(Effects) select DUST)
-#define GETBROKEN (GVAR(Effects) select BROKEN)
-#define GETDUSTT(type) ((GVAR(Effects) select DUST) select type)
+#define GETDIRT (GETGLASSES(ace_player) select DIRT)
+#define GETDUST (GETGLASSES(ace_player) select DUST)
+#define GETBROKEN (GETGLASSES(ace_player) select BROKEN)
+#define GETDUSTT(type) ((GETGLASSES(ace_player) select DUST) select type)
 
-#define SETDUST(type,value) (GVAR(Effects) select DUST) set [type,value]
+#define SETDUST(type,value) (GETGLASSES(ace_player) select DUST) set [type,value]
 
 #define DACTIVE 0
 #define DTIME 1

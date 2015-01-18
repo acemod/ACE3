@@ -19,7 +19,9 @@
 
 if (cameraOn != ace_player || {call FUNC(externalCamera)}) exitWith{false};
 private "_dirtImage";
-GVAR(Effects) set [DIRT, true];
+_effects = GETGLASSES(ace_player,GLASSESDEFAULT);
+_effects set [DIRT, true];
+SETGLASSES(ace_player,_effects);
 
 if (ace_player call FUNC(isGogglesVisible)) then{
 	_dirtImage = getText(ConfigFile >> "CfgGlasses" >> (goggles ace_player) >> "ACE_OverlayDirt");
