@@ -10,9 +10,14 @@ PFH executed while holding a vector key down.
 switch (_this select 0) do {
     case ("azimuth"): {
 
+        private "_isReady";
+        _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.2;
+
         [false] call FUNC(showCenter);
 
-        call FUNC(showAzimuth);
+        if (_isReady) then {
+            call FUNC(showAzimuth);
+        };
 
         if (!GVAR(isKeyDownAzimuth)) then {
             [_this select 1] call CBA_fnc_removePerFrameHandler;
@@ -131,6 +136,29 @@ switch (_this select 0) do {
 
     };
 
+    case ("relative_height+length"): {
+
+        private "_isReady";
+        _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.5;
+
+        [_isReady] call FUNC(showCenter);
+
+        if (!GVAR(isKeyDownAzimuth) && {!GVAR(isKeyDownDistance)}) then {
+            if (_isReady) then {
+                call FUNC(showRelativeHeightLength);
+            };
+            [false] call FUNC(showCenter);
+            [false] call FUNC(showP1);
+
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+            if (GVAR(holdKeyHandler) > -1) then {
+                GVAR(holdKeyHandler) = -1;
+            };
+        };
+
+    };
+
     case ("relative_azimuth+distance"): {
 
         private "_isReady";
@@ -154,6 +182,30 @@ switch (_this select 0) do {
 
     };
 
+    case ("fall_of_short"): {
+
+        private "_isReady";
+        _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
+
+        [_isReady] call FUNC(showCenter);
+
+        if (!GVAR(isKeyDownAzimuth) && {!GVAR(isKeyDownDistance)}) then {
+            if (_isReady) then {
+                GVAR(FOSData) = call FUNC(getFallOfShort);//
+                [false] call FUNC(showFallOfShort);
+            };
+            [false] call FUNC(showCenter);
+            [false] call FUNC(showP1);
+
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+            if (GVAR(holdKeyHandler) > -1) then {
+                GVAR(holdKeyHandler) = -1;
+            };
+        };
+
+    };
+
 };
 
-systemChat str (_this select 0);//
+//systemChat str (_this select 0);

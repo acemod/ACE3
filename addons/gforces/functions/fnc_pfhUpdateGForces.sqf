@@ -7,6 +7,11 @@ _interval = time - GVAR(lastUpdateTime);
 
 // Update the g-forces at constant game time intervals
 if (_interval < INTERVAL) exitWith {};
+
+if (isNull ACE_player) exitWith {};
+
+if !(alive ACE_player) exitWith {};
+
 GVAR(lastUpdateTime) = time;
 
 /*if !(vehicle ACE_player isKindOf "Air") exitWith {
