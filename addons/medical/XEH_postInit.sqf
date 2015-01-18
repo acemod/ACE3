@@ -51,13 +51,40 @@ call FUNC(handleDisplayEffects);
 
 
 // Keybindings
+GVAR(keyPressed) = false;
 
 ["ACE3",
    localize "STR_ACE_OPEN_CMS_MENU_DESC",
-   { [] call FUNC(openMenu) },
+   {    if (!GVAR(keyPressed)) then {
+            GVAR(keyPressed) = true;
+            GVAR(timeMenuOpened) = time;
+            [] call FUNC(openMenu);
+
+            true;
+        } else {
+            false;
+        };
+   },
    [ 0, [false, false, false]],
    false,
   "keydown"] call cba_fnc_registerKeybind;
+
+["ACE3",
+   localize "STR_ACE_OPEN_CMS_MENU_DESC",
+   {
+        GVAR(keyPressed) = false;
+        if (time - GVAR(timeMenuOpened) >= (0.25*accTime)) then {
+            disableSerialization;
+            _display = uiNamespace getVariable QGVAR(medicalMenu);
+            if (!isnil "_display") then {
+                closeDialog 314412;
+            };
+        };
+        false;
+   },
+   [ 0, [false, false, false]],
+   false,
+  "keyUp"] call cba_fnc_registerKeybind;
 
 
 

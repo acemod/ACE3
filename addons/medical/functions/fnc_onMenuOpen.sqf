@@ -73,3 +73,5 @@ setMousePosition [ 0.4, 0.4];
     ((_this select 0) displayCtrl 2000) ctrlSetBackgroundColor (_status select 2);
 
  }, [_display]] call BIS_fnc_addStackedEventHandler;
+
+ ["Medical_onMenuOpen", [ACE_player, _interactionTarget]] call ace_common_fnc_localEvent;

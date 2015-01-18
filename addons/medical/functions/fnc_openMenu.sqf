@@ -10,6 +10,18 @@
 
 #include "script_component.hpp"
 
+
+if (dialog) exitwith {
+	disableSerialization;
+
+	private "_display";
+	_display = uiNamespace getVariable QGVAR(medicalMenu);
+	if (!isnil "_display") then {
+		closeDialog 314412;
+	};
+
+};
+
 private ["_interactionTarget"];
 _interactionTarget = objNull;
 if (count _this > 0) then {
@@ -30,5 +42,3 @@ if (isNull _interactionTarget) then {
 };
 GVAR(INTERACTION_TARGET) = _interactionTarget;
 createDialog QGVAR(medicalMenu);
-
-["Medical_onMenuOpened", [ACE_player, _interactionTarget]] call ace_common_fnc_localEvent;

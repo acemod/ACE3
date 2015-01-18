@@ -18,8 +18,6 @@ _bodyPartN = [_bodyPartText] call FUNC(getBodyPartNumber);
 
 if (_bodyPartN < 0 || _bodyPartN > 5) exitwith {};
 
-systemChat format["updateUIInfo %1", _this];
-
 _openWounds = [_targetObj,QGVAR(openWounds)] call EFUNC(common,getDefinedVariable);
 _bandagedWounds = [_targetObj,QGVAR(bandagedWounds)] call EFUNC(common,getDefinedVariable);
 _fractures = [_targetObj,QGVAR(fractures)] call EFUNC(common,getDefinedVariable);
