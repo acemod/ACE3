@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-21 -->
-<Project name="AGM">
-  <Package name="Backpacks">
-    <Key ID="STR_AGM_Backpacks_BackpackVentralTake">
+<Project name="ACE">
+  <Package name="LockBackpacks">
+    <Key ID="STR_ACE_LockBackpacks_BackpackVentralTake">
       <English>Take (Ventral)</English>
       <German>Aufnehmen (Am Bauch)</German>
       <Spanish>Coger (Mochila delantera)</Spanish>
@@ -14,7 +14,7 @@
       <Portuguese>Pegar (Mochila Ventral)</Portuguese>
       <Italian>Prendi</Italian>
     </Key>
-    <Key ID="STR_AGM_Backpacks_BackpackVentralPut">
+    <Key ID="STR_ACE_LockBackpacks_BackpackVentralPut">
       <English>Take Off Backpack</English>
       <German>Rucksack ablegen</German>
       <Spanish>Dejar mochila</Spanish>
@@ -26,7 +26,7 @@
       <Portuguese>Retirar Mochila</Portuguese>
       <Italian>Togliere zaino</Italian>
     </Key>
-    <Key ID="STR_AGM_Backpacks_LockBackpack">
+    <Key ID="STR_ACE_LockBackpacks_LockBackpack">
       <English>Lock Backpack</English>
       <German>Rucksack verschließen</German>
       <French>Verrouiller le sac à dos</French>
@@ -36,7 +36,7 @@
       <Hungarian>Táska zárolása</Hungarian>
       <Russian>Запереть рюкзак</Russian>
     </Key>
-    <Key ID="STR_AGM_Backpacks_UnlockBackpack">
+    <Key ID="STR_ACE_LockBackpacks_UnlockBackpack">
       <English>Unlock Backpack</English>
       <German>Rucksack aufschließen</German>
       <French>Déverouiller le sac à dos</French>
@@ -46,7 +46,7 @@
       <Hungarian>Táska nyitása</Hungarian>
       <Russian>Отпереть рюкзак</Russian>
     </Key>
-    <Key ID="STR_AGM_Backpacks_BackpackLocked">
+    <Key ID="STR_ACE_LockBackpacks_BackpackLocked">
       <English>Backpack of %1 is locked</English>
       <German>Der Rucksack von %1 ist verschlossen</German>
       <French>Le sac à dos de %1 est verroullé</French>
@@ -56,7 +56,7 @@
       <Hungarian>%1 táskája zárolva</Hungarian>
       <Russian>Рюкзак %1 заперт</Russian>
     </Key>
-    <Key ID="STR_AGM_Backpacks_InventoryLocked">
+    <Key ID="STR_ACE_LockBackpacks_InventoryLocked">
       <English>Inventory is locked</English>
       <German>Das Inventar ist verschlossen</German>
       <French>L'inventaire est verrouillé</French>
