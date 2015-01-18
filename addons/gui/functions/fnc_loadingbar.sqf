@@ -36,13 +36,13 @@ if (_timeToWait > 0) exitwith {
 		if !(_params call _cond) exitwith {
 			[(_this select 1)] call cba_fnc_removePerFrameHandler;
 			1534 cutText ["","plain"];
-			_args call _onfailure;
+			_params call _onfailure;
 		};
 
 		if (GVAR(LOADING_BAR_STATUS) >= 1) exitwith {
 			[(_this select 1)] call cba_fnc_removePerFrameHandler;
 			1534 cutText ["","plain"];
-			_args call _onSuccess;
+			_params call _onSuccess;
 		};
 		private "_dialog";
 		disableSerialization;
