@@ -1,4 +1,15 @@
 
+class RscPicture;
+class RscText;
+class RscStructuredText;
+class RscButtonMenuOK;
+class RscButtonMenuCancel;
+class RscButtonMenu;
+class RscEdit;
+class RscCombo;
+class RscSlider;
+class RscXSliderH;
+
 class RscDisplayInsertMarker {
 	onLoad = "_this call compile preprocessFileLineNumbers 'AGM_Markers\scripts\initInsertMarker.sqf'";
 	onUnload = "_this call compile preprocessFileLineNumbers 'AGM_Markers\scripts\placeMarker.sqf'";
