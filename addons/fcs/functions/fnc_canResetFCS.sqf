@@ -12,5 +12,5 @@
 
 #include "script_component.hpp"
 
-_player == gunner _vehicle
-&& (count (_vehicle getVariable [QGVAR(Magazines), []]) > 1)
+ACE_player == gunner vehicle ACE_player
+&& (count ((vehicle ACE_player) getVariable [QGVAR(Magazines), []]) > 1)

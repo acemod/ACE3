@@ -1,46 +1,55 @@
-// by commy2
+// by commy2 and CAA-Picard
 #include "script_component.hpp"
 
-private ["_unit", "_range", "_isGreen"];
+EXPLODE_3_PVT(_this,_unit,_range,_isGreen);
 
-_unit = _this select 0;
-_range = _this select 1;
-_isGreen = _this select 2;
+_p0Pos = _unit modelToWorld (_unit selectionPosition "righthand");
 
-_p0 = _unit modelToWorld (_unit selectionPosition "righthand");
-_d  = _unit weaponDirection currentWeapon _unit;
+// Convert _p0Pos to ASL
+_p0 = + _p0Pos;
+if (!surfaceIsWater _p0) then {
+  _p0 = ATLtoASL _p0;
+};
 
-_p1 = _p0 vectorAdd (_d vectorMultiply _range);
-_pA = _p0 vectorAdd (_d vectorMultiply 0.5);
+// Find a system of orthogonal reference vectors
+// _v1 points in the direction of the weapon
+// _v2 points to the right of the weapon
+// _v3 points to the top side of the weapon
+_v1 = _unit weaponDirection currentWeapon _unit;
+_v2 = vectorNormalized (_v1 vectorCrossProduct [0,0,1]);
+_v3 = _v2 vectorCrossProduct _v1;
 
-_offset0 = getTerrainHeightASL _p0;
-_offset1 = getTerrainHeightASL _p1;
-_offsetA = getTerrainHeightASL _pA;
+// Offset over the 3 reference axis
+// This offset could eventually be configured by weapon in the config
+_offV1 = 0.31;
+_offV2 = 0;
+_offV3 = 0.08;
 
-_p1 = _p1 vectorAdd [0, 0, _offset0 - _offset1];
-_p0 = _pA vectorAdd [0, 0, _offset0 - _offsetA];
+// Offset _p0, the start of the laser
+_p0    = _p0    vectorAdd (_v1 vectorMultiply _offV1) vectorAdd (_v3 vectorMultiply _offV3) vectorAdd (_v2 vectorMultiply _offV2);
+_p0Pos = _p0Pos vectorAdd (_v1 vectorMultiply _offV1) vectorAdd (_v3 vectorMultiply _offV3) vectorAdd (_v2 vectorMultiply _offV2);
+// Calculate _p1, the potential end of the laser
+_p1    = _p0    vectorAdd (_v1 vectorMultiply _range);
 
-_fnc_getDistance = {
+//Debugaaa = lineIntersectsObjs [_p0, _p1, objNull, _unit, false, 2];
+
+_fnc_getDistanceToTerrain = {
     private "_distance";
 
     _pX = + _p0;
-    _line = [ATLToASL _p0, ATLToASL _pX];
+    _line = [_p0, _pX];
 
     _distance = _this;
     _iteration = _distance;
 
     while {
-        _iteration > 0.01 / 2
+        _iteration > 0.05 / 2
     } do {
         _iteration = _iteration / 2;
 
-        _pX = _p0 vectorAdd (_d vectorMultiply _distance);
+        _pX = _p0 vectorAdd (_v1 vectorMultiply _distance);
 
-        _offsetX = getTerrainHeightASL _pX;
-
-        _pX = _pX vectorAdd [0, 0, _offset0 - _offsetX];
-
-        _line set [1, ATLToASL _pX];
+        _line set [1, _pX];
 
         _distance = _distance + (([1, -1] select (lineIntersects (_line + [_unit]) || {terrainIntersectASL _line})) * _iteration);
 
@@ -50,53 +59,60 @@ _fnc_getDistance = {
     _distance
 };
 
-_distance = _range call _fnc_getDistance;
+// Get distance to nearest object or terrain (excluding men)
+_distance = _range call _fnc_getDistanceToTerrain;
 
-_units = nearestObjects [_unit, ["Man"], _distance];
+// Find all men potentially intercepted by the ray
+_intermediatePos = _p0 vectorAdd (_v1 vectorMultiply _distance/2);
+if (!surfaceIsWater _intermediatePos) then {
+  _intermediatePos = ASLtoATL _intermediatePos;
+};
+_units = nearestObjects [_intermediatePos, ["Man"], _distance/2];
+
 _units deleteAt (_units find _unit);
 
-_fnc_doesIntersect = {
-    _pX = _p0 vectorAdd (_d vectorMultiply (_this select 1));
-
-    _offsetX = getTerrainHeightASL _pX;
-
-    _pX = _pX vectorAdd [0, 0, _offset0 - _o1];
-
-    count ([_this select 0, "FIRE"] intersect [_p0, _pX]) > 0
+_fnc_doesIntersectWithMan = {
+    _pX = _p0 vectorAdd (_v1 vectorMultiply (_this select 1));
+    if (!surfaceIsWater _pX) then {
+      _pX = ASLtoATL _pX;
+    };
+    count ([_this select 0, "FIRE"] intersect [_p0Pos, _pX]) > 0
 };
 
+// Test intersection with nearby men
 {
-    if ([_x, _distance] call _fnc_doesIntersect) then {
-        _distance = _distance min (_unit distance _x);
+    if ([_x, _distance] call _fnc_doesIntersectWithMan) then {
+        _distance = _distance min ((_unit distance _x) - _offV1);
     };
 } forEach _units;
 
 //systemChat str _distance;
 if (_distance < 0.5) exitWith {};
 
-_pL = _p0 vectorAdd (_d vectorMultiply _distance);
-_pL2 = _p0 vectorAdd (_d vectorMultiply (_distance - 0.5));
+_pL = _p0 vectorAdd (_v1 vectorMultiply _distance);
+_pL2 = _p0 vectorAdd (_v1 vectorMultiply (_distance - 0.5));
 
-_offsetL = getTerrainHeightASL _pL;
-_offsetL2 = getTerrainHeightASL _pL2;
-
-_pL = _pL vectorAdd [0, 0, _offset0 - _offsetL];
-_pL2 = _pL2 vectorAdd [0, 0, _offset0 - _offsetL2];
+// Convert _pL to pos
+if (!surfaceIsWater _pL) then {
+  _pL = ASLtoATL _pL;
+};
 
 drawLine3D [
-    _p0,
+    _p0Pos,
     _pL,
     [[1,0,0,1], [0,1,0,1]] select _isGreen
 ];
 
-_spL = worldToScreen _pL; //systemChat str _spL;
 _size = 2 * (_range - (positionCameraToWorld [0,0,0] distance _pL)) / _range;
 
 _camPos = positionCameraToWorld [0,0,0.2];
 if (count ([_unit,      "FIRE"] intersect [_camPos, _pL]) > 0) exitWith {};
 if (count ([ACE_player, "FIRE"] intersect [_camPos, _pL]) > 0) exitWith {};
-if (                     terrainIntersect [_camPos, _pL2])      exitWith {};
-if (lineIntersects [ATLToASL _camPos, ATLToASL _pL2])           exitWith {};
+
+// Convert _camPos to ASL
+if (!surfaceIsWater _camPos) then { _camPos = ATLtoASL _camPos; };
+if (                  terrainIntersectASL [_camPos, _pL2])     exitWith {};
+if (                       lineIntersects [_camPos, _pL2])     exitWith {};
 
 drawIcon3D [
     format ["\a3\weapons_f\acc\data\collimdot_%1_ca.paa", ["red", "green"] select _isGreen],

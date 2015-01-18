@@ -12,6 +12,6 @@
 
 #include "script_component.hpp"
 
-_player == gunner _vehicle
-&& {getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(Enabled)) == 1}
+ACE_player == gunner vehicle ACE_player
+&& {getNumber (configFile >> "CfgVehicles" >> typeOf (vehicle ACE_player) >> QGVAR(Enabled)) == 1}
 && {cameraView == "GUNNER"}

@@ -4,46 +4,15 @@ class CfgPatches {
     class ADDON {
         units[] = {};
         weapons[] = {};
-        requiredVersion = 0.60;
+        requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {ace_common, ace_interaction};
-        version = QUOTE(VERSION);
-        versionStr = QUOTE(VERSION);
-        versionAr[] = {VERSION_AR};
         author[] = {"KoffeinFlummi","BadGuy (simon84)"};
         authorUrl = "https://github.com/KoffeinFlummi/";
+        VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
-
-class ACE_Default_Keys {
-    class laseTarget {
-        displayName = $STR_ACE_FCS_LaseTarget;
-        condition   = QUOTE(call FUNC(canUseRangefinder) || FUNC(canUseFCS));
-        statement   = QUOTE([_vehicle] call FUNC(keyDown));
-        conditionUp = QUOTE(GVAR(enabled) && FUNC(canUseFCS));
-        statementUp = QUOTE([_vehicle] call FUNC(keyUp));
-        key = 15;
-        shift = 0;
-        control = 0;
-        alt = 0;
-    };
-    class adjustRangeUp {
-        displayName = $STR_ACE_FCS_AdjustRangeUp;
-        condition   = QUOTE(call FUNC(canUseRangefinder) || FUNC(canUseFCS));
-        statement   = QUOTE([_vehicle, 50] call FUNC(adjustRange));
-        key = 201;
-        shift = 0;
-        control = 0;
-        alt = 0;
-        allowHolding = 1;
-    };
-    class adjustRangeDown: adjustRangeUp {
-        displayName = $STR_ACE_FCS_AdjustRangeDown;
-        statement = QUOTE([_vehicle, -50] call FUNC(adjustRange));
-        key = 209;
-    };
-};
 
 class CfgVehicles {
     class All {

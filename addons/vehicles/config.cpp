@@ -16,15 +16,3 @@ class CfgPatches {
 #include "CfgAmmo.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-
-class ACE_Default_Keys {
-    class speedLimiter {
-        displayName = "$STR_ACE_SpeedLimiter";
-        condition = QUOTE(_player == driver _vehicle && {_vehicle isKindOf 'Car' || {_vehicle isKindOf 'Tank'}});
-        statement = QUOTE([ARR_2(_player, _vehicle)] call FUNC(speedLimiter));
-        key = 211;
-        shift = 0;
-        control = 0;
-        alt = 0;
-    };
-};

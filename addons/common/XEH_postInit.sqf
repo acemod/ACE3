@@ -8,7 +8,7 @@ QGVAR(remoteFnc) addPublicVariableEventHandler {
 [missionNamespace] call FUNC(executePersistent);
 
 // check previous version number from profile
-_currentVersion = getText (configFile >> "CfgPatches" >> ADDON >> "version");
+_currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
 _previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
 
 if (_currentVersion != _previousVersion) then {
@@ -71,6 +71,7 @@ enableCamShake true;
     if (alive _oldPlayer) then {
         [_oldPlayer] call FUNC(setName)
     };
+
 }] call FUNC(addEventhandler);
 
 GVAR(OldPlayerInventory) = ACE_player call FUNC(getAllGear);
@@ -140,3 +141,22 @@ GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
     };
 
 }, 0, []] call cba_fnc_addPerFrameHandler;
+
+
+[QGVAR(reviveCounter_f), 0, false, QGVAR(ADDON)] call FUNC(defineVariable);
+[QGVAR(inReviveState), false, true, QGVAR(ADDON)] call FUNC(defineVariable);
+[QGVAR(isDead),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
+[QGVAR(isDeadPlayer), false, true, QUOTE(ADDON)] call FUNC(defineVariable);
+[QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
+["ACE_isUnconscious",false,true,QUOTE(ADDON)] call FUNC(defineVariable);
+[QGVAR(ENABLE_REVIVE_SETDEAD_F),0,false,QUOTE(ADDON)] call FUNC(defineVariable);
+[QGVAR(carriedBy),objNull,false,QUOTE(ADDON)] call FUNC(defineVariable);
+
+if (isNil QGVAR(ENABLE_REVIVE_F)) then {
+    GVAR(ENABLE_REVIVE_F) = 0;
+};
+
+
+[
+    {((_this select 0) getvariable [QGVAR(inReviveState), false])}
+] call EFUNC(common,registerUnconsciousCondition);
