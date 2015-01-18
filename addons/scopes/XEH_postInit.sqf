@@ -96,7 +96,7 @@ if !(hasInterface) exitWith {};
 ] call cba_fnc_registerKeybind;
 
 ["ACE3",
-    localize "adjustScopeRight",
+    localize "STR_ACE_Scopes_AdjustRight",
     {
         // Conditions: canInteract
         _exceptions = [];
