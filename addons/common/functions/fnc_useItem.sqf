@@ -15,6 +15,7 @@ _unit = _this select 0;
 _item = _this select 1;
 _vehicleUsage = [_this, 2, false, [false]] call BIS_fnc_Param;
 
+_return = false;
 if (!_vehicleUsage) then {
 	if (_item != "") then {
 		if (_item in (items _unit)) then {
@@ -27,12 +28,8 @@ if (!_vehicleUsage) then {
 				_return = true;
 			};
 		};
-	} else {
-		_return = false;
 	};
-	[format["fnc_useItem: %1 | %2",_this,_return]] call FUNC(debug);
-_return
-} else
-{
-	// TODO implement shared item functionality
 };
+// TODO implement shared item functionality for with vehicles.
+
+_return;
