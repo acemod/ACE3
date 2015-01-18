@@ -17,8 +17,6 @@ private ["_ammoType", "_viewDiff", "_posArrival", "_airFriction", "_timeToLive",
 _vehicle = _this select 0;
 _distance = call FUNC(getRange);
 
-if !(GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
-
 _magazines = magazines _vehicle;
 
 if (_distance == 0) then {
