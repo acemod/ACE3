@@ -1,7 +1,7 @@
 class CfgFunctions{
-	class AGM_Goggles{
-		class AGM_Goggles{
-			file="AGM_Goggles\functions";
+	class ACE_Goggles{
+		class ACE_Goggles{
+			file="ACE_Goggles\functions";
 			class Init{postInit = 1;};
 			class ApplyGlassesEffect;
 			class RemoveGlassesEffect;

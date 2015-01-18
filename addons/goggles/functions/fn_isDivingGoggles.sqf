@@ -1,5 +1,5 @@
 /*
-	Name: AGM_Goggles_fnc_isDivingGoggles
+	Name: ACE_Goggles_fnc_isDivingGoggles
 	
 	Author: Garth de Wet (LH)
 	
@@ -13,7 +13,7 @@
 	Boolean - whether diving goggles are worn
 	
 	Example:
-	(goggles player) call AGM_Goggles_fnc_isDivingGoggles;
+	(goggles player) call ACE_Goggles_fnc_isDivingGoggles;
 */
 private ["_result", "_glasses"];
 _glasses = _this;

@@ -1,5 +1,5 @@
 /*
-	Name: AGM_Goggles_fnc_ClearGlasses
+	Name: ACE_Goggles_fnc_ClearGlasses
 
 	Author: Garth de Wet (LH)
 
@@ -14,14 +14,14 @@
 	Nothing
 
 	Example:
-	call AGM_Goggles_fnc_ClearGlasses;
+	call ACE_Goggles_fnc_ClearGlasses;
 */
-#include "\AGM_Goggles\script.sqf"
+#include "\ACE_Goggles\script.sqf"
 
 private "_broken";
 _broken = GETBROKEN;
-AGM_Goggles_Effects = GLASSESDEFAULT;
-AGM_Goggles_Effects set [BROKEN, _broken];
+ACE_Goggles_Effects = GLASSESDEFAULT;
+ACE_Goggles_Effects set [BROKEN, _broken];
 
 if ((stance player) != "PRONE") then {
 	player playActionNow "gestureWipeFace";
@@ -34,6 +34,6 @@ null = [] spawn {
 	};
 };
 
-call AGM_Goggles_fnc_RemoveDirtEffect;
-call AGM_Goggles_fnc_RemoveRainEffect;
-call AGM_Goggles_fnc_RemoveDustEffect;
+call ACE_Goggles_fnc_RemoveDirtEffect;
+call ACE_Goggles_fnc_RemoveRainEffect;
+call ACE_Goggles_fnc_RemoveDustEffect;

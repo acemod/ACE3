@@ -1,5 +1,5 @@
 /*
-	Name: AGM_Goggles_fnc_isInRotorWash
+	Name: ACE_Goggles_fnc_isInRotorWash
 	
 	Author: Garth de Wet (LH)
 	
@@ -16,8 +16,8 @@
 		1 - number - Amount of rotor wash.
 	
 	Example:
-		if (([player, 10] call AGM_Goggles_fnc_isInRotorWash) select 0) then { hint "Rotor wash"; };
-		if (([player] call AGM_Goggles_fnc_isInRotorWash) select 0) then { hint "Rotor wash"; };
+		if (([player, 10] call ACE_Goggles_fnc_isInRotorWash) select 0) then { hint "Rotor wash"; };
+		if (([player] call ACE_Goggles_fnc_isInRotorWash) select 0) then { hint "Rotor wash"; };
 */
 private ["_heli", "_unit", "_result", "_radius"];
 _unit = _this select 0;

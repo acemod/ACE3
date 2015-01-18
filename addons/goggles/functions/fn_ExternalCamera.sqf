@@ -1,5 +1,5 @@
 /*
-	Name: AGM_Goggles_fnc_ExternalCamera
+	Name: ACE_Goggles_fnc_ExternalCamera
 	
 	Author: Garth de Wet (LH)
 	
@@ -13,7 +13,7 @@
 	Boolean - whether the camera is in external view or not.
 	
 	Example:
-	call AGM_Goggles_fnc_ExternalCamera;
+	call ACE_Goggles_fnc_ExternalCamera;
 */
-if (profileNamespace getVariable ["AGM_showInThirdPerson", false]) exitWith { false };
+if (profileNamespace getVariable ["ACE_showInThirdPerson", false]) exitWith { false };
 (cameraView == "External")

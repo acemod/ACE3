@@ -1,5 +1,5 @@
 /*
-	Name: AGM_Goggles_fnc_RemoveGlassesEffect
+	Name: ACE_Goggles_fnc_RemoveGlassesEffect
 	
 	Author: Garth de Wet (LH)
 	
@@ -14,16 +14,16 @@
 	Nothing
 	
 	Example:
-	call AGM_Goggles_fnc_RemoveGlassesEffect;
+	call ACE_Goggles_fnc_RemoveGlassesEffect;
 */
-#include "\AGM_Goggles\script.sqf"
-AGM_Goggles_EffectsActive = false;
-AGM_Goggles_PostProcess ppEffectEnable false;
+#include "\ACE_Goggles\script.sqf"
+ACE_Goggles_EffectsActive = false;
+ACE_Goggles_PostProcess ppEffectEnable false;
 
 if (!isNull(GLASSDISPLAY)) then {
 	GLASSDISPLAY closeDisplay 0;
 };
 
-call AGM_Goggles_fnc_RemoveDirtEffect;
-call AGM_Goggles_fnc_RemoveRainEffect;
-call AGM_Goggles_fnc_RemoveDustEffect;
+call ACE_Goggles_fnc_RemoveDirtEffect;
+call ACE_Goggles_fnc_RemoveRainEffect;
+call ACE_Goggles_fnc_RemoveDustEffect;

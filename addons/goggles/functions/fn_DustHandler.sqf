@@ -1,5 +1,5 @@
 /*
-	Name: AGM_Goggles_fnc_DustHandler
+	Name: ACE_Goggles_fnc_DustHandler
 	
 	Author: Garth de Wet (LH)
 	
@@ -14,10 +14,10 @@
 	Nothing
 	
 	Example:
-	player addEventHandler ["Fired", {[_this select 0, _this select 1] call AGM_Goggles_fnc_DustHandler;}];
+	player addEventHandler ["Fired", {[_this select 0, _this select 1] call ACE_Goggles_fnc_DustHandler;}];
 	See http://community.bistudio.com/wiki/ArmA_3:_Event_Handlers#Fired
 */
-#include "\AGM_Goggles\script.sqf"
+#include "\ACE_Goggles\script.sqf"
 
 private ["_bullets", "_position", "_surface", "_found", "_weapon", "_cloudType"];
 _weapon = _this select 1;
@@ -63,13 +63,13 @@ SETDUST(DTIME,time);
 if (GETDUSTT(DAMOUNT) < 2) then {
 	private "_bulletsRequired";
 	_bulletsRequired = 100;
-	if (isNumber (ConfigFile >> _cloudType >> "AGM_Goggles_BulletCount")) then {
-		_bulletsRequired = getNumber (ConfigFile >> _cloudType >> "AGM_Goggles_BulletCount");
+	if (isNumber (ConfigFile >> _cloudType >> "ACE_Goggles_BulletCount")) then {
+		_bulletsRequired = getNumber (ConfigFile >> _cloudType >> "ACE_Goggles_BulletCount");
 	};
 
 	if (_bulletsRequired <= _bullets) then {
 		SETDUST(DACTIVE,true);
-		call AGM_Goggles_fnc_ApplyDust;
+		call ACE_Goggles_fnc_ApplyDust;
 	};
 };
 true

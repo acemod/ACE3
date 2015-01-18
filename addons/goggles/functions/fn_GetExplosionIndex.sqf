@@ -1,5 +1,5 @@
 /*
-	Name: AGM_Goggles_fnc_GetExplosionIndex
+	Name: ACE_Goggles_fnc_GetExplosionIndex
 	
 	Author: Garth de Wet (LH)
 	
@@ -13,7 +13,7 @@
 	NUMBER (the rating) [0-3]
 	
 	Example:
-	_rating = 0.05 call AGM_Goggles_fnc_GetExplosionIndex
+	_rating = 0.05 call ACE_Goggles_fnc_GetExplosionIndex
 */
 private ["_effect", "_effectIndex"];
 _effect = _this;
