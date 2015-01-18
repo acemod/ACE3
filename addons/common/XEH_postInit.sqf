@@ -99,6 +99,14 @@ GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
         ["playerVisionModeChanged", [ACE_player, _newPlayerVisionMode]] call FUNC(localEvent);
     };
 
+    // "inventoryDisplayChanged" event
+    _newInventoryDisplayIsOpen = !(isNull findDisplay 602);
+    if !(_newInventoryDisplayIsOpen isEqualTo GVAR(OldInventoryDisplayIsOpen)) then {
+        // Raise ACE event locally
+        GVAR(OldInventoryDisplayIsOpen) = _newInventoryDisplayIsOpen;
+        ["inventoryDisplayChanged", [ACE_player, _newInventoryDisplayIsOpen]] call FUNC(localEvent);
+    };
+
     // "zeusDisplayChanged" event
     _newZeusDisplayIsOpen = !(isNull findDisplay 312);
     if !(_newZeusDisplayIsOpen isEqualTo GVAR(OldZeusDisplayIsOpen)) then {
