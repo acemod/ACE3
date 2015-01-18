@@ -20,7 +20,7 @@ if (isnil "_copy") exitwith {false};
 _unit setvariable [QGVAR(originalCopy_f), nil, true];
 _unit setvariable [QGVAR(copyOfBody_f), nil, true];
 if (!isNull _copy) then {
-	deleteVehicle _copy;
+    deleteVehicle _copy;
 };
 
 true;

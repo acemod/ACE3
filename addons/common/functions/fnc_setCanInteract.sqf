@@ -15,14 +15,14 @@ _unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _to = _this select 1;
 _return = false;
 if (((typeName _to) == "SCALAR")) then {
-	if (_to <-1) then {
-		_to = -1;
-	} else {
-		if (_to > 1) then {
-			_to = 1;
-		};
-	};
-	_unit setvariable [QGVAR(canInteract), ([_unit] call FUNC(getCanInteract)) + _to,false];
-	_return = true;
+    if (_to <-1) then {
+        _to = -1;
+    } else {
+        if (_to > 1) then {
+            _to = 1;
+        };
+    };
+    _unit setvariable [QGVAR(canInteract), ([_unit] call FUNC(getCanInteract)) + _to,false];
+    _return = true;
 };
 _return

@@ -15,26 +15,26 @@ _id       = _this select 0;
 _settings = _this select 1;
 _add      = true;
 if (count _this > 2) then {
-	_add = _this select 2;
+    _add = _this select 2;
 };
 
 _map = missionNamespace getVariable [QGVAR(setHearingCapabilityMap),[]];
 
 _exists = false;
 {
-	if (_id == _x select 0) exitWith {
-		_exists = true;
-		if (_add) then {
-			_x set [1, _settings];
-		} else {
-			_map set [_forEachIndex, 0];
-			_map = _map - [0];
-		};
-	};
+    if (_id == _x select 0) exitWith {
+        _exists = true;
+        if (_add) then {
+            _x set [1, _settings];
+        } else {
+            _map set [_forEachIndex, 0];
+            _map = _map - [0];
+        };
+    };
 } forEach _map;
 
 if (!_exists && _add) then {
-	_map pushBack [_id, _settings];
+    _map pushBack [_id, _settings];
 };
 
 missionNamespace setVariable [QGVAR(setHearingCapabilityMap), _map];
@@ -42,7 +42,7 @@ missionNamespace setVariable [QGVAR(setHearingCapabilityMap), _map];
 // find lowest volume
 _lowestVolume = 1;
 {
-	_lowestVolume = (_x select 1) min _lowestVolume;
+    _lowestVolume = (_x select 1) min _lowestVolume;
 } forEach _map;
 
 // in game sounds

@@ -20,5 +20,5 @@ GVAR(Module) = true;
 [_logic, QGVAR(REVIVE_NUMBER_MAX_F), "amountOf" ] call EFUNC(common,readNumericParameterFromModule);
 
 [
-	{(((_this select 0) getvariable[QGVAR(ENABLE_REVIVE_SETDEAD_F),0]) > 0)}
+    {(((_this select 0) getvariable[QGVAR(ENABLE_REVIVE_SETDEAD_F),0]) > 0)}
 ] call FUNC(registerUnconsciousCondition);

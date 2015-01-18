@@ -17,17 +17,17 @@ _setCaptive = [_this, 1, false, [false]] call BIS_fnc_Param;
 
 _captiveSwitch = true;
 if (_setCaptive) then {
-	if (captive _unit) then {
-		_captiveSwitch = false;
-	} else {
-		_unit setCaptive true;
-	};
+    if (captive _unit) then {
+        _captiveSwitch = false;
+    } else {
+        _unit setCaptive true;
+    };
 } else {
-	if (captive _unit) then {
-		_unit setCaptive false;
-	} else {
-		_captiveSwitch = false;
-	};
+    if (captive _unit) then {
+        _unit setCaptive false;
+    } else {
+        _captiveSwitch = false;
+    };
 };
 
 _captiveSwitch

@@ -14,40 +14,40 @@ private ["_unit","_carriedObj"];
 _unit = _this select 0;
 _fallDown = false;
 if (count _this > 1) then {
-	_fallDown = _this select 1;
+    _fallDown = _this select 1;
 };
 
 if ((_unit getvariable [QGVAR(limitMovementSpeed),false])) exitwith {
-	_unit setvariable [QGVAR(limitMovementSpeed),nil,true];
+    _unit setvariable [QGVAR(limitMovementSpeed),nil,true];
 };
 
 [{
-	private["_unit","_fallDown","_carriedObj"];
-	_unit = (_this select 0) select 0;
-	_fallDown = (_this select 0) select 1;
+    private["_unit","_fallDown","_carriedObj"];
+    _unit = (_this select 0) select 0;
+    _fallDown = (_this select 0) select 1;
 
-	_carriedObj = [_unit] call FUNC(getCarriedObj);
+    _carriedObj = [_unit] call FUNC(getCarriedObj);
 
-	if !(_unit getvariable [QGVAR(limitMovementSpeed),false]) exitwith {
-		[(_this select 1)] call cba_fnc_removePerFrameHandler;
-	};
-	if !((!isNull _carriedObj) && (alive _unit)) exitwith {
-		[(_this select 1)] call cba_fnc_removePerFrameHandler;
-	};
+    if !(_unit getvariable [QGVAR(limitMovementSpeed),false]) exitwith {
+        [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    };
+    if !((!isNull _carriedObj) && (alive _unit)) exitwith {
+        [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    };
 
-	if (speed _unit > 12 && vehicle _unit == _unit && isTouchingGround _unit) then {
+    if (speed _unit > 12 && vehicle _unit == _unit && isTouchingGround _unit) then {
 
-		_unit setVelocity [0,0,0];
+        _unit setVelocity [0,0,0];
 
-		if (_fallDown) then {
-			_unit playMove "amovppnemstpsraswrfldnon";
-		};
+        if (_fallDown) then {
+            _unit playMove "amovppnemstpsraswrfldnon";
+        };
 
-		if (_carriedObj isKindOf "Man") then {
-			hint "You can not move this fast while transporting this person.";
-		} else {
-			hint "You can not move this fast while carrying this object";
-		};
-		[_unit,ObjNull] call FUNC(carryObj);
-	};
+        if (_carriedObj isKindOf "Man") then {
+            hint "You can not move this fast while transporting this person.";
+        } else {
+            hint "You can not move this fast while carrying this object";
+        };
+        [_unit,ObjNull] call FUNC(carryObj);
+    };
 }, 0.5, [_unit,_fallDown] ] call CBA_fnc_addPerFrameHandler;

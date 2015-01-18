@@ -13,12 +13,12 @@
 private ["_return"];
 
 if (!isMultiplayer) then {
-	_return = true;
+    _return = true;
 } else {
-	if (isServer && !isDedicated) then {
-		_return = true;
-	} else {
-		_return = !(hasInterface || isDedicated);
-	};
+    if (isServer && !isDedicated) then {
+        _return = true;
+    } else {
+        _return = !(hasInterface || isDedicated);
+    };
 };
 _return

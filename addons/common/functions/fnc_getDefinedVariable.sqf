@@ -17,17 +17,17 @@ private "_value";
 
 _value = UNIT getvariable VARIABLE;
 if (isnil "_value") then {
-	if (count _this >2) then {
-		_value = _this select 2;
-	} else {
-		private "_definedVariable";
-		_definedVariable = ([VARIABLE] call FUNC(getDefinedVariableInfo));
-		if (count _definedVariable > 1) then {
-			_value = _definedVariable select 1;
-		};
-	};
-	if (isnil "_value") then {
-		_value = 0;
-	};
+    if (count _this >2) then {
+        _value = _this select 2;
+    } else {
+        private "_definedVariable";
+        _definedVariable = ([VARIABLE] call FUNC(getDefinedVariableInfo));
+        if (count _definedVariable > 1) then {
+            _value = _definedVariable select 1;
+        };
+    };
+    if (isnil "_value") then {
+        _value = 0;
+    };
 };
 _value

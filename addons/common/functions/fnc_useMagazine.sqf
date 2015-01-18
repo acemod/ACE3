@@ -16,15 +16,15 @@ _magazine = _this select 1;
 _vehicleUsage = [_this, 2, false, [false]] call BIS_fnc_Param;
 
 if (!_vehicleUsage) then {
-	if (_magazine != "") then {
-		_unit removeMagazine _magazine;
-		_return = true;
-	} else {
-		_return = false;
-	};
-	[format["fnc_useMagazine: %1 | %2",_this,_return]] call FUNC(debug);
+    if (_magazine != "") then {
+        _unit removeMagazine _magazine;
+        _return = true;
+    } else {
+        _return = false;
+    };
+    [format["fnc_useMagazine: %1 | %2",_this,_return]] call FUNC(debug);
 _return
 } else
 {
-	// TODO implement shared magazine functionality
+    // TODO implement shared magazine functionality
 };

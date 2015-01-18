@@ -19,18 +19,18 @@ _persistent = false;
 
 if (count _this < 3) exitwith {};
 if (count _this > 4) then {
-	_code = _this select 4;
-	if (count _this > 5) then {
-		_persistent = _this select 5;
-	};
+    _code = _this select 4;
+    if (count _this > 5) then {
+        _persistent = _this select 5;
+    };
 };
 
 if (typeName _name != typeName "") exitwith {
-	[format["Tried to the deinfe a variable with an invalid name: %1 Arguments: %2", _name, _this]] call FUNC(debug);
+    [format["Tried to the deinfe a variable with an invalid name: %1 Arguments: %2", _name, _this]] call FUNC(debug);
 };
 
 if (isnil QGVAR(OBJECT_VARIABLES_STORAGE)) then {
-	GVAR(OBJECT_VARIABLES_STORAGE) = [];
+    GVAR(OBJECT_VARIABLES_STORAGE) = [];
 };
 
 GVAR(OBJECT_VARIABLES_STORAGE) pushback [_name,_value,_defaultGlobal,_catagory,_code, _persistent];

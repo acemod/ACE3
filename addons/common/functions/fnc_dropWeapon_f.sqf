@@ -26,14 +26,14 @@ _secondairyWeapon = secondaryWeapon _unit;
 _handGunWeapon = handgunWeapon _unit;
 
 switch (_currentWeapon) do {
-	case _primairyWeapon: {
+    case _primairyWeapon: {
 
-	};
-	case _secondairyWeapon: {
+    };
+    case _secondairyWeapon: {
 
-	};
-	case _handGunWeapon: {
+    };
+    case _handGunWeapon: {
 
-	};
-	default {};
+    };
+    default {};
 };

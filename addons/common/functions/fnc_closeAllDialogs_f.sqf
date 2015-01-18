@@ -10,5 +10,5 @@
 #include "script_component.hpp"
 
 while {dialog} do {
-	closeDialog 0;
+    closeDialog 0;
 };

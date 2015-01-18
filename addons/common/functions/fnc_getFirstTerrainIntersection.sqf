@@ -19,26 +19,26 @@ _result = [false, [0, 0, 0]];
 _distance = _source vectorDistance _destination;
 
 if (terrainIntersectASL [_source, _destination]) then {
-	_lower = 0;
-	_upper = 1;
-	_mid = 0.5;
+    _lower = 0;
+    _upper = 1;
+    _mid = 0.5;
 
-	_dir = _source vectorFromTo _destination;
+    _dir = _source vectorFromTo _destination;
 
-	while {(_upper - _lower) * _distance > _accuracy} do {
-		_mid = _lower + (_upper - _lower) / 2;
+    while {(_upper - _lower) * _distance > _accuracy} do {
+        _mid = _lower + (_upper - _lower) / 2;
 
-		_intersection = terrainIntersectASL [_source, _source vectorAdd (_dir vectorMultiply (_mid * _distance))];
+        _intersection = terrainIntersectASL [_source, _source vectorAdd (_dir vectorMultiply (_mid * _distance))];
 
-		if (_intersection) then {
-			_upper = _mid;
-		} else {
-			_lower = _mid;
-		};
-	};
+        if (_intersection) then {
+            _upper = _mid;
+        } else {
+            _lower = _mid;
+        };
+    };
 
-	_mid = _lower + (_upper - _lower) / 2;
-	_result = [true, _source vectorAdd (_dir vectorMultiply (_mid * _distance))];
+    _mid = _lower + (_upper - _lower) / 2;
+    _result = [true, _source vectorAdd (_dir vectorMultiply (_mid * _distance))];
 };
 
 _result

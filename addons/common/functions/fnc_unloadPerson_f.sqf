@@ -24,7 +24,7 @@ if (!([_caller] call FUNC(isAwake))) exitwith{false;};
 moveOut _unit;
 unassignVehicle _unit;
 if (!alive _unit) then {
-	_unit action ["Eject", vehicle _unit];
+    _unit action ["Eject", vehicle _unit];
 };
 
 [_unit, false, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide_f);
@@ -34,26 +34,26 @@ _loaded = _loaded - [_unit];
 _vehicle setvariable [QGVAR(loaded_persons_F),_loaded,true];
 
 if (!([_unit] call FUNC(isAwake))) then {
-	_handle = [_unit,_vehicle] spawn {
-		private ["_unit","_vehicle"];
-		_unit = _this select 0;
-		_vehicle = _this select 1;
-		waituntil {vehicle _unit != _vehicle};
-		[_unit,([_unit] call FUNC(getDeathAnim)), 1, true] call FUNC(doAnimation);
-		[format["Unit should move into death anim: %1", _unit]] call FUNC(debug);
-	};
+    _handle = [_unit,_vehicle] spawn {
+        private ["_unit","_vehicle"];
+        _unit = _this select 0;
+        _vehicle = _this select 1;
+        waituntil {vehicle _unit != _vehicle};
+        [_unit,([_unit] call FUNC(getDeathAnim)), 1, true] call FUNC(doAnimation);
+        [format["Unit should move into death anim: %1", _unit]] call FUNC(debug);
+    };
 } else {
-	if ([_unit] call FUNC(isArrested)) then {
-		_handle = [_unit,_vehicle] spawn {
-			_unit = _this select 0;
-			_vehicle = _this select 1;
-			waituntil {vehicle _unit != _vehicle};
-			[_unit,"UnaErcPoslechVelitele2", 1] call FUNC(doAnimation);
-			[format["Unit should move into arrested anim: %1", _unit]] call FUNC(debug);
-		};
-	} else {
-		[format["Unit should move into normal anim: %1", _unit]] call FUNC(debug);
-	};
+    if ([_unit] call FUNC(isArrested)) then {
+        _handle = [_unit,_vehicle] spawn {
+            _unit = _this select 0;
+            _vehicle = _this select 1;
+            waituntil {vehicle _unit != _vehicle};
+            [_unit,"UnaErcPoslechVelitele2", 1] call FUNC(doAnimation);
+            [format["Unit should move into arrested anim: %1", _unit]] call FUNC(debug);
+        };
+    } else {
+        [format["Unit should move into normal anim: %1", _unit]] call FUNC(debug);
+    };
 };
 
 true;

@@ -17,29 +17,29 @@ _handle = _this select 1;
 _eventHandlerName = ("ace_f_custom_results_eventhandler_" + _handle);
 _eventHandlerCollection = missionNamespace getvariable _eventHandlerName;
 if (isnil "_eventHandlerCollection") then {
-	_eventHandlerCollection = [];
-	
-	// TODO Get a replacement for this
-	_cfg = (ConfigFile >> "Advanced_Combat_Environment" >> "CustomResults" >> _handle);
-	if (isClass _cfg) then {
-		_numberOfEH = count _cfg;
-		for [{_EHiterator=0}, {(_EHiterator< _numberOfEH)}, {_EHiterator=_EHiterator+1}] do {
-			_ehCfg = _cfg select _EHiterator;
-			if (isClass _ehCfg) then {
-				_classType = (ConfigName _ehCfg);
-				_code = (compile getText(_ehCfg >> "onCall"));
-				_eventHandlerCollection pushback [_classType, _code];
-				true;
-			};
-		};
-	};
-	missionNamespace setvariable [_eventHandlerName, _eventHandlerCollection];
+    _eventHandlerCollection = [];
+
+    // TODO Get a replacement for this
+    _cfg = (ConfigFile >> "Advanced_Combat_Environment" >> "CustomResults" >> _handle);
+    if (isClass _cfg) then {
+        _numberOfEH = count _cfg;
+        for [{_EHiterator=0}, {(_EHiterator< _numberOfEH)}, {_EHiterator=_EHiterator+1}] do {
+            _ehCfg = _cfg select _EHiterator;
+            if (isClass _ehCfg) then {
+                _classType = (ConfigName _ehCfg);
+                _code = (compile getText(_ehCfg >> "onCall"));
+                _eventHandlerCollection pushback [_classType, _code];
+                true;
+            };
+        };
+    };
+    missionNamespace setvariable [_eventHandlerName, _eventHandlerCollection];
 };
 
 _return = [];
 {
-	_return pushback (_arguments call (_x select 1));
-	false;
+    _return pushback (_arguments call (_x select 1));
+    false;
 }count _eventHandlerCollection;
 
 _return

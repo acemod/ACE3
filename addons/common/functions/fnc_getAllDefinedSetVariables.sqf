@@ -7,22 +7,24 @@
  * @Return: ARRAY REturns an array with the format  [ [name STRING, typeName STRING, value ANY, publicFlag BOOL, peristentFlag BOOL] ]
  * @PublicAPI: true
  */
+
 #include "script_component.hpp"
+
 private ["_object", "_return", "_val", "_category"];
 _object = _this select 0;
 _category = if (count _this > 1) then { _this select 1 } else { "" };
 
 if (isnil QGVAR(OBJECT_VARIABLES_STORAGE)) exitwith {
-	[];
+    [];
 };
 
 _return = [];
 {
-	_val = _object getvariable (_x select 0);
-	if (!isnil "_val") then {
-		if (_category == "" || _category == _x select 3) then {
-			_return pushback [_x select 0, typeName _val, _val, _x select 2, _x select 5];
-		};
-	};
+    _val = _object getvariable (_x select 0);
+    if (!isnil "_val") then {
+        if (_category == "" || _category == _x select 3) then {
+            _return pushback [_x select 0, typeName _val, _val, _x select 2, _x select 5];
+        };
+    };
 }foreach GVAR(OBJECT_VARIABLES_STORAGE);
 _return

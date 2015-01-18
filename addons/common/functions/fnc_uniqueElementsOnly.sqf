@@ -15,10 +15,10 @@ _array = _this select 0;
 
 _result = [];
 {
-	_value = _x;
-	if ({_x isEqualTo _value} count _result == 0) then {
-		_result pushback _x;
-	};
+    _value = _x;
+    if ({_x isEqualTo _value} count _result == 0) then {
+        _result pushback _x;
+    };
 }foreach _array;
 
 _result;

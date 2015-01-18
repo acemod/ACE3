@@ -21,22 +21,22 @@ if (!([_caller] call FUNC(canInteract)) || {_caller == _unit}) exitwith {_vehicl
 
 _loadcar = nearestObject [_unit, "car"];
 if (_unit distance _loadcar <= 10) then {
-	_vehicle = _loadcar;
+    _vehicle = _loadcar;
 } else {
-	_loadhelicopter = nearestObject [_unit, "air"];
-	if (_unit distance _loadhelicopter <= 10) then {
-		_vehicle = _loadhelicopter;
-	} else {
-		_loadtank = nearestObject [_unit, "tank"];
-		if (_unit distance _loadtank <= 10) then {
-			_vehicle = _loadtank;
-		};
-	};
+    _loadhelicopter = nearestObject [_unit, "air"];
+    if (_unit distance _loadhelicopter <= 10) then {
+        _vehicle = _loadhelicopter;
+    } else {
+        _loadtank = nearestObject [_unit, "tank"];
+        if (_unit distance _loadtank <= 10) then {
+            _vehicle = _loadtank;
+        };
+    };
 };
 if (!isNull _vehicle) then {
-	[_unit, true, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide_f);
-	[_caller,objNull] call FUNC(carryObj);
-	[_unit,objNull] call FUNC(carryObj);
-	[[_unit, _vehicle,_caller], QUOTE(FUNC(loadPersonLocal_F)), _unit, false] call EFUNC(common,execRemoteFnc);
+    [_unit, true, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide_f);
+    [_caller,objNull] call FUNC(carryObj);
+    [_unit,objNull] call FUNC(carryObj);
+    [[_unit, _vehicle,_caller], QUOTE(FUNC(loadPersonLocal_F)), _unit, false] call EFUNC(common,execRemoteFnc);
 };
 _vehicle

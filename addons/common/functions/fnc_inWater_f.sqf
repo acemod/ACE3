@@ -14,9 +14,9 @@ private ["_unit","_return","_aslPos"];
 _unit = _this select 0;
 _return = false;
 if ((surfaceIsWater getPos _unit)) then {
-	_aslPos = _unit modelToWorld (_unit selectionPosition "head");
-	if ((_aslPos select 2) <= 0) then {
-		_return = true;
-	};
+    _aslPos = _unit modelToWorld (_unit selectionPosition "head");
+    if ((_aslPos select 2) <= 0) then {
+        _return = true;
+    };
 };
 _return;

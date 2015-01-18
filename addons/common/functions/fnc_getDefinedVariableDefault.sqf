@@ -13,7 +13,7 @@
 private "_variableDefinition";
 _variableDefinition = ([_this select 0] call FUNC(getDefinedVariableInfo));
 if (count _variableDefinition > 0) exitwith {
-	_variableDefinition select 1;
+    _variableDefinition select 1;
 };
 
 nil;

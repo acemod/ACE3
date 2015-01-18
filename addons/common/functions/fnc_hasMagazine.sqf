@@ -15,8 +15,8 @@ _unit = _this select 0;
 _magazine = _this select 1;
 
 if (_magazine != "") then {
-	_return =  (_magazine in magazines _unit);
+    _return =  (_magazine in magazines _unit);
 } else {
-	_return = false;
+    _return = false;
 };
 _return

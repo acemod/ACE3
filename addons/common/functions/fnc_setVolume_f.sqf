@@ -12,36 +12,36 @@
 
 #define MUTED_LEVEL 0.2
 #define NORMAL_LEVEL 1
-#define NO_SOUND	0
+#define NO_SOUND    0
 
 private ["_setVolume"];
 _setVolume = [_this, 0, false, [false]] call BIS_fnc_Param;
 
 if (_setVolume) then {
-	// Vanilla Game
-	2 fadeSound NORMAL_LEVEL;
+    // Vanilla Game
+    2 fadeSound NORMAL_LEVEL;
 
-	// TFAR
-	player setVariable ["tf_voiceVolume", NORMAL_LEVEL, true];
-	player setVariable ["tf_globalVolume", NORMAL_LEVEL];
-	player setVariable ["tf_unable_to_use_radio", false];
+    // TFAR
+    player setVariable ["tf_voiceVolume", NORMAL_LEVEL, true];
+    player setVariable ["tf_globalVolume", NORMAL_LEVEL];
+    player setVariable ["tf_unable_to_use_radio", false];
 
-	// ACRE2
-	player setVariable ["acre_sys_core_globalVolume", NORMAL_LEVEL];
- 	player setVariable ["acre_sys_core_isDisabled", false, true];
+    // ACRE2
+    player setVariable ["acre_sys_core_globalVolume", NORMAL_LEVEL];
+     player setVariable ["acre_sys_core_isDisabled", false, true];
 
 } else {
-	// Vanilla Game
-	2 fadeSound MUTED_LEVEL;
+    // Vanilla Game
+    2 fadeSound MUTED_LEVEL;
 
-	// TFAR
-	player setVariable ["tf_voiceVolume", NO_SOUND, true];
-	player setVariable ["tf_globalVolume", MUTED_LEVEL];
-	player setVariable ["tf_unable_to_use_radio", true];
+    // TFAR
+    player setVariable ["tf_voiceVolume", NO_SOUND, true];
+    player setVariable ["tf_globalVolume", MUTED_LEVEL];
+    player setVariable ["tf_unable_to_use_radio", true];
 
-	// ACRE2
-	player setVariable ["acre_sys_core_globalVolume", MUTED_LEVEL];
-	player setVariable ["acre_sys_core_isDisabled", true, true];
+    // ACRE2
+    player setVariable ["acre_sys_core_globalVolume", MUTED_LEVEL];
+    player setVariable ["acre_sys_core_isDisabled", true, true];
 
 };
 

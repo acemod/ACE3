@@ -19,8 +19,8 @@ if (configName _configEntry == ",") exitWith { false };
 
 _match = false;
 while {configName _configEntry != ""} do {
-	if (configName _configEntry == _configMatch) exitWith { _match = true };
-	_configEntry = inheritsFrom(_configEntry);
+    if (configName _configEntry == _configMatch) exitWith { _match = true };
+    _configEntry = inheritsFrom(_configEntry);
 };
 
 _match

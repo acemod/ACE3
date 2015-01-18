@@ -15,31 +15,31 @@ _unit = [_this, 0, objNull, [objNull]] call BIS_fnc_Param;
 _setArrest = [_this, 1, false, [false]] call BIS_fnc_Param;
 
 if (_setArrest) then {
-	[_unit, QGVAR(StateArrested), true] call FUNC(setDefinedVariable);
+    [_unit, QGVAR(StateArrested), true] call FUNC(setDefinedVariable);
 
-	if ([_unit] call FUNC(isAwake)) then {
-		if (vehicle _unit == _unit) then {
-			[_unit,"UnaErcPoslechVelitele2",1] call FUNC(doAnimation);
-		};
-	};
-	if (IsPlayer _unit) then {
-		[["arrested", true],QUOTE(FUNC(setDisableUserInputStatus)),_unit,false] call EFUNC(common,execRemoteFnc);
-	};
-	_unit disableAI "Move";
-	_unit disableAI "ANIM";
+    if ([_unit] call FUNC(isAwake)) then {
+        if (vehicle _unit == _unit) then {
+            [_unit,"UnaErcPoslechVelitele2",1] call FUNC(doAnimation);
+        };
+    };
+    if (IsPlayer _unit) then {
+        [["arrested", true],QUOTE(FUNC(setDisableUserInputStatus)),_unit,false] call EFUNC(common,execRemoteFnc);
+    };
+    _unit disableAI "Move";
+    _unit disableAI "ANIM";
 } else {
-	[_unit, QGVAR(StateArrested), false] call FUNC(setDefinedVariable);
+    [_unit, QGVAR(StateArrested), false] call FUNC(setDefinedVariable);
 
-	if ([_unit] call FUNC(isAwake)) then {
-		if (vehicle _unit == _unit) then {
-			[_unit,"",1] call FUNC(doAnimation);
-		};
-		_unit enableAI "Move";
-		_unit enableAI "ANIM";
-	};
-	if (IsPlayer _unit) then {
-		[["arrested", false],QUOTE(FUNC(setDisableUserInputStatus)),_unit,false] call EFUNC(common,execRemoteFnc);
-	};
+    if ([_unit] call FUNC(isAwake)) then {
+        if (vehicle _unit == _unit) then {
+            [_unit,"",1] call FUNC(doAnimation);
+        };
+        _unit enableAI "Move";
+        _unit enableAI "ANIM";
+    };
+    if (IsPlayer _unit) then {
+        [["arrested", false],QUOTE(FUNC(setDisableUserInputStatus)),_unit,false] call EFUNC(common,execRemoteFnc);
+    };
 };
 
 [[_unit, _setArrest],"setArrestState"] call FUNC(raiseScriptedEvent_f);

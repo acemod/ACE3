@@ -26,8 +26,8 @@ _targetIterator = 0;
 _searchIterator = 0;
 while {(_searchIterator < _sizeSearchTerm) && (_targetIterator < _sizeString)} do { // Prevents us from going out of bounds
     if ((_arraySearchTerm select _searchIterator) == (_arrayString select _targetIterator)) then { // If we have a match, start looking for the next character in the search term
-    	_matchingCharacters = _matchingCharacters + 1;
-    	_searchIterator = _searchIterator + 1
+        _matchingCharacters = _matchingCharacters + 1;
+        _searchIterator = _searchIterator + 1
     };
     _targetIterator = _targetIterator + 1; // Look at the next character in the string
 };
