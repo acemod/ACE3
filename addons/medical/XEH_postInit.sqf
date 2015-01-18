@@ -186,15 +186,15 @@ ADD_TREATMENT_MEDICATION("STR_ACE_ACTION_EPINEPHRINE","STR_ACE_ACTION_EPINEPHRIN
 // Examine
 ["STR_ACE_ACTION_CHECK_PULSE","STR_ACE_ACTION_CHECK_PULSE_TOOLTIP",{
     true;
-},{[_this select 1,_this select 0] call FUNC(actionCheckPulse)},'examine'] call FUNC(addTreatmentOption);
+},{[_this select 0,_this select 1] call FUNC(actionCheckPulse)},'examine'] call FUNC(addTreatmentOption);
 
 ["STR_ACE_ACTION_CHECK_BP","STR_ACE_ACTION_CHECK_BP_TOOLTIP",{
     true;
-},{[_this select 1,_this select 0] call FUNC(actionCheckBloodPressure);},'examine'] call FUNC(addTreatmentOption);
+},{[_this select 0,_this select 1] call FUNC(actionCheckBloodPressure);},'examine'] call FUNC(addTreatmentOption);
 
 ["STR_ACE_ACTION_CHECK_RESPONSE","STR_ACE_ACTION_CHECK_RESPONSE_TOOLTIP",{
     true;
-},{[_this select 1,_this select 0] call FUNC(actionCheckResponse)},'examine'] call FUNC(addTreatmentOption);
+},{[_this select 0,_this select 1] call FUNC(actionCheckResponse)},'examine'] call FUNC(addTreatmentOption);
 
 
 // Drag/Movement
@@ -231,14 +231,14 @@ ADD_TREATMENT_MEDICATION("STR_ACE_ACTION_EPINEPHRINE","STR_ACE_ACTION_EPINEPHRIN
     _target = _this select 1;
 
     ((vehicle _target == _target));
-}, {[_this select 1,_this select 0] call FUNC(actionLoadUnit)},'drag'] call FUNC(addTreatmentOption);
+}, {[_this select 0,_this select 1] call FUNC(actionLoadUnit)},'drag'] call FUNC(addTreatmentOption);
 
 ["STR_ACE_ACTION_UNLOAD_PATIENT","STR_ACE_ACTION_UNLOAD_PATIENT_TOOLTIP",{
     _caller = _this select 0;
     _target = _this select 1;
 
     ((vehicle _target != _target));
-}, {[_this select 1,_this select 0] call FUNC(actionUnloadUnit)},'drag'] call FUNC(addTreatmentOption);
+}, {[_this select 0,_this select 1] call FUNC(actionUnloadUnit)},'drag'] call FUNC(addTreatmentOption);
 
 systemchat format["finished postInit"];
 diag_log format["finished postInit"];
