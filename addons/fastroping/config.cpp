@@ -12,6 +12,8 @@ class CfgPatches {
     };
 };
 
+#include "CfgEventHandlers.hpp"
+
 class CfgVehicles {
     class UAV_01_base_F;
     class ACE_FastRoping_Helper: UAV_01_base_F {
