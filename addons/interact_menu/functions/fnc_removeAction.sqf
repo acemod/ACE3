@@ -12,6 +12,8 @@
  */
 
 #include "script_component.hpp"
+private ["_object", "_entry", "_found", "_actions", "_searchFnc"];
+
 _object = _this select 0;
 _entry = _this select 1;
 
@@ -28,7 +30,7 @@ if(IS_ARRAY(_entry)) then {
 
 _found = false;
 _searchFnc = {
-    private ["_actions", "_entry"];
+    private ["_actions", "_entry", "_childActions"];
     _actions = _this select 0;
     _entry = _this select 1;
     {
