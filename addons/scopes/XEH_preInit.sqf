@@ -6,3 +6,5 @@ PREP(firedEH);
 PREP(getOptics);
 PREP(hideZeroing);
 PREP(inventoryCheck);
+
+GVAR(fadeScript) = scriptNull;
