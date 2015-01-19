@@ -11,8 +11,8 @@ class RscSlider;
 class RscXSliderH;
 
 class RscDisplayInsertMarker {
-    onLoad = QUOTE(_this call FUNC(initInsertMarker););
-    onUnload = QUOTE(_this call FUNC(placeMarker););
+    onLoad = QUOTE(_this call DFUNC(initInsertMarker););
+    onUnload = QUOTE(_this call DFUNC(placeMarker););
     idd = 54;
     movingEnable = 1;
     class controlsBackground {
