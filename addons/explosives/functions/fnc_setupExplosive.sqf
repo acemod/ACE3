@@ -43,7 +43,8 @@ if (!isNil "_timer") then {
   GVAR(Setup) setVariable [QGVAR(Timer), _timer];
 };
 
-[_unit, "ACE_Explosives", true] call EFUNC(common,setForceWalkStatus);
+// [_unit, "ACE_Explosives", true] call EFUNC(common,setForceWalkStatus);
+[GVAR(placer), "ACE_Explosives_Walk", "forceWalk", true, true, true] call EFUNC(common,setStatusEffect);
 GVAR(TweakedAngle) = 180;
 [QGVAR(Placement),"OnEachFrame", {
   private "_player";

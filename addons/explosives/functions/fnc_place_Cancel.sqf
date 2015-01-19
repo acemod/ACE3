@@ -28,7 +28,8 @@ GVAR(Setup) = objNull;
 if (isNil {GVAR(placer)}) then {
 	GVAR(placer) = objNull;
 };
-[GVAR(placer), "ACE_Explosives", false] call EFUNC(Common,setForceWalkStatus);
+// [GVAR(placer), "ACE_Explosives", false] call EFUNC(Common,setForceWalkStatus);
+[GVAR(placer), "ACE_Explosives_Walk", "forceWalk", false, true, true] call EFUNC(common,setStatusEffect);
 GVAR(placer) = objNull;
 call EFUNC(interaction,hideMouseHint);
 [ACE_player, "DefaultAction", ACE_player getVariable [QGVAR(Place),  -1]] call EFUNC(Common,removeActionEventHandler);

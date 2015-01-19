@@ -1,9 +1,31 @@
+/*
+Name: setStatusEffect
+
+Author: Pabst Mirror
+
+Description:
+  Sets the status effect on a unit.
+  Note: the JIP/Respawn settings are global, so use different names.
+
+Parameters:
+  0: OBJECT - Unit
+  1: STRING - Effect Name ("brokenLeg")
+  2: STRING - Effect Type ("forceWalk")
+  3: BOOL - Enabled
+  4: BOOL - Remove on JIP
+  5: BOOL - Remove on Respawn
+
+Returns:
+  None
+
+Example:
+  [this, "fattie", "forceWalk", true, false, false] call ace_common_fnc_setStatusEffect;  //permenetnt effect
+  [this, "carrying jerrycan", "forceWalk", true, true, true] call ace_common_fnc_setStatusEffect; //will be removed if the disconnectAndJIP or respawn
+*/
+
 #define DEBUG_MODE_FULL
 
 #include "script_component.hpp"
-
-//[this, "fattie", "forceWalk", true, false, false] call ace_common_fnc_setStatusEffect;
-//[this, "carrying jerrycan", "forceWalk", true, false, false] call ace_common_fnc_setStatusEffect;
 
 #define HASH_INDEX(hash,key) ((hash select 0) find key)
 

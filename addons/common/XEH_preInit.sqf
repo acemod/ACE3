@@ -10,7 +10,6 @@ PREP(addMapMarkerCreatedEventHandler);
 PREP(addScrollWheelEventHandler);
 PREP(adminKick);
 PREP(ambientBrightness);
-PREP(applyForceWalkStatus);
 PREP(binarizeNumber);
 PREP(callCustomEventHandlers);
 PREP(callCustomEventHandlersGlobal);
@@ -38,12 +37,10 @@ PREP(executePersistent);
 PREP(filter);
 PREP(fixLoweredRifleAnimation);
 PREP(getAllGear);
-PREP(getCaptivityStatus);
 PREP(getConfigCommander);
 PREP(getConfigGunner);
 PREP(getDefaultAnim);
 PREP(getDoorTurrets);
-PREP(getForceWalkStatus);
 PREP(getHitPoints);
 PREP(getHitPointsWithSelections);
 PREP(getInPosition);
@@ -106,8 +103,6 @@ PREP(restoreVariablesJIP);
 PREP(revertKeyCodeLocalized);
 PREP(sanitizeString);
 PREP(serverLog);
-PREP(setCaptivityStatus);
-PREP(setForceWalkStatus);
 PREP(setKeyDefault);
 PREP(setName);
 PREP(setParameter);
@@ -265,10 +260,8 @@ PREP(getStatusEffects);
 PREP(statusEffectSetCaptive);
 PREP(statusEffectForceWalk);
 
-
 ["setCaptive", {_this call FUNC(statusEffectSetCaptive)}] call FUNC(addEventHandler);
 ["forceWalk", {_this call FUNC(statusEffectForceWalk)}] call FUNC(addEventHandler);
-
 
 
 ADDON = true;

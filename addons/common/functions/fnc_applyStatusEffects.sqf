@@ -1,3 +1,19 @@
+/*
+Name: applyStatusEffect
+
+Author: Pabst Mirror
+
+Description:
+  Sets the status effect on a unit.
+
+Parameters:
+  0: OBJECT - Unit
+
+Returns:
+  None
+
+*/
+
 #define DEBUG_MODE_FULL
 
 #include "script_component.hpp"

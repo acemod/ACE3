@@ -1,3 +1,20 @@
+/*
+Name: getStatusEffect
+
+Author: Pabst Mirror
+
+Description:
+  Sets the status effect on a unit.
+
+Parameters:
+  0: OBJECT - Unit
+  1: STRING - Effect Type ("forceWalk")
+
+Returns:
+  ARRAY of strings of the active Effect Names
+
+*/
+
 #define DEBUG_MODE_FULL
 
 #include "script_component.hpp"

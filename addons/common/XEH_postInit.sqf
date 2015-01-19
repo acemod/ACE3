@@ -61,17 +61,18 @@ call COMPILE_FILE(scripts\KeyInput\initScrollWheel);
 
 enableCamShake true;
 
-// Set the name for the current player
+
 ["playerChanged", {
     EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
-
+  // Set the name for the current player
     if (alive _newPlayer) then {
         [_newPlayer] call FUNC(setName)
     };
     if (alive _oldPlayer) then {
         [_oldPlayer] call FUNC(setName)
     };
-
+  //Apply effects to new unit
+  ["applyStatusEffects", [_newPlayer]] call FUNC(localEvent);
 }] call FUNC(addEventhandler);
 
 GVAR(OldPlayerInventory) = ACE_player call FUNC(getAllGear);

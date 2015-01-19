@@ -44,7 +44,8 @@ if (vehicle _playerUnit == _playerUnit) then {
   _playerUnit linkItem  "ItemMap";
   removeUniform _playerUnit;
 
-  [_playerUnit, "ACE_SwitchUnits", true] call EFUNC(common,setForceWalkStatus);
+  // [_playerUnit, "ACE_SwitchUnits", true] call EFUNC(common,setForceWalkStatus);
+  [_playerUnit, "ACE_SwitchUnits_Walk", "forceWalk", true, true, true] call EFUNC(common,setStatusEffect);  //does anything disable this?
 
   [_playerUnit, _sides] call FUNC(addMapFunction);
 };
