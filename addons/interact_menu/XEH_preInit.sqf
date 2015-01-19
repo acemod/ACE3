@@ -12,6 +12,8 @@ PREP(rotateVectLine);
 PREP(keyDown);
 PREP(keyUp);
 PREP(compileMenu);
+PREP(addAction);
+PREP(removeAction);
 
 GVAR(toRender) = [];
 
@@ -45,5 +47,7 @@ GVAR(iconCtrls) = [];
 GVAR(iconCount) = 0;
 
 GVAR(objectActionsHash) = HASH_CREATE;
+
+GVAR(uidCounter) = 0;
 
 ADDON = true;

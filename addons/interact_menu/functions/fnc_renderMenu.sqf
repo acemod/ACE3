@@ -37,14 +37,13 @@ if(_cursorScreenPos distance _pos <= _distance) then {
 	_currentRenderDepth = GVAR(renderDepth);
 	GVAR(renderDepth) = GVAR(renderDepth) + 1;
 	if(_index == (GVAR(menuDepthPath) select (GVAR(renderDepth)-1))) then {
-		_radialOffset = 0;
-		{
+        _radialOffset = 0;
+        {
             // if(_index != (GVAR(menuDepthPath) select (GVAR(renderDepth)))) then {
                 this = _object;
                 _target = _object;
                 _player = ACE_player;
                 _active = [_object, ACE_player] call (_x select 4);
-                diag_log text format["_active: %1: %2", (_x select 0), _active];
                 if(_active) then {
                     _offset = [GVAR(vecLineMap), (270*(GVAR(renderDepth)%2))-(_radialOffset*45)] call FUNC(rotateVectLine);
                     _newPos = [
@@ -57,7 +56,7 @@ if(_cursorScreenPos distance _pos <= _distance) then {
                     _radialOffset = _radialOffset + 1;
                 };
             // };
-		} forEach (_actionData select 6);
+        } forEach (_actionData select 6);
 	};
 	GVAR(renderDepth) = GVAR(renderDepth) - 1;
 };

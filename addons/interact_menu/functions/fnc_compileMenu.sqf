@@ -1,6 +1,6 @@
 //fnc_compileMenu.sqf
 #include "script_component.hpp";
-diag_log text format["COMPILE ACTIONS: %1", _this];
+// diag_log text format["COMPILE ACTIONS: %1", _this];
 
 _object = _this select 0;
 _objectType = typeOf _object;
@@ -55,7 +55,7 @@ _recurseFnc = {
             _enableInside = getNumber (_entryCfg >> "enableInside");
             
             _condition = compile _condition;
-            diag_log text format["_condition: %1", _condition];
+            // diag_log text format["_condition: %1", _condition];
             _children = [];
             if(isArray (_entryCfg >> "subMenu")) then {
                 _subMenuDef = getArray (_entryCfg >> "subMenu");
@@ -70,9 +70,10 @@ _recurseFnc = {
                         _statement,
                         _condition,
                         _distance,
-                        _children
+                        _children,
+                        GVAR(uidCounter)
                     ];
-                    
+            GVAR(uidCounter) = GVAR(uidCounter) + 1;        
             _actions pushBack _entry;
         };
     };
@@ -88,8 +89,10 @@ _actions = [[
     { true },
     { true },
     5,
-    _actions
-]];
-    
+    _actions,
+    GVAR(uidCounter)
+]
+];
+GVAR(uidCounter) = GVAR(uidCounter) + 1; 
 
 _object setVariable [QUOTE(GVAR(actionData)), _actions];
