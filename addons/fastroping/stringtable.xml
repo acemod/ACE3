@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-21 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="FastRoping">
-    <Key ID="STR_AGM_FastRoping_DeployRopes">
+    <Key ID="STR_ACE_FastRoping_DeployRopes">
       <English>Deploy Ropes</English>
       <German>Seile vorbereiten</German>
       <Polish>Rozwiń liny</Polish>
@@ -10,7 +9,7 @@
       <Russian>Развернуть веревку</Russian>
       <Czech>Připravit lana</Czech>
     </Key>
-    <Key ID="STR_AGM_FastRoping_FastRope">
+    <Key ID="STR_ACE_FastRoping_FastRope">
       <English>Fast Rope</English>
       <German>Abseilen</German>
       <Polish>Zjedź na linie</Polish>
@@ -18,7 +17,7 @@
       <Russian>Спуститься по веревке</Russian>
       <Czech>Slanování</Czech>
     </Key>
-    <Key ID="STR_AGM_FastRoping_CutRopes">
+    <Key ID="STR_ACE_FastRoping_CutRopes">
       <English>Cut Ropes</English>
       <German>Seile trennen</German>
       <Polish>Odetnij liny</Polish>
