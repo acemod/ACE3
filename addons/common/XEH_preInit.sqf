@@ -1,11 +1,6 @@
 // by commy2
 #include "script_component.hpp"
 
-PREP(setStatusEffect);
-PREP(applyStatusEffects);
-PREP(getStatusEffects);
-
-
 // ACE Common Function
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
@@ -263,5 +258,17 @@ PREP(loadPersonLocal_F);
 PREP(makeCopyOfBody_F);
 PREP(unloadPerson_F);
 PREP(cleanUpCopyOfBody_F);
+
+PREP(setStatusEffect);
+PREP(applyStatusEffects);
+PREP(getStatusEffects);
+PREP(statusEffectSetCaptive);
+PREP(statusEffectForceWalk);
+
+
+["setCaptive", {_this call FUNC(statusEffectSetCaptive)}] call FUNC(addEventHandler);
+["forceWalk", {_this call FUNC(statusEffectForceWalk)}] call FUNC(addEventHandler);
+
+
 
 ADDON = true;
