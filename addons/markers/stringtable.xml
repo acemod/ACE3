@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-22 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="Markers">
-    <Key ID="STR_AGM_Markers_MarkerDirection">
+    <Key ID="STR_ACE_Markers_MarkerDirection">
       <English>Direction: %1°</English>
       <German>Drehung: %1°</German>
       <French>Direction: %1°</French>
@@ -11,7 +11,7 @@
       <Spanish>Dirección: %1°</Spanish>
       <Russian>Направление: %1</Russian>
     </Key>
-    <Key ID="STR_AGM_Markers_PlaceIn">
+    <Key ID="STR_ACE_Markers_PlaceIn">
       <English>Place in: %1</English>
       <German>Platz in: %1</German>
       <Spanish>Colocar en: %1</Spanish>

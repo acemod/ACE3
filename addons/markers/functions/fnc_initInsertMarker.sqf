@@ -1,18 +1,18 @@
 // stuff taken from bohemia, edited by commy2
+#include "script_component.hpp"
 
 #define BORDER  0.005
 
-with uinamespace do {
-  _this spawn {
+[{
     disableserialization;
     _display = _this select 0;
 
     //Prevent Captive Players from placing markers
-    if (AGM_player getVariable ["AGM_isCaptive", false]) exitWith {
-      _display closeDisplay 2;  //emulate "Cancel" button
-    };
+    /*if (ACE_player getVariable ["ACE_isCaptive", false]) exitWith {
+        _display closeDisplay 2;  //emulate "Cancel" button
+    };*/
 
-    // display vanilla key input
+    // prevent vanilla key input
     _display displayAddEventHandler ["KeyDown", {(_this select 1) in [200, 208]}];
 
     _text = _display displayctrl 101;
@@ -31,47 +31,41 @@ with uinamespace do {
     ctrlSetFocus _text;
 
     //Change ok button's text based on current channel
-    [_buttonOK] spawn {
-      disableserialization;
-      private ["_buttonOK", "_channel", "_textColor"];
-      _buttonOK = _this select 0;
+    //if (isNull _buttonOK) exitWith {true};
 
-      waitUntil {
-        if (isNull _buttonOK) exitWith {true};
-        _textColor = [1,1,1,1];
-        switch (call AGM_Core_fnc_currentChannel) do {
-          case ("global"): {
+    _channel = "";
+    _textColor = [1,1,1,1];
+    switch (call EFUNC(common,currentChannel)) do {
+        case ("global"): {
             _channel = localize "str_channel_global";
             _textColor = [(216/255),(216/255),(216/255),1];
-          };
-          case ("side"): {
+        };
+        case ("side"): {
             _channel = localize "str_channel_side";
             _textColor = [(70/255),(211/255),(252/255),1];
-          };
-          case ("group"): {
+        };
+        case ("group"): {
             _channel = localize "str_channel_group";
             _textColor = [(181/255),(248/255),(98/255),1];
-          };
-          case ("vehicle"): {
+        };
+        case ("vehicle"): {
             _channel = localize "str_channel_vehicle";
             _textColor = [(255/255),(208/255),(0/255),1];
-          };
-          case ("direct"): {
+        };
+        case ("direct"): {
             _channel = localize "str_channel_direct";
             _textColor = [(255/255),(255/255),(255/255),1];
-          };
-          case ("command"): {
+        };
+        case ("command"): {
             _channel = localize "str_channel_command";
             _textColor = [(255/255),(255/255),(70/255),1];
-          };
         };
-        //If localization not found, then don't touch anything (default is RscButtonMenuOK's localized text)
-        if (_channel != "") then {
-          _buttonOK ctrlSetTextColor _textColor;
-          _buttonOK ctrlSetText format [localize "STR_AGM_Markers_PlaceIn", _channel];
-        };
-        false
-      };
+    };
+
+    //If localization not found, then don't touch anything (default is RscButtonMenuOK's localized text)
+    if (_channel != "") then {
+        _buttonOK ctrlSetTextColor _textColor;
+        _buttonOK ctrlSetText format [localize "STR_ACE_Markers_PlaceIn", _channel];
     };
 
     //--- Background
@@ -150,40 +144,15 @@ with uinamespace do {
 
 
     // init marker shape lb
-    _config = configfile >> "CfgMarkers";
-    _index = 0;
-
-    if (isNil "AGM_Markers_MarkersCache") then {
-      AGM_Markers_MarkersCache = [];
-
-      for "_a" from 0 to (count _config - 1) do {
-        _marker = _config select _a;
-
-        _scope = getNumber (_marker >> "scope");
-        _name = getText (_marker >> "name");
-        _icon = getText (_marker >> "icon");
-
-        if (_scope == 2) then {
-          _shape lbAdd _name;
-          _shape lbSetValue [_index, _a];
-          _shape lbSetPicture [_index, _icon];
-
-          AGM_Markers_MarkersCache pushBack [_name, _a, _icon];
-
-          _index = _index + 1;
-        };
-      };
-    } else {
-      {
+    {
         _shape lbAdd (_x select 0);
         _shape lbSetValue [_forEachIndex, _x select 1];
         _shape lbSetPicture [_forEachIndex, _x select 2];
-      } forEach AGM_Markers_MarkersCache;
-    };
+    } forEach GVAR(MarkersCache);
 
-    _shape ctrlAddEventHandler ["LBSelChanged", {_this call AGM_Markers_fnc_onLBSelChangedShape}];
+    _shape ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedShape)}];
 
-    _curSelShape = uiNamespace getVariable ["AGM_Markers_curSelMarkerShape", 0];
+    _curSelShape = GETGVAR(curSelMarkerShape,0);
     _shape lbSetCurSel _curSelShape;
     _data = _shape lbValue _curSelShape;
     _config = (configfile >> "CfgMarkers") select _data;
@@ -192,74 +161,39 @@ with uinamespace do {
 
 
     // init marker color lb
-    _config = configfile >> "CfgMarkerColors";
-    _index = 0;
-
-    if (isNil "AGM_Markers_MarkerColorsCache") then {
-      AGM_Markers_MarkerColorsCache = [];
-
-      for "_a" from 0 to (count _config - 1) do {
-        _marker = _config select _a;
-
-        _scope = getNumber (_marker >> "scope");
-        _name = getText (_marker >> "name");
-
-        if (_scope == 2) then {
-          _color lbAdd _name;
-          _color lbSetValue [_index, _a];
-
-          _rgba = getArray (_marker >> "color");
-
-          {
-            if (typeName _x != "SCALAR") then {
-              _rgba set [_forEachIndex, call compile _x];
-            };
-          } forEach _rgba;
-
-          _icon = format ["#(argb,8,8,3)color(%1,%2,%3,%4)", _rgba select 0, _rgba select 1, _rgba select 2, _rgba select 3];
-
-          _color lbSetPicture [_index, _icon];
-
-          AGM_Markers_MarkerColorsCache pushBack [_name, _a, _icon];
-
-          _index = _index + 1;
-        };
-      };
-    } else {
-      {
+    {
         _color lbAdd (_x select 0);
         _color lbSetValue [_forEachIndex, _x select 1];
         _color lbSetPicture [_forEachIndex, _x select 2];
-      } forEach AGM_Markers_MarkerColorsCache;
-    };
+    } forEach GVAR(MarkerColorsCache);
 
-    _color ctrlAddEventHandler ["LBSelChanged", {_this call AGM_Markers_fnc_onLBSelChangedColor}];
+    _color ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedColor)}];
 
-    _curSelColor = uiNamespace getVariable ["AGM_Markers_curSelMarkerColor", 0];
+    _curSelColor = GETGVAR(curSelMarkerColor,0);
     _color lbSetCurSel _curSelColor;
     _data = _color lbValue _curSelColor;
     _config = (configfile >> "CfgMarkerColors") select _data;
     _rgba = getArray (_config >> "color");
     {
-      if (typeName _x != "SCALAR") then {
-        _rgba set [_forEachIndex, call compile _x];
-      };
+        if (typeName _x != "SCALAR") then {
+            _rgba set [_forEachIndex, call compile _x];
+        };
     } forEach _rgba;
     _picture ctrlSetTextColor _rgba;
 
 
     // init marker angle slider
     _angle sliderSetRange [-180, 180];
-    _angle ctrlAddEventHandler ["SliderPosChanged", {_this call AGM_Markers_fnc_onSliderPosChangedAngle}];
+    _angle ctrlAddEventHandler ["SliderPosChanged", {_this call FUNC(onSliderPosChangedAngle)}];
 
-    _curSelAngle = uiNamespace getVariable ["AGM_Markers_curSelMarkerAngle", 0];
+    _curSelAngle = GETGVAR(curSelMarkerAngle,0);
     _angle sliderSetPosition _curSelAngle;
 
     _curSelAngle = round _curSelAngle;
     if (_curSelAngle < 0) then {
-      _curSelAngle = _curSelAngle + 360;
+        _curSelAngle = _curSelAngle + 360;
     };
 
-    _angleText ctrlSetText format [localize "STR_AGM_Markers_MarkerDirection", _curSelAngle];
-  };
-};
+    _angleText ctrlSetText format [localize "STR_ACE_Markers_MarkerDirection", _curSelAngle];
+
+}, _this] call EFUNC(common,execNextFrame);
