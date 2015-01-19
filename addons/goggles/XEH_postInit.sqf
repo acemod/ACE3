@@ -37,7 +37,7 @@ GVAR(PostProcessEyes) ppEffectEnable false;
 GVAR(EffectsActive) = false;
 SETGLASSES(ace_player,GLASSESDEFAULT);
 GVAR(Current) = "None";
-GVAR(EyesDamageScript) = 0 spawn {};
+GVAR(EyesDamageScript) = -1;
 GVAR(FrameEvent) = [false, [false,20]];
 GVAR(PostProcessEyes_Enabled) = false;
 GVAR(DustHandler) = -1;
@@ -77,9 +77,13 @@ player addEventHandler ["Killed",{
   call FUNC(removeGlassesEffect);
   GVAR(EffectsActive)=false;
   ace_player setVariable ["ACE_EyesDamaged", false];
-  terminate GVAR(EyesDamageScript);
-  [GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
-  GVAR(DustHandler) = -1;
+  if (GVAR(EyesDamageScript) != -1) then {
+    [GVAR(EyesDamageScript)] call CALLSTACK(cba_fnc_removePreFrameHandler);
+  };
+  if (GVAR(DustHandler) != -1) then {
+    [GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
+    GVAR(DustHandler) = -1;
+  };
 }];
 player addEventHandler ["Fired",{[_this select 0, _this select 1] call FUNC(dustHandler);}];
 player AddEventHandler ["Take",{call FUNC(checkGlasses);}];
@@ -99,20 +103,21 @@ player AddEventHandler ["Put", {call FUNC(checkGlasses);}];
 ["GlassesCracked",{
   if (_this select 0 != ace_player) exitWith {};
   ace_player setVariable ["ACE_EyesDamaged", true];
-  if !(scriptDone GVAR(EyesDamageScript)) then {
-    terminate GVAR(EyesDamageScript);
+  if (GVAR(EyesDamageScript) != -1) then {
+    [GVAR(EyesDamageScript)] call CALLSTACK(cba_fnc_removePreFrameHandler);
   };
   GVAR(PostProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [0.5,0.5,0.5,0.5],[1,1,1,0]];
   GVAR(PostProcessEyes) ppEffectCommit 0;
   GVAR(PostProcessEyes) ppEffectEnable true;
-  GVAR(EyesDamageScript) = [] spawn {
-    sleep 25;
+  GVAR(EyesDamageScript) = [{
     GVAR(PostProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [1,1,1,1],[1,1,1,0]];
     GVAR(PostProcessEyes) ppEffectCommit 5;
-    sleep 5;
-    GVAR(PostProcessEyes) ppEffectEnable false;
-    ace_player setVariable ["ACE_EyesDamaged", false];
-  };
+    GVAR(EyesDamageScript) = [{
+      GVAR(PostProcessEyes) ppEffectEnable false;
+      ace_player setVariable ["ACE_EyesDamaged", false];
+      GVAR(EyesDamageScript) = -1;
+    }, [], 5, 1] call EFUNC(common,waitAndExecute);
+  }, [], 25, 5] call EFUNC(common,waitAndExecute);
 }] call EFUNC(common,addEventHandler);
 call FUNC(checkGlasses);
 [FUNC(CheckGoggles), 1, []] call CBA_fnc_addPerFrameHandler;

@@ -27,13 +27,11 @@ SETGLASSES(ace_player,_effects);
 if ((stance ace_player) != "PRONE") then {
 	ace_player playActionNow "gestureWipeFace";
 };
-
-null = [] spawn {
-	sleep 0.3;
+[{
 	if (cameraView == "INTERNAL") then {
 		addCamShake [5, 1.75, 2];
 	};
-};
+}, [], 0.3, 0] call EFUNC(common,waitAndExecute);
 
 call FUNC(removeDirtEffect);
 call FUNC(removeRainEffect);

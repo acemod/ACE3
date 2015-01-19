@@ -18,11 +18,13 @@
 	See http://community.bistudio.com/wiki/ArmA_3:_Event_Handlers#Fired
 */
 #include "script_component.hpp"
-private ["_bullets", "_position", "_surface", "_found", "_weapon", "_cloudType"];
-_weapon = _this select 1;
+private ["_bullets", "_position", "_surface", "_found", "_weapon", "_cloudType", "_unit"];
+EXPLODE_2_PVT(_this,_unit,_weapon);
+if (_unit != ace_player) exitWith {true};
 _cloudType = "";
 
-if ((_this select 0) != ace_player) exitWith {true};
+if (rain > 0.1) exitWith {true};
+if ((stance _unit) != "PRONE") exitWith {true};
 
 if (isClass(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "FirstEffect")) then {
 	_cloudType = getText(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "FirstEffect" >> "effectName");
@@ -33,10 +35,8 @@ if (isClass(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "FirstEff
 };
 
 if (_cloudType == "") exitWith {true};
-if (rain > 0.1) exitWith {true};
-if ((stance ace_player) != "PRONE") exitWith {true};
 
-_position = getPosATL ace_player;
+_position = getPosATL _unit;
 
 if (surfaceIsWater _position) exitWith {};
 if ((_position select 2) > 0.2) exitWith {};

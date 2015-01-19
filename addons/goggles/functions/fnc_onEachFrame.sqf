@@ -28,15 +28,16 @@ _safe = false;
 if !(_rotorWash select 0) exitWith {
 	if (GVAR(PostProcessEyes_Enabled)) then {
 		GVAR(PostProcessEyes_Enabled) = false;
-		if (!scriptDone (GVAR(DustHandler))) then {
-			terminate GVAR(DustHandler);
+		if (GVAR(DustHandler) != -1) then { // should be fixed in dev CBA
+			[GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
+			GVAR(DustHandler) = -1;
 		};
-		GVAR(DustHandler) = [] spawn {
-			GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0,0,0,0], [0,0,0,1],[1,1,1,0]];
-			GVAR(PostProcessEyes) ppEffectCommit 2;
-			sleep 2;
+		GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0,0,0,0], [0,0,0,1],[1,1,1,0]];
+		GVAR(PostProcessEyes) ppEffectCommit 2;
+		GVAR(DustHandler) = [{
 			GVAR(PostProcessEyes) ppEffectEnable false;
-		};
+			GVAR(DustHandler) = -1;
+		}, [], 2, 0.5] call EFUNC(common,waitAndExecute);
 	};
 };
 if ((headgear ace_player) != "") then {
@@ -66,8 +67,9 @@ if ((_rotorWash select 1) <= 15) then {
 		_scale = 0.1;
 	};
 	_scale = 1 - _scale;
-	if (!scriptDone (GVAR(DustHandler))) then {
-		terminate GVAR(DustHandler);
+	if (GVAR(DustHandler) != -1) then { // should be fixed in dev CBA
+		[GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
+		GVAR(DustHandler) = -1;
 	};
 	if !(ace_player getVariable ["ACE_EyesDamaged", false]) then {
 		GVAR(PostProcessEyes_Enabled) = true;

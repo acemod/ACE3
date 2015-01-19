@@ -33,10 +33,12 @@ _amount = 1 - (GETDUSTT(DAMOUNT) * 0.125);
 GVAR(PostProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [_amount,_amount,_amount,_amount],[1,1,1,0]];
 GVAR(PostProcessEyes) ppEffectCommit 1;
 GVAR(PostProcessEyes) ppEffectEnable true;
+SETDUST(DBULLETS,0);
+
 if (GVAR(DustHandler) != -1) then { // should be fixed in dev CBA
 	[GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
+	GVAR(DustHandler) = -1;
 };
-SETDUST(DBULLETS,0);
 GVAR(DustHandler) = [{
 	if (diag_tickTime >= GETDUSTT(DTIME) + 3) then {
 		SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
@@ -49,12 +51,7 @@ GVAR(DustHandler) = [{
 		if (GETDUSTT(DAMOUNT) <= 0) then {
 			GVAR(PostProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [1,1,1,1],[1,1,1,0]];
 			GVAR(PostProcessEyes) ppEffectCommit 2;
-			[{
-				if (diag_tickTime >= ((_this select 0) select 0)) then {
-					GVAR(PostProcessEyes) ppEffectEnable false;
-					[(_this select 1)] call CALLSTACK(cba_fnc_removePerFrameHandler);
-				};
-			},0.5,[diag_tickTime+2]] call CALLSTACK(cba_fnc_addPerFrameHandler);
+			[{GVAR(PostProcessEyes) ppEffectEnable false;}, [], 2, 0.5] call EFUNC(common,waitAndExecute);
 			SETDUST(DACTIVE,false);
 			SETDUST(DBULLETS,0);
 			[GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
