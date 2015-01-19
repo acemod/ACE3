@@ -1,6 +1,11 @@
 // by commy2
 #include "script_component.hpp"
 
+PREP(setStatusEffect);
+PREP(applyStatusEffects);
+PREP(getStatusEffects);
+
+
 // ACE Common Function
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);

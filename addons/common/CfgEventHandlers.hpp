@@ -24,8 +24,11 @@ class Extended_InitPost_EventHandlers {
         class GVAR(setName) {
             init = QUOTE(if (local (_this select 0)) then {_this call FUNC(setName)};);
         };
-        class GVAR(forceWalk) {
-            init = QUOTE(if (local (_this select 0)) then {_this call FUNC(applyForceWalkStatus);};);
+        // class GVAR(forceWalk) {
+            // init = QUOTE(if (local (_this select 0)) then {_this call FUNC(applyForceWalkStatus);};);
+        // };        
+		class GVAR(statusEffects) {
+            init = QUOTE(if (local (_this select 0)) then {[ARR_3(_this select 0, SLX_XEH_MACHINE select 1, false)] call FUNC(applyStatusEffects);};);
         };
     };
 };
@@ -40,6 +43,11 @@ class Extended_Respawn_EventHandlers {
         };
         class GVAR(RESETDefaults) {
             respawn = QUOTE(_this call FUNC(resetAllDefaults_F));
+        };
+    };
+    class CAManBase {     
+        class GVAR(statusEffects) {
+            respawn = QUOTE(if (local (_this select 0)) then {[ARR_3(_this select 0, SLX_XEH_MACHINE select 1, true)] call FUNC(applyStatusEffects);};);
         };
     };
 };
