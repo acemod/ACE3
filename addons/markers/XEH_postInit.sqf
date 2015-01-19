@@ -2,10 +2,10 @@
 #include "script_component.hpp"
 
 // recieve remote marker data
-[QGVAR(setMarkerNetwork), FUNC(setMarkerNetwork)] call EFUNC(common,addEventHandler);
+[QGVAR(setMarkerNetwork), {_this call DFUNC(setMarkerNetwork)}] call EFUNC(common,addEventHandler);
 
 // recieve marker data for JIP
-[QGVAR(setMarkerJIP), FUNC(setMarkerJIP)] call EFUNC(common,addEventHandler);
+[QGVAR(setMarkerJIP), {_this call DFUNC(setMarkerJIP)}] call EFUNC(common,addEventHandler);
 
 // request marker data for JIP
 if (isMultiplayer && {!isServer} && {hasInterface}) then {

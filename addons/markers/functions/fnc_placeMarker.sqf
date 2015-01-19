@@ -30,11 +30,13 @@ if (_this select 1 == 1) then {
     [
         {
 
-            ["setMarkerNetwork", [
-                GETMVAR(currentMarkerShape,0),
-                GETMVAR(currentMarkerColor,0),
-                _this,
-                GETMVAR(currentMarkerAngle,0)
+            [QGVAR(setMarkerNetwork), [
+                allMapMarkers select (count allMapMarkers - 1), [
+                    GETGVAR(currentMarkerShape,0),
+                    GETGVAR(currentMarkerColor,0),
+                    _this,
+                    GETGVAR(currentMarkerAngle,0)
+                ]
             ]] call EFUNC(common,globalEvent);
 
         },

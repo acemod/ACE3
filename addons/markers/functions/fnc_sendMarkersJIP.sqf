@@ -6,8 +6,8 @@ private "_logic";
 _logic = _this;
 
 [QGVAR(setMarkerJIP), _logic, [
-        GETMVAR(allMapMarkers,[]),
-        GETMVAR(allMapMarkersProperties,[]),
+        GETGVAR(allMapMarkers,[]),
+        GETGVAR(allMapMarkersProperties,[]),
         _logic
     ]
 ] call EFUNC(common,targetEvent);
