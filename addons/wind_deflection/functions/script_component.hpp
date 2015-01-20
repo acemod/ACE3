@@ -1,0 +1,1 @@
+#include "\z\ace\addons\wind_deflection\script_component.hpp"
