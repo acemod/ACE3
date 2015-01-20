@@ -2,31 +2,37 @@
 #include "script_component.hpp"
 
 GVAR(windHead) = 0;
+GVAR(wheelState) = 1;
 
 [{
 
+    // exit loop
     if (!GVAR(isKestrel) || {!("ACE_Kestrel" in items ACE_player)}) exitWith {
         call FUNC(closeKestrel);
 
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    private ["_dlgKestrel", "_ctrlKestrel1", "_ctrlKestrel2", "_ctrlHUD1", "_ctrlHUD2", "_ctrlHUD3", "_ctrlHUD4"];
+    // get controls
+    private ["_dlgKestrel", "_ctrlKestrel1", "_ctrlKestrelWheel", "_ctrlKestrel2", "_ctrlHUD1", "_ctrlHUD2", "_ctrlHUD3", "_ctrlHUD4"];
 
     disableSerialization;
     _dlgKestrel = _this select 0;
-    _ctrlKestrel1 = _dlgKestrel displayCtrl 10;
-    _ctrlKestrel2 = _dlgKestrel displayCtrl 11;
-    _ctrlHUD1 = _dlgKestrel displayCtrl 12;
-    _ctrlHUD2 = _dlgKestrel displayCtrl 13;
-    _ctrlHUD3 = _dlgKestrel displayCtrl 14;
-    _ctrlHUD4 = _dlgKestrel displayCtrl 15;
+    _ctrlKestrel1 = _dlgKestrel displayCtrl 1;
+    _ctrlKestrel2 = _dlgKestrel displayCtrl 2;
+    _ctrlKestrelWheel = _dlgKestrel displayCtrl 3;
+    _ctrlHUD1 = _dlgKestrel displayCtrl 11;
+    _ctrlHUD2 = _dlgKestrel displayCtrl 12;
+    _ctrlHUD3 = _dlgKestrel displayCtrl 13;
+    _ctrlHUD4 = _dlgKestrel displayCtrl 14;
 
+    // don't show the kestrel in gunner view
     private "_show";
     _show = cameraView != "GUNNER";
 
     _ctrlKestrel1 ctrlShow _show;
     _ctrlKestrel2 ctrlShow _show;
+    _ctrlKestrelWheel ctrlShow _show;
     _ctrlHUD1 ctrlShow _show;
     _ctrlHUD2 ctrlShow _show;
     _ctrlHUD3 ctrlShow _show;
@@ -34,6 +40,7 @@ GVAR(windHead) = 0;
 
     if !(_show) exitWith {};
 
+    // handle shown values
     private ["_position", "_directon", "_windC", "_windD", "_windR", "_windB", "_windA"];
 
     _position = eyePos ACE_player;
@@ -119,9 +126,28 @@ GVAR(windHead) = 0;
     _ctrlHUD3 ctrlSetText str round _directon;
     _ctrlHUD4 ctrlSetText str ((round (0 * 10)) / 10);
 
+    // adjust kestrel picture in the dark
     private "_brightness";
     _brightness = call EFUNC(common,ambientBrightness);
 
-    _ctrlKestrel2 ctrlsettextcolor [0, 0, 0, 1 - _brightness];
+    _ctrlKestrel2 ctrlSetTextColor [0, 0, 0, 1 - _brightness];
+
+    // handle wheel
+    private ["_wheelState", "_wheelStateAdd"];
+
+    _wheelState = GVAR(wheelState);
+    _wheelStateAdd = ((round GVAR(windHead) * 2) min 5) max -5;
+
+    _wheelState = _wheelState + _wheelStateAdd;
+
+    if (_wheelState < 0) then {_wheelState = _wheelState + 9};
+    if (_wheelState > 9) then {_wheelState = _wheelState - 9};
+
+    GVAR(wheelState) = _wheelState;
+
+    if (preloadTitleRsc ["ACE_Kestrel_Preload", "PLAIN"]) then {
+        _ctrlKestrelWheel ctrlSetText format [QUOTE(PATHTOF(data\kestrel_%1.paa)), _wheelState];
+        _ctrlKestrelWheel ctrlSetTextColor [_brightness, _brightness, _brightness, 1];
+    };
 
 }, 0.01, _this select 0] call CBA_fnc_addPerFrameHandler;

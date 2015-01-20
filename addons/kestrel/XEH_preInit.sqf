@@ -3,7 +3,6 @@
 ADDON = false;
 
 PREP(onLoadKestrel);
-PREP(onLoadKestrelWheel);
 PREP(openKestrel);
 PREP(closeKestrel);
 

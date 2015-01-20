@@ -15,8 +15,20 @@ class RscTitles {
         enablesimulation = 1;
 
         class controls {
+            // has to be first to be in the background
+            class Wheel: RscPicture {
+                idc = 3;
+                type = 0;
+                style = "48 + 0x800";
+                text = "";
+                x = "safeZoneX + 0.07";
+                y = "safeZoneY + safeZoneH - 0.76";
+                h = "0.15";
+                w = "0.15";
+            };
+
             class Kestrel1: RscPicture {
-                idc = 10;
+                idc = 1;
                 text = PATHTOF(data\4500NV1.paa);
                 style = "48 + 0x800";
                 x = "safeZoneX - 0.25";
@@ -25,13 +37,13 @@ class RscTitles {
                 w = "0.75";
             };
             class Kestrel2: Kestrel1 {
-                idc = 11;
+                idc = 2;
                 text = PATHTOF(data\4500NV2.paa);
                 colorText[] = {0,0,0,1-(sunOrMoon*sunOrMoon+(moonIntensity/5))};
             };
 
             class HUD1: RscText {
-                idc = 12;
+                idc = 11;
                 type = 0;
                 style = 1;
                 text = "";
@@ -47,41 +59,16 @@ class RscTitles {
                 lineSpacing = 1;
             };
             class HUD2: HUD1 {
-                idc = 13;
+                idc = 12;
                 y = "safeZoneY + safeZoneH - 0.48";
             };
             class HUD3: HUD1 {
-                idc = 14;
+                idc = 13;
                 y = "safeZoneY + safeZoneH - 0.45";
             };
             class HUD4: HUD1 {
-                idc = 15;
+                idc = 14;
                 y = "safeZoneY + safeZoneH - 0.418";
-            };
-        };
-    };
-
-    class ACE_KestrelWheel {
-        onload = QUOTE(_this call FUNC(onLoadKestrelWheel));
-        //onunload = "";
-        idd = -1;
-        movingEnable = 0;
-        enableDisplay = 1;
-        duration = 1e+011;
-        fadein = 0;
-        fadeout = 0;
-        enablesimulation = 1;
-
-        class controls {
-            class Wheel: RscPicture {
-                idc = 1;
-                type = 0;
-                style = "48 + 0x800";
-                text = "";
-                x = "safeZoneX + 0.07";
-                y = "safeZoneY + safeZoneH - 0.76";
-                h = "0.15";
-                w = "0.15";
             };
         };
     };
