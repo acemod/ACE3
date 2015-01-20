@@ -17,7 +17,7 @@ if !(local _unit) exitwith{
 };
 
 if !(_unit getvariable[QGVAR(addedToUnitLoop),false]) then{
-    _unit setvariable [QGVAR(addedToUnitLoop),true];
+    _unit setvariable [QGVAR(addedToUnitLoop),true, true];
 };
 
 if ([_unit] call FUNC(hasMedicalEnabled)) then {
