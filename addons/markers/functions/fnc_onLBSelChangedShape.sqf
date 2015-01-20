@@ -14,4 +14,4 @@ _icon = getText (_config >> "icon");
 
 ((ctrlParent _ctrl) displayCtrl 102) ctrlSetText _icon;
 
-GVAR(currentMarkerShape) = _data;
+GVAR(currentMarkerConfigName) = (configName _config);
