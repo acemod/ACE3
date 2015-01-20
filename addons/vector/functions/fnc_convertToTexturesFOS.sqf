@@ -15,8 +15,8 @@ _number = round (_number select _coordinate);
 _isNegative = _number < 0;
 _number = abs _number;
 
-if (_number >= 10000) exitWith {
-    [QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa))]    // return
+if (_number > 9999) exitWith {
+    [QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa))]    // return
 };
 
 private ["_digit0", "_digit1", "_digit2", "_digit3", "_digit4"];
@@ -234,6 +234,11 @@ switch (_coordinate) do {
         };
 
     };
+};
+
+// trap errors
+if ({typeName _x == "STRING"} count [_digit0, _digit1, _digit2, _digit3, _digit4] < 5) exitWith {
+    [QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa))]    // return
 };
 
 [_digit0, _digit1, _digit2, _digit3, _digit4]
