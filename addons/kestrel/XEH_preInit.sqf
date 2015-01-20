@@ -7,6 +7,5 @@ PREP(openKestrel);
 PREP(closeKestrel);
 
 GVAR(isKestrel) = false;
-GVAR(isKestrelWheel) = false;
 
 ADDON = true;
