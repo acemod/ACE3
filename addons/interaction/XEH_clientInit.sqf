@@ -81,7 +81,8 @@ GVAR(isOpeningDoor) = false;
 
         // Statement
         ACE_Modifier = 1;
-        true
+        // Return false so it doesn't block other actions
+        false
     },
     [29, [false, false, false]],
     false,
@@ -97,7 +98,8 @@ GVAR(isOpeningDoor) = false;
 
         // Statement
         ACE_Modifier = 0;
-        true
+        // Return false so it doesn't block other actions
+        false
     },
     [29, [false, false, false]],
     false,

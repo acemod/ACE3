@@ -16,7 +16,8 @@ GVAR(position) = [0,0,0];
 
         // Statement
         [vehicle ACE_player] call FUNC(keyDown);
-        true
+        // Return false so it doesn't block the rest weapon action
+        false
     },
     [15, [false, false, false]],
     false,
@@ -34,7 +35,7 @@ GVAR(position) = [0,0,0];
 
         // Statement
         [vehicle ACE_player] call FUNC(keyUp);
-        true
+        false
     },
     [15, [false, false, false]],
     false,

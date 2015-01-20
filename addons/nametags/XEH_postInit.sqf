@@ -15,7 +15,8 @@ if (!hasInterface) exitWith {};
         // Statement
         GVAR(ShowNamesTime) = time;
         if (call FUNC(canShow)) then{ call FUNC(doShow); };
-        true
+        // Return false so it doesn't block other actions
+        false
     },
     [29, [false, false, false]],
     false,
