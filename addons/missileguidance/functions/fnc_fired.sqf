@@ -5,7 +5,14 @@ TRACE_1("enter", _this);
 PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
 if(!local _shooter) exitWith { false };
-if(_weapon == "missiles_DAGR") then {
-	_this call FUNC(guidance_DAGR);
-	//_this call FUNC(guidance_HellfireII);
+
+switch _weapon do {
+	case "missiles_DAGR": {
+		_this call FUNC(guidance_DAGR);
+	};
+	case "GBU12BombLauncher": {
+		_this call FUNC(guidance_LGB);
+	};
 };
+
+//_this call FUNC(guidance_HellfireII);

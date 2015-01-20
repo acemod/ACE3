@@ -1,4 +1,4 @@
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 FUNC(guidance_Hellfire_LOAL_HI_PFH) = {
