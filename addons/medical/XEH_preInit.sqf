@@ -78,6 +78,7 @@ PREP(handleTreatment_Category_Medication);
 PREP(handleUI_DisplayOptions);
 PREP(handleUI_dropDownTriageCard);
 PREP(handleUnitVitals);
+PREP(handleDropUnit);
 
 PREP(hasEquipment);
 PREP(hasMedicalEnabled);
@@ -106,6 +107,7 @@ PREP(onMenuOpen);
 PREP(onTreatmentCompleted);
 PREP(onUnconscious);
 PREP(onStartMovingUnit);
+PREP(onCarryObjectDropped);
 
 PREP(openMenu);
 PREP(playInjuredSound);

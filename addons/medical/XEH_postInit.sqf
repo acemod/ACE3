@@ -48,6 +48,8 @@ call FUNC(handleDisplayEffects);
 ["Medical_treatmentCompleted", FUNC(onTreatmentCompleted)] call ace_common_fnc_addEventHandler;
 ["onStartMovingUnit", FUNC(onStartMovingUnit)] call ace_common_fnc_addEventHandler;
 ["onUnconscious", FUNC(onUnconscious)] call ace_common_fnc_addEventHandler;
+["carryObjectDropped", FUNC(onCarryObjectDropped)] call ace_common_fnc_addEventHandler;
+
 
 
 // Keybindings

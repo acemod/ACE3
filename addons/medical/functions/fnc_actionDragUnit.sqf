@@ -56,7 +56,7 @@ if (currentWeapon _caller == primaryWeapon _caller) then {
 };
 
 _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
-[3,
+[1,
     {((vehicle (_this select 0) != (_this select 0)) ||((getPos (_this select 0)) distance ((_this select 0) getvariable QGVAR(StartingPositionHandleTreatment)) < 1.5))}, // the condition
     {
         private ["_caller","_target"];
