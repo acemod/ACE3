@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         units[] = {};
-        weapons[] = {"ACE_muzzle_mzls_H","ACE_muzzle_mzls_B","ACE_muzzle_mzls_L","ACE_muzzle_mzls_smg_01","ACE_muzzle_mzls_smg_02"};
+        weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author[] = {"commy2"};
@@ -12,5 +12,7 @@ class CfgPatches {
     };
 };
 
+#include "CfgAmmo.hpp"
+#include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
