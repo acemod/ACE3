@@ -66,15 +66,15 @@ class ACE_Parameters_Boolean {
 
 class ACE_canInteractConditions {
   class GVAR(isNotEscorting) {
-    condition = QUOTE( !(_player getVariable ['ACE_isEscorting', false]) );
+    condition = QUOTE( !(ACE_player getVariable [ARR_2('ACE_isEscorting', false)]) );
   };
   class GVAR(isNotCaptive) {
-    condition = QUOTE( !(_player getVariable ['ACE_isCaptive', false]) );
+    condition = QUOTE( !(ACE_player getVariable [ARR_2('ACE_isCaptive', false)]) );
   };
   class GVAR(isNotSurrendering) {
-    condition = QUOTE( !(_player getVariable ['ACE_isSurrender', false]) );
+    condition = QUOTE( !(ACE_player getVariable [ARR_2('ACE_isSurrender', false)]) );
   };
   class GVAR(isNotSwimming) {
-    condition = QUOTE( !underwater _player );
+    condition = QUOTE( !underwater ACE_player );
   };
 };
