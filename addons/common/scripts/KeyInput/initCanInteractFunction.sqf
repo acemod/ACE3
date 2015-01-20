@@ -5,7 +5,7 @@ private ["_function", "_configFile", "_count", "_index", "_config", "_configName
 
 _function = "private '_exceptions'; _exceptions = _this; alive ACE_player";
 
-_configFile = configFile >> QGVAR(canInteractConditions);
+_configFile = configFile >> "ACE_canInteractConditions";
 _count = count _configFile;
 
 for "_index" from 0 to (_count -1) do {
