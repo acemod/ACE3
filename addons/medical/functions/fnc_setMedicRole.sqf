@@ -16,6 +16,8 @@ _value = [_this, 1, false,[false]] call BIS_fnc_param;
 
 if (_unit isKindOf "CaManBase") then {
     if (_value) then {
-        _unit setvariable [QGVAR(medicClass),1,true];
-    };
+        _unit setvariable [QGVAR(medicClass), 1, true];
+    } else {
+        _unit setvariable [QGVAR(medicClass), 0, true];
+    }
 };
