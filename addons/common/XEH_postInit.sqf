@@ -1,6 +1,16 @@
 // ACE - Common
 #include "script_component.hpp"
 
+// hack to get PFH to work in briefing
+[QGVAR(onBriefingPFH), "onEachFrame", {
+    if (time > 0) exitWith {
+        [QGVAR(onBriefingPFH), "onEachFrame"] call BIS_fnc_removeStackedEventHandler; 
+    };
+
+    call cba_common_fnc_onFrame;
+}] call BIS_fnc_addStackedEventHandler;
+/////
+
 QGVAR(remoteFnc) addPublicVariableEventHandler {
     (_this select 1) call FUNC(execRemoteFnc);
 };
