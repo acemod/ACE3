@@ -20,4 +20,4 @@ _color = getArray (_config >> "color");
 
 ((ctrlParent _ctrl) displayCtrl 102) ctrlSetTextColor _color;
 
-GVAR(currentMarkerColor) = _data;
+GVAR(currentMarkerColorConfigName) = (configName _config);

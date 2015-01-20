@@ -15,19 +15,6 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 
-class ACE_Default_Keys {
-    class showNames {
-        displayName = "$STR_ACE_NameTags_ShowNames";
-        condition = "true";
-        statement = QUOTE(GVAR(ShowNamesTime) = time; if (call FUNC(canShow)) then{ call FUNC(doShow); };);
-        key = 29;
-        shift = 0;
-        control = 0;
-        alt = 0;
-        allowHolding = 1;
-    };
-};
-
 class ACE_Options {
     class showPlayerNames {
         displayName = "$STR_ACE_NameTags_ShowPlayerNames";
