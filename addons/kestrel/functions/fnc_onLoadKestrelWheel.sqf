@@ -5,11 +5,18 @@ GVAR(windHead) = 0;
 GVAR(wheelState) = 1;
 
 [{
-    private ["_display", "_control"];
+
+    if (!GVAR(isKestrelWheel)) exitWith {
+        [_this select 1] call CBA_fnc_removePerFrameHandler;
+    };
+
+    private ["_dlgKestrelWheel", "_ctrlKestrelWheel"];
 
     disableSerialization;
-    _display = _this select 0;
-    _control = _display displayCtrl 1;
+    _dlgKestrelWheel = _this select 0;
+    _ctrlKestrelWheel = _dlgKestrelWheel displayCtrl 1;
+
+    _ctrlKestrelWheel ctrlShow (cameraView != "GUNNER");
 
     private ["_wheelState", "_wheelStateAdd"];
 
@@ -28,13 +35,9 @@ GVAR(wheelState) = 1;
         private "_brightness";
         _brightness = call EFUNC(common,ambientBrightness);
 
-        _control ctrlSetText format [QUOTE(PATHTOF(data\kestrel_%1.paa)), _rad1];
-        _control ctrlSetTextColor [_brightness, _brightness, _brightness, 1];
+        _ctrlKestrelWheel ctrlSetText format [QUOTE(PATHTOF(data\kestrel_%1.paa)), _wheelState];
+        _ctrlKestrelWheel ctrlSetTextColor [_brightness, _brightness, _brightness, 1];
 
-    };
-
-    if (!GVAR(isKestrelWheel)) exitWith {
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
 }, 0.01, _this select 0] call CBA_fnc_addPerFrameHandler;

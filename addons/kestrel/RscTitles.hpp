@@ -34,7 +34,7 @@ class RscTitles {
                 idc = 12;
                 type = 0;
                 style = 1;
-                text = " 0000";
+                text = "";
                 x = "safeZoneX + 0.08";
                 y = "safeZoneY + safeZoneH - 0.51";
                 h = "0.09";
@@ -77,7 +77,7 @@ class RscTitles {
                 idc = 1;
                 type = 0;
                 style = "48 + 0x800";
-                text = PATHTOF(data\kestrel_0.paa);
+                text = "";
                 x = "safeZoneX + 0.07";
                 y = "safeZoneY + safeZoneH - 0.76";
                 h = "0.15";
