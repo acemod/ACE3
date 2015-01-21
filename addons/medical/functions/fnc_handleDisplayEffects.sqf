@@ -51,6 +51,11 @@ FUNC(hb_effect) = {
 };
 
 
+GVAR(BloodLevel_CC) = ppEffectCreate ["ColorCorrections", 4208];
+GVAR(BloodLevel_CC) ppEffectForceInNVG True;
+GVAR(BloodLevel_CC) ppEffectAdjust [1,1,0, [0,0,0,0], [1,1,1,1], [0.2,0.2,0.2,0]];
+GVAR(BloodLevel_CC) ppEffectCommit 0;
+
 
 [{
     private ["_unit","_bloodLoss"];
@@ -59,6 +64,16 @@ FUNC(hb_effect) = {
         _bloodLoss = _unit call FUNC(getBloodLoss);
         if (_bloodLoss >0) then {
             [_bloodLoss] call EFUNC(gui,effectBleeding);
+        };
+
+         // Blood Level Effect
+        _currentBlood = _unit getVariable [QGVAR(bloodVolume), 100];
+        if (_currentBlood > 99) then {
+            GVAR(BloodLevel_CC) ppEffectEnable False;
+        } else {
+            GVAR(BloodLevel_CC) ppEffectEnable True;
+            GVAR(BloodLevel_CC) ppEffectAdjust [1, 1, 0, [0.0, 0.0, 0.0, 0.0], [1, 1, 1,_currentBlood], [0.2, 0.2, 0.2, 0]];
+            GVAR(BloodLevel_CC) ppEffectCommit 0;
         };
 
         [{
