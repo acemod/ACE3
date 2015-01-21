@@ -33,7 +33,7 @@ switch (_this select 0) do {
         (_dlgVector displayCtrl 1314) ctrlSetText "";
     };
 
-    case ("night"): {
+    case ("nigt"): {
         (_dlgVector displayCtrl 1315) ctrlSetText "";
         (_dlgVector displayCtrl 1316) ctrlSetText QUOTE(PATHTOF(rsc\vector_n.paa));
         (_dlgVector displayCtrl 1317) ctrlSetText QUOTE(PATHTOF(rsc\vector_i.paa));

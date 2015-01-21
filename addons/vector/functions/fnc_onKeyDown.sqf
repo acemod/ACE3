@@ -20,10 +20,11 @@ _fnc_setPFH = {
 
 switch (_this select 0) do {
     case ("azimuth"): {
+        GVAR(keyDownTabCountDistance) = 0;
 
         // handle input in option menu
         if (GVAR(currentMode) == "settings") exitWith {
-            if (diag_tickTime < GVAR(keyDownTimeMenu) + 0.5) exitWith {};
+            if (diag_tickTime < GVAR(keyDownTimeMenu) + 1) exitWith {};
 
             if (diag_tickTime < GVAR(keyDownTimeAzimuth) + 0.5) then {
                 GVAR(keyDownTabCountAzimuth) = (GETGVAR(keyDownTabCountAzimuth,0)) + 1;
@@ -32,14 +33,12 @@ switch (_this select 0) do {
             };
 
             GVAR(keyDownTimeAzimuth) = diag_tickTime;
-
-            systemChat str GVAR(keyDownTabCountAzimuth);//
         };
 
         if (GVAR(currentMode) == "config") exitWith {
             if (diag_tickTime < GVAR(keyDownTimeMenu) + 0.5) exitWith {};
 
-            systemChat "azi in config";
+            ["config"] call FUNC(nextMode);
         };
 
         // prevent additinal modifier input if advanced mode it set, spaghetti
@@ -63,6 +62,7 @@ switch (_this select 0) do {
             GVAR(keyDownTimeMenu) = diag_tickTime;
             GVAR(keyDownTimeAzimuth) = diag_tickTime;
             GVAR(keyDownTabCountAzimuth) = 0;
+            GVAR(configTemp) = [GVAR(useFeet), GVAR(useMil)];
             ["settings"] call FUNC(showText);
             "settings" call _fnc_setPFH;
         };
@@ -90,9 +90,9 @@ switch (_this select 0) do {
     };
 
     case ("distance"): {
+        GVAR(keyDownTabCountAzimuth) = 0;
 
         // handle input in option menu
-
         if (GVAR(currentMode) == "config") exitWith {
             if (diag_tickTime < GVAR(keyDownTimeMenu) + 0.5) exitWith {};
 
@@ -103,14 +103,12 @@ switch (_this select 0) do {
             };
 
             GVAR(keyDownTimeDistance) = diag_tickTime;
-
-            systemChat str GVAR(keyDownTabCountDistance);//
         };
 
         if (GVAR(currentMode) == "settings") exitWith {
             if (diag_tickTime < GVAR(keyDownTimeMenu) + 0.5) exitWith {};
 
-            systemChat "dis in settings"
+            ["settings"] call FUNC(nextMode);
         };
 
         // prevent additinal modifier input if advanced mode it set, spaghetti
@@ -139,7 +137,7 @@ switch (_this select 0) do {
             GVAR(keyDownTimeMenu) = diag_tickTime;
             GVAR(keyDownTimeDistance) = diag_tickTime;
             GVAR(keyDownTabCountDistance) = 0;
-            GVAR(configTemp) = [GVAR(useFeet), GVAR(useMil)];
+            GVAR(configTemp) = GVAR(modeReticle);
             ["config"] call FUNC(showText);
             "config" call _fnc_setPFH;
         };
