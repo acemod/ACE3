@@ -52,8 +52,8 @@ if (!_found && (random(1)>0.2)) then {
 if (_waitingTime > 0) then {
     [{
         private ["_params", "_config", "_person", "_amount","_bodyPart","_woundClass","_item", "_bandagedWounds","_bandagedBodyPart","_bandagedWoundClass","_openWounds", "_openWoundsBodyPart","_openWoundClass"];
-        _params = (_this select 0) select 0;
-        _config = (_this select 0) select 1;
+        _params = _this  select 0;
+        _config = _this select 1;
 
         _person = _params select 0;
         _amount = _params select 1;
@@ -79,8 +79,5 @@ if (_waitingTime > 0) then {
 
             ["Medical_onWoundsReopened", [_person, (_amount * (_config select RATIO)), _bodyPart, _woundClass, _item]] call ace_common_fnc_localEvent;
         };
-        // Delete this PFH, so it is only executed once
-        [(_this select 1)] call cba_fnc_removePerFrameHandler;
-    } , _waitingTime, [_this, _selectedConfig] ] call CBA_fnc_addPerFrameHandler;
-
+    }, [_this, _selectedConfig], _waitingTime, _waitingTime] call EFUNC(common,waitAndExecute);
 };
