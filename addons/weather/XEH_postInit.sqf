@@ -6,20 +6,14 @@
 
 simulWeatherSync;
 _fnc_updateWind = {
-    _wind = ([] call FUNC(getWind));
-    ACE_wind = [_wind select 0, _wind select 1];
-    setWind [_wind select 0, _wind select 1, true];
+    ACE_wind = [] call FUNC(getWind);
+    setWind [ACE_wind select 0, ACE_wind select 1, true];
     2 setGusts 0;
 
     // Set waves: 0 when no wind, 1 when wind >= 16 m/s
-    1 setWaves (((vectorMagnitude ACE_wind) / 16.0) min 1;
+    1 setWaves (((vectorMagnitude ACE_wind) / 16.0) min 1.0);
 
-    //systemChat format ["w: %1 %2, ACE_wind: %1 %2", [wind select 0, wind select 1, ACE_wind select 0, ACE_wind select 1]];
-    // _nWind = wind;
-    // _pW = [_nWind select 0, _nWind select 1, 0] call CBA_fnc_vect2polar;
-    // _pAW = [_wind select 0, _wind select 1, 0] call CBA_fnc_vect2polar;
-    // hint format["w: %1 %2\na: %3 %4", _pW select 1, _pw select 0, _pAW select 1, _pAW select 0];
-    // diag_log text format["ACE_WIND,%1,%2,%3,%4,%5", time, _pW select 1, _pw select 0, _pAW select 1, _pAW select 0];
+    //systemChat format ["w:%1 %2,ACE_w:%1 %2, w", [wind select 0, wind select 1, ACE_wind select 0, ACE_wind select 1]];
 };
 
 [_fnc_updateWind, 1, []] call CBA_fnc_addPerFrameHandler;
