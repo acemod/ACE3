@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-15 -->
 <Project name="ACE">
-  <Package name="Ballistics">
+  <Package name="Magazines">
     <!-- MX -->
     <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimName">
       <English>6.5mm 30Rnd Tracer IR-DIM Mag</English>
@@ -474,7 +474,7 @@
       <Italian>Calibro: 7.62x51 mm AP&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
       <Russian>Калибр: 7.62x51 мм дозвуковые&lt;br /&gt;Патронов: 20&lt;br /&gt;Применимы в: Mk18 ABR</Russian>
     </Key>
-    <Key ID="STR_ACE_Ballistics_20Rnd_762x51_Mag_Description">
+    <Key ID="STR_ACE_20Rnd_762x51_mag_LRDescription">
       <English>Caliber: 7.62x51mm M118LR&lt;br /&gt;Rounds: 20&lt;br /&gt;Type: M14</English>
       <Hungarian>Kaliber: 7,62x51 mm M118LR&lt;br /&gt;Lőszerek: 20&lt;br /&gt;Típus: M14</Hungarian>
       <German>Kaliber: 7,62x51mm M118LR&lt;br /&gt;Schuss: 20&lt;br /&gt;Typ: M14</German>
