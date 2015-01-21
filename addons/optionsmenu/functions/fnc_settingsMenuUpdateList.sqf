@@ -12,7 +12,8 @@
 private ["_settingsMenu", "_ctrlList", "_settingsText", "_color", "_settingsColor", "_updateKeyView"];
 DEFAULT_PARAM(0,_updateKeyView,true);
 
-disableSerialization
+disableSerialization;
+_settingsMenu = uiNamespace getVariable 'ACE_settingsMenu';
 _ctrlList = _settingsMenu displayCtrl 200;
 
 lbclear _ctrlList;

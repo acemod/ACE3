@@ -9,4 +9,5 @@
 */
 #include "script_component.hpp"
 
-[MENU_TAB_OPTIONS] call FUNC(onListBoxShowSelectionChanged);
+//Delay a frame
+[{ [MENU_TAB_OPTIONS] call FUNC(onListBoxShowSelectionChanged) }, []] call EFUNC(common,execNextFrame);

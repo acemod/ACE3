@@ -4,6 +4,7 @@ ADDON = false;
 
 PREP(addClientSideColor);
 PREP(addClientSideOptions);
+PREP(addFromConfig);
 PREP(loadFromProfile);
 PREP(onListBoxSettingsChanged);
 PREP(onListBoxShowSelectionChanged);

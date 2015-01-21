@@ -21,7 +21,6 @@ switch (GVAR(optionMenu_openTab)) do {
 case (MENU_TAB_OPTIONS): {
     _localizedHeader = format ["%1: %2", (localize "STR_ACE_OptionsMenu_OpenConfigMenu"), (localize "STR_ACE_OptionsMenu_TabOptions")];
     ctrlSetText [13, _localizedHeader];
-
     lbClear 400;
 
     (_settingsMenu displayCtrl 301) ctrlShow true;

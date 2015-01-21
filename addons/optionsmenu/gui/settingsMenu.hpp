@@ -107,7 +107,7 @@ class ACE_settingsMenu {
       x = "2 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
       y = "5.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
       w = "23 * (((safezoneW / safezoneH) min 1.2) / 40)";
-      h = "10 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+      h = "15 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
       SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
       colorBackground[] = {0, 0, 0, 0.9};
       colorSelectBackground[] = {0, 0, 0, 0.9};
