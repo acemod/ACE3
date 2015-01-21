@@ -18,7 +18,7 @@ if(GVAR(rain_period_count) > GVAR(rain_next_period)) then {
 		// player sideChat format["_transitionTime: %1", _transitionTime];
 
 		ACE_RAIN_PARAMS = [_lastRain, GVAR(current_rain), _transitionTime];
-		systemChat format ["ACE_RAIN_PARAMS_sent1: %1 %2 %3", ACE_RAIN_PARAMS];
+		//systemChat format ["ACE_RAIN_PARAMS_sent1: %1 %2 %3", ACE_RAIN_PARAMS];
 	} else {
 		GVAR(current_rain) = 0;
 		_lastRain = GVAR(current_rain);
@@ -26,7 +26,7 @@ if(GVAR(rain_period_count) > GVAR(rain_next_period)) then {
 		_transitionTime = (_rainOverCast*5)+(random (_rainOverCast*20))+1;
 
 		ACE_RAIN_PARAMS = [_lastRain, GVAR(current_rain), _transitionTime];
-		systemChat format ["ACE_RAIN_PARAMS_sent2: %1 %2 %3", ACE_RAIN_PARAMS];
+		//systemChat format ["ACE_RAIN_PARAMS_sent2: %1 %2 %3", ACE_RAIN_PARAMS];
 		TRACE_4("",_lastRain,_rainOverCast,_transitionTime, overcast);
 	};
 
