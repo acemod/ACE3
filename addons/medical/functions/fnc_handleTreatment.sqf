@@ -35,8 +35,13 @@ if ([_caller] call FUNC(isSetTreatmentMutex)) exitwith {
 [_caller, true] call FUNC(treatmentMutex);
 
 if (!([_caller, _target, _removeItem] call FUNC(hasEquipment)) && _removeItem != "") exitwith {
-    [_caller,"release"] call FUNC(treatmentMutex);
+    [_caller, false] call FUNC(treatmentMutex);
 };
+
+if (primaryWeapon _caller == "") then {
+    _caller addWeapon "ACE_FakePrimaryWeapon";
+};
+_caller selectWeapon (primaryWeapon _unit);
 
 // TODO make dynamic
 switch (toLower _category) do {
@@ -53,7 +58,7 @@ switch (toLower _category) do {
         ([_caller, _target, _selectionName, _removeItem] call FUNC(handleTreatment_Category_Airway));
     };
     default {
-        // do not handle the request
+        // Do not handle the request
         false;
     };
 };
