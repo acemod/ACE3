@@ -4,9 +4,11 @@
 "ACE_WIND_PARAMS" addPublicVariableEventHandler { GVAR(wind_period_start_time) = time; };
 "ACE_RAIN_PARAMS" addPublicVariableEventHandler { GVAR(rain_period_start_time) = time; };
 "ACE_MISC_PARAMS" addPublicVariableEventHandler {
-    30 setLightnings (ACE_MISC_PARAMS select 0);
-    30 setRainbow    (ACE_MISC_PARAMS select 1);
-    30 setFog        (ACE_MISC_PARAMS select 2);
+    if !(isServer) then {
+        30 setLightnings (ACE_MISC_PARAMS select 0);
+        30 setRainbow    (ACE_MISC_PARAMS select 1);
+        30 setFog        (ACE_MISC_PARAMS select 2);
+    };
 };
 
 
