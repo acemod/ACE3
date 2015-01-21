@@ -1,5 +1,7 @@
 
+class ItemCore;
 class VestItem;
+
 class Vest_Camo_Base: ItemCore {
   class ItemInfo: VestItem {
     /*containerClass = "Supply0";

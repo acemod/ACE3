@@ -77,9 +77,14 @@ switch (_this select 0) do {
 
     case ("azimuth+inclination"): {
 
+        private "_isReady";
+        _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.2;
+
         [false] call FUNC(showCenter);
 
-        call FUNC(showAzimuthInclination);
+        if (_isReady) then {
+            call FUNC(showAzimuthInclination);
+        };
 
         if (!GVAR(isKeyDownAzimuth)) then {
             [_this select 1] call CBA_fnc_removePerFrameHandler;

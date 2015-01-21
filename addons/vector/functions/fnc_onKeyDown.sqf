@@ -29,6 +29,19 @@ switch (_this select 0) do {
         GVAR(isKeyDownAzimuth) = true;
         [false] call FUNC(showP1);
 
+        // handle 5 times clicking
+        if (diag_tickTime < GVAR(keyDownTimeAzimuth) + 0.5) then {
+            GVAR(keyDownTabCountAzimuth) = (GETGVAR(keyDownTabCountAzimuth,0)) + 1;
+            GVAR(keyDownTimeAzimuth) = diag_tickTime;
+        } else {
+            GVAR(keyDownTabCountAzimuth) = 1;
+        };
+
+        // open config menu
+        if (GVAR(keyDownTabCountAzimuth) == 5) exitWith {
+            systemChat "0";
+        };
+
         if (diag_tickTime < GVAR(keyDownTimeAzimuth) + 0.5) exitWith {
             "azimuth+inclination" call _fnc_setPFH;
         };
@@ -65,6 +78,19 @@ switch (_this select 0) do {
 
         GVAR(isKeyDownDistance) = true;
         [false] call FUNC(showP1);
+
+        // handle 5 times clicking
+        if (diag_tickTime < GVAR(keyDownTimeDistance) + 0.5) then {
+            GVAR(keyDownTabCountDistance) = (GETGVAR(keyDownTabCountDistance,0)) + 1;
+            GVAR(keyDownTimeDistance) = diag_tickTime;
+        } else {
+            GVAR(keyDownTabCountDistance) = 1;
+        };
+
+        // open config menu
+        if (GVAR(keyDownTabCountDistance) == 5) exitWith {
+            systemChat "1";
+        };
 
         if (diag_tickTime < GVAR(keyDownTimeDistance) + 0.5) exitWith {
             "height+distance" call _fnc_setPFH;
