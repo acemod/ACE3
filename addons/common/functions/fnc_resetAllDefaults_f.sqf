@@ -13,7 +13,7 @@
 private ["_unit","_oldUnit","_sets"];
 _unit = _this select 0;
 
-_unit setvariable [QGVAR(isDead),nil,true];
+_unit setvariable ["ACE_isDead",nil,true];
 _unit setvariable ["ACE_isUnconscious", nil, true];
 
 if (isPlayer _unit) then {

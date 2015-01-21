@@ -16,10 +16,18 @@ private ["_msg", "_level", "_prefix", "_defaultLoglevel","_defaultLogDisplayLeve
 _msg = _this select 0;
 _level = if (count _this > 1) then {_this select 1} else { 2 };
 
+if (typeName _level != "NUMBER") then {
+    _level = 2;
+};
+
 _defaultLoglevel = if (isNil QGVAR(LOGLEVEL)) then {
     DEFAULT_LOGGING_LEVEL;
 } else {
     GVAR(LOGLEVEL);
+};
+
+if (_defaultLoglevel < 0) exitwith {
+    false
 };
 
 _defaultLogDisplayLevel = if (isnil QGVAR(LOGDISPLAY_LEVEL)) then {
@@ -28,9 +36,6 @@ _defaultLogDisplayLevel = if (isnil QGVAR(LOGDISPLAY_LEVEL)) then {
     GVAR(LOGDISPLAY_LEVEL);
 };
 
-if (_defaultLoglevel < 0) exitwith {
-    false
-};
 if (_level <= _defaultLoglevel) then {
 
     _prefix = switch (_level) do {
@@ -42,7 +47,7 @@ if (_level <= _defaultLoglevel) then {
     };
     _message = format["[%1] %2",_prefix,_msg];
 
-    if (_level >= _defaultLogDisplayLevel) then {
+    if (_level <= _defaultLogDisplayLevel) then {
         systemChat _message;
     };
     diag_log _message;

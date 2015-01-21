@@ -35,7 +35,7 @@ _caller = _this select 1;
     _newUnit disableAI "MOVE";
     _newUnit disableAI "ANIM";
     _newUnit disableAI "FSM";
-    _newUnit setvariable [QGVAR(isDead),true,true];
+    _newUnit setvariable ["ACE_isDead",true,true];
 
     removeallweapons _newUnit;
     removeallassigneditems _newUnit;

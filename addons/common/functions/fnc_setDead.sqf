@@ -62,7 +62,7 @@ if (((GVAR(ENABLE_REVIVE_F) == 1 && isPlayer _unit) || (GVAR(ENABLE_REVIVE_F) ==
             if (isPlayer _unit) then {
                 titleText ["You died..","PLAIN DOWN"];
             };
-            [_unit,QGVAR(isDead), true, true] call FUNC(setDefinedVariable);
+            [_unit,"ACE_isDead", true, true] call FUNC(setDefinedVariable);
             if (_playerDead) then {
                 [_unit,QGVAR(isDeadPlayer),true,true] call FUNC(setDefinedVariable);
             };
@@ -78,7 +78,7 @@ if (((GVAR(ENABLE_REVIVE_F) == 1 && isPlayer _unit) || (GVAR(ENABLE_REVIVE_F) ==
 
 };
 
-[_unit,QGVAR(isDead),true,true] call FUNC(setDefinedVariable);
+[_unit,"ACE_isDead",true,true] call FUNC(setDefinedVariable);
 if (isPLayer _unit) then {
     [_unit,QGVAR(isDeadPlayer),true,true] call FUNC(setDefinedVariable);
 };

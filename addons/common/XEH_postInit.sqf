@@ -145,7 +145,7 @@ GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
 
 [QGVAR(reviveCounter_f), 0, false, QGVAR(ADDON)] call FUNC(defineVariable);
 [QGVAR(inReviveState), false, true, QGVAR(ADDON)] call FUNC(defineVariable);
-[QGVAR(isDead),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
+["ACE_isDead",false,true,QUOTE(ADDON)] call FUNC(defineVariable);
 [QGVAR(isDeadPlayer), false, true, QUOTE(ADDON)] call FUNC(defineVariable);
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
 ["ACE_isUnconscious",false,true,QUOTE(ADDON)] call FUNC(defineVariable);

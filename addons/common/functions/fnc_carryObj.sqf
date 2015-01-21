@@ -37,8 +37,8 @@ if (((typeName _to) == "OBJECT" && (isNull ([_unit] call FUNC(getCarriedObj)))) 
                     [format["fnc_carryObj - UNIT: %1 TO %2 - attachTo offset: %3",_unit,_to,(_this select 2)],2] call FUNC(debug);
                 };
             };
-           // ["carryObject", [_unit], [_unit, _to, _fallDown]] call EFUNC(common,targetEvent);
-            ["carryObject", [_unit, _to, _fallDown]] call ace_common_fnc_localEvent;
+            ["carryObject", [_unit], [_unit, _to, _fallDown]] call EFUNC(common,targetEvent);
+           // ["carryObject", [_unit, _to, _fallDown]] call ace_common_fnc_localEvent;
         };
     } else {
         if (!isNull ([_unit] call FUNC(getCarriedObj))) then {
@@ -61,8 +61,8 @@ if (((typeName _to) == "OBJECT" && (isNull ([_unit] call FUNC(getCarriedObj)))) 
             _unit setvariable [QGVAR(carriedObj),_to,true];
             _return = true;
 
-           // ["carryObjectDropped", [_unit], [_unit, _to, _fallDown]] call EFUNC(common,targetEvent);
-            ["carryObjectDropped", [_unit, _to, _fallDown]] call ace_common_fnc_localEvent;
+            ["carryObjectDropped", [_unit], [_unit, _to, _fallDown]] call EFUNC(common,targetEvent);
+           // ["carryObjectDropped", [_unit, _to, _fallDown]] call ace_common_fnc_localEvent;
 
         };
     };
