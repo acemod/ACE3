@@ -16,7 +16,7 @@ _caller = _this select 0;
 _target = _this select 1;
 _category = _this select 2;
 
-if ((_category == "advanced" || _category == "airway" || _category == "drag") && (_caller == _target)) exitwith {
+if ((_category == "advanced" || _category == "airway") && (_caller == _target)) exitwith {
     [];
 };
 

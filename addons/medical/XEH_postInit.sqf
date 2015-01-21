@@ -204,28 +204,28 @@ ADD_TREATMENT_MEDICATION("STR_ACE_ACTION_EPINEPHRINE","STR_ACE_ACTION_EPINEPHRIN
     _caller = _this select 0;
     _target = _this select 1;
 
-    (isNull ([_caller] call EFUNC(common,getCarriedObj)) && isNull ([_target] call EFUNC(common,getCarriedObj)) && (vehicle _caller == _caller) && (vehicle _target == _target));
+    (isNull ([_caller] call EFUNC(common,getCarriedObj)) && isNull ([_target] call EFUNC(common,getCarriedObj)) && (_caller != _target) && (vehicle _target == _target));
 }, {[_this select 0,_this select 1] call FUNC(actionDragUnit)},'drag'] call FUNC(addTreatmentOption);
 
 ["STR_ACE_ACTION_CARRY_PATIENT","STR_ACE_ACTION_CARRY_PATIENT_TOOLTIP",{
     _caller = _this select 0;
     _target = _this select 1;
 
-    (isNull ([_caller] call EFUNC(common,getCarriedObj)) && isNull ([_target] call EFUNC(common,getCarriedObj)) && (vehicle _caller == _caller) && (vehicle _target == _target));
+    (isNull ([_caller] call EFUNC(common,getCarriedObj)) && isNull ([_target] call EFUNC(common,getCarriedObj)) && (_caller != _target) && (vehicle _target == _target));
 }, {[_this select 0,_this select 1] call FUNC(actionCarryUnit)},'drag'] call FUNC(addTreatmentOption);
 
-["STR_ACE_ACTION_DRAG_PATIENT","STR_ACE_ACTION_DRAG_PATIENT_TOOLTIP",{
+["STR_ACE_ACTION_BODYBAG","STR_ACE_ACTION_BODYBAG_TOOLTIP",{
     _caller = _this select 0;
     _target = _this select 1;
 
-    (isNull ([_caller] call EFUNC(common,getCarriedObj)) && isNull ([_target] call EFUNC(common,getCarriedObj)) && (vehicle _caller == _caller) && (vehicle _target == _target) && ([_caller, _target] call FUNC(canPutInBodyBag)));
+    (isNull ([_caller] call EFUNC(common,getCarriedObj)) && isNull ([_target] call EFUNC(common,getCarriedObj)) && (_caller != _target) && (vehicle _target == _target) && ([_caller, _target] call FUNC(canPutInBodyBag)));
 }, {[_this select 0,_this select 1] call FUNC(actionPlaceInBodyBag)},'drag'] call FUNC(addTreatmentOption);
 
 ["STR_ACE_ACTION_DROP_PATIENT","STR_ACE_ACTION_DROP_PATIENT_TOOLTIP",{
     _caller = _this select 0;
     _target = _this select 1;
 
-    (!(isNull ([_caller] call EFUNC(common,getCarriedObj))) && (vehicle _caller == _caller));
+    (!(isNull ([_caller] call EFUNC(common,getCarriedObj))) && ([_caller] call FUNC(isMovingUnit)));
 }, {[_this select 0,_this select 1] call FUNC(actionDropUnit)},'drag'] call FUNC(addTreatmentOption);
 
 ["STR_ACE_ACTION_LOAD_PATIENT","STR_ACE_ACTION_LOAD_PATIENT_TOOLTIP",{

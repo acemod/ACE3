@@ -91,6 +91,8 @@ PREP(inMedicalFacility);
 PREP(isMedic);
 PREP(isMedicalVehicle);
 PREP(isSetTreatmentMutex);
+PREP(isMovingUnit);
+
 
 PREP(moduleAssignMedicalEquipment);
 PREP(moduleAssignMedicalFacility);

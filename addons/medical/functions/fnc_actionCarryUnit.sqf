@@ -18,6 +18,7 @@
 private ["_caller", "_unit", "_positionUnit", "_killOnDrop"];
 _caller = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _unit = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
+_killOnDrop = [_this, 2, false, [false]] call BIS_fnc_param;
 
 ["FUNC(actionDragUnit) has been called",2] call EFUNC(common,debug);
 
@@ -37,23 +38,29 @@ if (([_caller] call EFUNC(common,getCarriedObj)) != _unit && !(isNull ([_caller]
 };
 _caller action ["WeaponOnBack", _caller];
 _killOnDrop = false;
-if (!alive _unit) then {
-    _unit = [_unit,_caller] call EFUNC(common,makeCopyOfBody_F);
-    _killOnDrop = true;
+if (!alive _unit) exitwith {
+    [_caller, false] call FUNC(treatmentMutex);
+    [{
+        _this call FUNC(actionCarryUnit);
+    }, [_caller, ([_unit,_caller] call EFUNC(common,makeCopyOfBody_F)), _killOnDrop], 0.2, 0.2] call EFUNC(common,waitAndExecute);
 };
 
 if !([_caller,_unit] call EFUNC(common,carryObj)) exitwith {
     ["couldn't carry object!"] call EFUNC(common,debug); [_caller,"release"] call FUNC(treatmentMutex);
 };
 
+if (primaryWeapon _caller == "") then {
+    _caller addWeapon "ACE_FakePrimaryWeapon";
+};
 _caller selectWeapon (primaryWeapon _caller);
 
-[_caller,"acinpercmstpsraswrfldnon",1] call EFUNC(common,doAnimation);
 _unit attachTo [_caller, [0.1, -0.1, -1.25], "LeftShoulder"];
-[_unit,"AinjPfalMstpSnonWnonDf_carried_dead",1] call EFUNC(common,doAnimation);
+
+[_unit,"AinjPfalMstpSnonWnonDf_carried_dead", 1, true] call EFUNC(common,doAnimation);
+[_caller,"acinpercmstpsraswrfldnon", 1] call EFUNC(common,doAnimation);
 
 _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
-[1,
+[2,
     {((vehicle (_this select 0) != (_this select 0)) ||((getPos (_this select 0)) distance ((_this select 0) getvariable QGVAR(StartingPositionHandleTreatment)) < 1.5))}, // the condition
     {
         private ["_caller","_target"];

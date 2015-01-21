@@ -16,6 +16,10 @@ _target = _this select 1;
 _selectionName = _this select 2;
 _removeItem = _this select 3;
 
+if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
+    _caller removeWeapon "ACE_FakePrimaryWeapon";
+};
+
 [_caller,false] call FUNC(treatmentMutex);
 
 // TODO: BUG: if AI finishes treatment, it will also hide the icon for the player

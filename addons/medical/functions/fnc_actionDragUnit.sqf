@@ -17,6 +17,7 @@ Executes: call
 private ["_caller", "_unit", "_positionUnit", "_killOnDrop"];
 _caller = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _unit = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
+_killOnDrop = [_this, 2, false, [false]] call BIS_fnc_param;
 
 ["FUNC(actionDragUnit) has been called",2] call EFUNC(common,debug);
 
@@ -34,19 +35,30 @@ if (([_caller] call EFUNC(common,getCarriedObj)) != _unit && !(isNull ([_caller]
     [_caller,objNull] call EFUNC(common,carryObj);
     [_caller, false] call FUNC(treatmentMutex);
 };
-_caller action ["WeaponOnBack", _caller];
-_killOnDrop = false;
-if (!alive _unit) then {
-    _unit = [_unit,_caller] call EFUNC(common,makeCopyOfBody_F);
-    _killOnDrop = true;
+
+if (!alive _unit) exitwith {
+    [_caller, false] call FUNC(treatmentMutex);
+    [{
+        _this call FUNC(actionDragUnit);
+    }, [_caller, ([_unit,_caller] call EFUNC(common,makeCopyOfBody_F)), _killOnDrop], 0.2, 0.2] call EFUNC(common,waitAndExecute);
 };
+
+
+if (primaryWeapon _caller == "") then {
+    _caller addWeapon "ACE_FakePrimaryWeapon";
+};
+_caller selectWeapon (primaryWeapon _unit);
+
+_unit setDir (getDir _unit + 180) % 360;
+_unit setPos ((getPos _unit) vectorAdd ((vectorDir _caller) vectorMultiply 1.5));
 
 if !([_caller,_unit,[0.125, 1.007, 0]] call EFUNC(common,carryObj)) exitwith {
     [_caller, false] call FUNC(treatmentMutex);
+    // well something went horribly wrong here, should never reach this, since we do checks above..
+
 };
 
-_unit setDir 180;
-[_unit,"AinjPpneMstpSnonWrflDb",true] call EFUNC(common,doAnimation);
+[_unit,"AinjPpneMstpSnonWrflDb",  1, true] call EFUNC(common,doAnimation);
 
 _caller selectWeapon (primaryWeapon _caller); // if no primairy weapon, add a fake one first
 if (currentWeapon _caller == primaryWeapon _caller) then {
@@ -55,8 +67,9 @@ if (currentWeapon _caller == primaryWeapon _caller) then {
     [_caller,"AcinPknlMstpSnonWnonDnon", 1] call EFUNC(common,doAnimation);
 };
 
+
 _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
-[1,
+[2,
     {((vehicle (_this select 0) != (_this select 0)) ||((getPos (_this select 0)) distance ((_this select 0) getvariable QGVAR(StartingPositionHandleTreatment)) < 1.5))}, // the condition
     {
         private ["_caller","_target"];

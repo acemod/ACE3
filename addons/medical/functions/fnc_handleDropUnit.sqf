@@ -22,12 +22,11 @@ _dragging = _params select 3;
 
 if ((isNull ([_caller] call EFUNC(common,getCarriedObj))) || !([_caller] call EFUNC(common,isAwake)) || (vehicle _caller != _caller)) then {
 
+    if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
+        _caller removeWeapon "ACE_FakePrimaryWeapon";
+    };
+
     [_target, false] call EFUNC(common,disableAI_f);
-
-    [format["fnc_handleDropUnit: %1 - additional dropping of object", _caller]] call EFUNC(common,debug);
-    [_caller,ObjNull] call EFUNC(common,carryObj);
-
-    [format["fnc_handleDropUnit: %1 - Clearing parameters", _caller]] call EFUNC(common,debug);
     _caller setvariable[QGVAR(onStartMovingUnitParams), nil];
 
     // handle the drag & carry administration
@@ -39,32 +38,30 @@ if ((isNull ([_caller] call EFUNC(common,getCarriedObj))) || !([_caller] call EF
         _caller setvariable [QGVAR(carrying),nil,true];
     };
 
-    [format["fnc_handleDropUnit: %1 - Reset the variables", _caller]] call EFUNC(common,debug);
+    // This is for good messure, the object should already have been dropped if it ever reaches this
+    [_caller,ObjNull] call EFUNC(common,carryObj);
 
     // handle the drag & carry animiations
     if ([_caller] call EFUNC(common,isAwake) && (vehicle _caller == _caller)) then {
-        if (vehicle _caller == _caller) then {
-            [_caller,"amovpercmstpsraswrfldnon_amovpknlmstpslowwrfldnon", 1] call EFUNC(common,doAnimation);
-            [format["Placing animation: getting normal again", _caller]] call EFUNC(common,debug);
-        };
+        [_caller,"amovpercmstpsraswrfldnon_amovpknlmstpslowwrfldnon", 1] call EFUNC(common,doAnimation);
     };
 
-    if ([_target] call EFUNC(common,isAwake)) then {
-        if (vehicle _target == _target) then {
-            if (_dragging) then {
-                [_target,"AinjPpneMstpSnonWrflDb_release",1] call EFUNC(common,doAnimation);
-            } else {
-                [_target,"",1] call EFUNC(common,doAnimation);
-            };
+    if (vehicle _target == _target) then {
+        if (_dragging) then {
+            [_target,"AinjPpneMstpSnonWrflDb_release", 1, true] call EFUNC(common,doAnimation);
         } else {
-            [_target,"", 1] call EFUNC(common,doAnimation); // TODO play animation for the current seat instead
+            [_target,"AinjPfalMstpSnonWrflDnon_carried_Down", 1, true] call EFUNC(common,doAnimation);
         };
     } else {
-        // TODO play animation for dropping first.
-        [_target,([_target] call EFUNC(common,getDeathAnim)), 1] call EFUNC(common,doAnimation);
+        if ([_target] call EFUNC(common,isAwake)) then {
+            [_target,"", 1] call EFUNC(common,doAnimation); // TODO play animation for the current seat instead
+        } else {
+            // this might not work properly
+            [_target,([_target] call EFUNC(common,getDeathAnim)), 0] call EFUNC(common,doAnimation);
+        };
     };
 
-
+    // Ensure that the unit does not get dropped through the floor of a building
     if (!surfaceIsWater getPos _caller) then {
         [{
             EXPLODE_3_PVT(_this,_caller,_target,_killOnDrop);
@@ -78,9 +75,8 @@ if ((isNull ([_caller] call EFUNC(common,getCarriedObj))) || !([_caller] call EF
             if (_killOnDrop) then {
                 _unit setDamage 1;
             };
-
+            [format["fnc_handleDropUnit: %1 - passed setPosATL fix", _caller]] call EFUNC(common,debug);
         }, [_caller,_target,_killOnDrop], 0.5, 0.5] call EFUNC(common,waitAndExecute);
-
     } else {
         if (_killOnDrop) then {
             _unit setDamage 1;
