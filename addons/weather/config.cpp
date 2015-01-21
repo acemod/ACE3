@@ -13,6 +13,8 @@ class CfgPatches {
 
 #include "CfgEventhandlers.hpp"
 
+#include "CfgWorlds.hpp"
+
 /*class ACE_Parameters_Numeric {
   GVAR(XXXX) = 100;
 };
