@@ -79,6 +79,10 @@ if(GVAR(wind_period_count) > GVAR(wind_next_period)) then {
     publicVariable "ACE_WIND_PARAMS";
 };
 
+// Sync misc. parameters
+ACE_MISC_PARAMS = [lightnings, rainbow, fogParams];
+publicVariable "ACE_MISC_PARAMS";
+
 // @todo: Temperature simulation
 
 
