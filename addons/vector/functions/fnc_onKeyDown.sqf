@@ -14,12 +14,33 @@ _fnc_setPFH = {
         GVAR(holdKeyHandler) = -1;
     };
 
-    GVAR(currentMode) = _this;//
+    GVAR(currentMode) = _this;
     GVAR(holdKeyHandler) = [FUNC(onKeyHold), 0, _this] call CBA_fnc_addPerFrameHandler;
 };
 
 switch (_this select 0) do {
     case ("azimuth"): {
+
+        // handle input in option menu
+        if (GVAR(currentMode) == "settings") exitWith {
+            if (diag_tickTime < GVAR(keyDownTimeMenu) + 0.5) exitWith {};
+
+            if (diag_tickTime < GVAR(keyDownTimeAzimuth) + 0.5) then {
+                GVAR(keyDownTabCountAzimuth) = (GETGVAR(keyDownTabCountAzimuth,0)) + 1;
+            } else {
+                GVAR(keyDownTabCountAzimuth) = 1;
+            };
+
+            GVAR(keyDownTimeAzimuth) = diag_tickTime;
+
+            systemChat str GVAR(keyDownTabCountAzimuth);//
+        };
+
+        if (GVAR(currentMode) == "config") exitWith {
+            if (diag_tickTime < GVAR(keyDownTimeMenu) + 0.5) exitWith {};
+
+            systemChat "azi in config";
+        };
 
         // prevent additinal modifier input if advanced mode it set, spaghetti
         if (GETGVAR(isKeyDownDistance,false) && {GETGVAR(currentMode,"") in ["relative_distance", "relative_height+length"]}) exitWith {};
@@ -37,9 +58,13 @@ switch (_this select 0) do {
             GVAR(keyDownTabCountAzimuth) = 1;
         };
 
-        // open config menu
+        // open settings menu
         if (GVAR(keyDownTabCountAzimuth) == 5) exitWith {
-            systemChat "0";
+            GVAR(keyDownTimeMenu) = diag_tickTime;
+            GVAR(keyDownTimeAzimuth) = diag_tickTime;
+            GVAR(keyDownTabCountAzimuth) = 0;
+            ["settings"] call FUNC(showText);
+            "settings" call _fnc_setPFH;
         };
 
         if (diag_tickTime < GVAR(keyDownTimeAzimuth) + 0.5) exitWith {
@@ -66,6 +91,28 @@ switch (_this select 0) do {
 
     case ("distance"): {
 
+        // handle input in option menu
+
+        if (GVAR(currentMode) == "config") exitWith {
+            if (diag_tickTime < GVAR(keyDownTimeMenu) + 0.5) exitWith {};
+
+            if (diag_tickTime < GVAR(keyDownTimeDistance) + 0.5) then {
+                GVAR(keyDownTabCountDistance) = (GETGVAR(keyDownTabCountDistance,0)) + 1;
+            } else {
+                GVAR(keyDownTabCountDistance) = 1;
+            };
+
+            GVAR(keyDownTimeDistance) = diag_tickTime;
+
+            systemChat str GVAR(keyDownTabCountDistance);//
+        };
+
+        if (GVAR(currentMode) == "settings") exitWith {
+            if (diag_tickTime < GVAR(keyDownTimeMenu) + 0.5) exitWith {};
+
+            systemChat "dis in settings"
+        };
+
         // prevent additinal modifier input if advanced mode it set, spaghetti
         if (GETGVAR(isKeyDownAzimuth,false) && {GETGVAR(currentMode,"") in ["relative_azimuth+distance", "fall_of_short"]}) exitWith {};
 
@@ -89,7 +136,12 @@ switch (_this select 0) do {
 
         // open config menu
         if (GVAR(keyDownTabCountDistance) == 5) exitWith {
-            systemChat "1";
+            GVAR(keyDownTimeMenu) = diag_tickTime;
+            GVAR(keyDownTimeDistance) = diag_tickTime;
+            GVAR(keyDownTabCountDistance) = 0;
+            GVAR(configTemp) = [GVAR(useFeet), GVAR(useMil)];
+            ["config"] call FUNC(showText);
+            "config" call _fnc_setPFH;
         };
 
         if (diag_tickTime < GVAR(keyDownTimeDistance) + 0.5) exitWith {

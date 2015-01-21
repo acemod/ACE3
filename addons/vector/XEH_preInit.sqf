@@ -24,6 +24,7 @@ PREP(showRelativeAzimuthDistance);
 PREP(showRelativeDistance);
 PREP(showRelativeHeightLength);
 PREP(showFallOfShort);
+PREP(showText);
 
 GVAR(holdKeyHandler) = -1;
 GVAR(isKeyDownAzimuth) = false;

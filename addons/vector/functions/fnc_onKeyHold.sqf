@@ -7,6 +7,16 @@ PFH executed while holding a vector key down.
 */
 #include "script_component.hpp"
 
+if (currentWeapon ACE_player != "ACE_Vector") exitWith {
+    [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+    GVAR(currentMode) = "";
+
+    if (GVAR(holdKeyHandler) > -1) then {
+        GVAR(holdKeyHandler) = -1;
+    };
+};
+
 switch (_this select 0) do {
     case ("azimuth"): {
 
@@ -209,6 +219,57 @@ switch (_this select 0) do {
             };
         };
 
+    };
+
+    case ("settings"): {
+        if (diag_tickTime < GVAR(keyDownTimeMenu) + 0.5) exitWith {
+            GVAR(keyDownTimeAzimuth) = diag_tickTime;
+        };
+
+        /*[["meter", "feet"] select GVAR(useFeet)] call FUNC(showText);
+        [["deg",   "mil" ] select GVAR(useMil)]  call FUNC(showText);*/
+
+        if (GVAR(keyDownTabCountAzimuth) > 0 && {diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.5}) exitWith {
+            systemChat "abort";
+
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+            GVAR(currentMode) = "";
+
+            if (GVAR(holdKeyHandler) > -1) then {
+                GVAR(holdKeyHandler) = -1;
+            };
+        };
+        //show current mode
+    };
+
+    case ("config"): {
+        if (diag_tickTime < GVAR(keyDownTimeMenu) + 0.5) exitWith {
+            GVAR(keyDownTimeDistance) = diag_tickTime;
+        };
+
+        [["meter", "feet"] select (GVAR(configTemp) select 0)] call FUNC(showText);
+        [["deg",   "mil" ] select (GVAR(configTemp) select 0)]  call FUNC(showText);
+
+        if (GVAR(keyDownTabCountDistance) > 0 && {diag_tickTime > GVAR(keyDownTimeDistance) + 0.5}) exitWith {
+            if (GVAR(keyDownTabCountDistance) >= 5) exitWith {
+                GVAR(useFeet) = GVAR(configTemp) select 0;
+                GVAR(useMil) = GVAR(configTemp) select 1;
+
+                systemChat "set";
+            };
+
+            systemChat "abort";
+
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+            GVAR(currentMode) = "";
+
+            if (GVAR(holdKeyHandler) > -1) then {
+                GVAR(holdKeyHandler) = -1;
+            };
+        };
+        //show current mode
     };
 
 };
