@@ -19,24 +19,21 @@ class CfgAddons {
     };
   };
 };
-//PARAMS_4(_name,_localizedName,_localizedDescription,_defaultValue);
 class ACE_Options {
-	class GVAR(testOption) {
-		displayName = "Config Test";
-		description = "Config Description";
-		default = 1;
-		values[] = {"Yeah", "Naa"};
-	};
+  class GVAR(testOption) {
+    displayName = "Config Test";
+    description = "Config Description";
+    default = 1;
+    values[] = {"Yeah", "Naa"};
+  };
 };
-
 class ACE_Colors {
-	class GVAR(testColor) {
-		displayName = "Color Config Test";
-		description = "Color Config Description";
-		default[] = {0,1,2,3};
-	};
+  class GVAR(testColor) {
+    displayName = "Color Config Test";
+    description = "Color Config Description";
+    default[] = {0,1,1,1};
+  };
 };
-
 
 
 #include "CfgEventHandlers.hpp"
