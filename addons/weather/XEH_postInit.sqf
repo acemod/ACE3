@@ -4,9 +4,13 @@
 "ACE_WIND_PARAMS" addPublicVariableEventHandler { GVAR(wind_period_start_time) = time; };
 "ACE_RAIN_PARAMS" addPublicVariableEventHandler { GVAR(rain_period_start_time) = time; };
 
-_fnc_uptadeWind = {
+simulWeatherSync;
+_fnc_updateWind = {
     _wind = ([] call FUNC(getWind));
+    ACE_wind = [_wind select 0, _wind select 1];
     setWind [_wind select 0, _wind select 1, true];
+    2 setGusts 0;
+    //systemChat format ["w: %1 %2, ACE_wind: %1 %2", [wind select 0, wind select 1, ACE_wind select 0, ACE_wind select 1]];
     // _nWind = wind;
     // _pW = [_nWind select 0, _nWind select 1, 0] call CBA_fnc_vect2polar;
     // _pAW = [_wind select 0, _wind select 1, 0] call CBA_fnc_vect2polar;
@@ -14,7 +18,7 @@ _fnc_uptadeWind = {
     // diag_log text format["ACE_WIND,%1,%2,%3,%4,%5", time, _pW select 1, _pw select 0, _pAW select 1, _pAW select 0];
 };
 
-[_fnc_uptadeWind, 1, []] call CBA_fnc_addPerFrameHandler;
+[_fnc_updateWind, 1, []] call CBA_fnc_addPerFrameHandler;
 
 _fnc_updateRain = {
     if(GVAR(enableRain)) then {
@@ -30,4 +34,4 @@ _fnc_updateRain = {
     };
 };
 
-[_fnc_updateRain, 0, []] call CBA_fnc_addPerFrameHandler;
+[_fnc_updateRain, 2, []] call CBA_fnc_addPerFrameHandler;

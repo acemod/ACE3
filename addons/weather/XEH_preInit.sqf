@@ -7,8 +7,9 @@ LOG(MSG_INIT);
 PREP(serverController);
 PREP(getWind);
 
+ACE_wind = [0, 0];
 
-GVAR(enableRain) = false;
+GVAR(enableRain) = true;
 
 GVAR(overcast_multiplier) = 1;
 
