@@ -17,19 +17,20 @@ _ctrlList = _settingsMenu displayCtrl 200;
 
 _collection = switch (GVAR(optionMenu_openTab)) do {
 case MENU_TAB_OPTIONS: {GVAR(clientSideOptions)};
+case MENU_TAB_COLORS: {GVAR(clientSideColors)};
 	default {[]};
 };
 
 if (count _collection > 0) then {
-	_selectedSetting =  (lbCurSel _ctrlList);
-	if (_selectedSetting > (count _collection)) then {
-		_selectedSetting = count _collection  - 1;
+	_settingIndex =  (lbCurSel _ctrlList);
+	if (_settingIndex > (count _collection)) then {
+		_settingIndex = count _collection  - 1;
 	};
 
-	if (_selectedSetting < 0) exitwith {
-		_selectedSetting = 0;
+	if (_settingIndex < 0) exitwith {
+		_settingIndex = 0;
 	};
-	_setting = _collection select _selectedSetting;
+	_setting = _collection select _settingIndex;
 
 	_entryName = _setting select 0;
 	_localizedName = _setting select 1;
@@ -38,57 +39,29 @@ if (count _collection > 0) then {
 	if (_localizedName == "") then {_localizedName = _entryName;};
 	(_settingsMenu displayCtrl 250) ctrlSetText _localizedName;
 	(_settingsMenu displayCtrl 251) ctrlSetText _localizedDescription;
+	(_settingsMenu displayCtrl 300) ctrlSetText _entryName;
 
+	
+	
 	switch (GVAR(optionMenu_openTab)) do {
 	case (MENU_TAB_OPTIONS): {
 			_possibleValues = _setting select 3;
 			_settingsValue = _setting select 4;
+
 			lbClear 400;
-			_settingsText = (_possibleValues select _settingsValue); // expecting: value [[any, TEXT (DESCRIPTION)]]
-			(_settingsMenu displayCtrl 300) ctrlSetText _entryName;
-			{
-				lbAdd [400, _x];
-			} foreach _possibleValues;
+			{ lbAdd [400, _x]; } foreach _possibleValues;
 
 			(_settingsMenu displayCtrl 400) lbSetCurSel _settingsValue;
-
+		};	
+		case (MENU_TAB_COLORS): {
+		
+			_currentColor = _setting select 3;
+			
+			systemChat format ["here %1", _currentColor];
+			{
+				systemChat str [_x, (_currentColor select _forEachIndex)];
+				sliderSetPosition [_x, (_currentColor select _forEachIndex)];
+			} forEach [410, 411, 412, 413];
 		};
 	};
-	
-	
-	// if (GVAR(optionMenu_openTab) != MENU_TAB_OPTIONS) then {
-	// _keybinding = _setting select 1;
-
-	// _keyCode = _keybinding select 0;
-	// _shiftPressed = _keybinding select 1;
-	// _ctrlPressed = _keybinding select 2;
-	// _altPressed = _keybinding select 3;
-
-	// _keyBindingText = keyName _keyCode;
-	// if (_keyBindingText == '""') then {
-	// _keyBindingText = "No key assigned";
-	// };
-	// (_settingsMenu displayCtrl 300) ctrlSetText ("Key: " + _keyBindingText);
-
-	// lbClear 400;
-	// lbadd [400, "No"];
-	// lbadd [400, "Yes"];
-	// lbadd [400, "Ignore"];
-	// (_settingsMenu displayCtrl 400) lbSetCurSel _shiftPressed;
-	// (_settingsMenu displayCtrl 401) lbSetCurSel _ctrlPressed;
-	// (_settingsMenu displayCtrl 402) lbSetCurSel _altPressed;
-	// } else {
-	// _possibleValues = _setting select 1;
-	// _settingsValue = _setting select 2;
-
-	// lbClear 400;
-
-	// _settingsText = (_possibleValues select _settingsValue); // expecting: value [[any, TEXT (DESCRIPTION)]]
-	// (_settingsMenu displayCtrl 300) ctrlSetText ("Setting: " + _settingsText);
-	// {
-	// lbAdd [400, _x];
-	// } foreach _possibleValues;
-
-	// (_settingsMenu displayCtrl 400) lbSetCurSel _settingsValue;
-	// };
 };

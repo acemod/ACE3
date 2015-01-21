@@ -11,26 +11,30 @@
 
 PARAMS_3(_type,_name,_newValue);
 
-private ["_changed", "_collection"];
+private ["_changed"];
 
 _changed = false;
-_collection = [];
 
 switch (_type) do {
-case (MENU_TAB_OPTIONS): {_collection = GVAR(clientSideOptions);};
-case (MENU_TAB_COLORS): {_collection = GVAR(clientSideColors);};
-};
-
-systemChat format ["%1: %2", _name, count _collection];
-
-{
-	if ((_x select 0) == _name) then {
-		if (!((_x select 4) isEqualTo _newValue)) then {
-			_changed = true;
-			_x set [4, _newValue];  //Change current Value
-		};
+case (MENU_TAB_OPTIONS): {
+		{
+			if ((_x select 0) == _name) then {
+				if (!((_x select 4) isEqualTo _newValue)) then {
+					_changed = true;
+					_x set [4, _newValue];
+				};
+			};
+		} foreach GVAR(clientSideOptions);
 	};
-} foreach _collection;
+case (MENU_TAB_COLORS): {
+		{
+			if (((_x select 0) == _name) && {!((_x select 3) isEqualTo _newValue)}) then {
+				_changed = true;
+				_x set [3, _newValue];
+			};
+		} foreach GVAR(clientSideColors);
+	};
+};
 
 systemChat format ["%1: %2", _name, _changed];
 

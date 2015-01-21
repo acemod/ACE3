@@ -2,6 +2,7 @@
 
 ADDON = false;
 
+PREP(addClientSideColor);
 PREP(addClientSideOptions);
 PREP(loadFromProfile);
 PREP(onListBoxSettingsChanged);

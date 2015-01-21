@@ -11,27 +11,21 @@
 
 private ["_type", "_collection", "_default", "_lastSelected"];
 
+
 {
-	_type = _x;
-	_collection = [];
-	switch (_type) do {
-	case (MENU_TAB_OPTIONS): {_collection = GVAR(clientSideOptions);};
-	case (MENU_TAB_COLORS): {_collection = GVAR(clientSideColors);};
-	};
+	_name = _x select 0;
+	_default = _x select 5;
+	[MENU_TAB_OPTIONS, _name, _default] call FUNC(updateSetting);
+} forEach GVAR(clientSideOptions);	
 
-	{
-		_name = _x select 0;
-		_default = _x select 5;
-		
-		systemChat format ["Reseting %1 to %2", _name, _default];
-		[_type, _name, _default] call FUNC(updateSetting);
-	} forEach _collection;
-
-} forEach [MENU_TAB_OPTIONS, MENU_TAB_COLORS];
-
+{
+	_name = _x select 0;
+	_default = _x select 4;
+	[MENU_TAB_COLORS, _name, _default] call FUNC(updateSetting);
+} forEach GVAR(clientSideColors);
 
 _lastSelected = lbCurSel 200;
 [GVAR(optionMenu_openTab)] call FUNC(onListBoxShowSelectionChanged);
 if (_lastSelected != -1) then {
-  lbSetCurSel [200, _lastSelected];
+	lbSetCurSel [200, _lastSelected];
 };

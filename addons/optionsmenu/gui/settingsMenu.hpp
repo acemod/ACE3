@@ -190,29 +190,31 @@ class ACE_settingsMenu {
 
 		class sliderBar1: RscXSliderH {
 			idc = 410;
-			x = "31.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
+			x = "28.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			y = "7.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			w = "7 * (((safezoneW / safezoneH) min 1.2) / 40)";
+			w = "10 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "0.75 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			onSliderPosChanged = QUOTE(_this call FUNC(onSliderPosChanged));
+			color[] = {1,0,0,0.4};
+			colorActive[] = {1,0,0,1};
 		};
 		class sliderBar2: sliderBar1 {
 			idc = 411;
 			y = "8.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			h = "0.75 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			onSliderPosChanged = QUOTE(_this call FUNC(onSliderPosChanged));
+			color[] = {0,1,0,0.4};
+			colorActive[] = {0,1,0,1};
 		};
 		class sliderBar3: sliderBar1 {
 			idc = 412;
 			y = "9.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			h = "0.75 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			onSliderPosChanged = QUOTE(_this call FUNC(onSliderPosChanged));
+			color[] = {0,0,1,0.4};
+			colorActive[] = {0,0,1,1};
 		};
 		class sliderBar4: sliderBar1 {
 			idc = 413;
 			y = "10 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			h = "0.75 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			onSliderPosChanged = QUOTE(_this call FUNC(onSliderPosChanged));
+			color[] = {1,1,1,0.4};
+			colorActive[] = {1,1,1,1};
 		};
 		
 		
@@ -260,15 +262,13 @@ class ACE_settingsMenu {
 			text = "Fix Animation";
 			x = "7.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			// action = "if ([player] call ACE_fnc_canInteract && {animationState player == 'deadState' || animationState player == 'unconscious'} && {(vehicle player == player)}) then { [player, 'amovppnemstpsnonwnondnon'] call ACE_fnc_broadcastAnim; };";
+			action = "hint 'todo???'";
 		};		
 		
 		class action_reset: actionClose {
 			idc = 1100;
 			text = "Reset All";
-			x = "7.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-			y = "22.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			w = "6 * (((safezoneW / safezoneH) min 1.2) / 40)";
-			h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			x = "14 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			action = QUOTE([] call FUNC(resetSettings));
 		}; 
 	};
