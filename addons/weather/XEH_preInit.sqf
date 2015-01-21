@@ -14,7 +14,7 @@ GVAR(enableRain) = true;
 GVAR(overcast_multiplier) = 1;
 
 GVAR(wind_initial_dir) = (random 360);
-GVAR(wind_initial_speed) = (overcast*15)+(random (overcast*5)) max 1;
+GVAR(wind_initial_speed) = (overcast*5)+(random (overcast*5)) max 1;
 GVAR(wind_mean_speed) = GVAR(wind_initial_speed);
 GVAR(wind_mean_dir) = GVAR(wind_initial_dir);
 GVAR(wind_current_speed) = GVAR(wind_initial_speed);
