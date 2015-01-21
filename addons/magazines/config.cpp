@@ -2,12 +2,12 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {"ACE_TargetWall"};
+        units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"TaoSensai","commy2"};
-        authorUrl = "https://github.com/Taosenai/tmr";
+        author[] = {"commy2"};
+        authorUrl = "https://github.com/commy2";
         VERSION_CONFIG;
     };
 };
