@@ -1,6 +1,6 @@
 class ACE_Open_SettingsMenu_BtnBase : ACE_gui_buttonBase {
 	idc = -1;
-	text = "Configure [CSE]";
+	text = "$STR_ACE_OptionsMenu_OpenConfigMenu";
 	x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX)";
 	y = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
 	w = "14 * (((safezoneW / safezoneH) min 1.2) / 40)";

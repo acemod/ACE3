@@ -49,7 +49,7 @@ class ACE_settingsMenu {
 			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 			colorText[] = {0.95, 0.95, 0.95, 0.75};
 			colorBackground[] = {0,0,0,0};
-			text = "ACE Settings";
+			text = "$STR_ACE_OptionsMenu_OpenConfigMenu";
 		};
 
 
@@ -72,7 +72,7 @@ class ACE_settingsMenu {
 
 		class selectionAction_1: ACE_gui_buttonBase {
 			idc = 1000;
-			text = "Settings";
+			text = "$STR_ACE_OptionsMenu_TabOptions";
 			x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			y = "2.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "9.5 * (((safezoneW / safezoneH) min 1.2) / 40)";
@@ -98,7 +98,7 @@ class ACE_settingsMenu {
 		
 		class selectionAction_2: selectionAction_1 {
 			idc = 1001;
-			text = "Colors";
+			text = "$STR_ACE_OptionsMenu_TabColors";
 			x = "10.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			action = QUOTE([MENU_TAB_COLORS] call FUNC(onListBoxShowSelectionChanged););
 		};
@@ -144,7 +144,7 @@ class ACE_settingsMenu {
 			y = "6.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "10 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			text = "variableName in quotes";
+			text = "";
 			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.6)";
 		};
 
@@ -153,31 +153,6 @@ class ACE_settingsMenu {
 			y = "7.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			text = "Setting:";
 			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-		};
-		class ColorLabel_1: Label2 {
-			idc = 310;
-			y = "7.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			h = "0.75 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			text = "R:";
-			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.75)";
-		};		
-		class ColorLabel_2: Label2 {
-			idc = 311;
-			y = "8.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			text = "G:";
-			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.75)";
-		};		
-		class ColorLabel_3: Label2 {
-			idc = 312;
-			y = "9.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			text = "B:";
-			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.75)";
-		};		
-		class ColorLabel_4: Label2 {
-			idc = 313;
-			y = "10 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			text = "A:";
-			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.75)";
 		};
 		class comboBox1: ACE_gui_comboBoxBase {
 			idc = 400;
@@ -190,9 +165,9 @@ class ACE_settingsMenu {
 
 		class sliderBar1: RscXSliderH {
 			idc = 410;
-			x = "28.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
+			x = "27.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			y = "7.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			w = "10 * (((safezoneW / safezoneH) min 1.2) / 40)";
+			w = "11 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "0.75 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			onSliderPosChanged = QUOTE(_this call FUNC(onSliderPosChanged));
 			color[] = {1,0,0,0.4};
@@ -217,9 +192,6 @@ class ACE_settingsMenu {
 			colorActive[] = {1,1,1,1};
 		};
 		
-		
-		
-
 		class labelDesc: ACE_gui_staticBase {
 			idc = 251;
 			x = "27.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
@@ -234,7 +206,7 @@ class ACE_settingsMenu {
 		
 		class actionClose: ACE_gui_buttonBase {
 			idc = 10;
-			text = "Close";
+			text = "$STR_DISP_CLOSE";
 			x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			y = "22.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "6 * (((safezoneW / safezoneH) min 1.2) / 40)";
@@ -259,7 +231,7 @@ class ACE_settingsMenu {
 
 		class action_animation: actionClose {
 			idc = 1100;
-			text = "Fix Animation";
+			text = "$STR_ACE_OptionsMenu_FixAnimation";
 			x = "7.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			// action = "if ([player] call ACE_fnc_canInteract && {animationState player == 'deadState' || animationState player == 'unconscious'} && {(vehicle player == player)}) then { [player, 'amovppnemstpsnonwnondnon'] call ACE_fnc_broadcastAnim; };";
 			action = "hint 'todo???'";
@@ -267,7 +239,7 @@ class ACE_settingsMenu {
 		
 		class action_reset: actionClose {
 			idc = 1100;
-			text = "Reset All";
+			text = "$STR_ACE_OptionsMenu_ResetAll";
 			x = "14 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
 			action = QUOTE([] call FUNC(resetSettings));
 		}; 

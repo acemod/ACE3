@@ -57,10 +57,8 @@ if (count _collection > 0) then {
 		
 			_currentColor = _setting select 3;
 			
-			systemChat format ["here %1", _currentColor];
 			{
-				systemChat str [_x, (_currentColor select _forEachIndex)];
-				sliderSetPosition [_x, (_currentColor select _forEachIndex)];
+				sliderSetPosition [_x, (255 * (_currentColor select _forEachIndex))];
 			} forEach [410, 411, 412, 413];
 		};
 	};

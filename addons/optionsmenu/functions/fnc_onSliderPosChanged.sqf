@@ -12,7 +12,7 @@
 private ["_newColor", "_settingIndex"];
 _newColor = [];
 {
-	_newColor pushBack (sliderPosition _x);
+	_newColor pushBack ((sliderPosition _x) / 255);
 } forEach [410, 411, 412, 413];
 
 _settingIndex =  lbCurSel 200;
