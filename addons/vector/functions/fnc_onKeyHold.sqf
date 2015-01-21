@@ -293,12 +293,15 @@ switch (_this select 0) do {
             switch (GVAR(configTemp)) do {
                 case (0): {
                     [false] call FUNC(adjustBrightness);
+                    [false] call FUNC(showReticle);
                 };
                 case (1): {
                     [false] call FUNC(adjustBrightness);
+                    [true] call FUNC(showReticle);
                 };
                 case (2): {
                     [true] call FUNC(adjustBrightness);
+                    [true] call FUNC(showReticle);
                 };
             };
 

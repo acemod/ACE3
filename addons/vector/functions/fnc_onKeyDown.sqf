@@ -7,6 +7,22 @@ Handles pressing the special vector keys.
 */
 #include "script_component.hpp"
 
+// set vector config settings
+switch (GVAR(modeReticle)) do {
+    case (0): {
+        [false] call FUNC(adjustBrightness);
+        [false] call FUNC(showReticle);
+    };
+    case (1): {
+        [false] call FUNC(adjustBrightness);
+        [true] call FUNC(showReticle);
+    };
+    case (2): {
+        [true] call FUNC(adjustBrightness);
+        [true] call FUNC(showReticle);
+    };
+};
+
 private "_fnc_setPFH";
 _fnc_setPFH = {
     if (GVAR(holdKeyHandler) > -1) then {

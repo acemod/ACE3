@@ -27,6 +27,7 @@ PREP(showFallOfShort);
 PREP(showText);
 PREP(nextMode);
 PREP(adjustBrightness);
+PREP(showReticle);
 
 GVAR(holdKeyHandler) = -1;
 GVAR(isKeyDownAzimuth) = false;
