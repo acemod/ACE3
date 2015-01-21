@@ -46,13 +46,31 @@ _fnc_updateRain = {
 
 // Update Temperature
 _fnc_updateTemperature = {
-    _annualCoef = 0.5 - 0.5 * cos(360 * dateToNumber date);
-    _dailyTempMean =      GVAR(TempMeanJan)      * (1 - _annualCoef) + GVAR(TempMeanJul)      * _annualCoef;
-    _dailyTempAmplitude = GVAR(TempAmplitudeJan) * (1 - _annualCoef) + GVAR(TempAmplitudeJul) * _annualCoef;
+    _time = daytime;
+    _month = date select 1;
 
+    // Temperature
     _hourlyCoef = -0.5 * sin(360 * ((3 + (date select 3))/24 + (date select 4)/1440));
 
-    GVAR(currentTemperature) = _dailyTempMean + _hourlyCoef * _dailyTempAmplitude - 2 * humidity - 4 * overcast;
+    GVAR(currentTemperature) = (GVAR(TempDay) select (_month - 1)) * (1 - _hourlyCoef) + (GVAR(TempNight) select (_month - 1)) * _hourlyCoef;
+    GVAR(currentTemperature) = GVAR(currentTemperature) + GVAR(currentTemperature) - 2 * humidity - 4 * overcast;
+    GVAR(currentTemperature) = round(GVAR(currentTemperature) * 10) / 10;
+
+    // Humidity
+    GVAR(currentHumidity) = (GVAR(Humidity) select _month) / 100;
+    GVAR(currentHumidity) = GVAR(currentHumidity)
+
+    if (rain > 0 && overcast > 0.7) then {
+        GVAR(currentHumidity) = 1;
+    } else {
+        _avgTemperature = ((GVAR(TempDay) select (_month - 1)) + (GVAR(TempNight) select (_month - 1))) / 2;
+        _pS1 = 6.112 * exp((17.62 * _avgTemperature) / (243.12 + _avgTemperature));
+        _PS2 = 6.112 * exp((17.62 * GVAR(currentTemperature)) / (243.12 + GVAR(currentTemperature)));
+        GVAR(currentHumidity) = GVAR(currentHumidity) * _PS1 / _PS2;
+    };
+    GVAR(currentHumidity) = 0 max GVAR(currentHumidity) min 1;
+
+    // @todo: take altitude and humidity into account
     GVAR(currentRelativeDensity) = (273.15 + 20) / (273.15 + GVAR(currentTemperature));
 };
 [_fnc_updateTemperature, 20, []] call CBA_fnc_addPerFrameHandler;

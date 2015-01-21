@@ -5,6 +5,7 @@ ADDON = false;
 LOG(MSG_INIT);
 
 PREP(serverController);
+PREP(getMapData);
 PREP(getWind);
 
 
@@ -38,20 +39,7 @@ GVAR(wind_major_period_count) = 0;
 GVAR(wind_total_time) = 0;
 GVAR(wind_period_start_time) = time;
 
-// Temperature variables
-if (isNumber (configFile >> "CfgWorlds" >> worldName >> "AGM_TempMeanJan")) then {
-    GVAR(TempMeanJan) = getNumber (configFile >> "CfgWorlds" >> worldName >> "ACE_TempMeanJan");
-    GVAR(TempMeanJul) = getNumber (configFile >> "CfgWorlds" >> worldName >> "ACE_TempMeanJul");
-    GVAR(TempAmplitudeJan) = getNumber (configFile >> "CfgWorlds" >> worldName >> "ACE_TempAmplitudeJan");
-    GVAR(TempAmplitudeJul) = getNumber (configFile >> "CfgWorlds" >> worldName >> "ACE_TempAmplitudeJul");
-} else {
-    _lat = - getNumber (configFile >> "CfgWorlds" >> worldName >> "latitude");
-    if (_lat == 0) then {_lat = 0.1;};
-    _yearlyTempMean = 28 min (28 - (abs(_lat) - 23.5) * (3.14159/180) * 6371 / 145);
-    GVAR(TempMeanJan) = _yearlyTempMean - _lat / abs(_lat) * ((abs(_lat) max 25) - 25) * 30 / 65;
-    GVAR(TempMeanJul) = _yearlyTempMean + _lat / abs(_lat) * ((abs(_lat) max 25) - 25) * 30 / 65;
-    GVAR(TempAmplitudeJan) = 10;
-    GVAR(TempAmplitudeJul) = 10;
-};
+// Init weather variables, in case they are needed before postInit
+call FUNC(getMapData);
 
 ADDON = true;
