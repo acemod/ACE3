@@ -9,6 +9,7 @@
  */
 #include "script_component.hpp"
 
+private ["_currentValue"];
 PARAMS_4(_name,_localizedName,_localizedDescription,_defaultValue);
 
 GVAR(clientSideColors) pushBack [_name, _localizedName, _localizedDescription, [], _defaultValue];

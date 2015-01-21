@@ -1,23 +1,23 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-	class ADDON {
-		units[] = {};
-		weapons[] = {};
-		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = {"ace_common"};
-		author[] = {"Combat Space Enhancement"};
-		authorUrl = "http://csemod.com";
-		VERSION_CONFIG;
-	};
+  class ADDON {
+    units[] = {};
+    weapons[] = {};
+    requiredVersion = REQUIRED_VERSION;
+    requiredAddons[] = {"ace_common"};
+    author[] = {"Combat Space Enhancement"};
+    authorUrl = "http://csemod.com";
+    VERSION_CONFIG;
+  };
 };
 
 class CfgAddons {
-	class PreloadAddons {
-		class ADDON {
-			list[] = {QUOTE(ADDON)};
-		};
-	};
+  class PreloadAddons {
+    class ADDON {
+      list[] = {QUOTE(ADDON)};
+    };
+  };
 };
 
 #include "CfgEventHandlers.hpp"

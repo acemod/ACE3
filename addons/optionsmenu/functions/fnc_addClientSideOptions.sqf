@@ -9,6 +9,7 @@
  */
 #include "script_component.hpp"
 
+private ["_currentValue"];
 PARAMS_5(_name,_localizedName,_localizedDescription,_possibleValues,_defaultValue);
 
 GVAR(clientSideOptions) pushBack [_name, _localizedName, _localizedDescription, _possibleValues, -1, _defaultValue];

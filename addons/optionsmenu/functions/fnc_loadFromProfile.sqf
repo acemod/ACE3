@@ -1,15 +1,15 @@
 /**
- * fnc_loadFromProfile.sqf
- * @Descr: N/A
- * @Author: Glowbal
- *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
- */
+* fnc_loadFromProfile.sqf
+* @Descr: N/A
+* @Author: Glowbal
+*
+* @Arguments: []
+* @Return:
+* @PublicAPI: false
+*/
 #include "script_component.hpp"
 
-private ["_settingValue"];
+private ["_typeString", "_settingValue", "_badData"];
 PARAMS_3(_type,_name,_default);
 
 _typeString = "";
@@ -22,10 +22,10 @@ _settingValue = profileNamespace getvariable [(format ["ace_%1_%2", _typeString,
 
 _badData = isNil "_settingValue";
 if (!_badData) then {
-	switch (_type) do {
-		case (MENU_TAB_OPTIONS): {_badData = ((typeName _settingValue) != (typeName 0));};
-		case (MENU_TAB_COLORS): {_badData = (((typeName _settingValue) != (typeName [])) || {(count _settingValue) != 4});};
-	};
+  switch (_type) do {
+  case (MENU_TAB_OPTIONS): {_badData = ((typeName _settingValue) != (typeName 0));};
+  case (MENU_TAB_COLORS): {_badData = (((typeName _settingValue) != (typeName [])) || {(count _settingValue) != 4});};
+  };
 };
 if (_badData) then {
   _settingValue = _default;
