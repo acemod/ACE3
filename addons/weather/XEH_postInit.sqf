@@ -9,6 +9,8 @@
     30 setFog        (ACE_MISC_PARAMS select 2);
 };
 
+
+// Update Wind
 simulWeatherSync;
 _fnc_updateWind = {
     ACE_wind = [] call FUNC(getWind);
@@ -20,9 +22,10 @@ _fnc_updateWind = {
 
     //systemChat format ["w:%1 %2,ACE_w:%1 %2, w", [wind select 0, wind select 1, ACE_wind select 0, ACE_wind select 1]];
 };
-
 [_fnc_updateWind, 1, []] call CBA_fnc_addPerFrameHandler;
 
+
+// Update Rain
 _fnc_updateRain = {
     if(GVAR(enableRain)) then {
         if(!isNil "ACE_RAIN_PARAMS" && {!isNil QGVAR(rain_period_start_time)}) then {
@@ -36,5 +39,18 @@ _fnc_updateRain = {
         };
     };
 };
-
 [_fnc_updateRain, 2, []] call CBA_fnc_addPerFrameHandler;
+
+
+// Update Temperature
+_fnc_updateTemperature = {
+    _annualCoef = 0.5 - 0.5 * cos(360 * dateToNumber date);
+    _dailyTempMean =      GVAR(TempMeanJan)      * (1 - _annualCoef) + GVAR(TempMeanJul)      * _annualCoef;
+    _dailyTempAmplitude = GVAR(TempAmplitudeJan) * (1 - _annualCoef) + GVAR(TempAmplitudeJul) * _annualCoef;
+
+    _hourlyCoef = -0.5 * sin(360 * ((3 + (date select 3))/24 + (date select 4)/1440));
+
+    GVAR(currentTemperature) = _dailyTempMean + _hourlyCoef * _dailyTempAmplitude - 2 * humidity - 4 * overcast;
+    GVAR(currentRelativeDensity) = (273.15 + 20) / (273.15 + GVAR(currentTemperature));
+};
+[_fnc_updateTemperature, 20, []] call CBA_fnc_addPerFrameHandler;

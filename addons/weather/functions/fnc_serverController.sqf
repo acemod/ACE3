@@ -83,8 +83,5 @@ if(GVAR(wind_period_count) > GVAR(wind_next_period)) then {
 ACE_MISC_PARAMS = [lightnings, rainbow, fogParams];
 publicVariable "ACE_MISC_PARAMS";
 
-// @todo: Temperature simulation
-
-
 GVAR(rain_period_count) = GVAR(rain_period_count) + 1;
 GVAR(wind_period_count) = GVAR(wind_period_count) + 1;
