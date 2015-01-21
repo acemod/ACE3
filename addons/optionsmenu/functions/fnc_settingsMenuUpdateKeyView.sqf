@@ -47,19 +47,21 @@ if (count _collection > 0) then {
 	case (MENU_TAB_OPTIONS): {
 			_possibleValues = _setting select 3;
 			_settingsValue = _setting select 4;
-
 			lbClear 400;
 			{ lbAdd [400, _x]; } foreach _possibleValues;
 
 			(_settingsMenu displayCtrl 400) lbSetCurSel _settingsValue;
 		};	
 		case (MENU_TAB_COLORS): {
-		
 			_currentColor = _setting select 3;
-			
 			{
 				sliderSetPosition [_x, (255 * (_currentColor select _forEachIndex))];
 			} forEach [410, 411, 412, 413];
 		};
 	};
+} else {  //no settings in list:
+	lbClear 400;
+	(_settingsMenu displayCtrl 250) ctrlSetText _localizedName;
+	(_settingsMenu displayCtrl 251) ctrlSetText _localizedDescription;
+	(_settingsMenu displayCtrl 300) ctrlSetText _entryName;
 };

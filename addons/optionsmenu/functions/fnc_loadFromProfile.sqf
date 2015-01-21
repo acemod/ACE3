@@ -29,7 +29,7 @@ if (!_badData) then {
 };
 if (_badData) then {
   _settingValue = _default;
-  systemChat format ["Bad Data in: ace_%1_%2", _typeString, _name];
+  systemChat format ["Bad Data in profile [ace_%1_%2] using default", _typeString, _name];
   ERROR("Bad Value in profile");
 };
 

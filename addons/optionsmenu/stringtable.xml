@@ -3,28 +3,30 @@
 <Project name="ACE">
   <Package name="OptionsMenu">
     <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
-      <English>ACE Options</English>
-      <German>ACE Optionen</German>
-      <Spanish>Opciones ACE</Spanish>
-      <Polish>Opcje ACE</Polish>
-      <Czech>ACE Nastavení</Czech>
-      <French>ACE Options</French>
-      <Russian>ACE Настройки</Russian>
-      <Portuguese>Opções do ACE</Portuguese>
-      <Hungarian>ACE Opciók</Hungarian>
-      <Italian>Opzioni ACE</Italian>
+      <English>Configure ACE</English>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_FixAnimation">
       <English>Fix Animation</English>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_ResetAll">
       <English>Reset All</English>
+      <German>Rücksetzen</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabColors">
       <English>Colors</English>
+      <German>Farben</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabOptions">
       <English>Options</English>
+      <German>Optionen</German>
+      <Spanish>Opciones</Spanish>
+      <Polish>Opcje</Polish>
+      <Czech>Nastavení</Czech>
+      <French>Options</French>
+      <Russian>Настройки</Russian>
+      <Portuguese>Opções</Portuguese>
+      <Hungarian>Opciók</Hungarian>
+      <Italian>Opzioni</Italian>
     </Key>
   </Package>
 </Project>

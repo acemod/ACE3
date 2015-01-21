@@ -19,7 +19,6 @@ case (MENU_TAB_OPTIONS): {
 			if (_nameSelected == _name) exitwith {
 				profileNamespace setvariable [(format ["ace_option_%1", _name]), (_x select 4)];
 				_saved = true;
-				systemChat str [(format ["ace_option_%1", _name]), (_x select 4)];
 			};
 		}foreach GVAR(clientSideOptions);
 	};
@@ -29,7 +28,6 @@ case (MENU_TAB_COLORS): {
 			if (_nameSelected == _name) exitwith {
 				profileNamespace setvariable [(format ["ace_color_%1", _name]), (_x select 3)];
 				_saved = true;
-				systemChat str [(format ["ace_color_%1", _name]), (_x select 3)];
 			};
 		}foreach GVAR(clientSideColors);
 	};

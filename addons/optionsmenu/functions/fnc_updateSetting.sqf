@@ -36,10 +36,9 @@ case (MENU_TAB_COLORS): {
 	};
 };
 
-systemChat format ["%1: %2", _name, _changed];
-
 if (_changed) then {
 	missionNameSpace setVariable [_name, _newValue];
 	[_type, _name] call FUNC(saveToProfile);
 	["SettingChanged", [_name, _newValue]] call EFUNC(common,localEvent);
+	TRACE_2("Variable Updated",_name,_newValue);
 };

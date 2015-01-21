@@ -41,6 +41,5 @@ case (MENU_TAB_COLORS): {
 	};
 };
 if (_updateKeyView) then {
-	systemChat "Hare";
 	[] call FUNC(settingsMenuUpdateKeyView);
 };

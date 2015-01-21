@@ -9,19 +9,17 @@
 */
 #include "script_component.hpp"
 
-private ["_settingsMenu"];
+private ["_settingsMenu", "_localizedHeader"];
 
 PARAMS_1(_openTab);
 GVAR(optionMenu_openTab) = _openTab;
-
-// _textOptions = ["Menu Keybindings", "Action Keybindings", "Client Settings"];
 
 disableSerialization;
 _settingsMenu = uiNamespace getVariable 'ACE_settingsMenu';
 
 switch (GVAR(optionMenu_openTab)) do {
 case (MENU_TAB_OPTIONS): {
-    _localizedHeader = format ["%1: %2", ("Settings"), ("Client Options")];
+    _localizedHeader = format ["%1: %2", (localize "STR_ACE_OptionsMenu_OpenConfigMenu"), (localize "STR_ACE_OptionsMenu_TabOptions")];
     ctrlSetText [13, _localizedHeader];
 
     lbClear 400;
@@ -35,7 +33,7 @@ case (MENU_TAB_OPTIONS): {
     (_settingsMenu displayCtrl 413) ctrlShow false;
   };
 case (MENU_TAB_COLORS): {
-    _localizedHeader = format ["%1: %2", ("Settings"), ("Colors")];
+    _localizedHeader = format ["%1: %2", (localize "STR_ACE_OptionsMenu_OpenConfigMenu"), (localize "STR_ACE_OptionsMenu_TabColors")];
     ctrlSetText [13, _localizedHeader];
 
     lbClear 400;
