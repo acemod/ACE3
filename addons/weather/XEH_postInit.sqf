@@ -10,6 +10,10 @@ _fnc_updateWind = {
     ACE_wind = [_wind select 0, _wind select 1];
     setWind [_wind select 0, _wind select 1, true];
     2 setGusts 0;
+
+    // Set waves: 0 when no wind, 1 when wind >= 16 m/s
+    1 setWaves (((vectorMagnitude ACE_wind) / 16.0) min 1;
+
     //systemChat format ["w: %1 %2, ACE_wind: %1 %2", [wind select 0, wind select 1, ACE_wind select 0, ACE_wind select 1]];
     // _nWind = wind;
     // _pW = [_nWind select 0, _nWind select 1, 0] call CBA_fnc_vect2polar;
