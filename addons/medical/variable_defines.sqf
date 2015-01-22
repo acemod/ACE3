@@ -53,5 +53,3 @@
 [QGVAR(addedToUnitLoop),false,false, QUOTE(ADDON)] call EFUNC(common,defineVariable);
 
 GVAR(VarDefinesCompleted) = true;
-
-diag_log "finished variable defines";

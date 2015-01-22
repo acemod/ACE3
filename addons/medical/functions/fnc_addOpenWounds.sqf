@@ -10,11 +10,12 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_bodyPart", "_type", "_openWounds", "_selection", "_amount", "_newAmount"];
+private ["_unit", "_bodyPart", "_type", "_openWounds", "_selection", "_amount", "_newAmount", "_global"];
 _unit = _this select 0;
 _bodyPart = _this select 1;
 _type = _this select 2;
 _amount = _this select 3;
+_global = if (count _this > 4) then {_this select 4} else {true};
 
 if (typeName _bodyPart == "STRING") then {
     _bodyPart = [_bodyPart] call FUNC(getBodyPartNumber);
@@ -40,7 +41,7 @@ if (_newAmount < 0) then {
 };
 _selection set [ _type, _newAmount];
 _openWounds set [ _bodyPart , _selection];
-[_unit, QGVAR(openWounds),_openWounds] call EFUNC(common,setDefinedVariable);
+[_unit, QGVAR(openWounds),_openWounds, _global] call EFUNC(common,setDefinedVariable);
 
 [_unit] call FUNC(addToInjuredCollection);
 ["Medical_onOpenWoundsAdded", [_unit, _bodyPart, _type, _amount]] call ace_common_fnc_localEvent;

@@ -10,62 +10,57 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_amountOfDamage", "_typeOfInjury", "_bodyPartn","_sizeOfWound","_amountOfNewWounds", "_return"];
+private ["_unit", "_amountOfDamage", "_typeOfInjury", "_bodyPartn"];
 _unit = _this select 0;
 _amountOfDamage = _this select 1;
 _typeOfInjury = _this select 2;
 _bodyPartn = _this select 3;
-_sizeOfWound = 0;
-_amountOfNewWounds = 0;
 
-_return = false;
-if (_amountOfDamage > 0.05) then {
-    switch (_typeOfInjury) do {
-        case "Bullet": {
-            _amountOfNewWounds = 1;
-            _sizeOfWound = round(random(2));
+if (_amountOfDamage > 0.05) exitwith {
+    switch (toLower _typeOfInjury) do {
+        case "bullet": {
+             [_unit, _bodyPartn, round(random(2)), 1, false] call FUNC(addOpenWounds);
         };
-        case "Grenade": {
-            _amountOfNewWounds = 1;
-            _sizeOfWound = round(random(2));
-            if (_sizeOfWound < 1) then {
-                _sizeOfWound = 1;
+        case "grenade": {
+            [_unit, _bodyPartn, round(random(2)), 1] call FUNC(addOpenWounds);
+            for "_i" from 0 to round(random(3)) /* step +1 */ do {
+                [_unit, round(random(6)), round(random(2)), 1, false] call FUNC(addOpenWounds);
             };
         };
-        case "Explosive": {
-            _amountOfNewWounds = 1;
-            _sizeOfWound = round(random(2));
-            if (_sizeOfWound < 1) then {
-                _sizeOfWound = 1;
+        case "explosive": {
+            [_unit, _bodyPartn, round(random(2)), 1] call FUNC(addOpenWounds);
+            for "_i" from 0 to round(random(4)) /* step +1 */ do {
+                [_unit, round(random(6)), round(random(2)), 1, false] call FUNC(addOpenWounds);
             };
         };
-        case "Shell": {
-            _amountOfNewWounds = 1;
-            _sizeOfWound = round(random(2));
-            if (_sizeOfWound < 1) then {
-                _sizeOfWound = 1;
+        case "shell": {
+            [_unit, _bodyPartn, round(random(2)), 1] call FUNC(addOpenWounds);
+            for "_i" from 0 to round(random(5)) /* step +1 */ do {
+                [_unit, round(random(6)), round(random(2)), 1, false] call FUNC(addOpenWounds);
             };
         };
-        case "Unknown": {
-            _amountOfNewWounds = 1;
-            _sizeOfWound = round(random(1));
+        case "backblast": {
+            if (random(1)>=0.5) then{
+                [_unit, _bodyPartn, round(random(1)), 1, false] call FUNC(addOpenWounds);
+            };
         };
-        case "VehicleCrash": {
-            _amountOfNewWounds = if (random(1)>=0.5) then{0}else{1};
-            _sizeOfWound = round(random(1));
+        case "unknown": {
+            [_unit, _bodyPartn, round(random(1)), 1, false] call FUNC(addOpenWounds);
+        };
+        case "vehiclecrash": {
+            if (random(1)>=0.5) then{
+                [_unit, _bodyPartn, round(random(1)), 1, false] call FUNC(addOpenWounds);
+            };
         };
         default {
-            _amountOfNewWounds = 1;
-            _sizeOfWound = round(random(1));
+            [_unit, _bodyPartn, round(random(1)), 1, false] call FUNC(addOpenWounds);
         };
     };
-    if (_sizeOfWound > 2) then {
-        _sizeOfWound = 3;
-    };
-    if (_amountOfNewWounds>0) then {
-        [_unit, _bodyPartn, _sizeOfWound, _amountOfNewWounds] call FUNC(addOpenWounds);
-        _return = true;
-    };
+
+    // one more call to broadcast the new injuries
+    [_unit, _bodyPartn, 0, 0, true] call FUNC(addOpenWounds);
+
+    true;
 };
 
-_return;
+false;
