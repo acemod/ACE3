@@ -4,7 +4,7 @@ class ACE_settingsMenu {
   onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_settingsMenu', _this select 0)]; [] call FUNC(onSettingsMenuOpen););
   onUnload = QUOTE(uiNamespace setVariable [ARR_2('ACE_settingsMenu', nil)]; saveProfileNamespace;);
 
-  #define SIZEX ((safezoneW / safezoneH) min 1.2)
+  #define SIZEX ((0.70 * safezoneW) max 1.0)
   #define SIZEY (SIZEX / 1.2)
   #define UNITX (SIZEX / 40)
   #define UNITY (SIZEY / 25)
@@ -128,7 +128,7 @@ class ACE_settingsMenu {
       w = 10 * UNITX;
       h = 1 * UNITY;
       text = "";
-      SizeEx = (UNITY * 1);
+      SizeEx = (UNITY * 0.75);
     };
     class labelKey: ACE_gui_staticBase {  //Variable Name
       idc = 300;
@@ -137,7 +137,7 @@ class ACE_settingsMenu {
       w = 10 * UNITX;
       h = 1 * UNITY;
       text = "";
-      SizeEx = (UNITY * 0.5);
+      SizeEx = (UNITY * 0.60);
     };
     class Label2: labelKey {
       idc = 301;
