@@ -11,8 +11,6 @@
 #include "script_component.hpp"
 #include "variable_defines.sqf"
 
-
-
 GVAR(injuredUnitCollection) = [];
 [{
     {
@@ -39,7 +37,8 @@ GVAR(injuredUnitCollection) = [];
 
 [
     {(([_this select 0,QGVAR(bloodVolume)] call EFUNC(common,getDefinedVariable)) < 65)},
-    {(([_this select 0,QGVAR(amountOfPain)] call EFUNC(common,getDefinedVariable)) > 48)}
+    {(([_this select 0,QGVAR(amountOfPain)] call EFUNC(common,getDefinedVariable)) > 48)},
+    {(((_this select 0) call FUNC(getBloodLoss)) > 0.25)}
 ] call EFUNC(common,registerUnconsciousCondition);
 
 call FUNC(handleDisplayEffects);
