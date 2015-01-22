@@ -3,7 +3,16 @@
 <Project name="ACE">
   <Package name="OptionsMenu">
     <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
-      <English>Configure ACE</English>
+      <English>ACE Options</English>
+      <German>ACE Optionen</German>
+      <Spanish>Opciones ACE</Spanish>
+      <Polish>Opcje ACE</Polish>
+      <Czech>ACE Nastavení</Czech>
+      <French>ACE Options</French>
+      <Russian>ACE Настройки</Russian>
+      <Portuguese>Opções do ACE</Portuguese>
+      <Hungarian>ACE Opciók</Hungarian>
+      <Italian>Opzioni ACE</Italian>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_FixAnimation">
       <English>Fix Animation</English>
