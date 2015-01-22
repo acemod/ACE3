@@ -58,7 +58,7 @@ _fnc_updateTemperature = {
 
     // Humidity
     GVAR(currentHumidity) = (GVAR(Humidity) select _month) / 100;
-    GVAR(currentHumidity) = GVAR(currentHumidity)
+    GVAR(currentHumidity) = GVAR(currentHumidity);
 
     if (rain > 0 && overcast > 0.7) then {
         GVAR(currentHumidity) = 1;
