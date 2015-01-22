@@ -48,32 +48,36 @@ GVAR(BloodLevel_CC) ppEffectForceInNVG true;
 GVAR(BloodLevel_CC) ppEffectAdjust [1,1,0, [0,0,0,0], [1,1,1,1], [0.2,0.2,0.2,0]];
 GVAR(BloodLevel_CC) ppEffectCommit 0;
 
-
 [{
     private ["_unit","_bloodLoss", "_bloodVolume"];
     _unit = ACE_player;
-    if ([_unit] call EFUNC(common,isAwake)) then {
-        _bloodLoss = _unit call FUNC(getBloodLoss);
-        if (_bloodLoss >0) then {
-            [_bloodLoss] call EFUNC(gui,effectBleeding);
+
+    if (isNull(findDisplay 312)) then {
+        if ([_unit] call EFUNC(common,isAwake) && false) then {
+            _bloodLoss = _unit call FUNC(getBloodLoss);
+            if (_bloodLoss >0) then {
+                [_bloodLoss] call EFUNC(gui,effectBleeding);
+            };
+
+            [{
+                [((_this select 0) getvariable[QGVAR(amountOfPain), 0])] call EFUNC(gui,effectPain);
+            }, [_unit], 0.25, 0.25] call EFUNC(common,waitAndExecute);
+
+            [(_unit getvariable[QGVAR(heartRate), 70])] call FUNC(hb_effect);
+            ["medicalEffectsLoop", [_unit]] call ace_common_fnc_localEvent
         };
 
-        [{
-            [((_this select 0) getvariable[QGVAR(amountOfPain), 0])] call EFUNC(gui,effectPain);
-        }, [_unit], 0.25, 0.25] call EFUNC(common,waitAndExecute);
-
-        [(_unit getvariable[QGVAR(heartRate), 70])] call FUNC(hb_effect);
-        ["medicalEffectsLoop", [_unit]] call ace_common_fnc_localEvent
-    };
-
-     // Blood Level Effect
-    _bloodVolume = _unit getVariable [QGVAR(bloodVolume), 100];
-    if (_bloodVolume > 99 || !alive _unit) then {
-        GVAR(BloodLevel_CC) ppEffectEnable false;
+         // Blood Level Effect
+        _bloodVolume = _unit getVariable [QGVAR(bloodVolume), 100];
+        if (_bloodVolume > 99 || !alive _unit) then {
+            GVAR(BloodLevel_CC) ppEffectEnable false;
+        } else {
+            GVAR(BloodLevel_CC) ppEffectEnable true;
+            GVAR(BloodLevel_CC) ppEffectAdjust [1, 1, 0, [0.0, 0.0, 0.0, 0.0], [1, 1, 1,_bloodVolume/100], [0.2, 0.2, 0.2, 0]];
+            GVAR(BloodLevel_CC) ppEffectCommit 0;
+        };
     } else {
-        GVAR(BloodLevel_CC) ppEffectEnable true;
-        GVAR(BloodLevel_CC) ppEffectAdjust [1, 1, 0, [0.0, 0.0, 0.0, 0.0], [1, 1, 1,_bloodVolume/100], [0.2, 0.2, 0.2, 0]];
-        GVAR(BloodLevel_CC) ppEffectCommit 0;
+        GVAR(BloodLevel_CC) ppEffectEnable false;
     };
 
  } , 0.5, [] ] call CBA_fnc_addPerFrameHandler;
