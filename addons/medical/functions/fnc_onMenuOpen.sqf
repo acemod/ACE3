@@ -35,7 +35,6 @@ _display = _this select 0; //uiNamespace getVariable QGVAR(medicalMenu);
 if (isnil "_display") exitwith {
 
 };
-systemChat format["onMenuOpen: %1", _this];
 
 (_display displayCtrl 11) ctrlSetTooltip localize "STR_ACE_UI_VIEW_TRIAGE_CARD";
 (_display displayCtrl 12) ctrlSetTooltip localize "STR_ACE_UI_EXAMINE_PATIENT";

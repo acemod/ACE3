@@ -16,8 +16,6 @@ _target = _this select 1;
 _selectionName = _this select 2;
 _removeItem = _this select 3;
 
-systemChat format ["Local bandage: %1",_this];
-
 // TODO figure this out later on
 //_selectedData = [_this, 4, "", [""]] call BIS_fnc_Param;
 

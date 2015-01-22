@@ -11,9 +11,6 @@
 
 #include "script_component.hpp"
 
-diag_log format["handleTreatment has been called - args: %1 ",_this];
-systemChat format["handleTreatment has been called - args: %1 ",_this];
-
 private ["_treatingPerson","_injuredPerson","_selectionName","_removeItem","_attributes","_patient", "_continue", "_prevAnim"];
 _caller = _this select 0;
 _target = _this select 1;

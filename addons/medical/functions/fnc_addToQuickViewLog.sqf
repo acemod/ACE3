@@ -16,8 +16,6 @@ _unit = _this select 0;
 _type = _this select 1;
 _message = _this select 2;
 
-systemChat format["Added event to quick view: %1", _this];
-
 if (!local _unit) exitwith {
     [_this, QUOTE(FUNC(addToQuickViewLog)), _unit] call EFUNC(common,execRemoteFnc);
 };

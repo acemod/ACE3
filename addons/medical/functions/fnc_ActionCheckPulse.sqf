@@ -22,7 +22,7 @@ _content = ["STR_ACE_CHECK_PULSE_CONTENT"];
 [_caller, _title, _content] call EFUNC(gui,sendDisplayInformationTo);
 
 _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
-[2 + round(random(6)),
+[2 + round(random(1)),
     {((vehicle (_this select 0) != (_this select 0)) ||((getPos (_this select 0)) distance ((_this select 0) getvariable QGVAR(StartingPositionHandleTreatment)) < 1))}, // the condition
     {
         private ["_caller","_target"];
@@ -37,5 +37,3 @@ _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
     },    // on failure
     [_caller, _target] // arguments
 ] call EFUNC(gui,loadingBar);
-
-systemChat format["actionCheckPulse: %1", _this];

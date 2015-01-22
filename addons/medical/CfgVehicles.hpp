@@ -181,12 +181,43 @@ class CfgVehicles
             sync[] = {};
         };
     };
+
+    class ACE_moduleDamageSettings: Module_F {
+        scope = 2;
+        displayName = "Damage Settings [ACE]";
+        icon = QUOTE(PATHTOF(data\ACE_medical_module.paa));
+        category = "ACE_medical";
+        function = QUOTE(FUNC(moduleDamageSettings));
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        author = "Glowbal";
+        class Arguments {
+            class damageThresholdAI {
+                displayName = "Damage Threshold AI";
+                description = "How much damage does it take for an AI to be killed?";
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
+            class damageThresholdPlayers {
+                displayName = "Damage Threshold Players";
+                description = "How much damage does it take for a player to be killed?";
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
+        };
+        class ModuleDescription {
+            description = "Custom damage threshold module";
+            sync[] = {};
+        };
+    };
+
     class ACE_moduleAssignMedicRoles: Module_F {
         scope = 2;
         displayName = "Set Medic Class [ACE]";
         icon = QUOTE(PATHTOF(data\ACE_medical_module.paa));
         category = "ACE_medical";
-        function = QUOTE(FUNC(assignMedicRoles));
+        function = QUOTE(FUNC(moduleAssignMedicRoles));
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
@@ -216,7 +247,7 @@ class CfgVehicles
         displayName = "set Medical Vehicle [ACE]";
         icon = QUOTE(PATHTOF(data\ACE_medical_module.paa));
         category = "ACE_medical";
-        function = QUOTE(FUNC(assignMedicalVehicle));
+        function = QUOTE(FUNC(moduleAssignMedicalVehicle));
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
@@ -246,7 +277,7 @@ class CfgVehicles
         displayName = "Set Medical Facility [ACE]";
         icon = QUOTE(PATHTOF(data\ACE_medical_module.paa));
         category = "ACE_medical";
-        function = QUOTE(FUNC(assignMedicalFacility));
+        function = QUOTE(FUNC(moduleAssignMedicalFacility));
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
@@ -269,7 +300,7 @@ class CfgVehicles
         displayName = "Assign Medical Equipment [ACE]";
         icon = QUOTE(PATHTOF(data\ACE_medical_module.paa));
         category = "ACE_medical";
-        function = QUOTE(FUNC(assignMedicalEquipment));
+        function = QUOTE(FUNC(moduleAssignMedicalEquipment));
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;

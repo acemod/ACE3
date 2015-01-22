@@ -240,6 +240,3 @@ ADD_TREATMENT_MEDICATION("STR_ACE_ACTION_EPINEPHRINE","STR_ACE_ACTION_EPINEPHRIN
 
     ((vehicle _target != _target));
 }, {[_this select 0,_this select 1] call FUNC(actionUnloadUnit)},'drag'] call FUNC(addTreatmentOption);
-
-systemchat format["finished postInit"];
-diag_log format["finished postInit"];

@@ -13,9 +13,6 @@
 private ["_unit","_handler"];
 _unit = _this select 0;
 
-systemChat format["Initalizing CMS for %1", _this];
-diag_log format["Initalizing CMS for %1", _this];
-
 if (!local _unit) exitwith {};
 if !(_unit isKindOf "CAManBase") exitwith{};
 

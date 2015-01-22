@@ -10,8 +10,6 @@
 
 #include "script_component.hpp"
 
-#define DEFAULT_DAMAGE_THRESHOLD 1
-
 private ["_unit","_part","_damageThreshold"];
 _unit = _this select 0;
 _part = _this select 1;

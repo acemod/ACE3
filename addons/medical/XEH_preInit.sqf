@@ -93,11 +93,11 @@ PREP(isMedicalVehicle);
 PREP(isSetTreatmentMutex);
 PREP(isMovingUnit);
 
-
 PREP(moduleAssignMedicalEquipment);
 PREP(moduleAssignMedicalFacility);
 PREP(moduleAssignMedicalVehicle);
 PREP(moduleAssignMedicRoles);
+PREP(moduleDamageSettings);
 
 PREP(onInitForUnit);
 PREP(onInjury_assignAirwayStatus);

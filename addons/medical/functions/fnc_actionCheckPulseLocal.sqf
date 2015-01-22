@@ -14,7 +14,6 @@ private ["_caller","_unit", "_heartRateOutput", "_heartRate","_logOutPut", "_tit
 _caller = _this select 0;
 _unit = _this select 1;
 
-systemChat format["called check pulse: %1", _this];
 
 _heartRate = [_unit,QGVAR(heartRate)] call EFUNC(common,getDefinedVariable);
 if (!alive _unit) then {
@@ -50,6 +49,3 @@ _content = ["STR_ACE_CHECK_PULSE_CHECKED_MEDIC",_heartRateOutput];
 if (_logOutPut != "") then {
     [_unit,"examine",format["%1 checked Heart Rate: %2",[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToQuickViewLog);
 };
-
-systemChat format["completed check pulse: %1 %2 %3 %4", _this, _logOutPut, _title, _content];
-diag_log format["completed check pulse: %1 %2 %3 %4", _this, _logOutPut, _title, _content];

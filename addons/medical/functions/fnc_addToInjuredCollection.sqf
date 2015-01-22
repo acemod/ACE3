@@ -26,6 +26,4 @@ if ([_unit] call FUNC(hasMedicalEnabled)) then {
     };
     if (_unit in GVAR(injuredUnitCollection)) exitwith {};
     GVAR(injuredUnitCollection) pushback _unit;
-} else {
-    systemChat format["has no medical system enabled: %1",_unit];
 };
