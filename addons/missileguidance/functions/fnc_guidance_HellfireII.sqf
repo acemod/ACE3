@@ -1,4 +1,4 @@
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 FUNC(guidance_Hellfire_LOAL_HI_PFH) = {
@@ -21,7 +21,7 @@ FUNC(guidance_Hellfire_LOAL_HI_PFH) = {
 		_shooter setVariable [QGVAR(launchTime), diag_tickTime, false];
 	};
 	
-	_targets = [_missile, ACE_DEFAULT_LASER_CODE, 70, _curVelocity] call ace__laser_fnc_findLaserDesignator;
+	_targets = [_missile, ACE_DEFAULT_LASER_CODE, 70, _curVelocity] call ace_laser_fnc_findLaserDesignator;
 	_addHeight = [0,0,0];
 	if((_targets select 0)) then {
 		_target = _targets select 1;
