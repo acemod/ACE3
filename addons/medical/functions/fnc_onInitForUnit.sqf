@@ -21,7 +21,7 @@ if !(_unit isKindOf "CAManBase") exitwith{};
 
 _unit addEventhandler["handleDamage", {
     if ((missionNamespace getvariable[QGVAR(setting_AdvancedLevel), 0]) >= 0) then {
-        call FUNC(handleDamage);
+        call FUNC(onDamage); // cache damage and pass it to handleDamage function
     };
 }];
 

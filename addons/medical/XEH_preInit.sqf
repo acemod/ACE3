@@ -110,6 +110,7 @@ PREP(onTreatmentCompleted);
 PREP(onUnconscious);
 PREP(onStartMovingUnit);
 PREP(onCarryObjectDropped);
+PREP(onDamage);
 
 PREP(openMenu);
 PREP(playInjuredSound);
@@ -126,6 +127,10 @@ PREP(updateIcons);
 PREP(updateUIInfo);
 
 PREP(useEquipment);
+
+
+PREP(cacheHandledamageCall);
+PREP(checkDamage);
 
 // initalize all module parameters.
 GVAR(setting_allowInstantDead) = true;
