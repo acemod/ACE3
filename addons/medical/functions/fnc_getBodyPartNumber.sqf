@@ -22,7 +22,7 @@ _selectionName = _this select 0;
             1
         };
         case "hands": {
-            if (random(1)>0.499) then {
+            if (random(1)>=0.5) then {
                 2
             } else {
                  3
@@ -35,7 +35,7 @@ _selectionName = _this select 0;
             3
         };
         case "legs": {
-            if (random(1)>0.499) then {
+            if (random(1)>=0.5) then {
                 4
             } else {
                  5

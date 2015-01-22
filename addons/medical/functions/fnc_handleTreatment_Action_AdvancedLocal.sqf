@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_caller", "_selectionName", "_removeItem", "_prevAnim"];
+private ["_unit", "_caller", "_selectionName", "_removeItem", "_prevAnim", "_value"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -37,11 +37,6 @@ if (count _attributes > 1) then {
     _value = [_target,(_attributes select 0)] call EFUNC(common,getDefinedVariable);
     _value = _value + (_attributes select 1);
     [_target,(_attributes select 0),_value] call EFUNC(common,setDefinedVariable);
-
-    _patient = "patient";
-    if (_target == _caller) then {
-        _patient = "himself";
-    };
 
     // TODO localization
     [_target,"treatment",format["%1 has given %4 a %2(%3ml)",[_caller] call cse_fnc_getName,_attributes select 2,_attributes select 1,_target]] call FUNC(addActivityToLog);

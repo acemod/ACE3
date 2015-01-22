@@ -21,14 +21,14 @@ class Extended_Killed_Eventhandlers {
 
 class Extended_Local_Eventhandlers {
     class CaManBase {
-        class ADDON    {
+        class ADDON {
             Local = QUOTE(_this call FUNC(eh_local));
         };
     };
 };
 class Extended_Init_Eventhandlers {
     class CaManBase {
-        class ADDON    {
+        class ADDON {
             init = QUOTE(_this call FUNC(onInitForUnit););
         };
     };
