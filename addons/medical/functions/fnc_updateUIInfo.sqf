@@ -66,7 +66,6 @@ _displayBodyPartText = switch (_bodyPartText) do {
 lbadd[213,format[localize "STR_ACE_UI_SELECTED_BODY_PART",_displayBodyPartText]];
 lbSetData [213, _numberOf, ""];
 lbSetColor [213, _numberOf, [0.27, 0.40, 0.26, 1]];
-//[] spawn FUNC(updateActivityLog);
 _numberOf = _numberOf + 1;
 
 if (GVAR(setting_allowAirwayInjuries)) then {

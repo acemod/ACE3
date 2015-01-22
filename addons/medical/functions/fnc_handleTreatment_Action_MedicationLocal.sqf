@@ -73,7 +73,6 @@ if (count _attributes > 1) then {
             [_target] call EFUNC(common,setDead);
         };
 
-        // TODO use PFH instead
         [_target,_wearOff,_var] spawn {
             sleep ((_this select 1) + (round(random(30))));
             _amountDecreased = 0;
