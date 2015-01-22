@@ -36,12 +36,13 @@ if ([_caller] call FUNC(isSetTreatmentMutex)) exitwith {
 
 if (!([_caller, _target, _removeItem] call FUNC(hasEquipment)) && _removeItem != "") exitwith {
     [_caller, false] call FUNC(treatmentMutex);
+    false;
 };
 
 if (primaryWeapon _caller == "") then {
     _caller addWeapon "ACE_FakePrimaryWeapon";
 };
-_caller selectWeapon (primaryWeapon _unit);
+_caller selectWeapon (primaryWeapon _caller);
 
 // TODO make dynamic
 switch (toLower _category) do {
