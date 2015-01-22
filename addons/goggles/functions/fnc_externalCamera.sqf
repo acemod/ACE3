@@ -16,5 +16,5 @@
 	call FUNC(ExternalCamera);
 */
 #include "script_component.hpp"
-if (GETVAR(profileNamespace,ACE_showInThirdPerson,false)) exitWith { false };
+if (GVAR(showInThirdPerson)) exitWith { false };
 (cameraView == "External")

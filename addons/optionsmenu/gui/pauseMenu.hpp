@@ -1,6 +1,6 @@
-class CSE_Open_SettingsMenu_BtnBase : cse_gui_buttonBase {
+class ACE_Open_SettingsMenu_BtnBase : ACE_gui_buttonBase {
 	idc = -1;
-	text = "Configure [CSE]";
+	text = "$STR_ACE_OptionsMenu_OpenConfigMenu";
 	x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX)";
 	y = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
 	w = "14 * (((safezoneW / safezoneH) min 1.2) / 40)";
@@ -20,27 +20,27 @@ class CSE_Open_SettingsMenu_BtnBase : cse_gui_buttonBase {
 	colorFocused[] = {0,0,0,1};
 	periodFocus = 1;
 	periodOver = 1;
-	action = "(findDisplay 49) closeDisplay 0; createDialog 'cse_settingsMenu';";
+	action = "(findDisplay 49) closeDisplay 0; createDialog 'ACE_settingsMenu';";
 };
 
 class RscStandardDisplay;
 class RscDisplayMPInterrupt: RscStandardDisplay {
 	class controls {
-		class cse_Open_settingsMenu_Btn : CSE_Open_SettingsMenu_BtnBase {};
+		class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {};
 	};
 };
 class RscDisplayInterruptEditorPreview: RscStandardDisplay {
 	class controls {
-		class cse_Open_settingsMenu_Btn : CSE_Open_SettingsMenu_BtnBase {};
+		class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {};
 	};
 };
 class RscDisplayInterrupt: RscStandardDisplay {
 	class controls {
-		class cse_Open_settingsMenu_Btn : CSE_Open_SettingsMenu_BtnBase {};
+		class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {};
 	};
 };
 class RscDisplayInterruptEditor3D: RscStandardDisplay {
 	class controls {
-		class cse_Open_settingsMenu_Btn : CSE_Open_SettingsMenu_BtnBase {};
+		class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {};
 	};
 };

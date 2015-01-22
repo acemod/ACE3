@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2015-01-21 -->
+<Project name="ACE">
+  <Package name="OptionsMenu">
+    <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
+      <English>Configure ACE</English>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_FixAnimation">
+      <English>Fix Animation</English>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_ResetAll">
+      <English>Reset All</English>
+      <German>Rücksetzen</German>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_TabColors">
+      <English>Colors</English>
+      <German>Farben</German>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_TabOptions">
+      <English>Options</English>
+      <German>Optionen</German>
+      <Spanish>Opciones</Spanish>
+      <Polish>Opcje</Polish>
+      <Czech>Nastavení</Czech>
+      <French>Options</French>
+      <Russian>Настройки</Russian>
+      <Portuguese>Opções</Portuguese>
+      <Hungarian>Opciók</Hungarian>
+      <Italian>Opzioni</Italian>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_Enabled">
+      <English>Yes</English>
+      <German>Ja</German>
+      <Spanish>Si</Spanish>
+      <Polish>Tak</Polish>
+      <Czech>Ano</Czech>
+      <French>Oui</French>
+      <Russian>Да</Russian>
+      <Hungarian>Igen</Hungarian>
+      <Portuguese>Sim</Portuguese>
+      <Italian>Si</Italian>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_Disabled">
+      <English>No</English>
+      <German>Nein</German>
+      <Spanish>No</Spanish>
+      <Polish>Nie</Polish>
+      <Czech>Ne</Czech>
+      <French>Non</French>
+      <Russian>Нет</Russian>
+      <Hungarian>Nem</Hungarian>
+      <Portuguese>Não</Portuguese>
+      <Italian>No</Italian>
+    </Key>
+  </Package>
+</Project>

@@ -22,6 +22,6 @@ _player = ACE_player;
 vehicle _player != _player &&
 {
     (GVAR(CrewInfoVisibility) == 1) ||
-    (GVAR(CrewInfoVisibility) != -1 && profileNamespace getVariable ["ACE_showVehicleCrewInfo", false])
+    (GVAR(CrewInfoVisibility) != -1 && GVAR(showVehicleCrewInfo))
 } &&
 {!(vehicle _player isKindOf "ParachuteBase")};

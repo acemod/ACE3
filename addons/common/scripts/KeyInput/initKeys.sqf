@@ -4,7 +4,7 @@
 _config = configFile >> "ACE_Default_Keys";
 _count = count _config;
 
-_header = format ["_keyCode = [_this select 1, _this select 2, _this select 3, _this select 4] call %1; _keyIndex = floor _keyCode; if (_keyIndex == 0) exitWith {false}; if (!(profileNamespace getVariable ['ACE_enableNumberHotkeys', true]) && {_keyIndex < 12} && {_keyIndex > 1} && {_keyCode mod 1 == 0}) exitWith {false}; _time = time; _player = ACE_player; _vehicle = vehicle _player; _isInput = false;", QUOTE(FUNC(convertKeyCode))];
+_header = format ["_keyCode = [_this select 1, _this select 2, _this select 3, _this select 4] call %1; _keyIndex = floor _keyCode; if (_keyIndex == 0) exitWith {false}; if (!(profileNamespace getVariable ['ACE_common_enableNumberHotkeys', true]) && {_keyIndex < 12} && {_keyIndex > 1} && {_keyCode mod 1 == 0}) exitWith {false}; _time = time; _player = ACE_player; _vehicle = vehicle _player; _isInput = false;", QUOTE(FUNC(convertKeyCode))];
 _headerUp = format ["_keyCode = _this select 1; _keyIndex = _keyCode; if (_keyIndex == 0) exitWith {false}; _time = time; _player = ACE_player; _vehicle = vehicle _player;"];
 
 _handleDoubleTap = QUOTE(if (_time < (GVAR(keyTimes) select _keyIndex) + 0.5 && {_keyIndex == _keyCode}) then {_keyCode = _keyIndex + 0.8};);
@@ -60,7 +60,7 @@ _halt = format ["if (!(_allowHold) || {_disallowHold}) then {%1 set [_keyIndex, 
 _haltUp = format ["%1 set [_keyIndex, 0];", QGVAR(keyStates)];
 
 //_return = "_isInput";
-_return = "if (profileNamespace getVariable ['ACE_enableNumberHotkeys', true] && {_keyIndex < 12} && {_keyIndex > 1}) then {true} else {_isInput}";
+_return = "if (profileNamespace getVariable ['ACE_common_enableNumberHotkeys', true] && {_keyIndex < 12} && {_keyIndex > 1}) then {true} else {_isInput}";
 
 _repeat = "if (!_isInput && {_keyCode mod 1 > 0.75} && {_keyCode mod 1 < 0.85}) exitWith {_keyCode = _keyIndex; " + _onKeyDown + _return + "};";
 _repeatUp = "if (!_isInput && {_keyCode mod 1 > 0.75} && {_keyCode mod 1 < 0.85}) exitWith {_keyCode = _keyIndex; " + _onKeyUp + "};";

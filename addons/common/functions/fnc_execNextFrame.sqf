@@ -29,6 +29,6 @@ EXPLODE_2_PVT(_this,_func,_params);
         // Execute the function
         _funcParams call _func;
     },
-    _interval,
+    0,
     [_this, diag_frameno]
 ] call CBA_fnc_addPerFrameHandler

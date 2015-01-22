@@ -26,17 +26,17 @@ if (!hasInterface) exitWith {};
 
 // Draw handle
 addMissionEventHandler ["Draw3D", {
-  if !(profileNamespace getVariable ["ACE_showPlayerNames", true]) exitWith {};
+  if (GVAR(showPlayerNames) == 0) exitWith {};
 
   _player = ACE_player;
-  if (profileNamespace getVariable ["ACE_showPlayerNamesOnlyOnCursor", true]) then {
+  if (GVAR(showPlayerNames) in [2,4]) then { //only on cursor
     _target = cursorTarget;
     _target = if (_target in allUnitsUAV) then {objNull} else {effectiveCommander _target};
 
     if (!isNull _target && {side group _target == playerSide} && {_target != _player} && {isPlayer _target || {GVAR(ShowNamesForAI)}} && {!(_target getVariable ["ACE_hideName", false])}) then {
       _distance = _player distance _target;
       _alpha = ((1 - 0.2 * (_distance - GVAR(PlayerNamesViewDistance))) min 1) * GVAR(PlayerNamesMaxAlpha);
-      if (profileNamespace getVariable ["ACE_showPlayerNamesOnlyOnKeyPress", false]) then {
+      if ((GVAR(showPlayerNames) in [3,4])) then { //only on keypress
         _alpha = _alpha min (1 - (time - GVAR(ShowNamesTime) - 1));
       };
       [_player, _target, _alpha, _distance * 0.026] call FUNC(drawNameTagIcon);
@@ -64,7 +64,7 @@ addMissionEventHandler ["Draw3D", {
 
         _alpha = ((1 - 0.2 * (_distance - GVAR(PlayerNamesViewDistance))) min (1 - 0.15 * (_projDist * 5 - _distance - 3)) min 1) * GVAR(PlayerNamesMaxAlpha);
 
-        if (profileNamespace getVariable ["ACE_showPlayerNamesOnlyOnKeyPress", false]) then {
+        if ((GVAR(showPlayerNames) in [3,4])) then { //only on keypress
           _alpha = _alpha min (1 - (time - GVAR(ShowNamesTime) - 1));
         };
 
