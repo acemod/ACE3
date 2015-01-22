@@ -9,8 +9,8 @@
  */
 #include "script_component.hpp"
 
-#define DEFAULT_LOGGING_LEVEL 4
-#define DEFAULT_TEXT_DISPLAY 4
+#define DEFAULT_LOGGING_LEVEL -1
+#define DEFAULT_TEXT_DISPLAY -1
 
 private ["_msg", "_level", "_prefix", "_defaultLoglevel","_defaultLogDisplayLevel", "_message", "_from"];
 _msg = _this select 0;
