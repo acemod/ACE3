@@ -16,23 +16,16 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 class ACE_Options {
-    class showPlayerNames {
+    class GVAR(showPlayerNames) {
         displayName = "$STR_ACE_NameTags_ShowPlayerNames";
+        values[] = {"Disabled", "Enabled", "Only Cursor", "Only On Keypress", "Only Cursor and KeyPress"};
         default = 1;
     };
-    class showPlayerNamesOnlyOnCursor {
-        displayName = "$STR_ACE_NameTags_ShowPlayerNamesOnlyOnCursor";
-        default = 1;
-    };
-    class showPlayerNamesOnlyOnKeyPress {
-        displayName = "$STR_ACE_NameTags_ShowPlayerNamesOnlyOnKeyPress";
-        default = 0;
-    };
-    class showPlayerRanks {
+    class GVAR(showPlayerRanks) {
         displayName = "$STR_ACE_NameTags_ShowPlayerRanks";
         default = 1;
     };
-    class showVehicleCrewInfo {
+    class GVAR(showVehicleCrewInfo) {
         displayName = "$STR_ACE_CrewInfo_ShowVehicleCrewInfo";
         default = 1;
     };

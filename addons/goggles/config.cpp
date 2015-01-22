@@ -244,7 +244,7 @@ class SniperCloud {
 };
 
 class ACE_Options {
-	class showInThirdPerson {
+	class GVAR(showInThirdPerson) {
 		displayName = $STR_ACE_Goggles_ShowInThirdPerson;
 		default = 0;
 	};

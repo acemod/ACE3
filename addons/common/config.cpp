@@ -58,7 +58,7 @@ class ACE_canInteractConditions {
 };
 
 class ACE_Options {
-    class enableNumberHotkeys {
+    class GVAR(enableNumberHotkeys) {
         displayName = "$STR_ACE_Common_EnableNumberHotkeys";
         default = 1;
     };
