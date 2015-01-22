@@ -17,11 +17,9 @@ _changed = false;
 switch (_type) do {
 case (MENU_TAB_OPTIONS): {
     {
-      if ((_x select 0) == _name) then {
-        if (!((_x select 4) isEqualTo _newValue)) then {
-          _changed = true;
-          _x set [4, _newValue];
-        };
+      if (((_x select 0) == _name) && {!((_x select 4) isEqualTo _newValue)}) then {
+        _changed = true;
+        _x set [4, _newValue];
       };
     } foreach GVAR(clientSideOptions);
   };
