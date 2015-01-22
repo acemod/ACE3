@@ -118,7 +118,7 @@ class ACE_settingsMenu {
       SizeEx = (UNITY * 0.7);
       colorBackground[] = {0, 0, 0, 0.9};
       colorSelectBackground[] = {0, 0, 0, 0.9};
-      columns[] = {0.0, 0.7};
+      columns[] = {0.0, 0.6};
       onLBSelChanged = QUOTE(_this call FUNC(settingsMenuUpdateKeyView));
     };
     class labelTitle: ACE_gui_staticBase {
