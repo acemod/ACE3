@@ -48,16 +48,16 @@ if ((isNull ([_caller] call EFUNC(common,getCarriedObj))) || !([_caller] call EF
 
     if (vehicle _target == _target) then {
         if (_dragging) then {
-            [_target,"AinjPpneMstpSnonWrflDb_release", 1, true] call EFUNC(common,doAnimation);
+            [_target,"AinjPpneMstpSnonWrflDb_release", 2, true] call EFUNC(common,doAnimation);
         } else {
-            [_target,"AinjPfalMstpSnonWrflDnon_carried_Down", 1, true] call EFUNC(common,doAnimation);
+            [_target,"AinjPfalMstpSnonWrflDnon_carried_Down", 2, true] call EFUNC(common,doAnimation);
         };
     } else {
         if ([_target] call EFUNC(common,isAwake)) then {
-            [_target,"", 1] call EFUNC(common,doAnimation); // TODO play animation for the current seat instead
+            [_target,"", 2] call EFUNC(common,doAnimation); // TODO play animation for the current seat instead
         } else {
             // this might not work properly
-            [_target,([_target] call EFUNC(common,getDeathAnim)), 0] call EFUNC(common,doAnimation);
+            [_target,([_target] call EFUNC(common,getDeathAnim)), 1] call EFUNC(common,doAnimation);
         };
     };
 

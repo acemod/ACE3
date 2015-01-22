@@ -56,7 +56,7 @@ _caller selectWeapon (primaryWeapon _caller);
 
 _unit attachTo [_caller, [0.1, -0.1, -1.25], "LeftShoulder"];
 
-[_unit,"AinjPfalMstpSnonWnonDf_carried_dead", 1, true] call EFUNC(common,doAnimation);
+[_unit,"AinjPfalMstpSnonWnonDf_carried_dead", 2, true] call EFUNC(common,doAnimation);
 [_caller,"acinpercmstpsraswrfldnon", 1] call EFUNC(common,doAnimation);
 
 _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];

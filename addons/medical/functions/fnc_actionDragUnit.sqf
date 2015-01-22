@@ -43,7 +43,6 @@ if (!alive _unit) exitwith {
     }, [_caller, ([_unit,_caller] call EFUNC(common,makeCopyOfBody_F)), _killOnDrop], 0.2, 0.2] call EFUNC(common,waitAndExecute);
 };
 
-
 if (primaryWeapon _caller == "") then {
     _caller addWeapon "ACE_FakePrimaryWeapon";
 };
@@ -58,7 +57,7 @@ if !([_caller,_unit,[0.125, 1.007, 0]] call EFUNC(common,carryObj)) exitwith {
 
 };
 
-[_unit,"AinjPpneMstpSnonWrflDb",  1, true] call EFUNC(common,doAnimation);
+[_unit, "AinjPpneMstpSnonWrflDb",  2, true] call EFUNC(common,doAnimation);
 
 _caller selectWeapon (primaryWeapon _caller); // if no primairy weapon, add a fake one first
 if (currentWeapon _caller == primaryWeapon _caller) then {
