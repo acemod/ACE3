@@ -64,8 +64,6 @@ class ACE_Options {
     };
 };
 
-#include <MainMenu.hpp>
-#include <MenuConfig.hpp>
 #include <ProgressScreen.hpp>
 #include <HintConfig.hpp>
 

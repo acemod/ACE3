@@ -125,7 +125,7 @@ class ACE_settingsMenu {
       idc = 250;
       x = 27.1 * UNITX + OFFSETX;
       y = 5.1 * UNITY + OFFSETY;
-      w = 10 * UNITX;
+      w = 11 * UNITX;
       h = 1 * UNITY;
       text = "";
       SizeEx = (UNITY * 0.75);
@@ -134,7 +134,7 @@ class ACE_settingsMenu {
       idc = 300;
       x = 27.1 * UNITX + OFFSETX;
       y = 6.2 * UNITY + OFFSETY;
-      w = 10 * UNITX;
+      w = 11 * UNITX;
       h = 1 * UNITY;
       text = "";
       SizeEx = (UNITY * 0.60);
@@ -142,8 +142,8 @@ class ACE_settingsMenu {
     class Label2: labelKey {
       idc = 301;
       y = 7.3 * UNITY + OFFSETY;
-      text = "Setting:";
-      SizeEx = (UNITY * 1);
+      text = "$STR_ACE_OptionsMenu_Setting";
+      SizeEx = (UNITY * 0.75);
     };
     class comboBox1: ACE_gui_comboBoxBase {
       idc = 400;
@@ -152,6 +152,7 @@ class ACE_settingsMenu {
       w = 7 * UNITX;
       h = 1 * UNITY;
       onLBSelChanged = QUOTE( call FUNC(onListBoxSettingsChanged));
+      SizeEx = (UNITY * 0.75);
     };
     class sliderBar1: RscXSliderH {
       idc = 410;
@@ -190,7 +191,7 @@ class ACE_settingsMenu {
       text = "";
       style = ST_LEFT + ST_MULTI;
       lineSpacing = 1;
-      sizeEx = 0.03;
+      SizeEx = (UNITY * 0.60);
     };
     class actionClose: ACE_gui_buttonBase {
       idc = 10;

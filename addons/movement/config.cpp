@@ -30,7 +30,7 @@ class ACE_Default_Keys {
 };
 
 class ACE_Options {
-    class useImperial {
+    class GVAR(useImperial) {
         displayName = "$STR_ACE_Movement_UseImperial";
         default = 0;
     };

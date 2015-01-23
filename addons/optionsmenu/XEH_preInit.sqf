@@ -16,7 +16,7 @@ PREP(settingsMenuUpdateKeyView);
 PREP(settingsMenuUpdateList);
 PREP(updateSetting);
 
-ADDON = true;
-
 GVAR(clientSideOptions) = [];
 GVAR(clientSideColors) = [];
+
+ADDON = true;
