@@ -24,7 +24,8 @@ if (GVAR(pfeh_running)) then {
 private ["_mag", "_setup", "_player"];
 _setup = GVAR(Setup);
 GVAR(Setup) = objNull;
-[GVAR(placer), "ACE_Explosives", false] call EFUNC(Common,setForceWalkStatus);
+// [GVAR(placer), "ACE_Explosives", false] call EFUNC(Common,setForceWalkStatus);
+[GVAR(placer), "ACE_Explosives_Walk", "forceWalk", false, true, true] call EFUNC(common,setStatusEffect);
 GVAR(placer) = objNull;
 _player = ACE_player;
 [_player, "DefaultAction", _player getVariable [QGVAR(Place), -1]] call EFUNC(Common,removeActionEventHandler);
