@@ -4,7 +4,7 @@
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
     if (time > 0) exitWith {
-        [QGVAR(onBriefingPFH), "onEachFrame"] call BIS_fnc_removeStackedEventHandler; 
+        [QGVAR(onBriefingPFH), "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
     };
 
     call cba_common_fnc_onFrame;
@@ -37,38 +37,17 @@ if (!hasInterface) exitWith {};
 
 call COMPILE_FILE(scripts\assignedItemFix);
 
-GVAR(keyInput)    = COMPILE_FILE(scripts\keyInput);
-GVAR(keyRelease)  = COMPILE_FILE(scripts\keyRelease);
-GVAR(editKey)     = COMPILE_FILE(scripts\editKey);
-GVAR(openMenu)    = COMPILE_FILE(scripts\openMenu);
-GVAR(closeMenu)   = COMPILE_FILE(scripts\closeMenu);
-GVAR(nextKeys)    = COMPILE_FILE(scripts\nextKeys);
-GVAR(toggleState) = COMPILE_FILE(scripts\toggleState);
-
-[false] call FUNC(setKeyDefault);
-
-GVAR(keyStates) = [];
-GVAR(keyTimes) = [];
-for "_index" from 0 to 300 do {
-    GVAR(keyStates) set [_index, 0];
-    GVAR(keyTimes) set [_index, -1];
-};
-
-call COMPILE_FILE(scripts\KeyInput\initCanInteractFunction);
-call COMPILE_FILE(scripts\KeyInput\initKeys);
-call COMPILE_FILE(scripts\KeyInput\initScrollWheel);
+call COMPILE_FILE(scripts\initCanInteractFunction);
+call COMPILE_FILE(scripts\initScrollWheel);
 
 0 spawn {
     while {true} do {
         waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
-        findDisplay 46 displayAddEventHandler ["KeyDown", QUOTE( _this call GVAR(onKeyDown) )];
-        findDisplay 46 displayAddEventHandler ["KeyUp", QUOTE( _this call GVAR(onKeyUp) )];
         findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call GVAR(onScrollWheel) )];
         [false] call FUNC(disableUserInput);
         waitUntil {isNull (findDisplay 46)};
     };
 };
-
 enableCamShake true;
 
 // Set the name for the current player
