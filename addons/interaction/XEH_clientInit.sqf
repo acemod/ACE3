@@ -19,14 +19,13 @@ GVAR(isOpeningDoor) = false;
 ["ACE3",
     localize "STR_ACE_Interaction_InteractionMenu",
     {
-        systemChat "A";
+        systemChat "interactionMenuDown";
         // Conditions: canInteract
         _exceptions = ["ACE_Drag_isNotDragging", "ACE_Medical_canTreat", "ACE_Interaction_isNotEscorting", "ACE_Interaction_isNotSwimming"];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
-        systemChat "B";
         // Conditions: specific
         if !(isNull (findDisplay 1713999)) exitWith {false};
-        systemChat "C";
+        systemChat "interactionMenuDown Statement";
 
         // Statement
         call FUNC(onButtonDown);
@@ -40,12 +39,13 @@ GVAR(isOpeningDoor) = false;
 ["ACE3",
     localize "STR_ACE_Interaction_InteractionMenu",
     {
+        systemChat "interactionMenu Up";
         // Conditions: canInteract
         _exceptions = ["ACE_Drag_isNotDragging", "ACE_Medical_canTreat", "ACE_Interaction_isNotEscorting", "ACE_Interaction_isNotSwimming"];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
         // Conditions: specific
         if !(!isNull (findDisplay 1713999) && {profileNamespace getVariable [QGVAR(AutoCloseMenu), 0] > 0}) exitWith {false};
-
+        systemChat "interactionMenu Up Statement";
 
         // Statement
         if (GVAR(MenuType) mod 2 == 0) then {call FUNC(onButtonUp)};
@@ -53,20 +53,19 @@ GVAR(isOpeningDoor) = false;
     },
     [219, [false, false, false]],
     false,
-    "keydown"
+    "keyup"
 ] call cba_fnc_registerKeybind;
 
 ["ACE3",
     localize "STR_ACE_Interaction_InteractionMenuSelf",
     {
-        systemChat "A";
+        systemChat "interactionMenuSelf Down";
         // Conditions: canInteract
         _exceptions = ["ACE_Drag_isNotDragging", "ACE_Medical_canTreat", "ACE_Interaction_isNotEscorting", "ACE_Interaction_isNotSwimming", "ACE_Common_notOnMap"];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
-        systemChat "B";
         // Conditions: specific
         if !(isNull (findDisplay 1713999)) exitWith {false};
-        systemChat "C";
+        systemChat "interactionMenuSelf Down Statement";
         // Statement
         call FUNC(onButtonDownSelf);
         true
@@ -79,12 +78,13 @@ GVAR(isOpeningDoor) = false;
 ["ACE3",
     localize "STR_ACE_Interaction_InteractionMenuSelf",
     {
+        systemChat "interactionMenuSelf Up";
         // Conditions: canInteract
         _exceptions = ["ACE_Drag_isNotDragging", "ACE_Medical_canTreat", "ACE_Interaction_isNotEscorting", "ACE_Interaction_isNotSwimming"];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
         // Conditions: specific
         if !(!isNull (findDisplay 1713999) && {profileNamespace getVariable [QGVAR(AutoCloseMenu), 0] > 0}) exitWith {false};
-
+        systemChat "interactionMenuSelf Up Statement";
 
         // Statement
         if (GVAR(MenuType) mod 2 == 1) then {call FUNC(onButtonUp)};
@@ -92,7 +92,7 @@ GVAR(isOpeningDoor) = false;
     },
     [219, [false, true, false]],
     false,
-    "keydown"
+    "keyup"
 ] call cba_fnc_registerKeybind;
 
 ["ACE3",
