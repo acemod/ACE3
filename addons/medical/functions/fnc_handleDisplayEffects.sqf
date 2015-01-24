@@ -11,7 +11,7 @@
 #include "script_component.hpp"
 
 if (!hasInterface) exitwith{};
-45 cutRsc [QEGVAR(gui,ScreenEffectsBlack),"PLAIN"];
+45 cutRsc [QGVAR(ScreenEffectsBlack),"PLAIN"];
 
 FUNC(hb_effect) = {
     _heartRate = _this select 0;
@@ -56,11 +56,11 @@ GVAR(BloodLevel_CC) ppEffectCommit 0;
         if ([_unit] call EFUNC(common,isAwake) && false) then {
             _bloodLoss = _unit call FUNC(getBloodLoss);
             if (_bloodLoss >0) then {
-                [_bloodLoss] call EFUNC(gui,effectBleeding);
+                [_bloodLoss] call FUNC(effectBleeding);
             };
 
             [{
-                [((_this select 0) getvariable[QGVAR(amountOfPain), 0])] call EFUNC(gui,effectPain);
+                [((_this select 0) getvariable[QGVAR(amountOfPain), 0])] call FUNC(effectPain);
             }, [_unit], 0.25, 0.25] call EFUNC(common,waitAndExecute);
 
             [(_unit getvariable[QGVAR(heartRate), 70])] call FUNC(hb_effect);

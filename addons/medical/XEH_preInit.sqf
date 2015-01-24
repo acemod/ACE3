@@ -37,6 +37,10 @@ PREP(determineIfFatal);
 PREP(determineIfUnconscious);
 PREP(fromNumberToBodyPart);
 
+PREP(effectPain);
+PREP(effectBleeding);
+PREP(effectBlackOut);
+
 PREP(getActivityLog);
 PREP(getBloodLoss);
 PREP(getBloodPressure);

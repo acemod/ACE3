@@ -39,13 +39,13 @@ if (_amountOfDamage > 0.2) then {
         };
     };
     if (isPlayer _unit) then {
-        76 cutRsc [QEGVAR(gui,ScreenEffectsHit),"PLAIN"];
+        76 cutRsc [QGVAR(ScreenEffectsHit),"PLAIN"];
         addCamShake [3, 5, _amountOfDamage + random 10];
     };
 } else {
     if (_amountOfDamage > 0) then {
         if (isPlayer _unit) then {
-            76 cutRsc [QEGVAR(gui,ScreenEffectsHit),"PLAIN"];
+            76 cutRsc [QGVAR(ScreenEffectsHit),"PLAIN"];
         };
     };
 };
