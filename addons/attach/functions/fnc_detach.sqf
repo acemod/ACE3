@@ -12,7 +12,7 @@ Return Value:
 none
 */
 
-private ["_unit", "_itemName", "_count", "_attachedItem"];
+private ["_unit", "_itemName", "_count", "_attachedItem", "_fnc_detachDelay"];
 
 _unit = _this select 0;
 _itemName = _unit getVariable [QGVAR(ItemName), ""];
@@ -33,7 +33,12 @@ if (_itemName == "B_IR_Grenade" or _itemName == "O_IR_Grenade" or _itemName == "
   detach _attachedItem;
   _attachedItem setPos [getPos _unit select 0, getPos _unit select 1, ((getPos _unit select 2) - 1000)];
   // Delete attached item after 0.5 seconds
-  [FUNC(detachFix), 0.5, [_attachedItem, (time + 0.5)]] call CBA_fnc_addPerFrameHandler;
+  systemChat "wait";
+  _fnc_detachDelay = {
+    systemChat "deleting";
+    deleteVehicle (_this select 0);
+  };
+  [_fnc_detachDelay, [_attachedItem], 0.5, 0] call EFUNC(common,waitAndExecute);
 } else {
   // Delete attached item
   deleteVehicle _attachedItem;
