@@ -19,7 +19,9 @@ _unit setvariable ["ACE_isUnconscious", nil, true];
 if (isPlayer _unit) then {
     [true] call FUNC(setVolume_f);
     [false] call FUNC(disableKeyInput_f);
-    [false] call EFUNC(GUI,effectBlackOut);
+    if (["ace_medical"] call FUNC(isModLoader_f)) then {
+        [false] call EFUNC(medical,effectBlackOut);
+    };
 
     if !(isnil QGVAR(DISABLE_USER_INPUT_COLLECTION_F)) then {
         // clear all disable user input
@@ -35,4 +37,3 @@ if (isPlayer _unit) then {
     };
 }foreach ([_unit] call FUNC(getAllDefinedSetVariables));
 
-[[_unit],"resetToDefaults"] call FUNC(raiseScriptedEvent_f);

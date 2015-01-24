@@ -28,3 +28,4 @@ class CfgAddons {
 #include "CfgVehicles.hpp"
 #include "ui\define.hpp"
 #include "ui\menu.hpp"
+#include "ui\RscTitles.hpp"

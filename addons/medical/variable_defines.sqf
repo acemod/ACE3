@@ -51,5 +51,10 @@
 [QGVAR(bodyPartStatusPrevious),[0,0,0,0,0,0],false, QUOTE(ADDON)] call EFUNC(common,defineVariable);
 
 [QGVAR(addedToUnitLoop),false,false, QUOTE(ADDON)] call EFUNC(common,defineVariable);
+["ACE_reviveCounterValue", 0, false, QGVAR(ADDON)] call FUNC(defineVariable);
+["ACE_inReviveState", false, true, QGVAR(ADDON)] call FUNC(defineVariable);
+["ACE_isDead",false,true,QUOTE(ADDON)] call FUNC(defineVariable);
+["ACE_isUnconscious",false,true,QUOTE(ADDON)] call FUNC(defineVariable);
+["ACE_isDeadPlayer", false, true, QUOTE(ADDON)] call FUNC(defineVariable);
 
 GVAR(VarDefinesCompleted) = true;

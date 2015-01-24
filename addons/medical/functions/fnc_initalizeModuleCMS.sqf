@@ -52,12 +52,12 @@ waituntil{!isnil "ACE_gui" && !isnil "ACE_common"};
 if (GVAR(setting_AdvancedLevel) > 0) then {
     [
         {(([_this select 0,QGVAR(heartRate)] call EFUNC(common,getDefinedVariable)) < 20)}
-    ] call EFUNC(common,registerUnconsciousCondition);
+    ] call FUNC(registerUnconsciousCondition);
 
     if (GVAR(setting_allowAirwayInjuries)) then {
         [
             {(([_this select 0,QGVAR(airway)] call EFUNC(common,getDefinedVariable)) > 2)}
-        ] call EFUNC(common,registerUnconsciousCondition);
+        ] call FUNC(registerUnconsciousCondition);
     };
 };
 

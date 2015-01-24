@@ -40,7 +40,7 @@ if (!alive _unit) exitwith {
     [_caller, false] call FUNC(treatmentMutex);
     [{
         _this call FUNC(actionDragUnit);
-    }, [_caller, ([_unit,_caller] call EFUNC(common,makeCopyOfBody_F)), _killOnDrop], 0.2, 0.2] call EFUNC(common,waitAndExecute);
+    }, [_caller, ([_unit,_caller] call EFUNC(medical,makeCopyOfBody_F)), _killOnDrop], 0.2, 0.2] call EFUNC(common,waitAndExecute);
 };
 
 if (primaryWeapon _caller == "") then {

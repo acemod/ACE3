@@ -14,4 +14,4 @@
 private ["_unit"];
 _unit = _this select 0;
 
-(!(isNull _unit) && {(_unit isKindOf "CaManBase") && ([_unit] call FUNC(isAwake))})
+(!(isNull _unit) && {(_unit isKindOf "CaManBase") && ([_unit] call EFUNC(common,isAwake))})

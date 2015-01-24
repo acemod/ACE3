@@ -131,10 +131,22 @@ PREP(updateIcons);
 PREP(updateUIInfo);
 
 PREP(useEquipment);
-
-
 PREP(cacheHandledamageCall);
 PREP(checkDamage);
+
+
+PREP(setUnconsciousState);
+PREP(isUnconscious);
+PREP(getUnconsciousCondition);
+PREP(registerUnconsciousCondition);
+PREP(cleanUpCopyOfBody_F);
+PREP(makeCopyOfBody_F);
+PREP(canGoUnconsciousState);
+PREP(setDead);
+PREP(moduleBasicRevive);
+
+PREP(setWeaponsCorrectUnconscious);
+PREP(setCaptiveSwitch);
 
 // initalize all module parameters.
 GVAR(setting_allowInstantDead) = true;

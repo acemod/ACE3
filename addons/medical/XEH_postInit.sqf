@@ -38,8 +38,9 @@ GVAR(injuredUnitCollection) = [];
 [
     {(([_this select 0,QGVAR(bloodVolume)] call EFUNC(common,getDefinedVariable)) < 65)},
     {(([_this select 0,QGVAR(amountOfPain)] call EFUNC(common,getDefinedVariable)) > 48)},
-    {(((_this select 0) call FUNC(getBloodLoss)) > 0.25)}
-] call EFUNC(common,registerUnconsciousCondition);
+    {(((_this select 0) call FUNC(getBloodLoss)) > 0.25)},
+    {((_this select 0) getvariable ["ACE_inReviveState", false])}
+] call FUNC(registerUnconsciousCondition);
 
 call FUNC(handleDisplayEffects);
 
@@ -49,6 +50,9 @@ call FUNC(handleDisplayEffects);
 ["onUnconscious", FUNC(onUnconscious)] call ace_common_fnc_addEventHandler;
 ["carryObjectDropped", FUNC(onCarryObjectDropped)] call ace_common_fnc_addEventHandler;
 
+if (isNil QGVAR(ENABLE_REVIVE_F)) then {
+    GVAR(ENABLE_REVIVE_F) = 0;
+};
 
 
 // Keybindings
@@ -86,7 +90,6 @@ GVAR(keyPressed) = false;
    [ 0, [false, false, false]],
    false,
   "keyUp"] call cba_fnc_registerKeybind;
-
 
 
 // Adding the treatment options for all available medical equipment.

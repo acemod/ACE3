@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {"ACE_Box_Misc"};
         weapons[] = {"ACE_ItemCore","ACE_FakePrimaryWeapon"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_main", "ace_gui"};
+        requiredAddons[] = {"ace_main"};
         author[] = {"KoffeinFlummi"};
         authorUrl = "https://github.com/KoffeinFlummi/";
         VERSION_CONFIG;

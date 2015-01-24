@@ -23,10 +23,10 @@ _caller = _this select 1;
 
     _newUnit = _group createUnit [typeof _oldBody, _position, [], 0, "NONE"];
 
-    _allVariables = [_oldBody] call FUNC(getAllDefinedSetVariables);
+    _allVariables = [_oldBody] call EFUNC(common,getAllDefinedSetVariables);
     //  [NAME (STRING), TYPENAME (STRING), VALUE (ANY), DEFAULT GLOBAL (BOOLEAN)]
     {
-        [_newUnit,_x select 0, _x select 2] call FUNC(setDefinedVariable);
+        [_newUnit,_x select 0, _x select 2] call EFUNC(common,setDefinedVariable);
     }foreach _allVariables;
     _newUnit setVariable [QGVAR(name),_name,true];
 
