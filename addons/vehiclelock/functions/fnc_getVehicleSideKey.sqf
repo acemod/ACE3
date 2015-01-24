@@ -24,7 +24,7 @@ _veh =   [_this, 0, objNull, [objNull]] call bis_fnc_param;
 if (isNull _veh) exitWith {["ACE_VehicleLock_fnc_getVehicleSideKey: null vehicle"] call BIS_fnc_error; ""};
 
 _vehConfigSide = [_veh, true] call BIS_fnc_objectSide;
-_vehSide = _veh getVariable [QGVAR(lock_side), _vehConfigSide];
+_vehSide = _veh getVariable [QGVAR(lockSide), _vehConfigSide];
 
 _returnValue = "";
 

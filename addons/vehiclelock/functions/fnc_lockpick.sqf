@@ -43,7 +43,7 @@ if (!("ACE_key_lockpick" in (items _unit))) exitWith {
   false
 };
 
-_vehLockpickStrenth = _veh getVariable[QGVAR(LockpickStrength), GVAR(DefaultLockpickStrength)];
+_vehLockpickStrenth = _veh getVariable[QGVAR(lockpickStrength), GVAR(DefaultLockpickStrength)];
 if (typeName _vehLockpickStrenth != "SCALAR") exitWith {
   ["ACE_VehicleLock_fnc_lockpick: 'ACE_vehicleLock_LockpickStrength' invalid: (%1)", _veh] call BIS_fnc_error;
   false
