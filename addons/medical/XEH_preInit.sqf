@@ -148,6 +148,7 @@ PREP(moduleBasicRevive);
 PREP(setWeaponsCorrectUnconscious);
 PREP(setCaptiveSwitch);
 
+
 // initalize all module parameters.
 GVAR(setting_allowInstantDead) = true;
 GVAR(setting_AdvancedLevel) = 0;

@@ -40,7 +40,7 @@ if (!alive _unit) exitwith {
     [_caller, false] call FUNC(treatmentMutex);
     [{
         _this call FUNC(actionDragUnit);
-    }, [_caller, ([_unit,_caller] call EFUNC(medical,makeCopyOfBody_F)), _killOnDrop], 0.2, 0.2] call EFUNC(common,waitAndExecute);
+    }, [_caller, ([_unit,_caller] call FUNC(makeCopyOfBody_F)), _killOnDrop], 0.25, 0.25] call EFUNC(common,waitAndExecute);
 };
 
 if (primaryWeapon _caller == "") then {
@@ -65,7 +65,6 @@ if (currentWeapon _caller == primaryWeapon _caller) then {
 } else {
     [_caller,"AcinPknlMstpSnonWnonDnon", 1] call EFUNC(common,doAnimation);
 };
-
 
 _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
 [2,

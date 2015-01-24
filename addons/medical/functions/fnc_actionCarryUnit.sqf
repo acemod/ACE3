@@ -42,11 +42,11 @@ if (!alive _unit) exitwith {
     [_caller, false] call FUNC(treatmentMutex);
     [{
         _this call FUNC(actionCarryUnit);
-    }, [_caller, ([_unit,_caller] call EFUNC(medical,makeCopyOfBody_F)), _killOnDrop], 0.2, 0.2] call EFUNC(common,waitAndExecute);
+    }, [_caller, ([_unit,_caller] call FUNC(makeCopyOfBody_F)), _killOnDrop], 0.25, 0.25] call EFUNC(common,waitAndExecute);
 };
 
 if !([_caller,_unit] call EFUNC(common,carryObj)) exitwith {
-    ["couldn't carry object!"] call EFUNC(common,debug); [_caller,"release"] call FUNC(treatmentMutex);
+    ["couldn't carry object!"] call EFUNC(common,debug); [_caller,false] call FUNC(treatmentMutex);
 };
 
 if (primaryWeapon _caller == "") then {
