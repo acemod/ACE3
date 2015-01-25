@@ -7,12 +7,12 @@
  * @Return:
  * @PublicAPI: false
  */
-#define ALL_PLAYERS 0
-#define ONLY_MEDICS    1
+#define ALL_PLAYERS   0
+#define ONLY_MEDICS   1
 
 
 // TODO add amount of to defines
-#define BASIC_BANDAGES         "ACE_bandage_basic"
+#define BASIC_BANDAGES       "ACE_bandage_basic"
 #define PACKING_BANDAGES     "ACE_packing_bandage"
 
 #include "script_component.hpp"
@@ -25,7 +25,6 @@ if (!isNull _logic) then {
     waituntil {time>0};
 
     _start = diag_tickTime;
-    waituntil {(["ACE_sys_medical"] call EFUNC(common,isModuleEnabled_F)) || (diag_tickTime - _start > 10000)};
 
     if (!(["ACE_sys_medical"] call EFUNC(common,isModuleEnabled_F))) exitwith {};
     // TODO Create functions for adding multiple magazines to a unit
@@ -55,9 +54,8 @@ if (!isNull _logic) then {
         player addItem  "ACE_morphine";
     };
 
-
     // TODO make this neat code.
-       switch (_setting) do {
+      switch (_setting) do {
            case ALL_PLAYERS: {
                _code = if ([player] call FUNC(medicClass)) then {
                    _medicsLoadout;
@@ -78,7 +76,7 @@ if (!isNull _logic) then {
                player addEventhandler["Respawn", _code];
            };
            default {};
-   };
+    };
  };
 
 true
