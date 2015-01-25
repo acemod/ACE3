@@ -9,56 +9,60 @@
  */
 
 #include "script_component.hpp"
+#define ADD_INJURY(BODYPART,TYPE,AMOUNT) _selection = _openWounds select BODYPART; \
+    _newAmount = (_selection select TYPE) + AMOUNT; \
+    _selection set [ TYPE, _newAmount]; \
+    _openWounds set [BODYPART , _selection];
 
-private ["_unit", "_amountOfDamage", "_typeOfInjury", "_bodyPartn"];
+
+private ["_unit", "_amountOfDamage", "_typeOfInjury", "_bodyPartn", "_openWounds","_newAmount","_selection"];
 _unit = _this select 0;
 _amountOfDamage = _this select 1;
 _typeOfInjury = _this select 2;
 _bodyPartn = _this select 3;
 
 if (_amountOfDamage > 0.05) exitwith {
+    _openWounds = [_unit,QGVAR(openWounds)] call EFUNC(common,getDefinedVariable);
     switch (toLower _typeOfInjury) do {
         case "bullet": {
-             [_unit, _bodyPartn, round(random(2)), 1, false] call FUNC(addOpenWounds);
+            ADD_INJURY(_bodyPartn, round(random(2)), 1);
         };
         case "grenade": {
-            [_unit, _bodyPartn, round(random(2)), 1] call FUNC(addOpenWounds);
+            ADD_INJURY(_bodyPartn, round(random(2)), 1);
             for "_i" from 0 to round(random(3)) /* step +1 */ do {
-                [_unit, round(random(6)), round(random(2)), 1, false] call FUNC(addOpenWounds);
+                ADD_INJURY(round(random(6)), round(random(2)), 1);
             };
         };
         case "explosive": {
-            [_unit, _bodyPartn, round(random(2)), 1] call FUNC(addOpenWounds);
+            ADD_INJURY(_bodyPartn, round(random(2)), 1);
             for "_i" from 0 to round(random(4)) /* step +1 */ do {
-                [_unit, round(random(6)), round(random(2)), 1, false] call FUNC(addOpenWounds);
+                ADD_INJURY(round(random(6)), round(random(2)), 1);
             };
         };
         case "shell": {
-            [_unit, _bodyPartn, round(random(2)), 1] call FUNC(addOpenWounds);
+            ADD_INJURY(_bodyPartn, round(random(2)), 1);
             for "_i" from 0 to round(random(5)) /* step +1 */ do {
-                [_unit, round(random(6)), round(random(2)), 1, false] call FUNC(addOpenWounds);
+                ADD_INJURY(round(random(6)), round(random(2)), 1);
             };
         };
         case "backblast": {
             if (random(1)>=0.5) then{
-                [_unit, _bodyPartn, round(random(1)), 1, false] call FUNC(addOpenWounds);
+                ADD_INJURY(_bodyPartn, round(random(2)), 1);
             };
         };
         case "unknown": {
-            [_unit, _bodyPartn, round(random(1)), 1, false] call FUNC(addOpenWounds);
+            ADD_INJURY(_bodyPartn, round(random(1)), 1);
         };
         case "vehiclecrash": {
             if (random(1)>=0.5) then{
-                [_unit, _bodyPartn, round(random(1)), 1, false] call FUNC(addOpenWounds);
+                ADD_INJURY(_bodyPartn, round(random(1)), 1);
             };
         };
         default {
-            [_unit, _bodyPartn, round(random(1)), 1, false] call FUNC(addOpenWounds);
+            ADD_INJURY(_bodyPartn, round(random(1)), 1);
         };
     };
-
-    // one more call to broadcast the new injuries
-    [_unit, _bodyPartn, 0, 0, true] call FUNC(addOpenWounds);
+    [_unit, QGVAR(openWounds),_openWounds] call EFUNC(common,setDefinedVariable);
 
     true;
 };

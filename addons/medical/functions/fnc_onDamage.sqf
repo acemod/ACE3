@@ -42,8 +42,8 @@ if !(_selectionName in ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]) e
 [_unit, _selectionName, _damage, _source, _projectile] call FUNC(cacheHandledamageCall);
 
 // Checking if we should return full damage or not
-if (_damage > 0.95) then {
-    _damage = 0.95;
+if (_damage > 0.975) then {
+    _damage = 0.975;
 };
 
 // Check if a unit would die from this hit
@@ -53,11 +53,20 @@ if (alive _unit && (vehicle _unit == _unit) && {alive (vehicle _unit)}) then {
     // Find the correct Damage threshold for unit.
     _damageThreshold = [1,1,1];
     if (isPlayer _unit) then {
-        _damageThreshold =_unit getvariable[QGVAR(unitDamageThreshold), [GVAR(damageThreshold_Players), GVAR(damageThreshold_Players), GVAR(damageThreshold_Players)]];
+        _damageThreshold =_unit getvariable[QGVAR(unitDamageThreshold), [GVAR(damageThreshold_Players), GVAR(damageThreshold_Players), GVAR(damageThreshold_Players) * 1.7]];
     } else {
-        _damageThreshold =_unit getvariable[QGVAR(unitDamageThreshold), [GVAR(damageThreshold_AI), GVAR(damageThreshold_AI), GVAR(damageThreshold_AI)]];
+        _damageThreshold =_unit getvariable[QGVAR(unitDamageThreshold), [GVAR(damageThreshold_AI), GVAR(damageThreshold_AI), GVAR(damageThreshold_AI) * 1.7]];
     };
     _damageBodyPart = ([_unit,QGVAR(bodyPartStatus),[0,0,0,0,0,0]] call EFUNC(common,getDefinedVariable)) select _bodyPartn;
+
+    _hitSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
+    _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
+
+    // Calculate change in damage.
+    _newDamage = _damage - (damage _unit);
+    if (_selectionName in _hitSelections) then {
+        _newDamage = _damage - (_unit getHitPointDamage (_hitPoints select (_hitSelections find _selectionName)));
+    };
 
        // Check if damage to body part is higher as damage head
     if (_bodyPartn == 0) exitwith {

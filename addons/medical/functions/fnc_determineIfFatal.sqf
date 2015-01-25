@@ -21,9 +21,9 @@ if ((vehicle _unit != _unit) && {!alive (vehicle _unit)}) exitwith { true };
 // Find the correct Damage threshold for unit.
 _damageThreshold = [1,1,1];
 if (isPlayer _unit) then {
-    _damageThreshold =_unit getvariable[QGVAR(unitDamageThreshold), [GVAR(damageThreshold_Players), GVAR(damageThreshold_Players), GVAR(damageThreshold_Players)]];
+    _damageThreshold =_unit getvariable[QGVAR(unitDamageThreshold), [GVAR(damageThreshold_Players), GVAR(damageThreshold_Players), GVAR(damageThreshold_Players) * 1.7]];
 } else {
-    _damageThreshold =_unit getvariable[QGVAR(unitDamageThreshold), [GVAR(damageThreshold_AI), GVAR(damageThreshold_AI), GVAR(damageThreshold_AI)]];
+    _damageThreshold =_unit getvariable[QGVAR(unitDamageThreshold), [GVAR(damageThreshold_AI), GVAR(damageThreshold_AI), GVAR(damageThreshold_AI) * 1.7]];
 };
 
 _damageBodyPart = ([_unit,QGVAR(bodyPartStatus),[0,0,0,0,0,0]] call EFUNC(common,getDefinedVariable)) select _part;

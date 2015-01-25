@@ -11,7 +11,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_selectionName","_damage"];
+private ["_unit", "_selectionName","_damage", "_source","_projectile","_hitSelections","_hitPoints","_newDamage","_cache_hitpoints","_cache_projectiles","_cache_params","_cache_damages"];
 _unit          = _this select 0;
 _selectionName = _this select 1;
 _damage        = _this select 2;
@@ -47,11 +47,12 @@ if (_unit getVariable [QGVAR(isFalling), false]) then {
 
 // Finished with the current frame, reset variables
 // Note: sometimes handleDamage spans over 2 or even 3 frames.
-if (diag_frameno > (_unit getVariable [QGVAR(frameNo), -3]) + 2) then {
-    _unit setVariable [QGVAR(frameNo), diag_frameno];
+if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) then {
+    _unit setVariable [QGVAR(frameNo_damageCaching), diag_frameno];
 
     // handle the cached damages 3 frames later
     [{
+        private ["_args","_unit","_frameNo"];
         _args = _this select 0;
         _unit = _args select 0;
         _frameNo = _args select 1;
@@ -87,7 +88,7 @@ if (_selectionName != "") then {
 
     // Check if the current projectile has already been handled once
     if (_projectile in _cache_projectiles) then {
-
+        private ["_index","_otherDamage"];
         // if it has been handled, find the index in the cache
         _index = _cache_projectiles find _projectile;
 
@@ -98,6 +99,7 @@ if (_selectionName != "") then {
         if (_otherDamage > _newDamage) then {
             _newDamage = 0;
         } else {
+            private ["_hitPoint", "_restore"];
             // Restore the damage before the previous damage was processed
             _hitPoint = _cache_hitpoints select _index;
             _restore = ((_unit getHitPointDamage _hitPoint) - _otherDamage) max 0;
