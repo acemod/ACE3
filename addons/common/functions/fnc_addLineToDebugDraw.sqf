@@ -29,7 +29,7 @@ if (count GVAR(debugLines) < 100) then {
 if (isNil QGVAR(debugDrawHandler)) then {
     GVAR(debugDrawHandler) = addMissionEventHandler ["Draw3D", {
         if (count GVAR(debugLines) == 0) exitWith {
-            removeMissionEventHandler GVAR(debugDrawHandler);
+            removeMissionEventHandler ["Draw3D", GVAR(debugDrawHandler)];
             GVAR(debugDrawHandler) = nil;
         };
 
