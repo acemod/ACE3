@@ -5,13 +5,21 @@ class Extended_PreInit_EventHandlers {
     };
 };
 
-class Extended_FiredNear_EventHandlers {
+class Extended_PostInit_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_postInit) );
+    };
+};
+
+class Extended_FiredBIS_EventHandlers {
     class CAManBase {
         class GVAR(LauncherBackblast) {
-            FiredNear = QUOTE( if (local (_this select 0) && {getNumber (configfile >> 'CfgWeapons' >> _this select 3 >> 'ACE_Backblast_Damage') > 0}) then {_this call FUNC(launcherBackblast)} );
+            firedBIS = QUOTE( if (local (_this select 0) && {getNumber (configfile >> 'CfgWeapons' >> _this select 1 >> 'ACE_Backblast_Damage') > 0}) then {_this call FUNC(fireLauncherBackblast)} );
         };
+    };
+    class AllVehicles {
         class GVAR(TankDangerZone) {
-            FiredNear = QUOTE( if (local (_this select 0) && {getNumber (configfile >> 'CfgWeapons' >> _this select 3 >> 'ACE_DangerZone_Damage') > 0}) then {_this call FUNC(tankDangerZone)} );
+            firedBIS = QUOTE( if (local (_this select 0) && {getNumber (configfile >> 'CfgWeapons' >> _this select 1 >> 'ACE_DangerZone_Damage') > 0}) then {_this call FUNC(fireOverpressureZone)} );
         };
     };
 };
