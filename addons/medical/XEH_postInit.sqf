@@ -26,7 +26,7 @@ GVAR(injuredUnitCollection) = [];
             };
             if (_pain > 45) then {
                 if (random(1) > 0.6) then {
-                    [_X] call EFUNC(common,setUnconsciousState);
+                    [_X] call FUNC(setUnconsciousState);
                 };
                 //[_X] call FUNC(playInjuredSound);
             };

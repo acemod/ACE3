@@ -60,7 +60,7 @@ if (_bloodVolume < 30) exitwith {
 if ([_unit] call EFUNC(common,isAwake)) then {
     if (_bloodVolume < 60) then {
         if (random(1) > 0.9) then {
-            [_unit] call EFUNC(common,setUnconsciousState);
+            [_unit] call FUNC(setUnconsciousState);
         };
     };
 };
@@ -97,13 +97,11 @@ if ((missionNamespace getvariable[QGVAR(setting_AdvancedLevel), 0]) > 0) exitwit
         _bloodPressureL = _bloodPressure select 0;
         _bloodPressureH = _bloodPressure select 1;
 
-
-        if (_heartRate < 10 || _bloodPressureH < 30 || _bloodVolume < 20) then {
-            [_unit] call EFUNC(common,setUnconsciousState); // safety check to ensure unconsciousness for units if they are not dead already.
-        };
-
-
         if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
+            if (_heartRate < 10 || _bloodPressureH < 30 || _bloodVolume < 20) then {
+                [_unit] call FUNC(setUnconsciousState); // safety check to ensure unconsciousness for units if they are not dead already.
+            };
+
             if (_bloodPressureH > 260) then {
                 if (random(1) > 0.7) then {
                     [_unit] call FUNC(setCardiacArrest);

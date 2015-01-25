@@ -69,7 +69,7 @@ if ([_unit] call FUNC(hasMedicalEnabled)) then {
     } else {
         [_unit] call FUNC(addToInjuredCollection);
         if ([_unit, _bodyPartn] call FUNC(determineIfUnconscious)) then {
-            [_unit] call EFUNC(common,setUnconsciousState);
+            [_unit] call FUNC(setUnconsciousState);
         } else {
             [_unit,_newDamage] call FUNC(handleReactionHit);
         };

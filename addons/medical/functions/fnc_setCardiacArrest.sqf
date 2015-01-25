@@ -20,11 +20,12 @@ _unit setvariable [QGVAR(inCardiacArrest), true,true];
 
 ["Medical_onEnteredCardiacArrest", [_unit]] call ace_common_fnc_localEvent;
 
-[_unit] call EFUNC(common,setUnconsciousState);
+[_unit] call FUNC(setUnconsciousState);
 _counter = 120 + round(random(600));
 _timer = 0;
 
 [{
+    private ["_args","_unit","_timer","_counter","_heartRate"];
     _args = _this select 0;
     _unit = _args select 0;
     _timer = _args select 1;
@@ -36,6 +37,7 @@ _timer = 0;
         [(_this select 1)] call cba_fnc_removePerFrameHandler;
     };
     if (_counter - _timer < 1) exitwith {
+
         [_unit] call FUNC(setDead);
         [(_this select 1)] call cba_fnc_removePerFrameHandler;
         _unit setvariable [QGVAR(inCardiacArrest), nil,true];
