@@ -23,17 +23,23 @@ _unit setvariable [QGVAR(inCardiacArrest), true,true];
 [_unit] call EFUNC(common,setUnconsciousState);
 _counter = 120 + round(random(600));
 _timer = 0;
-while {(_timer < _counter && alive _unit)} do {
+
+[{
+    _args = _this select 0;
+    _unit = _args select 0;
+    _timer = _args select 1;
+    _counter = _args select 2;
+
     _heartRate = [_unit,QGVAR(heartRate)] call EFUNC(common,getDefinedVariable);
-    if (_heartRate > 0) exitwith {
-        [format["%1 is moved out of cardiac: %2",_unit, _heartRate]] call EFUNC(common,debug);
+    if (_heartRate > 0 || !alive _unit) exitwith {
         _unit setvariable [QGVAR(inCardiacArrest), nil,true];
+        [(_this select 1)] call cba_fnc_removePerFrameHandler;
     };
     if (_counter - _timer < 1) exitwith {
         [_unit] call FUNC(setDead);
+        [(_this select 1)] call cba_fnc_removePerFrameHandler;
+        _unit setvariable [QGVAR(inCardiacArrest), nil,true];
     };
-    sleep 1;
-    _timer = _timer + 1;
-};
+    _args set[1, _timer + 1];
+}, 1, [_unit, _timer, _counter] ] call CBA_fnc_addPerFrameHandler;
 
-_unit setvariable [QGVAR(inCardiacArrest), nil,true];

@@ -72,24 +72,35 @@ if (count _attributes > 1) then {
         if (_totalUsed > 10) then {
             [_target] call EFUNC(common,setDead);
         };
+        _wearOff =  _wearOff + (round(random(30)));
 
-        [_target,_wearOff,_var] spawn {
-            sleep ((_this select 1) + (round(random(30))));
+        [{
+            _target = _this select 0;
+            _wearOff = _this select 1;
+            _var = _this select 2;
+
             _amountDecreased = 0;
             _usedMed = [_this select 0, _this select 2] call EFUNC(common,getDefinedVariable);
             if (typeName _usedMed != typeName 0) then {
                 _usedMed = 0;
             };
-            while {(_usedMed > 0.000000 && _amountDecreased < 1.000000)} do {
-                _usedMed = ([_this select 0, _this select 2] call EFUNC(common,getDefinedVariable));
-                if ( typeName _usedMed !=  typeName 0) then {
-                    _usedMed = 0;
-                };
-                [_this select 0, _this select 2,_usedMed - 0.001] call EFUNC(common,setDefinedVariable);
-                _amountDecreased = _amountDecreased + 0.001;
-                sleep 1;
+
+            if (_usedMed > 0) then {
+                [{
+                    _args = _this select 0;
+                    _amountDecreased = _args select 3;
+                    _usedMed = ([_args select 0, _args select 2] call EFUNC(common,getDefinedVariable));
+                    [_args select 0, _args select 2,_usedMed - 0.001] call EFUNC(common,setDefinedVariable);
+                    _amountDecreased = _amountDecreased + 0.001;
+
+                    if (_amountDecreased >= 1 || (_usedMed - 0.001 <= 0)) then {
+                        [(_this select 1)] call cba_fnc_removePerFrameHandler;
+                    };
+                    _args set [3, _amountDecreased];
+                }, 1, [_target, _wearOff,_var, 0] ] call CBA_fnc_addPerFrameHandler;
             };
-        };
+        }, [_target, _wearOff, _var], _wearOff, _wearOff] call EFUNC(common,waitAndExecute);
+
     };
 
     private ["_heartRate","_pain"];
