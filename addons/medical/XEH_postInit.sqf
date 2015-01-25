@@ -119,7 +119,7 @@ ADD_TREATMENT_ADVANCED("STR_ACE_ACTION_SALINEIV_250ml","STR_ACE_ACTION_SALINEIV_
         (GVAR(setting_aidKitRestrictions) == 2) ||
         (GVAR(setting_aidKitRestrictions) == 3 && (!_hasOpenWounds))) exitwith {
 
-        ((GVAR(setting_aidKitMedicsOnly) && [_caller] call FUNC(medicClass) || !GVAR(setting_aidKitMedicsOnly)));
+        ((GVAR(setting_aidKitMedicsOnly) && [_caller] call FUNC(isMedic) || !GVAR(setting_aidKitMedicsOnly)));
     };
     false;
 },TREATMENT_ADVANCED('ACE_personal_aid_kit'),'advanced'] call FUNC(addTreatmentOption);
@@ -142,7 +142,7 @@ ADD_TREATMENT_ADVANCED("STR_ACE_ACTION_SALINEIV_250ml","STR_ACE_ACTION_SALINEIV_
     _caller = _this select 0;
     _target = _this select 1;
 
-     ((GVAR(setting_allowStitching) == 0 && [_Caller] call FUNC(medicClass)) || GVAR(setting_allowStitching) == 1)
+     ((GVAR(setting_allowStitching) == 0 && [_Caller] call FUNC(isMedic)) || GVAR(setting_allowStitching) == 1)
 },TREATMENT_ADVANCED('ACE_surgical_kit'),'advanced'] call FUNC(addTreatmentOption);
 
 // Airway Management

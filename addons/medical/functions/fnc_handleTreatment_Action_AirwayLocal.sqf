@@ -25,7 +25,7 @@ if (!local _target) exitwith{};
 
 _airwayStatus = [_target,QGVAR(airway)] call EFUNC(common,getDefinedVariable);
 if (_airwayStatus > 0) then {
-    if (!([_treatingPerson] call FUNC(medicClass))) then {
+    if (!([_treatingPerson] call FUNC(isMedic))) then {
         _target setvariable [QGVAR(airwayTreated), true, true];
     } else {
         if (random (1) >= 0.35) then {

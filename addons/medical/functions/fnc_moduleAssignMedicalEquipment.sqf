@@ -26,7 +26,6 @@ if (!isNull _logic) then {
 
     _start = diag_tickTime;
 
-    if (!(["ACE_sys_medical"] call EFUNC(common,isModuleEnabled_F))) exitwith {};
     // TODO Create functions for adding multiple magazines to a unit
     // TODO Check if unit can store more magazines (ie backpack/vest/uniform are not full)
 
@@ -57,7 +56,7 @@ if (!isNull _logic) then {
     // TODO make this neat code.
       switch (_setting) do {
            case ALL_PLAYERS: {
-               _code = if ([player] call FUNC(medicClass)) then {
+               _code = if ([player] call FUNC(isMedic)) then {
                    _medicsLoadout;
                } else {
                    _nonMedics;
@@ -67,7 +66,7 @@ if (!isNull _logic) then {
                player addEventhandler["Respawn", _code];
            };
            case ONLY_MEDICS: {
-               _code = if ([player] call FUNC(medicClass)) then {
+               _code = if ([player] call FUNC(isMedic)) then {
                    _medicsLoadout;
                } else {
                    {};
