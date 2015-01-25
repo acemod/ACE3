@@ -19,7 +19,7 @@
 
 if (cameraOn != ace_player || {call FUNC(externalCamera)}) exitWith{false};
 private "_dirtImage";
-_effects = GETGLASSES(ace_player,GLASSESDEFAULT);
+_effects = GETGLASSES(ace_player);
 _effects set [DIRT, true];
 SETGLASSES(ace_player,_effects);
 
