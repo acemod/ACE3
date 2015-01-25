@@ -13,7 +13,6 @@
 #define ARMOURCOEF 2
 
 private ["_unit", "_selectionName", "_damage", "_source", "_source", "_projectile", "_hitSelections", "_hitPoints", "_newDamage", "_found", "_cache_projectiles", "_cache_hitpoints", "_cache_damages"];
-
 _unit          = _this select 0;
 _selectionName = _this select 1;
 _damage        = _this select 2;
@@ -23,6 +22,7 @@ _projectile    = _this select 4;
 if (!([_unit] call FUNC(hasMedicalEnabled))) exitwith {
     call FUNC(handleDamage); // let it run through the damage threshold script
 };
+
 // Otherwise we carry on with collecting the necessary information
 
 if (typeName _projectile == "OBJECT") then {
@@ -41,13 +41,8 @@ if !(_selectionName in ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]) e
 // Cache the handleDamage call
 [_unit, _selectionName, _damage, _source, _projectile] call FUNC(cacheHandledamageCall);
 
-// Checking if we should return full damage or not
-if (_damage > 0.975) then {
-    _damage = 0.975;
-};
-
 // Check if a unit would die from this hit
-if (alive _unit && (vehicle _unit == _unit) && {alive (vehicle _unit)}) then {
+if (alive (vehicle _unit)) then {
     _bodyPartn = [_selectionName] call FUNC(getBodyPartNumber);
 
     // Find the correct Damage threshold for unit.
@@ -63,12 +58,10 @@ if (alive _unit && (vehicle _unit == _unit) && {alive (vehicle _unit)}) then {
     _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
 
     // Calculate change in damage.
-    _newDamage = _damage - (damage _unit);
-    if (_selectionName in _hitSelections) then {
-        _newDamage = _damage - (_unit getHitPointDamage (_hitPoints select (_hitSelections find _selectionName)));
-    };
+    _previousDamage = _unit getvariable [QGVAR(bodyPartStatusPrevious), [0,0,0,0,0,0]];
+    _newDamage = _damage - (_previousDamage select _bodyPartn);
 
-       // Check if damage to body part is higher as damage head
+      // Check if damage to body part is higher as damage head
     if (_bodyPartn == 0) exitwith {
        if (_damageBodyPart >= ((_damageThreshold select 0) + _newDamage) && {(random(1) > 0.2)}) then {
            _damage = 1;
@@ -82,11 +75,14 @@ if (alive _unit && (vehicle _unit == _unit) && {alive (vehicle _unit)}) then {
         };
     };
     // Check if damage to body part is higher as damage limbs
-    if (_damageBodyPart >= ((_damageThreshold select 2) + _newDamage) && {(random(1) > 0.95)}) then {
-       _damage = 1;
+    if (_damageBodyPart >= ((_damageThreshold select 2) + _newDamage) && {(random(1) > 0.95)}) exitwith {
+        _damage = 1;
+    };
+     // Checking if we should return full damage or not
+    if (_damage > 0.975) then {
+        _damage = 0.975;
     };
 } else {
     _damage = 1;
 };
-
 _damage
