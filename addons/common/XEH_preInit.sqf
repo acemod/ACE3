@@ -93,6 +93,7 @@ PREP(owned);
 PREP(player);
 PREP(playerSide);
 PREP(progressBar);
+PREP(progressBar2);
 PREP(queueAnimation);
 PREP(readBooleanParameterFromModule);
 PREP(readNumericParameterFromModule);
