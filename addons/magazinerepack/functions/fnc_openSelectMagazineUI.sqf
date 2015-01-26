@@ -30,7 +30,7 @@ for "_index" from 0 to (_count - 1) do {
         call EFUNC(interaction,hideMenu);
         if (isNil "_data") exitWith {};
         _data set [2, [_data select 2] call EFUNC(common,toNumber)];
-        [_data select 2, _data, QFUNC(magazineRepackCallback), localize "STR_ACE_MagazineRepack_RepackingMagazine"] call EFUNC(common,progressBar);
+        [(_data select 2), _data, {(_this select 0) call FUNC(magazineRepackCallback)}, {}, (localize "STR_ACE_MagazineRepack_RepackingMagazine")] call EFUNC(common,progressBar);
         [ACE_player] call EFUNC(common,goKneeling);
     },
     {

@@ -21,4 +21,4 @@ _player playActionNow "GestureDismountMuzzle";
 _player playAction "GestureMountMuzzle";
 playSound "ACE_BarrelSwap";
 
-[10, [_player, _weapon], QFUNC(swapBarrelCallback), localize "STR_ACE_Overheating_SwappingBarrel"] call EFUNC(common,progressBar);
+[10, [_player, _weapon], {(_this select 0) call FUNC(swapBarrelCallback)}, {}, (localize "STR_ACE_Overheating_SwappingBarrel")] call EFUNC(common,progressBar);

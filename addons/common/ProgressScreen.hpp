@@ -28,37 +28,26 @@ class GVAR(ProgressBar_Dialog) {
       h = "safezoneH";
     };
 
-
     class Progress: ACE_gui_RscProgress {
       idc = 1;
       x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-      y = "5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+      y = "0.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
       w = "38 * (((safezoneW / safezoneH) min 1.2) / 40)";
-      h = "0.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-      colorFrame[] = {0,0,0,0};
-      colorBar[] = {0.27,0.5,0.31,0.6};
-      // colorBar[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.9])"};
+      h = ".8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+      colorFrame[] = {0,0,0,0.025};
+      colorBar[] = {0.27,0.5,0.31,0.8};
       texture = "#(argb,8,8,3)color(1,1,1,0.7)";
     };
 
     class Title_Bar : ACE_gui_staticBase {
       idc = 2;
-      //type = 13;
-      //size = 1;
+      style = 0x22;
       colorBackground[] = {0, 0, 0, 0};
+      colorText[] = {1, 1, 1, 1};
       x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-      y = "4 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+      y = "0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
       w = "38 * (((safezoneW / safezoneH) min 1.2) / 40)";
       h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-      class Attributes {
-        font = "TahomaB";
-        color = "#000000";
-        align = "center";
-        valign = "middle";
-        shadow = false;
-        shadowColor = "#ff0000";
-        size = "1";
-      };
     };
   };
 };
