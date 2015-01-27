@@ -42,4 +42,3 @@ if (_setArrest) then {
     };
 };
 
-[[_unit, _setArrest],"setArrestState"] call FUNC(raiseScriptedEvent_f);

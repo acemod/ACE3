@@ -9,7 +9,7 @@
   
   Parameters:
     0: OBJECT - unit
-    1: ARRAY<OBJECT> - sided
+    1: ARRAY<OBJECT> - sides
   
   Returns:
     VOID
@@ -17,9 +17,14 @@
 
 #include "script_component.hpp"
 
-private ["_unit"];
+private ["_unit", "_sides"];
 _unit = _this select 0;
+_sides = _this select 1;
 
 ["theMapClick", "onMapSingleClick", {
-  [_this, _pos, _shift, _alt] call FUNC(handleMapClick);
+
+    if (alive ACE_player && {GVAR(OriginalUnit) getVariable ["ACE_CanSwitchUnits", false]}) then {
+        [_this, _pos, _shift, _alt] call FUNC(handleMapClick);
+    };
+  
 }, [_unit, _sides]] call BIS_fnc_addStackedEventHandler;

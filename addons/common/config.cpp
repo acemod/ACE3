@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {"ACE_Box_Misc"};
         weapons[] = {"ACE_ItemCore","ACE_FakePrimaryWeapon"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_main", "ace_gui"};
+        requiredAddons[] = {"ace_main"};
         author[] = {"KoffeinFlummi"};
         authorUrl = "https://github.com/KoffeinFlummi/";
         VERSION_CONFIG;
@@ -66,14 +66,6 @@ class ACE_Options {
 
 #include <ProgressScreen.hpp>
 #include <HintConfig.hpp>
-
-/*
-class RscControlsGroupNoScrollbars;
-class RscAttributeInventory: RscControlsGroupNoScrollbars {
-    onSetFocus = QUOTE([ARR_3(_this,""RscAttributeInventory"",'CuratorCommon')] call (uinamespace getvariable ""BIS_fnc_initCuratorAttribute""); _this select 0 call DFUNC(addCuratorUnloadEventhandler););
-};
-*/
-
 #include <RscInfoType.hpp>
 #include <FixPickup.hpp>
 #include <FixAnimations.hpp>

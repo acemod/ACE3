@@ -80,7 +80,6 @@ PREP(isAutoWind);
 PREP(isEngineer);
 PREP(isEOD);
 PREP(isInBuilding);
-PREP(isMedic);
 PREP(isPlayer);
 PREP(isTurnedOut);
 PREP(letterToCode);
@@ -110,7 +109,6 @@ PREP(sanitizeString);
 PREP(serverLog);
 PREP(setCaptivityStatus);
 PREP(setForceWalkStatus);
-PREP(setKeyDefault);
 PREP(setName);
 PREP(setParameter);
 PREP(setPitchBankYaw);
@@ -215,11 +213,10 @@ PREP(getCanInteract);
 PREP(canInteract);
 PREP(resetAllDefaults_f);
 PREP(broadcastSound3D_f);
-PREP(setDead);
+
 PREP(isAwake);
 PREP(setProne);
 
-PREP(raiseScriptedEvent_f);
 PREP(setDisableUserInputStatus);
 
 PREP(dropWeapon_f);
@@ -227,7 +224,6 @@ PREP(inWater_f);
 PREP(setVolume_f);
 PREP(closeAllDialogs_f);
 PREP(disableAI_f);
-PREP(moduleBasicRevive);
 PREP(switchToGroupSide_f);
 PREP(getFirstObjectIntersection);
 PREP(getFirstTerrainIntersection);
@@ -243,22 +239,18 @@ PREP(getCarriedObj);
 PREP(getCarriedBy);
 PREP(beingCarried);
 PREP(setCarriedBy);
-PREP(setUnconsciousState);
-PREP(isUnconscious);
-PREP(getUnconsciousCondition);
-PREP(registerUnconsciousCondition);
-PREP(setCaptiveSwitch);
+
+
 PREP(moveToTempGroup);
-PREP(canGoUnconsciousState);
-PREP(setWeaponsCorrectUnconscious);
+
 
 PREP(limitMovementSpeed);
 PREP(setArrestState);
 PREP(isArrested);
 PREP(loadPerson_F);
 PREP(loadPersonLocal_F);
-PREP(makeCopyOfBody_F);
 PREP(unloadPerson_F);
-PREP(cleanUpCopyOfBody_F);
+
+
 
 ADDON = true;
