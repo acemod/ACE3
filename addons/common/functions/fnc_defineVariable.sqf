@@ -37,4 +37,3 @@ GVAR(OBJECT_VARIABLES_STORAGE) pushback [_name,_value,_defaultGlobal,_catagory,_
 
 missionNamespace setvariable [QGVAR(OBJECT_VARIABLES_STORAGE_) + _name, [_name,_value,_defaultGlobal,_catagory,_code, _persistent]];
 
-[[_name,_value,_defaultGlobal,_catagory,_code, _persistent],"variableDefined"] call FUNC(raiseScriptedEvent_f);

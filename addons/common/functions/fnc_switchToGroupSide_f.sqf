@@ -62,5 +62,3 @@ if (_switch) then {
     reverse _previousGroupsList;    // we have to reverse again, to ensure the list is in the right order.
     _unit setvariable [QGVAR(previousGroupSwitchTo_F), _previousGroupsList, true];
 };
-
-[[_unit, _switch, _id, _side],"switchToGroupSide"] call FUNC(raiseScriptedEvent_f);
