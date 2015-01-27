@@ -44,5 +44,3 @@ if (_setVolume) then {
     player setVariable ["acre_sys_core_isDisabled", true, true];
 
 };
-
-[[_setVolume],"setVolume"] call FUNC(raiseScriptedEvent_f);

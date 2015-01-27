@@ -36,12 +36,9 @@ if (((typeName _to) == "OBJECT" && (isNull ([_unit] call FUNC(getCarriedObj)))) 
                     _to attachTo [_unit,(_this select 2)];
                     [format["fnc_carryObj - UNIT: %1 TO %2 - attachTo offset: %3",_unit,_to,(_this select 2)],2] call FUNC(debug);
                 };
-            } else {
-                [format["fnc_carryObj - UNIT: %1 TO %2 - Script expects external handling of attachTo Command. Exiting",_unit,_to],2] call FUNC(debug);
             };
-
-            [[_unit, _to, _fallDown],"carryObject"] call FUNC(raiseScriptedEvent_f);
-
+            ["carryObject", [_unit], [_unit, _to, _fallDown]] call EFUNC(common,targetEvent);
+           // ["carryObject", [_unit, _to, _fallDown]] call ace_common_fnc_localEvent;
         };
     } else {
         if (!isNull ([_unit] call FUNC(getCarriedObj))) then {
@@ -59,13 +56,14 @@ if (((typeName _to) == "OBJECT" && (isNull ([_unit] call FUNC(getCarriedObj)))) 
                 _positionUnit set [2, ((getPosASL _unit) select 2) + 0.1];
                 _carriedObj setPosASL _positionUnit;
             };
-            [[_unit, _carriedObj],"carryObjectDropped"] call FUNC(raiseScriptedEvent_f);
 
             [[_unit] call FUNC(getCarriedObj), objNull] call FUNC(setCarriedBy);
             _unit setvariable [QGVAR(carriedObj),_to,true];
             _return = true;
 
-            [[_unit, _to, _fallDown],"carryObject"] call FUNC(raiseScriptedEvent_f);
+            ["carryObjectDropped", [_unit], [_unit, _to, _fallDown]] call EFUNC(common,targetEvent);
+           // ["carryObjectDropped", [_unit, _to, _fallDown]] call ace_common_fnc_localEvent;
+
         };
     };
 } else {

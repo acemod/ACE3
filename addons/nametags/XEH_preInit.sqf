@@ -8,3 +8,5 @@ PREP(getVehicleData);
 PREP(moduleNameTags);
 PREP(onMouseZChanged);
 PREP(setText);
+
+GVAR(ShowNamesTime) = -10;

@@ -23,7 +23,7 @@ class CfgPatches {
 #include "CfgAmmo.hpp"
 
 class ACE_Options {
-  class Hearing_DisableEarRinging {
+  class GVAR(Hearing_DisableEarRinging) {
     displayName = "$STR_ACE_Hearing_DisableEarRinging";
     default = 0;
   };

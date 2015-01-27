@@ -1,10 +1,10 @@
 class RscTitles {
-    class ACE_Scope_Zeroing {
+    class ACE_Scopes_Zeroing {
         idd = -1;
         movingEnable = 0;
         enableSimulation = 1;
         enableDisplay = 1;
-        onLoad = QUOTE(_this spawn compile preprocessFileLineNumbers 'z\ace\scopes\scripts\zeroingOnLoad.sqf'; uiNamespace setVariable [ARR_2('ACE_Scopes_Debug', _this)];);
+        onLoad = QUOTE(_this spawn compile preprocessFileLineNumbers QUOTE(QUOTE(PATHTOF(scripts\zeroingOnLoad.sqf))); uiNamespace setVariable [ARR_2('ACE_Scopes_Debug', _this)];);
         duration = 1e+011;
         fadein = 0;
         fadeout = 0;

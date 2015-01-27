@@ -2,3 +2,6 @@
 
 PREP(fired);
 PREP(onGetLockedTarget);
+
+PREP(translateToWeaponSpace);
+PREP(translateToModelSpace);
