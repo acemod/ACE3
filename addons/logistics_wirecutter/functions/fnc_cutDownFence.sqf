@@ -1,14 +1,13 @@
 // by gpgpgpgp, edited by commy2
 #include "script_component.hpp"
 
-PARAMS_2(_timeToCut,_fenceObject);
+PARAMS_1(_unit);
+if (_unit != ACE_player) exitWith {};
 
-// if (cadetMode) then {
-  // {
-    // [ACE_player, "{_this groupChat localize 'STR_ACE_CuttingFenceChat'}", _x] call ACE_Core_fnc_execRemoteFnc;
-  // } forEach units group ACE_player;
-// };
+_fenceObject = [ACE_player] call FUNC(getNearestFence);
+if (isNull _fenceObject) exitWith {};
 
+_timeToCut = 5;
 if !([ACE_player] call EFUNC(common,isEngineer)) then {
   _timeToCut = _timeToCut + 5;
 };
