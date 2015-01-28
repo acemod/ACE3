@@ -29,7 +29,7 @@ if (isNil QGVAR(Adjustment)) then {
     GVAR(Adjustment) = [[0,0], [0,0], [0,0]];
 };
 
-if (isNil "AGM_Scopes_Optics") then {
+if (isNil QGVAR(Optics)) then {
     GVAR(Optics) = ["", "", ""];
 };
 

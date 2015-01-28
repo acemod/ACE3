@@ -48,12 +48,16 @@ _recurseFnc = {
             _distance = getNumber (_entryCfg >> "distance");
             _icon = getText (_entryCfg >> "icon");
             _statement = compile (getText (_entryCfg >> "statement"));
-            
+
             _condition = getText (_entryCfg >> "condition");
-            
+            if (_condition == "") then {_condition = "true"};
+
+            // Add canInteract (including exceptions) and canInteractWith to condition
+            _condition = _condition + format [QUOTE( && {%1 call EGVAR(common,canInteract)} && {[ARR_2(ACE_player, _target)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
+
             _showDisabled = getNumber (_entryCfg >> "showDisabled");
             _enableInside = getNumber (_entryCfg >> "enableInside");
-            
+
             _condition = compile _condition;
             // diag_log text format["_condition: %1", _condition];
             _children = [];

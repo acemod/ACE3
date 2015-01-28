@@ -3,3 +3,76 @@
 GVAR(enabled) = True;
 GVAR(time) = 0;
 GVAR(position) = [0,0,0];
+
+// Add keybinds
+["ACE3",
+    localize "STR_ACE_FCS_LaseTarget",
+    {
+        // Conditions: canInteract
+        _exceptions = [];
+        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+        // Conditions: specific
+        if !(!GVAR(enabled) && {call FUNC(canUseRangefinder) || FUNC(canUseFCS)}) exitWith {false};
+
+        // Statement
+        [vehicle ACE_player] call FUNC(keyDown);
+        true
+    },
+    [15, [false, false, false]],
+    false,
+    "keydown"
+] call cba_fnc_registerKeybind;
+
+["ACE3",
+    localize "STR_ACE_FCS_LaseTarget",
+    {
+        // Conditions: canInteract
+        _exceptions = [];
+        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+        // Conditions: specific
+        if !(GVAR(enabled) && FUNC(canUseFCS)) exitWith {false};
+
+        // Statement
+        [vehicle ACE_player] call FUNC(keyUp);
+        true
+    },
+    [15, [false, false, false]],
+    false,
+    "keyup"
+] call cba_fnc_registerKeybind;
+
+["ACE3",
+    localize "STR_ACE_FCS_AdjustRangeUp",
+    {
+        // Conditions: canInteract
+        _exceptions = [];
+        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+        // Conditions: specific
+        if !(call FUNC(canUseRangefinder) || FUNC(canUseFCS)) exitWith {false};
+
+        // Statement
+        [vehicle ACE_player, 50] call FUNC(adjustRange);
+        true
+    },
+    [201, [false, false, false]],
+    false,
+    "keydown"
+] call cba_fnc_registerKeybind;
+
+["ACE3",
+    localize "STR_ACE_FCS_AdjustRangeDown",
+    {
+        // Conditions: canInteract
+        _exceptions = [];
+        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+        // Conditions: specific
+        if !(call FUNC(canUseRangefinder) || FUNC(canUseFCS)) exitWith {false};
+
+        // Statement
+        [vehicle ACE_player, -50] call FUNC(adjustRange);
+        true
+    },
+    [209, [false, false, false]],
+    false,
+    "keydown"
+] call cba_fnc_registerKeybind;
