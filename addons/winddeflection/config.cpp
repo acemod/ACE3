@@ -5,7 +5,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = {"ACE_common"};
+		requiredAddons[] = {"ACE_common", "ACE_weather"};
 		versionDesc = "ACE Wind Deflection";
 		version = VERSION;
 		author[] = {$STR_ACE_Core_ACETeam, "Glowbal", "Ruthberg"};
