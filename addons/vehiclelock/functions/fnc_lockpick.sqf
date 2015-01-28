@@ -23,7 +23,7 @@ Example:
 
 #include "script_component.hpp"
 
-private ["_unit","_veh","_funcType","_vehLockpickStrenth","_returnValue"];
+private ["_unit","_veh","_funcType","_vehLockpickStrenth","_returnValue", "_condition"];
 
 _unit = [_this, 0, objNull, [objNull]] call bis_fnc_param;
 _veh = [_this, 1, objNull, [objNull]] call bis_fnc_param;
@@ -61,7 +61,12 @@ case (_funcType == "canLockpick"): {
     _returnValue = true;
   };
 case (_funcType == "startLockpick"): {
-    [_vehLockpickStrenth, [_unit, _veh, "finishLockpick"], "ACE_VehicleLock_fnc_lockpick", (localize "STR_ACE_Vehicle_Action_LockpickInUse")] call EFUNC(common,progressBar);
+    _condition = {
+      PARAMS_1(_args);
+      EXPLODE_2_PVT(_args,_unit,_veh);
+      ((_unit distance _veh) < 5) && ((speed _veh) < 1)
+    };
+    [_vehLockpickStrenth, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize "STR_ACE_Vehicle_Action_LockpickInUse"), _condition] call EFUNC(common,progressBar);
   };
 case (_funcType == "finishLockpick"): {
     ["SetVehicleLock", [_veh], [_veh, false]] call EFUNC(common,targetEvent);
