@@ -18,13 +18,11 @@
 
 #include "script_component.hpp"
 
-if (isNil QGVAR(EnableForAI)) exitWith {false}; // means that the module has not yet initialized
-
 private ["_unit", "_weapon", "_ammo", "_bullet", "_airFriction", "_index"];
 _unit = _this select 0;
 
 if (_unit distance ACE_player > 3000) exitWith {false}; // Large enough distance to not simulate any wind deflection.
-if (!GVAR(EnableForAI) && !(isPlayer _unit)) exitWith {false};
+if (!GVAR(EnableForAI) && !([_unit] call EFUNC(common,isPlayer))) exitWith {false};
 _bullet = _this select 6;
 
 if (_bullet isKindOf "BulletBase") then {
