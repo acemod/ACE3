@@ -33,68 +33,39 @@ if (_bullet isKindOf "BulletBase") then {
 
     _airFriction = getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction");
 
-    _index = count GVAR(bulletDatabaseLastFrame);
-    if (count GVAR(bulletDatabaseLastFrameFreeIndices) > 0) then {
-        _index = GVAR(bulletDatabaseLastFrameFreeIndices) select 0;
-        GVAR(bulletDatabaseLastFrameFreeIndices) = GVAR(bulletDatabaseLastFrameFreeIndices) - [_index];
-    };
+    [{
+        private ["_bullet", "_airFriction", "_args", "_deltaT", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueVelocity", "_dragRef", "_drag", "_accelRef", "_accel"];
 
-    GVAR(bulletDatabaseLastFrame)          set[_index, [_bullet, _airFriction, _index]];
-    GVAR(bulletDatabaseLastFrameLastFrame) set[_index, time];
+        _args = _this select 0;
+        _bullet = _args select 0;
+        _airFriction = _args select 1;
+        _time = _args select 2;
 
-    GVAR(bulletDatabaseLastFrameOccupiedIndices) pushBack _index;
+        if (!alive _bullet) exitwith {
+            [_this select 1] call cba_fnc_removePerFrameHandler;
+        };
 
-    if (count GVAR(bulletDatabaseLastFrameOccupiedIndices) == 1) then {
-        [{
-            private ["_bullet", "_airFriction", "_index", "_deltaT", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueVelocity", "_dragRef", "_drag", "_accelRef", "_accel"];
+        _deltaT = time - _time;
+        _args set[2, time];
 
-            {
-                _bullet = (GVAR(bulletDatabaseLastFrame) select _x) select 0;
-                _index  = (GVAR(bulletDatabaseLastFrame) select _x) select 2;
-                if (!alive _bullet) then {
-                    GVAR(bulletDatabaseLastFrameOccupiedIndices) = GVAR(bulletDatabaseLastFrameOccupiedIndices) - [_index];
-                    GVAR(bulletDatabaseLastFrameFreeIndices) pushBack _index;
-                };
-            } forEach GVAR(bulletDatabaseLastFrameOccupiedIndices);
+        _bulletVelocity = velocity _bullet;
+        _bulletSpeed = vectorMagnitude _bulletVelocity;
 
-            if (count GVAR(bulletDatabaseLastFrameOccupiedIndices) == 0) exitWith {
-                /// Resetting all the variables.
-                GVAR(bulletDatabaseLastFrame) = [];
-                GVAR(bulletDatabaseLastFrameLastFrame) = [];
-                GVAR(bulletDatabaseLastFrameOccupiedIndices) = [];
-                GVAR(bulletDatabaseLastFrameFreeIndices) = [];
-                [_this select 1] call cba_fnc_removePerFrameHandler;
-            };
+        if (vectorMagnitude ACE_wind > 0) then {
+            _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
+            _trueSpeed = vectorMagnitude _trueVelocity;
 
-            {
-                _bullet      = (GVAR(bulletDatabaseLastFrame) select _x) select 0;
-                _airFriction = (GVAR(bulletDatabaseLastFrame) select _x) select 1;
-                _index       = (GVAR(bulletDatabaseLastFrame) select _x) select 2;
+            _dragRef = _deltaT * _airFriction * _bulletSpeed * _bulletSpeed;
+            _accelRef = (vectorNormalized _bulletVelocity) vectorMultiply (_dragRef);
+            _bulletVelocity = _bulletVelocity vectorDiff _accelRef;
 
-                _deltaT = time - (GVAR(bulletDatabaseLastFrameLastFrame) select _index);
-                GVAR(bulletDatabaseLastFrameLastFrame) set[_index, time];
+            _drag = _deltaT * _airFriction * _trueSpeed * _trueSpeed;
+            _accel = (vectorNormalized _trueVelocity) vectorMultiply (_drag);
+            _bulletVelocity = _bulletVelocity vectorAdd _accel;
+        };
+        _bullet setVelocity _bulletVelocity;
+        // TODO expand with advanced ballistics functionality.
 
-                _bulletVelocity = velocity _bullet;
-                _bulletSpeed = vectorMagnitude _bulletVelocity;
-
-                if (vectorMagnitude ACE_wind > 0) then {
-                    _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
-                    _trueSpeed = vectorMagnitude _trueVelocity;
-
-                    _dragRef = _deltaT * _airFriction * _bulletSpeed * _bulletSpeed;
-                    _accelRef = (vectorNormalized _bulletVelocity) vectorMultiply (_dragRef);
-                    _bulletVelocity = _bulletVelocity vectorDiff _accelRef;
-
-                    _drag = _deltaT * _airFriction * _trueSpeed * _trueSpeed;
-                    _accel = (vectorNormalized _trueVelocity) vectorMultiply (_drag);
-                    _bulletVelocity = _bulletVelocity vectorAdd _accel;
-                };
-
-                // TODO expand with advanced ballistics functionality.
-
-                _bullet setVelocity _bulletVelocity;
-            }forEach GVAR(bulletDatabaseLastFrameOccupiedIndices);
-        }, 0, []] call CBA_fnc_addPerFrameHandler;
-    };
+    }, 0, [_bullet, _airFriction, time]] call CBA_fnc_addPerFrameHandler;
 };
 true;

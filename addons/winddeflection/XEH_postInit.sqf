@@ -13,8 +13,3 @@
 if (isnil QGVAR(EnableForAI)) then {
 	GVAR(EnableForAI) = false;
 };
-
-GVAR(bulletDatabase) = [];
-GVAR(bulletDatabaseLastFrame) = [];
-GVAR(bulletDatabaseOccupiedIndices) = [];
-GVAR(bulletDatabaseFreeIndices) = [];
