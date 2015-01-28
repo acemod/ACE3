@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2014-12-21 -->
+<Project name="ACE">
+  <Package name="Wirecutter">
+    <Key ID="STR_ACE_CutFence">
+      <English>Cut Fence</English>
+      <German>Zaun schneiden</German>
+      <Spanish>Cortar alambrado</Spanish>
+      <Polish>Przetnij płot</Polish>
+      <Czech>Přestřihnout plot</Czech>
+      <French>Cisailler Clôture</French>
+      <Portuguese>Cortar Cerca</Portuguese>
+      <Italian>Taglia</Italian>
+      <Hungarian>Drótkerítés átvágása</Hungarian>
+      <Russian>Вырезать забор</Russian>
+    </Key>
+    <Key ID="STR_ACE_CuttingFence">
+      <English>Cutting Fences / Wires ...</English>
+      <German>Zaun / Draht schneiden ...</German>
+      <Spanish>Cortando alambrado / cables ...</Spanish>
+      <Polish>Przecinanie płotu / drutów ...</Polish>
+      <Czech>Přestřihnout plot / dráty ...</Czech>
+      <French>Cisaille l'obstacle ...</French>
+      <Portuguese>Cortando Cerca / Arame ...</Portuguese>
+      <Italian>Sto tagliando ...</Italian>
+      <Hungarian>Drótok elvágása ...</Hungarian>
+      <Russian>Вырезаем забор / провода ...</Russian>
+    </Key>
+    <Key ID="STR_ACE_CuttingFenceChat">
+      <English>Cutting Fences!</English>
+      <German>Schneide Zaun!</German>
+      <Spanish>Cortando alambrado!</Spanish>
+      <Polish>Przecinanie płotu!</Polish>
+      <Czech>Stříhání plotu!</Czech>
+      <French>Cisaillage!</French>
+      <Portuguese>Cortando Cerca!</Portuguese>
+      <Italian>La sto tagliando!</Italian>
+      <Hungarian>Átvágom a drótkerítést!</Hungarian>
+      <Russian>Вырезаем забор!</Russian>
+    </Key>
+    <Key ID="STR_ACE_FenceCut">
+      <English>Fence cut</English>
+      <German>Zaun geschnitten</German>
+      <Spanish>Alambrado cortado</Spanish>
+      <Polish>Płot przecięty</Polish>
+      <Czech>Plot přestřižen</Czech>
+      <French>Clôture cisaillée</French>
+      <Portuguese>Cerca cortada</Portuguese>
+      <Italian>Fatto!</Italian>
+      <Hungarian>Drótkerítés átvágva</Hungarian>
+      <Russian>Забор вырезан</Russian>
+    </Key>
+  </Package>
+</Project>
