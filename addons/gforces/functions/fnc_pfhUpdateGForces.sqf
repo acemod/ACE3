@@ -59,8 +59,8 @@ if (count GVAR(GForces) > 0) then {
 };
 
 _classCoef = ACE_player getVariable ["ACE_GForceCoef",
-    getNumber (configFile >> "CfgVehicles" >> (typeOf ACE_player) >> "AGM_GForceCoef")];
-_suitCoef = getNumber (configFile >> "CfgWeapons" >> (uniform ACE_player) >> "AGM_GForceCoef");
+    getNumber (configFile >> "CfgVehicles" >> (typeOf ACE_player) >> "ACE_GForceCoef")];
+_suitCoef = getNumber (configFile >> "CfgWeapons" >> (uniform ACE_player) >> "ACE_GForceCoef");
 
 _gBlackOut = MAXVIRTUALG / _classCoef + MAXVIRTUALG / _suitCoef - MAXVIRTUALG;
 _gRedOut = MINVIRTUALG / _classCoef;
