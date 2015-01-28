@@ -7,10 +7,11 @@
 * Argument:
 * 0: NUMBER - Total Time (in game "time" seconds)
 * 1: ARRAY - Arguments, passed to condition, fail and finish
-* 2: CODE or STRING - Finish: Code called or STRING raised as event.
-* 3: CODE or STRING - Failure: Code called or STRING raised as event.
-* 4: STRING - Localized Title
-* 5: CODE - Code to check each frame
+* 2: CODE or STRING - On Finish: Code called or STRING raised as event.
+* 3: CODE or STRING - On Failure: Code called or STRING raised as event.
+* 4: STRING - (Optional) Localized Title
+* 5: CODE - (Optional) Code to check each frame
+* 6: ARRAY - (Optional) Exceptions for checking EGVAR(common,canInteract)
 *
 * Return value:
 * Nothing
@@ -21,6 +22,7 @@
 PARAMS_4(_totalTime,_args,_onFinish,_onFail);
 DEFAULT_PARAM(4,_localizedTitle,"");
 DEFAULT_PARAM(5,_condition,{true});
+DEFAULT_PARAM(6,_exceptions,[]);
 private ["_player", "_perFrameFunction"];
 
 _player = ACE_player;
@@ -32,7 +34,7 @@ createDialog QGVAR(ProgressBar_Dialog);
 
 _perFrameFunction = {
   PARAMS_2(_parameters,_pfhID);
-  EXPLODE_7_PVT(_parameters,_args,_onFinish,_onFail,_condition,_player,_startTime,_totalTime);
+  EXPLODE_8_PVT(_parameters,_args,_onFinish,_onFail,_condition,_player,_startTime,_totalTime,_exceptions);
   private ["_elapsedTime", "_errorCode"];
   
   _elapsedTime = time - _startTime;
@@ -47,8 +49,12 @@ _perFrameFunction = {
       if (!([_args, _elapsedTime, _totalTime, _errorCode] call _condition)) then {
         _errorCode = 3;
       } else {
-        if (_elapsedTime >= _totalTime) then {
-          _errorCode = 0;
+        if (!(_exceptions call EGVAR(common,canInteract))) then {
+          _errorCode = 4;
+        } else {
+          if (_elapsedTime >= _totalTime) then {
+            _errorCode = 0;
+          };
         };
       };
     };
@@ -78,4 +84,4 @@ _perFrameFunction = {
   };
 };
 
-[_perFrameFunction, 0, [_args, _onFinish, _onFail, _condition, _player, time, _totalTime]] call CBA_fnc_addPerFrameHandler;
+[_perFrameFunction, 0, [_args, _onFinish, _onFail, _condition, _player, time, _totalTime, _exceptions]] call CBA_fnc_addPerFrameHandler;
