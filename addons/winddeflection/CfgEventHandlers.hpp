@@ -11,7 +11,7 @@ class Extended_PostInit_EventHandlers {
 };
 
 class Extended_Fired_Eventhandlers {
-	class ADDON {
+	class CaManBase {
 		fired = QUOTE( call FUNC(handleFired) );
 	};
 };

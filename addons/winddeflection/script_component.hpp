@@ -1,4 +1,4 @@
-#define COMPONENT windDeflection
+#define COMPONENT winddeflection
 #include "\z\ace\addons\main\script_mod.hpp"
 
 #ifdef DEBUG_ENABLED_WINDDEFLECTION

@@ -18,7 +18,7 @@
 
 #include "script_component.hpp"
 
-if (isNil QGVAR(EnableForAI)) exitWith {false}; // means that the module has not yet initalized
+if (isNil QGVAR(EnableForAI)) exitWith {false}; // means that the module has not yet initialized
 
 private ["_unit", "_weapon", "_ammo", "_bullet", "_airFriction", "_index"];
 _unit = _this select 0;
@@ -90,9 +90,11 @@ if (_bullet isKindOf "BulletBase") then {
                     _bulletVelocity = _bulletVelocity vectorAdd _accel;
                 };
 
+                // TODO expand with advanced ballistics functionality.
+
                 _bullet setVelocity _bulletVelocity;
             }forEach GVAR(bulletDatabaseLastFrameOccupiedIndices);
-        }, 0, []] call cba_fnc_addPerFrameHandler;
+        }, 0, []] call CBA_fnc_addPerFrameHandler;
     };
 };
 true;
