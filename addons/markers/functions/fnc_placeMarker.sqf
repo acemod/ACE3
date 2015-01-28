@@ -32,8 +32,8 @@ if (_this select 1 == 1) then {
 
             [QGVAR(setMarkerNetwork), [
                 allMapMarkers select (count allMapMarkers - 1), [
-                    GETGVAR(currentMarkerShape,0),
-                    GETGVAR(currentMarkerColor,0),
+                    GETGVAR(currentMarkerConfigName,""),
+                    GETGVAR(currentMarkerColorConfigName,""),
                     _this,
                     GETGVAR(currentMarkerAngle,0)
                 ]

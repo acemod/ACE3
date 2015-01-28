@@ -58,24 +58,14 @@ class ACE_canInteractConditions {
 };
 
 class ACE_Options {
-    class enableNumberHotkeys {
+    class GVAR(enableNumberHotkeys) {
         displayName = "$STR_ACE_Common_EnableNumberHotkeys";
         default = 1;
     };
 };
 
-#include <MainMenu.hpp>
-#include <MenuConfig.hpp>
 #include <ProgressScreen.hpp>
 #include <HintConfig.hpp>
-
-/*
-class RscControlsGroupNoScrollbars;
-class RscAttributeInventory: RscControlsGroupNoScrollbars {
-    onSetFocus = QUOTE([ARR_3(_this,""RscAttributeInventory"",'CuratorCommon')] call (uinamespace getvariable ""BIS_fnc_initCuratorAttribute""); _this select 0 call DFUNC(addCuratorUnloadEventhandler););
-};
-*/
-
 #include <RscInfoType.hpp>
 #include <FixPickup.hpp>
 #include <FixAnimations.hpp>

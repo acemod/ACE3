@@ -108,7 +108,6 @@ PREP(sanitizeString);
 PREP(serverLog);
 PREP(setCaptivityStatus);
 PREP(setForceWalkStatus);
-PREP(setKeyDefault);
 PREP(setName);
 PREP(setParameter);
 PREP(setPitchBankYaw);

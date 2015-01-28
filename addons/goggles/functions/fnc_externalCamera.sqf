@@ -11,10 +11,13 @@
 
 	Returns:
 	Boolean - whether the camera is in external view or not.
+	If the "showInThirdPerson" option is checked, this will always return false.
 
 	Example:
 	call FUNC(ExternalCamera);
 */
+
 #include "script_component.hpp"
-if (GETVAR(profileNamespace,ACE_showInThirdPerson,false)) exitWith { false };
+
+if ((missionNameSpace getVariable [QGVAR(showInThirdPerson), 0]) == 1) exitWith { false };
 (cameraView == "External")

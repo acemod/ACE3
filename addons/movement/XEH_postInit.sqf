@@ -17,3 +17,21 @@
     }, 0, _this select 0] call CBA_fnc_addPerFrameHandler;
 
 }] call EFUNC(common,addEventHandler);
+
+["ACE3",
+    localize "STR_ACE_Movement_Climb",
+    {
+        // Conditions: canInteract
+        _exceptions = [];
+        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+        // Conditions: specific
+        if (ACE_player != (vehicle ACE_player)) exitWith {false};
+
+        // Statement
+        [ACE_player] call FUNC(climb);
+        true
+    },
+    [47, [false, true, false]], //DIK_V + CTRL//STRG
+    false,
+    "keydown"
+] call cba_fnc_registerKeybind;
