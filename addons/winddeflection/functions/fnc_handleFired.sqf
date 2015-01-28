@@ -77,8 +77,8 @@ if (_bullet isKindOf "BulletBase") then {
                 _bulletVelocity = velocity _bullet;
                 _bulletSpeed = vectorMagnitude _bulletVelocity;
 
-                if (vectorMagnitude wind > 0) then {
-                    _trueVelocity = _bulletVelocity vectorDiff wind;
+                if (vectorMagnitude ACE_wind > 0) then {
+                    _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
                     _trueSpeed = vectorMagnitude _trueVelocity;
 
                     _dragRef = _deltaT * _airFriction * _bulletSpeed * _bulletSpeed;
