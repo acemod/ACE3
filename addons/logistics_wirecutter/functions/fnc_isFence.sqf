@@ -1,3 +1,16 @@
+/* fnc_isFence.sqf
+*
+* Author: PabstMirror
+*
+* Checks if object is a fence.  Should work on any fence type, even (typeof == "").
+* Call is fairly expensive because of all of the string checking.
+*
+* Argument:
+* 0: OBJECT - Ojbect to test
+*
+* Return value:
+* BOOL
+*/
 #include "script_component.hpp"
 
 //find is case sensitive, so keep everything lowercase
@@ -6,7 +19,6 @@
 
 #define FENCE_AIA_TYPENAMES []
 #define FENCE_AIA_P3DS ["wall_indfnc_3.p3d", "wall_indfnc_9.p3d", "wall_indfnc_corner.p3d", "pletivo_wired.p3d", "wall_fen1_5.p3d"]
-
 
 private ["_typeOf", "_returnValue"];
 PARAMS_1(_object);
