@@ -20,8 +20,8 @@ if (!(_this call FUNC(canRefuelUAV))) exitWith {};
 
 _onFinish = {
    EXPLODE_2_PVT((_this select 0),_caller,_target);
-  _target setFuel 1;
   _caller removeItem "ACE_UAVBattery";
+  ["VehicleSetFuel", [_target], [_target, 1]] call EFUNC(common,targetEvent); //setFuel is local
 };
 
 _onFailure = {
