@@ -1,7 +1,7 @@
 ace_logistics_uavbattery
 ===========
 
-Adds an item `ACE_wirecutter` that allows cutting of fences in A3 and AiA maps.
+Adds an item `ACE_UAVBattery` that allows refueling/recharging of the "Dartar" quadcopter UAVs.
 
 
 ## Maintainers
