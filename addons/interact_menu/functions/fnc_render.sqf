@@ -81,7 +81,7 @@ if(GVAR(keyDown)) then {
 			GVAR(startHoverTime) = diag_tickTime;
 			GVAR(expanded) = false;
 		} else {
-			if(!GVAR(expanded) && diag_tickTime-GVAR(startHoverTime) > 0.5) then {
+			if(!GVAR(expanded) && diag_tickTime-GVAR(startHoverTime) > 0.25) then {
 				GVAR(expanded) = true;
 				GVAR(menuDepthPath) = +GVAR(lastPath);
 			};

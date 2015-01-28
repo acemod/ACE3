@@ -7,6 +7,7 @@ _color = _this select 1;
 _pos = _this select 2;
 _icon = _this select 6;
 _sPos = worldToScreen _pos;
+// _sPos = _pos;
 if(count _sPos > 0) then {
 	// player sideChat format["render!"];
 	if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
