@@ -29,6 +29,9 @@ _distance       = _this select 6;
 _actions = [];
 if(IS_OBJECT(_object)) then {
     _actions = _object getVariable [QUOTE(GVAR(actionData)), []];
+    if((count _actions) == 0) then {
+        _object setVariable [QUOTE(GVAR(actionData)), _actions]
+    };
 } else {
     if(IS_ARRAY(_object)) then {
         _actions = _object select 6;
@@ -47,5 +50,4 @@ _entry = [
         ];
 GVAR(uidCounter) = GVAR(uidCounter) + 1;
 _actions pushBack _entry;
-
 _entry;
