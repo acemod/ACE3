@@ -13,7 +13,7 @@ class CfgPatches {
 	};
 };
 
-class ADDON {
+class CfgAddons {
     class PreloadAddons {
        class ADDON {
           list[] = {QUOTE(ADDON)};
