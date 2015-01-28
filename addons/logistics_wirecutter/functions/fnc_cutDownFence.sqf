@@ -20,4 +20,4 @@ if (_timeToCut > 4.5) then {
   playSound "ACE_wirecutter_sound";
 };
 
-[_timeToCut, [_fenceObject], {(_this select 0) call FUNC(cutDownFenceCallback)}, {(_this select 0) call FUNC(cutDownFenceAbort)}, localize "STR_ACE_CuttingFence"] call EFUNC(common,progressBar);
+[_timeToCut, [_fenceObject], {(_this select 0) call FUNC(cutDownFenceCallback)}, {(_this select 0) call FUNC(cutDownFenceAbort)}, localize "STR_ACE_logistics_wirecutter_CuttingFence"] call EFUNC(common,progressBar);
