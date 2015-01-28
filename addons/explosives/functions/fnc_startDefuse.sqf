@@ -56,13 +56,10 @@ if (ACE_player != _unit) then {
   };
 } else {
   _unit playActionNow _actionToPlay;
-  if (GVAR(RequireSpecialist)) then {
-    if ([_unit] call EFUNC(Common,isEOD)) then {
-      [[true, _target] call _fnc_DefuseTime, [_unit,_target],
-        QFUNC(defuseExplosive), localize "STR_ACE_Explosives_DefusingExplosive"] call EFUNC(common,progressBar);
-    };
-  } else {
-    [[([_unit] call EFUNC(Common,isEOD)), _target] call _fnc_DefuseTime, [_unit,_target],
-    QFUNC(defuseExplosive), localize "STR_ACE_Explosives_DefusingExplosive"] call EFUNC(common,progressBar);
+  private ["_defuseSeconds", "_isEOD"];
+  _isEOD = [_unit] call EFUNC(Common,isEOD);
+  _defuseSeconds = [_isEOD, _target] call _fnc_DefuseTime;
+  if (_isEOD || {!GVAR(RequireSpecialist)}) then {
+    [_defuseSeconds, [_unit,_target], {(_this select 0) call FUNC(defuseExplosive)}, {}, (localize "STR_ACE_Explosives_DefusingExplosive")] call EFUNC(common,progressBar);
   };
 };
