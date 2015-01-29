@@ -26,11 +26,6 @@ if (!GVAR(EnableForAI) && !([_unit] call EFUNC(common,isPlayer))) exitWith {fals
 _bullet = _this select 6;
 
 if (_bullet isKindOf "BulletBase") then {
-    _weapon = _this select 1;
-    _ammo   = _this select 4;
-
-    _airFriction = getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction");
-
     [{
         private ["_bullet", "_airFriction", "_args", "_deltaT", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueVelocity", "_dragRef", "_drag", "_accelRef", "_accel"];
 
@@ -57,13 +52,13 @@ if (_bullet isKindOf "BulletBase") then {
             _accelRef = (vectorNormalized _bulletVelocity) vectorMultiply (_dragRef);
             _bulletVelocity = _bulletVelocity vectorDiff _accelRef;
 
-            _drag = _deltaT * _airFriction * _trueSpeed * _trueSpeed;
-            _accel = (vectorNormalized _trueVelocity) vectorMultiply (_drag);
+            _drag = _deltaT * _airFriction * _trueSpeed;
+            _accel = _trueVelocity vectorMultiply (_drag);
             _bulletVelocity = _bulletVelocity vectorAdd _accel;
         };
         _bullet setVelocity _bulletVelocity;
         // TODO expand with advanced ballistics functionality.
 
-    }, 0, [_bullet, _airFriction, time]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_bullet, getNumber(configFile >> "cfgAmmo" >> (_this select 4) >> "airFriction"), time]] call CBA_fnc_addPerFrameHandler;
 };
 true;

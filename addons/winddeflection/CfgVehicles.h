@@ -1,4 +1,6 @@
 class CfgVehicles {
+
+		// TODO Stringtable usage
 		class Logic;
 		class Module_F: Logic {
 			class ArgumentsBaseUnits {
@@ -6,7 +8,7 @@ class CfgVehicles {
 		};
 		class GVAR(Module): Module_F {
 		scope = 2; 
-		displayName = "Basic Ballistics [ACE]";
+		displayName = "Wind Deflection [ACE]";
 		icon = QUOTE(PATHTOF(data\module_icon.paa));
 		category = "ACE";
 		function = FUNC(enableModule);
