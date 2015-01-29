@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+ADDON = false;
+
 PREP(addInteraction);
 PREP(addInteractionSelf);
 PREP(addSelectableItem);
@@ -45,6 +47,4 @@ PREP(sortOptionsByPriority);
 PREP(tapShoulder);
 PREP(updateTooltipPosition);
 
-
-
-
+ADDON = true;

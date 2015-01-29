@@ -18,6 +18,8 @@ None
 */
 #include "script_component.hpp"
 
+ADDON = false;
+
 PREP(addClacker);
 PREP(canDefuse);
 PREP(canDetonate);
@@ -49,3 +51,5 @@ PREP(setPosition);
 PREP(startDefuse);
 PREP(startTimer);
 PREP(triggerType);
+
+ADDON = true;

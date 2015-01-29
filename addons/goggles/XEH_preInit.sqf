@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+ADDON = false;
+
 PREP(applyDirtEffect);
 PREP(applyDust);
 PREP(applyGlassesEffect);
@@ -21,3 +23,5 @@ PREP(removeDirtEffect);
 PREP(removeDustEffect);
 PREP(removeGlassesEffect);
 PREP(removeRainEffect);
+
+ADDON = true;

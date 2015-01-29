@@ -1,6 +1,8 @@
 // by commy2
 #include "script_component.hpp"
 
+ADDON = false;
+
 // ACE Common Function
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
@@ -250,7 +252,6 @@ PREP(isArrested);
 PREP(loadPerson_F);
 PREP(loadPersonLocal_F);
 PREP(unloadPerson_F);
-
 
 
 ADDON = true;

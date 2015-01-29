@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+ADDON = false;
+
 PREP(countMagazinesForGrenadeMuzzle);
 PREP(displayGrenadeTypeAndNumber);
 PREP(findNextGrenadeMagazine);
@@ -63,3 +65,5 @@ GVAR(AllMuzzles)       = uiNamespace getVariable QGVAR(AllMuzzles);
 GVAR(FragMagazines)    = uiNamespace getVariable QGVAR(FragMagazines);
 GVAR(NonFragMagazines) = uiNamespace getVariable QGVAR(NonFragMagazines);
 GVAR(AllMagazines)     = uiNamespace getVariable QGVAR(AllMagazines);
+
+ADDON = true;
