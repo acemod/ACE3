@@ -5,8 +5,8 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
-        author[] = {"gpgpgpgp"};
+        requiredAddons[] = {"ace_common", "ace_interaction"};
+        author[] = {"gpgpgpgp", "PabstMirror"};
         authorUrl = "";
         VERSION_CONFIG;
     };
