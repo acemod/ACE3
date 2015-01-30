@@ -33,8 +33,11 @@ class ACE_Options {
   };
 };
 
-class ACE_Parameters_Boolean {
-  ACE_Interaction_EnableTeamManagement = 1;
+class ACE_Settings {
+  class GVAR(EnableTeamManagement) {
+    value = 1;
+    typeName = "BOOL";
+  };
 };
 
 class ACE_canInteractConditions {

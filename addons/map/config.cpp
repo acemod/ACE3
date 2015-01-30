@@ -23,13 +23,23 @@ class RscButtonMenuCancel;
 class RscButtonMenu;
 class RscEdit;
 
-class ACE_Parameters_Numeric {
-  GVAR(BFT_Interval) = 1;
-};
-class ACE_Parameters_Boolean {
-  GVAR(EveryoneCanDrawOnBriefing) = 1;
-  GVAR(BFT_Enabled) = 0;
-  GVAR(BFT_HideAiGroups) = 0;
+class ACE_Settings {
+    class GVAR(BFT_Interval) {
+        value = 1.0;
+        typeName = "SCALAR";
+    };
+    class GVAR(EveryoneCanDrawOnBriefing) {
+        value = 1;
+        typeName = "BOOL";
+    };
+    class GVAR(BFT_Enabled) {
+        value = 0;
+        typeName = "BOOL";
+    };
+    class GVAR(BFT_HideAiGroups) {
+        value = 0;
+        typeName = "BOOL";
+    };
 };
 
 #include "MapGpsUI.hpp"
