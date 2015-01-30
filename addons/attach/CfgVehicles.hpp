@@ -1,17 +1,59 @@
 #define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
-  name = #ITEM; \
-  count = COUNT; \
-};
+    name = #ITEM; \
+    count = COUNT; \
+  };
+
+#define MACRO_ATTACHTOVEHICLE \
+  class ACE_Actions { \
+    class GVAR(AttachVehicle) { \
+      displayName = "$STR_ACE_Attach_AttachDetach"; \
+      condition = QUOTE( [ARR_3(_player, _target, '')] call FUNC(canAttach) ); \
+      statement = QUOTE( [ARR_2(_player, _target)] call FUNC(openAttachUI); ); \
+      exceptions[] = {"ACE_Drag_isNotDragging"}; \
+      showDisabled = 0; \
+      priority = 0; \
+      icon = PATHTOF(UI\attach_ca.paa); \
+      hotkey = "T"; \
+    }; \
+    class GVAR(DetachVehicle) { \
+      displayName = "$STR_ACE_Attach_Detach"; \
+      condition = QUOTE( [ARR_2(_player, _target)] call FUNC(canDetach) ); \
+      statement = QUOTE( [ARR_2(_player, _target)] call FUNC(detach) ); \
+      exceptions[] = {"ACE_Drag_isNotDragging"}; \
+      showDisabled = 0; \
+      priority = 0; \
+      icon = PATHTOF(UI\detach_ca.paa); \
+    }; \
+  };
 
 class CfgVehicles {
+  class LandVehicle;
+  class Car: LandVehicle {
+    MACRO_ATTACHTOVEHICLE
+  };
+  class Tank: LandVehicle {
+    MACRO_ATTACHTOVEHICLE
+  };
+  class Air;
+  class Helicopter: Air {
+    MACRO_ATTACHTOVEHICLE
+  };
+  class Plane: Air {
+    MACRO_ATTACHTOVEHICLE
+  };
+  class Ship;
+  class Ship_F: Ship {
+    MACRO_ATTACHTOVEHICLE
+  };
+  
   class Man;
   class CAManBase: Man {
     class ACE_SelfActions {
       class ACE_Equipment {
         class GVAR(Attach) {
           displayName = "$STR_ACE_Attach_AttachDetach";
-          condition = QUOTE( [_player, ''] call FUNC(canAttach) );
-          statement = QUOTE( [_player] call FUNC(openAttachUI); );
+          condition = QUOTE( [ARR_3(_player, _player, '')] call FUNC(canAttach) );
+          statement = QUOTE( [ARR_2(_player, _player)] call FUNC(openAttachUI); );
           exceptions[] = {"ACE_Drag_isNotDragging"};
           showDisabled = 0;
           priority = 5;
@@ -20,8 +62,8 @@ class CfgVehicles {
         };
         class GVAR(Detach) {
           displayName = "$STR_ACE_Attach_Detach";
-          condition = QUOTE( [_player] call FUNC(canDetach) );
-          statement = QUOTE( [_player] call FUNC(detach) );
+          condition = QUOTE( [ARR_2(_player, _player)] call FUNC(canDetach) );
+          statement = QUOTE( [ARR_2(_player, _player)] call FUNC(detach) );
           exceptions[] = {"ACE_Drag_isNotDragging"};
           showDisabled = 0;
           priority = 5;

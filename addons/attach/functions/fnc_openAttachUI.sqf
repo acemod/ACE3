@@ -8,6 +8,7 @@
 
   Parameters:
     0: OBJECT - unit
+    0: OBJECT - target
 
   Returns:
     Nothing
@@ -15,8 +16,11 @@
   Example:
     [player] call ACE_Attach_fnc_openAttachUI;
 */
-private ["_unit", "_actions", "_attachables", "_item"];
-_unit = _this select 0;
+private ["_actions", "_attachables", "_item"];
+
+PARAMS_2(_unit,_target);
+
+GVAR(attachTarget) = _target;
 _listed = [];
 _attachables = magazines _unit;
 _actions = [localize "STR_ACE_Attach_AttachDetach", localize "STR_ACE_Attach_Attach"] call EFUNC(interaction,prepareSelectMenu);
@@ -53,7 +57,7 @@ _attachables = items _unit;
 [
   _actions,
   {
-    [ACE_player, _this] call FUNC(attach);
+    [ACE_player, GVAR(attachTarget), _this] call FUNC(attach);
     call EFUNC(interaction,hideMenu);
   },
   {
