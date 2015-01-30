@@ -3,13 +3,13 @@
 #define COLOUR 8.0
 class CfgPatches {
   class ADDON {
-    units[] = {};
-    weapons[] = {};
-    requiredVersion = REQUIRED_VERSION;
-    requiredAddons[] = {"ace_common"};
-    author[] = {"Garth 'L-H' de Wet"};
-    authorUrl = "http://garth.snakebiteink.co.za/";
-    VERSION_CONFIG;
+	units[] = {};
+	weapons[] = {};
+	requiredVersion = REQUIRED_VERSION;
+	requiredAddons[] = {"ace_common"};
+	author[] = {"Garth 'L-H' de Wet"};
+	authorUrl = "http://garth.snakebiteink.co.za/";
+	VERSION_CONFIG;
   };
 };
 
@@ -243,10 +243,12 @@ class SniperCloud {
 	ACE_Goggles_BulletCount = 1;
 };
 
-class ACE_Options {
+class ACE_Settings {
 	class GVAR(showInThirdPerson) {
-		displayName = $STR_ACE_Goggles_ShowInThirdPerson;
-		default = 0;
+		value = 0;
+		typeName = "BOOL";
+		isClientSetable = 1;
+		displayName = "$STR_ACE_Goggles_ShowInThirdPerson;"
 	};
 };
 

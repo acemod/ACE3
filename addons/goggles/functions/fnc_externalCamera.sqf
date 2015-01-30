@@ -19,5 +19,5 @@
 
 #include "script_component.hpp"
 
-if ((missionNameSpace getVariable [QGVAR(showInThirdPerson), 0]) == 1) exitWith { false };
+if (GVAR(showInThirdPerson)) exitWith { false };
 (cameraView == "External")
