@@ -78,7 +78,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
   }] call BIS_fnc_addStackedEventHandler;
 
   //had to spawn the mouseHint, not sure why
-  [localize "STR_ACE_Attach_PlaceAction", localize "STR_ACE_Attach_CancelAction"] call EFUNC(interaction,showMouseHint);
+  [localize "STR_ACE_Attach_PlaceAction", localize "STR_ACE_Attach_CancelAction"] spawn EFUNC(interaction,showMouseHint);
   _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {GVAR(pfeh_running) AND !isNull (GVAR(setupObject))}, {call FUNC(placeApprove);}] call EFUNC(common,AddActionEventHandler)];
   _unit setVariable [QGVAR(cancelActionEH), [_unit, "MenuBack", {GVAR(pfeh_running) AND !isNull (GVAR(setupObject))}, {call FUNC(placeCancel);}] call EFUNC(common,AddActionEventHandler)];
 };

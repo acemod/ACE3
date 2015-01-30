@@ -6,7 +6,8 @@ Author: eRazeri and CAA-Picard
 Detach an item from a unit
 
 Arguments:
-unit
+0: OBJECT - unit doing the attaching (player)
+1: OBJECT - vehicle that it will be detached from (player or vehicle)
 
 Return Value:
 none
@@ -14,7 +15,7 @@ none
 
 private ["_itemName", "_count", "_attachedItem", "_fnc_detachDelay"];
 
-PARAMS_2(_unit, _attachToVehicle);
+PARAMS_2(_unit,_attachToVehicle);
 
 _attachedObjectsArray = _attachToVehicle getVariable ["ACE_AttachedObjects", []];
 _attachedItemsArray = _attachToVehicle getVariable ["ACE_AttachedItemNames", []];
