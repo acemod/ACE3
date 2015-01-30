@@ -1,0 +1,1 @@
+#include "\z\ace\addons\backblast\script_component.hpp"

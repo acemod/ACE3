@@ -12,7 +12,7 @@ Return Value:
 none
 */
 
-private ["_unit", "_itemName", "_count", "_attachedItem"];
+private ["_unit", "_itemName", "_count", "_attachedItem", "_fnc_detachDelay"];
 
 _unit = _this select 0;
 _itemName = _unit getVariable [QGVAR(ItemName), ""];
@@ -25,7 +25,7 @@ if (_itemName == "") exitWith {};
 _count = (count items _unit) + (count magazines _unit);
 _unit addItem _itemName;
 if ((count items _unit) + (count magazines _unit) <= _count) exitWith {
-  [localize "STR_AGM_Attach_Inventory_Full"] call EFUNC(common,displayTextStructured);
+  [localize "STR_ACE_Attach_Inventory_Full"] call EFUNC(common,displayTextStructured);
 };
 
 if (_itemName == "B_IR_Grenade" or _itemName == "O_IR_Grenade" or _itemName == "I_IR_Grenade") then {
@@ -33,7 +33,10 @@ if (_itemName == "B_IR_Grenade" or _itemName == "O_IR_Grenade" or _itemName == "
   detach _attachedItem;
   _attachedItem setPos [getPos _unit select 0, getPos _unit select 1, ((getPos _unit select 2) - 1000)];
   // Delete attached item after 0.5 seconds
-  [FUNC(detachFix), 0.5, [_attachedItem, (time + 0.5)]] call CBA_fnc_addPerFrameHandler;
+  _fnc_detachDelay = {
+    deleteVehicle (_this select 0);
+  };
+  [_fnc_detachDelay, [_attachedItem], 0.5, 0] call EFUNC(common,waitAndExecute);
 } else {
   // Delete attached item
   deleteVehicle _attachedItem;
@@ -45,14 +48,14 @@ _unit setVariable [QGVAR(Item),nil, true];
 
 // Display message
 switch true do {
-  case (_itemName == "AGM_IR_Strobe_Item") : {
-    [localize "STR_AGM_Attach_IrStrobe_Detached"] call EFUNC(common,displayTextStructured);
+  case (_itemName == "ACE_IR_Strobe_Item") : {
+    [localize "STR_ACE_Attach_IrStrobe_Detached"] call EFUNC(common,displayTextStructured);
   };
   case (_itemName == "B_IR_Grenade" or _itemName == "O_IR_Grenade" or _itemName == "I_IR_Grenade") : {
-    [localize "STR_AGM_Attach_IrGrenade_Detached"] call EFUNC(common,displayTextStructured);
+    [localize "STR_ACE_Attach_IrGrenade_Detached"] call EFUNC(common,displayTextStructured);
   };
   case (_itemName == "Chemlight_blue" or {_itemName == "Chemlight_green"} or {_itemName == "Chemlight_red"} or {_itemName == "Chemlight_yellow"}) : {
-    [localize "STR_AGM_Attach_Chemlight_Detached"] call EFUNC(common,displayTextStructured);
+    [localize "STR_ACE_Attach_Chemlight_Detached"] call EFUNC(common,displayTextStructured);
   };
   default {
     if (true) exitWith {};

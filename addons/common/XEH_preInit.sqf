@@ -1,14 +1,15 @@
 // by commy2
 #include "script_component.hpp"
 
+ADDON = false;
+
 // ACE Common Function
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
 PREP(addCameraEventHandler);
 PREP(addCustomEventHandler);
-PREP(addInfoDisplayEventHandler);
+PREP(addLineToDebugDraw);
 PREP(addMapMarkerCreatedEventHandler);
-PREP(addInventoryDisplayLoadedEventHandler);
 PREP(addScrollWheelEventHandler);
 PREP(adminKick);
 PREP(ambientBrightness);
@@ -26,6 +27,7 @@ PREP(closeDialogIfTargetMoves);
 PREP(codeToLetter);
 PREP(codeToString);
 PREP(convertKeyCode);
+PREP(createOrthonormalReference);
 PREP(currentChannel);
 PREP(disableUserInput);
 PREP(displayText);
@@ -33,11 +35,13 @@ PREP(displayTextPicture);
 PREP(displayTextStructured);
 PREP(doAnimation);
 PREP(endRadioTransmission);
+PREP(execNextFrame);
 PREP(execPersistentFnc);
 PREP(execRemoteFnc);
 PREP(executePersistent);
 PREP(filter);
 PREP(fixLoweredRifleAnimation);
+PREP(getAllGear);
 PREP(getCaptivityStatus);
 PREP(getConfigCommander);
 PREP(getConfigGunner);
@@ -78,7 +82,6 @@ PREP(isAutoWind);
 PREP(isEngineer);
 PREP(isEOD);
 PREP(isInBuilding);
-PREP(isMedic);
 PREP(isPlayer);
 PREP(isTurnedOut);
 PREP(letterToCode);
@@ -100,8 +103,6 @@ PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);
 PREP(removeCameraEventHandler);
 PREP(removeCustomEventHandler);
-PREP(removeInfoDisplayEventHandler);
-PREP(removeInventoryDisplayLoadedEventHandler);
 PREP(removeMapMarkerCreatedEventHandler);
 PREP(removeScrollWheelEventHandler);
 PREP(restoreVariablesJIP);
@@ -110,7 +111,6 @@ PREP(sanitizeString);
 PREP(serverLog);
 PREP(setCaptivityStatus);
 PREP(setForceWalkStatus);
-PREP(setKeyDefault);
 PREP(setName);
 PREP(setParameter);
 PREP(setPitchBankYaw);
@@ -122,6 +122,7 @@ PREP(toBitmask);
 PREP(toHex);
 PREP(toNumber);
 PREP(unmuteUnit);
+PREP(waitAndExecute);
 
 // ACE_Debug
 PREP(exportConfig);
@@ -134,20 +135,123 @@ PREP(monitor);
 PREP(showUser);
 
 // ACE_CuratorFix
-PREP(addUnloadEventhandler);
+PREP(addCuratorUnloadEventhandler);
 PREP(fixCrateContent);
 
-// Loop to update the ACE_player variable
+//ACE events global variables
+GVAR(events) = [[],[]];
+
+PREP(globalEvent);
+PREP(_handleNetEvent);
+PREP(addEventHandler);
+PREP(targetEvent);
+PREP(serverEvent);
+PREP(localEvent);
+PREP(removeEventHandler);
+PREP(removeAlLEventHandlers);
+
+// hashes
+PREP(hashCreate);
+PREP(hashSet);
+PREP(hashGet);
+PREP(hashHasKey);
+PREP(hashRem);
+PREP(hashListCreateList);
+PREP(hashListCreateHash);
+PREP(hashListSelect);
+PREP(hashListSet);
+PREP(hashListPush);
+
+
+
 ACE_player = player;
+
 if (hasInterface) then {
-    ["ACE_CheckForPlayerChange", "onEachFrame", {
+    // PFH to update the ACE_player variable
+    [{
         if !(ACE_player isEqualTo (missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player])) then {
-            _this = ACE_player;
+            _oldPlayer = ACE_player;
 
             ACE_player = missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player];
             uiNamespace setVariable ["ACE_player", ACE_player];
 
-            [missionNamespace, "playerChanged", [ACE_player, _this]] call FUNC(callCustomEventHandlers);
+            // Raise custom event. @todo, remove
+            [missionNamespace, "playerChanged", [ACE_player, _oldPlayer]] call FUNC(callCustomEventHandlers);
+            // Raise ACE event
+            ["playerChanged", [ACE_player, _oldPlayer]] call FUNC(localEvent);
         };
-    }] call BIS_fnc_addStackedEventHandler;
+    }, 0, []] call cba_fnc_addPerFrameHandler;
 };
+
+
+PREP(stringCompare);
+PREP(string_removeWhiteSpace);
+PREP(isHC);
+PREP(sendRequest_f);
+PREP(requestCallback);
+PREP(receiveRequest);
+PREP(onAnswerRequest);
+PREP(debug);
+PREP(debugModule);
+PREP(defineVariable);
+PREP(setDefinedVariable);
+PREP(getDefinedVariable);
+PREP(getAllDefinedSetVariables);
+PREP(getDefinedVariableInfo);
+PREP(getDefinedVariableDefault);
+PREP(getDeathAnim);
+PREP(insertionSort);
+PREP(uniqueElementsOnly);
+PREP(sortAlphabeticallyBy);
+PREP(hasMagazine);
+PREP(useMagazine);
+PREP(findMagazine);
+PREP(hasItem);
+PREP(useItem);
+PREP(findItem);
+PREP(getNumberMagazinesIn);
+PREP(setCanInteract);
+PREP(getCanInteract);
+PREP(canInteract);
+PREP(resetAllDefaults_f);
+PREP(broadcastSound3D_f);
+
+PREP(isAwake);
+PREP(setProne);
+
+PREP(setDisableUserInputStatus);
+
+PREP(dropWeapon_f);
+PREP(inWater_f);
+PREP(setVolume_f);
+PREP(closeAllDialogs_f);
+PREP(disableAI_f);
+PREP(switchToGroupSide_f);
+PREP(getFirstObjectIntersection);
+PREP(getFirstTerrainIntersection);
+PREP(setHearingCapability);
+PREP(revealObject_f);
+PREP(getWeaponItems_f);
+PREP(isModLoaded_f);
+PREP(inheritsFrom);
+PREP(getVersion);
+PREP(carryObj);
+PREP(carriedByObj);
+PREP(getCarriedObj);
+PREP(getCarriedBy);
+PREP(beingCarried);
+PREP(setCarriedBy);
+
+
+PREP(moveToTempGroup);
+
+
+PREP(limitMovementSpeed);
+PREP(setArrestState);
+PREP(isArrested);
+PREP(loadPerson_F);
+PREP(loadPersonLocal_F);
+PREP(unloadPerson_F);
+
+
+ADDON = true;

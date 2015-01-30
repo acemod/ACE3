@@ -4,13 +4,11 @@ class CfgPatches {
   class ADDON {
     units[] = {};
     weapons[] = {};
-    requiredVersion = 0.60;
+    requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {"ace_main", "ace_common"};
-    version = QUOTE(VERSION);
-    versionStr = QUOTE(VERSION);
-    versionAr[] = {VERSION_AR};
     author[] = {"bux578"};
     authorUrl = "https://github.com/bux578/";
+    VERSION_CONFIG;
   };
 };
 

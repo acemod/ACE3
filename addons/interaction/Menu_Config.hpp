@@ -530,7 +530,7 @@ class RscTitles {
     class controls {
       class RearIcon: RscInteractionIcon{
         idc = 999;
-        text = "ACE_interaction\UI\CenterIcon_ca.paa";
+        text = PATHTOF(UI\CenterIcon_ca.paa);
         x = 17.9 * GUI_GRID_W;
         y = 10 * GUI_GRID_H;
         w = 3.7 * GUI_GRID_H;
@@ -570,7 +570,7 @@ class RscTitles {
       };
       class BackIcon: RscInteractionIcon{
         idc = 1210;
-        text = "ACE_interaction\UI\backArrow_ca.paa";
+        text = PATHTOF(UI\backArrow_ca.paa);
         x = 18.25 * GUI_GRID_W;
         y = 12.69 * GUI_GRID_H;
         w = 0.5 * GUI_GRID_W;
@@ -587,7 +587,7 @@ class RscTitles {
       };
     };
   };
-  class ACE_InteractionHelper {
+  class GVAR(InteractionHelper) {
     idd = 9930;
     enableSimulation = 1;
     movingEnable = 0;
@@ -599,7 +599,7 @@ class RscTitles {
     class controls {
       class SelectIcon: RscInteractionHelperIcon{
         idc = 1200;
-        text = "ACE_interaction\UI\mouse_left_ca.paa";
+        text = PATHTOF(UI\mouse_left_ca.paa);
         y = 17.5 * GUI_GRID_H;
       };
       class SelectText: RscInteractionText{
@@ -609,7 +609,7 @@ class RscTitles {
       };
       class GoBackIcon: RscInteractionHelperIcon{
         idc = 1201;
-        text = "ACE_interaction\UI\mouse_right_ca.paa";
+        text = PATHTOF(UI\mouse_right_ca.paa);
         y = 19.5 * GUI_GRID_H;
       };
       class GoBackText: RscInteractionText{
@@ -619,7 +619,7 @@ class RscTitles {
       };
       class ScrollIcon: RscInteractionHelperIcon{
         idc = 1202;
-        text = "ACE_interaction\UI\mouse_scroll_ca.paa";
+        text = PATHTOF(UI\mouse_scroll_ca.paa);
         y = 18.5 * GUI_GRID_H;
       };
       class ScrollText: RscInteractionText{

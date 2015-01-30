@@ -1,4 +1,4 @@
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 //_this=[TEST_AI_HELICOPTER,"missiles_DAGR","missiles_DAGR","Far_AI","M_PG_AT","24Rnd_PG_missiles",163988: rocket_01_fly_f.p3d]
 TRACE_1("enter", _this);
@@ -6,19 +6,44 @@ PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
 FUNC(guidance_Javelin_LOBL_HI_PFH) = {
 	TRACE_1("enter", _this);
+	private["_pitch", "_yaw", "_wentTerminal", "_target", "_targetPos", "_curVelocity", "_missile" ];
 	_args = _this select 0;
 	//PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 	_shooter = _args select 0;
 	_missile = _args select 6;
+	
+	if((count _this) > 2) then {
+		_wentTerminal = _this select 2;
+	} else {
+		_this set[2, false];
+		_wentTerminal = false;
+	};
+	
+	if((count _this) > 3) then {
+		_targets = _this select 3;
+		_target = _targets select 0;
+		_targetPos = _targets select 1;
+	} else {
+		_this set[3, [GVAR(currentTarget),GVAR(currentTargetPos)] ];
+		_target = GVAR(currentTarget);
+		_targetPos = GVAR(currentTargetPos);
+	};
+	
 	_curVelocity = velocity _missile;
 	
-	if(!alive _missile || isNull _missile || isNull _shooter) exitWith {
+	if(!alive _missile || isNull _missile) exitWith {
 		[(_this select 1)] call cba_fnc_removePerFrameHandler;
 	};
 	
-	TRACE_2("Setting launch parameters", GVAR(currentTarget), GVAR(currentTargetPos));
-	_target = GVAR(currentTarget);
 	
+	_launchPos = _shooter getVariable [QGVAR(launchPos), nil];
+	if(isNil "_launchPos") then {
+		TRACE_1("Setting launch parameters", "");
+		_launchPos = getPosASL _shooter;
+		_shooter setVariable [QGVAR(launchPos), _launchPos, false];
+		_shooter setVariable [QGVAR(launchTime), diag_tickTime, false];
+	};
+		
 	_addHeight = [0,0,0];
 	if(!isNil "_target") then {
 		
@@ -28,37 +53,28 @@ FUNC(guidance_Javelin_LOBL_HI_PFH) = {
 		
 		_missilePos = getPosASL _missile;
 		// player sideChat "G!";
-		_targetPos = GVAR(currentTargetPos);
-	
+
 		TRACE_4("Phase Check", _launchPos, _missilePos, _targetPos, (_missilePos distance _targetPos));
 		if((count _targetPos) > 0) then {
-			_distanceToTarget = _missilePos vectorDistance _targetPos;	
+			_distanceToTarget = [(_missilePos select 0), (_missilePos select 1), (_targetPos select 2)]  vectorDistance _targetPos;	
 			
-			_defPitch = 0.05;
+			_defPitch = 0.25;
 			
-			if((_launchPos distance _missilePos) < 400 && (_targetPos distance _missilePos) > 400) then {
-				_addHeight = [0,0,(_targetPos select 2) + ((_launchPos distance _targetPos)*2)];
+			if( (_missilePos select 2) < (_targetPos select 2) + 160 && !_wentTerminal) then {
+				_addHeight = [0,0,(_targetPos select 2) + ( (_distanceToTarget * 2) + 160)];
 				TRACE_1("Climb phase", _addHeight);
-				//_defPitch = 0.1;
 			} else {
-				// Covered half the distance, go terminal
-				if((_missilePos distance _targetPos) < (_launchPos distance _targetPos) / 2) then {
-					TRACE_1("TERMINAL", "");
-				} else {
-					if((_missilePos select 2) > (_targetPos select 2)) then {
-						_heightDiff = (_missilePos select 2) - (_targetPos select 2);
-						TRACE_1("Coasting", _heightDiff);
-						_addHeight = [0,0, _heightDiff];
-					};
-				};
+				_wentTerminal = true;
+				_this set[2, _wentTerminal];
+				TRACE_1("TERMINAL", "");
 			};
 			_targetPos = _targetPos vectorAdd _addHeight;
 			
 			_defYaw = 0.0035;
 			
-			
 			_targetVectorSeeker = [_missile, [_xVec, _yVec, _zVec], _targetPos] call FUNC(translateToWeaponSpace);
 			_yaw = 0.0;
+			TRACE_5("", _missile, _xVec, _yVec, _zVec, _targetPos);
 			if((_targetVectorSeeker select 0) < 0) then {
 				_yaw = -_defYaw;
 			} else {
@@ -75,6 +91,9 @@ FUNC(guidance_Javelin_LOBL_HI_PFH) = {
 					_pitch = _defPitch;
 				};
 			};
+			
+			TRACE_3("", _targetVectorSeeker, _pitch, _yaw);
+			
 	#ifdef DEBUG_MODE_FULL
 			drawLine3D [(ASLtoATL _targetPos) vectorAdd _addHeight, ASLtoATL _targetPos, [0,1,0,1]];
 			
@@ -95,9 +114,11 @@ FUNC(guidance_Javelin_LOBL_HI_PFH) = {
 	#endif		
 	
 			if(accTime > 0) then {
+				TRACE_5("", _xVec, _yVec, _zVec, _yaw, _pitch);
 				_outVector = [_missile, [_xVec, _yVec, _zVec], [_yaw, 1/accTime, _pitch]] call FUNC(translateToModelSpace);
 				
 				_vectorTo = _missilePos vectorFromTo _outVector;
+				TRACE_3("", _missile, _outVector, _vectorTo);
 				_missile setVectorDirAndUp [_vectorTo, vectorUp _missile];
 			};
 			
@@ -116,7 +137,7 @@ FUNC(guidance_Javelin_LOBL_HI) = {
 };
 
 if(!local _shooter) exitWith { false };
-if(_weapon == "launch_B_Titan_short_F") then {
+if(_ammo == "M_Titan_AT") then {
 	_fireMode = _shooter getVariable ["ACE_FIRE_SELECTION", ACE_DEFAULT_FIRE_SELECTION];
 	
 	switch (_fireMode select 0) do {

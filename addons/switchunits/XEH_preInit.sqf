@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+ADDON = false;
+
 PREP(addMapFunction);
 PREP(handleMapClick);
 PREP(initPlayer);
@@ -9,3 +11,5 @@ PREP(module);
 PREP(nearestPlayers);
 PREP(switchBack);
 PREP(switchUnit);
+
+ADDON = true;

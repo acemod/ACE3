@@ -31,7 +31,7 @@ _player = ACE_player;
 _vehicle = vehicle _player;
 //_object = [GVAR(Target), _player] select (GVAR(MenuType) % 2 == 1);
 
-if !([_target, 5] call GVAR(isInRange)) exitWith {};
+if !([_target, 5] call FUNC(isInRange)) exitWith {};
 
 GVAR(Shortcuts) = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
 
@@ -59,10 +59,10 @@ if (_this select 2) then {
 
 		(findDisplay 46) createDisplay QGVAR(Dialog);
 		// Add eventhandlers
-		(findDisplay 1713999) displayAddEventHandler ["KeyDown", QUOTE( _this call EFUNC(common,onKeyDown) )];
-		(findDisplay 1713999) displayAddEventHandler ["KeyUp", QUOTE( _this call EFUNC(common,onKeyUp) )];
+		/*(findDisplay 1713999) displayAddEventHandler ["KeyDown", QUOTE(_this call EGVAR(common,onKeyDown))];
+		(findDisplay 1713999) displayAddEventHandler ["KeyUp", QUOTE(_this call EGVAR(common,onKeyUp))];*/
 
-		(findDisplay 1713999) displayAddEventHandler ["KeyDown", QUOTE( _this call FUNC(menuKeyInput) )];
+		(findDisplay 1713999) displayAddEventHandler ["KeyDown", QUOTE(_this call FUNC(menuKeyInput))];
 	};
 	disableSerialization;
 	_dlgInteractionDialog = uiNamespace getVariable QGVAR(Dialog);
@@ -119,7 +119,7 @@ if (_this select 2) then {
 		_target = [GVAR(Target), _player] select (GVAR(MenuType) % 2 == 1);
 
 		waitUntil {
-			if !([_target, 5] call GVAR(isInRange)) exitWith {
+			if !([_target, 5] call FUNC(isInRange)) exitWith {
 				(findDisplay 1713999) closeDisplay 1
 			};
 
@@ -134,7 +134,7 @@ if (_this select 2) then {
 
 				GVAR(CurrentTooltip) = [];
 
-				_enable = (_distance == 0 || {[_target, _distance] call GVAR(isInRange)}) && {[_target, _player] call _condition} && {[_target, _player] call _conditionShow};
+				_enable = (_distance == 0 || {[_target, _distance] call FUNC(isInRange)}) && {[_target, _player] call _condition} && {[_target, _player] call _conditionShow};
 				if (isNil "_enable") then {_enable = false};
 
 				GVAR(Tooltips) set [_forEachIndex, GVAR(CurrentTooltip)];

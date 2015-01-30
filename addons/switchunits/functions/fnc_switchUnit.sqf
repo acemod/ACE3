@@ -1,5 +1,5 @@
 /*
-  Name: AGM_SwitchUnits_fnc_switchUnit
+  Name: ACE_SwitchUnits_fnc_switchUnit
   
   Author(s):
     bux578

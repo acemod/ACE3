@@ -1,5 +1,5 @@
 /*
-  Name: AGM_SwitchUnits_fnc_nearestPlayers
+  Name: ACE_SwitchUnits_fnc_nearestPlayers
   
   Author(s):
     bux578

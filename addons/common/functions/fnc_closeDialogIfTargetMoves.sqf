@@ -10,7 +10,7 @@
  * Return Value:
  * None
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 _this spawn {
   _target = _this select 0;
@@ -41,8 +41,8 @@ _this spawn {
   waitUntil {
     if (call _fnc_check) then {
       closeDialog 0;
-      call ACE_Interaction_fnc_hideMenu;
+      call EFUNC(interaction,hideMenu);
     };
-    (isNil "ACE_Interaction_MainButton" && !dialog) || {!isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull])} //Exit loop if DisableMouse dialog open
+    (isNil QEGVAR(interaction,MainButton) && !dialog) || {!isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull])} //Exit loop if DisableMouse dialog open
   };
 };

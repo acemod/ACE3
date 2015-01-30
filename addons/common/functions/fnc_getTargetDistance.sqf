@@ -11,7 +11,7 @@
  * Return value:
  * Measured distance in meters. Can return maximal or minimal distance (Number)
  */
-#include "\z\ace\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
 private ["_interval", "_maxDistance", "_minDistance", "_position", "_laser", "_line", "_distance", "_iteration"];
 
