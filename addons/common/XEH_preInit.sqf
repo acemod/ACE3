@@ -85,6 +85,7 @@ PREP(isInBuilding);
 PREP(isPlayer);
 PREP(isTurnedOut);
 PREP(letterToCode);
+PREP(loadSettingsOnServer);
 PREP(map);
 PREP(moduleCheckPBOs);
 PREP(moduleLSDVehicles);
@@ -115,6 +116,8 @@ PREP(setName);
 PREP(setParameter);
 PREP(setPitchBankYaw);
 PREP(setVariableJIP);
+PREP(setSetting);
+PREP(setSettingFromConfig);
 PREP(stringToColoredText);
 PREP(subString);
 PREP(toBin);
@@ -163,6 +166,10 @@ PREP(hashListSet);
 PREP(hashListPush);
 
 
+// Load settings
+if (isServer) {}
+    call FUNC(loadSettingsOnServer);
+};
 
 ACE_player = player;
 
@@ -182,7 +189,6 @@ if (hasInterface) then {
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
-
 
 PREP(stringCompare);
 PREP(string_removeWhiteSpace);

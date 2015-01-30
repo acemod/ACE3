@@ -57,10 +57,16 @@ class ACE_canInteractConditions {
     };
 };
 
-class ACE_Options {
+class ACE_Settings {
+    class GVAR(forceAllSettings) {
+        value = 0;
+        typeName = "BOOL";
+    };
     class GVAR(enableNumberHotkeys) {
+        value = 1;
+        typeName = "BOOL";
+        isClientSetable = 1;
         displayName = "$STR_ACE_Common_EnableNumberHotkeys";
-        default = 1;
     };
 };
 
