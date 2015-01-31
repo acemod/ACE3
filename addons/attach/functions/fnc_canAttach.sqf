@@ -18,4 +18,4 @@ PARAMS_3(_unit,_attachToVehicle,_item);
 _attachLimit = if (_unit == _attachToVehicle) then {1} else {10};
 _attachedObjects = _attachToVehicle getVariable ["ACE_AttachedObjects", []];
 
-canStand _unit && {alive _attachToVehicle} && {(count _attachedObjects) < _attachLimit} && {_item in (magazines _unit + items _unit + [""])}
+canStand _unit && {alive _attachToVehicle} && {(count _attachedObjects) < _attachLimit} && {_item in ((magazines _unit) + (items _unit) + [""])}

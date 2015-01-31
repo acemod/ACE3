@@ -28,7 +28,7 @@ if (_unit == _attachToVehicle) then {
   {
     _objectPos = getPos _x;
     _objectPos set [2, 0];
-    if ((_objectPos distance _unitPos) < 2.4) exitWith {_inRange = true};
+    if ((_objectPos distance _unitPos) < 4) exitWith {_inRange = true};
   } forEach _attachedObjects;
 };
 

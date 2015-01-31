@@ -1,19 +1,20 @@
 /*
-  Name: FUNC(placeApprove)
-  Author(s):
-    Pabst Mirror (based on Explosive attach by Garth de Wet (LH))
-  Description:
-    Approves placement of the lightObject, releases the placement object for it to settle in a location
-  Parameters:
-    Nothing
-  Returns:
-    Nothing
-  Example:
-    call FUNC(placeApprove);
+Name: FUNC(placeApprove)
+Author(s):
+  Pabst Mirror (based on Explosive attach by Garth de Wet (LH))
+Description:
+  Approves placement of the lightObject, releases the placement object for it to settle in a location
+Parameters:
+  Nothing
+Returns:
+  Nothing
+Example:
+  call FUNC(placeApprove);
 */
 #include "script_component.hpp"
 
-private ["_setupObject", "_setupClassname", "_itemClassname", "_placementText", "_attachToVehicle", "_player", "_position0", "_closeInRatio", "_offset", "_keepGoingCloser", "_pos0temp", "_position1", "_attachedObject", "_currentObjects", "_currentItemNames"];
+private ["_setupObject", "_setupClassname", "_itemClassname", "_placementText", "_attachToVehicle", "_placer", "_startingPosition", "_startingOffset", "_distanceFromCenter", "_closeInUnitVector", "_keepGoingCloser", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_attachedObject", "_currentObjects", "_currentItemNames"];
+
 
 if (GVAR(pfeh_running)) then {
   [QGVAR(PlacementEachFrame),"OnEachFrame"] call BIS_fnc_removeStackedEventHandler;
@@ -25,17 +26,17 @@ _setupClassname = typeOf _setupObject;
 _itemClassname = GVAR(SetupPlacmentItem);
 _placementText = GVAR(SetupPlacmentText);
 _attachToVehicle = GVAR(SetupAttachVehicle);
+_placer = GVAR(placer);
 
 GVAR(SetupPlacmentItem) = "";
 GVAR(SetupPlacmentText) = "";
 GVAR(setupObject) = objNull;
 GVAR(SetupAttachVehicle) = objNull;
-[GVAR(placer), QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
 GVAR(placer) = objNull;
 
-_player = ACE_player;
-[_player, "DefaultAction", _player getVariable [QGVAR(placeActionEH), -1]] call EFUNC(common,removeActionEventHandler);
-[_player, "MenuBack", _player getVariable [QGVAR(cancelActionEH), -1]] call EFUNC(common,removeActionEventHandler);
+[_placer, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+[_placer, "DefaultAction", _placer getVariable [QGVAR(placeActionEH), -1]] call EFUNC(common,removeActionEventHandler);
+[_placer, "MenuBack", _placer getVariable [QGVAR(cancelActionEH), -1]] call EFUNC(common,removeActionEventHandler);
 call EFUNC(interaction,hideMouseHint);
 
 //A player can release the attachObject with it floating in mid-air.
@@ -44,37 +45,55 @@ call EFUNC(interaction,hideMouseHint);
 //So it does multiple scans at slighly different angles
 //This is VERY computationaly intensive, but doesn't happen that often.
 
-_position0 = getPosAtl _setupObject;
-_closeInRatio = 1;
-_offset = _attachToVehicle worldToModel _position0;
+_startingPosition = _setupObject modelToWorld [0,0,0];
+_startingOffset = _attachToVehicle worldToModel _startingPosition;
+
+_distanceFromCenter = vectorMagnitude _startingOffset;
+_closeInUnitVector = vectorNormalized (_startingOffset vectorFromTo [0,0,0]);
 _keepGoingCloser = true;
+_closeInDistance = 0;
+
 while {_keepGoingCloser} do {
-  _closeInRatio = _closeInRatio - 0.004;
-  if (_closeInRatio <= 0) exitWith {};
+  if (_closeInDistance >= _distanceFromCenter) exitWith {};
+
+  _closeInDistance = _closeInDistance + 0.01; //10mm
+  _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
+  _endPosTestOffset set [2, (_startingOffset select 2)];
+  _endPosTest = _attachToVehicle modelToWorld _endPosTestOffset;
+
   {
-    _pos0temp = _position0 vectorAdd _x;
+    _startingPosShifted = _startingPosition vectorAdd _x;
+    _startASL = if (surfaceIsWater _startingPosShifted) then {_startingPosShifted} else {ATLtoASL _startingPosShifted};
     {
-      _position1 = [(_offset select 0) * _closeInRatio, (_offset select 1) * _closeInRatio, (_offset select 2)];
-      _position1 = _attachToVehicle modelToWorld _position1;
-      _position1 = _position1 vectorAdd _x;
+      _endPosShifted = _endPosTest vectorAdd _x;
+      _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
+      
       //Uncomment to see the lazor show, and see how the scanning works:
-      // drawLine3D [_pos0temp, _position1, [1,0,0,1]];
-      if (_attachToVehicle in lineIntersectsWith [(ATLToASL _pos0temp), (ATLToASL _position1), player, _setupObject]) exitWith {_keepGoingCloser = false};
-    } forEach [[0,0,0], [0,0,0.075], [0,0,-0.075], [0,0.075,0], [0,-0.075,0], [0.075,0,0], [-.075,0,0]];
-  } forEach [[0,0,0], [0,0,0.075], [0,0,-0.075]];
+      drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
+
+      if (_attachToVehicle in lineIntersectsWith [_startASL, _endASL, _placer, _setupObject]) exitWith {_keepGoingCloser = false};
+    } forEach [[0,0,0.045], [0,0,-0.045], [0,0.045,0], [0,-0.045,0], [0.045,0,0], [-0.045,0,0]];
+  } forEach [[0,0,0], [0,0,0.05], [0,0,-0.05]];
 };
-//Move it out slightly, for visability sake (better to look a little funny than be embedded//sunk in the hull)
-_closeInRatio = (_closeInRatio + 0.006) min 1;
 
 //Delete Local Placement Object
 deleteVehicle _setupObject;
 
+//Checks
+if (_closeInDistance >= _distanceFromCenter) exitWith {ERROR("no valid spot found")};
+if (!([_placer,_attachToVehicle,_itemClassname] call FUNC(canAttach))) exitWith {ERROR("canAttach failed")};
+
+//Move it out slightly, for visability sake (better to look a little funny than be embedded//sunk in the hull)
+_closeInDistance = (_closeInDistance - 0.0085);
+
 //Create New 'real' Object
-_attachedObject = _setupClassname createVehicle (getPos _player);
-_attachedObject attachTo [_attachToVehicle, [(_offset select 0) * _closeInRatio, (_offset select 1) * _closeInRatio, (_offset select 2)]];
+_endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
+_endPosTestOffset set [2, (_startingOffset select 2)];
+_attachedObject = _setupClassname createVehicle (getPos _placer);
+_attachedObject attachTo [_attachToVehicle, _endPosTestOffset];
 
 //Remove Item from inventory
-_player removeItem _itemClassname;
+_placer removeItem _itemClassname;
 
 //Add Object to ACE_AttachedObjects and ACE_AttachedItemNames
 _currentObjects = _attachToVehicle getVariable ["ACE_AttachedObjects", []];
