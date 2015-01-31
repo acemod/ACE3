@@ -69,7 +69,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     private "_player";
     _player = ACE_player;
     //Stop if player switch or player gets to far from vehicle
-    if ((GVAR(placer) != _player) || ((_player distance GVAR(SetupAttachVehicle)) > 9)) exitWith {
+    if ((GVAR(placer) != _player) || {(_player distance GVAR(SetupAttachVehicle)) > 7}) exitWith {
       call FUNC(placeCancel);
     };
     GVAR(pfeh_running) = true;
@@ -77,8 +77,9 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     GVAR(setupObject) setPosATL _pos;
   }] call BIS_fnc_addStackedEventHandler;
 
-  //had to spawn the mouseHint, not sure why
-  [localize "STR_ACE_Attach_PlaceAction", localize "STR_ACE_Attach_CancelAction"] spawn EFUNC(interaction,showMouseHint);
+  //had to delay the mouseHint, not sure why
+  [{[localize "STR_ACE_Attach_PlaceAction", localize "STR_ACE_Attach_CancelAction"] call EFUNC(interaction,showMouseHint)}, [], 0, 0] call EFUNC(common,waitAndExecute);
+  
   _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {GVAR(pfeh_running) AND !isNull (GVAR(setupObject))}, {call FUNC(placeApprove);}] call EFUNC(common,AddActionEventHandler)];
   _unit setVariable [QGVAR(cancelActionEH), [_unit, "MenuBack", {GVAR(pfeh_running) AND !isNull (GVAR(setupObject))}, {call FUNC(placeCancel);}] call EFUNC(common,AddActionEventHandler)];
 };

@@ -8,7 +8,7 @@
 
   Parameters:
     0: OBJECT - unit
-    0: OBJECT - target
+    1: OBJECT - target
 
   Returns:
     Nothing

@@ -29,10 +29,7 @@ GVAR(SetupPlacmentItem) = "";
 GVAR(SetupPlacmentText) = "";
 GVAR(setupObject) = objNull;
 GVAR(SetupAttachVehicle) = objNull;
-if (isNil QGVAR(placer)) then {
-  ERROR("Nil placer?");
-  GVAR(placer) = objNull;
-};
+
 
 [GVAR(placer), QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
 call EFUNC(interaction,hideMouseHint);

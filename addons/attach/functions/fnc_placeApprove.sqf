@@ -56,7 +56,7 @@ _closeInDistance = 0;
 while {_keepGoingCloser} do {
   if (_closeInDistance >= _distanceFromCenter) exitWith {};
 
-  _closeInDistance = _closeInDistance + 0.01; //10mm
+  _closeInDistance = _closeInDistance + 0.01; //10mm each step
   _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
   _endPosTestOffset set [2, (_startingOffset select 2)];
   _endPosTest = _attachToVehicle modelToWorld _endPosTestOffset;
@@ -80,8 +80,10 @@ while {_keepGoingCloser} do {
 deleteVehicle _setupObject;
 
 //Checks
-if (_closeInDistance >= _distanceFromCenter) exitWith {ERROR("no valid spot found")};
-if (!([_placer,_attachToVehicle,_itemClassname] call FUNC(canAttach))) exitWith {ERROR("canAttach failed")};
+if ((_closeInDistance >= _distanceFromCenter) || (!([_placer,_attachToVehicle,_itemClassname] call FUNC(canAttach)))) exitWith {
+  TRACE_2("no valid spot found",_closeInDistance,_distanceFromCenter); 
+  [localize "STR_ACE_Attach_Failed"] call EFUNC(common,displayTextStructured);
+};
 
 //Move it out slightly, for visability sake (better to look a little funny than be embedded//sunk in the hull)
 _closeInDistance = (_closeInDistance - 0.0085);

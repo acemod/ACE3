@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-12 -->
+<!-- Edited with tabler - 2015-01-31 -->
 <Project name="ACE">
   <Package name="Attach">
     <Key ID="STR_ACE_Attach_AttachDetach">
@@ -167,6 +167,13 @@
       <Portuguese>Cancelar</Portuguese>
       <Italian>Annulla</Italian>
       <Hungarian>Mégse</Hungarian>
+    </Key>
+    <Key ID="STR_ACE_Attach_Failed">
+      <English>Attach Failed</English>
+      <French>Échec du Attacher</French>
+      <German>Befestigen Fehlgeschlagen</German>
+      <Russian>Присоединить Ошибка</Russian>
+      <Spanish>Error en Acoplar</Spanish>
     </Key>
   </Package>
 </Project>
