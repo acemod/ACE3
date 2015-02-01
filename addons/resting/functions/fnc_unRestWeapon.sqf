@@ -43,6 +43,8 @@ if (_unit getVariable ["ACE_bipodDeployed", false]) then {
   _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
   [localize "STR_ACE_Resting_WeaponLifted", _picture] call EFUNC(common,displayTextPicture);
 };
+playSound QGVAR(unrest);
+//playSound3D [QUOTE(PATHTOF(sounds\weaponrest_unrest.wav)), _unit];
 
 _unit setVariable ["ACE_weaponRested", false];
 _unit setVariable ["ACE_bipodDeployed", false];

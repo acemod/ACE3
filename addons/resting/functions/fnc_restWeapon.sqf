@@ -14,6 +14,8 @@
 
 EXPLODE_3_PVT(_this,_unit,_vehicle,_weapon);
 
+systemChat format["restingWeapon %1", _this];
+
 if (_weapon != primaryWeapon _unit) exitWith {};
 
 if (_unit getVariable ["ACE_weaponRested", false]) exitWith {_this call FUNC(unRestWeapon)};
@@ -33,6 +35,8 @@ if (true in _intersects) then {
 
   // REST THE WEAPON
   addCamShake CAMSHAKE;
+  playSound QGVAR(rest);
+ // playSound3D [QUOTE(PATHTOF(sounds\weaponrest_rest.wav)), _unit];
 
   if ([_weapon] call FUNC(hasBipod) && {_intersects select 3}) then {
     _unit setVariable ["ACE_bipodDeployed", true];
