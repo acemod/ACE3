@@ -23,7 +23,7 @@
 private ["_typeOf", "_returnValue"];
 PARAMS_1(_object);
 
-_typeOf = typeOf _object;
+_typeOf = toLower (typeOf _object);
 _returnValue = false;
 
 if (_typeOf != "") then {
