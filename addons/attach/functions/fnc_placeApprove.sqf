@@ -1,24 +1,26 @@
 /*
-Name: FUNC(placeApprove)
-Author(s):
-  Pabst Mirror (based on Explosive attach by Garth de Wet (LH))
-Description:
-  Approves placement of the lightObject, releases the placement object for it to settle in a location
-Parameters:
-  Nothing
-Returns:
-  Nothing
-Example:
-  call FUNC(placeApprove);
-*/
+ * Author: Pabst Mirror (based on Explosive attach by Garth de Wet (LH))
+ * Approves placement of the lightObject, scans for an appropriate location and attaches
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * Nothing
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_setupObject", "_setupClassname", "_itemClassname", "_placementText", "_attachToVehicle", "_placer", "_startingPosition", "_startingOffset", "_distanceFromCenter", "_closeInUnitVector", "_keepGoingCloser", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_attachedObject", "_currentObjects", "_currentItemNames"];
 
 
 if (GVAR(pfeh_running)) then {
-  [QGVAR(PlacementEachFrame),"OnEachFrame"] call BIS_fnc_removeStackedEventHandler;
-  GVAR(pfeh_running) = false;
+    [QGVAR(PlacementEachFrame),"OnEachFrame"] call BIS_fnc_removeStackedEventHandler;
+    GVAR(pfeh_running) = false;
 };
 
 _setupObject = GVAR(setupObject);
@@ -54,26 +56,26 @@ _keepGoingCloser = true;
 _closeInDistance = 0;
 
 while {_keepGoingCloser} do {
-  if (_closeInDistance >= _distanceFromCenter) exitWith {};
+    if (_closeInDistance >= _distanceFromCenter) exitWith {};
 
-  _closeInDistance = _closeInDistance + 0.01; //10mm each step
-  _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
-  _endPosTestOffset set [2, (_startingOffset select 2)];
-  _endPosTest = _attachToVehicle modelToWorld _endPosTestOffset;
+    _closeInDistance = _closeInDistance + 0.01; //10mm each step
+    _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
+    _endPosTestOffset set [2, (_startingOffset select 2)];
+    _endPosTest = _attachToVehicle modelToWorld _endPosTestOffset;
 
-  {
-    _startingPosShifted = _startingPosition vectorAdd _x;
-    _startASL = if (surfaceIsWater _startingPosShifted) then {_startingPosShifted} else {ATLtoASL _startingPosShifted};
     {
-      _endPosShifted = _endPosTest vectorAdd _x;
-      _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
-      
-      //Uncomment to see the lazor show, and see how the scanning works:
-      drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
+        _startingPosShifted = _startingPosition vectorAdd _x;
+        _startASL = if (surfaceIsWater _startingPosShifted) then {_startingPosShifted} else {ATLtoASL _startingPosShifted};
+        {
+            _endPosShifted = _endPosTest vectorAdd _x;
+            _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
 
-      if (_attachToVehicle in lineIntersectsWith [_startASL, _endASL, _placer, _setupObject]) exitWith {_keepGoingCloser = false};
-    } forEach [[0,0,0.045], [0,0,-0.045], [0,0.045,0], [0,-0.045,0], [0.045,0,0], [-0.045,0,0]];
-  } forEach [[0,0,0], [0,0,0.05], [0,0,-0.05]];
+            //Uncomment to see the lazor show, and see how the scanning works:
+            drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
+
+            if (_attachToVehicle in lineIntersectsWith [_startASL, _endASL, _placer, _setupObject]) exitWith {_keepGoingCloser = false};
+        } forEach [[0,0,0.045], [0,0,-0.045], [0,0.045,0], [0,-0.045,0], [0.045,0,0], [-0.045,0,0]];
+    } forEach [[0,0,0], [0,0,0.05], [0,0,-0.05]];
 };
 
 //Delete Local Placement Object
@@ -81,8 +83,8 @@ deleteVehicle _setupObject;
 
 //Checks
 if ((_closeInDistance >= _distanceFromCenter) || (!([_placer,_attachToVehicle,_itemClassname] call FUNC(canAttach)))) exitWith {
-  TRACE_2("no valid spot found",_closeInDistance,_distanceFromCenter); 
-  [localize "STR_ACE_Attach_Failed"] call EFUNC(common,displayTextStructured);
+    TRACE_2("no valid spot found",_closeInDistance,_distanceFromCenter);
+    [localize "STR_ACE_Attach_Failed"] call EFUNC(common,displayTextStructured);
 };
 
 //Move it out slightly, for visability sake (better to look a little funny than be embedded//sunk in the hull)
