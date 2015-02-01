@@ -11,7 +11,7 @@ esteldunedain <nicolas.d.badano@gmail.com>
 Felix Wiegand <koffeinflummi@gmail.com>
 Garth "L-H" de Wet <garthofhearts@gmail.com>
 Jo David
-PabstMirror
+PabstMirror <pabstmirror@gmail.com>
 
 # CONTRIBUTORS
 11RDP-LoupVert <loupvert@11rdp.fr>
