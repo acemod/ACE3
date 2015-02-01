@@ -1,19 +1,19 @@
 /*
-	Name: ACE_Explosives_fnc_openTriggerSelectionUI
-
-	Author: Garth de Wet (LH)
-
-	Description:
-		Opens the UI for explosive trigger selection
-
-	Parameters:
-		0: String - explosive magazine
-
-	Returns:
-		Nothing
-
-	Example:
-		[lbData [8866, lbCurSel 8866]] call ACE_Explosives_fnc_openTriggerSelectionUI;
+* fnc_openTriggerSelectionUI.sqf
+*
+* Author: Garth 'L-H' de Wet
+* Opens the UI for explosive trigger selection
+*
+* Arguments:
+* 0: Explosive Magazine <STRING>
+*
+* Return Value:
+* None
+*
+* Example:
+* [lbData [8866, lbCurSel 8866]] call ACE_Explosives_fnc_openTriggerSelectionUI;
+*
+* Public: No
 */
 #include "script_component.hpp"
 private ["_magazine", "_hasRequiredItems","_triggerTypes", "_actions", "_detonators", "_required", "_magTriggers"];

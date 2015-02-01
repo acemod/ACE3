@@ -1,20 +1,19 @@
 /*
-Name: XEH_preInit.sqf
-
-Author(s):
-Garth de Wet (LH)
-
-Description:
-Prepares the functions
-
-Parameters:
-None
-
-Returns:
-None
-
-Example:
-None
+* XEH_preInit.sqf
+*
+* Author: Garth 'L-H' de Wet
+* Initialises the explosives system
+*
+* Arguments:
+* None
+*
+* Return Value:
+* None
+*
+* Example:
+* None
+*
+* Public: No
 */
 #include "script_component.hpp"
 

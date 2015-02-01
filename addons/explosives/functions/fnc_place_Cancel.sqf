@@ -1,20 +1,19 @@
 /*
-	Name: ACE_Explosives_fnc_Place_Cancel
-
-	Author(s):
-		Garth de Wet (LH)
-
-	Description:
-		Cancels placement of the explosive
-
-	Parameters:
-		Nothing
-
-	Returns:
-		Nothing
-
-	Example:
-		call ACE_Explosives_fnc_Place_Cancel;
+* fnc_place_Cancel.sqf
+*
+* Author: Garth 'L-H' de Wet
+* Cancels placement of the explosive
+*
+* Arguments:
+* None
+*
+* Return Value:
+* None
+*
+* Example:
+* call ACE_Explosives_fnc_place_Cancel;
+*
+* Public: Yes
 */
 #include "script_component.hpp"
 if (GVAR(pfeh_running)) then {

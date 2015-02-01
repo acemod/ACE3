@@ -1,20 +1,19 @@
 /*
-	Name: XEH_postInit.sqf
-
-	Author(s):
-		Garth de Wet (LH)
-
-	Description:
-		Initialises explosive behaviour.
-
-	Parameters:
-		None
-
-	Returns:
-		None
-
-	Example:
-		None
+* XEH_postInit.sqf
+*
+* Author: Garth 'L-H' de Wet
+* Initialises the player object for the explosive system.
+*
+* Arguments:
+* None
+*
+* Return Value:
+* None
+*
+* Example:
+* None
+*
+* Public: No
 */
 #include "script_component.hpp"
 if !(hasInterface) exitWith {};

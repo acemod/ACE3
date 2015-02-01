@@ -1,19 +1,19 @@
 /*
-  Name: ACE_Explosives_fnc_canDefuse
-
-  Author: Garth de Wet (LH)
-
-  Description:
-    Checks if a unit can defuse an explosive
-
-  Parameters:
-    0: OBJECT - unit
-
-  Returns:
-    Nothing
-
-  Example:
-    [player] call ACE_Explosives_fnc_CanDefuse;
+* fnc_canDefuse.sqf
+*
+* Author: Garth 'L-H' de Wet
+* Whether a unit can perform the defuse action
+*
+* Arguments:
+* 0: Unit <OBJECT>
+*
+* Return Value:
+* Able to defuse <BOOL>
+*
+* Example:
+* if ([player] call ACE_Explosives_fnc_canDefuse) then {hint "Can Defuse";};
+*
+* Public: Yes
 */
 #include "script_component.hpp"
 private "_unit";
@@ -24,7 +24,7 @@ _isSpecialist = [_unit] call EFUNC(Common,isEOD);
 if (GVAR(RequireSpecialist) && {!_isSpecialist}) exitWith {false};
 
 _timeBombCore = nearestObject [_unit, "TimeBombCore"];
-_mineBase =  nearestObject [_unit, "MineBase"];
+_mineBase = nearestObject [_unit, "MineBase"];
 
 _distCore = _unit distance _timeBombCore;
 _distBase = _unit distance _mineBase;

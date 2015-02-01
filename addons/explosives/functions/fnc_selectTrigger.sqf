@@ -1,20 +1,20 @@
 /*
-	Name: ACE_Explosives_fnc_selectTrigger
-
-	Author: Garth de Wet (LH)
-
-	Description:
-		Selects a trigger for an explosive.
-
-	Parameters:
-		0: String - Magazine
-		1: String - trigger index in ACE_triggers of magazine class
-
-	Returns:
-		Nothing
-
-	Example:
-		["SatchelCharge_Remote_Mag","Timer"] call ACE_Explosives_fnc_selectTrigger;
+* fnc_selectTrigger.sqf
+*
+* Author: Garth 'L-H' de Wet
+* Selects a trigger for an explosive.
+*
+* Arguments:
+* 0: Magazine <STRING>
+* 1: Trigger mode <STRING>
+*
+* Return Value:
+* None
+*
+* Example:
+* ["SatchelCharge_Remote_Mag","Timer"] call ACE_Explosives_fnc_selectTrigger;
+*
+* Public: No
 */
 #include "script_component.hpp"
 private ["_magazine","_trigger"];

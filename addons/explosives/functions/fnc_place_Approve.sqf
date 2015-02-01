@@ -1,20 +1,20 @@
 /*
-	Name: ACE_Explosives_fnc_Place_Approve
-
-	Author(s):
-		Garth de Wet (LH)
-
-	Description:
-		Approves placement of the explosive, releases the placement object for it to settle in a location suitable for the explosive to be created.
-
-	Parameters:
-		Nothing
-
-	Returns:
-		Nothing
-
-	Example:
-		call ACE_Explosives_fnc_Place_Approve;
+* fnc_place_Approve.sqf
+*
+* Author: Garth 'L-H' de Wet
+* Approves placement of the explosive, releases the placement object for it
+* to settle in a location suitable for the explosive to be created.
+*
+* Arguments:
+* None
+*
+* Return Value:
+* None
+*
+* Example:
+* call ACE_Explosives_fnc_place_Approve;
+*
+* Public: No
 */
 #include "script_component.hpp"
 if (GVAR(pfeh_running)) then {

@@ -1,19 +1,20 @@
 /*
-    Author(s):
-        Garth de Wet (LH)
-
-    Description:
-        Starts a timer for an explosive.
-
-    Parameters:
-        0: OBJECT - Explosive
-        1: NUMBER - time till detonation
-
-    Returns:
-        Nothing
-
-    Example:
-        [_explosive, 10] call ACE_Explosives_fnc_startTimer;
+* fnc_startTimer.sqf
+*
+* Author: Garth 'L-H' de Wet
+* Starts a timer for an explosive.
+*
+* Arguments:
+* 0: Explosive <OBJECT>
+* 1: Time till detonate <NUMBER>
+*
+* Return Value:
+* None
+*
+* Example:
+* [_explosive, 10] call ACE_Explosives_fnc_startTimer;
+*
+* Public: Yes
 */
 #include "script_component.hpp"
 

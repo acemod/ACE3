@@ -1,25 +1,24 @@
 /*
-	Name: ACE_Explosives_fnc_detonateExplosive
-
-	Author(s):
-		Garth de Wet (LH)
-
-	Description:
-		Detonates a remote Explosive.
-
-	Parameters:
-		0: OBJECT - Unit detonating explosive
-		1: NUMBER - Max range (-1 to ignore)
-		2: ARRAY - Explosive
-			0: OBJECT - Explosive
-			1: NUMBER - Fuse Time
-
-	Returns:
-		Nothing
-
-	Example:
-		// Clacker
-		[player, 100, [Explosive, 1]] call ACE_Explosives_fnc_detonateExplosive;
+* fnc_detonateExplosive.sqf
+*
+* Author: Garth 'L-H' de Wet
+* Causes the unit to defuse the passed explosive.
+*
+* Arguments:
+* 0: Unit <OBJECT>
+* 1: Max range (-1 to ignore) <NUMBER>
+* 2: Explosive <ARRAY>
+* 	0: Explosive <OBJECT>
+* 	1: Fuse time <NUMBER>
+*
+* Return Value:
+* None
+*
+* Example:
+* [player, 100, [Explosive, 1]] call ACE_Explosives_fnc_detonateExplosive; // has to be within range
+* [player, -1, [Explosive, 1]] call ACE_Explosives_fnc_detonateExplosive; // range ignored.
+*
+* Public: Yes
 */
 #include "script_component.hpp"
 private ["_item","_result", "_ignoreRange", "_unit", "_range"];
@@ -44,8 +43,11 @@ if (getNumber (ConfigFile >> "CfgAmmo" >> typeof (_item select 0) >> "TriggerWhe
 		_exp setPosASL _pos;
 	};
 };
-_item spawn {
-	sleep (_this select 1);
-	(_this select 0) setDamage 1;
-};
+[{
+		_explosive = _this;
+		if (!isNull _explosive) then {
+				_explosive setDamage 1;
+		};
+}, _item select 0, _item select 1, 0] call EFUNC(common,waitAndExecute);
+
 _result
