@@ -1,26 +1,27 @@
 /*
-	Name: AGM_Parachute_fnc_showAltimeter
-	
+	Name: ACE_Parachute_fnc_showAltimeter
+
 	Author: Garth de Wet (LH)
-	
+
 	Description:
 		Displays the altimeter on screen.
-	
-	Parameters: 
+
+	Parameters:
 		0: OBJECT - unit to track for the altimeter
-	
+
 	Returns:
 		Nothing
-	
+
 	Example:
-		[player] call AGM_Parachute_fnc_showAltimeter
+		[player] call ACE_Parachute_fnc_showAltimeter
 */
+#include "script_component.hpp"
 private ["_unit"];
 _unit = _this select 0;
-(["AGM_Altimeter"] call BIS_fnc_rscLayer) cutRsc ["AGM_Altimeter", "PLAIN",0,true];
-if (isNull (uiNamespace getVariable ["AGM_Altimeter", displayNull])) exitWith {};
+(["ACE_Altimeter"] call BIS_fnc_rscLayer) cutRsc ["ACE_Altimeter", "PLAIN",0,true];
+if (isNull (uiNamespace getVariable ["ACE_Altimeter", displayNull])) exitWith {};
 
-AGM_Parachute_AltimeterFnc = [uiNamespace getVariable ["AGM_Altimeter", displayNull], _unit] spawn {
+ACE_Parachute_AltimeterFnc = [uiNamespace getVariable ["ACE_Altimeter", displayNull], _unit] spawn {
 	private ["_height", "_hour", "_minute", "_descentRate"];
 	_unit = _this select 1;
 	_height = floor ((getPosASL _unit) select 2);
@@ -36,7 +37,7 @@ AGM_Parachute_AltimeterFnc = [uiNamespace getVariable ["AGM_Altimeter", displayN
 	_curTime = time;
 	_prevTime = _curTime;
 	while {true} do {
-		_TimeText ctrlSetText (format ["%1:%2",[_hour, 2] call AGM_Core_fnc_numberToDigitsString,[_minute, 2] call AGM_Core_fnc_numberToDigitsString]);
+		_TimeText ctrlSetText (format ["%1:%2",[_hour, 2] call ACE_Core_fnc_numberToDigitsString,[_minute, 2] call ACE_Core_fnc_numberToDigitsString]);
 		_HeightText ctrlSetText (format ["%1", floor(_height)]);
 		_DecendRate ctrlSetText (format ["%1", _descentRate max 0]);
 		sleep 0.2;
@@ -47,6 +48,6 @@ AGM_Parachute_AltimeterFnc = [uiNamespace getVariable ["AGM_Altimeter", displayN
 		_prevTime = _curTime;
 
 		// close altimeter, @todo _unit can change due to team switch, zeus!
-		if !("AGM_Altimeter" in assignedItems _unit) exitWith {call AGM_Parachute_fnc_hideAltimeter};
+		if !("ACE_Altimeter" in assignedItems _unit) exitWith {call ACE_Parachute_fnc_hideAltimeter};
 	};
 };
