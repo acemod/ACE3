@@ -18,10 +18,11 @@
 #include "script_component.hpp"
 private ["_unit"];
 _unit = _this select 0;
-["ACE_ParachuteFix", "OnEachFrame"] call BIS_fnc_removeStackedEventHandler;
-ACE_Parachuting_PFH = false;
-[_unit, "AmovPercMevaSrasWrflDf_AmovPknlMstpSrasWrflDnon", 2] call ACE_Core_fnc_doAnimation;
-[_unit] spawn {
-	sleep 1;
-	(_this select 0) playActionNow "Crouch";
-};
+GVAR(PFH) = false;
+[_unit, "AmovPercMevaSrasWrflDf_AmovPknlMstpSrasWrflDnon", 2] call EFUNC(common,doAnimation);
+[{
+	if (diag_tickTime >= ((_this select 0) select 0) + 1) then {
+		((_this select 0) select 1) playActionNow "Crouch";
+		[(_this select 1)] call CALLSTACK(cba_fnc_removePerFrameHandler);
+	};
+}, 1, [diag_tickTime,_unit]] call CALLSTACK(cba_fnc_addPerFrameHandler);

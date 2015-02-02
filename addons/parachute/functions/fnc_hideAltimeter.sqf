@@ -15,5 +15,5 @@
 		call ACE_Parachute_fnc_hideAltimeter
 */
 #include "script_component.hpp"
-terminate ACE_Parachute_AltimeterFnc;
+GVAR(AltimeterActive) = false;
 (["ACE_Altimeter"] call BIS_fnc_rscLayer) cutText ["","PLAIN",0,true];
