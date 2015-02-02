@@ -1,6 +1,6 @@
 /*
  * Author: Garth 'L-H' de Wet
- * Causes the unit to defuse the passed explosive.
+ * Causes the unit to detonate the passed explosive.
  *
  * Arguments:
  * 0: Unit <OBJECT>
