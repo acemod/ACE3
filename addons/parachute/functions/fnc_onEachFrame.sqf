@@ -1,20 +1,18 @@
 /*
-	Name: ACE_Parachute_fnc_onEachFrame
-
-	Author: Garth de Wet (LH)
-
-	Description:
-		Checks if a unit can defuse an explosive
-
-	Parameters:
-		0: OBJECT - unit
-
-	Returns:
-		Nothing
-
-	Example:
-		call ACE_Parachute_fnc_onEachFrame;
-*/
+ * Author: Garth 'L-H' de Wet
+ * Checks whether the unit should preform landing.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ACE_Parachute_fnc_onEachFrame;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 private "_player";
 _player = ACE_player;

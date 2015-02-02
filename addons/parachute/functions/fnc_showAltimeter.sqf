@@ -1,20 +1,18 @@
 /*
-	Name: ACE_Parachute_fnc_showAltimeter
-
-	Author: Garth de Wet (LH)
-
-	Description:
-		Displays the altimeter on screen.
-
-	Parameters:
-		0: OBJECT - unit to track for the altimeter
-
-	Returns:
-		Nothing
-
-	Example:
-		[player] call ACE_Parachute_fnc_showAltimeter
-*/
+ * Author: Garth 'L-H' de Wet
+ * Displays the altimeter on screen.
+ *
+ * Arguments:
+ * 0: unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player] call ACE_Parachute_fnc_showAltimeter
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private ["_unit"];
 _unit = _this select 0;

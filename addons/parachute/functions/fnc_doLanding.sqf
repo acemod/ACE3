@@ -1,20 +1,18 @@
 /*
-	Name: ACE_Parachute_fnc_doLanding
-
-	Author: Garth de Wet (LH)
-
-	Description:
-		Performs the landing animation fix
-
-	Parameters:
-		0: OBJECT - unit
-
-	Returns:
-		Nothing
-
-	Example:
-		[player] call ACE_Parachute_fnc_doLanding;
-*/
+ * Author: Garth 'L-H' de Wet
+ * Performs the landing animation fix
+ *
+ * Arguments:
+ * 0: unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player] call ACE_Parachute_fnc_doLanding;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 private ["_unit"];
 _unit = _this select 0;
