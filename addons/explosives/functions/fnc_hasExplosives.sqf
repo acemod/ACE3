@@ -1,20 +1,18 @@
 /*
-* fnc_hasExplosives.sqf
-*
-* Author: Garth 'L-H' de Wet
-* Whether the passed unit has any explosives on them.
-*
-* Arguments:
-* 0: Unit <OBJECT>
-*
-* Return Value:
-* The unit has explosives <BOOL>
-*
-* Example:
-* _hasExplosives = [player] call ACE_Explosives_fnc_hasExplosives;
-*
-* Public: Yes
-*/
+ * Author: Garth 'L-H' de Wet
+ * Whether the passed unit has any explosives on them.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * The unit has explosives <BOOL>
+ *
+ * Example:
+ * _hasExplosives = [player] call ACE_Explosives_fnc_hasExplosives;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private ["_unit", "_result", "_magazines"];
 _result = false;

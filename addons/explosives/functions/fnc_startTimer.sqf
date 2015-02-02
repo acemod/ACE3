@@ -1,21 +1,19 @@
 /*
-* fnc_startTimer.sqf
-*
-* Author: Garth 'L-H' de Wet
-* Starts a timer for an explosive.
-*
-* Arguments:
-* 0: Explosive <OBJECT>
-* 1: Time till detonate <NUMBER>
-*
-* Return Value:
-* None
-*
-* Example:
-* [_explosive, 10] call ACE_Explosives_fnc_startTimer;
-*
-* Public: Yes
-*/
+ * Author: Garth 'L-H' de Wet
+ * Starts a timer for an explosive.
+ *
+ * Arguments:
+ * 0: Explosive <OBJECT>
+ * 1: Time till detonate <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_explosive, 10] call ACE_Explosives_fnc_startTimer;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 
 EXPLODE_2_PVT(_this,_explosive,_delay);

@@ -1,20 +1,18 @@
 /*
-* fnc_triggerType.sqf
-*
-* Author: Garth 'L-H' de Wet
-* Gets the types of triggers associated with the explosive
-*
-* Arguments:
-* 0: Explosive magazine <STRING>
-*
-* Return Value:
-* Supported triggers as CfgACE_Triggers config entries <ARRAY>
-*
-* Example:
-* _supports = ["SatchelCharge_Remote_Mag"] call ACE_Explosives_fnc_TriggerType
-*
-* Public: Yes
-*/
+ * Author: Garth 'L-H' de Wet
+ * Gets the types of triggers associated with the explosive
+ *
+ * Arguments:
+ * 0: Explosive magazine <STRING>
+ *
+ * Return Value:
+ * Supported triggers as CfgACE_Triggers config entries <ARRAY>
+ *
+ * Example:
+ * _supports = ["SatchelCharge_Remote_Mag"] call ACE_Explosives_fnc_TriggerType
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private "_result";
 _result = [];

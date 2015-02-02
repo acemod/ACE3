@@ -1,22 +1,20 @@
 /*
-* fnc_getPlacedExplosives.sqf
-*
-* Author: Garth 'L-H' de Wet
-* Gets all placed explosives by unit, optionally filtered by specific trigger type.
-*
-* Arguments:
-* 0: Unit <OBJECT>
-* 1: Trigger classname - filter (optional) <STRING>
-*
-* Return Value:
-* Explosives <ARRAY>
-*
-* Example:
-* _allExplosives = [player] call ACE_Explosives_fnc_getPlacedExplosives;
-* _deadmanExplosives = [player, "DeadManSwitch"] call ACE_Explosives_fnc_getPlacedExplosives;
-*
-* Public: Yes
-*/
+ * Author: Garth 'L-H' de Wet
+ * Gets all placed explosives by unit, optionally filtered by specific trigger type.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Trigger classname - filter (optional) <STRING>
+ *
+ * Return Value:
+ * Explosives <ARRAY>
+ *
+ * Example:
+ * _allExplosives = [player] call ACE_Explosives_fnc_getPlacedExplosives;
+ * _deadmanExplosives = [player, "DeadManSwitch"] call ACE_Explosives_fnc_getPlacedExplosives;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private ["_unit", "_clackerList", "_adjustedList", "_list", "_filter"];
 _unit = _this select 0;

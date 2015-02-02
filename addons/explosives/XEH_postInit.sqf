@@ -1,20 +1,18 @@
 /*
-* XEH_postInit.sqf
-*
-* Author: Garth 'L-H' de Wet
-* Initialises the player object for the explosive system.
-*
-* Arguments:
-* None
-*
-* Return Value:
-* None
-*
-* Example:
-* None
-*
-* Public: No
-*/
+ * Author: Garth 'L-H' de Wet
+ * Initialises the player object for the explosive system.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 if !(hasInterface) exitWith {};
 GVAR(PlacedCount) = 0;

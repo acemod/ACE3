@@ -1,21 +1,19 @@
 /*
-* fnc_startDefuse.sqf
-*
-* Author: Garth 'L-H' de Wet
-* Starts defusing an explosive
-*
-* Arguments:
-* 0: Unit <OBJECT>
-* 1: Target explosive <OBJECT>
-*
-* Return Value:
-* Nothing
-*
-* Example:
-* [player, ACE_Interaction_Target] call ACE_Explosives_fnc_StartDefuse;
-*
-* Public: Yes
-*/
+ * Author: Garth 'L-H' de Wet
+ * Starts defusing an explosive
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Target explosive <OBJECT>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [player, ACE_Interaction_Target] call ACE_Explosives_fnc_StartDefuse;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private ["_unit","_target"];
 _unit = _this select 0;

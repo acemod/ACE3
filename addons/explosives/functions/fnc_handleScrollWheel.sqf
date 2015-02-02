@@ -1,20 +1,18 @@
 /*
-* fnc_handleScrollWheel.sqf
-*
-* Author: Garth 'L-H' de Wet
-* Handles rotating of Explosives
-*
-* Arguments:
-* Amount scrolled <NUMBER>
-*
-* Return Value:
-* Handled <BOOL>
-*
-* Example:
-* 1.2 call ACE_Explosives_fnc_HandleScrollWheel;
-*
-* Public: No
-*/
+ * Author: Garth 'L-H' de Wet
+ * Handles rotating of Explosives
+ *
+ * Arguments:
+ * Amount scrolled <NUMBER>
+ *
+ * Return Value:
+ * Handled <BOOL>
+ *
+ * Example:
+ * 1.2 call ACE_Explosives_fnc_HandleScrollWheel;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 private ["_obj"];
 if (isNull(GVAR(Setup)) || {ACE_Modifier == 0} || !GVAR(pfeh_running)) exitWith {false};

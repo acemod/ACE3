@@ -1,27 +1,25 @@
 /*
-* fnc_placeExplosive.sqf
-*
-* Author: Garth 'L-H' de Wet
-* Places an explosive at the requested position
-*
-* Arguments:
-* 0: Unit <OBJECT>
-* 1: Position to place explosive <POSITION>
-* 2: Rotation <NUMBER>
-* 3: Magazine class <STRING>
-* 4: Config of trigger <CONFIG>
-* 5: Variables required for the trigger type <ARRAY>
-* 6: Should direction be set <BOOL>
-*
-* Return Value:
-* Placed explosive <OBJECT>
-*
-* Example:
-* _explosive = [player, player modelToWorld [0,0.5, 0.1], 134,
-* 	"SatchelCharge_Remote_Mag", "Command", []] call ACE_Explosives_fnc_placeExplosive;
-*
-* Public: Yes
-*/
+ * Author: Garth 'L-H' de Wet
+ * Places an explosive at the requested position
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Position to place explosive <POSITION>
+ * 2: Rotation <NUMBER>
+ * 3: Magazine class <STRING>
+ * 4: Config of trigger <CONFIG>
+ * 5: Variables required for the trigger type <ARRAY>
+ * 6: Should direction be set <BOOL>
+ *
+ * Return Value:
+ * Placed explosive <OBJECT>
+ *
+ * Example:
+ * _explosive = [player, player modelToWorld [0,0.5, 0.1], 134,
+ * 	"SatchelCharge_Remote_Mag", "Command", []] call ACE_Explosives_fnc_placeExplosive;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private ["_pos", "_dir", "_magazineClass", "_ammo", "_triggerSpecificVars", "_unit", "_triggerConfig", "_explosive"];
 _unit = _this select 0;

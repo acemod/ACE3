@@ -1,25 +1,23 @@
 /*
-* fnc_detonateExplosive.sqf
-*
-* Author: Garth 'L-H' de Wet
-* Causes the unit to defuse the passed explosive.
-*
-* Arguments:
-* 0: Unit <OBJECT>
-* 1: Max range (-1 to ignore) <NUMBER>
-* 2: Explosive <ARRAY>
-* 	0: Explosive <OBJECT>
-* 	1: Fuse time <NUMBER>
-*
-* Return Value:
-* None
-*
-* Example:
-* [player, 100, [Explosive, 1]] call ACE_Explosives_fnc_detonateExplosive; // has to be within range
-* [player, -1, [Explosive, 1]] call ACE_Explosives_fnc_detonateExplosive; // range ignored.
-*
-* Public: Yes
-*/
+ * Author: Garth 'L-H' de Wet
+ * Causes the unit to defuse the passed explosive.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Max range (-1 to ignore) <NUMBER>
+ * 2: Explosive <ARRAY>
+ * 	0: Explosive <OBJECT>
+ * 	1: Fuse time <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, 100, [Explosive, 1]] call ACE_Explosives_fnc_detonateExplosive; // has to be within range
+ * [player, -1, [Explosive, 1]] call ACE_Explosives_fnc_detonateExplosive; // range ignored.
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private ["_item","_result", "_ignoreRange", "_unit", "_range"];
 _unit = _this select 0;

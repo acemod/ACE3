@@ -1,20 +1,18 @@
 /*
-* fnc_openPlaceUI.sqf
-*
-* Author: Garth 'L-H' de Wet
-* Opens the UI for explosive placement selection
-*
-* Arguments:
-* 0: Unit <OBJECT>
-*
-* Return Value:
-* None
-*
-* Example:
-* [player] call ACE_Explosives_fnc_openPlaceUI;
-*
-* Public: No
-*/
+ * Author: Garth 'L-H' de Wet
+ * Opens the UI for explosive placement selection
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player] call ACE_Explosives_fnc_openPlaceUI;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 private ["_unit","_mags", "_item", "_index", "_actions"];
 _unit = _this select 0;

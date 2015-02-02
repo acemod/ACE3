@@ -1,20 +1,18 @@
 /*
-* fnc_getDetonators.sqf
-*
-* Author: Garth 'L-H' de Wet
-* Returns all the detonators of the unit
-*
-* Arguments:
-* 0: Unit <OBJECT>
-*
-* Return Value:
-* Configs of all detonators <ARRAY>
-*
-* Example:
-* _detonators = [player] call ACE_Explosives_fnc_getDetonators;
-*
-* Public: Yes
-*/
+ * Author: Garth 'L-H' de Wet
+ * Returns all the detonators of the unit
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * Configs of all detonators <ARRAY>
+ *
+ * Example:
+ * _detonators = [player] call ACE_Explosives_fnc_getDetonators;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private ["_unit", "_items", "_result", "_config"];
 _unit = _this select 0;

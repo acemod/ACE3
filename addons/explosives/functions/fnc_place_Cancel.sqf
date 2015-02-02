@@ -1,20 +1,18 @@
 /*
-* fnc_place_Cancel.sqf
-*
-* Author: Garth 'L-H' de Wet
-* Cancels placement of the explosive
-*
-* Arguments:
-* None
-*
-* Return Value:
-* None
-*
-* Example:
-* call ACE_Explosives_fnc_place_Cancel;
-*
-* Public: Yes
-*/
+ * Author: Garth 'L-H' de Wet
+ * Cancels placement of the explosive
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ACE_Explosives_fnc_place_Cancel;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 if (GVAR(pfeh_running)) then {
 	[QGVAR(Placement),"OnEachFrame"] call CALLSTACK(BIS_fnc_removeStackedEventHandler);
