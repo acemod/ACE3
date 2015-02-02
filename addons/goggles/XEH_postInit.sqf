@@ -1,18 +1,19 @@
 /*
-  Name: XEH_postInit.sqf
-
-  Author: Garth de Wet (LH)
-
-  Description:
-  Sets up the glasses mod for usage. Initialises variables and event handlers.
-  Shouldn't be called by a user/modder ever. Done by the engine.
-
-  Parameters:
-  Nothing
-
-  Returns:
-  Nothing
-*/
+ * Author: Garth 'L-H' de Wet
+ * Sets up the glasses mod for usage. Initialises variables and event handlers.
+ * Shouldn't be called by a user/modder ever. Done by the engine.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 if (!hasInterface) exitWith {};
 
@@ -57,7 +58,7 @@ player addEventHandler ["Explosion", {
     call FUNC(ApplyDirtEffect);
     if (GETBROKEN) exitWith {};
     if (((_this select 1) call FUNC(GetExplosionIndex)) < getNumber(ConfigFile >> "CfgGlasses" >> GVAR(Current) >> "ACE_Resistance")) exitWith {};
-    if !(ace_player call FUNC(isGogglesVisible)) exitWith {["GlassesCracked",[ace_player]] call EFUNC(common,localEvent);};
+    if !([ace_player] call FUNC(isGogglesVisible)) exitWith {["GlassesCracked",[ace_player]] call EFUNC(common,localEvent);};
     _effects = GETGLASSES(ace_player);
     _effects set [BROKEN, true];
     SETGLASSES(ace_player,_effects);
@@ -94,8 +95,8 @@ player AddEventHandler ["Put", {call FUNC(checkGlasses);}];
 
   if (call FUNC(ExternalCamera)) exitWith {call FUNC(RemoveGlassesEffect)};
 
-  if (ace_player call FUNC(isGogglesVisible)) then {
-    (_this select 0) call FUNC(applyGlassesEffect);
+  if ([ace_player] call FUNC(isGogglesVisible)) then {
+    [_this select 0] call FUNC(applyGlassesEffect);
   } else {
     call FUNC(removeGlassesEffect);
   };

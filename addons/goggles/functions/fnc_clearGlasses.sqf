@@ -1,21 +1,19 @@
 /*
-	Name: fnc_clearGlasses.sqf
-
-	Author: Garth de Wet (LH)
-
-	Description:
-	Clears all dirt, rain, dust from glasses.
-	Removes glasses effect (PP, overlay) and then puts it back.
-
-	Parameters:
-	Nothing
-
-	Returns:
-	Nothing
-
-	Example:
-	call FUNC(ClearGlasses);
-*/
+ * Author: Garth 'L-H' de Wet
+ * Clears all dirt, rain, dust from glasses.
+ * Removes glasses effect (PP, overlay) and then puts it back.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_goggles_fnc_ClearGlasses;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 
 private "_broken";
