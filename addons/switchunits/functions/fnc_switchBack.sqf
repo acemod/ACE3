@@ -1,31 +1,41 @@
 /*
-  Name: ACE_SwitchUnits_fnc_switchBack
-  
-  Author(s):
-    bux578
-  
-  Description:
-    Switches back to the original player unit
-    This method needs to be "spawn"ed
-  
-  Parameters:
-    0: OBJECT - original player unit
-    1: OBJECT - respawned unit
-  
-  Returns:
-    VOID
-*/
+ * Author: bux578
+ * Switches back to the original player unit
+ *
+ * Arguments:
+ * 0: Original player unit <OBJECT>
+ * 1: Respawned unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_origPlayer, _respPlayer] call FUNC(switchBack)
+ *
+ * Public: Yes
+ */
 
 #include "script_component.hpp"
 
-private ["_originalPlayerUnit", "_currentUnit"];
-_originalPlayerUnit = _this select 0;
-_currentUnit = _this select 1;
+private ["_origPlayerUnit"];
 
-[_originalPlayerUnit] joinSilent GVAR(OriginalGroup);
+_origPlayerUnit = _this select 0;
+[_origPlayerUnit] joinSilent GVAR(OriginalGroup);
 
-waitUntil {local _originalPlayerUnit};
+DFUNC(pfhSwitchBack) = {
+    
+    private ["_args", "_originalPlayerUnit", "_currentUnit"];
+    
+    _args = _this select 0;
+    
+    _originalPlayerUnit = _args select 0;
+    _currentUnit = _args select 1;
 
-selectPlayer _originalPlayerUnit;
+    if (local _originalPlayerUnit) exitWith {
+        selectPlayer _originalPlayerUnit;
+        deleteVehicle _currentUnit;
+        [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    };
+};
 
-deleteVehicle _currentUnit;
+[FUNC(pfhSwitchBack), 0.2, _this] call CBA_fnc_addPerFrameHandler;

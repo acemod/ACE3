@@ -1,19 +1,19 @@
 /*
-  Name: ACE_SwitchUnits_fnc_initPlayer
-  
-  Author(s):
-    bux578
-  
-  Description:
-    Initializes the player
-  
-  Parameters:
-    0: OBJECT - player
-    1: ARRAY<OBJECT> - Array containing selected sides
-  
-  Returns:
-    VOID
-*/
+ * Author: bux578
+ * Initializes the player
+ *
+ * Arguments:
+ * 0: player <OBJECT>
+ * 1: sides <ARRAY<OBJECT>>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_player, _sides] call FUNC(initPlayer)
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 

@@ -1,20 +1,20 @@
 /*
-  Name: ACE_SwitchUnits_fnc_module
-  
-  Author(s):
-    bux578
-  
-  Description:
-    Initializes the SwitchUnits module
-  
-  Parameters:
-    0: OBJECT - module logic
-    1: ARRAY<OBJECT> - list of affected units
-    2: BOOLEAN - isActivated
-  
-  Returns:
-    BOOLEAN (Good practice to include one)
-*/
+ * Author: bux578
+ * Initializes the SwitchUnits module
+ *
+ * Arguments:
+ * 0: module logic <OBJECT>
+ * 1: list of affected units <ARRAY<OBJECT>>
+ * 2: isActivated <BOOLEAN>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * None
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 
