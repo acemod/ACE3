@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [west, east] call FUNC(markAiOnMap)
+ * [[west, east]] call FUNC(markAiOnMap)
  *
  * Public: No
  */
@@ -34,11 +34,13 @@ DFUNC(pfhMarkAiOnMap) = {
     } forEach GVAR(AllMarkerNames);
 
      if (alive ACE_player && {GVAR(OriginalUnit) getVariable ["ACE_CanSwitchUnits", false]}) then {
-
+                
         // create markers
         {
             if (([_x] call FUNC(isValidAi) && (side group _x in _sides)) || (_x getVariable [QGVAR(IsPlayerControlled), false])) then {
                 private ["_markerName", "_marker", "_markerColor"];
+                
+                hint format ["marker. %1", time];
 
                 //_markerName = format ["%1", [_x] call EFUNC(common,getName)];
                 _markerName = str _x;

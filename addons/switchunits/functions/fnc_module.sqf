@@ -27,8 +27,6 @@ if !(_activated) exitWith {};
 
 GVAR(Module) = true;
 
-[QGVAR(EnableSwitchUnits), true] call EFUNC(common,setParameter);
-
 [_logic, QGVAR(SwitchToWest), "SwitchToWest"] call EFUNC(common,readBooleanParameterFromModule);
 [_logic, QGVAR(SwitchToEast), "SwitchToEast"] call EFUNC(common,readBooleanParameterFromModule);
 [_logic, QGVAR(SwitchToIndependent), "SwitchToIndependent"] call EFUNC(common,readBooleanParameterFromModule);
@@ -36,5 +34,7 @@ GVAR(Module) = true;
          
 [_logic, QGVAR(EnableSafeZone), "EnableSafeZone"] call EFUNC(common,readBooleanParameterFromModule);
 [_logic, QGVAR(SafeZoneRadius), "SafeZoneRadius"] call EFUNC(common,readNumericParameterFromModule);
+
+[QGVAR(EnableSwitchUnits), true] call EFUNC(common,setParameter);
 
 diag_log text "[ACE]: SwitchUnits Module Initialized.";
