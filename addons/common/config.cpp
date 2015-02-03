@@ -58,6 +58,32 @@ class ACE_canInteractConditions {
 };
 
 class ACE_Settings {
+    /*
+    *class GVAR(sampleSetting) {
+    * Value
+    *    value = 1;
+    *
+    * Type (SCALAR, BOOL, STRING, ARRAY, COLOR)
+    *    typeName = "SCALAR";
+    *
+    * Force the setting?
+    *    force = 0;
+    *
+    * Does it appear on the options menu?
+    *    isClientSetable = 1;
+    *
+    * The following settings only apply when isClientSetable == 1
+    * Stringtable entry with the setting name
+    *    displayName = "$STR_ACE_Common_SettingName";
+    *
+    * Stringtable entry with the setting description
+    *    description = "$STR_ACE_Common_SettingDescription";
+    *
+    * Stringtable entries that describe the options
+    * Only applies if typeName == "SCALAR";
+    *    values[] = {"Disabled", "Enabled", "Only Cursor", "Only On Keypress", "Only Cursor and KeyPress"};
+    *};
+    */
     class GVAR(forceAllSettings) {
         value = 0;
         typeName = "BOOL";
