@@ -17,33 +17,27 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_selectionName", "_damage", "_source", "_projectile", "_damageReturn"];
+private ["_damageReturn"];
 
-_unit =          _this select 0;
-_selectionName = _this select 1;
-_damage =        _this select 2;
-_source =        _this select 3;
-_projectile =    _this select 4;
+if !(local (_this select 0)) exitWith {nil};
 
-if !(local _unit) exitWith {nil};
-
-if (typeName _projectile == "OBJECT") then {
-    _projectile = typeOf _projectile;
+if (typeName (_this select 4) == "OBJECT") then {
+    _this set [4, typeOf (_this select 4)];
 };
 
 
-_damageReturn = _damage;
+_damageReturn = (_this select 2);
 
-if (ace_medical_level >= 0) then {
-    _damageReturn = (_this + _damageReturn) call ace_medical_fnc_handleDamage_basic;
+if (GVAR(level) >= 0) then {
+    _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_basic);
 };
 
-if (ace_medical_level >= 1) then {
-    _damageReturn = (_this + _damageReturn) call ace_medical_fnc_handleDamage_medium;
+if (GVAR(level) >= 1) then {
+    _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_medium);
 };
 
-if (ace_medical_level >= 2) then {
-    _damageReturn = (_this + _damageReturn) call ace_medical_fnc_handleDamage_advanced;
+if (GVAR(level) >= 2) then {
+    _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_advanced);
 };
 
 _damageReturn
