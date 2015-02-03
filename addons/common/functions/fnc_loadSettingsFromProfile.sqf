@@ -1,6 +1,6 @@
 /*
  * Author: CAA-Picard
- * Load the user setable setting from the user profile.
+ * Load the user setable settings from the user profile.
  * Config < Server UserConfig < Mission Config < Client settings
  *
  * Arguments:
@@ -13,36 +13,25 @@
  */
 #include "script_component.hpp"
 
-_fnc_setSettingFromProfile = {
-    EXPLODE_1_PVT(_this,_optionEntry);
+// Iterate through settings
+{
+    _name = _x select 0;
+    _isClientSetable = _x select 2;
+    _isForced = _x select 6;
 
-    _name = configName _optionEntry;
-    _valueEntry = _optionEntry >> "value";
-    _isClientSetable = getNumber (_optionEntry >> "isClientSetable");
-
-    if (_isClientSetable > 0) then {
-        if !(missionNamespace getVariable format ["%1_forced", _name, false]) then {
+    // If setting is user setable
+    if (_isClientSetable) then {
+        // If setting is not forced
+        if !(_isForced) then {
             _profileValue = profileNamespace getvariable _name;
+            // If the setting is stored on the profile
             if !(isNil _profileValue) then {
+                // If the profile variable has the correct type
                 if (typeName _profileValue == typeName (missionNamespace getvariable _name)) then {
+                    // Load the setting from the profile
                     missionNamespace setvariable [_name, _profileValue];
                 };
             };
         };
     };
-};
-
-// Iterate through settings from main config
-_countOptions = count (configFile >> "ACE_Settings");
-for "_index" from 0 to (_countOptions - 1) do {
-    _optionEntry = (configFile >> "ACE_Settings") select _index;
-    [_optionEntry] call _fnc_setSettingFromProfile;
-
-};
-
-// Iterate through settings from mission config
-_countOptions = count (missionConfigFile >> "ACE_Settings");
-for "_index" from 0 to (_countOptions - 1) do {
-    _optionEntry = (missionConfigFile >> "ACE_Settings") select _index;
-    [_optionEntry] call _fnc_setSettingFromProfile;
-};
+} forEach GVAR(settings);

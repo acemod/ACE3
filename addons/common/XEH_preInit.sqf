@@ -55,6 +55,7 @@ PREP(getMarkerType);
 PREP(getName);
 PREP(getNumberFromMissionSQM);
 PREP(getPitchBankYaw);
+PREP(getSettingData);
 PREP(getStringFromMissionSQM);
 PREP(getTargetAzimuthAndInclination);
 PREP(getTargetDistance);

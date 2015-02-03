@@ -28,6 +28,9 @@ _fnc_getValueWithType = {
     if (_typeName == "ARRAY") exitWith {
         getArray (_optionEntry >> "value")
     };
+    if (_typeName == "COLOR") exitWith {
+        getArray (_optionEntry >> "value")
+    };
     _value
 };
 
@@ -39,41 +42,59 @@ if (isNil _name) then {
 
     // Get type from config
     _typeName = getText (_optionEntry >> "typeName");
+    if (_typeName == "") then {
+        _typeName = "SCALAR";
+    };
 
     // Read entry and cast it to the correct type
     _value = [_optionEntry, _typeName] call _fnc_getValueWithType;
 
     // Init the variable and publish it
     missionNamespace setVariable [_name, _value];
-    publicVariable _name;
-    // Set the variable to not forced
-    missionNamespace setVariable [format ["%1_forced", _name], false];
-    publicVariable format ["%1_forced", _name];
 
-    // Add the variable to a list on the server
-    GVAR(settingsList) pushBack _name;
+    // Add the setting to a list on the server
+    // Set the variable to not forced
+    /*_settingData = [
+        _name,
+        _typeName,
+        _isClientSetable,
+        _localizedName,
+        _localizedDescription,
+        _possibleValues,
+        _isForced
+    ];*/
+    _settingData = [
+        _name,
+        _typeName,
+        (getNumber (_optionEntry >> "isClientSetable")) > 0,
+        getText (_optionEntry >> "displayName"),
+        getText (_optionEntry >> "description"),
+        getArray (_optionEntry >> "values"),
+        getNumber (_optionEntry >> "force") > 0
+    ];
+
+    GVAR(settings) pushBack _settingData;
 
 } else {
     // The setting already exists.
 
     // Check if it's already forced and quit
-    if (missionNamespace getVariable format ["%1_forced", _name]) exitWith {};
+    _settingData = [_name] call FUNC(getSettingData);
+    if (_settingData select 6) exitWith {};
 
     // The setting is not forced, so update the value
 
     // Get the type from the existing variable
-    _typeName = typeName (missionNamespace getVariable _name);
+    _typeName = _settingData select 1;
 
     // Read entry and cast it to the correct type
     _value = [_optionEntry, _typeName] call _fnc_getValueWithType;
 
     // Update the variable and publish it
     missionNamespace setVariable [_name, _value];
-    publicVariable _name;
 
-    // Check if it needs forcing
+    // Force the setting if requested
     if (getNumber (_optionEntry >> "force") > 0) then {
-        missionNamespace setVariable [format ["%1_forced", _name], true];
-        publicVariable format ["%1_forced", _name];
+        _settingData set [6, true];
     };
 };

@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-GVAR(settingsList) = [];
+GVAR(settings) = [];
 
 // Load settings from main config
 _countOptions = count (configFile >> "ACE_Settings");
@@ -25,15 +25,13 @@ for "_index" from 0 to (_countOptions - 1) do {
 // Check if all settings should be forced
 if (GVAR(forceAllSettings)) then {
     {
-        if !(missionNamespace getVariable format ["%1_forced", _x]) then {
-            missionNamespace setVariable format ["%1_forced", _x, true];
-            publicVariable format ["%1_forced", _name];
-        };
-    } forEach GVAR(settingsList);
+        _x set [6, true];
+    } forEach GVAR(settings);
 };
 
+// @todo
 // Load settings from server userconfig only if the ACE_ServerSettings is loaded
-if (isClass (configFile >> "CfgPatches" >> "ACE_ServerSettings")) then {
+/*if (isClass (configFile >> "CfgPatches" >> "ACE_ServerSettings")) then {
     DFUNC(serverUserConfig) = compile preprocessFileLineNumbers "\userconfig\ACE\ACE_Settings.hpp";
     if !(isNil DFUNC(serverUserConfig)) then {
         [] call FUNC(serverUserConfig);
@@ -47,7 +45,7 @@ if (isClass (configFile >> "CfgPatches" >> "ACE_ServerSettings")) then {
             };
         } forEach GVAR(settingsList);
     };
-};
+};*/
 
 // Load settings from mission config
 _countOptions = count (missionConfigFile >> "ACE_Settings");
@@ -59,9 +57,13 @@ for "_index" from 0 to (_countOptions - 1) do {
 // Check if all settings should be forced
 if (GVAR(forceAllSettings)) then {
     {
-        if !(missionNamespace getVariable format ["%1_forced", _x]) then {
-            missionNamespace setVariable format ["%1_forced", _x, true];
-            publicVariable format ["%1_forced", _name];
-        };
-    } forEach GVAR(settingsList);
+        _x set [6, true];
+    } forEach GVAR(settings);
 };
+
+// Publish all settings data
+publicVariable QGVAR(settings);
+// Publish all setting values
+{
+    publicVariable (_x select 0);
+} forEach GVAR(settings);
