@@ -23,7 +23,7 @@ class Extended_GetIn_EventHandlers {
 class Extended_GetOut_EventHandlers {
     class All {
         class GVAR(AutoDetachCaptive) {
-            getOut = "if (local (_this select 2) && {(_this select 2) getVariable ['ACE_isCaptive', false]}) then {_this call ACE_Captives_fnc_handleGetOut}";
+            getOut = QUOTE(_this call FUNC(handleGetOut));
         };
     };
 };

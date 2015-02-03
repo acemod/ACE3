@@ -1,8 +1,7 @@
 #include "script_component.hpp"
 
 ADDON = false;
-
-PREP(empty);     
+  
 PREP(canFriskPerson);
 PREP(canLoadCaptive);
 PREP(canUnloadCaptive);

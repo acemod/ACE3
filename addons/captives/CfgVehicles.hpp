@@ -5,62 +5,62 @@ class CfgVehicles {
       class ACE_SetCaptive {
         displayName = "$STR_ACE_Captives_SetCaptive";
         distance = 4;
-        condition = "'ACE_CableTie' in items _player && {alive _target} && {!(_target getVariable ['ACE_isCaptive', false])}";
-        statement = "player removeItem 'ACE_CableTie'; [_target, true] call ACE_Captives_fnc_setCaptive";
+        condition = QUOTE(('ACE_CableTie' in (items _player)) && {alive _target} && {!(_target getVariable ['ACE_isCaptive', false])});
+        statement = QUOTE(_player removeItem 'ACE_CableTie'; [ARR_2(_target, true)] call FUNC(setCaptive););
         showDisabled = 0;
         priority = 2.4;
-        icon = "\ACE_Captives\UI\handcuff_ca.paa";
+        icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
         hotkey = "C";
       };
       class ACE_ReleaseCaptive {
         displayName = "$STR_ACE_Captives_ReleaseCaptive";
         distance = 4;
-        condition = "_target getVariable ['ACE_isCaptive', false] && {isNull (attachedTo _target)}";
-        statement = "[_target, false] call ACE_Captives_fnc_setCaptive";
+        condition = QUOTE(_target getVariable ['ACE_isCaptive', false] && {isNull (attachedTo _target)});
+        statement = QUOTE([ARR_2(_target, false)] call FUNC(setCaptive));
         exceptions[] = {"ACE_Interaction_isNotEscorting"};
         showDisabled = 0;
         priority = 2.4;
-        icon = "\ACE_Captives\UI\handcuff_ca.paa";
+        icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
         hotkey = "R";
       };
       class ACE_EscortCaptive {
         displayName = "$STR_ACE_Captives_EscortCaptive";
         distance = 4;
-        condition = "_target getVariable ['ACE_isCaptive', false] && {isNull (attachedTo _target)} && {alive _target} && {!(_target getVariable ['ACE_isUnconscious', false])}";
-        statement = "[_target, true] call ACE_Captives_fnc_escortCaptive";
+        condition = QUOTE((_target getVariable ['ACE_isCaptive', false]) && {isNull (attachedTo _target)} && {alive _target} && {!(_target getVariable ['ACE_isUnconscious', false])});
+        statement = QUOTE([ARR_2(_target, true)] call FUNC(escortCaptive));
         exceptions[] = {"ACE_Interaction_isNotEscorting"};
         showDisabled = 0;
-        icon = "\ACE_Captives\UI\captive_ca.paa";
+        icon = QUOTE(PATHTOF(UI\captive_ca.paa));
         priority = 2.3;
         hotkey = "E";
       };
       class ACE_StopEscorting {
         displayName = "$STR_ACE_Captives_StopEscorting";
         distance = 4;
-        condition = "_target getVariable ['ACE_isCaptive', false] && {_target in attachedObjects _player}";
-        statement = "[_target, false] call ACE_Captives_fnc_escortCaptive";
+        condition = QUOTE((_target getVariable ['ACE_isCaptive', false]) && {_target in (attachedObjects _player)});
+        statement = QUOTE([ARR_2(_target, false)] call FUNC(escortCaptive));
         exceptions[] = {"ACE_Interaction_isNotEscorting"};
         showDisabled = 0;
-        icon = "\ACE_Captives\UI\captive_ca.paa";
+        icon = QUOTE(PATHTOF(UI\captive_ca.paa));
         priority = 2.3;
         hotkey = "E";
       };
       class ACE_LoadCaptive {
         displayName = "$STR_ACE_Captives_LoadCaptive";
         distance = 4;
-        condition = "[_player, _target, objNull] call ACE_Captives_fnc_canLoadCaptive";
-        statement = "[_player, _target, objNull] call ACE_Captives_fnc_loadCaptive";
+        condition = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(canLoadCaptive));
+        statement = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(loadCaptive));
         exceptions[] = {"ACE_Interaction_isNotEscorting"};
         showDisabled = 0;
-        icon = "\ACE_Captives\UI\captive_ca.paa";
+        icon = QUOTE(PATHTOF(UI\captive_ca.paa));
         priority = 2.2;
         hotkey = "L";
       };
       class ACE_FriskPerson {
         displayName = "$STR_ACE_Captives_FriskPerson";
         distance = 2;
-        condition = "[_player, _target] call ACE_Captives_fnc_canFriskPerson";
-        statement = "[_player, _target] call ACE_Captives_fnc_openFriskMenu";
+        condition = QUOTE([ARR_2(_player, _target)] call FUNC(canFriskPerson));
+        statement = QUOTE([ARR_2(_player, _target)] call FUNC(openFriskMenu));
         showDisabled = 0;
         //icon = "";  //@todo
         priority = 3;
@@ -71,8 +71,8 @@ class CfgVehicles {
     class ACE_SelfActions {
       class ACE_StopEscortingSelf {
         displayName = "$STR_ACE_Captives_StopEscorting";
-        condition = "(_player getVariable ['ACE_escortedUnit', objNull]) getVariable ['ACE_isCaptive', false] && {(_player getVariable ['ACE_escortedUnit', objNull]) in attachedObjects _player}";
-        statement = "[_player getVariable ['ACE_escortedUnit', objNull], false] call ACE_Captives_fnc_escortCaptive;";
+        condition = QUOTE(((_player getVariable ['ACE_escortedUnit', objNull]) getVariable ['ACE_isCaptive', false]) && {(_player getVariable ['ACE_escortedUnit', objNull]) in attachedObjects _player});
+        statement = QUOTE([ARR_2((_player getVariable ['ACE_escortedUnit', objNull]), false)] call FUNC(_escortCaptive););
         exceptions[] = {"ACE_Interaction_isNotEscorting"};
         showDisabled = 0;
         priority = 2.3;
@@ -95,8 +95,8 @@ class CfgVehicles {
       class ACE_LoadCaptive { \
         displayName = "$STR_ACE_Captives_LoadCaptive"; \
         distance = 4; \
-        condition = "[_player, objNull, _target] call ACE_Captives_fnc_canLoadCaptive"; \
-        statement = "[_player, objNull, _target] call ACE_Captives_fnc_loadCaptive"; \
+        condition = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(canLoadCaptive)); \
+        statement = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(loadCaptive)); \
         exceptions[] = {"ACE_Interaction_isNotEscorting"}; \
         showDisabled = 0; \
         priority = 1.2; \
@@ -105,8 +105,8 @@ class CfgVehicles {
       class ACE_UnloadCaptive { \
         displayName = "$STR_ACE_Captives_UnloadCaptive"; \
         distance = 4; \
-        condition = "[_player, _target] call ACE_Captives_fnc_canUnloadCaptive"; \
-        statement = "[_player, _target] call ACE_Captives_fnc_unloadCaptive"; \
+        condition = QUOTE([ARR_2(_player, _target)] call FUNC(canUnloadCaptive)); \
+        statement = QUOTE([ARR_2(_player, _target)] call FUNC(unloadCaptive)); \
         showDisabled = 0; \
         priority = 1.2; \
         hotkey = "C"; \
