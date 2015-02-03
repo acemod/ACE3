@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-private ["_damageReturn"];
+private ["_damageReturn", "_typeOfDamage"];
 
 if !(local (_this select 0)) exitWith {nil};
 
@@ -25,19 +25,17 @@ if (typeName (_this select 4) == "OBJECT") then {
     _this set [4, typeOf (_this select 4)];
 };
 
-
 _damageReturn = (_this select 2);
-
+_typeOfDamage = [_this select 4] call FUNC(getTypeOfDamage)
 if (GVAR(level) >= 0) then {
-    _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_basic);
+    _damageReturn = (_this + [_damageReturn, _typeOfDamage]) call FUNC(handleDamage_basic);
 };
 
 if (GVAR(level) >= 1) then {
-    _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_medium);
-};
+    _damageReturn = (_this + [_damageReturn, _typeOfDamage]) call FUNC(handleDamage_medium);
 
-if (GVAR(level) >= 2) then {
-    _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_advanced);
+    if (GVAR(level) >= 2) then {
+	    _damageReturn = (_this + [_damageReturn, _typeOfDamage]) call FUNC(handleDamage_advanced);
+	};
 };
-
 _damageReturn
