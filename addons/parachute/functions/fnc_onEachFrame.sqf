@@ -18,7 +18,7 @@ private "_player";
 _player = ACE_player;
 if (!GVAR(PFH)) exitWith {[(_this select 1)] call CALLSTACK(cba_fnc_removePerFrameHandler);};
 if (isNull _player) exitWith {[(_this select 1)] call CALLSTACK(cba_fnc_removePerFrameHandler);GVAR(PFH) = false;};
-if !((vehicle _player) isKindOf "ParachuteBase") exitWith {};
+if !((vehicle _player) isKindOf "ParachuteBase") exitWith {[(_this select 1)] call CALLSTACK(cba_fnc_removePerFrameHandler);GVAR(PFH) = false;};
 if (isTouchingGround _player) exitWith {[(_this select 1)] call CALLSTACK(cba_fnc_removePerFrameHandler);GVAR(PFH) = false;};
 
 private ["_pos"];
