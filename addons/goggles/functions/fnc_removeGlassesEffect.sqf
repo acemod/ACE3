@@ -1,21 +1,19 @@
 /*
-	RemoveGlassesEffect
-
-	Author: Garth de Wet (LH)
-
-	Description:
-	Removes the glasses effect from the screen, removes dirt effect, removes rain effect,
-	removes dust effect. Does not reset array (glasses will still be broken, dirty, ect.)
-
-	Parameters:
-	Nothing
-
-	Returns:
-	Nothing
-
-	Example:
-	call FUNC(RemoveGlassesEffect);
-*/
+ * Author: Garth 'L-H' de Wet
+ * 	Removes the glasses effect from the screen, removes dirt effect, removes rain effect,
+ *	removes dust effect. Does not reset array (glasses will still be broken, dirty, ect.)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_goggles_fnc_removeGlassesEffect;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 GVAR(EffectsActive) = false;
 GVAR(PostProcess) ppEffectEnable false;
