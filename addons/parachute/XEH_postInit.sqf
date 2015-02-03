@@ -18,6 +18,9 @@ if (!hasInterface) exitWith {};
 
 ["ACE3", localize "STR_ACE_Parachute_showAltimeter",
 {
+  // Conditions: canInteract
+  _exceptions = [QEGVAR(interaction,isNotEscorting)];
+  if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
   if (!('ACE_Altimeter' in assignedItems ace_player)) exitWith {false};
   if (!(missionNamespace getVariable [QGVAR(AltimeterActive), false])) then {
     [ace_player] call FUNC(showAltimeter);
@@ -28,13 +31,12 @@ if (!hasInterface) exitWith {};
 }, [24, false, false, false], false, "keydown"] call CALLSTACK(cba_fnc_registerKeybind);
 
 GVAR(PFH) = false;
-
-[{
+["playerVehicleChanged",{
   if (!GVAR(PFH) && {(vehicle ACE_player) isKindOf "ParachuteBase"}) then {
     GVAR(PFH) = true;
     [FUNC(onEachFrame), 0.1, []] call CALLSTACK(cba_fnc_addPerFrameHandler);
   };
-}, 1, []] call CALLSTACK(cba_fnc_addPerFrameHandler);
+}] call EFUNC(common,addEventHandler);
 
 // don't show speed and height when in expert mode
 ["Parachute", {if (!cadetMode) then {_dlg = _this select 0; {(_dlg displayCtrl _x) ctrlShow false} forEach [121, 122, 1004, 1005, 1006, 1014];};}] call EFUNC(common,addInfoDisplayEventHandler);  //@todo addEventHandler infoDisplayChanged with select 1 == "Parachute"
