@@ -1,10 +1,19 @@
 /*
-	Author: Garth de Wet (LH)
-
-	Description:
-	Performs rain checks and checks to see whether glasses effects have been applied or not.
-	Checks for external camera and removes effects.
-*/
+ * Author: Garth 'L-H' de Wet
+ * Performs rain checks and checks to see whether glasses effects have been applied or not.
+ * Checks for external camera and removes effects.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 if (!alive ace_player) exitWith {};
 if (true) then {
@@ -15,7 +24,7 @@ if (true) then {
 		};
 	};
 	call FUNC(checkGlasses);
-	if !(ace_player call FUNC(isGogglesVisible)) exitWith {
+	if !([ace_player] call FUNC(isGogglesVisible)) exitWith {
 		if (GVAR(EffectsActive)) then {
 			call FUNC(removeGlassesEffect);
 		};
@@ -26,9 +35,9 @@ if (true) then {
 		};
 	};
 	if !(GVAR(EffectsActive)) then {
-		(goggles ace_player) call FUNC(applyGlassesEffect);
+		[goggles ace_player] call FUNC(applyGlassesEffect);
 	} else {
-		if ((goggles ace_player) call FUNC(isDivingGoggles) && {underwater ace_player}) then {
+		if ([goggles ace_player] call FUNC(isDivingGoggles) && {underwater ace_player}) then {
 			call FUNC(removeRainEffect);
 			call FUNC(removeDirtEffect);
 			call FUNC(removeDustEffect);

@@ -1,20 +1,18 @@
 /*
-	Name: ACE_Explosives_fnc_module
-
-	Author: Garth de Wet (LH)
-
-	Description:
-		Initialises the explosives module
-
-	Parameters:
-		Things
-
-	Returns:
-		Nothing
-
-	Example:
-
-*/
+ * Author: Garth 'L-H' de Wet
+ * Initialises the explosives module
+ *
+ * Arguments:
+ * Module things.
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * Called By BIS.
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 if !(isServer) exitWith {};
 _logic = _this select 0;

@@ -1,18 +1,18 @@
 class RscText;
 class RscPicture;
 class RscTitles {
-	class AGM_Altimeter {
+	class ACE_Altimeter {
 		idd = 9935;
 		enableSimulation = 1;
 		movingEnable = 0;
 		fadeIn=0;
 		fadeOut=1;
 		duration = 10e10;
-		onLoad = "uiNamespace setVariable ['AGM_Altimeter', _this select 0];";
+		onLoad = "uiNamespace setVariable ['ACE_Altimeter', _this select 0];";
 		class controls {
 			class AltimeterImage: RscPicture {
 				idc = 1200;
-				text = "AGM_Parachute\UI\watch_altimeter.paa";
+				text = PATHTOF(UI\watch_altimeter.paa);
 				x = 0.118437 * safezoneW + safezoneX;
 				y = 0.621 * safezoneH + safezoneY;
 				w = 0.20625 * safezoneW;
