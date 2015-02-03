@@ -36,13 +36,22 @@ if (count _settingData == 0) exitWith {};
 if (_settingData select 6) exitWith {};
 
 // If the type is not equal, try to cast it
+_failed = false;
 if ((typeName _value) != (_settingData select 1)) then {
-    _failed = True;
-    if ((_settingData select 1) == "BOOL" and (typeName _value) == "SCALAR") exitWith {
-        _value = _value > 0;
-        _failed = false;
+    _failed = true;
+    diag_log (typeName _value);
+    if ((_settingData select 1) == "BOOL" and (typeName _value) == "SCALAR") then {
+        // If value is not 0 or 1 consider it invalid and don't set anything
+        if (_value == 0) then {
+            _value = false;
+            _failed = false;
+        };
+        if (_value == 1) then {
+            _value = true;
+            _failed = false;
+        };
     };
-    if ((_settingData select 1) == "COLOR" and (typeName _value) == "ARRAY") exitWith {
+    if ((_settingData select 1) == "COLOR" and (typeName _value) == "ARRAY") then {
         _failed = false;
     };
 };
