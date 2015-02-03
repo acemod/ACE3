@@ -52,7 +52,6 @@ if (_leave) exitWith {
 _oldUnit = player;
 
 
-
 DFUNC(pfhSwitchUnit) = {
 
     private ["_args", "_unit", "_oldUnit", "_respawnEhId", "_oldOwner"];
@@ -60,6 +59,8 @@ DFUNC(pfhSwitchUnit) = {
     
     _unit = _args select 0;
     _oldUnit = _args select 1;
+    
+    
     
     if (local _unit) exitWith {
         
@@ -94,4 +95,4 @@ DFUNC(pfhSwitchUnit) = {
     };
 };
 
-[FUNC(pfhSwitchBack), 0.2, [_unit, _oldUnit]] call cba_fnc_addPerFrameHandler;
+[FUNC(pfhSwitchUnit), 0.2, [_unit, _oldUnit]] call cba_fnc_addPerFrameHandler;

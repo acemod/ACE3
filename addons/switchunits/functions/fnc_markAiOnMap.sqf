@@ -27,6 +27,7 @@ DFUNC(pfhMarkAiOnMap) = {
     _args = _this select 0;
     _sides = _args select 0;
 
+    
     // delete markers
     {
       deleteMarkerLocal _x;
@@ -65,4 +66,4 @@ DFUNC(pfhMarkAiOnMap) = {
     };
 };
 
-[FUNC(pfhMarkAiOnMap), 1, _sidesToShow] call CBA_fnc_addPerFrameHandler;
+[FUNC(pfhMarkAiOnMap), 1.5, [_sidesToShow]] call CBA_fnc_addPerFrameHandler;

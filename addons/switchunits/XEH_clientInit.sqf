@@ -25,8 +25,6 @@ if(GVAR(SwitchToEast)) then {_sides pushBack east};
 if(GVAR(SwitchToIndependent)) then {_sides pushBack independent};
 if(GVAR(SwitchToCivilian)) then {_sides pushBack civilian};
 
-hint "TEST";
-
 if (player getVariable ["ACE_CanSwitchUnits", false]) then {
     [player, _sides] call FUNC(initPlayer);
 };

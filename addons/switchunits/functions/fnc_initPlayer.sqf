@@ -30,7 +30,8 @@ if (vehicle _playerUnit == _playerUnit) then {
   _playerUnit allowDamage false;
 
   GVAR(OriginalUnit) = _playerUnit;
-  GVAR(OriginalName) = [_playerUnit] call EFUNC(common,getName);
+  //GVAR(OriginalName) = [_playerUnit] call EFUNC(common,getName);
+  GVAR(OriginalName) = name _playerUnit;
   GVAR(OriginalGroup) = group _playerUnit;
 
   // remove all starting gear of a player
