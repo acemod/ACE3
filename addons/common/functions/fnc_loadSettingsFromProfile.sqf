@@ -25,7 +25,7 @@
         if !(_isForced) then {
             _profileValue = profileNamespace getvariable _name;
             // If the setting is stored on the profile
-            if !(isNil _profileValue) then {
+            if !(isNil "_profileValue") then {
                 // If the profile variable has the correct type
                 if (typeName _profileValue == typeName (missionNamespace getvariable _name)) then {
                     // Load the setting from the profile
