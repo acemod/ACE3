@@ -13,7 +13,7 @@ call FUNC(loadSettingsFromProfile);
     _force = _this select 2;
     if (_force) then {
         _settingData = [_name] call FUNC(getSettingData);
-        if (isNull _settingData) exitWith {};
+        if (count _settingData == 0) exitWith {};
         _settingData set [6,_force];
     };
 }] call FUNC(addEventhandler);

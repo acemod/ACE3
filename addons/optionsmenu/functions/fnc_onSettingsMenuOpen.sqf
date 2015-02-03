@@ -13,8 +13,8 @@
 GVAR(clientSideOptions) = [];
 GVAR(clientSideColors) = [];
 {
-	// If the setting is user setable
-	if (_x select 2) then {
+	// If the setting is user setable and not forced
+	if ((_x select 2) && !(_x select 6)) then {
 		// Append the current value to the setting metadata
 		_setting = + _x;
 		_setting pushBack (missionNamespace getVariable (_x select 0));

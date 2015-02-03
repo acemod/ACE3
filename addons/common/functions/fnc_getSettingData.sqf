@@ -22,7 +22,8 @@
 
 EXPLODE_1_PVT(_this,_name);
 
-_value = objNull;
+private ["_value"];
+_value = [];
 {
     if ((_x select 0) == _name) exitWith {_value = _x};
 } forEach GVAR(settings);

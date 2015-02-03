@@ -17,9 +17,11 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_name,_value);
+private ["_name","_value"];
+_name = _this select 0;
+_value = _this select 1;
 
-private ["force"];
+private ["_force"];
 _force = false;
 if (count _this > 2) then {
     _force = _this select 2;
@@ -28,13 +30,13 @@ if (count _this > 2) then {
 _settingData = [_name] call FUNC(getSettingData);
 
 // Exit if the setting does not exist
-if (isNull _settingData) exitWith {};
+if (count _settingData == 0) exitWith {};
 
 // Exit if the setting is already forced
 if (_settingData select 6) exitWith {};
 
 // Exit if the type is not right
-if (typeName _value != typeName (missionNamespace getVariable _name)) exitWith {};
+if ((typeName _value) != typeName (missionNamespace getVariable _name)) exitWith {};
 
 // Force it if it was required
 _settingData set [6, _force];
