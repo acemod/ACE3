@@ -33,7 +33,13 @@ class ACE_Settings {
         value = 1;
         typeName = "BOOL";
         isClientSetable = 1;
-        displayName = "$STR_ACE_CrewInfo_ShowVehicleCrewInfo";
+        displayName = "$STR_ACE_NameTags_ShowVehicleCrewInfo";
+    };
+    class GVAR(showNamesForAI) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSetable = 1;
+        displayName = "$STR_ACE_NameTags_ShowNamesForAI";
     };
 
     class GVAR(PlayerNamesViewDistance) {
@@ -44,16 +50,6 @@ class ACE_Settings {
     class GVAR(PlayerNamesMaxAlpha) {
         value = 0.8;
         typeName = "SCALAR";
-        isClientSetable = 0;
-    };
-    class GVAR(CrewInfoVisibility) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSetable = 0;
-    };
-    class GVAR(ShowNamesForAI) {
-        value = 0;
-        typeName = "BOOL";
         isClientSetable = 0;
     };
 };
