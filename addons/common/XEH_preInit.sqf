@@ -87,6 +87,7 @@ PREP(isInBuilding);
 PREP(isPlayer);
 PREP(isTurnedOut);
 PREP(letterToCode);
+PREP(loadSettingsFromProfile);
 PREP(loadSettingsOnServer);
 PREP(map);
 PREP(moduleCheckPBOs);
