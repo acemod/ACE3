@@ -137,3 +137,8 @@ GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
 [QGVAR(carriedBy),objNull,false,QUOTE(ADDON)] call FUNC(defineVariable);
 [QGVAR(carriedObj),objNull,false,QUOTE(ADDON)] call FUNC(defineVariable);
+
+["VehicleSetFuel", {
+PARAMS_2(_vehicle,_fuelLevel);
+_vehicle setFuel _fuelLevel;
+}] call FUNC(addEventhandler);

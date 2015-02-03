@@ -15,7 +15,7 @@ class Extended_GetIn_EventHandlers {
 		class ADDON	{
 			getIn = QUOTE(call FUNC(onGetin));
 		};
-	}
+	};
 };
 
 class Extended_GetOut_EventHandlers {
