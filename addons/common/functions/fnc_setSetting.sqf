@@ -35,8 +35,18 @@ if (count _settingData == 0) exitWith {};
 // Exit if the setting is already forced
 if (_settingData select 6) exitWith {};
 
-// Exit if the type is not right
-if ((typeName _value) != typeName (missionNamespace getVariable _name)) exitWith {};
+// If the type is not equal, try to cast it
+if ((typeName _value) != (_settingData select 1)) then {
+    _failed = True;
+    if ((_settingData select 1) == "BOOL" and (typeName _value) == "SCALAR") exitWith {
+        _value = _value > 0;
+        _failed = false;
+    };
+    if ((_settingData select 1) == "COLOR" and (typeName _value) == "ARRAY") exitWith {
+        _failed = false;
+    };
+};
+if (_failed) exitWith {};
 
 // Force it if it was required
 _settingData set [6, _force];
@@ -49,12 +59,12 @@ TRACE_2("Variable Updated",_name,_value);
 missionNamespace setVariable [_name, _value];
 
 if (isServer && {count _this > 3} && {_this select 3}) then {
-	// Publicize the new value
-	publicVariable _name;
+    // Publicize the new value
+    publicVariable _name;
 
-	// Raise event globally, this publicizes eventual changes in _force status so clients can update it locally
-	["SettingChanged", [_name, _value, _force]] call FUNC(globalEvent);
+    // Raise event globally, this publicizes eventual changes in _force status so clients can update it locally
+    ["SettingChanged", [_name, _value, _force]] call FUNC(globalEvent);
 } else {
-	// Raise event locally
-	["SettingChanged", [_name, _value, _force]] call FUNC(localEvent);
+    // Raise event locally
+    ["SettingChanged", [_name, _value, _force]] call FUNC(localEvent);
 };
