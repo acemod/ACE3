@@ -43,7 +43,5 @@ case (MENU_TAB_COLORS): {
 
 if (_changed) then {
   profileNamespace setVariable [_name, _newValue];
-  missionNameSpace setVariable [_name, _newValue];
-  ["SettingChanged", [_name, _newValue]] call EFUNC(common,localEvent);
-  TRACE_2("Variable Updated",_name,_newValue);
+  [_name, _newValue] call EFUNC(common,setSetting);
 };

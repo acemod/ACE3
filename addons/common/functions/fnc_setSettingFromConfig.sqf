@@ -49,7 +49,7 @@ if (isNil _name) then {
     // Read entry and cast it to the correct type
     _value = [_optionEntry, _typeName] call _fnc_getValueWithType;
 
-    // Init the variable and publish it
+    // Init the variable
     missionNamespace setVariable [_name, _value];
 
     // Add the setting to a list on the server
@@ -92,7 +92,7 @@ if (isNil _name) then {
     // Read entry and cast it to the correct type
     _value = [_optionEntry, _typeName] call _fnc_getValueWithType;
 
-    // Update the variable and publish it
+    // Update the variable
     missionNamespace setVariable [_name, _value];
 
     // Force the setting if requested
