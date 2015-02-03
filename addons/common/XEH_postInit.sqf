@@ -1,6 +1,9 @@
 // ACE - Common
 #include "script_component.hpp"
 
+// Load settings from profile
+call FUNC(loadSettingsFromProfile);
+
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
     if (time > 0) exitWith {
