@@ -3,9 +3,8 @@
  * Load a setting from config if it was not previosuly forced. Force if neccesary.
  *
  * Arguments:
- * 0: Setting name (String)
- * 1: Config entry (config entry)
-  *
+ * 0: Config entry (config entry)
+ *
  * Return Value:
  * None
  *
@@ -13,33 +12,35 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_name,_optionEntry);
+EXPLODE_1_PVT(_this,_optionEntry);
 
 _fnc_getValueWithType = {
     EXPLODE_2_PVT(_this,_optionEntry,_typeName);
 
     _value = getNumber (_optionEntry >> "value");
+    diag_log text format ["%1 %2: %3", configName _optionEntry, _typeName, _value];
     if (_typeName == "BOOL") exitWith {
-        _value = _value > 0;
+        _value > 0
     };
     if (_typeName == "STRING") exitWith {
-        _value = getText (_optionEntry >> "value");
+        getText (_optionEntry >> "value")
     };
     if (_typeName == "ARRAY") exitWith {
-        _value = getArray (_optionEntry >> "value");
+        getArray (_optionEntry >> "value")
     };
     _value
 };
 
+_name = configName _optionEntry;
+
 // Check if the variable is already defined
-if (isNil _name) exitWith {
+if (isNil _name) then {
     // That setting was not loaded yet
 
-    //diag_log text format ["[ACE]: Mission setting '%1' doesn't exist", _name];
+    // Get type from config
+    _typeName = getText (_optionEntry >> "typeName");
 
-    _typeEntry = _this select 2;
-    _typeName = getText _typeEntry;
-
+    // Read entry and cast it to the correct type
     _value = [_optionEntry, _typeName] call _fnc_getValueWithType;
 
     // Init the variable and publish it
@@ -61,7 +62,9 @@ if (isNil _name) exitWith {
     // The setting is not forced, so update the value
 
     // Get the type from the existing variable
-    _typeName = typeName missionNamespace getVariable _name;
+    _typeName = typeName (missionNamespace getVariable _name);
+
+    // Read entry and cast it to the correct type
     _value = [_optionEntry, _typeName] call _fnc_getValueWithType;
 
     // Update the variable and publish it

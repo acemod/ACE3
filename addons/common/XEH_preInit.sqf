@@ -165,9 +165,8 @@ PREP(hashListSelect);
 PREP(hashListSet);
 PREP(hashListPush);
 
-
 // Load settings
-if (isServer) {}
+if (isServer) then {
     call FUNC(loadSettingsOnServer);
 };
 
