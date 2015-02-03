@@ -14,6 +14,7 @@
  * 4: _localizedDescription
  * 5: _possibleValues
  * 6: _isForced
+ * 7: _defaultValue
  *
  * Public: No
  */

@@ -61,7 +61,8 @@ if (isNil _name) then {
         _localizedName,
         _localizedDescription,
         _possibleValues,
-        _isForced
+        _isForced,
+        _defaultValue
     ];*/
     _settingData = [
         _name,
@@ -70,7 +71,8 @@ if (isNil _name) then {
         getText (_optionEntry >> "displayName"),
         getText (_optionEntry >> "description"),
         getArray (_optionEntry >> "values"),
-        getNumber (_optionEntry >> "force") > 0
+        getNumber (_optionEntry >> "force") > 0,
+        _value
     ];
 
     GVAR(settings) pushBack _settingData;

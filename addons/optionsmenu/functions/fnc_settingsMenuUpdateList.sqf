@@ -23,7 +23,7 @@ case (MENU_TAB_OPTIONS): {
     {
       _ctrlList lbadd (_x select 3);
 
-      _settingsValue = _x select 7;
+      _settingsValue = _x select 8;
 
       // Created disable/enable options for bools
       _settingsText = if ((_x select 1) == "BOOL") then {
@@ -37,14 +37,14 @@ case (MENU_TAB_OPTIONS): {
   };
 case (MENU_TAB_COLORS): {
     {
-      _color = +(_x select 7);
+      _color = +(_x select 8);
       {
         _color set [_forEachIndex, ((round (_x * 100))/100)];
       } forEach _color;
       _settingsColor = str _color;
       _ctrlList lbadd (_x select 3);
       _ctrlList lbadd (_settingsColor);
-      _ctrlList lnbSetColor [[_forEachIndex, 1], (_x select 7)];
+      _ctrlList lnbSetColor [[_forEachIndex, 1], (_x select 8)];
     }foreach GVAR(clientSideColors);
   };
 };
