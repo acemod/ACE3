@@ -18,8 +18,8 @@ private ["_vehicle", "_delta", "_min", "_max", "_distance"];
 _vehicle = _this select 0;
 _delta = _this select 1;
 
-_min = getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QGVAR(MinDistance));
-_max = getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QGVAR(MaxDistance));
+_min = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(MinDistance));
+_max = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(MaxDistance));
 _distance = _vehicle getVariable [QGVAR(Distance), _min];
 
 _distance = _distance + _delta;

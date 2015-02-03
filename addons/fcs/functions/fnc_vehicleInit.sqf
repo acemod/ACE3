@@ -12,25 +12,33 @@
 
 #include "script_component.hpp"
 
-private ["_gunBeg", "_gunnerView", "_gunBegPos", "_gunnerViewPos", "_viewDiff"];
+private "_vehicle";
 
-if (getNumber (configFile >> "CfgVehicles" >> (typeOf (_this select 0)) >> QGVAR(Enabled)) == 1) then {
-    (_this select 0) addEventHandler ["Fired", {_this call FUNC(firedEH)}];
+_vehicle = _this select 0;
 
-    (_this select 0) setVariable [QGVAR(Distance),  0,   true];
-    (_this select 0) setVariable [QGVAR(Magazines), [],  true];
-    (_this select 0) setVariable [QGVAR(Elevation), [],  true];
-    (_this select 0) setVariable [QGVAR(Azimuth),   0,   true];
+if (getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(Enabled)) == 1) then {   // @todo for all turrets
+    _vehicle addEventHandler ["Fired", {_this call FUNC(firedEH)}];
+
+    _vehicle setVariable [QGVAR(Distance),  0,  true];
+    _vehicle setVariable [QGVAR(Magazines), [], true];
+    _vehicle setVariable [QGVAR(Elevation), [], true];
+    _vehicle setVariable [QGVAR(Azimuth),   0,  true];
 
     // calculate offset between gunner camera and muzzle position
-    if !((_this select 0) isKindOf "Air") then {
-        _gunBeg = getText (configFile >> "CfgVehicles" >> (typeOf (_this select 0)) >> "Turrets" >> "MainTurret" >> "gunBeg");
-        _gunnerView = getText (configFile >> "CfgVehicles" >>  (typeOf (_this select 0)) >> "Turrets" >> "MainTurret" >> "memoryPointGunnerOptics");
-        _gunBegPos = ((_this select 0) selectionPosition _gunBeg) select 0;
-        _gunnerViewPos = ((_this select 0) selectionPosition _gunnerView) select 0;
+    if !(_vehicle isKindOf "Air") then {
+        private ["_turretConfig", "_gunBeg", "_gunnerView", "_gunBegPos", "_gunnerViewPos", "_viewDiff"];
+
+        _turretConfig = configFile >> "CfgVehicles" >> typeOf _vehicle >> "Turrets" >> "MainTurret";
+
+        _gunBeg = getText (_turretConfig >> "gunBeg");                          // @todo player turret path
+        _gunnerView = getText (_turretConfig >> "memoryPointGunnerOptics");    // @todo player turret path
+
+        _gunBegPos = (_vehicle selectionPosition _gunBeg) select 0;
+        _gunnerViewPos = (_vehicle selectionPosition _gunnerView) select 0;
         _viewDiff = _gunBegPos - _gunnerViewPos;
-        (_this select 0) setVariable [QGVAR(ViewDiff), _viewDiff, true];
+
+        _vehicle setVariable [QGVAR(ViewDiff), _viewDiff, true];
     } else {
-        (_this select 0) setVariable [QGVAR(ViewDiff), 0, true];
+        _vehicle setVariable [QGVAR(ViewDiff), 0, true];
     };
 };
