@@ -248,7 +248,7 @@ class ACE_Settings {
 		value = 0;
 		typeName = "BOOL";
 		isClientSetable = 1;
-		displayName = "$STR_ACE_Goggles_ShowInThirdPerson;"
+		displayName = "$STR_ACE_Goggles_ShowInThirdPerson";
 	};
 };
 
