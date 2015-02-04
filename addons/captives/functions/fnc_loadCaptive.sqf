@@ -20,17 +20,17 @@
 PARAMS_1(_unit,_target,_vehicle);
 
 if (isNull _target) then {
-  // _objects = attachedObjects _unit;
-  // _objects = [_objects, {_this getVariable ["ACE_isCaptive", false]}] call EFUNC(common,filter);
-  // _target = _objects select 0;
+    _objects = attachedObjects _unit;
+    _objects = [_objects, {_this getVariable ["ACE_isCaptive", false]}] call EFUNC(common,filter);
+    _target = _objects select 0;
 };
 
 if (isNull _vehicle) then {
-  _objects = nearestObjects [_unit, ["Car_F", "Tank_F", "Helicopter_F", "Boat_F", "Plane_F"], 10];
-  _vehicle = _objects select 0;
+    _objects = nearestObjects [_unit, ["Car_F", "Tank_F", "Helicopter_F", "Boat_F", "Plane_F"], 10];
+    _vehicle = _objects select 0;
 };
 
-if (!isNil "_target" && {!isNil "_vehicle"}) then {
-  _unit setVariable ["ACE_isEscorting", false];
-  [[_target, _vehicle], "{(_this select 0) moveInCargo (_this select 1); (_this select 0) assignAsCargo (_this select 1); (_this select 0) setVariable ['ACE_Captives_CargoIndex', (_this select 1) getCargoIndex (_this select 0), true];}", _target] call ACE_Core_fnc_execRemoteFnc;
+if ((!isNil "_target") && {!isNil "_vehicle"}) then {
+    _unit setVariable ["ACE_isEscorting", false];
+    [QGVAR(MoveIn), [_target], [_target, _vehicle]] call EFUNC(common,targetEvent);
 };

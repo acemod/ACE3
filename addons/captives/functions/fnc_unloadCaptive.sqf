@@ -24,12 +24,9 @@ _cargo = crew _vehicle;  // Can also unload from driver, gunner, commander, turr
 
 _cargo = [_cargo, {_this getVariable ["ACE_isCaptive", false]}] call EFUNC(common,filter);
 
-if (count _cargo > 0) then {
+if ((count _cargo) > 0) then {
     _target = _cargo select 0;
-
-    _target setVariable ["ACE_Captives_CargoIndex", -1, true];
-
-    moveOut _target;
-    [_target, "ACE_AmovPercMstpScapWnonDnon", 2] call EFUNC(common,doAnimation);
-    [_target, "{unassignVehicle _this}", _target] call ACE_Core_fnc_execRemoteFnc;
+    [QGVAR(MoveOut), [_target], [_target]] call EFUNC(common,targetEvent);
+} else {
+    ERROR("No captive to unload");
 };
