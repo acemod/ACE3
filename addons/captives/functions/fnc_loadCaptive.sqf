@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit,_target,_vehicle);
+PARAMS_3(_unit,_target,_vehicle);
 
 if (isNull _target) then {
     _objects = attachedObjects _unit;
@@ -32,5 +32,5 @@ if (isNull _vehicle) then {
 
 if ((!isNil "_target") && {!isNil "_vehicle"}) then {
     _unit setVariable ["ACE_isEscorting", false];
-    [QGVAR(MoveIn), [_target], [_target, _vehicle]] call EFUNC(common,targetEvent);
+    ["MoveInCaptive", [_target], [_target, _vehicle]] call EFUNC(common,targetEvent);
 };

@@ -18,6 +18,6 @@
 PARAMS_1(_unit);
 
 if (_unit getVariable ["ACE_isCaptive", false] && {vehicle _unit == _unit}) then {
-  [_unit] call EFUNC(common,fixLoweredRifleAnimation);
-  [_unit, "ACE_AmovPercMstpScapWnonDnon", 0] call EFUNC(common,doAnimation);
+    [_unit] call EFUNC(common,fixLoweredRifleAnimation);
+    [_unit, "ACE_AmovPercMstpScapWnonDnon", 0] call EFUNC(common,doAnimation);
 };

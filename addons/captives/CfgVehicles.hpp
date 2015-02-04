@@ -5,8 +5,8 @@ class CfgVehicles {
             class ACE_SetCaptive {
                 displayName = "$STR_ACE_Captives_SetCaptive";
                 distance = 4;
-                condition = QUOTE(('ACE_CableTie' in (items _player)) && {alive _target} && {!(_target getVariable ['ACE_isCaptive', false])});
-                statement = QUOTE(_player removeItem 'ACE_CableTie';  [ARR_3(QGVAR(SetCaptive), [_target], [ARR_2(_target, true)])] call EFUNC(common,targetEvent););
+                condition = QUOTE(('ACE_CableTie' in (items _player)) && {alive _target} && {!(_target getVariable [ARR_2('ACE_isCaptive', false)])});
+                statement = QUOTE(_player removeItem 'ACE_CableTie';  [ARR_3('SetCaptive', [_target], [ARR_2(_target, true)])] call EFUNC(common,targetEvent););
                 showDisabled = 0;
                 priority = 2.4;
                 icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
@@ -15,8 +15,8 @@ class CfgVehicles {
             class ACE_ReleaseCaptive {
                 displayName = "$STR_ACE_Captives_ReleaseCaptive";
                 distance = 4;
-                condition = QUOTE(_target getVariable ['ACE_isCaptive', false] && {isNull (attachedTo _target)});
-                statement = QUOTE([ARR_2(_target, false)] call FUNC(setCaptive));
+                condition = QUOTE(_target getVariable [ARR_2('ACE_isCaptive', false)] && {isNull (attachedTo _target)});
+                statement = QUOTE([ARR_3('SetCaptive', [_target], [ARR_2(_target, false)])] call EFUNC(common,targetEvent););
                 exceptions[] = {"ACE_Interaction_isNotEscorting"};
                 showDisabled = 0;
                 priority = 2.4;
@@ -26,7 +26,7 @@ class CfgVehicles {
             class ACE_EscortCaptive {
                 displayName = "$STR_ACE_Captives_EscortCaptive";
                 distance = 4;
-                condition = QUOTE((_target getVariable ['ACE_isCaptive', false]) && {isNull (attachedTo _target)} && {alive _target} && {!(_target getVariable ['ACE_isUnconscious', false])});
+                condition = QUOTE((_target getVariable [ARR_2('ACE_isCaptive', false)]) && {isNull (attachedTo _target)} && {alive _target} && {!(_target getVariable [ARR_2('ACE_isUnconscious', false)])});
                 statement = QUOTE([ARR_2(_target, true)] call FUNC(escortCaptive));
                 exceptions[] = {"ACE_Interaction_isNotEscorting"};
                 showDisabled = 0;
@@ -37,7 +37,7 @@ class CfgVehicles {
             class ACE_StopEscorting {
                 displayName = "$STR_ACE_Captives_StopEscorting";
                 distance = 4;
-                condition = QUOTE((_target getVariable ['ACE_isCaptive', false]) && {_target in (attachedObjects _player)});
+                condition = QUOTE((_target getVariable [ARR_2('ACE_isCaptive', false)]) && {_target in (attachedObjects _player)});
                 statement = QUOTE([ARR_2(_target, false)] call FUNC(escortCaptive));
                 exceptions[] = {"ACE_Interaction_isNotEscorting"};
                 showDisabled = 0;
@@ -71,8 +71,8 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_StopEscortingSelf {
                 displayName = "$STR_ACE_Captives_StopEscorting";
-                condition = QUOTE(((_player getVariable ['ACE_escortedUnit', objNull]) getVariable ['ACE_isCaptive', false]) && {(_player getVariable ['ACE_escortedUnit', objNull]) in attachedObjects _player});
-                statement = QUOTE([ARR_2((_player getVariable ['ACE_escortedUnit', objNull]), false)] call FUNC(_escortCaptive););
+                condition = QUOTE(((_player getVariable [ARR_2('ACE_escortedUnit', objNull)]) getVariable ['ACE_isCaptive', false]) && {(_player getVariable [ARR_2('ACE_escortedUnit', objNull)]) in attachedObjects _player});
+                statement = QUOTE([ARR_2((_player getVariable [ARR_2('ACE_escortedUnit', objNull)]), false)] call FUNC(_escortCaptive););
                 exceptions[] = {"ACE_Interaction_isNotEscorting"};
                 showDisabled = 0;
                 priority = 2.3;

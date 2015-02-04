@@ -26,7 +26,7 @@ _cargo = [_cargo, {_this getVariable ["ACE_isCaptive", false]}] call EFUNC(commo
 
 if ((count _cargo) > 0) then {
     _target = _cargo select 0;
-    [QGVAR(MoveOut), [_target], [_target]] call EFUNC(common,targetEvent);
+    ["MoveOutCaptive", [_target], [_target]] call EFUNC(common,targetEvent);
 } else {
     ERROR("No captive to unload");
 };

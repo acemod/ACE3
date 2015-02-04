@@ -19,6 +19,6 @@ PARAMS_1(_unit);
 
 // reset status on mission start
 if (_unit getVariable ["ACE_isCaptive", false]) then {
-  _unit setVariable ["ACE_isCaptive", false];
-  [_unit, true] call ACE_Captives_fnc_setCaptive;
+    _unit setVariable ["ACE_isCaptive", false];
+    [_unit, true] call ACE_Captives_fnc_setCaptive;
 };

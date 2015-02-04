@@ -19,7 +19,7 @@
 PARAMS_2(_unit,_oldUnit);
 
 if (_unit getVariable ["ACE_isCaptive", false]) then {
-	showHUD false;
+    showHUD false;
 } else {
-	showHUD true;
+    showHUD true;
 };

@@ -17,5 +17,7 @@ PREP(openFriskMenu);
 PREP(setCaptive);
 PREP(surrender);
 PREP(unloadCaptive);
+PREP(vehicleCaptiveMoveIn);
+PREP(vehicleCaptiveMoveOut);
 
 ADDON = true;

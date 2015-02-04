@@ -20,8 +20,8 @@ PARAMS_2(_target,_vehicle);
 
 private ["_cargoIndex"];
 
-_target moveInCargo _vehicle; 
-_target assignAsCargo _vehicle; 
+_target moveInCargo _vehicle;
+_target assignAsCargo _vehicle;
 _cargoIndex = _vehicle getCargoIndex _target;
 _target setVariable ["ACE_Captives_CargoIndex", _cargoIndex, true];
 
