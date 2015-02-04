@@ -29,12 +29,16 @@ _detonators = [_unit] call FUNC(getDetonators);
     _hasRequired = false;
   };
 } count _requiredItems;
-private ["_code", "_count"];
-_code = str(round (random 9999));
-_count = 4 - count (toArray _code);
-while {_count > 0} do {
-  _code = "0" + _code;
-  _count = _count - 1;
+private ["_code", "_count", "_codeSet"];
+_codeSet = false;
+while {!_codeSet} do {
+  _code = str(round (random 9999));
+  _count = 4 - count (toArray _code);
+  while {_count > 0} do {
+    _code = "0" + _code;
+    _count = _count - 1;
+  };
+  _codeSet = (isNull [objNull,_code] call FUNC(getSpeedDialExplosive));
 };
 if (isNil QGVAR(CellphoneIEDs)) then {
   GVAR(CellphoneIEDs) = [];
