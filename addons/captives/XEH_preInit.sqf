@@ -2,22 +2,28 @@
 
 ADDON = false;
   
+PREP(canEscortCaptive);
 PREP(canFriskPerson);
 PREP(canLoadCaptive);
+PREP(canReleaseCaptive);
+PREP(canStopEscorting);
+PREP(canTakeCaptive);
 PREP(canUnloadCaptive);
-PREP(escortCaptive);
+PREP(doEscortCaptive);
+PREP(doFriskPerson);
+PREP(doLoadCaptive);
+PREP(doReleaseCaptive);
+PREP(doTakeCaptive);
+PREP(doUnloadCaptive);
 PREP(handleGetIn);
 PREP(handleGetOut);
 PREP(handleKilled);
 PREP(handleKnockedOut);
 PREP(handlePlayerChanged);
-PREP(handleWokeUp);
 PREP(handleUnitInitPost);
-PREP(loadCaptive);
-PREP(openFriskMenu);
+PREP(handleWokeUp);
 PREP(setCaptive);
 PREP(surrender);
-PREP(unloadCaptive);
 PREP(vehicleCaptiveMoveIn);
 PREP(vehicleCaptiveMoveOut);
 

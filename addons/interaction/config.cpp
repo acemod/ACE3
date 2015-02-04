@@ -38,15 +38,6 @@ class ACE_Parameters_Boolean {
 };
 
 class ACE_canInteractConditions {
-  class GVAR(isNotEscorting) {
-    condition = QUOTE( !(ACE_player getVariable [ARR_2('ACE_isEscorting', false)]) );
-  };
-  class GVAR(isNotCaptive) {
-    condition = QUOTE( !(ACE_player getVariable [ARR_2('ACE_isCaptive', false)]) );
-  };
-  class GVAR(isNotSurrendering) {
-    condition = QUOTE( !(ACE_player getVariable [ARR_2('ACE_isSurrender', false)]) );
-  };
   class GVAR(isNotSwimming) {
     condition = QUOTE( !underwater ACE_player );
   };

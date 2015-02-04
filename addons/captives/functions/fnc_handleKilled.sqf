@@ -17,10 +17,10 @@
 
 PARAMS_1(_oldUnit);
 
-if (_oldUnit getVariable ["ACE_isCaptive", false]) then {
-    _oldUnit setVariable ["ACE_isCaptive", false, true];
+if (_oldUnit getVariable [QGVAR(isCaptive), false]) then {
+    _oldUnit setVariable [QGVAR(isCaptive), false, true];
 };
 
-if (_oldUnit getVariable ["ACE_isEscorting", false]) then {
-    _oldUnit setVariable ["ACE_isEscorting", false, true]
+if (_oldUnit getVariable [QGVAR(isEscorting), false]) then {
+    _oldUnit setVariable [QGVAR(isEscorting), false, true]
 };

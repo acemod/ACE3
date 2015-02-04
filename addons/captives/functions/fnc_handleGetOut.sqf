@@ -19,7 +19,7 @@
 
 PARAMS_3(_vehicle,_dontcare,_unit);
 
-if ((local _unit)&&(_unit getVariable ["ACE_isCaptive", false])) then {
+if ((local _unit)&&(_unit getVariable [QGVAR(isCaptive), false])) then {
 
     private ["_cargoIndex"];
 

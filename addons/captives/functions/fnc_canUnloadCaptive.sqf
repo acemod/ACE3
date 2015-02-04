@@ -23,6 +23,6 @@ PARAMS_2(_unit,_vehicle);
 
 _cargo = crew _vehicle;  // Can also unload from driver, gunner, commander, turret positions. They shouldn't be there anyway.
 
-_cargo = [_cargo, {_this getVariable ["ACE_isCaptive", false]}] call EFUNC(common,filter);
+_cargo = [_cargo, {_this getVariable [QGVAR(isCaptive), false]}] call EFUNC(common,filter);
 
 count _cargo > 0

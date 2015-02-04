@@ -21,9 +21,9 @@ PARAMS_2(_unit,_state);
 if (!local _unit) exitWith {[_this, _fnc_scriptName, _unit] call ACE_Core_fnc_execRemoteFnc};
 
 if (_state) then {
-    if (_unit getVariable ["ACE_isSurrender", false]) exitWith {};
+    if (_unit getVariable [QGVAR(isSurrender), false]) exitWith {};
 
-    _unit setVariable ["ACE_isSurrender", true, true];
+    _unit setVariable [QGVAR(isSurrender), true, true];
     [_unit, "ACE_Surrendered", true] call ACE_Core_fnc_setCaptivityStatus;
 
     _unit spawn {
@@ -32,13 +32,13 @@ if (_state) then {
             _this playMove "amovpercmstpsraswrfldnon";
         };
 
-        while {_this getVariable ["ACE_isSurrender", false]} do {
+        while {_this getVariable [QGVAR(isSurrender), false]} do {
             sleep 0.001; //sleep in UI
 
             if (isPlayer _this) then {showHUD false};
 
             if (!alive _this || {_this getVariable ["ACE_isUnconscious", false]}) then {
-                _this setVariable ["ACE_isSurrender", false, true];
+                _this setVariable [QGVAR(isSurrender), false, true];
             } else {
                 _this playMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
             };
@@ -54,7 +54,7 @@ if (_state) then {
         if (isPlayer _this) then {showHUD true};
     };
 } else {
-    _unit setVariable ["ACE_isSurrender", false, true];
+    _unit setVariable [QGVAR(isSurrender), false, true];
 };
 
 /*

@@ -18,7 +18,7 @@
 
 PARAMS_2(_unit,_oldUnit);
 
-if (_unit getVariable ["ACE_isCaptive", false]) then {
+if (_unit getVariable [QGVAR(isCaptive), false]) then {
     showHUD false;
 } else {
     showHUD true;

@@ -21,7 +21,7 @@ PARAMS_3(_unit,_target,_vehicle);
 
 if (isNull _target) then {
     _objects = attachedObjects _unit;
-    _objects = [_objects, {_this getVariable ["ACE_isCaptive", false]}] call EFUNC(common,filter);
+    _objects = [_objects, {_this getVariable [QGVAR(isCaptive), false]}] call EFUNC(common,filter);
     _target = _objects select 0;
 };
 
@@ -31,6 +31,6 @@ if (isNull _vehicle) then {
 };
 
 if ((!isNil "_target") && {!isNil "_vehicle"}) then {
-    _unit setVariable ["ACE_isEscorting", false, true];
+    _unit setVariable [QGVAR(isEscorting), false, true];
     ["MoveInCaptive", [_target], [_target, _vehicle]] call EFUNC(common,targetEvent);
 };

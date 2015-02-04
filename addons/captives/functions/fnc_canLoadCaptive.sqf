@@ -23,7 +23,7 @@ PARAMS_3(_unit,_target,_vehicle);
 
 if (isNull _target) then {
     _objects = attachedObjects _unit;
-    _objects = [_objects, {_this getVariable ["ACE_isCaptive", false]}] call EFUNC(common,filter);
+    _objects = [_objects, {_this getVariable [QGVAR(isCaptive), false]}] call EFUNC(common,filter);
     _target = _objects select 0;
 };
 
@@ -32,7 +32,7 @@ if (isNull _vehicle) then {
     _vehicle = _objects select 0;
 };
 
-_unit getVariable ["ACE_isEscorting", false]
+_unit getVariable [QGVAR(isEscorting), false]
 && {!isNil "_target"}
 && {!isNil "_vehicle"}
 && {_vehicle emptyPositions "cargo" > 0}

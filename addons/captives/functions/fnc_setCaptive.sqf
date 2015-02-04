@@ -21,15 +21,15 @@ PARAMS_2(_unit,_state);
 if (!local _unit) exitWith {[[_unit, _state, true], _fnc_scriptName, _unit] call ACE_Core_fnc_execRemoteFnc};
 
 if (_state) then {
-    if (_unit getVariable ["ACE_isCaptive", false]) exitWith {};
+    if (_unit getVariable [QGVAR(isCaptive), false]) exitWith {};
 
-    _unit setVariable ["ACE_isCaptive", true, true];
+    _unit setVariable [QGVAR(isCaptive), true, true];
 
     // fix anim on mission start (should work on dedicated servers)
     _unit spawn {
         [_this, "ACE_Handcuffed", true] call ACE_Core_fnc_setCaptivityStatus;
 
-        if (_this getVariable ["ACE_isCaptive", false] && {vehicle _this == _this}) then {
+        if (_this getVariable [QGVAR(isCaptive), false] && {vehicle _this == _this}) then {
             [_this] call EFUNC(common,fixLoweredRifleAnimation);
             [_this, "ACE_AmovPercMstpScapWnonDnon", 0] spawn EFUNC(common,doAnimation);
         };
@@ -41,9 +41,9 @@ if (_state) then {
         showHUD false;
     };
 } else {
-    if !(_unit getVariable ["ACE_isCaptive", false]) exitWith {};
+    if !(_unit getVariable [QGVAR(isCaptive), false]) exitWith {};
 
-    _unit setVariable ["ACE_isCaptive", false, true];
+    _unit setVariable [QGVAR(isCaptive), false, true];
     [_unit, "ACE_Handcuffed", false] call ACE_Core_fnc_setCaptivityStatus;
     if (vehicle _unit == _unit) then {
         [_unit, "ACE_AmovPercMstpScapWnonDnon_AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
