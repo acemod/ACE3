@@ -9,7 +9,7 @@
         if !(!GVAR(enabled) && {call FUNC(canUseRangefinder) || FUNC(canUseFCS)}) exitWith {false};
 
         // Statement
-        [vehicle ACE_player] call FUNC(keyDown);
+        [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex)] call FUNC(keyDown);
         // Return false so it doesn't block the rest weapon action
         false
     },
@@ -28,7 +28,7 @@
         if !(GVAR(enabled) && FUNC(canUseFCS)) exitWith {false};
 
         // Statement
-        [vehicle ACE_player] call FUNC(keyUp);
+        [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex)] call FUNC(keyUp);
         false
     },
     [15, [false, false, false]],
@@ -46,7 +46,7 @@
         if !(call FUNC(canUseRangefinder) || FUNC(canUseFCS)) exitWith {false};
 
         // Statement
-        [vehicle ACE_player, 50] call FUNC(adjustRange);
+        [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), 50] call FUNC(adjustRange);
         true
     },
     [201, [false, false, false]],
@@ -64,7 +64,7 @@
         if !(call FUNC(canUseRangefinder) || FUNC(canUseFCS)) exitWith {false};
 
         // Statement
-        [vehicle ACE_player, -50] call FUNC(adjustRange);
+        [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), -50] call FUNC(adjustRange);
         true
     },
     [209, [false, false, false]],

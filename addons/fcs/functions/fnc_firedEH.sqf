@@ -12,38 +12,46 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_weaponType", "_ammoType", "_magazineType", "_round", "_FCSMagazines", "_FCSElevation", "_offset"];
+private ["_vehicle", "_weapon", "_ammo", "_magazine", "_projectile"];
 
-_unit = _this select 0;
-_weaponType = _this select 1;
-_ammoType = _this select 4;
-_magazineType = _this select 5;
-_round = _this select 6;
+_vehicle = _this select 0;
+_weapon = _this select 1;
+_ammo = _this select 4;
+_magazine = _this select 5;
+_projectile = _this select 6;
 
-_FCSMagazines = _unit getVariable QGVAR(Magazines);
-_FCSElevation = _unit getVariable QGVAR(Elevation);
+private ["_gunner", "_turret"];
 
-if (ACE_player != gunner _unit) exitWith {};
-if !(_magazineType in _FCSMagazines) exitWith {};
+_gunner = [_vehicle, _weapon] call EFUNC(common,getGunner);
+_turret = [_gunner] call EFUNC(common,getTurretIndex);
+
+if (ACE_player != _gunner) exitWith {};
+
+private ["_FCSMagazines", "_FCSElevation", "_offset"];
+
+_FCSMagazines = _vehicle getVariable format ["%1_%2", QGVAR(Magazines), _turret];
+_FCSElevation = _vehicle getVariable format ["%1_%2", QGVAR(Elevation), _turret];
+
+if !(_magazine in _FCSMagazines) exitWith {};
 
 // GET ELEVATION OFFSET OF CURRENT MAGAZINE
 _offset = 0;
 {
-    if (_x == _magazineType) exitWith {
+    if (_x == _magazine) exitWith {
         _offset = _FCSElevation select _forEachIndex;
     };
 } forEach _FCSMagazines;
 
-[_round, (_unit getVariable QGVAR(Azimuth)), _offset, 0] call EFUNC(common,changeProjectileDirection);
+[_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, 0] call EFUNC(common,changeProjectileDirection);
 
 // Air burst missile
 // may need to get rewritten
-if (getNumber (configFile >> "CfgAmmo" >> _ammoType >> "ACE_Airburst") == 1) then {
+if (getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_Airburst") == 1) then {
     _this spawn {
         _vehicle = _this select 0;
         _projectile = _this select 6;
 
-        _distance = _vehicle getVariable [QGVAR(Distance), currentZeroing _vehicle];
+        _distance = _vehicle getVariable [format ["%1_%2", QGVAR(Distance), _turret], currentZeroing _vehicle];
 
         if (_distance < 50) exitWith {};
         if (_distance > 1500) exitWith {};
