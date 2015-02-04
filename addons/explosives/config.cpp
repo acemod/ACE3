@@ -3,7 +3,7 @@
 class CfgPatches {
   class ADDON {
     units[] = {};
-    weapons[] = {"ACE_Clacker", "ACE_DefusalKit", "ACE_M26_Clacker", "ACE_DeadManSwitch"};
+    weapons[] = {"ACE_Clacker", "ACE_DefusalKit", "ACE_M26_Clacker", "ACE_DeadManSwitch", "ACE_Cellphone"};
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {"ace_common", "ace_interaction"};
     author[] = {"Garth 'L-H' de Wet"};
