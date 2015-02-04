@@ -31,6 +31,6 @@ if (isNull _vehicle) then {
 };
 
 if ((!isNil "_target") && {!isNil "_vehicle"}) then {
-    _unit setVariable ["ACE_isEscorting", false];
+    _unit setVariable ["ACE_isEscorting", false, true];
     ["MoveInCaptive", [_target], [_target, _vehicle]] call EFUNC(common,targetEvent);
 };
