@@ -24,7 +24,7 @@ if (_state) then {
     if (_unit getVariable [QGVAR(isSurrender), false]) exitWith {};
 
     _unit setVariable [QGVAR(isSurrender), true, true];
-    [_unit, "ACE_Surrendered", true] call ACE_Core_fnc_setCaptivityStatus;
+    [_unit, "ACE_Surrendered", true] call EFUNC(common,setCaptivityStatus);
 
     _unit spawn {
         // fix for lowered rifle animation glitch
@@ -49,7 +49,7 @@ if (_state) then {
             _this playMoveNow "unconscious";
         };
 
-        [_this, "ACE_Surrendered", false] call ACE_Core_fnc_setCaptivityStatus;
+        [_this, "ACE_Surrendered", false] call EFUNC(common,setCaptivityStatus);
 
         if (isPlayer _this) then {showHUD true};
     };

@@ -19,7 +19,7 @@
 
 PARAMS_3(_unit,_target,_state);
 
-if !("ACE_Handcuffed" in ([_target] call ACE_Core_fnc_getCaptivityStatus)) exitWith {
+if !("ACE_Handcuffed" in ([_target] call EFUNC(common,getCaptivityStatus))) exitWith {
   [localize "STR_ACE_Captives_NoCaptive"] call EFUNC(common,displayTextStructured);
 };
 

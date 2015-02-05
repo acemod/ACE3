@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Checks the conditions for being able to release a captive
+ * Release a captive
  *
  * Arguments:
  * 0: caller (player) <OBJECT>
@@ -18,6 +18,4 @@
 
 PARAMS_2(_unit,_target);
 
-//Unit is captive and not being escorted
-_target getVariable [QGVAR(isCaptive), false] && 
-{isNull (attachedTo _target)}
+["SetHandcuffed", [_target], [_target, false]] call EFUNC(common,targetEvent);

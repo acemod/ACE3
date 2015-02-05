@@ -1,12 +1,9 @@
 #include "script_component.hpp"
 
-[missionNamespace, "playerChanged", {_this call ACE_Captives_fnc_handlePlayerChanged}] call ACE_Core_fnc_addCustomEventhandler;
-
-
-
+["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
 ["MoveInCaptive", {_this call FUNC(vehicleCaptiveMoveIn)}] call EFUNC(common,addEventHandler);
 ["MoveOutCaptive", {_this call FUNC(vehicleCaptiveMoveOut)}] call EFUNC(common,addEventHandler);
-["SetCaptive", {_this call FUNC(vehicleCaptiveMoveOut)}] call EFUNC(common,addEventHandler);
+["SetHandcuffed", {_this call FUNC(setHandcuffed)}] call EFUNC(common,addEventHandler);
 
 //TODO: Medical Integration Events???
 

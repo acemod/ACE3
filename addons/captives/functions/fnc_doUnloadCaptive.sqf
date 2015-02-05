@@ -22,7 +22,7 @@ private ["_cargo", "_target"];
 
 _cargo = crew _vehicle;  // Can also unload from driver, gunner, commander, turret positions. They shouldn't be there anyway.
 
-_cargo = [_cargo, {_this getVariable [QGVAR(isCaptive), false]}] call EFUNC(common,filter);
+_cargo = [_cargo, {_this getVariable [QGVAR(isHandcuffed), false]}] call EFUNC(common,filter);
 
 if ((count _cargo) > 0) then {
     _target = _cargo select 0;

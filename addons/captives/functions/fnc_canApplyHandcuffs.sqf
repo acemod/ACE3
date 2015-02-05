@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Checks the conditions for being able to take a unit captive
+ * Checks the conditions for being able to apply handcuffs
  *
  * Arguments:
  * 0: caller (player) <OBJECT>
@@ -18,5 +18,8 @@
 
 PARAMS_2(_unit,_target);
 
-_unit removeItem 'ACE_CableTie';  
-["SetCaptive", [_target], [_target, true]] call EFUNC(common,targetEvent);
+//Player has cableTie, target is alive and not already handcuffed
+
+("ACE_CableTie" in (items _unit)) && 
+{alive _target} && 
+{!(_target getVariable [QGVAR(isHandcuffed), false])}

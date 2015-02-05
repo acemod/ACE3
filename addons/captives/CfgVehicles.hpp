@@ -2,21 +2,21 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_Actions {
-            class ACE_SetCaptive {
+            class ACE_ApplyHandcuffs {
                 displayName = "$STR_ACE_Captives_SetCaptive";
                 distance = 4;
-                condition = QUOTE([ARR_2(_player, _target)] call FUNC(canTakeCaptive));
-                statement = QUOTE([ARR_2(_player, _target)] call FUNC(doTakeCaptive));
+                condition = QUOTE([ARR_2(_player, _target)] call FUNC(canApplyHandcuffs));
+                statement = QUOTE([ARR_2(_player, _target)] call FUNC(doApplyHandcuffs));
                 showDisabled = 0;
                 priority = 2.4;
                 icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
                 hotkey = "C";
             };
-            class ACE_ReleaseCaptive {
+            class ACE_RemoveHandcuffs {
                 displayName = "$STR_ACE_Captives_ReleaseCaptive";
                 distance = 4;
-                condition = QUOTE([ARR_2(_player, _target)] call FUNC(canReleaseCaptive));
-                statement = QUOTE([ARR_2(_player, _target)] call FUNC(doReleaseCaptive));
+                condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs));
+                statement = QUOTE([ARR_2(_player, _target)] call FUNC(doRemoveHandcuffs));
                 exceptions[] = {"ACE_Interaction_isNotEscorting"};
                 showDisabled = 0;
                 priority = 2.4;
@@ -27,7 +27,7 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Captives_EscortCaptive";
                 distance = 4;
                 condition = QUOTE([ARR_2(_player, _target)] call FUNC(canEscortCaptive));
-                statement = QUOTE([ARR_2(_target, true)] call FUNC(doEscortCaptive));
+                statement = QUOTE([ARR_3(_target, _target, true)] call FUNC(doEscortCaptive));
                 exceptions[] = {"ACE_Interaction_isNotEscorting"};
                 showDisabled = 0;
                 icon = QUOTE(PATHTOF(UI\captive_ca.paa));

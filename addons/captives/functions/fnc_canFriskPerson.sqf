@@ -18,6 +18,6 @@
 
 PARAMS_2(_unit,_target);
 
-_target getVariable [QGVAR(isCaptive), false]
+_target getVariable [QGVAR(isHandcuffed), false]
 || {_target getVariable ["ACE_isSearchable", false]}
 || {_target getVariable ["ACE_isUnconscious", false]}

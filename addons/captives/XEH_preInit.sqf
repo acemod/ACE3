@@ -1,19 +1,19 @@
 #include "script_component.hpp"
 
 ADDON = false;
-  
+
+PREP(canApplyHandcuffs);
 PREP(canEscortCaptive);
 PREP(canFriskPerson);
 PREP(canLoadCaptive);
-PREP(canReleaseCaptive);
+PREP(canRemoveHandcuffs);
 PREP(canStopEscorting);
-PREP(canTakeCaptive);
 PREP(canUnloadCaptive);
+PREP(doApplyHandcuffs);
 PREP(doEscortCaptive);
 PREP(doFriskPerson);
 PREP(doLoadCaptive);
-PREP(doReleaseCaptive);
-PREP(doTakeCaptive);
+PREP(doRemoveHandcuffs);
 PREP(doUnloadCaptive);
 PREP(handleGetIn);
 PREP(handleGetOut);
@@ -22,7 +22,7 @@ PREP(handleKnockedOut);
 PREP(handlePlayerChanged);
 PREP(handleUnitInitPost);
 PREP(handleWokeUp);
-PREP(setCaptive);
+PREP(setHandcuffed);
 PREP(surrender);
 PREP(vehicleCaptiveMoveIn);
 PREP(vehicleCaptiveMoveOut);

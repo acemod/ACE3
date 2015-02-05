@@ -17,15 +17,13 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 
-#define GVARFIX(var1) getVariable [ARR_2(QUOTE(GVAR(var1)), false)]
-
 
 class ACE_canInteractConditions {
     class GVAR(isNotEscorting) {
         condition = QUOTE(!(GETVAR(player,QGVAR(isEscorting),false)));
     };
-    class GVAR(isNotCaptive) {
-        condition = QUOTE(!(GETVAR(player,QGVAR(isCaptive),false)));
+    class GVAR(isNotHandcuffed) {
+        condition = QUOTE(!(GETVAR(player,QGVAR(isHandcuffed),false)));
     };
     class GVAR(isNotSurrendering) {
         condition = QUOTE(!(GETVAR(player,QGVAR(isSurrender),false)));

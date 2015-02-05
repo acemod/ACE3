@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Checks the conditions for being able to take a unit captive
+ * Checks the conditions for being able to remove handcuffs
  *
  * Arguments:
  * 0: caller (player) <OBJECT>
@@ -18,6 +18,6 @@
 
 PARAMS_2(_unit,_target);
 
-("ACE_CableTie" in (items _unit)) && 
-{alive _target} && 
-{!(_target getVariable [QGVAR(isCaptive), false])}
+//Unit is handcuffed and not currently being escorted
+_target getVariable [QGVAR(isHandcuffed), false] && 
+{isNull (attachedTo _target)}

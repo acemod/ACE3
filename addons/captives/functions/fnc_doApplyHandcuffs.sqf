@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Release a captive
+ * Checks the conditions for being able to apply handcuffs
  *
  * Arguments:
  * 0: caller (player) <OBJECT>
@@ -18,4 +18,5 @@
 
 PARAMS_2(_unit,_target);
 
-["SetCaptive", [_target], [_target, false]] call EFUNC(common,targetEvent);
+_unit removeItem "ACE_CableTie";  
+["SetHandcuffed", [_target], [_target, true]] call EFUNC(common,targetEvent);

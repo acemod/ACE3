@@ -21,14 +21,16 @@ PARAMS_3(_unit,_target,_vehicle);
 
 if (isNull _target) then {
     _objects = attachedObjects _unit;
-    _objects = [_objects, {_this getVariable [QGVAR(isCaptive), false]}] call EFUNC(common,filter);
-    _target = _objects select 0;
+    _objects = [_objects, {_this getVariable [QGVAR(isHandcuffed), false]}] call EFUNC(common,filter);
+    if ((count _objects) > 0) then {_target = _objects select 0;};
 };
+if (isNull _target) exitWith {};
 
 if (isNull _vehicle) then {
     _objects = nearestObjects [_unit, ["Car_F", "Tank_F", "Helicopter_F", "Boat_F", "Plane_F"], 10];
-    _vehicle = _objects select 0;
+    if ((count _objects) > 0) then {_vehicle = _objects select 0;};
 };
+if (isNull _vehicle) exitWith {};
 
 if ((!isNil "_target") && {!isNil "_vehicle"}) then {
     _unit setVariable [QGVAR(isEscorting), false, true];

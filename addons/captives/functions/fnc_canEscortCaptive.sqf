@@ -18,7 +18,7 @@
 
 PARAMS_2(_unit,_target);
 
-(_target getVariable [QGVAR(isCaptive), false]) && 
+(_target getVariable [QGVAR(isHandcuffed), false]) && 
 {isNull (attachedTo _target)} && 
 {alive _target} && 
 {!(_target getVariable [QGVAR(ACE_isUnconscious), false])}

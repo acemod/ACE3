@@ -17,8 +17,8 @@
 
 PARAMS_1(_oldUnit);
 
-if (_oldUnit getVariable [QGVAR(isCaptive), false]) then {
-    _oldUnit setVariable [QGVAR(isCaptive), false, true];
+if (_oldUnit getVariable [QGVAR(isHandcuffed), false]) then {
+    _oldUnit setVariable [QGVAR(isHandcuffed), false, true];
 };
 
 if (_oldUnit getVariable [QGVAR(isEscorting), false]) then {

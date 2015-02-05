@@ -33,7 +33,7 @@ if (isNull _target) exitWith {
 
 _isAttached = _target in (attachedObjects _unit);
 
-if (_isAttached && (!(_target getVariable [QGVAR(isCaptive), false]))) exitWith {
+if (_isAttached && (!(_target getVariable [QGVAR(isHandcuffed), false]))) exitWith {
     ERROR("Attached But Not Captive");
     false
 };
