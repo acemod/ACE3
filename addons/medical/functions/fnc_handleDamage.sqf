@@ -17,27 +17,43 @@
 
 #include "script_component.hpp"
 
-private ["_damageReturn"];
+private ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_damageReturn", "_hitPoints"];
 
-if !(local (_this select 0)) exitWith {nil};
+_unit         = _this select 0;
+_selection    = _this select 1;
+_damage       = _this select 2;
+_shooter      = _this select 3;
+_projectile   = _this select 4;
 
-if (typeName (_this select 4) == "OBJECT") then {
-    _this set [4, typeOf (_this select 4)];
+diag_log _this;
+
+if !(local _unit) exitWith {nil};
+
+if (typeName _projectile == "OBJECT") then {
+    _projectile = typeOf _projectile;
+    _this set [4, _projectile];
 };
 
+// If the damage is being weird, we just tell it to fuck off.
+_hitSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
+if !(_selection in (_hitSelections + [""])) exitWith {0};
 
-_damageReturn = (_this select 2);
+_damageReturn = _damage;
+
+// @todo, remove once parameters are set up
+if (isNil QGVAR(level)) then {
+  GVAR(level) = 0;
+};
 
 if (GVAR(level) >= 0) then {
     _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_basic);
 };
-
 if (GVAR(level) >= 1) then {
     _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_medium);
 };
-
 if (GVAR(level) >= 2) then {
     _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_advanced);
 };
 
+if (_damageReturn < 0.01) exitWith {0};
 _damageReturn
