@@ -18,13 +18,10 @@
 
 PARAMS_2(_unit,_state);
 
-systemChat format ["set %1", _this];
 
 if (!local _unit) exitWith {
     ERROR("setHandcuffed unit not local");
 };
-
-systemChat format ["set %1 %2 ", _state, (_unit getVariable [QGVAR(isHandcuffed), false])];
 
 if (_state isEqualTo (_unit getVariable [QGVAR(isHandcuffed), false])) exitWith {
     ERROR("new state equals current");
@@ -50,7 +47,7 @@ if (_state) then {
     };
 } else {
     _unit setVariable [QGVAR(isHandcuffed), false, true];
-    [_unit, "ACE_Handcuffed", false] call EFUNC(common,setCaptivityStatus);
+    [_unit, QGVAR(Handcuffed), true] call EFUNC(common,setCaptivityStatus);
     if (vehicle _unit == _unit) then {
         [_unit, "ACE_AmovPercMstpScapWnonDnon_AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
     };

@@ -19,38 +19,37 @@
 
 PARAMS_3(_unit,_target,_state);
 
-if !("ACE_Handcuffed" in ([_target] call EFUNC(common,getCaptivityStatus))) exitWith {
-  [localize "STR_ACE_Captives_NoCaptive"] call EFUNC(common,displayTextStructured);
-};
-
 if (_state) then {
-  if (_unit getVariable [QGVAR(isEscorting), false]) exitWith {};
+    if (_unit getVariable [QGVAR(isEscorting), false]) exitWith {};
 
-  [_unit, _target] call EFUNC(common,claim);
-  _unit setVariable [QGVAR(isEscorting), true, true];
+    [_unit, _target] call EFUNC(common,claim);
+    _unit setVariable [QGVAR(isEscorting), true, true];
 
-  _target attachTo [_unit, [0, 1, 0]];
+    _target attachTo [_unit, [0, 1, 0]];
 
-  _unit setVariable ["ACE_escortedUnit", _target, true];
-  _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize "STR_ACE_Captives_StopEscorting"], "[_unit getVariable ['ACE_escortedUnit', objNull], false] call ACE_Captives_fnc_escortCaptive;", nil, 20, false, true, "", "!isNull (_unit getVariable ['ACE_escortedUnit', objNull])"];
+    _unit setVariable [QGVAR(escortedUnit), _target, true];
 
-  [_target, _actionID] spawn {
-    _target = _this select 0;
-    _actionID = _this select 1;
+    //Add Actionmenu to release captive
+    _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize "STR_ACE_Captives_StopEscorting"],
+    {[(_this select 0), ((_this select 0) getVariable [QGVAR(escortedUnit), objNull]), false] call FUNC(doEscortCaptive);},
+    nil, 20, false, true, "", QUOTE(!isNull (GETVAR(_target,QGVAR(escortedUnit),objNull)))];
 
-    while {_unit getVariable [QGVAR(isEscorting), false]} do {
-      sleep 0.2;
+    [_unit, _target, _actionID] spawn {
+        PARAMS_3(_unit,_target,_actionID);
 
-      if (!alive _target || {!alive _unit} || {!canStand _target} || {!canStand _unit} || {_target getVariable ["ACE_isUnconscious", false]} || {_unit getVariable ["ACE_isUnconscious", false]} || {!isNull (attachedTo _unit)}) then {
-        _unit setVariable [QGVAR(isEscorting), false, true];
-      };
+        while {_unit getVariable [QGVAR(isEscorting), false]} do {
+            sleep 0.2;
+
+            if (!alive _target || {!alive _unit} || {!canStand _target} || {!canStand _unit} || {_target getVariable ["ACE_isUnconscious", false]} || {_unit getVariable ["ACE_isUnconscious", false]} || {!isNull (attachedTo _unit)}) then {
+                _unit setVariable [QGVAR(isEscorting), false, true];
+            };
+        };
+        [objNull, _target] call EFUNC(common,claim);
+
+        detach _target;
+        _unit removeAction _actionID;
     };
-    [objNull, _target] call EFUNC(common,claim);
-
-    detach _target;
-    _unit removeAction _actionID;
-  };
 } else {
-  _unit setVariable [QGVAR(isEscorting), false, true];
-  _unit setVariable ["ACE_escortedUnit", objNull, true];
+    _unit setVariable [QGVAR(isEscorting), false, true];
+    _unit setVariable [QGVAR(escortedUnit), objNull, true];
 };

@@ -23,7 +23,7 @@ private ["_isAttached"];
 
 
 if (isNull _target) then {
-    _target = _unit getVariable ["ACE_escortedUnit", objNull];
+    _target = _unit getVariable [QGVAR(escortedUnit), objNull];
 };
 
 if (isNull _target) exitWith {

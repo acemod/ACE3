@@ -7,6 +7,7 @@ class CfgVehicles {
                 distance = 4;
                 condition = QUOTE([ARR_2(_player, _target)] call FUNC(canApplyHandcuffs));
                 statement = QUOTE([ARR_2(_player, _target)] call FUNC(doApplyHandcuffs));
+                exceptions[] = {};
                 showDisabled = 0;
                 priority = 2.4;
                 icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
@@ -17,7 +18,7 @@ class CfgVehicles {
                 distance = 4;
                 condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs));
                 statement = QUOTE([ARR_2(_player, _target)] call FUNC(doRemoveHandcuffs));
-                exceptions[] = {"ACE_Interaction_isNotEscorting"};
+                exceptions[] = {};
                 showDisabled = 0;
                 priority = 2.4;
                 icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
@@ -27,8 +28,8 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Captives_EscortCaptive";
                 distance = 4;
                 condition = QUOTE([ARR_2(_player, _target)] call FUNC(canEscortCaptive));
-                statement = QUOTE([ARR_3(_target, _target, true)] call FUNC(doEscortCaptive));
-                exceptions[] = {"ACE_Interaction_isNotEscorting"};
+                statement = QUOTE([ARR_3(_player, _target, true)] call FUNC(doEscortCaptive));
+                exceptions[] = {};
                 showDisabled = 0;
                 icon = QUOTE(PATHTOF(UI\captive_ca.paa));
                 priority = 2.3;
@@ -39,7 +40,7 @@ class CfgVehicles {
                 distance = 4;
                 condition = QUOTE([ARR_2(_player, _target)] call FUNC(canStopEscorting));
                 statement = QUOTE([ARR_3(_player,_target, false)] call FUNC(doEscortCaptive));
-                exceptions[] = {"ACE_Interaction_isNotEscorting"};
+                exceptions[] = {QGVAR(isNotEscorting)};
                 showDisabled = 0;
                 icon = QUOTE(PATHTOF(UI\captive_ca.paa));
                 priority = 2.3;
@@ -50,7 +51,7 @@ class CfgVehicles {
                 distance = 4;
                 condition = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(canLoadCaptive));
                 statement = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(loadCaptive));
-                exceptions[] = {"ACE_Interaction_isNotEscorting"};
+                exceptions[] = {QGVAR(isNotEscorting)};
                 showDisabled = 0;
                 icon = QUOTE(PATHTOF(UI\captive_ca.paa));
                 priority = 2.2;
@@ -73,7 +74,7 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Captives_StopEscorting";
                 condition = QUOTE([ARR_2(_player, objNull)] call FUNC(canStopEscorting));
                 statement = QUOTE([ARR_3(_player,objNull, false)] call FUNC(doEscortCaptive));
-                exceptions[] = {"ACE_Interaction_isNotEscorting"};
+                exceptions[] = {QGVAR(isNotEscorting)};
                 showDisabled = 0;
                 priority = 2.3;
                 hotkey = "C";
@@ -82,7 +83,7 @@ class CfgVehicles {
         displayName = "$STR_ACE_Captives_LoadCaptive";
         condition = "[_player, objNull, objNull] call ACE_Captives_fnc_canLoadCaptiveIntoVehicle";
         statement = "[_player, objNull, objNull] call ACE_Captives_fnc_loadCaptiveIntoVehicle";
-        exceptions[] = {"ACE_Interaction_isNotEscorting"};
+        exceptions[] = {QGVAR(isNotEscorting)};
         showDisabled = 0;
         priority = 2.2;
         hotkey = "K";
@@ -97,7 +98,7 @@ class CfgVehicles {
                 distance = 4; \
                 condition = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(canLoadCaptive)); \
                 statement = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(loadCaptive)); \
-                exceptions[] = {"ACE_Interaction_isNotEscorting"}; \
+                exceptions[] = {QGVAR(isNotEscorting)}; \
                 showDisabled = 0; \
                 priority = 1.2; \
                 hotkey = "L"; \

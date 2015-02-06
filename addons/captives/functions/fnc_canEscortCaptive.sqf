@@ -18,6 +18,8 @@
 
 PARAMS_2(_unit,_target);
 
+//Alive, handcuffed, not being escored, and not unconsious
+
 (_target getVariable [QGVAR(isHandcuffed), false]) && 
 {isNull (attachedTo _target)} && 
 {alive _target} && 
