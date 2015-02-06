@@ -18,5 +18,5 @@
 
 PARAMS_2(_unit,_target);
 
-_unit removeItem "ACE_CableTie";  
+_unit removeItem "ACE_CableTie";
 ["SetHandcuffed", [_target], [_target, true]] call EFUNC(common,targetEvent);

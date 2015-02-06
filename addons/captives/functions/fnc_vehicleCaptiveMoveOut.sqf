@@ -17,7 +17,7 @@
 
 PARAMS_1(_unit);
 
-_unit setVariable ["ACE_Captives_CargoIndex", -1, true];
+_unit setVariable [QGVAR(CargoIndex), -1, true];
 
 moveOut _unit;
 [_unit, "ACE_AmovPercMstpScapWnonDnon", 2] call EFUNC(common,doAnimation);

@@ -23,6 +23,6 @@ private ["_cargoIndex"];
 _target moveInCargo _vehicle;
 _target assignAsCargo _vehicle;
 _cargoIndex = _vehicle getCargoIndex _target;
-_target setVariable ["ACE_Captives_CargoIndex", _cargoIndex, true];
+_target setVariable [QGVAR(CargoIndex), _cargoIndex, true];
 
 TRACE_3("moveinEH",_target,_vehicle,_cargoIndex);

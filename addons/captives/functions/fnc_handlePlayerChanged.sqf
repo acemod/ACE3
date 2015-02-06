@@ -1,9 +1,9 @@
 /*
  * Author: commy2
- * TODO
+ * Handles playerChanged.  Resets "showHUD" based on handcuff status
  *
  * Arguments:
- * 0: _unit <OBJECT>
+ * 0: _newUnit <OBJECT>
  * 1: _oldUnit <OBJECT>
  *
  * Return Value:
@@ -16,9 +16,9 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_oldUnit);
+PARAMS_2(_newUnit,_oldUnit);
 
-if (_unit getVariable [QGVAR(isHandcuffed), false]) then {
+if (_newUnit getVariable [QGVAR(isHandcuffed), false]) then {
     showHUD false;
 } else {
     showHUD true;

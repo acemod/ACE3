@@ -20,6 +20,6 @@ PARAMS_2(_unit,_target);
 
 //Player has cableTie, target is alive and not already handcuffed
 
-("ACE_CableTie" in (items _unit)) && 
-{alive _target} && 
+("ACE_CableTie" in (items _unit)) &&
+{alive _target} &&
 {!(_target getVariable [QGVAR(isHandcuffed), false])}

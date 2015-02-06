@@ -19,5 +19,5 @@
 PARAMS_2(_unit,_target);
 
 //Unit is handcuffed and not currently being escorted
-_target getVariable [QGVAR(isHandcuffed), false] && 
+_target getVariable [QGVAR(isHandcuffed), false] &&
 {isNull (attachedTo _target)}

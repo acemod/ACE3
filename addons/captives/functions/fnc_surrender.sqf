@@ -26,38 +26,31 @@ if (_state) then {
     _unit setVariable [QGVAR(isSurrender), true, true];
     [_unit, "ACE_Surrendered", true] call EFUNC(common,setCaptivityStatus);
 
-    _unit spawn {
-        // fix for lowered rifle animation glitch
-        if (currentWeapon _this != "" && {currentWeapon _this == primaryWeapon _this} && {weaponLowered _this} && {stance _this == "STAND"}) then {
-            _this playMove "amovpercmstpsraswrfldnon";
-        };
 
-        while {_this getVariable [QGVAR(isSurrender), false]} do {
-            sleep 0.001; //sleep in UI
-
-            if (isPlayer _this) then {showHUD false};
-
-            if (!alive _this || {_this getVariable ["ACE_isUnconscious", false]}) then {
-                _this setVariable [QGVAR(isSurrender), false, true];
+    private "_surrenderFnc";
+    _surrenderFnc = {
+        EXPLODE_1_PVT((_this select 0),_unit);
+        if (_unit getVariable [QGVAR(isSurrender), false]) then {
+            if ((!alive _unit) || {_unit getVariable ["ACE_isUnconscious", false]} || {_unit getVariable [QGVAR(isHandcuffed), false]}) then {
+                _unit setVariable [QGVAR(isSurrender), false, true];
             } else {
-                _this playMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
+                [_unit, "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon", 0] call EFUNC(common,doAnimation);
             };
         };
-        if !(_this getVariable ["ACE_isUnconscious", false]) then {
-            _this playMoveNow "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
-        } else {
-            _this playMoveNow "unconscious";
+
+        if (!(_unit getVariable [QGVAR(isSurrender), false])) then {
+            [(_this select 1)] call cba_fnc_removePerFrameHandler;
+
+            if !(_unit getVariable ["ACE_isUnconscious", false]) then {
+                [_unit, "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon", 1] call EFUNC(common,doAnimation);
+            } else {
+                [_unit, "unconscious", 1] call EFUNC(common,doAnimation);
+            };
+            [_unit, "ACE_Surrendered", false] call EFUNC(common,setCaptivityStatus);
+            if (isPlayer _unit) then {showHUD true};
         };
-
-        [_this, "ACE_Surrendered", false] call EFUNC(common,setCaptivityStatus);
-
-        if (isPlayer _this) then {showHUD true};
     };
+    [_surrenderFnc, 0.0, [_unit]] call CBA_fnc_addPerFrameHandler;
 } else {
     _unit setVariable [QGVAR(isSurrender), false, true];
 };
-
-/*
-player playMove "AmovPercMstpSsurWnonDnon"
-player switchMove "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon"
- */

@@ -50,7 +50,7 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Captives_LoadCaptive";
                 distance = 4;
                 condition = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(canLoadCaptive));
-                statement = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(loadCaptive));
+                statement = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(doLoadCaptive));
                 exceptions[] = {QGVAR(isNotEscorting)};
                 showDisabled = 0;
                 icon = QUOTE(PATHTOF(UI\captive_ca.paa));
@@ -61,7 +61,7 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Captives_FriskPerson";
                 distance = 2;
                 condition = QUOTE([ARR_2(_player, _target)] call FUNC(canFriskPerson));
-                statement = QUOTE([ARR_2(_player, _target)] call FUNC(openFriskMenu));
+                statement = QUOTE([ARR_2(_player, _target)] call FUNC(doFriskPerson));
                 showDisabled = 0;
                 //icon = "";  //@todo
                 priority = 3;
@@ -97,7 +97,7 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Captives_LoadCaptive"; \
                 distance = 4; \
                 condition = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(canLoadCaptive)); \
-                statement = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(loadCaptive)); \
+                statement = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(doLoadCaptive)); \
                 exceptions[] = {QGVAR(isNotEscorting)}; \
                 showDisabled = 0; \
                 priority = 1.2; \
@@ -107,7 +107,7 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Captives_UnloadCaptive"; \
                 distance = 4; \
                 condition = QUOTE([ARR_2(_player, _target)] call FUNC(canUnloadCaptive)); \
-                statement = QUOTE([ARR_2(_player, _target)] call FUNC(unloadCaptive)); \
+                statement = QUOTE([ARR_2(_player, _target)] call FUNC(doUnloadCaptive)); \
                 showDisabled = 0; \
                 priority = 1.2; \
                 hotkey = "C"; \

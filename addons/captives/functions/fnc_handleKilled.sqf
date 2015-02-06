@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Handles when a unit is kill.  Reset captivity and escorting status when getting killed
+ * Handles when a unit is kill.  Reset captivity and escorting status
  *
  * Arguments:
  * 0: _oldUnit <OBJECT>
@@ -22,5 +22,5 @@ if (_oldUnit getVariable [QGVAR(isHandcuffed), false]) then {
 };
 
 if (_oldUnit getVariable [QGVAR(isEscorting), false]) then {
-    _oldUnit setVariable [QGVAR(isEscorting), false, true]
+    _oldUnit setVariable [QGVAR(isEscorting), false, true];
 };

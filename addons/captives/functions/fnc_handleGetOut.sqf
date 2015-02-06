@@ -21,9 +21,9 @@ PARAMS_3(_vehicle,_dontcare,_unit);
 
 if ((local _unit) && {_unit getVariable [QGVAR(isHandcuffed), false]}) then {
     private ["_cargoIndex"];
-    
-    _cargoIndex = _unit getVariable ["ACE_Captives_CargoIndex", -1];
-    
+
+    _cargoIndex = _unit getVariable [QGVAR(CargoIndex), -1];
+
     //If captive was not "unloaded", then move them back into the vehicle.
     if (_cargoIndex != -1) exitWith {
         _unit moveInCargo [_vehicle, _cargoIndex];

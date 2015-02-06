@@ -4,8 +4,8 @@
  *
  * Arguments:
  * 0: Unit that wants to load a captive <OBJECT>
- * 1: A captive. ObjNull for the first escorted captive <OBJECT>
- * 2: Vehicle to load the captive into. ObjNull for the nearest vehicle <OBJECT>
+ * 1: A captive. ObjNull for the first escorted captive (may be null) <OBJECT>
+ * 2: Vehicle to load the captive into. ObjNull for the nearest vehicle (may be null) <OBJECT>
  *
  * Return Value:
  * The return value <BOOL>
@@ -24,15 +24,16 @@ PARAMS_3(_unit,_target,_vehicle);
 if (isNull _target) then {
     _objects = attachedObjects _unit;
     _objects = [_objects, {_this getVariable [QGVAR(isHandcuffed), false]}] call EFUNC(common,filter);
-    _target = _objects select 0;
+    if ((count _objects) > 0) then {_target = _objects select 0;};
 };
 
 if (isNull _vehicle) then {
     _objects = nearestObjects [_unit, ["Car", "Tank", "Helicopter", "Plane", "Ship_F"], 10];
-    _vehicle = _objects select 0;
+    if ((count _objects) > 0) then {_vehicle = _objects select 0;};
 };
 
-_unit getVariable [QGVAR(isEscorting), false]
-&& {!isNil "_target"}
-&& {!isNil "_vehicle"}
+(!isNull _target)
+&& {!isNull _vehicle}
+&& {_unit getVariable [QGVAR(isEscorting), false]}
+&& {_target getVariable [QGVAR(isHandcuffed), false]}
 && {_vehicle emptyPositions "cargo" > 0}
