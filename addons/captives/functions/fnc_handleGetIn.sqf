@@ -11,7 +11,7 @@
  * The return value <BOOL>
  *
  * Example:
- * -
+ * [car2, x, player] call ACE_captives_fnc_handleGetIn
  *
  * Public: No
  */

@@ -9,7 +9,7 @@
  * The return value <BOOL>
  *
  * Example:
- * TODO
+ * [bob] call ACE_captives_fnc_handleUnitInitPost
  *
  * Public: No
  */

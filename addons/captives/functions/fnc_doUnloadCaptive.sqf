@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * TODO
+ * [bob, car] call ACE_captives_fnc_doUnloadCaptive
  *
  * Public: No
  */

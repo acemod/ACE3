@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * TODO
+ * [bob, true] call ACE_captives_fnc_setHandcuffed;
  *
  * Public: No
  */

@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * TODO
+ * [player, bob] call ACE_captives_fnc_doFristPerson;
  *
  * Public: No
  */

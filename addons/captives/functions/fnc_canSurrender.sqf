@@ -10,7 +10,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [player, true] call ACE_captives_fnc_canSurrender;
+ * [Jean, true] call ACE_captives_fnc_canSurrender;
  *
  * Public: No
  */

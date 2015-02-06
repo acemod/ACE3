@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * TODO
+ * [bob] call ACE_captives_fnc_vehicleCaptiveMoveOut;
  *
  * Public: No
  */

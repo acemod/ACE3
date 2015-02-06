@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * -
+ * [bob1] call ACE_captives_fnc_handleKilled
  *
  * Public: No
  */
@@ -23,4 +23,8 @@ if (_oldUnit getVariable [QGVAR(isHandcuffed), false]) then {
 
 if (_oldUnit getVariable [QGVAR(isEscorting), false]) then {
     _oldUnit setVariable [QGVAR(isEscorting), false, true];
+};
+
+if (_oldUnit getVariable [QGVAR(isSurrendering), false]) then {
+    _oldUnit setVariable [QGVAR(isSurrendering), false, true];
 };

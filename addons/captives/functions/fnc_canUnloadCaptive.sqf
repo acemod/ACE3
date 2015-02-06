@@ -11,7 +11,7 @@
  * The return value <BOOL>
  *
  * Example:
- * -
+ * [player, bob, car1] call ACE_captives_fnc_canUnloadCaptive;
  *
  * Public: No
  */

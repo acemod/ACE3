@@ -11,7 +11,7 @@
  * The return value <BOOL>
  *
  * Example:
- * -
+ * [player, bob, true] call ACE_captives_fnc_doEscorteCaptive;
  *
  * Public: No
  */

@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * TODO
+ * [Pierre, true] call ACE_captives_fnc_surrender;
  *
  * Public: No
  */
@@ -19,11 +19,17 @@
 PARAMS_2(_unit,_state);
 
 if (_state) then {
-    if (_unit getVariable [QGVAR(isSurrendering), false]) exitWith {};
+    if (_unit getVariable [QGVAR(isSurrendering), false]) exitWith {
+        ERROR("Already Surrendering");
+    };
 
     _unit setVariable [QGVAR(isSurrendering), true, true];
     [_unit, QGVAR(Surrendered), true] call EFUNC(common,setCaptivityStatus);
     [_unit, "ACE_AmovPercMstpSsurWnonDnon", 1] call EFUNC(common,doAnimation);
+
+    if (_unit == ACE_player) then {
+        showHUD false;
+    };
 
     private "_surrenderFnc";
     _surrenderFnc = {
@@ -49,7 +55,7 @@ if (_state) then {
     };
 
     [_unit, QGVAR(Surrendered), false] call EFUNC(common,setCaptivityStatus);
-    
+
     if (_unit == ACE_player) then {
         //only enable if not handcuffed
         if (!(_unit getVariable [QGVAR(isHandcuffed), false])) then {

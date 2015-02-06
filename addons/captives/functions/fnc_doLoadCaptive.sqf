@@ -11,7 +11,7 @@
  * Nothing
  *
  * Example:
- * TODO
+ * [bob, tom, car] call ACE_captives_fnc_doLoadCaptive
  *
  * Public: No
  */

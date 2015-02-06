@@ -10,7 +10,7 @@
  * The return value <BOOL>
  *
  * Example:
- * TODO
+ * [bob1, bob2] call ACE_captives_fnc_handlePlayerChange
  *
  * Public: No
  */
@@ -18,7 +18,7 @@
 
 PARAMS_2(_newUnit,_oldUnit);
 
-if (_newUnit getVariable [QGVAR(isHandcuffed), false]) then {
+if ((_newUnit getVariable [QGVAR(isHandcuffed), false]) || {_unit getVariable [QGVAR(isSurrendering), false]}) then {
     showHUD false;
 } else {
     showHUD true;

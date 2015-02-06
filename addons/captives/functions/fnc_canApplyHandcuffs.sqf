@@ -10,7 +10,7 @@
  * The return value <BOOL>
  *
  * Example:
- * -
+ * [player, bob] call ACE_captives_fnc_canApplyHandcuffs
  *
  * Public: No
  */

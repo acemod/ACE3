@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * TODO
+ * [bob, car1] call ACE_captives_fnc_vehicleCaptiveMoveIn;
  *
  * Public: No
  */
@@ -24,5 +24,3 @@ _target moveInCargo _vehicle;
 _target assignAsCargo _vehicle;
 _cargoIndex = _vehicle getCargoIndex _target;
 _target setVariable [QGVAR(CargoIndex), _cargoIndex, true];
-
-TRACE_3("moveinEH",_target,_vehicle,_cargoIndex);

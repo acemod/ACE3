@@ -10,7 +10,7 @@
  * The return value <BOOL>
  *
  * Example:
- * -
+ * [player, bob] call ACE_captives_fnc_canStopEscorting
  *
  * Public: No
  */
@@ -20,7 +20,6 @@ PARAMS_1(_unit);
 DEFAULT_PARAM(1,_target,objNull);
 
 private ["_isAttached"];
-
 
 if (isNull _target) then {
     _target = _unit getVariable [QGVAR(escortedUnit), objNull];
