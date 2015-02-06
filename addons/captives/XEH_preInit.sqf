@@ -8,6 +8,7 @@ PREP(canFriskPerson);
 PREP(canLoadCaptive);
 PREP(canRemoveHandcuffs);
 PREP(canStopEscorting);
+PREP(canSurrender);
 PREP(canUnloadCaptive);
 PREP(doApplyHandcuffs);
 PREP(doEscortCaptive);

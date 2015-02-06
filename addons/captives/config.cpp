@@ -26,6 +26,6 @@ class ACE_canInteractConditions {
         condition = QUOTE(!(GETVAR(player,QGVAR(isHandcuffed),false)));
     };
     class GVAR(isNotSurrendering) {
-        condition = QUOTE(!(GETVAR(player,QGVAR(isSurrender),false)));
+        condition = QUOTE(!(GETVAR(player,QGVAR(isSurrendering),false)));
     };
 };

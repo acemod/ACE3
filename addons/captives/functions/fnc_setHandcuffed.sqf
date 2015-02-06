@@ -32,7 +32,6 @@ if (_state) then {
     [_unit, QGVAR(Handcuffed), true] call EFUNC(common,setCaptivityStatus);
 
     // fix anim on mission start (should work on dedicated servers)
-
     _fixAnimationFnc = {
         PARAMS_1(_unit);
         if (_unit getVariable [QGVAR(isHandcuffed), false] && {vehicle _unit == _unit}) then {
