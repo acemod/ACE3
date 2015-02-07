@@ -19,4 +19,7 @@
 PARAMS_2(_unit,_target);
 
 _unit removeItem "ACE_CableTie";
+
+playSound3D [QUOTE(PATHTO_R(sounds\cable_tie_zipping.ogg)), objNull, false, (getPosASL _target), 1, 1, 10];
+
 ["SetHandcuffed", [_target], [_target, true]] call EFUNC(common,targetEvent);
