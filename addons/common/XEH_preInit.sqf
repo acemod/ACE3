@@ -49,6 +49,7 @@ PREP(getConfigGunner);
 PREP(getDefaultAnim);
 PREP(getDoorTurrets);
 PREP(getForceWalkStatus);
+PREP(getGunner);
 PREP(getHitPoints);
 PREP(getHitPointsWithSelections);
 PREP(getInPosition);
