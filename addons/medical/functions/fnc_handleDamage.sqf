@@ -17,12 +17,7 @@
 
 #include "script_component.hpp"
 
-<<<<<<< HEAD
-private ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_damageReturn", "_hitPoints"];
-=======
-private ["_damageReturn", "_typeOfDamage"];
->>>>>>> 596d018f45d34ae8f713efcd3c0c3c2e3156af07
-
+private ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_damageReturn", "_hitPoints",  "_typeOfDamage"];
 _unit         = _this select 0;
 _selection    = _this select 1;
 _damage       = _this select 2;
@@ -38,7 +33,6 @@ if (typeName _projectile == "OBJECT") then {
     _this set [4, _projectile];
 };
 
-<<<<<<< HEAD
 // If the damage is being weird, we just tell it to fuck off.
 _hitSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
 if !(_selection in (_hitSelections + [""])) exitWith {0};
@@ -50,28 +44,20 @@ if (isNil QGVAR(level)) then {
   GVAR(level) = 0;
 };
 
-=======
 _damageReturn = (_this select 2);
-_typeOfDamage = [_this select 4] call FUNC(getTypeOfDamage)
->>>>>>> 596d018f45d34ae8f713efcd3c0c3c2e3156af07
+_typeOfDamage = [_this select 4] call FUNC(getTypeOfDamage);
+
 if (GVAR(level) >= 0) then {
     _damageReturn = (_this + [_damageReturn, _typeOfDamage]) call FUNC(handleDamage_basic);
 };
-if (GVAR(level) >= 1) then {
-<<<<<<< HEAD
-    _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_medium);
-};
-if (GVAR(level) >= 2) then {
-    _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_advanced);
-};
 
 if (_damageReturn < 0.01) exitWith {0};
-=======
-    _damageReturn = (_this + [_damageReturn, _typeOfDamage]) call FUNC(handleDamage_medium);
 
+if (GVAR(level) >= 1) then {
+    _damageReturn = (_this + [_damageReturn, _typeOfDamage]) call FUNC(handleDamage_medium);
     if (GVAR(level) >= 2) then {
 	    _damageReturn = (_this + [_damageReturn, _typeOfDamage]) call FUNC(handleDamage_advanced);
 	};
 };
->>>>>>> 596d018f45d34ae8f713efcd3c0c3c2e3156af07
+
 _damageReturn
