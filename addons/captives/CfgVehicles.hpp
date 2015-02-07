@@ -78,7 +78,7 @@ class CfgVehicles {
                 showDisabled = 0;
                 priority = 2.3;
                 hotkey = "C";
-            };            
+            };
             class ACE_StartSurrenderingSelf {
                 displayName = "$STR_ACE_Captives_StartSurrendering";
                 condition = QUOTE([ARR_2(_player, true)] call FUNC(canSurrender));
@@ -86,7 +86,7 @@ class CfgVehicles {
                 exceptions[] = {};
                 showDisabled = 0;
                 priority = 0;
-            };            
+            };
             class ACE_StopSurrenderingSelf {
                 displayName = "$STR_ACE_Captives_StopSurrendering";
                 condition = QUOTE([ARR_2(_player, false)] call FUNC(canSurrender));
@@ -160,6 +160,32 @@ class CfgVehicles {
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
             MACRO_ADDITEM(ACE_CableTie,12)
+        };
+    };
+
+
+    class Logic;
+    class Module_F: Logic {
+        class ArgumentsBaseUnits {};
+        class ModuleDescription {};
+    };
+
+    class GVAR(ModuleSurrender): Module_F {
+        author = "$STR_ACE_Common_ACETeam";
+        category = "ACE";
+        displayName = "Make Unit Surrender";
+        function = QUOTE(DFUNC(moduleSurrender));
+        scope = 2;  //show in editor
+        scopeCurator = 2; //show in zeus
+        curatorCost = 0;  //???
+        isGlobal = 1; //run global
+        isTriggerActivated  = 1; //Wait for triggers
+        // icon = QUOTE(PATHTOF(ui\todo.paa));
+        functionPriority = 0;
+        class Arguments {};
+        class ModuleDescription: ModuleDescription {
+            description = "Sync a unit to make them surrender.<br/>Source: ace_captives";
+            sync[] = {"AnyAI"};
         };
     };
 };

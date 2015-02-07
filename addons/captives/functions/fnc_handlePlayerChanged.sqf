@@ -18,8 +18,10 @@
 
 PARAMS_2(_newUnit,_oldUnit);
 
-if ((_newUnit getVariable [QGVAR(isHandcuffed), false]) || {_unit getVariable [QGVAR(isSurrendering), false]}) then {
-    showHUD false;
+if ((_newUnit getVariable [QGVAR(isHandcuffed), false]) || {_newUnit getVariable [QGVAR(isSurrendering), false]}) then {
+    TRACE_1("Player Change (showHUD false)",_newUnit);
+    showHUD false; 
 } else {
+    TRACE_1("Player Change (showHUD true)",_newUnit);
     showHUD true;
 };
