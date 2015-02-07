@@ -93,12 +93,12 @@ if ((missionNamespace getvariable[QGVAR(setting_AdvancedLevel), 0]) > 0) exitwit
     // Check vitals for medical status
     // TODO check for in revive state instead of variable
     // TODO Implement cardiac arrest.
-/*  _bloodPressureL = _bloodPressure select 0;
+  _bloodPressureL = _bloodPressure select 0;
     _bloodPressureH = _bloodPressure select 1;
 
     if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
         if (_heartRate < 10 || _bloodPressureH < 30 || _bloodVolume < 20) then {
-            [_unit] call FUNC(setUnconsciousState); // safety check to ensure unconsciousness for units if they are not dead already.
+            //[_unit] call FUNC(setUnconsciousState); // safety check to ensure unconsciousness for units if they are not dead already.
         };
 
         if (_bloodPressureH > 260) then {
@@ -123,5 +123,5 @@ if ((missionNamespace getvariable[QGVAR(setting_AdvancedLevel), 0]) > 0) exitwit
         if (_heartRate < 20) then {
             [_unit] call FUNC(setCardiacArrest);
         };
-    };*/
+    };
 };

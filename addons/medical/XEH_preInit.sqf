@@ -12,5 +12,12 @@ PREP(handleFractures);
 PREP(handleInternalInjuries);
 PREP(init);
 PREP(selectionNameToNumber);
+PREP(handleDamage_wounds);
+PREP(handleUnitVitals);
+PREP(getBloodLoss);
+PREP(getBloodPressure);
+PREP(getBloodVolumeChange);
+PREP(getCardiacOutput);
+PREP(setCardiacArrest);
 
 ADDON = true;
