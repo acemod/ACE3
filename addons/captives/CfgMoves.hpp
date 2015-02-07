@@ -70,7 +70,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             InterpolateTo[] = {"Unconscious",0.01};
         };
         class ACE_AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon: ACE_AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon {
-            speed = 0.4;  //for gameplay reasons, slow this down
+            speed = 0.333;  //for gameplay reasons, slow this down
             actions = "CivilStandActions";
             file = "\A3\anims_f\Data\Anim\Sdr\mov\erc\stp\sur\non\AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
             ConnectTo[] = {"AmovPercMstpSnonWnonDnon",0.1};

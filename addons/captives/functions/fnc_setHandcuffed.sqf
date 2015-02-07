@@ -1,6 +1,6 @@
 /*
  * Author: Nic547, commy2
- * Handcuffs a unit
+ * Handcuffs a unit.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -18,39 +18,38 @@
 
 PARAMS_2(_unit,_state);
 
-
-if (!local _unit) exitWith {
-    ERROR("setHandcuffed unit not local");
+// We only want this function to work on local machines
+if (!local _unit) exitwith {
+    [_this, QUOTE(FUNC(setHandcuffed)), _unit] call EFUNC(common,execRemoteFnc);
+    TRACE_2("running setHandcuffed on remote unit",_unit,_state);
 };
 
-if (_state isEqualTo (_unit getVariable [QGVAR(isHandcuffed), false])) exitWith {
-    ERROR("new state equals current");
+if (_state isEqualTo (_unit getVariable [QGVAR(isHandcuffed), false])) then {
+    LOG("setHandcuffed: current state same as new");
 };
 
 if (_state) then {
     _unit setVariable [QGVAR(isHandcuffed), true, true];
     [_unit, QGVAR(Handcuffed), true] call EFUNC(common,setCaptivityStatus);
-
-    // fix anim on mission start (should work on dedicated servers)
-    _fixAnimationFnc = {
-        PARAMS_1(_unit);
-        if (_unit getVariable [QGVAR(isHandcuffed), false] && {vehicle _unit == _unit}) then {
-            [_unit] call EFUNC(common,fixLoweredRifleAnimation);
-            [_unit, "ACE_AmovPercMstpScapWnonDnon", 0] call EFUNC(common,doAnimation);
-        };
-    };
-
-    [_fixAnimationFnc, [_unit], 0.05, 0] call EFUNC(common,waitAndExecute);
-
     _unit setVariable [QGVAR(CargoIndex), ((vehicle _unit) getCargoIndex _unit), true];
 
     if (_unit == ACE_player) then {
         showHUD false;
     };
+
+    // fix anim on mission start (should work on dedicated servers)
+    [{
+        PARAMS_1(_unit);
+        if (_unit getVariable [QGVAR(isHandcuffed), false] && {vehicle _unit == _unit}) then {
+            [_unit] call EFUNC(common,fixLoweredRifleAnimation);
+            [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
+        };
+    }, [_unit], 0.01, 0] call EFUNC(common,waitAndExecute);
 } else {
     _unit setVariable [QGVAR(isHandcuffed), false, true];
     [_unit, QGVAR(Handcuffed), false] call EFUNC(common,setCaptivityStatus);
     if ((vehicle _unit) == _unit) then {
+        //Break out of hands up animation loop (doAnimation handles Unconscious prioity)
         [_unit, "ACE_AmovPercMstpScapWnonDnon_AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
     };
 

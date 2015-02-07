@@ -18,9 +18,9 @@
 
 PARAMS_2(_unit,_target);
 
-//Alive, handcuffed, not being escored, and not unconsious
+//Alive, handcuffed, not being escored, and not unconscious
 
 (_target getVariable [QGVAR(isHandcuffed), false]) &&
 {isNull (attachedTo _target)} &&
 {alive _target} &&
-{!(_target getVariable [QGVAR(ACE_isUnconscious), false])}
+{!(_target getVariable ["ACE_isUnconscious", false])}
