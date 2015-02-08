@@ -1,3 +1,5 @@
+#define DEBUG_MODE_FULL
+
 #define COMPONENT magazinerepack
 #include "\z\ace\addons\main\script_mod.hpp"
 

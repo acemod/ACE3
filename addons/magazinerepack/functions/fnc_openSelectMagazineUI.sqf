@@ -1,40 +1,47 @@
-// by commy2
+// by commy2, esteldunedain
 #include "script_component.hpp"
 
-private ["_unit", "_magazines", "_repackTime", "_listIDC", "_count", "_index", "_magazine", "_time", "_displayName", "_picture"];
+private ["_unit", "_magazines", "_ammos", "_repackTime", "_magazine", "_ammo", "_count", "_index",   "_i", "_j", "_ammoToTransfer", "_ammoAvailable", "_ammoNeeded"];
 
-_unit = _this select 0;
-_magazines = _this select 1;
-_repackTime = _this select 2;
+PARAMS_1(_unit);
 
-_count = count _magazines;
+_unitMagazines = [];
+_unitMagCounts = [];
+
+// get all mags and ammo count
+{
+    _xClassname = _x select 0;
+    _xCount = _x select 1;
+    _fullMagazineCount = getNumber (configfile >> "CfgMagazines" >> _xClassname >> "count");
+
+    if ((_xCount != _fullMagazineCount) && {_xCount > 1}) then {//for every partial magazine
+        _index = _unitMagazines find _xClassname;
+        if (_index == -1) then {
+            _unitMagazines pushBack _xClassname;
+            _unitMagCounts pushBack [_xCount];
+        } else {
+            (_unitMagCounts select _index) pushBack _xCount;
+        };
+    };
+} forEach magazinesAmmoFull _unit;
 
 _actions = [localize "STR_ACE_MagazineRepack_SelectMagazineMenu", localize "STR_ACE_MagazineRepack_SelectMagazine"] call EFUNC(interaction,prepareSelectMenu);
-for "_index" from 0 to (_count - 1) do {
-    _magazine = _magazines select _index;
-    _time = _repackTime select _index;
-    _displayName = getText (configFile >> "CfgMagazines" >> _magazine >> "displayName");
-    _picture = getText (configFile >> "CfgMagazines" >> _magazine >> "picture");
-    _actions = [
-        _actions,
-        _displayName,
-        _picture,
-        [str _unit, _magazine, _time]
-    ] call EFUNC(interaction,addSelectableItem);
-};
+
+systemChat format ["%1 - %2", _unitMagazines, _unitMagCounts];
+
+{
+    if ((count (_unitMagCounts select _forEachIndex)) >= 2) then {// Ignore invalid magazines types (need 2+ partial mags to do anything)
+        _displayName = getText (configFile >> "CfgMagazines" >> _x >> "displayName");
+        _picture = getText (configFile >> "CfgMagazines" >> _x >> "picture");
+        _actions = [_actions, _displayName, _picture, _x] call EFUNC(interaction,addSelectableItem);
+    };
+} forEach _unitMagazines;
 
 [
-    _actions,
-    {
-        _data = _this;
-        call EFUNC(interaction,hideMenu);
-        if (isNil "_data") exitWith {};
-        _data set [2, [_data select 2] call EFUNC(common,toNumber)];
-        [(_data select 2), _data, {(_this select 0) call FUNC(magazineRepackCallback)}, {}, (localize "STR_ACE_MagazineRepack_RepackingMagazine")] call EFUNC(common,progressBar);
-        [ACE_player] call EFUNC(common,goKneeling);
-    },
-    {
-        call EFUNC(interaction,hideMenu);
-        if !(profileNamespace getVariable [QGVAR(AutoCloseMenu), false]) then {"Default" call EFUNC(interaction,openMenuSelf)};
-    }
+_actions,
+{ [ACE_player, _this] call FUNC(startRepackingMagazine); },
+{
+    call EFUNC(interaction,hideMenu);
+    if !(profileNamespace getVariable [QGVAR(AutoCloseMenu), false]) then {"Default" call EFUNC(interaction,openMenuSelf)};
+}
 ] call EFUNC(interaction,openSelectMenu);

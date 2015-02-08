@@ -13,6 +13,7 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
 
 class ACE_Parameters_Numeric {
