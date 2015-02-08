@@ -1,18 +1,38 @@
-// by commy2, esteldunedain
+/*
+ * Author: PabstMirror (based on repack from commy2, esteldunedain, Ruthberg)
+ * Starts repacking a specific magazine classname.
+ * Precalcs all the event timings and starts the progressBar.
+ *
+ * Arguments:
+ * 0: Magazine Classname <STRING>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * ["30Rnd_65x39_caseless_mag"] call ace_magazinerepack_fnc_startRepackingMagazine
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_unit", "_magazines", "_ammos", "_repackTime", "_magazine", "_ammo", "_count", "_index",   "_i", "_j", "_ammoToTransfer", "_ammoAvailable", "_ammoNeeded"];
+private ["_unit", "_fullMagazineCount", "_startingAmmoCounts", "_simEvents", "_totalTime"];
 
-PARAMS_2(_unit,_magazineClassname);
+PARAMS_1(_magazineClassname);
 if (isNil "_magazineClassname" || {_magazineClassname == ""}) exitWith {ERROR("Bad Mag Classname");};
 
-[_unit] call EFUNC(common,goKneeling);
+_unit = ACE_player;
+
+[ACE_player] call EFUNC(common,goKneeling);
 call EFUNC(interaction,hideMenu);
+
+// Calculate actual ammo to transfer during repack
+_fullMagazineCount = getNumber (configfile >> "CfgMagazines" >> _magazineClassname >> "count");
 
 _startingAmmoCounts = [];
 {
     EXPLODE_4_PVT(_x,_xClassname,_xCount,_xLoaded,_xType);
-    if (_xClassname == _magazineClassname) then {
+    if ((_xClassname == _magazineClassname) && {(_xCount != _fullMagazineCount) && {_xCount > 0}}) then {
         if (_xLoaded) then {
             //Try to Remove from weapon and add to inventory, otherwise ignore
             if (_unit canAdd _magazineClassname) then {
@@ -31,9 +51,9 @@ _startingAmmoCounts = [];
     };
 } forEach (magazinesAmmoFull _unit);
 
-if ((count _startingAmmoCounts) == 0) exitwith {ERROR("No Mags");};
+if ((count _startingAmmoCounts) < 2) exitwith {ERROR("Not Enough Mags to Repack");};
 
-_simEvents = [_magazineClassname, _startingAmmoCounts] call FUNC(simulateRepackEvents);
+_simEvents = [_fullMagazineCount, _startingAmmoCounts] call FUNC(simulateRepackEvents);
 _totalTime = (_simEvents select ((count _simEvents) - 1) select 0);
 
 [_totalTime, [_magazineClassname, _startingAmmoCounts, _simEvents], {hint "done"}, {hint "fail"}, (localize "STR_ACE_MagazineRepack_RepackingMagazine"), {_this call FUNC(magazineRepackProgress)}] call EFUNC(common,progressBar);
