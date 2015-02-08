@@ -39,7 +39,6 @@ if (_settingData select 6) exitWith {};
 _failed = false;
 if ((typeName _value) != (_settingData select 1)) then {
     _failed = true;
-    diag_log (typeName _value);
     if ((_settingData select 1) == "BOOL" and (typeName _value) == "SCALAR") then {
         // If value is not 0 or 1 consider it invalid and don't set anything
         if (_value == 0) then {

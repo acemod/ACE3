@@ -18,7 +18,7 @@ _fnc_getValueWithType = {
     EXPLODE_2_PVT(_this,_optionEntry,_typeName);
 
     _value = getNumber (_optionEntry >> "value");
-    diag_log text format ["%1 %2: %3", configName _optionEntry, _typeName, _value];
+    TRACE_3("_fnc_getValueWithType:", configName _optionEntry, _typeName, _value);
     if (_typeName == "BOOL") exitWith {
         _value > 0
     };
