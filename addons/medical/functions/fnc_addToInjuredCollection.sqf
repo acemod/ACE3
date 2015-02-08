@@ -21,9 +21,22 @@ if !(_unit getvariable[QGVAR(addedToUnitLoop),false]) then{
 };
 
 if ([_unit] call FUNC(hasMedicalEnabled)) then {
-    if (isnil QGVAR(injuredUnitCollection)) then {
-        GVAR(injuredUnitCollection) = [];
-    };
-    if (_unit in GVAR(injuredUnitCollection)) exitwith {};
-    GVAR(injuredUnitCollection) pushback _unit;
+	[{
+		private "_unit";
+		_unit = (_this select 0) select 0;
+        if (!alive _unit || !local _unit) then {
+           [_this select 1] call CBA_fnc_removePerFrameHandler;
+        } else {
+            [_unit] call FUNC(handleUnitVitals);
+
+            private "_pain";
+            _pain = _unit getvariable [QGVAR(pain), 0];
+            if (_pain > 45) then {
+                if (random(1) > 0.6) then {
+                //    [_unit] call FUNC(setUnconsciousState);
+                };
+                //[_unit] call FUNC(playInjuredSound);
+            };
+        };
+	}, 1, [_unit]] call CBA_fnc_addPerFrameHandler;
 };
