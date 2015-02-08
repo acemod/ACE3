@@ -23,7 +23,7 @@ _unit setvariable [QGVAR(heartRate), 0];
 
 ["Medical_onEnteredCardiacArrest", [_unit]] call ace_common_fnc_localEvent;
 
-//[_unit] call FUNC(setUnconsciousState);
+[_unit] call FUNC(setUnconscious);
 _counter = 120 + round(random(600));
 _timer = 0;
 

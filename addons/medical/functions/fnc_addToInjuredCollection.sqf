@@ -1,11 +1,14 @@
-/**
- * fnc_addToInjuredCollection.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Enabled the vitals loop for a unit.
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: The Unit <OBJECT>
+ *
+ * ReturnValue:
+ * <NIL>
+ *
+ * Public: Yes
  */
 
 #include "script_component.hpp"
@@ -33,7 +36,7 @@ if ([_unit] call FUNC(hasMedicalEnabled)) then {
             _pain = _unit getvariable [QGVAR(pain), 0];
             if (_pain > 45) then {
                 if (random(1) > 0.6) then {
-                //    [_unit] call FUNC(setUnconsciousState);
+                    [_unit] call FUNC(setUnconscious);
                 };
                 //[_unit] call FUNC(playInjuredSound);
             };

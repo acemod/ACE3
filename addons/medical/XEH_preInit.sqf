@@ -21,6 +21,9 @@ PREP(getCardiacOutput);
 PREP(setCardiacArrest);
 PREP(addToInjuredCollection);
 PREP(setUnconscious);
+PREP(getUnconsciousCondition);
+PREP(addUnconsciousCondition);
+
 GVAR(injuredUnitCollection) = [];
 
 ADDON = true;
