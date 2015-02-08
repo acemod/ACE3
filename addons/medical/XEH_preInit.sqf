@@ -23,6 +23,8 @@ PREP(addToInjuredCollection);
 PREP(setUnconscious);
 PREP(getUnconsciousCondition);
 PREP(addUnconsciousCondition);
+PREP(setDead);
+PREP(playInjuredSound);
 
 GVAR(injuredUnitCollection) = [];
 

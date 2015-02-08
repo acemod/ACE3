@@ -1,11 +1,14 @@
-/**
- * fn_setUnconsciousState.sqf
- * @Descr: Sets a unit in the unconscious state
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Sets a unit in the unconscious state.
  *
- * @Arguments: [unit OBJECT]
- * @Return: void
- * @PublicAPI: true
+ * Arguments:
+ * 0: The unit that will be put in an unconscious state <OBJECT>
+ *
+ * ReturnValue:
+ * <NIL>
+ *
+ * Public: yes
  */
 
 #include "script_component.hpp"

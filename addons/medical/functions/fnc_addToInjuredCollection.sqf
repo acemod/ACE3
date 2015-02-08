@@ -38,7 +38,7 @@ if ([_unit] call FUNC(hasMedicalEnabled)) then {
                 if (random(1) > 0.6) then {
                     [_unit] call FUNC(setUnconscious);
                 };
-                //[_unit] call FUNC(playInjuredSound);
+                [_unit] call FUNC(playInjuredSound);
             };
         };
 	}, 1, [_unit]] call CBA_fnc_addPerFrameHandler;

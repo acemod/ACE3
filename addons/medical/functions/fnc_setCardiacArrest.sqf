@@ -40,8 +40,7 @@ _timer = 0;
         [(_this select 1)] call cba_fnc_removePerFrameHandler;
     };
     if (_counter - _timer < 1) exitwith {
-
-        //[_unit] call FUNC(setDead);
+        [_unit] call FUNC(setDead);
         [(_this select 1)] call cba_fnc_removePerFrameHandler;
         _unit setvariable [QGVAR(inCardiacArrest), nil,true];
     };

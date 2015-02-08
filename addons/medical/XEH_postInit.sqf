@@ -43,14 +43,14 @@ GVAR(effectUnconsciousUnit) = objNull;
                 GVAR(playingHeartBeatSound) = true;
                 _sleep = 60 / _heartRate;
                 if (_heartRate < 60) then {
-                    _sound = _hbSoundsSlow select (random((count _hbSoundsSlow) -1));
+                    _sound = GVAR(heartBeatSounds_Slow) select (random((count GVAR(heartBeatSounds_Slow)) -1));
                     playSound _sound;
                     [{
                         GVAR(playingHeartBeatSound) = false;
                     }, [], _sleep, _sleep] call EFUNC(common,waitAndExecute);
                 } else {
                     if (_heartRate > 120) then {
-                        _sound = _hbSoundsFast select (random((count _hbSoundsFast) -1));
+                        _sound = GVAR(heartBeatSounds_Fast) select (random((count GVAR(heartBeatSounds_Fast)) -1));
                         playSound _sound;
                         [{
                             GVAR(playingHeartBeatSound) = false;

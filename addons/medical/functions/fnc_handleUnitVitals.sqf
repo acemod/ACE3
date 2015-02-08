@@ -43,7 +43,7 @@ if ((_unit call FUNC(getBloodLoss)) > 0) then {
     };
 };
 
-_painStatus = _unit getvariable [QGVAR(amountOfPain), 0];
+_painStatus = _unit getvariable [QGVAR(pain), 0];
 if (_painStatus > 0) then {
     if !(_unit getvariable [QGVAR(hasPain), false]) then {
         _unit setvariable [QGVAR(hasPain), true, true];
@@ -56,7 +56,7 @@ if (_painStatus > 0) then {
 
 
 if (_bloodVolume < 30) exitwith {
-  //  [_unit] call FUNC(setDead);
+    [_unit] call FUNC(setDead);
 };
 
 if ([_unit] call EFUNC(common,isAwake)) then {
