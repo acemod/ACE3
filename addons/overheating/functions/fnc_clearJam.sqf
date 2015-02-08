@@ -1,15 +1,16 @@
 /*
  * Author: Commy2
+ * Make the unit clear the jam from a weapon
  *
- * Clears the jam from a weapon
+ * Arguments:
+ * 0: Player <OBJECT>
+ * 1: Weapon <STRING>
+ * 2: Skip anim? <BOOL>
  *
- * Argument:
- * 0: Last temperature (number)
- * 1: Barrel mass (number)
- * 2: Time (number)
+ * Return Value:
+ * None
  *
- * Return value:
- * New temperature (number)
+ * Public: No
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
