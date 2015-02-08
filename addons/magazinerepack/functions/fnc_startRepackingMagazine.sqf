@@ -56,4 +56,11 @@ if ((count _startingAmmoCounts) < 2) exitwith {ERROR("Not Enough Mags to Repack"
 _simEvents = [_fullMagazineCount, _startingAmmoCounts] call FUNC(simulateRepackEvents);
 _totalTime = (_simEvents select ((count _simEvents) - 1) select 0);
 
-[_totalTime, [_magazineClassname, _startingAmmoCounts, _simEvents], {hint "done"}, {hint "fail"}, (localize "STR_ACE_MagazineRepack_RepackingMagazine"), {_this call FUNC(magazineRepackProgress)}] call EFUNC(common,progressBar);
+[
+_totalTime,
+[_magazineClassname, _startingAmmoCounts, _simEvents],
+{_this call FUNC(magazineRepackFinish)},
+{_this call FUNC(magazineRepackFinish)},
+(localize "STR_ACE_MagazineRepack_RepackingMagazine"),
+{_this call FUNC(magazineRepackProgress)}
+] call EFUNC(common,progressBar);

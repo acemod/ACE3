@@ -2,6 +2,7 @@
 
 ADDON = false;
 
+PREP(magazineRepackFinish);
 PREP(magazineRepackProgress);
 PREP(openSelectMagazineUI);
 PREP(simulateRepackEvents);
