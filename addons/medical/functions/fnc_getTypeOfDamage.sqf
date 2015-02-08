@@ -1,11 +1,14 @@
-/**
- * fn_getTypeOfDamage.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Get the type of damage based upon the projectile.
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: The projectile classname or object <STRING>
+ *
+ * ReturnValue:
+ * Type of damage <STRING>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

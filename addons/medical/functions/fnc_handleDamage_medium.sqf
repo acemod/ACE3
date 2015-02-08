@@ -1,3 +1,21 @@
+/*
+ * Author: Glowbal
+ * Medium HandleDamage EH function.
+ *
+ * Arguments:
+ * 0: Unit That Was Hit <OBJECT>
+ * 1: Name Of Hit Selection <STRING>
+ * 2: Amount Of Damage <NUMBER>
+ * 3: Shooter <OBJECT>
+ * 4: Projectile <STRING>
+ * 5: Current damage to be returned <NUMBER>
+ * 6: Type of Damage <STRING>
+ *
+ * Return Value:
+ * Damage To Be Inflicted <NUMBER>
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 

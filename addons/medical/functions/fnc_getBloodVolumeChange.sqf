@@ -1,11 +1,14 @@
-/**
- * fn_getBloodVolumeChange.sqf
- * @Descr: Calculates the blood volume change and decreases the IVs given to the unit.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Calculates the blood volume change and decreases the IVs given to the unit.
  *
- * @Arguments: []
- * @Return: NUMBER Bloodvolume change
- * @PublicAPI: false
+ * Arguments:
+ * 0: The Unit <OBJECT>
+ *
+ * ReturnValue:
+ * Current cardiac output <NUMBER>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

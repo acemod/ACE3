@@ -1,11 +1,14 @@
-/**
- * fn_handleUnitVitals.sqf
- * @Descr: Updates the vitals. Is expected to be called every second.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Updates the vitals. Is expected to be called every second.
  *
- * @Arguments: [unit OBJECT]
- * @Return: void
- * @PublicAPI: false
+ * Arguments:
+ * 0: The Unit <OBJECT>
+ *
+ * ReturnValue:
+ * <NIL>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

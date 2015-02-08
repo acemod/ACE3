@@ -1,11 +1,18 @@
-/**
- * fn_assignAirwayStatus.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Handling of the airway injuries upon the handleDamage eventhandler.
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: Unit That Was Hit <OBJECT>
+ * 1: Name Of Hit Selection <STRING>
+ * 2: Amount Of Damage <NUMBER>
+ * 3: Shooter or source of the damage <OBJECT>
+ * 4: Type of the damage done <STRING>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

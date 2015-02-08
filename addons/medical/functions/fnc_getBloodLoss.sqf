@@ -1,11 +1,14 @@
-/**
- * fn_getBloodLoss.sqf
- * @Descr: Calculate the total blood loss of a unit.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Calculate the total blood loss of a unit.
  *
- * @Arguments: [unit OBJECT]
- * @Return: NUMBER Total blood loss of unit
- * @PublicAPI: true
+ * Arguments:
+ * 0: The Unit <OBJECT>
+ *
+ * ReturnValue:
+ * Total blood loss of unit <NUMBER>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
