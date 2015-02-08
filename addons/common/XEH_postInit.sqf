@@ -2,7 +2,9 @@
 #include "script_component.hpp"
 
 // Load settings from profile
-call FUNC(loadSettingsFromProfile);
+if (hasInterface) then {
+    call FUNC(loadSettingsFromProfile);
+};
 
 // Listens for global "SettingChanged" events, to update the force status locally
 ["SettingChanged", {
