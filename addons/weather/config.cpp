@@ -14,11 +14,3 @@ class CfgPatches {
 #include "CfgEventhandlers.hpp"
 
 #include "CfgWorlds.hpp"
-
-/*class ACE_Parameters_Numeric {
-  GVAR(XXXX) = 100;
-};
-
-class ACE_Parameters_Boolean {
-  GVAR(XXXX) = 0;
-};*/

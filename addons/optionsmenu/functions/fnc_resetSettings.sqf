@@ -13,13 +13,13 @@ private ["_name", "_default", "_lastSelected"];
 
 {
   _name = _x select 0;
-  _default = _x select 5;
+  _default = _x select 7;
   [MENU_TAB_OPTIONS, _name, _default] call FUNC(updateSetting);
 } forEach GVAR(clientSideOptions);
 
 {
   _name = _x select 0;
-  _default = _x select 4;
+  _default = _x select 7;
   [MENU_TAB_COLORS, _name, _default] call FUNC(updateSetting);
 } forEach GVAR(clientSideColors);
 

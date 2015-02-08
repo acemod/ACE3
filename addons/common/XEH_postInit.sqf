@@ -1,6 +1,25 @@
 // ACE - Common
 #include "script_component.hpp"
 
+// Load settings from profile
+if (hasInterface) then {
+    call FUNC(loadSettingsFromProfile);
+};
+
+// Listens for global "SettingChanged" events, to update the force status locally
+["SettingChanged", {
+
+    PARAMS_2(_name,_value);
+    if !(count _this > 2) exitWith {};
+
+    _force = _this select 2;
+    if (_force) then {
+        _settingData = [_name] call FUNC(getSettingData);
+        if (count _settingData == 0) exitWith {};
+        _settingData set [6,_force];
+    };
+}] call FUNC(addEventhandler);
+
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
     if (time > 0) exitWith {

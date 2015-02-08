@@ -25,7 +25,7 @@ GVAR(newStrength) = GVAR(newStrength) max _strength;
 if (missionNamespace getVariable [QGVAR(isEarRingingPlaying), false]) exitWith {};
 
 
-if (profileNamespace getVariable [QGVAR(DisableEarRinging), false]) exitWith {};
+if (GVAR(DisableEarRinging)) exitWith {};
 
 if (_strength > 0.75) exitWith {
   playSound "ACE_EarRinging_Heavy";

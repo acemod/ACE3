@@ -66,7 +66,7 @@ _cacheIndices = _cache select 2;
 			_statement = getText (_action >> "statement");
 			_statement = compile _statement;
 
-			if (profileNamespace getVariable ["ACE_Interaction_FlowMenu", false]) then {
+			if (GVAR(FlowMenu)) then {
 				_statement = if (getText (_action >> "statement") == "" && {count _subMenu > 1}) then {
 					compile format [QUOTE( call FUNC(hideMenu);if(%2 == 1)then{['%1'] call FUNC(openSubMenuSelf);}else{['%1'] call FUNC(openSubMenu);}; ), _subMenu select 0, _subMenu select 1];
 				} else {

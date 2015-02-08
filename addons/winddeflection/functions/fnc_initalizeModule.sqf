@@ -15,5 +15,5 @@ if (!hasInterface) exitwith {}; // No need for this module on HC or dedicated se
 private ["_logic"];
 _logic = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if (!isNull _logic) then {
-	[_logic, QGVAR(EnableForAI), "forAI" ] call EFUNC(common,readBooleanParameterFromModule);
+	[_logic, QGVAR(EnableForAI), "EnableForAI" ] call EFUNC(common,readSettingFromModule);
 };

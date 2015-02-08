@@ -18,23 +18,29 @@ class CfgPatches {
 
 #include <Menu_Config.hpp>
 
-class ACE_Options {
-  class Interaction_FlowMenu {
+class ACE_Settings {
+  class GVAR(FlowMenu) {
+    value = 0;
+    typeName = "BOOL";
+    isClientSetable = 1;
     displayName = "$STR_ACE_Interaction_FlowMenu";
-    default = 0;
   };
-  class Interaction_AutoCloseMenu {
+  class GVAR(AutoCloseMenu) {
+    value = 0;
+    typeName = "BOOL";
+    isClientSetable = 1;
     displayName = "$STR_ACE_Interaction_AutoCloseMenu";
-    default = 0;
   };
-  class Interaction_AutoCenterCursor {
+  class GVAR(AutoCenterCursor) {
+    value = 1;
+    typeName = "BOOL";
+    isClientSetable = 1;
     displayName = "$STR_ACE_Interaction_AutoCenterCursor";
-    default = 1;
   };
-};
-
-class ACE_Parameters_Boolean {
-  ACE_Interaction_EnableTeamManagement = 1;
+  class GVAR(EnableTeamManagement) {
+    value = 1;
+    typeName = "BOOL";
+  };
 };
 
 class ACE_canInteractConditions {
