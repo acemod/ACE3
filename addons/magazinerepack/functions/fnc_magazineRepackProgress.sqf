@@ -36,6 +36,7 @@ _currentAmmoCount = [];
     };
 } forEach (magazinesAmmo ACE_player);  //only inventory mags
 
+//Go through mags we currently have and check off the ones we should have
 _addedMagazines = +_currentAmmoCount;
 _missingAmmo = false;
 {
@@ -49,10 +50,7 @@ _missingAmmo = false;
     };
 } forEach _lastAmmoCount;
 
-if (_missingAmmo) exitWith {false};  //something removed ammo that was being repacked
-if ((count _addedMagazines) > 0) then {
-    TRACE_1("Added Magazine While Repacking",_addedMagazines);
-};
+if (_missingAmmo) exitWith {false};  //something removed ammo that was being repacked (could be other players or scripts)
 
 _updateMagazinesOnPlayerFnc = {
     ACE_player removeMagazines _magazineClassname;  //remove inventory magazines
@@ -67,6 +65,7 @@ _updateMagazinesOnPlayerFnc = {
 if (_nextEventIsBullet) then {
     playSound QGVAR(soundMagazineFinished);
     if ((((count _simEvents) % 3) == 0) || {(count _simEvents) == 1}) then {
+        //For performance - only update mags every 3 bullets (or if it's the last event)
         call _updateMagazinesOnPlayerFnc;
     };
 } else {

@@ -1,6 +1,7 @@
 /*
  * Author: PabstMirror (based on repack from commy2, esteldunedain, Ruthberg)
  * Starts repacking a specific magazine classname.
+ * If room in inventory, unload magazine from weapon to be repacked.
  * Precalcs all the event timings and starts the progressBar.
  *
  * Arguments:
@@ -24,7 +25,7 @@ if (isNil "_magazineClassname" || {_magazineClassname == ""}) exitWith {ERROR("B
 _unit = ACE_player;
 
 [ACE_player] call EFUNC(common,goKneeling);
-call EFUNC(interaction,hideMenu);
+call EFUNC(interaction,hideMenu);//ToDo: Self Interaction Integration
 
 // Calculate actual ammo to transfer during repack
 _fullMagazineCount = getNumber (configfile >> "CfgMagazines" >> _magazineClassname >> "count");

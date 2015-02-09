@@ -37,7 +37,7 @@ _unitMagCounts = [];
             (_unitMagCounts select _index) pushBack _xCount;
         };
     };
-} forEach magazinesAmmoFull _unit;
+} forEach (magazinesAmmoFull _unit);
 
 _actions = [localize "STR_ACE_MagazineRepack_SelectMagazineMenu", localize "STR_ACE_MagazineRepack_SelectMagazine"] call EFUNC(interaction,prepareSelectMenu);
 
@@ -53,7 +53,7 @@ _actions = [localize "STR_ACE_MagazineRepack_SelectMagazineMenu", localize "STR_
 _actions,
 { [_this] call FUNC(startRepackingMagazine); },
 {
-    call EFUNC(interaction,hideMenu);
+    call EFUNC(interaction,hideMenu); //ToDo: Self Interaction Integration
     if !(profileNamespace getVariable [QGVAR(AutoCloseMenu), false]) then {"Default" call EFUNC(interaction,openMenuSelf)};
 }
 ] call EFUNC(interaction,openSelectMenu);

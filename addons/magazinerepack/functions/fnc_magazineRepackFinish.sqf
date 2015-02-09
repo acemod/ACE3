@@ -1,5 +1,5 @@
 /*
- * Author: PabstMirror
+ * Author: PabstMirror (based on repack from commy2, esteldunedain, Ruthberg)
  * Simulates repacking a set of magazines.
  * Returns the timing and magazines counts at every stage.
  *
