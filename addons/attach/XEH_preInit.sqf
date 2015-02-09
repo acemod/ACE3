@@ -7,5 +7,7 @@ PREP(canAttach);
 PREP(canDetach);
 PREP(detach);
 PREP(openAttachUI);
+PREP(placeApprove);
+PREP(placeCancel);
 
 ADDON = true;
