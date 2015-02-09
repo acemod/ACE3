@@ -16,6 +16,8 @@
 
 #include "script_component.hpp"
 
+/*
+
 DFUNC(pfhClientInit) = {
     
     if (GVAR(EnableSwitchUnits)) exitWith {
@@ -37,3 +39,5 @@ DFUNC(pfhClientInit) = {
 };
 
 [FUNC(pfhClientInit), 0.5, []] call cba_fnc_addPerFrameHandler;
+
+*/
