@@ -16,7 +16,10 @@
 
 #include "script_component.hpp"
 
-EXPLODE_1_PVT[_this,_player];
+
+private "_player";
+_player = _this select 0;
+
 
 if (GVAR(EnableSwitchUnits)) then {
     private ["_sides"];
