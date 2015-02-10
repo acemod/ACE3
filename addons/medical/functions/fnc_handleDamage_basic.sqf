@@ -43,6 +43,7 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo), -3]) + 2) then {
     _unit setVariable [QGVAR(hitPoints), []];
     _unit setVariable [QGVAR(damages), []];
     _unit setVariable [QGVAR(structDamage), 0];
+    _unit setVariable [QGVAR(preventDeath), false];
 };
 
 

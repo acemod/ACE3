@@ -56,8 +56,18 @@ if (_damageReturn < 0.01) exitWith {0};
 if (GVAR(level) >= 1) then {
     _damageReturn = (_this + [_damageReturn, _typeOfDamage]) call FUNC(handleDamage_medium);
     if (GVAR(level) >= 2) then {
-	    _damageReturn = (_this + [_damageReturn, _typeOfDamage]) call FUNC(handleDamage_advanced);
-	};
+	      _damageReturn = (_this + [_damageReturn, _typeOfDamage]) call FUNC(handleDamage_advanced);
+	  };
+};
+
+if (_unit getVariable [QGVAR(preventDeath), false] and
+        {_damageReturn >= 0.9} and
+        {_selection in ["", "head", "body"]}) exitWith {
+    if (vehicle _unit != _unit and {damage _vehicle >= 1}) then {
+        // @todo
+        // [_unit] call FUNC(unload);
+    };
+    0.89
 };
 
 _damageReturn
