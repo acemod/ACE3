@@ -1,29 +1,25 @@
 /*
  * Author: KoffeinFlummi
- *
  * Checks if a player can adjust his optic in the given way.
  *
- * Arguments:
- * 0: Horizontal adjustment
- * 1: Vertical adjustment
+ * Argument:
+ * 0: Unit <OBJECT>
+ * 1: Horizontal adjustment <NUMBER>
+ * 2: Vertical adjustment <NUMBER>
  *
- * Return Value:
- * Can adjustment be done? (Bool)
+ * Return value:
+ * Can adjustment be done? <BOOL>
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
-private ["_unit", "_weapons", "_zeroing", "_optic", "_maxHorizontal", "_maxVertical"];
+private ["_unit", "_weaponIndex", "_zeroing", "_optic", "_maxHorizontal", "_maxVertical"];
 
 _unit = _this select 0;
 
-_weapons = [
-    primaryWeapon _unit,
-    secondaryWeapon _unit,
-    handgunWeapon _unit
-];
-
-if !(currentWeapon _unit in _weapons) exitWith {false};
+_weaponIndex = [_unit, currentWeapon _unit] call FUNC(getWeaponIndex);
+if (_weaponIndex < 0) exitWith {false};
 
 _adjustment = _unit getVariable QGVAR(Adjustment);
 if (isNil "_adjustment") then {
@@ -34,11 +30,11 @@ if (isNil QGVAR(Optics)) then {
     GVAR(Optics) = ["", "", ""];
 };
 
-_zeroing = _adjustment select (_weapons find (currentWeapon _unit));
+_zeroing = _adjustment select _weaponIndex;
 _zeroX = (_zeroing select 0) + (_this select 1);
 _zeroY = (_zeroing select 1) + (_this select 2);
 
-_optic = GVAR(Optics) select (_weapons find (currentWeapon _unit));
+_optic = GVAR(Optics) select _weaponIndex;
 _maxHorizontal = getArray (configFile >> "CfgWeapons" >> _optic >> "ACE_ScopeAdjust_Horizontal");
 _maxVertical = getArray (configFile >> "CfgWeapons" >> _optic >> "ACE_ScopeAdjust_Vertical");
 if ((count _maxHorizontal < 2) or (count _maxVertical < 2)) exitWith {false};
