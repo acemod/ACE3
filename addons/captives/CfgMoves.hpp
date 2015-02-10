@@ -7,14 +7,16 @@ class CfgMovesBasic {
             stop = "ACE_AmovPercMstpScapWnonDnon";
             StopRelaxed = "ACE_AmovPercMstpScapWnonDnon";
             default = "ACE_AmovPercMstpScapWnonDnon";
+            PutDown = "";
             getOver = "";
             throwPrepare = "";
             throwGrenade[] = {"","Gesture"};
         };
         class ACE_CivilStandSurrenderActions: ACE_CivilStandHandcuffedActions {
-            stop = "ACE_AmovPercMstpScapWnonDnon";
-            StopRelaxed = "ACE_AmovPercMstpScapWnonDnon";
-            default = "ACE_AmovPercMstpScapWnonDnon";
+            stop = "ACE_AmovPercMstpSsurWnonDnon";
+            StopRelaxed = "ACE_AmovPercMstpSsurWnonDnon";
+            default = "ACE_AmovPercMstpSsurWnonDnon";
+            PutDown = "";
         };
     };
 };
