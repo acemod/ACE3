@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi
+ * Author: KoffeinFlummi and CAA-Picard
  *
  * Adjusts the flight path of the bullet according to the zeroing
  *
@@ -12,13 +12,17 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_weaponType", "_ammoType", "_magazineType", "_round", "_weapons", "_zeroing", "_direction", "_azimuth", "_altitude", "_velocity"];
+private ["_unit", "_weaponType", "_round", "_weapons", "_zeroing", "_adjustment"];
 
 _unit = _this select 0;
+
+_adjustment = _unit getVariable QGVAR(Adjustment);
+if (isNil "_adjustment") exitWith {};
+
+if !([_unit] call EFUNC(common,isPlayer)) exitWith {};
+
 _weaponType = _this select 1;
-_ammoType = _this select 4;
 _round = _this select 5;
-_magazineType = _this select 6;
 
 _weapons = [
     primaryWeapon _unit,
@@ -27,7 +31,7 @@ _weapons = [
 ];
 if !(_weaponType in _weapons) exitWith {};
 
-_zeroing = GVAR(Adjustment) select (_weapons find _weaponType);
+_zeroing = _adjustment select (_weapons find _weaponType);
 
 // convert zeroing from mils to degrees
 _zeroing = [_zeroing, {_this * 0.05625}] call EFUNC(common,map);

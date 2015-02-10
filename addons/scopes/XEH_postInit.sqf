@@ -15,6 +15,8 @@ if !(hasInterface) exitWith {};
     while {True} do {
         waitUntil {[ACE_player, 0,0] call FUNC(canAdjustScope)};
         _layer cutRsc [QGVAR(Zeroing), "PLAIN", 0, false];
+        call FUNC(showZeroing);
+
         sleep 3;
         _layer cutFadeOut 2;
 

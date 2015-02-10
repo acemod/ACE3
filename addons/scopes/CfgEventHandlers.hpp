@@ -13,7 +13,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_Fired_EventHandlers {
     class CAManBase {
         class ADDON {
-            clientFired = QUOTE(if (_this select 0 == ACE_player) then { _this call FUNC(firedEH);};);
+            fired = QUOTE(_this call FUNC(firedEH););
         };
     };
 };

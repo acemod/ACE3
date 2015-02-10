@@ -25,15 +25,16 @@ _weapons = [
 
 if !(currentWeapon _unit in _weapons) exitWith {false};
 
-if (isNil QGVAR(Adjustment)) then {
-    GVAR(Adjustment) = [[0,0], [0,0], [0,0]];
+_adjustment = _unit getVariable QGVAR(Adjustment);
+if (isNil "_adjustment") then {
+    _adjustment = [[0,0], [0,0], [0,0]];
 };
 
 if (isNil QGVAR(Optics)) then {
     GVAR(Optics) = ["", "", ""];
 };
 
-_zeroing = GVAR(Adjustment) select (_weapons find (currentWeapon _unit));
+_zeroing = _adjustment select (_weapons find (currentWeapon _unit));
 _zeroX = (_zeroing select 0) + (_this select 1);
 _zeroY = (_zeroing select 1) + (_this select 2);
 

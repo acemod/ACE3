@@ -4,7 +4,7 @@ class RscTitles {
         movingEnable = 0;
         enableSimulation = 1;
         enableDisplay = 1;
-        onLoad = QUOTE(_this spawn compile preprocessFileLineNumbers QUOTE(QUOTE(PATHTOF(scripts\zeroingOnLoad.sqf))); uiNamespace setVariable [ARR_2('ACE_Scopes_Debug', _this)];);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ZeroingDisplay)),_this select 0)];);
         duration = 1e+011;
         fadein = 0;
         fadeout = 0;

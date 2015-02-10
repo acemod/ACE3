@@ -8,6 +8,7 @@ PREP(firedEH);
 PREP(getOptics);
 PREP(hideZeroing);
 PREP(inventoryCheck);
+PREP(showZeroing);
 
 GVAR(fadeScript) = scriptNull;
 
