@@ -91,7 +91,21 @@ GVAR(effectTimeBlood) = time;
         GVAR(effectUnconsciousRB) ppEffectEnable false;
         [false] call EFUNC(common,disableUserInput); // @todo, see above
         if (GVAR(effectBlind)) then {
-            // @todo: blinding effect on wakeup
+            _strength = 0.78 * (call EFUNC(common,ambientBrightness));
+            GVAR(effectBlindingCC) ppEffectEnable true;
+            GVAR(effectBlindingCC) ppEffectAdjust [1,1,_strength, [1,1,1,0], [0,0,0,1], [0,0,0,0]];
+            GVAR(effectBlindingCC) ppEffectCommit 0;
+
+            [{
+                GVAR(effectBlindingCC) ppEffectAdjust [1,1,0, [1,1,1,0], [0,0,0,1], [0,0,0,0]];
+                GVAR(effectBlindingCC) ppEffectCommit ((_this select 0) * 2);
+            }, [_strength], 0.01, 0] call EFUNC(common,waitAndExecute);
+
+            [{
+                GVAR(effectBlindingCC) ppEffectEnable false;
+            }, [], (_strength * 2) + 0.5, 0] call EFUNC(common,waitAndExecute);
+
+            GVAR(effectBlind) = false;
         };
     };
 
