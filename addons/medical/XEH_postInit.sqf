@@ -30,6 +30,7 @@ GVAR(effectUnconsciousCC) = [
     4201,
     [1,1,0, [0,0,0,1], [0,0,0,0], [1,1,1,1], [0.4,0.4,0,0,0,0.1,0.3]]
 ] call _fnc_createEffect;
+
 GVAR(effectUnconsciousRB) = [
     "RadialBlur",
     4202,
@@ -53,6 +54,7 @@ GVAR(effectPainCA) = [
     4205,
     [0, 0, false]
 ] call _fnc_createEffect;
+
 GVAR(effectPainCC) = [
     "ColorCorrections",
     4206,
@@ -66,20 +68,9 @@ GVAR(effectUnconsciousUnit) = objNull;
 GVAR(effectBlind) = false;
 GVAR(effectTimeBlood) = time;
 
-// TODO add settings to allow modification of what is being displayed.
 [{
-    // Zeus interface is open; disable everything
-    if (!isNull (findDisplay 312)) exitWith {
-        GVAR(effectUnconsciousCC) ppEffectEnable false;
-        GVAR(effectUnconsciousRB) ppEffectEnable false;
-        GVAR(effectBlindingCC) ppEffectEnable false;
-        GVAR(effectBloodVolumeCC) ppEffectEnable false;
-        GVAR(effectPainCA) ppEffectEnable false;
-        GVAR(effectPainCC) ppEffectEnable false;
-    };
-
-    // Player is dead; disable everything and reenable input
-    if (!alive ACE_player) exitWith {
+    // Zeus interface is open or player is dead; disable everything
+    if (!(isNull (findDisplay 312)) or !(alive ACE_player)) exitWith {
         GVAR(effectUnconsciousCC) ppEffectEnable false;
         GVAR(effectUnconsciousRB) ppEffectEnable false;
         GVAR(effectBlindingCC) ppEffectEnable false;
@@ -88,8 +79,6 @@ GVAR(effectTimeBlood) = time;
         GVAR(effectPainCC) ppEffectEnable false;
         [false] call EFUNC(common,disableUserInput); // @todo, only when disabled?
     };
-
-    // @todo: merge the above?
 
     // Unconsciousness effect
     if (ACE_player getVariable [QGVAR(isUnconscious), false]) then {
