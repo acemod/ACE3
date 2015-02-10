@@ -1,23 +1,131 @@
+// ACE Medical System Visual Loop
 
 #include "script_component.hpp"
 
 if (!hasInterface) exitwith{};
-//45 cutRsc [QGVAR(ScreenEffectsBlack),"PLAIN"];
 
 GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "ACE_heartbeat_fast_3", "ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
 GVAR(heartBeatSounds_Normal) = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
 GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2", "ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
-
 GVAR(playingHeartBeatSound) = false;
-GVAR(effect_BloodLevel_CC) = ppEffectCreate ["ColorCorrections", 4208];
-GVAR(effect_BloodLevel_CC) ppEffectForceInNVG true;
-GVAR(effect_BloodLevel_CC) ppEffectAdjust [1,1,0, [0,0,0,0], [1,1,1,1], [0.2,0.2,0.2,0]];
-GVAR(effect_BloodLevel_CC) ppEffectCommit 0;
 
+// Initialize all effects
+// @todo: make this a macro?
+_fnc_createEffect = {
+    private ["_type", "_layer", "_default"];
+    _type = _this select 0;
+    _layer = _this select 1;
+    _default = _this select 2;
+
+    _effect = ppEffectCreate [_type, _layer];
+    _effect ppEffectForceInNVG true;
+    _effect ppEffectAdjust _default;
+    _effect ppEffectCommit 0;
+
+    _effect
+};
+
+GVAR(effectUnconsciousCC) = [
+    "ColorCorrections",
+    4201,
+    [1,1,0, [0,0,0,1], [0,0,0,0], [1,1,1,1], [0.4,0.4,0,0,0,0.1,0.3]]
+] call _fnc_createEffect;
+GVAR(effectUnconsciousRB) = [
+    "RadialBlur",
+    4202,
+    [0.01,0.01,0,0]
+] call _fnc_createEffect;
+
+GVAR(effectBlindingCC) = [
+    "ColorCorrections",
+    4203,
+    [1,1,0, [1,1,1,0], [0,0,0,1], [0,0,0,0]]
+] call _fnc_createEffect;
+
+GVAR(effectBloodVolumeCC) = [
+    "ColorCorrections",
+    4204,
+    [1,1,0, [0,0,0,0], [1,1,1,1], [0.2,0.2,0.2,0]]
+] call _fnc_createEffect;
+
+GVAR(effectPainCA) = [
+    "chromAberration",
+    4205,
+    [0, 0, false]
+] call _fnc_createEffect;
+GVAR(effectPainCC) = [
+    "ColorCorrections",
+    4206,
+    [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1.3,1.3,0,0,0,0.2,2]]
+] call _fnc_createEffect;
+
+// @todo; what's this for?
 GVAR(effectUnconsciousUnit) = objNull;
+
+// Initialize Other Variables
+GVAR(effectBlind) = false;
+GVAR(effectTimeBlood) = time;
 
 // TODO add settings to allow modification of what is being displayed.
 [{
+    // Zeus interface is open; disable everything
+    if (!isNull (findDisplay 312)) exitWith {
+        GVAR(effectUnconsciousCC) ppEffectEnable false;
+        GVAR(effectUnconsciousRB) ppEffectEnable false;
+        GVAR(effectBlindingCC) ppEffectEnable false;
+        GVAR(effectBloodVolumeCC) ppEffectEnable false;
+        GVAR(effectPainCA) ppEffectEnable false;
+        GVAR(effectPainCC) ppEffectEnable false;
+    };
+
+    // Player is dead; disable everything and reenable input
+    if (!alive ACE_player) exitWith {
+        GVAR(effectUnconsciousCC) ppEffectEnable false;
+        GVAR(effectUnconsciousRB) ppEffectEnable false;
+        GVAR(effectBlindingCC) ppEffectEnable false;
+        GVAR(effectBloodVolumeCC) ppEffectEnable false;
+        GVAR(effectPainCA) ppEffectEnable false;
+        GVAR(effectPainCC) ppEffectEnable false;
+        [false] call EFUNC(common,disableUserInput); // @todo, only when disabled?
+    };
+
+    // @todo: merge the above?
+
+    // Unconsciousness effect
+    if (ACE_player getVariable [QGVAR(isUnconscious), false]) then {
+        GVAR(effectUnconsciousCC) ppEffectEnable true;
+        GVAR(effectUnconsciousRB) ppEffectEnable true;
+        GVAR(effectBlind) = true;
+        [true, true] call EFUNC(common,disableUserInput); // @todo, see above
+    } else {
+        GVAR(effectUnconsciousCC) ppEffectEnable false;
+        GVAR(effectUnconsciousRB) ppEffectEnable false;
+        [false] call EFUNC(common,disableUserInput); // @todo, see above
+        if (GVAR(effectBlind)) then {
+            // @todo: blinding effect on wakeup
+        };
+    };
+
+    // @todo: pain effect
+
+    // Bleeding Indicator
+    // @todo: redo this after initial release
+    if (damage ACE_player > 0.1 and GVAR(effectTimeBlood) + 6 < time) then {
+        GVAR(effectTimeBlood) = time;
+        [500 * damage ACE_player] call BIS_fnc_bloodEffect;
+    };
+
+    // Blood Volume Effect
+    _blood = AGM_player getVariable ["AGM_Blood", 100] / 100;
+    if (_blood > 0.99) then {
+        GVAR(effectBloodVolumeCC) ppEffectEnable false;
+    } else {
+        GVAR(effectBloodVolumeCC) ppEffectEnable true;
+        GVAR(effectBloodVolumeCC) ppEffectAdjust [1,1,0, [0,0,0,0], [1,1,1,_blood], [0.2,0.2,0.2,0]];
+        GVAR(effectBloodVolumeCC) ppEffectCommit 0;
+    };
+ 
+/*
     private ["_unit","_bloodLoss", "_bloodVolume"];
     _unit = ACE_player;
 
@@ -97,5 +205,5 @@ GVAR(effectUnconsciousUnit) = objNull;
             [true] call EFUNC(common,setVolume_f);
         };
     };
-
- }, 0.5, [] ] call CBA_fnc_addPerFrameHandler;
+*/
+}, 0.5, [] ] call CBA_fnc_addPerFrameHandler;
