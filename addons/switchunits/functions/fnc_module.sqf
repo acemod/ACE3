@@ -37,17 +37,3 @@ GVAR(Module) = true;
 [QGVAR(EnableSwitchUnits), true, false, true] call EFUNC(common,setSetting);
 
 diag_log text "[ACE]: SwitchUnits Module Initialized.";
-
-if (GVAR(EnableSwitchUnits)) then {
-    private ["_sides"];
-    _sides = [];
-
-    if(GVAR(SwitchToWest)) then {_sides pushBack west;};
-    if(GVAR(SwitchToEast)) then {_sides pushBack east;};
-    if(GVAR(SwitchToIndependent)) then {_sides pushBack independent;};
-    if(GVAR(SwitchToCivilian)) then {_sides pushBack civilian;};
-
-    if (player getVariable ["ACE_CanSwitchUnits", false]) then {
-        [player, _sides] call FUNC(initPlayer);
-    };
-};
