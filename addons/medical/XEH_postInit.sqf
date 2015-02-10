@@ -105,7 +105,7 @@ GVAR(effectTimeBlood) = time;
     };
 
     // Blood Volume Effect
-    _blood = AGM_player getVariable ["AGM_Blood", 100] / 100;
+    _blood = (ACE_player getVariable [QGVAR(bloodVolume), 100]) / 100;
     if (_blood > 0.99) then {
         GVAR(effectBloodVolumeCC) ppEffectEnable false;
     } else {
