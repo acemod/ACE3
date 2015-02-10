@@ -127,6 +127,7 @@ PREP(toBin);
 PREP(toBitmask);
 PREP(toHex);
 PREP(toNumber);
+PREP(throttledPublicVariable);
 PREP(unmuteUnit);
 PREP(waitAndExecute);
 
