@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * 
+ *
  *
  * Public: No
  */
@@ -25,12 +25,16 @@ _doNotDropAmmo = false;
 
 switch (toLower _type) do {
 case ("backpack"): {
-    _listOfItemsToRemove pushBack (backpack _target);
-};
+        _listOfItemsToRemove pushBack (backpack _target);
+    };
 case ("weapons"): {
-    _listOfItemsToRemove = _listOfItemsToRemove + (weapons _target);
-    _doNotDropAmmo = true;
-};
+        _listOfItemsToRemove = _listOfItemsToRemove + (weapons _target);
+        _doNotDropAmmo = true;
+    };
+    
+    case ("uniform"): {
+        _listOfItemsToRemove = [(uniform _target)];
+    };
 
 
 };

@@ -1,10 +1,7 @@
-ace_captives
+ace_disarming
 ============
 
-Allows taking people captive/handcuffed
-
-####Items:
-`ACE_CableTie` - adds ability to take someone captive
+Adds ability to make units drop items/weapons/magazines.  
 
 
 ## Maintainers
