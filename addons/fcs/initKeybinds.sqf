@@ -7,7 +7,7 @@
         _exceptions = [];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
         // Conditions: specific
-        if !(!GVAR(enabled) && {call FUNC(canUseRangefinder) || FUNC(canUseFCS)}) exitWith {false};
+        if !((!GVAR(enabled) && FUNC(canUseFCS)) || FUNC(canUseRangefinder)) exitWith {false};
 
         // prevent holding down
         if (GETGVAR(isDownStateKey1,false)) exitWith {false};
