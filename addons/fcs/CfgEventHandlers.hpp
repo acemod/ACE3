@@ -37,3 +37,31 @@ class Extended_Init_EventHandlers {
         };
     };
 };
+
+class Extended_FiredBIS_EventHandlers {
+    class Tank {
+        class ADDON {
+            clientInit = QUOTE(_this call FUNC(firedEH));
+        };
+    };
+    class Car {
+        class ADDON {
+            clientInit = QUOTE(_this call FUNC(firedEH));
+        };
+    };
+    class Helicopter {
+        class ADDON {
+            clientInit = QUOTE(_this call FUNC(firedEH));
+        };
+    };
+    class Plane {
+        class ADDON {
+            clientInit = QUOTE(_this call FUNC(firedEH));
+        };
+    };
+    class Ship_F {
+        class ADDON {
+            clientInit = QUOTE(_this call FUNC(firedEH));
+        };
+    };
+};
