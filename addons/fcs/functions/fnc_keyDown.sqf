@@ -28,7 +28,15 @@ if (_distance == 0) then {
     _distance = [5, 5000, 0] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision
 };
 
-_weaponDirection = _vehicle weaponDirection (_vehicle currentWeaponTurret _turret);
+_weaponDirection = _vehicle weaponDirection (_vehicle currentWeaponTurret _turret);  // @todo doesn't work for sub turrets
+
+if (_turret isEqualTo ([typeOf _vehicle] call EFUNC(common,getTurretCommander))) then {
+    _weaponDirection = eyeDirection _vehicle;
+};
+
+if (_weaponDirection isEqualTo [0,0,0]) then {  // dummy value for non main turrets
+    _weaponDirection = [1,0,0];
+};
 
 GVAR(Position) = [
     (getPos _vehicle select 0) + _distance * (_weaponDirection select 0),
