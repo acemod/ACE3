@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-16 -->
-<Project name="AGM">
+<!-- Edited with tabler - 2015-02-06 -->
+<Project name="ACE">
   <Package name="Captives">
-    <Key ID="STR_AGM_Captives_SetCaptive">
+    <Key ID="STR_ACE_Captives_SetCaptive">
       <English>Take Prisoner</English>
       <German>Gefangen nehmen</German>
       <Spanish>Tomar prisionero</Spanish>
@@ -14,7 +14,7 @@
       <Hungarian>Foglyul ejtés</Hungarian>
       <Russian>Взять в плен</Russian>
     </Key>
-    <Key ID="STR_AGM_Captives_ReleaseCaptive">
+    <Key ID="STR_ACE_Captives_ReleaseCaptive">
       <English>Free Prisoner</English>
       <German>Gefangenen freilassen</German>
       <Spanish>Liberar prisionero</Spanish>
@@ -26,7 +26,7 @@
       <Hungarian>Fogoly szabadon elengedése</Hungarian>
       <Russian>Освободить пленника</Russian>
     </Key>
-    <Key ID="STR_AGM_Captives_EscortCaptive">
+    <Key ID="STR_ACE_Captives_EscortCaptive">
       <English>Escort Prisoner</English>
       <German>Gefangenen eskortieren</German>
       <Spanish>Escoltar prisionero</Spanish>
@@ -38,7 +38,7 @@
       <Hungarian>Fogoly kísérése</Hungarian>
       <Russian>Конвоировать пленника</Russian>
     </Key>
-    <Key ID="STR_AGM_Captives_StopEscorting">
+    <Key ID="STR_ACE_Captives_StopEscorting">
       <English>Release Prisoner</English>
       <German>Gefangenen loslassen</German>
       <Spanish>Soltar prisionero</Spanish>
@@ -50,7 +50,7 @@
       <Hungarian>Fogoly elengedése</Hungarian>
       <Russian>Прекратить конвоирование</Russian>
     </Key>
-    <Key ID="STR_AGM_Captives_NoCaptive">
+    <Key ID="STR_ACE_Captives_NoCaptive">
       <English>You need to take him as prisoner first!</English>
       <German>Du must ihn zuerst gefangen nehmen.</German>
       <Spanish>Necesitas hacerle prisionero primero!</Spanish>
@@ -62,7 +62,7 @@
       <Hungarian>Először foglyul kell ejtened!</Hungarian>
       <Russian>Вы должны сначала взять его в плен!</Russian>
     </Key>
-    <Key ID="STR_AGM_Captives_LoadCaptive">
+    <Key ID="STR_ACE_Captives_LoadCaptive">
       <English>Load Captive</English>
       <German>Gefangenen einladen</German>
       <Spanish>Cargar prisionero</Spanish>
@@ -71,8 +71,9 @@
       <Czech>Naložit zajatce</Czech>
       <Hungarian>Fogoly berakása</Hungarian>
       <Russian>Загрузить пленного</Russian>
+      <Portuguese>Embarcar Prisioneiro</Portuguese>
     </Key>
-    <Key ID="STR_AGM_Captives_UnloadCaptive">
+    <Key ID="STR_ACE_Captives_UnloadCaptive">
       <English>Unload Captive</English>
       <German>Gefangenen ausladen</German>
       <Spanish>Descargar prisionero</Spanish>
@@ -81,8 +82,9 @@
       <Czech>Vyložit zajatce</Czech>
       <Hungarian>Fogoly kivevése</Hungarian>
       <Russian>Выгрузить пленного</Russian>
+      <Portuguese>Desembarcar Prisioneiro</Portuguese>
     </Key>
-    <Key ID="STR_AGM_Captives_CableTie">
+    <Key ID="STR_ACE_Captives_CableTie">
       <English>Cable Tie</English>
       <German>Kabelbinder</German>
       <Polish>Opaska zaciskowa</Polish>
@@ -94,7 +96,7 @@
       <Hungarian>Gyorskötöző</Hungarian>
       <Russian>Кабельная стяжка</Russian>
     </Key>
-    <Key ID="STR_AGM_Captives_CableTieDescription">
+    <Key ID="STR_ACE_Captives_CableTieDescription">
       <English>Cable ties that allow you to restrain prisoners.</English>
       <German>Kabelbinder ermöglichen es, Gefangene zu fesseln.</German>
       <Polish>Opaska zaciskowa pozwala na skrępowanie dłoni u więźnia.</Polish>
@@ -106,7 +108,7 @@
       <Hungarian>Gyorskötöző emberek fogjulejtéséhez.</Hungarian>
       <Russian>Кабельные стяжки позволяют связывать пленников.</Russian>
     </Key>
-    <Key ID="STR_AGM_Captives_FriskMenuHeader">
+    <Key ID="STR_ACE_Captives_FriskMenuHeader">
       <English>Inventory of frisked person</English>
       <German>Inventar der durchsuchten Person</German>
       <French>Inventaire de la fouille</French>
@@ -115,8 +117,9 @@
       <Czech>Inventář prohledávané osoby</Czech>
       <Polish>Ekwipunek rewidowanej osoby</Polish>
       <Russian>Инвентарь обысканных лиц</Russian>
+      <Portuguese>Inventário da pessoa revistada</Portuguese>
     </Key>
-    <Key ID="STR_AGM_Captives_FriskPerson">
+    <Key ID="STR_ACE_Captives_FriskPerson">
       <English>Frisk person</English>
       <German>Person durchsuchen</German>
       <French>Fouiller</French>
@@ -125,6 +128,13 @@
       <Polish>Rewiduj osobę</Polish>
       <Hungarian>Motozás</Hungarian>
       <Russian>Обыскать человека</Russian>
+      <Portuguese>Revistar</Portuguese>
+    </Key>
+    <Key ID="STR_ACE_Captives_StartSurrendering">
+      <English>Surrender</English>
+    </Key>
+    <Key ID="STR_ACE_Captives_StopSurrendering">
+      <English>Stop Surrendering</English>
     </Key>
   </Package>
 </Project>
