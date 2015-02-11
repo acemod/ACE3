@@ -14,39 +14,48 @@ class CfgVehicles {
                 // hotkey = "M";
                 enableInside = 0;
 
-                class ACE_removeWeapons {
-                    displayName = "Remove Weapons";
+                class ACE_primaryweapononly {
+                    displayName = "primaryweapononly";
                     distance = 3;
-                    condition = QUOTE([ARR_3(_player, _target, 'weapons')] call FUNC(canDisarm));
-                    statement = QUOTE([ARR_3(_player, _target, 'weapons')] call FUNC(startDisarmCaller));
+                    condition = QUOTE([ARR_3(_player, _target, 'primaryweapononly')] call FUNC(canDisarm));
+                    statement = QUOTE([ARR_3(_player, _target, 'primaryweapononly')] call FUNC(startDisarmCaller));
                     exceptions[] = {};
                     showDisabled = 1;
-                    priority = 2.4;
+                    priority = 80085;
                     // icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
                     // hotkey = "C";
                 };
-                class ACE_removeBackpack {
-                    displayName = "Remove Backpack";
-                    distance = 3;
+                class ACE_secondaryweapononly: ACE_primaryweapononly {
+                    displayName = "secondaryweapononly";
+                    condition = QUOTE([ARR_3(_player, _target, 'secondaryweapononly')] call FUNC(canDisarm));
+                    statement = QUOTE([ARR_3(_player, _target, 'secondaryweapononly')] call FUNC(startDisarmCaller));
+                    priority = 80084;
+                };
+                class ACE_handgunweapononly: ACE_primaryweapononly {
+                    displayName = "handgunweapononly";
+                    condition = QUOTE([ARR_3(_player, _target, 'handgunweapononly')] call FUNC(canDisarm));
+                    statement = QUOTE([ARR_3(_player, _target, 'handgunweapononly')] call FUNC(startDisarmCaller));
+                    priority = 80083;
+                };
+                class ACE_backpack: ACE_primaryweapononly {
+                    displayName = "handgunweapononly";
                     condition = QUOTE([ARR_3(_player, _target, 'backpack')] call FUNC(canDisarm));
                     statement = QUOTE([ARR_3(_player, _target, 'backpack')] call FUNC(startDisarmCaller));
-                    exceptions[] = {};
-                    showDisabled = 1;
-                    priority = 2.4;
-                    // icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
-                    // hotkey = "C";
+                    priority = 80082;
                 };
-                class ACE_removeUniform {
-                    displayName = "Remove Uniform";
-                    distance = 3;
-                    condition = QUOTE([ARR_3(_player, _target, 'uniform')] call FUNC(canDisarm));
-                    statement = QUOTE([ARR_3(_player, _target, 'uniform')] call FUNC(startDisarmCaller));
-                    exceptions[] = {};
-                    showDisabled = 1;
-                    priority = 2.4;
-                    // icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
-                    // hotkey = "C";
+                class ACE_alldangerous: ACE_primaryweapononly {
+                    displayName = "alldangerous";
+                    condition = QUOTE([ARR_3(_player, _target, 'alldangerous')] call FUNC(canDisarm));
+                    statement = QUOTE([ARR_3(_player, _target, 'alldangerous')] call FUNC(startDisarmCaller));
+                    priority = 80081;
                 };
+                class ACE_strip: ACE_primaryweapononly {
+                    displayName = "strip";
+                    condition = QUOTE([ARR_3(_player, _target, 'strip')] call FUNC(canDisarm));
+                    statement = QUOTE([ARR_3(_player, _target, 'strip')] call FUNC(startDisarmCaller));
+                    priority = 80080;
+                };
+
             };
         };
     };

@@ -24,19 +24,43 @@ _listOfItemsToRemove = [];
 _doNotDropAmmo = false;
 
 switch (toLower _type) do {
-case ("backpack"): {
-        _listOfItemsToRemove pushBack (backpack _target);
-    };
-case ("weapons"): {
-        _listOfItemsToRemove = _listOfItemsToRemove + (weapons _target);
+case ("primaryweapononly"): {
+        _listOfItemsToRemove = [(primaryWeapon _target)];
         _doNotDropAmmo = true;
     };
-    
-    case ("uniform"): {
-        _listOfItemsToRemove = [(uniform _target)];
+case ("secondaryweapononly"): {
+        _listOfItemsToRemove = [(secondaryWeapon _target)];
+        _doNotDropAmmo = true;
     };
-
-
+case ("handgunweapononly"): {
+        _listOfItemsToRemove = [(handgunWeapon _target)];
+        _doNotDropAmmo = true;
+    };
+case ("backpack"): {
+        _listOfItemsToRemove = [(backpack _target)];
+    };
+case ("alldangerous"): {
+        _listOfItemsToRemove = weapons _target;
+        {
+            if (!(_x in _listOfItemsToRemove)) then {
+                _listOfItemsToRemove pushBack _x;
+            };
+        } forEach (magazines _target);
+        {
+            if ((!(_x in _listOfItemsToRemove)) && {_x in DANGEROUS_ITEMS} && {_x != ""}) then {
+                _listOfItemsToRemove pushBack _x;
+            };
+        } forEach ((items _target) + (assignedItems _target));
+    };
+case ("strip"): {
+        // _listOfItemsToRemove = [_target] call EFUNC(common,getAllGear);
+        _listOfItemsToRemove = [];
+        {
+            if ((!(_x in _listOfItemsToRemove)) && {_x != ""}) then {
+                _listOfItemsToRemove pushBack _x;
+            };
+        } forEach ((weapons _target) + (magazines _target) + (items _target) + (assignedItems _target) + [(backpack _target), (vest _target), (uniform _target)]);
+    };
 };
 
 [_caller, _target, _listOfItemsToRemove, _doNotDropAmmo] call FUNC(disarmDropItems);

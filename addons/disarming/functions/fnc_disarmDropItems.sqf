@@ -58,14 +58,15 @@ if ( ({(_x select 0) in _listOfItemsToRemove} count _targetMagazinesEnd) != 0) e
     [_caller, _target, "Didn't Remove Magazines"] call FUNC(finishDisarmTarget);
 };
 //Verify holder has mags unit had (lazy count for now)
-if (((count _targetMagazinesEnd) - (count _targetMagazinesStart)) != ((count _holderMagazinesEnd) - (count _holderMagazinesStart))) exitWith {
+if (((count _targetMagazinesStart) - (count _targetMagazinesEnd)) != ((count _holderMagazinesEnd) - (count _holderMagazinesStart))) exitWith {
+    ERR = [_targetMagazinesEnd, _targetMagazinesStart, _holderMagazinesEnd, _holderMagazinesStart];
     [_caller, _target, "Crate Magazines"] call FUNC(finishDisarmTarget);
 };
 
 
 //Remove Items, Assigned Items and NVG
 _holderItemsStart = getitemCargo _holder;
-_targetItemsStart = ((assignedItems _target) + (items _target) + [hmd _target] + [headgear _target]);
+_targetItemsStart = ((assignedItems _target) + (items _target) + [headgear _target]);
 
 _addToCrateClassnames = [];
 _addToCrateCount = [];
@@ -92,10 +93,11 @@ _addToCrateCount = [];
 } forEach _addToCrateClassnames;
 
 _holderItemsEnd = getitemCargo _holder;
-_targetItemsEnd = ((assignedItems _target) + (items _target) + [hmd _target] + [headgear _target]);
+_targetItemsEnd = ((assignedItems _target) + (items _target) + [headgear _target]);
 
 //Verify Items Added (lazy count)
-if (((count _targetItemsEnd) - (count _targetItemsStart)) != ([_addToCrateCount] call _fncSumArray)) exitWith {
+if (((count _targetItemsStart) - (count _targetItemsEnd)) != ([_addToCrateCount] call _fncSumArray)) exitWith {
+    ERR = [_targetItemsStart, _targetItemsEnd, _addToCrateClassnames, _addToCrateCount];
     [_caller, _target, "Items Not Removed From Player"] call FUNC(finishDisarmTarget);
 };
 if ((([_holderItemsEnd select 1] call _fncSumArray) - ([_holderItemsStart select 1] call _fncSumArray)) != ([_addToCrateCount] call _fncSumArray)) exitWith {

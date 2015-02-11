@@ -22,12 +22,18 @@ DEFAULT_PARAM(2,_type,"");
 
 _returnValue = false;
 
-if ((_target getVariable ["ACE_isUnconscious", false]) || {_target getVariable [QEGVAR(captives,isHandcuffed), false]} || {_target getVariable [QEGVAR(captives,isSurrendering), false]}) then {
-    switch (_type) do {
+if ((_target getVariable ["ACE_isUnconscious", false]) ||
+        {_target getVariable [QEGVAR(captives,isHandcuffed), false]} ||
+        {_target getVariable [QEGVAR(captives,isSurrendering), false]}) then {
+
+    switch (toLower _type) do {
     case (""): {_returnValue = true;};
-    case ("uniform"): {_returnValue = ((uniform _target) != "");};
+    case ("primaryweapononly"): {_returnValue = ((primaryWeapon _target) != "");};
+    case ("secondaryweapononly"): {_returnValue = ((secondaryWeapon _target) != "");};
+    case ("handgunweapononly"): {_returnValue = ((handgunWeapon _target) != "");};
     case ("backpack"): {_returnValue = ((backpack _target) != "");};
-    case ("weapons"): {_returnValue = ((count (weapons _target)) > 0);};
+    case ("alldangerous"): {_returnValue = ((count (weapons _target)) > 0) || {(count (magazines _target)) > 0} || {({_x in DANGEROUS_ITEMS} count ((items _target) + (assignedItems _target))) > 0};};
+    case ("strip"): {_returnValue = true;};
         default {systemChat "type unknown"; ERROR("type unknown");};
     };
 };
