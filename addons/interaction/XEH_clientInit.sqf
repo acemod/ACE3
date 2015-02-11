@@ -41,7 +41,7 @@ GVAR(isOpeningDoor) = false;
         _exceptions = ["ACE_Drag_isNotDragging", "ACE_Medical_canTreat", QEGVAR(captives,isNotEscorting), "ACE_Interaction_isNotSwimming"];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
         // Conditions: specific
-        if !(!isNull (findDisplay 1713999) && {profileNamespace getVariable [QGVAR(AutoCloseMenu), 0] > 0}) exitWith {false};
+        if !(!isNull (findDisplay 1713999) && {QGVAR(AutoCloseMenu)}) exitWith {false};
 
         // Statement
         if (GVAR(MenuType) mod 2 == 0) then {call FUNC(onButtonUp)};
@@ -77,7 +77,7 @@ GVAR(isOpeningDoor) = false;
         _exceptions = ["ACE_Drag_isNotDragging", "ACE_Medical_canTreat", QEGVAR(captives,isNotEscorting), QEGVAR(captives,isNotSurrendering), "ACE_Interaction_isNotSwimming"];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
         // Conditions: specific
-        if !(!isNull (findDisplay 1713999) && {profileNamespace getVariable [QGVAR(AutoCloseMenu), 0] > 0}) exitWith {false};
+        if !(!isNull (findDisplay 1713999) && {QGVAR(AutoCloseMenu)}) exitWith {false};
 
         // Statement
         if (GVAR(MenuType) mod 2 == 1) then {call FUNC(onButtonUp)};

@@ -1,21 +1,18 @@
 /*
-	Name: ACE_Explosives_fnc_getDetonators
-
-	Author(s):
-		Garth de Wet (LH)
-
-	Description:
-		Gets all the detonators of a specific unit
-
-	Parameters:
-		0: OBJECT - Unit to get detonators of
-
-	Returns:
-		ARRAY - Configs of all detonators.
-
-	Example:
-		_detonators = [player] call ACE_Explosives_fnc_getDetonators;
-*/
+ * Author: Garth 'L-H' de Wet
+ * Returns all the detonators of the unit
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * Configs of all detonators <ARRAY>
+ *
+ * Example:
+ * _detonators = [player] call ACE_Explosives_fnc_getDetonators;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private ["_unit", "_items", "_result", "_config"];
 _unit = _this select 0;

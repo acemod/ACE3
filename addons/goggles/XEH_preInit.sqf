@@ -1,3 +1,18 @@
+/*
+ * Author: Garth 'L-H' de Wet
+ * Initialises Goggles.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 ADDON = false;

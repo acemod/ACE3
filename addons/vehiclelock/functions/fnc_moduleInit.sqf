@@ -29,7 +29,7 @@ _sideKeysAssignment = _logic getVariable["SideKeysAssignment", 0];
 _setLockState = _logic getVariable["SetLockState", 0];
 
 if (isServer) then {
-  [_logic, QGVAR(DefaultLockpickStrength), "LockpickStrength"] call EFUNC(common,readNumericParameterFromModule);
+  [_logic, QGVAR(DefaultLockpickStrength), "LockpickStrength"] call EFUNC(common,readSettingFromModule);
 };
 
 //Run at mission start (anyone besides JIPs)

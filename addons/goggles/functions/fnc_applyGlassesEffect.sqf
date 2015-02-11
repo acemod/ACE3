@@ -1,26 +1,24 @@
 /*
-	Name: fnc_ApplyGlassesEffect.sqf
-
-	Author: Garth de Wet (LH)
-
-	Description:
-	Sets screen tint for glasses.
-	Sets screen overlay for glasses. (broken/fixed)
-	Sets dirt/rain overlay for glasses.
-
-	Parameters:
-	0: STRING - Glasses class name to be applied.
-
-	Returns:
-	Nothing
-
-	Example:
-	(goggles ace_player) call FUNC(ApplyGlassesEffect);
-*/
+ * Author: Garth 'L-H' de Wet
+ * Sets screen tint for glasses.
+ * Sets screen overlay for glasses. (broken/fixed)
+ * Sets dirt/rain overlay for glasses.
+ *
+ * Arguments:
+ * 0: Glasses classname to be applied <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [goggles ace_player] call ace_goggles_fnc_ApplyGlassesEffect;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 private["_postProcessColour", "_postProcessTintAmount", "_glassesClassname", "_glassImagePath"];
 
-_glassesClassname = _this;
+_glassesClassname = _this select 0;
 _postProcessColour = getArray(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_Color");
 _postProcessTintAmount = getNumber(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_TintAmount");
 

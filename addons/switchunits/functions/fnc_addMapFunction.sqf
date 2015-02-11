@@ -1,19 +1,19 @@
 /*
-  Name: ACE_SwitchUnits_fnc_addMapFunction
-  
-  Author(s):
-    bux578
-  
-  Description:
-    Adds a mapClick Eventhandler
-  
-  Parameters:
-    0: OBJECT - unit
-    1: ARRAY<OBJECT> - sides
-  
-  Returns:
-    VOID
-*/
+ * Author: bux578
+ * Adds a mapClick Eventhandler
+ *
+ * Arguments:
+ * 0: unit <OBJECT>
+ * 1: sides <ARRAY<OBJECT>>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_unit, _sides] call FUNC(addMapFunction)
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 

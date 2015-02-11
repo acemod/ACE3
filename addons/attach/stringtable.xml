@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-12 -->
+<!-- Edited with tabler - 2015-01-31 -->
 <Project name="ACE">
   <Package name="Attach">
     <Key ID="STR_ACE_Attach_AttachDetach">
@@ -145,6 +145,35 @@
       <Italian>La Strobo IR è una luce stroboscopica che ti permette di segnalare la tua posizione grazie all'emissione di impulsi ad infrarossi visibili solo con i visori notturni.</Italian>
       <Hungarian>Az infravörös jeladóval megjelölheted a helyzetedet úgy, hogy annak pulzáló fénye csak éjjellátó készülékkel látható.</Hungarian>
       <Russian>ИК строб позволяет сигнализировать свое местоположение через пульсирующий маяк, видимый только через ПНВ.</Russian>
+    </Key>
+    <Key ID="STR_ACE_Attach_PlaceAction">
+      <English>Place</English>
+      <German>Platzieren</German>
+      <Spanish>Colocar</Spanish>
+      <Polish>Umieść</Polish>
+      <French>Placer</French>
+      <Czech>Položit</Czech>
+      <Portuguese>Colocar</Portuguese>
+      <Italian>Posiziona</Italian>
+      <Hungarian>Elhelyez</Hungarian>
+    </Key>
+    <Key ID="STR_ACE_Attach_CancelAction">
+      <English>Cancel</English>
+      <German>Abbrechen</German>
+      <Spanish>Cancelar</Spanish>
+      <Polish>Anuluj</Polish>
+      <French>Annuler</French>
+      <Czech>Zrušit</Czech>
+      <Portuguese>Cancelar</Portuguese>
+      <Italian>Annulla</Italian>
+      <Hungarian>Mégse</Hungarian>
+    </Key>
+    <Key ID="STR_ACE_Attach_Failed">
+      <English>Attach Failed</English>
+      <French>Échec du Attacher</French>
+      <German>Befestigen Fehlgeschlagen</German>
+      <Russian>Присоединить Ошибка</Russian>
+      <Spanish>Error en Acoplar</Spanish>
     </Key>
   </Package>
 </Project>

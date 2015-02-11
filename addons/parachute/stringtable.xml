@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-11 -->
-<Project name="AGM">
+<Project name="ACE">
   <Package name="Parachute">
-    <Key ID="STR_AGM_Parachute_showAltimeter">
+    <Key ID="STR_ACE_Parachute_showAltimeter">
       <English>Altimeter</English>
       <French>Altimètre</French>
       <German>Höhenmesser</German>
@@ -12,7 +12,7 @@
       <Hungarian>Magasságmérő</Hungarian>
       <Russian>Высотомер</Russian>
     </Key>
-    <Key ID="STR_AGM_Parachute_AltimeterDisplayName">
+    <Key ID="STR_ACE_Parachute_AltimeterDisplayName">
       <English>Altimeter Watch</English>
       <French>Montre altimètre</French>
       <German>Höhenmesser</German>
@@ -22,7 +22,7 @@
       <Hungarian>Magasságmérő</Hungarian>
       <Russian>Часы с высотомером</Russian>
     </Key>
-    <Key ID="STR_AGM_Parachute_AltimeterDescription">
+    <Key ID="STR_ACE_Parachute_AltimeterDescription">
       <English>Used to show height, descent rate and the time.</English>
       <French>Affiche la hauteur, le taux de descente et l'heure.</French>
       <German>Zeigt Höhe, Fallgeschwindigkeit und Uhrzeit.</German>
@@ -32,7 +32,7 @@
       <Hungarian>Mutatja a magasságot, zuhanás sebességét és az időt.</Hungarian>
       <Russian>Используется для определения высоты, скорости снижения и времени.</Russian>
     </Key>
-    <Key ID="STR_AGM_Parachute_NonSteerableParachute">
+    <Key ID="STR_ACE_Parachute_NonSteerableParachute">
       <English>Non-Steerable Parachute</English>
       <German>Ungelenkter Fallschirm</German>
       <Spanish>Paracaídas no dirigible</Spanish>

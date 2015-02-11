@@ -1,20 +1,18 @@
 /*
-	Name: ACE_Explosives_fnc_openPlaceUI
-
-	Author: Garth de Wet (LH)
-
-	Description:
-		Opens the UI for explosive placement selection
-
-	Parameters:
-		0: OBJECT - unit
-
-	Returns:
-		Nothing
-
-	Example:
-		[player] call ACE_Explosives_fnc_openPlaceUI;
-*/
+ * Author: Garth 'L-H' de Wet
+ * Opens the UI for explosive placement selection
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player] call ACE_Explosives_fnc_openPlaceUI;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 private ["_unit","_mags", "_item", "_index", "_actions"];
 _unit = _this select 0;

@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-private ["_vehicle"];
+private "_vehicle";
 
 _vehicle = _this select 0;
 

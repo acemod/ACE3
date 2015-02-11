@@ -1,15 +1,16 @@
 /*
  * Author: CAA-Picard
- *
  * Calculate cooling down of the weapon.
  *
  * Argument:
- * 0: Last temperature (number)
- * 1: Barrel mass (number)
- * 2: Time (number)
+ * 0: Last temperature <NUMBER>
+ * 1: Barrel mass <NUMBER>
+ * 2: Time <NUMBER>
  *
  * Return value:
- * New temperature (number)
+ * New temperature <NUMBER>
+ *
+ * Public: No
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 

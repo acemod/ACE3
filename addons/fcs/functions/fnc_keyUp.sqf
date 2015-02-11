@@ -12,22 +12,37 @@
 
 #include "script_component.hpp"
 
-private ["_ammoType", "_viewDiff", "_posArrival", "_airFriction", "_timeToLive", "_maxElev", "_vehicle", "_posTarget", "_distance", "_simulationStep", "_posX", "_velocityMagnitude", "_magazines", "_movingAzimuth", "_FCSElevation", "_velocityX", "_velocityY", "_weaponDirection", "_velocityTarget", "_FCSAzimuth", "_FCSMagazines", "_dirArrival", "_i", "_magazineType", "_angleTarget", "_offset", "_timeToTarget", "_initSpeed"];
+private ["_vehicle", "_turret", "_turretConfig", "_distance", "_magazines"];
 
 _vehicle = _this select 0;
+_turret = _this select 1;
+
+_turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
+
 _distance = call FUNC(getRange);
 
-_magazines = magazines _vehicle;
+_magazines = _vehicle magazinesTurret _turret;
 
 if (_distance == 0) then {
     _distance = [
-        getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(DistanceInterval)),
-        getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(MaxDistance)),
-        getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(MinDistance))
+        getNumber (_turretConfig >> QGVAR(DistanceInterval)),
+        getNumber (_turretConfig >> QGVAR(MaxDistance)),
+        getNumber (_turretConfig >> QGVAR(MinDistance))
     ] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision
 };
 
-_weaponDirection = _vehicle weaponDirection currentWeapon _vehicle;
+private ["_weaponDirection", "_angleTarget"];
+
+_weaponDirection = _vehicle weaponDirection (_vehicle currentWeaponTurret _turret); // @todo doesn't work for sub turrets
+
+if (_turret isEqualTo ([typeOf _vehicle] call EFUNC(common,getTurretCommander))) then {
+    _weaponDirection = eyeDirection _vehicle;
+};
+
+if (_weaponDirection isEqualTo [0,0,0]) then {  // dummy value for non main turrets
+    _weaponDirection = [1,0,0];
+};
+
 _angleTarget = asin (_weaponDirection select 2);
 
 if (count _this > 2) then {
@@ -37,6 +52,8 @@ if (count _this > 2) then {
 if (!(isNil QGVAR(backgroundCalculation)) and {!(scriptDone GVAR(backgroundCalculation))}) then {
     terminate GVAR(backgroundCalculation);
 };
+
+private "_movingAzimuth";
 
 // MOVING TARGETS
 _movingAzimuth = 0;
@@ -53,8 +70,10 @@ if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
         ((_posTarget select 2) - (GVAR(position) select 2)) / (time - GVAR(time))
     ];
 
+    private ["_magazineType", "_ammoType", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep"];
+
     // estimate time to target
-    _magazineType = currentMagazine _vehicle;
+    _magazineType = _vehicle currentMagazineTurret _turret;
     _ammoType       = getText   (configFile >> "CfgMagazines" >> _magazineType >> "ammo");
     _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _magazineType >> "initSpeed");
     _airFriction    = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
@@ -62,10 +81,13 @@ if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
     _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "simulationStep");
 
     if (_simulationStep != 0) then {
+        private ["_posX", "_velocityX", "_velocityY", "_timeToTarget"];
+
         _posX = 0;
         _velocityX = _initSpeed;
         _velocityY = 0;
         _timeToTarget = 0;
+
         for "_i" from 1 to ((floor (_timeToLive / _simulationStep)) + 1) do {
             _posX = _posX + _velocityX * _simulationStep;
             if (_posX >= _distance) exitWith { // bullet passed the target
@@ -76,12 +98,15 @@ if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
             _velocityY = _velocityY + _velocityY * _velocityMagnitude * _airFriction * _simulationStep - 9.81 * _simulationStep;
         };
 
+        private ["_posArrival", "_dirArrival"];
+
         // calculate offsets
         _posArrival = [
             (_posTarget select 0) + (_velocityTarget select 0) * _timeToTarget,
             (_posTarget select 1) + (_velocityTarget select 1) * _timeToTarget,
             (_posTarget select 2) + (_velocityTarget select 2) * _timeToTarget
         ];
+
         _dirArrival = [
             ((_posArrival select 0) - (getPos _vehicle select 0)) / (_posArrival distance (getPos _vehicle)),
             ((_posArrival select 1) - (getPos _vehicle select 1)) / (_posArrival distance (getPos _vehicle)),
@@ -96,9 +121,12 @@ if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
 GVAR(enabled) = false;
 GVAR(time) = -1;
 
+private ["_viewDiff", "_FCSAzimuth", "_FCSMagazines", "_FCSElevation"];
+
 // CALCULATE AZIMUTH CORRECTION
-_viewDiff = _vehicle getVariable QGVAR(ViewDiff);
+_viewDiff = _vehicle getVariable format ["%1_%2", QGVAR(ViewDiff), _turret];
 _FCSAzimuth = _movingAzimuth;
+
 if (_viewDiff != 0) then {
     _FCSAzimuth = (atan (_distance / _viewDiff) - (abs _viewDiff / _viewDiff) * 90) + _movingAzimuth;
 };
@@ -108,11 +136,16 @@ _FCSMagazines = [];
 _FCSElevation = [];
 
 {
-    _ammoType = getText   (configFile >> "CfgMagazines" >> _x >> "ammo");
+    private "_ammoType";
+
+    _ammoType = getText (configFile >> "CfgMagazines" >> _x >> "ammo");
+
     if !(getText (configFile >> "CfgAmmo" >> _ammoType >> "simulation") == "shotMissile") then {
-        _maxElev        = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "Turrets" >> "MainTurret" >> "maxElev");
-        _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _x >> "initSpeed");
-        _airFriction    = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
+        private ["_maxElev", "_initSpeed", "_airFriction", "_offset"];
+
+        _maxElev     = getNumber (_turretConfig >> "maxElev");
+        _initSpeed   = getNumber (configFile >> "CfgMagazines" >> _x >> "initSpeed");
+        _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
 
         _offset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, _angleTarget, _distance];
         _offset = parseNumber _offset;
@@ -122,9 +155,9 @@ _FCSElevation = [];
     };
 } forEach _magazines;
 
-_vehicle setVariable [QGVAR(Distance),  _distance,     true];
-_vehicle setVariable [QGVAR(Magazines), _FCSMagazines, true];
-_vehicle setVariable [QGVAR(Elevation), _FCSElevation, true];
-_vehicle setVariable [QGVAR(Azimuth),   _FCSAzimuth,   true];
+_vehicle setVariable [format ["%1_%2", QGVAR(Distance), _turret],  _distance,     true];
+_vehicle setVariable [format ["%1_%2", QGVAR(Magazines), _turret], _FCSMagazines, true];
+_vehicle setVariable [format ["%1_%2", QGVAR(Elevation), _turret], _FCSElevation, true];
+_vehicle setVariable [format ["%1_%2", QGVAR(Azimuth), _turret],   _FCSAzimuth,   true];
 
 [format ["%1: %2", localize "STR_ACE_FCS_ZeroedTo", _distance]] call EFUNC(common,displayTextStructured);

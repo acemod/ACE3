@@ -1,20 +1,18 @@
 /*
-	fnc_onEachFrame.sqf
-
-	Author: Garth de Wet (LH)
-
-	Description:
-	Runs every frame checking for helicopters.
-
-	Parameters:
-	Nothing
-
-	Returns:
-	Nothing
-
-	Example:
-	["ACE_Goggles_RotorWash", "OnEachFrame", "call FUNC(OnEachFrame);"] call BIS_fnc_addStackedEventHandler;
-*/
+ * Author: Garth 'L-H' de Wet
+ * Checks whether the player is in the downwash of a helicopter and handles applying effects of that.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * ["ACE_Goggles_RotorWash", "OnEachFrame", "call ace_goggles_fnc_OnEachFrame;"] call BIS_fnc_addStackedEventHandler;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 if (isNull(ace_player)) exitWith {};
 GVAR(FrameEvent) set [0, !(GVAR(FrameEvent) select 0)];
@@ -44,7 +42,7 @@ if ((headgear ace_player) != "") then {
 	_safe = (getNumber (ConfigFile >> "CfgWeapons" >> (headgear ace_player) >> "ACE_Protection") == 1);
 };
 if !(_safe) then {
-	if !(ace_player call FUNC(isGogglesVisible)) exitWith{};
+	if !([ace_player] call FUNC(isGogglesVisible)) exitWith{};
 	if (GETDUSTT(DAMOUNT) < 2) then {
 		if (!GETDUSTT(DACTIVE)) then {
 			SETDUST(DACTIVE,true);

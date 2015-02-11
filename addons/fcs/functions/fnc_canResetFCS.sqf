@@ -12,5 +12,4 @@
 
 #include "script_component.hpp"
 
-ACE_player == gunner vehicle ACE_player
-&& (count ((vehicle ACE_player) getVariable [QGVAR(Magazines), []]) > 1)
+count ((vehicle ACE_player) getVariable [format ["%1_%2", QGVAR(Magazines), [vehicle ACE_player] call EFUNC(common,getTurretIndex)], []]) > 1
