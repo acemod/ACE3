@@ -11,7 +11,27 @@ class Extended_PostInit_EventHandlers {
 };
 
 class Extended_Init_EventHandlers {
-    class AllVehicles {
+    class Tank {
+        class ADDON {
+            clientInit = QUOTE(_this call FUNC(vehicleInit));
+        };
+    };
+    class Car {
+        class ADDON {
+            clientInit = QUOTE(_this call FUNC(vehicleInit));
+        };
+    };
+    class Helicopter {
+        class ADDON {
+            clientInit = QUOTE(_this call FUNC(vehicleInit));
+        };
+    };
+    class Plane {
+        class ADDON {
+            clientInit = QUOTE(_this call FUNC(vehicleInit));
+        };
+    };
+    class Ship_F {
         class ADDON {
             clientInit = QUOTE(_this call FUNC(vehicleInit));
         };
