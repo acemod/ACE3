@@ -63,13 +63,13 @@ _updateMagazinesOnPlayerFnc = {
 };
 
 if (_nextEventIsBullet) then {
-    playSound QGVAR(soundMagazineFinished);
+    playSound QGVAR(soundRoundFinished);
     if ((((count _simEvents) % 3) == 0) || {(count _simEvents) == 1}) then {
         //For performance - only update mags every 3 bullets (or if it's the last event)
         call _updateMagazinesOnPlayerFnc;
     };
 } else {
-    playSound QGVAR(soundRoundFinished);
+    playSound QGVAR(soundMagazineFinished);
     call _updateMagazinesOnPlayerFnc;
 };
 
