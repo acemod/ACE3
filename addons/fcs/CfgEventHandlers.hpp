@@ -13,27 +13,55 @@ class Extended_PostInit_EventHandlers {
 class Extended_Init_EventHandlers {
     class Tank {
         class ADDON {
-            clientInit = QUOTE(_this call FUNC(vehicleInit));
+            serverInit = QUOTE(_this call FUNC(vehicleInit));
         };
     };
     class Car {
         class ADDON {
-            clientInit = QUOTE(_this call FUNC(vehicleInit));
+            serverInit = QUOTE(_this call FUNC(vehicleInit));
         };
     };
     class Helicopter {
         class ADDON {
-            clientInit = QUOTE(_this call FUNC(vehicleInit));
+            serverInit = QUOTE(_this call FUNC(vehicleInit));
         };
     };
     class Plane {
         class ADDON {
-            clientInit = QUOTE(_this call FUNC(vehicleInit));
+            serverInit = QUOTE(_this call FUNC(vehicleInit));
         };
     };
     class Ship_F {
         class ADDON {
-            clientInit = QUOTE(_this call FUNC(vehicleInit));
+            serverInit = QUOTE(_this call FUNC(vehicleInit));
+        };
+    };
+};
+
+class Extended_Respawn_EventHandlers {
+    class Tank {
+        class ADDON {
+            respawn = QUOTE(_this call FUNC(vehicleInit));
+        };
+    };
+    class Car {
+        class ADDON {
+            respawn = QUOTE(_this call FUNC(vehicleInit));
+        };
+    };
+    class Helicopter {
+        class ADDON {
+            respawn = QUOTE(_this call FUNC(vehicleInit));
+        };
+    };
+    class Plane {
+        class ADDON {
+            respawn = QUOTE(_this call FUNC(vehicleInit));
+        };
+    };
+    class Ship_F {
+        class ADDON {
+            respawn = QUOTE(_this call FUNC(vehicleInit));
         };
     };
 };
