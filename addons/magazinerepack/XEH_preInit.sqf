@@ -2,8 +2,10 @@
 
 ADDON = false;
 
-PREP(magazineRepack);
-PREP(magazineRepackCallback);
+PREP(magazineRepackFinish);
+PREP(magazineRepackProgress);
 PREP(openSelectMagazineUI);
+PREP(simulateRepackEvents);
+PREP(startRepackingMagazine);
 
 ADDON = true;
