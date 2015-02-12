@@ -32,7 +32,7 @@ _zeroing set [1, (round (((_zeroing select 1) + (_this select 2)) * 10)) / 10];
 
 // Change the adjustment array
 _adjustment set [_weaponIndex, _zeroing];
-[_unit, QGVAR(Adjustment), 0.5] call EFUNC(common,throttledPublicVariable);
+[_unit, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
 
 playSound (["ACE_Scopes_Click_1", "ACE_Scopes_Click_2", "ACE_Scopes_Click_3"] select floor random 3);
 
