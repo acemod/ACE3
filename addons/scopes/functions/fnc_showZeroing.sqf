@@ -34,8 +34,8 @@ if (isNull _display) exitWith {};
 
 // Update values
 _zeroing = _adjustment select _weaponIndex;
-_vertical = _display displayCtrl 925002;
-_horizontal = _display displayCtrl 925003;
+_vertical = _display displayCtrl 12;
+_horizontal = _display displayCtrl 13;
 _vertical ctrlSetText (str (_zeroing select 1));
 _horizontal ctrlSetText (str (_zeroing select 0));
 
