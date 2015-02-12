@@ -119,6 +119,7 @@ PREP(setName);
 PREP(setParameter);
 PREP(setPitchBankYaw);
 PREP(setVariableJIP);
+PREP(setVariablePublic);
 PREP(setSetting);
 PREP(setSettingFromConfig);
 PREP(stringToColoredText);
