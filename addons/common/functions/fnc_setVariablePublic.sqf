@@ -27,7 +27,7 @@ _object setVariable [_varName, _value];
 // "duh"
 if (!isMultiplayer) exitWith {};
 
-// Fenerate stacked eventhandler id
+// Generate object variable to store embargo status
 private "_embargoTimeVarName";
 _embargoTimeVarName = format ["ACE_PE_%1", _varName];
 
@@ -41,9 +41,9 @@ _object setVariable [_varName, _value, true];
 _object setVariable [_embargoTimeVarName, diag_tickTime + _delay];
 
 [{
-    EXPLODE_5_PVT(_this select 0,_object,_varName,_value,_delay, _embargoTimeVarName);
+    EXPLODE_5_PVT(_this select 0,_object,_varName,_value,_delay,_embargoTimeVarName);
 
-    if (diag_tickTime < (_object getVariable _embargoTimeVarName)) exitWith {}
+    if (diag_tickTime < (_object getVariable _embargoTimeVarName)) exitWith {};
 
     // If the value has changed since last update
     if !(_value isEqualTo (_object getVariable _varName)) then {
