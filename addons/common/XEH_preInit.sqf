@@ -75,6 +75,7 @@ PREP(getVehicleCargo);
 PREP(getVehicleCodriver);
 PREP(getVehicleCrew);
 PREP(getWeaponAzimuthAndInclination);
+PREP(getWeaponIndex);
 PREP(getWeaponType);
 PREP(getWindDirection);
 PREP(goKneeling);
@@ -128,6 +129,7 @@ PREP(toBin);
 PREP(toBitmask);
 PREP(toHex);
 PREP(toNumber);
+PREP(throttledPublicVariable);
 PREP(unmuteUnit);
 PREP(waitAndExecute);
 
