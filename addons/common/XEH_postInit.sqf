@@ -82,7 +82,10 @@ enableCamShake true;
 
 }] call FUNC(addEventhandler);
 
-GVAR(OldPlayerInventory) = [ACE_player] call FUNC(getAllGear);
+GVAR(OldPlayerInventory) = objNull;
+if !(isNull ACE_player) then {
+    GVAR(OldPlayerInventory) = [ACE_player] call FUNC(getAllGear);
+};
 GVAR(OldPlayerVisionMode) = currentVisionMode ACE_player;
 GVAR(OldZeusDisplayIsOpen) = !(isNull findDisplay 312);
 GVAR(OldCameraView) = cameraView;
@@ -93,12 +96,15 @@ GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
 [{
 
     // "playerInventoryChanged" event
-    _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
-    if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
+    _newPlayerInventory = objNull;
+    if !(isNull ACE_player) then {
+        _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
+
+        if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
         // Raise ACE event locally
-        GVAR(OldPlayerInventory) = _newPlayerInventory;
         ["playerInventoryChanged", [ACE_player, _newPlayerInventory]] call FUNC(localEvent);
     };
+    GVAR(OldPlayerInventory) = _newPlayerInventory;
 
     // "playerVisionModeChanged" event
     _newPlayerVisionMode = currentVisionMode ACE_player;
