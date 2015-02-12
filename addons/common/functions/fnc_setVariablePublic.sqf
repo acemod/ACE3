@@ -32,7 +32,7 @@ private "_embargoTimeVarName";
 _embargoTimeVarName = format ["ACE_PE_%1", _varName];
 
 // If we are on embargo, exit
-if !(isNil (_object getVariable _embargoTimeVarName)) exitWith {}
+if !(isNil {_object getVariable _embargoTimeVarName}) exitWith {};
 
 // Publish
 _object setVariable [_varName, _value, true];
