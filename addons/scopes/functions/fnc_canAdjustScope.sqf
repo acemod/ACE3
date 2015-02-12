@@ -18,7 +18,7 @@ private ["_unit", "_weaponIndex", "_zeroing", "_optic", "_maxHorizontal", "_maxV
 
 _unit = _this select 0;
 
-_weaponIndex = [_unit, currentWeapon _unit] call FUNC(getWeaponIndex);
+_weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {false};
 
 _adjustment = _unit getVariable QGVAR(Adjustment);

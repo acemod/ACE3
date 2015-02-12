@@ -6,7 +6,6 @@ PREP(adjustScope);
 PREP(canAdjustScope);
 PREP(firedEH);
 PREP(getOptics);
-PREP(getWeaponIndex);
 PREP(inventoryCheck);
 PREP(showZeroing);
 

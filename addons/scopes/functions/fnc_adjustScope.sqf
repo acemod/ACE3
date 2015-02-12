@@ -18,7 +18,7 @@ private ["_unit", "_weapons", "_zeroing", "_pitchbankyaw", "_pitch", "_bank", "_
 
 _unit = _this select 0;
 
-_weaponIndex = [_unit, currentWeapon _unit] call FUNC(getWeaponIndex);
+_weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 
 _adjustment = _unit getVariable QGVAR(Adjustment);
 if (isNil "_adjustment") then {

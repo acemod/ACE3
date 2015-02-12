@@ -31,7 +31,7 @@ if !([_unit] call EFUNC(common,isPlayer)) exitWith {};
 _weapon = _this select 1;
 _projectile = _this select 5;
 
-_weaponIndex = [_unit, currentWeapon _unit] call FUNC(getWeaponIndex);
+_weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {};
 
 _zeroing = _adjustment select _weaponIndex;

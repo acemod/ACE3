@@ -75,6 +75,7 @@ PREP(getVehicleCargo);
 PREP(getVehicleCodriver);
 PREP(getVehicleCrew);
 PREP(getWeaponAzimuthAndInclination);
+PREP(getWeaponIndex);
 PREP(getWeaponType);
 PREP(getWindDirection);
 PREP(goKneeling);
