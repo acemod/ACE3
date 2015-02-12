@@ -35,19 +35,25 @@ if (!isMultiplayer) exitWith {};
 private "_idName";
 _idName = format ["ACE_setVariablePublic_%1", _varName];
 
+// exit now if an eh for that variable already exists
+private "_allIdNames";
+_allIdNames = [GETMVAR(BIS_stackedEventHandlers_onEachFrame,[]), {_this select 0}] call FUNC(map);
+
+if (_idName in _allIdNames) exitWith {};
+
 // when to push the value
 private "_syncTime";
 _syncTime = diag_tickTime + _sync;
 
-// add eventhandler. should the value change, then overwrite the previous eventhandler
+// add eventhandler
 [_idName, "onEachFrame", {
     // wait to sync the variable
-    if (diag_tickTime > _this select 3) then {
+    if (diag_tickTime > _this select 2) then {
         // set value public
-        (_this select 0) setVariable [_this select 1, _this select 2, true];
+        (_this select 0) setVariable [_this select 1, (_this select 0) getVariable (_this select 1), true];
 
         // remove eventhandler
-        [_this select 4, "onEachFrame"] call BIS_fnc_removeStackedEventHandler
+        [_this select 3, "onEachFrame"] call BIS_fnc_removeStackedEventHandler
     };
-}, [_object, _varName, _value, _syncTime, _idName]] call BIS_fnc_addStackedEventHandler;
+}, [_object, _varName, _syncTime, _idName]] call BIS_fnc_addStackedEventHandler;
 nil
