@@ -118,14 +118,14 @@ if (_selectionName != "") then {
             _cache_projectiles pushBack _projectile;
             _cache_hitpoints pushBack (_hitPoints select (_hitSelections find _selectionName));
             _cache_damages pushBack _newDamage;
-            _cache_params pushBack [_unit, _selectionName, _damage, _source, _projectile];
+            _cache_params pushBack [_unit, _selectionName, _damage, _source, _projectile, _returnDamage];
         };
     } else {
         // This is an unhandled projectile
         _cache_projectiles pushBack _projectile;
         _cache_hitpoints pushBack (_hitPoints select (_hitSelections find _selectionName));
         _cache_damages pushBack _newDamage;
-        _cache_params pushBack [_unit, _selectionName, _damage, _source, _projectile];
+        _cache_params pushBack [_unit, _selectionName, _damage, _source, _projectile, _returnDamage];
     };
 };
 
