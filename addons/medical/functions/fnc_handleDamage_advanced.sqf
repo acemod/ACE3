@@ -17,6 +17,7 @@
  * Public: No
  */
 
+#include "script_component.hpp"
 
 private ["_unit","_selectionName","_amountOfDamage","_sourceOfDamage","_typeOfProjectile","_typeOfDamage"];
 _unit = _this select 0;
