@@ -55,9 +55,17 @@ if (GVAR(level) >= 1) then {
 	[_unit, _selectionName, _damage, _source, _projectile, _damageReturn] call FUNC(handleDamage_caching);
 
 	// TODO check if this should would have killed the unit..
-	if (_damageReturn > 0.95) then {
-		_damageReturn = 0.95;
+	if (_damageReturn > 0.9) then {
+		_damageReturn = 0.9;
 	};
+};
+
+if (_unit getVariable [QGVAR(preventDeath), false] && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
+    if (vehicle _unit != _unit and {damage _vehicle >= 1}) then {
+        // @todo
+        // [_unit] call FUNC(unload);
+    };
+    0.89
 };
 
 _damageReturn
