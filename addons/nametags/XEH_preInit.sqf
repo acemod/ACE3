@@ -6,6 +6,7 @@ PREP(canShow);
 PREP(doShow);
 PREP(drawNameTagIcon);
 PREP(getVehicleData);
+PREP(initIsSpeaking);
 PREP(moduleNameTags);
 PREP(onMouseZChanged);
 PREP(setText);
