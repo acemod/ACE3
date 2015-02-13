@@ -45,18 +45,18 @@ if (isNil QGVAR(level)) then {
 };
 
 _damageReturn = (_this select 2);
-_typeOfDamage = [_this select 4] call FUNC(getTypeOfDamage);
-
-if (GVAR(level) >= 0) then {
-    _damageReturn = (_this + [_damageReturn, _typeOfDamage]) call FUNC(handleDamage_basic);
+if (GVAR(level) == 0) then {
+    _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_basic);
 };
 
 if (_damageReturn < 0.01) exitWith {0};
 
 if (GVAR(level) >= 1) then {
-    _damageReturn = (_this + [_damageReturn, _typeOfDamage]) call FUNC(handleDamage_medium);
-    if (GVAR(level) >= 2) then {
-	    _damageReturn = (_this + [_damageReturn, _typeOfDamage]) call FUNC(handleDamage_advanced);
+	[_unit, _selectionName, _damage, _source, _projectile, _damageReturn] call FUNC(handleDamage_caching);
+
+	// TODO check if this should would have killed the unit..
+	if (_damageReturn > 0.95) then {
+		_damageReturn = 0.95;
 	};
 };
 
