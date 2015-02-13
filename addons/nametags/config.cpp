@@ -41,7 +41,12 @@ class ACE_Settings {
         isClientSetable = 1;
         displayName = "$STR_ACE_NameTags_ShowNamesForAI";
     };
-
+    class GVAR(showSoundWaves) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSetable = 1;
+        displayName = "$STR_ACE_NameTags_ShowSoundWaves";
+    };
     class GVAR(PlayerNamesViewDistance) {
         value = 5;
         typeName = "SCALAR";

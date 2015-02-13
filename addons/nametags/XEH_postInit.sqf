@@ -1,6 +1,8 @@
 // by commy2 and CAA-Picard
 #include "script_component.hpp"
 
+[] call FUNC(initIsSpeaking);
+
 if (!hasInterface) exitWith {};
 
 

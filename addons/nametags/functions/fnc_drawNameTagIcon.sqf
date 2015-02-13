@@ -13,7 +13,7 @@
  */
 
 #include "script_component.hpp"
- 
+
 #define TEXTURES_RANKS [ \
     "", \
     "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa", \
@@ -46,11 +46,23 @@ _color = if !(group _target == group _player) then {
 
 _name = [_target, true] call EFUNC(common,getName);
 
-_rank = TEXTURES_RANKS select ((["PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"] find rank _target) + 1);
-_size = [0, 1] select GVAR(showPlayerRanks);
+_icon = "";
+_size = 0;
+if (GVAR(showSoundWaves) && {_target getVariable [QGVAR(isSpeaking), false]}) then {
+    _icon = QUOTE(PATHTOF(UI\soundwave));
+    _icon = _icon + str (floor (random 10)) + ".paa"; //random
+    // _icon = _icon + str (diag_frameno % 10) + ".paa"; //play in order??
+    _size = 2;
+} else {
+    if (GVAR(showPlayerRanks)) then {
+        _icon = TEXTURES_RANKS select ((["PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"] find (rank _target)) + 1);
+        _size = 1;
+    };
+};
+
 
 drawIcon3D [
-    _rank,
+    _icon,
     _color,
     _position,
     _size,

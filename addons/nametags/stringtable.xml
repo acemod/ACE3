@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-17 -->
+<!-- Edited with tabler - 2015-02-12 -->
 <Project name="ACE">
   <Package name="NameTags">
     <Key ID="STR_ACE_NameTags_ShowNames">
@@ -68,6 +68,11 @@
     </Key>
     <Key ID="STR_ACE_NameTags_ShowNamesForAI">
       <English>Show name tags for AI units</English>
+    </Key>
+    <Key ID="STR_ACE_NameTags_ShowSoundWaves">
+      <English>Show SoundWaves when speaking</English>
+      <German>Zeigen Schallwelle im Gespräch</German>
+      <Spanish>Mostrar onda sonora cuando se habla</Spanish>
     </Key>
   </Package>
 </Project>
