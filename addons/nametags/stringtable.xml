@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-02-12 -->
+<!-- Edited with tabler - 2015-02-13 -->
 <Project name="ACE">
   <Package name="NameTags">
     <Key ID="STR_ACE_NameTags_ShowNames">
@@ -70,9 +70,12 @@
       <English>Show name tags for AI units</English>
     </Key>
     <Key ID="STR_ACE_NameTags_ShowSoundWaves">
-      <English>Show SoundWaves when speaking</English>
-      <German>Zeigen Schallwelle im Gespräch</German>
-      <Spanish>Mostrar onda sonora cuando se habla</Spanish>
+      <English>Show SoundWaves (requires player names)</English>
+      <German>Zeigen Schallwelle  (benötigt spielernamen)</German>
+      <Spanish>Mostrar onda sonora  (requiere Mostrar nombres de jugadores)</Spanish>
+    </Key>
+    <Key ID="STR_ACE_NameTags_DefaultNametagColor">
+      <English>Default Nametag Color (Non Group Members)</English>
     </Key>
   </Package>
 </Project>

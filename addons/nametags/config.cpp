@@ -16,6 +16,12 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 class ACE_Settings {
+    class GVAR(defaultNametagColor) {
+        value[] = {0.77, 0.51, 0.08, 1};
+        typeName = "COLOR";
+        isClientSetable = 1;
+        displayName = "$STR_ACE_NameTags_DefaultNametagColor";
+    };
     class GVAR(showPlayerNames) {
         value = 1;
         typeName = "SCALAR";
@@ -40,6 +46,11 @@ class ACE_Settings {
         typeName = "BOOL";
         isClientSetable = 1;
         displayName = "$STR_ACE_NameTags_ShowNamesForAI";
+    };    
+    class GVAR(showCursorTagForVehicles) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSetable = 0;
     };
     class GVAR(showSoundWaves) {
         value = 0;
