@@ -36,7 +36,7 @@ addMissionEventHandler ["Draw3D", {
     //If set to "Only On Keypress" settings, fade just like main tags
     if (GVAR(showCursorTagForVehicles)) then {
         _target = cursorTarget;
-        if ((!(_target isKindOf "Man")) && {!(_target in allUnitsUAV)}) then {
+        if ((!(_target isKindOf "CAManBase")) && {!(_target in allUnitsUAV)}) then {
             _target = effectiveCommander _target;
             if ((!isNull _target) && {side group _target == playerSide} && {_target != _player} && {isPlayer _target || {GVAR(ShowNamesForAI)}} && {!(_target getVariable ["ACE_hideName", false])}) then {
                 _distance = _player distance _target;
@@ -52,7 +52,7 @@ addMissionEventHandler ["Draw3D", {
     if (GVAR(showPlayerNames) in [2,4]) then {
         //"Only Cursor" mode, only show nametags for humans
         _target = cursorTarget;
-        if ((!isNull _target) && {_target isKindOf "Man"} && {side group _target == playerSide} && {_target != _player} && {isPlayer _target || {GVAR(ShowNamesForAI)}} && {!(_target getVariable ["ACE_hideName", false])}) then {
+        if ((!isNull _target) && {_target isKindOf "CAManBase"} && {side group _target == playerSide} && {_target != _player} && {isPlayer _target || {GVAR(ShowNamesForAI)}} && {!(_target getVariable ["ACE_hideName", false])}) then {
             _distance = _player distance _target;
             _alpha = ((1 - 0.2 * (_distance - GVAR(PlayerNamesViewDistance))) min 1) * GVAR(PlayerNamesMaxAlpha);
             if ((GVAR(showPlayerNames) == 4)) then { //only on keypress
@@ -62,7 +62,7 @@ addMissionEventHandler ["Draw3D", {
         };
     } else {
         _pos = positionCameraToWorld [0, 0, 0];
-        _targets = _pos nearObjects ["Man", GVAR(PlayerNamesViewDistance) + 5];
+        _targets = _pos nearObjects ["CAManBase", GVAR(PlayerNamesViewDistance) + 5];
 
         if (!surfaceIsWater _pos) then {
             _pos = ATLtoASL _pos;
