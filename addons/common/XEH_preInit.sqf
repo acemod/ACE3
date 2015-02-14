@@ -111,7 +111,6 @@ PREP(isAutoWind);
 PREP(isAwake);
 PREP(isEngineer);
 PREP(isEOD);
-PREP(isHC);
 PREP(isInBuilding);
 PREP(isModLoaded);
 PREP(isPlayer);
