@@ -1,7 +1,7 @@
 /*
- * Author: KoffeinFlummi
+ * Author: KoffeinFlummi, commy2
  *
- * Checks if a vehicle is equipped with an FCS and if so, adds the fired event handler
+ * Checks if a vehicle is equipped with an FCS and if so, adds the fired event handler. Execute on server.
  *
  * Arguments:
  * 0: Vehicle

@@ -16,9 +16,9 @@ private "_vehicle";
 
 _vehicle = _this select 0;
 
-_vehicle setVariable [QGVAR(Distance), 0, true];
-_vehicle setVariable [QGVAR(Magazines), [], true];
-_vehicle setVariable [QGVAR(Elevation), 0, true];
-_vehicle setVariable [QGVAR(Azimuth), 0, true];
+[_vehicle, QGVAR(Distance),   0] call EFUNC(common,setVariablePublic);
+[_vehicle, QGVAR(Magazines), []] call EFUNC(common,setVariablePublic);
+[_vehicle, QGVAR(Elevation),  0] call EFUNC(common,setVariablePublic);
+[_vehicle, QGVAR(Azimuth),    0] call EFUNC(common,setVariablePublic);
 
 [localize "STR_ACE_FCS_HasBeenReset"] call EFUNC(common,displayTextStructured);
