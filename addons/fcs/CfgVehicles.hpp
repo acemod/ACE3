@@ -432,7 +432,9 @@ class CfgVehicles {
         };*/
     };
 
-    class B_Heli_Light_01_F: Heli_Light_01_base_F {
+    class Heli_Light_01_unarmed_base_F: Heli_Light_01_base_F {};
+
+    class B_Heli_Light_01_F: Heli_Light_01_unarmed_base_F {
         /*class Turrets: Turrets {
             class CopilotTurret: CopilotTurret {};
         };*/
