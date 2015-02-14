@@ -1,6 +1,3 @@
-class ACE_gui_RscProgress;
-class ACE_gui_staticBase;
-
 
 class GVAR(ProgressBar_Dialog) {
   idd = -1;

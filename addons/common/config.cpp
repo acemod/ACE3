@@ -94,8 +94,18 @@ class ACE_Settings {
         isClientSetable = 1;
         displayName = "$STR_ACE_Common_EnableNumberHotkeys";
     };
+    class GVAR(settingFeedbackIcons) {
+        value = 1;
+        typeName = "SCALAR";
+        force = 0;
+        isClientSetable = 1;
+        displayName = "$STR_ACE_Common_SettingFeedbackIconsName";
+        description = "$STR_ACE_Common_SettingFeedbackIconsDesc";
+        values[] = {"Hide", "Top right, downwards", "Top right, to the left", "Top left, downwards", "Top left, to the right"};
+    };    
 };
 
+#include "define.hpp"
 #include <ProgressScreen.hpp>
 #include <HintConfig.hpp>
 #include <RscInfoType.hpp>

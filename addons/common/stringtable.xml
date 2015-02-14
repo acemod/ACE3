@@ -315,6 +315,12 @@
             <Polish>Ignoruj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
             <Spanish>Rechazar Peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
         </Key>
+        <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
+            <English>Feedback icons</English>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
+            <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
+        </Key>        
     </Package>
 
 </Project>

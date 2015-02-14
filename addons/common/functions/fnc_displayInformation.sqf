@@ -19,10 +19,10 @@ _type = [_this, 2, 0, [0]] call BIS_fnc_Param;
 _icon = [_this, 3, "",[""]] call BIS_fnc_Param;
 
 if (_title != "") then {
-	DISPLAY_LAYER cutRsc [QGVAR(RSC_DISPLAY_INFORMATION),"PLAIN"];
+	DISPLAY_LAYER cutRsc ['ACE_RscDisplayInformation',"PLAIN"];
 
 	disableSerialization;
-	_display = uiNamespace getvariable QGVAR(RSC_DISPLAY_INFORMATION);
+	_display = uiNamespace getvariable 'ACE_RscDisplayInformation';
 	if (!isnil "_display") then {
 		_headerCtrl = _display displayCtrl 1;
 		_headerCtrl ctrlSetText _title;

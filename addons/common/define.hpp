@@ -182,12 +182,12 @@ class ACE_gui_buttonBase {
     bottom = 0.00;
   };
   textureNoShortcut = "";
-  animTextureNormal = QUOTE( PATHTOF(data\buttonNormal_gradient_top.paa) );
-  animTextureDisabled = QUOTE( PATHTOF(data\buttonDisabled_gradient.paa));
-  animTextureOver = QUOTE( PATHTOF(data\buttonNormal_gradient_top.paa));
-  animTextureFocused = QUOTE( PATHTOF(data\buttonNormal_gradient_top.paa));
-  animTexturePressed = QUOTE( PATHTOF(data\buttonNormal_gradient_top.paa));
-  animTextureDefault = QUOTE( PATHTOF(data\buttonNormal_gradient_top.paa));
+  animTextureNormal = "#(argb,8,8,3)color(0,0,0,0.9)";
+  animTextureDisabled = "#(argb,8,8,3)color(0,0,0,0.8)";
+  animTextureOver = "#(argb,8,8,3)color(1,1,1,1)";
+  animTextureFocused = "#(argb,8,8,3)color(1,1,1,1)";
+  animTexturePressed = "#(argb,8,8,3)color(1,1,1,1)";
+  animTextureDefault = "#(argb,8,8,3)color(1,1,1,1)";
   period = 0.5;
   font = FontCSE;
   soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};

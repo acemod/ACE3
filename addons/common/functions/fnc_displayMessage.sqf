@@ -18,10 +18,10 @@ _content = [_this, 1, "",[""]] call BIS_fnc_Param;
 _type = [_this, 2, 0, [0]] call BIS_fnc_Param;
 
 if (_title != "" && _content != "") then {
-	DISPLAY_LAYER cutRsc [QGVAR(RSC_DISPLAY_MESSAGE),"PLAIN"];
+	DISPLAY_LAYER cutRsc ['ACE_RscDisplayMessage',"PLAIN"];
 
 	disableSerialization;
-	_display = uiNamespace getvariable QGVAR(RSC_DISPLAY_MESSAGE);
+	_display = uiNamespace getvariable 'ACE_RscDisplayMessage';
 	if (!isnil "_display") then {
 		_headerCtrl = _display displayCtrl 1;
 		_contentCtrl = _display displayCtrl 2;
@@ -29,6 +29,7 @@ if (_title != "" && _content != "") then {
 		_headerCtrl ctrlSetText _title;
 		_contentCtrl ctrlSetText _content;
 
+		// TODO get a font that has the same width characters for all. Ask Jaynus.
 		_contentAmountOfChars = count (toArray _content);
 		_pos = ctrlPosition _contentCtrl;
 		_pos set [2, _contentAmountOfChars * ((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)/ 3.3) max (safeZoneW / 11)];

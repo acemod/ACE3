@@ -28,7 +28,7 @@ if (vehicle _caller == _caller && (vehicle _target == _target) && !(stance _call
 
 if (ACE_player == _caller) then {
     // Displaying the treatment icon action
-    [QGVAR(treatmentIconID), true, QUOTE(PATHTOF(data\icons\medication_small.paa)), [1,1,1,1]] call EFUNC(gui,displayIcon);
+    [QGVAR(treatmentIconID), true, QUOTE(PATHTOF(data\icons\medication_small.paa)), [1,1,1,1]] call EFUNC(common,displayIcon);
 };
 
 // Get the current position for the treatment person
@@ -54,7 +54,7 @@ _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
     }, // on success
     {
         private ["_caller","_target", "_selectionName", "_prevAnim"];
-        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(gui,sendDisplayInformationTo);
+        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(common,sendDisplayInformationTo);
 
         if (_prevAnim != "") then {
             [_caller,_prevAnim, 0] call EFUNC(common,doAnimation);
@@ -64,6 +64,6 @@ _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
         ["Medical_treatmentCompleted", [_caller, _target, _selectionName, _removeItem]] call ace_common_fnc_localEvent;
     },    // on failure
     [_caller, _target, _selectionName, _removeItem, _prevAnim] // arguments
-] call EFUNC(gui,loadingBar);
+] call EFUNC(common,loadingBar);
 
 true;

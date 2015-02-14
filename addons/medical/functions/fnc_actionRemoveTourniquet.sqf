@@ -53,10 +53,10 @@ _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
         [_caller,false] call FUNC(treatmentMutex);
     }, // on success
     {
-        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(gui,sendDisplayInformationTo);
+        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(common,sendDisplayInformationTo);
         [(_this select 0),false] call FUNC(treatmentMutex);
     },    // on failure
     [_caller, _target, _selectionName] // arguments
-] call EFUNC(gui,loadingBar);
+] call EFUNC(common,loadingBar);
 
 
