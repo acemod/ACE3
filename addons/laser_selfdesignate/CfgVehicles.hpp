@@ -15,6 +15,7 @@ class CfgVehicles {
     //  driverCanSee = 2+32;
 
     };
+
     class Helicopter_Base_F: Helicopter {};
 
     class Heli_Attack_01_base_F: Helicopter_Base_F {};
