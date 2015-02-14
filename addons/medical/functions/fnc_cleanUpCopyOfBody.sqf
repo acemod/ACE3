@@ -13,12 +13,12 @@
 private ["_unit", "_copy"];
 _unit = _this select 0;
 
-_copy = _unit getvariable QGVAR(copyOfBody_f);
+_copy = _unit getvariable QGVAR(copyOfBody);
 if (isnil "_copy") exitwith {false};
 [format["Cleaning up a copy of Body: %1 %2", _unit, _copy]] call EFUNC(common,debug);
 // lets clean it up
-_unit setvariable [QGVAR(originalCopy_f), nil, true];
-_unit setvariable [QGVAR(copyOfBody_f), nil, true];
+_unit setvariable [QGVAR(originalCopy), nil, true];
+_unit setvariable [QGVAR(copyOfBody), nil, true];
 if (!isNull _copy) then {
     deleteVehicle _copy;
 };
