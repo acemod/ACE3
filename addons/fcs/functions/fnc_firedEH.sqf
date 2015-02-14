@@ -25,7 +25,8 @@ private ["_gunner", "_turret"];
 _gunner = [_vehicle, _weapon] call EFUNC(common,getGunner);
 _turret = [_gunner] call EFUNC(common,getTurretIndex);
 
-//if (ACE_player != _gunner) exitWith {};     // global
+// Exit if the unit isn't a player
+if !([_unit] call EFUNC(common,isPlayer)) exitWith {};
 
 private ["_FCSMagazines", "_FCSElevation", "_offset"];
 
