@@ -15,7 +15,7 @@
 
         // Statement
         ["azimuth"] call FUNC(onKeyDown);
-        true
+        false
     },
     [15, [false, false, false]],
     false,
@@ -34,7 +34,7 @@
 
         // Statement
         ["azimuth"] call FUNC(onKeyUp);
-        true
+        false
     },
     [15, [false, false, false]],
     false,
