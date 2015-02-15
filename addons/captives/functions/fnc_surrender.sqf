@@ -30,12 +30,7 @@ if ((_unit getVariable [QGVAR(isSurrendering), false]) isEqualTo _state) then {
 
 if (_state) then {
     _unit setVariable [QGVAR(isSurrendering), true, true];
-    [_unit, QGVAR(Surrendered), true] call EFUNC(common,setCaptivityStatus);
-
-    if (_unit == ACE_player) then {
-        showHUD false;
-    };
-
+    
     // fix anim on mission start (should work on dedicated servers)
     [{
         PARAMS_1(_unit);
@@ -45,19 +40,27 @@ if (_state) then {
         };
     }, [_unit], 0.01, 0] call EFUNC(common,waitAndExecute);
 
-    //PFEH - (TODO: move to event system?)
+    //Start up a pfeh to make sure the unit actualy goes into the animation
+    //Only change variables and captivity when they reach that state 
+    //fixes vaulting to break animation
     [{
-        EXPLODE_1_PVT((_this select 0),_unit);
-        if (_unit getVariable [QGVAR(isSurrendering), false]) then {
-            //If unit dies, gets knocked out, or is handcuffed then end surrender
-            if ((!alive _unit) || {_unit getVariable ["ACE_isUnconscious", false]} || {_unit getVariable [QGVAR(isHandcuffed), false]}) then {
-                [_unit, false] call FUNC(surrender);
-                [(_this select 1)] call CBA_fnc_removePerFrameHandler;
-            };
-        } else {
-            [(_this select 1)] call cba_fnc_removePerFrameHandler;
+        PARAMS_2(_args,_pfID);
+        EXPLODE_2_PVT(_args,_unit,_maxTime);
+
+        if (time > _maxTime) exitWith {
+            [_pfID] call CBA_fnc_removePerFrameHandler;
+            _unit setVariable [QGVAR(isSurrendering), false, true];
+            ERROR("Surrender animation failed");
         };
-    }, 0.0, [_unit]] call CBA_fnc_addPerFrameHandler;
+        if ((animationState _unit) == "ACE_AmovPercMstpSsurWnonDnon") exitWith {
+            [_pfID] call CBA_fnc_removePerFrameHandler;
+             
+            if (_unit == ACE_player) then {
+                showHUD false;
+            };
+            [_unit, QGVAR(Surrendered), true] call EFUNC(common,setCaptivityStatus);
+        };
+    }, 0, [_unit, (time + 20)]] call CBA_fnc_addPerFrameHandler;
 } else {
     _unit setVariable [QGVAR(isSurrendering), false, true];
     [_unit, QGVAR(Surrendered), false] call EFUNC(common,setCaptivityStatus);

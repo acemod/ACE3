@@ -21,6 +21,9 @@ if (isServer) then {
     }];
 };
 
+["playerVehicleChanged", {_this call FUNC(handleVehicleChanged)}] call EFUNC(common,addEventHandler);
+["zeusDisplayChanged",   {_this call FUNC(handleZeusDisplayChanged)}] call EFUNC(common,addEventHandler);
+
 //TODO: Medical Integration Events???
 
 // [_unit, "knockedOut", {

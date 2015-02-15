@@ -10,15 +10,6 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
-//release escorted captive when entering a vehicle
-class Extended_GetIn_EventHandlers {
-    class All {
-        class GVAR(AutoDetachCaptive) {
-            getIn = QUOTE(_this call FUNC(handleGetIn));
-        };
-    };
-};
-
 //reset captive animation after leaving vehicle
 class Extended_GetOut_EventHandlers {
     class All {
@@ -45,4 +36,3 @@ class Extended_InitPost_EventHandlers {
         };
     };
 };
-

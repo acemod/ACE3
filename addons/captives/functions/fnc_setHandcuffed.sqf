@@ -30,6 +30,9 @@ if (_state isEqualTo (_unit getVariable [QGVAR(isHandcuffed), false])) then {
 
 if (_state) then {
     _unit setVariable [QGVAR(isHandcuffed), true, true];
+    if (_unit getVariable [QGVAR(isSurrendering), false]) then {  //If surrendering, stop
+        [_unit, _false] call FUNC(surrender);
+    };
     [_unit, QGVAR(Handcuffed), true] call EFUNC(common,setCaptivityStatus);
     _unit setVariable [QGVAR(CargoIndex), ((vehicle _unit) getCargoIndex _unit), true];
 
