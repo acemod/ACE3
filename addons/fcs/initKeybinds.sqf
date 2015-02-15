@@ -51,7 +51,7 @@
         _exceptions = [];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
         // Conditions: specific
-        if !(call FUNC(canUseRangefinder) || FUNC(canUseFCS)) exitWith {false};
+        if !(FUNC(canUseFCS)) exitWith {false};
 
         // Statement
         [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), 50] call FUNC(adjustRange);
@@ -69,7 +69,7 @@
         _exceptions = [];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
         // Conditions: specific
-        if !(call FUNC(canUseRangefinder) || FUNC(canUseFCS)) exitWith {false};
+        if !(FUNC(canUseFCS)) exitWith {false};
 
         // Statement
         [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), -50] call FUNC(adjustRange);
