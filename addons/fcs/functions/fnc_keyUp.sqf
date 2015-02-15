@@ -19,17 +19,21 @@ _turret = _this select 1;
 
 _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 
-_distance = call FUNC(getRange);
+_distance = 0;
+if (count _this > 2) then {
+    _distance = _this select 2;
+} else {
+    _distance = call FUNC(getRange);
+    if (_distance == 0) then {
+        _distance = [
+            getNumber (_turretConfig >> QGVAR(DistanceInterval)),
+            getNumber (_turretConfig >> QGVAR(MaxDistance)),
+            getNumber (_turretConfig >> QGVAR(MinDistance))
+        ] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision
+    };
+};
 
 _magazines = _vehicle magazinesTurret _turret;
-
-if (_distance == 0) then {
-    _distance = [
-        getNumber (_turretConfig >> QGVAR(DistanceInterval)),
-        getNumber (_turretConfig >> QGVAR(MaxDistance)),
-        getNumber (_turretConfig >> QGVAR(MinDistance))
-    ] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision
-};
 
 private ["_weaponDirection", "_angleTarget"];
 
@@ -44,10 +48,6 @@ if (_weaponDirection isEqualTo [0,0,0]) then {  // dummy value for non main turr
 };
 
 _angleTarget = asin (_weaponDirection select 2);
-
-if (count _this > 2) then {
-    _distance = _this select 2;
-};
 
 if (!(isNil QGVAR(backgroundCalculation)) and {!(scriptDone GVAR(backgroundCalculation))}) then {
     terminate GVAR(backgroundCalculation);
