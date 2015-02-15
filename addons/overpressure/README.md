@@ -1,4 +1,4 @@
-ace_backblast
+ace_overpressure
 =============
 
 Adds backblast to AT launchers and overpressure zones to tank cannons.
