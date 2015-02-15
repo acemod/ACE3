@@ -39,7 +39,7 @@ private "_affected";
 _affected = getPos _projectile nearEntities ["CAManBase", _dangerZoneRange];
 
 // Let each client handle their own affected units
-["overpressure", _affected, [_firer, _position, _direction, _weapon]] call EFUNC(common,targetEvent);
+["backblast", _affected, [_firer, _position, _direction, _weapon]] call EFUNC(common,targetEvent);
 
 // Draw debug lines
 #ifdef DEBUG_MODE_FULL

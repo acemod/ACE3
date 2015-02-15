@@ -6,6 +6,5 @@ PREP(backblastDamage);
 PREP(fireLauncherBackblast);
 PREP(fireOverpressureZone);
 PREP(getDistance);
-PREP(overpressureDamage);
 
 ADDON = true;

@@ -36,14 +36,14 @@ class CfgWeapons {
 
     class CannonCore;
     class cannon_120mm: CannonCore {
-        ACE_DangerZone_Angle = 90;
-        ACE_DangerZone_Range = 50;
-        ACE_DangerZone_Damage = 0.85;
+        GVAR(angle) = 90;
+        GVAR(range) = 50;
+        GVAR(damage) = 0.85;
     };
 
     class mortar_155mm_AMOS: CannonCore {
-        ACE_DangerZone_Angle = 90;
-        ACE_DangerZone_Range = 60;
-        ACE_DangerZone_Damage = 1;
+        GVAR(angle) = 90;
+        GVAR(range) = 60;
+        GVAR(damage) = 1;
     };
 };
