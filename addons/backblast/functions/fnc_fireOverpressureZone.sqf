@@ -14,28 +14,32 @@
  *
  * Return value:
  * None
- *///#define DEBUG_MODE_FULL
+ */
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 EXPLODE_7_PVT(_this,_firer,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
 // Prevent AI from causing backblast damage
-if !([gunner _firer] call EFUNC(common,isPlayer)) exitWith {};
+if !([gunner _firer] call EFUNC(common,isPlayer)) exitWith {};  //@todo non-maingun turrets?
 
-private ["_position","_direction","_distance","_alpha","_beta","_damage","_affected"];
+private ["_position", "_direction"];
+
 _position = getPosASL _projectile;
 _direction = vectorDir _projectile;
 
-private ["_dangerZoneAngle","_dangerZoneRange","_dangerZoneDamage"];
-_dangerZoneAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_DangerZone_Angle") / 2;
-_dangerZoneRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_DangerZone_Range");
-_dangerZoneDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_DangerZone_Damage");
+private ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
 
+_dangerZoneAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(angle)) / 2;
+_dangerZoneRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(range));
+_dangerZoneDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(damage));
 
 // Damage to others
+private "_affected";
 _affected = getPos _projectile nearEntities ["CAManBase", _dangerZoneRange];
+
 // Let each client handle their own affected units
-["overpressure", _affected, [_firer,_position,_direction,_weapon]] call EFUNC(common,targetEvent);
+["overpressure", _affected, [_firer, _position, _direction, _weapon]] call EFUNC(common,targetEvent);
 
 // Draw debug lines
 #ifdef DEBUG_MODE_FULL
@@ -44,6 +48,7 @@ _affected = getPos _projectile nearEntities ["CAManBase", _dangerZoneRange];
         [1,0,0,1]
     ] call EFUNC(common,addLineToDebugDraw);
 
+    private "_ref";
     _ref = _direction call EFUNC(common,createOrthonormalReference);
     [   _position,
         _position vectorAdd (_direction vectorMultiply _dangerZoneRange) vectorAdd ((_ref select 1) vectorMultiply _dangerZoneRange * tan _dangerZoneAngle),

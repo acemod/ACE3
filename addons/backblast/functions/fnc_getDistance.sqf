@@ -1,5 +1,5 @@
 /*
- * Author: Commy2 and CAA-Picard
+ * Author: commy2 and CAA-Picard
  *
  * Calculate the distance to the first intersection of a line
  *
@@ -13,9 +13,9 @@
  */
 #include "script_component.hpp"
 
-private ["_distance", "_interval", "_line", "_line"];
-
 EXPLODE_3_PVT(_this,_posASL,_direction,_maxDistance);
+
+private ["_distance", "_interval", "_line", "_intersections"];
 
 _distance = _maxDistance;
 _interval = _distance;

@@ -23,27 +23,32 @@ EXPLODE_7_PVT(_this,_firer,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 // Prevent AI from causing backblast damage
 if !([_firer] call EFUNC(common,isPlayer)) exitWith {};
 
-private ["_position","_direction","_distance","_alpha","_beta","_damage","_affected"];
+private ["_position", "_direction"];
+
 _position = getPosASL _projectile;
 _direction = [0, 0, 0] vectorDiff (vectorDir _projectile);
 
-private ["_backblastAngle","_backblastRange","_backblastDamage"];
-_backblastAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_Backblast_Angle") / 2;
-_backblastRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_Backblast_Range");
-_backblastDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_Backblast_Damage");
+private ["_backblastAngle", "_backblastRange", "_backblastDamage"];
 
+_backblastAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(angle)) / 2;
+_backblastRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(range));
+_backblastDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(damage));
 
 // Damage to others
+private "_affected";
 _affected = getPos _projectile nearEntities ["CAManBase", _backblastRange];
-// Let each client handle their own affected units
-["backblast", _affected, [_firer,_position,_direction,_weapon]] call EFUNC(common,targetEvent);
 
+// Let each client handle their own affected units
+["backblast", _affected, [_firer, _position, _direction, _weapon]] call EFUNC(common,targetEvent);
 
 // Damage to the firer
+private "_distance";
 _distance = [_position, _direction, _backblastRange] call FUNC(getDistance);
-TRACE_1("Distance", _distance);
+
+TRACE_1("Distance",_distance);
 
 if (_distance < _backblastRange) then {
+    private ["_alpha", "_beta", "_damage"];
 
     _alpha = sqrt (1 - _distance / _backblastRange);
     _beta = sqrt 0.5;
@@ -66,6 +71,7 @@ if (_distance < _backblastRange) then {
         [1,1,0,1]
     ] call EFUNC(common,addLineToDebugDraw);
 
+    private "_ref";
     _ref = _direction call EFUNC(common,createOrthonormalReference);
     [   _position,
         _position vectorAdd (_direction vectorMultiply _backblastRange) vectorAdd ((_ref select 1) vectorMultiply _backblastRange * tan _backblastAngle),
