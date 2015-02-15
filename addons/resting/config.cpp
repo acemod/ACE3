@@ -17,3 +17,5 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 
 #include "CfgMoves.hpp"
+
+#include "CfgSounds.hpp"

@@ -1,6 +1,8 @@
 // by commy2
 #include "script_component.hpp"
 
+ADDON = false;
+
 // ACE Common Function
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
@@ -9,6 +11,7 @@ PREP(addCustomEventHandler);
 PREP(addLineToDebugDraw);
 PREP(addMapMarkerCreatedEventHandler);
 PREP(addScrollWheelEventHandler);
+PREP(addSetting);
 PREP(adminKick);
 PREP(ambientBrightness);
 PREP(applyForceWalkStatus);
@@ -46,6 +49,7 @@ PREP(getConfigGunner);
 PREP(getDefaultAnim);
 PREP(getDoorTurrets);
 PREP(getForceWalkStatus);
+PREP(getGunner);
 PREP(getHitPoints);
 PREP(getHitPointsWithSelections);
 PREP(getInPosition);
@@ -53,6 +57,7 @@ PREP(getMarkerType);
 PREP(getName);
 PREP(getNumberFromMissionSQM);
 PREP(getPitchBankYaw);
+PREP(getSettingData);
 PREP(getStringFromMissionSQM);
 PREP(getTargetAzimuthAndInclination);
 PREP(getTargetDistance);
@@ -70,6 +75,7 @@ PREP(getVehicleCargo);
 PREP(getVehicleCodriver);
 PREP(getVehicleCrew);
 PREP(getWeaponAzimuthAndInclination);
+PREP(getWeaponIndex);
 PREP(getWeaponType);
 PREP(getWindDirection);
 PREP(goKneeling);
@@ -80,10 +86,11 @@ PREP(isAutoWind);
 PREP(isEngineer);
 PREP(isEOD);
 PREP(isInBuilding);
-PREP(isMedic);
 PREP(isPlayer);
 PREP(isTurnedOut);
 PREP(letterToCode);
+PREP(loadSettingsFromProfile);
+PREP(loadSettingsOnServer);
 PREP(map);
 PREP(moduleCheckPBOs);
 PREP(moduleLSDVehicles);
@@ -96,8 +103,7 @@ PREP(player);
 PREP(playerSide);
 PREP(progressBar);
 PREP(queueAnimation);
-PREP(readBooleanParameterFromModule);
-PREP(readNumericParameterFromModule);
+PREP(readSettingFromModule);
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);
 PREP(removeCameraEventHandler);
@@ -110,17 +116,20 @@ PREP(sanitizeString);
 PREP(serverLog);
 PREP(setCaptivityStatus);
 PREP(setForceWalkStatus);
-PREP(setKeyDefault);
 PREP(setName);
 PREP(setParameter);
 PREP(setPitchBankYaw);
 PREP(setVariableJIP);
+PREP(setVariablePublic);
+PREP(setSetting);
+PREP(setSettingFromConfig);
 PREP(stringToColoredText);
 PREP(subString);
 PREP(toBin);
 PREP(toBitmask);
 PREP(toHex);
 PREP(toNumber);
+PREP(throttledPublicVariable);
 PREP(unmuteUnit);
 PREP(waitAndExecute);
 
@@ -162,7 +171,10 @@ PREP(hashListSelect);
 PREP(hashListSet);
 PREP(hashListPush);
 
-
+// Load settings
+if (isServer) then {
+    call FUNC(loadSettingsOnServer);
+};
 
 ACE_player = player;
 
@@ -182,7 +194,6 @@ if (hasInterface) then {
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
-
 
 PREP(stringCompare);
 PREP(string_removeWhiteSpace);
@@ -215,11 +226,10 @@ PREP(getCanInteract);
 PREP(canInteract);
 PREP(resetAllDefaults_f);
 PREP(broadcastSound3D_f);
-PREP(setDead);
+
 PREP(isAwake);
 PREP(setProne);
 
-PREP(raiseScriptedEvent_f);
 PREP(setDisableUserInputStatus);
 
 PREP(dropWeapon_f);
@@ -227,7 +237,6 @@ PREP(inWater_f);
 PREP(setVolume_f);
 PREP(closeAllDialogs_f);
 PREP(disableAI_f);
-PREP(moduleBasicRevive);
 PREP(switchToGroupSide_f);
 PREP(getFirstObjectIntersection);
 PREP(getFirstTerrainIntersection);
@@ -243,22 +252,17 @@ PREP(getCarriedObj);
 PREP(getCarriedBy);
 PREP(beingCarried);
 PREP(setCarriedBy);
-PREP(setUnconsciousState);
-PREP(isUnconscious);
-PREP(getUnconsciousCondition);
-PREP(registerUnconsciousCondition);
-PREP(setCaptiveSwitch);
+
+
 PREP(moveToTempGroup);
-PREP(canGoUnconsciousState);
-PREP(setWeaponsCorrectUnconscious);
+
 
 PREP(limitMovementSpeed);
 PREP(setArrestState);
 PREP(isArrested);
 PREP(loadPerson_F);
 PREP(loadPersonLocal_F);
-PREP(makeCopyOfBody_F);
 PREP(unloadPerson_F);
-PREP(cleanUpCopyOfBody_F);
+
 
 ADDON = true;

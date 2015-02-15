@@ -1,23 +1,21 @@
 /*
-	Name: fnc_applyDust.sqf
-
-	Author: Garth de Wet (LH)
-
-	Description:
-	Applies dust to screen.
-
-	Parameters:
-	Nothing
-
-	Returns:
-	Nothing
-
-	Example 1:
-	call FUNC(ApplyDust);
-*/
+ * Author: Garth 'L-H' de Wet
+ * Applies dust to screen.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_goggles_fnc_ApplyDust;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 if (call FUNC(ExternalCamera)) exitWith {};
-if (ace_player call FUNC(isGogglesVisible)) exitWith {
+if ([ace_player] call FUNC(isGogglesVisible)) exitWith {
 	100 cutRsc["RscACE_GogglesEffects", "PLAIN",2,false];
 	(uiNamespace getVariable ["ACE_Goggles_DisplayEffects", displayNull] displayCtrl 10662) ctrlSetText format[getText(ConfigFile >> "CfgGlasses" >> GVAR(Current) >> "ACE_DustPath"), GETDUSTT(DAMOUNT)+1];
 	SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)+1,0,1));

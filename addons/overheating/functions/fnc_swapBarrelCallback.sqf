@@ -1,14 +1,15 @@
 /*
  * Author: Commy2
- *
  * Swap barrel callback
  *
  * Argument:
- * 0: unit
- * 1: weapon
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING>
  *
  * Return value:
  * None
+ *
+ * Public: No
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 

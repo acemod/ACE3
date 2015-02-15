@@ -1,24 +1,21 @@
 /*
-	Name: ACE_Explosives_fnc_addClacker
-
-	Author(s):
-		Garth de Wet (LH)
-
-	Description:
-		Adds an explosive as a clacker item to the passed unit if the unit has a ACE_Clacker item.
-
-	Parameters:
-		0: OBJECT - unit
-		1: OBJECT - Explosive
-		2: STRING - Magazine
-		3: ARRAY - Extra vars
-
-	Returns:
-		Nothing
-
-	Example:
-		[_unit, _explosive, "SatchelCharge_Remote_Mag", [ConfigFile >> "CfgACE_Triggers" >> "Command"]] call ACE_Explosives_fnc_AddClacker;
-*/
+ * Author: Garth 'L-H' de Wet
+ * Adds an explosive as a clacker item to the passed unit if the unit has the required item.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Explosive <OBJECT>
+ * 2: Magazine classname <STRING>
+ * 3: Extra variables <ARRAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, _explosive, "SatchelCharge_Remote_Mag", [ConfigFile >> "CfgACE_Triggers" >> "Command"]] call ACE_Explosives_fnc_addClacker;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private ["_unit", "_explosive", "_clacker", "_config", "_magazineClass", "_requiredItems", "_hasRequired"];
 _unit = _this select 0;

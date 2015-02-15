@@ -1,15 +1,18 @@
 /*
  * Author: Commy2 and CAA-Picard
- *
  * Make the player check the temperature of his weapon
  *
  * Arguments:
- * 0: _player
- * 1: _weapon
+ * 0: Player <OBJECT>
+ * 1: Weapon <STRING>
  *
- * Return Values:
+ * Return Value:
  * None
  *
+ * Example:
+ * None
+ *
+ * Public: No
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 

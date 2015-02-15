@@ -17,9 +17,11 @@ class CfgPatches {
 //#include "CfgInventoryGlobalVariable.hpp"
 #include "CfgMoves.hpp"
 
-class ACE_Options {
+class ACE_Settings {
     class GVAR(useImperial) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSetable = 1;
         displayName = "$STR_ACE_Movement_UseImperial";
-        default = 0;
     };
 };

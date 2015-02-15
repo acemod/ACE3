@@ -1,23 +1,42 @@
-// by KoffeinFlummi / commy2
-
+/*
+ * Author: KoffeinFlummi and Commy2
+ * Check if weapon optics changed and reset zeroing if needed
+ *
+ * Arguments:
+ * 0: Player <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private "_new";
+EXPLODE_1_PVT(_this,_player);
 
-_new = _this call FUNC(getOptics);
+private ["_newOptics", "_adjustment"];
+
+_adjustment = ACE_player getVariable QGVAR(Adjustment);
+if (isNil "_adjustment") then {
+    _adjustment = [[0,0], [0,0], [0,0]];
+    ACE_player setVariable [QGVAR(Adjustment), _adjustment];
+    [ACE_player, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
+};
 
 if (isNil QGVAR(Optics)) then {
     GVAR(Optics) = ["", "", ""];
 };
-
-if (isNil QGVAR(Adjustment)) then {
-    GVAR(Adjustment) = [[0,0], [0,0], [0,0]];
-};
+_newOptics = [_player] call FUNC(getOptics);
 
 {
-    if (_new select _forEachIndex != _x) then {
-        GVAR(Adjustment) set [_forEachIndex, [0,0]];
+    if (_newOptics select _forEachIndex != _x) then {
+        // The optic for this weapon changed, set adjustment to zero
+        if !((_adjustment select _foreachindex) isEqualTo [0,0]) then {
+            _adjustment set [_forEachIndex, [0,0]];
+            [ACE_player, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
+        };
     };
 } forEach GVAR(Optics);
 
-GVAR(Optics) = _new;
+_adjustment = ACE_player getVariable QGVAR(Adjustment);
+GVAR(Optics) = _newOptics;

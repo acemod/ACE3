@@ -1,9 +1,4 @@
 
-#define MACRO_ADDMAGAZINE(MAGAZINE,COUNT) class _xx_##MAGAZINE { \
-  magazine = #MAGAZINE; \
-  count = COUNT; \
-}
-
 class CfgVehicles {
     class NATO_Box_Base;
     class Box_NATO_Wps_F: NATO_Box_Base {

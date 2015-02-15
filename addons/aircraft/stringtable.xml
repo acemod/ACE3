@@ -14,6 +14,18 @@
       <Portuguese>Rajada</Portuguese>
       <Italian>Raffica</Italian>
     </Key>
+    <Key ID="STR_ACE_Aircraft_gatling_20mm_Name">
+      <English>XM301</English>
+      <German>XM301</German>
+      <Spanish>XM301</Spanish>
+      <Polish>XM301</Polish>
+      <Czech>XM301</Czech>
+      <French>XM301</French>
+      <Russian>XM301</Russian>
+      <Hungarian>XM301</Hungarian>
+      <Portuguese>XM301</Portuguese>
+      <Italian>XM301</Italian>
+    </Key>
     <Key ID="STR_ACE_Aircraft_OpenCargoRamp">
       <English>Open Cargo Door</English>
       <German>Laderampe öffnen</German>

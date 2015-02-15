@@ -12,51 +12,50 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_weaponType", "_ammoType", "_magazineType", "_round", "_FCSMagazines", "_FCSElevation", "_offset"];
+private ["_vehicle", "_weapon", "_ammo", "_magazine", "_projectile"];
 
-_unit = _this select 0;
-_weaponType = _this select 1;
-_ammoType = _this select 4;
-_magazineType = _this select 5;
-_round = _this select 6;
+_vehicle = _this select 0;
+_weapon = _this select 1;
+_ammo = _this select 4;
+_magazine = _this select 5;
+_projectile = _this select 6;
 
-_FCSMagazines = _unit getVariable QGVAR(Magazines);
-_FCSElevation = _unit getVariable QGVAR(Elevation);
+private ["_gunner", "_turret"];
 
-if (ACE_player != gunner _unit) exitWith {};
-if !(_magazineType in _FCSMagazines) exitWith {};
+_gunner = [_vehicle, _weapon] call EFUNC(common,getGunner);
+_turret = [_gunner] call EFUNC(common,getTurretIndex);
+
+// Exit if the unit isn't a player
+if !([_gunner] call EFUNC(common,isPlayer)) exitWith {};
+
+private ["_FCSMagazines", "_FCSElevation", "_offset"];
+
+_FCSMagazines = _vehicle getVariable format ["%1_%2", QGVAR(Magazines), _turret];
+_FCSElevation = _vehicle getVariable format ["%1_%2", QGVAR(Elevation), _turret];
+
+if !(_magazine in _FCSMagazines) exitWith {};
 
 // GET ELEVATION OFFSET OF CURRENT MAGAZINE
 _offset = 0;
 {
-    if (_x == _magazineType) exitWith {
+    if (_x == _magazine) exitWith {
         _offset = _FCSElevation select _forEachIndex;
     };
 } forEach _FCSMagazines;
 
-[_round, (_unit getVariable QGVAR(Azimuth)), _offset, 0] call EFUNC(common,changeProjectileDirection);
+[_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, 0] call EFUNC(common,changeProjectileDirection);
 
 // Air burst missile
-// may need to get rewritten
-if (getNumber (configFile >> "CfgAmmo" >> _ammoType >> "ACE_Airburst") == 1) then {
-    _this spawn {
-        _vehicle = _this select 0;
-        _projectile = _this select 6;
 
-        _distance = _vehicle getVariable [QGVAR(Distance), currentZeroing _vehicle];
+// handle locally only
+if (!local _gunner) exitWith {};
 
-        if (_distance < 50) exitWith {};
-        if (_distance > 1500) exitWith {};
+if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(Airburst)) == 1) then {
+    private "_zeroing";
+    _zeroing = _vehicle getVariable [format ["%1_%2", QGVAR(Distance), _turret], currentZeroing _vehicle];
 
-        waitUntil {_projectile distance _vehicle > _distance || {!alive _projectile}};
-        if (!alive _projectile) exitWith {};
+    if (_zeroing < 50) exitWith {};
+    if (_zeroing > 1500) exitWith {};
 
-        _position = getPosATL _projectile;
-
-        _subMunition = createVehicle ["ACE_B_35mm_ABM_Helper", _position, [], 0, "FLY"];
-        _subMunition setPosATL _position;
-        _subMunition setVelocity [0, 0, -10];
-
-        deleteVehicle _projectile;
-    };
+    [FUNC(handleAirBurstAmmunitionPFH), 0, [_vehicle, _projectile, _zeroing]] call CBA_fnc_addPerFrameHandler;
 };

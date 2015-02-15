@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+ADDON = false;
+
 PREP(addLineMarker);
 PREP(blueForceTrackingModule);
 PREP(blueForceTrackingUpdate);
@@ -29,3 +31,5 @@ PREP(updateLineMarker);
 
 ["drawing_requestMarkers", FUNC(copyMapRemoteSend) ] call EFUNC(common,addEventHandler);
 ["drawing_sendbackMarkers", FUNC(copyMapReceiveMarkers) ] call EFUNC(common,addEventHandler);
+
+ADDON = true;

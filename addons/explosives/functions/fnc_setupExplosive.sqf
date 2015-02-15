@@ -1,24 +1,21 @@
 /*
-  Name: ACE_Explosives_fnc_SetupExplosive
-
-  Author(s):
-    Garth de Wet (LH)
-
-  Description:
-    Starts the setup process for the passed explosive.
-
-  Parameters:
-    0: OBJECT - Unit placing explosive.
-    1: STRING - Classname of explosive to place. (CfgMagazine class)
-    2: Config - Trigger Config
-    3: NUMBER - (optional) timer
-
-  Returns:
-    Nothing
-
-  Example:
-    [player, "SatchelCharge_Remote_Mag", "Command"] call ACE_Explosives_fnc_SetupExplosive;
-*/
+ * Author: Garth 'L-H' de Wet
+ * Starts the setup process for the passed explosive. Player only.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Classname of explosive to place. (CfgMagazine class) <STRING>
+ * 2: Trigger Config <CONFIG>
+ * 3: Timer (optional) <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, "SatchelCharge_Remote_Mag", "Command"] call ACE_Explosives_fnc_SetupExplosive;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private ["_unit", "_class", "_config", "_timer"];
 _unit = _this select 0;

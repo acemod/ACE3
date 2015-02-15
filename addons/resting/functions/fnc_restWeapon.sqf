@@ -33,6 +33,7 @@ if (true in _intersects) then {
 
   // REST THE WEAPON
   addCamShake CAMSHAKE;
+  playSound QGVAR(rest);
 
   if ([_weapon] call FUNC(hasBipod) && {_intersects select 3}) then {
     _unit setVariable ["ACE_bipodDeployed", true];

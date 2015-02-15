@@ -59,15 +59,15 @@ if (_this select 2) then {
 
 		(findDisplay 46) createDisplay QGVAR(Dialog);
 		// Add eventhandlers
-		(findDisplay 1713999) displayAddEventHandler ["KeyDown", QUOTE(_this call EGVAR(common,onKeyDown))];
-		(findDisplay 1713999) displayAddEventHandler ["KeyUp", QUOTE(_this call EGVAR(common,onKeyUp))];
+		/*(findDisplay 1713999) displayAddEventHandler ["KeyDown", QUOTE(_this call EGVAR(common,onKeyDown))];
+		(findDisplay 1713999) displayAddEventHandler ["KeyUp", QUOTE(_this call EGVAR(common,onKeyUp))];*/
 
 		(findDisplay 1713999) displayAddEventHandler ["KeyDown", QUOTE(_this call FUNC(menuKeyInput))];
 	};
 	disableSerialization;
 	_dlgInteractionDialog = uiNamespace getVariable QGVAR(Dialog);
 	_ctrlInteractionDialog = _dlgInteractionDialog displayCtrl 3;
-	if (profileNamespace getVariable [QGVAR(AutoCenterCursor), true]) then {setMousePosition [0.5, 0.5]};
+	if (GVAR(AutoCenterCursor)) then {setMousePosition [0.5, 0.5]};
 	if !(_subMenu) then {
 		_ctrlInteractionDialog ctrlSetText ([_target] call EFUNC(common,getName));
 	} else {

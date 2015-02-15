@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {"ACE_Box_Misc"};
         weapons[] = {"ACE_ItemCore","ACE_FakePrimaryWeapon"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_main", "ace_gui"};
+        requiredAddons[] = {"ace_main"};
         author[] = {"KoffeinFlummi"};
         authorUrl = "https://github.com/KoffeinFlummi/";
         VERSION_CONFIG;
@@ -57,23 +57,47 @@ class ACE_canInteractConditions {
     };
 };
 
-class ACE_Options {
+class ACE_Settings {
+    /*
+    *class GVAR(sampleSetting) {
+    * Value
+    *    value = 1;
+    *
+    * Type (SCALAR, BOOL, STRING, ARRAY, COLOR)
+    *    typeName = "SCALAR";
+    *
+    * Force the setting?
+    *    force = 0;
+    *
+    * Does it appear on the options menu?
+    *    isClientSetable = 1;
+    *
+    * The following settings only apply when isClientSetable == 1
+    * Stringtable entry with the setting name
+    *    displayName = "$STR_ACE_Common_SettingName";
+    *
+    * Stringtable entry with the setting description
+    *    description = "$STR_ACE_Common_SettingDescription";
+    *
+    * Stringtable entries that describe the options
+    * Only applies if typeName == "SCALAR";
+    *    values[] = {"Disabled", "Enabled", "Only Cursor", "Only On Keypress", "Only Cursor and KeyPress"};
+    *};
+    */
+    class GVAR(forceAllSettings) {
+        value = 0;
+        typeName = "BOOL";
+    };
     class GVAR(enableNumberHotkeys) {
+        value = 1;
+        typeName = "BOOL";
+        isClientSetable = 1;
         displayName = "$STR_ACE_Common_EnableNumberHotkeys";
-        default = 1;
     };
 };
 
 #include <ProgressScreen.hpp>
 #include <HintConfig.hpp>
-
-/*
-class RscControlsGroupNoScrollbars;
-class RscAttributeInventory: RscControlsGroupNoScrollbars {
-    onSetFocus = QUOTE([ARR_3(_this,""RscAttributeInventory"",'CuratorCommon')] call (uinamespace getvariable ""BIS_fnc_initCuratorAttribute""); _this select 0 call DFUNC(addCuratorUnloadEventhandler););
-};
-*/
-
 #include <RscInfoType.hpp>
 #include <FixPickup.hpp>
 #include <FixAnimations.hpp>

@@ -43,7 +43,7 @@ if (_unit getVariable ["ACE_isUnconscious", false] && {!_force}) exitWith {
 };
 
 // don't go unconscious if the unit isn't unconscious
-if (_animation == "Unconscious" && {!(_unit getVariable ["ACE_isUnconscious", false])}) exitWith {};
+if (_animation == "Unconscious" && {!((_unit getVariable ["ACE_isUnconscious", false]) || (_unit getVariable ["ACE_isDead", false]))}) exitWith {};
 
 // switchMove "" no longer works in dev 1.37
 if (_animation == "") then {
