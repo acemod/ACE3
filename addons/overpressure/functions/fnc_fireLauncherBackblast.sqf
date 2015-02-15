@@ -39,7 +39,7 @@ private "_affected";
 _affected = getPos _projectile nearEntities ["CAManBase", _backblastRange];
 
 // Let each client handle their own affected units
-["backblast", _affected, [_firer, _position, _direction, _weapon]] call EFUNC(common,targetEvent);
+["overpressure", _affected, [_firer, _position, _direction, _weapon]] call EFUNC(common,targetEvent);
 
 // Damage to the firer
 private "_distance";

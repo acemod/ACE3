@@ -16,13 +16,13 @@
 
 EXPLODE_4_PVT(_this,_firer,_posASL,_direction,_weapon);
 
-private ["_backblastAngle", "_backblastRange", "_backblastDamage"];
+private ["_overpressureAngle", "_overpressureRange", "_overpressureDamage"];
 
-_backblastAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(angle)) / 2;
-_backblastRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(range));
-_backblastDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(damage));
+_overpressureAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(angle)) / 2;
+_overpressureRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(range));
+_overpressureDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(damage));
 
-TRACE_4("Parameters:",_backblastAngle,_backblastRange,_backblastDamage,_weapon);
+TRACE_4("Parameters:",_overpressureAngle,_overpressureRange,_overpressureDamage,_weapon);
 
 private "_pos";
 _pos = _posASL;
@@ -44,13 +44,13 @@ if (!surfaceIsWater _pos) then {
         _line2 = [_posASL, _targetPositionASL];
         TRACE_4("Affected:",_x,_axisDistance,_distance,_angle);
 
-        if (_angle < _backblastAngle && {_distance < _backblastRange} && {!lineIntersects _line} && {!terrainIntersectASL _line2}) then {
+        if (_angle < _overpressureAngle && {_distance < _overpressureRange} && {!lineIntersects _line} && {!terrainIntersectASL _line2}) then {
             private ["_alpha", "_beta", "_damage"];
 
-            _alpha = sqrt (1 - _distance / _backblastRange);
-            _beta = sqrt (1 - _angle / _backblastAngle);
+            _alpha = sqrt (1 - _distance / _overpressureRange);
+            _beta = sqrt (1 - _angle / _overpressureAngle);
 
-            _damage = 2 * _alpha * _beta * _backblastDamage;
+            _damage = 2 * _alpha * _beta * _overpressureDamage;
 
             // If the target is the ACE_player
             if (_x == ACE_player) then {[_damage * 100] call BIS_fnc_bloodEffect};
@@ -67,4 +67,4 @@ if (!surfaceIsWater _pos) then {
             };
         };
     };
-} forEach (_pos nearEntities ["CAManBase", _backblastRange]);
+} forEach (_pos nearEntities ["CAManBase", _overpressureRange]);

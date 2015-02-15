@@ -1,5 +1,5 @@
 /*
- * Author: Commy2 and CAA-Picard
+ * Author: commy2 and CAA-Picard
  *
  * Handle fire of local vehicle weapons creating overpressure zones
  *
@@ -20,7 +20,7 @@
 
 EXPLODE_7_PVT(_this,_firer,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
-// Prevent AI from causing backblast damage
+// Prevent AI from causing overpressure damage
 if !([gunner _firer] call EFUNC(common,isPlayer)) exitWith {};  //@todo non-maingun turrets?
 
 private ["_position", "_direction"];
@@ -39,7 +39,7 @@ private "_affected";
 _affected = getPos _projectile nearEntities ["CAManBase", _dangerZoneRange];
 
 // Let each client handle their own affected units
-["backblast", _affected, [_firer, _position, _direction, _weapon]] call EFUNC(common,targetEvent);
+["overpressure", _affected, [_firer, _position, _direction, _weapon]] call EFUNC(common,targetEvent);
 
 // Draw debug lines
 #ifdef DEBUG_MODE_FULL
