@@ -7,11 +7,7 @@
         _exceptions = [];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
         // Conditions: specific
-        if !((!GVAR(enabled) && FUNC(canUseFCS)) || FUNC(canUseRangefinder)) exitWith {false};
-
-        // prevent holding down
-        if (GETGVAR(isDownStateKey1,false)) exitWith {false};
-        GVAR(isDownStateKey1) = true;
+        if !((!GVAR(enabled) && [] call FUNC(canUseFCS)) || [] call FUNC(canUseRangefinder)) exitWith {false};
 
         // Statement
         [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex)] call FUNC(keyDown);
@@ -26,14 +22,11 @@
 ["ACE3",
     localize "STR_ACE_FCS_LaseTarget",
     {
-        // prevent holding down
-        GVAR(isDownStateKey1) = false;
-
         // Conditions: canInteract
         _exceptions = [];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
         // Conditions: specific
-        if !(GVAR(enabled) && FUNC(canUseFCS)) exitWith {false};
+        if !(GVAR(enabled) && [] call FUNC(canUseFCS)) exitWith {false};
 
         // Statement
         [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex)] call FUNC(keyUp);
@@ -51,7 +44,7 @@
         _exceptions = [];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
         // Conditions: specific
-        if !(FUNC(canUseFCS)) exitWith {false};
+        if !([] call FUNC(canUseFCS)) exitWith {false};
 
         // Statement
         [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), 50] call FUNC(adjustRange);
@@ -69,7 +62,7 @@
         _exceptions = [];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
         // Conditions: specific
-        if !(FUNC(canUseFCS)) exitWith {false};
+        if !([] call FUNC(canUseFCS)) exitWith {false};
 
         // Statement
         [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), -50] call FUNC(adjustRange);
