@@ -55,13 +55,13 @@ _attachables = items _unit;
 } forEach _attachables;
 
 [
-_actions,
-{
-    [ACE_player, GVAR(attachTarget), _this] call FUNC(attach);
-    call EFUNC(interaction,hideMenu);
-},
-{
-    call EFUNC(interaction,hideMenu);
-    if !(profileNamespace getVariable [QEGVAR(interaction,AutoCloseMenu), false]) then {"Default" call EFUNC(interaction,openMenuSelf)};
-}
+    _actions,
+    {
+        [ACE_player, GVAR(attachTarget), _this] call FUNC(attach);
+        call EFUNC(interaction,hideMenu);
+    },
+    {
+        call EFUNC(interaction,hideMenu);
+        if !(profileNamespace getVariable [QEGVAR(interaction,AutoCloseMenu), false]) then {"Default" call EFUNC(interaction,openMenuSelf)};
+    }
 ] call EFUNC(interaction,openSelectMenu);

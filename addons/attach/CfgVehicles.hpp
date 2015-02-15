@@ -1,7 +1,3 @@
-#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
-        name = #ITEM; \
-        count = COUNT; \
-    };
 
 #define MACRO_ATTACHTOVEHICLE \
     class ACE_Actions { \
@@ -32,16 +28,20 @@ class CfgVehicles {
     class Car: LandVehicle {
         MACRO_ATTACHTOVEHICLE
     };
+
     class Tank: LandVehicle {
         MACRO_ATTACHTOVEHICLE
     };
+
     class Air;
     class Helicopter: Air {
         MACRO_ATTACHTOVEHICLE
     };
+
     class Plane: Air {
         MACRO_ATTACHTOVEHICLE
     };
+
     class Ship;
     class Ship_F: Ship {
         MACRO_ATTACHTOVEHICLE
@@ -96,6 +96,7 @@ class CfgVehicles {
             onlyInNvg = 1;
             useFlare = 0;
         };
+
         side = 7;//-1=NO_SIDE yellow box,3=CIV grey box,4=NEUTRAL yellow box,6=FRIENDLY green box,7=LOGIC no radar signature
         accuracy = 1000;
         cost = 0;
@@ -111,37 +112,36 @@ class CfgVehicles {
     };
 
     class NATO_Box_Base;
-    class EAST_Box_Base;
-    class IND_Box_Base;
-    class FIA_Box_Base_F;
-
     class Box_NATO_Support_F: NATO_Box_Base {
         class TransportItems {
-            MACRO_ADDITEM(ACE_IR_Strobe_Item,12)
+            MACRO_ADDITEM(ACE_IR_Strobe_Item,12);
         };
     };
 
+    class EAST_Box_Base;
     class Box_East_Support_F: EAST_Box_Base {
         class TransportItems {
-            MACRO_ADDITEM(ACE_IR_Strobe_Item,12)
+            MACRO_ADDITEM(ACE_IR_Strobe_Item,12);
         };
     };
 
+    class IND_Box_Base;
     class Box_IND_Support_F: IND_Box_Base {
         class TransportItems {
-            MACRO_ADDITEM(ACE_IR_Strobe_Item,12)
+            MACRO_ADDITEM(ACE_IR_Strobe_Item,12);
         };
     };
 
+    class FIA_Box_Base_F;
     class Box_FIA_Support_F: FIA_Box_Base_F {
         class TransportItems {
-            MACRO_ADDITEM(ACE_IR_Strobe_Item,12)
+            MACRO_ADDITEM(ACE_IR_Strobe_Item,12);
         };
     };
 
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
-            MACRO_ADDITEM(ACE_IR_Strobe_Item,12)
+            MACRO_ADDITEM(ACE_IR_Strobe_Item,12);
         };
     };
 };
