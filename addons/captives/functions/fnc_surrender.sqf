@@ -50,7 +50,6 @@ if (_state) then {
             PARAMS_2(_unit,_newAnimation);
             if (_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") then {
                 ERROR("Surrender animation failed");
-                systemChat "You Stop Surrendering";
                 [_unit, false] call FUNC(surrender);
             };
         }];

@@ -23,7 +23,7 @@ private "_returnValue";
 _returnValue = if (_newSurrenderState) then {
     !(_unit getVariable [QGVAR(isSurrendering), false]); //Not currently surrendering
 } else {
-    (_unit getVariable [QGVAR(isSurrendering), false]); //isSurrendering and on the hands up animation - // && {(animationState _unit) == "ACE_AmovPercMstpSsurWnonDnon"};
+    (_unit getVariable [QGVAR(isSurrendering), false]); //is Surrendering
 };
 
 _returnValue

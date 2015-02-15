@@ -1,5 +1,5 @@
 /*
- * Author: PabstMirror
+ * Author: commy2, PabstMirror
  * Handles when a unit gets knocked out.  Ends surrendering.
  *
  * Arguments:
