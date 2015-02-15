@@ -6,7 +6,7 @@ class CfgVehicles {
 	};
 
 	// TODO make a curator variant for this
-	class cse_moduleAmbianceSound: Module_F {
+	class ACE_moduleAmbianceSound: Module_F {
 		scope = 2;
 		displayName = "Ambiance Sounds [ACE]";
 		icon = QUOTE(PATHTOF(data\moduleSound.paa));
