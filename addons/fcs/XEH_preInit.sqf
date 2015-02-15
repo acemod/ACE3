@@ -9,6 +9,7 @@ PREP(canUseRangefinder);
 PREP(firedEH);
 PREP(getAngle);
 PREP(getRange);
+PREP(handleAirBurstAmmunitionPFH);
 PREP(keyDown);
 PREP(keyUp);
 PREP(reset);
