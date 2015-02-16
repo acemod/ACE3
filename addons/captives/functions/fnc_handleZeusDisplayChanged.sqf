@@ -22,10 +22,10 @@ PARAMS_2(_unit,_zeusIsOpen);
 //set showHUD based on unit status:
 if (!_zeusIsOpen) then {
     if ((_unit getVariable [QGVAR(isHandcuffed), false]) || {_unit getVariable [QGVAR(isSurrendering), false]}) then {
-        TRACE_1("Player Change (showHUD false)",_newUnit);
+        TRACE_1("Player Change (showHUD false)",_unit);
         showHUD false;
     } else {
-        TRACE_1("Player Change (showHUD true)",_newUnit);
+        TRACE_1("Player Change (showHUD true)",_unit);
         showHUD true;
     };
 };
