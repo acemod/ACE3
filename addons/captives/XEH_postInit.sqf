@@ -3,6 +3,7 @@
 
 //Handles when someone starts escorting and then disconnects, leaving the captive attached
 //This is normaly handled by the PFEH in doEscortCaptive, but that won't be running if they DC
+
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {
         PARAMS_1(_disconnectedPlayer);

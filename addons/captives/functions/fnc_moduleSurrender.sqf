@@ -29,13 +29,13 @@ if (local _logic) then {
             if ((_mouseOverObject isKindOf "CAManBase") && {(vehicle _mouseOverObject) == _mouseOverObject}) then {
                 systemChat format ["Debug - module surrendering %1", (name _mouseOverObject)];
                 [_mouseOverObject, true] call FUNC(setSurrendered);
-                
-                if (!(_mouseOverObject getVariable [GVAR(), false])) then {
+
+                if (!(_mouseOverObject getVariable [QGVAR(isSurrendering), false])) then {
                     ["SetSurrendered", [_mouseOverObject], [_mouseOverObject, true]] call EFUNC(common,targetEvent);
                 } else {
                     ["SetSurrendered", [_mouseOverObject], [_mouseOverObject, false]] call EFUNC(common,targetEvent);
                 };
-                
+
             } else {
                 systemChat format ["Only use on dismounted inf"];
             };

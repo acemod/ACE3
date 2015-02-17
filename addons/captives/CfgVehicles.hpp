@@ -81,7 +81,7 @@ class CfgVehicles {
             };
             class ACE_StartSurrenderingSelf {
                 displayName = "$STR_ACE_Captives_StartSurrendering";
-                condition = QUOTE([ARR_2(_player, true)] call FUNC(setSurrendered));
+                condition = QUOTE([ARR_2(_player, true)] call FUNC(canSurrender));
                 statement = QUOTE([ARR_2(_player, true)] call FUNC(setSurrendered));
                 exceptions[] = {};
                 showDisabled = 0;
