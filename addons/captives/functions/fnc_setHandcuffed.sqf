@@ -58,13 +58,19 @@ if (_state) then {
                     [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
                 };
             }];
-            _unit setVariable [QGVAR(surrenderAnimEHID), _animChangedEHID];
+            _unit setVariable [QGVAR(handcuffAnimEHID), _animChangedEHID];
             
         };
     }, [_unit], 0.01, 0] call EFUNC(common,waitAndExecute);
 } else {
     _unit setVariable [QGVAR(isHandcuffed), false, true];
     [_unit, QGVAR(Handcuffed), false] call EFUNC(common,setCaptivityStatus);
+    
+     //remove AnimChanged EH
+    _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
+    _unit removeEventHandler ["AnimChanged", _animChangedEHID];
+    _unit setVariable [QGVAR(handcuffAnimEHID), -1];
+    
     if ((vehicle _unit) == _unit) then {
         //Break out of hands up animation loop (doAnimation handles Unconscious prioity)
         [_unit, "ACE_AmovPercMstpScapWnonDnon_AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
