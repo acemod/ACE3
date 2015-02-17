@@ -26,7 +26,7 @@ PREP(handleZeusDisplayChanged);
 PREP(handleWokeUp);
 PREP(moduleSurrender);
 PREP(setHandcuffed);
-PREP(surrender);
+PREP(setSurrendered);
 PREP(vehicleCaptiveMoveIn);
 PREP(vehicleCaptiveMoveOut);
 

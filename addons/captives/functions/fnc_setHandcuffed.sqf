@@ -18,22 +18,23 @@
 
 PARAMS_2(_unit,_state);
 
-// We only want this function to work on local machines
-if (!local _unit) exitwith {
-    [_this, QUOTE(FUNC(setHandcuffed)), _unit] call EFUNC(common,execRemoteFnc);
-    TRACE_2("running setHandcuffed on remote unit",_unit,_state);
-};
 
-if (_state isEqualTo (_unit getVariable [QGVAR(isHandcuffed), false])) then {
-    LOG("setHandcuffed: current state same as new");
+if (!local _unit) exitwith {
+    ERROR("running setHandcuffed on remote unit");
+};
+if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith {
+    ERROR("setHandcuffed: current state same as new");
 };
 
 if (_state) then {
     _unit setVariable [QGVAR(isHandcuffed), true, true];
-    if (_unit getVariable [QGVAR(isSurrendering), false]) then {  //If surrendering, stop
-        [_unit, false] call FUNC(surrender);
-    };
     [_unit, QGVAR(Handcuffed), true] call EFUNC(common,setCaptivityStatus);
+    
+    if (_unit getVariable [QGVAR(isSurrendering), false]) then {  //If surrendering, stop
+        [_unit, false] call FUNC(setSurrendered);
+    };
+    
+    //Set unit cargoIndex (will be -1 if dismounted)
     _unit setVariable [QGVAR(CargoIndex), ((vehicle _unit) getCargoIndex _unit), true];
 
     if (_unit == ACE_player) then {
@@ -46,6 +47,19 @@ if (_state) then {
         if (_unit getVariable [QGVAR(isHandcuffed), false] && {vehicle _unit == _unit}) then {
             [_unit] call EFUNC(common,fixLoweredRifleAnimation);
             [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
+            
+            //Adds an animation changed eh
+            //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
+            _animChangedEHID = _unit addEventHandler ["AnimChanged", {
+                PARAMS_2(_unit,_newAnimation);
+                if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && (_newAnimation != "Unconscious")) then {
+                    ERROR("Handcuff animation interrupted");
+                    systemChat format ["debug %2: new %1", _newAnimation, time];
+                    [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
+                };
+            }];
+            _unit setVariable [QGVAR(surrenderAnimEHID), _animChangedEHID];
+            
         };
     }, [_unit], 0.01, 0] call EFUNC(common,waitAndExecute);
 } else {

@@ -28,7 +28,14 @@ if (local _logic) then {
             _mouseOverObject = _bisMouseOver select 1;
             if ((_mouseOverObject isKindOf "CAManBase") && {(vehicle _mouseOverObject) == _mouseOverObject}) then {
                 systemChat format ["Debug - module surrendering %1", (name _mouseOverObject)];
-                [_mouseOverObject, true] call FUNC(surrender);
+                [_mouseOverObject, true] call FUNC(setSurrendered);
+                
+                if (!(_mouseOverObject getVariable [GVAR(), false])) then {
+                    ["SetSurrendered", [_mouseOverObject], [_mouseOverObject, true]] call EFUNC(common,targetEvent);
+                } else {
+                    ["SetSurrendered", [_mouseOverObject], [_mouseOverObject, false]] call EFUNC(common,targetEvent);
+                };
+                
             } else {
                 systemChat format ["Only use on dismounted inf"];
             };
@@ -38,7 +45,7 @@ if (local _logic) then {
     } else {//an editor module
         {
             systemChat format ["Debug - module surrendering %1", (name _x)];
-            [_x, true] call FUNC(surrender);
+            [_x, true] call FUNC(setSurrendered);
         } forEach _units;
     };
 

@@ -21,5 +21,5 @@
 PARAMS_1(_unit);
 
 if (_unit getVariable [QGVAR(isSurrendering), false]) then {  //If surrendering, stop
-    [_unit, _false] call FUNC(surrender);
+    [_unit, false] call FUNC(setSurrendered);
 };

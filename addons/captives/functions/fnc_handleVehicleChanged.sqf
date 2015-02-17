@@ -25,6 +25,6 @@ if ((vehicle _unit) != _unit) then {
     };
 
     if (_unit getVariable [QGVAR(isSurrendering), false]) then {
-        [_unit, false] call FUNC(surrender);
+        [_unit, false] call FUNC(setSurrender);
     };
 };
