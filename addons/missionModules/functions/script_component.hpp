@@ -1,1 +1,1 @@
-#include "\z\ace\addons\missionModules\script_component.hpp"
+#include "\z\ace\addons\missionmodules\script_component.hpp"
