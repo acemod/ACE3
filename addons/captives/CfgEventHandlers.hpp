@@ -9,7 +9,14 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
-
+//release escorted captive when entering a vehicle
+class Extended_GetIn_EventHandlers {
+    class All {
+        class GVAR(AutoDetachCaptive) {
+            getIn = QUOTE(_this call FUNC(handleGetIn));
+        };
+    };
+};
 //reset captive animation after leaving vehicle
 class Extended_GetOut_EventHandlers {
     class All {
@@ -18,7 +25,6 @@ class Extended_GetOut_EventHandlers {
         };
     };
 };
-
 //reset captivity and escorting status when getting killed
 class Extended_Killed_EventHandlers {
     class CAManBase {
@@ -27,7 +33,6 @@ class Extended_Killed_EventHandlers {
         };
     };
 };
-
 //mission start
 class Extended_InitPost_EventHandlers {
     class CAManBase {

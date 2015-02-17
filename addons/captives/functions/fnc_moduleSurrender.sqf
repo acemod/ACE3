@@ -28,8 +28,7 @@ if (local _logic) then {
             _mouseOverObject = _bisMouseOver select 1;
             if ((_mouseOverObject isKindOf "CAManBase") && {(vehicle _mouseOverObject) == _mouseOverObject}) then {
                 systemChat format ["Debug - module surrendering %1", (name _mouseOverObject)];
-                [_mouseOverObject, true] call FUNC(setSurrendered);
-
+                
                 if (!(_mouseOverObject getVariable [QGVAR(isSurrendering), false])) then {
                     ["SetSurrendered", [_mouseOverObject], [_mouseOverObject, true]] call EFUNC(common,targetEvent);
                 } else {

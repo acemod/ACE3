@@ -90,7 +90,7 @@ class CfgVehicles {
             class ACE_StopSurrenderingSelf {
                 displayName = "$STR_ACE_Captives_StopSurrendering";
                 condition = QUOTE([ARR_2(_player, false)] call FUNC(canSurrender));
-                statement = QUOTE([ARR_2(_player, false)] call FUNC(setSurrender));
+                statement = QUOTE([ARR_2(_player, false)] call FUNC(setSurrendered));
                 exceptions[] = {QGVAR(isNotSurrendering)};
                 showDisabled = 0;
                 priority = 0;
