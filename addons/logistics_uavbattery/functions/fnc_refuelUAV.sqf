@@ -1,17 +1,19 @@
-/* fnc_refuel.sqf
-*
-* Author: marc_book (modified by PabstMirror)
-*
-* Starts refueling/recharging the 'Dartar' UAVs
-*
-* Argument:
-* 0: OBJECT - Player unit
-* 1: OBJECT - UAV
-*
-* Return value:
-* NOTHING
-*/
-
+/*
+ * Author: marc_book
+ * Starts refueling/recharging the 'Dartar' UAVs
+ *
+ * Arguments:
+ * 0: Player <OBJECT>
+ * 1: UAV <OBJECT>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [player, theUAV] call ace_logistics_uavbattery_fnc_refuelUAV
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 PARAMS_2(_caller,_target);
