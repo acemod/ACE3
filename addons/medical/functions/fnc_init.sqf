@@ -19,4 +19,4 @@ _unit = _this select 0;
 
 _unit setVariable [QGVAR(pain), 0, true];
 _unit setVariable [QGVAR(morphine), 0, true];
-_unit setVariable [QGVAR(bloodVolume), 1, true];
+_unit setVariable [QGVAR(bloodVolume), 100, true];
