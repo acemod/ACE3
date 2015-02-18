@@ -61,13 +61,9 @@ GVAR(effectPainCC) = [
     [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1.3,1.3,0,0,0,0.2,2]]
 ] call _fnc_createEffect;
 
-// @todo; what's this for?
-GVAR(effectUnconsciousUnit) = objNull;
-
 // Initialize Other Variables
 GVAR(effectBlind) = false;
 GVAR(effectTimeBlood) = time;
-
 
 // MAIN EFFECTS LOOP
 [{
@@ -110,8 +106,6 @@ GVAR(effectTimeBlood) = time;
             GVAR(effectBlind) = false;
         };
     };
-
-    // @todo: pain effect
 
     // Bleeding Indicator
     // @todo: redo this after initial release
