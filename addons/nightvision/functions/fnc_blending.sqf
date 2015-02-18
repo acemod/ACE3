@@ -29,9 +29,9 @@ _ammo = _this select 4;
 _magazine = _this select 5;
 
 _player = ACE_player;
-
+//If our vehicle didn't shoot, or we're not in NVG mode, exit
 if ((_vehicle != (vehicle _player)) || {(currentVisionMode _player) != 1}) exitWith {};
-
+//If we are mounted, and it wasn't our weapon system that fired, exit
 if (_player != _vehicle && {!(_weapon in (_vehicle weaponsTurret ([_player] call EFUNC(common,getTurretIndex))))}) exitWith {};
 
 private ["_silencer", "_visibleFireCoef", "_visibleFireTimeCoef", "_visibleFire", "_visibleFireTime", "_nvgBrightnessCoef", "_fnc_isTracer", "_darkness"];
