@@ -38,13 +38,6 @@ _hitSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
 if !(_selection in (_hitSelections + [""])) exitWith {0};
 
 _damageReturn = _damage;
-
-// @todo, remove once parameters are set up
-if (isNil QGVAR(level)) then {
-  GVAR(level) = 0;
-};
-
-_damageReturn = (_this select 2);
 _typeOfDamage = [_this select 4] call FUNC(getTypeOfDamage);
 
 if (GVAR(level) >= 0) then {

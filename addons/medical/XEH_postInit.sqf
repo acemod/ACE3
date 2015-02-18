@@ -68,6 +68,8 @@ GVAR(effectUnconsciousUnit) = objNull;
 GVAR(effectBlind) = false;
 GVAR(effectTimeBlood) = time;
 
+
+// MAIN EFFECTS LOOP
 [{
     // Zeus interface is open or player is dead; disable everything
     if (!(isNull (findDisplay 312)) or !(alive ACE_player)) exitWith {
@@ -127,6 +129,76 @@ GVAR(effectTimeBlood) = time;
         GVAR(effectBloodVolumeCC) ppEffectAdjust [1,1,0, [0,0,0,0], [1,1,1,_blood], [0.2,0.2,0.2,0]];
         GVAR(effectBloodVolumeCC) ppEffectCommit 0;
     };
+}, 0.5, []] call CBA_fnc_addPerFrameHandler;
+
+
+GVAR(lastHeartBeat) = time;
+
+// @todo, remove once parameters are set up
+if (isNil QGVAR(level)) then {
+  GVAR(level) = 0;
+};
+
+// HEARTRATE BASED EFFECTS
+[{
+    _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
+    if (GVAR(level) == 0) then {
+        _heartRate = 60 + 40 * (ACE_player getVariable [QGVAR(pain), 0]);
+        _heartRate = _heartRate min 120;
+    };
+    _interval = 60 / _heartRate;
+    if (time < GVAR(lastHeartBeat) + _interval) exitWith {};
+    GVAR(lastHeartBeat) = time;
+
+    // Pain effect
+    _strength = ACE_player getVariable [QGVAR(pain), 0];
+    // _strength = _strength * (ACE_player getVariable [QGVAR(coefPain), GVAR(coefPain)]); @todo
+    GVAR(alternativePainEffect) = false; // @todo
+    if (GVAR(alternativePainEffect)) then {
+        GVAR(effectPainCC) ppEffectEnable false;
+        if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
+            _strength = _strength * 0.15;
+            GVAR(effectPainCA) ppEffectEnable true;
+            GVAR(effectPainCA) ppEffectAdjust [_strength, _strength, false];
+            GVAR(effectPainCA) ppEffectCommit 0.01;
+            [{
+                GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
+                GVAR(effectPainCA) ppEffectCommit (_this select 1);
+            }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
+            [{
+                GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
+                GVAR(effectPainCA) ppEffectCommit 0.01;
+            }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
+            [{
+                GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
+                GVAR(effectPainCA) ppEffectCommit (_this select 1);
+            }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+        } else {
+            GVAR(effectPainCA) ppEffectEnable false;
+        };
+    } else {
+        GVAR(effectPainCA) ppEffectEnable false;
+        if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
+            _strength = _strength * 0.6;
+            GVAR(effectPainCC) ppEffectEnable true;
+            GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - _strength,1 - _strength,0,0,0,0.2,2]];
+            GVAR(effectPainCC) ppEffectCommit 0.01;
+            [{
+                GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
+                GVAR(effectPainCC) ppEffectCommit (_this select 1);
+            }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
+            [{
+                GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
+                GVAR(effectPainCC) ppEffectCommit 0.01;
+            }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
+            [{
+                GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
+                GVAR(effectPainCC) ppEffectCommit (_this select 1);
+            }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+        } else {
+            GVAR(effectPainCC) ppEffectEnable false;
+        };
+    };
 
     /* @todo
     // Heart rate sound effect
@@ -152,4 +224,4 @@ GVAR(effectTimeBlood) = time;
         };
     };
     */
-}, 0.5, []] call CBA_fnc_addPerFrameHandler;
+}, 0, []] call CBA_fnc_addPerFrameHandler;
