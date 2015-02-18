@@ -6,7 +6,7 @@ _foundTarget = false;
 _cursorPos1 = positionCameraToWorld [0, 0, 0];
 _cursorPos2 = positionCameraToWorld [0, 0, 2];
 GVAR(currentOptions) = [];
-if((count GVAR(toRender)) > 0 && GVAR(keyDown)) then {
+if((count GVAR(toRender)) > 0 && (GVAR(keyDown) || GVAR(keyDownSelfAction))) then {
 	if((count GVAR(vecLineMap)) == 0 || ((count GVAR(menuDepthPath)) > 0 && (getPosASL player) distance GVAR(lastPos) > 0.01)) then {
 		GVAR(lastPos) = getPosASL player;
 		_cursorVec = [_cursorPos2, _cursorPos1] call BIS_fnc_vectorFromXtoY;
@@ -15,23 +15,32 @@ if((count GVAR(toRender)) > 0 && GVAR(keyDown)) then {
 		_p = (_cursorVec call CBA_fnc_vect2polar);
 		_v = [(_p select 0), (_p select 1), (_p select 2)+90] call CBA_fnc_polar2vect;
 		_cp = [_cursorVec, _v] call BIS_fnc_crossProduct;
-	
+
 		GVAR(vecLineMap) = [_cp, _p1, _p2] call FUNC(rotateVectLineGetMap);
 	};
-	{
-		if(!(_forEachIndex in GVAR(filter))) then {
-			GVAR(renderDepth) = 0;
-			_renderTargets = _x;
-			{
-				[_renderTargets select 0, _x, 0] call FUNC(renderMenu);
-			} forEach (_renderTargets select 1);
-		};
-	} forEach GVAR(toRender);
+	if (GVAR(keyDown)) then {
+		// Render all nearby interaction menus
+		{
+			if(!(_forEachIndex in GVAR(filter))) then {
+				GVAR(renderDepth) = 0;
+				_renderTargets = _x;
+				{
+					[_renderTargets select 0, _x, 0] call FUNC(renderMenu);
+				} forEach (_renderTargets select 1);
+			};
+		} forEach GVAR(toRender);
+	} else {
+		// Render only the self action menu
+		_actions = (ACE_player getVariable QGVAR(selfActionData)) select 0;
+		_pos = (ACE_player modelToWorld (ACE_player selectionPosition "spine3")) vectorAdd GVAR(selfMenuOffset);
+		[ACE_player, _actions, 0, _pos] call FUNC(renderMenu);
+	};
+
 	// player sideChat format["c: %1", count GVAR(toRender)];
 };
 
-if(GVAR(keyDown)) then {
-    
+if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
+
 	_cursorScreenPos = worldToScreen _cursorPos2;
 	_closestDistance = 1000000;
 	_closestSelection = -1;
@@ -46,11 +55,11 @@ if(GVAR(keyDown)) then {
 			};
 		};
 	} forEach GVAR(currentOptions);
-	
+
 	if(_closestSelection != -1) then {
-       
+
 		_closest = GVAR(currentOptions) select _closestSelection;
-		
+
 		_pos = _closest select 1;
 		_cTime = diag_tickTime;
 		_delta = _cTime - GVAR(lastTime);
@@ -75,7 +84,7 @@ if(GVAR(keyDown)) then {
 				};
 			} forEach GVAR(lastPath);
 		};
-		
+
 		if(_misMatch) then {
 			GVAR(lastPath) = _hoverPath;
 			GVAR(startHoverTime) = diag_tickTime;

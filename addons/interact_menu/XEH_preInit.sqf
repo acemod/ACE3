@@ -10,14 +10,18 @@ PREP(probe);
 PREP(rotateVectLineGetMap);
 PREP(rotateVectLine);
 PREP(keyDown);
+PREP(keyDownSelfAction);
 PREP(keyUp);
+PREP(keyUpSelfAction);
 PREP(compileMenu);
+PREP(compileMenuSelfAction);
 PREP(addAction);
 PREP(removeAction);
 
 GVAR(toRender) = [];
 
 GVAR(keyDown) = false;
+GVAR(keyDownSelfAction) = false;
 GVAR(keyDownTime) = 0;
 
 GVAR(lastTime) = diag_tickTime;
