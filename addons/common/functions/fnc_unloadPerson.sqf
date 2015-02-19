@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-#define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson_F))
+#define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
 
 private ["_caller", "_unit","_vehicle", "_loaded"];
 _caller = [_this, 0, ObjNull,[ObjNull]] call BIS_fnc_Param;
@@ -27,11 +27,11 @@ if (!alive _unit) then {
     _unit action ["Eject", vehicle _unit];
 };
 
-[_unit, false, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide_f);
+[_unit, false, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide);
 
-_loaded = _vehicle getvariable [QGVAR(loaded_persons_F),[]];
+_loaded = _vehicle getvariable [QGVAR(loaded_persons),[]];
 _loaded = _loaded - [_unit];
-_vehicle setvariable [QGVAR(loaded_persons_F),_loaded,true];
+_vehicle setvariable [QGVAR(loaded_persons),_loaded,true];
 
 if (!([_unit] call FUNC(isAwake))) then {
     _handle = [_unit,_vehicle] spawn {

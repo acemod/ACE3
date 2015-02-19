@@ -17,17 +17,17 @@ _unit setvariable ["ACE_isDead",nil,true];
 _unit setvariable ["ACE_isUnconscious", nil, true];
 
 if (isPlayer _unit) then {
-    [true] call FUNC(setVolume_f);
-    [false] call FUNC(disableKeyInput_f);
-    if (["ace_medical"] call FUNC(isModLoader_f)) then {
+    [true] call FUNC(setVolume);
+    [false] call FUNC(disableKeyInput);
+    if (["ace_medical"] call FUNC(isModLoader)) then {
         [false] call EFUNC(medical,effectBlackOut);
     };
 
-    if !(isnil QGVAR(DISABLE_USER_INPUT_COLLECTION_F)) then {
+    if !(isnil QGVAR(DISABLE_USER_INPUT_COLLECTION)) then {
         // clear all disable user input
         {
             [_X, false] call FUNC(setDisableUserInputStatus);
-        }foreach GVAR(DISABLE_USER_INPUT_COLLECTION_F);
+        }foreach GVAR(DISABLE_USER_INPUT_COLLECTION);
     };
 };
 

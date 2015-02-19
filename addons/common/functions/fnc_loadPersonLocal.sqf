@@ -16,13 +16,13 @@ _vehicle = [_this, 1, ObjNull,[ObjNull]] call BIS_fnc_Param;
 _caller = [_this, 2, ObjNull,[ObjNull]] call BIS_fnc_Param;
 
 if (!alive _unit) then {
-    _unit = [_unit,_caller] call FUNC(makeCopyOfBody_F);
+    _unit = [_unit,_caller] call FUNC(makeCopyOfBody);
 };
 
 _unit moveInCargo _vehicle;
-_loaded = _vehicle getvariable [QGVAR(loaded_persons_F),[]];
+_loaded = _vehicle getvariable [QGVAR(loaded_persons),[]];
 _loaded pushback _unit;
-_vehicle setvariable [QGVAR(loaded_persons_F),_loaded,true];
+_vehicle setvariable [QGVAR(loaded_persons),_loaded,true];
 if (!([_unit] call FUNC(isAwake))) then {
     _handle = [_unit,_vehicle] spawn {
         private ["_unit","_vehicle"];

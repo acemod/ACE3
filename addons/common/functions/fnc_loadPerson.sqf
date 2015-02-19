@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-#define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson_F))
+#define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
 
 private ["_caller", "_unit","_vehicle", "_loadcar", "_loadhelicopter", "_loadtank"];
 _caller = [_this, 0, ObjNull,[ObjNull]] call BIS_fnc_Param;
@@ -34,9 +34,9 @@ if (_unit distance _loadcar <= 10) then {
     };
 };
 if (!isNull _vehicle) then {
-    [_unit, true, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide_f);
+    [_unit, true, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide);
     [_caller,objNull] call FUNC(carryObj);
     [_unit,objNull] call FUNC(carryObj);
-    [[_unit, _vehicle,_caller], QUOTE(FUNC(loadPersonLocal_F)), _unit, false] call EFUNC(common,execRemoteFnc);
+    [[_unit, _vehicle,_caller], QUOTE(FUNC(loadPersonLocal)), _unit, false] call EFUNC(common,execRemoteFnc);
 };
 _vehicle

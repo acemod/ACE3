@@ -16,7 +16,7 @@ _switch = [_this, 1, false,[false]] call BIS_fnc_Param;
 _id = [_this, 2, "", [""]] call BIS_fnc_Param;
 _side = [_this, 3, side _unit,[west]] call BIS_fnc_Param;
 
-_previousGroupsList = _unit getvariable [QGVAR(previousGroupSwitchTo_F),[]];
+_previousGroupsList = _unit getvariable [QGVAR(previousGroupSwitchTo),[]];
 if (_switch) then {
     // go forward
     _previousGroup = group _unit;
@@ -30,7 +30,7 @@ if (_switch) then {
     [_unit] joinSilent _newGroup;
 
     _previousGroupsList pushback [_previousGroup, _originalSide, _id, true];
-    _unit setvariable [QGVAR(previousGroupSwitchTo_F), _previousGroupsList, true];
+    _unit setvariable [QGVAR(previousGroupSwitchTo), _previousGroupsList, true];
 } else {
     // go one back
     {
@@ -60,5 +60,5 @@ if (_switch) then {
     }foreach _previousGroupsList;
     _previousGroupsList = _previousGroupsList - [objNull];
     reverse _previousGroupsList;    // we have to reverse again, to ensure the list is in the right order.
-    _unit setvariable [QGVAR(previousGroupSwitchTo_F), _previousGroupsList, true];
+    _unit setvariable [QGVAR(previousGroupSwitchTo), _previousGroupsList, true];
 };
