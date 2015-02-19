@@ -28,13 +28,13 @@ if(_cursorScreenPos distance _pos <= _distance) then {
 	};
 	_menuDepth = (count GVAR(menuDepthPath));
 
-	_opacity = 1;
+	_color = "#FFFFFFFF";  // ARGB Color (First Hex Pair is transparancy)
 	if(_menuDepth > 0 && _index != (GVAR(menuDepthPath) select (GVAR(renderDepth)))) then {
-		_opacity = ((GVAR(renderDepth)/_menuDepth)) max 0.25;
+        _color = format ["#%1FFFFFF", [255 * (((GVAR(renderDepth)/_menuDepth)) max 0.25)] call EFUNC(common,toHex)];
 	};
 	_path set[(count _path), _index];
 	// player sideChat format["r: %1", _actionData select 2];
-	[_actionData select 0, [1,1,1,_opacity], _pos, 1, 1, 0, _actionData select 1, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
+	[_actionData select 0, _color, _pos, 1, 1, 0, _actionData select 1, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
 	GVAR(currentOptions) set[(count GVAR(currentOptions)), [_this, _pos, _path]];
 	_currentRenderDepth = -1;
 	_currentRenderDepth = GVAR(renderDepth);
