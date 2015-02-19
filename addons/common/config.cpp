@@ -104,7 +104,7 @@ class ACE_Settings {
         values[] = {"Hide", "Top right, downwards", "Top right, to the left", "Top left, downwards", "Top left, to the right"};
     };
     class GVAR(displayTextColor) {
-        value[] = {0,0,0,0};
+        value[] = {0,0,0,0.1};
         typeName = "COLOR";
         isClientSetable = 1;
         displayName = "$STR_ACE_Common_SettingDisplayTextColorName";
