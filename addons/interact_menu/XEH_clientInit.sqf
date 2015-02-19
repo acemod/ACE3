@@ -15,13 +15,27 @@ _fnc = {
 ["ACE3",
 "Interact Key",
 {_this call FUNC(keyDown)},
-[15, [false, false, false]],
+[219, [false, false, false]],
 false,
 "keydown"] call cba_fnc_registerKeybind;
 
 ["ACE3",
 "Interact Key",
 {_this call FUNC(keyUp)},
-[15, [false, false, false]],
+[219, [false, false, false]],
+false,
+"keyUp"] call cba_fnc_registerKeybind;
+
+["ACE3",
+"Self Actions Key",
+{_this call FUNC(keyDownSelfAction)},
+[219, [false, true, false]],
+false,
+"keydown"] call cba_fnc_registerKeybind;
+
+["ACE3",
+"Self Actions Key",
+{_this call FUNC(keyUpSelfAction)},
+[219, [false, true, false]],
 false,
 "keyUp"] call cba_fnc_registerKeybind;

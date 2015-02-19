@@ -1,4 +1,4 @@
-//fnc_compileMenu.sqf
+//fnc_compileMenuSelfAction.sqf
 #include "script_component.hpp";
 // diag_log text format["COMPILE ACTIONS: %1", _this];
 
@@ -7,15 +7,13 @@ _objectType = typeOf _object;
 
 
 /*
-displayName = "$STR_ACE_Interaction_TeamManagement";
-distance = 4;
-condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player} && {GVAR(EnableTeamManagement)});
-statement = "";
+displayName = "$STR_ACE_Hearing_Earbuds_On";
+condition = QUOTE( !([_player] call FUNC(hasEarPlugsIn)) && {'ACE_EarBuds' in items _player} );
+statement = QUOTE( [_player] call FUNC(putInEarPlugs) );
 showDisabled = 0;
-priority = 3.2;
-icon = PATHTOF(UI\team\team_management_ca.paa);
-subMenu[] = {"ACE_TeamManagement", 0};
-hotkey = "M";
+priority = 2.5;
+icon = PATHTOF(UI\ACE_earplugs_x_ca.paa);
+hotkey = "E";
 enableInside = 1;
 */
 
@@ -33,11 +31,11 @@ enableInside = 1;
 ]
 */
 
-_actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_Actions";
+_actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_SelfActions";
 
 
 _recurseFnc = {
-    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_selection", "_condition", "_showDisabled",
+    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_condition", "_showDisabled",
             "_enableInside", "_children", "_entry", "_actionsCfg"];
     _actions = [];
     _actionsCfg = _this select 0;
@@ -45,13 +43,9 @@ _recurseFnc = {
         _entryCfg = _actionsCfg select _i;
         if(isClass _entryCfg) then {
             _displayName = getText (_entryCfg >> "displayName");
-            _distance = getNumber (_entryCfg >> "distance");
             _icon = getText (_entryCfg >> "icon");
             _statement = compile (getText (_entryCfg >> "statement"));
-            _selection = getText (_entryCfg >> "selection");
-            if (_selection == "") then {
-                _selection = [0,0,0];
-            };
+
             _condition = getText (_entryCfg >> "condition");
             if (_condition == "") then {_condition = "true"};
 
@@ -62,18 +56,24 @@ _recurseFnc = {
             _enableInside = getNumber (_entryCfg >> "enableInside");
 
             _condition = compile _condition;
-            _children = [_entryCfg] call _recurseFnc;
+            // diag_log text format["_condition: %1", _condition];
+            _children = [];
+            if(isArray (_entryCfg >> "subMenu")) then {
+                _subMenuDef = getArray (_entryCfg >> "subMenu");
+                _childMenuName = _subMenuDef select 0;
+                _childMenuCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_SelfActions" >> _childMenuName;
+                _children = [_childMenuCfg] call _recurseFnc;
+            };
             _entry = [
                         _displayName,
                         _icon,
-                        _selection,
+                        [0,0,0],
                         _statement,
                         _condition,
-                        _distance,
+                        10, //distace
                         _children,
                         GVAR(uidCounter)
                     ];
-            diag_log _entry;
             GVAR(uidCounter) = GVAR(uidCounter) + 1;
             _actions pushBack _entry;
         };
@@ -82,29 +82,18 @@ _recurseFnc = {
 };
 
 _actions = [_actionsCfg] call _recurseFnc;
-//diag_log _actions;
-// Backward-compat, filter only base actions that have a selection
-private ["_newActions","_oldActions","_selection"];
-_filteredActions = [];
-{
-    _selection = _x select 2;
-    if (typeName _selection == "STRING") then {
-        _filteredActions pushBack _x;
-    };
-} forEach _actions;
 
-/*
 _actions = [[
-    "Interactions",
+    "Self Actions",
     "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
     "Spine3",
     { true },
     { true },
-    5,
+    10,
     _actions,
     GVAR(uidCounter)
 ]
 ];
 GVAR(uidCounter) = GVAR(uidCounter) + 1;
-*/
-_object setVariable [QUOTE(GVAR(actionData)), _filteredActions];
+
+_object setVariable [QUOTE(GVAR(selfActionData)), _actions];

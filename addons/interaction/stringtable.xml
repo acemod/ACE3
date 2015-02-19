@@ -2,6 +2,9 @@
 <!-- Edited with tabler - 2014-12-20 -->
 <Project name="ACE">
   <Package name="Interaction">
+    <Key ID="STR_ACE_Interaction_MainAction">
+      <English>Interactions &gt;&gt;</English>
+    </Key>
     <Key ID="STR_ACE_Interaction_InteractionMenu">
       <English>Interaction Menu</English>
       <German>Interaktionsmenü</German>

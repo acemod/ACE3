@@ -1,7 +1,7 @@
-//fnc_keyUpSelfAction.sqf
+//fnc_keyUp.sqf
 #include "script_component.hpp"
 
-GVAR(keyDown) = false;
+GVAR(keyDownSelfAction) = false;
 if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
     _player = ACE_Player;
