@@ -170,7 +170,7 @@ PREP(setVolume);
 PREP(sortAlphabeticallyBy);
 PREP(stringCompare);
 PREP(stringToColoredText);
-PREP(string_removeWhiteSpace);
+PREP(stringRemoveWhiteSpace);
 PREP(subString);
 PREP(switchToGroupSide);
 PREP(throttledPublicVariable);
