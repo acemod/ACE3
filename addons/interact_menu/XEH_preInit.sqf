@@ -2,21 +2,20 @@
 
 ADDON = false;
 
-PREP(setToRender);
-PREP(render);
-PREP(renderIcon);
-PREP(renderMenu);
-PREP(probe);
-PREP(rotateVectLineGetMap);
-PREP(rotateVectLine);
+PREP(addAction);
+PREP(compileMenu);
+PREP(compileMenuSelfAction);
 PREP(keyDown);
 PREP(keyDownSelfAction);
 PREP(keyUp);
 PREP(keyUpSelfAction);
-PREP(compileMenu);
-PREP(compileMenuSelfAction);
-PREP(addAction);
+PREP(probe);
 PREP(removeAction);
+PREP(render);
+PREP(renderIcon);
+PREP(renderMenu);
+PREP(rotateVectLine);
+PREP(rotateVectLineGetMap);
 
 GVAR(toRender) = [];
 

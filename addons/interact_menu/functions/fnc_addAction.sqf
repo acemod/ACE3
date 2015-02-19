@@ -1,19 +1,20 @@
 /*
  * Author: commy2
- *
  * Add an ACE action to an object. Note: This function is NOT global.
  *
  * Argument:
- * 0: Object the action should be assigned to (Object)
- * 1: Name of the action shown in the menu (String)
- * 2: Icon (String)
- * 3: Position (Position or Selection Name)
- * 4: Statement (Code)
- * 5: Condition (Code)
- * 6: Distance (Number)
+ * 0: Object the action should be assigned to <OBJECT>
+ * 1: Name of the action shown in the menu <STRING>
+ * 2: Icon <STRING>
+ * 3: Position (Position or Selection Name) <POSITION> or <STRING>
+ * 4: Statement <CODE>
+ * 5: Condition <CODE>
+ * 6: Distance <NUMBER>
  *
  * Return value:
- * The entry array, which can be used to remove the entry, or add children entries.
+ * The entry array, which can be used to remove the entry, or add children entries <ARRAY>.
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
