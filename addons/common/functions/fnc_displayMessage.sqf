@@ -10,15 +10,13 @@
 
 #include "script_component.hpp"
 
-#define DISPLAY_LAYER 546
-
 private["_title", "_content","_type","_display","_headerCtrl","_contentCtrl","_contentAmountOfChars","_pos"];
 _title = [_this, 0, "",[""]] call BIS_fnc_Param;
 _content = [_this, 1, "",[""]] call BIS_fnc_Param;
 _type = [_this, 2, 0, [0]] call BIS_fnc_Param;
 
 if (_title != "" && _content != "") then {
-	DISPLAY_LAYER cutRsc ['ACE_RscDisplayMessage',"PLAIN"];
+	("ACE_RscDisplayMessage" call BIS_fnc_rscLayer) cutRsc ['ACE_RscDisplayMessage',"PLAIN"];
 
 	disableSerialization;
 	_display = uiNamespace getvariable 'ACE_RscDisplayMessage';

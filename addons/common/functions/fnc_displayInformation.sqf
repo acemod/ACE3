@@ -10,8 +10,6 @@
 
 #include "script_component.hpp"
 
-#define DISPLAY_LAYER 32547
-
 private["_title", "_content","_type","_display","_headerCtrl","_contentCtrl","_contentAmountOfChars","_pos","_icon","_iconCtrl"];
 _title = [_this, 0, "",[""]] call BIS_fnc_Param;
 _content = [_this, 1, [""],[[""]]] call BIS_fnc_Param;
@@ -19,7 +17,7 @@ _type = [_this, 2, 0, [0]] call BIS_fnc_Param;
 _icon = [_this, 3, "",[""]] call BIS_fnc_Param;
 
 if (_title != "") then {
-	DISPLAY_LAYER cutRsc ['ACE_RscDisplayInformation',"PLAIN"];
+	("ACE_RscDisplayInformation" call BIS_fnc_rscLayer) cutRsc ['ACE_RscDisplayInformation',"PLAIN"];
 
 	disableSerialization;
 	_display = uiNamespace getvariable 'ACE_RscDisplayInformation';
@@ -62,6 +60,5 @@ if (_title != "") then {
 		};
 	};
 } else {
-
-	DISPLAY_LAYER cutText ["","PLAIN"];
+	("ACE_RscDisplayInformation" call BIS_fnc_rscLayer) cutText ["","PLAIN"];
 };
