@@ -53,10 +53,11 @@ class ACE_Settings {
         isClientSetable = 0;
     };
     class GVAR(showSoundWaves) {
-        value = 0;
-        typeName = "BOOL";
+        value = 1;
+        typeName = "SCALAR";
         isClientSetable = 1;
         displayName = "$STR_ACE_NameTags_ShowSoundWaves";
+        values[] = {"Disabled", "Use Nametag settings", "Always Show All"};
     };
     class GVAR(PlayerNamesViewDistance) {
         value = 5;

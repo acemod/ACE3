@@ -45,7 +45,6 @@ case (isClass (configFile >> "cfgPatches" >> "acre_api")): {
             _newSetting = ([ACE_player] call ACRE_api_fnc_isBroadcasting) || {!(isNull findDisplay 55)};
             if (!(_oldSetting isEqualTo _newSetting)) then {
                 ACE_player setVariable [QGVAR(isSpeaking), _newSetting, true];
-                // ["IsTalking??", [ACE_player, _newSetting]] call localEvent  //any use in ACE for a "speaking event"?
             };
         };
     };

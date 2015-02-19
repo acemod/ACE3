@@ -25,7 +25,7 @@
     "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa" \
 ]
 
-private ["_player", "_target", "_alpha", "_heightOffset", "_height", "_position", "_color", "_name", "_rank", "_size"];
+private ["_height", "_position", "_color", "_name", "_rank", "_size"];
 
 PARAMS_4(_player,_target,_alpha,_heightOffset);
 
