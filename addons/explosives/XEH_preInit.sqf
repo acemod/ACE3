@@ -36,6 +36,8 @@ PREP(getDetonators);
 PREP(getPlacedExplosives);
 PREP(getSpeedDialExplosive);
 
+PREP(onLanded);
+
 PREP(openDetonateUI);
 PREP(openPlaceUI);
 PREP(openTransmitterUI);
