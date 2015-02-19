@@ -9,15 +9,15 @@ _key = _this select 1;
 ERRORDATA(2);
 _val = false;
 try {
-	if(VALIDHASH(_hash)) then {
-		_index = (_hash select 0) find _key;
-		if(_index != -1) then {
-			_val = true;
-		};
-	} else {
-		ERROR("Input hash is not valid");
-	};
+    if(VALIDHASH(_hash)) then {
+        _index = (_hash select 0) find _key;
+        if(_index != -1) then {
+            _val = true;
+        };
+    } else {
+        ERROR("Input hash is not valid");
+    };
 } catch {
-	HANDLECATCH;
+    HANDLECATCH;
 };
 _val

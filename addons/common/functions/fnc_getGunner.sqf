@@ -20,9 +20,9 @@ private "_gunner";
 _gunner = objNull;
 
 {
-	if (_weapon in (_vehicle weaponsTurret _x)) exitWith {
-		_gunner = _vehicle turretUnit _x;
-	};
+    if (_weapon in (_vehicle weaponsTurret _x)) exitWith {
+        _gunner = _vehicle turretUnit _x;
+    };
 } forEach allTurrets _vehicle;
 
 _gunner

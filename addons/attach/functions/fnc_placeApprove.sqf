@@ -100,11 +100,11 @@ _attachedObject attachTo [_attachToVehicle, _endPosTestOffset];
 _placer removeItem _itemClassname;
 
 //Add Object to ACE_AttachedObjects and ACE_AttachedItemNames
-_currentObjects = _attachToVehicle getVariable ["ACE_AttachedObjects", []];
+_currentObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
 _currentObjects pushBack _attachedObject;
-_attachToVehicle setVariable ["ACE_AttachedObjects", _currentObjects, true];
-_currentItemNames = _attachToVehicle getVariable ["ACE_AttachedItemNames", []];
+_attachToVehicle setVariable [QGVAR(Objects), _currentObjects, true];
+_currentItemNames = _attachToVehicle getVariable [QGVAR(ItemNames), []];
 _currentItemNames pushBack _itemClassname;
-_attachToVehicle setVariable ["ACE_AttachedItemNames", _currentItemNames, true];
+_attachToVehicle setVariable [QGVAR(ItemNames), _currentItemNames, true];
 
 [_placementText] call EFUNC(common,displayTextStructured);

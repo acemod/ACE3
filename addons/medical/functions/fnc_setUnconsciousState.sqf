@@ -41,17 +41,17 @@ _originalPos = unitPos _unit;
 
 // Handle the on screen effects
 if (isPlayer _unit) then {
-    [] call EFUNC(common,closeAllDialogs_f);
+    [] call EFUNC(common,closeAllDialogs);
     [true] call FUNC(effectBlackOut);
     ["unconscious", true] call EFUNC(common,setDisableUserInputStatus);
-    [false] call EFUNC(common,setVolume_f);
+    [false] call EFUNC(common,setVolume);
 } else {
     _unit setUnitPos "DOWN";
-    [_unit, true] call EFUNC(common,disableAI_F);
+    [_unit, true] call EFUNC(common,disableAI);
 };
 
 // So the AI does not get stuck, we are moving the unit to a temp group on its own.
-[_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide_f);
+[_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 
 _captiveSwitch = [_unit, true] call EFUNC(common,setCaptiveSwitch);
 [_unit, [_unit] call EFUNC(common,getDeathAnim), 1, true] call EFUNC(common,doAnimation);
@@ -110,15 +110,15 @@ _minWaitingTime = (round(random(10)+5));
             _unit setUnconscious false;
 
             // Swhich the unit back to its original group
-            [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide_f);
+            [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 
             // Reset any visual and audio effects for players, or enable everything again for AI.
             if (isPlayer _unit) then {
                 [false] call FUNC(effectBlackOut);
-                [true] call EFUNC(common,setVolume_f);
+                [true] call EFUNC(common,setVolume);
                 ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
             } else {
-                [_unit, false] call EFUNC(common,disableAI_F);
+                [_unit, false] call EFUNC(common,disableAI);
                 _unit setUnitPos _originalPos;    // This is not position but stance (DOWN, MIDDLE, UP)
             };
 

@@ -22,7 +22,7 @@ if ([_unit] call cse_fnc_isAwake) exitwith {
 [_caller,objNull] call cse_fnc_carryObj;
 [_unit,objNull] call cse_fnc_carryObj;
 
-_vehicle = [_caller, _unit] call EFUNC(common,loadPerson_F);
+_vehicle = [_caller, _unit] call EFUNC(common,loadPerson);
 if (!isNull _vehicle) then {
     if (!isnil QGVAR(DROP_ADDACTION)) then {
         _caller removeAction GVAR(DROP_ADDACTION);

@@ -56,7 +56,7 @@ if (alive _unit) exitwith {
     _unit setDamage 0;
 
     // Resetting potential revive state
-    [_unit,QEGVAR(common,ENABLE_REVIVE_SETDEAD_F), 0] call EFUNC(common,setDefinedVariable);
+    [_unit,QEGVAR(common,ENABLE_REVIVE_SETDEAD), 0] call EFUNC(common,setDefinedVariable);
     [_unit,QEGVAR(common,ENABLE_REVIVE_COUNTER), 0] call EFUNC(common,setDefinedVariable);
 
 
