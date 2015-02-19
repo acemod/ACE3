@@ -75,7 +75,7 @@ if(_cursorScreenPos distance _pos <= _distance) then {
                     (_pos select 2) + ((_offset select 2)*_mod)
                 ];
                 // drawLine3D [_pos, _newPos, [1,0,0,0.5]];
-                [_object, _x, _forEachIndex, [_angle, 170], _newPos, _path] call FUNC(renderMenu);
+                [_object, _x, _forEachIndex, [_angle, 150], _newPos, _path] call FUNC(renderMenu);
 
                 if (_angle == 360) then {
                     _angle = _angle + _angleSpan / _numActions;
