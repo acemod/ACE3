@@ -82,29 +82,5 @@ _recurseFnc = {
 };
 
 _actions = [_actionsCfg] call _recurseFnc;
-//diag_log _actions;
-// Backward-compat, filter only base actions that have a selection
-private ["_newActions","_oldActions","_selection"];
-_filteredActions = [];
-{
-    _selection = _x select 2;
-    if (typeName _selection == "STRING") then {
-        _filteredActions pushBack _x;
-    };
-} forEach _actions;
 
-/*
-_actions = [[
-    "Interactions",
-    "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
-    "Spine3",
-    { true },
-    { true },
-    5,
-    _actions,
-    GVAR(uidCounter)
-]
-];
-GVAR(uidCounter) = GVAR(uidCounter) + 1;
-*/
-_object setVariable [QUOTE(GVAR(actionData)), _filteredActions];
+_object setVariable [QUOTE(GVAR(actionData)), _actions];
