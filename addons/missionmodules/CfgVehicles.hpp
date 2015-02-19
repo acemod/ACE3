@@ -11,7 +11,7 @@ class CfgVehicles {
 		displayName = "Ambiance Sounds [ACE]";
 		icon = QUOTE(PATHTOF(data\moduleSound.paa));
 		category = "ACE_missionModules";
-		function = QUOTE(FUNC(moduleAmbianceSound);
+		function = QUOTE(FUNC(moduleAmbianceSound));
 		functionPriority = 1;
 		isGlobal = 1;
 		isTriggerActivated = 0;
@@ -57,7 +57,7 @@ class CfgVehicles {
 				displayName = "Volume";
 				description = "The volume of the sounds played";
 				typeName = "NUMBER";
-				defaultValue = 0;
+				defaultValue = 1;
 			};
 		};
 		class ModuleDescription {
