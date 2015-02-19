@@ -52,7 +52,7 @@ if ((GVAR(showPlayerNames) in [2,4]) && {_onKeyPressAlphaMax > 0}) then {
         if (GVAR(showSoundWaves) == 2) then {  //icon will be drawn below, so only show name here
             _icon = if ((_target getVariable [QGVAR(isSpeaking), false]) && {(vehicle _target) == _target}) then {ICON_NAME} else {_defaultIcon};
         } else {
-            _icon = if ((_target getVariable [QGVAR(isSpeaking), false]) && {(vehicle _target) == _target}) then {ICON_NAME_SPEAK} else {_defaultIcon};
+            _icon = if ((_target getVariable [QGVAR(isSpeaking), false]) && {(vehicle _target) == _target} && {GVAR(showSoundWaves) > 0}) then {ICON_NAME_SPEAK} else {_defaultIcon};
         };
 
         [_player, _target, _alpha, _distance * 0.026, _icon] call FUNC(drawNameTagIcon);
@@ -77,7 +77,7 @@ if (((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) || {GVAR(sho
 
         _icon = ICON_NONE;
         if ((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) then {
-            if ((_target getVariable [QGVAR(isSpeaking), false]) && {(vehicle _target) == _target}) then {_icon = ICON_NAME_SPEAK;} else {_icon = _defaultIcon};
+            if ((_target getVariable [QGVAR(isSpeaking), false]) && {(vehicle _target) == _target} && {GVAR(showSoundWaves) > 0}) then {_icon = ICON_NAME_SPEAK;} else {_icon = _defaultIcon};
         } else {
             //showSoundWaves must be 2, only draw speak icon
             if ((_target getVariable [QGVAR(isSpeaking), false]) && {(vehicle _target) == _target}) then {_icon = ICON_SPEAK;};
