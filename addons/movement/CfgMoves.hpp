@@ -77,6 +77,15 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         class AmovPercMwlkSlowWrflDr: AmovPercMwlkSlowWrflDf {
             leftHandIKCurve[] = {};
         };
+        class AmovPercMwlkSlowWrflDf_v1: AmovPercMwlkSlowWrflDf {
+            leftHandIKCurve[] = {};
+        };
+        class AidlPercMwlkSrasWrflDf: AmovPercMwlkSlowWrflDf {
+            leftHandIKCurve[] = {};
+        };
+        class AmovPercMtacSlowWrflDf: AmovPercMwlkSlowWrflDf {
+            leftHandIKCurve[] = {};
+        };
 
         // enable optics in prone left and right stance
         class AidlPpneMstpSrasWrflDnon_G0S;

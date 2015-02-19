@@ -11,6 +11,7 @@ PREP(addCustomEventHandler);
 PREP(addLineToDebugDraw);
 PREP(addMapMarkerCreatedEventHandler);
 PREP(addScrollWheelEventHandler);
+PREP(addSetting);
 PREP(adminKick);
 PREP(ambientBrightness);
 PREP(applyForceWalkStatus);
@@ -48,6 +49,7 @@ PREP(getConfigGunner);
 PREP(getDefaultAnim);
 PREP(getDoorTurrets);
 PREP(getForceWalkStatus);
+PREP(getGunner);
 PREP(getHitPoints);
 PREP(getHitPointsWithSelections);
 PREP(getInPosition);
@@ -55,6 +57,7 @@ PREP(getMarkerType);
 PREP(getName);
 PREP(getNumberFromMissionSQM);
 PREP(getPitchBankYaw);
+PREP(getSettingData);
 PREP(getStringFromMissionSQM);
 PREP(getTargetAzimuthAndInclination);
 PREP(getTargetDistance);
@@ -72,6 +75,7 @@ PREP(getVehicleCargo);
 PREP(getVehicleCodriver);
 PREP(getVehicleCrew);
 PREP(getWeaponAzimuthAndInclination);
+PREP(getWeaponIndex);
 PREP(getWeaponType);
 PREP(getWindDirection);
 PREP(goKneeling);
@@ -85,6 +89,8 @@ PREP(isInBuilding);
 PREP(isPlayer);
 PREP(isTurnedOut);
 PREP(letterToCode);
+PREP(loadSettingsFromProfile);
+PREP(loadSettingsOnServer);
 PREP(map);
 PREP(moduleCheckPBOs);
 PREP(moduleLSDVehicles);
@@ -97,8 +103,7 @@ PREP(player);
 PREP(playerSide);
 PREP(progressBar);
 PREP(queueAnimation);
-PREP(readBooleanParameterFromModule);
-PREP(readNumericParameterFromModule);
+PREP(readSettingFromModule);
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);
 PREP(removeCameraEventHandler);
@@ -115,12 +120,16 @@ PREP(setName);
 PREP(setParameter);
 PREP(setPitchBankYaw);
 PREP(setVariableJIP);
+PREP(setVariablePublic);
+PREP(setSetting);
+PREP(setSettingFromConfig);
 PREP(stringToColoredText);
 PREP(subString);
 PREP(toBin);
 PREP(toBitmask);
 PREP(toHex);
 PREP(toNumber);
+PREP(throttledPublicVariable);
 PREP(unmuteUnit);
 PREP(waitAndExecute);
 
@@ -162,7 +171,10 @@ PREP(hashListSelect);
 PREP(hashListSet);
 PREP(hashListPush);
 
-
+// Load settings
+if (isServer) then {
+    call FUNC(loadSettingsOnServer);
+};
 
 ACE_player = player;
 
@@ -182,7 +194,6 @@ if (hasInterface) then {
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
-
 
 PREP(stringCompare);
 PREP(string_removeWhiteSpace);

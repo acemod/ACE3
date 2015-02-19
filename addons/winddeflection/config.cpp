@@ -1,16 +1,16 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-	class ADDON {
-		units[] = {};
-		weapons[] = {};
-		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = {"ACE_common", "ACE_weather"};
-		versionDesc = "ACE Wind Deflection";
-		version = VERSION;
-		author[] = {$STR_ACE_Core_ACETeam, "Glowbal", "Ruthberg"};
-		authorUrl = "http://csemod.com";
-	};
+    class ADDON {
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {"ACE_common", "ACE_weather"};
+        versionDesc = "ACE Wind Deflection";
+        version = VERSION;
+        author[] = {$STR_ACE_Common_ACETeam, "Glowbal", "Ruthberg"};
+        authorUrl = "http://csemod.com";
+    };
 };
 
 class CfgAddons {
@@ -21,4 +21,11 @@ class CfgAddons {
     };
 };
 
+class ACE_Settings {
+    class GVAR(EnableForAI) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSetable = 0;
+    };
+};
 #include "CfgVehicles.h"

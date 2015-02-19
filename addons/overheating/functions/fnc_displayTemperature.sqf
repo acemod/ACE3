@@ -1,15 +1,15 @@
 /*
  * Author: Commy2 and CAA-Picard
- *
  * Displays the weapon temperature
  *
  * Arguments:
- * 0: _player
- * 1: _weapon
+ * 0: Player <OBJECT>
+ * 1: Weapon <STRING>
  *
  * Return Values:
  * None
  *
+ * Public: No
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 

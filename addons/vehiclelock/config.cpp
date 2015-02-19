@@ -12,8 +12,11 @@ class CfgPatches {
   };
 };
 
-class ACE_Parameters_Numeric {
-  GVAR(DefaultLockpickStrength) = 10;
+class ACE_Settings {
+    class GVAR(DefaultLockpickStrength) {
+        value = 10;
+        typeName = "SCALAR";
+    };
 };
 
 #include "CfgEventHandlers.hpp"

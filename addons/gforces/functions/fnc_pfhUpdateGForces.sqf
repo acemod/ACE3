@@ -1,5 +1,17 @@
-// by KoffeinFlummi and CAA-Picard
-#include "script_component.hpp"
+/*
+ * Author: KoffeinFlummi and CAA-Picard
+ * Calculates average g-forces and triggers g-effects
+ *
+ * Argument:
+ * 0: Arguments <ARRAY>
+ * 1: pfh_id <NUMBER>
+ *
+ * Return value:
+ * None
+ *
+ * Public: No
+ */
+ #include "script_component.hpp"
 
 EXPLODE_2_PVT(_this,_params,_pfhId);
 
