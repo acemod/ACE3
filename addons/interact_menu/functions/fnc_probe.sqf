@@ -18,6 +18,7 @@ if(!GVAR(keyDown)) then {
                 _target = _actionObject;
                 _player = ACE_player;
                 _active = [_target, ACE_player] call (_actionItem select 4);
+                systemChat format ["%1 %2 is active %3", _actionObject, _actionItem select 0, _active];
                 // player sideChat format["_active: %1 %2", _actionItem select 0, _active];
                 if(_active) then {
                     _renderItem = +_actionItem;

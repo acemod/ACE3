@@ -6,7 +6,7 @@ _text = _this select 0;
 _color = _this select 1;
 _pos = _this select 2;
 _icon = _this select 6;
-
+//systemChat format ["Drawing icon %1", _text];
 _sPos = worldToScreen _pos;
 // _sPos = _pos;
 if(count _sPos > 0) then {

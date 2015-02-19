@@ -37,7 +37,7 @@ _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_Actions";
 
 
 _recurseFnc = {
-    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_condition", "_showDisabled",
+    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_selection", "_condition", "_showDisabled",
             "_enableInside", "_children", "_entry", "_actionsCfg"];
     _actions = [];
     _actionsCfg = _this select 0;
@@ -48,7 +48,10 @@ _recurseFnc = {
             _distance = getNumber (_entryCfg >> "distance");
             _icon = getText (_entryCfg >> "icon");
             _statement = compile (getText (_entryCfg >> "statement"));
-
+            _selection = getText (_entryCfg >> "selection");
+            if (_selection == "") then {
+                _selection = [0,0,0];
+            };
             _condition = getText (_entryCfg >> "condition");
             if (_condition == "") then {_condition = "true"};
 
@@ -59,24 +62,18 @@ _recurseFnc = {
             _enableInside = getNumber (_entryCfg >> "enableInside");
 
             _condition = compile _condition;
-            // diag_log text format["_condition: %1", _condition];
-            _children = [];
-            if(isArray (_entryCfg >> "subMenu")) then {
-                _subMenuDef = getArray (_entryCfg >> "subMenu");
-                _childMenuName = _subMenuDef select 0;
-                _childMenuCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_Actions" >> _childMenuName;
-                _children = [_childMenuCfg] call _recurseFnc;
-            };
+            _children = [_entryCfg] call _recurseFnc;
             _entry = [
                         _displayName,
                         _icon,
-                        [0,0,0],
+                        _selection,
                         _statement,
                         _condition,
                         _distance,
                         _children,
                         GVAR(uidCounter)
                     ];
+            diag_log _entry;
             GVAR(uidCounter) = GVAR(uidCounter) + 1;
             _actions pushBack _entry;
         };
@@ -85,9 +82,20 @@ _recurseFnc = {
 };
 
 _actions = [_actionsCfg] call _recurseFnc;
+//diag_log _actions;
+// Backward-compat, filter only base actions that have a selection
+private ["_newActions","_oldActions","_selection"];
+_filteredActions = [];
+{
+    _selection = _x select 2;
+    if (typeName _selection == "STRING") then {
+        _filteredActions pushBack _x;
+    };
+} forEach _actions;
 
+/*
 _actions = [[
-    "TEST!",
+    "Interactions",
     "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
     "Spine3",
     { true },
@@ -98,5 +106,5 @@ _actions = [[
 ]
 ];
 GVAR(uidCounter) = GVAR(uidCounter) + 1;
-
-_object setVariable [QUOTE(GVAR(actionData)), _actions];
+*/
+_object setVariable [QUOTE(GVAR(actionData)), _filteredActions];

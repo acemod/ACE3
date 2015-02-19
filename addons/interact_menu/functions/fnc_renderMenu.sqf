@@ -34,7 +34,6 @@ if(_cursorScreenPos distance _pos <= _distance) then {
         _color = format ["#%1FFFFFF", [255 * (((GVAR(renderDepth)/_menuDepth)) max 0.25)] call EFUNC(common,toHex)];
     };
     _path set[(count _path), _index];
-    // player sideChat format["r: %1", _actionData select 2];
     [_actionData select 0, _color, _pos, 1, 1, 0, _actionData select 1, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
     GVAR(currentOptions) set[(count GVAR(currentOptions)), [_this, _pos, _path]];
     _currentRenderDepth = -1;
@@ -53,7 +52,7 @@ if(_cursorScreenPos distance _pos <= _distance) then {
                 _numActions = _numActions + 1;
             };
         } forEach (_actionData select 6);
-        systemChat format ["_numActions: %1", _numActions];
+        systemChat format ["Menu %1, _numActions: %2", _actionData select 0, _numActions];
 
         private "_angleSpan";
         _angleSpan = _maxAngleSpan min (35 * (_numActions - 1));
@@ -67,7 +66,7 @@ if(_cursorScreenPos distance _pos <= _distance) then {
             _active = [_object, ACE_player] call (_x select 4);
             // diag_log text format["_active: %1: %2", (_x select 0), _active];
             if(_active) then {
-                systemChat format ["_angle: %1", _angle];
+                //systemChat format ["_angle: %1", _angle];
                 _offset = [GVAR(vecLineMap), _angle] call FUNC(rotateVectLine);
                 _mod = 0.4 max (0.15 * (_cursorScreenPos distance _pos)); //0.5;//0.1*_distance;
                 _newPos = [
