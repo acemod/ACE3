@@ -21,7 +21,7 @@ if (isNil QGVAR(CellphoneIEDs)) exitWith {objNull};
 _explosive = objNull;
 {
   if ((_x select 1) == _code) exitWith {
-    _explosive = _x select 0;
+    _explosive = _x;
   };
   false
 } count GVAR(CellphoneIEDs);

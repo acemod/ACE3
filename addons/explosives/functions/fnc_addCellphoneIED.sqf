@@ -43,7 +43,7 @@ while {!_codeSet} do {
 if (isNil QGVAR(CellphoneIEDs)) then {
   GVAR(CellphoneIEDs) = [];
 };
-_count = GVAR(CellphoneIEDs) pushBack [_explosive,_code];
+_count = GVAR(CellphoneIEDs) pushBack [_explosive,_code,GetNumber(ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> "Cellphone" >> "FuseTime")];
 _count = _count + 1;
 publicVariable QGVAR(CellphoneIEDs);
 _unit sideChat format ["IED %1 code: %2", _count,_code];

@@ -22,12 +22,14 @@ if ((_i mod 4) == 0) then {
     playSound3D [QUOTE(PATHTOF_R(Data\Audio\DialTone.wss)), objNull, false, (_unit ModelToWorld [0,0.2,2]), 15,1,2.5];
 };
 ctrlSetText [1400,format["Calling%1",_arr select (_i - 4)]];
+
+private "_explosive";
+_explosive = [_unit, _code] call FUNC(getSpeedDialExplosive);
+
 if (_i >= (count _arr + 2)) then {
     [_this select 1] call CALLSTACK(cba_fnc_removePerFrameHandler);
-    private "_explosive";
-    _explosive = [_unit, _code] call FUNC(getSpeedDialExplosive);
     if (!isNull (_explosive)) then {
-        [_unit, -1, [_explosive, 1]] call FUNC(detonateExplosive);
+        [_unit, -1, [_explosive select 0, _explosive select 2]] call FUNC(detonateExplosive);
     };
     _unit setVariable [QGVAR(Dialing), false, true];
     if (_unit == ace_player) then {
@@ -35,10 +37,8 @@ if (_i >= (count _arr + 2)) then {
     };
 };
 if (_i == (count _arr)) then {
-    private "_explosive";
-    _explosive = [_unit, _code] call FUNC(getSpeedDialExplosive);
     if (!isNull (_explosive)) then {
-        playSound3D [QUOTE(PATHTOF_R(Data\Audio\Cellphone_Ring.wss)),objNull, false, getPosATL _explosive,3.16228,1,75];
+        playSound3D [QUOTE(PATHTOF_R(Data\Audio\Cellphone_Ring.wss)),objNull, false, getPosATL (_explosive select 0),3.16228,1,75];
     };
 };
 (_this select 0) set [1, _i + 1];
