@@ -18,36 +18,32 @@
 #define DEFAULT_DELAY 2
 #define DEFAULT_PRIORITY 0
 
-if (isNil QGVAR(lastHint)) then {
-  GVAR(lastHint) = [0, 0];
-};
-
 _this resize 4;
 
-_this spawn {
-  private ["_text", "_sound", "_delay", "_priority", "_lastHintTime", "_lastHintPriority", "_time"];
+private ["_text", "_sound", "_delay", "_priority", "_lastHintTime", "_lastHintPriority", "_time"];
+_text = _this select 0;
+_sound = _this select 1;
+_delay = _this select 2;
+_priority = _this select 3;
 
-  _text = _this select 0;
-  _sound = _this select 1;
-  _delay = _this select 2;
-  _priority = _this select 3;
+if (isNil QGVAR(lastHint)) then {
+    GVAR(lastHint) = [0, 0];
+};
 
-  _lastHintTime = GVAR(lastHint) select 0;
-  _lastHintPriority = GVAR(lastHint) select 1;
+_lastHintTime = GVAR(lastHint) select 0;
+_lastHintPriority = GVAR(lastHint) select 1;
 
-  if !(typeName _text in ["STRING", "TEXT"]) then {_text = str _text};
-  if (isNil "_sound") then {_sound = DEFAULT_PLAY_SOUND};
-  if (isNil "_delay") then {_delay = DEFAULT_DELAY};
-  if (isNil "_priority") then {_priority = DEFAULT_PRIORITY};
+if !(typeName _text in ["STRING", "TEXT"]) then {_text = str _text};
+if (isNil "_sound") then {_sound = DEFAULT_PLAY_SOUND};
+if (isNil "_delay") then {_delay = DEFAULT_DELAY};
+if (isNil "_priority") then {_priority = DEFAULT_PRIORITY};
 
-  _time = time;
-  if (_time > _lastHintTime + _delay || {_priority >= _lastHintPriority}) then {
+_time = time;
+if (_time > _lastHintTime + _delay || {_priority >= _lastHintPriority}) then {
     hintSilent _text;
     if (_sound) then {playSound "ACE_Sound_Click"};
     GVAR(lastHint) set [0, _time];
     GVAR(lastHint) set [1, _priority];
 
-    sleep _delay;
-    if (_time == GVAR(lastHint) select 0) then {hintSilent ""};
-  };
+    [{if ((_this select 0) == GVAR(lastHint) select 0) then {hintSilent ""};}, [_time], _delay, 0] call FUNC(waitAndExecute);
 };
