@@ -25,6 +25,7 @@ class RscTitles {
                 y = safeZoneY + 0.2 * safezoneH;
                 w = 0.2 * safeZoneW;
                 h = 0.1 * SafeZoneH;
+                font = "PuristaMedium";
             };
         };
     };
@@ -36,7 +37,6 @@ class RscTitles {
         fadeIn = 0.2;
         fadeOut = 0.2;
         name = "ACE_RscErrorHint";
-
         class controls {
             class HintBox: RscStructuredText {
                 idc = 1;
@@ -56,7 +56,7 @@ class RscTitles {
     duration = 7;
     idd = 86411;
     movingenable = 0;
-    onLoad = "uiNamespace setVariable ['ACE_RscDisplayMessage', _this select 0];"
+    onLoad = "uiNamespace setVariable ['ACE_RscDisplayMessage', _this select 0];";
     fadein = 0;
     class controlsBackground {
       class header: ACE_gui_staticBase {
@@ -88,7 +88,7 @@ class RscTitles {
     duration = 15;
     idd = 86412;
     movingenable = 0;
-    onLoad = "uiNamespace setVariable ['ACE_RscDisplayInformation', _this select 0];"
+    onLoad = "uiNamespace setVariable ['ACE_RscDisplayInformation', _this select 0];";
     fadein = 0;
     class controlsBackground {
       class header: ACE_gui_staticBase {

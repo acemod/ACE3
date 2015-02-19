@@ -102,7 +102,14 @@ class ACE_Settings {
         displayName = "$STR_ACE_Common_SettingFeedbackIconsName";
         description = "$STR_ACE_Common_SettingFeedbackIconsDesc";
         values[] = {"Hide", "Top right, downwards", "Top right, to the left", "Top left, downwards", "Top left, to the right"};
-    };    
+    };
+    class GVAR(displayTextColor) {
+        value[] = {0,0,0,0};
+        typeName = "COLOR";
+        isClientSetable = 1;
+        displayName = "$STR_ACE_Common_SettingDisplayTextColorName";
+        description = "$STR_ACE_Common_SettingDisplayTextColorDesc";
+    };
 };
 
 #include "define.hpp"
@@ -113,3 +120,23 @@ class ACE_Settings {
 #include <FixAnimations.hpp>
 #include <NoVoice.hpp>
 
+class CfgUIGrids {
+    class IGUI {
+        class Presets {
+            class Arma3 {
+                class Variables {
+                    grid_ACE_displayText[] = {{safeZoneW + safeZoneX - 0.175 * safezoneW, safeZoneY + 0.175 * safezoneH, 0.15 * safeZoneW, 0.125 * SafeZoneH}, "(((safezoneW / safezoneH) min 1.2) / 40)","((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"};
+                };
+            };
+        };
+
+        class Variables {
+            class grid_ACE_displayText {
+                displayName = "ACE Hint";
+                description = "Textual in game feedback to the player.";
+                preview = "\a3\Ui_f\data\GUI\Cfg\UIGrids\grid_hint_ca.paa";
+                saveToProfile[] = {0,1};                
+            };
+        };
+    };
+};

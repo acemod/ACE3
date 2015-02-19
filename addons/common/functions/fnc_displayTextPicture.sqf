@@ -22,7 +22,7 @@ if (typeName _text != "TEXT") then {
 };
 
 _text = composeText [
-  parseText format ["<img size='2.5' align='center' color='#ffffff' image='%1'/>", _image],
+  parseText format ["<img size='2' align='center' color='#ffffff' image='%1'/>", _image],
   lineBreak,
   _text
 ];

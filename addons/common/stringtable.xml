@@ -320,7 +320,13 @@
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
             <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
-        </Key>        
+        </Key>
+        <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
+            <English>Hint Background color</English>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
+            <English>The color of the background from the ACE hints.</English>
+        </Key>          
     </Package>
 
 </Project>
