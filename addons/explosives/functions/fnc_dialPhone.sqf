@@ -31,10 +31,10 @@ if (_unit == ace_player) then {
 	[FUNC(dialingPhone), 0.25, [_unit,4,_arr,_code]] call CALLSTACK(CBA_fnc_addPerFrameHandler);
 } else {
 	private ["_explosive"];
-	_explosive = [_unit, _code] call FUNC(getSpeedDialExplosive);
-	if (!isNull (_explosive)) then {
+	_explosive = [_code] call FUNC(getSpeedDialExplosive);
+	if ((count _explosive) > 0) then {
 		[{
-			playSound3D [QUOTE(PATHTOF_R(Data\Audio\Cellphone_Ring.wss)),objNull, false, getPosASL (_this select 1),3.16228,1,75];
+			playSound3D [QUOTE(PATHTO_R(Data\Audio\Cellphone_Ring.wss)),objNull, false, getPosASL (_this select 1),3.16228,1,75];
 			(_this select 0) setVariable [QGVAR(Dialing), false, true];
 		}, [_unit,_explosive select 0], 0.25 * (count _arr - 4), 0] call EFUNC(common,waitAndExecute);
 		[_explosive select 0,(0.25 * (count _arr - 1)) + (_explosive select 2)] call FUNC(startTimer);

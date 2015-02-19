@@ -38,7 +38,7 @@ while {!_codeSet} do {
     _code = "0" + _code;
     _count = _count - 1;
   };
-  _codeSet = (isNull [objNull,_code] call FUNC(getSpeedDialExplosive));
+  _codeSet = (count ([_code] call FUNC(getSpeedDialExplosive))) == 0;
 };
 if (isNil QGVAR(CellphoneIEDs)) then {
   GVAR(CellphoneIEDs) = [];
