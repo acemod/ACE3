@@ -1,4 +1,4 @@
-//fnc_keyUp.sqf
+//fnc_keyUpSelfAction.sqf
 #include "script_component.hpp"
 
 GVAR(keyDown) = false;

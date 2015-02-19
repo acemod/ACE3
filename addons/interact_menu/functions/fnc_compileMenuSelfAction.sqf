@@ -70,7 +70,7 @@ _recurseFnc = {
                         [0,0,0],
                         _statement,
                         _condition,
-                        3, //distace
+                        10, //distace
                         _children,
                         GVAR(uidCounter)
                     ];
@@ -89,7 +89,7 @@ _actions = [[
     "Spine3",
     { true },
     { true },
-    5,
+    10,
     _actions,
     GVAR(uidCounter)
 ]
