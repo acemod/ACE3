@@ -1,11 +1,11 @@
 //fnc_renderMenu.sqf
 #include "script_component.hpp"
 
-private ["_object", "_actionData", "_distance", "_index", "_pos", "_cursorScreenPos", "_path", "_menuDepth", "_opacity", "_currentRenderDepth", "_radialOffset", "_active", "_x", "_offset", "_newPos", "_forEachIndex"];
+private ["_object", "_actionData", "_distance", "_uid", "_pos", "_cursorScreenPos", "_path", "_menuDepth", "_opacity", "_currentRenderDepth", "_radialOffset", "_active", "_x", "_offset", "_newPos", "_forEachIndex"];
 
 _object = _this select 0;
 _actionData = _this select 1;
-_index = _this select 2;
+_uid = _actionData select 7;//_this select 2;
 _angles = _this select 3;
 
 _distance = _actionData select 5;
@@ -30,16 +30,16 @@ if(_cursorScreenPos distance _pos <= _distance) then {
 
     // ARGB Color (First Hex Pair is transparancy)
     _color = "#FFFFFFFF";
-    if(_menuDepth > 0 && _index != (GVAR(menuDepthPath) select (GVAR(renderDepth)))) then {
+    if(_menuDepth > 0 && _uid != (GVAR(menuDepthPath) select (GVAR(renderDepth)))) then {
         _color = format ["#%1FFFFFF", [255 * (((GVAR(renderDepth)/_menuDepth)) max 0.25)] call EFUNC(common,toHex)];
     };
-    _path set[(count _path), _index];
+    _path set[(count _path), _uid];
     [_actionData select 0, _color, _pos, 1, 1, 0, _actionData select 1, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
     GVAR(currentOptions) set[(count GVAR(currentOptions)), [_this, _pos, _path]];
     _currentRenderDepth = -1;
     _currentRenderDepth = GVAR(renderDepth);
     GVAR(renderDepth) = GVAR(renderDepth) + 1;
-    if(_index == (GVAR(menuDepthPath) select (GVAR(renderDepth)-1))) then {
+    if(_uid == (GVAR(menuDepthPath) select (GVAR(renderDepth)-1))) then {
         // Count how many actions are active
         private "_numActions";
         _numActions = 0;
