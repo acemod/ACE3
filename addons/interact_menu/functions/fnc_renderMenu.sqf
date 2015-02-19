@@ -75,9 +75,9 @@ if(_cursorScreenPos distance _pos <= _distance) then {
                     (_pos select 1) + ((_offset select 1)*_mod),
                     (_pos select 2) + ((_offset select 2)*_mod)
                 ];
-                // drawLine3D [_pos, _newPos, [1,0,0,1]];
+                // drawLine3D [_pos, _newPos, [1,0,0,0.5]];
                 [_object, _x, _forEachIndex, [_angle, 180], _newPos, _path] call FUNC(renderMenu);
-                _angle = _angle + _angleSpan / (_numActions);
+                _angle = _angle + _angleSpan / ((_numActions-1) max 1);
             };
         } forEach (_actionData select 6);
     };
