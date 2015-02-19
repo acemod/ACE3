@@ -25,15 +25,15 @@ if((count GVAR(toRender)) > 0 && (GVAR(keyDown) || GVAR(keyDownSelfAction))) the
 				GVAR(renderDepth) = 0;
 				_renderTargets = _x;
 				{
-					[_renderTargets select 0, _x, 0] call FUNC(renderMenu);
+					[_renderTargets select 0, _x, 0, [270, 360]] call FUNC(renderMenu);
 				} forEach (_renderTargets select 1);
 			};
 		} forEach GVAR(toRender);
 	} else {
 		// Render only the self action menu
 		_actions = (ACE_player getVariable QGVAR(selfActionData)) select 0;
-		_pos = (ACE_player modelToWorld (ACE_player selectionPosition "spine3")) vectorAdd GVAR(selfMenuOffset);
-		[ACE_player, _actions, 0, _pos] call FUNC(renderMenu);
+		_pos = (ACE_player modelToWorld (ACE_player selectionPosition "spine3")) vectorAdd GVAR(selfMenuOffset) vectorAdd [0,0,0.25];
+		[ACE_player, _actions, 0, [270, 360], _pos] call FUNC(renderMenu);
 	};
 
 	// player sideChat format["c: %1", count GVAR(toRender)];

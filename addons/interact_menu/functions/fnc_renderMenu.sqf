@@ -5,11 +5,14 @@ private ["_object", "_actionData", "_distance", "_index", "_pos", "_cursorScreen
 
 _object = _this select 0;
 _actionData = _this select 1;
-_distance = _actionData select 5;
 _index = _this select 2;
+_angles = _this select 3;
 
-if((count _this) > 3) then {
-	_pos = _this select 3;
+_distance = _actionData select 5;
+EXPLODE_2_PVT(_angles,_centerAngle,_maxAngleSpan);
+
+if((count _this) > 4) then {
+	_pos = _this select 4;
 } else {
 	if(typeName (_actionData select 2) == "ARRAY") then {
 		_pos = _object modelToWorld (_actionData select 2);
@@ -20,8 +23,8 @@ if((count _this) > 3) then {
 _cursorScreenPos = (positionCameraToWorld [0, 0, 0]);
 if(_cursorScreenPos distance _pos <= _distance) then {
 	_path = [];
-	if((count _this) > 4) then {
-		_path = +(_this select 4);
+	if((count _this) > 5) then {
+		_path = +(_this select 5);
 	};
 	_menuDepth = (count GVAR(menuDepthPath));
 
@@ -37,27 +40,46 @@ if(_cursorScreenPos distance _pos <= _distance) then {
 	_currentRenderDepth = GVAR(renderDepth);
 	GVAR(renderDepth) = GVAR(renderDepth) + 1;
 	if(_index == (GVAR(menuDepthPath) select (GVAR(renderDepth)-1))) then {
-		_radialOffset = 0;
+		// Count how many actions are active
+		private "_numActions";
+		_numActions = 0;
 		{
-            // if(_index != (GVAR(menuDepthPath) select (GVAR(renderDepth)))) then {
-                this = _object;
-                _target = _object;
-                _player = ACE_player;
-                _active = [_object, ACE_player] call (_x select 4);
-                // diag_log text format["_active: %1: %2", (_x select 0), _active];
-                if(_active) then {
-                    _offset = [GVAR(vecLineMap), (270*(GVAR(renderDepth)%2))-(_radialOffset*45)] call FUNC(rotateVectLine);
-                    _mod = 0.1*_distance;
-                    _newPos = [
-                        (_pos select 0) + ((_offset select 0)*_mod),
-                        (_pos select 1) + ((_offset select 1)*_mod),
-                        (_pos select 2) + ((_offset select 2)*_mod)
-                    ];
-                    // drawLine3D [_pos, _newPos, [1,0,0,1]];
-                    [_object, _x, _forEachIndex, _newPos, _path] call FUNC(renderMenu);
-                    _radialOffset = _radialOffset + 1;
-                };
-            // };
+			this = _object;
+			_target = _object;
+			_player = ACE_player;
+			_active = [_object, ACE_player] call (_x select 4);
+			if(_active) then {
+				_numActions = _numActions + 1;
+			};
+		} forEach (_actionData select 6);
+		systemChat format ["_numActions: %1", _numActions];
+
+		private "_angleSpan";
+		_angleSpan = _maxAngleSpan min (35 * (_numActions - 1));
+
+		private "_angle";
+		_angle = _centerAngle - _angleSpan / 2;
+		{
+			// if(_index != (GVAR(menuDepthPath) select (GVAR(renderDepth)))) then {
+				this = _object;
+				_target = _object;
+				_player = ACE_player;
+				_active = [_object, ACE_player] call (_x select 4);
+				// diag_log text format["_active: %1: %2", (_x select 0), _active];
+				if(_active) then {
+					systemChat format ["_angle: %1", _angle];
+					_offset = [GVAR(vecLineMap), _angle] call FUNC(rotateVectLine);
+					_mod = 0.4 max (0.15 * (_cursorScreenPos distance _pos)); //0.5;//0.1*_distance;
+					_newPos = [
+						(_pos select 0) + ((_offset select 0)*_mod),
+						(_pos select 1) + ((_offset select 1)*_mod),
+						(_pos select 2) + ((_offset select 2)*_mod)
+					];
+					// drawLine3D [_pos, _newPos, [1,0,0,1]];
+					[_object, _x, _forEachIndex, [_angle, 180], _newPos, _path] call FUNC(renderMenu);
+					_angle = _angle + _angleSpan / (_numActions);
+				};
+			// };
 		} forEach (_actionData select 6);
 	};
 	GVAR(renderDepth) = GVAR(renderDepth) - 1;
