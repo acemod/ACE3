@@ -25,6 +25,7 @@ PREP(canDetonate);
 PREP(defuseExplosive);
 PREP(detonateExplosive);
 PREP(dialPhone);
+PREP(dialingPhone);
 
 PREP(handleScrollWheel);
 
