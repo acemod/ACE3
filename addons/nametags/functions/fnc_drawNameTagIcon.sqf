@@ -4,9 +4,11 @@
  * Draw the nametag and rank icon.
  *
  * Argument:
- * 0: Unit (Array)
- * 1: alpha (Number)
- * 2: Height offset (Number)
+ * 0: Unit (Player) <OBJECT>
+ * 1: Target <OBJECT>
+ * 2: alpha (Number)
+ * 4: Height offset (Number)
+ * 5: Draw Type <NUMBER>
  *
  * Return value:
  * None.
@@ -23,30 +25,38 @@
     "\A3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa", \
     "\A3\Ui_f\data\GUI\Cfg\Ranks\major_gs.paa", \
     "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa" \
-]
+    ]
 
 private ["_height", "_position", "_color", "_name", "_rank", "_size"];
 
-PARAMS_4(_player,_target,_alpha,_heightOffset);
+PARAMS_5(_player,_target,_alpha,_heightOffset,_iconType);
 
-_name = [_target, true] call EFUNC(common,getName);
+if (_alpha < 0) exitWith {}; //Don't waste time if not visable
+if (_iconType == ICON_NONE) exitWith {}; //Don't waste time if not visable
 
+
+//Set Text:
+_name = if (_iconType in [ICON_NAME, ICON_NAME_RANK, ICON_NAME_SPEAK]) then {
+    [_target, true] call EFUNC(common,getName)
+} else {
+    ""
+};
+
+//Set Icon:
 _icon = "";
 _size = 0;
-
-if (GVAR(showSoundWaves) && {(_target getVariable [QGVAR(isSpeaking), false]) && {(vehicle _target) == _target}}) then {
+if ((_iconType == ICON_NAME_SPEAK) || (_iconType == ICON_SPEAK)) then {
     _icon = QUOTE(PATHTOF(UI\soundwave)) + str (floor (random 10)) + ".paa";
     _size = 0.75;
     _alpha = _alpha + 0.6;//Boost alpha when speaking
 } else {
-    if (GVAR(showPlayerRanks)) then {
+    if (_iconType == ICON_NAME_RANK) then {
         _icon = TEXTURES_RANKS select ((["PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"] find (rank _target)) + 1);
         _size = 0.75;
     };
 };
 
-if (_alpha < 0) exitWith {}; //Don't waste time if not visable
-
+//Set Color:
 if !(group _target == group _player) then {
     _color = +GVAR(defaultNametagColor); //Make a copy, then multiply both alpha values (allows client to decrease alpha in settings)
     _color set [3, (_color select 3) * _alpha];
@@ -55,19 +65,18 @@ if !(group _target == group _player) then {
 };
 
 _height = [2, 1.5, 1, 1.5, 1] select (["STAND", "CROUCH", "PRONE", "UNDEFINED", ""] find (stance _target));
-
 // Convert position to ASLW (expected by drawIcon3D) and add height offsets
 _position = _target modelToWorldVisual [0, 0, (_height + _heightOffset)];
 
 drawIcon3D [
-    _icon,
-    _color,
-    _position,
-    _size,
-    _size,
-    0,
-    _name,
-    2,
-    0.033,
-    "PuristaMedium"
+_icon,
+_color,
+_position,
+_size,
+_size,
+0,
+_name,
+2,
+0.033,
+"PuristaMedium"
 ];

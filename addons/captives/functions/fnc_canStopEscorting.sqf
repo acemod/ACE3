@@ -25,4 +25,4 @@ if (isNull _target) then {
 
 if (isNull _target) exitWith {false};
 
-(_target in (attachedObjects _unit)) && {!(_target getVariable [QGVAR(isHandcuffed), false])}
+(_target in (attachedObjects _unit)) && {_target getVariable [QGVAR(isHandcuffed), false]}
