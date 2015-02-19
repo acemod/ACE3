@@ -38,7 +38,7 @@ if (_i >= (count _arr + 2)) then {
 };
 if (_i == (count _arr)) then {
     if (!isNull (_explosive)) then {
-        playSound3D [QUOTE(PATHTOF_R(Data\Audio\Cellphone_Ring.wss)),objNull, false, getPosATL (_explosive select 0),3.16228,1,75];
+        playSound3D [QUOTE(PATHTOF_R(Data\Audio\Cellphone_Ring.wss)),objNull, false, getPosASL (_explosive select 0),3.16228,1,75];
     };
 };
 (_this select 0) set [1, _i + 1];
