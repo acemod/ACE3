@@ -146,12 +146,23 @@ class CfgVehicles {
         };
       };
 
-      class ACE_TapShoulder {
+      class ACE_TapShoulderRight {
         displayName = "$STR_ACE_Interaction_TapShoulder";
         selection = "rightshoulder";
-        distance = 4;
+        distance = 2.0;
         condition = QUOTE([ARR_2(_player, _target)] call DFUNC(canTapShoulder));
-        statement = QUOTE([ARR_2(_player, _target)] call DFUNC(tapShoulder));
+        statement = QUOTE([ARR_3(_player, _target, 0)] call DFUNC(tapShoulder));
+        showDisabled = 0;
+        priority = 2.8;
+        hotkey = "Q";
+        enableInside = 1;
+      };
+      class ACE_TapShoulderLeft {
+        displayName = "$STR_ACE_Interaction_TapShoulder";
+        selection = "leftshoulder";
+        distance = 2.0;
+        condition = QUOTE([ARR_2(_player, _target)] call DFUNC(canTapShoulder));
+        statement = QUOTE([ARR_3(_player, _target, 1)] call DFUNC(tapShoulder));
         showDisabled = 0;
         priority = 2.8;
         hotkey = "Q";
