@@ -77,7 +77,7 @@ _recurseFnc = {
                         _children,
                         GVAR(uidCounter)
                     ];
-            GVAR(uidCounter) = GVAR(uidCounter) + 1;        
+            GVAR(uidCounter) = GVAR(uidCounter) + 1;
             _actions pushBack _entry;
         };
     };
@@ -97,6 +97,6 @@ _actions = [[
     GVAR(uidCounter)
 ]
 ];
-GVAR(uidCounter) = GVAR(uidCounter) + 1; 
+GVAR(uidCounter) = GVAR(uidCounter) + 1;
 
 _object setVariable [QUOTE(GVAR(actionData)), _actions];

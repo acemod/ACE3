@@ -9,7 +9,7 @@ if(!GVAR(keyDown)) then {
     {
         _actionObject = _x;
         _actionData = _actionObject getVariable [QUOTE(GVAR(actionData)), []];
-        
+
         if((count _actionData) > 0) then {
             _renderData = [];
             {
