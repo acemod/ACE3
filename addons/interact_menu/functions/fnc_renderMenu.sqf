@@ -17,7 +17,14 @@ if((count _this) > 4) then {
     if(typeName (_actionData select 2) == "ARRAY") then {
         _pos = _object modelToWorld (_actionData select 2);
     } else {
-        _pos = _object modelToWorld (_object selectionPosition (_actionData select 2));
+        if ((_actionData select 2) == "weapon") then {
+            // Craft a suitable position for weapon interaction
+            _weaponDir = _object weaponDirection currentWeapon _object;
+            _ref = _weaponDir call EFUNC(common,createOrthonormalReference);
+            _pos = (_object modelToWorld (_object selectionPosition "righthand")) vectorAdd ((_ref select 2) vectorMultiply 0.1);
+        } else {
+            _pos = _object modelToWorld (_object selectionPosition (_actionData select 2));
+        };
     };
 };
 _cursorScreenPos = (positionCameraToWorld [0, 0, 0]);
