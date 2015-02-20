@@ -47,7 +47,7 @@ _actions = [localize "STR_ACE_Explosives_PlaceMenu", localize "STR_ACE_Explosive
 [
 	_actions,
 	{
-		[_this] call FUNC(openTriggerSelectionUI);
+		[ACE_player, _this] call FUNC(setupExplosive);
 	},
 	{
 		call EFUNC(interaction,hideMenu);

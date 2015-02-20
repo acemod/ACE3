@@ -75,17 +75,21 @@ class CfgVehicles {
     vehicleClass = "Cargo";
     ACE_offset[] = {0,0,0};
     class ACE_Actions {
-        selection = "";
-        class ACE_SetTrigger {
+        class ACE_MainActions {
             selection = "";
-            displayName = "$STR_ACE_Explosives_TriggerMenu";
-            distance = 4;
-            condition = QUOTE(true);
-            statement = QUOTE([_target getVariable QUOTE(QGVAR(class))] call FUNC(openTriggerSelectionUI););
-            showDisabled = 0;
-            exceptions[] = {};
-            priority = 0.3;
-            icon = QUOTE(PATHTOF(UI\Explosives_Menu_ca.paa));
+            distance = 5;
+            condition = "true";
+            class ACE_SetTrigger {
+                selection = "";
+                displayName = "$STR_ACE_Explosives_TriggerMenu";
+                distance = 4;
+                condition = "true";
+                statement = QUOTE([_target getVariable QUOTE(QGVAR(class))] call FUNC(openTriggerSelectionUI););
+                showDisabled = 0;
+                exceptions[] = {};
+                priority = 5;
+                icon = QUOTE(PATHTOF(UI\Explosives_Menu_ca.paa));
+            };
         };
     };
   };

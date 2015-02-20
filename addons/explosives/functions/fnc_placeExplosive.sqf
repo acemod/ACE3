@@ -7,9 +7,9 @@
  * 1: Position to place explosive <POSITION>
  * 2: Rotation <NUMBER>
  * 3: Magazine class <STRING>
- * 4: Config of trigger <CONFIG>
+ * 4: Config of trigger <STRING>
  * 5: Variables required for the trigger type <ARRAY>
- * 6: Should direction be set <BOOL>
+ * 6: Explosive placeholder <OBJECT> <OPTIONAL>
  *
  * Return Value:
  * Placed explosive <OBJECT>
@@ -28,9 +28,8 @@ _dir = _this select 2;
 _magazineClass = _this select 3;
 _triggerConfig = _this select 4;
 _triggerSpecificVars = _this select 5;
-_setDir = true;
 if (count _this > 6) then {
-	_setDir = _this select 6;
+	deleteVehicle (_this select 6);
 };
 
 if (isNil "_triggerConfig") exitWith {
@@ -52,10 +51,8 @@ if (isText(_magazineTrigger >> "ammo")) then {
 };
 _triggerSpecificVars pushBack _triggerConfig;
 _explosive = createVehicle [_ammo, _pos, [], 0, "NONE"];
+
 if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_triggerSpecificVars]
 	call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {_explosive};
-if (_setDir) then {
-	[[_explosive, _dir, getNumber (_magazineTrigger >> "pitch")], QFUNC(setPosition)]
-		call EFUNC(common,execRemoteFnc);
-};
+[[_explosive, _dir, getNumber (_magazineTrigger >> "pitch")], QFUNC(setPosition)] call EFUNC(common,execRemoteFnc);
 _explosive

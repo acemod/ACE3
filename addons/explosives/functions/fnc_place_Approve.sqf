@@ -23,10 +23,10 @@ private ["_mag", "_setup", "_player"];
 _setup = GVAR(Setup);
 GVAR(Setup) = objNull;
 [GVAR(placer), "ACE_Explosives", false] call EFUNC(Common,setForceWalkStatus);
+[ACE_player, "DefaultAction", ACE_player getVariable [QGVAR(Place),  -1]] call EFUNC(Common,removeActionEventHandler);
+[ACE_player, "MenuBack",      ACE_player getVariable [QGVAR(Cancel), -1]] call EFUNC(Common,removeActionEventHandler);
 GVAR(placer) = objNull;
 _player = ACE_player;
-[_player, "DefaultAction", _player getVariable [QGVAR(Place), -1]] call EFUNC(Common,removeActionEventHandler);
-[_player, "MenuBack", _player getVariable [QGVAR(Cancel), -1]] call EFUNC(Common,removeActionEventHandler);
 call EFUNC(interaction,hideMouseHint);
 if ((_setup getVariable [QGVAR(Class), ""]) == "") exitWith {
 	deleteVehicle _setup;
@@ -43,6 +43,7 @@ _setup addEventHandler ["EpeContactStart", FUNC(onLanded)];
 _setup enableSimulationGlobal true;
 _player playActionNow "MedicOther";
 
+/*
 [{
 	private ["_setup", "_player"];
 	_setup = _this;
@@ -63,3 +64,4 @@ _player playActionNow "MedicOther";
 		_player RemoveMagazine _mag;
 	};
 }, _setup, 5, 0.5] call EFUNC(common,waitAndExecute);
+*/

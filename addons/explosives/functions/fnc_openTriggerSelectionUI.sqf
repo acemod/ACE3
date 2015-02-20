@@ -4,12 +4,13 @@
  *
  * Arguments:
  * 0: Explosive Magazine <STRING>
+ * 1: Explosive <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [lbData [8866, lbCurSel 8866]] call ACE_Explosives_fnc_openTriggerSelectionUI;
+ * [lbData [8866, lbCurSel 8866], _explosive] call ACE_Explosives_fnc_openTriggerSelectionUI;
  *
  * Public: No
  */
@@ -43,15 +44,15 @@ _count = 0;
 } count _triggerTypes;
 
 if (_count == 0) then {
-	[ACE_player] call FUNC(openPlaceUI);
 	[format[localize "STR_ACE_Explosives_NoTriggersAvailable",
 		getText(configFile >> "CfgMagazines" >> _magazine >> "DisplayName")]] call EFUNC(Common,displayTextStructured);
 }else{
+	GVAR(explosive) = _this select 1;
 	[
 		_actions,
 		{
-			[_this select 1, _this select 0] call FUNC(selectTrigger);
+			[GVAR(explosive),_this select 1, _this select 0] call FUNC(selectTrigger);
 		},
-		{[ACE_player] call FUNC(openPlaceUI);}
+		{closeDialog 0;GVAR(explosive) = objNull;}
 	] call EFUNC(interaction,openSelectMenu);
 };
