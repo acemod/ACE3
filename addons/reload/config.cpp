@@ -12,6 +12,10 @@ class CfgPatches {
     };
 };
 
+#include "CfgVehicles.hpp"
+
+#include "CfgMagazines.hpp"
+
 #include "CfgEventHandlers.hpp"
 
 #include "CfgActions.hpp"

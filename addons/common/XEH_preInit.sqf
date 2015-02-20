@@ -110,6 +110,7 @@ PREP(removeCameraEventHandler);
 PREP(removeCustomEventHandler);
 PREP(removeMapMarkerCreatedEventHandler);
 PREP(removeScrollWheelEventHandler);
+PREP(removeSpecificMagazine);
 PREP(restoreVariablesJIP);
 PREP(revertKeyCodeLocalized);
 PREP(sanitizeString);

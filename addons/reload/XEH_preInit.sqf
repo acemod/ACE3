@@ -2,6 +2,8 @@
 
 ADDON = false;
 
+PREP(canLinkBelt);
 PREP(checkAmmo);
+PREP(startLinkingBelt);
 
 ADDON = true;
