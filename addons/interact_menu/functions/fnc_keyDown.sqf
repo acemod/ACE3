@@ -1,4 +1,15 @@
-//fnc_keyDown.sqf
+/*
+ * Author: NouberNou
+ * Handle interaction key down
+ *
+ * Argument:
+ * None
+ *
+ * Return value:
+ * true <BOOL>
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 if(!GVAR(keyDown)) then {

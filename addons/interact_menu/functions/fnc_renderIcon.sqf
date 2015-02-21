@@ -1,4 +1,21 @@
-//fnc_renderIcon.sqf
+/*
+ * Author: NouberNou and CAA-Picard
+ * Render a single interaction icon
+ *
+ * Argument:
+ * 0: Text <STRING>
+ * 1: Color <STRING>
+ * 2: 3d position ASL <ARRAY>
+ * 3: ?
+ * 4: ?
+ * 5: ?
+ * 6: Icon <STRING>
+ *
+ * Return value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 #define DEFAULT_ICON QUOTE(\z\ace\addons\interaction\ui\dot_ca.paa)
 private ["_color", "_pos", "_sPos", "_ctrl", "_icon"];
@@ -6,11 +23,11 @@ _text = _this select 0;
 _color = _this select 1;
 _pos = _this select 2;
 _icon = _this select 6;
-//systemChat format ["Drawing icon %1", _text];
+
 _sPos = worldToScreen _pos;
 // _sPos = _pos;
 if(count _sPos > 0) then {
-    // player sideChat format["render!"];
+
     if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
         GVAR(iconCtrls) pushBack ((findDisplay 46) ctrlCreate ["RscStructuredText", 54021+GVAR(iconCount)]);
     };
