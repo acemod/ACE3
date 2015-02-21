@@ -1,11 +1,15 @@
-/**
- * fn_addToTriageList.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Add an entry to the triage card
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: The patient <OBJECT>
+ * 1: The new item classname <STRING>
+ *
+ * Return Value:
+ * nil
+ *
+ * Public: Yes
  */
 
 #include "script_component.hpp"

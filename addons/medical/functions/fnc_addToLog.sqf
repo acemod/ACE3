@@ -1,11 +1,17 @@
-/**
- * fn_addActivityToLog.sqf
- * @Descr: adds an item to the activity log
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Add an entry to the specified log
  *
- * @Arguments: [unit OBJECT, type STRING, message STRING]
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: The patient <OBJECT>
+ * 1: The log type <STRING>
+ * 2: The message <STRING>
+ * 3: The arguments for localization <ARRAY>
+ *
+ * Return Value:
+ * nil
+ *
+ * Public: Yes
  */
 
 #include "script_component.hpp"
