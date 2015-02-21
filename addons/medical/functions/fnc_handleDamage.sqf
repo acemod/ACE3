@@ -42,7 +42,6 @@ _damageReturn = _damage;
 _damageReturn = (_this select 2);
 if (GVAR(level) == 0) then {
     _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_basic);
-
 };
 
 if (_damageReturn < 0.01) exitWith {0};

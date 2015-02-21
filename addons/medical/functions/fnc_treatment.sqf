@@ -81,6 +81,11 @@ if (_caller != _target && {vehicle _target == _target} && {_patietAnim != ""}) t
 	[_target, _patietAnim] call EFUNC(common,doAnimation);
 };
 if (vehicle _caller == _caller && {_callerAnim != ""}) then {
+	if (primaryWeapon _caller == "") then {
+	    _caller addWeapon "ACE_FakePrimaryWeapon";
+	};
+	_caller selectWeapon (primaryWeapon _caller);
+	_caller setvariable [QGVAR(treatmentPrevAnimCaller), animationState _target];
 	[_caller, _callerAnim] call EFUNC(common,doAnimation);
 };
 

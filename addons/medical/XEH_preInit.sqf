@@ -40,6 +40,8 @@ PREP(treatmentTourniquetLocal);
 PREP(addToLog);
 PREP(addToTriageCard);
 PREP(actionPlaceInBodyBag);
+PREP(onTreatmentCompleted);
+PREP(reactionToDamage);
 
 GVAR(injuredUnitCollection) = [];
 call FUNC(parseConfigForInjuries);

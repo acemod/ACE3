@@ -28,6 +28,10 @@ _typeOfProjectile = _this select 4;
 _returnDamage = _this select 5;
 _typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
 
+
+// TODO parse for new damage
+// TODO parse for kill injuries
+
 [_unit, _selectionName, _amountOfDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_wounds);
 
 if (GVAR(enableAirway)) then {
@@ -39,4 +43,9 @@ if (GVAR(enableFractures)) then {
 if (GVAR(enableInternalBleeding)) then {
     [_unit,_selectionName,_amountOfDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_internalInjuries);
 };
+
+if (alive _unit && {!(_unit getvariable ["ACE_isUnconscious", false])}) then {
+	[_unit, _amountOfDamage] call FUNC(reactionToDamage);
+};
+
 _returnDamage;
