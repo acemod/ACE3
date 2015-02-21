@@ -24,9 +24,9 @@ _damage       = _this select 2;
 _shooter      = _this select 3;
 _projectile   = _this select 4;
 
-diag_log _this;
-
 if !(local _unit) exitWith {nil};
+
+if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {};
 
 if (typeName _projectile == "OBJECT") then {
     _projectile = typeOf _projectile;

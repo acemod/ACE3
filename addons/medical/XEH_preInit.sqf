@@ -44,6 +44,7 @@ PREP(onTreatmentCompleted);
 PREP(reactionToDamage);
 PREP(useItem);
 PREP(hasItem);
+PREP(hasMedicalEnabled);
 PREP(hasTourniquetAppliedTo);
 PREP(isMedic);
 PREP(isInMedicalFacility);
