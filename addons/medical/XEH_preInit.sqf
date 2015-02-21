@@ -42,6 +42,8 @@ PREP(addToTriageCard);
 PREP(actionPlaceInBodyBag);
 PREP(onTreatmentCompleted);
 PREP(reactionToDamage);
+PREP(useItem);
+PREP(hasItem);
 
 GVAR(injuredUnitCollection) = [];
 call FUNC(parseConfigForInjuries);

@@ -26,7 +26,7 @@ _items = _this select 4;
 
 if (count _items == 0) exitwith {};
 
-if ([_caller, _target, _items] call FUNC(useEquipment)) then {
+if ([_caller, _target, _items] call FUNC(useItem)) then {
     _removeItem = _items select 0;
     [[_target, _removeItem], QUOTE(FUNC(treatmentIVLocal)), _target] call EFUNC(common,execRemoteFnc);
     ["Medical_treatmentCompleted", [_caller, _target, _selectionName, _className, true]] call ace_common_fnc_localEvent;

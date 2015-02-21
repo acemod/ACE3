@@ -26,7 +26,7 @@ _items = _this select 4;
 
 if (count _items == 0) exitwith {};
 
-if ([_caller, _target, _items] call FUNC(useEquipment)) then {
+if ([_caller, _target, _items] call FUNC(useItem)) then {
     [[_target, _className], QUOTE(FUNC(treatmentMedicationLocal)), _target] call EFUNC(common,execRemoteFnc);
     {
     	if (_x != "") then {
