@@ -39,16 +39,18 @@ if (count _items > 0 && {!([_caller, _target, _items] call FUNC(hasItems))}) exi
 
 _locations = getArray (_config >> "treatmentLocations");
 
-if ("All" in _locations) exitwith {true};
-
 _return = false;
-{
-	if (_x == "field") exitwith {_return = true;};
-	if (_x == "MedicalFacility" && {([_caller] call FUNC(isInMedicalFacility)) || ([_target] call FUNC(isInMedicalFacility))}) exitwith {_return = true;};
-	if (_x == "MedicalVehicle" && {([vehicle _caller] call FUNC(isMedicalVehicle)) || ([vehicle _target] call FUNC(isMedicalVehicle))}) exitwith {_return = true;};
-}foreach _locations;
-
+if ("All" in _locations) then {
+	_return = true;
+} else {
+	{
+		if (_x == "field") exitwith {_return = true;};
+		if (_x == "MedicalFacility" && {([_caller] call FUNC(isInMedicalFacility)) || ([_target] call FUNC(isInMedicalFacility))}) exitwith {_return = true;};
+		if (_x == "MedicalVehicle" && {([vehicle _caller] call FUNC(isMedicalVehicle)) || ([vehicle _target] call FUNC(isMedicalVehicle))}) exitwith {_return = true;};
+	}foreach _locations;
+};
 if !(_return) exitwith {false};
+
 
 // Parse the config for the success callback
 _callbackSuccess = getText (_config >> "callbackSuccess");
