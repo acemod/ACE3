@@ -2,6 +2,15 @@
 
 ADDON = false;
 
-PREP(empty);
+PREP(canOpenSharedMap);
+PREP(canShareMap);
+PREP(doOpenSharedMap);
+PREP(doShareMap);
+PREP(drawSerializedMarkers);
+PREP(handleMainMapDraw);
+PREP(handleMapClick);
+PREP(handleRecieveMarkersEH);
+PREP(handleSharedMapDraw);
+PREP(serializeLocalMarkers);
 
 ADDON = true;

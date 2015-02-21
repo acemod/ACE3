@@ -1,9 +1,11 @@
+class RscMapControl;
+
 class GVAR(sharedMapDialog) {
     idd = -1;
     movingEnable = 0;
     enableSimulation = 1;
     enableDisplay = 1;
-    onLoad = "uiNamespace setVariable ['PABST_ShareMapDialog', _this select 0];";;
+    onLoad = "uiNamespace setVariable ['PABST_ShareMapDialog', _this select 0];";
     duration = 2147483647;
     fadein = 0;
     fadeout = 0;
