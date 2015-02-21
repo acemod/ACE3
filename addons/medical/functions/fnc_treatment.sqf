@@ -78,10 +78,10 @@ _callerAnim = getText (_config >> "animationCaller");
 _patietAnim = getText (_confg >> "animationPatient");
 
 if (_caller != _target && {vehicle _target == _target} && {_patietAnim != ""}) then {
-	[_target, _patietAnim] call EFUNC(common,doMove);
+	[_target, _patietAnim] call EFUNC(common,doAnimation);
 };
 if (vehicle _caller == _caller && {_callerAnim != ""}) then {
-	[_caller, _callerAnim] call EFUNC(common,doMove);
+	[_caller, _callerAnim] call EFUNC(common,doAnimation);
 };
 
 true;
