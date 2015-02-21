@@ -1,7 +1,12 @@
 #include "script_component.hpp"
 
+//Global Variables:
 GVAR(markerDataToDraw) = [];
 
+//Event Handlers:
+["ShareMap_RecieveMarkers", {_this call FUNC(handleRecieveMarkersEH)}] call EFUNC(common,addEventHandler);
+
+//Install Main Map EH
 if (hasInterface) then {
     [{
         if (!isNull findDisplay 12) exitWith {};  //Wait for main map
@@ -15,7 +20,7 @@ if (hasInterface) then {
     }, 1, []] call CBA_fnc_addPerFrameHandler;
 };
 
-//Handles when someone starts disconnects
+//Server Events: Handles when someone disconnects
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {
         PARAMS_1(_disconnectedPlayer);
