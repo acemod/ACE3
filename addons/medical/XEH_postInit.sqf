@@ -50,8 +50,8 @@ call FUNC(handleDisplayEffects);
 ["onUnconscious", FUNC(onUnconscious)] call ace_common_fnc_addEventHandler;
 ["carryObjectDropped", FUNC(onCarryObjectDropped)] call ace_common_fnc_addEventHandler;
 
-if (isNil QGVAR(ENABLE_REVIVE_F)) then {
-    GVAR(ENABLE_REVIVE_F) = 0;
+if (isNil QGVAR(ENABLE_REVIVE)) then {
+    GVAR(ENABLE_REVIVE) = 0;
 };
 
 

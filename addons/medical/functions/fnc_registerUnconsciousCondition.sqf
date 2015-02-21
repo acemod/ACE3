@@ -10,13 +10,13 @@
 
 #include "script_component.hpp"
 
-if (isnil QGVAR(unconsciousConditions_F)) then {
-    GVAR(unconsciousConditions_F) = [];
+if (isnil QGVAR(unconsciousConditions)) then {
+    GVAR(unconsciousConditions) = [];
 };
 if (typeName _this == typeName []) then {
     {
         if (typeName _x == typeName {}) then {
-            GVAR(unconsciousConditions_F) pushback _x;
+            GVAR(unconsciousConditions) pushback _x;
         };
     }foreach _this;
 };
