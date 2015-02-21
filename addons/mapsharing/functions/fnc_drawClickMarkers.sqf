@@ -18,7 +18,6 @@ _unitsUsingSameMap = [_nearUnits, {_sharedHost == (_this getVariable [QGVAR(shar
 
 {
     _clickPos = _x getVariable [QGVAR(mouseClickPos), []];
-    systemChat format ["%1 = %2", (name _x), _clickPos];
     if (!(_clickPos isEqualTo [])) then {
         _name = [_x] call EFUNC(common,getName);
         _theMap drawIcon ["iconThing", [1,0,0,1], _clickPos, 4, 4, 0, _name, 0, 0.03, "TahomaB", "center"];

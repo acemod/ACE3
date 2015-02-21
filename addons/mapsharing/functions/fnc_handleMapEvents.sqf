@@ -5,8 +5,6 @@
 //Only sync when sharing
 if (isNull (ACE_player getVariable [QGVAR(sharingMapHost), objNull])) exitWith {};
 
-
-
 EXPLODE_2_PVT(_this,_mouseEvent,_mouseData);
 
 switch (_mouseEvent) do {
@@ -22,14 +20,15 @@ case ("MouseDown"): {
             GVAR(MapLeftMouseButtonIsDown) = true;
             GVAR(MapMouseWorldPos) = _mapControl ctrlMapScreenToWorld [_mouseX, _mouseY];
         };
+        // if (_mouseButton == 1) then {
+        // _handeled = ACE_player != (ACE_player getVariable [QGVAR(sharingMapHost), objNull])
+        // };
     };
 case ("MouseMoving"): {
         EXPLODE_3_PVT(_mouseData,_mapControl,_mouseX,_mouseY);
         GVAR(MapMouseWorldPos) = _mapControl ctrlMapScreenToWorld [_mouseX, _mouseY];
     };
 };
-
-systemChat format ["%1 - %2", GVAR(MapLeftMouseButtonIsDown), GVAR(MapMouseWorldPos)];
 
 if (GVAR(MapLeftMouseButtonIsDown)) then {
     //if var is [], set to pos

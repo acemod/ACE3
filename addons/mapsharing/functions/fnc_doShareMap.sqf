@@ -20,25 +20,37 @@ systemChat "Debug: Starting Sharing";
         systemChat "Debug: Ending Sharing";
     };
 
-
     if (time > _nextMarkerSync) then {
-        _nextMarkerSync = time + 1;  //This shit is cpu and bandwith intensive, dont' run too often
+        //This is cpu and bandwith intensive, dont' run too often
+        _params set [4, (time + 1)];
+        
         _nearUnits = if ((vehicle ACE_player) == ACE_player) then {
             ACE_player nearEntities ["CAManBase", 5];
         } else {
             crew (vehicle ACE_player);
         };
+        
         _clientUnits = [_nearUnits, {(_this != ACE_player) && {ACE_player == (_this getVariable [QGVAR(sharingMapHost), objNull])}}] call EFUNC(common,filter);
-        _currentMarkers = [] call FUNC(serializeLocalMarkers);
+        if ((count _clientUnits) > 0) then {
 
-        if ((!(_clientUnits isEqualTo _syncedUnits)) || {!(_currentMarkers isEqualTo _syncedMarkers)}) then {
-            if ((count _clientUnits) > 0) then {
+            //Send our current map's position and zoom
+            _mapCenterPos = ((findDisplay 12) displayctrl 51) ctrlMapScreenToWorld [0.5, 0.5];
+            _mapScale = ctrlMapScale ((findDisplay 12) displayctrl 51);
+            ACE_player setVariable [QGVAR(sharingMapPosition), [_mapScale, _mapCenterPos], true];
+
+            _currentMarkers = [] call FUNC(serializeLocalMarkers);
+
+            //New Clients or Markers have changed
+            if ((!(_clientUnits isEqualTo _syncedUnits)) || {!(_currentMarkers isEqualTo _syncedMarkers)}) then {
                 systemChat format ["Debug: Sending %2 markers to %1", _clientUnits, (count _currentMarkers)];
                 ["ShareMap_RecieveMarkers", _clientUnits, [_unit, _currentMarkers]] call EFUNC(common,targetEvent);
+
+                _params set [2, _clientUnits];
+                _params set [3, _currentMarkers];
             };
+        } else {
             _params set [2, _clientUnits];
-            _params set [3, _currentMarkers];
         };
     };
 
-}, 0.2, [_unit, _target, [], [], -1]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_unit, _target, [], [], -1]] call CBA_fnc_addPerFrameHandler;

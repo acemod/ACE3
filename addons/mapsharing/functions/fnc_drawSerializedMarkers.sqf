@@ -2,8 +2,6 @@
 
 PARAMS_1(_theMap);
 
-hintSilent format ["Drawing %1 Markers", (count GVAR(markerDataToDraw))];
-
 {
     EXPLODE_9_PVT(_x,_posCenter,_shape,_text,_dir,_colorCfg,_alpha,_type,_size,_brush);
     if (_alpha > 0) then {
