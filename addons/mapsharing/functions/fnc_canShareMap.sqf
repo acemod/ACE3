@@ -4,5 +4,4 @@ PARAMS_1(_unit);
 
 visibleMap &&
 {alive _unit} &&
-{"ItemMap" in (assignedItems _unit)} &&
-{isNull (_unit getVariable [QGVAR(sharingMapHost), objNull])};
+{"ItemMap" in (assignedItems _unit)}

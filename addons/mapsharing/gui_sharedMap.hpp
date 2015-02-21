@@ -18,14 +18,15 @@ class GVAR(sharedMapDialog) {
             type = 100;  //100 hides all markers
             scaleDefault = 0.25;
             colorbackground[] = {0.9,0.9,0.9,1};
-            maxSatelliteAlpha = 0.15;
+            maxSatelliteAlpha = 0.5;
             x = 0.1 * safeZoneW + safezoneX;
             y = 0.1 * safeZoneH + safeZoneY;
             w = 0.8 * safeZoneW;
             h = 0.8 * safeZoneH;
-            onMouseButtonDown = QUOTE([ARR_2(_this, false)] call FUNC(handleMapClick));
-            onMouseButtonUp = QUOTE([ARR_2(_this, true)] call FUNC(handleMapClick));
-            onDraw = QUOTE(_this call FUNC(handleSharedMapDraw));
+            onMouseButtonDown = QUOTE([ARR_2('MouseDown', _this)] call FUNC(handleMapEvents));
+            onMouseButtonUp = QUOTE([ARR_2('MouseUp', _this)] call FUNC(handleMapEvents));
+            onMouseMoving = QUOTE([ARR_2('MouseMoving', _this)] call FUNC(handleMapEvents));
+            onDraw = QUOTE(_this call FUNC(handleDrawSharedMap));
         };
     };
 };

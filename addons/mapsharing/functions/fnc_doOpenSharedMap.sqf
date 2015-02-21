@@ -4,9 +4,13 @@ PARAMS_2(_unit,_target);
 
 if (ACE_player != _unit) exitWith {};
 
+_unit setVariable [QGVAR(sharingMapHost), _target, true];
+GVAR(MapMouseWorldPos) = [];
+GVAR(MapLeftMouseButtonIsDown) = false;
+
 closeDialog 0;
 createDialog QGVAR(sharedMapDialog);
-_unit setVariable [QGVAR(sharingMapHost), _target, true];
+
 
 [{
     EXPLODE_2_PVT(_this,_params,_pfhId);

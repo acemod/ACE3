@@ -3,3 +3,4 @@
 PARAMS_1(_theMap);
 
 [_theMap] call FUNC(drawSerializedMarkers);
+[_theMap] call FUNC(drawClickMarkers);

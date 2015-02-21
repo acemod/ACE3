@@ -6,11 +6,12 @@ PREP(canOpenSharedMap);
 PREP(canShareMap);
 PREP(doOpenSharedMap);
 PREP(doShareMap);
+PREP(drawClickMarkers);
 PREP(drawSerializedMarkers);
-PREP(handleMainMapDraw);
-PREP(handleMapClick);
+PREP(handleDrawMainMap);
+PREP(handleDrawSharedMap);
+PREP(handleMapEvents);
 PREP(handleRecieveMarkersEH);
-PREP(handleSharedMapDraw);
 PREP(serializeLocalMarkers);
 
 ADDON = true;
