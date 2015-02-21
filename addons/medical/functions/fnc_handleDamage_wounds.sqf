@@ -17,17 +17,7 @@
 
 #include "script_component.hpp"
 
-#define RANDOM_BODY_PART round(random(6))
-#define RANDOM_OPEN_WOUND (1 + round(random(2)))
-#define ADD_INJURY(BODYPART,TYPE,AMOUNT) _woundID = 1; \
-    _amountOf = count _openWounds; \
-    if (_amountOf > 0) then { _woundID = (_openWounds select (_amountOf - 1) select 0) + 1; }; \
-    for "_i" from  1 to AMOUNT /* step +1 */ do {   \
-        _openWounds pushback [_woundID, _woundType, BODYPART, 1 /* percentage treated */, FIND_BLEEDING_RATE(TYPE)]; \
-        _woundID = _woundID + 1; \
-    };
-
-private ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage", "_bodyPartn", "_woundType"];
+private ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage", "_bodyPartn", "_woundType", "_injuryTypeInfo", "_allInjuriesForDamageType", "_allPossibleInjuries", "_highestPossibleDamage", "_highestPossibleSpot", "_minDamage", "_openWounds", "_woundID", "_toAddInjury"];
 _unit = _this select 0;
 _selectionName = _this select 1;
 _damage = _this select 2;
@@ -35,109 +25,48 @@ _typeOfProjectile = _this select 3;
 _typeOfDamage = _this select 4;
 _bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
 
-_woundType = 1;
-if (_damage > 0.05) then {
-     private ["_wounds", "_woundID", "_amountOf"];
-    _openWounds = _unit getvariable[QGVAR(openWounds), []];
+if (_bodyPartn < 0) exitwith {};
 
-    // TODO specify openWounds based off typeOfInjury details better.
-    switch (toLower _typeOfInjury) do {
-        case "bullet": {
-            if (_damage < 0.1) exitwith {
-                if (random(1) => 0.5) then {
-                    if (random(1) => 0.5) then {
-                        ADD_INJURY(_bodyPartn, SCRATCH, 1);
-                    } else {
-                        ADD_INJURY(_bodyPartn, BRUISES, 1); // didn't do much damage, so the skin got only bruised.
-                    };
-                } else {
-                    ADD_INJURY(_bodyPartn, GRAZE_WOUND, 1);
-                };
-            };
-            // TODO base upon caliber of the round and damage done, using _typeOfProjectile and CfgAmmo class.
-            switch (true) do {
-                case (_damage >= 1.2): {ADD_INJURY(_bodyPartn, LARGE_OPEN_WOUND, 1);};
-                case (_damage >= 0.7): {ADD_INJURY(_bodyPartn, MEDIUM_OPEN_WOUND, 1);};
-                default {ADD_INJURY(_bodyPartn, MINOR_OPEN_WOUND, 1);};
-            };
+_injuryTypeInfo = missionNamespace getvariable [format[QGVAR(woundInjuryType_%1), _typeOfDamage],[[],[]]];
+_allInjuriesForDamageType = _injuryTypeInfo select 2;
+_highestPossibleSpot = -1;
+_highestPossibleDamage = 0;
+_allPossibleInjuries = [];
+{
+    /*_classType = _x select 0;
+    _selections = _x select 1;
+    _bloodLoss = _x select 2;
+    _pain = _x select 3;*/
+    _minDamage = _x select 4;
+    if (_damage >= _minDamage) then {
+        if (_minDamage > _highestPossibleDamage) then {
+            _highestPossibleSpot = _foreachIndex;
+            _highestPossibleDamage = _minDamage;
         };
-        case "grenade": {
-            if (_damage < 0.1) exitwith {
-                if (random(1) => 0.5) then {
-                    ADD_INJURY(RANDOM_BODY_PART, BRUISES, 1);
-                } else {
-                    ADD_INJURY(RANDOM_BODY_PART, GRAZE_WOUND, 1);
-                };
-            };
-            for "_i" from 0 to round(random(3)) /* step +1 */ do {
-                if (random(1) => 0.5) then {
-                    ADD_INJURY(RANDOM_BODY_PART, RANDOM_OPEN_WOUND, 1);
-                } else {
-                    ADD_INJURY(RANDOM_BODY_PART, SCHRAPNEL_WOUND, 1);
-                };
-            };
-        };
-        case "explosive": {
-            if (_damage < 0.1) exitwith {
-                if (random(1) => 0.5) then {
-                    ADD_INJURY(RANDOM_BODY_PART, BRUISES, 1);
-                } else {
-                    ADD_INJURY(RANDOM_BODY_PART, GRAZE_WOUND, 1);
-                };
-            };
+        _allPossibleInjuries pushback _x;
+    };
+}foreach _allInjuriesForDamageType;
 
-            ADD_INJURY(RANDOM_BODY_PART, RANDOM_OPEN_WOUND, 1);
-            for "_i" from 0 to round(random(4)) /* step +1 */ do {
-                if (random(1) => 0.5) then {
-                    ADD_INJURY(RANDOM_BODY_PART, SCHRAPNEL_WOUND, 1);
-                };
-                if (random(1) => 0.5) then {
-                    ADD_INJURY(RANDOM_BODY_PART, RANDOM_OPEN_WOUND, 1);
-                }:
-            };
-        };
-        case "shell": {
-            if (_damage < 0.1) exitwith {
-                if (random(1) => 0.5) then {
-                    ADD_INJURY(RANDOM_BODY_PART, BRUISES, 1);
-                } else {
-                    ADD_INJURY(RANDOM_BODY_PART, GRAZE_WOUND, 1);
-                };
-            };
+if (_highestPossibleSpot < 0) exitwith {
+    // It appears we are dealing with an unknown type of damage.
+    if (count _allInjuriesForDamageType == 0) then {
 
-            ADD_INJURY(RANDOM_BODY_PART, RANDOM_OPEN_WOUND, 1);
-            for "_i" from 0 to round(random(5)) /* step +1 */ do {
-                if (random(1) => 0.5) then {
-                    ADD_INJURY(RANDOM_BODY_PART, SCHRAPNEL_WOUND, 1);
-                };
-                if (random(1) => 0.5) then {
-                    ADD_INJURY(RANDOM_BODY_PART, RANDOM_OPEN_WOUND, 1);
-                }:
-            };
+    };
+};
+_openWounds = _unit getvariable[QGVAR(openWounds), []];
+_woundID = 1;
+_amountOf = count _openWounds;
+if (_amountOf > 0) then { _woundID = (_openWounds select (_amountOf - 1) select 0) + 1; };
 
-        };
-        case "backblast": {
-            if (random(1)>=0.5) then {
-                ADD_INJURY(RANDOM_BODY_PART, BRUISES, 1);
-            };
-        };
-        case "unknown": {
-            ADD_INJURY(_bodyPartn, RANDOM_OPEN_WOUND, 1);
-        };
-        case "vehiclecrash": {
-            if (random(1)>=0.5) then {
-                ADD_INJURY(_bodyPartn, RANDOM_OPEN_WOUND, 1);
-            };
-            for "_i" from 0 to round(random(5)) /* step +1 */ do {
-                if (random(_damage) => 0.25) then {
-                    ADD_INJURY(RANDOM_BODY_PART, BRUISES, 1);
-                };
-            };
-        };
-        default {
-            ADD_INJURY(_bodyPartn, RANDOM_OPEN_WOUND, 1);
-            // TODO allow third party to handle this instead ?
+{
+    if (_x select 0 <= _damage) exitwith {
+        for "_i" from 0 to (1+ floor(random(_x select 1)-1)) /* step +1 */ do {
+            _toAddInjury =  _allPossibleInjuries select (floor(random (count _allPossibleInjuries)));
+            // ID, classname, bodypart, percentage treated, bloodloss rate
+            _openWounds pushback [_woundID, _toAddInjury select 0, if (_injuryTypeInfo select 1) then {_bodyPartn} else {floor(random(6))}, 1, _toAddInjury select 2];
+            _woundID = _woundID + 1;
         };
     };
-    _unit setvariable [GVAR(openWounds), _openWounds, true];
-};
+}foreach (_injuryTypeInfo select 0);
+
+_unit setvariable [GVAR(openWounds), _openWounds, true];

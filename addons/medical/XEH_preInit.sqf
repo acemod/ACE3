@@ -27,8 +27,15 @@ PREP(setDead);
 PREP(playInjuredSound);
 PREP(treatment);
 PREP(canTreat);
-
+PREP(treatmentAdvanced_bandage);
+PREP(treatmentAdvanced_bandageLocal);
+PREP(treatmentAdvanced_medication);
+PREP(treatmentAdvanced_medicationLocal);
+PREP(teatmentIV);
+PREP(treatmentIVLocal);
+PREP(parseConfigForInjuries);
 
 GVAR(injuredUnitCollection) = [];
+call FUNC(parseConfigForInjuries);
 
 ADDON = true;

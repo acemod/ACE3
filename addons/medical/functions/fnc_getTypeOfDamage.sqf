@@ -31,4 +31,5 @@ _typeOfInjury = switch (true) do {
     case (_typeOfProjectile == "VehicleCrash"): {"VehicleCrash"};
     default {"Unknown"};
 };
-_typeOfInjury
+// TODO replace the capitalization on the switch results instead..
+toLower _typeOfInjury;

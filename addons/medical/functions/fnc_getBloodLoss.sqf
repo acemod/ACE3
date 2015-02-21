@@ -13,18 +13,7 @@
 
 #include "script_component.hpp"
 
-#define BLOODLOSS_SMALL_WOUNDS        0.025
-#define BLOODLOSS_MEDIUM_WOUNDS        0.05
-#define BLOODLOSS_LARGE_WOUNDS        0.1
-
-/**
-* The default cardiac output when all stats are set to normal is 5.25.
-*/
-#define DEFAULT_CARDIAC_OUTPUT         5.25
-
 private ["_totalBloodLoss","_tourniquets","_openWounds", "_value", "_cardiacOutput", "_internalWounds"];
-
-
 // TODO Only use this calculation if medium or higher, otherwise use vanilla calculations (for basic medical).
 _totalBloodLoss = 0;
 
@@ -50,5 +39,7 @@ if (GVAR(level) >= 1) then {
 
 	// cap the blood loss to be no greater as the current cardiac output
 	//(_totalBloodLoss min _cardiacOutput);
+} else {
+	// TODO basic medical
 };
 _totalBloodLoss;
