@@ -1,16 +1,14 @@
 /*
  * Author: Glowbal
- * IV Treatment callback
+ * IV Treatment local callback
  *
  * Arguments:
  * 0: The medic <OBJECT>
- * 1: The patient <OBJECT>
- * 2: SelectionName <STRING>
- * 3: Treatment classname <STRING>
+ * 1: Item used classname <STRING>
  *
  *
  * Return Value:
- * Succesful treatment started <BOOL>
+ * nil
  *
  * Public: Yes
  */

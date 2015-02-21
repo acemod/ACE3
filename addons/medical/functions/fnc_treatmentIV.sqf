@@ -15,7 +15,6 @@
  * Public: Yes
  */
 
-
 #include "script_component.hpp"
 
 private ["_caller", "_target", "_selectionName", "_className", "_items", "_removeItem", "_attributes"];
