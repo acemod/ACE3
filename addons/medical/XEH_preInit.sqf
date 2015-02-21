@@ -44,6 +44,10 @@ PREP(onTreatmentCompleted);
 PREP(reactionToDamage);
 PREP(useItem);
 PREP(hasItem);
+PREP(hasTourniquetAppliedTo);
+PREP(isMedic);
+PREP(isInMedicalFacility);
+PREP(isMedicalVehicle);
 
 GVAR(injuredUnitCollection) = [];
 call FUNC(parseConfigForInjuries);
