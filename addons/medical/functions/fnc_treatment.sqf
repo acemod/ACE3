@@ -1,34 +1,87 @@
 /*
- * Author: KoffeinFlummi
+ * Author: Glowbal, KoffeinFlummi
  * Starts the treatment process
  *
  * Arguments:
  * 0: The medic <OBJECT>
  * 1: The patient <OBJECT>
- * 2: The treatment type/item <STRING>
- * 3+: Additional paramters <ANY>
+ * 2: SelectionName <STRING>
+ * 3: Treatment classname <STRING>
  *
  * Return Value:
- * nil
+ * Succesful treatment started <BOOL>
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-_medic = _this select 0;
-_patient = _this select 1;
-_type = _this select 2;
+private ["_caller", "_target", "_selectionName", "_className", "_config", "_availableLevels", "_medicRequired", "_items", "_locations", "_return", "_callbackSuccess", "_callbackFailure", "_onProgress", "_treatmentTime", "_callerAnim", "_patietAnim"];
+_caller = _this select 0;
+_target = _this select 1;
+_selectionName = _this select 2;
+_className = _this select 3;
 
-_params = + _this;
-_params deleteAt 0;
-_params deleteAt 0;
-_params deleteAt 0;
+_config = (ConfigFile >> "ACE_Medical_Treatments" >> _className);
+if !(isClass _config) exitwith {false};
 
-// @todo: animation
+_availableLevels = getArray (_config >> "availableLevels");
+if !(GVAR(level) in _availableLevels) exitwith {false};
 
-// @todo: remove item
+_medicRequired = getNumber (_config >> "requiredMedic");
+if !([_caller, _medicRequired] call FUNC(isMedic) || [_target, _medicRequired] call FUNC(isMedic)) exitwith {false};
 
-// @todo: progress bar
+_items = getArray (_config >> "items");
+if (count _items > 0 && {!([_caller, _target, _items] call FUNC(hasItems))}) exitwith {false};
 
-_this call FUNC(treatmentCallback);
+_locations = getArray (_config >> "treatmentLocations");
+
+if ("All" in _locations) exitwith {true};
+
+_return = false;
+{
+	if (_x == "field") exitwith {_return = true;};
+	if (_x == "MedicalFacility" && {[_caller, _target] call FUNC(inMedicalFacility)}) exitwith {_return = true;};
+	if (_x == "MedicalVehicle" && {[_caller, _target] call FUNC(inMedicalVehicle)}) exitwith {_return = true;};
+}foreach _locations;
+
+if !(_return) exitwith {false};
+
+// Parse the config for the success callback
+_callbackSuccess = getText (_config >> "callbackSuccess");
+if (isNil _callbackSuccess) then {
+	_callbackSuccess = compile _callbackSuccess;
+} else {
+	_callbackSuccess = missionNamespace getvariable _callbackSuccess;
+};
+
+// Parse the config for the failure callback
+_callbackFailure = getText (_config >> "callbackFailure");
+if (isNil _callbackFailure) then {
+	_callbackFailure = compile _callbackFailure;
+} else {
+	_callbackFailure = missionNamespace getvariable _callbackFailure;
+};
+
+// Parse the config for the onProgress callback
+_onProgress = getText (_config >> "onProgress");
+if (isNil _onProgress) then {
+	_onProgress = compile _onProgress;
+} else {
+	_onProgress = missionNamespace getvariable _onProgress;
+};
+
+_treatmentTime = getNumber (_config >> "treatmentTime");
+[_treatmentTime, [_caller, _target, _selectionName, _className, _items], _callbackSuccess, _callbackFailure, (localize ""), _onProgress] call EFUNC(common,progressBar);
+
+_callerAnim = getText (_config >> "animationCaller");
+_patietAnim = getText (_confg >> "animationPatient");
+
+if (_caller != _target && {vehicle _target == _target} && {_patietAnim != ""}) then {
+	[_target, _patietAnim] call EFUNC(common,doMove);
+};
+if (vehicle _caller == _caller && {_callerAnim != ""}) then {
+	[_caller, _callerAnim] call EFUNC(common,doMove);
+};
+
+true;

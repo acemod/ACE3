@@ -26,9 +26,8 @@ PREP(addUnconsciousCondition);
 PREP(setDead);
 PREP(playInjuredSound);
 PREP(treatment);
-PREP(treatmentCallback);
-PREP(treatmentCallback_basic);
-PREP(treatmentCallback_advanced);
+PREP(canTreat);
+
 
 GVAR(injuredUnitCollection) = [];
 

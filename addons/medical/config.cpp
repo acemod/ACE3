@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {ace_common, ace_interaction};
-        author[] = {""};
+        author[] = {"Glowbal", "KoffienFlummi"};
         authorUrl = "";
         VERSION_CONFIG;
     };
@@ -14,3 +14,4 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
+#include "ACE_Medical_Treatments.hpp"
