@@ -20,6 +20,7 @@ PREP(getBloodVolumeChange);
 PREP(getCardiacOutput);
 PREP(setCardiacArrest);
 PREP(addToInjuredCollection);
+PREP(addHeartRateAdjustment);
 PREP(setUnconscious);
 PREP(getUnconsciousCondition);
 PREP(addUnconsciousCondition);
