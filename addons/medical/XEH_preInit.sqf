@@ -24,6 +24,7 @@ PREP(setUnconscious);
 PREP(getUnconsciousCondition);
 PREP(addUnconsciousCondition);
 PREP(setDead);
+PREP(parseConfigForInjuries);
 PREP(playInjuredSound);
 PREP(treatment);
 PREP(canTreat);
@@ -33,7 +34,8 @@ PREP(treatmentAdvanced_medication);
 PREP(treatmentAdvanced_medicationLocal);
 PREP(teatmentIV);
 PREP(treatmentIVLocal);
-PREP(parseConfigForInjuries);
+PREP(treatmentTourniquet);
+PREP(treatmentTourniquetLocal);
 
 GVAR(injuredUnitCollection) = [];
 call FUNC(parseConfigForInjuries);
