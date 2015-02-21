@@ -10,6 +10,3 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
-
-// Includes the possible injury types for medium and advanced medical
-#include "injury_defines.hpp"
