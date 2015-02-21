@@ -1,22 +1,45 @@
 
-class ACE_Medical_Treatments {
-    class ACE_Bandaging {
-        // Which locations can this treatment action be used? Available: Field, MedicalFacility, MedicalVehicle, All.
-        treatmentLocations[] = {"Field", "MedicalFacility", "MedicalVehicle"};
-        // What is the level of medical skill required for this treatment action? 0 = all soldiers, 1 = medic, 2 = doctor
-        requiredMedic = 0;
-        // Available under which medical level settings? 0 = basic, 1 = advanced.
-        availableLevels[] = {0, 1};
-        // The time it takes for a treatment action to complete. Time is in seconds.
-        treatmentTime = 5;
-        // Item required for the action. Leave empty for no item required.
-        items[] = {"ace_sampleItem"};
-        // Callbacks
-        callbackSuccess = "hint ""Success"";";
-        callbackFailure = "hint ""Failure "";";
-        onProgress = "";
-        animationPatient = "";
-        animationCaller = "";
+class ACE_Medical_Actions {
+    class Basic {
+        class ACE_Bandaging {
+            // Which locations can this treatment action be used? Available: Field, MedicalFacility, MedicalVehicle, All.
+            treatmentLocations[] = {"Field", "MedicalFacility", "MedicalVehicle"};
+            // What is the level of medical skill required for this treatment action? 0 = all soldiers, 1 = medic, 2 = doctor
+            requiredMedic = 0;
+            // Available under which medical level settings? 0 = basic, 1 = advanced.
+            availableLevels[] = {0, 1};
+            // The time it takes for a treatment action to complete. Time is in seconds.
+            treatmentTime = 5;
+            // Item required for the action. Leave empty for no item required.
+            items[] = {"ace_sampleItem"};
+            // Callbacks
+            callbackSuccess = "hint ""Success"";";
+            callbackFailure = "hint ""Failure "";";
+            onProgress = "";
+            animationPatient = "";
+            animationCaller = "";
+        };
+    };
+
+    class Advanced {
+        class ACE_Bandaging {
+            // Which locations can this treatment action be used? Available: Field, MedicalFacility, MedicalVehicle, All.
+            treatmentLocations[] = {"Field", "MedicalFacility", "MedicalVehicle"};
+            // What is the level of medical skill required for this treatment action? 0 = all soldiers, 1 = medic, 2 = doctor
+            requiredMedic = 0;
+            // Available under which medical level settings? 0 = basic, 1 = advanced.
+            availableLevels[] = {0, 1};
+            // The time it takes for a treatment action to complete. Time is in seconds.
+            treatmentTime = 5;
+            // Item required for the action. Leave empty for no item required.
+            items[] = {"ace_sampleItem"};
+            // Callbacks
+            callbackSuccess = "hint ""Success"";";
+            callbackFailure = "hint ""Failure "";";
+            onProgress = "";
+            animationPatient = "";
+            animationCaller = "";
+        };
     };
 };
 
@@ -25,18 +48,85 @@ class ACE_Medical_Advanced {
     class Injuries {
         // All the possible wounds
         class wounds {
-            class Scratch {
-                // Name displayed in a diagnose or injury overview list
-                name = "It's just a Scratch";
-                // Possible selections that this injury can occur for
+
+            // Source: Scarle
+            //  Also called scrapes, they occur when the skin is rubbed away by friction against another rough surface (e.g. rope burns and skinned knees).
+            class Abrasion {
+                name = "Scrape";
                 selections[] = {"All"};
-                // How much does this injury bleed per second?
                 bleedingRate = 0.01;
-                // How much pain is present while this injury is present
-                pain = 15;
-                // Possible damage causes for this injury
-                causes[] = {"Bullet", "VehicleCrash", "Backblast", "Explosive", "Shell", "Grenade"};
-                // Minimal amount of damage for this injury to occure
+                pain = 1;
+                causes[] = {"falling", "ropeburn", "vehiclecrash"};
+                minDamage = 0.01;
+            };
+
+            // Occur when an entire structure or part of it is forcibly pulled away, such as the loss of a permanent tooth or an ear lobe. Explosions, gunshots, and animal bites may cause avulsions.
+            class Avulsions {
+                name = "Avulsion";
+                selections[] = {"All"};
+                bleedingRate = 0.01;
+                pain = 1;
+                causes[] = {"explosive", "vehiclecrash", "grenade", "shell", "bullet", "backblast", "bite"};
+                minDamage = 0.2;
+            };
+
+            // Also called bruises, these are the result of a forceful trauma that injures an internal structure without breaking the skin. Blows to the chest, abdomen, or head with a blunt instrument (e.g. a football or a fist) can cause contusions.
+            class Contusion {
+                name = "Bruise";
+                selections[] = {"All"};
+                bleedingRate = 0.01;
+                pain = 1;
+                causes[] = {"bullet", "backblast", "punch"};
+                minDamage = 0.01;
+            };
+
+            // Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
+            class CrushWound {
+                name = "Impacted Tissue";
+                selections[] = {"All"};
+                bleedingRate = 0.01;
+                pain = 1;
+                causes[] = {"falling", "vehiclecrash", "punch"};
+                minDamage = 0.1;
+            };
+
+            // Slicing wounds made with a sharp instrument, leaving even edges. They may be as minimal as a paper cut or as significant as a surgical incision.
+            class Cut {
+                name = "Cut";
+                selections[] = {"All"};
+                bleedingRate = 0.01;
+                pain = 1;
+                causes[] = {"vehiclecrash", "grenade", "explosive", "shell", "backblast", "stab"};
+                minDamage = 0.1;
+            };
+
+            // Also called tears, these are separating wounds that produce ragged edges. They are produced by a tremendous force against the body, either from an internal source as in childbirth, or from an external source like a punch.
+            class Laceration {
+                name = "Tear";
+                selections[] = {"All"};
+                bleedingRate = 0.01;
+                pain = 1;
+                causes[] = {"punch"};
+                minDamage = 0.01;
+            };
+
+            // Also called velocity wounds, they are caused by an object entering the body at a high speed, typically a bullet or small peices of shrapnel.
+            class velocityWound {
+                name = "Velocity Wound";
+                selections[] = {"All"};
+                bleedingRate = 0.01;
+                pain = 1;
+                causes[] = {"bullet", "grenade","explosive", "shell"};
+                minDamage = 0.15;
+            };
+
+            // Deep, narrow wounds produced by sharp objects such as nails, knives, and broken glass.
+            class punctureWound {
+                name = "Puncture Wound";
+                selections[] = {"All"};
+                bleedingRate = 0.01;
+                pain = 1;
+                causes[] = {"stab", "grenade"};
                 minDamage = 0.01;
             };
         };
@@ -73,11 +163,31 @@ class ACE_Medical_Advanced {
                 thresholds[] = {{0.25, 5}};
                 selectionSpecific = 0;
             };
+            class backblast {
+                thresholds[] = {{0.25, 5}};
+                selectionSpecific = 0;
+            };
+            class stab {
+                thresholds[] = {{0.1, 1}};
+                selectionSpecific = 1;
+            };
+            class punch {
+                thresholds[] = {{0.1, 1}};
+                selectionSpecific = 1;
+            };
+            class falling {
+                thresholds[] = {{0.1, 1}};
+                selectionSpecific = 1;
+            };
+            class ropeburn {
+                thresholds[] = {{0.1, 1}};
+                selectionSpecific = 1;
+            };
         };
     };
     class Treatment {
         class Bandaging {
-            Class ACE_bandage {
+            class ACE_bandage {
                 // How effect is the bandage for treating one wounds type injury
                 effectiveness = 1;
                 // What is the chance and delays (in seconds) of the treated default injury reopening

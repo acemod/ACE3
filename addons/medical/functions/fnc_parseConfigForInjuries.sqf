@@ -15,7 +15,7 @@
 private ["_injuriesRootConfig", "_woundsConfig", "_allWoundClasses", "_amountOf", "_entry","_classType", "_selections", "_bloodLoss", "_pain","_minDamage","_causes", "_allTypes", "_damageTypesConfig", "_thresholds", "_typeThresholds", "_selectionSpecific", "_selectionSpecificType"];
 
 _injuriesRootConfig = (configFile >> "ACE_Medical_Advanced" >> "Injuries");
-_allTypes = ["backblast", "bullet", "grenade", "explosive", "shell", "vehiclecrash"];
+_allTypes = ["stab", "grenade", "bullet", "explosive", "shell", "punch", "vehiclecrash", "backblast", "falling", "bite", "ropeburn"];
 
 _woundsConfig = (_injuriesRootConfig >> "wounds");
 _allWoundClasses = [];
