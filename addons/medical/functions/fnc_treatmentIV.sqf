@@ -29,4 +29,6 @@ if (count _items == 0) exitwith {};
 if ([_caller, _target, _items] call FUNC(useEquipment)) then {
     _removeItem = _items select 0;
     [[_target, _removeItem], QUOTE(FUNC(treatmentIVLocal)), _target] call EFUNC(common,execRemoteFnc);
+    [_target, _removeItem] call FUNC(addToTriageCard);
+	[_target, "activity", "STR_ACE_HAS_GIVEN_IV_ACTIVITY", [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
 };

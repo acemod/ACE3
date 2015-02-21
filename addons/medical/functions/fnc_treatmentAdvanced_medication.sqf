@@ -28,6 +28,13 @@ if (count _items == 0) exitwith {};
 
 if ([_caller, _target, _items] call FUNC(useEquipment)) then {
     [[_target, _className], QUOTE(FUNC(treatmentMedicationLocal)), _target] call EFUNC(common,execRemoteFnc);
+    {
+    	if (_x != "") then {
+    		[_target, _x] call FUNC(addToTriageCard);
+    	};
+	}foreach _items;
+
+	[_target, "activity", "STR_ACE_HAS_MEDICATION_ACTIVITY", [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
 };
 
 true;
