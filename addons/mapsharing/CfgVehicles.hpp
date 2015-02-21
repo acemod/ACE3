@@ -9,7 +9,7 @@ class CfgVehicles {
                 exceptions[] = {QEGVAR(common,notOnMap)};
                 showDisabled = 0;
                 priority = 45;
-                // icon = PATHTOF(UI\ACE_earplugs_x_ca.paa);
+                icon = PATHTOF(UI\bear_ca.paa);
                 enableInside = 1;
             };
         };
@@ -20,7 +20,7 @@ class CfgVehicles {
                 statement = QUOTE([ARR_2(_player,_target)] call FUNC(doOpenSharedMap));
                 showDisabled = 0;
                 priority = 45;
-                // icon = PATHTOF(UI\ACE_earplugs_x_ca.paa);
+                icon = PATHTOF(UI\bear_ca.paa);
                 enableInside = 1;
             };
         };

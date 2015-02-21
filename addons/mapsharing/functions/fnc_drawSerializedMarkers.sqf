@@ -1,12 +1,12 @@
 #include "script_component.hpp"
 
-PARMAS_1(_theMap);
+PARAMS_1(_theMap);
+
+hintSilent format ["Drawing %1 Markers", (count GVAR(markerDataToDraw))];
 
 {
     EXPLODE_9_PVT(_x,_posCenter,_shape,_text,_dir,_colorCfg,_alpha,_type,_size,_brush);
     if (_alpha > 0) then {
-        _posCenter set [0, ((_posCenter select 0) + 100)];
-
         EXPLODE_2_PVT(_size,_sizeX,_sizeY);
 
         _texture = "";
