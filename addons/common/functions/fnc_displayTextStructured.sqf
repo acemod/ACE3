@@ -35,6 +35,7 @@ disableSerialization;
 _ctrlHint = uiNamespace getVariable "ACE_ctrlHint";
 
 _ctrlHint ctrlSetBackgroundColor GVAR(displayTextColor);
+_ctrlHint ctrlSetTextColor GVAR(displayTextFontColor);
 /*
 // This does not function at the moment. Has been disabled until it fixed.
 _xPos = profilenamespace getvariable ["IGUI_GRID_ACE_displayText_X", ((safezoneX + safezoneW) - (10 *(((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 *(((safezoneW / safezoneH) min 1.2) / 40))];

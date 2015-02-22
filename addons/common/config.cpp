@@ -110,6 +110,13 @@ class ACE_Settings {
         displayName = "$STR_ACE_Common_SettingDisplayTextColorName";
         description = "$STR_ACE_Common_SettingDisplayTextColorDesc";
     };
+    class GVAR(displayTextFontColor) {
+        value[] = {1,1,1,1};
+        typeName = "COLOR";
+        isClientSetable = 1;
+        displayName = "$STR_ACE_Common_SettingDisplayTextFontColorName";
+        description = "$STR_ACE_Common_SettingDisplayTextFontColorDesc";
+    };
 };
 
 #include "define.hpp"
