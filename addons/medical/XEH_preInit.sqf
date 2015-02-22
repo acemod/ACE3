@@ -41,6 +41,7 @@ PREP(addToLog);
 PREP(addToTriageCard);
 PREP(actionPlaceInBodyBag);
 PREP(onTreatmentCompleted);
+PREP(onMedicationUsed);
 PREP(reactionToDamage);
 PREP(useItem);
 PREP(hasItem);

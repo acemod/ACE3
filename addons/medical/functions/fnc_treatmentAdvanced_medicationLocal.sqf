@@ -70,6 +70,6 @@ if (_pain <= 0) then {
 _target setvariable [QGVAR(pain), _pain];
 
 // Call back to ensure that the medication is decreased over time
-[_target, _varName, _maxDose, _timeInSystem, _inCompatableMedication] call FUNC(onMedicationUsage);
+[_target, _classname, _varName, _maxDose, _timeInSystem, _inCompatableMedication] call FUNC(onMedicationUsage);
 
 true
