@@ -44,6 +44,7 @@ PREP(onTreatmentCompleted);
 PREP(onMedicationUsed);
 PREP(reactionToDamage);
 PREP(useItem);
+PREP(useItems);
 PREP(hasItem);
 PREP(hasItems);
 PREP(hasMedicalEnabled);

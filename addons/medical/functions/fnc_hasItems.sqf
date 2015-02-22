@@ -5,16 +5,15 @@
  * Arguments:
  * 0: Medic <OBJECT>
  * 1: Patient <OBJECT>
- * 2: Item <STRING>
+ * 2: Items <ARRAY<STRING>>
  *
  * ReturnValue:
- * <NIL>
+ * Has the items <BOOL>
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
-
 
 private ["_medic", "_patient", "_items", "_return"];
 _medic = _this select 0;
