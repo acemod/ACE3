@@ -125,7 +125,7 @@ class CfgUIGrids {
         class Presets {
             class Arma3 {
                 class Variables {
-                    grid_ACE_displayText[] = {{safeZoneW + safeZoneX - 0.175 * safezoneW, safeZoneY + 0.175 * safezoneH, 0.15 * safeZoneW, 0.125 * SafeZoneH}, "(((safezoneW / safezoneH) min 1.2) / 40)","((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"};
+                    grid_ACE_displayText[] = {{((safezoneX + safezoneW) - (10 *(((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 *(((safezoneW / safezoneH) min 1.2) / 40)),safeZoneY + 0.175 * safezoneH, (10 *(((safezoneW / safezoneH) min 1.2) / 40)), (2 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))}, "(((safezoneW / safezoneH) min 1.2) / 40)","((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"};
                 };
             };
         };

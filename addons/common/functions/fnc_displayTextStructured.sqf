@@ -1,15 +1,16 @@
 /*
- * Author: commy2
+ * Author: commy2, Glowbal
  *
  * Display a structured text.
  *
  * Argument:
- * 0: Text (Anything)
- * 1: Size of the textbox (Number, optional default: 1)
+ * 0: Text <ANY>
+ * 1: Size of the textbox <NUMBER> <OPTIONAL>
  *
  * Return value:
  * Nothing
  */
+
 #include "script_component.hpp"
 
 private ["_text", "_size", "_isShown", "_ctrlHint", "_yPos", "_xPos", "_wPos", "_hPos", "_position"];
@@ -34,11 +35,18 @@ disableSerialization;
 _ctrlHint = uiNamespace getVariable "ACE_ctrlHint";
 
 _ctrlHint ctrlSetBackgroundColor GVAR(displayTextColor);
-
-_xPos = profilenamespace getvariable ["IGUI_GRID_ACE_displayText_X", safeZoneW + safeZoneX - 0.175 * safezoneW];
+/*
+// This does not function at the moment. Has been disabled until it fixed.
+_xPos = profilenamespace getvariable ["IGUI_GRID_ACE_displayText_X", ((safezoneX + safezoneW) - (10 *(((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 *(((safezoneW / safezoneH) min 1.2) / 40))];
 _yPos = profilenamespace getvariable ["IGUI_GRID_ACE_displayText_Y", safeZoneY + 0.175 * safezoneH];
-_wPos = profilenamespace getvariable ["IGUI_GRID_ACE_displayText_W", 0.15 * safeZoneW];
-_hPos = profilenamespace getvariable ["IGUI_GRID_ACE_displayText_H", 0.125 * SafeZoneH];
+_wPos = profilenamespace getvariable ["IGUI_GRID_ACE_displayText_W", (10 *(((safezoneW / safezoneH) min 1.2) / 40))];
+_hPos = profilenamespace getvariable ["IGUI_GRID_ACE_displayText_H", (2 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))];
+*/
+
+_xPos = ((safezoneX + safezoneW) - (10 *(((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 *(((safezoneW / safezoneH) min 1.2) / 40));
+_yPos = safeZoneY + 0.175 * safezoneH;
+_wPos =  (10 *(((safezoneW / safezoneH) min 1.2) / 40));
+_hPos = (2 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
 _position = [_xPos, _yPos, _wPos, _size * _hPos];
 
 _ctrlHint ctrlSetPosition _position;
@@ -46,4 +54,4 @@ _ctrlHint ctrlCommit 0;
 
 _ctrlHint ctrlSetStructuredText _text;
 _ctrlHint ctrlSetPosition _position;
-_ctrlHint ctrlCommit ([0.2, 0] select _isShown);
+_ctrlHint ctrlCommit ([0.5, 0] select _isShown);
