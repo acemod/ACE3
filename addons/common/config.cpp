@@ -103,6 +103,15 @@ class ACE_Settings {
         description = "$STR_ACE_Common_SettingFeedbackIconsDesc";
         values[] = {"Hide", "Top right, downwards", "Top right, to the left", "Top left, downwards", "Top left, to the right"};
     };
+    class GVAR(SettingProgressBarLocation) {
+        value = 0;
+        typeName = "SCALAR";
+        force = 0;
+        isClientSetable = 1;
+        displayName = "$STR_ACE_Common_SettingProgressbarLocationName";
+        description = "$STR_ACE_Common_SettingProgressbarLocationDesc";
+        values[] = {"Top", "Bottom"};
+    };
     class GVAR(displayTextColor) {
         value[] = {0,0,0,0.1};
         typeName = "COLOR";
