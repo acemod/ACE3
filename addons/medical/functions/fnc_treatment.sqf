@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_availableLevels", "_medicRequired", "_items", "_locations", "_return", "_callbackSuccess", "_callbackFailure", "_onProgress", "_treatmentTime", "_callerAnim", "_patietAnim"];
+private ["_caller", "_target", "_selectionName", "_className", "_config", "_availableLevels", "_medicRequired", "_items", "_locations", "_return", "_callbackSuccess", "_callbackFailure", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patietAnim"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -65,16 +65,16 @@ if (isNil _callbackFailure) then {
 	_callbackFailure = missionNamespace getvariable _callbackFailure;
 };
 
-// Parse the config for the onProgress callback
-_onProgress = getText (_config >> "onProgress");
-if (isNil _onProgress) then {
-	_onProgress = compile _onProgress;
+// Parse the config for the callbackProgress callback
+_callbackProgress = getText (_config >> "callbackProgress");
+if (isNil _callbackProgress) then {
+	_callbackProgress = compile _callbackProgress;
 } else {
-	_onProgress = missionNamespace getvariable _onProgress;
+	_callbackProgress = missionNamespace getvariable _callbackProgress;
 };
 
 _treatmentTime = getNumber (_config >> "treatmentTime");
-[_treatmentTime, [_caller, _target, _selectionName, _className, _items], _callbackSuccess, _callbackFailure, (localize ""), _onProgress] call EFUNC(common,progressBar);
+[_treatmentTime, [_caller, _target, _selectionName, _className, _items], _callbackSuccess, _callbackFailure, (localize ""), _callbackProgress] call EFUNC(common,progressBar);
 
 _callerAnim = getText (_config >> "animationCaller");
 _patietAnim = getText (_confg >> "animationPatient");

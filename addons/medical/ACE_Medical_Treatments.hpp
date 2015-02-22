@@ -1,21 +1,45 @@
 
 class ACE_Medical_Actions {
     class Basic {
-        class ACE_Bandaging {
-            // Which locations can this treatment action be used? Available: Field, MedicalFacility, MedicalVehicle, All.
+        class Bandage {
             treatmentLocations[] = {"Field", "MedicalFacility", "MedicalVehicle"};
-            // What is the level of medical skill required for this treatment action? 0 = all soldiers, 1 = medic, 2 = doctor
+
             requiredMedic = 0;
-            // The time it takes for a treatment action to complete. Time is in seconds.
             treatmentTime = 5;
-            // Item required for the action. Leave empty for no item required.
-            items[] = {"ace_sampleItem"};
-            // Callbacks
-            callbackSuccess = "hint ""Success"";";
-            callbackFailure = "hint ""Failure "";";
-            onProgress = "";
+            treatmentTimeSelfCoef = 1;
+            items[] = {QGVAR(bandage)};
+            itemConsumed = 1;
+
+            callbackSuccess = QUOTE(_this call FUNC(treatmentBasic_bandage));
+            callbackFailure = QUOTE(_this call FUNC(treatmentBasic_abort));
+            callbackProgress = "";
             animationPatient = "";
             animationCaller = "";
+        };
+        class Morphine: Bandage {
+            treatmentTime = 2;
+            items[] = {QGVAR(morphine)};
+            callbackSuccess = QUOTE(_this call FUNC(treatmentBasic_morphine));
+            animationCaller = ""; // @todo
+        };
+        class Epipen: Bandage {
+            treatmentTime = 3;
+            items[] = {QGVAR(epipen)};
+            callbackSuccess = QUOTE(_this call FUNC(treatmentBasic_epipen));
+            animationCaller = ""; // @todo
+        };
+        class Bloodbag: Bandage {
+            treatmentTime = 20;
+            items[] = {QGVAR(bloodbag)};
+            callbackSuccess = QUOTE(_this call FUNC(treatmentBasic_bloodbag));
+            animationCaller = ""; // @todo
+        };
+        class Diagnose: Bandage {
+            treatmentTime = 10;
+            treatmentTimeSelfCoef = 0;
+            items[] = {};
+            callbackSuccess = QUOTE(_this call FUNC(treatmentBasic_diagnose));
+            animationCaller = ""; // @todo
         };
     };
 
@@ -32,7 +56,7 @@ class ACE_Medical_Actions {
             // Callbacks
             callbackSuccess = "hint ""Success"";";
             callbackFailure = "hint ""Failure "";";
-            onProgress = "";
+            callbackProgress = "";
             animationPatient = "";
             animationCaller = "";
         };
