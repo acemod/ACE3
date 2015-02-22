@@ -100,7 +100,7 @@ class ACE_Medical_Advanced {
                 selections[] = {"All"};
                 bleedingRate = 0.0;
                 pain = 1;
-                causes[] = {"bullet", "backblast", "punch"};
+                causes[] = {"bullet", "backblast", "punch","vehiclecrash","falling"};
                 minDamage = 0.01;
                 class Minor {
                     minDamage = 0.01;
