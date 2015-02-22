@@ -54,18 +54,21 @@ class ACE_Medical_Advanced {
             class Abrasion {
                 name = "Scrape";
                 selections[] = {"All"};
-                bleedingRate = 0.001;
-                pain = 1;
+                bleedingRate = 0.0001;
+                pain = 0.1;
                 causes[] = {"falling", "ropeburn", "vehiclecrash"};
                 minDamage = 0.01;
                 class Minor {
                     minDamage = 0.01;
+                    bleedingRate = 0.0001;
                 };
                 class Medium {
                     minDamage = 0.2;
+                    bleedingRate = 0.00015;
                 };
                 class Large {
                     minDamage = 0.3;
+                    bleedingRate = 0.0002;
                 };
             };
 
@@ -79,12 +82,15 @@ class ACE_Medical_Advanced {
                 minDamage = 0.2;
                 class Minor {
                     minDamage = 0.2;
+                    bleedingRate = 0.01;
                 };
                 class Medium {
                     minDamage = 0.3;
+                    bleedingRate = 0.02;
                 };
                 class Large {
                     minDamage = 0.5;
+                    bleedingRate = 0.05;
                 };
             };
 
@@ -92,7 +98,7 @@ class ACE_Medical_Advanced {
             class Contusion {
                 name = "Bruise";
                 selections[] = {"All"};
-                bleedingRate = 0.01;
+                bleedingRate = 0.0;
                 pain = 1;
                 causes[] = {"bullet", "backblast", "punch"};
                 minDamage = 0.01;
@@ -117,12 +123,15 @@ class ACE_Medical_Advanced {
                 minDamage = 0.1;
                 class Minor {
                     minDamage = 0.1;
+                    bleedingRate = 0.005;
                 };
                 class Medium {
                     minDamage = 0.4;
+                    bleedingRate = 0.007;
                 };
                 class Large {
                     minDamage = 0.6;
+                    bleedingRate = 0.0095;
                 };
             };
 
@@ -136,12 +145,15 @@ class ACE_Medical_Advanced {
                 minDamage = 0.1;
                 class Minor {
                     minDamage = 0.1;
+                    bleedingRate = 0.005;
                 };
                 class Medium {
                     minDamage = 0.3;
+                    bleedingRate = 0.02;
                 };
                 class Large {
                     minDamage = 0.65;
+                    bleedingRate = 0.05;
                 };
             };
 
@@ -151,16 +163,19 @@ class ACE_Medical_Advanced {
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 1;
-                causes[] = {"punch"};
+                causes[] = {"vehiclecrash", "punch"};
                 minDamage = 0.01;
                 class Minor {
                     minDamage = 0.1;
+                    bleedingRate = 0.005;
                 };
                 class Medium {
                     minDamage = 0.5;
+                    bleedingRate = 0.01;
                 };
                 class Large {
                     minDamage = 0.7;
+                    bleedingRate = 0.03;
                 };
             };
 
@@ -174,12 +189,15 @@ class ACE_Medical_Advanced {
                 minDamage = 0.15;
                 class Minor {
                     minDamage = 0.15;
+                    bleedingRate = 0.025;
                 };
                 class Medium {
                     minDamage = 0.3;
+                    bleedingRate = 0.05;
                 };
                 class Large {
                     minDamage = 0.75;
+                    bleedingRate = 0.1;
                 };
             };
 
@@ -193,12 +211,15 @@ class ACE_Medical_Advanced {
                 minDamage = 0.01;
                 class Minor {
                     minDamage = 0.01;
+                    bleedingRate = 0.01;
                 };
                 class Medium {
                     minDamage = 0.5;
+                    bleedingRate = 0.03;
                 };
                 class Large {
                     minDamage = 0.65;
+                    bleedingRate = 0.08;
                 };
             };
         };
