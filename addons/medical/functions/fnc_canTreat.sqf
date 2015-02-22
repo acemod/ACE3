@@ -28,9 +28,6 @@ if (GVAR(level)>=1) then {
 };
 if !(isClass _config) exitwith {false};
 
-_availableLevels = getArray (_config >> "availableLevels");
-if !(GVAR(level) in _availableLevels) exitwith {false};
-
 _medicRequired = getNumber (_config >> "requiredMedic");
 if !([_caller, _medicRequired] call FUNC(isMedic) || [_target, _medicRequired] call FUNC(isMedic)) exitwith {false};
 

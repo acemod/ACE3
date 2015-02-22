@@ -6,8 +6,6 @@ class ACE_Medical_Actions {
             treatmentLocations[] = {"Field", "MedicalFacility", "MedicalVehicle"};
             // What is the level of medical skill required for this treatment action? 0 = all soldiers, 1 = medic, 2 = doctor
             requiredMedic = 0;
-            // Available under which medical level settings? 0 = basic, 1 = advanced.
-            availableLevels[] = {0, 1};
             // The time it takes for a treatment action to complete. Time is in seconds.
             treatmentTime = 5;
             // Item required for the action. Leave empty for no item required.
@@ -27,8 +25,6 @@ class ACE_Medical_Actions {
             treatmentLocations[] = {"Field", "MedicalFacility", "MedicalVehicle"};
             // What is the level of medical skill required for this treatment action? 0 = all soldiers, 1 = medic, 2 = doctor
             requiredMedic = 0;
-            // Available under which medical level settings? 0 = basic, 1 = advanced.
-            availableLevels[] = {0, 1};
             // The time it takes for a treatment action to complete. Time is in seconds.
             treatmentTime = 5;
             // Item required for the action. Leave empty for no item required.
