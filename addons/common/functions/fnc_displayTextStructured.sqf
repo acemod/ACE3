@@ -18,7 +18,7 @@ private ["_text", "_size", "_isShown", "_ctrlHint", "_yPos", "_xPos", "_wPos", "
 _text = _this select 0;
 _size = _this select 1;
 
-if (isNil "_size") then {_size = 1};
+if (isNil "_size") then {_size = 1.5};
 
 if (typeName _text != "TEXT") then {
     if (typeName _text == "STRING" && {isLocalized _text}) then {

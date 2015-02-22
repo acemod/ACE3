@@ -17,8 +17,8 @@ class RscTitles {
             class HintBox: RscStructuredText {
                 idc = 1;
                 text = "";
-                size = "1 / 40 / (getResolution select 5)";
-                sizeEx = 1;
+                //size = "1 / 40 / (getResolution select 5)";
+                SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
                 colorText[] = {1, 1, 1, 1};
                 colorBackground[] = {0, 0, 0, 0.5};
                 x = safeZoneW + safeZoneX - 0 * safezoneW;  //safeZoneW + safeZoneX - 0.2 * safezoneW;
@@ -41,8 +41,8 @@ class RscTitles {
             class HintBox: RscStructuredText {
                 idc = 1;
                 text = "";
-                size = "1 / 40 / (getResolution select 5)";
-                sizeEx = 1;
+                //size = "1 / 40 / (getResolution select 5)";
+                SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
                 colorText[] = {1, 1, 1, 1};
                 colorBackground[] = {0.8, 0, 0, 0.5};
                 x = 0.3 * safeZoneW + safeZoneX;
