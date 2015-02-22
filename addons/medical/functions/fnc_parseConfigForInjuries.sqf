@@ -17,6 +17,24 @@ private ["_injuriesRootConfig", "_woundsConfig", "_allWoundClasses", "_amountOf"
 _injuriesRootConfig = (configFile >> "ACE_Medical_Advanced" >> "Injuries");
 _allTypes = ["stab", "grenade", "bullet", "explosive", "shell", "punch", "vehiclecrash", "backblast", "falling", "bite", "ropeburn"];
 
+_parseForSubClassWounds = {
+	_subClass = _this select 0;
+	if (isClass (_entry >> _subClass)) exitwith {
+		_subClassConfig = (_entry >> _subClass);
+		_subClasstype = _classType + (configName _subClassConfig);
+		_subClassselections = if (isArray(_subClassConfig >> "selections")) then { getArray(_subClassConfig >> "selections");} else { _selections };
+		_subClassbloodLoss = if (isNumber(_subClassConfig >> "bleedingRate")) then { getNumber(_subClassConfig >> "bleedingRate");} else { _bloodLoss };
+		_subClasspain = if (isNumber(_subClassConfig >> "pain")) then { getNumber(_subClassConfig >> "pain");} else { _pain };
+		_subClassminDamage = if (isNumber(_subClassConfig >> "minDamage")) then { getNumber(_subClassConfig >> "minDamage");} else { _minDamage };
+		_subClasscauses = if (isArray(_subClassConfig >> "causes")) then { getArray(_subClassConfig >> "causes");} else { _causes };
+		if (count _selections > 0 && count _causes > 0) then {
+			_allWoundClasses pushback [_subClasstype, _subClassselections, _subClassbloodLoss, _subClasspain, _subClassminDamage, _subClasscauses];
+		};
+		true;
+	};
+	false;
+};
+
 _woundsConfig = (_injuriesRootConfig >> "wounds");
 _allWoundClasses = [];
 if (isClass _woundsConfig) then {
@@ -31,6 +49,9 @@ if (isClass _woundsConfig) then {
 			_minDamage = if (isNumber(_entry >> "minDamage")) then { getNumber(_entry >> "minDamage");} else {0};
 			_causes = if (isArray(_entry >> "causes")) then { getArray(_entry >> "causes");} else {[]};
 
+			if (["Minor"] call _parseForSubClassWounds || ["Medium"] call _parseForSubClassWounds || ["Large"] call _parseForSubClassWounds) exitwith {}; // continue to the next one
+
+			// There were no subclasses, so we will add this one instead.
 			if (count _selections > 0 && count _causes > 0) then {
 				_allWoundClasses pushback [_classType, _selections, _bloodLoss, _pain, _minDamage, _causes];
 			};

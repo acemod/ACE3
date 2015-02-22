@@ -54,10 +54,19 @@ class ACE_Medical_Advanced {
             class Abrasion {
                 name = "Scrape";
                 selections[] = {"All"};
-                bleedingRate = 0.01;
+                bleedingRate = 0.001;
                 pain = 1;
                 causes[] = {"falling", "ropeburn", "vehiclecrash"};
                 minDamage = 0.01;
+                class Minor {
+                    minDamage = 0.01;
+                };
+                class Medium {
+                    minDamage = 0.2;
+                };
+                class Large {
+                    minDamage = 0.3;
+                };
             };
 
             // Occur when an entire structure or part of it is forcibly pulled away, such as the loss of a permanent tooth or an ear lobe. Explosions, gunshots, and animal bites may cause avulsions.
@@ -68,6 +77,15 @@ class ACE_Medical_Advanced {
                 pain = 1;
                 causes[] = {"explosive", "vehiclecrash", "grenade", "shell", "bullet", "backblast", "bite"};
                 minDamage = 0.2;
+                class Minor {
+                    minDamage = 0.2;
+                };
+                class Medium {
+                    minDamage = 0.3;
+                };
+                class Large {
+                    minDamage = 0.5;
+                };
             };
 
             // Also called bruises, these are the result of a forceful trauma that injures an internal structure without breaking the skin. Blows to the chest, abdomen, or head with a blunt instrument (e.g. a football or a fist) can cause contusions.
@@ -78,6 +96,15 @@ class ACE_Medical_Advanced {
                 pain = 1;
                 causes[] = {"bullet", "backblast", "punch"};
                 minDamage = 0.01;
+                class Minor {
+                    minDamage = 0.01;
+                };
+                class Medium {
+                    minDamage = 0.1;
+                };
+                class Large {
+                    minDamage = 0.3;
+                };
             };
 
             // Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
@@ -88,6 +115,15 @@ class ACE_Medical_Advanced {
                 pain = 1;
                 causes[] = {"falling", "vehiclecrash", "punch"};
                 minDamage = 0.1;
+                class Minor {
+                    minDamage = 0.1;
+                };
+                class Medium {
+                    minDamage = 0.4;
+                };
+                class Large {
+                    minDamage = 0.6;
+                };
             };
 
             // Slicing wounds made with a sharp instrument, leaving even edges. They may be as minimal as a paper cut or as significant as a surgical incision.
@@ -98,6 +134,15 @@ class ACE_Medical_Advanced {
                 pain = 1;
                 causes[] = {"vehiclecrash", "grenade", "explosive", "shell", "backblast", "stab"};
                 minDamage = 0.1;
+                class Minor {
+                    minDamage = 0.1;
+                };
+                class Medium {
+                    minDamage = 0.3;
+                };
+                class Large {
+                    minDamage = 0.65;
+                };
             };
 
             // Also called tears, these are separating wounds that produce ragged edges. They are produced by a tremendous force against the body, either from an internal source as in childbirth, or from an external source like a punch.
@@ -108,6 +153,15 @@ class ACE_Medical_Advanced {
                 pain = 1;
                 causes[] = {"punch"};
                 minDamage = 0.01;
+                class Minor {
+                    minDamage = 0.1;
+                };
+                class Medium {
+                    minDamage = 0.5;
+                };
+                class Large {
+                    minDamage = 0.7;
+                };
             };
 
             // Also called velocity wounds, they are caused by an object entering the body at a high speed, typically a bullet or small peices of shrapnel.
@@ -118,6 +172,15 @@ class ACE_Medical_Advanced {
                 pain = 1;
                 causes[] = {"bullet", "grenade","explosive", "shell"};
                 minDamage = 0.15;
+                class Minor {
+                    minDamage = 0.15;
+                };
+                class Medium {
+                    minDamage = 0.3;
+                };
+                class Large {
+                    minDamage = 0.75;
+                };
             };
 
             // Deep, narrow wounds produced by sharp objects such as nails, knives, and broken glass.
@@ -128,6 +191,15 @@ class ACE_Medical_Advanced {
                 pain = 1;
                 causes[] = {"stab", "grenade"};
                 minDamage = 0.01;
+                class Minor {
+                    minDamage = 0.01;
+                };
+                class Medium {
+                    minDamage = 0.5;
+                };
+                class Large {
+                    minDamage = 0.65;
+                };
             };
         };
         class fractures {
