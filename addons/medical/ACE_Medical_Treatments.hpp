@@ -7,7 +7,7 @@ class ACE_Medical_Actions {
             requiredMedic = 0;
             treatmentTime = 5;
             treatmentTimeSelfCoef = 1;
-            items[] = {QGVAR(bandage)};
+            items[] = {{QGVAR(fieldDressing), QGVAR(packingBandage), QGVAR(elasticBandage), QGVAR(quikClot)}};
             itemConsumed = 1;
 
             callbackSuccess = QUOTE(_this call FUNC(treatmentBasic_bandage));
@@ -24,13 +24,13 @@ class ACE_Medical_Actions {
         };
         class Epipen: Bandage {
             treatmentTime = 3;
-            items[] = {QGVAR(epipen)};
+            items[] = {QGVAR(epinephrine)};
             callbackSuccess = QUOTE(_this call FUNC(treatmentBasic_epipen));
             animationCaller = ""; // @todo
         };
         class Bloodbag: Bandage {
             treatmentTime = 20;
-            items[] = {QGVAR(bloodbag)};
+            items[] = {{QGVAR(bloodIV), QGVAR(bloodIV_500), QGVAR(bloodIV_250)}};
             callbackSuccess = QUOTE(_this call FUNC(treatmentBasic_bloodbag));
             animationCaller = ""; // @todo
         };
