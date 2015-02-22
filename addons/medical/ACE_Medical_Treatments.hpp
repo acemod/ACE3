@@ -115,7 +115,7 @@ class ACE_Medical_Advanced {
 
             // Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
             class CrushWound {
-                name = "Impacted Tissue";
+                name = "Crushed tissue";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 1;
