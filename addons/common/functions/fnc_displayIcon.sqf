@@ -1,14 +1,23 @@
-/**
- * fn_gui_displayIcon.sqf
- * @Descr:
- * @Author: Glowbal
- *
- * @Arguments: []
- * @Return:
- * @PublicAPI: true
- *
- * @Example ["myID", true, QUOTE(PATHTOF(data\icon_group.paa)), [1,1,1,1], 0] call ace_gui_fnc_displayIcon;
- */
+/*
+* Author: Glowbal
+*
+* Draw progress bar and execute given function if succesful.
+* Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
+*
+* Argument:
+* 0: icon ID <STRING>
+* 1: show <BOOL>
+* 2: Icon Path <STRING>
+* 3: Icon color <ARRAY>
+* 4: timeAlive. -1 = forever <NUMBER> <OPTIONAL>
+*
+* Return value:
+* Nothing
+*
+* Example:
+* ["myID", true, QUOTE(PATHTOF(data\icon_group.paa)), [1,1,1,1], 0] call ace_gui_fnc_displayIcon;
+*/
+
 
 #include "script_component.hpp"
 
