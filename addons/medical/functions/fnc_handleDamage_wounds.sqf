@@ -39,15 +39,19 @@ _allPossibleInjuries = [];
     _pain = _x select 3;*/
     _minDamage = _x select 4;
     if (_damage >= _minDamage) then {
-        if (_minDamage > _highestPossibleDamage) then {
-            _highestPossibleSpot = _foreachIndex;
-            _highestPossibleDamage = _minDamage;
+        if ("All" in _selections || _selectionName in _selections) then {
+            if (_minDamage > _highestPossibleDamage) then {
+                _highestPossibleSpot = _foreachIndex;
+                _highestPossibleDamage = _minDamage;
+            };
+            _allPossibleInjuries pushback _x;
         };
-        _allPossibleInjuries pushback _x;
     };
 }foreach _allInjuriesForDamageType;
 
+// No possible wounds available for this damage type or damage amount.
 if (_highestPossibleSpot < 0) exitwith {
+
     // It appears we are dealing with an unknown type of damage.
     if (count _allInjuriesForDamageType == 0) then {
 
