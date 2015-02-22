@@ -38,7 +38,7 @@ _return = false;
 if ([vehicle _medic] call FUNC(isMedicalVehicle) && {vehicle _medic != _medic}) then {
     _crew = crew vehicle _medic;
     {
-        if ([_x, _medic] call FUNC(canAccessMedicalEquipment) && {([_x, _item] call EFUNC(common,hasItem))}) exitwith {
+        if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {([_x, _item] call EFUNC(common,hasItem))}) exitwith {
             _return = true;
             [[_x, _item], QUOTE(EFUNC(common,useItem)), _x] call EFUNC(common,execRemoteFnc);
         };
