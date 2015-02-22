@@ -61,6 +61,7 @@ class ACE_Medical_Actions {
             callbackProgress = "";
             animationPatient = "";
             animationCaller = ""; // TODO
+            itemConsumed = 1;
         };
         class PackingBandage: fieldDressing {
             items[] = {QGVAR(packingBandage)};
@@ -123,6 +124,7 @@ class ACE_Medical_Actions {
             requiredMedic = 2;
             treatmentTime = 15;
             callbackSuccess = QUOTE(FUNC(treatmentAdvanced_surgicalKit));
+            itemConsumed = 0;
         };
         class PersonalAidKit: fieldDressing {
             items[] = {QGVAR(personalAidKit)};
@@ -130,6 +132,7 @@ class ACE_Medical_Actions {
             requiredMedic = 1;
             treatmentTime = 15;
             callbackSuccess = QUOTE(FUNC(treatmentAdvanced_aidKit));
+            itemConsumed = 0;
         };
 
     };
