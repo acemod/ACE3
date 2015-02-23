@@ -134,6 +134,28 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_aidKit));
             itemConsumed = 0;
         };
+        class CheckPulse: fieldDressing {
+            treatmentLocations[] = {"All"};
+            requiredMedic = 0;
+            treatmentTime = 2;
+            items[] = {};
+            callbackSuccess = QUOTE(DFUNC(actionCheckPulse));
+            callbackFailure = "";
+            callbackProgress = "";
+            animationPatient = "";
+            animationCaller = ""; // TODO
+            itemConsumed = 0;
+        };
+        class CheckBloodPressure: CheckPulse {
+            callbackSuccess = QUOTE(DFUNC(actionCheckBloodPressure));
+        };
+        class CheckResponse: CheckPulse {
+            callbackSuccess = QUOTE(DFUNC(actionCheckResponse));
+        };
+        class RemoveTourniquet: CheckPulse {
+            treatmentTime = 2.5;
+            callbackSuccess = QUOTE(DFUNC(actionRemoveTourniquet));
+        };
 
     };
 };
