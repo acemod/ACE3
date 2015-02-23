@@ -56,7 +56,7 @@ class ACE_Medical_Actions {
             // Item required for the action. Leave empty for no item required.
             items[] = {QGVAR(fieldDressing)};
             // Callbacks
-            callbackSuccess = QUOTE(FUNC(treatmentAdvanced_bandage));
+            callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_bandage));
             callbackFailure = "";
             callbackProgress = "";
             animationPatient = "";
@@ -75,12 +75,12 @@ class ACE_Medical_Actions {
         class Tourniquet: fieldDressing {
             items[] = {QGVAR(tourniquet)};
             treatmentTime = 6;
-            callbackSuccess = QUOTE(FUNC(treatmentTourniquet));
+            callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
         };
         class Morphine: fieldDressing {
             items[] = {QGVAR(morphine)};
             treatmentTime = 3;
-            callbackSuccess = QUOTE(FUNC(treatmentAdvanced_medication));
+            callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_medication));
         };
         class Atropine: fieldDressing {
             items[] = {QGVAR(atropine)};
@@ -92,7 +92,7 @@ class ACE_Medical_Actions {
             items[] = {QGVAR(bloodIV)};
             requiredMedic = 1;
             treatmentTime = 7;
-            callbackSuccess = QUOTE(FUNC(treatmentIV));
+            callbackSuccess = QUOTE(DFUNC(treatmentIV));
         };
         class BloodIV_500: BloodIV {
             items[] = {QGVAR(bloodIV_500)};
@@ -123,7 +123,7 @@ class ACE_Medical_Actions {
             treatmentLocations[] = {"MedicalFacility", "MedicalVehicle"};
             requiredMedic = 2;
             treatmentTime = 15;
-            callbackSuccess = QUOTE(FUNC(treatmentAdvanced_surgicalKit));
+            callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_surgicalKit));
             itemConsumed = 0;
         };
         class PersonalAidKit: fieldDressing {
@@ -131,7 +131,7 @@ class ACE_Medical_Actions {
             treatmentLocations[] = {"All"};
             requiredMedic = 1;
             treatmentTime = 15;
-            callbackSuccess = QUOTE(FUNC(treatmentAdvanced_aidKit));
+            callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_aidKit));
             itemConsumed = 0;
         };
 
