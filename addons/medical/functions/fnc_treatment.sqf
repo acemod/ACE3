@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_availableLevels", "_medicRequired", "_items", "_locations", "_return", "_callbackSuccess", "_callbackFailure", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patietAnim"];
+private ["_caller", "_target", "_selectionName", "_className", "_config", "_availableLevels", "_medicRequired", "_items", "_locations", "_return", "_callbackSuccess", "_callbackFailure", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patietAnim", "_iconDisplayed"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -89,6 +89,11 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
 	_caller selectWeapon (primaryWeapon _caller);
 	_caller setvariable [QGVAR(treatmentPrevAnimCaller), animationState _target];
 	[_caller, _callerAnim] call EFUNC(common,doAnimation);
+};
+
+_iconDisplayed = getText (_config >> "actionIconPath");
+if (_iconDisplayed != "") then {
+	[QGVAR(treatmentActionIcon), true, _iconDisplayed, [1,1,1,1], getNumber(_config >> "actionIconDisplayTime");] call EFUNC(common,displayIcon);
 };
 
 true;
