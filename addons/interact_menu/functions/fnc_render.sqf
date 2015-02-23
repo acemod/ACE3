@@ -1,4 +1,15 @@
-//fnc_render.sqf
+/*
+ * Author: NouberNou and CAA-Picard
+ * Render all available nearby interactions
+ *
+ * Argument:
+ * None
+ *
+ * Return value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_cursorPos1", "_cursorPos2", "_cursorVec", "_p1", "_p2", "_p", "_v", "_cp", "_forEachIndex", "_renderTargets", "_x", "_cursorScreenPos", "_closestDistance", "_closestSelection", "_pos", "_sPos", "_disSq", "_closest", "_cTime", "_delta", "_foundTarget", "_misMatch", "_hoverPath", "_i"];

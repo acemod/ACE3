@@ -44,7 +44,7 @@ if (_heartRate > 1.0) then {
 
 _title = "STR_ACE_CHECK_PULSE";
 _content = ["STR_ACE_CHECK_PULSE_CHECKED_MEDIC",_heartRateOutput];
-[_caller, _title, _content, 0, [[_unit] call EFUNC(common,getName), round(_heartRate)]] call EFUNC(gui,sendDisplayInformationTo);
+[_caller, _title, _content, 0, [[_unit] call EFUNC(common,getName), round(_heartRate)]] call EFUNC(common,sendDisplayInformationTo);
 
 if (_logOutPut != "") then {
     [_unit,"examine",format["%1 checked Heart Rate: %2",[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToQuickViewLog);

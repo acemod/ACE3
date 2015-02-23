@@ -1,9 +1,21 @@
-//fnc_probe.sqf
+/*
+ * Author: NouberNou
+ * Scan de vicinity of the player and collect every interaction available around it on
+ * the GVAR(toRender) array.
+ *
+ * Argument:
+ * None
+ *
+ * Return value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_nearestObjects", "_actionObject", "_x", "_actionData", "_renderData", "_actionItem", "_active", "_renderItem", "_object", "_forEachIndex"];
 if(!GVAR(keyDown)) then {
-    _nearestObjects = nearestObjects [(getPos player), ["All"], 100];
+    _nearestObjects = nearestObjects [(getPos ACE_player), ["All"], 100];
 
     GVAR(toRender) = [];
     {
@@ -36,7 +48,7 @@ if(!GVAR(keyDown)) then {
     GVAR(filter) = [];
     {
         _object = _x select 0;
-        if(_object distance player > 100) then {
+        if(_object distance ACE_player > 100) then {
             GVAR(filter) set[(count GVAR(filter)), _forEachIndex];
         };
     } forEach GVAR(toRender);

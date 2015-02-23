@@ -1,4 +1,15 @@
-//fnc_keyDownSelfAction.sqf
+/*
+ * Author: NouberNou
+ * Handle self action key down
+ *
+ * Argument:
+ * None
+ *
+ * Return value:
+ * true <BOOL>
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 if(!GVAR(keyDownSelfAction)) then {

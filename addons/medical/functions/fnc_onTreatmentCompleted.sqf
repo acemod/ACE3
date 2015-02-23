@@ -23,4 +23,4 @@ if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
 [_caller,false] call FUNC(treatmentMutex);
 
 // TODO: BUG: if AI finishes treatment, it will also hide the icon for the player
-[QGVAR(treatmentIconID), false, "", [1,1,1,1]] call EFUNC(gui,displayIcon);
+[QGVAR(treatmentIconID), false, "", [1,1,1,1]] call EFUNC(common,displayIcon);

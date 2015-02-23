@@ -1,4 +1,15 @@
-//fnc_keyUpSelfAction.sqf
+/*
+ * Author: NouberNou
+ * Handle interaction key up
+ *
+ * Argument:
+ * None
+ *
+ * Return value:
+ * true <BOOL>
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 GVAR(keyDown) = false;

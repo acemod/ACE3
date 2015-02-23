@@ -1,4 +1,20 @@
-//fnc_renderMenu.sqf
+/*
+ * Author: NouberNou and CAA-Picard
+ * Render a interaction menu
+ *
+ * Argument:
+ * 0: Object <OBJECT>
+ * 1: Action data <ARRAY>
+ * 2: ?
+ * 3: Angle range available for rendering <ARRAY>
+ * 4: 3D position <ARRAY> (Optional)
+ * 5: Path of UIDs <ARRAY> (Optional)
+ *
+ * Return value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_object", "_actionData", "_distance", "_uid", "_pos", "_cursorScreenPos", "_path", "_menuDepth", "_opacity", "_currentRenderDepth", "_radialOffset", "_active", "_x", "_offset", "_newPos", "_forEachIndex"];

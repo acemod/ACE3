@@ -1,23 +1,18 @@
-//fnc_compileMenu.sqf
-#include "script_component.hpp";
-// diag_log text format["COMPILE ACTIONS: %1", _this];
-
-_object = _this select 0;
-_objectType = typeOf _object;
-
-
 /*
-displayName = "$STR_ACE_Interaction_TeamManagement";
-distance = 4;
-condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player} && {GVAR(EnableTeamManagement)});
-statement = "";
-showDisabled = 0;
-priority = 3.2;
-icon = PATHTOF(UI\team\team_management_ca.paa);
-subMenu[] = {"ACE_TeamManagement", 0};
-hotkey = "M";
-enableInside = 1;
-*/
+ * Author: NouberNou
+ * Compile the action menu from config for a given object.
+ *
+ * Argument:
+ * 0: Object <OBJECT>
+ *
+ * Return value:
+ * None
+ *
+ * Public: No
+ */
+#include "script_component.hpp";
+
+EXPLODE_1_PVT(_this,_object);
 
 /*
 [
@@ -33,6 +28,8 @@ enableInside = 1;
 ]
 */
 
+private ["_objectType","_recurseFnc","_actions"];
+_objectType = typeOf _object;
 _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_Actions";
 
 
@@ -73,7 +70,6 @@ _recurseFnc = {
                         _children,
                         GVAR(uidCounter)
                     ];
-            diag_log _entry;
             GVAR(uidCounter) = GVAR(uidCounter) + 1;
             _actions pushBack _entry;
         };
@@ -82,29 +78,5 @@ _recurseFnc = {
 };
 
 _actions = [_actionsCfg] call _recurseFnc;
-//diag_log _actions;
-// Backward-compat, filter only base actions that have a selection
-private ["_newActions","_oldActions","_selection"];
-_filteredActions = [];
-{
-    _selection = _x select 2;
-    if (typeName _selection == "STRING") then {
-        _filteredActions pushBack _x;
-    };
-} forEach _actions;
 
-/*
-_actions = [[
-    "Interactions",
-    "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
-    "Spine3",
-    { true },
-    { true },
-    5,
-    _actions,
-    GVAR(uidCounter)
-]
-];
-GVAR(uidCounter) = GVAR(uidCounter) + 1;
-*/
-_object setVariable [QUOTE(GVAR(actionData)), _filteredActions];
+_object setVariable [QUOTE(GVAR(actionData)), _actions];

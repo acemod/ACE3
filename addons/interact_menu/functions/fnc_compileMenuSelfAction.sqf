@@ -1,21 +1,18 @@
-//fnc_compileMenuSelfAction.sqf
-#include "script_component.hpp";
-// diag_log text format["COMPILE ACTIONS: %1", _this];
-
-_object = _this select 0;
-_objectType = typeOf _object;
-
-
 /*
-displayName = "$STR_ACE_Hearing_Earbuds_On";
-condition = QUOTE( !([_player] call FUNC(hasEarPlugsIn)) && {'ACE_EarBuds' in items _player} );
-statement = QUOTE( [_player] call FUNC(putInEarPlugs) );
-showDisabled = 0;
-priority = 2.5;
-icon = PATHTOF(UI\ACE_earplugs_x_ca.paa);
-hotkey = "E";
-enableInside = 1;
-*/
+ * Author: NouberNou and CAA-Picard
+ * Compile the self action menu from config for a given object.
+ *
+ * Argument:
+ * 0: Object <OBJECT>
+ *
+ * Return value:
+ * None
+ *
+ * Public: No
+ */
+#include "script_component.hpp";
+
+EXPLODE_1_PVT(_this,_object);
 
 /*
 [
@@ -31,6 +28,8 @@ enableInside = 1;
 ]
 */
 
+private ["_objectType","_recurseFnc","_actions"];
+_objectType = typeOf _object;
 _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_SelfActions";
 
 
@@ -56,14 +55,7 @@ _recurseFnc = {
             _enableInside = getNumber (_entryCfg >> "enableInside");
 
             _condition = compile _condition;
-            // diag_log text format["_condition: %1", _condition];
-            _children = [];
-            if(isArray (_entryCfg >> "subMenu")) then {
-                _subMenuDef = getArray (_entryCfg >> "subMenu");
-                _childMenuName = _subMenuDef select 0;
-                _childMenuCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_SelfActions" >> _childMenuName;
-                _children = [_childMenuCfg] call _recurseFnc;
-            };
+            _children = [_entryCfg] call _recurseFnc;
             _entry = [
                         _displayName,
                         _icon,
@@ -83,6 +75,7 @@ _recurseFnc = {
 
 _actions = [_actionsCfg] call _recurseFnc;
 
+// Create a master action to base on self action
 _actions = [[
     "Self Actions",
     "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",

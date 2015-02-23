@@ -3,8 +3,7 @@
 ADDON = false;
 
 PREP(blending);
-PREP(decreaseNVGBrightness);
-PREP(increaseNVGBrightness);
+PREP(changeNVGBrightness);
 PREP(updatePPEffects);
 
 ADDON = true;

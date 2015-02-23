@@ -24,7 +24,7 @@ if (!local _target) exitwith{
 };
 
 if (_caller != _target) then {
-    [_target,"STR_ACE_BANDAGING", "STR_ACE_IS_BANDAGING_YOU", 0, [[_treatingPerson] call EFUNC(common,getName)]] call EFUNC(gui,sendDisplayMessageTo);
+    [_target,"STR_ACE_BANDAGING", "STR_ACE_IS_BANDAGING_YOU", 0, [[_treatingPerson] call EFUNC(common,getName)]] call EFUNC(common,sendDisplayMessageTo);
 };
 
 [_target,_removeItem] call FUNC(addToTriageList);
