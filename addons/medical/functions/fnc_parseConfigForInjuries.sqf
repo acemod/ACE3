@@ -17,6 +17,15 @@ private ["_injuriesRootConfig", "_woundsConfig", "_allWoundClasses", "_amountOf"
 _injuriesRootConfig = (configFile >> "ACE_Medical_Advanced" >> "Injuries");
 _allTypes = ["stab", "grenade", "bullet", "explosive", "shell", "punch", "vehiclecrash", "backblast", "falling", "bite", "ropeburn"];
 
+_allFoundDamageTypes = [];
+_configDamageTypes = (_injuryRouteConfig >> "damageTypes");
+for "_i" from 0 to (count _configDamageTypes -1) /* step +1 */ do {
+	if (isClass(_configDamageTypes select _i)) then {
+		_allFoundDamageTypes pushback (configName (_configDamageTypes select _i));
+	};
+};
+GVAR(allAvailableDamageTypes) = _allFoundDamageTypes;
+
 _parseForSubClassWounds = {
 	_subClass = _this select 0;
 	if (isClass (_entry >> _subClass)) exitwith {
