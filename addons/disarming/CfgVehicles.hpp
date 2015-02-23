@@ -56,6 +56,13 @@ class CfgVehicles {
                     priority = 80080;
                 };
 
+                class ACE_openFrisk2: ACE_primaryweapononly {
+                    displayName = "Frisk2";
+                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canFrisk2));
+                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doFrisk2));
+                    priority = 80078;
+                };
+                
             };
         };
     };
