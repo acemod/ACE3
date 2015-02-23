@@ -1,31 +1,27 @@
 /*
- * Author: commy2
- *
- * Add an ACE action to an object. Note: This function is NOT global.
+ * Author: commy2 and NouberNou
+ * Add an ACE action to an object or inside a parent action. Note: This function is NOT global.
  *
  * Argument:
- * 0: Object the action should be assigned to (Object)
- * 1: Name of the action shown in the menu (String)
- * 2: Icon (String)
- * 3: Position (Position or Selection Name)
- * 4: Statement (Code)
- * 5: Condition (Code)
- * 6: Distance (Number)
+ * 0: Object the action should be assigned to or parent action <OBJECT> or <ARRAY>
+ * 1: Name of the action shown in the menu <STRING>
+ * 2: Icon <STRING>
+ * 3: Position (Position or Selection Name) <POSITION> or <STRING>
+ * 4: Statement <CODE>
+ * 5: Condition <CODE>
+ * 6: Distance <NUMBER>
  *
  * Return value:
- * The entry array, which can be used to remove the entry, or add children entries.
+ * The entry array, which can be used to remove the entry, or add children entries <ARRAY>.
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_object", "_displayName", "_icon", "_position", "_statement", "_condition", "_distance", "_actions", "_entry"];
-_object         = _this select 0;
-_displayName    = _this select 1;
-_icon           = _this select 2;
-_position       = _this select 3;
-_statement      = _this select 4;
-_condition      = _this select 5;
-_distance       = _this select 6;
+EXPLODE_7_PVT(_this,_object,_displayName,_icon,_position,_statement,_condition,_distance);
 
+
+private ["_actions","_entry"];
 _actions = [];
 if(IS_OBJECT(_object)) then {
     _actions = _object getVariable [QUOTE(GVAR(actionData)), []];

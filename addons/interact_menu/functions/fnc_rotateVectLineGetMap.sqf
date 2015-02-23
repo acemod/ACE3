@@ -1,4 +1,17 @@
-//fnc_rotateVectLineGetMap.sqf
+/*
+ * Author: NouberNou
+ * ?
+ *
+ * Argument:
+ * 0: p0 <ARRAY>
+ * 1: p1 <ARRAY>
+ * 2: p2 <ARRAY>
+ *
+ * Return value:
+ * Map <ARRAY>
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_p", "_p1", "_p2", "_q1", "_q2", "_u", "_d"];

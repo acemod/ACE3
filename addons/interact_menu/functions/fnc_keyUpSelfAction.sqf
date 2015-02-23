@@ -1,6 +1,6 @@
 /*
  * Author: NouberNou
- * Handle interaction key up
+ * Handle self action key up
  *
  * Argument:
  * None
@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-GVAR(keyDown) = false;
+GVAR(keyDownSelfAction) = false;
 if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
     _player = ACE_Player;

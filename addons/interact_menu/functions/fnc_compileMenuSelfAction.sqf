@@ -1,6 +1,6 @@
 /*
- * Author: NouberNou
- * Compile the action menu from config for a given object.
+ * Author: NouberNou and CAA-Picard
+ * Compile the self action menu from config for a given object.
  *
  * Argument:
  * 0: Object <OBJECT>
@@ -30,11 +30,11 @@ EXPLODE_1_PVT(_this,_object);
 
 private ["_objectType","_recurseFnc","_actions"];
 _objectType = typeOf _object;
-_actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_Actions";
+_actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_SelfActions";
 
 
 _recurseFnc = {
-    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_selection", "_condition", "_showDisabled",
+    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_condition", "_showDisabled",
             "_enableInside", "_children", "_entry", "_actionsCfg"];
     _actions = [];
     _actionsCfg = _this select 0;
@@ -42,13 +42,9 @@ _recurseFnc = {
         _entryCfg = _actionsCfg select _i;
         if(isClass _entryCfg) then {
             _displayName = getText (_entryCfg >> "displayName");
-            _distance = getNumber (_entryCfg >> "distance");
             _icon = getText (_entryCfg >> "icon");
             _statement = compile (getText (_entryCfg >> "statement"));
-            _selection = getText (_entryCfg >> "selection");
-            if (_selection == "") then {
-                _selection = [0,0,0];
-            };
+
             _condition = getText (_entryCfg >> "condition");
             if (_condition == "") then {_condition = "true"};
 
@@ -63,10 +59,10 @@ _recurseFnc = {
             _entry = [
                         _displayName,
                         _icon,
-                        _selection,
+                        [0,0,0],
                         _statement,
                         _condition,
-                        _distance,
+                        10, //distace
                         _children,
                         GVAR(uidCounter)
                     ];
@@ -79,4 +75,18 @@ _recurseFnc = {
 
 _actions = [_actionsCfg] call _recurseFnc;
 
-_object setVariable [QUOTE(GVAR(actionData)), _actions];
+// Create a master action to base on self action
+_actions = [[
+    "Self Actions",
+    "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
+    "Spine3",
+    { true },
+    { true },
+    10,
+    _actions,
+    GVAR(uidCounter)
+]
+];
+GVAR(uidCounter) = GVAR(uidCounter) + 1;
+
+_object setVariable [QUOTE(GVAR(selfActionData)), _actions];
