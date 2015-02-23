@@ -56,7 +56,7 @@ GVAR(isOpeningDoor) = false;
     localize "STR_ACE_Interaction_InteractionMenuSelf",
     {
         // Conditions: canInteract
-        _exceptions = ["ACE_Drag_isNotDragging", "ACE_Medical_canTreat", QEGVAR(captives,isNotEscorting), QEGVAR(captives,isNotSurrendering), "ACE_Interaction_isNotSwimming", "ACE_Common_notOnMap"];
+        _exceptions = [QEGVAR(common,notOnMap), "ACE_Drag_isNotDragging", "ACE_Medical_canTreat", QEGVAR(captives,isNotEscorting), QEGVAR(captives,isNotSurrendering), "ACE_Interaction_isNotSwimming", "ACE_Common_notOnMap"];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
         // Conditions: specific
         if !(isNull (findDisplay 1713999)) exitWith {false};
@@ -74,7 +74,7 @@ GVAR(isOpeningDoor) = false;
     localize "STR_ACE_Interaction_InteractionMenuSelf",
     {
         // Conditions: canInteract
-        _exceptions = ["ACE_Drag_isNotDragging", "ACE_Medical_canTreat", QEGVAR(captives,isNotEscorting), QEGVAR(captives,isNotSurrendering), "ACE_Interaction_isNotSwimming"];
+        _exceptions = [QEGVAR(common,notOnMap), "ACE_Drag_isNotDragging", "ACE_Medical_canTreat", QEGVAR(captives,isNotEscorting), QEGVAR(captives,isNotSurrendering), "ACE_Interaction_isNotSwimming"];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
         // Conditions: specific
         if !(!isNull (findDisplay 1713999) && {QGVAR(AutoCloseMenu)}) exitWith {false};
