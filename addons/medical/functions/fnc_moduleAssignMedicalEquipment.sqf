@@ -21,7 +21,6 @@ private ["_logic","_setting","_objects", "_medicsLoadout", "_nonMedics", "_code"
 _logic = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if (!isNull _logic) then {
     _setting = _logic getvariable ["equipment",0];
-    waituntil {!isnil "ACE_gui"}; // ensure the player unit is available.
     waituntil {time>0};
 
     _start = diag_tickTime;

@@ -46,7 +46,7 @@ if (GVAR(setting_AdvancedLevel) == -1) exitwith{};
 GVAR(isEnabled) = true;
 
 
-waituntil{!isnil "ACE_gui" && !isnil "ACE_common"};
+waituntil{!isnil "ACE_common"};
 
 
 if (GVAR(setting_AdvancedLevel) > 0) then {

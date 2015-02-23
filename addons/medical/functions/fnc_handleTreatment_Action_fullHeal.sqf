@@ -42,7 +42,7 @@ _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
             [_caller,_prevAnim, 0] call EFUNC(common,doAnimation);
         };
 
-        [QGVAR(treatmentIconID), false, "", [1,1,1,1]] call EFUNC(gui,displayIcon);
+        [QGVAR(treatmentIconID), false, "", [1,1,1,1]] call EFUNC(common,displayIcon);
         ["Medical_handleTreatment_FullHeal", [_caller, _target, _selectionName, _removeItem, true]] call ace_common_fnc_localEvent;
         ["Medical_treatmentCompleted", [_caller, _target, _selectionName, _removeItem]] call ace_common_fnc_localEvent;
     }, // on success
@@ -54,18 +54,18 @@ _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
         _removeItem = _this select 3;
         _prevAnim = _this select 4;
 
-        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(gui,sendDisplayInformationTo);
+        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(common,sendDisplayInformationTo);
 
         if (_prevAnim != "") then {
             [_caller,_prevAnim, 0] call EFUNC(common,doAnimation);
         };
 
-        [QGVAR(treatmentIconID), false, "", [1,1,1,1]] call EFUNC(gui,displayIcon);
+        [QGVAR(treatmentIconID), false, "", [1,1,1,1]] call EFUNC(common,displayIcon);
         ["Medical_handleTreatment_FullHeal", [_caller, _target, _selectionName, _removeItem, false]] call ace_common_fnc_localEvent;
         ["Medical_treatmentCompleted", [_caller, _target, _selectionName, _removeItem]] call ace_common_fnc_localEvent;
     },    // on failure
     [_caller, _target, _selectionName, _removeItem, _prevAnim] // arguments
-] call EFUNC(gui,loadingBar);
+] call EFUNC(common,loadingBar);
 
 
 if (!(_unit getvariable [QEGVAR(common,isDead),false]) && alive _unit) then {

@@ -19,7 +19,7 @@ _removeItem = _this select 3;
 
 if (!local _target) exitwith{};
 
-[_target,"STR_ACE_AIRWAY","STR_ACE_IS_TREATING_YOUR_AIRWAY",0, [([_caller] call EFUNC(common,getName))]] call EFUNC(gui,sendDisplayMessageTo);
+[_target,"STR_ACE_AIRWAY","STR_ACE_IS_TREATING_YOUR_AIRWAY",0, [([_caller] call EFUNC(common,getName))]] call EFUNC(common,sendDisplayMessageTo);
 [_target,_removeItem] call FUNC(addToTriageList);
 
 

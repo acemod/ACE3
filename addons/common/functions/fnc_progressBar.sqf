@@ -15,6 +15,9 @@
 *
 * Return value:
 * Nothing
+*
+* Example:
+* [5, [], {Hint "Finished!"}, {hint "Failure!"}, "My Title"] call ace_common_fnc_progressBar
 */
 
 #include "script_component.hpp"
@@ -32,14 +35,24 @@ closeDialog 0;
 createDialog QGVAR(ProgressBar_Dialog);
 (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetText _localizedTitle;
 
+if (GVAR(SettingProgressBarLocation) == 1) then {
+  private "_ctrlPos";
+  _ctrlPos =  [1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2), 29 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2), 38 * (((safezoneW / safezoneH) min 1.2) / 40), 0.8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)];
+  (uiNamespace getVariable QGVAR(ctrlProgressBar)) ctrlSetPosition _ctrlPos;
+  (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetPosition _ctrlPos;
+  (uiNamespace getVariable QGVAR(ctrlProgressBar)) ctrlCommit 0;
+  (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlCommit 0;
+};
+
+
 _perFrameFunction = {
   PARAMS_2(_parameters,_pfhID);
   EXPLODE_8_PVT(_parameters,_args,_onFinish,_onFail,_condition,_player,_startTime,_totalTime,_exceptions);
   private ["_elapsedTime", "_errorCode"];
-  
+
   _elapsedTime = time - _startTime;
   _errorCode = -1;
-  
+
   if (isNull (uiNamespace getVariable [QGVAR(ctrlProgressBar), controlNull])) then {
     _errorCode = 1;
   } else {
