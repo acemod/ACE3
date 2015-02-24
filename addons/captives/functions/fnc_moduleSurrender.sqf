@@ -43,10 +43,15 @@ if (local _logic) then {
         } else {
             ["STR_ACE_Captives_Zeus_NothingSelected"] call EFUNC(commmon,displayTextStructured);
         };
-    } else {//an editor module
-        {
-            ["SetSurrendered", [_x], [_x, true]] call EFUNC(common,targetEvent);
-        } forEach _units;
+    } else {
+        //an editor module
+        //Modules run before postInit can instal the event handler, so we need to wait a little bit
+        [{
+            PARAMS_1(_units);
+            {
+                ["SetSurrendered", [_x], [_x, true]] call EFUNC(common,targetEvent);
+            } forEach _units;
+        }, [_units], 0.05, 0.05]call EFUNC(common,waitAndExecute);
     };
 
     deleteVehicle _logic;
