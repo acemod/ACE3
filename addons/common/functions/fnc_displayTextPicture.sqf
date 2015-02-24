@@ -21,9 +21,6 @@ _imageColor = if (count _this > 2) then {_this select 2} else {[1,1,1]};
 _imageColor resize 3;
 _target = if (count _this > 3) then {_this select 3} else {ACE_player};
 
-if (!local _target && {_target != ACE_player}) exitwith {
-    [_this, QUOTE(DFUNC(displayTextPicture)), _target] call FUNC(execRemoteFnc);
-};
 if (_target != ACE_player) exitWith {};
 
 if (typeName _text != "TEXT") then {

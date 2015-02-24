@@ -18,9 +18,6 @@ _text = _this select 0;
 _size = if (count _this > 1) then {_this select 1} else {0.1;};
 _target = if (count _this > 2) then {_this select 2} else {ACE_player};
 
-if (!local _target && {_target != ACE_player}) exitwith {
-    [_this, QUOTE(DFUNC(displayTextStructured)), _target] call FUNC(execRemoteFnc);
-};
 if (_target != ACE_player) exitWith {};
 
 if (typeName _text != "TEXT") then {
