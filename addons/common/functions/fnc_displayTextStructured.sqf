@@ -13,14 +13,26 @@
 
 #include "script_component.hpp"
 
-private ["_text", "_size", "_isShown", "_ctrlHint", "_yPos", "_xPos", "_wPos", "_hPos", "_position"];
-
+private ["_text", "_size", "_isShown", "_ctrlHint", "_yPos", "_xPos", "_wPos", "_hPos", "_position", "_target"];
 _text = _this select 0;
-_size = _this select 1;
+_size = if (count _this > 1) then {_this select 1} else {0.1;};
+_target = if (count _this > 2) then {_this select 2} else {ACE_player};
 
-if (isNil "_size") then {_size = 1.5};
+if (!local _target && {_target != ACE_player}) exitwith {
+	[_this, QUOTE(DFUNC(displayTextStructured)), _target] call FUNC(execRemoteFnc);
+};
 
 if (typeName _text != "TEXT") then {
+	if (typeName _text == "ARRAY") then {
+		if (count _text > 0) then {
+		    {
+		    	if (typeName _x == "STRING" && {isLocalized _x}) then {
+		    		_text set [_foreachIndex, localize _x];
+		    	};
+			}foreach _text;
+		    _text = format _text;
+		};
+	};
     if (typeName _text == "STRING" && {isLocalized _text}) then {
         _text = localize _text;
     };
