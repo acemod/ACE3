@@ -1,20 +1,18 @@
 /*
-	Name: ACE_Explosives_fnc_hasExplosives
-
-	Author: Garth de Wet (LH)
-
-	Description:
-		Whether the passed unit has any explosives on them.
-
-	Parameters:
-		0: OBJECT - unit
-
-	Returns:
-		BOOLEAN - True if the unit has explosives.
-
-	Example:
-		_hasExplosives = [player] call ACE_Explosives_fnc_hasExplosives;
-*/
+ * Author: Garth 'L-H' de Wet
+ * Whether the passed unit has any explosives on them.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * The unit has explosives <BOOL>
+ *
+ * Example:
+ * _hasExplosives = [player] call ACE_Explosives_fnc_hasExplosives;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private ["_unit", "_result", "_magazines"];
 _result = false;

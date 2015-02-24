@@ -3,7 +3,7 @@
 class CfgPatches {
   class ADDON {
     units[] = {};
-    weapons[] = {"ACE_Clacker", "ACE_DefusalKit", "ACE_M26_Clacker", "ACE_DeadManSwitch"};
+    weapons[] = {"ACE_Clacker", "ACE_DefusalKit", "ACE_M26_Clacker", "ACE_DeadManSwitch", "ACE_Cellphone"};
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {"ace_common", "ace_interaction"};
     author[] = {"Garth 'L-H' de Wet"};
@@ -39,7 +39,13 @@ class CfgMineTriggers {
   };
 };
 
-class ACE_Parameters_Boolean {
-  GVAR(RequireSpecialist) = 0;
-  GVAR(PunishNonSpecialists) = 1;
+class ACE_Settings {
+  class GVAR(RequireSpecialist) {
+    value = 0;
+    typeName = "BOOL";
+  };
+  class GVAR(PunishNonSpecialists) {
+    value = 1;
+    typeName = "BOOL";
+  };
 };

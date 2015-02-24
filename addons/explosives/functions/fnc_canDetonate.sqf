@@ -1,20 +1,18 @@
 /*
-Name: ACE_Explosives_fnc_canDetonate
-
-Author: Garth de Wet (LH)
-
-Description:
-Checks if a unit can detonate an explosive
-
-Parameters:
-0: OBJECT - unit
-
-Returns:
-BOOLEAN - if the unit has explosives and detonators.
-
-Example:
-[player] call ACE_Explosives_fnc_canDetonate;
-*/
+ * Author: Garth 'L-H' de Wet
+ * Whether the unit is able to detonate explosives
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * Able to detonate <BOOL>
+ *
+ * Example:
+ * if ([player] call ACE_Explosives_fnc_canDetonate) then { hint "Can Detonate"; };
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private "_unit";
 _unit = _this select 0;

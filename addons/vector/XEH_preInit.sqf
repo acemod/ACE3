@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+ADDON = false;
+
 PREP(clearDisplay);
 PREP(convertToTexturesDegree);
 PREP(convertToTexturesDistance);
@@ -37,3 +39,5 @@ GVAR(keyDownTimeDistance) = -1;
 GVAR(useMil) = false;
 GVAR(useFeet) = false;
 GVAR(modeReticle) = 0;
+
+ADDON = true;

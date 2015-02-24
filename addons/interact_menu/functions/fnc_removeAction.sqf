@@ -1,24 +1,21 @@
 /*
- * Author: commy2
- *
- * Add an ACE action to an object. Note: This function is global.
+ * Author: commy2 and NouberNou
+ * Remove an action from an object
  *
  * Argument:
- * 0: Object the action should be assigned to (Object)
- * 1: Entry to remove (Array or Number)
+ * 0: Object the action should be assigned to <OBJECT>
+ * 1: Entry to remove <ARRAY> or <NUMBER>
  *
  * Return value:
- * ID of the action (used to remove it later).
+ * None
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
-private ["_object", "_entry", "_found", "_actions", "_searchFnc"];
 
-_object = _this select 0;
-_entry = _this select 1;
+EXPLODE_2_PVT(_this,_object,_entry);
 
-
-
+private ["_found", "_actions", "_searchFnc"];
 
 
 if(!IS_OBJECT(_object)) exitWith {false};

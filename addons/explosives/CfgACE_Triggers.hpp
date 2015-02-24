@@ -24,6 +24,12 @@ class CfgACE_Triggers {
     picture = PATHTOF(Data\UI\DeadmanSwitch.paa);
     requires[] = {"ACE_DeadManSwitch"};
   };
+  class Cellphone:Command {
+    displayName = $STR_ACE_Explosives_cellphone_displayName;
+    picture = PATHTOF(Data\UI\Cellphone_UI.paa);
+    onPlace = QUOTE(_this call FUNC(addCellphoneIED);false);
+    requires[] = {"ACE_Cellphone"};
+  };
   class PressurePlate {
     displayName = $STR_ACE_Explosives_PressurePlate;
     picture = PATHTOF(Data\UI\PressurePlate.paa);

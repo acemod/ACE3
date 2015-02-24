@@ -11,7 +11,6 @@ GVAR(playingHeartBeatSound) = false;
 
 ["Medical_treatmentCompleted", FUNC(onTreatmentCompleted)] call ace_common_fnc_addEventHandler;
 
-
 // Initialize all effects
 // @todo: make this a macro?
 _fnc_createEffect = {

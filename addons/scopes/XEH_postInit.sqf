@@ -9,32 +9,27 @@
 
 if !(hasInterface) exitWith {};
 
-// show overlay after changing weapon/optic
-0 spawn {
-    _layer = [QGVAR(Zeroing)] call BIS_fnc_rscLayer;
-    while {True} do {
-        waitUntil {[ACE_player, 0,0] call FUNC(canAdjustScope)};
-        _layer cutRsc [QGVAR(Zeroing), "PLAIN", 0, false];
-        sleep 3;
-        _layer cutFadeOut 2;
+// Check inventory when it changes
+["playerInventoryChanged", {
+    [ACE_player] call FUNC(inventoryCheck);
+}] call EFUNC(common,addEventhandler);
 
-        _weapon = currentWeapon ACE_player;
-        _optics = [ACE_player] call FUNC(getOptics);
-        waitUntil {sleep 0.05; !(_optics isEqualTo ([ACE_player] call FUNC(getOptics))) or (currentWeapon ACE_player != _weapon)};
-    };
-};
 
-// instantly hide when scoping in
-0 spawn {
-    _layer = [QGVAR(Zeroing)] call BIS_fnc_rscLayer;
-    while {True} do {
-    waitUntil {sleep 0.05; cameraView == "GUNNER"};
-    if !(isNull GVAR(fadeScript)) then {
-        terminate GVAR(fadeScript);
-    };
+// Instantly hide knobs when scoping in
+["cameraViewChanged", {
+    EXPLODE_2_PVT(_this,_player,_newCameraView);
+    if (_newCameraView == "GUNNER") then {
+        private "_layer";
+        _layer = [QGVAR(Zeroing)] call BIS_fnc_rscLayer;
         _layer cutText ["", "PLAIN", 0];
+
+
+        if !(isNil QGVAR(fadePFH)) then {
+            [GVAR(fadePFH)] call cba_fnc_removePerFrameHandler;
+            GVAR(fadePFH) = nil;
+        };
     };
-};
+}] call EFUNC(common,addEventhandler);
 
 
 // Add keybinds

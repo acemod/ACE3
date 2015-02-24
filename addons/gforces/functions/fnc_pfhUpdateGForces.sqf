@@ -1,5 +1,17 @@
-// by KoffeinFlummi and CAA-Picard
-#include "script_component.hpp"
+/*
+ * Author: KoffeinFlummi and CAA-Picard
+ * Calculates average g-forces and triggers g-effects
+ *
+ * Argument:
+ * 0: Arguments <ARRAY>
+ * 1: pfh_id <NUMBER>
+ *
+ * Return value:
+ * None
+ *
+ * Public: No
+ */
+ #include "script_component.hpp"
 
 EXPLODE_2_PVT(_this,_params,_pfhId);
 
@@ -60,7 +72,15 @@ if (count GVAR(GForces) > 0) then {
 
 _classCoef = ACE_player getVariable ["ACE_GForceCoef",
     getNumber (configFile >> "CfgVehicles" >> (typeOf ACE_player) >> "ACE_GForceCoef")];
-_suitCoef = getNumber (configFile >> "CfgWeapons" >> (uniform ACE_player) >> "ACE_GForceCoef");
+_suitCoef = if ((uniform ACE_player) != "") then {
+    getNumber (configFile >> "CfgWeapons" >> (uniform ACE_player) >> "ACE_GForceCoef")
+} else {
+    1
+};
+
+//Fix "Error Zero divisor"
+if (_classCoef == 0) then {_classCoef = 0.001};
+if (_suitCoef == 0) then {_suitCoef = 0.001};
 
 _gBlackOut = MAXVIRTUALG / _classCoef + MAXVIRTUALG / _suitCoef - MAXVIRTUALG;
 _gRedOut = MINVIRTUALG / _classCoef;

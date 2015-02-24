@@ -78,13 +78,18 @@ class CfgVehicles {
             init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_nato_CO.paa'; _this call FUNC(initRallypoint));
         };
         class ACE_Actions : ACE_Actions {
-            class ACE_Teleport {
-                displayName = "Teleport to Rallypoint";
-                distance = 4;
-                condition = QUOTE(side group _player == west);
-                statement = QUOTE([ARR_3(_player, side group _player, false)] call FUNC(teleportToRallypoint));
-                showDisabled = 1;
-                priority = 1;
+            class ACE_MainActions {
+                distance = 5;
+                condition = "true";
+                selection = "";
+                class ACE_Teleport {
+                    displayName = "Teleport to Rallypoint";
+                    distance = 4;
+                    condition = QUOTE(side group _player == west);
+                    statement = QUOTE([ARR_3(_player, side group _player, false)] call FUNC(teleportToRallypoint));
+                    showDisabled = 1;
+                    priority = 1;
+                };
             };
         };
     };
@@ -98,13 +103,18 @@ class CfgVehicles {
             init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_CSAT_CO.paa'; _this call FUNC(initRallypoint));
         };
         class ACE_Actions : ACE_Actions {
-            class ACE_Teleport {
-                displayName = "Teleport to Rallypoint";
-                distance = 4;
-                condition = QUOTE(side group _player == east);
-                statement = QUOTE([ARR_3(_player, side group _player, false)] call FUNC(teleportToRallypoint));
-                showDisabled = 1;
-                priority = 1;
+            class ACE_MainActions {
+                distance = 5;
+                condition = "true";
+                selection = "";
+                class ACE_Teleport {
+                    displayName = "Teleport to Rallypoint";
+                    distance = 4;
+                    condition = QUOTE(side group _player == east);
+                    statement = QUOTE([ARR_3(_player, side group _player, false)] call FUNC(teleportToRallypoint));
+                    showDisabled = 1;
+                    priority = 1;
+                };
             };
         };
     };
@@ -118,13 +128,18 @@ class CfgVehicles {
             init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_AAF_CO.paa'; _this call FUNC(initRallypoint));
         };
         class ACE_Actions : ACE_Actions {
-            class ACE_Teleport {
-                displayName = "Teleport to Rallypoint";
-                distance = 4;
-                condition = QUOTE(side group _player == independent);
-                statement = QUOTE([ARR_3(_player, side group _player, false)] call FUNC(teleportToRallypoint));
-                showDisabled = 1;
-                priority = 1;
+            class ACE_MainActions {
+                distance = 5;
+                condition = "true";
+                selection = "";
+                class ACE_Teleport {
+                    displayName = "Teleport to Rallypoint";
+                    distance = 4;
+                    condition = QUOTE(side group _player == independent);
+                    statement = QUOTE([ARR_3(_player, side group _player, false)] call FUNC(teleportToRallypoint));
+                    showDisabled = 1;
+                    priority = 1;
+                };
             };
         };
     };
@@ -139,13 +154,17 @@ class CfgVehicles {
             init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_nato_CO.paa'; _this call FUNC(initRallypoint));
         };
         class ACE_Actions : ACE_Actions {
-            class ACE_Teleport {
-                displayName = "Teleport to Base";
-                distance = 4;
-                condition = QUOTE(side group _player == west);
-                statement = QUOTE([ARR_3(_player, side group _player, true)] call FUNC(teleportToRallypoint));
-                showDisabled = 1;
-                priority = 1;
+            class ACE_MainActions {
+                distance = 5;
+                condition = "true";
+                class ACE_Teleport {
+                    displayName = "Teleport to Base";
+                    distance = 4;
+                    condition = QUOTE(side group _player == west);
+                    statement = QUOTE([ARR_3(_player, side group _player, true)] call FUNC(teleportToRallypoint));
+                    showDisabled = 1;
+                    priority = 1;
+                };
             };
         };
     };
@@ -159,13 +178,17 @@ class CfgVehicles {
             init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_CSAT_CO.paa'; _this call FUNC(initRallypoint));
         };
         class ACE_Actions : ACE_Actions {
-            class ACE_Teleport {
-                displayName = "Teleport to Base";
-                distance = 4;
-                condition = QUOTE(side group _player == east);
-                statement = QUOTE([ARR_3(_player, side group _player, true)] call FUNC(teleportToRallypoint));
-                showDisabled = 1;
-                priority = 1;
+            class ACE_MainActions {
+                distance = 5;
+                condition = "true";
+                class ACE_Teleport {
+                    displayName = "Teleport to Base";
+                    distance = 4;
+                    condition = QUOTE(side group _player == east);
+                    statement = QUOTE([ARR_3(_player, side group _player, true)] call FUNC(teleportToRallypoint));
+                    showDisabled = 1;
+                    priority = 1;
+                };
             };
         };
     };
@@ -179,13 +202,17 @@ class CfgVehicles {
             init = QUOTE((_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_AAF_CO.paa'; _this call FUNC(initRallypoint));
         };
         class ACE_Actions : ACE_Actions {
-            class ACE_Teleport {
-                displayName = "Teleport to Base";
-                distance = 4;
-                condition = QUOTE(side group _player == independent);
-                statement = QUOTE([ARR_3(_player, side group _player, true)] call FUNC(teleportToRallypoint));
-                showDisabled = 1;
-                priority = 1;
+            class ACE_MainActions {
+                distance = 5;
+                condition = "true";
+                class ACE_Teleport {
+                    displayName = "Teleport to Base";
+                    distance = 4;
+                    condition = QUOTE(side group _player == independent);
+                    statement = QUOTE([ARR_3(_player, side group _player, true)] call FUNC(teleportToRallypoint));
+                    showDisabled = 1;
+                    priority = 1;
+                };
             };
         };
     };

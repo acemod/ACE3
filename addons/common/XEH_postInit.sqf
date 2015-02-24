@@ -1,6 +1,25 @@
 // ACE - Common
 #include "script_component.hpp"
 
+// Load settings from profile
+if (hasInterface) then {
+    call FUNC(loadSettingsFromProfile);
+};
+
+// Listens for global "SettingChanged" events, to update the force status locally
+["SettingChanged", {
+
+    PARAMS_2(_name,_value);
+    if !(count _this > 2) exitWith {};
+
+    _force = _this select 2;
+    if (_force) then {
+        _settingData = [_name] call FUNC(getSettingData);
+        if (count _settingData == 0) exitWith {};
+        _settingData set [6,_force];
+    };
+}] call FUNC(addEventhandler);
+
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
     if (time > 0) exitWith {
@@ -63,7 +82,7 @@ enableCamShake true;
 
 }] call FUNC(addEventhandler);
 
-GVAR(OldPlayerInventory) = ACE_player call FUNC(getAllGear);
+GVAR(OldPlayerInventory) = [ACE_player] call FUNC(getAllGear);
 GVAR(OldPlayerVisionMode) = currentVisionMode ACE_player;
 GVAR(OldZeusDisplayIsOpen) = !(isNull findDisplay 312);
 GVAR(OldCameraView) = cameraView;
@@ -74,7 +93,7 @@ GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
 [{
 
     // "playerInventoryChanged" event
-    _newPlayerInventory = ACE_player call FUNC(getAllGear);
+    _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
     if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
         // Raise ACE event locally
         GVAR(OldPlayerInventory) = _newPlayerInventory;
@@ -134,3 +153,8 @@ GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
 [QGVAR(carriedBy),objNull,false,QUOTE(ADDON)] call FUNC(defineVariable);
 [QGVAR(carriedObj),objNull,false,QUOTE(ADDON)] call FUNC(defineVariable);
+
+["VehicleSetFuel", {
+PARAMS_2(_vehicle,_fuelLevel);
+_vehicle setFuel _fuelLevel;
+}] call FUNC(addEventhandler);

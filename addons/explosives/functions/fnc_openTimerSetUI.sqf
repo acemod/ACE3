@@ -1,20 +1,18 @@
 /*
-	Name: ACE_Explosives_fnc_openTimerSetUI
-
-	Author: Garth de Wet (LH)
-
-	Description:
-		Opens the UI for timer setting of an explosive
-
-	Parameters:
-		0: String - Magazine
-
-	Returns:
-		Nothing
-
-	Example:
-		[player] call ACE_Explosives_fnc_openTimerSetUI;
-*/
+ * Author: Garth 'L-H' de Wet
+ * Opens the UI for timer setting of an explosive
+ *
+ * Arguments:
+ * 0: Magazine <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * ["SatchelCharge_Remote_Mag"] call ACE_Explosives_fnc_openTimerSetUI;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 private ["_mag"];
 _mag = _this select 0;

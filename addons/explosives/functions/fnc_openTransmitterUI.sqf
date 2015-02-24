@@ -1,20 +1,18 @@
 /*
-	Name: ACE_Explosives_fnc_openTransmitterUI
-
-	Author: Garth de Wet (LH)
-
-	Description:
-		Opens the UI for selecting the transmitter
-
-	Parameters:
-		0: OBJECT - Unit
-
-	Returns:
-		Nothing
-
-	Example:
-		[player] call ACE_Explosives_fnc_openTransmitterUI;
-*/
+ * Author: Garth 'L-H' de Wet
+ * Opens the UI for selecting the transmitter
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [player] call ACE_Explosives_fnc_openTransmitterUI;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 private ["_items", "_unit", "_count", "_actions", "_config"];
 _unit = _this select 0;

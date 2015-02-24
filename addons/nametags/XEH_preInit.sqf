@@ -1,5 +1,6 @@
 #include "script_component.hpp"
 
+ADDON = false;
 
 PREP(canShow);
 PREP(doShow);
@@ -10,3 +11,5 @@ PREP(onMouseZChanged);
 PREP(setText);
 
 GVAR(ShowNamesTime) = -10;
+
+ADDON = true;

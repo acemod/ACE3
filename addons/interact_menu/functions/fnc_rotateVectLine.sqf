@@ -1,4 +1,16 @@
-//fnc_rotateVectLine.sqf
+/*
+ * Author: NouberNou
+ * Rotate a vector line (?)
+ *
+ * Argument:
+ * 0: Map <ARRAY>
+ * 1: Theta <ARRAY>
+ *
+ * Return value:
+ * 0: ?? <ARRAY>
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_theta", "_p", "_map", "_p1", "_p2", "_q1", "_q2", "_u", "_d"];

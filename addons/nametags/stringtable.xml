@@ -58,15 +58,16 @@
       <Hungarian>Játékosok rendfokozatának mutatása (névcímke szükséges)</Hungarian>
       <Russian>Показать звания игроков (требует имен игроков)</Russian>
     </Key>
-  </Package>
-  <Package name="CrewInfo">
-    <Key ID="STR_ACE_CrewInfo_ShowVehicleCrewInfo">
+    <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo">
       <English>Show vehicle crew info</English>
       <German>Zeige Fahrzeugbesatzung</German>
       <Spanish>Mostrar tripulantes</Spanish>
       <Polish>Pokaż informacje o załodze pojazdu</Polish>
       <Czech>Zobrazit info o posádce vozidla</Czech>
       <Russian>Показать экипаж</Russian>
+    </Key>
+    <Key ID="STR_ACE_NameTags_ShowNamesForAI">
+      <English>Show name tags for AI units</English>
     </Key>
   </Package>
 </Project>

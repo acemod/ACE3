@@ -1,21 +1,19 @@
 /*
-	Name: ACE_Explosives_fnc_openDetonateUI
-
-	Author: Garth de Wet (LH)
-
-	Description:
-		Opens the UI for explosive detonation selection
-
-	Parameters:
-		0: OBJECT - unit
-		0: STRING - Classname of detonator
-
-	Returns:
-		Nothing
-
-	Example:
-		[player, "ACE_M26_Clacker"] call ACE_Explosives_fnc_openDetonateUI;
-*/
+ * Author: Garth 'L-H' de Wet
+ * Opens the UI for explosive detonation selection
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Trigger classname <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, "ACE_M26_Clacker"] call ACE_Explosives_fnc_openDetonateUI;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 private ["_unit","_result", "_item"];
 call EFUNC(interaction,hideMenu);

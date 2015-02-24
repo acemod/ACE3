@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-17 -->
+<!-- Edited with tabler - 2015-02-08 -->
 <Project name="ACE">
   <Package name="MagazineRepack">
     <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
@@ -73,6 +73,21 @@
       <Portuguese>%1 carregador(es) cheio(s) e %2 disparo(s) a mais</Portuguese>
       <Hungarian>%1 tejles tár és %2 extra lőszer.</Hungarian>
       <Russian>%1 полных магазина(ов) и %2 патрона(ов)</Russian>
+    </Key>
+    <Key ID="STR_ACE_MagazineRepack_RepackComplete">
+      <English>Repacking Finished</English>
+      <German>Wiederverpacken Fertig</German>
+      <Spanish>Reembalaje Finalizado</Spanish>
+    </Key>
+    <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
+      <English>Repacking Interrupted</English>
+      <German>Umpacken Unterbrochen</German>
+      <Spanish>Reempaque Interrupted</Spanish>
+    </Key>
+    <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
+      <English>%1 Full and %2 Partial</English>
+      <German>%1 Vollständigen und %2 Teilweisen</German>
+      <Spanish>%1 Total y %2 Parcial</Spanish>
     </Key>
   </Package>
 </Project>

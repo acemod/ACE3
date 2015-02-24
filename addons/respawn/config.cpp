@@ -17,7 +17,13 @@ class CfgPatches {
 #include "CfgVehicleClasses.hpp"
 #include "CfgVehicles.hpp"
 
-class ACE_Parameters_Boolean {
-    GVAR(SavePreDeathGear) = 0;
-    GVAR(RemoveDeadBodiesDisconnected) = 1;
+class ACE_Settings {
+    class GVAR(SavePreDeathGear) {
+        value = 0;
+        typeName = "BOOL";
+    };
+    class GVAR(RemoveDeadBodiesDisconnected) {
+        value = 1;
+        typeName = "BOOL";
+    };
 };
