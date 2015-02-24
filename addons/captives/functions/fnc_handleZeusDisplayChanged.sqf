@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Handles handles ZeusDisplayChanged event
+ * Handles ZeusDisplayChanged event
  * Need to reset showHUD after closing zeus
  *
  * Arguments:
