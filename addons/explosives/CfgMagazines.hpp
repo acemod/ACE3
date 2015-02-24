@@ -95,4 +95,33 @@ class CfgMagazines {
       };
     };
   };
+
+  class IEDUrbanBig_Remote_Mag: DemoCharge_Remote_Mag {
+    ACE_SetupObject = "ACE_Explosives_Place_IEDUrbanBig";
+    class ACE_Triggers {
+      SupportedTriggers[] = {"Command","DeadmanSwitch", "Cellphone"};
+      class Command {
+        FuseTime = 0.5;
+      };
+      class DeadmanSwitch:Command{};
+      class Cellphone:Command{};
+    };
+  };
+  class IEDLandBig_Remote_Mag: IEDUrbanBig_Remote_Mag{
+    ACE_SetupObject = "ACE_Explosives_Place_IEDLandBig";
+  };
+  class IEDUrbanSmall_Remote_Mag: DemoCharge_Remote_Mag {
+    ACE_SetupObject = "ACE_Explosives_Place_IEDUrbanSmall";
+    class ACE_Triggers {
+      SupportedTriggers[] = {"Command","DeadmanSwitch", "Cellphone"};
+      class Command {
+        FuseTime = 0.5;
+      };
+      class DeadmanSwitch:Command{};
+      class Cellphone:Command{};
+    };
+  };
+  class IEDLandSmall_Remote_Mag: IEDUrbanSmall_Remote_Mag {
+    ACE_SetupObject = "ACE_Explosives_Place_IEDLandSmall";
+  };
 };

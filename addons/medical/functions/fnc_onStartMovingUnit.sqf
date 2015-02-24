@@ -20,6 +20,6 @@ _dragging = _this select 3;
 
 _caller setvariable[QGVAR(onStartMovingUnitParams), [_caller, _target, _killOnDrop, _dragging]];
 
-[_target, true] call EFUNC(common,disableAI_f);
+[_target, true] call EFUNC(common,disableAI);
 
 nil;

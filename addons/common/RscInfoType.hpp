@@ -26,5 +26,5 @@ class RscDisplayInventory {
 };
 
 class RscDisplayChannel {
-    onLoad = QUOTE(_this call GVAR(onLoadRscDisplayChannel));
+    onLoad = QUOTE(_this call FUNC(onLoadRscDisplayChannel));
 };

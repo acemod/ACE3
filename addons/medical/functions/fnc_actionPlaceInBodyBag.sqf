@@ -36,7 +36,7 @@ _bodyBagCreated setvariable [QEGVAR(common,nameOfBody), _nameOfUnit, true];
 // reset the position to ensure it is on the correct one.
 _bodyBagCreated setPos _onPosition;
 
-[[_bodyBagCreated], QEFUNC(common,revealObject_f), true] call BIS_fnc_MP;
+[[_bodyBagCreated], QEFUNC(common,revealObject), true] call BIS_fnc_MP;
 
 _bodyBagCreated setvariable [QEGVAR(logistics,enableDrag), true, true];
 

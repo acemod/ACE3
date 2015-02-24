@@ -2,22 +2,25 @@
 
 ADDON = false;
 
-PREP(setToRender);
+PREP(addAction);
+PREP(compileMenu);
+PREP(compileMenuSelfAction);
+PREP(keyDown);
+PREP(keyDownSelfAction);
+PREP(keyUp);
+PREP(keyUpSelfAction);
+PREP(probe);
+PREP(removeAction);
 PREP(render);
 PREP(renderIcon);
 PREP(renderMenu);
-PREP(probe);
-PREP(rotateVectLineGetMap);
 PREP(rotateVectLine);
-PREP(keyDown);
-PREP(keyUp);
-PREP(compileMenu);
-PREP(addAction);
-PREP(removeAction);
+PREP(rotateVectLineGetMap);
 
 GVAR(toRender) = [];
 
 GVAR(keyDown) = false;
+GVAR(keyDownSelfAction) = false;
 GVAR(keyDownTime) = 0;
 
 GVAR(lastTime) = diag_tickTime;

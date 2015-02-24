@@ -14,17 +14,17 @@
 
 // ACRE
 if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
-	[-1] call acre_core_fnc_handleMultiPttKeyPressUp;
-	[0] call acre_core_fnc_handleMultiPttKeyPressUp;
-	[1] call acre_core_fnc_handleMultiPttKeyPressUp;
-	[2] call acre_core_fnc_handleMultiPttKeyPressUp;
+    [-1] call acre_core_fnc_handleMultiPttKeyPressUp;
+    [0] call acre_core_fnc_handleMultiPttKeyPressUp;
+    [1] call acre_core_fnc_handleMultiPttKeyPressUp;
+    [2] call acre_core_fnc_handleMultiPttKeyPressUp;
 };
 
 // TFAR
 if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
-	call TFAR_fnc_onSwTangentReleased;
-	call TFAR_fnc_onAdditionalSwTangentReleased;
-	call TFAR_fnc_onLRTangentReleased;
-	call TFAR_fnc_onAdditionalLRTangentReleased;
-	call TFAR_fnc_onDDTangentReleased;
+    call TFAR_fnc_onSwTangentReleased;
+    call TFAR_fnc_onAdditionalSwTangentReleased;
+    call TFAR_fnc_onLRTangentReleased;
+    call TFAR_fnc_onAdditionalLRTangentReleased;
+    call TFAR_fnc_onDDTangentReleased;
 };

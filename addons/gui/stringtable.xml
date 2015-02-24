@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<Project name="ACE3"> 
-	<Package name="ACE_gui">
-		<Container ID="GUI">
-		</Container>
-	</Package> 
-</Project>
