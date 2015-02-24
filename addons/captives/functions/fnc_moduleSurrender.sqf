@@ -27,24 +27,25 @@ if (local _logic) then {
         if ((count _bisMouseOver) == 2) then {//check what mouse was over before the module was placed
             _mouseOverObject = _bisMouseOver select 1;
             if ((_mouseOverObject isKindOf "CAManBase") && {(vehicle _mouseOverObject) == _mouseOverObject}) then {
-                systemChat format ["Debug - module surrendering %1", (name _mouseOverObject)];
-                
-                if (!(_mouseOverObject getVariable [QGVAR(isSurrendering), false])) then {
-                    ["SetSurrendered", [_mouseOverObject], [_mouseOverObject, true]] call EFUNC(common,targetEvent);
+                TRACE_2("Debug - module surrendering %1",_mouseOverObject,(name _mouseOverObject));
+                if (alive _mouseOverObject) then {
+                    if (!(_mouseOverObject getVariable [QGVAR(isSurrendering), false])) then {
+                        ["SetSurrendered", [_mouseOverObject], [_mouseOverObject, true]] call EFUNC(common,targetEvent);
+                    } else {
+                        ["SetSurrendered", [_mouseOverObject], [_mouseOverObject, false]] call EFUNC(common,targetEvent);
+                    };
                 } else {
-                    ["SetSurrendered", [_mouseOverObject], [_mouseOverObject, false]] call EFUNC(common,targetEvent);
+                    ["STR_ACE_Captives_Zeus_OnlyAlive"] call EFUNC(commmon,displayTextStructured);
                 };
-
             } else {
-                systemChat format ["Only use on dismounted inf"];
+                ["STR_ACE_Captives_Zeus_OnlyInfentry"] call EFUNC(commmon,displayTextStructured);
             };
         } else {
-            systemChat format ["Nothing under mouse"];
+            ["STR_ACE_Captives_Zeus_NothingSelected"] call EFUNC(commmon,displayTextStructured);
         };
     } else {//an editor module
         {
-            systemChat format ["Debug - module surrendering %1", (name _x)];
-            [_x, true] call FUNC(setSurrendered);
+            ["SetSurrendered", [_x], [_x, true]] call EFUNC(common,targetEvent);
         } forEach _units;
     };
 
