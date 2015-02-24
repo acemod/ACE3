@@ -65,7 +65,7 @@ if (isNil _callbackFailure) then {
 	_callbackFailure = missionNamespace getvariable _callbackFailure;
 };
 
-// Parse the config for the callbackProgress callback
+// Parse the config for the progress callback
 _callbackProgress = getText (_config >> "callbackProgress");
 if (isNil _callbackProgress) then {
 	_callbackProgress = compile _callbackProgress;

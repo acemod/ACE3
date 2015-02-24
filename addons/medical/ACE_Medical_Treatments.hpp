@@ -1,44 +1,47 @@
 
 class ACE_Medical_Actions {
     class Basic {
+        // @todo: localization
         class Bandage {
-            treatmentLocations[] = {"Field", "MedicalFacility", "MedicalVehicle"};
+            displayName = "Bandage";
+            displayNameProgress = "Bandaging ...";
 
+            treatmentLocations[] = {"Field", "MedicalFacility", "MedicalVehicle"};
             requiredMedic = 0;
             treatmentTime = 5;
             treatmentTimeSelfCoef = 1;
             items[] = {{QGVAR(fieldDressing), QGVAR(packingBandage), QGVAR(elasticBandage), QGVAR(quikClot)}};
+
             itemConsumed = 1;
 
-            callbackSuccess = QUOTE(_this call FUNC(treatmentBasic_bandage));
-            callbackFailure = QUOTE(_this call FUNC(treatmentBasic_abort));
+            callbackSuccess = QUOTE(DFUNC(treatmentBasic_bandage));
+            callbackFailure = QUOTE(DFUNC(treatmentBasic_abort));
             callbackProgress = "";
             animationPatient = "";
             animationCaller = "";
         };
         class Morphine: Bandage {
+            displayName = "Morphine";
+            displayNameProgress = "Injecting Morphine ...";
             treatmentTime = 2;
             items[] = {QGVAR(morphine)};
-            callbackSuccess = QUOTE(_this call FUNC(treatmentBasic_morphine));
+            callbackSuccess = QUOTE(DFUNC(treatmentBasic_morphine));
             animationCaller = ""; // @todo
         };
         class Epipen: Bandage {
+            displayName = "Epinephrine";
+            displayNameProgress = "Injecting Epinephrine ...";
             treatmentTime = 3;
             items[] = {QGVAR(epinephrine)};
-            callbackSuccess = QUOTE(_this call FUNC(treatmentBasic_epipen));
+            callbackSuccess = QUOTE(DFUNC(treatmentBasic_epipen));
             animationCaller = ""; // @todo
         };
         class Bloodbag: Bandage {
+            displayName = "Blood Bag";
+            displayNameProgress = "Transfusing Blood ...";
             treatmentTime = 20;
             items[] = {{QGVAR(bloodIV), QGVAR(bloodIV_500), QGVAR(bloodIV_250)}};
-            callbackSuccess = QUOTE(_this call FUNC(treatmentBasic_bloodbag));
-            animationCaller = ""; // @todo
-        };
-        class Diagnose: Bandage {
-            treatmentTime = 10;
-            treatmentTimeSelfCoef = 0;
-            items[] = {};
-            callbackSuccess = QUOTE(_this call FUNC(treatmentBasic_diagnose));
+            callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
             animationCaller = ""; // @todo
         };
     };

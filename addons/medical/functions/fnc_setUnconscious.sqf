@@ -6,7 +6,7 @@
  * 0: The unit that will be put in an unconscious state <OBJECT>
  *
  * ReturnValue:
- * <NIL>
+ * nil
  *
  * Public: yes
  */
