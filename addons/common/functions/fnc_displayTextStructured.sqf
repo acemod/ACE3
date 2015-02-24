@@ -58,6 +58,12 @@ _xPos = ((safezoneX + safezoneW) - (10 *(((safezoneW / safezoneH) min 1.2) / 40)
 _yPos = safeZoneY + 0.175 * safezoneH;
 _wPos =  (10 *(((safezoneW / safezoneH) min 1.2) / 40));
 _hPos = (2 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
+
+//Zeus Interface Open and Display would be under the "CREATE" list
+if (!isnull curatorCamera) then {
+    _xPos = _xPos min ((safezoneX + safezoneW - 12.5 * (((safezoneW / safezoneH) min 1.2) / 40)) - _wPos);
+};
+
 _position = [_xPos, _yPos, _wPos, _size * _hPos];
 
 _ctrlHint ctrlSetPosition _position;
