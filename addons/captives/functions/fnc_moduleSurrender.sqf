@@ -35,13 +35,13 @@ if (local _logic) then {
                         ["SetSurrendered", [_mouseOverObject], [_mouseOverObject, false]] call EFUNC(common,targetEvent);
                     };
                 } else {
-                    ["STR_ACE_Captives_Zeus_OnlyAlive"] call EFUNC(commmon,displayTextStructured);
+                    ["STR_ACE_Captives_Zeus_OnlyAlive"] call EFUNC(common,displayTextStructured);
                 };
             } else {
-                ["STR_ACE_Captives_Zeus_OnlyInfentry"] call EFUNC(commmon,displayTextStructured);
+                ["STR_ACE_Captives_Zeus_OnlyInfentry"] call EFUNC(common,displayTextStructured);
             };
         } else {
-            ["STR_ACE_Captives_Zeus_NothingSelected"] call EFUNC(commmon,displayTextStructured);
+            ["STR_ACE_Captives_Zeus_NothingSelected"] call EFUNC(common,displayTextStructured);
         };
     } else {
         //an editor module
