@@ -158,3 +158,6 @@ GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
 PARAMS_2(_vehicle,_fuelLevel);
 _vehicle setFuel _fuelLevel;
 }] call FUNC(addEventhandler);
+
+["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
+["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);

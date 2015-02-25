@@ -6,6 +6,7 @@
  * Argument:
  * 0: Text <ANY>
  * 1: Size of the textbox <NUMBER> <OPTIONAL>
+ * 2: Target Unit. Will only display if target is the player controlled object <OBJECT> <OPTIONAL>
  *
  * Return value:
  * Nothing
@@ -13,14 +14,24 @@
 
 #include "script_component.hpp"
 
-private ["_text", "_size", "_isShown", "_ctrlHint", "_yPos", "_xPos", "_wPos", "_hPos", "_position"];
-
+private ["_text", "_size", "_isShown", "_ctrlHint", "_yPos", "_xPos", "_wPos", "_hPos", "_position", "_target"];
 _text = _this select 0;
-_size = _this select 1;
+_size = if (count _this > 1) then {_this select 1} else {1.5;};
+_target = if (count _this > 2) then {_this select 2} else {ACE_player};
 
-if (isNil "_size") then {_size = 1.5};
+if (_target != ACE_player) exitWith {};
 
 if (typeName _text != "TEXT") then {
+    if (typeName _text == "ARRAY") then {
+        if (count _text > 0) then {
+            {
+                if (typeName _x == "STRING" && {isLocalized _x}) then {
+                    _text set [_foreachIndex, localize _x];
+                };
+            }foreach _text;
+            _text = format _text;
+        };
+    };
     if (typeName _text == "STRING" && {isLocalized _text}) then {
         _text = localize _text;
     };
@@ -48,6 +59,12 @@ _xPos = ((safezoneX + safezoneW) - (10 *(((safezoneW / safezoneH) min 1.2) / 40)
 _yPos = safeZoneY + 0.175 * safezoneH;
 _wPos =  (10 *(((safezoneW / safezoneH) min 1.2) / 40));
 _hPos = (2 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
+
+//Zeus Interface Open and Display would be under the "CREATE" list
+if (!isnull curatorCamera) then {
+    _xPos = _xPos min ((safezoneX + safezoneW - 12.5 * (((safezoneW / safezoneH) min 1.2) / 40)) - _wPos);
+};
+
 _position = [_xPos, _yPos, _wPos, _size * _hPos];
 
 _ctrlHint ctrlSetPosition _position;
