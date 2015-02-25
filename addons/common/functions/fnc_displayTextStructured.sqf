@@ -16,7 +16,7 @@
 
 private ["_text", "_size", "_isShown", "_ctrlHint", "_yPos", "_xPos", "_wPos", "_hPos", "_position", "_target"];
 _text = _this select 0;
-_size = if (count _this > 1) then {_this select 1} else {0.1;};
+_size = if (count _this > 1) then {_this select 1} else {1.5;};
 _target = if (count _this > 2) then {_this select 2} else {ACE_player};
 
 if (_target != ACE_player) exitWith {};
