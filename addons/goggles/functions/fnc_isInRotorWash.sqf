@@ -1,24 +1,22 @@
 /*
-	fnc_isInRotorWash.sqf
-
-	Author: Garth de Wet (LH)
-
-	Description:
-	Checks for nearby helicopters (within 15m)
-
-	Parameters:
-	0: Object - Unit
-	1: NUMBER - (optional) Radius to check for helicopter Default: 15
-
-	Returns:
-	Array:
-		0 - boolean - If in rotorwash
-		1 - number - Amount of rotor wash.
-
-	Example:
-		if (([ace_player, 10] call FUNC(isInRotorWash)) select 0) then { hint "Rotor wash"; };
-		if (([ace_player] call FUNC(isInRotorWash)) select 0) then { hint "Rotor wash"; };
-*/
+ * Author: Garth 'L-H' de Wet
+ * Checks for nearby running helicopters (within 15m)
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Radius to check for helicopter Default: 15 (optional) <NUMBER>
+ *
+ * Return Value:
+ * <ARRAY>:
+ * 	0: In rotorwash <BOOL>
+ * 	1: Amount of rotor wash. <NUMBER>
+ *
+ * Example:
+ * if (([ace_player, 10] call ace_goggles_fnc_isInRotorWash) select 0) then { hint "Rotor wash"; };
+ * if (([ace_player] call ace_goggles_fnc_isInRotorWash) select 0) then { hint "Rotor wash"; };
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private ["_heli", "_unit", "_result", "_radius"];
 _unit = _this select 0;

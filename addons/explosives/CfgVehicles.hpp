@@ -49,6 +49,15 @@ class CfgVehicles {
           priority = 0.8;
           hotkey = "F";
         };
+        class ACE_Cellphone {
+          displayName = $STR_ACE_Explosives_cellphone_displayName;
+          condition = "('ACE_Cellphone' in (items ace_player))";
+          statement = "closeDialog 0;createDialog 'Rsc_ACE_PhoneInterface';";
+          exceptions[] = {"ACE_Interaction_isNotSwimming"};
+          showDisabled = 0;
+          icon = PATHTOF(Data\UI\Cellphone_UI.paa);
+          priority = 0.8;
+        };
       };
     };
   };
@@ -105,6 +114,27 @@ class CfgVehicles {
     model = "\A3\Weapons_F\Explosives\mine_SLAM_directional";
   };
 
+  // IEDs
+  class ACE_Explosives_Place_IEDUrbanBig:ACE_Explosives_Place {
+    displayName = "IED Urban Big";
+    model = "\A3\Weapons_F\Explosives\IED_urban_big";
+  };
+
+  class ACE_Explosives_Place_IEDLandBig:ACE_Explosives_Place {
+    displayName = "IED Land Big";
+    model = "\A3\Weapons_F\Explosives\IED_land_big";
+  };
+
+  class ACE_Explosives_Place_IEDUrbanSmall:ACE_Explosives_Place {
+    displayName = "IED Urban Small";
+    model = "\A3\Weapons_F\Explosives\IED_urban_small";
+  };
+
+  class ACE_Explosives_Place_IEDLandSmall:ACE_Explosives_Place {
+    displayName = "IED Land Small";
+    model = "\A3\Weapons_F\Explosives\IED_land_small";
+  };
+
   class NATO_Box_Base;
   class EAST_Box_Base;
   class IND_Box_Base;
@@ -133,6 +163,7 @@ class CfgVehicles {
       MACRO_ADDITEM(ACE_M26_Clacker,6)
       MACRO_ADDITEM(ACE_DefusalKit,12)
       MACRO_ADDITEM(ACE_Deadmanswitch,2)
+      MACRO_ADDITEM(ACE_Cellphone,3)
     };
   };
 
@@ -142,6 +173,7 @@ class CfgVehicles {
       MACRO_ADDITEM(ACE_M26_Clacker,2)
       MACRO_ADDITEM(ACE_DefusalKit,2)
       MACRO_ADDITEM(ACE_Deadmanswitch,1)
+      MACRO_ADDITEM(ACE_Cellphone,2)
     };
   };
 
@@ -151,6 +183,7 @@ class CfgVehicles {
       MACRO_ADDITEM(ACE_M26_Clacker,6)
       MACRO_ADDITEM(ACE_DefusalKit,12)
       MACRO_ADDITEM(ACE_Deadmanswitch,6)
+      MACRO_ADDITEM(ACE_Cellphone,10)
     };
   };
 

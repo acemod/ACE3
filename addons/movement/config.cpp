@@ -17,21 +17,11 @@ class CfgPatches {
 //#include "CfgInventoryGlobalVariable.hpp"
 #include "CfgMoves.hpp"
 
-class ACE_Default_Keys {
-    class climb {
-        displayName = "$STR_ACE_Movement_Climb";
-        condition = QUOTE(_player == _vehicle);
-        statement = QUOTE([_player] call FUNC(climb););
-        key = 47;
-        shift = 0;
-        control = 1;
-        alt = 0;
-    };
-};
-
-class ACE_Options {
-    class useImperial {
+class ACE_Settings {
+    class GVAR(useImperial) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSetable = 1;
         displayName = "$STR_ACE_Movement_UseImperial";
-        default = 0;
     };
 };

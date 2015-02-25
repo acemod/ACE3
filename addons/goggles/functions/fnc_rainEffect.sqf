@@ -1,20 +1,18 @@
 /*
-	fnc_rainEffect.sqf
-
-	Author: Garth de Wet (LH)
-
-	Description:
-
-
-	Parameters:
-		Nothing
-
-	Returns:
-		Nothing
-
-	Example:
-		[] call FUNC(RainEffect);
-*/
+ * Author: Garth 'L-H' de Wet
+ * Handles rain effects being created on glasses.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_goggles_fnc_rainEffect;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 private ["_fnc_underCover"];
 if (isNull(ace_player) || {!(alive ace_player)}) exitWith {};

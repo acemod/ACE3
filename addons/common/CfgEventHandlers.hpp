@@ -2,7 +2,6 @@
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
-        serverInit = QUOTE(call COMPILE_FILE(scripts\readParameters));
         disableModuload = true;
     };
 };
@@ -39,7 +38,23 @@ class Extended_Respawn_EventHandlers {
             respawn = QUOTE(_this call FUNC(setName));
         };
         class GVAR(RESETDefaults) {
-            respawn = QUOTE(_this call FUNC(resetAllDefaults_F));
+            respawn = QUOTE(_this call FUNC(resetAllDefaults));
+        };
+    };
+};
+
+class Extended_Killed_EventHandlers {
+    class CAManBase {
+        class GVAR(dropObject) {
+            Killed = QUOTE(if (local (_this select 0)) then {[ARR_2(_this select 0, ObjNull)] call FUNC(carryObj)};);
+        };
+    };
+};
+
+class Extended_GetIn_EventHandlers {
+    class CAManBase {
+        class GVAR(dropObject) {
+            GetIn = QUOTE(if (local (_this select 0)) then {[ARR_2(_this select 0, ObjNull)] call FUNC(carryObj)};);
         };
     };
 };

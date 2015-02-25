@@ -1,21 +1,19 @@
 /*
-  Name: ACE_Explosives_fnc_StartDefuse
-
-  Author: Garth de Wet (LH)
-
-  Description:
-    Starts defusing an explosive
-
-  Parameters:
-    0: OBJECT - Unit to defuse explosive
-    1: OBJECT - Target explosive
-
-  Returns:
-    Nothing
-
-  Example:
-    [player, ACE_Interaction_Target] call ACE_Explosives_fnc_StartDefuse;
-*/
+ * Author: Garth 'L-H' de Wet
+ * Starts defusing an explosive
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Target explosive <OBJECT>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [player, ACE_Interaction_Target] call ACE_Explosives_fnc_StartDefuse;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 private ["_unit","_target"];
 _unit = _this select 0;
@@ -56,13 +54,10 @@ if (ACE_player != _unit) then {
   };
 } else {
   _unit playActionNow _actionToPlay;
-  if (GVAR(RequireSpecialist)) then {
-    if ([_unit] call EFUNC(Common,isEOD)) then {
-      [[true, _target] call _fnc_DefuseTime, [_unit,_target],
-        QFUNC(defuseExplosive), localize "STR_ACE_Explosives_DefusingExplosive"] call EFUNC(common,progressBar);
-    };
-  } else {
-    [[([_unit] call EFUNC(Common,isEOD)), _target] call _fnc_DefuseTime, [_unit,_target],
-    QFUNC(defuseExplosive), localize "STR_ACE_Explosives_DefusingExplosive"] call EFUNC(common,progressBar);
+  private ["_defuseSeconds", "_isEOD"];
+  _isEOD = [_unit] call EFUNC(Common,isEOD);
+  _defuseSeconds = [_isEOD, _target] call _fnc_DefuseTime;
+  if (_isEOD || {!GVAR(RequireSpecialist)}) then {
+    [_defuseSeconds, [_unit,_target], {(_this select 0) call FUNC(defuseExplosive)}, {}, (localize "STR_ACE_Explosives_DefusingExplosive")] call EFUNC(common,progressBar);
   };
 };

@@ -18,7 +18,8 @@ if !(hasInterface) exitWith {};
 
         // Statement
         [ACE_player, vehicle ACE_player, currentWeapon ACE_player] call FUNC(restWeapon);
-        true
+        // Return false so it doesn't block other actions
+        false
     },
     [15, [false, false, false]],
     false,

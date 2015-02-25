@@ -1,20 +1,18 @@
 /*
-	fnc_removeDustEffect.sqf
-
-	Author: Garth de Wet (LH)
-
-	Description:
-	Removes dust from the glasses.
-
-	Parameters:
-	Nothing
-
-	Returns:
-	Nothing
-
-	Example:
-	call FUNC(RemoveDustEffect);
-*/
+ * Author: Garth 'L-H' de Wet
+ * Removes dust from the glasses.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_goggles_fnc_removeDustEffect;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 if (!isNull(GETUVAR(GVAR(DisplayEffects),displayNull))) then {
 	(GETUVAR(GVAR(DisplayEffects),displayNull) displayCtrl 10662) ctrlSetText "";

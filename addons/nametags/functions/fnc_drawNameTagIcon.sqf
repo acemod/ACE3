@@ -47,7 +47,7 @@ _color = if !(group _target == group _player) then {
 _name = [_target, true] call EFUNC(common,getName);
 
 _rank = TEXTURES_RANKS select ((["PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"] find rank _target) + 1);
-_size = [0, 1] select (profileNamespace getVariable ["ACE_showPlayerRanks", true]);
+_size = [0, 1] select GVAR(showPlayerRanks);
 
 drawIcon3D [
     _rank,

@@ -121,10 +121,13 @@ GVAR(wheelState) = 1;
 
     };
 
+    _directon = round _directon;
+    if (_directon == 360) then {_directon = 0};
+
     _ctrlHUD1 ctrlSetText _windA;
     _ctrlHUD2 ctrlSetText _windB;
-    _ctrlHUD3 ctrlSetText str round _directon;
-    _ctrlHUD4 ctrlSetText str ((round (0 * 10)) / 10);
+    _ctrlHUD3 ctrlSetText str _directon;
+    _ctrlHUD4 ctrlSetText str ((round (EGVAR(weather,currentTemperature) * 10)) / 10);
 
     // adjust kestrel picture in the dark
     private "_brightness";

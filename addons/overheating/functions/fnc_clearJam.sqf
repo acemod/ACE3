@@ -1,15 +1,16 @@
 /*
  * Author: Commy2
+ * Make the unit clear the jam from a weapon
  *
- * Clears the jam from a weapon
+ * Arguments:
+ * 0: Player <OBJECT>
+ * 1: Weapon <STRING>
+ * 2: Skip anim? <BOOL>
  *
- * Argument:
- * 0: Last temperature (number)
- * 1: Barrel mass (number)
- * 2: Time (number)
+ * Return Value:
+ * None
  *
- * Return value:
- * New temperature (number)
+ * Public: No
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
@@ -42,6 +43,12 @@ if (_weapon in _jammedWeapons) then {
 
     _unit playActionNow _clearJamAction;
   };
-
+  if (_weapon == primaryWeapon _unit) then {
+    playSound QGVAR(fixing_rifle);
+  } else {
+    if (_weapon == secondaryWeapon _unit) then {
+      playSound QGVAR(fixing_pistol);
+    };
+  };
   [localize "STR_ACE_Overheating_WeaponUnjammed"] call EFUNC(common,displayTextStructured);
 };

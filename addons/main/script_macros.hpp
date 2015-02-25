@@ -52,7 +52,7 @@
 #define ACE_NOZEROING discreteDistance[] = {}; \
 			discreteDistanceInitIndex = 0; \
 			weaponInfoType = "RscWeaponEmpty"
-			
+
 #define ACE_NOTURRETZEROING discreteDistance[] = {}; \
 			discreteDistanceInitIndex = 0; \
 			turretInfoType = "RscWeaponEmpty"
@@ -62,7 +62,7 @@
 					irDistance = 300
 
 #define ACE_LASER_DISTANCE_VANILLA irDistance = 300
-					
+
 #define ACE_NOLASER	irLaserPos = "laser pos"; \
 					irLaserEnd = "laser dir"; \
 					irDistance = 0
@@ -100,9 +100,6 @@
 
 #define ACE_BWC ace_bwc = 1
 
-#define ACE_wind	([] call ace_ballistic_fnc_wind)
-
-
 // SCRIPTING MACROS
 
 // Items
@@ -129,7 +126,7 @@
 #define KNOCKOUT ace_common_fx_fnc_knockout
 #define RING ace_common_fx_fnc_ring
 
-// Stamina 
+// Stamina
 #define INC_MASS ace_stamina_fnc_inc_mass
 
 // Does this work, due to BWC_CONFIG(NAME) ?
@@ -164,7 +161,7 @@
 		}
 
 // Addaction defines for colored text
-#define ACE_TEXT_ORANGE(Text) ("<t color='#ffa500'>" + ##Text + "</t>")		
+#define ACE_TEXT_ORANGE(Text) ("<t color='#ffa500'>" + ##Text + "</t>")
 #define ACE_TEXT_RED(Text) ("<t color='#FF0000'>" + ##Text + "</t>")
 #define ACE_TEXT_GREEN(Text) ("<t color='#00FF00'>" + ##Text + "</t>")
 #define ACE_TEXT_YELLOW(Text) ("<t color='#FFFF00'>" + ##Text + "</t>")
@@ -200,6 +197,22 @@
 
 #define GETGVAR(var1,var2) GETMVAR(GVAR(var1),var2)
 #define GETEGVAR(var1,var2,var3) GETMVAR(EGVAR(var1,var2),var3)
+
+
+#define MACRO_ADDWEAPON(WEAPON,COUNT) class _xx_##WEAPON { \
+  weapon = #WEAPON; \
+  count = COUNT; \
+}
+
+#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
+  name = #ITEM; \
+  count = COUNT; \
+}
+
+#define MACRO_ADDMAGAZINE(MAGAZINE,COUNT) class _xx_##MAGAZINE { \
+  magazine = #MAGAZINE; \
+  count = COUNT; \
+}
 
 
 #ifdef DISABLE_COMPILE_CACHE

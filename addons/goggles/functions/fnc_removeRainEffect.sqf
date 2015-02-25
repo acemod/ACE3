@@ -1,20 +1,18 @@
 /*
-	RemoveRainEffect
-
-	Author: Garth de Wet (LH)
-
-	Description:
-	Removes rain effects from the screen. Resets the rain array.
-
-	Parameters:
-	Nothing
-
-	Returns:
-	Nothing
-
-	Example:
-	call FUNC(RemoveRainEffect);
-*/
+ * Author: Garth 'L-H' de Wet
+ * Removes rain effects from the screen.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_goggles_fnc_removeRainEffect;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 if (!isNull (GVAR(RainDrops))) then {
 	deleteVehicle (GVAR(RainDrops));

@@ -34,6 +34,13 @@ if(_eventType == "ACEc") then {
         if(!IS_ARRAY(_eventTargets)) then {
             _eventTargets = [_eventTargets];
         };
+
+        //If not multiplayer, and there are targets, then just run localy
+        if ((!isMultiplayer) && {(count _eventTargets) > 0}) exitWith {
+          ACEg = [_eventName, _eventArgs];
+          ["ACEg", ACEg] call FUNC(_handleNetEvent);
+        };
+
         _serverFlagged = false;
         {
             _owner = _x;

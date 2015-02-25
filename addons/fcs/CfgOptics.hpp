@@ -1,3 +1,4 @@
+
 #define MACRO_RANGEFINDER \
     class CA_Distance; \
     class ACE_CA_Distance: CA_Distance { \
@@ -17,12 +18,12 @@ class RscInGameUI {
     class RscUnitInfo;
     class RscUnitInfo_AH64D_gunner {
         onLoad = "";
-        controls[] = {"CA_Distance", "ACE_CA_Distance"};
+        controls[] = {"CA_Distance","ACE_CA_Distance"};
         MACRO_RANGEFINDER
     };
     class RscWeaponRangeFinder {
         onLoad = "uiNamespace setVariable ['ACE_dlgRangefinder', _this select 0]; ((_this select 0) displayCtrl 151) ctrlSetTextColor [0, 0, 0, 0];";
-        controls[] = {"CA_Distance", "ACE_CA_Distance"};
+        controls[] = {"CA_Distance","ACE_CA_Distance"};
         MACRO_RANGEFINDER
     };
 
@@ -56,17 +57,17 @@ class RscInGameUI {
     };
     class RscWeaponRangeFinderAbramsCom {
         onLoad = "uiNamespace setVariable ['ACE_dlgRangefinder', _this select 0]; ((_this select 0) displayCtrl 151) ctrlSetTextColor [0, 0, 0, 0];";
-        controls[] = {"CA_Distance", "ACE_CA_Distance"};
+        controls[] = {"CA_Distance","ACE_CA_Distance"};
         MACRO_RANGEFINDER
     };
     class RscWeaponRangeFinderAbramsGun {
         onLoad = "uiNamespace setVariable ['ACE_dlgRangefinder', _this select 0]; ((_this select 0) displayCtrl 151) ctrlSetTextColor [0, 0, 0, 0];";
-        controls[] = {"CA_Distance", "ACE_CA_Distance"};
+        controls[] = {"CA_Distance","ACE_CA_Distance"};
         MACRO_RANGEFINDER
     };
     class RscWeaponRangeFinderStrykerMGSGun {
         onLoad = "uiNamespace setVariable ['ACE_dlgRangefinder', _this select 0]; ((_this select 0) displayCtrl 151) ctrlSetTextColor [0, 0, 0, 0];";
-        controls[] = {"CA_Distance", "ACE_CA_Distance"};
+        controls[] = {"CA_Distance","ACE_CA_Distance"};
         MACRO_RANGEFINDER
     };
     class RscOptics_crows: RscUnitInfo {
@@ -88,7 +89,7 @@ class RscInGameUI {
 
     class RscWeaponRangeZeroing: RscUnitInfo {
         onLoad = "uiNamespace setVariable ['ACE_dlgRangefinder', _this select 0]; ((_this select 0) displayCtrl 151) ctrlSetTextColor [0, 0, 0, 0]; [""onLoad"",_this,""RscUnitInfo"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""";
-        controls[] = {"CA_Zeroing", "CA_DistanceText", "CA_Distance", "ACE_CA_Distance", "ACE_Rangehelper"};
+        controls[] = {"CA_Zeroing", "CA_DistanceText", "CA_Distance","ACE_CA_Distance", "ACE_Rangehelper"};
         MACRO_RANGEFINDER
     };
     class RscOptics_sos: RscUnitInfo {

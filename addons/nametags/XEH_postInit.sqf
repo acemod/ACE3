@@ -1,22 +1,42 @@
+// by commy2 and CAA-Picard
 #include "script_component.hpp"
 
-// by commy2 and CAA-Picard
 if (!hasInterface) exitWith {};
 
-GVAR(ShowNamesTime) = -10;
 
+// Add keybinds
+["ACE3",
+    localize "STR_ACE_NameTags_ShowNames",
+    {
+        // Conditions: canInteract
+        _exceptions = [];
+        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+
+        // Statement
+        GVAR(ShowNamesTime) = time;
+        if (call FUNC(canShow)) then{ call FUNC(doShow); };
+        // Return false so it doesn't block other actions
+        false
+    },
+    [29, [false, false, false]],
+    false,
+    "keydown"
+] call cba_fnc_registerKeybind;
+
+
+// Draw handle
 addMissionEventHandler ["Draw3D", {
-  if !(profileNamespace getVariable ["ACE_showPlayerNames", true]) exitWith {};
+  if (GVAR(showPlayerNames) == 0) exitWith {};
 
   _player = ACE_player;
-  if (profileNamespace getVariable ["ACE_showPlayerNamesOnlyOnCursor", true]) then {
+  if (GVAR(showPlayerNames) in [2,4]) then { //only on cursor
     _target = cursorTarget;
     _target = if (_target in allUnitsUAV) then {objNull} else {effectiveCommander _target};
 
     if (!isNull _target && {side group _target == playerSide} && {_target != _player} && {isPlayer _target || {GVAR(ShowNamesForAI)}} && {!(_target getVariable ["ACE_hideName", false])}) then {
       _distance = _player distance _target;
       _alpha = ((1 - 0.2 * (_distance - GVAR(PlayerNamesViewDistance))) min 1) * GVAR(PlayerNamesMaxAlpha);
-      if (profileNamespace getVariable ["ACE_showPlayerNamesOnlyOnKeyPress", false]) then {
+      if ((GVAR(showPlayerNames) in [3,4])) then { //only on keypress
         _alpha = _alpha min (1 - (time - GVAR(ShowNamesTime) - 1));
       };
       [_player, _target, _alpha, _distance * 0.026] call FUNC(drawNameTagIcon);
@@ -44,7 +64,7 @@ addMissionEventHandler ["Draw3D", {
 
         _alpha = ((1 - 0.2 * (_distance - GVAR(PlayerNamesViewDistance))) min (1 - 0.15 * (_projDist * 5 - _distance - 3)) min 1) * GVAR(PlayerNamesMaxAlpha);
 
-        if (profileNamespace getVariable ["ACE_showPlayerNamesOnlyOnKeyPress", false]) then {
+        if ((GVAR(showPlayerNames) in [3,4])) then { //only on keypress
           _alpha = _alpha min (1 - (time - GVAR(ShowNamesTime) - 1));
         };
 

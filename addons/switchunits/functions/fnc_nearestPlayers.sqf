@@ -1,19 +1,19 @@
 /*
-  Name: ACE_SwitchUnits_fnc_nearestPlayers
-  
-  Author(s):
-    bux578
-  
-  Description:
-    Returns an array of alive players in a given radius around a given location
-  
-  Parameters:
-    0: POSTION - Center position
-    1: NUMBER - Radius
-  
-  Returns:
-    ARRAY<OBJECT> - Player units
-*/
+ * Author: bux578
+ * Returns an array of alive players in a given radius around a given location
+ *
+ * Arguments:
+ * 0: Center position <POSTION>
+ * 1: Radius <NUMBER>
+ *
+ * Return Value:
+ * Player units <ARRAY<OBJECT>>
+ *
+ * Example:
+ * [_pos, 100] call FUNC(nearestPlayers)
+ *
+ * Public: Yes
+ */
 
 #include "script_component.hpp"
 

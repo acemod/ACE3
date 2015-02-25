@@ -15,49 +15,43 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 
-class ACE_Default_Keys {
-    class showNames {
-        displayName = "$STR_ACE_NameTags_ShowNames";
-        condition = "true";
-        statement = QUOTE(GVAR(ShowNamesTime) = time; if (call FUNC(canShow)) then{ call FUNC(doShow); };);
-        key = 29;
-        shift = 0;
-        control = 0;
-        alt = 0;
-        allowHolding = 1;
-    };
-};
-
-class ACE_Options {
-    class showPlayerNames {
+class ACE_Settings {
+    class GVAR(showPlayerNames) {
+        value = 1;
+        typeName = "SCALAR";
+        isClientSetable = 1;
         displayName = "$STR_ACE_NameTags_ShowPlayerNames";
-        default = 1;
+        values[] = {"Disabled", "Enabled", "Only Cursor", "Only On Keypress", "Only Cursor and KeyPress"};
     };
-    class showPlayerNamesOnlyOnCursor {
-        displayName = "$STR_ACE_NameTags_ShowPlayerNamesOnlyOnCursor";
-        default = 1;
-    };
-    class showPlayerNamesOnlyOnKeyPress {
-        displayName = "$STR_ACE_NameTags_ShowPlayerNamesOnlyOnKeyPress";
-        default = 0;
-    };
-    class showPlayerRanks {
+    class GVAR(showPlayerRanks) {
+        value = 1;
+        typeName = "BOOL";
+        isClientSetable = 1;
         displayName = "$STR_ACE_NameTags_ShowPlayerRanks";
-        default = 1;
     };
-    class showVehicleCrewInfo {
-        displayName = "$STR_ACE_CrewInfo_ShowVehicleCrewInfo";
-        default = 1;
+    class GVAR(showVehicleCrewInfo) {
+        value = 1;
+        typeName = "BOOL";
+        isClientSetable = 1;
+        displayName = "$STR_ACE_NameTags_ShowVehicleCrewInfo";
     };
-};
+    class GVAR(showNamesForAI) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSetable = 1;
+        displayName = "$STR_ACE_NameTags_ShowNamesForAI";
+    };
 
-class ACE_Parameters_Numeric {
-    GVAR(PlayerNamesViewDistance) = 5;
-    GVAR(PlayerNamesMaxAlpha) = 0.8;
-    GVAR(CrewInfoVisibility) = 0;
-};
-class ACE_Parameters_Boolean {
-    GVAR(ShowNamesForAI) = 0;
+    class GVAR(PlayerNamesViewDistance) {
+        value = 5;
+        typeName = "SCALAR";
+        isClientSetable = 0;
+    };
+    class GVAR(PlayerNamesMaxAlpha) {
+        value = 0.8;
+        typeName = "SCALAR";
+        isClientSetable = 0;
+    };
 };
 
 #include <RscTitles.hpp>
