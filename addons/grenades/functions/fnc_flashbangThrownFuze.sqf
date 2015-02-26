@@ -1,18 +1,25 @@
-//Waits for the grenade fuze to trigger and 'explode'
-
+/*
+ * Author: commy2
+ * Waits for the flashbang grenade fuze to trigger and 'explode'
+ *
+ * Arguments:
+ * 0: projectile - Flashbang Grenade <OBJECT>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [theFlashbang] call ace_grenades_fnc_flashbangThrownFuze
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-_projectile = (_this select 0) select 0;
-_waitUntilTime = (_this select 0) select 1;
-
-if (_waitUntilTime > time) exitWith {};
-
-//remove frameEH
-[(_this select 1)] call cba_fnc_removePerFrameHandler;
+PARAMS_1(_projectile);
 
 if (alive _projectile) then {
-  playSound3D ["A3\Sounds_F\weapons\Explosion\explosion_mine_1.wss", _projectile, false, getPosASL _projectile, 5, 1.2, 400];
-  
-  _affected = _projectile nearEntities ["CAManBase", 50];
-  ["flashbangExplosion", _affected, [_projectile]] call EFUNC(common,targetEvent);
+    playSound3D ["A3\Sounds_F\weapons\Explosion\explosion_mine_1.wss", _projectile, false, getPosASL _projectile, 5, 1.2, 400];
+
+    _affected = _projectile nearEntities ["CAManBase", 50];
+    ["flashbangExplosion", _affected, [_projectile]] call EFUNC(common,targetEvent);
 };

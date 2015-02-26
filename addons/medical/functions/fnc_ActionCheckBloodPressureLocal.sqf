@@ -51,7 +51,7 @@ if ([_caller] call FUNC(isMedic)) then {
 
 _title = format["STR_ACE_CHECK_BLOODPRESSURE"];
 _content = ["STR_ACE_CHECK_BLOODPRESSURE_CHECKED_MEDIC", _output];
-[_caller, _title, _content, 0,[[_unit] call EFUNC(common,getName), round(_bloodPressureHigh),round(_bloodPressureLow)] ] call EFUNC(gui,sendDisplayInformationTo);
+[_caller, _title, _content, 0,[[_unit] call EFUNC(common,getName), round(_bloodPressureHigh),round(_bloodPressureLow)] ] call EFUNC(common,sendDisplayInformationTo);
 
 if (_logOutPut != "") then {
     [_unit,"examine",format["%1 checked Blood Pressure: %2",[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToQuickViewLog);

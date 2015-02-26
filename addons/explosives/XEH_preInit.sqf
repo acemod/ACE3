@@ -17,11 +17,15 @@
 
 ADDON = false;
 
+PREP(addCellphoneIED);
 PREP(addClacker);
+PREP(addToSpeedDial);
 PREP(canDefuse);
 PREP(canDetonate);
 PREP(defuseExplosive);
 PREP(detonateExplosive);
+PREP(dialPhone);
+PREP(dialingPhone);
 
 PREP(handleScrollWheel);
 
@@ -30,6 +34,7 @@ PREP(hasPlacedExplosives);
 
 PREP(getDetonators);
 PREP(getPlacedExplosives);
+PREP(getSpeedDialExplosive);
 
 PREP(openDetonateUI);
 PREP(openPlaceUI);
@@ -41,10 +46,12 @@ PREP(place_Approve);
 PREP(place_Cancel);
 
 PREP(placeExplosive);
+PREP(removeFromSpeedDial);
 
 PREP(selectTrigger);
 PREP(setupExplosive);
 PREP(setPosition);
+PREP(setSpeedDial);
 PREP(startDefuse);
 PREP(startTimer);
 PREP(triggerType);

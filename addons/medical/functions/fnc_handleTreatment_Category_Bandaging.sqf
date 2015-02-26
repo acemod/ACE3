@@ -39,11 +39,11 @@ if (ACE_player == _caller) then {
 
         };
         default {
-            [_caller, "STR_ACE_BANDAGING", "STR_ACE_APPLY_BANDAGE", 0, [[_target] call EFUNC(common,getName), _selectionName]] call EFUNC(gui,sendDisplayMessageTo);
+            [_caller, "STR_ACE_BANDAGING", "STR_ACE_APPLY_BANDAGE", 0, [[_target] call EFUNC(common,getName), _selectionName]] call EFUNC(common,sendDisplayMessageTo);
         };
     };
     // Displaying the treatment icon action
-    [QGVAR(treatmentIconID), true, QUOTE(PATHTOF(data\icons\bandage_fracture_small.paa)), [1,1,1,1]] call EFUNC(gui,displayIcon);
+    [QGVAR(treatmentIconID), true, QUOTE(PATHTOF(data\icons\bandage_fracture_small.paa)), [1,1,1,1]] call EFUNC(common,displayIcon);
 };
 
 // Get the current position for the treatment person
@@ -83,7 +83,7 @@ if (isnil QGVAR(setting_bandageWaitingTime)) then {
     }, // on success
     {
         private ["_caller","_target","_selectedData", "_selectionName", "_prevAnim"];
-        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(gui,sendDisplayInformationTo);
+        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(common,sendDisplayInformationTo);
 
         if (_prevAnim != "") then {
             [_caller,_prevAnim, 0] call EFUNC(common,doAnimation);
@@ -92,6 +92,6 @@ if (isnil QGVAR(setting_bandageWaitingTime)) then {
         ["Medical_treatmentCompleted", [_caller, _target, _selectionName, _removeItem]] call ace_common_fnc_localEvent;
     },    // on failure
     [_caller, _target, _selectionName, _removeItem, _prevAnim] // arguments
-] call EFUNC(gui,loadingBar);
+] call EFUNC(common,loadingBar);
 
 true;

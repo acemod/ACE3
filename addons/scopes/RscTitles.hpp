@@ -4,7 +4,7 @@ class RscTitles {
         movingEnable = 0;
         enableSimulation = 1;
         enableDisplay = 1;
-        onLoad = QUOTE(_this spawn compile preprocessFileLineNumbers QUOTE(QUOTE(PATHTOF(scripts\zeroingOnLoad.sqf))); uiNamespace setVariable [ARR_2('ACE_Scopes_Debug', _this)];);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ZeroingDisplay)),_this select 0)];);
         duration = 1e+011;
         fadein = 0;
         fadeout = 0;
@@ -13,7 +13,7 @@ class RscTitles {
         class RscText;
         class controls {
             class ACE_Scopes_Zeroing_BG : RscPicture {
-                idc = 925001;
+                idc = 11;
                 type = 0;
                 text = PATHTOF(UI\scopes_bg.paa);
                 style = 48 + 0x800;
@@ -30,7 +30,7 @@ class RscTitles {
                 h = 0.3 * safezoneH;
             };
             class ACE_Scopes_Zeroing_Vertical : RscText {
-                idc = 925002;
+                idc = 12;
                 type = 0;
                 style = 2;
                 sizeEx = 0.04;
@@ -47,7 +47,7 @@ class RscTitles {
                 h = 0.025 * safezoneH;
             };
             class ACE_Scopes_Zeroing_Horizontal : RscText {
-                idc = 925003;
+                idc = 13;
                 type = 0;
                 style = 0;
                 sizeEx = 0.04;

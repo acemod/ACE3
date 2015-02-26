@@ -35,3 +35,40 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 ["cameraViewChanged",       {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
 ["playerVehicleChanged",    {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
 ["playerTurretChanged",     {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+
+// Add keybinds
+["ACE3",
+localize "STR_ACE_NightVision_IncreaseNVGBrightness",
+{
+    // Conditions: canInteract
+    _exceptions = [QEGVAR(captives,isNotEscorting)];
+    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    // Conditions: specific
+    if ((currentVisionMode _player != 1)) exitWith {false};
+
+    // Statement
+    [ACE_player, 1] call FUNC(changeNVGBrightness);
+    true
+},
+[201, [false, false, true]], //PageUp + ALT
+false,
+"keydown"
+] call cba_fnc_registerKeybind;
+
+["ACE3",
+localize "STR_ACE_NightVision_DecreaseNVGBrightness",
+{
+    // Conditions: canInteract
+    _exceptions = [QEGVAR(captives,isNotEscorting)];
+    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    // Conditions: specific
+    if ((currentVisionMode _player != 1)) exitWith {false};
+
+    // Statement
+    [ACE_player, -1] call FUNC(changeNVGBrightness);
+    true
+},
+[209, [false, false, true]], //PageDown + ALT
+false,
+"keydown"
+] call cba_fnc_registerKeybind;

@@ -1,8 +1,8 @@
 // by commy2
 /*
-	usage:
+    usage:
 
-	(configFile >> "CfgAmmo") call FUNC(exportConfig);
+    (configFile >> "CfgAmmo") call FUNC(exportConfig);
 */
 #include "script_component.hpp"
 

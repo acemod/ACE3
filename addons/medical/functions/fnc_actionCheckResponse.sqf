@@ -19,7 +19,7 @@ if ([_caller] call FUNC(isSetTreatmentMutex)) exitwith {};
 
 _title = format["STR_ACE_CHECK_RESPONSE"];
 _content = ["STR_ACE_CHECK_RESPONSE_CONTENT"];
-[_caller, _title, _content] call EFUNC(gui,sendDisplayInformationTo);
+[_caller, _title, _content] call EFUNC(common,sendDisplayInformationTo);
 
 _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
 [2 + round(random(1)),
@@ -38,14 +38,14 @@ _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
 
         _title = format["STR_ACE_CHECK_RESPONSE"];
         _content = [format[localize "STR_ACE_CHECK_REPONSE_YOU_CHECKED",[_target] call EFUNC(common,getName)],_output];
-        [_caller, _title, _content] call EFUNC(gui,sendDisplayInformationTo);
+        [_caller, _title, _content] call EFUNC(common,sendDisplayInformationTo);
         [_target,"examine",_output] call FUNC(addToQuickViewLog);
 
         [_caller,false] call FUNC(treatmentMutex);
     }, // on success
     {
-        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(gui,sendDisplayInformationTo);
+        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(common,sendDisplayInformationTo);
         [(_this select 0),false] call FUNC(treatmentMutex);
     },    // on failure
     [_caller, _target] // arguments
-] call EFUNC(gui,loadingBar);
+] call EFUNC(common,loadingBar);

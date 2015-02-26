@@ -31,42 +31,49 @@
     ctrlSetFocus _text;
 
     //Change ok button's text based on current channel
-    //if (isNull _buttonOK) exitWith {true};
+    [{
+        EXPLODE_2_PVT(_this,_params,_pfhId);
+        EXPLODE_1_PVT(_params,_buttonOK);
 
-    _channel = "";
-    _textColor = [1,1,1,1];
-    switch (call EFUNC(common,currentChannel)) do {
+        if (isNull _buttonOK) exitWith {
+            [_pfhId] call CBA_fnc_removePerFrameHandler;
+        };
+
+        _channel = "";
+        _textColor = [1,1,1,1];
+        switch (call EFUNC(common,currentChannel)) do {
         case ("global"): {
-            _channel = localize "str_channel_global";
-            _textColor = [(216/255),(216/255),(216/255),1];
-        };
+                _channel = localize "str_channel_global";
+                _textColor = [(216/255),(216/255),(216/255),1];
+            };
         case ("side"): {
-            _channel = localize "str_channel_side";
-            _textColor = [(70/255),(211/255),(252/255),1];
-        };
+                _channel = localize "str_channel_side";
+                _textColor = [(70/255),(211/255),(252/255),1];
+            };
         case ("group"): {
-            _channel = localize "str_channel_group";
-            _textColor = [(181/255),(248/255),(98/255),1];
-        };
+                _channel = localize "str_channel_group";
+                _textColor = [(181/255),(248/255),(98/255),1];
+            };
         case ("vehicle"): {
-            _channel = localize "str_channel_vehicle";
-            _textColor = [(255/255),(208/255),(0/255),1];
-        };
+                _channel = localize "str_channel_vehicle";
+                _textColor = [(255/255),(208/255),(0/255),1];
+            };
         case ("direct"): {
-            _channel = localize "str_channel_direct";
-            _textColor = [(255/255),(255/255),(255/255),1];
-        };
+                _channel = localize "str_channel_direct";
+                _textColor = [(255/255),(255/255),(255/255),1];
+            };
         case ("command"): {
-            _channel = localize "str_channel_command";
-            _textColor = [(255/255),(255/255),(70/255),1];
+                _channel = localize "str_channel_command";
+                _textColor = [(255/255),(255/255),(70/255),1];
+            };
         };
-    };
 
-    //If localization not found, then don't touch anything (default is RscButtonMenuOK's localized text)
-    if (_channel != "") then {
-        _buttonOK ctrlSetTextColor _textColor;
-        _buttonOK ctrlSetText format [localize "STR_ACE_Markers_PlaceIn", _channel];
-    };
+        //If localization not found, then don't touch anything (default is RscButtonMenuOK's localized text)
+        if (_channel != "") then {
+            _buttonOK ctrlSetTextColor _textColor;
+            _buttonOK ctrlSetText format [localize "STR_ACE_Markers_PlaceIn", _channel];
+        };
+    }, 0, [_buttonOK]] call CBA_fnc_addPerFrameHandler;
 
     //--- Background
     _pos = ctrlposition _text;

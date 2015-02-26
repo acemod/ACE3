@@ -85,12 +85,14 @@ class CfgVehicles {
     };
 
     class ACE_Actions {
-      class ACE_CopyMap {
-        displayName = "$STR_ACE_Map_CopyMap";
-        condition = QUOTE(([_target] call EFUNC(common,isPlayer) && {'ItemMap' in assigneditems _player} && {'ACE_MapTools' in items _player} && {'ItemMap' in assignedItems _target}));
-        statement = QUOTE([ARR_2(_player,_target)] call FUNC(copyMapStart));
-        showDisabled = 0;
-        priority = -1;
+      class ACE_MainActions {
+        class ACE_CopyMap {
+          displayName = "$STR_ACE_Map_CopyMap";
+          condition = QUOTE(([_target] call EFUNC(common,isPlayer) && {'ItemMap' in assigneditems _player} && {'ACE_MapTools' in items _player} && {'ItemMap' in assignedItems _target}));
+          statement = QUOTE([ARR_2(_player,_target)] call FUNC(copyMapStart));
+          showDisabled = 0;
+          priority = -1;
+        };
       };
     };
   };

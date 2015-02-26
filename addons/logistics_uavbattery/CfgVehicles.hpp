@@ -2,6 +2,7 @@ class CfgVehicles {
   class Helicopter_Base_F;
   class UAV_01_base_F: Helicopter_Base_F {
     class ACE_Actions {
+      class ACE_MainActions {
         class GVAR(RefuelUAV) {
           displayName = "$STR_ACE_logistics_uavbattery_Recharge";
           distance = 4;
@@ -11,9 +12,10 @@ class CfgVehicles {
           priority = 1.245; \
           icon = QUOTE(PATHTOF(ui\UAV_battery.paa));
         };
+      };
     };
   };
-  
+
   // Misc box content
   class Box_NATO_Support_F;
   class ACE_Box_Misc: Box_NATO_Support_F {

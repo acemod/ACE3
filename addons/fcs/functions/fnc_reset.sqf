@@ -12,13 +12,14 @@
 
 #include "script_component.hpp"
 
-private "_vehicle";
+private ["_vehicle", "_turret"];
 
 _vehicle = _this select 0;
+_turret = _this select 1;
 
-_vehicle setVariable [QGVAR(Distance), 0, true];
-_vehicle setVariable [QGVAR(Magazines), [], true];
-_vehicle setVariable [QGVAR(Elevation), 0, true];
-_vehicle setVariable [QGVAR(Azimuth), 0, true];
+[_vehicle, format ["%1_%2", QGVAR(Distance),  _turret],  0] call EFUNC(common,setVariablePublic);
+[_vehicle, format ["%1_%2", QGVAR(Magazines), _turret], []] call EFUNC(common,setVariablePublic);
+[_vehicle, format ["%1_%2", QGVAR(Elevation), _turret],  0] call EFUNC(common,setVariablePublic);
+[_vehicle, format ["%1_%2", QGVAR(Azimuth),   _turret],  0] call EFUNC(common,setVariablePublic);
 
 [localize "STR_ACE_FCS_HasBeenReset"] call EFUNC(common,displayTextStructured);
