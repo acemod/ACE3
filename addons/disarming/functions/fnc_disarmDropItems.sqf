@@ -1,3 +1,21 @@
+/*
+ * Author: PabstMirror
+ *
+ *
+ * Arguments:
+ * 0: caller (player) <OBJECT>
+ * 1: target <OBJECT>
+ * 2: classnamess <ARRAY>
+ * 3: Do Not Drop Ammo <BOOL><OPTIONAL>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [player, cursorTarget, ["ace_bandage"]] call ace_disarming_fnc_disarmDropItems
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 #define TIME_MAX_WAIT 5
@@ -13,17 +31,23 @@ _fncSumArray = {
     _return
 };
 
-//Sanity Check
+//Sanity Checks
+if (!([_target] call FUNC(canDisarm))) exitWith {
+    [_caller, _target, "Debug: Cannot disarm target"] call FUNC(eventTargetFinish);
+};
 if (_doNotDropAmmo && {({_x in _listOfItemsToRemove} count (magazines _target)) > 0}) exitWith {
-    [_caller, _target, "magazines and _doNotDropAmmo error"] call FUNC(finishDisarmTarget);
+    [_caller, _target, "Debug: Trying to drop magazine with _doNotDropAmmo flag"] call FUNC(eventTargetFinish);
 };
 
 _holder = objNull;
-{
-    if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
-        _holder = _x;
-    };
-} forEach ((getpos _target) nearObjects ["WeaponHolderSimulated", 3]);
+if (!_doNotDropAmmo) then {
+    //Try to use the same container, if one exists
+    {
+        if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
+            _holder = _x;
+        };
+    } forEach ((getpos _target) nearObjects ["WeaponHolderSimulated", 3]);
+};
 
 if (isNull _holder) then {
     _dropPos = _target modelToWorld [-0.75, 0.75, 0];
@@ -34,8 +58,16 @@ if (isNull _holder) then {
 
 //Verify holder created
 if (isNull _holder) exitWith {
-    [_caller, _target, "Create Holder"] call FUNC(finishDisarmTarget);
+    [_caller, _target, "Debug: Null Holder"] call FUNC(eventTargetFinish);
 };
+//Make sure only one drop operation at a time...
+if (_holder getVariable [QGVAR(holderInUse), false]) exitWith {
+    systemChat format ["Debug: %1 - Ground Container In Use, waiting until free", time];
+    [{
+        _this call FUNC(disarmDropItems);
+    }, 0.05, 0.05, _this] call EFUNC(common,waitAndExecute);
+};
+_holder setVariable [QGVAR(holderInUse), true];
 
 
 //Remove Magazines
@@ -55,12 +87,13 @@ _holderMagazinesEnd = magazinesAmmoCargo _holder;
 
 //Verify Mags dropped from unit:
 if ( ({(_x select 0) in _listOfItemsToRemove} count _targetMagazinesEnd) != 0) exitWith {
-    [_caller, _target, "Didn't Remove Magazines"] call FUNC(finishDisarmTarget);
+    _holder setVariable [QGVAR(holderInUse), false];
+    [_caller, _target, "Debug: Didn't Remove Magazines"] call FUNC(eventTargetFinish);
 };
 //Verify holder has mags unit had (lazy count for now)
 if (((count _targetMagazinesStart) - (count _targetMagazinesEnd)) != ((count _holderMagazinesEnd) - (count _holderMagazinesStart))) exitWith {
-    ERR = [_targetMagazinesEnd, _targetMagazinesStart, _holderMagazinesEnd, _holderMagazinesStart];
-    [_caller, _target, "Crate Magazines"] call FUNC(finishDisarmTarget);
+    _holder setVariable [QGVAR(holderInUse), false];
+    [_caller, _target, "Debug: Crate Magazines not in holder"] call FUNC(eventTargetFinish);
 };
 
 
@@ -97,11 +130,14 @@ _targetItemsEnd = ((assignedItems _target) + (items _target) + [headgear _target
 
 //Verify Items Added (lazy count)
 if (((count _targetItemsStart) - (count _targetItemsEnd)) != ([_addToCrateCount] call _fncSumArray)) exitWith {
-    ERR = [_targetItemsStart, _targetItemsEnd, _addToCrateClassnames, _addToCrateCount];
-    [_caller, _target, "Items Not Removed From Player"] call FUNC(finishDisarmTarget);
+
+    _holder setVariable [QGVAR(holderInUse), false];
+    [_caller, _target, "Debug: Items Not Removed From Player"] call FUNC(eventTargetFinish);
 };
 if ((([_holderItemsEnd select 1] call _fncSumArray) - ([_holderItemsStart select 1] call _fncSumArray)) != ([_addToCrateCount] call _fncSumArray)) exitWith {
-    [_caller, _target, "Items Not Added to Holder"] call FUNC(finishDisarmTarget);
+
+    _holder setVariable [QGVAR(holderInUse), false];
+    [_caller, _target, "Debug: Items Not Added to Holder"] call FUNC(eventTargetFinish);
 };
 
 
@@ -109,7 +145,7 @@ if ((([_holderItemsEnd select 1] call _fncSumArray) - ([_holderItemsStart select
 //So add a dummy item and just remove at the end
 _holderIsEmpty = (([_holderItemsEnd select 1] call _fncSumArray) + (count _holderMagazinesEnd)) == 0;
 if (_holderIsEmpty) then {
-    systemChat "Empty: making dummy";
+    systemChat "Debug: making dummy";
     _holder addItemCargoGlobal [DUMMY_ITEM, 1];
 };
 
@@ -178,7 +214,9 @@ systemChat format ["PFEh start %1", time];
 
         //If we added a dummy item, remove it now
         if (_holderIsEmpty && {!((getItemCargo _holder) isEqualTo [[DUMMY_ITEM],[1]])}) exitWith {
-            [_caller, _target, "Holder should only have dummy item"] call FUNC(finishDisarmTarget);
+
+            _holder setVariable [QGVAR(holderInUse), false];
+            [_caller, _target, "Debug: Holder should only have dummy item"] call FUNC(eventTargetFinish);
         };
         if (_holderIsEmpty) then {
             systemChat "Debug: Deleting Dummy";
@@ -187,25 +225,29 @@ systemChat format ["PFEh start %1", time];
 
         //Verify we didn't timeout waiting on drop action
         if (time >= _maxWaitTime)  exitWith {
-            [_caller, _target, "Drop Actions Timeout"] call FUNC(finishDisarmTarget);
+            _holder setVariable [QGVAR(holderInUse), false];
+            [_caller, _target, "Debug: Drop Actions Timeout"] call FUNC(eventTargetFinish);
         };
 
         if (_needToRemoveVest && {!((vestItems _target) isEqualTo [])}) exitWith {
-            [_caller, _target, "Vest Not Empty"] call FUNC(finishDisarmTarget);
+            _holder setVariable [QGVAR(holderInUse), false];
+            [_caller, _target, "Debug: Vest Not Empty"] call FUNC(eventTargetFinish);
         };
         if (_needToRemoveVest) then {
             removeVest _target;
             _holder addItemCargoGlobal [(vest _target), 1];
         };
         if (_needToRemoveUniform && {!((uniformItems _target) isEqualTo [])}) exitWith {
-            [_caller, _target, "Uniform Not Empty"] call FUNC(finishDisarmTarget);
+            _holder setVariable [QGVAR(holderInUse), false];
+            [_caller, _target, "Debug: Uniform Not Empty"] call FUNC(eventTargetFinish);
         };
         if (_needToRemoveUniform) then {
             removeUniform _target;
             _holder addItemCargoGlobal [(uniform _target), 1];
         };
 
-        [_caller, _target, "Victory"] call FUNC(finishDisarmTarget);
+        _holder setVariable [QGVAR(holderInUse), false];
+        [_caller, _target, "Debug: Victory!!!"] call FUNC(eventTargetFinish);
     };
 
 }, 0.0, [_caller,_target, _listOfItemsToRemove, _holder, _holderIsEmpty, (time + TIME_MAX_WAIT), _doNotDropAmmo, _targetMagazinesEnd]] call CBA_fnc_addPerFrameHandler;

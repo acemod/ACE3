@@ -16,6 +16,10 @@ if ((uniform _target) != "") then {
 if ((headgear _target) != "") then {
     _allItems pushBack (headgear _target);
 };
+//What kind of asshole takes a man's glasses?
+if ((goggles _target) != "") then {
+    _allItems pushBack (goggles _target);
+};
 
 _uniqueClassnames = [];
 _classnamesCount = [];

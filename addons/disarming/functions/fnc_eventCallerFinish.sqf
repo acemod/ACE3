@@ -5,7 +5,7 @@
  * Arguments:
  * 0: caller (player) <OBJECT>
  * 1: target <OBJECT>
- * 2: type of disarm <STRING>
+ * 2: error message <STRING>
  *
  * Return Value:
  * None
@@ -17,6 +17,8 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_caller,_target,_type);
+PARAMS_3(_caller,_target,_errorMsg);
 
-["Disarm", [_target], [_caller,_target,_type]] call EFUNC(common,targetEvent);
+if (_caller != ACE_player) exitWith {};
+
+systemChat format ["Debug-Caller: Disarm finished from [%1] with code [%2]", _target, _errorMsg];
