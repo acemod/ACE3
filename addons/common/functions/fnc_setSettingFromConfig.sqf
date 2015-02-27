@@ -16,7 +16,9 @@ EXPLODE_1_PVT(_this,_optionEntry);
 
 _fnc_getValueWithType = {
     EXPLODE_2_PVT(_this,_optionEntry,_typeName);
-   _value = if (isNumber (_optionEntry >> "value")) then {getNumber (_optionEntry >> "value")} else {0}; //getNumber on an array throws a warning
+
+    _valueConfig = (_optionEntry >> "value");
+    _value = if (isNumber (_optionEntry >> "value")) then {getNumber (_optionEntry >> "value")} else {0};
     TRACE_3("_fnc_getValueWithType:", configName _optionEntry, _typeName, _value);
     if (_typeName == "BOOL") exitWith {
         _value > 0
