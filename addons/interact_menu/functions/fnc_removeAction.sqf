@@ -10,11 +10,14 @@
  * Return value:
  * None
  *
+ * Example:
+ * [cursorTarget,0,["ACE_TapShoulderRight","VulcanPinch"]] call ace_interact_menu_fnc_removeAction;
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_object,_fullPath);
+EXPLODE_3_PVT(_this,_object,_typeNum,_fullPath);
 
 private ["_varName","_actions"];
 _varName = [QGVAR(actions),QGVAR(selfActions)] select _typeNum;

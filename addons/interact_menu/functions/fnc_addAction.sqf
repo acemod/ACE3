@@ -17,6 +17,9 @@
  * Return value:
  * The entry full path, which can be used to remove the entry, or add children entries <ARRAY>.
  *
+ * Example:
+ * [cursorTarget,0,["ACE_TapShoulderRight","VulcanPinch"],"Vulcan Pinch","",[0,0,0],{_target setDamage 1;},{true},100] call ace_interact_menu_fnc_addAction;
+ *
  * Public: No
  */
 #include "script_component.hpp"
