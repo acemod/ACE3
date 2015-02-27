@@ -64,7 +64,7 @@ _menuInSelectedPath = true;
 // ARGB Color (First Hex Pair is transparancy)
 _color = "#FFFFFFFF";
 if(_menuDepth > 0 && !_menuInSelectedPath) then {
-    _color = format ["#%1FFFFFF", [255 min (255 * (((GVAR(renderDepth)/_menuDepth)) max 0.25))] call EFUNC(common,toHex)];
+    _color = format ["#%1FFFFFF", [255 * (((GVAR(renderDepth)/_menuDepth)) max 0.25)] call EFUNC(common,toHex)];
 };
 [_actionData select 0, _color, _pos, 1, 1, 0, _actionData select 1, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
 
@@ -72,15 +72,9 @@ if(_menuDepth > 0 && !_menuInSelectedPath) then {
 GVAR(currentOptions) pushBack [_this, _pos, _path];
 
 _currentRenderDepth = GVAR(renderDepth);
-GVAR(renderDepth) = GVAR(renderDepth) + 1;
-
-//systemChat format ["Menu %1, _menuInSelectedPath: %2", _actionData select 8, _menuInSelectedPath];
 
 // Exit without rendering children if it isn't
-if !(_menuInSelectedPath) exitWith {
-    //diag_log text format ["Exiting on _path: %1",_path];
-    //diag_log text format ["GVAR(menuDepthPath): %1",GVAR(menuDepthPath)];
-};
+if !(_menuInSelectedPath) exitWith {};
 
 // Collect all active children actions
 private "_activeChildren";
@@ -98,10 +92,6 @@ _activeChildren = [];
 // Collect children object actions
 {
     _actionItem = _x;
-
-    /*diag_log text format ["_path:                  %1",_path];
-    diag_log text format ["(_actionItem select 8): %1",(_actionItem select 8)];
-    diag_log text format ["(_actionData select 8): %1",(_actionData select 8)];*/
 
     // Check if the action is children of the selected menu
     if ((count (_actionItem select 8)) == (count _path)) then {
@@ -133,8 +123,6 @@ if (_angleSpan >= 305) then {
 
 _angle = _centerAngle - _angleSpan / 2;
 
-//systemChat format ["Menu %1, _numA: %2, _aSpan: %3", _actionData select 8, count _activeChildren, _angleSpan];
-
 {
     _target = _object;
     _player = ACE_player;
@@ -144,7 +132,10 @@ _angle = _centerAngle - _angleSpan / 2;
     _newPos = _pos vectorAdd (_offset vectorMultiply _mod);
 
     // drawLine3D [_pos, _newPos, [1,0,0,0.5]];
+
+    GVAR(renderDepth) = _currentRenderDepth + 1;
     [_object, _x, _forEachIndex, [_angle, 140], _newPos] call FUNC(renderMenu);
+    GVAR(renderDepth) = _currentRenderDepth;
 
     if (_angleSpan == 360) then {
         _angle = _angle + _angleSpan / (count _activeChildren);
@@ -152,5 +143,3 @@ _angle = _centerAngle - _angleSpan / 2;
         _angle = _angle + _angleSpan / (((count _activeChildren)-1) max 1);
     };
 } forEach _activeChildren;
-
-GVAR(renderDepth) = GVAR(renderDepth) - 1;

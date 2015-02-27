@@ -161,8 +161,6 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
             GVAR(menuDepthPath) = +GVAR(lastPath);
         };
     };
-    //diag_log format ["GVAR(menuDepthPath): %1", GVAR(menuDepthPath)];
-
 };
 
 if(!_foundTarget && GVAR(actionSelected)) then {
