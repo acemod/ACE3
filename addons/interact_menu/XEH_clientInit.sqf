@@ -4,13 +4,7 @@
 _fnc = {
 	_this call FUNC(render);
 };
-// [_fnc, 0, []] call cba_fnc_addPerFrameHandler;
 addMissionEventHandler ["Draw3D", _fnc];
-
-_fnc = {
-	_this call FUNC(probe);
-};
-[_fnc, 0.5, []] call cba_fnc_addPerFrameHandler;
 
 ["ACE3",
 "Interact Key",

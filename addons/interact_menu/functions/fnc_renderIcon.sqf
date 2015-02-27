@@ -24,6 +24,8 @@ _color = _this select 1;
 _pos = _this select 2;
 _icon = _this select 6;
 
+//systemChat format ["Icon %1 - %2,%3,%4", _text, _pos select 0, _pos select 1, _pos select 2];
+
 _sPos = worldToScreen _pos;
 // _sPos = _pos;
 if(count _sPos > 0) then {

@@ -1,6 +1,6 @@
 /*
  * Author: NouberNou and CAA-Picard
- * Compile the self action menu from config for a given object.
+ * Compile the self action menu from config for an object's class
  *
  * Argument:
  * 0: Object <OBJECT>
@@ -14,34 +14,25 @@
 
 EXPLODE_1_PVT(_this,_object);
 
-/*
-[
-    [
-        "Launch",
-        "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
-        [0,0,0],
-        { (_this select 0) setVelocity [0,0,10]; },
-        { true },
-        1,
-        []
-    ]
-]
-*/
-
-private ["_objectType","_recurseFnc","_actions"];
+private ["_objectType","_actionsVarName"];
 _objectType = typeOf _object;
-_actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_SelfActions";
+_actionsVarName = format [QGVAR(SelfAct_%1), _objectType];
 
+// Exit if the action menu is already compiled for this class
+if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
 
+private "_recurseFnc";
 _recurseFnc = {
-    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_condition", "_showDisabled",
-            "_enableInside", "_children", "_entry", "_actionsCfg"];
+    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_selection", "_condition", "_showDisabled",
+            "_enableInside", "_children", "_entry", "_entryCfg", "_fullPath"];
+    EXPLODE_2_PVT(_this,_actionsCfg,_parentPath);
     _actions = [];
-    _actionsCfg = _this select 0;
-    for "_i" from 0 to (count _actionsCfg)-1 do {
+
+    for "_i" from 0 to (count _actionsCfg) - 1 do {
         _entryCfg = _actionsCfg select _i;
         if(isClass _entryCfg) then {
             _displayName = getText (_entryCfg >> "displayName");
+
             _icon = getText (_entryCfg >> "icon");
             _statement = compile (getText (_entryCfg >> "statement"));
 
@@ -54,8 +45,12 @@ _recurseFnc = {
             _showDisabled = getNumber (_entryCfg >> "showDisabled");
             _enableInside = getNumber (_entryCfg >> "enableInside");
 
+            _fullPath = (+ _parentPath);
+            _fullPath pushBack (configName _entryCfg);
+
             _condition = compile _condition;
-            _children = [_entryCfg] call _recurseFnc;
+            _children = [_entryCfg, _fullPath] call _recurseFnc;
+
             _entry = [
                         _displayName,
                         _icon,
@@ -64,8 +59,10 @@ _recurseFnc = {
                         _condition,
                         10, //distace
                         _children,
-                        GVAR(uidCounter)
+                        GVAR(uidCounter),
+                        _fullPath
                     ];
+
             GVAR(uidCounter) = GVAR(uidCounter) + 1;
             _actions pushBack _entry;
         };
@@ -73,7 +70,8 @@ _recurseFnc = {
     _actions
 };
 
-_actions = [_actionsCfg] call _recurseFnc;
+private "_actionsCfg";
+_actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_SelfActions";
 
 // Create a master action to base on self action
 _actions = [[
@@ -83,10 +81,11 @@ _actions = [[
     { true },
     { true },
     10,
-    _actions,
-    GVAR(uidCounter)
+    [_actionsCfg, ["SelfActions"]] call _recurseFnc,
+    GVAR(uidCounter),
+    ["SelfActions"]
 ]
 ];
 GVAR(uidCounter) = GVAR(uidCounter) + 1;
 
-_object setVariable [QUOTE(GVAR(selfActionData)), _actions];
+missionNamespace setVariable [_actionsVarName, _actions];
