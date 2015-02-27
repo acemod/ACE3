@@ -64,14 +64,12 @@ _menuInSelectedPath = true;
 // ARGB Color (First Hex Pair is transparancy)
 _color = "#FFFFFFFF";
 if(_menuDepth > 0 && !_menuInSelectedPath) then {
-    _color = format ["#%1FFFFFF", [255 * (((GVAR(renderDepth)/_menuDepth)) max 0.25)] call EFUNC(common,toHex)];
+    _color = format ["#%1FFFFFF", [255 * ((((count _path) - 2)/_menuDepth) max 0.25)] call EFUNC(common,toHex)];
 };
 [_actionData select 0, _color, _pos, 1, 1, 0, _actionData select 1, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
 
 // Add the action to current options
 GVAR(currentOptions) pushBack [_this, _pos, _path];
-
-_currentRenderDepth = GVAR(renderDepth);
 
 // Exit without rendering children if it isn't
 if !(_menuInSelectedPath) exitWith {};
@@ -133,9 +131,7 @@ _angle = _centerAngle - _angleSpan / 2;
 
     // drawLine3D [_pos, _newPos, [1,0,0,0.5]];
 
-    GVAR(renderDepth) = _currentRenderDepth + 1;
     [_object, _x, _forEachIndex, [_angle, 140], _newPos] call FUNC(renderMenu);
-    GVAR(renderDepth) = _currentRenderDepth;
 
     if (_angleSpan == 360) then {
         _angle = _angle + _angleSpan / (count _activeChildren);

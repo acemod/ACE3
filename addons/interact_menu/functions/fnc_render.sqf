@@ -39,7 +39,6 @@ if (GVAR(keyDown)) then {
                 _active = [_target, ACE_player] call (_actionItem select 4);
 
                 if (_active) then {
-                    GVAR(renderDepth) = 0;
                     [_target, _actionItem, 0, [180, 360]] call FUNC(renderMenu);
                 };
             };
@@ -52,7 +51,6 @@ if (GVAR(keyDown)) then {
             _active = [_target, ACE_player] call (_actionItem select 4);
 
             if (_active) then {
-                GVAR(renderDepth) = 0;
                 [_target, _actionItem, 0, [180, 360]] call FUNC(renderMenu);
             };
         } forEach _classActions;
@@ -80,7 +78,6 @@ if (GVAR(keyDown)) then {
                 _active = [_target, ACE_player] call (_actionItem select 4);
 
                 if (_active) then {
-                    GVAR(renderDepth) = 0;
                     [_target, _actionItem, 0, [180, 360]] call FUNC(renderMenu);
                 };
             };
@@ -94,7 +91,6 @@ if (GVAR(keyDown)) then {
             _active = [_target, ACE_player] call (_actionItem select 4);
 
             if (_active) then {
-                GVAR(renderDepth) = 0;
                 _pos = (ACE_player modelToWorld (ACE_player selectionPosition "spine3")) vectorAdd GVAR(selfMenuOffset) vectorAdd [0,0,0.25];
                 [ACE_player, _actionItem, 0, [180, 360], _pos] call FUNC(renderMenu);
             };
