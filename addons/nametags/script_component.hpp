@@ -10,3 +10,9 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define ICON_NONE 0
+#define ICON_NAME 1
+#define ICON_NAME_RANK 2
+#define ICON_NAME_SPEAK 3
+#define ICON_SPEAK 4
