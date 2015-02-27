@@ -19,6 +19,7 @@
 disableSerialization;
 PARAMS_2(_listBoxCtrl,_itemsCountArray);
 
+
 {
     _displayName = "";
     _picture = "";

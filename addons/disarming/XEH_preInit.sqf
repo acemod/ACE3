@@ -3,13 +3,13 @@
 ADDON = false;
 
 PREP(canDisarm);
-PREP(canFrisk2);
 PREP(disarmDropItems);
-PREP(doFrisk2);
-PREP(finishDisarmCaller);
-PREP(finishDisarmTarget);
-PREP(getAllGear);
-PREP(startDisarmCaller);
-PREP(startDisarmTarget);
+PREP(eventCallerFinish);
+PREP(eventTargetFinish);
+PREP(eventTargetStart);
+PREP(getAllGearContainer);
+PREP(getAllGearUnit);
+PREP(openDisarmDialog);
+PREP(showItemsInListbox);
 
 ADDON = true;

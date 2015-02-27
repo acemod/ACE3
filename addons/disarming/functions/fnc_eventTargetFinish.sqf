@@ -19,6 +19,8 @@
 
 PARAMS_3(_caller,_target,_errorMsg);
 
-_target setVariable [QGVAR(disarmInProgress), false];
 
-["DisarmFinished", [_caller], [_caller, _target, _errorMsg]] call EFUNC(common,targetEvent);
+if (_errorMsg != "") then {
+    systemChat _errorMsg;
+    ["DisarmDebugCallback", [_caller], [_caller, _target, _errorMsg]] call EFUNC(common,targetEvent);
+};

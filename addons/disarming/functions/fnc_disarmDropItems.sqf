@@ -46,13 +46,14 @@ if (!_doNotDropAmmo) then {
         if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
             _holder = _x;
         };
-    } forEach ((getpos _target) nearObjects ["WeaponHolderSimulated", 3]);
+    } forEach ((getpos _target) nearObjects ["GroundWeaponHolder", 3]);
 };
 
 if (isNull _holder) then {
     _dropPos = _target modelToWorld [-0.75, 0.75, 0];
     _dropPos set [2, 0];
-    _holder = createVehicle ["WeaponHolderSimulated", _dropPos, [], 0, "CAN_COLLIDE"];
+    // _holder = createVehicle ["WeaponHolderSimulated", _dropPos, [], 0, "CAN_COLLIDE"];
+    _holder = createVehicle ["GroundWeaponHolder", _dropPos, [], 0, "CAN_COLLIDE"];
     _holder setVariable [QGVAR(disarmUnit), _target];
 };
 

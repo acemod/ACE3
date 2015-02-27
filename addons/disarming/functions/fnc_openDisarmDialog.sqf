@@ -35,7 +35,7 @@ GVAR(disarmTarget) = _target;
     EXPLODE_3_PVT(_args,_player,_target,_display);
 
 
-    if ((!([_target] call FUNC(unitCanBeDisarmed))) ||
+    if ((!([_target] call FUNC(canDisarm))) ||
             {isNull _display} ||
             {_player != ACE_player} ||
             {!([] call EGVAR(common,canInteract))}) then {
@@ -64,13 +64,11 @@ GVAR(disarmTarget) = _target;
             if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
                 _holder = _x;
             };
-        } forEach ((getpos _target) nearObjects ["WeaponHolderSimulated", 3]);
+        } forEach ((getpos _target) nearObjects ["GroundWeaponHolder", 3]);
 
         if (!isNull _holder) then {
-
-            _targetUniqueItems = [_holder] call FUNC(getAllGearContainer);
-            [_groundContainer, _targetUniqueItems] call FUNC(showItemsInListbox);
-
+            _holderUniqueItems = [_holder] call FUNC(getAllGearContainer);
+            [_groundContainer, _holderUniqueItems] call FUNC(showItemsInListbox);
         };
 
     };
