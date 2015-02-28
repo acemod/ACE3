@@ -14,7 +14,7 @@ createDialog QGVAR(remoteInventory);
 
 disableSerialization;
 
-_display = uiNamespace getVariable ["remoteInventory", displayNull];
+_display = uiNamespace getVariable ["ACE_remoteInventory", displayNull];
 if (isNull _display) exitWith {ERROR("Display is Null");};
 
 GVAR(disarmTarget) = _target;
