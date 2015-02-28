@@ -89,7 +89,7 @@ missionNamespace setVariable [_actionsVarName, [_actionsCfg, []] call _recurseFn
         1,
         [],
         uid,
-        ["MainActions","TeamManagement","MyAction"]
+        ["ACE_MainActions","TeamManagement","MyAction"]
     ]
 ]
 */

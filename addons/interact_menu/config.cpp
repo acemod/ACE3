@@ -13,3 +13,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+
+#include "CursorMenus.hpp"

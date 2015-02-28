@@ -32,7 +32,7 @@ class CfgVehicles {
     class ACE_Actions {
       class ACE_MainActions {
         displayName = "$STR_ACE_Interaction_MainAction";
-        distance = 4;
+        distance = 5;
         condition = QUOTE(true);
         statement = "";
         icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
@@ -40,7 +40,7 @@ class CfgVehicles {
 
         class ACE_TeamManagement {
           displayName = "$STR_ACE_Interaction_TeamManagement";
-          distance = 4;
+          distance = 5;
           condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player} && {GVAR(EnableTeamManagement)});
           statement = "";
           showDisabled = 0;
@@ -51,7 +51,7 @@ class CfgVehicles {
 
           class ACE_JoinTeamRed {
             displayName = "$STR_ACE_Interaction_JoinTeamRed";
-            distance = 4;
+            distance = 5;
             condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
             statement = QUOTE([ARR_2(_target,'RED')] call DFUNC(joinTeam));
             showDisabled = 1;
@@ -62,7 +62,7 @@ class CfgVehicles {
           };
           class ACE_JoinTeamGreen {
             displayName = "$STR_ACE_Interaction_JoinTeamGreen";
-            distance = 4;
+            distance = 5;
             condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
             statement = QUOTE([ARR_2(_target,'GREEN')] call DFUNC(joinTeam));
             showDisabled = 1;
@@ -73,7 +73,7 @@ class CfgVehicles {
           };
           class ACE_JoinTeamBlue {
             displayName = "$STR_ACE_Interaction_JoinTeamBlue";
-            distance = 4;
+            distance = 5;
             condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
             statement = QUOTE([ARR_2(_target,'BLUE')] call DFUNC(joinTeam));
             showDisabled = 1;
@@ -84,7 +84,7 @@ class CfgVehicles {
           };
           class ACE_JoinTeamYellow {
             displayName = "$STR_ACE_Interaction_JoinTeamYellow";
-            distance = 4;
+            distance = 5;
             condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
             statement = QUOTE([ARR_2(_target,'YELLOW')] call DFUNC(joinTeam));
             showDisabled = 1;
@@ -96,7 +96,7 @@ class CfgVehicles {
 
           class ACE_LeaveTeam {
             displayName = "$STR_ACE_Interaction_LeaveTeam";
-            distance = 4;
+            distance = 5;
             condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player} && {assignedTeam _player != 'MAIN'});
             statement = QUOTE([ARR_2(_target,'MAIN')] call DFUNC(joinTeam));
             showDisabled = 1;
@@ -109,7 +109,7 @@ class CfgVehicles {
 
         class ACE_JoinGroup {
           displayName = "$STR_ACE_Interaction_JoinGroup";
-          distance = 4;
+          distance = 5;
           condition = QUOTE(side group _player == side group _target && {group _player != group _target});
           statement = QUOTE([_player] joinSilent group _target;);
           showDisabled = 0;
@@ -121,7 +121,7 @@ class CfgVehicles {
 
         class ACE_GetDown {
           displayName = "$STR_ACE_Interaction_GetDown";
-          distance = 4;
+          distance = 5;
           condition = QUOTE([_target] call DFUNC(canInteractWith));
           statement = QUOTE([_target] call DFUNC(getDown));
           showDisabled = 0;
@@ -129,7 +129,7 @@ class CfgVehicles {
         };
         class ACE_SendAway {
           displayName = "$STR_ACE_Interaction_SendAway";
-          distance = 4;
+          distance = 5;
           condition = QUOTE([_target] call DFUNC(canInteractWith));
           statement = QUOTE([_target] call DFUNC(sendAway));
           showDisabled = 0;
@@ -137,7 +137,7 @@ class CfgVehicles {
         };
         class ACE_Pardon {
           displayName = "$STR_ACE_Interaction_Pardon";
-          distance = 4;
+          distance = 5;
           condition = QUOTE(rating _target < -2000 && {alive _target} && {side group _player == side group _target});
           statement = QUOTE([ARR_3(_target,'{_this addRating -rating _this}',_target)] call DEFUNC(common,execRemoteFnc));
           showDisabled = 0;
