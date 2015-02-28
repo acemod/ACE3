@@ -63,10 +63,11 @@ _unit setvariable [QGVAR(isBleeding), false, true];
 _unit setvariable [QGVAR(hasPain), false, true];
 
 // medication
-_allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];
+_allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
 {
    _unit setvariable [_x select 0, nil];
 }foreach _allUsedMedication;
+_unit setVariable [QGVAR(allUsedMedication), []];
 
 _logs = _unit getvariable [QGVAR(allLogs), []];
 {
