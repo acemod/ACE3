@@ -102,4 +102,17 @@ if (_iconDisplayed != "") then {
     [QGVAR(treatmentActionIcon), true, _iconDisplayed, [1,1,1,1], getNumber(_config >> "actionIconDisplayTime");] call EFUNC(common,displayIcon);
 };
 
+// handle display of text/hints
+_displayText = "";
+if (_target != _caller) then {
+    _displayText = getText(_config >> "displayTextOther");
+} else {
+    _displayText = getText(_config >> "displayTextSelf");
+};
+
+if (_displayText != "") then {
+    ["displayTextStructured", [_caller], [[_displayText, [_caller] call EFUNC(getName), [_target] call EFUNC(getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
+};
+
+
 true;
