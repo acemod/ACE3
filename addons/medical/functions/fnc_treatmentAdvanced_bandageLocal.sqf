@@ -65,11 +65,18 @@ _mostEffectiveInjury = _openWounds select 0;
 
 if (_effectivenessFound == 0) exitwith {}; // Seems everything is patched up on this body part already..
 
+// TODO refactor this part
 // Find the impact this bandage has and reduce the amount this injury is present
 _impact = if ((_mostEffectiveInjury select 3) >= _effectivenessFound) then {_effectivenessFound} else { (_mostEffectiveInjury select 3) };
 _mostEffectiveInjury set [ 3, ((_mostEffectiveInjury select 3) - _effectivenessFound) max 0];
-_openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
-_target setvariable [QGVAR(openWounds), _openWounds];
+
+if (_mostEffectiveInjury select 3 == 0) then {
+    _openWounds deleteAt _mostEffectiveSpot;
+} else {
+    _openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
+};
+
+_target setvariable [QGVAR(openWounds), _openWounds, true];
 
 // Handle the reopening of bandaged wounds
 if (_impact > 0) then {

@@ -131,7 +131,7 @@ class ACE_Medical_Actions {
             treatmentLocations[] = {"All"};
             requiredMedic = 1;
             treatmentTime = 15;
-            callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_aidKit));
+            callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
             itemConsumed = 0;
         };
         class CheckPulse: fieldDressing {
@@ -155,6 +155,18 @@ class ACE_Medical_Actions {
         class RemoveTourniquet: CheckPulse {
             treatmentTime = 2.5;
             callbackSuccess = QUOTE(DFUNC(actionRemoveTourniquet));
+        };
+        class CPR: fieldDressing {
+            treatmentLocations[] = {"All"};
+            requiredMedic = 0;
+            treatmentTime = 25;
+            items[] = {};
+            callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
+            callbackFailure = "";
+            callbackProgress = "";
+            animationPatient = "";
+            animationCaller = ""; // TODO
+            itemConsumed = 0;
         };
 
     };

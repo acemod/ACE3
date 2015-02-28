@@ -20,7 +20,7 @@ _target = _this select 0;
 _className = _this select 1;
 
 // We have added a new dose of this medication to our system, so let's increase it
-_varName = format["ACE_Medical_%1_inSystem", _className];
+_varName = format[QGVAR(%1_inSystem), _className];
 _currentInSystem = _target getvariable [_varName, 0];
 _currentInSystem = _currentInSystem + 1;
 _target setvariable [_varName, _currentInSystem];

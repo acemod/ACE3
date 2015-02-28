@@ -44,6 +44,7 @@ _parseForSubClassWounds = {
 	false;
 };
 
+// TODO classTypes are strings currently. Convert them to unqiue IDs instead.
 _woundsConfig = (_injuriesRootConfig >> "wounds");
 _allWoundClasses = [];
 if (isClass _woundsConfig) then {
