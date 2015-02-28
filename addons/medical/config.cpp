@@ -16,3 +16,4 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "ACE_Medical_Treatments.hpp"
+#include "UI\RscTitles.hpp"
