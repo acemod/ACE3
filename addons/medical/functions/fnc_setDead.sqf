@@ -22,7 +22,7 @@ if (count _this >= 2) then {
 
 if (!alive _unit) exitwith{};
 if (!local _unit) exitwith {
-    [[_unit, _force], QUOTE(FUNC(setDead)), _unit, false] call EFUNC(common,execRemoteFnc);
+    [[_unit, _force], QUOTE(DFUNC(setDead)), _unit, false] call EFUNC(common,execRemoteFnc);
 };
 
 if (missionName getVariable [QGVAR(enableRevive), false]) exitwith {

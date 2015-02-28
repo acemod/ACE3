@@ -28,7 +28,7 @@ if (count _items == 0) exitwith {};
 
 if ([_caller, _target, _items] call FUNC(useItem)) then {
     _removeItem = _items select 0;
-    [[_target, _removeItem], QUOTE(FUNC(treatmentIVLocal)), _target] call EFUNC(common,execRemoteFnc);
+    [[_target, _removeItem], QUOTE(DFUNC(treatmentIVLocal)), _target] call EFUNC(common,execRemoteFnc);
     ["Medical_treatmentCompleted", [_caller, _target, _selectionName, _className, true]] call ace_common_fnc_localEvent;
     [_target, _removeItem] call FUNC(addToTriageCard);
 	[_target, "activity", "STR_ACE_HAS_GIVEN_IV_ACTIVITY", [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);

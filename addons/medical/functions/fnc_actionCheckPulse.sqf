@@ -18,4 +18,4 @@ private ["_caller","_target","_title","_content"];
 _caller = _this select 0;
 _target = _this select 1;
 
-[[_caller, _target], QUOTE(FUNC(actionCheckPulseLocal)), _target] call EFUNC(common,execRemoteFnc);
+[[_caller, _target], QUOTE(DFUNC(actionCheckPulseLocal)), _target] call EFUNC(common,execRemoteFnc);
