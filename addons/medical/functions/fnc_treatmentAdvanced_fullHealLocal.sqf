@@ -30,7 +30,7 @@ if (alive _unit) exitwith {
     // vitals
     _unit setVariable [QGVAR(heartRate), 80];
     _unit setvariable [QGVAR(heartRateAdjustments), []];
-    _unit setvariable [QGVAR(bloodPressure), _bloodPressure];
+    _unit setvariable [QGVAR(bloodPressure),  [80, 120]];
     _unit setVariable [QGVAR(peripheralResistance), 100];
 
     // fractures
