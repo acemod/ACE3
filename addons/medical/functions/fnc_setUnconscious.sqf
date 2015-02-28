@@ -15,7 +15,7 @@
 
 private ["_unit", "_set", "_animState", "_originalPos", "_captiveSwitch", "_startingTime","_minWaitingTime"];
 _unit = _this select 0;
-_set = if (count _this > 1) then {_this select 0} else {true};
+_set = if (count _this > 1) then {_this select 1} else {true};
 
 if !(_set) exitwith {
     _unit setvariable ["ACE_isUnconscious", false,true];
