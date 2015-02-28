@@ -66,7 +66,7 @@ _woundsCreated = [];
         for "_i" from 0 to (1+ floor(random(_x select 1)-1)) /* step +1 */ do {
             _toAddInjury =  _allPossibleInjuries select (floor(random (count _allPossibleInjuries)));
             // ID, classname, bodypart, percentage treated, bloodloss rate
-            _injury = [_woundID, _toAddInjury select 0, if (_injuryTypeInfo select 1) then {_bodyPartn} else {floor(random(6))}, 1, _toAddInjury select 2]
+            _injury = [_woundID, _toAddInjury select 0, if (_injuryTypeInfo select 1) then {_bodyPartn} else {floor(random(6))}, 1, _toAddInjury select 2];
             _openWounds pushback _injury;
             _woundsCreated pushback _injury;
             _woundID = _woundID + 1;
