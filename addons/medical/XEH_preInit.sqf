@@ -42,7 +42,6 @@ PREP(isInMedicalFacility);
 PREP(isMedic);
 PREP(isMedicalVehicle);
 PREP(onMedicationUsage);
-PREP(onTreatmentCompleted);
 PREP(parseConfigForInjuries);
 PREP(playInjuredSound);
 PREP(reactionToDamage);
