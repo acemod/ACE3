@@ -99,7 +99,7 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
 
 _iconDisplayed = getText (_config >> "actionIconPath");
 if (_iconDisplayed != "") then {
-    [QGVAR(treatmentActionIcon), true, _iconDisplayed, [1,1,1,1], getNumber(_config >> "actionIconDisplayTime");] call EFUNC(common,displayIcon);
+    [QGVAR(treatmentActionIcon), true, _iconDisplayed, [1,1,1,1], getNumber(_config >> "actionIconDisplayTime")] call EFUNC(common,displayIcon);
 };
 
 // handle display of text/hints
@@ -111,7 +111,7 @@ if (_target != _caller) then {
 };
 
 if (_displayText != "") then {
-    ["displayTextStructured", [_caller], [[_displayText, [_caller] call EFUNC(getName), [_target] call EFUNC(getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
+    ["displayTextStructured", [_caller], [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
 };
 
 

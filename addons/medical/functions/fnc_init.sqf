@@ -56,8 +56,8 @@ _unit setvariable [QGVAR(airwayCollapsed), true, true];
 
 // generic medical admin
 _unit setvariable [QGVAR(addedToUnitLoop), false, true];
-_unit setvariable [QGVAR(inCardiacArrest), true,true];
-_unit setVariable [QGVAR(isUnconscious), false, true]
+_unit setvariable [QGVAR(inCardiacArrest), true, true];
+_unit setVariable [QGVAR(isUnconscious), false, true];
 _unit setvariable [QGVAR(hasLostBlood), true, true];
 _unit setvariable [QGVAR(isBleeding), false, true];
 _unit setvariable [QGVAR(hasPain), false, true];

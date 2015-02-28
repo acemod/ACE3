@@ -80,7 +80,8 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
 	_woundTypes = [];
 	_type = _x;
 	{
-		if (_type in (_x select 4)) then {
+		// Check if this type is in the causes of a wound class, if so, we will store the wound types for this damage type
+		if (_type in (_x select 5)) then {
 			_woundTypes pushback _x;
 		};
 	}foreach _allWoundClasses;

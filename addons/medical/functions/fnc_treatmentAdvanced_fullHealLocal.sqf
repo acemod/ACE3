@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_caller"];
+private ["_unit", "_caller", "_allUsedMedication"];
 _unit = _this select 0;
 _caller = _this select 1;
 
@@ -30,7 +30,7 @@ if (alive _unit) exitwith {
     // vitals
     _unit setVariable [QGVAR(heartRate), 80];
     _unit setvariable [QGVAR(heartRateAdjustments), []];
-    _unit setvariable [QGVAR(bloodPressure),  [80, 120]];
+    _unit setvariable [QGVAR(bloodPressure), [80, 120]];
     _unit setVariable [QGVAR(peripheralResistance), 100];
 
     // fractures
@@ -51,22 +51,18 @@ if (alive _unit) exitwith {
 
     // generic medical admin
     _unit setvariable [QGVAR(addedToUnitLoop), false, true];
-    _unit setvariable [QGVAR(inCardiacArrest), true,true];
-    _unit setVariable [QGVAR(isUnconscious), false, true]
+    _unit setvariable [QGVAR(inCardiacArrest), true, true];
+    _unit setVariable [QGVAR(isUnconscious), false, true];
     _unit setvariable [QGVAR(hasLostBlood), true, true];
     _unit setvariable [QGVAR(isBleeding), false, true];
     _unit setvariable [QGVAR(hasPain), false, true];
 
     // medication
-    _allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];
+    _allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
     {
        _unit setvariable [_x select 0, nil];
     }foreach _allUsedMedication;
 
     // Resetting damage
     _unit setDamage 0;
-    ["Medical_onFullyHealed", [_unit, true]] call ace_common_fnc_localEvent;
-    [format["Completed healLocal %1", _this]] call EFUNC(common,debug);
 };
-
-["Medical_onFullyHealed", [_unit, false]] call ace_common_fnc_localEvent;

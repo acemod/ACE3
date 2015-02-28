@@ -16,6 +16,8 @@
  * Public: No
  */
 
+#include "script_component.hpp"
+
 private ["_target", "_className", "_variable", "_maxDosage", "_timeInSystem", "_incompatabileMeds", "_foundEntry", "_allUsedMedication","_allMedsFromClassname", "_usedMeds", "_hasOverDosed", "_med", "_limit", "_classNamesUsed", "_decreaseAmount"];
 _target = _this select 0;
 _className = _this select 1;
