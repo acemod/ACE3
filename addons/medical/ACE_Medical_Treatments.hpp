@@ -15,7 +15,7 @@ class ACE_Medical_Actions {
             itemConsumed = 1;
 
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bandage));
-            callbackFailure = QUOTE(DFUNC(treatmentBasic_abort));
+            callbackFailure = "";
             callbackProgress = "";
 
             animationPatient = "";
