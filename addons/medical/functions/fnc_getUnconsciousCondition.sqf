@@ -16,6 +16,7 @@
 private ["_unit","_return"];
 _unit = _this select 0;
 
+if (GVAR(level) == 0) exitwith {true};
 if (isnil QGVAR(unconsciousConditions)) then {
     GVAR(unconsciousConditions) = [];
 };

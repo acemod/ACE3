@@ -13,8 +13,13 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_animState", "_originalPos", "_captiveSwitch", "_startingTime","_minWaitingTime"];
+private ["_unit", "_set", "_animState", "_originalPos", "_captiveSwitch", "_startingTime","_minWaitingTime"];
 _unit = _this select 0;
+_set = if (count _this > 1) then {_this select 0} else {true};
+
+if !(_set) exitwith {
+    _unit setvariable ["ACE_isUnconscious", false,true];
+};
 
 if !(!(isNull _unit) && {(_unit isKindOf "CaManBase") && ([_unit] call EFUNC(common,isAwake))}) exitwith{};
 
@@ -74,7 +79,7 @@ _startingTime = time;
 _minWaitingTime = (round(random(10)+5));
 
 [{
-    private ["_unit", "_vehicleOfUnit","_lockSwitch","_minWaitingTime", "_oldAnimation", "_captiveSwitch"];
+    private ["_unit", "_vehicleOfUnit","_lockSwitch","_minWaitingTime", "_oldAnimation", "_captiveSwitch", "_hasMovedOut"];
     _args = _this select 0;
     _unit = _args select 0;
     _oldAnimation = _args select 1;
@@ -82,7 +87,7 @@ _minWaitingTime = (round(random(10)+5));
     _originalPos = _args select 3;
     _startingTime = _args select 4;
     _minWaitingTime = _args select 5;
-
+    _hasMovedOut = _args select 6;
     // Since the unit is no longer alive, get rid of this PFH.
     if (!alive _unit) exitwith {
         // EXIT PFH
@@ -105,13 +110,7 @@ _minWaitingTime = (round(random(10)+5));
             // EXIT PFH
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
         };
-    };
-
-    // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
-    if ((time - _startingTime) >= _minWaitingTime) exitwith {
-
-        // Wait until the unit is no longer unconscious
-        if (!([_unit] call FUNC(getUnconsciousCondition))) then {
+        if (!_hasMovedOut) then {
             // Reset the unit back to the previous captive state.
             if (_captiveSwitch) then {
             //    [_unit, false] call EFUNC(common,setCaptiveSwitch);
@@ -129,10 +128,20 @@ _minWaitingTime = (round(random(10)+5));
                 //[_unit, false] call EFUNC(common,disableAI_F);
                 //_unit setUnitPos _originalPos;    // This is not position but stance (DOWN, MIDDLE, UP)
             };
+            _unit setUnconscious false;
 
+            // ensure this statement runs only once
+            _args set [6, true];
+        };
+    };
+
+    // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
+    if ((time - _startingTime) >= _minWaitingTime) exitwith {
+
+        // Wait until the unit is no longer unconscious
+        if (!([_unit] call FUNC(getUnconsciousCondition))) then {
             // Move unit out of unconscious state
             _unit setvariable ["ACE_isUnconscious", false, true];
-            _unit setUnconscious false;
         };
     };
 
@@ -142,5 +151,5 @@ _minWaitingTime = (round(random(10)+5));
         [_unit,([_unit] call FUNC(getDeathAnim)), 1, true] call EFUNC(common,doAnimation); // Reset animations if unit starts doing wierd things.
     };
 
-}, 0.1, [_unit,_animState, _captiveSwitch, _originalPos, _startingTime, _minWaitingTime] ] call CBA_fnc_addPerFrameHandler;
+}, 0.1, [_unit,_animState, _captiveSwitch, _originalPos, _startingTime, _minWaitingTime, false] ] call CBA_fnc_addPerFrameHandler;
 
