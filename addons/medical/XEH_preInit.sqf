@@ -10,6 +10,7 @@ PREP(handleDamage_basic);
 PREP(handleDamage_fractures);
 PREP(handleDamage_internalInjuries);
 PREP(handleDamage_caching);
+PREP(handleDamage_advancedSetDamage);
 PREP(init);
 PREP(selectionNameToNumber);
 PREP(handleDamage_wounds);
@@ -67,6 +68,7 @@ PREP(isMedic);
 PREP(isInMedicalFacility);
 PREP(isMedicalVehicle);
 PREP(canAccessMedicalEquipment);
+PREP(determineIfFatal);
 
 GVAR(injuredUnitCollection) = [];
 call FUNC(parseConfigForInjuries);
