@@ -1,3 +1,5 @@
+//openDisarmDialog
+
 #include "script_component.hpp"
 
 PARAMS_2(_caller,_target);
@@ -23,9 +25,12 @@ GVAR(disarmTarget) = _target;
     PARAMS_5(_ctrl,_xPos,_yPos,_idc,_itemInfo);
     EXPLODE_3_PVT((_itemInfo select 0),_displayText,_value,_data);
 
+    if (isNull GVAR(disarmTarget)) exitWith {ERROR("disarmTarget is null");};
+    
     systemChat format ["Debug: Droping %1 from %2", _data, GVAR(disarmTarget)];
-    [ACE_player, GVAR(disarmTarget), [_data]] call FUNC(disarmDropItems);
-    false
+    ["DisarmDropItems", [GVAR(disarmTarget)], [ACE_player, GVAR(disarmTarget), [_data]]] call EFUNC(common,targetEvent);
+    
+    false //not sure what this does
 }];
 
 //Setup PFEH

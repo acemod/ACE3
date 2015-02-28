@@ -2,14 +2,16 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_Actions {
-            class ACE_Disarm {
-                displayName = "Disarm";
-                distance = 3;
-                condition = QUOTE([_target] call FUNC(canDisarm));
-                statement = "";
-                showDisabled = 0;
-                priority = 3.2;
-                enableInside = 0;
+            class ACE_MainActions {
+                class ACE_DisarmInventory {
+                    displayName = "Open Inventory";
+                    distance = 4;
+                    condition = QUOTE([_target] call FUNC(canDisarm));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(openDisarmDialog));
+                    icon = "\a3\Modules_F_Curator\Data\portraitRespawnInventory_ca.paa"; //todo
+                    selection = "spine3";
+                    exceptions[] = {};
+                };
             };
         };
     };

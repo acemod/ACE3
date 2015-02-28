@@ -22,3 +22,4 @@ PARAMS_3(_caller,_target,_errorMsg);
 if (_caller != ACE_player) exitWith {};
 
 systemChat format ["Debug-Caller: Disarm finished from [%1] with code [%2]", _target, _errorMsg];
+[format ["Problem Removing Item<br/>%1", _errorMsg]] call EFUNC(common,displayTextStructured);

@@ -39,8 +39,8 @@ PARAMS_2(_listBoxCtrl,_itemsCountArray);
             _picture = getText (configFile >> "CfgVehicles" >> _x >> "picture");
         };
     case (isClass (configFile >> "CfgGlasses" >> _x)): {
-            _displayName = getText (configFile >> "CfgGoggles" >> _x >> "displayName");
-            _picture = getText (configFile >> "CfgGoggles" >> _x >> "picture");
+            _displayName = getText (configFile >> "CfgGlasses" >> _x >> "displayName");
+            _picture = getText (configFile >> "CfgGlasses" >> _x >> "picture");
         };
     };
 

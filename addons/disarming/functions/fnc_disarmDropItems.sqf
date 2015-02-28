@@ -66,7 +66,7 @@ if (_holder getVariable [QGVAR(holderInUse), false]) exitWith {
     systemChat format ["Debug: %1 - Ground Container In Use, waiting until free", time];
     [{
         _this call FUNC(disarmDropItems);
-    }, 0.05, 0.05, _this] call EFUNC(common,waitAndExecute);
+    }, _this, 0.05, 0.05] call EFUNC(common,waitAndExecute);
 };
 _holder setVariable [QGVAR(holderInUse), true];
 
@@ -100,7 +100,10 @@ if (((count _targetMagazinesStart) - (count _targetMagazinesEnd)) != ((count _ho
 
 //Remove Items, Assigned Items and NVG
 _holderItemsStart = getitemCargo _holder;
-_targetItemsStart = ((assignedItems _target) + (items _target) + [headgear _target]);
+_targetItemsStart = (assignedItems _target) + (items _target);
+if ((headgear _target) != "") then {_targetItemsStart pushBack (headgear _target);};
+if ((goggles _target) != "") then {_targetItemsStart pushBack (goggles _target);};
+
 
 _addToCrateClassnames = [];
 _addToCrateCount = [];
@@ -127,11 +130,13 @@ _addToCrateCount = [];
 } forEach _addToCrateClassnames;
 
 _holderItemsEnd = getitemCargo _holder;
-_targetItemsEnd = ((assignedItems _target) + (items _target) + [headgear _target]);
+_targetItemsEnd = (assignedItems _target) + (items _target);
+if ((headgear _target) != "") then {_targetItemsEnd pushBack (headgear _target);};
+if ((goggles _target) != "") then {_targetItemsEnd pushBack (goggles _target);};
 
 //Verify Items Added (lazy count)
 if (((count _targetItemsStart) - (count _targetItemsEnd)) != ([_addToCrateCount] call _fncSumArray)) exitWith {
-
+    ERR = [_targetItemsStart, _targetItemsEnd, _addToCrateClassnames, _addToCrateCount];
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Items Not Removed From Player"] call FUNC(eventTargetFinish);
 };
@@ -144,7 +149,7 @@ if ((([_holderItemsEnd select 1] call _fncSumArray) - ([_holderItemsStart select
 
 //If holder is still empty, it will be 'garbage collected' while we wait for the drop 'action' to take place
 //So add a dummy item and just remove at the end
-_holderIsEmpty = (([_holderItemsEnd select 1] call _fncSumArray) + (count _holderMagazinesEnd)) == 0;
+_holderIsEmpty = ([_holder] call FUNC(getAllGearContainer)) isEqualTo [[],[]];
 if (_holderIsEmpty) then {
     systemChat "Debug: making dummy";
     _holder addItemCargoGlobal [DUMMY_ITEM, 1];
@@ -248,7 +253,7 @@ systemChat format ["PFEh start %1", time];
         };
 
         _holder setVariable [QGVAR(holderInUse), false];
-        [_caller, _target, "Debug: Victory!!!"] call FUNC(eventTargetFinish);
+        [_caller, _target, ""] call FUNC(eventTargetFinish);
     };
 
 }, 0.0, [_caller,_target, _listOfItemsToRemove, _holder, _holderIsEmpty, (time + TIME_MAX_WAIT), _doNotDropAmmo, _targetMagazinesEnd]] call CBA_fnc_addPerFrameHandler;
