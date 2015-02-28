@@ -21,15 +21,15 @@ _patient = _this select 1;
 _items = _this select 2;
 
 {
-	// handle a one of type use item
-	if (typeName _x == "ARRAY") then {
-		{
-			if ([_medic, _patient, _x] call FUNC(useItem)) exitwith {};
-		}foreach _x;
-	};
+    // handle a one of type use item
+    if (typeName _x == "ARRAY") then {
+        {
+            if ([_medic, _patient, _x] call FUNC(useItem)) exitwith {};
+        }foreach _x;
+    };
 
-	// handle required item
-	if (typeName _x == "STRING") then {
-		[_medic, _patient, _x] call FUNC(useItem);
-	};
+    // handle required item
+    if (typeName _x == "STRING") then {
+        [_medic, _patient, _x] call FUNC(useItem);
+    };
 }foreach _items;

@@ -24,9 +24,9 @@ if !(_unit getvariable[QGVAR(addedToUnitLoop),false]) then{
 };
 
 if ([_unit] call FUNC(hasMedicalEnabled)) then {
-	[{
-		private "_unit";
-		_unit = (_this select 0) select 0;
+    [{
+        private "_unit";
+        _unit = (_this select 0) select 0;
         if (!alive _unit || !local _unit) then {
            [_this select 1] call CBA_fnc_removePerFrameHandler;
         } else {
@@ -41,5 +41,5 @@ if ([_unit] call FUNC(hasMedicalEnabled)) then {
                 [_unit] call FUNC(playInjuredSound);
             };
         };
-	}, 1, [_unit]] call CBA_fnc_addPerFrameHandler;
+    }, 1, [_unit]] call CBA_fnc_addPerFrameHandler;
 };

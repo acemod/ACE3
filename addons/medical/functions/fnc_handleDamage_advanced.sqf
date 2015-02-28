@@ -51,7 +51,7 @@ if (GVAR(enableInternalBleeding)) then {
 };
 
 if (alive _unit && {!(_unit getvariable ["ACE_isUnconscious", false])}) then {
-	[_unit, _newDamage] call FUNC(reactionToDamage);
+    [_unit, _newDamage] call FUNC(reactionToDamage);
 };
 
 _returnDamage;

@@ -29,13 +29,13 @@ if (count _items == 0) exitwith {};
 if ([_caller, _target, _items] call FUNC(useItems)) then {
     [[_target, _className], QUOTE(DFUNC(treatmentMedicationLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
     {
-    	if (_x != "") then {
-    		[_target, _x] call FUNC(addToTriageCard);
-    	};
-	}foreach _items;
+        if (_x != "") then {
+            [_target, _x] call FUNC(addToTriageCard);
+        };
+    }foreach _items;
 
-	["Medical_treatmentCompleted", [_caller, _target, _selectionName, _className, true]] call ace_common_fnc_localEvent;
-	[_target, "activity", "STR_ACE_HAS_MEDICATION_ACTIVITY", [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
+    ["Medical_treatmentCompleted", [_caller, _target, _selectionName, _className, true]] call ace_common_fnc_localEvent;
+    [_target, "activity", "STR_ACE_HAS_MEDICATION_ACTIVITY", [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
 };
 
 true;

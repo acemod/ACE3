@@ -47,9 +47,9 @@ if (GVAR(level) == 0) then {
 if (_damageReturn < 0.01) exitWith {0};
 
 if (GVAR(level) >= 1) then {
-	[_unit, _selectionName, _damage, _source, _projectile, _damageReturn] call FUNC(handleDamage_caching);
+    [_unit, _selectionName, _damage, _source, _projectile, _damageReturn] call FUNC(handleDamage_caching);
 
-	if (_damageReturn > 0.9) then {
+    if (_damageReturn > 0.9) then {
         _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
         _newDamage = _damage - (damage _unit);
         if (_selectionName in _hitSelections) then {
@@ -62,7 +62,7 @@ if (GVAR(level) >= 1) then {
         } else {
             _damageReturn = 0.89;
         };
-	};
+    };
 };
 
 if (_unit getVariable [QGVAR(preventDeath), false] && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {

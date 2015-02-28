@@ -30,8 +30,8 @@ if (_bodyPartn != 0) exitwith {};
 
 if (_amountOfDamage > 0.4) then {
     if (random(1) >= 0.8) then {
-    	if !(_unit getvariable[QGVAR(airwayCollapsed), false]) then {
-        	_unit setvariable [QGVAR(airwayCollapsed), true, true];
-    	};
+        if !(_unit getvariable[QGVAR(airwayCollapsed), false]) then {
+            _unit setvariable [QGVAR(airwayCollapsed), true, true];
+        };
     };
 };

@@ -71,6 +71,6 @@ _unit setVariable [QGVAR(allUsedMedication), []];
 
 _logs = _unit getvariable [QGVAR(allLogs), []];
 {
-	_unit setvariable [_x, nil, true];
+    _unit setvariable [_x, nil, true];
 }foreach _logs;
 _unit setvariable [QGVAR(allLogs), [], true];
