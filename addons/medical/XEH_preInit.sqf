@@ -43,7 +43,6 @@ PREP(isMedic);
 PREP(isMedicalVehicle);
 PREP(onMedicationUsage);
 PREP(onPropagateWound);
-PREP(onTreatmentCompleted);
 PREP(parseConfigForInjuries);
 PREP(playInjuredSound);
 PREP(reactionToDamage);
