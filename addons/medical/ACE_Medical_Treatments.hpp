@@ -17,8 +17,12 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bandage));
             callbackFailure = QUOTE(DFUNC(treatmentBasic_abort));
             callbackProgress = "";
+
             animationPatient = "";
-            animationCaller = "";
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic4";
+            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+            animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
+            animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
         };
         class Morphine: Bandage {
             displayName = "Morphine";
@@ -26,7 +30,7 @@ class ACE_Medical_Actions {
             treatmentTime = 2;
             items[] = {QGVAR(morphine)};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_morphine));
-            animationCaller = ""; // @todo
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class Epipen: Bandage {
             displayName = "Epinephrine";
@@ -34,7 +38,7 @@ class ACE_Medical_Actions {
             treatmentTime = 3;
             items[] = {QGVAR(epinephrine)};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_epipen));
-            animationCaller = ""; // @todo
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class Bloodbag: Bandage {
             displayName = "Blood Bag";
@@ -42,7 +46,7 @@ class ACE_Medical_Actions {
             treatmentTime = 20;
             items[] = {{QGVAR(bloodIV), QGVAR(bloodIV_500), QGVAR(bloodIV_250)}};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
-            animationCaller = ""; // @todo
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
     };
 

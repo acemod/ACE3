@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_availableLevels", "_medicRequired", "_items", "_locations", "_return", "_callbackSuccess", "_callbackFailure", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patietAnim", "_iconDisplayed"];
+private ["_caller", "_target", "_selectionName", "_className", "_config", "_availableLevels", "_medicRequired", "_items", "_locations", "_return", "_callbackSuccess", "_callbackFailure", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -76,11 +76,17 @@ if (isNil _callbackProgress) then {
 _treatmentTime = getNumber (_config >> "treatmentTime");
 [_treatmentTime, [_caller, _target, _selectionName, _className, _items], _callbackSuccess, _callbackFailure, (localize ""), _callbackProgress] call EFUNC(common,progressBar);
 
-_callerAnim = getText (_config >> "animationCaller");
-_patietAnim = getText (_confg >> "animationPatient");
+_callerAnim = [getText (_config >> "animationCaller"), getText (_config >> "animationCallerProne")] select (stance _caller == "PRONE");
+if (_caller == _target) then {
+	_callerAnim = [getText (_config >> "animationCallerSelf"), getText (_config >> "animationCallerSelfProne")] select (stance _caller == "PRONE");
+};
+_wpn = ["non", "rfl", "pst"] select (["", primaryWeapon _caller, handgunWeapon _caller] find (currentWeapon _caller));
+_callerAnim = [_callerAnim, "[wpn]", _wpn] call CBA_fnc_replace;
 
-if (_caller != _target && {vehicle _target == _target} && {_patietAnim != ""}) then {
-	[_target, _patietAnim] call EFUNC(common,doAnimation);
+_patientAnim = getText (_confg >> "animationPatient");
+
+if (_caller != _target && {vehicle _target == _target} && {_patientAnim != ""}) then {
+	[_target, _patientAnim] call EFUNC(common,doAnimation);
 };
 if (vehicle _caller == _caller && {_callerAnim != ""}) then {
 	if (primaryWeapon _caller == "") then {
