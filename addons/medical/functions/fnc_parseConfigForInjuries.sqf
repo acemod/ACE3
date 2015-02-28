@@ -18,7 +18,7 @@ _injuriesRootConfig = (configFile >> "ACE_Medical_Advanced" >> "Injuries");
 _allTypes = ["stab", "grenade", "bullet", "explosive", "shell", "punch", "vehiclecrash", "backblast", "falling", "bite", "ropeburn"];
 
 _allFoundDamageTypes = [];
-_configDamageTypes = (_injuryRouteConfig >> "damageTypes");
+_configDamageTypes = (_injuriesRootConfig >> "damageTypes");
 for "_i" from 0 to (count _configDamageTypes -1) /* step +1 */ do {
     if (isClass(_configDamageTypes select _i)) then {
         _allFoundDamageTypes pushback (configName (_configDamageTypes select _i));
