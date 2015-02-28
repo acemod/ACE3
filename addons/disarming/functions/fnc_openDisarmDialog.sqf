@@ -10,11 +10,11 @@ if (!([_target] call FUNC(canDisarm))) exitWith {ERROR("Unit Cannot Be Disarmed"
 if (!([] call EGVAR(common,canInteract))) exitWith {ERROR("Player cannot Interact");};
 
 closeDialog 0;
-createDialog "friskInventory";
+createDialog QGVAR(remoteInventory);
 
 disableSerialization;
 
-_display = uiNamespace getVariable ['PABST_friskInventory', displayNull];
+_display = uiNamespace getVariable ["remoteInventory", displayNull];
 if (isNull _display) exitWith {ERROR("Display is Null");};
 
 GVAR(disarmTarget) = _target;
