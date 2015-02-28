@@ -32,7 +32,7 @@ if (!local _unit) exitwith {
 [_unit, ObjNull, [0,0,0]] call EFUNC(common,carryObj);
 
 // Set the unit in the unconscious state.
-_unit setvariable ["ACE_isUnconscious",true,true];
+_unit setvariable ["ACE_isUnconscious", true, true];
 _unit setUnconscious true;
 
 // If a unit has the launcher out, it will sometimes start selecting the primairy weapon while unconscious,
@@ -58,21 +58,13 @@ if (vehicle _unit == _unit) then {
 _animState = animationState _unit;
 _originalPos = unitPos _unit;
 
-// Handle the on screen effects
-if (isPlayer _unit) then {
-    //[] call EFUNC(common,closeAllDialogs_f);
-    //[true] call FUNC(effectBlackOut);
-    //["unconscious", true] call EFUNC(common,setDisableUserInputStatus);
-    //[false] call EFUNC(common,setVolume_f);
-} else {
-    //_unit setUnitPos "DOWN";
-    //[_unit, true] call EFUNC(common,disableAI_F);
-};
+_unit setUnitPos "DOWN";
+[_unit, true] call EFUNC(common,disableAI);
 
 // So the AI does not get stuck, we are moving the unit to a temp group on its own.
 [_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 
-_captiveSwitch = false; // [_unit, true] call EFUNC(common,setCaptiveSwitch);
+_captiveSwitch = [_unit, true] call EFUNC(common,setCaptiveSwitch);
 [_unit, [_unit] call EFUNC(common,getDeathAnim), 1, true] call EFUNC(common,doAnimation);
 
 _startingTime = time;
@@ -113,21 +105,15 @@ _minWaitingTime = (round(random(10)+5));
         if (!_hasMovedOut) then {
             // Reset the unit back to the previous captive state.
             if (_captiveSwitch) then {
-            //    [_unit, false] call EFUNC(common,setCaptiveSwitch);
+                [_unit, false] call EFUNC(common,setCaptiveSwitch);
             };
 
             // Swhich the unit back to its original group
             [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 
-            // Reset any visual and audio effects for players, or enable everything again for AI.
-            if (isPlayer _unit) then {
-                //[false] call FUNC(effectBlackOut);
-                //[true] call EFUNC(common,setVolume_f);
-                //["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
-            } else {
-                //[_unit, false] call EFUNC(common,disableAI_F);
-                //_unit setUnitPos _originalPos;    // This is not position but stance (DOWN, MIDDLE, UP)
-            };
+            [_unit, false] call EFUNC(common,disableAI_F);
+            _unit setUnitPos _originalPos; // This is not position but stance (DOWN, MIDDLE, UP)
+
             _unit setUnconscious false;
 
             // ensure this statement runs only once
