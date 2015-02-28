@@ -17,7 +17,7 @@ if(!GVAR(keyDownSelfAction)) then {
     GVAR(keyDown) = false;
     GVAR(keyDownTime) = diag_tickTime;
 
-    GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) || visibleMap;
+    GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || visibleMap;
 
     if (GVAR(useCursorMenu)) then {
         closeDialog 0;
