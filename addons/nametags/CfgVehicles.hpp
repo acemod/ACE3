@@ -55,6 +55,15 @@ class CfgVehicles {
                     };
                 };
             };
+            class showCursorTagForVehicles {
+                displayName = "Show for Vehicles";
+                description = "Show cursor NameTag for vehicle commander (only if client has name tags enabled)Default: No";
+                typeName = "BOOL";
+                class values {
+                    class Yes {name = "Yes"; value = 1;};
+                    class No {default = 1; name = "No"; value = 0;};
+                };
+            };
         };
     };
 };
