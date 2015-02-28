@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit"];
+private ["_unit", "_allUsedMedication", "_logs"];
 
 _unit = _this select 0;
 
@@ -67,3 +67,9 @@ _allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];
 {
    _unit setvariable [_x select 0, nil];
 }foreach _allUsedMedication;
+
+_logs = _unit getvariable [QGVAR(allLogs), []];
+{
+	_unit setvariable [_x, nil, true];
+}foreach _logs;
+_unit setvariable [QGVAR(allLogs), [], true];
