@@ -26,7 +26,7 @@ _projectile   = _this select 4;
 
 if !(local _unit) exitWith {nil};
 
-if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {systemChat format["Has no medical enabled: %1", _unit];};
+if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {};
 
 if (typeName _projectile == "OBJECT") then {
     _projectile = typeOf _projectile;
@@ -38,24 +38,20 @@ _hitSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
 if !(_selection in (_hitSelections + [""])) exitWith {0};
 
 _damageReturn = _damage;
-
-_damageReturn = (_this select 2);
 if (GVAR(level) == 0) then {
     _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_basic);
 };
 
-if (_damageReturn < 0.01) exitWith {0};
-
 if (GVAR(level) >= 1) then {
-    [_unit, _selectionName, _damage, _source, _projectile, _damageReturn] call FUNC(handleDamage_caching);
+    [_unit, _selection, _damage, _source, _projectile, _damageReturn] call FUNC(handleDamage_caching);
 
     if (_damageReturn > 0.9) then {
         _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
         _newDamage = _damage - (damage _unit);
-        if (_selectionName in _hitSelections) then {
-            _newDamage = _damage - (_unit getHitPointDamage (_hitPoints select (_hitSelections find _selectionName)));
+        if (_selection in _hitSelections) then {
+            _newDamage = _damage - (_unit getHitPointDamage (_hitPoints select (_hitSelections find _selection)));
         };
-        if ([_unit, [_selectionName] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)) then {
+        if ([_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)) then {
             if ([_unit] call FUNC(setDead)) then {
                 _damageReturn = 1;
             };

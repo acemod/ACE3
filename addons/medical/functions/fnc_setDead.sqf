@@ -25,7 +25,7 @@ if (!local _unit) exitwith {
     [[_unit, _force], QUOTE(DFUNC(setDead)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
-if (missionName getVariable [QGVAR(enableRevive), false]) exitwith {
+if (missionNamespace getVariable [QGVAR(enableRevive), false]) exitwith {
     // TODO Implement the revive state
 };
 

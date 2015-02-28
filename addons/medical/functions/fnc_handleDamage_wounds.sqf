@@ -33,10 +33,10 @@ _highestPossibleSpot = -1;
 _highestPossibleDamage = 0;
 _allPossibleInjuries = [];
 {
-    /*_classType = _x select 0;
+    _classType = _x select 0;
     _selections = _x select 1;
     _bloodLoss = _x select 2;
-    _pain = _x select 3;*/
+    _pain = _x select 3;
     _minDamage = _x select 4;
     if (_damage >= _minDamage) then {
         if ("All" in _selections || _selectionName in _selections) then {
@@ -51,7 +51,6 @@ _allPossibleInjuries = [];
 
 // No possible wounds available for this damage type or damage amount.
 if (_highestPossibleSpot < 0) exitwith {
-
     // It appears we are dealing with an unknown type of damage.
     if (count _allInjuriesForDamageType == 0) then {
 
@@ -74,8 +73,8 @@ _woundsCreated = [];
     };
 }foreach (_injuryTypeInfo select 0);
 
-_unit setvariable [GVAR(openWounds), _openWounds];
-_unit setvariable[QGVAR(lastUniqueWoundID), _woundID, true];
+_unit setvariable [QGVAR(openWounds), _openWounds];
+_unit setvariable [QGVAR(lastUniqueWoundID), _woundID, true];
 
 {
     ["medical_propagateWound", [_unit, _x]] call EFUNC(common,globalEvent);
