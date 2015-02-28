@@ -53,8 +53,7 @@ if ([_caller] call FUNC(isMedic)) then {
     };
 };
 
-// TODO build support in displayText for sending it across to a different client with localization + format support.
-// [format[_output, [_target] call EFUNC(common,getName), round(_bloodPressureHigh),round(_bloodPressureLow)]] call EFUNC(common,displayTextStructured);
+["displayTextStructured", [_caller], [[_output, [_target] call EFUNC(common,getName), round(_bloodPressureHigh),round(_bloodPressureLow)], 1.5, _caller]] call EFUNC(common,targetEvent);
 
 if (_logOutPut != "") then {
     [_target,"examine", format["%1 checked Blood Pressure: %2", [_caller] call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);

@@ -19,7 +19,7 @@ _unit = _this select 0;
 _newItem = _this select 1;
 
 if (!local _unit) exitwith {
-    [_this, QUOTE(DFUNC(addToTriageList)), _unit] call EFUNC(common,execRemoteFnc);
+    [_this, QUOTE(DFUNC(addToTriageList)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
 _log = _unit getvariable [QGVAR(triageCard), []];

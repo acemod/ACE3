@@ -23,7 +23,7 @@ _message = _this select 2;
 _arguments = _this select 3;
 
 if (!local _unit) exitwith {
-    [_this, QUOTE(DFUNC(addToLog)), _unit] call EFUNC(common,execRemoteFnc);
+    [_this, QUOTE(DFUNC(addToLog)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
 _lastNumber = date select 4;

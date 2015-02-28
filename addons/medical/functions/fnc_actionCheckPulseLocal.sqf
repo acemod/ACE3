@@ -19,7 +19,7 @@ _caller = _this select 0;
 _unit = _this select 1;
 
 
-_heartRate = [_unit,QGVAR(heartRate)] call EFUNC(common,getDefinedVariable);
+_heartRate = _unit getvariable [QGVAR(heartRate), 80];
 if (!alive _unit) then {
     _heartRate = 0;
 };
@@ -47,8 +47,7 @@ if (_heartRate > 1.0) then {
 };
 
 _content = ["STR_ACE_CHECK_PULSE_CHECKED_MEDIC",_heartRateOutput];
-// TODO build support in displayText for sending it across to a different client with localization + format support.
-// [format[_content, [_unit] call EFUNC(common,getName), round(_heartRate)]] call EFUNC(common,displayTextStructured);
+["displayTextStructured", [_caller], [[_content, [_unit] call EFUNC(common,getName), round(_heartRate)], 1.5, _caller]] call EFUNC(common,targetEvent);
 
 if (_logOutPut != "") then {
     [_unit,"examine",format["%1 checked Heart Rate: %2",[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToLog);

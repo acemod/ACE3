@@ -16,7 +16,7 @@
 private "_unit";
 _unit = _this select 0;
 if !(local _unit) exitwith{
-    [[_unit], QUOTE(DFUNC(addToInjuredCollection)), _unit] call EFUNC(common,execRemoteFnc);
+    [[_unit], QUOTE(DFUNC(addToInjuredCollection)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
 if !(_unit getvariable[QGVAR(addedToUnitLoop),false]) then{

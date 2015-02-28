@@ -34,6 +34,6 @@ _bodyBagCreated = createVehicle ["ACE_bodyBag", _onPosition, [], 0, "NONE"];
 _bodyBagCreated setPos _onPosition;
 
 // TODO Does this need to be something with QUOTE(DEFUNC)?
-[[_bodyBagCreated], QEFUNC(common,revealObject), true] call call EFUNC(common,execRemoteFnc);
+[[_bodyBagCreated], QEFUNC(common,revealObject), true] call call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 
 _bodyBagCreated;

@@ -18,6 +18,6 @@ _className = _this select 3;
 _items = _this select 4;
 
 // TODO replace by event system
-[[_caller, _target], QUOTE(DFUNC(treatmentAdvanced_fullHealLocal)), _target] call EFUNC(common,execRemoteFnc);
+[[_caller, _target], QUOTE(DFUNC(treatmentAdvanced_fullHealLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 
 true;

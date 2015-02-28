@@ -20,10 +20,11 @@ _target = _this select 1;
 
 _output = "";
 if ([_target] call EFUNC(common,isAwake)) then {
-    _output = format[localize "STR_ACE_CHECK_REPONSE_RESPONSIVE",[_target] call EFUNC(common,getName)];
+    _output = ["STR_ACE_CHECK_REPONSE_RESPONSIVE",[_target] call EFUNC(common,getName)];
 } else {
-    _output = format[localize "STR_ACE_CHECK_REPONSE_UNRESPONSIVE",[_target] call EFUNC(common,getName)];
+    _output = ["STR_ACE_CHECK_REPONSE_UNRESPONSIVE",[_target] call EFUNC(common,getName)];
 };
 
-[_output] call EFUNC(common,displayTextStructured);
+["displayTextStructured", [_caller], [_output, 1.5, _caller]] call EFUNC(common,targetEvent);
+
 [_target,"examine",_output] call FUNC(addToLog);
