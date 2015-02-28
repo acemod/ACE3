@@ -6,7 +6,7 @@
  * 0: The unit that will be put in an unconscious state <OBJECT>
  *
  * ReturnValue:
- * <NIL>
+ * nil
  *
  * Public: yes
  */
@@ -65,7 +65,7 @@ if (isPlayer _unit) then {
 };
 
 // So the AI does not get stuck, we are moving the unit to a temp group on its own.
-[_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide_f);
+[_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 
 _captiveSwitch = false; // [_unit, true] call EFUNC(common,setCaptiveSwitch);
 [_unit, [_unit] call EFUNC(common,getDeathAnim), 1, true] call EFUNC(common,doAnimation);
@@ -118,7 +118,7 @@ _minWaitingTime = (round(random(10)+5));
             };
 
             // Swhich the unit back to its original group
-            [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide_f);
+            [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 
             // Reset any visual and audio effects for players, or enable everything again for AI.
             if (isPlayer _unit) then {

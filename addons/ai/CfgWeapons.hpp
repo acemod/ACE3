@@ -28,7 +28,7 @@ class CfgWeapons {
     class arifle_MX_Base_F: Rifle_Base_F {
         aiDispersionCoefY = 18.0;
         aiDispersionCoefX = 12.0;
-        modes[] += {"AGM_Burst_far"};
+        modes[] += {"ACE_Burst_far"};
 
         class Single: Mode_SemiAuto {
             minRange = 120;       // 2;
@@ -43,7 +43,7 @@ class CfgWeapons {
             burst = "3 + round random 5"; //3;
         };
 
-        class AGM_Burst_far: fullauto_medium {
+        class ACE_Burst_far: fullauto_medium {
             aiRateOfFire = 2.0;
             aiRateOfFireDistance = 500;
             minRange = 400;
@@ -86,7 +86,7 @@ class CfgWeapons {
             burst = "3 + round random 5"; //3;
         };
 
-        class AGM_Burst_far: fullauto_medium {
+        class ACE_Burst_far: fullauto_medium {
             aiRateOfFire = 2.0;
             aiRateOfFireDistance = 400;
             minRange = 300;
@@ -146,8 +146,8 @@ class CfgWeapons {
         aiDispersionCoefY = 24.0;
         aiDispersionCoefX = 21.0;
         // Shit is still broken
-        //modes[] += {"AGM_Burst_far"};
-        modes[] = {"Single","manual","close","short","medium","far_optic1","far_optic2","AGM_Burst_far"};
+        //modes[] += {"ACE_Burst_far"};
+        modes[] = {"Single","manual","close","short","medium","far_optic1","far_optic2","ACE_Burst_far"};
 
         class Single: Mode_SemiAuto {
             minRange = 120;             // 2;
@@ -155,7 +155,7 @@ class CfgWeapons {
 
         class close;
         class medium;
-        class AGM_Burst_far: medium {
+        class ACE_Burst_far: medium {
             aiRateOfFire = 6.0;
             aiRateOfFireDistance = 900;
             minRange = 500;
@@ -182,7 +182,7 @@ class CfgWeapons {
     class arifle_Katiba_Base_F: Rifle_Base_F {
         aiDispersionCoefY = 18.0;
         aiDispersionCoefX = 12.0;
-        modes[] += {"AGM_Burst_far"};
+        modes[] += {"ACE_Burst_far"};
 
         class Single: Mode_SemiAuto {
             minRange = 120;       // 2;
@@ -197,7 +197,7 @@ class CfgWeapons {
             burst = "3 + round random 5"; //3;
         };
 
-        class AGM_Burst_far: fullauto_medium {
+        class ACE_Burst_far: fullauto_medium {
             aiRateOfFire = 2.0;
             aiRateOfFireDistance = 500;
             minRange = 400;
@@ -242,7 +242,7 @@ class CfgWeapons {
             burst = "3 + round random 5"; //3;
         };
 
-        class AGM_Burst_far: fullauto_medium {
+        class ACE_Burst_far: fullauto_medium {
             aiRateOfFire = 2.0;
             aiRateOfFireDistance = 400;
             minRange = 300;
@@ -270,7 +270,7 @@ class CfgWeapons {
     class mk20_base_F: Rifle_Base_F {
         aiDispersionCoefY = 18.0;
         aiDispersionCoefX = 12.0;
-        modes[] += {"AGM_Burst_far"};
+        modes[] += {"ACE_Burst_far"};
 
         class Single: Mode_SemiAuto {
             minRange = 120;       // 2;
@@ -289,7 +289,7 @@ class CfgWeapons {
             burst = "3 + round random 5"; // 3;
         };
 
-        class AGM_Burst_far: fullauto_medium {
+        class ACE_Burst_far: fullauto_medium {
             aiRateOfFire = 2.0;
             aiRateOfFireDistance = 500;
             minRange = 400;
@@ -343,7 +343,7 @@ class CfgWeapons {
             burst = "3 + round random 5"; //3;
         };
 
-        class AGM_Burst_far: fullauto_medium {
+        class ACE_Burst_far: fullauto_medium {
             aiRateOfFire = 2.0;
             aiRateOfFireDistance = 400;
             minRange = 300;
@@ -360,7 +360,7 @@ class CfgWeapons {
     class Tavor_base_F: Rifle_Base_F {
         aiDispersionCoefY = 18.0;
         aiDispersionCoefX = 12.0;
-        modes[] += {"AGM_Burst_far"};
+        modes[] += {"ACE_Burst_far"};
 
         class Single: Mode_SemiAuto {
             minRange = 120;       //2;
@@ -380,7 +380,7 @@ class CfgWeapons {
             burst = "3 + round random 5"; // 3;
         };
 
-        class AGM_Burst_far: fullauto_medium {
+        class ACE_Burst_far: fullauto_medium {
             aiRateOfFire = 2.0;
             aiRateOfFireDistance = 400;
             minRange = 300;
@@ -428,7 +428,7 @@ class CfgWeapons {
             burst = "3 + round random 5"; // 3;
         };
 
-        class AGM_Burst_far: fullauto_medium {
+        class ACE_Burst_far: fullauto_medium {
             aiRateOfFire = 2.0;
             aiRateOfFireDistance = 400;
             minRange = 300;
@@ -517,10 +517,10 @@ class CfgWeapons {
     class LMG_Mk200_F: Rifle_Long_Base_F {
         aiDispersionCoefY = 24.0;
         aiDispersionCoefX = 21.0;
-        modes[] += {"AGM_Burst_far"};
+        modes[] += {"ACE_Burst_far"};
 
         class medium;
-        class AGM_Burst_far: medium {
+        class ACE_Burst_far: medium {
             aiRateOfFire = 6.0;
             aiRateOfFireDistance = 900;
             minRange = 500;
@@ -546,7 +546,7 @@ class CfgWeapons {
     class LMG_Zafir_F: Rifle_Long_Base_F {
         aiDispersionCoefY = 23.0;
         aiDispersionCoefX = 19.0;
-        modes[] += {"AGM_Burst_far"};
+        modes[] += {"ACE_Burst_far"};
 
         class Single: Mode_SemiAuto {
             minRange = 120;        // 2;
@@ -554,7 +554,7 @@ class CfgWeapons {
 
         class close;
         class medium;
-        class AGM_Burst_far: medium {
+        class ACE_Burst_far: medium {
             aiRateOfFire = 6.0;
             aiRateOfFireDistance = 900;
             minRange = 500;

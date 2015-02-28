@@ -2,7 +2,6 @@
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
-        serverInit = QUOTE(call COMPILE_FILE(scripts\readParameters));
         disableModuload = true;
     };
 };
@@ -39,7 +38,7 @@ class Extended_Respawn_EventHandlers {
             respawn = QUOTE(_this call FUNC(setName));
         };
         class GVAR(RESETDefaults) {
-            respawn = QUOTE(_this call FUNC(resetAllDefaults_F));
+            respawn = QUOTE(_this call FUNC(resetAllDefaults));
         };
     };
 };

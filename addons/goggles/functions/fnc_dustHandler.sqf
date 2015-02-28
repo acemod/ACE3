@@ -1,22 +1,19 @@
 /*
-	fnc_DustHandler.sqf
-
-	Author: Garth de Wet (LH)
-
-	Description:
-	Determines whether to place dust on the goggles, based on calibre of weapon fired and other requirements.
-
-	Parameters:
-	0: Object - unit - eventhandler was attached to.			(Used)
-	1: String - weapon - Weapon fired							(Used)
-
-	Returns:
-	Nothing
-
-	Example:
-	ace_player addEventHandler ["Fired", {[_this select 0, _this select 1] call FUNC(DustHandler;}];
-	See http://community.bistudio.com/wiki/ArmA_3:_Event_Handlers#Fired
-*/
+ * Author: Garth 'L-H' de Wet
+ * Determines whether to place dust on the goggles, based on calibre of weapon fired and other requirements.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ *ace_player addEventHandler ["Fired", {[_this select 0, _this select 1] call ace_goggles_fnc_dustHandler;}];
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 private ["_bullets", "_position", "_surface", "_found", "_weapon", "_cloudType", "_unit"];
 EXPLODE_2_PVT(_this,_unit,_weapon);

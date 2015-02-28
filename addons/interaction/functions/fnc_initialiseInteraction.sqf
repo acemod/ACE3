@@ -67,7 +67,7 @@ if (_this select 2) then {
 	disableSerialization;
 	_dlgInteractionDialog = uiNamespace getVariable QGVAR(Dialog);
 	_ctrlInteractionDialog = _dlgInteractionDialog displayCtrl 3;
-	if (profileNamespace getVariable [QGVAR(AutoCenterCursor), true]) then {setMousePosition [0.5, 0.5]};
+	if (GVAR(AutoCenterCursor)) then {setMousePosition [0.5, 0.5]};
 	if !(_subMenu) then {
 		_ctrlInteractionDialog ctrlSetText ([_target] call EFUNC(common,getName));
 	} else {

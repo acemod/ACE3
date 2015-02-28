@@ -1,17 +1,19 @@
 /*
  * Author: Commy2 and CAA-Picard
- *
- * Heat up the weapon
+ * Handle weapon fire, heat up the weapon
  *
  * Argument:
- * 0: unit
- * 1: weapon
- * 2: ammo
- * 3: projectile
- * 4: velocity
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING>
+ * 3: Muzzle <STRING>
+ * 4: Ammo <STRING>
+ * 5: Magazine <STRING>
+ * 6: Projectile <OBJECT>
  *
  * Return value:
  * None
+ *
+ * Public: No
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 

@@ -1,29 +1,34 @@
 #define MACRO_LOCK_ACTIONS \
-  class ACE_unlockVehicle { \
-    displayName = "$STR_ACE_Vehicle_Action_UnLock"; \
-    distance = 4; \
-    condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(2,3)]}); \
-    statement = QUOTE([ARR_3('SetVehicleLock', [_target], [ARR_2(_target,false)])] call EFUNC(common,targetEvent)); \
-    showDisabled = 0; \
-    priority = 0.3; \
-    icon = QUOTE(PATHTOF(ui\key_menuIcon_ca.paa)); \
-  }; \
-  class ACE_lockVehicle { \
-    displayName = "$STR_ACE_Vehicle_Action_Lock"; \
-    distance = 4; \
-    condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(0,1)]}); \
-    statement = QUOTE([ARR_3('SetVehicleLock', [_target], [ARR_2(_target,true)])] call EFUNC(common,targetEvent)); \
-    showDisabled = 0; \
-    priority = 0.2; \
-    icon = QUOTE(PATHTOF(ui\key_menuIcon_ca.paa)); \
-  }; \
-  class ACE_lockpickVehicle { \
-    displayName = "$STR_ACE_Vehicle_Action_Lockpick"; \
-    distance = 4; \
-    condition = QUOTE([ARR_3(_player, _target, 'canLockpick')] call FUNC(lockpick)); \
-    statement = QUOTE([ARR_3(_player, _target, 'startLockpick')] call FUNC(lockpick)); \
-    showDisabled = 0; \
-    priority = 0.1; \
+  class ACE_MainActions { \
+    selection = ""; \
+    distance = 5; \
+    condition = "true"; \
+    class ACE_unlockVehicle { \
+      displayName = "$STR_ACE_Vehicle_Action_UnLock"; \
+      distance = 4; \
+      condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(2,3)]}); \
+      statement = QUOTE([ARR_3('SetVehicleLock', [_target], [ARR_2(_target,false)])] call EFUNC(common,targetEvent)); \
+      showDisabled = 0; \
+      priority = 0.3; \
+      icon = QUOTE(PATHTOF(ui\key_menuIcon_ca.paa)); \
+    }; \
+    class ACE_lockVehicle { \
+      displayName = "$STR_ACE_Vehicle_Action_Lock"; \
+      distance = 4; \
+      condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(0,1)]}); \
+      statement = QUOTE([ARR_3('SetVehicleLock', [_target], [ARR_2(_target,true)])] call EFUNC(common,targetEvent)); \
+      showDisabled = 0; \
+      priority = 0.2; \
+      icon = QUOTE(PATHTOF(ui\key_menuIcon_ca.paa)); \
+    }; \
+    class ACE_lockpickVehicle { \
+      displayName = "$STR_ACE_Vehicle_Action_Lockpick"; \
+      distance = 4; \
+      condition = QUOTE([ARR_3(_player, _target, 'canLockpick')] call FUNC(lockpick)); \
+      statement = QUOTE([ARR_3(_player, _target, 'startLockpick')] call FUNC(lockpick)); \
+      showDisabled = 0; \
+      priority = 0.1; \
+    }; \
   };
 
 class CfgVehicles {

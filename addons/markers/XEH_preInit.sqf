@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+ADDON = false;
+
 PREP(initInsertMarker);
 PREP(onLBSelChangedColor);
 PREP(onLBSelChangedShape);
@@ -72,3 +74,5 @@ if (isNil QGVAR(MarkerColorsCache)) then {
 };
 
 [QGVAR(sendMarkersJIP), FUNC(sendMarkersJIP)] call EFUNC(common,addEventHandler);
+
+ADDON = true;

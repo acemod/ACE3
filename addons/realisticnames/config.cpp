@@ -292,8 +292,8 @@ class CfgVehicles {
         displayName = "$STR_ACE_RealisticNames_Heli_Attack_01_Name";
     };
 
-    class Heli_Light_01_base_F;
-    class B_Heli_Light_01_F: Heli_Light_01_base_F {
+    class Heli_Light_01_unarmed_base_F;
+    class B_Heli_Light_01_F: Heli_Light_01_unarmed_base_F {
         displayName = "$STR_ACE_RealisticNames_Heli_Light_01_Name";
     };
 
@@ -302,7 +302,7 @@ class CfgVehicles {
         displayName = "$STR_ACE_RealisticNames_Heli_Light_01_armed_Name";
     };
 
-    class Heli_Light_01_civil_base_F: Heli_Light_01_base_F {
+    class Heli_Light_01_civil_base_F: Heli_Light_01_unarmed_base_F {
         displayName = "$STR_ACE_RealisticNames_Heli_Light_01_civil_Name";
     };
 

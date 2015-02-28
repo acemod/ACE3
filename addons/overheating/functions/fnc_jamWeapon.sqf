@@ -1,14 +1,15 @@
 /*
  * Author: Commy2, based on KK_fnc_playerWeaponMulfunction from KillzoneKid
- *
  * Jam the weapon
  *
  * Argument:
- * 0: unit
- * 1: weapon
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING>
  *
  * Return value:
  * None
+ *
+ * Public: No
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
