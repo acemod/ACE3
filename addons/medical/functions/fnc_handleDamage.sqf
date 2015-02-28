@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi
+ * Author: KoffeinFlummi, Glowbal
  * Main HandleDamage EH function.
  *
  * Arguments:
@@ -26,7 +26,7 @@ _projectile   = _this select 4;
 
 if !(local _unit) exitWith {nil};
 
-if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {};
+if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {systemChat format["Has no medical enabled: %1", _unit];};
 
 if (typeName _projectile == "OBJECT") then {
     _projectile = typeOf _projectile;
@@ -47,12 +47,22 @@ if (GVAR(level) == 0) then {
 if (_damageReturn < 0.01) exitWith {0};
 
 if (GVAR(level) >= 1) then {
-	[_unit, _selectionName, _damage, _source, _projectile, _damageReturn] call FUNC(handleDamage_caching);
+    [_unit, _selectionName, _damage, _source, _projectile, _damageReturn] call FUNC(handleDamage_caching);
 
-	// TODO check if this should would have killed the unit..
-	if (_damageReturn > 0.9) then {
-		_damageReturn = 0.9;
-	};
+    if (_damageReturn > 0.9) then {
+        _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
+        _newDamage = _damage - (damage _unit);
+        if (_selectionName in _hitSelections) then {
+            _newDamage = _damage - (_unit getHitPointDamage (_hitPoints select (_hitSelections find _selectionName)));
+        };
+        if ([_unit, [_selectionName] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)) then {
+            if ([_unit] call FUNC(setDead)) then {
+                _damageReturn = 1;
+            };
+        } else {
+            _damageReturn = 0.89;
+        };
+    };
 };
 
 if (_unit getVariable [QGVAR(preventDeath), false] && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {

@@ -24,9 +24,9 @@ if (isnil QGVAR(setting_advancedMedicRoles)) exitwith {
 
 if (GVAR(setting_advancedMedicRoles)) then {
     _class = _unit getvariable [QGVAR(medicClass), 0];
-	if (_class >= _medicN) then {
-		_return = true;
-	};
+    if (_class >= _medicN) then {
+        _return = true;
+    };
 } else {
     _return = true;
 };

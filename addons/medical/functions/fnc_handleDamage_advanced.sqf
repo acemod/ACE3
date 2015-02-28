@@ -19,33 +19,39 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_selectionName","_amountOfDamage","_sourceOfDamage","_typeOfProjectile","_typeOfDamage"];
+private ["_unit","_selectionName","_amountOfDamage","_sourceOfDamage","_typeOfProjectile","_typeOfDamage", "_part", "_damageBodyParts", "_newDamage", "_hitPoints"];
 _unit = _this select 0;
 _selectionName = _this select 1;
 _amountOfDamage = _this select 2;
 _sourceOfDamage = _this select 3;
 _typeOfProjectile = _this select 4;
 _returnDamage = _this select 5;
+
 _typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
+_part = [_selectionName] call FUNC(selectionNameToNumber);
 
+_hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
+// Sorting out the damage
+_damageBodyParts = _unit getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
+_newDamage = _amountOfDamage - (_unit getHitPointDamage (_hitPoints select _part));
+_damageBodyParts set [_part, (_damageBodyParts select _part) + _newDamage];
+_unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
+[_unit] call FUNC(handleDamage_advancedSetDamage);
 
-// TODO parse for new damage
-// TODO parse for kill injuries
-
-[_unit, _selectionName, _amountOfDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_wounds);
+[_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_wounds);
 
 if (GVAR(enableAirway)) then {
-    [_unit,_selectionName,_amountOfDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_airway);
+    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_airway);
 };
 if (GVAR(enableFractures)) then {
-    [_unit,_selectionName,_amountOfDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_fractures);
+    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_fractures);
 };
 if (GVAR(enableInternalBleeding)) then {
-    [_unit,_selectionName,_amountOfDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_internalInjuries);
+    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_internalInjuries);
 };
 
 if (alive _unit && {!(_unit getvariable ["ACE_isUnconscious", false])}) then {
-	[_unit, _amountOfDamage] call FUNC(reactionToDamage);
+    [_unit, _newDamage] call FUNC(reactionToDamage);
 };
 
 _returnDamage;
