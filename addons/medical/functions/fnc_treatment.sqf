@@ -54,22 +54,14 @@ if !(_return) exitwith {false};
 
 // Parse the config for the progress callback
 _callbackProgress = getText (_config >> "callbackProgress");
+if (_callbackProgress == "") then {
+    _callbackProgress = "true";
+};
 if (isNil _callbackProgress) then {
     _callbackProgress = compile _callbackProgress;
 } else {
     _callbackProgress = missionNamespace getvariable _callbackProgress;
 };
-
-// Start treatment
-_treatmentTime = getNumber (_config >> "treatmentTime");
-[
-    _treatmentTime,
-    [_caller, _target, _selectionName, _className, _items],
-    DFUNC(treatment_success),
-    DFUNC(treatment_failure),
-    getText (_config >> "displayNameProgress"),
-    _callbackProgress
-] call EFUNC(common,progressBar);
 
 // Patient Animation
 _patientAnim = getText (_confg >> "animationPatient");
@@ -89,9 +81,20 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         _caller addWeapon "ACE_FakePrimaryWeapon";
     };
     _caller selectWeapon (primaryWeapon _caller);
-    _caller setvariable [QGVAR(treatmentPrevAnimCaller), animationState _target];
+    _caller setvariable [QGVAR(treatmentPrevAnimCaller), animationState _caller];
     [_caller, _callerAnim] call EFUNC(common,doAnimation);
 };
+
+// Start treatment
+_treatmentTime = getNumber (_config >> "treatmentTime");
+[
+    _treatmentTime,
+    [_caller, _target, _selectionName, _className, _items],
+    DFUNC(treatment_success),
+    DFUNC(treatment_failure),
+    getText (_config >> "displayNameProgress"),
+    _callbackProgress
+] call EFUNC(common,progressBar);
 
 // Display Icon
 _iconDisplayed = getText (_config >> "actionIconPath");

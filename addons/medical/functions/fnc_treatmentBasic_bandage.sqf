@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 #define BANDAGEHEAL 0.8
 
-private ["_caller", "_target","_selection","_className","_config","_callback"];
+private ["_caller", "_target","_selection","_className","_target","_hitSelections","_hitPoints","_point"];
 _caller = _this select 0;
 _target = _this select 1;
 _selection = _this select 2;
@@ -30,8 +30,8 @@ if (_selection == "all") then {
     _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
     _point = _hitPoints select (_hitSelections find _selection);
 
-    systemChat _point;
-
     _damage = ((_target getHitPointDamage _point) - BANDAGEHEAL) max 0;
     [_target, _point, _damage] call FUNC(setHitPointDamage);
+
+    // @todo: leg/arm damage - in setHitPointDamage?
 };

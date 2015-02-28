@@ -1,13 +1,12 @@
 /*
  * Author: KoffeinFlummi
- * Epipen treatment.
+ * Callback when the epipen treatment is complete
  *
  * Arguments:
- * 0: Medic <OBJECT>
- * 1: Patient <OBJECT>
+ * 0: The medic <OBJECT>
+ * 1: The patient <OBJECT>
  * 2: Selection Name <STRING>
- * 3: Treatment Classname <STRING>
- * 4: Items required <ARRAY<STRING>>
+ * 3: Treatment classname <STRING>
  *
  * Return Value:
  * nil
@@ -16,9 +15,11 @@
  */
 
 #include "script_component.hpp"
+#define BLOODBAGHEAL 70
 
-_medic = _this select 0;
-_patient = _this select 1;
-_items = _this select 4;
+private ["_caller", "_target","_className"];
+_caller = _this select 0;
+_target = _this select 1;
+_className = _this select 3;
 
-[_patient, false] call FUNC(setUnconscious);
+[_target, false] call FUNC(setUnconscious);
