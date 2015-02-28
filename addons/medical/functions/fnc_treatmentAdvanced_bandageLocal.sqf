@@ -69,14 +69,11 @@ if (_effectivenessFound == 0) exitwith {}; // Seems everything is patched up on 
 // Find the impact this bandage has and reduce the amount this injury is present
 _impact = if ((_mostEffectiveInjury select 3) >= _effectivenessFound) then {_effectivenessFound} else { (_mostEffectiveInjury select 3) };
 _mostEffectiveInjury set [ 3, ((_mostEffectiveInjury select 3) - _effectivenessFound) max 0];
+_openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
 
-if (_mostEffectiveInjury select 3 == 0) then {
-    _openWounds deleteAt _mostEffectiveSpot;
-} else {
-    _openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
-};
+_target setvariable [QGVAR(openWounds), _openWounds];
 
-_target setvariable [QGVAR(openWounds), _openWounds, true];
+["medical_propagateWound", [_unit, _mostEffectiveInjury]] call EFUNC(common,globalEvent);
 
 // Handle the reopening of bandaged wounds
 if (_impact > 0) then {

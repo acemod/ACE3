@@ -57,6 +57,7 @@ PREP(actionCheckResponse);
 PREP(actionRemoveTourniquet);
 PREP(onTreatmentCompleted);
 PREP(onMedicationUsage);
+PREP(onPropagateWound);
 PREP(reactionToDamage);
 PREP(useItem);
 PREP(useItems);
