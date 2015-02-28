@@ -54,7 +54,7 @@ if (isNull _holder) then {
     _dropPos set [2, 0];
     // _holder = createVehicle ["WeaponHolderSimulated", _dropPos, [], 0, "CAN_COLLIDE"];
     _holder = createVehicle ["GroundWeaponHolder", _dropPos, [], 0, "CAN_COLLIDE"];
-    _holder setVariable [QGVAR(disarmUnit), _target];
+    _holder setVariable [QGVAR(disarmUnit), _target, true];
 };
 
 //Verify holder created
