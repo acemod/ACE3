@@ -6,7 +6,7 @@ class ACE_Medical_Actions {
             displayName = "Bandage";
             displayNameProgress = "Bandaging ...";
 
-            treatmentLocations[] = {"Field", "MedicalFacility", "MedicalVehicle"};
+            treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 5;
             treatmentTimeSelfCoef = 1;
@@ -35,14 +35,16 @@ class ACE_Medical_Actions {
         class Epipen: Bandage {
             displayName = "Epinephrine";
             displayNameProgress = "Injecting Epinephrine ...";
+            requiredMedic = 1;
             treatmentTime = 3;
-            items[] = {QGVAR(epinephrine)};
+            items[] = {QGVAR(epipen)};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_epipen));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class Bloodbag: Bandage {
             displayName = "Blood Bag";
             displayNameProgress = "Transfusing Blood ...";
+            requiredMedic = 1;
             treatmentTime = 20;
             items[] = {{QGVAR(bloodIV), QGVAR(bloodIV_500), QGVAR(bloodIV_250)}};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));

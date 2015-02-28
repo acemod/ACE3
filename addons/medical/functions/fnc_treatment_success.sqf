@@ -1,5 +1,5 @@
 /*
- * Author: Glowbal
+ * Author: KoffeinFlummi, Glowbal
  * Callback when the treatment is completed
  *
  * Arguments:
@@ -7,25 +7,34 @@
  * 1: The patient <OBJECT>
  * 2: SelectionName <STRING>
  * 3: Treatment classname <STRING>
- * 4: completed <BOOL>
  *
  * Return Value:
  * nil
  *
- * Public: false
+ * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_caller", "_target","_selectionName","_className", "_completed"];
+private ["_caller", "_target","_selectionName","_className","_config","_callback"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
 _className = _this select 3;
-_completed = _this select 4;
 
 if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
     [_caller, _caller getvariable [QGVAR(treatmentPrevAnimCaller), ""]] call EFUNC(common,doAnimation);
     _caller setvariable [QGVAR(treatmentPrevAnimCaller), nil];
 };
+
+
+// Record specific callback
+_config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
+if (GVAR(level) >= 1) then {
+    _config = (configFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
+};
+
+_callback = getText (_config >> "callbackSuccess");
+
+_this call compile _callback
