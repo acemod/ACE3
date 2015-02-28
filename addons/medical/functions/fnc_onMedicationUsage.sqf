@@ -32,12 +32,12 @@ _allUsedMedication = _target getvariable [QGVAR(allUsedMedication), []];
         if !(_className in _allMedsFromClassname) then {
             _allMedsFromClassname pushback _className;
             _x set [1, _allMedsFromClassname];
-            _allUsedMedication set[_foreachIndex, _x];
+            _allUsedMedication set [_foreachIndex, _x];
             _target setvariable [QGVAR(allUsedMedication), _allUsedMedication];
         };
         _foundEntry = true;
     };
-}foreach _allUsedMedication;
+} foreach _allUsedMedication;
 
 if (!_foundEntry) then {
     _allUsedMedication pushback [_variable, [_className]];
@@ -46,7 +46,7 @@ if (!_foundEntry) then {
 
 
 _usedMeds = _target getvariable [_variable, 0];
-if (_usedMeds >= floor(_maxDosage + round(random(2)))) then {
+if (_usedMeds >= floor (_maxDosage + round(random(2)))) then {
     [_target] call FUNC(setDead);
 };
 
@@ -56,7 +56,7 @@ _hasOverDosed = 0;
     _limit = _x select 1;
     {
         _classNamesUsed = _x select 1;
-        if ({_x == _med}count _classNamesUsed > _limit) then {
+        if ({_x == _med} count _classNamesUsed > _limit) then {
             _hasOverDosed = _hasOverDosed + 1;
         };
     }foreach _allUsedMedication;

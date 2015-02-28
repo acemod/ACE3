@@ -18,7 +18,7 @@
 #include "script_component.hpp"
 
 _medic = _this select 0;
-_patient = _this select 1:
+_patient = _this select 1;
 _items = _this select 4;
 
 [_patient, false] call FUNC(setUnconscious);
