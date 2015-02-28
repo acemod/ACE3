@@ -14,6 +14,7 @@
 
 #include "script_component.hpp"
 
+private ["_unit", "_injury", "_openWounds", "_injuryID", "_exists"];
 _unit = _this select 0;
 _injury = _this select 1;
 

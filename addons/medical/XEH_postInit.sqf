@@ -10,6 +10,7 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2", "A
 GVAR(playingHeartBeatSound) = false;
 
 ["Medical_treatmentCompleted", FUNC(onTreatmentCompleted)] call ace_common_fnc_addEventHandler;
+["medical_propagateWound", FUNC(onPropagateWound)] call ace_common_fnc_addEventHandler;
 
 // Initialize all effects
 // @todo: make this a macro?
