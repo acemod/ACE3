@@ -58,19 +58,25 @@ if (_highestPossibleSpot < 0) exitwith {
     };
 };
 _openWounds = _unit getvariable[QGVAR(openWounds), []];
-_woundID = 1;
-_amountOf = count _openWounds;
-if (_amountOf > 0) then { _woundID = (_openWounds select (_amountOf - 1) select 0) + 1; };
+_woundID = _unit getvariable[QGVAR(lastUniqueWoundID), 1];
 
+_woundsCreated = [];
 {
     if (_x select 0 <= _damage) exitwith {
         for "_i" from 0 to (1+ floor(random(_x select 1)-1)) /* step +1 */ do {
             _toAddInjury =  _allPossibleInjuries select (floor(random (count _allPossibleInjuries)));
             // ID, classname, bodypart, percentage treated, bloodloss rate
-            _openWounds pushback [_woundID, _toAddInjury select 0, if (_injuryTypeInfo select 1) then {_bodyPartn} else {floor(random(6))}, 1, _toAddInjury select 2];
+            _injury = [_woundID, _toAddInjury select 0, if (_injuryTypeInfo select 1) then {_bodyPartn} else {floor(random(6))}, 1, _toAddInjury select 2]
+            _openWounds pushback _injury;
+            _woundsCreated pushback _injury;
             _woundID = _woundID + 1;
         };
     };
 }foreach (_injuryTypeInfo select 0);
 
-_unit setvariable [GVAR(openWounds), _openWounds, true];
+_unit setvariable [GVAR(openWounds), _openWounds];
+_unit setvariable[QGVAR(lastUniqueWoundID), _woundID, true];
+
+{
+    ["medical_propagateWound", [_unit, _x]] call EFUNC(common,globalEvent);
+}foreach _woundsCreated;
