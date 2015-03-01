@@ -569,18 +569,6 @@
       <Italian>Perdona</Italian>
       <Hungarian>Megbocsátás</Hungarian>
     </Key>
-    <Key ID="STR_ACE_Interaction_FlowMenu">
-      <English>Flow Menu</English>
-      <German>Mausradmenü</German>
-      <Polish>Flow Menu</Polish>
-      <Spanish>Menú desplegable</Spanish>
-      <French>Menu Déroulant</French>
-      <Czech>Flow Menu</Czech>
-      <Russian>Выпадающее меню</Russian>
-      <Portuguese>Flow Menu</Portuguese>
-      <Italian>Menù a Scorrimento</Italian>
-      <Hungarian>Legördülő menü</Hungarian>
-    </Key>
     <Key ID="STR_ACE_Interaction_ScrollHint">
       <English>Scroll</English>
       <German>Scrollen</German>
@@ -615,25 +603,6 @@
       <Hungarian>Hatótávolságon kívül</Hungarian>
       <Polish>Poza zasięgiem</Polish>
       <Czech>Mimo dosah</Czech>
-    </Key>
-    <Key ID="STR_ACE_Interaction_AutoCloseMenu">
-      <English>Close Menu on Key Release</English>
-      <German>Menü nach Loslassen schließen</German>
-      <Polish>Zamknij menu automatycznie</Polish>
-      <French>Fermer le menu en relâchant la touche</French>
-      <Spanish>Cerrar menú al soltar la tecla</Spanish>
-      <Hungarian>Menü bezárása a billentyű elengedésekor</Hungarian>
-      <Russian>Закрывать меню при отжатии клавиши</Russian>
-      <Czech>Menu interakce (Na držení)</Czech>
-    </Key>
-    <Key ID="STR_ACE_Interaction_AutoCenterCursor">
-      <English>Auto Center Cursor</English>
-      <German>Mauszeiger automatisch zentrieren</German>
-      <Spanish>Auto-centrar cursor</Spanish>
-      <Polish>Automatycznie centruj kursor </Polish>
-      <Czech>Vycentrování kurzoru</Czech>
-      <Hungarian>Egér auto-centrírozása</Hungarian>
-      <Russian>Автоцентрирование курсора</Russian>
     </Key>
     <Key ID="STR_ACE_Interaction_Equipment">
       <English>Equipment &gt;&gt;</English>

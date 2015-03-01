@@ -62,6 +62,5 @@ _attachables = items _unit;
     },
     {
         call EFUNC(interaction,hideMenu);
-        if !(profileNamespace getVariable [QEGVAR(interaction,AutoCloseMenu), false]) then {"Default" call EFUNC(interaction,openMenuSelf)};
     }
 ] call EFUNC(interaction,openSelectMenu);
