@@ -59,7 +59,7 @@ if (isClass _woundsConfig) then {
             _pain = if (isNumber(_entry >> "pain")) then { getNumber(_entry >> "pain");} else {0};
             _minDamage = if (isNumber(_entry >> "minDamage")) then { getNumber(_entry >> "minDamage");} else {0};
             _causes = if (isArray(_entry >> "causes")) then { getArray(_entry >> "causes");} else {[]};
-            _classDisplayName = if (isText(_entry >> "name")) then { getText(_entry >> "name");} else {[]};
+            _classDisplayName = if (isText(_entry >> "name")) then { getText(_entry >> "name");} else {_classType};
             if (["Minor"] call _parseForSubClassWounds || ["Medium"] call _parseForSubClassWounds || ["Large"] call _parseForSubClassWounds) exitwith {}; // continue to the next one
 
             // There were no subclasses, so we will add this one instead.
