@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-private ["_injuriesRootConfig", "_woundsConfig", "_allWoundClasses", "_amountOf", "_entry","_classType", "_selections", "_bloodLoss", "_pain","_minDamage","_causes", "_allTypes", "_damageTypesConfig", "_thresholds", "_typeThresholds", "_selectionSpecific", "_selectionSpecificType"];
+private ["_injuriesRootConfig", "_woundsConfig", "_allWoundClasses", "_amountOf", "_entry","_classType", "_selections", "_bloodLoss", "_pain","_minDamage","_causes", "_allTypes", "_damageTypesConfig", "_thresholds", "_typeThresholds", "_selectionSpecific", "_selectionSpecificType", "_classDisplayName", "_subClassDisplayName"];
 
 _injuriesRootConfig = (configFile >> "ACE_Medical_Advanced" >> "Injuries");
 _allTypes = ["stab", "grenade", "bullet", "explosive", "shell", "punch", "vehiclecrash", "backblast", "falling", "bite", "ropeburn"];
@@ -36,8 +36,9 @@ _parseForSubClassWounds = {
         _subClasspain = if (isNumber(_subClassConfig >> "pain")) then { getNumber(_subClassConfig >> "pain");} else { _pain };
         _subClassminDamage = if (isNumber(_subClassConfig >> "minDamage")) then { getNumber(_subClassConfig >> "minDamage");} else { _minDamage };
         _subClasscauses = if (isArray(_subClassConfig >> "causes")) then { getArray(_subClassConfig >> "causes");} else { _causes };
+        _subClassDisplayName = if (isText(_entry >> "name")) then { getText(_entry >> "name");} else {_classDisplayName + " " + _subClass};
         if (count _selections > 0 && count _causes > 0) then {
-            _allWoundClasses pushback [_subClasstype, _subClassselections, _subClassbloodLoss, _subClasspain, _subClassminDamage, _subClasscauses];
+            _allWoundClasses pushback [_subClasstype, _subClassselections, _subClassbloodLoss, _subClasspain, _subClassminDamage, _subClasscauses, _subClassDisplayName];
         };
         true;
     };
@@ -58,12 +59,12 @@ if (isClass _woundsConfig) then {
             _pain = if (isNumber(_entry >> "pain")) then { getNumber(_entry >> "pain");} else {0};
             _minDamage = if (isNumber(_entry >> "minDamage")) then { getNumber(_entry >> "minDamage");} else {0};
             _causes = if (isArray(_entry >> "causes")) then { getArray(_entry >> "causes");} else {[]};
-
+            _classDisplayName = if (isText(_entry >> "name")) then { getText(_entry >> "name");} else {[]};
             if (["Minor"] call _parseForSubClassWounds || ["Medium"] call _parseForSubClassWounds || ["Large"] call _parseForSubClassWounds) exitwith {}; // continue to the next one
 
             // There were no subclasses, so we will add this one instead.
             if (count _selections > 0 && count _causes > 0) then {
-                _allWoundClasses pushback [_classType, _selections, _bloodLoss, _pain, _minDamage, _causes];
+                _allWoundClasses pushback [_classType, _selections, _bloodLoss, _pain, _minDamage, _causes, _classDisplayName];
             };
             true;
         };
