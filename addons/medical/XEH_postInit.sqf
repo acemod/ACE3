@@ -4,10 +4,9 @@
 
 if (!hasInterface) exitwith{};
 
-GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "ACE_heartbeat_fast_3", "ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
+GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "ACE_heartbeat_fast_3"];
 GVAR(heartBeatSounds_Normal) = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
-GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2", "ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
-GVAR(playingHeartBeatSound) = false;
+GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
 ["Medical_treatmentCompleted", FUNC(onTreatmentCompleted)] call ace_common_fnc_addEventHandler;
 ["medical_propagateWound", FUNC(onPropagateWound)] call ace_common_fnc_addEventHandler;
@@ -131,6 +130,7 @@ GVAR(effectTimeBlood) = time;
 
 
 GVAR(lastHeartBeat) = time;
+GVAR(lastHeartBeatSound) = time;
 
 // @todo, remove once parameters are set up
 if (isNil QGVAR(level)) then {
@@ -142,71 +142,75 @@ if (isNil QGVAR(level)) then {
     _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
     if (GVAR(level) == 0) then {
         _heartRate = 60 + 40 * (ACE_player getVariable [QGVAR(pain), 0]);
-        _heartRate = _heartRate min 120;
     };
-    _interval = 60 / _heartRate;
-    if (time < GVAR(lastHeartBeat) + _interval) exitWith {};
-    GVAR(lastHeartBeat) = time;
+    if (_heartRate <= 0) exitwith {};
+    _interval = 60 / (_heartRate min 50);
+    if (time > GVAR(lastHeartBeat) + _interval) then {
+        GVAR(lastHeartBeat) = time;
 
-    // Pain effect
-    _strength = ACE_player getVariable [QGVAR(pain), 0];
-    // _strength = _strength * (ACE_player getVariable [QGVAR(coefPain), GVAR(coefPain)]); @todo
-    GVAR(alternativePainEffect) = false; // @todo
-    if (GVAR(alternativePainEffect)) then {
-        GVAR(effectPainCC) ppEffectEnable false;
-        if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
-            _strength = _strength * 0.15;
-            GVAR(effectPainCA) ppEffectEnable true;
-            GVAR(effectPainCA) ppEffectAdjust [_strength, _strength, false];
-            GVAR(effectPainCA) ppEffectCommit 0.01;
-            [{
-                GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
-                GVAR(effectPainCA) ppEffectCommit (_this select 1);
-            }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
-            [{
-                GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
+        // Pain effect
+        _strength = ACE_player getVariable [QGVAR(pain), 0];
+        // _strength = _strength * (ACE_player getVariable [QGVAR(coefPain), GVAR(coefPain)]); @todo
+        GVAR(alternativePainEffect) = false; // @todo
+        if (GVAR(alternativePainEffect)) then {
+            GVAR(effectPainCC) ppEffectEnable false;
+            if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
+                _strength = _strength * 0.15;
+                GVAR(effectPainCA) ppEffectEnable true;
+                GVAR(effectPainCA) ppEffectAdjust [_strength, _strength, false];
                 GVAR(effectPainCA) ppEffectCommit 0.01;
-            }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
-            [{
-                GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
-                GVAR(effectPainCA) ppEffectCommit (_this select 1);
-            }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+                [{
+                    GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
+                    GVAR(effectPainCA) ppEffectCommit (_this select 1);
+                }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
+                [{
+                    GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
+                    GVAR(effectPainCA) ppEffectCommit 0.01;
+                }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
+                [{
+                    GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
+                    GVAR(effectPainCA) ppEffectCommit (_this select 1);
+                }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+            } else {
+                GVAR(effectPainCA) ppEffectEnable false;
+            };
         } else {
             GVAR(effectPainCA) ppEffectEnable false;
-        };
-    } else {
-        GVAR(effectPainCA) ppEffectEnable false;
-        if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
-            _strength = _strength * 0.6;
-            GVAR(effectPainCC) ppEffectEnable true;
-            GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - _strength,1 - _strength,0,0,0,0.2,2]];
-            GVAR(effectPainCC) ppEffectCommit 0.01;
-            [{
-                GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
-                GVAR(effectPainCC) ppEffectCommit (_this select 1);
-            }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
-            [{
-                GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
+            if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
+                _strength = _strength * 0.6;
+                GVAR(effectPainCC) ppEffectEnable true;
+                GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - _strength,1 - _strength,0,0,0,0.2,2]];
                 GVAR(effectPainCC) ppEffectCommit 0.01;
-            }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
-            [{
-                GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
-                GVAR(effectPainCC) ppEffectCommit (_this select 1);
-            }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
-        } else {
-            GVAR(effectPainCC) ppEffectEnable false;
+                [{
+                    GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
+                    GVAR(effectPainCC) ppEffectCommit (_this select 1);
+                }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
+                [{
+                    GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
+                    GVAR(effectPainCC) ppEffectCommit 0.01;
+                }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
+                [{
+                    GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
+                    GVAR(effectPainCC) ppEffectCommit (_this select 1);
+                }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+            } else {
+                GVAR(effectPainCC) ppEffectEnable false;
+            };
         };
     };
 
-    if (GVAR(level) > 0) then {
-        // Heart rate sound effect
-        if (_heartRate < 60) then {
-            _sound = GVAR(heartBeatSounds_Slow) select (random((count GVAR(heartBeatSounds_Slow)) -1));
-            playSound _sound;
-        } else {
-            if (_heartRate > 120) then {
-                _sound = GVAR(heartBeatSounds_Fast) select (random((count GVAR(heartBeatSounds_Fast)) -1));
+    if (GVAR(level) > 0 && {_heartRate > 0}) then {
+        _minTime = 60 / _heartRate;
+        if (time - GVAR(lastHeartBeatSound) > _minTime) then {
+            GVAR(lastHeartBeatSound) = time;
+            // Heart rate sound effect
+            if (_heartRate < 60) then {
+                _sound = GVAR(heartBeatSounds_Normal) select (random((count GVAR(heartBeatSounds_Normal)) -1));
                 playSound _sound;
+            } else {
+                if (_heartRate > 150) then {
+                    playSound "ACE_heartbeat_fast_2";
+                };
             };
         };
     };
