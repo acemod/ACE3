@@ -20,6 +20,9 @@
     <Key ID="STR_ACE_Interaction_LegRight">
       <English>Right Leg &gt;&gt;</English>
     </Key>
+    <Key ID="STR_ACE_Interaction_Weapon">
+      <English>Weapon &gt;&gt;</English>
+    </Key>
     <Key ID="STR_ACE_Interaction_InteractionMenu">
       <English>Interaction Menu</English>
       <German>Interaktionsmenü</German>

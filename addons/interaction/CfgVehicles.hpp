@@ -180,6 +180,13 @@ class CfgVehicles {
         condition = "";
         statement = "";
       };
+      class ACE_Weapon {
+        displayName = "$STR_ACE_Interaction_Weapon";
+        selection = "weapon";
+        distance = 2.0;
+        condition = "";
+        statement = "";
+      };
 
       class ACE_TapShoulderRight {
         displayName = "$STR_ACE_Interaction_TapShoulder";
