@@ -1,4 +1,18 @@
-// by commy2
+/*
+ * Author: commy2
+ * Returns the weight (from the loadAbs command) in lbs/kg (based on user option)
+ *
+ * Arguments:
+ * 0: The Unit (usually the player) <OBJECT>
+ *
+ * Return Value:
+ * The return value <NUMBER>
+ *
+ * Example:
+ * _bool = [player] call ace_movement_fnc_getWeight
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_unit", "_weight"];

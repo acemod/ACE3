@@ -25,5 +25,6 @@ GVAR(Module) = true;
 [_logic, QGVAR(PlayerNamesViewDistance),  "PlayerNamesViewDistance"     ] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(ShowNamesForAI),           "ShowNamesForAI"              ] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(showVehicleCrewInfo),      "showVehicleCrewInfo"         ] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(showCursorTagForVehicles),  "showCursorTagForVehicles"    ] call EFUNC(common,readSettingFromModule);
 
 diag_log text "[ACE]: NameTags Module Initialized.";
