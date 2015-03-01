@@ -9,15 +9,13 @@ PREP(keyDown);
 PREP(keyDownSelfAction);
 PREP(keyUp);
 PREP(keyUpSelfAction);
-PREP(probe);
 PREP(removeAction);
 PREP(render);
 PREP(renderIcon);
 PREP(renderMenu);
 PREP(rotateVectLine);
 PREP(rotateVectLineGetMap);
-
-GVAR(toRender) = [];
+PREP(updateVecLineMap);
 
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;
@@ -30,11 +28,7 @@ GVAR(selectedAction) = {};
 GVAR(actionSelected) = false;
 GVAR(selectedTarget) = objNull;
 
-GVAR(filter) = [];
-
 GVAR(menuDepthPath) = [];
-GVAR(renderDepth) = 0;
-GVAR(lastRenderDepth) = 0;
 GVAR(vecLineMap) = [];
 GVAR(lastPos) = [0,0,0];
 
@@ -44,12 +38,9 @@ GVAR(lastPath) = [];
 
 GVAR(expanded) = false;
 
-GVAR(maxRenderDepth) = 0;
 GVAR(startHoverTime) = diag_tickTime;
 GVAR(iconCtrls) = [];
 GVAR(iconCount) = 0;
-
-GVAR(objectActionsHash) = HASH_CREATE;
 
 GVAR(uidCounter) = 0;
 
