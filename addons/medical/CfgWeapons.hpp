@@ -173,7 +173,7 @@ class CfgWeapons {
             type = 201;
         };
     };
-    class GVAR(bloodIV_500): GVAR(bloodIV) {
+    class GVAR(bloodIV_250): GVAR(bloodIV) {
         displayName = $STR_ACE_MEDICAL_BLOOD_IV_250;
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
