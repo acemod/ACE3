@@ -9,6 +9,8 @@ PREP(actionCheckPulseLocal);
 PREP(actionCheckResponse);
 PREP(actionPlaceInBodyBag);
 PREP(actionRemoveTourniquet);
+PREP(actionLoadUnit);
+PREP(actionUnloadUnit);
 PREP(addHeartRateAdjustment);
 PREP(addToInjuredCollection);
 PREP(addToLog);
