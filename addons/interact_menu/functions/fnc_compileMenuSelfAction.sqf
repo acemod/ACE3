@@ -81,9 +81,9 @@ _actions = [[
     { true },
     { true },
     10,
-    [_actionsCfg, ["SelfActions"]] call _recurseFnc,
+    [_actionsCfg, ["ACE_SelfActions"]] call _recurseFnc,
     GVAR(uidCounter),
-    ["SelfActions"]
+    ["ACE_SelfActions"]
 ]
 ];
 GVAR(uidCounter) = GVAR(uidCounter) + 1;
