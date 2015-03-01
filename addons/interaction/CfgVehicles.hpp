@@ -145,6 +145,41 @@ class CfgVehicles {
           enableInside = 1;
         };
       };
+      class ACE_Head {
+        displayName = "$STR_ACE_Interaction_Head";
+        selection = "pilot";
+        distance = 2.0;
+        condition = "";
+        statement = "";
+      };
+      class ACE_ArmLeft {
+        displayName = "$STR_ACE_Interaction_ArmLeft";
+        selection = "LeftForeArm";
+        distance = 2.0;
+        condition = "";
+        statement = "";
+      };
+      class ACE_ArmRight {
+        displayName = "$STR_ACE_Interaction_ArmRight";
+        selection = "RightForeArm";
+        distance = 2.0;
+        condition = "";
+        statement = "";
+      };
+      class ACE_LegLeft {
+        displayName = "$STR_ACE_Interaction_LegLeft";
+        selection = "LKnee";
+        distance = 2.0;
+        condition = "";
+        statement = "";
+      };
+      class ACE_LegRight {
+        displayName = "$STR_ACE_Interaction_LegRight";
+        selection = "RKnee";
+        distance = 2.0;
+        condition = "";
+        statement = "";
+      };
 
       class ACE_TapShoulderRight {
         displayName = "$STR_ACE_Interaction_TapShoulder";
@@ -152,10 +187,6 @@ class CfgVehicles {
         distance = 2.0;
         condition = QUOTE([ARR_2(_player, _target)] call DFUNC(canTapShoulder));
         statement = QUOTE([ARR_3(_player, _target, 0)] call DFUNC(tapShoulder));
-        showDisabled = 0;
-        priority = 2.8;
-        hotkey = "Q";
-        enableInside = 1;
       };
       class ACE_TapShoulderLeft {
         displayName = "$STR_ACE_Interaction_TapShoulder";
@@ -163,10 +194,6 @@ class CfgVehicles {
         distance = 2.0;
         condition = QUOTE([ARR_2(_player, _target)] call DFUNC(canTapShoulder));
         statement = QUOTE([ARR_3(_player, _target, 1)] call DFUNC(tapShoulder));
-        showDisabled = 0;
-        priority = 2.8;
-        hotkey = "Q";
-        enableInside = 1;
       };
     };
 

@@ -5,6 +5,21 @@
     <Key ID="STR_ACE_Interaction_MainAction">
       <English>Interactions &gt;&gt;</English>
     </Key>
+    <Key ID="STR_ACE_Interaction_Head">
+      <English>Head &gt;&gt;</English>
+    </Key>
+    <Key ID="STR_ACE_Interaction_ArmLeft">
+      <English>Left Arm &gt;&gt;</English>
+    </Key>
+    <Key ID="STR_ACE_Interaction_ArmRight">
+      <English>Right Arm &gt;&gt;</English>
+    </Key>
+    <Key ID="STR_ACE_Interaction_LegLeft">
+      <English>Left Leg &gt;&gt;</English>
+    </Key>
+    <Key ID="STR_ACE_Interaction_LegRight">
+      <English>Right Leg &gt;&gt;</English>
+    </Key>
     <Key ID="STR_ACE_Interaction_InteractionMenu">
       <English>Interaction Menu</English>
       <German>Interaktionsmenü</German>
