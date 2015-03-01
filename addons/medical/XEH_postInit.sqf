@@ -78,7 +78,7 @@ GVAR(effectTimeBlood) = time;
         GVAR(effectBloodVolumeCC) ppEffectEnable false;
         GVAR(effectPainCA) ppEffectEnable false;
         GVAR(effectPainCC) ppEffectEnable false;
-        [false] call EFUNC(common,disableUserInput); // @todo, only when disabled?
+        ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
     };
 
     // Unconsciousness effect
@@ -86,11 +86,11 @@ GVAR(effectTimeBlood) = time;
         GVAR(effectUnconsciousCC) ppEffectEnable true;
         GVAR(effectUnconsciousRB) ppEffectEnable true;
         GVAR(effectBlind) = true;
-        [true, true] call EFUNC(common,disableUserInput); // @todo, see above
+        ["unconscious", true] call EFUNC(common,setDisableUserInputStatus);
     } else {
         GVAR(effectUnconsciousCC) ppEffectEnable false;
         GVAR(effectUnconsciousRB) ppEffectEnable false;
-        [false] call EFUNC(common,disableUserInput); // @todo, see above
+        ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
         if (GVAR(effectBlind)) then {
             _strength = 0.78 * (call EFUNC(common,ambientBrightness));
             GVAR(effectBlindingCC) ppEffectEnable true;
