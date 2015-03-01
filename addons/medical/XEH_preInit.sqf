@@ -44,6 +44,7 @@ PREP(isInMedicalFacility);
 PREP(isMedic);
 PREP(isMedicalVehicle);
 PREP(onMedicationUsage);
+PREP(onWoundUpdateRequest);
 PREP(onPropagateWound);
 PREP(parseConfigForInjuries);
 PREP(playInjuredSound);

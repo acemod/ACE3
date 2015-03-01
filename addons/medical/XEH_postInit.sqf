@@ -11,6 +11,7 @@ GVAR(playingHeartBeatSound) = false;
 
 ["Medical_treatmentCompleted", FUNC(onTreatmentCompleted)] call ace_common_fnc_addEventHandler;
 ["medical_propagateWound", FUNC(onPropagateWound)] call ace_common_fnc_addEventHandler;
+["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call ace_common_fnc_addEventHandler;
 
 // Initialize all effects
 // @todo: make this a macro?
@@ -197,28 +198,34 @@ if (isNil QGVAR(level)) then {
         };
     };
 
-    /* @todo
-    // Heart rate sound effect
-    _heartRate = _unit getvariable[QGVAR(heartRate), 70];
-    if (_heartRate > 0.1) then {
-        if (GVAR(playingHeartBeatSound)) exitwith {};
-        GVAR(playingHeartBeatSound) = true;
-        _sleep = 60 / _heartRate;
+    if (GVAR(level) > 0) then {
+        // Heart rate sound effect
         if (_heartRate < 60) then {
             _sound = GVAR(heartBeatSounds_Slow) select (random((count GVAR(heartBeatSounds_Slow)) -1));
             playSound _sound;
-            [{
-                GVAR(playingHeartBeatSound) = false;
-            }, [], _sleep, _sleep] call EFUNC(common,waitAndExecute);
         } else {
             if (_heartRate > 120) then {
                 _sound = GVAR(heartBeatSounds_Fast) select (random((count GVAR(heartBeatSounds_Fast)) -1));
                 playSound _sound;
-                [{
-                    GVAR(playingHeartBeatSound) = false;
-                }, [], _sleep, _sleep] call EFUNC(common,waitAndExecute);
             };
         };
     };
-    */
+
 }, 0, []] call CBA_fnc_addPerFrameHandler;
+
+// broadcast injuries to JIP clients in a MP session
+if (isMultiplayer && !isDedicated) then {
+    [QGVAR(onPlayerConnected), "onPlayerConnected", {
+        if (isNil QGVAR(InjuredCollection)) then {
+            GVAR(InjuredCollection) = [];
+        };
+
+        {
+            _unit = _x;
+            _openWounds = _unit getvariable [QGVAR(openWounds), []];
+            {
+                ["medical_propagateWound", [_id], [_unit, _x]] call EFUNC(common,targetEvent);
+            }foreach _openWounds;
+        }foreach GVAR(InjuredCollection);
+    }, []] call BIS_fnc_addStackedEventHandler;
+};

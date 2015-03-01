@@ -42,4 +42,9 @@ if ([_unit] call FUNC(hasMedicalEnabled)) then {
             };
         };
     }, 1, [_unit]] call CBA_fnc_addPerFrameHandler;
+
+    if (isNil QGVAR(InjuredCollection)) then {
+        GVAR(InjuredCollection) = [];
+    };
+    GVAR(InjuredCollection) pushback _unit;
 };
