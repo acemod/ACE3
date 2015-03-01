@@ -16,7 +16,6 @@ class CfgVehicles {
         showDisabled = 1;
         priority = 4;
         icon = PATHTOF(UI\Explosives_Menu_ca.paa);
-        subMenu[] = {"ACE_Explosives", 1};
         hotkey = "X";
         //Sub-menu items
         class ACE_Detonate {

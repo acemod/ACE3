@@ -212,7 +212,6 @@ class CfgVehicles {
         showDisabled = 1;
         priority = 3.2;
         icon = PATHTOF(UI\team\team_management_ca.paa);
-        subMenu[] = {"ACE_TeamManagement", 1};
         enableInside = 1;
         hotkey = "M";
 
@@ -290,30 +289,12 @@ class CfgVehicles {
         };
       };
 
-      /* DANCE ANIMATION DOESN'T WORK :(
-      class ACE_Dance {
-        displayName = "$STR_ACE_Interaction_Dance";
-        condition = "isClass (configFile >> 'CfgPatches' >> 'ACE_Movement') and !ACE_Dancing";
-        statement = "ACE_Dancing = true; [-2, {_this switchMove 'TestDance';}, player] call CBA_fnc_globalExecute;";
-        showDisabled = 0;
-        priority = -1.2;
-      };
-      class ACE_StopDancing {
-        displayName = "$STR_ACE_Interaction_StopDancing";
-        condition = "ACE_Dancing";
-        statement = "ACE_Dancing = false; [-2, {_this switchMove '';}, player] call CBA_fnc_globalExecute;";
-        showDisabled = 0;
-        priority = -1.2;
-      };
-      */
-
       class ACE_Gestures {
         displayName = "$STR_ACE_Interaction_Gestures";
         condition = "canStand _target";
         statement = "";
         showDisabled = 1;
         priority = 3.5;
-        subMenu[] = {"ACE_Gestures", 1};
         icon = PATHTOF(UI\gestures_ca.paa);
         hotkey = "G";
 
@@ -420,19 +401,8 @@ class CfgVehicles {
         showDisabled = 1;
         priority = 4.5;
         icon = "";  // @todo
-        subMenu[] = {"ACE_Equipment", 1};
         enableInside = 1;
         hotkey = "E";
-
-        class ACE_Dummy {
-          displayName = "";
-          condition = QUOTE(false);
-          statement = "";
-          showDisabled = 1;
-          priority = -99;
-          icon = PATHTOEF(common,UI\blank_CO.paa);
-          enableInside = 1;
-        };
       };
     };
   };
