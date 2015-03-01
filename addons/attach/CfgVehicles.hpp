@@ -2,9 +2,6 @@
 #define MACRO_ATTACHTOVEHICLE \
     class ACE_Actions { \
         class ACE_MainActions { \
-            selection = ""; \
-            distance = 5; \
-            condition = "true"; \
             class GVAR(AttachVehicle) { \
                 displayName = "$STR_ACE_Attach_AttachDetach"; \
                 condition = QUOTE(([ARR_3(_player, _target, '')] call FUNC(canAttach))); \

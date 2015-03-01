@@ -157,6 +157,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 distance = 5;
                 condition = "true";
+                selection = "";
                 class ACE_Teleport {
                     displayName = "Teleport to Base";
                     distance = 4;
@@ -181,6 +182,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 distance = 5;
                 condition = "true";
+                selection = "";
                 class ACE_Teleport {
                     displayName = "Teleport to Base";
                     distance = 4;
@@ -205,6 +207,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 distance = 5;
                 condition = "true";
+                selection = "";
                 class ACE_Teleport {
                     displayName = "Teleport to Base";
                     distance = 4;

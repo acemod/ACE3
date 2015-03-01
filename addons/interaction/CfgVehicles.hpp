@@ -409,47 +409,89 @@ class CfgVehicles {
 
   class LandVehicle;
   class Car: LandVehicle {
-    class ACE_Actions {};
+    class ACE_Actions {
+      class ACE_MainActions {
+        selection = "";
+        distance = 8;
+        condition = "true";
+      };
+    };
     class ACE_SelfActions {};
   };
   class Tank: LandVehicle {
-    class ACE_Actions {};
+    class ACE_Actions {
+      class ACE_MainActions {
+        selection = "";
+        distance = 8;
+        condition = "true";
+      };
+    };
     class ACE_SelfActions {};
   };
 
   class Air;
   class Helicopter: Air {
-    class ACE_Actions {};
+    class ACE_Actions {
+      class ACE_MainActions {
+        selection = "";
+        distance = 8;
+        condition = "true";
+      };
+    };
     class ACE_SelfActions {};
   };
   class Plane: Air {
-    class ACE_Actions {};
+    class ACE_Actions {
+      class ACE_MainActions {
+        selection = "";
+        distance = 8;
+        condition = "true";
+      };
+    };
     class ACE_SelfActions {};
   };
 
   class Ship;
   class Ship_F: Ship {
     class ACE_Actions {
-      class ACE_Push {
-        displayName = "$STR_ACE_Interaction_Push";
-        distance = 4;
-        condition = QUOTE(getMass _target < 1000 && {alive _target});
-        statement = QUOTE([ARR_2(_target, [ARR_3(2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5)])] call FUNC(push););
-        showDisabled = 0;
-        priority = -1;
+      class ACE_MainActions {
+        selection = "";
+        distance = 8;
+        condition = "true";
+
+        class ACE_Push {
+          displayName = "$STR_ACE_Interaction_Push";
+          distance = 6;
+          condition = QUOTE(getMass _target < 1000 && {alive _target});
+          statement = QUOTE([ARR_2(_target, [ARR_3(2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5)])] call FUNC(push););
+          showDisabled = 0;
+          priority = -1;
+        };
       };
     };
     class ACE_SelfActions {};
   };
 
   class StaticWeapon: LandVehicle {
-    class ACE_Actions {};
+    class ACE_Actions {
+      class ACE_MainActions {
+        selection = "";
+        distance = 8;
+        condition = "true";
+      };
+    };
     class ACE_SelfActions {};
   };
 
   class StaticMortar;
   class Mortar_01_base_F: StaticMortar {
-    class ACE_Actions {};
+    class ACE_Actions {
+      class ACE_MainActions {
+        selection = "";
+        distance = 8;
+        condition = "true";
+      };
+    };
     class ACE_SelfActions {};
   };
 
