@@ -23,7 +23,7 @@ _selectionName = _this select 2;
 _removeItem = _this select 3;
 _prevAnim = _this select 4;
 
-[_caller,"STR_ACE_STITCHING","STR_ACE_START_STITCHING_INJURIES", 0, [[_injuredPerson] call EFUNC(common,getName),_selectionName]] call EFUNC(gui,sendDisplayMessageTo);
+[_caller,"STR_ACE_STITCHING","STR_ACE_START_STITCHING_INJURIES", 0, [[_injuredPerson] call EFUNC(common,getName),_selectionName]] call EFUNC(common,sendDisplayMessageTo);
 
 _bandagedWounds = [_injuredPerson,QGVAR(bandagedWounds)] call EFUNC(common,getDefinedVariable);
 _bodyPartN = [_selectionName] call FUNC(getBodyPartNumber);
@@ -46,12 +46,12 @@ _caller setvariable [QGVAR(lastStichPerformed), diag_tickTime];
     _prevAnim = _args select 4;
 
     if ((vehicle _caller != _caller) || ((getPos _caller) distance (_caller getvariable GVAR(ORIGINAL_POSITION_PLAYER))) >= 1) then {
-        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(gui,sendDisplayInformationTo);
+        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(common,sendDisplayInformationTo);
 
         if (_prevAnim != "") then {
             [_caller,_prevAnim, 0] call EFUNC(common,doAnimation);
         };
-        [QGVAR(treatmentIconID), false, QUOTE(PATHTOF(data\icons\icon_advanced_treatment.paa)), [1,1,1,1]] call EFUNC(gui,displayIcon);
+        [QGVAR(treatmentIconID), false, QUOTE(PATHTOF(data\icons\icon_advanced_treatment.paa)), [1,1,1,1]] call EFUNC(common,displayIcon);
         ["Medical_handleTreatment_Stitching", [_caller, _target, _selectionName, _removeItem, false]] call ace_common_fnc_localEvent;
         ["Medical_treatmentCompleted", [_caller, _target, _selectionName, _removeItem]] call ace_common_fnc_localEvent;
 
@@ -83,7 +83,7 @@ _caller setvariable [QGVAR(lastStichPerformed), diag_tickTime];
             if (_prevAnim != "") then {
                 [_caller,_prevAnim, 0] call EFUNC(common,doAnimation);
             };
-            [QGVAR(treatmentIconID), false, QUOTE(PATHTOF(data\icons\icon_advanced_treatment.paa)), [1,1,1,1]] call EFUNC(gui,displayIcon);
+            [QGVAR(treatmentIconID), false, QUOTE(PATHTOF(data\icons\icon_advanced_treatment.paa)), [1,1,1,1]] call EFUNC(common,displayIcon);
             ["Medical_handleTreatment_Stitching", [_caller, _target, _selectionName, _removeItem, true]] call ace_common_fnc_localEvent;
             ["Medical_treatmentCompleted", [_caller, _target, _selectionName, _removeItem]] call ace_common_fnc_localEvent;
 
@@ -99,6 +99,6 @@ _caller setvariable [QGVAR(lastStichPerformed), diag_tickTime];
     {}, // on success
     {},    // on failure
     [_caller] // arguments
-] call EFUNC(gui,loadingBar);
+] call EFUNC(common,loadingBar);
 
 true;

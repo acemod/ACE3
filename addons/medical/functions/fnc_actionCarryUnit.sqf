@@ -42,7 +42,7 @@ if (!alive _unit) exitwith {
     [_caller, false] call FUNC(treatmentMutex);
     [{
         _this call FUNC(actionCarryUnit);
-    }, [_caller, ([_unit,_caller] call FUNC(makeCopyOfBody_F)), _killOnDrop], 0.25, 0.25] call EFUNC(common,waitAndExecute);
+    }, [_caller, ([_unit,_caller] call FUNC(makeCopyOfBody)), _killOnDrop], 0.25, 0.25] call EFUNC(common,waitAndExecute);
 };
 
 if !([_caller,_unit] call EFUNC(common,carryObj)) exitwith {
@@ -87,9 +87,9 @@ _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
 
     }, // on success
     {
-        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(gui,sendDisplayInformationTo);
+        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(common,sendDisplayInformationTo);
         [(_this select 0), false] call FUNC(treatmentMutex);
         [(_this select 0), objNull,[0, 0, 0]] call EFUNC(common,carryObj);
     },    // on failure
     [_caller, _unit, _killOnDrop] // arguments
-] call EFUNC(gui,loadingBar);
+] call EFUNC(common,loadingBar);

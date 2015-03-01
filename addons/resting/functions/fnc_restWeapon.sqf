@@ -27,6 +27,9 @@ _intersects = _this call FUNC(getIntersection);
 
 if (true in _intersects) then {
   _unit setVariable ["ACE_weaponRested", true];
+  if (_unit == ACE_PLAYER) then {
+    [QGVAR(bipodDeployed), true, QUOTE(PATHTOF(data\icons\icon_bipod.paa)), [1,1,1,1], -1] call EFUNC(common,displayIcon);
+  };
 
   private "_restedPosition";
   _restedPosition = getPosASL _unit;

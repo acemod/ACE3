@@ -19,7 +19,9 @@
 
 PARAMS_3(_unit,_attachToVehicle,_item);
 
-_attachLimit = if (_unit == _attachToVehicle) then {1} else {10};
-_attachedObjects = _attachToVehicle getVariable ["ACE_AttachedObjects", []];
+private ["_attachLimit", "_attachedObjects"];
 
-canStand _unit && {alive _attachToVehicle} && {(count _attachedObjects) < _attachLimit} && {_item in ((magazines _unit) + (items _unit) + [""])}
+_attachLimit = [10, 1] select (_unit == _attachToVehicle);
+_attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
+
+canStand _unit && {alive _attachToVehicle} && {count _attachedObjects < _attachLimit} && {_item in (itemsWithMagazines _unit + [""])}

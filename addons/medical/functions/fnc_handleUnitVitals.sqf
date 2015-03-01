@@ -93,7 +93,7 @@ if ((missionNamespace getvariable[QGVAR(setting_AdvancedLevel), 0]) > 0) exitwit
 
     // Check vitals for medical status
     // TODO check for in revive state instead of variable
-    if ((_unit getvariable[QEGVAR(common,ENABLE_REVIVE_SETDEAD_F),0]) == 0) then {
+    if ((_unit getvariable[QEGVAR(common,ENABLE_REVIVE_SETDEAD),0]) == 0) then {
         _bloodPressureL = _bloodPressure select 0;
         _bloodPressureH = _bloodPressure select 1;
 

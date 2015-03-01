@@ -1,3 +1,4 @@
+// by commy2
 
 ["ACE3",
     localize "STR_ACE_FCS_LaseTarget",
@@ -6,7 +7,11 @@
         _exceptions = [];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
         // Conditions: specific
-        if !(!GVAR(enabled) && {call FUNC(canUseRangefinder) || FUNC(canUseFCS)}) exitWith {false};
+        if !((!GVAR(enabled) && FUNC(canUseFCS)) || FUNC(canUseRangefinder)) exitWith {false};
+
+        // prevent holding down
+        if (GETGVAR(isDownStateKey1,false)) exitWith {false};
+        GVAR(isDownStateKey1) = true;
 
         // Statement
         [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex)] call FUNC(keyDown);
@@ -21,6 +26,9 @@
 ["ACE3",
     localize "STR_ACE_FCS_LaseTarget",
     {
+        // prevent holding down
+        GVAR(isDownStateKey1) = false;
+
         // Conditions: canInteract
         _exceptions = [];
         if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};

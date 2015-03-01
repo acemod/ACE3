@@ -19,7 +19,7 @@ _drag = [_this, 2, false, [false]] call BIS_fnc_Param;
 if (vehicle _unit == _unit) exitwith {};
 if (([_unit] call cse_fnc_isAwake)) exitwith {};
 
-if ([_caller, _unit] call EFUNC(common,unloadPerson_F)) then {
+if ([_caller, _unit] call EFUNC(common,unloadPerson)) then {
     if (_drag) then {
         if ((vehicle _caller) == _caller) then {
             [[_caller,_unit], QUOTE(FUNC(actionDragUnit)), _caller, false] call BIS_fnc_MP;

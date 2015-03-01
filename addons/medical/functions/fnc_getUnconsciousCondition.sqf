@@ -13,8 +13,8 @@
 private ["_unit","_return"];
 _unit = _this select 0;
 
-if (isnil QGVAR(unconsciousConditions_F)) then {
-    GVAR(unconsciousConditions_F) = [];
+if (isnil QGVAR(unconsciousConditions)) then {
+    GVAR(unconsciousConditions) = [];
 };
 
 _return = false;
@@ -25,5 +25,5 @@ _return = false;
         };
     };
     if (_return) exitwith{};
-}foreach GVAR(unconsciousConditions_F);
+}foreach GVAR(unconsciousConditions);
 _return

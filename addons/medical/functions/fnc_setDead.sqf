@@ -24,11 +24,11 @@ if (!local _unit) exitwith {
     [[_unit, _force], QUOTE(FUNC(setDead)), _unit, false] call BIS_fnc_MP;
 };
 
-if (isnil QGVAR(ENABLE_REVIVE_F)) then {
-    GVAR(ENABLE_REVIVE_F) = 0;
+if (isnil QGVAR(ENABLE_REVIVE)) then {
+    GVAR(ENABLE_REVIVE) = 0;
 };
 
-if (((GVAR(ENABLE_REVIVE_F) == 1 && isPlayer _unit) || (GVAR(ENABLE_REVIVE_F) == 2)) && !_force && (alive (vehicle _unit))) exitwith {
+if (((GVAR(ENABLE_REVIVE) == 1 && isPlayer _unit) || (GVAR(ENABLE_REVIVE) == 2)) && !_force && (alive (vehicle _unit))) exitwith {
     // enter revive state
     _unit setvariable ["ACE_inReviveState", true, true];
 
@@ -36,11 +36,11 @@ if (((GVAR(ENABLE_REVIVE_F) == 1 && isPlayer _unit) || (GVAR(ENABLE_REVIVE_F) ==
     [_unit] call FUNC(setUnconsciousState);
 
     // setting the revive default values
-    if (isnil QGVAR(REVIVE_TIMER_F)) then {
-        GVAR(REVIVE_TIMER_F) = 10;
+    if (isnil QGVAR(REVIVE_TIMER)) then {
+        GVAR(REVIVE_TIMER) = 10;
     };
-    if (isnil QGVAR(REVIVE_NUMBER_MAX_F)) then {
-        GVAR(REVIVE_NUMBER_MAX_F) = -1;
+    if (isnil QGVAR(REVIVE_NUMBER_MAX)) then {
+        GVAR(REVIVE_NUMBER_MAX) = -1;
     };
 
     [{
@@ -58,7 +58,7 @@ if (((GVAR(ENABLE_REVIVE_F) == 1 && isPlayer _unit) || (GVAR(ENABLE_REVIVE_F) ==
         };
 
         _counter = _unit getvariable ["ACE_reviveCounterValue", 0];
-        if (_counter >= GVAR(REVIVE_TIMER_F)) exitwith{
+        if (_counter >= GVAR(REVIVE_TIMER)) exitwith{
             if (isPlayer _unit) then {
                 titleText ["You died..","PLAIN DOWN"];
             };

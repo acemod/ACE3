@@ -26,7 +26,7 @@ if ((isNull ([_caller] call EFUNC(common,getCarriedObj))) || !([_caller] call EF
         _caller removeWeapon "ACE_FakePrimaryWeapon";
     };
 
-    [_target, false] call EFUNC(common,disableAI_f);
+    [_target, false] call EFUNC(common,disableAI);
     _caller setvariable[QGVAR(onStartMovingUnitParams), nil];
 
     // handle the drag & carry administration
