@@ -75,6 +75,7 @@ PREP(treatmentTourniquet);
 PREP(treatmentTourniquetLocal);
 PREP(useItem);
 PREP(useItems);
+PREP(displayPatientInformation);
 
 GVAR(injuredUnitCollection) = [];
 call FUNC(parseConfigForInjuries);
