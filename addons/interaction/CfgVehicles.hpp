@@ -411,8 +411,9 @@ class CfgVehicles {
   class Car: LandVehicle {
     class ACE_Actions {
       class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
         selection = "";
-        distance = 8;
+        distance = 10;
         condition = "true";
       };
     };
@@ -421,8 +422,9 @@ class CfgVehicles {
   class Tank: LandVehicle {
     class ACE_Actions {
       class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
         selection = "";
-        distance = 8;
+        distance = 10;
         condition = "true";
       };
     };
@@ -433,8 +435,9 @@ class CfgVehicles {
   class Helicopter: Air {
     class ACE_Actions {
       class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
         selection = "";
-        distance = 8;
+        distance = 10;
         condition = "true";
       };
     };
@@ -443,8 +446,9 @@ class CfgVehicles {
   class Plane: Air {
     class ACE_Actions {
       class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
         selection = "";
-        distance = 8;
+        distance = 10;
         condition = "true";
       };
     };
@@ -455,8 +459,9 @@ class CfgVehicles {
   class Ship_F: Ship {
     class ACE_Actions {
       class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
         selection = "";
-        distance = 8;
+        distance = 10;
         condition = "true";
 
         class ACE_Push {
@@ -475,8 +480,9 @@ class CfgVehicles {
   class StaticWeapon: LandVehicle {
     class ACE_Actions {
       class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
         selection = "";
-        distance = 8;
+        distance = 10;
         condition = "true";
       };
     };
@@ -487,8 +493,9 @@ class CfgVehicles {
   class Mortar_01_base_F: StaticMortar {
     class ACE_Actions {
       class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
         selection = "";
-        distance = 8;
+        distance = 10;
         condition = "true";
       };
     };
