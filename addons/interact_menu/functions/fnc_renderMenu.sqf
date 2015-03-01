@@ -78,8 +78,12 @@ _menuInSelectedPath = true;
 // Render icon
 // ARGB Color (First Hex Pair is transparancy)
 _color = "#FFFFFFFF";
-if(_menuDepth > 0 && !_menuInSelectedPath) then {
-    _color = format ["#%1FFFFFF", [255 * ((((count _path) - 2)/_menuDepth) max 0.25)] call EFUNC(common,toHex)];
+if(!_menuInSelectedPath) then { //_menuDepth > 0 &&
+    if (_menuDepth > 0) then {
+        _color = format ["#%1FFFFFF", [255 * ((((count _path) - 2)/_menuDepth) max 0.25)] call EFUNC(common,toHex)];
+    } else {
+        _color = format ["#%1FFFFFF", [255 * 0.75] call EFUNC(common,toHex)];
+    };
 };
 [_actionData select 0, _color, _pos, 1, 1, 0, _actionData select 1, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
 
