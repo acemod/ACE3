@@ -492,13 +492,13 @@ class CfgVehicles {
         };*/
     };
 
-    class I_Heli_light_03_base_F: Helicopter_Base_F {
+    class Heli_light_03_base_F;
+    class I_Heli_light_03_base_F: Heli_light_03_base_F {
         /*class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };*/
     };
-
-    class I_Heli_light_03_F: I_Heli_light_03_base_F {
+    class I_Heli_light_03_F: Heli_light_03_base_F {
         /*class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };*/
