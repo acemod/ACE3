@@ -95,42 +95,7 @@ if !(_menuInSelectedPath) exitWith {true};
 
 // Collect all active children actions
 private "_activeChildren";
-_activeChildren = [];
-// Collect children class actions
-{
-    _target = _object;
-    _player = ACE_player;
-    _active = [_object, ACE_player] call (_x select 4);
-    if(_active) then {
-        _activeChildren pushBack _x;
-    };
-} forEach (_actionData select 6);
-
-// Collect children object actions
-{
-    _actionItem = _x;
-
-    // Check if the action is children of the selected menu
-    if ((count (_actionItem select 8)) == (count _path)) then {
-        // Compare parent path to see if it's a suitable child
-        private "_isChild";
-        _isChild = true;
-        for "_i" from 0 to (count (_actionItem select 8)) - 2 do {
-            if !(((_actionItem select 8) select _i) isEqualTo (_path select (_i + 1))) exitWith {
-                _isChild = false;
-            };
-        };
-        if (_isChild) exitWith {
-            _target = _object;
-            _player = ACE_player;
-            _active = [_target, ACE_player] call (_actionItem select 4);
-
-            if (_active) then {
-                _activeChildren pushBack _actionItem;
-            };
-        };
-    };
-} forEach GVAR(objectActions);
+_activeChildren = [_object,_actionData] call FUNC(collectActiveChildren);
 
 private ["_angleSpan","_angle"];
 _angleSpan = _maxAngleSpan min (55 * ((count _activeChildren) - 1));
@@ -139,7 +104,6 @@ if (_angleSpan >= 305) then {
 };
 
 _angle = _centerAngle - _angleSpan / 2;
-
 {
     _target = _object;
     _player = ACE_player;

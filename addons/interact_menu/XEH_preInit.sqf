@@ -5,6 +5,7 @@ ADDON = false;
 PREP(addAction);
 PREP(compileMenu);
 PREP(compileMenuSelfAction);
+PREP(collectActiveChildren);
 PREP(keyDown);
 PREP(keyDownSelfAction);
 PREP(keyUp);
