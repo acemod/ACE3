@@ -30,7 +30,7 @@ if !([_gunner] call EFUNC(common,isPlayer)) exitWith {};
 
 private ["_FCSMagazines", "_FCSElevation", "_offset"];
 
-_FCSMagazines = _vehicle getVariable format ["%1_%2", QGVAR(Magazines), _turret];
+_FCSMagazines = _vehicle getVariable [(format ["%1_%2", QGVAR(Magazines), _turret]), []];
 _FCSElevation = _vehicle getVariable format ["%1_%2", QGVAR(Elevation), _turret];
 
 if !(_magazine in _FCSMagazines) exitWith {};
