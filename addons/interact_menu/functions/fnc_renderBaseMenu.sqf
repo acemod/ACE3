@@ -41,6 +41,9 @@ if((count _this) > 2) then {
     _pos = _pos vectorAdd ((visiblePositionASL _object) vectorDiff (getPosASL _object));
 };
 
+_cameraToActionVec = (_pos call EFUNC(common,positionToASL)) vectorDiff ((positionCameraToWorld [0,0,0]) call EFUNC(common,positionToASL));
+GVAR(refSystem) = _cameraToActionVec call EFUNC(common,createOrthonormalReference);
+
 // For non-self actions, exit if the action is too far away
 if (GVAR(keyDown) &&
     {(ACE_player modelToWorld (ACE_player selectionPosition "pilot")) distance _pos >= _distance}) exitWith {false};

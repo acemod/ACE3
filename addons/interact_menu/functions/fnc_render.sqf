@@ -25,7 +25,6 @@ GVAR(currentOptions) = [];
 private ["_actionsVarName","_classActions","_objectActions","_target","_player","_action","_actionData","_active"];
 _player = ACE_player;
 if (GVAR(keyDown)) then {
-    [] call FUNC(updateVecLineMap);
 
     // Render all nearby interaction menus
     #define MAXINTERACTOBJECTS 3
@@ -76,8 +75,6 @@ if (GVAR(keyDown)) then {
 } else {
     if (GVAR(keyDownSelfAction)) then {
 
-        [] call FUNC(updateVecLineMap);
-
         // Render only the self action menu
         _target = vehicle ACE_player;
 
@@ -100,7 +97,7 @@ if (GVAR(keyDown)) then {
         {
             _action = _x;
 
-            _pos = _cursorPos1 vectorAdd GVAR(selfMenuOffset);
+            _pos = (((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL)) vectorAdd GVAR(selfMenuOffset)) call EFUNC(common,ASLToPosition);
             [_target, _action, _pos] call FUNC(renderBaseMenu);
         } forEach _classActions;
     };
@@ -176,9 +173,6 @@ if(!_foundTarget && GVAR(actionSelected)) then {
     GVAR(actionSelected) = false;
     GVAR(expanded) = false;
     GVAR(lastPath) = [];
-    if(!GVAR(keyDown)) then {
-        GVAR(vecLineMap) = [];
-    };
 };
 for "_i" from GVAR(iconCount) to (count GVAR(iconCtrls))-1 do {
     ctrlDelete (GVAR(iconCtrls) select _i);

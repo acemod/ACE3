@@ -66,9 +66,11 @@ _angle = _centerAngle - _angleSpan / 2;
     _target = _object;
     _player = ACE_player;
 
-    _offset = [GVAR(vecLineMap), _angle] call FUNC(rotateVectLine);
     _mod = (0.15 max (0.15 * ((positionCameraToWorld [0, 0, 0]) distance _pos))) / GVAR(selfMenuScale);
-    _newPos = _pos vectorAdd (_offset vectorMultiply _mod);
+
+    _offset = ((GVAR(refSystem) select 1) vectorMultiply (-_mod * cos _angle)) vectorAdd
+                ((GVAR(refSystem) select 2) vectorMultiply (-_mod * sin _angle));
+    _newPos = ((_pos call EFUNC(common,positionToASL)) vectorAdd _offset) call EFUNC(common,ASLToPosition);
 
     //drawLine3D [_pos, _newPos, [1,0,0,0.5]];
 

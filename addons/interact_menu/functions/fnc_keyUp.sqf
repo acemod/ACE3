@@ -22,5 +22,4 @@ if(GVAR(actionSelected)) then {
 GVAR(expanded) = false;
 GVAR(lastPath) = [];
 GVAR(menuDepthPath) = [];
-GVAR(vecLineMap) = [];
 true

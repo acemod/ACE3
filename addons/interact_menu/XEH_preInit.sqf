@@ -15,9 +15,6 @@ PREP(render);
 PREP(renderIcon);
 PREP(renderBaseMenu);
 PREP(renderMenu);
-PREP(rotateVectLine);
-PREP(rotateVectLineGetMap);
-PREP(updateVecLineMap);
 
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;
@@ -31,7 +28,6 @@ GVAR(actionSelected) = false;
 GVAR(selectedTarget) = objNull;
 
 GVAR(menuDepthPath) = [];
-GVAR(vecLineMap) = [];
 GVAR(lastPos) = [0,0,0];
 
 GVAR(currentOptions) = [];

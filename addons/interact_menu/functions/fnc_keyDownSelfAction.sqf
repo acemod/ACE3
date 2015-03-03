@@ -32,6 +32,8 @@ if(!GVAR(keyDownSelfAction)) then {
         setMousePosition [0.5, 0.5];
 
     };
-    GVAR(selfMenuOffset) = (positionCameraToWorld [0, 0, 2]) vectorDiff (positionCameraToWorld [0, 0, 0]);
+
+    GVAR(selfMenuOffset) = ((positionCameraToWorld [0, 0, 2]) call EFUNC(common,positionToASL)) vectorDiff
+                           ((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL));
 };
 true
