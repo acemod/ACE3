@@ -2,10 +2,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_isCivilian"];
-
-_unit = _this select 0;
-_isCivilian = _this select 1;
+EXPLODE_2_PVT(_this,_unit,_isCivilian);
 
 if (isNil "_isCivilian") then {_isCivilian = true};
 

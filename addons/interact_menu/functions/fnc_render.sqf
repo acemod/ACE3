@@ -22,10 +22,9 @@ GVAR(selfMenuScale) = (((worldToScreen (positionCameraToWorld [1,0,2])) select 0
 //systemChat format ["selfMenuScale: %1", GVAR(selfMenuScale)];
 GVAR(currentOptions) = [];
 
-private ["_actionsVarName","_classActions","_objectActions","_target","_player","_actionItem","_active"];
+private ["_actionsVarName","_classActions","_objectActions","_target","_player","_action","_actionData","_active"];
 _player = ACE_player;
 if (GVAR(keyDown)) then {
-    [] call FUNC(updateVecLineMap);
 
     // Render all nearby interaction menus
     #define MAXINTERACTOBJECTS 3
@@ -44,11 +43,11 @@ if (GVAR(keyDown)) then {
             _actionsVarName = format [QGVAR(Act_%1), typeOf _target];
             GVAR(objectActions) = _target getVariable [QGVAR(actions), []];
             {
-                _actionItem = _x;
+                _action = _x;
                 // Only render them directly if they are base level actions
-                if (count (_actionItem select 8) == 1) then {
+                if (count ((_action select 0) select 7) == 1) then {
                     // Try to render the menu
-                    if ([_target, _actionItem, false, [180, 360]] call FUNC(renderMenu)) then {
+                    if ([_target, _action] call FUNC(renderBaseMenu)) then {
                         _numInteractions = _numInteractions + 1;
                     };
                 };
@@ -57,9 +56,9 @@ if (GVAR(keyDown)) then {
             // Iterate through base level class actions and render them if appropiate
             _classActions = missionNamespace getVariable [_actionsVarName, []];
             {
-                _actionItem = _x;
+                _action = _x;
                 // Try to render the menu
-                if ([_target, _actionItem, false, [180, 360]] call FUNC(renderMenu)) then {
+                if ([_target, _action] call FUNC(renderBaseMenu)) then {
                     _numInteractions = _numInteractions + 1;
                 };
             } forEach _classActions;
@@ -76,8 +75,6 @@ if (GVAR(keyDown)) then {
 } else {
     if (GVAR(keyDownSelfAction)) then {
 
-        [] call FUNC(updateVecLineMap);
-
         // Render only the self action menu
         _target = vehicle ACE_player;
 
@@ -86,14 +83,10 @@ if (GVAR(keyDown)) then {
         GVAR(objectActions) = _target getVariable [QGVAR(selfActions), []];
         /*
         {
-            _actionItem = _x;
+            _action = _x;
             // Only render them directly if they are base level actions
-            if (count (_actionItem select 8) == 1) then {
-                _active = [_target, ACE_player] call (_actionItem select 4);
-
-                if (_active) then {
-                    [_target, _actionItem, 0, [180, 360]] call FUNC(renderMenu);
-                };
+            if (count (_action select 7) == 1) then {
+                [_target, _action, 0, [180, 360]] call FUNC(renderMenu);
             };
         } forEach GVAR(objectActions);
         */
@@ -102,14 +95,10 @@ if (GVAR(keyDown)) then {
         _actionsVarName = format [QGVAR(SelfAct_%1), typeOf _target];
         _classActions = missionNamespace getVariable [_actionsVarName, []];
         {
-            _actionItem = _x;
-            _active = [_target, ACE_player] call (_actionItem select 4);
+            _action = _x;
 
-            if (_active) then {
-                //_pos = (ACE_player modelToWorld (ACE_player selectionPosition "spine3")) vectorAdd GVAR(selfMenuOffset) vectorAdd [0,0,0.25];
-                _pos = _cursorPos1 vectorAdd GVAR(selfMenuOffset);
-                [_target, _actionItem, true, [180, 360], _pos] call FUNC(renderMenu);
-            };
+            _pos = (((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL)) vectorAdd GVAR(selfMenuOffset)) call EFUNC(common,ASLToPosition);
+            [_target, _action, _pos] call FUNC(renderBaseMenu);
         } forEach _classActions;
     };
 };
@@ -154,9 +143,10 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
     _foundTarget = true;
     GVAR(actionSelected) = true;
     GVAR(selectedTarget) = (_closest select 0) select 0;
-    GVAR(selectedAction) = ((_closest select 0) select 1) select 3;
+    GVAR(selectedAction) = (((_closest select 0) select 1) select 0) select 3;
     _misMatch = false;
     _hoverPath = (_closest select 2);
+
     if((count GVAR(lastPath)) != (count _hoverPath)) then {
         _misMatch = true;
     } else {
@@ -183,9 +173,6 @@ if(!_foundTarget && GVAR(actionSelected)) then {
     GVAR(actionSelected) = false;
     GVAR(expanded) = false;
     GVAR(lastPath) = [];
-    if(!GVAR(keyDown)) then {
-        GVAR(vecLineMap) = [];
-    };
 };
 for "_i" from GVAR(iconCount) to (count GVAR(iconCtrls))-1 do {
     ctrlDelete (GVAR(iconCtrls) select _i);

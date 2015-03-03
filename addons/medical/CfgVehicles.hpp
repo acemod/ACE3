@@ -60,46 +60,77 @@ class CfgVehicles {
         };
 
         class ACE_Actions {
-            class Bandage_Head {
-                displayName = "Bandage Head";
-                selection = "pilot";
-                distance = 2.0;
-                //condition = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(canTreat));
-                statement = QUOTE([ARR_4(_player, _target, 'head', 'Bandage Head')] call DFUNC(treatment));
-                showDisabled = 1;
-                priority = 2;
-                hotkey = "B";
-                enableInside = 1;
+            class ACE_Head {
+                class Bandage_Head {
+                    displayName = "Bandage Head";
+                    distance = 2.0;
+                    condition = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(canTreat));
+                    statement = QUOTE([ARR_4(_player, _target, 'head', 'Bandage Head')] call DFUNC(treatment));
+                    showDisabled = 1;
+                    priority = 2;
+                    hotkey = "B";
+                    enableInside = 1;
+                };
             };
-            class Bandage_Torso: Bandage_Head {
-                displayName = "Bandage Torso";
-                selection = "Spine3";
-                //condition = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(canTreat));
-                statement = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(treatment));
+            class ACE_MainActions {
+                class Bandage_Torso {
+                    displayName = "Bandage Torso";
+                    distance = 2.0;
+                    condition = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(canTreat));
+                    statement = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(treatment));
+                    showDisabled = 1;
+                    priority = 2;
+                    hotkey = "B";
+                    enableInside = 1;
+                };
             };
-            class Bandage_LeftArm: Bandage_Head {
-                displayName = "Bandage Right Arm";
-                selection = "LeftForeArm";
-                //condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreat));
-                statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(treatment));
+            class ACE_ArmLeft {
+                class Bandage_LeftArm {
+                    displayName = "Bandage Right Arm";
+                    distance = 2.0;
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreat));
+                    statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(treatment));
+                    showDisabled = 1;
+                    priority = 2;
+                    hotkey = "B";
+                    enableInside = 1;
+                };
             };
-            class Bandage_RightArm: Bandage_Head {
-                displayName = "Bandage Right Arm";
-                selection = "RightForeArm";
-                //condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreat));
-                statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(treatment));
+            class ACE_ArmRight {
+                class Bandage_RightArm {
+                    displayName = "Bandage Right Arm";
+                    distance = 2.0;
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreat));
+                    statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(treatment));
+                    showDisabled = 1;
+                    priority = 2;
+                    hotkey = "B";
+                    enableInside = 1;
+                };
             };
-            class Bandage_LeftLeg: Bandage_Head {
-                displayName = "Bandage Left Leg";
-                selection = "lknee";
-                //condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(canTreat));
-                statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(treatment));
+            class ACE_LegLeft {
+                class Bandage_LeftLeg {
+                    displayName = "Bandage Left Leg";
+                    distance = 2.0;
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(canTreat));
+                    statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(treatment));
+                    showDisabled = 1;
+                    priority = 2;
+                    hotkey = "B";
+                    enableInside = 1;
+                };
             };
-            class Bandage_RightLeg: Bandage_Head {
-                displayName = "Bandage Right Leg";
-                selection = "rknee";
-                //condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(canTreat));
-                statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(treatment));
+            class ACE_LegRight {
+                class Bandage_RightLeg {
+                    displayName = "Bandage Right Leg";
+                    distance = 2.0;
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(canTreat));
+                    statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(treatment));
+                    showDisabled = 1;
+                    priority = 2;
+                    hotkey = "B";
+                    enableInside = 1;
+                };
             };
         };
     };

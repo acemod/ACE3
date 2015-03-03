@@ -36,17 +36,18 @@ if((count _actions) == 0) then {
 
 private "_entry";
 _entry = [
-            _displayName,
-            _icon,
-            _position,
-            _statement,
-            _condition,
-            _distance,
-            [],
-            GVAR(uidCounter),
-            + _fullPath
+            [
+                _displayName,
+                _icon,
+                _position,
+                _statement,
+                _condition,
+                _distance,
+                [false,false,false],
+                + _fullPath
+            ],
+            []
         ];
-GVAR(uidCounter) = GVAR(uidCounter) + 1;
 
 _actions pushBack _entry;
 
