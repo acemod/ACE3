@@ -44,11 +44,13 @@ _mostEffectiveInjury = _openWounds select 0;
     if (_x select 2 == _part) then {
         _woundEffectivenss = _effectiveness;
         _classID = (_x select 1);
-        // Check if this wound type has attributes specified for the used bandage
-        if (HASH_HASKEY(GVAR(woundClassNameIDHash), _classID)) then {
 
+        // Select the classname from the wound classname storage
+        _className = GVAR(woundClassNames) select _classID;
+        // Check if this wound type has attributes specified for the used bandage
+        if (isClass (_config >> _className)) then {
             // Collect the effectiveness from the used bandage for this wound type
-            _woundTreatmentConfig = (_config >> (HASH_GET(GVAR(woundClassNameIDHash), _classID)));
+            _woundTreatmentConfig = (_config >> _className);
             if (isNumber (_woundTreatmentConfig >> "effectiveness")) then {
                 _woundEffectivenss = getNumber (_woundTreatmentConfig >> "effectiveness");
             };

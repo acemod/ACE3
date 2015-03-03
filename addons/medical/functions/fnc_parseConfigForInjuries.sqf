@@ -29,7 +29,7 @@ for "_i" from 0 to (count _configDamageTypes -1) /* step +1 */ do {
 GVAR(allAvailableDamageTypes) = _allFoundDamageTypes;
 
 // Creating a hash map to map wound IDs to classnames
-GVAR(woundClassNameIDHash) = HASHCREATE;
+GVAR(woundClassNames) = [];
 
 // function for parsing a sublcass of an injury
 _parseForSubClassWounds = {
@@ -42,9 +42,9 @@ _parseForSubClassWounds = {
         _subClasspain = if (isNumber(_subClassConfig >> "pain")) then { getNumber(_subClassConfig >> "pain");} else { _pain };
         _subClassminDamage = if (isNumber(_subClassConfig >> "minDamage")) then { getNumber(_subClassConfig >> "minDamage");} else { _minDamage };
         _subClasscauses = if (isArray(_subClassConfig >> "causes")) then { getArray(_subClassConfig >> "causes");} else { _causes };
-        _subClassDisplayName = if (isText(_entry >> "name")) then { getText(_entry >> "name");} else {_classDisplayName + " " + _subClass};
+        _subClassDisplayName = if (isText(_subClassConfig >> "name")) then { getText(_subClassConfig >> "name");} else {_classDisplayName + " " + _subClass};
         if (count _selections > 0 && {count _causes > 0}) then {
-            HASH_SET(GVAR(woundClassNameIDHash), _classID, _subClasstype);
+            GVAR(woundClassNames) pushback _subClasstype;
             _allWoundClasses pushback [_classID, _subClassselections, _subClassbloodLoss, _subClasspain, _subClassminDamage, _subClasscauses, _subClassDisplayName];
             _classID = _classID + 1;
         };
@@ -75,7 +75,7 @@ if (isClass _woundsConfig) then {
 
             // There were no subclasses, so we will add this one instead.
             if (count _selections > 0 && count _causes > 0) then {
-                HASH_SET(GVAR(woundClassNameIDHash), _classID, _classType);
+                GVAR(woundClassNames) pushback _classType;
                 _allWoundClasses pushback [_classID, _selections, _bloodLoss, _pain, _minDamage, _causes, _classDisplayName];
                 _classID = _classID + 1;
             };

@@ -82,15 +82,16 @@ _woundsCreated = [];
         for "_i" from 0 to (1+ floor(random(_x select 1)-1)) /* step +1 */ do {
 
             // Find the injury we are going to add. Format [ classID, allowdSelections, bloodloss, painOfInjury, minimalDamage]
-            _toAddInjury =  _allPossibleInjuries select (floor(random (count _allPossibleInjuries)));
+            _toAddInjury =  if (random(1) >= 0.5) then {_allPossibleInjuries select _highestPossibleSpot} else {_allPossibleInjuries select (floor(random (count _allPossibleInjuries)));};
             _toAddClassID = _toAddInjury select 0;
             _foundIndex = -1;
 
+            _bodyPartNToAdd = if (_injuryTypeInfo select 1) then {_bodyPartn} else {floor(random(6))};
             // If the injury type is selection part specific, we will check if one of those injury types already exists and find the spot for it..
             if ((_injuryTypeInfo select 1)) then {
                 {
                     // Check if we have an id of the given class on the given bodypart already
-                    if (_x select 0 == _toAddClassID && {_x select 2 == _bodyPartn}) exitwith {
+                    if (_x select 1 == _toAddClassID && {_x select 2 == _bodyPartNToAdd}) exitwith {
                         _foundIndex = _foreachIndex;
                     };
                 }foreach _openWounds;
@@ -99,7 +100,7 @@ _woundsCreated = [];
             _injury = [];
             if (_foundIndex < 0) then {
                 // Create a new injury. Format [ID, classID, bodypart, percentage treated, bloodloss rate]
-                _injury = [_woundID, _toAddInjury select 0, if (_injuryTypeInfo select 1) then {_bodyPartn} else {floor(random(6))}, 1, _toAddInjury select 2];
+                _injury = [_woundID, _toAddInjury select 0, _bodyPartNToAdd, 1, _toAddInjury select 2];
 
                 // Since it is a new injury, we will have to add it to the open wounds array to store it
                 _openWounds pushback _injury;
@@ -108,7 +109,7 @@ _woundsCreated = [];
                 _woundID = _woundID + 1;
             } else {
                 // We already have one of these, so we are just going to increase the number that we have of it with a new one.
-                _injury = _openWounds select _foreachIndex;
+                _injury = _openWounds select _foundIndex;
                 _injury set [3, (_injury select 3) + 1];
             };
             // Store the injury so we can process it later correctly.
