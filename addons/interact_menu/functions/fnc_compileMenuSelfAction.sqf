@@ -42,8 +42,9 @@ _recurseFnc = {
             // Add canInteract (including exceptions) and canInteractWith to condition
             _condition = _condition + format [QUOTE( && {%1 call EGVAR(common,canInteract)} && {[ARR_2(ACE_player, _target)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
 
-            _showDisabled = getNumber (_entryCfg >> "showDisabled");
-            _enableInside = getNumber (_entryCfg >> "enableInside");
+            _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
+            _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
+            _canCollapse = (getNumber (_entryCfg >> "canCollapse")) > 0;
 
             _fullPath = (+ _parentPath);
             _fullPath pushBack (configName _entryCfg);
@@ -52,18 +53,18 @@ _recurseFnc = {
             _children = [_entryCfg, _fullPath] call _recurseFnc;
 
             _entry = [
-                        _displayName,
-                        _icon,
-                        [0,0,0],
-                        _statement,
-                        _condition,
-                        10, //distace
-                        _children,
-                        GVAR(uidCounter),
-                        _fullPath
+                        [
+                            _displayName,
+                            _icon,
+                            [0,0,0],
+                            _statement,
+                            _condition,
+                            10, //distace
+                            [_showDisabled,_enableInside,_canCollapse],
+                            _fullPath
+                        ],
+                        _children
                     ];
-
-            GVAR(uidCounter) = GVAR(uidCounter) + 1;
             _actions pushBack _entry;
         };
     };
@@ -74,18 +75,20 @@ private "_actionsCfg";
 _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_SelfActions";
 
 // Create a master action to base on self action
-_actions = [[
-    "Self Actions",
-    "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
-    "Spine3",
-    { true },
-    { true },
-    10,
-    [_actionsCfg, ["ACE_SelfActions"]] call _recurseFnc,
-    GVAR(uidCounter),
-    ["ACE_SelfActions"]
-]
+_actions = [
+    [
+        [
+            "Self Actions",
+            "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
+            "Spine3",
+            { true },
+            { true },
+            10,
+            [false,true,false],
+            ["ACE_SelfActions"]
+        ],
+        [_actionsCfg, ["ACE_SelfActions"]] call _recurseFnc
+    ]
 ];
-GVAR(uidCounter) = GVAR(uidCounter) + 1;
 
 missionNamespace setVariable [_actionsVarName, _actions];

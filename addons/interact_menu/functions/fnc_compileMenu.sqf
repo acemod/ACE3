@@ -45,8 +45,9 @@ _recurseFnc = {
             // Add canInteract (including exceptions) and canInteractWith to condition
             _condition = _condition + format [QUOTE( && {%1 call EGVAR(common,canInteract)} && {[ARR_2(ACE_player, _target)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
 
-            _showDisabled = getNumber (_entryCfg >> "showDisabled");
-            _enableInside = getNumber (_entryCfg >> "enableInside");
+            _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
+            _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
+            _canCollapse = (getNumber (_entryCfg >> "canCollapse")) > 0;
 
             _fullPath = (+ _parentPath);
             _fullPath pushBack (configName _entryCfg);
@@ -55,18 +56,18 @@ _recurseFnc = {
             _children = [_entryCfg, _fullPath] call _recurseFnc;
 
             _entry = [
-                        _displayName,
-                        _icon,
-                        _selection,
-                        _statement,
-                        _condition,
-                        _distance,
-                        _children,
-                        GVAR(uidCounter),
-                        _fullPath
+                        [
+                            _displayName,
+                            _icon,
+                            _selection,
+                            _statement,
+                            _condition,
+                            _distance,
+                            [_showDisabled,_enableInside,_canCollapse],
+                            _fullPath
+                        ],
+                        _children
                     ];
-
-            GVAR(uidCounter) = GVAR(uidCounter) + 1;
             _actions pushBack _entry;
         };
     };
@@ -81,15 +82,17 @@ missionNamespace setVariable [_actionsVarName, [_actionsCfg, []] call _recurseFn
 /*
 [
     [
-        "My Action",
-        "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
-        [0,0,0],
-        { (_this select 0) setVelocity [0,0,10]; },
-        { true },
-        1,
-        [],
-        uid,
-        ["ACE_MainActions","TeamManagement","MyAction"]
+        [
+            "My Action",
+            "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
+            [0,0,0],
+            { (_this select 0) setVelocity [0,0,10]; },
+            { true },
+            1,
+            [false,false,false]
+            ["ACE_MainActions","TeamManagement","MyAction"]
+        ],
+        [children actions]
     ]
 ]
 */

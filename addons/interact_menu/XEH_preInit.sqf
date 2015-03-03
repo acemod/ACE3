@@ -5,7 +5,7 @@ ADDON = false;
 PREP(addAction);
 PREP(compileMenu);
 PREP(compileMenuSelfAction);
-PREP(collectActiveChildren);
+PREP(collectActiveActionTree);
 PREP(keyDown);
 PREP(keyDownSelfAction);
 PREP(keyUp);
@@ -13,6 +13,7 @@ PREP(keyUpSelfAction);
 PREP(removeAction);
 PREP(render);
 PREP(renderIcon);
+PREP(renderBaseMenu);
 PREP(renderMenu);
 PREP(rotateVectLine);
 PREP(rotateVectLineGetMap);
@@ -42,7 +43,5 @@ GVAR(expanded) = false;
 GVAR(startHoverTime) = diag_tickTime;
 GVAR(iconCtrls) = [];
 GVAR(iconCount) = 0;
-
-GVAR(uidCounter) = 0;
 
 ADDON = true;

@@ -33,6 +33,5 @@ if(!GVAR(keyDownSelfAction)) then {
 
     };
     GVAR(selfMenuOffset) = (positionCameraToWorld [0, 0, 2]) vectorDiff (positionCameraToWorld [0, 0, 0]);
-    //systemChat format ["GVAR(selfMenuOffset) %1",GVAR(selfMenuOffset)];
 };
 true

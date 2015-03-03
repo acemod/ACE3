@@ -1,70 +1,32 @@
 /*
  * Author: NouberNou and CAA-Picard
- * Render a interaction menu and it's children recursively
+ * Render an interaction menu and it's children recursively
  *
  * Argument:
  * 0: Object <OBJECT>
  * 1: Action data <ARRAY>
- * 2: Was the condition already checked? <BOOL>
+ * 2: 3D position <ARRAY>
  * 3: Angle range available for rendering <ARRAY>
- * 4: 3D position <ARRAY> (Optional)
  *
  * Return value:
- * Was the menu rendered <BOOL>
+ * None
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_distance", "_uid", "_pos", "_cameraPos", "_path", "_menuDepth", "_opacity", "_currentRenderDepth", "_radialOffset", "_active", "_x", "_offset", "_newPos", "_forEachIndex"];
+private ["_menuInSelectedPath", "_path", "_menuDepth", "_currentRenderDepth", "_x", "_offset", "_newPos", "_forEachIndex"];
 
-EXPLODE_4_PVT(_this,_object,_actionData,_wasConditionChecked,_angles);
+EXPLODE_4_PVT(_this,_object,_action,_pos,_angles);
+EXPLODE_2_PVT(_action,_actionData,_activeChildren);
 EXPLODE_2_PVT(_angles,_centerAngle,_maxAngleSpan);
-
-_uid = _actionData select 7;
-_distance = _actionData select 5;
-
-// Obtain a 3D position for the action
-if((count _this) > 4) then {
-    _pos = _this select 4;
-} else {
-    if(typeName (_actionData select 2) == "ARRAY") then {
-        _pos = _object modelToWorld (_actionData select 2);
-    } else {
-        if ((_actionData select 2) == "weapon") then {
-            // Craft a suitable position for weapon interaction
-            _weaponDir = _object weaponDirection currentWeapon _object;
-            _ref = _weaponDir call EFUNC(common,createOrthonormalReference);
-            _pos = (_object modelToWorld (_object selectionPosition "righthand")) vectorAdd ((_ref select 2) vectorMultiply 0.1);
-        } else {
-            _pos = _object modelToWorld (_object selectionPosition (_actionData select 2));
-        };
-    };
-};
-
-// For non-self actions, exit if the action is too far away
-_cameraPos = positionCameraToWorld [0, 0, 0];
-if (GVAR(keyDown) && {_cameraPos distance _pos >= _distance}) exitWith {false};
-
-// Exit if the action is behind you
-_sPos = worldToScreen _pos;
-if(count _sPos == 0) exitWith {false};
-
-// Exit if the action is off screen
-if ((_sPos select 0) < safeZoneXAbs || (_sPos select 0) > safeZoneXAbs + safeZoneWAbs) exitWith {false};
-if ((_sPos select 1) < safeZoneY    || (_sPos select 1) > safeZoneY    + safeZoneH) exitWith {false};
-
-// If the condition was not checked, check it and exit if needed
-if (!_wasConditionChecked && {!([_target, ACE_player] call (_actionItem select 4))}) exitWith {false};
 
 _menuDepth = (count GVAR(menuDepthPath)) - 1;
 
 // Store path to action
-_path = [_object];
-_path = _path + (_actionData select 8);
+_path = [_object] + (_actionData select 7);
 
 // Check if the menu is on the selected path
-private "_menuInSelectedPath";
 _menuInSelectedPath = true;
 {
     if (_forEachIndex >= (count GVAR(menuDepthPath))) exitWith {
@@ -93,10 +55,6 @@ GVAR(currentOptions) pushBack [_this, _pos, _path];
 // Exit without rendering children if it isn't
 if !(_menuInSelectedPath) exitWith {true};
 
-// Collect all active children actions
-private "_activeChildren";
-_activeChildren = [_object,_actionData] call FUNC(collectActiveChildren);
-
 private ["_angleSpan","_angle"];
 _angleSpan = _maxAngleSpan min (55 * ((count _activeChildren) - 1));
 if (_angleSpan >= 305) then {
@@ -109,12 +67,12 @@ _angle = _centerAngle - _angleSpan / 2;
     _player = ACE_player;
 
     _offset = [GVAR(vecLineMap), _angle] call FUNC(rotateVectLine);
-    _mod = (0.15 max (0.15 * (_cameraPos distance _pos))) / GVAR(selfMenuScale);
+    _mod = (0.15 max (0.15 * ((positionCameraToWorld [0, 0, 0]) distance _pos))) / GVAR(selfMenuScale);
     _newPos = _pos vectorAdd (_offset vectorMultiply _mod);
 
-    // drawLine3D [_pos, _newPos, [1,0,0,0.5]];
+    //drawLine3D [_pos, _newPos, [1,0,0,0.5]];
 
-    [_object, _x, true, [_angle, 140], _newPos] call FUNC(renderMenu);
+    [_object, _x, _newPos, [_angle, 140]] call FUNC(renderMenu);
 
     if (_angleSpan == 360) then {
         _angle = _angle + _angleSpan / (count _activeChildren);
