@@ -15,7 +15,7 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_className", "_currentInSystem", "_medicationConfig", "_painReduce", "_hrIncreaseLow", "_hrIncreaseNorm", "_hrIncreaseHigh", "_maxDose", "_inCompatableMedication", "_timeInSystem", "_heartRate", "_pain"];
+private ["_target", "_className", "_currentInSystem", "_medicationConfig", "_painReduce", "_hrIncreaseLow", "_hrIncreaseNorm", "_hrIncreaseHigh", "_maxDose", "_inCompatableMedication", "_timeInSystem", "_heartRate", "_pain", "_resistance"];
 _target = _this select 0;
 _className = _this select 1;
 
@@ -33,6 +33,8 @@ _hrIncreaseNorm = getArray (_medicationConfig >> "hrIncreaseNormal");
 _hrIncreaseHigh = getArray (_medicationConfig >> "hrIncreaseHigh");
 _timeInSystem = getNumber (_medicationConfig >> "timeInSystem");
 _maxDose = getNumber (_medicationConfig >> "maxDose");
+_viscosityChange = getNumber (_medicationConfig >> "viscosityChange");
+
 _inCompatableMedication = [];
 if (isClass (_medicationConfig >> _className)) then {
     _medicationConfig = (_medicationConfig >> _className);
@@ -43,6 +45,7 @@ if (isClass (_medicationConfig >> _className)) then {
     if (isNumber (_medicationConfig >> "timeInSystem")) then { _timeInSystem = getNumber (_medicationConfig >> "timeInSystem"); };
     if (isNumber (_medicationConfig >> "maxDose")) then { _maxDose = getNumber (_medicationConfig >> "maxDose"); };
     if (isArray (_medicationConfig >> "inCompatableMedication")) then { _inCompatableMedication = getArray (_medicationConfig >> "inCompatableMedication"); };
+    if (isNumber (_medicationConfig >> "viscosityChange")) then { _viscosityChange = getNumber (_medicationConfig >> "viscosityChange"); };
 };
 
 // Adjust the heart rate based upon config entry
@@ -69,7 +72,11 @@ if (_pain <= 0) then {
 };
 _target setvariable [QGVAR(pain), _pain];
 
+_resistance = _unit getvariable [QGVAR(peripheralResistance), 100];
+_resistance = _resistance + _viscosityChange;
+_unit setvariable [QGVAR(peripheralResistance), _resistance];
+
 // Call back to ensure that the medication is decreased over time
-[_target, _classname, _varName, _maxDose, _timeInSystem, _inCompatableMedication] call FUNC(onMedicationUsage);
+[_target, _classname, _varName, _maxDose, _timeInSystem, _inCompatableMedication, _viscosityChange] call FUNC(onMedicationUsage);
 
 true

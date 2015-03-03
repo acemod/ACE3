@@ -637,18 +637,23 @@ class ACE_Medical_Advanced {
             timeInSystem = 120;
             // How many of this type of medication can be in the system before the patient overdoses?
             maxDose = 4;
-            // specific details for the ACE_Morphine treatment action.
+
+            // The viscosity of a fluid is a measure of its resistance to gradual deformation by shear stress or tensile stress. For liquids, it corresponds to the informal concept of "thickness". This value will increase/decrease the viscoty of the blood with the percentage given. Where 100 = max. Using the minus will decrease viscosity
+            viscosityChange = 0;
+
+            // specific details for the ACE_Morphine treatment action
             class Morphine {
-                painReduce = 1;
+                painReduce = 0.7;
                 hrIncreaseLow[] = {-10, -30, 35};
                 hrIncreaseNormal[] = {-10, -50, 40};
                 hrIncreaseHigh[] = {-10, -40, 50};
-                timeInSystem = 120;
+                timeInSystem = 500;
                 maxDose = 4;
                 inCompatableMedication[] = {};
+                viscosityChange = 10;
             };
             class Epinephrine {
-                painReduce = 1;
+                painReduce = 0;
                 hrIncreaseLow[] = {10, 20, 30};
                 hrIncreaseNormal[] = {10, 50, 20};
                 hrIncreaseHigh[] = {10, 40, 10};
@@ -657,8 +662,8 @@ class ACE_Medical_Advanced {
                 inCompatableMedication[] = {};
             };
             class Atropine {
-                painReduce = 1;
-                hrIncreaseLow[] = {-10, -20, 15};
+                painReduce = 0;
+                hrIncreaseLow[] = {20, 30, 15};
                 hrIncreaseNormal[] = {-10, -50, 20};
                 hrIncreaseHigh[] = {-10, -40, 10};
                 timeInSystem = 120;
