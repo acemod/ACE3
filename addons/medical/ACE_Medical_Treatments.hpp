@@ -630,9 +630,9 @@ class ACE_Medical_Advanced {
             // How much does the pain get reduced?
             painReduce = 0;
             // How much will the heart rate be increased when the HR is low (below 55)? {minIncrease, maxIncrease, seconds}
-            hrIncreaseLow[] = {10, 20, 35};
-            hrIncreaseNormal[] = {10, 50, 40};
-            hrIncreaseHigh[] = {10, 40, 50};
+            hrIncreaseLow[] = {0, 0, 0};
+            hrIncreaseNormal[] = {0, 0, 0};
+            hrIncreaseHigh[] = {0, 0, 0};
             // How long until this medication has disappeared
             timeInSystem = 120;
             // How many of this type of medication can be in the system before the patient overdoses?
@@ -669,6 +669,13 @@ class ACE_Medical_Advanced {
                 timeInSystem = 120;
                 maxDose = 6;
                 inCompatableMedication[] = {};
+            };
+            class PainKillers {
+                painReduce = 0.7;
+                timeInSystem = 120;
+                maxDose = 10;
+                inCompatableMedication[] = {};
+                viscosityChange = 5;
             };
         };
         class IV {
