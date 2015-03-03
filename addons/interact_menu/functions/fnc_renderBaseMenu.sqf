@@ -42,8 +42,8 @@ if((count _this) > 2) then {
 };
 
 // For non-self actions, exit if the action is too far away
-_cameraPos = positionCameraToWorld [0, 0, 0];
-if (GVAR(keyDown) && {_cameraPos distance _pos >= _distance}) exitWith {false};
+if (GVAR(keyDown) &&
+    {(ACE_player modelToWorld (ACE_player selectionPosition "pilot")) distance _pos >= _distance}) exitWith {false};
 
 // Exit if the action is behind you
 _sPos = worldToScreen _pos;
