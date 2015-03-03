@@ -122,7 +122,7 @@ class CfgVehicles {
         class ACE_GetDown {
           displayName = "$STR_ACE_Interaction_GetDown";
           distance = 5;
-          condition = QUOTE([_target] call DFUNC(canInteractWith));
+          condition = QUOTE([_target] call DFUNC(canInteractWithCivilian));
           statement = QUOTE([_target] call DFUNC(getDown));
           showDisabled = 0;
           priority = 2.2;
@@ -130,7 +130,7 @@ class CfgVehicles {
         class ACE_SendAway {
           displayName = "$STR_ACE_Interaction_SendAway";
           distance = 5;
-          condition = QUOTE([_target] call DFUNC(canInteractWith));
+          condition = QUOTE([_target] call DFUNC(canInteractWithCivilian));
           statement = QUOTE([_target] call DFUNC(sendAway));
           showDisabled = 0;
           priority = 2.0;

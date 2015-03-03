@@ -4,6 +4,7 @@ ADDON = false;
 
 PREP(addSelectableItem);
 PREP(applyButtons);
+PREP(canInteractWithCivilian);
 PREP(canTapShoulder);
 PREP(getDoor);
 PREP(getDoorAnimations);
