@@ -633,6 +633,9 @@ class ACE_Medical_Advanced {
             hrIncreaseLow[] = {0, 0, 0};
             hrIncreaseNormal[] = {0, 0, 0};
             hrIncreaseHigh[] = {0, 0, 0};
+            // Callback once the heart rate values have been added.
+            hrCallback = "";
+
             // How long until this medication has disappeared
             timeInSystem = 120;
             // How many of this type of medication can be in the system before the patient overdoses?
