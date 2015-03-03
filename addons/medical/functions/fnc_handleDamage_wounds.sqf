@@ -71,7 +71,7 @@ if (_highestPossibleSpot < 0) exitwith {
     };
 };
 
-// admin for open wounds and ids
+// Administration for open wounds and ids
 _openWounds = _unit getvariable[QGVAR(openWounds), []];
 _woundID = _unit getvariable[QGVAR(lastUniqueWoundID), 1];
 
@@ -81,16 +81,38 @@ _woundsCreated = [];
     if (_x select 0 <= _damage) exitwith {
         for "_i" from 0 to (1+ floor(random(_x select 1)-1)) /* step +1 */ do {
 
-            // Find the injury we are going to add. Format [ classType, allowdSelections, bloodloss, painOfInjury, minimalDamage]
+            // Find the injury we are going to add. Format [ classID, allowdSelections, bloodloss, painOfInjury, minimalDamage]
             _toAddInjury =  _allPossibleInjuries select (floor(random (count _allPossibleInjuries)));
+            _toAddClassID = _toAddInjury select 0;
+            _foundIndex = -1;
 
-            // Create a new injury. Format [ID, classname, bodypart, percentage treated, bloodloss rate]
-            _injury = [_woundID, _toAddInjury select 0, if (_injuryTypeInfo select 1) then {_bodyPartn} else {floor(random(6))}, 1, _toAddInjury select 2];
+            // If the injury type is selection part specific, we will check if one of those injury types already exists and find the spot for it..
+            if ((_injuryTypeInfo select 1)) then {
+                {
+                    // Check if we have an id of the given class on the given bodypart already
+                    if (_x select 0 == _toAddClassID && {_x select 2 == _bodyPartn}) exitwith {
+                        _foundIndex = _foreachIndex;
+                    };
+                }foreach _openWounds;
+            };
 
+            _injury = [];
+            if (_foundIndex < 0) then {
+                // Create a new injury. Format [ID, classID, bodypart, percentage treated, bloodloss rate]
+                _injury = [_woundID, _toAddInjury select 0, if (_injuryTypeInfo select 1) then {_bodyPartn} else {floor(random(6))}, 1, _toAddInjury select 2];
+
+                // Since it is a new injury, we will have to add it to the open wounds array to store it
+                _openWounds pushback _injury;
+
+                // New injuries will also increase the wound ID
+                _woundID = _woundID + 1;
+            } else {
+                // We already have one of these, so we are just going to increase the number that we have of it with a new one.
+                _injury = _openWounds select _foreachIndex;
+                _injury set [3, (_injury select 3) + 1];
+            };
             // Store the injury so we can process it later correctly.
-            _openWounds pushback _injury;
             _woundsCreated pushback _injury;
-            _woundID = _woundID + 1;
 
             // Collect the pain that is caused by this injury
             _painToAdd = _painToAdd + (_toAddInjury select 3);
@@ -99,8 +121,13 @@ _woundsCreated = [];
 }foreach (_injuryTypeInfo select 0);
 
 _unit setvariable [QGVAR(openWounds), _openWounds];
-_unit setvariable [QGVAR(lastUniqueWoundID), _woundID, true];
 
+// Only update if new wounds have been created
+if (count _woundsCreated > 0) then {
+    _unit setvariable [QGVAR(lastUniqueWoundID), _woundID, true];
+};
+
+// TODO Should this be done in a single broadcast?
 // Broadcast the new injuries across the net in parts. One broadcast per injury. Prevents having to broadcast one massive array of injuries.
 {
     ["medical_propagateWound", [_unit, _x]] call EFUNC(common,globalEvent);
