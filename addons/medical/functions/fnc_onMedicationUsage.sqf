@@ -85,7 +85,7 @@ _viscosityAdjustment = _viscosityChange / _timeInSystem;
     _amountDecreased = _amountDecreased + _decreaseAmount;
 
     // Restoring the viscosity while the medication is leaving the system
-    _target setvariable [QGVAR(peripheralResistance), (_target getvariable [QGVAR(peripheralResistance), 100]) - _viscosityAdjustment];
+    _target setvariable [QGVAR(peripheralResistance), ((_target getvariable [QGVAR(peripheralResistance), 100]) - _viscosityAdjustment) max 0];
 
     if (_amountDecreased >= 1 || (_usedMeds <= 0) || !alive _target) then {
         [(_this select 1)] call cba_fnc_removePerFrameHandler;
