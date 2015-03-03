@@ -37,6 +37,8 @@ if((count _this) > 2) then {
             _pos = _object modelToWorld (_object selectionPosition (_actionData select 2));
         };
     };
+    // Compensate for movement during the frame to get rid of jittering
+    _pos = _pos vectorAdd ((visiblePositionASL _object) vectorDiff (getPosASL _object));
 };
 
 // For non-self actions, exit if the action is too far away
