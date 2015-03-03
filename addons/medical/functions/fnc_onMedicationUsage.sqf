@@ -18,7 +18,7 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_className", "_variable", "_maxDosage", "_timeInSystem", "_incompatabileMeds", "_foundEntry", "_allUsedMedication","_allMedsFromClassname", "_usedMeds", "_hasOverDosed", "_med", "_limit", "_classNamesUsed", "_decreaseAmount", "_viscosityChange", "_viscosityAdjustment"];
+private ["_target", "_className", "_variable", "_maxDosage", "_timeInSystem", "_incompatabileMeds", "_foundEntry", "_allUsedMedication","_allMedsFromClassname", "_usedMeds", "_hasOverDosed", "_med", "_limit", "_classNamesUsed", "_decreaseAmount", "_viscosityChange", "_viscosityAdjustment", "_medicationConfig", "_onOverDose"];
 _target = _this select 0;
 _className = _this select 1;
 _variable = _this select 2;
@@ -64,6 +64,21 @@ _hasOverDosed = 0;
         };
     }foreach _allUsedMedication;
 }foreach _incompatabileMeds;
+
+if (_hasOverDosed > 0) then {
+    _medicationConfig = (configFile >> "ACE_Medical_Advanced" >> "Treatment" >> "Medication");
+    _onOverDose = getText (_medicationConfig >> "onOverDose");
+    if (isClass (_medicationConfig >> _className)) then {
+        _medicationConfig = (_medicationConfig >> _className);
+         if (isText (_medicationConfig  >> "onOverDose")) then { _onOverDose = getText (_medicationConfig >> "onOverDose"); };
+    };
+    if (isNil _onOverDose) then {
+        _onOverDose = compile _onOverDose;
+    } else {
+        _onOverDose = missionNamespace getvariable _onOverDose;
+    };
+    [_target, _className] call _onOverDose;
+};
 
 _decreaseAmount = 1 / _timeInSystem;
 _viscosityAdjustment = _viscosityChange / _timeInSystem;

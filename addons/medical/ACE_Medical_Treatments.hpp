@@ -640,7 +640,8 @@ class ACE_Medical_Advanced {
             timeInSystem = 120;
             // How many of this type of medication can be in the system before the patient overdoses?
             maxDose = 4;
-
+            // Function to execute upon overdose. Arguments passed to call back are 0: unit <OBJECT>, 1: medicationClassName <STRING>
+            onOverDose = "";
             // The viscosity of a fluid is a measure of its resistance to gradual deformation by shear stress or tensile stress. For liquids, it corresponds to the informal concept of "thickness". This value will increase/decrease the viscoty of the blood with the percentage given. Where 100 = max. Using the minus will decrease viscosity
             viscosityChange = 0;
 

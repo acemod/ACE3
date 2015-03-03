@@ -52,7 +52,7 @@ if (isClass (_medicationConfig >> _className)) then {
 if (isNil _hrCallback) then {
     _hrCallback = compile _hrCallback;
 } else {
-    _hrCallback = missionNamespace getvariable [_hrCallback, {}];
+    _hrCallback = missionNamespace getvariable _hrCallback;
 };
 
 // Adjust the heart rate based upon config entry
