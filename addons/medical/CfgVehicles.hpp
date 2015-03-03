@@ -64,7 +64,7 @@ class CfgVehicles {
                 class Bandage_Head {
                     displayName = "Bandage Head";
                     distance = 2.0;
-                    //condition = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(canTreat));
+                    condition = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'Bandage Head')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
@@ -76,7 +76,7 @@ class CfgVehicles {
                 class Bandage_Torso {
                     displayName = "Bandage Torso";
                     distance = 2.0;
-                    //condition = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(canTreat));
+                    condition = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
@@ -88,7 +88,7 @@ class CfgVehicles {
                 class Bandage_LeftArm {
                     displayName = "Bandage Right Arm";
                     distance = 2.0;
-                    //condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreat));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
@@ -100,7 +100,7 @@ class CfgVehicles {
                 class Bandage_RightArm {
                     displayName = "Bandage Right Arm";
                     distance = 2.0;
-                    //condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreat));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
@@ -112,7 +112,7 @@ class CfgVehicles {
                 class Bandage_LeftLeg {
                     displayName = "Bandage Left Leg";
                     distance = 2.0;
-                    //condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(canTreat));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
@@ -124,7 +124,7 @@ class CfgVehicles {
                 class Bandage_RightLeg {
                     displayName = "Bandage Right Leg";
                     distance = 2.0;
-                    //condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(canTreat));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
