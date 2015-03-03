@@ -49,7 +49,7 @@ if (!_foundEntry) then {
 
 
 _usedMeds = _target getvariable [_variable, 0];
-if (_usedMeds >= floor (_maxDosage + round(random(2)))) then {
+if (_usedMeds >= floor (_maxDosage + round(random(2))) && _maxDosage >= 1) then {
     [_target] call FUNC(setDead);
 };
 
