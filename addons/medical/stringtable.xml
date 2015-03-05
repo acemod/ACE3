@@ -1,7 +1,22 @@
 <?xml version="1.0"encoding="UTF-8"?>
 <Project name="ACE">
     <Package name="Medical">
-        <Container name="CfgWeapons">
+        <Container name="UI">
+            <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_MINOR">
+                <Original>Minor</Original>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DELAYED">
+                <Original>Delayed</Original>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_IMMEDIATE">
+                <Original>Immediate</Original>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DECEASED">
+                <Original>Deceased</Original>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_NONE">
+                <Original>None</Original>
+            </Key>
              <Key ID="STR_ACE_MEDICAL_NORMAL_BREATHING">
                 <Original>Normal breathing</Original>
                 <Russian>Дыхание в норме</Russian>

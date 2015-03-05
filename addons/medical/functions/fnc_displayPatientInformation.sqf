@@ -139,6 +139,10 @@ if (_show) then {
 			}foreach _log;
 		}foreach _logs;
 
+		_triageStatus = [_target] call FUNC(getTriageStatus);
+		(_display displayCtrl 303) ctrlSetText (_triageStatus select 0);
+		(_display displayCtrl 303) ctrlSetBackgroundColor (_triageStatus select 2);
+
 	}, 0, [_target]] call CBA_fnc_addPerFrameHandler;
 
 } else {

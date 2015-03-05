@@ -24,6 +24,7 @@ PREP(getBloodPressure);
 PREP(getBloodVolumeChange);
 PREP(getCardiacOutput);
 PREP(getTypeOfDamage);
+PREP(getTriageStatus);
 PREP(getUnconsciousCondition);
 PREP(handleDamage);
 PREP(handleDamage_advanced);
