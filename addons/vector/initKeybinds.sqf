@@ -2,19 +2,24 @@
 
 ["ACE3", QGVAR(AzimuthKey), localize "STR_ACE_Vector_AzimuthKey",
 {
-    systemChat format ["Down %1", diag_tickTime];
     // Conditions: canInteract
     _exceptions = [];
     if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
     // Conditions: specific
     if !(currentWeapon ACE_player == "ACE_Vector" && {ACE_player == cameraOn} && {cameraView == "GUNNER"}) exitWith {false};
 
+    // prevent holding down
+    if (GETGVAR(isDownStateKey1,false)) exitWith {false};
+    GVAR(isDownStateKey1) = true;
+
     // Statement
     ["azimuth"] call FUNC(onKeyDown);
     true
 },
 {
-    systemChat format ["Up %1", diag_tickTime];
+    // prevent holding down
+    GVAR(isDownStateKey1) = false;
+
     // Conditions: canInteract
     _exceptions = [];
     if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
@@ -34,11 +39,18 @@
     // Conditions: specific
     if !(currentWeapon ACE_player == "ACE_Vector" && {ACE_player == cameraOn} && {cameraView == "GUNNER"}) exitWith {false};
 
+    // prevent holding down
+    if (GETGVAR(isDownStateKey2,false)) exitWith {false};
+    GVAR(isDownStateKey2) = true;
+
     // Statement
     ["distance"] call FUNC(onKeyDown);
     true
 },
 {
+    // prevent holding down
+    GVAR(isDownStateKey2) = false;
+
     // Conditions: canInteract
     _exceptions = [];
     if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
@@ -47,4 +59,4 @@
     ["distance"] call FUNC(onKeyUp);
     true
 },
-[19, [false, false, false]], false] call CBA_fnc_registerKeybind; //R Key
+[19, [false, false, false]], false] call CBA_fnc_addKeybind; //R Key

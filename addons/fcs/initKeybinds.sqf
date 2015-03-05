@@ -8,12 +8,18 @@
     // Conditions: specific
     if !((!GVAR(enabled) && FUNC(canUseFCS)) || FUNC(canUseRangefinder)) exitWith {false};
 
+    if (GETGVAR(isDownStateKey1,false)) exitWith {false};
+    GVAR(isDownStateKey1) = true;
+    
     // Statement
     [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex)] call FUNC(keyDown);
     // Return false so it doesn't block the rest weapon action
     false
 }, 
 {
+    // prevent holding down
+    GVAR(isDownStateKey1) = false;
+
     // Conditions: canInteract
     _exceptions = [];
     if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
