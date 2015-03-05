@@ -17,5 +17,5 @@ if !(hasInterface) exitWith {};
     [ACE_player, vehicle ACE_player, false] call FUNC(checkAmmo);
     true
 },
-{},
+{false},
 [19, [false, true, false]], false] call cba_fnc_addKeybind;

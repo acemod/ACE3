@@ -25,7 +25,7 @@ if (!hasInterface) exitWith {};
     };
     false
 },
-{},
+{false},
 [20, true, true, false], false] call CALLSTACK(cba_fnc_addKeybind);
 
 if isNil(QGVAR(UsePP)) then {

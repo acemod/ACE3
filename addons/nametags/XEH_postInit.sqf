@@ -19,7 +19,7 @@ if (!hasInterface) exitWith {};
     // Return false so it doesn't block other actions
     false
 },
-{},
+{false},
 [29, [false, false, false]], false] call cba_fnc_addKeybind; //LeftControl Key
 
 

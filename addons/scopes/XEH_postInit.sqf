@@ -46,7 +46,7 @@ if !(hasInterface) exitWith {};
     [ACE_player, 0, 0.1] call FUNC(adjustScope);
     true
 },
-{},
+{false},
 [201, [false, false, false]], false] call cba_fnc_addKeybind;
 
 ["ACE3", QGVAR(AdjustDown), localize "STR_ACE_Scopes_AdjustDown",
@@ -62,7 +62,7 @@ if !(hasInterface) exitWith {};
     [ACE_player, 0, -0.1] call FUNC(adjustScope);
     true
 },
-{},
+{false},
 [209, [false, false, false]], false] call cba_fnc_addKeybind;
 
 ["ACE3", QGVAR(AdjustLeft), localize "STR_ACE_Scopes_AdjustLeft",
@@ -78,7 +78,7 @@ if !(hasInterface) exitWith {};
     [ACE_player, -0.1, 0] call FUNC(adjustScope);
     true
 },
-{},
+{false},
 [209, [false, true, false]], false] call cba_fnc_addKeybind;
 
 ["ACE3", QGVAR(AdjustRight), localize "STR_ACE_Scopes_AdjustRight",
@@ -94,5 +94,5 @@ if !(hasInterface) exitWith {};
     [ACE_player, 0.1, 0] call FUNC(adjustScope);
     true
 },
-{},
+{false},
 [201, [false, true, false]], false] call cba_fnc_addKeybind;

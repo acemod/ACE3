@@ -18,5 +18,5 @@
     [ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call FUNC(lockSafety);
     true
 },
-{},
+{false},
 [41, [false, true, false]], false] call cba_fnc_addKeybind;

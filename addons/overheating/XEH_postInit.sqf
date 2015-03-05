@@ -18,5 +18,5 @@ if !(hasInterface) exitWith {};
     [ACE_player, currentMuzzle ACE_player, false] call FUNC(clearJam);
     true
 },
-{},
+{false},
 [19, [true, false, false]], false] call cba_fnc_addKeybind; //R Key

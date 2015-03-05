@@ -30,5 +30,5 @@
     [ACE_player] call FUNC(climb);
     true
 },
-{},
+{false},
 [47, [false, true, false]], false] call cba_fnc_addKeybind; //DIK_V + CTRL//STRG

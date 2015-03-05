@@ -29,7 +29,7 @@ if (!hasInterface) exitWith {};
     };
     true
 },
-{},
+{false},
 [24, false, false, false], false] call CALLSTACK(cba_fnc_addKeybind);
 
 GVAR(PFH) = false;

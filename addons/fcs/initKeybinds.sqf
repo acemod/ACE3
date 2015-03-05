@@ -10,12 +10,12 @@
 
     if (GETGVAR(isDownStateKey1,false)) exitWith {false};
     GVAR(isDownStateKey1) = true;
-    
+
     // Statement
     [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex)] call FUNC(keyDown);
     // Return false so it doesn't block the rest weapon action
     false
-}, 
+},
 {
     // prevent holding down
     GVAR(isDownStateKey1) = false;
@@ -44,7 +44,7 @@
     [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), 50] call FUNC(adjustRange);
     true
 },
-{}, 
+{false},
 [201, [false, false, false]], false] call cba_fnc_addKeybind;  //PageUp Key
 
 ["ACE3", QGVAR(adjustRangDown), localize "STR_ACE_FCS_AdjustRangeDown",
@@ -59,5 +59,5 @@
     [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), -50] call FUNC(adjustRange);
     true
 },
-{}, 
+{false},
 [209, [false, false, false]], false] call cba_fnc_addKeybind; //PageDown Key

@@ -49,7 +49,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     [ACE_player, 1] call FUNC(changeNVGBrightness);
     true
 },
-{},
+{false},
 [201, [false, false, true]], false] call cba_fnc_addKeybind; //PageUp + ALT
 
 ["ACE3", QGVAR(DecreaseNVGBrightness), localize "STR_ACE_NightVision_DecreaseNVGBrightness",
@@ -64,5 +64,5 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     [ACE_player, -1] call FUNC(changeNVGBrightness);
     true
 },
-{},
+{false},
 [209, [false, false, true]], false] call cba_fnc_addKeybind; //PageDown + ALT

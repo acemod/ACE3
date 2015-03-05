@@ -18,5 +18,5 @@ if !(hasInterface) exitWith {};
     [ACE_player, vehicle ACE_player] call FUNC(speedLimiter);
     true
 },
-{},
+{false},
 [211, [false, false, false]], false] call cba_fnc_addKeybind; //DELETE Key

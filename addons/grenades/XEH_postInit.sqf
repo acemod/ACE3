@@ -21,5 +21,5 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
     // Statement
     [] call FUNC(nextMode);
 },
-{},
+{false},
 [9, [false, false, false]], false] call cba_fnc_addKeybind; //8 Key
