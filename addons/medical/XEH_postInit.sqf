@@ -3,6 +3,7 @@
 #include "script_component.hpp"
 
 if (!hasInterface) exitwith{};
+GVAR(enabledFor) = 1; // TODO remove this once we implement settings. Just here to get the vitals working.
 
 GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "ACE_heartbeat_fast_3"];
 GVAR(heartBeatSounds_Normal) = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];

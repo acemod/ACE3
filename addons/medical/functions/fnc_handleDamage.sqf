@@ -60,6 +60,7 @@ if (GVAR(level) >= 1) then {
         };
     };
 };
+[_unit] call FUNC(addToInjuredCollection);
 
 if (_unit getVariable [QGVAR(preventDeath), false] && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
     if (vehicle _unit != _unit and {damage _vehicle >= 1}) then {

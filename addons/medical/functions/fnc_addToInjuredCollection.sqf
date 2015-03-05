@@ -15,15 +15,16 @@
 
 private "_unit";
 _unit = _this select 0;
-if !(local _unit) exitwith{
-    [[_unit], QUOTE(DFUNC(addToInjuredCollection)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
-};
 
-if !(_unit getvariable[QGVAR(addedToUnitLoop),false]) then{
-    _unit setvariable [QGVAR(addedToUnitLoop),true, true];
-};
+if ([_unit] call FUNC(hasMedicalEnabled) || true) then {
 
-if ([_unit] call FUNC(hasMedicalEnabled)) then {
+    if !(local _unit) exitwith{
+        [[_unit], QUOTE(DFUNC(addToInjuredCollection)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    };
+    if !(_unit getvariable[QGVAR(addedToUnitLoop),false]) then{
+        _unit setvariable [QGVAR(addedToUnitLoop),true, true];
+    };
+
     [{
         private "_unit";
         _unit = (_this select 0) select 0;

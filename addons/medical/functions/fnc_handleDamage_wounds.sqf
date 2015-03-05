@@ -36,7 +36,7 @@ _allInjuriesForDamageType = _injuryTypeInfo select 2;
 
 // find the available injuries for this damage type and damage amount
 _highestPossibleSpot = -1;
-_highestPossibleDamage = 0;
+_highestPossibleDamage = -1;
 _allPossibleInjuries = [];
 {
     _minDamage = _x select 4;
@@ -82,7 +82,7 @@ _woundsCreated = [];
         for "_i" from 0 to (1+ floor(random(_x select 1)-1)) /* step +1 */ do {
 
             // Find the injury we are going to add. Format [ classID, allowdSelections, bloodloss, painOfInjury, minimalDamage]
-            _toAddInjury =  if (random(1) >= 0.5) then {_allPossibleInjuries select _highestPossibleSpot} else {_allPossibleInjuries select (floor(random (count _allPossibleInjuries)));};
+            _toAddInjury =  if (random(1) >= 0.5) then {_allInjuriesForDamageType select _highestPossibleSpot} else {_allPossibleInjuries select (floor(random (count _allPossibleInjuries)));};
             _toAddClassID = _toAddInjury select 0;
             _foundIndex = -1;
 

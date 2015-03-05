@@ -24,7 +24,7 @@ if (GVAR(level) >= 1) then {
     //_cardiacOutput = [_this] call FUNC(getCardiacOutput);
 
     {
-        if ((_tourniquets select (_x select 2)) < 1) then {
+        if ((_tourniquets select (_x select 2)) == 0) then {
             // total bleeding ratio * percentage of injury left
             _totalBloodLoss = _totalBloodLoss + ((_x select 4) * (_x select 3));
 
