@@ -62,6 +62,7 @@ if (_show) then {
 					// Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
 					if (_amountOf > 0) then {
 						if (_amountOf >= 1) then {
+							// TODO localization
 							_allInjuryTexts pushback format["%2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf];
 						} else {
 							// TODO localization
@@ -110,6 +111,33 @@ if (_show) then {
 		if (count _genericMessages == 0 && {count _allInjuryTexts == 0}) then {
 			_lbCtrl lbAdd "No injuries on this bodypart..";
 		};
+
+		_logCtrl = (_display displayCtrl 302);
+		lbClear _logCtrl;
+
+		private ["_logs", "_log", "_message", "_moment", "_arguments", "_lbCtrl"];
+		_logs = _unit getvariable [QGVAR(allLogs), []];
+		{
+			_log = _unit getvariable [_x, []];
+			{
+				// [_message,_moment,_type, _arguments]
+				_message = _x select 0;
+				_moment = _x select 1;
+				_arguments = _x select 3;
+				if (isLocalized _message) then {
+					_message = localize _message;
+				};
+
+				{
+					if (typeName _x == "STRING" && {isLocalized _x}) then {
+						_arguments set [_foreachIndex, localize _x];
+					};
+				}foreach _arguments;
+
+				_message = format([_message] + _arguments);
+				_logCtrl lbAdd format["%1 %2", _moment, _message];
+			}foreach _log;
+		}foreach _logs;
 
 	}, 0, [_target]] call CBA_fnc_addPerFrameHandler;
 
