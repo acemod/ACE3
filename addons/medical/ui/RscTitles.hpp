@@ -48,12 +48,54 @@ class Rsctitles {
             idc = 55;
             text = QUOTE(PATHTOF(ui\body_leg_right.paa));
         };
+        class InjuryListLabel {
+            idc = 199;
+            type = CT_STATIC;
+            x = "safezoneX + (2 * (((safezoneW / safezoneH) min 1.2) / 40))";
+            y = "10.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
+            w = "8.5 * (((safezoneW / safezoneH) min 1.2) / 40)";
+            h = "0.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
+            style = 0x00 + 0x100; // ST_LEFT + ST_SHADOW
+            font = "PuristaMedium";
+            colorText[] = {0.95, 0.95, 0.95, 0.75};
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.9])"};
+            text = "INJURIES";
+        };
         class InjuryList: ACE_gui_listBoxBase {
             idc = 200;
             x = "safezoneX + (2 * (((safezoneW / safezoneH) min 1.2) / 40))";
             y = "11 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
             w = "8.5 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "9 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
+            rowHeight = 0.03;
+            colorBackground[] = {0, 0, 0, 0.2};
+            colorText[] = {1,1, 1, 1.0};
+            colorScrollbar[] = {0.95, 0.95, 0.95, 1};
+            colorSelect[] = {0.95, 0.95, 0.95, 1};
+            colorSelect2[] = {0.95, 0.95, 0.95, 1};
+            colorSelectBackground[] = {0, 0, 0, 0.0};
+            colorSelectBackground2[] = {0.0, 0.0, 0.0, 0.5};
+        };
+        class LogName {
+            idc = 301;
+            type = CT_STATIC;
+            x = "safezoneX + (2 * (((safezoneW / safezoneH) min 1.2) / 40))";
+            y = "20.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
+            w = "8.5 * (((safezoneW / safezoneH) min 1.2) / 40)";
+            h = "0.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
+            style = 0x00 + 0x100; // ST_LEFT + ST_SHADOW
+            font = "PuristaMedium";
+            colorText[] = {0.95, 0.95, 0.95, 0.75};
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.9])"};
+            text = "ACTIVITY LOG";
+        };
+        class ActivityLog: InjuryList {
+            idc = 302;
+            y = "21.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
+            h = "7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
             rowHeight = 0.03;
             colorBackground[] = {0, 0, 0, 0.2};

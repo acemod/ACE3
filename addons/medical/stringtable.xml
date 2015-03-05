@@ -2,6 +2,64 @@
 <Project name="ACE">
     <Package name="Medical">
         <Container name="CfgWeapons">
+             <Key ID="STR_ACE_MEDICAL_NORMAL_BREATHING">
+                <Original>Normal breathing</Original>
+                <Russian>Дыхание в норме</Russian>
+                <Spanish>Respiración normal</Spanish>
+                <French>Respiration Normale</French>
+                <Polish>Normalny oddech</Polish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_NO_BREATHING">
+                <Original>No breathing</Original>
+                <Russian>Дыхания нет</Russian>
+                <Spanish>No respira</Spanish>
+                <French>Apnée</French>
+                <Polish>Brak oddechu</Polish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_DIFFICULT_BREATHING">
+                <Original>Difficult breathing</Original>
+                <Russian>Дыхание затруднено</Russian>
+                <Spanish>Dificultad para respirar</Spanish>
+                <French>Difficultée Respiratoire</French>
+                <Polish>Trudności z oddychaniem</Polish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_ALMOST_NO_BREATHING">
+                <Original>Almost no breathing</Original>
+                <Russian>Дыхания почти нет</Russian>
+                <Spanish>Casi sin respirar</Spanish>
+                <French>Respiration Faible</French>
+                <Polish>Prawie brak oddechu</Polish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_STATUS_BLEEDING">
+                <Original>Bleeding</Original>
+                <Russian>Кровотечение</Russian>
+                <Spanish>Sangrando</Spanish>
+                <French>Seignement</French>
+                <Polish>Krwawienie zewnętrzne</Polish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_STATUS_PAIN">
+                <Original>in Pain</Original>
+                <Russian>Испытывает боль</Russian>
+                <Spanish>Con Dolor</Spanish>
+                <French>A De La Douleur</French>
+                <Polish>W bólu</Polish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_STATUS_LOST_BLOOD">
+                <Original>Lost a lot of Blood</Original>
+                <Russian>Большая кровопотеря</Russian>
+                <Spanish>Mucha Sangre perdida</Spanish>
+                <French>A Perdu Bcp de Sang</French>
+                <Polish>Stracił dużo krwi</Polish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_STATUS_TOURNIQUET_APPLIED">
+                <Original>Tourniquet [CAT]</Original>
+                <Russian>Жгут</Russian>
+                <Spanish>Torniquete [CAT]</Spanish>
+                <French>Garot [CAT]</French>
+                <Polish>Opaska uciskowa [CAT]</Polish>
+            </Key>
+        </Container>
+        <Container name="CfgWeapons">
             <Key ID="STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY">
                 <Original>Bandage (Basic)</Original>
                 <Russian>Повязка (обычная)</Russian>
