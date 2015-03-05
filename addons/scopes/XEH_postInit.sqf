@@ -33,78 +33,66 @@ if !(hasInterface) exitWith {};
 
 
 // Add keybinds
-["ACE3",
-    localize "STR_ACE_Scopes_AdjustUp",
-    {
-        // Conditions: canInteract
-        _exceptions = [];
-        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
-        // Conditions: specific
-        [ACE_player] call FUNC(inventoryCheck);
-        if !([ACE_player, 0, 0.1] call FUNC(canAdjustScope)) exitWith {false};
+["ACE3", QGVAR(AdjustUp), localize "STR_ACE_Scopes_AdjustUp",
+{
+    // Conditions: canInteract
+    _exceptions = [];
+    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    // Conditions: specific
+    [ACE_player] call FUNC(inventoryCheck);
+    if !([ACE_player, 0, 0.1] call FUNC(canAdjustScope)) exitWith {false};
 
-        // Statement
-        [ACE_player, 0, 0.1] call FUNC(adjustScope);
-        true
-    },
-    [201, [false, false, false]],
-    false,
-    "keydown"
-] call cba_fnc_registerKeybind;
+    // Statement
+    [ACE_player, 0, 0.1] call FUNC(adjustScope);
+    true
+},
+{},
+[201, [false, false, false]], false] call cba_fnc_addKeybind;
 
-["ACE3",
-    localize "STR_ACE_Scopes_AdjustDown",
-    {
-        // Conditions: canInteract
-        _exceptions = [];
-        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
-        // Conditions: specific
-        [ACE_player] call FUNC(inventoryCheck);
-        if !([ACE_player, 0, -0.1] call FUNC(canAdjustScope)) exitWith {false};
+["ACE3", QGVAR(AdjustDown), localize "STR_ACE_Scopes_AdjustDown",
+{
+    // Conditions: canInteract
+    _exceptions = [];
+    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    // Conditions: specific
+    [ACE_player] call FUNC(inventoryCheck);
+    if !([ACE_player, 0, -0.1] call FUNC(canAdjustScope)) exitWith {false};
 
-        // Statement
-        [ACE_player, 0, -0.1] call FUNC(adjustScope);
-        true
-    },
-    [209, [false, false, false]],
-    false,
-    "keydown"
-] call cba_fnc_registerKeybind;
+    // Statement
+    [ACE_player, 0, -0.1] call FUNC(adjustScope);
+    true
+},
+{},
+[209, [false, false, false]], false] call cba_fnc_addKeybind;
 
-["ACE3",
-    localize "STR_ACE_Scopes_AdjustLeft",
-    {
-        // Conditions: canInteract
-        _exceptions = [];
-        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
-        // Conditions: specific
-        [ACE_player] call FUNC(inventoryCheck);
-        if !([ACE_player, -0.1, 0] call FUNC(canAdjustScope)) exitWith {false};
+["ACE3", QGVAR(AdjustLeft), localize "STR_ACE_Scopes_AdjustLeft",
+{
+    // Conditions: canInteract
+    _exceptions = [];
+    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    // Conditions: specific
+    [ACE_player] call FUNC(inventoryCheck);
+    if !([ACE_player, -0.1, 0] call FUNC(canAdjustScope)) exitWith {false};
 
-        // Statement
-        [ACE_player, -0.1, 0] call FUNC(adjustScope);
-        true
-    },
-    [209, [false, true, false]],
-    false,
-    "keydown"
-] call cba_fnc_registerKeybind;
+    // Statement
+    [ACE_player, -0.1, 0] call FUNC(adjustScope);
+    true
+},
+{},
+[209, [false, true, false]], false] call cba_fnc_addKeybind;
 
-["ACE3",
-    localize "STR_ACE_Scopes_AdjustRight",
-    {
-        // Conditions: canInteract
-        _exceptions = [];
-        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
-        // Conditions: specific
-        [ACE_player] call FUNC(inventoryCheck);
-        if !([ACE_player, 0.1, 0] call FUNC(canAdjustScope)) exitWith {false};
+["ACE3", QGVAR(AdjustRight), localize "STR_ACE_Scopes_AdjustRight",
+{
+    // Conditions: canInteract
+    _exceptions = [];
+    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    // Conditions: specific
+    [ACE_player] call FUNC(inventoryCheck);
+    if !([ACE_player, 0.1, 0] call FUNC(canAdjustScope)) exitWith {false};
 
-        // Statement
-        [ACE_player, 0.1, 0] call FUNC(adjustScope);
-        true
-    },
-    [201, [false, true, false]],
-    false,
-    "keydown"
-] call cba_fnc_registerKeybind;
+    // Statement
+    [ACE_player, 0.1, 0] call FUNC(adjustScope);
+    true
+},
+{},
+[201, [false, true, false]], false] call cba_fnc_addKeybind;
