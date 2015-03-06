@@ -27,14 +27,12 @@ _ammoCount = _target ammo currentWeapon _target;
 // Exit if the belt is full or empty
 if ((_ammoCount == 0)  || (getNumber (_magazineCfg >> "count") - _ammoCount) == 0) exitWith {false};
 
-// Check if the player has any of the same same magazines
+// Check if the player has any of the same magazines
 // Calculate max ammo
 private "_maxAmmo";
 _maxAmmo = 0;
 
 {
-	diag_log "filtered:";
-	diag_log _x;
     _maxAmmo = _maxAmmo max (_x select 1);
 } forEach ([magazinesAmmo _player, {_this select 0 == _magazineType}] call EFUNC(common,filter));
 
