@@ -1,12 +1,15 @@
-/**
-* fnc_onListBoxSettingsChanged.sqf
-* @Descr: N/A
-* @Author: Glowbal
-*
-* @Arguments: []
-* @Return:
-* @PublicAPI: false
-*/
+/*
+ * Author: Glowbal
+ * Called when a listbox selection is changed.
+ *
+ * Arguments:
+ *
+ * Return Value:
+ * NONE
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 private ["_settingIndex", "_rightDropDownIndex"];

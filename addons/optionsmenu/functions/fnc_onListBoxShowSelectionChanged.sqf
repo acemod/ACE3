@@ -1,12 +1,16 @@
-/**
-* fnc_onListBoxShowSelectionChanged.sqf
-* @Descr: called when the listbox selection has changed. Updates configuration menu information
-* @Author: Glowbal
-*
-* @Arguments: []
-* @Return:
-* @PublicAPI: false
-*/
+/*
+ * Author: Glowbal
+ * called when the listbox selection has changed. Updates configuration menu information
+ *
+ * Arguments:
+ * 0: Opened category or tab <STRING>
+ *
+ * Return Value:
+ * NONE
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 private ["_settingsMenu", "_localizedHeader"];

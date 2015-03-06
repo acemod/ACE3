@@ -1,12 +1,18 @@
-/**
-* fnc_updateSetting.sqf
-* @Descr:
-* @Author: Glowbal
-*
-* @Arguments: []
-* @Return:
-* @PublicAPI: true
-*/
+/*
+ * Author: Glowbal
+ * Upidates a setting.
+ *
+ * Arguments:
+ * 0: Type Of setting <NUMBER>
+ * 1: Name of setting <STRING>
+ * 2: New value <ANY>
+ *
+ * Return Value:
+ * NONE
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 private ["_changed"];
