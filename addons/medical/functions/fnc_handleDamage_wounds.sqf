@@ -39,10 +39,12 @@ _highestPossibleSpot = -1;
 _highestPossibleDamage = -1;
 _allPossibleInjuries = [];
 {
-    _minDamage = _x select 4;
+    _damageLevels = _x select 4;
+    _minDamage = _damageLevels select 0;
+    _maxDamage = _damageLevels select 1;
 
     // Check if the damage is higher as the min damage for the specific injury
-    if (_damage >= _minDamage) then {
+    if (_damage >= _minDamage && {_damage <= _maxDamage || _maxDamage < 0}) then {
         _classType = _x select 0;
         _selections = _x select 1;
         _bloodLoss = _x select 2;

@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-private ["_injuriesRootConfig", "_woundsConfig", "_allWoundClasses", "_amountOf", "_entry","_classType", "_selections", "_bloodLoss", "_pain","_minDamage","_causes", "_allTypes", "_damageTypesConfig", "_thresholds", "_typeThresholds", "_selectionSpecific", "_selectionSpecificType", "_classDisplayName", "_subClassDisplayName"];
+private ["_injuriesRootConfig", "_woundsConfig", "_allWoundClasses", "_amountOf", "_entry","_classType", "_selections", "_bloodLoss", "_pain","_minDamage","_causes", "_allTypes", "_damageTypesConfig", "_thresholds", "_typeThresholds", "_selectionSpecific", "_selectionSpecificType", "_classDisplayName", "_subClassDisplayName", "_maxDamage", "_subClassmaxDamage"];
 
 _injuriesRootConfig = (configFile >> "ACE_Medical_Advanced" >> "Injuries");
 _allTypes = ["stab", "grenade", "bullet", "explosive", "shell", "punch", "vehiclecrash", "backblast", "falling", "bite", "ropeburn"];
@@ -27,10 +27,11 @@ for "_i" from 0 to (count _configDamageTypes -1) /* step +1 */ do {
     };
 };
 GVAR(allAvailableDamageTypes) = _allFoundDamageTypes;
-
-// Creating a hash map to map wound IDs to classnames
 GVAR(woundClassNames) = [];
+GVAR(fractureClassNames) = [];
 
+
+// Parsing the wounds
 // function for parsing a sublcass of an injury
 _parseForSubClassWounds = {
     _subClass = _this select 0;
@@ -41,11 +42,12 @@ _parseForSubClassWounds = {
         _subClassbloodLoss = if (isNumber(_subClassConfig >> "bleedingRate")) then { getNumber(_subClassConfig >> "bleedingRate");} else { _bloodLoss };
         _subClasspain = if (isNumber(_subClassConfig >> "pain")) then { getNumber(_subClassConfig >> "pain");} else { _pain };
         _subClassminDamage = if (isNumber(_subClassConfig >> "minDamage")) then { getNumber(_subClassConfig >> "minDamage");} else { _minDamage };
+        _subClassmaxDamage = if (isNumber(_subClassConfig >> "maxDamage")) then { getNumber(_subClassConfig >> "maxDamage");} else { _maxDamage };
         _subClasscauses = if (isArray(_subClassConfig >> "causes")) then { getArray(_subClassConfig >> "causes");} else { _causes };
         _subClassDisplayName = if (isText(_subClassConfig >> "name")) then { getText(_subClassConfig >> "name");} else {_classDisplayName + " " + _subClass};
         if (count _selections > 0 && {count _causes > 0}) then {
             GVAR(woundClassNames) pushback _subClasstype;
-            _allWoundClasses pushback [_classID, _subClassselections, _subClassbloodLoss, _subClasspain, _subClassminDamage, _subClasscauses, _subClassDisplayName];
+            _allWoundClasses pushback [_classID, _subClassselections, _subClassbloodLoss, _subClasspain, [_subClassminDamage, _subClassmaxDamage], _subClasscauses, _subClassDisplayName];
             _classID = _classID + 1;
         };
         true;
@@ -67,6 +69,7 @@ if (isClass _woundsConfig) then {
             _bloodLoss = if (isNumber(_entry >> "bleedingRate")) then { getNumber(_entry >> "bleedingRate");} else {0};
             _pain = if (isNumber(_entry >> "pain")) then { getNumber(_entry >> "pain");} else {0};
             _minDamage = if (isNumber(_entry >> "minDamage")) then { getNumber(_entry >> "minDamage");} else {0};
+            _maxDamage = if (isNumber(_entry >> "maxDamage")) then { getNumber(_entry >> "maxDamage");} else {-1};
             _causes = if (isArray(_entry >> "causes")) then { getArray(_entry >> "causes");} else {[]};
             _classDisplayName = if (isText(_entry >> "name")) then { getText(_entry >> "name");} else {_classType};
 
@@ -76,7 +79,7 @@ if (isClass _woundsConfig) then {
             // There were no subclasses, so we will add this one instead.
             if (count _selections > 0 && count _causes > 0) then {
                 GVAR(woundClassNames) pushback _classType;
-                _allWoundClasses pushback [_classID, _selections, _bloodLoss, _pain, _minDamage, _causes, _classDisplayName];
+                _allWoundClasses pushback [_classID, _selections, _bloodLoss, _pain, [_minDamage, _maxDamage], _causes, _classDisplayName];
                 _classID = _classID + 1;
             };
             true;
@@ -85,11 +88,10 @@ if (isClass _woundsConfig) then {
 };
 GVAR(AllWoundInjuryTypes) = _allWoundClasses;
 
+// Linking injuries to the woundInjuryType variables.
 _damageTypesConfig = (configFile >> "ACE_Medical_Advanced" >> "Injuries" >> "damageTypes");
 _thresholds = getArray(_damageTypesConfig >> "thresholds");
 _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
-
-// Linking injuries to the woundInjuryType variables.
 {
     _varName = format[QGVAR(woundInjuryType_%1),_x];
     _woundTypes = [];
