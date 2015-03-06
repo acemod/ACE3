@@ -141,7 +141,7 @@ if (isNil QGVAR(level)) then {
 // HEARTRATE BASED EFFECTS
 [{
     _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
-    if (GVAR(level) == 0) then {
+    if (GVAR(level) == 1) then {
         _heartRate = 60 + 40 * (ACE_player getVariable [QGVAR(pain), 0]);
     };
     if (_heartRate <= 0) exitwith {};
@@ -200,7 +200,7 @@ if (isNil QGVAR(level)) then {
         };
     };
 
-    if (GVAR(level) > 0 && {_heartRate > 0}) then {
+    if (GVAR(level) >= 2 && {_heartRate > 0}) then {
         _minTime = 60 / _heartRate;
         if (time - GVAR(lastHeartBeatSound) > _minTime) then {
             GVAR(lastHeartBeatSound) = time;

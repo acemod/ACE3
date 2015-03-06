@@ -18,7 +18,7 @@ private ["_totalBloodLoss","_tourniquets","_openWounds", "_value", "_cardiacOutp
 _totalBloodLoss = 0;
 
 // Advanced medical bloodloss handling
-if (GVAR(level) >= 1) then {
+if (GVAR(level) >= 2) then {
     _tourniquets = _this getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
     _openWounds = _this getvariable [QGVAR(openWounds), []];
     //_cardiacOutput = [_this] call FUNC(getCardiacOutput);

@@ -23,7 +23,7 @@ _selectionName = _this select 2;
 _className = _this select 3;
 
 _config = (ConfigFile >> "ACE_Medical_Treatments" >> "Basic" >> _className);
-if (GVAR(level)>=1) then {
+if (GVAR(level)>=2) then {
     _config = (ConfigFile >> "ACE_Medical_Treatments" >> "Advanced" >> _className);
 };
 if !(isClass _config) exitwith {false};

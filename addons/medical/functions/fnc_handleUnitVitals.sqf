@@ -68,7 +68,7 @@ if ([_unit] call EFUNC(common,isAwake)) then {
 };
 
 // handle advanced medical, with vitals
-if ((missionNamespace getvariable[QGVAR(level), 0]) > 0) exitwith {
+if (GVAR(level) >= 2) exitwith {
 
     // Set the vitals
     _heartRate = (_unit getvariable [QGVAR(heartRate), 0]) + ([_unit] call FUNC(getHeartRateChange));

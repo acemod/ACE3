@@ -1,5 +1,87 @@
 
 class CfgVehicles {
+
+    class Logic;
+    class Module_F: Logic {
+        class ArgumentsBaseUnits {
+        };
+    };
+    class ACE_moduleMedicalSettings: Module_F    {
+        scope = 2;
+        displayName = "Medical Settings [ACE]";
+        icon = QUOTE(PATHTOF(data\ACE_medical_module.paa));
+        category = "ACE_medical";
+        function = QUOTE(DFUNC(moduleMedicalSettings));
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        author = "Glowbal";
+        class Arguments    {
+            class level {
+                displayName = "Medical Level";
+                description = "What is the medical simulation level?";
+                typeName = "NUMBER";
+                class values {
+                    class disable {
+                        name = "Disabled";
+                        value = -1;
+                    };
+                    class normal {
+                        name = "Basic";
+                        value = 0;
+                        default = 1;
+                    };
+                    class full  {
+                        name = "Advanced";
+                        value = 1;
+                    };
+                };
+            };
+            class medicSetting {
+                displayName = "Medics setting";
+                description = "What is the level of detail prefered for medics?";
+                typeName = "NUMBER";
+                class values {
+                    class disable {
+                        name = "Disable medics";
+                        value = -1;
+                    };
+                    class normal {
+                        name = "Normal";
+                        value = 0;
+                        default = 1;
+                    };
+                    class full  {
+                        name = "Advanced";
+                        value = 1;
+                    };
+                };
+            };
+            class enableFor {
+                displayName = "Enabled for";
+                description = "Select what units the medical system will be enabled for";
+                typeName = "NUMBER";
+                class values {
+                    class playableUnits {
+                        name = "Players only";
+                        value = 0;
+                        default = 1;
+                    };
+                    class playableUnitsAndAI {
+                        name = "Players and AI";
+                        value = 1;
+                    };
+                };
+            };
+        };
+        class ModuleDescription {
+            description = "Provides a medical system for both players and AI.";
+            sync[] = {};
+        };
+    };
+
+
+
     #define ARM_LEG_ARMOR_DEFAULT 2
     #define ARM_LEG_ARMOR_BETTER  3
     #define ARM_LEG_ARMOR_CSAT    4

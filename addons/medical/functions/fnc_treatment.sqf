@@ -25,7 +25,7 @@ _className = _this select 3;
 if !(_target isKindOf "CAManBase") exitWith {false};
 
 _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
-if (GVAR(level) >= 1) then {
+if (GVAR(level) >= 2) then {
     _config = (configFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
 };
 if !(isClass _config) exitwith {false};

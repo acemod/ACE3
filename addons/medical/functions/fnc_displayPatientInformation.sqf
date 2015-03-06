@@ -51,7 +51,7 @@ if (_show) then {
 		};
 
 		_selectionBloodLoss = [0,0,0,0,0,0];
-		if (GVAR(level) >= 1) then {
+		if (GVAR(level) >= 2) then {
 			_openWounds = _target getvariable [QGVAR(openWounds), []];
 			private "_amountOf";
 			{
