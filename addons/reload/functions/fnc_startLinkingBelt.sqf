@@ -38,6 +38,7 @@ _maxAmmo = 0;
 
 if (_maxAmmo == 0) exitWith {};
 
+
 // Condition to call each frame
 _condition = {
     EXPLODE_2_PVT((_this select 0),_player,_target);
