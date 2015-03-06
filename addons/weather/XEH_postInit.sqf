@@ -10,7 +10,8 @@
         30 setFog        (ACE_MISC_PARAMS select 2);
     };
 };
-
+ACE_wind = wind;
+if (true) exitwith {};
 
 // Update Wind
 simulWeatherSync;

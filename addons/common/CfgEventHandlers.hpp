@@ -38,7 +38,7 @@ class Extended_Respawn_EventHandlers {
             respawn = QUOTE(_this call FUNC(setName));
         };
         class GVAR(RESETDefaults) {
-            respawn = QUOTE(_this call FUNC(resetAllDefaults_F));
+            respawn = QUOTE(_this call FUNC(resetAllDefaults));
         };
     };
 };

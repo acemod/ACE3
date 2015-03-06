@@ -1,8 +1,5 @@
 #define MACRO_LOCK_ACTIONS \
   class ACE_MainActions { \
-    selection = ""; \
-    distance = 5; \
-    condition = "true"; \
     class ACE_unlockVehicle { \
       displayName = "$STR_ACE_Vehicle_Action_UnLock"; \
       distance = 4; \

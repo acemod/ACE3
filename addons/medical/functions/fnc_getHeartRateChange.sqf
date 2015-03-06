@@ -1,11 +1,14 @@
-/**
- * fn_getHeartRateChange.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Get the change in the heart rate. Used for the vitals calculations. Calculated in one seconds.
  *
- * @Arguments: []
- * @Return: void
- * @PublicAPI: false
+ * Arguments:
+ * 0: The Unit <OBJECT>
+ *
+ * ReturnValue:
+ * Change in heart Rate <NUMBER>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

@@ -23,9 +23,10 @@ PREP(handleKnockedOut);
 PREP(handlePlayerChanged);
 PREP(handleUnitInitPost);
 PREP(handleWokeUp);
+PREP(handleZeusDisplayChanged);
 PREP(moduleSurrender);
 PREP(setHandcuffed);
-PREP(surrender);
+PREP(setSurrendered);
 PREP(vehicleCaptiveMoveIn);
 PREP(vehicleCaptiveMoveOut);
 

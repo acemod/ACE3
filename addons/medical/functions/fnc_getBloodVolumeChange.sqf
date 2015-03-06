@@ -1,11 +1,14 @@
-/**
- * fn_getBloodVolumeChange.sqf
- * @Descr: Calculates the blood volume change and decreases the IVs given to the unit.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Calculates the blood volume change and decreases the IVs given to the unit.
  *
- * @Arguments: []
- * @Return: NUMBER Bloodvolume change
- * @PublicAPI: false
+ * Arguments:
+ * 0: The Unit <OBJECT>
+ *
+ * ReturnValue:
+ * Current cardiac output <NUMBER>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
@@ -38,11 +41,6 @@ if (_bloodVolume < 100.0) then {
         _bloodVolumeChange = _bloodVolumeChange + BLOOD_CHANGE_PER_SECOND;
         _ivVolume = (_unit getvariable [QGVAR(salineIVVolume), 0]) + IV_CHANGE_PER_SECOND;
         _unit setvariable [QGVAR(salineIVVolume),_ivVolume];
-        if ([QEGVAR(fieldRations,module)] call EFUNC(common,isModuleEnabled_F)) then {
-            if ([_unit] call EFUNC(fieldRations,canDrink)) then {
-                _unit setvariable [QEGVAR(fieldRations,drinkStatus), (_unit getvariable [QEGVAR(fieldRations,drinkStatus), 100]) + 0.2];
-            };
-        };
     };
     if ((_unit getvariable [QGVAR(plasmaIVVolume), 0]) > 0) then {
         _bloodVolumeChange = _bloodVolumeChange + BLOOD_CHANGE_PER_SECOND;
@@ -56,4 +54,4 @@ if (_bloodVolume < 100.0) then {
     };
 };
 
-_bloodVolumeChange
+_bloodVolumeChange;

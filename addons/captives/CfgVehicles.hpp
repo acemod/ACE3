@@ -2,34 +2,26 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_Actions {
-            class ACE_RightHandActions {
+
+            class ACE_ApplyHandcuffs {
+                displayName = "$STR_ACE_Captives_SetCaptive";
                 selection = "righthand";
-                displayName = "Right hand";
-                distance = 5;
-                condition = QUOTE(([ARR_2(_player, _target)] call FUNC(canApplyHandcuffs)) || ([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs)));
-                class ACE_ApplyHandcuffs {
-                    displayName = "$STR_ACE_Captives_SetCaptive";
-                    distance = 4;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canApplyHandcuffs));
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doApplyHandcuffs));
-                    exceptions[] = {};
-                    showDisabled = 0;
-                    priority = 2.4;
-                    icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
-                    hotkey = "C";
-                };
-                class ACE_RemoveHandcuffs {
-                    displayName = "$STR_ACE_Captives_ReleaseCaptive";
-                    distance = 4;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs));
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doRemoveHandcuffs));
-                    exceptions[] = {};
-                    showDisabled = 0;
-                    priority = 2.4;
-                    icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
-                    hotkey = "R";
-                };
+                distance = 2;
+                condition = QUOTE([ARR_2(_player, _target)] call FUNC(canApplyHandcuffs));
+                statement = QUOTE([ARR_2(_player, _target)] call FUNC(doApplyHandcuffs));
+                exceptions[] = {};
+                icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
             };
+            class ACE_RemoveHandcuffs {
+                displayName = "$STR_ACE_Captives_ReleaseCaptive";
+                selection = "righthand";
+                distance = 2;
+                condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs));
+                statement = QUOTE([ARR_2(_player, _target)] call FUNC(doRemoveHandcuffs));
+                exceptions[] = {};
+                icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
+            };
+
             class ACE_MainActions {
                 class ACE_EscortCaptive {
                     displayName = "$STR_ACE_Captives_EscortCaptive";
@@ -90,7 +82,7 @@ class CfgVehicles {
             class ACE_StartSurrenderingSelf {
                 displayName = "$STR_ACE_Captives_StartSurrendering";
                 condition = QUOTE([ARR_2(_player, true)] call FUNC(canSurrender));
-                statement = QUOTE([ARR_2(_player, true)] call FUNC(surrender));
+                statement = QUOTE([ARR_2(_player, true)] call FUNC(setSurrendered));
                 exceptions[] = {};
                 showDisabled = 0;
                 priority = 0;
@@ -98,7 +90,7 @@ class CfgVehicles {
             class ACE_StopSurrenderingSelf {
                 displayName = "$STR_ACE_Captives_StopSurrendering";
                 condition = QUOTE([ARR_2(_player, false)] call FUNC(canSurrender));
-                statement = QUOTE([ARR_2(_player, false)] call FUNC(surrender));
+                statement = QUOTE([ARR_2(_player, false)] call FUNC(setSurrendered));
                 exceptions[] = {QGVAR(isNotSurrendering)};
                 showDisabled = 0;
                 priority = 0;

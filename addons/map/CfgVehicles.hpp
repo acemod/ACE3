@@ -15,7 +15,6 @@ class CfgVehicles {
         exceptions[] = {"ACE_Drag_isNotDragging", QEGVAR(common,notOnMap)};
         showDisabled = 0;
         priority = 100;
-        subMenu[] = {"ACE_MapTools", 1};
         enableInside = 1;
 
         class ACE_MapToolsHide {
