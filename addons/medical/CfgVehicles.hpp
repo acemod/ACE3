@@ -9,7 +9,7 @@ class CfgVehicles {
     class ACE_moduleMedicalSettings: Module_F    {
         scope = 2;
         displayName = "Medical Settings [ACE]";
-        icon = QUOTE(PATHTOF(data\ACE_medical_module.paa));
+        icon = QUOTE(PATHTOF(ui\moduleIcon.paa));
         category = "ACE_medical";
         function = QUOTE(DFUNC(moduleMedicalSettings));
         functionPriority = 1;
@@ -24,16 +24,16 @@ class CfgVehicles {
                 class values {
                     class disable {
                         name = "Disabled";
-                        value = -1;
+                        value = 0;
                     };
                     class normal {
                         name = "Basic";
-                        value = 0;
+                        value = 1;
                         default = 1;
                     };
                     class full  {
                         name = "Advanced";
-                        value = 1;
+                        value = 2;
                     };
                 };
             };
@@ -44,16 +44,16 @@ class CfgVehicles {
                 class values {
                     class disable {
                         name = "Disable medics";
-                        value = -1;
+                        value = 0;
                     };
                     class normal {
                         name = "Normal";
-                        value = 0;
+                        value = 1;
                         default = 1;
                     };
                     class full  {
                         name = "Advanced";
-                        value = 1;
+                        value = 2;
                     };
                 };
             };
