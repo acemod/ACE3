@@ -21,9 +21,13 @@ if ([_unit] call FUNC(hasMedicalEnabled) || true) then {
     if !(local _unit) exitwith{
         [[_unit], QUOTE(DFUNC(addToInjuredCollection)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
     };
-    if !(_unit getvariable[QGVAR(addedToUnitLoop),false]) then{
-        _unit setvariable [QGVAR(addedToUnitLoop),true, true];
+    if (_unit getvariable[QGVAR(addedToUnitLoop),false]) exitwith{};
+    _unit setvariable [QGVAR(addedToUnitLoop),true, true];
+
+    if (isNil QGVAR(InjuredCollection)) then {
+        GVAR(InjuredCollection) = [];
     };
+    GVAR(InjuredCollection) pushback _unit;
 
     [{
         private "_unit";
@@ -44,8 +48,4 @@ if ([_unit] call FUNC(hasMedicalEnabled) || true) then {
         };
     }, 1, [_unit]] call CBA_fnc_addPerFrameHandler;
 
-    if (isNil QGVAR(InjuredCollection)) then {
-        GVAR(InjuredCollection) = [];
-    };
-    GVAR(InjuredCollection) pushback _unit;
 };
