@@ -65,7 +65,7 @@ class CfgVehicles {
                     displayName = "Bandage Head";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(canTreat));
-                    statement = QUOTE([ARR_4(_player, _target, 'head', 'Bandage Head')] call DFUNC(treatment));
+                    statement = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
                     hotkey = "B";
@@ -86,10 +86,10 @@ class CfgVehicles {
             };
             class ACE_ArmLeft {
                 class Bandage_LeftArm {
-                    displayName = "Bandage Right Arm";
+                    displayName = "Bandage Left Arm";
                     distance = 2.0;
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreat));
-                    statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(treatment));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call DFUNC(canTreat));
+                    statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
                     hotkey = "B";
