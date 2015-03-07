@@ -18,15 +18,16 @@ private ["_unit","_class","_return"];
 _unit = _this select 0;
 _medicN = if (count _this > 1) then {_this select 1} else {1};
 
-if (isnil QGVAR(setting_advancedMedicRoles)) exitwith {
-    true;
-};
-
-if (GVAR(setting_advancedMedicRoles)) then {
+_return = false;
+if (GVAR(medicSetting) >= 1) then {
     _class = _unit getvariable [QGVAR(medicClass), 0];
-    if (_class >= _medicN) then {
-        _return = true;
-    };
+    if (GVAR(medicSetting) == 1) then {
+    	_return = _class > 0;
+    } else {
+	    if (_class >= _medicN) then {
+	        _return = true;
+	    };
+	};
 } else {
     _return = true;
 };
