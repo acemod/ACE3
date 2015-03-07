@@ -784,8 +784,8 @@ class CfgVehicles {
                 name = QGVAR(surgicalKit);
                 count = 2;
             };
-            class ACE_itemBodyBag {
-                name = "ACE_itemBodyBag";
+            class GVAR(bodyBag) {
+                name = QGVAR(bodyBag);
                 count = 5;
             };
         };
