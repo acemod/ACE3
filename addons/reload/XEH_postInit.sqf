@@ -14,7 +14,7 @@ if !(hasInterface) exitWith {};
     {(vehicle ACE_player) isKindOf 'StaticWeapon'}) exitWith {false};
 
     // Statement
-    [ACE_player, vehicle ACE_player, false] call FUNC(checkAmmo);
+    [ACE_player] call FUNC(checkAmmo);
     true
 },
 {false},
