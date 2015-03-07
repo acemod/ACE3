@@ -1,12 +1,18 @@
-/**
- * fn_assignMedicalVehicle.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Assign vehicle as a medical vehicle
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: The module logic <LOGIC>
+ * 1: units <ARRAY>
+ * 2: activated <BOOL>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Public: No
  */
+
 
 #include "script_component.hpp"
 

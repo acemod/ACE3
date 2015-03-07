@@ -1,11 +1,16 @@
-/**
- * fn_assignMedicRoles.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Assign a medical role to a unit
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: The module logic <LOGIC>
+ * 1: units <ARRAY>
+ * 2: activated <BOOL>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
