@@ -37,8 +37,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 ["playerTurretChanged",     {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
 
 // Add keybinds
-["ACE3",
-localize "STR_ACE_NightVision_IncreaseNVGBrightness",
+["ACE3", QGVAR(IncreaseNVGBrightness), localize "STR_ACE_NightVision_IncreaseNVGBrightness",
 {
     // Conditions: canInteract
     _exceptions = [QEGVAR(captives,isNotEscorting)];
@@ -50,13 +49,10 @@ localize "STR_ACE_NightVision_IncreaseNVGBrightness",
     [ACE_player, 1] call FUNC(changeNVGBrightness);
     true
 },
-[201, [false, false, true]], //PageUp + ALT
-false,
-"keydown"
-] call cba_fnc_registerKeybind;
+{false},
+[201, [false, false, true]], false] call cba_fnc_addKeybind; //PageUp + ALT
 
-["ACE3",
-localize "STR_ACE_NightVision_DecreaseNVGBrightness",
+["ACE3", QGVAR(DecreaseNVGBrightness), localize "STR_ACE_NightVision_DecreaseNVGBrightness",
 {
     // Conditions: canInteract
     _exceptions = [QEGVAR(captives,isNotEscorting)];
@@ -68,7 +64,5 @@ localize "STR_ACE_NightVision_DecreaseNVGBrightness",
     [ACE_player, -1] call FUNC(changeNVGBrightness);
     true
 },
-[209, [false, false, true]], //PageDown + ALT
-false,
-"keydown"
-] call cba_fnc_registerKeybind;
+{false},
+[209, [false, false, true]], false] call cba_fnc_addKeybind; //PageDown + ALT
