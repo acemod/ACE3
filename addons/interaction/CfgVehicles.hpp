@@ -30,122 +30,177 @@ class CfgVehicles {
   class Man;
   class CAManBase: Man {
     class ACE_Actions {
-      class ACE_TeamManagement {
-        displayName = "$STR_ACE_Interaction_TeamManagement";
-        distance = 4;
-        condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player} && {GVAR(EnableTeamManagement)});
+      class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
+        distance = 5;
+        condition = QUOTE(true);
         statement = "";
-        showDisabled = 0;
-        priority = 3.2;
-        icon = PATHTOF(UI\team\team_management_ca.paa);
-        subMenu[] = {"ACE_TeamManagement", 0};
-        hotkey = "M";
-        enableInside = 1;
+        icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
+        selection = "spine3";
 
-        class ACE_JoinTeamRed {
-          displayName = "$STR_ACE_Interaction_JoinTeamRed";
-          distance = 4;
-          condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
-          statement = QUOTE([ARR_2(_target,'RED')] call DFUNC(joinTeam));
-          showDisabled = 1;
-          icon = PATHTOF(UI\team\team_red_ca.paa);
-          priority = 2.4;
-          hotkey = "R";
+        class ACE_TeamManagement {
+          displayName = "$STR_ACE_Interaction_TeamManagement";
+          distance = 5;
+          condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player} && {GVAR(EnableTeamManagement)});
+          statement = "";
+          showDisabled = 0;
+          priority = 3.2;
+          icon = PATHTOF(UI\team\team_management_ca.paa);
+          hotkey = "M";
+          enableInside = 1;
+
+          class ACE_JoinTeamRed {
+            displayName = "$STR_ACE_Interaction_JoinTeamRed";
+            distance = 5;
+            condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
+            statement = QUOTE([ARR_2(_target,'RED')] call DFUNC(joinTeam));
+            showDisabled = 1;
+            icon = PATHTOF(UI\team\team_red_ca.paa);
+            priority = 2.4;
+            hotkey = "R";
+            enableInside = 1;
+          };
+          class ACE_JoinTeamGreen {
+            displayName = "$STR_ACE_Interaction_JoinTeamGreen";
+            distance = 5;
+            condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
+            statement = QUOTE([ARR_2(_target,'GREEN')] call DFUNC(joinTeam));
+            showDisabled = 1;
+            icon = PATHTOF(UI\team\team_green_ca.paa);
+            priority = 2.3;
+            hotkey = "G";
+            enableInside = 1;
+          };
+          class ACE_JoinTeamBlue {
+            displayName = "$STR_ACE_Interaction_JoinTeamBlue";
+            distance = 5;
+            condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
+            statement = QUOTE([ARR_2(_target,'BLUE')] call DFUNC(joinTeam));
+            showDisabled = 1;
+            icon = PATHTOF(UI\team\team_blue_ca.paa);
+            priority = 2.2;
+            hotkey = "B";
+            enableInside = 1;
+          };
+          class ACE_JoinTeamYellow {
+            displayName = "$STR_ACE_Interaction_JoinTeamYellow";
+            distance = 5;
+            condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
+            statement = QUOTE([ARR_2(_target,'YELLOW')] call DFUNC(joinTeam));
+            showDisabled = 1;
+            icon = PATHTOF(UI\team\team_yellow_ca.paa);
+            priority = 2.1;
+            hotkey = "Y";
+            enableInside = 1;
+          };
+
+          class ACE_LeaveTeam {
+            displayName = "$STR_ACE_Interaction_LeaveTeam";
+            distance = 5;
+            condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player} && {assignedTeam _player != 'MAIN'});
+            statement = QUOTE([ARR_2(_target,'MAIN')] call DFUNC(joinTeam));
+            showDisabled = 1;
+            icon = PATHTOF(UI\team\team_white_ca.paa);
+            priority = 2.5;
+            hotkey = "N";
+            enableInside = 1;
+          };
+        };
+
+        class ACE_JoinGroup {
+          displayName = "$STR_ACE_Interaction_JoinGroup";
+          distance = 5;
+          condition = QUOTE(side group _player == side group _target && {group _player != group _target});
+          statement = QUOTE([_player] joinSilent group _target;);
+          showDisabled = 0;
+          priority = 2.6;
+          icon = PATHTOF(UI\team\team_management_ca.paa);
+          hotkey = "J";
           enableInside = 1;
         };
-        class ACE_JoinTeamGreen {
-          displayName = "$STR_ACE_Interaction_JoinTeamGreen";
-          distance = 4;
-          condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
-          statement = QUOTE([ARR_2(_target,'GREEN')] call DFUNC(joinTeam));
-          showDisabled = 1;
-          icon = PATHTOF(UI\team\team_green_ca.paa);
-          priority = 2.3;
-          hotkey = "G";
-          enableInside = 1;
-        };
-        class ACE_JoinTeamBlue {
-          displayName = "$STR_ACE_Interaction_JoinTeamBlue";
-          distance = 4;
-          condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
-          statement = QUOTE([ARR_2(_target,'BLUE')] call DFUNC(joinTeam));
-          showDisabled = 1;
-          icon = PATHTOF(UI\team\team_blue_ca.paa);
+
+        class ACE_GetDown {
+          displayName = "$STR_ACE_Interaction_GetDown";
+          distance = 5;
+          condition = QUOTE([_target] call DFUNC(canInteractWithCivilian));
+          statement = QUOTE([_target] call DFUNC(getDown));
+          showDisabled = 0;
           priority = 2.2;
-          hotkey = "B";
-          enableInside = 1;
         };
-        class ACE_JoinTeamYellow {
-          displayName = "$STR_ACE_Interaction_JoinTeamYellow";
-          distance = 4;
-          condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
-          statement = QUOTE([ARR_2(_target,'YELLOW')] call DFUNC(joinTeam));
-          showDisabled = 1;
-          icon = PATHTOF(UI\team\team_yellow_ca.paa);
-          priority = 2.1;
-          hotkey = "Y";
-          enableInside = 1;
+        class ACE_SendAway {
+          displayName = "$STR_ACE_Interaction_SendAway";
+          distance = 5;
+          condition = QUOTE([_target] call DFUNC(canInteractWithCivilian));
+          statement = QUOTE([_target] call DFUNC(sendAway));
+          showDisabled = 0;
+          priority = 2.0;
         };
-
-        class ACE_LeaveTeam {
-          displayName = "$STR_ACE_Interaction_LeaveTeam";
-          distance = 4;
-          condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player} && {assignedTeam _player != 'MAIN'});
-          statement = QUOTE([ARR_2(_target,'MAIN')] call DFUNC(joinTeam));
-          showDisabled = 1;
-          icon = PATHTOF(UI\team\team_white_ca.paa);
+        class ACE_Pardon {
+          displayName = "$STR_ACE_Interaction_Pardon";
+          distance = 5;
+          condition = QUOTE(rating _target < -2000 && {alive _target} && {side group _player == side group _target});
+          statement = QUOTE([ARR_3(_target,'{_this addRating -rating _this}',_target)] call DEFUNC(common,execRemoteFnc));
+          showDisabled = 0;
           priority = 2.5;
-          hotkey = "N";
           enableInside = 1;
         };
       };
+      class ACE_Head {
+        displayName = "$STR_ACE_Interaction_Head";
+        selection = "pilot";
+        distance = 2.0;
+        condition = "";
+        statement = "";
+      };
+      class ACE_ArmLeft {
+        displayName = "$STR_ACE_Interaction_ArmLeft";
+        selection = "LeftForeArm";
+        distance = 2.0;
+        condition = "";
+        statement = "";
+      };
+      class ACE_ArmRight {
+        displayName = "$STR_ACE_Interaction_ArmRight";
+        selection = "RightForeArm";
+        distance = 2.0;
+        condition = "";
+        statement = "";
+      };
+      class ACE_LegLeft {
+        displayName = "$STR_ACE_Interaction_LegLeft";
+        selection = "LKnee";
+        distance = 2.0;
+        condition = "";
+        statement = "";
+      };
+      class ACE_LegRight {
+        displayName = "$STR_ACE_Interaction_LegRight";
+        selection = "RKnee";
+        distance = 2.0;
+        condition = "";
+        statement = "";
+      };
+      class ACE_Weapon {
+        displayName = "$STR_ACE_Interaction_Weapon";
+        selection = "weapon";
+        distance = 2.0;
+        condition = "";
+        statement = "";
+      };
 
-      class ACE_TapShoulder {
+      class ACE_TapShoulderRight {
         displayName = "$STR_ACE_Interaction_TapShoulder";
-        distance = 4;
+        selection = "rightshoulder";
+        distance = 2.0;
         condition = QUOTE([ARR_2(_player, _target)] call DFUNC(canTapShoulder));
-        statement = QUOTE([ARR_2(_player, _target)] call DFUNC(tapShoulder));
-        showDisabled = 1;
-        priority = 2.8;
-        hotkey = "Q";
-        enableInside = 1;
+        statement = QUOTE([ARR_3(_player, _target, 0)] call DFUNC(tapShoulder));
       };
-      class ACE_JoinGroup {
-        displayName = "$STR_ACE_Interaction_JoinGroup";
-        distance = 4;
-        condition = QUOTE(side group _player == side group _target && {group _player != group _target});
-        statement = QUOTE([_player] joinSilent group _target;);
-        showDisabled = 0;
-        priority = 2.6;
-        icon = PATHTOF(UI\team\team_management_ca.paa);
-        hotkey = "J";
-        enableInside = 1;
-      };
-
-      class ACE_GetDown {
-        displayName = "$STR_ACE_Interaction_GetDown";
-        distance = 4;
-        condition = QUOTE([_target] call DFUNC(canInteractWith));
-        statement = QUOTE([_target] call DFUNC(getDown));
-        showDisabled = 0;
-        priority = 2.2;
-      };
-      class ACE_SendAway {
-        displayName = "$STR_ACE_Interaction_SendAway";
-        distance = 4;
-        condition = QUOTE([_target] call DFUNC(canInteractWith));
-        statement = QUOTE([_target] call DFUNC(sendAway));
-        showDisabled = 0;
-        priority = 2.0;
-      };
-      class ACE_Pardon {
-        displayName = "$STR_ACE_Interaction_Pardon";
-        distance = 4;
-        condition = QUOTE(rating _target < -2000 && {alive _target} && {side group _player == side group _target});
-        statement = QUOTE([ARR_3(_target,'{_this addRating -rating _this}',_target)] call DEFUNC(common,execRemoteFnc));
-        showDisabled = 0;
-        priority = 2.5;
-        enableInside = 1;
+      class ACE_TapShoulderLeft {
+        displayName = "$STR_ACE_Interaction_TapShoulder";
+        selection = "leftshoulder";
+        distance = 2.0;
+        condition = QUOTE([ARR_2(_player, _target)] call DFUNC(canTapShoulder));
+        statement = QUOTE([ARR_3(_player, _target, 1)] call DFUNC(tapShoulder));
       };
     };
 
@@ -157,7 +212,6 @@ class CfgVehicles {
         showDisabled = 1;
         priority = 3.2;
         icon = PATHTOF(UI\team\team_management_ca.paa);
-        subMenu[] = {"ACE_TeamManagement", 1};
         enableInside = 1;
         hotkey = "M";
 
@@ -235,30 +289,12 @@ class CfgVehicles {
         };
       };
 
-      /* DANCE ANIMATION DOESN'T WORK :(
-      class ACE_Dance {
-        displayName = "$STR_ACE_Interaction_Dance";
-        condition = "isClass (configFile >> 'CfgPatches' >> 'ACE_Movement') and !ACE_Dancing";
-        statement = "ACE_Dancing = true; [-2, {_this switchMove 'TestDance';}, player] call CBA_fnc_globalExecute;";
-        showDisabled = 0;
-        priority = -1.2;
-      };
-      class ACE_StopDancing {
-        displayName = "$STR_ACE_Interaction_StopDancing";
-        condition = "ACE_Dancing";
-        statement = "ACE_Dancing = false; [-2, {_this switchMove '';}, player] call CBA_fnc_globalExecute;";
-        showDisabled = 0;
-        priority = -1.2;
-      };
-      */
-
       class ACE_Gestures {
         displayName = "$STR_ACE_Interaction_Gestures";
         condition = "canStand _target";
         statement = "";
         showDisabled = 1;
         priority = 3.5;
-        subMenu[] = {"ACE_Gestures", 1};
         icon = PATHTOF(UI\gestures_ca.paa);
         hotkey = "G";
 
@@ -365,66 +401,104 @@ class CfgVehicles {
         showDisabled = 1;
         priority = 4.5;
         icon = "";  // @todo
-        subMenu[] = {"ACE_Equipment", 1};
         enableInside = 1;
         hotkey = "E";
-
-        class ACE_Dummy {
-          displayName = "";
-          condition = QUOTE(false);
-          statement = "";
-          showDisabled = 1;
-          priority = -99;
-          icon = PATHTOEF(common,UI\blank_CO.paa);
-          enableInside = 1;
-        };
       };
     };
   };
 
   class LandVehicle;
   class Car: LandVehicle {
-    class ACE_Actions {};
+    class ACE_Actions {
+      class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
+        selection = "";
+        distance = 10;
+        condition = "true";
+      };
+    };
     class ACE_SelfActions {};
   };
   class Tank: LandVehicle {
-    class ACE_Actions {};
+    class ACE_Actions {
+      class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
+        selection = "";
+        distance = 10;
+        condition = "true";
+      };
+    };
     class ACE_SelfActions {};
   };
 
   class Air;
   class Helicopter: Air {
-    class ACE_Actions {};
+    class ACE_Actions {
+      class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
+        selection = "";
+        distance = 10;
+        condition = "true";
+      };
+    };
     class ACE_SelfActions {};
   };
   class Plane: Air {
-    class ACE_Actions {};
+    class ACE_Actions {
+      class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
+        selection = "";
+        distance = 10;
+        condition = "true";
+      };
+    };
     class ACE_SelfActions {};
   };
 
   class Ship;
   class Ship_F: Ship {
     class ACE_Actions {
-      class ACE_Push {
-        displayName = "$STR_ACE_Interaction_Push";
-        distance = 4;
-        condition = QUOTE(getMass _target < 1000 && {alive _target});
-        statement = QUOTE([ARR_2(_target, [ARR_3(2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5)])] call FUNC(push););
-        showDisabled = 0;
-        priority = -1;
+      class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
+        selection = "";
+        distance = 10;
+        condition = "true";
+
+        class ACE_Push {
+          displayName = "$STR_ACE_Interaction_Push";
+          distance = 6;
+          condition = QUOTE(getMass _target < 1000 && {alive _target});
+          statement = QUOTE([ARR_2(_target, [ARR_3(2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5)])] call FUNC(push););
+          showDisabled = 0;
+          priority = -1;
+        };
       };
     };
     class ACE_SelfActions {};
   };
 
   class StaticWeapon: LandVehicle {
-    class ACE_Actions {};
+    class ACE_Actions {
+      class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
+        selection = "gunnerview";
+        distance = 2;
+        condition = "true";
+      };
+    };
     class ACE_SelfActions {};
   };
 
   class StaticMortar;
   class Mortar_01_base_F: StaticMortar {
-    class ACE_Actions {};
+    class ACE_Actions {
+      class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
+        selection = "gunnerview";
+        distance = 2;
+        condition = "true";
+      };
+    };
     class ACE_SelfActions {};
   };
 

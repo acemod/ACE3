@@ -1,25 +1,27 @@
 
 #define MACRO_ATTACHTOVEHICLE \
     class ACE_Actions { \
-        class GVAR(AttachVehicle) { \
-            displayName = "$STR_ACE_Attach_AttachDetach"; \
-            condition = QUOTE(([ARR_3(_player, _target, '')] call FUNC(canAttach))); \
-            statement = QUOTE( [ARR_2(_player, _target)] call FUNC(openAttachUI);); \
-            exceptions[] = {"ACE_Drag_isNotDragging"}; \
-            showDisabled = 0; \
-            priority = 0; \
-            icon = PATHTOF(UI\attach_ca.paa); \
-            distance = 4; \
-        }; \
-        class GVAR(DetachVehicle) { \
-            displayName = "$STR_ACE_Attach_Detach"; \
-            condition = QUOTE(([ARR_2(_player, _target)] call FUNC(canDetach))); \
-            statement = QUOTE( [ARR_2(_player, _target)] call FUNC(detach) ); \
-            exceptions[] = {"ACE_Drag_isNotDragging"}; \
-            showDisabled = 0; \
-            priority = 0; \
-            icon = PATHTOF(UI\detach_ca.paa); \
-            distance = 4; \
+        class ACE_MainActions { \
+            class GVAR(AttachVehicle) { \
+                displayName = "$STR_ACE_Attach_AttachDetach"; \
+                condition = QUOTE(([ARR_3(_player, _target, '')] call FUNC(canAttach))); \
+                statement = QUOTE( [ARR_2(_player, _target)] call FUNC(openAttachUI);); \
+                exceptions[] = {"ACE_Drag_isNotDragging"}; \
+                showDisabled = 0; \
+                priority = 0; \
+                icon = PATHTOF(UI\attach_ca.paa); \
+                distance = 4; \
+            }; \
+            class GVAR(DetachVehicle) { \
+                displayName = "$STR_ACE_Attach_Detach"; \
+                condition = QUOTE(([ARR_2(_player, _target)] call FUNC(canDetach))); \
+                statement = QUOTE( [ARR_2(_player, _target)] call FUNC(detach) ); \
+                exceptions[] = {"ACE_Drag_isNotDragging"}; \
+                showDisabled = 0; \
+                priority = 0; \
+                icon = PATHTOF(UI\detach_ca.paa); \
+                distance = 4; \
+            }; \
         }; \
     };
 

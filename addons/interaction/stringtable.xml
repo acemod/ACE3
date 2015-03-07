@@ -2,6 +2,27 @@
 <!-- Edited with tabler - 2014-12-20 -->
 <Project name="ACE">
   <Package name="Interaction">
+    <Key ID="STR_ACE_Interaction_MainAction">
+      <English>Interactions &gt;&gt;</English>
+    </Key>
+    <Key ID="STR_ACE_Interaction_Head">
+      <English>Head &gt;&gt;</English>
+    </Key>
+    <Key ID="STR_ACE_Interaction_ArmLeft">
+      <English>Left Arm &gt;&gt;</English>
+    </Key>
+    <Key ID="STR_ACE_Interaction_ArmRight">
+      <English>Right Arm &gt;&gt;</English>
+    </Key>
+    <Key ID="STR_ACE_Interaction_LegLeft">
+      <English>Left Leg &gt;&gt;</English>
+    </Key>
+    <Key ID="STR_ACE_Interaction_LegRight">
+      <English>Right Leg &gt;&gt;</English>
+    </Key>
+    <Key ID="STR_ACE_Interaction_Weapon">
+      <English>Weapon &gt;&gt;</English>
+    </Key>
     <Key ID="STR_ACE_Interaction_InteractionMenu">
       <English>Interaction Menu</English>
       <German>Interaktionsmenü</German>
@@ -338,17 +359,29 @@
       <Portuguese>Tocar ombro</Portuguese>
       <Italian>Dai un colpetto</Italian>
     </Key>
-    <Key ID="STR_ACE_Interaction_YouWereTapped">
-      <English>You were tapped on the shoulder.</English>
-      <German>Dir wurde auf die Schulter geklopft</German>
-      <Spanish>Te tocaron el hombro.</Spanish>
-      <French>On te tape sur l'épaule.</French>
-      <Polish>Zostałeś klepnięty po ramieniu</Polish>
-      <Hungarian>Vállonveregettek</Hungarian>
-      <Czech>Někdo tě poklepal na rameno.</Czech>
-      <Russian>Вас похлопали по плечу</Russian>
-      <Portuguese>Você foi tocado no ombro.</Portuguese>
-      <Italian>Ti è stato dato un colpetto sulla spalla</Italian>
+    <Key ID="STR_ACE_Interaction_YouWereTappedRight">
+      <English>You were tapped on the RIGHT shoulder &gt;</English>
+      <Spanish>Te tocaron el hombro DERECHO &gt;</Spanish>
+      <German>Dir wurde auf die Schulter geklopft &gt;</German>
+      <French>On te tape sur l'épaule &gt;</French>
+      <Polish>Zostałeś klepnięty po ramieniu &gt;</Polish>
+      <Hungarian>Vállonveregettek &gt;</Hungarian>
+      <Czech>Někdo tě poklepal na rameno &gt;</Czech>
+      <Russian>Вас похлопали по плечу &gt;</Russian>
+      <Portuguese>Você foi tocado no ombro &gt;</Portuguese>
+      <Italian>Ti è stato dato un colpetto sulla spalla &gt;</Italian>
+    </Key>
+    <Key ID="STR_ACE_Interaction_YouWereTappedLeft">
+      <English>&lt; You were tapped on the LEFT shoulder.</English>
+      <Spanish>&lt; Te tocaron el hombro IZQUIERDO.</Spanish>
+      <German>&lt; Dir wurde auf die Schulter geklopft</German>
+      <French>&lt; On te tape sur l'épaule.</French>
+      <Polish>&lt; Zostałeś klepnięty po ramieniu</Polish>
+      <Hungarian>&lt; Vállonveregettek</Hungarian>
+      <Czech>&lt; Někdo tě poklepal na rameno.</Czech>
+      <Russian>&lt; Вас похлопали по плечу</Russian>
+      <Portuguese>&lt; Você foi tocado no ombro.</Portuguese>
+      <Italian>&lt; Ti è stato dato un colpetto sulla spalla</Italian>
     </Key>
     <Key ID="STR_ACE_Interaction_CancelSelection">
       <English>Cancel</English>
@@ -554,18 +587,6 @@
       <Italian>Perdona</Italian>
       <Hungarian>Megbocsátás</Hungarian>
     </Key>
-    <Key ID="STR_ACE_Interaction_FlowMenu">
-      <English>Flow Menu</English>
-      <German>Mausradmenü</German>
-      <Polish>Flow Menu</Polish>
-      <Spanish>Menú desplegable</Spanish>
-      <French>Menu Déroulant</French>
-      <Czech>Flow Menu</Czech>
-      <Russian>Выпадающее меню</Russian>
-      <Portuguese>Flow Menu</Portuguese>
-      <Italian>Menù a Scorrimento</Italian>
-      <Hungarian>Legördülő menü</Hungarian>
-    </Key>
     <Key ID="STR_ACE_Interaction_ScrollHint">
       <English>Scroll</English>
       <German>Scrollen</German>
@@ -600,25 +621,6 @@
       <Hungarian>Hatótávolságon kívül</Hungarian>
       <Polish>Poza zasięgiem</Polish>
       <Czech>Mimo dosah</Czech>
-    </Key>
-    <Key ID="STR_ACE_Interaction_AutoCloseMenu">
-      <English>Close Menu on Key Release</English>
-      <German>Menü nach Loslassen schließen</German>
-      <Polish>Zamknij menu automatycznie</Polish>
-      <French>Fermer le menu en relâchant la touche</French>
-      <Spanish>Cerrar menú al soltar la tecla</Spanish>
-      <Hungarian>Menü bezárása a billentyű elengedésekor</Hungarian>
-      <Russian>Закрывать меню при отжатии клавиши</Russian>
-      <Czech>Menu interakce (Na držení)</Czech>
-    </Key>
-    <Key ID="STR_ACE_Interaction_AutoCenterCursor">
-      <English>Auto Center Cursor</English>
-      <German>Mauszeiger automatisch zentrieren</German>
-      <Spanish>Auto-centrar cursor</Spanish>
-      <Polish>Automatycznie centruj kursor </Polish>
-      <Czech>Vycentrování kurzoru</Czech>
-      <Hungarian>Egér auto-centrírozása</Hungarian>
-      <Russian>Автоцентрирование курсора</Russian>
     </Key>
     <Key ID="STR_ACE_Interaction_Equipment">
       <English>Equipment &gt;&gt;</English>

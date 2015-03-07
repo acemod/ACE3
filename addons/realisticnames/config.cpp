@@ -223,43 +223,46 @@ class CfgVehicles {
     class B_Truck_01_Repair_F: B_Truck_01_mover_F {
         displayName = "$STR_ACE_RealisticNames_Truck_01_Repair_Name";
     };
-
-    class Truck_02_base_F;
-    class O_Truck_02_transport_F: Truck_02_base_F {
+    class Truck_02_transport_base_F;
+    class O_Truck_02_transport_F: Truck_02_transport_base_F {
         displayName = "$STR_ACE_RealisticNames_Truck_02_transport_Name";
     };
+    class Truck_02_base_F;
     class O_Truck_02_covered_F: Truck_02_base_F {
         displayName = "$STR_ACE_RealisticNames_Truck_02_covered_Name";
     };
-    class O_Truck_02_ammo_F: Truck_02_base_F {
+    class Truck_02_Ammo_base_F;
+    class O_Truck_02_ammo_F: Truck_02_Ammo_base_F {
         displayName = "$STR_ACE_RealisticNames_Truck_02_ammo_Name";
     };
-    class O_Truck_02_fuel_F: Truck_02_base_F {
+    class Truck_02_fuel_base_F;
+    class O_Truck_02_fuel_F: Truck_02_fuel_base_F {
         displayName = "$STR_ACE_RealisticNames_Truck_02_fuel_Name";
     };
-    class O_Truck_02_box_F: Truck_02_base_F {
+    class Truck_02_box_base_F;
+    class O_Truck_02_box_F: Truck_02_box_base_F {
         displayName = "$STR_ACE_RealisticNames_Truck_02_box_Name";
     };
-    class O_Truck_02_medical_F: O_Truck_02_box_F {
+    class Truck_02_medical_base_F;
+    class O_Truck_02_medical_F: Truck_02_medical_base_F {
         displayName = "$STR_ACE_RealisticNames_Truck_02_medical_Name";
     };
-
-    class I_Truck_02_transport_F: Truck_02_base_F {
+    class I_Truck_02_transport_F: Truck_02_transport_base_F {
         displayName = "$STR_ACE_RealisticNames_Truck_02_transport_Name";
     };
     class I_Truck_02_covered_F: Truck_02_base_F {
         displayName = "$STR_ACE_RealisticNames_Truck_02_covered_Name";
     };
-    class I_Truck_02_ammo_F: Truck_02_base_F {
+    class I_Truck_02_ammo_F: Truck_02_Ammo_base_F {
         displayName = "$STR_ACE_RealisticNames_Truck_02_ammo_Name";
     };
-    class I_Truck_02_fuel_F: Truck_02_base_F {
+    class I_Truck_02_fuel_F: Truck_02_fuel_base_F {
         displayName = "$STR_ACE_RealisticNames_Truck_02_fuel_Name";
     };
-    class I_Truck_02_box_F: Truck_02_base_F {
+    class I_Truck_02_box_F: Truck_02_box_base_F {
         displayName = "$STR_ACE_RealisticNames_Truck_02_box_Name";
     };
-    class I_Truck_02_medical_F: I_Truck_02_box_F {
+    class I_Truck_02_medical_F: Truck_02_medical_base_F {
         displayName = "$STR_ACE_RealisticNames_Truck_02_medical_Name";
     };
 
@@ -306,13 +309,12 @@ class CfgVehicles {
         displayName = "$STR_ACE_RealisticNames_Heli_Light_01_civil_Name";
     };
 
-    class B_Heli_Transport_03_base_F;
-    class B_Heli_Transport_03_F: B_Heli_Transport_03_base_F {
+    class Heli_Transport_03_base_F;
+    class B_Heli_Transport_03_F: Heli_Transport_03_base_F {
         displayName = "$STR_ACE_RealisticNames_Heli_Transport_03_Name";
     };
-
-    class B_Heli_Transport_03_unarmed_base_F: B_Heli_Transport_03_base_F {};
-    class B_Heli_Transport_03_unarmed_F: B_Heli_Transport_03_unarmed_base_F {
+    class Heli_Transport_03_unarmed_base_F;
+    class B_Heli_Transport_03_unarmed_F: Heli_Transport_03_unarmed_base_F {
         displayName = "$STR_ACE_RealisticNames_Heli_Transport_03_unarmed_Name";
     };
 
@@ -320,17 +322,18 @@ class CfgVehicles {
     class O_Heli_Light_02_F: Heli_Light_02_base_F {
         displayName = "$STR_ACE_RealisticNames_Heli_Light_02_Name";
     };
-    class O_Heli_Light_02_unarmed_F: Heli_Light_02_base_F {
+    class Heli_Light_02_unarmed_base_F;
+    class O_Heli_Light_02_unarmed_F: Heli_Light_02_unarmed_base_F {
         displayName = "$STR_ACE_RealisticNames_Heli_Light_02_unarmed_Name";
     };
 
-    class I_Heli_light_03_base_F;
-    class I_Heli_light_03_F: I_Heli_light_03_base_F {
+    class Heli_light_03_base_F;
+    class I_Heli_light_03_F: Heli_light_03_base_F {
         displayName = "$STR_ACE_RealisticNames_Heli_light_03_Name";
     };
 
-    class I_Heli_light_03_unarmed_base_F;
-    class I_Heli_light_03_unarmed_F: I_Heli_light_03_unarmed_base_F {
+    class Heli_light_03_unarmed_base_F;
+    class I_Heli_light_03_unarmed_F: Heli_light_03_unarmed_base_F {
         displayName = "$STR_ACE_RealisticNames_Heli_light_03_unarmed_Name";
     };
 

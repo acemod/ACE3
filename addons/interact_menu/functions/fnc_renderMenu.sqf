@@ -1,64 +1,86 @@
-//fnc_renderMenu.sqf
+/*
+ * Author: NouberNou and CAA-Picard
+ * Render an interaction menu and it's children recursively
+ *
+ * Argument:
+ * 0: Object <OBJECT>
+ * 1: Action data <ARRAY>
+ * 2: 3D position <ARRAY>
+ * 3: Angle range available for rendering <ARRAY>
+ *
+ * Return value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_object", "_actionData", "_distance", "_index", "_pos", "_cursorScreenPos", "_path", "_menuDepth", "_opacity", "_currentRenderDepth", "_radialOffset", "_active", "_x", "_offset", "_newPos", "_forEachIndex"];
+private ["_menuInSelectedPath", "_path", "_menuDepth", "_currentRenderDepth", "_x", "_offset", "_newPos", "_forEachIndex"];
 
-_object = _this select 0;
-_actionData = _this select 1;
-_distance = _actionData select 5;
-_index = _this select 2;
+EXPLODE_4_PVT(_this,_object,_action,_pos,_angles);
+EXPLODE_2_PVT(_action,_actionData,_activeChildren);
+EXPLODE_2_PVT(_angles,_centerAngle,_maxAngleSpan);
 
-if((count _this) > 3) then {
-	_pos = _this select 3;
-} else {
-	if(typeName (_actionData select 2) == "ARRAY") then {
-		_pos = _object modelToWorld (_actionData select 2);
-	} else {
-		_pos = _object modelToWorld (_object selectionPosition (_actionData select 2));
-	};
+_menuDepth = (count GVAR(menuDepthPath)) - 1;
+
+// Store path to action
+_path = [_object] + (_actionData select 7);
+
+// Check if the menu is on the selected path
+_menuInSelectedPath = true;
+{
+    if (_forEachIndex >= (count GVAR(menuDepthPath))) exitWith {
+        _menuInSelectedPath = false;
+    };
+    if (_x != (GVAR(menuDepthPath) select _forEachIndex)) exitWith {
+        _menuInSelectedPath = false;
+    };
+} forEach _path;
+
+// Render icon
+// ARGB Color (First Hex Pair is transparancy)
+_color = "#FFFFFFFF";
+if(!_menuInSelectedPath) then { //_menuDepth > 0 &&
+    if (_menuDepth > 0) then {
+        _color = format ["#%1FFFFFF", [255 * ((((count _path) - 2)/_menuDepth) max 0.25)] call EFUNC(common,toHex)];
+    } else {
+        _color = format ["#%1FFFFFF", [255 * 0.75] call EFUNC(common,toHex)];
+    };
 };
-_cursorScreenPos = (positionCameraToWorld [0, 0, 0]);
-if(_cursorScreenPos distance _pos <= _distance) then {
-	_path = [];
-	if((count _this) > 4) then {
-		_path = +(_this select 4);
-	};
-	_menuDepth = (count GVAR(menuDepthPath));
+[_actionData select 0, _color, _pos, 1, 1, 0, _actionData select 1, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
 
-	_opacity = 1;
-	if(_menuDepth > 0 && _index != (GVAR(menuDepthPath) select (GVAR(renderDepth)))) then {
-		_opacity = ((GVAR(renderDepth)/_menuDepth)) max 0.25;
-	};
-	_path set[(count _path), _index];
-	// player sideChat format["r: %1", _actionData select 2];
-	[_actionData select 0, [1,1,1,_opacity], _pos, 1, 1, 0, _actionData select 1, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
-	GVAR(currentOptions) set[(count GVAR(currentOptions)), [_this, _pos, _path]];
-	_currentRenderDepth = -1;
-	_currentRenderDepth = GVAR(renderDepth);
-	GVAR(renderDepth) = GVAR(renderDepth) + 1;
-	if(_index == (GVAR(menuDepthPath) select (GVAR(renderDepth)-1))) then {
-		_radialOffset = 0;
-		{
-            // if(_index != (GVAR(menuDepthPath) select (GVAR(renderDepth)))) then {
-                this = _object;
-                _target = _object;
-                _player = ACE_player;
-                _active = [_object, ACE_player] call (_x select 4);
-                // diag_log text format["_active: %1: %2", (_x select 0), _active];
-                if(_active) then {
-                    _offset = [GVAR(vecLineMap), (270*(GVAR(renderDepth)%2))-(_radialOffset*45)] call FUNC(rotateVectLine);
-                    _mod = 0.1*_distance;
-                    _newPos = [
-                        (_pos select 0) + ((_offset select 0)*_mod),
-                        (_pos select 1) + ((_offset select 1)*_mod),
-                        (_pos select 2) + ((_offset select 2)*_mod)
-                    ];
-                    // drawLine3D [_pos, _newPos, [1,0,0,1]];
-                    [_object, _x, _forEachIndex, _newPos, _path] call FUNC(renderMenu);
-                    _radialOffset = _radialOffset + 1;
-                };
-            // };
-		} forEach (_actionData select 6);
-	};
-	GVAR(renderDepth) = GVAR(renderDepth) - 1;
+// Add the action to current options
+GVAR(currentOptions) pushBack [_this, _pos, _path];
+
+// Exit without rendering children if it isn't
+if !(_menuInSelectedPath) exitWith {true};
+
+private ["_angleSpan","_angle"];
+_angleSpan = _maxAngleSpan min (55 * ((count _activeChildren) - 1));
+if (_angleSpan >= 305) then {
+    _angleSpan = 360;
 };
+
+_angle = _centerAngle - _angleSpan / 2;
+{
+    _target = _object;
+    _player = ACE_player;
+
+    _mod = (0.15 max (0.15 * ((positionCameraToWorld [0, 0, 0]) distance _pos))) / GVAR(selfMenuScale);
+
+    _offset = ((GVAR(refSystem) select 1) vectorMultiply (-_mod * cos _angle)) vectorAdd
+                ((GVAR(refSystem) select 2) vectorMultiply (-_mod * sin _angle));
+    _newPos = ((_pos call EFUNC(common,positionToASL)) vectorAdd _offset) call EFUNC(common,ASLToPosition);
+
+    //drawLine3D [_pos, _newPos, [1,0,0,0.5]];
+
+    [_object, _x, _newPos, [_angle, 140]] call FUNC(renderMenu);
+
+    if (_angleSpan == 360) then {
+        _angle = _angle + _angleSpan / (count _activeChildren);
+    } else {
+        _angle = _angle + _angleSpan / (((count _activeChildren)-1) max 1);
+    };
+} forEach _activeChildren;
+
+true

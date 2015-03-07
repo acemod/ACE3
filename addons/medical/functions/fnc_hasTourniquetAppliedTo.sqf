@@ -1,13 +1,21 @@
-/**
- * fnc_hasTourniquetAppliedTo.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Check if unit has a tourniquet applied to the specified bodypart
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: The Unit <OBJECT>
+ * 1: SelectionName <STRING>
+ *
+ * ReturnValue:
+ * Has tourniquet applied <BOOL>
+ *
+ * Public: Yes
  */
 
 #include "script_component.hpp"
 
-((([(_this select 0),QGVAR(tourniquets)] call EFUNC(common,getDefinedVariable)) select ([(_this select 1)] call FUNC(getBodyPartNumber))) > 0);
+private ["_target", "_selectionName"];
+_target = _this select 0;
+_selectionName = _this select 1;
+
+(((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select ([_selectionName] call FUNC(selectionNameToNumber))) > 0);

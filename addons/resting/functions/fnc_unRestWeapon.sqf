@@ -47,3 +47,7 @@ playSound QGVAR(unrest);
 
 _unit setVariable ["ACE_weaponRested", false];
 _unit setVariable ["ACE_bipodDeployed", false];
+
+if (_unit == ACE_PLAYER) then {
+  [QGVAR(bipodDeployed), false, "", [1,1,1,1], -1] call EFUNC(common,displayIcon);
+};

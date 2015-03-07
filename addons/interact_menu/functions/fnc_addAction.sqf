@@ -1,53 +1,54 @@
 /*
- * Author: commy2
- *
- * Add an ACE action to an object. Note: This function is NOT global.
+ * Author: commy2, NouberNou and CAA-Picard
+ * Add an ACE action to an object, under a certain config path
+ * Note: This function is NOT global.
  *
  * Argument:
- * 0: Object the action should be assigned to (Object)
- * 1: Name of the action shown in the menu (String)
- * 2: Icon (String)
- * 3: Position (Position or Selection Name)
- * 4: Statement (Code)
- * 5: Condition (Code)
- * 6: Distance (Number)
+ * 0: Object the action should be assigned to <OBJECT>
+ * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
+ * 2: Full path of the new action <ARRAY>
+ * 3: Name of the action shown in the menu <STRING>
+ * 4: Icon <STRING>
+ * 5: Position (Position or Selection Name) <POSITION> or <STRING>
+ * 6: Statement <CODE>
+ * 7: Condition <CODE>
+ * 8: Distance <NUMBER>
  *
  * Return value:
- * The entry array, which can be used to remove the entry, or add children entries.
+ * The entry full path, which can be used to remove the entry, or add children entries <ARRAY>.
+ *
+ * Example:
+ * [cursorTarget,0,["ACE_TapShoulderRight","VulcanPinch"],"Vulcan Pinch","",[0,0,0],{_target setDamage 1;},{true},100] call ace_interact_menu_fnc_addAction;
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_object", "_displayName", "_icon", "_position", "_statement", "_condition", "_distance", "_actions", "_entry"];
-_object         = _this select 0;
-_displayName    = _this select 1;
-_icon           = _this select 2;
-_position       = _this select 3;
-_statement      = _this select 4;
-_condition      = _this select 5;
-_distance       = _this select 6;
+EXPLODE_9_PVT(_this,_object,_typeNum,_fullPath,_displayName,_icon,_position,_statement,_condition,_distance);
 
-_actions = [];
-if(IS_OBJECT(_object)) then {
-    _actions = _object getVariable [QUOTE(GVAR(actionData)), []];
-    if((count _actions) == 0) then {
-        _object setVariable [QUOTE(GVAR(actionData)), _actions]
-    };
-} else {
-    if(IS_ARRAY(_object)) then {
-        _actions = _object select 6;
-    };
+private ["_varName","_actions"];
+
+_varName = [QGVAR(actions),QGVAR(selfActions)] select _typeNum;
+_actions = _object getVariable [_varName, []];
+if((count _actions) == 0) then {
+    _object setVariable [_varName, _actions];
 };
 
+private "_entry";
 _entry = [
-            _displayName,
-            _icon,
-            _position,
-            _statement,
-            _condition,
-            _distance,
-            [],
-            GVAR(uidCounter)
+            [
+                _displayName,
+                _icon,
+                _position,
+                _statement,
+                _condition,
+                _distance,
+                [false,false,false],
+                + _fullPath
+            ],
+            []
         ];
-GVAR(uidCounter) = GVAR(uidCounter) + 1;
+
 _actions pushBack _entry;
-_entry;
+
+_fullPath

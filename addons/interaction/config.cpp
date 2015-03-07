@@ -19,24 +19,6 @@ class CfgPatches {
 #include <Menu_Config.hpp>
 
 class ACE_Settings {
-  class GVAR(FlowMenu) {
-    value = 0;
-    typeName = "BOOL";
-    isClientSetable = 1;
-    displayName = "$STR_ACE_Interaction_FlowMenu";
-  };
-  class GVAR(AutoCloseMenu) {
-    value = 0;
-    typeName = "BOOL";
-    isClientSetable = 1;
-    displayName = "$STR_ACE_Interaction_AutoCloseMenu";
-  };
-  class GVAR(AutoCenterCursor) {
-    value = 1;
-    typeName = "BOOL";
-    isClientSetable = 1;
-    displayName = "$STR_ACE_Interaction_AutoCenterCursor";
-  };
   class GVAR(EnableTeamManagement) {
     value = 1;
     typeName = "BOOL";

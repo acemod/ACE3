@@ -51,8 +51,5 @@ _actions = [localize "STR_ACE_Explosives_PlaceMenu", localize "STR_ACE_Explosive
 	},
 	{
 		call EFUNC(interaction,hideMenu);
-		if !(profileNamespace getVariable [EGVAR(interaction,AutoCloseMenu), false]) then {
-			"ACE_Explosives" call EFUNC(interaction,openMenuSelf);
-		};
 	}
 ] call EFUNC(interaction,openSelectMenu);
