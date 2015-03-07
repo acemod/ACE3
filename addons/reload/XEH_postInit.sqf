@@ -64,4 +64,3 @@ if !(hasInterface) exitWith {};
 
     _receiver addMagazine _magazine;
 }] call EFUNC(common,addEventhandler);
->>>>>>> master
