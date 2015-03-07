@@ -6,6 +6,7 @@ class CfgVehicles {
         class ArgumentsBaseUnits {
         };
     };
+    // TODO localization for all the modules
     class ACE_moduleMedicalSettings: Module_F    {
         scope = 2;
         displayName = "Medical Settings [ACE]";
@@ -80,7 +81,103 @@ class CfgVehicles {
         };
     };
 
+    class ACE_moduleAssignMedicRoles: Module_F {
+        scope = 2;
+        displayName = "Set Medic Class [ACE]";
+        icon = QUOTE(PATHTOF(ui\moduleIcon.paa));
+        category = "ACE_medical";
+        function = QUOTE(FUNC(moduleAssignMedicRoles));
+        functionPriority = 10;
+        isGlobal = 2;
+        isTriggerActivated = 0;
+        isDisposable = 0;
+        author = "Glowbal";
+        class Arguments    {
+            class EnableList {
+                displayName = "List";
+                description = "List of unit names that will be classified as medic, separated by commas.";
+                defaultValue = "";
+            };
+            class role {
+                displayName = "Is Medic";
+                description = "Medics allow for more advanced treatment in case of Advanced Medic roles enabled";
+                typeName = "NUMBER";
+                class values {
+                    class none {
+                        name = "None";
+                        value = 0;
+                    };
+                    class medic {
+                        name = "Regular medic";
+                        value = 1;
+                        default = 1;
+                    };
+                    class doctor {
+                        name = "Doctor (Only Advanced Medics)";
+                        value = 1;
+                        default = 1;
+                    };
+                };
+            };
+        };
+        class ModuleDescription {
+            description = "Assigns the ACE medic class to a unit"; // Short description, will be formatted as structured text
+            sync[] = {};
+        };
+    };
 
+    class ACE_moduleAssignMedicRoles: Module_F {
+        scope = 2;
+        displayName = "Set Medic Class [ACE]";
+        icon = QUOTE(PATHTOF(ui\moduleIcon.paa));
+        category = "ACE_medical";
+        function = QUOTE(FUNC(moduleAssignMedicRoles));
+        functionPriority = 10;
+        isGlobal = 2;
+        isTriggerActivated = 0;
+        isDisposable = 0;
+        author = "Glowbal";
+        class Arguments    {
+            class EnableList {
+                displayName = "List";
+                description = "List of unit names that will be classified as medic, separated by commas.";
+                defaultValue = "";
+            };
+            class enabled {
+                displayName = "Is Medical Vehicle";
+                description = "Whatever or not the objects in the list will be a medical vehicle.";
+                typeName = "BOOL";
+                defaultValue = true;
+            };
+        };
+        class ModuleDescription {
+            description = "Assigns the ACE medic class to a unit"; // Short description, will be formatted as structured text
+            sync[] = {};
+        };
+    };
+    class ACE_moduleAssignMedicalFacility: Module_F {
+        scope = 2;
+        displayName = "Set Medical Facility [ACE]";
+        icon = QUOTE(PATHTOF(ui\moduleIcon.paa));
+        category = "ACE_medical";
+        function = QUOTE(FUNC(moduleAssignMedicalFacility));
+        functionPriority = 10;
+        isGlobal = 2;
+        isTriggerActivated = 0;
+        isDisposable = 0;
+        author = "Glowbal";
+        class Arguments {
+            class enabled {
+                displayName = "Is Medical Facility";
+                description = "Registers an object as a medical facility for CMS";
+                typeName = "BOOL";
+            };
+        };
+        class ModuleDescription {
+            description = "Defines an object as a medical facility for CMS. This allows for more advanced treatments. Can be used on buildings and vehicles. ";
+            sync[] = {};
+        };
+    };
 
     #define ARM_LEG_ARMOR_DEFAULT 2
     #define ARM_LEG_ARMOR_BETTER  3
