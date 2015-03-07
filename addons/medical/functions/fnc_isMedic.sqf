@@ -22,12 +22,12 @@ _return = false;
 if (GVAR(medicSetting) >= 1) then {
     _class = _unit getvariable [QGVAR(medicClass), 0];
     if (GVAR(medicSetting) == 1) then {
-    	_return = _class > 0;
+        _return = _class > 0;
     } else {
-	    if (_class >= _medicN) then {
-	        _return = true;
-	    };
-	};
+        if (_class >= _medicN) then {
+            _return = true;
+        };
+    };
 } else {
     _return = true;
 };
