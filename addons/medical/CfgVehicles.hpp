@@ -479,4 +479,315 @@ class CfgVehicles {
             };
         };
     };
+    class MapBoard_altis_F;
+    class ACE_bodyBag: MapBoard_altis_F {
+        scope = 1;
+        side = -1;
+        model = QUOTE(PATHTOF(data\bodybag.p3d));
+        icon = "";
+        displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
+    };
+    class Item_Base_F;
+    class GVAR(fieldDressingItem): Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY;
+        author = "Glowbal";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class GVAR(fieldDressing)
+            {
+                name = QGVAR(fieldDressing);
+                count = 1;
+            };
+        };
+    };
+    class GVAR(packingBandageItem): Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_MEDICAL_PACKING_BANDAGE_DISPLAY;
+        author = "Glowbal";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class GVAR(packingBandage)
+            {
+                name = QGVAR(packingBandage);
+                count = 1;
+            };
+        };
+    };
+    class GVAR(elasticBandageItem): Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY;
+        author = "Glowbal";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class GVAR(elasticBandage)
+            {
+                name = QGVAR(elasticBandage);
+                count = 1;
+            };
+        };
+    };
+    class GVAR(tourniquetItem): Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_MEDICAL_TOURNIQUET_DISPLAY;
+        author = "Glowbal";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class GVAR(tourniquet)
+            {
+                name = QGVAR(tourniquet);
+                count = 1;
+            };
+        };
+    };
+    class GVAR(morphineItem): Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_MEDICAL_MORPHINE_DISPLAY;
+        author = "Glowbal";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class GVAR(morphine)
+            {
+                name = QGVAR(morphine);
+                count = 1;
+            };
+        };
+    };
+    class GVAR(atropineItem): Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_MEDICAL_ATROPINE_DISPLAY;
+        author = "Glowbal";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class GVAR(atropine)
+            {
+                name = QGVAR(atropine);
+                count = 1;
+            };
+        };
+    };
+    class GVAR(epinephrineItem): Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_MEDICAL_EPINEPHRINE_DISPLAY;
+        author = "Glowbal";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class GVAR(epinephrine)
+            {
+                name = QGVAR(epinephrine);
+                count = 1;
+            };
+        };
+    };
+    class GVAR(plasmaIVItem): Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_MEDICAL_PLASMA_IV;
+        author = "Glowbal";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class GVAR(plasmaIV)
+            {
+                name = QGVAR(plasmaIV);
+                count = 1;
+            };
+        };
+    };
+
+    class GVAR(bloodIV): Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_MEDICAL_BLOOD_IV;
+        author = "Glowbal";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class GVAR(bloodIV)
+            {
+                name = QGVAR(bloodIV);
+                count = 1;
+            };
+        };
+    };
+    class GVAR(salineIVItem): Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_MEDICAL_SALINE_IV;
+        author = "Glowbal";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class GVAR(salineIV)
+            {
+                name = QGVAR(salineIV);
+                count = 1;
+            };
+        };
+    };
+    class GVAR(quikClot): Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_MEDICAL_QUIKCLOT_DISPLAY;
+        author = "Glowbal";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class GVAR(quikClot)
+            {
+                name = QGVAR(quikClot);
+                count = 1;
+            };
+        };
+    };
+    class GVAR(personalAidKitItem): Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_MEDICAL_AID_KIT_DISPLAY;
+        author = "Glowbal";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class GVAR(personalAidKit)
+            {
+                name = QGVAR(personalAidKit);
+                count = 1;
+            };
+        };
+    };
+    class GVAR(surgicalKitItem): Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_MEDICAL_SURGICALKIT_DISPLAY;
+        author = "Glowbal";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class GVAR(surgicalKit)
+            {
+                name = QGVAR(surgicalKit);
+                count = 1;
+            };
+        };
+    };
+    class GVAR(bodyBagItem): Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
+        author = "Glowbal";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class GVAR(bodyBag)
+            {
+                name = QGVAR(bodyBag);
+                count = 1;
+            };
+        };
+    };
+
+    class NATO_Box_Base;
+    class GVAR(supplyCrate): NATO_Box_Base {
+        scope = 2;
+        accuracy = 1000;
+        displayName = "Medical Supply Crate [ACE]";
+        model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
+        author = "Glowbal";
+        class TransportItems {
+            class GVAR(fieldDressing) {
+                name = QGVAR(fieldDressing);
+                count = 25;
+            };
+            class GVAR(packingBandage) {
+                name = QGVAR(packingBandage);
+                count = 25;
+            };
+            class GVAR(elasticBandage) {
+                name = QGVAR(elasticBandage);
+                count = 25;
+            };
+            class GVAR(tourniquet) {
+                name = QGVAR(tourniquet);
+                count = 15;
+            };
+            class GVAR(morphine) {
+                name = QGVAR(morphine);
+                count = 15;
+            };
+            class GVAR(atropine) {
+                name = QGVAR(atropine);
+                count = 15;
+            };
+            class GVAR(epinephrine) {
+                name = QGVAR(epinephrine);
+                count = 15;
+            };
+            class GVAR(plasmaIV) {
+                name = QGVAR(plasmaIV);
+                count = 7;
+            };
+            class GVAR(plasmaIV_500) {
+                name = QGVAR(plasmaIV_500);
+                count = 7;
+            };
+            class GVAR(plasmaIV_250) {
+                name = QGVAR(plasmaIV_250);
+                count = 7;
+            };
+            class GVAR(salineIV) {
+                name = QGVAR(salineIV);
+                count = 7;
+            };
+            class GVAR(salineIV_500) {
+                name = QGVAR(salineIV_500);
+                count = 7;
+            };
+            class GVAR(salineIV_250) {
+                name = QGVAR(salineIV_250);
+                count = 7;
+            };
+            class GVAR(bloodIV) {
+                name = QGVAR(bloodIV);
+                count = 7;
+            };
+            class GVAR(bloodIV_500) {
+                name = QGVAR(bloodIV_500);
+                count = 7;
+            };
+            class GVAR(bloodIV_250) {
+                name = QGVAR(bloodIV_250);
+                count = 7;
+            };
+            class GVAR(quikClot) {
+                name = QGVAR(quikClot);
+                count = 20;
+            };
+            class GVAR(personalAidKit) {
+                name = QGVAR(personalAidKit);
+                count = 3;
+            };
+            class GVAR(surgicalKit) {
+                name = QGVAR(surgicalKit);
+                count = 2;
+            };
+            class ACE_itemBodyBag {
+                name = "ACE_itemBodyBag";
+                count = 5;
+            };
+        };
+    };
 };
