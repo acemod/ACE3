@@ -121,7 +121,7 @@ class CfgVehicles {
             };
         };
         class ModuleDescription {
-            description = "Assigns the ACE medic class to a unit"; // Short description, will be formatted as structured text
+            description = "Assigns the ACE medic class to a unit";
             sync[] = {};
         };
     };
@@ -151,7 +151,7 @@ class CfgVehicles {
             };
         };
         class ModuleDescription {
-            description = "Assigns the ACE medic class to a unit"; // Short description, will be formatted as structured text
+            description = "Assigns the ACE medic class to a unit";
             sync[] = {};
         };
     };
