@@ -4,24 +4,21 @@
 if !(hasInterface) exitWith {};
 
 // Add keybinds
-["ACE3",
-    localize "STR_ACE_Reload_checkAmmo",
-    {
-        // Conditions: canInteract
-        _exceptions = [];
-        if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
-        // Conditions: specific
-        if !([ACE_player] call EFUNC(common,canUseWeapon) ||
-             {(vehicle ACE_player) isKindOf 'StaticWeapon'}) exitWith {false};
+["ACE3", QGVAR(checkAmmo), localize "STR_ACE_Reload_checkAmmo",
+{
+    // Conditions: canInteract
+    _exceptions = [];
+    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    // Conditions: specific
+    if !([ACE_player] call EFUNC(common,canUseWeapon) ||
+    {(vehicle ACE_player) isKindOf 'StaticWeapon'}) exitWith {false};
 
-        // Statement
-        [ACE_player] call FUNC(checkAmmo);
-        true
-    },
-    [19, [false, true, false]],
-    false,
-    "keydown"
-] call cba_fnc_registerKeybind;
+    // Statement
+    [ACE_player] call FUNC(checkAmmo);
+    true
+},
+{false},
+[19, [false, true, false]], false] call cba_fnc_addKeybind;
 
 
 // Listen for attempts to link ammo
