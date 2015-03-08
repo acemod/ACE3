@@ -481,8 +481,8 @@ class CfgVehicles {
     class ACE_Actions {
       class ACE_MainActions {
         displayName = "$STR_ACE_Interaction_MainAction";
-        selection = "";
-        distance = 10;
+        selection = "gunnerview";
+        distance = 2;
         condition = "true";
       };
     };
@@ -494,8 +494,8 @@ class CfgVehicles {
     class ACE_Actions {
       class ACE_MainActions {
         displayName = "$STR_ACE_Interaction_MainAction";
-        selection = "";
-        distance = 10;
+        selection = "gunnerview";
+        distance = 2;
         condition = "true";
       };
     };

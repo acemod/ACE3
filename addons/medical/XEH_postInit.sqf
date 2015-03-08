@@ -13,7 +13,6 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call ace_common_fnc_addEventHandler;
 
 // Initialize all effects
-// @todo: make this a macro?
 _fnc_createEffect = {
     private ["_type", "_layer", "_default"];
     _type = _this select 0;
@@ -111,7 +110,6 @@ GVAR(effectTimeBlood) = time;
     };
 
     // Bleeding Indicator
-    // @todo: redo this after initial release
     if (damage ACE_player > 0.1 and GVAR(effectTimeBlood) + 6 < time) then {
         GVAR(effectTimeBlood) = time;
         [500 * damage ACE_player] call BIS_fnc_bloodEffect;

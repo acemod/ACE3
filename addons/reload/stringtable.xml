@@ -32,5 +32,11 @@
       <Portuguese>Munições</Portuguese>
       <Russian>Боеприпасы</Russian>
     </Key>
+    <Key ID="STR_ACE_Reload_LinkBelt">
+      <English>Link belt</English>
+    </Key>
+    <Key ID="STR_ACE_Reload_LinkingBelt">
+      <English>Linking belt...</English>
+    </Key>
   </Package>
 </Project>

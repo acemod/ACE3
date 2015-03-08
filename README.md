@@ -15,7 +15,7 @@
 </p>
 <p align="center"><sup><strong>Requires the latest version of <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a> | <a href="#">BIF thread</a></strong></sup></p>
 
-**ACE 3** is a join effort by the teams behind **ACE 2**, **AGM**, **CSE** and **RHS** to improve the realism and authenticity of Arma 3.
+**ACE 3** is a join effort by the teams behind **ACE 2**, **AGM** and **CSE** to improve the realism and authenticity of Arma 3.
 
 This mod is entirely **open-source**, and everyone is free to propose changes or maintain their own, customized version as long as they make their changes open to the public in accordance with the GNU General Public License (for more information check the license file attached to this project).
 
@@ -32,7 +32,7 @@ More information on the purpose of the different components of ACE and which one
 *   Realistic ballistics including wind and humidity
 *   Backblast simulation
 *   Weapon resting and bipod deployment
-*   A fire control system for armored vehicles and helicopters  
+*   A fire control system for armored vehicles and helicopters
     ***and more...***
 
 For a full list of current features, check [the official wiki](https://github.com/KoffeinFlummi/ACE3/wiki).
