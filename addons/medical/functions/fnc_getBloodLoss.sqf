@@ -42,4 +42,4 @@ if (GVAR(level) >= 2) then {
 } else {
     // TODO basic medical
 };
-_totalBloodLoss;
+_totalBloodLoss * GVAR(bleedingCoefficient);

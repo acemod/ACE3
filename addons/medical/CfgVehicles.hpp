@@ -7,7 +7,7 @@ class CfgVehicles {
         };
     };
     // TODO localization for all the modules
-    class ACE_moduleMedicalSettings: Module_F    {
+    class ACE_moduleMedicalSettings: Module_F {
         scope = 2;
         displayName = "Medical Settings [ACE]";
         icon = QUOTE(PATHTOF(ui\moduleIcon.paa));
@@ -17,7 +17,7 @@ class CfgVehicles {
         isGlobal = 1;
         isTriggerActivated = 0;
         author = "Glowbal";
-        class Arguments    {
+        class Arguments {
             class level {
                 displayName = "Medical Level";
                 description = "What is the medical simulation level?";
@@ -29,26 +29,6 @@ class CfgVehicles {
                     };
                     class normal {
                         name = "Basic";
-                        value = 1;
-                        default = 1;
-                    };
-                    class full  {
-                        name = "Advanced";
-                        value = 2;
-                    };
-                };
-            };
-            class medicSetting {
-                displayName = "Medics setting";
-                description = "What is the level of detail prefered for medics?";
-                typeName = "NUMBER";
-                class values {
-                    class disable {
-                        name = "Disable medics";
-                        value = 0;
-                    };
-                    class normal {
-                        name = "Normal";
                         value = 1;
                         default = 1;
                     };
@@ -74,9 +54,134 @@ class CfgVehicles {
                     };
                 };
             };
+            class enableAirway {
+                displayName = "Enable Airway";
+                description = "Enable Advanced medical Airway";
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
+            class enableFractures {
+                displayName = "Enable Fractures";
+                description = "Enable Advanced medical Fractures";
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
+            class enableAdvancedWounds {
+                displayName = "Enable Advanced wounds";
+                description = "Allow reopening of bandaged wounds?";
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
+            class enableVehicleCrashes {
+                displayName = "Vehicle Crashes";
+                description = "Do units take damage from a vehicle crash?";
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class enableScreams {
+                displayName = "Enable Screams";
+                description = "Enable screaming by injuried units";
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class playerDamageThreshold {
+                displayName = "Player Damage";
+                description = "What is the damage a player can take before being killed?";
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
+            class AIDamageThreshold {
+                displayName = "AI Damage";
+                description = "What is the damage an AI can take before being killed?";
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
+            class enableUnsconsiousnessAI {
+                displayName = "AI Unconsciousness";
+                description = "Allow AI to go unconscious";
+                typeName = "NUMBER";
+                class values {
+                    class disable {
+                        name = "Disabled";
+                        value = 0;
+                    };
+                    class normal {
+                        name = "Enabled";
+                        value = 1;
+                        default = 1;
+                    };
+                    class full  {
+                        name = "50/50";
+                        value = 2;
+                    };
+                };
+            };
+            class preventInstaDeath {
+                displayName = "Prevent instant death";
+                description = "Have a unit move to unconscious instead of death";
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
         };
         class ModuleDescription {
             description = "Provides a medical system for both players and AI.";
+            sync[] = {};
+        };
+    };
+
+    class ACE_moduleTreatmentConfiguration: Module_F {
+        scope = 2;
+        displayName = "Treatment Configuration [ACE]";
+        icon = QUOTE(PATHTOF(ui\moduleIcon.paa));
+        category = "ACE_medical";
+        function = QUOTE(FUNC(moduleTreatmentConfiguration));
+        functionPriority = 10;
+        isGlobal = 2;
+        isTriggerActivated = 0;
+        isDisposable = 0;
+        author = "Glowbal";
+        class Arguments {
+            class medicSetting {
+                displayName = "Medics setting";
+                description = "What is the level of detail prefered for medics?";
+                typeName = "NUMBER";
+                class values {
+                    class disable {
+                        name = "Disable medics";
+                        value = 0;
+                    };
+                    class normal {
+                        name = "Normal";
+                        value = 1;
+                        default = 1;
+                    };
+                    class full  {
+                        name = "Advanced";
+                        value = 2;
+                    };
+                };
+            };
+            class maxRevives {
+                displayName = "Max revives";
+                description = "Max amount of revives available (when preventing death)";
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
+            class enableOverdosing {
+                displayName = "Enable Overdosing";
+                description = "Enable overdosing of medications";
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class bleedingCoefficient {
+                displayName = "Bleeding coefficient";
+                description = "Coefficient to modify the bleeding speed";
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
+        };
+        class ModuleDescription {
+            description = "Configure the treatment settings from ACE Medical";
             sync[] = {};
         };
     };
@@ -92,11 +197,12 @@ class CfgVehicles {
         isTriggerActivated = 0;
         isDisposable = 0;
         author = "Glowbal";
-        class Arguments    {
+        class Arguments {
             class EnableList {
                 displayName = "List";
                 description = "List of unit names that will be classified as medic, separated by commas.";
                 defaultValue = "";
+                typeName = "STRING";
             };
             class role {
                 displayName = "Is Medic";
@@ -126,28 +232,29 @@ class CfgVehicles {
         };
     };
 
-    class ACE_moduleAssignMedicRoles: Module_F {
+    class ACE_moduleAssignMedicVehicle: Module_F {
         scope = 2;
-        displayName = "Set Medic Class [ACE]";
+        displayName = "Set Medical Vehicle [ACE]";
         icon = QUOTE(PATHTOF(ui\moduleIcon.paa));
         category = "ACE_medical";
-        function = QUOTE(FUNC(moduleAssignMedicRoles));
+        function = QUOTE(FUNC(moduleAssignMedicalVehicle));
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
         author = "Glowbal";
-        class Arguments    {
+        class Arguments {
             class EnableList {
                 displayName = "List";
-                description = "List of unit names that will be classified as medic, separated by commas.";
+                description = "List of vehicles that will be classified as medical vehicle, separated by commas.";
                 defaultValue = "";
+                typeName = "STRING";
             };
             class enabled {
                 displayName = "Is Medical Vehicle";
                 description = "Whatever or not the objects in the list will be a medical vehicle.";
                 typeName = "BOOL";
-                defaultValue = true;
+                defaultValue = 1;
             };
         };
         class ModuleDescription {
