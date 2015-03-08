@@ -92,9 +92,15 @@ if (GVAR(level) >= 2) then {
             };
         } else {
             if !((_unit getvariable [QGVAR(airwayOccluded), false]) || (_unit getvariable [QGVAR(airwayCollapsed), false])) then {
-                if (_airwayStatus <= 98.5) then {
-                    _unit setvariable [QGVAR(airwayStatus), _airwayStatus + 1.5, _syncValues];
+                if (_airwayStatus < 100) then {
+                    _unit setvariable [QGVAR(airwayStatus), (_airwayStatus + 1.5) min 100, _syncValues];
                 };
+            };
+        };
+        if (_airwayStatus < 80) then {
+            [_unit] call FUNC(setUnconscious);
+            if (_airwayStatus <= 0) then {
+                [_unit, true] call FUNC(setDead);
             };
         };
     };

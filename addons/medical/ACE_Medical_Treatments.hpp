@@ -53,8 +53,6 @@ class ACE_Medical_Actions {
     };
 
     class Advanced {
-        // cse_surgical_kit cse_bandage_basic cse_packing_bandage cse_bandageElastic cse_tourniquet cse_splint cse_morphine cse_atropine cse_epinephrine cse_plasma_iv cse_plasma_iv_500 cse_plasma_iv250 cse_blood_iv cse_blood_iv_500 cse_blood_iv_250 cse_saline_iv cse_saline_iv_500 cse_saline_iv_250 cse_quikclot cse_nasopharyngeal_tube cse_opa cse_liquidSkin cse_chestseal cse_personal_aid_kit
-
         class FieldDressing {
             // Which locations can this treatment action be used? Available: Field, MedicalFacility, MedicalVehicle, All.
             treatmentLocations[] = {"All"};
@@ -68,9 +66,12 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_bandage));
             callbackFailure = "";
             callbackProgress = "";
-            animationPatient = "";
-            animationCaller = ""; // TODO
             itemConsumed = 1;
+            animationPatient = "";
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic4";
+            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+            animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
+            animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
         };
         class PackingBandage: fieldDressing {
             items[] = {QGVAR(packingBandage)};
@@ -90,11 +91,12 @@ class ACE_Medical_Actions {
             items[] = {QGVAR(morphine)};
             treatmentTime = 3;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_medication));
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
-        class Atropine: fieldDressing {
+        class Atropine: Morphine {
             items[] = {QGVAR(atropine)};
         };
-        class Epinephrine: fieldDressing {
+        class Epinephrine: Morphine {
             items[] = {QGVAR(epinephrine)};
         };
         class BloodIV: fieldDressing {
@@ -102,6 +104,7 @@ class ACE_Medical_Actions {
             requiredMedic = 1;
             treatmentTime = 7;
             callbackSuccess = QUOTE(DFUNC(treatmentIV));
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class BloodIV_500: BloodIV {
             items[] = {QGVAR(bloodIV_500)};
@@ -111,6 +114,7 @@ class ACE_Medical_Actions {
         };
         class PlasmaIV: BloodIV {
             items[] = {QGVAR(plasmaIV)};
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class PlasmaIV_500: PlasmaIV {
             items[] = {QGVAR(plasmaIV_500)};
@@ -120,6 +124,7 @@ class ACE_Medical_Actions {
         };
         class SalineIV: BloodIV {
             items[] = {QGVAR(salineIV)};
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class SalineIV_500: SalineIV {
             items[] = {QGVAR(salineIV_500)};
@@ -134,6 +139,7 @@ class ACE_Medical_Actions {
             treatmentTime = 15;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_surgicalKit));
             itemConsumed = 0;
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class PersonalAidKit: fieldDressing {
             items[] = {QGVAR(personalAidKit)};
@@ -142,6 +148,7 @@ class ACE_Medical_Actions {
             treatmentTime = 15;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
             itemConsumed = 0;
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class CheckPulse: fieldDressing {
             treatmentLocations[] = {"All"};
@@ -365,7 +372,7 @@ class ACE_Medical_Advanced {
             class Femur {
                 name = "Broken Femur";
                 selections[] = {"Head", "Torso"};
-                pain = 20;
+                pain = 0.2;
                 causes[] = {"Bullet", "VehicleCrash", "Backblast", "Explosive", "Shell", "Grenade"};
                 minDamage = 0.5;
             };
