@@ -2,12 +2,12 @@
  * Author: commy2
  *
  * Count the ammo of the currently loaded magazine or count rifle grenades. Play animation and display message.
- * 
+ *
  * Argument:
  * 0: The player (Object)
  * 1: The vehicle (Object)
  * 2: Skip the animation? Used after reloading (Bool)
- * 
+ *
  * Return value:
  * Nothing
  */
