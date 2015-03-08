@@ -64,4 +64,8 @@ class ACE_Settings {
         typeName = "BOOL";
         value = false;
     };
+    class GVAR(maxReviveTime) {
+        typeName = "NUMBER";
+        value = 120;
+    };
 };

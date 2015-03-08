@@ -219,7 +219,7 @@ if (isNil QGVAR(level)) then {
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
 // broadcast injuries to JIP clients in a MP session
-if (isMultiplayer && !isDedicated) then {
+if (isMultiplayer) then {
     [QGVAR(onPlayerConnected), "onPlayerConnected", {
         if (isNil QGVAR(InjuredCollection)) then {
             GVAR(InjuredCollection) = [];
@@ -234,3 +234,11 @@ if (isMultiplayer && !isDedicated) then {
         }foreach GVAR(InjuredCollection);
     }, []] call BIS_fnc_addStackedEventHandler;
 };
+
+
+[
+    {(((_this select 0) getvariable [QGVAR(bloodVolume), 0]) < 65)},
+    {(((_this select 0) getvariable [QGVAR(pain), 0]) > 48)},
+    {(((_this select 0) call FUNC(getBloodLoss)) > 0.25)},
+    {((_this select 0) getvariable [QGVAR(inReviveState), false])}
+] call FUNC(registerUnconsciousCondition);
