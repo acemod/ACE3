@@ -241,4 +241,4 @@ if (isMultiplayer) then {
     {(((_this select 0) getvariable [QGVAR(pain), 0]) > 48)},
     {(((_this select 0) call FUNC(getBloodLoss)) > 0.25)},
     {((_this select 0) getvariable [QGVAR(inReviveState), false])}
-] call FUNC(registerUnconsciousCondition);
+] call FUNC(addUnconsciousCondition);
