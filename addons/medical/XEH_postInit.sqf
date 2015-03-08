@@ -238,7 +238,7 @@ if (isMultiplayer) then {
 
 [
     {(((_this select 0) getvariable [QGVAR(bloodVolume), 0]) < 65)},
-    {(((_this select 0) getvariable [QGVAR(pain), 0]) > 48)},
+    {(((_this select 0) getvariable [QGVAR(pain), 0]) > 0.9)},
     {(((_this select 0) call FUNC(getBloodLoss)) > 0.25)},
     {((_this select 0) getvariable [QGVAR(inReviveState), false])},
     {((_this select 0) getvariable ["ACE_isDead", false])}

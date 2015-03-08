@@ -193,7 +193,7 @@ class ACE_Medical_Advanced {
                 name = "Scrape";
                 selections[] = {"All"};
                 bleedingRate = 0.0001;
-                pain = 0.1;
+                pain = 0.01;
                 causes[] = {"falling", "ropeburn", "vehiclecrash"};
                 minDamage = 0.01;
                 class Minor {
@@ -215,7 +215,7 @@ class ACE_Medical_Advanced {
                 name = "Avulsion";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
-                pain = 1;
+                pain = 0.3;
                 causes[] = {"explosive", "vehiclecrash", "grenade", "shell", "bullet", "backblast", "bite"};
                 minDamage = 0.2;
                 class Minor {
@@ -237,7 +237,7 @@ class ACE_Medical_Advanced {
                 name = "Bruise";
                 selections[] = {"All"};
                 bleedingRate = 0.0;
-                pain = 1;
+                pain = 0.05;
                 causes[] = {"bullet", "backblast", "punch","vehiclecrash","falling"};
                 minDamage = 0.01;
                 class Minor {
@@ -256,7 +256,7 @@ class ACE_Medical_Advanced {
                 name = "Crushed tissue";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
-                pain = 1;
+                pain = 0.1;
                 causes[] = {"falling", "vehiclecrash", "punch"};
                 minDamage = 0.1;
                 class Minor {
@@ -278,7 +278,7 @@ class ACE_Medical_Advanced {
                 name = "Cut";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
-                pain = 1;
+                pain = 0.075;
                 causes[] = {"vehiclecrash", "grenade", "explosive", "shell", "backblast", "stab"};
                 minDamage = 0.1;
                 class Minor {
@@ -300,7 +300,7 @@ class ACE_Medical_Advanced {
                 name = "Tear";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
-                pain = 1;
+                pain = 0.075;
                 causes[] = {"vehiclecrash", "punch"};
                 minDamage = 0.01;
                 class Minor {
@@ -322,7 +322,7 @@ class ACE_Medical_Advanced {
                 name = "Velocity Wound";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
-                pain = 1;
+                pain = 0.2;
                 causes[] = {"bullet", "grenade","explosive", "shell"};
                 minDamage = 0.15;
                 class Minor {
@@ -344,7 +344,7 @@ class ACE_Medical_Advanced {
                 name = "Puncture Wound";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
-                pain = 1;
+                pain = 0.075;
                 causes[] = {"stab", "grenade"};
                 minDamage = 0.01;
                 class Minor {
