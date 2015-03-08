@@ -115,7 +115,7 @@ _minWaitingTime = (round(random(10)+5));
             _unit setUnitPos _originalPos; // This is not position but stance (DOWN, MIDDLE, UP)
 
             _unit setUnconscious false;
-
+            ["medical_onUnconscious", [_unit], [_unit, false]] call EFUNC(common,targetEvent);
             // ensure this statement runs only once
             _args set [6, true];
         };
@@ -139,3 +139,4 @@ _minWaitingTime = (round(random(10)+5));
 
 }, 0.1, [_unit,_animState, _captiveSwitch, _originalPos, _startingTime, _minWaitingTime, false] ] call CBA_fnc_addPerFrameHandler;
 
+["medical_onUnconscious", [_unit], [_unit, true]] call EFUNC(common,targetEvent);
