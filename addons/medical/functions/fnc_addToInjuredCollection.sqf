@@ -51,6 +51,7 @@ if ([_unit] call FUNC(hasMedicalEnabled)) then {
                 if (_pain > 0.7 && {random(1) > 0.6}) then {
                     [_unit] call FUNC(setUnconscious);
                 };
+
                 [_unit, _pain] call FUNC(playInjuredSound);
             };
         };
