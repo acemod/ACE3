@@ -15,14 +15,14 @@
 
 private "_unit";
 _unit = _this select 0;
+_force = if (count _this > 1) then {_this select 1} else {false};
 
-if ([_unit] call FUNC(hasMedicalEnabled)) then {
-
-    if !(local _unit) exitwith{
-        [[_unit], QUOTE(DFUNC(addToInjuredCollection)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
+    if ((_unit getvariable[QGVAR(addedToUnitLoop),false] || !alive _unit) && !_force) exitwith{};
+    if !(local _unit) exitwith {
+        [[_unit, _force], QUOTE(DFUNC(addToInjuredCollection)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
     };
-    if (_unit getvariable[QGVAR(addedToUnitLoop),false]) exitwith{};
-    _unit setvariable [QGVAR(addedToUnitLoop),true, true];
+    _unit setvariable [QGVAR(addedToUnitLoop), true, true];
 
     if (isNil QGVAR(InjuredCollection)) then {
         GVAR(InjuredCollection) = [];
@@ -56,5 +56,4 @@ if ([_unit] call FUNC(hasMedicalEnabled)) then {
             };
         };
     }, 1, [_unit]] call CBA_fnc_addPerFrameHandler;
-
 };
