@@ -2,6 +2,12 @@
 <!-- Edited with tabler - 2014-12-20 -->
 <Project name="ACE">
   <Package name="WeaponSelect">
+    <Key ID="STR_ACE_Weaponselect_SettingDisplayTextName">
+      <English>Display text on weapon select</English>
+    </Key>
+    <Key ID="STR_ACE_Weaponselect_SettingDisplayTextDesc">
+      <English>Display a hint or text on weapon select or grenade throw.</English>
+    </Key>
     <Key ID="STR_ACE_WeaponSelect_SelectPistol">
       <English>Select Pistol</English>
       <German>Pistole auswählen</German>
