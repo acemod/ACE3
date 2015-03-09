@@ -24,9 +24,9 @@ _className = _this select 3;
 
 if !(_target isKindOf "CAManBase") exitWith {false};
 
-_config = (ConfigFile >> "ACE_Medical_Treatments" >> "Basic" >> _className);
+_config = (ConfigFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
 if (GVAR(level)>=2) then {
-    _config = (ConfigFile >> "ACE_Medical_Treatments" >> "Advanced" >> _className);
+    _config = (ConfigFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
 };
 if !(isClass _config) exitwith {false};
 
@@ -38,17 +38,9 @@ if (count _items > 0 && {!([_caller, _target, _items] call FUNC(hasItems))}) exi
 
 _locations = getArray (_config >> "treatmentLocations");
 
-if ("All" in _locations) exitwith {true};
-
-_return = false;
-{
-    if (_x == "field") exitwith {_return = true;};
-    if (_x == "MedicalFacility" && {[_caller, _target] call FUNC(inMedicalFacility)}) exitwith {_return = true;};
-    if (_x == "MedicalVehicle" && {[_caller, _target] call FUNC(inMedicalVehicle)}) exitwith {_return = true;};
-}foreach _locations;
-
-if (_return) then {
-	_condition = getText (_config >> "condition");
+_return = true;
+if (isText (_config >> "Condition")) then {
+	_condition = getText(_config >> "condition");
 	if (_condition != "") then {
 		if (isnil _condition) then {
 			_condition = compile _condition;
@@ -62,5 +54,14 @@ if (_return) then {
 		};
 	};
 };
+if (!_return) exitwith {false};
+
+if ("All" in _locations) exitwith {true};
+
+{
+    if (_x == "field") exitwith {_return = true;};
+    if (_x == "MedicalFacility" && {[_caller, _target] call FUNC(inMedicalFacility)}) exitwith {_return = true;};
+    if (_x == "MedicalVehicle" && {[_caller, _target] call FUNC(inMedicalVehicle)}) exitwith {_return = true;};
+}foreach _locations;
 
 _return;

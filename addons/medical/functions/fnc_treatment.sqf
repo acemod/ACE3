@@ -40,19 +40,10 @@ if (count _items > 0 && {!([_caller, _target, _items] call FUNC(hasItems))}) exi
 
 // Check allowed locations
 _locations = getArray (_config >> "treatmentLocations");
-_return = false;
-if ("All" in _locations) then {
-    _return = true;
-} else {
-    {
-        if (_x == "field") exitwith {_return = true;};
-        if (_x == "MedicalFacility" && {([_caller] call FUNC(isInMedicalFacility)) || ([_target] call FUNC(isInMedicalFacility))}) exitwith {_return = true;};
-        if (_x == "MedicalVehicle" && {([vehicle _caller] call FUNC(isMedicalVehicle)) || ([vehicle _target] call FUNC(isMedicalVehicle))}) exitwith {_return = true;};
-    }foreach _locations;
-};
 
-if (_return) then {
-    _condition = getText (_config >> "condition");
+_return = true;
+if (isText (_config >> "Condition")) then {
+    _condition = getText(_config >> "condition");
     if (_condition != "") then {
         if (isnil _condition) then {
             _condition = compile _condition;
@@ -65,6 +56,17 @@ if (_return) then {
             _return = [_caller, _target, _selectionName, _className] call _condition;
         };
     };
+};
+if (!_return) exitwith {false};
+
+if ("All" in _locations) then {
+    _return = true;
+} else {
+    {
+        if (_x == "field") exitwith {_return = true;};
+        if (_x == "MedicalFacility" && {([_caller] call FUNC(isInMedicalFacility)) || ([_target] call FUNC(isInMedicalFacility))}) exitwith {_return = true;};
+        if (_x == "MedicalVehicle" && {([vehicle _caller] call FUNC(isMedicalVehicle)) || ([vehicle _target] call FUNC(isMedicalVehicle))}) exitwith {_return = true;};
+    }foreach _locations;
 };
 
 if !(_return) exitwith {false};
