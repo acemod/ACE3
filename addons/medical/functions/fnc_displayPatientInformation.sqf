@@ -40,7 +40,7 @@ if (_show) then {
         _allInjuryTexts = [];
         _genericMessages = [];
         if (_target getvariable[QGVAR(isBleeding), false]) then {
-            _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_BLEEDING", [1, 1, 1, 1]];
+            _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_BLEEDING", [1, 0.1, 0.1, 1]];
         };
         if (_target getvariable[QGVAR(hasLostBlood), false]) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_LOST_BLOOD", [1, 0.1, 0.1, 1]];
@@ -48,6 +48,9 @@ if (_show) then {
 
         if (((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select GVAR(currentSelectedSelectionN)) > 0) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_TOURNIQUET_APPLIED", [0.5, 0.5, 0, 1]];
+        };
+        if (_target getvariable[QGVAR(inPain), false]) then {
+            _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_PAIN", [1, 1, 1, 1]];
         };
 
         _selectionBloodLoss = [0,0,0,0,0,0];

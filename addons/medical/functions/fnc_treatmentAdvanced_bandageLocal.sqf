@@ -39,7 +39,7 @@ if (isClass (_config >> _bandage)) then {
 
 // Figure out which injury for this bodypart is the best choice to bandage
 _mostEffectiveSpot = 0;
-_effectivenessFound = 0;
+_effectivenessFound = -1;
 _mostEffectiveInjury = _openWounds select 0;
 _exit = false;
 {
@@ -76,7 +76,8 @@ _exit = false;
     if (_exit) exitwith {};
 }foreach _openWounds;
 
-if (_effectivenessFound == 0) exitwith {}; // Seems everything is patched up on this body part already..
+if (_effectivenessFound == -1) exitwith {}; // Seems everything is patched up on this body part already..
+
 
 // TODO refactor this part
 // Find the impact this bandage has and reduce the amount this injury is present
