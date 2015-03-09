@@ -87,7 +87,7 @@ class ACE_Medical_Actions {
             items[] = {QGVAR(tourniquet)};
             treatmentTime = 6;
             callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
-            condition = QUOTE(ARR_2(!([_this select 1, _this select 2] call FUNC(hasTourniquetAppliedTo))));
+            condition = QUOTE(!([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo)));
         };
         class Morphine: fieldDressing {
             items[] = {QGVAR(morphine)};
@@ -173,7 +173,7 @@ class ACE_Medical_Actions {
         class RemoveTourniquet: CheckPulse {
             treatmentTime = 2.5;
             callbackSuccess = QUOTE(DFUNC(actionRemoveTourniquet));
-            condition = QUOTE(ARR_2([_this select 1, _this select 2] call FUNC(hasTourniquetAppliedTo)));
+            condition = QUOTE([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo));
         };
         class CPR: fieldDressing {
             treatmentLocations[] = {"All"};
