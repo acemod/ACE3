@@ -40,19 +40,19 @@ _locations = getArray (_config >> "treatmentLocations");
 
 _return = true;
 if (isText (_config >> "Condition")) then {
-	_condition = getText(_config >> "condition");
-	if (_condition != "") then {
-		if (isnil _condition) then {
-			_condition = compile _condition;
-		} else {
-			_condition = missionNamespace getvariable _condition;
-		};
-		if (typeName _condition == "BOOL") then {
-			_return = _condition;
-		} else {
-			_return = [_caller, _target, _selectionName, _className] call _condition;
-		};
-	};
+    _condition = getText(_config >> "condition");
+    if (_condition != "") then {
+        if (isnil _condition) then {
+            _condition = compile _condition;
+        } else {
+            _condition = missionNamespace getvariable _condition;
+        };
+        if (typeName _condition == "BOOL") then {
+            _return = _condition;
+        } else {
+            _return = [_caller, _target, _selectionName, _className] call _condition;
+        };
+    };
 };
 if (!_return) exitwith {false};
 
