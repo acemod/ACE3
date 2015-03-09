@@ -1,15 +1,13 @@
 /*
 Adjust the scaling of the inventory screen
-- changes it from scaling based on user's interface size to a static size
-- text size and row height size are uneffected
+- changes it from scaling based on user's interface size to a dynamic size based on a setting variable
+- text size and row height size are uneffected (so more rows in a list)
 - also tweaks the height of the two ProgressBars which looked odd scaled up so much
 
 regex:
 x = "[-+]?(\d*[.]?\d+).*
 x = X_PART\(\1\);
-
  */
-
 
 class RscText;
 class RscPicture;
@@ -24,12 +22,10 @@ class RscCombo;
 #define W_BIS(num) (num * (((safezoneW / safezoneH) min 1.2) / 40))
 #define H_BIS(num) (num * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))
 
-
 #define X_MAKEITBIGGA(num) (num * (safeZoneH / 40) + (safezoneX + (safezoneW - safeZoneH)/2))
 #define Y_MAKEITBIGGA(num) (num * (safeZoneH / 30) + (safezoneY + (safezoneH - (safeZoneH / 1.2))/2))
 #define W_MAKEITBIGGA(num) (num * (safeZoneH / 40))
 #define H_MAKEITBIGGA(num) (num * (safeZoneH / 30))
-
 
 #define X_PART(num) QUOTE(linearConversion [ARR_5(0, 2, (missionNamespace getVariable [ARR_2(QUOTE(QGVAR(inventoryDisplaySize)), 0)]), X_BIS(num), X_MAKEITBIGGA(num))])
 #define Y_PART(num) QUOTE(linearConversion [ARR_5(0, 2, (missionNamespace getVariable [ARR_2(QUOTE(QGVAR(inventoryDisplaySize)), 0)]), Y_BIS(num), Y_MAKEITBIGGA(num))])

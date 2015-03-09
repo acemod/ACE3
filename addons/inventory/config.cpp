@@ -21,7 +21,7 @@ class ACE_Settings {
         isClientSetable = 1;
         displayName = "$STR_ACE_Inventory_SettingName";
         description = "$STR_ACE_Inventory_SettingDescription";
-        values[] = {"Normal (User Interface Size)", "Medium", "Biggah"};
+        values[] = {"Normal (Default Size)", "Medium", "Bigger"};
     };
 };
 
