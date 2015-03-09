@@ -17,4 +17,10 @@
  */
 #include "script_component.hpp"
 
+PARAMS_1(_showType);
+
+if (_show == DISPLAY_MODE_CLOSED) exitWith {true};
+if (_show == DISPLAY_MODE_HIDDEN) exitWith {true};
+
+
 true

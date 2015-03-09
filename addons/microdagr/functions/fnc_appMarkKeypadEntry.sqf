@@ -35,7 +35,9 @@ _editText = ctrlText (_display displayCtrl IDC_MODEMARK_CORDSEDIT);
 switch (_keypadButton) do {
 case ("ok"): {
         if ((count GVAR(newWaypointPosition)) == 0) then {
-            _actualPos = [9000,9000,0];
+            _gridPosTuple = [_editText] call BIS_fnc_gridToPos;
+            _actualPos = [(((_gridPosTuple select 0) select 0) + 0.5 * ((_gridPosTuple select 1) select 0)), (((_gridPosTuple select 0) select 1) + 0.5 * ((_gridPosTuple select 1) select 1))];
+            _actualPos set [2, (getTerrainHeightASL _actualPos)];
             GVAR(newWaypointPosition) = _actualPos;
             [APP_MODE_MARK] call FUNC(saveCurrentAndSetNewMode);
         } else {

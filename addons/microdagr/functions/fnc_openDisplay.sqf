@@ -34,7 +34,7 @@ disableSerialization;
 
 //On first-startup
 if (GVAR(currentApplicationPage) == APP_MODE_NULL) then {
-    GVAR(currentApplicationPage) = APP_MODE_INFO;
+    GVAR(currentApplicationPage) = APP_MODE_INFODISPLAY;
     GVAR(mapPosition) = getPos ace_player;
 };
 
