@@ -23,11 +23,12 @@ _target = _this select 1;
 _selectionName = _this select 2;
 _className = _this select 3;
 _items = _this select 4;
+_specificSpot = if (count _this > 5) then {_this select 5} else {-1};
 
 if (count _items == 0) exitwith {};
 
 if ([_caller, _target, _items] call FUNC(useItems)) then {
-    [[_target, _className], QUOTE(DFUNC(treatmentBandageLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    [[_target, _className, _selectionName, _specificSpot], QUOTE(DFUNC(treatmentBandageLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
     {
         if (_x != "") then {
             [_target, _x] call FUNC(addToTriageCard);

@@ -15,9 +15,11 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_bandage", "_part", "_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact"];
+private ["_target", "_bandage", "_part", "_selectionName", "_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact", "_exit"];
 _target = _this select 0;
 _bandage = _this select 1;
+_selectionName = _this select 2;
+_specificClass = if (count _this > 3) then {_this select 3} else { -1 };
 
 // Ensure it is a valid bodypart
 _part = [_selectionName] call FUNC(selectionNameToNumber);
@@ -39,6 +41,7 @@ if (isClass (_config >> _bandage)) then {
 _mostEffectiveSpot = 0;
 _effectivenessFound = 0;
 _mostEffectiveInjury = _openWounds select 0;
+_exit = false;
 {
     // Only parse injuries that are for the selected bodypart.
     if (_x select 2 == _part) then {
@@ -56,6 +59,13 @@ _mostEffectiveInjury = _openWounds select 0;
             };
         };
 
+        if (_specificClass == _classID) exitwith {
+            _effectivenessFound = _woundEffectivenss;
+            _mostEffectiveSpot = _foreachIndex;
+            _mostEffectiveInjury = _x;
+            _exit = true;
+        };
+
         // Check if this is the currently most effective found.
         if (_woundEffectivenss * ((_x select 4) * (_x select 3)) > _effectivenessFound * ((_mostEffectiveInjury select 4) * (_mostEffectiveInjury select 3))) then {
             _effectivenessFound = _woundEffectivenss;
@@ -63,6 +73,7 @@ _mostEffectiveInjury = _openWounds select 0;
             _mostEffectiveInjury = _x;
         };
     };
+    if (_exit) exitwith {};
 }foreach _openWounds;
 
 if (_effectivenessFound == 0) exitwith {}; // Seems everything is patched up on this body part already..
