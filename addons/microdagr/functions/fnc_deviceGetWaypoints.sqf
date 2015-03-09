@@ -17,8 +17,4 @@
  */
 #include "script_component.hpp"
 
-systemChat "Debug: dialog closed";
-if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
-    [-1] call FUNC(saveCurrentAndSetNewMode);
-    [DISPLAY_MODE_DISPLAY] call FUNC(openDisplay);
-};
+(ace_player getVariable [QGVAR(waypoints), []])

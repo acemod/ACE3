@@ -17,56 +17,87 @@
  */
 #include "script_component.hpp"
 
-_this spawn {
-    _swap = if (GVAR(currentShowMode) == DISPLAY_MODE_DISPLAY) then {DISPLAY_MODE_DIALOG} else {DISPLAY_MODE_DISPLAY};
-    DEFAULT_PARAM(0,_newDisplayShowMode,_swap);
-    GVAR(currentShowMode) = _newDisplayShowMode;
+DEFAULT_PARAM(0,_newDisplayShowMode,-1);
+_oldShowMode = GVAR(currentShowMode);
 
-    systemChat format ["New ShowMode: %1", GVAR(currentShowMode)];
+if (_newDisplayShowMode == -1) then {
+    if (_oldShowMode in [DISPLAY_MODE_DISPLAY, DISPLAY_MODE_HIDDEN]) then {_newDisplayShowMode = DISPLAY_MODE_DIALOG};
+    if (_oldShowMode in [DISPLAY_MODE_DIALOG, DISPLAY_MODE_CLOSED]) then {_newDisplayShowMode = DISPLAY_MODE_DISPLAY};
+};
 
-    disableSerialization;
+if ((_newDisplayShowMode == DISPLAY_MODE_DISPLAY) && {!([DISPLAY_MODE_DISPLAY] call FUNC(canShow))}) then {_newDisplayShowMode = DISPLAY_MODE_HIDDEN};
+if ((_newDisplayShowMode == DISPLAY_MODE_DIALOG) && {!([DISPLAY_MODE_DIALOG] call FUNC(canShow))}) then {_newDisplayShowMode = DISPLAY_MODE_HIDDEN};
 
-    //On first-startup
-    if (GVAR(currentApplicationPage) == APP_MODE_NULL) then {
-        GVAR(currentApplicationPage) = APP_MODE_MARK;
-        GVAR(mapPosition) = getPos ace_player;
+GVAR(currentShowMode) = _newDisplayShowMode;
+
+disableSerialization;
+
+//On first-startup
+if (GVAR(currentApplicationPage) == APP_MODE_NULL) then {
+    GVAR(currentApplicationPage) = APP_MODE_INFO;
+    GVAR(mapPosition) = getPos ace_player;
+};
+
+systemChat format ["%1 to %2 from %3", _oldShowMode, GVAR(currentShowMode), _this];
+
+
+if (GVAR(currentShowMode) in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
+    systemChat "Closing";
+    
+    //If Dialog is open, back it up before closing:
+    if (dialog && {!isNull (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull])}) then {
+        [-1] call FUNC(saveCurrentAndSetNewMode);
+        closeDialog 0;
     };
-
-
-    _display = displayNull;
-    if (_newDisplayShowMode == 0) then {
-        systemChat "Closing";
-        if (dialog && {!isNull (uiNamespace getVariable ["testGPS", displayNull])}) then {
+    
+    //Close the display:
+    (QGVAR(TheRscTitleDisplay) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+} else {
+    if (GVAR(currentShowMode) == DISPLAY_MODE_DISPLAY) then {
+        systemChat "Opening Display";
+        //If Dialog is open, back it up before closing:
+        if (dialog && {!isNull (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull])}) then {
             [-1] call FUNC(saveCurrentAndSetNewMode);
             closeDialog 0;
         };
-        ("testGPS_T" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+        //Open the display:
+        (QGVAR(TheRscTitleDisplay) call BIS_fnc_rscLayer) cutRsc [QGVAR(TheRscTitleDisplay), "PLAIN", 0, true];
     } else {
-        if (_newDisplayShowMode == 1) then {
-            systemChat "Opening Display";
-            if (dialog && {!isNull (uiNamespace getVariable ["testGPS", displayNull])}) then {
-                systemChat "backing up";
-                [-1] call FUNC(saveCurrentAndSetNewMode);
-                closeDialog 0;
-            };
-            ("testGPS_T" call BIS_fnc_rscLayer) cutRsc ["testGPS_T", "PLAIN", 0, true];
-            _display = (uiNamespace getVariable ["testGPS_T", displayNull]);
+        systemChat "Opening Dialog";
+        //Close the display:
+        (QGVAR(TheRscTitleDisplay) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+        //Open the dialog:
+        createDialog QGVAR(TheDialog);
+    };
+};
+
+[] call FUNC(showApplicationPage);
+
+if ((_oldShowMode == DISPLAY_MODE_CLOSED) && {GVAR(currentShowMode) != DISPLAY_MODE_CLOSED}) then {
+    //Start a pfeh to update display and handle hiding display
+    
+    [{
+        disableSerialization;
+        PARAMS_2(_args,_pfID);
+        EXPLODE_1_PVT(_args,_player);
+
+        if ((ace_player != _player) || {!("ACE_microDAGR" in (items ace_player))} || {GVAR(currentShowMode) == DISPLAY_MODE_CLOSED}) then {
+            GVAR(currentShowMode) = DISPLAY_MODE_CLOSED;
+            [_pfID] call CBA_fnc_removePerFrameHandler;
         } else {
-            systemChat "Opening Dialog";
-            ("testGPS_T" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
-            createDialog "testGPS";
-            _display = (uiNamespace getVariable ["testGPS", displayNull]);
+            GVAR(gpsPositionASL) = getPosAsl player;
+
+            if (GVAR(currentShowMode) == DISPLAY_MODE_HIDDEN) then {
+                if ([DISPLAY_MODE_DISPLAY] call FUNC(canShow)) then {
+                    [DISPLAY_MODE_DISPLAY] call FUNC(openDisplay);
+                };
+            } else {
+                if ([GVAR(currentShowMode)] call FUNC(canShow)) then {
+                    [] call FUNC(updateDisplay);
+                } else {
+                    [DISPLAY_MODE_HIDDEN] call FUNC(openDisplay);
+                };
+            };
         };
-    };
-
-    [] call FUNC(showApplicationPage);
-
-    waitUntil {
-        if (isNull _display) exitWith {true};
-        [] call FUNC(updateDisplay);
-        GVAR(gpsPositionASL) = getPosAsl player;
-        GVAR(compassDirection) = getDir player;
-        sleep 0.1;
-        false;
-    };
+    }, 0.1, [ace_player]] call CBA_fnc_addPerFrameHandler;
 };

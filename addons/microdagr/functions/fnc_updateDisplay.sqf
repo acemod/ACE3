@@ -18,18 +18,20 @@
 #include "script_component.hpp"
 
 disableSerialization;
-_display = (uiNamespace getVariable ["testGPS", displayNull]);
-_isControl = true;
-if (isNull _display) then {
-    _display = (uiNamespace getVariable ["testGPS_T", displayNull]);
-    _isControl = false;
+_display = displayNull;
+if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
+    _display = (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull]);
+} else {
+    _display = (uiNamespace getVariable [QGVAR(RscTitleDisplay), displayNull]);
 };
-if (isNull _display) exitWith {};
+if (isNull _display) exitWith {ERROR("No Display");};
 
 (_display displayCtrl IDC_CLOCKTEXT) ctrlSetText ([daytime, "HH:MM"] call bis_fnc_timeToString);
 
+_waypoints = [] call FUNC(deviceGetWaypoints);
+
 switch (GVAR(currentApplicationPage)) do {
-case (0): {
+case (APP_MODE_INFODISPLAY): {
         //Easting/Northing:
         _posString = mapGridPosition ACE_player;
         _eastingText = "";
@@ -74,9 +76,9 @@ case (0): {
                     _targetPosLocationASL = GVAR(rangeFinderPositionASL);
                 };
             } else {
-                if (GVAR(currentWaypoint) > ((count GVAR(waypointList) - 1))) exitWith {ERROR("bounds");};
-                _targetPosName = (GVAR(waypointList) select GVAR(currentWaypoint)) select 0;
-                _targetPosLocationASL = (GVAR(waypointList) select GVAR(currentWaypoint)) select 1;
+                if (GVAR(currentWaypoint) > ((count _waypoints) - 1)) exitWith {ERROR("bounds");};
+                _targetPosName = (_waypoints select GVAR(currentWaypoint)) select 0;
+                _targetPosLocationASL = (_waypoints select GVAR(currentWaypoint)) select 1;
             };
 
             if (!(_targetPosLocationASL isEqualTo [])) then {
@@ -100,7 +102,7 @@ case (0): {
 
         //bullshit gps accuracy: <t size='1' align='left'>EHE: +03.7</t><t size='1' align='right'>FOM: 1</t><br/><br/>
     };
-case (1): {
+case (APP_MODE_COMPASS): {
         //Heading:
         _compassAngleText = [(floor (getDir ace_player)), 3, 1] call CBA_fnc_formatNumber;
         _compassAngleText = _compassAngleText + "°M"; //degree symbol is in UTF-8
@@ -126,9 +128,9 @@ case (1): {
                     _targetPosLocationASL = GVAR(rangeFinderPositionASL);
                 };
             } else {
-                if (GVAR(currentWaypoint) > ((count GVAR(waypointList) - 1))) exitWith {ERROR("bounds");};
-                _targetPosName = (GVAR(waypointList) select GVAR(currentWaypoint)) select 0;
-                _targetPosLocationASL = (GVAR(waypointList) select GVAR(currentWaypoint)) select 1;
+                if (GVAR(currentWaypoint) > ((count _waypoints - 1))) exitWith {ERROR("bounds");};
+                _targetPosName = (_waypoints select GVAR(currentWaypoint)) select 0;
+                _targetPosLocationASL = (_waypoints select GVAR(currentWaypoint)) select 1;
             };
 
             _bearing = "---";
@@ -150,16 +152,16 @@ case (1): {
 case (APP_MODE_WAYPOINTS): {
         _wpListBox = _display displayCtrl IDC_MODEWAYPOINTS_LISTOFWAYPOINTS;
         _currentIndex = lbCurSel _wpListBox;
-
+       
         lbClear _wpListBox;
         {
             EXPLODE_2_PVT(_x,_wpName,_wpPos);
             _wpListBox lbAdd _wpName;
             _2dDistanceKm = ((GVAR(gpsPositionASL) select [0,2]) distance (_wpPos select [0,2])) / 1000;
             _wpListBox lbSetTextRight [_forEachIndex, (format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)])];
-        } forEach GVAR(waypointList);
+        } forEach _waypoints;
 
-        _currentIndex = (_currentIndex max 0) min (count GVAR(waypointList));
+        _currentIndex = (_currentIndex max 0) min (count _waypoints);
         _wpListBox lbSetCurSel _currentIndex;
     };
 };

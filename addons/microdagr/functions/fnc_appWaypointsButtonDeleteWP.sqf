@@ -18,19 +18,20 @@
 #include "script_component.hpp"
 
 disableSerialization;
-_display = (uiNamespace getVariable ["testGPS", displayNull]);
-if (isNull _display) then { _display = (uiNamespace getVariable ["testGPS_T", displayNull]);};
-if (isNull _display) exitWith {};
+_display = displayNull;
+if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
+    _display = (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull]);
+} else {
+    _display = (uiNamespace getVariable [QGVAR(RscTitleDisplay), displayNull]);
+};
+if (isNull _display) exitWith {ERROR("No Display");};
 
 _wpIndex = lbCurSel (_display displayCtrl IDC_MODEWAYPOINTS_LISTOFWAYPOINTS);
-if ((_wpIndex < 0) || (_wpIndex > ((count GVAR(waypointList)) - 1))) exitWith {
-    ERROR("out of bounds wp");
-};
 
 //If it's our currentWP then deactivate
 if (GVAR(currentWaypoint) == _wpIndex) then {GVAR(currentWaypoint) = -1};
 
 //Delete from list:
-GVAR(waypointList) deleteAt _wpIndex;
+[_wpIndex] call FUNC(deviceDeleteWaypoint);
 //Update list now:
 [] call FUNC(updateDisplay);

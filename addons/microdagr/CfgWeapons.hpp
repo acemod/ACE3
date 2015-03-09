@@ -8,8 +8,6 @@ class CfgWeapons {
         displayName = "$STR_ACE_microdagr_itemName";
         descriptionShort = "$STR_ACE_microdagr_itemDescription";
         picture = QUOTE(PATHTOF(images\microDAGR_item.paa));
-        icon = "iconObject_circle";
-        mapSize = 0.034;
         class ItemInfo: InventoryItem_Base_F {
             mass = 2;
         };

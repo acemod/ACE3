@@ -21,7 +21,10 @@ disableSerialization;
 _wpButton = _this select 0;
 _wpListBox = (ctrlParent _wpButton) displayCtrl 144501;
 _newWpIndex = lbCurSel _wpListBox;
-if ((_newWpIndex < 0) || (_newWpIndex > ((count GVAR(waypointList)) - 1))) exitWith {
+_waypoints = [] call FUNC(deviceGetWaypoints);
+
+
+if ((_newWpIndex < 0) || (_newWpIndex > ((count _waypoints) - 1))) exitWith {
     GVAR(currentWaypoint) = -1;
     ERROR("out of bounds wp");
 };

@@ -17,8 +17,11 @@
  */
 #include "script_component.hpp"
 
-systemChat "Debug: dialog closed";
-if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
-    [-1] call FUNC(saveCurrentAndSetNewMode);
-    [DISPLAY_MODE_DISPLAY] call FUNC(openDisplay);
-};
+PARAMS_1(_wpIndex);
+
+_waypoints = ace_player getVariable [QGVAR(waypoints), []];
+
+if ((_wpIndex < 0) || (_wpIndex > ((count _waypoints) - 1))) exitWith {ERROR("out of bounds wp");};
+
+_waypoints deleteAt _wpIndex;
+ace_player setVariable [QGVAR(waypoints), _waypoints];

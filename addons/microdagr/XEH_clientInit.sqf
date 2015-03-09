@@ -12,6 +12,7 @@ if (!hasInterface) exitWith {};
     // Conditions: specific
     if (!("ACE_microDAGR" in (items ace_player))) exitWith {false};
 
+    systemChat "Toggle Button Press";
     [] call FUNC(openDisplay);
     true;
 },
@@ -26,6 +27,7 @@ if (!hasInterface) exitWith {};
     // Conditions: specific
     if (!("ACE_microDAGR" in (items ace_player))) exitWith {false};
 
+    systemChat "Close Button Press";
     [DISPLAY_MODE_CLOSED] call FUNC(openDisplay);
     true;
 },
@@ -46,7 +48,7 @@ GVAR(currentShowMode) = DISPLAY_MODE_CLOSED;
 GVAR(newWaypointPosition) = [];
 GVAR(currentWaypoint) = -1;
 GVAR(rangeFinderPositionASL) = [];
-GVAR(waypointList) = [["Alpha Base", [4000, 4000, 69]], ["Bravo Base", [5000, 5000, 0]]];
+
 
 GVAR(mapAltitude) = getNumber (configFile >> "CfgWorlds" >> worldName >> "elevationOffset");
 

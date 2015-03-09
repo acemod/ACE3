@@ -6,12 +6,12 @@ class RscActiveText;
 class RscText;
 class RscPicture;
 class RscMapControl {
-        class hospital;
-        class church;
-        class lighthouse;
-        class power;
-        class fuelstation;
-        class transmitter;
+    class hospital;
+    class church;
+    class lighthouse;
+    class power;
+    class fuelstation;
+    class transmitter;
 };
 class RscMapControlEmpty;
 class RscControlsGroupNoScrollbars;
@@ -36,6 +36,7 @@ class GVAR(RscActiveTextPicture): RscActiveText {
 
 class GVAR(RscText): RscText {
     font = "EtelkaMonospacePro";
+    //Design note: I think less contrast in font color makes it look more natural and less "eye catching"
     colorText[] = {0.75,0.75,0.75,1};
 };
 
@@ -45,13 +46,13 @@ class GVAR(RscText): RscText {
 #define W_PART(num) QUOTE((num) * (safeZoneH / 64))
 #define H_PART(num) QUOTE((num) * (safeZoneH / 36))
 
-class testGPS {
+class GVAR(TheDialog) {
     idd = -1;
     movingEnable = 1;
     duration = 9999999;
     fadein = 0;
     fadeout = 0;
-    onLoad = "uiNamespace setVariable ['testGPS', _this select 0];";  //@todo cbaify this
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(DialogDisplay)),_this select 0)];);
     onUnload = QUOTE([] call FUNC(dialogClosedEH));
 
     #include "gui_controls.hpp"
@@ -70,13 +71,13 @@ class testGPS {
 #define H_PART(num) QUOTE((num) / 25 * PROFILE_H)
 
 class RscTitles {
-    class testGPS_T {
+    class GVAR(TheRscTitleDisplay) {
         idd = -1;
         movingEnable = 1;
         duration = 9999999;
         fadein = 0;
         fadeout = 0;
-        onLoad = "uiNamespace setVariable ['testGPS_T', _this select 0];";  //@todo cbaify this
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(RscTitleDisplay)),_this select 0)];);
 
         #include "gui_controls.hpp"
     };

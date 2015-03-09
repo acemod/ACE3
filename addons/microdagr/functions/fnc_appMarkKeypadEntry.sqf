@@ -20,11 +20,13 @@
 PARAMS_1(_keypadButton);
 
 disableSerialization;
-_display = (uiNamespace getVariable ["testGPS", displayNull]);
-if (isNull _display) then {
-    _display = (uiNamespace getVariable ["testGPS_T", displayNull]);
+_display = displayNull;
+if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
+    _display = (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull]);
+} else {
+    _display = (uiNamespace getVariable [QGVAR(RscTitleDisplay), displayNull]);
 };
-if (isNull _display) exitWith {};
+if (isNull _display) exitWith {ERROR("No Display");};
 
 if (GVAR(currentApplicationPage) != APP_MODE_MARK) exitWith {};
 
@@ -37,7 +39,7 @@ case ("ok"): {
             GVAR(newWaypointPosition) = _actualPos;
             [APP_MODE_MARK] call FUNC(saveCurrentAndSetNewMode);
         } else {
-            GVAR(waypointList) pushBack [_editText, GVAR(newWaypointPosition)];
+            [_editText, GVAR(newWaypointPosition)] call FUNC(deviceAddWaypoint);
             [APP_MODE_WAYPOINTS] call FUNC(saveCurrentAndSetNewMode);
         };
     };

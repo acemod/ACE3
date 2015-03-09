@@ -18,16 +18,18 @@
 #include "script_component.hpp"
 
 disableSerialization;
-_display = (uiNamespace getVariable ["testGPS", displayNull]);
-_isControl = true;
 
-if (isNull _display) then {
-    _display = (uiNamespace getVariable ["testGPS_T", displayNull]);
-    _isControl = false;
+_display = displayNull;
+if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
+    _display = (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull]);
+} else {
+    _display = (uiNamespace getVariable [QGVAR(RscTitleDisplay), displayNull]);
 };
-if (isNull _display) exitWith {};
+if (isNull _display) exitWith {ERROR("No Display");};
 
-//Fade "shell" at night
+systemChat format ["Showing %1 on %2", GVAR(currentApplicationPage), _display];
+
+//Fade "shell" at night: TODO: find beter amibent light code
 _daylight = (1 - cos (daytime * 360/24)) / 2;
 (_display displayCtrl IDC_MICRODAGRSHELL) ctrlSetTextColor [_daylight, _daylight, _daylight, 1];
 
@@ -102,6 +104,8 @@ if (GVAR(currentApplicationPage) == APP_MODE_MARK) then {
 
 //Mode: Waypoints
 (_display displayCtrl IDC_MODEWAYPOINTS) ctrlShow (GVAR(currentApplicationPage) == APP_MODE_WAYPOINTS);
+systemChat format ["WP %1 on %2", (GVAR(currentApplicationPage) == APP_MODE_WAYPOINTS), _display];
+
 
 //Button's pushed:
 if (GVAR(currentApplicationPage) == 0) then {

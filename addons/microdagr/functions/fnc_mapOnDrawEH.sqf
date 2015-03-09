@@ -20,6 +20,8 @@
 _theMap = _this select 0;
 _mapSize = (ctrlPosition _theMap) select 3;
 
+_waypoints = [] call FUNC(deviceGetWaypoints);
+
 if (GVAR(currentApplicationPage) == 1) then {
     _theMap ctrlMapAnimAdd [0, DUMMY_ZOOM, DUMMY_POS];
     ctrlMapAnimCommit _theMap;
@@ -34,7 +36,9 @@ if (GVAR(currentApplicationPage) == 1) then {
                 _targetPos = GVAR(rangeFinderPositionASL);
             };
         } else {
-            _targetPos = (GVAR(waypointList) select GVAR(currentWaypoint)) select 1;
+            if (GVAR(currentWaypoint) < (count _waypoints)) then {
+                _targetPos = (_waypoints select GVAR(currentWaypoint)) select 1;
+            };
         };
         if ((count _targetPos) == 3) then {
             _relBearing = [ace_player, _targetPos] call BIS_fnc_relativeDirTo;
