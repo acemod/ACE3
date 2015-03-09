@@ -188,6 +188,18 @@ class ACE_Medical_Actions {
             animationCaller = ""; // TODO
             itemConsumed = 0;
         };
+        class BodyBag: fieldDressing {
+            treatmentLocations[] = {"All"};
+            requiredMedic = 0;
+            treatmentTime = 7.5;
+            items[] = {QVAR(bodyBag)};
+            condition = "!alive (_this select 1);";
+            callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));
+            callbackFailure = "";
+            callbackProgress = "";
+            animationPatient = "";
+            itemConsumed = 0;
+        };
 
     };
 };

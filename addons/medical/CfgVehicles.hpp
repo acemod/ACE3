@@ -1242,7 +1242,7 @@ class CfgVehicles {
         };
     };
 
-    class GVAR(bloodIV): Item_Base_F {
+    class GVAR(bloodIVItem): Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_BLOOD_IV;
@@ -1272,7 +1272,7 @@ class CfgVehicles {
             };
         };
     };
-    class GVAR(quikClot): Item_Base_F {
+    class GVAR(quikClotItem): Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_QUIKCLOT_DISPLAY;
