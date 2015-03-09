@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2015-03-09 -->
+<Project name="ACE">
+  <Package name="microdagr">
+    <Key ID="STR_ACE_microdagr_itemName">
+      <English>MicroDAGR GPS</English>
+    </Key>
+    <Key ID="STR_ACE_microdagr_itemDescription">
+      <English>MicroDAGR advanced GPS receiver</English>
+    </Key>
+  </Package>
+</Project>
