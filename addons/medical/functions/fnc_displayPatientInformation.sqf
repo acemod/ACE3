@@ -116,9 +116,9 @@ if (_show) then {
         lbClear _logCtrl;
 
         private ["_logs", "_log", "_message", "_moment", "_arguments", "_lbCtrl"];
-        _logs = _unit getvariable [QGVAR(allLogs), []];
+        _logs = _target getvariable [QGVAR(allLogs), []];
         {
-            _log = _unit getvariable [_x, []];
+            _log = _target getvariable [_x, []];
             {
                 // [_message,_moment,_type, _arguments]
                 _message = _x select 0;
@@ -133,7 +133,6 @@ if (_show) then {
                         _arguments set [_foreachIndex, localize _x];
                     };
                 }foreach _arguments;
-
                 _message = format([_message] + _arguments);
                 _logCtrl lbAdd format["%1 %2", _moment, _message];
             }foreach _log;
