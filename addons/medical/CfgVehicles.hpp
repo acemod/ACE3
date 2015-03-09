@@ -583,7 +583,7 @@ class CfgVehicles {
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckBloodPressure')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckBloodPressure')] call DFUNC(treatment));
                 };
-                class RemoveTourniquet: CheckPulse {
+                class RemoveTourniquet: Tourniquet {
                     displayName = "Remove Tourniquet";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'RemoveTourniquet')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'RemoveTourniquet')] call DFUNC(treatment));
@@ -702,7 +702,7 @@ class CfgVehicles {
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckBloodPressure')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckBloodPressure')] call DFUNC(treatment));
                 };
-                class RemoveTourniquet: CheckPulse {
+                class RemoveTourniquet: Tourniquet {
                     displayName = "Remove Tourniquet";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'RemoveTourniquet')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'RemoveTourniquet')] call DFUNC(treatment));
@@ -813,7 +813,7 @@ class CfgVehicles {
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_250')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_250')] call DFUNC(treatment));
                 };
-                class RemoveTourniquet: CheckPulse {
+                class RemoveTourniquet: Tourniquet {
                     displayName = "Remove Tourniquet";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'RemoveTourniquet')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'RemoveTourniquet')] call DFUNC(treatment));
@@ -923,7 +923,7 @@ class CfgVehicles {
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_250')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_250')] call DFUNC(treatment));
                 };
-                class RemoveTourniquet: CheckPulse {
+                class RemoveTourniquet: Tourniquet {
                     displayName = "Remove Tourniquet";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'RemoveTourniquet')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'RemoveTourniquet')] call DFUNC(treatment));
