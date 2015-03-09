@@ -1,6 +1,79 @@
 <?xml version="1.0"encoding="UTF-8"?>
 <Project name="ACE">
     <Package name="Medical">
+        <Container name="UI">
+            <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_MINOR">
+                <Original>Minor</Original>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DELAYED">
+                <Original>Delayed</Original>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_IMMEDIATE">
+                <Original>Immediate</Original>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DECEASED">
+                <Original>Deceased</Original>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_NONE">
+                <Original>None</Original>
+            </Key>
+             <Key ID="STR_ACE_MEDICAL_NORMAL_BREATHING">
+                <Original>Normal breathing</Original>
+                <Russian>Дыхание в норме</Russian>
+                <Spanish>Respiración normal</Spanish>
+                <French>Respiration Normale</French>
+                <Polish>Normalny oddech</Polish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_NO_BREATHING">
+                <Original>No breathing</Original>
+                <Russian>Дыхания нет</Russian>
+                <Spanish>No respira</Spanish>
+                <French>Apnée</French>
+                <Polish>Brak oddechu</Polish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_DIFFICULT_BREATHING">
+                <Original>Difficult breathing</Original>
+                <Russian>Дыхание затруднено</Russian>
+                <Spanish>Dificultad para respirar</Spanish>
+                <French>Difficultée Respiratoire</French>
+                <Polish>Trudności z oddychaniem</Polish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_ALMOST_NO_BREATHING">
+                <Original>Almost no breathing</Original>
+                <Russian>Дыхания почти нет</Russian>
+                <Spanish>Casi sin respirar</Spanish>
+                <French>Respiration Faible</French>
+                <Polish>Prawie brak oddechu</Polish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_STATUS_BLEEDING">
+                <Original>Bleeding</Original>
+                <Russian>Кровотечение</Russian>
+                <Spanish>Sangrando</Spanish>
+                <French>Seignement</French>
+                <Polish>Krwawienie zewnętrzne</Polish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_STATUS_PAIN">
+                <Original>In Pain</Original>
+                <Russian>Испытывает боль</Russian>
+                <Spanish>Con Dolor</Spanish>
+                <French>A De La Douleur</French>
+                <Polish>W bólu</Polish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_STATUS_LOST_BLOOD">
+                <Original>Lost a lot of Blood</Original>
+                <Russian>Большая кровопотеря</Russian>
+                <Spanish>Mucha Sangre perdida</Spanish>
+                <French>A Perdu Bcp de Sang</French>
+                <Polish>Stracił dużo krwi</Polish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_STATUS_TOURNIQUET_APPLIED">
+                <Original>Tourniquet [CAT]</Original>
+                <Russian>Жгут</Russian>
+                <Spanish>Torniquete [CAT]</Spanish>
+                <French>Garot [CAT]</French>
+                <Polish>Opaska uciskowa [CAT]</Polish>
+            </Key>
+        </Container>
         <Container name="CfgWeapons">
             <Key ID="STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY">
                 <Original>Bandage (Basic)</Original>
@@ -326,5 +399,164 @@
                 <Spanish>Bolsa para cadáveres</Spanish>
             </Key>
         </Container>
+        <Container name="Actions">
+            <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE">
+                <Original>Blood Pressure</Original>
+                <Russian>Артериальное давление</Russian>
+                <Spanish>Presión Arterial</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CONTENT">
+                <Original>Checking Blood Pressure..</Original>
+                <Russian>Проверка артериального давления...</Russian>
+                <Spanish>Comprobando Presión Arterial...</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CHECKED_MEDIC">
+                <Original>You checked %1</Original>
+                <Russian>Вы осмотрели раненого %1</Russian>
+                <Spanish>Examinando a %1</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_1">
+                <Original>You find a blood pressure of %2/%3</Original>
+                <Russian>Артериальное давление %2/%3</Russian>
+                <Spanish>La Presión Arterial es %2/%3</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_2">
+                <Original>You find a low blood pressure</Original>
+                <Russian>Давление низкое</Russian>
+                <Spanish>La Presión Arterial es baja</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_3">
+                <Original>You find a normal blood pressure</Original>
+                <Russian>Давление нормальное</Russian>
+                <Spanish>La Presión Arterial es normal</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_4">
+                <Original>You find a high blood pressure</Original>
+                <Russian>Давление высокое</Russian>
+                <Spanish>La Presión Arterial es alta</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_5">
+                <Original>You find no blood pressure</Original>
+                <Russian>Давления нет</Russian>
+                <Spanish>No hay Presión Arterial</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_6">
+                <Original>You fail to find a blood pressure</Original>
+                <Russian>Артериальное давление не определяется</Russian>
+                <Spanish>No puedes encontrar Presión Arterial</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_PULSE">
+                <Original>Pulse</Original>
+                <Russian>Пульс</Russian>
+                <Spanish>Pulso</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_CONTENT">
+                <Original>Checking Heart Rate..</Original>
+                <Russian>Проверка пульса...</Russian>
+                <Spanish>Comprobando Pulso...</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_CHECKED_MEDIC">
+                <Original>You checked %1</Original>
+                <Russian>Вы осмотрели раненого %1</Russian>
+                <Spanish>Examinando a %1</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_1">
+                <Original>You find a Heart Rate of %2</Original>
+                <Russian>Пульс %2 уд./мин.</Russian>
+                <Spanish>El Pulso es %2</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_2">
+                <Original>You find a weak Heart Rate</Original>
+                <Russian>Пульс слабый</Russian>
+                <Spanish>El Pulso es débil</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_3">
+                <Original>You find a strong Heart Rate</Original>
+                <Russian>Пульс учащенный</Russian>
+                <Spanish>El Pulso está acelerado</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_4">
+                <Original>You find a normal Heart Rate</Original>
+                <Russian>Пульс в норме</Russian>
+                <Spanish>El Pulso es bueno</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_5">
+                <Original>You find no Heart Rate</Original>
+                <Russian>Пульс не прощупывается</Russian>
+                <Spanish>No tiene Pulso</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_RESPONSE">
+                <Original>Response</Original>
+                <Russian>Реакция</Russian>
+                <Spanish>Reacciona</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_RESPONSE_CONTENT">
+                <Original>You check response of patient</Original>
+                <Russian>Вы проверяете реакцию раненого</Russian>
+                <Spanish>Compruebas si el paciente reacciona</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_RESPONSIVE">
+                <Original>%1 is responsive</Original>
+                <Russian>%1 реагирует на раздражители</Russian>
+                <Spanish>%1 ha reaccionado</Spanish>
+                
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_UNRESPONSIVE">
+                <Original>%1 is not responsive</Original>
+                <Russian>%1 не реагирует</Russian>
+                <Spanish>%1 no reacciona</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_YOU_CHECKED">
+                <Original>You checked %1</Original>
+                <Russian>Вы осмотрели раненого %1</Russian>
+                <Spanish>Examinas a %1</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_BANDAGING">
+                <Original>Bandaging</Original>
+                <Russian>Перевязка...</Russian>
+                <Spanish>Vendando</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_BANDAGED">
+                <Original>Bandaged</Original>
+                <Russian>Повязка наложена</Russian>
+                <Spanish>Vendado</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_APPLY_BANDAGE">
+                <Original>You bandage %1 (%2)</Original>
+                <Russian>Вы перевязали раненого %1 (%2)</Russian>
+                <Spanish>Aplicas vendaje a %1 en %2</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_IS_BANDAGING_YOU">
+                <Original>%1 is bandaging you</Original>
+                <Russian>%1 перевязывает вас</Russian>
+                <Spanish>%1 te está vendando</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_START_STITCHING_INJURIES">
+                <Original>You start stitching injures from %1 (%2)</Original>
+                <Russian>Вы зашиваете ранения от %1 (%2)</Russian>
+                <Spanish>Estás suturando heridas de %1 en %2</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_STITCHING">
+                <Original>Stitching</Original>
+                <Russian>Наложение швов</Russian>
+                <Spanish>Suturando</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_YOU_TREAT_AIRWAY">
+                <Original>You treat the airway of %1</Original>
+                <Russian>Вы интубируете раненого %1</Russian>
+                <Spanish>Estás intubando a %1</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_AIRWAY">
+                <Original>Airway</Original>
+                <Russian>Дыхательные пути</Russian>
+                <Spanish>Vías Aéreas</Spanish>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_IS_TREATING_YOUR_AIRWAY">
+                <Original>%1 is treating your airway</Original>
+                <Russian>%1 проводит вам интубацию</Russian>
+                <Spanish>%1 te está intubando</Spanish>
+            </Key>
+        </Container>
+
     </Package>
 </Project> 

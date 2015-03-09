@@ -13,14 +13,20 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_heartRate","_bloodPressure","_bloodVolume","_painStatus"];
+private ["_unit", "_heartRate","_bloodPressure","_bloodVolume","_painStatus", "_lastTimeValuesSynced", "_syncValues"];
 _unit = _this select 0;
+
+_lastTimeValuesSynced = _unit getvariable [QGVAR(lastMomentValuesSynced), 0];
+_syncValues = time - _lastTimeValuesSynced >= (10 + floor(random(10)));
+if (_syncValues) then {
+    _unit setvariable [QGVAR(lastMomentValuesSynced), time];
+};
 
 _bloodVolume = (_unit getvariable [QGVAR(bloodVolume), 0]) + ([_unit] call FUNC(getBloodVolumeChange));
 if (_bloodVolume <= 0) then {
     _bloodVolume = 0;
 };
-_unit setvariable  [QGVAR(bloodVolume), _bloodVolume];
+_unit setvariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
 
 // Set variables for synchronizing information across the net
 if (_bloodVolume < 90) then {
@@ -68,27 +74,33 @@ if ([_unit] call EFUNC(common,isAwake)) then {
 };
 
 // handle advanced medical, with vitals
-if ((missionNamespace getvariable[QGVAR(level), 0]) > 0) exitwith {
+if (GVAR(level) >= 2) then {
 
     // Set the vitals
     _heartRate = (_unit getvariable [QGVAR(heartRate), 0]) + ([_unit] call FUNC(getHeartRateChange));
-    _unit setvariable  [QGVAR(heartRate), _heartRate];
+    _unit setvariable  [QGVAR(heartRate), _heartRate, _syncValues];
 
     _bloodPressure = [_unit] call FUNC(getBloodPressure);
-    _unit setvariable  [QGVAR(bloodPressure), _bloodPressure];
+    _unit setvariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];
 
     // Handle airway
     if (GVAR(setting_allowAirwayInjuries)) then {
         _airwayStatus = _unit getvariable [QGVAR(airwayStatus), 100];
         if (((_unit getvariable [QGVAR(airwayOccluded), false]) || (_unit getvariable [QGVAR(airwayCollapsed), false])) && !((_unit getvariable [QGVAR(airwaySecured), false]))) then {
             if (_airwayStatus >= 0.5) then {
-                _unit setvariable [QGVAR(airwayStatus), _airwayStatus - 0.5];
+                _unit setvariable [QGVAR(airwayStatus), _airwayStatus - 0.5, _syncValues];
             };
         } else {
             if !((_unit getvariable [QGVAR(airwayOccluded), false]) || (_unit getvariable [QGVAR(airwayCollapsed), false])) then {
-                if (_airwayStatus <= 98.5) then {
-                    _unit setvariable [QGVAR(airwayStatus), _airwayStatus + 1.5];
+                if (_airwayStatus < 100) then {
+                    _unit setvariable [QGVAR(airwayStatus), (_airwayStatus + 1.5) min 100, _syncValues];
                 };
+            };
+        };
+        if (_airwayStatus < 80) then {
+            [_unit] call FUNC(setUnconscious);
+            if (_airwayStatus <= 0) then {
+                [_unit, true] call FUNC(setDead);
             };
         };
     };
