@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2015-02-13 -->
+<Project name="ACE">
+  <Package name="Inventory">
+    <Key ID="STR_ACE_Inventory_SettingName">
+      <English>Make Inventory Display Bigger</English>
+    </Key>    
+    <Key ID="STR_ACE_Inventory_SettingDescription">
+      <English>Normally inventory display is scaled by UI size. This allows scaling the Inventory UI size up, but doesn't increase font size allowing more rows displayed.</English>
+    </Key>
+  </Package>
+</Project>
