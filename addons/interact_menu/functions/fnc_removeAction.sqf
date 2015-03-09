@@ -24,7 +24,7 @@ _varName = [QGVAR(actions),QGVAR(selfActions)] select _typeNum;
 _actions = _object getVariable [_varName, []];
 
 {
-    if ((_x select 8) isEqualTo _fullPath) exitWith {
+    if (((_x select 0) select 7) isEqualTo _fullPath) exitWith {
         _actions deleteAt _forEachIndex;
     };
 } forEach _actions;

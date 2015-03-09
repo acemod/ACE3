@@ -9,6 +9,7 @@ PREP(isValidAi);
 PREP(markAiOnMap);
 PREP(module);
 PREP(nearestPlayers);
+PREP(startSwitchUnits);
 PREP(switchBack);
 PREP(switchUnit);
 

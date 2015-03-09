@@ -12,6 +12,10 @@
  */
 #include "script_component.hpp"
 
+if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
+    closeDialog 0;
+};
+
 GVAR(keyDownSelfAction) = false;
 if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
@@ -22,5 +26,4 @@ if(GVAR(actionSelected)) then {
 GVAR(expanded) = false;
 GVAR(lastPath) = [];
 GVAR(menuDepthPath) = [];
-GVAR(vecLineMap) = [];
 true
