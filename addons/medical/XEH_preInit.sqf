@@ -79,6 +79,8 @@ PREP(treatmentTourniquetLocal);
 PREP(useItem);
 PREP(useItems);
 PREP(displayPatientInformation);
+PREP(displayTriageCard);
+PREP(dropDownTriageCard);
 PREP(moduleMedicalSettings);
 PREP(moduleAssignMedicRoles);
 PREP(moduleAssignMedicalVehicle);
