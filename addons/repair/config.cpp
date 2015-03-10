@@ -13,6 +13,7 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
 
 class ACE_Settings {
     class GVAR(DisplayTextOnRepair) {

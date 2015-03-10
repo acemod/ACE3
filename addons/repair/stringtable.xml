@@ -2,6 +2,19 @@
 <!-- Edited with tabler - 2014-12-21 -->
 <Project name="ACE">
     <Package name="repair">
+        <Key ID="STR_AGM_Repair_Repair">
+            <English>Repair &gt;&gt;</English>
+            <German>Reparieren &gt;&gt;</German>
+            <Spanish>Reparación &gt;&gt;</Spanish>
+            <French>Réparer &gt;&gt;</French>
+            <Polish>Napraw &gt;&gt;</Polish>
+            <Czech>Opravit &gt;&gt;</Czech>
+            <Portuguese>Reparar &gt;&gt;</Portuguese>
+            <Italian>Ripara &gt;&gt;</Italian>
+            <Hungarian>Szerelés &gt;&gt;</Hungarian>
+            <Russian>Ремонт &gt;&gt;</Russian>
+        </Key>
+
         <Key ID="STR_ACE_Repair_SettingDisplayTextName">
             <English>Display text on repair</English>
         </Key>
