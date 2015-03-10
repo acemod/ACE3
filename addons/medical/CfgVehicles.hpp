@@ -347,7 +347,7 @@ class CfgVehicles {
 
         class ACE_Actions {
             class ACE_Head {
-                statement = QUOTE([ARR_3(_target, true, 0)] call DEFUNC(displayPatientInformation));
+                statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
 
                 class Bandage_Head {
                     displayName = "Bandage Head";
@@ -406,7 +406,7 @@ class CfgVehicles {
                     displayName = "Medical";
                     distance = 5.0;
                     condition = "true";
-                    statement = QUOTE([ARR_3(_target, true, 1)] call DEFUNC(displayPatientInformation));
+                    statement = QUOTE([ARR_3(_target, true, 1)] call DFUNC(displayPatientInformation));
                     showDisabled = 1;
                     priority = 2;
                     hotkey = "M";
@@ -481,7 +481,7 @@ class CfgVehicles {
                 };
             };
             class ACE_ArmLeft {
-                statement = QUOTE([ARR_3(_target, true, 2)] call DEFUNC(displayPatientInformation));
+                statement = QUOTE([ARR_3(_target, true, 2)] call DFUNC(displayPatientInformation));
 
                 class Bandage_LeftArm {
                     displayName = "Bandage Left Arm";
@@ -602,7 +602,7 @@ class CfgVehicles {
                 };
             };
             class ACE_ArmRight {
-                statement = QUOTE([ARR_3(_target, true, 3)] call DEFUNC(displayPatientInformation));
+                statement = QUOTE([ARR_3(_target, true, 3)] call DFUNC(displayPatientInformation));
                 class Bandage_RightArm {
                     displayName = "Bandage Right Arm";
                     distance = 2.0;
@@ -723,7 +723,7 @@ class CfgVehicles {
 
             };
             class ACE_LegLeft {
-                statement = QUOTE([ARR_3(_target, true, 4)] call DEFUNC(displayPatientInformation));
+                statement = QUOTE([ARR_3(_target, true, 4)] call DFUNC(displayPatientInformation));
                 class Bandage_LeftLeg {
                     displayName = "Bandage Left Leg";
                     distance = 2.0;
@@ -834,7 +834,7 @@ class CfgVehicles {
                 };
             };
             class ACE_LegRight {
-                statement = QUOTE([ARR_3(_target, true, 5)] call DEFUNC(displayPatientInformation));
+                statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
                 class Bandage_RightLeg {
                     displayName = "Bandage Right Leg";
                     distance = 2.0;
