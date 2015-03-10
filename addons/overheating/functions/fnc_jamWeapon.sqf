@@ -61,7 +61,7 @@ if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
   _statement = {
     playSound3D ["a3\sounds_f\weapons\Other\dry9.wss", _this select 0];
 
-    if (!(missionNamespace getVariable [QGVAR(knowAboutJam), false]) && {(_this select 1) ammo currentWeapon (_this select 1) > 0}) then {
+    if (!(missionNamespace getVariable [QGVAR(knowAboutJam), false]) && {(_this select 1) ammo currentWeapon (_this select 1) > 0} && {GVAR(DisplayTextOnJam)}) then {
       [localize "STR_ACE_Overheating_WeaponJammed"] call EFUNC(common,displayTextStructured);
       GVAR(knowAboutJam) = true;
     };
