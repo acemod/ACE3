@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common","ace_interaction"};
+        requiredAddons[] = {"ace_common"};
         author[] = {"bux","commy2"};
         authorUrl = "https://github.com/commy2/";
         VERSION_CONFIG;
@@ -13,4 +13,3 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgVehicles.hpp"
