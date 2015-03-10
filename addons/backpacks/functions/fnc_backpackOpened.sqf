@@ -28,10 +28,13 @@ if ([_target] call EFUNC(common,isPlayer)) then {
 private ["_sounds", "_position"];
 
 _sounds = [
-    "a3\sounds_f\characters\ingame\AinvPknlMstpSlayWpstDnon_medic.wss",
+    /*"a3\sounds_f\characters\ingame\AinvPknlMstpSlayWpstDnon_medic.wss",
     "a3\sounds_f\characters\ingame\AinvPknlMstpSlayWrflDnon_medic.wss",
     "a3\sounds_f\characters\ingame\AinvPpneMstpSlayWpstDnon_medic.wss",
-    "a3\sounds_f\characters\ingame\AinvPpneMstpSlayWrflDnon_medic.wss"
+    "a3\sounds_f\characters\ingame\AinvPpneMstpSlayWrflDnon_medic.wss"*/
+
+    QUOTE(PATHTO_R(sounds\zip_in.wav)),
+    QUOTE(PATHTO_R(sounds\zip_out.wav))
 ];
 
 _position = _target modelToWorld (_target selectionPosition "Spine3");
