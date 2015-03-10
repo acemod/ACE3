@@ -2,6 +2,7 @@
 
 ADDON = false;
 
-PREP(empty);
+PREP(setDamage);
+PREP(setHitPointDamage);
 
 ADDON = true;
