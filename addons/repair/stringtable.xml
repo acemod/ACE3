@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2014-12-21 -->
+<Project name="ACE">
+    <Package name="repair">
+        <Key ID="STR_ACE_Repair_Repairing">
+            <English>Repairing ...</English>
+            <German>Reparieren ...</German>
+            <Spanish>Reparando ...</Spanish>
+            <French>Réparation ...</French>
+            <Polish>Naprawianie...</Polish>
+            <Czech>Opravuji ...</Czech>
+            <Portuguese>Reparando ...</Portuguese>
+            <Italian>Sto riparando ...</Italian>
+            <Hungarian>javítása ...</Hungarian>
+            <Russian>Ремонтируем ...</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_RepairingHitPoint">
+            <English>Repairing %1 ...</English>
+            <German>Reparieren %1 ...</German>
+            <Spanish>Reparando %1 ...</Spanish>
+            <French>Réparation %1 ...</French>
+            <Polish>Naprawianie %1...</Polish>
+            <Czech>Opravuji %1 ...</Czech>
+            <Portuguese>Reparando %1 ...</Portuguese>
+            <Italian>Sto riparando %1 ...</Italian>
+            <Hungarian>%1 javítása ...</Hungarian>
+            <Russian>Ремонтируем %1 ...</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_Repaired">
+            <English>Repaired %1</English>
+            <German>%1 repariert</German>
+            <Spanish>Reparado %1</Spanish>
+            <French>%1 réparé(e)</French>
+            <Polish>Naprawiono %1</Polish>
+            <Czech>Opraveno - %1</Czech>
+            <Portuguese>Reparado %1</Portuguese>
+            <Italian>%1 Riparata/o</Italian>
+            <Hungarian>%1 megjavítva</Hungarian>
+            <Russian>%1 отремонтирован</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Repair_HitBody">
+            <English>Body</English>
+            <German>Karosserie</German>
+            <Spanish>Carrocería</Spanish>
+            <French>Blindage</French>
+            <Polish>Karoseria</Polish>
+            <Czech>Karoserie</Czech>
+            <Portuguese>Carroceria</Portuguese>
+            <Italian>Carrozzeria</Italian>
+            <Hungarian>Test</Hungarian>
+            <Russian>Кузов</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitHull">
+            <English>Hull</English>
+            <German>Wanne</German>
+            <Spanish>Casco</Spanish>
+            <French>Caisse</French>
+            <Polish>Kadłub</Polish>
+            <Czech>Trup</Czech>
+            <Portuguese>Chassi</Portuguese>
+            <Italian>Scafo</Italian>
+            <Hungarian>Test</Hungarian>
+            <Russian>Корпус</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitEngine">
+            <English>Engine</English>
+            <German>Motor</German>
+            <Spanish>Motor</Spanish>
+            <French>Moteur</French>
+            <Polish>Silnik</Polish>
+            <Czech>Motor</Czech>
+            <Portuguese>Motor</Portuguese>
+            <Italian>Motore</Italian>
+            <Hungarian>Motor</Hungarian>
+            <Russian>Двигатель</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitFuel">
+            <English>Fuel Tank</English>
+            <German>Tank</German>
+            <Spanish>Depósito</Spanish>
+            <French>Réservoir</French>
+            <Polish>Zbiornik paliwa</Polish>
+            <Czech>Palivová nádrž</Czech>
+            <Portuguese>Tanque de Combustível</Portuguese>
+            <Italian>Serbatoio</Italian>
+            <Hungarian>Üzemanyagtank</Hungarian>
+            <Russian>Топливный бак</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitTurret">
+            <English>Main Turret</English>
+            <German>Turm</German>
+            <Spanish>Torreta príncipal</Spanish>
+            <French>Tourelle</French>
+            <Polish>Wieżyczka</Polish>
+            <Czech>Hlavní Věž</Czech>
+            <Portuguese>Torre principal</Portuguese>
+            <Italian>Torretta principale</Italian>
+            <Hungarian>Lövegtorony</Hungarian>
+            <Russian>Башню</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitGun">
+            <English>Gun</English>
+            <German>Kanone</German>
+            <Spanish>Cañón</Spanish>
+            <French>Canon</French>
+            <Polish>Działo</Polish>
+            <Czech>Kanón</Czech>
+            <Portuguese>Canhão</Portuguese>
+            <Italian>Cannone</Italian>
+            <Hungarian>Ágyú</Hungarian>
+            <Russian>Пушку</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitLTrack">
+            <English>Left Track</English>
+            <German>Linke Kette</German>
+            <Spanish>Cadena izquierda</Spanish>
+            <French>Chenille gauche</French>
+            <Polish>Lewa gąsienica</Polish>
+            <Czech>Levý Pás</Czech>
+            <Portuguese>Lagarta Esquerda</Portuguese>
+            <Italian>Cingolo sinistro</Italian>
+            <Hungarian>Bal lánctalp</Hungarian>
+            <Russian>Левую гусеницу</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitRTrack">
+            <English>Right Track</English>
+            <German>Rechte Kette</German>
+            <Spanish>Cadena derecha</Spanish>
+            <French>Chenille droite</French>
+            <Polish>Prawa gąsienica</Polish>
+            <Czech>Pravý Pás</Czech>
+            <Portuguese>Lagarta Direita</Portuguese>
+            <Italian>Cingolo destro</Italian>
+            <Hungarian>Jobb lánctalp</Hungarian>
+            <Russian>Правую гусеницу</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitLFWheel">
+            <English>Left Front Wheel</English>
+            <German>Linkes Vorderrad</German>
+            <Spanish>Rueda frontal izquierda</Spanish>
+            <French>Roue avant-gauche</French>
+            <Polish>Przednie lewe koło</Polish>
+            <Czech>Levé přední Kolo</Czech>
+            <Portuguese>Roda Dianteira Esquerda</Portuguese>
+            <Italian>Ruota frontale sinistra</Italian>
+            <Hungarian>Bal első kerék</Hungarian>
+            <Russian>Левое переднее колесо</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitRFWheel">
+            <English>Right Front Wheel</English>
+            <German>Rechtes Vorderrad</German>
+            <Spanish>Rueda frontal derecha</Spanish>
+            <French>Roue avant-droite</French>
+            <Polish>Przednie prawe koło</Polish>
+            <Czech>Pravé přední Kolo</Czech>
+            <Portuguese>Roda Dianteira Direita</Portuguese>
+            <Italian>Ruota frontale destra</Italian>
+            <Hungarian>Jobb első kerék</Hungarian>
+            <Russian>Правое переднее колесо</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitLF2Wheel">
+            <English>Second Left Front Wheel</English>
+            <German>Zweites linkes Vorderrad</German>
+            <Spanish>Segunda rueda frontal izquierda</Spanish>
+            <French>Deuxième roue avant-gauche</French>
+            <Polish>Drugie przednie lewe koło</Polish>
+            <Czech>Druhé Levé přední Kolo</Czech>
+            <Portuguese>Segunda Roda Dianteira Esquerda</Portuguese>
+            <Italian>Seconda ruota frontale sinistra</Italian>
+            <Hungarian>Második bal első kerék</Hungarian>
+            <Russian>Второе переднее левое колесо</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitRF2Wheel">
+            <English>Second Right Front Wheel</English>
+            <German>Zweites rechtes Vorderrad</German>
+            <Spanish>Segunda rueda frontal derecha</Spanish>
+            <French>Deuxième roue avant-droite</French>
+            <Polish>Drugie przednie prawe koło</Polish>
+            <Czech>Druhé Pravé přední Kolo</Czech>
+            <Portuguese>Segunda Roda Dianteira Direita</Portuguese>
+            <Italian>Seconda ruota frontale destra</Italian>
+            <Hungarian>Második jobb hátsó kerék</Hungarian>
+            <Russian>Второе правое переднее колесо</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitLMWheel">
+            <English>Left Middle Wheel</English>
+            <German>Linkes mittleres Rad</German>
+            <Spanish>Rueda central izquierda</Spanish>
+            <French>Roue centre-gauche</French>
+            <Polish>Środkowe lewe koło</Polish>
+            <Czech>Levé prostřední Kolo</Czech>
+            <Portuguese>Roda Intermediária Esquerda</Portuguese>
+            <Italian>Ruota centrale sinistra</Italian>
+            <Hungarian>Bal középső kerék</Hungarian>
+            <Russian>Левое среднее колесо</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitRMWheel">
+            <English>Right Middle Wheel</English>
+            <German>Rechtes mittleres Rad</German>
+            <Spanish>Rueda central derecha</Spanish>
+            <French>Roue centre-droite</French>
+            <Polish>Środkowe prawe koło</Polish>
+            <Czech>Pravé prostřední Kolo</Czech>
+            <Portuguese>Roda Intermediária Direita</Portuguese>
+            <Italian>Ruota centrale destra</Italian>
+            <Hungarian>Jobb középső kerék</Hungarian>
+            <Russian>Правое среднее колесо</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitLBWheel">
+            <English>Left Rear Wheel</English>
+            <German>Linkes Hinterrad</German>
+            <Spanish>Rueda trasera izquierda</Spanish>
+            <French>Roue arrière-gauche</French>
+            <Polish>Tylnie lewe koło</Polish>
+            <Czech>Levé zadní Kolo</Czech>
+            <Portuguese>Roda Traseira Esquerda</Portuguese>
+            <Italian>Ruota posteriore sinistra</Italian>
+            <Hungarian>Bal hátsó kerék</Hungarian>
+            <Russian>Левое заднее колесо</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitRBWheel">
+            <English>Right Rear Wheel</English>
+            <German>Rechtes Hinterrad</German>
+            <Spanish>Rueda trasera derecha</Spanish>
+            <French>Roue arrière-droite</French>
+            <Polish>Tylnie prawe koło</Polish>
+            <Czech>Pravé zadní Kolo</Czech>
+            <Portuguese>Roda Traseira Direita</Portuguese>
+            <Italian>Ruota posteriore destra</Italian>
+            <Hungarian>Jobb hátsó kerék</Hungarian>
+            <Russian>Правое заднее колесо</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitAvionics">
+            <English>Avionics</English>
+            <German>Avionik</German>
+            <Spanish>Aviónica</Spanish>
+            <French>Avionique</French>
+            <Polish>Awionika</Polish>
+            <Czech>Elektronika</Czech>
+            <Portuguese>Aviônica</Portuguese>
+            <Italian>Avionica</Italian>
+            <Hungarian>Avionika</Hungarian>
+            <Russian>Авионику</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitHRotor">
+            <English>Main Rotor</English>
+            <German>Hauptrotor</German>
+            <Spanish>Rotor principal</Spanish>
+            <French>Rotor principal</French>
+            <Polish>Główny rotor</Polish>
+            <Czech>Hlavní Rotor</Czech>
+            <Portuguese>Rotor Principal</Portuguese>
+            <Italian>Rotore principale</Italian>
+            <Hungarian>Főrotor</Hungarian>
+            <Russian>Несущий винт</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitVRotor">
+            <English>Tail Rotor</English>
+            <German>Heckrotor</German>
+            <Spanish>Rotor de cola</Spanish>
+            <French>Rotor anticouple</French>
+            <Polish>Tylni rotor</Polish>
+            <Czech>Zadní Rotor</Czech>
+            <Portuguese>Rotor de Cauda</Portuguese>
+            <Italian>Rotore di coda</Italian>
+            <Hungarian>Farokrotor</Hungarian>
+            <Russian>Рулевой винт</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitWinch">
+            <English>Winch</English>
+            <German>Seilwinde</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitRGlass">
+            <English>Glass (right)</English>
+            <German>Scheibe (rechts)</German>
+            <Spanish>Ventana (derecha)</Spanish>
+            <French>Vitre (droite)</French>
+            <Polish>Szyba (prawa)</Polish>
+            <Czech>Sklo (pravé)</Czech>
+            <Portuguese>Vidro (à direita)</Portuguese>
+            <Italian>Vetro destro</Italian>
+            <Hungarian>Jobb szélvédő</Hungarian>
+            <Russian>Стекло (справа)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitLGlass">
+            <English>Glass (left)</English>
+            <German>Scheibe (links)</German>
+            <Spanish>Ventana (izquierda)</Spanish>
+            <French>Vitre (gauche)</French>
+            <Polish>Szyba (lewa)</Polish>
+            <Czech>Sklo (pravé)</Czech>
+            <Portuguese>Vidro (à esquerda)</Portuguese>
+            <Italian>Vetro sinistro</Italian>
+            <Hungarian>Bal szélvédő</Hungarian>
+            <Russian>Стекло (слава)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitGlass1">
+            <English>Glass 1</English>
+            <German>Scheibe 1</German>
+            <Spanish>Ventana 1</Spanish>
+            <French>Vitre 1</French>
+            <Polish>Szyba 1</Polish>
+            <Czech>Sklo 1</Czech>
+            <Portuguese>Vidro 1</Portuguese>
+            <Italian>Vetro 1</Italian>
+            <Hungarian>Üveg 1</Hungarian>
+            <Russian>Стекло 1</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitGlass2">
+            <English>Glass 2</English>
+            <German>Scheibe 2</German>
+            <Spanish>Ventana 2</Spanish>
+            <French>Vitre 2</French>
+            <Polish>Szyba 2</Polish>
+            <Czech>Sklo 2</Czech>
+            <Portuguese>Vidro 2</Portuguese>
+            <Italian>Vetro 2</Italian>
+            <Hungarian>Üveg 2</Hungarian>
+            <Russian>Стекло 2</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitGlass3">
+            <English>Glass 3</English>
+            <German>Scheibe 3</German>
+            <Spanish>Ventana 3</Spanish>
+            <French>Vitre 3</French>
+            <Polish>Szyba 3</Polish>
+            <Czech>Sklo 3</Czech>
+            <Portuguese>Vidro 3</Portuguese>
+            <Italian>Vetro 3</Italian>
+            <Hungarian>Üveg 3</Hungarian>
+            <Russian>Стекло 3</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitGlass4">
+            <English>Glass 4</English>
+            <German>Scheibe 4</German>
+            <Spanish>Ventana 4</Spanish>
+            <French>Vitre 4</French>
+            <Polish>Szyba 4</Polish>
+            <Czech>Sklo 4</Czech>
+            <Portuguese>Vidro 4</Portuguese>
+            <Italian>Vetro 4</Italian>
+            <Hungarian>Üveg 4</Hungarian>
+            <Russian>Стекло 4</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitGlass5">
+            <English>Glass 5</English>
+            <German>Scheibe 5</German>
+            <Spanish>Ventana 5</Spanish>
+            <French>Vitre 5</French>
+            <Polish>Szyba 5</Polish>
+            <Czech>Sklo 5</Czech>
+            <Portuguese>Vidro 5</Portuguese>
+            <Italian>Vetro 5</Italian>
+            <Hungarian>Üveg 5</Hungarian>
+            <Russian>Стекло 5</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitGlass6">
+            <English>Glass 6</English>
+            <German>Scheibe 6</German>
+            <Spanish>Ventana 6</Spanish>
+            <French>Vitre 6</French>
+            <Polish>Szyba 6</Polish>
+            <Czech>Sklo 6</Czech>
+            <Portuguese>Vidro 6</Portuguese>
+            <Italian>Vetro 6</Italian>
+            <Hungarian>Üveg 6</Hungarian>
+            <Russian>Стекло 6</Russian>
+        </Key>
+    </Package>
+</Project>

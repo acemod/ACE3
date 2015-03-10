@@ -31,7 +31,13 @@ _time = 5 * _damage;
 
 // get string of the hitpoint
 private "_text";
-_text = "Repair placeholder";
+_text = format ["STR_ACE_Repair_%1", _hitPoint];
+
+if (isLocalized _text) then {
+	_text = format [localize "STR_ACE_Repair_RepairingHitPoint", localize _text];
+} else {
+	_text = localize "STR_ACE_Repair_Repairing";
+};
 
 // open the loading bar
 [_time, [_vehicle, _hitPoint], DFUNC(doRepair), DFUNC(doRepair), _text, {true}, []] call EFUNC(common,progressBar);
