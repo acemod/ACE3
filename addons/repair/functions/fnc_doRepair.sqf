@@ -31,3 +31,17 @@ _hitPointDamage = _hitPointDamage max 0;
 
 // raise event to set the new hitpoint damage
 ["setVehicleHitPointDamage", _vehicle, [_vehicle, _hitPoint, _hitPointDamage]] call EFUNC(common,targetEvent);
+
+// display text message if enabled
+if (GVAR(DisplayTextOnRepair)) then {
+    private "_text";
+    _text = format ["STR_ACE_Repair_%1", _hitPoint];
+
+    if (isLocalized _text) then {
+        _text = format [localize (["STR_ACE_Repair_RepairedHitPointFully", "STR_ACE_Repair_RepairedHitPointPartially"] select (_hitPointDamage > 0)), localize _text];
+    } else {
+        _text = localize (["STR_ACE_Repair_RepairedFully", "STR_ACE_Repair_RepairedPartially"] select (_hitPointDamage > 0));
+    };
+
+    [_text] call EFUNC(common,displayTextStructured);
+};

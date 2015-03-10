@@ -2,6 +2,13 @@
 <!-- Edited with tabler - 2014-12-21 -->
 <Project name="ACE">
     <Package name="repair">
+        <Key ID="STR_ACE_Repair_SettingDisplayTextName">
+            <English>Display text on repair</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_SettingDisplayTextDesc">
+            <English>Display a notification whenever you repair a vehicle</English>
+        </Key>
+
         <Key ID="STR_ACE_Repair_Repairing">
             <English>Repairing ...</English>
             <German>Reparieren ...</German>
@@ -37,6 +44,23 @@
             <Italian>%1 Riparata/o</Italian>
             <Hungarian>%1 megjavítva</Hungarian>
             <Russian>%1 отремонтирован</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Repair_RepairedFully">
+            <English>Fully repaired part</English>
+            <German>Bauteil vollständig repariert</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_RepairedPartially">
+            <English>Partially repaired %1</English>
+            <German>Bauteil teilweise repariert</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_RepairedHitPointFully">
+            <English>Fully repaired %1</English>
+            <German>%1 vollständig repariert</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_RepairedHitPointPartially">
+            <English>Partially repaired %1</English>
+            <German>%1 teilweise repariert</German>
         </Key>
 
         <Key ID="STR_ACE_Repair_HitBody">

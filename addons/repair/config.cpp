@@ -13,3 +13,13 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+
+class ACE_Settings {
+    class GVAR(DisplayTextOnRepair) {
+        typeName = "BOOL";
+        isClientSetable = 1;
+        value = 1;
+        displayName = "$STR_ACE_Repair_SettingDisplayTextName";
+        description = "$STR_ACE_Repair_SettingDisplayTextDesc";
+    };
+};
