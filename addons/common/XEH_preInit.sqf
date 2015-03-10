@@ -200,6 +200,9 @@ PREP(logDisplays);
 PREP(monitor);
 PREP(showUser);
 
+PREP(dumpPerformanceCounters);
+PREP(dumpArray);
+
 // ACE_CuratorFix
 PREP(addCuratorUnloadEventhandler);
 PREP(fixCrateContent);
@@ -227,6 +230,9 @@ PREP(hashListCreateHash);
 PREP(hashListSelect);
 PREP(hashListSet);
 PREP(hashListPush);
+
+//Debug
+ACE_COUNTERS = [];
 
 // Load settings
 if (isServer) then {
