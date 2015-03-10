@@ -109,6 +109,7 @@ PREP(insertionSort);
 PREP(interpolateFromArray);
 PREP(inTransitionAnim);
 PREP(inWater);
+PREP(isAlive);
 PREP(isArrested);
 PREP(isAutoWind);
 PREP(isAwake);
