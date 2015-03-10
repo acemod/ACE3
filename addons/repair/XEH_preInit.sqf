@@ -2,6 +2,8 @@
 
 ADDON = false;
 
+PREP(doRepair);
+PREP(repairVehicle);
 PREP(setDamage);
 PREP(setHitPointDamage);
 
