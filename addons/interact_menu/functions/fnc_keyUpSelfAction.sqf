@@ -16,7 +16,11 @@ if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
     closeDialog 0;
 };
 
-GVAR(keyDownSelfAction) = false;
+if (GVAR(keyDownSelfAction)) then {
+    GVAR(keyDownSelfAction) = false;
+    ["interactMenuClosed", [1]] call FUNC(localEvent);
+};
+
 if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
     _player = ACE_Player;

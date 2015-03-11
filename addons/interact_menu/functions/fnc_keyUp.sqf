@@ -12,7 +12,11 @@
  */
 #include "script_component.hpp"
 
-GVAR(keyDown) = false;
+if (GVAR(keyDown)) then {
+    GVAR(keyDown) = false;
+    ["interactMenuClosed", [0]] call FUNC(localEvent);
+};
+
 if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
     _player = ACE_Player;
