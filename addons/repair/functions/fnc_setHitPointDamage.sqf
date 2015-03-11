@@ -74,3 +74,6 @@ _vehicle setDamage _damageNew;
 {
     _vehicle setHitPointDamage [_x, _hitPointDamages select _forEachIndex];
 } forEach _hitPoints;
+
+// normalize hitpoints
+[_vehicle] call FUNC(normalizeHitPoints);
