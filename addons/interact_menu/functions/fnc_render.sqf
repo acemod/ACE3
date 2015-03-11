@@ -168,8 +168,10 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
             GVAR(expanded) = true;
             GVAR(menuDepthPath) = +GVAR(lastPath);
 
-            // Execute the current action if it's opening a submenu
-            if (count (GVAR(selectedAction) select 1) > 0) then {
+            // Execute the current action if it's run on hover
+            private "_runOnHover";
+            _runOnHover = ((GVAR(selectedAction) select 0) select 6) select 3;
+            if (_runOnHover) then {
                 this = GVAR(selectedTarget);
                 _player = ACE_Player;
                 _target = GVAR(selectedTarget);
