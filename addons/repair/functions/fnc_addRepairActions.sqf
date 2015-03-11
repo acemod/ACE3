@@ -26,7 +26,7 @@ if (_type in _initializedClasses) exitWith {};
 
 // get all hitpoints
 private "_hitPoints";
-_hitPoints = [_vehicle] call EFUNC(common,getHitPoints);
+_hitPoints = [_vehicle] call EFUNC(common,getHitPointsWithSelections) select 0;
 
 // get hitpoints of wheels with their selections
 private ["_wheelHitPointsWithSelections", "_wheelHitPoints", "_wheelHitPointSelections"];
@@ -88,6 +88,9 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         [_type, 0, [_nameReplace], _nameReplace, _icon, _selection, _statement_replace, _condition_replace, 2] call EFUNC(interact_menu,addClassAction);
 
     } else {
+        // exit if the hitpoint is in the blacklist, e.g. glasses
+        if (_x in IGNORED_HITPOINTS) exitWith {};
+
         // add misc repair action
 
         private ["_name", "_icon", "_selection"];

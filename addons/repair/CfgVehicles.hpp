@@ -4,8 +4,9 @@
         class ACE_MainActions { \
             class GVAR(Repair) { \
                 displayName = "$STR_ACE_Repair_Repair"; \
-                condition = QUOTE([ARR_2(_player, _target)] call DFUNC(actionCanRepair)); \
-                statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionRepair);); \
+                condition = ""; \
+                statement = "'show a hint with the hitpart damage'"; \
+                runOnHover = 1; \
                 showDisabled = 0; \
                 priority = 2; \
                 icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"; \

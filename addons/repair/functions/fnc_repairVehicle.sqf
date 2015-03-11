@@ -27,7 +27,7 @@ private ["_damage", "_time"];
 
 _damage = _vehicle getHitPointDamage _hitPoint;
 
-_time = 5 * _damage;
+_time = 5 + 10 * _damage;
 
 // get string of the hitpoint
 private "_text";
@@ -41,3 +41,6 @@ if (isLocalized _text) then {
 
 // open the loading bar
 [_time, [_vehicle, _hitPoint], DFUNC(doRepair), DFUNC(doRepair), _text, {true}, []] call EFUNC(common,progressBar);
+
+// do animation
+[_unit] call EFUNC(common,goKneeling);
