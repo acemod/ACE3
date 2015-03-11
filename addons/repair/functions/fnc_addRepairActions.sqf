@@ -46,7 +46,7 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         _nameRemove = format ["Remove %1", _x];
         _nameReplace = format  ["Replace %1", _x];
 
-        _icon = "";
+        _icon = QUOTE(PATHTOF(ui\tire_ca.paa));
 
         _selection = _wheelHitPointSelections select (_wheelHitPoints find _x);
 
@@ -84,25 +84,41 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         _statement_replace = missionNamespace getVariable [_statement_replace, {}];
         _condition_replace = missionNamespace getVariable [_condition_replace, {}];
 
-        [_vehicle, 0, [_nameRemove], _nameRemove, _icon, _selection, _statement_remove, _condition_remove, 2] call EFUNC(interact_menu,addAction);  // @todo class instead of object
-        [_vehicle, 0, [_nameReplace], _nameReplace, _icon, _selection, _statement_replace, _condition_replace, 2] call EFUNC(interact_menu,addAction);
+        [_type, 0, [_nameRemove], _nameRemove, _icon, _selection, _statement_remove, _condition_remove, 2] call EFUNC(interact_menu,addClassAction);
+        [_type, 0, [_nameReplace], _nameReplace, _icon, _selection, _statement_replace, _condition_replace, 2] call EFUNC(interact_menu,addClassAction);
 
     } else {
         // add misc repair action
 
-        /*private ["_selection", "_statement", "_condition"];
+        private ["_name", "_icon", "_selection"];
 
         _name = format ["Repair %1", _x];
 
         _icon = "";
 
-        _statement = {
-            hint "repaired";
+        _selection = "";
+
+        private ["_statement", "_condition"];
+
+        _statement = format [QFUNC(repair_%1), _x];
+        _condition = format [QFUNC(canRepair_%1), _x];
+
+        // compile functions for that hitpoint if no such functions currently exist
+        if (isNil _statement) then {
+            private "_function";
+            _function = compile format [QUOTE([ARR_3(_player,_target,'%1')] call DFUNC(repairVehicle)), _x];
+
+            missionNamespace setVariable [_statement, _function];
+
+            _function = compile format ["alive _target && {_target getHitPointDamage '%1' > 0}", _x];
+
+            missionNamespace setVariable [_condition, _function];
         };
 
-        _condition = {true};
+        _statement = missionNamespace getVariable [_statement, {}];
+        _condition = missionNamespace getVariable [_condition, {}];
 
-        [_vehicle, 0, ["RepairMe"], _name, _icon, "", _statement, _condition, 4] call ace_interact_menu_fnc_addAction;*/
+        [_type, 0, ["ACE_MainActions", QGVAR(Repair), _name], _name, _icon, _selection, _statement, _condition, 4] call EFUNC(interact_menu,addClassAction);
 
     };
 } forEach _hitPoints;
