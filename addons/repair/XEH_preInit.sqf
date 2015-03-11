@@ -2,9 +2,10 @@
 
 ADDON = false;
 
-PREP(canRepair);
+PREP(actionCanRepair);
+PREP(actionRepair);
 PREP(doRepair);
-PREP(repair);
+PREP(getWheelHitPointsWithSelections);
 PREP(repairVehicle);
 PREP(setDamage);
 PREP(setHitPointDamage);

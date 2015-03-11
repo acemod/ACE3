@@ -4,8 +4,8 @@
         class ACE_MainActions { \
             class GVAR(Repair) { \
                 displayName = "$STR_AGM_Repair_Repair"; \
-                condition = QUOTE([ARR_2(_player, _target)] call DFUNC(canRepair)); \
-                statement = QUOTE([ARR_2(_player, _target)] call DFUNC(repair);); \
+                condition = QUOTE([ARR_2(_player, _target)] call DFUNC(actionCanRepair)); \
+                statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionRepair);); \
                 showDisabled = 0; \
                 priority = 2; \
                 icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"; \
