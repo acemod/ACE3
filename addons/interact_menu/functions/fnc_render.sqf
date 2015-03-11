@@ -143,7 +143,7 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
     _foundTarget = true;
     GVAR(actionSelected) = true;
     GVAR(selectedTarget) = (_closest select 0) select 0;
-    GVAR(selectedAction) = (((_closest select 0) select 1) select 0) select 3;
+    GVAR(selectedStatement) = (((_closest select 0) select 1) select 0) select 3;
     _misMatch = false;
     _hoverPath = (_closest select 2);
 
@@ -165,6 +165,14 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
         if(!GVAR(expanded) && diag_tickTime-GVAR(startHoverTime) > 0.25) then {
             GVAR(expanded) = true;
             GVAR(menuDepthPath) = +GVAR(lastPath);
+
+            // Execute the menu action when it ex
+            if(GVAR(actionSelected)) then {
+                this = GVAR(selectedTarget);
+                _player = ACE_Player;
+                _target = GVAR(selectedTarget);
+                [GVAR(selectedTarget), ACE_player] call GVAR(selectedStatement);
+            };
         };
     };
 };
