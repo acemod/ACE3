@@ -185,7 +185,7 @@ if (_selection == "" and
 )) then {
     // random chance to kill AI instead of knocking them out
     if (_unit getVariable [QGVAR(allowUnconscious), ([_unit] call EFUNC(common,isPlayer)) or random 1 > 0.5]) then {
-        hint "unconscious"; // @todo
+        [_unit, true] call FUNC(setUnconscious);
     } else {
         _damageReturn = 1;
     };
