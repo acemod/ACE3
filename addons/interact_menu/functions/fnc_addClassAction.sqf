@@ -27,6 +27,13 @@
 
 EXPLODE_9_PVT(_this,_objectType,_typeNum,_fullPath,_displayName,_icon,_position,_statement,_condition,_distance);
 
+// Ensure the config menu was compiled first
+if (_typeNum == 0) then {
+    [_objectType] call FUNC(compileMenu);
+} else {
+    [_objectType] call FUNC(compileMenuSelfAction);
+};
+
 private ["_varName","_actions","_params","_entry", "_parentLevel", "_foundParentLevel", "_fnc_findFolder"];
 
 _varName = format [[QGVAR(Act_%1), QGVAR(SelfAct_%1)] select _typeNum, _objectType];
