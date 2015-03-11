@@ -27,8 +27,6 @@ if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
 };
 if (isNull _display) exitWith {ERROR("No Display");};
 
-systemChat format ["Showing %1 on %2", GVAR(currentApplicationPage), _display];
-
 //Fade "shell" at night: TODO: find beter amibent light code
 _daylight = (1 - cos (daytime * 360/24)) / 2;
 (_display displayCtrl IDC_MICRODAGRSHELL) ctrlSetTextColor [_daylight, _daylight, _daylight, 1];
