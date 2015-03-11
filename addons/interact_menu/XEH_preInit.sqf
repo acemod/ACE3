@@ -3,6 +3,7 @@
 ADDON = false;
 
 PREP(addAction);
+PREP(addClassAction);
 PREP(compileMenu);
 PREP(compileMenuSelfAction);
 PREP(collectActiveActionTree);
@@ -11,6 +12,7 @@ PREP(keyDownSelfAction);
 PREP(keyUp);
 PREP(keyUpSelfAction);
 PREP(removeAction);
+PREP(removeClassAction);
 PREP(render);
 PREP(renderIcon);
 PREP(renderBaseMenu);
