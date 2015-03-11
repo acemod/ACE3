@@ -16,17 +16,18 @@ if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
     closeDialog 0;
 };
 
-if (GVAR(keyDownSelfAction)) then {
-    GVAR(keyDownSelfAction) = false;
-    ["interactMenuClosed", [1]] call FUNC(localEvent);
-};
-
 if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
     _player = ACE_Player;
     _target = GVAR(selectedTarget);
     [GVAR(selectedTarget), ACE_player] call GVAR(selectedStatement);
 };
+
+if (GVAR(keyDownSelfAction)) then {
+    GVAR(keyDownSelfAction) = false;
+    ["interactMenuClosed", [1]] call FUNC(localEvent);
+};
+
 GVAR(expanded) = false;
 GVAR(lastPath) = [];
 GVAR(menuDepthPath) = [];
