@@ -91,6 +91,9 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         // exit if the hitpoint is in the blacklist, e.g. glasses
         if (_x in IGNORED_HITPOINTS) exitWith {};
 
+        // exit if the hitpoint is virtual
+        if (isText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _x >> "depends")) exitWith {};
+
         // add misc repair action
 
         private ["_name", "_icon", "_selection"];
