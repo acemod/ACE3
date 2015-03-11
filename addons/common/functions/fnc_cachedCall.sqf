@@ -23,7 +23,7 @@ if (((_namespace getVariable [_uid, [-99999]]) select 0) < diag_tickTime) then {
 #ifdef DEBUG_MODE_FULL
     diag_log format ["Calculated result: %1 %2", _namespace, _uid];
 } else {
-	diag_log format ["Cached result    : %1 %2", _namespace, _uid];
+    diag_log format ["Cached result    : %1 %2", _namespace, _uid];
 #endif
 };
 

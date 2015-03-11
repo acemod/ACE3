@@ -143,7 +143,9 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
     _foundTarget = true;
     GVAR(actionSelected) = true;
     GVAR(selectedTarget) = (_closest select 0) select 0;
-    GVAR(selectedStatement) = (((_closest select 0) select 1) select 0) select 3;
+    GVAR(selectedAction) = (_closest select 0) select 1;
+    GVAR(selectedStatement) = ((GVAR(selectedAction)) select 0) select 3;
+
     _misMatch = false;
     _hoverPath = (_closest select 2);
 
@@ -166,8 +168,8 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
             GVAR(expanded) = true;
             GVAR(menuDepthPath) = +GVAR(lastPath);
 
-            // Execute the menu action when it ex
-            if(GVAR(actionSelected)) then {
+            // Execute the current action if it's opening a submenu
+            if (count (GVAR(selectedAction) select 1) > 0) then {
                 this = GVAR(selectedTarget);
                 _player = ACE_Player;
                 _target = GVAR(selectedTarget);
