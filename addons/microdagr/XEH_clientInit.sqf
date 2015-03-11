@@ -36,6 +36,7 @@ if (!hasInterface) exitWith {};
 ["RangerfinderData", {_this call FUNC(recieveRangefinderData)}] call EFUNC(common,addEventHandler);
 
 //Global Variables to default:
+GVAR(gpsPositionASL) = [0,0,0];
 GVAR(mapAutoTrackPosition) = true;
 GVAR(mapShowTexture) = false;
 GVAR(mapPosition) = [-999, -999];

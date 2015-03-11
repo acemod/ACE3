@@ -1,21 +1,21 @@
 /*
  * Author: PabstMirror
- * Takes some arguments and returns something or other.
+ * Handles the draw event from all 3 maps (compass + 2 minimaps)
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Third Optional Argument <BOOL><OPTIONAL>
+ * 0: The Map <CONTROL>
  *
  * Return Value:
- * The return value <BOOL>
+ * Nothing
  *
  * Example:
- * _bool = ["something", player] call ace_common_fnc_imanexample
+ * [compassMap] call ace_microdagr_fnc_mapOnDrawEH
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
+
+PARAMS_1(_theMap);
 
 _theMap = _this select 0;
 _mapSize = (ctrlPosition _theMap) select 3;

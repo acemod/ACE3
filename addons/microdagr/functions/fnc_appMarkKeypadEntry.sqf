@@ -1,22 +1,21 @@
 /*
  * Author: PabstMirror
- * Takes some arguments and returns something or other.
+ * Handles the keypad entries from the "Mark" Application
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Third Optional Argument <BOOL><OPTIONAL>
+ * 0: String version of Keypad entry ["ok","del","1",...] <STRING>
  *
  * Return Value:
- * The return value <BOOL>
+ * Nothing
  *
  * Example:
- * _bool = ["something", player] call ace_common_fnc_imanexample
+ * ["ok"] call ace_microdagr_fnc_appMarkKeypadEntry
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
+private ["_display", "_editText", "_gridPosTuple", "_actualPos"];
 PARAMS_1(_keypadButton);
 
 disableSerialization;

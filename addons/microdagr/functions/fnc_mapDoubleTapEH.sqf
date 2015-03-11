@@ -1,23 +1,26 @@
 /*
  * Author: PabstMirror
- * Takes some arguments and returns something or other.
+ * Handles the double tapping either of the 2 mini-maps
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Third Optional Argument <BOOL><OPTIONAL>
+ * 0: The Map <CONTROL>
+ * 1: MouseButton <NUMBER>
+ * 2: MousePosX <NUMBER>
+ * 3: MousePosY <NUMBER>
  *
  * Return Value:
- * The return value <BOOL>
+ * Nothing
  *
  * Example:
- * _bool = ["something", player] call ace_common_fnc_imanexample
+ * [minimap,0,0.5,0.5] call ace_microdagr_fnc_mapOnDrawEH
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
 PARAMS_4(_theMap,_mouseButton,_xPos,_yPos);
+
+//Only handle LMB
 if (_mouseButton != 0) exitWith {};
 
 _worldPos = _theMap ctrlMapScreenToWorld [_xPos, _yPos];

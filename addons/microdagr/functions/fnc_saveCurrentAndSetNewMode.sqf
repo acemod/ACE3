@@ -1,24 +1,24 @@
 /*
  * Author: PabstMirror
- * Takes some arguments and returns something or other.
+ * Saves the current mode and sets a new mode
+ * Used to backup display when switching display modes 
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Third Optional Argument <BOOL><OPTIONAL>
+ * 0: New Mode <NUMBER>
  *
  * Return Value:
- * The return value <BOOL>
+ * Nothing
  *
  * Example:
- * _bool = ["something", player] call ace_common_fnc_imanexample
+ * [2] call ace_microdagr_fnc_saveCurrentAndSetNewMode
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
+private ["_display", "_theMap", "_mapSize", "_centerPos"];
+
 PARAMS_1(_newMode);
-systemChat format ["Switching App To %1", _newMode];
 
 disableSerialization;
 _display = displayNull;
@@ -31,9 +31,9 @@ if (isNull _display) exitWith {ERROR("No Display");};
 
 if (GVAR(currentApplicationPage) == 2) then {
     _theMap = if (!GVAR(mapShowTexture)) then {_display displayCtrl IDC_MAPPLAIN} else {_display displayCtrl IDC_MAPDETAILS};
-    _pos = ctrlPosition _theMap;
-    _mapSize = _pos select 3;
-    _centerPos = [((_pos select 0) + (_pos select 2) / 2), ((_pos select 1) + (_pos select 3) / 2)];
+    _mapCtrlPos = ctrlPosition _theMap;
+    _mapSize = _mapCtrlPos select 3;
+    _centerPos = [((_mapCtrlPos select 0) + (_mapCtrlPos select 2) / 2), ((_mapCtrlPos select 1) + (_mapCtrlPos select 3) / 2)];
     GVAR(mapPosition) = _theMap ctrlMapScreenToWorld _centerPos;
     GVAR(mapZoom) = (ctrlMapScale _theMap) * _mapSize;
     
@@ -60,4 +60,3 @@ if (_newMode != -1) then {
     GVAR(currentApplicationPage) = _newMode;
     [] call FUNC(showApplicationPage);
 };
-

@@ -1,17 +1,17 @@
 /*
  * Author: PabstMirror
- * Takes some arguments and returns something or other.
+ * Function for the module (handles the map fill level)
  *
  * Arguments:
- * 0:logic <OBJECT>
+ * 0: logic <OBJECT>
  * 1: synced units-not used <ARRAY>
  * 2: Module Activated <BOOL>
  *
  * Return Value:
- * The return value <BOOL>
+ * Nothing
  *
  * Example:
- * _bool = ["something", player] call ace_common_fnc_imanexample
+ * [module, [], true] call ace_microdagr_fnc_moduleMapFill
  *
  * Public: No
  */

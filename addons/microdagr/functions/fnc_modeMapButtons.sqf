@@ -3,21 +3,19 @@
  * Takes some arguments and returns something or other.
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Third Optional Argument <BOOL><OPTIONAL>
+ * 0: String of the map button pressed <STRING>
  *
  * Return Value:
- * The return value <BOOL>
+ * Nothing
  *
  * Example:
- * _bool = ["something", player] call ace_common_fnc_imanexample
+ * ["autotrack"] call ace_microdagr_fnc_modeMapButtons
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
-_mode = _this select 0;
+PARAMS_1(_mode);
 
 [-1] call FUNC(saveCurrentAndSetNewMode); //backup current draw pos/zoom
 

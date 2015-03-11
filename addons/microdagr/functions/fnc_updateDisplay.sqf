@@ -1,21 +1,21 @@
 /*
  * Author: PabstMirror
- * Takes some arguments and returns something or other.
+ * Updates the display (several times a second) called from the pfeh
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Third Optional Argument <BOOL><OPTIONAL>
+ * Nothing
  *
  * Return Value:
- * The return value <BOOL>
+ * Nothing
  *
  * Example:
- * _bool = ["something", player] call ace_common_fnc_imanexample
+ * [] call ace_microdagr_fnc_updateDisplay
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
+
+private ["_display", "_waypoints", "_posString", "_eastingText", "_northingText", "_numASL", "_aboveSeaLevelText", "_compassAngleText", "_targetPosName", "_targetPosLocationASL", "_bearingText", "_rangeText", "_targetName", "_bearing", "_2dDistanceKm", "_SpeedText", "_playerPos2d", "_wpListBox", "_currentIndex", "_wpName", "_wpPos", "_settingListBox"];
 
 disableSerialization;
 _display = displayNull;
@@ -40,7 +40,6 @@ case (APP_MODE_INFODISPLAY): {
             _eastingText = (_posString select [0, ((count _posString)/2)]) + "e";
             _northingText = (_posString select [(count _posString)/2, (count _posString - 1)]) + "n";
         };
-
         (_display displayCtrl IDC_MODEDISPLAY_EASTING) ctrlSetText _eastingText;
         (_display displayCtrl IDC_MODEDISPLAY_NORTHING) ctrlSetText _northingText;
 

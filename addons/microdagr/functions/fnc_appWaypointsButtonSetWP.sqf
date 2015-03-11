@@ -1,28 +1,28 @@
 /*
  * Author: PabstMirror
- * Takes some arguments and returns something or other.
+ * Handles clicking the setWP button from the waypoint application
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Third Optional Argument <BOOL><OPTIONAL>
+ * The "SetWP" button <CONTROL>
  *
  * Return Value:
- * The return value <BOOL>
+ * Nothing
  *
  * Example:
- * _bool = ["something", player] call ace_common_fnc_imanexample
+ * [] call ace_microdagr_fnc_appWaypointsButtonSetWP
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
+private ["_wpListBox", "_newWpIndex", "_waypoints"];
+
 disableSerialization;
-_wpButton = _this select 0;
+PARAMS_1(_wpButton);
+
 _wpListBox = (ctrlParent _wpButton) displayCtrl 144501;
 _newWpIndex = lbCurSel _wpListBox;
 _waypoints = [] call FUNC(deviceGetWaypoints);
-
 
 if ((_newWpIndex < 0) || (_newWpIndex > ((count _waypoints) - 1))) exitWith {
     GVAR(currentWaypoint) = -1;

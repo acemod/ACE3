@@ -1,21 +1,21 @@
 /*
  * Author: PabstMirror
- * Takes some arguments and returns something or other.
+ * Changes the display mode of the microDAGR
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Third Optional Argument <BOOL><OPTIONAL>
+ * 0: Display Mode to show the microDAGR in <NUMBER><OPTIONAL>
  *
  * Return Value:
- * The return value <BOOL>
+ * Nothing
  *
  * Example:
- * _bool = ["something", player] call ace_common_fnc_imanexample
+ * [1] call ace_microdagr_fnc_openDisplay
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
+
+private ["_oldShowMode", "_args", "_pfID", "_player"];
 
 DEFAULT_PARAM(0,_newDisplayShowMode,-1);
 _oldShowMode = GVAR(currentShowMode);
@@ -30,8 +30,6 @@ if ((_newDisplayShowMode == DISPLAY_MODE_DIALOG) && {!([DISPLAY_MODE_DIALOG] cal
 
 GVAR(currentShowMode) = _newDisplayShowMode;
 
-disableSerialization;
-
 //On first-startup
 if (GVAR(currentApplicationPage) == APP_MODE_NULL) then {
     GVAR(currentApplicationPage) = APP_MODE_INFODISPLAY;
@@ -39,13 +37,13 @@ if (GVAR(currentApplicationPage) == APP_MODE_NULL) then {
 };
 
 if (GVAR(currentShowMode) in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
-    
+
     //If Dialog is open, back it up before closing:
     if (dialog && {!isNull (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull])}) then {
         [-1] call FUNC(saveCurrentAndSetNewMode);
         closeDialog 0;
     };
-    
+
     //Close the display:
     (QGVAR(TheRscTitleDisplay) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 } else {
@@ -69,9 +67,8 @@ if (GVAR(currentShowMode) in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
 
 if ((_oldShowMode == DISPLAY_MODE_CLOSED) && {GVAR(currentShowMode) != DISPLAY_MODE_CLOSED}) then {
     //Start a pfeh to update display and handle hiding display
-    
+
     [{
-        disableSerialization;
         PARAMS_2(_args,_pfID);
         EXPLODE_1_PVT(_args,_player);
 
@@ -79,7 +76,7 @@ if ((_oldShowMode == DISPLAY_MODE_CLOSED) && {GVAR(currentShowMode) != DISPLAY_M
             GVAR(currentShowMode) = DISPLAY_MODE_CLOSED;
             [_pfID] call CBA_fnc_removePerFrameHandler;
         } else {
-            GVAR(gpsPositionASL) = getPosAsl player;
+            GVAR(gpsPositionASL) = getPosAsl ace_player;
 
             if (GVAR(currentShowMode) == DISPLAY_MODE_HIDDEN) then {
                 if ([DISPLAY_MODE_DISPLAY] call FUNC(canShow)) then {

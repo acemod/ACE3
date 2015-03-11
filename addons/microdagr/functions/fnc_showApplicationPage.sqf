@@ -1,21 +1,21 @@
 /*
  * Author: PabstMirror
- * Takes some arguments and returns something or other.
+ * Changes the "application page" shown on the microDAGR
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Third Optional Argument <BOOL><OPTIONAL>
+ * Nothing
  *
  * Return Value:
- * The return value <BOOL>
+ * Nothing
  *
  * Example:
- * _bool = ["something", player] call ace_common_fnc_imanexample
+ * [] call ace_microdagr_fnc_showApplicationPage
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
+
+private ["_display", "_daylight", "_theMap", "_mapSize"];
 
 disableSerialization;
 
@@ -35,9 +35,9 @@ _daylight = (1 - cos (daytime * 360/24)) / 2;
 (_display displayCtrl IDC_RANGEFINDERCONNECTEDICON) ctrlShow (GVAR(currentWaypoint) == -2);
 
 //Mode: Info:
-(_display displayCtrl IDC_MODEDISPLAY) ctrlShow (GVAR(currentApplicationPage) == 0);
+(_display displayCtrl IDC_MODEDISPLAY) ctrlShow (GVAR(currentApplicationPage) == APP_MODE_INFODISPLAY);
 
-if (GVAR(currentApplicationPage) == 0) then {
+if (GVAR(currentApplicationPage) == APP_MODE_INFODISPLAY) then {
     (_display displayCtrl IDC_MODEDISPLAY_UTMGRID) ctrlSetText GVAR(mgrsGridZoneDesignator);
     if (GVAR(currentWaypoint) == -1) then {
         (_display displayCtrl IDC_MODEDISPLAY_MODEPOSTIMECG) ctrlShow true;
@@ -54,19 +54,19 @@ if (GVAR(currentApplicationPage) == 0) then {
 };
 
 //Mode: Compass:
-(_display displayCtrl IDC_MODECOMPASS) ctrlShow (GVAR(currentApplicationPage) == 1);
-(_display displayCtrl IDC_MAPCOMPASS) ctrlShow (GVAR(currentApplicationPage) == 1);
+(_display displayCtrl IDC_MODECOMPASS) ctrlShow (GVAR(currentApplicationPage) == APP_MODE_COMPASS);
+(_display displayCtrl IDC_MAPCOMPASS) ctrlShow (GVAR(currentApplicationPage) == APP_MODE_COMPASS);
 
 
 //Mode: Map
-(_display displayCtrl IDC_MODEMAP_MAPTRACKBUTTON) ctrlShow (GVAR(currentApplicationPage) == 2);
-(_display displayCtrl IDC_MODEMAP_MAPZOOMIN) ctrlShow (GVAR(currentApplicationPage) == 2);
-(_display displayCtrl IDC_MODEMAP_MAPZOOMOUT) ctrlShow (GVAR(currentApplicationPage) == 2);
+(_display displayCtrl IDC_MODEMAP_MAPTRACKBUTTON) ctrlShow (GVAR(currentApplicationPage) == APP_MODE_MAP);
+(_display displayCtrl IDC_MODEMAP_MAPZOOMIN) ctrlShow (GVAR(currentApplicationPage) == APP_MODE_MAP);
+(_display displayCtrl IDC_MODEMAP_MAPZOOMOUT) ctrlShow (GVAR(currentApplicationPage) == APP_MODE_MAP);
 
-(_display displayCtrl IDC_MAPPLAIN) ctrlShow ((GVAR(currentApplicationPage) == 2) && {!GVAR(mapShowTexture)});
-(_display displayCtrl IDC_MAPDETAILS) ctrlShow ((GVAR(currentApplicationPage) == 2) && {GVAR(mapShowTexture)});
+(_display displayCtrl IDC_MAPPLAIN) ctrlShow ((GVAR(currentApplicationPage) == APP_MODE_MAP) && {!GVAR(mapShowTexture)});
+(_display displayCtrl IDC_MAPDETAILS) ctrlShow ((GVAR(currentApplicationPage) == APP_MODE_MAP) && {GVAR(mapShowTexture)});
 
-if (GVAR(currentApplicationPage) == 2) then {
+if (GVAR(currentApplicationPage) == APP_MODE_MAP) then {
     _theMap = if (!GVAR(mapShowTexture)) then {_display displayCtrl IDC_MAPPLAIN} else {_display displayCtrl IDC_MAPDETAILS};
     _mapSize = (ctrlPosition _theMap) select 3;
     _theMap ctrlMapAnimAdd [0, (GVAR(mapZoom) / _mapSize), GVAR(mapPosition)];
@@ -79,7 +79,7 @@ if (GVAR(currentApplicationPage) == 2) then {
 };
 
 //Mode: Menu
-(_display displayCtrl IDC_MODEMENU) ctrlShow (GVAR(currentApplicationPage) == 3);
+(_display displayCtrl IDC_MODEMENU) ctrlShow (GVAR(currentApplicationPage) == APP_MODE_MENU);
 
 //Mode: Mark
 if (GVAR(currentApplicationPage) == APP_MODE_MARK) then {
@@ -106,19 +106,18 @@ if (GVAR(currentApplicationPage) == APP_MODE_MARK) then {
 //Mode: Setting
 (_display displayCtrl IDC_MODESETTINGS) ctrlShow (GVAR(currentApplicationPage) == APP_MODE_SETUP);
 
-
 //Button's pushed:
-if (GVAR(currentApplicationPage) == 0) then {
+if (GVAR(currentApplicationPage) == APP_MODE_INFODISPLAY) then {
     (_display displayCtrl IDC_BUTTONBG0) ctrlSetText QUOTE(PATHTOF(images\button_pushedDown.paa));
 } else {
     (_display displayCtrl IDC_BUTTONBG0) ctrlSetText QUOTE(PATHTOF(images\button_pushedUp.paa));
 };
-if (GVAR(currentApplicationPage) == 1) then {
+if (GVAR(currentApplicationPage) == APP_MODE_COMPASS) then {
     (_display displayCtrl IDC_BUTTONBG1) ctrlSetText QUOTE(PATHTOF(images\button_pushedDown.paa));
 } else {
     (_display displayCtrl IDC_BUTTONBG1) ctrlSetText QUOTE(PATHTOF(images\button_pushedUp.paa));
 };
-if (GVAR(currentApplicationPage) == 2) then {
+if (GVAR(currentApplicationPage) == APP_MODE_MAP) then {
     (_display displayCtrl IDC_BUTTONBG2) ctrlSetText QUOTE(PATHTOF(images\button_pushedDown.paa));
 } else {
     (_display displayCtrl IDC_BUTTONBG2) ctrlSetText QUOTE(PATHTOF(images\button_pushedUp.paa));

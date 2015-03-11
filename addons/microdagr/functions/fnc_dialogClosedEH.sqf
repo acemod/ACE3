@@ -1,19 +1,17 @@
 /*
  * Author: PabstMirror
- * Takes some arguments and returns something or other.
+ * Handles the dialog closeing, switches back to display mode
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Third Optional Argument <BOOL><OPTIONAL>
+ * Nothing
  *
  * Return Value:
- * The return value <BOOL>
+ * Nothing
  *
  * Example:
- * _bool = ["something", player] call ace_common_fnc_imanexample
+ * [] call ace_microdagr_fnc_dialogClosedEH
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 

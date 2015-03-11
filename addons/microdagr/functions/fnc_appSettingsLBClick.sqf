@@ -1,23 +1,23 @@
 /*
  * Author: PabstMirror
- * Takes some arguments and returns something or other.
+ * Handles double clicking on the setting listbox
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Third Optional Argument <BOOL><OPTIONAL>
+ * 0: Setting List box (not used) <CONTROL>
+ * 1: Index <NUMBER>
  *
  * Return Value:
- * The return value <BOOL>
+ * Nothing
  *
  * Example:
- * _bool = ["something", player] call ace_common_fnc_imanexample
+ * [settingList, 1] call ace_microdagr_fnc_appSettingsLBClick
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
-_itemClicked = _this select 1;
+disableSerialization;
+PARAMS_2(_control,_itemClicked);
 
 switch (_itemClicked) do {
     case (0): { GVAR(settingUseMils) = ! GVAR(settingUseMils)};

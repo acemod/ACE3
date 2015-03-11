@@ -1,19 +1,19 @@
 /*
  * Author: PabstMirror
- * Takes some arguments and returns something or other.
+ * Adds a waypoint to the "device"
+ * Device saving not implemented yet, just save to player object
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Third Optional Argument <BOOL><OPTIONAL>
+ * 0: Waypoint name <STRING>
+ * 1: Waypoint Position ASL <ARRAY>
  *
  * Return Value:
- * The return value <BOOL>
+ * Nothing
  *
  * Example:
- * _bool = ["something", player] call ace_common_fnc_imanexample
+ * ["Hill 55", [41,324, 12]] call ace_microdagr_fnc_deviceAddWaypoint
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
