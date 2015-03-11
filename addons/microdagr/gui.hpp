@@ -22,7 +22,6 @@ class RscListBox;
 
 class GVAR(RscActiveTextPicture): RscActiveText {
     style = 48;
-    onbuttonclick = "hint 'cen'";
     colorText[] = {1,1,1,1};
     colorActive[] = {1,1,1,1};
     color[] = {1,1,1,1};

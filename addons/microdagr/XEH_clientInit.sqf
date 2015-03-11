@@ -4,30 +4,28 @@
 if (!hasInterface) exitWith {};
 
 //Add Keybinds:
-["ACE3", QGVAR(openGPS), "Open GPS",
+["ACE3", QGVAR(openGPS), (localize "STR_ACE_microdagr_openUnit"),
 {
     // Conditions: canInteract
     _exceptions = [];
     if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
     // Conditions: specific
     if (!("ACE_microDAGR" in (items ace_player))) exitWith {false};
-
-    systemChat "Toggle Button Press";
     [] call FUNC(openDisplay);
     true;
 },
 {false},
 [0xC7, [false, false, false]], false] call cba_fnc_addKeybind;  //Home Key
 
-["ACE3", QGVAR(closeGpS), "Close GPS",
+["ACE3", QGVAR(closeGPS), (localize "STR_ACE_microdagr_closeUnit"),
 {
     // Conditions: canInteract
     _exceptions = [];
     if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
     // Conditions: specific
     if (!("ACE_microDAGR" in (items ace_player))) exitWith {false};
+    if (GVAR(currentShowMode) == DISPLAY_MODE_CLOSED) exitWith {false};
 
-    systemChat "Close Button Press";
     [DISPLAY_MODE_CLOSED] call FUNC(openDisplay);
     true;
 },
@@ -44,6 +42,10 @@ GVAR(mapPosition) = [-999, -999];
 GVAR(mapZoom) = 0.075;
 GVAR(currentApplicationPage) = APP_MODE_NULL;
 GVAR(currentShowMode) = DISPLAY_MODE_CLOSED;
+
+//User Settings
+GVAR(settingUseMils) = false;
+GVAR(settingShowAllWaypointsOnMap) = true;
 
 GVAR(newWaypointPosition) = [];
 GVAR(currentWaypoint) = -1;

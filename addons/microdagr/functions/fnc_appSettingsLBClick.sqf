@@ -17,7 +17,11 @@
  */
 #include "script_component.hpp"
 
-if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
-    [-1] call FUNC(saveCurrentAndSetNewMode);
-    [DISPLAY_MODE_DISPLAY] call FUNC(openDisplay);
+_itemClicked = _this select 1;
+
+switch (_itemClicked) do {
+    case (0): { GVAR(settingUseMils) = ! GVAR(settingUseMils)};
+    case (1): { GVAR(settingShowAllWaypointsOnMap) = ! GVAR(settingShowAllWaypointsOnMap)};
 };
+
+[] call FUNC(updateDisplay);

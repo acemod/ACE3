@@ -27,7 +27,7 @@ class controlsBackground {
     class ClockText: GVAR(RscText) {
         idc = IDC_CLOCKTEXT;
         style = ST_RIGHT;
-        text = "12:00";
+        // text = "12:00";
         x = X_PART(0);
         y = Y_PART(0.2);
         w = W_PART(15);
@@ -149,7 +149,6 @@ class controls {
         onbuttonclick = QUOTE([3] call FUNC(saveCurrentAndSetNewMode));
     };
 
-
     //Mode: Display
     class ModeDisplay: RscControlsGroupNoScrollbars {
         idc = IDC_MODEDISPLAY;
@@ -160,7 +159,7 @@ class controls {
         class Controls {
             class MGRSNew: GVAR(RscText) {
                 idc = -1;
-                text = "MGRS-New"; //--- ToDo: Localize;
+                text = "$STR_ACE_microdagr_controlMGRS";
                 x = W_PART(0.5);
                 y = H_PART(0);
                 w = W_PART(10);
@@ -170,7 +169,7 @@ class controls {
             class WGD: GVAR(RscText) {
                 idc = -1;
                 style = ST_RIGHT;
-                text = "WGD"; //--- ToDo: Localize;
+                text = "$STR_ACE_microdagr_controlWGD";
                 x = W_PART(14.5);
                 y = H_PART(0);
                 w = W_PART(10);
@@ -179,7 +178,7 @@ class controls {
             };
             class UTMGrid: GVAR(RscText) {
                 idc = IDC_MODEDISPLAY_UTMGRID;
-                text = "15T XG";
+                // text = "15T XG";
                 x = W_PART(4.5);
                 y = H_PART(1.5);
                 w = W_PART(10);
@@ -196,7 +195,7 @@ class controls {
             };
             class Easting: GVAR(RscText) {
                 idc = IDC_MODEDISPLAY_EASTING;
-                text = "11994e"; //--- ToDo: Localize;
+                // text = "11994e"; //--- ToDo: Localize;
                 style = ST_RIGHT;
                 x = W_PART(14.5);
                 y = H_PART(1.5);
@@ -206,7 +205,7 @@ class controls {
             };
             class Northing: GVAR(RscText) {
                 idc = IDC_MODEDISPLAY_NORTHING;
-                text = "11994n"; //--- ToDo: Localize;
+                // text = "11994n"; //--- ToDo: Localize;
                 style = ST_RIGHT;
                 x = W_PART(14.5);
                 y = H_PART(3.5);
@@ -216,7 +215,7 @@ class controls {
             };
             class ElevationText: GVAR(RscText) {
                 idc = -1;
-                text = "Elevation:"; //--- ToDo: Localize;
+                text = "$STR_A3_disp_editor_elevation";
                 x = W_PART(0.5);
                 y = H_PART(6);
                 w = W_PART(10);
@@ -225,7 +224,7 @@ class controls {
             };
             class ElevationNum: GVAR(RscText) {
                 idc = IDC_MODEDISPLAY_ELEVATIONNUM;
-                text = "+000232 MSL"; //--- ToDo: Localize;
+                // text = "+000232 MSL"; //--- ToDo: Localize;
                 style = ST_RIGHT;
                 x = W_PART(12);
                 y = H_PART(6);
@@ -251,7 +250,7 @@ class controls {
             };
             class HeadingNum: GVAR(RscText) {
                 idc = IDC_MODEDISPLAY_HEADINGNUM;
-                text = "097.2oM"; //--- ToDo: Localize;
+                // text = "097.2oM"; //--- ToDo: Localize;
                 x = W_PART(4);
                 y = H_PART(8.5);
                 w = W_PART(10);
@@ -260,7 +259,7 @@ class controls {
             };
             class SpeedNum: GVAR(RscText) {
                 idc = IDC_MODEDISPLAY_SPEEDNUM;
-                text = "34kph"; //--- ToDo: Localize;
+                // text = "34kph"; //--- ToDo: Localize;
                 style = ST_RIGHT;
                 x = W_PART(14.5);
                 y = H_PART(8.5);
@@ -324,7 +323,7 @@ class controls {
                     };
                     class TrackNum: GVAR(RscText) {
                         idc = IDC_MODEDISPLAY_TRACKNUM;
-                        text = "097.2oM"; //--- ToDo: Localize;
+                        // text = "097.2oM"; //--- ToDo: Localize;
                         x = W_PART(4);
                         y = H_PART(0.5);
                         w = W_PART(10);
@@ -333,7 +332,7 @@ class controls {
                     };
                     class TargetRangeText: GVAR(RscText) {
                         idc = -1;
-                        text = "Range: "; //--- ToDo: Localize;
+                        text = "$STR_ACE_microdagr_controlRange";
                         x = W_PART(0.5);
                         y = H_PART(2);
                         w = W_PART(7.5);
@@ -342,7 +341,7 @@ class controls {
                     };
                     class TargetRangeNum: GVAR(RscText) {
                         idc = IDC_MODEDISPLAY_TARGETRANGENUM;
-                        text = "1250 m";
+                        // text = "1250 m";
                         style = ST_RIGHT;
                         x = W_PART(14.5);
                         y = H_PART(2);
@@ -352,7 +351,7 @@ class controls {
                     };
                     class TargetElevationText: GVAR(RscText) {
                         idc = -1;
-                        text = "Elevation:"; //--- ToDo: Localize;
+                        text = "$STR_A3_disp_editor_elevation"; //--- ToDo: Localize;
                         x = W_PART(0.5);
                         y = H_PART(3.5);
                         w = W_PART(10);
@@ -361,7 +360,7 @@ class controls {
                     };
                     class TargetElevationNum: GVAR(RscText) {
                         idc = IDC_MODEDISPLAY_TARGETELEVATIONNUM;
-                        text = "+000232 MSL"; //--- ToDo: Localize;
+                        // text = "+000232 MSL"; //--- ToDo: Localize;
                         style = ST_RIGHT;
                         x = W_PART(12);
                         y = H_PART(3.5);
@@ -371,7 +370,7 @@ class controls {
                     };
                     class TargetName: GVAR(RscText) {
                         idc = IDC_MODEDISPLAY_TARGETNAME;
-                        text = "43243 33432"; //--- ToDo: Localize;
+                        // text = "43243 33432"; //--- ToDo: Localize;
                         style = ST_CENTER;
                         x = W_PART(1);
                         y = H_PART(5.5);
@@ -396,7 +395,7 @@ class controls {
             class CompassHeader: GVAR(RscText) {
                 idc = -1;
                 style = ST_CENTER;
-                text = "Compass Direction";
+                text = "$STR_ACE_microdagr_compasDirection";
                 x = W_PART(0);
                 y = H_PART(0);
                 w = W_PART(25);
@@ -471,14 +470,6 @@ class controls {
         w = W_PART(25);
         h = H_PART(19);
         class Controls {
-            // class MenuBackground: RscPicture {
-            // idc = -1;
-            // text = "#(argb,8,8,3)color(0,0,0,1)";
-            // x = W_PART(0.1);
-            // y = H_PART(0);
-            // w = W_PART(24.8);
-            // h = H_PART(25);
-            // };
             class ButtonTL: GVAR(RscActiveTextPicture) {
                 idc = -1;
                 text = QUOTE(PATHTOF(images\icon_menuMark.paa));
@@ -509,7 +500,7 @@ class controls {
             class TextTL: GVAR(RscText) {
                 idc = -1;
                 style = ST_CENTER;
-                text = "Mark"; //--- ToDo: Localize;
+                text = "$STR_ACE_microdagr_menuMark";
                 x = W_PART(0);
                 y = H_PART(7.5);
                 w = W_PART(14);
@@ -517,16 +508,17 @@ class controls {
                 sizeEx = H_PART(1.2);
             };
             class TextTR: TextTL {
-                text = "Waypoints"; //--- ToDo: Localize;
+                text = "$STR_ACE_microdagr_menuWaypoints";
                 x = W_PART(11);
                 y = H_PART(7.5);
             };
             class TextBL: TextTL {
-                text = "Connect To"; //--- ToDo: Localize;
+                text = "$STR_ACE_microdagr_menuConnectTo";
                 x = W_PART(0);
                 y = H_PART(16.5);
-            };            class TextBR: TextTL {
-                text = "Settings"; //--- ToDo: Localize;
+            };           
+            class TextBR: TextTL {
+                text = "$STR_ACE_microdagr_menuSettings";
                 x = W_PART(11);
                 y = H_PART(16.5);
             };
@@ -592,7 +584,7 @@ class controls {
                 onbuttonclick = QUOTE(['2'] call FUNC(appMarkKeypadEntry));
             };
             class Keypad3: Keypad1 {
-                text = "2";
+                text = "3";
                 x = W_PART(16);
                 onbuttonclick = QUOTE(['3'] call FUNC(appMarkKeypadEntry));
             };
@@ -657,19 +649,23 @@ class controls {
                 sizeEx = H_PART(1.5);
                 sizeEx2 = H_PART(1.5);
                 rowHeight = H_PART(1.75);
-                colorText[] = {1,1,1,1};
-                colorBackground[] = {0.05,0.05,0.05,1};
-                itemBackground[] = {1,1,1,0.2};
+                colorText[] = {0.75,0.75,0.75,1};
+                colorSelect[] = {0.75,0.75,0.75,1};
+                colorSelect2[] = {0.75,0.75,0.75,1};
+                colorBackground[] = {0,0,0,1};
+                colorSelectBackground[] = {0.3,0.3,0.3,1};
+                colorSelectBackground2[] = {0.3,0.3,0.3,1};
+
                 itemSpacing = 0.001;
-                x = W_PART(0.5);
+                x = W_PART(0.2);
                 y = H_PART(0.5);
-                w = W_PART(24);
+                w = W_PART(24.6);
                 h = H_PART(16.5);
             };
 
             class ButtonSetWP: RscButton {
                 idc = -1;
-                text = "SetWP";
+                text = "$STR_ACE_microdagr_waypointsSet";
                 x = W_PART(1);
                 y = H_PART(17);
                 w = W_PART(7);
@@ -684,16 +680,35 @@ class controls {
                 onbuttonclick = QUOTE(_this call FUNC(appWaypointsButtonSetWP));
             };
             class ButtonAdd: ButtonSetWP {
-                text = "Add";
+                text = "$STR_ACE_microdagr_waypointsAdd";
                 x = W_PART(9);
                 onbuttonclick = QUOTE([APP_MODE_MARK] call FUNC(saveCurrentAndSetNewMode));
             };
             class ButtonDelete: ButtonSetWP {
-                text = "Delete";
+                text = "$STR_ACE_microdagr_waypointsDelete";
                 x = W_PART(17);
                 onbuttonclick = QUOTE(_this call FUNC(appWaypointsButtonDeleteWP));
             };
         };
+    };
+
+    class SettingsMenu: RscListBox {
+        idc = IDC_MODESETTINGS;
+        x = X_PART(0.2);
+        y = Y_PART(2);
+        w = W_PART(24.6);
+        h = H_PART(19);
+        onLBDblClick = QUOTE(_this call FUNC(appSettingsLBClick));
+        sizeEx = H_PART(1.5);
+        sizeEx2 = H_PART(1.5);
+        rowHeight = H_PART(1.75);
+        itemSpacing = 0.001;
+        colorText[] = {0.75,0.75,0.75,1};
+        colorSelect[] = {0.75,0.75,0.75,1};
+        colorSelect2[] = {0.75,0.75,0.75,1};
+        colorBackground[] = {0.05,0.05,0.05,1};
+        colorSelectBackground[] = {0.05,0.05,0.05,1};
+        colorSelectBackground2[] = {0.05,0.05,0.05,1};
     };
 
     class ButtonBG0: RscPicture {

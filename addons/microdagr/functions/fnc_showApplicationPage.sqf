@@ -90,10 +90,10 @@ if (GVAR(currentApplicationPage) == APP_MODE_MARK) then {
 
 
     if ((count GVAR(newWaypointPosition)) == 0) then {
-        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText format ["Enter Grid Cords:"];
+        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText (localize "STR_ACE_microdagr_wpEnterCords");
         (_display displayCtrl IDC_MODEMARK_CORDSEDIT) ctrlSetText "";
     } else {
-        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText format ["Name of [%1]", mapGridPosition GVAR(newWaypointPosition)];
+        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText format [(localize "STR_ACE_microdagr_wpEnterName"), mapGridPosition GVAR(newWaypointPosition)];
         (_display displayCtrl IDC_MODEMARK_CORDSEDIT) ctrlSetText format ["[%1]", mapGridPosition GVAR(newWaypointPosition)];
     };
     ctrlSetFocus (_display displayCtrl IDC_MODEMARK_CORDSEDIT);
@@ -104,7 +104,9 @@ if (GVAR(currentApplicationPage) == APP_MODE_MARK) then {
 
 //Mode: Waypoints
 (_display displayCtrl IDC_MODEWAYPOINTS) ctrlShow (GVAR(currentApplicationPage) == APP_MODE_WAYPOINTS);
-systemChat format ["WP %1 on %2", (GVAR(currentApplicationPage) == APP_MODE_WAYPOINTS), _display];
+
+//Mode: Setting
+(_display displayCtrl IDC_MODESETTINGS) ctrlShow (GVAR(currentApplicationPage) == APP_MODE_SETUP);
 
 
 //Button's pushed:

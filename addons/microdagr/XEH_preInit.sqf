@@ -4,6 +4,7 @@ ADDON = false;
 
 PREP(appMarkKeypadEntry);
 PREP(appMenuButtonConnectRangefinder);
+PREP(appSettingsLBClick);
 PREP(appWaypointsButtonDeleteWP);
 PREP(appWaypointsButtonSetWP);
 PREP(canShow);

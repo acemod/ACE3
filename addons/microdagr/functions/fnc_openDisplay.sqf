@@ -38,11 +38,7 @@ if (GVAR(currentApplicationPage) == APP_MODE_NULL) then {
     GVAR(mapPosition) = getPos ace_player;
 };
 
-systemChat format ["%1 to %2 from %3", _oldShowMode, GVAR(currentShowMode), _this];
-
-
 if (GVAR(currentShowMode) in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
-    systemChat "Closing";
     
     //If Dialog is open, back it up before closing:
     if (dialog && {!isNull (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull])}) then {
@@ -54,7 +50,6 @@ if (GVAR(currentShowMode) in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
     (QGVAR(TheRscTitleDisplay) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 } else {
     if (GVAR(currentShowMode) == DISPLAY_MODE_DISPLAY) then {
-        systemChat "Opening Display";
         //If Dialog is open, back it up before closing:
         if (dialog && {!isNull (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull])}) then {
             [-1] call FUNC(saveCurrentAndSetNewMode);
@@ -63,7 +58,6 @@ if (GVAR(currentShowMode) in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
         //Open the display:
         (QGVAR(TheRscTitleDisplay) call BIS_fnc_rscLayer) cutRsc [QGVAR(TheRscTitleDisplay), "PLAIN", 0, true];
     } else {
-        systemChat "Opening Dialog";
         //Close the display:
         (QGVAR(TheRscTitleDisplay) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
         //Open the dialog:
