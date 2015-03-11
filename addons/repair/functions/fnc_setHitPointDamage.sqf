@@ -23,8 +23,10 @@ _hitPointDamage = _this select 2;
 if !(local _vehicle) exitWith {};
 
 // get all valid hitpoints
-private "_hitPoints";
+private ["_hitPoints", "_hitPointsWithSelections"];
+
 _hitPoints = [_vehicle] call EFUNC(common,getHitpoints);
+_hitPointsWithSelections = [_vehicle] call EFUNC(common,getHitpointsWithSelections) select 0;
 
 // exit if the hitpoint is not valid
 if !(_hitPoint in _hitPoints) exitWith {};
@@ -44,8 +46,10 @@ _damageOld = damage _vehicle;
 
 _hitPointDamageSumOld = 0;
 {
-    _hitPointDamageSumOld = _hitPointDamageSumOld + _x;
-} forEach _hitPointDamages;
+    if (!(_x in IGNORED_HITPOINTS) && {!isText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")}) then {
+        _hitPointDamageSumOld = _hitPointDamageSumOld + (_hitPointDamages select (_hitPoints find _x));
+    };
+} forEach _hitPointsWithSelections;
 
 // set new damage in array
 _hitPointDamages set [_hitPoints find _hitPoint, _hitPointDamage];
@@ -55,8 +59,10 @@ private "_hitPointDamageSumNew";
 
 _hitPointDamageSumNew = 0;
 {
-    _hitPointDamageSumNew = _hitPointDamageSumNew + _x;
-} forEach _hitPointDamages;
+    if (!(_x in IGNORED_HITPOINTS) && {!isText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")}) then {
+        _hitPointDamageSumNew = _hitPointDamageSumNew + (_hitPointDamages select (_hitPoints find _x));
+    };
+} forEach _hitPointsWithSelections;
 
 // calculate new strctural damage
 private "_damageNew";
