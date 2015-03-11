@@ -3,24 +3,28 @@
  * When interact_menu starts rendering (from "interact_keyDown" event)
  *
  * Arguments:
- * Nothing
+ * Interact Menu Type (0 - world, 1 - self) <NUMBER>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * [] call ace_logistics_wirecutter_fnc_interactEH
+ * [0] call ace_logistics_wirecutter_fnc_interactEH
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
+PARAMS_1(_interactionType);
+
+if (_interactionType != 0) exitWith {};
 
 //for performance only do stuff it they have a wirecutter item
 //(if they somehow get one durring keydown they'll just have to reopen)
 if (!("ACE_wirecutter" in (items ace_player))) exitWith {};
 
 [{
+    private ["_fncStatement", "_attachedFence", "_fncCondition", "_helper"];
     PARAMS_2(_args,_pfID);
     EXPLODE_3_PVT(_args,_setPosition,_addedHelpers,_fencesHelped);
 

@@ -20,6 +20,6 @@ if(!GVAR(keyDown)) then {
     GVAR(keyDown) = true;
     GVAR(keyDownTime) = diag_tickTime;
 
-    ["interact_keyDown", []] call EFUNC(common,localEvent);
+    ["interactMenuOpened", [0]] call EFUNC(common,localEvent);
 };
 true

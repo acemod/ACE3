@@ -2,4 +2,4 @@
 
 if (!hasInterface) exitWith {};
 
-["interact_keyDown", {_this call FUNC(interactEH)}] call EFUNC(common,addEventHandler);
+["interactMenuOpened", {_this call FUNC(interactEH)}] call EFUNC(common,addEventHandler);
