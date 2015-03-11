@@ -27,7 +27,7 @@ _items = _this select 4;
 if (count _items == 0) exitwith {};
 
 if ([_caller, _target, _items] call FUNC(useItems)) then {
-    [[_target, _className], QUOTE(DFUNC(treatmentMedicationLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    [[_target, _className], QUOTE(DFUNC(treatmentAdvanced_medicationLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
     {
         if (_x != "") then {
             [_target, _x] call FUNC(addToTriageCard);

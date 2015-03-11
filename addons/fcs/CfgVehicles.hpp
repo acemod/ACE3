@@ -28,7 +28,7 @@ class CfgVehicles {
                 displayName = $STR_ACE_FCS_ResetFCS;
                 enableInside = 1;
                 condition = QUOTE(call FUNC(canResetFCS));
-                statement = QUOTE([ARR_2(_vehicle,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
+                statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
                 priority = 1;
                 icon = "";
@@ -42,7 +42,7 @@ class CfgVehicles {
                 displayName = $STR_ACE_FCS_ResetFCS;
                 enableInside = 1;
                 condition = QUOTE(call FUNC(canResetFCS));
-                statement = QUOTE([ARR_2(_vehicle,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
+                statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
                 priority = 1;
                 icon = "";

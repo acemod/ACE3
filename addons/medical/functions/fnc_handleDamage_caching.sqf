@@ -35,13 +35,23 @@ if (_selectionName in _hitSelections) then {
     _newDamage = _damage - (_unit getHitPointDamage (_hitPoints select (_hitSelections find _selectionName)));
 };
 
+
 // we want to move damage to another selection; have to do it ourselves.
 // this is only the case for limbs, so this will not impact the killed EH.
 if (_selectionName != (_this select 1)) then {
     _unit setHitPointDamage [_hitPoints select (_hitSelections find _selectionName), _damage + _newDamage];
     _newDamage = 0;
 };
+//  ??????
 _damage = _damage + _newDamage;
+
+// Check for vehicle crash
+if (vehicle _unit != _unit && !(vehicle _unit isKindOf "StaticWeapon") && {isNull _source} && {_projectile == ""} && {_selectionName == ""}) then {
+    if (missionNamespace getvariable [QGVAR(allowVehicleCrashDamage), true]) then {
+        _selectionName = _hitSelections select (floor(random(count _hitSelections)));
+        _projectile = "vehiclecrash";
+    };
+};
 
 // From AGM medical:
 // Exclude falling damage to everything other than legs; reduce structural damage.

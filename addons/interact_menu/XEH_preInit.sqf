@@ -3,6 +3,7 @@
 ADDON = false;
 
 PREP(addAction);
+PREP(addClassAction);
 PREP(compileMenu);
 PREP(compileMenuSelfAction);
 PREP(collectActiveActionTree);
@@ -11,6 +12,7 @@ PREP(keyDownSelfAction);
 PREP(keyUp);
 PREP(keyUpSelfAction);
 PREP(removeAction);
+PREP(removeClassAction);
 PREP(render);
 PREP(renderIcon);
 PREP(renderBaseMenu);
@@ -23,7 +25,8 @@ GVAR(keyDownTime) = 0;
 GVAR(lastTime) = diag_tickTime;
 GVAR(rotationAngle) = 0;
 
-GVAR(selectedAction) = {};
+GVAR(selectedAction) = [[],[]];
+GVAR(selectedStatement) = {};
 GVAR(actionSelected) = false;
 GVAR(selectedTarget) = objNull;
 
