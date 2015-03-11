@@ -161,3 +161,12 @@ _vehicle setFuel _fuelLevel;
 
 ["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
 ["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
+
+["lockVehicle", {
+    _this setVariable [QGVAR(lockStatus), locked _this];
+    _this lock 2
+}] call FUNC(addEventhandler);
+
+["unlockVehicle", {
+    _this lock (_this getVariable [QGVAR(lockStatus), locked _this])
+}] call FUNC(addEventhandler);
