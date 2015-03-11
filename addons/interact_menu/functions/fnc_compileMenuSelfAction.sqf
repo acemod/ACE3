@@ -3,7 +3,7 @@
  * Compile the self action menu from config for an object's class
  *
  * Argument:
- * 0: Object <OBJECT>
+ * 0: Object or class name <OBJECT> or <STRING>
  *
  * Return value:
  * None
@@ -12,10 +12,13 @@
  */
 #include "script_component.hpp";
 
-EXPLODE_1_PVT(_this,_object);
+EXPLODE_1_PVT(_this,_target);
 
 private ["_objectType","_actionsVarName"];
-_objectType = typeOf _object;
+_objectType = _target;
+if (typeName _target == "OBJECT") then {
+    _objectType = typeOf _target;
+};
 _actionsVarName = format [QGVAR(SelfAct_%1), _objectType];
 
 // Exit if the action menu is already compiled for this class
