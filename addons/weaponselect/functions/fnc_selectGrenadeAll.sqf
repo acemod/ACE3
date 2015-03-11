@@ -36,9 +36,10 @@ if (_nextMuzzle != "") then {
   // There is a no muzzle with magazines --> select nothing
   GVAR(CurrentGrenadeMuzzleFrag) = ""; GVAR(CurrentGrenadeMuzzleOther) = "";
 
-  _text = [localize "STR_ACE_WeaponSelect_NoGrenadesLeft", [1,0,0]] call EFUNC(common,stringToColoredText);
-  [composeText [lineBreak, _text]] call EFUNC(common,displayTextStructured);
-
+  if (GVAR(DisplayText)) then {
+    _text = [localize "STR_ACE_WeaponSelect_NoGrenadesLeft", [1,0,0]] call EFUNC(common,stringToColoredText);
+    [composeText [lineBreak, _text]] call EFUNC(common,displayTextStructured);
+  };
 };
 
 if (_nextMuzzle in GVAR(FragMuzzles)) then {
