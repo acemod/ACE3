@@ -2,7 +2,32 @@
 <!-- Edited with tabler - 2014-12-21 -->
 <Project name="ACE">
     <Package name="repair">
-        <Key ID="STR_AGM_Repair_Repair">
+        <Key ID="STR_ACE_Repair_SpareTrack">
+            <English>Spare Track</English>
+            <German>Ersatzkette</German>
+            <Spanish>Cadena de repuesto</Spanish>
+            <French>Chenille de réserve</French>
+            <Polish>Zapasowa gąsienica</Polish>
+            <Czech>Náhradní pásy</Czech>
+            <Portuguese>Lagarta Reserva</Portuguese>
+            <Italian>Cingolo di scorta</Italian>
+            <Hungarian>Pót lánctalp</Hungarian>
+            <Russian>Запасная гусеница</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_SpareWheel">
+            <English>Spare Wheel</English>
+            <German>Ersatzreifen</German>
+            <Spanish>Rueda de repuesto</Spanish>
+            <French>Roue de secours</French>
+            <Polish>Zapasowe koło</Polish>
+            <Czech>Náhradní Kolo</Czech>
+            <Portuguese>Roda Reserva</Portuguese>
+            <Italian>Ruota di scorta</Italian>
+            <Hungarian>Pótkerék</Hungarian>
+            <Russian>Запасное колесо</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Repair_Repair">
             <English>Repair &gt;&gt;</English>
             <German>Reparieren &gt;&gt;</German>
             <Spanish>Reparación &gt;&gt;</Spanish>

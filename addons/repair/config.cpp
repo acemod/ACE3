@@ -13,6 +13,8 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+
+#include "CfgVehicleClasses.hpp"
 #include "CfgVehicles.hpp"
 
 class ACE_Settings {
