@@ -12,13 +12,18 @@
  */
 #include "script_component.hpp"
 
-GVAR(keyDown) = false;
 if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
     _player = ACE_Player;
     _target = GVAR(selectedTarget);
-    [GVAR(selectedTarget), ACE_player] call GVAR(selectedAction);
+    [GVAR(selectedTarget), ACE_player] call GVAR(selectedStatement);
 };
+
+if (GVAR(keyDown)) then {
+    GVAR(keyDown) = false;
+    ["interactMenuClosed", [0]] call FUNC(localEvent);
+};
+
 GVAR(expanded) = false;
 GVAR(lastPath) = [];
 GVAR(menuDepthPath) = [];

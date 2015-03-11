@@ -24,7 +24,7 @@ if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
 private "_recurseFnc";
 _recurseFnc = {
     private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_selection", "_condition", "_showDisabled",
-            "_enableInside", "_children", "_entry", "_entryCfg", "_fullPath"];
+            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_fullPath"];
     EXPLODE_2_PVT(_this,_actionsCfg,_parentPath);
     _actions = [];
 
@@ -48,6 +48,7 @@ _recurseFnc = {
             _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
             _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
             _canCollapse = (getNumber (_entryCfg >> "canCollapse")) > 0;
+            _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
 
             _fullPath = (+ _parentPath);
             _fullPath pushBack (configName _entryCfg);
@@ -63,7 +64,7 @@ _recurseFnc = {
                             _statement,
                             _condition,
                             _distance,
-                            [_showDisabled,_enableInside,_canCollapse],
+                            [_showDisabled,_enableInside,_canCollapse,_runOnHover],
                             _fullPath
                         ],
                         _children

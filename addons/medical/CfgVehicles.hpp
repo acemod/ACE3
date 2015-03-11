@@ -347,6 +347,7 @@ class CfgVehicles {
 
         class ACE_Actions {
             class ACE_Head {
+                runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
 
                 class Bandage_Head {
@@ -406,6 +407,7 @@ class CfgVehicles {
                     displayName = "Medical";
                     distance = 5.0;
                     condition = "true";
+                    runOnHover = 1;
                     statement = QUOTE([ARR_3(_target, true, 1)] call DFUNC(displayPatientInformation));
                     showDisabled = 1;
                     priority = 2;
@@ -481,6 +483,7 @@ class CfgVehicles {
                 };
             };
             class ACE_ArmLeft {
+                runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 2)] call DFUNC(displayPatientInformation));
 
                 class Bandage_LeftArm {
@@ -602,6 +605,7 @@ class CfgVehicles {
                 };
             };
             class ACE_ArmRight {
+                runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 3)] call DFUNC(displayPatientInformation));
                 class Bandage_RightArm {
                     displayName = "Bandage Right Arm";
@@ -723,6 +727,7 @@ class CfgVehicles {
 
             };
             class ACE_LegLeft {
+                runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 4)] call DFUNC(displayPatientInformation));
                 class Bandage_LeftLeg {
                     displayName = "Bandage Left Leg";
@@ -834,6 +839,7 @@ class CfgVehicles {
                 };
             };
             class ACE_LegRight {
+                runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
                 class Bandage_RightLeg {
                     displayName = "Bandage Right Leg";

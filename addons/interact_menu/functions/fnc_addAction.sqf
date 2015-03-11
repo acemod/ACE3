@@ -13,6 +13,7 @@
  * 6: Statement <CODE>
  * 7: Condition <CODE>
  * 8: Distance <NUMBER>
+ * 9: Other parameters <ARRAY> (Optional)
  *
  * Return value:
  * The entry full path, which can be used to remove the entry, or add children entries <ARRAY>.
@@ -26,7 +27,7 @@
 
 EXPLODE_9_PVT(_this,_object,_typeNum,_fullPath,_displayName,_icon,_position,_statement,_condition,_distance);
 
-private ["_varName","_actions"];
+private ["_varName","_actions","_params","_entry"];
 
 _varName = [QGVAR(actions),QGVAR(selfActions)] select _typeNum;
 _actions = _object getVariable [_varName, []];
@@ -34,7 +35,11 @@ if((count _actions) == 0) then {
     _object setVariable [_varName, _actions];
 };
 
-private "_entry";
+_params = [false,false,false,false];
+if (count _this > 9) then {
+    _params = _this select 9;
+};
+
 _entry = [
             [
                 _displayName,
@@ -43,7 +48,7 @@ _entry = [
                 _statement,
                 _condition,
                 _distance,
-                [false,false,false],
+                _params,
                 + _fullPath
             ],
             []
