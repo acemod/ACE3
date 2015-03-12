@@ -13,9 +13,4 @@ if (_distance < -999) exitWith {
     [-1000, -1000]    // return
 };
 
-
-//Send Data to connected GPS
-["RangerfinderData", [_distance, _azimuth, _inclination]] call EFUNC(common,localEvent);
-
-
 [sin _inclination * _distance, cos _inclination * _distance]
