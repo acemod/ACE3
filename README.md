@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/KoffeinFlummi/ACE3/new-readme/extras/logo.png?token=ACU2mWeJUeshQIVc52XPoNiPpc3PzTauks5Uv24rwA%3D%3D" height="150px" /><br />
+  <img style="heigth: 150px" src="https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" height="150" /><br />
   <a href="https://github.com/KoffeinFlummi/ACE3/releases">
     <img src="http://img.shields.io/badge/release-3.0-green.svg?style=flat" alt="ACE version">
   </a>
@@ -15,7 +15,7 @@
 </p>
 <p align="center"><sup><strong>Requires the latest version of <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a> | <a href="#">BIF thread</a></strong></sup></p>
 
-**ACE 3** is a joint effort by the teams behind **ACE 2**, **AGM** and **CSE** to improve the realism and authenticity of Arma 3.
+**ACE 3** is a joint effort by the teams behind **ACE2**, **AGM** and **CSE** to improve the realism and authenticity of Arma 3.
 
 This mod is entirely **open-source**, and everyone is free to propose changes or maintain their own, customized version as long as they make their changes open to the public in accordance with the GNU General Public License (for more information check the license file attached to this project).
 
