@@ -16,6 +16,8 @@
  *
  */
 
+x=_this;
+ 
 #include "script_component.hpp"
 
 private ["_unit", "_weapon", "_ammo", "_bullet", "_airFriction", "_index"];
