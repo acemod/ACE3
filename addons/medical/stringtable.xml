@@ -556,6 +556,18 @@
                 <Russian>%1 проводит вам интубацию</Russian>
                 <Spanish>%1 te está intubando</Spanish>
             </Key>
+            <Key ID="STR_ACE_MEDICAL_CARRY">
+                <Original>Carry Patient</Original>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_DRAG">
+                <Original>Drag Patient</Original>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_LOAD">
+                <Original>Load Patient</Original>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_UNLOAD">
+                <Original>Unload Patient</Original>
+            </Key>
         </Container>
 
     </Package>
