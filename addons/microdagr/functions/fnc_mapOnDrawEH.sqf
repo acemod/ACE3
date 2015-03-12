@@ -51,11 +51,11 @@ if (GVAR(currentApplicationPage) == 1) then {
         _theMap ctrlMapAnimAdd [0, (GVAR(mapZoom)/_mapSize), GVAR(gpsPositionASL)];
         ctrlMapAnimCommit _theMap;
     };
-    _size = 32 * _mapSize;
+    _size = 48 * _mapSize;
     _theMap drawIcon [QUOTE(PATHTO_R(images\icon_self.paa)), [0.533,0.769,0.76,0.75], GVAR(gpsPositionASL), _size, _size, (getDir ace_player), '', 0 ];
 
     if (GVAR(settingShowAllWaypointsOnMap)) then {
-        _size = 24 * _mapSize;
+        _size = 32 * _mapSize;
         {
             EXPLODE_2_PVT(_x,_wpName,_wpPos);
             _alpha = if (_forEachIndex == GVAR(currentWaypoint)) then {1} else {0.5};
