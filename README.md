@@ -1,15 +1,17 @@
 <p align="center">
-  <img style="heigth: 150px" src="https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" height="150" /><br />
+  <img src="https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" height="80" />
+</p>
+<p align="center">
   <a href="https://github.com/KoffeinFlummi/ACE3/releases">
     <img src="http://img.shields.io/badge/release-3.0-green.svg?style=flat" alt="ACE version">
   </a>
-    <a href="#">
+  <a href="#">
     <img src="http://img.shields.io/badge/download-22_MB-blue.svg?style=flat" alt="ACE download">
   </a>
-    <a href="https://github.com/KoffeinFlummi/ACE3/issues">
+  <a href="https://github.com/KoffeinFlummi/ACE3/issues">
     <img src="http://img.shields.io/github/issues/KoffeinFlummi/ACE3.svg?style=flat" alt="ACE issues">
   </a>
-    <a href="https://github.com/KoffeinFlummi/ACE3/blob/master/LICENSE">
+  <a href="https://github.com/KoffeinFlummi/ACE3/blob/master/LICENSE">
     <img src="http://img.shields.io/badge/license-GPLv2-red.svg?style=flat" alt="ACE license">
   </a>
 </p>
