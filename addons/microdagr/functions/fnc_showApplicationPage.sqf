@@ -106,7 +106,7 @@ if (GVAR(currentApplicationPage) == APP_MODE_MARK) then {
 //Mode: Setting
 (_display displayCtrl IDC_MODESETTINGS) ctrlShow (GVAR(currentApplicationPage) == APP_MODE_SETUP);
 
-//Button's pushed:
+//Buttons pushed:
 if (GVAR(currentApplicationPage) == APP_MODE_INFODISPLAY) then {
     (_display displayCtrl IDC_BUTTONBG0) ctrlSetText QUOTE(PATHTOF(images\button_pushedDown.paa));
 } else {

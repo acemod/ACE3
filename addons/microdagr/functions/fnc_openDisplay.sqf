@@ -28,7 +28,7 @@ if (_newDisplayShowMode == -1) then {
 if ((_newDisplayShowMode == DISPLAY_MODE_DISPLAY) && {!([DISPLAY_MODE_DISPLAY] call FUNC(canShow))}) then {_newDisplayShowMode = DISPLAY_MODE_HIDDEN};
 if ((_newDisplayShowMode == DISPLAY_MODE_DIALOG) && {!([DISPLAY_MODE_DIALOG] call FUNC(canShow))}) then {_newDisplayShowMode = DISPLAY_MODE_HIDDEN};
 
-GVAR(currentShowMode) = _newDisplayShowMode;
+
 
 //On first-startup
 if (GVAR(currentApplicationPage) == APP_MODE_NULL) then {
@@ -36,7 +36,7 @@ if (GVAR(currentApplicationPage) == APP_MODE_NULL) then {
     GVAR(mapPosition) = getPos ace_player;
 };
 
-if (GVAR(currentShowMode) in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
+if (_newDisplayShowMode in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
 
     //If Dialog is open, back it up before closing:
     if (dialog && {!isNull (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull])}) then {
@@ -47,7 +47,7 @@ if (GVAR(currentShowMode) in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
     //Close the display:
     (QGVAR(TheRscTitleDisplay) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 } else {
-    if (GVAR(currentShowMode) == DISPLAY_MODE_DISPLAY) then {
+    if (_newDisplayShowMode == DISPLAY_MODE_DISPLAY) then {
         //If Dialog is open, back it up before closing:
         if (dialog && {!isNull (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull])}) then {
             [-1] call FUNC(saveCurrentAndSetNewMode);
@@ -55,7 +55,7 @@ if (GVAR(currentShowMode) in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
         };
         //Open the display:
         (QGVAR(TheRscTitleDisplay) call BIS_fnc_rscLayer) cutRsc [QGVAR(TheRscTitleDisplay), "PLAIN", 0, true];
-    } else {
+    } else { //DISPLAY_MODE_DIALOG
         //Close the display:
         (QGVAR(TheRscTitleDisplay) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
         //Open the dialog:
@@ -63,6 +63,7 @@ if (GVAR(currentShowMode) in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
     };
 };
 
+GVAR(currentShowMode) = _newDisplayShowMode;
 [] call FUNC(showApplicationPage);
 
 if ((_oldShowMode == DISPLAY_MODE_CLOSED) && {GVAR(currentShowMode) != DISPLAY_MODE_CLOSED}) then {
