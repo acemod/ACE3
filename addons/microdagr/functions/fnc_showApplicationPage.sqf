@@ -27,8 +27,8 @@ if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
 };
 if (isNull _display) exitWith {ERROR("No Display");};
 
-//Fade "shell" at night: TODO: find beter amibent light code
-_daylight = (1 - cos (daytime * 360/24)) / 2;
+//Fade "shell" at night
+_daylight = 0.05 max (((1 - overcast)/2 + ((1 - cos (daytime * 360/24)) / 4)) * (linearConversion [0, 1, sunOrMoon, (0.25 * moonIntensity), 1]));
 (_display displayCtrl IDC_MICRODAGRSHELL) ctrlSetTextColor [_daylight, _daylight, _daylight, 1];
 
 //TopBar
