@@ -75,9 +75,11 @@ if (_show) then {
                 };
             }foreach _openWounds;
         } else {
-            // TODO handle basic medical colors for body part selections here
+            {
+                _selectionBloodLoss set [_forEachIndex, _unit getHitPointDamage _x];
+            } forEach ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
 
-
+            // @todo Injury texts?
         };
 
         // Handle the body image coloring
