@@ -42,13 +42,16 @@ if (_weapon in _jammedWeapons) then {
     };
 
     _unit playActionNow _clearJamAction;
-  };
-  if (_weapon == primaryWeapon _unit) then {
-    playSound QGVAR(fixing_rifle);
-  } else {
-    if (_weapon == secondaryWeapon _unit) then {
-      playSound QGVAR(fixing_pistol);
+    if (_weapon == primaryWeapon _unit) then {
+      playSound QGVAR(fixing_rifle);
+    } else {
+      if (_weapon == secondaryWeapon _unit) then {
+        playSound QGVAR(fixing_pistol);
+      };
     };
   };
-  [localize "STR_ACE_Overheating_WeaponUnjammed"] call EFUNC(common,displayTextStructured);
+
+  if (GVAR(DisplayTextOnJam)) then {
+    [localize "STR_ACE_Overheating_WeaponUnjammed"] call EFUNC(common,displayTextStructured);
+  };
 };

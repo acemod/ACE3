@@ -26,3 +26,19 @@ class Extended_Respawn_EventHandlers {
         };
     };
 };
+
+class Extended_Killed_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            killed = QUOTE(call FUNC(handleKilled));
+        };
+    };
+};
+
+class Extended_Local_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            local = QUOTE(call FUNC(handleLocal));
+        };
+    };
+};

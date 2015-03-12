@@ -14,6 +14,8 @@
 
 private ["_magazine", "_numberofMagazines"];
 
+if !(GVAR(DisplayText)) exitwith {};
+
 _magazine = _this select 0;
 _numberofMagazines = _this select 1;
 

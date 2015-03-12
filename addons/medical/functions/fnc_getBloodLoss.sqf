@@ -18,13 +18,13 @@ private ["_totalBloodLoss","_tourniquets","_openWounds", "_value", "_cardiacOutp
 _totalBloodLoss = 0;
 
 // Advanced medical bloodloss handling
-if (GVAR(level) >= 1) then {
+if (GVAR(level) >= 2) then {
     _tourniquets = _this getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
     _openWounds = _this getvariable [QGVAR(openWounds), []];
     //_cardiacOutput = [_this] call FUNC(getCardiacOutput);
 
     {
-        if ((_tourniquets select (_x select 2)) < 1) then {
+        if ((_tourniquets select (_x select 2)) == 0) then {
             // total bleeding ratio * percentage of injury left
             _totalBloodLoss = _totalBloodLoss + ((_x select 4) * (_x select 3));
 
@@ -42,4 +42,4 @@ if (GVAR(level) >= 1) then {
 } else {
     // TODO basic medical
 };
-_totalBloodLoss;
+_totalBloodLoss * GVAR(bleedingCoefficient);

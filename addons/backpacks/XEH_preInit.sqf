@@ -2,6 +2,7 @@
 
 ADDON = false;
 
+PREP(backpackOpened);
 PREP(getBackpackAssignedUnit);
 PREP(isBackpack);
 PREP(onOpenInventory);

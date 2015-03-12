@@ -15,9 +15,11 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_bandage", "_part", "_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact"];
+private ["_target", "_bandage", "_part", "_selectionName", "_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact", "_exit"];
 _target = _this select 0;
 _bandage = _this select 1;
+_selectionName = _this select 2;
+_specificClass = if (count _this > 3) then {_this select 3} else { -1 };
 
 // Ensure it is a valid bodypart
 _part = [_selectionName] call FUNC(selectionNameToNumber);
@@ -37,21 +39,31 @@ if (isClass (_config >> _bandage)) then {
 
 // Figure out which injury for this bodypart is the best choice to bandage
 _mostEffectiveSpot = 0;
-_effectivenessFound = 0;
+_effectivenessFound = -1;
 _mostEffectiveInjury = _openWounds select 0;
+_exit = false;
 {
     // Only parse injuries that are for the selected bodypart.
     if (_x select 2 == _part) then {
         _woundEffectivenss = _effectiveness;
+        _classID = (_x select 1);
 
+        // Select the classname from the wound classname storage
+        _className = GVAR(woundClassNames) select _classID;
         // Check if this wound type has attributes specified for the used bandage
-        if (isClass (_config >> (_x select 1))) then {
-
+        if (isClass (_config >> _className)) then {
             // Collect the effectiveness from the used bandage for this wound type
-            _woundTreatmentConfig = (_config >> (_x select 1));
+            _woundTreatmentConfig = (_config >> _className);
             if (isNumber (_woundTreatmentConfig >> "effectiveness")) then {
                 _woundEffectivenss = getNumber (_woundTreatmentConfig >> "effectiveness");
             };
+        };
+
+        if (_specificClass == _classID) exitwith {
+            _effectivenessFound = _woundEffectivenss;
+            _mostEffectiveSpot = _foreachIndex;
+            _mostEffectiveInjury = _x;
+            _exit = true;
         };
 
         // Check if this is the currently most effective found.
@@ -61,9 +73,11 @@ _mostEffectiveInjury = _openWounds select 0;
             _mostEffectiveInjury = _x;
         };
     };
+    if (_exit) exitwith {};
 }foreach _openWounds;
 
-if (_effectivenessFound == 0) exitwith {}; // Seems everything is patched up on this body part already..
+if (_effectivenessFound == -1) exitwith {}; // Seems everything is patched up on this body part already..
+
 
 // TODO refactor this part
 // Find the impact this bandage has and reduce the amount this injury is present
