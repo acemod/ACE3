@@ -4,8 +4,10 @@ class Extended_PreInit_EventHandlers {
     };
 };
 
-class Extended_Fired_Eventhandlers {
-	class CaManBase {
-		fired = QUOTE( call FUNC(handleFired) );
-	};
+class Extended_FiredBIS_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            firedBIS = QUOTE(_this call FUNC(handleFired));
+        };
+    };
 };
