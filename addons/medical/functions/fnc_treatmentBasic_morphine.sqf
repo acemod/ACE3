@@ -29,5 +29,3 @@ _pain = ((_target getVariable [QGVAR(pain), 0]) - MORPHINEHEAL) max 0;
 _target setVariable [QGVAR(pain), _pain, true];
 
 // @todo overdose
-
-// @todo pain, painkiller reduction

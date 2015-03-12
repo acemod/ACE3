@@ -73,6 +73,18 @@ if ([_unit] call EFUNC(common,isAwake)) then {
     };
 };
 
+if (GVAR(level) == 1) then {
+    // reduce pain
+    if (_unit getVariable [QGVAR(pain), 0] > 0) then {
+        _unit setVariable [QGVAR(pain), ((_unit getVariable QGVAR(pain)) - 0.001) max 0, true];
+    };
+
+    // reduce painkillers
+    if (_unit getVariable [QGVAR(morphine), 0] > 0) then {
+        _unit setVariable [QGVAR(morphine), ((_unit getVariable QGVAR(morphine)) - 0.0015) max 0, true];
+    };
+};
+
 // handle advanced medical, with vitals
 if (GVAR(level) >= 2) then {
 
