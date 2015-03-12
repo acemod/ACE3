@@ -1,7 +1,8 @@
 ace_microdagr
 ===============
 
-Adds a microDAGR infentry GPS device.  Press home to open.  Then home again to toggle an interactive version.
+Adds a microDAGR infentry GPS device.  
+Press home to open.  Then home again to toggle an interactive version. Press CTRL+Home to close.
 Info/Compass/Minimap modes are selectable by the bottom buttons.  Tap the top bar to open the menu and access Mark/Waypoints/Connect To/Settings modes.
 Tap the minimap button again to toggle map modes (if available).
 Enter waypoints from the menu or double tapping on the minimap.

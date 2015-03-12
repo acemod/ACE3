@@ -64,7 +64,10 @@ if (_newDisplayShowMode in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
 };
 
 GVAR(currentShowMode) = _newDisplayShowMode;
-[] call FUNC(showApplicationPage);
+//Update display applicaiton if open:
+if (GVAR(currentShowMode) in [DISPLAY_MODE_DIALOG, DISPLAY_MODE_DISPLAY]) then {
+    [] call FUNC(showApplicationPage);
+};
 
 if ((_oldShowMode == DISPLAY_MODE_CLOSED) && {GVAR(currentShowMode) != DISPLAY_MODE_CLOSED}) then {
     //Start a pfeh to update display and handle hiding display
