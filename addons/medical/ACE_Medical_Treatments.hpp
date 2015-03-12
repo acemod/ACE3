@@ -192,7 +192,7 @@ class ACE_Medical_Actions {
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 7.5;
-            items[] = {QVAR(bodyBag)};
+            items[] = {QGVAR(bodyBag)};
             condition = "!alive (_this select 1);";
             callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));
             callbackFailure = "";

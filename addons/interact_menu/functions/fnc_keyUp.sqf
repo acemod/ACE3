@@ -21,7 +21,7 @@ if(GVAR(actionSelected)) then {
 
 if (GVAR(keyDown)) then {
     GVAR(keyDown) = false;
-    ["interactMenuClosed", [0]] call FUNC(localEvent);
+    ["interactMenuClosed", [0]] call EFUNC(common,localEvent);
 };
 
 GVAR(expanded) = false;
