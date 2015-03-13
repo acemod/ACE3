@@ -1,8 +1,7 @@
 #include "script_component.hpp"
 
 // Calculate the light
-//_data = [[], FUNC(determineMapLight), missionNamespace, QGVAR(mapLight), 0.1] call EFUNC(common,cachedCall);
-_data = call FUNC(determineMapLight);
+_data = [[], FUNC(determineMapLight), missionNamespace, QGVAR(mapLight), 0.1] call EFUNC(common,cachedCall);
 diag_log _data;
 _darkMap = _data select 0;
 _color = _data select 1;
