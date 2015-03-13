@@ -1,8 +1,3 @@
-#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
-    name = #ITEM; \
-    count = COUNT; \
-};
-
 class CfgVehicles {
     class Man;
 
@@ -39,61 +34,61 @@ class CfgVehicles {
 
     class Box_NATO_Support_F: NATO_Box_Base {
         class TransportItems {
-            MACRO_ADDITEM(ACE_SpareBarrel,2)
+            MACRO_ADDITEM(ACE_SpareBarrel,2);
         };
     };
 
     class B_supplyCrate_F: ReammoBox_F {
         class TransportItems {
-            MACRO_ADDITEM(ACE_SpareBarrel,2)
+            MACRO_ADDITEM(ACE_SpareBarrel,2);
         };
     };
 
     class Box_East_Support_F: EAST_Box_Base {
         class TransportItems {
-            MACRO_ADDITEM(ACE_SpareBarrel,2)
+            MACRO_ADDITEM(ACE_SpareBarrel,2);
         };
     };
 
     class O_supplyCrate_F: B_supplyCrate_F {
         class TransportItems {
-            MACRO_ADDITEM(ACE_SpareBarrel,2)
+            MACRO_ADDITEM(ACE_SpareBarrel,2);
         };
     };
 
     class Box_IND_Support_F: IND_Box_Base {
         class TransportItems {
-            MACRO_ADDITEM(ACE_SpareBarrel,2)
+            MACRO_ADDITEM(ACE_SpareBarrel,2);
         };
     };
 
     class Box_FIA_Support_F: FIA_Box_Base_F {
         class TransportItems {
-            MACRO_ADDITEM(ACE_SpareBarrel,2)
+            MACRO_ADDITEM(ACE_SpareBarrel,2);
         };
     };
 
     class I_supplyCrate_F: B_supplyCrate_F {
         class TransportItems {
-            MACRO_ADDITEM(ACE_SpareBarrel,2)
+            MACRO_ADDITEM(ACE_SpareBarrel,2);
         };
     };
 
     class IG_supplyCrate_F: ReammoBox_F {
         class TransportItems {
-            MACRO_ADDITEM(ACE_SpareBarrel,2)
+            MACRO_ADDITEM(ACE_SpareBarrel,2);
         };
     };
 
     class C_supplyCrate_F: ReammoBox_F {
         class TransportItems {
-            MACRO_ADDITEM(ACE_SpareBarrel,2)
+            MACRO_ADDITEM(ACE_SpareBarrel,2);
         };
     };
 
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
-            MACRO_ADDITEM(ACE_SpareBarrel,6)
+            MACRO_ADDITEM(ACE_SpareBarrel,6);
         };
     };
 

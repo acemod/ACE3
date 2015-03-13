@@ -22,37 +22,22 @@ GVAR(isOpeningDoor) = false;
     _exceptions = [];
     if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
     // Conditions: specific
-    if !(!GVAR(isOpeningDoor) &&
-    {[2] call FUNC(getDoor) select 1 != ''}
-    ) exitWith {false};
+    if (GVAR(isOpeningDoor) || {[2] call FUNC(getDoor) select 1 == ''}) exitWith {false};
 
     // Statement
     call EFUNC(interaction,openDoor);
     true
 },
-{},
-[57, [false, true, false]], false] call cba_fnc_addKeybind;
-
-["ACE3",
-localize "STR_ACE_Interaction_OpenDoor",
 {
-    // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
-    // Conditions: specific
-    if !(GVAR(isOpeningDoor)) exitWith {false};
-
+    //Probably don't want any condidtions here, so variable never gets locked down
     // Statement
     GVAR(isOpeningDoor) = false;
     true
 },
-[57, [false, true, false]],
-false,
-"keyup"
-] call cba_fnc_registerKeybind;
+[57, [false, true, false]], false] call cba_fnc_addKeybind; //Key CTRL+Space
 
-["ACE3",
-localize "STR_ACE_Interaction_TapShoulder",
+
+["ACE3", QGVAR(tapShoulder), localize "STR_ACE_Interaction_TapShoulder",
 {
     // Conditions: canInteract
     _exceptions = [];
@@ -64,13 +49,10 @@ localize "STR_ACE_Interaction_TapShoulder",
     [ACE_player, cursorTarget] call FUNC(tapShoulder);
     true
 },
-[20, [true, false, false]],
-false,
-"keydown"
-] call cba_fnc_registerKeybind;
+{false},
+[20, [true, false, false]], false] call cba_fnc_addKeybind;
 
-["ACE3",
-localize "STR_ACE_Interaction_ModifierKey",
+["ACE3", QGVAR(modifierKey), localize "STR_ACE_Interaction_ModifierKey",
 {
     // Conditions: canInteract
     _exceptions = ["ACE_Drag_isNotDragging"];
@@ -81,24 +63,9 @@ localize "STR_ACE_Interaction_ModifierKey",
     // Return false so it doesn't block other actions
     false
 },
-[29, [false, false, false]],
-false,
-"keydown"
-] call cba_fnc_registerKeybind;
-
-["ACE3",
-localize "STR_ACE_Interaction_ModifierKey",
 {
-    // Conditions: canInteract
-    _exceptions = ["ACE_Drag_isNotDragging"];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
-
-    // Statement
+    //Probably don't want any condidtions here, so variable never gets locked down
     ACE_Modifier = 0;
-    // Return false so it doesn't block other actions
-    false
+    false;
 },
-[29, [false, false, false]],
-false,
-"keyup"
-] call cba_fnc_registerKeybind;
+[29, [false, false, false]], false] call cba_fnc_addKeybind;
