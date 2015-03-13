@@ -25,7 +25,7 @@ if !(!(isNull _unit) && {(_unit isKindOf "CaManBase") && ([_unit] call EFUNC(com
 
 // We only want this function to work on local machines
 if (!local _unit) exitwith {
-    [[_unit], QUOTE(DFUNC(setUnconsciousState)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    [[_unit], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
 // Get rid of the object we are carrying, before we go unconscious.
