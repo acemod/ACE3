@@ -2,15 +2,15 @@
 
 // Calculate the light
 _data = [[], FUNC(determineMapLight), missionNamespace, QGVAR(mapLight), 0.1] call EFUNC(common,cachedCall);
-diag_log _data;
-_darkMap = _data select 0;
-_color = _data select 1;
-_fill = _data select 2;
-_externalLight = _data select 3;
-if (_darkMap) then {
-    ((findDisplay 12) displayCtrl 51) drawRectangle [(getArray(configFile >> 'CfgWorlds' >> worldName >> 'centerPosition')),80000,80000,0,_color,_fill];
+
+EXPLODE_3_PVT(_data,_darkenMap,_darkenColor,_externalLight);
+//systemChat format ["%1 %2 %3", _darkenMap, _darkenColor, _createLight];
+
+if (_darkenMap) then {
+    _darkenFill = format["#(rgb,1,1,1)color(%1,%2,%3,%4)",_darkenColor select 0, _darkenColor select 1, _darkenColor select 2, _darkenColor select 3];
+    ((findDisplay 12) displayCtrl 51) drawRectangle [(getArray(configFile >> 'CfgWorlds' >> worldName >> 'centerPosition')),80000,80000,0,_darkenColor,_darkenFill];
 } else {
-    if (_externalLight) then {
+    /*if (_externalLight) then {
         [] spawn {
             _light = ACE_player getVariable ['ace_map_light',objNull];
             if (isNull _light) then {
@@ -23,7 +23,7 @@ if (_darkMap) then {
                 ACE_player setVariable ['ace_map_light',objNull];
             };
         };
-    };
+    };*/
 };
 
 _ctrl = ((findDisplay 12) displayCtrl 51);
