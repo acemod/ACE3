@@ -2,8 +2,7 @@
 
 private ["_darkenMap","_darkenColor","_createLight","_gunlight","_nearObjects","_light"];
 
-// @todo: Update the way to check for flashlights
-_gunlight = isArray(configFile>> "CfgWeapons" >> currentWeapon player >>"ace_gunlight_classes") || {"ACE_MugLite" in weapons player};
+_gunlight = [ACE_player] call FUNC(isGunLightOn);
 
 _fnc_blendColor = {
     EXPLODE_3_PVT(_this,_c1,_c2,_alpha);
