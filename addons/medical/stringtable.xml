@@ -556,19 +556,66 @@
                 <Russian>%1 проводит вам интубацию</Russian>
                 <Spanish>%1 te está intubando</Spanish>
             </Key>
-            <Key ID="STR_ACE_MEDICAL_CARRY">
-                <Original>Carry Patient</Original>
-            </Key>
             <Key ID="STR_ACE_MEDICAL_DRAG">
-                <Original>Drag Patient</Original>
+              <English>Drag</English>
+              <German>Ziehen</German>
+              <Spanish>Arrastrar</Spanish>
+              <Polish>Ciągnij</Polish>
+              <Czech>Táhnout</Czech>
+              <Russian>Тащить</Russian>
+              <French>Tracter</French>
+              <Hungarian>Húzás</Hungarian>
+              <Portuguese>Arrastar</Portuguese>
+              <Italian>Trascina</Italian>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_CARRY">
+              <English>Carry</English>
+              <German>Tragen</German>
+              <Spanish>Cargar</Spanish>
+              <Polish>Nieś</Polish>
+              <Czech>Nést</Czech>
+              <Russian>Нести</Russian>
+              <French>Porter</French>
+              <Hungarian>Cipelés</Hungarian>
+              <Portuguese>Carregar</Portuguese>
+              <Italian>Trasporta</Italian>
+            </Key>
+            <Key ID="STR_ACE_MEDICAL_RELEASE">
+              <English>Release</English>
+              <German>Loslassen</German>
+              <Spanish>Soltar</Spanish>
+              <Polish>Połóż</Polish>
+              <Czech>Položit</Czech>
+              <Russian>Отпустить</Russian>
+              <French>Déposer</French>
+              <Hungarian>Elenged</Hungarian>
+              <Portuguese>Largar</Portuguese>
+              <Italian>Lascia</Italian>
             </Key>
             <Key ID="STR_ACE_MEDICAL_LOAD">
-                <Original>Load Patient</Original>
+              <English>Load Patient Into</English>
+              <German>Patient Einladen</German>
+              <Spanish>Cargar el paciente en</Spanish>
+              <Polish>Załaduj pacjenta</Polish>
+              <Czech>Naložit pacianta do</Czech>
+              <Russian>Погрузить пациента в</Russian>
+              <French>Embarquer le Patient</French>
+              <Hungarian>Sebesült berakása</Hungarian>
+              <Portuguese>Carregar Paciente Em</Portuguese>
+              <Italian>Carica paziente nel</Italian>
             </Key>
             <Key ID="STR_ACE_MEDICAL_UNLOAD">
-                <Original>Unload Patient</Original>
+              <English>Unload Patient</English>
+              <German>Patient Ausladen</German>
+              <Spanish>Descargar el paciente</Spanish>
+              <Polish>Wyładuj pacjenta</Polish>
+              <Czech>Vyložit pacienta</Czech>
+              <Russian>Выгрузить пациента</Russian>
+              <French>Débarquer le Patient</French>
+              <Hungarian>Sebesült kihúzása</Hungarian>
+              <Portuguese>Descarregar Paciente</Portuguese>
+              <Italian>Scarica il paziente</Italian>
             </Key>
         </Container>
-
     </Package>
 </Project> 
