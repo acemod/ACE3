@@ -1,12 +1,18 @@
-/**
-* fnc_onListBoxSettingsChanged.sqf
-* @Descr: N/A
-* @Author: Glowbal
-*
-* @Arguments: []
-* @Return:
-* @PublicAPI: false
-*/
+/*
+ * Author: Glowbal
+ * Called when the listbox selection is changed for an options (eg: chaning a setting from false to true)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ACE_optionsmenu_fnc_onListBoxSettingsChanged
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_settingIndex", "_rightDropDownIndex"];

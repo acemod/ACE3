@@ -217,13 +217,17 @@ class ACE_settingsMenu {
       periodOver = 1;
       action = "closedialog 0;";
     };
-    class action_animation: actionClose {
+    
+    //probably use this for the export to hpp button:
+/*     class action_animation: actionClose { 
       idc = 1100;
       text = "$STR_ACE_OptionsMenu_FixAnimation";
       x = 7.5 * UNITX + OFFSETX;
       // action = "if ([player] call ACE_fnc_canInteract && {animationState player == 'deadState' || animationState player == 'unconscious'} && {(vehicle player == player)}) then { [player, 'amovppnemstpsnonwnondnon'] call ACE_fnc_broadcastAnim; };";
-      action = "hint 'todo???'";
-    };
+      action = QUOTE(_this call FUNC(k,rgr));
+    }; */
+    
+    
     class action_reset: actionClose {
       idc = 1100;
       text = "$STR_ACE_OptionsMenu_ResetAll";
