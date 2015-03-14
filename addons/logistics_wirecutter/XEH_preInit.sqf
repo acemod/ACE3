@@ -2,11 +2,11 @@
 
 ADDON = false;
 
-PREP(canCutFence);
 PREP(cutDownFence);
 PREP(cutDownFenceAbort);
 PREP(cutDownFenceCallback);
 PREP(getNearestFence);
+PREP(interactEH);
 PREP(isFence);
 
 ADDON = true;
