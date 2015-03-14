@@ -2,6 +2,7 @@
 
 ADDON = false;
 
-PREP(empty);
+PREP(initObject);
+PREP(setDraggable);
 
 ADDON = true;
