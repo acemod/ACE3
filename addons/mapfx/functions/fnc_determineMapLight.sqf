@@ -13,23 +13,15 @@ _fnc_blendColor = {
      (_c1 select 3) * (1 - _alpha) + (_c2 select 3) * _alpha]
 };
 
+
 _lightTint = switch (true) do {
-    case (daytime < 4 || dayTime >= 20) : {[0,0,0.2,1]};
-    case (daytime < 5.5) : {[[0,0,0.4,1],   [0.8,0.2,0,1], (daytime - 4)/1.5 ] call _fnc_blendColor};
-    case (daytime < 6.5) : {[[0.8,0.2,0,1], [1,1,1,1],      daytime - 5.5    ] call _fnc_blendColor};
-    case (daytime < 17)  : { [1,1,1,1] };
-    case (daytime < 18)  : {[[1,1,1,1],     [0.8,0.2,0,1],  daytime - 17   ] call _fnc_blendColor};
-    case (daytime < 20)  : {[[0.8,0.2,0,1], [0,0,0.4,1],   (daytime - 18)/2] call _fnc_blendColor};
+    case (sunOrMoon == 1.0) : { [1,1,1,1] };
+    case (sunOrMoon > 0.80) : {[[1.0 - overcast,0.2,0,1], [1,1,1,1],   (sunOrMoon - 0.8)/0.2] call _fnc_blendColor};
+    case (sunOrMoon > 0.50) : {[[0,0,0.1,1], [1.0 - overcast,0.2,0,1], (sunOrMoon - 0.5)/0.3] call _fnc_blendColor};
+    case (sunOrMoon <= 0.5) : { [0,0,0.1,1] };
 };
 
-_lightLevel = switch (true) do {
-    case (daytime < 4 || dayTime >= 20) : {0.08};
-    case (daytime < 6) : {0.08 + (1 - 0.08) * (daytime - 4) / 2};
-    case (daytime < 18): {1};
-    case (daytime < 20): {1 + (0.08 - 1) * (daytime - 18) / 2};
-};
-
-_lightLevel = _lightLevel - 0.5 * (_lightLevel + 0.08) * ((overcast - 0.5) max 0);
+_lightLevel = 0.04 + (0.96 * call EFUNC(common,ambientBrightness));
 
 _fnc_calcColor = {
     EXPLODE_2_PVT(_this,_c1,_lightLevel);
