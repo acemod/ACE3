@@ -1,11 +1,15 @@
 /*
  * Author: Glowbal
- * Sets all client side settings back to default.
+ * Resets all settings to default.
  *
  * Arguments:
+ * None
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [] call ACE_optionsmenu_fnc_onListBoxSettingsChanged
  *
  * Public: No
  */

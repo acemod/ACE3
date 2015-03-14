@@ -1,8 +1,3 @@
-#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
-  name = #ITEM; \
-  count = COUNT; \
-};
-
 class CfgVehicles {
 
   class Module_F;
@@ -481,8 +476,8 @@ class CfgVehicles {
     class ACE_Actions {
       class ACE_MainActions {
         displayName = "$STR_ACE_Interaction_MainAction";
-        selection = "";
-        distance = 10;
+        selection = "gunnerview";
+        distance = 2;
         condition = "true";
       };
     };
@@ -494,8 +489,8 @@ class CfgVehicles {
     class ACE_Actions {
       class ACE_MainActions {
         displayName = "$STR_ACE_Interaction_MainAction";
-        selection = "";
-        distance = 10;
+        selection = "gunnerview";
+        distance = 2;
         condition = "true";
       };
     };

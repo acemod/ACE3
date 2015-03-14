@@ -1,14 +1,17 @@
 /*
  * Author: Glowbal
- * Upidates a setting.
+ * Updates the setting when the client has selected a new value.  Saves to profilenamespace and calls setSetting.
  *
  * Arguments:
- * 0: Type Of setting <NUMBER>
- * 1: Name of setting <STRING>
- * 2: New value <ANY>
+ * 0: The Tab Open <NUMBER>
+ * 1: The setting's name <STRING>
+ * 2: The new value either an index or a color <NUMBER>OR<ARRAY>
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [MENU_TAB_COLORS, "ace_fireTruckColor", [1,0,0,1]] call ACE_optionsmenu_fnc_updateSetting
  *
  * Public: No
  */

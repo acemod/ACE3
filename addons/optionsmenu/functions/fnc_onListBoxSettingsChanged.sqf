@@ -1,11 +1,15 @@
 /*
  * Author: Glowbal
- * Called when a listbox selection is changed.
+ * Called when the listbox selection is changed for an options (eg: chaning a setting from false to true)
  *
  * Arguments:
+ * None
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [] call ACE_optionsmenu_fnc_onListBoxSettingsChanged
  *
  * Public: No
  */

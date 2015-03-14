@@ -25,10 +25,9 @@ _sourceOfDamage = _this select 3;
 _typeOfDamage = _this select 4;
 _bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
 
-// We process only the head for airway.
-if (_bodyPartn != 0) exitwith {};
+if (_bodyPartn > 1) exitwith {};
 
-if (_amountOfDamage > 0.4) then {
+if (_amountOfDamage > 0.5) then {
     if (random(1) >= 0.8) then {
         if !(_unit getvariable[QGVAR(airwayCollapsed), false]) then {
             _unit setvariable [QGVAR(airwayCollapsed), true, true];

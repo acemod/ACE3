@@ -1,11 +1,15 @@
 /*
  * Author: Glowbal
- * called when the settings or configuration menu has opened. Do not use anywhere else.
+ * Called from the onLoad of ACE_settingsMenu dialog.
  *
  * Arguments:
+ * None
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [onLoadEvent] call ACE_optionsmenu_fnc_onSettingsMenuOpen
  *
  * Public: No
  */

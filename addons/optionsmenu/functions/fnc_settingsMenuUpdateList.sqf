@@ -1,12 +1,15 @@
 /*
  * Author: Glowbal
- * Updates the list with all settings in the menu.
+ * Updates the setting when the client has selected a new value.  Saves to profilenamespace.
  *
  * Arguments:
- * 0: update The selection view <BOOL>
+ * 0: Update the keylist as well <BOOL>
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [false] call ACE_optionsmenu_fnc_settingsMenuUpdateList
  *
  * Public: No
  */

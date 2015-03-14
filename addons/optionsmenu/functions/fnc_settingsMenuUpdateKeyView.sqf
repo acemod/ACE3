@@ -1,11 +1,15 @@
 /*
  * Author: Glowbal
- * Updates the view on the right side with the selected settings details
+ * Updates the right half of the option menu for the currently selected option.
  *
  * Arguments:
+ * None
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [] call ACE_optionsmenu_fnc_settingsMenuUpdateKeyView
  *
  * Public: No
  */

@@ -35,7 +35,7 @@ _caller setvariable [QGVAR(treatmentPrevAnimCaller), nil];
 
 // Record specific callback
 _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
-if (GVAR(level) >= 1) then {
+if (GVAR(level) >= 2) then {
     _config = (configFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
 };
 

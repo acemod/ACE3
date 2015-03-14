@@ -1,11 +1,15 @@
 /*
  * Author: PabstMirror
- * Called when a slider position is changed.
+ * Called when one of the color sliders is moved.
  *
  * Arguments:
+ * None
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [] call ACE_optionsmenu_fnc_onSliderPosChanged
  *
  * Public: No
  */

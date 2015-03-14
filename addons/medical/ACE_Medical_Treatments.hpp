@@ -11,7 +11,7 @@ class ACE_Medical_Actions {
             treatmentTime = 5;
             treatmentTimeSelfCoef = 1;
             items[] = {{QGVAR(fieldDressing), QGVAR(packingBandage), QGVAR(elasticBandage), QGVAR(quikClot)}};
-
+            condition = "";
             itemConsumed = 1;
 
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bandage));
@@ -53,8 +53,6 @@ class ACE_Medical_Actions {
     };
 
     class Advanced {
-        // cse_surgical_kit cse_bandage_basic cse_packing_bandage cse_bandageElastic cse_tourniquet cse_splint cse_morphine cse_atropine cse_epinephrine cse_plasma_iv cse_plasma_iv_500 cse_plasma_iv250 cse_blood_iv cse_blood_iv_500 cse_blood_iv_250 cse_saline_iv cse_saline_iv_500 cse_saline_iv_250 cse_quikclot cse_nasopharyngeal_tube cse_opa cse_liquidSkin cse_chestseal cse_personal_aid_kit
-
         class FieldDressing {
             // Which locations can this treatment action be used? Available: Field, MedicalFacility, MedicalVehicle, All.
             treatmentLocations[] = {"All"};
@@ -64,13 +62,17 @@ class ACE_Medical_Actions {
             treatmentTime = 5;
             // Item required for the action. Leave empty for no item required.
             items[] = {QGVAR(fieldDressing)};
+            condition = "";
             // Callbacks
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_bandage));
             callbackFailure = "";
             callbackProgress = "";
-            animationPatient = "";
-            animationCaller = ""; // TODO
             itemConsumed = 1;
+            animationPatient = "";
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic4";
+            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+            animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
+            animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
         };
         class PackingBandage: fieldDressing {
             items[] = {QGVAR(packingBandage)};
@@ -85,16 +87,18 @@ class ACE_Medical_Actions {
             items[] = {QGVAR(tourniquet)};
             treatmentTime = 6;
             callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
+            condition = QUOTE(!([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo)));
         };
         class Morphine: fieldDressing {
             items[] = {QGVAR(morphine)};
             treatmentTime = 3;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_medication));
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
-        class Atropine: fieldDressing {
+        class Atropine: Morphine {
             items[] = {QGVAR(atropine)};
         };
-        class Epinephrine: fieldDressing {
+        class Epinephrine: Morphine {
             items[] = {QGVAR(epinephrine)};
         };
         class BloodIV: fieldDressing {
@@ -102,6 +106,7 @@ class ACE_Medical_Actions {
             requiredMedic = 1;
             treatmentTime = 7;
             callbackSuccess = QUOTE(DFUNC(treatmentIV));
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class BloodIV_500: BloodIV {
             items[] = {QGVAR(bloodIV_500)};
@@ -111,6 +116,7 @@ class ACE_Medical_Actions {
         };
         class PlasmaIV: BloodIV {
             items[] = {QGVAR(plasmaIV)};
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class PlasmaIV_500: PlasmaIV {
             items[] = {QGVAR(plasmaIV_500)};
@@ -120,6 +126,7 @@ class ACE_Medical_Actions {
         };
         class SalineIV: BloodIV {
             items[] = {QGVAR(salineIV)};
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class SalineIV_500: SalineIV {
             items[] = {QGVAR(salineIV_500)};
@@ -134,6 +141,7 @@ class ACE_Medical_Actions {
             treatmentTime = 15;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_surgicalKit));
             itemConsumed = 0;
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class PersonalAidKit: fieldDressing {
             items[] = {QGVAR(personalAidKit)};
@@ -142,6 +150,7 @@ class ACE_Medical_Actions {
             treatmentTime = 15;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
             itemConsumed = 0;
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class CheckPulse: fieldDressing {
             treatmentLocations[] = {"All"};
@@ -164,17 +173,31 @@ class ACE_Medical_Actions {
         class RemoveTourniquet: CheckPulse {
             treatmentTime = 2.5;
             callbackSuccess = QUOTE(DFUNC(actionRemoveTourniquet));
+            condition = QUOTE([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo));
         };
         class CPR: fieldDressing {
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 25;
             items[] = {};
+            condition = ""; // unconscious?
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
             callbackProgress = "";
             animationPatient = "";
             animationCaller = ""; // TODO
+            itemConsumed = 0;
+        };
+        class BodyBag: fieldDressing {
+            treatmentLocations[] = {"All"};
+            requiredMedic = 0;
+            treatmentTime = 7.5;
+            items[] = {QGVAR(bodyBag)};
+            condition = "!alive (_this select 1);";
+            callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));
+            callbackFailure = "";
+            callbackProgress = "";
+            animationPatient = "";
             itemConsumed = 0;
         };
 
@@ -193,7 +216,7 @@ class ACE_Medical_Advanced {
                 name = "Scrape";
                 selections[] = {"All"};
                 bleedingRate = 0.0001;
-                pain = 0.1;
+                pain = 0.01;
                 causes[] = {"falling", "ropeburn", "vehiclecrash"};
                 minDamage = 0.01;
                 class Minor {
@@ -215,7 +238,7 @@ class ACE_Medical_Advanced {
                 name = "Avulsion";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
-                pain = 1;
+                pain = 0.3;
                 causes[] = {"explosive", "vehiclecrash", "grenade", "shell", "bullet", "backblast", "bite"};
                 minDamage = 0.2;
                 class Minor {
@@ -237,7 +260,7 @@ class ACE_Medical_Advanced {
                 name = "Bruise";
                 selections[] = {"All"};
                 bleedingRate = 0.0;
-                pain = 1;
+                pain = 0.05;
                 causes[] = {"bullet", "backblast", "punch","vehiclecrash","falling"};
                 minDamage = 0.01;
                 class Minor {
@@ -256,7 +279,7 @@ class ACE_Medical_Advanced {
                 name = "Crushed tissue";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
-                pain = 1;
+                pain = 0.1;
                 causes[] = {"falling", "vehiclecrash", "punch"};
                 minDamage = 0.1;
                 class Minor {
@@ -278,7 +301,7 @@ class ACE_Medical_Advanced {
                 name = "Cut";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
-                pain = 1;
+                pain = 0.075;
                 causes[] = {"vehiclecrash", "grenade", "explosive", "shell", "backblast", "stab"};
                 minDamage = 0.1;
                 class Minor {
@@ -300,7 +323,7 @@ class ACE_Medical_Advanced {
                 name = "Tear";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
-                pain = 1;
+                pain = 0.075;
                 causes[] = {"vehiclecrash", "punch"};
                 minDamage = 0.01;
                 class Minor {
@@ -322,7 +345,7 @@ class ACE_Medical_Advanced {
                 name = "Velocity Wound";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
-                pain = 1;
+                pain = 0.2;
                 causes[] = {"bullet", "grenade","explosive", "shell"};
                 minDamage = 0.15;
                 class Minor {
@@ -344,7 +367,7 @@ class ACE_Medical_Advanced {
                 name = "Puncture Wound";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
-                pain = 1;
+                pain = 0.075;
                 causes[] = {"stab", "grenade"};
                 minDamage = 0.01;
                 class Minor {
@@ -365,7 +388,7 @@ class ACE_Medical_Advanced {
             class Femur {
                 name = "Broken Femur";
                 selections[] = {"Head", "Torso"};
-                pain = 20;
+                pain = 0.2;
                 causes[] = {"Bullet", "VehicleCrash", "Backblast", "Explosive", "Shell", "Grenade"};
                 minDamage = 0.5;
             };
@@ -630,25 +653,34 @@ class ACE_Medical_Advanced {
             // How much does the pain get reduced?
             painReduce = 0;
             // How much will the heart rate be increased when the HR is low (below 55)? {minIncrease, maxIncrease, seconds}
-            hrIncreaseLow[] = {10, 20, 35};
-            hrIncreaseNormal[] = {10, 50, 40};
-            hrIncreaseHigh[] = {10, 40, 50};
+            hrIncreaseLow[] = {0, 0, 0};
+            hrIncreaseNormal[] = {0, 0, 0};
+            hrIncreaseHigh[] = {0, 0, 0};
+            // Callback once the heart rate values have been added.
+            hrCallback = "";
+
             // How long until this medication has disappeared
             timeInSystem = 120;
             // How many of this type of medication can be in the system before the patient overdoses?
             maxDose = 4;
-            // specific details for the ACE_Morphine treatment action.
+            // Function to execute upon overdose. Arguments passed to call back are 0: unit <OBJECT>, 1: medicationClassName <STRING>
+            onOverDose = "";
+            // The viscosity of a fluid is a measure of its resistance to gradual deformation by shear stress or tensile stress. For liquids, it corresponds to the informal concept of "thickness". This value will increase/decrease the viscoty of the blood with the percentage given. Where 100 = max. Using the minus will decrease viscosity
+            viscosityChange = 0;
+
+            // specific details for the ACE_Morphine treatment action
             class Morphine {
-                painReduce = 1;
+                painReduce = 0.7;
                 hrIncreaseLow[] = {-10, -30, 35};
                 hrIncreaseNormal[] = {-10, -50, 40};
                 hrIncreaseHigh[] = {-10, -40, 50};
-                timeInSystem = 120;
+                timeInSystem = 500;
                 maxDose = 4;
                 inCompatableMedication[] = {};
+                viscosityChange = 10;
             };
             class Epinephrine {
-                painReduce = 1;
+                painReduce = 0;
                 hrIncreaseLow[] = {10, 20, 30};
                 hrIncreaseNormal[] = {10, 50, 20};
                 hrIncreaseHigh[] = {10, 40, 10};
@@ -657,13 +689,20 @@ class ACE_Medical_Advanced {
                 inCompatableMedication[] = {};
             };
             class Atropine {
-                painReduce = 1;
-                hrIncreaseLow[] = {-10, -20, 15};
+                painReduce = 0;
+                hrIncreaseLow[] = {20, 30, 15};
                 hrIncreaseNormal[] = {-10, -50, 20};
                 hrIncreaseHigh[] = {-10, -40, 10};
                 timeInSystem = 120;
                 maxDose = 6;
                 inCompatableMedication[] = {};
+            };
+            class PainKillers {
+                painReduce = 0.7;
+                timeInSystem = 120;
+                maxDose = 10;
+                inCompatableMedication[] = {};
+                viscosityChange = 5;
             };
         };
         class IV {

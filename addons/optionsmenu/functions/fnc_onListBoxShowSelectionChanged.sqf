@@ -1,12 +1,15 @@
 /*
  * Author: Glowbal
- * called when the listbox selection has changed. Updates configuration menu information
+ * Changes which tab is open (options or colors)
  *
  * Arguments:
- * 0: Opened category or tab <STRING>
+ * The tab to open (defined in script_component) <NUMBER>
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [MENU_TAB_COLORS] call ACE_optionsmenu_fnc_onListBoxShowSelectionChanged
  *
  * Public: No
  */

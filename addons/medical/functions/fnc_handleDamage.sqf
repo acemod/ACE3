@@ -38,11 +38,11 @@ _hitSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
 if !(_selection in (_hitSelections + [""])) exitWith {0};
 
 _damageReturn = _damage;
-if (GVAR(level) == 0) then {
+if (GVAR(level) == 1) then {
     _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_basic);
 };
 
-if (GVAR(level) >= 1) then {
+if (GVAR(level) >= 2) then {
     [_unit, _selection, _damage, _source, _projectile, _damageReturn] call FUNC(handleDamage_caching);
 
     if (_damageReturn > 0.9) then {
@@ -60,6 +60,7 @@ if (GVAR(level) >= 1) then {
         };
     };
 };
+[_unit] call FUNC(addToInjuredCollection);
 
 if (_unit getVariable [QGVAR(preventDeath), false] && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
     if (vehicle _unit != _unit and {damage _vehicle >= 1}) then {

@@ -227,7 +227,7 @@ class CfgWeapons {
         count = 1;
         type = 16;
         displayName = $STR_ACE_MEDICAL_AID_KIT_DISPLAY;
-        //picture = QUOTE(PATHTOF(ui\items\personal_aid_kit.paa));
+        picture = QUOTE(PATHTOF(ui\items\personal_aid_kit.paa));
         //model = QUOTE(PATHTOF(equipment\Personal-aidkits\MTP.p3d));
         descriptionShort = $STR_ACE_MEDICAL_AID_KIT_DESC_SHORT;
         descriptionUse = $STR_ACE_MEDICAL_AID_KIT_DESC_USE;
@@ -240,7 +240,7 @@ class CfgWeapons {
         scope=2;
         displayName= $STR_ACE_MEDICAL_SURGICALKIT_DISPLAY;
         model = QUOTE(PATHTOF(data\surgical_kit.p3d));
-        //picture = QUOTE(PATHTOF(data\surgical_kit.paa));
+        picture = QUOTE(PATHTOF(ui\items\surgicalKit.paa));
         descriptionShort = $STR_ACE_MEDICAL_SURGICALKIT_DESC_SHORT;
         descriptionUse = $STR_ACE_MEDICAL_SURGICALKIT_DESC_USE;
          class ItemInfo: InventoryItem_Base_F {

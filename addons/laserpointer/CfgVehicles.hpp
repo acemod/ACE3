@@ -1,9 +1,3 @@
-
-#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
-    name = #ITEM; \
-    count = COUNT; \
-}
-
 class CfgVehicles {
     class NATO_Box_Base;
     class Box_NATO_Support_F: NATO_Box_Base {

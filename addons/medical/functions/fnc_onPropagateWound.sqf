@@ -19,19 +19,19 @@ _unit = _this select 0;
 _injury = _this select 1;
 
 if (!local _unit) then {
-	_openWounds = _unit getvariable[QGVAR(openWounds), []];
-	_injuryID = _injury select 0;
+    _openWounds = _unit getvariable[QGVAR(openWounds), []];
+    _injuryID = _injury select 0;
 
-	_exists = false;
-	{
-		if (_x select 0 == _injuryID) exitwith {
-			_exists = true;
-			_openWounds set [_foreachIndex, _injury];
-		};
-	}foreach _openWounds;
+    _exists = false;
+    {
+        if (_x select 0 == _injuryID) exitwith {
+            _exists = true;
+            _openWounds set [_foreachIndex, _injury];
+        };
+    }foreach _openWounds;
 
-	if (!_exists) then {
-		_openWounds pushback _injury;
-	};
-	_unit setvariable [GVAR(openWounds), _openWounds];
+    if (!_exists) then {
+        _openWounds pushback _injury;
+    };
+    _unit setvariable [GVAR(openWounds), _openWounds];
 };
