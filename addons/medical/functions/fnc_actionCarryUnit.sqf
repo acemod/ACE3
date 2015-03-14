@@ -26,7 +26,7 @@ if (!([_caller] call EFUNC(common,canInteract)) || {_caller == _target} || {(([_
 
 _caller action ["WeaponOnBack", _caller];
 if (!alive _target) exitwith {
-    if (missionNamespace getvariable [QGVAR(allowDeadbodyMovement), false]) then {
+    if (GVAR(allowDeadBodyMovement)) then {
         [{
             _this call FUNC(actionCarryUnit);
         }, [_caller, ([_target,_caller] call FUNC(makeCopyOfBody)), _carry], 0.25, 0.25] call EFUNC(common,waitAndExecute);
