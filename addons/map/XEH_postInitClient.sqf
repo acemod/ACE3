@@ -6,6 +6,8 @@ LOG(MSG_INIT);
 // Calculate the maximum zoom allowed for this map
 call FUNC(determineZoom);
 
+// This spawn is probably worth keeping, as pfh don't work natively on the briefing screen and IDK how reliable the hack we implemented for them is.
+// The thread dies as soon as the mission start, so it's not really compiting for scheduler space.
 [] spawn {
     // Wait until the map display is detected
     waitUntil {(!isNull findDisplay 12)};
