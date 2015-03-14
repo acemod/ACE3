@@ -100,17 +100,25 @@ if (vehicle ACE_player == ACE_player) then {
         TRACE_1("player near chemlight","");
     };
 
-    _nearObjects = [ACE_player nearObjects ["Chemlight_red", 4], {alive _this}] call EFUNC(common,filter);
-    [_nearObjects, [1,0,0,1]] call _fnc_chemLight;
+    // all chemlights inherit from SmokeShell, CfgAmmo
+    _nearObjects = [ACE_player nearObjects ["SmokeShell", 4], {alive _this}] call EFUNC(common,filter);
 
-    _nearObjects = [ACE_player nearObjects ["Chemlight_green", 4], {alive _this}] call EFUNC(common,filter);
-    [_nearObjects, [0,1,0,1]] call _fnc_chemLight;
-
-    _nearObjects = [ACE_player nearObjects ["Chemlight_blue", 4], {alive _this}] call EFUNC(common,filter);
-    [_nearObjects, [0,0,1,1]] call _fnc_chemLight;
-
-    _nearObjects = [ACE_player nearObjects ["Chemlight_yellow", 4], {alive _this}] call EFUNC(common,filter);
-    [_nearObjects, [1,1,0,1]] call _fnc_chemLight;
+    {
+        switch (toLower typeOf _x) do {
+            case ("chemlight_red"): {
+                [_nearObjects, [1,0,0,1]] call _fnc_chemLight;
+            };
+            case ("chemlight_green"): {
+                [_nearObjects, [0,1,0,1]] call _fnc_chemLight;
+            };
+            case ("chemlight_blue"): {
+                [_nearObjects, [0,0,1,1]] call _fnc_chemLight;
+            };
+            case ("chemlight_yellow"): {
+                [_nearObjects, [1,1,0,1]] call _fnc_chemLight;
+            };
+        };
+    } forEach _nearObjects;
 
     // Gun with light
     if (_gunlight) then {
