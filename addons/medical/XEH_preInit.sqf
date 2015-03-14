@@ -87,6 +87,7 @@ PREP(moduleAssignMedicRoles);
 PREP(moduleAssignMedicalVehicle);
 PREP(moduleAssignMedicalFacility);
 PREP(moduleTreatmentConfiguration);
+PREP(copyDeadBody);
 
 GVAR(injuredUnitCollection) = [];
 call FUNC(parseConfigForInjuries);

@@ -29,7 +29,7 @@ if (!alive _target) exitwith {
     if (GVAR(allowDeadBodyMovement)) then {
         [{
             _this call FUNC(actionCarryUnit);
-        }, [_caller, ([_target,_caller] call FUNC(makeCopyOfBody)), _carry], 0.25, 0.25] call EFUNC(common,waitAndExecute);
+        }, [_caller, ([_target,_caller] call FUNC(copyDeadBody)), _carry], 0.25, 0.25] call EFUNC(common,waitAndExecute);
     };
 };
 
