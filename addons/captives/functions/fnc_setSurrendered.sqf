@@ -50,7 +50,7 @@ if (_state) then {
             //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
             _animChangedEHID = _unit addEventHandler ["AnimChanged", {
                 PARAMS_2(_unit,_newAnimation);
-                if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && (_newAnimation != "Unconscious")) then {
+                if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
                     ERROR("Surrender animation interrupted");
                     systemChat format ["debug %2: new %1", _newAnimation, time];
                     [_unit, "ACE_AmovPercMstpSsurWnonDnon", 1] call EFUNC(common,doAnimation);

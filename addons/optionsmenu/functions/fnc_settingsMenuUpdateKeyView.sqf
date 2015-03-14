@@ -1,12 +1,18 @@
-/**
-* fnc_settingsMenuUpdateKeyView.sqf
-* @Descr: N/A
-* @Author: Glowbal
-*
-* @Arguments: []
-* @Return:
-* @PublicAPI: false
-*/
+/*
+ * Author: Glowbal
+ * Updates the right half of the option menu for the currently selected option.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ACE_optionsmenu_fnc_settingsMenuUpdateKeyView
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_settingsMenu", "_ctrlList", "_collection", "_settingIndex", "_setting", "_entryName", "_localizedName", "_localizedDescription", "_possibleValues", "_settingsValue", "_currentColor"];

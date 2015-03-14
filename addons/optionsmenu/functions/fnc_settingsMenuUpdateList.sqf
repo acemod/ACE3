@@ -1,12 +1,18 @@
-/**
-* fnc_settingsMenuUpdateList.sqf
-* @Descr: N/A
-* @Author: Glowbal
-*
-* @Arguments: []
-* @Return:
-* @PublicAPI: false
-*/
+/*
+ * Author: Glowbal
+ * Updates the setting when the client has selected a new value.  Saves to profilenamespace.
+ *
+ * Arguments:
+ * 0: Update the keylist as well <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [false] call ACE_optionsmenu_fnc_settingsMenuUpdateList
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_settingsMenu", "_ctrlList", "_settingsText", "_color", "_settingsColor", "_updateKeyView"];

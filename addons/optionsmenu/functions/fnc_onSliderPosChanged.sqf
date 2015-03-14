@@ -1,12 +1,18 @@
-/**
-* fnc_onSliderPosChanged.sqf
-* @Descr: N/A
-* @Author: PabstMirror
-*
-* @Arguments: []
-* @Return:
-* @PublicAPI: false
-*/
+/*
+ * Author: PabstMirror
+ * Called when one of the color sliders is moved.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ACE_optionsmenu_fnc_onSliderPosChanged
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_newColor", "_settingIndex"];
