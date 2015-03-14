@@ -1,6 +1,16 @@
+/*
+* Author: Rocko
+* Calculate the maximum zoom level allowed for the current map
+*
+* Arguments:
+* None
+*
+* Return Value:
+* None
+*
+* Public: No
+*/
 #include "script_component.hpp"
-
-// TODO: Perhaps change to return values instead of setting GVAR's directly
 
 private ["_grids", "_fourSize", "_sixSize", "_continue", "_size"];
 _grids = configFile >> "CfgWorlds" >> worldName >> "Grid";

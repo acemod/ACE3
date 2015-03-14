@@ -3,9 +3,9 @@
 ADDON = false;
 LOG(MSG_INIT);
 
+// Calculate the maximum zoom allowed for this map
 call FUNC(determineZoom);
 
-//Probably need this spawn, because CBA_fnc_addPerFrameHandler doesn't work durring briefing.
 [] spawn {
     // Wait until the map display is detected
     waitUntil {(!isNull findDisplay 12)};

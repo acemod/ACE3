@@ -13,7 +13,15 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 
 class ACE_Settings {
-    class GVAR(limitZoom) {
+    class GVAR(mapIllumination) {
+        value = 1;
+        typeName = "BOOL";
+    };
+    class GVAR(mapShake) {
+        value = 1;
+        typeName = "BOOL";
+    };
+    class GVAR(mapLimitZoom) {
         value = 0;
         typeName = "BOOL";
     };

@@ -1,10 +1,23 @@
+/*
+* Author: Rocko and CAA-Picard
+* Calculates the current map illumination for a given unit
+*
+* Arguments:
+* 0: Unit <OBJECT>
+*
+* Return Value:
+* 0: Does the map needs shading? <BOOL>
+* 1: Color of the overlay <ARRAY>
+*
+* Public: No
+*/
 #include "script_component.hpp"
 
-private ["_darkenMap","_darkenColor","_createLight","_gunlight","_nearObjects","_light"];
+EXPLODE_1_PVT(_this,_unit);
 
-// @todo: Update the way to check for flashlights
-_gunlight = isArray(configFile>> "CfgWeapons" >> currentWeapon player >>"ace_gunlight_classes") || {"ACE_MugLite" in weapons player};
+private ["_isEnclosed","_nearObjects","_light","_ll","_flashlight"];
 
+// Blend two colors
 _fnc_blendColor = {
     EXPLODE_3_PVT(_this,_c1,_c2,_alpha);
     [(_c1 select 0) * (1 - _alpha) + (_c2 select 0) * _alpha,
@@ -13,27 +26,26 @@ _fnc_blendColor = {
      (_c1 select 3) * (1 - _alpha) + (_c2 select 3) * _alpha]
 };
 
-
+// Ambient light tint depending on time of day
 _lightTint = switch (true) do {
-    case (sunOrMoon == 1.0) : { [1,1,1,1] };
+    case (sunOrMoon == 1.0) : { [0.5,0.5,0.5,1] };
     case (sunOrMoon > 0.80) : {[[1.0 - overcast,0.2,0,1], [1,1,1,1],   (sunOrMoon - 0.8)/0.2] call _fnc_blendColor};
     case (sunOrMoon > 0.50) : {[[0,0,0.1,1], [1.0 - overcast,0.2,0,1], (sunOrMoon - 0.5)/0.3] call _fnc_blendColor};
     case (sunOrMoon <= 0.5) : { [0,0,0.1,1] };
 };
 
-_lightLevel = 0.04 + (0.96 * call EFUNC(common,ambientBrightness));
-
+// Calculates overlay color from tint and light level
 _fnc_calcColor = {
     EXPLODE_2_PVT(_this,_c1,_lightLevel);
 
-    _l = abs(_lightLevel - 0.5) / 0.5;
-
     if (_lightLevel < 0.5) then {
-        [(_c1 select 0) * _l * _l * _l,
-         (_c1 select 1) * _l * _l * _l,
-         (_c1 select 2) * _l * _l * _l,
+        _l = _lightLevel / 0.5;
+        [(_c1 select 0) * _l,
+         (_c1 select 1) * _l,
+         (_c1 select 2) * _l,
          (_c1 select 3) * (1 - _lightLevel)]
     } else {
+        _l = (_lightLevel - 0.5) / 0.5;
         [(_c1 select 0) * (1 - _l) + _l,
          (_c1 select 1) * (1 - _l) + _l,
          (_c1 select 2) * (1 - _l) + _l,
@@ -41,107 +53,92 @@ _fnc_calcColor = {
     };
 };
 
-_darkenMap = true;
-_createLight = false;
+_lightLevel = 0.04 + (0.96 * call EFUNC(common,ambientBrightness));
 
 // check if player has NVG enabled
-if (currentVisionMode ACE_player == 1) exitWith {
+if (currentVisionMode _unit == 1) exitWith {
     // stick to nvg color
-    _darkenMap = true;
-    _darkenColor = [154/255,253/255,177/255,0.5];
-    _createLight = false;
-
-    [_darkenMap,_darkenColor,_createLight]
+    [true, [154/255,253/255,177/255,0.5]]
 };
 
+// Do not obscure the map if the ambient light level is above 0.95
 if (_lightLevel > 0.95) exitWith {
-    [false, [1,1,1,0], false]
+    [false, [0.5,0.5,0.5,0]]
 };
 
+// Do not obscure the map if the player is on a enclosed vehicle (assume internal illumination)
+if (vehicle _unit != _unit) then {
+    // Player is in a vehicle
+    if ((vehicle _unit) isKindOf "Tank") then {
+        _isEnclosed = true;
+    };
+};
+if (_isEnclosed) exitWith {
+    TRACE_1("Player in a enclosed vehicle","");
+    [false, [1,1,1,0]]
+};
 
-// Check if player is not in a vehicle
-if (vehicle ACE_player == ACE_player) then {
-    // Player is not in a vehicle
-    TRACE_1("NOT in vehicle","");
+// Player is not in a vehicle
+TRACE_1("Player is on foot or in an open vehicle","");
 
-    // darken map, unless following cases are fulfilled
-    // Priorities: Weapons flashlight, lamppost, fire, chemlight, flares
+// Check if player is near a campfires, lights or vehicles with lights on - 15m
+_nearObjects = [nearestObjects [_unit, ["All"], 15], {(inflamed _this) || (isLightOn _this)}] call EFUNC(common,filter);
+if (count (_nearObjects) > 0) then {
+    _light = _nearObjects select 0;
 
-    // Check if player is near a campfires, lights or vehicles with lights on - 15m
-    _nearObjects = [nearestObjects [ACE_player, ["All"], 15], {(inflamed _this) || (isLightOn _this)}] call EFUNC(common,filter);
-    if (count (_nearObjects) > 0) then {
-        _light = _nearObjects select 0;
-        _lightLevel = _lightLevel max (1 - (((((ACE_player distance _light) - 5)/10) max 0) min 1));
+    _ll = (1 - (((((_unit distance _light) - 5)/10) max 0) min 1));
+    if (_ll > _lightLevel) then {
+        _lightLevel = _ll;
         TRACE_1("player near campfire","");
     };
-
-    // TODO: Illumination flares (timed)
-
-    // Using chemlights
-    _fnc_chemLight = {
-        EXPLODE_2_PVT(_this,_no,_lc);
-        if (count (_no) == 0) exitWith {};
-
-        _light = _no select 0;
-        _ll = (1 - ((((ACE_player distance _light) - 2)/2) max 0)) * 0.4;
-        if (_ll > _lightLevel) then {
-            _lightLevel = _ll;
-            _lightTint = +_lc;
-            hint format ["%1 %2",ACE_player distance _light,_ll];
-        };
-        TRACE_1("player near chemlight","");
-    };
-
-    _nearObjects = [ACE_player nearObjects ["Chemlight_red", 4], {alive _this}] call EFUNC(common,filter);
-    [_nearObjects, [1,0,0,1]] call _fnc_chemLight;
-
-    _nearObjects = [ACE_player nearObjects ["Chemlight_green", 4], {alive _this}] call EFUNC(common,filter);
-    [_nearObjects, [0,1,0,1]] call _fnc_chemLight;
-
-    _nearObjects = [ACE_player nearObjects ["Chemlight_blue", 4], {alive _this}] call EFUNC(common,filter);
-    [_nearObjects, [0,0,1,1]] call _fnc_chemLight;
-
-    _nearObjects = [ACE_player nearObjects ["Chemlight_yellow", 4], {alive _this}] call EFUNC(common,filter);
-    [_nearObjects, [1,1,0,1]] call _fnc_chemLight;
-
-    // Gun with light
-    if (_gunlight) then {
-        _darkenMap = false;
-        _createLight = true;
-        TRACE_1("using gun light","");
-    };
-
-} else {
-    // Player is in a vehicle
-    if ((vehicle ACE_player) isKindOf "Tank") exitWith {
-        _darkenMap = false;
-        _createLight = false;
-    };
-
-    // check if vehicle is not of following type: parachute
-    TRACE_1("in vehicle","");
-
-    // darken map if vehicle is kind of bicycle or motorbike or ATV or parachute or PBX boat
-    if (vehicle ACE_player isKindOf "Bicycle" || {vehicle ACE_player isKindOf "Motorcycle"}) then {
-        if (_gunlight) then {
-            _darkenMap = false;
-            _createLight = true;
-            TRACE_1("bright map - gun lights","");
-        } else {
-            _darkenColor = [0,0,0,(_alpha*1.1)];
-            TRACE_1("darken map - no lights","");
-        };
-    } else {
-        // do not darken map, but create a lightpoint at players eye pos to simulate dash light / flashlight usage to view map
-        // do nothing if in a tank or apc
-        _darkenMap = false;
-        _createLight = true;
-        TRACE_1("using vehicle light","");
-    };
-
 };
 
-_darkenColor = [_lightTint, _lightLevel] call _fnc_calcColor;
 
-TRACE_4("",_darkenMap,_darkenColor,_createLight);
-[_darkenMap,_darkenColor,_createLight]
+// Gun with light
+_nearObjects = [nearestObjects [_unit, ["CAManBase"], 10], { _this isFlashlightOn (currentWeapon _this)}] call EFUNC(common,filter);
+if (count (_nearObjects) > 0) then {
+    _light = (_nearObjects select 0);
+    _flashlight = (_light weaponAccessories currentMuzzle _light) select 1;
+
+    // Check if it's a day laser
+    if (_flashlight == "ACE_acc_pointer_red") exitWith {};
+    if (_flashlight == "ACE_acc_pointer_green") exitWith {};
+
+    _lightLevel = _lightLevel max (1 - (((((_unit distance _light) - 2)/8) max 0) min 1));
+    TRACE_1("Using gun light","");
+};
+
+
+// @todo: Illumination flares (timed)
+
+
+// Using chemlights
+_nearObjects = [_unit nearObjects ["SmokeShell", 4], {
+    alive _this && {(typeOf _this == "Chemlight_red") || {
+                    (typeOf _this == "Chemlight_green") || {
+                    (typeOf _this == "Chemlight_blue") || {
+                    (typeOf _this == "Chemlight_yellow")}}}}}] call EFUNC(common,filter);
+if (count (_nearObjects) > 0) then {
+    _light = _nearObjects select 0;
+
+    _ll = (1 - ((((_unit distance _light) - 2)/2) max 0)) * 0.4;
+    if (_ll > _lightLevel) then {
+        _flareTint = switch (typeOf _light) do {
+            case "Chemlight_red" : {[1,0,0,1]};
+            case "Chemlight_green" : {[0,1,0,1]};
+            case "Chemlight_blue" : {[0,0,1,1]};
+            case "Chemlight_yellow" : {[1,1,0,1]};
+        };
+        _lightTint = [_lightTint, _flareTint, (_ll - _lightLevel)/(1 - _lightLevel)] call _fnc_blendColor;
+        _lightLevel = _ll;
+        TRACE_1("player near chemlight","");
+    };
+};
+
+// Do not obscure the map if the ambient light level is above 0.95
+if (_lightLevel > 0.95) exitWith {
+    [false, [0.5,0.5,0.5,0]]
+};
+
+// Calculate resulting map color
+[true, [_lightTint, _lightLevel] call _fnc_calcColor]
