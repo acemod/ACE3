@@ -13,6 +13,7 @@
  *
  * Public: No
  */
+
 #include "script_component.hpp"
 
 private ["_name", "_default", "_lastSelected"];

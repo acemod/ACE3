@@ -4,7 +4,7 @@ class ACE_settingsMenu {
   onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_settingsMenu', _this select 0)]; [] call FUNC(onSettingsMenuOpen););
   onUnload = QUOTE(uiNamespace setVariable [ARR_2('ACE_settingsMenu', nil)]; saveProfileNamespace;);
 
-  #define SIZEX ((0.70 * safezoneW) max 1.0)
+  #define SIZEX (((safezoneW / safezoneH) min 1.2))
   #define SIZEY (SIZEX / 1.2)
   #define UNITX (SIZEX / 40)
   #define UNITY (SIZEY / 25)
@@ -41,6 +41,10 @@ class ACE_settingsMenu {
     class RightBackground: LeftBackground {
       x = 26.1 * UNITX + OFFSETX;
       w = 12.9 * UNITX;
+    };
+    class RightBackgroundHeader: RightBackground {
+      h = 1.4 * UNITY;
+      colorBackground[] = {0,0,0,1};
     };
   };
 
@@ -85,7 +89,7 @@ class ACE_settingsMenu {
       colorBackgroundFocused[] = {1,1,1,1};
       colorBackground[] = {1,1,1,1};
       colorbackground2[] = {1,1,1,1};
-      colorDisabled[] = {0.5,0.5,0.5,0.8};
+      colorDisabled[] = {1,1,1,1};
       colorFocused[] = {0,0,0,1};
       periodFocus = 1;
       periodOver = 1;
@@ -99,13 +103,13 @@ class ACE_settingsMenu {
     };
     class selectionAction_3: selectionAction_1 {
       idc = 1002;
-      text = "---";
+      text = "";
       x = 20 * UNITX + OFFSETX;
       action = "";
     };
     class selectionAction_4: selectionAction_1 {
       idc = 1003;
-      text = "---";
+      text = "";
       x = 29.5 * UNITX + OFFSETX;
       action = "";
     };
@@ -115,7 +119,7 @@ class ACE_settingsMenu {
       y = 5.5 * UNITY + OFFSETY;
       w = 23 * UNITX;
       h = 15 * UNITY;
-      SizeEx = (UNITY * 0.7);
+      SizeEx = (UNITY * 0.8);
       colorBackground[] = {0, 0, 0, 0.9};
       colorSelectBackground[] = {0, 0, 0, 0.9};
       columns[] = {0.0, 0.6};
@@ -128,7 +132,7 @@ class ACE_settingsMenu {
       w = 11 * UNITX;
       h = 1 * UNITY;
       text = "";
-      SizeEx = (UNITY * 0.75);
+      SizeEx = (UNITY *1);
     };
     class labelKey: ACE_gui_staticBase {  //Variable Name
       idc = 300;
@@ -137,13 +141,13 @@ class ACE_settingsMenu {
       w = 11 * UNITX;
       h = 1 * UNITY;
       text = "";
-      SizeEx = (UNITY * 0.60);
+      SizeEx = (UNITY * 0.65);
     };
     class Label2: labelKey {
       idc = 301;
       y = 7.3 * UNITY + OFFSETY;
       text = "$STR_ACE_OptionsMenu_Setting";
-      SizeEx = (UNITY * 0.75);
+      SizeEx = (UNITY * 1);
     };
     class comboBox1: ACE_gui_comboBoxBase {
       idc = 400;
@@ -152,7 +156,7 @@ class ACE_settingsMenu {
       w = 7 * UNITX;
       h = 1 * UNITY;
       onLBSelChanged = QUOTE( call FUNC(onListBoxSettingsChanged));
-      SizeEx = (UNITY * 0.75);
+      SizeEx = (UNITY * 0.9);
     };
     class sliderBar1: RscXSliderH {
       idc = 410;
@@ -191,15 +195,16 @@ class ACE_settingsMenu {
       text = "";
       style = ST_LEFT + ST_MULTI;
       lineSpacing = 1;
-      SizeEx = (UNITY * 0.60);
+      SizeEx = (UNITY * 0.8);
     };
     class actionClose: ACE_gui_buttonBase {
       idc = 10;
       text = "$STR_DISP_CLOSE";
       x = 1 * UNITX + OFFSETX;
       y = 22.3 * UNITY + OFFSETY;
-      w = 6 * UNITX;
+      w = 7.5 * UNITX;
       h = 1 * UNITY;
+      style = ST_LEFT;
       animTextureNormal = "#(argb,8,8,3)color(0,0,0,0.8)";
       animTextureDisabled = "#(argb,8,8,3)color(0,0,0,0.5)";
       animTextureOver = "#(argb,8,8,3)color(1,1,1,1)";
@@ -217,21 +222,10 @@ class ACE_settingsMenu {
       periodOver = 1;
       action = "closedialog 0;";
     };
-    
-    //probably use this for the export to hpp button:
-/*     class action_animation: actionClose { 
-      idc = 1100;
-      text = "$STR_ACE_OptionsMenu_FixAnimation";
-      x = 7.5 * UNITX + OFFSETX;
-      // action = "if ([player] call ACE_fnc_canInteract && {animationState player == 'deadState' || animationState player == 'unconscious'} && {(vehicle player == player)}) then { [player, 'amovppnemstpsnonwnondnon'] call ACE_fnc_broadcastAnim; };";
-      action = QUOTE(_this call FUNC(k,rgr));
-    }; */
-    
-    
     class action_reset: actionClose {
       idc = 1100;
       text = "$STR_ACE_OptionsMenu_ResetAll";
-      x = 14 * (SIZEX / 40) + OFFSETX;
+      x = 26.1 * (SIZEX / 40) + OFFSETX;
       action = QUOTE([] call FUNC(resetSettings));
     };
   };

@@ -13,6 +13,7 @@
  *
  * Public: No
  */
+
 #include "script_component.hpp"
 
 private ["_settingsMenu", "_localizedHeader"];

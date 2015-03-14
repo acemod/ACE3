@@ -6,8 +6,8 @@ class CfgPatches {
     weapons[] = {};
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {"ace_common"};
-    author[] = {"Combat Space Enhancement"};
-    authorUrl = "http://csemod.com";
+    author[] = {"Glowbal", "PabstMirror"};
+    authorUrl = "http://github.com/Glowbal";
     VERSION_CONFIG;
   };
 };
