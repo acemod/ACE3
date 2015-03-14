@@ -51,7 +51,7 @@ if (_state) then {
             _unit setVariable [QGVAR(escortedUnit), objNull, true];
         };
     };
-    [_escortFnc, 0.2, [_unit, _target, _actionID]] call CBA_fnc_addPerFrameHandler;
+    [_escortFnc, 0, [_unit, _target, _actionID]] call CBA_fnc_addPerFrameHandler;
 
 } else {
     _unit setVariable [QGVAR(isEscorting), false, true];
