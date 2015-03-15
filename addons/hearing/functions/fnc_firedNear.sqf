@@ -1,13 +1,23 @@
 /*
  * Author: KoffeinFlummi, commy2
- *
  * Handles deafness due to large-caliber weapons going off near the player.
  *
  * Arguments:
- * -> FiredNear Event Handler
+ * 0: Unit - Object the event handler is assigned to <OBJECT>
+ * 1: Firer: Object - Object which fires a weapon near the unit <OBJECT>
+ * 2: Distance - Distance in meters between the unit and firer <NUMBER>
+ * 3: weapon - Fired weapon <STRING>
+ * 4: muzzle - Muzzle that was used <STRING>
+ * 5: mod - Current mode of the fired weapon <STRING>
+ * 6: ammo - Ammo used <STRING>
  *
  * Return Value:
- * none
+ * None
+ *
+ * Example:
+ * [clientFiredNearEvent] call ace_hearing_fnc_firedNear
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -25,17 +35,17 @@ if (_weapon in ["Throw", "Put"]) exitWith {};
 if (_unit != vehicle _unit && {!([_unit] call EFUNC(common,isTurnedOut))}) exitWith {};
 
 _silencer = switch (_weapon) do {
-  case (primaryWeapon _unit) : {primaryWeaponItems _unit select 0};
-  case (secondaryWeapon _unit) : {secondaryWeaponItems _unit select 0};
-  case (handgunWeapon _unit) : {handgunItems _unit select 0};
-  default {""};
+case (primaryWeapon _unit) : {primaryWeaponItems _unit select 0};
+case (secondaryWeapon _unit) : {secondaryWeaponItems _unit select 0};
+case (handgunWeapon _unit) : {handgunItems _unit select 0};
+    default {""};
 };
 
 _audibleFireCoef = 1;
 //_audibleFireTimeCoef = 1;
 if (_silencer != "") then {
-  _audibleFireCoef = getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFire");
-  //_audibleFireTimeCoef = getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFireTime");
+    _audibleFireCoef = getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFire");
+    //_audibleFireTimeCoef = getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFireTime");
 };
 
 _audibleFire = getNumber (configFile >> "CfgAmmo" >> _ammo >> "audibleFire");
@@ -47,6 +57,6 @@ _strength = _loudness - (_loudness/50 * _distance); // linear drop off
 if (_strength < 0.01) exitWith {};
 
 [_unit, _strength] spawn {
-  sleep 0.2;
-  _this call FUNC(earRinging);
+    sleep 0.2;
+    _this call FUNC(earRinging);
 };
