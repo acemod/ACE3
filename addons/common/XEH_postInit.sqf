@@ -160,4 +160,4 @@ _vehicle setFuel _fuelLevel;
 ["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
 ["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
 
-["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithConditon);
+["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
