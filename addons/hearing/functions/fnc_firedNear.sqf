@@ -35,9 +35,9 @@ if (_weapon in ["Throw", "Put"]) exitWith {};
 if (_unit != vehicle _unit && {!([_unit] call EFUNC(common,isTurnedOut))}) exitWith {};
 
 _silencer = switch (_weapon) do {
-case (primaryWeapon _unit) : {primaryWeaponItems _unit select 0};
-case (secondaryWeapon _unit) : {secondaryWeaponItems _unit select 0};
-case (handgunWeapon _unit) : {handgunItems _unit select 0};
+    case (primaryWeapon _firer) : {(primaryWeaponItems _firer) select 0};
+    case (secondaryWeapon _firer) : {(secondaryWeaponItems _firer) select 0};
+    case (handgunWeapon _firer) : {(handgunItems _firer) select 0};
     default {""};
 };
 
