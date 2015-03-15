@@ -18,7 +18,10 @@ _caller = _this select 0;
 _target = _caller getvariable [QGVAR(carrying), objNull];
 _carrying = _caller getvariable [QGVAR(isCarrying), -1];
 
+systemChat format["handle onCarryObjectDropped %1", [_this, _target, _carrying]];
+
 if (_carrying >= 0) then {
+
 	_caller setvariable [QGVAR(isCarrying), -1, true];
     if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
         _caller removeWeapon "ACE_FakePrimaryWeapon";
@@ -28,7 +31,7 @@ if (_carrying >= 0) then {
     _caller setvariable[QGVAR(onStartMovingUnitParams), nil];
 
     // handle the drag & carry administration
-    if (_dragging) then {
+    if (_carrying == 0) then {
         _target setvariable [QGVAR(beingDragged), nil, true];
         _caller setvariable [QGVAR(dragging), nil, true];
     } else {
@@ -42,7 +45,7 @@ if (_carrying >= 0) then {
     };
 
     if (vehicle _target == _target) then {
-        if (_dragging) then {
+        if (_carrying == 0) then {
             [_target,"AinjPpneMstpSnonWrflDb_release", 2, true] call EFUNC(common,doAnimation);
         } else {
             [_target,"AinjPfalMstpSnonWrflDnon_carried_Down", 2, true] call EFUNC(common,doAnimation);

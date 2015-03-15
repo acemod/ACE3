@@ -38,7 +38,9 @@ if !([_caller,_target] call EFUNC(common,carryObj)) exitwith {};
 if (primaryWeapon _caller == "") then {
     _caller addWeapon "ACE_FakePrimaryWeapon";
 };
-_caller selectWeapon (primaryWeapon _caller);
+if (currentWeapon _caller != (primaryWeapon _caller)) then {
+    _caller selectWeapon (primaryWeapon _caller);
+};
 
 if (_carry) then {
     _target attachTo [_caller, [0.1, -0.1, -1.25], "LeftShoulder"];
@@ -48,16 +50,19 @@ if (_carry) then {
     _target attachTo [_caller, [0.125, 1.007, 0]];
     _target setDir (getDir _target + 180) % 360;
     _target setPos ((getPos _target) vectorAdd ((vectorDir _caller) vectorMultiply 1.5));
+     [_caller, "AcinPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
+    [_target, "AinjPpneMstpSnonWrflDb", 2, true] call EFUNC(common,doAnimation);
 };
 
 [
     2,
     [_caller, _target, _carry],
     {
-        private ["_caller","_target"];
-        _caller = _this select 0;
-        _target = _this select 1;
-        _carry = _this select 2;
+        private ["_caller","_target", "_carry", "_args"];
+        _args = _this select 0;
+        _caller = _args select 0;
+        _target = _args select 1;
+        _carry = _args select 2;
 
         _target setvariable [QGVAR(beingCarried), _caller, true];
         _caller setvariable [QGVAR(carrying), _target, true];
