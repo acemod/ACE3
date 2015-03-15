@@ -56,7 +56,4 @@ _strength = _loudness - (_loudness/50 * _distance); // linear drop off
 
 if (_strength < 0.01) exitWith {};
 
-[_unit, _strength] spawn {
-    sleep 0.2;
-    _this call FUNC(earRinging);
-};
+[{_this call FUNC(earRinging)}, [_unit, _strength], 0.2, 0] call EFUNC(common,waitAndExecute);
