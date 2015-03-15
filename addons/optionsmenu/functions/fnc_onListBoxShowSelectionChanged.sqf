@@ -1,12 +1,19 @@
-/**
-* fnc_onListBoxShowSelectionChanged.sqf
-* @Descr: called when the listbox selection has changed. Updates configuration menu information
-* @Author: Glowbal
-*
-* @Arguments: []
-* @Return:
-* @PublicAPI: false
-*/
+/*
+ * Author: Glowbal
+ * Changes which tab is open (options or colors)
+ *
+ * Arguments:
+ * The tab to open (defined in script_component) <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [MENU_TAB_COLORS] call ACE_optionsmenu_fnc_onListBoxShowSelectionChanged
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 private ["_settingsMenu", "_localizedHeader"];

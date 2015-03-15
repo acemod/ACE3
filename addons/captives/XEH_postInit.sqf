@@ -27,15 +27,8 @@ if (isServer) then {
 ["SetHandcuffed", {_this call FUNC(setHandcuffed)}] call EFUNC(common,addEventHandler);
 ["SetSurrendered", {_this call FUNC(setSurrendered)}] call EFUNC(common,addEventHandler);
 
-//TODO: Medical Integration Events???
-
-// [_unit, "knockedOut", {
-// if (local (_this select 0)) then {_this call ACE_Captives_fnc_handleKnockedOut};
-// }] call ACE_Core_fnc_addCustomEventhandler;
-
-// [_unit, "wokeUp", {
-// if (local (_this select 0)) then {_this call ACE_Captives_fnc_handleWokeUp};
-// }] call ACE_Core_fnc_addCustomEventhandler;
+//Medical Integration Events???
+["medical_onUnconscious", {_this call ACE_Captives_fnc_handleOnUnconscious}] call EFUNC(common,addEventHandler);
 
 if (!hasInterface) exitWith {};
 
