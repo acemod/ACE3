@@ -5,8 +5,8 @@ Adds keys as an item, to lock and unlock vehicles.
 Primary target would be role play or TVT, but has uses in all game types, even co-ops (e.g.: DAC AI will steal unlocked vehicles)
 
 Two key modes (can be used together):
-Simple Side based keys (e.g. "ACE_key_west" works on any [WEST] vehicle like the M-ATV//hunter)
-Custom keys (one key will only open a specific vehicle and nothing else)
+* Simple Side based keys (e.g. "ACE_key_west" works on any [WEST] vehicle like the M-ATV//hunter)
+* Custom keys (one key will only open a specific vehicle and nothing else)
 
 #### Items Added:
 
