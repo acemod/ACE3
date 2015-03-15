@@ -88,6 +88,19 @@ if (GVAR(level) == 1) then {
     if (_unit getVariable [QGVAR(morphine), 0] > 0) then {
         _unit setVariable [QGVAR(morphine), ((_unit getVariable QGVAR(morphine)) - 0.0015 * _interval) max 0, _syncValues];
     };
+
+    // bleeding
+    _blood = _unit getVariable [QGVAR(bloodVolume), 100];
+    _blood = (_blood - 0.4 * (damage _unit) * _interval) max 0;
+    if (_blood != (_unit getVariable [QGVAR(bloodVolume), 100])) then {
+        _unit setVariable [QGVAR(bloodVolume), _blood, _syncValues];
+        if (_blood <= 35 and !(_unit getVariable [QGVAR(isUnconscious), false])) then {
+            [_unit, true] call FUNC(setUnconscious);
+        };
+        if (_blood == 0) then {
+            _unit setDamage 1;
+        };
+    };
 };
 
 // handle advanced medical, with vitals
