@@ -161,6 +161,3 @@ _vehicle setFuel _fuelLevel;
 ["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithConditon);
-
-//@todo remove obsolete
-GVAR(canInteract) = {true};

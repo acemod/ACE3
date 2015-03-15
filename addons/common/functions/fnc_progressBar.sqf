@@ -11,7 +11,7 @@
 * 3: CODE or STRING - On Failure: Code called or STRING raised as event.
 * 4: STRING - (Optional) Localized Title
 * 5: CODE - (Optional) Code to check each frame
-* 6: ARRAY - (Optional) Exceptions for checking EGVAR(common,canInteract)
+* 6: ARRAY - (Optional) Exceptions for checking EGVAR(common,canInteractWith)
 *
 * Return value:
 * Nothing
@@ -62,7 +62,7 @@ _perFrameFunction = {
       if (!([_args, _elapsedTime, _totalTime, _errorCode] call _condition)) then {
         _errorCode = 3;
       } else {
-        if (!(_exceptions call EGVAR(common,canInteract))) then {
+        if (!([_player, objNull, _exceptions] call EGVAR(common,canInteractWith))) then {
           _errorCode = 4;
         } else {
           if (_elapsedTime >= _totalTime) then {
