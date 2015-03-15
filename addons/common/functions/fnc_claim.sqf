@@ -1,7 +1,20 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * Unit claims the ownership over an object. This is used to prevent multiple players from draging the same ammo box or using up the same wheel when repairing etc.
+ *
+ * Arguments:
+ * 0: Unit that claims another object. ObjNull to remove claim. (Object)
+ * 1: The object that gets claimed. (Object)
+ * 2: Lock the claimed object aswell? (Bool)
+ *
+ * Return Value:
+ * NONE
+ *
+ */
 #include "script_component.hpp"
 
-private ["_unit", "_target", "_lockTarget", "_owner"];
+private ["_unit", "_target", "_lockTarget"];
 
 _unit = _this select 0;
 _target = _this select 1;
@@ -9,20 +22,26 @@ _lockTarget = _this select 2;
 
 if (isNil "_lockTarget") then {_lockTarget = false};
 
-_owner = _target getVariable ["ACE_isUsedBy", objNull];
+private "_owner";
+_owner = _target getVariable [QGVAR(owner), objNull];
 
 if (!isNull _owner && {!isNull _unit} && {_unit != _owner}) then {
   diag_log text "[ACE] ERROR: Claiming already owned object.";
 };
 
-_target setVariable ["ACE_isUsedBy", _unit, true];
+// transfer this immediately
+_target setVariable [QGVAR(owner), _unit, true];
 
+// lock target object
 if (_lockTarget) then {
-  if (!isNull _unit) then {
-    [_target, "{_locked = locked _this; _this setVariable ['ACE_lockStatus', _locked]; _this lock 2}", _target] call FUNC(execRemoteFnc);
-  } else {
-    [_target, "{_this lock (_this getVariable ['ACE_lockStatus', locked _this])}", _target] call FUNC(execRemoteFnc);
-  };
+    if (!isNull _unit) then {
+        ["lockVehicle", _target, _target] call FUNC(targetEvent);
+    } else {
+        ["unlockVehicle", _target, _target] call FUNC(targetEvent);
+    };
 };
 
-//systemChat str locked _target; systemChat str (_target getVariable ['ACE_lockStatus', locked _target]);
+/*
+systemChat str locked _target;
+systemChat str (_target getVariable [QGVAR(lockStatus), locked _target]);
+*/
