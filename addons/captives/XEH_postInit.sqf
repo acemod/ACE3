@@ -29,3 +29,9 @@ if (isServer) then {
 
 //Medical Integration Events???
 ["medical_onUnconscious", {_this call ACE_Captives_fnc_handleOnUnconscious}] call EFUNC(common,addEventHandler);
+
+if (!hasInterface) exitWith {};
+
+["isNotEscorting", {!(GETVAR(_this select 0,GVAR(isEscorting),false))}] call EFUNC(common,addCanInteractWithCondition);
+["isNotHandcuffed", {!(GETVAR(_this select 0,GVAR(isHandcuffed),false))}] call EFUNC(common,addCanInteractWithCondition);
+["isNotSurrendering", {!(GETVAR(_this select 0,GVAR(isSurrendering),false))}] call EFUNC(common,addCanInteractWithCondition);

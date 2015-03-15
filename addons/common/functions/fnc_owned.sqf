@@ -1,8 +1,19 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * Counterpart of ace_common_fnc_claim. Check if the given object is claimed by another unit.
+ *
+ * Arguments:
+ * 0: Any object. (Object)
+ *
+ * Return Value:
+ * Is this object claimed by someone?
+ *
+ */
 #include "script_component.hpp"
 
-private "_object";
+private "_target";
 
-_object = _this select 0;
+_target = _this select 0;
 
-!isNull (_object getVariable ["ACE_isUsedBy", objNull])
+!isNull (_target getVariable [QGVAR(owner), objNull])

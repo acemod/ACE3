@@ -64,7 +64,7 @@ case (_funcType == "startLockpick"): {
     _condition = {
       PARAMS_1(_args);
       EXPLODE_2_PVT(_args,_unit,_veh);
-      ([_unit] call EFUNC(common,canInteract)) && ((_unit distance _veh) < 5) && ((speed _veh) < 1)
+      ([_unit, objNull, []] call EFUNC(common,canInteractWith)) && ((_unit distance _veh) < 5) && ((speed _veh) < 1)
     };
     [_vehLockpickStrenth, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize "STR_ACE_Vehicle_Action_LockpickInUse"), _condition] call EFUNC(common,progressBar);
   };

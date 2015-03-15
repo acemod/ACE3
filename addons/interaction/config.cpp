@@ -24,9 +24,3 @@ class ACE_Settings {
     typeName = "BOOL";
   };
 };
-
-class ACE_canInteractConditions {
-  class GVAR(isNotSwimming) {
-    condition = QUOTE( !underwater ACE_player );
-  };
-};
