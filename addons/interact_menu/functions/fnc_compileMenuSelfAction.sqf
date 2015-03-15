@@ -43,7 +43,7 @@ _recurseFnc = {
             if (_condition == "") then {_condition = "true"};
 
             // Add canInteract (including exceptions) and canInteractWith to condition
-            _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EGVAR(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
+            _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, objNull, %1)] call EGVAR(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
 
             _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
             _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
