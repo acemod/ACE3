@@ -65,19 +65,6 @@ if (_painStatus > 0) then {
     };
 };
 
-
-if (_bloodVolume < 30) exitwith {
-    [_unit] call FUNC(setDead);
-};
-
-if ([_unit] call EFUNC(common,isAwake)) then {
-    if (_bloodVolume < 60) then {
-        if (random(1) > 0.9) then {
-            [_unit] call FUNC(setUnconscious);
-        };
-    };
-};
-
 if (GVAR(level) == 1) then {
     // reduce pain
     if (_unit getVariable [QGVAR(pain), 0] > 0) then {
@@ -105,6 +92,17 @@ if (GVAR(level) == 1) then {
 
 // handle advanced medical, with vitals
 if (GVAR(level) >= 2) then {
+    if (_bloodVolume < 30) exitwith {
+        [_unit] call FUNC(setDead);
+    };
+
+    if ([_unit] call EFUNC(common,isAwake)) then {
+        if (_bloodVolume < 60) then {
+            if (random(1) > 0.9) then {
+                [_unit] call FUNC(setUnconscious);
+            };
+        };
+    };
 
     // Set the vitals
     _heartRate = (_unit getvariable [QGVAR(heartRate), 0]) + ([_unit] call FUNC(getHeartRateChange)) * _interval;
