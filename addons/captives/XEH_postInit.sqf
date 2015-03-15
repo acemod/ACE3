@@ -36,3 +36,9 @@ if (isServer) then {
 // [_unit, "wokeUp", {
 // if (local (_this select 0)) then {_this call ACE_Captives_fnc_handleWokeUp};
 // }] call ACE_Core_fnc_addCustomEventhandler;
+
+if (!hasInterface) exitWith {};
+
+["isNotEscorting", {!(GETVAR(_this select 0,GVAR(isEscorting),false))}] call EFUNC(common,addCanInteractWithConditon);
+["isNotHandcuffed", {!(GETVAR(_this select 0,GVAR(isHandcuffed),false))}] call EFUNC(common,addCanInteractWithConditon);
+["isNotSurrendering", {!(GETVAR(_this select 0,GVAR(isSurrendering),false))}] call EFUNC(common,addCanInteractWithConditon);

@@ -20,6 +20,8 @@ _unit = _this select 0;
 _target = _this select 1;
 _exceptions = _this select 2;
 
+_exceptions = [_exceptions, {toLower _this}] call FUNC(map);
+
 // exit if the target is not free to interact
 private "_owner";
 _owner = _target getVariable [QGVAR(owner), objNull];

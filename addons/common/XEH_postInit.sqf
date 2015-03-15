@@ -55,8 +55,6 @@ if (_currentVersion != _previousVersion) then {
 if (!hasInterface) exitWith {};
 
 call COMPILE_FILE(scripts\assignedItemFix);
-
-call COMPILE_FILE(scripts\initCanInteractFunction);
 call COMPILE_FILE(scripts\initScrollWheel);
 
 0 spawn {
@@ -161,3 +159,8 @@ _vehicle setFuel _fuelLevel;
 
 ["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
 ["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
+
+["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithConditon);
+
+//@todo remove obsolete
+GVAR(canInteract) = {true};
