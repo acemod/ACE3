@@ -33,19 +33,29 @@ _position = _position vectorAdd [0, 0, _offset];
 _target attachTo [_unit, _position];
 _target setDir _direction;
 
-// add scrollwheel action to release object
-/*
-    _actionID = _unit getVariable ["AGM_Drag_ReleaseActionID", -1];
-
-    if (_actionID != -1) then {
-        _unit removeAction _actionID;
-    };
-    _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize "STR_AGM_Drag_EndDrag"], "player call AGM_Drag_fnc_releaseObject;", nil, 20, false, true, "","player call AGM_Drag_fnc_isDraggingObject"];
-
-    _unit setVariable ["AGM_Drag_ReleaseActionID", _actionID];
-*/
-
 _unit setVariable [QGVAR(isDragging), true, true];
+_unit setVariable [QGVAR(draggedObject), _target, true];
+
+// add scrollwheel action to release object
+private "_actionID";
+_actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
+
+if (_actionID != -1) then {
+    _unit removeAction _actionID;
+};
+
+_actionID = _unit addAction [
+    format ["<t color='#FF0000'>%1</t>", "STR_AGM_Drag_EndDrag"],
+    QUOTE([ARR_2(_this select 0, (_this select 0) getVariable [ARR_2(QUOTE(QGVAR(draggedObject)),objNull)])] call FUNC(dropObject)),
+    nil,
+    20,
+    false,
+    true,
+    "",
+    QUOTE(!isNull (_this getVariable [ARR_2(QUOTE(QGVAR(draggedObject)),objNull)]))
+];
+
+_unit setVariable [QGVAR(ReleaseActionID), _actionID];
 
 // check everything
 [FUNC(dragObjectPFH), 0, [_unit, _target]] call CBA_fnc_addPerFrameHandler;

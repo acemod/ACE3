@@ -3,6 +3,7 @@
 ADDON = false;
 
 PREP(canDrag);
+PREP(canDrop);
 PREP(dragObject);
 PREP(dragObjectPFH);
 PREP(dropObject);

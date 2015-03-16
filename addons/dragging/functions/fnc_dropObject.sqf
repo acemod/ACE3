@@ -18,9 +18,7 @@ _unit = _this select 0;
 _target = _this select 1;
 
 // remove scroll wheel action
-/*
-_this removeAction (_this getVariable ["AGM_Drag_ReleaseActionID", -1]);
-*/
+_unit removeAction (_unit getVariable [QGVAR(ReleaseActionID), -1]);
 
 // play release animation
 _unit playAction "released";
@@ -29,6 +27,7 @@ _unit playAction "released";
 detach _target;
 
 _unit setVariable [QGVAR(isDragging), false, true];
+_unit setVariable [QGVAR(draggedObject), objNull, true];
 
 // make object accesable for other units
 [objNull, _target, true] call EFUNC(common,claim);
