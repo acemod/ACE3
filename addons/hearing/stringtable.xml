@@ -2,7 +2,7 @@
 <!-- Edited with tabler - 2014-12-17 -->
 <Project name="ACE">
   <Package name="Hearing">
-    <Key ID="STR_ACE_Hearing_Earbuds_Name">
+    <Key ID="STR_ACE_Hearing_EarPlugs_Name">
       <English>Ear Plugs</English>
       <German>Ohrenstöpsel</German>
       <Spanish>Tapones para los oídos</Spanish>
@@ -14,8 +14,8 @@
       <Portuguese>Protetor auricular</Portuguese>
       <Italian>Tappi auricolari</Italian>
     </Key>
-    <Key ID="STR_ACE_Hearing_Earbuds_Description">
-      <English>Protective Ear Buds allow the wearer to be near loud weaponry without damage to his hearing.</English>
+    <Key ID="STR_ACE_Hearing_EarPlugs_Description">
+      <English>Protective Ear Plugs allow the wearer to be near loud weaponry without damage to his hearing.</English>
       <German>Schützende Ohrenstöpsel, die es dem Träger ermöglichen, sich in der Nähe lauter Waffen aufzuhalten.</German>
       <Spanish>Los tapones para los oídos permiten al usuario operar armamento ruidoso sin sufrir pérdida de audición.</Spanish>
       <Polish>Stopery do uszu umożliwiają użytkownikowi przebywać w pobliżu głośnej broni bez poniesienia konsekwencji jaką jest utrata słuchu.</Polish>
@@ -26,7 +26,7 @@
       <Portuguese>Protetor para ouvidos permitem que o usuário esteja próximo a ruídos sem danificar sua audição.</Portuguese>
       <Italian>Proteggono l'apparato uditivo, permettendo a chi li indossa di resistere ai suoni particolarmente forti senza alcun danno.</Italian>
     </Key>
-    <Key ID="STR_ACE_Hearing_Earbuds_On">
+    <Key ID="STR_ACE_Hearing_EarPlugs_On">
       <English>Earplugs in</English>
       <German>Ohrenstöpsel drinnen</German>
       <Spanish>Poner tapones</Spanish>
@@ -38,7 +38,7 @@
       <Portuguese>Protetores colocados</Portuguese>
       <Italian>Indossa i tappi auricolari</Italian>
     </Key>
-    <Key ID="STR_ACE_Hearing_Earbuds_Off">
+    <Key ID="STR_ACE_Hearing_EarPlugs_Off">
       <English>Earplugs out</English>
       <German>Ohrenstöpsel raus</German>
       <Spanish>Quitar tapones</Spanish>
@@ -50,7 +50,7 @@
       <Portuguese>Protetores retirados</Portuguese>
       <Italian>Levati i tappi auricolari</Italian>
     </Key>
-    <Key ID="STR_ACE_Hearing_Earbuds_Are_On">
+    <Key ID="STR_ACE_Hearing_EarPlugs_Are_On">
       <English>Earplugs in</English>
       <German>Ohrenstöpsel drinnen</German>
       <Spanish>Tapones puestos</Spanish>
@@ -62,7 +62,7 @@
       <Portuguese>Protetores colocados</Portuguese>
       <Italian>Indossa i tappi auricolari</Italian>
     </Key>
-    <Key ID="STR_ACE_Hearing_Earbuds_Are_Off">
+    <Key ID="STR_ACE_Hearing_EarPlugs_Are_Off">
       <English>Earplugs out</English>
       <German>Ohrenstöpsel raus</German>
       <Spanish>Tapones quitados</Spanish>
@@ -74,7 +74,7 @@
       <Portuguese>Protetores retirados</Portuguese>
       <Italian>Levati i tappi auricolari</Italian>
     </Key>
-    <Key ID="STR_ACE_Hearing_NoBuds">
+    <Key ID="STR_ACE_Hearing_NoPlugs">
       <English>You have no ear plugs</English>
       <German>Keine Ohrenstöpsel im Inventar</German>
       <Spanish>No tienes tapones para los oídos</Spanish>

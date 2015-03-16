@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         units[] = {};
-        weapons[] = {"ACE_EarBuds"};
+        weapons[] = {"ACE_EarPlugs"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common", "ace_interaction"};
         author[] = {"KoffeinFlummi", "CAA-Picard", "HopeJ", "commy2"};
