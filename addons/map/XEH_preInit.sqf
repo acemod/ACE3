@@ -7,6 +7,7 @@ PREP(blueForceTrackingModule);
 PREP(blueForceTrackingUpdate);
 PREP(determineMapLight);
 PREP(determineZoom);
+PREP(moduleMap);
 PREP(updateMapEffects);
 
 ADDON = true;
