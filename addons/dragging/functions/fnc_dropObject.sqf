@@ -24,6 +24,8 @@ _unit removeAction (_unit getVariable [QGVAR(ReleaseActionID), -1]);
 _unit playAction "released";
 
 // release object
+[_target] call EFUNC(common,fixCollisions);//"fixCollision"
+
 detach _target;
 
 _unit setVariable [QGVAR(isDragging), false, true];
