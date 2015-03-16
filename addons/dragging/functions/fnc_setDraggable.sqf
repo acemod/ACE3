@@ -48,5 +48,5 @@ if (_type in _initializedClasses) exitWith {};
 _initializedClasses pushBack _type;
 GVAR(initializedClasses) = _initializedClasses;
 
-[_type, 0, ["ACE_MainActions", QGVAR(drag)], "drg", "", "", {[_player, _target] call FUNC(startDrag)}, {[_player, _target] call FUNC(canDrag)}, 2] call EFUNC(interact_menu,addClassAction);
-[_type, 0, ["ACE_MainActions", QGVAR(drop)], "drp", "", "", {[_player, _target] call FUNC(dropObject)}, {[_player, _target] call FUNC(canDrop)}, 2] call EFUNC(interact_menu,addClassAction);
+[_type, 0, ["ACE_MainActions", QGVAR(drag)], localize "STR_ACE_Dragging_Drag", "", "", {[_player, _target] call FUNC(startDrag)}, {[_player, _target] call FUNC(canDrag)}, 2] call EFUNC(interact_menu,addClassAction);
+[_type, 0, ["ACE_MainActions", QGVAR(drop)], localize "STR_ACE_Dragging_Drop", "", "", {[_player, _target] call FUNC(dropObject)}, {[_player, _target] call FUNC(canDrop)}, 2] call EFUNC(interact_menu,addClassAction);

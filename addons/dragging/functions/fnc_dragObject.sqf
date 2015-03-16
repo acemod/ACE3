@@ -45,7 +45,7 @@ if (_actionID != -1) then {
 };
 
 _actionID = _unit addAction [
-    format ["<t color='#FF0000'>%1</t>", "STR_AGM_Drag_EndDrag"],
+    format ["<t color='#FF0000'>%1</t>", localize "STR_ACE_Dragging_Drop"],
     QUOTE([ARR_2(_this select 0, (_this select 0) getVariable [ARR_2(QUOTE(QGVAR(draggedObject)),objNull)])] call FUNC(dropObject)),
     nil,
     20,
