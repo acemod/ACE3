@@ -42,7 +42,7 @@ if (_maxAmmo == 0) exitWith {};
 // Condition to call each frame
 _condition = {
     EXPLODE_2_PVT((_this select 0),_player,_target);
-    ([_player, _target] call EFUNC(common,canInteract)) && ((_player distance _target) < 3) && ((speed _target) < 1)
+    ([_player, _target, []] call EFUNC(common,canInteractWith)) && ((_player distance _target) < 3) && ((speed _target) < 1)
 };
 
 _onFinish = {

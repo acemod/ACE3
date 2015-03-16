@@ -13,6 +13,7 @@
  *
  * Public: No
  */
+
 #include "script_component.hpp"
 
 // Filter only user setable setting
@@ -38,3 +39,9 @@ GVAR(clientSideColors) = [];
 
 //Delay a frame
 [{ [MENU_TAB_OPTIONS] call FUNC(onListBoxShowSelectionChanged) }, []] call EFUNC(common,execNextFrame);
+
+private "_menu";
+disableSerialization;
+_menu = uiNamespace getvariable "ACE_settingsMenu";
+(_menu displayCtrl 1002) ctrlEnable false;
+(_menu displayCtrl 1003) ctrlEnable false;
