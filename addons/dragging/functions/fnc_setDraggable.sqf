@@ -54,4 +54,4 @@ _name = "drag";
 _icon = "";
 _selection = "";
 
-[_type, 0, ["ACE_MainActions", _name], _name, _icon, _selection, FUNC(startDrag), FUNC(canDrag), 2] call EFUNC(interact_menu,addClassAction);
+[_type, 0, ["ACE_MainActions", _name], _name, _icon, _selection, {[_player, _target] call FUNC(startDrag)}, {[_player, _target] call FUNC(canDrag)}, 2] call EFUNC(interact_menu,addClassAction);

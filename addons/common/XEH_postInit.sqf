@@ -20,6 +20,8 @@ if (hasInterface) then {
     };
 }] call FUNC(addEventhandler);
 
+["fixPosition", FUNC(fixPosition)] call FUNC(addEventhandler);
+
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
     if (time > 0) exitWith {

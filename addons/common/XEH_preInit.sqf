@@ -56,6 +56,7 @@ PREP(execRemoteFnc);
 PREP(executePersistent);
 PREP(filter);
 PREP(fixLoweredRifleAnimation);
+PREP(fixPosition);
 PREP(getAllDefinedSetVariables);
 PREP(getAllGear);
 PREP(getCaptivityStatus);
