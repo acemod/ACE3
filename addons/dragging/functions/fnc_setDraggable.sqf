@@ -39,10 +39,14 @@ _object setVariable [QGVAR(dragDirection), _direction];
 // add action to class if it is not already present
 private ["_type", "_initializedClasses"];
 
-_initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
+_type = typeOf _object;
+_initializedClasses = GETGVAR(initializedClasses,[]);
 
 // do nothing if the class is already initialized
 if (_type in _initializedClasses) exitWith {};
+
+_initializedClasses pushBack _type;
+GVAR(initializedClasses) = _initializedClasses;
 
 private ["_name", "_icon", "_selection", "_statement", "_condition"];
 
@@ -50,4 +54,4 @@ _name = "drag";
 _icon = "";
 _selection = "";
 
-[_type, 0, [_name], _name, _icon, _selection, FUNC(startDrag), FUNC(canDrag), 2] call EFUNC(interact_menu,addClassAction);
+[_type, 0, ["ACE_MainActions", _name], _name, _icon, _selection, FUNC(startDrag), FUNC(canDrag), 2] call EFUNC(interact_menu,addClassAction);
