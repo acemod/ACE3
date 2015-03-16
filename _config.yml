@@ -1,9 +1,9 @@
 navigation:
  - title: Home
-   url: /index.html
+   url: ./index.html
  - title: Projects
-   url: /projects.html
+   url: ./projects.html
  - title: About
-   url: /about.html
+   url: ./about.html
  - title: Contact
-   url: /contact.html
+   url: ./contact.html
