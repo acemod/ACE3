@@ -2,6 +2,7 @@
 class CfgVehicles {
     class ThingX;
     class ReammoBox_F: ThingX {
+        XEH_ENABLED;
         GVAR(canDrag) = 0;
         GVAR(dragPosition[]) = {0,1,1};
         GVAR(dragDirection) = 0;

@@ -12,9 +12,9 @@ class Extended_PostInit_EventHandlers {
 };
 
 class Extended_Init_EventHandlers {
-    class ThingX {
+    class ReammoBox_F {
         class ADDON {
-            init = QUOTE(if (local (_this select 0)) then {_this call DFUNC(initObject)};);
+            init = QUOTE(_this call DFUNC(initObject));
         };
     };
 };

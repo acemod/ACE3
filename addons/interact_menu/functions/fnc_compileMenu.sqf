@@ -18,7 +18,7 @@ private ["_objectType","_actionsVarName"];
 _objectType = _target;
 if (typeName _target == "OBJECT") then {
     _objectType = typeOf _target;
-};
+};systemChat _objectType;
 _actionsVarName = format [QGVAR(Act_%1), _objectType];
 
 // Exit if the action menu is already compiled for this class

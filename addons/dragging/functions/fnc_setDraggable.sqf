@@ -32,9 +32,9 @@ if (isNil "_direction") then {
 };
 
 // update variables
-_object setVariable [QGVAR(canDrag), _enableDrag, true];
-_object setVariable [QGVAR(dragPosition), _position, true];
-_object setVariable [QGVAR(dragDirection), _direction, true];
+_object setVariable [QGVAR(canDrag), _enableDrag];
+_object setVariable [QGVAR(dragPosition), _position];
+_object setVariable [QGVAR(dragDirection), _direction];
 
 // add action to class if it is not already present
 private ["_type", "_initializedClasses"];
@@ -49,7 +49,5 @@ private ["_name", "_icon", "_selection", "_statement", "_condition"];
 _name = "drag";
 _icon = "";
 _selection = "";
-_statement = {hint str _target};
-_condition = {true};
 
-[_type, 0, [_name], _name, _icon, _selection, _statement, _condition, 2] call EFUNC(interact_menu,addClassAction);
+[_type, 0, [_name], _name, _icon, _selection, FUNC(startDrag), FUNC(canDrag), 2] call EFUNC(interact_menu,addClassAction);
