@@ -92,4 +92,27 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_EarBuds,12);
         };
     };
+
+
+    class Module_F;
+    class ACE_ModuleHearing: Module_F {
+        author = "$STR_ACE_Common_ACETeam";
+        category = "ACE";
+        displayName = "Hearing";
+        function = QFUNC(moduleHearing);
+        scope = 2;
+        isGlobal = 1;
+        icon = PATHTOF(UI\IconHearing_ca.paa);
+        class Arguments {
+            class EnableCombatDeafness {
+                displayName = "Enable combat deafness?";
+                description = "Enable combat deafness?";
+                typeName = "BOOL";
+                class values {
+                    class Yes { name = "Yes"; value = 1; default = 1; };
+                    class No { name = "No"; value = 0; };
+                };
+            };
+        };
+    };
 };

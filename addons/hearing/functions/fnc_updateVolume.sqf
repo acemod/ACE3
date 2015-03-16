@@ -4,6 +4,9 @@
 #define STRENGHTODEAFNESS 3
 #define MAXDEAFNESS 1.1
 
+// Exit if combat deafness is disabled
+if !(GVAR(enableCombatDeafness)) exitWith {};
+
 // Check if new noises increase deafness
 if (GVAR(newStrength) * STRENGHTODEAFNESS > GVAR(currentDeafness)) then {
   GVAR(currentDeafness) = GVAR(newStrength) * STRENGHTODEAFNESS min MAXDEAFNESS;
@@ -27,12 +30,12 @@ _volume = (1 - GVAR(currentDeafness) max 0)^2 max 0.04;
 
 // Earplugs reduce hearing 50%
 if ([ACE_player] call FUNC(hasEarPlugsIn)) then {
-  _volume = _volume min 0.5;
+  _volume = _volume min GVAR(EarplugsVolume);
 };
 
 // Reduce volume if player is unconscious
 if (ACE_player getVariable ["ACE_isUnconscious", false]) then {
-  _volume = _volume min 0.4;
+  _volume = _volume min GVAR(UnconsciousnessVolume);
 };
 
 if (!(missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false])) then {
