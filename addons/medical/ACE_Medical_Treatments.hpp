@@ -41,7 +41,7 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_epipen));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
-        class Bloodbag: Bandage {
+        class BloodIV: Bandage {
             displayName = "Blood Bag";
             displayNameProgress = "Transfusing Blood ...";
             requiredMedic = 1;
