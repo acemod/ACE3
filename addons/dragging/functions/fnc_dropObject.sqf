@@ -20,13 +20,23 @@ _target = _this select 1;
 // remove scroll wheel action
 _unit removeAction (_unit getVariable [QGVAR(ReleaseActionID), -1]);
 
+private "_inBuilding";
+_inBuilding = [_unit] call FUNC(isObjectOnObject);
+
 // play release animation
 _unit playAction "released";
 
-// release object
-[_target] call EFUNC(common,fixCollisions);//"fixCollision"
+// prevent collision damage
+["fixCollision", _target, _target] call EFUNC(common,targetEvent);
 
+// release object
 detach _target;
+
+// prevent object from flipping inside buildings
+if (_inBuilding) then {
+    _target setPosASL (getPosASL _target vectorAdd [0, 0, 0.05]);
+};
+
 
 _unit setVariable [QGVAR(isDragging), false, true];
 _unit setVariable [QGVAR(draggedObject), objNull, true];

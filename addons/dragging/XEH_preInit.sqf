@@ -8,6 +8,7 @@ PREP(dragObject);
 PREP(dragObjectPFH);
 PREP(dropObject);
 PREP(initObject);
+PREP(isObjectOnObject);
 PREP(setDraggable);
 PREP(startDrag);
 PREP(startDragPFH);

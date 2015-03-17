@@ -55,7 +55,7 @@ PREP(execPersistentFnc);
 PREP(execRemoteFnc);
 PREP(executePersistent);
 PREP(filter);
-PREP(fixCollisions);
+PREP(fixCollision);
 PREP(fixLoweredRifleAnimation);
 PREP(fixPosition);
 PREP(getAllDefinedSetVariables);

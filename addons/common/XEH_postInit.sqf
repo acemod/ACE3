@@ -20,6 +20,7 @@ if (hasInterface) then {
     };
 }] call FUNC(addEventhandler);
 
+["fixCollision", FUNC(fixCollision)] call FUNC(addEventhandler);
 ["fixPosition", FUNC(fixPosition)] call FUNC(addEventhandler);
 
 // hack to get PFH to work in briefing
