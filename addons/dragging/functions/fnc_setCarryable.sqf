@@ -6,7 +6,7 @@
  * Argument:
  * 0: Any object (Object)
  * 1: true to enable carrying, false to disable (Bool)
- * 2: Position offset for attachTo command (Array, optinal; default: [0,0,0])
+ * 2: Position offset for attachTo command (Array, optinal; default: [0,1,1])
  * 3: Direction in degree to rotate the object after attachTo (Number, optional; default: 0)
  *
  * Return value:
@@ -24,7 +24,7 @@ _position = _this select 2;
 _direction = _this select 3;
 
 if (isNil "_position") then {
-    _position = _object getVariable [QGVAR(carryPosition), [0,0,0]];
+    _position = _object getVariable [QGVAR(carryPosition), [0,1,1]];
 };
 
 if (isNil "_direction") then {
