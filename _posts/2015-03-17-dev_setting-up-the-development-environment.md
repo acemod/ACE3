@@ -32,7 +32,7 @@ You will need to run the following commands in a command prompt window as Admini
 
 Windows 8:
 
-```
+```ruby
 mklink /D /J "C:\Program Files (x86)\Steam\steamapps\common\ArmA 3\z\ace" "C:\dev\ACE3"
 mklink /D /J "P:\z\ace" "C:\dev\ACE3"
 ```
@@ -69,9 +69,9 @@ Configs are not patched during run time, only at load time. You do not have have
 
 You have two options for file patching to work. 
 
-* you can load cba_cache_disable.pbo
+  * you can load `cba_cache_disable.pbo`
+  * Add the following to your test missions description.ext
 
-* Add the following to your test missions description.ext
 ```
 class CfgSettings {
    class CBA {

@@ -4,8 +4,9 @@ name: ACE3
 description: ACE 3 is a joint effort by the teams behind ACE2, AGM and CSE to improve the realism and authenticity of Arma 3.
 
 markdown: redcarpet
+highlighter: rouge
 
-exclude: [.editorconfig,README.md]
+exclude: [.editorconfig,README.md, src]
 
 navigation:
  - title: Home

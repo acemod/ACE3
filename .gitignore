@@ -4,6 +4,7 @@ _drafts/
 
 Thumbs.db
 .DS_Store
+.idea
 
 !.gitkeep
 
