@@ -35,6 +35,12 @@ if (!local _unit) exitwith {
 _unit setvariable ["ACE_isUnconscious", true, true];
 _unit setUnconscious true;
 
+// @todo: mute player?
+if (_unit == ACE_player) then {
+    if (visibleMap) then {openMap false};
+    closeDialog 0;
+};
+
 // If a unit has the launcher out, it will sometimes start selecting the primairy weapon while unconscious,
 // therefor we force it to select the primairy weapon before going unconscious
 if ((vehicle _unit) isKindOf "StaticWeapon") then {
