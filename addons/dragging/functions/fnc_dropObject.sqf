@@ -37,7 +37,6 @@ if (_inBuilding) then {
     _target setPosASL (getPosASL _target vectorAdd [0, 0, 0.05]);
 };
 
-
 _unit setVariable [QGVAR(isDragging), false, true];
 _unit setVariable [QGVAR(draggedObject), objNull, true];
 

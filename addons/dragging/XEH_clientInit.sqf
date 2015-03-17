@@ -1,5 +1,4 @@
 // by PabstMirror, commy2
-
 #include "script_component.hpp"
 
 GVAR(currentHeightChange) = 0;

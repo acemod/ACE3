@@ -26,7 +26,7 @@ _exceptions = [_exceptions, {toLower _this}] call FUNC(map);
 private "_owner";
 _owner = _target getVariable [QGVAR(owner), objNull];
 
-if (!isNull _owner && {_unit != _owner} && {!([_owner] call FUNC(isPlayer))}) exitWith {false};
+if (!isNull _owner && {_unit != _owner}) exitWith {false};
 
 // check general conditions
 
