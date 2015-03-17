@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  *
- * Initialize variables for dragable objects. Called from init EH.
+ * Initialize variables for drag or carryable objects. Called from init EH.
  *
  * Argument:
  * 0: Any object (Object)
@@ -15,11 +15,23 @@ private "_object";
 
 _object = _this select 0;
 
-if (getNumber (configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(canDrag)) == 1) then {
+private "_config";
+_config = configFile >> "CfgVehicles" >> typeOf _object;
+
+if (getNumber (_config >> QGVAR(canDrag)) == 1) then {
     private ["_position", "_direction"];
 
-    _position = getArray (configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(dragPosition));
-    _direction = getNumber (configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(dragDirection));
+    _position = getArray (_config >> QGVAR(dragPosition));
+    _direction = getNumber (_config >> QGVAR(dragDirection));
 
     [_object, true, _position, _direction] call FUNC(setDraggable);
+};
+
+if (getNumber (_config >> QGVAR(canCarry)) == 1) then {
+    private ["_position", "_direction"];
+
+    _position = getArray (_config >> QGVAR(carryPosition));
+    _direction = getNumber (_config >> QGVAR(carryDirection));
+
+    [_object, true, _position, _direction] call FUNC(setCarryable);
 };

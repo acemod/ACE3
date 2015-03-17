@@ -10,6 +10,7 @@ if (isNil QGVAR(maxWeight)) then {
 };
 
 ["isNotDragging", {!((_this select 0) getVariable [QGVAR(isDragging), false])}] call EFUNC(common,addCanInteractWithCondition);
+["isNotCarrying", {!((_this select 0) getVariable [QGVAR(isCarrying), false])}] call EFUNC(common,addCanInteractWithCondition);
 
 // release object on player change. This does work when returning to lobby, but not when hard disconnecting.
 ["playerChanged", {
