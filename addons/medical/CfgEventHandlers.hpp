@@ -1,3 +1,4 @@
+
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
@@ -6,30 +7,38 @@ class Extended_PreInit_EventHandlers {
 
 class Extended_PostInit_EventHandlers {
     class ADDON {
-       init = QUOTE(call COMPILE_FILE(XEH_postInit));
+        init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
 
-
-class Extended_Killed_Eventhandlers {
-    class CaManBase {
+class Extended_Init_EventHandlers {
+    class CAManBase {
         class ADDON {
-            Killed =  QUOTE(_this call FUNC(eh_killed));
+            init = QUOTE(call COMPILE_FILE(XEH_init));
         };
     };
 };
 
-class Extended_Local_Eventhandlers {
-    class CaManBase {
+class Extended_Respawn_EventHandlers {
+    class CAManBase {
         class ADDON {
-            Local = QUOTE(_this call FUNC(eh_local));
+            respawn = QUOTE(call COMPILE_FILE(XEH_respawn));
         };
     };
 };
-class Extended_Init_Eventhandlers {
-    class CaManBase {
+
+class Extended_Killed_EventHandlers {
+    class CAManBase {
         class ADDON {
-            init = QUOTE(_this call FUNC(onInitForUnit););
+            killed = QUOTE(call FUNC(handleKilled));
+        };
+    };
+};
+
+class Extended_Local_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            local = QUOTE(call FUNC(handleLocal));
         };
     };
 };

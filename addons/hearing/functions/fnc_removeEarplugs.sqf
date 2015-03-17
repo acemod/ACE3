@@ -1,28 +1,29 @@
 /*
- * Author: Hope Johnson
- * Edited by commy2
- *
- * Puts in / takes out earplugs.
+ * Author: Hope Johnson and commy2
+ * Takes out earplugs.
  *
  * Arguments:
- * none
+ * 0:Unit (player) <OBJECT>
  *
  * Return Value:
- * none
+ * None
+ *
+ * Example:
+ * [ace_player] call ace_hearing_fnc_removeEarplugs
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private "_player";
+PARAMS_1(_player);
 
-_player = _this select 0;
-
-if !(_player canAdd "ACE_EarBuds") exitWith { // inventory full
-  [localize "STR_ACE_Hearing_Inventory_Full"] call EFUNC(common,displayTextStructured);
+if !(_player canAdd "ACE_EarPlugs") exitWith { // inventory full
+    [localize "STR_ACE_Hearing_Inventory_Full"] call EFUNC(common,displayTextStructured);
 };
 
-// Buds already in and removing them.
-_player addItem "ACE_EarBuds";
+// Plugs already in and removing them.
+_player addItem "ACE_EarPlugs";
 
 _player setVariable ["ACE_hasEarPlugsIn", false, true];
 
-[localize "STR_ACE_Hearing_Earbuds_Are_Off"] call EFUNC(common,displayTextStructured);
+[localize "STR_ACE_Hearing_EarPlugs_Are_Off"] call EFUNC(common,displayTextStructured);

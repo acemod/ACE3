@@ -1,11 +1,16 @@
-/**
- * fn_assignMedicalFacility.sqf
- * @Descr: Register synchronized objects from passed object as a medical facility for CMS.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Register synchronized objects from passed object as a medical facility
  *
- * @Arguments: [logic OBJECT]
- * @Return: BOOL
- * @PublicAPI: true
+ * Arguments:
+ * 0: The module logic <LOGIC>
+ * 1: units <ARRAY>
+ * 2: activated <BOOL>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
@@ -22,4 +27,4 @@ if (!isNull _logic) then {
     }foreach _objects;
 };
 
-true
+true;

@@ -1,50 +1,30 @@
 /*
- * Author: commy2 and NouberNou
+ * Author: commy2, NouberNou and CAA-Picard
  * Remove an action from an object
  *
  * Argument:
- * 0: Object the action should be assigned to <OBJECT>
- * 1: Entry to remove <ARRAY> or <NUMBER>
+ * 0: Object the action is assigned to <OBJECT>
+ * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
+ * 2: Full path of the action to remove <ARRAY>
  *
  * Return value:
  * None
+ *
+ * Example:
+ * [cursorTarget,0,["ACE_TapShoulderRight","VulcanPinch"]] call ace_interact_menu_fnc_removeAction;
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_object,_entry);
+EXPLODE_3_PVT(_this,_object,_typeNum,_fullPath);
 
-private ["_found", "_actions", "_searchFnc"];
+private ["_varName","_actions"];
+_varName = [QGVAR(actions),QGVAR(selfActions)] select _typeNum;
+_actions = _object getVariable [_varName, []];
 
-
-if(!IS_OBJECT(_object)) exitWith {false};
-
-_actions = _object getVariable [QUOTE(GVAR(actionData)), []];
-if(IS_ARRAY(_entry)) then {
-    _entry = _entry select 7;
-};
-
-_found = false;
-_searchFnc = {
-    private ["_actions", "_entry", "_childActions"];
-    _actions = _this select 0;
-    _entry = _this select 1;
-    {
-        if((_x select 7) == _entry) then {
-            _actions set[_forEachIndex, "aceactiondelete"];
-            _actions = _actions - ["aceactiondelete"];
-            _found = true;
-        } else {
-            if(!_found && {count (_x select 6) > 0}) then {
-                _childActions = [(_x select 6), _entry] call _searchFnc;
-                _x set[6, _childActions];
-            };
-        };
-    } forEach _actions;
-    _actions;
-};
-_actions = [_actions, _entry] call _searchFnc;
-_object setVariable [QUOTE(GVAR(actionData)), _actions];
-
-_found;
+{
+    if (((_x select 0) select 7) isEqualTo _fullPath) exitWith {
+        _actions deleteAt _forEachIndex;
+    };
+} forEach _actions;

@@ -1,31 +1,22 @@
 #include "script_component.hpp"
 
-class CfgPatches
-{
- class ADDON
- {
-  units[] = {"ACE_medical_supply_crate_cms", "ACE_bandage_basicItem","ACE_packing_bandageItem","ACE_bandageElasticItem","ACE_tourniquetItem","ACE_splintItem","ACE_morphineItem","ACE_atropineItem","ACE_epinephrineItem","ACE_plasma_ivItem","ACE_plasma_iv_500Item","ACE_plasma_iv250Item","ACE_blood_ivItem","ACE_blood_iv_500Item","ACE_blood_iv_250Item","ACE_saline_ivItem","ACE_saline_iv_500Item","ACE_saline_iv_250Item","ACE_quikclotItem","ACE_nasopharyngeal_tubeItem","ACE_opaItem","ACE_liquidSkinItem","ACE_chestsealItem","ACE_personal_aid_kitItem"};
-  weapons[] = {"ACE_surgical_kit"};
-  requiredVersion = REQUIRED_VERSION;
-  requiredAddons[] = {"ACE_common"};
-  version = VERSION;
-  author[] = {$STR_ACE_Common_ACETeam, "Glowbal"};
-  authorUrl = "http://csemod.com"; 
- };
-};
-class CfgAddons {
-    class PreloadAddons {
-       class ADDON {
-          list[] = {QUOTE(ADDON)};
-       };
+class CfgPatches {
+    class ADDON {
+        units[] = {QGVAR(fieldDressingItem), QGVAR(packingBandageItem), QGVAR(elasticBandageItem), QGVAR(tourniquetItem), QGVAR(morphineItem), QGVAR(atropineItem), QGVAR(epinephrineItem), QGVAR(plasmaIVItem), QGVAR(bloodIVItem), QGVAR(salineIVItem), QGVAR(quikclotItem), QGVAR(personalAidKitItem), QGVAR(surgicalKitItem), QGVAR(bodyBagItem)};
+        weapons[] = {QGVAR(fieldDressing), QGVAR(packingBandage), QGVAR(elasticBandage), QGVAR(tourniquet), QGVAR(morphine), QGVAR(atropine), QGVAR(epinephrine), QGVAR(plasmaIV), QGVAR(plasmaIV_500), QGVAR(plasmaIV_250), QGVAR(bloodIV), QGVAR(bloodIV_500), QGVAR(bloodIV_250), QGVAR(salineIV), QGVAR(salineIV_500), QGVAR(salineIV_250), QGVAR(quikclot), QGVAR(personalAidKit), QGVAR(surgicalKit), QGVAR(bodyBag)};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {ace_common, ace_interaction};
+        author[] = {"Glowbal", "KoffienFlummi"};
+        authorUrl = "";
+        VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
-#include "CfgWeapons.hpp"
-#include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
-#include "ui\define.hpp"
-#include "ui\menu.hpp"
-#include "ui\RscTitles.hpp"
+#include "CfgWeapons.hpp"
+#include "CFgSounds.hpp"
+#include "ACE_Medical_Treatments.hpp"
+#include "ACE_Settings.hpp"
+#include "UI\RscTitles.hpp"

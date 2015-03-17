@@ -29,13 +29,8 @@ if (_picture == "" || _picture == "PictureThing") then {
 	_picture = QUOTE(PATHTOF(UI\dot_ca.paa));
 };
 
-if ((profileNamespace getVariable [QGVAR(FlowMenu), false])) then {
-	//[_displayName, _statement, _condition, _priority, _subMenu, _icon, _tooltip, _conditionShow, _exceptions, _distance, _hotkey]
-	_container pushBack [_displayName, nil, {true},0,[], _picture, "", {true}, [], 4, "", _data];
-}else{
-	_index = lbAdd [_container, _displayName];
-	lbSetData [_container, _index, str _data];
-	lbSetPicture [_container, _index, _picture];
-};
+_index = lbAdd [_container, _displayName];
+lbSetData [_container, _index, str _data];
+lbSetPicture [_container, _index, _picture];
 
 _container

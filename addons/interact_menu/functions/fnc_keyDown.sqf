@@ -13,7 +13,13 @@
 #include "script_component.hpp"
 
 if(!GVAR(keyDown)) then {
+
+    // Only interact with others if on foot
+    if (vehicle ACE_player != ACE_player) exitWith {};
+
     GVAR(keyDown) = true;
     GVAR(keyDownTime) = diag_tickTime;
+
+    ["interactMenuOpened", [0]] call EFUNC(common,localEvent);
 };
 true

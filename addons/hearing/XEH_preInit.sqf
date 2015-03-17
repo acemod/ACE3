@@ -7,6 +7,7 @@ PREP(earRinging);
 PREP(explosionNear);
 PREP(firedNear);
 PREP(hasEarPlugsIn);
+PREP(moduleHearing);
 PREP(putInEarPlugs);
 PREP(removeEarPlugs);
 PREP(updateVolume);
