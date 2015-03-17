@@ -69,4 +69,4 @@ if ((count _activeChildren) == 0 && ((_origActionData select 3) isEqualTo {})) e
     []
 };
 
-[_origActionData, _activeChildren]
+[_origActionData, _activeChildren, _object]

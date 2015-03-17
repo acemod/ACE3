@@ -66,12 +66,11 @@ _activeActionTree = [
                         _object, _uid, 0.2
                     ] call EFUNC(common,cachedCall);
 
-
 // Check if there's something left for rendering
 if (count _activeActionTree == 0) exitWith {false};
 
 //EXPLODE_2_PVT(_activeActionTree,_actionData,_actionChildren);
 
-[_object, _activeActionTree, _pos, [180,360]] call FUNC(renderMenu);
+[[], _activeActionTree, _pos, [180,360]] call FUNC(renderMenu);
 
 true

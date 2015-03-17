@@ -142,8 +142,8 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,.75], _pos, 0.6*SafeZoneW, 0.6*SafeZoneW, GVAR(rotationAngle), "", 0.5, 0.025, "TahomaB"];
     _foundTarget = true;
     GVAR(actionSelected) = true;
-    GVAR(selectedTarget) = (_closest select 0) select 0;
     GVAR(selectedAction) = (_closest select 0) select 1;
+    GVAR(selectedTarget) = (GVAR(selectedAction)) select 2;
     GVAR(selectedStatement) = ((GVAR(selectedAction)) select 0) select 3;
 
     _misMatch = false;
@@ -153,7 +153,7 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
         _misMatch = true;
     } else {
         {
-            if(_x != (_hoverPath select _forEachIndex)) exitWith {
+            if !(_x isEqualTo (_hoverPath select _forEachIndex)) exitWith {
                 _misMatch = true;
             };
         } forEach GVAR(lastPath);

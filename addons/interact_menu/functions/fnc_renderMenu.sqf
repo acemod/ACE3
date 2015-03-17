@@ -3,7 +3,7 @@
  * Render an interaction menu and it's children recursively
  *
  * Argument:
- * 0: Object <OBJECT>
+ * 0: Parent path <ARRAY>
  * 1: Action data <ARRAY>
  * 2: 3D position <ARRAY>
  * 3: Angle range available for rendering <ARRAY>
@@ -15,16 +15,18 @@
  */
 #include "script_component.hpp"
 
-private ["_menuInSelectedPath", "_path", "_menuDepth", "_currentRenderDepth", "_x", "_offset", "_newPos", "_forEachIndex"];
+private ["_menuInSelectedPath", "_localPath", "_path", "_menuDepth", "_currentRenderDepth", "_x", "_offset", "_newPos", "_forEachIndex"];
 
-EXPLODE_4_PVT(_this,_object,_action,_pos,_angles);
-EXPLODE_2_PVT(_action,_actionData,_activeChildren);
+EXPLODE_4_PVT(_this,_parentPath,_action,_pos,_angles);
+EXPLODE_3_PVT(_action,_actionData,_activeChildren,_actionObject);
 EXPLODE_2_PVT(_angles,_centerAngle,_maxAngleSpan);
 
 _menuDepth = (count GVAR(menuDepthPath)) - 1;
 
 // Store path to action
-_path = [_object] + (_actionData select 7);
+_localPath = _actionData select 7;
+_path = +_parentPath;
+_path pushBack [_localPath select ((count _localPath) - 1), _actionObject];
 
 // Check if the menu is on the selected path
 _menuInSelectedPath = true;
@@ -32,7 +34,7 @@ _menuInSelectedPath = true;
     if (_forEachIndex >= (count GVAR(menuDepthPath))) exitWith {
         _menuInSelectedPath = false;
     };
-    if (_x != (GVAR(menuDepthPath) select _forEachIndex)) exitWith {
+    if !(_x isEqualTo (GVAR(menuDepthPath) select _forEachIndex)) exitWith {
         _menuInSelectedPath = false;
     };
 } forEach _path;
@@ -63,7 +65,7 @@ if (_angleSpan >= 305) then {
 
 _angle = _centerAngle - _angleSpan / 2;
 {
-    _target = _object;
+    _target = _actionObject;
     _player = ACE_player;
 
     _mod = (0.15 max (0.15 * ((positionCameraToWorld [0, 0, 0]) distance _pos))) / GVAR(selfMenuScale);
@@ -74,7 +76,7 @@ _angle = _centerAngle - _angleSpan / 2;
 
     //drawLine3D [_pos, _newPos, [1,0,0,0.5]];
 
-    [_object, _x, _newPos, [_angle, 140]] call FUNC(renderMenu);
+    [_path, _x, _newPos, [_angle, 140]] call FUNC(renderMenu);
 
     if (_angleSpan == 360) then {
         _angle = _angle + _angleSpan / (count _activeChildren);
