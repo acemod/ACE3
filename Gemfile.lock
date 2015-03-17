@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    RedCloth (4.2.9)
     RedCloth (4.2.9-x86-mingw32)
     activesupport (4.2.0)
       i18n (~> 0.7)
@@ -20,6 +21,7 @@ GEM
     colorator (0.1)
     execjs (2.4.0)
     fast-stemmer (1.0.2)
+    ffi (1.9.8)
     ffi (1.9.8-x86-mingw32)
     gemoji (2.1.0)
     github-pages (33)
@@ -43,6 +45,7 @@ GEM
     github-pages-health-check (0.2.2)
       net-dns (~> 0.6)
       public_suffix (~> 1.4)
+    hitimes (1.2.2)
     hitimes (1.2.2-x86-mingw32)
     html-pipeline (1.9.0)
       activesupport (>= 2)
@@ -93,6 +96,8 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.1)
     net-dns (0.8.0)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
     nokogiri (1.6.6.2-x86-mingw32)
       mini_portile (~> 0.6.0)
     parslet (1.5.0)
@@ -118,13 +123,12 @@ GEM
       parslet (~> 1.5.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    wdm (0.1.0)
     yajl-ruby (1.2.1)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
   github-pages
   rouge
-  wdm (~> 0.1.0)
