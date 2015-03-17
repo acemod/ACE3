@@ -1,3 +1,18 @@
+/*
+ * Author: PabstMirror
+ * Helper function to get all gear of a unit.
+ *
+ * Arguments:
+ * 0: Target <OBJECT>
+ *
+ * Return Value:
+ * Array of 2 arrays, classnames and count<ARRAY>
+ *
+ * Example:
+ * [["ace_bandage"],[2]] = [bob] call ace_disarming_fnc_getAllGearUnit
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 PARAMS_1(_target);

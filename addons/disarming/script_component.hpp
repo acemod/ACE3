@@ -11,4 +11,5 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define DANGEROUS_ITEMS ["ACE_Clacker", "ACE_M26_Clacker", "ACE_DeadManSwitch"]
+#define DUMMY_ITEM "ACE_DebugPotato"
+#define UNIQUE_MAGAZINES ["ACE_key_customKeyMagazine"]

@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- *
+ * Makes a unit drop items:
  *
  * Arguments:
  * 0: caller (player) <OBJECT>
@@ -19,8 +19,6 @@
 #include "script_component.hpp"
 
 #define TIME_MAX_WAIT 5
-#define DUMMY_ITEM "ACE_DebugPotato"
-#define UNIQUE_MAGAZINES ["ACE_key_customKeyMagazine"]
 
 PARAMS_3(_caller,_target,_listOfItemsToRemove);
 DEFAULT_PARAM(3,_doNotDropAmmo,false); //By default units drop all weapon mags when dropping a weapon
@@ -91,12 +89,12 @@ if ( ({(_x select 0) in _listOfItemsToRemove} count _targetMagazinesEnd) != 0) e
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Didn't Remove Magazines"] call FUNC(eventTargetFinish);
 };
-//Verify holder has mags unit had (lazy count for now)
-if (((count _targetMagazinesStart) - (count _targetMagazinesEnd)) != ((count _holderMagazinesEnd) - (count _holderMagazinesStart))) exitWith {
+//Verify holder has mags unit had 
+if (!([_targetMagazinesStart, _targetMagazinesEnd, _holderMagazinesStart, _holderMagazinesEnd] call FUNC(verifyMagazinesMoved))) then {
+    ERR = [_targetMagazinesStart, _targetMagazinesEnd, _holderMagazinesStart, _holderMagazinesEnd];
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Crate Magazines not in holder"] call FUNC(eventTargetFinish);
 };
-
 
 //Remove Items, Assigned Items and NVG
 _holderItemsStart = getitemCargo _holder;
@@ -134,9 +132,8 @@ _targetItemsEnd = (assignedItems _target) + (items _target);
 if ((headgear _target) != "") then {_targetItemsEnd pushBack (headgear _target);};
 if ((goggles _target) != "") then {_targetItemsEnd pushBack (goggles _target);};
 
-//Verify Items Added (lazy count)
+//Verify Items Added
 if (((count _targetItemsStart) - (count _targetItemsEnd)) != ([_addToCrateCount] call _fncSumArray)) exitWith {
-    ERR = [_targetItemsStart, _targetItemsEnd, _addToCrateClassnames, _addToCrateCount];
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Items Not Removed From Player"] call FUNC(eventTargetFinish);
 };
@@ -167,9 +164,7 @@ systemChat format ["PFEh start %1", time];
     _needToRemoveVest = ((vest _target) != "") && {(vest _target) in _listOfItemsToRemove};
     _needToRemoveUniform = ((uniform _target) != "") && {(uniform _target) in _listOfItemsToRemove};
 
-    // systemChat format ["%1 - (%2 %3 %4 %5)", time, _maxWaitTime, _needToRemoveWeapon, _needToRemoveMagazines, _needToRemoveBackpack];
-
-    if ((time < _maxWaitTime) && {_needToRemoveWeapon || _needToRemoveMagazines || _needToRemoveBackpack}) then {
+    if ((time < _maxWaitTime) && {[_target] call FUNC(canDisarm)} && {_needToRemoveWeapon || _needToRemoveMagazines || _needToRemoveBackpack}) then {
         //action drop weapons (keeps loaded magazine and attachements)
         {
             if (_x in _listOfItemsToRemove) then {
@@ -220,7 +215,6 @@ systemChat format ["PFEh start %1", time];
 
         //If we added a dummy item, remove it now
         if (_holderIsEmpty && {!((getItemCargo _holder) isEqualTo [[DUMMY_ITEM],[1]])}) exitWith {
-
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Holder should only have dummy item"] call FUNC(eventTargetFinish);
         };
@@ -234,7 +228,12 @@ systemChat format ["PFEh start %1", time];
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Drop Actions Timeout"] call FUNC(eventTargetFinish);
         };
-
+        //If target lost disarm status:
+        if (!([_target] call FUNC(canDisarm))) exitWith {
+            _holder setVariable [QGVAR(holderInUse), false];
+            [_caller, _target, "Debug: Target cannot be disarmed"] call FUNC(eventTargetFinish);
+        };
+        
         if (_needToRemoveVest && {!((vestItems _target) isEqualTo [])}) exitWith {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Vest Not Empty"] call FUNC(eventTargetFinish);

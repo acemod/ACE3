@@ -1,5 +1,19 @@
-//openDisarmDialog
-
+/*
+ * Author: PabstMirror
+ * Opens the disarm dialog (allowing a person to remove items)
+ *
+ * Arguments:
+ * 0: Caller (player) <OBJECT>
+ * 1: Target <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, bob] call ace_disarming_fnc_openDisarmDialog
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 PARAMS_2(_caller,_target);
@@ -9,7 +23,7 @@ if (_caller != ACE_player) exitwith {ERROR("Player isn't caller?");};
 if (!([_target] call FUNC(canDisarm))) exitWith {ERROR("Unit Cannot Be Disarmed");};
 if (!([] call EGVAR(common,canInteract))) exitWith {ERROR("Player cannot Interact");};
 
-closeDialog 0;
+if (dialog) then {closeDialog 0;};
 createDialog QGVAR(remoteInventory);
 
 disableSerialization;
@@ -26,10 +40,10 @@ GVAR(disarmTarget) = _target;
     EXPLODE_3_PVT((_itemInfo select 0),_displayText,_value,_data);
 
     if (isNull GVAR(disarmTarget)) exitWith {ERROR("disarmTarget is null");};
-    
+
     systemChat format ["Debug: Droping %1 from %2", _data, GVAR(disarmTarget)];
     ["DisarmDropItems", [GVAR(disarmTarget)], [ACE_player, GVAR(disarmTarget), [_data]]] call EFUNC(common,targetEvent);
-    
+
     false //not sure what this does
 }];
 
@@ -39,12 +53,11 @@ GVAR(disarmTarget) = _target;
     EXPLODE_2_PVT(_this,_args,_pfID);
     EXPLODE_3_PVT(_args,_player,_target,_display);
 
-
     if ((!([_target] call FUNC(canDisarm))) ||
             {isNull _display} ||
             {_player != ACE_player} ||
-            {!([] call EGVAR(common,canInteract))}) then {
-
+            {!([_player, _target, []] call EFUNC(common,canInteractWith))}) then {
+        systemChat "Debug: closeing dialog";
         [_pfID] call CBA_fnc_removePerFrameHandler;
         GVAR(disarmTarget) = objNull;
         if (!isNull _display) then {closeDialog 0;}; //close dialog if still open
@@ -60,9 +73,9 @@ GVAR(disarmTarget) = _target;
         lbClear _groundContainer;
         lbClear _targetContainer;
 
+        //Show the items in the ground disarmTarget's inventory
         _targetUniqueItems = [GVAR(disarmTarget)] call FUNC(getAllGearUnit);
         [_targetContainer, _targetUniqueItems] call FUNC(showItemsInListbox);
-
 
         _holder = objNull;
         {

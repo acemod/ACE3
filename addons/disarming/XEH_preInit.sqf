@@ -11,5 +11,6 @@ PREP(getAllGearContainer);
 PREP(getAllGearUnit);
 PREP(openDisarmDialog);
 PREP(showItemsInListbox);
+PREP(verifyMagazinesMoved);
 
 ADDON = true;

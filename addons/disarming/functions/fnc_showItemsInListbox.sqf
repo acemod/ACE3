@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Checks the conditions for being able to disarm
+ * Shows a list of inventory items in a listBox control.
  *
  * Arguments:
  * 0: RscListBox <CONTROL>
@@ -18,7 +18,6 @@
 
 disableSerialization;
 PARAMS_2(_listBoxCtrl,_itemsCountArray);
-
 
 {
     _displayName = "";
