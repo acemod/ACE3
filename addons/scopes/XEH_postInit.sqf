@@ -36,8 +36,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(AdjustUp), localize "STR_ACE_Scopes_AdjustUp",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EGVAR(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
     if !([ACE_player, 0, 0.1] call FUNC(canAdjustScope)) exitWith {false};
@@ -52,8 +51,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(AdjustDown), localize "STR_ACE_Scopes_AdjustDown",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EGVAR(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
     if !([ACE_player, 0, -0.1] call FUNC(canAdjustScope)) exitWith {false};
@@ -68,8 +66,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(AdjustLeft), localize "STR_ACE_Scopes_AdjustLeft",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EGVAR(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
     if !([ACE_player, -0.1, 0] call FUNC(canAdjustScope)) exitWith {false};
@@ -84,8 +81,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(AdjustRight), localize "STR_ACE_Scopes_AdjustRight",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EGVAR(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
     if !([ACE_player, 0.1, 0] call FUNC(canAdjustScope)) exitWith {false};

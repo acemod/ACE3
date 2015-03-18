@@ -1,15 +1,18 @@
-/* fnc_getNearestFence.sqf
-*
-* Author: PabstMirror
-*
-* Gets nearest fence within 5 meters to the unit.
-*
-* Argument:
-* 0: OBJECT - Unit to search for fence objects arround
-*
-* Return value:
-* OBJECT - Nearest object that is a fence, objNull if none found.
-*/
+/*
+ * Author: PabstMirror
+ * Gets nearest fence object (not actully used, left for utility)
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * The return value <OBJECT>
+ *
+ * Example:
+ * [player] call ace_logistics_wirecutter_fnc_getNearestFence
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 
 private "_nearestFence";
@@ -20,6 +23,6 @@ _nearestFence = objNull;
   if ((isNull _nearestFence) && {[_x] call FUNC(isFence)}) then {
     _nearestFence = _x;
   };
-} forEach nearestObjects [_unit, [], 5];
+} forEach nearestObjects [_unit, [], 15];
 
 _nearestFence

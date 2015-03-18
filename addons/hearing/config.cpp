@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         units[] = {};
-        weapons[] = {"ACE_EarBuds"};
+        weapons[] = {"ACE_EarPlugs"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common", "ace_interaction"};
         author[] = {"KoffeinFlummi", "CAA-Picard", "HopeJ", "commy2"};
@@ -23,8 +23,20 @@ class CfgPatches {
 #include "CfgAmmo.hpp"
 
 class ACE_Settings {
+    class GVAR(EnableCombatDeafness) {
+        value = 1;
+        typeName = "BOOL";
+    };
+    class GVAR(EarplugsVolume) {
+        value = 0.5;
+        typeName = "SCALAR";
+    };
+    class GVAR(UnconsciousnessVolume) {
+        value = 0.4;
+        typeName = "SCALAR";
+    };
     class GVAR(DisableEarRinging) {
-        default = 1;
+        value = 0;
         typeName = "BOOL";
         isClientSetable = 1;
         displayName = "$STR_ACE_Hearing_DisableEarRinging";

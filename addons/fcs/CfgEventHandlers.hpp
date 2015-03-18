@@ -36,6 +36,11 @@ class Extended_Init_EventHandlers {
             serverInit = QUOTE(_this call FUNC(vehicleInit));
         };
     };
+    class StaticWeapon {
+        class ADDON {
+            serverInit = QUOTE(_this call FUNC(vehicleInit));
+        };
+    };
 };
 
 class Extended_Respawn_EventHandlers {
@@ -64,6 +69,11 @@ class Extended_Respawn_EventHandlers {
             respawn = QUOTE(_this call FUNC(vehicleInit));
         };
     };
+    class StaticWeapon {
+        class ADDON {
+            respawn = QUOTE(_this call FUNC(vehicleInit));
+        };
+    };
 };
 
 class Extended_FiredBIS_EventHandlers {
@@ -88,6 +98,11 @@ class Extended_FiredBIS_EventHandlers {
         };
     };
     class Ship_F {
+        class ADDON {
+            firedBIS = QUOTE(_this call FUNC(firedEH));
+        };
+    };
+    class StaticWeapon {
         class ADDON {
             firedBIS = QUOTE(_this call FUNC(firedEH));
         };
