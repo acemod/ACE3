@@ -21,7 +21,7 @@ PARAMS_1(_showType);
 if (_showType in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) exitWith {true};
 
 //Can't interact then hide gps:   TODO: any exceptions?
-if (!([] call EGVAR(common,canInteract))) exitWith {false};
+if (!([ACE_player, objNull, []] call EGVAR(common,canInteractWith))) exitWith {false};
 
  //Can't have minimap up while zoomed in
 if ((_showType == DISPLAY_MODE_DISPLAY) && {cameraview == "GUNNER"}) exitWith {false};
