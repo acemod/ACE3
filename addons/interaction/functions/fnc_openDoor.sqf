@@ -47,7 +47,7 @@ playSound "ACE_Sound_Click";
 		!GVAR(isOpeningDoor) || {getPosASL ACE_player distance _position > 1}
 	};
 
-	if (!_usedMouseWheel && {time < _time}) then {
+	if (!_usedMouseWheel && {time < _time} && {[ACE_player, objNull, []] call EGVAR(common,canInteractWith)}) then {
 		_phase = [0, 1] select (_house animationPhase (_animations select 0) < 0.5);
 
 		{_house animate [_x, _phase]} forEach _animations;

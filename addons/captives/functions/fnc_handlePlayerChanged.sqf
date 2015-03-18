@@ -18,10 +18,16 @@
 
 PARAMS_2(_newUnit,_oldUnit);
 
+//set showHUD based on new unit status:
 if ((_newUnit getVariable [QGVAR(isHandcuffed), false]) || {_newUnit getVariable [QGVAR(isSurrendering), false]}) then {
     TRACE_1("Player Change (showHUD false)",_newUnit);
-    showHUD false; 
+    showHUD false;
 } else {
     TRACE_1("Player Change (showHUD true)",_newUnit);
     showHUD true;
+};
+
+//If old player was escorting, stop
+if (_oldUnit getVariable [QGVAR(isEscorting), false]) then {
+    _oldUnit setVariable [QGVAR(isEscorting), false, true];
 };

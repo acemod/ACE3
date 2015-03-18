@@ -19,8 +19,7 @@ _turret = _this select 1;
 
 _distance = call FUNC(getRange);
 
-if (GVAR(Enabled)) exitWith {};
-if !([] call FUNC(canUseFCS)) exitWith {};
+if !(!GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
 
 GVAR(Enabled) = true;
 GVAR(Time) = time;

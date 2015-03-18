@@ -217,9 +217,8 @@ class CfgVehicles {
         };*/
     };
 
-    class I_Heli_Transport_02_F: Heli_Transport_02_base_F {};
-
-    class I_Heli_light_03_base_F: Helicopter_Base_F {
+    class Heli_light_03_base_F: Helicopter_Base_F {};
+    class I_Heli_light_03_base_F: Heli_light_03_base_F {
         lockDetectionSystem = 0;
         incomingMissileDetectionSystem = 16;
         driverCanEject = 1;
@@ -242,15 +241,15 @@ class CfgVehicles {
         };
     };
 
-    class I_Heli_light_03_F: I_Heli_light_03_base_F {
+    class I_Heli_light_03_F: Heli_light_03_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
     };
 
-    class I_Heli_light_03_unarmed_base_F: I_Heli_light_03_base_F {};
+    class Heli_light_03_unarmed_base_F: Heli_light_03_base_F {};
 
-    class I_Heli_light_03_unarmed_F: I_Heli_light_03_unarmed_base_F {};
+    class I_Heli_light_03_unarmed_F: Heli_light_03_unarmed_base_F {};
 
     class Plane_CAS_01_base_F: Plane_Base_F {
         lockDetectionSystem = 12;
@@ -303,7 +302,8 @@ class CfgVehicles {
         };*/
     };
 
-    class B_Heli_Transport_03_base_F: Helicopter_Base_H {
+    class Heli_Transport_03_base_F: Helicopter_Base_H {};
+    class B_Heli_Transport_03_base_F: Heli_Transport_03_base_F {
         lockDetectionSystem = 12;
         incomingMissileDetectionSystem = 16;
         driverCanEject = 1;
@@ -317,7 +317,7 @@ class CfgVehicles {
         };
     };
 
-    class B_Heli_Transport_03_unarmed_base_F: B_Heli_Transport_03_base_F {
+    class B_Heli_Transport_03_unarmed_base_F: Heli_Transport_03_base_F {
         class Turrets: Turrets {
             class CopilotTurret: CopilotTurret {
                 canEject = 1;

@@ -4,7 +4,7 @@
 terminate (missionNamespace getVariable [QGVAR(waitForAnimationHandle), scriptNull]);
 
 GVAR(waitForAnimationHandle) = _this spawn {
-	waitUntil {!([_this select 0] call FUNC(inTransitionAnim))};
+    waitUntil {!([_this select 0] call FUNC(inTransitionAnim))};
 
-	_this call FUNC(doAnimation);
+    _this call FUNC(doAnimation);
 };

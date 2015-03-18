@@ -1,21 +1,23 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/KoffeinFlummi/ACE3/new-readme/extras/logo.png?token=ACU2mWeJUeshQIVc52XPoNiPpc3PzTauks5Uv24rwA%3D%3D" height="150px" /><br />
+  <img src="https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" height="80" />
+</p>
+<p align="center">
   <a href="https://github.com/KoffeinFlummi/ACE3/releases">
     <img src="http://img.shields.io/badge/release-3.0-green.svg?style=flat" alt="ACE version">
   </a>
-    <a href="#">
+  <a href="#">
     <img src="http://img.shields.io/badge/download-22_MB-blue.svg?style=flat" alt="ACE download">
   </a>
-    <a href="https://github.com/KoffeinFlummi/ACE3/issues">
+  <a href="https://github.com/KoffeinFlummi/ACE3/issues">
     <img src="http://img.shields.io/github/issues/KoffeinFlummi/ACE3.svg?style=flat" alt="ACE issues">
   </a>
-    <a href="https://github.com/KoffeinFlummi/ACE3/blob/master/LICENSE">
+  <a href="https://github.com/KoffeinFlummi/ACE3/blob/master/LICENSE">
     <img src="http://img.shields.io/badge/license-GPLv2-red.svg?style=flat" alt="ACE license">
   </a>
 </p>
 <p align="center"><sup><strong>Requires the latest version of <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a> | <a href="#">BIF thread</a></strong></sup></p>
 
-**ACE 3** is a join effort by the teams behind **ACE 2**, **AGM**, **CSE** and **RHS** to improve the realism and authenticity of Arma 3.
+**ACE 3** is a joint effort by the teams behind **ACE2**, **AGM** and **CSE** to improve the realism and authenticity of Arma 3.
 
 This mod is entirely **open-source**, and everyone is free to propose changes or maintain their own, customized version as long as they make their changes open to the public in accordance with the GNU General Public License (for more information check the license file attached to this project).
 
@@ -32,7 +34,7 @@ More information on the purpose of the different components of ACE and which one
 *   Realistic ballistics including wind and humidity
 *   Backblast simulation
 *   Weapon resting and bipod deployment
-*   A fire control system for armored vehicles and helicopters  
+*   A fire control system for armored vehicles and helicopters
     ***and more...***
 
 For a full list of current features, check [the official wiki](https://github.com/KoffeinFlummi/ACE3/wiki).

@@ -1,13 +1,15 @@
-/**
- * fn_isMedicalVehicle.sqf
- * @Descr: Check if vehicle is a medical vehicle
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Check if vehicle is a medical vehicle
  *
- * @Arguments: [vehicle OBJECT]
- * @Return: BOOL
- * @PublicAPI: true
+ * Arguments:
+ * 0: The Vehicle <OBJECT>
+ *
+ * ReturnValue:
+ * Is in of medic class <BOOL>
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 private ["_veh"];

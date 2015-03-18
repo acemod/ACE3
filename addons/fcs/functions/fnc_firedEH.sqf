@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-private ["_vehicle", "_weapon", "_ammo", "_magazine", "_projectile"];
+private ["_vehicle", "_weapon", "_ammo", "_magazine", "_projectile","_velocityCorrection"];
 
 _vehicle = _this select 0;
 _weapon = _this select 1;
@@ -30,7 +30,7 @@ if !([_gunner] call EFUNC(common,isPlayer)) exitWith {};
 
 private ["_FCSMagazines", "_FCSElevation", "_offset"];
 
-_FCSMagazines = _vehicle getVariable format ["%1_%2", QGVAR(Magazines), _turret];
+_FCSMagazines = _vehicle getVariable [(format ["%1_%2", QGVAR(Magazines), _turret]), []];
 _FCSElevation = _vehicle getVariable format ["%1_%2", QGVAR(Elevation), _turret];
 
 if !(_magazine in _FCSMagazines) exitWith {};
@@ -43,8 +43,12 @@ _offset = 0;
     };
 } forEach _FCSMagazines;
 
-[_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, 0] call EFUNC(common,changeProjectileDirection);
+// Correct velocity for weapons that have initVelocity
+// @todo: Take into account negative initVelocities
+_velocityCorrection = (vectorMagnitude velocity _projectile) -
+                      getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
 
+[_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, _velocityCorrection] call EFUNC(common,changeProjectileDirection);
 // Air burst missile
 
 // handle locally only
