@@ -31,6 +31,12 @@ private ["_position", "_direction"];
 _position = _target getVariable [QGVAR(carryPosition), [0, 0, 0]];
 _direction = _target getVariable [QGVAR(carryDirection), 0];
 
+// add height offset of model
+private "_offset";
+_offset = (_target modelToWorld [0, 0, 0] select 2) - (_unit modelToWorld [0, 0, 0] select 2);
+
+_position = _position vectorAdd [0, 0, _offset];
+
 // attach object
 _target attachTo [_unit, _position];
 _target setDir _direction;

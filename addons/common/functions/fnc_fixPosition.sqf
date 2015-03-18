@@ -18,8 +18,8 @@ private "_position";
 _position = getPos _this;
 
 // don't place the object below the ground
-if (_position select 2 < 0) then {
-    _position set [2, 0];
+if (_position select 2 < -0.1) then {
+    _position set [2, -0.1];
     _this setPos _position;
 };
 

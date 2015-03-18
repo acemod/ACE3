@@ -27,6 +27,7 @@ _inBuilding = [_unit] call FUNC(isObjectOnObject);
 _unit playAction "released";
 
 // prevent collision damage
+["fixCollision", _unit, _unit] call EFUNC(common,targetEvent);
 ["fixCollision", _target, _target] call EFUNC(common,targetEvent);
 
 // release object

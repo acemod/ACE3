@@ -13,6 +13,16 @@ class Extended_PostInit_EventHandlers {
 };
 
 class Extended_Init_EventHandlers {
+    class StaticWeapon {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
+    class StaticMortar {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
     class ReammoBox_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject));

@@ -1,5 +1,35 @@
 
 class CfgVehicles {
+    // Static weapons
+    class LandVehicle;
+    class StaticWeapon: LandVehicle {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1.2,0};
+        GVAR(carryDirection) = 0;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragDirection) = 0;
+    };
+
+    //remove actions from Taru Pods
+    class Pod_Heli_Transport_04_base_F: StaticWeapon {
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+
+    class StaticMortar;
+    class Mortar_01_base_F: StaticMortar {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1.2,0};
+        GVAR(carryDirection) = 0;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragDirection) = 0;
+    };
+
+    // ammo boxes
     class ThingX;
     class ReammoBox_F: ThingX {
         XEH_ENABLED;
