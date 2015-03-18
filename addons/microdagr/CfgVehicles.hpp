@@ -8,8 +8,8 @@ class CfgVehicles {
                     condition = QUOTE(('ACE_microDAGR' in (items _player)));
                     statement = QUOTE([] call FUNC(openDisplay));
                     showDisabled = 0;
-                    priority = 0;
-                    icon = QUOTE(PATHTOF(data\icon_microDAGR.paa.paa));
+                    priority = 0.1;
+                    icon = QUOTE(PATHTOF(data\icon_microDAGR.paa));
                     hotkey = "G";
                 };                
                 class GVAR(closeMicroDAGR) {
@@ -17,7 +17,7 @@ class CfgVehicles {
                     condition = QUOTE(GVAR(currentShowMode) != DISPLAY_MODE_CLOSED);
                     statement = QUOTE([DISPLAY_MODE_CLOSED] call FUNC(openDisplay));
                     showDisabled = 0;
-                    priority = 0.1;
+                    priority = 0;
                     icon = QUOTE(PATHTOF(data\icon_microDAGR.paa));
                     // hotkey = "G";
                 };
