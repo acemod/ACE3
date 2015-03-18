@@ -24,7 +24,6 @@ if (!(_target isKindOf "CaManBase") || !(_caller isKindOf "CaManBase")) exitwith
 if (vehicle _caller != _caller || vehicle _target != _target) exitwith {};
 if (!([_caller] call EFUNC(common,canInteract)) || {_caller == _target} || {(([_target] call EFUNC(common,isAwake)))}) exitwith {};
 
-_caller action ["WeaponOnBack", _caller];
 if (!alive _target) exitwith {
     if (GVAR(allowDeadBodyMovement)) then {
         [{

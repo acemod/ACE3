@@ -85,9 +85,10 @@ clearWeaponCargoGlobal (backpackContainer _newUnit);
 
 _newUnit selectWeapon (primaryWeapon _newUnit);
 
-// TODO sometimes the old body does not get cleaned up properly. Look into garbage collection.
+// TODO sometimes the old body does not get cleaned up properly.
+// TODO Maybe it is better to hide the body, attach it as well, and remove the copy once we are done with it instead?
 deleteVehicle _oldBody;
 
 _newUnit setDamage 0.89;
 
-_newUnit
+_newUnit;
