@@ -44,3 +44,4 @@ _unit setVariable [QGVAR(draggedObject), objNull, true];
 [objNull, _target, true] call EFUNC(common,claim);
 
 ["fixPosition", _target, _target] call EFUNC(common,targetEvent);
+["fixFloating", _target, _target] call EFUNC(common,targetEvent);

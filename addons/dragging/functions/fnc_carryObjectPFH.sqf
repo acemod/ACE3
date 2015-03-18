@@ -6,25 +6,13 @@ private ["_unit", "_target"];
 _unit = _this select 0 select 0;
 _target = _this select 0 select 1;
 
-// drop if the player is dead
-if !([_unit] call EFUNC(common,isAlive)) exitWith {
-    [_unit, _target] call FUNC(dropObject_carry);
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
-};
-
-// drop if the crate is destroyed
-if !([_target] call EFUNC(common,isAlive)) exitWith {
-    [_unit, _target] call FUNC(dropObject_carry);
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
-};
-
-// drop if not in carrying anim.
-if (currentWeapon _unit != "") exitWith {
-    [_unit, _target] call FUNC(dropObject_carry);
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
-};
-
-if !([_unit] call EFUNC(common,isPlayer)) exitWith {
+if (
+    !([_unit] call EFUNC(common,isAlive))           // drop if the player is dead
+    || {!([_target] call EFUNC(common,isAlive))}    // drop if the crate is destroyed
+    || {currentWeapon _unit != ""}
+    || {stance _unit != "STAND"}                    // drop when crouching or inside a vehicle
+    || {!([_unit] call EFUNC(common,isPlayer))}
+) then {
     [_unit, _target] call FUNC(dropObject_carry);
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 };

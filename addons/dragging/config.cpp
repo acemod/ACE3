@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common","ace_interact_menu"};
+        requiredAddons[] = {"ace_common","ace_interaction","ace_interact_menu"};
         author[] = {"https://github.com/commy2/"};
         authorUrl = "";
         VERSION_CONFIG;

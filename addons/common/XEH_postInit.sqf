@@ -20,8 +20,9 @@ if (hasInterface) then {
     };
 }] call FUNC(addEventhandler);
 
-["fixCollision", FUNC(fixCollision)] call FUNC(addEventhandler);
-["fixPosition", FUNC(fixPosition)] call FUNC(addEventhandler);
+["fixCollision", DFUNC(fixCollision)] call FUNC(addEventhandler);
+["fixFloating", DFUNC(fixFloating)] call FUNC(addEventhandler);
+["fixPosition", DFUNC(fixPosition)] call FUNC(addEventhandler);
 
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
