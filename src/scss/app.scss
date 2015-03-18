@@ -1,9 +1,14 @@
+
+@import "vendor/normalize";
 @import "settings";
 @import "foundation";
 @import "overrides";
 
-@import "ui/_syntax";
-@import "ui/_layout";
+@import "vendor/slick";
+@import "vendor/slick-theme";
+
+@import "ui/syntax";
+@import "ui/layout";
 
 // Or selectively include components
 // @import

@@ -4,7 +4,7 @@ layout: default
 group: mainNav
 order: 1
 short: wiki
-parent: peter
+parent:
 ---
 
     <div class="row">
@@ -18,16 +18,16 @@ parent: peter
             <h3>User</h3>
             <p>Everything you need to know about using the mod.</p>
             <nav>
-                {% assign pages_list = site.pages %}
+                {% assign pages_list = site.pages | sort: "order" %}
                 {% assign group = 'user' %}
                 {% include pages_list %}
             </nav>
         </div>
         <div class="large-4 medium-4 columns">
             <h3>Mission Maker</h3>
-            <p>Want to make a mission using ACE3? Here you'll everything you need to know.</p>
+            <p>Want to make a mission using ACE3? Here you'll find everything you need to know.</p>
             <nav>
-                {% assign pages_list = site.pages %}
+                {% assign pages_list = site.pages | sort: "order"%}
                 {% assign group = 'missionMaker' %}
                 {% include pages_list %}
             </nav>
@@ -36,21 +36,9 @@ parent: peter
             <h3>Developer</h3>
             <p>If you're an aspiring developer, you'll find all necessary information here.</p>
             <nav>
-                {% assign pages_list = site.pages %}
+                {% assign pages_list = site.pages | sort: "order"%}
                 {% assign group = 'dev' %}
                 {% include pages_list %}
             </nav>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="large-12 columns">
-              <ul class="posts">
-              {% for post in site.posts %}
-                <li>
-                    <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                </li>
-              {% endfor %}
-              </ul>
         </div>
     </div>
