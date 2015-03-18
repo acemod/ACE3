@@ -33,6 +33,8 @@ _unit playAction "released";
 // release object
 detach _target;
 
+_unit removeWeapon "ACE_FakePrimaryWeapon";
+
 // prevent object from flipping inside buildings
 if (_inBuilding) then {
     _target setPosASL (getPosASL _target vectorAdd [0, 0, 0.05]);

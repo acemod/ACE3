@@ -37,6 +37,7 @@ _unit selectWeapon primaryWeapon _unit;
 // prevent multiple players from accessing the same object
 [_unit, _target, true] call EFUNC(common,claim);
 
-_unit playActionNow "grabDrag";
+// can't play action that depends on weapon if it was added the same frame
+[{_this playActionNow "grabDrag";}, _unit] call EFUNC(common,execNextFrame);
 
 [FUNC(startDragPFH), 0.2, [_unit, _target, time + 5]] call CBA_fnc_addPerFrameHandler;
