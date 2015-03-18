@@ -8,7 +8,14 @@
             {{ content }}
         </section>
         <aside class="large-4 medium-12 columns">
-            {% include _sideNav.html %}
+            <nav>
+                <ul class="side-nav">
+                    <li class="heading">User Resources</li>
+                    {% assign pages_list = site.pages | sort: "order" %}
+                    {% assign group = 'user' %}
+                    {% include pages_list %}
+                </ul>
+            </nav>
         </aside>
     </div>
 

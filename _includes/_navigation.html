@@ -9,15 +9,9 @@
   <section class="top-bar-section">
     <!-- Left Nav Section -->
     <ul class="left">
-        {% for link in site.navigation %}
-            {% assign current = nil %}
-            {% if page.url contains link.url %}
-                {% assign current = 'active' %}
-            {% endif %}
-            <li class="element {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
-                <a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
-            </li>
-        {% endfor %}
+        {% assign pages_list = site.pages | sort: "order" %}
+        {% assign group = 'mainNav' %}
+        {% include pages_list %}
     </ul>
   </section>
 </nav>

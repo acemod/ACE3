@@ -1,6 +1,9 @@
 ---
-layout: post_dev
+layout: wiki_dev
 title: Setting up the development environment
+group: dev
+parent: wiki
+order: 0
 ---
 
 The folder structure and pathing here is setup in such a way that you can quickly and easily setup your environment to allow for dynamic loading of changes, and also your build environment is set up at the same time. Our structure allows you to basically dynamically load modules for testing, as well as quick building/rebuilding of PBO's.
@@ -32,14 +35,14 @@ You will need to run the following commands in a command prompt window as Admini
 
 Windows 8:
 
-```ruby
+```powershell
 mklink /D /J "C:\Program Files (x86)\Steam\steamapps\common\ArmA 3\z\ace" "C:\dev\ACE3"
 mklink /D /J "P:\z\ace" "C:\dev\ACE3"
 ```
 
 Windows 7 and Vista:
 
-```
+```powershell
 mklink /D "C:\Program Files (x86)\Steam\steamapps\common\ArmA 3\z\ace" "C:\dev\ACE3"
 mklink /D "P:\z\ace" "C:\dev\ACE3"
 ```
@@ -50,7 +53,7 @@ You'll still need pbos created - use the tools\build.bat file for quick, unbinar
 
 After the pbo's are built, you will change your modline to load the following instead:
 
-```
+```powershell
 -mod=@cba_a3;z\ace
 ```
 
@@ -72,14 +75,14 @@ You have two options for file patching to work.
   * you can load `cba_cache_disable.pbo`
   * Add the following to your test missions description.ext
 
-```
+```cpp
 class CfgSettings {
-   class CBA {
-      class Caching {
-         compile = 0;
-         xeh = 0;
-         functions = 0;
-      };
-   };
+    class CBA {
+        class Caching {
+            compile = 0;
+            xeh = 0;
+            functions = 0;
+        };
+    };
 };
 ```

@@ -1,0 +1,22 @@
+{% include _header.html %}
+    
+{% include _navigation.html %}
+
+    <div class="row">
+        <section class="large-8 medium-12 columns">
+            <h1>{{page.title}}</h1>
+            {{ content }}
+        </section>
+        <aside class="large-4 medium-12 columns">
+            <nav>
+                <ul class="side-nav">
+                    <li class="heading">Development</li>
+                    {% assign pages_list = site.pages | sort: "order" %}
+                    {% assign group = 'dev' %}
+                    {% include pages_list %}
+                </ul>
+            </nav>
+        </aside>
+    </div>
+
+{% include _footer.html %}
