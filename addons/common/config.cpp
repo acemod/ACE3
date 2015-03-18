@@ -51,12 +51,6 @@ class ACE_Rsc_Control_Base {
     h = 0;
 };
 
-class ACE_canInteractConditions {
-    class GVAR(notOnMap) {
-        condition = "!visibleMap";
-    };
-};
-
 class ACE_Settings {
     /*
     *class GVAR(sampleSetting) {
