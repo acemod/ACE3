@@ -17,6 +17,14 @@ private ["_unit", "_target"];
 _unit = _this select 0;
 _target = _this select 1;
 
+// check weight
+private "_weight";
+_weight = [_target] call FUNC(getWeight);
+
+if (_weight > GETMVAR(ACE_maxWeightCarry,1E11)) exitWith {
+    [localize "STR_ACE_Dragging_UnableToDrag"] call EFUNC(common,displayTextStructured);
+};
+
 // select no weapon and stop sprinting
 _unit action ["SwitchWeapon", _unit, _unit, 99];
 

@@ -3,8 +3,12 @@
 
 [{_this call DFUNC(handleScrollWheel)}] call EFUNC(common,addScrollWheelEventHandler);
 
-if (isNil QGVAR(maxWeight)) then {
-    GVAR(maxWeight) = 800;
+if (isNil "ACE_maxWeightDrag") then {
+    ACE_maxWeightDrag = 800;
+};
+
+if (isNil "ACE_maxWeightCarry") then {
+    ACE_maxWeightCarry = 600;
 };
 
 ["isNotDragging", {!((_this select 0) getVariable [QGVAR(isDragging), false])}] call EFUNC(common,addCanInteractWithCondition);

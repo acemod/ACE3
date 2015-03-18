@@ -27,7 +27,9 @@
       <Hungarian>Elengedés</Hungarian>
     </Key>
     <Key ID="STR_ACE_Dragging_UnableToDrag">
-      <English>Unable to drag item due to weight</English>
+      <English>Item to heavy</English>
+      <German>Gegenstand zu schwer</German>
+      <!-- <English>Unable to drag item due to weight</English>
       <Russian>Слишком тяжелый предмет</Russian>
       <Spanish>No se puede arrastrar el objeto debido a su peso</Spanish>
       <Polish>Nie można ciągnąć tego przedmiotu z powodu jego wagi</Polish>
@@ -36,7 +38,7 @@
       <German>Dieser Gegenstand kann nicht gezogen werden, da er zu schwer ist.</German>
       <Portuguese>Não é possível carregar o item devido a seu peso</Portuguese>
       <Italian>Non è possibile trascinare l'oggetto a causa del suo peso</Italian>
-      <Hungarian>Túl nehéz ahhoz, hogy elhúzd</Hungarian>
+      <Hungarian>Túl nehéz ahhoz, hogy elhúzd</Hungarian> -->
     </Key>
     <Key ID="STR_ACE_Dragging_Carry">
       <English>Carry</English>

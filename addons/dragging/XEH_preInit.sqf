@@ -12,6 +12,7 @@ PREP(dragObject);
 PREP(dragObjectPFH);
 PREP(dropObject);
 PREP(dropObject_carry);
+PREP(getWeight);
 PREP(handleScrollWheel);
 PREP(initObject);
 PREP(isObjectOnObject);

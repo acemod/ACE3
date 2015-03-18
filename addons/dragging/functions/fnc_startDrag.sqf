@@ -17,8 +17,13 @@ private ["_unit", "_target"];
 _unit = _this select 0;
 _target = _this select 1;
 
-// @todo check weight
-//_ableToDrag = ((_draggedObject call AGM_Drag_fnc_GetWeight) <= AGM_Drag_MaxWeight);
+// check weight
+private "_weight";
+_weight = [_target] call FUNC(getWeight);
+
+if (_weight > GETMVAR(ACE_maxWeightDrag,1E11)) exitWith {
+    [localize "STR_ACE_Dragging_UnableToDrag"] call EFUNC(common,displayTextStructured);
+};
 
 // add a primary weapon if the unit has none.
 // @todo prevent opening inventory when equipped with a fake weapon
