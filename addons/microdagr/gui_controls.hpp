@@ -61,41 +61,49 @@ class controlsBackground {
         maxSatelliteAlpha = 0;
         alphaFadeStartScale = 100;
         alphaFadeEndScale = 100;
-        colorBackground[] = {1,1,1,1};
-        colorOutside[] = {"uinamespace getvariable ['RscDisplayStrategicMap_colorOutside_R',0]","uinamespace getvariable ['RscDisplayStrategicMap_colorOutside_G',0]","uinamespace getvariable ['RscDisplayStrategicMap_colorOutside_B',0]",1};
         colorSea[] = {0.467,0.631,0.851,0.25};
-        colorCountlines[] = {0.572,0.354,0.188,0.25};
-        colorMainCountlines[] = {0.572,0.354,0.188,0.5};
         colorCountlinesWater[] = {0.491,0.577,0.702,0.3};
         colorMainCountlinesWater[] = {0.491,0.577,0.702,0.6};
-        colorForest[] = {0,1,0,0.1};
-        colorForestBorder[] = {0,1,0,0.1};
-        colorRocks[] = {0,0,0,0};
         colorGrid[] = {0,0,0,0.15};
         colorGridMap[] = {0,0,0,0.2};
-        ptsPerSquareTxt = 50;
-        ptsPerSquareRoad = 7;
-        ptsPerSquareObj = 2000; //show buildings
-        ptsPerSquareCLn = 1;
-        ptsPerSquareCost = 200;
-        ptsPerSquareFor = 15;
-        ptsPerSquareForEdge = 15;
+
+        //Text sizes:
         sizeExLabel = 0;
-        sizeExGrid = 0;
+        sizeExGrid = H_PART(0.5);
         sizeExUnits = 0;
-        sizeExNames = 0;
+        sizeExNames = H_PART(2); //Marker's Text
         sizeExInfo = 0;
         sizeExLevel = 0;
-        moveOnEdges = 1;
+        sizeEx = H_PART(1);
+
+        ptsPerSquareSea = 5;
+        ptsPerSquareTxt = 20;
+        ptsPerSquareRoad = 0.01;
+        ptsPerSquareObj = 2000; //don't show buildings
+        ptsPerSquareCLn = 100;
+        ptsPerSquareCost = 200;
+        ptsPerSquareFor = 9;
+        ptsPerSquareForEdge = 9;
+
         showCountourInterval = 0;
 
-        colorRailWay[] = {0,0,0,0.5};
-        colorTracks[] = {0.84,0.76,0.65,0.15};
-        colorRoads[] = {0.7,0.7,0.7,1};
-        colorMainRoads[] = {0.9,0.5,0.3,1};
-        colorTracksFill[] = {0.84,0.76,0.65,1};
-        colorRoadsFill[] = {1,1,1,1};
+        //Copy style from ace_map's config.cpp:
+        colorTracks[] = {1.0,0.0,0.0,1};
+        colorTracksFill[] = {1.0,1.0,0.0,1};
+        colorRoads[] = {0.0,0.0,0.0,1};
+        colorRoadsFill[] = {1,1,0,1};
+        colorMainRoads[] = {0.0,0.0,0.0,1};
         colorMainRoadsFill[] = {1,0.6,0.4,1};
+        colorRailWay[] = {0.8,0.2,0,1};
+
+        colorBackground[] = {0.929412, 0.929412, 0.929412, 1.0};
+        colorOutside[] = {0.929412, 0.929412, 0.929412, 1.0};
+        colorCountlines[] = {0.647059, 0.533333, 0.286275, 0.5};
+        colorMainCountlines[] = {0.858824, 0, 0,0.5};
+        colorForest[] = {0.6, 0.8, 0.2, 0.1};
+        colorForestBorder[] = {0,1,0,0.25};
+        colorLevels[] = {0.0, 0.0, 0.0, 0.5};
+        colorRocks[] = {0.50, 0.50, 0.50, 0};
     };
     class MapDetails: MapPlain {
         idc = IDC_MAPDETAILS;
@@ -106,17 +114,19 @@ class controlsBackground {
         onDraw = QUOTE(_this call FUNC(mapOnDrawEH));
         onMouseButtonDblClick = QUOTE(_this call FUNC(mapDoubleTapEH));
 
-        ptsPerSquareSea = 5;
-        ptsPerSquareTxt = 20;
-        ptsPerSquareCLn = 10;
-        ptsPerSquareExp = 10;
-        ptsPerSquareCost = 10;
-        ptsPerSquareFor = 9;
-        ptsPerSquareForEdge = 9;
-        ptsPerSquareRoad = 0.01;
+        // ptsPerSquareSea = 5;
+        // ptsPerSquareTxt = 20;
+        // ptsPerSquareRoad = 0.01;
         ptsPerSquareObj = 9;
+        // ptsPerSquareCLn = 100;
+        // ptsPerSquareCost = 200;
+        // ptsPerSquareFor = 9;
+        // ptsPerSquareForEdge = 9;
 
-        maxSatelliteAlpha = 0.666;
+        maxSatelliteAlpha = 0.5
+
+        colorRocks[] = {0.50, 0.50, 0.50, 0.50};
+
         class hospital: Hospital {color[] = {0,0,0,0.25};};
         class church: Church {color[] = {0,0,0,0.25};};
         class lighthouse: Lighthouse {color[] = {0,0,0,0.25};};
@@ -132,6 +142,7 @@ class controlsBackground {
         w = W_PART(25);
         h = H_PART(19);
         onDraw = QUOTE(_this call FUNC(mapOnDrawEH));
+
         colorBackground[] = {0,0,0,1};
         colorOutside[] = {0,0,0,1};
         moveOnEdges = 0;
@@ -516,7 +527,7 @@ class controls {
                 text = "$STR_ACE_microdagr_menuConnectTo";
                 x = W_PART(0);
                 y = H_PART(16.5);
-            };           
+            };
             class TextBR: TextTL {
                 text = "$STR_ACE_microdagr_menuSettings";
                 x = W_PART(11);
