@@ -1,3 +1,4 @@
-```shell
-jekyll serve --baseurl ''
+```powershell
+bundle install
+bundle exec jekyll serve --baseurl '' --foce-polling
 ```
