@@ -4,7 +4,7 @@
  * Check of the unit can reload the launcher of target unit.
  *
  * Argument:
- * 0: Unit to to the reload (Object)
+ * 0: Unit to do the reloading (Object)
  * 1: Unit eqipped with launcher (Object)
  *
  * Return value:
@@ -30,27 +30,7 @@ if (_weapon == "" || {currentWeapon _target != _weapon}) exitWith {false};
 if (currentMagazine _target != "") exitWith {false};
 
 // check if the launcher is compatible
-private "_config";
-_config = configFile >> "CfgWeapons" >> _weapon;
-
-if (getNumber (_config >> QGVAR(enabled)) == 0) exitWith {false};
-
-// get magazine of reloader
-private "_magazines";
-_magazines = magazines _unit;
-
-{
-    _magazines deleteAt (_magazines find _x);
-} forEach secondaryWeaponMagazine _unit;
+if (getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(enabled)) == 0) exitWith {false};
 
 // check if the reloader has a magazine compatible with targets launcher
-private "_hasMagazine";
-_hasMagazine = false;
-
-{
-    if (_x in _magazines) exitWith {
-        _hasMagazine = true;
-    };
-} forEach getArray (_config >> "magazines");
-
-_hasMagazine
+count ([_unit, _weapon] call FUNC(getLoadableMissiles)) > 0
