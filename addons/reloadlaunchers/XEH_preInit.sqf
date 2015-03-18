@@ -2,6 +2,8 @@
 
 ADDON = false;
 
-PREP(empty);
+PREP(canLoad);
+PREP(load);
+PREP(reloadLauncher);
 
 ADDON = true;
