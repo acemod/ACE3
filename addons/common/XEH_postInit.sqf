@@ -99,6 +99,7 @@ GVAR(OldZeusDisplayIsOpen) = !(isNull findDisplay 312);
 GVAR(OldCameraView) = cameraView;
 GVAR(OldPlayerVehicle) = vehicle ACE_player;
 GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
+GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 
 // PFH to raise varios events
 [{
@@ -157,6 +158,14 @@ GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
         // Raise ACE event locally
         GVAR(OldPlayerTurret) = _newPlayerTurret;
         ["playerTurretChanged", [ACE_player, _newPlayerTurret]] call FUNC(localEvent);
+    };
+
+    // "playerWeaponChanged" event
+    _newPlayerWeapon = currentWeapon ACE_player;
+    if (_newPlayerWeapon != GVAR(OldPlayerWeapon)) then {
+        // Raise ACE event locally
+        GVAR(OldPlayerWeapon) = _newPlayerWeapon;
+        ["playerWeaponChanged", [ACE_player, _newPlayerWeapon]] call FUNC(localEvent);
     };
 
 }, 0, []] call cba_fnc_addPerFrameHandler;

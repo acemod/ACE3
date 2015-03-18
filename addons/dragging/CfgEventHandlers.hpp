@@ -29,3 +29,19 @@ class Extended_Init_EventHandlers {
         };
     };
 };
+
+class Extended_Killed_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            killed = QUOTE(_this call DFUNC(handleKilled));
+        };
+    };
+};
+
+class Extended_AnimChanged_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            animChanged = QUOTE(_this call DFUNC(handleAnimChanged));
+        };
+    };
+};
