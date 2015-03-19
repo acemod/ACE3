@@ -92,12 +92,13 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to define default font stacks
 // $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-sans-serif: "Open Sans","Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
-// $font-weight-normal: normal;
-// $font-weight-bold: bold;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
 
 // $white       : #FFFFFF;
 // $ghost       : #FAFAFA;
@@ -204,6 +205,7 @@ $primary-color: $ace-primary-color;
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
 // $header-font-weight: $font-weight-normal;
+$header-font-weight: 700;
 // $header-font-style: normal;
 // $header-font-color: $jet;
 // $header-line-height: 1.4;
@@ -230,8 +232,8 @@ $h5-font-size: rem-calc(16);
 // $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-// $h1-font-reduction: rem-calc(10);
-// $h2-font-reduction: rem-calc(10);
+$h1-font-reduction: rem-calc(5);
+$h2-font-reduction: rem-calc(5);
 // $h3-font-reduction: rem-calc(5);
 // $h4-font-reduction: rem-calc(5);
 // $h5-font-reduction: 0;
@@ -947,7 +949,7 @@ $code-border-style: none;
 // Hide controls on small
 // $orbit-nav-hide-for-small: true;
 // $orbit-bullet-hide-for-small: true;
-// $orbit-timer-hide-for-small: true; 
+// $orbit-timer-hide-for-small: true;
 
 // 20. Pagination
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1285,7 +1287,7 @@ $code-border-style: none;
 // $switch-paddle-bg: $white;
 // $switch-paddle-transition-speed: .15s;
 // $switch-paddle-transition-ease: ease-out;
-// $switch-active-color: $primary-color; 
+// $switch-active-color: $primary-color;
 
 // 30. Tables
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1476,7 +1478,7 @@ $code-border-style: none;
 // Sticky Class
 // $topbar-sticky-class: ".sticky";
 // $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
-// $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from dropdown subnavigation li// 
+// $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from dropdown subnavigation li//
 
 // 36. Visibility Classes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
