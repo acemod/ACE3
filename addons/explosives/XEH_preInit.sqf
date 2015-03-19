@@ -19,6 +19,7 @@ ADDON = false;
 
 PREP(addCellphoneIED);
 PREP(addClacker);
+PREP(addExplosiveActions);
 PREP(addToSpeedDial);
 PREP(canDefuse);
 PREP(canDetonate);
@@ -37,7 +38,6 @@ PREP(getPlacedExplosives);
 PREP(getSpeedDialExplosive);
 
 PREP(openDetonateUI);
-PREP(openPlaceUI);
 PREP(openTransmitterUI);
 PREP(openTimerSetUI);
 PREP(openTriggerSelectionUI);
