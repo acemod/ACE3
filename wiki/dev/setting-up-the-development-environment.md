@@ -1,5 +1,5 @@
 ---
-layout: wiki_dev
+layout: wiki
 title: Setting up the development environment
 group: dev
 parent: wiki

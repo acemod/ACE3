@@ -10,9 +10,9 @@
         <aside class="large-4 medium-12 columns">
             <nav>
                 <ul class="side-nav">
-                    <li class="heading">User Resources</li>
+                    <li class="heading">Development</li>
                     {% assign pages_list = site.pages | sort: "order" %}
-                    {% assign group = 'user' %}
+                    {% assign group = page.group %}
                     {% include pages_list %}
                 </ul>
             </nav>

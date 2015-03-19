@@ -1,13 +1,14 @@
 module.exports = function(grunt) {
 
     var header = [
-        "js/vendor/modernizr.js"
+        "js/vendor/modernizr/modernizr.custom.18747.js"
     ];
     
     var footer = [
-        "js/vendor/jquery.js",
-        "components/foundation/js/foundation.js",
-        "js/vendor/slick.js",
+        "js/vendor/jquery/jquery-2.1.3.min.js",
+        "js/vendor/foundation/foundation.js",
+        "js/vendor/foundation/foundation.topbar.js",
+        "js/vendor/slick/slick.js",
         "js/app.js"
     ];
 

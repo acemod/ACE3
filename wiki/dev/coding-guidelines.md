@@ -1,5 +1,5 @@
 ---
-layout: wiki_dev
+layout: wiki
 title: Coding Guidelines
 group: dev
 parent: wiki

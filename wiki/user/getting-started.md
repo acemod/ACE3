@@ -1,5 +1,5 @@
 ---
-layout: wiki_user
+layout: wiki
 title: Getting Started
 group: user
 order: 0
