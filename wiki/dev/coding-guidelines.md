@@ -6,7 +6,7 @@ parent: wiki
 order: 1
 ---
 
-## Table of Contents
+## Table Of Contents
 
   1. [Modules](#how-to-create-a-new-module)
   2. [Macros](#macro-usage)
@@ -14,7 +14,7 @@ order: 1
   4. [Hashes](#hashes)
 
 
-## How to create a new module
+## How To Create A New Module
 
   1. Copy the structure from `extras\blank` to the `addons\` folder and name it what you wish the new module to be named.
   2. Edit `script_component.hpp`, change the `COMPONENT` definition to the name of the module. Also edit each of the `DEBUG` definitions to be the name of the module (for example, `DEBUG_SETTINGS_BLANK` should be `DEBUG_SETTINGS_BALLS` for module balls)
@@ -52,7 +52,7 @@ Every function should have a header of the following format:
 
 ## Macro Usage
 
-### Module/PBO specific Macro Usage
+### Module/PBO Specific Macro Usage
 The family of `GVAR` macro's define global variable strings or constants for use within a module. Please use these to make sure we follow naming conventions across all modules and also prevent duplicate/overwriting between variables in different modules. The macro family expands as follows, for the example of the module `'balls'`:
 
  * `GVAR(face)` is `ace_balls_face`
@@ -75,7 +75,7 @@ The `FUNC` and `EFUNC` macros should NOT be used inside `QUOTE` macros if the in
 
 Using `FUNC` or `EFUNC` inside a `QUOTE` macro is fine if the intention is for it to be executed as a function.
 
-#### FUNC Macros, Call Tracing, and Non-ACE/Anonymous Functions
+#### FUNC Macros, Call Tracing, And Non-ACE/Anonymous Functions
 
 ACE implements a basic call tracing system that can dump the call stack on errors or wherever you want. To do this the `FUNC` macros in debug mode will expand out to include metadata about the call including line numbers and files. This functionality is automatic with the use of calls via `FUNC` and `EFUNC`, but any calls to other functions need to use the following macros:
 
@@ -90,7 +90,7 @@ Link to the [CBA `script_macros_common.hpp`](https://gist.github.com/commy2/9ed6
 
 * `QUOTE()` is utilized within configuration files for bypassing the quote issues in configuration macros. So, all code segments inside a given config should utilize wrapping in the `QUOTE()` macro instead of direct strings. This allows us to use our macros inside the string segments, such as `QUOTE(_this call FUNC(balls))`.
 
-#### setVariable, getVariable family macros
+#### setVariable, getVariable Family Macros
 
   * `GETVAR(player,MyVarName,false)`  
     `player getVariable ["MyVarName", false]`
@@ -125,7 +125,7 @@ Events can be removed or cleared with the following commands.
   * `[eventName, eventHandlerId] call ace_common_fnc_removeEventHandler` will remove a specific event handler of the event name, using the ID returned from `ace_common_fnc_addEventHandler`.
   * `[eventName] call ace_common_fnc_removeAllEventHandlers` will remove all event handlers for that type of event.
 
-More information on the [ACE Events System](https://github.com/KoffeinFlummi/ACE3/wiki/ACE-Events-System) page.
+More information on the [ACE Events System]({{ site.baseurl }}/wiki/dev/ace3-events-system.html) page.
 
 ## Hashes
 
@@ -192,6 +192,6 @@ As you can see above working with hashlists are fairly simple, a more in depth e
   * `HASHLIST_SELECT(hashlist, index)` returns the hash at that index in the list.
   * `HASHLIST_SET(hashlist, index, hash)` sets a specific index to that hash.
 
-#### A note on pass by reference and hashes
+#### A Note On Pass By Reference And Hashes
 
 Hashes and hashlists are implemented with SQF arrays, and as such they are passed by reference to other functions. Remember to make copies (using the + operator) if you intend for the hash or hashlist to be modified with out the need for changing the original value.

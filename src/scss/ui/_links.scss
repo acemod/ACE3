@@ -1,0 +1,12 @@
+a[href^="mailto:"] {
+
+    &:before {
+        content: "<";
+        color: $body-font-color;
+    }
+
+    &:after {
+        content: ">";
+        color: $body-font-color;
+    }
+}

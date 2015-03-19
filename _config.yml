@@ -5,9 +5,7 @@ description: ACE 3 is a joint effort by the teams behind ACE2, AGM and CSE to im
 
 markdown: redcarpet
 redcarpet:
-  extensions:
-    - with_toc_data
-    - html_toc
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "html_toc"]
 
 timezone: UTC
 

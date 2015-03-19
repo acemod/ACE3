@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Setting up the development environment
+title: Setting Up The Development Environment
 group: dev
 parent: wiki
 order: 0
@@ -8,7 +8,7 @@ order: 0
 
 The folder structure and pathing here is setup in such a way that you can quickly and easily setup your environment to allow for dynamic loading of changes, and also your build environment is set up at the same time. Our structure allows you to basically dynamically load modules for testing, as well as quick building/rebuilding of PBO's.
 
-## What this allows us to do
+## What This Allows Us To Do
 
 Using this set up allows you to do dynamic editing of files existing within an addon while the game is running, just requiring a mission reload for the changes to take affect. So, for example, you can use a test mission which is calling `ACE_boobAddon_fnc_balls`, this set up you can dynamically edit that file directly in your source tree and then reload your mission, and the changes take affect.
 
@@ -26,7 +26,7 @@ We will be making the following assumptions for the sake of this article on wher
   6. Install mikeros makepbo from `https://dev.withsix.com/projects/mikero-pbodll/files`
   7. Git pull the latest version to that same folder from `git://git.withsix.com/pbodll-release.git`
 
-## Setting up your Links
+## Setting Up Your Links
 
 With our folder structure, we can configure an entire development/testing setup with just a few windows symbolic links. This allows us to load "uncompiled" addon code and dynamically test in the mission editor (called file patching in Arma technical terms). We will need to link our ACE3 development folder in the Arma 3 and P: directories.
 
@@ -47,7 +47,7 @@ mklink /D "C:\Program Files (x86)\Steam\steamapps\common\Arma 3\z\ace" "C:\dev\A
 mklink /D "P:\z\ace" "C:\dev\ACE3"
 ```
 
-## How to use it
+## How To Use It
 
 You'll still need pbo's created - use the tools\build.bat file for quick, unbinarized building.  we'll need the pbo's build and present in your c:\dev\ace3\addons\ folder just as if it were the real addons folder.
 
