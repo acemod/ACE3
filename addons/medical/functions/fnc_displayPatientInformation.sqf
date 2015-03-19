@@ -77,9 +77,15 @@ if (_show) then {
         } else {
             {
                 _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _x];
-            } forEach ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
 
-            // @todo Injury texts?
+                if (_target getHitPointDamage _x > 0.1) then {
+                    // @todo localize
+                    _allInjuryTexts pushBack format ["%1 %2",
+                        ["Lightly wounded", "Heavily wounded"] select (_target getHitPointDamage _x > 0.5),
+                        ["head", "torso", "left arm", "right arm", "left leg", "right leg"] select _forEachIndex
+                    ];
+                };
+            } forEach ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
         };
 
         // Handle the body image coloring
