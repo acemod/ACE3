@@ -69,12 +69,11 @@ if (count _origActionData > 8 && {!({} isEqualTo (_origActionData select 8))}) t
 
 
 // If the original action has no statement, and no children, don't display it
-/*
 if ((count _activeChildren) == 0 && ((_origActionData select 3) isEqualTo {})) exitWith {
     // @todo: Account for showDisabled?
     []
 };
-*/
+
 
 //diag_log [_origActionData, _activeChildren, _object];
 [_origActionData, _activeChildren, _object]
