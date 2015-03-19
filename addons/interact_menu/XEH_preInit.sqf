@@ -41,6 +41,7 @@ GVAR(lastPath) = [];
 GVAR(expanded) = false;
 
 GVAR(startHoverTime) = diag_tickTime;
+GVAR(expandedTime) = diag_tickTime;
 GVAR(iconCtrls) = [];
 GVAR(iconCount) = 0;
 

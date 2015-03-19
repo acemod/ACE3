@@ -166,6 +166,7 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
     } else {
         if(!GVAR(expanded) && diag_tickTime-GVAR(startHoverTime) > 0.25) then {
             GVAR(expanded) = true;
+            GVAR(expandedTime) = diag_tickTime;
             GVAR(menuDepthPath) = +GVAR(lastPath);
 
             // Execute the current action if it's run on hover
