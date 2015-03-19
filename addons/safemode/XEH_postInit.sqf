@@ -9,8 +9,7 @@
 ["ACE3", QGVAR(safeMode), localize "STR_ACE_SafeMode_SafeMode",
 {
     // Conditions: canInteract
-    _exceptions = [QEGVAR(interaction,isNotEscorting)];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting"]] call EGVAR(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
 

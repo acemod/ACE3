@@ -1,0 +1,461 @@
+
+class Mode_FullAuto;
+
+class CfgWeapons {
+    // assault rifles
+
+    // MX
+    class arifle_MX_Base_F;
+    class arifle_MX_F: arifle_MX_Base_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_MX_Name";
+    };
+    class arifle_MX_Black_F: arifle_MX_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_MX_Black_Name";
+    };
+
+    class arifle_MXC_F: arifle_MX_Base_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_MXC_Name";
+    };
+    class arifle_MXC_Black_F: arifle_MXC_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_MXC_Black_Name";
+    };
+
+    class arifle_MX_GL_F: arifle_MX_Base_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_MX_GL_Name";
+    };
+    class arifle_MX_GL_Black_F: arifle_MX_GL_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_MX_GL_Black_Name";
+    };
+
+    class arifle_MX_SW_F: arifle_MX_Base_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_MX_SW_Name";
+    };
+    class arifle_MX_SW_Black_F: arifle_MX_SW_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_MX_SW_Black_Name";
+    };
+
+    class arifle_MXM_F: arifle_MX_Base_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_MXM_Name";
+    };
+    class arifle_MXM_Black_F: arifle_MXM_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_MXM_Black_Name";
+    };
+
+    // Katiba
+    class arifle_katiba_Base_F;
+    class arifle_Katiba_F: arifle_katiba_Base_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_Katiba_Name";
+    };
+    class arifle_Katiba_GL_F: arifle_katiba_Base_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_Katiba_GL_Name";
+    };
+    class arifle_Katiba_C_F: arifle_katiba_Base_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_Katiba_C_Name";
+    };
+
+    // SDAR
+    class SDAR_base_F;
+    class arifle_SDAR_F: SDAR_base_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_SDAR_Name";
+    };
+
+    // TAR-21
+    class Tavor_base_F;
+    class arifle_TRG21_F: Tavor_base_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_TRG21_Name";
+    };
+    class arifle_TRG21_GL_F: arifle_TRG21_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_TRG21_GL_Name";
+    };
+    class arifle_TRG20_F: Tavor_base_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_TRG20_Name";
+    };
+
+    // F2000
+    class mk20_base_F;
+    class arifle_Mk20_F: mk20_base_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_Mk20_Name";
+    };
+    class arifle_Mk20_plain_F: arifle_Mk20_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_Mk20_plain_Name";
+    };
+
+    class arifle_Mk20C_F: mk20_base_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_Mk20C_Name";
+    };
+    class arifle_Mk20C_plain_F: arifle_Mk20C_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_Mk20C_plain_Name";
+    };
+
+    class arifle_Mk20_GL_F: mk20_base_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_Mk20_GL_Name";
+    };
+    class arifle_Mk20_GL_plain_F: arifle_Mk20_GL_F {
+        displayName = "$STR_ACE_RealisticNames_arifle_Mk20_GL_plain_Name";
+    };
+
+    // Vector
+    class SMG_01_Base;
+    class SMG_01_F: SMG_01_Base {
+        displayName = "$STR_ACE_RealisticNames_SMG_01_Name";
+    };
+
+    // Scorpion
+    class SMG_02_base_F;
+    class SMG_02_F: SMG_02_base_F {
+        displayName = "$STR_ACE_RealisticNames_SMG_02_Name";
+    };
+
+    // PDW 2000
+    class pdw2000_base_F;
+    class hgun_pdw2000_F: pdw2000_base_F {
+        displayName = "$STR_ACE_RealisticNames_hgun_PDW2000_Name";
+    };
+
+    // pistols
+    class Pistol_Base_F;
+    class hgun_P07_F: Pistol_Base_F {
+        displayName = "$STR_ACE_RealisticNames_hgun_P07_Name";
+    };
+
+    class hgun_Rook40_F: Pistol_Base_F {
+        displayName = "$STR_ACE_RealisticNames_hgun_Rook40_Name";
+    };
+
+    class hgun_ACPC2_F: Pistol_Base_F {
+        displayName = "$STR_ACE_RealisticNames_hgun_ACPC2_Name";
+    };
+
+    class hgun_Pistol_heavy_01_F: Pistol_Base_F {
+        displayName = "$STR_ACE_RealisticNames_hgun_Pistol_heavy_01_Name";
+    };
+
+    class hgun_Pistol_heavy_02_F: Pistol_Base_F {
+        displayName = "$STR_ACE_RealisticNames_hgun_Pistol_heavy_02_Name";
+    };
+
+    class hgun_Pistol_Signal_F: Pistol_Base_F {
+        displayName = "$STR_ACE_RealisticNames_hgun_Pistol_Signal_Name";
+    };
+
+    // machine guns
+    class Rifle_Long_Base_F;
+    class LMG_Mk200_F: Rifle_Long_Base_F {
+        displayName = "$STR_ACE_RealisticNames_LMG_Mk200_Name";
+    };
+
+    class LMG_Zafir_F: Rifle_Long_Base_F {
+        displayName = "$STR_ACE_RealisticNames_LMG_Zafir_Name";
+    };
+
+    // sniper rifles
+    class EBR_base_F;
+    class srifle_EBR_F: EBR_base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_EBR_Name";
+    };
+
+    class LRR_base_F;
+    class srifle_LRR_F: LRR_base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_LRR_Name";
+    };
+    class srifle_LRR_camo_F: srifle_LRR_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_LRR_camo_Name";
+    };
+
+    class GM6_base_F;
+    class srifle_GM6_F: GM6_base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_GM6_Name";
+    };
+    class srifle_GM6_camo_F: srifle_GM6_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_GM6_camo_Name";
+    };
+
+    class DMR_01_base_F;
+    class srifle_DMR_01_F: DMR_01_base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_01_Name";
+    };
+
+    // launchers
+    class Launcher_Base_F;
+    class launch_RPG32_F: Launcher_Base_F {
+        displayName = "$STR_ACE_RealisticNames_launch_RPG32_Name";
+    };
+
+    class launch_Titan_base: Launcher_Base_F {
+        displayName = "$STR_ACE_RealisticNames_launch_Titan_Name";
+    };
+    class launch_Titan_short_base: launch_Titan_base {
+        displayName = "$STR_ACE_RealisticNames_launch_Titan_short_Name";
+    };
+
+    class launch_NLAW_F: Launcher_Base_F {
+        displayName = "$STR_ACE_RealisticNames_launch_NLAW_Name";
+    };
+
+    // vehicle weapons
+
+    // gatlings
+    class CannonCore;
+    class gatling_20mm: CannonCore {
+        //displayName = "";
+        class manual: CannonCore {
+            //displayName = "";
+        };
+    };
+    class Twin_Cannon_20mm: gatling_20mm {
+        displayName = "Plamen PL-20";
+        class manual: manual {
+            displayName = "Plamen PL-20";
+        };
+    };
+
+    class gatling_30mm: CannonCore { // This is a fictional veresion of the GSh-6-30, with 3 barrels
+        displayName = "GSh-3-30";
+        class LowROF: Mode_FullAuto {
+            displayName = "GSh-3-30";
+        };
+    };
+
+    class Gatling_30mm_Plane_CAS_01_F: CannonCore {
+        displayName = "GAU-8";
+        class LowROF: Mode_FullAuto {
+            displayName = "GAU-8";
+        };
+    };
+
+    class Cannon_30mm_Plane_CAS_02_F: CannonCore {
+        displayName = "GSh-301";
+        class LowROF: Mode_FullAuto {
+            displayName = "GSh-301";
+        };
+    };
+
+    // missiles
+    class RocketPods;
+    class Missile_AA_04_Plane_CAS_01_F: RocketPods {
+        displayName = "AIM-9 Sidewinder";
+    };
+    class Missile_AA_03_Plane_CAS_02_F: Missile_AA_04_Plane_CAS_01_F {
+        displayName = "Wympel R-73";
+    };
+
+    class MissileLauncher;
+    class Missile_AGM_02_Plane_CAS_01_F: MissileLauncher {
+        displayName = "AGM-65 Maverick";
+    };
+    class Missile_AGM_01_Plane_CAS_02_F: Missile_AGM_02_Plane_CAS_01_F {
+        displayName = "Kh-25MTP";
+    };
+
+    // rockets
+    class Rocket_04_HE_Plane_CAS_01_F: RocketPods {
+        displayName = "Hydra 70";
+        class Burst: RocketPods {
+            displayName = "Hydra 70";
+        };
+    };
+    class Rocket_04_AP_Plane_CAS_01_F: Rocket_04_HE_Plane_CAS_01_F {
+        displayName = "Hydra 70";
+    };
+
+    class Rocket_03_HE_Plane_CAS_02_F: Rocket_04_HE_Plane_CAS_01_F {
+        displayName = "S-8";
+        class Burst: Burst {
+            displayName = "S-8";
+        };
+    };
+    class Rocket_03_AP_Plane_CAS_02_F: Rocket_04_AP_Plane_CAS_01_F {
+        displayName = "S-8";
+        class Burst: Burst {
+            displayName = "S-8";
+        };
+    };
+
+    class rockets_Skyfire: RocketPods {
+        displayName = "Skyfire-70";
+        class Burst: RocketPods {
+            displayName = "Skyfire-70";
+        };
+    };
+
+    // more missiles
+    class missiles_DAR: RocketPods {
+        displayName = "Hydra 70";
+        class Burst: RocketPods {
+            displayName = "Hydra 70";
+        };
+    };
+
+    class missiles_DAGR: RocketPods {
+        displayName = "DAGR";
+        class Burst: RocketPods {
+            displayName = "DAGR";
+        };
+    };
+
+    class missiles_ASRAAM: MissileLauncher {
+        displayName = "AIM-132 ASRAAM";
+    };
+
+    class missiles_Zephyr: MissileLauncher {
+        displayName = "AIM-120A AMRAAM";
+    };
+
+    class missiles_SCALPEL: RocketPods { // according to zGuba, this is what it's based on
+        displayName = "9K121 Vikhr";
+    };
+
+    // bomb
+    class Bomb_04_Plane_CAS_01_F: RocketPods {
+        //displayName = "";
+    };
+    class Bomb_03_Plane_CAS_02_F: Bomb_04_Plane_CAS_01_F {
+        displayName = "FAB-250M-54";
+    };
+
+    // machine guns
+    class MGunCore;
+    class M134_minigun: MGunCore {
+        displayName = "2x M134 Minigun";
+    };
+
+    class LMG_RCWS;
+    class MGun;
+
+    class LMG_Minigun: LMG_RCWS {
+        displayName = "M134 Minigun";
+        class manual: MGun {
+            displayName = "M134 Minigun";
+        };
+    };
+
+    class HMG_127: LMG_RCWS {
+        displayName = "M2";
+        class manual: MGun {
+            displayName = "M2";
+        };
+    };
+
+    class HMG_01: HMG_127 {
+        displayName = "XM312";
+    };
+    class HMG_M2: HMG_01 {
+        displayName = "M2";
+    };
+
+    class HMG_NSVT: HMG_127 {
+        displayName = "NSVT";
+        class manual: manual {
+            displayName = "NSVT";
+        };
+    };
+
+    // grenade launchers
+    class GMG_F;
+    class GMG_20mm: GMG_F {
+        displayName = "XM307";
+        class manual: GMG_F {
+            displayName = "XM307";
+        };
+    };
+
+    class GMG_40mm: GMG_F {
+        displayName = "Mk 19";
+        class manual: GMG_F {
+            displayName = "Mk 19";
+        };
+    };
+
+    // autocannons
+    class autocannon_35mm: CannonCore {
+        displayName = "GDF-001";
+        class manual: CannonCore {
+            displayName = "GDF-001";
+        };
+    };
+
+    // aa missiles
+    class missiles_titan: MissileLauncher {
+        displayName = "Mini-Spike";
+    };
+
+    // mortar
+    class mortar_155mm_AMOS: CannonCore {
+        displayName = "L/52";
+    };
+
+    // artillery rockets
+    class rockets_230mm_GAT: RocketPods {
+        displayName = "M269";
+    };
+
+    // tank guns
+    class cannon_120mm: CannonCore {
+        class player;
+        displayName = "MG251";
+    };
+
+    class cannon_120mm_long: cannon_120mm {
+        displayName = "L/55";
+        class player: player {};
+    };
+
+    class cannon_105mm: cannon_120mm {
+        displayName = "M68";
+        class player: player {
+            displayName = "M68";
+        };
+    };
+
+    class cannon_125mm: cannon_120mm {
+        displayName = "2A46";
+    };
+
+    // coax machine guns
+    class LMG_coax: LMG_RCWS {
+        displayName = "PKT";
+    };
+
+    class ACE_LMG_coax_MBT_01: LMG_coax {
+        displayName = "MAG 58";
+    };
+
+    class ACE_LMG_coax_APC_Tracked_03: LMG_coax {
+        displayName = "L94A1";
+    };
+
+    // more autocannons
+    class autocannon_Base_F;
+    class autocannon_40mm_CTWS: autocannon_Base_F {
+        displayName = "Mk44 Bushmaster II";
+        class AP: autocannon_Base_F {
+            displayName = "Mk44 Bushmaster II";
+        };
+
+        class HE: autocannon_Base_F {
+            displayName = "Mk44 Bushmaster II";
+        };
+    };
+
+    class autocannon_30mm_CTWS: autocannon_Base_F {
+        displayName = "Mk44 Bushmaster II";
+        class AP: autocannon_Base_F {
+            displayName = "Mk44 Bushmaster II";
+        };
+
+        class HE: autocannon_Base_F {
+            displayName = "Mk44 Bushmaster II";
+        };
+    };
+
+    class autocannon_30mm: autocannon_30mm_CTWS {
+        displayName = "L21A1 RARDEN";
+        class AP: AP {
+            displayName = "L21A1 RARDEN";
+        };
+
+        class HE: HE {
+            displayName = "L21A1 RARDEN";
+        };
+    };
+};
