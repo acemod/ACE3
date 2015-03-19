@@ -17,7 +17,7 @@
 </p>
 <p align="center"><sup><strong>Requires the latest version of <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a> | <a href="#">BIF thread</a></strong></sup></p>
 
-**ACE 3** is a joint effort by the teams behind **ACE2**, **AGM** and **CSE** to improve the realism and authenticity of Arma 3.
+**ACE3** is a joint effort by the teams behind **ACE2**, **AGM** and **CSE** to improve the realism and authenticity of Arma 3.
 
 This mod is entirely **open-source**, and everyone is free to propose changes or maintain their own, customized version as long as they make their changes open to the public in accordance with the GNU General Public License (for more information check the license file attached to this project).
 

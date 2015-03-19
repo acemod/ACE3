@@ -53,7 +53,7 @@ GVAR(isOpeningDoor) = false;
 ["ACE3", QGVAR(modifierKey), localize "STR_ACE_Interaction_ModifierKey",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotDragging"]] call EGVAR(common,canInteractWith)) exitWith {false};
+    //if !([ACE_player, objNull, ["isNotDragging"]] call EGVAR(common,canInteractWith)) exitWith {false};   // not needed
 
     // Statement
     ACE_Modifier = 1;
