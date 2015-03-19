@@ -133,7 +133,7 @@ Hashes are a variable type that store key value pairs. They are not implemented 
 
 The following example is a simple usage using our macros which will be explained further below.
 
-```
+```cpp
 _hash = HASHCREATE;
 HASH_SET(_hash, "key", "value");
 if(HASH_HASKEY(_hash, "key")) then {
@@ -147,17 +147,17 @@ if(HASH_HASKEY(_hash, "key")) then {
 
 A description of the above macros is below.
 
-* `HASHCREATE` is used to create an empty hash.
-* `HASH_SET(hash, key, val)` will set the hash key to that value, a key can be anything, even objects.
-* `HASH_GET(hash, key)` will return the value of that key (or nil if it doesn't exist).
-* `HASH_HASKEY(hash, key)` will return true/false if that key exists in the hash.
-* `HASH_REM(hash, key)` will remove that hash key.
+  * `HASHCREATE` is used to create an empty hash.
+  * `HASH_SET(hash, key, val)` will set the hash key to that value, a key can be anything, even objects.
+  * `HASH_GET(hash, key)` will return the value of that key (or nil if it doesn't exist).
+  * `HASH_HASKEY(hash, key)` will return true/false if that key exists in the hash.
+  * `HASH_REM(hash, key)` will remove that hash key.
 
 ### Hashlists
 
 A hashlist is an extension of a hash. It is a list of hashes! The reason for having this special type of storage container rather than using a normal array is that an array of normal hashes that are are similar will duplicate a large amount of data in their storage of keys. A hashlist on the other hand uses a common list of keys and an array of unique value containers. The following will demonstrate it's usage.
 
-```
+```cpp
 _defaultKeys = ["key1","key2","key3"];
 // create a new hashlist using the above keys as default
 _hashList = HASHLIST_CREATELIST(_defaultKeys);
@@ -186,11 +186,11 @@ HASH_SET(_anotherHash, "anotherKey", "another value");
 
 As you can see above working with hashlists are fairly simple, a more in depth explanation of the macros is below.
 
-* `HASHLIST_CREATELIST(keys)` creates a new hashlist with the default keys, pass [] for no default keys.
-* `HASHLIST_CREATEHASH(hashlist)` returns a blank hash template from a hashlist.
-* `HASHLIST_PUSH(hashList, hash)` pushes a new hash onto the end of the list.
-* `HASHLIST_SELECT(hashlist, index)` returns the hash at that index in the list.
-* `HASHLIST_SET(hashlist, index, hash)` sets a specific index to that hash.
+  * `HASHLIST_CREATELIST(keys)` creates a new hashlist with the default keys, pass [] for no default keys.
+  * `HASHLIST_CREATEHASH(hashlist)` returns a blank hash template from a hashlist.
+  * `HASHLIST_PUSH(hashList, hash)` pushes a new hash onto the end of the list.
+  * `HASHLIST_SELECT(hashlist, index)` returns the hash at that index in the list.
+  * `HASHLIST_SET(hashlist, index, hash)` sets a specific index to that hash.
 
 #### A note on pass by reference and hashes
 
