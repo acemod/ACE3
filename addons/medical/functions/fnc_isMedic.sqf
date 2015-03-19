@@ -1,5 +1,5 @@
 /*
- * Author: Glowbal
+ * Author: Glowbal, KoffeinFlummi
  * Check if a unit is any medical class
  *
  * Arguments:
@@ -21,4 +21,4 @@ _medicN = if (count _this > 1) then {_this select 1} else {1};
 _class = _unit getVariable [QGVAR(medicClass),
     getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "attendant")];
 
-(_class min GVAR(medicSetting)) >= (_medicN min GVAR(medicSetting))
+_class >= _medicN min GVAR(medicSetting)
