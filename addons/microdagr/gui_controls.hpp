@@ -123,7 +123,7 @@ class controlsBackground {
         // ptsPerSquareFor = 9;
         // ptsPerSquareForEdge = 9;
 
-        maxSatelliteAlpha = 0.5
+        maxSatelliteAlpha = 0.5;
 
         colorRocks[] = {0.50, 0.50, 0.50, 0.50};
 
