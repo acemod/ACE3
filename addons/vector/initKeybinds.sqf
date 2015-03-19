@@ -13,7 +13,7 @@
 
     // Statement
     ["azimuth"] call FUNC(onKeyDown);
-    true
+    false
 },
 {
     // prevent holding down
@@ -24,7 +24,7 @@
 
     // Statement
     ["azimuth"] call FUNC(onKeyUp);
-    true
+    false
 },
 [15, [false, false, false]], false, 0] call CBA_fnc_addKeybind; //Tab Key
 
@@ -42,7 +42,7 @@
 
     // Statement
     ["distance"] call FUNC(onKeyDown);
-    true
+    false
 },
 {
     // prevent holding down
@@ -53,6 +53,6 @@
 
     // Statement
     ["distance"] call FUNC(onKeyUp);
-    true
+    false
 },
 [19, [false, false, false]], false] call CBA_fnc_addKeybind; //R Key
