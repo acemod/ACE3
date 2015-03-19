@@ -7,6 +7,7 @@ PREP(addClassAction);
 PREP(compileMenu);
 PREP(compileMenuSelfAction);
 PREP(collectActiveActionTree);
+PREP(createAction);
 PREP(keyDown);
 PREP(keyDownSelfAction);
 PREP(keyUp);

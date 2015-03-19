@@ -22,11 +22,16 @@ _target = _object;
 _player = ACE_player;
 
 // Return nothing if the action itself is not active
-if !([_target, ACE_player] call (_origActionData select 4)) exitWith {
+if !([_target, ACE_player, _origActionData select 9] call (_origActionData select 4)) exitWith {
     []
 };
 
 _activeChildren = [];
+
+// If there's a statement to dynamically insert children then execute it
+if (count _origActionData > 8 && {!({} isEqualTo (_origActionData select 8))}) then {
+    _activeChildren = [_target, ACE_player, _origActionData select 9] call (_origActionData select 8);
+};
 
 // Collect children class actions
 {
@@ -64,9 +69,12 @@ _activeChildren = [];
 
 
 // If the original action has no statement, and no children, don't display it
+/*
 if ((count _activeChildren) == 0 && ((_origActionData select 3) isEqualTo {})) exitWith {
     // @todo: Account for showDisabled?
     []
 };
+*/
 
+//diag_log [_origActionData, _activeChildren, _object];
 [_origActionData, _activeChildren, _object]

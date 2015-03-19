@@ -20,7 +20,7 @@ if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
     _player = ACE_Player;
     _target = GVAR(selectedTarget);
-    [GVAR(selectedTarget), ACE_player] call GVAR(selectedStatement);
+    [GVAR(selectedTarget), ACE_player, (GVAR(selectedAction) select 0) select 9] call GVAR(selectedStatement);
 };
 
 if (GVAR(keyDownSelfAction)) then {

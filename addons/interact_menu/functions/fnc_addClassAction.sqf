@@ -14,6 +14,8 @@
  * 7: Condition <CODE>
  * 8: Distance <NUMBER>
  * 9: Other parameters <ARRAY> (Optional)
+ * 10: Insert children code <CODE> (Optional)
+ * 11: Action parameters <ANY> (Optional)
  *
  * Return value:
  * The entry full path, which can be used to remove the entry, or add children entries <ARRAY>.
@@ -34,7 +36,7 @@ if (_typeNum == 0) then {
     [_objectType] call FUNC(compileMenuSelfAction);
 };
 
-private ["_varName","_actions","_params","_entry", "_parentLevel", "_foundParentLevel", "_fnc_findFolder"];
+private ["_varName","_actions","_params","_insertChildren","_parameters","_entry", "_parentLevel", "_foundParentLevel", "_fnc_findFolder"];
 
 _varName = format [[QGVAR(Act_%1), QGVAR(SelfAct_%1)] select _typeNum, _objectType];
 _actions = missionNamespace getVariable [_varName, []];
@@ -45,6 +47,16 @@ if((count _actions) == 0) then {
 _params = [false,false,false,false];
 if (count _this > 9) then {
     _params = _this select 9;
+};
+
+_insertChildren = {};
+if (count _this > 10) then {
+    _insertChildren = _this select 10;
+};
+
+_parameters = [];
+if (count _this > 11) then {
+    _parameters = _this select 11;
 };
 
 // Search the class action trees and find where to insert the entry
@@ -84,7 +96,9 @@ _entry = [
                 _condition,
                 _distance,
                 _params,
-                + _fullPath
+                + _fullPath,
+                _insertChildren,
+                _parameters
             ],
             []
         ];

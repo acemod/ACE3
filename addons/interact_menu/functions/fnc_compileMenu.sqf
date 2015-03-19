@@ -27,7 +27,7 @@ if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
 private "_recurseFnc";
 _recurseFnc = {
     private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_selection", "_condition", "_showDisabled",
-            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_fullPath"];
+            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_fullPath", "_insertChildren"];
     EXPLODE_2_PVT(_this,_actionsCfg,_parentPath);
     _actions = [];
 
@@ -46,7 +46,9 @@ _recurseFnc = {
             if (_condition == "") then {_condition = "true"};
 
             // Add canInteract (including exceptions) and canInteractWith to condition
-            _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EGVAR(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
+            _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
+
+            _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
 
             _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
             _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
@@ -68,7 +70,9 @@ _recurseFnc = {
                             _condition,
                             _distance,
                             [_showDisabled,_enableInside,_canCollapse,_runOnHover],
-                            _fullPath
+                            _fullPath,
+                            _insertChildren,
+                            []
                         ],
                         _children
                     ];
