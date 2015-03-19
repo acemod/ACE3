@@ -76,7 +76,7 @@ if (_show) then {
             }foreach _openWounds;
         } else {
             {
-                _selectionBloodLoss set [_forEachIndex, _unit getHitPointDamage _x];
+                _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _x];
             } forEach ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
 
             // @todo Injury texts?
