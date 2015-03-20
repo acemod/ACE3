@@ -8,7 +8,7 @@
 6. Open a CLI and `cd` to the directory
 7. Execute `bundle install`
 
-**To run jekyll execute:**
+**To run Jekyll execute:**
 
 ```powershell
 bundle exec jekyll serve --baseUrl="/ACE3" --force_polling
