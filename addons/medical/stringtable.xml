@@ -669,7 +669,6 @@
                 <English>%1 is responsive</English>
                 <Russian>%1 реагирует на раздражители</Russian>
                 <Spanish>%1 ha reaccionado</Spanish>
-                
             </Key>
             <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_UNRESPONSIVE">
                 <English>%1 is not responsive</English>
@@ -729,4 +728,4 @@
         </Container>
 
     </Package>
-</Project> 
+</Project>
