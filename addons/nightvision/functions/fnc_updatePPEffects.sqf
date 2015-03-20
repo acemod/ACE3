@@ -1,4 +1,18 @@
-//by commy2, PabstMirror and CAA-Picard
+/*
+ * Author: commy2, PabstMirror and CAA-Picard
+ * Update the ppEffects everytime something changes
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [someEvent] call ace_nightvision_fnc_updatePPEffects
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_currentVehicle", "_grainSetting", "_blurSetting", "_radBlurSetting", "_config"];

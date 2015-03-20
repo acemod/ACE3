@@ -1,12 +1,9 @@
 #include "script_component.hpp"
 
-["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
-["MoveInCaptive", {_this call FUNC(vehicleCaptiveMoveIn)}] call EFUNC(common,addEventHandler);
-["MoveOutCaptive", {_this call FUNC(vehicleCaptiveMoveOut)}] call EFUNC(common,addEventHandler);
-["SetHandcuffed", {_this call FUNC(setHandcuffed)}] call EFUNC(common,addEventHandler);
 
 //Handles when someone starts escorting and then disconnects, leaving the captive attached
 //This is normaly handled by the PFEH in doEscortCaptive, but that won't be running if they DC
+
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {
         PARAMS_1(_disconnectedPlayer);
@@ -21,12 +18,20 @@ if (isServer) then {
     }];
 };
 
-//TODO: Medical Integration Events???
+["playerVehicleChanged", {_this call FUNC(handleVehicleChanged)}] call EFUNC(common,addEventHandler);
+["zeusDisplayChanged",   {_this call FUNC(handleZeusDisplayChanged)}] call EFUNC(common,addEventHandler);
+["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
+["MoveInCaptive", {_this call FUNC(vehicleCaptiveMoveIn)}] call EFUNC(common,addEventHandler);
+["MoveOutCaptive", {_this call FUNC(vehicleCaptiveMoveOut)}] call EFUNC(common,addEventHandler);
 
-// [_unit, "knockedOut", {
-// if (local (_this select 0)) then {_this call ACE_Captives_fnc_handleKnockedOut};
-// }] call ACE_Core_fnc_addCustomEventhandler;
+["SetHandcuffed", {_this call FUNC(setHandcuffed)}] call EFUNC(common,addEventHandler);
+["SetSurrendered", {_this call FUNC(setSurrendered)}] call EFUNC(common,addEventHandler);
 
-// [_unit, "wokeUp", {
-// if (local (_this select 0)) then {_this call ACE_Captives_fnc_handleWokeUp};
-// }] call ACE_Core_fnc_addCustomEventhandler;
+//Medical Integration Events???
+["medical_onUnconscious", {_this call ACE_Captives_fnc_handleOnUnconscious}] call EFUNC(common,addEventHandler);
+
+if (!hasInterface) exitWith {};
+
+["isNotEscorting", {!(GETVAR(_this select 0,GVAR(isEscorting),false))}] call EFUNC(common,addCanInteractWithCondition);
+["isNotHandcuffed", {!(GETVAR(_this select 0,GVAR(isHandcuffed),false))}] call EFUNC(common,addCanInteractWithCondition);
+["isNotSurrendering", {!(GETVAR(_this select 0,GVAR(isSurrendering),false))}] call EFUNC(common,addCanInteractWithCondition);

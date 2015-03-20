@@ -1,7 +1,6 @@
-class CfgFactionClasses
-{
+class CfgFactionClasses {
     class NO_CATEGORY;
-    class ACE_medical: NO_CATEGORY {
+    class ADDON: NO_CATEGORY {
         displayName = "ACE Medical";
     };
 };

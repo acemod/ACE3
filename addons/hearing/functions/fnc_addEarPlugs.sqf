@@ -1,13 +1,17 @@
 /*
  * Author: commy2
- *
  * Called on unit initialization. Adds earplugs if the unit is equipped with either a really loud primary weapon or a rocket launcher.
  *
- * Argument:
- * 0: A Soldier (Object)
+ * Arguments:
+ * 0: A Soldier <Object>
  *
- * Return value:
- * Nothing
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [guy] call ace_hearing_fnc_addEarPlugs
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -19,7 +23,7 @@ _unit = _this select 0;
 _launcher = secondaryWeapon _unit;
 
 if (_launcher != "") exitWith {
-  _unit addItem "ACE_EarBuds";
+    _unit addItem "ACE_EarPlugs";
 };
 
 // otherwise add earplugs if the soldier has a big rifle
@@ -32,5 +36,5 @@ if (isNil "_magazine") exitWith {};
 _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
 
 if (getNumber (configFile >> "CfgAmmo" >> _ammo >> "audiblefire") > 8) then {
-  _unit addItem "ACE_EarBuds";
+    _unit addItem "ACE_EarPlugs";
 };

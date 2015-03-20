@@ -19,13 +19,13 @@ PREP(doUnloadCaptive);
 PREP(handleGetIn);
 PREP(handleGetOut);
 PREP(handleKilled);
-PREP(handleKnockedOut);
+PREP(handleOnUnconscious);
 PREP(handlePlayerChanged);
 PREP(handleUnitInitPost);
-PREP(handleWokeUp);
+PREP(handleZeusDisplayChanged);
 PREP(moduleSurrender);
 PREP(setHandcuffed);
-PREP(surrender);
+PREP(setSurrendered);
 PREP(vehicleCaptiveMoveIn);
 PREP(vehicleCaptiveMoveOut);
 

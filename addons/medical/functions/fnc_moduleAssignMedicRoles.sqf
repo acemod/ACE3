@@ -1,19 +1,22 @@
-/**
- * fn_assignMedicRoles.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Assign a medical role to a unit
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: The module logic <LOGIC>
+ * 1: units <ARRAY>
+ * 2: activated <BOOL>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_logic","_setting","_objects"];
+private ["_logic","_setting","_objects", "_list", "_splittedList", "_nilCheckPassedList", "_parsedList"];
 _logic = [_this,0,objNull,[objNull]] call BIS_fnc_param;
-
- [format["AssignMedicalRoles called. Arguments are: %1 %2", _this]] call EFUNC(common,debug);
 
 if (!isNull _logic) then {
     _list = _logic getvariable ["EnableList",""];
@@ -21,7 +24,7 @@ if (!isNull _logic) then {
     _splittedList = [_list, ","] call BIS_fnc_splitString;
     _nilCheckPassedList = "";
     {
-        _x = [_x] call EFUNC(common,string_removeWhiteSpace);
+        _x = [_x] call EFUNC(common,stringRemoveWhiteSpace);
         if !(isnil _x) then {
             if (_nilCheckPassedList == "") then {
                 _nilCheckPassedList = _x;
@@ -33,15 +36,14 @@ if (!isNull _logic) then {
 
     _list = "[" + _nilCheckPassedList + "]";
     _parsedList = [] call compile _list;
-    _setting = _logic getvariable ["class",0];
+    _setting = _logic getvariable ["role",0];
     _objects = synchronizedObjects _logic;
     if (!(_objects isEqualTo []) && _parsedList isEqualTo []) then {
-        [["synchronizedObjects for the 'Assign Medic Role' Module is deprecated. Please use the enable for list instead!"], 1] call EFUNC(common,debug);
         {
             if (!isnil "_x") then {
                    if (typeName _x == typeName objNull) then {
                     if (local _x) then {
-                        [_x,_setting] call FUNC(setMedicRole);
+                        _x setvariable [QGVAR(medicClass), _setting, true];
                     };
                 };
             };
@@ -51,7 +53,7 @@ if (!isNull _logic) then {
         if (!isnil "_x") then {
                if (typeName _x == typeName objNull) then {
                 if (local _x) then {
-                    [_x,_setting] call FUNC(setMedicRole);
+                    _x setvariable [QGVAR(medicClass), _setting, true];
                 };
             };
         };

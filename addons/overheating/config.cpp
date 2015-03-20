@@ -19,3 +19,14 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 #include "CfgWeapons.hpp"
+
+class ACE_Settings {
+    class GVAR(DisplayTextOnJam) {
+        typeName = "BOOL";
+        isClientSetable = 1;
+        value = 1;
+        displayName = "$STR_ACE_overheating_SettingDisplayTextName";
+        description = "$STR_ACE_overheating_SettingDisplayTextDesc";
+    };
+};
+

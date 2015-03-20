@@ -16,10 +16,6 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 class ACE_Settings {
-    class GVAR(SafeZoneRadius) {
-        value = 100;
-        typeName = "SCALAR";
-    };
     class GVAR(EnableSwitchUnits) {
         value = 0;
         typeName = "BOOL";
@@ -43,5 +39,9 @@ class ACE_Settings {
     class GVAR(EnableSafeZone) {
         value = 1;
         typeName = "BOOL";
+    };
+    class GVAR(SafeZoneRadius) {
+        value = 100;
+        typeName = "SCALAR";
     };
 };

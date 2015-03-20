@@ -1,18 +1,22 @@
-/**
- * fn_canAccessMedicalEquipment.sqf
- * @Descr: Check if caller can access targets medical equipment, based upon accessLevel
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Check if caller can access targets medical equipment, based upon accessLevel.
  *
- * @Arguments: [target OBJECT, caller OBJECT]
- * @Return: BOOL
- * @PublicAPI: true
+ * Arguments:
+ * 0: The caller <OBJECT>
+ * 1: The target <OBJECT>
+ *
+ * ReturnValue:
+ * Can Treat <BOOL>
+ *
+ * Public: Yes
  */
 
 #include "script_component.hpp"
 
 private ["_target", "_caller", "_accessLevel", "_return"];
-_target = _this select 0;
-_caller = _this select 1;
+_caller = _this select 0;
+_target = _this select 1;
 
 _accessLevel = _target getvariable [QGVAR(allowSharedEquipmentAccess), -1];
 

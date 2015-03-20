@@ -1,1 +1,0 @@
-#include "\z\ace\addons\lockbackpacks\script_component.hpp"

@@ -1,8 +1,3 @@
-#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
-  name = #ITEM; \
-  count = COUNT; \
-};
-
 class CfgVehicles {
   class Man;
 
@@ -16,7 +11,6 @@ class CfgVehicles {
         showDisabled = 1;
         priority = 4;
         icon = PATHTOF(UI\Explosives_Menu_ca.paa);
-        subMenu[] = {"ACE_Explosives", 1};
         hotkey = "X";
         //Sub-menu items
         class ACE_Detonate {
@@ -143,47 +137,47 @@ class CfgVehicles {
 
   class Box_NATO_AmmoOrd_F: NATO_Box_Base {
     class TransportItems {
-      MACRO_ADDITEM(ACE_Clacker,12)
-      MACRO_ADDITEM(ACE_M26_Clacker,6)
-      MACRO_ADDITEM(ACE_DefusalKit,12)
+      MACRO_ADDITEM(ACE_Clacker,12);
+      MACRO_ADDITEM(ACE_M26_Clacker,6);
+      MACRO_ADDITEM(ACE_DefusalKit,12);
     };
   };
 
   class Box_East_AmmoOrd_F: EAST_Box_Base {
     class TransportItems {
-      MACRO_ADDITEM(ACE_Clacker,12)
-      MACRO_ADDITEM(ACE_M26_Clacker,6)
-      MACRO_ADDITEM(ACE_DefusalKit,12)
+      MACRO_ADDITEM(ACE_Clacker,12);
+      MACRO_ADDITEM(ACE_M26_Clacker,6);
+      MACRO_ADDITEM(ACE_DefusalKit,12);
     };
   };
 
   class Box_IND_AmmoOrd_F: IND_Box_Base {
     class TransportItems {
-      MACRO_ADDITEM(ACE_Clacker,12)
-      MACRO_ADDITEM(ACE_M26_Clacker,6)
-      MACRO_ADDITEM(ACE_DefusalKit,12)
-      MACRO_ADDITEM(ACE_Deadmanswitch,2)
-      MACRO_ADDITEM(ACE_Cellphone,3)
+      MACRO_ADDITEM(ACE_Clacker,12);
+      MACRO_ADDITEM(ACE_M26_Clacker,6);
+      MACRO_ADDITEM(ACE_DefusalKit,12);
+      MACRO_ADDITEM(ACE_Deadmanswitch,2);
+      MACRO_ADDITEM(ACE_Cellphone,3);
     };
   };
 
   class Box_FIA_Ammo_F: FIA_Box_Base_F {
     class TransportItems {
-      MACRO_ADDITEM(ACE_Clacker,2)
-      MACRO_ADDITEM(ACE_M26_Clacker,2)
-      MACRO_ADDITEM(ACE_DefusalKit,2)
-      MACRO_ADDITEM(ACE_Deadmanswitch,1)
-      MACRO_ADDITEM(ACE_Cellphone,2)
+      MACRO_ADDITEM(ACE_Clacker,2);
+      MACRO_ADDITEM(ACE_M26_Clacker,2);
+      MACRO_ADDITEM(ACE_DefusalKit,2);
+      MACRO_ADDITEM(ACE_Deadmanswitch,1);
+      MACRO_ADDITEM(ACE_Cellphone,2);
     };
   };
 
   class ACE_Box_Misc: Box_NATO_Support_F {
     class TransportItems {
-      MACRO_ADDITEM(ACE_Clacker,12)
-      MACRO_ADDITEM(ACE_M26_Clacker,6)
-      MACRO_ADDITEM(ACE_DefusalKit,12)
-      MACRO_ADDITEM(ACE_Deadmanswitch,6)
-      MACRO_ADDITEM(ACE_Cellphone,10)
+      MACRO_ADDITEM(ACE_Clacker,12);
+      MACRO_ADDITEM(ACE_M26_Clacker,6);
+      MACRO_ADDITEM(ACE_DefusalKit,12);
+      MACRO_ADDITEM(ACE_Deadmanswitch,6);
+      MACRO_ADDITEM(ACE_Cellphone,10);
     };
   };
 

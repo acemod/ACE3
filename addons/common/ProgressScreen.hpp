@@ -1,6 +1,3 @@
-class ACE_gui_RscProgress;
-class ACE_gui_staticBase;
-
 
 class GVAR(ProgressBar_Dialog) {
   idd = -1;
@@ -20,7 +17,7 @@ class GVAR(ProgressBar_Dialog) {
       type = 0;
       style = 0;
       size = 1;
-      colorBackground[] = {0, 0, 0, 0.1};
+      colorBackground[] = {0, 0, 0, 0.0};
       colorText[] = {0, 0, 0, 0};
       x = "safezoneX";
       y = "safezoneY";
@@ -34,7 +31,7 @@ class GVAR(ProgressBar_Dialog) {
       y = "0.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
       w = "38 * (((safezoneW / safezoneH) min 1.2) / 40)";
       h = ".8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-      colorFrame[] = {0,0,0,0.025};
+      colorFrame[] = {0,0,0,0.0};
       colorBar[] = {0.27,0.5,0.31,0.8};
       texture = "#(argb,8,8,3)color(1,1,1,0.7)";
     };

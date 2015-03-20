@@ -1,74 +1,125 @@
+class ACE_gui_backgroundBase;
+class ACE_gui_listBoxBase;
+
 class Rsctitles {
-  class GVAR(ScreenEffectsBlack) {
-    duration = 10e10;
-    idd = 1111;
-    movingenable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(GVAR(ScreenEffectsBlack))), _this select 0)]);
-
+  class GVAR(DisplayInformation) {
+  duration = 10e10;
+  idd = 1111;
+  movingenable = 0;
+  onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(GVAR(DisplayInformation))), _this select 0)]);
+  onUnload = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(GVAR(DisplayInformation))), nil)]);
     class controlsBackground {
-      class blackScreen: ACE_gui_backgroundBase {
-        text = QUOTE(PATHTOF(data\black_out.paa));
-        colorText[] = {0.0, 0.0, 0.0, 0.0};
-        idc = 11112;
-        x = safezoneX;
-        y = safezoneY;
-        w = safezoneW;
-        h = safezoneH;
-      };
-    };
-  };
-  class GVAR(ScreenEffectsBleeding) {
-    duration = 1;
-    idd = 1111;
-    movingenable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(GVAR(ScreenEffectsBleeding))), _this select 0)]);
-
-    class controlsBackground {
-      class bleedingScreen: ACE_gui_backgroundBase {
-        text = QUOTE(PATHTOF(data\bleeding.paa));
-        colorText[] = {0.9, 0.2, 0.2, 0.6};
-        idc = 11113;
-        x = safezoneX;
-        y = safezoneY;
-        w = safezoneW;
-        h = safezoneH;
-      };
-    };
-  };
-  class GVAR(ScreenEffectsHit) {
-    duration = 1.1;
-    idd = 1111;
-    movingenable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(GVAR(ScreenEffectsHit))), _this select 0)]);
-
-    class controlsBackground {
-      class effectHit: ACE_gui_backgroundBase {
-        text = QUOTE(PATHTOF(data\hit.paa));
-        colorText[] = {0.7, 0.2, 0.2, 0.4};
-        idc = 11113;
-        x = safezoneX;
-        y = safezoneY;
-        w = safezoneW;
-        h = safezoneH;
-      };
-    };
-  };
-  class GVAR(ScreenEffectsPain) {
-    duration = 1;
-    idd = 1111;
-    movingenable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(GVAR(ScreenEffectsPain))), _this select 0)]);
-
-    class controlsBackground {
-      class painScreen: ACE_gui_backgroundBase {
-        text = QUOTE(PATHTOF(data\painScreen.paa));
-        colorText[] = {1, 1, 1, 0.5};
-        idc = 11115;
-        x = safezoneX;
-        y = safezoneY;
-        w = safezoneW;
-        h = safezoneH;
-      };
+        class bodyImgBackground: ACE_gui_backgroundBase {
+            idc = -1;
+            x = "safezoneX + (2.5 * (((safezoneW / safezoneH) min 1.2) / 40))";
+            y = "1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
+            w = "8.5 * (((safezoneW / safezoneH) min 1.2) / 40)";
+            h = "8.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.4)";
+            colorBackground[] = {1,1,1,1};
+            colorPicture[] = {1,1,1,1};
+            colorText[] = {1,1,1,1};
+            text = QUOTE(PATHTOF(ui\body_background.paa));
+        };
+        class bodyImgHead: bodyImgBackground {
+            idc = 50;
+            colorBackground[] = {1,1,1,1};
+            colorPicture[] = {1,1,1,1};
+            colorText[] = {1,1,1,1};
+            text = QUOTE(PATHTOF(ui\body_head.paa));
+        };
+        class bodyImgTorso: bodyImgHead {
+            idc = 51;
+            text = QUOTE(PATHTOF(ui\body_torso.paa));
+        };
+        class bodyImgArms_l: bodyImgHead {
+            idc = 52;
+            text = QUOTE(PATHTOF(ui\body_arm_left.paa));
+        };
+        class bodyImgArms_r: bodyImgHead {
+            idc = 53;
+            text = QUOTE(PATHTOF(ui\body_arm_right.paa));
+        };
+        class bodyImgLegs_l: bodyImgHead {
+            idc = 54;
+            text = QUOTE(PATHTOF(ui\body_leg_left.paa));
+        };
+        class bodyImgLegs_r: bodyImgHead {
+            idc = 55;
+            text = QUOTE(PATHTOF(ui\body_leg_right.paa));
+        };
+        class InjuryListLabel {
+            idc = 199;
+            type = CT_STATIC;
+            x = "safezoneX + (2 * (((safezoneW / safezoneH) min 1.2) / 40))";
+            y = "10.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
+            w = "9 * (((safezoneW / safezoneH) min 1.2) / 40)";
+            h = "0.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
+            style = 0x00 + 0x100; // ST_LEFT + ST_SHADOW
+            font = "PuristaMedium";
+            colorText[] = {0.95, 0.95, 0.95, 0.75};
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.9])"};
+            text = "INJURIES";
+        };
+        class InjuryList: ACE_gui_listBoxBase {
+            idc = 200;
+            x = "safezoneX + (2 * (((safezoneW / safezoneH) min 1.2) / 40))";
+            y = "11 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
+            w = "9 * (((safezoneW / safezoneH) min 1.2) / 40)";
+            h = "9 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
+            rowHeight = 0.03;
+            colorBackground[] = {0, 0, 0, 0.2};
+            colorText[] = {1,1, 1, 1.0};
+            colorScrollbar[] = {0.95, 0.95, 0.95, 1};
+            colorSelect[] = {0.95, 0.95, 0.95, 1};
+            colorSelect2[] = {0.95, 0.95, 0.95, 1};
+            colorSelectBackground[] = {0, 0, 0, 0.0};
+            colorSelectBackground2[] = {0.0, 0.0, 0.0, 0.5};
+        };
+        class LogName {
+            idc = 301;
+            type = CT_STATIC;
+            x = "safezoneX + (2 * (((safezoneW / safezoneH) min 1.2) / 40))";
+            y = "20.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
+            w = "9 * (((safezoneW / safezoneH) min 1.2) / 40)";
+            h = "0.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
+            style = 0x00 + 0x100; // ST_LEFT + ST_SHADOW
+            font = "PuristaMedium";
+            colorText[] = {0.95, 0.95, 0.95, 0.75};
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.9])"};
+            text = "ACTIVITY LOG";
+        };
+        class ActivityLog: InjuryList {
+            idc = 302;
+            y = "21.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
+            h = "7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
+            rowHeight = 0.03;
+            colorBackground[] = {0, 0, 0, 0.2};
+            colorText[] = {1,1, 1, 1.0};
+            colorScrollbar[] = {0.95, 0.95, 0.95, 1};
+            colorSelect[] = {0.95, 0.95, 0.95, 1};
+            colorSelect2[] = {0.95, 0.95, 0.95, 1};
+            colorSelectBackground[] = {0, 0, 0, 0.0};
+            colorSelectBackground2[] = {0.0, 0.0, 0.0, 0.5};
+        };
+        class TriageStatus {
+            idc = 303;
+            type = CT_STATIC;
+            x = "safezoneX + (2 * (((safezoneW / safezoneH) min 1.2) / 40))";
+            y = "28.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
+            w = "9 * (((safezoneW / safezoneH) min 1.2) / 40)";
+            h = "0.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
+            style = 0x00 + 0x100; // ST_LEFT + ST_SHADOW
+            font = "PuristaMedium";
+            colorText[] = {0.95, 0.95, 0.95, 0.75};
+            colorBackground[] = {0,0,0,0.9};
+            text = "";
+        };
     };
   };
 };

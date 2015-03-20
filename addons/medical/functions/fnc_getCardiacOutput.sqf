@@ -1,11 +1,14 @@
-/**
- * fn_getCardiacOutput.sqf
- * @Descr: Get the cardiac output from the Heart, based on current Heart Rate and Blood Volume.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Get the cardiac output from the Heart, based on current Heart Rate and Blood Volume.
  *
- * @Arguments: [unit OBJECT]
- * @Return:    NUMBER    Current cardiac output.
- * @PublicAPI: true
+ * Arguments:
+ * 0: The Unit <OBJECT>
+ *
+ * ReturnValue:
+ * Current cardiac output <NUMBER>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
