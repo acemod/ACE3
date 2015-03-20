@@ -843,7 +843,7 @@ class CfgVehicles {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
                 class Bandage_RightLeg {
-                    displayName = "STR_ACE_Medical_Bandage_HitRightLeg";
+                    displayName = "$STR_ACE_Medical_Bandage_HitRightLeg";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(treatment));
