@@ -1,10 +1,9 @@
 
 class ACE_Medical_Actions {
     class Basic {
-        // @todo: localization
         class Bandage {
-            displayName = "Bandage";
-            displayNameProgress = "Bandaging ...";
+            displayName = "$STR_ACE_Medical_Bandage";
+            displayNameProgress = "$STR_ACE_Medical_Bandaging";
 
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
@@ -25,16 +24,16 @@ class ACE_Medical_Actions {
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
         };
         class Morphine: Bandage {
-            displayName = "Morphine";
-            displayNameProgress = "Injecting Morphine ...";
+            displayName = "$STR_ACE_Medical_Inject_Morphine";
+            displayNameProgress = "$STR_ACE_Medical_Injecting_Morphine";
             treatmentTime = 2;
             items[] = {QGVAR(morphine)};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_morphine));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class Epipen: Bandage {
-            displayName = "Epinephrine";
-            displayNameProgress = "Injecting Epinephrine ...";
+            displayName = "$STR_ACE_Medical_Inject_Epinephrine";
+            displayNameProgress = "$STR_ACE_Medical_Injecting_Epinephrine";
             requiredMedic = 1;
             treatmentTime = 3;
             items[] = {QGVAR(epipen)};
@@ -42,8 +41,8 @@ class ACE_Medical_Actions {
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class BloodIV: Bandage {
-            displayName = "Blood Bag";
-            displayNameProgress = "Transfusing Blood ...";
+            displayName = "$STR_ACE_Medical_Transfuse_Blood";
+            displayNameProgress = "$STR_ACE_Medical_Transfusing_Blood";
             requiredMedic = 1;
             treatmentTime = 20;
             items[] = {{QGVAR(bloodIV), QGVAR(bloodIV_500), QGVAR(bloodIV_250)}};
