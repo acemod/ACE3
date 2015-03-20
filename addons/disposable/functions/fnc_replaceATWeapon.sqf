@@ -61,8 +61,8 @@ if !([_unit] call EFUNC(common,isPlayer)) then {
             if (((secondaryWeapon _unit) != _tube) || {!alive _unit} || {([_unit] call EFUNC(common,isPlayer))}) exitWith {};
 
             private ["_items", "_container"];
-            
-            _items = secondaryWeaponItems _unit; 
+
+            _items = secondaryWeaponItems _unit;
             _container = createVehicle ["GroundWeaponHolder", position _unit, [], 0, "CAN_COLLIDE"];
             _container setPosAsl (getPosAsl _unit);
             _container addWeaponCargoGlobal [_tube, 1];
