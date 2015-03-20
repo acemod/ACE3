@@ -6,7 +6,7 @@
  * 0: unit - Object the event handler is assigned to <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player] call ace_disposable_fnc_updateInventoryDisplay;

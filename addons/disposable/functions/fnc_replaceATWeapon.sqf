@@ -21,28 +21,55 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_tube", "_projectile"];
+private ["_unit", "_weapon", "_projectile", "_replacementTube", "_items"];
 
 _unit = _this select 0;
-if (!local _unit) exitWith {};
-
-_tube = getText (configFile >> "CfgWeapons" >> (_this select 1) >> "ACE_UsedTube");
-if (_tube == "") exitWith {};
-
+_weapon = _this select 1;
 _projectile = _this select 6;
 
-private "_items";
+if (!local _unit) exitWith {};
 
+_replacementTube = getText (configFile >> "CfgWeapons" >> _weapon >> "ACE_UsedTube");
+if (_replacementTube == "") exitWith {}; //If no replacement defined just exit
+if (_weapon != (secondaryWeapon _unit)) exitWith {}; //just to be sure
+
+
+//Save array of items attached to launcher
 _items = secondaryWeaponItems _unit;
-
-_unit addWeapon _tube;
-_unit selectWeapon _tube;
+//Replace the orginal weapon with the 'usedTube' weapon
+_unit addWeapon _replacementTube;
+//Makes sure the used tube is still equiped
+_unit selectWeapon _replacementTube;
+//Re-add all attachments to the used tube
 {
     if (_x != "") then {_unit addSecondaryWeaponItem _x};
 } forEach _items;
 
-// AI
+
+// AI - Remove the ai's missle launcher tube after the missle has exploded
 if !([_unit] call EFUNC(common,isPlayer)) then {
-    //waits until _projectile is null, so random 0-2 tickTime seconds after that
-    [FUNC(aiDropWeaponCallback), 2, [_unit, _tube, _projectile]] call CBA_fnc_addPerFrameHandler;
+    [{
+        EXPLODE_2_PVT(_this,_params,_pfhId);
+        EXPLODE_3_PVT(_params,_unit,_tube,_projectile);
+
+        //don't do anything until projectile is null (exploded/max range)
+        if (isNull _projectile) then {
+            //Remove PFEH:
+            [_pfhId] call cba_fnc_removePerFrameHandler;
+
+            //If (tube is dropped) OR (is dead) OR (is player) just exit
+            if (((secondaryWeapon _unit) != _tube) || {!alive _unit} || {([_unit] call EFUNC(common,isPlayer))}) exitWith {};
+
+            private ["_items", "_container"];
+            
+            _items = secondaryWeaponItems _unit; 
+            _container = createVehicle ["GroundWeaponHolder", position _unit, [], 0, "CAN_COLLIDE"];
+            _container setPosAsl (getPosAsl _unit);
+            _container addWeaponCargoGlobal [_tube, 1];
+            {
+                if (_x != "") then {_container addItemCargoGlobal [_x, 1];};
+            } forEach _items;
+            _unit removeWeaponGlobal _tube;
+        };
+    }, 1, [_unit, _replacementTube, _projectile]] call CBA_fnc_addPerFrameHandler;
 };
