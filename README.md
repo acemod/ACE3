@@ -4,11 +4,11 @@
 2. Install Python 2.7.9 https://www.python.org/downloads/windows/
 3. Install Ruby Devkit: http://jekyll-windows.juthilo.com/1-ruby-and-devkit/#install-the-ruby-devkit
 4. Install Python Pygments: http://jekyll-windows.juthilo.com/3-syntax-highlighting/#install-python-base-of-pygments
-5. Install bundler gem: `gem install bundler`
-6. Open a CLI and `cd` to the directory
+5. Install bundler gem: Open a CLI and run `gem install bundler`
+6. `cd` to the repo directory
 7. Execute `bundle install`
 
-**To run Jekyll execute:**
+**To run Jekyll:**
 
 ```powershell
 bundle exec jekyll serve --baseUrl="/ACE3" --force_polling
