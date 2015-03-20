@@ -183,8 +183,7 @@ if (_selection == "" and
     _damageReturn < 1 and
     !(_unit getVariable [QGVAR(isUnconscious), False]
 )) then {
-    // random chance to kill AI instead of knocking them out
-    if (_unit getVariable [QGVAR(allowUnconscious), ([_unit] call EFUNC(common,isPlayer)) or random 1 > 0.5]) then {
+    if (_unit getVariable [QGVAR(allowUnconscious), ([_unit] call EFUNC(common,isPlayer)) or random 1 > 0.3]) then {
         [_unit, true] call FUNC(setUnconscious);
     } else {
         _damageReturn = 1;

@@ -351,7 +351,7 @@ class CfgVehicles {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
 
-                class Bandage_Head {
+                class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitHead";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(canTreat));
@@ -414,7 +414,8 @@ class CfgVehicles {
                     priority = 2;
                     hotkey = "M";
                     enableInside = 1;
-                    class Bandage_Torso {
+
+                    class Bandage {
                         displayName = "$STR_ACE_Medical_Bandage_HitBody";
                         distance = 2.0;
                         condition = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(canTreat));
@@ -487,7 +488,7 @@ class CfgVehicles {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 2)] call DFUNC(displayPatientInformation));
 
-                class Bandage_LeftArm {
+                class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitLeftArm";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call DFUNC(canTreat));
@@ -608,7 +609,7 @@ class CfgVehicles {
             class ACE_ArmRight {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 3)] call DFUNC(displayPatientInformation));
-                class Bandage_RightArm {
+                class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitRightArm";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreat));
@@ -730,7 +731,7 @@ class CfgVehicles {
             class ACE_LegLeft {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 4)] call DFUNC(displayPatientInformation));
-                class Bandage_LeftLeg {
+                class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitLeftLeg";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(canTreat));
@@ -842,7 +843,7 @@ class CfgVehicles {
             class ACE_LegRight {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
-                class Bandage_RightLeg {
+                class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitRightLeg";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(canTreat));

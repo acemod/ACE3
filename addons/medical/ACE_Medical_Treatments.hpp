@@ -31,12 +31,12 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_morphine));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
-        class Epipen: Bandage {
+        class Epinephrine: Bandage {
             displayName = "$STR_ACE_Medical_Inject_Epinephrine";
             displayNameProgress = "$STR_ACE_Medical_Injecting_Epinephrine";
             requiredMedic = 1;
             treatmentTime = 3;
-            items[] = {QGVAR(epipen)};
+            items[] = {QGVAR(epinephrine)};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_epipen));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
