@@ -149,7 +149,7 @@ if (_legdamage >= LEGDAMAGETRESHOLD1) then {
 } else {
     if (_unit getHitPointDamage "HitLegs" != 0) then {_unit setHitPointDamage ["HitLegs", 0]};
 };
-// @ŧodo: force prone for completely fucked up legs.
+// @todo: force prone for completely fucked up legs.
 
 
 // Arm Damage
