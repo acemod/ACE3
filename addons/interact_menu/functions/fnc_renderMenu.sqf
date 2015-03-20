@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_menuInSelectedPath", "_localPath", "_path", "_menuDepth", "_currentRenderDepth", "_x", "_offset", "_newPos", "_forEachIndex"];
+private ["_menuInSelectedPath", "_path", "_menuDepth", "_currentRenderDepth", "_x", "_offset", "_newPos", "_forEachIndex"];
 
 EXPLODE_4_PVT(_this,_parentPath,_action,_pos,_angles);
 EXPLODE_3_PVT(_action,_actionData,_activeChildren,_actionObject);
@@ -24,9 +24,8 @@ EXPLODE_2_PVT(_angles,_centerAngle,_maxAngleSpan);
 _menuDepth = (count GVAR(menuDepthPath));
 
 // Store path to action
-_localPath = _actionData select 7;
 _path = +_parentPath;
-_path pushBack [_localPath select ((count _localPath) - 1), _actionObject];
+_path pushBack [_actionData select 0,_actionObject];
 
 // Check if the menu is on the selected path
 _menuInSelectedPath = true;
@@ -49,7 +48,7 @@ if(!_menuInSelectedPath) then { //_menuDepth > 0 &&
         _color = format ["#%1FFFFFF", [255 * 0.75] call EFUNC(common,toHex)];
     };
 };
-[_actionData select 0, _color, _pos, 1, 1, 0, _actionData select 1, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
+[_actionData select 1, _color, _pos, 1, 1, 0, _actionData select 2, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
 
 // Add the action to current options
 GVAR(currentOptions) pushBack [_this, _pos, _path];

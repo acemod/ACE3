@@ -41,17 +41,17 @@ if (GVAR(keyDown)) then {
 
             // Iterate through object actions, find base level actions and render them if appropiate
             _actionsVarName = format [QGVAR(Act_%1), typeOf _target];
-            GVAR(objectActions) = _target getVariable [QGVAR(actions), []];
+            GVAR(objectActionList) = _target getVariable [QGVAR(actions), []];
             {
-                _action = _x;
                 // Only render them directly if they are base level actions
-                if (count ((_action select 0) select 7) == 1) then {
+                if (count (_x select 1) == 0) then {
                     // Try to render the menu
+                    _action = [_x,[]];
                     if ([_target, _action] call FUNC(renderBaseMenu)) then {
                         _numInteractions = _numInteractions + 1;
                     };
                 };
-            } forEach GVAR(objectActions);
+            } forEach GVAR(objectActionList);
 
             // Iterate through base level class actions and render them if appropiate
             _classActions = missionNamespace getVariable [_actionsVarName, []];
@@ -80,7 +80,7 @@ if (GVAR(keyDown)) then {
 
         // Iterate through object actions, find base level actions and render them if appropiate
         _actionsVarName = format [QGVAR(SelfAct_%1), typeOf _target];
-        GVAR(objectActions) = _target getVariable [QGVAR(selfActions), []];
+        GVAR(objectActionList) = _target getVariable [QGVAR(selfActions), []];
         /*
         {
             _action = _x;
@@ -88,7 +88,7 @@ if (GVAR(keyDown)) then {
             if (count (_action select 7) == 1) then {
                 [_target, _action, 0, [180, 360]] call FUNC(renderMenu);
             };
-        } forEach GVAR(objectActions);
+        } forEach GVAR(objectActionList);
         */
 
         // Iterate through base level class actions and render them if appropiate
@@ -171,12 +171,12 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
 
             // Execute the current action if it's run on hover
             private "_runOnHover";
-            _runOnHover = ((GVAR(selectedAction) select 0) select 6) select 3;
+            _runOnHover = ((GVAR(selectedAction) select 0) select 9) select 3;
             if (_runOnHover) then {
                 this = GVAR(selectedTarget);
                 _player = ACE_Player;
                 _target = GVAR(selectedTarget);
-                [GVAR(selectedTarget), ACE_player] call GVAR(selectedStatement);
+                [GVAR(selectedTarget), ACE_player, (GVAR(selectedAction) select 0) select 6] call GVAR(selectedStatement);
             };
         };
     };

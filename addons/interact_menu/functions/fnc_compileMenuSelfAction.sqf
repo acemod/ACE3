@@ -27,8 +27,8 @@ if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
 private "_recurseFnc";
 _recurseFnc = {
     private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_selection", "_condition", "_showDisabled",
-            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_fullPath", "_insertChildren"];
-    EXPLODE_2_PVT(_this,_actionsCfg,_parentPath);
+            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren"];
+    EXPLODE_1_PVT(_this,_actionsCfg);
     _actions = [];
 
     for "_i" from 0 to (count _actionsCfg) - 1 do {
@@ -52,24 +52,21 @@ _recurseFnc = {
             _canCollapse = (getNumber (_entryCfg >> "canCollapse")) > 0;
             _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
 
-            _fullPath = (+ _parentPath);
-            _fullPath pushBack (configName _entryCfg);
-
             _condition = compile _condition;
-            _children = [_entryCfg, _fullPath] call _recurseFnc;
+            _children = [_entryCfg] call _recurseFnc;
 
             _entry = [
                         [
+                            configName _entryCfg,
                             _displayName,
                             _icon,
-                            [0,0,0],
                             _statement,
                             _condition,
-                            10, //distace
-                            [_showDisabled,_enableInside,_canCollapse,_runOnHover],
-                            _fullPath,
                             _insertChildren,
-                            []
+                            [],
+                            [0,0,0],
+                            10, //distace
+                            [_showDisabled,_enableInside,_canCollapse,_runOnHover]
                         ],
                         _children
                     ];
@@ -86,18 +83,18 @@ _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_SelfActions";
 _actions = [
     [
         [
+            "ACE_SelfActions",
             "Self Actions",
             "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
-            "Spine3",
-            { true },
-            { true },
-            10,
-            [false,true,false],
-            ["ACE_SelfActions"],
             {},
-            []
+            { true },
+            {},
+            [],
+            "Spine3",
+            10,
+            [false,true,false]
         ],
-        [_actionsCfg, ["ACE_SelfActions"]] call _recurseFnc
+        [_actionsCfg] call _recurseFnc
     ]
 ];
 
