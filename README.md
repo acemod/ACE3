@@ -16,7 +16,7 @@ bundle exec jekyll serve --baseUrl="/ACE3" --force_polling
 
 ### How to update the compiled Javascript and CSS files
 
-1. Install Node.js
+1. Install Node.js: https://nodejs.org/download/
 2. Open a CLI and `cd` to the `src` directory
 3. Run `npm install`
 4. Run `grunt`
