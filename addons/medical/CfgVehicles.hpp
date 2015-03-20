@@ -346,7 +346,6 @@ class CfgVehicles {
         };
 
         class ACE_Actions {
-            // @todo morphine, epi, bloodbag actions for basic
             class ACE_Head {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
