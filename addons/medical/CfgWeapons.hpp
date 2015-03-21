@@ -138,14 +138,14 @@ class CfgWeapons {
             type = 201;
         };
     };
-    class ACE_plasmaIV_500: ACE_plasmaIV) {
+    class ACE_plasmaIV_500: ACE_plasmaIV {
         displayName = $STR_ACE_MEDICAL_PLASMA_IV_500;
         class ItemInfo: InventoryItem_Base_F {
             mass = 5;
             type = 201;
         };
     };
-    class ACE_plasmaIV_250: ACE_plasmaIV) {
+    class ACE_plasmaIV_250: ACE_plasmaIV {
         displayName = $STR_ACE_MEDICAL_PLASMA_IV_250;
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
@@ -166,14 +166,14 @@ class CfgWeapons {
             type = 201;
         };
     };
-    class ACE_bloodIV_500: ACE_bloodIV) {
+    class ACE_bloodIV_500: ACE_bloodIV {
         displayName = $STR_ACE_MEDICAL_BLOOD_IV_500;
         class ItemInfo: InventoryItem_Base_F {
             mass = 5;
             type = 201;
         };
     };
-    class ACE_bloodIV_250: ACE_bloodIV) {
+    class ACE_bloodIV_250: ACE_bloodIV {
         displayName = $STR_ACE_MEDICAL_BLOOD_IV_250;
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
@@ -193,14 +193,14 @@ class CfgWeapons {
             type = 201;
         };
     };
-    class ACE_salineIV_500: ACE_salineIV) {
+    class ACE_salineIV_500: ACE_salineIV {
         displayName = $STR_ACE_MEDICAL_SALINE_IV_500;
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
             type = 201;
         };
     };
-    class ACE_salineIV_250: ACE_salineIV) {
+    class ACE_salineIV_250: ACE_salineIV {
         displayName = $STR_ACE_MEDICAL_SALINE_IV_250;
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
@@ -243,7 +243,7 @@ class CfgWeapons {
         picture = QUOTE(PATHTOF(ui\items\surgicalKit.paa));
         descriptionShort = $STR_ACE_MEDICAL_SURGICALKIT_DESC_SHORT;
         descriptionUse = $STR_ACE_MEDICAL_SURGICALKIT_DESC_USE;
-         class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: InventoryItem_Base_F {
             mass = 5;
             type = 201;
         };
