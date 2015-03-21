@@ -409,7 +409,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'CheckResponse')] call DFUNC(treatment));
                 };
             };
-            class ACE_MainActions {
+            class ACE_Torso {
                 class Medical {
                     displayName = "Medical";
                     distance = 5.0;
