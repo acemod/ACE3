@@ -1,31 +1,27 @@
 /*
-Name: ACE_VehicleLock_fnc_hasKeyForVehicle
-
-Author: Pabst Mirror
-
-Description:
-  Returns if user has a valid key for the vehicle
-
-Parameters:
-  0: OBJECT - unit
-  1: OBJECT - vehicle
-
-Returns:
-  BOOL - unit has key for vehicle
-
-Example:
-  [bob, car] call ACE_VehicleLock_fnc_hasKeyForVehicle;
-*/
-
+ * Author: PabstMirror
+ * Returns if user has a valid key for the vehicle
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Vehicle <OBJECT>
+ *
+ * Return Value:
+ * unit has key for vehicle <BOOL>
+ *
+ * Example:
+ * [bob, car] call ACE_VehicleLock_fnc_hasKeyForVehicle;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_unit","_veh","_returnValue","_sideKeyName","_customKeys"];
+private ["_returnValue","_sideKeyName","_customKeys"];
 
-_unit = [_this, 0, objNull, [objNull]] call bis_fnc_param;
-_veh =   [_this, 1, objNull, [objNull]] call bis_fnc_param;
+PARAMS_2(_unit,_veh);
 
-if (isNull _unit) exitWith {["ACE_VehicleLock_fnc_hasKeyForVehicle: null unit"] call BIS_fnc_error; false};
-if (isNull _veh)  exitWith {["ACE_VehicleLock_fnc_hasKeyForVehicle: null vehicle"] call BIS_fnc_error; false};
+if (isNull _unit) exitWith {ERROR("null unit"); false};
+if (isNull _veh) exitWith {ERROR("null vehicle"); false};
 
 _returnValue = false;
 
@@ -39,7 +35,7 @@ if (_sideKeyName in (items _unit)) then {_returnValue = true};
 //Check custom keys
 _customKeys = _veh getVariable [QGVAR(customKeys), []];
 {
-  if (_x in (magazinesDetail _unit)) then {_returnValue = true;};
+    if (_x in (magazinesDetail _unit)) then {_returnValue = true;};
 } forEach _customKeys;
 
 _returnValue
