@@ -1,7 +1,7 @@
 ace_disposable
 ==============
 
-Makes the NLAW a disposable one-way weapon.
+Makes the NLAW a disposable one-shot weapon.
 
 
 ## Maintainers

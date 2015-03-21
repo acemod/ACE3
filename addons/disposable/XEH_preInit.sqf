@@ -2,7 +2,6 @@
 
 ADDON = false;
 
-PREP(aiDropWeaponCallback);
 PREP(replaceATWeapon);
 PREP(takeLoadedATWeapon);
 PREP(updateInventoryDisplay);
