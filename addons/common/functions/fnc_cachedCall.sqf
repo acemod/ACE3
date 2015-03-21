@@ -1,6 +1,6 @@
 /*
  * Author: CAA-Picard and Jaynus
- * Returns the result of the function and caches it up to a given time
+ * Returns the result of the function and caches it up to a given time or event
  *
  * Arguments:
  * 0: Parameters <ARRAY>
@@ -37,7 +37,9 @@ if (((_namespace getVariable [_uid, [-99999]]) select 0) < diag_tickTime) then {
             [_event, {
                 private ["_varName","_cacheList"];
                 // _eventName is defined on the function that calls the event
-                diag_log text format ["ACE: Clear cached variables on event: %1", _eventName];
+                #ifdef DEBUG_MODE_FULL
+                    diag_log text format ["ACE: Clear cached variables on event: %1", _eventName];
+                #endif
                 // Get the list of caches to clear
                 _varName = format [QGVAR(clearCache_%1),_eventName];
                 _cacheList = missionNamespace getVariable [_varName, []];
