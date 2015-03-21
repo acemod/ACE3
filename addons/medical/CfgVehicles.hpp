@@ -353,7 +353,7 @@ class CfgVehicles {
                 class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitHead";
                     distance = 2.0;
-                    condition = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
@@ -364,7 +364,7 @@ class CfgVehicles {
                 class FieldDressing {
                     displayName = "Field Dressing";
                     distance = 5.0;
-                    condition = QUOTE([ARR_4(_player, _target, 'head', 'FieldDressing')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'head', 'FieldDressing')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'FieldDressing')] call DFUNC(treatment));
                     showDisabled = 0;
                     priority = 2;
@@ -373,32 +373,32 @@ class CfgVehicles {
                 };
                 class PackingBandage: fieldDressing {
                     displayName = "Packing Bandage";
-                    condition = QUOTE([ARR_4(_player, _target, 'head', 'PackingBandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'head', 'PackingBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'PackingBandage')] call DFUNC(treatment));
                 };
                 class ElasticBandage: fieldDressing {
                     displayName = "Elastic Bandage";
-                    condition = QUOTE([ARR_4(_player, _target, 'head', 'ElasticBandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'head', 'ElasticBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'ElasticBandage')] call DFUNC(treatment));
                 };
                 class QuikClot: fieldDressing {
                     displayName = "QuikClot";
-                    condition = QUOTE([ARR_4(_player, _target, 'head', 'QuikClot')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'head', 'QuikClot')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'QuikClot')] call DFUNC(treatment));
                 };
                 class CheckPulse: fieldDressing {
                     displayName = "Check Pulse";
-                    condition = QUOTE([ARR_4(_player, _target, 'head', 'CheckPulse')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'head', 'CheckPulse')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'CheckPulse')] call DFUNC(treatment));
                 };
                 class CheckBloodPressure: CheckPulse {
                     displayName = "Check Blood Pressure";
-                    condition = QUOTE([ARR_4(_player, _target, 'head', 'CheckBloodPressure')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'head', 'CheckBloodPressure')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'CheckBloodPressure')] call DFUNC(treatment));
                 };
                 class CheckResponse: CheckPulse {
                     displayName = "Check Response";
-                    condition = QUOTE([ARR_4(_player, _target, 'head', 'CheckResponse')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'head', 'CheckResponse')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'CheckResponse')] call DFUNC(treatment));
                 };
             };
@@ -417,7 +417,7 @@ class CfgVehicles {
                     class Bandage {
                         displayName = "$STR_ACE_Medical_Bandage_HitBody";
                         distance = 2.0;
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call EFUNC(canTreatCached));
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(canTreatCached));
                         statement = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(treatment));
                         showDisabled = 1;
                         priority = 2;
@@ -429,7 +429,7 @@ class CfgVehicles {
                     class FieldDressing {
                         displayName = "Field Dressing";
                         distance = 5.0;
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'FieldDressing')] call EFUNC(canTreatCached));
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'FieldDressing')] call DFUNC(canTreatCached));
                         statement = QUOTE([ARR_4(_player, _target, 'body', 'FieldDressing')] call DFUNC(treatment));
                         showDisabled = 0;
                         priority = 2;
@@ -438,47 +438,32 @@ class CfgVehicles {
                     };
                     class PackingBandage: fieldDressing {
                         displayName = "Packing Bandage";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call EFUNC(canTreatCached));
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(canTreatCached));
                         statement = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(treatment));
                     };
                     class ElasticBandage: fieldDressing {
                         displayName = "Elastic Bandage";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'ElasticBandage')] call EFUNC(canTreatCached));
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'ElasticBandage')] call DFUNC(canTreatCached));
                         statement = QUOTE([ARR_4(_player, _target, 'body', 'ElasticBandage')] call DFUNC(treatment));
                     };
                     class QuikClot: fieldDressing {
                         displayName = "QuikClot";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'QuikClot')] call EFUNC(canTreatCached));
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'QuikClot')] call DFUNC(canTreatCached));
                         statement = QUOTE([ARR_4(_player, _target, 'body', 'QuikClot')] call DFUNC(treatment));
-                    };
-                    class Morphine: fieldDressing {
-                        displayName = "$STR_ACE_Medical_Inject_Morphine";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'Morphine')] call EFUNC(canTreatCached));
-                        statement = QUOTE([ARR_4(_player, _target, 'body', 'Morphine')] call DFUNC(treatment));
-                    };
-                    class Atropine: Morphine {
-                        displayName = "Atropine";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'Atropine')] call EFUNC(canTreatCached));
-                        statement = QUOTE([ARR_4(_player, _target, 'body', 'Atropine')] call DFUNC(treatment));
-                    };
-                    class Epinephrine: Morphine {
-                        displayName = "$STR_ACE_Medical_Inject_Epinephrine";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'Epinephrine')] call EFUNC(canTreatCached));
-                        statement = QUOTE([ARR_4(_player, _target, 'body', 'Epinephrine')] call DFUNC(treatment));
                     };
                     class SurgicalKit: fieldDressing {
                         displayName = "Use Surgical Kit";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'SurgicalKit')] call EFUNC(canTreatCached));
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'SurgicalKit')] call DFUNC(canTreatCached));
                         statement = QUOTE([ARR_4(_player, _target, 'body', 'SurgicalKit')] call DFUNC(treatment));
                     };
                     class PersonalAidKit: fieldDressing {
                         displayName = "Use Personal Aid Kit";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call EFUNC(canTreatCached));
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(canTreatCached));
                         statement = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(treatment));
                     };
                     class CPR: fieldDressing {
                         displayName = "CPR";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'CPR')] call EFUNC(canTreatCached));
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'CPR')] call DFUNC(canTreatCached));
                         statement = QUOTE([ARR_4(_player, _target, 'body', 'CPR')] call DFUNC(treatment));
                     };
                 };
@@ -490,7 +475,7 @@ class CfgVehicles {
                 class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitLeftArm";
                     distance = 2.0;
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
@@ -502,7 +487,7 @@ class CfgVehicles {
                 class FieldDressing {
                     displayName = "Field Dressing";
                     distance = 5.0;
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'FieldDressing')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'FieldDressing')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'FieldDressing')] call DFUNC(treatment));
                     showDisabled = 0;
                     priority = 2;
@@ -511,97 +496,97 @@ class CfgVehicles {
                 };
                 class PackingBandage: fieldDressing {
                     displayName = "Packing Bandage";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'PackingBandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'PackingBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'PackingBandage')] call DFUNC(treatment));
                 };
                 class ElasticBandage: fieldDressing {
                     displayName = "Elastic Bandage";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'ElasticBandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'ElasticBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'ElasticBandage')] call DFUNC(treatment));
                 };
                 class QuikClot: fieldDressing {
                     displayName = "QuikClot";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'QuikClot')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'QuikClot')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'QuikClot')] call DFUNC(treatment));
                 };
                 class Tourniquet: fieldDressing {
                     displayName = "Tourniquet";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Tourniquet')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Tourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Tourniquet')] call DFUNC(treatment));
                 };
                 class Morphine: fieldDressing {
                     displayName = "$STR_ACE_Medical_Inject_Morphine";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Morphine')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Morphine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Morphine')] call DFUNC(treatment));
                 };
                 class Atropine: Morphine {
                     displayName = "Atropine";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Atropine')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Atropine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Atropine')] call DFUNC(treatment));
                 };
                 class Epinephrine: Morphine {
                     displayName = "$STR_ACE_Medical_Inject_Epinephrine";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Epinephrine')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Epinephrine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Epinephrine')] call DFUNC(treatment));
                 };
                 class BloodIV: fieldDressing {
                     displayName = "Give Blood IV (1000ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV')] call DFUNC(treatment));
                 };
                 class BloodIV_500: BloodIV {
                     displayName = "Give Blood IV (500ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV_500')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV_500')] call DFUNC(treatment));
                 };
                 class BloodIV_250: BloodIV {
                     displayName = "Give Blood IV (250ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV_250')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV_250')] call DFUNC(treatment));
                 };
                 class PlasmaIV: BloodIV {
                     displayName = "Give Blood IV (1000ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV')] call DFUNC(treatment));
                 };
                 class PlasmaIV_500: PlasmaIV {
                     displayName = "Give Blood IV (500ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV_500')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV_500')] call DFUNC(treatment));
                 };
                 class PlasmaIV_250: PlasmaIV {
                     displayName = "Give Blood IV (250ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV_250')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV_250')] call DFUNC(treatment));
                 };
                 class SalineIV: BloodIV {
                     displayName = "Give Blood IV (1000ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV')] call DFUNC(treatment));
                 };
                 class SalineIV_500: SalineIV {
                     displayName = "Give Blood IV (500ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV_500')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV_500')] call DFUNC(treatment));
                 };
                 class SalineIV_250: SalineIV {
                     displayName = "Give Blood IV (250ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV_250')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV_250')] call DFUNC(treatment));
                 };
                 class CheckPulse: fieldDressing {
                     displayName = "Check Pulse";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckPulse')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckPulse')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckPulse')] call DFUNC(treatment));
                 };
                 class CheckBloodPressure: CheckPulse {
                     displayName = "Check Blood Pressure";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckBloodPressure')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckBloodPressure')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckBloodPressure')] call DFUNC(treatment));
                 };
                 class RemoveTourniquet: Tourniquet {
                     displayName = "Remove Tourniquet";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'RemoveTourniquet')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'RemoveTourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'RemoveTourniquet')] call DFUNC(treatment));
                 };
             };
@@ -611,7 +596,7 @@ class CfgVehicles {
                 class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitRightArm";
                     distance = 2.0;
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
@@ -623,7 +608,7 @@ class CfgVehicles {
                 class FieldDressing {
                     displayName = "Field Dressing";
                     distance = 5.0;
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'FieldDressing')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'FieldDressing')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'FieldDressing')] call DFUNC(treatment));
                     showDisabled = 0;
                     priority = 2;
@@ -632,97 +617,97 @@ class CfgVehicles {
                 };
                 class PackingBandage: fieldDressing {
                     displayName = "Packing Bandage";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PackingBandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PackingBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'PackingBandage')] call DFUNC(treatment));
                 };
                 class ElasticBandage: fieldDressing {
                     displayName = "Elastic Bandage";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'ElasticBandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'ElasticBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'ElasticBandage')] call DFUNC(treatment));
                 };
                 class QuikClot: fieldDressing {
                     displayName = "QuikClot";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'QuikClot')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'QuikClot')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'QuikClot')] call DFUNC(treatment));
                 };
                 class Tourniquet: fieldDressing {
                     displayName = "Tourniquet";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Tourniquet')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Tourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Tourniquet')] call DFUNC(treatment));
                 };
                 class Morphine: fieldDressing {
                     displayName = "$STR_ACE_Medical_Inject_Morphine";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call DFUNC(treatment));
                 };
                 class Atropine: Morphine {
                     displayName = "Atropine";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Atropine')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Atropine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Atropine')] call DFUNC(treatment));
                 };
                 class Epinephrine: Morphine {
                     displayName = "$STR_ACE_Medical_Inject_Epinephrine";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Epinephrine')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Epinephrine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Epinephrine')] call DFUNC(treatment));
                 };
                 class BloodIV: fieldDressing {
                     displayName = "Give Blood IV (1000ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(treatment));
                 };
                 class BloodIV_500: BloodIV {
                     displayName = "Give Blood IV (500ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV_500')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV_500')] call DFUNC(treatment));
                 };
                 class BloodIV_250: BloodIV {
                     displayName = "Give Blood IV (250ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV_250')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV_250')] call DFUNC(treatment));
                 };
                 class PlasmaIV: BloodIV {
                     displayName = "Give Blood IV (1000ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(treatment));
                 };
                 class PlasmaIV_500: PlasmaIV {
                     displayName = "Give Blood IV (500ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV_500')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV_500')] call DFUNC(treatment));
                 };
                 class PlasmaIV_250: PlasmaIV {
                     displayName = "Give Blood IV (250ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV_250')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV_250')] call DFUNC(treatment));
                 };
                 class SalineIV: BloodIV {
                     displayName = "Give Blood IV (1000ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV')] call DFUNC(treatment));
                 };
                 class SalineIV_500: SalineIV {
                     displayName = "Give Blood IV (500ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV_500')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV_500')] call DFUNC(treatment));
                 };
                 class SalineIV_250: SalineIV {
                     displayName = "Give Blood IV (250ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV_250')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV_250')] call DFUNC(treatment));
                 };
                 class CheckPulse: fieldDressing {
                     displayName = "Check Pulse";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckPulse')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckPulse')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckPulse')] call DFUNC(treatment));
                 };
                 class CheckBloodPressure: CheckPulse {
                     displayName = "Check Blood Pressure";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckBloodPressure')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckBloodPressure')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckBloodPressure')] call DFUNC(treatment));
                 };
                 class RemoveTourniquet: Tourniquet {
                     displayName = "Remove Tourniquet";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'RemoveTourniquet')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'RemoveTourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'RemoveTourniquet')] call DFUNC(treatment));
                 };
 
@@ -733,7 +718,7 @@ class CfgVehicles {
                 class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitLeftLeg";
                     distance = 2.0;
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
@@ -746,7 +731,7 @@ class CfgVehicles {
                 class FieldDressing {
                     displayName = "Field Dressing";
                     distance = 5.0;
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'FieldDressing')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'FieldDressing')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'FieldDressing')] call DFUNC(treatment));
                     showDisabled = 0;
                     priority = 2;
@@ -755,87 +740,87 @@ class CfgVehicles {
                 };
                 class PackingBandage: fieldDressing {
                     displayName = "Packing Bandage";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PackingBandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PackingBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'PackingBandage')] call DFUNC(treatment));
                 };
                 class ElasticBandage: fieldDressing {
                     displayName = "Elastic Bandage";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'ElasticBandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'ElasticBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'ElasticBandage')] call DFUNC(treatment));
                 };
                 class QuikClot: fieldDressing {
                     displayName = "QuikClot";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'QuikClot')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'QuikClot')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'QuikClot')] call DFUNC(treatment));
                 };
                 class Tourniquet: fieldDressing {
                     displayName = "Tourniquet";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Tourniquet')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Tourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Tourniquet')] call DFUNC(treatment));
                 };
                 class Morphine: fieldDressing {
                     displayName = "$STR_ACE_Medical_Inject_Morphine";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(treatment));
                 };
                 class Atropine: Morphine {
                     displayName = "Atropine";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Atropine')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Atropine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Atropine')] call DFUNC(treatment));
                 };
                 class Epinephrine: Morphine {
                     displayName = "$STR_ACE_Medical_Inject_Epinephrine";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Epinephrine')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Epinephrine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Epinephrine')] call DFUNC(treatment));
                 };
                 class BloodIV: fieldDressing {
                     displayName = "Give Blood IV (1000ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(treatment));
                 };
                 class BloodIV_500: BloodIV {
                     displayName = "Give Blood IV (500ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV_500')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV_500')] call DFUNC(treatment));
                 };
                 class BloodIV_250: BloodIV {
                     displayName = "Give Blood IV (250ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV_250')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV_250')] call DFUNC(treatment));
                 };
                 class PlasmaIV: BloodIV {
                     displayName = "Give Blood IV (1000ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(treatment));
                 };
                 class PlasmaIV_500: PlasmaIV {
                     displayName = "Give Blood IV (500ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV_500')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV_500')] call DFUNC(treatment));
                 };
                 class PlasmaIV_250: PlasmaIV {
                     displayName = "Give Blood IV (250ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV_250')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV_250')] call DFUNC(treatment));
                 };
                 class SalineIV: BloodIV {
                     displayName = "Give Blood IV (1000ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV')] call DFUNC(treatment));
                 };
                 class SalineIV_500: SalineIV {
                     displayName = "Give Blood IV (500ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_500')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_500')] call DFUNC(treatment));
                 };
                 class SalineIV_250: SalineIV {
                     displayName = "Give Blood IV (250ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_250')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_250')] call DFUNC(treatment));
                 };
                 class RemoveTourniquet: Tourniquet {
                     displayName = "Remove Tourniquet";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'RemoveTourniquet')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'RemoveTourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'RemoveTourniquet')] call DFUNC(treatment));
                 };
             };
@@ -845,7 +830,7 @@ class CfgVehicles {
                 class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitRightLeg";
                     distance = 2.0;
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
@@ -858,7 +843,7 @@ class CfgVehicles {
                 class FieldDressing {
                     displayName = "Field Dressing";
                     distance = 5.0;
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'FieldDressing')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'FieldDressing')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'FieldDressing')] call DFUNC(treatment));
                     showDisabled = 0;
                     priority = 2;
@@ -867,87 +852,87 @@ class CfgVehicles {
                 };
                 class PackingBandage: fieldDressing {
                     displayName = "Packing Bandage";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PackingBandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PackingBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'PackingBandage')] call DFUNC(treatment));
                 };
                 class ElasticBandage: fieldDressing {
                     displayName = "Elastic Bandage";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'ElasticBandage')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'ElasticBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'ElasticBandage')] call DFUNC(treatment));
                 };
                 class QuikClot: fieldDressing {
                     displayName = "QuikClot";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'QuikClot')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'QuikClot')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'QuikClot')] call DFUNC(treatment));
                 };
                 class Tourniquet: fieldDressing {
                     displayName = "Tourniquet";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Tourniquet')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Tourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Tourniquet')] call DFUNC(treatment));
                 };
                 class Morphine: fieldDressing {
                     displayName = "$STR_ACE_Medical_Inject_Morphine";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Morphine')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Morphine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Morphine')] call DFUNC(treatment));
                 };
                 class Atropine: Morphine {
                     displayName = "Atropine";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Atropine')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Atropine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Atropine')] call DFUNC(treatment));
                 };
                 class Epinephrine: Morphine {
                     displayName = "$STR_ACE_Medical_Inject_Epinephrine";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Epinephrine')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Epinephrine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Epinephrine')] call DFUNC(treatment));
                 };
                 class BloodIV: fieldDressing {
                     displayName = "Give Blood IV (1000ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(treatment));
                 };
                 class BloodIV_500: BloodIV {
                     displayName = "Give Blood IV (500ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV_500')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV_500')] call DFUNC(treatment));
                 };
                 class BloodIV_250: BloodIV {
                     displayName = "Give Blood IV (250ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV_250')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV_250')] call DFUNC(treatment));
                 };
                 class PlasmaIV: BloodIV {
                     displayName = "Give Blood IV (1000ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(treatment));
                 };
                 class PlasmaIV_500: PlasmaIV {
                     displayName = "Give Blood IV (500ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV_500')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV_500')] call DFUNC(treatment));
                 };
                 class PlasmaIV_250: PlasmaIV {
                     displayName = "Give Blood IV (250ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV_250')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV_250')] call DFUNC(treatment));
                 };
                 class SalineIV: BloodIV {
                     displayName = "Give Blood IV (1000ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV')] call DFUNC(treatment));
                 };
                 class SalineIV_500: SalineIV {
                     displayName = "Give Blood IV (500ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_500')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_500')] call DFUNC(treatment));
                 };
                 class SalineIV_250: SalineIV {
                     displayName = "Give Blood IV (250ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_250')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_250')] call DFUNC(treatment));
                 };
                 class RemoveTourniquet: Tourniquet {
                     displayName = "Remove Tourniquet";
-                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'RemoveTourniquet')] call EFUNC(canTreatCached));
+                    condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'RemoveTourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'RemoveTourniquet')] call DFUNC(treatment));
                 };
             };
