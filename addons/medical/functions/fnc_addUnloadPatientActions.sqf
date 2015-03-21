@@ -16,16 +16,12 @@
 
 EXPLODE_3_PVT(_this,_vehicle,_player,_parameters);
 
-systemChat format ["Generating for %1 %2", _vehicle, _player];
-
 private ["_actions"];
 _actions = [];
 
 {
     _unit = _x;
-    systemChat str(_unit);
     if (_unit != _player && {(alive _unit) && {_unit getVariable ["ACE_isUnconscious", false]}}) then {
-        systemChat "Entered";
         _actions pushBack
             [
                 [
