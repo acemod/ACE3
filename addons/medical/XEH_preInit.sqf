@@ -18,6 +18,7 @@ PREP(addToTriageCard);
 PREP(addUnconsciousCondition);
 PREP(canAccessMedicalEquipment);
 PREP(canTreat);
+PREP(canTreatCached);
 PREP(determineIfFatal);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
