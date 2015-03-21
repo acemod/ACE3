@@ -65,7 +65,18 @@ _activeActionTree = [
                         DFUNC(collectActiveActionTree),
                         _object, _uid, 0.2
                     ] call EFUNC(common,cachedCall);
-
+/*
+diag_log "Printing: _activeActionTree";
+_fnc_print = {
+    EXPLODE_2_PVT(_this,_level,_node);
+    EXPLODE_3_PVT(_node,_actionData,_children,_object);
+    diag_log text format ["Level %1 -> %2 on %3", _level, _actionData select 0, _object];
+    {
+        [_level + 1, _x] call _fnc_print;
+    } forEach _children;
+};
+[0, _activeActionTree] call _fnc_print;
+*/
 // Check if there's something left for rendering
 if (count _activeActionTree == 0) exitWith {false};
 
