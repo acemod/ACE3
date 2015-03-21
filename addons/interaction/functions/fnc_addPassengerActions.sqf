@@ -27,6 +27,6 @@ _actionTrees = missionNamespace getVariable [_varName, []];
 
 _actions = [];
 // Mount unit MainActions menu
-_actions pushBack (_actionTrees select 0);
+_actions pushBack [(_actionTrees select 0) select 0, (_actionTrees select 0) select 1, _unit];
 
 _actions

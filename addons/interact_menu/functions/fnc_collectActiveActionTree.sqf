@@ -17,7 +17,7 @@
 EXPLODE_3_PVT(_this,_object,_origAction,_parentPath);
 EXPLODE_2_PVT(_origAction,_origActionData,_origActionChildren);
 
-private ["_target","_player","_fullPath","_activeChildren","_action","_actionData","_x"];
+private ["_target","_player","_fullPath","_activeChildren","_dynamicChildren","_action","_actionData","_x"];
 
 _target = _object;
 _player = ACE_player;
@@ -27,15 +27,22 @@ if !([_target, ACE_player, _origActionData select 6] call (_origActionData selec
     []
 };
 
+_fullPath = +_parentPath;
+_fullPath pushBack (_origActionData select 0);
 _activeChildren = [];
 
 // If there's a statement to dynamically insert children then execute it
 if !({} isEqualTo (_origActionData select 5)) then {
-    _activeChildren = [_target, ACE_player, _origActionData select 6] call (_origActionData select 5);
-};
+    _dynamicChildren = [_target, ACE_player, _origActionData select 6] call (_origActionData select 5);
 
-_fullPath = +_parentPath;
-_fullPath pushBack (_origActionData select 0);
+    // Collect dynamic children class actions
+    {
+        _action = [_x select 2, _x, _fullPath] call FUNC(collectActiveActionTree);
+        if ((count _action) > 0) then {
+            _activeChildren pushBack _action;
+        };
+    } forEach _dynamicChildren;
+};
 
 // Collect children class actions
 {
