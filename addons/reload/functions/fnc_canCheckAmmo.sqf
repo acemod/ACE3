@@ -13,7 +13,7 @@
 
 EXPLODE_2_PVT(_this,_player,_target);
 
-// Return true for static weapons if they have been fired once
+// Return true for static weapons if they have been fired once, @todo 1.40 this work-around doesn't work anymore
 if (_target isKindOf "StaticWeapon") exitWith {
 	(currentMagazine _target) != ""
 };

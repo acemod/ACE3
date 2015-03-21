@@ -20,6 +20,19 @@ if (hasInterface) then {
     };
 }] call FUNC(addEventhandler);
 
+["fixCollision", DFUNC(fixCollision)] call FUNC(addEventhandler);
+["fixFloating", DFUNC(fixFloating)] call FUNC(addEventhandler);
+["fixPosition", DFUNC(fixPosition)] call FUNC(addEventhandler);
+
+["lockVehicle", {
+    _this setVariable [QGVAR(lockStatus), locked _this];
+    _this lock 2;
+}] call FUNC(addEventhandler);
+
+["unlockVehicle", {
+    _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
+}] call FUNC(addEventhandler);
+
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
     if (time > 0) exitWith {
@@ -86,6 +99,7 @@ GVAR(OldZeusDisplayIsOpen) = !(isNull findDisplay 312);
 GVAR(OldCameraView) = cameraView;
 GVAR(OldPlayerVehicle) = vehicle ACE_player;
 GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
+GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 
 // PFH to raise varios events
 [{
@@ -144,6 +158,14 @@ GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
         // Raise ACE event locally
         GVAR(OldPlayerTurret) = _newPlayerTurret;
         ["playerTurretChanged", [ACE_player, _newPlayerTurret]] call FUNC(localEvent);
+    };
+
+    // "playerWeaponChanged" event
+    _newPlayerWeapon = currentWeapon ACE_player;
+    if (_newPlayerWeapon != GVAR(OldPlayerWeapon)) then {
+        // Raise ACE event locally
+        GVAR(OldPlayerWeapon) = _newPlayerWeapon;
+        ["playerWeaponChanged", [ACE_player, _newPlayerWeapon]] call FUNC(localEvent);
     };
 
 }, 0, []] call cba_fnc_addPerFrameHandler;
