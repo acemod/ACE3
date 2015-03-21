@@ -16,17 +16,27 @@
  */
 #include "script_component.hpp"
 
+#define TEXTURES_RANKS [ \
+    "", \
+    "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa", \
+    "\A3\Ui_f\data\GUI\Cfg\Ranks\corporal_gs.paa", \
+    "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa", \
+    "\A3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa", \
+    "\A3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa", \
+    "\A3\Ui_f\data\GUI\Cfg\Ranks\major_gs.paa", \
+    "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa" \
+    ]
+
 PARAMS_2(_caller,_target);
 
 //Sanity Checks
 if (_caller != ACE_player) exitwith {ERROR("Player isn't caller?");};
-if (!([_target] call FUNC(canDisarm))) exitWith {ERROR("Unit Cannot Be Disarmed");};
-if (!([] call EGVAR(common,canInteract))) exitWith {ERROR("Player cannot Interact");};
-
-if (dialog) then {closeDialog 0;};
-createDialog QGVAR(remoteInventory);
+if (!([_player, _target] call FUNC(canPlayerDisarmUnit))) exitWith {ERROR("Can't Disarm Unit");};
+if (dialog) then {ERROR("Dialog open when trying to open disarm dialog"); closeDialog 0;};
 
 disableSerialization;
+
+createDialog QGVAR(remoteInventory);
 
 _display = uiNamespace getVariable ["ACE_remoteInventory", displayNull];
 if (isNull _display) exitWith {ERROR("Display is Null");};
@@ -53,11 +63,12 @@ GVAR(disarmTarget) = _target;
     EXPLODE_2_PVT(_this,_args,_pfID);
     EXPLODE_3_PVT(_args,_player,_target,_display);
 
-    if ((!([_target] call FUNC(canDisarm))) ||
+    if ((!([_player, _target] call FUNC(canPlayerDisarmUnit))) ||
             {isNull _display} ||
-            {_player != ACE_player} ||
-            {!([_player, _target, []] call EFUNC(common,canInteractWith))}) then {
+            {_player != ACE_player}) then {
+
         systemChat "Debug: closeing dialog";
+
         [_pfID] call CBA_fnc_removePerFrameHandler;
         GVAR(disarmTarget) = objNull;
         if (!isNull _display) then {closeDialog 0;}; //close dialog if still open
@@ -67,9 +78,12 @@ GVAR(disarmTarget) = _target;
         _playerName = _display displayCtrl 111;
         _rankPicture = _display displayCtrl 1203;
 
-        _rankPicture ctrlSetText "\A3\Ui_f\data\GUI\Cfg\Ranks\corporal_gs.paa";
+        //Show rank and name (just like BIS's inventory)
+        _rankIndex = ["PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"] find (rank _target);
+        _rankPicture ctrlSetText (TEXTURES_RANKS select _rankIndex);
         _playerName ctrlSetText ([GVAR(disarmTarget)] call EFUNC(common,getName));
 
+        //Clear both inventory lists:
         lbClear _groundContainer;
         lbClear _targetContainer;
 
@@ -77,17 +91,18 @@ GVAR(disarmTarget) = _target;
         _targetUniqueItems = [GVAR(disarmTarget)] call FUNC(getAllGearUnit);
         [_targetContainer, _targetUniqueItems] call FUNC(showItemsInListbox);
 
+        //Try to find a holder that the target is using to drop items into:
         _holder = objNull;
         {
             if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
                 _holder = _x;
             };
-        } forEach ((getpos _target) nearObjects ["GroundWeaponHolder", 3]);
+        } forEach ((getpos _target) nearObjects [DISARM_CONTAINER, 3]);
 
+        //If a holder exists, show it's inventory
         if (!isNull _holder) then {
             _holderUniqueItems = [_holder] call FUNC(getAllGearContainer);
             [_groundContainer, _holderUniqueItems] call FUNC(showItemsInListbox);
         };
-
     };
-}, 0.05, [_caller, _target, _display]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_caller, _target, _display]] call CBA_fnc_addPerFrameHandler;

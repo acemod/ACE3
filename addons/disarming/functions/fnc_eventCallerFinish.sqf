@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Starts the disarming process from the caller
+ * Recieves a possible error code from FUNC(eventTargetFinish)
  *
  * Arguments:
  * 0: caller (player) <OBJECT>
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * TODO
+ * [player1, player2, "Someting fucked up"] call ace_disarming_fnc_eventCallerFinish
  *
  * Public: No
  */
@@ -22,4 +22,4 @@ PARAMS_3(_caller,_target,_errorMsg);
 if (_caller != ACE_player) exitWith {};
 
 systemChat format ["Debug-Caller: Disarm finished from [%1] with code [%2]", _target, _errorMsg];
-[format ["Problem Removing Item<br/>%1", _errorMsg]] call EFUNC(common,displayTextStructured);
+diag_log text format ["[ACE_Disarming] %1 - eventCallerFinish: %2", time, _this];

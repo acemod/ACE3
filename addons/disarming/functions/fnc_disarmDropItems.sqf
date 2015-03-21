@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Makes a unit drop items:
+ * Makes a unit drop items
  *
  * Arguments:
  * 0: caller (player) <OBJECT>
@@ -30,7 +30,7 @@ _fncSumArray = {
 };
 
 //Sanity Checks
-if (!([_target] call FUNC(canDisarm))) exitWith {
+if (!([_target] call FUNC(canBeDisarmed))) exitWith {
     [_caller, _target, "Debug: Cannot disarm target"] call FUNC(eventTargetFinish);
 };
 if (_doNotDropAmmo && {({_x in _listOfItemsToRemove} count (magazines _target)) > 0}) exitWith {
@@ -38,20 +38,23 @@ if (_doNotDropAmmo && {({_x in _listOfItemsToRemove} count (magazines _target)) 
 };
 
 _holder = objNull;
+
+//If not dropping ammo, don't use an existing container
 if (!_doNotDropAmmo) then {
-    //Try to use the same container, if one exists
     {
         if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
             _holder = _x;
         };
-    } forEach ((getpos _target) nearObjects ["GroundWeaponHolder", 3]);
+    } forEach ((getpos _target) nearObjects [DISARM_CONTAINER, 3]);
 };
 
 if (isNull _holder) then {
-    _dropPos = _target modelToWorld [-0.75, 0.75, 0];
-    _dropPos set [2, 0];
+    _dropPos = _target modelToWorld [0, 0.75, 0];
+    _dropPos set [2, ((getPosASL _target) select 2)];
     // _holder = createVehicle ["WeaponHolderSimulated", _dropPos, [], 0, "CAN_COLLIDE"];
-    _holder = createVehicle ["GroundWeaponHolder", _dropPos, [], 0, "CAN_COLLIDE"];
+    _holder = createVehicle [DISARM_CONTAINER, _dropPos, [], 0, "CAN_COLLIDE"];
+    _holder setPosASL _dropPos;
+    _holder setVariable [QGVAR(holderInUse), false];
     _holder setVariable [QGVAR(disarmUnit), _target, true];
 };
 
@@ -59,12 +62,12 @@ if (isNull _holder) then {
 if (isNull _holder) exitWith {
     [_caller, _target, "Debug: Null Holder"] call FUNC(eventTargetFinish);
 };
-//Make sure only one drop operation at a time...
+//Make sure only one drop operation at a time (using PFEH system as a queue)
 if (_holder getVariable [QGVAR(holderInUse), false]) exitWith {
     systemChat format ["Debug: %1 - Ground Container In Use, waiting until free", time];
     [{
         _this call FUNC(disarmDropItems);
-    }, _this, 0.05, 0.05] call EFUNC(common,waitAndExecute);
+    }, _this, 0, 0] call EFUNC(common,waitAndExecute);
 };
 _holder setVariable [QGVAR(holderInUse), true];
 
@@ -164,7 +167,7 @@ systemChat format ["PFEh start %1", time];
     _needToRemoveVest = ((vest _target) != "") && {(vest _target) in _listOfItemsToRemove};
     _needToRemoveUniform = ((uniform _target) != "") && {(uniform _target) in _listOfItemsToRemove};
 
-    if ((time < _maxWaitTime) && {[_target] call FUNC(canDisarm)} && {_needToRemoveWeapon || _needToRemoveMagazines || _needToRemoveBackpack}) then {
+    if ((time < _maxWaitTime) && {[_target] call FUNC(canBeDisarmed)} && {_needToRemoveWeapon || _needToRemoveMagazines || _needToRemoveBackpack}) then {
         //action drop weapons (keeps loaded magazine and attachements)
         {
             if (_x in _listOfItemsToRemove) then {
@@ -222,18 +225,16 @@ systemChat format ["PFEh start %1", time];
             systemChat "Debug: Deleting Dummy";
             clearItemCargoGlobal _holder;
         };
-
         //Verify we didn't timeout waiting on drop action
         if (time >= _maxWaitTime)  exitWith {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Drop Actions Timeout"] call FUNC(eventTargetFinish);
         };
         //If target lost disarm status:
-        if (!([_target] call FUNC(canDisarm))) exitWith {
+        if (!([_target] call FUNC(canBeDisarmed))) exitWith {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Target cannot be disarmed"] call FUNC(eventTargetFinish);
         };
-        
         if (_needToRemoveVest && {!((vestItems _target) isEqualTo [])}) exitWith {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Vest Not Empty"] call FUNC(eventTargetFinish);

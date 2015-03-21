@@ -1,3 +1,6 @@
+//The disarming dialog
+//Meant to mimic the real BIS inventory (so people understand how to use it)
+
 class RscText;
 class RscPicture;
 class RscActiveText;
@@ -13,8 +16,7 @@ class GVAR(remoteInventory) {
     fadein = 0;
     fadeout = 0;
 
-    class Colors
-    {
+    class Colors {
         dragValidBgr[] = {"(profilenamespace getvariable ['IGUI_TEXT_RGB_R',0])","(profilenamespace getvariable ['IGUI_TEXT_RGB_G',1])","(profilenamespace getvariable ['IGUI_TEXT_RGB_B',1])",0.5};
         dragInvalidBgr[] = {"(profilenamespace getvariable ['IGUI_ERROR_RGB_R',0.8])","(profilenamespace getvariable ['IGUI_ERROR_RGB_G',0.0])","(profilenamespace getvariable ['IGUI_ERROR_RGB_B',0.0])",0.5};
         dragValidBar[] = {"(profilenamespace getvariable ['IGUI_WARNING_RGB_R',0.8])","(profilenamespace getvariable ['IGUI_WARNING_RGB_G',0.5])","(profilenamespace getvariable ['IGUI_WARNING_RGB_B',0.0])",0.5};
@@ -86,7 +88,7 @@ class GVAR(remoteInventory) {
             h = "1 * ((safeZoneH / 1.2) / 25)";
             colorText[] = {1,1,1,0.7};
             colorActive[] = {1,1,1,1};
-            tooltip = "Close";
+            tooltip = "$str_disp_close";
         };
         class ExternalContainerBackground: RscPicture {
             colorText[] = {1,1,1,0.1};
@@ -121,16 +123,16 @@ class GVAR(remoteInventory) {
         };
         class GroundContainer: RscListBox {
             idc = 632;
-            sizeEx = "0.8 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            sizeEx2 = "0.8 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            rowHeight = "1.75 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            sizeEx = "0.8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            sizeEx2 = "0.8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            rowHeight = "1.75 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             canDrag = 0;
             colorText[] = {1,1,1,1};
             colorBackground[] = {0,0,0,0};
             itemBackground[] = {1,1,1,0.2};
             itemSpacing = 0.001;
-            x = "1.5 * (safeZoneH / 40) +    (safezoneX + (safezoneW - safeZoneH)/2)";
-            y = "2.5 * ((safeZoneH / 1.2) / 25) +  (safezoneY + (safezoneH - (safeZoneH / 1.2))/2)";
+            x = "1.5 * (safeZoneH / 40) + (safezoneX + (safezoneW - safeZoneH)/2)";
+            y = "2.5 * ((safeZoneH / 1.2) / 25) + (safezoneY + (safezoneH - (safeZoneH / 1.2))/2)";
             w = "11 * (safeZoneH / 40)";
             h = "21.5 * ((safeZoneH / 1.2) / 25)";
         };

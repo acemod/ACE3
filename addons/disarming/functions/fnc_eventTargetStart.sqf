@@ -1,6 +1,7 @@
 /*
  * Author: PabstMirror
- * TODO
+ * Disarm Event Handler, Starting func, called on the target.
+ * If target has to remove uniform/vest, this will add all uniform/vest items to the drop list.
  *
  * Arguments:
  * 0: caller (player) <OBJECT>

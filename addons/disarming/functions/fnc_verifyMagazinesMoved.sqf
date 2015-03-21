@@ -14,7 +14,7 @@
  * Verified Good <BOOL>
  *
  * Example:
- * [] call ace_disarming_fnc_verifyMagazinesMoved
+ * [stuff] call ace_disarming_fnc_verifyMagazinesMoved
  *
  * Public: No
  */
@@ -26,7 +26,6 @@ PARAMS_4(_startA,_endA,_startB,_endB);
 
 //Quick Lazy Count Check
 if (((count _startA) + (count _startB)) != ((count _endA) + (count _endB))) exitWith {
-    systemChat format ["%1 - %2", ((count _startA) + (count _startB)), ((count _endA) + (count _endB))];
     false
 };
 
@@ -38,7 +37,5 @@ _problem = false;
     if (_index == -1) exitWith {_problem = true;};
     _beginingArray deleteAt _index;
 } forEach (_endA + _endB);
-
-systemChat format ["%1 - %2", _problem, _beginingArray];
 
 (!_problem) && {_beginingArray isEqualTo []}

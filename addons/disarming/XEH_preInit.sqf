@@ -2,7 +2,8 @@
 
 ADDON = false;
 
-PREP(canDisarm);
+PREP(canBeDisarmed);
+PREP(canPlayerDisarmUnit);
 PREP(disarmDropItems);
 PREP(eventCallerFinish);
 PREP(eventTargetFinish);

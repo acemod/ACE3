@@ -1,6 +1,7 @@
 /*
  * Author: PabstMirror
- * TODO
+ * After FUNC(disarmDropItems) has completed, passing a possible error code.
+ * Passes that error back to orginal caller.
  *
  * Arguments:
  * 0: caller <OBJECT>
@@ -11,7 +12,7 @@
  * Nothing
  *
  * Example:
- * eventTargetFinish
+ * [player1, player2, "Someting fucked up"] call ace_disarming_fnc_eventTargetFinish
  *
  * Public: No
  */
@@ -21,6 +22,6 @@ PARAMS_3(_caller,_target,_errorMsg);
 
 
 if (_errorMsg != "") then {
-    systemChat _errorMsg;
+    diag_log text format ["[ACE_Disarming] %1 - eventTargetFinish: %2", time, _this];
     ["DisarmDebugCallback", [_caller], [_caller, _target, _errorMsg]] call EFUNC(common,targetEvent);
 };
