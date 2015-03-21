@@ -3,7 +3,7 @@
  * Render an interaction menu and it's children recursively
  *
  * Argument:
- * 0: Object <OBJECT>
+ * 0: Parent path <ARRAY>
  * 1: Action data <ARRAY>
  * 2: 3D position <ARRAY>
  * 3: Angle range available for rendering <ARRAY>
@@ -17,14 +17,15 @@
 
 private ["_menuInSelectedPath", "_path", "_menuDepth", "_currentRenderDepth", "_x", "_offset", "_newPos", "_forEachIndex"];
 
-EXPLODE_4_PVT(_this,_object,_action,_pos,_angles);
-EXPLODE_2_PVT(_action,_actionData,_activeChildren);
+EXPLODE_4_PVT(_this,_parentPath,_action,_pos,_angles);
+EXPLODE_3_PVT(_action,_actionData,_activeChildren,_actionObject);
 EXPLODE_2_PVT(_angles,_centerAngle,_maxAngleSpan);
 
 _menuDepth = (count GVAR(menuDepthPath));
 
 // Store path to action
-_path = [_object] + (_actionData select 7);
+_path = +_parentPath;
+_path pushBack [_actionData select 0,_actionObject];
 
 // Check if the menu is on the selected path
 _menuInSelectedPath = true;
@@ -32,7 +33,7 @@ _menuInSelectedPath = true;
     if (_forEachIndex >= (count GVAR(menuDepthPath))) exitWith {
         _menuInSelectedPath = false;
     };
-    if (_x != (GVAR(menuDepthPath) select _forEachIndex)) exitWith {
+    if !(_x isEqualTo (GVAR(menuDepthPath) select _forEachIndex)) exitWith {
         _menuInSelectedPath = false;
     };
 } forEach _path;
@@ -47,7 +48,7 @@ if(!_menuInSelectedPath) then { //_menuDepth > 0 &&
         _color = format ["#%1FFFFFF", [255 * 0.75] call EFUNC(common,toHex)];
     };
 };
-[_actionData select 0, _color, _pos, 1, 1, 0, _actionData select 1, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
+[_actionData select 1, _color, _pos, 1, 1, 0, _actionData select 2, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
 
 // Add the action to current options
 GVAR(currentOptions) pushBack [_this, _pos, _path];
@@ -83,7 +84,7 @@ if (_menuInSelectedPath && (_menuDepth == count _path)) then {
 
 _angle = _centerAngle - _angleSpan / 2;
 {
-    _target = _object;
+    _target = _actionObject;
     _player = ACE_player;
 
     _offset = ((GVAR(refSystem) select 1) vectorMultiply (-_scale * cos _angle)) vectorAdd
@@ -92,7 +93,7 @@ _angle = _centerAngle - _angleSpan / 2;
 
     //drawLine3D [_pos, _newPos, [1,0,0,0.8]];
 
-    [_object, _x, _newPos, [_angle, 140]] call FUNC(renderMenu);
+    [_path, _x, _newPos, [_angle, 140]] call FUNC(renderMenu);
 
     if (_angleSpan == 360) then {
         _angle = _angle + _angleSpan / (count _activeChildren);

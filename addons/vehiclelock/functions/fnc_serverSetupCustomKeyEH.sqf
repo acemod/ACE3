@@ -1,22 +1,19 @@
-	/*
-  Name: ACE_VehicleLock_fnc_serverSetupCustomKeyEH
-
-  Author: Pabst Mirror
-
-  Description:
-    Adds a key (magazineDetail name) to approved keys for a vehicle
-
-  Parameters:
-    0: OBJECT - vehicle
-    1: STRING - Magazine Name
-
-  Returns:
-    Nothing
-
-  Example:
-    [tank1, "someMagainze [id xx:yy]"] call ACE_VehicleLock_fnc_serverSetupCustomKeyEH;
-*/
-
+/*
+ * Author: PabstMirror
+ * On the server: Adds a key (magazineDetail name) to approved keys for a vehicle.
+ *
+ * Arguments:
+ * 0: Vehicle <OBJECT>
+ * 1: Magazine Name <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [tank1, "someMagainze [id xx:yy]"] call ACE_VehicleLock_fnc_serverSetupCustomKeyEH
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 
 private ["_currentKeys"];
@@ -24,6 +21,7 @@ private ["_currentKeys"];
 PARAMS_2(_veh,_key);
 
 if (!isServer) exitWith {ERROR("only run on server");};
+if (isNull _veh) exitWith {ERROR("null vehicle");};
 if (_key == "") exitWith {ERROR("empty key string");};
 
 _currentKeys = _veh getVariable [QGVAR(customKeys), []];
