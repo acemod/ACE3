@@ -1,6 +1,6 @@
 /*
  * Author: CAA-Picard
- * Create one action per passenger
+ * Create one unload action per unconscious passenger
  *
  * Argument:
  * 0: Vehicle <OBJECT>
@@ -16,21 +16,25 @@
 
 EXPLODE_3_PVT(_this,_vehicle,_player,_parameters);
 
+systemChat format ["Generating for %1 %2", _vehicle, _player];
+
 private ["_actions"];
 _actions = [];
 
 {
     _unit = _x;
-    if (_x != _player) then {
+    systemChat str(_unit);
+    if (_unit != _player && {(alive _unit) && {_unit getVariable ["ACE_isUnconscious", false]}}) then {
+        systemChat "Entered";
         _actions pushBack
             [
                 [
                     str(_unit),
                     [_unit, true] call EFUNC(common,getName),
                     "",
-                    {},
+                    {[_player, (_this select 2) select 0] call FUNC(actionUnloadUnit);},
                     {true},
-                    {_this call FUNC(addPassengerActions);},
+                    {},
                     [_unit]
                 ] call EFUNC(interact_menu,createAction),
                 [],
@@ -38,5 +42,7 @@ _actions = [];
             ];
     };
 } forEach crew _vehicle;
+
+systemChat str(count _actions);
 
 _actions

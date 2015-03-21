@@ -1430,4 +1430,98 @@ class CfgVehicles {
             };
         };
     };
+
+    // Patient unload from vehicle actions
+    class LandVehicle;
+    class Car: LandVehicle {
+        class ACE_Actions {
+            class ACE_MainActions {
+                class ACE_UnloadPatients {
+                    displayName = "$STR_ACE_Medical_UnloadPatient";
+                    condition = "true";
+                    statement = "";
+                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
+                };
+            };
+        };
+    };
+    class Tank: LandVehicle {
+        class ACE_Actions {
+            class ACE_MainActions {
+                class ACE_UnloadPatients {
+                    displayName = "$STR_ACE_Medical_UnloadPatient";
+                    condition = "true";
+                    statement = "";
+                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
+                };
+            };
+        };
+    };
+
+    class Air;
+    class Helicopter: Air {
+        class ACE_Actions {
+            class ACE_MainActions {
+                class ACE_UnloadPatients {
+                    displayName = "$STR_ACE_Medical_UnloadPatient";
+                    condition = "true";
+                    statement = "";
+                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
+                };
+            };
+        };
+    };
+    class Plane: Air {
+        class ACE_Actions {
+            class ACE_MainActions {
+                class ACE_UnloadPatients {
+                    displayName = "$STR_ACE_Medical_UnloadPatient";
+                    condition = "true";
+                    statement = "";
+                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
+                };
+            };
+        };
+    };
+
+    class Ship;
+    class Ship_F: Ship {
+        class ACE_Actions {
+            class ACE_MainActions {
+                class ACE_UnloadPatients {
+                    displayName = "$STR_ACE_Medical_UnloadPatient";
+                    condition = "true";
+                    statement = "";
+                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
+                };
+            };
+        };
+    };
+
+    class StaticWeapon: LandVehicle {
+        class ACE_Actions {
+            class ACE_MainActions {
+                class ACE_UnloadPatients {
+                    displayName = "$STR_ACE_Medical_UnloadPatient";
+                    condition = "true";
+                    statement = "";
+                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
+                };
+            };
+        };
+    };
+
+    class StaticMortar;
+    class Mortar_01_base_F: StaticMortar {
+        class ACE_Actions {
+            class ACE_MainActions {
+                class ACE_UnloadPatients {
+                    displayName = "$STR_ACE_Medical_UnloadPatient";
+                    condition = "true";
+                    statement = "";
+                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
+                };
+            };
+        };
+    };
 };

@@ -16,6 +16,7 @@ PREP(addToInjuredCollection);
 PREP(addToLog);
 PREP(addToTriageCard);
 PREP(addUnconsciousCondition);
+PREP(addUnloadPatientActions);
 PREP(canAccessMedicalEquipment);
 PREP(canTreat);
 PREP(determineIfFatal);
