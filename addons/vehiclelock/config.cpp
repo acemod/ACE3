@@ -17,6 +17,10 @@ class ACE_Settings {
         value = 10;
         typeName = "SCALAR";
     };
+    class GVAR(LockVehicleInventory) {
+        value = 0;
+        typeName = "BOOL";
+    };
 };
 
 #include "CfgEventHandlers.hpp"

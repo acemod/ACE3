@@ -650,5 +650,8 @@
       <Polish>Interakcja</Polish>
       <Spanish>Interactuar</Spanish>
     </Key>
+    <Key ID="STR_ACE_Interaction_Passengers">
+      <English>Passengers &gt;&gt;</English>
+    </Key>
   </Package>
 </Project>

@@ -412,7 +412,14 @@ class CfgVehicles {
         condition = "true";
       };
     };
-    class ACE_SelfActions {};
+    class ACE_SelfActions {
+      class ACE_Passengers {
+        displayName = "$STR_ACE_Interaction_Passengers";
+        condition = "true";
+        statement = "";
+        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+      };
+    };
   };
   class Tank: LandVehicle {
     class ACE_Actions {
@@ -423,7 +430,14 @@ class CfgVehicles {
         condition = "true";
       };
     };
-    class ACE_SelfActions {};
+    class ACE_SelfActions {
+      class ACE_Passengers {
+        displayName = "$STR_ACE_Interaction_Passengers";
+        condition = "true";
+        statement = "";
+        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+      };
+    };
   };
 
   class Air;
@@ -436,7 +450,14 @@ class CfgVehicles {
         condition = "true";
       };
     };
-    class ACE_SelfActions {};
+    class ACE_SelfActions {
+      class ACE_Passengers {
+        displayName = "$STR_ACE_Interaction_Passengers";
+        condition = "true";
+        statement = "";
+        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+      };
+    };
   };
   class Plane: Air {
     class ACE_Actions {
@@ -447,7 +468,14 @@ class CfgVehicles {
         condition = "true";
       };
     };
-    class ACE_SelfActions {};
+    class ACE_SelfActions {
+      class ACE_Passengers {
+        displayName = "$STR_ACE_Interaction_Passengers";
+        condition = "true";
+        statement = "";
+        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+      };
+    };
   };
 
   class Ship;
@@ -469,7 +497,14 @@ class CfgVehicles {
         };
       };
     };
-    class ACE_SelfActions {};
+    class ACE_SelfActions {
+      class ACE_Passengers {
+        displayName = "$STR_ACE_Interaction_Passengers";
+        condition = "true";
+        statement = "";
+        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+      };
+    };
   };
 
   class StaticWeapon: LandVehicle {
@@ -481,7 +516,14 @@ class CfgVehicles {
         condition = "true";
       };
     };
-    class ACE_SelfActions {};
+    class ACE_SelfActions {
+      class ACE_Passengers {
+        displayName = "$STR_ACE_Interaction_Passengers";
+        condition = "true";
+        statement = "";
+        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+      };
+    };
   };
 
   class StaticMortar;
@@ -494,7 +536,14 @@ class CfgVehicles {
         condition = "true";
       };
     };
-    class ACE_SelfActions {};
+    class ACE_SelfActions {
+      class ACE_Passengers {
+        displayName = "$STR_ACE_Interaction_Passengers";
+        condition = "true";
+        statement = "";
+        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+      };
+    };
   };
 
   class thingX;

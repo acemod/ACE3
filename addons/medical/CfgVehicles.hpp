@@ -350,8 +350,8 @@ class CfgVehicles {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
 
-                class Bandage_Head {
-                    displayName = "Bandage Head";
+                class Bandage {
+                    displayName = "$STR_ACE_Medical_Bandage_HitHead";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(treatment));
@@ -413,8 +413,9 @@ class CfgVehicles {
                     priority = 2;
                     hotkey = "M";
                     enableInside = 1;
-                    class Bandage_Torso {
-                        displayName = "Bandage Torso";
+
+                    class Bandage {
+                        displayName = "$STR_ACE_Medical_Bandage_HitBody";
                         distance = 2.0;
                         condition = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(canTreat));
                         statement = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(treatment));
@@ -451,7 +452,7 @@ class CfgVehicles {
                         statement = QUOTE([ARR_4(_player, _target, 'body', 'QuikClot')] call DFUNC(treatment));
                     };
                     class Morphine: fieldDressing {
-                        displayName = "Morphine";
+                        displayName = "$STR_ACE_Medical_Inject_Morphine";
                         condition = QUOTE([ARR_4(_player, _target, 'body', 'Morphine')] call DFUNC(canTreat));
                         statement = QUOTE([ARR_4(_player, _target, 'body', 'Morphine')] call DFUNC(treatment));
                     };
@@ -461,7 +462,7 @@ class CfgVehicles {
                         statement = QUOTE([ARR_4(_player, _target, 'body', 'Atropine')] call DFUNC(treatment));
                     };
                     class Epinephrine: Morphine {
-                        displayName = "Epinephrine";
+                        displayName = "$STR_ACE_Medical_Inject_Epinephrine";
                         condition = QUOTE([ARR_4(_player, _target, 'body', 'Epinephrine')] call DFUNC(canTreat));
                         statement = QUOTE([ARR_4(_player, _target, 'body', 'Epinephrine')] call DFUNC(treatment));
                     };
@@ -486,8 +487,8 @@ class CfgVehicles {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 2)] call DFUNC(displayPatientInformation));
 
-                class Bandage_LeftArm {
-                    displayName = "Bandage Left Arm";
+                class Bandage {
+                    displayName = "$STR_ACE_Medical_Bandage_HitLeftArm";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call DFUNC(treatment));
@@ -529,7 +530,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Tourniquet')] call DFUNC(treatment));
                 };
                 class Morphine: fieldDressing {
-                    displayName = "Morphine";
+                    displayName = "$STR_ACE_Medical_Inject_Morphine";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Morphine')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Morphine')] call DFUNC(treatment));
                 };
@@ -539,7 +540,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Atropine')] call DFUNC(treatment));
                 };
                 class Epinephrine: Morphine {
-                    displayName = "Epinephrine";
+                    displayName = "$STR_ACE_Medical_Inject_Epinephrine";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Epinephrine')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Epinephrine')] call DFUNC(treatment));
                 };
@@ -607,8 +608,8 @@ class CfgVehicles {
             class ACE_ArmRight {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 3)] call DFUNC(displayPatientInformation));
-                class Bandage_RightArm {
-                    displayName = "Bandage Right Arm";
+                class Bandage {
+                    displayName = "$STR_ACE_Medical_Bandage_HitRightArm";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(treatment));
@@ -650,7 +651,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Tourniquet')] call DFUNC(treatment));
                 };
                 class Morphine: fieldDressing {
-                    displayName = "Morphine";
+                    displayName = "$STR_ACE_Medical_Inject_Morphine";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call DFUNC(treatment));
                 };
@@ -660,7 +661,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Atropine')] call DFUNC(treatment));
                 };
                 class Epinephrine: Morphine {
-                    displayName = "Epinephrine";
+                    displayName = "$STR_ACE_Medical_Inject_Epinephrine";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Epinephrine')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Epinephrine')] call DFUNC(treatment));
                 };
@@ -729,8 +730,8 @@ class CfgVehicles {
             class ACE_LegLeft {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 4)] call DFUNC(displayPatientInformation));
-                class Bandage_LeftLeg {
-                    displayName = "Bandage Left Leg";
+                class Bandage {
+                    displayName = "$STR_ACE_Medical_Bandage_HitLeftLeg";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(treatment));
@@ -773,7 +774,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Tourniquet')] call DFUNC(treatment));
                 };
                 class Morphine: fieldDressing {
-                    displayName = "Morphine";
+                    displayName = "$STR_ACE_Medical_Inject_Morphine";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(treatment));
                 };
@@ -783,7 +784,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Atropine')] call DFUNC(treatment));
                 };
                 class Epinephrine: Morphine {
-                    displayName = "Epinephrine";
+                    displayName = "$STR_ACE_Medical_Inject_Epinephrine";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Epinephrine')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Epinephrine')] call DFUNC(treatment));
                 };
@@ -841,8 +842,8 @@ class CfgVehicles {
             class ACE_LegRight {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
-                class Bandage_RightLeg {
-                    displayName = "Bandage Right Leg";
+                class Bandage {
+                    displayName = "$STR_ACE_Medical_Bandage_HitRightLeg";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(treatment));
@@ -885,7 +886,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Tourniquet')] call DFUNC(treatment));
                 };
                 class Morphine: fieldDressing {
-                    displayName = "Morphine";
+                    displayName = "$STR_ACE_Medical_Inject_Morphine";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Morphine')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Morphine')] call DFUNC(treatment));
                 };
@@ -895,7 +896,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Atropine')] call DFUNC(treatment));
                 };
                 class Epinephrine: Morphine {
-                    displayName = "Epinephrine";
+                    displayName = "$STR_ACE_Medical_Inject_Epinephrine";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Epinephrine')] call DFUNC(canTreat));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Epinephrine')] call DFUNC(treatment));
                 };
