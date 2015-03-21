@@ -19,33 +19,33 @@ _unit = _this select 0;
 while {({_x == "FirstAidKit"} count items _unit) > 0} do {
     _unit removeItem "FirstAidKit";
     if (GVAR(level) >= 2) then {
-        _unit addItem QGVAR(fieldDressing);
-        _unit addItem QGVAR(packingBandage);
-        _unit addItem QGVAR(morphine);
-        _unit addItem QGVAR(tourniquet);
+        _unit addItem "ACE_fieldDressing";
+        _unit addItem "ACE_packingBandage";
+        _unit addItem "ACE_morphine";
+        _unit addItem "ACE_tourniquet";
     } else {
-        _unit addItem QGVAR(fieldDressing);
-        _unit addItem QGVAR(fieldDressing);
-        _unit addItem QGVAR(morphine);
+        _unit addItem "ACE_fieldDressing";
+        _unit addItem "ACE_fieldDressing";
+        _unit addItem "ACE_morphine";
     };
 };
 
 while {({_x == "Medikit"} count items _unit) > 0} do {
     _unit removeItem "Medikit";
     if (GVAR(level) >= 2) then {
-        _unit addItemToBackpack QGVAR(fieldDressing);
-        _unit addItemToBackpack QGVAR(packingBandage);
-        _unit addItemToBackpack QGVAR(packingBandage);
-        _unit addItemToBackpack QGVAR(epinephrine);
-        _unit addItemToBackpack QGVAR(morphine);
-        _unit addItemToBackpack QGVAR(salineIV_250);
-        _unit addItemToBackpack QGVAR(tourniquet);
+        _unit addItemToBackpack "ACE_fieldDressing";
+        _unit addItemToBackpack "ACE_packingBandage";
+        _unit addItemToBackpack "ACE_packingBandage";
+        _unit addItemToBackpack "ACE_epinephrine";
+        _unit addItemToBackpack "ACE_morphine";
+        _unit addItemToBackpack "ACE_salineIV_250";
+        _unit addItemToBackpack "ACE_tourniquet";
     } else {
-        _unit addItemToBackpack QGVAR(epinephrine);
-        _unit addItemToBackpack QGVAR(epinephrine);
-        _unit addItemToBackpack QGVAR(epinephrine);
-        _unit addItemToBackpack QGVAR(epinephrine);
-        _unit addItemToBackpack QGVAR(bloodIV);
-        _unit addItemToBackpack QGVAR(bloodIV);
+        _unit addItemToBackpack "ACE_epinephrine";
+        _unit addItemToBackpack "ACE_epinephrine";
+        _unit addItemToBackpack "ACE_epinephrine";
+        _unit addItemToBackpack "ACE_epinephrine";
+        _unit addItemToBackpack "ACE_bloodIV";
+        _unit addItemToBackpack "ACE_bloodIV";
     };
 };
