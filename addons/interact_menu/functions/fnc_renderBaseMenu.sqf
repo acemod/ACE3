@@ -63,8 +63,9 @@ _uid = format [QGVAR(ATCache_%1), _actionData select 0];
 _activeActionTree = [
                         [_object, _baseActionNode, []],
                         DFUNC(collectActiveActionTree),
-                        _object, _uid, 0.2
+                        _object, _uid, 1.0, "interactMenuClosed"
                     ] call EFUNC(common,cachedCall);
+
 /*
 diag_log "Printing: _activeActionTree";
 _fnc_print = {
