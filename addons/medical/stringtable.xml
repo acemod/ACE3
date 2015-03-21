@@ -680,11 +680,6 @@
                 <Russian>Вы осмотрели раненого %1</Russian>
                 <Spanish>Examinas a %1</Spanish>
             </Key>
-            <Key ID="STR_ACE_MEDICAL_BANDAGING">
-                <English>Bandaging</English>
-                <Russian>Перевязка...</Russian>
-                <Spanish>Vendando</Spanish>
-            </Key>
             <Key ID="STR_ACE_MEDICAL_BANDAGED">
                 <English>Bandaged</English>
                 <Russian>Повязка наложена</Russian>
@@ -724,6 +719,9 @@
                 <English>%1 is treating your airway</English>
                 <Russian>%1 проводит вам интубацию</Russian>
                 <Spanish>%1 te está intubando</Spanish>
+            </Key>
+            <Key ID="STR_ACE_Medical_UnloadPatient">
+                <English>Unload patient &gt;&gt;</English>
             </Key>
         </Container>
 

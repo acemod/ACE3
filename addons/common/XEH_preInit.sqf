@@ -6,9 +6,7 @@ ADDON = false;
 // ACE Common Function
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
-PREP(addCameraEventHandler);
 PREP(addCanInteractWithCondition);
-PREP(addCustomEventHandler);
 PREP(addLineToDebugDraw);
 PREP(addMapMarkerCreatedEventHandler);
 PREP(addScrollWheelEventHandler);
@@ -21,8 +19,6 @@ PREP(beingCarried);
 PREP(binarizeNumber);
 PREP(blurScreen);
 PREP(cachedCall);
-PREP(callCustomEventHandlers);
-PREP(callCustomEventHandlersGlobal);
 PREP(canGetInPosition);
 PREP(canInteract);
 PREP(canInteractWith);
@@ -150,9 +146,7 @@ PREP(readSettingFromModule);
 PREP(receiveRequest);
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);
-PREP(removeCameraEventHandler);
 PREP(removeCanInteractWithCondition);
-PREP(removeCustomEventHandler);
 PREP(removeMapMarkerCreatedEventHandler);
 PREP(removeScrollWheelEventHandler);
 PREP(removeSpecificMagazine);
@@ -258,8 +252,6 @@ if (hasInterface) then {
             ACE_player = missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player];
             uiNamespace setVariable ["ACE_player", ACE_player];
 
-            // Raise custom event. @todo, remove
-            [missionNamespace, "playerChanged", [ACE_player, _oldPlayer]] call FUNC(callCustomEventHandlers);
             // Raise ACE event
             ["playerChanged", [ACE_player, _oldPlayer]] call FUNC(localEvent);
         };

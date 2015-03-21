@@ -33,5 +33,5 @@ if (!local _unit) then {
     if (!_exists) then {
         _openWounds pushback _injury;
     };
-    _unit setvariable [GVAR(openWounds), _openWounds];
+    _unit setvariable [QGVAR(openWounds), _openWounds];
 };

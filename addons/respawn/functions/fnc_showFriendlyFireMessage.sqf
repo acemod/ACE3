@@ -25,8 +25,6 @@ _killer = _this select 1;
 if (_unit != _killer && side group _unit in [side group ACE_player, civilian] && {side group _killer == side group ACE_player}) then {
     systemChat format ["%1 was killed by %2", [_unit] call EFUNC(common,getName), [_killer] call EFUNC(common,getName)];
 
-    // Raise custom event. @todo: remove
-    [_unit, "killedByFriendly", [_unit, _killer]] call EFUNC(common,callCustomEventHandlers);
     // Raise ACE globalEvent
     ["killedByFriendly", [_unit, _killer]] call EFUNC(common,globalEvent);
 };
