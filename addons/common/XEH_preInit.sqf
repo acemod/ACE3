@@ -6,7 +6,6 @@ ADDON = false;
 // ACE Common Function
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
-PREP(addCameraEventHandler);
 PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
 PREP(addMapMarkerCreatedEventHandler);
@@ -147,7 +146,6 @@ PREP(readSettingFromModule);
 PREP(receiveRequest);
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);
-PREP(removeCameraEventHandler);
 PREP(removeCanInteractWithCondition);
 PREP(removeMapMarkerCreatedEventHandler);
 PREP(removeScrollWheelEventHandler);
