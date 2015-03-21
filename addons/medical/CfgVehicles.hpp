@@ -434,6 +434,18 @@ class CfgVehicles {
                         icon = PATHTOF(UI\icons\bandage.paa);
                     };
 
+                    class TriageCard {
+                        displayName = "Triage Card";
+                        distance = 2.0;
+                        condition = "true";
+                        statement = QUOTE([ARR_2(_target, true)] call DFUNC(displayTriageCard));
+                        showDisabled = 1;
+                        priority = 2;
+                        hotkey = "";
+                        enableInside = 1;
+                        icon = PATHTOF(UI\icons\triageCard.paa);
+                    };
+
                     // Advanced medical
                     class FieldDressing {
                         displayName = "Field Dressing";
