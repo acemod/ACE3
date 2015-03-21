@@ -1,25 +1,25 @@
 
 class CfgWeapons {
-  class ItemCore;
-  class InventoryItem_Base_F;
-  class InventoryFirstAidKitItem_Base_F;
-  class MedikitItem;
-
-  // ITEMS
-  class FirstAidKit: ItemCore {
-    type = 0;
-    class ItemInfo: InventoryFirstAidKitItem_Base_F {
-      mass = 4;
-      type = 201;
+    class ItemCore;
+    class InventoryItem_Base_F;
+    class InventoryFirstAidKitItem_Base_F;
+    class MedikitItem;
+  
+    // ITEMS
+    class FirstAidKit: ItemCore {
+        type = 0;
+        class ItemInfo: InventoryFirstAidKitItem_Base_F {
+            mass = 4;
+            type = 201;
+        };
     };
-  };
-  class Medikit: ItemCore {
-    type = 0;
-    class ItemInfo: MedikitItem {
-      mass = 60;
-      type = 201;
+    class Medikit: ItemCore {
+        type = 0;
+        class ItemInfo: MedikitItem {
+            mass = 60;
+            type = 201;
+        };
     };
-  };
 
     // @todo localize
     class ACE_ItemCore;
