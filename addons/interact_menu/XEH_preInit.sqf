@@ -2,21 +2,25 @@
 
 ADDON = false;
 
-PREP(addAction);
-PREP(addClassAction);
+PREP(addActionToClass);
+PREP(addActionToObject);
 PREP(compileMenu);
 PREP(compileMenuSelfAction);
 PREP(collectActiveActionTree);
+PREP(createAction);
+PREP(findActionNode);
+PREP(isSubPath);
 PREP(keyDown);
 PREP(keyDownSelfAction);
 PREP(keyUp);
 PREP(keyUpSelfAction);
-PREP(removeAction);
-PREP(removeClassAction);
+PREP(removeActionFromClass);
+PREP(removeActionFromObject);
 PREP(render);
-PREP(renderIcon);
 PREP(renderBaseMenu);
+PREP(renderIcon);
 PREP(renderMenu);
+PREP(splitPath);
 
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;
