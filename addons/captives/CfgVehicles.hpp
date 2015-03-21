@@ -154,15 +154,10 @@ class CfgVehicles {
         MACRO_LOADUNLOADCAPTIVE
     };
 
-#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
-            name = #ITEM; \
-            count = COUNT; \
-        };
-
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
-            MACRO_ADDITEM(ACE_CableTie,12)
+            MACRO_ADDITEM(ACE_CableTie,12);
         };
     };
 

@@ -43,4 +43,9 @@ class Extended_FiredBIS_EventHandlers {
             firedBIS = QUOTE(if (local (_this select 0) && {getNumber (configfile >> 'CfgWeapons' >> _this select 1 >> QUOTE(QGVAR(Damage))) > 0}) then {_this call DFUNC(fireOverpressureZone)});
         };
     };
+    class StaticWeapons {
+        class ADDON {
+            firedBIS = QUOTE(if (local (_this select 0) && {getNumber (configfile >> 'CfgWeapons' >> _this select 1 >> QUOTE(QGVAR(Damage))) > 0}) then {_this call DFUNC(fireOverpressureZone)});
+        };
+    };
 };

@@ -58,8 +58,14 @@ if ((_sPos select 1) < safeZoneY    || (_sPos select 1) > safeZoneY    + safeZon
 
 
 // Collect active tree
-// @todo: cache activeActionTree?
-_activeActionTree = ([_object, _baseAction] call FUNC(collectActiveActionTree));
+private "_uid";
+_uid = format [QGVAR(ATCache_%1), (_actionData select 7) select 0];
+_activeActionTree = [
+                        [_object, _baseAction],
+                        DFUNC(collectActiveActionTree),
+                        _object, _uid, 0.2
+                    ] call EFUNC(common,cachedCall);
+
 
 // Check if there's something left for rendering
 if (count _activeActionTree == 0) exitWith {false};

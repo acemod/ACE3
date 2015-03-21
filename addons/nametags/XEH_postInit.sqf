@@ -10,8 +10,7 @@ if (!hasInterface) exitWith {};
 ["ACE3", QGVAR(showNameTags), localize "STR_ACE_NameTags_ShowNames",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EGVAR(common,canInteractWith)) exitWith {false};
 
     // Statement
     GVAR(ShowNamesTime) = time;

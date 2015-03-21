@@ -2,8 +2,8 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {"AGM_Item_Vector"};
-        weapons[] = {"AGM_Vector"};
+        units[] = {"ACE_Item_Vector"};
+        weapons[] = {"ACE_Vector"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author[] = {"Ghost","Hamburger SV","commy2","bux578"};

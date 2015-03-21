@@ -7,6 +7,7 @@ ADDON = false;
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
 PREP(addCameraEventHandler);
+PREP(addCanInteractWithCondition);
 PREP(addCustomEventHandler);
 PREP(addLineToDebugDraw);
 PREP(addMapMarkerCreatedEventHandler);
@@ -19,6 +20,7 @@ PREP(ASLToPosition);
 PREP(beingCarried);
 PREP(binarizeNumber);
 PREP(blurScreen);
+PREP(cachedCall);
 PREP(callCustomEventHandlers);
 PREP(callCustomEventHandlersGlobal);
 PREP(canGetInPosition);
@@ -47,12 +49,16 @@ PREP(displayTextPicture);
 PREP(displayTextStructured);
 PREP(doAnimation);
 PREP(endRadioTransmission);
+PREP(eraseCache);
 PREP(execNextFrame);
 PREP(execPersistentFnc);
 PREP(execRemoteFnc);
 PREP(executePersistent);
 PREP(filter);
+PREP(fixCollision);
+PREP(fixFloating);
 PREP(fixLoweredRifleAnimation);
+PREP(fixPosition);
 PREP(getAllDefinedSetVariables);
 PREP(getAllGear);
 PREP(getCaptivityStatus);
@@ -109,6 +115,7 @@ PREP(insertionSort);
 PREP(interpolateFromArray);
 PREP(inTransitionAnim);
 PREP(inWater);
+PREP(isAlive);
 PREP(isArrested);
 PREP(isAutoWind);
 PREP(isAwake);
@@ -144,6 +151,7 @@ PREP(receiveRequest);
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);
 PREP(removeCameraEventHandler);
+PREP(removeCanInteractWithCondition);
 PREP(removeCustomEventHandler);
 PREP(removeMapMarkerCreatedEventHandler);
 PREP(removeScrollWheelEventHandler);
@@ -200,6 +208,9 @@ PREP(logDisplays);
 PREP(monitor);
 PREP(showUser);
 
+PREP(dumpPerformanceCounters);
+PREP(dumpArray);
+
 // ACE_CuratorFix
 PREP(addCuratorUnloadEventhandler);
 PREP(fixCrateContent);
@@ -227,6 +238,9 @@ PREP(hashListCreateHash);
 PREP(hashListSelect);
 PREP(hashListSet);
 PREP(hashListPush);
+
+//Debug
+ACE_COUNTERS = [];
 
 // Load settings
 if (isServer) then {
