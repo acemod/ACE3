@@ -62,13 +62,17 @@ if !([_unit] call EFUNC(common,isPlayer)) then {
 
             private ["_items", "_container"];
 
-            _items = secondaryWeaponItems _unit;
+            // _items = secondaryWeaponItems _unit;
             _container = createVehicle ["GroundWeaponHolder", position _unit, [], 0, "CAN_COLLIDE"];
             _container setPosAsl (getPosAsl _unit);
             _container addWeaponCargoGlobal [_tube, 1];
-            {
-                if (_x != "") then {_container addItemCargoGlobal [_x, 1];};
-            } forEach _items;
+            
+            //This will duplicate attachements, because we will be adding a weapon that may already have attachments on it
+            //We either need a way to add a clean weapon, or a way to add a fully configured weapon to a container:
+            // {
+                // if (_x != "") then {_container addItemCargoGlobal [_x, 1];};
+            // } forEach _items;
+            
             _unit removeWeaponGlobal _tube;
         };
     }, 1, [_unit, _replacementTube, _projectile]] call CBA_fnc_addPerFrameHandler;
