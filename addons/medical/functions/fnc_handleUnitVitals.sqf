@@ -85,7 +85,7 @@ if (GVAR(level) == 1) then {
             [_unit, true] call FUNC(setUnconscious);
         };
         if (_blood == 0) then {
-            _unit setDamage 1;
+            [_unit] call FUNC(setDead);
         };
     };
 };
