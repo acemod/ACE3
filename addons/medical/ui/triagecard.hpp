@@ -20,6 +20,22 @@ class GVAR(triageCard) {
             colorBackground[] = {1,1,1,1};
             text = "";
         };
+        class cornor_top_l: ACE_gui_backgroundBase {
+            idc = -1;
+            x = "10 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
+            y = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+            w = "5 * (((safezoneW / safezoneH) min 1.2) / 40)";
+            h = "5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            font = "PuristaMedium";
+            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+            colorText[] = {1,1,0,1};
+            colorBackground[] = {0,0,0,0};
+            text = QUOTE(PATHTOF(ui\triage_card_corner_l.paa));
+        };
+        class cornor_top_r: cornor_top_l {
+            x = "20 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
+            text = QUOTE(PATHTOF(ui\triage_card_corner_r.paa));
+        };
 
         class TriageCardLabel {
             idc = 199;
