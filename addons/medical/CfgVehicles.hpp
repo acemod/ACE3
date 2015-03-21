@@ -1178,7 +1178,7 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
     };
     class Item_Base_F;
-    class GVAR(fieldDressingItem): Item_Base_F {
+    class ACE_fieldDressingItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY;
@@ -1186,14 +1186,14 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems
         {
-            class GVAR(fieldDressing)
+            class ACE_fieldDressing
             {
-                name = QGVAR(fieldDressing);
+                name = "ACE_fieldDressing";
                 count = 1;
             };
         };
     };
-    class GVAR(packingBandageItem): Item_Base_F {
+    class ACE_packingBandageItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_PACKING_BANDAGE_DISPLAY;
@@ -1201,14 +1201,14 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems
         {
-            class GVAR(packingBandage)
+            class ACE_packingBandage
             {
-                name = QGVAR(packingBandage);
+                name = "ACE_packingBandage";
                 count = 1;
             };
         };
     };
-    class GVAR(elasticBandageItem): Item_Base_F {
+    class ACE_elasticBandageItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY;
@@ -1216,14 +1216,14 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems
         {
-            class GVAR(elasticBandage)
+            class ACE_elasticBandage
             {
-                name = QGVAR(elasticBandage);
+                name = "ACE_elasticBandage";
                 count = 1;
             };
         };
     };
-    class GVAR(tourniquetItem): Item_Base_F {
+    class ACE_tourniquetItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_TOURNIQUET_DISPLAY;
@@ -1231,14 +1231,14 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems
         {
-            class GVAR(tourniquet)
+            class ACE_tourniquet
             {
-                name = QGVAR(tourniquet);
+                name = "ACE_tourniquet";
                 count = 1;
             };
         };
     };
-    class GVAR(morphineItem): Item_Base_F {
+    class ACE_morphineItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_MORPHINE_DISPLAY;
@@ -1246,14 +1246,14 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems
         {
-            class GVAR(morphine)
+            class ACE_morphine
             {
-                name = QGVAR(morphine);
+                name = "ACE_morphine";
                 count = 1;
             };
         };
     };
-    class GVAR(atropineItem): Item_Base_F {
+    class ACE_atropineItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_ATROPINE_DISPLAY;
@@ -1261,14 +1261,14 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems
         {
-            class GVAR(atropine)
+            class ACE_atropine
             {
-                name = QGVAR(atropine);
+                name = "ACE_atropine";
                 count = 1;
             };
         };
     };
-    class GVAR(epinephrineItem): Item_Base_F {
+    class ACE_epinephrineItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_EPINEPHRINE_DISPLAY;
@@ -1276,14 +1276,14 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems
         {
-            class GVAR(epinephrine)
+            class ACE_epinephrine
             {
-                name = QGVAR(epinephrine);
+                name = "ACE_epinephrine";
                 count = 1;
             };
         };
     };
-    class GVAR(plasmaIVItem): Item_Base_F {
+    class ACE_plasmaIVItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_PLASMA_IV;
@@ -1291,15 +1291,15 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems
         {
-            class GVAR(plasmaIV)
+            class ACE_plasmaIV
             {
-                name = QGVAR(plasmaIV);
+                name = "ACE_plasmaIV";
                 count = 1;
             };
         };
     };
 
-    class GVAR(bloodIVItem): Item_Base_F {
+    class ACE_bloodIVItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_BLOOD_IV;
@@ -1307,14 +1307,14 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems
         {
-            class GVAR(bloodIV)
+            class ACE_bloodIV
             {
-                name = QGVAR(bloodIV);
+                name = "ACE_bloodIV";
                 count = 1;
             };
         };
     };
-    class GVAR(salineIVItem): Item_Base_F {
+    class ACE_salineIVItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_SALINE_IV;
@@ -1322,14 +1322,14 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems
         {
-            class GVAR(salineIV)
+            class ACE_salineIV
             {
-                name = QGVAR(salineIV);
+                name = "ACE_salineIV";
                 count = 1;
             };
         };
     };
-    class GVAR(quikClotItem): Item_Base_F {
+    class ACE_quikClotItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_QUIKCLOT_DISPLAY;
@@ -1337,14 +1337,14 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems
         {
-            class GVAR(quikClot)
+            class ACE_quikClot
             {
-                name = QGVAR(quikClot);
+                name = "ACE_quikclot";
                 count = 1;
             };
         };
     };
-    class GVAR(personalAidKitItem): Item_Base_F {
+    class ACE_personalAidKitItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_AID_KIT_DISPLAY;
@@ -1352,14 +1352,14 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems
         {
-            class GVAR(personalAidKit)
+            class ACE_personalAidKit
             {
-                name = QGVAR(personalAidKit);
+                name = "ACE_personalAidKit";
                 count = 1;
             };
         };
     };
-    class GVAR(surgicalKitItem): Item_Base_F {
+    class ACE_surgicalKitItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_SURGICALKIT_DISPLAY;
@@ -1367,14 +1367,14 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems
         {
-            class GVAR(surgicalKit)
+            class ACE_surgicalKit
             {
-                name = QGVAR(surgicalKit);
+                name = "ACE_surgicalKit";
                 count = 1;
             };
         };
     };
-    class GVAR(bodyBagItem): Item_Base_F {
+    class ACE_bodyBagItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
@@ -1382,100 +1382,100 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems
         {
-            class GVAR(bodyBag)
+            class ACE_bodyBag
             {
-                name = QGVAR(bodyBag);
+                name = "ACE_bodyBag";
                 count = 1;
             };
         };
     };
 
     class NATO_Box_Base;
-    class GVAR(supplyCrate): NATO_Box_Base {
+    class ACE_medicalSupplyCrate: NATO_Box_Base {
         scope = 2;
         accuracy = 1000;
-        displayName = "Medical Supply Crate [ACE]";
+        displayName = "[ACE] Medical Supply Crate";
         model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
         author = "Glowbal";
         class TransportItems {
-            class GVAR(fieldDressing) {
-                name = QGVAR(fieldDressing);
+            class ACE_fieldDressing {
+                name = "ACE_fieldDressing";
                 count = 25;
             };
-            class GVAR(packingBandage) {
-                name = QGVAR(packingBandage);
+            class ACE_packingBandage {
+                name = "ACE_packingBandage";
                 count = 25;
             };
-            class GVAR(elasticBandage) {
-                name = QGVAR(elasticBandage);
+            class ACE_elasticBandage {
+                name = "ACE_elasticBandage";
                 count = 25;
             };
-            class GVAR(tourniquet) {
-                name = QGVAR(tourniquet);
+            class ACE_tourniquet {
+                name = "ACE_tourniquet";
                 count = 15;
             };
-            class GVAR(morphine) {
-                name = QGVAR(morphine);
+            class ACE_morphine {
+                name = "ACE_morphine";
                 count = 15;
             };
-            class GVAR(atropine) {
-                name = QGVAR(atropine);
+            class ACE_atropine {
+                name = "ACE_atropine";
                 count = 15;
             };
-            class GVAR(epinephrine) {
-                name = QGVAR(epinephrine);
+            class ACE_epinephrine {
+                name = "ACE_epinephrine";
                 count = 15;
             };
-            class GVAR(plasmaIV) {
-                name = QGVAR(plasmaIV);
+            class ACE_plasmaIV {
+                name = "ACE_plasmaIV";
                 count = 7;
             };
-            class GVAR(plasmaIV_500) {
-                name = QGVAR(plasmaIV_500);
+            class ACE_plasmaIV_500 {
+                name = "ACE_plasmaIV_500";
                 count = 7;
             };
-            class GVAR(plasmaIV_250) {
-                name = QGVAR(plasmaIV_250);
+            class ACE_plasmaIV_250 {
+                name = "ACE_plasmaIV_250";
                 count = 7;
             };
-            class GVAR(salineIV) {
-                name = QGVAR(salineIV);
+            class ACE_salineIV {
+                name = "ACE_salineIV";
                 count = 7;
             };
-            class GVAR(salineIV_500) {
-                name = QGVAR(salineIV_500);
+            class ACE_salineIV_500 {
+                name = "ACE_salineIV_500";
                 count = 7;
             };
-            class GVAR(salineIV_250) {
-                name = QGVAR(salineIV_250);
+            class ACE_salineIV_250 {
+                name = "ACE_salineIV_250";
                 count = 7;
             };
-            class GVAR(bloodIV) {
-                name = QGVAR(bloodIV);
+            class ACE_bloodIV {
+                name = "ACE_bloodIV";
                 count = 7;
             };
-            class GVAR(bloodIV_500) {
-                name = QGVAR(bloodIV_500);
+            class ACE_bloodIV_500 {
+                name = "ACE_bloodIV_500";
                 count = 7;
             };
-            class GVAR(bloodIV_250) {
-                name = QGVAR(bloodIV_250);
+            class ACE_bloodIV_250 {
+                name = "ACE_bloodIV_250";
                 count = 7;
             };
-            class GVAR(quikClot) {
-                name = QGVAR(quikClot);
+            class ACE_quikClot {
+                name = "ACE_quikclot";
                 count = 20;
             };
-            class GVAR(personalAidKit) {
-                name = QGVAR(personalAidKit);
+            class ACE_personalAidKit {
+                name = "ACE_personalAidKit";
                 count = 3;
             };
-            class GVAR(surgicalKit) {
-                name = QGVAR(surgicalKit);
+            class ACE_surgicalKit {
+                name = "ACE_surgicalKit";
                 count = 2;
             };
-            class GVAR(bodyBag) {
-                name = QGVAR(bodyBag);
+            class ACE_bodyBag {
+                name = "ACE_bodyBag";
                 count = 5;
             };
         };
