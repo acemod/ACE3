@@ -9,6 +9,7 @@ PREP(compileMenuSelfAction);
 PREP(collectActiveActionTree);
 PREP(createAction);
 PREP(findActionNode);
+PREP(isSubPath);
 PREP(keyDown);
 PREP(keyDownSelfAction);
 PREP(keyUp);

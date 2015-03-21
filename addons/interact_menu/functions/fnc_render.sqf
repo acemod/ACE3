@@ -159,14 +159,18 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
         } forEach GVAR(lastPath);
     };
 
-    if(_misMatch) then {
-        GVAR(lastPath) = _hoverPath;
+    if(_misMatch && {diag_tickTime-GVAR(expandedTime) > 0.25}) then {
         GVAR(startHoverTime) = diag_tickTime;
+        GVAR(lastPath) = _hoverPath;
         GVAR(expanded) = false;
     } else {
         if(!GVAR(expanded) && diag_tickTime-GVAR(startHoverTime) > 0.25) then {
             GVAR(expanded) = true;
-            GVAR(expandedTime) = diag_tickTime;
+
+            // Start the expanding menu animation only if the user is not going up the menu
+            if !([GVAR(menuDepthPath),GVAR(lastPath)] call FUNC(isSubPath)) then {
+                GVAR(expandedTime) = diag_tickTime;
+            };
             GVAR(menuDepthPath) = +GVAR(lastPath);
 
             // Execute the current action if it's run on hover
