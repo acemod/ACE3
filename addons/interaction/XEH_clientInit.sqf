@@ -19,7 +19,7 @@ GVAR(isOpeningDoor) = false;
 ["ACE3", QGVAR(openDoor), localize "STR_ACE_Interaction_OpenDoor",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EGVAR(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if (GVAR(isOpeningDoor) || {[2] call FUNC(getDoor) select 1 == ''}) exitWith {false};
 
@@ -39,7 +39,7 @@ GVAR(isOpeningDoor) = false;
 ["ACE3", QGVAR(tapShoulder), localize "STR_ACE_Interaction_TapShoulder",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EGVAR(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player, cursorTarget] call FUNC(canTapShoulder)) exitWith {false};
 
@@ -53,7 +53,7 @@ GVAR(isOpeningDoor) = false;
 ["ACE3", QGVAR(modifierKey), localize "STR_ACE_Interaction_ModifierKey",
 {
     // Conditions: canInteract
-    //if !([ACE_player, objNull, ["isNotDragging"]] call EGVAR(common,canInteractWith)) exitWith {false};   // not needed
+    //if !([ACE_player, objNull, ["isNotDragging"]] call EFUNC(common,canInteractWith)) exitWith {false};   // not needed
 
     // Statement
     ACE_Modifier = 1;

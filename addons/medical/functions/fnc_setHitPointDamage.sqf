@@ -1,6 +1,6 @@
 /*
  * Author: KoffeinFlummi
- * My very own setHitPointDamage since BIS's one is buggy when affecting a remote unit.
+ * My very own setHitPointDamage since BIS' one is buggy when affecting a remote unit.
  * It also doesn't change the overall damage. This does.
  *
  * Arguments:
@@ -16,6 +16,10 @@
  */
 
 #include "script_component.hpp"
+#define LEGDAMAGETRESHOLD1 1
+#define LEGDAMAGETRESHOLD2 1.7
+#define ARMDAMAGETRESHOLD1 1
+#define ARMDAMAGETRESHOLD2 1.7
 
 private ["_unit", "_selection", "_damage", "_selections", "_damages", "_damageOld", "_damageSumOld", "_damageNew", "_damageSumNew", "_damageFinal"];
 
@@ -76,3 +80,22 @@ _unit setDamage _damageNew;
     _damageFinal = (_damages select _forEachIndex);
     _unit setHitPointDamage [_x, _damageFinal];
 } forEach _selections;
+
+// Leg Damage
+_legdamage = (_unit getHitPointDamage "HitLeftLeg") + (_unit getHitPointDamage "HitRightLeg");
+if (_legdamage >= LEGDAMAGETRESHOLD1) then {
+    if (_unit getHitPointDamage "HitLegs" != 1) then {_unit setHitPointDamage ["HitLegs", 1]};
+} else {
+    if (_unit getHitPointDamage "HitLegs" != 0) then {_unit setHitPointDamage ["HitLegs", 0]};
+};
+// @ŧodo: force prone for completely fucked up legs.
+
+
+// Arm Damage
+_armdamage = (_unit getHitPointDamage "HitLeftArm") + (_unit getHitPointDamage "HitRightArm");
+if (_armdamage >= ARMDAMAGETRESHOLD1) then {
+    if (_unit getHitPointDamage "HitHands" != 1) then {_unit setHitPointDamage ["HitHands", 1]};
+} else {
+    if (_unit getHitPointDamage "HitHands" != 0) then {_unit setHitPointDamage ["HitHands", 0]};
+};
+// @todo: Drop weapon for full damage.

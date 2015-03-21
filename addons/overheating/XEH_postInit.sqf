@@ -7,7 +7,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(unjamWeapon), localize "STR_ACE_Overheating_UnjamWeapon",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EGVAR(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call EFUNC(common,canUseWeapon) &&
     {currentWeapon ACE_player in (ACE_player getVariable [QGVAR(jammedWeapons), []])}
