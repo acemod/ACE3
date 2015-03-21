@@ -104,7 +104,8 @@ class GVAR(remoteInventory) {
             h = H_PART(1);
             colorText[] = {1,1,1,0.7};
             colorActive[] = {1,1,1,1};
-            tooltip = "$str_disp_close";
+            tooltip = "$STR_DISP_OPT_CLOSE";
+            onButtonClick = "closeDialog 0";
         };
         class ExternalContainerBackground: RscPicture {
             colorText[] = {1,1,1,0.1};

@@ -49,7 +49,7 @@ if (!_doNotDropAmmo) then {
 };
 
 if (isNull _holder) then {
-    _dropPos = _target modelToWorld [0, 0.75, 0];
+    _dropPos = _target modelToWorld [0.333, 0.75, 0];
     _dropPos set [2, ((getPosASL _target) select 2)];
     // _holder = createVehicle ["WeaponHolderSimulated", _dropPos, [], 0, "CAN_COLLIDE"];
     _holder = createVehicle [DISARM_CONTAINER, _dropPos, [], 0, "CAN_COLLIDE"];
@@ -240,16 +240,16 @@ systemChat format ["PFEh start %1", time];
             [_caller, _target, "Debug: Vest Not Empty"] call FUNC(eventTargetFinish);
         };
         if (_needToRemoveVest) then {
-            removeVest _target;
             _holder addItemCargoGlobal [(vest _target), 1];
+            removeVest _target;
         };
         if (_needToRemoveUniform && {!((uniformItems _target) isEqualTo [])}) exitWith {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Uniform Not Empty"] call FUNC(eventTargetFinish);
         };
         if (_needToRemoveUniform) then {
-            removeUniform _target;
             _holder addItemCargoGlobal [(uniform _target), 1];
+            removeUniform _target;
         };
 
         _holder setVariable [QGVAR(holderInUse), false];

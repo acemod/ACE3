@@ -79,7 +79,7 @@ GVAR(disarmTarget) = _target;
         _rankPicture = _display displayCtrl 1203;
 
         //Show rank and name (just like BIS's inventory)
-        _rankIndex = ["PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"] find (rank _target);
+        _rankIndex = ((["PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"] find (rank _target)) + 1);
         _rankPicture ctrlSetText (TEXTURES_RANKS select _rankIndex);
         _playerName ctrlSetText ([GVAR(disarmTarget)] call EFUNC(common,getName));
 
