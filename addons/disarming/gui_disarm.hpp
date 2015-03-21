@@ -151,7 +151,7 @@ class GVAR(remoteInventory) {
             x = X_PART(1.5);
             y = Y_PART(2.5);
             w = W_PART(11);
-            h = H_PART(21.5);
+            h = H_PART(21);
         };
         class UniformContainer: GroundContainer {
             idc = 633;
