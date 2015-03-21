@@ -30,7 +30,6 @@ GVAR(lastTime) = diag_tickTime;
 GVAR(rotationAngle) = 0;
 
 GVAR(selectedAction) = [[],[]];
-GVAR(selectedStatement) = {};
 GVAR(actionSelected) = false;
 GVAR(selectedTarget) = objNull;
 
