@@ -83,8 +83,9 @@ if (GVAR(level) >= 2) then {
     _bloodPressure = [_unit] call FUNC(getBloodPressure);
     _unit setvariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];
 
+    // TODO Disabled until implemented fully
     // Handle airway
-    if (GVAR(setting_allowAirwayInjuries)) then {
+    /*if (GVAR(setting_allowAirwayInjuries)) then {
         _airwayStatus = _unit getvariable [QGVAR(airwayStatus), 100];
         if (((_unit getvariable [QGVAR(airwayOccluded), false]) || (_unit getvariable [QGVAR(airwayCollapsed), false])) && !((_unit getvariable [QGVAR(airwaySecured), false]))) then {
             if (_airwayStatus >= 0.5) then {
@@ -103,12 +104,11 @@ if (GVAR(level) >= 2) then {
                 [_unit, true] call FUNC(setDead);
             };
         };
-    };
+    };*/
 
     // Check vitals for medical status
     // TODO check for in revive state instead of variable
-    // TODO Implement cardiac arrest.
-  _bloodPressureL = _bloodPressure select 0;
+    _bloodPressureL = _bloodPressure select 0;
     _bloodPressureH = _bloodPressure select 1;
 
     if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
