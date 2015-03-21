@@ -20,3 +20,4 @@ class CfgPatches {
 #include "ACE_Medical_Treatments.hpp"
 #include "ACE_Settings.hpp"
 #include "UI\RscTitles.hpp"
+#include "UI\triagecard.hpp"
