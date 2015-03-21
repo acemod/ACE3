@@ -3,7 +3,7 @@
 ["ACE3", QGVAR(AzimuthKey), localize "STR_ACE_Vector_AzimuthKey",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EGVAR(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(currentWeapon ACE_player == "ACE_Vector" && {ACE_player == cameraOn} && {cameraView == "GUNNER"}) exitWith {false};
 
@@ -20,7 +20,7 @@
     GVAR(isDownStateKey1) = false;
 
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EGVAR(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
     ["azimuth"] call FUNC(onKeyUp);
@@ -32,7 +32,7 @@
 ["ACE3", QGVAR(DistanceKey), localize "STR_ACE_Vector_DistanceKey",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EGVAR(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(currentWeapon ACE_player == "ACE_Vector" && {ACE_player == cameraOn} && {cameraView == "GUNNER"}) exitWith {false};
 
@@ -49,7 +49,7 @@
     GVAR(isDownStateKey2) = false;
 
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EGVAR(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
     ["distance"] call FUNC(onKeyUp);
