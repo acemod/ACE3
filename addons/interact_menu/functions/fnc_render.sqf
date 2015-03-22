@@ -41,17 +41,17 @@ if (GVAR(keyDown)) then {
 
             // Iterate through object actions, find base level actions and render them if appropiate
             _actionsVarName = format [QGVAR(Act_%1), typeOf _target];
-            GVAR(objectActions) = _target getVariable [QGVAR(actions), []];
+            GVAR(objectActionList) = _target getVariable [QGVAR(actions), []];
             {
-                _action = _x;
                 // Only render them directly if they are base level actions
-                if (count ((_action select 0) select 7) == 1) then {
+                if (count (_x select 1) == 0) then {
                     // Try to render the menu
+                    _action = [_x,[]];
                     if ([_target, _action] call FUNC(renderBaseMenu)) then {
                         _numInteractions = _numInteractions + 1;
                     };
                 };
-            } forEach GVAR(objectActions);
+            } forEach GVAR(objectActionList);
 
             // Iterate through base level class actions and render them if appropiate
             _classActions = missionNamespace getVariable [_actionsVarName, []];
@@ -80,7 +80,7 @@ if (GVAR(keyDown)) then {
 
         // Iterate through object actions, find base level actions and render them if appropiate
         _actionsVarName = format [QGVAR(SelfAct_%1), typeOf _target];
-        GVAR(objectActions) = _target getVariable [QGVAR(selfActions), []];
+        GVAR(objectActionList) = _target getVariable [QGVAR(selfActions), []];
         /*
         {
             _action = _x;
@@ -88,7 +88,7 @@ if (GVAR(keyDown)) then {
             if (count (_action select 7) == 1) then {
                 [_target, _action, 0, [180, 360]] call FUNC(renderMenu);
             };
-        } forEach GVAR(objectActions);
+        } forEach GVAR(objectActionList);
         */
 
         // Iterate through base level class actions and render them if appropiate
@@ -142,9 +142,8 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,.75], _pos, 0.6*SafeZoneW, 0.6*SafeZoneW, GVAR(rotationAngle), "", 0.5, 0.025, "TahomaB"];
     _foundTarget = true;
     GVAR(actionSelected) = true;
-    GVAR(selectedTarget) = (_closest select 0) select 0;
     GVAR(selectedAction) = (_closest select 0) select 1;
-    GVAR(selectedStatement) = ((GVAR(selectedAction)) select 0) select 3;
+    GVAR(selectedTarget) = (GVAR(selectedAction)) select 2;
 
     _misMatch = false;
     _hoverPath = (_closest select 2);
@@ -153,29 +152,46 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
         _misMatch = true;
     } else {
         {
-            if(_x != (_hoverPath select _forEachIndex)) exitWith {
+            if !(_x isEqualTo (_hoverPath select _forEachIndex)) exitWith {
                 _misMatch = true;
             };
         } forEach GVAR(lastPath);
     };
 
-    if(_misMatch) then {
-        GVAR(lastPath) = _hoverPath;
+    if(_misMatch && {diag_tickTime-GVAR(expandedTime) > 0.25}) then {
         GVAR(startHoverTime) = diag_tickTime;
+        GVAR(lastPath) = _hoverPath;
         GVAR(expanded) = false;
     } else {
         if(!GVAR(expanded) && diag_tickTime-GVAR(startHoverTime) > 0.25) then {
             GVAR(expanded) = true;
+
+            // Start the expanding menu animation only if the user is not going up the menu
+            if !([GVAR(menuDepthPath),GVAR(lastPath)] call FUNC(isSubPath)) then {
+                GVAR(expandedTime) = diag_tickTime;
+            };
             GVAR(menuDepthPath) = +GVAR(lastPath);
 
             // Execute the current action if it's run on hover
             private "_runOnHover";
-            _runOnHover = ((GVAR(selectedAction) select 0) select 6) select 3;
+            _runOnHover = ((GVAR(selectedAction) select 0) select 9) select 3;
             if (_runOnHover) then {
                 this = GVAR(selectedTarget);
                 _player = ACE_Player;
                 _target = GVAR(selectedTarget);
-                [GVAR(selectedTarget), ACE_player] call GVAR(selectedStatement);
+
+                // Clear the conditions caches
+                ["clearConditionCaches", []] call EFUNC(common,localEvent);
+
+                // Check the action conditions
+                _actionData = GVAR(selectedAction) select 0;
+                if ([_target, _player, _actionData select 6] call (_actionData select 4)) then {
+                    // Call the statement
+                    [_target, _player, _actionData select 6] call (_actionData select 3);
+
+                    // Clear the conditions caches again if the action was performed
+                    ["clearConditionCaches", []] call EFUNC(common,localEvent);
+                };
             };
         };
     };

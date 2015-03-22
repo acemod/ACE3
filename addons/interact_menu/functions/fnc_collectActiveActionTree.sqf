@@ -5,6 +5,7 @@
  * Argument:
  * 0: Object <OBJECT>
  * 1: Original action tree <ARRAY>
+ * 2: Parent path <ARRAY>
  *
  * Return value:
  * Active children <ARRAY>
@@ -13,24 +14,39 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_object,_origAction);
+EXPLODE_3_PVT(_this,_object,_origAction,_parentPath);
 EXPLODE_2_PVT(_origAction,_origActionData,_origActionChildren);
 
-private ["_resultingAction","_target","_player","_activeChildren","_action","_actionData","_x"];
+private ["_target","_player","_fullPath","_activeChildren","_dynamicChildren","_action","_actionData","_x"];
 
 _target = _object;
 _player = ACE_player;
 
 // Return nothing if the action itself is not active
-if !([_target, ACE_player] call (_origActionData select 4)) exitWith {
+if !([_target, ACE_player, _origActionData select 6] call (_origActionData select 4)) exitWith {
     []
 };
 
+_fullPath = +_parentPath;
+_fullPath pushBack (_origActionData select 0);
 _activeChildren = [];
+
+// If there's a statement to dynamically insert children then execute it
+if !({} isEqualTo (_origActionData select 5)) then {
+    _dynamicChildren = [_target, ACE_player, _origActionData select 6] call (_origActionData select 5);
+
+    // Collect dynamic children class actions
+    {
+        _action = [_x select 2, _x, _fullPath] call FUNC(collectActiveActionTree);
+        if ((count _action) > 0) then {
+            _activeChildren pushBack _action;
+        };
+    } forEach _dynamicChildren;
+};
 
 // Collect children class actions
 {
-    _action = [_object, _x] call FUNC(collectActiveActionTree);
+    _action = [_object, _x, _fullPath] call FUNC(collectActiveActionTree);
     if ((count _action) > 0) then {
         _activeChildren pushBack _action;
     };
@@ -38,26 +54,15 @@ _activeChildren = [];
 
 // Collect children object actions
 {
-    _action = _x;
-    _actionData = _action select 0;
+    EXPLODE_2_PVT(_x,_actionData,_pPath);
 
     // Check if the action is children of the original action
-    if ((count (_actionData select 7)) == (count (_origActionData select 7) + 1)) then {
+    if (count _pPath == count _fullPath &&
+        {_pPath isEqualTo _fullPath}) then {
 
-        // Compare parent path to see if it's a suitable child
-        private "_isChild";
-        _isChild = true;
-        {
-            if !(_x isEqualTo ((_actionData select 7) select _forEachIndex)) exitWith {
-                _isChild = false;
-            };
-        } forEach (_origActionData select 7);
-
-        if (_isChild) then {
-            _action = [_object, _action] call FUNC(collectActiveActionTree);
-            if ((count _action) > 0) then {
-                _activeChildren pushBack _action;
-            };
+        _action = [_object, _action, _fullPath] call FUNC(collectActiveActionTree);
+        if ((count _action) > 0) then {
+            _activeChildren pushBack _action;
         };
     };
 } forEach GVAR(objectActions);
@@ -69,4 +74,5 @@ if ((count _activeChildren) == 0 && ((_origActionData select 3) isEqualTo {})) e
     []
 };
 
-[_origActionData, _activeChildren]
+
+[_origActionData, _activeChildren, _object]

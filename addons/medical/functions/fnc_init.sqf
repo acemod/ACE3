@@ -74,3 +74,8 @@ _logs = _unit getvariable [QGVAR(allLogs), []];
     _unit setvariable [_x, nil, true];
 } foreach _logs;
 _unit setvariable [QGVAR(allLogs), [], true];
+
+// items
+[{
+    _this call FUNC(itemCheck);
+}, [_unit], 0.5, 0.1] call EFUNC(common,waitAndExecute);

@@ -13,6 +13,7 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["medical_propagateWound", FUNC(onPropagateWound)] call ace_common_fnc_addEventHandler;
 ["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call ace_common_fnc_addEventHandler;
 ["carryObjectDropped", FUNC(onCarryObjectDropped)] call ace_common_fnc_addEventHandler;
+["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call ace_common_fnc_addEventHandler;
 
 // Initialize all effects
 _fnc_createEffect = {
@@ -218,7 +219,7 @@ if (isNil QGVAR(level)) then {
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
 // broadcast injuries to JIP clients in a MP session
-if (isMultiplayer) then {
+if (isMultiplayer and GVAR(level) >= 2) then {
     [QGVAR(onPlayerConnected), "onPlayerConnected", {
         if (isNil QGVAR(InjuredCollection)) then {
             GVAR(InjuredCollection) = [];

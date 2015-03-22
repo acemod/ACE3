@@ -7,7 +7,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(speedLimiter), localize "STR_ACE_SpeedLimiter",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EGVAR(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(ACE_player == driver vehicle ACE_player &&
     {vehicle ACE_player isKindOf 'Car' ||

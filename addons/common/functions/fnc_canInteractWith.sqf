@@ -1,16 +1,16 @@
 /*
  * Author: commy2
- *
  * Check if the unit can interact.
  *
  * Arguments:
- * 0: The player. (Object)
- * 1: The interaction target. objNull to ignore. (Object)
- * 2: Exceptions. What general conditions are to skip? (Array)
+ * 0: The player. <OBJECT>
+ * 1: The interaction target. objNull to ignore. <OBJECT>
+ * 2: Exceptions. What general conditions are to skip? <ARRAY> (Optional)
  *
  * Return Value:
  * Unit can interact?
  *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -18,7 +18,11 @@ private ["_unit", "_target", "_exceptions"];
 
 _unit = _this select 0;
 _target = _this select 1;
-_exceptions = _this select 2;
+_exceptions = if (count _this > 2) then {
+    _this select 2;
+} else {
+    [];
+};
 
 _exceptions = [_exceptions, {toLower _this}] call FUNC(map);
 
