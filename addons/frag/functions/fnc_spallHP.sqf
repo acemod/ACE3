@@ -21,7 +21,7 @@ if((_this select 0) <= (count GVAR(spallHPData))) then {
 						// diag_log text format["%1: %2", _forEachIndex, _x];
 					// } forEach _hp;
 				// } forEach (_this select 1);
-				[FUNC(doSpall), 0, [_this, _forEachIndex]] call cba_fnc_addPerFrameHandler;
+				[DFUNC(doSpall), 0, [_this, _forEachIndex]] call cba_fnc_addPerFrameHandler;
 				// player sideChat "WEEE";
 			} forEach (_this select 1);
 		};
