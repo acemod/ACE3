@@ -18,8 +18,6 @@ _caller = _this select 0;
 _target = _caller getvariable [QGVAR(carrying), objNull];
 _carrying = _caller getvariable [QGVAR(isCarrying), -1];
 
-systemChat format["handle onCarryObjectDropped %1", [_this, _target, _carrying]];
-
 if (_carrying >= 0) then {
 
 	_caller setvariable [QGVAR(isCarrying), -1, true];

@@ -39,6 +39,4 @@ _actions = [];
     };
 } forEach crew _vehicle;
 
-systemChat str(count _actions);
-
 _actions
