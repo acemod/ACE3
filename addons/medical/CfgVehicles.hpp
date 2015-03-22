@@ -7,7 +7,6 @@ class CfgVehicles {
         };
     };
     class ACE_Module;
-
     // TODO localization for all the modules
     class ACE_moduleMedicalSettings: ACE_Module {
         scope = 2;

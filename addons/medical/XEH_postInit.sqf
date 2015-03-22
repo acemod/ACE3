@@ -2,7 +2,6 @@
 
 #include "script_component.hpp"
 
-if (!hasInterface) exitwith{};
 GVAR(enabledFor) = 1; // TODO remove this once we implement settings. Just here to get the vitals working.
 
 GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "ACE_heartbeat_fast_3"];
@@ -219,23 +218,13 @@ if (isNil QGVAR(level)) then {
 
 // broadcast injuries to JIP clients in a MP session
 if (isMultiplayer) then {
-    [QGVAR(onPlayerConnected), "onPlayerConnected", {
-        if (GVAR(level) >= 2) then {
-            if (isNil QGVAR(InjuredCollection)) then {
-                GVAR(InjuredCollection) = [];
-            };
-
-            {
-                _unit = _x;
-                _openWounds = _unit getvariable [QGVAR(openWounds), []];
-                {
-                    ["medical_propagateWound", [_id], [_unit, _x]] call EFUNC(common,targetEvent);
-                }foreach _openWounds;
-            }foreach GVAR(InjuredCollection);
-        };
-    }, []] call BIS_fnc_addStackedEventHandler;
+    // We are only pulling the wounds for the units in the player group. Anything else will come when the unit interacts with them.
+    if (hasInterface) then {
+        {
+            [_x, player] call FUNC(requestWoundSync);
+        }foreach units group player;
+    };
 };
-
 
 [
     {(((_this select 0) getvariable [QGVAR(bloodVolume), 0]) < 65)},
