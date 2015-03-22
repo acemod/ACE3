@@ -45,15 +45,16 @@ _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 
 [_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_wounds);
 
-if (GVAR(enableAirway)) then {
-    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_airway);
-};
-if (GVAR(enableFractures)) then {
-    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_fractures);
-};
-if (GVAR(enableInternalBleeding)) then {
-    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_internalInjuries);
-};
+// TODO Disabled until implemented fully
+//if (GVAR(enableAirway)) then {
+//    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_airway);
+//};
+//if (GVAR(enableFractures)) then {
+//    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_fractures);
+//};
+//if (GVAR(enableInternalBleeding)) then {
+//    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_internalInjuries);
+//};
 
 if (alive _unit && {!(_unit getvariable ["ACE_isUnconscious", false])}) then {
     [_unit, _newDamage] call FUNC(reactionToDamage);

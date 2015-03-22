@@ -5,6 +5,9 @@
     <Key ID="STR_ACE_Interaction_MainAction">
       <English>Interactions &gt;&gt;</English>
     </Key>
+    <Key ID="STR_ACE_Interaction_Torso">
+      <English>Torso &gt;&gt;</English>
+    </Key>
     <Key ID="STR_ACE_Interaction_Head">
       <English>Head &gt;&gt;</English>
     </Key>
@@ -649,6 +652,9 @@
       <Russian>Взаимодействовать</Russian>
       <Polish>Interakcja</Polish>
       <Spanish>Interactuar</Spanish>
+    </Key>
+    <Key ID="STR_ACE_Interaction_Passengers">
+      <English>Passengers &gt;&gt;</English>
     </Key>
   </Package>
 </Project>

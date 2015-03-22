@@ -23,11 +23,9 @@ _target = _this select 1;
 _className = _this select 3;
 
 // reduce pain, pain sensitivity
-_morphine = (_target getVariable [QGVAR(morphine), 0] + MORPHINEHEAL) min 1;
+_morphine = ((_target getVariable [QGVAR(morphine), 0]) + MORPHINEHEAL) min 1;
 _target setVariable [QGVAR(morphine), _morphine, true];
 _pain = ((_target getVariable [QGVAR(pain), 0]) - MORPHINEHEAL) max 0;
 _target setVariable [QGVAR(pain), _pain, true];
 
 // @todo overdose
-
-// @todo pain, painkiller reduction

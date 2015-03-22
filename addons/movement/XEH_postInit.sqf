@@ -21,7 +21,7 @@
 ["ACE3", QGVAR(climb), localize "STR_ACE_Movement_Climb",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EGVAR(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if (ACE_player != (vehicle ACE_player)) exitWith {false};
 

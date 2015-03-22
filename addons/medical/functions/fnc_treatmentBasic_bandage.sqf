@@ -32,6 +32,4 @@ if (_selection == "all") then {
 
     _damage = ((_target getHitPointDamage _point) - BANDAGEHEAL) max 0;
     [_target, _point, _damage] call FUNC(setHitPointDamage);
-
-    // @todo: leg/arm damage - in setHitPointDamage?
 };

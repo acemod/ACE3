@@ -5,7 +5,7 @@ EXPLODE_3_PVT(_this,_tapper,_target,_shoulderNum);
 
 if (_target != ACE_player) exitWith {
     addCamShake [4, 0.5, 5];
-    ACE_player playActionNow 'gestureAdvance';
+    ACE_player playActionNow "PutDown";
     if !(local _target) then {
         [[_tapper, _target, _shoulderNum], QUOTE(DFUNC(tapShoulder)), _target] call EFUNC(common,execRemoteFnc);
     };

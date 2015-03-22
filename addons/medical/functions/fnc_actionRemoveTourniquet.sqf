@@ -36,6 +36,6 @@ _tourniquets set[_part, 0];
 _target setvariable [QGVAR(tourniquets), _tourniquets, true];
 
 // Adding the tourniquet item to the caller
-_caller addItem QGVAR(tourniquet);
+_caller addItem "ACE_tourniquet";
 
 // "AinvPknlMstpSlayWrflDnon_medic

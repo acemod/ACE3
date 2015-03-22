@@ -31,6 +31,10 @@ if (count _this > 1) then {
     };
 };
 
-_unit playActionNow "Gear";
+if (_unit == _target) then {
+    _unit playActionNow "Gear";
+} else {
+    _unit playActionNow "PutDown";
+};
 
 [FUNC(displayAmmo), [_target], 1, 0.1] call EFUNC(common,waitAndExecute);
