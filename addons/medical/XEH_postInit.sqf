@@ -219,7 +219,7 @@ if (isNil QGVAR(level)) then {
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
 // broadcast injuries to JIP clients in a MP session
-if (isMultiplayer and GVAR(level) >= 2) then {
+if (isMultiplayer && GVAR(level) >= 2) then {
     [QGVAR(onPlayerConnected), "onPlayerConnected", {
         if (isNil QGVAR(InjuredCollection)) then {
             GVAR(InjuredCollection) = [];

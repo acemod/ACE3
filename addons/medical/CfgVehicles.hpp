@@ -433,6 +433,28 @@ class CfgVehicles {
                         enableInside = 1;
                         icon = PATHTOF(UI\icons\bandage.paa);
                     };
+                    class Carry {
+                        displayName = "$STR_ACE_MEDICAL_CARRY";
+                        distance = 2.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'Carry')] call DFUNC(canTreatCached));
+                        statement = QUOTE([ARR_4(_player, _target, 'body', 'Carry')] call DFUNC(treatment));
+                        showDisabled = 1;
+                        priority = 2;
+                        hotkey = "";
+                        enableInside = 1;
+                        //icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                    class Drag {
+                        displayName = "$STR_ACE_MEDICAL_DRAG";
+                        distance = 2.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'Drag')] call DFUNC(canTreatCached));
+                        statement = QUOTE([ARR_4(_player, _target, 'body', 'Drag')] call DFUNC(treatment));
+                        showDisabled = 1;
+                        priority = 2;
+                        hotkey = "";
+                        enableInside = 1;
+                        //icon = PATHTOF(UI\icons\bandage.paa);
+                    };
 
                     class TriageCard {
                         displayName = "Triage Card";
