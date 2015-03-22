@@ -60,7 +60,6 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, true)] call  DFUNC(actionCarryUnit));
             callbackFailure = "";
             callbackProgress = "";
-            animationPatient = "";
             itemConsumed = 0;
             animationPatient = "";
             animationCaller = "";
@@ -235,7 +234,6 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, true)] call  DFUNC(actionCarryUnit));
             callbackFailure = "";
             callbackProgress = "";
-            animationPatient = "";
             itemConsumed = 0;
             animationPatient = "";
             animationCaller = "";
