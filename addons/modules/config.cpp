@@ -19,9 +19,9 @@ class CfgVehicles {
         };
     };
     class ACE_Module: Module_F {
-    	class EventHandlers {
-    		init = QUOTE(_this call DFUNC(moduleInit));
-    	};
+        class EventHandlers {
+            init = QUOTE(_this call DFUNC(moduleInit));
+        };
     };
 };
 
