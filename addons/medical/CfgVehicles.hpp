@@ -7,7 +7,7 @@ class CfgVehicles {
         };
     };
     // TODO localization for all the modules
-    class ACE_moduleMedicalSettings: Module_F {
+    class ACE_moduleMedicalSettings: ACE_Module {
         scope = 2;
         displayName = "Medical Settings [ACE]";
         icon = QUOTE(PATHTOF(ui\moduleIcon.paa));
@@ -129,7 +129,7 @@ class CfgVehicles {
         };
     };
 
-    class ACE_moduleTreatmentConfiguration: Module_F {
+    class ACE_moduleTreatmentConfiguration: ACE_Module {
         scope = 2;
         displayName = "Treatment Configuration [ACE]";
         icon = QUOTE(PATHTOF(ui\moduleIcon.paa));
