@@ -13,8 +13,7 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
 ["ACE3", QGVAR(switchGrenadeMode), localize "STR_ACE_Grenades_SwitchGrenadeMode",
 {
     // Conditions: canInteract
-    _exceptions = [QEGVAR(captives,isNotEscorting)];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if (!([ACE_player] call EFUNC(common,canUseWeapon))) exitWith {false};
 

@@ -2,8 +2,8 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {QGVAR(fieldDressingItem), QGVAR(packingBandageItem), QGVAR(elasticBandageItem), QGVAR(tourniquetItem), QGVAR(morphineItem), QGVAR(atropineItem), QGVAR(epinephrineItem), QGVAR(plasmaIVItem), QGVAR(bloodIVItem), QGVAR(salineIVItem), QGVAR(quikclotItem), QGVAR(personalAidKitItem), QGVAR(surgicalKitItem), QGVAR(bodyBagItem)};
-        weapons[] = {QGVAR(fieldDressing), QGVAR(packingBandage), QGVAR(elasticBandage), QGVAR(tourniquet), QGVAR(morphine), QGVAR(atropine), QGVAR(epinephrine), QGVAR(plasmaIV), QGVAR(plasmaIV_500), QGVAR(plasmaIV_250), QGVAR(bloodIV), QGVAR(bloodIV_500), QGVAR(bloodIV_250), QGVAR(salineIV), QGVAR(salineIV_500), QGVAR(salineIV_250), QGVAR(quikclot), QGVAR(personalAidKit), QGVAR(surgicalKit), QGVAR(bodyBag)};
+        units[] = {"ACE_medicalSupplyCrate", "ACE_fieldDressingItem", "ACE_packingBandageItem", "ACE_elasticBandageItem", "ACE_tourniquetItem", "ACE_morphineItem", "ACE_atropineItem", "ACE_epinephrineItem", "ACE_plasmaIVItem", "ACE_bloodIVItem", "ACE_salineIVItem", "ACE_quikclotItem", "ACE_personalAidKitItem", "ACE_surgicalKitItem", "ACE_bodyBagItem"};
+        weapons[] = {"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_tourniquet", "ACE_morphine", "ACE_atropine", "ACE_epinephrine", "ACE_plasmaIV", "ACE_plasmaIV_500", "ACE_plasmaIV_250", "ACE_bloodIV", "ACE_bloodIV_500", "ACE_bloodIV_250", "ACE_salineIV", "ACE_salineIV_500", "ACE_salineIV_250", "ACE_quikclot", "ACE_personalAidKit", "ACE_surgicalKit", "ACE_bodyBag"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {ace_common, ace_interaction};
         author[] = {"Glowbal", "KoffienFlummi"};
@@ -20,3 +20,4 @@ class CfgPatches {
 #include "ACE_Medical_Treatments.hpp"
 #include "ACE_Settings.hpp"
 #include "UI\RscTitles.hpp"
+#include "UI\triagecard.hpp"

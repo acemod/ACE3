@@ -112,8 +112,20 @@ if (_selection == "") then {
 };
 
 
-// Assign orphan structural damage to torso;
-// @todo
+// Assign orphan structural damage to torso
+[{
+    private ["_unit", "_damagesum"];
+    _unit = _this select 0;
+    _damagesum = (_unit getHitPointDamage "HitHead") +
+        (_unit getHitPointDamage "HitBody") +
+        (_unit getHitPointDamage "HitLeftArm") +
+        (_unit getHitPointDamage "HitRightArm") +
+        (_unit getHitPointDamage "HitLeftLeg") +
+        (_unit getHitPointDamage "HitRightLeg");
+    if (_damagesum < 0.06 and damage _unit > 0.06 and alive _unit) then {
+        _unit setHitPointDamage ["HitBody", damage _unit];
+    };
+}, [_unit], 2, 0.1] call EFUNC(common,waitAndExecute);
 
 
 if (_selection == "") then {
@@ -137,7 +149,7 @@ if (_legdamage >= LEGDAMAGETRESHOLD1) then {
 } else {
     if (_unit getHitPointDamage "HitLegs" != 0) then {_unit setHitPointDamage ["HitLegs", 0]};
 };
-// @ŧodo: force prone for completely fucked up legs.
+// @todo: force prone for completely fucked up legs.
 
 
 // Arm Damage
@@ -171,9 +183,8 @@ if (_selection == "" and
     _damageReturn < 1 and
     !(_unit getVariable [QGVAR(isUnconscious), False]
 )) then {
-    // random chance to kill AI instead of knocking them out
-    if (_unit getVariable [QGVAR(allowUnconscious), ([_unit] call EFUNC(common,isPlayer)) or random 1 > 0.5]) then {
-        hint "unconscious"; // @todo
+    if (_unit getVariable [QGVAR(allowUnconscious), ([_unit] call EFUNC(common,isPlayer)) or random 1 > 0.3]) then {
+        [_unit, true] call FUNC(setUnconscious);
     } else {
         _damageReturn = 1;
     };

@@ -7,8 +7,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(SelectPistol), localize "STR_ACE_WeaponSelect_SelectPistol",
 {
     // Conditions: canInteract
-    _exceptions = [QEGVAR(interaction,isNotEscorting)];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
 
@@ -22,8 +21,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(SelectRifle), localize "STR_ACE_WeaponSelect_SelectRifle",
 {
     // Conditions: canInteract
-    _exceptions = [QEGVAR(interaction,isNotEscorting)];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
 
@@ -37,8 +35,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(SelectRifleMuzzle), localize "STR_ACE_WeaponSelect_SelectRifleMuzzle",
 {
     // Conditions: canInteract
-    _exceptions = [QEGVAR(interaction,isNotEscorting)];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
 
@@ -52,8 +49,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(SelectLauncher), localize "STR_ACE_WeaponSelect_SelectLauncher",
 {
     // Conditions: canInteract
-    _exceptions = [QEGVAR(interaction,isNotEscorting)];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
 
@@ -67,8 +63,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(SelectBinocular), localize "STR_ACE_WeaponSelect_SelectBinocular",
 {
     // Conditions: canInteract
-    _exceptions = [QEGVAR(interaction,isNotEscorting)];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
 
@@ -82,8 +77,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(SelectGrenadeFrag), localize "STR_ACE_WeaponSelect_SelectGrenadeFrag",
 {
     // Conditions: canInteract
-    _exceptions = [QEGVAR(interaction,isNotEscorting)];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
 
@@ -97,8 +91,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(SelectGrenadeOther), localize "STR_ACE_WeaponSelect_SelectGrenadeOther",
 {
     // Conditions: canInteract
-    _exceptions = [QEGVAR(interaction,isNotEscorting)];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
 
@@ -112,8 +105,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(HolsterWeapon), localize "STR_ACE_WeaponSelect_HolsterWeapon",
 {
     // Conditions: canInteract
-    _exceptions = [QEGVAR(interaction,isNotEscorting)];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
 
@@ -127,8 +119,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(EngineOn), localize "STR_ACE_WeaponSelect_EngineOn",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(ACE_player != vehicle ACE_player && {ACE_player == driver vehicle ACE_player} && {!isEngineOn vehicle ACE_player}) exitWith {false};
 
@@ -142,8 +133,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(EngineOff), localize "STR_ACE_WeaponSelect_EngineOff",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(ACE_player != vehicle ACE_player && {ACE_player == driver vehicle ACE_player} && {isEngineOn vehicle ACE_player}) exitWith {false};
 
@@ -157,8 +147,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(SelectMainGun), localize "STR_ACE_WeaponSelect_SelectMainGun",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(ACE_player != vehicle ACE_player) exitWith {false};
 
@@ -172,8 +161,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(SelectMachineGun), localize "STR_ACE_WeaponSelect_SelectMachineGun",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(ACE_player != vehicle ACE_player) exitWith {false};
 
@@ -187,8 +175,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(SelectMissiles), localize "STR_ACE_WeaponSelect_SelectMissiles",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(ACE_player != vehicle ACE_player) exitWith {false};
 
@@ -202,8 +189,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(FireSmokeLauncher), localize "STR_ACE_WeaponSelect_FireSmokeLauncher",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(ACE_player != vehicle ACE_player && {ACE_player == commander vehicle ACE_player}) exitWith {false};
 

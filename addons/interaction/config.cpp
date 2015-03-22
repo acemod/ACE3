@@ -5,7 +5,7 @@ class CfgPatches {
     units[] = {};
     weapons[] = {};
     requiredVersion = REQUIRED_VERSION;
-    requiredAddons[] = {"ace_common"};
+    requiredAddons[] = {"ace_interact_menu"};
     author[] = {"commy2", "KoffeinFlummi", "CAA-Picard", "bux578"};
     authorUrl = "https://github.com/commy2/";
     VERSION_CONFIG;
@@ -22,11 +22,5 @@ class ACE_Settings {
   class GVAR(EnableTeamManagement) {
     value = 1;
     typeName = "BOOL";
-  };
-};
-
-class ACE_canInteractConditions {
-  class GVAR(isNotSwimming) {
-    condition = QUOTE( !underwater ACE_player );
   };
 };

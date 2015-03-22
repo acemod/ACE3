@@ -19,8 +19,7 @@ GVAR(isOpeningDoor) = false;
 ["ACE3", QGVAR(openDoor), localize "STR_ACE_Interaction_OpenDoor",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if (GVAR(isOpeningDoor) || {[2] call FUNC(getDoor) select 1 == ''}) exitWith {false};
 
@@ -40,8 +39,7 @@ GVAR(isOpeningDoor) = false;
 ["ACE3", QGVAR(tapShoulder), localize "STR_ACE_Interaction_TapShoulder",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player, cursorTarget] call FUNC(canTapShoulder)) exitWith {false};
 
@@ -55,8 +53,7 @@ GVAR(isOpeningDoor) = false;
 ["ACE3", QGVAR(modifierKey), localize "STR_ACE_Interaction_ModifierKey",
 {
     // Conditions: canInteract
-    _exceptions = ["ACE_Drag_isNotDragging"];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    //if !([ACE_player, objNull, ["isNotDragging"]] call EFUNC(common,canInteractWith)) exitWith {false};   // not needed
 
     // Statement
     ACE_Modifier = 1;
@@ -69,3 +66,5 @@ GVAR(isOpeningDoor) = false;
     false;
 },
 [29, [false, false, false]], false] call cba_fnc_addKeybind;
+
+["isNotSwimming", {!underwater (_this select 0)}] call EFUNC(common,addCanInteractWithCondition);

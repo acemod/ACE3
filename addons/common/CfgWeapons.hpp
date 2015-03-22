@@ -7,14 +7,22 @@ class CfgWeapons {
         simulation = "ItemMineDetector";
     };
 
-    class Rifle_Base_F;
+    class Rifle;
+    class Rifle_Base_F: Rifle {
+        class WeaponSlotsInfo;
+    };
+
     class ACE_FakePrimaryWeapon: Rifle_Base_F {
+        scope = 2;
+        displayName = "";
+        model = "";
+        picture = "";
+        magazines[] = {"ACE_FakeMagazine"};
         discreteDistance[] = {};
         discreteDistanceInitIndex = 0;
-        displayName = "";
-        picture = "";
-        model = "";
-        magazines[] = {"ACE_FakeMagazine"};
-        scope = 2;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 0;
+        };
     };
 };

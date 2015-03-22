@@ -1,16 +1,15 @@
 
 class ACE_Medical_Actions {
     class Basic {
-        // @todo: localization
         class Bandage {
-            displayName = "Bandage";
-            displayNameProgress = "Bandaging ...";
+            displayName = "$STR_ACE_Medical_Bandage";
+            displayNameProgress = "$STR_ACE_Medical_Bandaging";
 
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 5;
             treatmentTimeSelfCoef = 1;
-            items[] = {{QGVAR(fieldDressing), QGVAR(packingBandage), QGVAR(elasticBandage), QGVAR(quikClot)}};
+            items[] = {{"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_quikclot"}};
             condition = "";
             itemConsumed = 1;
 
@@ -25,28 +24,28 @@ class ACE_Medical_Actions {
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
         };
         class Morphine: Bandage {
-            displayName = "Morphine";
-            displayNameProgress = "Injecting Morphine ...";
+            displayName = "$STR_ACE_Medical_Inject_Morphine";
+            displayNameProgress = "$STR_ACE_Medical_Injecting_Morphine";
             treatmentTime = 2;
-            items[] = {QGVAR(morphine)};
+            items[] = {"ACE_morphine"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_morphine));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
-        class Epipen: Bandage {
-            displayName = "Epinephrine";
-            displayNameProgress = "Injecting Epinephrine ...";
+        class Epinephrine: Bandage {
+            displayName = "$STR_ACE_Medical_Inject_Epinephrine";
+            displayNameProgress = "$STR_ACE_Medical_Injecting_Epinephrine";
             requiredMedic = 1;
             treatmentTime = 3;
-            items[] = {QGVAR(epipen)};
+            items[] = {"ACE_epinephrine"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_epipen));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
-        class Bloodbag: Bandage {
-            displayName = "Blood Bag";
-            displayNameProgress = "Transfusing Blood ...";
+        class BloodIV: Bandage {
+            displayName = "$STR_ACE_Medical_Transfuse_Blood";
+            displayNameProgress = "$STR_ACE_Medical_Transfusing_Blood";
             requiredMedic = 1;
             treatmentTime = 20;
-            items[] = {{QGVAR(bloodIV), QGVAR(bloodIV_500), QGVAR(bloodIV_250)}};
+            items[] = {{"ACE_bloodIV", "ACE_bloodIV_500", "ACE_bloodIV_250"}};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
@@ -61,7 +60,7 @@ class ACE_Medical_Actions {
             // The time it takes for a treatment action to complete. Time is in seconds.
             treatmentTime = 5;
             // Item required for the action. Leave empty for no item required.
-            items[] = {QGVAR(fieldDressing)};
+            items[] = {"ACE_fieldDressing"};
             condition = "";
             // Callbacks
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_bandage));
@@ -75,67 +74,67 @@ class ACE_Medical_Actions {
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
         };
         class PackingBandage: fieldDressing {
-            items[] = {QGVAR(packingBandage)};
+            items[] = {"ACE_packingBandage"};
         };
         class ElasticBandage: fieldDressing {
-            items[] = {QGVAR(elasticBandage)};
+            items[] = {"ACE_elasticBandage"};
         };
         class QuikClot: fieldDressing {
-            items[] = {QGVAR(quikClot)};
+            items[] = {"ACE_quikclot"};
         };
         class Tourniquet: fieldDressing {
-            items[] = {QGVAR(tourniquet)};
+            items[] = {"ACE_tourniquet"};
             treatmentTime = 6;
             callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
             condition = QUOTE(!([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo)));
         };
         class Morphine: fieldDressing {
-            items[] = {QGVAR(morphine)};
+            items[] = {"ACE_morphine"};
             treatmentTime = 3;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_medication));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class Atropine: Morphine {
-            items[] = {QGVAR(atropine)};
+            items[] = {"ACE_atropine"};
         };
         class Epinephrine: Morphine {
-            items[] = {QGVAR(epinephrine)};
+            items[] = {"ACE_epinephrine"};
         };
         class BloodIV: fieldDressing {
-            items[] = {QGVAR(bloodIV)};
+            items[] = {"ACE_bloodIV"};
             requiredMedic = 1;
             treatmentTime = 7;
             callbackSuccess = QUOTE(DFUNC(treatmentIV));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class BloodIV_500: BloodIV {
-            items[] = {QGVAR(bloodIV_500)};
+            items[] = {"ACE_bloodIV_500"};
         };
         class BloodIV_250: BloodIV {
-            items[] = {QGVAR(bloodIV_250)};
+            items[] = {"ACE_bloodIV_250"};
         };
         class PlasmaIV: BloodIV {
-            items[] = {QGVAR(plasmaIV)};
+            items[] = {"ACE_plasmaIV"};
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class PlasmaIV_500: PlasmaIV {
-            items[] = {QGVAR(plasmaIV_500)};
+            items[] = {"ACE_plasmaIV_500"};
         };
         class PlasmaIV_250: PlasmaIV {
-            items[] = {QGVAR(plasmaIV_250)};
+            items[] = {"ACE_plasmaIV_250"};
         };
         class SalineIV: BloodIV {
-            items[] = {QGVAR(salineIV)};
+            items[] = {"ACE_salineIV"};
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class SalineIV_500: SalineIV {
-            items[] = {QGVAR(salineIV_500)};
+            items[] = {"ACE_salineIV_500"};
         };
         class SalineIV_250: SalineIV {
-            items[] = {QGVAR(salineIV_250)};
+            items[] = {"ACE_salineIV_250"};
         };
         class SurgicalKit: fieldDressing {
-            items[] = {QGVAR(surgicalKit)};
+            items[] = {"ACE_surgicalKit"};
             treatmentLocations[] = {"MedicalFacility", "MedicalVehicle"};
             requiredMedic = 2;
             treatmentTime = 15;
@@ -144,7 +143,7 @@ class ACE_Medical_Actions {
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class PersonalAidKit: fieldDressing {
-            items[] = {QGVAR(personalAidKit)};
+            items[] = {"ACE_personalAidKit"};
             treatmentLocations[] = {"All"};
             requiredMedic = 1;
             treatmentTime = 15;
@@ -192,7 +191,7 @@ class ACE_Medical_Actions {
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 7.5;
-            items[] = {QGVAR(bodyBag)};
+            items[] = {"ACE_bodyBag"};
             condition = "!alive (_this select 1);";
             callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));
             callbackFailure = "";

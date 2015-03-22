@@ -1,12 +1,21 @@
-/**
-* fnc_updateSetting.sqf
-* @Descr:
-* @Author: Glowbal
-*
-* @Arguments: []
-* @Return:
-* @PublicAPI: true
-*/
+/*
+ * Author: Glowbal
+ * Updates the setting when the client has selected a new value.  Saves to profilenamespace and calls setSetting.
+ *
+ * Arguments:
+ * 0: The Tab Open <NUMBER>
+ * 1: The setting's name <STRING>
+ * 2: The new value either an index or a color <NUMBER>OR<ARRAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [MENU_TAB_COLORS, "ace_fireTruckColor", [1,0,0,1]] call ACE_optionsmenu_fnc_updateSetting
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 private ["_changed"];

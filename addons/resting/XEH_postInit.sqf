@@ -7,8 +7,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(RestWeapon), localize "STR_ACE_Resting_RestWeapon",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call EFUNC(common,canUseWeapon) &&
     {inputAction 'reloadMagazine' == 0} &&

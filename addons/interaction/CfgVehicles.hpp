@@ -1,8 +1,3 @@
-#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
-  name = #ITEM; \
-  count = COUNT; \
-};
-
 class CfgVehicles {
 
   class Module_F;
@@ -36,7 +31,7 @@ class CfgVehicles {
         condition = QUOTE(true);
         statement = "";
         icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
-        selection = "spine3";
+        selection = "pelvis";
 
         class ACE_TeamManagement {
           displayName = "$STR_ACE_Interaction_TeamManagement";
@@ -145,45 +140,52 @@ class CfgVehicles {
           enableInside = 1;
         };
       };
+      class ACE_Torso {
+        displayName = "$STR_ACE_Interaction_Torso";
+        selection = "spine3";
+        distance = 1.50;
+        condition = "";
+        statement = "";
+      };
       class ACE_Head {
         displayName = "$STR_ACE_Interaction_Head";
         selection = "pilot";
-        distance = 2.0;
+        distance = 1.50;
         condition = "";
         statement = "";
       };
       class ACE_ArmLeft {
         displayName = "$STR_ACE_Interaction_ArmLeft";
         selection = "LeftForeArm";
-        distance = 2.0;
+        distance = 1.50;
         condition = "";
         statement = "";
       };
       class ACE_ArmRight {
         displayName = "$STR_ACE_Interaction_ArmRight";
         selection = "RightForeArm";
-        distance = 2.0;
+        distance = 1.50;
         condition = "";
         statement = "";
       };
       class ACE_LegLeft {
         displayName = "$STR_ACE_Interaction_LegLeft";
         selection = "LKnee";
-        distance = 2.0;
+        distance = 1.50;
         condition = "";
         statement = "";
       };
       class ACE_LegRight {
         displayName = "$STR_ACE_Interaction_LegRight";
         selection = "RKnee";
-        distance = 2.0;
+        distance = 1.50;
         condition = "";
         statement = "";
       };
       class ACE_Weapon {
         displayName = "$STR_ACE_Interaction_Weapon";
         selection = "weapon";
-        distance = 2.0;
+        distance = 1.50;
         condition = "";
         statement = "";
       };
@@ -417,7 +419,14 @@ class CfgVehicles {
         condition = "true";
       };
     };
-    class ACE_SelfActions {};
+    class ACE_SelfActions {
+      class ACE_Passengers {
+        displayName = "$STR_ACE_Interaction_Passengers";
+        condition = "true";
+        statement = "";
+        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+      };
+    };
   };
   class Tank: LandVehicle {
     class ACE_Actions {
@@ -428,7 +437,14 @@ class CfgVehicles {
         condition = "true";
       };
     };
-    class ACE_SelfActions {};
+    class ACE_SelfActions {
+      class ACE_Passengers {
+        displayName = "$STR_ACE_Interaction_Passengers";
+        condition = "true";
+        statement = "";
+        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+      };
+    };
   };
 
   class Air;
@@ -441,7 +457,14 @@ class CfgVehicles {
         condition = "true";
       };
     };
-    class ACE_SelfActions {};
+    class ACE_SelfActions {
+      class ACE_Passengers {
+        displayName = "$STR_ACE_Interaction_Passengers";
+        condition = "true";
+        statement = "";
+        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+      };
+    };
   };
   class Plane: Air {
     class ACE_Actions {
@@ -452,7 +475,14 @@ class CfgVehicles {
         condition = "true";
       };
     };
-    class ACE_SelfActions {};
+    class ACE_SelfActions {
+      class ACE_Passengers {
+        displayName = "$STR_ACE_Interaction_Passengers";
+        condition = "true";
+        statement = "";
+        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+      };
+    };
   };
 
   class Ship;
@@ -474,7 +504,14 @@ class CfgVehicles {
         };
       };
     };
-    class ACE_SelfActions {};
+    class ACE_SelfActions {
+      class ACE_Passengers {
+        displayName = "$STR_ACE_Interaction_Passengers";
+        condition = "true";
+        statement = "";
+        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+      };
+    };
   };
 
   class StaticWeapon: LandVehicle {
@@ -486,7 +523,14 @@ class CfgVehicles {
         condition = "true";
       };
     };
-    class ACE_SelfActions {};
+    class ACE_SelfActions {
+      class ACE_Passengers {
+        displayName = "$STR_ACE_Interaction_Passengers";
+        condition = "true";
+        statement = "";
+        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+      };
+    };
   };
 
   class StaticMortar;
@@ -495,6 +539,26 @@ class CfgVehicles {
       class ACE_MainActions {
         displayName = "$STR_ACE_Interaction_MainAction";
         selection = "gunnerview";
+        distance = 2;
+        condition = "true";
+      };
+    };
+    class ACE_SelfActions {
+      class ACE_Passengers {
+        displayName = "$STR_ACE_Interaction_Passengers";
+        condition = "true";
+        statement = "";
+        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+      };
+    };
+  };
+
+  class thingX;
+  class ReammoBox_F: thingX {
+    class ACE_Actions {
+      class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
+        selection = "";
         distance = 2;
         condition = "true";
       };

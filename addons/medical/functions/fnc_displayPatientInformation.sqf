@@ -49,7 +49,7 @@ if (_show) then {
         if (((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select GVAR(currentSelectedSelectionN)) > 0) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_TOURNIQUET_APPLIED", [0.5, 0.5, 0, 1]];
         };
-        if (_target getvariable[QGVAR(inPain), false]) then {
+        if (_target getvariable[QGVAR(hasPain), false]) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_PAIN", [1, 1, 1, 1]];
         };
 
@@ -75,9 +75,17 @@ if (_show) then {
                 };
             }foreach _openWounds;
         } else {
-            // TODO handle basic medical colors for body part selections here
+            {
+                _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _x];
 
-
+                if (_target getHitPointDamage _x > 0.1) then {
+                    // @todo localize
+                    _allInjuryTexts pushBack format ["%1 %2",
+                        ["Lightly wounded", "Heavily wounded"] select (_target getHitPointDamage _x > 0.5),
+                        ["head", "torso", "left arm", "right arm", "left leg", "right leg"] select _forEachIndex
+                    ];
+                };
+            } forEach ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
         };
 
         // Handle the body image coloring

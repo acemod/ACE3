@@ -7,8 +7,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(checkAmmo), localize "STR_ACE_Reload_checkAmmo",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call EFUNC(common,canUseWeapon) ||
     {(vehicle ACE_player) isKindOf 'StaticWeapon'}) exitWith {false};

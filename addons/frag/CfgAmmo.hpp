@@ -26,7 +26,7 @@ class CfgAmmo {
 		ACE_FRAG_SKIP = 0;
 		ACE_FRAG_FORCE = 1;
 		// This is a good high-drag frag type for grenades.
-		ACE_FRAG_CLASSES[] = {"ACE_frag_medium_HD"};
+		ACE_FRAG_CLASSES[] = {"ACE_frag_tiny_HD"};
 		/*
 		These values are based on the M67 Grenade, should be tweaked for
 		individual grenades.

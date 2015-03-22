@@ -1,18 +1,20 @@
 /*
  * Author: commy2
- *
  * Check if the unit has earplugs put in.
  *
- * Argument:
- * A soldier (Object)
+ * Arguments:
+ * 0:Unit (player) <OBJECT>
  *
- * Return value:
- * Boolean (Bool)
+ * Return Value:
+ * Have Earplugs in <BOOL>
+ *
+ * Example:
+ * [ace_player] call ace_hearing_fnc_hasEarPlugsIn
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private "_unit";
-
-_unit = _this select 0;
+PARAMS_1(_unit);
 
 _unit getVariable ["ACE_hasEarPlugsin", false]

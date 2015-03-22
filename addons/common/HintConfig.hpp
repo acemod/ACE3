@@ -53,17 +53,6 @@ class RscTitles {
         };
     };
 
-    class ACE_EventHandlerHelper: ACE_Rsc_Display_Base {
-        idd = -1;
-        class controls {
-            class CameraView: RscMapControl {
-                onDraw = "if (cameraView != uiNamespace getVariable 'ACE_EventHandler_CameraMode') then {uiNamespace setVariable ['ACE_EventHandler_CameraMode', cameraView]; {[uiNamespace getVariable 'ACE_EventHandler_CameraMode'] call _x; nil} count ((missionNamespace getVariable 'ACE_EventHandler_CameraMode') select 2);};";
-                idc = -1;
-                w = 0;
-                h = 0;
-            };
-        };
-    };
     class ACE_EventHandlerHelper2: ACE_Rsc_Display_Base {
         class controls {
             class MapMarkerCreated: RscMapControl {
