@@ -218,19 +218,21 @@ if (isNil QGVAR(level)) then {
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
 // broadcast injuries to JIP clients in a MP session
-if (isMultiplayer and GVAR(level) >= 2) then {
+if (isMultiplayer) then {
     [QGVAR(onPlayerConnected), "onPlayerConnected", {
-        if (isNil QGVAR(InjuredCollection)) then {
-            GVAR(InjuredCollection) = [];
-        };
+        if (GVAR(level) >= 2) then {
+            if (isNil QGVAR(InjuredCollection)) then {
+                GVAR(InjuredCollection) = [];
+            };
 
-        {
-            _unit = _x;
-            _openWounds = _unit getvariable [QGVAR(openWounds), []];
             {
-                ["medical_propagateWound", [_id], [_unit, _x]] call EFUNC(common,targetEvent);
-            }foreach _openWounds;
-        }foreach GVAR(InjuredCollection);
+                _unit = _x;
+                _openWounds = _unit getvariable [QGVAR(openWounds), []];
+                {
+                    ["medical_propagateWound", [_id], [_unit, _x]] call EFUNC(common,targetEvent);
+                }foreach _openWounds;
+            }foreach GVAR(InjuredCollection);
+        };
     }, []] call BIS_fnc_addStackedEventHandler;
 };
 
