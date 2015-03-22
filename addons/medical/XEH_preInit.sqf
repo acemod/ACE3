@@ -22,6 +22,7 @@ PREP(addUnloadPatientActions);
 PREP(canAccessMedicalEquipment);
 PREP(canTreat);
 PREP(canTreatCached);
+PREP(canCarry);
 PREP(determineIfFatal);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
