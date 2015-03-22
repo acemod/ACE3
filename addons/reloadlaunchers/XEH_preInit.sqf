@@ -2,6 +2,7 @@
 
 ADDON = false;
 
+PREP(addMissileReloadActions);
 PREP(canLoad);
 PREP(getLoadableMissiles);
 PREP(load);

@@ -21,9 +21,28 @@ _target = _this select 1;
 _weapon = _this select 2;
 _magazine = _this select 3;
 
-//do stuff
+private "_reloadTime";
+_reloadTime = getNumber (configFile >> "CfgWeapons" >> _weapon >> "magazineReloadTime");
 
-/**/
+// do animation
+[_unit] call EFUNC(common,goKneeling);
 
-// reload launcher on remote machine
-["reloadLauncher", _target, [_target, _weapon, _magazine]] call EFUNC(common,targetEvent);
+// show progress bar
+private ["_onSuccess", "_onFailure", "_condition"];
+
+_onSuccess =  {
+    (_this select 0 select 0) removeMagazine (_this select 0 select 3);
+    ["reloadLauncher", _this select 0 select 0, _this select 0] call DEFUNC(common,targetEvent);
+
+    ["WEAPON RELOADED"] call DEFUNC(common,displayTextStructured);
+};
+
+_onFailure = {
+    ["WEAPON NOT RELOADED"] call DEFUNC(common,displayTextStructured);
+};
+
+_condition = {
+    (_this select 0) call DFUNC(canLoad) && {(_this select 0 select 0) distance (_this select 0 select 1) < 4}
+};
+
+[_reloadTime, [_unit, _target, _weapon, _magazine], _onSuccess, _onFailure, "RELOADING WEAPON", _condition] call EFUNC(common,progressBar);

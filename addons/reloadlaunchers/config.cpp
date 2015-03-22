@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {"ace_common","ace_interaction","ace_interact_menu"};
         author[] = {""};
         authorUrl = "";
         VERSION_CONFIG;
@@ -13,4 +13,6 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+
+#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"

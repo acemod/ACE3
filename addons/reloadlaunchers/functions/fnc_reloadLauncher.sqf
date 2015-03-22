@@ -4,9 +4,10 @@
  * Reload a launcher
  *
  * Argument:
- * 0: Unit to reload (Object)
- * 1: weapon name (String)
- * 2: missile name (String)
+ * 0: Unit to do the reloading (Object)
+ * 1: Target to rload (Object)
+ * 2: weapon name (String)
+ * 3: missile name (String)
  *
  * Return value:
  * NONE
@@ -16,13 +17,14 @@
 private ["_unit", "_weapon", "_magazine"];
 
 _unit = _this select 0;
-_weapon = _this select 1;
-_magazine = _this select 2;
+_target = _this select 1;
+_weapon = _this select 2;
+_magazine = _this select 3;
 
-_unit selectWeapon _weapon;
+_target selectWeapon _weapon;
 
-if (currentWeapon _unit != _weapon) exitWith {};
-if (currentMagazine _unit != "") exitWith {};
+if (currentWeapon _target != _weapon) exitWith {};
+if (currentMagazine _target != "") exitWith {};
 
 // command is wip, reload time for launchers is not intended.
-_unit addWeaponItem [_weapon, _magazine]; 
+_target addWeaponItem [_weapon, _magazine]; 
