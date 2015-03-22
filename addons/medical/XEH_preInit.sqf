@@ -29,6 +29,7 @@ PREP(getBloodPressure);
 PREP(getBloodVolumeChange);
 PREP(getCardiacOutput);
 PREP(getTypeOfDamage);
+PREP(getHeartRateChange);
 PREP(getTriageStatus);
 PREP(getUnconsciousCondition);
 PREP(handleDamage);
@@ -97,6 +98,8 @@ PREP(copyDeadBody);
 PREP(requestWoundSync);
 
 GVAR(injuredUnitCollection) = [];
+GVAR(IVBags) = [];
+
 call FUNC(parseConfigForInjuries);
 
 ADDON = true;

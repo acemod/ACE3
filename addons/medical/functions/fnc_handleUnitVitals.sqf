@@ -105,7 +105,7 @@ if (GVAR(level) >= 2) then {
     };
 
     // Set the vitals
-    _heartRate = (_unit getvariable [QGVAR(heartRate), 0]) + ([_unit] call FUNC(getHeartRateChange)) * _interval;
+    _heartRate = (_unit getvariable [QGVAR(heartRate), 0]) + (([_unit] call FUNC(getHeartRateChange)) * _interval);
     _unit setvariable  [QGVAR(heartRate), _heartRate, _syncValues];
 
     _bloodPressure = [_unit] call FUNC(getBloodPressure);
