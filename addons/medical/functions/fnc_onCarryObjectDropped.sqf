@@ -19,6 +19,17 @@ _target = _caller getvariable [QGVAR(carrying), objNull];
 _carrying = _caller getvariable [QGVAR(isCarrying), -1];
 
 if (_carrying >= 0) then {
+    if !(isNull (_target getvariable [QGVAR(copyOfUnit), objNull])) then {
+        _copy = _target;
+        _target = _copy getvariable [QGVAR(copyOfUnit), objNull];
+        if (isMultiplayer) then {
+            _target hideObjectGlobal false;
+        } else {
+            _target hideObject false;
+        };
+        detach _copy;
+        deleteVehicle _copy;
+    };
 
 	_caller setvariable [QGVAR(isCarrying), -1, true];
     if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
