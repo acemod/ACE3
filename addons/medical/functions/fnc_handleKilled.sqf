@@ -22,4 +22,9 @@ if (GVAR(level) >= 2) then {
     _unit setvariable [QGVAR(heartRate), 0];
     _unit setvariable [QGVAR(bloodPressure), [0, 0]];
     _unit setvariable [QGVAR(airwayStatus), 0];
+
+	_openWounds = _unit getvariable [QGVAR(openWounds), []];
+	{
+	    ["medical_propagateWound", [_unit, _x]] call EFUNC(common,globalEvent);
+	}foreach _openWounds;
 };

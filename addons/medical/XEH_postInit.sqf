@@ -2,7 +2,6 @@
 
 #include "script_component.hpp"
 
-if (!hasInterface) exitwith{};
 GVAR(enabledFor) = 1; // TODO remove this once we implement settings. Just here to get the vitals working.
 
 GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "ACE_heartbeat_fast_3"];
@@ -12,11 +11,7 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["Medical_treatmentCompleted", FUNC(onTreatmentCompleted)] call ace_common_fnc_addEventHandler;
 ["medical_propagateWound", FUNC(onPropagateWound)] call ace_common_fnc_addEventHandler;
 ["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call ace_common_fnc_addEventHandler;
-["carryObjectDropped", FUNC(onCarryObjectDropped)] call ace_common_fnc_addEventHandler;
 ["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call ace_common_fnc_addEventHandler;
-
-
-[QGVAR(disableInteraction), {!((_this select 1) getVariable [QGVAR(disableInteraction), false])}] call EFUNC(common,addCanInteractWithCondition);
 
 // Initialize all effects
 _fnc_createEffect = {
@@ -222,22 +217,14 @@ if (isNil QGVAR(level)) then {
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
 // broadcast injuries to JIP clients in a MP session
-if (isMultiplayer && GVAR(level) >= 2) then {
-    [QGVAR(onPlayerConnected), "onPlayerConnected", {
-        if (isNil QGVAR(InjuredCollection)) then {
-            GVAR(InjuredCollection) = [];
-        };
-
+if (isMultiplayer) then {
+    // We are only pulling the wounds for the units in the player group. Anything else will come when the unit interacts with them.
+    if (hasInterface) then {
         {
-            _unit = _x;
-            _openWounds = _unit getvariable [QGVAR(openWounds), []];
-            {
-                ["medical_propagateWound", [_id], [_unit, _x]] call EFUNC(common,targetEvent);
-            }foreach _openWounds;
-        }foreach GVAR(InjuredCollection);
-    }, []] call BIS_fnc_addStackedEventHandler;
+            [_x, player] call FUNC(requestWoundSync);
+        }foreach units group player;
+    };
 };
-
 
 [
     {(((_this select 0) getvariable [QGVAR(bloodVolume), 0]) < 65)},
