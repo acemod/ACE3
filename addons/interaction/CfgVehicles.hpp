@@ -32,6 +32,7 @@ class CfgVehicles {
         statement = "";
         icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
         selection = "pelvis";
+        exceptions[] = {"isNotCarrying","isNotDragging"};
 
         class ACE_TeamManagement {
           displayName = "$STR_ACE_Interaction_TeamManagement";
@@ -417,6 +418,7 @@ class CfgVehicles {
         selection = "";
         distance = 10;
         condition = "true";
+        exceptions[] = {"isNotCarrying","isNotDragging"};
       };
     };
     class ACE_SelfActions {
@@ -435,6 +437,7 @@ class CfgVehicles {
         selection = "";
         distance = 10;
         condition = "true";
+        exceptions[] = {"isNotCarrying","isNotDragging"};
       };
     };
     class ACE_SelfActions {
@@ -455,6 +458,7 @@ class CfgVehicles {
         selection = "";
         distance = 10;
         condition = "true";
+        exceptions[] = {"isNotCarrying","isNotDragging"};
       };
     };
     class ACE_SelfActions {
@@ -473,6 +477,7 @@ class CfgVehicles {
         selection = "";
         distance = 10;
         condition = "true";
+        exceptions[] = {"isNotCarrying","isNotDragging"};
       };
     };
     class ACE_SelfActions {
@@ -493,6 +498,7 @@ class CfgVehicles {
         selection = "";
         distance = 10;
         condition = "true";
+        exceptions[] = {"isNotCarrying","isNotDragging"};
 
         class ACE_Push {
           displayName = "$STR_ACE_Interaction_Push";
@@ -521,6 +527,7 @@ class CfgVehicles {
         selection = "gunnerview";
         distance = 2;
         condition = "true";
+        exceptions[] = {"isNotCarrying","isNotDragging"};
       };
     };
     class ACE_SelfActions {
@@ -541,6 +548,7 @@ class CfgVehicles {
         selection = "gunnerview";
         distance = 2;
         condition = "true";
+        exceptions[] = {"isNotCarrying","isNotDragging"};
       };
     };
     class ACE_SelfActions {
@@ -561,6 +569,7 @@ class CfgVehicles {
         selection = "";
         distance = 2;
         condition = "true";
+        exceptions[] = {"isNotCarrying","isNotDragging"};
       };
     };
     class ACE_SelfActions {};
