@@ -37,7 +37,7 @@ if (GVAR(keyDown)) then {
 
         _numInteractions = 0;
         // Prevent interacting with yourself or your own vehicle
-        if (_target != ACE_player && {_target != vehicle ACE_player} && {_target getvariable [QEGVAR(interaction,enabled), true]}) then {
+        if (_target != ACE_player && {_target != vehicle ACE_player}) then {
 
             // Iterate through object actions, find base level actions and render them if appropiate
             _actionsVarName = format [QGVAR(Act_%1), typeOf _target];

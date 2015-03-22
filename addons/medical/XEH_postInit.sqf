@@ -15,6 +15,9 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["carryObjectDropped", FUNC(onCarryObjectDropped)] call ace_common_fnc_addEventHandler;
 ["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call ace_common_fnc_addEventHandler;
 
+
+[QGVAR(disableInteraction), {!((_this select 1) getVariable [QGVAR(disableInteraction), false])}] call EFUNC(common,addCanInteractWithCondition);
+
 // Initialize all effects
 _fnc_createEffect = {
     private ["_type", "_layer", "_default"];
