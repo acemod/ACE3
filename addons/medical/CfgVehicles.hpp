@@ -894,6 +894,28 @@ class CfgVehicles {
                         enableInside = 1;
                         icon = PATHTOF(UI\icons\bandage.paa);
                     };
+                    class Carry {
+                        displayName = "$STR_ACE_MEDICAL_CARRY";
+                        distance = 2.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'Carry')] call DFUNC(canTreatCached));
+                        statement = QUOTE([ARR_4(_player, _target, 'body', 'Carry')] call DFUNC(treatment));
+                        showDisabled = 1;
+                        priority = 2;
+                        hotkey = "";
+                        enableInside = 1;
+                        //icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                    class Drag {
+                        displayName = "$STR_ACE_MEDICAL_DRAG";
+                        distance = 2.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'Drag')] call DFUNC(canTreatCached));
+                        statement = QUOTE([ARR_4(_player, _target, 'body', 'Drag')] call DFUNC(treatment));
+                        showDisabled = 1;
+                        priority = 2;
+                        hotkey = "";
+                        enableInside = 1;
+                        //icon = PATHTOF(UI\icons\bandage.paa);
+                    };
 
                     class TriageCard {
                         displayName = "Triage Card";
@@ -1050,27 +1072,27 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV')] call DFUNC(treatment));
                 };
                 class PlasmaIV_500: PlasmaIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "Give Plasma IV (500ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV_500')] call DFUNC(treatment));
                 };
                 class PlasmaIV_250: PlasmaIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "Give Plasma IV (250ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV_250')] call DFUNC(treatment));
                 };
                 class SalineIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "Give Saline IV (1000ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV')] call DFUNC(treatment));
                 };
                 class SalineIV_500: SalineIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "Give Saline IV (500ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV_500')] call DFUNC(treatment));
                 };
                 class SalineIV_250: SalineIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "Give Saline IV (250ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV_250')] call DFUNC(treatment));
                 };
@@ -1175,32 +1197,32 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV_250')] call DFUNC(treatment));
                 };
                 class PlasmaIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "Give Plasma IV (1000ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(treatment));
                 };
                 class PlasmaIV_500: PlasmaIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "Give Plasma IV (500ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV_500')] call DFUNC(treatment));
                 };
                 class PlasmaIV_250: PlasmaIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "Give Plasma IV (250ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV_250')] call DFUNC(treatment));
                 };
                 class SalineIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "Give Saline IV (1000ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV')] call DFUNC(treatment));
                 };
                 class SalineIV_500: SalineIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "Give Saline IV (500ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV_500')] call DFUNC(treatment));
                 };
                 class SalineIV_250: SalineIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "Give Saline IV (250ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV_250')] call DFUNC(treatment));
                 };
@@ -1307,32 +1329,32 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV_250')] call DFUNC(treatment));
                 };
                 class PlasmaIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "Give Plasma IV (1000ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(treatment));
                 };
                 class PlasmaIV_500: PlasmaIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "Give Plasma IV (500ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV_500')] call DFUNC(treatment));
                 };
                 class PlasmaIV_250: PlasmaIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "Give Plasma IV (250ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV_250')] call DFUNC(treatment));
                 };
                 class SalineIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "Give saline IV (1000ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV')] call DFUNC(treatment));
                 };
                 class SalineIV_500: SalineIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "Give saline IV (500ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_500')] call DFUNC(treatment));
                 };
                 class SalineIV_250: SalineIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "Give saline IV (250ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_250')] call DFUNC(treatment));
                 };
@@ -1427,32 +1449,32 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV_250')] call DFUNC(treatment));
                 };
                 class PlasmaIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "Give Plasma IV (1000ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(treatment));
                 };
                 class PlasmaIV_500: PlasmaIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "Give Plasma IV (500ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV_500')] call DFUNC(treatment));
                 };
                 class PlasmaIV_250: PlasmaIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "Give Plasma IV (250ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV_250')] call DFUNC(treatment));
                 };
                 class SalineIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "Give Saline IV (1000ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV')] call DFUNC(treatment));
                 };
                 class SalineIV_500: SalineIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "Give Saline IV (500ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_500')] call DFUNC(treatment));
                 };
                 class SalineIV_250: SalineIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "Give Saline IV (250ml)";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_250')] call DFUNC(treatment));
                 };
