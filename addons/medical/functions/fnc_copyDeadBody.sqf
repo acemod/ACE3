@@ -75,5 +75,8 @@ if (isMultiplayer) then {
 _newUnit setvariable [QGVAR(copyOfUnit), _oldBody, true];
 _newUnit setvariable ["ACE_isDead", true, true];
 _newUnit setvariable ["ACE_isUnconscious", true, true];
+_newUnit setvariable [QEGVAR(interaction,enabled), false, true];
+_oldBody setvariable [QEGVAR(interaction,enabled), false, true];
+
 _newUnit setDamage 0.89;
 _newUnit;

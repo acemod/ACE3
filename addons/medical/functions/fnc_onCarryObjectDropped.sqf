@@ -29,6 +29,7 @@ if (_carrying >= 0) then {
         };
         detach _copy;
         deleteVehicle _copy;
+        _target setvariable [QEGVAR(interaction,enabled), nil, true];
     };
 
 	_caller setvariable [QGVAR(isCarrying), -1, true];
