@@ -34,15 +34,15 @@ _onSuccess =  {
     (_this select 0 select 0) removeMagazine (_this select 0 select 3);
     ["reloadLauncher", _this select 0 select 0, _this select 0] call DEFUNC(common,targetEvent);
 
-    ["WEAPON RELOADED"] call DEFUNC(common,displayTextStructured);
+    [localize "STR_ACE_ReloadLaunchers_LauncherLoaded"] call DEFUNC(common,displayTextStructured);
 };
 
 _onFailure = {
-    ["WEAPON NOT RELOADED"] call DEFUNC(common,displayTextStructured);
+    [localize "STR_ACE_Common_ActionAborted"] call DEFUNC(common,displayTextStructured);
 };
 
 _condition = {
     (_this select 0) call DFUNC(canLoad) && {(_this select 0 select 0) distance (_this select 0 select 1) < 4}
 };
 
-[_reloadTime, [_unit, _target, _weapon, _magazine], _onSuccess, _onFailure, "RELOADING WEAPON", _condition] call EFUNC(common,progressBar);
+[_reloadTime, [_unit, _target, _weapon, _magazine], _onSuccess, _onFailure, localize "STR_ACE_ReloadLaunchers_LoadingLauncher", _condition] call EFUNC(common,progressBar);

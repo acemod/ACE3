@@ -4,7 +4,7 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_Actions {
             class GVAR(ReloadLauncher) {
-                displayName = "RELOAD LAUNCHERS";
+                displayName = "$STR_ACE_ReloadLaunchers_LoadLauncher";
                 selection = "launcher";
                 distance = 4;
                 condition = "";
