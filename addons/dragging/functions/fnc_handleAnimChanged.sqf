@@ -13,7 +13,9 @@ if (_unit getVariable [QGVAR(isDragging), false]) then {
         private "_draggedObject";
         _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
 
-        [_unit, _draggedObject] call FUNC(dropObject);
+        if (!isNull _draggedObject) then {
+            [_unit, _draggedObject] call FUNC(dropObject);
+        };
     };
 
 };
@@ -25,7 +27,9 @@ if (_unit getVariable [QGVAR(isCarrying), false]) then {
         private "_carriedObject";
         _carriedObject = _unit getVariable [QGVAR(carriedObject), objNull];
 
-        [_unit, _carriedObject] call FUNC(dropObject_carry);
+        if (!isNull _carriedObject) then {
+            [_unit, _carriedObject] call FUNC(dropObject_carry);
+        };
     };
 
 };
