@@ -53,6 +53,7 @@ _perFrameFunction = {
     _elapsedTime = time - _startTime;
     _errorCode = -1;
 
+    // this does not check: target fell unconscious, target died, target moved inside vehicle / left vehicle, target moved outside of players range, target moves at all.
     if (isNull (uiNamespace getVariable [QGVAR(ctrlProgressBar), controlNull])) then {
         _errorCode = 1;
     } else {
