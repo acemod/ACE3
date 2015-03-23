@@ -258,6 +258,9 @@ if (hasInterface) then {
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
 
+// Init toHex
+[0] call FUNC(toHex);
+
 ADDON = true;
 
 isHC = !(hasInterface || isDedicated);
