@@ -27,7 +27,6 @@ _icon = _this select 6;
 //systemChat format ["Icon %1 - %2,%3,%4", _text, _pos select 0, _pos select 1, _pos select 2];
 
 _sPos = worldToScreen _pos;
-// _sPos = _pos;
 if(count _sPos > 0) then {
 
     if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
@@ -44,6 +43,5 @@ if(count _sPos > 0) then {
     _ctrl ctrlSetStructuredText (parseText _text);
     _ctrl ctrlSetPosition [(_sPos select 0)-(0.2*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.4*SafeZoneW, 0.035*SafeZoneW];
     //_ctrl ctrlSetBackgroundColor [1, 0, 0, 0.1];
-    //_ctrl ctrlSetBackgroundColor [1,0,0,1];
     _ctrl ctrlCommit 0;
 };
