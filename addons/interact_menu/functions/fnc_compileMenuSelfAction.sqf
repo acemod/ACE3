@@ -86,7 +86,10 @@ _actions = [
             "ACE_SelfActions",
             "Self Actions",
             "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
-            {},
+            {
+                // Dummy statement so it's not collapsed when there's no available actions
+                true
+            },
             {[ACE_player, objNull, ["isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)},
             {},
             [],

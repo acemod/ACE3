@@ -1,10 +1,19 @@
 //XEH_clientInit.sqf
 #include "script_component.hpp"
 
-_fnc = {
-	_this call FUNC(render);
+// Install the render EH on the main display
+addMissionEventHandler ["Draw3D", DFUNC(render)];
+
+// This spawn is probably worth keeping, as pfh don't work natively on the briefing screen and IDK how reliable the hack we implemented for them is.
+// The thread dies as soon as the mission start, so it's not really compiting for scheduler space.
+[] spawn {
+    // Wait until the map display is detected
+    waitUntil {(!isNull findDisplay 12)};
+
+	// Install the render EH on the map screen
+    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", DFUNC(render)];
 };
-addMissionEventHandler ["Draw3D", _fnc];
+
 
 ["ACE3", QGVAR(InteractKey), "Interact Key",
 {_this call FUNC(keyDown)},

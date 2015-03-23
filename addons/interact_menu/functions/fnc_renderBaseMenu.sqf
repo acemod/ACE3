@@ -51,7 +51,7 @@ if (GVAR(keyDown) &&
 _sPos = if (count _pos != 2) then {
     worldToScreen _pos
 } else {
-    pos
+    _pos
 };
 if(count _sPos == 0) exitWith {false};
 

@@ -27,7 +27,7 @@ _icon = _this select 6;
 //systemChat format ["Icon %1 - %2,%3,%4", _text, _pos select 0, _pos select 1, _pos select 2];
 
 if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
-    _displayNum = [46,91919] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
+    _displayNum = [[46, 12] select visibleMap,91919] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
     GVAR(iconCtrls) pushBack ((findDisplay _displayNum) ctrlCreate ["RscStructuredText", 54021+GVAR(iconCount)]);
 };
 _ctrl = GVAR(iconCtrls) select GVAR(iconCount);
