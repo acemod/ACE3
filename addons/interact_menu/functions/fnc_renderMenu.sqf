@@ -56,37 +56,37 @@ GVAR(currentOptions) pushBack [_this, _pos, _path];
 // Exit without rendering children if it isn't
 if !(_menuInSelectedPath) exitWith {true};
 
-private ["_angleSpan","_angle","_angleInterval","_scale"];
-_angleSpan = _maxAngleSpan min (55 * ((count _activeChildren) - 1));
+private ["_numChildren","_angleSpan","_angle","_angleInterval","_scale","_offset"];
+_numChildren = count _activeChildren;
+_angleSpan = _maxAngleSpan min (55 * ((_numChildren) - 1));
 if (_angleSpan >= 305) then {
     _angleSpan = 360;
 };
 _angleInterval = 55;
 if (_angleSpan < 360) then {
-    if (count _activeChildren > 1) then {
-        _angleInterval = _angleSpan / (count _activeChildren - 1);
+    if (_numChildren > 1) then {
+        _angleInterval = _angleSpan / (_numChildren - 1);
     };
 } else {
-    _angleSpan / (count _activeChildren);
+    _angleSpan / (_numChildren);
 };
-if (count _activeChildren == 1) then {
+if (_numChildren == 1) then {
     _angleInterval = 60;
 };
 
-// Scale menu based on distance
-_scale = (0.15 max (0.15 * ((positionCameraToWorld [0, 0, 0]) distance _pos))) / GVAR(selfMenuScale);
 // Scale menu based on the amount of children
-_scale = _scale * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.4) max 0.5);
+_scale = GVAR(menuScale) * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.4) max 0.5);
 // Animate menu scale
 if (_menuInSelectedPath && (_menuDepth == count _path)) then {
     _scale = _scale * (0.3 + 0.7 * (((diag_tickTime - GVAR(expandedTime)) * 8) min 1));
 };
 
+_target = _actionObject;
+_player = ACE_player;
 _angle = _centerAngle - _angleSpan / 2;
 {
-    _target = _actionObject;
-    _player = ACE_player;
 
+    private ["_offset","_newPos"];
     _offset = ((GVAR(refSystem) select 1) vectorMultiply (-_scale * cos _angle)) vectorAdd
                 ((GVAR(refSystem) select 2) vectorMultiply (-_scale * sin _angle));
     _newPos = ((_pos call EFUNC(common,positionToASL)) vectorAdd _offset) call EFUNC(common,ASLToPosition);
@@ -95,11 +95,7 @@ _angle = _centerAngle - _angleSpan / 2;
 
     [_path, _x, _newPos, [_angle, 140]] call FUNC(renderMenu);
 
-    if (_angleSpan == 360) then {
-        _angle = _angle + _angleSpan / (count _activeChildren);
-    } else {
-        _angle = _angle + _angleSpan / (((count _activeChildren)-1) max 1);
-    };
+    _angle = _angle + _angleInterval;
 } forEach _activeChildren;
 
 true
