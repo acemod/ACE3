@@ -7,7 +7,7 @@ class CfgVehicles {
         function = FUNC(enableModule);
         scope = 2;
         isGlobal = 1;
-        icon = QUOTE(PATHTOF(data\module_icon.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Wind_ca.paa));
         class Arguments {
             class EnableForAI {
                 displayName = "Enable for AI";

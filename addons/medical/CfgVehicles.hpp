@@ -11,7 +11,7 @@ class CfgVehicles {
     class ACE_moduleMedicalSettings: ACE_Module {
         scope = 2;
         displayName = "Medical Settings [ACE]";
-        icon = QUOTE(PATHTOF(UI\moduleIcon.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(DFUNC(moduleMedicalSettings));
         functionPriority = 1;
@@ -133,7 +133,7 @@ class CfgVehicles {
     class ACE_moduleTreatmentConfiguration: ACE_Module {
         scope = 2;
         displayName = "Treatment Configuration [ACE]";
-        icon = QUOTE(PATHTOF(UI\moduleIcon.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(FUNC(moduleTreatmentConfiguration));
         functionPriority = 10;
@@ -190,7 +190,7 @@ class CfgVehicles {
     class ACE_moduleAssignMedicRoles: Module_F {
         scope = 2;
         displayName = "Set Medic Class [ACE]";
-        icon = QUOTE(PATHTOF(UI\moduleIcon.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(FUNC(moduleAssignMedicRoles));
         functionPriority = 10;
@@ -236,7 +236,7 @@ class CfgVehicles {
     class ACE_moduleAssignMedicVehicle: Module_F {
         scope = 2;
         displayName = "Set Medical Vehicle [ACE]";
-        icon = QUOTE(PATHTOF(UI\moduleIcon.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(FUNC(moduleAssignMedicalVehicle));
         functionPriority = 10;
@@ -266,7 +266,7 @@ class CfgVehicles {
     class ACE_moduleAssignMedicalFacility: Module_F {
         scope = 2;
         displayName = "Set Medical Facility [ACE]";
-        icon = QUOTE(PATHTOF(UI\moduleIcon.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(FUNC(moduleAssignMedicalFacility));
         functionPriority = 10;

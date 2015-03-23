@@ -7,7 +7,7 @@
             statement = QUOTE([ARR_3('VehicleLock_SetVehicleLock', [_target], [ARR_2(_target,false)])] call EFUNC(common,targetEvent)); \
             showDisabled = 0; \
             priority = 0.3; \
-            icon = QUOTE(PATHTOF(ui\key_menuIcon_ca.paa)); \
+            icon = QUOTE(PATHTOF(UI\key_menuIcon_ca.paa)); \
         }; \
         class ACE_lockVehicle { \
             displayName = "$STR_ACE_Vehicle_Action_Lock"; \
@@ -16,7 +16,7 @@
             statement = QUOTE([ARR_3('VehicleLock_SetVehicleLock', [_target], [ARR_2(_target,true)])] call EFUNC(common,targetEvent)); \
             showDisabled = 0; \
             priority = 0.2; \
-            icon = QUOTE(PATHTOF(ui\key_menuIcon_ca.paa)); \
+            icon = QUOTE(PATHTOF(UI\key_menuIcon_ca.paa)); \
         }; \
         class ACE_lockpickVehicle { \
             displayName = "$STR_ACE_Vehicle_Action_Lockpick"; \
@@ -58,7 +58,7 @@ class CfgVehicles {
         function = QUOTE(DFUNC(moduleInit));
         scope = 2;
         isGlobal = 0;
-        icon = QUOTE(PATHTOF(ui\IconLock_ca.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_VehicleLock_ca.paa));
         functionPriority = 0;
         class Arguments {
             class LockVehicleInventory {
@@ -96,7 +96,7 @@ class CfgVehicles {
         function = QUOTE(DFUNC(moduleSync));
         scope = 2;
         isGlobal = 0;
-        icon = QUOTE(PATHTOF(ui\IconLock_ca.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_VehicleKey_ca.paa));
         functionPriority = 0;
         class Arguments {};
         class ModuleDescription: ModuleDescription {

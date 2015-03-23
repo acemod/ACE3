@@ -7,7 +7,7 @@ class CfgVehicles {
         function = QFUNC(moduleNameTags);
         scope = 2;
         isGlobal = 1;
-        icon = QUOTE(PATHTOF(UI\IconNameTags_ca.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_NameTags_ca.paa));
         class Arguments {
             class PlayerNamesViewDistance {
                 displayName = "Player Names View Dist.";
