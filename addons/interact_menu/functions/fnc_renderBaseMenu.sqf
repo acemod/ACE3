@@ -43,6 +43,7 @@ if((count _this) > 2) then {
 
 _cameraToActionVec = (_pos call EFUNC(common,positionToASL)) vectorDiff ((positionCameraToWorld [0,0,0]) call EFUNC(common,positionToASL));
 GVAR(refSystem) = _cameraToActionVec call EFUNC(common,createOrthonormalReference);
+GVAR(menuScale) = (0.15 max (0.15 * ((positionCameraToWorld [0, 0, 0]) distance _pos))) / GVAR(selfMenuScale);
 
 // For non-self actions, exit if the action is too far away
 if (GVAR(keyDown) &&
