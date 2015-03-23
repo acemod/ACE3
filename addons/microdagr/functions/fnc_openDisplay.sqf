@@ -77,7 +77,10 @@ if ((_oldShowMode == DISPLAY_MODE_CLOSED) && {GVAR(currentShowMode) != DISPLAY_M
         EXPLODE_1_PVT(_args,_player);
 
         if ((ace_player != _player) || {!("ACE_microDAGR" in (items ace_player))} || {GVAR(currentShowMode) == DISPLAY_MODE_CLOSED}) then {
-            GVAR(currentShowMode) = DISPLAY_MODE_CLOSED;
+            //Close Display if still open:
+            if (GVAR(currentShowMode) != DISPLAY_MODE_CLOSED) then {
+                [DISPLAY_MODE_CLOSED] call FUNC(openDisplay);
+            };
             [_pfID] call CBA_fnc_removePerFrameHandler;
         } else {
             GVAR(gpsPositionASL) = getPosAsl ace_player;
