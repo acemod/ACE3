@@ -20,6 +20,7 @@ PREP(render);
 PREP(renderBaseMenu);
 PREP(renderIcon);
 PREP(renderMenu);
+PREP(renderSelector);
 PREP(splitPath);
 
 GVAR(keyDown) = false;
