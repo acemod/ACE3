@@ -87,7 +87,7 @@ _actions = [
             "Self Actions",
             "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
             {},
-            { true },
+            {[ACE_player, objNull, ["isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)},
             {},
             [],
             "Spine3",
