@@ -113,7 +113,7 @@ if (GVAR(keyDown)) then {
 if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
     // Draw the red selector only when there's no cursor
     if !(uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
-        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selected_ca.paa", [1,0,0,1], _cursorPos2, 1, 1, 0, "", 0.5, 0.025, "TahomaB"];
+        [[0.5,0.5], "\a3\ui_f\data\IGUI\Cfg\Cursors\selected_ca.paa"] call FUNC(renderSelector);
     };
 
     _cursorScreenPos = [worldToScreen _cursorPos2, GVAR(cursorPos)] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
@@ -140,7 +140,7 @@ if(GVAR(keyDown) || GVAR(keyDownSelfAction)) then {
     GVAR(lastTime) = _cTime;
 
     GVAR(rotationAngle) = (GVAR(rotationAngle) + (270*_delta)) mod 360;
-    [_sPos] call FUNC(renderSelector);
+    [_sPos, format [QUOTE(PATHTOF(ui\selector%1.paa)), floor (((abs GVAR(rotationAngle)) mod 90) / 6)]] call FUNC(renderSelector);
 
     _foundTarget = true;
     GVAR(actionSelected) = true;

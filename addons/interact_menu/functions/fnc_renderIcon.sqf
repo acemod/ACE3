@@ -24,7 +24,7 @@ _color = _this select 1;
 _sPos = _this select 2;
 _icon = _this select 6;
 
-//systemChat format ["Icon %1 - %2,%3,%4", _text, _pos select 0, _pos select 1, _pos select 2];
+//systemChat format ["Icon %1 - %2,%3", _text, _sPos select 0, _sPos select 1];
 
 if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
     _displayNum = [[46, 12] select visibleMap,91919] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
