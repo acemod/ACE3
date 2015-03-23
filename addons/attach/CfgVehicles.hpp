@@ -6,7 +6,7 @@
                 displayName = "$STR_ACE_Attach_AttachDetach"; \
                 condition = QUOTE(([ARR_3(_player, _target, '')] call FUNC(canAttach))); \
                 statement = QUOTE( [ARR_2(_player, _target)] call FUNC(openAttachUI);); \
-                exceptions[] = {"ACE_Drag_isNotDragging"}; \
+                exceptions[] = {"isNotDragging"}; \
                 showDisabled = 0; \
                 priority = 0; \
                 icon = PATHTOF(UI\attach_ca.paa); \
@@ -16,7 +16,7 @@
                 displayName = "$STR_ACE_Attach_Detach"; \
                 condition = QUOTE(([ARR_2(_player, _target)] call FUNC(canDetach))); \
                 statement = QUOTE( [ARR_2(_player, _target)] call FUNC(detach) ); \
-                exceptions[] = {"ACE_Drag_isNotDragging"}; \
+                exceptions[] = {"isNotDragging"}; \
                 showDisabled = 0; \
                 priority = 0; \
                 icon = PATHTOF(UI\detach_ca.paa); \
@@ -57,7 +57,7 @@ class CfgVehicles {
                     displayName = "$STR_ACE_Attach_AttachDetach";
                     condition = QUOTE(([ARR_3(_player, _player, '')] call FUNC(canAttach)));
                     statement = QUOTE( [ARR_2(_player, _player)] call FUNC(openAttachUI); );
-                    exceptions[] = {"ACE_Drag_isNotDragging"};
+                    exceptions[] = {"isNotDragging"};
                     showDisabled = 0;
                     priority = 5;
                     icon = PATHTOF(UI\attach_ca.paa);
@@ -67,7 +67,7 @@ class CfgVehicles {
                     displayName = "$STR_ACE_Attach_Detach";
                     condition = QUOTE(([ARR_2(_player, _player)] call FUNC(canDetach)));
                     statement = QUOTE( [ARR_2(_player, _player)] call FUNC(detach) );
-                    exceptions[] = {"ACE_Drag_isNotDragging"};
+                    exceptions[] = {"isNotDragging"};
                     showDisabled = 0;
                     priority = 5;
                     icon = PATHTOF(UI\detach_ca.paa);
