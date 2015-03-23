@@ -18,22 +18,21 @@ _unit = _this select 0;
 _force = if (count _this > 1) then {_this select 1} else {false};
 
 if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
-    if ((_unit getvariable[QGVAR(addedToUnitLoop),false] || !alive _unit) && !_force) exitwith{};
+
     if !(local _unit) exitwith {
         [[_unit, _force], QUOTE(DFUNC(addToInjuredCollection)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
     };
+
+    if ((_unit getvariable[QGVAR(addedToUnitLoop),false] || !alive _unit) && !_force) exitwith{};
     _unit setvariable [QGVAR(addedToUnitLoop), true, true];
 
-    if (isNil QGVAR(InjuredCollection)) then {
-        GVAR(InjuredCollection) = [];
-    };
-    GVAR(InjuredCollection) pushback _unit;
-
+    diag_log format["[MEDICAL] Added a unit to loop: %1", _unit];
     [{
         private "_unit";
         _unit = (_this select 0) select 0;
         if (!alive _unit || !local _unit) then {
            [_this select 1] call CBA_fnc_removePerFrameHandler;
+           diag_log format["[MEDICAL] Removed a unit from loop: %1", _unit];
            if (!local _unit) then {
                 if (GVAR(level) >= 2) then {
                     _unit setvariable [QGVAR(heartRate), _unit getvariable [QGVAR(heartRate), 0], true];
@@ -41,7 +40,6 @@ if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
                 };
                 _unit setvariable [QGVAR(bloodVolume), _unit getvariable [QGVAR(bloodVolume), 0], true];
            };
-           GVAR(InjuredCollection) = GVAR(InjuredCollection) - [_unit];
         } else {
             [_unit] call FUNC(handleUnitVitals);
 

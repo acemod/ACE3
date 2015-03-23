@@ -49,6 +49,30 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
+        class Carry: Bandage {
+            displayName = "";
+            displayNameProgress = "";
+            treatmentLocations[] = {"All"};
+            requiredMedic = 0;
+            treatmentTime = 0;
+            items[] = {};
+            condition = QUOTE(DFUNC(canCarry));
+            callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, true)] call  DFUNC(actionCarryUnit));
+            callbackFailure = "";
+            callbackProgress = "";
+            itemConsumed = 0;
+            animationPatient = "";
+            animationCaller = "";
+            animationCallerProne = "";
+            animationCallerSelf = "";
+            animationCallerSelfProne = "";
+        };
+        class Drag: Carry {
+            displayName = "";
+            displayNameProgress = "";
+            condition = QUOTE(DFUNC(canCarry));
+            callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, false)] call  DFUNC(actionCarryUnit));
+        };
     };
 
     class Advanced {
@@ -198,6 +222,30 @@ class ACE_Medical_Actions {
             callbackProgress = "";
             animationPatient = "";
             itemConsumed = 0;
+        };
+        class Carry: fieldDressing {
+            displayName = "";
+            displayNameProgress = "";
+            treatmentLocations[] = {"All"};
+            requiredMedic = 0;
+            treatmentTime = 0;
+            items[] = {};
+            condition = QUOTE(DFUNC(canCarry));
+            callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, true)] call  DFUNC(actionCarryUnit));
+            callbackFailure = "";
+            callbackProgress = "";
+            itemConsumed = 0;
+            animationPatient = "";
+            animationCaller = "";
+            animationCallerProne = "";
+            animationCallerSelf = "";
+            animationCallerSelfProne = "";
+        };
+        class Drag: Carry {
+            displayName = "";
+            displayNameProgress = "";
+            condition = QUOTE(DFUNC(canCarry));
+            callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, false)] call  DFUNC(actionCarryUnit));
         };
 
     };

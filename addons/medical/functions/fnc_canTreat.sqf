@@ -40,6 +40,7 @@ _locations = getArray (_config >> "treatmentLocations");
 
 _return = true;
 if (getText (_config >> "condition") != "") then {
+    _condition = getText (_config >> "condition");
     if (isnil _condition) then {
         _condition = compile _condition;
     } else {
