@@ -635,7 +635,7 @@ class controls {
                 text = "0";
                 x = W_PART(3);
                 y = H_PART(15.5);
-                w = W_PART(12.5)
+                w = W_PART(12.5);
                 onbuttonclick = QUOTE(['0'] call FUNC(appMarkKeypadEntry));
             };
             class KeypadEnter: Keypad1 {
