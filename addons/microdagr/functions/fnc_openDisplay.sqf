@@ -75,8 +75,7 @@ if ((_oldShowMode == DISPLAY_MODE_CLOSED) && {GVAR(currentShowMode) != DISPLAY_M
     [{
         PARAMS_2(_args,_pfID);
         EXPLODE_1_PVT(_args,_player);
-
-        if ((ace_player != _player) || {!("ACE_microDAGR" in (items ace_player))} || {GVAR(currentShowMode) == DISPLAY_MODE_CLOSED}) then {
+        if ((isNull ace_player) || {!alive ace_player} || {ace_player != _player} || {!("ACE_microDAGR" in (items ace_player))} || {GVAR(currentShowMode) == DISPLAY_MODE_CLOSED}) then {
             //Close Display if still open:
             if (GVAR(currentShowMode) != DISPLAY_MODE_CLOSED) then {
                 [DISPLAY_MODE_CLOSED] call FUNC(openDisplay);
