@@ -423,7 +423,6 @@ class CfgVehicles {
                     displayName = "$STR_ACE_Interaction_Torso";
                     distance = 5.0;
                     condition = "true";
-                    exceptions[] = {"isNotInside"};
                     runOnHover = 1;
                     exceptions[] = {"isNotInside"};
                     statement = QUOTE([ARR_3(_target, true, 1)] call DFUNC(displayPatientInformation));

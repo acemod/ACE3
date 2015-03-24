@@ -391,13 +391,12 @@ class CfgVehicles {
       class ACE_Equipment {
         displayName = "$STR_ACE_Interaction_Equipment";
         condition = QUOTE(true);
-        exceptions[] = {"isNotInside"};
+        exceptions[] = {"isNotInside","notOnMap"};
         statement = "";
         showDisabled = 1;
         priority = 4.5;
         icon = "";  // @todo
         hotkey = "E";
-        exceptions[] = {"notOnMap"};
       };
     };
   };
