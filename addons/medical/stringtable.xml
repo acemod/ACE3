@@ -853,5 +853,19 @@
         <English>Unload patient</English>
       </Key>
     </Container>
+    <Container name="Activities">
+      <Key ID="STR_ACE_MEDICAL_ACTIVITY_bandagedPatient">
+        <English>%1 has bandaged patient</English>
+      </Key>
+      <Key ID="STR_ACE_MEDICAL_ACTIVITY_usedItem">
+        <English>%1 used %2</English>
+      </Key>
+      <Key ID="STR_ACE_MEDICAL_ACTIVITY_gaveIV">
+        <English>%1 has given an IV</English>
+      </Key>
+      <Key ID="STR_ACE_MEDICAL_ACTIVITY_appliedTourniquet">
+        <English>%1 applied a tourniquet</English>
+      </Key>
+    </Container>
   </Package>
 </Project>
