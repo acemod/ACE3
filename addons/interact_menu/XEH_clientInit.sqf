@@ -16,11 +16,11 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 
 
 ["ACE3", QGVAR(InteractKey), "Interact Key",
-{_this call FUNC(keyDown)},
-{_this call FUNC(keyUp)},
+{[0] call FUNC(keyDown)},
+{[0] call FUNC(keyUp)},
 [219, [false, false, false]], false] call cba_fnc_addKeybind;  //Left Windows Key
 
 ["ACE3", QGVAR(SelfInteractKey), "Self Actions Key",
-{_this call FUNC(keyDownSelfAction)},
-{_this call FUNC(keyUpSelfAction)},
+{[1] call FUNC(keyDown)},
+{[1] call FUNC(keyUp)},
 [219, [false, true, false]], false] call cba_fnc_addKeybind; //Left Windows Key + Ctrl/Strg

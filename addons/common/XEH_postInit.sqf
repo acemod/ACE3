@@ -183,3 +183,4 @@ _vehicle setFuel _fuelLevel;
 ["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
+["isNotInside", {_this select 0 == _this select 1 || {vehicle (_this select 0) == _this select 0}}] call FUNC(addCanInteractWithCondition);

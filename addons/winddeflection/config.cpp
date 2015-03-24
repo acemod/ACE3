@@ -30,4 +30,4 @@ class ACE_Settings {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgVehicles.h"
+#include "CfgVehicles.hpp"

@@ -8,7 +8,7 @@ class CfgVehicles {
     function = "ACE_Interaction_fnc_moduleInteraction";
     scope = 2;
     isGlobal = 1;
-    icon = PATHTOF(UI\IconInteraction_ca.paa);
+    icon = PATHTOF(UI\Icon_Module_Interaction_ca.paa);
     class Arguments {
       class EnableTeamManagement {
         displayName = "Enable Team Management";
@@ -42,7 +42,6 @@ class CfgVehicles {
           priority = 3.2;
           icon = PATHTOF(UI\team\team_management_ca.paa);
           hotkey = "M";
-          enableInside = 1;
 
           class ACE_JoinTeamRed {
             displayName = "$STR_ACE_Interaction_JoinTeamRed";
@@ -53,7 +52,6 @@ class CfgVehicles {
             icon = PATHTOF(UI\team\team_red_ca.paa);
             priority = 2.4;
             hotkey = "R";
-            enableInside = 1;
           };
           class ACE_JoinTeamGreen {
             displayName = "$STR_ACE_Interaction_JoinTeamGreen";
@@ -64,7 +62,6 @@ class CfgVehicles {
             icon = PATHTOF(UI\team\team_green_ca.paa);
             priority = 2.3;
             hotkey = "G";
-            enableInside = 1;
           };
           class ACE_JoinTeamBlue {
             displayName = "$STR_ACE_Interaction_JoinTeamBlue";
@@ -75,7 +72,6 @@ class CfgVehicles {
             icon = PATHTOF(UI\team\team_blue_ca.paa);
             priority = 2.2;
             hotkey = "B";
-            enableInside = 1;
           };
           class ACE_JoinTeamYellow {
             displayName = "$STR_ACE_Interaction_JoinTeamYellow";
@@ -86,7 +82,6 @@ class CfgVehicles {
             icon = PATHTOF(UI\team\team_yellow_ca.paa);
             priority = 2.1;
             hotkey = "Y";
-            enableInside = 1;
           };
 
           class ACE_LeaveTeam {
@@ -98,7 +93,6 @@ class CfgVehicles {
             icon = PATHTOF(UI\team\team_white_ca.paa);
             priority = 2.5;
             hotkey = "N";
-            enableInside = 1;
           };
         };
 
@@ -111,7 +105,6 @@ class CfgVehicles {
           priority = 2.6;
           icon = PATHTOF(UI\team\team_management_ca.paa);
           hotkey = "J";
-          enableInside = 1;
         };
 
         class ACE_GetDown {
@@ -137,7 +130,6 @@ class CfgVehicles {
           statement = QUOTE([ARR_3(_target,'{_this addRating -rating _this}',_target)] call DEFUNC(common,execRemoteFnc));
           showDisabled = 0;
           priority = 2.5;
-          enableInside = 1;
         };
       };
       class ACE_Torso {
@@ -210,83 +202,83 @@ class CfgVehicles {
       class ACE_TeamManagement {
         displayName = "$STR_ACE_Interaction_TeamManagement";
         condition = QUOTE(GVAR(EnableTeamManagement));
+        exceptions[] = {"isNotInside"};
         statement = "";
         showDisabled = 1;
         priority = 3.2;
         icon = PATHTOF(UI\team\team_management_ca.paa);
-        enableInside = 1;
         hotkey = "M";
 
         class ACE_JoinTeamRed {
           displayName = "$STR_ACE_Interaction_JoinTeamRed";
           condition = QUOTE(true);
+          exceptions[] = {"isNotInside"};
           statement = QUOTE([ARR_2(_player,'RED')] call DFUNC(joinTeam));
           showDisabled = 1;
           priority = 2.4;
           icon = PATHTOF(UI\team\team_red_ca.paa);
-          enableInside = 1;
           hotkey = "R";
         };
         class ACE_JoinTeamGreen {
           displayName = "$STR_ACE_Interaction_JoinTeamGreen";
           condition = QUOTE(true);
+          exceptions[] = {"isNotInside"};
           statement = QUOTE([ARR_2(_player,'GREEN')] call DFUNC(joinTeam));
           showDisabled = 1;
           priority = 2.3;
           icon = PATHTOF(UI\team\team_green_ca.paa);
-          enableInside = 1;
           hotkey = "G";
         };
         class ACE_JoinTeamBlue {
           displayName = "$STR_ACE_Interaction_JoinTeamBlue";
           condition = QUOTE(true);
+          exceptions[] = {"isNotInside"};
           statement = QUOTE([ARR_2(_player,'BLUE')] call FUNC(joinTeam));
           showDisabled = 1;
           priority = 2.2;
           icon = PATHTOF(UI\team\team_blue_ca.paa);
-          enableInside = 1;
           hotkey = "B";
         };
         class ACE_JoinTeamYellow {
           displayName = "$STR_ACE_Interaction_JoinTeamYellow";
           condition = QUOTE(true);
+          exceptions[] = {"isNotInside"};
           statement = QUOTE([ARR_2(_player,'YELLOW')] call FUNC(joinTeam));
           showDisabled = 1;
           priority = 2.1;
           icon = PATHTOF(UI\team\team_yellow_ca.paa);
-          enableInside = 1;
           hotkey = "Y";
         };
 
         class ACE_LeaveTeam {
           displayName = "$STR_ACE_Interaction_LeaveTeam";
           condition = QUOTE(assignedTeam _player != 'MAIN');
+          exceptions[] = {"isNotInside"};
           statement = QUOTE([ARR_2(_player,'MAIN')] call FUNC(joinTeam));
           showDisabled = 1;
           priority = 2.5;
           icon = PATHTOF(UI\team\team_white_ca.paa);
-          enableInside = 1;
           hotkey = "N";
         };
 
         class ACE_BecomeLeader {
           displayName = "$STR_ACE_Interaction_BecomeLeader";
           condition = QUOTE(count (units group _player) > 1 && {leader group _player != _player});
+          exceptions[] = {"isNotInside"};
           statement = QUOTE(_newGroup = createGroup side group _player; (units group _player) joinSilent _newGroup; _newGroup selectLeader _player;);
           showDisabled = 1;
           priority = 1.0;
           icon = PATHTOF(UI\team\team_white_ca.paa);
-          enableInside = 1;
           hotkey = "L";
         };
         class ACE_LeaveGroup {
           displayName = "$STR_ACE_Interaction_LeaveGroup";
           condition = QUOTE(count (units group _player) > 1);
+          exceptions[] = {"isNotInside"};
           statement = QUOTE(_oldGroup = units group _player; _newGroup = createGroup side _player; [_player] joinSilent _newGroup; {_player reveal _x} forEach _oldGroup;);
           showDisabled = 1;
           priority = 1.2;
           icon = PATHTOF(UI\team\team_management_ca.paa);
-          enableInside = 1;
           hotkey = "M";
         };
       };
@@ -399,13 +391,12 @@ class CfgVehicles {
       class ACE_Equipment {
         displayName = "$STR_ACE_Interaction_Equipment";
         condition = QUOTE(true);
+        exceptions[] = {"isNotInside","notOnMap"};
         statement = "";
         showDisabled = 1;
         priority = 4.5;
         icon = "";  // @todo
-        enableInside = 1;
         hotkey = "E";
-        exceptions[] = {"notOnMap"};
       };
     };
   };
