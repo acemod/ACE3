@@ -171,8 +171,6 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 }, 0, []] call cba_fnc_addPerFrameHandler;
 
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
-[QGVAR(carriedBy),objNull,false,QUOTE(ADDON)] call FUNC(defineVariable);
-[QGVAR(carriedObj),objNull,false,QUOTE(ADDON)] call FUNC(defineVariable);
 
 ["VehicleSetFuel", {
 PARAMS_2(_vehicle,_fuelLevel);
