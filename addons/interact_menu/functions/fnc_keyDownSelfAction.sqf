@@ -13,7 +13,7 @@
 #include "script_component.hpp"
 
 if(!GVAR(keyDownSelfAction)) then {
-    closeDialog 0;
+    while {dialog} do {closeDialog 0};
 
     GVAR(keyDownSelfAction) = true;
     GVAR(keyDown) = false;
