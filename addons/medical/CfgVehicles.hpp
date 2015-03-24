@@ -17,7 +17,7 @@ class CfgVehicles {
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class level {
                 displayName = "Medical Level";
@@ -140,7 +140,7 @@ class CfgVehicles {
         isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class medicSetting {
                 displayName = "Medics setting";
@@ -197,7 +197,7 @@ class CfgVehicles {
         isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class EnableList {
                 displayName = "List";
@@ -243,7 +243,7 @@ class CfgVehicles {
         isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class EnableList {
                 displayName = "List";
@@ -273,7 +273,7 @@ class CfgVehicles {
         isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class enabled {
                 displayName = "Is Medical Facility";
@@ -1665,7 +1665,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1680,7 +1680,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_PACKING_BANDAGE_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1695,7 +1695,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1710,7 +1710,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_TOURNIQUET_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1725,7 +1725,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_MORPHINE_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1740,7 +1740,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_ATROPINE_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1755,7 +1755,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_EPINEPHRINE_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1770,7 +1770,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_PLASMA_IV;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1786,7 +1786,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_BLOOD_IV;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1801,7 +1801,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_SALINE_IV;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1816,7 +1816,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_QUIKCLOT_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1831,7 +1831,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_AID_KIT_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1846,7 +1846,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_SURGICALKIT_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1861,7 +1861,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1879,7 +1879,7 @@ class CfgVehicles {
         accuracy = 1000;
         displayName = "[ACE] Medical Supply Crate";
         model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         class TransportItems {
             class ACE_fieldDressing {
                 name = "ACE_fieldDressing";

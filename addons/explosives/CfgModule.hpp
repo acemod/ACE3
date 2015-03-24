@@ -1,6 +1,6 @@
 class Module_F;
 class ACE_ModuleExplosive: Module_F {
-  author = "ACE Team";
+  author = "$STR_ACE_Common_ACETeam";
   category = "ACE";
   displayName = "Explosive System";
   function = QUOTE(FUNC(module));
