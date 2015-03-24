@@ -44,7 +44,7 @@ if((count _this) > 2) then {
 };
 
 // For non-self actions, exit if the action is too far away
-if (GVAR(keyDown) &&
+if (GVAR(openedMenuType) == 0 && vehicle ACE_player == ACE_player &&
     {(ACE_player modelToWorld (ACE_player selectionPosition "pilot")) distance _pos >= _distance}) exitWith {false};
 
 // Exit if the action is behind you
