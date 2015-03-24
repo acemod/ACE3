@@ -967,8 +967,8 @@ class CfgVehicles {
                     };
                     class PersonalAidKit: fieldDressing {
                         displayName = "Use Personal Aid Kit";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(canTreatCached));
-                        statement = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(treatment));
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'PersonalAidKit')] call DFUNC(canTreatCached));
+                        statement = QUOTE([ARR_4(_player, _target, 'body', 'PersonalAidKit')] call DFUNC(treatment));
                         icon = "";
                     };
                     class CPR: fieldDressing {
@@ -1057,7 +1057,7 @@ class CfgVehicles {
                     icon = PATHTOF(UI\icons\iv.paa);
                 };
                 class BloodIV_500: BloodIV {
-                    displayName = "#STR_ACE_MEDICAL_ACTIONS_Blood4_500";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV_500')] call DFUNC(treatment));
                 };
@@ -1187,7 +1187,7 @@ class CfgVehicles {
                     icon = PATHTOF(UI\icons\iv.paa);
                 };
                 class BloodIV_500: BloodIV {
-                    displayName = "#STR_ACE_MEDICAL_ACTIONS_Blood4_500";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV_500')] call DFUNC(treatment));
                 };
@@ -1319,7 +1319,7 @@ class CfgVehicles {
                     icon = PATHTOF(UI\icons\iv.paa);
                 };
                 class BloodIV_500: BloodIV {
-                    displayName = "#STR_ACE_MEDICAL_ACTIONS_Blood4_500";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV_500')] call DFUNC(treatment));
                 };
@@ -1439,7 +1439,7 @@ class CfgVehicles {
                     icon = PATHTOF(UI\icons\iv.paa);
                 };
                 class BloodIV_500: BloodIV {
-                    displayName = "#STR_ACE_MEDICAL_ACTIONS_Blood4_500";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV_500')] call DFUNC(treatment));
                 };
