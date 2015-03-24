@@ -18,6 +18,7 @@ PREP(handleKilled);
 PREP(handlePlayerChanged);
 PREP(handlePlayerWeaponChanged);
 PREP(handleScrollWheel);
+PREP(handleUnconscious);
 PREP(initObject);
 PREP(initPerson);
 PREP(isObjectOnObject);

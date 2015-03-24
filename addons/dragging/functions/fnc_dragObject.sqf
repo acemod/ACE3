@@ -33,6 +33,10 @@ _position = _position vectorAdd [0, 0, _offset];
 _target attachTo [_unit, _position];
 _target setDir _direction;
 
+if (_target isKindOf "CAManBase") then {
+    [_target, "AinjPpneMrunSnonWnonDb_still", 0, true] call EFUNC(common,doAnimation);
+};
+
 _unit setVariable [QGVAR(isDragging), true, true];
 _unit setVariable [QGVAR(draggedObject), _target, true];
 

@@ -22,4 +22,4 @@ if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
 // a static weapon has to be empty for dragging
 if ((typeOf _target) isKindOf "StaticWeapon" && {count crew _target > 0}) exitWith {false};
 
-alive _target && {_target getVariable [QGVAR(canDrag), false]}
+alive _target && {_target getVariable [QGVAR(canDrag), false]} && {animationState _target in ["", "unconscious"]}

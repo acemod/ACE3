@@ -33,6 +33,14 @@ _unit playAction "released";
 // release object
 detach _target;
 
+if (_target isKindOf "CAManBase") then {
+    if (_target getVariable ["ACE_isUnconscious", false]) then {
+        [_target, "unconscious", 2, true] call EFUNC(common,doAnimation);
+    } else {
+        [_target, "", 2, true] call EFUNC(common,doAnimation);  //@todo "AinjPpneMrunSnonWnonDb_release" seems to fall back to unconsciousness anim. retest after config fix
+    };
+};
+
 _unit removeWeapon "ACE_FakePrimaryWeapon";
 
 // prevent object from flipping inside buildings

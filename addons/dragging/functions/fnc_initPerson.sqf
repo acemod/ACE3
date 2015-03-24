@@ -15,5 +15,5 @@ private "_unit";
 
 _unit = _this select 0;
 
-[_unit, true/*, _position, _direction*/] call FUNC(setDraggable);
-[_unit, true/*, _position, _direction*/] call FUNC(setCarryable);
+[_unit, true, [0,1.1,0.092], 180] call FUNC(setDraggable);
+[_unit, true, [0.4,-0.1,-1.25], 195] call FUNC(setCarryable); // hard-coded selection: "LeftShoulder"

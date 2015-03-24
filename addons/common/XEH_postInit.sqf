@@ -33,6 +33,8 @@ if (hasInterface) then {
     _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
 }] call FUNC(addEventhandler);
 
+["setDir", {(_this select 0) setDir (_this select 1)}] call FUNC(addEventhandler);
+
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
     if (time > 0) exitWith {

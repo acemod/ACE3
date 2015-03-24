@@ -17,3 +17,8 @@ if (isNil "ACE_maxWeightCarry") then {
 // release object on player change. This does work when returning to lobby, but not when hard disconnecting.
 ["playerChanged", {_this call DFUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
 ["playerWeaponChanged", {_this call DFUNC(handlePlayerWeaponChanged)}] call EFUNC(common,addEventhandler);
+
+// handle waking up dragged unit and falling unconscious while dragging
+["medical_onUnconscious", {_this call DFUNC(handleUnconscious)}] call EFUNC(common,addEventhandler);
+
+//@todo Captivity?
