@@ -8,7 +8,7 @@ class CfgVehicles {
     function = "ACE_Interaction_fnc_moduleInteraction";
     scope = 2;
     isGlobal = 1;
-    icon = PATHTOF(UI\IconInteraction_ca.paa);
+    icon = PATHTOF(UI\Icon_Module_Interaction_ca.paa);
     class Arguments {
       class EnableTeamManagement {
         displayName = "Enable Team Management";
