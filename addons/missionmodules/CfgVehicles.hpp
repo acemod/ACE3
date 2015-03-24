@@ -15,7 +15,7 @@ class CfgVehicles {
 		functionPriority = 1;
 		isGlobal = 1;
 		isTriggerActivated = 0;
-		author = "Glowbal";
+		author = "$STR_ACE_Common_ACETeam";
 		class Arguments	{
 			class soundFiles {
 				displayName = "Sounds";
