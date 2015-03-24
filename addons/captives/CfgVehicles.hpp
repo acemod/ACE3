@@ -178,7 +178,7 @@ class CfgVehicles {
         curatorCost = 0;  //???
         isGlobal = 1; //run global
         isTriggerActivated  = 1; //Wait for triggers
-        // icon = QUOTE(PATHTOF(ui\todo.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Make_Unit_Surrender_ca.paa));
         functionPriority = 0;
         class Arguments {};
         class ModuleDescription: ModuleDescription {

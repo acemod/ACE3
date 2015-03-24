@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-03-10 -->
+<!-- Edited with tabler - 2015-03-24 -->
 <Project name="ACE">
   <Package name="microdagr">
     <Key ID="STR_ACE_microdagr_itemName">
@@ -42,12 +42,6 @@
       <Russian>Выкл.</Russian>
       <Spanish>No</Spanish>
     </Key>
-    <Key ID="STR_ACE_microdagr_openUnit">
-      <English>Open MicroDAGR</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_closeUnit">
-      <English>Close MicroDAGR</English>
-    </Key>
     <Key ID="STR_ACE_microdagr_wpEnterCords">
       <English>Enter Grid Cords:</English>
     </Key>
@@ -89,15 +83,27 @@
       <English>Add</English>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsDelete">
-        <English>Delete</English>
-        <Czech>Smazat</Czech>
-        <French>Supprimer</French>
-        <German>Löschen</German>
-        <Italian>Elimina</Italian>
-        <Polish>Usuń</Polish>
-        <Portuguese>Excluir</Portuguese>
-        <Russian>Удалить</Russian>
-        <Spanish>Suprimir</Spanish>
+      <English>Delete</English>
+      <Czech>Smazat</Czech>
+      <French>Supprimer</French>
+      <German>Löschen</German>
+      <Italian>Elimina</Italian>
+      <Polish>Usuń</Polish>
+      <Portuguese>Excluir</Portuguese>
+      <Russian>Удалить</Russian>
+      <Spanish>Suprimir</Spanish>
+    </Key>
+    <Key ID="STR_ACE_microdagr_toggleUnit">
+      <English>Toggle MicroDAGR Display Mode</English>
+    </Key>
+    <Key ID="STR_ACE_microdagr_show">
+      <English>Show MicoDAGR</English>
+    </Key>
+    <Key ID="STR_ACE_microdagr_configure">
+      <English>Configure MicroDAGR</English>
+    </Key>
+    <Key ID="STR_ACE_microdagr_closeUnit">
+      <English>Close MicroDAGR</English>
     </Key>
   </Package>
 </Project>

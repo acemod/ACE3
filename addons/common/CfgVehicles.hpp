@@ -33,7 +33,7 @@ class CfgVehicles {
     function = QFUNC(moduleCheckPBOs);
     scope = 2;
     isGlobal = 1;
-    icon = QUOTE(PATHTOF(UI\IconCheckPBO_ca.paa));
+    icon = QUOTE(PATHTOF(UI\Icon_Module_CheckPBO_ca.paa));
     class Arguments {
       class Action {
         displayName = "Action";

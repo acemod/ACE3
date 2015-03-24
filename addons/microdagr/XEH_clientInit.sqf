@@ -4,14 +4,14 @@
 if (!hasInterface) exitWith {};
 
 //Add Keybinds:
-["ACE3", QGVAR(openGPS), (localize "STR_ACE_microdagr_openUnit"),
+["ACE3", QGVAR(openGPS), (localize "STR_ACE_microdagr_toggleUnit"),
 {
-    // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    // canInteractWith (can use on map)
+    if !([ACE_player, objNull, ["notOnMap"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if (!("ACE_microDAGR" in (items ace_player))) exitWith {false};
-    [] call FUNC(openDisplay);
+
+    [] call FUNC(openDisplay); //toggle display mode
     true;
 },
 {false},
@@ -19,14 +19,13 @@ if (!hasInterface) exitWith {};
 
 ["ACE3", QGVAR(closeGPS), (localize "STR_ACE_microdagr_closeUnit"),
 {
-    // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    // canInteractWith (can use on map)
+    if !([ACE_player, objNull, ["notOnMap"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if (!("ACE_microDAGR" in (items ace_player))) exitWith {false};
     if (GVAR(currentShowMode) == DISPLAY_MODE_CLOSED) exitWith {false};
 
-    [DISPLAY_MODE_CLOSED] call FUNC(openDisplay);
+    [DISPLAY_MODE_CLOSED] call FUNC(openDisplay); //close unit
     true;
 },
 {false},

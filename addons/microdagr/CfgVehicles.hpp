@@ -3,23 +3,34 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
-                class GVAR(openMicroDAGR) {
-                    displayName = "$STR_ACE_microdagr_openUnit";
-                    condition = QUOTE(('ACE_microDAGR' in (items _player)));
-                    statement = QUOTE([] call FUNC(openDisplay));
+                class GVAR(show) {
+                    //Opens the mini map
+                    displayName = "$STR_ACE_microdagr_show";
+                    condition = QUOTE(([DISPLAY_MODE_DISPLAY] call FUNC(canShow)) && {GVAR(currentShowMode) != DISPLAY_MODE_DISPLAY});
+                    statement = QUOTE([DISPLAY_MODE_DISPLAY] call FUNC(openDisplay));
+                    showDisabled = 0;
+                    priority = 0.2;
+                    icon = QUOTE(PATHTOF(data\icon_microDAGR.paa));
+                    exceptions[] = {"notOnMap"};
+                };
+                class GVAR(configure) {
+                    //Opens the dialog
+                    displayName = "$STR_ACE_microdagr_configure";
+                    condition = QUOTE(([DISPLAY_MODE_DIALOG] call FUNC(canShow)) && {GVAR(currentShowMode) != DISPLAY_MODE_DIALOG});
+                    statement = QUOTE([DISPLAY_MODE_DIALOG] call FUNC(openDisplay));
                     showDisabled = 0;
                     priority = 0.1;
                     icon = QUOTE(PATHTOF(data\icon_microDAGR.paa));
-                    hotkey = "G";
-                };                
-                class GVAR(closeMicroDAGR) {
+                    exceptions[] = {"notOnMap"};
+                };
+                class GVAR(close) {
                     displayName = "$STR_ACE_microdagr_closeUnit";
                     condition = QUOTE(GVAR(currentShowMode) != DISPLAY_MODE_CLOSED);
                     statement = QUOTE([DISPLAY_MODE_CLOSED] call FUNC(openDisplay));
                     showDisabled = 0;
-                    priority = 0;
+                    priority = 0.3;
                     icon = QUOTE(PATHTOF(data\icon_microDAGR.paa));
-                    // hotkey = "G";
+                    exceptions[] = {"notOnMap"};
                 };
             };
         };

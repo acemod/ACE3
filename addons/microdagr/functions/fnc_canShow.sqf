@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * [] call ace_microdagr_fnc_canShow
+ * [mode] call ace_microdagr_fnc_canShow
  *
  * Public: No
  */
@@ -17,13 +17,21 @@
 
 PARAMS_1(_showType);
 
-//Can always do closed or hidden
-if (_showType in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) exitWith {true};
+private ["_returnValue"];
 
-//Can't interact then hide gps:   TODO: any exceptions?
-if (!([ACE_player, objNull, []] call EGVAR(common,canInteractWith))) exitWith {false};
+_returnValue = false;
 
- //Can't have minimap up while zoomed in
-if ((_showType == DISPLAY_MODE_DISPLAY) && {cameraview == "GUNNER"}) exitWith {false};
+switch (_showType) do {
+case (DISPLAY_MODE_CLOSED): {_returnValue = true}; //Can always close
+case (DISPLAY_MODE_HIDDEN): {_returnValue = true}; //Can always hide
 
-true
+case (DISPLAY_MODE_DIALOG): {
+        _returnValue = ("ACE_microDAGR" in (items ACE_player)) && {[ACE_player, objNull, ["notOnMap"]] call EFUNC(common,canInteractWith)};
+    };
+case (DISPLAY_MODE_DISPLAY): {
+        //Can't have minimap up while zoomed in
+        _returnValue = (cameraview != "GUNNER") && {"ACE_microDAGR" in (items ACE_player)} && {[ACE_player, objNull, ["notOnMap"]] call EFUNC(common,canInteractWith)};
+    };
+};
+
+_returnValue

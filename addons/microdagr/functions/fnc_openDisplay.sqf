@@ -21,6 +21,7 @@ DEFAULT_PARAM(0,_newDisplayShowMode,-1);
 _oldShowMode = GVAR(currentShowMode);
 
 if (_newDisplayShowMode == -1) then {
+    //Toggle mode button:
     if (_oldShowMode in [DISPLAY_MODE_DISPLAY, DISPLAY_MODE_HIDDEN]) then {_newDisplayShowMode = DISPLAY_MODE_DIALOG};
     if (_oldShowMode in [DISPLAY_MODE_DIALOG, DISPLAY_MODE_CLOSED]) then {_newDisplayShowMode = DISPLAY_MODE_DISPLAY};
 };
