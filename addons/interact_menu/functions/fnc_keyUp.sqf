@@ -1,9 +1,9 @@
 /*
- * Author: NouberNou
- * Handle interaction key up
+ * Author: NouberNou and esteldunedain
+ * Handle interactions key up
  *
  * Argument:
- * None
+ * 0: Type of key: 0 interaction / 1 self interaction <NUMBER>
  *
  * Return value:
  * true <BOOL>
@@ -11,6 +11,9 @@
  * Public: No
  */
 #include "script_component.hpp"
+
+// Exit if there's no menu opened
+if (GVAR(openedMenuType) < 0) exitWith {true};
 
 if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
@@ -33,12 +36,18 @@ if(GVAR(actionSelected)) then {
     };
 };
 
-if (GVAR(keyDown)) then {
-    GVAR(keyDown) = false;
-    ["interactMenuClosed", [0]] call EFUNC(common,localEvent);
+GVAR(keyDown) = false;
+GVAR(keyDownSelfAction) = false;
+GVAR(openedMenuType) = -1;
+
+if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
+    closeDialog 0;
 };
 
 GVAR(expanded) = false;
 GVAR(lastPath) = [];
 GVAR(menuDepthPath) = [];
+
+["interactMenuClosed", [GVAR(openedMenuType)]] call EFUNC(common,localEvent);
+
 true
