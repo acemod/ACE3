@@ -850,7 +850,7 @@
         <Italian>Scarica il paziente</Italian>
       </Key>
       <Key ID="STR_ACE_Medical_UnloadPatient">
-        <English>Unload patient &gt;&gt;</English>
+        <English>Unload patient</English>
       </Key>
     </Container>
   </Package>
