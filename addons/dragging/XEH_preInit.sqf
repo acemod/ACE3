@@ -24,6 +24,8 @@ PREP(initPerson);
 PREP(isObjectOnObject);
 PREP(setCarryable);
 PREP(setDraggable);
+PREP(startCarry);
+PREP(startCarryPFH);
 PREP(startDrag);
 PREP(startDragPFH);
 

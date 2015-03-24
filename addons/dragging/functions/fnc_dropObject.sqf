@@ -27,7 +27,7 @@ _inBuilding = [_unit] call FUNC(isObjectOnObject);
 _unit playAction "released";
 
 // prevent collision damage
-["fixCollision", _unit, _unit] call EFUNC(common,targetEvent);
+["fixCollision", _unit] call EFUNC(common,localEvent);
 ["fixCollision", _target, _target] call EFUNC(common,targetEvent);
 
 // release object
@@ -37,7 +37,7 @@ if (_target isKindOf "CAManBase") then {
     if (_target getVariable ["ACE_isUnconscious", false]) then {
         [_target, "unconscious", 2, true] call EFUNC(common,doAnimation);
     } else {
-        [_target, "", 2, true] call EFUNC(common,doAnimation);  //@todo "AinjPpneMrunSnonWnonDb_release" seems to fall back to unconsciousness anim. retest after config fix
+        [_target, "", 2, true] call EFUNC(common,doAnimation);  //@todo "AinjPpneMrunSnonWnonDb_release" seems to fall back to unconsciousness anim.
     };
 };
 
@@ -54,5 +54,7 @@ _unit setVariable [QGVAR(draggedObject), objNull, true];
 // make object accesable for other units
 [objNull, _target, true] call EFUNC(common,claim);
 
-["fixPosition", _target, _target] call EFUNC(common,targetEvent);
-["fixFloating", _target, _target] call EFUNC(common,targetEvent);
+if !(_target isKindOf "CAManBase") then {
+    ["fixPosition", _target, _target] call EFUNC(common,targetEvent);
+    ["fixFloating", _target, _target] call EFUNC(common,targetEvent);
+};
