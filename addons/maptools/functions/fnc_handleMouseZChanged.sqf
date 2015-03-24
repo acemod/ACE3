@@ -21,6 +21,7 @@ diag_log "Scroll";
 diag_log _this;
 _handled   = false;
 
+_handled = true;
 // If drawing, change line color
 
 

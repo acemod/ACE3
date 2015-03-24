@@ -17,6 +17,7 @@ class CfgVehicles {
             class ACE_CheckTemperature {
                 displayName = "$STR_ACE_Overheating_CheckTemperatureShort";
                 condition = QUOTE( currentWeapon _player in [ARR_3(primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player)] );
+                exceptions[] = {"isNotInside"};
                 statement = QUOTE( [ARR_2(_player, currentWeapon _player)] call FUNC(CheckTemperature); );
                 showDisabled = 0;
                 priority = 3.1;
