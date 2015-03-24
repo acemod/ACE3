@@ -28,8 +28,20 @@ if (_target isKindOf "StaticWeapon") then {
       _muzzle = _weapon;
     };
   };
+
+  if (_magazine == "") then {
+    // Try to get magazine using magazinesAmmoFull
+    private ["_magazines"];
+    _magazines = magazinesAmmoFull _target;
+    {
+        if (_x select 2) exitWith {
+            _magazine = _x select 0;
+        };
+    } forEach _magazines;
+  };
 };
 
+if (_magazine == "") exitWith {};
 if (_weapon == "") exitWith {};
 if (typeName _muzzle != "STRING") then {_muzzle = _weapon};
 
