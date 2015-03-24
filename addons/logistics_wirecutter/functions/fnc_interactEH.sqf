@@ -17,6 +17,7 @@
 
 PARAMS_1(_interactionType);
 
+//Ignore self-interaction menu
 if (_interactionType != 0) exitWith {};
 
 //for performance only do stuff it they have a wirecutter item
@@ -32,7 +33,10 @@ if (!("ACE_wirecutter" in (items ace_player))) exitWith {};
         {deleteVehicle _x;} forEach _addedHelpers;
         [_pfID] call CBA_fnc_removePerFrameHandler;
     } else {
-        //If play moved >5 meters from last pos, then rescan
+        // Prevent Rare Error when ending mission with interact key down:
+        if (isNull ace_player) exitWith {};
+    
+        //If player moved >5 meters from last pos, then rescan
         if (((getPosASL ace_player) distance _setPosition) > 5) then {
 
             _fncStatement = {
