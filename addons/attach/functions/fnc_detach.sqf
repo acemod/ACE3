@@ -1,5 +1,5 @@
 /*
- * Author: eRazeri and CAA-Picard
+ * Author: eRazeri and esteldunedain
  * Detach an item from a unit
  *
  * Arguments:

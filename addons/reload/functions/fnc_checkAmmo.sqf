@@ -1,5 +1,5 @@
 /*
- * Author: commy2 and CAA-Picard
+ * Author: commy2 and esteldunedain
  * Count the ammo of the currently loaded magazine or count rifle grenades. Play animation and display message.
  *
  * Argument:

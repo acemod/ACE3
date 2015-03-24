@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {};// "ACE_Kestrel4500" };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"q1184", "Rocko", "CAA-Picard"};
+        author[] = {"q1184", "Rocko", "esteldunedain"};
         VERSION_CONFIG;
     };
 };

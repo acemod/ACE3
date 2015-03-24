@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Creates an isolated ACE action
  * Note: This function is NOT global.
  *

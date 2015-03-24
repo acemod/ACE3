@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Take full path and split it between parent path and action name
  *
  * Argument:

@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Insert an ACE action to an object, under a certain config path
  * Note: This function is NOT global.
  *

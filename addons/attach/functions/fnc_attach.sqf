@@ -1,5 +1,5 @@
 /*
- * Author: eRazeri and CAA-Picard
+ * Author: eRazeri and esteldunedain
  * Attach an item to the unit
  *
  * Arguments:

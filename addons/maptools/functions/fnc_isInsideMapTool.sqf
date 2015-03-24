@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  *
  * Return true if the position is inside the map marker (to allow dragging).
  *

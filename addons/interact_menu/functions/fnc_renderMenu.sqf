@@ -1,5 +1,5 @@
 /*
- * Author: NouberNou and CAA-Picard
+ * Author: NouberNou and esteldunedain
  * Render an interaction menu and it's children recursively
  *
  * Argument:

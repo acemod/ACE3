@@ -1,5 +1,5 @@
 /*
- * Author: NouberNou and CAA-Picard
+ * Author: NouberNou and esteldunedain
  * Render a single interaction icon
  *
  * Argument:

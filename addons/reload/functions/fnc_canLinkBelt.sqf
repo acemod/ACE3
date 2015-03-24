@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Check if the target has an MG equiped with belt system that the player can link
  *
  * Argument:

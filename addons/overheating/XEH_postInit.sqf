@@ -1,4 +1,4 @@
-// by CAA-Picard
+// by esteldunedain
 #include "script_component.hpp"
 
 if !(hasInterface) exitWith {};

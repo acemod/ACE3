@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Collect a entire tree of active actions
  *
  * Argument:

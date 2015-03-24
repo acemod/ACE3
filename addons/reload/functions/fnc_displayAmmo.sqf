@@ -1,5 +1,5 @@
 /*
- * Author: commy2 and CAA-Picard
+ * Author: commy2 and esteldunedain
  * Display the ammo of the currently loaded magazine of the target or count rifle grenades.
  *
  * Argument:

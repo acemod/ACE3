@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi and CAA-Picard
+ * Author: KoffeinFlummi and esteldunedain
  *
  * Watches for scope changes.
  * Defines key bindings

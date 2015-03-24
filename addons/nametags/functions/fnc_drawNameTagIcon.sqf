@@ -1,5 +1,5 @@
 /*
- * Author: commy2, CAA-Picard
+ * Author: commy2, esteldunedain
  *
  * Draw the nametag and rank icon.
  *

@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Insert an ACE action to a class, under a certain path
  * Note: This function is NOT global.
  *
