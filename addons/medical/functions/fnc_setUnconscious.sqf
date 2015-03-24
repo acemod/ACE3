@@ -110,7 +110,7 @@ _minWaitingTime = (round(random(10)+5));
         if (!_hasMovedOut) then {
             // Reset the unit back to the previous captive state.
             [_unit, QGVAR(unconscious), false] call EFUNC(common,setCaptivityStatus);
-            
+
             // Swhich the unit back to its original group
             [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 
@@ -118,7 +118,7 @@ _minWaitingTime = (round(random(10)+5));
             _unit setUnitPos _originalPos; // This is not position but stance (DOWN, MIDDLE, UP)
 
             _unit setUnconscious false;
-            ["medical_onUnconscious", [_unit], [_unit, false]] call EFUNC(common,targetEvent);
+            ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
             // ensure this statement runs only once
             _args set [6, true];
         };
@@ -142,4 +142,4 @@ _minWaitingTime = (round(random(10)+5));
 
 }, 0.1, [_unit,_animState, _originalPos, _startingTime, _minWaitingTime, false] ] call CBA_fnc_addPerFrameHandler;
 
-["medical_onUnconscious", [_unit], [_unit, true]] call EFUNC(common,targetEvent);
+["medical_onUnconscious", [_unit, true]] call EFUNC(common,globalEvent);
