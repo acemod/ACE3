@@ -26,13 +26,11 @@ if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
     if ((_unit getvariable[QGVAR(addedToUnitLoop),false] || !alive _unit) && !_force) exitwith{};
     _unit setvariable [QGVAR(addedToUnitLoop), true, true];
 
-    diag_log format["[MEDICAL] Added a unit to loop: %1", _unit];
     [{
         private "_unit";
         _unit = (_this select 0) select 0;
         if (!alive _unit || !local _unit) then {
            [_this select 1] call CBA_fnc_removePerFrameHandler;
-           diag_log format["[MEDICAL] Removed a unit from loop: %1", _unit];
            if (!local _unit) then {
                 if (GVAR(level) >= 2) then {
                     _unit setvariable [QGVAR(heartRate), _unit getvariable [QGVAR(heartRate), 0], true];
