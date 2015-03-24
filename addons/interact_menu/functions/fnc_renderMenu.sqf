@@ -85,15 +85,14 @@ if (_angleSpan < 360) then {
         _angleInterval = _angleSpan / (_numChildren - 1);
     };
 } else {
-    _angleSpan / (_numChildren);
+    _angleInterval = _angleSpan / (_numChildren);
 };
 if (_numChildren == 1) then {
-    _angleInterval = 60;
+    _angleInterval = 55;
 };
 
 // Scale menu based on the amount of children
-GVAR(menuScale) = 0.15;
-_scale = GVAR(menuScale) * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.4) max 0.5);
+_scale = 0.17 * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.1) max 0.5);
 // Animate menu scale
 if (_menuInSelectedPath && (_menuDepth == count _path)) then {
     _scale = _scale * (0.3 + 0.7 * (((diag_tickTime - GVAR(expandedTime)) * 8) min 1));
@@ -112,7 +111,7 @@ _angle = _centerAngle - _angleSpan / 2;
 
     //drawLine3D [_pos, _newPos, [1,0,0,0.8]];
     //END_COUNTER(children);
-    [_path, _x, _newPos, [_angle, 140]] call FUNC(renderMenu);
+    [_path, _x, _newPos, [_angle, 150]] call FUNC(renderMenu);
 
     _angle = _angle + _angleInterval;
 } forEach _activeChildren;

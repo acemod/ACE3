@@ -35,8 +35,8 @@ GVAR(iconCount) = GVAR(iconCount) + 1;
 if(_icon == "") then {
     _icon = DEFAULT_ICON;
 };
-_text = format ["<img image='%1' color='%2' align='center'/><br/><t color ='%3' size='0.75' align='center'>%4</t>", _icon, _color, _color, _text];
+_text = format ["<img image='%1' color='%2' align='center'/><br/><t color='%3' size='0.80' align='center'>%4</t>", _icon, _color, _color, _text];
 _ctrl ctrlSetStructuredText (parseText _text);
-_ctrl ctrlSetPosition [(_sPos select 0)-(0.2*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.4*SafeZoneW, 0.035*SafeZoneW];
+_ctrl ctrlSetPosition [(_sPos select 0)-(0.08*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.16*SafeZoneW, 0.05*SafeZoneW];
 //_ctrl ctrlSetBackgroundColor [1, 0, 0, 0.1];
 _ctrl ctrlCommit 0;
