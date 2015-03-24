@@ -110,10 +110,11 @@ GVAR(effectTimeBlood) = time;
         };
     };
 
+    _bleeding = ACE_player call FUNC(getBloodLoss);
     // Bleeding Indicator
-    if (damage ACE_player > 0.1 and GVAR(effectTimeBlood) + 6 < time) then {
+    if (_bleeding > 0 and GVAR(effectTimeBlood) + 6 < time) then {
         GVAR(effectTimeBlood) = time;
-        [500 * damage ACE_player] call BIS_fnc_bloodEffect;
+        [500 * _bleeding] call BIS_fnc_bloodEffect;
     };
 
     // Blood Volume Effect
