@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi and CAA-Picard
+ * Author: KoffeinFlummi and esteldunedain
  * Calculates average g-forces and triggers g-effects
  *
  * Argument:

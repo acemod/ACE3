@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  *
  * Returns the equivalent of 100m in screen coordinates
  *

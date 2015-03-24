@@ -13,6 +13,9 @@
 #include "script_component.hpp"
 
 if(!GVAR(keyDown)) then {
+    while {dialog} do {
+        closeDialog 0;
+    };
 
     // Only interact with others if on foot
     if (vehicle ACE_player != ACE_player) exitWith {};

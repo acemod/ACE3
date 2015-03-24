@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi, edited by commy2 and CAA-Picard
+ * Author: KoffeinFlummi, edited by commy2 and esteldunedain
  *
  * PFH that check for player moving away, changing weapon, etc
  * and unrests the weapon if necessary

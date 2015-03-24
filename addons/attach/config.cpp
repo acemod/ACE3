@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {"ACE_IR_Strobe_Item"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
-        author[] = {"KoffeinFlummi","eRazeri","CAA-Picard"};
+        author[] = {"KoffeinFlummi","eRazeri","esteldunedain"};
         authorUrl = "https://github.com/KoffeinFlummi/";
         VERSION_CONFIG;
     };

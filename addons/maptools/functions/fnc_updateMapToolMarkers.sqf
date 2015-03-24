@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  *
  * Update the map tool markers, position, size, rotation and visibility.
  *

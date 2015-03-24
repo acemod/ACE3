@@ -13,6 +13,10 @@
 #include "script_component.hpp"
 
 if(!GVAR(keyDownSelfAction)) then {
+    while {dialog} do {
+        closeDialog 0;
+    };
+
     GVAR(keyDownSelfAction) = true;
     GVAR(keyDown) = false;
     GVAR(keyDownTime) = diag_tickTime;

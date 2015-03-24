@@ -1,5 +1,5 @@
 /*
- * Author: commy2 and CAA-Picard
+ * Author: commy2 and esteldunedain
  *
  * Handle fire of local launchers
  *

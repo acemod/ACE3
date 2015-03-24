@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Initializes the Map module.
  *
  * Arguments:

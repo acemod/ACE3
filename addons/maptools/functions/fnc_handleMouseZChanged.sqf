@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  *
  * Handle mouse wheel.
  *
@@ -24,7 +24,7 @@ _handled   = false;
 // If drawing, change line color
 
 
-//@todo AGM bug: 
+//@todo AGM bug:
 // ACE_Map_drawColors is never defined
 
 /* if (count GVAR(drawing_tempLineMarker) > 0) then {
@@ -37,7 +37,7 @@ _handled   = false;
   };
   GVAR(drawing_tempLineMarker) set [3, ACE_Map_drawColor];
   GVAR(drawing_tempLineMarker) call ACE_Map_fnc_updateLineMarker;
-  
+
   _handled = true;
 }; */
 _handled

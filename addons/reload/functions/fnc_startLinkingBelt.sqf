@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Start linking the belt
  *
  * Argument:
@@ -60,7 +60,7 @@ _onFailure = {
     _player addMagazine _magazine;
 };
 
-[_player, "AinvPknlMstpSnonWnonDr_medic5", 0] call EFUNC(common,doAnimation);
+_player playActionNow "PutDown";
 
 // Remove the magazine with maximum remaining ammo
 [_player, _magazineType, _maxAmmo] call EFUNC(common,removeSpecificMagazine);

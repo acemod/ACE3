@@ -1,5 +1,5 @@
 /*
-* Author: CAA-Picard
+* Author: esteldunedain
 *
 * Opens or closes the gps on the map screen, showing coordinates
 *

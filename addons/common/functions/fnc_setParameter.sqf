@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  *
  * Sets the value of an ACE_Parameter and makes it public.
  *

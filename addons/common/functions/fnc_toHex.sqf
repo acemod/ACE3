@@ -1,5 +1,5 @@
 /*
-Author: commy2, CAA-Picard
+Author: commy2, esteldunedain
 
 Description:
 Converts number to hexadecimal number

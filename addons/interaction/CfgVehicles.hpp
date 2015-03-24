@@ -405,6 +405,7 @@ class CfgVehicles {
         icon = "";  // @todo
         enableInside = 1;
         hotkey = "E";
+        exceptions[] = {"notOnMap"};
       };
     };
   };

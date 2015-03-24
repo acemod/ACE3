@@ -7,7 +7,7 @@ class CfgVehicles {
         displayName = $STR_ACE_Explosives_Menu;
         condition = QUOTE(!(_player getVariable [ARR_2('ace_explosives_PlantingExplosive',false)]));
         statement = "";
-        exceptions[] = {"ACE_Interaction_isNotSwimming"};
+        exceptions[] = {"isNotSwimming"};
         showDisabled = 1;
         priority = 4;
         icon = PATHTOF(UI\Explosives_Menu_ca.paa);
@@ -17,7 +17,7 @@ class CfgVehicles {
           displayName = $STR_ACE_Explosives_Detonate;
           condition = QUOTE([_player] call FUNC(canDetonate));
           statement = QUOTE([_player] call FUNC(openTransmitterUI););
-          exceptions[] = {"ACE_Interaction_isNotSwimming"};
+          exceptions[] = {"isNotSwimming"};
           showDisabled = 1;
           icon = PATHTOF(UI\Explosives_Menu_ca.paa);
           priority = 2;
@@ -27,7 +27,7 @@ class CfgVehicles {
           displayName = $STR_ACE_Explosives_Place;
           condition = QUOTE((vehicle _player == _player) and {[_player] call FUNC(hasExplosives)});
           statement = QUOTE([_player] call FUNC(openPlaceUI););
-          exceptions[] = {"ACE_Interaction_isNotSwimming"};
+          exceptions[] = {"isNotSwimming"};
           showDisabled = 1;
           icon = PATHTOF(UI\Place_Explosive_ca.paa);
           priority = 1;
@@ -37,7 +37,7 @@ class CfgVehicles {
           displayName = $STR_ACE_Explosives_Defuse;
           condition = QUOTE([_player] call FUNC(canDefuse));
           statement = QUOTE([ARR_2(_player,EGVAR(Interaction,Target))] call FUNC(startDefuse););
-          exceptions[] = {"ACE_Interaction_isNotSwimming"};
+          exceptions[] = {"isNotSwimming"};
           showDisabled = 0;
           icon = PATHTOF(UI\Defuse_ca.paa);
           priority = 0.8;
@@ -47,7 +47,7 @@ class CfgVehicles {
           displayName = $STR_ACE_Explosives_cellphone_displayName;
           condition = "('ACE_Cellphone' in (items ace_player))";
           statement = "closeDialog 0;createDialog 'Rsc_ACE_PhoneInterface';";
-          exceptions[] = {"ACE_Interaction_isNotSwimming"};
+          exceptions[] = {"isNotSwimming"};
           showDisabled = 0;
           icon = PATHTOF(Data\UI\Cellphone_UI.paa);
           priority = 0.8;

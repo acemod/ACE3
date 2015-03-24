@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Create one unload action per unconscious passenger
  *
  * Argument:

@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Check if the first path is a subpath of the other
  *
  * Argument:
