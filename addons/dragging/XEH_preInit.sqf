@@ -19,6 +19,7 @@ PREP(handlePlayerChanged);
 PREP(handlePlayerWeaponChanged);
 PREP(handleScrollWheel);
 PREP(initObject);
+PREP(initPerson);
 PREP(isObjectOnObject);
 PREP(setCarryable);
 PREP(setDraggable);
