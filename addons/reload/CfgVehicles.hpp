@@ -32,4 +32,18 @@ class CfgVehicles {
             };
         };
     };
+
+    class StaticMortar: StaticWeapon {};
+    class Mortar_01_base_F: StaticMortar {
+        class ACE_Actions {
+            class ACE_MainActions {
+                class ACE_CheckAmmo {
+                    displayName = "$STR_ACE_Reload_checkAmmo";
+                    distance = 2.0;
+                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canCheckAmmo));
+                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(checkAmmo));
+                };
+            };
+        };
+    };
 };
