@@ -87,6 +87,7 @@ class CfgVehicles {
     displayName = "LSD Vehicles";
     function = "ACE_Common_fnc_moduleLSDVehicles";
     scope = 2;
+    icon = QUOTE(PATHTOF(UI\Icon_Module_LSD_ca.paa));
     isGlobal = 1;
     class Arguments {
     };
