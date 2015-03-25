@@ -12,6 +12,7 @@ PREP(deviceAddWaypoint);
 PREP(deviceDeleteWaypoint);
 PREP(deviceGetWaypoints);
 PREP(dialogClosedEH);
+PREP(mapButtonDownEH);
 PREP(mapDoubleTapEH);
 PREP(mapOnDrawEH);
 PREP(modeMapButtons);
