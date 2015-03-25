@@ -82,12 +82,12 @@ class ACE_Settings {
         value = 0;
         typeName = "BOOL";
     };
-    class GVAR(enableNumberHotkeys) {
+    /*class GVAR(enableNumberHotkeys) {
         value = 1;
         typeName = "BOOL";
         isClientSetable = 1;
         displayName = "$STR_ACE_Common_EnableNumberHotkeys";
-    };
+    };*/
     class GVAR(settingFeedbackIcons) {
         value = 1;
         typeName = "SCALAR";

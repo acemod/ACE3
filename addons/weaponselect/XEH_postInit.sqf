@@ -13,7 +13,7 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, handgunWeapon ACE_player] call FUNC(selectWeaponMode);
-    false
+    true
 },
 {false},
 [2, [false, false, false]], false] call cba_fnc_addKeybind; //1 Key
@@ -27,7 +27,7 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, primaryWeapon ACE_player] call FUNC(selectWeaponMode);
-    false
+    true
 },
 {false},
 [3, [false, false, false]], false] call cba_fnc_addKeybind; //2 Key
@@ -41,7 +41,7 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, primaryWeapon ACE_player] call FUNC(selectWeaponMuzzle);
-    false
+    true
 },
 {false},
 [4, [false, false, false]], false] call cba_fnc_addKeybind; //3 Key
@@ -55,7 +55,7 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, secondaryWeapon ACE_player] call FUNC(selectWeaponMode);
-    false
+    true
 },
 {false},
 [5, [false, false, false]], false] call cba_fnc_addKeybind; //4 Key
@@ -69,7 +69,7 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, binocular ACE_player] call FUNC(selectWeaponMode);
-    false
+    true
 },
 {false},
 [6, [false, false, false]], false] call cba_fnc_addKeybind; //5 Key
@@ -83,7 +83,7 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player] call FUNC(selectGrenadeFrag);
-    false
+    true
 },
 {false},
 [7, [false, false, false]], false] call cba_fnc_addKeybind; //6 Key
@@ -97,7 +97,7 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player] call FUNC(selectGrenadeOther);
-    false
+    true
 },
 {false},
 [8, [false, false, false]], false] call cba_fnc_addKeybind; //7 Key
@@ -111,7 +111,7 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player] call FUNC(putWeaponAway);
-    false
+    true
 },
 {false},
 [11, [false, false, false]], false] call cba_fnc_addKeybind; //0 Key
@@ -125,7 +125,7 @@ if !(hasInterface) exitWith {};
 
     // Statement
     (vehicle ACE_player) engineOn true;
-    false
+    true
 },
 {false},
 [3, [false, false, false]], false] call cba_fnc_addKeybind; //2 Key
@@ -139,7 +139,7 @@ if !(hasInterface) exitWith {};
 
     // Statement
     (vehicle ACE_player) engineOn false;
-    false
+    true
 },
 {false},
 [2, [false, false, false]], false] call cba_fnc_addKeybind; //1 Key
@@ -153,7 +153,7 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, vehicle ACE_player, 0] call FUNC(selectWeaponVehicle);
-    false
+    true
 },
 {false},
 [4, [false, false, false]], false] call cba_fnc_addKeybind; //3 Key
@@ -167,7 +167,7 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, vehicle ACE_player, 1] call FUNC(selectWeaponVehicle);
-    false
+    true
 },
 {false},
 [5, [false, false, false]], false] call cba_fnc_addKeybind; //4 Key
@@ -181,7 +181,7 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, vehicle ACE_player, 2] call FUNC(selectWeaponVehicle);
-    false
+    true
 },
 {false},
 [6, [false, false, false]], false] call cba_fnc_addKeybind; //5 Key
@@ -195,7 +195,7 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [vehicle ACE_player] call FUNC(fireSmokeLauncher);
-    false
+    true
 },
 {false},
 [10, [false, false, false]], false] call cba_fnc_addKeybind; //9 Key
