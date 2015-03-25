@@ -10,7 +10,7 @@ class CfgVehicles {
                     statement = QUOTE([DISPLAY_MODE_DISPLAY] call FUNC(openDisplay));
                     showDisabled = 0;
                     priority = 0.2;
-                    icon = QUOTE(PATHTOF(data\icon_microDAGR.paa));
+                    icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
                     exceptions[] = {"notOnMap"};
                 };
                 class GVAR(configure) {
@@ -20,7 +20,7 @@ class CfgVehicles {
                     statement = QUOTE([DISPLAY_MODE_DIALOG] call FUNC(openDisplay));
                     showDisabled = 0;
                     priority = 0.1;
-                    icon = QUOTE(PATHTOF(data\icon_microDAGR.paa));
+                    icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
                     exceptions[] = {"notOnMap"};
                 };
                 class GVAR(close) {
@@ -29,7 +29,7 @@ class CfgVehicles {
                     statement = QUOTE([DISPLAY_MODE_CLOSED] call FUNC(openDisplay));
                     showDisabled = 0;
                     priority = 0.3;
-                    icon = QUOTE(PATHTOF(data\icon_microDAGR.paa));
+                    icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
                     exceptions[] = {"notOnMap"};
                 };
             };
@@ -73,5 +73,4 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_microDAGR,10);
         };
     };
-    
 };
