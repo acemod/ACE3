@@ -5,7 +5,7 @@ private ["_vehicle", "_turret", "_weapons"];
 
 _vehicle = _this select 0;
 
-_turret = [typeOf _vehicle] call EFUNC(common,getTurretCommander);
+_turret = [_vehicle] call EFUNC(common,getTurretCommander);
 
 _weapons = _vehicle weaponsTurret _turret;
 
