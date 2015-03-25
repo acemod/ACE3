@@ -53,6 +53,7 @@ class controlsBackground {
         h = H_PART(19);
         onDraw = QUOTE(_this call FUNC(mapOnDrawEH));
         onMouseButtonDblClick = QUOTE(_this call FUNC(mapDoubleTapEH));
+        onMouseButtonDown = QUOTE(_this call FUNC(mapButtonDownEH));
 
         scaleMin = 0.005;
         scaleMax = 10;  //Lets the mini display zoom out far enough
@@ -113,6 +114,7 @@ class controlsBackground {
         h = H_PART(19);
         onDraw = QUOTE(_this call FUNC(mapOnDrawEH));
         onMouseButtonDblClick = QUOTE(_this call FUNC(mapDoubleTapEH));
+        onMouseButtonDown = QUOTE(_this call FUNC(mapButtonDownEH));
 
         // ptsPerSquareSea = 5;
         // ptsPerSquareTxt = 20;
