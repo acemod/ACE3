@@ -7,6 +7,11 @@
  *
  * Return value:
  * Nothing
+ *
+ * Example:
+ * [player] call ace_reload_fnc_displayAmmo
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

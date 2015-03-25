@@ -21,7 +21,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class GVAR(CheckAmmo) {
                 displayName = "$STR_ACE_Reload_checkAmmo";
-                condition = QUOTE([ARR_2(_player, _player)] call FUNC(canCheckAmmoHover));
+                condition = QUOTE([ARR_2(_player, _target)] call FUNC(canCheckAmmoHover));
                 insertChildren = QUOTE(_this call FUNC(checkAmmoHover));
             };
         };

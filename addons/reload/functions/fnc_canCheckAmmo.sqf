@@ -8,6 +8,11 @@
  *
  * Return value:
  * Can link belt<BOOL>
+ *
+ * Example:
+ * [player] call ace_reload_fnc_canCheckAmmo
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

@@ -8,6 +8,11 @@
  *
  * Return value:
  * Can link belt<BOOL>
+ *
+ * Example:
+ * [AAR, AR] call ace_reload_fnc_canLinkBelt
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

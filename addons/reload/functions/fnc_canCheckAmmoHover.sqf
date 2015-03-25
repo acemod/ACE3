@@ -9,6 +9,11 @@
  *
  * Return value:
  * Can check ammo for statics<BOOL>
+ *
+ * Example:
+ * [player, mortar] call ace_reload_fnc_canCheckAmmoHover
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

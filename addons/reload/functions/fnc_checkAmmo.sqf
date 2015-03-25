@@ -8,6 +8,11 @@
  *
  * Return value:
  * Nothing
+ *
+ * Example:
+ * [player] call ace_reload_fnc_checkAmmo
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
