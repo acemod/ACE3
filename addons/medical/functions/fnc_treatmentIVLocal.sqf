@@ -35,7 +35,7 @@ _target setvariable [_varName, (_target getvariable [_varName, 0]) + _volumeAdde
 
 if !(_varName in GVAR(IVBags)) then {
 	GVAR(IVBags) pushback _varName;
-	publicVariable GVAR(IVBags);
+	publicVariable QGVAR(IVBags);
 };
 
 // TODO localization
