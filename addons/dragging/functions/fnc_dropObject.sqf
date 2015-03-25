@@ -33,7 +33,7 @@ _unit playAction "released";
 // release object
 detach _target;
 
-if (_target isKindOf "CAManBase") then {
+if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
     if (_target getVariable ["ACE_isUnconscious", false]) then {
         [_target, "unconscious", 2, true] call EFUNC(common,doAnimation);
     } else {
