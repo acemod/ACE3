@@ -66,4 +66,12 @@ class CfgVehicles {
             description = "Controls how muchdata is filled in the microDAGR items.  Less data restricts the map view to show less on the minimap.<br/>Source: microDAGR.pbo";
         };
     };
+	
+	class Box_NATO_Support_F;
+    class ACE_Box_Misc: Box_NATO_Support_F {
+        class TransportItems {
+            MACRO_ADDITEM(ACE_microDAGR,10);
+        };
+    };
+	
 };
