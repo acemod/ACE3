@@ -31,7 +31,7 @@ _position = _position vectorAdd [0, 0, _offset];
 
 // attach object
 _target attachTo [_unit, _position];
-_target setDir _direction;
+["setDir", _target, [_target, _direction]] call EFUNC(common,targetEvent);
 
 if (_target isKindOf "CAManBase") then {
     [_target, "AinjPpneMrunSnonWnonDb_still", 0, true] call EFUNC(common,doAnimation);
