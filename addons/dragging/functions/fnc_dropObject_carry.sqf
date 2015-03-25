@@ -31,7 +31,7 @@ _inBuilding = [_unit] call FUNC(isObjectOnObject);
 detach _target;
 
 // fix anim when aborting carrying persons
-if (_target isKindOf "CAManBase") then {
+if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
     [_unit, "", 2, true] call EFUNC(common,doAnimation);
 
     if (_target getVariable ["ACE_isUnconscious", false]) then {
