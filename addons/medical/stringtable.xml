@@ -399,7 +399,7 @@
         <Polish>Opaska zaciskowa CAT służy do tamowanie krwotoków w sytuacji zranienia kończyn z masywnym krwawieniem tętniczym lub żylnym.</Polish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_MORPHINE_DISPLAY">
-        <English>Morphine auto-injector</English>
+        <English>Morphine autoinjector</English>
         <Russian>Морфин в автоматическом шприце</Russian>
         <Spanish>Morfina auto-inyectable</Spanish>
         <French>Auto-injecteur de Morphine</French>
@@ -420,7 +420,7 @@
         <Polish>Organiczny związek chemiczny z grupy alkaloidów. Ma silne działanie przeciwbólowe.</Polish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ATROPINE_DISPLAY">
-        <English>Atropin auto-injector</English>
+        <English>Atropin autoinjector</English>
         <Russian>Атропин в автоматическом шприце</Russian>
         <Spanish>Atropina auto-inyectable</Spanish>
         <French>Auto-injecteur d'Atropine</French>
@@ -441,7 +441,7 @@
         <Polish>Atropina. Stosowana jako lek rozkurczowy i środek rozszerzający źrenice. Środek stosowany w przypadku zagrożeń NBC.</Polish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_EPINEPHRINE_DISPLAY">
-        <English>Epinephrine auto-injector</English>
+        <English>Epinephrine autoinjector</English>
         <Russian>Адреналин в автоматическом шприце</Russian>
         <Spanish>Epinefrina auto-inyectable</Spanish>
         <French>Auto-injecteur d'épinéphrine</French>
