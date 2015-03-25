@@ -3,6 +3,7 @@
 ADDON = false;
 
 PREP(canCheckAmmo);
+PREP(canCheckAmmoHover);
 PREP(canLinkBelt);
 PREP(checkAmmo);
 PREP(checkAmmoHover);
