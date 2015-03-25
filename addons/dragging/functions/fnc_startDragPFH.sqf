@@ -7,6 +7,11 @@ _unit = _this select 0 select 0;
 _target = _this select 0 select 1;
 _timeOut = _this select 0 select 2;
 
+// handle aborting drag
+if (_unit getVariable [QGVAR(isDragging), false]) exitWith {
+    [_this select 1] call CBA_fnc_removePerFrameHandler;
+};
+
 // same as dragObjectPFH, checks if object is deleted or dead.
 if !([_target] call EFUNC(common,isAlive)) then {
     [_unit, _target] call FUNC(dropObject);
@@ -26,10 +31,7 @@ if (time > _timeOut) exitWith {
 
 // unit is ready to start dragging
 if (animationState _unit in DRAG_ANIMATIONS) exitWith {
-    // handles aborting dragging
-    if (_unit getVariable [QGVAR(isDragging), false]) then {
-        [_unit, _target] call FUNC(dragObject);
-    };
+    [_unit, _target] call FUNC(dragObject);
 
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 };

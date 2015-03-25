@@ -7,6 +7,11 @@ _unit = _this select 0 select 0;
 _target = _this select 0 select 1;
 _timeOut = _this select 0 select 2;
 
+// handle aborting carry
+if (_unit getVariable [QGVAR(isCarrying), false]) exitWith {
+    [_this select 1] call CBA_fnc_removePerFrameHandler;
+};
+
 // same as dragObjectPFH, checks if object is deleted or dead.
 if !([_target] call EFUNC(common,isAlive)) then {
     [_unit, _target] call FUNC(dropObject);
@@ -15,10 +20,7 @@ if !([_target] call EFUNC(common,isAlive)) then {
 
 // timeout. Done with lifting object. Start carrying process.
 if (time > _timeOut) exitWith {
-    // handles aborting carry
-    if (_unit getVariable [QGVAR(isCarrying), false]) then {
-        [_unit, _target] call FUNC(carryObject);
-    };
+    [_unit, _target] call FUNC(carryObject);
 
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 };
