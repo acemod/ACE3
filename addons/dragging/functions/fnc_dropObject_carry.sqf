@@ -40,6 +40,17 @@ if (_target isKindOf "CAManBase") then {
     };
 };
 
+// fix anim when aborting carrying persons
+if (animationState _unit in CARRY_ANIMATIONS) then {
+    [_unit, "", 2, true] call EFUNC(common,doAnimation);
+
+    if (_target getVariable ["ACE_isUnconscious", false]) then {
+        [_target, "unconscious", 2, true] call EFUNC(common,doAnimation);
+    } else {
+        [_target, "", 2, true] call EFUNC(common,doAnimation);
+    };
+};
+
 // reselect weapon and re-enable sprint
 _unit selectWeapon primaryWeapon _unit;
 

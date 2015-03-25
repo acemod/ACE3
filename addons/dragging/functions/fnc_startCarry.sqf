@@ -25,33 +25,46 @@ if (_weight > GETMVAR(ACE_maxWeightCarry,1E11)) exitWith {
     [localize "STR_ACE_Dragging_UnableToDrag"] call EFUNC(common,displayTextStructured);
 };
 
-// select no weapon and stop sprinting
-_unit action ["SwitchWeapon", _unit, _unit, 99];
-
-[_unit, "isDragging", true] call EFUNC(common,setforceWalkStatus);
-
-// prevent multiple players from accessing the same object
-[_unit, _target, true] call EFUNC(common,claim);
-
 private "_timer";
-_timer = 2;
+_timer = time + 2;
 
-// can't play action that depends on weapon if it was added the same frame
-/*[{_this playActionNow "grabDrag";}, _unit] call EFUNC(common,execNextFrame);*/ //@todo
-
-// move a bit closer and adjust direction when trying to pick up a person
+// handle objects vs persons
 if (_target isKindOf "CAManBase") then {
-    /*[_target, "AinjPpneMrunSnonWnonDb_grab", 2, true] call EFUNC(common,doAnimation);
+
+    // add a primary weapon if the unit has none.
+    if (primaryWeapon _unit == "") then {
+        _unit addWeapon "ACE_FakePrimaryWeapon";
+    };
+
+    // select primary, otherwise the drag animation actions don't work.
+    _unit selectWeapon primaryWeapon _unit;
+
+    // move a bit closer and adjust direction when trying to pick up a person
     _target setDir (getDir _unit + 180);
-    _target setPos (getPos _unit vectorAdd (vectorDir _unit vectorMultiply 1.5));*/
+    _target setPos (getPos _unit vectorAdd vectorDir _unit);
 
-    _timer = 15;
+    [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 2, true] call EFUNC(common,doAnimation);
+    [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 2, true] call EFUNC(common,doAnimation);
 
+    _timer = time + 15;
 
-//@todo
+} else {
+
+    // select no weapon and stop sprinting
+    _unit action ["SwitchWeapon", _unit, _unit, 99];
+    [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
+
+    [_unit, "isDragging", true] call EFUNC(common,setforceWalkStatus);
+
+    // prevent multiple players from accessing the same object
+    [_unit, _target, true] call EFUNC(common,claim);
+
 };
 
 // prevents draging and carrying at the same time
 _unit setVariable [QGVAR(isCarrying), true, true];
 
-[FUNC(startCarryPFH), 0.2, [_unit, _target], _timer] call CBA_fnc_addPerFrameHandler;
+// required for aborting animation
+_unit setVariable [QGVAR(carriedObject), _target, true];
+
+[FUNC(startCarryPFH), 0.2, [_unit, _target, _timer]] call CBA_fnc_addPerFrameHandler;
