@@ -1,6 +1,10 @@
 // by commy2
 #include "script_component.hpp"
 
+#ifdef DEBUG_ENABLED_DRAGGING
+    systemChat format ["%1 startDragPFH running", time];
+#endif
+
 private ["_unit", "_target", "_timeOut"];
 
 _unit = _this select 0 select 0;
@@ -25,7 +29,6 @@ if (time > _timeOut) exitWith {
     // drop if in timeout
     private "_draggedObject";
     _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
-
     [_unit, _draggedObject] call FUNC(dropObject);
 };
 

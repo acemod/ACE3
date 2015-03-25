@@ -26,7 +26,7 @@ if (_weight > GETMVAR(ACE_maxWeightCarry,1E11)) exitWith {
 };
 
 private "_timer";
-_timer = time + 2;
+_timer = time + 5;
 
 // handle objects vs persons
 if (_target isKindOf "CAManBase") then {

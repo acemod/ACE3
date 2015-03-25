@@ -62,7 +62,7 @@ _actionID = _unit addAction [
 _unit setVariable [QGVAR(ReleaseActionID), _actionID];
 
 // check everything
-[FUNC(dragObjectPFH), 0, [_unit, _target]] call CBA_fnc_addPerFrameHandler;
+[FUNC(dragObjectPFH), 0.5, [_unit, _target]] call CBA_fnc_addPerFrameHandler;
 
 // reset current dragging height.
 GVAR(currentHeightChange) = 0;
