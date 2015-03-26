@@ -12,14 +12,24 @@
  */
 #include "script_component.hpp"
 
-private ["_digits", "_count", "_string", "_index"];
+private ["_number", "_minLength", "_length"];
 
-_digits = _this call FUNC(numberToDigits);
+_number = _this select 0;
+_minLength = _this select 1;
 
-_count = count _digits;
+_number = _number min 999999;
 
-_string = "";
-for "_index" from 0 to (_count - 1) do {
-  _string = _string + str (_digits select _index);
+_number = str _number;
+
+_length = count _number;
+
+if (isNil "_minLength") then {_minLength = _length};
+
+_minLength = _minLength min 6;
+
+while {_length < _minLength} do {
+    _number = "0" + _number;
+    _length = _length + 1;
 };
-_string
+
+_number
