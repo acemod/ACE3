@@ -750,6 +750,7 @@ class CfgVehicles {
                         condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(canTreatCached));
                         exceptions[] = {"isNotInside"};
                         statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\autoInjector.paa);
                     };
                     class Atropine: Morphine {
                         displayName = "$STR_ACE_Medical_Inject_Atropine";
@@ -1338,6 +1339,7 @@ class CfgVehicles {
                     displayName = "$STR_ACE_Medical_Inject_Morphine";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(treatment));
+                    icon = PATHTOF(UI\icons\autoInjector.paa);
                 };
                 class Atropine: Morphine {
                     displayName = "$STR_ACE_Medical_Inject_Atropine";
