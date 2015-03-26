@@ -21,6 +21,7 @@ PREP(handleGetOut);
 PREP(handleKilled);
 PREP(handleOnUnconscious);
 PREP(handlePlayerChanged);
+PREP(handleRespawn);
 PREP(handleUnitInitPost);
 PREP(handleZeusDisplayChanged);
 PREP(moduleSurrender);
