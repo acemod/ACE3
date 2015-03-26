@@ -22,4 +22,3 @@ if (!local _unit) exitWith {};
 
 [_unit, QGVAR(Handcuffed), false] call EFUNC(common,setCaptivityStatus);
 [_unit, QGVAR(Surrendered), false] call EFUNC(common,setCaptivityStatus);
-
