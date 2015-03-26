@@ -84,8 +84,8 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         _statement_replace = missionNamespace getVariable [_statement_replace, {}];
         _condition_replace = missionNamespace getVariable [_condition_replace, {}];
 
-        [_type, 0, [_nameRemove], _nameRemove, _icon, _selection, _statement_remove, _condition_remove, 2] call EFUNC(interact_menu,addClassAction);
-        [_type, 0, [_nameReplace], _nameReplace, _icon, _selection, _statement_replace, _condition_replace, 2] call EFUNC(interact_menu,addClassAction);
+        [_type, 0, [_nameRemove], [_nameRemove, _icon, _selection, _statement_remove, _condition_remove, 2]] call EFUNC(interact_menu,addActionToClass);
+        [_type, 0, [_nameReplace], [_nameReplace, _icon, _selection, _statement_replace, _condition_replace, 2]] call EFUNC(interact_menu,addActionToClass);
 
     } else {
         // exit if the hitpoint is in the blacklist, e.g. glasses
@@ -124,7 +124,7 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         _statement = missionNamespace getVariable [_statement, {}];
         _condition = missionNamespace getVariable [_condition, {}];
 
-        [_type, 0, ["ACE_MainActions", QGVAR(Repair), _name], _name, _icon, _selection, _statement, _condition, 4] call EFUNC(interact_menu,addClassAction);
+        [_type, 0, ["ACE_MainActions", QGVAR(Repair), _name], [_name, _icon, _selection, _statement, _condition, 4]] call EFUNC(interact_menu,addActionToClass);
 
     };
 } forEach _hitPoints;
