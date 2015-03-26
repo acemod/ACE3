@@ -82,7 +82,7 @@ GVAR(effectTimeBlood) = time;
     };
 
     // Unconsciousness effect
-    if (ACE_player getVariable [QGVAR(isUnconscious), false]) then {
+    if (ACE_player getVariable ["ACE_isUnconscious", false]) then {
         GVAR(effectUnconsciousCC) ppEffectEnable true;
         GVAR(effectUnconsciousRB) ppEffectEnable true;
         GVAR(effectBlind) = true;
