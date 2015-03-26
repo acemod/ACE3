@@ -10,6 +10,6 @@ diag_log "running respawn";
 [_unit] call FUNC(init);
 
 //Reset captive status for respawning unit
-if (!_unit getVariable ["ACE_isUnconscious", false]) then {
+if (!(_unit getVariable ["ACE_isUnconscious", false])) then {
     [_unit, QGVAR(unconscious), false] call EFUNC(common,setCaptivityStatus);
 };
