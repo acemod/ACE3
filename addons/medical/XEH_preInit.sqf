@@ -59,7 +59,6 @@ PREP(onPropagateWound);
 PREP(onCarryObjectDropped);
 PREP(parseConfigForInjuries);
 PREP(playInjuredSound);
-PREP(reactionToDamage);
 PREP(selectionNameToNumber);
 PREP(setCardiacArrest);
 PREP(setDead);
