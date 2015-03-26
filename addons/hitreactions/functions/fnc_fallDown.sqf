@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-private "_unit";
+private ["_unit", "_firer", "_damage"];
 
 _unit = _this select 0;
 _firer = _this select 1;
