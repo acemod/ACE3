@@ -28,11 +28,6 @@ if (!local _unit) exitwith {
     [[_unit], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
-// Get rid of the object we are carrying, before we go unconscious.
-if (!isNil QEFUNC(dragging,carryObj)) then {
-    [_unit, ObjNull, [0,0,0]] call EFUNC(dragging,carryObj);
-};
-
 // Set the unit in the unconscious state.
 _unit setvariable ["ACE_isUnconscious", true, true];
 _unit setUnconscious true;
