@@ -33,6 +33,8 @@ if (hasInterface) then {
     _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
 }] call FUNC(addEventhandler);
 
+["setDir", {(_this select 0) setDir (_this select 1)}] call FUNC(addEventhandler);
+
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
     if (time > 0) exitWith {
@@ -171,8 +173,6 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 }, 0, []] call cba_fnc_addPerFrameHandler;
 
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
-[QGVAR(carriedBy),objNull,false,QUOTE(ADDON)] call FUNC(defineVariable);
-[QGVAR(carriedObj),objNull,false,QUOTE(ADDON)] call FUNC(defineVariable);
 
 ["VehicleSetFuel", {
 PARAMS_2(_vehicle,_fuelLevel);
@@ -183,3 +183,4 @@ _vehicle setFuel _fuelLevel;
 ["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
+["isNotInside", {_this select 0 == _this select 1 || {vehicle (_this select 0) == _this select 0}}] call FUNC(addCanInteractWithCondition);

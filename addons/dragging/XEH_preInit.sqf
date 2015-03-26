@@ -18,10 +18,14 @@ PREP(handleKilled);
 PREP(handlePlayerChanged);
 PREP(handlePlayerWeaponChanged);
 PREP(handleScrollWheel);
+PREP(handleUnconscious);
 PREP(initObject);
+PREP(initPerson);
 PREP(isObjectOnObject);
 PREP(setCarryable);
 PREP(setDraggable);
+PREP(startCarry);
+PREP(startCarryPFH);
 PREP(startDrag);
 PREP(startDragPFH);
 

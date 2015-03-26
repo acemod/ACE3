@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard and Jaynus
+ * Author: esteldunedain and Jaynus
  * Returns the result of the function and caches it up to a given time or event
  *
  * Arguments:

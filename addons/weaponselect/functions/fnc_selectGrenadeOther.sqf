@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard, commy2
+ * Author: esteldunedain, commy2
  *
  * Cycle through non explosive grenades.
  *

@@ -1,5 +1,5 @@
 /*
- * Author: Ruthberg, CAA-Picard
+ * Author: Ruthberg, esteldunedain
  *
  * Get the weather data for the current map
  *

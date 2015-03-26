@@ -1,12 +1,12 @@
 class Module_F;
 class ACE_ModuleExplosive: Module_F {
-  author = "ACE Team";
+  author = "$STR_ACE_Common_ACETeam";
   category = "ACE";
   displayName = "Explosive System";
   function = QUOTE(FUNC(module));
   scope = 2;
   isGlobal = 1;
-  icon = PATHTOF(UI\IconExplosives_ca.paa);
+  icon = PATHTOF(UI\Icon_Module_Explosives_ca.paa);
   class Arguments {
     class RequireSpecialist {
       displayName = "Require specialists?";

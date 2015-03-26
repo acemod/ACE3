@@ -12,9 +12,7 @@
  * Public: No
  */
 
-
 #include "script_component.hpp"
-
 
 private ["_caller", "_target","_vehicle", "_loaded"];
 _caller = _this select 0;

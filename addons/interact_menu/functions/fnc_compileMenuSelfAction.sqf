@@ -1,5 +1,5 @@
 /*
- * Author: NouberNou and CAA-Picard
+ * Author: NouberNou and esteldunedain
  * Compile the self action menu from config for an object's class
  *
  * Argument:
@@ -86,8 +86,11 @@ _actions = [
             "ACE_SelfActions",
             "Self Actions",
             "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
-            {},
-            { true },
+            {
+                // Dummy statement so it's not collapsed when there's no available actions
+                true
+            },
+            {[ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)},
             {},
             [],
             "Spine3",

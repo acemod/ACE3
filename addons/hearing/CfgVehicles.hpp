@@ -6,22 +6,22 @@ class CfgVehicles {
                 class ACE_PutInEarplugs {
                     displayName = "$STR_ACE_Hearing_EarPlugs_On";
                     condition = QUOTE( !([_player] call FUNC(hasEarPlugsIn)) && {'ACE_EarPlugs' in items _player} );
+                    exceptions[] = {"isNotInside"};
                     statement = QUOTE( [_player] call FUNC(putInEarPlugs) );
                     showDisabled = 0;
                     priority = 2.5;
                     icon = PATHTOF(UI\ACE_earplugs_x_ca.paa);
                     hotkey = "E";
-                    enableInside = 1;
                 };
                 class ACE_RemoveEarplugs {
                     displayName = "$STR_ACE_Hearing_EarPlugs_Off";
                     condition = QUOTE( [_player] call FUNC(hasEarPlugsIn) );
+                    exceptions[] = {"isNotInside"};
                     statement = QUOTE( [_player] call FUNC(removeEarPlugs) );
                     showDisabled = 0;
                     priority = 2.5;
                     icon = PATHTOF(UI\ACE_earplugs_x_ca.paa);
                     hotkey = "E";
-                    enableInside = 1;
                 };
             };
         };
@@ -102,7 +102,7 @@ class CfgVehicles {
         function = QFUNC(moduleHearing);
         scope = 2;
         isGlobal = 1;
-        icon = PATHTOF(UI\IconHearing_ca.paa);
+        icon = PATHTOF(UI\Icon_Module_Hearing_ca.paa);
         class Arguments {
             class EnableCombatDeafness {
                 displayName = "Enable combat deafness?";

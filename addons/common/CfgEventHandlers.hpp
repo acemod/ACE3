@@ -42,19 +42,3 @@ class Extended_Respawn_EventHandlers {
         };
     };
 };
-
-class Extended_Killed_EventHandlers {
-    class CAManBase {
-        class GVAR(dropObject) {
-            Killed = QUOTE(if (local (_this select 0)) then {[ARR_2(_this select 0, ObjNull)] call FUNC(carryObj)};);
-        };
-    };
-};
-
-class Extended_GetIn_EventHandlers {
-    class CAManBase {
-        class GVAR(dropObject) {
-            GetIn = QUOTE(if (local (_this select 0)) then {[ARR_2(_this select 0, ObjNull)] call FUNC(carryObj)};);
-        };
-    };
-};

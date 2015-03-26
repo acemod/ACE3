@@ -1,5 +1,5 @@
 /*
- * Author: commy2 and CAA-Picard
+ * Author: commy2 and esteldunedain
  *
  * Calculate and apply backblast damage to potentially affected local units
  *

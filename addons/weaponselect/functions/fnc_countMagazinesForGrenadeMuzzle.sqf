@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  *
  * Count how many grenade magazines the unit has on the uniform and vest.
  *

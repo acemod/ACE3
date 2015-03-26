@@ -1,4 +1,6 @@
 
+#define MEDICAL_ACTION_DISTANCE 1.75
+
 class CfgVehicles {
 
     class Logic;
@@ -6,17 +8,18 @@ class CfgVehicles {
         class ArgumentsBaseUnits {
         };
     };
+    class ACE_Module;
     // TODO localization for all the modules
-    class ACE_moduleMedicalSettings: Module_F {
+    class ACE_moduleMedicalSettings: ACE_Module {
         scope = 2;
         displayName = "Medical Settings [ACE]";
-        icon = QUOTE(PATHTOF(ui\moduleIcon.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(DFUNC(moduleMedicalSettings));
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class level {
                 displayName = "Medical Level";
@@ -129,17 +132,17 @@ class CfgVehicles {
         };
     };
 
-    class ACE_moduleTreatmentConfiguration: Module_F {
+    class ACE_moduleTreatmentConfiguration: ACE_Module {
         scope = 2;
         displayName = "Treatment Configuration [ACE]";
-        icon = QUOTE(PATHTOF(ui\moduleIcon.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(FUNC(moduleTreatmentConfiguration));
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class medicSetting {
                 displayName = "Medics setting";
@@ -189,14 +192,14 @@ class CfgVehicles {
     class ACE_moduleAssignMedicRoles: Module_F {
         scope = 2;
         displayName = "Set Medic Class [ACE]";
-        icon = QUOTE(PATHTOF(ui\moduleIcon.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(FUNC(moduleAssignMedicRoles));
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class EnableList {
                 displayName = "List";
@@ -235,14 +238,14 @@ class CfgVehicles {
     class ACE_moduleAssignMedicVehicle: Module_F {
         scope = 2;
         displayName = "Set Medical Vehicle [ACE]";
-        icon = QUOTE(PATHTOF(ui\moduleIcon.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(FUNC(moduleAssignMedicalVehicle));
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class EnableList {
                 displayName = "List";
@@ -265,14 +268,14 @@ class CfgVehicles {
     class ACE_moduleAssignMedicalFacility: Module_F {
         scope = 2;
         displayName = "Set Medical Facility [ACE]";
-        icon = QUOTE(PATHTOF(ui\moduleIcon.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(FUNC(moduleAssignMedicalFacility));
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class enabled {
                 displayName = "Is Medical Facility";
@@ -344,13 +347,524 @@ class CfgVehicles {
                 name = "leg_r";
             };
         };
+        class ACE_SelfActions {
+            class Medical {
+                displayName = "$STR_ACE_MEDICAL_ACTIONS_Medical";
+                runOnHover = 1;
+                hotkey = "M";
+                exceptions[] = {"isNotInside"};
+                statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
+                icon = PATHTOF(UI\icons\medical_cross.paa);
+
+               class ACE_Head {
+                    displayName = "$STR_ACE_Interaction_Head";
+                    icon = PATHTOF(UI\icons\medical_cross.paa);
+                    exceptions[] = {"isNotInside"};
+                    statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
+                    runOnHover = 1;
+
+                    class Bandage {
+                        displayName = "$STR_ACE_Medical_Bandage_HitHead";
+                        distance = 2.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(treatment));
+                        showDisabled = 1;
+                        priority = 2;
+                        hotkey = "B";
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                    // Advanced medical
+                    class FieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_FieldDressing";
+                        distance = 5.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'head', 'FieldDressing')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'head', 'FieldDressing')] call DFUNC(treatment));
+                        showDisabled = 0;
+                        priority = 2;
+                        hotkey = "";
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                    class PackingBandage: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_PackingBandage";
+                        condition = QUOTE([ARR_4(_player, _target, 'head', 'PackingBandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'head', 'PackingBandage')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\packingBandage.paa);
+                    };
+                    class ElasticBandage: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_ElasticBandage";
+                        condition = QUOTE([ARR_4(_player, _target, 'head', 'ElasticBandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'head', 'ElasticBandage')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                    class QuikClot: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_QuikClot";
+                        condition = QUOTE([ARR_4(_player, _target, 'head', 'QuikClot')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'head', 'QuikClot')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                    class CheckPulse: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_CheckPulse";
+                        condition = QUOTE([ARR_4(_player, _target, 'head', 'CheckPulse')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'head', 'CheckPulse')] call DFUNC(treatment));
+                        icon = "";
+                    };
+                    class CheckBloodPressure: CheckPulse {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure";
+                        condition = QUOTE([ARR_4(_player, _target, 'head', 'CheckBloodPressure')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'head', 'CheckBloodPressure')] call DFUNC(treatment));
+                    };
+                };
+                class ACE_Torso {
+                    displayName = "$STR_ACE_Interaction_Torso";
+                    distance = 5.0;
+                    condition = "true";
+                    runOnHover = 1;
+                    exceptions[] = {"isNotInside"};
+                    statement = QUOTE([ARR_3(_target, true, 1)] call DFUNC(displayPatientInformation));
+                    showDisabled = 1;
+                    priority = 2;
+                    hotkey = "";
+                    icon = PATHTOF(UI\icons\medical_cross.paa);
+
+                    class Bandage {
+                        displayName = "$STR_ACE_Medical_Bandage_HitBody";
+                        distance = 2.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(treatment));
+                        showDisabled = 1;
+                        priority = 2;
+                        hotkey = "B";
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+
+                    class TriageCard {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_TriageCard";
+                        distance = 2.0;
+                        condition = "true";
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_2(_target, true)] call DFUNC(displayTriageCard));
+                        showDisabled = 1;
+                        priority = 2;
+                        hotkey = "";
+                        icon = PATHTOF(UI\icons\triageCard.paa);
+                    };
+
+                    // Advanced medical
+                    class FieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_FieldDressing";
+                        distance = 5.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'FieldDressing')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'body', 'FieldDressing')] call DFUNC(treatment));
+                        showDisabled = 0;
+                        priority = 2;
+                        hotkey = "";
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                    class PackingBandage: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_PackingBandage";
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\packingBandage.paa);
+                    };
+                    class ElasticBandage: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_ElasticBandage";
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'ElasticBandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'body', 'ElasticBandage')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                    class QuikClot: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_QuikClot";
+                        condition = QUOTE([ARR_4(_player, _target, 'body', 'QuikClot')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'body', 'QuikClot')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                };
+                class ACE_ArmLeft {
+                    displayName = "$STR_ACE_Interaction_ArmLeft";
+                    runOnHover = 1;
+                    exceptions[] = {"isNotInside"};
+                    statement = QUOTE([ARR_3(_target, true, 2)] call DFUNC(displayPatientInformation));
+                    icon = PATHTOF(UI\icons\medical_cross.paa);
+
+                    class Bandage {
+                        displayName = "$STR_ACE_Medical_Bandage_HitLeftArm";
+                        distance = 2.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call DFUNC(treatment));
+                        showDisabled = 1;
+                        priority = 2;
+                        hotkey = "B";
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+
+                    // Advanced medical
+                    class FieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_FieldDressing";
+                        distance = 5.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'FieldDressing')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'FieldDressing')] call DFUNC(treatment));
+                        showDisabled = 0;
+                        priority = 2;
+                        hotkey = "";
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                    class PackingBandage: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_PackingBandage";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'PackingBandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'PackingBandage')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\packingBandage.paa);
+                    };
+                    class ElasticBandage: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_ElasticBandage";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'ElasticBandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'ElasticBandage')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                    class QuikClot: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_QuikClot";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'QuikClot')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'QuikClot')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                    class Tourniquet: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_Tourniquet";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Tourniquet')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Tourniquet')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\tourniquet.paa);
+                    };
+                    class Morphine: fieldDressing {
+                        displayName = "$STR_ACE_Medical_Inject_Morphine";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Morphine')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Morphine')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\autoInjector.paa);
+                    };
+                    class Atropine: Morphine {
+                        displayName = "$STR_ACE_Medical_Inject_Atropine";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Atropine')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Atropine')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\autoInjector.paa);
+                    };
+                    class Epinephrine: Morphine {
+                        displayName = "$STR_ACE_Medical_Inject_Epinephrine";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Epinephrine')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Epinephrine')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\autoInjector.paa);
+                    };
+                    class CheckPulse: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_CheckPulse";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckPulse')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckPulse')] call DFUNC(treatment));
+                        icon = "";
+                    };
+                    class CheckBloodPressure: CheckPulse {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckBloodPressure')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckBloodPressure')] call DFUNC(treatment));
+                    };
+                    class RemoveTourniquet: Tourniquet {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'RemoveTourniquet')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'RemoveTourniquet')] call DFUNC(treatment));
+                    };
+                };
+                class ACE_ArmRight {
+                    displayName = "$STR_ACE_Interaction_ArmRight";
+                    runOnHover = 1;
+                    exceptions[] = {"isNotInside"};
+                    statement = QUOTE([ARR_3(_target, true, 3)] call DFUNC(displayPatientInformation));
+                    icon = PATHTOF(UI\icons\medical_cross.paa);
+
+                    class Bandage {
+                        displayName = "$STR_ACE_Medical_Bandage_HitRightArm";
+                        distance = 2.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(treatment));
+                        showDisabled = 1;
+                        priority = 2;
+                        hotkey = "B";
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+
+                    // Advanced medical
+                    class FieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_FieldDressing";
+                        distance = 5.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'FieldDressing')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'FieldDressing')] call DFUNC(treatment));
+                        showDisabled = 0;
+                        priority = 2;
+                        hotkey = "";
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                    class PackingBandage: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_PackingBandage";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PackingBandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'PackingBandage')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\packingBandage.paa);
+                    };
+                    class ElasticBandage: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_ElasticBandage";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'ElasticBandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'ElasticBandage')] call DFUNC(treatment));
+                    };
+                    class QuikClot: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_QuikClot";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'QuikClot')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'QuikClot')] call DFUNC(treatment));
+                    };
+                    class Tourniquet: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_Tourniquet";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Tourniquet')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Tourniquet')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\tourniquet.paa);
+                    };
+                    class Morphine: fieldDressing {
+                        displayName = "$STR_ACE_Medical_Inject_Morphine";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\autoInjector.paa);
+                    };
+                    class Atropine: Morphine {
+                        displayName = "$STR_ACE_Medical_Inject_Atropine";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Atropine')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Atropine')] call DFUNC(treatment));
+                    };
+                    class Epinephrine: Morphine {
+                        displayName = "$STR_ACE_Medical_Inject_Epinephrine";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Epinephrine')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Epinephrine')] call DFUNC(treatment));
+                    };
+                    class CheckPulse: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_CheckPulse";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckPulse')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckPulse')] call DFUNC(treatment));
+                        icon = "";
+                    };
+                    class CheckBloodPressure: CheckPulse {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckBloodPressure')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckBloodPressure')] call DFUNC(treatment));
+                    };
+                    class RemoveTourniquet: Tourniquet {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet";
+                        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'RemoveTourniquet')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'RemoveTourniquet')] call DFUNC(treatment));
+                    };
+                };
+                class ACE_LegLeft {
+                    displayName = "$STR_ACE_Interaction_LegLeft";
+                    runOnHover = 1;
+                    exceptions[] = {"isNotInside"};
+                    statement = QUOTE([ARR_3(_target, true, 4)] call DFUNC(displayPatientInformation));
+                    icon = PATHTOF(UI\icons\medical_cross.paa);
+
+                    class Bandage {
+                        displayName = "$STR_ACE_Medical_Bandage_HitLeftLeg";
+                        distance = 2.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(treatment));
+                        showDisabled = 1;
+                        priority = 2;
+                        hotkey = "B";
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+
+
+                    // Advanced medical
+                    class FieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_FieldDressing";
+                        distance = 5.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'FieldDressing')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'FieldDressing')] call DFUNC(treatment));
+                        showDisabled = 0;
+                        priority = 2;
+                        hotkey = "";
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                    class PackingBandage: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_PackingBandage";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PackingBandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'PackingBandage')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\packingBandage.paa);
+                    };
+                    class ElasticBandage: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_ElasticBandage";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'ElasticBandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'ElasticBandage')] call DFUNC(treatment));
+                    };
+                    class QuikClot: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_QuikClot";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'QuikClot')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'QuikClot')] call DFUNC(treatment));
+                    };
+                    class Tourniquet: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_Tourniquet";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Tourniquet')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Tourniquet')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\tourniquet.paa);
+                    };
+                    class Morphine: fieldDressing {
+                        displayName = "$STR_ACE_Medical_Inject_Morphine";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\autoInjector.paa);
+                    };
+                    class Atropine: Morphine {
+                        displayName = "$STR_ACE_Medical_Inject_Atropine";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Atropine')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Atropine')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\autoInjector.paa);
+                    };
+                    class Epinephrine: Morphine {
+                        displayName = "$STR_ACE_Medical_Inject_Epinephrine";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Epinephrine')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Epinephrine')] call DFUNC(treatment));
+                    };
+                    class RemoveTourniquet: Tourniquet {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'RemoveTourniquet')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'RemoveTourniquet')] call DFUNC(treatment));
+                    };
+                };
+                class ACE_LegRight {
+                    displayName = "$STR_ACE_Interaction_LegRight";
+                    runOnHover = 1;
+                    exceptions[] = {"isNotInside"};
+                    statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
+                    icon = PATHTOF(UI\icons\medical_cross.paa);
+
+                    class Bandage {
+                        displayName = "$STR_ACE_Medical_Bandage_HitRightLeg";
+                        distance = 2.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(treatment));
+                        showDisabled = 1;
+                        priority = 2;
+                        hotkey = "B";
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+
+
+                    // Advanced medical
+                    class FieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_FieldDressing";
+                        distance = 5.0;
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'FieldDressing')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'FieldDressing')] call DFUNC(treatment));
+                        showDisabled = 0;
+                        priority = 2;
+                        hotkey = "";
+                        icon = PATHTOF(UI\icons\bandage.paa);
+                    };
+                    class PackingBandage: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_PackingBandage";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PackingBandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'PackingBandage')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\packingBandage.paa);
+                    };
+                    class ElasticBandage: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_ElasticBandage";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'ElasticBandage')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'ElasticBandage')] call DFUNC(treatment));
+                    };
+                    class QuikClot: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_QuikClot";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'QuikClot')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'QuikClot')] call DFUNC(treatment));
+                    };
+                    class Tourniquet: fieldDressing {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_Tourniquet";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Tourniquet')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Tourniquet')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\tourniquet.paa);
+                    };
+                    class Morphine: fieldDressing {
+                        displayName = "$STR_ACE_Medical_Inject_Morphine";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Morphine')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Morphine')] call DFUNC(treatment));
+                        icon = PATHTOF(UI\icons\autoInjector.paa);
+                    };
+                    class Atropine: Morphine {
+                        displayName = "$STR_ACE_Medical_Inject_Atropine";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Atropine')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Atropine')] call DFUNC(treatment));
+                    };
+                    class Epinephrine: Morphine {
+                        displayName = "$STR_ACE_Medical_Inject_Epinephrine";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Epinephrine')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Epinephrine')] call DFUNC(treatment));
+                    };
+                    class RemoveTourniquet: Tourniquet {
+                        displayName = "$STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet";
+                        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'RemoveTourniquet')] call DFUNC(canTreatCached));
+                        exceptions[] = {"isNotInside"};
+                        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'RemoveTourniquet')] call DFUNC(treatment));
+                    };
+                };
+            };
+        };
 
         class ACE_Actions {
             class ACE_Head {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
                 icon = PATHTOF(UI\icons\medical_cross.paa);
-
+                distance = MEDICAL_ACTION_DISTANCE;
                 class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitHead";
                     distance = 2.0;
@@ -359,47 +873,45 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 2;
                     hotkey = "B";
-                    enableInside = 1;
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
                 // Advanced medical
                 class FieldDressing {
-                    displayName = "Field Dressing";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_FieldDressing";
                     distance = 5.0;
                     condition = QUOTE([ARR_4(_player, _target, 'head', 'FieldDressing')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'FieldDressing')] call DFUNC(treatment));
                     showDisabled = 0;
                     priority = 2;
                     hotkey = "";
-                    enableInside = 1;
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
                 class PackingBandage: fieldDressing {
-                    displayName = "Packing Bandage";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_PackingBandage";
                     condition = QUOTE([ARR_4(_player, _target, 'head', 'PackingBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'PackingBandage')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\packingBandage.paa);
                 };
                 class ElasticBandage: fieldDressing {
-                    displayName = "Elastic Bandage";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_ElasticBandage";
                     condition = QUOTE([ARR_4(_player, _target, 'head', 'ElasticBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'ElasticBandage')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
                 class QuikClot: fieldDressing {
-                    displayName = "QuikClot";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_QuikClot";
                     condition = QUOTE([ARR_4(_player, _target, 'head', 'QuikClot')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'QuikClot')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
                 class CheckPulse: fieldDressing {
-                    displayName = "Check Pulse";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_CheckPulse";
                     condition = QUOTE([ARR_4(_player, _target, 'head', 'CheckPulse')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'CheckPulse')] call DFUNC(treatment));
                     icon = "";
                 };
                 class CheckBloodPressure: CheckPulse {
-                    displayName = "Check Blood Pressure";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure";
                     condition = QUOTE([ARR_4(_player, _target, 'head', 'CheckBloodPressure')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'CheckBloodPressure')] call DFUNC(treatment));
                 };
@@ -410,96 +922,110 @@ class CfgVehicles {
                 };
             };
             class ACE_Torso {
-                class Medical {
-                    displayName = "Medical";
-                    distance = 5.0;
-                    condition = "true";
-                    runOnHover = 1;
-                    statement = QUOTE([ARR_3(_target, true, 1)] call DFUNC(displayPatientInformation));
+                runOnHover = 1;
+                statement = QUOTE([ARR_3(_target, true, 1)] call DFUNC(displayPatientInformation));
+                icon = PATHTOF(UI\icons\medical_cross.paa);
+                distance = MEDICAL_ACTION_DISTANCE;
+                class Bandage {
+                    displayName = "$STR_ACE_Medical_Bandage_HitBody";
+                    distance = 2.0;
+                    condition = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(canTreatCached));
+                    statement = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
-                    hotkey = "M";
+                    hotkey = "B";
                     enableInside = 1;
-                    icon = PATHTOF(UI\icons\medical_cross.paa);
+                    icon = PATHTOF(UI\icons\bandage.paa);
+                };
+                class Carry {
+                    displayName = "$STR_ACE_MEDICAL_CARRY";
+                    distance = 2.0;
+                    condition = QUOTE([ARR_4(_player, _target, 'body', 'Carry')] call DFUNC(canTreatCached));
+                    statement = QUOTE([ARR_4(_player, _target, 'body', 'Carry')] call DFUNC(treatment));
+                    showDisabled = 1;
+                    priority = 2;
+                    hotkey = "";
+                    enableInside = 1;
+                    //icon = PATHTOF(UI\icons\bandage.paa);
+                };
+                class Drag {
+                    displayName = "$STR_ACE_MEDICAL_DRAG";
+                    distance = 2.0;
+                    condition = QUOTE([ARR_4(_player, _target, 'body', 'Drag')] call DFUNC(canTreatCached));
+                    statement = QUOTE([ARR_4(_player, _target, 'body', 'Drag')] call DFUNC(treatment));
+                    showDisabled = 1;
+                    priority = 2;
+                    hotkey = "";
+                    enableInside = 1;
+                    //icon = PATHTOF(UI\icons\bandage.paa);
+                };
 
-                    class Bandage {
-                        displayName = "$STR_ACE_Medical_Bandage_HitBody";
-                        distance = 2.0;
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(canTreatCached));
-                        statement = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(treatment));
-                        showDisabled = 1;
-                        priority = 2;
-                        hotkey = "B";
-                        enableInside = 1;
-                        icon = PATHTOF(UI\icons\bandage.paa);
-                    };
+                class TriageCard {
+                    displayName = "Triage Card";
+                    distance = 2.0;
+                    condition = "true";
+                    statement = QUOTE([ARR_2(_target, true)] call DFUNC(displayTriageCard));
+                    showDisabled = 1;
+                    priority = 2;
+                    hotkey = "";
+                    enableInside = 1;
+                    icon = PATHTOF(UI\icons\triageCard.paa);
+                };
 
-                    class TriageCard {
-                        displayName = "Triage Card";
-                        distance = 2.0;
-                        condition = "true";
-                        statement = QUOTE([ARR_2(_target, true)] call DFUNC(displayTriageCard));
-                        showDisabled = 1;
-                        priority = 2;
-                        hotkey = "";
-                        enableInside = 1;
-                        icon = PATHTOF(UI\icons\triageCard.paa);
-                    };
-
-                    // Advanced medical
-                    class FieldDressing {
-                        displayName = "Field Dressing";
-                        distance = 5.0;
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'FieldDressing')] call DFUNC(canTreatCached));
-                        statement = QUOTE([ARR_4(_player, _target, 'body', 'FieldDressing')] call DFUNC(treatment));
-                        showDisabled = 0;
-                        priority = 2;
-                        hotkey = "";
-                        enableInside = 1;
-                        icon = PATHTOF(UI\icons\bandage.paa);
-                    };
-                    class PackingBandage: fieldDressing {
-                        displayName = "Packing Bandage";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(canTreatCached));
-                        statement = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(treatment));
-                        icon = PATHTOF(UI\icons\packingBandage.paa);
-                    };
-                    class ElasticBandage: fieldDressing {
-                        displayName = "Elastic Bandage";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'ElasticBandage')] call DFUNC(canTreatCached));
-                        statement = QUOTE([ARR_4(_player, _target, 'body', 'ElasticBandage')] call DFUNC(treatment));
-                        icon = PATHTOF(UI\icons\bandage.paa);
-                    };
-                    class QuikClot: fieldDressing {
-                        displayName = "QuikClot";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'QuikClot')] call DFUNC(canTreatCached));
-                        statement = QUOTE([ARR_4(_player, _target, 'body', 'QuikClot')] call DFUNC(treatment));
-                        icon = PATHTOF(UI\icons\bandage.paa);
-                    };
-                    class SurgicalKit: fieldDressing {
-                        displayName = "Use Surgical Kit";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'SurgicalKit')] call DFUNC(canTreatCached));
-                        statement = QUOTE([ARR_4(_player, _target, 'body', 'SurgicalKit')] call DFUNC(treatment));
-                        icon = PATHTOF(UI\icons\surgicalKit.paa);
-                    };
-                    class PersonalAidKit: fieldDressing {
-                        displayName = "Use Personal Aid Kit";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(canTreatCached));
-                        statement = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(treatment));
-                        icon = "";
-                    };
-                    class CPR: fieldDressing {
-                        displayName = "CPR";
-                        condition = QUOTE([ARR_4(_player, _target, 'body', 'CPR')] call DFUNC(canTreatCached));
-                        statement = QUOTE([ARR_4(_player, _target, 'body', 'CPR')] call DFUNC(treatment));
-                        icon = "";
-                    };
+                // Advanced medical
+                class FieldDressing {
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_FieldDressing";
+                    distance = 5.0;
+                    condition = QUOTE([ARR_4(_player, _target, 'body', 'FieldDressing')] call DFUNC(canTreatCached));
+                    statement = QUOTE([ARR_4(_player, _target, 'body', 'FieldDressing')] call DFUNC(treatment));
+                    showDisabled = 0;
+                    priority = 2;
+                    hotkey = "";
+                    enableInside = 1;
+                    icon = PATHTOF(UI\icons\bandage.paa);
+                };
+                class PackingBandage: fieldDressing {
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_PackingBandage";
+                    condition = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(canTreatCached));
+                    statement = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(treatment));
+                    icon = PATHTOF(UI\icons\packingBandage.paa);
+                };
+                class ElasticBandage: fieldDressing {
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_ElasticBandage";
+                    condition = QUOTE([ARR_4(_player, _target, 'body', 'ElasticBandage')] call DFUNC(canTreatCached));
+                    statement = QUOTE([ARR_4(_player, _target, 'body', 'ElasticBandage')] call DFUNC(treatment));
+                    icon = PATHTOF(UI\icons\bandage.paa);
+                };
+                class QuikClot: fieldDressing {
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_QuikClot";
+                    condition = QUOTE([ARR_4(_player, _target, 'body', 'QuikClot')] call DFUNC(canTreatCached));
+                    statement = QUOTE([ARR_4(_player, _target, 'body', 'QuikClot')] call DFUNC(treatment));
+                    icon = PATHTOF(UI\icons\bandage.paa);
+                };
+                class SurgicalKit: fieldDressing {
+                    displayName = "Use Surgical Kit";
+                    condition = QUOTE([ARR_4(_player, _target, 'body', 'SurgicalKit')] call DFUNC(canTreatCached));
+                    statement = QUOTE([ARR_4(_player, _target, 'body', 'SurgicalKit')] call DFUNC(treatment));
+                    icon = PATHTOF(UI\icons\surgicalKit.paa);
+                };
+                class PersonalAidKit: fieldDressing {
+                    displayName = "Use Personal Aid Kit";
+                    condition = QUOTE([ARR_4(_player, _target, 'body', 'PersonalAidKit')] call DFUNC(canTreatCached));
+                    statement = QUOTE([ARR_4(_player, _target, 'body', 'PersonalAidKit')] call DFUNC(treatment));
+                    icon = "";
+                };
+                class CPR: fieldDressing {
+                    displayName = "CPR";
+                    condition = QUOTE([ARR_4(_player, _target, 'body', 'CPR')] call DFUNC(canTreatCached));
+                    statement = QUOTE([ARR_4(_player, _target, 'body', 'CPR')] call DFUNC(treatment));
+                    icon = "";
                 };
             };
             class ACE_ArmLeft {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 2)] call DFUNC(displayPatientInformation));
                 icon = PATHTOF(UI\icons\medical_cross.paa);
+                distance = MEDICAL_ACTION_DISTANCE;
 
                 class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitLeftArm";
@@ -509,42 +1035,40 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 2;
                     hotkey = "B";
-                    enableInside = 1;
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
 
                 // Advanced medical
                 class FieldDressing {
-                    displayName = "Field Dressing";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_FieldDressing";
                     distance = 5.0;
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'FieldDressing')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'FieldDressing')] call DFUNC(treatment));
                     showDisabled = 0;
                     priority = 2;
                     hotkey = "";
-                    enableInside = 1;
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
                 class PackingBandage: fieldDressing {
-                    displayName = "Packing Bandage";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_PackingBandage";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'PackingBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'PackingBandage')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\packingBandage.paa);
                 };
                 class ElasticBandage: fieldDressing {
-                    displayName = "Elastic Bandage";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_ElasticBandage";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'ElasticBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'ElasticBandage')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
                 class QuikClot: fieldDressing {
-                    displayName = "QuikClot";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_QuikClot";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'QuikClot')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'QuikClot')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
                 class Tourniquet: fieldDressing {
-                    displayName = "Tourniquet";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Tourniquet";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Tourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Tourniquet')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\tourniquet.paa);
@@ -556,7 +1080,7 @@ class CfgVehicles {
                     icon = PATHTOF(UI\icons\autoInjector.paa);
                 };
                 class Atropine: Morphine {
-                    displayName = "Atropine";
+                    displayName = "$STR_ACE_Medical_Inject_Atropine";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Atropine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Atropine')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\autoInjector.paa);
@@ -568,64 +1092,64 @@ class CfgVehicles {
                     icon = PATHTOF(UI\icons\autoInjector.paa);
                 };
                 class BloodIV: fieldDressing {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_1000";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\iv.paa);
                 };
                 class BloodIV_500: BloodIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV_500')] call DFUNC(treatment));
                 };
                 class BloodIV_250: BloodIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_250";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV_250')] call DFUNC(treatment));
                 };
                 class PlasmaIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
-                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV')] call DFUNC(canTreatCached));
-                    statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV')] call DFUNC(treatment));
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_1000";
+                    condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV')] call DFUNC(canTreatCached));
+                    statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV')] call DFUNC(treatment));
                 };
                 class PlasmaIV_500: PlasmaIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV_500')] call DFUNC(treatment));
                 };
                 class PlasmaIV_250: PlasmaIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_250";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'PlasmaIV_250')] call DFUNC(treatment));
                 };
                 class SalineIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Saline4_1000";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV')] call DFUNC(treatment));
                 };
                 class SalineIV_500: SalineIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Saline4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV_500')] call DFUNC(treatment));
                 };
                 class SalineIV_250: SalineIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Saline4_250";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'SalineIV_250')] call DFUNC(treatment));
                 };
                 class CheckPulse: fieldDressing {
-                    displayName = "Check Pulse";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_CheckPulse";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckPulse')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckPulse')] call DFUNC(treatment));
                     icon = "";
                 };
                 class CheckBloodPressure: CheckPulse {
-                    displayName = "Check Blood Pressure";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckBloodPressure')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'CheckBloodPressure')] call DFUNC(treatment));
                 };
                 class RemoveTourniquet: Tourniquet {
-                    displayName = "Remove Tourniquet";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'RemoveTourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'RemoveTourniquet')] call DFUNC(treatment));
                 };
@@ -634,6 +1158,7 @@ class CfgVehicles {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 3)] call DFUNC(displayPatientInformation));
                 icon = PATHTOF(UI\icons\medical_cross.paa);
+                distance = MEDICAL_ACTION_DISTANCE;
 
                 class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitRightArm";
@@ -643,40 +1168,38 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 2;
                     hotkey = "B";
-                    enableInside = 1;
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
 
                 // Advanced medical
                 class FieldDressing {
-                    displayName = "Field Dressing";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_FieldDressing";
                     distance = 5.0;
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'FieldDressing')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'FieldDressing')] call DFUNC(treatment));
                     showDisabled = 0;
                     priority = 2;
                     hotkey = "";
-                    enableInside = 1;
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
                 class PackingBandage: fieldDressing {
-                    displayName = "Packing Bandage";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_PackingBandage";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PackingBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'PackingBandage')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\packingBandage.paa);
                 };
                 class ElasticBandage: fieldDressing {
-                    displayName = "Elastic Bandage";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_ElasticBandage";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'ElasticBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'ElasticBandage')] call DFUNC(treatment));
                 };
                 class QuikClot: fieldDressing {
-                    displayName = "QuikClot";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_QuikClot";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'QuikClot')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'QuikClot')] call DFUNC(treatment));
                 };
                 class Tourniquet: fieldDressing {
-                    displayName = "Tourniquet";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Tourniquet";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Tourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Tourniquet')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\tourniquet.paa);
@@ -688,7 +1211,7 @@ class CfgVehicles {
                     icon = PATHTOF(UI\icons\autoInjector.paa);
                 };
                 class Atropine: Morphine {
-                    displayName = "Atropine";
+                    displayName = "$STR_ACE_Medical_Inject_Atropine";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Atropine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Atropine')] call DFUNC(treatment));
                 };
@@ -698,64 +1221,64 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Epinephrine')] call DFUNC(treatment));
                 };
                 class BloodIV: fieldDressing {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_1000";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\iv.paa);
                 };
                 class BloodIV_500: BloodIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV_500')] call DFUNC(treatment));
                 };
                 class BloodIV_250: BloodIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_250";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV_250')] call DFUNC(treatment));
                 };
                 class PlasmaIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_1000";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(treatment));
                 };
                 class PlasmaIV_500: PlasmaIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV_500')] call DFUNC(treatment));
                 };
                 class PlasmaIV_250: PlasmaIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_250";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV_250')] call DFUNC(treatment));
                 };
                 class SalineIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Saline4_1000";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV')] call DFUNC(treatment));
                 };
                 class SalineIV_500: SalineIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Saline4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV_500')] call DFUNC(treatment));
                 };
                 class SalineIV_250: SalineIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Saline4_250";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'SalineIV_250')] call DFUNC(treatment));
                 };
                 class CheckPulse: fieldDressing {
-                    displayName = "Check Pulse";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_CheckPulse";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckPulse')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckPulse')] call DFUNC(treatment));
                     icon = "";
                 };
                 class CheckBloodPressure: CheckPulse {
-                    displayName = "Check Blood Pressure";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckBloodPressure')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'CheckBloodPressure')] call DFUNC(treatment));
                 };
                 class RemoveTourniquet: Tourniquet {
-                    displayName = "Remove Tourniquet";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet";
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'RemoveTourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'RemoveTourniquet')] call DFUNC(treatment));
                 };
@@ -765,6 +1288,7 @@ class CfgVehicles {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 4)] call DFUNC(displayPatientInformation));
                 icon = PATHTOF(UI\icons\medical_cross.paa);
+                distance = MEDICAL_ACTION_DISTANCE;
 
                 class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitLeftLeg";
@@ -774,41 +1298,39 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 2;
                     hotkey = "B";
-                    enableInside = 1;
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
 
 
                 // Advanced medical
                 class FieldDressing {
-                    displayName = "Field Dressing";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_FieldDressing";
                     distance = 5.0;
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'FieldDressing')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'FieldDressing')] call DFUNC(treatment));
                     showDisabled = 0;
                     priority = 2;
                     hotkey = "";
-                    enableInside = 1;
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
                 class PackingBandage: fieldDressing {
-                    displayName = "Packing Bandage";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_PackingBandage";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PackingBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'PackingBandage')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\packingBandage.paa);
                 };
                 class ElasticBandage: fieldDressing {
-                    displayName = "Elastic Bandage";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_ElasticBandage";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'ElasticBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'ElasticBandage')] call DFUNC(treatment));
                 };
                 class QuikClot: fieldDressing {
-                    displayName = "QuikClot";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_QuikClot";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'QuikClot')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'QuikClot')] call DFUNC(treatment));
                 };
                 class Tourniquet: fieldDressing {
-                    displayName = "Tourniquet";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Tourniquet";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Tourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Tourniquet')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\tourniquet.paa);
@@ -817,9 +1339,10 @@ class CfgVehicles {
                     displayName = "$STR_ACE_Medical_Inject_Morphine";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(treatment));
+                    icon = PATHTOF(UI\icons\autoInjector.paa);
                 };
                 class Atropine: Morphine {
-                    displayName = "Atropine";
+                    displayName = "$STR_ACE_Medical_Inject_Atropine";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Atropine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Atropine')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\autoInjector.paa);
@@ -830,53 +1353,53 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Epinephrine')] call DFUNC(treatment));
                 };
                 class BloodIV: fieldDressing {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_1000";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\iv.paa);
                 };
                 class BloodIV_500: BloodIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV_500')] call DFUNC(treatment));
                 };
                 class BloodIV_250: BloodIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_250";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV_250')] call DFUNC(treatment));
                 };
                 class PlasmaIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_1000";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(treatment));
                 };
                 class PlasmaIV_500: PlasmaIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV_500')] call DFUNC(treatment));
                 };
                 class PlasmaIV_250: PlasmaIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_250";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV_250')] call DFUNC(treatment));
                 };
                 class SalineIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Saline4_1000";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV')] call DFUNC(treatment));
                 };
                 class SalineIV_500: SalineIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Saline4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_500')] call DFUNC(treatment));
                 };
                 class SalineIV_250: SalineIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Saline4_250";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'SalineIV_250')] call DFUNC(treatment));
                 };
                 class RemoveTourniquet: Tourniquet {
-                    displayName = "Remove Tourniquet";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'RemoveTourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'RemoveTourniquet')] call DFUNC(treatment));
                 };
@@ -885,6 +1408,7 @@ class CfgVehicles {
                 runOnHover = 1;
                 statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
                 icon = PATHTOF(UI\icons\medical_cross.paa);
+                distance = MEDICAL_ACTION_DISTANCE;
 
                 class Bandage {
                     displayName = "$STR_ACE_Medical_Bandage_HitRightLeg";
@@ -894,41 +1418,39 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 2;
                     hotkey = "B";
-                    enableInside = 1;
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
 
 
                 // Advanced medical
                 class FieldDressing {
-                    displayName = "Field Dressing";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_FieldDressing";
                     distance = 5.0;
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'FieldDressing')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'FieldDressing')] call DFUNC(treatment));
                     showDisabled = 0;
                     priority = 2;
                     hotkey = "";
-                    enableInside = 1;
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
                 class PackingBandage: fieldDressing {
-                    displayName = "Packing Bandage";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_PackingBandage";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PackingBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'PackingBandage')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\packingBandage.paa);
                 };
                 class ElasticBandage: fieldDressing {
-                    displayName = "Elastic Bandage";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_ElasticBandage";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'ElasticBandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'ElasticBandage')] call DFUNC(treatment));
                 };
                 class QuikClot: fieldDressing {
-                    displayName = "QuikClot";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_QuikClot";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'QuikClot')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'QuikClot')] call DFUNC(treatment));
                 };
                 class Tourniquet: fieldDressing {
-                    displayName = "Tourniquet";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Tourniquet";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Tourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Tourniquet')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\tourniquet.paa);
@@ -940,7 +1462,7 @@ class CfgVehicles {
                     icon = PATHTOF(UI\icons\autoInjector.paa);
                 };
                 class Atropine: Morphine {
-                    displayName = "Atropine";
+                    displayName = "$STR_ACE_Medical_Inject_Atropine";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Atropine')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Atropine')] call DFUNC(treatment));
                 };
@@ -950,53 +1472,53 @@ class CfgVehicles {
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Epinephrine')] call DFUNC(treatment));
                 };
                 class BloodIV: fieldDressing {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_1000";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(treatment));
                     icon = PATHTOF(UI\icons\iv.paa);
                 };
                 class BloodIV_500: BloodIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV_500')] call DFUNC(treatment));
                 };
                 class BloodIV_250: BloodIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_250";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV_250')] call DFUNC(treatment));
                 };
                 class PlasmaIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_1000";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(treatment));
                 };
                 class PlasmaIV_500: PlasmaIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV_500')] call DFUNC(treatment));
                 };
                 class PlasmaIV_250: PlasmaIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_250";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV_250')] call DFUNC(treatment));
                 };
                 class SalineIV: BloodIV {
-                    displayName = "Give Blood IV (1000ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Saline4_1000";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV')] call DFUNC(treatment));
                 };
                 class SalineIV_500: SalineIV {
-                    displayName = "Give Blood IV (500ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Saline4_500";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_500')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_500')] call DFUNC(treatment));
                 };
                 class SalineIV_250: SalineIV {
-                    displayName = "Give Blood IV (250ml)";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Saline4_250";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_250')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'SalineIV_250')] call DFUNC(treatment));
                 };
                 class RemoveTourniquet: Tourniquet {
-                    displayName = "Remove Tourniquet";
+                    displayName = "$STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet";
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'RemoveTourniquet')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'RemoveTourniquet')] call DFUNC(treatment));
                 };
@@ -1182,7 +1704,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1197,7 +1719,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_PACKING_BANDAGE_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1212,7 +1734,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1227,7 +1749,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_TOURNIQUET_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1242,7 +1764,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_MORPHINE_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1257,7 +1779,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_ATROPINE_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1272,7 +1794,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_EPINEPHRINE_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1287,7 +1809,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_PLASMA_IV;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1303,7 +1825,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_BLOOD_IV;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1318,7 +1840,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_SALINE_IV;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1333,7 +1855,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_QUIKCLOT_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1348,7 +1870,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_AID_KIT_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1363,7 +1885,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_SURGICALKIT_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1378,7 +1900,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems
         {
@@ -1396,7 +1918,7 @@ class CfgVehicles {
         accuracy = 1000;
         displayName = "[ACE] Medical Supply Crate";
         model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
-        author = "Glowbal";
+        author = "$STR_ACE_Common_ACETeam";
         class TransportItems {
             class ACE_fieldDressing {
                 name = "ACE_fieldDressing";

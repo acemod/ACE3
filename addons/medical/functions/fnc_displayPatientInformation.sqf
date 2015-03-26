@@ -21,6 +21,8 @@ GVAR(currentSelectedSelectionN) = if (count _this > 2) then {_this select 2} els
 
 GVAR(displayPatientInformationTarget) = if (_show) then {_target} else {ObjNull};
 
+[_target, ACE_player] call FUNC(requestWoundSync);
+
 if (_show) then {
     ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutRsc [QGVAR(DisplayInformation),"PLAIN"];
 
@@ -47,7 +49,7 @@ if (_show) then {
         };
 
         if (((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select GVAR(currentSelectedSelectionN)) > 0) then {
-            _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_TOURNIQUET_APPLIED", [0.5, 0.5, 0, 1]];
+            _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_TOURNIQUET_APPLIED", [0.77, 0.51, 0.08, 1]];
         };
         if (_target getvariable[QGVAR(hasPain), false]) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_PAIN", [1, 1, 1, 1]];

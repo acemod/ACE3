@@ -1,5 +1,5 @@
 /*
- * Author: commy2, NouberNou and CAA-Picard
+ * Author: commy2, NouberNou and esteldunedain
  * Removes an action from an object
  *
  * Argument:

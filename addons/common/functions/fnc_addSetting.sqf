@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Adds a new setting at runtime, with all it's metadata.
  * If has only local effects.
  *

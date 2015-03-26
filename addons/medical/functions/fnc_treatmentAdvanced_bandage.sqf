@@ -36,7 +36,7 @@ if ([_caller, _target, _items] call FUNC(useItems)) then {
     }foreach _items;*/
 
     ["Medical_treatmentCompleted", [_caller, _target, _selectionName, _className, true]] call ace_common_fnc_localEvent;
-    [_target, "activity", "STR_ACE_HAS_BANDAGED_ACTIVITY", [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
+    [_target, "activity", "STR_ACE_MEDICAL_ACTIVITY_bandagedPatient", [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
 };
 
 true;

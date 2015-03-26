@@ -40,4 +40,15 @@ _unit selectWeapon primaryWeapon _unit;
 // can't play action that depends on weapon if it was added the same frame
 [{_this playActionNow "grabDrag";}, _unit] call EFUNC(common,execNextFrame);
 
+// move a bit closer and adjust direction when trying to pick up a person
+if (_target isKindOf "CAManBase") then {
+    _target setDir (getDir _unit + 180);
+    _target setPos (getPos _unit vectorAdd (vectorDir _unit vectorMultiply 1.5));
+
+    [_target, "AinjPpneMrunSnonWnonDb_grab", 2, true] call EFUNC(common,doAnimation);
+};
+
+// prevents draging and carrying at the same time
+_unit setVariable [QGVAR(isDragging), true, true];
+
 [FUNC(startDragPFH), 0.2, [_unit, _target, time + 5]] call CBA_fnc_addPerFrameHandler;

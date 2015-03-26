@@ -81,7 +81,7 @@ if (GVAR(level) == 1) then {
     _blood = (_blood - 0.4 * (damage _unit) * _interval) max 0;
     if (_blood != (_unit getVariable [QGVAR(bloodVolume), 100])) then {
         _unit setVariable [QGVAR(bloodVolume), _blood, _syncValues];
-        if (_blood <= 35 and !(_unit getVariable [QGVAR(isUnconscious), false])) then {
+        if (_blood <= 35 and !(_unit getVariable ["ACE_isUnconscious", false])) then {
             [_unit, true] call FUNC(setUnconscious);
         };
         if (_blood == 0) then {
@@ -105,7 +105,7 @@ if (GVAR(level) >= 2) then {
     };
 
     // Set the vitals
-    _heartRate = (_unit getvariable [QGVAR(heartRate), 0]) + ([_unit] call FUNC(getHeartRateChange)) * _interval;
+    _heartRate = (_unit getvariable [QGVAR(heartRate), 0]) + (([_unit] call FUNC(getHeartRateChange)) * _interval);
     _unit setvariable  [QGVAR(heartRate), _heartRate, _syncValues];
 
     _bloodPressure = [_unit] call FUNC(getBloodPressure);

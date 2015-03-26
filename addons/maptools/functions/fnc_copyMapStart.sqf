@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  *
  * Send request to remote player
  *
@@ -15,7 +15,7 @@
  * Return value:
  * Return
  */
- 
+
 #include "script_component.hpp"
 
 PARAMS_1(_player,_target);

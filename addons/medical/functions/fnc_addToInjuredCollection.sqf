@@ -18,16 +18,13 @@ _unit = _this select 0;
 _force = if (count _this > 1) then {_this select 1} else {false};
 
 if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
-    if ((_unit getvariable[QGVAR(addedToUnitLoop),false] || !alive _unit) && !_force) exitwith{};
+
     if !(local _unit) exitwith {
         [[_unit, _force], QUOTE(DFUNC(addToInjuredCollection)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
     };
-    _unit setvariable [QGVAR(addedToUnitLoop), true, true];
 
-    if (isNil QGVAR(InjuredCollection)) then {
-        GVAR(InjuredCollection) = [];
-    };
-    GVAR(InjuredCollection) pushback _unit;
+    if ((_unit getvariable[QGVAR(addedToUnitLoop),false] || !alive _unit) && !_force) exitwith{};
+    _unit setvariable [QGVAR(addedToUnitLoop), true, true];
 
     [{
         private "_unit";
@@ -41,7 +38,6 @@ if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
                 };
                 _unit setvariable [QGVAR(bloodVolume), _unit getvariable [QGVAR(bloodVolume), 0], true];
            };
-           GVAR(InjuredCollection) = GVAR(InjuredCollection) - [_unit];
         } else {
             [_unit] call FUNC(handleUnitVitals);
 

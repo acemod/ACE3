@@ -13,10 +13,15 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgMagazines.hpp"
+
+#include "CfgActions.hpp"
+#include "CfgMoves.hpp"
+#include "CfgVoice.hpp"
 
 class ACE_Rsc_Display_Base {
     idd = -1;
@@ -82,12 +87,12 @@ class ACE_Settings {
         value = 0;
         typeName = "BOOL";
     };
-    class GVAR(enableNumberHotkeys) {
+    /*class GVAR(enableNumberHotkeys) {
         value = 1;
         typeName = "BOOL";
         isClientSetable = 1;
         displayName = "$STR_ACE_Common_EnableNumberHotkeys";
-    };
+    };*/
     class GVAR(settingFeedbackIcons) {
         value = 1;
         typeName = "SCALAR";
@@ -126,9 +131,6 @@ class ACE_Settings {
 #include <ProgressScreen.hpp>
 #include <HintConfig.hpp>
 #include <RscInfoType.hpp>
-#include <FixPickup.hpp>
-#include <FixAnimations.hpp>
-#include <NoVoice.hpp>
 
 class CfgUIGrids {
     class IGUI {

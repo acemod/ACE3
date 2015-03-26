@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Create one unload action per unconscious passenger
  *
  * Argument:
@@ -38,7 +38,5 @@ _actions = [];
             ];
     };
 } forEach crew _vehicle;
-
-systemChat str(count _actions);
 
 _actions

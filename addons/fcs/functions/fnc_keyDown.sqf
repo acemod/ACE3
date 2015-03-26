@@ -30,7 +30,7 @@ if (_distance == 0) then {
 
 _weaponDirection = _vehicle weaponDirection (_vehicle currentWeaponTurret _turret);  // @todo doesn't work for sub turrets
 
-if (_turret isEqualTo ([typeOf _vehicle] call EFUNC(common,getTurretCommander))) then {
+if (_turret isEqualTo ([_vehicle] call EFUNC(common,getTurretCommander))) then {
     _weaponDirection = eyeDirection _vehicle;
 };
 

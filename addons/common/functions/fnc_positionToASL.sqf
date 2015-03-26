@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Converts Arma "Position" to ASL
  *
  * Arguments:

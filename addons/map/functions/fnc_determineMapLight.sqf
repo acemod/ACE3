@@ -1,5 +1,5 @@
 /*
-* Author: Rocko and CAA-Picard
+* Author: Rocko and esteldunedain
 * Calculates the current map illumination for a given unit
 *
 * Arguments:

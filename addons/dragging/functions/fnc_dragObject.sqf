@@ -31,7 +31,11 @@ _position = _position vectorAdd [0, 0, _offset];
 
 // attach object
 _target attachTo [_unit, _position];
-_target setDir _direction;
+["setDir", _target, [_target, _direction]] call EFUNC(common,targetEvent);
+
+if (_target isKindOf "CAManBase") then {
+    [_target, "AinjPpneMrunSnonWnonDb_still", 0, true] call EFUNC(common,doAnimation);
+};
 
 _unit setVariable [QGVAR(isDragging), true, true];
 _unit setVariable [QGVAR(draggedObject), _target, true];
@@ -58,7 +62,7 @@ _actionID = _unit addAction [
 _unit setVariable [QGVAR(ReleaseActionID), _actionID];
 
 // check everything
-[FUNC(dragObjectPFH), 0, [_unit, _target]] call CBA_fnc_addPerFrameHandler;
+[FUNC(dragObjectPFH), 0.5, [_unit, _target]] call CBA_fnc_addPerFrameHandler;
 
 // reset current dragging height.
 GVAR(currentHeightChange) = 0;
