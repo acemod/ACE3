@@ -218,6 +218,7 @@ class CfgVoice {
         displayName = "$STR_ACE_Common_NoVoice";
     };
 };
+
 class CfgVoiceTypes {
     class ACE_NoVoice {
         name = "$STR_ACE_Common_NoVoice";
