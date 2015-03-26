@@ -10,11 +10,37 @@ _damage = _this select 2;
 // don't fall on collision damage
 if (_unit == _firer) exitWith {};
 
+// cam shake for player
+if (_unit == ACE_player) then {
+    addCamShake [3, 5, _damage + random 10];
+};
+
+private "_vehicle";
+_vehicle = vehicle _unit;
+
+// handle static weapons
+if (_vehicle isKindOf "StaticWeapon") exitwith {
+    if (!alive _unit) then {
+        _unit action ["Eject", _vehicle];
+        unassignVehicle _unit;
+    };
+};
+
 // don't fall after minor damage
 if (_damage < 0.1) exitWith {};
 
+// play sound
+if (!isNil QUOTE(EFUNC(medical,playInjuredSound))) then {
+    [_unit] call EFUNC(medical,playInjuredSound);
+};
+
 // this checks most things, so it doesn't mess with being inside vehicles or while dragging etc.
-if !([_unit, vehicle _unit] call EFUNC(common,canInteractWith)) exitWith {};
+if !([_unit, _vehicle] call EFUNC(common,canInteractWith)) exitWith {};
+
+// handle ladders
+if (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit >> "AGM_isLadder") == 1) exitWith {
+    _unit action ["LadderOff", nearestObject [position _unit, "House"]];
+};
 
 // only play animation when standing due to lack of animations, sry
 if !(stance _unit in ["CROUCH", "STAND"]) exitWith {};
