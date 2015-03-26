@@ -29,7 +29,9 @@ if (!local _unit) exitwith {
 };
 
 // Get rid of the object we are carrying, before we go unconscious.
-[_unit, ObjNull, [0,0,0]] call EFUNC(common,carryObj);
+if (!isNil QEFUNC(dragging,carryObj)) then {
+    [_unit, ObjNull, [0,0,0]] call EFUNC(dragging,carryObj);
+};
 
 // Set the unit in the unconscious state.
 _unit setvariable ["ACE_isUnconscious", true, true];
