@@ -7,10 +7,10 @@
  * 1: unit doing the detaching (player) <OBJECT>
  *
  * Return Value:
- * Boolean <BOOL>
+ * Can Detach <BOOL>
  *
  * Example:
- * Nothing
+ * [bob, bob] call ace_attach_fnc_canDetach;
  *
  * Public: No
  */

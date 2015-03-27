@@ -8,13 +8,18 @@
  * This is VERY computationaly intensive, but doesn't happen that often.
  *
  * Arguments:
- * Nothing
+ * 0: Unit (player) <OBJECT>
+ * 1: attachToVehicle <OBJECT>
+ * 2: Item Classname (cfgWeapon/cfgMagazine) <STRING>
+ * 3: Light Vehicle Classname <STRING>
+ * 4: On Attach Text <STRING>
+ * 5: Starting Pos of dummy item <ARRAY>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * Nothing
+ * No
  *
  * Public: No
  */
@@ -52,7 +57,7 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
             _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
 
             //Uncomment to see the lazor show, and see how the scanning works:
-            drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
+            // drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
             if (_attachToVehicle in lineIntersectsWith [_startASL, _endASL, _unit]) exitWith {_doesIntersect = true};
         } forEach [[0,0,0.045], [0,0,-0.045], [0,0.045,0], [0,-0.045,0], [0.045,0,0], [-0.045,0,0]];
     } forEach [[0,0,0], [0,0,0.05], [0,0,-0.05]];

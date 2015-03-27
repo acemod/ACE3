@@ -8,10 +8,10 @@
  * 2: Array empty or containing a string of the attachable item <ARRAY>
  *
  * Return Value:
- * Boolean <BOOL>
+ * Can Attach <BOOL>
  *
  * Example:
- * Nothing
+ * [bob, bob, ["light"]] call ace_attach_fnc_canAttach;
  *
  * Public: No
  */
