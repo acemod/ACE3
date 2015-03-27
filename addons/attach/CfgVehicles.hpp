@@ -6,21 +6,21 @@
                 displayName = "$STR_ACE_Attach_AttachDetach"; \
                 condition = QUOTE(_this call FUNC(canAttach)); \
                 insertChildren = QUOTE(_this call FUNC(getChildrenAttachActions)); \
-                exceptions[] = {"isNotDragging"}; \
+                exceptions[] = {}; \
                 showDisabled = 0; \
                 priority = 0; \
                 icon = PATHTOF(UI\attach_ca.paa); \
-                distance = 4; \
+                distance = 4.5; \
             }; \
             class GVAR(DetachVehicle) { \
                 displayName = "$STR_ACE_Attach_Detach"; \
                 condition = QUOTE(_this call FUNC(canDetach)); \
                 statement = QUOTE(_this call FUNC(detach) ); \
-                exceptions[] = {"isNotDragging"}; \
+                exceptions[] = {}; \
                 showDisabled = 0; \
-                priority = 0; \
+                priority = 0.1; \
                 icon = PATHTOF(UI\detach_ca.paa); \
-                distance = 4; \
+                distance = 4.5; \
             }; \
         }; \
     };

@@ -1,6 +1,11 @@
 /*
  * Author: Pabst Mirror (based on Explosive attach by Garth de Wet (LH))
  * Approves placement of the lightObject, scans for an appropriate location and attaches
+ * A player can release the attachObject with it floating in mid-air.
+ * This will use lineIntersectsWith to scan towards the center of the vehicle to find a collision
+ * ArmA's collision detection is of couse terrible and often misses collisions (difference between what we see and collision LOD)
+ * So it does multiple scans at slighly different angles
+ * This is VERY computationaly intensive, but doesn't happen that often.
  *
  * Arguments:
  * Nothing
@@ -15,43 +20,14 @@
  */
 #include "script_component.hpp"
 
-private ["_setupObject", "_setupClassname", "_itemClassname", "_placementText", "_attachToVehicle", "_placer", "_startingPosition", "_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_keepGoingCloser", "_closeInMax", "_closeInMin", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_attachedObject", "_currentObjects", "_currentItemNames"];
+private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_setupObject", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_attachedObject", "_currentObjects", "_currentItemNames"];
 
-if (GVAR(pfeh_running)) then {
-    [QGVAR(PlacementEachFrame),"OnEachFrame"] call BIS_fnc_removeStackedEventHandler;
-    GVAR(pfeh_running) = false;
-};
+PARAMS_6(_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAtachText,_startingPosition);
 
-_setupObject = GVAR(setupObject);
-_setupClassname = typeOf _setupObject;
-_itemClassname = GVAR(SetupPlacmentItem);
-_placementText = GVAR(SetupPlacmentText);
-_attachToVehicle = GVAR(SetupAttachVehicle);
-_placer = GVAR(placer);
-
-GVAR(SetupPlacmentItem) = "";
-GVAR(SetupPlacmentText) = "";
-GVAR(setupObject) = objNull;
-GVAR(SetupAttachVehicle) = objNull;
-GVAR(placer) = objNull;
-
-[_placer, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
-[_placer, "DefaultAction", _placer getVariable [QGVAR(placeActionEH), -1]] call EFUNC(common,removeActionEventHandler);
-// [_placer, "MenuBack", _placer getVariable [QGVAR(cancelActionEH), -1]] call EFUNC(common,removeActionEventHandler);
-call EFUNC(interaction,hideMouseHint);
-
-//A player can release the attachObject with it floating in mid-air.
-//This will use lineIntersectsWith to scan towards the center of the vehicle to find a collision
-//ArmA's collision detection is of couse terrible and often misses collisions (difference between what we see and collision LOD)
-//So it does multiple scans at slighly different angles
-//This is VERY computationaly intensive, but doesn't happen that often.
-
-_startingPosition = _setupObject modelToWorld [0,0,0];
 _startingOffset = _attachToVehicle worldToModel _startingPosition;
 
 _startDistanceFromCenter = vectorMagnitude _startingOffset;
 _closeInUnitVector = vectorNormalized (_startingOffset vectorFromTo [0,0,0]);
-_keepGoingCloser = true;
 
 _closeInMax = _startDistanceFromCenter;
 _closeInMin = 0;
@@ -76,9 +52,8 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
             _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
 
             //Uncomment to see the lazor show, and see how the scanning works:
-            // drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
-
-            if (_attachToVehicle in lineIntersectsWith [_startASL, _endASL, _placer]) exitWith {_doesIntersect = true};
+            drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
+            if (_attachToVehicle in lineIntersectsWith [_startASL, _endASL, _unit]) exitWith {_doesIntersect = true};
         } forEach [[0,0,0.045], [0,0,-0.045], [0,0.045,0], [0,-0.045,0], [0.045,0,0], [-0.045,0,0]];
     } forEach [[0,0,0], [0,0,0.05], [0,0,-0.05]];
 
@@ -92,7 +67,7 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
 _closeInDistance = (_closeInMax + _closeInMin) / 2;
 
 //Checks (too close to center or can't attach)
-if (((_startDistanceFromCenter - _closeInDistance) < 0.1) || {!([_attachToVehicle, _placer, _itemClassname] call FUNC(canAttach))}) exitWith {
+if (((_startDistanceFromCenter - _closeInDistance) < 0.1) || {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) exitWith {
     TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
     [localize "STR_ACE_Attach_Failed"] call EFUNC(common,displayTextStructured);
 };
@@ -103,11 +78,11 @@ _closeInDistance = (_closeInDistance - 0.0085);
 //Create New 'real' Object
 _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
 _endPosTestOffset set [2, (_startingOffset select 2)];
-_attachedObject = _setupClassname createVehicle (getPos _placer);
+_attachedObject = _itemVehClass createVehicle (getPos _unit);
 _attachedObject attachTo [_attachToVehicle, _endPosTestOffset];
 
 //Remove Item from inventory
-_placer removeItem _itemClassname;
+_unit removeItem _itemClassname;
 
 //Add Object to ACE_AttachedObjects and ACE_AttachedItemNames
 _currentObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
@@ -117,4 +92,4 @@ _currentItemNames = _attachToVehicle getVariable [QGVAR(ItemNames), []];
 _currentItemNames pushBack _itemClassname;
 _attachToVehicle setVariable [QGVAR(ItemNames), _currentItemNames, true];
 
-[_placementText] call EFUNC(common,displayTextStructured);
+[_onAtachText] call EFUNC(common,displayTextStructured);

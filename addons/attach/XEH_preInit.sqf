@@ -8,6 +8,5 @@ PREP(canDetach);
 PREP(detach);
 PREP(getChildrenAttachActions);
 PREP(placeApprove);
-PREP(placeCancel);
 
 ADDON = true;
