@@ -5,7 +5,7 @@
  * Arguments:
  * 0: unit doing the attach (player) <OBJECT>
  * 1: vehicle that it will be attached to (player or vehicle) <OBJECT>
- * 2: Name of the attachable item <STRING>
+ * 2: Name of the attachable item <STRING><OPTIONAL>
  *
  * Return Value:
  * Boolean <BOOL>
@@ -17,7 +17,8 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_attachToVehicle,_item);
+PARAMS_2(_unit,_attachToVehicle);
+DEFAULT_PARAM(2,_item,"");
 
 private ["_attachLimit", "_attachedObjects"];
 

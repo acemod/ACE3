@@ -4,9 +4,9 @@
         class ACE_MainActions { \
             class GVAR(AttachVehicle) { \
                 displayName = "$STR_ACE_Attach_AttachDetach"; \
-                condition = QUOTE(([ARR_3(_player, _target, '')] call FUNC(canAttach))); \
+                condition = QUOTE(([ARR_2(_player, _target)] call FUNC(canAttach))); \
                 statement = QUOTE( [ARR_2(_player, _target)] call FUNC(openAttachUI);); \
-                exceptions[] = {"isNotDragging"}; \
+                exceptions[] = {}; \
                 showDisabled = 0; \
                 priority = 0; \
                 icon = PATHTOF(UI\attach_ca.paa); \
@@ -16,7 +16,7 @@
                 displayName = "$STR_ACE_Attach_Detach"; \
                 condition = QUOTE(([ARR_2(_player, _target)] call FUNC(canDetach))); \
                 statement = QUOTE( [ARR_2(_player, _target)] call FUNC(detach) ); \
-                exceptions[] = {"isNotDragging"}; \
+                exceptions[] = {}; \
                 showDisabled = 0; \
                 priority = 0; \
                 icon = PATHTOF(UI\detach_ca.paa); \
@@ -55,7 +55,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(Attach) {
                     displayName = "$STR_ACE_Attach_AttachDetach";
-                    condition = QUOTE(([ARR_3(_player, _player, '')] call FUNC(canAttach)));
+                    condition = QUOTE(([ARR_2(_player, _player)] call FUNC(canAttach)));
                     statement = QUOTE( [ARR_2(_player, _player)] call FUNC(openAttachUI); );
                     exceptions[] = {"isNotDragging"};
                     showDisabled = 0;

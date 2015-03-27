@@ -83,8 +83,10 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     }] call BIS_fnc_addStackedEventHandler;     // @todo replace with CBA PFH
 
     //had to delay the mouseHint, not sure why
-    [{[localize "STR_ACE_Attach_PlaceAction", localize "STR_ACE_Attach_CancelAction"] call EFUNC(interaction,showMouseHint)}, [], 0, 0] call EFUNC(common,waitAndExecute);
+    // [{[localize "STR_ACE_Attach_PlaceAction", localize "STR_ACE_Attach_CancelAction"] call EFUNC(interaction,showMouseHint)}, [], 0, 0] call EFUNC(common,waitAndExecute);
+    //RMB is unusable for now, so don't show it:
+    [{[localize "STR_ACE_Attach_PlaceAction", ""] call EFUNC(interaction,showMouseHint)}, [], 0, 0] call EFUNC(common,waitAndExecute);
 
     _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {GVAR(pfeh_running) && {!isNull (GVAR(setupObject))}}, {call FUNC(placeApprove);}] call EFUNC(common,AddActionEventHandler)];
-    _unit setVariable [QGVAR(cancelActionEH), [_unit, "MenuBack", {GVAR(pfeh_running) && {!isNull (GVAR(setupObject))}}, {call FUNC(placeCancel);}] call EFUNC(common,AddActionEventHandler)];
+    // _unit setVariable [QGVAR(cancelActionEH), [_unit, "MenuBack", {GVAR(pfeh_running) && {!isNull (GVAR(setupObject))}}, {call FUNC(placeCancel);}] call EFUNC(common,AddActionEventHandler)];
 };
