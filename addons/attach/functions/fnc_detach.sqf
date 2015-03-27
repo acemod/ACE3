@@ -74,13 +74,13 @@ _attachToVehicle setVariable [QGVAR(ItemNames), _attachedItems, true];
 
 // Display message
 switch (true) do {
-    case (_itemName == "ACE_IR_Strobe_Item") : {
+case (_itemName == "ACE_IR_Strobe_Item") : {
         [localize "STR_ACE_Attach_IrStrobe_Detached"] call EFUNC(common,displayTextStructured);
     };
-    case (toLower _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) : {
+case (toLower _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) : {
         [localize "STR_ACE_Attach_IrGrenade_Detached"] call EFUNC(common,displayTextStructured);
     };
-    case (toLower _itemName in ["chemlight_blue", "chemlight_green", "chemlight_red", "chemlight_yellow"]) : {
+case (toLower _itemName in ["chemlight_blue", "chemlight_green", "chemlight_red", "chemlight_yellow"]) : {
         [localize "STR_ACE_Attach_Chemlight_Detached"] call EFUNC(common,displayTextStructured);
     };
 };

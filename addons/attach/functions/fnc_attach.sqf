@@ -1,5 +1,5 @@
 /*
- * Author: eRazeri and esteldunedain
+ * Author: eRazeri, esteldunedain, PabstMirror
  * Attach an item to the unit
  *
  * Arguments:
@@ -77,7 +77,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     // _unit setVariable [QGVAR(cancelActionEH), [_unit, "MenuBack", {true}, {GVAR(placeAction) = 0;}] call EFUNC(common,AddActionEventHandler)];
 
     _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize "STR_ACE_Attach_CancelAction"], {GVAR(placeAction) = 0}];
-    
+
     [{
         PARAMS_2(_args,_pfID);
         EXPLODE_7_PVT(_args,_unit,_attachToVehicle,_itemClassname,_itemVehClass,_tempObject,_onAtachText,_actionID);
@@ -93,7 +93,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
             [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
             //[_unit, "MenuBack", (_unit getVariable [QGVAR(cancelActionEH), -1])] call EFUNC(common,removeActionEventHandler);
             _unit removeAction _actionID;
-        
+
             if (GVAR(placeAction) == 1) then {
                 _startingPosition = _tempObject modelToWorld [0,0,0];
                 [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAtachText, _startingPosition] call FUNC(placeApprove);
