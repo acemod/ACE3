@@ -24,7 +24,7 @@ _onFinish = {
    EXPLODE_2_PVT((_this select 0),_caller,_target);
   _caller removeItem "ACE_UAVBattery";
   playSound3D [QUOTE(PATHTO_R(sounds\exchange_battery.ogg)), objNull, false, getPosASL _caller, 1, 1, 10];
-  ["VehicleSetFuel", [_target], [_target, 1]] call EFUNC(common,targetEvent); //setFuel is local
+  ["setFuel", [_target], [_target, 1]] call EFUNC(common,targetEvent); //setFuel is local
 };
 
 _onFailure = {

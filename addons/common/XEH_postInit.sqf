@@ -34,6 +34,7 @@ if (hasInterface) then {
 }] call FUNC(addEventhandler);
 
 ["setDir", {(_this select 0) setDir (_this select 1)}] call FUNC(addEventhandler);
+["setFuel", {(_this select 0) setFuel (_this select 1)}] call FUNC(addEventhandler);
 
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
@@ -173,11 +174,6 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 }, 0, []] call cba_fnc_addPerFrameHandler;
 
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
-
-["VehicleSetFuel", {
-PARAMS_2(_vehicle,_fuelLevel);
-_vehicle setFuel _fuelLevel;
-}] call FUNC(addEventhandler);
 
 ["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
 ["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
