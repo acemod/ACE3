@@ -92,7 +92,7 @@ _closeInDistance = (_closeInMax + _closeInMin) / 2;
 deleteVehicle _setupObject;
 
 //Checks
-if (((_startDistanceFromCenter - _closeInDistance) < 0.1) || {!([_placer,_attachToVehicle,_itemClassname] call FUNC(canAttach))}) exitWith {
+if (((_startDistanceFromCenter - _closeInDistance) < 0.1) || {!([_attachToVehicle, _placer, _itemClassname] call FUNC(canAttach))}) exitWith {
     TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
     [localize "STR_ACE_Attach_Failed"] call EFUNC(common,displayTextStructured);
 };

@@ -3,9 +3,9 @@
  * Attach an item to the unit
  *
  * Arguments:
- * 0: unit doing the attach (player) <OBJECT>
- * 1: vehicle that it will be attached to (player or vehicle) <OBJECT>
- * 2: Name of the attachable item <STRING>
+ * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
+ * 1: unit doing the attach (player) <OBJECT>
+ * 2: Array containing a string of the attachable item <ARRAY>
  *
  * Return Value:
  * Nothing
@@ -17,12 +17,14 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_attachToVehicle,_itemName);
+PARAMS_3(_attachToVehicle,_unit,_args);
+
+private ["_item", "_itemVehClass", "_onAtachText", "_selfAttachPosition"];
+
+_itemName = [_args, 0, ""] call CBA_fnc_defaultParam;
 
 //Sanity Check (_unit has item in inventory, not over attach limit)
-if !([_unit, _attachToVehicle, _itemName] call FUNC(canAttach)) exitWith {ERROR("Tried to attach, but check failed");};
-
-private ["_itemVehClass", "_onAtachText", "_selfAttachPosition"];
+if ((_itemName == "") || {!(_this call FUNC(canAttach))}) exitWith {ERROR("Tried to attach, but check failed");};
 
 _itemVehClass = "";
 _onAtachText = "";

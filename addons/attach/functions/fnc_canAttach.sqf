@@ -3,9 +3,9 @@
  * Check if a unit can attach a specific item.
  *
  * Arguments:
- * 0: unit doing the attach (player) <OBJECT>
- * 1: vehicle that it will be attached to (player or vehicle) <OBJECT>
- * 2: Name of the attachable item <STRING><OPTIONAL>
+ * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
+ * 1: unit doing the attach (player) <OBJECT>
+ * 2: Array empty or containing a string of the attachable item <ARRAY>
  *
  * Return Value:
  * Boolean <BOOL>
@@ -17,12 +17,16 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_attachToVehicle);
-DEFAULT_PARAM(2,_item,"");
+PARAMS_3(_attachToVehicle,_player,_args);
 
-private ["_attachLimit", "_attachedObjects"];
+private ["_itemName", "_attachLimit", "_attachedObjects"];
 
-_attachLimit = [10, 1] select (_unit == _attachToVehicle);
+_itemName = [_args, 0, ""] call CBA_fnc_defaultParam;
+_attachLimit = [6, 1] select (_player == _attachToVehicle);
 _attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
 
-canStand _unit && {alive _attachToVehicle} && {count _attachedObjects < _attachLimit} && {_item in (itemsWithMagazines _unit + [""])}
+_ret = (canStand _player) && {alive _attachToVehicle} && {(count _attachedObjects) < _attachLimit} && {_itemName in ((itemsWithMagazines _player) + [""])};
+
+systemChat format ["[%1] Checking = %2", _itemName, _ret ];
+x = _this;
+_ret

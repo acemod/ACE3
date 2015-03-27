@@ -3,20 +3,20 @@
  * Detach an item from a unit
  *
  * Arguments:
- * 0: unit doing the attaching (player) <STRING>
- * 1: vehicle that it will be detached from (player or vehicle) <OBJECT>
+ * 0: vehicle that it will be detached from (player or vehicle) <OBJECT>
+ * 1: unit doing the detaching (player) <OBJECT>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * Nothing
+ * [car, bob] call ace_attach_fnc_detach
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_attachToVehicle);
+PARAMS_2(_attachToVehicle,_unit);
 
 private ["_attachedObjects", "_attachedItems"];
 

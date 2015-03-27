@@ -4,9 +4,9 @@
         class ACE_MainActions { \
             class GVAR(AttachVehicle) { \
                 displayName = "$STR_ACE_Attach_AttachDetach"; \
-                condition = QUOTE(([ARR_2(_player, _target)] call FUNC(canAttach))); \
-                statement = QUOTE( [ARR_2(_player, _target)] call FUNC(openAttachUI);); \
-                exceptions[] = {}; \
+                condition = QUOTE(_this call FUNC(canAttach)); \
+                insertChildren = QUOTE(_this call FUNC(getChildrenAttachActions)); \
+                exceptions[] = {"isNotDragging"}; \
                 showDisabled = 0; \
                 priority = 0; \
                 icon = PATHTOF(UI\attach_ca.paa); \
@@ -14,9 +14,9 @@
             }; \
             class GVAR(DetachVehicle) { \
                 displayName = "$STR_ACE_Attach_Detach"; \
-                condition = QUOTE(([ARR_2(_player, _target)] call FUNC(canDetach))); \
-                statement = QUOTE( [ARR_2(_player, _target)] call FUNC(detach) ); \
-                exceptions[] = {}; \
+                condition = QUOTE(_this call FUNC(canDetach)); \
+                statement = QUOTE(_this call FUNC(detach) ); \
+                exceptions[] = {"isNotDragging"}; \
                 showDisabled = 0; \
                 priority = 0; \
                 icon = PATHTOF(UI\detach_ca.paa); \
@@ -55,18 +55,18 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(Attach) {
                     displayName = "$STR_ACE_Attach_AttachDetach";
-                    condition = QUOTE(([ARR_2(_player, _player)] call FUNC(canAttach)));
-                    statement = QUOTE( [ARR_2(_player, _player)] call FUNC(openAttachUI); );
+                    condition = QUOTE(_this call FUNC(canAttach));
+                    insertChildren = QUOTE(_this call FUNC(getChildrenAttachActions));
                     exceptions[] = {"isNotDragging"};
                     showDisabled = 0;
                     priority = 5;
                     icon = PATHTOF(UI\attach_ca.paa);
-                    hotkey = "T";
+                    // hotkey = "T";
                 };
                 class GVAR(Detach) {
                     displayName = "$STR_ACE_Attach_Detach";
-                    condition = QUOTE(([ARR_2(_player, _player)] call FUNC(canDetach)));
-                    statement = QUOTE( [ARR_2(_player, _player)] call FUNC(detach) );
+                    condition = QUOTE(_this call FUNC(canDetach));
+                    statement = QUOTE(_this call FUNC(detach));
                     exceptions[] = {"isNotDragging"};
                     showDisabled = 0;
                     priority = 5;
