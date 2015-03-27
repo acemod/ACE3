@@ -19,7 +19,7 @@
 
 PARAMS_3(_attachToVehicle,_unit,_args);
 
-private ["_item", "_itemVehClass", "_onAtachText", "_selfAttachPosition"];
+private ["_itemClassname", "_itemVehClass", "_onAtachText", "_selfAttachPosition", "_attachedItem", "_tempObject", "_actionID"];
 
 _itemClassname = [_args, 0, ""] call CBA_fnc_defaultParam;
 
@@ -76,23 +76,24 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = 1;}] call EFUNC(common,AddActionEventHandler)];
     // _unit setVariable [QGVAR(cancelActionEH), [_unit, "MenuBack", {true}, {GVAR(placeAction) = 0;}] call EFUNC(common,AddActionEventHandler)];
 
+    _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize "STR_ACE_Attach_CancelAction"], {GVAR(placeAction) = 0}];
+    
     [{
         PARAMS_2(_args,_pfID);
-        EXPLODE_6_PVT(_args,_unit,_attachToVehicle,_itemClassname,_itemVehClass,_tempObject,_onAtachText);
+        EXPLODE_7_PVT(_args,_unit,_attachToVehicle,_itemClassname,_itemVehClass,_tempObject,_onAtachText,_actionID);
 
         if ((GVAR(placeAction) != -1) ||
                 {_unit != ACE_player} ||
                 {!([_unit, _attachToVehicle, []] call EFUNC(common,canInteractWith))} ||
                 {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) then {
 
-            systemChat "exiting";
-
             [_pfID] call CBA_fnc_removePerFrameHandler;
             [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
             [] call EFUNC(interaction,hideMouseHint);
             [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
             //[_unit, "MenuBack", (_unit getVariable [QGVAR(cancelActionEH), -1])] call EFUNC(common,removeActionEventHandler);
-
+            _unit removeAction _actionID;
+        
             if (GVAR(placeAction) == 1) then {
                 _startingPosition = _tempObject modelToWorld [0,0,0];
                 [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAtachText, _startingPosition] call FUNC(placeApprove);
@@ -101,5 +102,5 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
         } else {
             _tempObject setPosATL ((ASLtoATL eyePos _unit) vectorAdd (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]));;
         };
-    }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _tempObject, _onAtachText]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _tempObject, _onAtachText, _actionID]] call CBA_fnc_addPerFrameHandler;
 };
