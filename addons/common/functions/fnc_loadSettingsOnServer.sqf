@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Load the parameters on the server.
  * Config < Server UserConfig < Mission Config
  *

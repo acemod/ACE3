@@ -18,5 +18,12 @@
 
 PARAMS_2(_unit,_newSurrenderState);
 
-//TODO: any other conditions??
-(!((_unit getVariable [QGVAR(isSurrendering), false]) isEqualTo _newSurrenderState))
+private "_returnValue";
+
+_returnValue = if (_newSurrenderState) then {
+    !(_unit getVariable [QGVAR(isSurrendering), false]); //Not currently surrendering
+} else {
+    (_unit getVariable [QGVAR(isSurrendering), false]); //is Surrendering
+};
+
+_returnValue

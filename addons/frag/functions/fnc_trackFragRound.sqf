@@ -12,7 +12,7 @@ _spallTrack = _params select 7;
 _foundObjectHPIds = _params select 8;
 
 if (!alive _round) then {
-	[_this select 1] call FUNC(removeBISPFH);
+	[_this select 1] call cba_fnc_removePerFrameHandler;
 	if(_time != time && {_round in GVAR(trackedObjects)} && {!(_round in GVAR(blackList))}) then {
 		GVAR(trackedObjects) = GVAR(trackedObjects) - [_round];
 		_skip = getNumber (configFile >> "CfgAmmo" >> _type >> "ACE_FRAG_SKIP");
@@ -22,7 +22,7 @@ if (!alive _round) then {
 			_force = getNumber (configFile >> "CfgAmmo" >> _type >> "ACE_FRAG_FORCE");
 			_fragPower = getNumber(configFile >> "CfgAmmo" >> _type >> "indirecthit")*(sqrt(_indirectRange));
 			if((_explosive > 0.5 && {_indirectRange >= 4.5} && {_fragPower >= 35}) || {_force == 1} ) then {
-				[QGVAR(frag_eh), _params] call CBA_fnc_clientToServerEvent;
+				[QGVAR(frag_eh), _params] call ace_common_fnc_serverEvent;
 				GVAR(trackedObjects) = GVAR(trackedObjects) - [_round];
 			};
 		};
@@ -38,7 +38,7 @@ if (!alive _round) then {
 	};
 } else {
 	if(!(_round in GVAR(trackedObjects)) || {_round in GVAR(blackList)}) then {
-		[_this select 1] call FUNC(removeBISPFH);
+		[_this select 1] call cba_fnc_removePerFrameHandler;
 		if(_round in GVAR(blackList)) then {
 			GVAR(blackList) = GVAR(blackList) - [_round];
 		};

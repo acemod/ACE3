@@ -1,5 +1,5 @@
-
 class SlotInfo;
+class MuzzleSlot;
 
 class CfgWeapons {
 
@@ -20,7 +20,7 @@ class CfgWeapons {
         };
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_H"};
             };
         };
@@ -59,7 +59,7 @@ class CfgWeapons {
         };
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_H"};
             };
         };
@@ -74,7 +74,7 @@ class CfgWeapons {
 
     class EBR_base_F: Rifle_Long_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_B"};
             };
         };
@@ -82,7 +82,7 @@ class CfgWeapons {
 
     class DMR_01_base_F: Rifle_Long_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_B"};
             };
         };
@@ -90,7 +90,7 @@ class CfgWeapons {
 
     class LMG_Mk200_F: Rifle_Long_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_H"};
             };
         };
@@ -98,7 +98,7 @@ class CfgWeapons {
 
     class LMG_Zafir_F: Rifle_Long_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_B"};
             };
         };
@@ -115,7 +115,7 @@ class CfgWeapons {
         };
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_L"};
             };
         };
@@ -129,7 +129,7 @@ class CfgWeapons {
         };
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_L"};
             };
         };
@@ -148,7 +148,7 @@ class CfgWeapons {
 
     class pdw2000_base_F: Rifle_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
             };
         };
@@ -156,7 +156,7 @@ class CfgWeapons {
 
     class SMG_01_Base: Rifle_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
             };
         };
@@ -164,7 +164,7 @@ class CfgWeapons {
 
     class SMG_02_base_F: Rifle_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
             };
         };
@@ -180,7 +180,7 @@ class CfgWeapons {
 
     class hgun_P07_F: Pistol_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
                 compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
             };
@@ -189,7 +189,7 @@ class CfgWeapons {
 
     class hgun_Rook40_F: Pistol_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
                 compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
             };
@@ -198,7 +198,7 @@ class CfgWeapons {
 
     class hgun_ACPC2_F: Pistol_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
             };
         };
@@ -206,7 +206,7 @@ class CfgWeapons {
 
     class hgun_Pistol_heavy_01_F: Pistol_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
             };
         };

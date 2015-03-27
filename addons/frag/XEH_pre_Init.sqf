@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-#define ACE_TRACE_DRAW_INC	1
+
 ADDON = false;
 
 PREP(fired);
@@ -14,7 +14,7 @@ GVAR(trackedObjects) = [];
 GVAR(blackList) = [];
 GVAR(traceFrags) = false;
 
-GVAR(replacedBisArtyWrapper) = false;
+GVAR(replacedBisArtyWrapper) = true;
 
 GVAR(TOTALFRAGS) = 0;
 

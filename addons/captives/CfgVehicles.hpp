@@ -2,34 +2,26 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_Actions {
-            class ACE_RightHandActions {
+
+            class ACE_ApplyHandcuffs {
+                displayName = "$STR_ACE_Captives_SetCaptive";
                 selection = "righthand";
-                displayName = "Right hand";
-                distance = 5;
-                condition = QUOTE(([ARR_2(_player, _target)] call FUNC(canApplyHandcuffs)) || ([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs)));
-                class ACE_ApplyHandcuffs {
-                    displayName = "$STR_ACE_Captives_SetCaptive";
-                    distance = 4;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canApplyHandcuffs));
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doApplyHandcuffs));
-                    exceptions[] = {};
-                    showDisabled = 0;
-                    priority = 2.4;
-                    icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
-                    hotkey = "C";
-                };
-                class ACE_RemoveHandcuffs {
-                    displayName = "$STR_ACE_Captives_ReleaseCaptive";
-                    distance = 4;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs));
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doRemoveHandcuffs));
-                    exceptions[] = {};
-                    showDisabled = 0;
-                    priority = 2.4;
-                    icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
-                    hotkey = "R";
-                };
+                distance = 2;
+                condition = QUOTE([ARR_2(_player, _target)] call FUNC(canApplyHandcuffs));
+                statement = QUOTE([ARR_2(_player, _target)] call FUNC(doApplyHandcuffs));
+                exceptions[] = {};
+                icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
             };
+            class ACE_RemoveHandcuffs {
+                displayName = "$STR_ACE_Captives_ReleaseCaptive";
+                selection = "righthand";
+                distance = 2;
+                condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs));
+                statement = QUOTE([ARR_2(_player, _target)] call FUNC(doRemoveHandcuffs));
+                exceptions[] = {};
+                icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
+            };
+
             class ACE_MainActions {
                 class ACE_EscortCaptive {
                     displayName = "$STR_ACE_Captives_EscortCaptive";
@@ -47,7 +39,7 @@ class CfgVehicles {
                     distance = 4;
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canStopEscorting));
                     statement = QUOTE([ARR_3(_player,_target, false)] call FUNC(doEscortCaptive));
-                    exceptions[] = {QGVAR(isNotEscorting)};
+                    exceptions[] = {"isNotEscorting"};
                     showDisabled = 0;
                     icon = QUOTE(PATHTOF(UI\captive_ca.paa));
                     priority = 2.3;
@@ -58,7 +50,7 @@ class CfgVehicles {
                     distance = 4;
                     condition = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(canLoadCaptive));
                     statement = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(doLoadCaptive));
-                    exceptions[] = {QGVAR(isNotEscorting)};
+                    exceptions[] = {"isNotEscorting"};
                     showDisabled = 0;
                     icon = QUOTE(PATHTOF(UI\captive_ca.paa));
                     priority = 2.2;
@@ -82,7 +74,7 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Captives_StopEscorting";
                 condition = QUOTE([ARR_2(_player, objNull)] call FUNC(canStopEscorting));
                 statement = QUOTE([ARR_3(_player,objNull, false)] call FUNC(doEscortCaptive));
-                exceptions[] = {QGVAR(isNotEscorting)};
+                exceptions[] = {"isNotEscorting"};
                 showDisabled = 0;
                 priority = 2.3;
                 hotkey = "C";
@@ -90,7 +82,7 @@ class CfgVehicles {
             class ACE_StartSurrenderingSelf {
                 displayName = "$STR_ACE_Captives_StartSurrendering";
                 condition = QUOTE([ARR_2(_player, true)] call FUNC(canSurrender));
-                statement = QUOTE([ARR_2(_player, true)] call FUNC(surrender));
+                statement = QUOTE([ARR_2(_player, true)] call FUNC(setSurrendered));
                 exceptions[] = {};
                 showDisabled = 0;
                 priority = 0;
@@ -98,8 +90,8 @@ class CfgVehicles {
             class ACE_StopSurrenderingSelf {
                 displayName = "$STR_ACE_Captives_StopSurrendering";
                 condition = QUOTE([ARR_2(_player, false)] call FUNC(canSurrender));
-                statement = QUOTE([ARR_2(_player, false)] call FUNC(surrender));
-                exceptions[] = {QGVAR(isNotSurrendering)};
+                statement = QUOTE([ARR_2(_player, false)] call FUNC(setSurrendered));
+                exceptions[] = {"isNotSurrendering"};
                 showDisabled = 0;
                 priority = 0;
             };
@@ -115,7 +107,7 @@ class CfgVehicles {
                     distance = 4; \
                     condition = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(canLoadCaptive)); \
                     statement = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(doLoadCaptive)); \
-                    exceptions[] = {QGVAR(isNotEscorting)}; \
+                    exceptions[] = {"isNotEscorting"}; \
                     showDisabled = 0; \
                     priority = 1.2; \
                     hotkey = "L"; \
@@ -162,15 +154,10 @@ class CfgVehicles {
         MACRO_LOADUNLOADCAPTIVE
     };
 
-#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
-            name = #ITEM; \
-            count = COUNT; \
-        };
-
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
-            MACRO_ADDITEM(ACE_CableTie,12)
+            MACRO_ADDITEM(ACE_CableTie,12);
         };
     };
 
@@ -191,7 +178,7 @@ class CfgVehicles {
         curatorCost = 0;  //???
         isGlobal = 1; //run global
         isTriggerActivated  = 1; //Wait for triggers
-        // icon = QUOTE(PATHTOF(ui\todo.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Make_Unit_Surrender_ca.paa));
         functionPriority = 0;
         class Arguments {};
         class ModuleDescription: ModuleDescription {

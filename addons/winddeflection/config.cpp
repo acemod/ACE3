@@ -28,4 +28,6 @@ class ACE_Settings {
         isClientSetable = 0;
     };
 };
-#include "CfgVehicles.h"
+
+#include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"

@@ -1,28 +1,32 @@
-/**
- * fn_load_CMS.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Action for loading an unconscious or dead unit in the nearest vechile
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: The medic <OBJECT>
+ * 1: The patient <OBJECT>
+ *
+ * Return Value:
+ * NONE
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
 
-
-private ["_caller", "_unit","_vehicle", "_loaded"];
+private ["_caller", "_target","_vehicle", "_loaded"];
 _caller = _this select 0;
-_unit = _this select 1;
+_target = _this select 1;
 
-if ([_unit] call cse_fnc_isAwake) exitwith {
-    hintSilent "This person is awake and cannot be loaded";
+if ([_target] call EFUNC(common,isAwake)) exitwith {
+    // TODO localization
+    ["displayTextStructured", [_caller], [["This person (%1) is awake and cannot be loaded", [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
 };
 
-[_caller,objNull] call cse_fnc_carryObj;
-[_unit,objNull] call cse_fnc_carryObj;
+[_caller, objNull] call cse_fnc_carryObj;
+[_target, objNull] call cse_fnc_carryObj;
 
-_vehicle = [_caller, _unit] call EFUNC(common,loadPerson);
+_vehicle = [_caller, _target] call EFUNC(common,loadPerson);
 if (!isNull _vehicle) then {
     if (!isnil QGVAR(DROP_ADDACTION)) then {
         _caller removeAction GVAR(DROP_ADDACTION);

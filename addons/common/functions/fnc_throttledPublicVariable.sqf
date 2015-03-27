@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Schedules the publishment of an object variable to reduce network overhead
  *
  * Arguments:

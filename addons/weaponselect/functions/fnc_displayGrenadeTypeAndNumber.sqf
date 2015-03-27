@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  *
  * Display a grenade type and quantity.
  *
@@ -13,6 +13,8 @@
 #include "script_component.hpp"
 
 private ["_magazine", "_numberofMagazines"];
+
+if !(GVAR(DisplayText)) exitwith {};
 
 _magazine = _this select 0;
 _numberofMagazines = _this select 1;

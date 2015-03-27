@@ -54,6 +54,5 @@ _actions,
 { [_this] call FUNC(startRepackingMagazine); },
 {
     call EFUNC(interaction,hideMenu); //ToDo: Self Interaction Integration
-    if !(profileNamespace getVariable [QGVAR(AutoCloseMenu), false]) then {"Default" call EFUNC(interaction,openMenuSelf)};
 }
 ] call EFUNC(interaction,openSelectMenu);

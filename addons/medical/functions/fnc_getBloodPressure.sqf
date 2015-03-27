@@ -1,11 +1,14 @@
-/**
- * fn_getBloodPressure.sqf
- * @Descr: Calculate the current blood pressure of a unit.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Calculates the blood volume change and decreases the IVs given to the unit.
  *
- * @Arguments: [unit OBJECT (The unit to get the blood pressure from.)]
- * @Return: ARRAY Blood Pressure. Format [low NUMBER, high NUMBER]
- * @PublicAPI: true
+ * Arguments:
+ * 0: The Unit <OBJECT>
+ *
+ * ReturnValue:
+ * Blood Pressuret <ARRAY <NUMBER>,<NUMBER>>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
@@ -23,7 +26,7 @@
 private ["_unit", "_bloodPressureLow", "_bloodPressureHigh", "_cardiacOutput", "_resistance"];
 _unit = _this select 0;
 _cardiacOutput = [_unit] call FUNC(getCardiacOutput);
-_resistance = [_unit, QGVAR(peripheralResistance)] call EFUNC(common,getDefinedVariable);
+_resistance = _unit getvariable [QGVAR(peripheralResistance), 100];
 
 _bloodPressureHigh = (_cardiacOutput * MODIFIER_BP_HIGH) * _resistance;
 _bloodPressureLow = (_cardiacOutput * MODIFIER_BP_LOW) * _resistance;

@@ -1,6 +1,7 @@
 class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;
+class MuzzleSlot;
 
 // config inheritance of weapon slot info v1.32
 class SlotInfo;
@@ -21,7 +22,7 @@ class CfgWeapons {
     class RifleCore;
     class Rifle: RifleCore {
         class WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {};
+            class MuzzleSlot: MuzzleSlot {};
             class CowsSlot: CowsSlot {};
             class PointerSlot: PointerSlot {};
         };

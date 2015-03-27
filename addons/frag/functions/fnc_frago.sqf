@@ -130,11 +130,12 @@ if(_isArmed && (count _objects) > 0) then {
 					
 					_targetVel = (velocity _target);
 					
-					_targetPos set[2, (_targetPos select 2)+_add];
+					
 					_targetPos set[0, (_targetPos select 0)+((_targetVel select 0)*(_distance/_fragPower))];
 					_targetPos set[1, (_targetPos select 1)+((_targetVel select 1)*(_distance/_fragPower))];
-					
-					_baseVec = [_lastPos, _targetPos] call BIS_fnc_vectorFromXToY;
+					_targetPos set[2, (_targetPos select 2)+_add];
+                    
+                    _baseVec = _lastPos vectorFromTo _targetPos;
 					
 					_dir = floor(_baseVec call CBA_fnc_vectDir);
 					_currentCount = _fragArcs select _dir;
@@ -213,7 +214,6 @@ if(_isArmed && (count _objects) > 0) then {
 			_fragObj setVelocity _vel;
 			#ifdef DEBUG_MODE_FULL
 				GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
-				// [FUNC(frag_trace), 0, [_fragObj]] call cba_fnc_addPerFrameHandler;
 				GVAR(traceFrags) = true;
 			#endif
 			if(GVAR(traceFrags)) then {

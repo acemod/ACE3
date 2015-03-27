@@ -2,7 +2,7 @@
   Name: ACE_Respawn_fnc_module
 
   Author(s):
-    KoffeinFlummi, bux578, CAA-Picard, commy2
+    KoffeinFlummi, bux578, esteldunedain, commy2
 
   Description:
     initializes the respawn module

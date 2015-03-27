@@ -1,47 +1,48 @@
 /*
-Author: commy2
+Author: commy2, esteldunedain
 
 Description:
 Converts number to hexadecimal number
 
 Arguments:
-A number
+A number between 0 and 255 <NUMBER>
 
 Return Value:
 A hexadecimal number, String
 */
 #include "script_component.hpp"
 
-private ["_number", "_minLength", "_sign", "_hex", "_rest"];
+private ["_number"];
+_number = ((round abs (_this select 0)) max 0) min 255;
 
-_number = _this select 0;
-_minLength = _this select 1;
+if (isNil QGVAR(hexArray)) then {
+    private ["_minLength", "_i", "_num", "_hex", "_rest"];
 
-if (isNil "_minLength") then {_minLength = 1};
+    GVAR(hexArray) = [];
+    _minLength = 2;
+    for [{_i = 0;}, {_i < 256}, {_i = _i + 1}] do {
+        _num = _i;
+        _hex = ["", "0"] select (_i == 0);
 
-_sign = ["", "-"] select (_number < 0);
-
-_number = round abs _number;
-_hex = ["", "0"] select (_number == 0);
-
-while {_number > 0} do {
-  _rest = _number mod 16;
-  _rest = switch _rest do {
-    case 10 : {"A"};
-    case 11 : {"B"};
-    case 12 : {"C"};
-    case 13 : {"D"};
-    case 14 : {"E"};
-    case 15 : {"F"};
-    default {str _rest};
-  };
-  _number = floor (_number / 16);
-
-  _hex = _rest + _hex;
+        while {_num > 0} do {
+            _rest = _num mod 16;
+            _rest = switch _rest do {
+                case 10 : {"A"};
+                case 11 : {"B"};
+                case 12 : {"C"};
+                case 13 : {"D"};
+                case 14 : {"E"};
+                case 15 : {"F"};
+                default {str _rest};
+            };
+            _num = floor (_num / 16);
+            _hex = _rest + _hex;
+        };
+        while {count toArray _hex < _minLength} do {
+            _hex = "0" + _hex;
+        };
+        GVAR(hexArray) pushBack _hex;
+    };
 };
 
-while {count toArray _hex < _minLength} do {
-  _hex = "0" + _hex;
-};
-
-_sign + _hex
+(GVAR(hexArray) select _number)

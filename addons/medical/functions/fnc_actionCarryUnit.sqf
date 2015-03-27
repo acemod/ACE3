@@ -1,77 +1,71 @@
 /*
-    fnc_carry.sqf
-    Usage: makes the calling unit start carrying the specified unit
-    Author: Glowbal
-
-    Arguments: array [caller (object), target (object)]
-            1: caller (OBJECT), Object of type Man
-            2: target (OBJECT), Object of type Man
-    Returns: none
-
-    Affects: Caller and target locality
-    Executes: spawn
-*/
+ * Author: Glowbal
+ * makes the calling unit start carrying the specified unit
+ *
+ * Arguments:
+ * 0: The caller <OBJECT>
+ * 1: The target <OBJECT>
+ * 2: Carry object. True is carry, false is dragging <BOOL>
+ *
+ * Return Value:
+ * NONE
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 
+private ["_caller", "_target", "_positionUnit", "_carry"];
+_caller = _this select 0;
+_target = _this select 1;
+_carry = _this select 2;
 
-private ["_caller", "_unit", "_positionUnit", "_killOnDrop"];
-_caller = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_unit = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
-_killOnDrop = [_this, 2, false, [false]] call BIS_fnc_param;
+if (!(_target isKindOf "CaManBase") || !(_caller isKindOf "CaManBase")) exitwith{ };
+if (vehicle _caller != _caller || vehicle _target != _target) exitwith {};
+if (!([_caller] call EFUNC(common,canInteract)) || {_caller == _target} || {(([_target] call EFUNC(common,isAwake)))}) exitwith {};
 
-["FUNC(actionDragUnit) has been called",2] call EFUNC(common,debug);
-
-if ([_caller] call FUNC(isSetTreatmentMutex)) exitwith {};
-[_caller, true] call FUNC(treatmentMutex);
-
-if (!(_unit isKindOf "CaManBase") || !(_caller isKindOf "CaManBase")) exitwith{ [_caller, false] call FUNC(treatmentMutex);};
-if (vehicle _caller != _caller || vehicle _unit != _unit) exitwith { [_caller, false] call FUNC(treatmentMutex);};
-
-if (!([_caller] call EFUNC(common,canInteract)) || {_caller == _unit} || {(([_unit] call EFUNC(common,isAwake)))}) exitwith {
-    [_caller, false] call FUNC(treatmentMutex);
+if (!alive _target) exitwith {
+    if (GVAR(allowDeadBodyMovement)) then {
+        [{
+            _this call FUNC(actionCarryUnit);
+        }, [_caller, ([_target,_caller] call FUNC(copyDeadBody)), _carry], 0.25, 0.25] call EFUNC(common,waitAndExecute);
+    };
 };
 
-if (([_caller] call EFUNC(common,getCarriedObj)) != _unit && !(isNull ([_caller] call EFUNC(common,getCarriedObj))) || {!isNull(_unit getvariable [QGVAR(beingDragged),objNull]) || !isNull(_caller getvariable [QGVAR(dragging),objNull])} || {!isNull(_unit getvariable [QGVAR(beingCarried),objNull]) || !isNull(_caller getvariable [QGVAR(carrying),objNull])}) exitwith {
-    [_caller,objNull] call EFUNC(common,carryObj);
-    [_caller, false] call FUNC(treatmentMutex);
-};
-_caller action ["WeaponOnBack", _caller];
-_killOnDrop = false;
-if (!alive _unit) exitwith {
-    [_caller, false] call FUNC(treatmentMutex);
-    [{
-        _this call FUNC(actionCarryUnit);
-    }, [_caller, ([_unit,_caller] call FUNC(makeCopyOfBody)), _killOnDrop], 0.25, 0.25] call EFUNC(common,waitAndExecute);
-};
-
-if !([_caller,_unit] call EFUNC(common,carryObj)) exitwith {
-    ["couldn't carry object!"] call EFUNC(common,debug); [_caller,false] call FUNC(treatmentMutex);
-};
+if !([_caller,_target] call EFUNC(common,carryObj)) exitwith {};
 
 if (primaryWeapon _caller == "") then {
     _caller addWeapon "ACE_FakePrimaryWeapon";
 };
-_caller selectWeapon (primaryWeapon _caller);
+if (currentWeapon _caller != (primaryWeapon _caller)) then {
+    _caller selectWeapon (primaryWeapon _caller);
+};
 
-_unit attachTo [_caller, [0.1, -0.1, -1.25], "LeftShoulder"];
+if (_carry) then {
+    _target attachTo [_caller, [0.1, -0.1, -1.25], "LeftShoulder"];
+    [_target, "AinjPfalMstpSnonWnonDf_carried_dead", 2, true] call EFUNC(common,doAnimation);
+    [_caller, "acinpercmstpsraswrfldnon", 1] call EFUNC(common,doAnimation);
+} else {
+    _target attachTo [_caller, [0.125, 1.007, 0]];
+    _target setDir (getDir _target + 180) % 360;
+    _target setPos ((getPos _target) vectorAdd ((vectorDir _caller) vectorMultiply 1.5));
+     [_caller, "AcinPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
+    [_target, "AinjPpneMstpSnonWrflDb", 2, true] call EFUNC(common,doAnimation);
+};
 
-[_unit,"AinjPfalMstpSnonWnonDf_carried_dead", 2, true] call EFUNC(common,doAnimation);
-[_caller,"acinpercmstpsraswrfldnon", 1] call EFUNC(common,doAnimation);
-
-_caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
-[2,
-    {((vehicle (_this select 0) != (_this select 0)) ||((getPos (_this select 0)) distance ((_this select 0) getvariable QGVAR(StartingPositionHandleTreatment)) < 1.5))}, // the condition
+[
+    2,
+    [_caller, _target, _carry],
     {
-        private ["_caller","_target"];
-        _caller = _this select 0;
-        _target = _this select 1;
-        _killOnDrop = _this select 2;
-        [_caller, false] call FUNC(treatmentMutex);
+        private ["_caller","_target", "_carry", "_args"];
+        _args = _this select 0;
+        _caller = _args select 0;
+        _target = _args select 1;
+        _carry = _args select 2;
 
-        // Registration for drag/carry functions
-        _target setvariable [QGVAR(beingCarried),_caller,true];
-        _caller setvariable [QGVAR(carrying),_unit,true];
+        _target setvariable [QGVAR(beingCarried), _caller, true];
+        _caller setvariable [QGVAR(carrying), _target, true];
+        _caller setvariable [QGVAR(isCarrying), if (_carry) then {1} else {0}, true];
 
         // Removing any old drop scroll wheel actions
         // TODO Do we still want scroll wheel actions?
@@ -82,14 +76,12 @@ _caller setvariable [QGVAR(StartingPositionHandleTreatment), getPos _caller];
         // Adding the drop scroll wheel action.
         GVAR(DROP_ADDACTION) = _caller addAction [format["Drop %1",[_target] call EFUNC(common,getName)], {[_this select 1, _this select 2] call FUNC(actionDropUnit);}];
 
-        // Raise an event
-        ["onStartMovingUnit", [_caller], [_caller, _Target, _killOnDrop, false]] call EFUNC(common,targetEvent);
-
-    }, // on success
+        [_target, true] call EFUNC(common,disableAI);
+    },
     {
-        [(_this select 0), "STR_ACE_CANCELED", ["STR_ACE_ACTION_CANCELED","STR_ACE_YOU_MOVED_AWAY"]] call EFUNC(common,sendDisplayInformationTo);
-        [(_this select 0), false] call FUNC(treatmentMutex);
         [(_this select 0), objNull,[0, 0, 0]] call EFUNC(common,carryObj);
-    },    // on failure
-    [_caller, _unit, _killOnDrop] // arguments
-] call EFUNC(common,loadingBar);
+        // TODO reset animations..
+    },
+    if (_carry) then {localize "STR_ACE_MEDICAL_ACTION_CARRY"} else {localize "STR_ACE_MEDICAL_ACTION_DRAG"},
+    {true}
+] call EFUNC(common,progressBar);

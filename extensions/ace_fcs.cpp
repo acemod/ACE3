@@ -21,7 +21,6 @@
 #include <string>
 
 #define MAXELEVATION 20
-#define SIMULATIONSTEP 0.05
 #define MAXITERATIONS 120
 #define PRECISION 0.1
 #define RADIANS(X) (X / (180 / M_PI))
@@ -45,7 +44,7 @@ std::vector<std::string> splitString(std::string input) {
 }
 
 double traceBullet(double initSpeed, double airFriction, double angle, double angleTarget, double distance) {
-    double velX, velY, posX, posY, posTargetX, posTargetY, velMag;
+    double velX, velY, posX, posY, lastPosX, lastPosY, posTargetX, posTargetY, velMag;
     velX = cos(RADIANS(angle)) * initSpeed;
     velY = sin(RADIANS(angle)) * initSpeed;
     posX = 0;
@@ -53,18 +52,24 @@ double traceBullet(double initSpeed, double airFriction, double angle, double an
     posTargetX = cos(RADIANS(angleTarget)) * distance;
     posTargetY = sin(RADIANS(angleTarget)) * distance;
 
+    double simulationStep = 0.05;
+
     int i = 0;
     while (i < MAXITERATIONS) {
+        lastPosX = posX;
+        lastPosY = posY;
+        simulationStep = 0.1 - 0.049 * (posX / posTargetX);
         velMag = sqrt(pow(velX, 2) + pow(velY, 2));
-        velX += SIMULATIONSTEP * (velX * velMag * airFriction);
-        velY += SIMULATIONSTEP * (velY * velMag * airFriction - 9.81);
-        posX += velX * SIMULATIONSTEP;
-        posY += velY * SIMULATIONSTEP;
+        velX += simulationStep * (velX * velMag * airFriction);
+        velY += simulationStep * (velY * velMag * airFriction - 9.81);
+        posX += velX * simulationStep;
+        posY += velY * simulationStep;
         if (posX >= posTargetX) { break; }
         i++;
     }
 
-    return posY - posTargetY;
+    double coef = (posTargetX - lastPosX) / (posX - lastPosX);
+    return (lastPosY + (posY - lastPosY) * coef) - posTargetY;
 }
 
 double getSolution(double initSpeed, double airFriction, double angleTarget, double distance) {

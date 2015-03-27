@@ -20,8 +20,7 @@
 
 if !(isServer) exitWith {};
 
-_logic = _this select 0;
-_activated = _this select 2;
+EXPLODE_3_PVT(_this,_logic,_units,_activated);
 
 if !(_activated) exitWith {};
 

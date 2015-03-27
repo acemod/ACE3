@@ -16,26 +16,27 @@
 #include "script_component.hpp"
 if (!hasInterface) exitWith {};
 
-["ACE3", localize "STR_ACE_Parachute_showAltimeter",
+["ACE3", QGVAR(showAltimeter), localize "STR_ACE_Parachute_showAltimeter",
 {
-  // Conditions: canInteract
-  _exceptions = [QEGVAR(interaction,isNotEscorting)];
-  if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
-  if (!('ACE_Altimeter' in assignedItems ace_player)) exitWith {false};
-  if (!(missionNamespace getVariable [QGVAR(AltimeterActive), false])) then {
-    [ace_player] call FUNC(showAltimeter);
-  } else {
-    call FUNC(hideAltimeter);
-  };
-  true
-}, [24, false, false, false], false, "keydown"] call CALLSTACK(cba_fnc_registerKeybind);
+    // Conditions: canInteract
+    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if (!('ACE_Altimeter' in assignedItems ace_player)) exitWith {false};
+    if (!(missionNamespace getVariable [QGVAR(AltimeterActive), false])) then {
+        [ace_player] call FUNC(showAltimeter);
+    } else {
+        call FUNC(hideAltimeter);
+    };
+    true
+},
+{false},
+[24, [false, false, false]], false] call cba_fnc_addKeybind;
 
 GVAR(PFH) = false;
 ["playerVehicleChanged",{
-  if (!GVAR(PFH) && {(vehicle ACE_player) isKindOf "ParachuteBase"}) then {
-    GVAR(PFH) = true;
-    [FUNC(onEachFrame), 0.1, []] call CALLSTACK(cba_fnc_addPerFrameHandler);
-  };
+    if (!GVAR(PFH) && {(vehicle ACE_player) isKindOf "ParachuteBase"}) then {
+        GVAR(PFH) = true;
+        [FUNC(onEachFrame), 0.1, []] call CALLSTACK(cba_fnc_addPerFrameHandler);
+    };
 }] call EFUNC(common,addEventHandler);
 
 // don't show speed and height when in expert mode
