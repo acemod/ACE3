@@ -7,7 +7,6 @@ PREP(canAttach);
 PREP(canDetach);
 PREP(detach);
 PREP(getChildrenAttachActions);
-PREP(openAttachUI);
 PREP(placeApprove);
 PREP(placeCancel);
 

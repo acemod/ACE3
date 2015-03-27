@@ -25,8 +25,4 @@ _itemName = [_args, 0, ""] call CBA_fnc_defaultParam;
 _attachLimit = [6, 1] select (_player == _attachToVehicle);
 _attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
 
-_ret = (canStand _player) && {alive _attachToVehicle} && {(count _attachedObjects) < _attachLimit} && {_itemName in ((itemsWithMagazines _player) + [""])};
-
-systemChat format ["[%1] Checking = %2", _itemName, _ret ];
-x = _this;
-_ret
+(canStand _player) && {alive _attachToVehicle} && {(count _attachedObjects) < _attachLimit} && {_itemName in ((itemsWithMagazines _player) + [""])};

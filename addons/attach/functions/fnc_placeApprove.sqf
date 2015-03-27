@@ -37,7 +37,7 @@ GVAR(placer) = objNull;
 
 [_placer, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
 [_placer, "DefaultAction", _placer getVariable [QGVAR(placeActionEH), -1]] call EFUNC(common,removeActionEventHandler);
-[_placer, "MenuBack", _placer getVariable [QGVAR(cancelActionEH), -1]] call EFUNC(common,removeActionEventHandler);
+// [_placer, "MenuBack", _placer getVariable [QGVAR(cancelActionEH), -1]] call EFUNC(common,removeActionEventHandler);
 call EFUNC(interaction,hideMouseHint);
 
 //A player can release the attachObject with it floating in mid-air.
@@ -56,6 +56,9 @@ _keepGoingCloser = true;
 _closeInMax = _startDistanceFromCenter;
 _closeInMin = 0;
 
+//Delete Local Placement Object
+deleteVehicle _setupObject;
+
 while {(_closeInMax - _closeInMin) > 0.01} do {
     _closeInDistance = (_closeInMax + _closeInMin) / 2;
     // systemChat format ["Trying %1 from %2 start %3", _closeInDistance, [_closeInMax, _closeInMin], _startDistanceFromCenter];
@@ -73,12 +76,12 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
             _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
 
             //Uncomment to see the lazor show, and see how the scanning works:
-            drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
+            // drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
 
-            if (_attachToVehicle in lineIntersectsWith [_startASL, _endASL, _placer, _setupObject]) exitWith {_doesIntersect = true};
+            if (_attachToVehicle in lineIntersectsWith [_startASL, _endASL, _placer]) exitWith {_doesIntersect = true};
         } forEach [[0,0,0.045], [0,0,-0.045], [0,0.045,0], [0,-0.045,0], [0.045,0,0], [-0.045,0,0]];
     } forEach [[0,0,0], [0,0,0.05], [0,0,-0.05]];
-    
+
     if (_doesIntersect) then {
         _closeInMax = _closeInDistance;
     } else {
@@ -88,10 +91,7 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
 
 _closeInDistance = (_closeInMax + _closeInMin) / 2;
 
-//Delete Local Placement Object
-deleteVehicle _setupObject;
-
-//Checks
+//Checks (too close to center or can't attach)
 if (((_startDistanceFromCenter - _closeInDistance) < 0.1) || {!([_attachToVehicle, _placer, _itemClassname] call FUNC(canAttach))}) exitWith {
     TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
     [localize "STR_ACE_Attach_Failed"] call EFUNC(common,displayTextStructured);
