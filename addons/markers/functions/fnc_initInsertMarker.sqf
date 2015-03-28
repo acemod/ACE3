@@ -54,8 +54,6 @@
     if (_mapIDD == -1) exitWith {ERROR("No Map?");};
     if (!(_mapIDD in GVAR(mapDisplaysWithDrawEHs))) then {
         GVAR(mapDisplaysWithDrawEHs) pushBack _mapIDD;
-        systemChat str _mapIDD;
-        systemChat str ((finddisplay _mapIDD) displayctrl 51);
         ((finddisplay _mapIDD) displayctrl 51) ctrlAddEventHandler ["Draw", {_this call FUNC(mapDrawEH)}];
     };
 

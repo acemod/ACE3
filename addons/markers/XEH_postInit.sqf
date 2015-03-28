@@ -11,7 +11,6 @@
 if (isMultiplayer && {!isServer} && {hasInterface}) then {
     private "_logic";
     _logic = createGroup sideLogic createUnit ["Logic", [0,0,0], [], 0, "NONE"];
-    systemChat "requesting markers";
     [QGVAR(sendMarkersJIP), [_logic]] call EFUNC(common,serverEvent);
 };
 
