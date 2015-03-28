@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Draws the current temp marker.  Allows rotation. 
+ * Draws the current temp marker.  Allows rotation.
  *
  * Arguments:
  * 0: TheMap <Control>

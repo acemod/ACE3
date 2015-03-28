@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_data", "_config", "_color"];
+private ["_data", "_config"];
 
 PARAMS_2(_ctrl,_index);
 _data = _ctrl lbValue _index;

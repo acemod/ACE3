@@ -66,7 +66,7 @@
 
     //Hide the bis picture:
     _picture ctrlShow false;
-    
+
     // prevent vanilla key input
     _display displayAddEventHandler ["KeyDown", {(_this select 1) in [200, 208]}];
 

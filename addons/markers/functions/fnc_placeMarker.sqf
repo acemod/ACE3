@@ -31,6 +31,6 @@ if (_closeNum == 1) then {
         GETGVAR(currentMarkerAngle,0)
         ]
         ]] call EFUNC(common,globalEvent);
-        
+
     }, []] call EFUNC(common,execNextFrame);
 };
