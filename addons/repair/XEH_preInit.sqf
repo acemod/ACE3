@@ -3,6 +3,9 @@
 ADDON = false;
 
 PREP(addRepairActions);
+PREP(canRemoveWheel);
+PREP(canRepair);
+PREP(canReplaceWheel);
 PREP(doRepair);
 PREP(getWheelHitPointsWithSelections);
 PREP(normalizeHitPoints);

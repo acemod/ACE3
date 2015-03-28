@@ -1,1 +1,1 @@
-(_this select 0) setHitPointDamage [_this select 1, 1]; systemChat str _this;
+(_this select 1) setHitPointDamage [_this select 2, 1]; systemChat str _this;

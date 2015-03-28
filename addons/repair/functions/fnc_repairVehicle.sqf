@@ -44,3 +44,5 @@ if (isLocalized _text) then {
 
 // do animation
 [_unit] call EFUNC(common,goKneeling);
+
+// @todo play sound
