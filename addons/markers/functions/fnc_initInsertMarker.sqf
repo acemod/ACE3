@@ -15,65 +15,25 @@
     // prevent vanilla key input
     _display displayAddEventHandler ["KeyDown", {(_this select 1) in [200, 208]}];
 
+    //BIS Controlls:
     _text = _display displayctrl 101;
     _picture = _display displayctrl 102;
+    _channel = _display displayctrl 103;
     _buttonOK = _display displayctrl 1;
     _buttonCancel = _display displayctrl 2;
     _description = _display displayctrl 1100;
     _title = _display displayctrl 1001;
-    _sizeX = _display displayctrl 1200;
-    _sizeY = _display displayctrl 1201;
+    _descriptionChannel = _display displayctrl 1101;
+
+    //ACE Controlls:
+    // _sizeX = _display displayctrl 1200;
+    // _sizeY = _display displayctrl 1201;
     _shape = _display displayctrl 1210;
     _color = _display displayctrl 1211;
     _angle = _display displayctrl 1220;
     _angleText = _display displayctrl 1221;
 
     ctrlSetFocus _text;
-
-    //Change ok button's text based on current channel
-    [{
-        EXPLODE_2_PVT(_this,_params,_pfhId);
-        EXPLODE_1_PVT(_params,_buttonOK);
-
-        if (isNull _buttonOK) exitWith {
-            [_pfhId] call CBA_fnc_removePerFrameHandler;
-        };
-
-        _channel = "";
-        _textColor = [1,1,1,1];
-        switch (call EFUNC(common,currentChannel)) do {
-        case ("global"): {
-                _channel = localize "str_channel_global";
-                _textColor = [(216/255),(216/255),(216/255),1];
-            };
-        case ("side"): {
-                _channel = localize "str_channel_side";
-                _textColor = [(70/255),(211/255),(252/255),1];
-            };
-        case ("group"): {
-                _channel = localize "str_channel_group";
-                _textColor = [(181/255),(248/255),(98/255),1];
-            };
-        case ("vehicle"): {
-                _channel = localize "str_channel_vehicle";
-                _textColor = [(255/255),(208/255),(0/255),1];
-            };
-        case ("direct"): {
-                _channel = localize "str_channel_direct";
-                _textColor = [(255/255),(255/255),(255/255),1];
-            };
-        case ("command"): {
-                _channel = localize "str_channel_command";
-                _textColor = [(255/255),(255/255),(70/255),1];
-            };
-        };
-
-        //If localization not found, then don't touch anything (default is RscButtonMenuOK's localized text)
-        if (_channel != "") then {
-            _buttonOK ctrlSetTextColor _textColor;
-            _buttonOK ctrlSetText format [localize "STR_ACE_Markers_PlaceIn", _channel];
-        };
-    }, 0, [_buttonOK]] call CBA_fnc_addPerFrameHandler;
 
     //--- Background
     _pos = ctrlposition _text;
@@ -96,11 +56,10 @@
     //--- Description
     _pos set [1,_posY - 1*_posH];
     _pos set [3,6*_posH + 6 * BORDER];
+    _description ctrlenable false;
     _description ctrlsetposition _pos;
-    _description ctrlsetstructuredtext parsetext format ["<t size='0.8'>%1</t>","Description:"]; //--- ToDo: Localze
+    _description ctrlsetstructuredtext parsetext format ["<t size='0.8'>%1</t>", (localize "str_lib_label_description")];
     _description ctrlcommit 0;
-
-    _activeColor = (["IGUI","WARNING_RGB"] call bis_fnc_displaycolorget) call bis_fnc_colorRGBtoHTML;
 
     //--- Shape
     _pos set [1,_posY + 1 * _posH + 2 * BORDER];
@@ -127,15 +86,37 @@
     _angleText ctrlsetposition _pos;
     _angleText ctrlcommit 0;
 
+    _offsetButtons = 0;
+    if (ismultiplayer) then {
+        _pos set [1,_posY + 5 * _posH + 7 * BORDER];
+        _pos set [3,_posH];
+        _descriptionChannel ctrlsetstructuredtext parsetext format ["<t size='0.8'>%1</t>", (localize "str_a3_cfgvehicles_modulerespawnposition_f_arguments_marker_0") + ":"];
+        _descriptionChannel ctrlsetposition _pos;
+        _descriptionChannel ctrlcommit 0;
+
+        _pos set [1,_posY + 6 * _posH + 7 * BORDER];
+        _pos set [3,_posH];
+        _channel ctrlsetposition _pos;
+        _channel ctrlcommit 0;
+        _offsetButtons = 7 * _posH + 8 * BORDER;
+    } else {
+        _descriptionChannel ctrlshow false;
+        _channel ctrlshow false;
+        _offsetButtons = 5 * _posH + 7 * BORDER;
+    };
+
     //--- ButtonOK
-    _pos set [1,_posY + 5 * _posH + 7 * BORDER];
-    _pos set [2,_posW * (8.9/10) - BORDER];
+    _pos set [1,_posY + _offsetButtons];
+    _pos set [2,_posW / 2 - BORDER];
+    _pos set [3,_posH];
     _buttonOk ctrlsetposition _pos;
     _buttonOk ctrlcommit 0;
 
     //--- ButtonCancel
-    _pos set [0,_posX + _posW * (8.9 / 10)];
-    _pos set [2,_posW * (1.1 / 10)];
+    _pos set [0,_posX + _posW / 2];
+    _pos set [1,_posY + _offsetButtons];
+    _pos set [2,_posW / 2];
+    _pos set [3,_posH];
     _buttonCancel ctrlsetposition _pos;
     _buttonCancel ctrlcommit 0;
 
