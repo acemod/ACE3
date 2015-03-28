@@ -8,7 +8,7 @@
  * 1: A weapon (String)
  *
  * Return value:
- * NONE.
+ * Weapon info, format: [attachments, muzzles, magazines, ammo] (Array)
  */
  #include "script_component.hpp"
 
