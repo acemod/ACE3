@@ -20,15 +20,12 @@
 
 [{
     disableserialization;
-    _display = _this select 0;
+    PARAMS_1(_display);
 
     //Can't place markers when can't interact
     if (!([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {
         _display closeDisplay 2;  //emulate "Cancel" button
     };
-
-    // prevent vanilla key input
-    _display displayAddEventHandler ["KeyDown", {(_this select 1) in [200, 208]}];
 
     //BIS Controls:
     _text = _display displayctrl 101;
@@ -48,6 +45,33 @@
     _aceAngleSlider = _display displayctrl 1220;
     _aceAngleSliderText = _display displayctrl 1221;
 
+
+    //Install MapDrawEH on current map
+    _mapIDD = -1;
+    {
+        if (!isNull (findDisplay _x)) exitWith {_mapIDD = _x};
+    } forEach [12, 37, 52, 53];
+    if (_mapIDD == -1) exitWith {ERROR("No Map?");};
+    if (!(_mapIDD in GVAR(mapDisplaysWithDrawEHs))) then {
+        GVAR(mapDisplaysWithDrawEHs) pushBack _mapIDD;
+        systemChat str _mapIDD;
+        systemChat str ((finddisplay _mapIDD) displayctrl 51);
+        ((finddisplay _mapIDD) displayctrl 51) ctrlAddEventHandler ["Draw", {_this call FUNC(mapDrawEH)}];
+    };
+
+    //Calculate center position of the marker placement ctrl
+    _pos = ctrlPosition _picture;
+    _pos = [(_pos select 0) + (_pos select 2) / 2, (_pos select 1) + (_pos select 3) / 2];
+    GVAR(currentMarkerPosition) = ((findDisplay _mapIDD) displayCtrl 51) ctrlMapScreenToWorld _pos;
+
+    //Hide the bis picture:
+    _picture ctrlShow false;
+    
+    // prevent vanilla key input
+    _display displayAddEventHandler ["KeyDown", {(_this select 1) in [200, 208]}];
+
+
+    //Focus on the text input
     ctrlSetFocus _text;
 
     //--- Background

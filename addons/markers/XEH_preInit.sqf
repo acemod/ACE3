@@ -3,6 +3,7 @@
 ADDON = false;
 
 PREP(initInsertMarker);
+PREP(mapDrawEH);
 PREP(onLBSelChangedColor);
 PREP(onLBSelChangedShape);
 PREP(onSliderPosChangedAngle);

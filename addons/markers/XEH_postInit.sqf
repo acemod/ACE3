@@ -14,3 +14,10 @@ if (isMultiplayer && {!isServer} && {hasInterface}) then {
 
     [QGVAR(sendMarkersJIP), _logic] call EFUNC(common,serverEvent);
 };
+
+
+GVAR(mapDisplaysWithDrawEHs) = [];
+GVAR(currentMarkerPosition) = [];
+GVAR(currentMarkerAngle) = 0;
+GVAR(currentMarkerColorConfigName) = "";
+GVAR(currentMarkerConfigName) = "";

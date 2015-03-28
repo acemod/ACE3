@@ -25,8 +25,4 @@ GVAR(curSelMarkerShape) = _index;
 
 _config = (configfile >> "CfgMarkers") select _data;
 
-_icon = getText (_config >> "icon");
-
-((ctrlParent _ctrl) displayCtrl 102) ctrlSetText _icon;
-
 GVAR(currentMarkerConfigName) = (configName _config);
