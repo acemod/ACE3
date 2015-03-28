@@ -339,6 +339,13 @@
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
             <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
         </Key>
+
+        <Key ID="STR_ACE_Common_bananaDisplayName">
+            <English>Banana</English>
+        </Key>
+        <Key ID="STR_ACE_Common_bananaDescr">
+            <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
+        </Key>
     </Package>
 
 </Project>
