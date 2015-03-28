@@ -43,8 +43,8 @@ _marker setMarkerDirLocal _markerDir;
 if (isMultiplayer && {isServer}) then {
     private ["_allMapMarkers", "_allMapMarkersProperties", "_index"];
 
-    _allMapMarkers = GETMVAR(allMapMarkers,[]);
-    _allMapMarkersProperties = GETMVAR(allMapMarkersProperties,[]);
+    _allMapMarkers = GETGVAR(allMapMarkers,[]);
+    _allMapMarkersProperties = GETGVAR(allMapMarkersProperties,[]);
 
     _index = _allMapMarkers find _marker;
 
