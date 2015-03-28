@@ -8,8 +8,6 @@ PREP(findNextGrenadeMagazine);
 PREP(findNextGrenadeMuzzle);
 PREP(fireSmokeLauncher);
 PREP(getSelectedGrenade);
-PREP(getWeaponModes);
-PREP(getWeaponMuzzles);
 PREP(playChangeFiremodeSound);
 PREP(putWeaponAway);
 PREP(selectGrenadeAll);
