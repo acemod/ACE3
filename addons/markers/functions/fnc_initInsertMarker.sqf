@@ -1,4 +1,19 @@
-// stuff taken from bohemia, edited by commy2
+/*
+ * Author: BIS, commy2
+ * Sets up the marker placement
+ * Replaces \a3\ui_f\scripts\GUI\RscDisplayInsertMarker.sqf
+ *
+ * Arguments:
+ * 0: RscDisplayInsertMarker <DISPLAY>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [onLoad] call ace_markers_fnc_initInsertMarker;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 #define BORDER  0.005
@@ -7,15 +22,15 @@
     disableserialization;
     _display = _this select 0;
 
-    //Prevent Captive Players from placing markers
-    /*if (ACE_player getVariable ["ACE_isCaptive", false]) exitWith {
+    //Can't place markers when can't interact
+    if (!([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {
         _display closeDisplay 2;  //emulate "Cancel" button
-    };*/
+    };
 
     // prevent vanilla key input
     _display displayAddEventHandler ["KeyDown", {(_this select 1) in [200, 208]}];
 
-    //BIS Controlls:
+    //BIS Controls:
     _text = _display displayctrl 101;
     _picture = _display displayctrl 102;
     _channel = _display displayctrl 103;
@@ -25,13 +40,13 @@
     _title = _display displayctrl 1001;
     _descriptionChannel = _display displayctrl 1101;
 
-    //ACE Controlls:
+    //ACE Controls:
     // _sizeX = _display displayctrl 1200;
     // _sizeY = _display displayctrl 1201;
-    _shape = _display displayctrl 1210;
-    _color = _display displayctrl 1211;
-    _angle = _display displayctrl 1220;
-    _angleText = _display displayctrl 1221;
+    _aceShapeLB = _display displayctrl 1210;
+    _aceColorLB = _display displayctrl 1211;
+    _aceAngleSlider = _display displayctrl 1220;
+    _aceAngleSliderText = _display displayctrl 1221;
 
     ctrlSetFocus _text;
 
@@ -41,7 +56,7 @@
     _posY = _pos select 1;
     _posW = _pos select 2;
     _posH = _pos select 3;
-    _posY = _posY min ((safeZoneH + safeZoneY) - (6 * _posH + 8 * BORDER));  //prevent buttons being placed below bottom edge of screen
+    _posY = _posY min ((safeZoneH + safeZoneY) - (8 * _posH + 8 * BORDER));  //prevent buttons being placed below bottom edge of screen
     _pos set [0,_posX];
     _pos set [1,_posY];
     _text ctrlsetposition _pos;
@@ -65,29 +80,29 @@
     _pos set [1,_posY + 1 * _posH + 2 * BORDER];
     _pos set [2,_posW];
     _pos set [3,_posH];
-    _shape ctrlsetposition _pos;
-    _shape ctrlcommit 0;
+    _aceShapeLB ctrlsetposition _pos;
+    _aceShapeLB ctrlcommit 0;
 
     //--- Color
     _pos set [1,_posY + 2 * _posH + 3 * BORDER];
     _pos set [2,_posW];
-    _color ctrlsetposition _pos;
-    _color ctrlcommit 0;
+    _aceColorLB ctrlsetposition _pos;
+    _aceColorLB ctrlcommit 0;
 
     //--- Angle
     _pos set [1,_posY + 3 * _posH + 4 * BORDER];
     _pos set [2,_posW];
-    _angle ctrlsetposition _pos;
-    _angle ctrlcommit 0;
+    _aceAngleSlider ctrlsetposition _pos;
+    _aceAngleSlider ctrlcommit 0;
 
     //--- Angle Text
     _pos set [1,_posY + 4 * _posH + 5 * BORDER];
     _pos set [2,_posW];
-    _angleText ctrlsetposition _pos;
-    _angleText ctrlcommit 0;
+    _aceAngleSliderText ctrlsetposition _pos;
+    _aceAngleSliderText ctrlcommit 0;
 
     _offsetButtons = 0;
-    if (ismultiplayer) then {
+    if (isMultiplayer) then {
         _pos set [1,_posY + 5 * _posH + 7 * BORDER];
         _pos set [3,_posH];
         _descriptionChannel ctrlsetstructuredtext parsetext format ["<t size='0.8'>%1</t>", (localize "str_a3_cfgvehicles_modulerespawnposition_f_arguments_marker_0") + ":"];
@@ -132,56 +147,41 @@
 
 
     // init marker shape lb
+    lbClear _aceShapeLB;
     {
-        _shape lbAdd (_x select 0);
-        _shape lbSetValue [_forEachIndex, _x select 1];
-        _shape lbSetPicture [_forEachIndex, _x select 2];
+        _aceShapeLB lbAdd (_x select 0);
+        _aceShapeLB lbSetValue [_forEachIndex, _x select 1];
+        _aceShapeLB lbSetPicture [_forEachIndex, _x select 2];
     } forEach GVAR(MarkersCache);
-
-    _shape ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedShape)}];
-
     _curSelShape = GETGVAR(curSelMarkerShape,0);
-    _shape lbSetCurSel _curSelShape;
-    _data = _shape lbValue _curSelShape;
-    _config = (configfile >> "CfgMarkers") select _data;
-    _icon = getText (_config >> "icon");
-    _picture ctrlSetText _icon;
+    _aceShapeLB lbSetCurSel _curSelShape;
+
+    //Update now and add eventHandler:
+    [_aceShapeLB, _curSelShape] call FUNC(onLBSelChangedShape);
+    _aceShapeLB ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedShape)}];
 
 
     // init marker color lb
+    lbClear _aceColorLB;
     {
-        _color lbAdd (_x select 0);
-        _color lbSetValue [_forEachIndex, _x select 1];
-        _color lbSetPicture [_forEachIndex, _x select 2];
+        _aceColorLB lbAdd (_x select 0);
+        _aceColorLB lbSetValue [_forEachIndex, _x select 1];
+        _aceColorLB lbSetPicture [_forEachIndex, _x select 2];
     } forEach GVAR(MarkerColorsCache);
-
-    _color ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedColor)}];
-
     _curSelColor = GETGVAR(curSelMarkerColor,0);
-    _color lbSetCurSel _curSelColor;
-    _data = _color lbValue _curSelColor;
-    _config = (configfile >> "CfgMarkerColors") select _data;
-    _rgba = getArray (_config >> "color");
-    {
-        if (typeName _x != "SCALAR") then {
-            _rgba set [_forEachIndex, call compile _x];
-        };
-    } forEach _rgba;
-    _picture ctrlSetTextColor _rgba;
+    _aceColorLB lbSetCurSel _curSelColor;
+
+    //Update now and add eventHandler:
+    [_aceColorLB, _curSelColor] call FUNC(onLBSelChangedColor);
+    _aceColorLB ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedColor)}];
 
 
     // init marker angle slider
-    _angle sliderSetRange [-180, 180];
-    _angle ctrlAddEventHandler ["SliderPosChanged", {_this call FUNC(onSliderPosChangedAngle)}];
-
-    _curSelAngle = GETGVAR(curSelMarkerAngle,0);
-    _angle sliderSetPosition _curSelAngle;
-
-    _curSelAngle = round _curSelAngle;
-    if (_curSelAngle < 0) then {
-        _curSelAngle = _curSelAngle + 360;
-    };
-
-    _angleText ctrlSetText format [localize "STR_ACE_Markers_MarkerDirection", _curSelAngle];
+    _aceAngleSlider sliderSetRange [-180, 180];
+    _curSelAngle = GETGVAR(currentMarkerAngle,0);
+    _aceAngleSlider sliderSetPosition _curSelAngle;
+    //Update now and add eventHandler:
+    [_aceAngleSlider, _curSelAngle] call FUNC(onSliderPosChangedAngle);
+    _aceAngleSlider ctrlAddEventHandler ["SliderPosChanged", {_this call FUNC(onSliderPosChangedAngle)}];
 
 }, _this] call EFUNC(common,execNextFrame);
