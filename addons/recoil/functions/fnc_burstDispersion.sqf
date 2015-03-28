@@ -41,8 +41,8 @@ if (time - _lastFired < 0.45) then {
     // Maximum possible dispersion (without _sightsBurst mod)
     _maxBurst = 50;
 
-    if (_unit getVariable [QUOTE(EGVAR(resting,weaponRested)), false]) then {_maxBurst = 25};
-    if (_unit getVariable [QUOTE(EGVAR(resting,bipodDeployed)), false]) then {_maxBurst = 18};
+    if (isWeaponRested _unit) then {_maxBurst = 25};
+    if (isWeaponDeployed _unit) then {_maxBurst = 18};
 
     // Cap the dispersion
     _burst = (_burst min _maxBurst) + _sightsBurst;
