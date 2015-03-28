@@ -294,3 +294,10 @@ class V_Press_F: Vest_Camo_Base {
     /*passThrough = 1;*/
   };
 };
+
+// marksman dlc
+/*class V_PlateCarrierGL_blk: V_PlateCarrierGL_rgr {};
+class V_PlateCarrierGL_mtp: V_PlateCarrierGL_rgr {};
+class V_PlateCarrierSpec_blk: V_PlateCarrierSpec_rgr {};
+class V_PlateCarrierSpec_mtp: V_PlateCarrierSpec_rgr {};
+class V_PlateCarrierIAGL_oli: V_PlateCarrierIAGL_dgtl {};*/
