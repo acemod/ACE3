@@ -1214,5 +1214,97 @@
             <English>VS-121</English>
             <German>VS-121</German>
         </Key>
+
+        <Key ID="STR_ACE_RealisticNames_DMR_02">
+            <English>TODO: MAR-10 .338</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_02">
+            <English>TODO: MAR-10 .338 (Black)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_camo">
+            <English>TODO: MAR-10 .338 (Camo)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_sniper">
+            <English>TODO: MAR-10 .338 (Sand)</English>
+        </Key>
+
+        <Key ID="STR_ACE_RealisticNames_DMR_03">
+            <English>TODO: Mk-I EMR 7.62 mm</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_03">
+            <English>TODO: Mk-I EMR 7.62 mm (Black)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_khaki">
+            <English>TODO: Mk-I EMR 7.62 mm (Khaki)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_tan">
+            <English>TODO: Mk-I EMR 7.62 mm (Sand)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_multicam">
+            <English>TODO: Mk-I EMR 7.62 mm (Camo)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_woodland">
+            <English>TODO: Mk-I EMR 7.62 mm (Woodland)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
+            <English>TODO: NATO DMR (provisional) spotter</English>
+        </Key>
+
+        <Key ID="STR_ACE_RealisticNames_DMR_04">
+            <English>TODO: ASP-1 Kir 12.7 mm</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_04">
+            <English>TODO: ASP-1 Kir 12.7 mm (Black)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_04_Tan">
+            <English>TODO: ASP-1 Kir 12.7 mm (Tan)</English>
+        </Key>
+
+        <Key ID="STR_ACE_RealisticNames_DMR_05">
+            <English>TODO: Cyrus 9.3 mm</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_blk">
+            <English>TODO: Cyrus 9.3 mm (Black)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_hex">
+            <English>TODO: Cyrus 9.3 mm (Hex)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_tan">
+            <English>TODO: Cyrus 9.3 mm (Tan)</English>
+        </Key>
+
+        <Key ID="STR_ACE_RealisticNames_DMR_06">
+            <English>TODO: Mk14 7.62 mm</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_camo">
+            <English>TODO: Mk14 7.62 mm (Camo)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_olive">
+            <English>TODO: Mk14 7.62 mm (Olive)</English>
+        </Key>
+
+        <Key ID="STR_ACE_RealisticNames_MMG_01">
+            <English>TODO: Navid 9.3 mm</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_MMG_01_hex">
+            <English>TODO: Navid 9.3 mm (Hex)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_MMG_01_tan">
+            <English>TODO: Navid 9.3 mm (Tan)</English>
+        </Key>
+
+        <Key ID="STR_ACE_RealisticNames_MMG_02">
+            <English>TODO: SPMG .338</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_MMG_02_camo">
+            <English>TODO: SPMG .338 (MTP)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_MMG_02_black">
+            <English>TODO: SPMG .338 (Black)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_MMG_02_sand">
+            <English>TODO: SPMG .338 (Sand)</English>
+        </Key>
+
     </Package>
 </Project>
