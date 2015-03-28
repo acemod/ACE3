@@ -24,7 +24,3 @@ class RscInGameUI {
 class RscDisplayInventory {
     onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDisplayInventory"",'IGUI')] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; [ARR_2('inventoryDisplayLoaded', _this)] call FUNC(localEvent););
 };
-
-class RscDisplayChannel {
-    onLoad = QUOTE(_this call FUNC(onLoadRscDisplayChannel));
-};

@@ -132,7 +132,6 @@ PREP(muteUnit);
 PREP(numberToDigits);
 PREP(numberToDigitsString);
 PREP(onAnswerRequest);
-PREP(onLoadRscDisplayChannel);
 PREP(owned);
 PREP(player);
 PREP(playerSide);
