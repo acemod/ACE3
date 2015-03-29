@@ -57,7 +57,7 @@ _unit setvariable [QGVAR(airwayCollapsed), false, true];
 // generic medical admin
 _unit setvariable [QGVAR(addedToUnitLoop), false, true];
 _unit setvariable [QGVAR(inCardiacArrest), false, true];
-_unit setVariable [QGVAR(isUnconscious), false, true];
+_unit setVariable ["ACE_isUnconscious", false, true];
 _unit setvariable [QGVAR(hasLostBlood), false, true];
 _unit setvariable [QGVAR(isBleeding), false, true];
 _unit setvariable [QGVAR(hasPain), false, true];
@@ -74,3 +74,8 @@ _logs = _unit getvariable [QGVAR(allLogs), []];
     _unit setvariable [_x, nil, true];
 } foreach _logs;
 _unit setvariable [QGVAR(allLogs), [], true];
+
+// items
+[{
+    _this call FUNC(itemCheck);
+}, [_unit], 0.5, 0.1] call EFUNC(common,waitAndExecute);

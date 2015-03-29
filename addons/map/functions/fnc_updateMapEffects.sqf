@@ -1,5 +1,5 @@
 /*
-* Author: Rocko and CAA-Picard
+* Author: Rocko and esteldunedain
 * On map draw, updates the effects
 *
 * Arguments:

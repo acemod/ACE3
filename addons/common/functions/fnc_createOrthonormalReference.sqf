@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  *
  * Returns a orthonormal system of reference aligned with the supplied vector
  *

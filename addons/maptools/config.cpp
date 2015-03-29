@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {"ACE_MapTools"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common", "ace_interaction"};
-        author[] = {"CAA-Picard"};
+        author[] = {"esteldunedain"};
         authorUrl = "https://github.com/esteldunedain/";
         VERSION_CONFIG;
     };

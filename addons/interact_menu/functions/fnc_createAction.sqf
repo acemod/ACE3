@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Creates an isolated ACE action
  * Note: This function is NOT global.
  *
@@ -19,7 +19,7 @@
  * Action <ARRAY>
  *
  * Example:
- * [VulcanPinch","Vulcan Pinch",{_target setDamage 1;},{true},{},[parameters], [0,0,0], 100] call ace_interact_menu_fnc_createAction;
+ * [VulcanPinch","Vulcan Pinch","",{_target setDamage 1;},{true},{},[parameters], [0,0,0], 100] call ace_interact_menu_fnc_createAction;
  *
  * Public: No
  */

@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Load the user setable settings from the user profile.
  * Config < Server UserConfig < Mission Config < Client settings
  *

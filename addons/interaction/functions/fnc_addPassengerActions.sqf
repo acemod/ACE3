@@ -1,7 +1,6 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Mount unit actions inside passenger submenu
- * Note: This function is NOT global.
  *
  * Argument:
  * 0: Vehicle <OBJECT>

@@ -26,7 +26,6 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ResetFCS {
                 displayName = $STR_ACE_FCS_ResetFCS;
-                enableInside = 1;
                 condition = QUOTE(call FUNC(canResetFCS));
                 statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
@@ -40,7 +39,6 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ResetFCS {
                 displayName = $STR_ACE_FCS_ResetFCS;
-                enableInside = 1;
                 condition = QUOTE(call FUNC(canResetFCS));
                 statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;

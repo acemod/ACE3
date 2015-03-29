@@ -9,13 +9,13 @@ class CfgVehicles {
 	class ACE_moduleAmbianceSound: Module_F {
 		scope = 2;
 		displayName = "Ambiance Sounds [ACE]";
-		icon = QUOTE(PATHTOF(data\moduleSound.paa));
+		icon = QUOTE(PATHTOF(UI\Icon_Module_Ambient_Sounds_ca.paa));
 		category = "ACE_missionModules";
 		function = QUOTE(FUNC(moduleAmbianceSound));
 		functionPriority = 1;
 		isGlobal = 1;
 		isTriggerActivated = 0;
-		author = "Glowbal";
+		author = "$STR_ACE_Common_ACETeam";
 		class Arguments	{
 			class soundFiles {
 				displayName = "Sounds";

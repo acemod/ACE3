@@ -68,4 +68,8 @@ class ACE_Settings {
         typeName = "NUMBER";
         value = 120;
     };
+    class GVAR(allowDeadBodyMovement) {
+        typeName = "BOOL";
+        value = false;
+    };
 };

@@ -3,25 +3,28 @@
 <Project name="ACE">
   <Package name="Interaction">
     <Key ID="STR_ACE_Interaction_MainAction">
-      <English>Interactions &gt;&gt;</English>
+      <English>Interactions</English>
+    </Key>
+    <Key ID="STR_ACE_Interaction_Torso">
+      <English>Torso</English>
     </Key>
     <Key ID="STR_ACE_Interaction_Head">
-      <English>Head &gt;&gt;</English>
+      <English>Head</English>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmLeft">
-      <English>Left Arm &gt;&gt;</English>
+      <English>Left Arm</English>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmRight">
-      <English>Right Arm &gt;&gt;</English>
+      <English>Right Arm</English>
     </Key>
     <Key ID="STR_ACE_Interaction_LegLeft">
-      <English>Left Leg &gt;&gt;</English>
+      <English>Left Leg</English>
     </Key>
     <Key ID="STR_ACE_Interaction_LegRight">
-      <English>Right Leg &gt;&gt;</English>
+      <English>Right Leg</English>
     </Key>
     <Key ID="STR_ACE_Interaction_Weapon">
-      <English>Weapon &gt;&gt;</English>
+      <English>Weapon</English>
     </Key>
     <Key ID="STR_ACE_Interaction_InteractionMenu">
       <English>Interaction Menu</English>
@@ -180,16 +183,16 @@
       <Italian>&lt;&lt; Indietro</Italian>
     </Key>
     <Key ID="STR_ACE_Interaction_Gestures">
-      <English>Gestures &gt;&gt;</English>
-      <German>Gesten &gt;&gt;</German>
-      <Spanish>Gestos &gt;&gt;</Spanish>
-      <Polish>Gesty &gt;&gt;</Polish>
-      <Czech>Gesta &gt;&gt;</Czech>
-      <French>Signaux &gt;&gt;</French>
-      <Russian>Жесты &gt;&gt;</Russian>
-      <Hungarian>Kézjelek &gt;&gt;</Hungarian>
-      <Portuguese>Gestos &gt;&gt;</Portuguese>
-      <Italian>Segnali gestuali &gt;&gt;</Italian>
+      <English>Gestures</English>
+      <German>Gesten</German>
+      <Spanish>Gestos</Spanish>
+      <Polish>Gesty</Polish>
+      <Czech>Gesta</Czech>
+      <French>Signaux</French>
+      <Russian>Жесты</Russian>
+      <Hungarian>Kézjelek</Hungarian>
+      <Portuguese>Gestos</Portuguese>
+      <Italian>Segnali gestuali</Italian>
     </Key>
     <Key ID="STR_ACE_Interaction_Gestures_Attack">
       <English>Attack</English>
@@ -432,16 +435,16 @@
       <Italian>A Terra!</Italian>
     </Key>
     <Key ID="STR_ACE_Interaction_TeamManagement">
-      <English>Team Management &gt;&gt;</English>
-      <German>Team Management &gt;&gt;</German>
-      <Spanish>Gestión de equipo &gt;&gt;</Spanish>
-      <French>Gestion d'équipe &gt;&gt;</French>
-      <Polish>Zarządzanie oddziałem &gt;&gt;</Polish>
-      <Czech>Správa týmu &gt;&gt;</Czech>
-      <Russian>Управление группой &gt;&gt;</Russian>
-      <Portuguese>Gerenciamento de Equipe &gt;&gt;</Portuguese>
-      <Italian>Organizzazione Squadra &gt;&gt;</Italian>
-      <Hungarian>Csapat kezelés &gt;&gt;</Hungarian>
+      <English>Team&lt;br/&gt;Management</English>
+      <German>Team&lt;br/&gt;Management</German>
+      <Spanish>Gestión&lt;br/&gt;de equipo</Spanish>
+      <French>Gestion&lt;br/&gt;d'équipe</French>
+      <Polish>Zarządzanie&lt;br/&gt;oddziałem</Polish>
+      <Czech>Správa&lt;br/&gt;týmu</Czech>
+      <Russian>Управление&lt;br/&gt;группой</Russian>
+      <Portuguese>Gerenciamento&lt;br/&gt;de Equipe</Portuguese>
+      <Italian>Organizzazione&lt;br/&gt;Squadra</Italian>
+      <Hungarian>Csapat&lt;br/&gt;kezelés</Hungarian>
     </Key>
     <Key ID="STR_ACE_Interaction_TeamRED">
       <English>Red</English>
@@ -492,52 +495,52 @@
       <Hungarian>Sárga</Hungarian>
     </Key>
     <Key ID="STR_ACE_Interaction_JoinTeamRed">
-      <English>Join Team Red</English>
-      <German>Team Rot beitreten</German>
-      <Spanish>Unirse al equipo rojo</Spanish>
-      <French>Rejoindre Rouge</French>
-      <Polish>Dołącz do drużyny czerwonej</Polish>
-      <Czech>Připojit do Červeného Týmu</Czech>
-      <Russian>Присоединиться к красной группе</Russian>
-      <Portuguese>Unir-se à Equipe Vermelha</Portuguese>
-      <Italian>Entra nella Squadra Rossa</Italian>
-      <Hungarian>Csatlakozás a piros csapathoz</Hungarian>
+      <English>Join Team&lt;br/&gt;Red</English>
+      <German>Team Rot&lt;br/&gt;beitreten</German>
+      <Spanish>Unirse al&lt;br/&gt;equipo rojo</Spanish>
+      <French>Rejoindre&lt;br/&gt;Rouge</French>
+      <Polish>Dołącz do drużyny&lt;br/&gt;czerwonej</Polish>
+      <Czech>Připojit do&lt;br/&gt;Červeného Týmu</Czech>
+      <Russian>Присоединиться&lt;br/&gt;к красной группе</Russian>
+      <Portuguese>Unir-se à&lt;br/&gt;Equipe Vermelha</Portuguese>
+      <Italian>Entra nella&lt;br/&gt;Squadra Rossa</Italian>
+      <Hungarian>Csatlakozás a&lt;br/&gt;piros csapathoz</Hungarian>
     </Key>
     <Key ID="STR_ACE_Interaction_JoinTeamGreen">
-      <English>Join Team Green</English>
-      <German>Team Grün beitreten</German>
-      <Spanish>Unirse al equipo verde</Spanish>
-      <French>Rejoindre Verte</French>
-      <Polish>Dołącz do drużyny zielonej</Polish>
-      <Czech>Připojit do Zeleného Týmu</Czech>
-      <Russian>Присоединиться к зеленой группе</Russian>
-      <Portuguese>Unir-se à Equipe Verde</Portuguese>
-      <Italian>Entra nella Squadra Verde</Italian>
-      <Hungarian>Csatlakozás a zöld csapathoz</Hungarian>
+      <English>Join Team&lt;br/&gt;Green</English>
+      <German>Team Grün&lt;br/&gt;beitreten</German>
+      <Spanish>Unirse al&lt;br/&gt;equipo verde</Spanish>
+      <French>Rejoindre&lt;br/&gt;Verte</French>
+      <Polish>Dołącz do&lt;br/&gt;drużyny zielonej</Polish>
+      <Czech>Připojit do&lt;br/&gt;Zeleného Týmu</Czech>
+      <Russian>Присоединиться&lt;br/&gt;к зеленой группе</Russian>
+      <Portuguese>Unir-se à&lt;br/&gt;Equipe Verde</Portuguese>
+      <Italian>Entra nella&lt;br/&gt;Squadra Verde</Italian>
+      <Hungarian>Csatlakozás a&lt;br/&gt;zöld csapathoz</Hungarian>
     </Key>
     <Key ID="STR_ACE_Interaction_JoinTeamBlue">
-      <English>Join Team Blue</English>
-      <German>Team Blau beitreten</German>
-      <Spanish>Unirse al equipo azul</Spanish>
-      <French>Rejoindre Bleue</French>
-      <Polish>Dołącz do drużyny niebieskiej</Polish>
-      <Czech>Připojit do Modrého Týmu</Czech>
-      <Russian>Присоединиться к синей группе</Russian>
-      <Portuguese>Unir-se à Equipe Azul</Portuguese>
-      <Italian>Entra nella Squadra Blu</Italian>
-      <Hungarian>Csatlakozás a kék csapathoz</Hungarian>
+      <English>Join Team&lt;br/&gt;Blue</English>
+      <German>Team Blau&lt;br/&gt;beitreten</German>
+      <Spanish>Unirse al&lt;br/&gt;equipo azul</Spanish>
+      <French>Rejoindre&lt;br/&gt;Bleue</French>
+      <Polish>Dołącz do&lt;br/&gt;drużyny niebieskiej</Polish>
+      <Czech>Připojit do&lt;br/&gt;Modrého Týmu</Czech>
+      <Russian>Присоединиться&lt;br/&gt;к синей группе</Russian>
+      <Portuguese>Unir-se à&lt;br/&gt;Equipe Azul</Portuguese>
+      <Italian>Entra nella&lt;br/&gt;Squadra Blu</Italian>
+      <Hungarian>Csatlakozás a&lt;br/&gt;kék csapathoz</Hungarian>
     </Key>
     <Key ID="STR_ACE_Interaction_JoinTeamYellow">
-      <English>Join Team Yellow</English>
-      <German>Team Gelb beitreten</German>
-      <Spanish>Unirse al equipo amarillo</Spanish>
-      <French>Rejoindre Jaune</French>
-      <Polish>Dołącz do drużyny żółtej</Polish>
-      <Czech>Připojit do Žlutého Týmu</Czech>
-      <Russian>Присоединиться к желтой группе</Russian>
-      <Portuguese>Unir-se à Equipe Amarela</Portuguese>
-      <Italian>Entra nella Squadra Gialla</Italian>
-      <Hungarian>Csatlakozás a sárga csapathoz</Hungarian>
+      <English>Join Team&lt;br/&gt;Yellow</English>
+      <German>Team Gelb&lt;br/&gt;beitreten</German>
+      <Spanish>Unirse al&lt;br/&gt;equipo amarillo</Spanish>
+      <French>Rejoindre&lt;br/&gt;Jaune</French>
+      <Polish>Dołącz do&lt;br/&gt;drużyny żółtej</Polish>
+      <Czech>Připojit do&lt;br/&gt;Žlutého Týmu</Czech>
+      <Russian>Присоединиться&lt;br/&gt;к желтой группе</Russian>
+      <Portuguese>Unir-se à&lt;br/&gt;Equipe Amarela</Portuguese>
+      <Italian>Entra nella&lt;br/&gt;Squadra Gialla</Italian>
+      <Hungarian>Csatlakozás a&lt;br/&gt;sárga csapathoz</Hungarian>
     </Key>
     <Key ID="STR_ACE_Interaction_JoinedTeam">
       <English>You joined Team %1</English>
@@ -623,14 +626,14 @@
       <Czech>Mimo dosah</Czech>
     </Key>
     <Key ID="STR_ACE_Interaction_Equipment">
-      <English>Equipment &gt;&gt;</English>
-      <German>Ausrüstung &gt;&gt;</German>
-      <Spanish>Equipamiento &gt;&gt;</Spanish>
-      <French>Équipment &gt;&gt;</French>
-      <Polish>Ekwipunek &gt;&gt;</Polish>
-      <Czech>Vybavení &gt;&gt;</Czech>
-      <Hungarian>Felszerelés &gt;&gt;</Hungarian>
-      <Russian>Снаряжение &gt;&gt;</Russian>
+      <English>Equipment</English>
+      <German>Ausrüstung</German>
+      <Spanish>Equipamiento</Spanish>
+      <French>Équipment</French>
+      <Polish>Ekwipunek</Polish>
+      <Czech>Vybavení</Czech>
+      <Hungarian>Felszerelés</Hungarian>
+      <Russian>Снаряжение</Russian>
     </Key>
     <Key ID="STR_ACE_Interaction_Push">
       <English>Push</English>
@@ -651,7 +654,7 @@
       <Spanish>Interactuar</Spanish>
     </Key>
     <Key ID="STR_ACE_Interaction_Passengers">
-      <English>Passengers &gt;&gt;</English>
+      <English>Passengers</English>
     </Key>
   </Package>
 </Project>

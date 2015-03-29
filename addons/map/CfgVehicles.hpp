@@ -7,7 +7,7 @@ class CfgVehicles {
         function = QFUNC(moduleMap);
         scope = 2;
         isGlobal = 1;
-        icon = PATHTOF(UI\IconMap_ca.paa);
+        icon = PATHTOF(UI\Icon_Module_Map_ca.paa);
         class Arguments {
             class MapIllumination {
                 displayName = "Map illumination?";
@@ -46,7 +46,7 @@ class CfgVehicles {
         function = QFUNC(blueForceTrackingModule);
         scope = 2;
         isGlobal = 1;
-        icon = PATHTOF(UI\IconBFTracking_ca.paa);
+        icon = PATHTOF(UI\Icon_Module_BFTracking_ca.paa);
         class Arguments {
             class Interval {
                 displayName = "Interval";

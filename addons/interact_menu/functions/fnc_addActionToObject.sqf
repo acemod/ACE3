@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Insert an ACE action to an object, under a certain config path
  * Note: This function is NOT global.
  *
@@ -13,7 +13,7 @@
  * The entry full path, which can be used to remove the entry, or add children entries <ARRAY>.
  *
  * Example:
- * [typeOf cursorTarget, 0, ["ACE_TapShoulderRight"],VulcanPinchAction] call ace_interact_menu_fnc_addActionToClass;
+ * [cursorTarget, 0, ["ACE_TapShoulderRight"],VulcanPinchAction] call ace_interact_menu_fnc_addActionToObject;
  *
  * Public: No
  */

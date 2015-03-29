@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Calculate cooling down of the weapon.
  *
  * Argument:

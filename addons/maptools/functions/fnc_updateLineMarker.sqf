@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  *
  * Updates the line marker position and scale
  *
@@ -19,7 +19,7 @@
  _startPos = _this select 1;
  _difPos   = (_this select 2) vectorDiff _startPos ;
  _color    = _this select 3;
- 
+
 _name setMarkerShapeLocal "RECTANGLE";
 _name setMarkerAlphaLocal 1;
 _name setMarkerColorLocal GVAR(drawing_drawColor);

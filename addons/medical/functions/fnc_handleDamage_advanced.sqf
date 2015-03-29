@@ -45,19 +45,18 @@ _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 
 [_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_wounds);
 
-if (GVAR(enableAirway)) then {
-    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_airway);
-};
-if (GVAR(enableFractures)) then {
-    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_fractures);
-};
-if (GVAR(enableInternalBleeding)) then {
-    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_internalInjuries);
-};
+// TODO Disabled until implemented fully
+//if (GVAR(enableAirway)) then {
+//    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_airway);
+//};
+//if (GVAR(enableFractures)) then {
+//    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_fractures);
+//};
+//if (GVAR(enableInternalBleeding)) then {
+//    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_internalInjuries);
+//};
 
 if (alive _unit && {!(_unit getvariable ["ACE_isUnconscious", false])}) then {
-    [_unit, _newDamage] call FUNC(reactionToDamage);
-
     // If it reaches this, we can assume that the hit did not kill this unit, as this function is called 3 frames after the damage has been passed.
     if ([_unit, _part, if (_part > 1) then {_newDamage * 1.3} else {_newDamage * 2}] call FUNC(determineIfFatal)) then {
         [_unit] call FUNC(setUnconscious);

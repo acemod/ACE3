@@ -28,7 +28,10 @@ _scrollAmount = _this select 0;
 _scrollAmount = _scrollAmount * 0.15;
 
 private "_carriedItem";
-_carriedItem = _unit getVariable [QGVAR(carriedObject),objNull];
+_carriedItem = _unit getVariable [QGVAR(carriedObject), objNull];
+
+//disabled for persons
+if (_carriedItem isKindOf "CAManBase") exitWith {false};
 
 private ["_position", "_maxHeight"];
 

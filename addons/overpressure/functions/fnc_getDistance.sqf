@@ -1,5 +1,5 @@
 /*
- * Author: commy2 and CAA-Picard
+ * Author: commy2 and esteldunedain
  *
  * Calculate the distance to the first intersection of a line
  *

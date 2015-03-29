@@ -3,16 +3,16 @@
 <Project name="ACE">
   <Package name="MagazineRepack">
     <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
-      <English>Repack Magazines</English>
-      <German>Magazine umpacken</German>
-      <Spanish>Reorganizar cargadores</Spanish>
-      <French>Réorganiser chargeurs</French>
-      <Polish>Przepakuj magazynki</Polish>
-      <Czech>Přepáskovat Zásobníky</Czech>
-      <Italian>Ricarica Caricatori</Italian>
-      <Portuguese>Reorganizar Carregadores</Portuguese>
-      <Hungarian>Újratárazás</Hungarian>
-      <Russian>Перепаковать магазины</Russian>
+      <English>Repack&lt;br/&gt;Magazines</English>
+      <German>Magazine&lt;br/&gt;umpacken</German>
+      <Spanish>Reorganizar&lt;br/&gt;cargadores</Spanish>
+      <French>Réorganiser&lt;br/&gt;chargeurs</French>
+      <Polish>Przepakuj&lt;br/&gt;magazynki</Polish>
+      <Czech>Přepáskovat&lt;br/&gt;Zásobníky</Czech>
+      <Italian>Ricarica&lt;br/&gt;Caricatori</Italian>
+      <Portuguese>Reorganizar&lt;br/&gt;Carregadores</Portuguese>
+      <Hungarian>Újratárazás&lt;br/&gt;</Hungarian>
+      <Russian>Перепаковать&lt;br/&gt;магазины</Russian>
     </Key>
     <Key ID="STR_ACE_MagazineRepack_SelectMagazineMenu">
       <English>Select Magazine Menu</English>

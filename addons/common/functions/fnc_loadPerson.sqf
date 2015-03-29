@@ -35,8 +35,6 @@ if (_unit distance _loadcar <= 10) then {
 };
 if (!isNull _vehicle) then {
     [_unit, true, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide);
-    [_caller,objNull] call FUNC(carryObj);
-    [_unit,objNull] call FUNC(carryObj);
     [[_unit, _vehicle,_caller], QUOTE(FUNC(loadPersonLocal)), _unit, false] call EFUNC(common,execRemoteFnc);
 };
 _vehicle

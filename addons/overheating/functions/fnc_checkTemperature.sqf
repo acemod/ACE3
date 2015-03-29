@@ -1,5 +1,5 @@
 /*
- * Author: Commy2 and CAA-Picard
+ * Author: Commy2 and esteldunedain
  * Make the player check the temperature of his weapon
  *
  * Arguments:

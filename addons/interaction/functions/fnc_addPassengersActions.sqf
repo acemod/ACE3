@@ -1,7 +1,6 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Create one action per passenger
- * Note: This function is NOT global.
  *
  * Argument:
  * 0: Vehicle <OBJECT>
@@ -29,7 +28,7 @@ _actions = [];
                     str(_unit),
                     [_unit, true] call EFUNC(common,getName),
                     "",
-                    {systemChat "selected passenger"},
+                    {},
                     {true},
                     {_this call FUNC(addPassengerActions);},
                     [_unit]

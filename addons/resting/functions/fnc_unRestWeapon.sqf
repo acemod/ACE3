@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi, edited by commy2 and CAA-Picard
+ * Author: KoffeinFlummi, edited by commy2 and esteldunedain
  *
  * Un Rests the player's weapon
  *

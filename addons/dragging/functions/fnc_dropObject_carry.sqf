@@ -24,11 +24,27 @@ private "_inBuilding";
 _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
 // prevent collision damage
-["fixCollision", _unit, _unit] call EFUNC(common,targetEvent);
+["fixCollision", _unit] call EFUNC(common,localEvent);
 ["fixCollision", _target, _target] call EFUNC(common,targetEvent);
 
 // release object
 detach _target;
+
+// fix anim when aborting carrying persons
+if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
+    if (vehicle _unit == _unit) then {
+        [_unit, "", 2, true] call EFUNC(common,doAnimation);
+    };
+
+    if (_target getVariable ["ACE_isUnconscious", false]) then {
+        [_target, "unconscious", 2, true] call EFUNC(common,doAnimation);
+    } else {
+        [_target, "", 2, true] call EFUNC(common,doAnimation);  //@todo
+    };
+};
+
+// properly remove fake weapon
+_unit removeWeapon "ACE_FakePrimaryWeapon";
 
 // reselect weapon and re-enable sprint
 _unit selectWeapon primaryWeapon _unit;
@@ -46,5 +62,7 @@ _unit setVariable [QGVAR(carriedObject), objNull, true];
 // make object accesable for other units
 [objNull, _target, true] call EFUNC(common,claim);
 
-["fixPosition", _target, _target] call EFUNC(common,targetEvent);
-["fixFloating", _target, _target] call EFUNC(common,targetEvent);
+if !(_target isKindOf "CAManBase") then {
+    ["fixPosition", _target, _target] call EFUNC(common,targetEvent);
+    ["fixFloating", _target, _target] call EFUNC(common,targetEvent);
+};

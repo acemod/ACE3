@@ -1,6 +1,6 @@
 #define COMPONENT vehiclelock
 
-#define DEBUG_MODE_FULL
+// #define DEBUG_MODE_FULL
 
 #include "\z\ace\addons\main\script_mod.hpp"
 

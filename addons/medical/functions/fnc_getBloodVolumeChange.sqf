@@ -37,21 +37,13 @@ _bloodVolume = _unit getvariable [QGVAR(bloodVolume), 100];
 _bloodVolumeChange = -(_unit call FUNC(getBloodLoss));
 
 if (_bloodVolume < 100.0) then {
-    if ((_unit getvariable [QGVAR(salineIVVolume), 0]) > 0) then {
-        _bloodVolumeChange = _bloodVolumeChange + BLOOD_CHANGE_PER_SECOND;
-        _ivVolume = (_unit getvariable [QGVAR(salineIVVolume), 0]) + IV_CHANGE_PER_SECOND;
-        _unit setvariable [QGVAR(salineIVVolume),_ivVolume];
-    };
-    if ((_unit getvariable [QGVAR(plasmaIVVolume), 0]) > 0) then {
-        _bloodVolumeChange = _bloodVolumeChange + BLOOD_CHANGE_PER_SECOND;
-        _ivVolume = (_unit getvariable [QGVAR(plasmaIVVolume), 0]) + IV_CHANGE_PER_SECOND;
-        _unit setvariable [QGVAR(plasmaIVVolume),_ivVolume];
-    };
-    if ((_unit getvariable [QGVAR(bloodIVVolume), 0]) > 0) then {
-        _bloodVolumeChange = _bloodVolumeChange + BLOOD_CHANGE_PER_SECOND;
-        _ivVolume = (_unit getvariable [QGVAR(bloodIVVolume), 0]) + IV_CHANGE_PER_SECOND;
-        _unit setvariable [QGVAR(bloodIVVolume),_ivVolume];
-    };
+    {
+        if ((_unit getvariable [_x, 0]) > 0) then {
+            _bloodVolumeChange = _bloodVolumeChange + BLOOD_CHANGE_PER_SECOND;
+            _ivVolume = (_unit getvariable [_x, 0]) + IV_CHANGE_PER_SECOND;
+            _unit setvariable [_x,_ivVolume];
+        };
+    }foreach GVAR(IVBags);
 };
 
 _bloodVolumeChange;

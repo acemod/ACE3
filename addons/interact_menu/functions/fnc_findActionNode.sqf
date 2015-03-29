@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Return action point from path
  * Note: This function is NOT global.
  *

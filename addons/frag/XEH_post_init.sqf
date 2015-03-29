@@ -1,8 +1,8 @@
 #include "script_component.hpp"
-[QUOTE(ffsBIS), "oneachframe", QUOTE(FUNC(onFrame))] call BIS_fnc_addStackedEventHandler;
 if(isServer) then {
-	[QGVAR(frag_eh), { _this call FUNC(frago); }] call CBA_fnc_addClientToServerEventhandler;
+	[QGVAR(frag_eh), { _this call FUNC(frago); }] call ace_common_fnc_addEventHandler;
 };
+/*
 GVAR(replacedBisArtyWrapper) = false;
 [] spawn {
 	waitUntil {
@@ -15,3 +15,4 @@ GVAR(replacedBisArtyWrapper) = false;
 		GVAR(replacedBisArtyWrapper)
 	};
 };
+*/

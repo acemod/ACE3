@@ -1,4 +1,4 @@
-// by commy2 and CAA-Picard
+// by commy2 and esteldunedain
 #include "script_component.hpp"
 
 EXPLODE_3_PVT(_this,_unit,_range,_isGreen);

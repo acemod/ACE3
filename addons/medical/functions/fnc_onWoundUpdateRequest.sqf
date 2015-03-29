@@ -19,9 +19,9 @@ _unit = _this select 0;
 _lastId = _this select 1;
 _originOfrequest = _this select 2;
 
-_openWounds = _unit getvariable [QGVAR(openWounds), []];
-if (count _openWounds > _lastId) then {
-    {
-        ["medical_propagateWound", [_originOfrequest], [_unit, _x]] call EFUNC(common,targetEvent);
-    }foreach _openWounds;
+if (local _unit) then {
+	_openWounds = _unit getvariable [QGVAR(openWounds), []];
+	{
+	    ["medical_propagateWound", [_originOfrequest], [_unit, _x]] call EFUNC(common,targetEvent);
+	}foreach _openWounds;
 };

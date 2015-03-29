@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi and CAA-Picard
+ * Author: KoffeinFlummi and esteldunedain
  * Adjusts the flight path of the bullet according to the zeroing
  *
  * Argument:

@@ -27,16 +27,16 @@
       <Russian>Картографические инструменты позволяют измерять расстояния и углы на карте.</Russian>
     </Key>
     <Key ID="STR_ACE_MapTools_MapTools_Menu">
-      <English>Map Tools &gt;&gt;</English>
-      <Spanish>Herramientas de mapa &gt;&gt;</Spanish>
-      <French>Outils de navigation &gt;&gt;</French>
-      <Polish>Narzędzia nawigacyjne &gt;&gt;</Polish>
-      <German>Kartenwerkzeug &gt;&gt;</German>
-      <Czech>Pomůcky k Mapě &gt;&gt;</Czech>
-      <Italian>Strumenti Cartografici &gt;&gt;</Italian>
-      <Portuguese>Ferramentas de Mapa &gt;&gt;</Portuguese>
-      <Hungarian>Térképészeti eszközök &gt;&gt;</Hungarian>
-      <Russian>Инструменты карты &gt;&gt;</Russian>
+      <English>Map Tools</English>
+      <Spanish>Herramientas de mapa</Spanish>
+      <French>Outils de navigation</French>
+      <Polish>Narzędzia nawigacyjne</Polish>
+      <German>Kartenwerkzeug</German>
+      <Czech>Pomůcky k Mapě</Czech>
+      <Italian>Strumenti Cartografici</Italian>
+      <Portuguese>Ferramentas de Mapa</Portuguese>
+      <Hungarian>Térképészeti eszközök</Hungarian>
+      <Russian>Инструменты карты</Russian>
     </Key>
     <Key ID="STR_ACE_MapTools_MapToolsHide">
       <English>Hide Map Tool</English>

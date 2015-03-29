@@ -44,13 +44,12 @@ if(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) then {
 	_exit = false;
 	_vm = 1;
 	_velocity = _initialData select 5;
-	_unitDir = _velocity call BIS_fnc_unitVector;
 	
 	_oldVelocity = _velocity call BIS_fnc_magnitude;
 	_curVelocity = (velocity _round) call BIS_fnc_magnitude;
 	
 	if(alive _round) then {
-		_diff = [_velocity, (velocity _round)] call FUNC(vectorDiffFast);
+		_diff = _velocity vectorDiff (velocity _round);
 		_polar = _diff call CBA_fnc_vect2polar;
 		// player sideChat format["polar: %1", _polar];
 		if((abs(_polar select 1) > 45 || abs(_polar select 2) > 45)) then {
@@ -63,7 +62,7 @@ if(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) then {
 		};
 	};
 	if(!_exit) then {
-		_unitDir = _velocity call BIS_fnc_unitVector;
+		_unitDir = vectorNormalized _velocity;
 		_pos = _hpData select 3;
 		_spallPos = nil;
 		for "_i" from 0 to 100 do {
@@ -137,7 +136,6 @@ if(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) then {
 				_fragment = (_fragTypes select _fragType) createVehicleLocal [0,0,10000];
 				_fragment setPosASL _spallPos;
 				_fragment setVelocity _spallFragVect;
-				// [fnc_spallTrackPFH, 0, [_fragment, diag_tickTime]] call cba_fnc_addPerFrameHandler;
 				if(GVAR(traceFrags)) then {
 					[player, _fragment, [1,0.5,0,1]] call FUNC(addTrack);
 				};
@@ -159,7 +157,6 @@ if(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) then {
 				_fragment = (_fragTypes select _fragType) createVehicleLocal [0,0,10000];
 				_fragment setPosASL _spallPos;
 				_fragment setVelocity _spallFragVect;
-				// [fnc_spallTrackPFH, 0, [_fragment, diag_tickTime]] call cba_fnc_addPerFrameHandler;
 				if(GVAR(traceFrags)) then {
 					[player, _fragment, [1,0,0,1]] call FUNC(addTrack);
 				};

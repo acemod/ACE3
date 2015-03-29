@@ -6,9 +6,7 @@ ADDON = false;
 // ACE Common Function
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
-PREP(addCameraEventHandler);
 PREP(addCanInteractWithCondition);
-PREP(addCustomEventHandler);
 PREP(addLineToDebugDraw);
 PREP(addMapMarkerCreatedEventHandler);
 PREP(addScrollWheelEventHandler);
@@ -17,18 +15,13 @@ PREP(adminKick);
 PREP(ambientBrightness);
 PREP(applyForceWalkStatus);
 PREP(ASLToPosition);
-PREP(beingCarried);
 PREP(binarizeNumber);
 PREP(blurScreen);
 PREP(cachedCall);
-PREP(callCustomEventHandlers);
-PREP(callCustomEventHandlersGlobal);
 PREP(canGetInPosition);
 PREP(canInteract);
 PREP(canInteractWith);
 PREP(canUseWeapon);
-PREP(carriedByObj);
-PREP(carryObj);
 PREP(changeProjectileDirection);
 PREP(checkPBOs);
 PREP(claim);
@@ -62,8 +55,6 @@ PREP(fixPosition);
 PREP(getAllDefinedSetVariables);
 PREP(getAllGear);
 PREP(getCaptivityStatus);
-PREP(getCarriedBy);
-PREP(getCarriedObj);
 PREP(getConfigCommander);
 PREP(getConfigGunner);
 PREP(getDeathAnim);
@@ -104,6 +95,9 @@ PREP(getVehicleCrew);
 PREP(getVersion);
 PREP(getWeaponAzimuthAndInclination);
 PREP(getWeaponIndex);
+PREP(getWeaponModes);
+PREP(getWeaponMuzzles);
+PREP(getWeaponState);
 PREP(getWeaponType);
 PREP(getWindDirection);
 PREP(goKneeling);
@@ -126,7 +120,6 @@ PREP(isModLoaded);
 PREP(isPlayer);
 PREP(isTurnedOut);
 PREP(letterToCode);
-PREP(limitMovementSpeed);
 PREP(loadPerson);
 PREP(loadPersonLocal);
 PREP(loadSettingsFromProfile);
@@ -150,9 +143,7 @@ PREP(readSettingFromModule);
 PREP(receiveRequest);
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);
-PREP(removeCameraEventHandler);
 PREP(removeCanInteractWithCondition);
-PREP(removeCustomEventHandler);
 PREP(removeMapMarkerCreatedEventHandler);
 PREP(removeScrollWheelEventHandler);
 PREP(removeSpecificMagazine);
@@ -166,7 +157,6 @@ PREP(serverLog);
 PREP(setArrestState);
 PREP(setCanInteract);
 PREP(setCaptivityStatus);
-PREP(setCarriedBy);
 PREP(setDefinedVariable);
 PREP(setDisableUserInputStatus);
 PREP(setForceWalkStatus);
@@ -258,13 +248,14 @@ if (hasInterface) then {
             ACE_player = missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player];
             uiNamespace setVariable ["ACE_player", ACE_player];
 
-            // Raise custom event. @todo, remove
-            [missionNamespace, "playerChanged", [ACE_player, _oldPlayer]] call FUNC(callCustomEventHandlers);
             // Raise ACE event
             ["playerChanged", [ACE_player, _oldPlayer]] call FUNC(localEvent);
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
+
+// Init toHex
+[0] call FUNC(toHex);
 
 ADDON = true;
 

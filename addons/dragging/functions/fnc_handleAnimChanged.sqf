@@ -13,19 +13,23 @@ if (_unit getVariable [QGVAR(isDragging), false]) then {
         private "_draggedObject";
         _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
 
-        [_unit, _draggedObject] call FUNC(dropObject);
+        if (!isNull _draggedObject) then {
+            [_unit, _draggedObject] call FUNC(dropObject);
+        };
     };
 
 };
 
 if (_unit getVariable [QGVAR(isCarrying), false]) then {
 
-    // drop carried object when not standing
-    if (stance _unit != "STAND") then {
+    // drop carried object when not standing; also some exceptions when picking up crate
+    if (stance _unit != "STAND" && {_anim != "amovpercmstpsnonwnondnon"}) then {
         private "_carriedObject";
         _carriedObject = _unit getVariable [QGVAR(carriedObject), objNull];
 
-        [_unit, _carriedObject] call FUNC(dropObject_carry);
+        if (!isNull _carriedObject) then {
+            [_unit, _carriedObject] call FUNC(dropObject_carry);
+        };
     };
 
 };

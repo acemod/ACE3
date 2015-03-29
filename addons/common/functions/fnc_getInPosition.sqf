@@ -64,7 +64,7 @@ switch (_position) do {
   };
 
   case "gunner" : {
-    _turret = [typeOf _vehicle] call FUNC(getTurretGunner);
+    _turret = [_vehicle] call FUNC(getTurretGunner);
 
     if (CANGETINTURRETINDEX) then {
       _script = [
@@ -75,7 +75,7 @@ switch (_position) do {
   };
 
   case "commander" : {
-    _turret = [typeOf _vehicle] call FUNC(getTurretCommander);
+    _turret = [_vehicle] call FUNC(getTurretCommander);
 
     if (CANGETINTURRETINDEX) then {
       _script = [
@@ -86,7 +86,7 @@ switch (_position) do {
   };
 
   case "copilot" : {
-    _turret = [typeOf _vehicle] call FUNC(getTurretCopilot);
+    _turret = [_vehicle] call FUNC(getTurretCopilot);
 
     if (CANGETINTURRETINDEX) then {
       _script = [
@@ -100,7 +100,7 @@ switch (_position) do {
 
   case "turret" : {
     private "_turrets";
-    _turrets = [typeOf _vehicle] call FUNC(getTurretsOther);
+    _turrets = [_vehicle] call FUNC(getTurretsOther);
 
     if (_index != -1 && {_turret = _turrets select _index; CANGETINTURRETINDEX}) then {
       _script = [
@@ -127,7 +127,7 @@ switch (_position) do {
 
   case "ffv" : {
     private "_turrets";
-    _turrets = [typeOf _vehicle] call FUNC(getTurretsFFV);
+    _turrets = [_vehicle] call FUNC(getTurretsFFV);
 
     if (_index != -1 && {_turret = _turrets select _index; CANGETINTURRETINDEX}) then {
       _script = [

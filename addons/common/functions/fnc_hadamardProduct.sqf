@@ -19,7 +19,7 @@ _vector2 = _this select 1;
 _newVector = [];
 
 for "_i" from 0 to (((count _vector1) min (count _vector2)) - 1) do {
-  _newVector = _newVector + [(_vector1 select _i) * (_vector2 select _i)];
+    _newVector pushBack ((_vector1 select _i) * (_vector2 select _i));
 };
 
 _newVector

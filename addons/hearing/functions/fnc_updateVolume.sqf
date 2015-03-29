@@ -1,5 +1,5 @@
 /*
- * Author: commy2 and CAA-Picard
+ * Author: commy2 and esteldunedain
  * Updates and applys the current deafness.  Called every 0.1 sec from a PFEH.
  *
  * Arguments:

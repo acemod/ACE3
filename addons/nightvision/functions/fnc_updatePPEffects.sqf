@@ -1,5 +1,5 @@
 /*
- * Author: commy2, PabstMirror and CAA-Picard
+ * Author: commy2, PabstMirror and esteldunedain
  * Update the ppEffects everytime something changes
  *
  * Arguments:
