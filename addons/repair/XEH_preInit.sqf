@@ -6,6 +6,7 @@ PREP(addRepairActions);
 PREP(canRemoveWheel);
 PREP(canRepair);
 PREP(canReplaceWheel);
+PREP(doRemoveWheel);
 PREP(doRepair);
 PREP(getWheelHitPointsWithSelections);
 PREP(normalizeHitPoints);
@@ -14,5 +15,6 @@ PREP(repairVehicle);
 PREP(replaceWheel);
 PREP(setDamage);
 PREP(setHitPointDamage);
+PREP(spawnObject);
 
 ADDON = true;

@@ -558,4 +558,16 @@ class CfgVehicles {
     class ACE_SelfActions {};
   };
 
+  class ACE_RepairItem_Base: thingX {
+    class ACE_Actions {
+      class ACE_MainActions {
+        displayName = "$STR_ACE_Interaction_MainAction";
+        selection = "";
+        distance = 2;
+        condition = "true";
+      };
+    };
+    class ACE_SelfActions {};
+  };
+
 };
