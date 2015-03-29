@@ -1,0 +1,1 @@
+#include "\z\ace\addons\getin\script_component.hpp"
