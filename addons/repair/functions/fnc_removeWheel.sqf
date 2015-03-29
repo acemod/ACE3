@@ -26,12 +26,8 @@ if !(_hitPoint in ([_vehicle] call EFUNC(common,getHitPoints))) exitWith {};
 private "_time";
 _time = 10;
 
-// get string of the hitpoint
-private "_text";
-_text = "REMOVE WHEEL";
-
 // open the loading bar
-[_time, [_unit, _vehicle, _hitPoint], {(_this select 0) call DFUNC(doRemoveWheel)}, {hint "abort"}, _text, {true}, []] call EFUNC(common,progressBar);
+[_time, [_unit, _vehicle, _hitPoint], {(_this select 0) call DFUNC(doRemoveWheel)}, {[localize "STR_ACE_Common_ActionAborted"] call EFUNC(common,displayTextStructured);}, localize "STR_ACE_Repair_RemovingWheel", {true}, []] call EFUNC(common,progressBar);
 
 // do animation
 [_unit] call EFUNC(common,goKneeling);

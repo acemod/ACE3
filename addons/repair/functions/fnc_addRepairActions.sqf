@@ -53,7 +53,7 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
 
         // remove wheel action
         _name = format  ["Remove_%1", _x];
-        _text = "Remove Wheel"; //@todo localize
+        _text = localize "STR_ACE_Repair_RemoveWheel";
 
         _condition = {[_this select 1, _this select 0, _this select 2 select 0] call DFUNC(canRemoveWheel)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0] call DFUNC(removeWheel)};
@@ -64,7 +64,7 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
 
         // replace wheel action
         _name = format  ["Replace_%1", _x];
-        _text = "Replace Wheel"; //@todo localize
+        _text = localize "STR_ACE_Repair_ReplaceWheel";
 
         _condition = {[_this select 1, _this select 0, _this select 2 select 0] call DFUNC(canReplaceWheel)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0] call DFUNC(replaceWheel)};
@@ -84,7 +84,15 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         private ["_name", "_text", "_icon", "_selection", "_condition", "_statement"];
 
         _name = format ["Repair_%1", _x];
-        _text = format ["Repair %1", _x]; //@todo localize
+
+        _text = format ["STR_ACE_Repair_%1", _x];
+
+        if (isLocalized _text) then {
+            _text = format [localize "STR_ACE_Repair_RepairHitpoint", localize _text];
+        } else {
+            _text = format [localize "STR_ACE_Repair_RepairHitpoint", _x];
+        };
+
         _icon = "";
         _selection = "";
 

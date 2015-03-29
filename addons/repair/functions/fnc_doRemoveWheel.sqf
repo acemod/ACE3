@@ -17,6 +17,7 @@ _unit = _this select 0;
 _vehicle = _this select 1;
 _hitPoint = _this select 2;
 
+
 // get current hitpoint damage
 private "_hitPointDamage";
 _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
@@ -37,8 +38,5 @@ _wheel setdamage _damage;
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {
-    private "_text";
-    _text = "WHEEL REMOVED";
-
-    [_text] call EFUNC(common,displayTextStructured);
+    [localize "STR_ACE_Repair_RemovedWheel"] call EFUNC(common,displayTextStructured);
 };

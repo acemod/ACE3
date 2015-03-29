@@ -27,6 +27,59 @@
             <Russian>Запасное колесо</Russian>
         </Key>
 
+        <Key ID="STR_ACE_Repair_ReplaceWheel">
+            <English>Change Wheel</English>
+            <German>Reifen wechseln</German>
+            <Spanish>Cambiar rueda</Spanish>
+            <French>Changer Roue</French>
+            <Polish>Wymień koło</Polish>
+            <Czech>Vyměňit kolo</Czech>
+            <Portuguese>Trocar Roda</Portuguese>
+            <Italian>Sostituisci la ruota</Italian>
+            <Hungarian>Kerék cseréje</Hungarian>
+            <Russian>Поменять колесо</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_ReplacingWheel">
+            <English>Replacing Wheel ...</English>
+            <German>Ersetze Reifen ...</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_ReplacedWheel">
+            <English>Wheel replaced</English>
+            <German>Reifen ersetzt</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_RemoveWheel">
+            <English>Remove Wheel</English>
+            <German>Reifen entfernen</German>
+            <Spanish>Quitar rueda</Spanish>
+            <French>Démonter Roue</French>
+            <Polish>Zdejmij koło</Polish>
+            <Czech>Odstranit Kolo</Czech>
+            <Portuguese>Remover Roda</Portuguese>
+            <Italian>Rimuovi la ruota</Italian>
+            <Hungarian>Kerék leszerelése</Hungarian>
+            <Russian>Снять колесо</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_RemovingWheel">
+            <English>Removing Wheel ...</English>
+            <German>Entferne Reifen ...</German>
+        </Key>
+        <Key ID="STR_ACE_Repair_RemovedWheel">
+            <English>Wheel removed</English>
+            <German>Reifen entfernt</German>
+        </Key>
+
+        <Key ID="STR_ACE_Repair_RepairHitpoint">
+            <English>Repair %1</English>
+            <German>Reparieren %1</German>
+            <Spanish>Reparación %1</Spanish>
+            <French>Réparer %1</French>
+            <Polish>Napraw %1</Polish>
+            <Czech>Opravit %1</Czech>
+            <Portuguese>Reparar %1</Portuguese>
+            <Italian>Ripara %1</Italian>
+            <Hungarian>Szerelés %1</Hungarian>
+            <Russian>Ремонт %1</Russian>
+        </Key>
         <Key ID="STR_ACE_Repair_Repair">
             <English>Repair &gt;&gt;</English>
             <German>Reparieren &gt;&gt;</German>

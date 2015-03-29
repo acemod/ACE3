@@ -38,8 +38,5 @@ deleteVehicle _wheel;
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {
-    private "_text";
-    _text = "WHEEL REMPLACED";
-
-    [_text] call EFUNC(common,displayTextStructured);
+    [localize "STR_ACE_Repair_ReplacedWheel"] call EFUNC(common,displayTextStructured);
 };
