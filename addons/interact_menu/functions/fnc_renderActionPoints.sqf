@@ -38,7 +38,7 @@ _fnc_renderNearbyActions = {
                 // Only render them directly if they are base level actions
                 if (count (_x select 1) == 0) then {
                     // Try to render the menu
-                    _action = [_x,[]];
+                    _action = _x;
                     if ([_target, _action] call FUNC(renderBaseMenu)) then {
                         _numInteractions = _numInteractions + 1;
                     };
