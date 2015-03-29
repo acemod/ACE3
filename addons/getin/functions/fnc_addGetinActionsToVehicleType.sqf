@@ -23,6 +23,7 @@ _fncGetNicePosition = {
 
     //If pos on the ass-end of the vehicle, shift in
     if ((_yPos > 1) && {abs(_xPos) < 0.25}) then {
+        _yPos = (_yPos - 1) max 0;
     } else {
 
         if (_xPos > 0) then {
@@ -60,6 +61,7 @@ if (isText (_config >> "memoryPointsGetInDriver")) then {
     _displayName = "";
     _icon = "";
     if (_typeOfVehicle isKindOf "Air") then {
+        _displayName =  "Get In Pilot";
         _icon = "\A3\ui_f\data\igui\cfg\actions\getinpilot_ca.paa";
     } else {
         _displayName = localize "STR_ACE_GetIn_Driver";

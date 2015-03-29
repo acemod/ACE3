@@ -18,7 +18,7 @@ if (_position == "driver") then {
     };
 };
 
-systemChat format ["%1 = _%2", _args, _roomInPosition];
+// systemChat format ["%1 = _%2", _args, _roomInPosition];
 
 _roomInPosition &&
 {alive _target} &&
