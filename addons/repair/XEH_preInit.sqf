@@ -8,6 +8,7 @@ PREP(canRepair);
 PREP(canReplaceWheel);
 PREP(doRemoveWheel);
 PREP(doRepair);
+PREP(doReplaceWheel);
 PREP(getWheelHitPointsWithSelections);
 PREP(normalizeHitPoints);
 PREP(removeWheel);

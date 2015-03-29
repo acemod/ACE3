@@ -31,7 +31,7 @@ private "_text";
 _text = "REMOVE WHEEL";
 
 // open the loading bar
-[_time, [_unit, _vehicle, _hitPoint], DFUNC(doRemoveWheel), {hint "abort"}, _text, {true}, []] call EFUNC(common,progressBar);
+[_time, [_unit, _vehicle, _hitPoint], {(_this select 0) call DFUNC(doRemoveWheel)}, {hint "abort"}, _text, {true}, []] call EFUNC(common,progressBar);
 
 // do animation
 [_unit] call EFUNC(common,goKneeling);

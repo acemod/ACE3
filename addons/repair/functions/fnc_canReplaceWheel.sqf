@@ -21,4 +21,16 @@ _hitPoint = _this select 2;
 
 if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
+// check for a near wheel
+private "_wheel";
+_wheel = objNull;
+
+{
+    if ([_unit, _x, ["isNotDragging", "isNotCarrying"]] call EFUNC(common,canInteractWith)) exitWith {
+        _wheel = _x;
+    };
+} forEach nearestObjects [_unit, ["ACE_Wheel"], 5];
+
+if (isNull _wheel) exitWith {false};
+
 alive _target && {_target getHitPointDamage _hitPoint >= 1}

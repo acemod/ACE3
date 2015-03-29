@@ -11,34 +11,35 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_vehicle", "_hitPoint"];
+private ["_unit", "_vehicle", "_hitPoint", "_wheel"];
 
 _unit = _this select 0;
 _vehicle = _this select 1;
 _hitPoint = _this select 2;
+_wheel = _this select 3;
 
 // get current hitpoint damage
 private "_hitPointDamage";
 _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
 
-// can't remove destroyed or already removed wheel
-if (_hitPointDamage >= 1) exitWith {};
+// can't replace not destroyed wheel
+if (_hitPointDamage < 1) exitWith {};
 
 // don't die by spawning / moving the wheel
-["fixCollision", _unit] call EFUNC(common,localEvent);
+_hitPointDamage = damage _wheel;
 
-// spawn wheel
-private "_wheel";
-_wheel = ["ACE_Wheel", getPosASL _unit] call FUNC(spawnObject);
-_wheel setdamage _damage;
+// can't replace a destroyed wheel
+if (_hitPointDamage >= 1) exitWith {};
+
+deleteVehicle _wheel;
 
 // raise event to set the new hitpoint damage
-["setWheelHitPointDamage", _vehicle, [_vehicle, _hitPoint, 1]] call EFUNC(common,targetEvent);
+["setWheelHitPointDamage", _vehicle, [_vehicle, _hitPoint, _hitPointDamage]] call EFUNC(common,targetEvent);
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {
     private "_text";
-    _text = "WHEEL REMOVED";
+    _text = "WHEEL REMPLACED";
 
     [_text] call EFUNC(common,displayTextStructured);
 };
