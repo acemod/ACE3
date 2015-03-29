@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"interact_menu"};
+        requiredAddons[] = {"ace_interaction", "ace_interact_menu"};
         author[] = {"PabstMirror", "commy2"};
         authorUrl = "https://github.com/ace3";
         VERSION_CONFIG;

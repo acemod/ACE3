@@ -6,28 +6,28 @@ class Extended_PreInit_EventHandlers {
 
 class Extended_InitPost_EventHandlers {
     class Car {
-        class GVAR(InitPost) {
+        class GVAR(InitPostCar) {
             clientInit = QUOTE(_this call FUNC(vehicleInitPost));
         };
     };
     class Tank {
-        class GVAR(InitPost) {
-            clientInit = QUOTE(_this call FUNC(handleUnitInitPost));
+        class GVAR(InitPostTank) {
+            clientInit = QUOTE(_this call FUNC(vehicleInitPost));
         };
     };
-    class Air {
-        class GVAR(InitPost) {
-            clientInit = QUOTE(_this call FUNC(handleUnitInitPost));
+    class Helicopter {
+        class GVAR(InitPostHelicopter) {
+            clientInit = QUOTE(_this call FUNC(vehicleInitPost));
         };
     };
     class Ship {
-        class GVAR(InitPost) {
-            clientInit = QUOTE(_this call FUNC(handleUnitInitPost));
+        class GVAR(InitPostShip) {
+            clientInit = QUOTE(_this call FUNC(vehicleInitPost));
         };
     };
     class StaticWeapon {
-        class GVAR(InitPost) {
-            clientInit = QUOTE(_this call FUNC(handleUnitInitPost));
+        class GVAR(InitPostStaticWeapon) {
+            clientInit = QUOTE(_this call FUNC(vehicleInitPost));
         };
     };
 };
