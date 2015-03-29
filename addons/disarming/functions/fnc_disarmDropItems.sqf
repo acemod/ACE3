@@ -88,7 +88,7 @@ _targetMagazinesEnd = magazinesAmmo _target;
 _holderMagazinesEnd = magazinesAmmoCargo _holder;
 
 //Verify Mags dropped from unit:
-if ( ({(_x select 0) in _listOfItemsToRemove} count _targetMagazinesEnd) != 0) exitWith {
+if ( ({((_x select 0) in _listOfItemsToRemove) && {!((_x select 0) in UNIQUE_MAGAZINES)}} count _targetMagazinesEnd) != 0) exitWith {
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Didn't Remove Magazines"] call FUNC(eventTargetFinish);
 };
