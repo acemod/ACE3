@@ -43,7 +43,7 @@ _recurseFnc = {
             if (_condition == "") then {_condition = "true"};
 
             // Add canInteract (including exceptions) and canInteractWith to condition
-            _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, objNull, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
+            _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
 
             _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
 
@@ -90,7 +90,7 @@ _actions = [
                 // Dummy statement so it's not collapsed when there's no available actions
                 true
             },
-            {[ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)},
+            {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)},
             {},
             [],
             "Spine3",
