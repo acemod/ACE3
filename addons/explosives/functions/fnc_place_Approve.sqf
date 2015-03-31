@@ -42,6 +42,7 @@ _player setVariable [QGVAR(PlantingExplosive), true];
 _setup addEventHandler ["EpeContactStart", FUNC(onLanded)];
 _setup enableSimulationGlobal true;
 _player playActionNow "MedicOther";
+_player removeMagazine (_setup getVariable [QGVAR(Class), ""]);
 
 /*
 [{

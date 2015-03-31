@@ -16,7 +16,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_magazine","_trigger"];
+private ["_config"];
 closeDialog 0;
 call EFUNC(interaction,hideMenu);
 EXPLODE_3_PVT(_this,_explosive,_magazine,_trigger);

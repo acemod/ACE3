@@ -24,13 +24,7 @@ GVAR(placer) = _unit;
 GVAR(Setup) = createVehicle [getText(ConfigFile >> "CfgMagazines" >> _class >> "ACE_SetupObject"),[0,0,-10000],[], 0, "NONE"];
 
 GVAR(Setup) enableSimulationGlobal false;
-GVAR(Setup) setVariable [QGVAR(class), _class];
-private "_container";
-_container = [GVAR(Setup),"",QUOTE(PATHTOF(UI\Explosives_Menu_ca.paa)),"",{}, {true}, 4] call EFUNC(interact_menu,addAction);
-[_container,"Set Trigger", QUOTE(PATHTOF(UI\Explosives_Menu_ca.paa)),"",
-{[_target getVariable QGVAR(class),_target] call FUNC(openTriggerSelectionUI)}, {true}, 4] call EFUNC(interact_menu,addAction);
-[_container,"Pick up", QUOTE(PATHTOF(UI\Explosives_Menu_ca.paa)),"",
-{ACE_Player addMagazine (_target getVariable QGVAR(class));deleteVehicle _target;}, {true}, 4] call EFUNC(interact_menu,addAction);
+GVAR(Setup) setVariable [QGVAR(class), _class, true];
 
 [_unit, "ACE_Explosives", true] call EFUNC(common,setForceWalkStatus);
 GVAR(TweakedAngle) = 180;

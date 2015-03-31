@@ -57,6 +57,7 @@ class CfgVehicles {
 
   class Items_base_F;
   class ACE_Explosives_Place: Items_base_F {
+    XEH_ENABLED;
     author = "ACE";
     _generalMacro = "ACE_Explosives_Place";
     displayName = "Multi-meter";
@@ -88,7 +89,7 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Explosives_Pickup";
                 distance = 4;
                 condition = "true";
-                statement = QUOTE(_player addMagazine (_target getVariable QUOTE(QGVAR(class)));destroyVehicle _target;);
+                statement = QUOTE(_player addMagazine (_target getVariable QUOTE(QGVAR(class)));deleteVehicle _target;);
                 showDisabled = 0;
                 exceptions[] = {};
                 priority = 5;
