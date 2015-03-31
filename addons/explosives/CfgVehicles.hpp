@@ -25,7 +25,8 @@ class CfgVehicles {
         class ACE_Place {
           displayName = $STR_ACE_Explosives_Place;
           condition = QUOTE((vehicle _player == _player) and {[_player] call FUNC(hasExplosives)});
-          statement = QUOTE([_player] call FUNC(openPlaceUI););
+          statement = "";
+          insertChildren = QUOTE([_player] call FUNC(addExplosiveActions););
           exceptions[] = {"isNotSwimming"};
           showDisabled = 1;
           icon = PATHTOF(UI\Place_Explosive_ca.paa);
