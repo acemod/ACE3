@@ -15,6 +15,10 @@
 // Exit if there's no menu opened
 if (GVAR(openedMenuType) < 0) exitWith {true};
 
+if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
+    closeDialog 0;
+};
+
 if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
 
@@ -27,7 +31,9 @@ if(GVAR(actionSelected)) then {
 
     // Check the action conditions
     _actionData = GVAR(selectedAction) select 0;
+    systemChat "Checking Condition";
     if ([_target, _player, _actionData select 6] call (_actionData select 4)) then {
+        systemChat format ["Condition met: %1", [_target, _player, _actionData select 6, (_actionData select 3)]];
         // Call the statement
         [_target, _player, _actionData select 6] call (_actionData select 3);
 
@@ -39,10 +45,6 @@ if(GVAR(actionSelected)) then {
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;
 GVAR(openedMenuType) = -1;
-
-if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
-    closeDialog 0;
-};
 
 GVAR(expanded) = false;
 GVAR(lastPath) = [];
