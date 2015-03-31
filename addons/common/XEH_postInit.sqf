@@ -179,4 +179,11 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 ["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
-["isNotInside", {_this select 0 == _this select 1 || {vehicle (_this select 0) == _this select 0}}] call FUNC(addCanInteractWithCondition);
+["isNotInside", {
+    // Players can always interact with himself if not boarded
+    vehicle (_this select 0) == (_this select 0) ||
+    // Players can always interact with his vehicle
+    {vehicle (_this select 0) == (_this select 1)} ||
+    // Players can always interact with passengers of the same vehicle
+    {!((_this select 0) isEqualTo (_this select 1)) && {vehicle (_this select 0) == vehicle (_this select 1)}}
+}] call FUNC(addCanInteractWithCondition);
