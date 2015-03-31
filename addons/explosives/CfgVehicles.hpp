@@ -5,7 +5,6 @@
 
 class CfgVehicles {
   class Man;
-
   class CAManBase: Man {
     class ACE_SelfActions {
       class ACE_Explosives {
@@ -84,6 +83,17 @@ class CfgVehicles {
                 distance = 4;
                 condition = "true";
                 statement = QUOTE([_target getVariable QUOTE(QGVAR(class))] call FUNC(openTriggerSelectionUI););
+                showDisabled = 0;
+                exceptions[] = {};
+                priority = 5;
+                icon = QUOTE(PATHTOF(UI\Explosives_Menu_ca.paa));
+            };
+            class ACE_PickUp {
+                selection = "";
+                displayName = "$STR_ACE_Explosives_Pickup";
+                distance = 4;
+                condition = "true";
+                statement = QUOTE(_player addMagazine (_target getVariable QUOTE(QGVAR(class)));destroyVehicle _target;);
                 showDisabled = 0;
                 exceptions[] = {};
                 priority = 5;

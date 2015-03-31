@@ -490,5 +490,8 @@
       <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
       <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
     </Key>
+    <Key ID="STR_ACE_Explosives_Pickup">
+      <English>Pick up</English>
+    </Key>
   </Package>
 </Project>
