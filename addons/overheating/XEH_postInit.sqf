@@ -1,4 +1,4 @@
-// by CAA-Picard
+// by esteldunedain
 #include "script_component.hpp"
 
 if !(hasInterface) exitWith {};
@@ -7,8 +7,7 @@ if !(hasInterface) exitWith {};
 ["ACE3", QGVAR(unjamWeapon), localize "STR_ACE_Overheating_UnjamWeapon",
 {
     // Conditions: canInteract
-    _exceptions = [];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call EFUNC(common,canUseWeapon) &&
     {currentWeapon ACE_player in (ACE_player getVariable [QGVAR(jammedWeapons), []])}

@@ -19,8 +19,7 @@ if (!hasInterface) exitWith {};
 ["ACE3", QGVAR(showAltimeter), localize "STR_ACE_Parachute_showAltimeter",
 {
     // Conditions: canInteract
-    _exceptions = [QEGVAR(interaction,isNotEscorting)];
-    if !(_exceptions call EGVAR(common,canInteract)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     if (!('ACE_Altimeter' in assignedItems ace_player)) exitWith {false};
     if (!(missionNamespace getVariable [QGVAR(AltimeterActive), false])) then {
         [ace_player] call FUNC(showAltimeter);
@@ -30,7 +29,7 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[24, false, false, false], false] call CALLSTACK(cba_fnc_addKeybind);
+[24, [false, false, false]], false] call cba_fnc_addKeybind;
 
 GVAR(PFH) = false;
 ["playerVehicleChanged",{

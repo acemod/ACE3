@@ -3,16 +3,16 @@
 <Project name="ACE">
   <Package name="Explosives">
     <Key ID="STR_ACE_Explosives_Menu">
-      <English>Explosives &gt;&gt;</English>
-      <German>Sprengstoffe &gt;&gt;</German>
-      <Spanish>Explosivos &gt;&gt;</Spanish>
-      <Polish>Ładunki wybuchowe &gt;&gt;</Polish>
-      <French>Explosifs &gt;&gt;</French>
-      <Czech>Výbušniny &gt;&gt;</Czech>
-      <Italian>Esplosivi &gt;&gt;</Italian>
-      <Hungarian>Robbanóanyagok &gt;&gt;</Hungarian>
-      <Portuguese>Explosivos &gt;&gt;</Portuguese>
-      <Russian>Взрывчатка &gt;&gt;</Russian>
+      <English>Explosives</English>
+      <German>Sprengstoffe</German>
+      <Spanish>Explosivos</Spanish>
+      <Polish>Ładunki wybuchowe</Polish>
+      <French>Explosifs</French>
+      <Czech>Výbušniny</Czech>
+      <Italian>Esplosivi</Italian>
+      <Hungarian>Robbanóanyagok</Hungarian>
+      <Portuguese>Explosivos</Portuguese>
+      <Russian>Взрывчатка</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_Place">
       <English>Place &gt;&gt;</English>

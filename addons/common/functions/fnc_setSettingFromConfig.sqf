@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Load a setting from config if it was not previosuly forced. Force if neccesary.
  *
  * Arguments:

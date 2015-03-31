@@ -6,6 +6,7 @@ PREP(clearDisplay);
 PREP(convertToTexturesDegree);
 PREP(convertToTexturesDistance);
 PREP(convertToTexturesFOS);
+PREP(dataTransfer);
 PREP(showCenter);
 PREP(showP1);
 PREP(onKeyDown);

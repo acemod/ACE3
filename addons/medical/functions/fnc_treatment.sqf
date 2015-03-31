@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_availableLevels", "_medicRequired", "_items", "_locations", "_return", "_callbackSuccess", "_callbackFailure", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed"];
+private ["_caller", "_target", "_selectionName", "_className", "_config", "_availableLevels", "_medicRequired", "_items", "_locations", "_return", "_callbackSuccess", "_callbackFailure", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -25,14 +25,14 @@ _className = _this select 3;
 if !(_target isKindOf "CAManBase") exitWith {false};
 
 _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
-if (GVAR(level) >= 1) then {
+if (GVAR(level) >= 2) then {
     _config = (configFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
 };
 if !(isClass _config) exitwith {false};
 
 // Check for required class
 _medicRequired = getNumber (_config >> "requiredMedic");
-if !([_caller, _medicRequired] call FUNC(isMedic) || [_target, _medicRequired] call FUNC(isMedic)) exitwith {false};
+if !([_caller, _medicRequired] call FUNC(isMedic)) exitwith {false};
 
 // Check item
 _items = getArray (_config >> "items");
@@ -40,7 +40,25 @@ if (count _items > 0 && {!([_caller, _target, _items] call FUNC(hasItems))}) exi
 
 // Check allowed locations
 _locations = getArray (_config >> "treatmentLocations");
-_return = false;
+
+_return = true;
+if (isText (_config >> "Condition")) then {
+    _condition = getText(_config >> "condition");
+    if (_condition != "") then {
+        if (isnil _condition) then {
+            _condition = compile _condition;
+        } else {
+            _condition = missionNamespace getvariable _condition;
+        };
+        if (typeName _condition == "BOOL") then {
+            _return = _condition;
+        } else {
+            _return = [_caller, _target, _selectionName, _className] call _condition;
+        };
+    };
+};
+if (!_return) exitwith {false};
+
 if ("All" in _locations) then {
     _return = true;
 } else {
@@ -50,7 +68,9 @@ if ("All" in _locations) then {
         if (_x == "MedicalVehicle" && {([vehicle _caller] call FUNC(isMedicalVehicle)) || ([vehicle _target] call FUNC(isMedicalVehicle))}) exitwith {_return = true;};
     }foreach _locations;
 };
+
 if !(_return) exitwith {false};
+
 
 // Parse the config for the progress callback
 _callbackProgress = getText (_config >> "callbackProgress");

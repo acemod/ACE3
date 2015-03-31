@@ -26,7 +26,7 @@ if (!hasInterface) exitWith {};
     false
 },
 {false},
-[20, true, true, false], false] call CALLSTACK(cba_fnc_addKeybind);
+[20, [true, true, false]], false] call cba_fnc_addKeybind;
 
 if isNil(QGVAR(UsePP)) then {
     GVAR(UsePP) = true;

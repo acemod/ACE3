@@ -1,9 +1,9 @@
 /*
- * Author: NouberNou and CAA-Picard
+ * Author: NouberNou and esteldunedain
  * Compile the self action menu from config for an object's class
  *
  * Argument:
- * 0: Object <OBJECT>
+ * 0: Object or class name <OBJECT> or <STRING>
  *
  * Return value:
  * None
@@ -12,10 +12,13 @@
  */
 #include "script_component.hpp";
 
-EXPLODE_1_PVT(_this,_object);
+EXPLODE_1_PVT(_this,_target);
 
 private ["_objectType","_actionsVarName"];
-_objectType = typeOf _object;
+_objectType = _target;
+if (typeName _target == "OBJECT") then {
+    _objectType = typeOf _target;
+};
 _actionsVarName = format [QGVAR(SelfAct_%1), _objectType];
 
 // Exit if the action menu is already compiled for this class
@@ -24,8 +27,8 @@ if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
 private "_recurseFnc";
 _recurseFnc = {
     private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_selection", "_condition", "_showDisabled",
-            "_enableInside", "_children", "_entry", "_entryCfg", "_fullPath"];
-    EXPLODE_2_PVT(_this,_actionsCfg,_parentPath);
+            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren"];
+    EXPLODE_1_PVT(_this,_actionsCfg);
     _actions = [];
 
     for "_i" from 0 to (count _actionsCfg) - 1 do {
@@ -40,28 +43,30 @@ _recurseFnc = {
             if (_condition == "") then {_condition = "true"};
 
             // Add canInteract (including exceptions) and canInteractWith to condition
-            _condition = _condition + format [QUOTE( && {%1 call EGVAR(common,canInteract)} && {[ARR_2(ACE_player, _target)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
+            _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, objNull, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
+
+            _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
 
             _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
             _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
             _canCollapse = (getNumber (_entryCfg >> "canCollapse")) > 0;
-
-            _fullPath = (+ _parentPath);
-            _fullPath pushBack (configName _entryCfg);
+            _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
 
             _condition = compile _condition;
-            _children = [_entryCfg, _fullPath] call _recurseFnc;
+            _children = [_entryCfg] call _recurseFnc;
 
             _entry = [
                         [
+                            configName _entryCfg,
                             _displayName,
                             _icon,
-                            [0,0,0],
                             _statement,
                             _condition,
+                            _insertChildren,
+                            [],
+                            [0,0,0],
                             10, //distace
-                            [_showDisabled,_enableInside,_canCollapse],
-                            _fullPath
+                            [_showDisabled,_enableInside,_canCollapse,_runOnHover]
                         ],
                         _children
                     ];
@@ -78,16 +83,21 @@ _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_SelfActions";
 _actions = [
     [
         [
+            "ACE_SelfActions",
             "Self Actions",
             "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
+            {
+                // Dummy statement so it's not collapsed when there's no available actions
+                true
+            },
+            {[ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)},
+            {},
+            [],
             "Spine3",
-            { true },
-            { true },
             10,
-            [false,true,false],
-            ["ACE_SelfActions"]
+            [false,true,false]
         ],
-        [_actionsCfg, ["ACE_SelfActions"]] call _recurseFnc
+        [_actionsCfg] call _recurseFnc
     ]
 ];
 

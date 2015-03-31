@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = { "ace_main", "ace_common", "ace_interaction" };
-        author[] = { "commy2", "CAA-Picard" };
+        author[] = { "commy2", "esteldunedain" };
         authorUrl = "https://github.com/commy2/";
         VERSION_CONFIG;
     };
@@ -46,7 +46,7 @@ class ACE_Settings {
         typeName = "BOOL";
         isClientSetable = 1;
         displayName = "$STR_ACE_NameTags_ShowNamesForAI";
-    };    
+    };
     class GVAR(showCursorTagForVehicles) {
         value = 0;
         typeName = "BOOL";

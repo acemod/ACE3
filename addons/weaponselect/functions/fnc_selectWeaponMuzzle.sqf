@@ -19,7 +19,7 @@ _weapon = _this select 1;
 if (_weapon == "") exitWith {};
 
 private "_muzzles";
-_muzzles = [_weapon] call FUNC(getWeaponMuzzles);
+_muzzles = [_weapon] call EFUNC(common,getWeaponMuzzles);
 
 if (currentWeapon _unit != _weapon) exitWith {
     if (count _muzzles > 1) then {

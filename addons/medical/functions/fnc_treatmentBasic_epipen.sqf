@@ -15,7 +15,6 @@
  */
 
 #include "script_component.hpp"
-#define BLOODBAGHEAL 70
 
 private ["_caller", "_target","_className"];
 _caller = _this select 0;

@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi and CAA-Picard
+ * Author: KoffeinFlummi and esteldunedain
  * Display the adjustment knobs, update their value and fade them out later
  *
  * Arguments:

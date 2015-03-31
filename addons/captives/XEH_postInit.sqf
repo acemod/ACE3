@@ -27,12 +27,11 @@ if (isServer) then {
 ["SetHandcuffed", {_this call FUNC(setHandcuffed)}] call EFUNC(common,addEventHandler);
 ["SetSurrendered", {_this call FUNC(setSurrendered)}] call EFUNC(common,addEventHandler);
 
-//TODO: Medical Integration Events???
+//Medical Integration Events???
+["medical_onUnconscious", {_this call ACE_Captives_fnc_handleOnUnconscious}] call EFUNC(common,addEventHandler);
 
-// [_unit, "knockedOut", {
-// if (local (_this select 0)) then {_this call ACE_Captives_fnc_handleKnockedOut};
-// }] call ACE_Core_fnc_addCustomEventhandler;
+if (!hasInterface) exitWith {};
 
-// [_unit, "wokeUp", {
-// if (local (_this select 0)) then {_this call ACE_Captives_fnc_handleWokeUp};
-// }] call ACE_Core_fnc_addCustomEventhandler;
+["isNotEscorting", {!(GETVAR(_this select 0,GVAR(isEscorting),false))}] call EFUNC(common,addCanInteractWithCondition);
+["isNotHandcuffed", {!(GETVAR(_this select 0,GVAR(isHandcuffed),false))}] call EFUNC(common,addCanInteractWithCondition);
+["isNotSurrendering", {!(GETVAR(_this select 0,GVAR(isSurrendering),false))}] call EFUNC(common,addCanInteractWithCondition);

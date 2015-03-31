@@ -1,29 +1,29 @@
 
 class CfgWeapons {
-  class ItemCore;
-  class InventoryItem_Base_F;
-  class InventoryFirstAidKitItem_Base_F;
-  class MedikitItem;
+    class ItemCore;
+    class InventoryItem_Base_F;
+    class InventoryFirstAidKitItem_Base_F;
+    class MedikitItem;
 
-  // ITEMS
-  class FirstAidKit: ItemCore {
-    type = 0;
-    class ItemInfo: InventoryFirstAidKitItem_Base_F {
-      mass = 4;
-      type = 201;
+    // ITEMS
+    class FirstAidKit: ItemCore {
+        type = 0;
+        class ItemInfo: InventoryFirstAidKitItem_Base_F {
+            mass = 4;
+            type = 201;
+        };
     };
-  };
-  class Medikit: ItemCore {
-    type = 0;
-    class ItemInfo: MedikitItem {
-      mass = 60;
-      type = 201;
+    class Medikit: ItemCore {
+        type = 0;
+        class ItemInfo: MedikitItem {
+            mass = 60;
+            type = 201;
+        };
     };
-  };
 
     // @todo localize
     class ACE_ItemCore;
-    class GVAR(fieldDressing): ACE_ItemCore {
+    class ACE_fieldDressing: ACE_ItemCore {
         scope = 2;
         model = "\A3\Structures_F_EPA\Items\Medical\Bandage_F.p3d";
         picture = QUOTE(PATHTOF(ui\items\fieldDressing.paa));
@@ -35,7 +35,7 @@ class CfgWeapons {
             type=201;
         };
     };
-    class GVAR(packingBandage): ItemCore {
+    class ACE_packingBandage: ItemCore {
         scope = 2;
         value = 1;
         count = 1;
@@ -50,7 +50,7 @@ class CfgWeapons {
             type=201;
         };
     };
-    class GVAR(elasticBandage): ItemCore {
+    class ACE_elasticBandage: ItemCore {
         scope = 2;
         value = 1;
         count = 1;
@@ -65,7 +65,7 @@ class CfgWeapons {
             type=201;
         };
     };
-    class GVAR(tourniquet): ItemCore {
+    class ACE_tourniquet: ItemCore {
         scope = 2;
         value = 1;
         count = 1;
@@ -80,7 +80,7 @@ class CfgWeapons {
             type=201;
         };
     };
-    class GVAR(morphine): ItemCore {
+    class ACE_morphine: ItemCore {
         scope = 2;
         value = 1;
         count = 1;
@@ -95,7 +95,7 @@ class CfgWeapons {
             type=201;
         };
     };
-    class GVAR(atropine): ItemCore {
+    class ACE_atropine: ItemCore {
         scope = 2;
         value = 1;
         count = 1;
@@ -110,7 +110,7 @@ class CfgWeapons {
             type=201;
         };
     };
-    class GVAR(epinephrine): ItemCore {
+    class ACE_epinephrine: ItemCore {
         scope = 2;
         value = 1;
         count = 1;
@@ -125,7 +125,7 @@ class CfgWeapons {
             type=201;
         };
     };
-    class GVAR(plasmaIV): ItemCore {
+    class ACE_plasmaIV: ItemCore {
         scope = 2;
         value = 1;
         count = 1;
@@ -138,21 +138,21 @@ class CfgWeapons {
             type = 201;
         };
     };
-    class GVAR(plasmaIV_500): GVAR(plasmaIV) {
+    class ACE_plasmaIV_500: ACE_plasmaIV {
         displayName = $STR_ACE_MEDICAL_PLASMA_IV_500;
         class ItemInfo: InventoryItem_Base_F {
             mass = 5;
             type = 201;
         };
     };
-    class GVAR(plasmaIV_250): GVAR(plasmaIV) {
+    class ACE_plasmaIV_250: ACE_plasmaIV {
         displayName = $STR_ACE_MEDICAL_PLASMA_IV_250;
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
             type = 201;
         };
     };
-    class GVAR(bloodIV): ItemCore {
+    class ACE_bloodIV: ItemCore {
         scope = 2;
         value = 1;
         count = 1;
@@ -166,21 +166,21 @@ class CfgWeapons {
             type = 201;
         };
     };
-    class GVAR(bloodIV_500): GVAR(bloodIV) {
+    class ACE_bloodIV_500: ACE_bloodIV {
         displayName = $STR_ACE_MEDICAL_BLOOD_IV_500;
         class ItemInfo: InventoryItem_Base_F {
             mass = 5;
             type = 201;
         };
     };
-    class GVAR(bloodIV_250): GVAR(bloodIV) {
+    class ACE_bloodIV_250: ACE_bloodIV {
         displayName = $STR_ACE_MEDICAL_BLOOD_IV_250;
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
             type = 201;
         };
     };
-    class GVAR(salineIV): ItemCore {
+    class ACE_salineIV: ItemCore {
         scope = 2;
         value = 1;
         count = 1;
@@ -193,21 +193,21 @@ class CfgWeapons {
             type = 201;
         };
     };
-    class GVAR(salineIV_500): GVAR(salineIV) {
+    class ACE_salineIV_500: ACE_salineIV {
         displayName = $STR_ACE_MEDICAL_SALINE_IV_500;
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
             type = 201;
         };
     };
-    class GVAR(salineIV_250): GVAR(salineIV) {
+    class ACE_salineIV_250: ACE_salineIV {
         displayName = $STR_ACE_MEDICAL_SALINE_IV_250;
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
             type = 201;
         };
     };
-    class GVAR(quikclot): ItemCore {
+    class ACE_quikclot: ItemCore {
         scope = 2;
         value = 1;
         count = 1;
@@ -221,13 +221,13 @@ class CfgWeapons {
             type = 201;
         };
     };
-    class GVAR(personalAidKit): ItemCore {
+    class ACE_personalAidKit: ItemCore {
         scope = 2;
         value = 1;
         count = 1;
         type = 16;
         displayName = $STR_ACE_MEDICAL_AID_KIT_DISPLAY;
-        //picture = QUOTE(PATHTOF(ui\items\personal_aid_kit.paa));
+        picture = QUOTE(PATHTOF(ui\items\personal_aid_kit.paa));
         //model = QUOTE(PATHTOF(equipment\Personal-aidkits\MTP.p3d));
         descriptionShort = $STR_ACE_MEDICAL_AID_KIT_DESC_SHORT;
         descriptionUse = $STR_ACE_MEDICAL_AID_KIT_DESC_USE;
@@ -236,19 +236,19 @@ class CfgWeapons {
             type = 201;
         };
     };
-    class GVAR(surgicalKit): ItemCore {
+    class ACE_surgicalKit: ItemCore {
         scope=2;
         displayName= $STR_ACE_MEDICAL_SURGICALKIT_DISPLAY;
         model = QUOTE(PATHTOF(data\surgical_kit.p3d));
-        //picture = QUOTE(PATHTOF(data\surgical_kit.paa));
+        picture = QUOTE(PATHTOF(ui\items\surgicalKit.paa));
         descriptionShort = $STR_ACE_MEDICAL_SURGICALKIT_DESC_SHORT;
         descriptionUse = $STR_ACE_MEDICAL_SURGICALKIT_DESC_USE;
-         class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: InventoryItem_Base_F {
             mass = 5;
             type = 201;
         };
     };
-    class GVAR(bodyBag): ItemCore {
+    class ACE_bodyBag: ItemCore {
         scope=2;
         displayName= $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
         model = QUOTE(PATHTOF(data\bodybagItem.p3d));

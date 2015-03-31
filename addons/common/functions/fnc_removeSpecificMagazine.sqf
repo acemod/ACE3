@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Removes a magazine from the unit that has an specific ammo count
  *
  * Argument:

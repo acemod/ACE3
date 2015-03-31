@@ -2,7 +2,7 @@
 
 #include "script_component.hpp"
 
-if (!hasInterface) exitwith{};
+GVAR(enabledFor) = 1; // TODO remove this once we implement settings. Just here to get the vitals working.
 
 GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "ACE_heartbeat_fast_3"];
 GVAR(heartBeatSounds_Normal) = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
@@ -11,6 +11,7 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["Medical_treatmentCompleted", FUNC(onTreatmentCompleted)] call ace_common_fnc_addEventHandler;
 ["medical_propagateWound", FUNC(onPropagateWound)] call ace_common_fnc_addEventHandler;
 ["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call ace_common_fnc_addEventHandler;
+["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call ace_common_fnc_addEventHandler;
 
 // Initialize all effects
 _fnc_createEffect = {
@@ -81,7 +82,7 @@ GVAR(effectTimeBlood) = time;
     };
 
     // Unconsciousness effect
-    if (ACE_player getVariable [QGVAR(isUnconscious), false]) then {
+    if (ACE_player getVariable ["ACE_isUnconscious", false]) then {
         GVAR(effectUnconsciousCC) ppEffectEnable true;
         GVAR(effectUnconsciousRB) ppEffectEnable true;
         GVAR(effectBlind) = true;
@@ -109,10 +110,11 @@ GVAR(effectTimeBlood) = time;
         };
     };
 
+    _bleeding = ACE_player call FUNC(getBloodLoss);
     // Bleeding Indicator
-    if (damage ACE_player > 0.1 and GVAR(effectTimeBlood) + 6 < time) then {
+    if (_bleeding > 0 and GVAR(effectTimeBlood) + 6 < time) then {
         GVAR(effectTimeBlood) = time;
-        [500 * damage ACE_player] call BIS_fnc_bloodEffect;
+        [500 * _bleeding] call BIS_fnc_bloodEffect;
     };
 
     // Blood Volume Effect
@@ -138,7 +140,7 @@ if (isNil QGVAR(level)) then {
 // HEARTRATE BASED EFFECTS
 [{
     _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
-    if (GVAR(level) == 0) then {
+    if (GVAR(level) == 1) then {
         _heartRate = 60 + 40 * (ACE_player getVariable [QGVAR(pain), 0]);
     };
     if (_heartRate <= 0) exitwith {};
@@ -197,7 +199,7 @@ if (isNil QGVAR(level)) then {
         };
     };
 
-    if (GVAR(level) > 0 && {_heartRate > 0}) then {
+    if (GVAR(level) >= 2 && {_heartRate > 0}) then {
         _minTime = 60 / _heartRate;
         if (time - GVAR(lastHeartBeatSound) > _minTime) then {
             GVAR(lastHeartBeatSound) = time;
@@ -216,18 +218,20 @@ if (isNil QGVAR(level)) then {
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
 // broadcast injuries to JIP clients in a MP session
-if (isMultiplayer && !isDedicated) then {
-    [QGVAR(onPlayerConnected), "onPlayerConnected", {
-        if (isNil QGVAR(InjuredCollection)) then {
-            GVAR(InjuredCollection) = [];
-        };
-
+if (isMultiplayer) then {
+    // We are only pulling the wounds for the units in the player group. Anything else will come when the unit interacts with them.
+    if (hasInterface) then {
         {
-            _unit = _x;
-            _openWounds = _unit getvariable [QGVAR(openWounds), []];
-            {
-                ["medical_propagateWound", [_id], [_unit, _x]] call EFUNC(common,targetEvent);
-            }foreach _openWounds;
-        }foreach GVAR(InjuredCollection);
-    }, []] call BIS_fnc_addStackedEventHandler;
+            [_x, player] call FUNC(requestWoundSync);
+        }foreach units group player;
+    };
 };
+
+[
+    {(((_this select 0) getvariable [QGVAR(bloodVolume), 0]) < 65)},
+    {(((_this select 0) getvariable [QGVAR(pain), 0]) > 0.9)},
+    {(((_this select 0) call FUNC(getBloodLoss)) > 0.25)},
+    {((_this select 0) getvariable [QGVAR(inReviveState), false])},
+    {((_this select 0) getvariable ["ACE_isDead", false])},
+    {(((_this select 0) getvariable [QGVAR(airwayStatus), 100]) < 80)}
+] call FUNC(addUnconsciousCondition);

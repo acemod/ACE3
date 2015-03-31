@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  * Start linking the belt
  *
  * Argument:
@@ -42,7 +42,7 @@ if (_maxAmmo == 0) exitWith {};
 // Condition to call each frame
 _condition = {
     EXPLODE_2_PVT((_this select 0),_player,_target);
-    ([_player, _target] call EFUNC(common,canInteract)) && ((_player distance _target) < 3) && ((speed _target) < 1)
+    ([_player, _target, []] call EFUNC(common,canInteractWith)) && ((_player distance _target) < 3) && ((speed _target) < 1)
 };
 
 _onFinish = {
@@ -60,7 +60,7 @@ _onFailure = {
     _player addMagazine _magazine;
 };
 
-[_player, "AinvPknlMstpSnonWnonDr_medic5", 0] call EFUNC(common,doAnimation);
+_player playActionNow "PutDown";
 
 // Remove the magazine with maximum remaining ammo
 [_player, _magazineType, _maxAmmo] call EFUNC(common,removeSpecificMagazine);

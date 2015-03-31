@@ -1,5 +1,5 @@
 /*
- * Author: Glowbal
+ * Author: Glowbal, KoffeinFlummi
  * Check if a unit is any medical class
  *
  * Arguments:
@@ -18,17 +18,7 @@ private ["_unit","_class","_return"];
 _unit = _this select 0;
 _medicN = if (count _this > 1) then {_this select 1} else {1};
 
-if (isnil QGVAR(setting_advancedMedicRoles)) exitwith {
-    true;
-};
+_class = _unit getVariable [QGVAR(medicClass),
+    getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "attendant")];
 
-if (GVAR(setting_advancedMedicRoles)) then {
-    _class = _unit getvariable [QGVAR(medicClass), 0];
-    if (_class >= _medicN) then {
-        _return = true;
-    };
-} else {
-    _return = true;
-};
-
-_return;
+_class >= _medicN min GVAR(medicSetting)

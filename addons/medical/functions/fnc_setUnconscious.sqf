@@ -25,15 +25,18 @@ if !(!(isNull _unit) && {(_unit isKindOf "CaManBase") && ([_unit] call EFUNC(com
 
 // We only want this function to work on local machines
 if (!local _unit) exitwith {
-    [[_unit], QUOTE(DFUNC(setUnconsciousState)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    [[_unit], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
-
-// Get rid of the object we are carrying, before we go unconscious.
-[_unit, ObjNull, [0,0,0]] call EFUNC(common,carryObj);
 
 // Set the unit in the unconscious state.
 _unit setvariable ["ACE_isUnconscious", true, true];
 _unit setUnconscious true;
+
+// @todo: mute player?
+if (_unit == ACE_player) then {
+    if (visibleMap) then {openMap false};
+    closeDialog 0;
+};
 
 // If a unit has the launcher out, it will sometimes start selecting the primairy weapon while unconscious,
 // therefor we force it to select the primairy weapon before going unconscious
@@ -64,22 +67,21 @@ _unit setUnitPos "DOWN";
 // So the AI does not get stuck, we are moving the unit to a temp group on its own.
 [_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 
-_captiveSwitch = [_unit, true] call EFUNC(common,setCaptiveSwitch);
+[_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
 [_unit, [_unit] call EFUNC(common,getDeathAnim), 1, true] call EFUNC(common,doAnimation);
 
 _startingTime = time;
 _minWaitingTime = (round(random(10)+5));
 
 [{
-    private ["_unit", "_vehicleOfUnit","_lockSwitch","_minWaitingTime", "_oldAnimation", "_captiveSwitch", "_hasMovedOut"];
+    private ["_unit", "_vehicleOfUnit","_minWaitingTime", "_oldAnimation", "_captiveSwitch", "_hasMovedOut"];
     _args = _this select 0;
     _unit = _args select 0;
     _oldAnimation = _args select 1;
-    _captiveSwitch = _args select 2;
-    _originalPos = _args select 3;
-    _startingTime = _args select 4;
-    _minWaitingTime = _args select 5;
-    _hasMovedOut = _args select 6;
+    _originalPos = _args select 2;
+    _startingTime = _args select 3;
+    _minWaitingTime = _args select 4;
+    _hasMovedOut = _args select 5;
     // Since the unit is no longer alive, get rid of this PFH.
     if (!alive _unit) exitwith {
         // EXIT PFH
@@ -104,9 +106,7 @@ _minWaitingTime = (round(random(10)+5));
         };
         if (!_hasMovedOut) then {
             // Reset the unit back to the previous captive state.
-            if (_captiveSwitch) then {
-                [_unit, false] call EFUNC(common,setCaptiveSwitch);
-            };
+            [_unit, QGVAR(unconscious), false] call EFUNC(common,setCaptivityStatus);
 
             // Swhich the unit back to its original group
             [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
@@ -115,7 +115,7 @@ _minWaitingTime = (round(random(10)+5));
             _unit setUnitPos _originalPos; // This is not position but stance (DOWN, MIDDLE, UP)
 
             _unit setUnconscious false;
-
+            ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
             // ensure this statement runs only once
             _args set [6, true];
         };
@@ -137,5 +137,6 @@ _minWaitingTime = (round(random(10)+5));
         [_unit,([_unit] call FUNC(getDeathAnim)), 1, true] call EFUNC(common,doAnimation); // Reset animations if unit starts doing wierd things.
     };
 
-}, 0.1, [_unit,_animState, _captiveSwitch, _originalPos, _startingTime, _minWaitingTime, false] ] call CBA_fnc_addPerFrameHandler;
+}, 0.1, [_unit,_animState, _originalPos, _startingTime, _minWaitingTime, false] ] call CBA_fnc_addPerFrameHandler;
 
+["medical_onUnconscious", [_unit, true]] call EFUNC(common,globalEvent);

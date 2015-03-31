@@ -70,5 +70,5 @@ if (_amountOfDamage > 0.05) then {
         _fractureID = (_fractures select (_amountOf - 1) select 0) + 1;
     };
     _fractures pushback [_fractureID, _fractureType, _bodyPartn, 1 /* percentage treated */];
-    _unit setvariable [GVAR(fractures), _fractures, true];
+    _unit setvariable [QGVAR(fractures), _fractures, true];
 };

@@ -4,7 +4,7 @@
  * Get the turret indices of ffv turrets.
  *
  * Argument:
- * 0: Vehicle type (String)
+ * 0: Vehicle (Object)
  *
  * Return value:
  * Turret index of the vehicles gunner. Empty array means no ffv turrets. (Array)
@@ -15,11 +15,11 @@ private ["_vehicle", "_turrets", "_turret", "_config"];
 
 _vehicle = _this select 0;
 
-_turrets = [_vehicle] call FUNC(getTurrets);
+_turrets = allTurrets [_vehicle, true];
 
 _turret = [];
 {
-  _config = configFile >> "CfgVehicles" >> _vehicle;
+  _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
   _config = [_config, _x] call FUNC(getTurretConfigPath);
 

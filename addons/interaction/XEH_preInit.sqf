@@ -2,6 +2,8 @@
 
 ADDON = false;
 
+PREP(addPassengerActions);
+PREP(addPassengersActions);
 PREP(addSelectableItem);
 PREP(applyButtons);
 PREP(canInteractWithCivilian);

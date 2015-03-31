@@ -74,6 +74,7 @@ switch (_this select 0) do {
             if (_isReady) then {
                 call FUNC(showDistance);
                 [false] call FUNC(showCenter);
+                [] call FUNC(dataTransfer);
             };
 
             [_this select 1] call CBA_fnc_removePerFrameHandler;
