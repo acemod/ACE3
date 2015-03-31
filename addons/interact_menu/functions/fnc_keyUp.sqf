@@ -31,9 +31,7 @@ if(GVAR(actionSelected)) then {
 
     // Check the action conditions
     _actionData = GVAR(selectedAction) select 0;
-    systemChat "Checking Condition";
     if ([_target, _player, _actionData select 6] call (_actionData select 4)) then {
-        systemChat format ["Condition met: %1", [_target, _player, _actionData select 6, (_actionData select 3)]];
         // Call the statement
         [_target, _player, _actionData select 6] call (_actionData select 3);
 
