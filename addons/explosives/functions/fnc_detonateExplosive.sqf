@@ -28,6 +28,12 @@ _result = true;
 
 if (!_ignoreRange && {(_unit distance (_item select 0)) > _range}) exitWith {false};
 
+_helper = (attachedTo (_item select 0));
+if (!isNull(_helper)) then {
+	detach (_item select 0);
+	deleteVehicle _helper;
+};
+
 if (getNumber (ConfigFile >> "CfgAmmo" >> typeof (_item select 0) >> "TriggerWhenDestroyed") == 0) then {
 	private ["_exp", "_previousExp"];
 	_previousExp = _item select 0;
@@ -44,7 +50,7 @@ if (getNumber (ConfigFile >> "CfgAmmo" >> typeof (_item select 0) >> "TriggerWhe
 [{
 		_explosive = _this;
 		if (!isNull _explosive) then {
-				_explosive setDamage 1;
+			_explosive setDamage 1;
 		};
 }, _item select 0, _item select 1, 0] call EFUNC(common,waitAndExecute);
 

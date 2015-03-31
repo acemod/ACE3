@@ -21,7 +21,6 @@ closeDialog 0;
 call EFUNC(interaction,hideMenu);
 EXPLODE_3_PVT(_this,_explosive,_magazine,_trigger);
 _config = ConfigFile >> "CfgACE_Triggers" >> _trigger;
-GVAR(explosive) = objNull;
 
 // If the onSetup function returns true, it is handled elsewhere
 if (isText(_config >> "onSetup") && {[_explosive,_magazine] call compile getText (_config >> "onSetup")}) exitWith {};

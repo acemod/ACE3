@@ -50,7 +50,18 @@ if (isText(_magazineTrigger >> "ammo")) then {
 	_ammo = getText (_magazineTrigger >> "ammo");
 };
 _triggerSpecificVars pushBack _triggerConfig;
+private ["_defuseHelper"];
+_defuseHelper = createVehicle ["ACE_DefuseObject", _pos, [], 0, "NONE"];
+_defuseHelper setPosATL _pos;
+
 _explosive = createVehicle [_ammo, _pos, [], 0, "NONE"];
+_explosive attachTo [_defuseHelper, [0,0,0], ""];
+
+_expPos = getPosATL _explosive;
+_defuseHelper enableSimulationGlobal false;
+_defuseHelper setPosATL (((getPosATL _defuseHelper) vectorAdd (_pos vectorDiff _expPos)));
+_explosive setPosATL _pos;
+_dir = (getDir _defuseHelper) - _dir;
 
 if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_triggerSpecificVars]
 	call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {_explosive};

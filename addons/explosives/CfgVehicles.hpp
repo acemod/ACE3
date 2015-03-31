@@ -15,7 +15,8 @@ class CfgVehicles {
         class ACE_Detonate {
           displayName = $STR_ACE_Explosives_Detonate;
           condition = QUOTE([_player] call FUNC(canDetonate));
-          statement = QUOTE([_player] call FUNC(openTransmitterUI););
+          statement = "";
+          insertChildren = QUOTE([_player] call FUNC(openTransmitterUI););
           exceptions[] = {"isNotSwimming"};
           showDisabled = 1;
           icon = PATHTOF(UI\Explosives_Menu_ca.paa);
@@ -33,16 +34,6 @@ class CfgVehicles {
           priority = 1;
           hotkey = "P";
         };
-        class ACE_Defuse {
-          displayName = $STR_ACE_Explosives_Defuse;
-          condition = QUOTE([_player] call FUNC(canDefuse));
-          statement = QUOTE([ARR_2(_player,EGVAR(Interaction,Target))] call FUNC(startDefuse););
-          exceptions[] = {"isNotSwimming"};
-          showDisabled = 0;
-          icon = PATHTOF(UI\Defuse_ca.paa);
-          priority = 0.8;
-          hotkey = "F";
-        };
         class ACE_Cellphone {
           displayName = $STR_ACE_Explosives_cellphone_displayName;
           condition = "('ACE_Cellphone' in (items ace_player))";
@@ -57,6 +48,36 @@ class CfgVehicles {
   };
 
   class Items_base_F;
+  class ACE_DefuseObject: Items_base_F {
+    XEH_ENABLED;
+    author = "ACE";
+    _generalMacro = "ACE_DefuseObject";
+    displayName = "ACE Defuse Helper";
+    mapSize = 0.2;
+    icon = "iconObject_1x2";
+    model = "\A3\Weapons_f\dummyweapon.p3d";
+    scope = 2;
+    scopeCurator = 1;
+    vehicleClass = "Cargo";
+    class ACE_Actions {
+        class ACE_MainActions {
+            selection = "";
+            distance = 5;
+            condition = "true";
+            class ACE_Defuse {
+                displayName = $STR_ACE_Explosives_Defuse;
+                condition = QUOTE([_player] call FUNC(canDefuse));
+                statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDefuse););
+                exceptions[] = {"isNotSwimming"};
+                showDisabled = 0;
+                icon = PATHTOF(UI\Defuse_ca.paa);
+                priority = 0.8;
+                hotkey = "F";
+                distance = 5;
+            };
+        };
+    };
+  };
   class ACE_Explosives_Place: Items_base_F {
     XEH_ENABLED;
     author = "ACE";
@@ -79,7 +100,8 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Explosives_TriggerMenu";
                 distance = 4;
                 condition = "true";
-                statement = QUOTE([_target getVariable QUOTE(QGVAR(class))] call FUNC(openTriggerSelectionUI););
+                statement = "";
+                insertChildren = QUOTE([ARR_3(_target getVariable QUOTE(QGVAR(class)),_target,_player)] call FUNC(openTriggerSelectionUI););
                 showDisabled = 0;
                 exceptions[] = {};
                 priority = 5;

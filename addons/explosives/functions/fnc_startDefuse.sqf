@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 private ["_unit","_target"];
 _unit = _this select 0;
-_target = _this select 1;
+_target = (attachedObjects (_this select 1)) select 0;
 
 _fnc_DefuseTime = {
   _target = _this select 1;

@@ -21,18 +21,4 @@ _isSpecialist = [_unit] call EFUNC(Common,isEOD);
 
 if (GVAR(RequireSpecialist) && {!_isSpecialist}) exitWith {false};
 
-_timeBombCore = nearestObject [_unit, "TimeBombCore"];
-_mineBase = nearestObject [_unit, "MineBase"];
-
-_distCore = _unit distance _timeBombCore;
-_distBase = _unit distance _mineBase;
-_distance = 10;
-if (_distCore < _distBase) then {
-  _distance = _distCore;
-  EGVAR(interaction,Target) = _timeBombCore;
-}else{
-  _distance = _distBase;
-  EGVAR(interaction,Target) = _mineBase;
-};
-if (isNil "_distance") exitWith {false};
-_distance < 4
+true

@@ -11,7 +11,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_mags", "_item", "_index", "_actions"];
+private ["_mags", "_item", "_index", "_children"];
 
 EXPLODE_1_PVT(_this,_unit);
 
@@ -34,22 +34,20 @@ _itemCount = [];
 _children = [];
 
 {
-    _action = [
-        [format ["Explosive_%1", _forEachIndex]],
-        format [getText(_x >> "displayName") + " (%1)", _itemCount select _foreachIndex],
-        getText(_x >> "picture"),
-        "",
-        {(_this select 2) call FUNC(openTriggerSelectionUI)},
-        {true},
-        2,
-        [false,false,false,false],
-        {},
-        [configName _x]
-    ] call EFUNC(interact_menu,createAction);
-
-    _action pushBack _unit;
-    _children pushBack _action
-
+    _children pushBack
+        [
+            [
+                format ["Explosive_%1", _forEachIndex],
+                format [getText(_x >> "displayName") + " (%1)", _itemCount select _foreachIndex],
+                getText(_x >> "picture"),
+                {(_this select 2) call FUNC(setupExplosive);},
+                {true},
+                {},
+                [_unit, configName _x]
+            ] call EFUNC(interact_menu,createAction),
+            [],
+            _unit
+        ];
 } foreach _list;
 
 _children

@@ -23,4 +23,10 @@ if (getNumber (ConfigFile >> "CfgAmmo" >> typeof _explosive >> "ACE_explodeOnDef
 	[_unit, -1, [_explosive, 1], true] call FUNC(detonateExplosive);
 };
 
+_helper = (attachedTo _explosive);
+if (!isNull(_helper)) then {
+	detach _explosive;
+	deleteVehicle _helper;
+};
+
 _unit action ["Deactivate", _unit, _explosive];
