@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  *
  * Select the next grenade muzzle to throw.
  *
@@ -104,18 +104,18 @@ _throwMuzzleNames = getArray (configfile >> "CfgWeapons" >> "Throw" >> "muzzles"
 // Readd magazines
 {
     for [{_i = 0}, {_i < (_x select 1)}, {_i = _i + 1}] do {
-        _unit addItemToUniform (_x select 0); 
+        _unit addItemToUniform (_x select 0);
     };
 } forEach _uniformMagsToRemove;
 
 {
     for [{_i = 0}, {_i < (_x select 1)}, {_i = _i + 1}] do {
-        _unit addItemToVest (_x select 0); 
+        _unit addItemToVest (_x select 0);
     };
 } forEach _vestMagsToRemove;
 
 {
     for [{_i = 0}, {_i < (_x select 1)}, {_i = _i + 1}] do {
-        _unit addItemToBackpack (_x select 0); 
+        _unit addItemToBackpack (_x select 0);
     };
 } forEach _backPackMagsToRemove;

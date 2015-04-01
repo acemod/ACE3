@@ -1,33 +1,24 @@
-/**
- * fn_medicClass.sqf
- * @Descr: Check if a unit is any medical class above normal.
- * @Author: Glowbal
+/*
+ * Author: Glowbal, KoffeinFlummi
+ * Check if a unit is any medical class
  *
- * @Arguments: [unit OBJECT]
- * @Return: BOOL
- * @PublicAPI: true
+ * Arguments:
+ * 0: The Unit <OBJECT>
+ * 1: Class <NUMBER> <OPTIONAL>
+ *
+ * ReturnValue:
+ * Is in of medic class <BOOL>
+ *
+ * Public: Yes
  */
 
 #include "script_component.hpp"
 
 private ["_unit","_class","_return"];
-_unit = [_this, 0, objNull,[ObjNull]] call BIS_fnc_Param;
+_unit = _this select 0;
+_medicN = if (count _this > 1) then {_this select 1} else {1};
 
-if (isnil QGVAR(setting_advancedMedicRoles)) exitwith {
-    true;
-};
+_class = _unit getVariable [QGVAR(medicClass),
+    getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "attendant")];
 
-if (GVAR(setting_advancedMedicRoles)) then {
-    _class = [_unit,QGVAR(medicClass)] call EFUNC(common,getDefinedVariable);
-    _return = switch (_class) do {
-        case 0: {false};
-        case 1: {true};
-        case 2: {true};
-        default {false};
-
-    };
-} else {
-    _return = true;
-};
-
-_return
+_class >= _medicN min GVAR(medicSetting)

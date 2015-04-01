@@ -29,6 +29,6 @@ if (local _unit) then {
 
     if (_unit getVariable [QGVAR(isSurrendering), false]) then {
         _unit setVariable [QGVAR(isSurrendering), false];
-        [_unit, true] call FUNC(surrender);
+        [_unit, true] call FUNC(setSurrendered);
     };
 };

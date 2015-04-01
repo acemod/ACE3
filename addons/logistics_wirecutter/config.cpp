@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common", "ace_interaction"};
+        requiredAddons[] = {"ace_interact_menu"};
         author[] = {"gpgpgpgp", "PabstMirror"};
         authorUrl = "";
         VERSION_CONFIG;
@@ -13,6 +13,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgSounds.hpp"
 #include "CfgWeapons.hpp"

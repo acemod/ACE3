@@ -10,5 +10,5 @@ if(alive _tracerObj && (count GVAR(traces)) > 0) then {
 	_objTVel = sqrt((_objVel select 0)^2 + (_objVel select 1)^2 + (_objVel select 2)^2);
 	_positions set[(count _positions), [(getPos _tracerObj), _objTVel]];
 } else {
-	[(_this select 1)] call FUNC(removeBISPFH);
+	[(_this select 1)] call cba_fnc_removePerFrameHandler;
 };		

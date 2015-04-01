@@ -1,21 +1,24 @@
-/**
- * fnc HandleFired.
- * Handles wind deflection for projectiles.
- * Is expected to be triggered by the fired eventhandler from BI.
- *
- * Params:
- *   1. unit: Object - Object the event handler is assigned to
- *   2. weapon: String - Fired weapon
- *   3. muzzle: String - Muzzle that was used
- *   4. mode: String - Current mode of the fired weapon
- *   5. ammo: String - Ammo used
- *   6. magazine: String - magazine name which was used
- *   7. projectile: Object - Object of the projectile that was shot (Arma 2: OA and onwards)
- *
+/*
  * Author: Glowbal, Ruthberg
+ * Handles wind deflection for projectiles.
  *
+ * Arguments:
+ * 0: unit - Object the event handler is assigned to <OBJECT>
+ * 1: weapon - Fired weapon <STRING>
+ * 2: muzzle - Muzzle that was used <STRING>
+ * 3: mode - Current mode of the fired weapon <STRING>
+ * 4: ammo - Ammo used <STRING>
+ * 5: magazine - magazine name which was used <STRING>
+ * 6: projectile - Object of the projectile that was shot <OBJECT>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [clientFiredBIS-XEH] call ace_winddeflection_fnc_handleFired
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
 private ["_unit", "_weapon", "_ammo", "_bullet", "_airFriction", "_index"];

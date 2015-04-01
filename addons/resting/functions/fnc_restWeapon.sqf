@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi, edited by commy2 and CAA-Picard
+ * Author: KoffeinFlummi, edited by commy2 and esteldunedain
  *
  * Rests the player's weapon if possible.
  *
@@ -27,6 +27,9 @@ _intersects = _this call FUNC(getIntersection);
 
 if (true in _intersects) then {
   _unit setVariable ["ACE_weaponRested", true];
+  if (_unit == ACE_PLAYER) then {
+    [QGVAR(bipodDeployed), true, QUOTE(PATHTOF(data\icons\icon_bipod.paa)), [1,1,1,1], -1] call EFUNC(common,displayIcon);
+  };
 
   private "_restedPosition";
   _restedPosition = getPosASL _unit;

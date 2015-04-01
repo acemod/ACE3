@@ -1,5 +1,5 @@
 /*
- * Author: Commy2 and CAA-Picard
+ * Author: Commy2 and esteldunedain
  * Handle weapon fire, heat up the weapon
  *
  * Argument:

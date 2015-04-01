@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ACE_common", "ACE_weather"};
         versionDesc = "ACE Wind Deflection";
         version = VERSION;
-        author[] = {$STR_ACE_Core_ACETeam, "Glowbal", "Ruthberg"};
+        author[] = {$STR_ACE_Common_ACETeam, "Glowbal", "Ruthberg"};
         authorUrl = "http://csemod.com";
     };
 };
@@ -28,4 +28,6 @@ class ACE_Settings {
         isClientSetable = 0;
     };
 };
-#include "CfgVehicles.h"
+
+#include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"

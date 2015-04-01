@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-/*
 private ["_gun", "_type", "_round", "_doFragTrack", "_doSpall"];
 if !(isNil QGVAR(enabled) && {GVAR(enabled)}) exitWith {};
 
@@ -23,7 +22,7 @@ if(_gun == player) then {
 		};
 	};
 };
-_doSpall = true;
+_doSpall = false;
 if(_doSpall) then {
 	if(GVAR(spallIsTrackingCount) <= 0) then {
 		GVAR(spallHPData) = [];
@@ -36,15 +35,14 @@ if(_doSpall) then {
 	};
 };
 // player sideChat format["c: %1", GVAR(spallIsTrackingCount)];
-[player, _round, [1,0,0,1]] call FUNC(addTrack);
+[player, _round, [1,0,0,1]] call nou_fnc_addTrack;
 if(_doFragTrack && alive _round) then {
-	GVAR(trackedObjects) set[(count GVAR(trackedObjects)), _round];
+	GVAR(trackedObjects) pushBack _round;
 	_spallTrack = [];
 	_spallTrackID = [];
-	[FUNC(trackFragRound), 0, [_round, (getPosASL _round), (velocity _round), _type, time, _gun, _doSpall, _spallTrack, _spallTrackID]] call cba_fnc_addPerFrameHandler;
+	[DFUNC(trackFragRound), 0, [_round, (getPosASL _round), (velocity _round), _type, time, _gun, _doSpall, _spallTrack, _spallTrackID]] call cba_fnc_addPerFrameHandler;
 	if(_doSpall) then {
 		[_round, 2, _spallTrack, _spallTrackID] call FUNC(spallTrack);
 	};
 	// player sideChat "WTF2";
 };
-*/

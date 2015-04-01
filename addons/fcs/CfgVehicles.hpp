@@ -26,9 +26,8 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ResetFCS {
                 displayName = $STR_ACE_FCS_ResetFCS;
-                enableInside = 1;
                 condition = QUOTE(call FUNC(canResetFCS));
-                statement = QUOTE([ARR_2(_vehicle,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
+                statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
                 priority = 1;
                 icon = "";
@@ -40,9 +39,8 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ResetFCS {
                 displayName = $STR_ACE_FCS_ResetFCS;
-                enableInside = 1;
                 condition = QUOTE(call FUNC(canResetFCS));
-                statement = QUOTE([ARR_2(_vehicle,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
+                statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
                 priority = 1;
                 icon = "";
@@ -432,7 +430,9 @@ class CfgVehicles {
         };*/
     };
 
-    class B_Heli_Light_01_F: Heli_Light_01_base_F {
+    class Heli_Light_01_unarmed_base_F: Heli_Light_01_base_F {};
+
+    class B_Heli_Light_01_F: Heli_Light_01_unarmed_base_F {
         /*class Turrets: Turrets {
             class CopilotTurret: CopilotTurret {};
         };*/
@@ -490,13 +490,13 @@ class CfgVehicles {
         };*/
     };
 
-    class I_Heli_light_03_base_F: Helicopter_Base_F {
+    class Heli_light_03_base_F;
+    class I_Heli_light_03_base_F: Heli_light_03_base_F {
         /*class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };*/
     };
-
-    class I_Heli_light_03_F: I_Heli_light_03_base_F {
+    class I_Heli_light_03_F: Heli_light_03_base_F {
         /*class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };*/

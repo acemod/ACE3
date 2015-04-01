@@ -35,7 +35,7 @@ private ["_weaponDirection", "_angleTarget"];
 
 _weaponDirection = _vehicle weaponDirection (_vehicle currentWeaponTurret _turret); // @todo doesn't work for sub turrets
 
-if (_turret isEqualTo ([typeOf _vehicle] call EFUNC(common,getTurretCommander))) then {
+if (_turret isEqualTo ([_vehicle] call EFUNC(common,getTurretCommander))) then {
     _weaponDirection = eyeDirection _vehicle;
 };
 
@@ -155,9 +155,9 @@ _FCSElevation = [];
     };
 } forEach _magazines;
 
-_vehicle setVariable [format ["%1_%2", QGVAR(Distance), _turret],  _distance,     true];
-_vehicle setVariable [format ["%1_%2", QGVAR(Magazines), _turret], _FCSMagazines, true];
-_vehicle setVariable [format ["%1_%2", QGVAR(Elevation), _turret], _FCSElevation, true];
-_vehicle setVariable [format ["%1_%2", QGVAR(Azimuth), _turret],   _FCSAzimuth,   true];
+[_vehicle, format ["%1_%2", QGVAR(Distance), _turret],      _distance] call EFUNC(common,setVariablePublic);
+[_vehicle, format ["%1_%2", QGVAR(Magazines), _turret], _FCSMagazines] call EFUNC(common,setVariablePublic);
+[_vehicle, format ["%1_%2", QGVAR(Elevation), _turret], _FCSElevation] call EFUNC(common,setVariablePublic);
+[_vehicle, format ["%1_%2", QGVAR(Azimuth), _turret],     _FCSAzimuth] call EFUNC(common,setVariablePublic);
 
 [format ["%1: %2", localize "STR_ACE_FCS_ZeroedTo", _distance]] call EFUNC(common,displayTextStructured);

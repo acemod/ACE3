@@ -1,11 +1,14 @@
-/**
- * fn_getTypeOfDamage.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Get the type of damage based upon the projectile.
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: The projectile classname or object <STRING>
+ *
+ * ReturnValue:
+ * Type of damage <STRING>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
@@ -13,6 +16,7 @@
 private ["_typeOfProjectile","_typeOfInjury"];
 _typeOfProjectile = _this select 0;
 _typeOfInjury = switch (true) do {
+    case (_typeOfProjectile isKindOf "Backblast"): {"backblast"};
     case (_typeOfProjectile iskindof "BulletBase"): {"Bullet"};
     case (_typeOfProjectile iskindof "GrenadeCore"): {"Grenade"};
     case (_typeOfProjectile iskindof "TimeBombCore"): {"Explosive"};
@@ -27,4 +31,5 @@ _typeOfInjury = switch (true) do {
     case (_typeOfProjectile == "VehicleCrash"): {"VehicleCrash"};
     default {"Unknown"};
 };
-_typeOfInjury
+// TODO replace the capitalization on the switch results instead..
+toLower _typeOfInjury;

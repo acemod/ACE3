@@ -23,33 +23,33 @@ _hitpoints = [];
 private "_hitpointClasses";
 _hitpointClasses = [_config >> "HitPoints"];
 {
-	private "_class";
-	_class = ([_config, _x] call FUNC(getTurretConfigPath)) >> "HitPoints";
+    private "_class";
+    _class = ([_config, _x] call FUNC(getTurretConfigPath)) >> "HitPoints";
 
-	if (isClass _class) then {
-		_hitpointClasses pushBack _class;
-	};
+    if (isClass _class) then {
+        _hitpointClasses pushBack _class;
+    };
 
 } forEach allTurrets _vehicle;
 
 // iterate through all classes with hitpoints and their parents
 {
-	private "_class";
-	_class = _x;
+    private "_class";
+    _class = _x;
 
-	while {isClass _class} do {
+    while {isClass _class} do {
 
-		for "_i" from 0 to (count _class - 1) do {
-			private "_entry";
-			_entry = configName (_class select _i);
+        for "_i" from 0 to (count _class - 1) do {
+            private "_entry";
+            _entry = configName (_class select _i);
 
-			if (!(_entry in _hitpoints) && {!isNil {_vehicle getHitPointDamage _entry}}) then {
-				_hitpoints pushBack _entry;
-			};
-		};
+            if (!(_entry in _hitpoints) && {!isNil {_vehicle getHitPointDamage _entry}}) then {
+                _hitpoints pushBack _entry;
+            };
+        };
 
-		_class = inheritsFrom _class;
-	};
+        _class = inheritsFrom _class;
+    };
 
 } forEach _hitpointClasses;
 

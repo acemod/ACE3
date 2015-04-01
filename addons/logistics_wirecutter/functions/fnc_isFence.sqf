@@ -1,16 +1,19 @@
-/* fnc_isFence.sqf
-*
-* Author: PabstMirror
-*
-* Checks if object is a fence.  Should work on any fence type, even (typeof == "").
-* Call is fairly expensive because of all of the string checking.
-*
-* Argument:
-* 0: OBJECT - Ojbect to test
-*
-* Return value:
-* BOOL
-*/
+/*
+ * Author: PabstMirror
+ * Checks if object is a fence.  Should work on any fence type, even (typeof == "").
+ * Call is fairly expensive because of all of the string checking.
+ *
+ * Arguments:
+ * 0: An Object To Test <OBJECT>
+ *
+ * Return Value:
+ * Is it a fence <BOOL>
+ *
+ * Example:
+ * [aFence] call ace_logistics_wirecutter_fnc_isFence
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 //find is case sensitive, so keep everything lowercase
@@ -27,14 +30,14 @@ _typeOf = toLower (typeOf _object);
 _returnValue = false;
 
 if (_typeOf != "") then {
-  _returnValue = _typeOf in (FENCE_A3_TYPENAMES + FENCE_AIA_TYPENAMES);
+    _returnValue = _typeOf in (FENCE_A3_TYPENAMES + FENCE_AIA_TYPENAMES);
 } else {
-  _typeOf = toLower (str _object);  //something like "123201: wall_indfnc_9.p3d"
-  {
-    if ((_typeOf find _x) != -1) then {
-      _returnValue = true;
-    };
-  } forEach (FENCE_A3_P3DS + FENCE_AIA_P3DS);
+    _typeOf = toLower (str _object);  //something like "123201: wall_indfnc_9.p3d"
+    {
+        if ((_typeOf find _x) != -1) then {
+            _returnValue = true;
+        };
+    } forEach (FENCE_A3_P3DS + FENCE_AIA_P3DS);
 };
 
 _returnValue

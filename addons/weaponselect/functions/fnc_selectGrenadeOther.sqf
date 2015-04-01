@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard, commy2
+ * Author: esteldunedain, commy2
  *
  * Cycle through non explosive grenades.
  *
@@ -35,10 +35,10 @@ if (_nextMuzzle != "") then {
 } else {
   // There is a no muzzle with magazines --> select nothing
   GVAR(CurrentGrenadeMuzzleOther) = "";
-
-  _text = [localize "STR_ACE_WeaponSelect_NoMiscGrenadeLeft", [1,0,0]] call EFUNC(common,stringToColoredText);
-  [composeText [lineBreak, _text]] call EFUNC(common,displayTextStructured);
-
+  if (GVAR(DisplayText)) then {
+    _text = [localize "STR_ACE_WeaponSelect_NoMiscGrenadeLeft", [1,0,0]] call EFUNC(common,stringToColoredText);
+    [composeText [lineBreak, _text]] call EFUNC(common,displayTextStructured);
+  };
 };
 
 GVAR(CurrentGrenadeMuzzleIsFrag) = false;

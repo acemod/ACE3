@@ -7,7 +7,7 @@ class CfgVehicles {
         function = QFUNC(moduleNameTags);
         scope = 2;
         isGlobal = 1;
-        icon = QUOTE(PATHTOF(UI\IconNameTags_ca.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_NameTags_ca.paa));
         class Arguments {
             class PlayerNamesViewDistance {
                 displayName = "Player Names View Dist.";
@@ -53,6 +53,15 @@ class CfgVehicles {
                         name = "Force Show";
                         value = 1;
                     };
+                };
+            };
+            class showCursorTagForVehicles {
+                displayName = "Show for Vehicles";
+                description = "Show cursor NameTag for vehicle commander (only if client has name tags enabled)Default: No";
+                typeName = "BOOL";
+                class values {
+                    class Yes {name = "Yes"; value = 1;};
+                    class No {default = 1; name = "No"; value = 0;};
                 };
             };
         };

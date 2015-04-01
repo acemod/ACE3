@@ -16,7 +16,7 @@
 
  EXPLODE_2_PVT(_this,_unit,_weapon);
 
-if (_weapon = "") exitWith {-1};
+if (_weapon == "") exitWith {-1};
 
 [
     primaryWeapon _unit,

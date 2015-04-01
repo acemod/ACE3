@@ -1,5 +1,5 @@
-
 class SlotInfo;
+class MuzzleSlot;
 
 class CfgWeapons {
 
@@ -20,7 +20,7 @@ class CfgWeapons {
         };
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_H"};
             };
         };
@@ -59,7 +59,7 @@ class CfgWeapons {
         };
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_H"};
             };
         };
@@ -74,7 +74,7 @@ class CfgWeapons {
 
     class EBR_base_F: Rifle_Long_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_B"};
             };
         };
@@ -82,7 +82,7 @@ class CfgWeapons {
 
     class DMR_01_base_F: Rifle_Long_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_B"};
             };
         };
@@ -90,7 +90,7 @@ class CfgWeapons {
 
     class LMG_Mk200_F: Rifle_Long_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_H"};
             };
         };
@@ -98,7 +98,7 @@ class CfgWeapons {
 
     class LMG_Zafir_F: Rifle_Long_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_B"};
             };
         };
@@ -115,7 +115,7 @@ class CfgWeapons {
         };
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_L"};
             };
         };
@@ -129,7 +129,7 @@ class CfgWeapons {
         };
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_L"};
             };
         };
@@ -148,7 +148,7 @@ class CfgWeapons {
 
     class pdw2000_base_F: Rifle_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
             };
         };
@@ -156,7 +156,7 @@ class CfgWeapons {
 
     class SMG_01_Base: Rifle_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
             };
         };
@@ -164,7 +164,7 @@ class CfgWeapons {
 
     class SMG_02_base_F: Rifle_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
             };
         };
@@ -180,7 +180,7 @@ class CfgWeapons {
 
     class hgun_P07_F: Pistol_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
                 compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
             };
@@ -189,7 +189,7 @@ class CfgWeapons {
 
     class hgun_Rook40_F: Pistol_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
                 compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
             };
@@ -198,7 +198,7 @@ class CfgWeapons {
 
     class hgun_ACPC2_F: Pistol_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
             };
         };
@@ -206,7 +206,7 @@ class CfgWeapons {
 
     class hgun_Pistol_heavy_01_F: Pistol_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {
+            class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
             };
         };
@@ -230,7 +230,7 @@ class CfgWeapons {
     class muzzle_snds_H: ItemCore {
         class ItemInfo: InventoryMuzzleItem_Base_F {
             class MagazineCoef {
-                initSpeed = 1.0;
+                initSpeed = 1.05;
             };
 
             class AmmoCoef {
@@ -263,7 +263,7 @@ class CfgWeapons {
     class muzzle_snds_L: muzzle_snds_H {
         class ItemInfo: ItemInfo {
             class MagazineCoef {
-                initSpeed = 1.0;
+                initSpeed = 1.05;
             };
 
             class AmmoCoef {
@@ -296,7 +296,7 @@ class CfgWeapons {
     class muzzle_snds_M: muzzle_snds_H {
         class ItemInfo: ItemInfo {
             class MagazineCoef {
-                initSpeed = 1.0;
+                initSpeed = 1.05;
             };
 
             class AmmoCoef {
@@ -329,7 +329,7 @@ class CfgWeapons {
     class muzzle_snds_B: muzzle_snds_H {
         class ItemInfo: ItemInfo {
             class MagazineCoef {
-                initSpeed = 1.0;
+                initSpeed = 1.05;
             };
 
             class AmmoCoef {
@@ -362,7 +362,7 @@ class CfgWeapons {
     class muzzle_snds_H_MG: muzzle_snds_H {
         class ItemInfo: ItemInfo {
             class MagazineCoef {
-                initSpeed = 1.0;
+                initSpeed = 1.05;
             };
 
             class AmmoCoef {
@@ -395,7 +395,7 @@ class CfgWeapons {
     class muzzle_snds_H_SW: muzzle_snds_H_MG {
         class ItemInfo: ItemInfo {
             class MagazineCoef {
-                initSpeed = 1.0;
+                initSpeed = 1.05;
             };
 
             class AmmoCoef {
@@ -428,7 +428,73 @@ class CfgWeapons {
     class muzzle_snds_acp: muzzle_snds_H {
         class ItemInfo: ItemInfo {
             class MagazineCoef {
-                initSpeed = 1.0;
+                initSpeed = 1.05;
+            };
+
+            class AmmoCoef {
+                hit = 0.9;
+                visibleFire = 0.5;
+                audibleFire = 0.1;
+                visibleFireTime = 0.5;
+                audibleFireTime = 0.5;
+                cost = 1.0;
+                typicalSpeed = 1.0;
+                airFriction = 1.0;
+            };
+
+            class MuzzleCoef {
+                dispersionCoef = "0.8f";
+                artilleryDispersionCoef = "1.0f";
+                fireLightCoef = "0.5f";
+                recoilCoef = "1.0f";
+                recoilProneCoef = "1.0f";
+                minRangeCoef = "1.0f";
+                minRangeProbabCoef = "1.0f";
+                midRangeCoef = "1.0f";
+                midRangeProbabCoef = "1.0f";
+                maxRangeCoef = "1.0f";
+                maxRangeProbabCoef = "1.0f";
+            };
+        };
+    };
+
+    class muzzle_snds_338_black: ItemCore {
+        class ItemInfo: InventoryMuzzleItem_Base_F {
+            class MagazineCoef {
+                initSpeed = 1.05;
+            };
+
+            class AmmoCoef {
+                hit = 0.9;
+                visibleFire = 0.5;
+                audibleFire = 0.1;
+                visibleFireTime = 0.5;
+                audibleFireTime = 0.5;
+                cost = 1.0;
+                typicalSpeed = 1.0;
+                airFriction = 1.0;
+            };
+
+            class MuzzleCoef {
+                dispersionCoef = "0.8f";
+                artilleryDispersionCoef = "1.0f";
+                fireLightCoef = "0.5f";
+                recoilCoef = "1.0f";
+                recoilProneCoef = "1.0f";
+                minRangeCoef = "1.0f";
+                minRangeProbabCoef = "1.0f";
+                midRangeCoef = "1.0f";
+                midRangeProbabCoef = "1.0f";
+                maxRangeCoef = "1.0f";
+                maxRangeProbabCoef = "1.0f";
+            };
+        };
+    };
+
+    class muzzle_snds_93mmg: ItemCore {
+        class ItemInfo: InventoryMuzzleItem_Base_F {
+            class MagazineCoef {
+                initSpeed = 1.05;
             };
 
             class AmmoCoef {

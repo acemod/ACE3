@@ -52,4 +52,18 @@ class CfgWeapons {
       uniformModel = "\A3\weapons_F\ammo\mag_univ.p3d";
     };
   };
+  class ACE_Cellphone: ACE_ItemCore {
+    scope = 2;
+    displayName = $STR_ACE_Explosives_cellphone_displayName;
+    descriptionShort = $STR_ACE_Explosives_cellphone_description;
+    picture = PATHTOF(Data\UI\Cellphone_UI.paa);
+    model = "\A3\weapons_F\ammo\mag_univ.p3d";
+    ACE_Range = 15000;
+    ACE_Detonator = 1;
+
+    class ItemInfo: ACE_ExplosiveItem {
+      mass = 2;
+      uniformModel = "\A3\weapons_F\ammo\mag_univ.p3d";
+    };
+  };
 };

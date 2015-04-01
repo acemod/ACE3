@@ -1,64 +1,119 @@
-//fnc_renderMenu.sqf
+/*
+ * Author: NouberNou and esteldunedain
+ * Render an interaction menu and it's children recursively
+ *
+ * Argument:
+ * 0: Parent path <ARRAY>
+ * 1: Action data <ARRAY>
+ * 2: 2D position <ARRAY>
+ * 3: Angle range available for rendering <ARRAY>
+ *
+ * Return value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_object", "_actionData", "_distance", "_index", "_pos", "_cursorScreenPos", "_path", "_menuDepth", "_opacity", "_currentRenderDepth", "_radialOffset", "_active", "_x", "_offset", "_newPos", "_forEachIndex"];
+private ["_menuInSelectedPath", "_path", "_menuDepth", "_currentRenderDepth", "_x", "_offset", "_newPos", "_forEachIndex"];
 
-_object = _this select 0;
-_actionData = _this select 1;
-_distance = _actionData select 5;
-_index = _this select 2;
+EXPLODE_4_PVT(_this,_parentPath,_action,_sPos,_angles);
+EXPLODE_3_PVT(_action,_actionData,_activeChildren,_actionObject);
+EXPLODE_2_PVT(_angles,_centerAngle,_maxAngleSpan);
 
-if((count _this) > 3) then {
-	_pos = _this select 3;
+_menuDepth = (count GVAR(menuDepthPath));
+
+//BEGIN_COUNTER(constructing_paths);
+
+// Store path to action
+_path = +_parentPath;
+_path pushBack [_actionData select 0,_actionObject];
+
+// Check if the menu is on the selected path
+_menuInSelectedPath = true;
+{
+    if (_forEachIndex >= (count GVAR(menuDepthPath))) exitWith {
+        _menuInSelectedPath = false;
+    };
+    if !(_x isEqualTo (GVAR(menuDepthPath) select _forEachIndex)) exitWith {
+        _menuInSelectedPath = false;
+    };
+} forEach _path;
+
+//END_COUNTER(constructing_paths);
+//BEGIN_COUNTER(constructing_colors);
+
+// Render icon
+// ARGB Color (First Hex Pair is transparancy)
+_color = "#FFFFFFFF";
+if(!_menuInSelectedPath) then {
+    if (_menuDepth > 0) then {
+        _color = format ["#%1FFFFFF", [255 * ((((count _path) - 1)/_menuDepth) max 0.25)] call EFUNC(common,toHex)];
+    } else {
+        _color = format ["#%1FFFFFF", [255 * 0.75] call EFUNC(common,toHex)];
+    };
+};
+
+//END_COUNTER(constructing_colors);
+//BEGIN_COUNTER(fnc_renderIcons);
+
+[_actionData select 1, _color, _sPos, 1, 1, 0, _actionData select 2, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
+
+//END_COUNTER(fnc_renderIcons);
+
+//BEGIN_COUNTER(currentOptions);
+
+// Add the action to current options
+GVAR(currentOptions) pushBack [_this, _sPos, _path];
+
+//END_COUNTER(currentOptions);
+
+// Exit without rendering children if it isn't
+if !(_menuInSelectedPath) exitWith {true};
+
+//BEGIN_COUNTER(children);
+
+private ["_numChildren","_angleSpan","_angle","_angleInterval","_scale","_offset"];
+_numChildren = count _activeChildren;
+_angleSpan = _maxAngleSpan min (55 * ((_numChildren) - 1));
+if (_angleSpan >= 305) then {
+    _angleSpan = 360;
+};
+_angleInterval = 55;
+if (_angleSpan < 360) then {
+    if (_numChildren > 1) then {
+        _angleInterval = _angleSpan / (_numChildren - 1);
+    };
 } else {
-	if(typeName (_actionData select 2) == "ARRAY") then {
-		_pos = _object modelToWorld (_actionData select 2);
-	} else {
-		_pos = _object modelToWorld (_object selectionPosition (_actionData select 2));
-	};
+    _angleInterval = _angleSpan / (_numChildren);
 };
-_cursorScreenPos = (positionCameraToWorld [0, 0, 0]);
-if(_cursorScreenPos distance _pos <= _distance) then {
-	_path = [];
-	if((count _this) > 4) then {
-		_path = +(_this select 4);
-	};
-	_menuDepth = (count GVAR(menuDepthPath));
+if (_numChildren == 1) then {
+    _angleInterval = 55;
+};
 
-	_opacity = 1;
-	if(_menuDepth > 0 && _index != (GVAR(menuDepthPath) select (GVAR(renderDepth)))) then {
-		_opacity = ((GVAR(renderDepth)/_menuDepth)) max 0.25;
-	};
-	_path set[(count _path), _index];
-	// player sideChat format["r: %1", _actionData select 2];
-	[_actionData select 0, [1,1,1,_opacity], _pos, 1, 1, 0, _actionData select 1, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
-	GVAR(currentOptions) set[(count GVAR(currentOptions)), [_this, _pos, _path]];
-	_currentRenderDepth = -1;
-	_currentRenderDepth = GVAR(renderDepth);
-	GVAR(renderDepth) = GVAR(renderDepth) + 1;
-	if(_index == (GVAR(menuDepthPath) select (GVAR(renderDepth)-1))) then {
-		_radialOffset = 0;
-		{
-            // if(_index != (GVAR(menuDepthPath) select (GVAR(renderDepth)))) then {
-                this = _object;
-                _target = _object;
-                _player = ACE_player;
-                _active = [_object, ACE_player] call (_x select 4);
-                // diag_log text format["_active: %1: %2", (_x select 0), _active];
-                if(_active) then {
-                    _offset = [GVAR(vecLineMap), (270*(GVAR(renderDepth)%2))-(_radialOffset*45)] call FUNC(rotateVectLine);
-                    _mod = 0.1*_distance;
-                    _newPos = [
-                        (_pos select 0) + ((_offset select 0)*_mod),
-                        (_pos select 1) + ((_offset select 1)*_mod),
-                        (_pos select 2) + ((_offset select 2)*_mod)
-                    ];
-                    // drawLine3D [_pos, _newPos, [1,0,0,1]];
-                    [_object, _x, _forEachIndex, _newPos, _path] call FUNC(renderMenu);
-                    _radialOffset = _radialOffset + 1;
-                };
-            // };
-		} forEach (_actionData select 6);
-	};
-	GVAR(renderDepth) = GVAR(renderDepth) - 1;
+// Scale menu based on the amount of children
+_scale = 0.17 * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.1) max 0.5);
+// Animate menu scale
+if (_menuInSelectedPath && (_menuDepth == count _path)) then {
+    _scale = _scale * (0.3 + 0.7 * (((diag_tickTime - GVAR(expandedTime)) * 8) min 1));
 };
+
+_target = _actionObject;
+_player = ACE_player;
+
+//END_COUNTER(children);
+_angle = _centerAngle - _angleSpan / 2;
+{
+    //BEGIN_COUNTER(children);
+    private ["_offset","_newPos"];
+    _newPos = [(_sPos select 0) -_scale * cos _angle,
+               (_sPos select 1) +_scale * (sin _angle) * 4/3];
+
+    //drawLine3D [_pos, _newPos, [1,0,0,0.8]];
+    //END_COUNTER(children);
+    [_path, _x, _newPos, [_angle, 150]] call FUNC(renderMenu);
+
+    _angle = _angle + _angleInterval;
+} forEach _activeChildren;
+
+true
