@@ -49,7 +49,7 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
-        class Carry: Bandage {
+        /*class Carry: Bandage {
             displayName = "";
             displayNameProgress = "";
             treatmentLocations[] = {"All"};
@@ -72,7 +72,7 @@ class ACE_Medical_Actions {
             displayNameProgress = "";
             condition = QUOTE(DFUNC(canCarry));
             callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, false)] call  DFUNC(actionCarryUnit));
-        };
+        };*/
     };
 
     class Advanced {
@@ -223,7 +223,7 @@ class ACE_Medical_Actions {
             animationPatient = "";
             itemConsumed = 0;
         };
-        class Carry: fieldDressing {
+        /*class Carry: fieldDressing {
             displayName = "";
             displayNameProgress = "";
             treatmentLocations[] = {"All"};
@@ -246,7 +246,7 @@ class ACE_Medical_Actions {
             displayNameProgress = "";
             condition = QUOTE(DFUNC(canCarry));
             callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, false)] call  DFUNC(actionCarryUnit));
-        };
+        };*/
 
     };
 };

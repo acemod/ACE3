@@ -937,7 +937,7 @@ class CfgVehicles {
                     enableInside = 1;
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
-                class Carry {
+                /*class Carry {
                     displayName = "$STR_ACE_MEDICAL_CARRY";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'body', 'Carry')] call DFUNC(canTreatCached));
@@ -958,7 +958,7 @@ class CfgVehicles {
                     hotkey = "";
                     enableInside = 1;
                     //icon = PATHTOF(UI\icons\bandage.paa);
-                };
+                };*/
 
                 class TriageCard {
                     displayName = "Triage Card";
