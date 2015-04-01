@@ -7,6 +7,7 @@
  * 0: Unit (OBJECT)
  * 1: Classname (String)
  * 2: Type (String)
+ * 3: Container (String, Optional)
  *
  * Return Value:
  * Array:
@@ -19,12 +20,32 @@
 
 EXPLODE_3_PVT(_this,_unit,_classname,_type);
 private "_addedToPlayer";
+private "_container";
+private "_canAdd";
+
+_canAdd = false;
 _addedToPlayer = true;
+
+if((count _this) > 3) then {
+	_container = _this select 4;
+} else {
+	_container = nil;
+};
+
+if(!isNil "_container" && _type != "weapon") then {
+	switch (_container) do {
+		case "vest": { _canAdd = _unit canAddItemToVest _classname; };
+		case "backpack": { _canAdd = _unit canAddItemToBackpack _classname; };
+		case "uniform": { _canAdd = _unit canAddItemToUniform _classname; };
+	};
+} else {
+	_canAdd = _unit canAdd _classname;
+};
 
 switch (_type) do {
     case "weapon": {
         if (!isClass(ConfigFile >> "CfgWeapons" >> _classname)) exitWith {};
-        if (_unit canAdd _classname) then {
+        if (_canAdd) then {
             _unit addWeaponGlobal _classname;
         } else {
             _addedToPlayer = false;
@@ -36,7 +57,7 @@ switch (_type) do {
     };
     case "magazine": {
         if (!isClass(ConfigFile >> "CfgMagazines" >> _classname)) exitWith {};
-        if (_unit canAdd _classname) then {
+        if (_canAdd) then {
             _unit addMagazineGlobal _classname;
         } else {
             _addedToPlayer = false;
@@ -48,7 +69,7 @@ switch (_type) do {
     };
     case "item": {
         if (!isClass(ConfigFile >> "CfgWeapons" >> _classname)) exitWith {};
-        if (_unit canAdd _classname) then {
+        if (_canAdd) then {
             _unit addItem _classname;
         } else {
             _addedToPlayer = false;
