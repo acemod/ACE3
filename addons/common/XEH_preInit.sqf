@@ -72,6 +72,8 @@ PREP(getGunner);
 PREP(getHitPoints);
 PREP(getHitPointsWithSelections);
 PREP(getInPosition);
+PREP(getItemType);
+PREP(getItemTypeWeapon);
 PREP(getMarkerType);
 PREP(getName);
 PREP(getNumberFromMissionSQM);
