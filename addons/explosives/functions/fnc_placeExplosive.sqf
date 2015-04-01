@@ -21,13 +21,8 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_pos", "_dir", "_magazineClass", "_ammo", "_triggerSpecificVars", "_unit", "_triggerConfig", "_explosive"];
-_unit = _this select 0;
-_pos = _this select 1;
-_dir = _this select 2;
-_magazineClass = _this select 3;
-_triggerConfig = _this select 4;
-_triggerSpecificVars = _this select 5;
+private ["_ammo", "_explosive"];
+EXPLODE_6_PVT(_this,_unit,_pos,_dir,_magazineClass,_triggerConfig,_triggerSpecificVars);
 if (count _this > 6) then {
 	deleteVehicle (_this select 6);
 };
@@ -55,13 +50,12 @@ _defuseHelper = createVehicle ["ACE_DefuseObject", _pos, [], 0, "NONE"];
 _defuseHelper setPosATL _pos;
 
 _explosive = createVehicle [_ammo, _pos, [], 0, "NONE"];
-_explosive attachTo [_defuseHelper, [0,0,0], ""];
+_defuseHelper attachTo [_explosive, [0,0,0], ""];
+_defuseHelper setVariable [QGVAR(Explosive),_explosive,true];
 
 _expPos = getPosATL _explosive;
-_defuseHelper enableSimulationGlobal false;
 _defuseHelper setPosATL (((getPosATL _defuseHelper) vectorAdd (_pos vectorDiff _expPos)));
 _explosive setPosATL _pos;
-_dir = (getDir _defuseHelper) - _dir;
 
 if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_triggerSpecificVars]
 	call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {_explosive};

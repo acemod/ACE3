@@ -15,18 +15,17 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_unit","_target"];
-_unit = _this select 0;
-_target = (attachedObjects (_this select 1)) select 0;
+EXPLODE_2_PVT(_this,_unit,_target);
+_target = attachedTo (_target);
 
 _fnc_DefuseTime = {
-  _target = _this select 1;
+  EXPLODE_2_PVT(_this,_specialist,_target);
 
   _defuseTime = 5;
   if (isNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> "ACE_DefuseTime")) then {
     _defuseTime = getNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> "ACE_DefuseTime");
   };
-  if (!(_this select 0) && {GVAR(PunishNonSpecialists)}) then {
+  if (!_specialist && {GVAR(PunishNonSpecialists)}) then {
     _defuseTime = _defuseTime * 1.5;
   };
   _defuseTime

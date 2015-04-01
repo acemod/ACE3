@@ -17,10 +17,8 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_unit", "_explosive", "_clacker", "_config", "_magazineClass", "_requiredItems", "_hasRequired"];
-_unit = _this select 0;
-_explosive = _this select 1;
-_magazineClass = _this select 2;
+private ["_clacker", "_config", "_requiredItems", "_hasRequired"];
+EXPLODE_3_PVT(_this,_unit,_explosive,_magazineClass);
 // Config is the last item in the list of passed in items.
 _config = (_this select 3) select (count (_this select 3) - 1);
 

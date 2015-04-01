@@ -14,8 +14,12 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private "_unit";
-_unit = _this select 0;
+private ["_specialist"];
+EXPLODE_2_PVT(_this,_unit,_target);
+if (isNull(_target getVariable [QGVAR(Explosive),objNull])) exitWith {
+    deleteVehicle _target;
+    false
+};
 if (vehicle _unit != _unit || {!("ACE_DefusalKit" in (items _unit))}) exitWith {false};
 _isSpecialist = [_unit] call EFUNC(Common,isEOD);
 

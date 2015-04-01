@@ -66,7 +66,7 @@ class CfgVehicles {
             condition = "true";
             class ACE_Defuse {
                 displayName = $STR_ACE_Explosives_Defuse;
-                condition = QUOTE([_player] call FUNC(canDefuse));
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDefuse));
                 statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDefuse););
                 exceptions[] = {"isNotSwimming"};
                 showDisabled = 0;

@@ -19,10 +19,8 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_item","_result", "_ignoreRange", "_unit", "_range"];
-_unit = _this select 0;
-_range = _this select 1;
-_item = _this select 2;
+private ["_result", "_ignoreRange", "_helper"];
+EXPLODE_3_PVT(_this,_unit,_range,_item);
 _ignoreRange = (_range == -1);
 _result = true;
 

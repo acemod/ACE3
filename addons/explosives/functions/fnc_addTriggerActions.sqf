@@ -15,9 +15,9 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_magazine", "_hasRequiredItems","_triggerTypes", "_children", "_detonators", "_required", "_magTriggers"];
-_magazine = _this select 0;
-_explosive = _this select 1;
+private ["_hasRequiredItems","_triggerTypes", "_children",
+	"_detonators", "_required", "_magTriggers"];
+EXPLODE_2_PVT(_this,_magazine,_explosive);
 _detonators = [ACE_player] call FUNC(getDetonators);
 
 _triggerTypes = [_magazine] call FUNC(triggerType);
@@ -37,9 +37,11 @@ _children = [];
 				[
 					format ["Trigger_%1", _forEachIndex],
 					if(isText(_magTriggers >> configName _x >> "displayName"))then
-						{getText(_magTriggers >> configName _x >> "displayName")}else{getText(_x >> "displayName")},
+						{getText(_magTriggers >> configName _x >> "displayName")}
+						else{getText(_x >> "displayName")},
 					if(isText(_magTriggers >> configName _x >> "picture"))then
-						{getText(_magTriggers >> configName _x >> "picture")}else{getText(_x >> "picture")},
+						{getText(_magTriggers >> configName _x >> "picture")}
+						else{getText(_x >> "picture")},
 					{(_this select 2) call FUNC(selectTrigger);},
 					{true},
 					{},

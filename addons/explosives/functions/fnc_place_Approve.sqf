@@ -43,26 +43,3 @@ _setup addEventHandler ["EpeContactStart", FUNC(onLanded)];
 _setup enableSimulationGlobal true;
 _player playActionNow "MedicOther";
 _player removeMagazine (_setup getVariable [QGVAR(Class), ""]);
-
-/*
-[{
-	private ["_setup", "_player"];
-	_setup = _this;
-	_player = ACE_player;
-	_player setVariable [QGVAR(PlantingExplosive), false];
-	if (!isNull _setup) then {
-		private ["_mag", "_dir", "_delayTime"];
-		_mag = _setup getVariable [QGVAR(Class), ""];
-		_dir = _setup getVariable [QGVAR(Direction), 0];
-		// TODO: Might need to handle this at some point?
-		//_delayTime = (getNumber(ConfigFile >> "CfgMagazines" >> _mag >> "ACE_DelayTime")) - 5;
-		//if (_delayTime > 0) then {
-		//	sleep _delayTime;
-		//};
-		[_player, GetPosATL _setup, _dir, _mag, _setup getVariable QGVAR(Trigger),
-		[_setup getVariable QGVAR(Timer)], true] call FUNC(placeExplosive);
-		deleteVehicle _setup;
-		_player RemoveMagazine _mag;
-	};
-}, _setup, 5, 0.5] call EFUNC(common,waitAndExecute);
-*/

@@ -12,27 +12,28 @@
  * Public: No
  */
 #include "script_component.hpp"
-if (!((_this select 0) getVariable [QGVAR(Handled), false])) then {
-	(_this select 0) setVariable [QGVAR(Handled), true];
-	if (!isNull (_this select 1) && {(_this select 1) isKindOf "AllVehicles"}) then {
-		_player RemoveMagazine _mag;
-		_explosive attachTo [(_this select 1)];
-		_dir = _dir - (getDir (_this select 1));
-		[[_explosive, _dir, 0], QFUNC(setPosition)] call EFUNC(common,execRemoteFnc);
-	} else {
-		[{
-			EXPLODE_2_PVT(_this,_player,_explosive);
-			private ["_pos"];
-			_player setVariable [QGVAR(PlantingExplosive), false];
+EXPLODE_2_PVT(_this,_explosive,_hitTarget);
+
+if ((_explosive getVariable [QGVAR(Handled), false])) exitWith {};
+
+_explosive setVariable [QGVAR(Handled), true];
+if (!isNull _hitTarget && {_hitTarget isKindOf "AllVehicles"}) then {
+	_explosive attachTo [_hitTarget];
+	private "_dir";
+	_dir = _setup getVariable [QGVAR(Direction), 0];
+	_dir = _dir - (getDir _hitTarget);
+	[[_explosive, _dir, 0], QFUNC(setPosition)] call EFUNC(common,execRemoteFnc);
+} else {
+	[{
+		EXPLODE_2_PVT(_this,_player,_explosive);
+		private "_pos";
+		_player setVariable [QGVAR(PlantingExplosive), false];
+		if (surfaceIsWater _pos) then {
+			_pos = getPosASL _explosive;
+			_explosive setPosASL _pos;
+		}else{
 			_pos = getPosATL _explosive;
-			//_explosive enableSimulationGlobal false;
-			if (surfaceIsWater _pos) then {
-				_pos = getPosASL _explosive;
-				_explosive setPosASL _pos;
-			}else{
-				_explosive setPosATL _pos;
-			};
-			_player RemoveMagazine _mag;
-		}, [ACE_player, _this select 0], 0.5, 0.1] call EFUNC(common,waitAndExecute);
-	};
+			_explosive setPosATL _pos;
+		};
+	}, [ACE_player, _explosive], 0.5, 0.1] call EFUNC(common,waitAndExecute);
 };

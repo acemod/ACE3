@@ -16,9 +16,7 @@
  */
 #include "script_component.hpp"
 closeDialog 0;
-private ["_unit", "_class"];
-_unit = _this select 0;
-_class = _this select 1;
+EXPLODE_2_PVT(_this,_unit,_class);
 GVAR(placer) = _unit;
 // TODO: check MP performance and MP compatible.
 GVAR(Setup) = createVehicle [getText(ConfigFile >> "CfgMagazines" >> _class >> "ACE_SetupObject"),[0,0,-10000],[], 0, "NONE"];
@@ -47,5 +45,5 @@ GVAR(TweakedAngle) = 180;
   localize "STR_ACE_Explosives_ScrollAction"] call EFUNC(interaction,showMouseHint);
 _unit setVariable [QGVAR(Place), [_unit, "DefaultAction",
   {GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call FUNC(place_Approve);}] call EFUNC(common,AddActionEventHandler)];
-_unit setVariable [QGVAR(Cancel), [_unit, "MenuBack",
+_unit setVariable [QGVAR(Cancel), [_unit, "zoomtemp",
   {GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call FUNC(place_Cancel);}] call EFUNC(common,AddActionEventHandler)];

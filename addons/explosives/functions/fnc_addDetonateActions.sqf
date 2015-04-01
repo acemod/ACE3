@@ -15,10 +15,9 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_unit","_result", "_item", "_children"];
+private ["_result", "_item", "_children"];
 call EFUNC(interaction,hideMenu);
-_unit = _this select 0;
-_detonator = _this select 1;
+EXPLODE_2_PVT(_this,_unit,_detonator);
 _range = GetNumber (ConfigFile >> "CfgWeapons" >> _detonator >> "ACE_Range");
 
 _result = [_unit] call FUNC(getPlacedExplosives);

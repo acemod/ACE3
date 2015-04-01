@@ -29,4 +29,4 @@ if (isNil {GVAR(placer)}) then {
 GVAR(placer) = objNull;
 call EFUNC(interaction,hideMouseHint);
 [ACE_player, "DefaultAction", ACE_player getVariable [QGVAR(Place),  -1]] call EFUNC(Common,removeActionEventHandler);
-[ACE_player, "MenuBack",      ACE_player getVariable [QGVAR(Cancel), -1]] call EFUNC(Common,removeActionEventHandler);
+[ACE_player, "zoomtemp",      ACE_player getVariable [QGVAR(Cancel), -1]] call EFUNC(Common,removeActionEventHandler);
