@@ -21,7 +21,9 @@ GVAR(currentSelectedSelectionN) = if (count _this > 2) then {_this select 2} els
 
 GVAR(displayPatientInformationTarget) = if (_show) then {_target} else {ObjNull};
 
-[_target, ACE_player] call FUNC(requestWoundSync);
+if (USE_WOUND_EVENT_SYNC) then {
+    [_target, ACE_player] call FUNC(requestWoundSync);
+};
 
 if (_show) then {
     ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutRsc [QGVAR(DisplayInformation),"PLAIN"];

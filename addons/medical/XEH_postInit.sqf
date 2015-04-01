@@ -217,13 +217,15 @@ if (isNil QGVAR(level)) then {
 
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
-// broadcast injuries to JIP clients in a MP session
-if (isMultiplayer) then {
-    // We are only pulling the wounds for the units in the player group. Anything else will come when the unit interacts with them.
-    if (hasInterface) then {
-        {
-            [_x, player] call FUNC(requestWoundSync);
-        }foreach units group player;
+if (USE_WOUND_EVENT_SYNC) then {
+    // broadcast injuries to JIP clients in a MP session
+    if (isMultiplayer) then {
+        // We are only pulling the wounds for the units in the player group. Anything else will come when the unit interacts with them.
+        if (hasInterface) then {
+            {
+                [_x, player] call FUNC(requestWoundSync);
+            }foreach units group player;
+        };
     };
 };
 
