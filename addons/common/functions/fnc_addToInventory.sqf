@@ -46,7 +46,12 @@ switch (_type) do {
     case "weapon": {
         if (!isClass(ConfigFile >> "CfgWeapons" >> _classname)) exitWith {};
         if (_canAdd) then {
-            _unit addWeaponGlobal _classname;
+             switch (_container) do {
+				case "vest": {  (vestContainer _unit) addWeaponCargoGlobal [_classname, 1]; };
+				case "backpack": {  (backpackContainer _unit) addWeaponCargoGlobal [_classname, 1]; };
+				case "uniform": {  (uniformContainer _unit) addWeaponCargoGlobal [_classname, 1]; };
+				default { _unit addWeaponGlobal _classname; };
+			};
         } else {
             _addedToPlayer = false;
             _pos = _unit modelToWorld [0,1,0.05];
@@ -58,7 +63,12 @@ switch (_type) do {
     case "magazine": {
         if (!isClass(ConfigFile >> "CfgMagazines" >> _classname)) exitWith {};
         if (_canAdd) then {
-            _unit addMagazineGlobal _classname;
+            switch (_container) do {
+				case "vest": {  (vestContainer _unit) addMagazineCargoGlobal [_classname, 1]; };
+				case "backpack": {  (backpackContainer _unit) addMagazineCargoGlobal [_classname, 1]; };
+				case "uniform": {  (uniformContainer _unit) addMagazineCargoGlobal [_classname, 1]; };
+				default { _unit addMagazineGlobal _classname; };
+			};
         } else {
             _addedToPlayer = false;
             _pos = _unit modelToWorld [0,1,0.05];
@@ -70,7 +80,12 @@ switch (_type) do {
     case "item": {
         if (!isClass(ConfigFile >> "CfgWeapons" >> _classname)) exitWith {};
         if (_canAdd) then {
-            _unit addItem _classname;
+           switch (_container) do {
+				case "vest": { _unit addItemToVest _classname; };
+				case "backpack": { _unit addItemToBackpack _classname; };
+				case "uniform": { _unit addItemToUniform _classname; };
+				default { _unit addItem _classname; };
+			};
         } else {
             _addedToPlayer = false;
             _pos = _unit modelToWorld [0,1,0.05];
