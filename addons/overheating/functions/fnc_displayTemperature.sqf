@@ -15,28 +15,10 @@
 
 EXPLODE_2_PVT(_this,_player,_weapon);
 
+private ["_temperature", "_scaledTemperature", "_color", "_count", "_string", "_text", "_picture"];
+
 // Calculate cool down of weapon since last shot
-private ["_string", "_overheat", "_temperature", "_time", "_barrelMass"];
-_string = format [QGVAR(%1), _weapon];
-_overheat = _player getVariable [_string, [0, 0]];
-_temperature = _overheat select 0;
-_time = _overheat select 1;
-
-// Get physical parameters
-_barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
-
-// Calculate cooling
-_temperature = [_temperature, _barrelMass, time - _time] call FUNC(cooldown);
-
-//["Overheating", _temperature, {format ["Temperature: %1 °C", _this]}] call EFUNC(common,log);
-
-// Store new temperature
-_time = time;
-_player setVariable [_string, [_temperature, _time], false];
-
-
-
-private ["_scaledTemperature", "_action", "_color", "_count", "_string", "_text", "_picture"];
+_temperature = [_player, _weapon, 0] call FUNC(updateTemperature)
 _scaledTemperature = (_temperature / 1000) min 1;
 
 _color = [
