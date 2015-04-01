@@ -27,7 +27,7 @@ _canAdd = false;
 _addedToPlayer = true;
 
 if((count _this) > 3) then {
-	_container = _this select 4;
+	_container = _this select 3;
 } else {
 	_container = nil;
 };
