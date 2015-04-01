@@ -79,13 +79,24 @@ _recurseFnc = {
 private "_actionsCfg";
 _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_SelfActions";
 
+private ["_baseDisplayName", "_baseIcon"];
+_baseDisplayName = "";
+_baseIcon = "";
+if (_objectType isKindOf "CAManBase") then {
+    _baseDisplayName = "Self Actions";
+    _baseIcon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
+} else {
+    _baseDisplayName = getText (configFile >> "CfgVehicles" >> _objectType >> "displayName");
+    _baseIcon = getText (configFile >> "CfgVehicles" >> _objectType >> "Icon");
+};
+
 // Create a master action to base on self action
 _actions = [
     [
         [
             "ACE_SelfActions",
-            "Self Actions",
-            "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa",
+            _baseDisplayName,
+            _baseIcon,
             {
                 // Dummy statement so it's not collapsed when there's no available actions
                 true
