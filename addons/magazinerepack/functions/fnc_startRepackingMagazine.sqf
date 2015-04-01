@@ -5,7 +5,9 @@
  * Precalcs all the event timings and starts the progressBar.
  *
  * Arguments:
- * 0: Magazine Classname <STRING>
+ * 0: Target <OBJECT>
+ * 1: Player <OBJECT>
+ * 2: Magazine Classname <STRING>
  *
  * Return Value:
  * Nothing
@@ -17,22 +19,18 @@
  */
 #include "script_component.hpp"
 
-private ["_player", "_fullMagazineCount", "_startingAmmoCounts", "_simEvents", "_totalTime", "_magazineCfg"];
+private ["_fullMagazineCount", "_startingAmmoCounts", "_simEvents", "_totalTime", "_magazineCfg"];
 
-PARAMS_1(_magazineClassname);
+PARAMS_2(_target,_player,_magazineClassname);
+
 if (isNil "_magazineClassname" || {_magazineClassname == ""}) exitWith {ERROR("Bad Mag Classname");};
-
 _magazineCfg = configfile >> "CfgMagazines" >> _magazineClassname;
 // Calculate actual ammo to transfer during repack
 _fullMagazineCount = getNumber (_magazineCfg >> "count");
 //Is linked belt magazine:
 _isBelt = (isNumber (_magazineCfg >> "ACE_isBelt")) && {(getNumber (_magazineCfg >> "ACE_isBelt")) == 1};
 
-
-_player = ACE_player;
-
 [_player] call EFUNC(common,goKneeling);
-
 
 _startingAmmoCounts = [];
 {
