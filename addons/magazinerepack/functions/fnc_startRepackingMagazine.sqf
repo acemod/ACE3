@@ -21,7 +21,7 @@
 
 private ["_fullMagazineCount", "_startingAmmoCounts", "_simEvents", "_totalTime", "_magazineCfg"];
 
-PARAMS_2(_target,_player,_magazineClassname);
+PARAMS_3(_target,_player,_magazineClassname);
 
 if (isNil "_magazineClassname" || {_magazineClassname == ""}) exitWith {ERROR("Bad Mag Classname");};
 _magazineCfg = configfile >> "CfgMagazines" >> _magazineClassname;

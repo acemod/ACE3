@@ -35,19 +35,20 @@ _structuredOutputText = if (_errorCode == 0) then {
 _picture = getText (configFile >> "CfgMagazines" >> _magazineClassname >> "picture");
 _structuredOutputText = _structuredOutputText + format ["<img align='center' size='1.8' color='#ffffff' image='%1'/> <br/>", _picture];
 
-_fullMags = 0;
-_partialMags = 0;
-{
-    EXPLODE_2_PVT(_x,_xClassname,_xCount);
-    if ((_xClassname == _magazineClassname) && {_xCount > 0}) then {
-        if (_xCount == _fullMagazineCount) then {
-            _fullMags = _fullMags + 1;
-        } else {
-            _partialMags = _partialMags + 1;
-        };
-    };
-} forEach (magazinesAmmoFull ACE_player);
+//EFUNC(common,displayTextStructured) doesn't have room for this, and I don't think it's nessacary, can fix in the future if wanted:
 
-_structuredOutputText = _structuredOutputText + format [("<t align='center'>" + (localize "STR_ACE_MagazineRepack_RepackedMagazinesCount") + "</t>"), _fullMags, _partialMags];
+// _fullMags = 0;
+// _partialMags = 0;
+// {
+    // EXPLODE_2_PVT(_x,_xClassname,_xCount);
+    // if ((_xClassname == _magazineClassname) && {_xCount > 0}) then {
+        // if (_xCount == _fullMagazineCount) then {
+            // _fullMags = _fullMags + 1;
+        // } else {
+            // _partialMags = _partialMags + 1;
+        // };
+    // };
+// } forEach (magazinesAmmoFull ACE_player);
+// _structuredOutputText = _structuredOutputText + format [("<t align='center'>" + (localize "STR_ACE_MagazineRepack_RepackedMagazinesCount") + "</t>"), _fullMags, _partialMags];
 
 [parseText _structuredOutputText] call EFUNC(common,displayTextStructured);
