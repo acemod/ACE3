@@ -60,7 +60,7 @@ switch (true) do {
     case (_type == 801): {["item","uniform"]};
 
     case (_type == 2^12): {
-        switch (toLower getNumber (_config >> "simulation")) do {
+        switch (toLower getText (_config >> "simulation")) do {
             case ("binocular"): {["weapon","binocular"]};
             case ("nvgoggles"): {["item","nvgoggles"]};
             case ("itemminedetector"): {["item","minedetector"]};
