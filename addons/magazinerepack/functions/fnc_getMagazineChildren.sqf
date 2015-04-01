@@ -37,8 +37,8 @@ _unitMagCounts = [];
 } forEach (magazinesAmmoFull _player);
 
 _childCondition = {
-    PARAMS_2(_target,_player,_classname);
-    (_classname in (magazines _player)) && {[_player, _player, ["isNotInside"]] call EFUNC(common,canInteractWith)};
+    PARAMS_3(_target,_player,_classname);
+    (_classname in (magazines _player)) && {[_player, _player, ["isNotInside"]] call EFUNC(common,canInteractWith)}
 };
 
 //Create the action children for all appropriate magazines
