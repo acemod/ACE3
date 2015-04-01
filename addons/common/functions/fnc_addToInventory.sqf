@@ -32,7 +32,7 @@ if((count _this) > 3) then {
     _container = nil;
 };
 
-if(!isNil "_container" && _type != "weapon") then {
+if(!isNil "_container") then {
     switch (_container) do {
         case "vest": { _canAdd = _unit canAddItemToVest _classname; };
         case "backpack": { _canAdd = _unit canAddItemToBackpack _classname; };
