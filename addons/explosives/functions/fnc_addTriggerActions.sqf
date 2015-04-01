@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [lbData [8866, lbCurSel 8866], _explosive] call ACE_Explosives_fnc_openTriggerSelectionUI;
+ * [lbData [8866, lbCurSel 8866], _explosive] call ACE_Explosives_fnc_addTriggerActions;
  *
  * Public: No
  */
@@ -22,7 +22,6 @@ _detonators = [ACE_player] call FUNC(getDetonators);
 
 _triggerTypes = [_magazine] call FUNC(triggerType);
 _magTriggers = ConfigFile >> "CfgMagazines" >> _magazine >> "ACE_Triggers";
-_count = 0;
 _children = [];
 {
 	_required = getArray (_x >> "requires");
@@ -37,8 +36,10 @@ _children = [];
 			[
 				[
 					format ["Trigger_%1", _forEachIndex],
-					if(isText(_magTriggers >> configName _x >> "displayName"))then{getText(_magTriggers >> configName _x >> "displayName")}else{getText(_x >> "displayName")},
-						if(isText(_magTriggers >> configName _x >> "picture"))then{getText(_magTriggers >> configName _x >> "picture")}else{getText(_x >> "picture")},
+					if(isText(_magTriggers >> configName _x >> "displayName"))then
+						{getText(_magTriggers >> configName _x >> "displayName")}else{getText(_x >> "displayName")},
+					if(isText(_magTriggers >> configName _x >> "picture"))then
+						{getText(_magTriggers >> configName _x >> "picture")}else{getText(_x >> "picture")},
 					{(_this select 2) call FUNC(selectTrigger);},
 					{true},
 					{},
@@ -47,13 +48,7 @@ _children = [];
 				[],
 				ACE_Player
 			];
-		_count = _count + 1;
 	};
-} count _triggerTypes;
-
-if (_count == 0) then {
-	[format[localize "STR_ACE_Explosives_NoTriggersAvailable",
-		getText(configFile >> "CfgMagazines" >> _magazine >> "DisplayName")]] call EFUNC(Common,displayTextStructured);
-};
+} foreach _triggerTypes;
 
 _children

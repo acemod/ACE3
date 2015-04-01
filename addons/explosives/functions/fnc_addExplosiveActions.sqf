@@ -34,11 +34,14 @@ _itemCount = [];
 _children = [];
 
 {
+    private "_name";
+    _name = if(isText(_x >> "displayNameShort") && {getText(_x >> "displayNameShort") != ""}) then
+        {getText (_x >> "displayNameShort")}else{getText(_x >> "displayName")};
     _children pushBack
         [
             [
                 format ["Explosive_%1", _forEachIndex],
-                format [getText(_x >> "displayName") + " (%1)", _itemCount select _foreachIndex],
+                format [_name + " (%1)", _itemCount select _foreachIndex],
                 getText(_x >> "picture"),
                 {(_this select 2) call FUNC(setupExplosive);},
                 {true},

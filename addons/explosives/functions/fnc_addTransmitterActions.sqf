@@ -9,12 +9,12 @@
  * Nothing
  *
  * Example:
- * [player] call ACE_Explosives_fnc_openTransmitterUI;
+ * [player] call ACE_Explosives_fnc_addTransmitterActions;
  *
  * Public: No
  */
 #include "script_component.hpp"
-private ["_items", "_unit", "_count", "_children", "_config"];
+private ["_items", "_unit", "_children", "_config"];
 _unit = _this select 0;
 _detonators = [_unit] call FUNC(getDetonators);
 _children = [];
@@ -28,18 +28,12 @@ _children = [];
 				getText(_config >> "picture"),
 				{},
 				{true},
-				{(_this select 2) call FUNC(openDetonateUI);},
+				{(_this select 2) call FUNC(addDetonateActions);},
 				[ACE_player,_x]
 			] call EFUNC(interact_menu,createAction),
 			[],
 			ACE_Player
 		];
 } foreach _detonators;
-
-if (count _detonators == 0) then {
-	call EFUNC(interaction,hideMenu);
-	"ACE_Explosives" call EFUNC(interaction,openMenuSelf);
-	[format[localize "STR_ACE_Explosives_NoTriggersAvailable", "player"]] call EFUNC(Common,displayTextStructured);
-};
 
 _children

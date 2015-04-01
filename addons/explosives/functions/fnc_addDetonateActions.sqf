@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [player, "ACE_M26_Clacker"] call ACE_Explosives_fnc_openDetonateUI;
+ * [player, "ACE_M26_Clacker"] call ACE_Explosives_fnc_addDetonateActions;
  *
  * Public: No
  */
@@ -23,7 +23,6 @@ _range = GetNumber (ConfigFile >> "CfgWeapons" >> _detonator >> "ACE_Range");
 
 _result = [_unit] call FUNC(getPlacedExplosives);
 _children = [];
-_count = 0;
 {
 	if (!isNull(_x select 0)) then {
 		_required = getArray (ConfigFile >> "CfgACE_Triggers" >> (_x select 4) >> "requires");
@@ -44,13 +43,8 @@ _count = 0;
 					[],
 					ACE_Player
 				];
-			_count = _count + 1;
 		};
 	};
 } foreach _result;
-if (_count == 0) then {
-	call EFUNC(interaction,hideMenu);
-	[localize "STR_ACE_Explosives_NoExplosivesAvailable"] call EFUNC(common,displayTextStructured);
-};
 
 _children

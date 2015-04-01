@@ -5,7 +5,7 @@ class CfgPatches {
     units[] = {};
     weapons[] = {"ACE_Clacker", "ACE_DefusalKit", "ACE_M26_Clacker", "ACE_DeadManSwitch", "ACE_Cellphone"};
     requiredVersion = REQUIRED_VERSION;
-    requiredAddons[] = {"ace_interaction", "ace_interact_menu"};
+    requiredAddons[] = {"ace_interaction"};
     author[] = {"Garth 'L-H' de Wet"};
     authorUrl = "http://garth.snakebiteink.co.za/";
     VERSION_CONFIG;
