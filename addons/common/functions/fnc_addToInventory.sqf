@@ -27,19 +27,19 @@ _canAdd = false;
 _addedToPlayer = true;
 
 if((count _this) > 3) then {
-	_container = _this select 3;
+    _container = _this select 3;
 } else {
-	_container = nil;
+    _container = nil;
 };
 
 if(!isNil "_container" && _type != "weapon") then {
-	switch (_container) do {
-		case "vest": { _canAdd = _unit canAddItemToVest _classname; };
-		case "backpack": { _canAdd = _unit canAddItemToBackpack _classname; };
-		case "uniform": { _canAdd = _unit canAddItemToUniform _classname; };
-	};
+    switch (_container) do {
+        case "vest": { _canAdd = _unit canAddItemToVest _classname; };
+        case "backpack": { _canAdd = _unit canAddItemToBackpack _classname; };
+        case "uniform": { _canAdd = _unit canAddItemToUniform _classname; };
+    };
 } else {
-	_canAdd = _unit canAdd _classname;
+    _canAdd = _unit canAdd _classname;
 };
 
 switch (_type) do {
