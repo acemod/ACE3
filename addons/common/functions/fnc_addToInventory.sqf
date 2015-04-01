@@ -39,6 +39,7 @@ if(!isNil "_container") then {
         case "uniform": { _canAdd = _unit canAddItemToUniform _classname; };
     };
 } else {
+    _container = "";
     _canAdd = _unit canAdd _classname;
 };
 
