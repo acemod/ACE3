@@ -57,6 +57,8 @@ PREP(getAllGear);
 PREP(getCaptivityStatus);
 PREP(getConfigCommander);
 PREP(getConfigGunner);
+PREP(getConfigType);
+PREP(getConfigTypeObject);
 PREP(getDeathAnim);
 PREP(getDefaultAnim);
 PREP(getDefinedVariable);
