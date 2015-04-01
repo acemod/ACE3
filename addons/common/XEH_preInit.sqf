@@ -11,6 +11,7 @@ PREP(addLineToDebugDraw);
 PREP(addMapMarkerCreatedEventHandler);
 PREP(addScrollWheelEventHandler);
 PREP(addSetting);
+PREP(addToInventory);
 PREP(adminKick);
 PREP(ambientBrightness);
 PREP(applyForceWalkStatus);
