@@ -20,13 +20,13 @@ When using the ACE3 logo please do not stretch or skew it.
 ### Black
 <img src="https://raw.githubusercontent.com/KoffeinFlummi/ACE3/master/extras/assets/logo/black/ACE3-Logo.jpg?token=ABLaQPwJDmUmowjOZ4eNR1VtdbOZlESqks5VI9VvwA%3D%3D" width="128" height="30" />
 
-* [JPG (white background)](https://raw.githubusercontent.com/KoffeinFlummi/ACE3/192934e3b18ebbcc72bb46633242ec8e7d0eb4f1/extras/assets/logo/black/ACE3-Logo.jpg?token=ABLaQN56zoPb8yN4j1OM1WuN4iwJbDjsks5VCtSHwA%3D%3D)
-* [PNG (transparent background)](https://raw.githubusercontent.com/KoffeinFlummi/ACE3/192934e3b18ebbcc72bb46633242ec8e7d0eb4f1/extras/assets/logo/black/ACE3-Logo.png?token=ABLaQPk--d--9oKSb_PWJuioeV3jtDywks5VCtSWwA%3D%3D)
-* [EPS (vector file)](https://github.com/KoffeinFlummi/ACE3/raw/192934e3b18ebbcc72bb46633242ec8e7d0eb4f1/extras/assets/logo/black/ACE3-Logo.eps)
+* [JPG (white background)](https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg)
+* [PNG (transparent background)](https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.png)
+* [EPS (vector file)](https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.eps)
 
 ### White
 <img src="https://raw.githubusercontent.com/KoffeinFlummi/ACE3/master/extras/assets/logo/white/ACE3-Logo.jpg?token=ABLaQMonZRho-vpL1HSNd8iyyUo25DSNks5VI9XvwA%3D%3D" width="128" height="30" />
 
-* [JPG (black background)](https://raw.githubusercontent.com/KoffeinFlummi/ACE3/192934e3b18ebbcc72bb46633242ec8e7d0eb4f1/extras/assets/logo/white/ACE3-Logo.jpg?token=ABLaQM9GzfodtGXsCTfL2qF9yKPXkZ7Zks5VCtTLwA%3D%3D)
-* [PNG (transparent background)](https://raw.githubusercontent.com/KoffeinFlummi/ACE3/192934e3b18ebbcc72bb46633242ec8e7d0eb4f1/extras/assets/logo/white/ACE3-Logo.png?token=ABLaQC-ZR60ZPJfH6utNU9htimgS8pXHks5VCtTYwA%3D%3D)
-* [EPS (vector file)](https://github.com/KoffeinFlummi/ACE3/raw/192934e3b18ebbcc72bb46633242ec8e7d0eb4f1/extras/assets/logo/white/ACE3-Logo.eps)
+* [JPG (black background)](https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/white/ACE3-Logo.jpg)
+* [PNG (transparent background)](https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/white/ACE3-Logo.png)
+* [EPS (vector file)](https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/white/ACE3-Logo.eps)
