@@ -6,8 +6,7 @@
  * Arguments:
  * 0: Unit (OBJECT)
  * 1: Classname (String)
- * 2: Type (String)
- * 3: Container (String, Optional)
+ * 2: Container (String, Optional) uniform, vest, backpack
  *
  * Return Value:
  * Array:
@@ -16,21 +15,25 @@
  *
  * Public: Yes
  */
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_unit,_classname,_type);
+EXPLODE_2_PVT(_this,_unit,_classname);
 private "_addedToPlayer";
 private "_container";
 private "_canAdd";
+private "_type";
 
 _canAdd = false;
 _addedToPlayer = true;
 
-if((count _this) > 3) then {
-    _container = _this select 3;
+if((count _this) > 2) then {
+    _container = _this select 2;
 } else {
     _container = nil;
 };
+
+_type = [_classname] call EFUNC(common,getItemType);
 
 if(!isNil "_container") then {
     switch (_container) do {
@@ -43,9 +46,8 @@ if(!isNil "_container") then {
     _canAdd = _unit canAdd _classname;
 };
 
-switch (_type) do {
+switch ((_type select 0)) do {
     case "weapon": {
-        if (!isClass(ConfigFile >> "CfgWeapons" >> _classname)) exitWith {};
         if (_canAdd) then {
              switch (_container) do {
                 case "vest": {  (vestContainer _unit) addWeaponCargoGlobal [_classname, 1]; };
@@ -62,7 +64,6 @@ switch (_type) do {
         };
     };
     case "magazine": {
-        if (!isClass(ConfigFile >> "CfgMagazines" >> _classname)) exitWith {};
         if (_canAdd) then {
             switch (_container) do {
                 case "vest": {  (vestContainer _unit) addMagazineCargoGlobal [_classname, 1]; };
@@ -79,7 +80,6 @@ switch (_type) do {
         };
     };
     case "item": {
-        if (!isClass(ConfigFile >> "CfgWeapons" >> _classname)) exitWith {};
         if (_canAdd) then {
            switch (_container) do {
                 case "vest": { _unit addItemToVest _classname; };
