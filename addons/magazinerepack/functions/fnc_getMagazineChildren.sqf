@@ -16,6 +16,8 @@
  */
 #include "script_component.hpp"
 
+private ["_unitMagazines", "_unitMagCounts", "_xFullMagazineCount", "_index", "_childCondition", "_actions", "_displayName", "_picture", "_action"];
+
 PARAMS_2(_target,_player);
 
 // get all mags and ammo count

@@ -6,6 +6,7 @@
  * Arguments:
  * 0: How many rounds in a full magazine <NUMBER>
  * 1: Array of rounds in magazines <ARRAY>
+ * 2: Magazine is a belt <BOOL>
  *
  * Return Value:
  * Array in format [time, isBullet, array of ammo counts] <ARRAY>

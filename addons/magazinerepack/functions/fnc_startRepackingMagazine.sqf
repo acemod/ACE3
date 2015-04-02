@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-private ["_fullMagazineCount", "_startingAmmoCounts", "_simEvents", "_totalTime", "_magazineCfg"];
+private ["_magazineCfg", "_fullMagazineCount", "_isBelt", "_startingAmmoCounts", "_simEvents", "_totalTime"];
 
 PARAMS_3(_target,_player,_magazineClassname);
 
