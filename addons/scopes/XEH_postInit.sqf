@@ -92,3 +92,13 @@ if !(hasInterface) exitWith {};
 },
 {false},
 [201, [false, true, false]], false] call cba_fnc_addKeybind;
+
+// init shortdot
+["playerInventoryChanged", {
+    private "_optic";
+    _optic = _this select 1 select 9 select 2;
+
+    if (_optic == "ACE_optic_DMS" && {!(GETGVAR(shownShortdot,false))}) then {
+        [_optic] call FUNC(onShowShortdot);
+    };
+}] call EFUNC(common,addEventHandler);
