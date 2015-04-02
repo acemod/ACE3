@@ -1,4 +1,4 @@
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 // TODO: we should do this differently eventually
 private["_onActionId", "_offActionId"];

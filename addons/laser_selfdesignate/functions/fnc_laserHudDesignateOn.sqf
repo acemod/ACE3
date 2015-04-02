@@ -33,26 +33,9 @@ FUNC(laserHudDesignatePFH) = {
     
     // Retrieve the gunner and turret memory point information
     _gunnerInfo = [_vehicle, _weapon] call CBA_fnc_getFirer;
-    
-    _turret = [_vehicle, _gunnerInfo select 1] call CBA_fnc_getTurret;
-    _pov = getText (_turret >> "memoryPointGunnerOptics");
-    _gunBeg = getText (_turret >> "gunBeg");
-    _gunEnd = getText (_turret >> "gunEnd");    
-    TRACE_3("", _pov, _gunBeg, _gunEnd);
-
-    // Pull the PIP pov or barrel direction, depending on how the model is set up
-    _povPos = ATLtoASL ( _vehicle modelToWorld (_vehicle selectionPosition _pov ) );
-    _povDir = [0,0,0];
-    if(_pov == "pip0_pos") then {
-        _pipDir = ATLtoASL ( _vehicle modelToWorld (_vehicle selectionPosition "pip0_dir" ) ); 
-        _povDir = [_povPos, _pipDir] call BIS_fnc_vectorDiff;
-    } else {
-        _gunBeginPos = ATLtoASL ( _vehicle modelToWorld (_vehicle selectionPosition _gunBeg ) );
-        _gunEndPos = ATLtoASL ( _vehicle modelToWorld (_vehicle selectionPosition _gunEnd ) );
-        _povDir = [_gunEndPos, _gunBeginPos] call BIS_fnc_vectorDiff;
-    };
-    
-    TRACE_4("", _povDir, _povPos, _gunBeginPos, _gunEndPos);
+    _turretInfo = [_vehicle, _gunnerInfo select 1] call EFUNC(common,getTurretDirection);
+    _povPos = _turretInfo select 0;
+    _povDir = _turretInfo select 1;
     
     _result = [_povPos, _povDir] call EFUNC(laser,shootCone);
     

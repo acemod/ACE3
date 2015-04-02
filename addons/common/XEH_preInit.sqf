@@ -92,6 +92,7 @@ PREP(getTurretIndex);
 PREP(getTurrets);
 PREP(getTurretsFFV);
 PREP(getTurretsOther);
+PREP(getTurretDirection);
 PREP(getUavControlPosition);
 PREP(getVehicleCargo);
 PREP(getVehicleCodriver);

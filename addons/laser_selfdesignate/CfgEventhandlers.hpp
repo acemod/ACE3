@@ -13,7 +13,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_GetIn_EventHandlers {
     class B_Heli_Attack_01_F {
         class ADDON {
-            getIn = QUOTE(_this call FUNC(onGetin));
+            clientGetIn = QUOTE(_this call FUNC(onGetIn));
         };
     };
 };
@@ -21,7 +21,7 @@ class Extended_GetIn_EventHandlers {
 class Extended_GetOut_EventHandlers {
     class B_Heli_Attack_01_F {
         class ADDON {
-            getOut = QUOTE(_this call FUNC(onGetout));
+            clientGetOut = QUOTE(_this call FUNC(onGetOut));
         };
     };
 };
