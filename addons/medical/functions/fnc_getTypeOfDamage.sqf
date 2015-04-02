@@ -16,7 +16,6 @@
 private ["_typeOfProjectile","_typeOfInjury"];
 _typeOfProjectile = _this select 0;
 _typeOfInjury = switch (true) do {
-    case (_typeOfProjectile isKindOf "Backblast"): {"backblast"};
     case (_typeOfProjectile iskindof "BulletBase"): {"Bullet"};
     case (_typeOfProjectile iskindof "GrenadeCore"): {"Grenade"};
     case (_typeOfProjectile iskindof "TimeBombCore"): {"Explosive"};
@@ -29,7 +28,7 @@ _typeOfInjury = switch (true) do {
     case (_typeOfProjectile iskindof "BombCore"): {"Explosive"};
     case (_typeOfProjectile iskindof "Grenade"): {"Grenade"};
     case (_typeOfProjectile == "VehicleCrash"): {"VehicleCrash"};
-    default {"Unknown"};
+    default {_typeOfProjectile};
 };
 // TODO replace the capitalization on the switch results instead..
 toLower _typeOfInjury;
