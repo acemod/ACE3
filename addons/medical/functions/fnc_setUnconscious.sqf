@@ -4,6 +4,8 @@
  *
  * Arguments:
  * 0: The unit that will be put in an unconscious state <OBJECT>
+ * 1: Set unconsciouns <BOOL> <OPTIONAL>
+ * 2: Minimum unconscious time <NUMBER> <OPTIONAL>
  *
  * ReturnValue:
  * nil
@@ -13,9 +15,12 @@
 
 #include "script_component.hpp"
 
+#define DEFAULT_DELAY   (round(random(10)+5))
+
 private ["_unit", "_set", "_animState", "_originalPos", "_captiveSwitch", "_startingTime","_minWaitingTime"];
 _unit = _this select 0;
 _set = if (count _this > 1) then {_this select 1} else {true};
+_minWaitingTime = if (count _this > 2) then {_this select 2} else {DEFAULT_DELAY};
 
 if !(_set) exitwith {
     _unit setvariable ["ACE_isUnconscious", false,true];
@@ -71,7 +76,6 @@ _unit setUnitPos "DOWN";
 [_unit, [_unit] call EFUNC(common,getDeathAnim), 1, true] call EFUNC(common,doAnimation);
 
 _startingTime = time;
-_minWaitingTime = (round(random(10)+5));
 
 [{
     private ["_unit", "_vehicleOfUnit","_minWaitingTime", "_oldAnimation", "_captiveSwitch", "_hasMovedOut"];
