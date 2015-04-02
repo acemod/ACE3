@@ -156,7 +156,7 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
     };
 
     // "playerTurretChanged" event
-    [ACE_player] call FUNC(getTurretIndex);
+    _newPlayerTurret = [ACE_player] call FUNC(getTurretIndex);
     if !(_newPlayerTurret isEqualTo GVAR(OldPlayerTurret)) then {
         // Raise ACE event locally
         GVAR(OldPlayerTurret) = _newPlayerTurret;
