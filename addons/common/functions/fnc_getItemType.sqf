@@ -8,7 +8,7 @@
  *
  * Return value:
  * Item type. (Array)
- * 0: "weapon", "item", "magazine", "unknown" or "" (String)
+ * 0: "weapon", "item", "magazine" or "" (String)
  * 1: A description of the item (e.g. "primary" for a weapon or "vest" for a vest item)
  *
  */
@@ -24,18 +24,21 @@ if (_cfgType == "") exitWith {["",""]};
 
 if (_cfgType == "CfgGlasses") exitWith {["item","glasses"]};
 
-private "_config";
+private ["_config", "_type"];
+
 _config = configFile >> _cfgType >> _item;
 
-private "_type";
 _type = getNumber (_config >> "type");
 
 if (isNumber (_config >> "ItemInfo" >> "type")) then {
     _type = getNumber (_config >> "ItemInfo" >> "type");
 };
 
+private "_default";
+_default = ["item", "magazine"] select (_cfgType == "CfgMagazines");
+
 switch (true) do {
-    case (_type == 0): {["item","unknown"]};
+    case (_type == 0): {[_default,"unknown"]};
     case (_type == 2^0): {["weapon","primary"]};
     case (_type == 2^1): {["weapon","handgun"]};
     case (_type == 2^2): {["weapon","secondary"]};
@@ -43,8 +46,7 @@ switch (true) do {
     case (_type == 2^4): {["magazine","handgun"]}; // handgun
     case (_type == 2^8): {["magazine","primary"]}; // rifle
     case (_type == 2^9): {["magazine","secondary"]}; // rpg, mg, mines
-    case (_type == 768): {["magazine","secondary"]}; // NLAW
-    case (_type == 1536): {["magazine","secondary"]}; // titan
+  //case (_type  < 2^11): {["magazine","unknown"]};
 
     case (_type == 101): {["item","muzzle"]};
     case (_type == 201): {["item","optics"]};
@@ -67,15 +69,15 @@ switch (true) do {
 
     case (_type == 2^12): {
         switch (toLower getText (_config >> "simulation")) do {
+            case ("weapon"): {["weapon","binocular"]};
             case ("binocular"): {["weapon","binocular"]};
             case ("nvgoggles"): {["item","nvgoggles"]};
             case ("itemminedetector"): {["item","minedetector"]};
-            case ("weapon"): {["weapon","binocular"]};
-            default {["unknown","unknown"]};
+            default {[_default,"unknown"]};
         };
     };
 
     case (_type == 2^16): {["weapon","vehicle"]};
-    case (_type == 2^17): {["item","unknown"]}; // ???
-    default {["item","unknown"]};
+    case (_type == 2^17): {[_default,"unknown"]}; // ???
+    default {[_default,"unknown"]};
 };
