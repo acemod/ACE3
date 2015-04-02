@@ -75,6 +75,7 @@ if (_state) then {
         };
     };
 
+    if (!alive _unit) exitWith {};
     if (_unit getVariable ["ACE_isUnconscious", false]) exitWith {};  //don't touch animations if unconscious
 
     //if we are in "hands up" animationState, crack it now

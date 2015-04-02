@@ -192,6 +192,120 @@ class CfgWeapons {
         displayName = "$STR_ACE_RealisticNames_launch_NLAW_Name";
     };
 
+    // marksmen marksman
+    /*class DMR_02_base_F: Rifle_Long_Base_F {
+        displayName = "$STR_ACE_RealisticNames_DMR_02"; //MAR-10 .338";
+    };
+
+    class srifle_DMR_02_F: DMR_02_base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_02"; //MAR-10 .338 (Black)";
+    };
+
+    class srifle_DMR_02_camo_F: srifle_DMR_02_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_02_camo"; //MAR-10 .338 (Camo)";
+    };
+
+    class srifle_DMR_02_sniper_F: srifle_DMR_02_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_02_sniper"; //MAR-10 .338 (Sand)";
+    };
+
+    class DMR_03_base_F: Rifle_Long_Base_F {
+        displayName = "$STR_ACE_RealisticNames_DMR_03"; //Mk-I EMR 7.62 mm";
+    };
+
+    class srifle_DMR_03_F: DMR_03_base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03"; //Mk-I EMR 7.62 mm (Black)";
+    };
+
+    class srifle_DMR_03_khaki_F: srifle_DMR_03_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_khaki"; //Mk-I EMR 7.62 mm (Khaki)";
+    };
+
+    class srifle_DMR_03_tan_F: srifle_DMR_03_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_tan"; //Mk-I EMR 7.62 mm (Sand)";
+    };
+
+    class srifle_DMR_03_multicam_F: srifle_DMR_03_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_multicam"; //Mk-I EMR 7.62 mm (Camo)";
+    };
+
+    class srifle_DMR_03_woodland_F: srifle_DMR_03_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_woodland"; //Mk-I EMR 7.62 mm (Woodland)";
+    };
+
+    class srifle_DMR_03_spotter_F: srifle_DMR_03_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_spotter"; //NATO DMR (provisional) spotter";
+    };
+
+    class DMR_04_base_F: Rifle_Long_Base_F {
+        displayName = "$STR_ACE_RealisticNames_DMR_04"; //ASP-1 Kir 12.7 mm";
+    };
+
+    class srifle_DMR_04_F: DMR_04_base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_04"; //ASP-1 Kir 12.7 mm (Black)";
+    };
+
+    class srifle_DMR_04_Tan_F: srifle_DMR_04_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_04_Tan"; //ASP-1 Kir 12.7 mm (Tan)";
+    };
+
+    class DMR_05_base_F: Rifle_Long_Base_F {
+        displayName = "$STR_ACE_RealisticNames_DMR_05"; //Cyrus 9.3 mm";
+    };
+
+    class srifle_DMR_05_blk_F: DMR_05_base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_05_blk"; //Cyrus 9.3 mm (Black)
+    };
+
+    class srifle_DMR_05_hex_F: srifle_DMR_05_blk_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_05_hex"; //Cyrus 9.3 mm (Hex)";
+    };
+
+    class srifle_DMR_05_tan_f: srifle_DMR_05_blk_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_05_tan"; //Cyrus 9.3 mm (Tan)";
+    };
+
+    class DMR_06_base_F: Rifle_Long_Base_F {
+        displayName = "$STR_ACE_RealisticNames_DMR_06"; //Mk14 7.62 mm";
+    };
+
+    class srifle_DMR_06_camo_F: DMR_06_base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_06_camo"; //Mk14 7.62 mm (Camo)
+    };
+
+    class srifle_DMR_06_olive_F: srifle_DMR_06_camo_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_06_olive"; //Mk14 7.62 mm (Olive)";
+    };
+
+    // marksmen mgs
+    class MMG_01_base_F: Rifle_Long_Base_F {
+        displayName = "$STR_ACE_RealisticNames_MMG_01"; //Navid 9.3 mm";
+    };
+
+    class MMG_01_hex_F: MMG_01_base_F {
+        displayName = "$STR_ACE_RealisticNames_MMG_01_hex"; //Navid 9.3 mm (Hex)";
+    };
+
+    class MMG_01_tan_F: MMG_01_hex_F {
+        displayName = "$STR_ACE_RealisticNames_MMG_01_tan"; //Navid 9.3 mm (Tan)";
+    };
+
+    class MMG_02_base_F: Rifle_Long_Base_F {
+        displayName = "$STR_ACE_RealisticNames_MMG_02"; //SPMG .338";
+    };
+
+    class MMG_02_camo_F: MMG_02_base_F {
+        displayName = "$STR_ACE_RealisticNames_MMG_02_camo"; //SPMG .338 (MTP)";
+    };
+
+    class MMG_02_black_F: MMG_02_camo_F {
+        displayName = "$STR_ACE_RealisticNames_MMG_02_black"; //SPMG .338 (Black)";
+    };
+
+    class MMG_02_sand_F: MMG_02_camo_F {
+        displayName = "$STR_ACE_RealisticNames_MMG_02_sand"; //SPMG .338 (Sand)";
+    };*/
+
     // vehicle weapons
 
     // gatlings
