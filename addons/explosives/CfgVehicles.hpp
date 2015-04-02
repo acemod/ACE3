@@ -112,7 +112,7 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Explosives_Pickup";
                 distance = 4;
                 condition = "true";
-                statement = QUOTE(_player addMagazine (_target getVariable QUOTE(QGVAR(class)));deleteVehicle _target;);
+                statement = QUOTE([ARR_2(_player,_target getVariable QUOTE(QGVAR(class)))] call EFUNC(common,addToInventory);deleteVehicle _target;);
                 showDisabled = 0;
                 exceptions[] = {};
                 priority = 5;
