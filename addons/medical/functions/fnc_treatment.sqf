@@ -94,6 +94,12 @@ _callerAnim = [getText (_config >> "animationCaller"), getText (_config >> "anim
 if (_caller == _target) then {
     _callerAnim = [getText (_config >> "animationCallerSelf"), getText (_config >> "animationCallerSelfProne")] select (stance _caller == "PRONE");
 };
+
+// Cannot use secondairy weapon for animation
+if (currentWeapon _caller == secondaryWeapon _caller) then {
+    _caller selectWeapon (primaryWeapon _caller);
+};
+
 _wpn = ["non", "rfl", "pst"] select (["", primaryWeapon _caller, handgunWeapon _caller] find (currentWeapon _caller));
 _callerAnim = [_callerAnim, "[wpn]", _wpn] call CBA_fnc_replace;
 if (vehicle _caller == _caller && {_callerAnim != ""}) then {
