@@ -53,12 +53,11 @@ if (_distance < _backblastRange) then {
     _alpha = sqrt (1 - _distance / _backblastRange);
     _beta = sqrt 0.5;
 
-    _damage = 2 * _alpha * _beta * _backblastDamage;
+    _damage = _alpha * _beta * _backblastDamage;
     [_damage * 100] call BIS_fnc_bloodEffect;
 
-    // TODO: Sort this interaction with medical
-    if (isClass (configFile >> "CfgPatches" >> "ACE_Medical")) then {
-        [_firer, "HitBody", ([_firer, "", ((_firer getHitPointDamage "HitBody") + _damage), objNull, objNull] call EFUNC(medical,handleDamage))] call EFUNC(medical,setHitPointDamage);
+    if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {([_firer] call EFUNC(medical,hasMedicalEnabled))}) then {
+         [_firer, "HitBody", [_firer, "body", ((_firer getHitPointDamage "HitBody") + _damage), _firer, "backblast"] call EFUNC(medical,handleDamage)] call EFUNC(medical,setHitPointDamage);
     } else {
         _firer setDamage (damage _firer + _damage);
     };
