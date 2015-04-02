@@ -94,11 +94,26 @@ if !(hasInterface) exitWith {};
 [201, [false, true, false]], false] call cba_fnc_addKeybind;
 
 // init shortdot
-["playerInventoryChanged", {
-    private "_optic";
-    _optic = _this select 1 select 9 select 2;
+GVAR(showShortdot) = false;
 
-    if (_optic == "ACE_optic_DMS" && {!(GETGVAR(shownShortdot,false))}) then {
-        [_optic] call FUNC(onShowShortdot);
+["playerInventoryChanged", {
+    private "_showShortdot";
+    _showShortdot = _this select 1 select 9 select 2 == "ACE_optic_DMS";
+
+    if (GVAR(showShortdot)) then {
+        if (!_showShortdot) then {
+            // hide control and turn onDraw handler off
+            (uiNamespace getVariable ["ACE_ctrlShortdotReticle", controlNull]) ctrlShow false;
+            GVAR(showShortdot) = false;
+        };
+    } else {
+        if (_showShortdot) then {
+            // create control and turn onDraw handler on
+            ([QGVAR(reticle)] call BIS_fnc_rscLayer) cutRsc ["ACE_Shortdot_Reticle", "PLAIN", 0, false];
+            (uiNamespace getVariable "ACE_ctrlShortdotReticle") ctrlSetText QUOTE(PATHTOF(data\reticles\ace_shortdot_reticle_1.paa));
+            GVAR(showShortdot) = true;
+        };
     };
 }] call EFUNC(common,addEventHandler);
+
+addMissionEventHandler ["Draw3D", {if (GVAR(showShortdot)) then {call FUNC(onDrawShortdot)};}];

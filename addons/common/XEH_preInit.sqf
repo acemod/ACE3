@@ -81,6 +81,7 @@ PREP(getWeaponAzimuthAndInclination);
 PREP(getWeaponIndex);
 PREP(getWeaponState);
 PREP(getWindDirection);
+PREP(getZoom);
 PREP(goKneeling);
 PREP(hadamardProduct);
 PREP(hasItem);
