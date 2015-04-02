@@ -197,6 +197,7 @@ PREP(getDisplayConfigName);
 PREP(log);
 PREP(logControls);
 PREP(logDisplays);
+PREP(logModEntries);
 PREP(monitor);
 PREP(showUser);
 
