@@ -107,4 +107,21 @@ class CfgVehicles {
     class TransportItems {};
     class TransportBackpacks {};
   };
+
+    class Item_Base_F;
+    class ACE_bananaItem: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = $STR_ACE_Common_bananaDisplayName;
+        author = "$STR_ACE_Common_ACETeam";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class ACE_banana
+            {
+                name = "ACE_banana";
+                count = 1;
+            };
+        };
+    };
 };
