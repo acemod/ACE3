@@ -97,6 +97,8 @@ if !(hasInterface) exitWith {};
 GVAR(showShortdot) = false;
 
 ["playerInventoryChanged", {
+    if (_this select 1 isEqualTo []) exitWith {}; //@todo fix eh
+
     private "_showShortdot";
     _showShortdot = _this select 1 select 9 select 2 == "ACE_optic_DMS";
 
