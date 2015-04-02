@@ -8,6 +8,7 @@ ADDON = false;
 PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
 PREP(addSetting);
+PREP(addToInventory);
 PREP(adminKick);
 PREP(ambientBrightness);
 PREP(applyForceWalkStatus);
