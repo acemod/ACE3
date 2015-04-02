@@ -24,6 +24,7 @@ _damage       = _this select 2;
 _shooter      = _this select 3;
 _projectile   = _this select 4;
 
+
 if !(local _unit) exitWith {nil};
 
 if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {};
@@ -46,12 +47,17 @@ if (GVAR(level) >= 2) then {
     [_unit, _selection, _damage, _source, _projectile, _damageReturn] call FUNC(handleDamage_caching);
 
     if (_damageReturn > 0.9) then {
+
+        _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
+        _minLethalDamage = GVAR(minLethalDamages) select (GVAR(allAvailableDamageTypes) find _typeOfDamage);
+
         _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
         _newDamage = _damage - (damage _unit);
         if (_selection in _hitSelections) then {
             _newDamage = _damage - (_unit getHitPointDamage (_hitPoints select (_hitSelections find _selection)));
         };
-        if ([_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)) then {
+
+        if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
             if ([_unit] call FUNC(setDead)) then {
                 _damageReturn = 1;
             };

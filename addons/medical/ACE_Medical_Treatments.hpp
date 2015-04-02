@@ -443,6 +443,8 @@ class ACE_Medical_Advanced {
         class damageTypes {
             thresholds[] = {{0.1, 1}};
             selectionSpecific = 1;
+            lethalDamage = 0.01;
+
             class bullet {
                 // above damage, amount. Put the highest threshold to the left and lower the threshold with the elements to the right of it.
                 thresholds[] = {{0.1, 1}};
@@ -465,8 +467,9 @@ class ACE_Medical_Advanced {
                 selectionSpecific = 0;
             };
             class backblast {
-                thresholds[] = {{0.25, 5}};
+                thresholds[] = {{0, 2},{0.55, 5}, {1, 6}};
                 selectionSpecific = 0;
+                lethalDamage = 1;
             };
             class stab {
                 thresholds[] = {{0.1, 1}};
