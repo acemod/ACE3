@@ -44,9 +44,9 @@ FUNC(guidance_DIRECT_LOAL_PFH) = {
             
             _targetPos = _targetPos vectorAdd _addHeight;
 
-            _def = 0.0030;
+            _def = 0.0040;
             if(_distanceToShooter > 100) then {
-                _def = 0.0020;
+                _def = 0.0025;
             };
             
             _targetVectorSeeker = [_dagr, [_xVec, _yVec, _zVec], _targetPos] call FUNC(translateToWeaponSpace);
