@@ -203,7 +203,7 @@ class ACE_Medical_Actions {
             requiredMedic = 0;
             treatmentTime = 25;
             items[] = {};
-            condition = ""; // unconscious?
+            condition = "((_this select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
             callbackProgress = "";
