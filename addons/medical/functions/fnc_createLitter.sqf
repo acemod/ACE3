@@ -18,6 +18,8 @@ private ["_target", "_className", "_config", "_litter", "_createLitter", "_litte
 _target = _this select 0;
 _className = _this select 1;
 
+if !(GVAR(allowLitterCreation)) exitwith {};
+
 _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
 if (GVAR(level) >= 2) then {
     _config = (configFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);

@@ -116,6 +116,12 @@ class CfgVehicles {
                     };
                 };
             };
+            class allowLitterCreation {
+                displayName = "Enable Litter";
+                description = "Enable litter being created upon treatment";
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
             class preventInstaDeath {
                 displayName = "Prevent instant death";
                 description = "Have a unit move to unconscious instead of death";
@@ -131,7 +137,7 @@ class CfgVehicles {
 
     class ACE_moduleTreatmentConfiguration: ACE_Module {
         scope = 2;
-        displayName = "Treatment Configuration [ACE]";
+        displayName = "Treatment Settings [ACE]";
         icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(FUNC(moduleTreatmentConfiguration));
