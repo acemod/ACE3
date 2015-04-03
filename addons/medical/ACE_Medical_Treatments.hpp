@@ -49,34 +49,34 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
-        /*class Carry: Bandage {
-            displayName = "";
-            displayNameProgress = "";
+        class Tourniquet: Bandage {
+            displayName = "$STR_ACE_Medical_Apply_Tourniquet";
+            displayNameProgress = "$STR_ACE_Medical_Applying_Tourniquet";
+            items[] = {"ACE_tourniquet"};
+            treatmentTime = 6;
+            callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
+            condition = QUOTE(!([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo)));
+        };
+        class BodyBag: Bandage {
+            displayName = "$STR_ACE_MEDICAL_PlaceInBodyBag";
+            displayNameProgress = "$STR_ACE_MEDICAL_PlacingInBodyBag";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
-            treatmentTime = 0;
-            items[] = {};
-            condition = QUOTE(DFUNC(canCarry));
-            callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, true)] call  DFUNC(actionCarryUnit));
+            treatmentTime = 2;
+            items[] = {"ACE_bodyBag"};
+            condition = "!alive (_this select 1);";
+            callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));
             callbackFailure = "";
             callbackProgress = "";
-            itemConsumed = 0;
             animationPatient = "";
-            animationCaller = "";
-            animationCallerProne = "";
-            animationCallerSelf = "";
-            animationCallerSelfProne = "";
+            itemConsumed = 0;
         };
-        class Drag: Carry {
-            displayName = "";
-            displayNameProgress = "";
-            condition = QUOTE(DFUNC(canCarry));
-            callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, false)] call  DFUNC(actionCarryUnit));
-        };*/
     };
 
     class Advanced {
         class FieldDressing {
+            displayName = "$STR_ACE_Medical_Bandage";
+            displayNameProgress = "$STR_ACE_Medical_Bandaging";
             // Which locations can this treatment action be used? Available: Field, MedicalFacility, MedicalVehicle, All.
             treatmentLocations[] = {"All"};
             // What is the level of medical skill required for this treatment action? 0 = all soldiers, 1 = medic, 2 = doctor
@@ -107,24 +107,34 @@ class ACE_Medical_Actions {
             items[] = {"ACE_quikclot"};
         };
         class Tourniquet: fieldDressing {
+            displayName = "$STR_ACE_Medical_Apply_Tourniquet";
+            displayNameProgress = "$STR_ACE_Medical_Applying_Tourniquet";
             items[] = {"ACE_tourniquet"};
             treatmentTime = 6;
             callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
             condition = QUOTE(!([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo)));
         };
         class Morphine: fieldDressing {
+            displayName = "$STR_ACE_Medical_Inject_Morphine";
+            displayNameProgress = "$STR_ACE_Medical_Injecting_Morphine";
             items[] = {"ACE_morphine"};
             treatmentTime = 3;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_medication));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class Atropine: Morphine {
+            displayName = "$STR_ACE_Medical_Inject_Atropine";
+            displayNameProgress = "$STR_ACE_Medical_Injecting_Atropine";
             items[] = {"ACE_atropine"};
         };
         class Epinephrine: Morphine {
+            displayName = "$STR_ACE_Medical_Inject_Epinephrine";
+            displayNameProgress = "$STR_ACE_Medical_Injecting_Epinephrine";
             items[] = {"ACE_epinephrine"};
         };
         class BloodIV: fieldDressing {
+            displayName = "$STR_ACE_Medical_Transfuse_Blood";
+            displayNameProgress = "$STR_ACE_Medical_Transfusing_Blood";
             items[] = {"ACE_bloodIV"};
             requiredMedic = 1;
             treatmentTime = 7;
@@ -138,6 +148,8 @@ class ACE_Medical_Actions {
             items[] = {"ACE_bloodIV_250"};
         };
         class PlasmaIV: BloodIV {
+            displayName = "$STR_ACE_Medical_Transfuse_Plasma";
+            displayNameProgress = "$STR_ACE_Medical_Transfusing_Plasma";
             items[] = {"ACE_plasmaIV"};
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
@@ -148,6 +160,8 @@ class ACE_Medical_Actions {
             items[] = {"ACE_plasmaIV_250"};
         };
         class SalineIV: BloodIV {
+            displayName = "$STR_ACE_Medical_Transfuse_Saline";
+            displayNameProgress = "$STR_ACE_Medical_Transfusing_Saline";
             items[] = {"ACE_salineIV"};
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
@@ -158,6 +172,8 @@ class ACE_Medical_Actions {
             items[] = {"ACE_salineIV_250"};
         };
         class SurgicalKit: fieldDressing {
+            displayName = "";
+            displayNameProgress = "";
             items[] = {"ACE_surgicalKit"};
             treatmentLocations[] = {"MedicalFacility", "MedicalVehicle"};
             requiredMedic = 2;
@@ -167,6 +183,8 @@ class ACE_Medical_Actions {
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class PersonalAidKit: fieldDressing {
+            displayName = "";
+            displayNameProgress = "";
             items[] = {"ACE_personalAidKit"};
             treatmentLocations[] = {"All"};
             requiredMedic = 1;
@@ -176,6 +194,8 @@ class ACE_Medical_Actions {
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class CheckPulse: fieldDressing {
+            displayName = "";
+            displayNameProgress = "";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 2;
@@ -199,6 +219,8 @@ class ACE_Medical_Actions {
             condition = QUOTE([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo));
         };
         class CPR: fieldDressing {
+            displayName = "CPR";
+            displayNameProgress = "Performing CPR";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 25;
@@ -212,9 +234,11 @@ class ACE_Medical_Actions {
             itemConsumed = 0;
         };
         class BodyBag: fieldDressing {
+            displayName = "$STR_ACE_MEDICAL_PlaceInBodyBag";
+            displayNameProgress = "$STR_ACE_MEDICAL_PlacingInBodyBag";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
-            treatmentTime = 7.5;
+            treatmentTime = 2;
             items[] = {"ACE_bodyBag"};
             condition = "!alive (_this select 1);";
             callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));
@@ -223,31 +247,6 @@ class ACE_Medical_Actions {
             animationPatient = "";
             itemConsumed = 0;
         };
-        /*class Carry: fieldDressing {
-            displayName = "";
-            displayNameProgress = "";
-            treatmentLocations[] = {"All"};
-            requiredMedic = 0;
-            treatmentTime = 0;
-            items[] = {};
-            condition = QUOTE(DFUNC(canCarry));
-            callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, true)] call  DFUNC(actionCarryUnit));
-            callbackFailure = "";
-            callbackProgress = "";
-            itemConsumed = 0;
-            animationPatient = "";
-            animationCaller = "";
-            animationCallerProne = "";
-            animationCallerSelf = "";
-            animationCallerSelfProne = "";
-        };
-        class Drag: Carry {
-            displayName = "";
-            displayNameProgress = "";
-            condition = QUOTE(DFUNC(canCarry));
-            callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, false)] call  DFUNC(actionCarryUnit));
-        };*/
-
     };
 };
 
