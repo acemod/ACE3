@@ -71,6 +71,17 @@ class ACE_Medical_Actions {
             animationPatient = "";
             itemConsumed = 0;
         };
+        class PersonalAidKit: Bandage {
+            displayName = "";
+            displayNameProgress = "";
+            items[] = {"ACE_personalAidKit"};
+            treatmentLocations[] = {"All"};
+            requiredMedic = 1;
+            treatmentTime = 15;
+            callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
+            itemConsumed = 0;
+            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
+        };
     };
 
     class Advanced {
