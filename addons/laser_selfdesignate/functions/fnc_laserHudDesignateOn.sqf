@@ -3,6 +3,8 @@
 
 TRACE_1("enter", _this);
 
+#define FCS_UPDATE_DELAY 2.0
+
 FUNC(magnitude) = {
      _this distance [0, 0, 0]
 };
@@ -17,10 +19,15 @@ FUNC(mat_normalize3d) = {
 };
 
 FUNC(laserHudDesignatePFH) = {
-    private["_args", "_laserTarget", "_shooter", "_vehicle", "_weapon", "_gunnerInfo", "_turret", "_pov", "_gunBeg", "_gunEnd", "_povPos", "_povDir", "_result", "_resultPositions", "_firstResult"];
+    private["_args", "_laserTarget", "_shooter", "_vehicle", "_weapon", "_gunnerInfo", "_turret", "_pov", "_gunBeg", "_gunEnd", "_povPos", "_povDir", "_result", "_resultPositions", "_firstResult", "_forceUpdateTime"];
     _args = _this select 0;
     _laserTarget = _args select 0;
     _shooter = _args select 1;
+    
+    if( (count _args) < 3) then {
+        _args set[2, diag_tickTime + FCS_UPDATE_DELAY];
+    };
+    _forceUpdateTime = _args select 2;
     
     _vehicle = vehicle _shooter;
     _weapon = currentWeapon _vehicle;
@@ -50,14 +57,29 @@ FUNC(laserHudDesignatePFH) = {
             // Just regular use of lasers will commonly make them move this much,
             // but not across multiple close frames.
             // This loses accuracy a little, but saves position updates per frame.
-            //if( ((getPosASL _laserTarget) distance _pos) > 0.5) then {
+            TRACE_5("", diag_tickTime, _forceUpdateTime, getPosASL _laserTarget, _pos, ((getPosASL _laserTarget) distance _pos));
+    
+            if(diag_tickTime > _forceUpdateTime) then {
+                TRACE_1("FCS Update", "");
+                ["ace_fcs_forceUpdate", []] call ace_common_fnc_localEvent;
+            };
+            
+            if( diag_tickTime > _forceUpdateTime || ((getPosASL _laserTarget) distance _pos) > 0.5) then {
+                TRACE_1("LaserPos Update", "");
                 _laserTarget setPosATL (ASLToATL _pos);
-            //};
+                
+            };
+            
+            if(diag_tickTime > _forceUpdateTime) then {
+                 _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
+            };
 #ifdef DEBUG_MODE_FULL
             drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLToATL _pos, 0.75, 0.75, 0, "", 0.5, 0.025, "TahomaB"];
 #endif
         };
     };
+    
+    _this set[0, _args];
 };
 
 private "_laserTarget";
