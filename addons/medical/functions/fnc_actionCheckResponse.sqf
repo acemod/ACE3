@@ -27,4 +27,4 @@ if ([_target] call EFUNC(common,isAwake)) then {
 
 ["displayTextStructured", [_caller], [[_output, [_target] call EFUNC(common,getName)], 2, _caller]] call EFUNC(common,targetEvent);
 
-[_target,"examine",_output, [[_target] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target,"activity",_output, [[_target] call EFUNC(common,getName)]] call FUNC(addToLog);

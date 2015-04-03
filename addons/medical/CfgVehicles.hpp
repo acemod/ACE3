@@ -26,10 +26,6 @@ class CfgVehicles {
                 description = "What is the medical simulation level?";
                 typeName = "NUMBER";
                 class values {
-                    class disable {
-                        name = "Disabled";
-                        value = 0;
-                    };
                     class normal {
                         name = "Basic";
                         value = 1;
@@ -43,11 +39,11 @@ class CfgVehicles {
             };
             class enableFor {
                 displayName = "Enabled for";
-                description = "Select what units the medical system will be enabled for";
+                description = "Select what units the medical system will be enabled for (Adv only)";
                 typeName = "NUMBER";
                 class values {
                     class playableUnits {
-                        name = "Players only";
+                        name = "Players only.";
                         value = 0;
                         default = 1;
                     };
@@ -57,21 +53,22 @@ class CfgVehicles {
                     };
                 };
             };
-            class enableAirway {
+            // TODO Disabled until the features are implemented
+            /*class enableAirway {
                 displayName = "Enable Airway";
-                description = "Enable Advanced medical Airway";
+                description = "Enable Advanced medical Airway (Adv only)";
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class enableFractures {
                 displayName = "Enable Fractures";
-                description = "Enable Advanced medical Fractures";
+                description = "Enable Advanced medical Fractures (Adv only)";
                 typeName = "BOOL";
                 defaultValue = 0;
-            };
+            };*/
             class enableAdvancedWounds {
                 displayName = "Enable Advanced wounds";
-                description = "Allow reopening of bandaged wounds?";
+                description = "Allow reopening of bandaged wounds? (Adv only)";
                 typeName = "BOOL";
                 defaultValue = 0;
             };
@@ -167,6 +164,12 @@ class CfgVehicles {
             class maxRevives {
                 displayName = "Max revives";
                 description = "Max amount of revives available (when preventing death)";
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
+            class maxReviveTime {
+                displayName = "Max Revive time";
+                description = "Max amount of seconds a unit can spend in revive state";
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
@@ -937,29 +940,16 @@ class CfgVehicles {
                     enableInside = 1;
                     icon = PATHTOF(UI\icons\bandage.paa);
                 };
-                class Carry {
-                    displayName = "$STR_ACE_MEDICAL_CARRY";
+                class PlaceInBodyBag {
+                    displayName = "$STR_ACE_MEDICAL_PlaceInBodyBag";
                     distance = 2.0;
-                    condition = QUOTE([ARR_4(_player, _target, 'body', 'Carry')] call DFUNC(canTreatCached));
-                    statement = QUOTE([ARR_4(_player, _target, 'body', 'Carry')] call DFUNC(treatment));
+                    condition = QUOTE([ARR_4(_player, _target, 'body', 'BodyBag')] call DFUNC(canTreatCached));
+                    statement = QUOTE([ARR_4(_player, _target, 'body', 'BodyBag')] call DFUNC(treatment));
                     showDisabled = 1;
                     priority = 2;
                     hotkey = "";
                     enableInside = 1;
-                    //icon = PATHTOF(UI\icons\bandage.paa);
                 };
-                class Drag {
-                    displayName = "$STR_ACE_MEDICAL_DRAG";
-                    distance = 2.0;
-                    condition = QUOTE([ARR_4(_player, _target, 'body', 'Drag')] call DFUNC(canTreatCached));
-                    statement = QUOTE([ARR_4(_player, _target, 'body', 'Drag')] call DFUNC(treatment));
-                    showDisabled = 1;
-                    priority = 2;
-                    hotkey = "";
-                    enableInside = 1;
-                    //icon = PATHTOF(UI\icons\bandage.paa);
-                };
-
                 class TriageCard {
                     displayName = "Triage Card";
                     distance = 2.0;

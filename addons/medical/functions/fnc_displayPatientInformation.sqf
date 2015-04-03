@@ -21,7 +21,9 @@ GVAR(currentSelectedSelectionN) = if (count _this > 2) then {_this select 2} els
 
 GVAR(displayPatientInformationTarget) = if (_show) then {_target} else {ObjNull};
 
-[_target, ACE_player] call FUNC(requestWoundSync);
+if (USE_WOUND_EVENT_SYNC) then {
+    [_target, ACE_player] call FUNC(requestWoundSync);
+};
 
 if (_show) then {
     ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutRsc [QGVAR(DisplayInformation),"PLAIN"];
@@ -41,6 +43,10 @@ if (_show) then {
 
         _allInjuryTexts = [];
         _genericMessages = [];
+
+        _partText = ["STR_ACE_Interaction_Head", "STR_ACE_Interaction_Torso", "STR_ACE_Interaction_ArmLeft" ,"STR_ACE_Interaction_ArmRight" ,"STR_ACE_Interaction_LegLeft", "STR_ACE_Interaction_LegRight"] select GVAR(currentSelectedSelectionN);
+        _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
+
         if (_target getvariable[QGVAR(isBleeding), false]) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_BLEEDING", [1, 0.1, 0.1, 1]];
         };
@@ -121,7 +127,7 @@ if (_show) then {
         {
             _lbCtrl lbAdd _x;
         }foreach _allInjuryTexts;
-        if (count _genericMessages == 0 && {count _allInjuryTexts == 0}) then {
+        if (count _allInjuryTexts == 0) then {
             _lbCtrl lbAdd "No injuries on this bodypart..";
         };
 
@@ -129,26 +135,23 @@ if (_show) then {
         lbClear _logCtrl;
 
         private ["_logs", "_log", "_message", "_moment", "_arguments", "_lbCtrl"];
-        _logs = _target getvariable [QGVAR(allLogs), []];
+        _logs = _target getvariable [QGVAR(logFile_Activity), []];
         {
-            _log = _target getvariable [_x, []];
-            {
-                // [_message,_moment,_type, _arguments]
-                _message = _x select 0;
-                _moment = _x select 1;
-                _arguments = _x select 3;
-                if (isLocalized _message) then {
-                    _message = localize _message;
-                };
+            // [_message,_moment,_type, _arguments]
+            _message = _x select 0;
+            _moment = _x select 1;
+            _arguments = _x select 3;
+            if (isLocalized _message) then {
+                _message = localize _message;
+            };
 
-                {
-                    if (typeName _x == "STRING" && {isLocalized _x}) then {
-                        _arguments set [_foreachIndex, localize _x];
-                    };
-                }foreach _arguments;
-                _message = format([_message] + _arguments);
-                _logCtrl lbAdd format["%1 %2", _moment, _message];
-            }foreach _log;
+            {
+                if (typeName _x == "STRING" && {isLocalized _x}) then {
+                    _arguments set [_foreachIndex, localize _x];
+                };
+            }foreach _arguments;
+            _message = format([_message] + _arguments);
+            _logCtrl lbAdd format["%1 %2", _moment, _message];
         }foreach _logs;
 
         _triageStatus = [_target] call FUNC(getTriageStatus);
