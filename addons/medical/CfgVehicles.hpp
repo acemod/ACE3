@@ -26,10 +26,6 @@ class CfgVehicles {
                 description = "What is the medical simulation level?";
                 typeName = "NUMBER";
                 class values {
-                    class disable {
-                        name = "Disabled";
-                        value = 0;
-                    };
                     class normal {
                         name = "Basic";
                         value = 1;
@@ -43,11 +39,11 @@ class CfgVehicles {
             };
             class enableFor {
                 displayName = "Enabled for";
-                description = "Select what units the medical system will be enabled for";
+                description = "Select what units the medical system will be enabled for (Adv only)";
                 typeName = "NUMBER";
                 class values {
                     class playableUnits {
-                        name = "Players only";
+                        name = "Players only.";
                         value = 0;
                         default = 1;
                     };
@@ -60,19 +56,19 @@ class CfgVehicles {
             // TODO Disabled until the features are implemented
             /*class enableAirway {
                 displayName = "Enable Airway";
-                description = "Enable Advanced medical Airway";
+                description = "Enable Advanced medical Airway (Adv only)";
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class enableFractures {
                 displayName = "Enable Fractures";
-                description = "Enable Advanced medical Fractures";
+                description = "Enable Advanced medical Fractures (Adv only)";
                 typeName = "BOOL";
                 defaultValue = 0;
             };*/
             class enableAdvancedWounds {
                 displayName = "Enable Advanced wounds";
-                description = "Allow reopening of bandaged wounds?";
+                description = "Allow reopening of bandaged wounds? (Adv only)";
                 typeName = "BOOL";
                 defaultValue = 0;
             };

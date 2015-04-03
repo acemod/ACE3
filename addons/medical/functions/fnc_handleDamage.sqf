@@ -26,8 +26,6 @@ _projectile   = _this select 4;
 
 if !(local _unit) exitWith {nil};
 
-if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {};
-
 if (typeName _projectile == "OBJECT") then {
     _projectile = typeOf _projectile;
     _this set [4, _projectile];
@@ -38,11 +36,17 @@ _hitSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
 if !(_selection in (_hitSelections + [""])) exitWith {0};
 
 _damageReturn = _damage;
-if (GVAR(level) == 1) then {
+if (GVAR(level) < 2) then {
     _damageReturn = _this call FUNC(handleDamage_basic);
 };
 
 if (GVAR(level) >= 2) then {
+    if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {
+        // Because of the config changes, we cannot properly disable the medical system for a unit.
+        // lets use basic for the time being..
+        _this call FUNC(handleDamage_basic);
+    };
+
     [_unit, _selection, _damage, _source, _projectile] call FUNC(handleDamage_caching);
 
     if (_damageReturn > 0.9) then {
