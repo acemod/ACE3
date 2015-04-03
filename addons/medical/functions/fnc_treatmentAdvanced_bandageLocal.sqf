@@ -85,10 +85,11 @@ _impact = if ((_mostEffectiveInjury select 3) >= _effectivenessFound) then {_eff
 _mostEffectiveInjury set [ 3, ((_mostEffectiveInjury select 3) - _effectivenessFound) max 0];
 _openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
 
-_target setvariable [QGVAR(openWounds), _openWounds];
+_target setvariable [QGVAR(openWounds), _openWounds, !USE_WOUND_EVENT_SYNC];
 
-["medical_propagateWound", [_unit, _mostEffectiveInjury]] call EFUNC(common,globalEvent);
-
+if (USE_WOUND_EVENT_SYNC) then {
+    ["medical_propagateWound", [_unit, _mostEffectiveInjury]] call EFUNC(common,globalEvent);
+};
 // Handle the reopening of bandaged wounds
 if (_impact > 0) then {
     // TODO handle reopening of bandaged wounds
