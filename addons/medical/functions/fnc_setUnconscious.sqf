@@ -97,7 +97,7 @@ _startingTime = time;
 
         // TODO, handle this with carry instead, so we can remove the PFH here.
         // Wait until the unit isn't being carried anymore, so we won't end up with wierd animations
-        //if !([_unit] call EFUNC(common,beingCarried)) then {
+        if !(([_unit] call FUNC(isBeingCarried)) || ([_unit] call FUNC(isBeingDragged))) then {
             if (vehicle _unit == _unit) then {
                 [_unit,"amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
             } else {
@@ -107,7 +107,7 @@ _startingTime = time;
             };
             // EXIT PFH
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
-        //};
+        };
         if (!_hasMovedOut) then {
             // Reset the unit back to the previous captive state.
             [_unit, QGVAR(unconscious), false] call EFUNC(common,setCaptivityStatus);
