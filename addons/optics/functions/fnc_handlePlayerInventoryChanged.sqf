@@ -19,12 +19,10 @@ _usedOptics = if (isNull (_this select 0)) then {["","",""]} else { //@todo fix 
         _opticsScript = {};
 
         if (_x != "") then { // @todo
-            _opticsTexture = "";
-            _opticsScript = {};
+            _opticsTexture = QUOTE(PATHTOF(reticles\ace_shortdot_reticle_1.paa));
+            _opticsScript = FUNC(drawShortdotScript);
         };
 
         GVAR(usedOptics) set [_forEachIndex, [_x, _opticsTexture, _opticsScript]];
     };
 } forEach _usedOptics;
-
-//(uiNamespace getVariable "ACE_ctrlShortdotReticle") ctrlSetText QUOTE(PATHTOF(reticles\ace_shortdot_reticle_1.paa));

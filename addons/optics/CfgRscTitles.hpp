@@ -1,9 +1,6 @@
 
 class RscText;
 
-
-class RscText;
-
 class RscTitles {
     class ACE_Shortdot_Reticle {
         idd = -1;
