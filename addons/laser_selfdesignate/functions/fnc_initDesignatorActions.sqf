@@ -12,9 +12,18 @@
 
 EXPLODE_1_PVT(_this,_vehicle);
 
+// Add action to class if it is not already done
+private ["_type", "_initializedClasses"];
+_type = typeOf _vehicle;
+_initializedClasses = GETGVAR(initializedClasses,[]);
+
+// do nothing if the class is already initialized
+if (_type in _initializedClasses) exitWith {};
+_initializedClasses pushBack _type;
+
 {
     private ["_turretConfig","_onAction","_offAction"];
-    _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _x] call EFUNC(common,getTurretConfigPath);
+    _turretConfig = [configFile >> "CfgVehicles" >> _type, _x] call EFUNC(common,getTurretConfigPath);
 
     if (getNumber (_turretConfig >> QGVAR(Enabled)) == 1) exitWith {
         // @todo: Add the state variables to the vehicle, instead of to the client
@@ -41,7 +50,7 @@ EXPLODE_1_PVT(_this,_vehicle);
             GVAR(laserActive) && {[ACE_player] call FUNC(unitTurretHasDesignator)}
         }] call EFUNC(interact_menu,createAction);
 
-        [typeOf _vehicle, 1, ["ACE_SelfActions"], _onAction] call EFUNC(interact_menu,addActionToClass);
-        [typeOf _vehicle, 1, ["ACE_SelfActions"], _offAction] call EFUNC(interact_menu,addActionToClass);
+        [_type, 1, ["ACE_SelfActions"], _onAction] call EFUNC(interact_menu,addActionToClass);
+        [_type, 1, ["ACE_SelfActions"], _offAction] call EFUNC(interact_menu,addActionToClass);
     };
 } forEach allTurrets _vehicle;
