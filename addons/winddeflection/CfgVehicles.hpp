@@ -4,7 +4,7 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "Wind Deflection";
-        function = FUNC(enableModule);
+        function = FUNC(initalizeModule);
         scope = 2;
         isGlobal = 1;
         icon = QUOTE(PATHTOF(UI\Icon_Module_Wind_ca.paa));
