@@ -21,7 +21,7 @@ else()
 	set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "/MT /Zi /O2 /Ob1 /D NDEBUG")
 endif()
 
-file(GLOB_RECURSE ACE_COMMON_SOURCES common/*.h common/*.hpp common/*.c common/*.cpp)
+file(GLOB ACE_COMMON_SOURCES common/*.h common/*.hpp common/*.c common/*.cpp)
 add_library(ace_common STATIC ${ACE_COMMON_SOURCES})
 include_directories(AFTER "common")
 
