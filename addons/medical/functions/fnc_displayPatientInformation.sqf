@@ -135,26 +135,23 @@ if (_show) then {
         lbClear _logCtrl;
 
         private ["_logs", "_log", "_message", "_moment", "_arguments", "_lbCtrl"];
-        _logs = _target getvariable [QGVAR(allLogs), []];
+        _logs = _target getvariable [QGVAR(logFile_Activity), []];
         {
-            _log = _target getvariable [_x, []];
-            {
-                // [_message,_moment,_type, _arguments]
-                _message = _x select 0;
-                _moment = _x select 1;
-                _arguments = _x select 3;
-                if (isLocalized _message) then {
-                    _message = localize _message;
-                };
+            // [_message,_moment,_type, _arguments]
+            _message = _x select 0;
+            _moment = _x select 1;
+            _arguments = _x select 3;
+            if (isLocalized _message) then {
+                _message = localize _message;
+            };
 
-                {
-                    if (typeName _x == "STRING" && {isLocalized _x}) then {
-                        _arguments set [_foreachIndex, localize _x];
-                    };
-                }foreach _arguments;
-                _message = format([_message] + _arguments);
-                _logCtrl lbAdd format["%1 %2", _moment, _message];
-            }foreach _log;
+            {
+                if (typeName _x == "STRING" && {isLocalized _x}) then {
+                    _arguments set [_foreachIndex, localize _x];
+                };
+            }foreach _arguments;
+            _message = format([_message] + _arguments);
+            _logCtrl lbAdd format["%1 %2", _moment, _message];
         }foreach _logs;
 
         _triageStatus = [_target] call FUNC(getTriageStatus);
