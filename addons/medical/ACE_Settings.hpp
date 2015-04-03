@@ -14,10 +14,6 @@ class ACE_Settings {
         typeName = "SCALAR";
         values[] = {"Players only", "Players and AI"};
     };
-    class GVAR(maxRevives) {
-        typeName = "NUMBER";
-        value = 1;
-    };
     class GVAR(enableOverdosing) {
         typeName = "BOOL";
         value = true;
@@ -67,6 +63,10 @@ class ACE_Settings {
     class GVAR(maxReviveTime) {
         typeName = "NUMBER";
         value = 120;
+    };
+    class GVAR(amountOfReviveLives) {
+        typeName = "NUMBER";
+        value = -1;
     };
     class GVAR(allowDeadBodyMovement) {
         typeName = "BOOL";

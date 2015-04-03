@@ -173,6 +173,12 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
+            class amountOfReviveLives {
+                displayName = "Max Revive lives";
+                description = "Max amount of lives a unit. 0 or -1 is disabled.";
+                typeName = "NUMBER";
+                defaultValue = -1;
+            };
             class enableOverdosing {
                 displayName = "Enable Overdosing";
                 description = "Enable overdosing of medications";

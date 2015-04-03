@@ -27,7 +27,17 @@ if (!local _unit) exitwith {
 };
 
 if ((_unit getVariable [QGVAR(preventDeath), GVAR(preventInstaDeath)]) && !_force) exitwith {
-    if (_unit getvariable [QGVAR(inReviveState), false]) exitwith {false}; // already in revive state
+    if (_unit getvariable [QGVAR(inReviveState), false]) exitwith {
+        if (GVAR(amountOfReviveLives) > 0) then {
+            _lifesLeft = _unit getvariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
+            if (_lifesLeft == 0) then {
+                [_unit, true] call FUNC(setDead);
+            };
+        };
+
+        false;
+    };
+
     _unit setvariable [QGVAR(inReviveState), true, true];
     _unit setvariable [QGVAR(reviveStartTime), time];
     [_unit, true] call FUNC(setUnconscious);
@@ -47,6 +57,12 @@ if ((_unit getVariable [QGVAR(preventDeath), GVAR(preventInstaDeath)]) && !_forc
         };
 
         if !(_unit getvariable [QGVAR(inReviveState), false]) exitwith {
+            // revived without dieing, so in case we have lifes, remove one.
+            if (GVAR(amountOfReviveLives) > 0) then {
+                _lifesLeft = _unit getvariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
+                _unit setvariable [QGVAR(amountOfReviveLives), _lifesLeft - 1, true];
+            };
+
             _unit setvariable [QGVAR(reviveStartTime), nil];
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
         };
