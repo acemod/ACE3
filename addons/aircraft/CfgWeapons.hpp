@@ -4,6 +4,23 @@ class Mode_Burst;
 class Mode_FullAuto;
 
 class CfgWeapons {
+
+    class RocketPods;
+	class ACE_AIR_SAFETY : RocketPods
+	{
+		CanLock = 0;
+		displayName = "SAFE";
+		displayNameMagazine = "SAFE";
+		shortNameMagazine = "SAFE";
+		nameSound = "cannon";
+		cursor = "EmptyCursor";
+		cursorAim = "EmptyCursor";
+		magazines[] = {"FakeMagazine"};
+		burst = 0;
+		reloadTime = 0.01;
+		magazineReloadTime = 0.1;
+	};
+    
     // Manual Switching Of Flare Mode
     class SmokeLauncher;
     class CMFlareLauncher: SmokeLauncher {

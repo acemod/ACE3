@@ -23,7 +23,7 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
 				helmetRight[] = {0,0,0};
 				helmetDown[] = {0,0,0};
 			};
-			class Kimi_HUD_1
+			class ACE_HUD_1
 			{
 				topLeft = "HUD_top_left";
 				topRight = "HUD_top_right";
@@ -715,7 +715,7 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
 				helmetRight[] = {0.08,0,0};
 				helmetDown[] = {0,-0.08,0};
 			};
-			class Kimi_HUD_2
+			class ACE_HUD_2
 			{
 				topLeft = "HUD_top_left";
 				topRight = "HUD_top_right";
@@ -866,7 +866,7 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
             directionStabilized = 1;
             horizontallyStabilized  = 1;
             
-            weapons[] = {"ACE_gatling_20mm_Comanche","missiles_DAGR","missiles_ASRAAM"};
+            weapons[] = {"ACE_gatling_20mm_Comanche","missiles_DAGR","missiles_ASRAAM", "ACE_AIR_SAFETY"};
             magazines[] = {"ACE_500Rnd_20mm_shells_Comanche","4Rnd_AAA_missiles","24Rnd_PG_missiles"};
             
             isCopilot = 1;

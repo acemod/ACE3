@@ -200,7 +200,7 @@ class CfgVehicles {
         lockDetectionSystem = 0;
         incomingMissileDetectionSystem = 16;
         driverCanEject = 1;
-        weapons[] = {"M134_minigun","missiles_DAR","CMFlareLauncher"};
+        weapons[] = {"M134_minigun","missiles_DAR","CMFlareLauncher", "ACE_AIR_SAFETY" };
         magazines[] = {"5000Rnd_762x51_Yellow_Belt","24Rnd_missiles","168Rnd_CMFlare_Chaff_Magazine"};
 
         class Turrets: Turrets {
