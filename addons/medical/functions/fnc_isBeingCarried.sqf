@@ -1,15 +1,15 @@
 /*
  * Author: PabstMirror
- * Returns if a target is being dragged. (from ace_dragging)
+ * Returns if a target is being carried. (from ace_dragging)
  *
  * Arguments:
  * 0: Target Unit <OBJECT>
  *
  * Return Value:
- * Is being dragged <BOOL>
+ * Is being carried <BOOL>
  *
  * Example:
- * [bob] call ace_medical_fnc_isBeingDragged
+ * [bob] call ace_medical_fnc_isBeingCarried
  *
  * Public: No
  */
@@ -23,4 +23,4 @@ _owner = _target getVariable [QEGVAR(common,owner), objNull];
 
 if (isNull _owner) exitWith {false};
 
-(_owner getVariable [QEGVAR(dragging,draggedObject), objNull]) == _target
+(_owner getVariable [QEGVAR(dragging,carriedObject), objNull]) == _target
