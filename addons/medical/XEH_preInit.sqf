@@ -49,6 +49,7 @@ PREP(hasItems);
 PREP(hasMedicalEnabled);
 PREP(hasTourniquetAppliedTo);
 PREP(init);
+PREP(isBeingDragged);
 PREP(isInMedicalFacility);
 PREP(isMedic);
 PREP(isMedicalVehicle);
