@@ -23,6 +23,7 @@ PREP(canAccessMedicalEquipment);
 PREP(canTreat);
 PREP(canTreatCached);
 PREP(canCarry);
+PREP(createLitter);
 PREP(determineIfFatal);
 PREP(getBloodLoss);
 PREP(getBloodPressure);

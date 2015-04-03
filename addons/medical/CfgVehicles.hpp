@@ -1689,6 +1689,29 @@ class CfgVehicles {
         icon = "";
         displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
     };
+
+    // Medical litter classes
+    class Thing;
+    class ACE_MedicalLitterBase: Thing {
+        scope = 1;
+        displayName = " ";
+        destrType = "DestructNo";
+        model = QUOTE(PATHTOF(data\littergeneric.p3d));
+    };
+    class ACE_MedicalLitter_bandage1: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_bandages1.p3d));
+    };
+    class ACE_MedicalLitter_bandage2: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_bandages2.p3d));
+    };
+    class ACE_MedicalLitter_bandage3: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_bandages3.p3d));
+    };
+    class ACE_MedicalLitter_gloves: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_gloves.p3d));
+    };
+
+
     class Item_Base_F;
     class ACE_fieldDressingItem: Item_Base_F {
         scope = 2;

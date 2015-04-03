@@ -50,3 +50,5 @@ if (isNil _callback) then {
 };
 
 _args call _callback;
+
+[_target, _className] call FUNC(createLitter);
