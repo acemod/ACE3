@@ -22,16 +22,16 @@ _gunEnd = getText (_turret >> "gunEnd");
 TRACE_3("", _pov, _gunBeg, _gunEnd);
 
 // Pull the PIP pov or barrel direction, depending on how the model is set up
-_povPos = ATLtoASL ( _vehicle modelToWorld (_vehicle selectionPosition _pov ) );
+_povPos = ATLtoASL ( _vehicle modelToWorldVisual (_vehicle selectionPosition _pov ) );
 _povDir = [0,0,0];
 
 if(_pov == "pip0_pos") then {
-    _pipDir = ATLtoASL ( _vehicle modelToWorld (_vehicle selectionPosition "pip0_dir" ) ); 
-    _povDir = [_povPos, _pipDir] call BIS_fnc_vectorDiff;
+    _pipDir = ATLtoASL ( _vehicle modelToWorldVisual (_vehicle selectionPosition "pip0_dir" ) ); 
+    _povDir = _povPos vectorDiff _pipDir;
 } else {
-    _gunBeginPos = ATLtoASL ( _vehicle modelToWorld (_vehicle selectionPosition _gunBeg ) );
-    _gunEndPos = ATLtoASL ( _vehicle modelToWorld (_vehicle selectionPosition _gunEnd ) );
-    _povDir = [_gunEndPos, _gunBeginPos] call BIS_fnc_vectorDiff;
+    _gunBeginPos = ATLtoASL ( _vehicle modelToWorldVisual (_vehicle selectionPosition _gunBeg ) );
+    _gunEndPos = ATLtoASL ( _vehicle modelToWorldVisual (_vehicle selectionPosition _gunEnd ) );
+    _povDir = _gunEndPos vectorDiff _gunBeginPos;
 };
 
 [_povPos, _povDir]
