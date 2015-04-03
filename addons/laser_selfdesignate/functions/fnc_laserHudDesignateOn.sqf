@@ -66,17 +66,23 @@ FUNC(laserHudDesignatePFH) = {
                 ["ace_fcs_forceUpdate", []] call ace_common_fnc_localEvent;
             };
             
-            if( (str (getPosASL _laserTarget)) != str _pos) then {
+            if( ((getPosASL _laserTarget) vectorDistance _pos) > 2) then {
                 TRACE_1("LaserPos Update", "");
                 _laserTarget setPosATL (ASLToATL _pos);
                 
-            };
+           };
             
             if(diag_tickTime > _forceUpdateTime) then {
                  _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
             };
 #ifdef DEBUG_MODE_FULL
-            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLToATL _pos, 0.75, 0.75, 0, "", 0.5, 0.025, "TahomaB"];
+            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], (getPosATL _laserTarget), 0.75, 0.75, 0, "", 0.5, 0.025, "TahomaB"];
+
+            {
+                private["_position"];
+                _position = _x select 0;
+                drawLine3d [_povPos, _position, [0,0,1,1] ];
+            } forEach _resultPositions;
 #endif
         };
     };
