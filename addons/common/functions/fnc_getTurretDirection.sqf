@@ -27,11 +27,11 @@ _povDir = [0,0,0];
 
 if(_pov == "pip0_pos") then {
     _pipDir = ATLtoASL ( _vehicle modelToWorldVisual (_vehicle selectionPosition "pip0_dir" ) ); 
-    _povDir = _povPos vectorDiff _pipDir;
+    _povDir = _pipDir vectorDiff _povPos;
 } else {
     _gunBeginPos = ATLtoASL ( _vehicle modelToWorldVisual (_vehicle selectionPosition _gunBeg ) );
     _gunEndPos = ATLtoASL ( _vehicle modelToWorldVisual (_vehicle selectionPosition _gunEnd ) );
-    _povDir = _gunEndPos vectorDiff _gunBeginPos;
+    _povDir = _gunBeginPos vectorDiff _gunEndPos;
 };
 
 [_povPos, _povDir]

@@ -83,7 +83,7 @@ FUNC(guidance_DIRECT_LOAL_PFH) = {
     
             if(accTime > 0) then {
                 _outVector = [_dagr, [_xVec, _yVec, _zVec], [_yaw, 1/accTime, _pitch]] call FUNC(translateToModelSpace);
-                // _outVector = _dagr modelToWorld [_yaw, 1, _pitch];
+                // _outVector = _dagr modelToWorldVisual [_yaw, 1, _pitch];
                 // _outVector = ATLtoASL _outVector;
                 _vectorTo = _dagrPos vectorFromTo _outVector;
                 

@@ -28,15 +28,15 @@ if((count _this) > 2) then {
     _pos = _this select 2;
 } else {
     if(typeName (_actionData select 7) == "ARRAY") then {
-        _pos = _object modelToWorld (_actionData select 7);
+        _pos = _object modelToWorldVisual (_actionData select 7);
     } else {
         if ((_actionData select 7) == "weapon") then {
             // Craft a suitable position for weapon interaction
             _weaponDir = _object weaponDirection currentWeapon _object;
             _ref = _weaponDir call EFUNC(common,createOrthonormalReference);
-            _pos = (_object modelToWorld (_object selectionPosition "righthand")) vectorAdd ((_ref select 2) vectorMultiply 0.1);
+            _pos = (_object modelToWorldVisual (_object selectionPosition "righthand")) vectorAdd ((_ref select 2) vectorMultiply 0.1);
         } else {
-            _pos = _object modelToWorld (_object selectionPosition (_actionData select 7));
+            _pos = _object modelToWorldVisual (_object selectionPosition (_actionData select 7));
         };
     };
     // Compensate for movement during the frame to get rid of jittering
@@ -45,7 +45,7 @@ if((count _this) > 2) then {
 
 // For non-self actions, exit if the action is too far away
 if (GVAR(openedMenuType) == 0 && vehicle ACE_player == ACE_player &&
-    {(ACE_player modelToWorld (ACE_player selectionPosition "pilot")) distance _pos >= _distance}) exitWith {false};
+    {(ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot")) distance _pos >= _distance}) exitWith {false};
 
 // Exit if the action is behind you
 _sPos = if (count _pos != 2) then {

@@ -1,4 +1,4 @@
-//#define DEBUG_MODE_FULL
+// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 TRACE_1("enter", _this);
@@ -47,6 +47,8 @@ FUNC(laserHudDesignatePFH) = {
     _povPos = _turretInfo select 0;
     _povDir = _turretInfo select 1;
     
+    
+    
     _result = [_povPos, _povDir] call EFUNC(laser,shootCone);
     if((count _result) > 0) then {
         _resultPositions = _result select 2;
@@ -77,11 +79,11 @@ FUNC(laserHudDesignatePFH) = {
             };
 #ifdef DEBUG_MODE_FULL
             drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], (getPosATL _laserTarget), 0.75, 0.75, 0, "", 0.5, 0.025, "TahomaB"];
-
+            
             {
                 private["_position"];
                 _position = _x select 0;
-                drawLine3d [_povPos, _position, [0,0,1,1] ];
+                drawLine3d [ASLToATL _povPos, ASLToATL _position, [0,0,1,1] ];
             } forEach _resultPositions;
 #endif
         };

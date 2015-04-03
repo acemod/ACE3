@@ -19,7 +19,7 @@ if(!(isNil "ACE_LASERS")) then {
     
     {
         if(!(isNull _x)) then {
-            _sensorPos = ATLtoASL(_missile modelToWorld _offset);
+            _sensorPos = ATLtoASL(_missile modelToWorldVisual _offset);
             _vectorTo = [_sensorPos, ([_x] call FUNC(getPosASL))] call BIS_fnc_vectorFromXToY;
             _polarTo = _vectorTo call CBA_fnc_vect2polar;
             _dir = _polarTo select 1;
