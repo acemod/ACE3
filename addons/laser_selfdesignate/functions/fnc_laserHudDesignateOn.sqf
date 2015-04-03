@@ -48,7 +48,6 @@ FUNC(laserHudDesignatePFH) = {
     _povDir = _turretInfo select 1;
     
     _result = [_povPos, _povDir] call EFUNC(laser,shootCone);
-    
     if((count _result) > 0) then {
         _resultPositions = _result select 2;
 
@@ -67,7 +66,7 @@ FUNC(laserHudDesignatePFH) = {
                 ["ace_fcs_forceUpdate", []] call ace_common_fnc_localEvent;
             };
             
-            if( diag_tickTime > _forceUpdateTime || ((getPosASL _laserTarget) distance _pos) > 0.5) then {
+            if( (str (getPosASL _laserTarget)) != str _pos) then {
                 TRACE_1("LaserPos Update", "");
                 _laserTarget setPosATL (ASLToATL _pos);
                 
