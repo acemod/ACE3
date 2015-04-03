@@ -45,7 +45,7 @@ if (alive _unit) exitwith {
     _unit setvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
 
     // airway
-    _unit setvariable [QGVAR(airwayStatus), 0, true];
+    _unit setvariable [QGVAR(airwayStatus), 1000, true];
     _unit setVariable [QGVAR(airwayOccluded), false, true];
     _unit setvariable [QGVAR(airwayCollapsed), false, true];
 
