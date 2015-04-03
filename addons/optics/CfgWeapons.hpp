@@ -1,3 +1,4 @@
+
 class CfgWeapons {
     class ItemCore;
     class InventoryOpticsItem_Base_F;
@@ -6,6 +7,7 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Snip;
+                class Iron;
             };
         };
     };
@@ -15,6 +17,8 @@ class CfgWeapons {
         _generalMacro = "ACE_optic_DMS";
         displayName = "LOCALIZE ACE DMS";
         //descriptionShort = "$STR_A3_CFGWEAPONS_ACC_DMS1";
+        weaponInfoType = "ACE_RscWeaponZeroing";
+
         class ItemInfo: ItemInfo {
             modelOptics = QUOTE(PATHTOF(models\ace_shortdot_optics.p3d));
 
@@ -26,6 +30,8 @@ class CfgWeapons {
                     discretefov[] = {};
                     modelOptics[] = {};
                 };
+
+                class Iron: Iron {};
             };
         };
     };
