@@ -35,7 +35,10 @@ FUNC(laserHudDesignatePFH) = {
     TRACE_1("", _args);
     
     if(!alive _shooter || isNull _vehicle || isNull _laserTarget || !GVAR(laserActive) ) exitWith { 
-        [(_this select 1)] call cba_fnc_removePerFrameHandler; 
+        [] call FUNC(laserHudDesignateOff);
+    };
+    if(!([ACE_player] call FUNC(unitTurretHasDesignator)) ) exitWith {
+        [] call FUNC(laserHudDesignateOff);
     };
     
     // Retrieve the gunner and turret memory point information
