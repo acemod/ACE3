@@ -43,6 +43,10 @@ if (_show) then {
 
         _allInjuryTexts = [];
         _genericMessages = [];
+
+        _partText = ["STR_ACE_Interaction_Head", "STR_ACE_Interaction_Torso", "STR_ACE_Interaction_ArmLeft" ,"STR_ACE_Interaction_ArmRight" ,"STR_ACE_Interaction_LegLeft", "STR_ACE_Interaction_LegRight"] select GVAR(currentSelectedSelectionN);
+        _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
+
         if (_target getvariable[QGVAR(isBleeding), false]) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_BLEEDING", [1, 0.1, 0.1, 1]];
         };
@@ -123,7 +127,7 @@ if (_show) then {
         {
             _lbCtrl lbAdd _x;
         }foreach _allInjuryTexts;
-        if (count _genericMessages == 0 && {count _allInjuryTexts == 0}) then {
+        if (count _allInjuryTexts == 0) then {
             _lbCtrl lbAdd "No injuries on this bodypart..";
         };
 
