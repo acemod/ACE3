@@ -172,7 +172,7 @@ class CfgVehicles {
                 defaultValue = 1;
             };
             class maxReviveTime {
-                displayName = "MAx Revive time";
+                displayName = "Max Revive time";
                 description = "Max amount of seconds a unit can spend in revive state";
                 typeName = "NUMBER";
                 defaultValue = 1;

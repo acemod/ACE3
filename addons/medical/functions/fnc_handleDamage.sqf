@@ -60,6 +60,8 @@ if (GVAR(level) >= 2) then {
         if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
             if ([_unit] call FUNC(setDead)) then {
                 _damageReturn = 1;
+            } else {
+                _damageReturn = 0.89;
             };
         } else {
             _damageReturn = 0.89;
@@ -68,7 +70,7 @@ if (GVAR(level) >= 2) then {
 };
 [_unit] call FUNC(addToInjuredCollection);
 
-if (_unit getVariable [QGVAR(preventDeath), false] && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
+if (_unit getVariable [QGVAR(preventDeath), GVAR(preventInstaDeath)] && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
     if (vehicle _unit != _unit and {damage _vehicle >= 1}) then {
         // @todo
         // [_unit] call FUNC(unload);
