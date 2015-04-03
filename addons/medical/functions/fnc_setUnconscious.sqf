@@ -121,7 +121,7 @@ _startingTime = time;
             _unit setUnconscious false;
             ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
             // ensure this statement runs only once
-            _args set [6, true];
+            _args set [5, true];
         };
     };
 
