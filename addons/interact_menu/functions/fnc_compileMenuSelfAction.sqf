@@ -83,11 +83,19 @@ private ["_baseDisplayName", "_baseIcon"];
 _baseDisplayName = "";
 _baseIcon = "";
 if (_objectType isKindOf "CAManBase") then {
-    _baseDisplayName = "Self Actions";
+    _baseDisplayName = localize "STR_ACE_Interact_Menu_SelfActionsRoot";
     _baseIcon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
 } else {
     _baseDisplayName = getText (configFile >> "CfgVehicles" >> _objectType >> "displayName");
+    //Alt would be to just use a static text, if veh names end up being too long:
+    // _baseDisplayName = localize "STR_ACE_Interact_Menu_VehicleActionsRoot";
+
+    //Pull the icon from the vehicle's config:
     _baseIcon = getText (configFile >> "CfgVehicles" >> _objectType >> "Icon");
+    //icon could be a CfgVehicleIcons
+    if isText (configFile >> "CfgVehicleIcons" >> _baseIcon) then {
+        _baseIcon = getText (configFile >> "CfgVehicleIcons" >> _baseIcon);
+    };
 };
 
 // Create a master action to base on self action

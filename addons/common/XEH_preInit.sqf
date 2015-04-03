@@ -4,13 +4,11 @@
 ADDON = false;
 
 // ACE Common Function
-PREP(addActionEventHandler);
-PREP(addActionMenuEventHandler);
+
 PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
-PREP(addMapMarkerCreatedEventHandler);
-PREP(addScrollWheelEventHandler);
 PREP(addSetting);
+PREP(addToInventory);
 PREP(adminKick);
 PREP(ambientBrightness);
 PREP(applyForceWalkStatus);
@@ -55,25 +53,16 @@ PREP(fixPosition);
 PREP(getAllDefinedSetVariables);
 PREP(getAllGear);
 PREP(getCaptivityStatus);
-PREP(getConfigCommander);
-PREP(getConfigGunner);
-PREP(getConfigType);
-PREP(getConfigTypeObject);
 PREP(getDeathAnim);
 PREP(getDefaultAnim);
 PREP(getDefinedVariable);
 PREP(getDefinedVariableDefault);
 PREP(getDefinedVariableInfo);
-PREP(getDoorTurrets);
 PREP(getFirstObjectIntersection);
 PREP(getFirstTerrainIntersection);
 PREP(getForceWalkStatus);
 PREP(getGunner);
-PREP(getHitPoints);
-PREP(getHitPointsWithSelections);
 PREP(getInPosition);
-PREP(getItemType);
-PREP(getItemTypeWeapon);
 PREP(getMarkerType);
 PREP(getName);
 PREP(getNumberFromMissionSQM);
@@ -96,15 +85,12 @@ PREP(getTurretDirection);
 PREP(getUavControlPosition);
 PREP(getVehicleCargo);
 PREP(getVehicleCodriver);
-PREP(getVehicleCrew);
 PREP(getVersion);
 PREP(getWeaponAzimuthAndInclination);
 PREP(getWeaponIndex);
-PREP(getWeaponModes);
-PREP(getWeaponMuzzles);
 PREP(getWeaponState);
-PREP(getWeaponType);
 PREP(getWindDirection);
+PREP(getZoom);
 PREP(goKneeling);
 PREP(hadamardProduct);
 PREP(hasItem);
@@ -146,11 +132,7 @@ PREP(progressBar);
 PREP(queueAnimation);
 PREP(readSettingFromModule);
 PREP(receiveRequest);
-PREP(removeActionEventHandler);
-PREP(removeActionMenuEventHandler);
 PREP(removeCanInteractWithCondition);
-PREP(removeMapMarkerCreatedEventHandler);
-PREP(removeScrollWheelEventHandler);
 PREP(removeSpecificMagazine);
 PREP(requestCallback);
 PREP(resetAllDefaults);
@@ -193,6 +175,32 @@ PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
 
+// config items
+PREP(getConfigType);
+PREP(getItemType);
+PREP(getWeaponType);
+PREP(getWeaponModes);
+PREP(getWeaponMuzzles);
+
+// config objects
+PREP(getConfigTypeObject);
+PREP(getConfigGunner);
+PREP(getConfigCommander);
+PREP(getHitPoints);
+PREP(getHitPointsWithSelections);
+PREP(getVehicleCrew);
+
+// turrets
+PREP(getTurrets);
+PREP(getTurretIndex);
+PREP(getTurretConfigPath);
+PREP(getTurretGunner);
+PREP(getTurretCommander);
+PREP(getTurretCopilot);
+PREP(getDoorTurrets);
+PREP(getTurretsFFV);
+PREP(getTurretsOther);
+
 // ACE_Debug
 PREP(exportConfig);
 PREP(getChildren);
@@ -200,6 +208,7 @@ PREP(getDisplayConfigName);
 PREP(log);
 PREP(logControls);
 PREP(logDisplays);
+PREP(logModEntries);
 PREP(monitor);
 PREP(showUser);
 
@@ -221,6 +230,17 @@ PREP(serverEvent);
 PREP(localEvent);
 PREP(removeEventHandler);
 PREP(removeAlLEventHandlers);
+
+// other eventhandlers
+PREP(addActionEventHandler);
+PREP(addActionMenuEventHandler);
+PREP(addScrollWheelEventHandler);
+PREP(addMapMarkerCreatedEventHandler);
+
+PREP(removeActionEventHandler);
+PREP(removeActionMenuEventHandler);
+PREP(removeScrollWheelEventHandler);
+PREP(removeMapMarkerCreatedEventHandler);
 
 // hashes
 PREP(hashCreate);
