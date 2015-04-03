@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         units[] = {};
-        weapons[] = {};
+        weapons[] = {"ACE_optic_DMS","ACE_optic_Hamr_PIP"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author[] = {""};
@@ -14,6 +14,6 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 
-#include "CfgWeapons.hpp"
-
+#include "CfgOpticsEffect.hpp"
 #include "CfgRscTitles.hpp"
+#include "CfgWeapons.hpp"

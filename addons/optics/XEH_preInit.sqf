@@ -3,5 +3,6 @@
 ADDON = false;
 
 PREP(onDrawScope);
+PREP(onDrawScopePIP);
 
 ADDON = true;
