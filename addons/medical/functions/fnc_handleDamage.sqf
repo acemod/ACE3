@@ -24,7 +24,6 @@ _damage       = _this select 2;
 _shooter      = _this select 3;
 _projectile   = _this select 4;
 
-
 if !(local _unit) exitWith {nil};
 
 if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {};
@@ -40,11 +39,11 @@ if !(_selection in (_hitSelections + [""])) exitWith {0};
 
 _damageReturn = _damage;
 if (GVAR(level) == 1) then {
-    _damageReturn = (_this + [_damageReturn]) call FUNC(handleDamage_basic);
+    _damageReturn = _this call FUNC(handleDamage_basic);
 };
 
 if (GVAR(level) >= 2) then {
-    [_unit, _selection, _damage, _source, _projectile, _damageReturn] call FUNC(handleDamage_caching);
+    [_unit, _selection, _damage, _source, _projectile] call FUNC(handleDamage_caching);
 
     if (_damageReturn > 0.9) then {
 
