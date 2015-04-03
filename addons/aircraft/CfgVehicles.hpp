@@ -95,29 +95,7 @@ class CfgVehicles {
         };
     };
 
-    class Heli_Attack_01_base_F: Helicopter_Base_F {
-        lockDetectionSystem = 12;
-        incomingMissileDetectionSystem = 16;
-        driverCanEject = 1;
-
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                canEject = 1;
-                showHMD = 1;
-                weapons[] = {"ACE_gatling_20mm_Comanche","missiles_DAGR","missiles_ASRAAM"};
-                magazines[] = {"ACE_500Rnd_20mm_shells_Comanche","4Rnd_AAA_missiles","24Rnd_PG_missiles"};
-            };
-        };
-
-        class AnimationSources: AnimationSources {
-            class Gatling {
-                weapon = "ACE_gatling_20mm_Comanche";
-            };
-            class Muzzle_flash {
-                weapon = "ACE_gatling_20mm_Comanche";
-            };
-        };
-    };
+    #include "Heli_Attack_01_base_F.hpp"
 
     class B_Heli_Attack_01_F: Heli_Attack_01_base_F {};
 
