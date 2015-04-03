@@ -116,7 +116,7 @@ class CfgVehicles {
                 showDisabled = 0;
                 exceptions[] = {};
                 priority = 5;
-                icon = QUOTE(PATHTOF(UI\Explosives_Menu_ca.paa));
+                icon = "\A3\ui_f\data\IGUI\Cfg\Actions\Obsolete\ui_action_takemine_ca.paa";
             };
         };
     };
