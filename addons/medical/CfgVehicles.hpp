@@ -161,17 +161,11 @@ class CfgVehicles {
                     };
                 };
             };
-            class maxRevives {
-                displayName = "Max revives";
-                description = "Max amount of revives available (when preventing death)";
-                typeName = "NUMBER";
-                defaultValue = 1;
-            };
             class maxReviveTime {
                 displayName = "Max Revive time";
                 description = "Max amount of seconds a unit can spend in revive state";
                 typeName = "NUMBER";
-                defaultValue = 1;
+                defaultValue = 120;
             };
             class amountOfReviveLives {
                 displayName = "Max Revive lives";
