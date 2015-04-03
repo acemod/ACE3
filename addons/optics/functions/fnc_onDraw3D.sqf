@@ -1,6 +1,15 @@
 // by commy2
 #include "script_component.hpp"
 
+
+
+
+
+if (GVAR(showShortdot)) then {
+
+
+
+
 private "_control";
 _control = uiNamespace getVariable ["ACE_ctrlShortdotReticle", controlNull];
 
