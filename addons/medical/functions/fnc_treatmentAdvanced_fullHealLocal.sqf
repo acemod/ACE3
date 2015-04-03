@@ -52,6 +52,7 @@ if (alive _unit) exitwith {
     // generic medical admin
     _unit setvariable [QGVAR(addedToUnitLoop), false, true];
     _unit setvariable [QGVAR(inCardiacArrest), false, true];
+    _unit setvariable [QGVAR(inReviveState), false, true];
     _unit setVariable ["ACE_isUnconscious", false, true];
     _unit setvariable [QGVAR(hasLostBlood), false, true];
     _unit setvariable [QGVAR(isBleeding), false, true];
