@@ -120,7 +120,10 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
     if (primaryWeapon _caller == "") then {
         _caller addWeapon "ACE_FakePrimaryWeapon";
     };
-    _caller selectWeapon (primaryWeapon _caller);
+    if (currentWeapon _caller == "") then {
+        _caller selectWeapon (primaryWeapon _caller); // unit always has a primary weapon here
+    };
+
     if (stance _caller == "STAND") then {
         _caller setvariable [QGVAR(treatmentPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
     } else {
