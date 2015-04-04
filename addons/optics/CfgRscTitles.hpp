@@ -12,8 +12,6 @@ class RscInGameUI {
     class ACE_RscWeaponZeroing: RscWeaponZeroing {
         controls[] = {"CA_Zeroing","CA_FOVMode","ACE_DrawReticleHelper","ACE_ScriptedReticle"};
 
-        class CA_Zeroing: CA_Zeroing {};
-
         class CA_FOVMode: RscOpticsValue {  // idea by Taosenai. Apparently this can be used via isNil check to determine wheter the scope or the kolimator is used
             idc = 154;
             style = 2;
@@ -42,11 +40,24 @@ class RscInGameUI {
         };
     };
 
-    class ACE_RscWeaponZeroingPIP: ACE_RscWeaponZeroing {
+    class ACE_RscWeapon_base: RscWeaponZeroing {
         controls[] = {"CA_Zeroing","CA_FOVMode","ACE_DrawReticleHelper","ReticleDay","ReticleNight","BodyNight","BodyDay"}; // don't change this order
 
-        class ACE_DrawReticleHelper: ACE_DrawReticleHelper {
-            onDraw = QUOTE([ctrlParent (_this select 0)] call DFUNC(onDrawScopePIP));
+        class CA_FOVMode: RscOpticsValue {  // idea by Taosenai. Apparently this can be used via isNil check to determine wheter the scope or the kolimator is used
+            idc = 154;
+            style = 2;
+            colorText[] = {0,0,0,0};
+            x = 0;
+            y = 0;
+            w = 0;
+            h = 0;
+        };
+
+        class ACE_DrawReticleHelper: RscMapControl {
+            onDraw = QUOTE([ctrlParent (_this select 0)] call DFUNC(onDrawScope2D));
+            idc = -1;
+            w = 0;
+            h = 0;
         };
 
         #define SIZEX 0.76/(getResolution select 5)
@@ -55,7 +66,7 @@ class RscInGameUI {
             style = 48;
             size = 0;
             sizeEx = 1;
-            text = QUOTE(PATHTOF(reticles\hamr-reticle65_ca.paa));
+            text = "";
             colorText[] = {1,1,1,0};
             colorBackground[] = {0,0,0,0};
             x = safezoneX+0.5*safezoneW-0.5*SIZEX;
@@ -66,13 +77,13 @@ class RscInGameUI {
 
         class ReticleNight: ReticleDay {
             idc = 1713002;
-            text = QUOTE(PATHTOF(reticles\hamr-reticle65Illum_ca.paa));
+            text = "";
         };
 
         #define SIZEX 2*0.76/(getResolution select 5)
         class BodyDay: ReticleDay {
             idc = 1713005;
-            text = QUOTE(PATHTOF(reticles\hamr-body_ca.paa));
+            text = "";
             x = safezoneX+0.5*safezoneW-0.5*SIZEX;
             y = safezoneY+0.5*safezoneH-0.5*SIZEX*safezoneW/safezoneH;
             w = SIZEX;
@@ -81,7 +92,79 @@ class RscInGameUI {
 
         class BodyNight: BodyDay {
             idc = 1713006;
+            text = "";
+        };
+    };
+
+    class ACE_RscWeapon_Hamr: ACE_RscWeapon_base {
+        class ReticleDay: ReticleDay {
+            text = QUOTE(PATHTOF(reticles\hamr-reticle65_ca.paa));
+        };
+
+        class ReticleNight: ReticleNight {
+            text = QUOTE(PATHTOF(reticles\hamr-reticle65Illum_ca.paa));
+        };
+
+        class BodyDay: BodyDay {
+            text = QUOTE(PATHTOF(reticles\hamr-body_ca.paa));
+        };
+
+        class BodyNight: BodyNight {
             text = QUOTE(PATHTOF(reticles\hamr-bodyNight_ca.paa));
+        };
+    };
+
+    class ACE_RscWeapon_Arco: ACE_RscWeapon_base {
+        class ReticleDay: ReticleDay {
+            text = QUOTE(PATHTOF(reticles\arco-reticle65_ca.paa));
+        };
+
+        class ReticleNight: ReticleNight {
+            text = QUOTE(PATHTOF(reticles\arco-reticle65Illum_ca.paa));
+        };
+
+        class BodyDay: BodyDay {
+            text = QUOTE(PATHTOF(reticles\arco-body_ca.paa));
+        };
+
+        class BodyNight: BodyNight {
+            text = QUOTE(PATHTOF(reticles\arco-bodyNight_ca.paa));
+        };
+    };
+
+    class ACE_RscWeapon_MRCO: ACE_RscWeapon_base {
+        class ReticleDay: ReticleDay {
+            text = QUOTE(PATHTOF(reticles\mrco-reticle556_ca.paa));
+        };
+
+        class ReticleNight: ReticleNight {
+            text = QUOTE(PATHTOF(reticles\mrco-reticle556Illum_ca.paa));
+        };
+
+        class BodyDay: BodyDay {
+            text = QUOTE(PATHTOF(reticles\mrco-body_ca.paa));
+        };
+
+        class BodyNight: BodyNight {
+            text = QUOTE(PATHTOF(reticles\mrco-bodyNight_ca.paa));
+        };
+    };
+
+    class ACE_RscWeapon_SOS: ACE_RscWeapon_base {
+        class ReticleDay: ReticleDay {
+            text = QUOTE(PATHTOF(reticles\sos-reticleMLR_ca.paa));
+        };
+
+        class ReticleNight: ReticleNight {
+            text = QUOTE(PATHTOF(reticles\sos-reticleMLRIllum_ca.paa));
+        };
+
+        class BodyDay: BodyDay {
+            text = QUOTE(PATHTOF(reticles\sos-body_ca.paa));
+        };
+
+        class BodyNight: BodyNight {
+            text = QUOTE(PATHTOF(reticles\sos-bodyNight_ca.paa));
         };
     };
 };
