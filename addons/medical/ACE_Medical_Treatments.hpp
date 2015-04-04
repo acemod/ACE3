@@ -19,6 +19,7 @@ class ACE_Medical_Actions {
 
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
+            animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic4";
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
@@ -113,6 +114,7 @@ class ACE_Medical_Actions {
             itemConsumed = 1;
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
+            animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic4";
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";

@@ -99,7 +99,7 @@ if (_impact > 0) then {
 // If all wounds have been bandaged, we will reset all damage to 0, so the unit is not showing any blood on the model anymore.
 if (count _openWounds == 0) then {
     _target setDamage 0;
-    // TODO also set hitpoints to 0
+    // _target setvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
 };
 
 true;

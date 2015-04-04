@@ -90,11 +90,17 @@ if (isNil _callbackProgress) then {
 // Patient Animation
 _patientAnim = getText (_config >> "animationPatient");
 if (_target getvariable ["ACE_isUnconscious", false]) then {
-    _patientAnim = getText (_config >> "animationPatientUnconscious");
+    if !(animationState _target in (getArray (_config >> "animationPatientUnconsciousExcludeOn"))) then {
+        _patientAnim = getText (_config >> "animationPatientUnconscious");
+    };
 };
 
 if (_caller != _target && {vehicle _target == _target} && {_patientAnim != ""}) then {
-    [_target, _patientAnim, 2, true] call EFUNC(common,doAnimation);
+    if (_target getvariable ["ACE_isUnconscious", false]) then {
+        [_target, _patientAnim, 2, true] call EFUNC(common,doAnimation);
+    } else {
+        [_target, _patientAnim, 1, true] call EFUNC(common,doAnimation);
+    };
 };
 
 // Player Animation
