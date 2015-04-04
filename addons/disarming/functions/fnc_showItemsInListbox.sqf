@@ -29,7 +29,7 @@ private "_classname";
     _count = (_itemsCountArray select 1) select _forEachIndex;
 
     if (_classname != DUMMY_ITEM) then { //Don't show the dummy potato
-    
+
         switch (true) do {
         case (isClass (configFile >> "CfgWeapons" >> _classname)): {
                 _displayName = getText (configFile >> "CfgWeapons" >> _classname >> "displayName");
@@ -46,6 +46,9 @@ private "_classname";
         case (isClass (configFile >> "CfgGlasses" >> _classname)): {
                 _displayName = getText (configFile >> "CfgGlasses" >> _classname >> "displayName");
                 _picture = getText (configFile >> "CfgGlasses" >> _classname >> "picture");
+            };
+            default {
+                ERROR(format ["[%1] - bad classname", _classname]);
             };
         };
 

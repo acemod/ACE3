@@ -51,7 +51,7 @@ GVAR(disarmTarget) = _target;
 
     if (isNull GVAR(disarmTarget)) exitWith {ERROR("disarmTarget is null");};
 
-    systemChat format ["Debug: Droping %1 from %2", _data, GVAR(disarmTarget)];
+    TRACE_2("Debug: Droping %1 from %2",_data,GVAR(disarmTarget));
     ["DisarmDropItems", [GVAR(disarmTarget)], [ACE_player, GVAR(disarmTarget), [_data]]] call EFUNC(common,targetEvent);
 
     false //not sure what this does
@@ -66,8 +66,6 @@ GVAR(disarmTarget) = _target;
     if ((!([_player, _target] call FUNC(canPlayerDisarmUnit))) ||
             {isNull _display} ||
             {_player != ACE_player}) then {
-
-        systemChat "Debug: closeing dialog";
 
         [_pfID] call CBA_fnc_removePerFrameHandler;
         GVAR(disarmTarget) = objNull;

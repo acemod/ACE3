@@ -48,13 +48,12 @@ if (!_doNotDropAmmo) then {
     } forEach ((getpos _target) nearObjects [DISARM_CONTAINER, 3]);
 };
 
+//Create a new weapon holder
 if (isNull _holder) then {
-    _dropPos = _target modelToWorld [0.333, 0.75, 0];
+    _dropPos = _target modelToWorld [0.4, 0.75, 0]; //offset someone unconscious isn't lying over it
     _dropPos set [2, ((getPosASL _target) select 2)];
-    // _holder = createVehicle ["WeaponHolderSimulated", _dropPos, [], 0, "CAN_COLLIDE"];
     _holder = createVehicle [DISARM_CONTAINER, _dropPos, [], 0, "CAN_COLLIDE"];
     _holder setPosASL _dropPos;
-    _holder setVariable [QGVAR(holderInUse), false];
     _holder setVariable [QGVAR(disarmUnit), _target, true];
 };
 
@@ -64,7 +63,6 @@ if (isNull _holder) exitWith {
 };
 //Make sure only one drop operation at a time (using PFEH system as a queue)
 if (_holder getVariable [QGVAR(holderInUse), false]) exitWith {
-    systemChat format ["Debug: %1 - Ground Container In Use, waiting until free", time];
     [{
         _this call FUNC(disarmDropItems);
     }, _this, 0, 0] call EFUNC(common,waitAndExecute);
@@ -92,7 +90,7 @@ if ( ({((_x select 0) in _listOfItemsToRemove) && {!((_x select 0) in UNIQUE_MAG
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Didn't Remove Magazines"] call FUNC(eventTargetFinish);
 };
-//Verify holder has mags unit had 
+//Verify holder has mags unit had
 if (!([_targetMagazinesStart, _targetMagazinesEnd, _holderMagazinesStart, _holderMagazinesEnd] call FUNC(verifyMagazinesMoved))) then {
     ERR = [_targetMagazinesStart, _targetMagazinesEnd, _holderMagazinesStart, _holderMagazinesEnd];
     _holder setVariable [QGVAR(holderInUse), false];
@@ -141,7 +139,6 @@ if (((count _targetItemsStart) - (count _targetItemsEnd)) != ([_addToCrateCount]
     [_caller, _target, "Debug: Items Not Removed From Player"] call FUNC(eventTargetFinish);
 };
 if ((([_holderItemsEnd select 1] call _fncSumArray) - ([_holderItemsStart select 1] call _fncSumArray)) != ([_addToCrateCount] call _fncSumArray)) exitWith {
-
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Items Not Added to Holder"] call FUNC(eventTargetFinish);
 };
@@ -151,11 +148,10 @@ if ((([_holderItemsEnd select 1] call _fncSumArray) - ([_holderItemsStart select
 //So add a dummy item and just remove at the end
 _holderIsEmpty = ([_holder] call FUNC(getAllGearContainer)) isEqualTo [[],[]];
 if (_holderIsEmpty) then {
-    systemChat "Debug: making dummy";
+    TRACE_1("Debug: adding dummy item to holder",_holder);
     _holder addItemCargoGlobal [DUMMY_ITEM, 1];
 };
 
-systemChat format ["PFEh start %1", time];
 //Start the PFEH to do the actions (which could take >1 frame)
 [{
     PARAMS_2(_args,_pfID);
@@ -185,10 +181,7 @@ systemChat format ["PFEh start %1", time];
         //Drop backpack (Keeps variables for ACRE/TFR)
         if (_needToRemoveBackpack) then {_target action ["DropBag", _holder, (backPack _target)];};
     } else {
-        systemChat format ["PFEh done %1", time];
-        //Exit PFEH
         [_pfID] call CBA_fnc_removePerFrameHandler;
-
 
         if (_doNotDropAmmo) then {
             _error = false;
@@ -222,7 +215,7 @@ systemChat format ["PFEh start %1", time];
             [_caller, _target, "Debug: Holder should only have dummy item"] call FUNC(eventTargetFinish);
         };
         if (_holderIsEmpty) then {
-            systemChat "Debug: Deleting Dummy";
+            TRACE_1("Debug: removing dummy item from holder",_holder);
             clearItemCargoGlobal _holder;
         };
         //Verify we didn't timeout waiting on drop action
