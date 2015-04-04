@@ -99,7 +99,12 @@ _startingTime = time;
         // Wait until the unit isn't being carried anymore, so we won't end up with wierd animations
         if !(([_unit] call FUNC(isBeingCarried)) || ([_unit] call FUNC(isBeingDragged))) then {
             if (vehicle _unit == _unit) then {
-                [_unit,"amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
+                if (animationState _unit == "AinjPpneMstpSnonWrflDnon") then {
+                    [_unit,"AinjPpneMstpSnonWrflDnon_rolltofront", 2] call EFUNC(common,doAnimation);
+                    [_unit,"amovppnemstpsnonwnondnon", 1] call EFUNC(common,doAnimation);
+                } else {
+                    [_unit,"amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
+                };
             } else {
                 // Switch to the units original animation, assuming
                 // TODO: what if the unit switched vehicle?
@@ -137,9 +142,9 @@ _startingTime = time;
 
     // A check to ensure that the animation is being played properly.
     // TODO: Might no longer be necessary: Have to test this in MP.
-    if (vehicle _unit == _unit && {animationState _unit != "deadState" && animationState _unit != "unconscious"} && {(isNull ([_unit] call EFUNC(common,getCarriedBy)))} && (time - _startingTime >= 0.5)) then {
-        [_unit,([_unit] call FUNC(getDeathAnim)), 1, true] call EFUNC(common,doAnimation); // Reset animations if unit starts doing wierd things.
-    };
+    // if (vehicle _unit == _unit && {animationState _unit != "deadState" && animationState _unit != "unconscious"} && {(isNull ([_unit] call EFUNC(common,getCarriedBy)))} && (time - _startingTime >= 0.5)) then {
+        //[_unit,([_unit] call FUNC(getDeathAnim)), 1, true] call EFUNC(common,doAnimation); // Reset animations if unit starts doing wierd things.
+    //};
 
 }, 0.1, [_unit,_animState, _originalPos, _startingTime, _minWaitingTime, false] ] call CBA_fnc_addPerFrameHandler;
 

@@ -122,6 +122,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 0;
             };
+            class bleedingCoefficient {
+                displayName = "Bleeding coefficient";
+                description = "Coefficient to modify the bleeding speed";
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
         };
         class ModuleDescription {
             description = "Provides a medical system for both players and AI.";
@@ -131,7 +137,7 @@ class CfgVehicles {
 
     class ACE_moduleTreatmentConfiguration: ACE_Module {
         scope = 2;
-        displayName = "Treatment Configuration [ACE]";
+        displayName = "Treatment Settings [ACE]";
         icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(FUNC(moduleTreatmentConfiguration));
@@ -161,17 +167,17 @@ class CfgVehicles {
                     };
                 };
             };
-            class maxRevives {
-                displayName = "Max revives";
-                description = "Max amount of revives available (when preventing death)";
-                typeName = "NUMBER";
-                defaultValue = 1;
-            };
             class maxReviveTime {
                 displayName = "Max Revive time";
                 description = "Max amount of seconds a unit can spend in revive state";
                 typeName = "NUMBER";
-                defaultValue = 1;
+                defaultValue = 120;
+            };
+            class amountOfReviveLives {
+                displayName = "Max Revive lives";
+                description = "Max amount of lives a unit. 0 or -1 is disabled.";
+                typeName = "NUMBER";
+                defaultValue = -1;
             };
             class enableOverdosing {
                 displayName = "Enable Overdosing";
@@ -179,12 +185,46 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
-            class bleedingCoefficient {
-                displayName = "Bleeding coefficient";
-                description = "Coefficient to modify the bleeding speed";
-                typeName = "NUMBER";
+            class allowLitterCreation {
+                displayName = "Enable Litter";
+                description = "Enable litter being created upon treatment";
+                typeName = "BOOL";
                 defaultValue = 1;
             };
+            class litterCleanUpDelay {
+                displayName = "Life time of litter objects";
+                description = "How long should litter objects stay? In seconds. -1 is forever.";
+                typeName = "NUMBER";
+                defaultValue = 1800;
+            };
+            class medicSetting_PAK {
+                displayName = "Allow PAK";
+                description = "Who can use the PAK for full heal?";
+                typeName = "NUMBER";
+                class values {
+                    class anyone { name = "Anyone"; value = 0; };
+                    class Medic { name = "Medics only"; value = 1; default = 1; };
+                    class Special { name = "Doctors only (Adv)"; value = 2; };
+                };
+            };
+            class consumeItem_PAK {
+                displayName = "Remove PAK on use";
+                description = "Should PAK be removed on usage?";
+                typeName = "NUMBER";
+                class values {
+                    class keep { name = "No"; value = 0; };
+                    class remove { name = "Yes"; value = 1; default = 1; };
+                };
+            };
+            class medicSetting_SurgicalKit: medicSetting_PAK {
+                displayName = "Allow Surgical kit";
+                description = "Who can use the surgical kit?";
+            };
+            class consumeItem_SurgicalKit: consumeItem_PAK {
+                displayName = "Remove Surgical kit";
+                description = "Should Surgical kit be removed on usage?";
+            };
+
         };
         class ModuleDescription {
             description = "Configure the treatment settings from ACE Medical";
@@ -227,7 +267,6 @@ class CfgVehicles {
                     class doctor {
                         name = "Doctor (Only Advanced Medics)";
                         value = 1;
-                        default = 1;
                     };
                 };
             };
@@ -259,8 +298,18 @@ class CfgVehicles {
             class enabled {
                 displayName = "Is Medical Vehicle";
                 description = "Whatever or not the objects in the list will be a medical vehicle.";
-                typeName = "BOOL";
-                defaultValue = 1;
+                typeName = "NUMBER";
+                class values {
+                    class none {
+                        name = "No";
+                        value = 0;
+                    };
+                    class medic {
+                        name = "Yes";
+                        value = 1;
+                        default = 1;
+                    };
+                };
             };
         };
         class ModuleDescription {
@@ -1689,6 +1738,40 @@ class CfgVehicles {
         icon = "";
         displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
     };
+
+    // Medical litter classes
+    class Thing;
+    class ACE_MedicalLitterBase: Thing {
+        scope = 1;
+        displayName = " ";
+        destrType = "DestructNo";
+        model = QUOTE(PATHTOF(data\littergeneric.p3d));
+    };
+    class ACE_MedicalLitter_bandage1: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_bandages1.p3d));
+    };
+    class ACE_MedicalLitter_bandage2: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_bandages2.p3d));
+    };
+    class ACE_MedicalLitter_bandage3: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_bandages3.p3d));
+    };
+    class ACE_MedicalLitter_packingBandage: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\litter_packingBandage.p3d));
+    };
+    class ACE_MedicalLitter_gloves: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_gloves.p3d));
+    };
+    class ACE_MedicalLitter_atropine: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\litter_atropine.p3d));
+    };
+    class ACE_MedicalLitter_epinephrine: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\litter_epinephrine.p3d));
+    };
+    class ACE_MedicalLitter_morphine: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\litter_morphine.p3d));
+    };
+
     class Item_Base_F;
     class ACE_fieldDressingItem: Item_Base_F {
         scope = 2;

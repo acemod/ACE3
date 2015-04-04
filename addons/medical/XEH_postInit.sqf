@@ -237,6 +237,7 @@ if (USE_WOUND_EVENT_SYNC) then {
     {(((_this select 0) getvariable [QGVAR(pain), 0]) > 0.9)},
     {(((_this select 0) call FUNC(getBloodLoss)) > 0.25)},
     {((_this select 0) getvariable [QGVAR(inReviveState), false])},
+    {((_this select 0) getvariable [QGVAR(inCardiacArrest), false])},
     {((_this select 0) getvariable ["ACE_isDead", false])},
     {(((_this select 0) getvariable [QGVAR(airwayStatus), 100]) < 80)}
 ] call FUNC(addUnconsciousCondition);

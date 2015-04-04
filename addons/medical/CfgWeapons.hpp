@@ -25,7 +25,7 @@ class CfgWeapons {
     class ACE_ItemCore;
     class ACE_fieldDressing: ACE_ItemCore {
         scope = 2;
-        model = "\A3\Structures_F_EPA\Items\Medical\Bandage_F.p3d";
+        model = QUOTE(PATHTOF(data\bandage.p3d));
         picture = QUOTE(PATHTOF(ui\items\fieldDressing.paa));
         displayName = $STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY;
         descriptionShort = $STR_ACE_MEDICAL_BANDAGE_BASIC_DESC_SHORT;

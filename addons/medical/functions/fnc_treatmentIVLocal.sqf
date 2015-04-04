@@ -37,7 +37,3 @@ if !(_varName in GVAR(IVBags)) then {
 	GVAR(IVBags) pushback _varName;
 	publicVariable QGVAR(IVBags);
 };
-
-// TODO localization
-//[_target,"treatment",format["%1 has given %4 a %2(%3ml)",[_caller] call EFUNC(common,getName),_attributes select 2,_attributes select 1,_target]] call FUNC(addActivityToLog);
-//[_target,_removeItem] call FUNC(addToTriageList);

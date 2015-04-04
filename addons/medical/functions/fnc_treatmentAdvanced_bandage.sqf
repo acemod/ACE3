@@ -23,7 +23,8 @@ _target = _this select 1;
 _selectionName = _this select 2;
 _className = _this select 3;
 _items = _this select 4;
-_specificSpot = if (count _this > 5) then {_this select 5} else {-1};
+
+_specificSpot = if (count _this > 6) then {_this select 6} else {-1};
 
 if !([_target] call FUNC(hasMedicalEnabled)) exitwith {
 	_this call FUNC(treatmentBasic_bandage);
