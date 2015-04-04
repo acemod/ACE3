@@ -2155,18 +2155,4 @@ class CfgVehicles {
             };
         };
     };
-
-    class StaticMortar;
-    class Mortar_01_base_F: StaticMortar {
-        class ACE_Actions {
-            class ACE_MainActions {
-                class ACE_UnloadPatients {
-                    displayName = "$STR_ACE_Medical_UnloadPatient";
-                    condition = "true";
-                    statement = "";
-                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
-                };
-            };
-        };
-    };
 };

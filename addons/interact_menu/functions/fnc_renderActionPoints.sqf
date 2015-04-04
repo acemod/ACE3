@@ -89,7 +89,7 @@ _fnc_renderSelfActions = {
     {
         _action = _x;
 
-        _pos = if !(visibleMap) then {
+        _pos = if !(GVAR(useCursorMenu)) then {
             (((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL)) vectorAdd GVAR(selfMenuOffset)) call EFUNC(common,ASLToPosition)
         } else {
             [0.5, 0.5]

@@ -149,11 +149,6 @@ class CfgVehicles {
         MACRO_LOADUNLOADCAPTIVE
     };
 
-    class StaticMortar;
-    class Mortar_01_base_F: StaticMortar {
-        MACRO_LOADUNLOADCAPTIVE
-    };
-
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
