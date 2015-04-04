@@ -26,10 +26,8 @@ _items = _this select 4;
 
 if (count _items == 0) exitwith {};
 
-if ([_caller, _target, _items] call FUNC(useItems)) then {
-    _removeItem = _items select 0;
-    [[_target, _removeItem], QUOTE(DFUNC(treatmentIVLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
-    ["Medical_treatmentCompleted", [_caller, _target, _selectionName, _className, true]] call ace_common_fnc_localEvent;
-    [_target, _removeItem] call FUNC(addToTriageCard);
-    [_target, "activity", "STR_ACE_MEDICAL_ACTIVITY_gaveIV", [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
-};
+_removeItem = _items select 0;
+[[_target, _removeItem], QUOTE(DFUNC(treatmentIVLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+["Medical_treatmentCompleted", [_caller, _target, _selectionName, _className, true]] call ace_common_fnc_localEvent;
+[_target, _removeItem] call FUNC(addToTriageCard);
+[_target, "activity", "STR_ACE_MEDICAL_ACTIVITY_gaveIV", [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);

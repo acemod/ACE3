@@ -25,7 +25,6 @@ _selectionName = _this select 1;
 _amountOfDamage = _this select 2;
 _sourceOfDamage = _this select 3;
 _typeOfProjectile = _this select 4;
-_returnDamage = _this select 5;
 
 // Most likely taking exessive fire damage. Lets exit.
 if (isNull _sourceOfDamage && (_selectionName == "head" || isBurning _unit) && _typeOfProjectile == "" && vehicle _unit == _unit) exitwith {
@@ -63,4 +62,4 @@ if (alive _unit && {!(_unit getvariable ["ACE_isUnconscious", false])}) then {
     };
 };
 
-_returnDamage;
+_amountOfDamage;
