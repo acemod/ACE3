@@ -99,7 +99,12 @@ _startingTime = time;
         // Wait until the unit isn't being carried anymore, so we won't end up with wierd animations
         if !(([_unit] call FUNC(isBeingCarried)) || ([_unit] call FUNC(isBeingDragged))) then {
             if (vehicle _unit == _unit) then {
-                [_unit,"amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
+                if (animationState _unit == "AinjPpneMstpSnonWrflDnon") then {
+                    [_unit,"AinjPpneMstpSnonWrflDnon_rolltofront", 2] call EFUNC(common,doAnimation);
+                    [_unit,"amovppnemstpsnonwnondnon", 1] call EFUNC(common,doAnimation);
+                } else {
+                    [_unit,"amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
+                };
             } else {
                 // Switch to the units original animation, assuming
                 // TODO: what if the unit switched vehicle?
