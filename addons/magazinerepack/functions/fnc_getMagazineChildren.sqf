@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unitMagazines", "_unitMagCounts", "_xFullMagazineCount", "_index", "_childCondition", "_actions", "_displayName", "_picture", "_action"];
+private ["_unitMagazines", "_unitMagCounts", "_xFullMagazineCount", "_index", "_actions", "_displayName", "_picture", "_action"];
 
 PARAMS_2(_target,_player);
 
@@ -24,10 +24,11 @@ PARAMS_2(_target,_player);
 _unitMagazines = [];
 _unitMagCounts = [];
 {
-    EXPLODE_2_PVT(_x,_xClassname,_xCount);
+    EXPLODE_4_PVT(_x,_xClassname,_xCount,_xLoaded,_xType);
     _xFullMagazineCount = getNumber (configfile >> "CfgMagazines" >> _xClassname >> "count");
 
-    if ((_xCount != _xFullMagazineCount) && {_xCount > 0}) then {//for every partial magazine
+    //for every partial magazine, that is either in inventory or can be moved there
+    if ((_xCount < _xFullMagazineCount) && {_xCount > 0} && {(!_xLoaded) || {_player canAdd _magazineClassname}}) then {
         _index = _unitMagazines find _xClassname;
         if (_index == -1) then {
             _unitMagazines pushBack _xClassname;
@@ -38,11 +39,6 @@ _unitMagCounts = [];
     };
 } forEach (magazinesAmmoFull _player);
 
-_childCondition = {
-    PARAMS_3(_target,_player,_classname);
-    (_classname in (magazines _player)) && {[_player, _player, ["isNotInside"]] call EFUNC(common,canInteractWith)}
-};
-
 //Create the action children for all appropriate magazines
 _actions = [];
 {
@@ -50,7 +46,7 @@ _actions = [];
         _displayName = getText (configFile >> "CfgMagazines" >> _x >> "displayName");
         _picture = getText (configFile >> "CfgMagazines" >> _x >> "picture");
 
-        _action = [_x, _displayName, _picture, {_this call FUNC(startRepackingMagazine)}, _childCondition, {}, _x] call EFUNC(interact_menu,createAction);
+        _action = [_x, _displayName, _picture, {_this call FUNC(startRepackingMagazine)}, {true}, {}, _x] call EFUNC(interact_menu,createAction);
         _actions pushBack [_action, [], _player];
     };
 } forEach _unitMagazines;

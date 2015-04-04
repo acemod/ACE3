@@ -30,6 +30,9 @@ _fullMagazineCount = getNumber (_magazineCfg >> "count");
 //Is linked belt magazine:
 _isBelt = (isNumber (_magazineCfg >> "ACE_isBelt")) && {(getNumber (_magazineCfg >> "ACE_isBelt")) == 1};
 
+//Check canInteractWith:
+if (!([_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {};
+
 [_player] call EFUNC(common,goKneeling);
 
 _startingAmmoCounts = [];
