@@ -24,7 +24,7 @@ private "_ctrl";
 _ctrl = GVAR(iconCtrls) select GVAR(iconCount);
 GVAR(iconCount) = GVAR(iconCount) + 1;
 
-_ctrl ctrlSetStructuredText (parseText format ["<img image='%1' color='#FF0000' size='1.6' align='center'/>", _icon]);
-_ctrl ctrlSetPosition [(_sPos select 0)-(0.05*SafeZoneW), (_sPos select 1)-(0.014*SafeZoneW), 0.1*SafeZoneW, 0.035*SafeZoneW];
+_ctrl ctrlSetStructuredText (parseText format ["<img image='%1' color='#FF0000' size='1.6'/>", _icon]);
+_ctrl ctrlSetPosition [(_sPos select 0)-(0.014*SafeZoneW), (_sPos select 1)-(0.014*SafeZoneW), 0.05*SafeZoneW, 0.035*SafeZoneW];
 //_ctrl ctrlSetBackgroundColor [1, 0, 0, 0.1];
 _ctrl ctrlCommit 0;
