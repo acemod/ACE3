@@ -4,8 +4,8 @@
  * Either interaction or self-interaction.
  *
  * Argument:
- * 0: Player <OBJECT>
- * 1: Target (or player) <OBJECT>
+ * 0: Target (or player) <OBJECT>
+ * 1: Player <OBJECT>
  *
  * Return value:
  * Can check ammo for statics<BOOL>
@@ -17,11 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_player,_target);
+PARAMS_2(_target,_player);
 
-//For self interaction, get the player's vehicle
-if (_player == _target) then {
-    _target = vehicle _player;
-};
-
-_target isKindOf "StaticWeapon"
+//Can't think of any conditions that actually need to be checked...
+true

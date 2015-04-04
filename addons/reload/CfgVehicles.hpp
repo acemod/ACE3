@@ -26,7 +26,7 @@ class CfgVehicles {
                 class GVAR(CheckAmmo) {
                     displayName = "$STR_ACE_Reload_checkAmmo";
                     distance = 2.0;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canCheckAmmoHover));
+                    condition = QUOTE(_this call FUNC(canCheckAmmoHover));
                     insertChildren = QUOTE(_this call FUNC(checkAmmoHover));
                 };
             };
@@ -34,7 +34,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class GVAR(CheckAmmo) {
                 displayName = "$STR_ACE_Reload_checkAmmo";
-                condition = QUOTE([ARR_2(_player, _target)] call FUNC(canCheckAmmoHover));
+                condition = QUOTE(_this call FUNC(canCheckAmmoHover));
                 insertChildren = QUOTE(_this call FUNC(checkAmmoHover));
             };
         };
