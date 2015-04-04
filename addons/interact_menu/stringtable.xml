@@ -1,7 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2015-04-03 -->
 <Project name="ACE">
   <Package name="Interact_Menu">
     <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
       <English>Always display cursor for self interaction</English>
     </Key>
+    <Key ID="STR_ACE_Interact_Menu_InteractKey">
+      <English>Interact Key</English>
+    </Key>
+    <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
+      <English>Self Interaction Key</English>
+    </Key>
+    <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
+      <English>Self Actions</English>
+    </Key>
+    <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
+      <English>Vehicle Actions</English>
+    </Key>
+  </Package>
 </Project>

@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {"ACE_Box_Misc"};
+        units[] = {"ACE_Box_Misc", "ACE_bananaItem"};
         weapons[] = {"ACE_ItemCore","ACE_FakePrimaryWeapon", "ACE_Banana"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_main"};
