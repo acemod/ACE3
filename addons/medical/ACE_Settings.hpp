@@ -92,4 +92,8 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0;
     };
+    class GVAR(litterCleanUpDelay) {
+        typeName = "SCALAR";
+        value = 1800;
+    };
 };
