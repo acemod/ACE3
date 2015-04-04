@@ -10,3 +10,11 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
+
+class Extended_FiredBIS_EventHandlers {
+    class CAManBase {
+        class AGM_Optics {
+            clientFiredBIS = QUOTE(if (_this select 0 == ACE_player) then {_this call DFUNC(handleFired)};);
+        };
+    };
+};

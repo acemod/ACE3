@@ -63,10 +63,12 @@ class CfgWeapons {
                 class Hamr2Collimator: Hamr2Collimator {};
 
                 class Hamr2Scope: Hamr2Scope {
-                    // zoom 0.0872664626 to all
                     opticsDisplayName = "IHAMR"; // test??
                     modelOptics = QUOTE(PATHTOF(models\ace_optics_pip.p3d));
                     useModelOptics = 1;
+                    opticsZoomInit = 0.0872664626;
+                    opticsZoomMax = 0.0872664626;
+                    opticsZoomMin = 0.0872664626;
                     opticsPPEffects[] += {"ACE_OpticsRadBlur1"};
                     opticsDisablePeripherialVision = 0;
                     visionMode[] = {"Normal","NVG"};

@@ -18,3 +18,10 @@
     // @todo
     //waitUntil {[] call AGM_Optics_fnc_mainLoop; False};
 };
+
+// save control for fired EH
+["infoDisplayChanged", {
+    if (!isNull ((_this select 0) displayCtrl 1713001)) then {
+        uiNamespace setVariable [QGVAR(RscWeaponInfoPIP), _this select 0];
+    };
+}] call EFUNC(common,addEventHandler);

@@ -2,6 +2,7 @@
 
 ADDON = false;
 
+PREP(handleFired);
 PREP(onDrawScope);
 PREP(onDrawScopePIP);
 

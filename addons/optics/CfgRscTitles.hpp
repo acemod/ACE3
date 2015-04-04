@@ -69,7 +69,7 @@ class RscInGameUI {
             text = QUOTE(PATHTOF(reticles\hamr-reticle65Illum_ca.paa));
         };
 
-        #define SIZEX 1.54/(getResolution select 5)
+        #define SIZEX 2*0.76/(getResolution select 5)
         class BodyDay: ReticleDay {
             idc = 1713005;
             text = QUOTE(PATHTOF(reticles\hamr-body_ca.paa));
