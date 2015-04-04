@@ -18,6 +18,7 @@ class ACE_Medical_Actions {
             callbackProgress = "";
 
             animationPatient = "";
+            animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic4";
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
@@ -74,6 +75,7 @@ class ACE_Medical_Actions {
             callbackFailure = "";
             callbackProgress = "";
             animationPatient = "";
+            animationPatientUnconscious = "";
             itemConsumed = 0;
             litter[] = {};
         };
@@ -86,7 +88,7 @@ class ACE_Medical_Actions {
             treatmentTime = 15;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
             itemConsumed = 0;
-            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
+            animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             litter[] = {"ACE_MedicalLitter_gloves", {"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}, {"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}};
         };
     };
@@ -110,6 +112,7 @@ class ACE_Medical_Actions {
             callbackProgress = "";
             itemConsumed = 1;
             animationPatient = "";
+            animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic4";
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
@@ -219,7 +222,12 @@ class ACE_Medical_Actions {
             treatmentTime = 15;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
             itemConsumed = 0;
-            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
+            animationPatient = "";
+            animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
+            animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
+            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+            animationCallerSelf = "";
+            animationCallerSelfProne = "";
             litter[] = {"ACE_MedicalLitter_gloves", {"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"},  {"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}};
         };
         class CheckPulse: fieldDressing {
@@ -260,7 +268,11 @@ class ACE_Medical_Actions {
             callbackFailure = "";
             callbackProgress = "";
             animationPatient = "";
-            animationCaller = ""; // TODO
+            animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
+            animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
+            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+            animationCallerSelf = "";
+            animationCallerSelfProne = "";
             itemConsumed = 0;
             litter[] = {};
         };
@@ -276,6 +288,7 @@ class ACE_Medical_Actions {
             callbackFailure = "";
             callbackProgress = "";
             animationPatient = "";
+            animationPatientUnconscious = "";
             itemConsumed = 0;
             litter[] = {};
         };
