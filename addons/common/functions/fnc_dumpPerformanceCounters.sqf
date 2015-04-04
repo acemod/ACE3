@@ -2,16 +2,16 @@
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-/*
+
 diag_log text format["REGISTERED ACE PFH HANDLERS"];
 diag_log text format["-------------------------------------------"];
-if(!isNil "ACE_PFH") then {
+if(!isNil "ACE_PFH_COUNTER") then {
 	{
 		private["_pfh"];
 		_pfh = _x select 0;
 		diag_log text format["Registered PFH: id=%1, %1:%2", (_pfh select 0), (_pfh select 1), (_pfh select 2) ]; 
-	} forEach ACE_PFH;
-};*/
+	} forEach ACE_PFH_COUNTER;
+};
 
 diag_log text format["ACE COUNTER RESULTS"];
 diag_log text format["-------------------------------------------"];
