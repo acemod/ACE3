@@ -16,8 +16,11 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_isUnconc);
+EXPLODE_2_PVT(_this,_unit,_isUnconc);
 
+diag_log "handleOnUnconscious";
+diag_log _this;
+diag_log _unit;
 if (!local _unit) exitWith {};
 
 if (_isUnconc) then {
