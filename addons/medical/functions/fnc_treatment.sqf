@@ -164,7 +164,8 @@ _treatmentTime = getNumber (_config >> "treatmentTime");
     DFUNC(treatment_success),
     DFUNC(treatment_failure),
     getText (_config >> "displayNameProgress"),
-    _callbackProgress
+    _callbackProgress,
+    ["isnotinside"]
 ] call EFUNC(common,progressBar);
 
 // Display Icon
