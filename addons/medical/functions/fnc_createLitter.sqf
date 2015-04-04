@@ -14,9 +14,14 @@
 
 #include "script_component.hpp"
 
+#define MIN_ENTRIES_LITTER_CONFIG 3
+
 private ["_target", "_className", "_config", "_litter", "_createLitter", "_litterObject", "_position", "_createdLitter"];
-_target = _this select 0;
-_className = _this select 1;
+_caller = _this select 0;
+_target = _this select 1;
+_selectionName = _this select 2;
+_className = _this select 3;
+_usersOfItems = _this select 5;
 
 if !(GVAR(allowLitterCreation)) exitwith {};
 
@@ -51,14 +56,32 @@ if (isnil QGVAR(allCreatedLitter)) then {
 _createdLitter = [];
 {
     if (typeName _x == "ARRAY") then {
-        {
-            if (typeName _x == "STRING") exitwith {
-                _createdLitter pushback ([_target, _x] call _createLitter);
+        if (count _x < MIN_ENTRIES_LITTER_CONFIG) exitwith {};
+        private ["_selection", "_litterCondition", "_litterOptions"];
+        _selection = _x select 0;
+        if (toLower _selection in [toLower _selectionName, "all"]) then { // in is case sensitve. We can be forgiving here, so lets use toLower.
+            _litterCondition = _x select 1;
+            _litterOptions = _x select 2;
+
+            if (isnil _litterCondition) then {
+                _litterCondition = if (_litterCondition != "") then {compile _litterCondition} else {{true}};
+            } else {
+                _litterCondition = missionNamespace getvariable _litterCondition;
             };
-        }foreach _x;
-    };
-    if (typeName _x == "STRING") then {
-        _createdLitter pushback ([_target, _x] call _createLitter);
+            if !([_caller, _target, _selectionName, _className, _usersOfItems] call _litterCondition) exitwith {};
+
+            if (typeName _litterOptions == "ARRAY") then {
+                // Loop through through the litter options and place the litter
+                {
+                    if (typeName _x == "ARRAY" && {(count _x > 0)}) then {
+                        _createdLitter pushback ([_target, _x select (floor(random(count _x)))] call _createLitter);
+                    };
+                    if (typeName _x == "STRING") then {
+                        _createdLitter pushback ([_target, _x] call _createLitter);
+                    };
+                }foreach _litterOptions;
+            };
+        };
     };
 }foreach _litter;
 

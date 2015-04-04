@@ -20,11 +20,11 @@ class ACE_Medical_Actions {
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
-            animationCaller = "AinvPknlMstpSnonWnonDnon_medic4";
+            animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
-            litter[] = {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}};
+            litter[] = { {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}} };
         };
         class Morphine: Bandage {
             displayName = "$STR_ACE_Medical_Inject_Morphine";
@@ -33,7 +33,7 @@ class ACE_Medical_Actions {
             items[] = {"ACE_morphine"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_morphine));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
-            litter[] = {"ACE_MedicalLitter_morphine"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
         };
         class Epinephrine: Bandage {
             displayName = "$STR_ACE_Medical_Inject_Epinephrine";
@@ -43,7 +43,7 @@ class ACE_Medical_Actions {
             items[] = {"ACE_epinephrine"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_epipen));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
-            litter[] = {"ACE_MedicalLitter_epinephrine"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
         };
         class BloodIV: Bandage {
             displayName = "$STR_ACE_Medical_Transfuse_Blood";
@@ -80,7 +80,7 @@ class ACE_Medical_Actions {
             itemConsumed = 0;
             litter[] = {};
         };
-        class PersonalAidKit: Bandage {
+        /*class PersonalAidKit: Bandage {
             displayName = "";
             displayNameProgress = "";
             items[] = {"ACE_personalAidKit"};
@@ -90,8 +90,8 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
             itemConsumed = 0;
             animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medic";
-            litter[] = {"ACE_MedicalLitter_gloves", {"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}, {"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}};
-        };
+            litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"}},  {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}, {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}} };
+        };*/
     };
 
     class Advanced {
@@ -115,23 +115,20 @@ class ACE_Medical_Actions {
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
-            animationCaller = "AinvPknlMstpSnonWnonDnon_medic4";
+            animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
-            litter[] = {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}};
+            litter[] = { {"All", "", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}} };
         };
         class PackingBandage: fieldDressing {
             items[] = {"ACE_packingBandage"};
-            litter[] = {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}};
         };
         class ElasticBandage: fieldDressing {
             items[] = {"ACE_elasticBandage"};
-            litter[] = {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}};
         };
         class QuikClot: fieldDressing {
             items[] = {"ACE_quikclot"};
-            litter[] = {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}};
         };
         class Tourniquet: fieldDressing {
             displayName = "$STR_ACE_Medical_Apply_Tourniquet";
@@ -149,19 +146,19 @@ class ACE_Medical_Actions {
             treatmentTime = 3;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_medication));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
-            litter[] = {"ACE_MedicalLitter_morphine"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
         };
         class Atropine: Morphine {
             displayName = "$STR_ACE_Medical_Inject_Atropine";
             displayNameProgress = "$STR_ACE_Medical_Injecting_Atropine";
             items[] = {"ACE_atropine"};
-            litter[] = {"ACE_MedicalLitter_atropine"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_atropine"}} };
         };
         class Epinephrine: Morphine {
             displayName = "$STR_ACE_Medical_Inject_Epinephrine";
             displayNameProgress = "$STR_ACE_Medical_Injecting_Epinephrine";
             items[] = {"ACE_epinephrine"};
-            litter[] = {"ACE_MedicalLitter_epinephrine"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
         };
         class BloodIV: fieldDressing {
             displayName = "$STR_ACE_Medical_Transfuse_Blood";
@@ -213,7 +210,7 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_surgicalKit));
             itemConsumed = 0;
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
-            litter[] = {"ACE_MedicalLitter_gloves"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"} }};
         };
         class PersonalAidKit: fieldDressing {
             displayName = "";
@@ -230,7 +227,7 @@ class ACE_Medical_Actions {
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
             animationCallerSelf = "";
             animationCallerSelfProne = "";
-            litter[] = {"ACE_MedicalLitter_gloves", {"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"},  {"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"}},  {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}} }, {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}} };
         };
         class CheckPulse: fieldDressing {
             displayName = "";
