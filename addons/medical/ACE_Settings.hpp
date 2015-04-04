@@ -19,7 +19,7 @@ class ACE_Settings {
         value = true;
     };
     class GVAR(bleedingCoefficient) {
-        typeName = "NUMBER";
+        typeName = "SCALAR";
         value = 1;
     };
 
@@ -44,16 +44,16 @@ class ACE_Settings {
         value = true;
     };
     class GVAR(playerDamageThreshold) {
-        typeName = "NUMBER";
+        typeName = "SCALAR";
         value = 1;
     };
     class GVAR(AIDamageThreshold) {
-        typeName = "NUMBER";
+        typeName = "SCALAR";
         value = 1;
     };
     class GVAR(enableUnsconsiousnessAI) {
         value = 1;
-        typeName = "NUMBER";
+        typeName = "SCALAR";
         values[] = {"Disabled", "Enabled", "50/50"};
     };
     class GVAR(preventInstaDeath) {
@@ -61,11 +61,11 @@ class ACE_Settings {
         value = false;
     };
     class GVAR(maxReviveTime) {
-        typeName = "NUMBER";
+        typeName = "SCALAR";
         value = 120;
     };
     class GVAR(amountOfReviveLives) {
-        typeName = "NUMBER";
+        typeName = "SCALAR";
         value = -1;
     };
     class GVAR(allowDeadBodyMovement) {
