@@ -18,7 +18,7 @@ class CfgVehicles {
                     class No { default = 1; name = "No"; value = 0; };
                 };
             };
-            class RemoveDeadBodiesDisonncected {
+            class RemoveDeadBodiesDisconnected {
                 displayName = "Remove bodies?";
                 description = "Remove player bodies after disconnect?";
                 typeName = "BOOL";

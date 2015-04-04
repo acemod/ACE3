@@ -4,6 +4,8 @@
  *
  * Arguments:
  * 0: The unit that will be put in an unconscious state <OBJECT>
+ * 1: Set unconsciouns <BOOL> <OPTIONAL>
+ * 2: Minimum unconscious time <NUMBER> <OPTIONAL>
  *
  * ReturnValue:
  * nil
@@ -13,9 +15,12 @@
 
 #include "script_component.hpp"
 
+#define DEFAULT_DELAY   (round(random(10)+5))
+
 private ["_unit", "_set", "_animState", "_originalPos", "_captiveSwitch", "_startingTime","_minWaitingTime"];
 _unit = _this select 0;
 _set = if (count _this > 1) then {_this select 1} else {true};
+_minWaitingTime = if (count _this > 2) then {_this select 2} else {DEFAULT_DELAY};
 
 if !(_set) exitwith {
     _unit setvariable ["ACE_isUnconscious", false,true];
@@ -27,9 +32,6 @@ if !(!(isNull _unit) && {(_unit isKindOf "CaManBase") && ([_unit] call EFUNC(com
 if (!local _unit) exitwith {
     [[_unit], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
-
-// Get rid of the object we are carrying, before we go unconscious.
-[_unit, ObjNull, [0,0,0]] call EFUNC(common,carryObj);
 
 // Set the unit in the unconscious state.
 _unit setvariable ["ACE_isUnconscious", true, true];
@@ -74,7 +76,6 @@ _unit setUnitPos "DOWN";
 [_unit, [_unit] call EFUNC(common,getDeathAnim), 1, true] call EFUNC(common,doAnimation);
 
 _startingTime = time;
-_minWaitingTime = (round(random(10)+5));
 
 [{
     private ["_unit", "_vehicleOfUnit","_minWaitingTime", "_oldAnimation", "_captiveSwitch", "_hasMovedOut"];
@@ -93,17 +94,17 @@ _minWaitingTime = (round(random(10)+5));
 
     // In case the unit is no longer in an unconscious state, we are going to check if we can already reset the animation
     if !(_unit getvariable ["ACE_isUnconscious",false]) exitwith {
+
         // TODO, handle this with carry instead, so we can remove the PFH here.
         // Wait until the unit isn't being carried anymore, so we won't end up with wierd animations
-        if !([_unit] call EFUNC(common,beingCarried)) then {
+        if !(([_unit] call FUNC(isBeingCarried)) || ([_unit] call FUNC(isBeingDragged))) then {
             if (vehicle _unit == _unit) then {
-                [_unit,"amovppnemstpsnonwnondnon", 1] call EFUNC(common,doAnimation);
+                [_unit,"amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
             } else {
                 // Switch to the units original animation, assuming
                 // TODO: what if the unit switched vehicle?
-                [_unit, _oldAnimation, 1] call EFUNC(common,doAnimation);
+                [_unit, _oldAnimation, 2] call EFUNC(common,doAnimation);
             };
-
             // EXIT PFH
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
         };
@@ -120,7 +121,7 @@ _minWaitingTime = (round(random(10)+5));
             _unit setUnconscious false;
             ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
             // ensure this statement runs only once
-            _args set [6, true];
+            _args set [5, true];
         };
     };
 

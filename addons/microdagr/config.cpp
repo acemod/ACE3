@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         units[] = {};
-        weapons[] = {};
+        weapons[] = {"ACE_microDAGR"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author[] = {"PabstMirror"};

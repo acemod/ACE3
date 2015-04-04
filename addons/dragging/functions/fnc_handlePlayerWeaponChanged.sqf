@@ -20,12 +20,21 @@ if (_unit getVariable [QGVAR(isDragging), false]) then {
 
 if (_unit getVariable [QGVAR(isCarrying), false]) then {
 
-    // drop carried object when selecting any weapon
-    if (_weapon != "") then {
-        private "_carriedObject";
-        _carriedObject = _unit getVariable [QGVAR(carriedObject), objNull];
+    private "_carriedObject";
+    _carriedObject = _unit getVariable [QGVAR(carriedObject), objNull];
 
-        [_unit, _carriedObject] call FUNC(dropObject_carry);
+    if (_carriedObject isKindOf "CAManBase") then {
+
+        if (_weapon != primaryWeapon _unit) then {
+            [_unit, _carriedObject] call FUNC(dropObject_carry);
+        };
+
+    } else {
+
+        // drop carried object when selecting any weapon
+        if (_weapon != "") then {
+            [_unit, _carriedObject] call FUNC(dropObject_carry);
+        };
+
     };
-
 };

@@ -87,6 +87,7 @@ class CfgVehicles {
     displayName = "LSD Vehicles";
     function = "ACE_Common_fnc_moduleLSDVehicles";
     scope = 2;
+    icon = QUOTE(PATHTOF(UI\Icon_Module_LSD_ca.paa));
     isGlobal = 1;
     class Arguments {
     };
@@ -106,4 +107,21 @@ class CfgVehicles {
     class TransportItems {};
     class TransportBackpacks {};
   };
+
+    class Item_Base_F;
+    class ACE_bananaItem: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "$STR_ACE_Common_bananaDisplayName";
+        author = "$STR_ACE_Common_ACETeam";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class ACE_banana
+            {
+                name = "ACE_banana";
+                count = 1;
+            };
+        };
+    };
 };

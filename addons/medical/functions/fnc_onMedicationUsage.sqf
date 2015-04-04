@@ -49,7 +49,7 @@ if (!_foundEntry) then {
 
 
 _usedMeds = _target getvariable [_variable, 0];
-if (_usedMeds >= floor (_maxDosage + round(random(2))) && _maxDosage >= 1) then {
+if (_usedMeds >= floor (_maxDosage + round(random(2))) && _maxDosage >= 1 && GVAR(enableOverdosing)) then {
     [_target] call FUNC(setDead);
 };
 
@@ -65,7 +65,7 @@ _hasOverDosed = 0;
     }foreach _allUsedMedication;
 }foreach _incompatabileMeds;
 
-if (_hasOverDosed > 0) then {
+if (_hasOverDosed > 0 && GVAR(enableOverdosing)) then {
     _medicationConfig = (configFile >> "ACE_Medical_Advanced" >> "Treatment" >> "Medication");
     _onOverDose = getText (_medicationConfig >> "onOverDose");
     if (isClass (_medicationConfig >> _className)) then {

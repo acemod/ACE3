@@ -12,7 +12,7 @@
  * Nothing
  *
  * Example:
- * [minimap,0,0.5,0.5] call ace_microdagr_fnc_mapOnDrawEH
+ * [minimap,0,0.5,0.5] call ace_microdagr_fnc_mapDoubleTapEH
  *
  * Public: No
  */

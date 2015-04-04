@@ -10,7 +10,7 @@ class CfgVehicles {
                     statement = QUOTE([DISPLAY_MODE_DISPLAY] call FUNC(openDisplay));
                     showDisabled = 0;
                     priority = 0.2;
-                    icon = QUOTE(PATHTOF(data\icon_microDAGR.paa));
+                    icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
                     exceptions[] = {"notOnMap"};
                 };
                 class GVAR(configure) {
@@ -20,7 +20,7 @@ class CfgVehicles {
                     statement = QUOTE([DISPLAY_MODE_DIALOG] call FUNC(openDisplay));
                     showDisabled = 0;
                     priority = 0.1;
-                    icon = QUOTE(PATHTOF(data\icon_microDAGR.paa));
+                    icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
                     exceptions[] = {"notOnMap"};
                 };
                 class GVAR(close) {
@@ -29,7 +29,7 @@ class CfgVehicles {
                     statement = QUOTE([DISPLAY_MODE_CLOSED] call FUNC(openDisplay));
                     showDisabled = 0;
                     priority = 0.3;
-                    icon = QUOTE(PATHTOF(data\icon_microDAGR.paa));
+                    icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
                     exceptions[] = {"notOnMap"};
                 };
             };
@@ -48,12 +48,12 @@ class CfgVehicles {
         function = QFUNC(moduleMapFill);
         scope = 2;
         isGlobal = 1;
-        // icon = QUOTE(PATHTOF(ui\IconLock_ca.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_microDAGR_ca.paa));
         functionPriority = 0;
         class Arguments {
             class MapDataAvailable {
                 displayName = "MicroDAGR Map Fill"; // Argument label
-                description = "How much map data is filled on MicroDAGRs "; // Tooltip description
+                description = "How much map data is filled on MicroDAGR's "; // Tooltip description
                 typeName = "NUMBER"; // Value type, can be "NUMBER", "STRING" or "BOOL"
                 class values {
                     class None {name = "Full Satellite + Buildings"; value = MAP_DETAIL_SAT; default = 1;};
@@ -63,7 +63,14 @@ class CfgVehicles {
             };
         };
         class ModuleDescription: ModuleDescription {
-            description = "Controls how muchdata is filled in the microDAGR items.  Less data restricts the map view to show less on the minimap.<br/>Source: microDAGR.pbo";
+            description = "Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.<br/>Source: microDAGR.pbo";
+        };
+    };
+    
+    class Box_NATO_Support_F;
+    class ACE_Box_Misc: Box_NATO_Support_F {
+        class TransportItems {
+            MACRO_ADDITEM(ACE_microDAGR,10);
         };
     };
 };

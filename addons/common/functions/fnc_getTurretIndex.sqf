@@ -18,7 +18,6 @@ _vehicle = vehicle _unit;
 
 if (_unit == _vehicle) exitWith {[]};
 
-//_turrets = [typeOf _vehicle] call FUNC(getTurrets);
 _turrets = allTurrets [_vehicle, true];
 
 _units = [];

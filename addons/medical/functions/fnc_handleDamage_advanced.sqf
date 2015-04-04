@@ -25,7 +25,6 @@ _selectionName = _this select 1;
 _amountOfDamage = _this select 2;
 _sourceOfDamage = _this select 3;
 _typeOfProjectile = _this select 4;
-_returnDamage = _this select 5;
 
 // Most likely taking exessive fire damage. Lets exit.
 if (isNull _sourceOfDamage && (_selectionName == "head" || isBurning _unit) && _typeOfProjectile == "" && vehicle _unit == _unit) exitwith {
@@ -57,12 +56,10 @@ _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 //};
 
 if (alive _unit && {!(_unit getvariable ["ACE_isUnconscious", false])}) then {
-    [_unit, _newDamage] call FUNC(reactionToDamage);
-
     // If it reaches this, we can assume that the hit did not kill this unit, as this function is called 3 frames after the damage has been passed.
     if ([_unit, _part, if (_part > 1) then {_newDamage * 1.3} else {_newDamage * 2}] call FUNC(determineIfFatal)) then {
         [_unit] call FUNC(setUnconscious);
     };
 };
 
-_returnDamage;
+_amountOfDamage;

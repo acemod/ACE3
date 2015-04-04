@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_availableLevels", "_medicRequired", "_items", "_locations", "_return", "_callbackSuccess", "_callbackFailure", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return"];
+private ["_caller", "_target", "_selectionName", "_className", "_config", "_availableLevels", "_medicRequired", "_items", "_locations", "_return", "_callbackSuccess", "_callbackFailure", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -71,6 +71,10 @@ if ("All" in _locations) then {
 
 if !(_return) exitwith {false};
 
+_usersOfItems = [];
+if (getNumber (_config >> "itemConsumed") > 0) then {
+    _usersOfItems = ([_caller, _target, _items] call FUNC(useItems)) select 1;
+};
 
 // Parse the config for the progress callback
 _callbackProgress = getText (_config >> "callbackProgress");
@@ -94,6 +98,12 @@ _callerAnim = [getText (_config >> "animationCaller"), getText (_config >> "anim
 if (_caller == _target) then {
     _callerAnim = [getText (_config >> "animationCallerSelf"), getText (_config >> "animationCallerSelfProne")] select (stance _caller == "PRONE");
 };
+
+// Cannot use secondairy weapon for animation
+if (currentWeapon _caller == secondaryWeapon _caller) then {
+    _caller selectWeapon (primaryWeapon _caller);
+};
+
 _wpn = ["non", "rfl", "pst"] select (["", primaryWeapon _caller, handgunWeapon _caller] find (currentWeapon _caller));
 _callerAnim = [_callerAnim, "[wpn]", _wpn] call CBA_fnc_replace;
 if (vehicle _caller == _caller && {_callerAnim != ""}) then {
@@ -109,7 +119,7 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
 _treatmentTime = getNumber (_config >> "treatmentTime");
 [
     _treatmentTime,
-    [_caller, _target, _selectionName, _className, _items],
+    [_caller, _target, _selectionName, _className, _items, _usersOfItems],
     DFUNC(treatment_success),
     DFUNC(treatment_failure),
     getText (_config >> "displayNameProgress"),
@@ -133,6 +143,5 @@ if (_target != _caller) then {
 if (_displayText != "") then {
     ["displayTextStructured", [_caller], [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
 };
-
 
 true;

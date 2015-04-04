@@ -39,6 +39,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             interpolationRestart = 2;
             ConnectTo[] = {"ACE_AmovPercMstpScapWnonDnon",0.1};
             InterpolateTo[] = {"Unconscious",0.01,"ACE_AmovPercMstpScapWnonDnon_AmovPercMstpSnonWnonDnon",0.1};
+            canReload = 0;
         };
         class ACE_AmovPercMstpScapWnonDnon: ACE_AmovPercMstpSnonWnonDnon_AmovPercMstpScapWnonDnon {
             file = "\A3\anims_f\Data\Anim\Sdr\mov\erc\stp\non\non\AmovPercMstpSnonWnonDnon_Ease";
@@ -63,6 +64,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             interpolationRestart = 2;
             ConnectTo[] = {"ACE_AmovPercMstpSsurWnonDnon",0.1};
             InterpolateTo[] = {"Unconscious",0.01,"ACE_AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon",0.1};
+            canReload = 0;
         };
         class ACE_AmovPercMstpSsurWnonDnon: ACE_AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon {
             file = "\A3\anims_f\Data\Anim\Sdr\mov\erc\stp\sur\non\AmovPercMstpSsurWnonDnon";
@@ -80,4 +82,3 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         };
     };
 };
-
