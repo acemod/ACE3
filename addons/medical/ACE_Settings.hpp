@@ -76,6 +76,10 @@ class ACE_Settings {
         typeName = "BOOL";
         value = true;
     };
+    class GVAR(litterCleanUpDelay) {
+        typeName = "SCALAR";
+        value = 1800;
+    };
     class GVAR(medicSetting_PAK) {
         typeName = "SCALAR";
         value = 1;
@@ -91,9 +95,5 @@ class ACE_Settings {
     class GVAR(consumeItem_SurgicalKit) {
         typeName = "SCALAR";
         value = 0;
-    };
-    class GVAR(litterCleanUpDelay) {
-        typeName = "SCALAR";
-        value = 1800;
     };
 };

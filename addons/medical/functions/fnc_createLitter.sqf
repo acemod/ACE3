@@ -85,7 +85,9 @@ _createdLitter = [];
     };
 }foreach _litter;
 
-GVAR(allCreatedLitter) pushback [time, GVAR(litterCleanUpDelay), _createdLitter];
+if (GVAR(litterCleanUpDelay) >= 0) then {
+    GVAR(allCreatedLitter) pushback [time, GVAR(litterCleanUpDelay), _createdLitter];
+};
 
 if !(GVAR(litterPFHRunning)) then {
     GVAR(litterPFHRunning) = true;

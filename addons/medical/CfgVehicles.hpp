@@ -191,6 +191,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class litterCleanUpDelay {
+                displayName = "Life time of litter objects";
+                description = "How long should litter objects stay? In seconds. -1 is forever.";
+                typeName = "NUMBER";
+                defaultValue = 1800;
+            };
             class medicSetting_PAK {
                 displayName = "Allow PAK";
                 description = "Who can use the PAK for full heal?";
