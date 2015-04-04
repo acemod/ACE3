@@ -50,8 +50,7 @@ class CfgWeapons {
     class ACE_optic_Hamr_2D: optic_Hamr {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_Hamr_2D";
-        displayName = "$STR_A3_cfgWeapons_optic_Hamr0";    //@todo
-        descriptionShort = "$STR_A3_cfgWeapons_optic_Hamr1";    //@todo
+        displayName = "$STR_ACE_optic_hamr";
         weaponInfoType = "ACE_RscWeapon_Hamr";
 
         class ItemInfo: ItemInfo {
@@ -76,6 +75,7 @@ class CfgWeapons {
     class ACE_optic_Hamr_PIP: ACE_optic_Hamr_2D {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_Hamr_PIP";
+        displayName = "$STR_ACE_optic_hamr_pip";
 
         class ItemInfo: ItemInfo {
             modelOptics = QUOTE(PATHTOF(models\ace_optics_pip.p3d));
@@ -94,8 +94,7 @@ class CfgWeapons {
     class ACE_optic_Arco_2D: optic_Arco {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_Arco_2D";
-        displayName = "$STR_A3_cfgWeapons_optic_Arco0";    //@todo
-        descriptionShort = "$STR_A3_cfgWeapons_optic_Arco1";    //@todo
+        displayName = "$STR_ACE_optic_arco";
         weaponInfoType = "ACE_RscWeapon_Arco";
 
         class ItemInfo: ItemInfo {
@@ -119,6 +118,7 @@ class CfgWeapons {
     class ACE_optic_Arco_PIP: ACE_optic_Arco_2D {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_Arco_PIP";
+        displayName = "$STR_ACE_optic_arco_pip";
 
         class ItemInfo: ItemInfo {
             modelOptics = QUOTE(PATHTOF(models\ace_optics_pip.p3d));
@@ -137,8 +137,7 @@ class CfgWeapons {
     class ACE_optic_MRCO_2D: optic_MRCO {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_MRCO_2D";
-        displayName = "$STR_A3_cfgWeapons_optic_Valdada0"; //@todo
-        descriptionShort = "$STR_A3_cfgWeapons_optic_Valdada1";
+        displayName = "$STR_ACE_optic_valdada";
         weaponInfoType = "ACE_RscWeapon_MRCO";
 
         class ItemInfo: ItemInfo {
@@ -162,6 +161,7 @@ class CfgWeapons {
     class ACE_optic_MRCO_PIP: ACE_optic_MRCO_2D {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_MRCO_PIP";
+        displayName = "$STR_ACE_optic_valdada_pip";
 
         class ItemInfo: ItemInfo {
             modelOptics = QUOTE(PATHTOF(models\ace_optics_pip.p3d));
@@ -180,8 +180,7 @@ class CfgWeapons {
     class ACE_optic_SOS_2D: optic_SOS {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_SOS_2D";
-        displayName = "$STR_A3_cfgWeapons_optic_SOS0"; // @todo
-        descriptionShort = "$STR_A3_cfgWeapons_optic_SOS1";
+        displayName = "$STR_ACE_optic_sos";
         weaponInfoType = "ACE_RscWeapon_SOS";
 
         class ItemInfo: ItemInfo {
@@ -198,6 +197,7 @@ class CfgWeapons {
     class ACE_optic_SOS_PIP: ACE_optic_SOS_2D {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_SOS_PIP";
+        displayName = "$STR_ACE_optic_sos_pip";
 
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
@@ -219,10 +219,7 @@ class CfgWeapons {
     class ACE_optic_LRPS_2D: optic_LRPS {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_LRPS_2D";
-        displayName = "$STR_A3_cfgWeapons_optic_LRPS0"; //@todo
-        picture = "\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
-        model = "\A3\Weapons_F_EPB\Acc\acco_sniper02_F.p3d";
-        descriptionShort = "$STR_A3_cfgWeapons_optic_LRPS1";
+        displayName = "$STR_ACE_optic_lrps";
         weaponInfoType = "ACE_RscWeapon_SOS";
 
         class ItemInfo: ItemInfo {
@@ -244,6 +241,7 @@ class CfgWeapons {
     class ACE_optic_LRPS_PIP: ACE_optic_LRPS_2D {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_LRPS_PIP";
+        displayName = "$STR_ACE_optic_lrps_pip";
 
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
