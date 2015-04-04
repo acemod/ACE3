@@ -40,7 +40,6 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 
 // Listens for the falling unconscious event, just in case the menu needs to be closed
 ["medical_onUnconscious", {
-    diag_log ["im_onUn 1:",_this];
     // If no menu is open just quit
     if (GVAR(openedMenuType) < 0) exitWith {};
 
@@ -50,5 +49,4 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 
     GVAR(actionSelected) = false;
     [] call FUNC(keyUp);
-    diag_log ["im_onUn 2:",_this];
 }] call EFUNC(common,addEventhandler);
