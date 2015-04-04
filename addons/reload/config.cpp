@@ -31,4 +31,3 @@ class ACE_Settings {
         description = "$STR_ACE_reload_SettingDisplayTextDesc";
     };
 };
-
