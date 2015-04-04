@@ -49,6 +49,11 @@ class CfgWeapons {
     };
 
     class ACE_optic_Hamr_2D: optic_Hamr {
+        GVAR(BodyDay) = QUOTE(PATHTOF(reticles\hamr-body_ca.paa));
+        GVAR(BodyNight) = QUOTE(PATHTOF(reticles\hamr-bodyNight_ca.paa));
+        GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\hamr-reticle65_ca.paa));
+        GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\hamr-reticle65Illum_ca.paa));
+
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_Hamr_2D";
         displayName = "$STR_ACE_optic_hamr";
@@ -65,7 +70,7 @@ class CfgWeapons {
                     opticsZoomInit = 0.0872664626;
                     opticsZoomMax = 0.0872664626;
                     opticsZoomMin = 0.0872664626;
-                    opticsPPEffects[] += {"ACE_OpticsRadBlur1"};
+                    opticsPPEffects[] = {"OpticsCHAbera5","OpticsBlur5","ACE_OpticsRadBlur1"};
                     opticsDisablePeripherialVision = 0;
                     visionMode[] = {"Normal","NVG"};
                 };
@@ -94,6 +99,11 @@ class CfgWeapons {
     };
 
     class ACE_optic_Arco_2D: optic_Arco {
+        GVAR(BodyDay) = QUOTE(PATHTOF(reticles\arco-body_ca.paa));
+        GVAR(BodyNight) = QUOTE(PATHTOF(reticles\arco-bodyNight_ca.paa));
+        GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\arco-reticle65_ca.paa));
+        GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\arco-reticle65Illum_ca.paa));
+
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_Arco_2D";
         displayName = "$STR_ACE_optic_arco";
@@ -109,7 +119,7 @@ class CfgWeapons {
                     opticsZoomInit = 0.0872664626;
                     opticsZoomMax = 0.0872664626;
                     opticsZoomMin = 0.0872664626;
-                    opticsPPEffects[] += {"ACE_OpticsRadBlur1"};
+                    opticsPPEffects[] = {"OpticsCHAbera5","OpticsBlur5","ACE_OpticsRadBlur1"};
                     opticsDisablePeripherialVision = 0;
                     visionMode[] = {"Normal"};
                 };
@@ -138,6 +148,11 @@ class CfgWeapons {
     };
 
     class ACE_optic_MRCO_2D: optic_MRCO {
+        GVAR(BodyDay) = QUOTE(PATHTOF(reticles\mrco-body_ca.paa));
+        GVAR(BodyNight) = QUOTE(PATHTOF(reticles\mrco-bodyNight_ca.paa));
+        GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\mrco-reticle556_ca.paa));
+        GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\mrco-reticle556Illum_ca.paa));
+
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_MRCO_2D";
         displayName = "$STR_ACE_optic_valdada";
@@ -153,7 +168,7 @@ class CfgWeapons {
                     opticsZoomInit = 0.0872664626;
                     opticsZoomMax = 0.0872664626;
                     opticsZoomMin = 0.0872664626;
-                    opticsPPEffects[] += {"ACE_OpticsRadBlur1"};
+                    opticsPPEffects[] = {"OpticsCHAbera5","OpticsBlur5","ACE_OpticsRadBlur1"};
                     opticsDisablePeripherialVision = 0;
                     visionMode[] = {"Normal"};
                 };
@@ -200,6 +215,11 @@ class CfgWeapons {
     };
 
     class ACE_optic_SOS_PIP: ACE_optic_SOS_2D {
+        GVAR(BodyDay) = QUOTE(PATHTOF(reticles\sos-body_ca.paa));
+        GVAR(BodyNight) = QUOTE(PATHTOF(reticles\sos-bodyNight_ca.paa));
+        GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\sos-reticleMLR_ca.paa));
+        GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\sos-reticleMLRIllum_ca.paa));
+
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_SOS_PIP";
         scopeArsenal = 1;
@@ -223,6 +243,11 @@ class CfgWeapons {
     };
 
     class ACE_optic_LRPS_2D: optic_LRPS {
+        GVAR(BodyDay) = QUOTE(PATHTOF(reticles\sos-body_ca.paa));
+        GVAR(BodyNight) = QUOTE(PATHTOF(reticles\sos-bodyNight_ca.paa));
+        GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\sos-reticleMLR_ca.paa));
+        GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\sos-reticleMLRIllum_ca.paa));
+
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_LRPS_2D";
         displayName = "$STR_ACE_optic_lrps";
@@ -237,7 +262,7 @@ class CfgWeapons {
                     opticsZoomMax = 0.04673;
                     opticsZoomMin = 0.01234;
                     discreteFOV[] = {};
-                    opticsPPEffects[] += {"ACE_OpticsRadBlur1"};
+                    opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1","ACE_OpticsRadBlur1"};
                     opticsDisablePeripherialVision = 0;
                 };
             };

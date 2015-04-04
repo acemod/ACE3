@@ -30,3 +30,5 @@ class CfgPatches {
 #include "CfgRscTitles.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+
+#include "CfgPreloadTextures.hpp"

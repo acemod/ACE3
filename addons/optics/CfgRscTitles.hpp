@@ -60,7 +60,7 @@ class RscInGameUI {
             h = 0;
         };
 
-        #define SIZEX 0.76/(getResolution select 5)
+        #define SIZEX 0.75/(getResolution select 5)
         class ReticleDay: RscText {
             idc = 1713001;
             style = 48;
@@ -80,7 +80,7 @@ class RscInGameUI {
             text = "";
         };
 
-        #define SIZEX 2*0.76/(getResolution select 5)
+        #define SIZEX 2*0.75/(getResolution select 5)
         class BodyDay: ReticleDay {
             idc = 1713005;
             text = "";

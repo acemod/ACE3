@@ -51,7 +51,7 @@ _scopeShiftY = _recoilCoef * linearConversion [0, 1, random 1, SCOPE_SHIFT_Y_MIN
 // Create and commit recoil effect
 private ["_sizeX", "_sizeY"];
 
-_sizeX = (0.76+_recoilScope)/(getResolution select 5);
+_sizeX = (0.75+_recoilScope)/(getResolution select 5);
 _sizeY = _sizeX*safezoneW/safezoneH;
 
 private "_positionReticle";
@@ -82,7 +82,7 @@ _positionBody = [
 (_display displayCtrl 1713006) ctrlCommit 0;
 
 // Bring them all back
-_sizeX = 0.76/(getResolution select 5);
+_sizeX = 0.75/(getResolution select 5);
 _sizeY = _sizeX*safezoneW/safezoneH;
 
 _positionReticle = [
