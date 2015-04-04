@@ -525,26 +525,6 @@ class CfgVehicles {
     };
   };
 
-  class StaticMortar;
-  class Mortar_01_base_F: StaticMortar {
-    class ACE_Actions {
-      class ACE_MainActions {
-        displayName = "$STR_ACE_Interaction_MainAction";
-        selection = "gunnerview";
-        distance = 2;
-        condition = "true";
-      };
-    };
-    class ACE_SelfActions {
-      class ACE_Passengers {
-        displayName = "$STR_ACE_Interaction_Passengers";
-        condition = "true";
-        statement = "";
-        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
-      };
-    };
-  };
-
   class thingX;
   class ReammoBox_F: thingX {
     class ACE_Actions {

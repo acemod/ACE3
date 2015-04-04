@@ -24,7 +24,6 @@ if !(_activated) exitWith {};
 
 [_logic, QGVAR(medicSetting), "medicSetting"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(maxRevives), "maxRevives"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(maxReviveTime), "maxReviveTime"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(enableOverdosing), "enableOverdosing"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(bleedingCoefficient), "bleedingCoefficient"] call EFUNC(common,readSettingFromModule);
-
-
