@@ -22,6 +22,13 @@ _target = _this select 1;
 _selectionName = _this select 2;
 _className = _this select 3;
 
+// If the cursorMenu is open, the loading bar will fail. If we execute the function one frame later, it will work fine
+if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exitwith {
+    [{
+        _this call FUNC(treatment);
+    }, _this, 0, 0] call EFUNC(common,waitAndExecute);
+};
+
 if !(_target isKindOf "CAManBase") exitWith {false};
 
 _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
