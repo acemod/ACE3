@@ -121,7 +121,11 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         _caller addWeapon "ACE_FakePrimaryWeapon";
     };
     _caller selectWeapon (primaryWeapon _caller);
-    _caller setvariable [QGVAR(treatmentPrevAnimCaller), animationState _caller];
+    if (stance _caller == "STAND") then {
+        _caller setvariable [QGVAR(treatmentPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
+    } else {
+        _caller setvariable [QGVAR(treatmentPrevAnimCaller), animationState _caller];
+    };
     [_caller, _callerAnim] call EFUNC(common,doAnimation);
 };
 
