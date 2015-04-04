@@ -116,17 +116,17 @@ class CfgVehicles {
                     };
                 };
             };
-            class allowLitterCreation {
-                displayName = "Enable Litter";
-                description = "Enable litter being created upon treatment";
-                typeName = "BOOL";
-                defaultValue = 1;
-            };
             class preventInstaDeath {
                 displayName = "Prevent instant death";
                 description = "Have a unit move to unconscious instead of death";
                 typeName = "BOOL";
                 defaultValue = 0;
+            };
+            class bleedingCoefficient {
+                displayName = "Bleeding coefficient";
+                description = "Coefficient to modify the bleeding speed";
+                typeName = "NUMBER";
+                defaultValue = 1;
             };
         };
         class ModuleDescription {
@@ -185,12 +185,40 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
-            class bleedingCoefficient {
-                displayName = "Bleeding coefficient";
-                description = "Coefficient to modify the bleeding speed";
-                typeName = "NUMBER";
+            class allowLitterCreation {
+                displayName = "Enable Litter";
+                description = "Enable litter being created upon treatment";
+                typeName = "BOOL";
                 defaultValue = 1;
             };
+            class medicSetting_PAK {
+                displayName = "Allow PAK";
+                description = "Who can use the PAK for full heal?";
+                typeName = "NUMBER";
+                class values {
+                    class anyone { name = "Anyone"; value = 0; };
+                    class Medic { name = "Medics only"; value = 1; default = 1; };
+                    class Special { name = "Doctors only (Adv)"; value = 2; };
+                };
+            };
+            class consumeItem_PAK {
+                displayName = "Remove PAK on use";
+                description = "Should PAK be removed on usage?";
+                typeName = "NUMBER";
+                class values {
+                    class keep { name = "No"; value = 0; };
+                    class remove { name = "Yes"; value = 1; default = 1; };
+                };
+            };
+            class medicSetting_SurgicalKit: medicSetting_PAK {
+                displayName = "Allow Surgical kit";
+                description = "Who can use the surgical kit?";
+            };
+            class consumeItem_SurgicalKit: consumeItem_PAK {
+                displayName = "Remove Surgical kit";
+                description = "Should Surgical kit be removed on usage?";
+            };
+
         };
         class ModuleDescription {
             description = "Configure the treatment settings from ACE Medical";
@@ -233,7 +261,6 @@ class CfgVehicles {
                     class doctor {
                         name = "Doctor (Only Advanced Medics)";
                         value = 1;
-                        default = 1;
                     };
                 };
             };
@@ -265,8 +292,18 @@ class CfgVehicles {
             class enabled {
                 displayName = "Is Medical Vehicle";
                 description = "Whatever or not the objects in the list will be a medical vehicle.";
-                typeName = "BOOL";
-                defaultValue = 1;
+                typeName = "NUMBER";
+                class values {
+                    class none {
+                        name = "No";
+                        value = 0;
+                    };
+                    class medic {
+                        name = "Yes";
+                        value = 1;
+                        default = 1;
+                    };
+                };
             };
         };
         class ModuleDescription {
