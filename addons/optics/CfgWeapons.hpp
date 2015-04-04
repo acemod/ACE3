@@ -16,6 +16,7 @@ class CfgWeapons {
     class ACE_optic_DMS: optic_DMS {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_DMS";
+        scope = 1;
         displayName = "LOCALIZE ACE DMS";
         //descriptionShort = "$STR_A3_CFGWEAPONS_ACC_DMS1";
         weaponInfoType = "ACE_RscWeaponZeroing";
@@ -75,6 +76,7 @@ class CfgWeapons {
     class ACE_optic_Hamr_PIP: ACE_optic_Hamr_2D {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_Hamr_PIP";
+        scopeArsenal = 1;
         displayName = "$STR_ACE_optic_hamr_pip";
 
         class ItemInfo: ItemInfo {
@@ -118,6 +120,7 @@ class CfgWeapons {
     class ACE_optic_Arco_PIP: ACE_optic_Arco_2D {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_Arco_PIP";
+        scopeArsenal = 1;
         displayName = "$STR_ACE_optic_arco_pip";
 
         class ItemInfo: ItemInfo {
@@ -161,6 +164,8 @@ class CfgWeapons {
     class ACE_optic_MRCO_PIP: ACE_optic_MRCO_2D {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_MRCO_PIP";
+        scope = 1;
+        scopeArsenal = 1;
         displayName = "$STR_ACE_optic_valdada_pip";
 
         class ItemInfo: ItemInfo {
@@ -197,6 +202,7 @@ class CfgWeapons {
     class ACE_optic_SOS_PIP: ACE_optic_SOS_2D {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_SOS_PIP";
+        scopeArsenal = 1;
         displayName = "$STR_ACE_optic_sos_pip";
 
         class ItemInfo: ItemInfo {
@@ -241,6 +247,7 @@ class CfgWeapons {
     class ACE_optic_LRPS_PIP: ACE_optic_LRPS_2D {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_LRPS_PIP";
+        scopeArsenal = 1;
         displayName = "$STR_ACE_optic_lrps_pip";
 
         class ItemInfo: ItemInfo {

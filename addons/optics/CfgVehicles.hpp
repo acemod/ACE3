@@ -8,7 +8,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_optic_Arco_2D,2);
             MACRO_ADDITEM(ACE_optic_Arco_PIP,2);
             MACRO_ADDITEM(ACE_optic_MRCO_2D,2);
-            MACRO_ADDITEM(ACE_optic_MRCO_PIP,2);
+            //MACRO_ADDITEM(ACE_optic_MRCO_PIP,2);
             MACRO_ADDITEM(ACE_optic_SOS_2D,2);
             MACRO_ADDITEM(ACE_optic_SOS_PIP,2);
             MACRO_ADDITEM(ACE_optic_LRPS_2D,2);

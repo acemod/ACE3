@@ -9,7 +9,7 @@ class CfgPatches {
             "ACE_optic_Arco_2D",
             "ACE_optic_Arco_PIP",
             "ACE_optic_MRCO_2D",
-            "ACE_optic_MRCO_PIP",
+            //"ACE_optic_MRCO_PIP",
             "ACE_optic_SOS_2D",
             "ACE_optic_SOS_PIP",
             "ACE_optic_LRPS_2D",

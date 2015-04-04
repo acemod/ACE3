@@ -25,7 +25,7 @@ _weapon = _this select 1;
 
 // check if compatible scope is used
 private "_display";
-_display = uiNamespace getVariable [QGVAR(RscWeaponInfoPIP), displayNull];
+_display = uiNamespace getVariable [QGVAR(RscWeaponInfo2D), displayNull];
 
 if (isNull _display) exitWith {};
 
