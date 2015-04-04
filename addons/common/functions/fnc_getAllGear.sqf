@@ -13,8 +13,6 @@
 
 EXPLODE_1_PVT(_this,_unit);
 
-if (isNull _unit) exitWith {[]};
-
 [
     (headgear _unit),
     (goggles _unit),
