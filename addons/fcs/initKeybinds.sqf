@@ -3,7 +3,7 @@
 ["ACE3", QGVAR(lazeTarget), localize "STR_ACE_FCS_LaseTarget",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !((!GVAR(enabled) && FUNC(canUseFCS)) || FUNC(canUseRangefinder)) exitWith {false};
 
@@ -20,7 +20,7 @@
     GVAR(isDownStateKey1) = false;
 
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(GVAR(enabled) && FUNC(canUseFCS)) exitWith {false};
 
@@ -33,7 +33,7 @@
 ["ACE3", QGVAR(adjustRangeUp), localize "STR_ACE_FCS_AdjustRangeUp",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(call FUNC(canUseRangefinder) || FUNC(canUseFCS)) exitWith {false};
 
@@ -47,7 +47,7 @@
 ["ACE3", QGVAR(adjustRangDown), localize "STR_ACE_FCS_AdjustRangeDown",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(call FUNC(canUseRangefinder) || FUNC(canUseFCS)) exitWith {false};
 

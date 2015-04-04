@@ -17,13 +17,14 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target","_selectionName","_className","_config","_callback"];
+private ["_caller", "_target","_selectionName","_className","_config","_callback", "_usersOfItems"];
 
 _args = _this select 0;
 _caller = _args select 0;
 _target = _args select 1;
 _selectionName = _args select 2;
 _className = _args select 3;
+_usersOfItems = _args select 5;
 
 if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
@@ -31,7 +32,9 @@ if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
 [_caller, _caller getvariable [QGVAR(treatmentPrevAnimCaller), ""], 1] call EFUNC(common,doAnimation);
 _caller setvariable [QGVAR(treatmentPrevAnimCaller), nil];
 
-// @todo remove item?
+{
+	(_x select 0) addItem (_x select 1);
+}foreach _usersOfItems;
 
 // Record specific callback
 _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
@@ -46,4 +49,6 @@ if (isNil _callback) then {
     _callback = missionNamespace getvariable _callback;
 };
 
-_args call _callback
+_args call FUNC(createLitter);
+
+_args call _callback;

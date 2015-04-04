@@ -50,7 +50,7 @@ _unit setVariable [QGVAR(bloodIVVolume), 0];
 _unit setvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
 
 // airway
-_unit setvariable [QGVAR(airwayStatus), 0, true];
+_unit setvariable [QGVAR(airwayStatus), 100, true];
 _unit setVariable [QGVAR(airwayOccluded), false, true];
 _unit setvariable [QGVAR(airwayCollapsed), false, true];
 
@@ -61,6 +61,7 @@ _unit setVariable ["ACE_isUnconscious", false, true];
 _unit setvariable [QGVAR(hasLostBlood), false, true];
 _unit setvariable [QGVAR(isBleeding), false, true];
 _unit setvariable [QGVAR(hasPain), false, true];
+_unit setvariable [QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives), true];
 
 // medication
 _allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];

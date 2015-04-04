@@ -6,8 +6,7 @@ PREP(attach);
 PREP(canAttach);
 PREP(canDetach);
 PREP(detach);
-PREP(openAttachUI);
+PREP(getChildrenAttachActions);
 PREP(placeApprove);
-PREP(placeCancel);
 
 ADDON = true;

@@ -22,8 +22,8 @@ if (_unit getVariable [QGVAR(isDragging), false]) then {
 
 if (_unit getVariable [QGVAR(isCarrying), false]) then {
 
-    // drop carried object when not standing
-    if (stance _unit != "STAND") then {
+    // drop carried object when not standing; also some exceptions when picking up crate
+    if (stance _unit != "STAND" && {_anim != "amovpercmstpsnonwnondnon"}) then {
         private "_carriedObject";
         _carriedObject = _unit getVariable [QGVAR(carriedObject), objNull];
 
