@@ -4,9 +4,14 @@
 TRACE_1("Launch", _this);
 PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
-FUNC(guidance_Javelin_LOBL_HI_PFH) = {
+FUNC(guidance_Javelin_LOBL_DIR_PFH) = {
+    
+};
+
+FUNC(guidance_Javelin_LOBL_TOP_PFH) = {
 	TRACE_1("enter", _this);
-	private["_pitch", "_yaw", "_wentTerminal", "_target", "_targetPos", "_curVelocity", "_missile", "_launchPos", "_targetStartPos" ];
+	private["_pitch", "_yaw", "_wentTerminal", "_target", "_targetPos", "_curVelocity", "_missile", 
+            "_launchPos", "_targetStartPos", "_defPitch", "_defYaw"];
 	_args = _this select 0;
 	//PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 	_shooter = _args select 0;
@@ -21,18 +26,18 @@ FUNC(guidance_Javelin_LOBL_HI_PFH) = {
 	} else {
         _wentTerminal = false;
         _launchPos = getPosASL _shooter;
-		_target = GVAR(currentTarget);
-		_targetStartPos = GVAR(currentTargetPos);
+        _target = ACE_player getVariable[QGVAR(currentTarget), objNull];
+        _targetStartPos = ACE_player getVariable[QGVAR(currentTargetPos), [0,0,0]];
 	};
 	
+    if(!alive _missile || isNull _missile || isNull _target) exitWith {
+		[(_this select 1)] call cba_fnc_removePerFrameHandler;
+	};
+    
     _targetPos = getPosASL _target;
 	_curVelocity = velocity _missile;
 	
     TRACE_4("", _target, _targetPos, _launchPos, _targetStartPos);
-    
-	if(!alive _missile || isNull _missile) exitWith {
-		[(_this select 1)] call cba_fnc_removePerFrameHandler;
-	};
 
 	_addHeight = [0,0,0];
 	if(!isNil "_target") then {
@@ -47,22 +52,25 @@ FUNC(guidance_Javelin_LOBL_HI_PFH) = {
 		TRACE_4("Phase Check", _launchPos, _missilePos, _targetPos, (_missilePos distance _targetPos));
 		if((count _targetPos) > 0) then {
 			_distanceToTarget = [(_missilePos select 0), (_missilePos select 1), (_targetPos select 2)]  vectorDistance _targetPos;	
-			
-			
-			
+
 			if( (_missilePos select 2) < (_targetPos select 2) + 200 && !_wentTerminal) then {
-				_addHeight = [0,0,(_targetPos select 2) + ( (_distanceToTarget * 2) + 200)];
-				TRACE_1("Climb phase", _addHeight);
+				_addHeight = [0,0, ( (_distanceToTarget * 2) + 400)];
+				
+                _defPitch = 0.25;
+                _defYaw = 0.035;
+                
+                TRACE_1("Climb phase", _addHeight);
 			} else {
 				_wentTerminal = true;
 				_this set[2, _wentTerminal];
-				TRACE_1("TERMINAL", "");
+				
+                _defPitch = 0.25;
+                _defYaw = 0.25;
+                
+                TRACE_1("TERMINAL", "");
 			};
 			_targetPos = _targetPos vectorAdd _addHeight;
-			
-            _defPitch = 0.25;
-			_defYaw = 0.035;
-			
+
 			_targetVectorSeeker = [_missile, [_xVec, _yVec, _zVec], _targetPos] call FUNC(translateToWeaponSpace);
 			_yaw = 0.0;
 			TRACE_5("", _missile, _xVec, _yVec, _zVec, _targetPos);
@@ -119,23 +127,34 @@ FUNC(guidance_Javelin_LOBL_HI_PFH) = {
     _this set[0, _args];
 };
 
-FUNC(guidance_Javelin_LOBL_HI) = {
+FUNC(guidance_Javelin_LOBL_TOP) = {
 	PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 	
 	GVAR(lastTime) = time;
-	[FUNC(guidance_Javelin_LOBL_HI_PFH), 0, _this] call cba_fnc_addPerFrameHandler;
+	[FUNC(guidance_Javelin_LOBL_TOP_PFH), 0, _this] call cba_fnc_addPerFrameHandler;
+};
+
+FUNC(guidance_Javelin_LOBL_DIR) = {
+	PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
+	
+	GVAR(lastTime) = time;
+	[FUNC(guidance_Javelin_LOBL_DIR_PFH), 0, _this] call cba_fnc_addPerFrameHandler;
 };
 
 if(!local _shooter) exitWith { false };
 if(_ammo == "M_Titan_AT") then {
-	_fireMode = _shooter getVariable ["ACE_FIRE_SELECTION", ACE_DEFAULT_FIRE_SELECTION];
+	_fireMode = _shooter getVariable ["ACE_FIRE_SELECTION", ACE_JAV_FIREMODE_TOP];
 	
-	switch (_fireMode select 0) do {
-	// Default to FIREMODE_DIRECT_LOAL
-	// FIREMODE_DIRECT_LOAL
-	default {
-		LOG("Initiating Javelin FIREMODE_LOBL_HI");
-		_this call FUNC(guidance_Javelin_LOBL_HI);
-	};
-};
+	switch (_fireMode) do {
+        // Default to FIREMODE_DIRECT_LOAL
+        // FIREMODE_DIRECT_LOAL
+        case ACE_JAV_FIREMODE_DIR: {
+            LOG("Initiating Javelin FIREMODE_LOBL_DIR");
+            _this call FUNC(guidance_Javelin_LOBL_DIR);
+        };
+        default {
+            LOG("Initiating Javelin FIREMODE_LOBL_TOP");
+            _this call FUNC(guidance_Javelin_LOBL_TOP);
+        };
+    };
 };
