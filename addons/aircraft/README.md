@@ -10,3 +10,4 @@ The people responsible for merging changes to this component or answering potent
 
 - [KoffeinFlummi](https://github.com/KoffeinFlummi)
 - [commy2](https://github.com/commy2)
+- [jaynus](https://github.com/walterpearce)

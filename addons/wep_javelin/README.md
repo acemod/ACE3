@@ -8,5 +8,5 @@ Adds the Javelin AT launcher.
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [walterpearce](https://github.com/walterpearce)
+- [jaynus](https://github.com/walterpearce)
 - [NouberNou](https://github.com/NouberNou)
