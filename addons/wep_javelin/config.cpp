@@ -12,3 +12,4 @@ class CfgPatches {
 
 #include "CfgEventhandlers.hpp"
 #include "CfgOptics.hpp"
+#include "CfgSounds.hpp"
