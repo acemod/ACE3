@@ -34,7 +34,11 @@ _createLitter = {
     _position = getPos (_this select 0);
     _litterClass = _this select 1;
     _litterObject = createVehicle [_litterClass, _position, [], 0, "NONE"];
-    _litterObject setPos [(_position select 0) + random 0.5, (_position select 1) + random 1.2, _position select 2];
+    if (random(1) >= 0.5) then {
+        _litterObject setPos [(_position select 0) + random 2, (_position select 1) + random 2, _position select 2];
+    } else {
+        _litterObject setPos [(_position select 0) - random 2, (_position select 1) - random 2, _position select 2];
+    };
     _litterObject setDir (random 360);
     _litterObject;
 };
