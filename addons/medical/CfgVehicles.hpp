@@ -1713,10 +1713,21 @@ class CfgVehicles {
     class ACE_MedicalLitter_bandage3: ACE_MedicalLitterBase {
         model = QUOTE(PATHTOF(data\littergeneric_bandages3.p3d));
     };
+    class ACE_MedicalLitter_packingBandage: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\litter_packingBandage.p3d));
+    };
     class ACE_MedicalLitter_gloves: ACE_MedicalLitterBase {
         model = QUOTE(PATHTOF(data\littergeneric_gloves.p3d));
     };
-
+    class ACE_MedicalLitter_atropine: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\litter_atropine.p3d));
+    };
+    class ACE_MedicalLitter_epinephrine: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\litter_epinephrine.p3d));
+    };
+    class ACE_MedicalLitter_morphine: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\litter_morphine.p3d));
+    };
 
     class Item_Base_F;
     class ACE_fieldDressingItem: Item_Base_F {
