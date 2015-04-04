@@ -18,7 +18,7 @@
 PARAMS_1(_oldUnit);
 
 if (_oldUnit getVariable [QGVAR(isHandcuffed), false]) then {
-    _oldUnit setVariable [QGVAR(isHandcuffed), false, true];
+    [_oldUnit, false] call FUNC(setSurrendered);
 };
 
 if (_oldUnit getVariable [QGVAR(isEscorting), false]) then {
@@ -26,5 +26,5 @@ if (_oldUnit getVariable [QGVAR(isEscorting), false]) then {
 };
 
 if (_oldUnit getVariable [QGVAR(isSurrendering), false]) then {
-    _oldUnit setVariable [QGVAR(isSurrendering), false, true];
+    [_oldUnit, false] call FUNC(setSurrendered);
 };

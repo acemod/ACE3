@@ -15,6 +15,10 @@
 // Exit if there's no menu opened
 if (GVAR(openedMenuType) < 0) exitWith {true};
 
+if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
+    closeDialog 0;
+};
+
 if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
 
@@ -39,10 +43,6 @@ if(GVAR(actionSelected)) then {
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;
 GVAR(openedMenuType) = -1;
-
-if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
-    closeDialog 0;
-};
 
 GVAR(expanded) = false;
 GVAR(lastPath) = [];

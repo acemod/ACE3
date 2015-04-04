@@ -1,6 +1,8 @@
 //XEH_clientInit.sqf
 #include "script_component.hpp"
 
+if (!hasInterface) exitWith {};
+
 // Install the render EH on the main display
 addMissionEventHandler ["Draw3D", DFUNC(render)];
 
@@ -10,17 +12,17 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     // Wait until the map display is detected
     waitUntil {(!isNull findDisplay 12)};
 
-	// Install the render EH on the map screen
+    // Install the render EH on the map screen
     ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", DFUNC(render)];
 };
 
 
-["ACE3", QGVAR(InteractKey), "Interact Key",
+["ACE3", QGVAR(InteractKey), (localize "STR_ACE_Interact_Menu_InteractKey"),
 {[0] call FUNC(keyDown)},
 {[0] call FUNC(keyUp)},
 [219, [false, false, false]], false] call cba_fnc_addKeybind;  //Left Windows Key
 
-["ACE3", QGVAR(SelfInteractKey), "Self Actions Key",
+["ACE3", QGVAR(SelfInteractKey), (localize "STR_ACE_Interact_Menu_SelfInteractKey"),
 {[1] call FUNC(keyDown)},
 {[1] call FUNC(keyUp)},
 [219, [false, true, false]], false] call cba_fnc_addKeybind; //Left Windows Key + Ctrl/Strg
