@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_availableLevels", "_medicRequired", "_items", "_locations", "_return", "_callbackSuccess", "_callbackFailure", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems"];
+private ["_caller", "_target", "_selectionName", "_className", "_config", "_availableLevels", "_medicRequired", "_items", "_locations", "_return", "_callbackSuccess", "_callbackFailure", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems", "_consumeItems"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -30,8 +30,16 @@ if (GVAR(level) >= 2) then {
 };
 if !(isClass _config) exitwith {false};
 
-// Check for required class
-_medicRequired = getNumber (_config >> "requiredMedic");
+_medicRequired = if (isNumber (_config >> "requiredMedic")) then {
+    getNumber (_config >> "requiredMedic");
+} else {
+    // Check for required class
+    if (isText (_config >> "requiredMedic")) exitwith {
+        missionNamespace getvariable [(getText (_config >> "requiredMedic")), 0];
+    };
+    0;
+};
+
 if !([_caller, _medicRequired] call FUNC(isMedic)) exitwith {false};
 
 // Check item
@@ -72,7 +80,16 @@ if ("All" in _locations) then {
 if !(_return) exitwith {false};
 
 _usersOfItems = [];
-if (getNumber (_config >> "itemConsumed") > 0) then {
+_consumeItems = if (isNumber (_config >> "itemConsumed")) then {
+    getNumber (_config >> "itemConsumed");
+} else {
+    // Check for required class
+    if (isText (_config >> "itemConsumed")) exitwith {
+        missionNamespace getvariable [(getText (_config >> "itemConsumed")), 0];
+    };
+    0;
+};
+if (_consumeItems > 0) then {
     _usersOfItems = ([_caller, _target, _items] call FUNC(useItems)) select 1;
 };
 

@@ -30,7 +30,15 @@ if (GVAR(level)>=2) then {
 };
 if !(isClass _config) exitwith {false};
 
-_medicRequired = getNumber (_config >> "requiredMedic");
+_medicRequired = if (isNumber (_config >> "requiredMedic")) then {
+    getNumber (_config >> "requiredMedic");
+} else {
+    // Check for required class
+    if (isText (_config >> "requiredMedic")) exitwith {
+        missionNamespace getvariable [(getText (_config >> "requiredMedic")), 0];
+    };
+    0;
+};
 if !([_caller, _medicRequired] call FUNC(isMedic)) exitwith {false};
 
 _items = getArray (_config >> "items");

@@ -76,4 +76,20 @@ class ACE_Settings {
         typeName = "BOOL";
         value = true;
     };
+    class GVAR(medicSetting_PAK) {
+        typeName = "SCALAR";
+        value = 1;
+    };
+    class GVAR(medicSetting_SurgicalKit) {
+        typeName = "SCALAR";
+        value = 1;
+    };
+    class GVAR(consumeItem_PAK) {
+        typeName = "SCALAR";
+        value = 0;
+    };
+    class GVAR(consumeItem_SurgicalKit) {
+        typeName = "SCALAR";
+        value = 0;
+    };
 };
