@@ -31,7 +31,7 @@
 #define __JavelinIGUITargetingConstrainLeft (__JavelinIGUI displayCtrl 699103)
 #define __JavelinIGUITargetingConstrainRight (__JavelinIGUI displayCtrl 699104)
 
-// Targeting gate (not present yet)
+// Targeting gate
 #define __JavelinIGUITargetingGate (__JavelinIGUI displayCtrl 699200)
 #define __JavelinIGUITargetingGateTL (__JavelinIGUI displayCtrl 699201)
 #define __JavelinIGUITargetingGateTR (__JavelinIGUI displayCtrl 699202)

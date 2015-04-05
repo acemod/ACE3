@@ -95,9 +95,9 @@ if (isNull _newTarget) then {
    
 };
 
-
 TRACE_2("", _newTarget, _currentTarget);
 
+// Save arguments for next run
 _args set[0, diag_tickTime];
 _args set[1, _currentTarget];
 

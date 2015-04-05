@@ -211,6 +211,7 @@ class RscInGameUI {
 						};
 					};
 				};
+                /*
 				class TargetingConstrains: RscControlsGroup {
 					idc = 699100;
 					x = "SafezoneX";
@@ -264,6 +265,7 @@ class RscInGameUI {
 						};
 					};
 				};
+                
 				class TargetingGate: TargetingConstrains {
 					idc = 699200;
 					class Controls {
@@ -349,6 +351,7 @@ class RscInGameUI {
 						};
 					};
 				};
+                
 				class TargetingLines: TargetingConstrains {
 					idc = 699300;
 					class Controls {
@@ -370,6 +373,8 @@ class RscInGameUI {
 						};
 					};
 				};
+                */
+                
 				class ACE_javelin_SEEK_off: ACE_javelin_Day_mode_off {
 					idc = 699000;
 					x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.863/4)*3*SafezoneH - SafezoneX";
