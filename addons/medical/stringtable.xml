@@ -336,6 +336,9 @@
         <French>Garot [CAT]</French>
         <Polish>Opaska uciskowa [CAT]</Polish>
       </Key>
+      <Key ID="STR_ACE_MEDICAL_receivingIvVolume">
+        <English>Receiving IV [%1ml]</English>
+      </Key>
     </Container>
     <Container name="CfgWeapons">
       <Key ID="STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY">

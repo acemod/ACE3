@@ -61,6 +61,18 @@ if (_show) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_PAIN", [1, 1, 1, 1]];
         };
 
+        _totalIvVolume = 0;
+        {
+            private "_value";
+            _value = _target getvariable _x;
+            if !(isnil "_value") then {
+                _totalIvVolume = _totalIvVolume + (_target getvariable [_x, 0]);
+            };
+        }foreach GVAR(IVBags);
+        if (_totalIvVolume >= 1) then {
+            _genericMessages pushback [format[localize "STR_ACE_MEDICAL_receivingIvVolume", floor _totalIvVolume], [1, 1, 1, 1]];
+        };
+
         _selectionBloodLoss = [0,0,0,0,0,0];
         if (GVAR(level) >= 2) then {
             _openWounds = _target getvariable [QGVAR(openWounds), []];

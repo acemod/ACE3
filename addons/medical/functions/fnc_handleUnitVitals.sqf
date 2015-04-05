@@ -167,4 +167,15 @@ if (GVAR(level) >= 2) then {
             [_unit] call FUNC(setCardiacArrest);
         };
     };
+
+    // syncing any remaining values
+    if (_syncValues) then {
+        {
+            private "_value";
+            _value = _unit getvariable _x;
+            if !(isnil "_value") then {
+                _unit setvariable [_x,(_unit getvariable [_x, 0]), true];
+            };
+        }foreach GVAR(IVBags);
+    };
 };
