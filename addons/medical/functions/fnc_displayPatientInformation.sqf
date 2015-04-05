@@ -87,9 +87,9 @@ if (_show) then {
             {
                 _amountOf = _x select 3;
                 // Find how much this bodypart is bleeding
-                if (_selectionBloodLoss select (_x select 2) == 0) then {
-                    _selectionBloodLoss set [(_x select 2), (_selectionBloodLoss select (_x select 2)) + (15 * ((_x select 4) * _amountOf))];
-                };
+                //if (_selectionBloodLoss select (_x select 2) == 0) then {
+                //    _selectionBloodLoss set [(_x select 2), (_selectionBloodLoss select (_x select 2)) + (15 * ((_x select 4) * _amountOf))];
+                //};
                 if (GVAR(currentSelectedSelectionN) == (_x select 2)) then {
                     // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
                     if (_amountOf > 0) then {
