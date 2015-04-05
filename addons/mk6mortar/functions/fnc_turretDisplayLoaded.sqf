@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-#define CTRL_CA_HEADING (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_Heading")
+
 #define CTRL_CA_OPTICSPITCH (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_OPTICSPITCH")
 #define CTRL_CA_OPTICSZOOM (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_OPTICSZOOM")
 #define CTRL_CA_SOLUTION_TEXT (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_SOLUTION_TEXT")
@@ -23,6 +23,7 @@
 #define CTRL_CA_ELEV_NEED_TEXT (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_ELEV_NEED_TEXT")
 #define CTRL_CA_RANGEELEMENTS_GROUP (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_RangeElements_group")
 
+#define CTRL_CA_HEADING (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_Heading")
 #define CTRL_CA_ELEV (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_ELEV")
 #define CTRL_CA_ELEV_NEED (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_ELEV_NEED")
 
@@ -54,8 +55,10 @@ _fnc_hideControl = {
 
 {
     [_x, GVAR(disableComputerRangefinder)] call _fnc_hideControl;
-} forEach [CTRL_CA_HEADING, CTRL_CA_OPTICSPITCH, CTRL_CA_OPTICSZOOM, CTRL_CA_SOLUTION_TEXT, CTRL_CA_DISTANCE_TEXT, CTRL_CA_DISTANCE, CTRL_CA_TIME_TEXT, CTRL_CA_TIME, CTRL_CA_ELEV_NEED_TEXT, CTRL_CA_RANGEELEMENTS_GROUP];
+} forEach [CTRL_CA_OPTICSPITCH, CTRL_CA_OPTICSZOOM, CTRL_CA_SOLUTION_TEXT, CTRL_CA_DISTANCE_TEXT, CTRL_CA_DISTANCE, CTRL_CA_TIME_TEXT, CTRL_CA_TIME, CTRL_CA_ELEV_NEED_TEXT, CTRL_CA_RANGEELEMENTS_GROUP];
 
-//Always hide these, handled by the mil convertions in handlePlayerVehChanged
+//Always hide these, handled by the mil convertions PFEH in handlePlayerVehChanged
+[CTRL_CA_HEADING, true] call _fnc_hideControl;
 [CTRL_CA_ELEV, true] call _fnc_hideControl;
 [CTRL_CA_ELEV_NEED, true] call _fnc_hideControl;
+
