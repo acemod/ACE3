@@ -856,7 +856,7 @@ class CfgVehicles {
         scope = 2;
         accuracy = 1000;
         displayName = "[ACE] Medical Supply Crate";
-        model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
+        model = PATHTOF(data\ace_medcrate.p3d);
         author = "$STR_ACE_Common_ACETeam";
         class TransportItems {
             class ACE_fieldDressing {
