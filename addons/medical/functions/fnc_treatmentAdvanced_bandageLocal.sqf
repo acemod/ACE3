@@ -10,7 +10,7 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
- * Public: Yes
+ * Public: No
  */
 
 #include "script_component.hpp"
@@ -82,18 +82,17 @@ if (_effectivenessFound == -1) exitwith {}; // Seems everything is patched up on
 // TODO refactor this part
 // Find the impact this bandage has and reduce the amount this injury is present
 _impact = if ((_mostEffectiveInjury select 3) >= _effectivenessFound) then {_effectivenessFound} else { (_mostEffectiveInjury select 3) };
-_mostEffectiveInjury set [ 3, ((_mostEffectiveInjury select 3) - _effectivenessFound) max 0];
+_mostEffectiveInjury set [ 3, ((_mostEffectiveInjury select 3) - _impact) max 0];
 _openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
 
 _target setvariable [QGVAR(openWounds), _openWounds, !USE_WOUND_EVENT_SYNC];
 
 if (USE_WOUND_EVENT_SYNC) then {
-    ["medical_propagateWound", [_unit, _mostEffectiveInjury]] call EFUNC(common,globalEvent);
+    ["medical_propagateWound", [_target, _mostEffectiveInjury]] call EFUNC(common,globalEvent);
 };
 // Handle the reopening of bandaged wounds
-if (_impact > 0) then {
-    // TODO handle reopening of bandaged wounds
-    // [_target, _impact, _part,_highestSpot, _removeItem] call FUNC(handleBandageOpening);
+if (_impact > 0 && {GVAR(enableAdvancedWounds)}) then {
+    [_target, _impact, _part, _mostEffectiveSpot, _mostEffectiveInjury, _bandage] call FUNC(handleBandageOpening);
 };
 
 // If all wounds have been bandaged, we will reset all damage to 0, so the unit is not showing any blood on the model anymore.

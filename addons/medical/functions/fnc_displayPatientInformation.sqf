@@ -74,24 +74,45 @@ if (_show) then {
                     if (_amountOf > 0) then {
                         if (_amountOf >= 1) then {
                             // TODO localization
-                            _allInjuryTexts pushback format["%2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf];
+                            _allInjuryTexts pushback [format["%2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf], [1,1,1,1]];
                         } else {
                             // TODO localization
-                            _allInjuryTexts pushback format["Partial %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6];
+                            _allInjuryTexts pushback [format["Partial %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6], [1,1,1,1]];
                         };
                     };
                 };
             }foreach _openWounds;
+
+            _bandagedwounds = _target getvariable [QGVAR(bandagedWounds), []];
+            {
+                _amountOf = _x select 3;
+                // Find how much this bodypart is bleeding
+                if (_selectionBloodLoss select (_x select 2) == 0) then {
+                    _selectionBloodLoss set [(_x select 2), (_selectionBloodLoss select (_x select 2)) + (15 * ((_x select 4) * _amountOf))];
+                };
+                if (GVAR(currentSelectedSelectionN) == (_x select 2)) then {
+                    // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
+                    if (_amountOf > 0) then {
+                        if (_amountOf >= 1) then {
+                            // TODO localization
+                            _allInjuryTexts pushback [format["[B] %2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf], [1,0.5,0.5,1]];
+                        } else {
+                            // TODO localization
+                            _allInjuryTexts pushback [format["[B] Partial %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6], [1,0.5,0.5,1]];
+                        };
+                    };
+                };
+            }foreach _bandagedwounds;
         } else {
             {
                 _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _x];
 
                 if (_target getHitPointDamage _x > 0.1) then {
                     // @todo localize
-                    _allInjuryTexts pushBack format ["%1 %2",
+                    _allInjuryTexts pushBack [format ["%1 %2",
                         ["Lightly wounded", "Heavily wounded"] select (_target getHitPointDamage _x > 0.5),
                         ["head", "torso", "left arm", "right arm", "left leg", "right leg"] select _forEachIndex
-                    ];
+                    ], [1,1,1,1]];
                 };
             } forEach ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
         };
@@ -125,7 +146,8 @@ if (_show) then {
             _lbCtrl lbSetColor [_foreachIndex, _x select 1];
         }foreach _genericMessages;
         {
-            _lbCtrl lbAdd _x;
+            _lbCtrl lbAdd (_x select 0);
+            _lbCtrl lbSetColor [_foreachIndex, _x select 1];
         }foreach _allInjuryTexts;
         if (count _allInjuryTexts == 0) then {
             _lbCtrl lbAdd "No injuries on this bodypart..";
