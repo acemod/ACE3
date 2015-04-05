@@ -24,6 +24,11 @@ if (!(_newVehicle isKindOf "Mortar_01_base_F")) exitWith {};
     if ((vehicle ACE_player) != _veh) then {
         [_pfID] call CBA_fnc_removePerFrameHandler;
     } else {
+        if (shownArtilleryComputer && GVAR(noComputer)) then {
+            //Don't like this solution
+            closeDialog 0;
+            [parseText "Computer Disabled"] call EFUNC(common,displayTextStructured);
+        };
         _display = uiNamespace getVariable ["ACE_Mk6_RscWeaponRangeArtillery", displayNull];
         if (isNull _display) exitWith {systemChat "null";};
 
