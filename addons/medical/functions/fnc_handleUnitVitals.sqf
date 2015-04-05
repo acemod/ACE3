@@ -22,7 +22,7 @@ _unit setVariable [QGVAR(lastMomentVitalsHandled), time];
 if (_interval == 0) exitWith {};
 
 _lastTimeValuesSynced = _unit getvariable [QGVAR(lastMomentValuesSynced), 0];
-_syncValues = time - _lastTimeValuesSynced >= (10 + floor(random(10)));
+_syncValues = (time - _lastTimeValuesSynced >= (10 + floor(random(10))) && GVAR(keepLocalSettingsSynced));
 if (_syncValues) then {
     _unit setvariable [QGVAR(lastMomentValuesSynced), time];
 };

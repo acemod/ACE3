@@ -128,6 +128,12 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
+            class keepLocalSettingsSynced {
+                displayName = "Sync status";
+                description = "Keep unit status synced. Recommended on.";
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
         };
         class ModuleDescription {
             description = "Provides a medical system for both players and AI.";
