@@ -5,8 +5,8 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(rangetable) {
                     displayName = "Open 82mm Rangetable";
-                    condition = QUOTE(true);
-                    statement = QUOTE(call FUNC(rangeTableOpen));
+                    condition = QUOTE(_this call FUNC(rangeTableCanUse));
+                    statement = QUOTE(_this call FUNC(rangeTableOpen));
                     priority = 0;
                     icon = QUOTE(PATHTOF(UI\icon_rangeTable.paa));
                 };

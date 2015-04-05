@@ -11,6 +11,7 @@ PREP(dev_simulateShot);
 PREP(handleFired);
 PREP(handlePlayerVehicleChanged);
 PREP(moduleInit);
+PREP(rangeTableCanUse);
 PREP(rangeTableOpen);
 PREP(rangeTablePageChange);
 PREP(rangeTablePreCalculatedValues);
