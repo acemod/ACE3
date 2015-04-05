@@ -19,7 +19,7 @@ _logic = _this select 0;
 if (isMultiplayer) exitwith {};
 
 if (_logic getvariable ["allowconfigurationExport", false]) then {
-	GVAR(serverConfigGeneration) = 1;
+    GVAR(serverConfigGeneration) = 1;
 } else {
-	GVAR(serverConfigGeneration) = 0;
+    GVAR(serverConfigGeneration) = 0;
 };

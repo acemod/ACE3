@@ -19,9 +19,9 @@ private "_settingsMenu";
 disableSerialization;
 _settingsMenu = uiNamespace getVariable 'ACE_serverSettingsMenu';
 if (GVAR(ClientSettingsExportIncluded)) then {
-	(_settingsMenu displayCtrl 1102) ctrlSetText localize ("STR_ACE_OptionsMenu_exClientSettings");
+    (_settingsMenu displayCtrl 1102) ctrlSetText localize ("STR_ACE_OptionsMenu_exClientSettings");
 } else {
-	(_settingsMenu displayCtrl 1102) ctrlSetText localize ("STR_ACE_OptionsMenu_inClientSettings");
+    (_settingsMenu displayCtrl 1102) ctrlSetText localize ("STR_ACE_OptionsMenu_inClientSettings");
 };
 
 [] call FUNC(onServerSettingsMenuOpen);

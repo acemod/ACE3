@@ -19,7 +19,7 @@
 _compiledConfig = "
 ";
 {
-	 /*_settingData = [
+     /*_settingData = [
         _name,
         _typeName,
         _isClientSetable,
@@ -41,7 +41,7 @@ _compiledConfig = "
     if (GVAR(ClientSettingsExportIncluded) || !_isClientSetable) then {
         _value = missionNamespace getvariable [_name, _defaultValue];
         if (_typeName == "STRING") then { // I dont think we have string values, but just in case
-        	_value = format['"%1"', _value];
+            _value = format['"%1"', _value];
         };
 
         _compiledConfigEntry = format ["
