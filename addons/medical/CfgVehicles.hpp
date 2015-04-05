@@ -135,7 +135,7 @@ class CfgVehicles {
         };
     };
 
-    class ACE_moduleTreatmentConfiguration: ACE_Module {
+    class ACE_moduleTreatmentSettings: ACE_Module {
         scope = 2;
         displayName = "Treatment Settings [ACE]";
         icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
