@@ -17,3 +17,22 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "RscInGameUI.hpp"
+
+class ACE_Settings {
+    class GVAR(useMils) {
+        value = 1;
+        typeName = "BOOL";
+        isClientSetable = 1;
+        displayName = "$STR_ACE_mk6mortar_useMils";
+    };
+    // class GVAR(airResistance) {
+    // value = 0;
+    // typeName = "BOOL";
+    // isClientSetable = 0;
+    // };
+    class GVAR(noComputer) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSetable = 0;
+    };
+};

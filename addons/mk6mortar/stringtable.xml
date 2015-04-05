@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-01-31 -->
+<!-- Edited with tabler - 2015-04-05 -->
 <Project name="ACE">
   <Package name="mk6mortar">
+    <Key ID="STR_ACE_mk6mortar_useMils">
+      <English>Mk6 Mortar: Show Angle in MILS</English>
+    </Key>
   </Package>
 </Project>

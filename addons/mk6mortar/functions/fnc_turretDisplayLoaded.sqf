@@ -33,8 +33,6 @@ disableSerialization;
 _display = uiNamespace getVariable ["ACE_Mk6_RscWeaponRangeArtillery", displayNull];
 if (isNull _display) exitWith {};
 
-_hideRangefinder = true;
-
 _fnc_hideControl = {
     PARAMS_2(_path,_hideCtrl);
     _idc = getNumber (_path >> "IDC");
@@ -55,8 +53,9 @@ _fnc_hideControl = {
 };
 
 {
-    [_x, _hideRangefinder] call _fnc_hideControl;
+    [_x, GVAR(noComputer)] call _fnc_hideControl;
 } forEach [CTRL_CA_HEADING, CTRL_CA_OPTICSPITCH, CTRL_CA_OPTICSZOOM, CTRL_CA_SOLUTION_TEXT, CTRL_CA_DISTANCE_TEXT, CTRL_CA_DISTANCE, CTRL_CA_TIME_TEXT, CTRL_CA_TIME, CTRL_CA_ELEV_NEED_TEXT, CTRL_CA_RANGEELEMENTS_GROUP];
 
+//Always hide these, handled by the mil convertions in handlePlayerVehChanged
 [CTRL_CA_ELEV, true] call _fnc_hideControl;
 [CTRL_CA_ELEV_NEED, true] call _fnc_hideControl;
