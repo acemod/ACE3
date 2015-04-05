@@ -14,7 +14,7 @@
  * Nothing
  *
  * Example:
- * [clientFiredBIS-XEH] call ace_grenades_fnc_throwGrenade
+ * [clientFiredBIS-XEH] call ace_
  *
  * Public: No
  */
@@ -24,6 +24,38 @@ disableSerialization;
 
 PARAMS_7(_vehicle,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
+// if (_bullet isKindOf "BulletBase") then {
+[{
+    private ["_deltaT", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueSpeed", "_dragRef", "_accelRef", "_drag", "_accel"];
+    PARAMS_2(_args,_pfID);
+    EXPLODE_3_PVT(_args,_shell,_airFriction,_time);
 
+    if (isNull _shell || {!alive _shell}) exitwith {
+        [_pfID] call cba_fnc_removePerFrameHandler;
+    };
 
+    _deltaT = time - _time;
+    _args set[2, time];
+
+    _bulletVelocity = velocity _shell;
+    _bulletSpeed = vectorMagnitude _bulletVelocity;
+
+    if (vectorMagnitude ACE_wind > 0) then {
+        _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
+        _trueSpeed = vectorMagnitude _trueVelocity;
+
+        // _dragRef = _deltaT * _airFriction * _bulletSpeed * _bulletSpeed;
+        // _accelRef = (vectorNormalized _bulletVelocity) vectorMultiply (_dragRef);
+        // _bulletVelocity = _bulletVelocity vectorDiff _accelRef;
+
+        _drag = _deltaT * _airFriction * _trueSpeed;
+        _accel = _trueVelocity vectorMultiply (_drag);
+
+        _bulletVelocity = _bulletVelocity vectorAdd _accel;
+    };
+    _shell setVelocity _bulletVelocity;
+    // TODO expand with advanced ballistics functionality.
+
+}, 0, [_projectile, -0.0001, time]] call CBA_fnc_addPerFrameHandler;
+// };
 
