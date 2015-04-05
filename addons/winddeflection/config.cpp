@@ -30,4 +30,7 @@ class ACE_Settings {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgAmmo.hpp"
+#include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
+#include "RscTitles.hpp"
