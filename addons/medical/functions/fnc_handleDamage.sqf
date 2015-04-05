@@ -52,7 +52,12 @@ if (GVAR(level) >= 2) then {
     if (_damageReturn > 0.9) then {
 
         _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
-        _minLethalDamage = GVAR(minLethalDamages) select (GVAR(allAvailableDamageTypes) find _typeOfDamage);
+
+        _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
+        _minLethalDamage = 0.01;
+        if (_typeIndex >= 0) then {
+            _minLethalDamage = GVAR(minLethalDamages) select _typeIndex;
+        };
 
         _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
         _newDamage = _damage - (damage _unit);
