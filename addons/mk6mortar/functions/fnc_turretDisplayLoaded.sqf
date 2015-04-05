@@ -53,7 +53,7 @@ _fnc_hideControl = {
 };
 
 {
-    [_x, GVAR(noComputer)] call _fnc_hideControl;
+    [_x, GVAR(disableComputerRangefinder)] call _fnc_hideControl;
 } forEach [CTRL_CA_HEADING, CTRL_CA_OPTICSPITCH, CTRL_CA_OPTICSZOOM, CTRL_CA_SOLUTION_TEXT, CTRL_CA_DISTANCE_TEXT, CTRL_CA_DISTANCE, CTRL_CA_TIME_TEXT, CTRL_CA_TIME, CTRL_CA_ELEV_NEED_TEXT, CTRL_CA_RANGEELEMENTS_GROUP];
 
 //Always hide these, handled by the mil convertions in handlePlayerVehChanged

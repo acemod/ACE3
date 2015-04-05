@@ -25,12 +25,12 @@ class ACE_Settings {
         isClientSetable = 1;
         displayName = "$STR_ACE_mk6mortar_useMils";
     };
-    // class GVAR(airResistance) {
-    // value = 0;
-    // typeName = "BOOL";
-    // isClientSetable = 0;
-    // };
-    class GVAR(noComputer) {
+    class GVAR(airResistanceEnabled) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSetable = 0;
+    };
+    class GVAR(disableComputerRangefinder) {
         value = 0;
         typeName = "BOOL";
         isClientSetable = 0;

@@ -24,6 +24,12 @@ disableSerialization;
 
 PARAMS_7(_vehicle,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
+if (!GVAR(airResistanceEnabled)) exitWith {};
+
+if (_unit distance ACE_player > 3000) exitWith {false}; // Large enough distance to not simulate any wind deflection.
+if (!GVAR(EnableForAI) && !([_unit] call EFUNC(common,isPlayer))) exitWith {false};
+
+
 // if (_bullet isKindOf "BulletBase") then {
 [{
     private ["_deltaT", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueSpeed", "_dragRef", "_accelRef", "_drag", "_accel"];

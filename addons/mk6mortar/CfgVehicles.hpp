@@ -33,9 +33,15 @@ class CfgVehicles {
         // icon = QUOTE(PATHTOF(UI\Icon_.paa));
         functionPriority = 0;
         class Arguments {
-            class noComputer {
-                displayName = "No Computer";
-                description = "Removes Computer and Rangefinder";
+            class disableComputerRangefinder {
+                displayName = "Remove MK6 Computer/Rangefinder";
+                description = "Removes Computer and Rangefinder (these should be removed if you enable air resistance)";
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class airResistanceEnabled {
+                displayName = "Air Resitance";
+                description = "For Player Shots, Model Air Restiance and Wind Effects";
                 typeName = "BOOL";
                 defaultValue = 1;
             };

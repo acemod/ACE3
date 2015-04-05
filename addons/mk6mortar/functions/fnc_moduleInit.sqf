@@ -22,4 +22,5 @@ PARAMS_3(_logic,_syncedUnits,_activated);
 if (!_activated) exitWith {WARNING("Module - placed but not active");};
 if (!isServer) exitWith {};
 
-[_logic, QGVAR(noComputer), "noComputer"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(disableComputerRangefinder), "disableComputerRangefinder"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(airResistanceEnabled), "airResistanceEnabled"] call EFUNC(common,readSettingFromModule);
