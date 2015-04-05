@@ -1,16 +1,21 @@
 /*
  * Author: PabstMirror
+ * Opens the rangetable and fills the charge listbox.
  *
  * Arguments:
+ * No
+ *
  * Return Value:
+ * No
  *
  * Example:
+ *
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-#define LIST_CHARGE       ((uiNamespace getVariable "ACE_82mm_RangeTable_Dialog") displayCtrl 1501)
+#define LIST_CHARGE ((uiNamespace getVariable "ACE_82mm_RangeTable_Dialog") displayCtrl 1501)
 
 _weaponName = "mortar_82mm";
 

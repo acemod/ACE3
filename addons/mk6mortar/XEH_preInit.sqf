@@ -2,7 +2,6 @@
 
 ADDON = false;
 
-
 PREP(dev_buildTable);
 PREP(dev_formatNumber);
 PREP(dev_simulateCalcRangeTableLine);

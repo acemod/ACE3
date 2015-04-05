@@ -1,12 +1,15 @@
 /*
  * Author: PabstMirror
- *
+ * Called when listbox selection changes.  Updates the rangetable with new values.
  *
  * Arguments:
+ * No
  *
  * Return Value:
+ * No
  *
  * Example:
+ *
  *
  * Public: No
  */

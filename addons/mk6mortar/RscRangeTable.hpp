@@ -1,5 +1,4 @@
-class ACE_82mm_RangeTable_Dialog
-{
+class ACE_82mm_RangeTable_Dialog {
     idd = -1;
     movingEnable = 1;
     onLoad = "uiNamespace setVariable ['ACE_82mm_RangeTable_Dialog', _this select 0];";
@@ -25,7 +24,7 @@ class ACE_82mm_RangeTable_Dialog
         };
     };
     class controls {
-        class TheTable  : RscListNBox {
+        class TheTable: RscListNBox {
             idc = 20001;
             // style = ST_CENTER + ST_MULTI + LB_TEXTURES;
             // style = ST_LEFT + ST_MULTI + LB_TEXTURES;

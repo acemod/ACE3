@@ -1,17 +1,18 @@
 /*
  * Author: PabstMirror
- *
+ * Called when the mk6's in game UI is loaded.  Hides rangefinder data if it is disabled.
  *
  * Arguments:
+ * None
  *
  * Return Value:
+ * None
  *
  * Example:
  *
  * Public: No
  */
 #include "script_component.hpp"
-
 
 #define CTRL_CA_OPTICSPITCH (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_OPTICSPITCH")
 #define CTRL_CA_OPTICSZOOM (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_OPTICSZOOM")
@@ -26,7 +27,6 @@
 #define CTRL_CA_HEADING (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_Heading")
 #define CTRL_CA_ELEV (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_ELEV")
 #define CTRL_CA_ELEV_NEED (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_ELEV_NEED")
-
 
 disableSerialization;
 

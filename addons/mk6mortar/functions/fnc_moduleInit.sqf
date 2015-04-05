@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * 
+ * Loads settings from the module.
  *
  * Arguments:
  * 0: The Module Logic Object <OBJECT>
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * 
+ *
  *
  * Public: No
  */

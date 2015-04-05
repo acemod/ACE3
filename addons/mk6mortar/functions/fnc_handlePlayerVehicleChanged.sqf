@@ -1,10 +1,13 @@
 /*
  * Author: PabstMirror
- *
+ * Handles player getting into new vehicle.  Loads PFEG for mortar display if it is a mortar.
  *
  * Arguments:
+ * 0:Player <OBJECT>
+ * 1: New Vehicle <OBJECT>
  *
  * Return Value:
+ * No
  *
  * Example:
  *
@@ -16,8 +19,6 @@ PARAMS_2(_player,_newVehicle);
 
 if (isNull _newVehicle) exitWith {};
 if (!(_newVehicle isKindOf "Mortar_01_base_F")) exitWith {};
-
-
 
 _chargeText = (findDisplay 46) ctrlCreate ["RscStructuredText", 80085];
 
@@ -42,7 +43,7 @@ _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes")
     } else {
 
         _useMils = _mortarVeh getVariable [QGVAR(useMils), true];
-    
+
         //Compute: 'charge' from weaponstate
         _currentFireMode = (weaponState [_mortarVeh, [0]]) select 2;
         _currentChargeMode = _fireModes find _currentFireMode;

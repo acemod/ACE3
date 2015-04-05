@@ -1,5 +1,6 @@
 /*
  * Author: PabstMirror
+ * Called when the mortar is fired.
  *
  * Arguments:
  * 0: mortar - Object the event handler is assigned to <OBJECT>
@@ -14,7 +15,7 @@
  * Nothing
  *
  * Example:
- * [clientFiredBIS-XEH] call ace_
+ * [clientFiredBIS-XEH] call ace_mk6mortars_fnc_handleFired
  *
  * Public: No
  */
@@ -24,11 +25,14 @@ disableSerialization;
 
 PARAMS_7(_vehicle,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
-
 if (!GVAR(airResistanceEnabled)) exitWith {};
 
 if (_unit distance ACE_player > 3000) exitWith {false}; // Large enough distance to not simulate any wind deflection.
-if (!GVAR(EnableForAI) && !([_unit] call EFUNC(common,isPlayer))) exitWith {false};
+
+//AI will have no clue how to use:
+_shooterMan = gunner _vehicle;
+if (!([_shooterMan] call EFUNC(common,isPlayer))) exitWith {false};
+
 
 //Hack Until these are intergrated:
 if (isNil QEGVAR(weather,currentRelativeDensity)) then {
@@ -37,6 +41,7 @@ if (isNil QEGVAR(weather,currentRelativeDensity)) then {
 if (isNil QEGVAR(weather,currentTemperature)) then {
     EGVAR(weather,currentTemperature) = 20;
 };
+
 
 //powder effects:
 _temperature = EGVAR(weather,currentTemperature);
@@ -71,17 +76,12 @@ if (_newMuzzleVelocityCoefficent != 1) then {
         _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
         _trueSpeed = vectorMagnitude _trueVelocity;
 
-        // _dragRef = _deltaT * _airFriction * _bulletSpeed * _bulletSpeed;
-        // _accelRef = (vectorNormalized _bulletVelocity) vectorMultiply (_dragRef);
-        // _bulletVelocity = _bulletVelocity vectorDiff _accelRef;
-
         _drag = _deltaT * _airFriction * _trueSpeed * EGVAR(weather,currentRelativeDensity);
         _accel = _trueVelocity vectorMultiply (_drag);
 
         _bulletVelocity = _bulletVelocity vectorAdd _accel;
     };
     _shell setVelocity _bulletVelocity;
-    // TODO expand with advanced ballistics functionality.
 
 }, 0, [_projectile, MK6_82mm_AIR_FRICTION, time]] call CBA_fnc_addPerFrameHandler;
 // };

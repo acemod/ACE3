@@ -1,14 +1,17 @@
 /*
  * Author: PabstMirror
-Simple Lookup Table for various muzzle velocities and air frictions.
-Use ACE_Artillery_fnc_dev_buildTable to build
+ * Simple Lookup Table for various muzzle velocities and air frictions.
+ * Use ace_mk6mortar_fnc_dev_buildTable to build
  *
  * Arguments:
- *  0: NUMBER - Muzzle Velocity
-1: NUMBER - Air Friction
+ * 0: Muzzle Velocity <NUMBER>
+ * 1: Air Friction <NUMBER>
+ *
  * Return Value:
+ * <ARRAY>
  *
  * Example:
+ * 
  *
  * Public: No
  */

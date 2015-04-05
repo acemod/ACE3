@@ -3,4 +3,3 @@
 if (!hasInterface) exitWith {};
 
 ["playerVehicleChanged", {_this call FUNC(handlePlayerVehicleChanged);}] call EFUNC(common,addEventHandler);
-

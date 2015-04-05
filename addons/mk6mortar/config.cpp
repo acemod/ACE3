@@ -25,7 +25,6 @@ class RscControlsGroup;
 class ScrollBar;
 class RscActiveText;
 
-
 #include "RscInGameUI.hpp"
 #include "RscRangeTable.hpp"
 
@@ -40,7 +39,7 @@ class ACE_Settings {
         value = 1;
         typeName = "BOOL";
         isClientSetable = 0;
-    };    
+    };
     class GVAR(allowCompass) {
         value = 1;
         typeName = "BOOL";
