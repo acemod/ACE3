@@ -48,6 +48,7 @@ _compiledConfig = "
         class %1 {
             value = %2;
             typeName = %3;
+            force = 1;
         };
         ", _name, _value, format['"%1"', _typeName]];
         _compiledConfig = _compiledConfig + _compiledConfigEntry;
