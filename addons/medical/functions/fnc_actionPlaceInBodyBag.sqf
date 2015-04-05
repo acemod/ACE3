@@ -22,18 +22,18 @@ if !([_caller, "ACE_itemBodyBag"] call EFUNC(common,hasItem)) exitwith {};
 
 [_caller, "ACE_itemBodyBag"] call EFUNC(common,useItem);
 
-_nameOfUnit = [_unit] call EFUNC(common,getName);
-if (alive _unit) then {
+_nameOfUnit = [_target] call EFUNC(common,getName);
+if (alive _target) then {
     // force kill the unit.
-    [_unit, true] call FUNC(setDead);
+    [_target, true] call FUNC(setDead);
 };
-_onPosition = getPos _unit;
-deleteVehicle _unit;
+_onPosition = getPos _target;
+deleteVehicle _target;
 _bodyBagCreated = createVehicle ["ACE_bodyBag", _onPosition, [], 0, "NONE"];
 // reset the position to ensure it is on the correct one.
 _bodyBagCreated setPos _onPosition;
 
 // TODO Does this need to be something with QUOTE(DEFUNC)?
-[[_bodyBagCreated], QEFUNC(common,revealObject), true] call call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+[[_bodyBagCreated], QUOTE(DEFUNC(common,revealObject)), true] call call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 
 _bodyBagCreated;
