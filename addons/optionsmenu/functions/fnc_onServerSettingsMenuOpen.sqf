@@ -16,6 +16,8 @@
 
 #include "script_component.hpp"
 
+if (GVAR(serverConfigGeneration) == 0 || isMultiplayer) exitwith {closeDialog 145246;};
+
 // Filter only user setable setting
 GVAR(serverSideOptions) = [];
 GVAR(serverSideColors) = [];
@@ -57,3 +59,8 @@ disableSerialization;
 _menu = uiNamespace getvariable "ACE_serverSettingsMenu";
 (_menu displayCtrl 1003) ctrlEnable false;
 
+if (GVAR(ClientSettingsExportIncluded)) then {
+    (_settingsMenu displayCtrl 1102) ctrlSetText localize ("STR_ACE_OptionsMenu_exClientSettings");
+} else {
+    (_settingsMenu displayCtrl 1102) ctrlSetText localize ("STR_ACE_OptionsMenu_inClientSettings");
+};

@@ -100,5 +100,8 @@
     <Key ID="STR_ACE_OptionsMenu_exClientSettings">
       <English>Exclude Client Settings</English>
     </Key>
+    <Key ID="STR_ACE_OptionsMenu_settingsExported">
+      <English>Settings exported to clipboard</English>
+    </Key>
   </Package>
 </Project>
