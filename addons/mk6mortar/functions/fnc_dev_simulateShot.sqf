@@ -44,7 +44,7 @@ _wind = [_crosswind, _tailWind, 0];
 _gravity = [0,0,-9.8];
 
 _currentPos = [0,0,0];
-_muzzleVelocity = _muzzleVelocity * (1 + ((((_temp + 273.13) / 288.13 - 1) / 2.5 + 1 ) - 1));
+_muzzleVelocity = _muzzleVelocity * (((_temp + 273.13) / 288.13 - 1) / 30 + 1);
 _currentVelocity = [0, (_muzzleVelocity * cos _angleDeg), (_muzzleVelocity * sin _angleDeg)];
 
 _currentTime = 0;

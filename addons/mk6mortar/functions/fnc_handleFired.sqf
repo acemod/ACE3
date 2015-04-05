@@ -29,6 +29,27 @@ if (!GVAR(airResistanceEnabled)) exitWith {};
 if (_unit distance ACE_player > 3000) exitWith {false}; // Large enough distance to not simulate any wind deflection.
 if (!GVAR(EnableForAI) && !([_unit] call EFUNC(common,isPlayer))) exitWith {false};
 
+//Hack Until these are intergrated:
+if (isNil QEGVAR(weather,currentRelativeDensity)) then {
+    EGVAR(weather,currentRelativeDensity) = 1;
+};
+if (isNil QEGVAR(weather,currentTemperature)) then {
+    EGVAR(weather,currentTemperature) = 20;
+};
+
+//powder effects:
+_temperature = EGVAR(weather,currentTemperature);
+_newMuzzleVelocityCoefficent = (((_temperature + 273.13) / 288.13 - 1) / 30 + 1);
+if (_newMuzzleVelocityCoefficent != 1) then {
+    _bulletVelocity = velocity _projectile;
+    systemChat format ["Start Vel: %1", _bulletVelocity];
+    _bulletSpeed = vectorMagnitude _bulletVelocity;
+    _bulletVelocity = (vectorNormalized _bulletVelocity) vectorMultiply (_bulletSpeed * _newMuzzleVelocityCoefficent);
+    systemChat format ["New Vel: %1", _bulletVelocity];
+    _projectile setVelocity _bulletVelocity;
+    _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
+};
+
 
 // if (_bullet isKindOf "BulletBase") then {
 [{
@@ -54,7 +75,7 @@ if (!GVAR(EnableForAI) && !([_unit] call EFUNC(common,isPlayer))) exitWith {fals
         // _accelRef = (vectorNormalized _bulletVelocity) vectorMultiply (_dragRef);
         // _bulletVelocity = _bulletVelocity vectorDiff _accelRef;
 
-        _drag = _deltaT * _airFriction * _trueSpeed;
+        _drag = _deltaT * _airFriction * _trueSpeed * EGVAR(weather,currentRelativeDensity);
         _accel = _trueVelocity vectorMultiply (_drag);
 
         _bulletVelocity = _bulletVelocity vectorAdd _accel;
@@ -62,6 +83,6 @@ if (!GVAR(EnableForAI) && !([_unit] call EFUNC(common,isPlayer))) exitWith {fals
     _shell setVelocity _bulletVelocity;
     // TODO expand with advanced ballistics functionality.
 
-}, 0, [_projectile, -0.0001, time]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_projectile, MK6_82mm_AIR_FRICTION, time]] call CBA_fnc_addPerFrameHandler;
 // };
 
