@@ -84,7 +84,9 @@ switch (_type) do {
 
 if (_changed) then {
   if (GVAR(serverConfigGeneration) > 0) then {
-    missionNamespace setvariable [_name, _newValue];
+    if !(isMultiplayer) then {
+      missionNamespace setvariable [_name, _newValue];
+    };
   } else {
     profileNamespace setVariable [_name, _newValue];
     [_name, _newValue] call EFUNC(common,setSetting);

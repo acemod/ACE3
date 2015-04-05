@@ -16,6 +16,8 @@
 
 #include "script_component.hpp"
 
+if (GVAR(serverConfigGeneration) == 0 || isMultiplayer) exitwith {closeDialog 145246;};
+
 // Filter only user setable setting
 GVAR(serverSideOptions) = [];
 GVAR(serverSideColors) = [];
