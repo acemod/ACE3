@@ -14,54 +14,48 @@
  */
 #include "script_component.hpp"
 
-private ["_delay", "_found", "_pushedOnIndex", "_newArray"];
+private ["_delay", "_found", "_pushedOnIndex", "_element"];
 _delay = _this select 2;
 
 if (isnil QGVAR(waitAndExecQueue)) then {
     GVAR(waitAndExecQueue) = [];
-    GVAR(waitAndExecQueueSize) = 0;
+    GVAR(addedWaitAndExecPFH) = false;
 };
 
-_newArray = [];
-_found = false;
-_pushedOnIndex = -1;
-{
-    if (time + _delay < (_x select 1) && {!_found}) then {
-        _found = true;
-        _pushedOnIndex = _newArray pushback [_this, time + _delay];
+
+if (count GVAR(waitAndExecQueue) > 0) then {
+    _element = GVAR(waitAndExecQueue);
+    if (time + _delay < (_element select 1)) exitwith {
+        GVAR(waitAndExecQueue) = [_this, time + _delay, _element];
     };
-    _newArray pushback _x;
-}foreach GVAR(waitAndExecQueue);
 
-if (!_found) then {
-    _pushedOnIndex = _newArray pushback [_this, time + _delay];
+    while {true} do {
+        _nextElement = _element select 2;
+        if (count _nextElement == 0) exitwith { // last element
+            _element set [2, [_this, time + _delay, []]];
+        };
+        if (time + _delay < (_nextElement select 1)) exitwith {
+            _element set [2, [_this, time + _delay, _nextElement]];
+        };
+        _element = _nextElement;
+    };
+} else {
+    GVAR(waitAndExecQueue) = [_this, time + _delay, []];
 };
 
-GVAR(waitAndExecQueue) = _newArray;
-GVAR(waitAndExecQueueSize) = GVAR(waitAndExecQueueSize) + 1;
-
-if (_pushedOnIndex == 0) then {
+if !(GVAR(addedWaitAndExecPFH)) then {
+    GVAR(addedWaitAndExecPFH) = true;
     [
         {
-            private ["_lastExecuted", "_lastExecuted", "_func", "_params"];
-            _lastExecuted = -1;
-
-            {
-                if (time < (_x select 1)) exitWith {};
-                _lastExecuted = _foreachIndex;
-                _func = (_x select 0) select 0;
-                _params = (_x select 0) select 1;
+            private ["_element", "_nextElement", "_func","_params"];
+            _element = GVAR(waitAndExecQueue);
+            while {true} do {
+                if (count _element == 0) exitwith {GVAR(waitAndExecQueue) = _element;}; // last element
+                if (time < (_element select 1)) exitWith {GVAR(waitAndExecQueue) = _element;}; // all current valid elements have been executed
+                _func = (_element select 0) select 0;
+                _params = (_element select 0) select 1;
                 _params call _func;
-            }foreach GVAR(waitAndExecQueue);
-
-            if (_lastExecuted >= 0) then {
-                GVAR(waitAndExecQueue) deleteRange [0, _lastExecuted + 1];
-                GVAR(waitAndExecQueueSize) = GVAR(waitAndExecQueueSize) - (_lastExecuted + 1);
-            };
-
-            if (GVAR(waitAndExecQueueSize) <= 0) then {
-                // Remove the PFH
-                [(_this select 1)] call cba_fnc_removePerFrameHandler;
+                _element = _element select 2;
             };
         },
         0,
