@@ -1,4 +1,4 @@
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 TRACE_1("enter", _this);
 
@@ -9,6 +9,9 @@ if((count _this) > 0) then {
 uiNameSpace setVariable [QGVAR(arguments), 
     [
         0,         // Last runtime
-        objNull    // currentTargetObject
+        objNull,   // currentTargetObject
+        0,         // Run Time
+        0,          // Lock Time
+        0           // Sound timer
     ]
 ];

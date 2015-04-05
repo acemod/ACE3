@@ -78,7 +78,7 @@ FUNC(guidance_Javelin_LOBL_TOP_PFH) = {
             _pitch = 0.0;
 
             // Stop jinking on terminal final decent
-            if((_missilePos distance _targetPos) > 50) then {
+            if((_missilePos distance _targetPos) < 50) then {
                 _defPitch = 0.0015;
                 _defYaw = 0.0015;
             };
