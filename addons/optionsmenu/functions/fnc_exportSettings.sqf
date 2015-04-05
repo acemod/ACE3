@@ -43,7 +43,9 @@ _compiledConfig = "
         if (_typeName == "STRING") then { // I dont think we have string values, but just in case
             _value = format['"%1"', _value];
         };
-
+        if (_typeName == "BOOL") then {
+            _value = if (typeOf _value == "BOOL" && {_value}) then {1} else {0};
+        };
         _compiledConfigEntry = format ["
 class %1 {
     value = %2;
