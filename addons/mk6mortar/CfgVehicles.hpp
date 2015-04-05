@@ -40,7 +40,7 @@ class CfgVehicles {
                 defaultValue = 1;
             };
             class allowComputerRangefinder {
-                displayName = "Allow MK6 Computer/Rangefinder";
+                displayName = "Allow MK6 Computer";
                 description = "Show the Computer and Rangefinder (these should be removed if you enable air resistance)";
                 typeName = "BOOL";
                 defaultValue = 0;

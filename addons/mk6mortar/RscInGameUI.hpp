@@ -11,18 +11,17 @@ class RscInGameUI {
         class ACE_MILS_GROUP: CA_IGUI_elements_group {
             idc = 80170;
             class controls {
-                class CA_Heading_MILS: RscText
-                {
+                class CA_Heading_MILS: RscText {
                     idc = 80156;
-                    style = 0;
+                    style = 2;
                     colorText[] = {0.706,0.0745,0.0196,1};
                     sizeEx = "0.028*SafezoneH";
                     shadow = 0;
                     font = "EtelkaMonospacePro";
                     text = "015";
-                    x = "25.3 * (0.01875 * SafezoneH)";
+                    x = "25.0 * (0.01875 * SafezoneH)";
                     y = "6.3 * (0.025 * SafezoneH)";
-                    w = "2.2 * (0.01875 * SafezoneH)";
+                    w = "3.3333 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
                 class CA_Elev_MILS: RscText {

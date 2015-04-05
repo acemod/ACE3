@@ -84,11 +84,11 @@ _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes")
         if (!GVAR(allowCompass)) then {
             (_display displayCtrl 80156) ctrlSetText "";
         } else {
-            _elevDeg = parseNumber ctrlText (_display displayCtrl 156);
+            _rotationDegrees = ((getDir _mortarVeh) + (((-180 / PI) * (_mortarVeh animationPhase "mainTurret")) + 360)) % 360;
             if (GVAR(useMils)) then {
-                (_display displayCtrl 80156) ctrlSetText str round (_elevDeg * 6400 / 360);
+                (_display displayCtrl 80156) ctrlSetText str round (_rotationDegrees * 6400 / 360);
             } else {
-                (_display displayCtrl 80156) ctrlSetText str _elevDeg;
+                (_display displayCtrl 80156) ctrlSetText str _rotationDegrees;
             };
         };
     };
