@@ -29,7 +29,9 @@ _usersOfItems = _args select 5;
 if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
 };
-[_caller, _caller getvariable [QGVAR(treatmentPrevAnimCaller), ""], 1] call EFUNC(common,doAnimation);
+if (vehicle _caller == _caller) then {
+	[_caller, _caller getvariable [QGVAR(treatmentPrevAnimCaller), ""], 1] call EFUNC(common,doAnimation);
+};
 _caller setvariable [QGVAR(treatmentPrevAnimCaller), nil];
 
 {
