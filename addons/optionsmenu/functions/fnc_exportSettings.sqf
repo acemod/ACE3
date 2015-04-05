@@ -57,3 +57,5 @@ class %1 {
 } forEach EGVAR(common,settings);
 
 copyToClipboard format["%1",_compiledConfig];
+
+["STR_ACE_OptionsMenu_settingsExported"] call EFUNC(common,displayTextStructured);
