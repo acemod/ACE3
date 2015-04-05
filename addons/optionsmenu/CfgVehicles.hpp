@@ -16,7 +16,7 @@ class CfgVehicles {
                 displayName = "Allow";
                 description = "Allow export of all settings to a server config formatted.";
                 typeName = "BOOL";
-                defaultValue = 0;
+                defaultValue = 1;
             };
         };
         class ModuleDescription {
