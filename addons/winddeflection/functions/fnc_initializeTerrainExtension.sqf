@@ -12,8 +12,6 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(UseDLL)) exitWith {};
-
 [] spawn {
 	private ["_initStartTime", "_mapSize", "_mapGrids", "_gridCenter", "_gridHeight", "_gridNumObjects", "_gridSurfaceIsWater"];
 	

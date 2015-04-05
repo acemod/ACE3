@@ -20,7 +20,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-#include "definesh.h"
+#include "defines.h"
 
 private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_index", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_bulletMass", "_bulletLength", "_bulletTranslation", "_airFriction", "_dragModel", "_velocityBoundaryData", "_muzzleVelocity", "_muzzleVelocityCoef", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_bulletWeight", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef", "_ACE_Elevation", "_ACE_Windage", "_ID"];
 _unit     = _this select 0;
@@ -32,7 +32,7 @@ _bullet   = _this select 6;
 
 if (isDedicated) exitWith {};
 if (!alive _bullet) exitWith {};
-if (!(isPlayer _unit)) exitWith {};
+if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
 if (underwater _unit) exitWith {};
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
 if (_unit distanceSqr ACE_player > 9000000) exitWith {};
@@ -50,7 +50,12 @@ if (_muzzleVelocityCoef < 0) then {
 	_muzzleVelocity = _muzzleVelocity * (-1 * _muzzleVelocityCoef);
 };
 
-_muzzleAccessory = (primaryWeaponItems _unit) select 0;
+_muzzleAccessory = "";
+switch (currentWeapon _unit) do {
+	case primaryWeapon _unit: { _muzzleAccessory = (primaryWeaponItems _unit) select 0; };
+	case handgunWeapon _unit: { _muzzleAccessory = (handgunItems _unit) select 0; };
+};
+
 if (_muzzleAccessory != "" && isNumber(configFile >> "cfgWeapons" >> _muzzleAccessory >> "ItemInfo" >> "MagazineCoef" >> "initSpeed")) then {
 	_initSpeedCoef = getNumber(configFile >> "cfgWeapons" >> _muzzleAccessory >> "ItemInfo" >> "MagazineCoef" >> "initSpeed");
 	_muzzleVelocity = _muzzleVelocity * _initSpeedCoef;
@@ -79,11 +84,12 @@ if (GVAR(AmmoTemperatureEnabled)) then {
 	};
 };
 
+// TODO: Make _bulletTraceVisible global and toggle it with events
 _bulletTraceVisible = false;
 if (GVAR(BulletTraceEnabled) && currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
 	_opticsName = (primaryWeaponItems ACE_player) select 2;
 	_opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
-	_bulletTraceVisible = (_opticType == 2 || currentWeapon ACE_player in ["Binocular", "Rangefinder", "Laserdesignator"]) && cameraView == "GUNNER";
+	_bulletTraceVisible = (_opticType == 2 || currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]) && cameraView == "GUNNER";
 };
 
 _caliber = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_caliber");
@@ -248,7 +254,7 @@ if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
 					if (GVAR(AtmosphericDensitySimulationEnabled)) then {
 						_pressure = 1013.25 * exp(-(GVAR(Altitude) + (_bulletPosition select 2)) / 7990) - 10 * overcast;
 						_temperature = GET_TEMPERATURE_AT_HEIGHT(_bulletPosition select 2);
-						_humidity = EGVAR(weather, currentHumidity);
+						_humidity = EGVAR(weather,currentHumidity);
 						_airDensity = STD_AIR_DENSITY_ICAO;
 						if (_humidity > 0) then {
 							private ["_pSat", "_vaporPressure", "_partialPressure"];
@@ -275,7 +281,7 @@ if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
 					if (GVAR(AtmosphericDensitySimulationEnabled)) then {
 						_pressureDeviation = 1013.25 * exp(-(GVAR(Altitude) + (_bulletPosition select 2)) / 7990) - 1013.25 - 10 * overcast;
 						_temperature = GET_TEMPERATURE_AT_HEIGHT(_bulletPosition select 2);
-						_humidity = EGVAR(weather, currentHumidity);					
+						_humidity = EGVAR(weather,currentHumidity);					
 						_airFriction = _airFriction + ((_temperature - 15) * 0.0000015 + _humidity * 0.0000040 + _pressureDeviation * -0.0000009);
 					};
 					

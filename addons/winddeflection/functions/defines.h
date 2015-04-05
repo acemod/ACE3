@@ -8,4 +8,4 @@
 #define SPECIFIC_GAS_CONSTANT_DRY_AIR 287.058
 #define STD_AIR_DENSITY_ICAO 1.22498
 #define STD_AIR_DENSITY_ASM 1.20885
-#define GET_TEMPERATURE_AT_HEIGHT(h) (EGVAR(weather, currentTemperature) - 0.0065 * (h))
+#define GET_TEMPERATURE_AT_HEIGHT(h) (EGVAR(weather,currentTemperature) - 0.0065 * (h))

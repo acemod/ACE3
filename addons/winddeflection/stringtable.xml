@@ -32,6 +32,12 @@
 				<Polish>Wilgotność: %1</Polish>
 				<Spanish>Humedad: %1%</Spanish>
 			</Key>
+            <Key ID="STR_ACE_WindDeflection_WindInfoKey">
+              <English>Show Wind Info</English>
+            </Key>
+            <Key ID="STR_ACE_WindDeflection_ProtractorKey">
+              <English>Show Protractor</English>
+            </Key>
 		</Container>
 	</Package> 
 </Project>

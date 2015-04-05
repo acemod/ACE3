@@ -20,7 +20,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-#include "definesh.h"
+#include "defines.h"
 
 private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_index", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_bulletMass", "_bulletLength", "_bulletTranslation", "_airFriction", "_dragModel", "_velocityBoundaryData", "_muzzleVelocity", "_muzzleVelocityCoef", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_bulletWeight", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef", "_ACE_Elevation", "_ACE_Windage", "_ID"];
 _unit     = _this select 0;
@@ -32,7 +32,7 @@ _bullet   = _this select 6;
 
 if (isDedicated) exitWith {};
 if (!alive _bullet) exitWith {};
-if (!(isPlayer _unit)) exitWith {};
+if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
 if (underwater _unit) exitWith {};
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
 if (_unit distanceSqr ACE_player > 9000000) exitWith {};
@@ -50,7 +50,11 @@ if (_muzzleVelocityCoef < 0) then {
 	_muzzleVelocity = _muzzleVelocity * (-1 * _muzzleVelocityCoef);
 };
 
-_muzzleAccessory = (primaryWeaponItems _unit) select 0;
+switch (currentWeapon _unit) do {
+	case primaryWeapon _unit: { _muzzleAccessory = (primaryWeaponItems _unit) select 0; };
+	case handgunWeapon _unit: { _muzzleAccessory = (handgunItems _unit) select 0; };
+	default { _muzzleAccessory = ""; };
+};
 if (_muzzleAccessory != "" && isNumber(configFile >> "cfgWeapons" >> _muzzleAccessory >> "ItemInfo" >> "MagazineCoef" >> "initSpeed")) then {
 	_initSpeedCoef = getNumber(configFile >> "cfgWeapons" >> _muzzleAccessory >> "ItemInfo" >> "MagazineCoef" >> "initSpeed");
 	_muzzleVelocity = _muzzleVelocity * _initSpeedCoef;
@@ -83,7 +87,7 @@ _bulletTraceVisible = false;
 if (GVAR(BulletTraceEnabled) && currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
 	_opticsName = (primaryWeaponItems ACE_player) select 2;
 	_opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
-	_bulletTraceVisible = (_opticType == 2 || currentWeapon ACE_player in ["Binocular", "Rangefinder", "Laserdesignator"]) && cameraView == "GUNNER";
+	_bulletTraceVisible = (_opticType == 2 || currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]) && cameraView == "GUNNER";
 };
 
 _caliber = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_caliber");
@@ -139,7 +143,7 @@ if (count GVAR(bulletDatabaseFreeIndices) > 0) then {
 	GVAR(bulletDatabaseFreeIndices) = GVAR(bulletDatabaseFreeIndices) - [_index];
 };
 
-"AdvancedBallistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", _index, _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _muzzleVelocity, _transonicStabilityCoef, getPosASL _bullet, GVAR(Latitude), EGVAR(weather, currentTemperature), GVAR(Altitude), EGVAR(weather, currentHumidity), overcast, floor(time), time - floor(time)];
+"AdvancedBallistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", _index, _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _muzzleVelocity, _transonicStabilityCoef, getPosASL _bullet, GVAR(Latitude), EGVAR(weather,currentTemperature), GVAR(Altitude), EGVAR(weather,currentHumidity), overcast, floor(time), time - floor(time)];
 GVAR(bulletDatabase) set[_index, [_bullet, _caliber, _bulletTraceVisible, _index]];
 
 if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
@@ -178,7 +182,7 @@ if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
 				drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.4*_caliber,0.2*_caliber],[[0,0,0,0.6],[0,0,0,0.4]],[1,0],0,0,"","",""];
 			};
 			
-			call compile ("AdvancedBallistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, wind, ASLToATL(_bulletPosition) select 2, floor(time), time - floor(time)]);
+			call compile ("AdvancedBallistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, floor(time), time - floor(time)]);
 			
 			true
 		} count GVAR(bulletDatabaseOccupiedIndices);
