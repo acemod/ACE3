@@ -45,6 +45,7 @@ PREP(handleDamage_wounds);
 PREP(handleUnitVitals);
 PREP(handleKilled);
 PREP(handleLocal);
+PREP(handleBandageOpening);
 PREP(hasItem);
 PREP(hasItems);
 PREP(hasMedicalEnabled);

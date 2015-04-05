@@ -14,7 +14,7 @@ PREP(translateToWeaponSpace);
 
 PREP(laser_init);
 
-GVAR(laser) = nil;			// a single hud draws 1 laser at a time
+GVAR(laser) = nil;            // a single hud draws 1 laser at a time
 
 PREP(laserTargetPFH);
 

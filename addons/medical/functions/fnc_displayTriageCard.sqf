@@ -43,28 +43,27 @@ if (_show) then {
         _lbCtrl = (_display displayCtrl 200);
         lbClear _lbCtrl;
 
-        _log = _target getvariable ["myVariableTESTKOEAKJR", []];
+        _log = _target getvariable [QGVAR(triageCard), []];
         {
-            // [_message,_moment,_type, _arguments]
-            _message = _x select 0;
-            _moment = _x select 1;
-            _arguments = _x select 3;
-            if (isLocalized _message) then {
-                _message = localize _message;
-            };
-
-            {
-                if (typeName _x == "STRING" && {isLocalized _x}) then {
-                    _arguments set [_foreachIndex, localize _x];
+            _item = _x select 0;
+            _amount = _x select 1;
+            _message = _item;
+            if (isClass(configFile >> "CfgWeapons" >> _item)) then {
+                _message = getText(configFile >> "CfgWeapons" >> _item >> "DisplayName");
+            } else {
+                if (isLocalized _message) then {
+                    _message = localize _message;
                 };
-            }foreach _arguments;
-            _message = format([_message] + _arguments);
-            _lbCtrl lbAdd format["%1 %2", _moment, _message];
+            };
+            _triageCardTexts pushback format["%1x - %2", _amount, _message];
         }foreach _log;
 
         if (count _triageCardTexts == 0) then {
             _lbCtrl lbAdd "No entries on this triage card..";
         };
+        {
+            _lbCtrl lbAdd _x;
+        }foreach _triageCardTexts;
 
         _triageStatus = [_target] call FUNC(getTriageStatus);
         (_display displayCtrl 2000) ctrlSetText (_triageStatus select 0);

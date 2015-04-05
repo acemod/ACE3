@@ -11,8 +11,8 @@
  * Correction to angle
  */
 
-#include "stdafx.h"
-
+#include "ace_common.h"
+ 
 #define _USE_MATH_DEFINES
 
 #include <math.h>

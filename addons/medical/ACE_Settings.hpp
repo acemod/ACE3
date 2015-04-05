@@ -16,13 +16,12 @@ class ACE_Settings {
     };
     class GVAR(enableOverdosing) {
         typeName = "BOOL";
-        value = true;
+        value = 1;
     };
     class GVAR(bleedingCoefficient) {
         typeName = "SCALAR";
         value = 1;
     };
-
     class GVAR(enableAirway) {
         typeName = "BOOL";
         value = false;
@@ -37,11 +36,11 @@ class ACE_Settings {
     };
     class GVAR(enableVehicleCrashes) {
         typeName = "BOOL";
-        value = true;
+        value = 1;
     };
     class GVAR(enableScreams) {
         typeName = "BOOL";
-        value = true;
+        value = 1;
     };
     class GVAR(playerDamageThreshold) {
         typeName = "SCALAR";
@@ -58,7 +57,7 @@ class ACE_Settings {
     };
     class GVAR(preventInstaDeath) {
         typeName = "BOOL";
-        value = false;
+        value = 0;
     };
     class GVAR(maxReviveTime) {
         typeName = "SCALAR";
@@ -70,7 +69,7 @@ class ACE_Settings {
     };
     class GVAR(allowDeadBodyMovement) {
         typeName = "BOOL";
-        value = false;
+        value = 0;
     };
     class GVAR(allowLitterCreation) {
         typeName = "BOOL";
@@ -83,17 +82,25 @@ class ACE_Settings {
     class GVAR(medicSetting_PAK) {
         typeName = "SCALAR";
         value = 1;
+        values[] = {"Anyone", "Medics only", "Doctors only"};
     };
     class GVAR(medicSetting_SurgicalKit) {
         typeName = "SCALAR";
         value = 1;
+        values[] = {"Anyone", "Medics only", "Doctors only"};
     };
     class GVAR(consumeItem_PAK) {
         typeName = "SCALAR";
         value = 0;
+        values[] = {"No", "Yes"};
     };
     class GVAR(consumeItem_SurgicalKit) {
         typeName = "SCALAR";
         value = 0;
+        values[] = {"No", "Yes"};
+    };
+    class GVAR(keepLocalSettingsSynced) {
+        typeName = "BOOL";
+        value = 1;
     };
 };

@@ -1,15 +1,15 @@
 #include "script_component.hpp"
 
 if(isNil QGVAR(laser)) exitWith {
-	false
+    false
 };
 if(!local GVAR(laser)) then {
-	false 
+    false 
 };
 
 _handle = GVAR(laser) getVariable ["ACE_PFH_HANDLE", nil];
 if(!isNil "_handle") then {
-	[_handle] call cba_fnc_removePerFrameHandler;
+    [_handle] call cba_fnc_removePerFrameHandler;
 };
 
 REM(ACE_LASERS, GVAR(laser));

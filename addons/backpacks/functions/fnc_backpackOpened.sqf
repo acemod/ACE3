@@ -37,7 +37,7 @@ _sounds = [
     QUOTE(PATHTO_R(sounds\zip_out.wav))
 ];
 
-_position = _target modelToWorld (_target selectionPosition "Spine3");
+_position = _target modelToWorldVisual (_target selectionPosition "Spine3");
 _position = _position call EFUNC(common,positionToASL);
 
 playSound3D [

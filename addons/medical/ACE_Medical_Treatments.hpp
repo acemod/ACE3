@@ -265,7 +265,7 @@ class ACE_Medical_Actions {
             condition = "((_this select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
-            callbackProgress = "((_this select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
+            callbackProgress = "(((_this select 0) select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
