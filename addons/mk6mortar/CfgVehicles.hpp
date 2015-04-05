@@ -1,4 +1,19 @@
 class CfgVehicles {
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+            class ACE_Equipment {
+                class GVAR(rangetable) {
+                    displayName = "Open 82mm Rangetable";
+                    condition = QUOTE(true);
+                    statement = QUOTE(call FUNC(rangeTableOpen));
+                    priority = 0;
+                    icon = QUOTE(PATHTOF(UI\icon_rangeTable.paa));
+                };
+            };
+        };
+    };
+
     class LandVehicle;
     class StaticWeapon: LandVehicle {
         class Turrets {

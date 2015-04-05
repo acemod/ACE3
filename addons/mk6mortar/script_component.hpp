@@ -10,3 +10,5 @@
 #endif
 
 #include "\z\ace\Addons\main\script_macros.hpp"
+
+#define MK6_82mm_AIR_FRICTION -0.0001

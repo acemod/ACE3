@@ -1,6 +1,3 @@
-class RscControlsGroup;
-class RscText;
-
 class RscInGameUI {
     class RscWeaponRangeArtillery {
         class CA_IGUI_elements_group: RscControlsGroup {};

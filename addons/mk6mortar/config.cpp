@@ -16,7 +16,18 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+
+class RscText;
+class RscListbox;
+class RscListNBox;
+class RscPicture;
+class RscControlsGroup;
+class ScrollBar;
+class RscActiveText;
+
+
 #include "RscInGameUI.hpp"
+#include "RscRangeTable.hpp"
 
 class ACE_Settings {
     //These settings effect gameplay difficutly:  defaults will leave the mortar the same as vanilla
