@@ -16,8 +16,6 @@
 
 EXPLODE_3_PVT(_this,_vehicle,_player,_parameters);
 
-diag_log "addPassengerActions";
-
 private ["_unit","_actions"];
 _unit = _parameters select 0;
 
