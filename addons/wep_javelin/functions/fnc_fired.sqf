@@ -72,25 +72,30 @@ FUNC(guidance_Javelin_LOBL_TOP_PFH) = {
 			_targetPos = _targetPos vectorAdd _addHeight;
 
 			_targetVectorSeeker = [_missile, [_xVec, _yVec, _zVec], _targetPos] call FUNC(translateToWeaponSpace);
-			_yaw = 0.0;
 			TRACE_5("", _missile, _xVec, _yVec, _zVec, _targetPos);
-			if((_targetVectorSeeker select 0) < 0) then {
-				_yaw = -_defYaw;
-			} else {
-				if((_targetVectorSeeker select 0) > 0) then {
-					_yaw = _defYaw;
-				};
+            
+            _yaw = 0.0;
+            _pitch = 0.0;
+
+            // Stop jinking on terminal final decent
+            if((_missilePos distance _targetPos) > 50) then {
+                if((_targetVectorSeeker select 0) < 0) then {
+                    _yaw = -_defYaw;
+                } else {
+                    if((_targetVectorSeeker select 0) > 0) then {
+                        _yaw = _defYaw;
+                    };
+                };
+                
+                
+                if((_targetVectorSeeker select 2) < 0) then {
+                    _pitch = -_defPitch;
+                } else {
+                    if((_targetVectorSeeker select 2) > 0) then {
+                        _pitch = _defPitch;
+                    };
+                };
 			};
-			
-			_pitch = 0.0;
-			if((_targetVectorSeeker select 2) < 0) then {
-				_pitch = -_defPitch;
-			} else {
-				if((_targetVectorSeeker select 2) > 0) then {
-					_pitch = _defPitch;
-				};
-			};
-			
 			TRACE_3("", _targetVectorSeeker, _pitch, _yaw);
 			
 	#ifdef DEBUG_MODE_FULL
