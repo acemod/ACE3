@@ -17,6 +17,14 @@ class CfgVehicles {
                 turretInfoType = "ACE_Mk6_RscWeaponRangeArtillery";
             };
         };
+        class ACE_SelfActions {
+            class GVAR(toggleMils) {
+                displayName = "Toggle MILS";
+                condition = QUOTE(true);
+                statement = QUOTE(_this call FUNC(toggleMils));
+                exceptions[] = {};
+            };
+        };
     };
 
     class Logic;
@@ -44,7 +52,7 @@ class CfgVehicles {
                 description = "Show the Computer and Rangefinder (these should be removed if you enable air resistance)";
                 typeName = "BOOL";
                 defaultValue = 0;
-            };            
+            };
             class allowCompass {
                 displayName = "Allow MK6 Compass";
                 description = "Show the MK6 Digital Compass";

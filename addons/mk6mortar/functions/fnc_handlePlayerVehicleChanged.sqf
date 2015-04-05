@@ -41,6 +41,8 @@ _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes")
         ctrlDelete _chargeText;
     } else {
 
+        _useMils = _mortarVeh getVariable [QGVAR(useMils), true];
+    
         //Compute: 'charge' from weaponstate
         _currentFireMode = (weaponState [_mortarVeh, [0]]) select 2;
         _currentChargeMode = _fireModes find _currentFireMode;
@@ -58,7 +60,7 @@ _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes")
 
         //Update CurrentElevation Display:
         _elevDeg = parseNumber ctrlText (_display displayCtrl 175);
-        if (GVAR(useMils)) then {
+        if (_useMils) then {
             (_display displayCtrl 80175) ctrlSetText str round (_elevDeg * 6400 / 360);
         } else {
             (_display displayCtrl 80175) ctrlSetText str _elevDeg;
@@ -72,7 +74,7 @@ _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes")
             if (_elevDeg <= 0) then {
                 (_display displayCtrl 80176) ctrlSetText (ctrlText (_display displayCtrl 176));
             } else {
-                if (GVAR(useMils)) then {
+                if (_useMils) then {
                     (_display displayCtrl 80176) ctrlSetText str round (_elevDeg * 6400 / 360);
                 } else {
                     (_display displayCtrl 80176) ctrlSetText str _elevDeg;
@@ -85,10 +87,10 @@ _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes")
             (_display displayCtrl 80156) ctrlSetText "";
         } else {
             _rotationDegrees = ((getDir _mortarVeh) + (((-180 / PI) * (_mortarVeh animationPhase "mainTurret")) + 360)) % 360;
-            if (GVAR(useMils)) then {
+            if (_useMils) then {
                 (_display displayCtrl 80156) ctrlSetText str round (_rotationDegrees * 6400 / 360);
             } else {
-                (_display displayCtrl 80156) ctrlSetText str _rotationDegrees;
+                (_display displayCtrl 80156) ctrlSetText (ctrlText (_display displayCtrl 156));
             };
         };
     };

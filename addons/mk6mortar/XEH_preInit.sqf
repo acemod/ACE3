@@ -5,6 +5,7 @@ ADDON = false;
 PREP(handleFired);
 PREP(handlePlayerVehicleChanged);
 PREP(moduleInit);
+PREP(toggleMils);
 PREP(turretDisplayLoaded);
 
 ADDON = true;

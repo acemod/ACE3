@@ -19,13 +19,6 @@ class CfgPatches {
 #include "RscInGameUI.hpp"
 
 class ACE_Settings {
-    class GVAR(useMils) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSetable = 1;
-        displayName = "$STR_ACE_mk6mortar_useMils";
-    };
-    
     //These settings effect gameplay difficutly:  defaults will leave the mortar the same as vanilla
     class GVAR(airResistanceEnabled) {
         value = 0;
