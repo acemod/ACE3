@@ -24,6 +24,7 @@ disableSerialization;
 
 PARAMS_7(_vehicle,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
+
 if (!GVAR(airResistanceEnabled)) exitWith {};
 
 if (_unit distance ACE_player > 3000) exitWith {false}; // Large enough distance to not simulate any wind deflection.
@@ -39,13 +40,12 @@ if (isNil QEGVAR(weather,currentTemperature)) then {
 
 //powder effects:
 _temperature = EGVAR(weather,currentTemperature);
-_newMuzzleVelocityCoefficent = (((_temperature + 273.13) / 288.13 - 1) / 30 + 1);
+_newMuzzleVelocityCoefficent = (((_temperature + 273.13) / 288.13 - 1) / 40 + 1);
+systemChat str _newMuzzleVelocityCoefficent;
 if (_newMuzzleVelocityCoefficent != 1) then {
     _bulletVelocity = velocity _projectile;
-    systemChat format ["Start Vel: %1", _bulletVelocity];
     _bulletSpeed = vectorMagnitude _bulletVelocity;
     _bulletVelocity = (vectorNormalized _bulletVelocity) vectorMultiply (_bulletSpeed * _newMuzzleVelocityCoefficent);
-    systemChat format ["New Vel: %1", _bulletVelocity];
     _projectile setVelocity _bulletVelocity;
     _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
 };
