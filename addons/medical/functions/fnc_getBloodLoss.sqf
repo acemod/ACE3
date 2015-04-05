@@ -13,6 +13,8 @@
 
 #include "script_component.hpp"
 
+#define BLOODLOSSRATE_BASIC 0.4
+
 private ["_totalBloodLoss","_tourniquets","_openWounds", "_value", "_cardiacOutput", "_internalWounds"];
 // TODO Only use this calculation if medium or higher, otherwise use vanilla calculations (for basic medical).
 _totalBloodLoss = 0;
@@ -40,6 +42,6 @@ if (GVAR(level) >= 2) then {
     // cap the blood loss to be no greater as the current cardiac output
     //(_totalBloodLoss min _cardiacOutput);
 } else {
-    // TODO basic medical
+     _totalBloodLoss = BLOODLOSSRATE_BASIC * (damage _this);
 };
 _totalBloodLoss * (GVAR(bleedingCoefficient) max 0);
