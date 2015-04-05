@@ -15,7 +15,7 @@
  * Nothing
  *
  * Example:
- * [clientFiredBIS-XEH] call ace_winddeflection_fnc_handleFired
+ * [clientFiredBIS-XEH] call ace_advanced_ballistics_fnc_handleFired
  *
  * Public: No
  */
@@ -23,6 +23,9 @@
 
 private ["_unit", "_weapon", "_ammo", "_bullet", "_airFriction", "_index"];
 _unit = _this select 0;
+
+// TODO: Add some way to decide whether to use basic wind deflection or advanced ballistics
+if (true) exitWith {false};
 
 if (_unit distance ACE_player > 3000) exitWith {false}; // Large enough distance to not simulate any wind deflection.
 if (!GVAR(EnableForAI) && !([_unit] call EFUNC(common,isPlayer))) exitWith {false};
