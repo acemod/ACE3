@@ -39,6 +39,9 @@
       <Hungarian>Opciók</Hungarian>
       <Italian>Opzioni</Italian>
     </Key>
+    <Key ID="STR_ACE_OptionsMenu_TabValues">
+      <English>Values</English>
+    </Key>
     <Key ID="STR_ACE_OptionsMenu_Enabled">
       <English>Yes</English>
       <German>Ja</German>
@@ -69,6 +72,36 @@
       <German>Einstellung:</German>
       <Russian>Yстановки:</Russian>
       <Spanish>Ajuste:</Spanish>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_Export">
+      <English>Export</English>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_OpenExport">
+      <English>Open Export Menu</English>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_stringType">
+      <English>String input.</English>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_arrayType">
+      <English>Array. Seperate elements by using ,.</English>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_scalarType">
+      <English>Number</English>
+    </Key>
+    <Key ID="STR_ACE_optionsMenu_unknownType">
+      <English>Uknown input type</English>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_SaveInput">
+      <English>Save input</English>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_inClientSettings">
+      <English>Include Client Settings</English>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_exClientSettings">
+      <English>Exclude Client Settings</English>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_settingsExported">
+      <English>Settings exported to clipboard</English>
     </Key>
   </Package>
 </Project>
