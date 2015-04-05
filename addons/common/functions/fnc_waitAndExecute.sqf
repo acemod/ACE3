@@ -14,23 +14,57 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_func,_params,_delay,_interval);
+private ["_delay", "_found", "_pushedOnIndex", "_newArray"];
+_delay = _this select 2;
 
-[
-    {
-        EXPLODE_2_PVT(_this,_params,_pfhId);
-        EXPLODE_2_PVT(_params,_delayedExecParams,_startTime);
-        EXPLODE_3_PVT(_delayedExecParams,_func,_funcParams,_delay);
+if (isnil QGVAR(waitAndExecQueue)) then {
+    GVAR(waitAndExecQueue) = [];
+    GVAR(waitAndExecQueueSize) = 0;
+};
 
-        // Exit if the time was not reached yet
-        if (time < _startTime + _delay) exitWith {};
+_newArray = [];
+_found = false;
+_pushedOnIndex = -1;
+{
+    if (time + _delay < (_x select 1) && {!_found}) then {
+        _found = true;
+        _pushedOnIndex = _newArray pushback [_this, time + _delay];
+    };
+    _newArray pushback _x;
+}foreach GVAR(waitAndExecQueue);
 
-        // Remove the PFH
-        [_pfhId] call cba_fnc_removePerFrameHandler;
+if (!_found) then {
+    _pushedOnIndex = _newArray pushback [_this, time + _delay];
+};
 
-        // Execute the function
-        _funcParams call _func;
-    },
-    _interval,
-    [_this, time]
-] call CBA_fnc_addPerFrameHandler
+GVAR(waitAndExecQueue) = _newArray;
+GVAR(waitAndExecQueueSize) = GVAR(waitAndExecQueueSize) + 1;
+
+if (_pushedOnIndex == 0) then {
+    [
+        {
+            private ["_lastExecuted", "_lastExecuted", "_func", "_params"];
+            _lastExecuted = -1;
+
+            {
+                if (time < (_x select 1)) exitWith {};
+                _lastExecuted = _foreachIndex;
+                _func = (_x select 0) select 0;
+                _params = (_x select 0) select 1;
+                _params call _func;
+            }foreach GVAR(waitAndExecQueue);
+
+            if (_lastExecuted >= 0) then {
+                GVAR(waitAndExecQueue) deleteRange [0, _lastExecuted + 1];
+                GVAR(waitAndExecQueueSize) = GVAR(waitAndExecQueueSize) - (_lastExecuted + 1);
+            };
+
+            if (GVAR(waitAndExecQueueSize) <= 0) then {
+                // Remove the PFH
+                [(_this select 1)] call cba_fnc_removePerFrameHandler;
+            };
+        },
+        0,
+        []
+    ] call CBA_fnc_addPerFrameHandler
+};
