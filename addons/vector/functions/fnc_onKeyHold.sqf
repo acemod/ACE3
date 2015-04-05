@@ -198,7 +198,7 @@ switch (_this select 0) do {
 
     };
 
-    case ("fall_of_short"): {
+    case ("fall_of_shot"): {
 
         private "_isReady";
         _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
@@ -207,8 +207,8 @@ switch (_this select 0) do {
 
         if (!GVAR(isKeyDownAzimuth) && {!GVAR(isKeyDownDistance)}) then {
             if (_isReady) then {
-                GVAR(FOSData) = call FUNC(getFallOfShort);//
-                [false] call FUNC(showFallOfShort);
+                GVAR(FOSData) = call FUNC(getFallOfShot);//
+                [false] call FUNC(showFallOfShot);
             };
             [false] call FUNC(showCenter);
             [false] call FUNC(showP1);
