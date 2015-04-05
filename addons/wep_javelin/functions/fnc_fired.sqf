@@ -79,23 +79,26 @@ FUNC(guidance_Javelin_LOBL_TOP_PFH) = {
 
             // Stop jinking on terminal final decent
             if((_missilePos distance _targetPos) > 50) then {
-                if((_targetVectorSeeker select 0) < 0) then {
-                    _yaw = -_defYaw;
-                } else {
-                    if((_targetVectorSeeker select 0) > 0) then {
-                        _yaw = _defYaw;
-                    };
+                _defPitch = 0.0015;
+                _defYaw = 0.0015;
+            };
+               
+            if((_targetVectorSeeker select 0) < 0) then {
+                _yaw = -_defYaw;
+            } else {
+                if((_targetVectorSeeker select 0) > 0) then {
+                    _yaw = _defYaw;
                 };
-                
-                
-                if((_targetVectorSeeker select 2) < 0) then {
-                    _pitch = -_defPitch;
-                } else {
-                    if((_targetVectorSeeker select 2) > 0) then {
-                        _pitch = _defPitch;
-                    };
+            };
+
+            if((_targetVectorSeeker select 2) < 0) then {
+                _pitch = -_defPitch;
+            } else {
+                if((_targetVectorSeeker select 2) > 0) then {
+                    _pitch = _defPitch;
                 };
-			};
+            };
+			
 			TRACE_3("", _targetVectorSeeker, _pitch, _yaw);
 			
 	#ifdef DEBUG_MODE_FULL
