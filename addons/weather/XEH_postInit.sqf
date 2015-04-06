@@ -11,6 +11,18 @@
     };
 };
 
+["ACE3", QGVAR(WindInfoKey), localize "STR_ACE_Weather_WindInfoKey",
+{
+    // Conditions: canInteract
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+
+    // Statement
+    [] call FUNC(displayWindInfo);
+    false
+},
+{false},
+[37, [true, false, false]], false, 0] call CBA_fnc_addKeybind; // (SHIFT + K)
+
 // Update Wind
 simulWeatherSync;
 _fnc_updateWind = {

@@ -12,14 +12,6 @@ class CfgPatches {
     };
 };
 
-class CfgAddons {
-    class PreloadAddons {
-       class ADDON {
-          list[] = {QUOTE(ADDON)};
-       };
-    };
-};
-
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
