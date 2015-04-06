@@ -13,6 +13,28 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call ace_common_fnc_addEventHandler;
 ["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call ace_common_fnc_addEventHandler;
 
+["medical_onUnconscious", {
+    if (local (_this select 0)) then {
+        _unit = _this select 0;
+        if (_this select 1) then {
+            _unit setVariable ["tf_globalVolume", 0.4];
+            _unit setVariable ["tf_voiceVolume", 0, true];
+            _unit setVariable ["tf_unable_to_use_radio", true, true];
+
+            _unit setVariable ["acre_sys_core_isDisabled", true, true];
+            _unit setVariable ["acre_sys_core_globalVolume", 0.4];
+        } else {
+            _unit setVariable ["tf_globalVolume", 1];
+            _unit setVariable ["tf_voiceVolume", 1, true];
+            _unit setVariable ["tf_unable_to_use_radio", true, true];
+
+            _unit setVariable ["acre_sys_core_isDisabled", true, true];
+            _unit setVariable ["acre_sys_core_globalVolume", 1];
+        };
+    };
+}] call ace_common_fnc_addEventHandler;
+
+
 // Initialize all effects
 _fnc_createEffect = {
     private ["_type", "_layer", "_default"];
@@ -217,13 +239,18 @@ if (isNil QGVAR(level)) then {
 
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
-// broadcast injuries to JIP clients in a MP session
-if (isMultiplayer) then {
-    // We are only pulling the wounds for the units in the player group. Anything else will come when the unit interacts with them.
-    if (hasInterface) then {
-        {
-            [_x, player] call FUNC(requestWoundSync);
-        }foreach units group player;
+if (USE_WOUND_EVENT_SYNC) then {
+    // broadcast injuries to JIP clients in a MP session
+    if (isMultiplayer && hasInterface) then {
+        ["playerChanged", {
+            EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
+            if (alive _newPlayer) then {
+                // We are only pulling the wounds for the units in the player group. Anything else will come when the unit interacts with them.
+                {
+                    [_x, _newPlayer] call FUNC(requestWoundSync);
+                }foreach units group player;
+            };
+        }] call EFUNC(common,addEventhandler);
     };
 };
 
@@ -232,6 +259,11 @@ if (isMultiplayer) then {
     {(((_this select 0) getvariable [QGVAR(pain), 0]) > 0.9)},
     {(((_this select 0) call FUNC(getBloodLoss)) > 0.25)},
     {((_this select 0) getvariable [QGVAR(inReviveState), false])},
+    {((_this select 0) getvariable [QGVAR(inCardiacArrest), false])},
     {((_this select 0) getvariable ["ACE_isDead", false])},
     {(((_this select 0) getvariable [QGVAR(airwayStatus), 100]) < 80)}
 ] call FUNC(addUnconsciousCondition);
+
+// Prevent all types of interaction while unconscious
+// @todo: probably remove this when CBA keybind hold key works properly
+["isNotUnconscious", {!((_this select 0) getVariable ["ACE_isUnconscious", false])}] call EFUNC(common,addCanInteractWithCondition);

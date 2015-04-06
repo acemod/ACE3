@@ -89,7 +89,7 @@ _gRedOut = MINVIRTUALG / _classCoef;
 
 // @todo: Sort the interaction with medical
 if ((_average > _gBlackOut) and {isClass (configFile >> "CfgPatches" >> "ACE_Medical") and {!(ACE_player getVariable ["ACE_isUnconscious", false])}}) then {
-    [ACE_player, (10 + floor(random 5))] call EFUNC(medical,knockOut);
+    [ACE_player, true, (10 + floor(random 5))] call EFUNC(medical,setUnconscious);
 };
 
 GVAR(GForces_CC) ppEffectAdjust [1,1,0,[0,0,0,1],[0,0,0,0],[1,1,1,1],[10,10,0,0,0,0.1,0.5]];

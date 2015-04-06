@@ -242,10 +242,10 @@ _fnc_isInRange = {
   private ["_unitPosition", "_distance"];
   _unitPosition = getPos _unit;
 
-  _distance = _unitPosition distance (_vehicle modelToWorld _selectionPosition);
+  _distance = _unitPosition distance (_vehicle modelToWorldVisual _selectionPosition);
 
   if (!isNil "_selectionPosition2") then {
-    _distance = _distance min (_unitPosition distance (_vehicle modelToWorld _selectionPosition2));
+    _distance = _distance min (_unitPosition distance (_vehicle modelToWorldVisual _selectionPosition2));
   };
 
   _distance < _radius

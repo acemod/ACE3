@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-private ["_vehicle", "_turret", "_turretConfig", "_distance", "_magazines"];
+private ["_vehicle", "_turret", "_turretConfig", "_distance", "_magazines", "_userChange"];
 
 _vehicle = _this select 0;
 _turret = _this select 1;
@@ -46,7 +46,9 @@ if (_weaponDirection isEqualTo [0,0,0]) then {  // dummy value for non main turr
 _angleTarget = asin (_weaponDirection select 2);
 
 if (count _this > 2) then {
-    _distance = _this select 2;
+    if((_this select 2) > -1) then {
+        _distance = _this select 2;
+    };
 };
 
 if (!(isNil QGVAR(backgroundCalculation)) and {!(scriptDone GVAR(backgroundCalculation))}) then {
@@ -160,4 +162,11 @@ _FCSElevation = [];
 [_vehicle, format ["%1_%2", QGVAR(Elevation), _turret], _FCSElevation] call EFUNC(common,setVariablePublic);
 [_vehicle, format ["%1_%2", QGVAR(Azimuth), _turret],     _FCSAzimuth] call EFUNC(common,setVariablePublic);
 
-[format ["%1: %2", localize "STR_ACE_FCS_ZeroedTo", _distance]] call EFUNC(common,displayTextStructured);
+_userChange = true;
+if( (count _this) > 3) then {
+    _userChange = _this select 3;
+};
+
+if(_userChange) then {
+    [format ["%1: %2", localize "STR_ACE_FCS_ZeroedTo", _distance]] call EFUNC(common,displayTextStructured);
+};

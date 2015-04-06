@@ -15,7 +15,7 @@
  * Placed explosive <OBJECT>
  *
  * Example:
- * _explosive = [player, player modelToWorld [0,0.5, 0.1], 134,
+ * _explosive = [player, player modelToWorldVisual [0,0.5, 0.1], 134,
  *  "SatchelCharge_Remote_Mag", "Command", []] call ACE_Explosives_fnc_placeExplosive;
  *
  * Public: Yes

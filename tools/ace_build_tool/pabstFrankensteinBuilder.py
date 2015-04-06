@@ -180,9 +180,10 @@ def find_bi_tools(work_drive):
 	addonbuilder_path = os.path.join(arma3tools_path, "AddonBuilder", "AddonBuilder.exe")
 	dssignfile_path = os.path.join(arma3tools_path, "DSSignFile", "DSSignFile.exe")
 	dscreatekey_path = os.path.join(arma3tools_path, "DSSignFile", "DSCreateKey.exe")
+	cfgconvert_path = os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe")
 
-	if os.path.isfile(addonbuilder_path) and os.path.isfile(dssignfile_path) and os.path.isfile(dscreatekey_path):
-		return [addonbuilder_path, dssignfile_path, dscreatekey_path]
+	if os.path.isfile(addonbuilder_path) and os.path.isfile(dssignfile_path) and os.path.isfile(dscreatekey_path) and os.path.isfile(cfgconvert_path):
+		return [addonbuilder_path, dssignfile_path, dscreatekey_path, cfgconvert_path]
 	else:
 		raise Exception("BadTools","Arma 3 Tools are not installed correctly or the P: drive needs to be created.")
 
@@ -429,6 +430,7 @@ See the make.cfg file for additional build options.
 		addonbuilder = tools[0]
 		dssignfile = tools[1]
 		dscreatekey = tools[2]
+		cfgconvert = tools[3]
 
 	except:
 		print_error("Arma 3 Tools are not installed correctly or the P: drive has not been created.")
@@ -573,7 +575,7 @@ See the make.cfg file for additional build options.
 		if build_tool == "pboproject":
 			try:
 				#PABST: Convert config (run the macro'd config.cpp through CfgConvert twice to produce a de-macro'd cpp that pboProject can read without fucking up:
-				os.chdir("P:\\CfgConvert")
+				os.chdir(os.path.join(arma3tools_path, "CfgConvert"))
 				shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
 				print_green("\Pabst (double converting):" + "cfgConvertGUI.exe " + os.path.join(work_drive, prefix, module, "config.cpp"))
 				ret = subprocess.call(["cfgConvertGUI.exe", os.path.join(work_drive, prefix, module, "config.cpp")])

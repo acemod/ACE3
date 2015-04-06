@@ -11,4 +11,5 @@ class CfgPatches {
 };
 
 #include "CfgEventhandlers.hpp"
-#include "CfgOptics.hpp"
+#include "RscInGameUI.hpp"
+#include "CfgSounds.hpp"
