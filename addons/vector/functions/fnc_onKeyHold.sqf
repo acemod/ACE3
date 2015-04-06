@@ -207,7 +207,7 @@ switch (_this select 0) do {
 
         if (!GVAR(isKeyDownAzimuth) && {!GVAR(isKeyDownDistance)}) then {
             if (_isReady) then {
-                GVAR(FOSData) = call FUNC(getFallOfShot);//
+                GVAR(FOSData) = call FUNC(getFallOfShot);
                 [false] call FUNC(showFallOfShot);
             };
             [false] call FUNC(showCenter);
