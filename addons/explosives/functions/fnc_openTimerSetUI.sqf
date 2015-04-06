@@ -23,16 +23,16 @@ sliderSetPosition [8845, 30];
 GVAR(explosive) = _explosive;
 
 DFUNC(SetTimer) = {
-	[
-		ACE_player,
-		getPosATL GVAR(explosive),
-		GVAR(explosive) getVariable QGVAR(Direction),
-		GVAR(explosive) getVariable QGVAR(class),
-		"Timer",
-		[floor sliderPosition 8845],
-		GVAR(explosive)
-	] call FUNC(placeExplosive);
-	closeDialog 0;
+    [
+        ACE_player,
+        getPosATL GVAR(explosive),
+        GVAR(explosive) getVariable QGVAR(Direction),
+        GVAR(explosive) getVariable QGVAR(class),
+        "Timer",
+        [floor sliderPosition 8845],
+        GVAR(explosive)
+    ] call FUNC(placeExplosive);
+    closeDialog 0;
 };
 
 buttonSetAction [8860, QUOTE(call DFUNC(SetTimer);)];
