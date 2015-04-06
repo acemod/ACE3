@@ -12,7 +12,7 @@ if ((GVAR(ATragMX_scopeUnits) select (GVAR(ATragMX_currentScopeUnit) select GVAR
 	GVAR(ATragMX_currentScopeUnit) set [GVAR(ATragMX_currentTarget), (GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 6];
 };
 
-call compile preprocessFile ("\atragmx\fnc_update_gun.sqf");
+[] call FUNC(update_gun);
 
 GVAR(ATragMX_elevationOutput) set [GVAR(ATragMX_currentTarget), 0];
 GVAR(ATragMX_windageOutput) set [GVAR(ATragMX_currentTarget), 0];
@@ -20,4 +20,4 @@ GVAR(ATragMX_leadOutput) set [GVAR(ATragMX_currentTarget), 0];
 GVAR(ATragMX_tofOutput) set [GVAR(ATragMX_currentTarget), 0];
 GVAR(ATragMX_velocityOutput) set [GVAR(ATragMX_currentTarget), 0];
 
-call compile preprocessFile ("\atragmx\fnc_update_result.sqf");
+[] call FUNC(update_result);

@@ -9,7 +9,7 @@ if (ctrlVisible 8000) then
 	
 	if (_this == 1) then
 	{
-		call compile preprocessFile ("\atragmx\fnc_calculate_target_speed_assist.sqf");
+		[] call FUNC(calculate_target_speed_assist);
 		ctrlSetText [330, Str(parseNumber(ctrlText 8007))];
 	};
 } else

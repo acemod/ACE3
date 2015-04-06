@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_OpenATragMX {
                 displayName = "$STR_ACE_ATragMX_OpenATragMXDialog";
                 condition = QUOTE('ACE_ATragMX' in items _player && {!GVAR(ATragMX)});
-                statement = QUOTE(call FUNC(createATragMXDialog));
+                statement = QUOTE(call FUNC(create_dialog));
                 showDisabled = 0;
                 priority = 2;
                 icon = PATHTOF(UI\ATRAG_Icon.paa);

@@ -69,6 +69,6 @@ switch ((GVAR(ATragMX_currentScopeUnit) select GVAR(ATragMX_currentTarget))) do
 (GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) set [10, _elevationCur];
 (GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) set [11, _windageCur];
 
-call compile preprocessFile ("\atragmx\fnc_update_gun.sqf");
-call compile preprocessFile ("\atragmx\fnc_update_atmosphere.sqf");
-call compile preprocessFile ("\atragmx\fnc_update_target.sqf");
+[] call FUNC(update_gun);
+[] call FUNC(update_atmosphere);
+[] call FUNC(update_target);

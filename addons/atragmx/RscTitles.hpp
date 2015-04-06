@@ -208,7 +208,7 @@ class ATragMX_Display
 			h=1.024*4/3;
 			colorBackground[]={1,1,1,1};
 			colorText[]={1,1,1,1};
-			text="\atragmx\data\atrag.paa";
+			text=PATHTOF(UI\atrag.paa);
 		};
 		class POWER: ATragMX_RscButton
 		{

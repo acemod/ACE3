@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-call compile preprocessFile ("\atragmx\fnc_parse_input.sqf");
+[] call FUNC(parse_input.sqf);
 
 private ["_scopeBaseAngle"];
 _scopeBaseAngle = ((GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 3);

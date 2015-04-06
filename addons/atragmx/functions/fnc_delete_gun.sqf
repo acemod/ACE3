@@ -16,4 +16,4 @@ GVAR(ATragMX_gunList) = GVAR(ATragMX_gunList) - [0];
 
 lbDelete [6000, _index];
 
-profileNamespace setVariable ["GVAR(ATragMX_gunList)", GVAR(ATragMX_gunList)];
+profileNamespace setVariable ["ACE_ATragMX_gunList", GVAR(ATragMX_gunList)];

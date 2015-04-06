@@ -48,9 +48,9 @@ if (_storeRangeCardData) then {
 
 private ["_wind"];
 _wind = [cos(270 - _windDirection * 30) * _windSpeed, sin(270 - _windDirection * 30) * _windSpeed, 0];
-if (AdvancedBallistics) then {
-	if (AB_AdvancedAirDragEnabled) then {
-		_bc = [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel] call ab_fnc_calculate_atmospheric_correction;
+if (EGVAR(advanced_ballistics,AdvancedBallistics)) then {
+	if (EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
+		_bc = [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel] call FUNC(calculateAtmosphericCorrection);
 	};
 };
 
@@ -70,11 +70,11 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do
 	
 	_trueVelocity = _bulletVelocity vectorDiff _wind;
 	_trueSpeed = vectorMagnitude _trueVelocity;
-		
-	if (AdvancedBallistics) then {
-		if (AB_AdvancedAirDragEnabled) then {
+    
+    if (EGVAR(advanced_ballistics,AdvancedBallistics)) then {
+        if (EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
 			private ["_drag"];
-			_drag = -1 * ([_dragModel, _bc, _trueSpeed] call ab_fnc_calculate_retardation);
+			_drag = -1 * ([_dragModel, _bc, _trueSpeed] call FUNC(calculateRetardation);
 			_bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (_drag);
 		};
 	} else {

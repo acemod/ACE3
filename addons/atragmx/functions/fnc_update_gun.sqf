@@ -35,4 +35,4 @@ if (GVAR(ATragMX_currentUnit) == 2) then
 	ctrlSetText [140, Str(Round(((GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 2) * 1.0936133))];
 };
 
-call compile preprocessFile ("\atragmx\fnc_update_scope_unit.sqf");
+[] call FUNC(update_scope_unit);

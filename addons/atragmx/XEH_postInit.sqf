@@ -2,8 +2,8 @@
 
 #include "initKeybinds.sqf"
 
-if (count (profileNamespace getVariable ["GVAR(ATragMX_gunList)", []]) > 0) then {
-	GVAR(ATragMX_gunList) = profileNamespace getVariable "GVAR(ATragMX_gunList)";
+if (count (profileNamespace getVariable ["ACE_ATragMX_gunList", []]) > 0) then {
+	GVAR(ATragMX_gunList) = profileNamespace getVariable "ACE_ATragMX_gunList";
 } else {
 	// Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Elevation Scope Step, Windage Scope Step, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Ammo Class Name, Magazine Class Name, BC, Drag Model, Atmosphere Model
 	GVAR(ATragMX_gunList) =  [["12.7x108mm"       , 820, 500, 0.255, -0.0005600, 3.81, 0, 0.338, 0.338, 120, 0, 0, 48.28, "B_127x108_Ball"  , "5Rnd_127x108_Mag"        , 0.700, 1, "ASM" ],
@@ -14,7 +14,7 @@ if (count (profileNamespace getVariable ["GVAR(ATragMX_gunList)", []]) > 0) then
                               ["5.56x45mm"        , 920, 500, 0.259, -0.0012000, 3.81, 0, 0.338, 0.338, 120, 0, 0, 4.000, "B_556x45_Ball"   , "30Rnd_556x45_Stanag"     , 0.304, 1, "ASM" ],
                               ["5.56x45mm Mk262"  , 850, 500, 0.294, -0.0011250, 3.81, 0, 0.338, 0.338, 120, 0, 0, 4.990, "RH_556x45_Mk262" , "RH_30Rnd_556x45_Mk262"   , 0.361, 1, "ASM" ]];
 	
-	profileNamespace setVariable ["GVAR(ATragMX_gunList)", GVAR(ATragMX_gunList)];
+	profileNamespace setVariable ["ACE_ATragMX_gunList", GVAR(ATragMX_gunList)];
 };
 
 [] call FUNC(init);

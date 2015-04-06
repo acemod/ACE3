@@ -23,7 +23,7 @@ if !(ctrlVisible 9000) then
 	
 	ctrlSetText [8006, Str(Round((time - _startTime) * 10) / 10)];
 	
-	call compile preprocessFile ("\atragmx\fnc_calculate_target_speed_assist.sqf");
+	[] call FUNC(calculate_target_speed_assist);
 	
 	false execVM "\atragmx\fnc_show_target_speed_assist_timer.sqf";
 	true execVM "\atragmx\fnc_show_target_speed_assist.sqf";

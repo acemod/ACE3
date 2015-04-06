@@ -8,7 +8,7 @@
 
 (_dsp displayCtrl 600 + GVAR(ATragMX_currentUnit)) ctrlEnable false;
 
-call compile preprocessFile ("\atragmx\fnc_update_gun.sqf");
-call compile preprocessFile ("\atragmx\fnc_update_atmosphere.sqf");
-call compile preprocessFile ("\atragmx\fnc_update_target.sqf");
-call compile preprocessFile ("\atragmx\fnc_update_result.sqf");
+[] call FUNC(update_gun);
+[] call FUNC(update_atmosphere);
+[] call FUNC(update_target);
+[] call FUNC(update_result);

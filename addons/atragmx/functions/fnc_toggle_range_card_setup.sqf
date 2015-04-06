@@ -13,8 +13,8 @@ if (ctrlVisible 10000) then
 		GVAR(ATragMX_rangeCardEndRange) = 0 max Round(parseNumber(ctrlText 10004)) min 3000;
 		GVAR(ATragMX_rangeCardIncrement) = 1 max Round(parseNumber(ctrlText 10005)) min 3000;
 		
-		call compile preprocessFile ("\atragmx\fnc_calculate_range_card.sqf");
-		call compile preprocessFile ("\atragmx\fnc_update_range_card.sqf");
+		[] call FUNC(calculate_range_card);
+		[] call FUNC(update_range_card);
 	};
 } else
 {

@@ -4,4 +4,4 @@ GVAR(ATragMX_rangeCardCurrentColumn) = (GVAR(ATragMX_rangeCardCurrentColumn) + 1
 
 ctrlSetText [5006, (GVAR(ATragMX_rangeCardLastColumns) select GVAR(ATragMX_rangeCardCurrentColumn))];
 
-call compile preprocessFile ("\atragmx\fnc_update_range_card.sqf");
+[] call FUNC(update_range_card);

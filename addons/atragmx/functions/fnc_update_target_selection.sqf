@@ -11,4 +11,4 @@
 
 ctrlSetFocus (_dsp displayCtrl 3000);
 
-call compile preprocessFile ("\atragmx\fnc_update_unit_selection.sqf");
+[] call FUNC(update_unit_selection);

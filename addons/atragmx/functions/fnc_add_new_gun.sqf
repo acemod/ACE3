@@ -10,5 +10,5 @@ if (_gunName != "") then {
 
 	lbAdd [6000, _gunProfileEntry select 0];
 
-	profileNamespace setVariable ["GVAR(ATragMX_gunList)", GVAR(ATragMX_gunList)];
+	profileNamespace setVariable ["ACE_ATragMX_gunList", GVAR(ATragMX_gunList)];
 };

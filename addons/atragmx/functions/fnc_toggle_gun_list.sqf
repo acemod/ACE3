@@ -8,7 +8,7 @@ if (ctrlVisible 6000) then
 	true execVM "\atragmx\fnc_show_main_page.sqf";
 	
 	if (_this) then {
-		(lbCurSel 6000) call compile preprocessFile ("\atragmx\fnc_change_gun.sqf");
+		(lbCurSel 6000) call FUNC(change_gun);
 	};
 } else
 {

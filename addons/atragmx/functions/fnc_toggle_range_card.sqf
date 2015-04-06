@@ -13,6 +13,6 @@ if (ctrlVisible 5006) then
 	
 	ctrlSetFocus (_dsp displayCtrl 5001);
 	
-	call compile preprocessFile ("\atragmx\fnc_calculate_range_card.sqf");
-	call compile preprocessFile ("\atragmx\fnc_update_range_card.sqf");
+	[] call FUNC(calculate_range_card);
+	[] call FUNC(update_range_card);
 };
