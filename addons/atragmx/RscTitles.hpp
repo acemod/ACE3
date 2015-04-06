@@ -225,7 +225,7 @@ class ATragMX_Display
 			idc=-1;
 			w=0.06;
 			x=0.55*safezoneW+safezoneX+0.3122;
-			action="call ('\atragmx\init.sqf' call SLX_XEH_COMPILE); call ('\atragmx\fnc_update_target_selection.sqf' call SLX_XEH_COMPILE)";
+            action=QUOTE(call FUNC(init); call FUNC(update_target_selection));
 		};
 		class WINDOWS: ATragMX_RscButton
 		{
@@ -250,13 +250,13 @@ class ATragMX_Display
 			w=0.03;
 			h=0.03;
 			colorBackground[]={0,0,0,0.0};
-			action="((GVAR(ATragMX_currentGun) select GVAR(ATragMX_currentTarget)) + (count GVAR(ATragMX_gunList)) - 1) % (count GVAR(ATragMX_gunList)) call ('\atragmx\fnc_change_gun.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(((GVAR(ATragMX_currentGun) select GVAR(ATragMX_currentTarget)) + (count GVAR(ATragMX_gunList)) - 1) % (count GVAR(ATragMX_gunList)) call FUNC(change_gun));
 		};
 		class BOTTOM: TOP
 		{
 			idc=-1;
 			y=0.265*safezoneH+safezoneY+0.955;
-			action="((GVAR(ATragMX_currentGun) select GVAR(ATragMX_currentTarget)) + (count GVAR(ATragMX_gunList)) + 1) % (count GVAR(ATragMX_gunList)) call ('\atragmx\fnc_change_gun.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(((GVAR(ATragMX_currentGun) select GVAR(ATragMX_currentTarget)) + (count GVAR(ATragMX_gunList)) + 1) % (count GVAR(ATragMX_gunList)) call FUNC(change_gun));
 		};
 		class LEFT: ATragMX_RscButton
 		{
@@ -266,13 +266,13 @@ class ATragMX_Display
 			w=0.05;
 			h=0.03;
 			colorBackground[]={0,0,0,0};
-			action="call ('\atragmx\fnc_parse_input.sqf' call SLX_XEH_COMPILE); GVAR(ATragMX_currentTarget) = (4 + GVAR(ATragMX_currentTarget) - 1) % 4; call ('\atragmx\fnc_update_target_selection.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(parse_input); GVAR(ATragMX_currentTarget) = (4 + GVAR(ATragMX_currentTarget) - 1) % 4; call FUNC(update_target_selection));
 		};
 		class RIGHT: LEFT
 		{
 			idc=-1;
 			x=0.55*safezoneW+safezoneX+0.2725;
-			action="call ('\atragmx\fnc_parse_input.sqf' call SLX_XEH_COMPILE); GVAR(ATragMX_currentTarget) = (4 + GVAR(ATragMX_currentTarget) + 1) % 4; call ('\atragmx\fnc_update_target_selection.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(parse_input); GVAR(ATragMX_currentTarget) = (4 + GVAR(ATragMX_currentTarget) + 1) % 4; call FUNC(update_target_selection));
 		};
 		class TOP_LEFT: ATragMX_RscButton
 		{
@@ -311,21 +311,21 @@ class ATragMX_Display
 			colorBackgroundDisabled[]={0,0,0,1};
 			colorBackgroundActive[]={0,0,0,0};
 			text="D";
-			action="GVAR(ATragMX_currentUnit)=0; call ('\atragmx\fnc_update_unit_selection.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(GVAR(ATragMX_currentUnit)=0; call FUNC(update_unit_selection));
 		};
 		class TEXT_E: TEXT_D
 		{
 			idc=601;
 			x=0.550*safezoneW+safezoneX+0.3131;
 			text="E";
-			action="GVAR(ATragMX_currentUnit)=1; call ('\atragmx\fnc_update_unit_selection.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(GVAR(ATragMX_currentUnit)=1; call FUNC(update_unit_selection));
 		};
 		class TEXT_M: TEXT_E
 		{
 			idc=602;
 			x=0.550*safezoneW+safezoneX+0.3362;		
 			text="M";
-			action="GVAR(ATragMX_currentUnit)=2; call ('\atragmx\fnc_update_unit_selection.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(GVAR(ATragMX_currentUnit)=2; call FUNC(update_unit_selection));
 		};
 		class TEXT_RANGE_CARD: TEXT_D
 		{
@@ -335,7 +335,7 @@ class ATragMX_Display
 			colorBackground[]={0.15,0.21,0.23,0.3};
 			colorFocused[]={0.15,0.21,0.23,0.2};
 			text="RC";
-			action="call ('\atragmx\fnc_toggle_range_card.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(toggle_range_card));
 		};
 		
 		class TEXT_GUN: ATragMX_RscButton
@@ -361,7 +361,7 @@ class ATragMX_Display
 			w=0.058;
 			x=0.550*safezoneW+safezoneX+0.145;
 			y=0.265*safezoneH+safezoneY+0.285;
-			onKeyUp="if (_this select 1 == 28) then {call ('\atragmx\fnc_calculate_target_solution.sqf' call SLX_XEH_COMPILE)}";
+            onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(calculate_target_solution)});
 		};
 		class TEXT_BULLET_MASS: TEXT_BORE_HEIGHT
 		{
@@ -412,7 +412,7 @@ class ATragMX_Display
 		{
 			idc=140;
 			y=0.265*safezoneH+safezoneY+0.425;
-			onKeyUp="if (_this select 1 == 28) then {call ('\atragmx\fnc_update_zero_range.sqf' call SLX_XEH_COMPILE)}";
+			onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(update_zero_range)});
 		};
 		class TEXT_ATMOSPHERE: TEXT_GUN
 		{
@@ -433,7 +433,7 @@ class ATragMX_Display
 			x=0.550*safezoneW+safezoneX+0.245;
 			y=0.265*safezoneH+safezoneY+0.320;
 			text="";
-			onKeyUp="if (_this select 1 == 28) then {call ('\atragmx\fnc_calculate_target_solution.sqf' call SLX_XEH_COMPILE)}";
+			onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(calculate_target_solution)});
 		};
 		class TEXT_BAROMETRIC_PRESSURE: TEXT_AIR_FRICTION
 		{
@@ -469,28 +469,28 @@ class ATragMX_Display
 			colorBackgroundDisabled[]={0,0,0,1};
 			colorBackgroundActive[]={0,0,0,0};
 			text="A";
-			action="call ('\atragmx\fnc_parse_input.sqf' call SLX_XEH_COMPILE); GVAR(ATragMX_currentTarget)=0; call ('\atragmx\fnc_update_target_selection.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(parse_input); GVAR(ATragMX_currentTarget)=0; call FUNC(update_target_selection));
 		};
 		class TEXT_TARGET_B: TEXT_TARGET_A
 		{
 			idc=501;
 			x=0.550*safezoneW+safezoneX+0.2281;
 			text="B";
-			action="call ('\atragmx\fnc_parse_input.sqf' call SLX_XEH_COMPILE); GVAR(ATragMX_currentTarget)=1; call ('\atragmx\fnc_update_target_selection.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(parse_input); GVAR(ATragMX_currentTarget)=1; call FUNC(update_target_selection));
 		};
 		class TEXT_TARGET_C: TEXT_TARGET_B
 		{
 			idc=502;
 			x=0.550*safezoneW+safezoneX+0.2512;
 			text="C";
-			action="call ('\atragmx\fnc_parse_input.sqf' call SLX_XEH_COMPILE); GVAR(ATragMX_currentTarget)=2; call ('\atragmx\fnc_update_target_selection.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(parse_input); GVAR(ATragMX_currentTarget)=2; call FUNC(update_target_selection));
 		};
 		class TEXT_TARGET_D: TEXT_TARGET_B
 		{
 			idc=503;
 			x=0.550*safezoneW+safezoneX+0.2743;
 			text="D";
-			action="call ('\atragmx\fnc_parse_input.sqf' call SLX_XEH_COMPILE); GVAR(ATragMX_currentTarget)=3; call ('\atragmx\fnc_update_target_selection.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(parse_input); GVAR(ATragMX_currentTarget)=3; call FUNC(update_target_selection));
 		};
 		
 		class TEXT_TARGET: TEXT_GUN
@@ -511,7 +511,7 @@ class ATragMX_Display
 			w=0.058;
 			x=0.550*safezoneW+safezoneX+0.335;
 			y=0.265*safezoneH+safezoneY+0.285;
-			onKeyUp="if (_this select 1 == 28) then {call ('\atragmx\fnc_calculate_target_solution.sqf' call SLX_XEH_COMPILE)}";
+			onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(calculate_target_solution)});
 			text="0";
 		};
 		class TEXT_WIND_DIRECTION: TEXT_BULLET_MASS
@@ -541,7 +541,7 @@ class ATragMX_Display
 			idc=33;
 			x=0.550*safezoneW+safezoneX+0.3;
 			text="TS";
-			action="call ('\atragmx\fnc_toggle_target_speed_assist.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(toggle_target_speed_assist));
 		};
 		class TEXT_TARGET_SPEED_INPUT: TEXT_WIND_SPEED_INPUT
 		{
@@ -553,7 +553,7 @@ class ATragMX_Display
 			idc=34;
 			y=0.265*safezoneH+safezoneY+0.425;
 			text="TR";
-			action="0 call ('\atragmx\fnc_toggle_target_range_assist.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(0 call FUNC(toggle_target_range_assist));
 		};
 		class TEXT_TARGET_RANGE_INPUT: TEXT_WIND_SPEED_INPUT
 		{
@@ -607,7 +607,7 @@ class ATragMX_Display
 		{
 			idc=402;
 			x=0.550*safezoneW+safezoneX+0.323;
-			onKeyUp="if (_this select 1 == 28) then {call ('\atragmx\fnc_parse_input.sqf' call SLX_XEH_COMPILE); call ('\atragmx\fnc_update_result.sqf' call SLX_XEH_COMPILE)}";
+			onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(parse_input); call FUNC(update_result)});
 		};
 		class TEXT_WINDAGE: TEXT_ELEVATION
 		{
@@ -629,7 +629,7 @@ class ATragMX_Display
 		{
 			idc=412;
 			x=0.550*safezoneW+safezoneX+0.323;
-			onKeyUp="if (_this select 1 == 28) then {call ('\atragmx\fnc_parse_input.sqf' call SLX_XEH_COMPILE); call ('\atragmx\fnc_update_result.sqf' call SLX_XEH_COMPILE)}";
+			onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(parse_input); call FUNC(update_result)});
 		};
 		class TEXT_LEAD: TEXT_GUN
 		{
@@ -653,14 +653,14 @@ class ATragMX_Display
 			x=0.550*safezoneW+safezoneX+0.2465;
 			y=0.265*safezoneH+safezoneY+0.57;
 			text="Reset";
-			action="call ('\atragmx\fnc_reset_relative_click_memory.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(reset_relative_click_memory));
 		};
 		class TEXT_UPDATE_SCOPE_ZERO: TEXT_RESET_SCOPE_ZERO
 		{
 			idc=4007;
 			x=0.550*safezoneW+safezoneX+0.323;
 			text="Update";
-			action="call ('\atragmx\fnc_update_relative_click_memory.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(update_relative_click_memory));
 		};
 		class TEXT_GUN_LIST: TEXT_GUN
 		{
@@ -668,7 +668,7 @@ class ATragMX_Display
 			style=ST_LEFT;
 			y=0.265*safezoneH+safezoneY+0.65;
 			text="GunList";
-			action="call ('\atragmx\fnc_toggle_gun_list.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(toggle_gun_list));
 		};
 		class TEXT_SCOPE_UNIT: TEXT_GUN_LIST
 		{
@@ -677,7 +677,7 @@ class ATragMX_Display
 			x=0.550*safezoneW+safezoneX+0.205;
 			colorBackground[]={0,0,0,0};
 			text="TMOA";
-			action="call ('\atragmx\fnc_cycle_scope_unit.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(cycle_scope_unit));
 		};
 		class TEXT_CALCULATE: TEXT_SCOPE_UNIT
 		{
@@ -685,7 +685,7 @@ class ATragMX_Display
 			style=ST_RIGHT;
 			x=0.550*safezoneW+safezoneX+0.3;
 			text="Calc";
-			action="call ('\atragmx\fnc_calculate_target_solution.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(calculate_target_solution));
 		};
 		
 		class TEXT_RANGE_CARD_SCOPE_UNIT: TEXT_GUN_PROFILE
@@ -702,14 +702,14 @@ class ATragMX_Display
 			colorBackground[]={0.15,0.21,0.23,0.3};
 			colorFocused[]={0.15,0.21,0.23,0.2};
 			text="Setup";
-			action="call ('\atragmx\fnc_toggle_range_card_setup.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(toggle_range_card_setup));
 		};
 		class TEXT_RANGE_CARD_DONE: TEXT_RANGE_CARD_SETUP
 		{
 			idc=5002;
 			x=0.550*safezoneW+safezoneX+0.3362;
 			text="Done";
-			action="call ('\atragmx\fnc_toggle_range_card.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(toggle_range_card));
 		};
 		class TEXT_RANGE_CARD_COLUMN_1_CAPTION: ATragMX_RscButton
 		{
@@ -738,7 +738,7 @@ class ATragMX_Display
 			idc=5006;
 			x=0.550*safezoneW+safezoneX+0.321875;
 			text="TmFlt";
-			action="call ('\atragmx\fnc_cycle_range_card_columns.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(cycle_range_card_columns));
 		};
 		class TEXT_RANGE_CARD_OUTPUT: ATragMX_RscListNBox
 		{
@@ -760,7 +760,7 @@ class ATragMX_Display
 			y=0.265*safezoneH+safezoneY+0.24;
 			colorSelectBackground[]={0.15,0.21,0.23,0.3};
 			colorSelectBackground2[]={0.15,0.21,0.23,0.3};
-			onMouseButtonDblClick="true call ('\atragmx\fnc_toggle_gun_list.sqf' call SLX_XEH_COMPILE)";
+			onMouseButtonDblClick=QUOTE(true call FUNC(toggle_gun_list));
 		};
 		class TEXT_GUN_LIST_COLUMN_CAPTION: TEXT_GUN_PROFILE
 		{
@@ -780,28 +780,28 @@ class ATragMX_Display
 			colorFocused[]={0.15,0.21,0.23,0.2};
 			sizeEx=0.024;
 			text="Open Gun";
-			action="true call ('\atragmx\fnc_toggle_gun_list.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(true call FUNC(toggle_gun_list));
 		};
 		class TEXT_GUN_LIST_SAVE_GUN: TEXT_GUN_LIST_OPEN_GUN
 		{
 			idc=6003;
 			y=0.265*safezoneH+safezoneY+0.24;
 			text="Save Gun";
-			action="call ('\atragmx\fnc_save_gun.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(save_gun));
 		};
 		class TEXT_GUN_LIST_ADD_NEW_GUN: TEXT_GUN_LIST_OPEN_GUN
 		{
 			idc=6004;
 			y=0.265*safezoneH+safezoneY+0.28;
 			text="Add New Gun";
-			action="false call ('\atragmx\fnc_show_gun_list.sqf' call SLX_XEH_COMPILE); true call ('\atragmx\fnc_show_add_new_gun.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(false call FUNC(show_gun_list); true call FUNC(show_add_new_gun));
 		};
 		class TEXT_GUN_LIST_DELETE_GUN: TEXT_GUN_LIST_OPEN_GUN
 		{
 			idc=6005;
 			y=0.265*safezoneH+safezoneY+0.34;
 			text="Delete Gun";
-			action="call ('\atragmx\fnc_delete_gun.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(delete_gun));
 		};
 		class TEXT_GUN_LIST_NOTE: TEXT_GUN_LIST_OPEN_GUN
 		{
@@ -814,7 +814,7 @@ class ATragMX_Display
 			idc=6007;
 			y=0.265*safezoneH+safezoneY+0.65;
 			text="Done";
-			action="false call ('\atragmx\fnc_toggle_gun_list.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(false call FUNC(toggle_gun_list));
 		};
 		
 		class TEXT_TARGET_RANGE_ASSIST_CAPTION: ATragMX_RscText
@@ -884,19 +884,19 @@ class ATragMX_Display
 			y=0.265*safezoneH+safezoneY+0.4;
 			sizeEx=0.03;
 			text="!";
-			action="0 call ('\atragmx\fnc_calculate_target_range_assist.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(0 call FUNC(calculate_target_range_assist));
 		};
 		class TEXT_TARGET_RANGE_ASSIST_CALC_2: TEXT_TARGET_RANGE_ASSIST_CALC_1
 		{
 			idc=7008;
 			y=0.265*safezoneH+safezoneY+0.45;
-			action="1 call ('\atragmx\fnc_calculate_target_range_assist.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(1 call FUNC(calculate_target_range_assist));
 		};
 		class TEXT_TARGET_RANGE_ASSIST_CALC_3: TEXT_TARGET_RANGE_ASSIST_CALC_1
 		{
 			idc=7009;
 			y=0.265*safezoneH+safezoneY+0.55;
-			action="2 call ('\atragmx\fnc_calculate_target_range_assist.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(2 call FUNC(calculate_target_range_assist));
 		};
 		class TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE_INPUT: ATragMX_RscEdit
 		{
@@ -926,14 +926,14 @@ class ATragMX_Display
 			w=0.07;
 			x=0.550*safezoneW+safezoneX+0.32;
 			text="cm";
-			action="GVAR(ATragMX_rangeAssistTargetSizeUnit)=(GVAR(ATragMX_rangeAssistTargetSizeUnit)+1) % (count GVAR(GVAR(ATragMX_rangeAssistTargetSizeUnit)s)); ctrlSetText [7014, GVAR(GVAR(ATragMX_rangeAssistTargetSizeUnit)s) select GVAR(ATragMX_rangeAssistTargetSizeUnit)]";
+			action=QUOTE(GVAR(ATragMX_rangeAssistTargetSizeUnit)=(GVAR(ATragMX_rangeAssistTargetSizeUnit)+1) % (count GVAR(GVAR(ATragMX_rangeAssistTargetSizeUnit)s)); ctrlSetText [7014, GVAR(GVAR(ATragMX_rangeAssistTargetSizeUnit)s) select GVAR(ATragMX_rangeAssistTargetSizeUnit)]);
 		};
 		class TEXT_TARGET_RANGE_ASSIST_IMAGE_SIZE_UNIT: TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE_UNIT
 		{
 			idc=7015;
 			y=0.265*safezoneH+safezoneY+0.45;
 			text="MIL";
-			action="GVAR(ATragMX_rangeAssistImageSizeUnit)=(GVAR(ATragMX_rangeAssistImageSizeUnit)+1) % (count GVAR(ATragMX_rangeAssistImageSizeUnits)); ctrlSetText [7015, GVAR(ATragMX_rangeAssistImageSizeUnits) select GVAR(ATragMX_rangeAssistImageSizeUnit)]";
+			action=QUOTE(GVAR(ATragMX_rangeAssistImageSizeUnit)=(GVAR(ATragMX_rangeAssistImageSizeUnit)+1) % (count GVAR(ATragMX_rangeAssistImageSizeUnits)); ctrlSetText [7015, GVAR(ATragMX_rangeAssistImageSizeUnits) select GVAR(ATragMX_rangeAssistImageSizeUnit)]);
 		};
 		class TEXT_TARGET_RANGE_ASSIST_ESTIMATED_RANGE_UNIT: TEXT_TARGET_RANGE_ASSIST_ESTIMATED_RANGE
 		{
@@ -953,14 +953,14 @@ class ATragMX_Display
 			colorBackground[]={0.15,0.21,0.23,0.3};
 			colorFocused[]={0.15,0.21,0.23,0.2};
 			text="Done";
-			action="1 call ('\atragmx\fnc_toggle_target_range_assist.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(1 call FUNC(toggle_target_range_assist));
 		};
 		class TEXT_TARGET_RANGE_ASSIST_CANCEL: TEXT_TARGET_RANGE_ASSIST_DONE
 		{
 			idc=7018;
 			x=0.550*safezoneW+safezoneX+0.180625;
 			text="Cancel";
-			action="0 call ('\atragmx\fnc_toggle_target_range_assist.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(0 call FUNC(toggle_target_range_assist));
 		};
 		class TEXT_TARGET_RANGE_ASSIST_PREV: TEXT_TARGET_RANGE_ASSIST_DONE
 		{
@@ -1004,17 +1004,17 @@ class ATragMX_Display
 		class TEXT_TARGET_SPEED_ASSIST_TARGET_RANGE_INPUT: TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE_INPUT
 		{
 			idc=8004;
-			onKeyUp="if (_this select 1 == 28) then {call ('\atragmx\fnc_calculate_target_speed_assist.sqf' call SLX_XEH_COMPILE)}";
+			onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(calculate_target_speed_assist)});
 		};
 		class TEXT_TARGET_SPEED_ASSIST_NUM_TICKS_INPUT: TEXT_TARGET_RANGE_ASSIST_IMAGE_SIZE_INPUT
 		{
 			idc=8005;
-			onKeyUp="if (_this select 1 == 28) then {call ('\atragmx\fnc_calculate_target_speed_assist.sqf' call SLX_XEH_COMPILE)}";
+			onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(calculate_target_speed_assist)});
 		};
 		class TEXT_TARGET_SPEED_ASSIST_TIME_INPUT: TEXT_TARGET_RANGE_ASSIST_ANGLE_INPUT
 		{
 			idc=8006;
-			onKeyUp="if (_this select 1 == 28) then {call ('\atragmx\fnc_calculate_target_speed_assist.sqf' call SLX_XEH_COMPILE)}";
+			onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(calculate_target_speed_assist)});
 		};
 		class TEXT_TARGET_SPEED_ASSIST_TARGET_ESTIMATED_SPEED_OUTPUT: TEXT_TARGET_RANGE_ASSIST_ESTIMATED_RANGE
 		{
@@ -1035,14 +1035,14 @@ class ATragMX_Display
 		{
 			idc=8009;
 			text="MIL";
-			action="GVAR(ATragMX_speedAssistNumTicksUnit)=(GVAR(ATragMX_speedAssistNumTicksUnit)+1) % (count GVAR(ATragMX_speedAssistNumTicksUnits)); ctrlSetText [8009, GVAR(ATragMX_speedAssistNumTicksUnits) select GVAR(ATragMX_speedAssistNumTicksUnit)]; call ('\atragmx\fnc_calculate_target_speed_assist.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(GVAR(ATragMX_speedAssistNumTicksUnit)=(GVAR(ATragMX_speedAssistNumTicksUnit)+1) % (count GVAR(ATragMX_speedAssistNumTicksUnits)); ctrlSetText [8009, GVAR(ATragMX_speedAssistNumTicksUnits) select GVAR(ATragMX_speedAssistNumTicksUnit)]; call FUNC(calculate_target_speed_assist));
 		};
 		class TEXT_TARGET_SPEED_ASSIST_TIMER_START: TEXT_TARGET_RANGE_ASSIST_IMAGE_SIZE_UNIT
 		{
 			idc=8010;
 			y=0.265*safezoneH+safezoneY+0.5;
 			text="Start";
-			action="call '\atragmx\fnc_target_speed_assist_timer.sqf'";
+			action=QUOTE(call FUNC(target_speed_assist_timer));
 		};
 		class TEXT_TARGET_SPEED_ASSIST_TARGET_ESTIMATED_SPEED_UNIT: TEXT_TARGET_RANGE_ASSIST_ESTIMATED_RANGE_UNIT
 		{
@@ -1052,12 +1052,12 @@ class ATragMX_Display
 		class TEXT_TARGET_SPEED_ASSIST_DONE: TEXT_TARGET_RANGE_ASSIST_DONE
 		{
 			idc=8012;
-			action="1 call ('\atragmx\fnc_toggle_target_speed_assist.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(1 call FUNC(toggle_target_speed_assist));
 		};
 		class TEXT_TARGET_SPEED_ASSIST_CANCEL: TEXT_TARGET_RANGE_ASSIST_CANCEL
 		{
 			idc=8013;
-			action="0 call ('\atragmx\fnc_toggle_target_speed_assist.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(0 call FUNC(toggle_target_speed_assist));
 		};
 		class TEXT_TARGET_SPEED_ASSIST_PREV: TEXT_TARGET_RANGE_ASSIST_PREV
 		{
@@ -1077,7 +1077,7 @@ class ATragMX_Display
 			y=0.265*safezoneH+safezoneY+0.2;
 			colorBackground[]={0,0,0,0};
 			colorBackgroundActive[]={0,0,0,0};
-			action="GVAR(ATragMX_speedAssistTimer)=false";
+			action=QUOTE(GVAR(ATragMX_speedAssistTimer=false));
 		}
 		class TEXT_TARGET_SPEED_ASSIST_TIME_OUTPUT: ATragMX_RscText
 		{
@@ -1101,7 +1101,7 @@ class ATragMX_Display
 			colorBackground[]={0.15,0.21,0.23,0.3};
 			colorFocused[]={0.15,0.21,0.23,0.2};
 			text="Stop";
-			action="GVAR(ATragMX_speedAssistTimer)=false";
+			action=QUOTE(GVAR(ATragMX_speedAssistTimer=false));
 		};
 		
 		class TEXT_RANGE_CARD_SETUP_START_RANGE: TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE
@@ -1125,27 +1125,27 @@ class ATragMX_Display
 		class TEXT_RANGE_CARD_SETUP_START_RANGE_INPUT: TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE_INPUT
 		{
 			idc=10003;
-			onKeyUp="if (_this select 1 == 28) then {1 call ('\atragmx\fnc_toggle_range_card_setup.sqf' call SLX_XEH_COMPILE)}";
+			onKeyUp=QUOTE(if (_this select 1 == 28) then {1 call FUNC(toggle_range_card_setup)});
 		};
 		class TEXT_RANGE_CARD_SETUP_END_RANGE_INPUT: TEXT_TARGET_RANGE_ASSIST_IMAGE_SIZE_INPUT
 		{
 			idc=10004;
-			onKeyUp="if (_this select 1 == 28) then {1 call ('\atragmx\fnc_toggle_range_card_setup.sqf' call SLX_XEH_COMPILE)}";
+			onKeyUp=QUOTE(if (_this select 1 == 28) then {1 call FUNC(toggle_range_card_setup)});
 		};
 		class TEXT_RANGE_CARD_SETUP_INCREMENT_INPUT: TEXT_TARGET_RANGE_ASSIST_ANGLE_INPUT
 		{
 			idc=10005;
-			onKeyUp="if (_this select 1 == 28) then {1 call ('\atragmx\fnc_toggle_range_card_setup.sqf' call SLX_XEH_COMPILE)}";
+			onKeyUp=QUOTE(if (_this select 1 == 28) then {1 call FUNC(toggle_range_card_setup)});
 		};
 		class TEXT_RANGE_CARD_SETUP_DONE: TEXT_TARGET_SPEED_ASSIST_DONE
 		{
 			idc=10006;
-			action="1 call ('\atragmx\fnc_toggle_range_card_setup.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(1 call FUNC(toggle_range_card_setup));
 		};
 		class TEXT_RANGE_CARD_SETUP_CANCEL: TEXT_TARGET_SPEED_ASSIST_CANCEL
 		{
 			idc=10007;
-			action="0 call ('\atragmx\fnc_toggle_range_card_setup.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(0 call FUNC(toggle_range_card_setup));
 		};
 		class TEXT_RANGE_CARD_SETUP_PREV: TEXT_TARGET_SPEED_ASSIST_PREV
 		{
@@ -1188,14 +1188,14 @@ class ATragMX_Display
 			colorBackground[]={0.15,0.21,0.23,0.3};
 			colorFocused[]={0.15,0.21,0.23,0.2};
 			text="OK";
-			action="call ('\atragmx\fnc_add_new_gun.sqf' call SLX_XEH_COMPILE); false call ('\atragmx\fnc_show_add_new_gun.sqf' call SLX_XEH_COMPILE); true call ('\atragmx\fnc_show_gun_list.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(call FUNC(add_new_gun); false call FUNC(show_add_new_gun); true call FUNC(show_gun_list));
 		};
 		class TEXT_ADD_NEW_GUN_CANCEL: TEXT_ADD_NEW_GUN_OK
 		{
 			idc=11003;
 			x=0.550*safezoneW+safezoneX+0.245;
 			text="Cancel";
-			action="false call ('\atragmx\fnc_show_add_new_gun.sqf' call SLX_XEH_COMPILE); true call ('\atragmx\fnc_show_gun_list.sqf' call SLX_XEH_COMPILE)";
+			action=QUOTE(false call FUNC(show_add_new_gun); true call FUNC(show_gun_list));
 		};
 	};
 };
