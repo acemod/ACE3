@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- *
+ * [fromModule] call ace_mk6mortar_fnc_moduleInit
  *
  * Public: No
  */

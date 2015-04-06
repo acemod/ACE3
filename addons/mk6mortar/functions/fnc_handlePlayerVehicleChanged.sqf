@@ -10,6 +10,7 @@
  * No
  *
  * Example:
+ * [bob, mortar] call ace_mk6mortar_fnc_handlePlayerVehicleChanged;
  *
  * Public: No
  */
@@ -48,7 +49,7 @@ _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes")
         _currentFireMode = (weaponState [_mortarVeh, [0]]) select 2;
         _currentChargeMode = _fireModes find _currentFireMode;
 
-        _text = format ["<t size='0.8'>%1: %2 <img image='%3'/></t>", "Charge", _currentChargeMode, QUOTE(PATHTOF(UI\ui_charges.paa))];
+        _text = format ["<t size='0.8'>%1: %2 <img image='%3'/></t>", (localize "STR_ACE_MK6MORTAR_rangetable_charge"), _currentChargeMode, QUOTE(PATHTOF(UI\ui_charges.paa))];
         _chargeText ctrlSetStructuredText parseText _text;
         if (shownArtilleryComputer && {!GVAR(allowComputerRangefinder)}) then {
             //Don't like this solution, but it works
@@ -57,22 +58,29 @@ _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes")
         };
 
         _display = uiNamespace getVariable ["ACE_Mk6_RscWeaponRangeArtillery", displayNull];
-        if (isNull _display) exitWith {systemChat "null";};
+        if (isNull _display) exitWith {}; //It may be null for the first frame
+
+        //Hud should hidden in 3rd person
+        _notGunnerView = cameraView != "GUNNER";
 
         //Update CurrentElevation Display:
-        _elevDeg = parseNumber ctrlText (_display displayCtrl 175);
-        if (_useMils) then {
-            (_display displayCtrl 80175) ctrlSetText str round (_elevDeg * 6400 / 360);
+        if (_notGunnerView) then {
+            (_display displayCtrl 80175) ctrlSetText "";
         } else {
-            (_display displayCtrl 80175) ctrlSetText str _elevDeg;
+            _elevDeg = parseNumber ctrlText (_display displayCtrl 175);
+            if (_useMils) then {
+                (_display displayCtrl 80175) ctrlSetText str round (_elevDeg * 6400 / 360);
+            } else {
+                (_display displayCtrl 80175) ctrlSetText str _elevDeg;
+            };
         };
 
         //Update ElevationNeeded Display:
-        if (!GVAR(allowComputerRangefinder)) then {
+        if (_notGunnerView || (!GVAR(allowComputerRangefinder))) then {
             (_display displayCtrl 80176) ctrlSetText "";
         } else {
             _elevDeg = parseNumber ctrlText (_display displayCtrl 176);
-            if (_elevDeg <= 0) then {
+            if (_elevDeg <= 0) then { //Bad data means "----" out of range
                 (_display displayCtrl 80176) ctrlSetText (ctrlText (_display displayCtrl 176));
             } else {
                 if (_useMils) then {
@@ -84,7 +92,7 @@ _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes")
         };
 
         //Update Heading Display:
-        if (!GVAR(allowCompass)) then {
+        if (_notGunnerView || (!GVAR(allowCompass))) then {
             (_display displayCtrl 80156) ctrlSetText "";
         } else {
             _rotationDegrees = ((getDir _mortarVeh) + (((-180 / PI) * (_mortarVeh animationPhase "mainTurret")) + 360)) % 360;

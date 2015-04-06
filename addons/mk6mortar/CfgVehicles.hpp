@@ -4,11 +4,12 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class GVAR(rangetable) {
-                    displayName = "Open 82mm Rangetable";
+                    displayName = "$STR_ACE_MK6MORTAR_rangetable_action";
                     condition = QUOTE(_this call FUNC(rangeTableCanUse));
                     statement = QUOTE(_this call FUNC(rangeTableOpen));
                     priority = 0;
                     icon = QUOTE(PATHTOF(UI\icon_rangeTable.paa));
+                    exceptions[] = {"notOnMap", "isNotInside"};
                 };
             };
         };

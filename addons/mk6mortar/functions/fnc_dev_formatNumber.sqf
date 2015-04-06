@@ -4,19 +4,19 @@ Name: AGM_Artillery_fnc_formatNumber
 Author: Pabst Mirror
 
 Description:
-  Converts numbers into nicely formated strings.
+Converts numbers into nicely formated strings.
 
 Parameters:
-  0: NUMBER - Input number
-  1: STRING - Output type (see case statement)
-  2: BOOL   - If output type is mil, convert input type from deg->mil
+0: NUMBER - Input number
+1: STRING - Output type (see case statement)
+2: BOOL   - If output type is mil, convert input type from deg->mil
 
 Returns:
-  STRING - Formatted number
+STRING - Formatted number
 
 Example:
-  [45, "mil4", true] call AGM_Artillery_fnc_formatNumber = "0800"
-*/
+[45, "mil4", true] call AGM_Artillery_fnc_formatNumber = "0800"
+ */
 #include "script_component.hpp"
 
 private ["_theNumber", "_inputType", "_convertToMils", "_decimalPlaces", "_integerPlaces", "_prefix", "_return"];
@@ -30,47 +30,47 @@ _integerPlaces = -1;
 
 switch (toLower _inputType) do {
 case ("meters"): {
-    _decimalPlaces = 0;
-    _integerPlaces = 1;
-  };
+        _decimalPlaces = 0;
+        _integerPlaces = 1;
+    };
 case ("metersprecise"): {
-    _decimalPlaces = 1;
-    _integerPlaces = 1;
-  };
+        _decimalPlaces = 1;
+        _integerPlaces = 1;
+    };
 case ("meters4"): {
-    _decimalPlaces = 0;
-    _integerPlaces = 4;
-  };
+        _decimalPlaces = 0;
+        _integerPlaces = 4;
+    };
 case ("deg3precise"): {
-    _decimalPlaces = 2;
-    _integerPlaces = 3;
-  };
+        _decimalPlaces = 2;
+        _integerPlaces = 3;
+    };
 case ("mil"): {
-    _decimalPlaces = 0;
-    _integerPlaces = 1;
-    if (_convertToMils) then {
-      _theNumber = _theNumber * (6400 / 360);
+        _decimalPlaces = 0;
+        _integerPlaces = 1;
+        if (_convertToMils) then {
+            _theNumber = _theNumber * (6400 / 360);
+        };
     };
-  };
 case ("mil4"): {
-    _decimalPlaces = 0;
-    _integerPlaces = 4;
-    if (_convertToMils) then {
-      _theNumber = _theNumber * (6400 / 360);
+        _decimalPlaces = 0;
+        _integerPlaces = 4;
+        if (_convertToMils) then {
+            _theNumber = _theNumber * (6400 / 360);
+        };
     };
-  };
 case ("milprecise"): {
-    _decimalPlaces = 1;
-    _integerPlaces = 1;
-    if (_convertToMils) then {
-      _theNumber = _theNumber * (6400 / 360);
+        _decimalPlaces = 1;
+        _integerPlaces = 1;
+        if (_convertToMils) then {
+            _theNumber = _theNumber * (6400 / 360);
+        };
     };
-  };
 case ("sec"): {
-    _decimalPlaces = 1;
-    _integerPlaces = 1;
-  };
-  default {systemChat format ["badtype %1", _inputType];};
+        _decimalPlaces = 1;
+        _integerPlaces = 1;
+    };
+    default {systemChat format ["badtype %1", _inputType];};
 };
 
 

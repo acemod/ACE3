@@ -9,6 +9,7 @@
  * None
  *
  * Example:
+ * [] call ace_mk6mortar_fnc_turretDisplayLoaded
  *
  * Public: No
  */
@@ -28,9 +29,9 @@
 #define CTRL_CA_ELEV (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_ELEV")
 #define CTRL_CA_ELEV_NEED (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_ELEV_NEED")
 
+
 disableSerialization;
 
-// PARAMS_1(_display);
 _display = uiNamespace getVariable ["ACE_Mk6_RscWeaponRangeArtillery", displayNull];
 if (isNull _display) exitWith {};
 

@@ -9,7 +9,7 @@
  * No
  *
  * Example:
- *
+ * [] call ace_mk6mortar_fnc_rangeTableOpen
  *
  * Public: No
  */
@@ -38,7 +38,7 @@ _muzzleVelocities = [];
     _showToPlayer = getNumber (configFile >> "CfgWeapons" >> _weaponName >> _x >> "showToPlayer");
     if (_showToPlayer == 1) then {
         _artilleryCharge = getNumber (configFile >> "CfgWeapons" >> _weaponName >> _x >> "artilleryCharge");
-        LIST_CHARGE lbAdd format ["%1: %2 [%3m/s]", "Charge", (count _muzzleVelocities), (_initSpeed * _artilleryCharge)];
+        LIST_CHARGE lbAdd format ["%1: %2", (localize "STR_ACE_MK6MORTAR_rangetable_charge"), (count _muzzleVelocities)];
         LIST_CHARGE lbSetData [(count _muzzleVelocities), str (_artilleryCharge * _initSpeed)];
         _muzzleVelocities pushBack _artilleryCharge;
     };

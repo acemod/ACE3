@@ -1,9 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-05 -->
+<!-- Edited with tabler - 2015-04-06 -->
 <Project name="ACE">
   <Package name="mk6mortar">
-    <Key ID="STR_ACE_mk6mortar_useMils">
-      <English>Mk6 Mortar: Show Angle in MILS</English>
+    <Key ID="STR_ACE_MK6MORTAR_rangetable_name">
+      <English>82mm Rangetable</English>
+    </Key>
+    <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
+      <English>Range Table for the MK6 82mm Mortar</English>
+    </Key>
+    <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
+      <English>Open 82mm Rangetable</English>
+    </Key>
+    <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
+      <English>Charge</English>
     </Key>
   </Package>
 </Project>

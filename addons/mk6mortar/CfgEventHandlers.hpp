@@ -8,3 +8,10 @@ class Extended_PostInit_EventHandlers {
         clientInit = QUOTE( call COMPILE_FILE(XEH_clientInit) );
     };
 };
+class Extended_FiredBIS_EventHandlers {
+    class Mortar_01_base_F {
+        class ADDON {
+            firedBIS = QUOTE(_this call FUNC(handleFired));
+        };
+    };
+};
