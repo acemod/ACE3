@@ -621,6 +621,18 @@ class CfgVehicles {
         icon = "";
         displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
         EGVAR(dragging,canDrag) = 1;
+        EGVAR(dragging,dragPosition[]) = {0,1.2,0};
+        EGVAR(dragging,dragDirection) = 0;
+        class ACE_Actions {
+              class ACE_MainActions {
+                displayName = "$STR_ACE_Interaction_MainAction";
+                distance = 5;
+                condition = QUOTE(true);
+                statement = "";
+                icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
+                selection = "";
+            };
+        };
     };
 
     // Medical litter classes
