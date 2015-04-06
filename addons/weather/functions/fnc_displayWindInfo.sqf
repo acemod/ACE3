@@ -26,7 +26,7 @@ if (vehicle ACE_player != ACE_player) exitWith { true };
         // Toogle behaviour depending on ace_advanced_ballistics being used or not
         // @todo, check ACE_AB is actually enabled
         _windSpeed = if (isClass (configFile >> "CfgPatches" >> "ACE_Advanced_Ballistics")) then {
-            (eyePos ACE_player) call FUNC(calculateWindSpeed);
+            (eyePos ACE_player) call EFUNC(advanced_ballistics,calculateWindSpeed);
         } else {
             vectorMagnitude ACE_wind;
         };
