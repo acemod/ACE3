@@ -2,7 +2,7 @@
 
 class CfgPatches {
   class ADDON {
-    units[] = {};
+    units[] = {"ACE_moduleAllowConfigExport"};
     weapons[] = {};
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {"ace_common"};
@@ -25,3 +25,5 @@ class CfgAddons {
 #include "gui\define.hpp"
 #include "gui\settingsMenu.hpp"
 #include "gui\pauseMenu.hpp"
+
+#include "CFgVehicles.hpp"
