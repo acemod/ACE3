@@ -4,12 +4,12 @@
 
 if (ctrlVisible 5006) then
 {
-	false call FUNC(show_range_card);
-	true call FUNC(show_main_page);
+	false execVM QUOTE(PATHTOF(functions\fnc_show_range_card.sqf));
+	true execVM QUOTE(PATHTOF(functions\fnc_show_main_page.sqf));
 } else
 {
-	false call FUNC(show_main_page);
-	true call FUNC(show_range_card);
+	false execVM QUOTE(PATHTOF(functions\fnc_show_main_page.sqf));
+	true execVM QUOTE(PATHTOF(functions\fnc_show_range_card.sqf));
 	
 	ctrlSetFocus (_dsp displayCtrl 5001);
 	

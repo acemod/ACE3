@@ -4,16 +4,16 @@
 
 if (ctrlVisible 6000) then
 {
-	false call FUNC(show_gun_list);
-	true call FUNC(show_main_page);
+	false execVM QUOTE(PATHTOF(functions\fnc_show_gun_list.sqf));
+	true execVM QUOTE(PATHTOF(functions\fnc_show_main_page.sqf));
 	
 	if (_this) then {
 		(lbCurSel 6000) call FUNC(change_gun);
 	};
 } else
 {
-	false call FUNC(show_main_page);
-	true call FUNC(show_gun_list);
+	false execVM QUOTE(PATHTOF(functions\fnc_show_main_page.sqf));
+	true execVM QUOTE(PATHTOF(functions\fnc_show_gun_list.sqf));
 	
 	ctrlSetFocus (_dsp displayCtrl 6002);
 
