@@ -19,10 +19,11 @@ private ["_projectile", "_adjustDir", "_adjustUp", "_adjustSpeed", "_vdir", "_di
 _projectile = _this select 0;
 _adjustDir = _this select 1;
 _adjustUp = _this select 2;
-_adjustSpeed = _this select 3;
 
-if (isNil "_adjustSpeed") then {
-  _adjustSpeed = 0;
+_adjustSpeed = if (count _this > 3) then {
+    _this select 3
+} else {
+    0
 };
 
 ["CPD", [_fnc_scriptNameParent, _adjustDir, _adjustUp, _adjustSpeed], nil, false] call FUNC(log);
