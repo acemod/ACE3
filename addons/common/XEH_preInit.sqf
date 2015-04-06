@@ -122,6 +122,7 @@ PREP(moveToTempGroup);
 PREP(muteUnit);
 PREP(numberToDigits);
 PREP(numberToDigitsString);
+PREP(numberToString);
 PREP(onAnswerRequest);
 PREP(onLoadRscDisplayChannel);
 PREP(owned);

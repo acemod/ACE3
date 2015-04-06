@@ -48,7 +48,8 @@ _offset = 0;
 _velocityCorrection = (vectorMagnitude velocity _projectile) -
                       getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
 
-[_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, _velocityCorrection] call EFUNC(common,changeProjectileDirection);
+[_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, -_velocityCorrection] call EFUNC(common,changeProjectileDirection);
+
 // Air burst missile
 
 // handle locally only
