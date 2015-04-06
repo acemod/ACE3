@@ -3,7 +3,7 @@
 
 TRACE_1("enter", _this);
 
-#define FCS_UPDATE_DELAY 2.0
+#define FCS_UPDATE_DELAY 1
 
 FUNC(magnitude) = {
      _this distance [0, 0, 0]
@@ -100,7 +100,7 @@ if(isNil QGVAR(laser)) then {
     
     GVAR(laserActive) = true;
     
-    _handle = [FUNC(laserHudDesignatePFH), 0, [_laserTarget, player]] call cba_fnc_addPerFrameHandler;
+    _handle = [FUNC(laserHudDesignatePFH), 0.25, [_laserTarget, player]] call cba_fnc_addPerFrameHandler;
     _laserTarget setVariable ["ACE_PFH_HANDLE", _handle, false];
     
     GVAR(laser) = _laserTarget;

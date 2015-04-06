@@ -5,11 +5,14 @@ class CfgAmmo {
     
     class ACE_20mm_HEDP : B_20mm {
 		hit = 80;
-        indirectHit = 25;
-        indirectHitRange = 1.7; //2;
+        indirectHit = 12;
+        indirectHitRange = 2; //2;
+        caliber = 1.4;
+        deflecting = 3;
         fuseDistance = 3;
+        tracerStartTime = 0.02;
         timeToLive = 40;
-		explosive = 0.4;
+        explosive = 1.8;
     };
 
 
