@@ -74,7 +74,7 @@ FUNC(laserHudDesignatePFH) = {
             };
             
             if(diag_tickTime > _forceUpdateTime) then {
-                 _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
+                 _args set[2, diag_tickTime + FCS_UPDATE_DELAY];
             };
 #ifdef DEBUG_MODE_FULL
             drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], (getPosATL _laserTarget), 0.75, 0.75, 0, "", 0.5, 0.025, "TahomaB"];
