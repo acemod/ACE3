@@ -18,20 +18,27 @@ if (vehicle ACE_player != ACE_player) exitWith { true };
 	GVAR(Protractor) = false;
 	1 cutText ["", "PLAIN"];
 	GVAR(WindInfo) = true;
-	
+
 	while {GVAR(WindInfo) && !(underwater ACE_player) && vehicle ACE_player == ACE_player} do {
 		_windIndex = 12;
 		_windColor = [1, 1, 1, 1];
-		
-		_windSpeed = (eyePos ACE_player) call FUNC(calculateWindSpeed);
-		
+
+		// Toogle behaviour depending on ace_advanced_ballistics being used or not
+		// @todo, check ACE_AB is actually enabled
+		_windSpeed = if (isClass (configFile >> "CfgPatches" >> "ACE_Advanced_Ballistics")) then {
+			(eyePos ACE_player) call FUNC(calculateWindSpeed);
+		} else {
+			vectorMagnitude ACE_wind;
+		};
+
+
 		if (_windSpeed > 0.2) then {
 			_playerDir = getDir ACE_player;
-			_windDir = (wind select 0) atan2 (wind select 1);
+			_windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
 			_windIndex = round(((_playerDir - _windDir + 360) % 360) / 30);
 			_windIndex = _windIndex % 12;
 		};
-		
+
 		// Color Codes from https://en.wikipedia.org/wiki/Beaufort_scale#Modern_scale
 		if (_windSpeed > 0.3) then { _windColor = [0.796, 1, 1, 1]; };
 		if (_windSpeed > 1.5) then { _windColor = [0.596, 0.996, 0.796, 1]; };
@@ -45,18 +52,18 @@ if (vehicle ACE_player != ACE_player) exitWith { true };
 		if (_windSpeed > 24.4) then { _windColor = [1, 0.404, 0.031, 1]; };
 		if (_windSpeed > 28.4) then { _windColor = [1, 0.22, 0.027, 1]; };
 		if (_windSpeed > 32.6) then { _windColor = [1, 0.078, 0.027, 1]; };
-		
+
 		0 cutRsc ["RscWindIntuitive", "PLAIN", 1, false];
-		
+
 		__ctrl ctrlSetScale 0.75;
 		__ctrl ctrlCommit 0;
-		
+
 		__ctrl ctrlSetText format[QUOTE(PATHTOF(UI\wind%1.paa)), _windIndex];
 		__ctrl ctrlSetTextColor _windColor;
-		
+
 		sleep 0.5;
 	};
-	
+
 	GVAR(WindInfo) = false;
 	0 cutText ["", "PLAIN"];
 };
