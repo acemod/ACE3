@@ -15,9 +15,11 @@ private ["_number", "_decimals"];
 
 _number = _this select 0;
 
-_decimals = str (_number mod 1);
-
+_decimals = str (abs(_number) mod 1);
 _decimals = toArray _decimals;
-_decimals deleteRange [0,2];
+_decimals deleteAt 0;
 
-format ["%1.%2", floor _number, toString _decimals];
+if (_number < 0) exitWith {
+    format ["-%1%2", floor abs(_number), toString _decimals];
+};
+format ["%1%2", floor _number, toString _decimals];
