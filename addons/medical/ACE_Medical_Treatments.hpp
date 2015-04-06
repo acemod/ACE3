@@ -192,7 +192,7 @@ class ACE_Medical_Actions {
             displayName = "";
             displayNameProgress = "";
             items[] = {"ACE_surgicalKit"};
-            treatmentLocations[] = {QGVAR(useLocation_PAK)};
+            treatmentLocations[] = {QGVAR(useLocation_SurgicalKit)};
             requiredMedic = QGVAR(medicSetting_SurgicalKit);
             treatmentTime = 10;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_surgicalKit));

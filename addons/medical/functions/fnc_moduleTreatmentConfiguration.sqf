@@ -32,3 +32,5 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(medicSetting_SurgicalKit), "medicSetting_SurgicalKit"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(consumeItem_PAK), "consumeItem_PAK"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(consumeItem_SurgicalKit), "consumeItem_SurgicalKit"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(useLocation_PAK), "useLocation_PAK"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(useLocation_SurgicalKit), "useLocation_SurgicalKit"] call EFUNC(common,readSettingFromModule);
