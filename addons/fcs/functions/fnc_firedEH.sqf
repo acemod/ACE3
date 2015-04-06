@@ -45,10 +45,14 @@ _offset = 0;
 
 // Correct velocity for weapons that have initVelocity
 // @todo: Take into account negative initVelocities
+systemChat format ["%1/%2", vectorMagnitude velocity _projectile, getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed")];
 _velocityCorrection = (vectorMagnitude velocity _projectile) -
                       getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
 
-[_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, _velocityCorrection] call EFUNC(common,changeProjectileDirection);
+[_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, -_velocityCorrection] call EFUNC(common,changeProjectileDirection);
+
+systemChat format ["%1/%2", vectorMagnitude velocity _projectile];
+
 // Air burst missile
 
 // handle locally only
