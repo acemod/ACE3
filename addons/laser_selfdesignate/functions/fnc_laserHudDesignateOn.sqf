@@ -1,4 +1,4 @@
-// #define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 TRACE_1("enter", _this);
@@ -68,11 +68,10 @@ FUNC(laserHudDesignatePFH) = {
                 ["ace_fcs_forceUpdate", []] call ace_common_fnc_localEvent;
             };
             
-            if( ((getPosASL _laserTarget) vectorDistance _pos) > 2) then {
+            if( (_laserTarget distance _pos) > 0.1) then {
                 TRACE_1("LaserPos Update", "");
                 _laserTarget setPosATL (ASLToATL _pos);
-                
-           };
+            };
             
             if(diag_tickTime > _forceUpdateTime) then {
                  _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
