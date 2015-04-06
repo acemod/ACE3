@@ -26,9 +26,9 @@ _requiredItems = getArray(_config >> "requires");
 _hasRequired = true;
 _detonators = [_unit] call FUNC(getDetonators);
 {
-	if !(_x in _detonators) exitWith{
-		_hasRequired = false;
-	};
+    if !(_x in _detonators) exitWith{
+        _hasRequired = false;
+    };
 } count _requiredItems;
 
 if !(_hasRequired) exitWith {};
@@ -38,7 +38,7 @@ _clacker = _unit getVariable [QGVAR(Clackers), []];
 GVAR(PlacedCount) = GVAR(PlacedCount) + 1;
 
 _clacker pushBack [_explosive, getNumber(_config >> "FuseTime"), format [localize "STR_ACE_Explosives_DetonateCode",
-	GVAR(PlacedCount)], _magazineClass, configName ((_this select 3) select (count (_this select 3) - 1))];
+    GVAR(PlacedCount)], _magazineClass, configName ((_this select 3) select (count (_this select 3) - 1))];
 
 _unit setVariable [QGVAR(Clackers), _clacker, true];
 _unit sideChat format [localize "STR_ACE_Explosives_DetonateCode", GVAR(PlacedCount)];

@@ -16,8 +16,8 @@
  */
 #include "script_component.hpp"
 if (GVAR(pfeh_running)) then {
-	[QGVAR(Placement),"OnEachFrame"] call CALLSTACK(BIS_fnc_removeStackedEventHandler);
-	GVAR(pfeh_running) = false;
+    [QGVAR(Placement),"OnEachFrame"] call CALLSTACK(BIS_fnc_removeStackedEventHandler);
+    GVAR(pfeh_running) = false;
 };
 private ["_mag", "_setup", "_player"];
 _setup = GVAR(Setup);
@@ -29,13 +29,13 @@ GVAR(placer) = objNull;
 _player = ACE_player;
 call EFUNC(interaction,hideMouseHint);
 if ((_setup getVariable [QGVAR(Class), ""]) == "") exitWith {
-	deleteVehicle _setup;
+    deleteVehicle _setup;
 };
 _dir = (getDir _setup);
 if (_dir > 180) then {
-	_dir = _dir - 180;
+    _dir = _dir - 180;
 } else {
-	_dir = 180 + _dir;
+    _dir = 180 + _dir;
 };
 _setup setVariable [QGVAR(Direction), _dir];
 _player setVariable [QGVAR(PlantingExplosive), true];

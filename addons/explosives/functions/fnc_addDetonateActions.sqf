@@ -23,27 +23,27 @@ _range = GetNumber (ConfigFile >> "CfgWeapons" >> _detonator >> "ACE_Range");
 _result = [_unit] call FUNC(getPlacedExplosives);
 _children = [];
 {
-	if (!isNull(_x select 0)) then {
-		_required = getArray (ConfigFile >> "CfgACE_Triggers" >> (_x select 4) >> "requires");
-		if (_detonator in _required) then {
-			_item = ConfigFile >> "CfgMagazines" >> (_x select 3);
+    if (!isNull(_x select 0)) then {
+        _required = getArray (ConfigFile >> "CfgACE_Triggers" >> (_x select 4) >> "requires");
+        if (_detonator in _required) then {
+            _item = ConfigFile >> "CfgMagazines" >> (_x select 3);
 
-			_children pushBack
-				[
-					[
-						format ["Explosive_%1", _forEachIndex],
-						_x select 2,
-						getText(_item >> "picture"),
-						{(_this select 2) call FUNC(detonateExplosive);},
-						{true},
-						{},
-						[ACE_player,_range,_x]
-					] call EFUNC(interact_menu,createAction),
-					[],
-					ACE_Player
-				];
-		};
-	};
+            _children pushBack
+                [
+                    [
+                        format ["Explosive_%1", _forEachIndex],
+                        _x select 2,
+                        getText(_item >> "picture"),
+                        {(_this select 2) call FUNC(detonateExplosive);},
+                        {true},
+                        {},
+                        [ACE_player,_range,_x]
+                    ] call EFUNC(interact_menu,createAction),
+                    [],
+                    ACE_Player
+                ];
+        };
+    };
 } foreach _result;
 
 _children

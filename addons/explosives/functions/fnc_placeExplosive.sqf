@@ -16,7 +16,7 @@
  *
  * Example:
  * _explosive = [player, player modelToWorldVisual [0,0.5, 0.1], 134,
- * 	"SatchelCharge_Remote_Mag", "Command", []] call ACE_Explosives_fnc_placeExplosive;
+ *  "SatchelCharge_Remote_Mag", "Command", []] call ACE_Explosives_fnc_placeExplosive;
  *
  * Public: Yes
  */
@@ -24,25 +24,25 @@
 private ["_ammo", "_explosive"];
 EXPLODE_6_PVT(_this,_unit,_pos,_dir,_magazineClass,_triggerConfig,_triggerSpecificVars);
 if (count _this > 6) then {
-	deleteVehicle (_this select 6);
+    deleteVehicle (_this select 6);
 };
 
 if (isNil "_triggerConfig") exitWith {
-	diag_log format ["ACE_Explosives: Error config not passed to PlaceExplosive: %1", _this];
-	objNull
+    diag_log format ["ACE_Explosives: Error config not passed to PlaceExplosive: %1", _this];
+    objNull
 };
 
 _magazineTrigger = ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> _triggerConfig;
 _triggerConfig = ConfigFile >> "CfgACE_Triggers" >> _triggerConfig;
 
 if (isNil "_triggerConfig") exitWith {
-	diag_log format ["ACE_Explosives: Error config not found in PlaceExplosive: %1", _this];
-	objNull
+    diag_log format ["ACE_Explosives: Error config not found in PlaceExplosive: %1", _this];
+    objNull
 };
 
 _ammo = getText(ConfigFile >> "CfgMagazines" >> _magazineClass >> "ammo");
 if (isText(_magazineTrigger >> "ammo")) then {
-	_ammo = getText (_magazineTrigger >> "ammo");
+    _ammo = getText (_magazineTrigger >> "ammo");
 };
 _triggerSpecificVars pushBack _triggerConfig;
 private ["_defuseHelper"];
@@ -58,6 +58,6 @@ _defuseHelper setPosATL (((getPosATL _defuseHelper) vectorAdd (_pos vectorDiff _
 _explosive setPosATL _pos;
 
 if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_triggerSpecificVars]
-	call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {_explosive};
+    call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {_explosive};
 [[_explosive, _dir, getNumber (_magazineTrigger >> "pitch")], QFUNC(setPosition)] call EFUNC(common,execRemoteFnc);
 _explosive
