@@ -13,6 +13,28 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call ace_common_fnc_addEventHandler;
 ["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call ace_common_fnc_addEventHandler;
 
+["medical_onUnconscious", {
+    if (local (_this select 0)) then {
+        _unit = _this select 0;
+        if (_this select 1) then {
+            _unit setVariable ["tf_globalVolume", 0.4];
+            _unit setVariable ["tf_voiceVolume", 0, true];
+            _unit setVariable ["tf_unable_to_use_radio", true, true];
+
+            _unit setVariable ["acre_sys_core_isDisabled", true, true];
+            _unit setVariable ["acre_sys_core_globalVolume", 0.4];
+        } else {
+            _unit setVariable ["tf_globalVolume", 1];
+            _unit setVariable ["tf_voiceVolume", 1, true];
+            _unit setVariable ["tf_unable_to_use_radio", true, true];
+
+            _unit setVariable ["acre_sys_core_isDisabled", true, true];
+            _unit setVariable ["acre_sys_core_globalVolume", 1];
+        };
+    };
+}] call ace_common_fnc_addEventHandler;
+
+
 // Initialize all effects
 _fnc_createEffect = {
     private ["_type", "_layer", "_default"];

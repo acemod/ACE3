@@ -68,6 +68,18 @@ if ("All" in _locations) exitwith {true};
     if (_x == "field") exitwith {_return = true;};
     if (_x == "MedicalFacility" && {[_caller, _target] call FUNC(inMedicalFacility)}) exitwith {_return = true;};
     if (_x == "MedicalVehicle" && {[_caller, _target] call FUNC(inMedicalVehicle)}) exitwith {_return = true;};
+    if !(isnil _x) exitwith {
+        private "_val";
+        _val = missionNamespace getvariable _x;
+        if (typeName _val == "SCALAR") then {
+            _return = switch (_val) {
+                case 0: {true};
+                case 1: {[_caller, _target] call FUNC(inMedicalVehicle)};
+                case 2: {[_caller, _target] call FUNC(inMedicalFacility)};
+                case 3: {[_caller, _target] call FUNC(inMedicalVehicle) || [_caller, _target] call FUNC(inMedicalFacility)};
+            };
+        };
+    };
 }foreach _locations;
 
 _return;
