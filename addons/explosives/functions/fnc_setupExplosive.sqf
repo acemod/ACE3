@@ -28,22 +28,22 @@ GVAR(Setup) setVariable [QGVAR(class), _class, true];
 GVAR(TweakedAngle) = 180;
 
 [QGVAR(Placement),"OnEachFrame", {
-  private "_player";
-  _player = ACE_player;
-  if (GVAR(placer) != _player) exitWith {
-    call FUNC(place_Cancel);
-  };
-  GVAR(pfeh_running) = true;
-  _pos = (ASLtoATL eyePos _player) vectorAdd (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]);
-  GVAR(Setup) setPosATL _pos;
-  if (ACE_Modifier == 0) then {
-    GVAR(Setup) setDir (GVAR(TweakedAngle) + getDir _player);
-  };
+	private "_player";
+	_player = ACE_player;
+	if (GVAR(placer) != _player) exitWith {
+		call FUNC(place_Cancel);
+	};
+	GVAR(pfeh_running) = true;
+	_pos = (ASLtoATL eyePos _player) vectorAdd (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]);
+	GVAR(Setup) setPosATL _pos;
+	if (ACE_Modifier == 0) then {
+		GVAR(Setup) setDir (GVAR(TweakedAngle) + getDir _player);
+	};
 }] call CALLSTACK(BIS_fnc_addStackedEventHandler);
 
 [localize "STR_ACE_Explosives_PlaceAction", localize "STR_ACE_Explosives_CancelAction",
-  localize "STR_ACE_Explosives_ScrollAction"] call EFUNC(interaction,showMouseHint);
+	localize "STR_ACE_Explosives_ScrollAction"] call EFUNC(interaction,showMouseHint);
 _unit setVariable [QGVAR(Place), [_unit, "DefaultAction",
-  {GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call FUNC(place_Approve);}] call EFUNC(common,AddActionEventHandler)];
+	{GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call FUNC(place_Approve);}] call EFUNC(common,AddActionEventHandler)];
 _unit setVariable [QGVAR(Cancel), [_unit, "zoomtemp",
-  {GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call FUNC(place_Cancel);}] call EFUNC(common,AddActionEventHandler)];
+	{GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call FUNC(place_Cancel);}] call EFUNC(common,AddActionEventHandler)];
