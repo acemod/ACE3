@@ -204,7 +204,7 @@ class CfgVehicles {
                 defaultValue = 1800;
             };
             class medicSetting_PAK {
-                displayName = "Allow PAK";
+                displayName = "Allow PAK (Adv)";
                 description = "Who can use the PAK for full heal?";
                 typeName = "NUMBER";
                 class values {
@@ -214,7 +214,7 @@ class CfgVehicles {
                 };
             };
             class consumeItem_PAK {
-                displayName = "Remove PAK on use";
+                displayName = "Remove PAK on use (Adv)";
                 description = "Should PAK be removed on usage?";
                 typeName = "NUMBER";
                 class values {
@@ -222,13 +222,29 @@ class CfgVehicles {
                     class remove { name = "Yes"; value = 1; default = 1; };
                 };
             };
+            class useLocation_PAK {
+                displayName = "Locations PAK (Adv)";
+                description = "Where can the personal aid kit be used?";
+                typeName = "NUMBER";
+                class values {
+                    class anywhere { name = "Anywhere"; value = 0; };
+                    class vehicle { name = "Medical Vehicles"; value = 1; };
+                    class facility { name = "Medical facility"; value = 2; };
+                    class vehicleAndFacility { name = "Vehicles & facility"; value = 3; default = 1; };
+                    class disabled { name = "Disabled"; value = 4;};
+                };
+            };
             class medicSetting_SurgicalKit: medicSetting_PAK {
-                displayName = "Allow Surgical kit";
+                displayName = "Allow Surgical kit (Adv)";
                 description = "Who can use the surgical kit?";
             };
             class consumeItem_SurgicalKit: consumeItem_PAK {
-                displayName = "Remove Surgical kit";
+                displayName = "Remove Surgical kit (Adv)";
                 description = "Should Surgical kit be removed on usage?";
+            };
+            class useLocation_SurgicalKit: useLocation_PAK {
+                displayName = "Locations Surgical kit (Adv)";
+                description = "Where can the Surgical kit be used?";
             };
 
         };
@@ -597,12 +613,26 @@ class CfgVehicles {
         };
     };
     class MapBoard_altis_F;
-    class ACE_bodyBag: MapBoard_altis_F {
+    class ACE_bodyBagObject: MapBoard_altis_F {
+        XEH_ENABLED;
         scope = 1;
         side = -1;
         model = QUOTE(PATHTOF(data\bodybag.p3d));
         icon = "";
         displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
+        EGVAR(dragging,canDrag) = 1;
+        EGVAR(dragging,dragPosition[]) = {0,1.2,0};
+        EGVAR(dragging,dragDirection) = 0;
+        class ACE_Actions {
+              class ACE_MainActions {
+                displayName = "$STR_ACE_Interaction_MainAction";
+                distance = 5;
+                condition = QUOTE(true);
+                statement = "";
+                icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
+                selection = "";
+            };
+        };
     };
 
     // Medical litter classes
