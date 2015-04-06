@@ -17,9 +17,9 @@ class Extended_Init_EventHandlers {
             init = QUOTE(call COMPILE_FILE(XEH_init));
         };
     };
-    class ACE_bodyBag {
+    class ACE_bodyBagObject {
         class ADDON {
-            init = QUOTE(_this call EDFUNC(dragging,initObject));
+            init = QUOTE(_this call DEFUNC(dragging,initObject));
         };
     };
 };

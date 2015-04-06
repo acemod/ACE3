@@ -613,7 +613,8 @@ class CfgVehicles {
         };
     };
     class MapBoard_altis_F;
-    class ACE_bodyBag: MapBoard_altis_F {
+    class ACE_bodyBagObject: MapBoard_altis_F {
+        XEH_ENABLED;
         scope = 1;
         side = -1;
         model = QUOTE(PATHTOF(data\bodybag.p3d));
