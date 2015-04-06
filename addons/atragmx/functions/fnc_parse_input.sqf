@@ -13,7 +13,7 @@ GVAR(ATragMX_targetRange) set [GVAR(ATragMX_currentTarget), 0 max abs(parseNumbe
 private ["_boreHeight", "_bulletMass", "_airFriction", "_muzzleVelocity"];
 _boreHeight = parseNumber(ctrlText 100);
 _bulletMass = parseNumber(ctrlText 110);
-if (AdvancedBallistics && AB_AdvancedAirDragEnabled) then {
+if (EGVAR(advanced_ballistics,AdvancedBallistics) && EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
 	_airFriction = 0.1 max parseNumber(ctrlText 120) min 2;
 } else {
 	_airFriction = parseNumber(ctrlText 120) / -1000;
@@ -31,7 +31,7 @@ _muzzleVelocity = 100 max _muzzleVelocity min 1400;
 
 (GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) set [5, _boreHeight];
 (GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) set [12, _bulletMass];
-if (AdvancedBallistics && AB_AdvancedAirDragEnabled) then {
+if (EGVAR(advanced_ballistics,AdvancedBallistics) && EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
 	(GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) set [15, _airFriction];
 } else {
 	(GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) set [4, _airFriction];

@@ -74,7 +74,7 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do
     if (EGVAR(advanced_ballistics,AdvancedBallistics)) then {
         if (EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
 			private ["_drag"];
-			_drag = -1 * ([_dragModel, _bc, _trueSpeed] call FUNC(calculateRetardation);
+			_drag = -1 * ([_dragModel, _bc, _trueSpeed] call EFUNC(advanced_ballistics,calculateRetardation));
 			_bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (_drag);
 		};
 	} else {

@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
-if (isNil QUOTE(EGVAR(advanced_ballistics, AdvancedBallistics))) then { EGVAR(advanced_ballistics, AdvancedBallistics) = false; };
-if (isNil QUOTE(EGVAR(advanced_ballistics, AdvancedAirDragEnabled))) then { EGVAR(advanced_ballistics, AdvancedAirDragEnabled) = false; };
+if (isNil QUOTE(EGVAR(advanced_ballistics,AdvancedBallistics))) then { EGVAR(advanced_ballistics,AdvancedBallistics) = false; };
+if (isNil QUOTE(EGVAR(advanced_ballistics,AdvancedAirDragEnabled))) then { EGVAR(advanced_ballistics,AdvancedAirDragEnabled) = false; };
 
 GVAR(ATragMX_workingMemory) = [+(GVAR(ATragMX_gunList) select 0), +(GVAR(ATragMX_gunList) select 0), +(GVAR(ATragMX_gunList) select 0), +(GVAR(ATragMX_gunList) select 0)];
 

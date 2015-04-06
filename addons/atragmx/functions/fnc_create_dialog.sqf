@@ -1,8 +1,10 @@
 #include "script_component.hpp"
 
+systemChat "create_dialog";
+
 if (dialog) exitWith { false };
-if (underwater player) exitWith { false };
-if (!("ATragMX" in (uniformItems player)) && !("ATragMX" in (vestItems player))) exitWith { false };
+if (underwater ACE_player) exitWith { false };
+if (!("ACE_ATragMX" in (uniformItems ACE_player)) && !("ACE_ATragMX" in (vestItems ACE_player))) exitWith { false };
 
 execVM "\atragmx\fnc_update_target_selection.sqf";
 
