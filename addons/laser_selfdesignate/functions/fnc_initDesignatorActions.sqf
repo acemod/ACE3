@@ -20,6 +20,7 @@ _initializedClasses = GETGVAR(initializedClasses,[]);
 // do nothing if the class is already initialized
 if (_type in _initializedClasses) exitWith {};
 _initializedClasses pushBack _type;
+GVAR(initializedClasses) = _initializedClasses;
 
 {
     private ["_turretConfig","_onAction","_offAction"];
