@@ -100,7 +100,7 @@ if(isNil QGVAR(laser)) then {
     
     GVAR(laserActive) = true;
     
-    _handle = [FUNC(laserHudDesignatePFH), 0.25, [_laserTarget, player]] call cba_fnc_addPerFrameHandler;
+    _handle = [FUNC(laserHudDesignatePFH), 0.1, [_laserTarget, player]] call cba_fnc_addPerFrameHandler;
     _laserTarget setVariable ["ACE_PFH_HANDLE", _handle, false];
     
     GVAR(laser) = _laserTarget;
