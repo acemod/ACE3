@@ -77,7 +77,7 @@ class ACE_Medical_Actions {
             callbackProgress = "";
             animationPatient = "";
             animationPatientUnconscious = "";
-            itemConsumed = 0;
+            itemConsumed = 1;
             litter[] = {};
         };
     };
@@ -276,7 +276,7 @@ class ACE_Medical_Actions {
             callbackProgress = "";
             animationPatient = "";
             animationPatientUnconscious = "";
-            itemConsumed = 0;
+            itemConsumed = 1;
             litter[] = {};
         };
     };

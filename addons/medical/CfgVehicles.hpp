@@ -619,6 +619,7 @@ class CfgVehicles {
         model = QUOTE(PATHTOF(data\bodybag.p3d));
         icon = "";
         displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
+        EGVAR(dragging,canDrag) = 1;
     };
 
     // Medical litter classes
