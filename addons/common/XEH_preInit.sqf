@@ -242,6 +242,9 @@ PREP(removeActionMenuEventHandler);
 PREP(removeScrollWheelEventHandler);
 PREP(removeMapMarkerCreatedEventHandler);
 
+PREP(handleFiredSoldier);
+PREP(handleFiredVehicle);
+
 // hashes
 PREP(hashCreate);
 PREP(hashSet);

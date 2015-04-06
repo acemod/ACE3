@@ -42,3 +42,18 @@ class Extended_Respawn_EventHandlers {
         };
     };
 };
+
+//
+class Extended_FiredBIS_Eventhandlers {
+    class All {
+        class ADDON {
+            firedBIS = QUOTE(_this call FUNC(handleFiredVehicle));
+            exclude = "CAManBase";
+        };
+    };
+    class CAManBase {
+        class ADDON {
+            firedBIS = QUOTE(_this call FUNC(handleFiredSoldier));
+        };
+    };
+};
