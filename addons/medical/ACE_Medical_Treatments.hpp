@@ -751,7 +751,7 @@ class ACE_Medical_Advanced {
 
             // specific details for the ACE_Morphine treatment action
             class Morphine {
-                painReduce = 0.7;
+                painReduce = 1;
                 hrIncreaseLow[] = {-10, -30, 35};
                 hrIncreaseNormal[] = {-10, -50, 40};
                 hrIncreaseHigh[] = {-10, -40, 50};
