@@ -100,7 +100,7 @@ _stabilityFactor = 1.5;
 
 if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
 	_temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL _unit) select 2);
-	_barometricPressure = 1013.25 * exp(-(GVAR(Altitude) + ((getPosASL _bullet) select 2)) / 7990) - 10 * overcast;
+	_barometricPressure = 1013.25 * exp(-(EGVAR(weather,Altitude) + ((getPosASL _bullet) select 2)) / 7990) - 10 * overcast;
 	_stabilityFactor = [_caliber, _bulletLength, _bulletMass, _barrelTwist, _muzzleVelocity, _temperature, _barometricPressure] call FUNC(calculateStabilityFactor);
 };
 
@@ -156,7 +156,7 @@ GVAR(bulletDatabaseSpinDrift) set[_index, 0];
 if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
     [{
 		private ["_bulletDatabaseEntry", "_bullet", "_caliber", "_muzzleVelocity", "_frames", "_speed", "_airFriction", "_airFrictionRef", "_dragModel", "_atmosphereModel", "_ballisticCoefficient", "_ballisticCoefficients", "_velocityBoundaries", "_airDensity", "_stabilityFactor", "_transonicStabilityCoef", "_twistDirection", "_unit", "_bulletTraceVisible", "_index", "_temperature", "_humidity", "_deltaT", "_TOF", "_bulletPosition", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueSpeed", "_bulletSpeedAvg", "_wind", "_drag", "_dragRef", "_vect", "_accel", "_accelRef", "_centripetalAccel", "_pressure", "_pressureDeviation", "_windSourceObstacle", "_windSourceTerrain", "_height", "_roughnessLength"];
-		
+
 		{
 			_bullet = (GVAR(bulletDatabase) select _x) select 0;
 			_index  = (GVAR(bulletDatabase) select _x) select 13;
@@ -166,7 +166,7 @@ if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
 			};
 			true
 		} count GVAR(bulletDatabaseOccupiedIndices);
-		
+
 		if (count GVAR(bulletDatabaseOccupiedIndices) == 0) exitWith {
 			GVAR(bulletDatabase)          = [];
 			GVAR(bulletDatabaseStartTime) = [];
@@ -179,7 +179,7 @@ if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
 			GVAR(bulletDatabaseFreeIndices) = [];
 			[_this select 1] call cba_fnc_removePerFrameHandler;
 		};
-		
+
 		{
 			_bulletDatabaseEntry    = GVAR(bulletDatabase) select _x;
 			_bullet                 = _bulletDatabaseEntry select 0;
@@ -196,34 +196,34 @@ if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
 			_atmosphereModel        = _bulletDatabaseEntry select 11;
 			_dragModel              = _bulletDatabaseEntry select 12;
 			_index                  = _bulletDatabaseEntry select 13;
-			
+
 			_TOF = time - (GVAR(bulletDatabaseStartTime) select _index);
-			
+
 			_bulletVelocity = velocity _bullet;
 			_bulletPosition = getPosASL _bullet;
-			
+
 			_bulletSpeed = vectorMagnitude _bulletVelocity;
 			_bulletDir = (_bulletVelocity select 0) atan2 (_bulletVelocity select 1);
-			
+
 			_speed = (GVAR(bulletDatabaseSpeed) select _index);
 			GVAR(bulletDatabaseSpeed) set[_index, _speed + _bulletSpeed];
-			
+
 			_frames = (GVAR(bulletDatabaseFrames) select _index);
 			GVAR(bulletDatabaseFrames) set[_index, _frames + 1];
-			
+
 			_bulletSpeedAvg = (_speed / _frames);
-			
+
 			if ((GVAR(SimulationPrecision) < 2) || {_frames % GVAR(SimulationPrecision) == _index % GVAR(SimulationPrecision)}) then {
 				_deltaT = time - (GVAR(bulletDatabaseLastFrame) select _index);
 				GVAR(bulletDatabaseLastFrame) set[_index, time];
-				
+
 				_trueVelocity = _bulletVelocity;
 				_trueSpeed = _bulletSpeed;
 				_wind = [0, 0, 0];
-				if (GVAR(WindEnabled) && (vectorMagnitude ACE_wind) > 0) then {					
+				if (GVAR(WindEnabled) && (vectorMagnitude ACE_wind) > 0) then {
 					_windSourceObstacle = _bulletPosition vectorDiff ((vectorNormalized ACE_wind) vectorMultiply 10);
 					_windSourceTerrain = _bulletPosition vectorDiff ((vectorNormalized ACE_wind) vectorMultiply 100);
-					
+
 					if (!(lineIntersects [_bulletPosition, _windSourceObstacle]) && !(terrainIntersectASL [_bulletPosition, _windSourceTerrain])) then {
 						_wind = ACE_wind;
 						_height = ASLToATL(_bulletPosition) select 2;
@@ -232,27 +232,27 @@ if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
 							_roughnessLength = _bulletPosition call FUNC(calculateRoughnessLength);
 							_wind = _wind vectorMultiply (ln(_height / _roughnessLength) / ln(20 / _roughnessLength));
 						};
-						
+
 						_trueVelocity = _bulletVelocity vectorDiff _wind;
 						_trueSpeed = vectorMagnitude _trueVelocity;
 					};
 				};
-				
+
 				_airFrictionRef = _airFriction;
 				if (GVAR(AdvancedAirDragEnabled) && (count _ballisticCoefficients) == (count _velocityBoundaries) + 1) then {
 					_dragRef = _deltaT * _airFrictionRef * _bulletSpeed * _bulletSpeed;
 					_accelRef = (vectorNormalized _bulletVelocity) vectorMultiply (_dragRef);
 					_bulletVelocity = _bulletVelocity vectorDiff _accelRef;
-					
+
 					_ballisticCoefficient = (_ballisticCoefficients select 0);
 					for "_i" from (count _velocityBoundaries) - 1 to 0 step -1 do {
 						if (_bulletSpeed < (_velocityBoundaries select _i)) exitWith {
 							_ballisticCoefficient = (_ballisticCoefficients select (_i + 1));
 						};
 					};
-					
+
 					if (GVAR(AtmosphericDensitySimulationEnabled)) then {
-						_pressure = 1013.25 * exp(-(GVAR(Altitude) + (_bulletPosition select 2)) / 7990) - 10 * overcast;
+						_pressure = 1013.25 * exp(-(EGVAR(weather,Altitude) + (_bulletPosition select 2)) / 7990) - 10 * overcast;
 						_temperature = GET_TEMPERATURE_AT_HEIGHT(_bulletPosition select 2);
 						_humidity = EGVAR(weather,currentHumidity);
 						_airDensity = STD_AIR_DENSITY_ICAO;
@@ -262,7 +262,7 @@ if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
 							_pSat = 6.1078 * 10 ^ ((7.5 * _temperature) / (_temperature + 237.3));
 							_vaporPressure = _humidity * _pSat;
 							_partialPressure = (_pressure * 100)- _vaporPressure;
-							
+
 							_airDensity = (_partialPressure * DRY_AIR_MOLAR_MASS + _vaporPressure * WATER_VAPOR_MOLAR_MASS) / (UNIVERSAL_GAS_CONSTANT * KELVIN(_temperature));
 						} else {
 							_airDensity = (_pressure * 100) / (SPECIFIC_GAS_CONSTANT_DRY_AIR * KELVIN(_temperature));
@@ -273,58 +273,58 @@ if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
 							_ballisticCoefficient = (STD_AIR_DENSITY_ASM / _airDensity) * _ballisticCoefficient;
 						};
 					};
-					
+
 					_drag = _deltaT * ([_dragModel, _ballisticCoefficient, _trueSpeed] call FUNC(calculateRetardation));
 					_accel = (vectorNormalized _trueVelocity) vectorMultiply (_drag);
 					_bulletVelocity = _bulletVelocity vectorDiff _accel;
 				} else {
 					if (GVAR(AtmosphericDensitySimulationEnabled)) then {
-						_pressureDeviation = 1013.25 * exp(-(GVAR(Altitude) + (_bulletPosition select 2)) / 7990) - 1013.25 - 10 * overcast;
+						_pressureDeviation = 1013.25 * exp(-(EGVAR(weather,Altitude) + (_bulletPosition select 2)) / 7990) - 1013.25 - 10 * overcast;
 						_temperature = GET_TEMPERATURE_AT_HEIGHT(_bulletPosition select 2);
-						_humidity = EGVAR(weather,currentHumidity);					
+						_humidity = EGVAR(weather,currentHumidity);
 						_airFriction = _airFriction + ((_temperature - 15) * 0.0000015 + _humidity * 0.0000040 + _pressureDeviation * -0.0000009);
 					};
-					
+
 					if (_airFriction != _airFrictionRef || vectorMagnitude _wind > 0) then {
 						_dragRef = _deltaT * _airFrictionRef * _bulletSpeed * _bulletSpeed;
 						_accelRef = (vectorNormalized _bulletVelocity) vectorMultiply (_dragRef);
 						_bulletVelocity = _bulletVelocity vectorDiff _accelRef;
-						
+
 						_drag = _deltaT * _airFriction * _trueSpeed * _trueSpeed;
 						_accel = (vectorNormalized _trueVelocity) vectorMultiply (_drag);
 						_bulletVelocity = _bulletVelocity vectorAdd _accel;
 					};
 				};
-				
+
 				if (GVAR(CoriolisEnabled) && _bulletSpeedAvg > 0) then {
-					_horizontalDeflection = 0.0000729 * (_unit distanceSqr _bullet) * sin(GVAR(Latitude)) / _bulletSpeedAvg;
+					_horizontalDeflection = 0.0000729 * (_unit distanceSqr _bullet) * sin(EGVAR(weather,Latitude)) / _bulletSpeedAvg;
 					_horizontalDeflectionPartial = _horizontalDeflection - (GVAR(bulletDatabaseHDeflect) select _index);
 					GVAR(bulletDatabaseHDeflect) set[_index, _horizontalDeflection];
 					_vect = [sin(_bulletDir + 90) * _horizontalDeflectionPartial, cos(_bulletDir + 90) * _horizontalDeflectionPartial, 0];
-					
+
 					_bulletPosition = _bulletPosition vectorAdd _vect;
 				};
-				
+
 				/*
 				// Negligible effect on the trajectory
 				if (GVAR(EoetvoesEnabled)) then {
-					_centripetalAccel = 2 * 0.0000729 * (_muzzleVelocity / -32.2) * cos(GVAR(Latitude)) * sin(_bulletDir);
+					_centripetalAccel = 2 * 0.0000729 * (_muzzleVelocity / -32.2) * cos(EGVAR(weather,Latitude)) * sin(_bulletDir);
 					_accel = [0, 0, -(_centripetalAccel * _deltaT)];
-					
+
 					_bulletVelocity = _bulletVelocity vectorAdd _accel;
 				};
 				//*/
-				
+
 				if (GVAR(SpinDriftEnabled)) then {
 					_spinDrift = _twistDirection * 0.0254 * 1.25 * (_stabilityFactor + 1.2) * _TOF ^ 1.83;
 					_spinDriftPartial = _spinDrift - (GVAR(bulletDatabaseSpinDrift) select _index);
 					GVAR(bulletDatabaseSpinDrift) set[_index, _spinDrift];
 					_vect = [sin(_bulletDir + 90) * _spinDriftPartial, cos(_bulletDir + 90) * _spinDriftPartial, 0];
-					
+
 					_bulletPosition = _bulletPosition vectorAdd _vect;
 				};
 			};
-			
+
 			if (GVAR(TransonicRegionEnabled) && _transonicStabilityCoef < 1) then {
 				if (_bulletSpeed < 345 && _bulletSpeedAvg > 340 && _bulletSpeed > 335) then {
 					_accel = [(random 0.8) - 0.4, (random 0.8) - 0.4, (random 0.8) - 0.4];
@@ -332,15 +332,15 @@ if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
 					_bulletVelocity = _bulletVelocity vectorAdd _accel;
 				};
 			};
-			
+
 			if (_bulletTraceVisible && _bulletSpeed > 600 && _bullet distanceSqr _unit > 400) then {
 				drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.4*_caliber,0.2*_caliber],[[0,0,0,0.6],[0,0,0,0.4]],[1,0],0,0,"","",""];
 			};
-			
+
 			_bullet setVelocity _bulletVelocity;
 			_bullet setPosASL _bulletPosition;
 			true
 		} count GVAR(bulletDatabaseOccupiedIndices);
-		
+
     }, 0, []] call CBA_fnc_addPerFrameHandler;
 };

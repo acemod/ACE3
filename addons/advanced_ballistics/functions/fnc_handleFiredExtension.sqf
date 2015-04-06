@@ -98,7 +98,7 @@ _stabilityFactor = 1.5;
 
 if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
 	_temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL _unit) select 2);
-	_barometricPressure = 1013.25 * exp(-(GVAR(Altitude) + ((getPosASL _bullet) select 2)) / 7990) - 10 * overcast;
+	_barometricPressure = 1013.25 * exp(-(EGVAR(weather,Altitude) + ((getPosASL _bullet) select 2)) / 7990) - 10 * overcast;
 	_stabilityFactor = [_caliber, _bulletLength, _bulletMass, _barrelTwist, _muzzleVelocity, _temperature, _barometricPressure] call FUNC(calculateStabilityFactor);
 };
 
@@ -143,13 +143,13 @@ if (count GVAR(bulletDatabaseFreeIndices) > 0) then {
 	GVAR(bulletDatabaseFreeIndices) = GVAR(bulletDatabaseFreeIndices) - [_index];
 };
 
-"AdvancedBallistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", _index, _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _muzzleVelocity, _transonicStabilityCoef, getPosASL _bullet, GVAR(Latitude), EGVAR(weather,currentTemperature), GVAR(Altitude), EGVAR(weather,currentHumidity), overcast, floor(time), time - floor(time)];
+"AdvancedBallistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", _index, _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _muzzleVelocity, _transonicStabilityCoef, getPosASL _bullet, EGVAR(weather,Latitude), EGVAR(weather,currentTemperature), EGVAR(weather,Altitude), EGVAR(weather,currentHumidity), overcast, floor(time), time - floor(time)];
 GVAR(bulletDatabase) set[_index, [_bullet, _caliber, _bulletTraceVisible, _index]];
 
 if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
 	[{
 		private ["_bulletDatabaseEntry", "_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];
-		
+
 		{
 			_bulletDatabaseEntry = (GVAR(bulletDatabase) select _x);
 			_bullet = _bulletDatabaseEntry select 0;
@@ -160,32 +160,32 @@ if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
 			};
 			true
 		} count GVAR(bulletDatabaseOccupiedIndices);
-		
+
 		if (count GVAR(bulletDatabaseOccupiedIndices) == 0) exitWith {
 			GVAR(bulletDatabase) = [];
 			GVAR(bulletDatabaseOccupiedIndices) = [];
 			GVAR(bulletDatabaseFreeIndices) = [];
 			[_this select 1] call cba_fnc_removePerFrameHandler;
 		};
-		
+
 		{
 			_bulletDatabaseEntry = (GVAR(bulletDatabase) select _x);
 			_bullet              = _bulletDatabaseEntry select 0;
 			_caliber             = _bulletDatabaseEntry select 1;
 			_bulletTraceVisible  = _bulletDatabaseEntry select 2;
 			_index               = _bulletDatabaseEntry select 3;
-			
+
 			_bulletVelocity = velocity _bullet;
 			_bulletPosition = getPosASL _bullet;
-			
+
 			if (_bulletTraceVisible && vectorMagnitude _bulletVelocity > 600) then {
 				drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.4*_caliber,0.2*_caliber],[[0,0,0,0.6],[0,0,0,0.4]],[1,0],0,0,"","",""];
 			};
-			
+
 			call compile ("AdvancedBallistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, floor(time), time - floor(time)]);
-			
+
 			true
 		} count GVAR(bulletDatabaseOccupiedIndices);
-		
+
 	}, 0, []] call CBA_fnc_addPerFrameHandler;
 };
