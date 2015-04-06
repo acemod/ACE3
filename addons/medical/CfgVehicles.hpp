@@ -228,9 +228,9 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 class values {
                     class anywhere { name = "Anywhere"; value = 0; };
-                    class vehicle { name = "Medical Vehicles"; value = 1; ; };
+                    class vehicle { name = "Medical Vehicles"; value = 1; };
                     class facility { name = "Medical facility"; value = 2; };
-                    class vehicleAndFacility { name = "Vehicles & facility"; value = 3; default = 1};
+                    class vehicleAndFacility { name = "Vehicles & facility"; value = 3; default = 1; };
                     class disabled { name = "Disabled"; value = 4;};
                 };
             };
