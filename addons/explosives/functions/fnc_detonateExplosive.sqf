@@ -6,8 +6,8 @@
  * 0: Unit <OBJECT>
  * 1: Max range (-1 to ignore) <NUMBER>
  * 2: Explosive <ARRAY>
- * 	0: Explosive <OBJECT>
- * 	1: Fuse time <NUMBER>
+ *     0: Explosive <OBJECT>
+ *     1: Fuse time <NUMBER>
  *
  * Return Value:
  * None
@@ -29,23 +29,23 @@ _result = true;
 if (!_ignoreRange && {(_unit distance (_item select 0)) > _range}) exitWith {false};
 
 if (getNumber (ConfigFile >> "CfgAmmo" >> typeof (_item select 0) >> "TriggerWhenDestroyed") == 0) then {
-	private ["_exp", "_previousExp"];
-	_previousExp = _item select 0;
-	_exp = getText (ConfigFile >> "CfgAmmo" >> typeof (_previousExp) >> "ACE_Explosive");
-	if (_exp != "") then {
-		_exp = createVehicle [_exp, [0,0,15001], [], 0, "NONE"];
-		_exp setDir (getDir _previousExp);
-		_item set [0, _exp];
-		_pos = getPosASL _previousExp;
-		deleteVehicle _previousExp;
-		_exp setPosASL _pos;
-	};
+    private ["_exp", "_previousExp"];
+    _previousExp = _item select 0;
+    _exp = getText (ConfigFile >> "CfgAmmo" >> typeof (_previousExp) >> "ACE_Explosive");
+    if (_exp != "") then {
+        _exp = createVehicle [_exp, [0,0,15001], [], 0, "NONE"];
+        _exp setDir (getDir _previousExp);
+        _item set [0, _exp];
+        _pos = getPosASL _previousExp;
+        deleteVehicle _previousExp;
+        _exp setPosASL _pos;
+    };
 };
 [{
-		_explosive = _this;
-		if (!isNull _explosive) then {
-				_explosive setDamage 1;
-		};
+        _explosive = _this;
+        if (!isNull _explosive) then {
+                _explosive setDamage 1;
+        };
 }, _item select 0, _item select 1, 0] call EFUNC(common,waitAndExecute);
 
 _result

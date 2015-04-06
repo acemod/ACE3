@@ -20,7 +20,7 @@ _unit = _this select 0;
 _explosive = _this select 1;
 
 if (getNumber (ConfigFile >> "CfgAmmo" >> typeof _explosive >> "ACE_explodeOnDefuse") == 1) exitWith {
-	[_unit, -1, [_explosive, 1], true] call FUNC(detonateExplosive);
+    [_unit, -1, [_explosive, 1], true] call FUNC(detonateExplosive);
 };
 
 _unit action ["Deactivate", _unit, _explosive];

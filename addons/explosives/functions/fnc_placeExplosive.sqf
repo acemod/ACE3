@@ -16,7 +16,7 @@
  *
  * Example:
  * _explosive = [player, player modelToWorldVisual [0,0.5, 0.1], 134,
- * 	"SatchelCharge_Remote_Mag", "Command", []] call ACE_Explosives_fnc_placeExplosive;
+ *     "SatchelCharge_Remote_Mag", "Command", []] call ACE_Explosives_fnc_placeExplosive;
  *
  * Public: Yes
  */
@@ -30,32 +30,32 @@ _triggerConfig = _this select 4;
 _triggerSpecificVars = _this select 5;
 _setDir = true;
 if (count _this > 6) then {
-	_setDir = _this select 6;
+    _setDir = _this select 6;
 };
 
 if (isNil "_triggerConfig") exitWith {
-	diag_log format ["ACE_Explosives: Error config not passed to PlaceExplosive: %1", _this];
-	objNull
+    diag_log format ["ACE_Explosives: Error config not passed to PlaceExplosive: %1", _this];
+    objNull
 };
 
 _magazineTrigger = ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> _triggerConfig;
 _triggerConfig = ConfigFile >> "CfgACE_Triggers" >> _triggerConfig;
 
 if (isNil "_triggerConfig") exitWith {
-	diag_log format ["ACE_Explosives: Error config not found in PlaceExplosive: %1", _this];
-	objNull
+    diag_log format ["ACE_Explosives: Error config not found in PlaceExplosive: %1", _this];
+    objNull
 };
 
 _ammo = getText(ConfigFile >> "CfgMagazines" >> _magazineClass >> "ammo");
 if (isText(_magazineTrigger >> "ammo")) then {
-	_ammo = getText (_magazineTrigger >> "ammo");
+    _ammo = getText (_magazineTrigger >> "ammo");
 };
 _triggerSpecificVars pushBack _triggerConfig;
 _explosive = createVehicle [_ammo, _pos, [], 0, "NONE"];
 if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_triggerSpecificVars]
-	call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {_explosive};
+    call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {_explosive};
 if (_setDir) then {
-	[[_explosive, _dir, getNumber (_magazineTrigger >> "pitch")], QFUNC(setPosition)]
-		call EFUNC(common,execRemoteFnc);
+    [[_explosive, _dir, getNumber (_magazineTrigger >> "pitch")], QFUNC(setPosition)]
+        call EFUNC(common,execRemoteFnc);
 };
 _explosive
