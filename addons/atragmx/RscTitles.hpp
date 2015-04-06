@@ -1042,7 +1042,7 @@ class ATragMX_Display
 			idc=8010;
 			y=0.265*safezoneH+safezoneY+0.5;
 			text="Start";
-			action="execVM '\atragmx\fnc_target_speed_assist_timer.sqf'";
+			action="call '\atragmx\fnc_target_speed_assist_timer.sqf'";
 		};
 		class TEXT_TARGET_SPEED_ASSIST_TARGET_ESTIMATED_SPEED_UNIT: TEXT_TARGET_RANGE_ASSIST_ESTIMATED_RANGE_UNIT
 		{

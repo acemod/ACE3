@@ -4,12 +4,12 @@
 
 if (ctrlVisible 5006) then
 {
-	false execVM "\atragmx\fnc_show_range_card.sqf";
-	true execVM "\atragmx\fnc_show_main_page.sqf";
+	false call FUNC(show_range_card);
+	true call FUNC(show_main_page);
 } else
 {
-	false execVM "\atragmx\fnc_show_main_page.sqf";
-	true execVM "\atragmx\fnc_show_range_card.sqf";
+	false call FUNC(show_main_page);
+	true call FUNC(show_range_card);
 	
 	ctrlSetFocus (_dsp displayCtrl 5001);
 	

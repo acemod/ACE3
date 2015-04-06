@@ -6,8 +6,8 @@ if !(ctrlVisible 9000) then
 {
 	private ["_startTime"];
 	
-	false execVM "\atragmx\fnc_show_target_speed_assist.sqf";
-	true execVM "\atragmx\fnc_show_target_speed_assist_timer.sqf";
+	false call FUNC(show_target_speed_assist);
+	true call FUNC(show_target_speed_assist_timer);
 	
 	ctrlSetFocus (_dsp displayCtrl 9002);
 	
@@ -25,6 +25,6 @@ if !(ctrlVisible 9000) then
 	
 	[] call FUNC(calculate_target_speed_assist);
 	
-	false execVM "\atragmx\fnc_show_target_speed_assist_timer.sqf";
-	true execVM "\atragmx\fnc_show_target_speed_assist.sqf";
+	false call FUNC(show_target_speed_assist_timer);
+	true call FUNC(show_target_speed_assist);
 };

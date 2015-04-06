@@ -4,16 +4,16 @@
 
 if (ctrlVisible 6000) then
 {
-	false execVM "\atragmx\fnc_show_gun_list.sqf";
-	true execVM "\atragmx\fnc_show_main_page.sqf";
+	false call FUNC(show_gun_list);
+	true call FUNC(show_main_page);
 	
 	if (_this) then {
 		(lbCurSel 6000) call FUNC(change_gun);
 	};
 } else
 {
-	false execVM "\atragmx\fnc_show_main_page.sqf";
-	true execVM "\atragmx\fnc_show_gun_list.sqf";
+	false call FUNC(show_main_page);
+	true call FUNC(show_gun_list);
 	
 	ctrlSetFocus (_dsp displayCtrl 6002);
 

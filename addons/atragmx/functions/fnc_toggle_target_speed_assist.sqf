@@ -4,8 +4,8 @@
 
 if (ctrlVisible 8000) then
 {
-	false execVM "\atragmx\fnc_show_target_speed_assist.sqf";
-	true execVM "\atragmx\fnc_show_main_page.sqf";
+	false call FUNC(show_target_speed_assist);
+	true call FUNC(show_main_page);
 	
 	if (_this == 1) then
 	{
@@ -14,8 +14,8 @@ if (ctrlVisible 8000) then
 	};
 } else
 {
-	false execVM "\atragmx\fnc_show_main_page.sqf";
-	true execVM "\atragmx\fnc_show_target_speed_assist.sqf";
+	false call FUNC(show_main_page);
+	true call FUNC(show_target_speed_assist);
 	
 	ctrlSetFocus (_dsp displayCtrl 8012);
 	
