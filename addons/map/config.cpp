@@ -53,6 +53,7 @@ class ACE_Settings {
 #include "CfgEventHandlers.hpp"
 #include "CfgMarkers.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgWorlds.hpp"
 
 class RscMapControl {
     maxSatelliteAlpha = 0.5;
