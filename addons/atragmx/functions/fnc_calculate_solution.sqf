@@ -19,7 +19,7 @@ _bc                 = _this select 14;
 _dragModel          = _this select 15;
 _atmosphereModel    = _this select 16;
 _storeRangeCardData = _this select 17;
- 
+
 private ["_bulletPos", "_bulletVelocity", "_bulletSpeed", "_bulletAccel", "_gravity", "_deltaT"];
 _bulletPos = [0, 0, 0];
 _bulletVelocity = [0, 0, 0];
@@ -64,13 +64,12 @@ _bulletVelocity set [0, 0];
 _bulletVelocity set [1, Cos(_scopeBaseAngle) * _muzzleVelocity];
 _bulletVelocity set [2, Sin(_scopeBaseAngle) * _muzzleVelocity];
 
-while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do
-{
+while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
     _bulletSpeed = vectorMagnitude _bulletVelocity;
-    
+
     _trueVelocity = _bulletVelocity vectorDiff _wind;
     _trueSpeed = vectorMagnitude _trueVelocity;
-    
+
     if (EGVAR(advanced_ballistics,AdvancedBallistics)) then {
         if (EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
             private ["_drag"];
@@ -80,14 +79,14 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do
     } else {
         _bulletAccel = _trueVelocity vectorMultiply (_trueSpeed * _airFriction);
     };
-    
+
     _bulletAccel = _bulletAccel vectorAdd _gravity;
-    
+
     _bulletVelocity = _bulletVelocity vectorAdd (_bulletAccel vectorMultiply _deltaT);
     _bulletPos = _bulletPos vectorAdd (_bulletVelocity vectorMultiply _deltaT);
-    
+
     _TOF = _TOF + _deltaT;
-    
+
     if (_storeRangeCardData) then {
         _range = GVAR(ATragMX_rangeCardStartRange) + _n * GVAR(ATragMX_rangeCardIncrement);
         if ((_bulletPos select 1) * _rangeFactor >= _range && _range <= GVAR(ATragMX_rangeCardEndRange)) then {
@@ -100,7 +99,7 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do
             };
             _kineticEnergy = 0.5 * (_bulletMass / 1000 * (_bulletSpeed ^ 2));
             _kineticEnergy = _kineticEnergy * 0.737562149;
-            
+
             GVAR(ATragMX_rangeCardData) set [_n, [_range, _elevation * 60, _windage * 60, _lead, _TOF, _bulletSpeed, _kineticEnergy]];
             _n = _n + 1;
         };
