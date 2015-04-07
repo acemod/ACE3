@@ -8,7 +8,7 @@ class CfgVehicles {
                 statement = QUOTE(call FUNC(createKestrelDialog));
                 showDisabled = 0;
                 priority = 2;
-                icon = PATHTOF(data\4500NV1.paa);
+                icon = PATHTOF(UI\Kestrel4500_Icon.paa);
                 hotkey = "K";
             };
         };
