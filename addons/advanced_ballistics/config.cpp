@@ -5,23 +5,14 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ACE_common", "ACE_weather"};
-        versionDesc = "ACE Advanced Ballistics";
-        version = VERSION;
-        author[] = {$STR_ACE_Common_ACETeam, "Glowbal", "Ruthberg"};
-    };
-};
-
-class CfgAddons {
-    class PreloadAddons {
-       class ADDON {
-          list[] = {QUOTE(ADDON)};
-       };
+        requiredAddons[] = {"ACE_ballistics", "ACE_weather"};
+        author[] = {"Ruthberg"};
+        authorUrl = "https://github.com/ulteq";
+        VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgAmmo.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
 #include "RscTitles.hpp"

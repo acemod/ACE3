@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project name="ACE">
+    <Package name="Weather">
+        <Key ID="STR_ACE_Weather_WindInfoKey">
+            <English>Show Wind Info</English>
+        </Key>
+    </Package>
+</Project>

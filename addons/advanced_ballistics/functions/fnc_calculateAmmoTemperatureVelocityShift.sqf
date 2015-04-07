@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ *
+ * Calculates the ammo temperature induced muzzle velocity shift
+ *
+ * Arguments:
+ * 0: ammo - classname <string>
+ * 1: temperature - degrees celcius <NUMBER>
+ *
+ * Return Value:
+ * 0: muzzle velocity shift - m/s <NUMBER>
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 
 private ["_ammo", "_temperature", "_muzzleVelocityTable", "_muzzleVelocityShift", "_temperatureIndexA", "_temperatureIndexB", "_temperatureRatio"];
@@ -7,7 +22,7 @@ _temperature    = _this select 1;
 _muzzleVelocityTable = [];
 
 if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ammoTempMuzzleVelocityShifts")) then {
-	_muzzleVelocityTable = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ammoTempMuzzleVelocityShifts");
+    _muzzleVelocityTable = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ammoTempMuzzleVelocityShifts");
 };
 
 if (count _muzzleVelocityTable != 11) exitWith { 0 };

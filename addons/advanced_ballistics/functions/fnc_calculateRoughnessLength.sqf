@@ -1,3 +1,16 @@
+/*
+ * Author: Ruthberg
+ *
+ * Calculates the terrain roughness length at a given world position
+ *
+ * Arguments:
+ * 0: _this - world position <posASL>
+ *
+ * Return Value:
+ * 0: roughness length <NUMBER>
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_roughness_lengths", "_windSource", "_nearBuildings", "_isWater"];
@@ -11,11 +24,11 @@ _nearBuildings = count (_windSource nearObjects ["Building", 50]);
 _isWater = surfaceIsWater _windSource;
 
 if (_nearBuildings == 0 && _isWater) exitWith {
-	0.0005
+    0.0005
 };
 
 if (_nearBuildings >= 10) exitWith {
-	1.6
+    1.6
 };
 
 _roughness_lengths select (2 + (_nearBuildings min 6))

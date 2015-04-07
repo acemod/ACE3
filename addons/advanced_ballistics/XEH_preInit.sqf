@@ -11,9 +11,7 @@ PREP(calculateRoughnessLength);
 PREP(calculateStabilityFactor);
 PREP(calculateWindSpeed);
 PREP(displayProtractor);
-PREP(displayWindInfo);
 PREP(handleFired);
-PREP(handleFiredExtension);
 PREP(initializeTerrainExtension);
 
 ADDON = true;
