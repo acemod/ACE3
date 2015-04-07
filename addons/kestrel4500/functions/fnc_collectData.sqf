@@ -22,14 +22,14 @@ if (isNil QUOTE(EGVAR(advanced_ballistics,Altitude))) then {EGVAR(advanced_balli
 if (isNil QUOTE(GVAR(Kestrel4500_MIN)) || isNil QUOTE(GVAR(Kestrel4500_MAX))) then {
     _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL ACE_player) select 2);
     _humidity = EGVAR(weather,currentHumidity);
-	_barometricPressure = 1013.25 * exp(-(EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast;
-	_altitude = EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2);
-	GVAR(Kestrel4500_MIN) = [0, 0, 0, 0, _temperature, _humidity, _barometricPressure, _altitude];
-	GVAR(Kestrel4500_MAX) = [0, 0, 0, 0, _temperature, _humidity, _barometricPressure, _altitude];
+    _barometricPressure = 1013.25 * exp(-(EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast;
+    _altitude = EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2);
+    GVAR(Kestrel4500_MIN) = [0, 0, 0, 0, _temperature, _humidity, _barometricPressure, _altitude];
+    GVAR(Kestrel4500_MAX) = [0, 0, 0, 0, _temperature, _humidity, _barometricPressure, _altitude];
 };
 
 {
-	GVAR(Kestrel4500_ENTRIES) set [_x, (GVAR(Kestrel4500_ENTRIES) select _x) + 1];
+    GVAR(Kestrel4500_ENTRIES) set [_x, (GVAR(Kestrel4500_ENTRIES) select _x) + 1];
 } forEach [0, 4, 5, 6 ,7];
 
 // Direction
@@ -39,34 +39,34 @@ GVAR(Kestrel4500_MAX) set [0, _playerDir max (GVAR(Kestrel4500_MAX) select 0)];
 GVAR(Kestrel4500_TOTAL) set [0, (GVAR(Kestrel4500_TOTAL) select 0) + _playerDir];
 
 if (GVAR(Kestrel4500_MinAvgMaxMode) == 1) then {
-	{
-		GVAR(Kestrel4500_ENTRIES) set [_x, (GVAR(Kestrel4500_ENTRIES) select _x) + 1];
-	} forEach [1, 2, 3];
-	
-	// Wind SPD
-	_windSpeed = vectorMagnitude ACE_wind;
-	_windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
+    {
+        GVAR(Kestrel4500_ENTRIES) set [_x, (GVAR(Kestrel4500_ENTRIES) select _x) + 1];
+    } forEach [1, 2, 3];
+    
+    // Wind SPD
+    _windSpeed = vectorMagnitude ACE_wind;
+    _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
 
-	if (isClass (configFile >> "CfgPatches" >> "ACE_Advanced_Ballistics")) then {
-		_windSpeed = (eyePos ACE_player) call EFUNC(advanced_ballistics,calculateWindSpeed);
-	};
+    if (isClass (configFile >> "CfgPatches" >> "ACE_Advanced_Ballistics")) then {
+        _windSpeed = (eyePos ACE_player) call EFUNC(advanced_ballistics,calculateWindSpeed);
+    };
 
-	_windSpeed = cos(_playerDir - _windDir) * _windSpeed;
-	GVAR(Kestrel4500_MIN) set [1, (GVAR(Kestrel4500_MIN) select 1) min abs(_windSpeed)];
-	GVAR(Kestrel4500_MAX) set [1, abs(_windSpeed) max (GVAR(Kestrel4500_MAX) select 1)];
-	GVAR(Kestrel4500_TOTAL) set [1, (GVAR(Kestrel4500_TOTAL) select 1) + abs(_windSpeed)];
+    _windSpeed = cos(_playerDir - _windDir) * _windSpeed;
+    GVAR(Kestrel4500_MIN) set [1, (GVAR(Kestrel4500_MIN) select 1) min abs(_windSpeed)];
+    GVAR(Kestrel4500_MAX) set [1, abs(_windSpeed) max (GVAR(Kestrel4500_MAX) select 1)];
+    GVAR(Kestrel4500_TOTAL) set [1, (GVAR(Kestrel4500_TOTAL) select 1) + abs(_windSpeed)];
 
-	// CROSSWIND
-	_crosswind = abs(sin(GVAR(Kestrel4500_RefHeading) - _playerDir) * _windSpeed);
-	GVAR(Kestrel4500_MIN) set [2, (GVAR(Kestrel4500_MIN) select 2) min _crosswind];
-	GVAR(Kestrel4500_MAX) set [2, _crosswind max (GVAR(Kestrel4500_MAX) select 2)];
-	GVAR(Kestrel4500_TOTAL) set [2, (GVAR(Kestrel4500_TOTAL) select 2) + _crosswind];
+    // CROSSWIND
+    _crosswind = abs(sin(GVAR(Kestrel4500_RefHeading) - _playerDir) * _windSpeed);
+    GVAR(Kestrel4500_MIN) set [2, (GVAR(Kestrel4500_MIN) select 2) min _crosswind];
+    GVAR(Kestrel4500_MAX) set [2, _crosswind max (GVAR(Kestrel4500_MAX) select 2)];
+    GVAR(Kestrel4500_TOTAL) set [2, (GVAR(Kestrel4500_TOTAL) select 2) + _crosswind];
 
-	// HEADWIND
-	_headwind = abs(cos(GVAR(Kestrel4500_RefHeading) - _playerDir) * _windSpeed);
-	GVAR(Kestrel4500_MIN) set [3, (GVAR(Kestrel4500_MIN) select 3) min _headwind];
-	GVAR(Kestrel4500_MAX) set [3, _headwind max (GVAR(Kestrel4500_MAX) select 3)];
-	GVAR(Kestrel4500_TOTAL) set [3, (GVAR(Kestrel4500_TOTAL) select 3) + _headwind];
+    // HEADWIND
+    _headwind = abs(cos(GVAR(Kestrel4500_RefHeading) - _playerDir) * _windSpeed);
+    GVAR(Kestrel4500_MIN) set [3, (GVAR(Kestrel4500_MIN) select 3) min _headwind];
+    GVAR(Kestrel4500_MAX) set [3, _headwind max (GVAR(Kestrel4500_MAX) select 3)];
+    GVAR(Kestrel4500_TOTAL) set [3, (GVAR(Kestrel4500_TOTAL) select 3) + _headwind];
 };
 
 // TEMP

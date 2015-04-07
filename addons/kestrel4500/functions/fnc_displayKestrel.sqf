@@ -30,16 +30,16 @@
 private ["_outputData"];
 
 if (GVAR(Kestrel4500_Overlay)) exitWith {
-	GVAR(Kestrel4500_Overlay) = false;
-	3 cutText ["", "PLAIN"];
-	true
+    GVAR(Kestrel4500_Overlay) = false;
+    3 cutText ["", "PLAIN"];
+    true
 };
 if (underwater ACE_player) exitWith { true };
 if (!("ACE_Kestrel4500" in (uniformItems ACE_player)) && !("ACE_Kestrel4500" in (vestItems ACE_player))) exitWith { true };
 
 if (GVAR(Kestrel4500) && dialog) then {
-	GVAR(Kestrel4500) = false;
-	closeDialog 0;
+    GVAR(Kestrel4500) = false;
+    closeDialog 0;
 };
 
 GVAR(Kestrel4500_Overlay) = true;

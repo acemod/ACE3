@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <Project name="ACE"> 
-	<Package name="Kestrel4500">
+    <Package name="Kestrel4500">
         <Key ID="STR_ACE_Kestrel_Name">
           <English>Kestrel 4500NV</English>
           <German>Kestrel 4500NV</German>
@@ -31,5 +31,5 @@
         <Key ID="STR_ACE_Kestrel4500_DisplayKestrelKey">
           <English>Show Kestrel 4500</English>
         </Key>
-	</Package> 
+    </Package> 
 </Project>
