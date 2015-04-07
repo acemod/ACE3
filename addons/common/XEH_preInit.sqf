@@ -189,6 +189,7 @@ PREP(getConfigGunner);
 PREP(getConfigCommander);
 PREP(getHitPoints);
 PREP(getHitPointsWithSelections);
+PREP(getReflectorsWithSelections);
 PREP(getVehicleCrew);
 
 // turrets
