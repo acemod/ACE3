@@ -33,6 +33,13 @@ _injuryTypeInfo = missionNamespace getvariable [format[QGVAR(woundInjuryType_%1)
 
 // This are the available injuries for this damage type. Format [[classtype, selections, bloodloss, minimalDamage, pain], ..]
 _allInjuriesForDamageType = _injuryTypeInfo select 2;
+// It appears we are dealing with an unknown type of damage.
+
+if (count _allInjuriesForDamageType == 0) then {
+    // grabbing the configuration for unknown damage type
+    _injuryTypeInfo = missionNamespace getvariable [QGVAR(woundInjuryType_unknown),[[], false, []]];
+    _allInjuriesForDamageType = _injuryTypeInfo select 2;
+};
 
 // find the available injuries for this damage type and damage amount
 _highestPossibleSpot = -1;
@@ -67,10 +74,7 @@ _allPossibleInjuries = [];
 
 // No possible wounds available for this damage type or damage amount.
 if (_highestPossibleSpot < 0) exitwith {
-    // It appears we are dealing with an unknown type of damage.
-    if (count _allInjuriesForDamageType == 0) then {
 
-    };
 };
 
 // Administration for open wounds and ids
@@ -84,7 +88,7 @@ _woundsCreated = [];
         for "_i" from 0 to (1+ floor(random(_x select 1)-1)) /* step +1 */ do {
 
             // Find the injury we are going to add. Format [ classID, allowdSelections, bloodloss, painOfInjury, minimalDamage]
-            _toAddInjury =  if (random(1) >= 0.5) then {_allInjuriesForDamageType select _highestPossibleSpot} else {_allPossibleInjuries select (floor(random (count _allPossibleInjuries)));};
+            _toAddInjury =  if (random(1) >= 0.85) then {_allInjuriesForDamageType select _highestPossibleSpot} else {_allPossibleInjuries select (floor(random (count _allPossibleInjuries)));};
             _toAddClassID = _toAddInjury select 0;
             _foundIndex = -1;
 

@@ -14,11 +14,12 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_show"];
+private ["_target", "_show", "_selectionN"];
 _target = _this select 0;
 _show = if (count _this > 1) then {_this select 1} else {true};
-GVAR(currentSelectedSelectionN) = if (count _this > 2) then {_this select 2} else {0};
+_selectionN = if (count _this > 2) then {_this select 2} else {0};
 
+GVAR(currentSelectedSelectionN) = if (typeName _selectionN == "SCALAR") then {_selectionN} else {0};
 GVAR(displayPatientInformationTarget) = if (_show) then {_target} else {ObjNull};
 
 if (USE_WOUND_EVENT_SYNC) then {
@@ -75,6 +76,7 @@ if (_show) then {
             _genericMessages pushback [format[localize "STR_ACE_MEDICAL_receivingIvVolume", floor _totalIvVolume], [1, 1, 1, 1]];
         };
 
+        _damaged = [false, false, false, false, false, false];
         _selectionBloodLoss = [0,0,0,0,0,0];
         if (GVAR(level) >= 2) then {
             _openWounds = _target getvariable [QGVAR(openWounds), []];
@@ -82,10 +84,12 @@ if (_show) then {
             {
                 _amountOf = _x select 3;
                 // Find how much this bodypart is bleeding
-                _selectionBloodLoss set [(_x select 2), (_selectionBloodLoss select (_x select 2)) + (15 * ((_x select 4) * _amountOf))];
-                if (GVAR(currentSelectedSelectionN) == (_x select 2)) then {
+                if (_amountOf > 0) then {
+                    _damaged set[_x select 2, true];
+                    _selectionBloodLoss set [(_x select 2), (_selectionBloodLoss select (_x select 2)) + (20 * ((_x select 4) * _amountOf))];
+
+                    if (_selectionN == (_x select 2)) then {
                     // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
-                    if (_amountOf > 0) then {
                         if (_amountOf >= 1) then {
                             // TODO localization
                             _allInjuryTexts pushback [format["%2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf], [1,1,1,1]];
@@ -101,27 +105,28 @@ if (_show) then {
             {
                 _amountOf = _x select 3;
                 // Find how much this bodypart is bleeding
-                //if (_selectionBloodLoss select (_x select 2) == 0) then {
-                //    _selectionBloodLoss set [(_x select 2), (_selectionBloodLoss select (_x select 2)) + (15 * ((_x select 4) * _amountOf))];
-                //};
-                if (GVAR(currentSelectedSelectionN) == (_x select 2)) then {
+                if !(_damaged select (_x select 2)) then {
+                    _selectionBloodLoss set [(_x select 2), (_selectionBloodLoss select (_x select 2)) + (20 * ((_x select 4) * _amountOf))];
+                };
+                if (_selectionN == (_x select 2)) then {
                     // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
                     if (_amountOf > 0) then {
                         if (_amountOf >= 1) then {
                             // TODO localization
-                            _allInjuryTexts pushback [format["[B] %2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf], [1,0.5,0.5,1]];
+                            _allInjuryTexts pushback [format["[B] %2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf], [0.88,0.7,0.65,1]];
                         } else {
                             // TODO localization
-                            _allInjuryTexts pushback [format["[B] Partial %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6], [1,0.5,0.5,1]];
+                            _allInjuryTexts pushback [format["[B] Partial %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
                         };
                     };
                 };
             }foreach _bandagedwounds;
         } else {
+            _damaged = [true, true, true, true, true, true];
             {
                 _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _x];
 
-                if (_target getHitPointDamage _x > 0.1) then {
+                if (_target getHitPointDamage _x > 0.1 && {_forEachIndex == _selectionN}) then {
                     // @todo localize
                     _allInjuryTexts pushBack [format ["%1 %2",
                         ["Lightly wounded", "Heavily wounded"] select (_target getHitPointDamage _x > 0.5),
@@ -132,7 +137,7 @@ if (_show) then {
         };
 
         // Handle the body image coloring
-        _damaged = [false, false, false, false, false, false];
+
         _availableSelections = [50,51,52,53,54,55];
         {
             private ["_red", "_green", "_blue"];
@@ -141,27 +146,30 @@ if (_show) then {
             _red = 1;
             _green = 1;
             _blue = 1;
-            if (_total >0) then {
-                _green = 0.9 - _total;
-                if (_green < 0.0) then {
-                    _green = 0.0;
+            if (_total > 0) then {
+                if (_damaged select _forEachIndex) then {
+                    _green = (0.9 - _total) max 0;
+                    _blue = _green;
+                } else {
+                    _green = (0.9 - _total) max 0;
+                    _red = _green;
+                    //_blue = _green;
                 };
-                _blue = _green;
-                _damaged set[_foreachIndex, true];
             };
             (_display displayCtrl (_availableSelections select _foreachIndex)) ctrlSetTextColor [_red, _green, _blue, 1.0];
         }foreach _selectionBloodLoss;
 
-        // TODO fill the lb with the appropiate information for the patient
         _lbCtrl = (_display displayCtrl 200);
         lbClear _lbCtrl;
         {
             _lbCtrl lbAdd (_x select 0);
             _lbCtrl lbSetColor [_foreachIndex, _x select 1];
         }foreach _genericMessages;
+
+        _amountOfGeneric = count _genericMessages;
         {
             _lbCtrl lbAdd (_x select 0);
-            _lbCtrl lbSetColor [_foreachIndex, _x select 1];
+            _lbCtrl lbSetColor [_foreachIndex + _amountOfGeneric, _x select 1];
         }foreach _allInjuryTexts;
         if (count _allInjuryTexts == 0) then {
             _lbCtrl lbAdd "No injuries on this bodypart..";
