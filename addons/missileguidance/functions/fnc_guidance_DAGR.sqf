@@ -1,4 +1,4 @@
-//#define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 FUNC(guidance_DIRECT_LOAL_PFH) = {
@@ -15,21 +15,15 @@ FUNC(guidance_DIRECT_LOAL_PFH) = {
     };
     
     _targets = [_dagr, ACE_DEFAULT_LASER_CODE, 70, _curVelocity] call ace_laser_fnc_findLaserDesignator;
-    TRACE_2("Targets", _target, _targets);
-    
     if((_targets select 0)) then {
         _target = _targets select 1;
-        
-        // player sideChat "FUCK!";
-        // drop ["\a3\data_f\Cl_basic","","Billboard",1,20,(getPos _dagr),[0,0,0],1,1.275,1.0,0.0,[5],[[1,0,0,1]],[0],0.0,2.0,"","",""];
-        
-        
+        TRACE_2("Targets", _target, _targets);
+ 
         _yVec = vectorDir _dagr;
         _zVec = vectorUp _dagr;
         _xVec = vectorNormalized (_yVec vectorCrossProduct _zVec);
         
         _dagrPos = getPosASL _dagr;
-        // player sideChat "G!";
         _targetPos = getPosASL _target;
         _shooterPos = getPosASL _shooter;
         
@@ -44,49 +38,41 @@ FUNC(guidance_DIRECT_LOAL_PFH) = {
             
             _targetPos = _targetPos vectorAdd _addHeight;
 
-            _deflection = 0.015;
+            _minDeflection = 0.005;
+            _maxDeflection = 0.15;
             
             _targetVectorSeeker = [_dagr, [_xVec, _yVec, _zVec], _targetPos] call FUNC(translateToWeaponSpace);
-            // _targetVectorSeeker = _dagr worldToModel (ASLtoATL _targetPos);
-            // _targetVectorSeeker = [0,0,0] vectorFromTo _targetVectorSeeker;
-            _yaw = 0.0;
+            _targetVector = [0,0,0] vectorFromTo _targetVectorSeeker;
+            TRACE_1("", _targetVectorSeeker, _targetVector);
+            
+            _yaw = 0;
+            _pitch = 0;
+                       
             if((_targetVectorSeeker select 0) < 0) then {
-                _yaw = -_deflection;
+                _yaw = - ( (_minDeflection max ((_targetVector select 0) min _maxDeflection) ) );
             } else {
                 if((_targetVectorSeeker select 0) > 0) then {
-                    _yaw = _deflection;
+                    _yaw = ( (_minDeflection max ((_targetVector select 0) min _maxDeflection) ) );
+                };
+            };
+            if((_targetVectorSeeker select 2) < 0) then {
+                _pitch = - ( (_minDeflection max ((_targetVector select 2) min _maxDeflection) ) );
+            } else {
+                if((_targetVectorSeeker select 2) > 0) then {
+                    _pitch = ( (_minDeflection max ((_targetVector select 2) min _maxDeflection) ) );
                 };
             };
             
-            _pitch = 0.0;
-            if((_targetVectorSeeker select 2) < 0) then {
-                _pitch = -_deflection;
-            } else {
-                if((_targetVectorSeeker select 2) > 0) then {
-                    _pitch = _deflection;
-                };
-            };
+            
     #ifdef DEBUG_MODE_FULL
             drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _dagrPos, 0.75, 0.75, 0, str _vectorTo, 1, 0.025, "TahomaB"];
             drawLine3D [ASLtoATL _dagrPos, ASLtoATL _targetPos, [1,0,0,1]];
-            
-            _distance = ([getPos startPos, _dagrPos] call BIS_fnc_distance2D);
-            _marker = createMarkerLocal [format["m%1", MARKERCOUNT], [_distance, _dagrPos select 2]];
-            _marker setMarkerTypeLocal "mil_dot";
-            _marker setMarkerColorLocal "ColorRed";
-
-            MARKERCOUNT = MARKERCOUNT + 1;
     #endif        
-    
+
             if(accTime > 0) then {
                 _outVector = [_dagr, [_xVec, _yVec, _zVec], [_yaw, 1/accTime, _pitch]] call FUNC(translateToModelSpace);
-                // _outVector = _dagr modelToWorldVisual [_yaw, 1, _pitch];
-                // _outVector = ATLtoASL _outVector;
                 _vectorTo = _dagrPos vectorFromTo _outVector;
                 
-                // hintSilent format["v: %1", _vectorTo];
-            
-                // _dagr setVectorDir _vectorTo;
                 _dagr setVectorDirAndUp [_vectorTo, vectorUp _dagr];
             };
             

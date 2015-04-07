@@ -6,5 +6,6 @@ class CfgAmmo {
         laserLock = 0;
         airLock = 0;
         manualControl = 0;
+        timeToLive = 120;
     };
 };
