@@ -1,19 +1,19 @@
 /*
-	Author: Garth de Wet (LH)
+    Author: Garth de Wet (LH)
 
-	Description:
-		Adds an item to the select menu
+    Description:
+        Adds an item to the select menu
 
-	Parameters:
-		0: ARRAY/NUMBER - List container
-		1: String - Display Name
-		2: String - Picture
-		3: String/code - data
+    Parameters:
+        0: ARRAY/NUMBER - List container
+        1: String - Display Name
+        2: String - Picture
+        3: String/code - data
 
-	Returns:
-		ARRAY/Number
+    Returns:
+        ARRAY/Number
 
-	Example:
+    Example:
 */
 
 #include "script_component.hpp"
@@ -26,7 +26,7 @@ _picture = _this select 2;
 _data = _this select 3;
 
 if (_picture == "" || _picture == "PictureThing") then {
-	_picture = QUOTE(PATHTOF(UI\dot_ca.paa));
+    _picture = QUOTE(PATHTOF(UI\dot_ca.paa));
 };
 
 _index = lbAdd [_container, _displayName];

@@ -2,10 +2,10 @@
 #include "script_component.hpp"
 //TRACE_1("enter", _this);
 
-#define __TRACKINTERVAL 0.1	// how frequent the check should be.
-#define __LOCKONTIME 1.85	// Lock on won't occur sooner
-#define __LOCKONTIMERANDOM 0.3	// Deviation in lock on time
-#define __SENSORSQUARE 1	// Locking on sensor square side in angles
+#define __TRACKINTERVAL 0.1    // how frequent the check should be.
+#define __LOCKONTIME 1.85    // Lock on won't occur sooner
+#define __LOCKONTIMERANDOM 0.3    // Deviation in lock on time
+#define __SENSORSQUARE 1    // Locking on sensor square side in angles
 
 #define __ConstraintTop (((ctrlPosition __JavelinIGUITargetingConstrainTop) select 1) + ((ctrlPosition (__JavelinIGUITargetingConstrainTop)) select 3))
 #define __ConstraintBottom ((ctrlPosition __JavelinIGUITargetingConstrainBottom) select 1)
@@ -35,9 +35,9 @@ _soundTime = _args select 4;
 
 // Find a target within the optic range
 _newTarget = objNull;
-		
+        
 // Bail on fast movement
-if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && {cameraOn == ACE_player}) exitWith {	// keep it steady.
+if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && {cameraOn == ACE_player}) exitWith {    // keep it steady.
     ACE_player switchCamera "INTERNAL";
 };
 
@@ -71,7 +71,7 @@ if (isNull _newTarget) then {
     ACE_player setVariable [QGVAR(currentTarget),nil, false];
     
     // Disallow fire
-    //if (ACE_player ammo "Javelin" > 0 || {ACE_player ammo "ACE_Javelin_Direct" > 0}) then {ACE_player setWeaponReloadingTime //[player, "Javelin", 0.2];};	
+    //if (ACE_player ammo "Javelin" > 0 || {ACE_player ammo "ACE_Javelin_Direct" > 0}) then {ACE_player setWeaponReloadingTime //[player, "Javelin", 0.2];};    
 } else {
     if (_newTarget distance ACE_player < 2500
             // && {(call CBA_fnc_getFoV) select 1 > 7} 

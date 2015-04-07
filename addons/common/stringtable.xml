@@ -296,25 +296,21 @@
       <Hungarian>Nincs hang</Hungarian>
     </Key>
     <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TITLE">
-      <Original>Accept Requests</Original>
       <Polish>Akceptuj prośby</Polish>
       <Spanish>Aceptar Peticiones</Spanish>
       <English>Accept Requests</English>
     </Key>
     <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TITLE">
-      <Original>Decline Requests</Original>
       <Polish>Ignoruj prośby</Polish>
       <Spanish>Rechazar Peticiones</Spanish>
       <English>Decline Requests</English>
     </Key>
     <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
-      <Original>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</Original>
       <Polish>Akceptuj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
       <Spanish>Acepta Peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
       <English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
     </Key>
     <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
-      <Original>Decline Requests send by other players. These can be requests to use / share equipment, perform certain actions.</Original>
       <Polish>Ignoruj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
       <Spanish>Rechazar Peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
       <English>Decline Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>

@@ -8,8 +8,6 @@ class CfgAmmo {
         indirectHit = 12;
         indirectHitRange = 2; //2;
         caliber = 1.4;
-        deflecting = 3;
-        fuseDistance = 3;
         tracerStartTime = 0.02;
         timeToLive = 40;
         explosive = 1.8;
