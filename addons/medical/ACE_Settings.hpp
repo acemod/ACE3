@@ -113,4 +113,8 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
+    class GVAR(healHitPointAfterAdvBandage) {
+        typeName = "BOOL";
+        value = 1;
+    };
 };
