@@ -13,10 +13,10 @@ _muzzleVelocityTable = [];
 _barrelLengthTable = [];
 
 if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_muzzleVelocities")) then {
-	_muzzleVelocityTable = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_muzzleVelocities");
+    _muzzleVelocityTable = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_muzzleVelocities");
 };
 if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_barrelLengths")) then {
-	_barrelLengthTable = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_barrelLengths");
+    _barrelLengthTable = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_barrelLengths");
 };
 
 if (count _muzzleVelocityTable != count _barrelLengthTable) exitWith { 0 };
@@ -30,19 +30,19 @@ if (_barrelLength <= (_barrelLengthTable select _lowerIndex)) exitWith { (_muzzl
 if (_barrelLength >= (_barrelLengthTable select _upperIndex)) exitWith { (_muzzleVelocityTable select _upperIndex) - _muzzleVelocity };
 
 for "_i" from 0 to (count _barrelLengthTable) - 1 do {
-	if (_barrelLength >= _barrelLengthTable select _i) then {
-		_lowerIndex = _i;
-	};
+    if (_barrelLength >= _barrelLengthTable select _i) then {
+        _lowerIndex = _i;
+    };
 };
 for "_i" from (count _barrelLengthTable) - 1 to 0 step -1 do {
-	if (_barrelLength <= _barrelLengthTable select _i) then {
-		_upperIndex = _i;
-	};
+    if (_barrelLength <= _barrelLengthTable select _i) then {
+        _upperIndex = _i;
+    };
 };
 
 _barrelLengthRatio = 0;
 if ((_barrelLengthTable select _upperIndex) - (_barrelLengthTable select _lowerIndex) > 0) then {
-	_barrelLengthRatio = ((_barrelLengthTable select _upperIndex) - _barrelLength) / ((_barrelLengthTable select _upperIndex) - (_barrelLengthTable select _lowerIndex));
+    _barrelLengthRatio = ((_barrelLengthTable select _upperIndex) - _barrelLength) / ((_barrelLengthTable select _upperIndex) - (_barrelLengthTable select _lowerIndex));
 };
 
 _muzzleVelocityNew = (_muzzleVelocityTable select _lowerIndex) + ((_muzzleVelocityTable select _upperIndex) - (_muzzleVelocityTable select _lowerIndex)) * (1 - _barrelLengthRatio);

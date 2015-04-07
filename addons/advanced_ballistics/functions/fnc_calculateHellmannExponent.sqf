@@ -16,13 +16,13 @@ _isWater = surfaceIsWater _this;
 _hellmann_index = 0 max floor(overcast * 3) min 2;
 
 if (_nearObjects >= 5) then {
-	_hellmann_exponent = _hellmann_exponents select (_hellmann_index + 6);
+    _hellmann_exponent = _hellmann_exponents select (_hellmann_index + 6);
 };
 if (_nearObjects < 5) then {
-	_hellmann_exponent = _hellmann_exponents select (_hellmann_index + 3);
+    _hellmann_exponent = _hellmann_exponents select (_hellmann_index + 3);
 };
 if (_nearObjects == 0 && _isWater) then {
-	_hellmann_exponent = _hellmann_exponents select (_hellmann_index + 0);
+    _hellmann_exponent = _hellmann_exponents select (_hellmann_index + 0);
 };
 
 _hellmann_exponent

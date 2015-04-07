@@ -7,7 +7,7 @@ _temperature    = _this select 1;
 _muzzleVelocityTable = [];
 
 if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ammoTempMuzzleVelocityShifts")) then {
-	_muzzleVelocityTable = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ammoTempMuzzleVelocityShifts");
+    _muzzleVelocityTable = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ammoTempMuzzleVelocityShifts");
 };
 
 if (count _muzzleVelocityTable != 11) exitWith { 0 };

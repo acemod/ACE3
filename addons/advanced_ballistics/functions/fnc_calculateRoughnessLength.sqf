@@ -11,11 +11,11 @@ _nearBuildings = count (_windSource nearObjects ["Building", 50]);
 _isWater = surfaceIsWater _windSource;
 
 if (_nearBuildings == 0 && _isWater) exitWith {
-	0.0005
+    0.0005
 };
 
 if (_nearBuildings >= 10) exitWith {
-	1.6
+    1.6
 };
 
 _roughness_lengths select (2 + (_nearBuildings min 6))

@@ -11,7 +11,7 @@ _atmosphereModel      = _this select 4; // "ICAO" or "ASM"
 _airDensity = [_temperature, _pressure, _relativeHumidity] call FUNC(calculateAirDensity);
 
 if (_atmosphereModel == "ICAO") then {
-	(STD_AIR_DENSITY_ICAO / _airDensity) * _ballisticCoefficient
+    (STD_AIR_DENSITY_ICAO / _airDensity) * _ballisticCoefficient
 } else {
-	(STD_AIR_DENSITY_ASM / _airDensity) * _ballisticCoefficient
+    (STD_AIR_DENSITY_ASM / _airDensity) * _ballisticCoefficient
 };

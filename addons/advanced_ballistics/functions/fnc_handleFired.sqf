@@ -44,52 +44,52 @@ _airFriction = getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction");
 _muzzleVelocity = getNumber(configFile >> "cfgMagazines" >> _magazine >> "initSpeed");
 _muzzleVelocityCoef = getNumber(configFile >> "cfgWeapons" >> _weapon >> "initSpeed");
 if (_muzzleVelocityCoef > 0) then {
-	_muzzleVelocity = _muzzleVelocityCoef;
+    _muzzleVelocity = _muzzleVelocityCoef;
 };
 if (_muzzleVelocityCoef < 0) then {
-	_muzzleVelocity = _muzzleVelocity * (-1 * _muzzleVelocityCoef);
+    _muzzleVelocity = _muzzleVelocity * (-1 * _muzzleVelocityCoef);
 };
 
 _muzzleAccessory = "";
 switch (currentWeapon _unit) do {
-	case primaryWeapon _unit: { _muzzleAccessory = (primaryWeaponItems _unit) select 0; };
-	case handgunWeapon _unit: { _muzzleAccessory = (handgunItems _unit) select 0; };
+    case primaryWeapon _unit: { _muzzleAccessory = (primaryWeaponItems _unit) select 0; };
+    case handgunWeapon _unit: { _muzzleAccessory = (handgunItems _unit) select 0; };
 };
 
 if (_muzzleAccessory != "" && isNumber(configFile >> "cfgWeapons" >> _muzzleAccessory >> "ItemInfo" >> "MagazineCoef" >> "initSpeed")) then {
-	_initSpeedCoef = getNumber(configFile >> "cfgWeapons" >> _muzzleAccessory >> "ItemInfo" >> "MagazineCoef" >> "initSpeed");
-	_muzzleVelocity = _muzzleVelocity * _initSpeedCoef;
+    _initSpeedCoef = getNumber(configFile >> "cfgWeapons" >> _muzzleAccessory >> "ItemInfo" >> "MagazineCoef" >> "initSpeed");
+    _muzzleVelocity = _muzzleVelocity * _initSpeedCoef;
 };
 
 if (GVAR(BarrelLengthInfluenceEnabled)) then {
-	_muzzleVelocityShift = [_ammo, _weapon, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
-	if (_muzzleVelocityShift != 0) then {
-		_bulletVelocity = velocity _bullet;
-		_bulletSpeed = vectorMagnitude _bulletVelocity;
-		_bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift * (_bulletSpeed / _muzzleVelocity)));
-		_bullet setVelocity _bulletVelocity;
-		_muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
-	};
+    _muzzleVelocityShift = [_ammo, _weapon, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
+    if (_muzzleVelocityShift != 0) then {
+        _bulletVelocity = velocity _bullet;
+        _bulletSpeed = vectorMagnitude _bulletVelocity;
+        _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift * (_bulletSpeed / _muzzleVelocity)));
+        _bullet setVelocity _bulletVelocity;
+        _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
+    };
 };
 
 if (GVAR(AmmoTemperatureEnabled)) then {
-	_temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL _unit) select 2);
-	_muzzleVelocityShift = [_ammo, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift);
-	if (_muzzleVelocityShift != 0) then {
-		_bulletVelocity = velocity _bullet;
-		_bulletSpeed = vectorMagnitude _bulletVelocity;
-		_bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift * (_bulletSpeed / _muzzleVelocity)));
-		_bullet setVelocity _bulletVelocity;
-		_muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
-	};
+    _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL _unit) select 2);
+    _muzzleVelocityShift = [_ammo, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift);
+    if (_muzzleVelocityShift != 0) then {
+        _bulletVelocity = velocity _bullet;
+        _bulletSpeed = vectorMagnitude _bulletVelocity;
+        _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift * (_bulletSpeed / _muzzleVelocity)));
+        _bullet setVelocity _bulletVelocity;
+        _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
+    };
 };
 
 // TODO: Make _bulletTraceVisible global and toggle it with events
 _bulletTraceVisible = false;
 if (GVAR(BulletTraceEnabled) && currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
-	_opticsName = (primaryWeaponItems ACE_player) select 2;
-	_opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
-	_bulletTraceVisible = (_opticType == 2 || currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]) && cameraView == "GUNNER";
+    _opticsName = (primaryWeaponItems ACE_player) select 2;
+    _opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
+    _bulletTraceVisible = (_opticType == 2 || currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]) && cameraView == "GUNNER";
 };
 
 _caliber = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_caliber");
@@ -99,22 +99,22 @@ _barrelTwist = getNumber(configFile >> "cfgWeapons" >> _weapon >> "ACE_barrelTwi
 _stabilityFactor = 1.5;
 
 if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
-	_temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL _unit) select 2);
-	_barometricPressure = 1013.25 * exp(-(EGVAR(weather,Altitude) + ((getPosASL _bullet) select 2)) / 7990) - 10 * overcast;
-	_stabilityFactor = [_caliber, _bulletLength, _bulletMass, _barrelTwist, _muzzleVelocity, _temperature, _barometricPressure] call FUNC(calculateStabilityFactor);
+    _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL _unit) select 2);
+    _barometricPressure = 1013.25 * exp(-(EGVAR(weather,Altitude) + ((getPosASL _bullet) select 2)) / 7990) - 10 * overcast;
+    _stabilityFactor = [_caliber, _bulletLength, _bulletMass, _barrelTwist, _muzzleVelocity, _temperature, _barometricPressure] call FUNC(calculateStabilityFactor);
 };
 
 _twistDirection = 1;
 if (isNumber(configFile >> "cfgWeapons" >> _weapon >> "ACE_twistDirection")) then {
-	_twistDirection = getNumber(configFile >> "cfgWeapons" >> _weapon >> "ACE_twistDirection");
-	if (_twistDirection != -1 && _twistDirection != 0 &&  _twistDirection != 1) then {
-		_twistDirection = 1;
-	};
+    _twistDirection = getNumber(configFile >> "cfgWeapons" >> _weapon >> "ACE_twistDirection");
+    if (_twistDirection != -1 && _twistDirection != 0 &&  _twistDirection != 1) then {
+        _twistDirection = 1;
+    };
 };
 
 _transonicStabilityCoef = 0.5;
 if (isNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_transonicStabilityCoef")) then {
-	_transonicStabilityCoef = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_transonicStabilityCoef");
+    _transonicStabilityCoef = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_transonicStabilityCoef");
 };
 
 _dragModel = 1;
@@ -122,27 +122,27 @@ _ballisticCoefficients = [];
 _velocityBoundaries = [];
 _atmosphereModel = "ICAO";
 if (GVAR(AdvancedAirDragEnabled)) then {
-	if (isNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_dragModel")) then {
-		_dragModel = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_dragModel");
-		if (!(_dragModel in [1, 2, 5, 6, 7, 8])) then {
-			_dragModel = 1;
-		};
-	};
-	if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ballisticCoefficients")) then {
-		_ballisticCoefficients = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ballisticCoefficients");
-	};
-	if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_velocityBoundaries")) then {
-		_velocityBoundaries = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_velocityBoundaries");
-	};
-	if (isText(configFile >> "cfgAmmo" >> _ammo >> "ACE_standardAtmosphere")) then {
-		_atmosphereModel = getText(configFile >> "cfgAmmo" >> _ammo >> "ACE_standardAtmosphere");
-	};
+    if (isNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_dragModel")) then {
+        _dragModel = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_dragModel");
+        if (!(_dragModel in [1, 2, 5, 6, 7, 8])) then {
+            _dragModel = 1;
+        };
+    };
+    if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ballisticCoefficients")) then {
+        _ballisticCoefficients = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ballisticCoefficients");
+    };
+    if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_velocityBoundaries")) then {
+        _velocityBoundaries = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_velocityBoundaries");
+    };
+    if (isText(configFile >> "cfgAmmo" >> _ammo >> "ACE_standardAtmosphere")) then {
+        _atmosphereModel = getText(configFile >> "cfgAmmo" >> _ammo >> "ACE_standardAtmosphere");
+    };
 };
 
 _index = count GVAR(bulletDatabase);
 if (count GVAR(bulletDatabaseFreeIndices) > 0) then {
-	_index = GVAR(bulletDatabaseFreeIndices) select 0;
-	GVAR(bulletDatabaseFreeIndices) = GVAR(bulletDatabaseFreeIndices) - [_index];
+    _index = GVAR(bulletDatabaseFreeIndices) select 0;
+    GVAR(bulletDatabaseFreeIndices) = GVAR(bulletDatabaseFreeIndices) - [_index];
 };
 
 #ifdef USE_ADVANCEDBALLISTICS_DLL
