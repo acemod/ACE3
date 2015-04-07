@@ -1,5 +1,10 @@
 #include "script_component.hpp"
 
+if( (count _this) > 2) then {
+    EXPLODE_3_PVT((_this select 0),_vehicle,_shooter,_laserTarget);
+    _vehicle setVariable[QGVAR(currentTarget), [], true];
+};
+
 if(isNil QGVAR(laser)) exitWith {
     false
 };
@@ -16,5 +21,7 @@ REM(ACE_LASERS, GVAR(laser));
 deleteVehicle GVAR(laser);
 GVAR(laser) = nil;
 GVAR(laserActive) = false;
+
+
 
 true
