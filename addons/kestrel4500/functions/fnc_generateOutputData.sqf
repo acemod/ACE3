@@ -94,7 +94,7 @@ switch (GVAR(Kestrel4500_Menu)) do {
 	};
 	case 2: { // CROSSWIND
 		if (!GVAR(Kestrel4500_MinAvgMax)) then {
-			_textCenterBig = Str(round(abs(sin(Kestrel4500_RefHeading - _playerDir) * _windSpeed) * 10) / 10);
+			_textCenterBig = Str(round(abs(sin(GVAR(Kestrel4500_RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
 			_textInfoLine1 = format["%1 m/s @ %2", round((cos(_playerDir - _windDir) * _windSpeed) * 10) / 10, round(_playerDir)];
 			_textInfoLine2 = "- set heading";
 		} else {
@@ -121,7 +121,7 @@ switch (GVAR(Kestrel4500_Menu)) do {
 	};
 	case 3: { // HEADWIND
 		if (!GVAR(Kestrel4500_MinAvgMax)) then {
-			_textCenterBig = Str(round(abs(cos(Kestrel4500_RefHeading - _playerDir) * _windSpeed) * 10) / 10);
+			_textCenterBig = Str(round(abs(cos(GVAR(Kestrel4500_RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
 			_textInfoLine1 = format["%1 m/s @ %2", round((cos(_playerDir - _windDir) * _windSpeed) * 10) / 10, round(_playerDir)];
 			_textInfoLine2 = "- set heading";
 		} else {

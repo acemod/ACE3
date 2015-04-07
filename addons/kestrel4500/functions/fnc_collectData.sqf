@@ -57,13 +57,13 @@ if (GVAR(Kestrel4500_MinAvgMaxMode) == 1) then {
 	GVAR(Kestrel4500_TOTAL) set [1, (GVAR(Kestrel4500_TOTAL) select 1) + abs(_windSpeed)];
 
 	// CROSSWIND
-	_crosswind = abs(sin(Kestrel4500_RefHeading - _playerDir) * _windSpeed);
+	_crosswind = abs(sin(GVAR(Kestrel4500_RefHeading) - _playerDir) * _windSpeed);
 	GVAR(Kestrel4500_MIN) set [2, (GVAR(Kestrel4500_MIN) select 2) min _crosswind];
 	GVAR(Kestrel4500_MAX) set [2, _crosswind max (GVAR(Kestrel4500_MAX) select 2)];
 	GVAR(Kestrel4500_TOTAL) set [2, (GVAR(Kestrel4500_TOTAL) select 2) + _crosswind];
 
 	// HEADWIND
-	_headwind = abs(cos(Kestrel4500_RefHeading - _playerDir) * _windSpeed);
+	_headwind = abs(cos(GVAR(Kestrel4500_RefHeading) - _playerDir) * _windSpeed);
 	GVAR(Kestrel4500_MIN) set [3, (GVAR(Kestrel4500_MIN) select 3) min _headwind];
 	GVAR(Kestrel4500_MAX) set [3, _headwind max (GVAR(Kestrel4500_MAX) select 3)];
 	GVAR(Kestrel4500_TOTAL) set [3, (GVAR(Kestrel4500_TOTAL) select 3) + _headwind];
