@@ -1,3 +1,20 @@
+/*
+ * Author: Ruthberg
+ *
+ * Calculates the atmospherically corrected ballistic coefficient
+ *
+ * Arguments:
+ * 0: ballistic coefficient - G1-G7 <float>
+ * 1: temperature - degrees celcius <float>
+ * 2: pressure - hPa <float>
+ * 3: relativeHumidity - value between 0.0 and 1.0 <float>
+ * 4: atmosphereModel - ICAO or ASM <STRING>
+ *
+ * Return Value:
+ * corrected ballistic coefficient <float>
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 #include "defines.h"
 

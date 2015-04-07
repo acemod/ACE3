@@ -1,3 +1,19 @@
+/*
+ * Author: Ruthberg
+ *
+ * Calculates the retardation of the bullet
+ *
+ * Arguments:
+ * 0: drag model - 1-7 <integer>
+ * 1: drag coefficient - bc <float>
+ * 2: velocity - m/s <float>
+ *
+ * Return Value:
+ * 0: retardation - m/(s^2) <float>
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 
 // Source: GNU Exterior Ballistics

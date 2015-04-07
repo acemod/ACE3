@@ -1,6 +1,7 @@
 /*
  * Author: Glowbal, Ruthberg
- * Handles wind deflection for projectiles.
+ *
+ * Handles advanced ballistics for (BulletBase) projectiles
  *
  * Arguments:
  * 0: unit - Object the event handler is assigned to <OBJECT>
@@ -13,9 +14,6 @@
  *
  * Return Value:
  * Nothing
- *
- * Example:
- * [clientFiredBIS-XEH] call ace_winddeflection_fnc_handleFired
  *
  * Public: No
  */

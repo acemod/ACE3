@@ -1,3 +1,16 @@
+/*
+ * Author: Ruthberg
+ *
+ * Calculates the terrain roughness length at a given world position
+ *
+ * Arguments:
+ * 0: _this - world position <posASL>
+ *
+ * Return Value:
+ * 0: roughness length <float>
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_roughness_lengths", "_windSource", "_nearBuildings", "_isWater"];

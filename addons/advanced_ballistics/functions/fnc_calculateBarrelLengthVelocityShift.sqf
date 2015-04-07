@@ -1,3 +1,19 @@
+/*
+ * Author: Ruthberg
+ *
+ * Calculates the muzzle velocity shift caused by different barrel lengths
+ *
+ * Arguments:
+ * 0: ammo - classname <string>
+ * 0: weapon - classname <string>
+ * 1: muzzle velocity - m/s <float>
+ *
+ * Return Value:
+ * 0: muzzle velocity shift - m/s <float>
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 
 private ["_ammo", "_weapon", "_barrelLength", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocity", "_lowerIndex", "_upperIndex", "_barrelLengthRatio", "_muzzleVelocityNew"];

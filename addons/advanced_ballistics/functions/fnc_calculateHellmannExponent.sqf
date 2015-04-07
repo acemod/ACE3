@@ -1,3 +1,16 @@
+/*
+ * Author: Ruthberg
+ *
+ * Calculates the terrain hellmann exponent at a given world position
+ *
+ * Arguments:
+ * 0: _this - world position <posASL>
+ *
+ * Return Value:
+ * 0: hellmann exponent <float>
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_hellmann_exponents", "_hellmann_index", "_windSource", "_nearObjects", "_isWater"];

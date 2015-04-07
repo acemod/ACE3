@@ -1,3 +1,14 @@
+/*
+ * Author: Ruthberg
+ *
+ * Displays a protractor in the top left corner of the screen
+ *
+ * Argument:
+ * None
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 
 #define __dsp (uiNamespace getVariable "RscProtractor")

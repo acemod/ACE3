@@ -1,3 +1,16 @@
+/*
+ * Author: Ruthberg
+ *
+ * Calculates the true wind speed at a given world position
+ *
+ * Arguments:
+ * 0: _this - world position <posASL>
+ *
+ * Return Value:
+ * 0: wind speed - m/s <float>
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_windSpeed", "_windDir", "_height", "_newWindSpeed", "_windSource", "_roughnessLength"];

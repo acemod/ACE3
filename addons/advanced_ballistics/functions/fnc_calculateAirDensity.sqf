@@ -1,3 +1,19 @@
+/*
+ * Author: Ruthberg
+ *
+ * Displays a wind info (colored arrow) in the top left corner of the screen
+ *
+ * Arguments:
+ * 0: temperature - degrees celcius <float>
+ * 1: pressure - hPa <float>
+ * 2: relativeHumidity - value between 0.0 and 1.0 <float>
+ *
+ * Return Value:
+ * 0: density of air - kg * m^(-3) <float>
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 #include "defines.h"
 

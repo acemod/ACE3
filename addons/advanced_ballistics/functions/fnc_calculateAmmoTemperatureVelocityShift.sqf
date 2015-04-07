@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ *
+ * Calculates the ammo temperature induced muzzle velocity shift
+ *
+ * Arguments:
+ * 0: ammo - classname <string>
+ * 1: temperature - degrees celcius <float>
+ *
+ * Return Value:
+ * 0: muzzle velocity shift - m/s <float>
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 
 private ["_ammo", "_temperature", "_muzzleVelocityTable", "_muzzleVelocityShift", "_temperatureIndexA", "_temperatureIndexB", "_temperatureRatio"];

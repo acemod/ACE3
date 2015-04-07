@@ -1,3 +1,23 @@
+/*
+ * Author: Ruthberg
+ *
+ * Calculates the stability factor of a bullet
+ *
+ * Arguments:
+ * 0: caliber - inches <float>
+ * 1: bullet length - inches <float>
+ * 2: bullet mass - grains <float>
+ * 3: barrel twist - inches <float>
+ * 4: muzzle velocity shift - m/s <float>
+ * 5: temperature - degrees celcius <float>
+ * 6: barometric Pressure - hPA <float>
+ *
+ * Return Value:
+ * 0: stability factor <float>
+ *
+ * Public: No
+ */
+ 
 private ["_caliber", "_bulletLength", "_bulletMass", "_barrelTwist", "_muzzleVelocity", "_temperature", "_barometricPressure", "_l", "_t", "_stabilityFactor"];
 _caliber            = _this select 0;
 _bulletLength       = _this select 1;
