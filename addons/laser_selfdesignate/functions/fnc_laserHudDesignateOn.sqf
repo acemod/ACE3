@@ -13,7 +13,7 @@ FUNC(laserHudDesignatePFH) = {
 
     TRACE_1("", _args);
     
-    if(vehicle ACE_player) != _shooter || !alive _shooter || isNull _vehicle || isNull _laserTarget || !GVAR(active) ) exitWith { 
+    if((vehicle ACE_player) != _shooter || !alive _shooter || isNull _vehicle || isNull _laserTarget || !GVAR(active) ) exitWith { 
         [_vehicle, _shooter, _laserTarget] call FUNC(laserHudDesignateOff);
     };
     if(!([_shooter] call FUNC(unitTurretHasDesignator)) ) exitWith {
