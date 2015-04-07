@@ -1,11 +1,10 @@
-ace_winddeflection
+ace_atragmx
 ===============
 
-Wind deflection for projectiles/bullets.
+ATragMX - Handheld ballistics calculator
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [Glowbal](https://github.com/Glowbal)
 - [Ruthberg] (http://github.com/Ulteq)
