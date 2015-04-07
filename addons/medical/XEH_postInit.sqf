@@ -8,7 +8,6 @@ GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "A
 GVAR(heartBeatSounds_Normal) = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
 GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
-["Medical_treatmentCompleted", FUNC(onTreatmentCompleted)] call ace_common_fnc_addEventHandler;
 ["medical_propagateWound", FUNC(onPropagateWound)] call ace_common_fnc_addEventHandler;
 ["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call ace_common_fnc_addEventHandler;
 ["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call ace_common_fnc_addEventHandler;
@@ -134,9 +133,9 @@ GVAR(effectTimeBlood) = time;
 
     _bleeding = ACE_player call FUNC(getBloodLoss);
     // Bleeding Indicator
-    if (_bleeding > 0 and GVAR(effectTimeBlood) + 6 < time) then {
+    if (_bleeding > 0 and GVAR(effectTimeBlood) + 3.5 < time) then {
         GVAR(effectTimeBlood) = time;
-        [500 * _bleeding] call BIS_fnc_bloodEffect;
+        [600 * _bleeding] call BIS_fnc_bloodEffect;
     };
 
     // Blood Volume Effect
