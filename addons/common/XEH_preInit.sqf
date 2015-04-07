@@ -73,6 +73,7 @@ PREP(getStringFromMissionSQM);
 PREP(getTargetAzimuthAndInclination);
 PREP(getTargetDistance);
 PREP(getTargetObject);
+PREP(getTurnedOnLights);
 PREP(getTurretCommander);
 PREP(getTurretConfigPath);
 PREP(getTurretCopilot);
