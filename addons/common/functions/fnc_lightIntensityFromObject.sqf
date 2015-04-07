@@ -96,6 +96,14 @@ if (_lightSource isKindOf "CAManBase") then {
 
     } forEach _lights;
 
+    // handle campfires
+    if (inflamed _lightSource) then {
+        private "_distance";
+        _distance = _unitPos distance position _lightSource;
+
+        _lightLevel = _lightLevel max linearConversion [0, 30, _distance, 0.5, 0, true];
+    };
+
 };
 
 _lightLevel
