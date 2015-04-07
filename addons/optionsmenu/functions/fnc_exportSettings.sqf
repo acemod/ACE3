@@ -44,7 +44,7 @@ _compiledConfig = "
             _value = format['"%1"', _value];
         };
         if (_typeName == "BOOL") then {
-            _value = if (typeOf _value == "BOOL" && {_value}) then {1} else {0};
+            _value = if (typeName _value == "BOOL" && {_value}) then {1} else {0};
         };
         _compiledConfigEntry = format ["
 class %1 {

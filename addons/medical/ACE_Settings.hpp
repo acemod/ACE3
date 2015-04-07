@@ -99,6 +99,16 @@ class ACE_Settings {
         value = 0;
         values[] = {"No", "Yes"};
     };
+    class GVAR(useLocation_PAK) {
+        typeName = "SCALAR";
+        value = 3;
+        values[] = {"Anywhere", "Medical vehicles", "Medical facility", "vehicle & facility", "Disabled"};
+    };
+    class GVAR(useLocation_SurgicalKit) {
+        typeName = "SCALAR";
+        value = 2;
+        values[] = {"Anywhere", "Medical vehicles", "Medical facility", "vehicle & facility", "Disabled"};
+    };
     class GVAR(keepLocalSettingsSynced) {
         typeName = "BOOL";
         value = 1;

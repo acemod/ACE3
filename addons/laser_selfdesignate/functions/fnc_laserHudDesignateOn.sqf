@@ -1,9 +1,9 @@
-// #define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 TRACE_1("enter", _this);
 
-#define FCS_UPDATE_DELAY 2.0
+#define FCS_UPDATE_DELAY 1
 
 FUNC(magnitude) = {
      _this distance [0, 0, 0]
@@ -68,14 +68,13 @@ FUNC(laserHudDesignatePFH) = {
                 ["ace_fcs_forceUpdate", []] call ace_common_fnc_localEvent;
             };
             
-            if( ((getPosASL _laserTarget) vectorDistance _pos) > 2) then {
+            if( (_laserTarget distance _pos) > 0.1) then {
                 TRACE_1("LaserPos Update", "");
                 _laserTarget setPosATL (ASLToATL _pos);
-                
-           };
+            };
             
             if(diag_tickTime > _forceUpdateTime) then {
-                 _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
+                 _args set[2, diag_tickTime + FCS_UPDATE_DELAY];
             };
 #ifdef DEBUG_MODE_FULL
             drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], (getPosATL _laserTarget), 0.75, 0.75, 0, "", 0.5, 0.025, "TahomaB"];
@@ -101,7 +100,7 @@ if(isNil QGVAR(laser)) then {
     
     GVAR(laserActive) = true;
     
-    _handle = [FUNC(laserHudDesignatePFH), 0, [_laserTarget, player]] call cba_fnc_addPerFrameHandler;
+    _handle = [FUNC(laserHudDesignatePFH), 0.1, [_laserTarget, player]] call cba_fnc_addPerFrameHandler;
     _laserTarget setVariable ["ACE_PFH_HANDLE", _handle, false];
     
     GVAR(laser) = _laserTarget;

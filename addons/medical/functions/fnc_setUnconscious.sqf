@@ -37,7 +37,6 @@ if (!local _unit) exitwith {
 _unit setvariable ["ACE_isUnconscious", true, true];
 _unit setUnconscious true;
 
-// @todo: mute player?
 if (_unit == ACE_player) then {
     if (visibleMap) then {openMap false};
     closeDialog 0;

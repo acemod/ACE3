@@ -24,5 +24,5 @@ _className = _this select 3;
 [_target, false] call FUNC(setUnconscious);
 
 if (_target getvariable [QGVAR(inReviveState), false]) then {
-	_target setvariable [QGVAR(inReviveState), nil, true];
+    _target setvariable [QGVAR(inReviveState), nil, true];
 };

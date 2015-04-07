@@ -1,18 +1,18 @@
 /*
-	Author(s):
-		Garth de Wet (LH)
+    Author(s):
+        Garth de Wet (LH)
 
-	Description:
-		Hides the interaction helper text with the mouse buttons at the bottom middle of the screen
+    Description:
+        Hides the interaction helper text with the mouse buttons at the bottom middle of the screen
 
-	Parameters:
-		Nothing
+    Parameters:
+        Nothing
 
-	Returns:
-		Nothing
+    Returns:
+        Nothing
 
-	Example:
-		call FUNC(hideMouseHint);
+    Example:
+        call FUNC(hideMouseHint);
 */
 #include "script_component.hpp"
 
