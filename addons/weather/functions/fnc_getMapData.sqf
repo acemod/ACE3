@@ -11,8 +11,8 @@
  */
 #include "script_component.hpp"
 
-GVAR(Altitude) = -getNumber(configFile >> "CfgWorlds" >> worldName >> "elevationOffset");
-GVAR(Latitude) = -getNumber(configFile >> "CfgWorlds" >> worldName >> "latitude");
+GVAR(Altitude) = getNumber(configFile >> "CfgWorlds" >> worldName >> "elevationOffset");
+GVAR(Latitude) = getNumber(configFile >> "CfgWorlds" >> worldName >> "latitude");
 
 if (worldName in ["Chernarus", "Bootcamp_ACR", "Woodland_ACR", "utes"]) then { GVAR(Latitude) = 50; GVAR(Altitude) = 0; };
 if (worldName in ["Altis", "Stratis"]) then { GVAR(Latitude) = 40; GVAR(Altitude) = 0; };
