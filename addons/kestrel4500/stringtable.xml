@@ -16,8 +16,14 @@
         <Key ID="STR_ACE_Kestrel_Description">
           <English>Kestrel 4500 Pocket Weather Tracker</English>
         </Key>
-        <Key ID="STR_ACE_Kestrel4500_OpenKestrelDialog">
+        <Key ID="STR_ACE_Kestrel4500_OpenKestrel">
           <English>Open Kestrel 4500</English>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_ShowKestrel">
+          <English>Show Kestrel 4500</English>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_HideKestrel">
+          <English>Hide Kestrel 4500</English>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_KestrelDialogKey">
           <English>Open Kestrel 4500</English>

@@ -2,14 +2,34 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
-            class ACE_OpenKestrel4500 {
-                displayName = "$STR_ACE_Kestrel4500_OpenKestrelDialog";
-                condition = QUOTE('ACE_Kestrel4500' in items _player && {!GVAR(Kestrel4500)});
-                statement = QUOTE(call FUNC(createKestrelDialog));
-                showDisabled = 0;
-                priority = 2;
-                icon = PATHTOF(UI\Kestrel4500_Icon.paa);
-                hotkey = "K";
+            class ACE_Equipment {
+                class GVAR(open) {
+                    displayName = "$STR_ACE_Kestrel4500_OpenKestrel";
+                    condition = QUOTE(call FUNC(canShow) && !GVAR(Kestrel4500));
+                    statement = QUOTE(call FUNC(createKestrelDialog));
+                    showDisabled = 0;
+                    priority = 0.1;
+                    icon = QUOTE(PATHTOF(UI\Kestrel4500_Icon.paa));
+                    exceptions[] = {"notOnMap"};
+                };
+                class GVAR(show) {
+                    displayName = "$STR_ACE_Kestrel4500_ShowKestrel";
+                    condition = QUOTE(call FUNC(canShow) && !GVAR(Kestrel4500_Overlay));
+                    statement = QUOTE(call FUNC(displayKestrel));
+                    showDisabled = 0;
+                    priority = 0.2;
+                    icon = QUOTE(PATHTOF(UI\Kestrel4500_Icon.paa));
+                    exceptions[] = {"notOnMap"};
+                };
+                class GVAR(hide) {
+                    displayName = "$STR_ACE_Kestrel4500_HideKestrel";
+                    condition = QUOTE(GVAR(Kestrel4500_Overlay));
+                    statement = QUOTE(call FUNC(displayKestrel));
+                    showDisabled = 0;
+                    priority = 0.3;
+                    icon = QUOTE(PATHTOF(UI\Kestrel4500_Icon.paa));
+                    exceptions[] = {"notOnMap"};
+                };
             };
         };
     };

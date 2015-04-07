@@ -26,6 +26,7 @@ createDialog 'Kestrel4500_Display';
 
 [{
     if (!dialog || !GVAR(Kestrel4500)) exitWith {
+        GVAR(Kestrel4500) = false;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
     

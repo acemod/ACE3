@@ -3,6 +3,7 @@
 ADDON = false;
 
 PREP(buttonPressed);
+PREP(canShow);
 PREP(collectData);
 PREP(createKestrelDialog);
 PREP(displayKestrel);
