@@ -46,7 +46,8 @@ if (_lightSource isKindOf "CAManBase") then {
         default {""};
     };
 
-    _properties = [_flashlight] call FUNC(getLightPropertiesWeapon);
+    _properties = [[_flashlight], FUNC(getLightPropertiesWeapon), uiNamespace, format [QEGVAR(cache,%1_%2), QUOTE(DFUNC(getLightPropertiesWeapon)), _flashlight], 1E11] call FUNC(cachedCall);
+    //_properties = [_flashlight] call FUNC(getLightPropertiesWeapon);
 
     _innerAngle = (_properties select 3) / 2;
     _outerAngle = (_properties select 4) / 2;
@@ -70,7 +71,8 @@ if (_lightSource isKindOf "CAManBase") then {
     {
         private ["_properties", "_intensity", "_innerAngle", "_outerAngle", "_position", "_direction", "_directionToUnit", "_distance", "_angle"];
 
-        _properties = [_lightSource, _x] call FUNC(getLightProperties);
+        _properties = [[_lightSource, _x], FUNC(getLightProperties), uiNamespace, format [QEGVAR(cache,%1_%2_%3), QUOTE(DFUNC(getLightProperties)), typeOf _lightSource, _x], 1E11] call FUNC(cachedCall);
+        //_properties = [_lightSource, _x] call FUNC(getLightProperties);
 
         // @todo intensity affects range?
         //_intensity = _properties select 0;
