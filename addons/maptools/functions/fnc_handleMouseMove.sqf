@@ -37,7 +37,7 @@ if (GVAR(drawing_isDrawing)) exitWith {
 };
 
 // Handle Map tools
-if (isNil QGVAR(mapTool_markerRotatingFixed)) exitWith {false};
+if (GVAR(mapTool_Shown) == 0) exitWith {false};
 
 // Translation
 if (GVAR(mapTool_isDragging)) exitWith {

@@ -18,13 +18,6 @@ if (GVAR(mapVisableLastFrame) && (!visibleMap)) then {
   GVAR(mapVisableLastFrame) = false;
   // Hide GPS
   [false] call FUNC(openMapGps);
-  // Hide Map tools
-  deleteMarkerLocal MARKERNAME_MAPTOOL_FIXED;
-  deleteMarkerLocal MARKERNAME_MAPTOOL_ROTATINGNORMAL;
-  deleteMarkerLocal MARKERNAME_MAPTOOL_ROTATINGSMALL;
-  GVAR(mapTool_markerRotatingFixed) = nil;
-  GVAR(mapTool_markerRotatingNormal) = nil;
-  GVAR(mapTool_markerRotatingSmall) = nil;
   // Cancel drawing
   call FUNC(cancelDrawing);
 };
