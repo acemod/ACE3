@@ -8,23 +8,23 @@ order: 3
 
 ## Event Handlers
 
-Event handlers in ACE3 are implemented through our event system. They should be used to trigger or allow triggering of specific functionality.
+Event handlers in ACE are implemented through our event system. They should be used to trigger or allow triggering of specific functionality.
 
 The commands are listed below.
 
-* `[eventName, eventCodeBlock] call ace_common_fnc_addEventHandler` <br/> adds an event handler with the event name and returns the event handler id.
-* `[eventName, args] call ace_common_fnc_globalEvent` <br/> calls an event with the listed args on all machines, the local machine, and the server.
-* `[eventName, args] call ace_common_fnc_serverEvent` <br/> calls an event just on the server computer (dedicated or self-hosted).
-* `[eventName, targetObject(s), args] call ace_common_fnc_targetEvent` <br/> calls an event just on the targeted object or list of objects.
-* `[eventName, args] call ace_common_fnc_localEvent` <br/> calls an event just on the local machine, useful for inter-module events.
+* `[eventName, eventCodeBlock] call ace_common_fnc_addEventHandler` adds an event handler with the event name and returns the event handler id.
+* `[eventName, args] call ace_common_fnc_globalEvent` calls an event with the listed args on all machines, the local machine, and the server.
+* `[eventName, args] call ace_common_fnc_serverEvent` calls an event just on the server computer (dedicated or self-hosted).
+* `[eventName, targetObject(s), args] call ace_common_fnc_targetEvent` calls an event just on the targeted object or list of objects.
+* `[eventName, args] call ace_common_fnc_localEvent` calls an event just on the local machine, useful for inter-module events.
 
 Events can be removed or cleared with the following commands.
 
-* `[eventName, eventHandlerId] call ace_common_fnc_removeEventHandler` <br/> will remove a specific event handler of the event name, using the ID returned from `ace_common_fnc_addEventHandler`.
-* `[eventName] call ace_common_fnc_removeAllEventHandlers` <br/> will remove all event handlers for that type of event.
+* `[eventName, eventHandlerId] call ace_common_fnc_removeEventHandler` will remove a specific event handler of the event name, using the ID returned from `ace_common_fnc_addEventHandler`.
+* `[eventName] call ace_common_fnc_removeAllEventHandlers` will remove all event handlers for that type of event.
 
 ### Pattern:
-```js
+```
 // tapper machine
 ["tapShoulder", [_target], [otherArguments]] call EFUNC(common,targetEvent);
 
@@ -33,7 +33,7 @@ PREP(onTapShoulder);
 ["tapShoulder", FUNC(onTapShoulder) ] call EFUNC(common,addEventHandler);
 ```
 
-### Event List:
+### Listenable Event List:
 <table>
     <thead>
         <tr>
@@ -144,5 +144,28 @@ PREP(onTapShoulder);
             <td>grenades</td>
             <td>target</td>
         </tr> 
+    </tbody>
+</table>
+
+### Callable Event List:
+<table>
+    <thead>
+        <tr>
+            <th>Event Key</th>
+            <th>Description</th>
+            <th>Parameters</th>
+            <th>Owner</th>
+            <th>Locality</th>
+        </tr>
+    </thead>
+    <tbody>
+         <tr>
+            <td>"ace_fcs_forceChange"</td>
+            <td>force FCS updates</td>
+            <td>fcs</td>
+            <td>fcs</td>
+            <td>local</td>
+        </tr>
+        </tr>   
     </tbody>
 </table>

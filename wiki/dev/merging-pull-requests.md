@@ -24,7 +24,7 @@ If the changes consists of trivial changes, such as spelling or indentation fixe
 +    valueC = 2;
 ```
 
-&hellip; can be merged right away by one of the maintainers.
+... the PR can be merged right away by one of the maintainers.
 
 Non-trivial pull requests remain open for a minimum of 48 hours, to give all other contributors time to comment on potential issues, and are then merged by a maintainer, should no issues arise.
 

@@ -6,15 +6,14 @@ parent: wiki
 order: 7
 ---
 
-The fragmentation system (sys_frag) in ACE3 is a significant improvement over the fragmentation system in ACE2. Previously the system relied on fuzzy math from the values of `indirectHit` and `indirectHitRange` in CfgAmmo to calculate roughly the velocity and range of fragmentation. This had some serious drawbacks, especially in the case of smaller explosives such as hand grenades and 40mm grenades where casualty production was lower than desired.
+The fragmentation system (sys_frag) in ACE3 is a significant improvement over the fragmentation system in ACE2. Previously the system relied in fuzzy math from the values of `indirectHit` and `indirectHitRange` in CfgAmmo to calculate roughly the velocity and range of fragmentation. This had some serious drawbacks, especially in the case of smaller explosives such as hand grenades and 40mm grenades where casualty production was lower than desired.
 
-In ACE3 the system has moved away from what "feels" right to actual explosive engineering equations, primarily the [Gurney equations]([http://en.wikipedia.org/wiki/Gurney_equations). This allows us to get close to the actual fragmentation velocities that would be produced by an explosive configuration similar to type of ammo we are simulating.
+In ACE3 the system has moved away from what "feels" right to actual explosive engineering equations, primarily the Gurney equations (http://en.wikipedia.org/wiki/Gurney_equations). This allows us to get close to the actual fragmentation velocities that would be produced by an explosive configuration similar to type of ammo we are simulating.
 
 The system for the end-developer is easy to use, and only requires minimal research into the type of ammo being represented. I will describe how to do this in this ticket.
 
 Below is an example set of explosives configuration properties for sys_frag (in this case an M67 hand grenade):
-
-```js
+```
 ACE_FRAG_METAL = 210;     // metal in grams
 ACE_FRAG_CHARGE = 185;    // explosive in grams
 ACE_FRAG_GURNEY_C = 2843; // Gurney velocity constant for explosive type. See: http://en.wikipedia.org/wiki/Gurney_equations
@@ -25,23 +24,21 @@ ACE_FRAG_GURNEY_K = 3/5;  // Gurney shape factor, in this case a sphere. See: ht
 
 `ACE_FRAG_GURNEY_C` is the Gurney constant for explosive force. You can find a list of common explosive types below. If you can not find it here, or want more accurate numbers, just google the type of explosive and Gurney constant and you can find substantial information. This is *NOT* the detonation velocity of the explosive, do not confuse them!
 
-
-| Type             | Speed    |
-|------------------|----------|
-|Composition B     | 2700 m/s |
-|Composition C-3   | 2680 m/s |
-|Cyclotol 75/25    | 2790 m/s |
-|HMX               | 2800 m/s |
-|LX-14             | 2970 m/s |
-|Octol 75/25       | 2800 m/s |
-|PBX 9404          | 2900 m/s |
-|PBX 9502          | 2377 m/s |
-|PETN              | 2930 m/s |
-|RDX               | 2830 m/s |
-|Tetryl            | 2500 m/s |
-|TNT               | 2440 m/s |
-|Tritonal          | 2320 m/s |
-
+```
+Composition B      2700m/s
+Composition C-3    2680m/s
+Cyclotol 75/25     2790m/s
+HMX                2800m/s
+LX-14              2970m/s
+Octol 75/25        2800m/s
+PBX 9404           2900m/s
+PBX 9502           2377m/s
+PETN               2930m/s
+RDX                2830m/s
+Tetryl             2500m/s
+TNT                2440m/s
+Tritonal           2320m/s
+```
 
 `ACE_FRAG_GURNEY_K` is the shape factor for the explosive configuration. You should choose it based on the general configuration of explosives/metal in the warhead. Most grenades for example are a sphere. Artillery and aircraft bombs are a cylinder. Mines generally a flat plate. Below is a list of the three common shapes and their factors.
 

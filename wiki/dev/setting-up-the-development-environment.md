@@ -6,75 +6,98 @@ parent: wiki
 order: 0
 ---
 
-The folder structure and pathing here is setup in such a way that you can quickly and easily setup your environment to allow for dynamic loading of changes, and also your build environment is set up at the same time. Our structure allows you to basically dynamically load modules for testing, as well as quick building/rebuilding of PBO's.
+This page describes how you can setup your development environment for ACE3, allowing you to properly build ACE and utilize file patching.
 
-## What This Allows Us To Do
 
-Using this set up allows you to do dynamic editing of files existing within an addon while the game is running, just requiring a mission reload for the changes to take affect. So, for example, you can use a test mission which is calling `ACE_boobAddon_fnc_balls`, this set up you can dynamically edit that file directly in your source tree and then reload your mission, and the changes take affect.
+## Contents
+- [Requirements](#requirements)
+- [Why so complicated?](#why-so-complicated)
+- [Getting ACE](#getting-ace)
+- [Initial Setup](#initial-setup)
+  - [Manual Setup](#manual-setup)
+- [Creating a Test Build](#creating-a-test-build)
+- [Creating a Release Build](#creating-a-release-build)
+- [File Patching](#file-patching)
+  - [Enabling File Patching](#enabling-file-patching)
+  - [Restrictions of File Patching](#restrictions-of-file-patching)
 
-*New Files and Config changes do not take affect here* - If you add a SQF, or make changes to a Config file, you'll need to reload your game unless you are using the dev branch.
 
-## Initial Installations
+## Requirements
 
-We will be making the following assumptions for the sake of this article on where you have things installed:
+- Arma 3 (duh)
+- A proper installation of the Arma 3 Tools (available on Steam)
+- A properly setup P-drive
+- Python 3.x, available [here](http://www.python.org)
+- The following Mikero Tools (available [here](https://dev.withsix.com/projects/mikero-pbodll/files)): DePBO, Rapify, MakePBO, PBOProject
+- A properly setup PATH variable (containing Python and the Mikero tools)
 
-  1. Arma 3 Install: `C:\Program Files (x86)\Steam\steamapps\common\Arma 3`
-  2. Arma 3 Tools: `C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools`
-  3. Mikero's tools must be installed. Specifically, makepbo is used for dev testing builds. These must be in your `PATH` variable
-  4. Your clone of the ACE3 git repository is `c:\dev\ace3`
-  5. The P: drive is setup correctly.
-  6. Install mikeros makepbo from `https://dev.withsix.com/projects/mikero-pbodll/files`
-  7. Git pull the latest version to that same folder from `git://git.withsix.com/pbodll-release.git`
 
-## Setting Up Your Links
+## Why so complicated?
 
-With our folder structure, we can configure an entire development/testing setup with just a few windows symbolic links. This allows us to load "uncompiled" addon code and dynamically test in the mission editor (called file patching in Arma technical terms). We will need to link our ACE3 development folder in the Arma 3 and P: directories.
+If you have contributed to AGM you might be used to an easier build process, where there was even an .exe you could use for building. ACE3, however, makes use of CBA macros to simplify things and give the developer access to a better debug process, which requires a stricter build environment. Additionally, Mikero's tools are stricter and report more errors than AddonBuilder does. The structure of this development environment also allows for [file patching](#file-patching), which is very useful for debugging.
 
-Make the `\z` folder first in both locations.
-You will need to run the following commands in a command prompt window as Administrator:
+Not offering .exes for the Python scripts we use allows us to make easy changes without the hassle of compiling self-extracting exes all the time. Additionally, having Python installed is always nice, as it is a very powerful scripting language.
 
-**Windows 8**:
 
-```powershell
-mklink /D /J "C:\Program Files (x86)\Steam\steamapps\common\Arma 3\z\ace" "C:\dev\ACE3"
-mklink /D /J "P:\z\ace" "C:\dev\ACE3"
+## Getting ACE
+
+To actually get the ACE source code on your machine, it is recommended that you use Git. Tutorials for this are all around the web, and it allows you to track your changes and easily update your local copy.
+
+If you just want to create a quick and dirty build, you can also directly download the source code using the "Download ZIP" button on the front page of the GitHub repo.
+
+
+## Initial Setup
+
+After ensuring that you have installed all requirements, execute the `setup.py` script found in the `tools` folder. This will do most of the heavy lifting for you, create the links you need and copy the required CBA code to the proper place. Please note that these links are tied to the location of your ACE3 source code, so make sure that the project folder is where you want it to be. We recommend that you store the ACE3 project on your P-drive.
+
+#### Manual Setup
+
+Should the script fail, here is how you create the required links manually:
+
+First, to set up the links, create `z` folders both in your Arma 3 directory and on your P-drive. Then run the following commands as admin, replacing the text in brackets with the appropriate paths:
+
+Windows 8:
+```batch
+mklink /D /J "[Arma 3 installation folder]\z\ace" "[location of the ACE3 project]"
+mklink /D /J "P:\z\ace" "[location of the ACE3 project]"
 ```
 
-**Windows 7 and Vista**:
-
-```powershell
-mklink /D "C:\Program Files (x86)\Steam\steamapps\common\Arma 3\z\ace" "C:\dev\ACE3"
-mklink /D "P:\z\ace" "C:\dev\ACE3"
+Windows 7 and Vista:
+```batch
+mklink /D "[Arma 3 installation folder]\z\ace" "[location of the ACE3 project]"
+mklink /D "P:\z\ace" "[location of the ACE3 project]"
 ```
 
-## How To Use It
+Then, copy the `cba` folder from the `tools` folder to `P:\x\cba`. Create the `x` folder if needed. That folder contains the part of the CBA source code that are required for the macros to work.
 
-You'll still need pbo's created - use the tools\build.bat file for quick, unbinarized building.  we'll need the pbo's build and present in your c:\dev\ace3\addons\ folder just as if it were the real addons folder.
 
-After the pbo's are built, you will change your modline to load the following instead:
+## Creating a Test Build
 
-```powershell
+To create a development build of ACE to test changes or to debug something, run the `build.bat` file in the `tools` folder. This will populate the `addons` folder with binarized PBOs. These PBOs still point to the source files in their respective folders however, which allows you to use [file patching](#file-patching).
+
+This also means that you cannot distribute this build to others.
+
+To start the game using this build, you can use the following modline:
+
+```
 -mod=@cba_a3;z\ace
 ```
 
-This will load our new linked structure, directly from the source tree, instead of the actual addon (folder @ace3).
 
-## Restrictions
+## Creating a Release Build
 
-Files must exist in the built pbo's for filepatching to work. If you create a new file you must rebuild the PBO or Arma will not find it in your file paths.
-
-Configs are not patched during run time, only at load time. You do not have have to rebuild a PBO to make config changes, just restart Arma. You can get around this though if you are on the dev branch of Arma 3 and running the diagnostic exe. That includes `diag_mergeConfig` which takes a full system path (as in `p:\z\ace\addons\my_module\config.cpp`) and allows you selectivly reload config files.
-
-*If you need to add/remove files* Then you'll need to run build.bat again without the game running, and restart. That is all that is required to add new files to then further use in testing.
+To create a complete build of ACE that you can use without the source files, run the `make.py` file in the `tools` folder. This will populate the `release` folder with binarized PBOs that you can redistribute. These handle like those of any other mod.
 
 
-## Enabling File Patching
+## File Patching
 
-You have two options for file patching to work:
+File Patching allows you to change the files in an addon while the game is running, requiring only a restart of the mission. This makes it great for debugging, as it cuts down the time required between tests. Note that this only works with PBOs created using MakePBO, as outlined in [Creating a Test Build](#creating-a-test-build).
 
-  * You can load `cba_cache_disable.pbo`
-  * Add the following to your test missions description.ext
+#### Enabling File Patching
 
+There are two ways to enable file patching:
+- Load cba_cache_disable.pbo (included in CBA's optional folder)
+- Add the following to your test missions description.ext:
 ```cpp
 class CfgSettings {
     class CBA {
@@ -86,3 +109,11 @@ class CfgSettings {
     };
 };
 ```
+
+#### Restrictions of File Patching
+
+Files must exist in the built PBOs for filepatching to work. If you create a new file you must rebuild the PBO or Arma will not find it in your file paths.
+
+Configs are not patched during run time, only at load time. You do not have have to rebuild a PBO to make config changes, just restart Arma. You can get around this though if you are on the dev branch of Arma 3 and running the diagnostic exe. That includes `diag_mergeConfig` which takes a full system path (as in `p:\z\ace\addons\my_module\config.cpp`) and allows you selectivly reload config files.
+
+If you need to add/remove files* Then you'll need to run build.bat again without the game running, and restart. That is all that is required to add new files to then further use in testing.
