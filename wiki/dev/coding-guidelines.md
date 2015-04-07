@@ -104,7 +104,7 @@ Functions should be created in the functions\ subdirectory, named `fnc_FunctionN
 
 Every function should have a header of the following format:
 
-```sqf
+```cpp
 /*
  * Author: [Name of Author(s)]
  * [Description]
