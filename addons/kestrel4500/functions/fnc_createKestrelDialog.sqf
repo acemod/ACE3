@@ -1,3 +1,17 @@
+/*
+ * Author: Ruthberg
+ * Opens the Kestrel 4500 dialog
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 if (dialog) exitWith { false };

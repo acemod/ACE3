@@ -1,3 +1,17 @@
+/*
+ * Author: Ruthberg
+ * Generates the Kestrel 4500 output text.
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * [top <STRING>, centerBig <STRING>, CenterLine1Left <STRING>, CenterLine2Left <STRING>, CenterLine3Left <STRING>, CenterLine1Right <STRING>, CenterLine2Right <STRING>, CenterLine3Right <STRING>, InfoLine1 <STRING>, InfoLine2 <STRING>]
+ *
+ * Example:
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 #include "defines.h"
 

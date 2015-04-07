@@ -1,3 +1,17 @@
+/*
+ * Author: Ruthberg
+ * Gathers the weather data for the Kestrel 4500
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 #include "defines.h"
 

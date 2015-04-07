@@ -1,3 +1,17 @@
+/*
+ * Author: Ruthberg
+ * Shows the Kestrel 4500 as rsc title
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 #define __dsp (uiNamespace getVariable "RscKestrel4500")

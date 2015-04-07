@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Handles the Kestrel 4500 dialog button actions
+ *
+ * Arguments:
+ * buttonID <integer>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * 2 call ace_kestrel4500_fnc_buttonPressed
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 switch (_this) do {

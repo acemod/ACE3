@@ -1,3 +1,17 @@
+/*
+ * Author: Ruthberg
+ * Updates the Kestrel 4500 dialog text boxes.
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_outputData"];
