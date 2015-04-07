@@ -9,6 +9,7 @@ PREP(calculate_solution);
 PREP(calculate_target_range_assist);
 PREP(calculate_target_solution);
 PREP(calculate_target_speed_assist);
+PREP(canShow);
 PREP(change_gun);
 PREP(create_dialog);
 PREP(cycle_range_card_columns);

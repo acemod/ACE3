@@ -2,14 +2,15 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
-            class ACE_OpenATragMX {
-                displayName = "$STR_ACE_ATragMX_OpenATragMXDialog";
-                condition = QUOTE('ACE_ATragMX' in items _player && {!GVAR(ATragMX)});
-                statement = QUOTE(call FUNC(create_dialog));
-                showDisabled = 0;
-                priority = 2;
-                icon = PATHTOF(UI\ATRAG_Icon.paa);
-                hotkey = "K";
+            class ACE_Equipment {
+                class GVAR(open) {
+                    displayName = "$STR_ACE_ATragMX_OpenATragMXDialog";
+                    condition = QUOTE(call FUNC(canShow));
+                    statement = QUOTE(call FUNC(create_dialog));
+                    showDisabled = 0;
+                    priority = 2;
+                    icon = PATHTOF(UI\ATRAG_Icon.paa);
+                };
             };
         };
     };

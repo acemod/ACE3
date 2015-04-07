@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-#include "initKeybinds.sqf"
+//#include "initKeybinds.sqf"
 
 if (count (profileNamespace getVariable ["ACE_ATragMX_gunList", []]) > 0) then {
 	GVAR(ATragMX_gunList) = profileNamespace getVariable "ACE_ATragMX_gunList";
