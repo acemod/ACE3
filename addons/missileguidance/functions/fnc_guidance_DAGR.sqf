@@ -44,29 +44,26 @@ FUNC(guidance_DIRECT_LOAL_PFH) = {
             
             _targetPos = _targetPos vectorAdd _addHeight;
 
-            _def = 0.0040;
-            if(_distanceToShooter > 100) then {
-                _def = 0.0025;
-            };
+            _deflection = 0.015;
             
             _targetVectorSeeker = [_dagr, [_xVec, _yVec, _zVec], _targetPos] call FUNC(translateToWeaponSpace);
             // _targetVectorSeeker = _dagr worldToModel (ASLtoATL _targetPos);
             // _targetVectorSeeker = [0,0,0] vectorFromTo _targetVectorSeeker;
             _yaw = 0.0;
             if((_targetVectorSeeker select 0) < 0) then {
-                _yaw = -_def;
+                _yaw = -_deflection;
             } else {
                 if((_targetVectorSeeker select 0) > 0) then {
-                    _yaw = _def;
+                    _yaw = _deflection;
                 };
             };
             
             _pitch = 0.0;
             if((_targetVectorSeeker select 2) < 0) then {
-                _pitch = -_def;
+                _pitch = -_deflection;
             } else {
                 if((_targetVectorSeeker select 2) > 0) then {
-                    _pitch = _def;
+                    _pitch = _deflection;
                 };
             };
     #ifdef DEBUG_MODE_FULL
@@ -104,7 +101,7 @@ FUNC(guidance_DAGR_DIRECT_LOAL) = {
     PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
     
     GVAR(lastTime) = time;
-    [FUNC(guidance_DIRECT_LOAL_PFH), 0, _this] call cba_fnc_addPerFrameHandler;
+    [FUNC(guidance_DIRECT_LOAL_PFH), 0.1, _this] call cba_fnc_addPerFrameHandler;
 };
 
 PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
