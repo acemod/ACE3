@@ -17,6 +17,6 @@
 
 private ["_returnValue"];
 
-_returnValue = ("ACE_ATragMX" in (items ACE_player)) && {[ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)} && {!(underwater ACE_player)};
+_returnValue = (("ACE_ATragMX" in (uniformItems ACE_player)) || ("ACE_ATragMX" in (vestItems ACE_player))) && !(underwater ACE_player);
 
 _returnValue
