@@ -6,7 +6,7 @@ class CfgWorlds {
     class Stratis: CAWorld {
         class Grid: Grid {
             class Zoom1 {
-                zoomMax = 0.02;
+                zoomMax = 1e-030;
                 format = "XY";
                 formatX = "0000";
                 formatY = "0000";
@@ -42,7 +42,7 @@ class CfgWorlds {
     class Altis: CAWorld {
         class Grid: Grid {
             class Zoom1 {
-                zoomMax = 0.005;
+                zoomMax = 1e-030;
                 format = "XY";
                 formatX = "0000";
                 formatY = "0000";
