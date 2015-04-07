@@ -20,8 +20,6 @@ GVAR(ProtractorStart) = time;
 
 GVAR(SimulationPrecision) = 1;
 
-GVAR(INIT_MESSAGE_ENABLED) = true;
-
 GVAR(WindEnabled) = true;
 GVAR(SpinDriftEnabled) = true;
 GVAR(CoriolisEnabled) = true;
@@ -33,6 +31,7 @@ GVAR(BulletTraceEnabled) = true;
 GVAR(AtmosphericDensitySimulationEnabled) = true;
 GVAR(BarrelLengthInfluenceEnabled) = true;
 GVAR(VehicleGunnerEnabled) = true;
-GVAR(ExtensionsEnabled) = false;
+
+GVAR(INIT_MESSAGE_ENABLED) = false;
 
 [] call FUNC(initializeTerrainExtension);

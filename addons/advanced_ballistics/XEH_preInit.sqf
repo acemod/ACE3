@@ -12,7 +12,6 @@ PREP(calculateStabilityFactor);
 PREP(calculateWindSpeed);
 PREP(displayProtractor);
 PREP(handleFired);
-PREP(handleFiredExtension);
 PREP(initializeTerrainExtension);
 
 ADDON = true;
