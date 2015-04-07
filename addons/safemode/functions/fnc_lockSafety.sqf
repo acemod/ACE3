@@ -55,9 +55,13 @@ if (_unit getVariable [QGVAR(actionID), -1] == -1) then {
 
 _unit selectWeapon _muzzle;//_weapon
 
-// play fire mode selector sound
-[_unit, _weapon, _muzzle] call FUNC(playChangeFiremodeSound);
+if (!GVAR(safetyLockedOnInteract)) then {
+  // play fire mode selector sound
+  [_unit, _weapon, _muzzle] call FUNC(playChangeFiremodeSound);
 
-private "_picture";
-_picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
-[localize "STR_ACE_SafeMode_PutOnSafety", _picture] call EFUNC(common,displayTextPicture);
+  if (GVAR(displaySafetyText)) then {
+    private "_picture";
+    _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
+    [localize "STR_ACE_SafeMode_PutOnSafety", _picture] call EFUNC(common,displayTextPicture);
+  };
+};
