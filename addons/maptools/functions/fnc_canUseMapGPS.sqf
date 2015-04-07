@@ -1,5 +1,15 @@
-// by esteldunedain
-
+/*
+ * Author: esteldunedain
+ * canUseMapGPS
+ *
+ * Arguments:
+ * None
+ *
+ * Return value:
+ * <BOOL>
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 visibleMap &&

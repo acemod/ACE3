@@ -7,8 +7,9 @@
  *
  * Return value:
  * Nothing
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
 #define TEXTURE_WIDTH_IN_M    6205
