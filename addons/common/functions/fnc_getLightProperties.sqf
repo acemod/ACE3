@@ -20,18 +20,11 @@ _light = _this select 1;
 private "_config";
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle >> "Reflectors" >> _light;
 
-// world position and direction
-private ["_position", "_direction"];
-
-_position = _vehicle modelToWorld (_vehicle selectionPosition getText (_config >> "position"));
-_direction = _vehicle modelToWorld (_vehicle selectionPosition getText (_config >> "direction"));
-
-_direction = _position vectorFromTo _direction;
-
-// Intensity, angles
-private ["_intensity", "_innerAngle", "_outerAngle"];
+private ["_intensity", "_position", "_direction", "_innerAngle", "_outerAngle"];
 
 _intensity = getNumber (_config >> "intensity");
+_position = getText (_config >> "position");
+_direction = getText (_config >> "direction");
 _innerAngle = getNumber (_config >> "innerAngle");
 _outerAngle = getNumber (_config >> "outerAngle");
 
