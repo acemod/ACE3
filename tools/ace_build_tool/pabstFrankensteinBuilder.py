@@ -48,6 +48,7 @@ import hashlib
 import configparser
 import json
 import traceback
+import time
 
 if sys.platform == "win32":
 	import winreg
@@ -180,9 +181,10 @@ def find_bi_tools(work_drive):
 	addonbuilder_path = os.path.join(arma3tools_path, "AddonBuilder", "AddonBuilder.exe")
 	dssignfile_path = os.path.join(arma3tools_path, "DSSignFile", "DSSignFile.exe")
 	dscreatekey_path = os.path.join(arma3tools_path, "DSSignFile", "DSCreateKey.exe")
+	cfgconvert_path = os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe")
 
-	if os.path.isfile(addonbuilder_path) and os.path.isfile(dssignfile_path) and os.path.isfile(dscreatekey_path):
-		return [addonbuilder_path, dssignfile_path, dscreatekey_path]
+	if os.path.isfile(addonbuilder_path) and os.path.isfile(dssignfile_path) and os.path.isfile(dscreatekey_path) and os.path.isfile(cfgconvert_path):
+		return [addonbuilder_path, dssignfile_path, dscreatekey_path, cfgconvert_path]
 	else:
 		raise Exception("BadTools","Arma 3 Tools are not installed correctly or the P: drive needs to be created.")
 
@@ -429,6 +431,7 @@ See the make.cfg file for additional build options.
 		addonbuilder = tools[0]
 		dssignfile = tools[1]
 		dscreatekey = tools[2]
+		cfgconvert = tools[3]
 
 	except:
 		print_error("Arma 3 Tools are not installed correctly or the P: drive has not been created.")
@@ -536,8 +539,8 @@ See the make.cfg file for additional build options.
 				input("Press Enter to continue...")
 				print("Resuming build...")
 				continue
-		else:
-			print("WARNING: Module is stored on work drive (" + work_drive + ").")
+		#else:
+			#print("WARNING: Module is stored on work drive (" + work_drive + ").")
 
 		try:
 			# Remove the old pbo, key, and log
@@ -573,14 +576,24 @@ See the make.cfg file for additional build options.
 		if build_tool == "pboproject":
 			try:
 				#PABST: Convert config (run the macro'd config.cpp through CfgConvert twice to produce a de-macro'd cpp that pboProject can read without fucking up:
-				os.chdir("P:\\CfgConvert")
 				shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
-				print_green("\Pabst (double converting):" + "cfgConvertGUI.exe " + os.path.join(work_drive, prefix, module, "config.cpp"))
-				ret = subprocess.call(["cfgConvertGUI.exe", os.path.join(work_drive, prefix, module, "config.cpp")])
-				ret = subprocess.call(["cfgConvertGUI.exe", os.path.join(work_drive, prefix, module, "config.bin")])
-				        
-				# Call pboProject
+				
 				os.chdir("P:\\")
+				
+				cmd = [os.path.join(work_drive, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
+				ret = subprocess.call(cmd)
+				#ret = subprocess.call(["cfgConvertGUI.exe", os.path.join(work_drive, prefix, module, "config.cpp")])
+				
+				if ret != 0:
+					print_error("CfgConvert -bin return code == " + str(ret))
+					input("Press Enter to continue...")
+				
+				
+				cmd = [os.path.join(work_drive, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
+				ret = subprocess.call(cmd)
+				if ret != 0:
+					print_error("CfgConvert -txt) return code == " + str(ret))
+					input("Press Enter to continue...")
 				
 				if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
 					print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
@@ -623,12 +636,12 @@ See the make.cfg file for additional build options.
 				if not build_successful:
 					print_error("pboProject return code == " + str(ret))
 					print_error("Module not successfully built/signed.")
-					#input("Press Enter to continue...")
+					input("Press Enter to continue...")
 					print ("Resuming build...")
 					continue
 
 				#PABST: cleanup config BS (you could comment this out to see the "de-macroed" cpp
-				print_green("\Pabst (restoring): " + os.path.join(work_drive, prefix, module, "config.cpp"))
+				#print_green("\Pabst (restoring): " + os.path.join(work_drive, prefix, module, "config.cpp"))
 				os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
 				os.remove(os.path.join(work_drive, prefix, module, "config.bin"))
 				os.rename(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))

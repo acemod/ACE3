@@ -4,6 +4,23 @@ class Mode_Burst;
 class Mode_FullAuto;
 
 class CfgWeapons {
+
+    class RocketPods;
+    class ACE_AIR_SAFETY : RocketPods
+    {
+        CanLock = 0;
+        displayName = "SAFE";
+        displayNameMagazine = "SAFE";
+        shortNameMagazine = "SAFE";
+        nameSound = "cannon";
+        cursor = "EmptyCursor";
+        cursorAim = "EmptyCursor";
+        magazines[] = {"FakeMagazine"};
+        burst = 0;
+        reloadTime = 0.01;
+        magazineReloadTime = 0.1;
+    };
+    
     // Manual Switching Of Flare Mode
     class SmokeLauncher;
     class CMFlareLauncher: SmokeLauncher {
@@ -37,24 +54,24 @@ class CfgWeapons {
 
         class manual: manual {
             reloadTime = 0.04;
-            dispersion = 0.0022;
+            dispersion = 0.006;
             displayName = "$STR_ACE_Aircraft_gatling_20mm_Name";
         };
         class close: close {
             reloadTime = 0.04;
-            dispersion = 0.0022;
+            dispersion = 0.006;
         };
         class short: short {
             reloadTime = 0.04;
-            dispersion = 0.0022;
+            dispersion = 0.006;
         };
         class medium: medium {
             reloadTime = 0.04;
-            dispersion = 0.0022;
+            dispersion = 0.006;
         };
         class far: far {
             reloadTime = 0.04;
-            dispersion = 0.0022;
+            dispersion = 0.006;
         };
     };
 
