@@ -283,6 +283,16 @@ if (hasInterface) then {
             ["playerChanged", [ACE_player, _oldPlayer]] call FUNC(localEvent);
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
+
+    // doesn't work on postInit in SP
+    ["mapDisplayLoaded", {
+        //hint str _this; systemChat str _this; diag_log str _this;
+
+        if (_this select 1 == "ingame") then {
+            ((_this select 0) displayCtrl 1016) ctrlShow false;
+        };
+    }] call FUNC(addEventhandler);
+
 };
 
 // Init toHex
