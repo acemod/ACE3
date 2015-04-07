@@ -9,7 +9,7 @@ lbSetCurSel [6000, (GVAR(ATragMX_currentGun) select GVAR(ATragMX_currentTarget))
 
 if ((GVAR(ATragMX_scopeUnits) select (GVAR(ATragMX_currentScopeUnit) select GVAR(ATragMX_currentTarget))) != "Clicks") then
 {
-	GVAR(ATragMX_currentScopeUnit) set [GVAR(ATragMX_currentTarget), (GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 6];
+    GVAR(ATragMX_currentScopeUnit) set [GVAR(ATragMX_currentTarget), (GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 6];
 };
 
 [] call FUNC(update_gun);

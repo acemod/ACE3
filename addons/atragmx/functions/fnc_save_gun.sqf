@@ -7,7 +7,7 @@ GVAR(ATragMX_gunList) set [_index, +(GVAR(ATragMX_workingMemory) select GVAR(ATr
 
 lbClear 6000;
 {
-	lbAdd [6000, _x select 0];
+    lbAdd [6000, _x select 0];
 } forEach GVAR(ATragMX_gunList);
 
 profileNamespace setVariable ["ACE_ATragMX_gunList", GVAR(ATragMX_gunList)];

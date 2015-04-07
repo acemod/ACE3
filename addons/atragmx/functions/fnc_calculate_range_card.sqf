@@ -20,8 +20,8 @@ _barometricPressure = (GVAR(ATragMX_barometricPressure) select GVAR(ATragMX_curr
 _relativeHumidity = (GVAR(ATragMX_relativeHumidity) select GVAR(ATragMX_currentTarget));
 if (GVAR(ATragMX_currentUnit) == 1) then
 {
-	_temperature = (_temperature - 32) / 1.8;
-	_barometricPressure = _barometricPressure * 33.8638866667;
+    _temperature = (_temperature - 32) / 1.8;
+    _barometricPressure = _barometricPressure * 33.8638866667;
 };
 
 private ["_windSpeed", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange"];
@@ -32,17 +32,17 @@ _targetSpeed = (GVAR(ATragMX_targetSpeed) select GVAR(ATragMX_currentTarget));
 _targetRange = GVAR(ATragMX_rangeCardEndRange);
 if (GVAR(ATragMX_currentUnit) != 2) then
 {
-	_targetRange = _targetRange / 1.0936133;
+    _targetRange = _targetRange / 1.0936133;
 };
 if (GVAR(ATragMX_currentUnit) == 1) then
 {
-	_windSpeed = _windSpeed / 2.23693629;
-	_targetSpeed = _targetSpeed / 2.23693629;
+    _windSpeed = _windSpeed / 2.23693629;
+    _targetSpeed = _targetSpeed / 2.23693629;
 };
 
 GVAR(ATragMX_rangeCardData) = [];
 
 private ["_result"];
 _result = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 1000,
-			_windSpeed, _windDirection, _inclinationAngle, _targetSpeed, _targetRange, _bc, _dragModel, _atmosphereModel, true] call FUNC(calculate_solution);
+            _windSpeed, _windDirection, _inclinationAngle, _targetSpeed, _targetRange, _bc, _dragModel, _atmosphereModel, true] call FUNC(calculate_solution);
 

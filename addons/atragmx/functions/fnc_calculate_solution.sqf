@@ -40,18 +40,18 @@ _n = 0;
 _range = 0;
 _rangeFactor = 1;
 if (_storeRangeCardData) then {
-	if (GVAR(ATragMX_currentUnit) != 2) then {
-		_rangeFactor = 1.0936133;
-	};
-	GVAR(ATragMX_rangeCardData) = [];
+    if (GVAR(ATragMX_currentUnit) != 2) then {
+        _rangeFactor = 1.0936133;
+    };
+    GVAR(ATragMX_rangeCardData) = [];
 };
 
 private ["_wind"];
 _wind = [cos(270 - _windDirection * 30) * _windSpeed, sin(270 - _windDirection * 30) * _windSpeed, 0];
 if (EGVAR(advanced_ballistics,AdvancedBallistics)) then {
-	if (EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
-		_bc = [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel] call FUNC(calculateAtmosphericCorrection);
-	};
+    if (EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
+        _bc = [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel] call FUNC(calculateAtmosphericCorrection);
+    };
 };
 
 _TOF = 0;
@@ -66,54 +66,54 @@ _bulletVelocity set [2, Sin(_scopeBaseAngle) * _muzzleVelocity];
 
 while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do
 {
-	_bulletSpeed = vectorMagnitude _bulletVelocity;
-	
-	_trueVelocity = _bulletVelocity vectorDiff _wind;
-	_trueSpeed = vectorMagnitude _trueVelocity;
+    _bulletSpeed = vectorMagnitude _bulletVelocity;
+    
+    _trueVelocity = _bulletVelocity vectorDiff _wind;
+    _trueSpeed = vectorMagnitude _trueVelocity;
     
     if (EGVAR(advanced_ballistics,AdvancedBallistics)) then {
         if (EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
-			private ["_drag"];
-			_drag = -1 * ([_dragModel, _bc, _trueSpeed] call EFUNC(advanced_ballistics,calculateRetardation));
-			_bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (_drag);
-		};
-	} else {
-		_bulletAccel = _trueVelocity vectorMultiply (_trueSpeed * _airFriction);
-	};
-	
-	_bulletAccel = _bulletAccel vectorAdd _gravity;
-	
-	_bulletVelocity = _bulletVelocity vectorAdd (_bulletAccel vectorMultiply _deltaT);
-	_bulletPos = _bulletPos vectorAdd (_bulletVelocity vectorMultiply _deltaT);
-	
-	_TOF = _TOF + _deltaT;
-	
-	if (_storeRangeCardData) then {
-		_range = GVAR(ATragMX_rangeCardStartRange) + _n * GVAR(ATragMX_rangeCardIncrement);
-		if ((_bulletPos select 1) * _rangeFactor >= _range && _range <= GVAR(ATragMX_rangeCardEndRange)) then {
-			if ((_bulletPos select 1) > 0) then {
-				_elevation = - atan((_bulletPos select 2) / (_bulletPos select 1));
-				_windage = - atan((_bulletPos select 0) / (_bulletPos select 1));
-			};
-			if (_range != 0) then {
-				_lead = (_targetSpeed * _TOF) / (Tan(3.38 / 60) * _range);
-			};
-			_kineticEnergy = 0.5 * (_bulletMass / 1000 * (_bulletSpeed ^ 2));
-			_kineticEnergy = _kineticEnergy * 0.737562149;
-			
-			GVAR(ATragMX_rangeCardData) set [_n, [_range, _elevation * 60, _windage * 60, _lead, _TOF, _bulletSpeed, _kineticEnergy]];
-			_n = _n + 1;
-		};
-	};
+            private ["_drag"];
+            _drag = -1 * ([_dragModel, _bc, _trueSpeed] call EFUNC(advanced_ballistics,calculateRetardation));
+            _bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (_drag);
+        };
+    } else {
+        _bulletAccel = _trueVelocity vectorMultiply (_trueSpeed * _airFriction);
+    };
+    
+    _bulletAccel = _bulletAccel vectorAdd _gravity;
+    
+    _bulletVelocity = _bulletVelocity vectorAdd (_bulletAccel vectorMultiply _deltaT);
+    _bulletPos = _bulletPos vectorAdd (_bulletVelocity vectorMultiply _deltaT);
+    
+    _TOF = _TOF + _deltaT;
+    
+    if (_storeRangeCardData) then {
+        _range = GVAR(ATragMX_rangeCardStartRange) + _n * GVAR(ATragMX_rangeCardIncrement);
+        if ((_bulletPos select 1) * _rangeFactor >= _range && _range <= GVAR(ATragMX_rangeCardEndRange)) then {
+            if ((_bulletPos select 1) > 0) then {
+                _elevation = - atan((_bulletPos select 2) / (_bulletPos select 1));
+                _windage = - atan((_bulletPos select 0) / (_bulletPos select 1));
+            };
+            if (_range != 0) then {
+                _lead = (_targetSpeed * _TOF) / (Tan(3.38 / 60) * _range);
+            };
+            _kineticEnergy = 0.5 * (_bulletMass / 1000 * (_bulletSpeed ^ 2));
+            _kineticEnergy = _kineticEnergy * 0.737562149;
+            
+            GVAR(ATragMX_rangeCardData) set [_n, [_range, _elevation * 60, _windage * 60, _lead, _TOF, _bulletSpeed, _kineticEnergy]];
+            _n = _n + 1;
+        };
+    };
 };
 
 if ((_bulletPos select 1) > 0) then {
-	_elevation = - atan((_bulletPos select 2) / (_bulletPos select 1));
-	_windage = - atan((_bulletPos select 0) / (_bulletPos select 1));
+    _elevation = - atan((_bulletPos select 2) / (_bulletPos select 1));
+    _windage = - atan((_bulletPos select 0) / (_bulletPos select 1));
 };
 
 if (_targetRange != 0) then {
-	_lead = (_targetSpeed * _TOF) / (Tan(3.38 / 60) * _targetRange);
+    _lead = (_targetSpeed * _TOF) / (Tan(3.38 / 60) * _targetRange);
 };
 
 _kineticEnergy = 0.5 * (_bulletMass / 1000 * (_bulletSpeed ^ 2));

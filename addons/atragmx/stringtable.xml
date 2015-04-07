@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <Project name="ACE"> 
-	<Package name="ATragMX">
+    <Package name="ATragMX">
         <Key ID="STR_ACE_ATragMX_Name">
           <English>ATragMX</English>
           <German>ATragMX</German>
@@ -22,5 +22,5 @@
         <Key ID="STR_ACE_ATragMX_ATragMXDialogKey">
           <English>Open ATragMX</English>
         </Key>
-	</Package> 
+    </Package> 
 </Project>

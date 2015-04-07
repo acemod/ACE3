@@ -19,7 +19,7 @@ false execVM QUOTE(PATHTOF(functions\fnc_show_target_speed_assist.sqf));
 false execVM QUOTE(PATHTOF(functions\fnc_show_target_speed_assist_timer.sqf));
 
 {
-	lbAdd [6000, _x select 0];
+    lbAdd [6000, _x select 0];
 } forEach GVAR(ATragMX_gunList);
 
 true

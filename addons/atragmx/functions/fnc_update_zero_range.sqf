@@ -16,7 +16,7 @@ private ["_zeroRange"];
 _zeroRange = Round(parseNumber(ctrlText 140));
 if (GVAR(ATragMX_currentUnit) != 2) then
 {
-	_zeroRange = _zeroRange / 1.0936133;
+    _zeroRange = _zeroRange / 1.0936133;
 };
 
 private ["_temperature", "_barometricPressure", "_relativeHumidity"];
@@ -25,8 +25,8 @@ _barometricPressure = (GVAR(ATragMX_barometricPressure) select GVAR(ATragMX_curr
 _relativeHumidity = (GVAR(ATragMX_relativeHumidity) select GVAR(ATragMX_currentTarget));
 if (GVAR(ATragMX_currentUnit) == 1) then
 {
-	_temperature = (_temperature - 32) / 1.8;
-	_barometricPressure = _barometricPressure * 33.8638866667;
+    _temperature = (_temperature - 32) / 1.8;
+    _barometricPressure = _barometricPressure * 33.8638866667;
 };
 
 private ["_result"];

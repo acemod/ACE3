@@ -16,41 +16,41 @@ switch ((GVAR(ATragMX_currentScopeUnit) select GVAR(ATragMX_currentTarget))) do
 {
     case 0:
     {
-		_elevationAbs = _elevationAbs / 3.38;
-		_windageAbs = _windageAbs / 3.38;
-		
-		_elevationRel = _elevationRel / 3.38;
-		_windageRel = _windageRel / 3.38;
-		
-		_elevationCur = _elevationCur / 3.38;
-		_windageCur = _windageCur / 3.38;
+        _elevationAbs = _elevationAbs / 3.38;
+        _windageAbs = _windageAbs / 3.38;
+        
+        _elevationRel = _elevationRel / 3.38;
+        _windageRel = _windageRel / 3.38;
+        
+        _elevationCur = _elevationCur / 3.38;
+        _windageCur = _windageCur / 3.38;
     };
-	
+    
     case 2:
     {
-		_elevationAbs = _elevationAbs * 1.047;
-		_windageAbs = _windageAbs * 1.047;
-		
-		_elevationRel = _elevationRel * 1.047;
-		_windageRel = _windageRel * 1.047;
-		
-		_elevationCur = _elevationCur * 1.047;
-		_windageCur = _windageCur * 1.047;
+        _elevationAbs = _elevationAbs * 1.047;
+        _windageAbs = _windageAbs * 1.047;
+        
+        _elevationRel = _elevationRel * 1.047;
+        _windageRel = _windageRel * 1.047;
+        
+        _elevationCur = _elevationCur * 1.047;
+        _windageCur = _windageCur * 1.047;
     };
-	
-	case 3:
+    
+    case 3:
     {
-		_elevationScopeStep = ((GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 7);
-		_windageScopeStep = ((GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 8);
-		
-		_elevationAbs = Round(_elevationAbs / _elevationScopeStep);
-		_windageAbs = Round(_windageAbs / _windageScopeStep);
-		
-		_elevationRel = Round(_elevationRel / _elevationScopeStep);
-		_windageRel = Round(_windageRel / _windageScopeStep);
-		
-		_elevationCur = Round(_elevationCur / _elevationScopeStep);
-		_windageCur = Round(_windageCur / _windageScopeStep);
+        _elevationScopeStep = ((GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 7);
+        _windageScopeStep = ((GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 8);
+        
+        _elevationAbs = Round(_elevationAbs / _elevationScopeStep);
+        _windageAbs = Round(_windageAbs / _windageScopeStep);
+        
+        _elevationRel = Round(_elevationRel / _elevationScopeStep);
+        _windageRel = Round(_windageRel / _windageScopeStep);
+        
+        _elevationCur = Round(_elevationCur / _elevationScopeStep);
+        _windageCur = Round(_windageCur / _windageScopeStep);
     };
 };
 
