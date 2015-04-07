@@ -4,16 +4,16 @@
  * Calculates the stability factor of a bullet
  *
  * Arguments:
- * 0: caliber - inches <float>
- * 1: bullet length - inches <float>
- * 2: bullet mass - grains <float>
- * 3: barrel twist - inches <float>
- * 4: muzzle velocity shift - m/s <float>
- * 5: temperature - degrees celcius <float>
- * 6: barometric Pressure - hPA <float>
+ * 0: caliber - inches <NUMBER>
+ * 1: bullet length - inches <NUMBER>
+ * 2: bullet mass - grains <NUMBER>
+ * 3: barrel twist - inches <NUMBER>
+ * 4: muzzle velocity shift - m/s <NUMBER>
+ * 5: temperature - degrees celcius <NUMBER>
+ * 6: barometric Pressure - hPA <NUMBER>
  *
  * Return Value:
- * 0: stability factor <float>
+ * 0: stability factor <NUMBER>
  *
  * Public: No
  */

@@ -5,10 +5,10 @@
  *
  * Arguments:
  * 0: ammo - classname <string>
- * 1: temperature - degrees celcius <float>
+ * 1: temperature - degrees celcius <NUMBER>
  *
  * Return Value:
- * 0: muzzle velocity shift - m/s <float>
+ * 0: muzzle velocity shift - m/s <NUMBER>
  *
  * Return value:
  * None

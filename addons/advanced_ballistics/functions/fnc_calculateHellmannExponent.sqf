@@ -7,7 +7,7 @@
  * 0: _this - world position <posASL>
  *
  * Return Value:
- * 0: hellmann exponent <float>
+ * 0: hellmann exponent <NUMBER>
  *
  * Public: No
  */

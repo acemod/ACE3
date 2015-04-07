@@ -5,11 +5,11 @@
  *
  * Arguments:
  * 0: drag model - 1-7 <integer>
- * 1: drag coefficient - bc <float>
- * 2: velocity - m/s <float>
+ * 1: drag coefficient - bc <NUMBER>
+ * 2: velocity - m/s <NUMBER>
  *
  * Return Value:
- * 0: retardation - m/(s^2) <float>
+ * 0: retardation - m/(s^2) <NUMBER>
  *
  * Return value:
  * None

@@ -4,14 +4,14 @@
  * Calculates the atmospherically corrected ballistic coefficient
  *
  * Arguments:
- * 0: ballistic coefficient - G1-G7 <float>
- * 1: temperature - degrees celcius <float>
- * 2: pressure - hPa <float>
- * 3: relativeHumidity - value between 0.0 and 1.0 <float>
+ * 0: ballistic coefficient - G1-G7 <NUMBER>
+ * 1: temperature - degrees celcius <NUMBER>
+ * 2: pressure - hPa <NUMBER>
+ * 3: relativeHumidity - value between 0.0 and 1.0 <NUMBER>
  * 4: atmosphereModel - ICAO or ASM <STRING>
  *
  * Return Value:
- * corrected ballistic coefficient <float>
+ * corrected ballistic coefficient <NUMBER>
  *
  * Public: No
  */

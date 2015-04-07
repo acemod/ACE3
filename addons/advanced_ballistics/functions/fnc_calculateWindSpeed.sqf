@@ -7,7 +7,7 @@
  * 0: _this - world position <posASL>
  *
  * Return Value:
- * 0: wind speed - m/s <float>
+ * 0: wind speed - m/s <NUMBER>
  *
  * Public: No
  */

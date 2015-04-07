@@ -4,12 +4,12 @@
  * Displays a wind info (colored arrow) in the top left corner of the screen
  *
  * Arguments:
- * 0: temperature - degrees celcius <float>
- * 1: pressure - hPa <float>
- * 2: relativeHumidity - value between 0.0 and 1.0 <float>
+ * 0: temperature - degrees celcius <NUMBER>
+ * 1: pressure - hPa <NUMBER>
+ * 2: relativeHumidity - value between 0.0 and 1.0 <NUMBER>
  *
  * Return Value:
- * 0: density of air - kg * m^(-3) <float>
+ * 0: density of air - kg * m^(-3) <NUMBER>
  *
  * Return value:
  * None

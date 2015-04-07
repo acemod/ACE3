@@ -7,7 +7,7 @@
  * 0: _this - world position <posASL>
  *
  * Return Value:
- * 0: roughness length <float>
+ * 0: roughness length <NUMBER>
  *
  * Public: No
  */

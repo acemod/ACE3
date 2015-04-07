@@ -6,10 +6,10 @@
  * Arguments:
  * 0: ammo - classname <string>
  * 0: weapon - classname <string>
- * 1: muzzle velocity - m/s <float>
+ * 1: muzzle velocity - m/s <NUMBER>
  *
  * Return Value:
- * 0: muzzle velocity shift - m/s <float>
+ * 0: muzzle velocity shift - m/s <NUMBER>
  *
  * Return value:
  * None
