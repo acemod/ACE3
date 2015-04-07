@@ -1,11 +1,10 @@
-ace_winddeflection
+ace_advanced_ballistics
 ===============
 
-Wind deflection for projectiles/bullets.
+The Advanced Ballistics module introduces advanced external- and internal ballistics to the game.
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [Glowbal](https://github.com/Glowbal)
 - [Ruthberg] (http://github.com/Ulteq)
