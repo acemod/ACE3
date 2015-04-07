@@ -16,10 +16,10 @@ REM(ACE_LASERS, objNull);
 if(!(local _laserTarget)) exitWith { };
 // The target is local, so its on this client
 if(!isDedicated) then {
-	_laserTarget setVariable ["ACE_LASERTARGET_SHOOTER", player, true];
-	
-	[FUNC(laserTargetPFH), 0, [_laserTarget, player]] call cba_fnc_addPerFrameHandler;
+    _laserTarget setVariable ["ACE_LASERTARGET_SHOOTER", player, true];
+    
+    [FUNC(laserTargetPFH), 0, [_laserTarget, player]] call cba_fnc_addPerFrameHandler;
 } else {
-	// server side ownership of laser 
-	//_laserTarget setVariable ["ACE_LASERTARGET_SHOOTER", nil, false];
+    // server side ownership of laser 
+    //_laserTarget setVariable ["ACE_LASERTARGET_SHOOTER", nil, false];
 };

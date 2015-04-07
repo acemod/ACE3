@@ -43,7 +43,7 @@
 #define ACE_ITEMS_CIVILIAN "ItemWatch"
 
 
-#define ACE_DEFAULT_SLOTS "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072"
+#define ACE_DEFAULT_SLOTS "1     +     4     + 12*        256     + 2*    4096     +     2     + 8*    16  + 12*131072"
 
 #define ACE_NOGRIP handAnim[] = {}
 #define ACE_DISTANCE_DEFAULT distanceZoomMin = 300; distanceZoomMax = 300
@@ -51,30 +51,30 @@
 // #include "script_macros_optics.hpp" //ToDo
 
 #define ACE_NOZEROING discreteDistance[] = {}; \
-			discreteDistanceInitIndex = 0; \
-			weaponInfoType = "RscWeaponEmpty"
+            discreteDistanceInitIndex = 0; \
+            weaponInfoType = "RscWeaponEmpty"
 
 #define ACE_NOTURRETZEROING discreteDistance[] = {}; \
-			discreteDistanceInitIndex = 0; \
-			turretInfoType = "RscWeaponEmpty"
+            discreteDistanceInitIndex = 0; \
+            turretInfoType = "RscWeaponEmpty"
 
 #define ACE_LASER irLaserPos = "laser pos"; \
-					irLaserEnd = "laser dir"; \
-					irDistance = 300
+                    irLaserEnd = "laser dir"; \
+                    irDistance = 300
 
 #define ACE_LASER_DISTANCE_VANILLA irDistance = 300
 
-#define ACE_NOLASER	irLaserPos = "laser pos"; \
-					irLaserEnd = "laser dir"; \
-					irDistance = 0
+#define ACE_NOLASER    irLaserPos = "laser pos"; \
+                    irLaserEnd = "laser dir"; \
+                    irDistance = 0
 
 #define ACE_SUPPRESSED ace_suppressed = 1; \
-			fireLightDuration = 0; \
-			fireLightIntensity = 0
+            fireLightDuration = 0; \
+            fireLightIntensity = 0
 
 // TODO: Cleanup in all the configs around
-#define ACE_M_MAG(x,y)	class _xx_##x {magazine = ##x; count = ##y;}
-#define ACE_M_WEP(x,y)	class _xx_##x {weapon = ##x; count = ##y;}
+#define ACE_M_MAG(x,y)    class _xx_##x {magazine = ##x; count = ##y;}
+#define ACE_M_WEP(x,y)    class _xx_##x {weapon = ##x; count = ##y;}
 #define ACE_M_ITEM(x,y) class _xx_##x {name = ##x; count = ##y;}
 #define ACE_M_BAG(x,y) class _xx_##x {backpack = ##x; count = ##y;}
 
@@ -82,11 +82,11 @@
 // Vehicle defines
 // ACE_canBeLoad = This vehicle acts as transporter, i.e you can load stuff into it
 // ACE_canBeCargo = This vehicle acts as cargo, i.e you can load this item into other vehicles
-#define ACE_CARGO_FRONT 	ACE_canBeLoad = false; ACE_canBeCargo = true; ACE_canGear = false; ACE_canLoadFront = true
-#define ACE_CARGO_ONLY 		ACE_canBeLoad = false; ACE_canBeCargo = true; ACE_canGear = false; ACE_canLoadFront = false
-#define ACE_LOAD_ONLY 		ACE_canBeLoad = true; ACE_canBeCargo = false; ACE_canGear = false; ACE_canLoadFront = false
-#define ACE_GEAR_ONLY		ACE_canBeLoad = true; ACE_canBeCargo = false; ACE_canGear = true; ACE_canLoadFront = false
-#define ACE_NOCARGOLOAD		ACE_canBeLoad = false; ACE_canBeCargo = false; ACE_canGear = false; ACE_canLoadFront = false
+#define ACE_CARGO_FRONT     ACE_canBeLoad = false; ACE_canBeCargo = true; ACE_canGear = false; ACE_canLoadFront = true
+#define ACE_CARGO_ONLY         ACE_canBeLoad = false; ACE_canBeCargo = true; ACE_canGear = false; ACE_canLoadFront = false
+#define ACE_LOAD_ONLY         ACE_canBeLoad = true; ACE_canBeCargo = false; ACE_canGear = false; ACE_canLoadFront = false
+#define ACE_GEAR_ONLY        ACE_canBeLoad = true; ACE_canBeCargo = false; ACE_canGear = true; ACE_canLoadFront = false
+#define ACE_NOCARGOLOAD        ACE_canBeLoad = false; ACE_canBeCargo = false; ACE_canGear = false; ACE_canLoadFront = false
 
 // Increased FOV for tank driver
 // Increased Default US Tank driver optic
@@ -134,32 +134,32 @@
 #undef BWC_CONFIG
 
 #define BWC_CONFIG(NAME) class NAME { \
-		units[] = {}; \
-		weapons[] = {}; \
-		requiredVersion = REQUIRED_VERSION; \
-		requiredAddons[] = {}; \
-		version = VERSION; \
-		ACE_BWC; \
+        units[] = {}; \
+        weapons[] = {}; \
+        requiredVersion = REQUIRED_VERSION; \
+        requiredAddons[] = {}; \
+        version = VERSION; \
+        ACE_BWC; \
 }
 
 #define ACE_FLASHLIGHT class FlashLight { \
-			color[] = {0.9, 0.9, 0.7, 0.9}; \
-			ambient[] = {0.1, 0.1, 0.1, 1.0}; \
-			position = "flash dir"; \
-			direction = "flash"; \
-			angle = 30; \
-			scale[] = {1, 1, 0.5}; \
-			brightness = 0.1; \
-		}
+            color[] = {0.9, 0.9, 0.7, 0.9}; \
+            ambient[] = {0.1, 0.1, 0.1, 1.0}; \
+            position = "flash dir"; \
+            direction = "flash"; \
+            angle = 30; \
+            scale[] = {1, 1, 0.5}; \
+            brightness = 0.1; \
+        }
 #define ACE_SMALL_FLASHLIGHT class FlashLight { \
-			color[] = {0.9, 0.9, 0.7, 0.9}; \
-			ambient[] = {0.1, 0.1, 0.1, 1.0}; \
-			position = "flash dir"; \
-			direction = "flash"; \
-			angle = 20; \
-			scale[] = {0.9, 0.9, 0.4}; \
-			brightness = 0.09; \
-		}
+            color[] = {0.9, 0.9, 0.7, 0.9}; \
+            ambient[] = {0.1, 0.1, 0.1, 1.0}; \
+            position = "flash dir"; \
+            direction = "flash"; \
+            angle = 20; \
+            scale[] = {0.9, 0.9, 0.4}; \
+            brightness = 0.09; \
+        }
 
 // Addaction defines for colored text
 #define ACE_TEXT_ORANGE(Text) ("<t color='#ffa500'>" + ##Text + "</t>")
@@ -172,8 +172,8 @@
 #define EGVAR(module,var) TRIPLES(PREFIX,module,var)
 #define QEGVAR(module,var) QUOTE(EGVAR(module,var))
 
-#define DGVAR(varName)	if(isNil "ACE_DEBUG_NAMESPACE") then { ACE_DEBUG_NAMESPACE = []; }; if(!(QUOTE(GVAR(varName)) in ACE_DEBUG_NAMESPACE)) then { PUSH(ACE_DEBUG_NAMESPACE, QUOTE(GVAR(varName))); }; GVAR(varName)
-#define DVAR(varName) 	if(isNil "ACE_DEBUG_NAMESPACE") then { ACE_DEBUG_NAMESPACE = []; }; if(!(QUOTE(varName) in ACE_DEBUG_NAMESPACE)) then { PUSH(ACE_DEBUG_NAMESPACE, QUOTE(varName)); }; varName
+#define DGVAR(varName)    if(isNil "ACE_DEBUG_NAMESPACE") then { ACE_DEBUG_NAMESPACE = []; }; if(!(QUOTE(GVAR(varName)) in ACE_DEBUG_NAMESPACE)) then { PUSH(ACE_DEBUG_NAMESPACE, QUOTE(GVAR(varName))); }; GVAR(varName)
+#define DVAR(varName)     if(isNil "ACE_DEBUG_NAMESPACE") then { ACE_DEBUG_NAMESPACE = []; }; if(!(QUOTE(varName) in ACE_DEBUG_NAMESPACE)) then { PUSH(ACE_DEBUG_NAMESPACE, QUOTE(varName)); }; varName
 #define DFUNC(var1) TRIPLES(ADDON,fnc,var1)
 #define DEFUNC(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)
 
@@ -223,23 +223,23 @@
 
 
 #ifdef DISABLE_COMPILE_CACHE
-	#define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
+    #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
 #else
-	#define PREP(fncName) DFUNC(fncName) = QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)) call SLX_XEH_COMPILE
+    #define PREP(fncName) DFUNC(fncName) = QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)) call SLX_XEH_COMPILE
 #endif
 
 #define PREP_MODULE(folder) [] call compile preprocessFileLineNumbers QUOTE(PATHTOF(folder\__PREP__.sqf))
 
-#define HASH_CREATE					([] call EFUNC(common,hashCreate))
-#define HASH_SET(hash, key, val)	([hash, key, val, __FILE__, __LINE__] call EFUNC(common,hashSet))
-#define HASH_GET(hash, key)			([hash, key, __FILE__, __LINE__] call EFUNC(common,hashGet))
-#define HASH_REM(hash, key)			([hash, key, __FILE__, __LINE__] call EFUNC(common,hashRem))
-#define HASH_HASKEY(hash, key)		([hash, key, __FILE__, __LINE__] call EFUNC(common,hashHasKey))
+#define HASH_CREATE                    ([] call EFUNC(common,hashCreate))
+#define HASH_SET(hash, key, val)    ([hash, key, val, __FILE__, __LINE__] call EFUNC(common,hashSet))
+#define HASH_GET(hash, key)            ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashGet))
+#define HASH_REM(hash, key)            ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashRem))
+#define HASH_HASKEY(hash, key)        ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashHasKey))
 
-#define HASHLIST_CREATELIST(keys)				([keys] call EFUNC(common,hashListCreateList))
-#define HASHLIST_CREATEHASH(hashList)			([hashList] call EFUNC(common,hashListCreateHash))
-#define HASHLIST_SELECT(hashList, index)		([hashList, index, __FILE__, __LINE__] call EFUNC(common,hashListSelect))
-#define HASHLIST_SET(hashList, index, value)	([hashList, index, value, __FILE__, __LINE__] call EFUNC(common,hashListSet))
-#define HASHLIST_PUSH(hashList, value)			([hashList, value, __FILE__, __LINE__] call EFUNC(common,hashListPush))
+#define HASHLIST_CREATELIST(keys)                ([keys] call EFUNC(common,hashListCreateList))
+#define HASHLIST_CREATEHASH(hashList)            ([hashList] call EFUNC(common,hashListCreateHash))
+#define HASHLIST_SELECT(hashList, index)        ([hashList, index, __FILE__, __LINE__] call EFUNC(common,hashListSelect))
+#define HASHLIST_SET(hashList, index, value)    ([hashList, index, value, __FILE__, __LINE__] call EFUNC(common,hashListSet))
+#define HASHLIST_PUSH(hashList, value)            ([hashList, value, __FILE__, __LINE__] call EFUNC(common,hashListPush))
 
 #include "script_debug.hpp"

@@ -20,6 +20,6 @@ _config = getArray (ConfigFile >> "CfgMagazines" >> (_this select 0) >> "ACE_Tri
 _count = count _config;
 
 for "_index" from 0 to (_count - 1) do {
-	_result set [_index, ConfigFile >> "CfgACE_Triggers" >> (_config select _index)];
+    _result set [_index, ConfigFile >> "CfgACE_Triggers" >> (_config select _index)];
 };
 _result

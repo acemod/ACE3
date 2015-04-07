@@ -20,10 +20,10 @@ _items = (items _unit);
 _result = [];
 
 {
-	_config = ConfigFile >> "CfgWeapons" >> _x;
-	if (getNumber (_config >> "ACE_Detonator") == 1) then {
-		_result pushBack _x;
-	};
+    _config = ConfigFile >> "CfgWeapons" >> _x;
+    if (getNumber (_config >> "ACE_Detonator") == 1) then {
+        _result pushBack _x;
+    };
 } forEach _items;
 
 _result

@@ -26,7 +26,6 @@ _unit setvariable [QGVAR(heartRate), 0];
 [_unit, true] call FUNC(setUnconscious);
 _timeInCardiacArrest = 120 + round(random(600));
 
-systemChat format["Unit went cardiac arrest; hr: %1", _unit getvariable [QGVAR(heartRate), -1]];
 [{
     private ["_args","_unit","_startTime","_timeInCardiacArrest","_heartRate"];
     _args = _this select 0;
@@ -36,7 +35,6 @@ systemChat format["Unit went cardiac arrest; hr: %1", _unit getvariable [QGVAR(h
 
     _heartRate = _unit getvariable [QGVAR(heartRate), 0];
     if (_heartRate > 0 || !alive _unit) exitwith {
-        systemChat format["Unit no longer cardiac arrest; hr: %1", _unit getvariable [QGVAR(heartRate), -1]];
         [(_this select 1)] call cba_fnc_removePerFrameHandler;
         _unit setvariable [QGVAR(inCardiacArrest), nil,true];
     };

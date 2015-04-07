@@ -20,8 +20,8 @@ _lastId = _this select 1;
 _originOfrequest = _this select 2;
 
 if (local _unit) then {
-	_openWounds = _unit getvariable [QGVAR(openWounds), []];
-	{
-	    ["medical_propagateWound", [_originOfrequest], [_unit, _x]] call EFUNC(common,targetEvent);
-	}foreach _openWounds;
+    _openWounds = _unit getvariable [QGVAR(openWounds), []];
+    {
+        ["medical_propagateWound", [_originOfrequest], [_unit, _x]] call EFUNC(common,targetEvent);
+    }foreach _openWounds;
 };

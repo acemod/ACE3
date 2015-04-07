@@ -11,9 +11,9 @@ _count = count GVAR(Buttons);
 _index = call FUNC(getSelectedButton);
 
 _action = if (_index != -1 && {_index < _count}) then {
-	GVAR(Buttons) select _index
+    GVAR(Buttons) select _index
 } else {
-	["", {}, {false}, 0, [], "", "", {false}, [], 0]
+    ["", {}, {false}, 0, [], "", "", {false}, [], 0]
 };
 
 (findDisplay 1713999) closeDisplay 1;
@@ -28,5 +28,5 @@ _exceptions = _action select 8;//
 _distance = _action select 9;
 
 if ((_distance == 0 || {[GVAR(Target), _distance] call FUNC(isInRange)}) && {[_target, _player] call _condition} && {[_target, _player] call _conditionShow}) then {
-	[_target, _player] call _statement;
+    [_target, _player] call _statement;
 };

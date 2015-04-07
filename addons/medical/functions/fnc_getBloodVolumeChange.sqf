@@ -44,6 +44,12 @@ if (_bloodVolume < 100.0) then {
             _unit setvariable [_x,_ivVolume];
         };
     }foreach GVAR(IVBags);
+} else {
+    {
+        if ((_unit getvariable [_x, 0]) > 0) then {
+            _unit setvariable [_x, 0]; // lets get rid of exessive IV volume
+        };
+    }foreach GVAR(IVBags);
 };
 
 _bloodVolumeChange;

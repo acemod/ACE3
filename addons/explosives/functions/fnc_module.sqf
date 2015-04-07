@@ -20,7 +20,9 @@ _activated = _this select 2;
 
 if !(_activated) exitWith {};
 
-[_logic, QGVAR(RequireSpecialist),         "RequireSpecialist"           ] call EFUNC(Common,readSettingFromModule);
-[_logic, QGVAR(PunishNonSpecialists),      "PunishNonSpecialists"        ] call EFUNC(Common,readSettingFromModule);
+[_logic, QGVAR(RequireSpecialist), "RequireSpecialist"]
+    call EFUNC(Common,readSettingFromModule);
+[_logic, QGVAR(PunishNonSpecialists),"PunishNonSpecialists"]
+    call EFUNC(Common,readSettingFromModule);
 
 diag_log text "[ACE]: Explosive Module Initialized.";

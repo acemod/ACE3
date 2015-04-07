@@ -1,0 +1,36 @@
+/*
+ * Author: commy2
+ *
+ * Returns all turned on lights of any vehicle or streetlamp.
+ *
+ * Arguments:
+ * 0: A vehicle, not the classname (Object)
+ *
+ * Return Value:
+ * All burning lights (Array)
+ */
+#include "script_component.hpp"
+
+private "_vehicle";
+
+_vehicle = _this select 0;
+
+if (!isLightOn _vehicle) exitWith {[]};
+
+private ["_reflectorsWithSelections", "_lights", "_hitpoints"];
+
+_reflectorsWithSelections = [_vehicle] call FUNC(getReflectorsWithSelections);
+
+_lights = _reflectorsWithSelections select 0;
+_hitpoints = _reflectorsWithSelections select 1;
+
+private "_turnedOnLights";
+_turnedOnLights = [];
+{
+    if (_vehicle getHit _x <= 0.9) then {
+        _turnedOnLights pushBack (_lights select _forEachIndex);
+    };
+
+} forEach _hitpoints;
+
+_turnedOnLights
