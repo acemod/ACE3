@@ -228,18 +228,23 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckPulse">
         <English>Check Pulse</English>
+        <German>Plus überprüfen</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure">
         <English>Check Blood Pressure</English>
+        <German>Blutdruck messen</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_TriageCard">
         <English>Triage Card</English>
+        <German>Triage Karte</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Tourniquet">
         <English>Tourniquet</English>
+        <German>Tourniquet</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet">
         <English>Remove Tourniquet</English>
+        <German>Entferne Tourniquet</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_1000">
         <English>Give Blood IV (1000ml)</English>
@@ -272,6 +277,7 @@
     <Container name="UI">
       <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_MINOR">
         <English>Minor</English>
+        <German>Gering</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DELAYED">
         <English>Delayed</English>
