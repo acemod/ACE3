@@ -23,9 +23,6 @@ if ([_target] call EFUNC(common,isAwake)) exitwith {
     ["displayTextStructured", [_caller], [["This person (%1) is awake and cannot be loaded", [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
 };
 
-[_caller, objNull] call cse_fnc_carryObj;
-[_target, objNull] call cse_fnc_carryObj;
-
 _vehicle = [_caller, _target] call EFUNC(common,loadPerson);
 if (!isNull _vehicle) then {
     if (!isnil QGVAR(DROP_ADDACTION)) then {

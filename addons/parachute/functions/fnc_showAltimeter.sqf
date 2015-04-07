@@ -21,26 +21,26 @@ if (isNull (uiNamespace getVariable ["ACE_Altimeter", displayNull])) exitWith {}
 
 GVAR(AltimeterActive) = true;
 [{
-	if (!GVAR(AltimeterActive)) exitWith {[_this select 1] call CALLSTACK(cba_fnc_removePerFrameEventHandler);};
-	disableSerialization;
-	EXPLODE_4_PVT(_this select 0,_display,_unit,_oldHeight,_prevTime);
-	if !("ACE_Altimeter" in assignedItems _unit) exitWith {[_this select 1] call CALLSTACK(cba_fnc_removePerFrameEventHandler);call FUNC(hideAltimeter);};
+    if (!GVAR(AltimeterActive)) exitWith {[_this select 1] call CALLSTACK(cba_fnc_removePerFrameEventHandler);};
+    disableSerialization;
+    EXPLODE_4_PVT(_this select 0,_display,_unit,_oldHeight,_prevTime);
+    if !("ACE_Altimeter" in assignedItems _unit) exitWith {[_this select 1] call CALLSTACK(cba_fnc_removePerFrameEventHandler);call FUNC(hideAltimeter);};
 
-	private ["_height", "_hour", "_minute", "_descentRate","_HeightText", "_DecendRate", "_TimeText", "_curTime"];
-	_HeightText = _display displayCtrl 1100;
-	_DecendRate = _display displayCtrl 1000;
-	_TimeText = _display displayCtrl 1001;
-	_hour = floor daytime;
-	_minute = floor ((daytime - _hour) * 60);
+    private ["_height", "_hour", "_minute", "_descentRate","_HeightText", "_DecendRate", "_TimeText", "_curTime"];
+    _HeightText = _display displayCtrl 1100;
+    _DecendRate = _display displayCtrl 1000;
+    _TimeText = _display displayCtrl 1001;
+    _hour = floor daytime;
+    _minute = floor ((daytime - _hour) * 60);
 
-	_height = (getPosASL _unit) select 2;
-	_curTime = time;
-	_descentRate = floor ((_oldHeight - _height) / (_curTime - _prevTime));
+    _height = (getPosASL _unit) select 2;
+    _curTime = time;
+    _descentRate = floor ((_oldHeight - _height) / (_curTime - _prevTime));
 
-	_TimeText ctrlSetText (format ["%1:%2",[_hour, 2] call EFUNC(common,numberToDigitsString),[_minute, 2] call EFUNC(common,numberToDigitsString)]);
-	_HeightText ctrlSetText (format ["%1", floor(_height)]);
-	_DecendRate ctrlSetText (format ["%1", _descentRate max 0]);
+    _TimeText ctrlSetText (format ["%1:%2",[_hour, 2] call EFUNC(common,numberToDigitsString),[_minute, 2] call EFUNC(common,numberToDigitsString)]);
+    _HeightText ctrlSetText (format ["%1", floor(_height)]);
+    _DecendRate ctrlSetText (format ["%1", _descentRate max 0]);
 
-	(_this select 0) set [2, _height];
-	(_this select 0) set [3, _curTime];
+    (_this select 0) set [2, _height];
+    (_this select 0) set [3, _curTime];
 }, 0.2, [uiNamespace getVariable ["ACE_Altimeter", displayNull], _unit,floor ((getPosASL _unit) select 2), time]] call CALLSTACK(cba_fnc_addPerFrameHandler);
