@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-private ["_vehicle", "_turret", "_turretConfig", "_distance", "_magazines", "_userChange"];
+private ["_vehicle", "_turret", "_turretConfig", "_distance", "_magazines", "_showHint", "_playSound"];
 
 _vehicle = _this select 0;
 _turret = _this select 1;
@@ -162,11 +162,20 @@ _FCSElevation = [];
 [_vehicle, format ["%1_%2", QGVAR(Elevation), _turret], _FCSElevation] call EFUNC(common,setVariablePublic);
 [_vehicle, format ["%1_%2", QGVAR(Azimuth), _turret],     _FCSAzimuth] call EFUNC(common,setVariablePublic);
 
-_userChange = true;
+_showHint = false;
 if( (count _this) > 3) then {
-    _userChange = _this select 3;
+    _showHint = _this select 3;
 };
 
-if(_userChange) then {
+_playSound = true;
+if( (count _this) > 3) then {
+    _playSound = _this select 4;
+};
+
+if(_playSound) then {
+    playSound "ACE_Sound_Click";
+};
+
+if(_showHint) then {
     [format ["%1: %2", localize "STR_ACE_FCS_ZeroedTo", _distance]] call EFUNC(common,displayTextStructured);
 };

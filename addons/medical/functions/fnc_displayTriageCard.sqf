@@ -16,7 +16,6 @@
 private ["_target", "_show"];
 _target = _this select 0;
 _show = if (count _this > 1) then {_this select 1} else {true};
-GVAR(currentSelectedSelectionN) = if (count _this > 2) then {_this select 2} else {0};
 
 GVAR(TriageCardTarget) = if (_show) then {_target} else {ObjNull};
 

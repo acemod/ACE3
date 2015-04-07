@@ -31,7 +31,9 @@ if (_show) then {
     [{
         private ["_target", "_display", "_alphaLevel", "_damaged", "_availableSelections", "_openWounds", "_selectionBloodLoss", "_red", "_green", "_blue", "_alphaLevel", "_allInjuryTexts", "_lbCtrl", "_genericMessages"];
         _target = (_this select 0) select 0;
-        if (GVAR(displayPatientInformationTarget) != _target) exitwith {
+        _selectionN = (_this select 0) select 1;
+
+        if (GVAR(displayPatientInformationTarget) != _target || GVAR(currentSelectedSelectionN) != _selectionN) exitwith {
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
 
@@ -44,7 +46,7 @@ if (_show) then {
         _allInjuryTexts = [];
         _genericMessages = [];
 
-        _partText = ["STR_ACE_Interaction_Head", "STR_ACE_Interaction_Torso", "STR_ACE_Interaction_ArmLeft" ,"STR_ACE_Interaction_ArmRight" ,"STR_ACE_Interaction_LegLeft", "STR_ACE_Interaction_LegRight"] select GVAR(currentSelectedSelectionN);
+        _partText = ["STR_ACE_Interaction_Head", "STR_ACE_Interaction_Torso", "STR_ACE_Interaction_ArmLeft" ,"STR_ACE_Interaction_ArmRight" ,"STR_ACE_Interaction_LegLeft", "STR_ACE_Interaction_LegRight"] select _selectionN;
         _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
 
         if (_target getvariable[QGVAR(isBleeding), false]) then {
@@ -54,7 +56,7 @@ if (_show) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_LOST_BLOOD", [1, 0.1, 0.1, 1]];
         };
 
-        if (((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select GVAR(currentSelectedSelectionN)) > 0) then {
+        if (((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select _selectionN) > 0) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_TOURNIQUET_APPLIED", [0.77, 0.51, 0.08, 1]];
         };
         if (_target getvariable[QGVAR(hasPain), false]) then {
@@ -192,7 +194,7 @@ if (_show) then {
         (_display displayCtrl 303) ctrlSetText (_triageStatus select 0);
         (_display displayCtrl 303) ctrlSetBackgroundColor (_triageStatus select 2);
 
-    }, 0, [_target]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_target, GVAR(currentSelectedSelectionN)]] call CBA_fnc_addPerFrameHandler;
 
 } else {
     ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutText ["","PLAIN"];

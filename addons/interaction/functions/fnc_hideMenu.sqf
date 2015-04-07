@@ -1,17 +1,17 @@
 /*
-	Author: Garth de Wet (LH)
+    Author: Garth de Wet (LH)
 
-	Description:
-		Closes the Interaction menu
+    Description:
+        Closes the Interaction menu
 
-	Parameters:
-		Nothing
+    Parameters:
+        Nothing
 
-	Returns:
-		Nothing
+    Returns:
+        Nothing
 
-	Example:
-		call FUNC(hideMenu);
+    Example:
+        call FUNC(hideMenu);
 */
 #include "script_component.hpp"
 

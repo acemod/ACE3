@@ -54,6 +54,7 @@ PREP(init);
 PREP(isBeingCarried);
 PREP(isBeingDragged);
 PREP(isInMedicalFacility);
+PREP(isInMedicalVehicle);
 PREP(isMedic);
 PREP(isMedicalVehicle);
 PREP(itemCheck);
