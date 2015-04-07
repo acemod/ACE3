@@ -8,10 +8,31 @@ GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "A
 GVAR(heartBeatSounds_Normal) = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
 GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
-["Medical_treatmentCompleted", FUNC(onTreatmentCompleted)] call ace_common_fnc_addEventHandler;
 ["medical_propagateWound", FUNC(onPropagateWound)] call ace_common_fnc_addEventHandler;
 ["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call ace_common_fnc_addEventHandler;
 ["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call ace_common_fnc_addEventHandler;
+
+["medical_onUnconscious", {
+    if (local (_this select 0)) then {
+        _unit = _this select 0;
+        if (_this select 1) then {
+            _unit setVariable ["tf_globalVolume", 0.4];
+            _unit setVariable ["tf_voiceVolume", 0, true];
+            _unit setVariable ["tf_unable_to_use_radio", true, true];
+
+            _unit setVariable ["acre_sys_core_isDisabled", true, true];
+            _unit setVariable ["acre_sys_core_globalVolume", 0.4];
+        } else {
+            _unit setVariable ["tf_globalVolume", 1];
+            _unit setVariable ["tf_voiceVolume", 1, true];
+            _unit setVariable ["tf_unable_to_use_radio", true, true];
+
+            _unit setVariable ["acre_sys_core_isDisabled", true, true];
+            _unit setVariable ["acre_sys_core_globalVolume", 1];
+        };
+    };
+}] call ace_common_fnc_addEventHandler;
+
 
 // Initialize all effects
 _fnc_createEffect = {
@@ -112,9 +133,9 @@ GVAR(effectTimeBlood) = time;
 
     _bleeding = ACE_player call FUNC(getBloodLoss);
     // Bleeding Indicator
-    if (_bleeding > 0 and GVAR(effectTimeBlood) + 6 < time) then {
+    if (_bleeding > 0 and GVAR(effectTimeBlood) + 3.5 < time) then {
         GVAR(effectTimeBlood) = time;
-        [500 * _bleeding] call BIS_fnc_bloodEffect;
+        [600 * _bleeding] call BIS_fnc_bloodEffect;
     };
 
     // Blood Volume Effect
@@ -237,6 +258,11 @@ if (USE_WOUND_EVENT_SYNC) then {
     {(((_this select 0) getvariable [QGVAR(pain), 0]) > 0.9)},
     {(((_this select 0) call FUNC(getBloodLoss)) > 0.25)},
     {((_this select 0) getvariable [QGVAR(inReviveState), false])},
+    {((_this select 0) getvariable [QGVAR(inCardiacArrest), false])},
     {((_this select 0) getvariable ["ACE_isDead", false])},
     {(((_this select 0) getvariable [QGVAR(airwayStatus), 100]) < 80)}
 ] call FUNC(addUnconsciousCondition);
+
+// Prevent all types of interaction while unconscious
+// @todo: probably remove this when CBA keybind hold key works properly
+["isNotUnconscious", {!((_this select 0) getVariable ["ACE_isUnconscious", false])}] call EFUNC(common,addCanInteractWithCondition);

@@ -44,7 +44,7 @@ if (GVAR(level) >= 2) then {
     if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {
         // Because of the config changes, we cannot properly disable the medical system for a unit.
         // lets use basic for the time being..
-        _this call FUNC(handleDamage_basic);
+        _damageReturn = _this call FUNC(handleDamage_basic);
     };
 
     [_unit, _selection, _damage, _source, _projectile] call FUNC(handleDamage_caching);
@@ -52,7 +52,12 @@ if (GVAR(level) >= 2) then {
     if (_damageReturn > 0.9) then {
 
         _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
-        _minLethalDamage = GVAR(minLethalDamages) select (GVAR(allAvailableDamageTypes) find _typeOfDamage);
+
+        _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
+        _minLethalDamage = 0.01;
+        if (_typeIndex >= 0) then {
+            _minLethalDamage = GVAR(minLethalDamages) select _typeIndex;
+        };
 
         _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
         _newDamage = _damage - (damage _unit);
@@ -60,7 +65,7 @@ if (GVAR(level) >= 2) then {
             _newDamage = _damage - (_unit getHitPointDamage (_hitPoints select (_hitSelections find _selection)));
         };
 
-        if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
+        if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)} && {_selection in ["", "head", "body"]}) then {
             if ([_unit] call FUNC(setDead)) then {
                 _damageReturn = 1;
             } else {
@@ -73,11 +78,13 @@ if (GVAR(level) >= 2) then {
 };
 [_unit] call FUNC(addToInjuredCollection);
 
-if (_unit getVariable [QGVAR(preventDeath), GVAR(preventInstaDeath)] && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
+if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
     if (vehicle _unit != _unit and {damage _vehicle >= 1}) then {
         // @todo
         // [_unit] call FUNC(unload);
     };
+    [_unit] call FUNC(setDead);
+
     0.89
 };
 

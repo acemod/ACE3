@@ -26,6 +26,7 @@ _unit setvariable [QGVAR(tourniquets), [0,0,0,0,0,0], true];
 
 // wounds and injuries
 _unit setvariable [QGVAR(openWounds), [], true];
+_unit setvariable [QGVAR(bandagedWounds), [], true];
 _unit setVariable [QGVAR(internalWounds), [], true];
 
 // vitals
@@ -61,6 +62,7 @@ _unit setVariable ["ACE_isUnconscious", false, true];
 _unit setvariable [QGVAR(hasLostBlood), false, true];
 _unit setvariable [QGVAR(isBleeding), false, true];
 _unit setvariable [QGVAR(hasPain), false, true];
+_unit setvariable [QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives), true];
 
 // medication
 _allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];

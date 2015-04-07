@@ -45,7 +45,7 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
     // systemChat format ["Trying %1 from %2 start %3", _closeInDistance, [_closeInMax, _closeInMin], _startDistanceFromCenter];
     _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
     _endPosTestOffset set [2, (_startingOffset select 2)];
-    _endPosTest = _attachToVehicle modelToWorld _endPosTestOffset;
+    _endPosTest = _attachToVehicle modelToWorldVisual _endPosTestOffset;
 
     _doesIntersect = false;
     {

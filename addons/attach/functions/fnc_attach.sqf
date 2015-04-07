@@ -94,7 +94,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
             _unit removeAction _actionID;
 
             if (GVAR(placeAction) == 1) then {
-                _startingPosition = _tempObject modelToWorld [0,0,0];
+                _startingPosition = _tempObject modelToWorldVisual [0,0,0];
                 [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAtachText, _startingPosition] call FUNC(placeApprove);
             };
             deleteVehicle _tempObject;

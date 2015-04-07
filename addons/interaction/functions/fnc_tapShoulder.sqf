@@ -13,10 +13,12 @@ if (_target != ACE_player) exitWith {
 
 addCamShake [4, 0.5, 5];
 
+private "_message";
+//localize is converting the escaped <> symbols, so just add them here instead of in the stringtable
 if (_shoulderNum == 0) then {
-    _message = localize "STR_ACE_Interaction_YouWereTappedRight";
+    _message = format ["%1 &gt;", (localize "STR_ACE_Interaction_YouWereTappedRight")];
 } else {
-    _message = localize "STR_ACE_Interaction_YouWereTappedLeft";
+    _message = format ["&lt; %1", (localize "STR_ACE_Interaction_YouWereTappedLeft")];
 };
 
-[_message] call EFUNC(common,displayTextStructured);
+[parseText _message] call EFUNC(common,displayTextStructured);

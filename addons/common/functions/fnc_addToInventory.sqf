@@ -57,7 +57,7 @@ switch ((_type select 0)) do {
             };
         } else {
             _addedToPlayer = false;
-            _pos = _unit modelToWorld [0,1,0.05];
+            _pos = _unit modelToWorldVisual [0,1,0.05];
             _unit = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
             _unit addWeaponCargoGlobal [_classname,1];
             _unit setPosATL _pos;
@@ -73,7 +73,7 @@ switch ((_type select 0)) do {
             };
         } else {
             _addedToPlayer = false;
-            _pos = _unit modelToWorld [0,1,0.05];
+            _pos = _unit modelToWorldVisual [0,1,0.05];
             _unit = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
             _unit addMagazineCargoGlobal [_classname, 1];
             _unit setPosATL _pos;
@@ -89,7 +89,7 @@ switch ((_type select 0)) do {
             };
         } else {
             _addedToPlayer = false;
-            _pos = _unit modelToWorld [0,1,0.05];
+            _pos = _unit modelToWorldVisual [0,1,0.05];
             _unit = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
             _unit addItemCargoGlobal [_classname,1];
             _unit setPosATL _pos;

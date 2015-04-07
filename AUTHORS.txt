@@ -6,12 +6,22 @@
 # request, preferably including an email address.
 
 # CORE TEAM
+bux578 <github@jonathandavid.de>
 commy2
 esteldunedain <nicolas.d.badano@gmail.com>
 Felix Wiegand <koffeinflummi@gmail.com>
 Garth "L-H" de Wet <garthofhearts@gmail.com>
-bux578 <github@jonathandavid.de>
+Giallustio
+Glowbal
+Janus
+Kieran
+NouberNou
 PabstMirror <pabstmirror@gmail.com>
+Ruthberg
+tpM
+ViperMaul
+VKing <kauestad@gmail.com>
+Walter Pearce <jaynus@gmail.com>
 
 # CONTRIBUTORS
 11RDP-LoupVert <loupvert@11rdp.fr>

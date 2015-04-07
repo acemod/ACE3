@@ -15,12 +15,16 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_unit", "_explosive"];
-_unit = _this select 0;
-_explosive = _this select 1;
+EXPLODE_2_PVT(_this,_unit,_explosive);
 
 if (getNumber (ConfigFile >> "CfgAmmo" >> typeof _explosive >> "ACE_explodeOnDefuse") == 1) exitWith {
-	[_unit, -1, [_explosive, 1], true] call FUNC(detonateExplosive);
+    [_unit, -1, [_explosive, 1], true] call FUNC(detonateExplosive);
 };
+
+{
+    detach _x;
+    deleteVehicle _x;
+    false
+} count (attachedObjects (_explosive));
 
 _unit action ["Deactivate", _unit, _explosive];

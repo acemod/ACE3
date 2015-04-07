@@ -3,7 +3,7 @@
 
 EXPLODE_3_PVT(_this,_unit,_range,_isGreen);
 
-_p0Pos = _unit modelToWorld (_unit selectionPosition "righthand");
+_p0Pos = _unit modelToWorldVisual (_unit selectionPosition "righthand");
 
 // Convert _p0Pos to ASL
 _p0 = + _p0Pos;
