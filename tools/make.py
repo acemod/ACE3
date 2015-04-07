@@ -49,6 +49,7 @@ import configparser
 import json
 import traceback
 import time
+import re
 
 if sys.platform == "win32":
 	import winreg
@@ -364,6 +365,17 @@ See the make.cfg file for additional build options.
 	make_root_parent = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
 	os.chdir(make_root)
 
+	# Get latest commit ID
+	try:
+		gitpath = os.path.join(os.path.dirname(make_root), ".git")
+		assert os.path.exists(gitpath)
+
+		commit_id = subprocess.check_output(["git", "rev-parse", "HEAD"])
+		commit_id = str(commit_id, "utf-8")[:8]
+	except:
+		print_error("FAILED TO DETERMINE COMMIT ID.")
+		commit_id = "NOGIT"
+
 	cfg = configparser.ConfigParser();
 	try:
 		cfg.read(os.path.join(make_root, "make.cfg"))
@@ -582,18 +594,34 @@ See the make.cfg file for additional build options.
 				
 				cmd = [os.path.join(work_drive, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
 				ret = subprocess.call(cmd)
-				#ret = subprocess.call(["cfgConvertGUI.exe", os.path.join(work_drive, prefix, module, "config.cpp")])
-				
 				if ret != 0:
 					print_error("CfgConvert -bin return code == " + str(ret))
 					input("Press Enter to continue...")
-				
 				
 				cmd = [os.path.join(work_drive, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
 				ret = subprocess.call(cmd)
 				if ret != 0:
 					print_error("CfgConvert -txt) return code == " + str(ret))
 					input("Press Enter to continue...")
+
+				# Include build number
+				try:
+					configpath = os.path.join(work_drive, prefix, module, "config.cpp")
+					f = open(configpath, "r")
+					configtext = f.read()
+					f.close()
+
+					patchestext = re.search(r"class CfgPatches\n\{(.*?)\n\}", configtext, re.DOTALL).group(1)
+					patchestext = re.sub(r'version(.*?)="(.*?)"', r'version\1="\2-{}"'.format(commit_id), patchestext)
+					configtext = re.sub(r"class CfgPatches\n\{(.*?)\n\}", "class CfgPatches\n{"+patchestext+"\n}", configtext, flags=re.DOTALL)
+
+					f = open(configpath, "w")
+					f.write(configtext)
+					f.close()
+				except:
+					raise
+					print_error("Failed to include build number")
+					continue
 				
 				if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
 					print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
