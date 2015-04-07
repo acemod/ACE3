@@ -7,10 +7,15 @@ PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 if(!local _shooter) exitWith { false };
 
 
-switch _weapon do {
-    case "missiles_DAGR": {
+switch _ammo do {
+    case "M_PG_AT": {                           // Vanilla DAGR missile
         _this call FUNC(guidance_DAGR);
-        //_this call FUNC(guidance_HellfireII);
+    };
+    case "ACE_Hydra70_DAGR": {                  // ACE DAGR 
+        _this call FUNC(guidance_DAGR);
+    };
+    case "ACE_Hellfire_AGM114K": {              // ACE Hellfire AGM-114K 
+        _this call FUNC(guidance_HellfireII);
     };
     case "GBU12BombLauncher": {
         _this call FUNC(guidance_LGB);
