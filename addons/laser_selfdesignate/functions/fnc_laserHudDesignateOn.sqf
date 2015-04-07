@@ -5,19 +5,6 @@ TRACE_1("enter", _this);
 
 #define FCS_UPDATE_DELAY 1
 
-FUNC(magnitude) = {
-     _this distance [0, 0, 0]
-};
-
-FUNC(mat_normalize3d) = {
-    private ["_mag"];
-    PARAMS_3(_vx,_vy,_vz);
-
-    _mag = _this call FUNC(magnitude);
-    if (_mag == 0) then {_mag = 1};
-    [(_vx/_mag), (_vy/_mag), (_vz/_mag)]
-};
-
 FUNC(laserHudDesignatePFH) = {
     private["_args", "_laserTarget", "_shooter", "_vehicle", "_weapon", "_gunnerInfo", "_turret", "_pov", "_gunBeg", "_gunEnd", "_povPos", "_povDir", "_result", "_resultPositions", "_firstResult", "_forceUpdateTime"];
     _args = _this select 0;
@@ -26,10 +13,10 @@ FUNC(laserHudDesignatePFH) = {
 
     TRACE_1("", _args);
     
-    if(!alive _shooter || isNull _vehicle || isNull _laserTarget || !GVAR(active) ) exitWith { 
+    if(vehicle ACE_player) != _shooter || !alive _shooter || isNull _vehicle || isNull _laserTarget || !GVAR(active) ) exitWith { 
         [_vehicle, _shooter, _laserTarget] call FUNC(laserHudDesignateOff);
     };
-    if(!([ACE_player] call FUNC(unitTurretHasDesignator)) ) exitWith {
+    if(!([_shooter] call FUNC(unitTurretHasDesignator)) ) exitWith {
         [_vehicle, _shooter, _laserTarget] call FUNC(laserHudDesignateOff);
     };
    
@@ -79,10 +66,10 @@ FUNC(laserHudDesignatePFH) = {
                 ["ace_fcs_forceUpdate", []] call ace_common_fnc_localEvent;
             };
             
-            if( (_laserTarget distance _pos) > 0.1) then {
+            //if( (_laserTarget distance _pos) > 0.1) then {
                 TRACE_1("LaserPos Update", "");
                 _laserTarget setPosATL (ASLToATL _pos);
-            };
+            //};
             
             if(diag_tickTime > _forceUpdateTime) then {
                  _args set[2, diag_tickTime + FCS_UPDATE_DELAY];
@@ -102,8 +89,7 @@ FUNC(laserHudDesignatePFH) = {
     _this set[0, _args];
 };
 
-private "_laserTarget";
-private "_handle";
+private ["_laserTarget", "_handle", "_vehicle"];
 
 if(isNil QGVAR(laser)) then {
     _laserTarget = "LaserTargetW" createVehicle (getpos ACE_player);
