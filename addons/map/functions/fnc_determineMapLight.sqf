@@ -86,7 +86,7 @@ TRACE_1("Player is on foot or in an open vehicle","");
 
 // Check if player is near a campfires, streetlamps, units with flashlights, vehicles with lights on, etc. - 40m
 {
-    _lightLevel = _lightLevel max ([_unit, _x] call FUNC(lightIntensityFromObject));
+    _lightLevel = _lightLevel max ([_unit, _x] call EFUNC(common,lightIntensityFromObject));
 } forEach nearestObjects [_unit, ["All"], 40];
 
 
