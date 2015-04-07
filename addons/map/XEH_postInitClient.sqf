@@ -19,12 +19,14 @@ call FUNC(determineZoom);
     ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {[] call FUNC(updateMapEffects);}];
 };
 
-// doesn't work on postInit in SP
+// Note: doesn't work on postInit in SP, therefore use default setting
+(findDisplay 12 displayCtrl 1016) ctrlShow (GETGVAR(showPositionOnCursor,false));
+
 ["mapDisplayLoaded", {
-    hint str _this; systemChat str _this; diag_log str _this;//
+    //hint str _this; systemChat str _this; diag_log str _this;
 
     if (_this select 1 == "ingame") then {
-        ((_this select 0) displayCtrl 1016) ctrlShow false;
+        ((_this select 0) displayCtrl 1016) ctrlShow (GETGVAR(showPositionOnCursor,false));
     };
 }] call FUNC(addEventhandler);
 
