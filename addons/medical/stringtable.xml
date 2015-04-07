@@ -30,9 +30,6 @@
         <Portuguese>Injetar Morfina</Portuguese>
         <Italian>Inietta Morfina</Italian>
       </Key>
-      <Key ID="STR_ACE_Medical_Inject_Atropine">
-        <English>Inject Atropine</English>
-      </Key>
       <Key ID="STR_ACE_Medical_Transfuse_Blood">
         <English>Transfuse Blood</English>
         <German>Bluttransfusion</German>

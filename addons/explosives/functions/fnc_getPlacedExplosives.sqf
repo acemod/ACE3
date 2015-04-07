@@ -27,7 +27,7 @@ _adjustedList = false;
 _clackerList = _unit getVariable [QGVAR(Clackers), []];
 _list = [];
 {
-    if isNull (_x select 0) then {
+    if (isNull (_x select 0)) then {
         _clackerList set [_foreachIndex, "X"];
         _adjustedList = true;
     } else {

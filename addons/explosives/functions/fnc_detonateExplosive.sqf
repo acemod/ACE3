@@ -19,14 +19,18 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_item","_result", "_ignoreRange", "_unit", "_range"];
-_unit = _this select 0;
-_range = _this select 1;
-_item = _this select 2;
+private ["_result", "_ignoreRange", "_helper"];
+EXPLODE_3_PVT(_this,_unit,_range,_item);
 _ignoreRange = (_range == -1);
 _result = true;
 
 if (!_ignoreRange && {(_unit distance (_item select 0)) > _range}) exitWith {false};
+
+_helper = (attachedTo (_item select 0));
+if (!isNull(_helper)) then {
+    detach (_item select 0);
+    deleteVehicle _helper;
+};
 
 if (getNumber (ConfigFile >> "CfgAmmo" >> typeof (_item select 0) >> "TriggerWhenDestroyed") == 0) then {
     private ["_exp", "_previousExp"];
@@ -44,7 +48,7 @@ if (getNumber (ConfigFile >> "CfgAmmo" >> typeof (_item select 0) >> "TriggerWhe
 [{
         _explosive = _this;
         if (!isNull _explosive) then {
-                _explosive setDamage 1;
+            _explosive setDamage 1;
         };
 }, _item select 0, _item select 1, 0] call EFUNC(common,waitAndExecute);
 

@@ -1,5 +1,19 @@
 
 class CfgAmmo {
+    class BulletBase;
+    class B_20mm;
+    
+    class ACE_20mm_HEDP : B_20mm {
+		hit = 80;
+        indirectHit = 12;
+        indirectHitRange = 2; //2;
+        caliber = 1.4;
+        tracerStartTime = 0.02;
+        timeToLive = 40;
+        explosive = 1.8;
+    };
+
+
     // adjust minigun caliber and deflection to other ammo
     class SubmunitionBullet;
     class B_65x39_Minigun_Caseless: SubmunitionBullet {
@@ -13,7 +27,6 @@ class CfgAmmo {
     };
 
     // also adjust tracer, "muh lightshow"; also adjust splash damage radius
-    class BulletBase;
     class Gatling_30mm_HE_Plane_CAS_01_F: BulletBase {
         hit = 80;
         indirectHit = 12;
@@ -22,6 +35,7 @@ class CfgAmmo {
         deflecting = 3;
         fuseDistance = 3;
         tracerStartTime = 0.02;
+        timeToLive = 40;
     };
 
     // helper projectiles to simulate a rof > fps
