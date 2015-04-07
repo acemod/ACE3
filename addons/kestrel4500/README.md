@@ -1,11 +1,10 @@
-ace_winddeflection
+ace_kestrel4500
 ===============
 
-Wind deflection for projectiles/bullets.
+Kestrel 4500 Pocket Weather Tracker
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [Glowbal](https://github.com/Glowbal)
 - [Ruthberg] (http://github.com/Ulteq)
