@@ -17,6 +17,6 @@
 
 private ["_returnValue"];
 
-_returnValue = ("ACE_Kestrel4500" in (items ACE_player)) && {[ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)} && {!(underwater ACE_player)};
+_returnValue = ("ACE_Kestrel4500" in (items ACE_player)) && {!(underwater ACE_player)};
 
 _returnValue
