@@ -27,6 +27,9 @@ _versions = [];
   _versions set [_forEachIndex, _version];
 } forEach _files;
 
+_versionFull = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "versionStr");
+diag_log text format ["[ACE] Full Version Number: %1", _versionFull];
+
 if (isServer) then {
   diag_log text format ["[ACE] Server: ACE_Common is Version %1.", _versionMain];
 
