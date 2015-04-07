@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-03-23 -->
+<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
   <Package name="Medical">
     <Container name="Basic">
       <Key ID="STR_ACE_Medical_Inject_Atropine">
         <English>Inject Atropine</English>
+        <German>Atropin</German>
       </Key>
       <Key ID="STR_ACE_Medical_Inject_Epinephrine">
         <English>Inject Epinephrine</English>
@@ -44,12 +45,15 @@
       </Key>
       <Key ID="STR_ACE_Medical_Transfuse_Plasma">
         <English>Transfuse Plasma</English>
+        <German>Plasmatransfusion</German>
       </Key>
       <Key ID="STR_ACE_Medical_Transfuse_Saline">
         <English>Transfuse Saline</English>
+        <German>Salzlösungtransfusion</German>
       </Key>
       <Key ID="STR_ACE_Medical_Apply_Tourniquet">
         <English>Apply Tourniquet</English>
+        <German>Aderpresse anwenden</German>
       </Key>
       <Key ID="STR_ACE_Medical_Bandage">
         <English>Bandage</English>
@@ -149,7 +153,7 @@
       </Key>
       <Key ID="STR_ACE_Medical_Injecting_Epinephrine">
         <English>Injecting Epinephrine ...</English>
-        <German>Epinephrine injizieren ...</German>
+        <German>Epinephrin injizieren ...</German>
         <Spanish>Inyectando Epinefrina ...</Spanish>
         <Polish>Wstrzykiwanie adrenaliny ...</Polish>
         <Czech>Aplikuju Adrenalin ...</Czech>
@@ -161,6 +165,7 @@
       </Key>
       <Key ID="STR_ACE_Medical_Injecting_Atropine">
         <English>Injecting Atropine ...</English>
+        <German>Atropin injizieren ...</German>
       </Key>
       <Key ID="STR_ACE_Medical_Transfusing_Blood">
         <English>Transfusing Blood ...</English>
@@ -176,9 +181,11 @@
       </Key>
       <Key ID="STR_ACE_Medical_Transfusing_Saline">
         <English>Transfusing Saline ...</English>
+        <German>Sallösungtransfusion ...</German>
       </Key>
       <Key ID="STR_ACE_Medical_Transfusing_Plasma">
         <English>Transfusing Plasma ...</English>
+        <German>Plasmatransfusion ...</German>
       </Key>
       <Key ID="STR_ACE_Medical_Bandaging">
         <English>Bandaging ...</English>
@@ -194,6 +201,7 @@
       </Key>
       <Key ID="STR_ACE_Medical_Applying_Tourniquet">
         <English>Applying Tourniquet ...</English>
+        <German>Aderpresse ...</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Medical">
         <English>Medical</English>
@@ -876,10 +884,10 @@
       <Key ID="STR_ACE_Medical_UnloadPatient">
         <English>Unload patient</English>
       </Key>
-      <Key ID="STR_ACE_MEDICAL_PlaceInBodyBag"> 
+      <Key ID="STR_ACE_MEDICAL_PlaceInBodyBag">
         <English>Place body in bodybag</English>
       </Key>
-      <Key ID="STR_ACE_MEDICAL_PlacingInBodyBag"> 
+      <Key ID="STR_ACE_MEDICAL_PlacingInBodyBag">
         <English>Placing body in bodybag</English>
       </Key>
     </Container>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-06 -->
+<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
   <Package name="Common">
     <Key ID="STR_ACE_Common_ACETeam">
@@ -299,51 +299,65 @@
       <Polish>Akceptuj prośby</Polish>
       <Spanish>Aceptar Peticiones</Spanish>
       <English>Accept Requests</English>
+      <German>Anfrage annehmen</German>
     </Key>
     <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TITLE">
       <Polish>Ignoruj prośby</Polish>
       <Spanish>Rechazar Peticiones</Spanish>
       <English>Decline Requests</English>
+      <German>Anfrage ablehnen</German>
     </Key>
     <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
       <Polish>Akceptuj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
       <Spanish>Acepta Peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
       <English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
+      <German>Anfragen anderer Spieler annehmen. Diese Anfragen können sich auf das Benutzen / Teilen von Equipment beziehen oder das Ausführen bestimmter Aktionen.</German>
     </Key>
     <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
       <Polish>Ignoruj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
       <Spanish>Rechazar Peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
       <English>Decline Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
+      <German>Anfragen anderer Spieler ablehnen. Diese Anfragen können sich auf das Benutzen / Teilen von Equipment beziehen oder das Ausführen bestimmter Aktionen.</German>
     </Key>
     <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
       <English>Feedback icons</English>
+      <German>Feedback-Icons</German>
     </Key>
     <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
       <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
+      <German>Wähle die Position der Feedback-Icons aus oder deaktiviere Sie. Die Feedback-Icons zeigen den Status deiner Einheit an, oder die ausgeführte Aktion.</German>
     </Key>
     <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
       <English>Progress bar location</English>
+      <German>Position des Fortschrittsanzeige</German>
     </Key>
     <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
       <English>Set the desired location of the progress bar on your screen.</English>
+      <German>Wähle die Position der Fortschrittsanzeige.</German>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
       <English>Hint Background color</English>
+      <German>Hinweis Hintergrundfarbe</German>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
       <English>The color of the background from the ACE hints.</English>
+      <German>Wähle die Hintergrundfarbe für ACE-Hinweise.</German>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
       <English>Hint text font color</English>
+      <German>Hinweis Textfarbe</German>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
       <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
+      <German>Wähle die Textfarbe für ACE-Hinweise. </German>
     </Key>
     <Key ID="STR_ACE_Common_bananaDisplayName">
       <English>Banana</English>
+      <German>Banane</German>
     </Key>
     <Key ID="STR_ACE_Common_bananaDescr">
       <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
+      <German>Die Bananen (Musa) sind eine Pflanzengattung in der Familie der Bananengewächse (Musaceae) innerhalb der Einkeimblättrigen Pflanzen (Monokotyledonen).</German>
     </Key>
   </Package>
 </Project>

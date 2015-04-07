@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-02-24 -->
+<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
   <Package name="Captives">
     <Key ID="STR_ACE_Captives_SetCaptive">
@@ -132,18 +132,23 @@
     </Key>
     <Key ID="STR_ACE_Captives_StartSurrendering">
       <English>Surrender</English>
+      <German>Ergeben</German>
     </Key>
     <Key ID="STR_ACE_Captives_StopSurrendering">
       <English>Stop Surrendering</English>
+      <German>Nicht ergeben</German>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
       <English>Only use on alive units</English>
+      <German>Nur auf lebenden Einheiten anwenden</German>
     </Key>
-    <Key ID="STR_ACE_Captives_Zeus_OnlyInfentry">
+    <Key ID="STR_ACE_Captives_Zeus_OnlyInfantry">
       <English>Only use on dismounted inf</English>
+      <German>Nur auf abgesessenen Einheiten anwenden</German>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
       <English>Nothing under mouse</English>
+      <German>Keine Einheit unter dem Cursor</German>
     </Key>
   </Package>
 </Project>
