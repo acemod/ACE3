@@ -576,32 +576,24 @@ See the make.cfg file for additional build options.
 		if build_tool == "pboproject":
 			try:
 				#PABST: Convert config (run the macro'd config.cpp through CfgConvert twice to produce a de-macro'd cpp that pboProject can read without fucking up:
-				os.chdir(os.path.join(arma3tools_path, "CfgConvert"))
 				shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
 				
-				ret = subprocess.call(["cfgConvertGUI.exe", os.path.join(work_drive, prefix, module, "config.cpp")])
-				if ret != 0:
-					print_error("cfgConvertGUI (bin) return code == " + str(ret))
-					input("Press Enter to continue...")
-				
-				#PABST: Need micro sleeps because cfgConvertGUI can return before it's finished procressing
-				time.sleep(0.05)
-				
-				ret = subprocess.call(["cfgConvertGUI.exe", os.path.join(work_drive, prefix, module, "config.bin")])
-				if ret != 0:
-					print_error("cfgConvertGUI (txt) return code == " + str(ret))
-					input("Press Enter to continue...")
-				
-				time.sleep(0.05)
- 				                   
-				#cmd = [rapifyTool, "-L", "-P", os.path.join(work_drive, prefix, module, "config.cpp")];
-				#ret = subprocess.call(cmd)
-				#if ret != 0:
-				#	print_error("rapifyTool return code == " + str(ret) + str(cmd))
-				#	input("Press Enter to continue...")
-				  
-				# Call pboProject
 				os.chdir("P:\\")
+				
+				cmd = [os.path.join(work_drive, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
+				ret = subprocess.call(cmd)
+				#ret = subprocess.call(["cfgConvertGUI.exe", os.path.join(work_drive, prefix, module, "config.cpp")])
+				
+				if ret != 0:
+					print_error("CfgConvert -bin return code == " + str(ret))
+					input("Press Enter to continue...")
+				
+				
+				cmd = [os.path.join(work_drive, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
+				ret = subprocess.call(cmd)
+				if ret != 0:
+					print_error("CfgConvert -txt) return code == " + str(ret))
+					input("Press Enter to continue...")
 				
 				if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
 					print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
