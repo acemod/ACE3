@@ -28,7 +28,7 @@ if (currentWeapon ACE_player != primaryWeapon ACE_player) exitWith { true };
 
 [] spawn {
     2 cutText ["", "PLAIN"];
-    GVAR(WindInfo) = false;
+    EGVAR(weather,WindInfo) = false;
     0 cutText ["", "PLAIN"];
     GVAR(Protractor) = true;
     

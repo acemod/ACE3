@@ -26,7 +26,7 @@ if (vehicle ACE_player != ACE_player) exitWith { true };
 
 [] spawn {
     2 cutText ["", "PLAIN"];
-    GVAR(Protractor) = false;
+    EGVAR(advanced_ballistics,Protractor) = false;
     1 cutText ["", "PLAIN"];
     GVAR(WindInfo) = true;
 
