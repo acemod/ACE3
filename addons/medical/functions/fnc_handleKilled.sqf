@@ -24,9 +24,9 @@ if (GVAR(level) >= 2) then {
     _unit setvariable [QGVAR(airwayStatus), 0];
 
     if (USE_WOUND_EVENT_SYNC) then {
-		_openWounds = _unit getvariable [QGVAR(openWounds), []];
-		{
-		    ["medical_propagateWound", [_unit, _x]] call EFUNC(common,globalEvent);
-		}foreach _openWounds;
-	};
+        _openWounds = _unit getvariable [QGVAR(openWounds), []];
+        {
+            ["medical_propagateWound", [_unit, _x]] call EFUNC(common,globalEvent);
+        }foreach _openWounds;
+    };
 };

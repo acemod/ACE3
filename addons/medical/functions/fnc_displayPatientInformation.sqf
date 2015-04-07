@@ -31,7 +31,9 @@ if (_show) then {
     [{
         private ["_target", "_display", "_alphaLevel", "_damaged", "_availableSelections", "_openWounds", "_selectionBloodLoss", "_red", "_green", "_blue", "_alphaLevel", "_allInjuryTexts", "_lbCtrl", "_genericMessages"];
         _target = (_this select 0) select 0;
-        if (GVAR(displayPatientInformationTarget) != _target) exitwith {
+        _selectionN = (_this select 0) select 1;
+
+        if (GVAR(displayPatientInformationTarget) != _target || GVAR(currentSelectedSelectionN) != _selectionN) exitwith {
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
 
@@ -44,7 +46,7 @@ if (_show) then {
         _allInjuryTexts = [];
         _genericMessages = [];
 
-        _partText = ["STR_ACE_Interaction_Head", "STR_ACE_Interaction_Torso", "STR_ACE_Interaction_ArmLeft" ,"STR_ACE_Interaction_ArmRight" ,"STR_ACE_Interaction_LegLeft", "STR_ACE_Interaction_LegRight"] select GVAR(currentSelectedSelectionN);
+        _partText = ["STR_ACE_Interaction_Head", "STR_ACE_Interaction_Torso", "STR_ACE_Interaction_ArmLeft" ,"STR_ACE_Interaction_ArmRight" ,"STR_ACE_Interaction_LegLeft", "STR_ACE_Interaction_LegRight"] select _selectionN;
         _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
 
         if (_target getvariable[QGVAR(isBleeding), false]) then {
@@ -54,11 +56,23 @@ if (_show) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_LOST_BLOOD", [1, 0.1, 0.1, 1]];
         };
 
-        if (((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select GVAR(currentSelectedSelectionN)) > 0) then {
+        if (((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select _selectionN) > 0) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_TOURNIQUET_APPLIED", [0.77, 0.51, 0.08, 1]];
         };
         if (_target getvariable[QGVAR(hasPain), false]) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_PAIN", [1, 1, 1, 1]];
+        };
+
+        _totalIvVolume = 0;
+        {
+            private "_value";
+            _value = _target getvariable _x;
+            if !(isnil "_value") then {
+                _totalIvVolume = _totalIvVolume + (_target getvariable [_x, 0]);
+            };
+        }foreach GVAR(IVBags);
+        if (_totalIvVolume >= 1) then {
+            _genericMessages pushback [format[localize "STR_ACE_MEDICAL_receivingIvVolume", floor _totalIvVolume], [1, 1, 1, 1]];
         };
 
         _selectionBloodLoss = [0,0,0,0,0,0];
@@ -74,24 +88,45 @@ if (_show) then {
                     if (_amountOf > 0) then {
                         if (_amountOf >= 1) then {
                             // TODO localization
-                            _allInjuryTexts pushback format["%2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf];
+                            _allInjuryTexts pushback [format["%2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf], [1,1,1,1]];
                         } else {
                             // TODO localization
-                            _allInjuryTexts pushback format["Partial %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6];
+                            _allInjuryTexts pushback [format["Partial %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6], [1,1,1,1]];
                         };
                     };
                 };
             }foreach _openWounds;
+
+            _bandagedwounds = _target getvariable [QGVAR(bandagedWounds), []];
+            {
+                _amountOf = _x select 3;
+                // Find how much this bodypart is bleeding
+                //if (_selectionBloodLoss select (_x select 2) == 0) then {
+                //    _selectionBloodLoss set [(_x select 2), (_selectionBloodLoss select (_x select 2)) + (15 * ((_x select 4) * _amountOf))];
+                //};
+                if (GVAR(currentSelectedSelectionN) == (_x select 2)) then {
+                    // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
+                    if (_amountOf > 0) then {
+                        if (_amountOf >= 1) then {
+                            // TODO localization
+                            _allInjuryTexts pushback [format["[B] %2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf], [1,0.5,0.5,1]];
+                        } else {
+                            // TODO localization
+                            _allInjuryTexts pushback [format["[B] Partial %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6], [1,0.5,0.5,1]];
+                        };
+                    };
+                };
+            }foreach _bandagedwounds;
         } else {
             {
                 _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _x];
 
                 if (_target getHitPointDamage _x > 0.1) then {
                     // @todo localize
-                    _allInjuryTexts pushBack format ["%1 %2",
+                    _allInjuryTexts pushBack [format ["%1 %2",
                         ["Lightly wounded", "Heavily wounded"] select (_target getHitPointDamage _x > 0.5),
                         ["head", "torso", "left arm", "right arm", "left leg", "right leg"] select _forEachIndex
-                    ];
+                    ], [1,1,1,1]];
                 };
             } forEach ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
         };
@@ -125,7 +160,8 @@ if (_show) then {
             _lbCtrl lbSetColor [_foreachIndex, _x select 1];
         }foreach _genericMessages;
         {
-            _lbCtrl lbAdd _x;
+            _lbCtrl lbAdd (_x select 0);
+            _lbCtrl lbSetColor [_foreachIndex, _x select 1];
         }foreach _allInjuryTexts;
         if (count _allInjuryTexts == 0) then {
             _lbCtrl lbAdd "No injuries on this bodypart..";
@@ -158,7 +194,7 @@ if (_show) then {
         (_display displayCtrl 303) ctrlSetText (_triageStatus select 0);
         (_display displayCtrl 303) ctrlSetBackgroundColor (_triageStatus select 2);
 
-    }, 0, [_target]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_target, GVAR(currentSelectedSelectionN)]] call CBA_fnc_addPerFrameHandler;
 
 } else {
     ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutText ["","PLAIN"];

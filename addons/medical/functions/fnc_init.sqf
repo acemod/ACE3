@@ -26,6 +26,7 @@ _unit setvariable [QGVAR(tourniquets), [0,0,0,0,0,0], true];
 
 // wounds and injuries
 _unit setvariable [QGVAR(openWounds), [], true];
+_unit setvariable [QGVAR(bandagedWounds), [], true];
 _unit setVariable [QGVAR(internalWounds), [], true];
 
 // vitals

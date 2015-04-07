@@ -22,7 +22,6 @@ class CfgMagazines {
         descriptionShort = "$STR_ACE_30Rnd_65x39_caseless_mag_SDDescription";
         picture = "\A3\weapons_f\data\ui\m_30stanag_caseless_green_CA.paa";
         initSpeed = 320;
-        GVAR(forceMagazineMuzzleVelocity) = 1;
     };
 
     class ACE_30Rnd_65x39_caseless_mag_AP: 30Rnd_65x39_caseless_mag {
@@ -58,7 +57,6 @@ class CfgMagazines {
         displayNameShort = "$STR_ACE_30Rnd_65x39_caseless_green_mag_SDNameShort";
         descriptionShort = "$STR_ACE_30Rnd_65x39_caseless_green_mag_SDDescription";
         initSpeed = 320;
-        GVAR(forceMagazineMuzzleVelocity) = 1;
     };
 
     class ACE_30Rnd_65x39_caseless_green_mag_AP: 30Rnd_65x39_caseless_green {
@@ -90,7 +88,6 @@ class CfgMagazines {
         displayNameShort = "$STR_ACE_30Rnd_556x45_mag_SDNameShort";
         descriptionShort = "$STR_ACE_30Rnd_556x45_mag_SDDescription";
         initSpeed = 320;
-        GVAR(forceMagazineMuzzleVelocity) = 1;
         picture = "\A3\weapons_f\data\ui\m_30stanag_green_ca.paa";
     };
 
@@ -130,7 +127,6 @@ class CfgMagazines {
         displayNameShort = "$STR_ACE_20Rnd_762x51_mag_SDNameShort";
         descriptionShort = "$STR_ACE_20Rnd_762x51_mag_SDDescription";
         initSpeed = 320;
-        GVAR(forceMagazineMuzzleVelocity) = 1;
     };
 
     class ACE_20Rnd_762x51_Mag_AP: 20Rnd_762x51_Mag {

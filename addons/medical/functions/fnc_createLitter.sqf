@@ -24,6 +24,7 @@ _className = _this select 3;
 _usersOfItems = _this select 5;
 
 if !(GVAR(allowLitterCreation)) exitwith {};
+if (vehicle _caller != _caller || vehicle _target != _target) exitwith {};
 
 _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
 if (GVAR(level) >= 2) then {

@@ -22,7 +22,7 @@ _unit setVariable [QGVAR(lastMomentVitalsHandled), time];
 if (_interval == 0) exitWith {};
 
 _lastTimeValuesSynced = _unit getvariable [QGVAR(lastMomentValuesSynced), 0];
-_syncValues = time - _lastTimeValuesSynced >= (10 + floor(random(10)));
+_syncValues = (time - _lastTimeValuesSynced >= (10 + floor(random(10))) && GVAR(keepLocalSettingsSynced));
 if (_syncValues) then {
     _unit setvariable [QGVAR(lastMomentValuesSynced), time];
 };
@@ -166,5 +166,16 @@ if (GVAR(level) >= 2) then {
         if (_heartRate < 20) then {
             [_unit] call FUNC(setCardiacArrest);
         };
+    };
+
+    // syncing any remaining values
+    if (_syncValues) then {
+        {
+            private "_value";
+            _value = _unit getvariable _x;
+            if !(isnil "_value") then {
+                _unit setvariable [_x,(_unit getvariable [_x, 0]), true];
+            };
+        }foreach GVAR(IVBags);
     };
 };

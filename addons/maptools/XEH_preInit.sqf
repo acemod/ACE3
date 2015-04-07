@@ -24,8 +24,8 @@ PREP(updateMapToolMarkers);
 PREP(updateLineMarker);
 
 if (isServer) then {
-	GVAR(drawing_serverLineMarkers) = [];
-	publicVariable QGVAR(drawing_serverLineMarkers);
+    GVAR(drawing_serverLineMarkers) = [];
+    publicVariable QGVAR(drawing_serverLineMarkers);
 };
 
 //Add Event Handlers:

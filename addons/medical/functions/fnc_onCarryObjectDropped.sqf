@@ -33,7 +33,7 @@ if (_carrying >= 0) then {
         _target setvariable [QGVAR(hasCopy), nil, true];
     };
 
-	_caller setvariable [QGVAR(isCarrying), -1, true];
+    _caller setvariable [QGVAR(isCarrying), -1, true];
     if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
         _caller removeWeapon "ACE_FakePrimaryWeapon";
     };

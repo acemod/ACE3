@@ -77,21 +77,9 @@ class ACE_Medical_Actions {
             callbackProgress = "";
             animationPatient = "";
             animationPatientUnconscious = "";
-            itemConsumed = 0;
+            itemConsumed = 1;
             litter[] = {};
         };
-        /*class PersonalAidKit: Bandage {
-            displayName = "";
-            displayNameProgress = "";
-            items[] = {"ACE_personalAidKit"};
-            treatmentLocations[] = {"All"};
-            requiredMedic = 1;
-            treatmentTime = 15;
-            callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
-            itemConsumed = 0;
-            animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medic";
-            litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"}},  {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}, {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}} };
-        };*/
     };
 
     class Advanced {
@@ -204,7 +192,7 @@ class ACE_Medical_Actions {
             displayName = "";
             displayNameProgress = "";
             items[] = {"ACE_surgicalKit"};
-            treatmentLocations[] = {"MedicalFacility", "MedicalVehicle"};
+            treatmentLocations[] = {QGVAR(useLocation_SurgicalKit)};
             requiredMedic = QGVAR(medicSetting_SurgicalKit);
             treatmentTime = 10;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_surgicalKit));
@@ -216,7 +204,7 @@ class ACE_Medical_Actions {
             displayName = "";
             displayNameProgress = "";
             items[] = {"ACE_personalAidKit"};
-            treatmentLocations[] = {"All"};
+            treatmentLocations[] = {QGVAR(useLocation_PAK)};
             requiredMedic = QGVAR(medicSetting_PAK);
             treatmentTime = 10;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
@@ -265,7 +253,7 @@ class ACE_Medical_Actions {
             condition = "((_this select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
-            callbackProgress = "((_this select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
+            callbackProgress = "(((_this select 0) select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
@@ -288,7 +276,7 @@ class ACE_Medical_Actions {
             callbackProgress = "";
             animationPatient = "";
             animationPatientUnconscious = "";
-            itemConsumed = 0;
+            itemConsumed = 1;
             litter[] = {};
         };
     };

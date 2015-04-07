@@ -18,7 +18,7 @@ EXPLODE_3_PVT(_this,_unit,_vehicle,_weapon);
 
 private ["_weaponPos", "_weaponDir", "_weaponPosDown"];
 
-_weaponPos = ATLtoASL (_unit modelToWorld (_unit selectionPosition "RightHand"));
+_weaponPos = ATLtoASL (_unit modelToWorldVisual (_unit selectionPosition "RightHand"));
 _weaponDir = _unit weaponDirection _weapon;
 _weaponPosDown = _weaponPos vectorAdd [0,0,-MAXHEIGHT];
 

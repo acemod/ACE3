@@ -22,16 +22,16 @@ _found = false;
 EXPLODE_2_PVT(_this,_name,_code);
 
 if ((_code) == "") ExitWith {
-	[_name] call FUNC(removeFromSpeedDial);
+    [_name] call FUNC(removeFromSpeedDial);
 };
 {
-	if ((_x select 0) == _name) exitWith {
-		_speedDial set [_foreachindex, _this];
-		_found = true;
-	};
+    if ((_x select 0) == _name) exitWith {
+        _speedDial set [_foreachindex, _this];
+        _found = true;
+    };
 } foreach _speedDial;
 if (!_found) then {
-	_speedDial pushBack _this;
+    _speedDial pushBack _this;
 };
 
 ace_player setVariable [QGVAR(SpeedDial), _speedDial];
