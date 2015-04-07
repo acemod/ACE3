@@ -18,6 +18,17 @@ class CfgAmmo {
 		maxspeed = 1030;
 		maneuvrability = 8;
 		sideairfriction = 0.065;
+        
+        ACE_maxDeflection = 0.15;       // Maximum flap deflection for guidance
+        ACE_minDeflection = 0.005;      // Minium flap deflection for guidance
+        ACE_incDeflection = 0.005;      // The incrmeent in which deflection adjusts.
+        
+        ACE_seekerTypes = [ "SALH" ];   // {"SALH", "LIDAR", "BeamRide", "SARH", "Optic", "Thermal"};
+        ACE_seekerAngle = 90;           // Angle in front of the missile which can be searched
+        ACE_seekerAccuracy = 1;         // seeker accuracy multiplier
+        ACE_seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
+        
+        ACE_attackProfiles = [ "LOAL-LIN", "LOAL-DIR", "LOAL-MID", "LOAL-HI"];
     };
     
     class ACE_Hydra70_DAGR : M_PG_AT {

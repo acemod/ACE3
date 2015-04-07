@@ -1,8 +1,11 @@
 #include "script_component.hpp"
 
-if( (count _this) > 2) then {
-    EXPLODE_3_PVT((_this select 0),_vehicle,_shooter,_laserTarget);
-    _vehicle setVariable[QGVAR(currentTarget), [], true];
+if(!isNil "_this") then {
+    if( (count _this) > 2) then {
+        EXPLODE_3_PVT((_this select 0),_vehicle,_shooter,_laserTarget);
+        // We got the optional vehicle list, clear the parameters
+        _vehicle setVariable[QGVAR(currentTarget), [], true];
+    };
 };
 
 if(isNil QGVAR(laser)) exitWith {
@@ -17,10 +20,9 @@ if(!isNil "_handle") then {
     [_handle] call cba_fnc_removePerFrameHandler;
 };
 
-REM(ACE_LASERS, GVAR(laser));
 deleteVehicle GVAR(laser);
 GVAR(laser) = nil;
-GVAR(laserActive) = false;
+GVAR(active) = false;
 
 
 

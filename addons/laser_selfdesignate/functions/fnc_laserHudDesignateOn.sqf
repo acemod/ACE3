@@ -23,7 +23,16 @@ FUNC(laserHudDesignatePFH) = {
     _args = _this select 0;
     _laserTarget = _args select 0;
     _shooter = _args select 1;
+
+    TRACE_1("", _args);
     
+    if(!alive _shooter || isNull _vehicle || isNull _laserTarget || !GVAR(active) ) exitWith { 
+        [_vehicle, _shooter, _laserTarget] call FUNC(laserHudDesignateOff);
+    };
+    if(!([ACE_player] call FUNC(unitTurretHasDesignator)) ) exitWith {
+        [_vehicle, _shooter, _laserTarget] call FUNC(laserHudDesignateOff);
+    };
+   
     if( (count _args) < 3) then {
         _args set[2, diag_tickTime + FCS_UPDATE_DELAY];
     };
@@ -31,15 +40,6 @@ FUNC(laserHudDesignatePFH) = {
     
     _vehicle = vehicle _shooter;
     _weapon = currentWeapon _vehicle;
-    
-    TRACE_1("", _args);
-    
-    if(!alive _shooter || isNull _vehicle || isNull _laserTarget || !GVAR(laserActive) ) exitWith { 
-        [_vehicle, _shooter, _laserTarget] call FUNC(laserHudDesignateOff);
-    };
-    if(!([ACE_player] call FUNC(unitTurretHasDesignator)) ) exitWith {
-        [_vehicle, _shooter, _laserTarget] call FUNC(laserHudDesignateOff);
-    };
     
     // Retrieve the gunner and turret memory point information
     _gunnerInfo = [_vehicle, _weapon] call CBA_fnc_getFirer;
@@ -106,13 +106,15 @@ private "_laserTarget";
 private "_handle";
 
 if(isNil QGVAR(laser)) then {
-    
     _laserTarget = "LaserTargetW" createVehicle (getpos ACE_player);
     
-    GVAR(laserActive) = true;
+    GVAR(active) = true;
     
     _handle = [FUNC(laserHudDesignatePFH), 0.1, [_laserTarget, ACE_player]] call cba_fnc_addPerFrameHandler;
     _laserTarget setVariable ["ACE_PFH_HANDLE", _handle, false];
+    
+    // Clear the vehicle parameters
+    _vehicle setVariable[QGVAR(currentTarget), [], true];
     
     GVAR(laser) = _laserTarget;
 } else {
