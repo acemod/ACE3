@@ -73,6 +73,7 @@ PREP(getStringFromMissionSQM);
 PREP(getTargetAzimuthAndInclination);
 PREP(getTargetDistance);
 PREP(getTargetObject);
+PREP(getTurnedOnLights);
 PREP(getTurretCommander);
 PREP(getTurretConfigPath);
 PREP(getTurretCopilot);
@@ -111,6 +112,7 @@ PREP(isModLoaded);
 PREP(isPlayer);
 PREP(isTurnedOut);
 PREP(letterToCode);
+PREP(lightIntensityFromObject);
 PREP(loadPerson);
 PREP(loadPersonLocal);
 PREP(loadSettingsFromProfile);
@@ -189,6 +191,9 @@ PREP(getConfigGunner);
 PREP(getConfigCommander);
 PREP(getHitPoints);
 PREP(getHitPointsWithSelections);
+PREP(getReflectorsWithSelections);
+PREP(getLightProperties);
+PREP(getLightPropertiesWeapon);
 PREP(getVehicleCrew);
 
 // turrets

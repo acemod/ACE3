@@ -17,7 +17,6 @@
     </Key>
 
     <Key ID="STR_ACE_Laserpointer_useLaser">
-      <Original>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</Original>
       <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</English>
       <Czech>&lt;t color='#9cf953'&gt;Použití: &lt;/t&gt;Zapnout/vypnout laser</Czech>
       <French>&lt;t color='#9cf953'&gt;Utiliser : &lt;/t&gt;laser on/off</French>

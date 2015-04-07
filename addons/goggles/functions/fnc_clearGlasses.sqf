@@ -23,12 +23,12 @@ _effects set [BROKEN, _broken];
 SETGLASSES(ace_player,_effects);
 
 if ((stance ace_player) != "PRONE") then {
-	ace_player playActionNow "gestureWipeFace";
+    ace_player playActionNow "gestureWipeFace";
 };
 [{
-	if (cameraView == "INTERNAL") then {
-		addCamShake [5, 1.75, 2];
-	};
+    if (cameraView == "INTERNAL") then {
+        addCamShake [5, 1.75, 2];
+    };
 }, [], 0.3, 0] call EFUNC(common,waitAndExecute);
 
 call FUNC(removeDirtEffect);
