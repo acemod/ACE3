@@ -3,5 +3,5 @@
 private ["_ret"];
 _ret = [(_this select 0)] call FUNC(removeTrack);
 if(!_ret) then {
-	[(_this select 0)] call FUNC(addBlackList);
+    [(_this select 0)] call FUNC(addBlackList);
 };
