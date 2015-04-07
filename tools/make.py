@@ -394,7 +394,7 @@ See the make.cfg file for additional build options.
 		work_drive = cfg.get(make_target, "work_drive",  fallback="P:\\")
 
 		# Which build tool should we use?
-		build_tool = "pboproject"
+		build_tool = cfg.get(make_target, "build_tool", fallback="addonbuilder").lower()
 
 		# Release/build directory, relative to script dir
 		release_dir = cfg.get(make_target, "release_dir", fallback="release")
