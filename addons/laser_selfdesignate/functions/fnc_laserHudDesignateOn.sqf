@@ -11,7 +11,7 @@ FUNC(laserHudDesignatePFH) = {
     _laserTarget = _args select 0;
     _shooter = _args select 1;
 
-    TRACE_1("", _args);
+    TRACE_1("", _args, (_laserTarget getVariable["ACE_LASER_CODE"]));
     
     if((vehicle ACE_player) != _shooter || !alive _shooter || isNull _vehicle || isNull _laserTarget || !GVAR(active) ) exitWith { 
         [_vehicle, _shooter, _laserTarget] call FUNC(laserHudDesignateOff);
