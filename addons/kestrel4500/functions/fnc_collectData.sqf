@@ -17,13 +17,11 @@
 
 private ["_playerDir", "_windSpeed", "_windDir", "_crosswind", "_headwind", "_humidity", "_temperature", "_humidity", "_barometricPressure", "_altitude"];
 
-if (isNil QUOTE(EGVAR(advanced_ballistics,Altitude))) then {EGVAR(advanced_ballistics,Altitude) = 0};
-
 if (isNil QUOTE(GVAR(MIN)) || isNil QUOTE(GVAR(MAX))) then {
     _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL ACE_player) select 2);
     _humidity = EGVAR(weather,currentHumidity);
-    _barometricPressure = 1013.25 * exp(-(EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast;
-    _altitude = EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2);
+    _barometricPressure = 1013.25 * exp(-(EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast;
+    _altitude = EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2);
     GVAR(MIN) = [0, 0, 0, 0, _temperature, _humidity, _barometricPressure, _altitude];
     GVAR(MAX) = [0, 0, 0, 0, _temperature, _humidity, _barometricPressure, _altitude];
 };
@@ -82,13 +80,13 @@ GVAR(MAX) set [5, _humidity max (GVAR(MAX) select 5)];
 GVAR(TOTAL) set [5, (GVAR(TOTAL) select 5) + _humidity];
 
 // BARO
-_barometricPressure = 1013.25 * exp(-(EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast;
+_barometricPressure = 1013.25 * exp(-(EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast;
 GVAR(MIN) set [6, (GVAR(MIN) select 6) min _barometricPressure];
 GVAR(MAX) set [6, _barometricPressure max (GVAR(MAX) select 6)];
 GVAR(TOTAL) set [6, (GVAR(TOTAL) select 6) + _barometricPressure];
 
 // ALTITUDE
-_altitude = EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2);
+_altitude = EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2);
 GVAR(MIN) set [7, (GVAR(MIN) select 7) min _altitude];
 GVAR(MAX) set [7, _altitude max (GVAR(MAX) select 7)];
 GVAR(TOTAL) set [7, (GVAR(TOTAL) select 7) + _altitude];

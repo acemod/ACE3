@@ -17,7 +17,7 @@
 
 private ["_playerDir", "_textTop", "_textCenterBig", "_textCenterLine1Left", "_textCenterLine2Left", "_textCenterLine3Left", "_textCenterLine1Right", "_textCenterLine2Right", "_textCenterLine3Right", "_textInfoLine1", "_textInfoLine2", "_temperature", "_humidity", "_windSpeed", "_windDir", "_newWindSpeed", "_windSource", "_height"];
 
-if (isNil QUOTE(EGVAR(advanced_ballistics,Altitude))) then {EGVAR(advanced_ballistics,Altitude) = 0};
+if (isNil QUOTE(EGVAR(weather,Altitude))) then {EGVAR(weather,Altitude) = 0};
 
 [] call FUNC(collectData);
 
@@ -172,7 +172,7 @@ switch (GVAR(Menu)) do {
     };
     case 6: { // BARO
         if (!GVAR(MinAvgMax)) then {
-            _textCenterBig = Str(round((1013.25 * exp(-(EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast) * 10) / 10);
+            _textCenterBig = Str(round((1013.25 * exp(-(EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast) * 10) / 10);
         } else {
             _textCenterLine1Left = "Min";
             _textCenterLine2Left = "Avg";
@@ -184,7 +184,7 @@ switch (GVAR(Menu)) do {
     };
     case 7: { // ALTITUDE
         if (!GVAR(MinAvgMax)) then {
-            _textCenterBig = Str(round(EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2)));
+            _textCenterBig = Str(round(EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2)));
         } else {
             _textCenterLine1Left = "Min";
             _textCenterLine2Left = "Avg";
@@ -196,7 +196,7 @@ switch (GVAR(Menu)) do {
     };
     case 8: { // User Screen 1
         _textCenterLine1Left = Str(round(_playerDir));
-        _textCenterLine2Left = Str(round(EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2)));
+        _textCenterLine2Left = Str(round(EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2)));
         _textCenterLine3Left = Str(round(abs(_windSpeed) * 10) / 10);
         _textCenterLine1Right = GVAR(Direction)s select GVAR(Direction);
         _textCenterLine2Right = "m";
@@ -205,7 +205,7 @@ switch (GVAR(Menu)) do {
     case 9: { // User Screen 2
         _textCenterLine1Left = Str(round(_temperature * 10) / 10);
         _textCenterLine2Left = Str(round(_humidity * 100 * 10) / 10);
-        _textCenterLine3Left = Str(round((1013.25 * exp(-(EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast) * 10) / 10);
+        _textCenterLine3Left = Str(round((1013.25 * exp(-(EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast) * 10) / 10);
         _textCenterLine1Right = "C";
         _textCenterLine2Right = "%";
         _textCenterLine3Right = "hPA";
