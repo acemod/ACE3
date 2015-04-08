@@ -66,7 +66,7 @@ if(!isNil "_seekerTargetPos") then {
 
     if(accTime > 0) then {
         _adjustTime = 1/accTime;
-        _adjustTime = _adjustTime * (.01/_runtimeDelta);
+        _adjustTime = _adjustTime * (_runtimeDelta / 0.1);
         
         _outVector = [_projectile, [_xVec, _yVec, _zVec], [_yaw, _adjustTime, _pitch]] call FUNC(translateToModelSpace);
         _vectorTo = _projectilePos vectorFromTo _outVector;
@@ -79,7 +79,7 @@ if(!isNil "_seekerTargetPos") then {
 #endif
 };
 
-_stateParams set[0, [diag_tickTime]];
+_stateParams set[0, diag_tickTime];
 
 _args set[4, _stateParams];
 _this set[0, _args];
