@@ -13,8 +13,8 @@ _targetLaunchParams = _launchParams select 1;
 _shooterPos = getPosASL _shooter;
 _projectilePos = getPosASL _projectile;
 
-_distanceToTarget = _projectilePos vectorDistance _seekerTargetPos;    
-_distanceToShooter = _projectilePos vectorDistance _shooterPos;
+_distanceToTarget = _projectilePos distance _seekerTargetPos;    
+_distanceToShooter = _projectilePos distance _shooterPos;
 
 _addHeight = [0,0,(_projectilePos distance _seekerTargetPos)*0.02];
 

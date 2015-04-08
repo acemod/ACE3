@@ -18,7 +18,7 @@ PREP(attackProfile_DIR);
 PREP(attackProfile_MID);
 PREP(attackProfile_HI);
 PREP(attackProfile_TOP);
-
+PREP(attackprofile_PYM);
 
 // Seeker search functions
 PREP(seekerType_SALH);

@@ -1,4 +1,4 @@
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 private["_args", "_launchParams", "_targetLaunchParams", "_config", "_flightParams", "_seekerParams"];
