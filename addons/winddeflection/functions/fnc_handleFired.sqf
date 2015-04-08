@@ -24,8 +24,7 @@
 private ["_unit", "_weapon", "_ammo", "_bullet", "_airFriction", "_index"];
 _unit = _this select 0;
 
-// TODO: Add some way to decide whether to use basic wind deflection or advanced ballistics
-if (true) exitWith {false};
+if (EGVAR(advanced_ballistics,AdvancedBallistics)) exitWith {false};
 
 if (_unit distance ACE_player > 3000) exitWith {false}; // Large enough distance to not simulate any wind deflection.
 if (!GVAR(EnableForAI) && !([_unit] call EFUNC(common,isPlayer))) exitWith {false};
