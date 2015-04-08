@@ -43,7 +43,7 @@ class CfgAmmo {
             enabled = 1;
             
             minDeflection = 0.005;      // Minium flap deflection for guidance
-            maxDeflection = 0.15;       // Maximum flap deflection for guidance
+            maxDeflection = 0.025;       // Maximum flap deflection for guidance
             incDeflection = 0.005;      // The incrmeent in which deflection adjusts.
             
             // Guidance type for munitions
