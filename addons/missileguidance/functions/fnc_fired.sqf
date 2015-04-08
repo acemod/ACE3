@@ -16,10 +16,9 @@ _enabled = getNumber ( _config >> "enabled");
 // Bail if guidance is not enabled
 if(isNil "_enabled" || {_enabled != 1}) exitWith { false };
 
-
-_target = _shooter getVariable[QGVAR(target), nil];
-_seekerType = _shooter getVariable [QGVAR(seekerType), nil];
-_attackProfile = _shooter getVariable [QGVAR(attackProfile), nil];
+_target = (vehicle _shooter) getVariable [QGVAR(target), nil];
+_seekerType = (vehicle _shooter) getVariable [QGVAR(seekerType), nil];
+_attackProfile = (vehicle _shooter) getVariable [QGVAR(attackProfile), nil];
 TRACE_3("Begin guidance", _target, _seekerType, _attackProfile);
 
 if ( isNil "_seekerType" || { ! ( _seekerType in (getArray (_config >> "seekerTypes" ) ) ) } ) then { 

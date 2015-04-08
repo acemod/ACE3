@@ -42,12 +42,12 @@ class CfgAmmo {
         class ACE_MissileGuidance {
             enabled = 1;
             
-            //minDeflection = 0.005;      // Minium flap deflection for guidance
-            //maxDeflection = 0.025;       // Maximum flap deflection for guidance
-            //incDeflection = 0.005;      // The incrmeent in which deflection adjusts.
-            minDeflection = 0.005; 
-            maxDeflection = 0.5;
-            incDeflection = 0.005;
+            minDeflection = 0.005;      // Minium flap deflection for guidance
+            maxDeflection = 0.025;       // Maximum flap deflection for guidance
+            incDeflection = 0.005;      // The incrmeent in which deflection adjusts.
+            //minDeflection = 0.005; 
+            //maxDeflection = 0.5;
+            //incDeflection = 0.005;
             
             // Guidance type for munitions
             defaultSeekerType = "SALH";
