@@ -5,7 +5,17 @@ jQuery(document).ready(function(){
     if ($slider.length > 0) {
         $slider.slick({
             arrows: true,
-            dots: true
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 640,
+                    settings: {
+                        arrows: false
+                    }
+                }
+            ]
         });
     }
 });
