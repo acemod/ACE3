@@ -23,7 +23,7 @@
  */
 #include "script_component.hpp"
 
-private ["_angleDeg", "_muzzleVelocity", "_airFriction", "_temp", "_relDensity", "_tailWind", "_crosswind", "_heightOfTarget", "_wind", "_gravity", "_timeStep", "_currentPos", "_currentVelocity", "_currentTime", "_lastPos", "_kCoefficent", "_aparentWind", "_changeInVelocity", "_linConversion", "_middlePos", "_middlePosOld", "_middleTotalTravelTime", "_offsetDeg"];
+private ["_angleDeg", "_muzzleVelocity", "_airFriction", "_temp", "_relDensity", "_tailWind", "_crosswind", "_heightOfTarget", "_timeStep", "_wind", "_gravity", "_currentPos", "_currentVelocity", "_currentTime", "_lastPos", "_kCoefficent", "_aparentWind", "_changeInVelocity", "_linConversion", "_middlePos", "_middlePosOld", "_middleTotalTravelTime", "_offsetDeg"];
 
 _angleDeg = _this select 0;
 _muzzleVelocity = _this select 1;

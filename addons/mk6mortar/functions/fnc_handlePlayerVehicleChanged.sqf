@@ -16,6 +16,8 @@
  */
 #include "script_component.hpp"
 
+private ["_chargeText", "_xPos", "_yPos", "_wPos", "_hPos", "_tubeWeaponName", "_fireModes"];
+
 PARAMS_2(_player,_newVehicle);
 
 if (isNull _newVehicle) exitWith {};

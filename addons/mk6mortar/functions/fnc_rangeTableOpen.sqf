@@ -17,6 +17,8 @@
 
 #define LIST_CHARGE ((uiNamespace getVariable "ACE_82mm_RangeTable_Dialog") displayCtrl 1501)
 
+private ["_weaponName", "_magazines", "_initSpeed", "_fireModes", "_muzzleVelocities", "_showToPlayer", "_artilleryCharge"];
+
 _weaponName = "mortar_82mm";
 
 if (dialog) exitWith {ERROR("Dialog Open");};

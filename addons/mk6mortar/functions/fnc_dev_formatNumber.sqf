@@ -73,8 +73,7 @@ case ("sec"): {
     default {systemChat format ["badtype %1", _inputType];};
 };
 
-
-//CBA_fnc_formatNumber is stupid:  [-9.58545, 1, 1, false] call CBA_fnc_formatNumber == "-9.-6"
+//CBA_fnc_formatNumber is silly:  [-9.58545, 1, 1, false] call CBA_fnc_formatNumber == "-9.-6"
 
 _prefix = if (_theNumber < 0) then {"-"} else {""};
 

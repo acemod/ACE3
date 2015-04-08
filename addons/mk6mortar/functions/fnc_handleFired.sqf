@@ -21,13 +21,15 @@
  */
 #include "script_component.hpp"
 
+private ["_unit", "_shooterMan", "_bisAirFriction", "_temperature", "_newMuzzleVelocityCoefficent", "_bulletVelocity", "_bulletSpeed", "_muzzleVelocity", "_muzzleVelocityShift"];
+
 disableSerialization;
 
 PARAMS_7(_vehicle,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
 if (!GVAR(airResistanceEnabled)) exitWith {};
 // Large enough distance to not simulate any wind deflection
-if (_unit distance ACE_player > 8000) exitWith {false};
+if (_vehicle distance ACE_player > 8000) exitWith {false};
 
 //AI will have no clue how to use:
 _shooterMan = gunner _vehicle;

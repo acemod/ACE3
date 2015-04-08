@@ -29,6 +29,7 @@
 #define CTRL_CA_ELEV (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_ELEV")
 #define CTRL_CA_ELEV_NEED (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_ELEV_NEED")
 
+private ["_display", "_fnc_hideControl"];
 
 disableSerialization;
 
@@ -36,6 +37,7 @@ _display = uiNamespace getVariable ["ACE_Mk6_RscWeaponRangeArtillery", displayNu
 if (isNull _display) exitWith {};
 
 _fnc_hideControl = {
+    private "_idc";
     PARAMS_2(_path,_hideCtrl);
     _idc = getNumber (_path >> "IDC");
     _pos = [];
