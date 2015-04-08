@@ -97,7 +97,7 @@ FUNC(guidance_LGB_LOAL) = {
 };
 
 PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
-_fireMode = _shooter getVariable ["ACE_FIRE_SELECTION", ACE_DEFAULT_FIRE_SELECTION];
+_fireMode = _shooter getVariable [QGVAR(attackProfile), ACE_DEFAULT_FIRE_SELECTION];
 
 switch (_fireMode select 0) do {
     // Default to FIREMODE_DIRECT_LOAL

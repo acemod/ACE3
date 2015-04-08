@@ -268,7 +268,7 @@ FUNC(guidance_Javelin_LOBL_DIR) = {
 
 if(!local _shooter) exitWith { false };
 if(_ammo == "M_Titan_AT") then {
-    _fireMode = _shooter getVariable ["ACE_FIRE_SELECTION", ACE_JAV_FIREMODE_TOP];
+    _fireMode = _shooter getVariable ["ace_missileguidance_attackProfile", ACE_JAV_FIREMODE_TOP];
     
     switch (_fireMode) do {
         // Default to FIREMODE_DIRECT_LOAL

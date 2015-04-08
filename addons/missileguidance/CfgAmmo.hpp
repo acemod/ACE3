@@ -8,7 +8,6 @@ class CfgAmmo {
         irLock = 0;
 		laserLock = 0;
 		airLock = 0;
-        manualControl = 1;
 		weaponLockSystem = "2 + 16";
         
         hit = 600;
@@ -17,8 +16,6 @@ class CfgAmmo {
 
 		maxSpeed = 720;
 		maxControlRange = 5000;
-		trackOversteer = 1;
-		trackLead = 1;
 		maneuvrability = 8;
 		timeToLive = 60;
 		simulationStep = 0.01;
@@ -34,16 +31,32 @@ class CfgAmmo {
 		whistleDist = 4;
 		muzzleEffect = "";
 
-        ACE_maxDeflection = 0.15;       // Maximum flap deflection for guidance
-        ACE_minDeflection = 0.005;      // Minium flap deflection for guidance
-        ACE_incDeflection = 0.005;      // The incrmeent in which deflection adjusts.
+        // Turn off arma crosshair-guidance
+        manualControl = 0;
         
-        ACE_seekerTypes[] = { "SALH" };   // {"SALH", "LIDAR", "BeamRide", "SARH", "Optic", "Thermal"};
-        ACE_seekerAngle = 90;           // Angle in front of the missile which can be searched
-        ACE_seekerAccuracy = 1;         // seeker accuracy multiplier
-        ACE_seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
-        
-        ACE_attackProfiles[] = { "LOAL-LIN", "LOAL-DIR", "LOAL-MID", "LOAL-HI" };
+        // ACE uses these values
+        trackOversteer = 1;
+        trackLead = 0;
+       
+        // Begin ACE guidance Configs
+        class ACE_MissileGuidance {
+            enabled = 1;
+            
+            minDeflection = 0.005;      // Minium flap deflection for guidance
+            maxDeflection = 0.15;       // Maximum flap deflection for guidance
+            incDeflection = 0.005;      // The incrmeent in which deflection adjusts.
+            
+            // Guidance type for munitions
+            defaultSeekerType = "SALH";
+            seekerTypes[] = { "SALH", "LIDAR", "SARH", "Optic", "Thermal", "GPS", "SACLOS", "MCLOS",  };   
+            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
+            seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
+            
+            // Attack profile type selection
+            defaultAttackProfile = "LOAL-LIN";
+            attackProfiles[] = { "LOBL-LIN", "LOBL-DIR", "LOBL-MID", "LOBL-HI", "LOBL-TOP-DOWN", "LOAL-LIN", "LOAL-DIR", "LOAL-MID", "LOAL-HI", "LOAL-TOP-DOWN"  };
+        };
     };
     
     class ACE_Hydra70_DAGR : M_PG_AT {

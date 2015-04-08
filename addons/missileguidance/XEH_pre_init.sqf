@@ -8,7 +8,10 @@ PREP(translateToWeaponSpace);
 
 PREP(fired);
 
-PREP(guidance_DAGR);
+PREP(guidancePFH);
+PREP(doAttackProfile); 
+PREP(doSeekerSearch);
+
+// Probably to be renamed
+PREP(attackProfile_linear);
 PREP(guidance_LGB);
-PREP(guidance_HellfireII);
-FUNC(getPosASL) = {visiblePositionASL (_this select 0)};

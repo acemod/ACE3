@@ -4,7 +4,7 @@ TRACE_1("enter", _this);
 
 private["_player", "_currentFireMode"];
 
-_currentFireMode = ACE_player getVariable["ACE_FIRE_SELECTION", ACE_JAV_FIREMODE_TOP];
+_currentFireMode = ACE_player getVariable["ace_missileguidance_attackProfile", ACE_JAV_FIREMODE_TOP];
 if(_currentFireMode == ACE_JAV_FIREMODE_DIR) then {
     _currentFireMode = ACE_JAV_FIREMODE_TOP;
     
@@ -16,4 +16,4 @@ if(_currentFireMode == ACE_JAV_FIREMODE_DIR) then {
     __JavelinIGUITop ctrlSetTextColor __ColorGray;
     __JavelinIGUIDir ctrlSetTextColor __ColorGreen;
 };
-ACE_player setVariable["ACE_FIRE_SELECTION", _currentFireMode, false];
+ACE_player setVariable["ace_missileguidance_attackProfile", _currentFireMode, false];
