@@ -188,10 +188,16 @@ def find_bi_tools(work_drive):
 	else:
 		raise Exception("BadTools","Arma 3 Tools are not installed correctly or the P: drive needs to be created.")
 
-def find_depbo_tools():
+def find_depbo_tools(regKey):
 	"""Use registry entries to find DePBO-based tools."""
+	stop = False
 
-	reg = winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)
+	if regKey == "HKCU":
+		reg = winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)
+		stop = True
+	else:
+		reg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
+
 	try:
 		k = winreg.OpenKey(reg, r"Software\Mikero\pboProject")
 		try:
@@ -217,7 +223,10 @@ def find_depbo_tools():
 		except:
 			print_error("Could not find makepbo.")
 	except:
-		raise Exception("BadDePBO", "DePBO tools not installed correctly")
+		if stop == True: 
+			raise Exception("BadDePBO", "DePBO tools not installed correctly")
+		return -1
+
 
 	#Strip any quotations from the path due to a MikeRo tool bug which leaves a trailing space in some of its registry paths.
 	return [pboproject_path.strip('"'),rapify_path.strip('"'),makepbo_path.strip('"')]
@@ -439,7 +448,9 @@ See the make.cfg file for additional build options.
 
 	if build_tool == "pboproject":
 		try:
-			depbo_tools = find_depbo_tools()
+			depbo_tools = find_depbo_tools("HKLM")
+			if depbo_tools == -1: 
+				depbo_tools = find_depbo_tools("HKCU")
 			pboproject = depbo_tools[0]
 			rapifyTool = depbo_tools[1]
 			makepboTool = depbo_tools[2]
@@ -576,32 +587,24 @@ See the make.cfg file for additional build options.
 		if build_tool == "pboproject":
 			try:
 				#PABST: Convert config (run the macro'd config.cpp through CfgConvert twice to produce a de-macro'd cpp that pboProject can read without fucking up:
-				os.chdir(os.path.join(arma3tools_path, "CfgConvert"))
 				shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
 				
-				ret = subprocess.call(["cfgConvertGUI.exe", os.path.join(work_drive, prefix, module, "config.cpp")])
-				if ret != 0:
-					print_error("cfgConvertGUI (bin) return code == " + str(ret))
-					input("Press Enter to continue...")
-				
-				#PABST: Need micro sleeps because cfgConvertGUI can return before it's finished procressing
-				time.sleep(0.05)
-				
-				ret = subprocess.call(["cfgConvertGUI.exe", os.path.join(work_drive, prefix, module, "config.bin")])
-				if ret != 0:
-					print_error("cfgConvertGUI (txt) return code == " + str(ret))
-					input("Press Enter to continue...")
-				
-				time.sleep(0.05)
- 				                   
-				#cmd = [rapifyTool, "-L", "-P", os.path.join(work_drive, prefix, module, "config.cpp")];
-				#ret = subprocess.call(cmd)
-				#if ret != 0:
-				#	print_error("rapifyTool return code == " + str(ret) + str(cmd))
-				#	input("Press Enter to continue...")
-				  
-				# Call pboProject
 				os.chdir("P:\\")
+				
+				cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
+				ret = subprocess.call(cmd)
+				#ret = subprocess.call(["cfgConvertGUI.exe", os.path.join(work_drive, prefix, module, "config.cpp")])
+				
+				if ret != 0:
+					print_error("CfgConvert -bin return code == " + str(ret))
+					input("Press Enter to continue...")
+				
+				
+				cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
+				ret = subprocess.call(cmd)
+				if ret != 0:
+					print_error("CfgConvert -txt) return code == " + str(ret))
+					input("Press Enter to continue...")
 				
 				if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
 					print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
