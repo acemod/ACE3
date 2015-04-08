@@ -6,7 +6,7 @@ TRACE_1("enter", _this);
 #define FCS_UPDATE_DELAY 1
 
 FUNC(laserHudDesignatePFH) = {
-    private["_args", "_laserTarget", "_shooter", "_vehicle", "_weapon", "_gunnerInfo", "_turret", "_pov", "_gunBeg", "_gunEnd", "_povPos", "_povDir", "_result", "_resultPositions", "_firstResult", "_forceUpdateTime"];
+    private["_strongestResultPos", "_args", "_laserTarget", "_shooter", "_vehicle", "_weapon", "_gunnerInfo", "_turret", "_pov", "_gunBeg", "_gunEnd", "_povPos", "_povDir", "_result", "_resultPositions", "_firstResult", "_forceUpdateTime"];
     _args = _this select 0;
     _laserTarget = _args select 0;
     _shooter = _args select 1;
@@ -52,23 +52,22 @@ FUNC(laserHudDesignatePFH) = {
         _resultPositions = _result select 2;
 
         if((count _resultPositions) > 0) then {
-            _firstResult = _resultPositions select 0;
-            _pos = _firstResult select 0;
+            _strongestResultPos = [_resultPositions, _povPos] call EFUNC(laser,findStrongestRay);
             
             // If the laser has moved less than a half meter, then dont move it.
             // Just regular use of lasers will commonly make them move this much,
             // but not across multiple close frames.
             // This loses accuracy a little, but saves position updates per frame.
-            TRACE_5("", diag_tickTime, _forceUpdateTime, getPosASL _laserTarget, _pos, ((getPosASL _laserTarget) distance _pos));
+            TRACE_5("", diag_tickTime, _forceUpdateTime, getPosASL _laserTarget, _strongestResultPos, ((getPosASL _laserTarget) distance _pos));
     
             if(diag_tickTime > _forceUpdateTime) then {
                 TRACE_1("FCS Update", "");
                 ["ace_fcs_forceUpdate", []] call ace_common_fnc_localEvent;
             };
             
-            //if( (_laserTarget distance _pos) > 0.1) then {
+            //if( (_laserTarget distance _strongestResultPos) > 0.1) then {
                 TRACE_1("LaserPos Update", "");
-                _laserTarget setPosATL (ASLToATL _pos);
+                _laserTarget setPosATL (ASLToATL _strongestResultPos);
             //};
             
             if(diag_tickTime > _forceUpdateTime) then {
