@@ -41,7 +41,6 @@ if (GVAR(useCursorMenu)) then {
     ctrlEnable [91921, true];
     GVAR(cursorPos) = [0.5,0.5,0];
     ((finddisplay 91919) displayctrl 91921) ctrlAddEventHandler ["MouseMoving", {
-
         if (GVAR(cursorKeepCentered)) then {
             GVAR(cursorPos) = GVAR(cursorPos) vectorAdd [_this select 1, _this select 2, 0] vectorDiff [0.5, 0.5, 0];
             setMousePosition [0.5, 0.5];

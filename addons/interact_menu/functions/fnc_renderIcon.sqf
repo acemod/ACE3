@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 #define DEFAULT_ICON QUOTE(\z\ace\addons\interaction\ui\dot_ca.paa)
-private ["_color", "_sPos", "_ctrl", "_icon"];
+private ["_color", "_sPos", "_ctrl", "_icon", "_pos"];
 _text = _this select 0;
 _color = _this select 1;
 _sPos = _this select 2;
@@ -39,7 +39,7 @@ _text = format ["<img image='%1' color='%2' align='center'/><br/><t color='%3' s
 _ctrl ctrlSetStructuredText (parseText _text);
 _pos =  [(_sPos select 0)-(0.125*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.25*SafeZoneW, 0.1*SafeZoneW];
 
-if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
+if (GVAR(cursorKeepCentered) && {uiNamespace getVariable [QGVAR(cursorMenuOpened),false]}) then {
     _pos set [0, ((_pos select 0) - (GVAR(cursorPos) select 0) + 0.5)];
     _pos set [1, ((_pos select 1) - (GVAR(cursorPos) select 1) + 0.5)];
 };
