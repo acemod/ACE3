@@ -6,13 +6,11 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"KoffeinFlummi", "TaoSensai", "commy2"};
+        author[] = {"KoffeinFlummi","TaoSensai","commy2"};
         authorUrl = "https://github.com/Taosenai/tmr";
         VERSION_CONFIG;
     };
 };
-
-#include "CfgEventHandlers.hpp"
 
 // DOC: http://forums.bistudio.com/showthread.php?94464-explaining-the-cfgRecoils-array
 class CfgRecoils {
@@ -114,17 +112,18 @@ class CfgRecoils {
     recoil_single_titan[]        = {0,0,0};
 };
 
-class CfgCameraShake {
+/*class CfgCameraShake {
     // Seems to be ignored by Arma
     defaultCaliberCoefWeaponFire = 0;
-};
+};*/
 
 // Completely disable BI's camshake on fire.
-class CfgMovesBasic {
+/*class CfgMovesBasic {
     class Default {
         camShakeFire = 0;
     };
 };
+
 class CfgMovesMaleSdr : CfgMovesBasic {
     class States {
         class AmovPercMstpSlowWrflDnon;
@@ -183,128 +182,4 @@ class CfgMovesMaleSdr : CfgMovesBasic {
             camShakeFire = 0;
         };
     };
-};
-
-// Ammo
-class CfgAmmo {
-    class MissileCore;
-    class MissileBase: MissileCore {
-        GVAR(shakeMultiplier) = 2;
-    };
-
-    class BombCore;
-    class LaserBombCore: BombCore {
-        GVAR(shakeMultiplier) = 2;
-    };
-    class Bo_Mk82: BombCore {
-        GVAR(shakeMultiplier) = 2;
-    };
-
-    class RocketCore;
-    class ArtilleryRocketCore: RocketCore {
-        GVAR(shakeMultiplier) = 1.4;
-    };
-    class RocketBase: RocketCore {
-        GVAR(shakeMultiplier) = 1.4;
-    };
-
-    class BulletCore;
-    class BulletBase: BulletCore {
-        GVAR(shakeMultiplier) = 1;
-    };
-
-    class ShotgunCore;
-    class ShotgunBase: ShotgunCore {
-        GVAR(shakeMultiplier) = 1.1;
-    };
-
-    class ShellCore;
-    class ShellBase: ShellCore {
-        GVAR(shakeMultiplier) = 3;
-    };
-
-    class SubmunitionCore;
-    class SubmunitionBase: SubmunitionCore {
-        GVAR(shakeMultiplier) = 3;
-    };
-
-    class ShotDeployCore;
-    class ShotDeployBase: ShotDeployCore {
-        GVAR(shakeMultiplier) = 3;
-    };
-};
-
-// Weapons
-// 1. Set the recoil profiles for all fire modes.
-// 2. Set the shake multiplier. This determines the camshake for the weapon.
-//     Ex: GVAR(shakeMultiplier) = 1; (disabled currently)
-
-class CfgWeapons {
-    class CannonCore;
-    class autocannon_Base_F: CannonCore {
-        GVAR(shakeMultiplier) = 0;
-    };
-    class autocannon_35mm: CannonCore {
-        GVAR(shakeMultiplier) = 0;
-    };
-    class cannon_120mm: CannonCore {
-        GVAR(shakeMultiplier) = 0;
-    };
-    class mortar_155mm_AMOS: CannonCore {
-        GVAR(shakeMultiplier) = 0;
-    };
-    class mortar_82mm: CannonCore {
-        GVAR(shakeMultiplier) = 0;
-    };
-
-    // No camshake for gatlings
-    class gatling_20mm: CannonCore {
-        GVAR(shakeMultiplier) = 0;
-    };
-    class gatling_25mm: CannonCore {
-        GVAR(shakeMultiplier) = 0;
-    };
-    class gatling_30mm: CannonCore {
-        GVAR(shakeMultiplier) = 0;
-    };
-
-    class MGunCore;
-    class MGun: MGunCore {
-        GVAR(shakeMultiplier) = 0;
-    };
-    // No camshake for smoke launchers
-    class SmokeLauncher: MGun {
-        GVAR(shakeMultiplier) = 0;
-    };
-
-    // No camshake for coax machine guns
-    class LMG_RCWS;
-    class LMG_M200: LMG_RCWS {
-        GVAR(shakeMultiplier) = 0;
-    };
-    class LMG_coax: LMG_RCWS {
-        GVAR(shakeMultiplier) = 0;
-    };
-    class LMG_Minigun: LMG_RCWS {
-        GVAR(shakeMultiplier) = 0;
-    };
-};
-
-// Vehicles
-class CfgVehicles {
-    class LandVehicle;
-    class Tank: LandVehicle {
-        GVAR(enableCamshake) = 1;
-    };
-    class Car: LandVehicle {
-        GVAR(enableCamshake) = 1;
-    };
-    class StaticWeapon: LandVehicle {
-        GVAR(enableCamshake) = 1;
-    };
-
-    class Allvehicles;
-    class Air: Allvehicles {
-        GVAR(enableCamshake) = 1;
-    };
-};
+};*/

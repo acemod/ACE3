@@ -12,24 +12,33 @@
 
 #include "script_component.hpp"
 
-private ["_injuriesRootConfig", "_woundsConfig", "_allWoundClasses", "_amountOf", "_entry","_classType", "_selections", "_bloodLoss", "_pain","_minDamage","_causes", "_allTypes", "_damageTypesConfig", "_thresholds", "_typeThresholds", "_selectionSpecific", "_selectionSpecificType", "_classDisplayName", "_subClassDisplayName", "_maxDamage", "_subClassmaxDamage"];
+private ["_injuriesRootConfig", "_woundsConfig", "_allWoundClasses", "_amountOf", "_entry","_classType", "_selections", "_bloodLoss", "_pain","_minDamage","_causes", "_damageTypesConfig", "_thresholds", "_typeThresholds", "_selectionSpecific", "_selectionSpecificType", "_classDisplayName", "_subClassDisplayName", "_maxDamage", "_subClassmaxDamage", "_defaultMinLethalDamage", "_minLethalDamage"];
 
 _injuriesRootConfig = (configFile >> "ACE_Medical_Advanced" >> "Injuries");
-_allTypes = ["stab", "grenade", "bullet", "explosive", "shell", "punch", "vehiclecrash", "backblast", "falling", "bite", "ropeburn"];
-
-// Collect all available damage types from the config
 _allFoundDamageTypes = [];
 _configDamageTypes = (_injuriesRootConfig >> "damageTypes");
+
+// minimum lethal damage collection, mapped to damageTypes
+_defaultMinLethalDamage = getNumber (_configDamageTypes >> "lethalDamage");
+GVAR(minLethalDamages) = [];
+
+// Collect all available damage types from the config
 for "_i" from 0 to (count _configDamageTypes -1) /* step +1 */ do {
     // Only get the subclasses in damageType class
     if (isClass(_configDamageTypes select _i)) then {
         _allFoundDamageTypes pushback (configName (_configDamageTypes select _i));
+        _minLethalDamage = if (isNumber((_configDamageTypes select _i) >> "lethalDamage")) then {
+            getNumber((_configDamageTypes select _i) >> "lethalDamage");
+        } else {
+            _defaultMinLethalDamage
+        };
+
+        GVAR(minLethalDamages) pushback _minLethalDamage;
     };
 };
 GVAR(allAvailableDamageTypes) = _allFoundDamageTypes;
 GVAR(woundClassNames) = [];
 GVAR(fractureClassNames) = [];
-
 
 // Parsing the wounds
 // function for parsing a sublcass of an injury

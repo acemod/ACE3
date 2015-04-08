@@ -11,7 +11,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 0.2;
                     icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
-                    exceptions[] = {"notOnMap"};
+                    exceptions[] = {"notOnMap", "isNotInside"};
                 };
                 class GVAR(configure) {
                     //Opens the dialog
@@ -21,7 +21,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 0.1;
                     icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
-                    exceptions[] = {"notOnMap"};
+                    exceptions[] = {"notOnMap", "isNotInside"};
                 };
                 class GVAR(close) {
                     displayName = "$STR_ACE_microdagr_closeUnit";
@@ -30,7 +30,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 0.3;
                     icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
-                    exceptions[] = {"notOnMap"};
+                    exceptions[] = {"notOnMap", "isNotInside"};
                 };
             };
         };

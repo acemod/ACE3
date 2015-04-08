@@ -17,7 +17,7 @@ private "_caller";
 _caller = _this select 0;
 
 if (!isnil QGVAR(DROP_ADDACTION)) then {
-	[_caller,objNull] call EFUNC(common,carryObj);
-	_caller removeAction GVAR(DROP_ADDACTION);
+    [_caller,objNull] call EFUNC(common,carryObj);
+    _caller removeAction GVAR(DROP_ADDACTION);
     GVAR(DROP_ADDACTION) = nil;
 };

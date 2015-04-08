@@ -552,4 +552,85 @@ class CfgVehicles {
     class Weapon_srifle_DMR_01_F: Weapon_Base_F {
         displayName = "$STR_ACE_RealisticNames_srifle_DMR_01_Name";
     };
+
+    // marksmen
+    /*class Weapon_srifle_DMR_02_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_02";
+    };
+
+    class Weapon_srifle_DMR_02_camo_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_02_camo";
+    };
+
+    class Weapon_srifle_DMR_02_sniper_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_02_sniper";
+    };
+
+    class Weapon_srifle_DMR_03_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03";
+    };
+
+    class Weapon_srifle_DMR_03_khaki_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_khaki";
+    };
+
+    class Weapon_srifle_DMR_03_tan_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_tan";
+    };
+
+    class Weapon_srifle_DMR_03_multicam_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_multicam";
+    };
+
+    class Weapon_srifle_DMR_03_woodland_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_woodland";
+    };
+
+    class Weapon_srifle_DMR_04_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_04";
+    };
+
+    class Weapon_srifle_DMR_04_Tan_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_04_Tan";
+    };
+
+    class Weapon_srifle_DMR_05_blk_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_05_blk";
+    };
+
+    class Weapon_srifle_DMR_05_hex_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_05_hex";
+    };
+
+    class Weapon_srifle_DMR_05_tan_f: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_05_tan";
+    };
+
+    class Weapon_srifle_DMR_06_camo_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_06_camo";
+    };
+
+    class Weapon_srifle_DMR_06_olive_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_srifle_DMR_06_olive";
+    };
+
+    class Weapon_MMG_01_hex_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_MMG_01_hex";
+    };
+
+    class Weapon_MMG_01_tan_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_MMG_01_tan";
+    };
+
+    class Weapon_MMG_02_camo_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_MMG_02_camo";
+    };
+
+    class Weapon_MMG_02_black_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_MMG_02_black";
+    };
+
+    class Weapon_MMG_02_sand_F: Weapon_Base_F {
+        displayName = "$STR_ACE_RealisticNames_MMG_02_sand";
+    };*/
 };

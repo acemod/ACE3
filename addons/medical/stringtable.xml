@@ -42,6 +42,15 @@
         <Portuguese>Transfundir Sangue</Portuguese>
         <Italian>Effettua Trasfusione</Italian>
       </Key>
+      <Key ID="STR_ACE_Medical_Transfuse_Plasma">
+        <English>Transfuse Plasma</English>
+      </Key>
+      <Key ID="STR_ACE_Medical_Transfuse_Saline">
+        <English>Transfuse Saline</English>
+      </Key>
+      <Key ID="STR_ACE_Medical_Apply_Tourniquet">
+        <English>Apply Tourniquet</English>
+      </Key>
       <Key ID="STR_ACE_Medical_Bandage">
         <English>Bandage</English>
         <German>Verbinden</German>
@@ -150,6 +159,9 @@
         <Portuguese>Injetando Epinefrina ...</Portuguese>
         <Italian>Inietto l'epinefrina ...</Italian>
       </Key>
+      <Key ID="STR_ACE_Medical_Injecting_Atropine">
+        <English>Injecting Atropine ...</English>
+      </Key>
       <Key ID="STR_ACE_Medical_Transfusing_Blood">
         <English>Transfusing Blood ...</English>
         <German>Bluttransfusion ...</German>
@@ -162,6 +174,12 @@
         <Portuguese>Transfundindo Sangue ...</Portuguese>
         <Italian>Effettuo la trasfusione ...</Italian>
       </Key>
+      <Key ID="STR_ACE_Medical_Transfusing_Saline">
+        <English>Transfusing Saline ...</English>
+      </Key>
+      <Key ID="STR_ACE_Medical_Transfusing_Plasma">
+        <English>Transfusing Plasma ...</English>
+      </Key>
       <Key ID="STR_ACE_Medical_Bandaging">
         <English>Bandaging ...</English>
         <German>Verbinden ...</German>
@@ -173,6 +191,9 @@
         <Hungarian>Bekötözés...</Hungarian>
         <Portuguese>Atando ...</Portuguese>
         <Russian>Перевязывание....</Russian>
+      </Key>
+      <Key ID="STR_ACE_Medical_Applying_Tourniquet">
+        <English>Applying Tourniquet ...</English>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Medical">
         <English>Medical</English>
@@ -311,6 +332,9 @@
         <Spanish>Torniquete [CAT]</Spanish>
         <French>Garot [CAT]</French>
         <Polish>Opaska uciskowa [CAT]</Polish>
+      </Key>
+      <Key ID="STR_ACE_MEDICAL_receivingIvVolume">
+        <English>Receiving IV [%1ml]</English>
       </Key>
     </Container>
     <Container name="CfgWeapons">
@@ -851,6 +875,12 @@
       </Key>
       <Key ID="STR_ACE_Medical_UnloadPatient">
         <English>Unload patient</English>
+      </Key>
+      <Key ID="STR_ACE_MEDICAL_PlaceInBodyBag"> 
+        <English>Place body in bodybag</English>
+      </Key>
+      <Key ID="STR_ACE_MEDICAL_PlacingInBodyBag"> 
+        <English>Placing body in bodybag</English>
       </Key>
     </Container>
     <Container name="Activities">
