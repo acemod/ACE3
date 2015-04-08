@@ -6,7 +6,7 @@ parent: wiki
 order: 1
 ---
 
-## Table of Contents
+## Table Of Contents
 
 - [Indentation](#indentation)
 - [Braces](#braces)

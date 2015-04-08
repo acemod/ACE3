@@ -1,9 +1,9 @@
 ---
 layout: wiki
-title: ACE 3 Config Entries
+title: ACE3 Config Entries
 group: dev
 parent: wiki
-order: 8
+order: 2
 ---
 
 ### CfgVehicles

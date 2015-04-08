@@ -3,7 +3,7 @@ layout: wiki
 title: Extension Guidelines
 group: dev
 parent: wiki
-order: 8
+order: 9
 ---
 
 ## Basics
@@ -20,6 +20,8 @@ order: 8
 
 ### ace_common cpp library
 
+---
+
 ## Building Extensions on Windows
 
 ### Compiling 
@@ -27,25 +29,31 @@ order: 8
 #### Windows - Creating a Visual Studio Project
 1. Open your compiling command prompt (which has cmake and your compiler)
 2. From this directory, you need to use cmake to build the appropriate build files. Change the -G property appropriately. run cmake --help to get a list of the options.
+
 ```
-    cd extensions\build
-    cmake .. -G "Visual Studio 2014"
+cd extensions\build
+cmake .. -G "Visual Studio 2014"
 ```
+
 A Visual studio project file will now be generated in your build directory.
 
 #### Windows - Visual Studio - Compile only (nmake)
 1. Open your compiling command prompt (which has cmake and your compiler)
 2. From this directory, you need to use cmake to build the appropriate build files. Change the -G property appropriately. run cmake --help to get a list of the options.
+
 ```
-    cd extensions\build
-    cmake .. -G "NMake Makefiles"
-    nmake
+cd extensions\build
+cmake .. -G "NMake Makefiles"
+nmake
 ```
+
 The extensions will not be built in its appropriate project folder, for example:
+
 ```
 extensions\
     build\
         fcs\ace_fcs.dll
         somethingElse\ace_somethingElse.dll
 ```
+
 ### Creating a New Extension
