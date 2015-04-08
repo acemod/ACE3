@@ -57,8 +57,6 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
 };
 
-systemChat format ["PFEH for %1", _ammo];
-
 [{
     private ["_deltaT", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueSpeed", "_dragRef", "_accelRef", "_drag", "_accel"];
     PARAMS_2(_args,_pfID);

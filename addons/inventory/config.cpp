@@ -15,7 +15,7 @@ class CfgPatches {
 #include "RscDisplayInventory.hpp"
 
 class ACE_Settings {
-    class GVAR(useMils) {
+    class GVAR(inventoryDisplaySize) {
         value = 0;
         typeName = "SCALAR";
         isClientSetable = 1;
