@@ -10,6 +10,11 @@ _targetLaunchParams = _launchParams select 1;
 _flightParams = _args select 2;
 _seekerParams = _args select 3;
 
+_stateParams = _args select 4;
+
+_lastRunTime = _stateParams select 0;
+_runtimeDelta = diag_tickTime - _lastRunTime;
+
 _config = configFile >> "CfgAmmo" >> _ammo >> "ACE_MissileGuidance";
 
 if(!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
@@ -60,7 +65,10 @@ if(!isNil "_seekerTargetPos") then {
 #endif        
 
     if(accTime > 0) then {
-        _outVector = [_projectile, [_xVec, _yVec, _zVec], [_yaw, 1/accTime, _pitch]] call FUNC(translateToModelSpace);
+        _adjustTime = 1/accTime;
+        _adjustTime = _adjustTime * (.01/_runtimeDelta);
+        
+        _outVector = [_projectile, [_xVec, _yVec, _zVec], [_yaw, _adjustTime, _pitch]] call FUNC(translateToModelSpace);
         _vectorTo = _projectilePos vectorFromTo _outVector;
         
         _projectile setVectorDirAndUp [_vectorTo, vectorUp _projectile];
@@ -70,3 +78,8 @@ if(!isNil "_seekerTargetPos") then {
     hintSilent format["d: %1", _distanceToTarget];
 #endif
 };
+
+_stateParams set[0, [diag_tickTime]];
+
+_args set[4, _stateParams];
+_this set[0, _args];
