@@ -1,17 +1,31 @@
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-EXPLODE_7_PVT((_this select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
-private["_targets", "_foundTargetPos", "_launchParams", "_seekerParams", "_targetLaunchParams"];
+EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
+private["_seekerProfilePos"];
 
-_launchParams = _this select 1;
-_targetLaunchParams = _launchParams select 1;
+_launchParams = ((_this select 1) select 1);
+_seekerTypeName = _launchParams select 2;
 
-_seekerParams = _this select 3;
+TRACE_1("Seeker type", _seekerTypeName);
 
-// TODO: this needs to be shootCone/findStrongestRay after testing
-_targets = [_projectile, ACE_DEFAULT_LASER_CODE, (_seekerParams select 0)] call ace_laser_fnc_findLaserDesignator;
-_foundTargetPos = getPosASL (_targets select 1);
+_seekerTypesCfg = ( configFile >> QGVAR(SeekerTypes) );
 
-TRACE_1("Seeker return target pos", _foundTargetPos);
-_foundTargetPos;
+_seekerType = nil;
+for [{_i=0}, {_i< (count _seekerTypesCfg) }, {_i=_i+1}] do {
+    _testProfile = _seekerTypesCfg select _i;
+    _testName = configName _testProfile;
+    TRACE_3("", _testName, _testProfile, _seekerTypesCfg);
+    
+    if( _testName == _seekerTypeName) exitWith {
+        _seekerType = _seekerTypesCfg select _i;
+    };
+};
+
+_seekerProfilePos = [0,0,0];
+if(!isNil "_seekerType") then {
+    _seekerProfileExecCode = "_this call " + getText (_seekerType >> "functionName");
+    _seekerProfilePos = call compile _seekerProfileExecCode;
+};
+
+_seekerProfilePos;

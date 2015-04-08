@@ -16,7 +16,8 @@ if(!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
 };
 
-_seekerTargetPos = _args call FUNC(doSeekerSearch);
+// TODO: placeholder for "last seek target position"
+_seekerTargetPos = [ [0,0,0], _args] call FUNC(doSeekerSearch);
 if(!isNil "_seekerTargetPos") then {
 
     _profileAdjustedTargetPos = [_seekerTargetPos,_args] call FUNC(doAttackProfile);

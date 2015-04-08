@@ -2,27 +2,30 @@
 #include "script_component.hpp"
 
 EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
-private["_target", "_seekerTargetPos", "_launchParams", "_targetLaunchParams", "_targetPos", "_projectilePos"];
+private["_attackProfilePos"];
 
-_launchParams = _this select 1;
-_seekerTargetPos = _this select 0;
+_launchParams = ((_this select 1) select 1);
+_attackProfileName = _launchParams select 3;
 
-_target = _launchParams select 0;
-_targetLaunchParams = _launchParams select 1;
+TRACE_1("Attacking profile", _attackProfileName);
 
-_shooterPos = getPosASL _shooter;
-_projectilePos = getPosASL _projectile;
+_attackProfilesCfg = ( configFile >> QGVAR(AttackProfiles) );
 
-_distanceToTarget = _projectilePos vectorDistance _seekerTargetPos;    
-_distanceToShooter = _projectilePos vectorDistance _shooterPos;
+_attackProfile = nil;
+for [{_i=0}, {_i< (count _attackProfilesCfg) }, {_i=_i+1}] do {
+    _testProfile = _attackProfilesCfg select _i;
+    _testName = configName _testProfile;
+    TRACE_3("", _testName, _testProfile, _attackProfilesCfg);
+    
+    if( _testName == _attackProfileName) exitWith {
+        _attackProfile = _attackProfilesCfg select _i;
+    };
+};
 
-_addHeight = [0,0,(_projectilePos distance _seekerTargetPos)*0.02];
+_attackProfilePos = [0,0,0];
+if(!isNil "_attackProfile") then {
+    _attackProfileExecCode = "_this call " + getText (_attackProfile >> "functionName");
+    _attackProfilePos = call compile _attackProfileExecCode;
+};
 
-_seekerTargetPos = _seekerTargetPos vectorAdd _addHeight;
-
-#ifdef DEBUG_MODE_FULL
-drawLine3D [(ASLtoATL _seekerTargetPos) vectorAdd _addHeight, ASLtoATL _seekerTargetPos, [0,1,0,1]];
-#endif
-
-TRACE_1("Adjusted target position", _seekerTargetPos);
-_seekerTargetPos;
+_attackProfilePos;

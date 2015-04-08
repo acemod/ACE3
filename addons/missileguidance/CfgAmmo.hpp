@@ -48,14 +48,14 @@ class CfgAmmo {
             
             // Guidance type for munitions
             defaultSeekerType = "SALH";
-            seekerTypes[] = { "SALH", "LIDAR", "SARH", "Optic", "Thermal", "GPS", "SACLOS", "MCLOS",  };   
+            seekerTypes[] = { "SALH", "LIDAR", "SARH", "Optic", "Thermal", "GPS", "SACLOS", "MCLOS" };   
             seekerAngle = 90;           // Angle in front of the missile which can be searched
             seekerAccuracy = 1;         // seeker accuracy multiplier
             seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
             
             // Attack profile type selection
-            defaultAttackProfile = "LOAL-LIN";
-            attackProfiles[] = { "LOBL-LIN", "LOBL-DIR", "LOBL-MID", "LOBL-HI", "LOBL-TOP-DOWN", "LOAL-LIN", "LOAL-DIR", "LOAL-MID", "LOAL-HI", "LOAL-TOP-DOWN"  };
+            defaultAttackProfile = "LIN";
+            attackProfiles[] = { "LIN", "DIR", "MID", "HI", "TOP" };
         };
     };
     
