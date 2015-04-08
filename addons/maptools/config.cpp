@@ -32,7 +32,6 @@ class RscEdit;
 
 #include "MapGpsUI.hpp"
 #include "CfgEventHandlers.hpp"
-#include "CfgMarkers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 

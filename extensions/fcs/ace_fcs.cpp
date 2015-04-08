@@ -21,7 +21,7 @@
 #include <string>
 
 #define MAXELEVATION 20
-#define MAXITERATIONS 120
+#define MAXITERATIONS 600
 #define PRECISION 0.1
 #define RADIANS(X) (X / (180 / M_PI))
 
