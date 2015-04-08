@@ -11,6 +11,12 @@
 if (isMultiplayer && {!isServer} && {hasInterface}) then {
     private "_logic";
     _logic = createGroup sideLogic createUnit ["Logic", [0,0,0], [], 0, "NONE"];
-
-    [QGVAR(sendMarkersJIP), _logic] call EFUNC(common,serverEvent);
+    [QGVAR(sendMarkersJIP), [_logic]] call EFUNC(common,serverEvent);
 };
+
+
+GVAR(mapDisplaysWithDrawEHs) = [];
+GVAR(currentMarkerPosition) = [];
+GVAR(currentMarkerAngle) = 0;
+GVAR(currentMarkerColorConfigName) = "";
+GVAR(currentMarkerConfigName) = "";
