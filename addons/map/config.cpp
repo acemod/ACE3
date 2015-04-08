@@ -48,6 +48,10 @@ class ACE_Settings {
         value = 0;
         typeName = "BOOL";
     };
+    class GVAR(mapShowCursorCoordinates) {
+        value = 0;
+        typeName = "BOOL";
+    };
 };
 
 #include "CfgEventHandlers.hpp"

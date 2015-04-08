@@ -20,13 +20,13 @@ call FUNC(determineZoom);
 };
 
 // Note: doesn't work on postInit in SP, therefore use default setting
-(findDisplay 12 displayCtrl 1016) ctrlShow (GETGVAR(showPositionOnCursor,false));
+(findDisplay 12 displayCtrl 1016) ctrlShow GVAR(mapShowCursorCoordinates);
 
 ["mapDisplayLoaded", {
     //hint str _this; systemChat str _this; diag_log str _this;
 
     if (_this select 1 == "ingame") then {
-        ((_this select 0) displayCtrl 1016) ctrlShow (GETGVAR(showPositionOnCursor,false));
+        ((_this select 0) displayCtrl 1016) ctrlShow GVAR(mapShowCursorCoordinates);
     };
 }] call FUNC(addEventhandler);
 
