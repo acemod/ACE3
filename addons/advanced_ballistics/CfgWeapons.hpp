@@ -52,7 +52,7 @@ class CfgWeapons
     class arifle_Katiba_F: arifle_katiba_Base_F
     {
         ACE_barrelTwist=8;
-        ACE_barrelLength=228.7;
+        ACE_barrelLength=28.7;
     };
     class arifle_Katiba_C_F: arifle_katiba_Base_F
     {
