@@ -1,8 +1,8 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 #require 'json'
 #require 'open-uri'
-#versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+#versions = JSON.parse(open('http://pages.github.com/versions.json').read)
 
 gem 'rouge'
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?

@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     RedCloth (4.2.9)
     RedCloth (4.2.9-x86-mingw32)
@@ -22,6 +22,7 @@ GEM
     execjs (2.4.0)
     fast-stemmer (1.0.2)
     ffi (1.9.8)
+    ffi (1.9.8-x64-mingw32)
     ffi (1.9.8-x86-mingw32)
     gemoji (2.1.0)
     github-pages (33)
@@ -98,6 +99,8 @@ GEM
     net-dns (0.8.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    nokogiri (1.6.6.2-x64-mingw32)
+      mini_portile (~> 0.6.0)
     nokogiri (1.6.6.2-x86-mingw32)
       mini_portile (~> 0.6.0)
     parslet (1.5.0)
@@ -128,6 +131,7 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
   x86-mingw32
 
 DEPENDENCIES
