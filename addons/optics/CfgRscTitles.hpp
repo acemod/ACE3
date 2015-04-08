@@ -80,6 +80,7 @@ class RscInGameUI {
             text = "";
         };
 
+        #undef SIZEX
         #define SIZEX 2*0.75/(getResolution select 5)
         class BodyDay: ReticleDay {
             idc = 1713005;
