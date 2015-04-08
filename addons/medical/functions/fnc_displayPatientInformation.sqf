@@ -47,8 +47,10 @@ if (_show) then {
         _allInjuryTexts = [];
         _genericMessages = [];
 
-        _partText = ["STR_ACE_Interaction_Head", "STR_ACE_Interaction_Torso", "STR_ACE_Interaction_ArmLeft" ,"STR_ACE_Interaction_ArmRight" ,"STR_ACE_Interaction_LegLeft", "STR_ACE_Interaction_LegRight"] select _selectionN;
-        _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
+        if (GVAR(level) >= 2) then {
+            _partText = ["STR_ACE_Interaction_Head", "STR_ACE_Interaction_Torso", "STR_ACE_Interaction_ArmLeft" ,"STR_ACE_Interaction_ArmRight" ,"STR_ACE_Interaction_LegLeft", "STR_ACE_Interaction_LegRight"] select _selectionN;
+            _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
+        };
 
         if (_target getvariable[QGVAR(isBleeding), false]) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_BLEEDING", [1, 0.1, 0.1, 1]];
