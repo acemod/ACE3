@@ -37,6 +37,13 @@ if(_icon == "") then {
 };
 _text = format ["<img image='%1' color='%2' align='center'/><br/><t color='%3' size='0.80' align='center' shadow='1' shadowColor='#000000' shadowOffset='0.07'>%4</t>", _icon, _color, _color, _text];
 _ctrl ctrlSetStructuredText (parseText _text);
-_ctrl ctrlSetPosition [(_sPos select 0)-(0.125*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.25*SafeZoneW, 0.1*SafeZoneW];
+_pos =  [(_sPos select 0)-(0.125*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.25*SafeZoneW, 0.1*SafeZoneW];
+
+if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
+    _pos set [0, ((_pos select 0) - (GVAR(cursorPos) select 0) + 0.5)];
+    _pos set [1, ((_pos select 1) - (GVAR(cursorPos) select 1) + 0.5)];
+};
+_ctrl ctrlSetPosition _pos;
+
 //_ctrl ctrlSetBackgroundColor [1, 0, 0, 0.1];
 _ctrl ctrlCommit 0;
