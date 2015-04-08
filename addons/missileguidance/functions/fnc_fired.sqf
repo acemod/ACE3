@@ -1,11 +1,14 @@
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
-PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
+
+// Bail if guidance is disabled
+if(!GVAR(enabled)) exitWith { false };
 
 // Bail on locality of the projectile, it should be local to us
 if(!local _projectile) exitWith { false };
 
 private["_config", "_enabled", "_target", "_seekerType", "_attackProfile"];
+PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
 _config = configFile >> "CfgAmmo" >> _ammo >> "ACE_MissileGuidance";
 _enabled = getNumber ( _config >> "enabled");

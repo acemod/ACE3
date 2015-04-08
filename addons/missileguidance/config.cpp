@@ -9,7 +9,7 @@ class CfgPatches {
         VERSION_CONFIG;
     };
 };
-
+#include "ACE_Settings.hpp"
 #include "CfgEventhandlers.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
