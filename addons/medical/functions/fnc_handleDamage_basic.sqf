@@ -120,7 +120,7 @@ if (_selectionName == "") then {
         (_unit getHitPointDamage "HitRightArm") +
         (_unit getHitPointDamage "HitLeftLeg") +
         (_unit getHitPointDamage "HitRightLeg");
-    if (_damagesum < 0.06 and damage _unit > 0.06 and alive _unit) then {
+    if (damage _unit > _damagesum and alive _unit) then {
         _unit setHitPointDamage ["HitBody", damage _unit];
     };
 }, [_unit], 2, 0.1] call EFUNC(common,waitAndExecute);
