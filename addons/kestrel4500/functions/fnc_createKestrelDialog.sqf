@@ -18,7 +18,7 @@ if (dialog) exitWith { false };
 if (underwater ACE_player) exitWith { false };
 if (!("ACE_Kestrel4500" in (uniformItems ACE_player)) && !("ACE_Kestrel4500" in (vestItems ACE_player))) exitWith { false };
 
-GVAR(Kestrel4500_Overlay) = false;
+GVAR(Overlay) = false;
 3 cutText ["", "PLAIN"];
 
 GVAR(Kestrel4500) = true;

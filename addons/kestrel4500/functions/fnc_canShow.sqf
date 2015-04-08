@@ -15,8 +15,4 @@
  */
 #include "script_component.hpp"
 
-private ["_returnValue"];
-
-_returnValue = ("ACE_Kestrel4500" in (items ACE_player)) && {!(underwater ACE_player)};
-
-_returnValue
+("ACE_Kestrel4500" in (uniformItems ACE_player)) || ("ACE_Kestrel4500" in (vestItems ACE_player))

@@ -14,7 +14,7 @@ class CfgVehicles {
                 };
                 class GVAR(show) {
                     displayName = "$STR_ACE_Kestrel4500_ShowKestrel";
-                    condition = QUOTE(call FUNC(canShow) && !GVAR(Kestrel4500_Overlay));
+                    condition = QUOTE(call FUNC(canShow) && !GVAR(Overlay));
                     statement = QUOTE(call FUNC(displayKestrel));
                     showDisabled = 0;
                     priority = 0.2;
@@ -23,7 +23,7 @@ class CfgVehicles {
                 };
                 class GVAR(hide) {
                     displayName = "$STR_ACE_Kestrel4500_HideKestrel";
-                    condition = QUOTE(GVAR(Kestrel4500_Overlay));
+                    condition = QUOTE(GVAR(Overlay));
                     statement = QUOTE(call FUNC(displayKestrel));
                     showDisabled = 0;
                     priority = 0.3;

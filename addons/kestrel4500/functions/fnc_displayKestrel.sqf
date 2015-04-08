@@ -29,8 +29,8 @@
 
 private ["_outputData"];
 
-if (GVAR(Kestrel4500_Overlay)) exitWith {
-    GVAR(Kestrel4500_Overlay) = false;
+if (GVAR(Overlay)) exitWith {
+    GVAR(Overlay) = false;
     3 cutText ["", "PLAIN"];
     true
 };
@@ -42,12 +42,12 @@ if (GVAR(Kestrel4500) && dialog) then {
     closeDialog 0;
 };
 
-GVAR(Kestrel4500_Overlay) = true;
+GVAR(Overlay) = true;
 
 [{
     // abort condition
-    if (!GVAR(Kestrel4500_Overlay) || {!(("ACE_Kestrel4500" in (uniformItems ACE_player)) || ("ACE_Kestrel4500" in (vestItems ACE_player)))}) exitWith {
-        GVAR(Kestrel4500_Overlay) = false;
+    if (!GVAR(Overlay) || {!(("ACE_Kestrel4500" in (uniformItems ACE_player)) || ("ACE_Kestrel4500" in (vestItems ACE_player)))}) exitWith {
+        GVAR(Overlay) = false;
         3 cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };

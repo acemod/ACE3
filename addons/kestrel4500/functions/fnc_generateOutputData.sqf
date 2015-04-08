@@ -21,7 +21,7 @@ if (isNil QUOTE(EGVAR(advanced_ballistics,Altitude))) then {EGVAR(advanced_balli
 
 [] call FUNC(collectData);
 
-_textTop = GVAR(Kestrel4500_Menus) select GVAR(Kestrel4500_Menu);
+_textTop = GVAR(Menus) select GVAR(Menu);
 _textCenterBig = "";
 
 _textCenterLine1Left = "";
@@ -47,17 +47,17 @@ if (isClass (configFile >> "CfgPatches" >> "ACE_Advanced_Ballistics")) then {
 _playerDir = getDir ACE_player;
 _windSpeed = cos(_playerDir - _windDir) * _windSpeed;
 
-GVAR(Kestrel4500_Direction) = 4 * floor(_playerDir / 90);
-if (_playerDir % 90 > 10) then { GVAR(Kestrel4500_Direction) = GVAR(Kestrel4500_Direction) + 1};
-if (_playerDir % 90 > 35) then { GVAR(Kestrel4500_Direction) = GVAR(Kestrel4500_Direction) + 1};
-if (_playerDir % 90 > 55) then { GVAR(Kestrel4500_Direction) = GVAR(Kestrel4500_Direction) + 1};
-if (_playerDir % 90 > 80) then { GVAR(Kestrel4500_Direction) = GVAR(Kestrel4500_Direction) + 1};
-GVAR(Kestrel4500_Direction) = GVAR(Kestrel4500_Direction) % 16;
+GVAR(Direction) = 4 * floor(_playerDir / 90);
+if (_playerDir % 90 > 10) then { GVAR(Direction) = GVAR(Direction) + 1};
+if (_playerDir % 90 > 35) then { GVAR(Direction) = GVAR(Direction) + 1};
+if (_playerDir % 90 > 55) then { GVAR(Direction) = GVAR(Direction) + 1};
+if (_playerDir % 90 > 80) then { GVAR(Direction) = GVAR(Direction) + 1};
+GVAR(Direction) = GVAR(Direction) % 16;
 
-switch (GVAR(Kestrel4500_Menu)) do {
+switch (GVAR(Menu)) do {
     case 0: { // Direction
-        if (!GVAR(Kestrel4500_MinAvgMax)) then {
-            _textCenterBig = format["%1", format["%1 %2", GVAR(Kestrel4500_Direction)s select GVAR(Kestrel4500_Direction), round(_playerDir)]];
+        if (!GVAR(MinAvgMax)) then {
+            _textCenterBig = format["%1", format["%1 %2", GVAR(Direction)s select GVAR(Direction), round(_playerDir)]];
         } else {
             _textCenterLine1Left = "Min";
             _textCenterLine2Left = "Avg";
@@ -68,12 +68,12 @@ switch (GVAR(Kestrel4500_Menu)) do {
         };
     };
     case 1: { // Wind SPD
-        if (!GVAR(Kestrel4500_MinAvgMax)) then {
+        if (!GVAR(MinAvgMax)) then {
             _textCenterBig = Str(round(abs(_windSpeed) * 10) / 10);
         } else {
             _textCenterLine1Left = "Max";
             _textCenterLine2Left = "Avg";
-            switch (GVAR(Kestrel4500_MinAvgMaxMode)) do {
+            switch (GVAR(MinAvgMaxMode)) do {
                 case 0: {
                     _textCenterLine1Right = "--. -";
                     _textCenterLine2Right = "--. -";
@@ -93,14 +93,14 @@ switch (GVAR(Kestrel4500_Menu)) do {
         };
     };
     case 2: { // CROSSWIND
-        if (!GVAR(Kestrel4500_MinAvgMax)) then {
-            _textCenterBig = Str(round(abs(sin(GVAR(Kestrel4500_RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
+        if (!GVAR(MinAvgMax)) then {
+            _textCenterBig = Str(round(abs(sin(GVAR(RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
             _textInfoLine1 = format["%1 m/s @ %2", round((cos(_playerDir - _windDir) * _windSpeed) * 10) / 10, round(_playerDir)];
             _textInfoLine2 = "- set heading";
         } else {
             _textCenterLine1Left = "Max";
             _textCenterLine2Left = "Avg";
-            switch (GVAR(Kestrel4500_MinAvgMax)Mode) do {
+            switch (GVAR(MinAvgMax)Mode) do {
                 case 0: {
                     _textCenterLine1Right = "--. -";
                     _textCenterLine2Right = "--. -";
@@ -120,14 +120,14 @@ switch (GVAR(Kestrel4500_Menu)) do {
         };
     };
     case 3: { // HEADWIND
-        if (!GVAR(Kestrel4500_MinAvgMax)) then {
-            _textCenterBig = Str(round(abs(cos(GVAR(Kestrel4500_RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
+        if (!GVAR(MinAvgMax)) then {
+            _textCenterBig = Str(round(abs(cos(GVAR(RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
             _textInfoLine1 = format["%1 m/s @ %2", round((cos(_playerDir - _windDir) * _windSpeed) * 10) / 10, round(_playerDir)];
             _textInfoLine2 = "- set heading";
         } else {
             _textCenterLine1Left = "Max";
             _textCenterLine2Left = "Avg";
-            switch (GVAR(Kestrel4500_MinAvgMax)Mode) do {
+            switch (GVAR(MinAvgMax)Mode) do {
                 case 0: {
                     _textCenterLine1Right = "--. -";
                     _textCenterLine2Right = "--. -";
@@ -147,7 +147,7 @@ switch (GVAR(Kestrel4500_Menu)) do {
         };
     };
     case 4: { // TEMP
-        if (!GVAR(Kestrel4500_MinAvgMax)) then {
+        if (!GVAR(MinAvgMax)) then {
             _textCenterBig = Str(round(_temperature * 10) / 10);
         } else {
             _textCenterLine1Left = "Min";
@@ -159,7 +159,7 @@ switch (GVAR(Kestrel4500_Menu)) do {
         };
     };
     case 5: { // HUMIDITY
-        if (!GVAR(Kestrel4500_MinAvgMax)) then {
+        if (!GVAR(MinAvgMax)) then {
             _textCenterBig = Str(round(_humidity * 100 * 10) / 10);
         } else {
             _textCenterLine1Left = "Min";
@@ -171,7 +171,7 @@ switch (GVAR(Kestrel4500_Menu)) do {
         };
     };
     case 6: { // BARO
-        if (!GVAR(Kestrel4500_MinAvgMax)) then {
+        if (!GVAR(MinAvgMax)) then {
             _textCenterBig = Str(round((1013.25 * exp(-(EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast) * 10) / 10);
         } else {
             _textCenterLine1Left = "Min";
@@ -183,7 +183,7 @@ switch (GVAR(Kestrel4500_Menu)) do {
         };
     };
     case 7: { // ALTITUDE
-        if (!GVAR(Kestrel4500_MinAvgMax)) then {
+        if (!GVAR(MinAvgMax)) then {
             _textCenterBig = Str(round(EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2)));
         } else {
             _textCenterLine1Left = "Min";
@@ -198,7 +198,7 @@ switch (GVAR(Kestrel4500_Menu)) do {
         _textCenterLine1Left = Str(round(_playerDir));
         _textCenterLine2Left = Str(round(EGVAR(advanced_ballistics,Altitude) + ((getPosASL ACE_player) select 2)));
         _textCenterLine3Left = Str(round(abs(_windSpeed) * 10) / 10);
-        _textCenterLine1Right = GVAR(Kestrel4500_Direction)s select GVAR(Kestrel4500_Direction);
+        _textCenterLine1Right = GVAR(Direction)s select GVAR(Direction);
         _textCenterLine2Right = "m";
         _textCenterLine3Right = "m/s";
     };

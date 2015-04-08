@@ -17,32 +17,32 @@
 
 switch (_this) do {
     case 0: { // Enter
-        if (!GVAR(Kestrel4500_MinAvgMAx) && (GVAR(Kestrel4500_Menu) == 2 || GVAR(Kestrel4500_Menu) == 3)) then {
-            GVAR(Kestrel4500_RefHeading) = getDir ACE_player;
+        if (!GVAR(MinAvgMAx) && (GVAR(Menu) == 2 || GVAR(Menu) == 3)) then {
+            GVAR(RefHeading) = getDir ACE_player;
         };
-        if (GVAR(Kestrel4500_MinAvgMAx) && GVAR(Kestrel4500_Menu) > 0 && GVAR(Kestrel4500_Menu) < 4) then {
-            if (GVAR(Kestrel4500_MinAvgMAxMode) != 1) then {
+        if (GVAR(MinAvgMAx) && GVAR(Menu) > 0 && GVAR(Menu) < 4) then {
+            if (GVAR(MinAvgMAxMode) != 1) then {
                 {
-                    GVAR(Kestrel4500_MIN) set [_x, 0];
-                    GVAR(Kestrel4500_MAX) set [_x, 0];
-                    GVAR(Kestrel4500_TOTAL) set [_x, 0];
-                    GVAR(Kestrel4500_ENTRIES) set [_x, 0];
+                    GVAR(MIN) set [_x, 0];
+                    GVAR(MAX) set [_x, 0];
+                    GVAR(TOTAL) set [_x, 0];
+                    GVAR(ENTRIES) set [_x, 0];
                 } forEach [1, 2, 3];
             };
-            GVAR(Kestrel4500_MinAvgMaxMode) = GVAR(Kestrel4500_MinAvgMaxMode + 1) % 3;
+            GVAR(MinAvgMaxMode) = GVAR(MinAvgMaxMode + 1) % 3;
         };
     };
     case 1: { // Top
-        GVAR(Kestrel4500_Menu) = (GVAR(Kestrel4500_Menu) - 1 + (count GVAR(Kestrel4500_Menus))) % (count GVAR(Kestrel4500_Menus));
+        GVAR(Menu) = (GVAR(Menu) - 1 + (count GVAR(Menus))) % (count GVAR(Menus));
     };
     case 2: { // Bottom
-        GVAR(Kestrel4500_Menu) = (GVAR(Kestrel4500_Menu) + 1 + (count GVAR(Kestrel4500_Menus))) % (count GVAR(Kestrel4500_Menus));
+        GVAR(Menu) = (GVAR(Menu) + 1 + (count GVAR(Menus))) % (count GVAR(Menus));
     };
     case 3: { // Left
-        GVAR(Kestrel4500_MinAvgMaxMode) = !GVAR(Kestrel4500_MinAvgMaxMode);
+        GVAR(MinAvgMaxMode) = !GVAR(MinAvgMaxMode);
     };
     case 4: { // Right
-        GVAR(Kestrel4500_MinAvgMaxMode) = !GVAR(Kestrel4500_MinAvgMaxMode);
+        GVAR(MinAvgMaxMode) = !GVAR(MinAvgMaxMode);
     };
     case 5: { // Memory
     };
