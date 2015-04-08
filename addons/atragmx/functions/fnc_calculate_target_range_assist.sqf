@@ -4,11 +4,11 @@ private ["_targetSize", "_imageSize", "_angle", "_estRange"];
 
 _angle = parseNumber(ctrlText 7012);
 _targetSize = parseNumber(ctrlText 7010);
-if (GVAR(ATragMX_rangeAssistUseTargetHeight)) then
+if (GVAR(rangeAssistUseTargetHeight)) then
 {
     _targetSize = _targetSize * cos(_angle);
 };
-switch (GVAR(ATragMX_rangeAssistTargetSizeUnit)) do
+switch (GVAR(rangeAssistTargetSizeUnit)) do
 {
     case 0:
     {
@@ -24,7 +24,7 @@ switch (GVAR(ATragMX_rangeAssistTargetSizeUnit)) do
     };
 };
 _imageSize = parseNumber(ctrlText 7011);
-switch (GVAR(ATragMX_rangeAssistImageSizeUnit)) do
+switch (GVAR(rangeAssistImageSizeUnit)) do
 {
     case 0:
     {
@@ -40,7 +40,7 @@ switch (GVAR(ATragMX_rangeAssistImageSizeUnit)) do
     };
 };
 _estRange = parseNumber(ctrlText 7013);
-if (GVAR(ATragMX_currentUnit) != 2) then
+if (GVAR(currentUnit) != 2) then
 {
     _estRange = _estRange / 1.0936133;
 };
@@ -51,12 +51,12 @@ switch (_this) do
     {
         _targetSize = tan(_imageSize) * _estRange;
         
-        if (GVAR(ATragMX_rangeAssistUseTargetHeight)) then
+        if (GVAR(rangeAssistUseTargetHeight)) then
         {
             _targetSize = _targetSize / cos(_angle);
         };
         
-        switch (GVAR(ATragMX_rangeAssistTargetSizeUnit)) do
+        switch (GVAR(rangeAssistTargetSizeUnit)) do
         {
             case 0:
             {
@@ -78,7 +78,7 @@ switch (_this) do
     {
         _imageSize = atan(_targetSize / _estRange);
         
-        switch (GVAR(ATragMX_rangeAssistImageSizeUnit)) do
+        switch (GVAR(rangeAssistImageSizeUnit)) do
         {
             case 0:
             {

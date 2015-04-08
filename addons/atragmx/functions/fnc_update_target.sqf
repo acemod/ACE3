@@ -1,22 +1,22 @@
 #include "script_component.hpp"
 
-if (!isNil ("GVAR(ATragMX_windSpeed)")) then
+if (!isNil ("GVAR(windSpeed)")) then
 {
-    ctrlSetText [300, Str(Round((GVAR(ATragMX_windSpeed) select GVAR(ATragMX_currentTarget)) * 100) / 100)];
+    ctrlSetText [300, Str(Round((GVAR(windSpeed) select GVAR(currentTarget)) * 100) / 100)];
 };
-if (!isNil ("GVAR(ATragMX_windDirection)")) then
+if (!isNil ("GVAR(windDirection)")) then
 {
-    ctrlSetText [310, Str(Round((GVAR(ATragMX_windDirection) select GVAR(ATragMX_currentTarget))))];
+    ctrlSetText [310, Str(Round((GVAR(windDirection) select GVAR(currentTarget))))];
 };
-if (!isNil ("GVAR(ATragMX_inclinationAngle)")) then
+if (!isNil ("GVAR(inclinationAngle)")) then
 {
-    ctrlSetText [320, Str(Round((GVAR(ATragMX_inclinationAngle) select GVAR(ATragMX_currentTarget))))];
+    ctrlSetText [320, Str(Round((GVAR(inclinationAngle) select GVAR(currentTarget))))];
 };
-if (!isNil ("GVAR(ATragMX_targetSpeed)")) then
+if (!isNil ("GVAR(targetSpeed)")) then
 {
-    ctrlSetText [330, Str(Round((GVAR(ATragMX_targetSpeed) select GVAR(ATragMX_currentTarget)) * 100) / 100)];
+    ctrlSetText [330, Str(Round((GVAR(targetSpeed) select GVAR(currentTarget)) * 100) / 100)];
 };
-if (!isNil ("GVAR(ATragMX_targetRange)")) then
+if (!isNil ("GVAR(targetRange)")) then
 {
-    ctrlSetText [340, Str(Round((GVAR(ATragMX_targetRange) select GVAR(ATragMX_currentTarget))))];
+    ctrlSetText [340, Str(Round((GVAR(targetRange) select GVAR(currentTarget))))];
 };

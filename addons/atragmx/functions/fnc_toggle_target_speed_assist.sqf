@@ -19,9 +19,9 @@ if (ctrlVisible 8000) then
     
     ctrlSetFocus (_dsp displayCtrl 8012);
     
-    ctrlSetText [8004, Str(Round((GVAR(ATragMX_targetRange) select GVAR(ATragMX_currentTarget))))];
+    ctrlSetText [8004, Str(Round((GVAR(targetRange) select GVAR(currentTarget))))];
 
-    if (GVAR(ATragMX_currentUnit) != 2) then
+    if (GVAR(currentUnit) != 2) then
     {
         ctrlSetText [8008, "Yards"];
     } else
@@ -29,7 +29,7 @@ if (ctrlVisible 8000) then
         ctrlSetText [8008, "Meters"];
     };
     
-    if (GVAR(ATragMX_currentUnit) != 1) then
+    if (GVAR(currentUnit) != 1) then
     {
         ctrlSetText [8011, "m/s"];
     } else

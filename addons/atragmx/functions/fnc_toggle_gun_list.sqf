@@ -17,5 +17,5 @@ if (ctrlVisible 6000) then
     
     ctrlSetFocus (_dsp displayCtrl 6002);
 
-    lbSetCurSel [6000, (GVAR(ATragMX_currentGun) select GVAR(ATragMX_currentTarget))];
+    lbSetCurSel [6000, (GVAR(currentGun) select GVAR(currentTarget))];
 };

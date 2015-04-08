@@ -6,7 +6,7 @@
 (_dsp displayCtrl 601) ctrlEnable true;
 (_dsp displayCtrl 602) ctrlEnable true;
 
-(_dsp displayCtrl 600 + GVAR(ATragMX_currentUnit)) ctrlEnable false;
+(_dsp displayCtrl 600 + GVAR(currentUnit)) ctrlEnable false;
 
 [] call FUNC(update_gun);
 [] call FUNC(update_atmosphere);

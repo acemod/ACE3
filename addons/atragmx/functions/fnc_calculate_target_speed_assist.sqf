@@ -7,12 +7,12 @@ _numTicks = parseNumber(ctrlText 8005);
 _timeSecs = parseNumber(ctrlText 8006);
 _estSpeed = 0;
 
-if (GVAR(ATragMX_currentUnit) != 2) then
+if (GVAR(currentUnit) != 2) then
 {
     _targetRange = _targetRange / 1.0936133;
 };
 
-switch (GVAR(ATragMX_rangeAssistImageSizeUnit)) do
+switch (GVAR(rangeAssistImageSizeUnit)) do
 {
     case 0:
     {
@@ -33,7 +33,7 @@ if (_timeSecs > 0) then
     _estSpeed = tan(_numTicks) * _targetRange / _timeSecs;
 };
 
-if (GVAR(ATragMX_currentUnit) == 1) then
+if (GVAR(currentUnit) == 1) then
 {
     _estSpeed = _estSpeed * 2.23693629;
 };

@@ -3,9 +3,9 @@
 private ["_range", "_elevation", "_windage", "_lead", "_TOF", "_velocity", "_kineticEnergy", "_rangeOutput", "_elevationOutput", "_windageOutput", "_lastColumnOutput"];
 _lastColumnOutput = "";
 
-ctrlSetText [5006, (GVAR(ATragMX_rangeCardLastColumns) select GVAR(ATragMX_rangeCardCurrentColumn))];
+ctrlSetText [5006, (GVAR(rangeCardLastColumns) select GVAR(rangeCardCurrentColumn))];
 
-if (GVAR(ATragMX_currentUnit) != 2) then
+if (GVAR(currentUnit) != 2) then
 {
     ctrlSetText [5003, "Yards"];
 } else
@@ -24,7 +24,7 @@ lnbClear 5007;
     _velocity = _x select 5;
     _kineticEnergy = _x select 6;
     
-    switch ((GVAR(ATragMX_currentScopeUnit) select GVAR(ATragMX_currentTarget))) do
+    switch ((GVAR(currentScopeUnit) select GVAR(currentTarget))) do
     {
         case 0:
         {
@@ -40,8 +40,8 @@ lnbClear 5007;
         
         case 3:
         {
-            _elevationScopeStep = ((GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 7);
-            _windageScopeStep = ((GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 8);
+            _elevationScopeStep = ((GVAR(workingMemory) select GVAR(currentTarget)) select 7);
+            _windageScopeStep = ((GVAR(workingMemory) select GVAR(currentTarget)) select 8);
             
             _elevation = Round(_elevation / _elevationScopeStep);
             _windage = Round(_windage / _windageScopeStep);
@@ -57,12 +57,12 @@ lnbClear 5007;
         _rangeOutput = _rangeOutput + "*";
     };
     
-    if (GVAR(ATragMX_currentUnit) == 1) then
+    if (GVAR(currentUnit) == 1) then
     {
         _velocity = _velocity * 3.2808399;
     };
     
-    switch (GVAR(ATragMX_rangeCardCurrentColumn)) do
+    switch (GVAR(rangeCardCurrentColumn)) do
     {
         case 0:
         {
@@ -86,4 +86,4 @@ lnbClear 5007;
     };
     
     lnbAddRow [5007, [_rangeOutput, _elevationOutput, _windageOutput, _lastColumnOutput]];
-} forEach GVAR(ATragMX_rangeCardData);
+} forEach GVAR(rangeCardData);

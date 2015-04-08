@@ -40,10 +40,10 @@ _n = 0;
 _range = 0;
 _rangeFactor = 1;
 if (_storeRangeCardData) then {
-    if (GVAR(ATragMX_currentUnit) != 2) then {
+    if (GVAR(currentUnit) != 2) then {
         _rangeFactor = 1.0936133;
     };
-    GVAR(ATragMX_rangeCardData) = [];
+    GVAR(rangeCardData) = [];
 };
 
 private ["_wind"];
@@ -89,8 +89,8 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do
     _TOF = _TOF + _deltaT;
     
     if (_storeRangeCardData) then {
-        _range = GVAR(ATragMX_rangeCardStartRange) + _n * GVAR(ATragMX_rangeCardIncrement);
-        if ((_bulletPos select 1) * _rangeFactor >= _range && _range <= GVAR(ATragMX_rangeCardEndRange)) then {
+        _range = GVAR(rangeCardStartRange) + _n * GVAR(rangeCardIncrement);
+        if ((_bulletPos select 1) * _rangeFactor >= _range && _range <= GVAR(rangeCardEndRange)) then {
             if ((_bulletPos select 1) > 0) then {
                 _elevation = - atan((_bulletPos select 2) / (_bulletPos select 1));
                 _windage = - atan((_bulletPos select 0) / (_bulletPos select 1));
@@ -101,7 +101,7 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do
             _kineticEnergy = 0.5 * (_bulletMass / 1000 * (_bulletSpeed ^ 2));
             _kineticEnergy = _kineticEnergy * 0.737562149;
             
-            GVAR(ATragMX_rangeCardData) set [_n, [_range, _elevation * 60, _windage * 60, _lead, _TOF, _bulletSpeed, _kineticEnergy]];
+            GVAR(rangeCardData) set [_n, [_range, _elevation * 60, _windage * 60, _lead, _TOF, _bulletSpeed, _kineticEnergy]];
             _n = _n + 1;
         };
     };

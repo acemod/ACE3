@@ -1,18 +1,18 @@
 #include "script_component.hpp"
 
 private ["_elevationAbs", "_elevationRel", "_elevationCur", "_windageAbs", "_windageRel", "_windageCur", "_lead", "_elevationScopeStep", "_windageScopeStep"];
-_elevationAbs = (GVAR(ATragMX_elevationOutput) select GVAR(ATragMX_currentTarget));
-_windageAbs = (GVAR(ATragMX_windageOutput) select GVAR(ATragMX_currentTarget));
+_elevationAbs = (GVAR(elevationOutput) select GVAR(currentTarget));
+_windageAbs = (GVAR(windageOutput) select GVAR(currentTarget));
 
-_elevationCur = (GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 10;
-_windageCur = (GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 11;
+_elevationCur = (GVAR(workingMemory) select GVAR(currentTarget)) select 10;
+_windageCur = (GVAR(workingMemory) select GVAR(currentTarget)) select 11;
 
 _elevationRel = _elevationAbs - _elevationCur;
 _windageRel = _windageAbs - _windageCur;
 
-_lead = (GVAR(ATragMX_leadOutput) select GVAR(ATragMX_currentTarget));
+_lead = (GVAR(leadOutput) select GVAR(currentTarget));
 
-switch ((GVAR(ATragMX_currentScopeUnit) select GVAR(ATragMX_currentTarget))) do
+switch ((GVAR(currentScopeUnit) select GVAR(currentTarget))) do
 {
     case 0:
     {
@@ -40,8 +40,8 @@ switch ((GVAR(ATragMX_currentScopeUnit) select GVAR(ATragMX_currentTarget))) do
     
     case 3:
     {
-        _elevationScopeStep = ((GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 7);
-        _windageScopeStep = ((GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 8);
+        _elevationScopeStep = ((GVAR(workingMemory) select GVAR(currentTarget)) select 7);
+        _windageScopeStep = ((GVAR(workingMemory) select GVAR(currentTarget)) select 8);
         
         _elevationAbs = Round(_elevationAbs / _elevationScopeStep);
         _windageAbs = Round(_windageAbs / _windageScopeStep);

@@ -9,9 +9,9 @@ if (ctrlVisible 10000) then
     
     if (_this == 1) then
     {
-        GVAR(ATragMX_rangeCardStartRange) = 0 max Round(parseNumber(ctrlText 10003)) min 3000;
-        GVAR(ATragMX_rangeCardEndRange) = 0 max Round(parseNumber(ctrlText 10004)) min 3000;
-        GVAR(ATragMX_rangeCardIncrement) = 1 max Round(parseNumber(ctrlText 10005)) min 3000;
+        GVAR(rangeCardStartRange) = 0 max Round(parseNumber(ctrlText 10003)) min 3000;
+        GVAR(rangeCardEndRange) = 0 max Round(parseNumber(ctrlText 10004)) min 3000;
+        GVAR(rangeCardIncrement) = 1 max Round(parseNumber(ctrlText 10005)) min 3000;
         
         [] call FUNC(calculate_range_card);
         [] call FUNC(update_range_card);
@@ -23,7 +23,7 @@ if (ctrlVisible 10000) then
     
     ctrlSetFocus (_dsp displayCtrl 10006);
     
-    ctrlSetText [10003, Str(Round(GVAR(ATragMX_rangeCardStartRange)))];
-    ctrlSetText [10004, Str(Round(GVAR(ATragMX_rangeCardEndRange)))];
-    ctrlSetText [10005, Str(Round(GVAR(ATragMX_rangeCardIncrement)))];
+    ctrlSetText [10003, Str(Round(GVAR(rangeCardStartRange)))];
+    ctrlSetText [10004, Str(Round(GVAR(rangeCardEndRange)))];
+    ctrlSetText [10005, Str(Round(GVAR(rangeCardIncrement)))];
 };

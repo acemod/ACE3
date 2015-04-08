@@ -22,7 +22,7 @@ if (ctrlVisible 7000) then
     ctrlSetText [7012, Str(parseNumber(ctrlText 320))];
     ctrlSetText [7013, Str(parseNumber(ctrlText 340))];
 
-    if (GVAR(ATragMX_currentUnit) != 2) then
+    if (GVAR(currentUnit) != 2) then
     {
         ctrlSetText [7016, "Yards"];
     } else

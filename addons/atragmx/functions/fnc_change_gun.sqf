@@ -1,23 +1,23 @@
 #include "script_component.hpp"
 
-if (_this < 0 || _this > (count GVAR(ATragMX_gunList)) - 1) exitWith {};
+if (_this < 0 || _this > (count GVAR(gunList)) - 1) exitWith {};
 
-GVAR(ATragMX_workingMemory) set [GVAR(ATragMX_currentTarget), +(GVAR(ATragMX_gunList) select _this)];
-GVAR(ATragMX_currentGun) set [GVAR(ATragMX_currentTarget), _this];
+GVAR(workingMemory) set [GVAR(currentTarget), +(GVAR(gunList) select _this)];
+GVAR(currentGun) set [GVAR(currentTarget), _this];
 
-lbSetCurSel [6000, (GVAR(ATragMX_currentGun) select GVAR(ATragMX_currentTarget))];
+lbSetCurSel [6000, (GVAR(currentGun) select GVAR(currentTarget))];
 
-if ((GVAR(ATragMX_scopeUnits) select (GVAR(ATragMX_currentScopeUnit) select GVAR(ATragMX_currentTarget))) != "Clicks") then
+if ((GVAR(scopeUnits) select (GVAR(currentScopeUnit) select GVAR(currentTarget))) != "Clicks") then
 {
-    GVAR(ATragMX_currentScopeUnit) set [GVAR(ATragMX_currentTarget), (GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) select 6];
+    GVAR(currentScopeUnit) set [GVAR(currentTarget), (GVAR(workingMemory) select GVAR(currentTarget)) select 6];
 };
 
 [] call FUNC(update_gun);
 
-GVAR(ATragMX_elevationOutput) set [GVAR(ATragMX_currentTarget), 0];
-GVAR(ATragMX_windageOutput) set [GVAR(ATragMX_currentTarget), 0];
-GVAR(ATragMX_leadOutput) set [GVAR(ATragMX_currentTarget), 0];
-GVAR(ATragMX_tofOutput) set [GVAR(ATragMX_currentTarget), 0];
-GVAR(ATragMX_velocityOutput) set [GVAR(ATragMX_currentTarget), 0];
+GVAR(elevationOutput) set [GVAR(currentTarget), 0];
+GVAR(windageOutput) set [GVAR(currentTarget), 0];
+GVAR(leadOutput) set [GVAR(currentTarget), 0];
+GVAR(tofOutput) set [GVAR(currentTarget), 0];
+GVAR(velocityOutput) set [GVAR(currentTarget), 0];
 
 [] call FUNC(update_result);

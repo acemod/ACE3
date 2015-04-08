@@ -2,7 +2,7 @@
 
 [] call FUNC(parse_input);
 
-GVAR(ATragMX_currentScopeUnit) set [GVAR(ATragMX_currentTarget), ((GVAR(ATragMX_currentScopeUnit) select GVAR(ATragMX_currentTarget)) + 1) % (count GVAR(ATragMX_scopeUnits))];
+GVAR(currentScopeUnit) set [GVAR(currentTarget), ((GVAR(currentScopeUnit) select GVAR(currentTarget)) + 1) % (count GVAR(scopeUnits))];
 
 [] call FUNC(update_scope_unit);
 [] call FUNC(update_result);

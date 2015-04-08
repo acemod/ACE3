@@ -250,13 +250,13 @@ class ATragMX_Display
             w=0.03;
             h=0.03;
             colorBackground[]={0,0,0,0.0};
-            action=QUOTE(((GVAR(ATragMX_currentGun) select GVAR(ATragMX_currentTarget)) + (count GVAR(ATragMX_gunList)) - 1) % (count GVAR(ATragMX_gunList)) call FUNC(change_gun));
+            action=QUOTE(((GVAR(currentGun) select GVAR(currentTarget)) + (count GVAR(gunList)) - 1) % (count GVAR(gunList)) call FUNC(change_gun));
         };
         class BOTTOM: TOP
         {
             idc=-1;
             y=0.265*safezoneH+safezoneY+0.955;
-            action=QUOTE(((GVAR(ATragMX_currentGun) select GVAR(ATragMX_currentTarget)) + (count GVAR(ATragMX_gunList)) + 1) % (count GVAR(ATragMX_gunList)) call FUNC(change_gun));
+            action=QUOTE(((GVAR(currentGun) select GVAR(currentTarget)) + (count GVAR(gunList)) + 1) % (count GVAR(gunList)) call FUNC(change_gun));
         };
         class LEFT: ATragMX_RscButton
         {
@@ -266,13 +266,13 @@ class ATragMX_Display
             w=0.05;
             h=0.03;
             colorBackground[]={0,0,0,0};
-            action=QUOTE(call FUNC(parse_input); GVAR(ATragMX_currentTarget) = (4 + GVAR(ATragMX_currentTarget) - 1) % 4; call FUNC(update_target_selection));
+            action=QUOTE(call FUNC(parse_input); GVAR(currentTarget) = (4 + GVAR(currentTarget) - 1) % 4; call FUNC(update_target_selection));
         };
         class RIGHT: LEFT
         {
             idc=-1;
             x=0.55*safezoneW+safezoneX+0.2725;
-            action=QUOTE(call FUNC(parse_input); GVAR(ATragMX_currentTarget) = (4 + GVAR(ATragMX_currentTarget) + 1) % 4; call FUNC(update_target_selection));
+            action=QUOTE(call FUNC(parse_input); GVAR(currentTarget) = (4 + GVAR(currentTarget) + 1) % 4; call FUNC(update_target_selection));
         };
         class TOP_LEFT: ATragMX_RscButton
         {
@@ -311,21 +311,21 @@ class ATragMX_Display
             colorBackgroundDisabled[]={0,0,0,1};
             colorBackgroundActive[]={0,0,0,0};
             text="D";
-            action=QUOTE(GVAR(ATragMX_currentUnit)=0; call FUNC(update_unit_selection));
+            action=QUOTE(GVAR(currentUnit)=0; call FUNC(update_unit_selection));
         };
         class TEXT_E: TEXT_D
         {
             idc=601;
             x=0.550*safezoneW+safezoneX+0.3131;
             text="E";
-            action=QUOTE(GVAR(ATragMX_currentUnit)=1; call FUNC(update_unit_selection));
+            action=QUOTE(GVAR(currentUnit)=1; call FUNC(update_unit_selection));
         };
         class TEXT_M: TEXT_E
         {
             idc=602;
             x=0.550*safezoneW+safezoneX+0.3362;		
             text="M";
-            action=QUOTE(GVAR(ATragMX_currentUnit)=2; call FUNC(update_unit_selection));
+            action=QUOTE(GVAR(currentUnit)=2; call FUNC(update_unit_selection));
         };
         class TEXT_RANGE_CARD: TEXT_D
         {
@@ -469,28 +469,28 @@ class ATragMX_Display
             colorBackgroundDisabled[]={0,0,0,1};
             colorBackgroundActive[]={0,0,0,0};
             text="A";
-            action=QUOTE(call FUNC(parse_input); GVAR(ATragMX_currentTarget)=0; call FUNC(update_target_selection));
+            action=QUOTE(call FUNC(parse_input); GVAR(currentTarget)=0; call FUNC(update_target_selection));
         };
         class TEXT_TARGET_B: TEXT_TARGET_A
         {
             idc=501;
             x=0.550*safezoneW+safezoneX+0.2281;
             text="B";
-            action=QUOTE(call FUNC(parse_input); GVAR(ATragMX_currentTarget)=1; call FUNC(update_target_selection));
+            action=QUOTE(call FUNC(parse_input); GVAR(currentTarget)=1; call FUNC(update_target_selection));
         };
         class TEXT_TARGET_C: TEXT_TARGET_B
         {
             idc=502;
             x=0.550*safezoneW+safezoneX+0.2512;
             text="C";
-            action=QUOTE(call FUNC(parse_input); GVAR(ATragMX_currentTarget)=2; call FUNC(update_target_selection));
+            action=QUOTE(call FUNC(parse_input); GVAR(currentTarget)=2; call FUNC(update_target_selection));
         };
         class TEXT_TARGET_D: TEXT_TARGET_B
         {
             idc=503;
             x=0.550*safezoneW+safezoneX+0.2743;
             text="D";
-            action=QUOTE(call FUNC(parse_input); GVAR(ATragMX_currentTarget)=3; call FUNC(update_target_selection));
+            action=QUOTE(call FUNC(parse_input); GVAR(currentTarget)=3; call FUNC(update_target_selection));
         };
         
         class TEXT_TARGET: TEXT_GUN
@@ -848,7 +848,7 @@ class ATragMX_Display
             y=0.265*safezoneH+safezoneY+0.35;
             strings[]={"Height","Width"};
             values[]={1,0};
-            onToolBoxSelChanged="GVAR(ATragMX_rangeAssistUseTargetHeight)=((_this select 1)==0)";
+            onToolBoxSelChanged="GVAR(rangeAssistUseTargetHeight)=((_this select 1)==0)";
         };
         class TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE: TEXT_TARGET_RANGE_ASSIST_MEASUREMENT_METHOD
         {
@@ -926,14 +926,14 @@ class ATragMX_Display
             w=0.07;
             x=0.550*safezoneW+safezoneX+0.32;
             text="cm";
-            action=QUOTE(GVAR(ATragMX_rangeAssistTargetSizeUnit)=(GVAR(ATragMX_rangeAssistTargetSizeUnit)+1) % (count GVAR(GVAR(ATragMX_rangeAssistTargetSizeUnit)s)); ctrlSetText [7014, GVAR(GVAR(ATragMX_rangeAssistTargetSizeUnit)s) select GVAR(ATragMX_rangeAssistTargetSizeUnit)]);
+            action=QUOTE(GVAR(rangeAssistTargetSizeUnit)=(GVAR(rangeAssistTargetSizeUnit)+1) % (count GVAR(GVAR(rangeAssistTargetSizeUnit)s)); ctrlSetText [7014, GVAR(GVAR(rangeAssistTargetSizeUnit)s) select GVAR(rangeAssistTargetSizeUnit)]);
         };
         class TEXT_TARGET_RANGE_ASSIST_IMAGE_SIZE_UNIT: TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE_UNIT
         {
             idc=7015;
             y=0.265*safezoneH+safezoneY+0.45;
             text="MIL";
-            action=QUOTE(GVAR(ATragMX_rangeAssistImageSizeUnit)=(GVAR(ATragMX_rangeAssistImageSizeUnit)+1) % (count GVAR(ATragMX_rangeAssistImageSizeUnits)); ctrlSetText [7015, GVAR(ATragMX_rangeAssistImageSizeUnits) select GVAR(ATragMX_rangeAssistImageSizeUnit)]);
+            action=QUOTE(GVAR(rangeAssistImageSizeUnit)=(GVAR(rangeAssistImageSizeUnit)+1) % (count GVAR(rangeAssistImageSizeUnits)); ctrlSetText [7015, GVAR(rangeAssistImageSizeUnits) select GVAR(rangeAssistImageSizeUnit)]);
         };
         class TEXT_TARGET_RANGE_ASSIST_ESTIMATED_RANGE_UNIT: TEXT_TARGET_RANGE_ASSIST_ESTIMATED_RANGE
         {
@@ -1035,7 +1035,7 @@ class ATragMX_Display
         {
             idc=8009;
             text="MIL";
-            action=QUOTE(GVAR(ATragMX_speedAssistNumTicksUnit)=(GVAR(ATragMX_speedAssistNumTicksUnit)+1) % (count GVAR(ATragMX_speedAssistNumTicksUnits)); ctrlSetText [8009, GVAR(ATragMX_speedAssistNumTicksUnits) select GVAR(ATragMX_speedAssistNumTicksUnit)]; call FUNC(calculate_target_speed_assist));
+            action=QUOTE(GVAR(speedAssistNumTicksUnit)=(GVAR(speedAssistNumTicksUnit)+1) % (count GVAR(speedAssistNumTicksUnits)); ctrlSetText [8009, GVAR(speedAssistNumTicksUnits) select GVAR(speedAssistNumTicksUnit)]; call FUNC(calculate_target_speed_assist));
         };
         class TEXT_TARGET_SPEED_ASSIST_TIMER_START: TEXT_TARGET_RANGE_ASSIST_IMAGE_SIZE_UNIT
         {
@@ -1077,7 +1077,7 @@ class ATragMX_Display
             y=0.265*safezoneH+safezoneY+0.2;
             colorBackground[]={0,0,0,0};
             colorBackgroundActive[]={0,0,0,0};
-            action=QUOTE(GVAR(ATragMX_speedAssistTimer=false));
+            action=QUOTE(GVAR(speedAssistTimer=false));
         }
         class TEXT_TARGET_SPEED_ASSIST_TIME_OUTPUT: ATragMX_RscText
         {
@@ -1101,7 +1101,7 @@ class ATragMX_Display
             colorBackground[]={0.15,0.21,0.23,0.3};
             colorFocused[]={0.15,0.21,0.23,0.2};
             text="Stop";
-            action=QUOTE(GVAR(ATragMX_speedAssistTimer=false));
+            action=QUOTE(GVAR(speedAssistTimer=false));
         };
         
         class TEXT_RANGE_CARD_SETUP_START_RANGE: TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE

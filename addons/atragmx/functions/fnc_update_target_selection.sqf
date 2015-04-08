@@ -7,7 +7,7 @@
 (_dsp displayCtrl 502) ctrlEnable true;
 (_dsp displayCtrl 503) ctrlEnable true;
 
-(_dsp displayCtrl 500 + GVAR(ATragMX_currentTarget)) ctrlEnable false;
+(_dsp displayCtrl 500 + GVAR(currentTarget)) ctrlEnable false;
 
 ctrlSetFocus (_dsp displayCtrl 3000);
 

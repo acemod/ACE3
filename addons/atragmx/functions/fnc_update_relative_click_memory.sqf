@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-(GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) set [10, (GVAR(ATragMX_elevationOutput) select GVAR(ATragMX_currentTarget))];
-(GVAR(ATragMX_workingMemory) select GVAR(ATragMX_currentTarget)) set [11, (GVAR(ATragMX_windageOutput) select GVAR(ATragMX_currentTarget))];
+(GVAR(workingMemory) select GVAR(currentTarget)) set [10, (GVAR(elevationOutput) select GVAR(currentTarget))];
+(GVAR(workingMemory) select GVAR(currentTarget)) set [11, (GVAR(windageOutput) select GVAR(currentTarget))];
 
 [] call FUNC(update_result);

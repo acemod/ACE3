@@ -13,13 +13,13 @@ if !(ctrlVisible 9000) then
     
     _startTime = time;
     
-    while {GVAR(ATragMX_speedAssistTimer)} do
+    while {GVAR(speedAssistTimer)} do
     {
         sleep 0.1;
         ctrlSetText [9001, Str(Round((time - _startTime) * 10) / 10)];
     };
     
-    GVAR(ATragMX_speedAssistTimer) = true;
+    GVAR(speedAssistTimer) = true;
     
     ctrlSetText [8006, Str(Round((time - _startTime) * 10) / 10)];
     
