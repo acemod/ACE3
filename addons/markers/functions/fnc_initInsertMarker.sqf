@@ -50,7 +50,7 @@
     _mapIDD = -1;
     {
         if (!isNull (findDisplay _x)) exitWith {_mapIDD = _x};
-    } forEach [12, 37, 52, 53];
+    } forEach [12, 37, 52, 53, 160];
     if (_mapIDD == -1) exitWith {ERROR("No Map?");};
     if (!(_mapIDD in GVAR(mapDisplaysWithDrawEHs))) then {
         GVAR(mapDisplaysWithDrawEHs) pushBack _mapIDD;
