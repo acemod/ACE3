@@ -15,8 +15,4 @@
  */
 #include "script_component.hpp"
 
-private ["_returnValue"];
-
-_returnValue = (("ACE_ATragMX" in (uniformItems ACE_player)) || ("ACE_ATragMX" in (vestItems ACE_player))) && !(underwater ACE_player);
-
-_returnValue
+("ACE_ATragMX" in (uniformItems ACE_player)) || ("ACE_ATragMX" in (vestItems ACE_player)) && !(underwater ACE_player);
