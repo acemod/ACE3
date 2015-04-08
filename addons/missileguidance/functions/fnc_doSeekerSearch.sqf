@@ -9,6 +9,7 @@ _targetLaunchParams = _launchParams select 1;
 
 _seekerParams = _this select 3;
 
+// TODO: this needs to be shootCone/findStrongestRay after testing
 _targets = [_projectile, ACE_DEFAULT_LASER_CODE, (_seekerParams select 0)] call ace_laser_fnc_findLaserDesignator;
 _foundTargetPos = getPosASL (_targets select 1);
 
