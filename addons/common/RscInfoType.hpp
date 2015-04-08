@@ -109,10 +109,6 @@ class RscDisplayInventory {
     onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDisplayInventory"",'IGUI')] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; [ARR_2('inventoryDisplayLoaded', _this)] call FUNC(localEvent););
 };
 
-class RscDisplayChannel {
-    onLoad = QUOTE(_this call FUNC(onLoadRscDisplayChannel));
-};
-
 // map
 class RscDisplayMainMap {
     onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDiary"",'GUI')] call    (uinamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgMap', _this select 0)]; [ARR_2('mapDisplayLoaded', [ARR_2(_this select 0, 'Ingame')])] call FUNC(localEvent););

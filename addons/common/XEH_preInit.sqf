@@ -126,7 +126,6 @@ PREP(numberToDigits);
 PREP(numberToDigitsString);
 PREP(numberToString);
 PREP(onAnswerRequest);
-PREP(onLoadRscDisplayChannel);
 PREP(owned);
 PREP(player);
 PREP(playerSide);
