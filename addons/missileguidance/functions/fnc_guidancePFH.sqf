@@ -23,6 +23,7 @@ if(!isNil "_seekerTargetPos") then {
    
     _minDeflection = _flightParams select 0;
     _maxDeflection = _flightParams select 1;
+    _incDeflection = _flightParams select 2;
     
     _yVec = vectorDir _projectile;
     _zVec = vectorUp _projectile;
@@ -38,14 +39,14 @@ if(!isNil "_seekerTargetPos") then {
     _pitch = 0;
                
     if((_targetVectorSeeker select 0) < 0) then {
-        _yaw = - ( (_minDeflection max ((_targetVector select 0) min _maxDeflection) ) );
+        _yaw = - ( (_minDeflection max (abs(_targetVector select 0) min _maxDeflection) ) );
     } else {
         if((_targetVectorSeeker select 0) > 0) then {
             _yaw = ( (_minDeflection max ((_targetVector select 0) min _maxDeflection) ) );
         };
     };
     if((_targetVectorSeeker select 2) < 0) then {
-        _pitch = - ( (_minDeflection max ((_targetVector select 2) min _maxDeflection) ) );
+        _pitch = - ( (_minDeflection max (abs(_targetVector select 2) min _maxDeflection) ) );
     } else {
         if((_targetVectorSeeker select 2) > 0) then {
             _pitch = ( (_minDeflection max ((_targetVector select 2) min _maxDeflection) ) );
