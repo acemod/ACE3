@@ -2,8 +2,8 @@
 #include "script_component.hpp"
 
 EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
-private["_target", "_seekerTargetPos", "_launchParams", "_targetLaunchParams", "_targetPos", "_projectilePos"];
-
+private["_targetPos", "_projectilePos", "_target", "_seekerTargetPos", "_launchParams", "_targetLaunchParams"];
+private["_distanceToTarget", "_distanceToShooter", "_addHeight", "_returnTargetPos"];
 _seekerTargetPos = _this select 0;
 _launchParams = _this select 1;
 
@@ -13,16 +13,21 @@ _targetLaunchParams = _launchParams select 1;
 _shooterPos = getPosASL _shooter;
 _projectilePos = getPosASL _projectile;
 
-_distanceToTarget = _projectilePos distance _seekerTargetPos;    
-_distanceToShooter = _projectilePos distance _shooterPos;
+_distanceToTarget = _projectilePos vectorDistance _seekerTargetPos;    
+_distanceToShooter = _projectilePos vectorDistance _shooterPos;
 
-_addHeight = [0,0,(_projectilePos distance _seekerTargetPos)*0.02];
+TRACE_2("", _distanceToTarget, _distanceToShooter);
 
-_seekerTargetPos = _seekerTargetPos vectorAdd _addHeight;
+//_addHeight = [0,0,0];
+_addHeight = [0,0, _distanceToTarget*0.02];
+
+TRACE_3("", _distanceToTarget, _distanceToShooter, _addHeight);
+
+_returnTargetPos = _seekerTargetPos vectorAdd _addHeight;
 
 #ifdef DEBUG_MODE_FULL
-drawLine3D [(ASLtoATL _seekerTargetPos) vectorAdd _addHeight, ASLtoATL _seekerTargetPos, [0,1,0,1]];
+drawLine3D [(ASLtoATL _returnTargetPos) vectorAdd _addHeight, ASLtoATL _returnTargetPos, [0,1,0,1]];
 #endif
 
-TRACE_1("Adjusted target position", _seekerTargetPos);
-_seekerTargetPos;
+TRACE_1("Adjusted target position", _returnTargetPos);
+_returnTargetPos;
