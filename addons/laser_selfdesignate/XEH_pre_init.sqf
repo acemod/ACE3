@@ -1,12 +1,11 @@
 #include "script_component.hpp"
 
-PREP(onGetIn);
-PREP(onGetOut);
-
+PREP(initDesignatorActions);
 PREP(laserHudDesignateOn);
 PREP(laserHudDesignateOff);
+PREP(unitTurretHasDesignator);
 
 GVAR(laser) = nil;
-GVAR(laserActive) = false; 
+GVAR(laserActive) = false;
 
 FUNC(getPosASL) = {visiblePositionASL (_this select 0)};

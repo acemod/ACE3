@@ -1,3 +1,7 @@
+//#define DEBUG_MODE_FULL
+#include "script_component.hpp"
+TRACE_1("enter", _this);
+
 _object = _this select 0;
 _origin = getPosASL _object;
 _matrix = _this select 1;

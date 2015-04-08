@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 if(GVAR(autoTrace)) then {
-	[] call FUNC(startTracing);
+    [] call FUNC(startTracing);
 };
 
 // setAccTime 0.05;
@@ -9,7 +9,7 @@ _obj = _this select 1;
 _origin = _this select 0;
 _color = [1,0,0,1];
 if((count _this) > 2) then {
-	_color = _this select 2;
+    _color = _this select 2;
 };
 _positions = [];
 _objVel = velocity _obj;

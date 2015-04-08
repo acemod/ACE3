@@ -1,15 +1,15 @@
 /*
  * Author: esteldunedain
- *
  * Returns the equivalent of 100m in screen coordinates
  *
- * Argument:
+ * Arguments:
  * None
  *
  * Return value:
- * Return
+ * No
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
 _pos          = ((finddisplay 12) displayctrl 51) ctrlMapScreenToWorld [0.5, 0.5];

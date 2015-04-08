@@ -1,6 +1,8 @@
 //XEH_clientInit.sqf
 #include "script_component.hpp"
 
+if (!hasInterface) exitWith {};
+
 // Install the render EH on the main display
 addMissionEventHandler ["Draw3D", DFUNC(render)];
 
@@ -10,17 +12,41 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     // Wait until the map display is detected
     waitUntil {(!isNull findDisplay 12)};
 
-	// Install the render EH on the map screen
+    // Install the render EH on the map screen
     ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", DFUNC(render)];
 };
 
 
-["ACE3", QGVAR(InteractKey), "Interact Key",
-{[0] call FUNC(keyDown)},
+["ACE3", QGVAR(InteractKey), (localize "STR_ACE_Interact_Menu_InteractKey"),
+{
+    // Conditions: canInteract
+    if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    // Statement
+    [0] call FUNC(keyDown)
+},
 {[0] call FUNC(keyUp)},
 [219, [false, false, false]], false] call cba_fnc_addKeybind;  //Left Windows Key
 
-["ACE3", QGVAR(SelfInteractKey), "Self Actions Key",
-{[1] call FUNC(keyDown)},
+["ACE3", QGVAR(SelfInteractKey), (localize "STR_ACE_Interact_Menu_SelfInteractKey"),
+{
+    // Conditions: canInteract
+    if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    // Statement
+    [1] call FUNC(keyDown)
+},
 {[1] call FUNC(keyUp)},
 [219, [false, true, false]], false] call cba_fnc_addKeybind; //Left Windows Key + Ctrl/Strg
+
+
+// Listens for the falling unconscious event, just in case the menu needs to be closed
+["medical_onUnconscious", {
+    // If no menu is open just quit
+    if (GVAR(openedMenuType) < 0) exitWith {};
+
+    EXPLODE_2_PVT(_this,_unit,_isUnconscious);
+
+    if (_unit != ACE_player || !_isUnconscious) exitWith {};
+
+    GVAR(actionSelected) = false;
+    [] call FUNC(keyUp);
+}] call EFUNC(common,addEventhandler);

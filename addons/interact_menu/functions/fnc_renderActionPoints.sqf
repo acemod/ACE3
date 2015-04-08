@@ -38,7 +38,7 @@ _fnc_renderNearbyActions = {
                 // Only render them directly if they are base level actions
                 if (count (_x select 1) == 0) then {
                     // Try to render the menu
-                    _action = [_x,[]];
+                    _action = _x;
                     if ([_target, _action] call FUNC(renderBaseMenu)) then {
                         _numInteractions = _numInteractions + 1;
                     };
@@ -89,7 +89,7 @@ _fnc_renderSelfActions = {
     {
         _action = _x;
 
-        _pos = if !(visibleMap) then {
+        _pos = if !(GVAR(useCursorMenu)) then {
             (((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL)) vectorAdd GVAR(selfMenuOffset)) call EFUNC(common,ASLToPosition)
         } else {
             [0.5, 0.5]

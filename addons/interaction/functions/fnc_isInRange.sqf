@@ -43,8 +43,8 @@ _position1 = ATLToASL positionCameraToWorld [0, 0, _distance];
 _position1 set [2, (_position1 select 2) - (getTerrainHeightASL _position1 min 0)];
 
 if (_vehicle in lineIntersectsWith [_position0, _position1] || {_player distance _vehicle < _distance}) then {
-	true
+    true
 } else {
-	["Not in Range"] call FUNC(addToTooltip);
-	false
+    ["Not in Range"] call FUNC(addToTooltip);
+    false
 }

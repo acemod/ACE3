@@ -45,3 +45,8 @@ disableSerialization;
 _menu = uiNamespace getvariable "ACE_settingsMenu";
 (_menu displayCtrl 1002) ctrlEnable false;
 (_menu displayCtrl 1003) ctrlEnable false;
+
+if (GVAR(serverConfigGeneration) == 0) then {
+    (_menu displayCtrl 1102) ctrlEnable false;
+    (_menu displayCtrl 1102) ctrlShow false;
+};
