@@ -19,9 +19,8 @@
 
 private ["_weaponName", "_magazines", "_initSpeed", "_fireModes", "_muzzleVelocities", "_showToPlayer", "_artilleryCharge"];
 
-_weaponName = "mortar_82mm";
+_weaponName = "mortar_82mm"; //todo: work on other weapons
 
-if (dialog) exitWith {ERROR("Dialog Open");};
 createDialog "ACE_82mm_RangeTable_Dialog";
 if (isNull (uiNamespace getVariable ["ACE_82mm_RangeTable_Dialog", displayNull])) exitWith {ERROR("Dialog failed to open");};
 
