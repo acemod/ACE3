@@ -3,6 +3,8 @@ baseurl: /ACE3
 name: ACE3
 description: ACE3 is a joint effort by the teams behind ACE2, AGM and CSE to improve the realism and authenticity of Arma 3.
 
+githubUrl: https://github.com/KoffeinFlummi/ACE3
+
 markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "html_toc"]

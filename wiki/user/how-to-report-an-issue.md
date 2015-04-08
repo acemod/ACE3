@@ -18,7 +18,7 @@ If you've found an issue with ACE3 please make sure that ACE3 is really the caus
 
 ### Reporting the issue
 
-Head over to the <a href="https://github.com/KoffeinFlummi/ACE3/issues" target="_blank">ACE3 GitHub issue tracker</a> and press the <a href="https://github.com/KoffeinFlummi/ACE3/issues/new" target="_blank">"New issue"</a> button in the top right corner. Add a descriptive title and copy the following issue template in to the text area:
+Head over to the <a href="{{ site.githubUrl }}/issues" target="_blank">ACE3 GitHub issue tracker</a> and press the <a href="{{ site.githubUrl }}/issues/new" target="_blank">"New issue"</a> button in the top right corner. Add a descriptive title and copy the following issue template in to the text area:
 
 ```
 ACE3 Version: 3.x.x
