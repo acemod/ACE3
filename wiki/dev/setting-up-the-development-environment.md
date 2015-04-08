@@ -9,7 +9,7 @@ order: 0
 This page describes how you can setup your development environment for ACE3, allowing you to properly build ACE and utilize file patching.
 
 
-## Contents
+## Table Of Contents
 - [Requirements](#requirements)
 - [Why so complicated?](#why-so-complicated)
 - [Getting ACE](#getting-ace)
@@ -57,13 +57,15 @@ Should the script fail, here is how you create the required links manually:
 First, to set up the links, create `z` folders both in your Arma 3 directory and on your P-drive. Then run the following commands as admin, replacing the text in brackets with the appropriate paths:
 
 Windows 8:
-```batch
+
+```
 mklink /D /J "[Arma 3 installation folder]\z\ace" "[location of the ACE3 project]"
 mklink /D /J "P:\z\ace" "[location of the ACE3 project]"
 ```
 
 Windows 7 and Vista:
-```batch
+
+```
 mklink /D "[Arma 3 installation folder]\z\ace" "[location of the ACE3 project]"
 mklink /D "P:\z\ace" "[location of the ACE3 project]"
 ```
@@ -98,7 +100,8 @@ File Patching allows you to change the files in an addon while the game is runni
 There are two ways to enable file patching:
 - Load cba_cache_disable.pbo (included in CBA's optional folder)
 - Add the following to your test missions description.ext:
-```cpp
+
+```c++
 class CfgSettings {
     class CBA {
         class Caching {

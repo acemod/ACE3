@@ -13,7 +13,8 @@ In ACE3 the system has moved away from what "feels" right to actual explosive en
 The system for the end-developer is easy to use, and only requires minimal research into the type of ammo being represented. I will describe how to do this in this ticket.
 
 Below is an example set of explosives configuration properties for sys_frag (in this case an M67 hand grenade):
-```
+
+```c++
 ACE_FRAG_METAL = 210;     // metal in grams
 ACE_FRAG_CHARGE = 185;    // explosive in grams
 ACE_FRAG_GURNEY_C = 2843; // Gurney velocity constant for explosive type. See: http://en.wikipedia.org/wiki/Gurney_equations

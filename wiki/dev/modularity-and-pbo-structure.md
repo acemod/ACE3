@@ -6,8 +6,6 @@ parent: wiki
 order: 4
 ---
 
-## Modularity and PBO Structure
-
 ###  Modularity
 
 Main principles:
@@ -17,10 +15,9 @@ Main principles:
 ### PBO Structure
 
 Main principles:
+
 - Try to keep single module dependencies as much as possible
-
 - InteractionMenu would be the requirement for most modules.
-
 - Anything that is 100% config should require common and not interaction.
 
 ```
@@ -28,8 +25,8 @@ Main -> Common -> OptionsMenu -> InteractionMenu -> Most things
 
 Main -> Common -> Config things
 
-Main -> Common -> 3D Models     |
-                 InteracionMenu | -> Feature
+Main -> Common -> 3D Models      |
+                 InteractionMenu | -> Feature
 ```
 
 

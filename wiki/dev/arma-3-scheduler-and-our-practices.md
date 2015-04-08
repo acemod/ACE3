@@ -70,11 +70,13 @@ Line Notes:
 ##### Generic PFH functions
 See: https://dev.withsix.com/docs/cba/files/common/fnc_addPerFrameHandler-sqf.html for more details. 
 
-```[{ code } , delayTime, [ARGS] ] call CBA_fnc_addPerFrameHandler;```
+```c++
+[{ code } , delayTime, [ARGS] ] call CBA_fnc_addPerFrameHandler;
+```
 
 
 ##### PFH Wait
-```
+```c++
 DFUNC(myDelayedFunction) = {
 	// Our argument array is passed in a PFH as select 0
 	_args = _this select 0;

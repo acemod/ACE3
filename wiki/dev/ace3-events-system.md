@@ -24,7 +24,7 @@ Events can be removed or cleared with the following commands.
 * `[eventName] call ace_common_fnc_removeAllEventHandlers` will remove all event handlers for that type of event.
 
 ### Pattern:
-```
+```c++
 // tapper machine
 ["tapShoulder", [_target], [otherArguments]] call EFUNC(common,targetEvent);
 

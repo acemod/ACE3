@@ -8,12 +8,12 @@ order: 1
 
 ## Table of Contents
 
-1. [[Indentation|Coding-Guidelines#indentation]]
-1. [[Braces|Coding-Guidelines#braces]]
-1. [[Modules|Coding-Guidelines#how-to-create-a-new-module]]
-1. [[Macros|Coding-Guidelines#macro-usage]]
-1. [[Events|Coding-Guidelines#event-handlers]]
-1. [[Hashes|Coding-Guidelines#hashes]]
+- [Indentation](#indentation)
+- [Braces](#braces)
+- [Modules](#how-to-create-a-new-module)
+- [Macros](#macro-usage)
+- [Events](#event-handlers)
+- [Hashes](#hashes)
 
 
 ## Indentation
@@ -39,6 +39,7 @@ Tabs can be tricky sometimes, especially when it comes to sharing code with othe
 - closing bracket in own line, same level of indentation as keyword
 
 **Yes:**
+
 ```c++
 class Something: Or {
     class Other {
@@ -48,6 +49,7 @@ class Something: Or {
 ```
 
 **No:**
+
 ```c++
 class Something : Or
 {
@@ -59,6 +61,7 @@ class Something : Or
 ```
 
 **Also no:**
+
 ```c++
 class Something : Or {
     class Other {
@@ -207,7 +210,7 @@ Hashes are a variable type that store key value pairs. They are not implemented 
 
 The following example is a simple usage using our macros which will be explained further below.
 
-```
+```c++
 _hash = HASHCREATE;
 HASH_SET(_hash, "key", "value");
 if(HASH_HASKEY(_hash, "key")) then {
@@ -231,7 +234,7 @@ A description of the above macros is below.
 
 A hashlist is an extension of a hash. It is a list of hashes! The reason for having this special type of storage container rather than using a normal array is that an array of normal hashes that are are similar will duplicate a large amount of data in their storage of keys. A hashlist on the other hand uses a common list of keys and an array of unique value containers. The following will demonstrate it's usage.
 
-```
+```c++
 _defaultKeys = ["key1","key2","key3"];
 // create a new hashlist using the above keys as default
 _hashList = HASHLIST_CREATELIST(_defaultKeys);
