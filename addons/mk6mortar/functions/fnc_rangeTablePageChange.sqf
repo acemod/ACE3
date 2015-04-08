@@ -22,7 +22,9 @@ _listBoxData = LIST_CHARGE lbData (lbCurSel LIST_CHARGE);
 if (isNil "_listBoxData" || {_listBoxData == ""}) exitWith {ERROR("lbCurSel out of bounds or no data");};
 _muzzleVelocity = parseNumber _listBoxData;
 
-_precalcArray = [_muzzleVelocity, MK6_82mm_AIR_FRICTION] call FUNC(rangeTablePreCalculatedValues);
+_airFriction = if (GVAR(airResistanceEnabled)) then {MK6_82mm_AIR_FRICTION} else {0};
+
+_precalcArray = [_muzzleVelocity, _airFriction] call FUNC(rangeTablePreCalculatedValues);
 
 lnbClear RANGE_TABLE;
 {

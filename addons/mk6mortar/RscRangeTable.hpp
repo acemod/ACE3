@@ -16,9 +16,9 @@ class ACE_82mm_RangeTable_Dialog {
         };
         class ChargeBackground: RscText {
             idc = -1;
-            x = "13 *(safeZoneH / 40) +       (safezoneX + (safezoneW - safeZoneH)/2)";
+            x = "14 *(safeZoneH / 40) +       (safezoneX + (safezoneW - safeZoneH)/2)";
             y = "1 * ((safeZoneH / 1.2) / 25) +   (safezoneY + (safezoneH - (safeZoneH / 1.2))/2)";
-            w = "5 * (safeZoneH / 40)";
+            w = "4 * (safeZoneH / 40)";
             h = "5 * ((safeZoneH / 1.2) / 25)";
             colorBackground[] = {0,0,0,1};
         };
@@ -54,16 +54,16 @@ class ACE_82mm_RangeTable_Dialog {
         class ChargeListBox: RscListbox {
             idc = 1501;
             style = ST_RIGHT;
-            x = "13 *(safeZoneH / 40) +       (safezoneX + (safezoneW - safeZoneH)/2)";
-            y = "1 * ((safeZoneH / 1.2) / 25) +   (safezoneY + (safezoneH - (safeZoneH / 1.2))/2)";
-            w = "5 * (safeZoneH / 40)";
+            x = "14 *(safeZoneH / 40) + (safezoneX + (safezoneW - safeZoneH)/2)";
+            y = "1 * ((safeZoneH / 1.2) / 25) + (safezoneY + (safezoneH - (safeZoneH / 1.2))/2)";
+            w = "4 * (safeZoneH / 40)";
             h = "5 * ((safeZoneH / 1.2) / 25)";
             onLBSelChanged = QUOTE(_this call FUNC(rangeTablePageChange));
         };
         class CloseBackground: RscText {
             idc = -1;
-            x = "33.7634559672906 *(safeZoneH / 40) +       (safezoneX + (safezoneW - safeZoneH)/2)";
-            y = "1 * ((safeZoneH / 1.2) / 25) +   (safezoneY + (safezoneH - (safeZoneH / 1.2))/2)";
+            x = "33.7634559672906 *(safeZoneH / 40) + (safezoneX + (safezoneW - safeZoneH)/2)";
+            y = "1 * ((safeZoneH / 1.2) / 25) + (safezoneY + (safezoneH - (safeZoneH / 1.2))/2)";
             w = "0.5 * (safeZoneH / 40)";
             h = "0.5 * ((safeZoneH / 1.2) / 25)";
             colorBackground[] = {0,0,0,0.5};
@@ -73,7 +73,7 @@ class ACE_82mm_RangeTable_Dialog {
             style = 48;
             color[] = {1,1,1,0.7};
             text = "A3\Ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_exit_cross_ca.paa";
-            x = "33.7634559672906 *(safeZoneH / 40) +       (safezoneX + (safezoneW - safeZoneH)/2)";
+            x = "33.7634559672906 *(safeZoneH / 40) + (safezoneX + (safezoneW - safeZoneH)/2)";
             y = "1 * ((safeZoneH / 1.2) / 25) +   (safezoneY + (safezoneH - (safeZoneH / 1.2))/2)";
             w = "0.5 * (safeZoneH / 40)";
             h = "0.5 * ((safeZoneH / 1.2) / 25)";

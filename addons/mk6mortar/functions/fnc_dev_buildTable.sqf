@@ -35,7 +35,16 @@ while {_stillInRange} do {
     if (_result isEqualTo []) then {
         _stillInRange = false;
     } else {
-        if ((_result select 1) < 86) then {
+        if (_airFriction == 0) then {
+            _result set [4, 0];
+            _result set [5, 0];
+            _result set [6, 0];
+            _result set [7, 0];
+            _result set [8, 0];
+            _result set [9, 0];
+            _result set [10, 0];
+        };
+        if ((_result select 1) < 88) then {
             _outputArray pushBack [
             ([(_result select 0),  "meters", false] call FUNC(dev_formatNumber)),
             ([(_result select 1),  "mil", true] call FUNC(dev_formatNumber)),
@@ -72,5 +81,6 @@ _outputString = format ["case ((abs(_muzzleVelocity - %1) < 0.00001) && ((abs(_a
 } forEach _outputArray;
 
 copyToClipboard _outputString;
+rangeTableOutput = _outputString;
 
 hint "done";
