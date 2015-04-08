@@ -6,7 +6,7 @@
                 icon = PATHTOF(UI\icons\medical_cross.paa);
                 distance = MEDICAL_ACTION_DISTANCE;
                 class Bandage {
-                    displayName = "$STR_ACE_Medical_Bandage_HitHead";
+                    displayName = "$STR_ACE_Medical_Bandage";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(treatment));
@@ -77,7 +77,7 @@
                 icon = PATHTOF(UI\icons\medical_cross.paa);
                 distance = MEDICAL_ACTION_DISTANCE;
                 class Bandage {
-                    displayName = "$STR_ACE_Medical_Bandage_HitBody";
+                    displayName = "$STR_ACE_Medical_Bandage";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(treatment));
@@ -177,7 +177,7 @@
                 distance = MEDICAL_ACTION_DISTANCE;
 
                 class Bandage {
-                    displayName = "$STR_ACE_Medical_Bandage_HitLeftArm";
+                    displayName = "$STR_ACE_Medical_Bandage";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call DFUNC(treatment));
@@ -333,7 +333,7 @@
                 distance = MEDICAL_ACTION_DISTANCE;
 
                 class Bandage {
-                    displayName = "$STR_ACE_Medical_Bandage_HitRightArm";
+                    displayName = "$STR_ACE_Medical_Bandage";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(treatment));
@@ -486,7 +486,7 @@
                 distance = MEDICAL_ACTION_DISTANCE;
 
                 class Bandage {
-                    displayName = "$STR_ACE_Medical_Bandage_HitLeftLeg";
+                    displayName = "$STR_ACE_Medical_Bandage";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(treatment));
@@ -627,7 +627,7 @@
                 distance = MEDICAL_ACTION_DISTANCE;
 
                 class Bandage {
-                    displayName = "$STR_ACE_Medical_Bandage_HitRightLeg";
+                    displayName = "$STR_ACE_Medical_Bandage";
                     distance = 2.0;
                     condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(canTreatCached));
                     statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(treatment));
