@@ -48,6 +48,10 @@ class ACE_Settings {
         value = 0;
         typeName = "BOOL";
     };
+    class GVAR(mapShowCursorCoordinates) {
+        value = 0;
+        typeName = "BOOL";
+    };
 };
 
 #include "CfgEventHandlers.hpp"
@@ -85,7 +89,8 @@ class RscMapControl {
 class RscDisplayMainMap {
     // Tweak map styling
     class controlsBackground {
-        class CA_Map : RscMapControl {
+        class CA_Map: RscMapControl {
+            onDraw = QUOTE([ctrlParent (_this select 0)] call DFUNC(onDrawMap));
             #include "MapTweaks.hpp"
         };
     };
@@ -143,6 +148,13 @@ class RscDisplayDiary {
 
 // BRIEFING SCREEN
 class RscDisplayGetReady: RscDisplayMainMap {
+    // Tweak map styling
+    class controlsBackground {
+        class CA_Map: RscMapControl {
+            onDraw = QUOTE([ctrlParent (_this select 0)] call DFUNC(onDrawMap));
+            //#include "MapTweaks.hpp" @todo Shouldn't this apply to briefing too?
+        };
+    };
     // get rid of the "center to player position" - button (as it works even on elite)
     class controls {
         class TopRight: RscControlsGroup {
