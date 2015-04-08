@@ -54,7 +54,7 @@ class CfgVehicles {
         function = QFUNC(moduleInit);
         scope = 2;
         isGlobal = 0;
-        // icon = QUOTE(PATHTOF(UI\Icon_.paa));
+        icon =  QUOTE(PATHTOF(UI\Icon_Module_mk6_ca.paa));
         functionPriority = 0;
         class Arguments {
             class airResistanceEnabled {
@@ -65,7 +65,7 @@ class CfgVehicles {
             };
             class allowComputerRangefinder {
                 displayName = "Allow MK6 Computer";
-                description = "Show the Computer and Rangefinder (these should be removed if you enable air resistance)";
+                description = "Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)";
                 typeName = "BOOL";
                 defaultValue = 0;
             };
