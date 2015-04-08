@@ -1,5 +1,5 @@
 a[href^="mailto:"] {
-
+/*
     &:before {
         content: "<";
         color: $body-font-color;
@@ -9,4 +9,5 @@ a[href^="mailto:"] {
         content: ">";
         color: $body-font-color;
     }
+    */
 }
