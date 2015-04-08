@@ -1,4 +1,4 @@
-//#define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
@@ -16,7 +16,7 @@ _projectilePos = getPosASL _projectile;
 _distanceToTarget = _projectilePos vectorDistance _seekerTargetPos;    
 _distanceToShooter = _projectilePos vectorDistance _shooterPos;
 
-_addHeight = [0,0,(_projectilePos distance _seekerTargetPos)*0.02];
+_addHeight = [0,0,_distanceToTarget];
 
 _seekerTargetPos = _seekerTargetPos vectorAdd _addHeight;
 

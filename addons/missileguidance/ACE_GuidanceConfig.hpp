@@ -6,6 +6,41 @@ class GVAR(AttackProfiles) {
         
         functionName = QFUNC(attackProfile_LIN);
     };
+    class DIR {
+        name = "";
+        visualName = "";
+        description = "";
+        
+        functionName = QFUNC(attackProfile_DIR);
+    };
+    class MID {
+        name = "";
+        visualName = "";
+        description = "";
+        
+        functionName = QFUNC(attackProfile_MID);
+    };
+    class HI {
+        name = "";
+        visualName = "";
+        description = "";
+        
+        functionName = QFUNC(attackProfile_HI);
+    };
+    class TOP {
+        name = "";
+        visualName = "";
+        description = "";
+        
+        functionName = QFUNC(attackProfile_TOP);
+    };
+    class PYM {
+        name = "";
+        visualName = "";
+        description = "";
+        
+        functionName = QFUNC(attackProfile_PYM);
+    };
 };
 
 class GVAR(SeekerTypes) {

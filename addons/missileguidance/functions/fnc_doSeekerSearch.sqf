@@ -24,8 +24,7 @@ for [{_i=0}, {_i< (count _seekerTypesCfg) }, {_i=_i+1}] do {
 
 _seekerProfilePos = [0,0,0];
 if(!isNil "_seekerType") then {
-    _seekerProfileExecCode = "_this call " + getText (_seekerType >> "functionName");
-    _seekerProfilePos = call compile _seekerProfileExecCode;
+    _seekerProfilePos = _this call (missionNamespace getVariable (getText (_seekerType >> "functionName")));
 };
 
 _seekerProfilePos;

@@ -14,10 +14,10 @@ PREP(doSeekerSearch);
 
 // Attack Profiles
 PREP(attackProfile_LIN);
-//PREP(attackProfile_HI);
-//PREP(attackProfile_DIR);
-//PREP(attackProfile_MID);
-//PREP(attackProfile_TOP);
+PREP(attackProfile_DIR);
+PREP(attackProfile_MID);
+PREP(attackProfile_HI);
+PREP(attackProfile_TOP);
 
 
 // Seeker search functions

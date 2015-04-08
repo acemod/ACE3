@@ -24,8 +24,7 @@ for [{_i=0}, {_i< (count _attackProfilesCfg) }, {_i=_i+1}] do {
 
 _attackProfilePos = [0,0,0];
 if(!isNil "_attackProfile") then {
-    _attackProfileExecCode = "_this call " + getText (_attackProfile >> "functionName");
-    _attackProfilePos = call compile _attackProfileExecCode;
+    _attackProfilePos = _this call (missionNamespace getVariable (getText (_attackProfile >> "functionName")));
 };
 
 _attackProfilePos;
