@@ -68,7 +68,7 @@ if (isNull _newTarget) then {
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
     
-    ACE_player setVariable [QGVAR(currentTarget),nil, false];
+    ACE_player setVariable ["ace_missileguidance_target",nil, false];
     
     // Disallow fire
     //if (ACE_player ammo "Javelin" > 0 || {ACE_player ammo "ACE_Javelin_Direct" > 0}) then {ACE_player setWeaponReloadingTime //[player, "Javelin", 0.2];};    
@@ -91,8 +91,7 @@ if (isNull _newTarget) then {
                 __JavelinIGUINFOV ctrlSetTextColor __ColorNull;
                 __JavelinIGUITargetingConstrains ctrlShow true;
                 
-                ACE_player setVariable[QGVAR(currentTarget), _currentTarget, false];
-                ACE_player setVariable[QGVAR(currentTargetPos), getPosASL _currentTarget, false];
+                ACE_player setVariable["ace_missileguidance_target", _currentTarget, false];
                 
                 if(diag_tickTime > _soundTime) then {
                     playSound "ACE_Javelin_Locked";
@@ -115,7 +114,7 @@ if (isNull _newTarget) then {
         __JavelinIGUITargetingGate ctrlShow false;
         __JavelinIGUITargetingLines ctrlShow false;
 
-        ACE_player setVariable [QGVAR(currentTarget),nil, false];
+        ACE_player setVariable ["ace_missileguidance_target",nil, false];
    };
    
 };

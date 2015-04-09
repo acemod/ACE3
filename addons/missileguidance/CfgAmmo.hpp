@@ -1,3 +1,8 @@
+enum {
+    ACE_LOBL = 1,
+    ACE_LOAL = 2
+};
+
 class CfgAmmo {
     class MissileBase;
 
@@ -51,7 +56,11 @@ class CfgAmmo {
             
             // Guidance type for munitions
             defaultSeekerType = "SALH";
-            seekerTypes[] = { "SALH", "LIDAR", "SARH", "Optic", "Thermal", "GPS", "SACLOS", "MCLOS" };   
+            seekerTypes[] = { "SALH", "LIDAR", "SARH", "Optic", "Thermal", "GPS", "SACLOS", "MCLOS" };  
+           
+            defaultSeekerLockMode = "LOAL";
+            seekerLockModes[] = { "LOAL", "LOBL" }; 
+            
             seekerAngle = 90;           // Angle in front of the missile which can be searched
             seekerAccuracy = 1;         // seeker accuracy multiplier
             seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
@@ -77,5 +86,46 @@ class CfgAmmo {
         indirectHit = 71;
 		indirectHitRange = 4.5;
 		effectsMissile = "missile2";
+    };
+    
+    // Titan
+    class M_Titan_AT : MissileBase {
+        irLock = 0;
+		laserLock = 0;
+		airLock = 0;
+
+        // Turn off arma crosshair-guidance
+        manualControl = 0;
+        
+        // ACE uses these values
+        trackOversteer = 1;
+        trackLead = 0;
+       
+        // Begin ACE guidance Configs
+        class ACE_MissileGuidance {
+            enabled = 1;
+            
+            minDeflection = 0.005;      // Minium flap deflection for guidance
+            maxDeflection = 0.25;       // Maximum flap deflection for guidance
+            incDeflection = 0.005;      // The incrmeent in which deflection adjusts.
+            //minDeflection = 0.005; 
+            //maxDeflection = 0.5;
+            //incDeflection = 0.005;
+            
+            // Guidance type for munitions
+            defaultSeekerType = "Optic";
+            seekerTypes[] = { "Optic" };   
+            
+            defaultSeekerLockMode = "LOBL";
+            seekerLockModes[] = { "LOBL" };
+            
+            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
+            seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
+            
+            // Attack profile type selection
+            defaultAttackProfile = "TOP";
+            attackProfiles[] = { "TOP" };
+        };
     };
 };

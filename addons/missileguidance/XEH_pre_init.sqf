@@ -22,3 +22,4 @@ PREP(attackprofile_PYM);
 
 // Seeker search functions
 PREP(seekerType_SALH);
+PREP(seekerType_Optic);

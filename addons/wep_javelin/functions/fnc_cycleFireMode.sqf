@@ -4,14 +4,14 @@ TRACE_1("enter", _this);
 
 private["_player", "_currentFireMode"];
 
-_currentFireMode = ACE_player getVariable["ace_missileguidance_attackProfile", ACE_JAV_FIREMODE_TOP];
-if(_currentFireMode == ACE_JAV_FIREMODE_DIR) then {
-    _currentFireMode = ACE_JAV_FIREMODE_TOP;
+_currentFireMode = ACE_player getVariable["ace_missileguidance_attackProfile", "TOP"];
+if(_currentFireMode == "DIR") then {
+    _currentFireMode = "TOP";
     
     __JavelinIGUITop ctrlSetTextColor __ColorGreen;
     __JavelinIGUIDir ctrlSetTextColor __ColorGray;
 } else {
-    _currentFireMode = ACE_JAV_FIREMODE_DIR;
+    _currentFireMode = "DIR";
     
     __JavelinIGUITop ctrlSetTextColor __ColorGray;
     __JavelinIGUIDir ctrlSetTextColor __ColorGreen;
