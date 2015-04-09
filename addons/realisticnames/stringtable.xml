@@ -1041,66 +1041,82 @@
         <Key ID="STR_ACE_RealisticNames_hgun_P07_Name">
             <English>P99</English>
             <German>P99</German>
+            <Polish>P99</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Rook40_Name">
             <English>MP-443 Grach</English>
             <German>MP-443 Grach</German>
+            <Polish>MP-443 Grach</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_ACPC2_Name">
             <English>ACP-C2</English>
             <German>ACP-C2</German>
+            <Polish>ACP-C2</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_Name">
             <English>FNX-45 Tactical</English>
             <German>FNX-45 Tactical</German>
+            <Polish>FNX-45 Tactical</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_02_Name">
             <English>Chiappa Rhino 60DS</English>
             <German>Chiappa Rhino 60DS</German>
+            <Polish>Chiappa Rhino 60DS</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_Signal_Name">
             <English>Taurus Judge</English>
             <German>Taurus Judge</German>
+            <Polish>Taurus Judge</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_NLAW_Name">
             <English>NLAW</English>
             <German>NLAW</German>
+            <Polish>NLAW</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_RPG32_Name">
             <English>RPG-32</English>
             <German>RPG-32</German>
+            <Polish>RPG-32</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_Name">
             <English>Mini-Spike (AA)</English>
             <German>Mini-Spike (AA)</German>
+            <Polish>Mini-Spike (AA)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_short_Name">
             <English>Mini-Spike (AT)</English>
             <German>Mini-Spike (AT)</German>
+            <Polish>Mini-Spike (AA)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Name">
             <English>MX</English>
             <German>MX</German>
+            <Polish>MX</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Black_Name">
             <English>MX (Black)</English>
             <German>MX (Black)</German>
+            <Polish>MX (Czarny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Name">
             <English>MXC</English>
             <German>MXC</German>
+            <Polish>MXC</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Black_Name">
             <English>MXC (Black)</English>
             <German>MXC (Black)</German>
+            <Polish>MXC (Czarny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Name">
             <English>MX 3GL</English>
             <German>MX 3GL</German>
+            <Polish>MX 3GL</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Black_Name">
             <English>MX 3GL (Black)</English>
             <German>MX 3GL (Black)</German>
+            <Polish>MX 3GL (Czarny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Name">
             <English>MX LSW</English>
