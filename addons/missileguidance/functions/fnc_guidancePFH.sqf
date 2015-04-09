@@ -1,7 +1,11 @@
-//#define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-private["_args", "_launchParams", "_targetLaunchParams", "_config", "_flightParams", "_seekerParams"];
+private["_args", "_stateParams", "_launchParams", "_targetLaunchParams", "_config", "_flightParams", "_seekerParams", "_seekerTargetPos"];
+private["_lastRunTime", "_runtimeDelta", "_profileAdjustedTargetPos", "_targetVectorSeeker", "_targetVector"];
+private["_minDeflection", "_maxDeflection", "_incDeflection"];
+private["_yVec", "_zVec", "_xVec"];
+    
 _args = _this select 0;
 EXPLODE_7_PVT((_args select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
@@ -26,11 +30,11 @@ _seekerTargetPos = [ [0,0,0], _args] call FUNC(doSeekerSearch);
 if(!isNil "_seekerTargetPos") then {
 
     _profileAdjustedTargetPos = [_seekerTargetPos,_args] call FUNC(doAttackProfile);
-   
+
     _minDeflection = _flightParams select 0;
     _maxDeflection = _flightParams select 1;
     _incDeflection = _flightParams select 2;
-    
+   
     _yVec = vectorDir _projectile;
     _zVec = vectorUp _projectile;
     _xVec = vectorNormalized (_yVec vectorCrossProduct _zVec);
@@ -41,6 +45,7 @@ if(!isNil "_seekerTargetPos") then {
     _targetVector = [0,0,0] vectorFromTo _targetVectorSeeker;
     TRACE_1("", _targetVectorSeeker, _targetVector);
     
+    private["_yaw", "_pitch"];
     _yaw = 0;
     _pitch = 0;
                
@@ -65,9 +70,10 @@ if(!isNil "_seekerTargetPos") then {
 #endif        
 
     if(accTime > 0) then {
+        private["_adjustTime", "_outVector", "_vectorTo"];
         _adjustTime = 1/accTime;
-        _adjustTime = _adjustTime * (_runtimeDelta / 0.1);
-        
+        _adjustTime = _adjustTime * (_runtimeDelta / 0.01);
+        TRACE_4("Adjust timing", 1/accTime, _adjustTime, _runtimeDelta, (_runtimeDelta / 0.1));
         _outVector = [_projectile, [_xVec, _yVec, _zVec], [_yaw, _adjustTime, _pitch]] call FUNC(translateToModelSpace);
         _vectorTo = _projectilePos vectorFromTo _outVector;
         

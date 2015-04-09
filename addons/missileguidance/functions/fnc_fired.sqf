@@ -38,7 +38,7 @@ if ( isNil "_lockMode" || { ! ( _lockMode in (getArray (_config >> "seekerLockMo
  
 
 TRACE_4("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile);
-[FUNC(guidancePFH), 0.1, [_this, 
+[FUNC(guidancePFH), 0, [_this, 
                             [ACE_player, 
                                 [_target, _targetPos, _launchPos], 
                                 _seekerType, 
