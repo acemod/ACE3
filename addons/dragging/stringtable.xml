@@ -28,7 +28,7 @@
     </Key>
     <Key ID="STR_ACE_Dragging_UnableToDrag">
       <English>Item to heavy</English>
-      <German>Gegenstand zu schwer</German>
+      <German>Gegenstand ist zu schwer</German>
       <!-- <English>Unable to drag item due to weight</English>
       <Russian>Слишком тяжелый предмет</Russian>
       <Spanish>No se puede arrastrar el objeto debido a su peso</Spanish>
