@@ -1,4 +1,5 @@
-#include "stdafx.h"
+#include "ace_common.h"
+
 #include <time.h>
 #include <string>
 #include <vector>
