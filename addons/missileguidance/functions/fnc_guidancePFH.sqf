@@ -72,8 +72,9 @@ if(!isNil "_seekerTargetPos") then {
     if(accTime > 0) then {
         private["_adjustTime", "_outVector", "_vectorTo"];
         _adjustTime = 1/accTime;
-        _adjustTime = _adjustTime * (_runtimeDelta / 0.01);
-        TRACE_4("Adjust timing", 1/accTime, _adjustTime, _runtimeDelta, (_runtimeDelta / 0.1));
+        _adjustTime = _adjustTime *  ( 1 / (_runtimeDelta / 0.1));
+        TRACE_4("Adjust timing", 1/accTime, _adjustTime, _runtimeDelta,  ( 1 / (_runtimeDelta / 0.1)) );
+        
         _outVector = [_projectile, [_xVec, _yVec, _zVec], [_yaw, _adjustTime, _pitch]] call FUNC(translateToModelSpace);
         _vectorTo = _projectilePos vectorFromTo _outVector;
         
