@@ -52,10 +52,16 @@ _velocity = vectorMagnitude velocity _unit;
 if (_velocity < 2) exitWith {};
 
 // get correct animation by weapon
-private "_anim";
+private ["_isPlayer", "_isRunning", "_anim"];
+
+_isPlayer = [_unit] call EFUNC(common,isPlayer);
+_isRunning = _velocity > 4;
+
 _anim = switch (currentWeapon _unit) do {
     case (""): {"AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon"};
     case (primaryWeapon _unit): {
+        if !(_isPlayer) exitWith {"AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"};
+
         [
             ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select (_velocity > 4),
             ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select (_velocity > 4),
@@ -64,6 +70,8 @@ _anim = switch (currentWeapon _unit) do {
         ] select floor random 4;
     };
     case (handgunWeapon _unit): {
+        if !(_isPlayer) exitWith {"AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon"};
+
         [
             "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon",
             "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon",
