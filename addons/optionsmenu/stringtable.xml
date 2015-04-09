@@ -16,10 +16,11 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_FixAnimation">
       <English>Fix Animation</English>
+      <German>Behebe Animation</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_ResetAll">
       <English>Reset All</English>
-      <German>Rücksetzen</German>
+      <German>Alles Zurücksetzen</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabColors">
       <English>Colors</English>
@@ -75,33 +76,43 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Export">
       <English>Export</English>
+      <German>Exportieren</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_OpenExport">
       <English>Open Export Menu</English>
+      <German>Öffne Exportmenü</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_stringType">
       <English>String input.</English>
+      <German>String input.</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_arrayType">
       <English>Array. Seperate elements by using ,.</English>
+      <German>Array. Teile unterschiedliche Elemente mit , . </German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_scalarType">
       <English>Number</English>
+      <German>Nummer</German>
     </Key>
     <Key ID="STR_ACE_optionsMenu_unknownType">
       <English>Uknown input type</English>
+      <German>Unbekannter Eingabetyp</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_SaveInput">
       <English>Save input</English>
+      <German>Speicher Eingabe</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_inClientSettings">
       <English>Include Client Settings</English>
+      <German>Beinhalte Client-Einstellungen</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_exClientSettings">
       <English>Exclude Client Settings</English>
+      <German>Schließe Client-Einstellungen aus</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_settingsExported">
       <English>Settings exported to clipboard</English>
+      <German>Einstellungen ins Clipboard exportiert</German>
     </Key>
   </Package>
 </Project>
