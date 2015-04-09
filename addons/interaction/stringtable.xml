@@ -4,27 +4,35 @@
   <Package name="Interaction">
     <Key ID="STR_ACE_Interaction_MainAction">
       <English>Interactions</English>
+      <German>Interaktionen</German>
     </Key>
     <Key ID="STR_ACE_Interaction_Torso">
       <English>Torso</English>
+      <German>Torso</German>
     </Key>
     <Key ID="STR_ACE_Interaction_Head">
       <English>Head</English>
+      <German>Kopf</German>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmLeft">
       <English>Left Arm</English>
+      <German>Linker Arm</German>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmRight">
       <English>Right Arm</English>
+      <German>Rechter Arm</German>
     </Key>
     <Key ID="STR_ACE_Interaction_LegLeft">
       <English>Left Leg</English>
+      <German>Linkes Bein</German>
     </Key>
     <Key ID="STR_ACE_Interaction_LegRight">
       <English>Right Leg</English>
+      <German>Rechtes Bein</German>
     </Key>
     <Key ID="STR_ACE_Interaction_Weapon">
       <English>Weapon</English>
+      <German>Waffe</German>
     </Key>
     <Key ID="STR_ACE_Interaction_InteractionMenu">
       <English>Interaction Menu</English>
@@ -654,7 +662,7 @@
       <Spanish>Interactuar</Spanish>
     </Key>
     <Key ID="STR_ACE_Interaction_Passengers">
-      <English>Passengers</English>
+      <English>Fahrzeuginsassen</English>
     </Key>
   </Package>
 </Project>
