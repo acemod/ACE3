@@ -16,9 +16,11 @@
     </Key>
     <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
       <English>Self Actions</English>
+      <German>Eigene Aktionen</German>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
       <English>Vehicle Actions</English>
+      <German>Fahrzeug Aktionen</German>
     </Key>
   </Package>
 </Project>
