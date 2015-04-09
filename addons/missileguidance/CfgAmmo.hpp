@@ -100,8 +100,8 @@ class CfgAmmo {
         manualControl = 0;
         
         // ACE uses these values
-        trackOversteer = 1;
-        trackLead = 0;
+        //trackOversteer = 1;
+        //trackLead = 0;
        
         // Begin ACE guidance Configs
         class ACE_MissileGuidance {
