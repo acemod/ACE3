@@ -68,14 +68,16 @@
     </Key>
     <Key ID="STR_ACE_NameTags_ShowNamesForAI">
       <English>Show name tags for AI units</English>
+      <German>Zeige KI-Namen</German>
     </Key>
     <Key ID="STR_ACE_NameTags_ShowSoundWaves">
       <English>Show SoundWaves (requires player names)</English>
-      <German>Zeigen Schallwelle  (benötigt spielernamen)</German>
+      <German>Zeigen Schallwellen  (benötigt Spielernamen)</German>
       <Spanish>Mostrar onda sonora  (requiere Mostrar nombres de jugadores)</Spanish>
     </Key>
     <Key ID="STR_ACE_NameTags_DefaultNametagColor">
       <English>Default Nametag Color (Non Group Members)</English>
+      <German>Voreingestellte Namenfarbe (Spieler außerhalb der Gruppe)</German>
     </Key>
   </Package>
 </Project>
