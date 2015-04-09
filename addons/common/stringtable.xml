@@ -325,7 +325,7 @@
     </Key>
     <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
       <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
-      <German>Wähle die Position der Rückmeldungssymbole, oder deaktiviere sie. Diese Symbole stellen eine zusätzliche Rückmeldung über die Lage und Handlungen deines Soldaten dar.</German>
+      <German>Wähle die Position der Rückmeldungssymbole, oder deaktiviere sie. Diese Symbole stellen eine zusätzliche Rückmeldung über die Lage und Handlungen deines Soldaten da.</German>
     </Key>
     <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
       <English>Progress bar location</English>
@@ -333,24 +333,30 @@
     </Key>
     <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
       <English>Set the desired location of the progress bar on your screen.</English>
+      <German>Setze die gewünschte Position der Fortschrittsanzeige fest</German>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
       <English>Hint Background color</English>
+      <German>Hintergrundfarbe der Hinweise</German>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
       <English>The color of the background from the ACE hints.</English>
+      <German>Die Hintergrundfarbe der Ace-Hinweise.</German>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
       <English>Hint text font color</English>
+      <German>Textfarbe der Hinweise</German>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
       <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
     </Key>
     <Key ID="STR_ACE_Common_bananaDisplayName">
       <English>Banana</English>
+      <German>Banane</German>
     </Key>
     <Key ID="STR_ACE_Common_bananaDescr">
       <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
+      <German>Die Banane ist eine essbare Frucht, biologisch betrachtet jedoch eine Beere. Sie wächst an unterschiedlichen, krautartigen Gewächsen aus der Familie der Musa.</German>
     </Key>
   </Package>
 </Project>
