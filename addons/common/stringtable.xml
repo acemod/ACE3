@@ -333,19 +333,19 @@
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
       <English>Hint Background color</English>
-      <Spanish>Color de fondo de las indicaciones</Spanish>
+      <Spanish>Color de fondo de las notificaciones</Spanish>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
       <English>The color of the background from the ACE hints.</English>
-      <Spanish>El color de fondo de las indicaciones del ACE</Spanish>
+      <Spanish>El color de fondo de las notificaciones del ACE</Spanish>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
       <English>Hint text font color</English>
-      <Spanish>El color del texto de las indicaciones</Spanish>
+      <Spanish>El color del texto de las notificaciones</Spanish>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
       <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
-      <Spanish>El color del texto de las indicaciones del ACE. Este es el color predeterminado para todo el texto que se muestra a través del sistema de indicaciones del ACE, si el texto de indicacion no tiene otro color especificado.</Spanish>
+      <Spanish>El color del texto de las notificaciones del ACE. Este es el color predeterminado para todo el texto que se muestra a través del sistema de notificaciones del ACE, si el texto de notificacion no tiene otro color especificado.</Spanish>
     </Key>
     <Key ID="STR_ACE_Common_bananaDisplayName">
       <English>Banana</English>
