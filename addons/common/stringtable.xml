@@ -345,7 +345,7 @@
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
       <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
-      <Spanish>El color del texto de las notificaciones del ACE. Este es el color predeterminado para todo el texto que se muestra a través del sistema de notificaciones del ACE, si el texto de notificacion no tiene otro color especificado.</Spanish>
+      <Spanish>El color del texto de las notificaciones del ACE. Este es el color predeterminado para todo el texto que se muestra a través del sistema de notificaciones del ACE, si el texto de notificación no tiene otro color especificado.</Spanish>
     </Key>
     <Key ID="STR_ACE_Common_bananaDisplayName">
       <English>Banana</English>
