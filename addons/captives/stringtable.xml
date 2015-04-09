@@ -52,7 +52,7 @@
     </Key>
     <Key ID="STR_ACE_Captives_NoCaptive">
       <English>You need to take him as prisoner first!</English>
-      <German>Du must ihn zuerst gefangen nehmen.</German>
+      <German>Du musst ihn zuerst gefangen nehmen.</German>
       <Spanish>Necesitas hacerle prisionero primero!</Spanish>
       <Polish>Najpierw musisz wziąć go jako więźnia!</Polish>
       <French>Vous devez d'abord le capturer!</French>
@@ -132,18 +132,23 @@
     </Key>
     <Key ID="STR_ACE_Captives_StartSurrendering">
       <English>Surrender</English>
+      <German>Kapitulieren</German>
     </Key>
     <Key ID="STR_ACE_Captives_StopSurrendering">
       <English>Stop Surrendering</English>
+      <German>Den Kampf erneut aufnehmen</German>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
       <English>Only use on alive units</English>
+      <German>Nur bei lebenden Einheiten verwendbar</German>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_OnlyInfentry">
       <English>Only use on dismounted inf</English>
+      <German>Nur bei abgesessener Infanterie verwendbar</German>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
       <English>Nothing under mouse</English>
+      <German>Es wurde nichts ausgewählt</German>
     </Key>
   </Package>
 </Project>
