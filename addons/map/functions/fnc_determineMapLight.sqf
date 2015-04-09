@@ -61,11 +61,6 @@ if (currentVisionMode _unit == 1) exitWith {
     [true, [154/255,253/255,177/255,0.5]]
 };
 
-// Do not obscure the map if the ambient light level is above 0.95
-if (_lightLevel > 0.95) exitWith {
-    [false, [0.5,0.5,0.5,0]]
-};
-
 private "_vehicle";
 _vehicle = vehicle _unit;
 
