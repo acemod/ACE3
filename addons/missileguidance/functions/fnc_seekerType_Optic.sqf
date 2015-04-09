@@ -16,7 +16,7 @@ TRACE_1("", _launchParams);
 // TODO:: Make sure the missile maintains LOS
 _foundTargetPos = [0,0,0];
 if(!isNil "_target") then {
-    _foundTargetPos = getPosASL (_target);
+    _foundTargetPos = getPosASL _target;
 };
 
 TRACE_2("", _target, _foundTargetPos);
