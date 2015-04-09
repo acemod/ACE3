@@ -50,7 +50,7 @@ private ["_wind"];
 _wind = [cos(270 - _windDirection * 30) * _windSpeed, sin(270 - _windDirection * 30) * _windSpeed, 0];
 if (EGVAR(advanced_ballistics,AdvancedBallistics)) then {
     if (EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
-        _bc = [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel] call FUNC(calculateAtmosphericCorrection);
+        _bc = [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel] call EFUNC(advanced_ballistics,calculateAtmosphericCorrection);
     };
 };
 
