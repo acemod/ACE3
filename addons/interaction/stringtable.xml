@@ -662,7 +662,8 @@
       <Spanish>Interactuar</Spanish>
     </Key>
     <Key ID="STR_ACE_Interaction_Passengers">
-      <English>Fahrzeuginsassen</English>
+      <English>Passengers</English>
+      <German>Fahrzeuginsassen</German>
     </Key>
   </Package>
 </Project>
