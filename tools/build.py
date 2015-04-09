@@ -21,9 +21,11 @@ def check_for_changes(addonspath, module):
 
 
 def main():
-    print("####################")
-    print("# ACE3 Debug Build #")
-    print("####################\n")
+    print("""
+  ####################
+  # ACE3 Debug Build #
+  ####################
+""")
 
     scriptpath = os.path.realpath(__file__)
     projectpath = os.path.dirname(os.path.dirname(scriptpath))
@@ -42,7 +44,7 @@ def main():
             continue
         if not check_for_changes(addonspath, p):
             skipped += 1
-            print("Skipping {}.".format(p))
+            print("  Skipping {}.".format(p))
             continue
 
         print("# Making {} ...".format(p))
