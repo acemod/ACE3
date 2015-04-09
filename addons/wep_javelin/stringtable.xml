@@ -4,7 +4,7 @@
     <Package name="WEP_JAVELIN">
         <Key ID="STR_ACE_WEP_JAVELIN_LockTarget">
             <English>Lock Target (Hold)</English>
-            <German>Lock Target (Hold)</German>
+            <German>Ziel Aufschalten</German>
             <French>Lock Target (Hold)</French>
             <Polish>Lock Target (Hold)</Polish>
             <Czech>Lock Target (Hold)</Czech>
@@ -13,7 +13,7 @@
         </Key>
          <Key ID="STR_ACE_WEP_JAVELIN_CycleFireMode">
             <English>Cycle Fire Mode</English>
-            <German>Cycle Fire Mode</German>
+            <German>Wechsle Feuermodus</German>
             <French>Cycle Fire Mode</French>
             <Polish>Cycle Fire Mode</Polish>
             <Czech>Cycle Fire Mode</Czech>
