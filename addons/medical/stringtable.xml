@@ -5,6 +5,7 @@
     <Container name="Basic">
       <Key ID="STR_ACE_Medical_Inject_Atropine">
         <English>Inject Atropine</English>
+        <German>Atropin injizieren</German>
       </Key>
       <Key ID="STR_ACE_Medical_Inject_Epinephrine">
         <English>Inject Epinephrine</English>
@@ -50,6 +51,7 @@
       </Key>
       <Key ID="STR_ACE_Medical_Apply_Tourniquet">
         <English>Apply Tourniquet</English>
+         <English>Adrepresse verwenden</English>
       </Key>
       <Key ID="STR_ACE_Medical_Bandage">
         <English>Bandage</English>
@@ -161,6 +163,7 @@
       </Key>
       <Key ID="STR_ACE_Medical_Injecting_Atropine">
         <English>Injecting Atropine ...</English>
+        <German>Atropin injizieren ...</German>
       </Key>
       <Key ID="STR_ACE_Medical_Transfusing_Blood">
         <English>Transfusing Blood ...</English>
@@ -220,9 +223,11 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckPulse">
         <English>Check Pulse</English>
+        <German>Puls überprüfen</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure">
         <English>Check Blood Pressure</English>
+        <German>Blutdruck überprüfen</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_TriageCard">
         <English>Triage Card</English>
