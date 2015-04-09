@@ -28,7 +28,6 @@ _ammo     = _this select 4;
 _magazine = _this select 5;
 _bullet   = _this select 6;
 
-if (isDedicated) exitWith {};
 if (!hasInterface) exitWith {};
 if (!alive _bullet) exitWith {};
 if (!GVAR(enabled)) exitWith {};

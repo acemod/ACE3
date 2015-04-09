@@ -27,7 +27,6 @@ private ["_unit", "_bullet"];
 _unit = _this select 0;
 _bullet = _this select 6;
 
-if (isDedicated) exitWith {false};
 if (!hasInterface) exitWith {false};
 if (!(_bullet isKindOf "BulletBase")) exitWith {false};
 if (_unit distanceSqr ACE_player > 9000000) exitWith {false};
