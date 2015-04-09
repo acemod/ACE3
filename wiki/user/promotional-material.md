@@ -2,7 +2,7 @@
 layout: wiki
 title: Promotional Material
 group: user
-order: 2
+order: 20
 parent: wiki
 ---
 

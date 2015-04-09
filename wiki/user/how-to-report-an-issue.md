@@ -2,7 +2,7 @@
 layout: wiki
 title: How to report an issue
 group: user
-order: 1
+order: 10
 parent: wiki
 ---
 
