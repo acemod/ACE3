@@ -35,6 +35,7 @@
       <Czech>Otevřít nákladní prostor</Czech>
       <Hungarian>Rámpát kinyitni</Hungarian>
       <Russian>Открыть грузовой отсек</Russian>
+      <Portuguese>Abrir porta de carga</Portuguese>
     </Key>
     <Key ID="STR_ACE_Aircraft_CloseCargoRamp">
       <English>Close Cargo Door</English>
@@ -45,6 +46,7 @@
       <Czech>Zavřít nákladní prostor</Czech>
       <Hungarian>Rámpát zárni</Hungarian>
       <Russian>Закрыть грузовой отсек</Russian>
+      <Portuguese>Fechar porta de carga</Portuguese>
     </Key>
   </Package>
 </Project>
