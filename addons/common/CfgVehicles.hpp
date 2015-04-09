@@ -100,7 +100,7 @@ class CfgVehicles {
     transportMaxWeapons = 9001;
     transportMaxMagazines = 9001;
     transportMaxItems = 9001;
-    maximumload = 2000;
+    maximumload = 9001;
 
     class TransportWeapons {};
     class TransportMagazines {};

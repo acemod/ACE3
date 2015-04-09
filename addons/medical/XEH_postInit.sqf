@@ -25,9 +25,9 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
         } else {
             _unit setVariable ["tf_globalVolume", 1];
             _unit setVariable ["tf_voiceVolume", 1, true];
-            _unit setVariable ["tf_unable_to_use_radio", true, true];
+            _unit setVariable ["tf_unable_to_use_radio", false, true];
 
-            _unit setVariable ["acre_sys_core_isDisabled", true, true];
+            _unit setVariable ["acre_sys_core_isDisabled", false, true];
             _unit setVariable ["acre_sys_core_globalVolume", 1];
         };
     };
