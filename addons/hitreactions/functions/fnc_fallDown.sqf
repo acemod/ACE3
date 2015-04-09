@@ -63,8 +63,8 @@ _anim = switch (currentWeapon _unit) do {
         if !(_isPlayer) exitWith {"AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"};
 
         [
-            ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select (_velocity > 4),
-            ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select (_velocity > 4),
+            ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select _isRunning,
+            ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select _isRunning,
             "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft",
             "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright"
         ] select floor random 4;
