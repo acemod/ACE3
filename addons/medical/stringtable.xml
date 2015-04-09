@@ -197,6 +197,7 @@
       </Key>
       <Key ID="STR_ACE_Medical_Applying_Tourniquet">
         <English>Applying Tourniquet ...</English>
+        <German>Setze Aderpresse an ...</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Medical">
         <English>Medical</English>
@@ -211,15 +212,19 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_FieldDressing">
         <English>Field Dressing</English>
+        <German>Notverband</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_PackingBandage">
         <English>Packing Bandage</English>
+        <German>Verband</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_ElasticBandage">
         <English>Elastic Bandage</English>
+        <German>Elastische Binde</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_QuikClot">
         <English>QuikClot</English>
+        <German>QuikClot</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckPulse">
         <English>Check Pulse</English>
@@ -231,30 +236,39 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_TriageCard">
         <English>Triage Card</English>
+        <German>Ersteinschätzungskarte</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Tourniquet">
         <English>Tourniquet</English>
+        <German>Aderpresse</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet">
         <English>Remove Tourniquet</English>
+        <German>Entferne Aderpresse</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_1000">
         <English>Give Blood IV (1000ml)</English>
+        <German>Gebe Blut IV (1000ml)</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_500">
         <English>Give Blood IV (500ml)</English>
+        <German>Gebe Blut IV (500ml)</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_250">
         <English>Give Blood IV (250ml)</English>
+        <German>Gebe Blut IV (250ml)</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_1000">
         <English>Give Plasma IV (1000ml)</English>
+        <German>Gebe Plasma  IV (1000ml)</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_500">
         <English>Give Plasma IV (500ml)</English>
+        <German>Gebe Plasma  IV (500ml)</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_250">
         <English>Give Plasma IV (250ml)</English>
+        <German>Gebe Plasma  IV (250ml)</German>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_1000">
         <English>Give Saline IV (1000ml)</English>
@@ -284,6 +298,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_NORMAL_BREATHING">
         <English>Normal breathing</English>
+        <German>Normales Atmen</German>
         <Russian>Дыхание в норме</Russian>
         <Spanish>Respiración normal</Spanish>
         <French>Respiration Normale</French>
@@ -291,6 +306,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_NO_BREATHING">
         <English>No breathing</English>
+        <German>Atmet nicht</German>
         <Russian>Дыхания нет</Russian>
         <Spanish>No respira</Spanish>
         <French>Apnée</French>
@@ -298,6 +314,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_DIFFICULT_BREATHING">
         <English>Difficult breathing</English>
+        <German>Schweres Atmen</German>
         <Russian>Дыхание затруднено</Russian>
         <Spanish>Dificultad para respirar</Spanish>
         <French>Difficultée Respiratoire</French>
@@ -305,6 +322,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_ALMOST_NO_BREATHING">
         <English>Almost no breathing</English>
+        <German>Atmet beinahe nicht</German>
         <Russian>Дыхания почти нет</Russian>
         <Spanish>Casi sin respirar</Spanish>
         <French>Respiration Faible</French>
@@ -312,6 +330,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_STATUS_BLEEDING">
         <English>Bleeding</English>
+        <German>Blutet</German>
         <Russian>Кровотечение</Russian>
         <Spanish>Sangrando</Spanish>
         <French>Seignement</French>
@@ -319,6 +338,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_STATUS_PAIN">
         <English>In Pain</English>
+        <German>Unter Schmerzen</German>
         <Russian>Испытывает боль</Russian>
         <Spanish>Con Dolor</Spanish>
         <French>A De La Douleur</French>
@@ -326,6 +346,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_STATUS_LOST_BLOOD">
         <English>Lost a lot of Blood</English>
+        <German>Hat eine große Menge Blut verloren</German>
         <Russian>Большая кровопотеря</Russian>
         <Spanish>Mucha Sangre perdida</Spanish>
         <French>A Perdu Bcp de Sang</French>
@@ -333,6 +354,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_STATUS_TOURNIQUET_APPLIED">
         <English>Tourniquet [CAT]</English>
+        <German>Aderpresse [CAT]</German>
         <Russian>Жгут</Russian>
         <Spanish>Torniquete [CAT]</Spanish>
         <French>Garot [CAT]</French>
@@ -340,11 +362,13 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_receivingIvVolume">
         <English>Receiving IV [%1ml]</English>
+        <German>Wiederbeleben IV</German>
       </Key>
     </Container>
     <Container name="CfgWeapons">
       <Key ID="STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY">
         <English>Bandage (Basic)</English>
+        <German>Verband (Basis)</German>
         <Russian>Повязка (обычная)</Russian>
         <Spanish>Vendaje (Básico)</Spanish>
         <French>Bandage (Standard)</French>
@@ -352,6 +376,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_BANDAGE_BASIC_DESC_SHORT">
         <English>Used to cover a wound</English>
+        <German>Verwendet um die Wunde zu schützen</German>
         <Russian>Для перевязки ран</Russian>
         <Spanish>Utilizado para cubrir una herida</Spanish>
         <French>Utilisé Pour Couvrir Une Blessure</French>
@@ -359,6 +384,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_BANDAGE_BASIC_DESC_USE">
         <English>A dressing, that is a particular material used to cover a wound, which is applied over the wound once bleeding has been stemmed.</English>
+        <German>Ein Verband, der aus einem besonderen Material besteht um die Wunde zu schützen, nachdem die Blutung gestoppt wurde.</German>
         <Russian>Повязка, накладываемая поверх раны после остановки кровотечения.</Russian>
         <Spanish>Un apósito, material específico utilizado para cubrir una herida, se aplica sobre la herida una vez ha dejado de sangrar.</Spanish>
         <French>C'est un bandage, qui est fait d'un matériel spécial utiliser pour couvrir une blessure, qui peut etre appliquer des que le seignement as ete stopper.</French>
@@ -366,6 +392,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_PACKING_BANDAGE_DISPLAY">
         <English>Packing Bandage</English>
+        <German>Verband</German>
         <Russian>Тампонирующая повязка</Russian>
         <Spanish>Vendaje Compresivo</Spanish>
         <French>Bandage Mèche</French>
@@ -373,6 +400,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_PACKING_BANDAGE_DESC_SHORT">
         <English>Used to pack medium to large wounds and stem the bleeding</English>
+        <German>Wird verwendet, um mittel bis große Wunden zu verbinden und die Blutung zu stoppen</German>
         <Russian>Для тампонирования ран среднего и большого размера и остановки кровотечения.</Russian>
         <Spanish>Se utiliza para vendar heridas medianas y grandes y detener el sangrado</Spanish>
         <French>Utiliser pour remplire la cavité créé dans une blessure moyenne et grande.</French>
@@ -387,6 +415,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY">
         <English>Bandage (Elastic)</English>
+        <German>Verband (Elastisch)</German>
         <Russian>Повязка (давящая)</Russian>
         <Spanish>Vendaje (Elástico)</Spanish>
         <French>Bandage (Élastique)</French>
@@ -394,6 +423,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DESC_SHORT">
         <English>Bandage kit, Elastic</English>
+        <German>Verbandssatz, Elastisch</German>
         <Russian>Давящая повязка</Russian>
         <Spanish>Vendaje (Elástico)</Spanish>
         <French>Bandage Compressif Élastique</French>
@@ -401,6 +431,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DESC_USE">
         <English></English>
+        <German></German>
         <Russian></Russian>
         <French>Ce bandage peut etre utiliser pour compresser la plaie afin de ralentire le seignement et assurer la tenue du bandage lors de mouvment.</French>
         <Polish>Elastyczna opaska podtrzymująca opatrunek oraz usztywniająca okolice stawów.</Polish>
@@ -408,6 +439,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_TOURNIQUET_DISPLAY">
         <English>Tourniquet (CAT)</English>
+        <German>Aderpresse (CAT)</German>
         <Russian>Жгут</Russian>
         <Spanish>Torniquete (CAT)</Spanish>
         <French>Garot (CAT)</French>
@@ -415,6 +447,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_TOURNIQUET_DESC_SHORT">
         <English>Slows down blood loss when bleeding</English>
+        <German>Veringert den Blutverlust</German>
         <Russian>Уменьшает кровопотерю при кровотечении.</Russian>
         <Spanish>Reduce la velocidad de pérdida de sangre</Spanish>
         <French>Ralentit le seignement</French>
@@ -429,6 +462,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_MORPHINE_DISPLAY">
         <English>Morphine autoinjector</English>
+        <German>Morphin Autoinjector</German>
         <Russian>Морфин в автоматическом шприце</Russian>
         <Spanish>Morfina auto-inyectable</Spanish>
         <French>Auto-injecteur de Morphine</French>
@@ -436,6 +470,7 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_MORPHINE_DESC_SHORT">
         <English>Used to combat moderate to severe pain experiences</English>
+        <German>Wird verwendet um moderate bis starke Schmärzen zu lindern.</German>
         <Russian>Для снятия средних и сильных болевых ощущений.</Russian>
         <Spanish>Usado para combatir los estados dolorosos moderados a severos</Spanish>
         <French>Utiliser pour contrer les douleurs modéré à severes.</French>
