@@ -2,7 +2,7 @@
 
 #include "initKeybinds.sqf"
 
-GVAR(AdvancedBallistics) = true;
+GVAR(enabled) = true;
 
 GVAR(bulletDatabase) = [];
 GVAR(bulletDatabaseStartTime) = [];

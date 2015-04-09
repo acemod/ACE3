@@ -20,7 +20,7 @@
 #include "script_component.hpp"
 #include "defines.h"
 
-private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_index", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_bulletMass", "_bulletLength", "_bulletTranslation", "_airFriction", "_dragModel", "_velocityBoundaryData", "_muzzleVelocity", "_muzzleVelocityCoef", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_bulletWeight", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef", "_ACE_Elevation", "_ACE_Windage", "_ID"];
+private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_abort", "_index", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_bulletMass", "_bulletLength", "_bulletTranslation", "_airFriction", "_dragModel", "_velocityBoundaryData", "_muzzleVelocity", "_muzzleVelocityCoef", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_bulletWeight", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef", "_ACE_Elevation", "_ACE_Windage", "_ID"];
 _unit     = _this select 0;
 _weapon   = _this select 1;
 _mode     = _this select 3;
@@ -29,7 +29,9 @@ _magazine = _this select 5;
 _bullet   = _this select 6;
 
 if (isDedicated) exitWith {};
+if (!hasInterface) exitWith {};
 if (!alive _bullet) exitWith {};
+if (!GVAR(enabled)) exitWith {};
 if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
 if (underwater _unit) exitWith {};
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
@@ -37,6 +39,20 @@ if (_unit distanceSqr ACE_player > 9000000) exitWith {};
 if (GVAR(ONLY_ACTIVE_FOR_LOCAL_PLAYER) && _unit != ACE_player) exitWith {};
 if (!GVAR(VehicleGunnerEnabled) && !(_unit isKindOf "Man")) exitWith {};
 if (GVAR(DISABLED_IN_FULL_AUTO_MODE) && getNumber(configFile >> "cfgWeapons" >> _weapon >> _mode >> "autoFire") == 1) exitWith {};
+
+// Decide whether normal winddeflection is good enough
+_abort = !(local _unit);
+if (_abort) then {
+    // The shooter is non local
+    if (currentWeapon _unit == primaryWeapon _unit && count primaryWeaponItems _unit > 2) then {
+        _opticsName = (primaryWeaponItems _unit) select 2;
+        _opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
+        _abort = _opticType != 2; // We only abort if the non local shooter is not a sniper
+    };
+};
+if (_abort) exitWith {
+    [_bullet, getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction")] call EFUNC(winddeflection,updateTrajectoryPFH);
+};
 
 _airFriction = getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction");
 _muzzleVelocity = getNumber(configFile >> "cfgMagazines" >> _magazine >> "initSpeed");
