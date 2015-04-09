@@ -5,10 +5,11 @@
     <Key ID="STR_ACE_logistics_wirecutter_wirecutterName">
       <English>Wirecutter</English>
       <German>Drahtschneider</German>
-      <Spanish>Wirecutter</Spanish>
+      <Spanish>Cortador de cables</Spanish>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_wirecutterDescription">
       <English>Wirecutter</English>
+      <Spanish>Cortador de cables</Spanish>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_CutFence">
       <English>Cut Fence</English>
