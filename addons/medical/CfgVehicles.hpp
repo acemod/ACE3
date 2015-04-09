@@ -440,6 +440,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
                     icon = PATHTOF(UI\icons\medical_cross.paa);
 
+                    #undef EXCEPTIONS
                     #define EXCEPTIONS exceptions[] = {"isNotInside"};
                     #include "ACE_Medical_Actions.hpp"
                 };

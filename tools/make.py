@@ -8,7 +8,7 @@
 
 # The MIT License (MIT)
 
-# Copyright (c) 2013-2014 Ryan Schultz 
+# Copyright (c) 2013-2014 Ryan Schultz
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -66,7 +66,7 @@ def  get_directory_hash(directory):
 	directory_hash = hashlib.sha1()
 	if not os.path.exists (directory):
 		return -1
-	
+
 	try:
 		for root, dirs, files in os.walk(directory):
 			for names in files:
@@ -189,10 +189,16 @@ def find_bi_tools(work_drive):
 	else:
 		raise Exception("BadTools","Arma 3 Tools are not installed correctly or the P: drive needs to be created.")
 
-def find_depbo_tools():
+def find_depbo_tools(regKey):
 	"""Use registry entries to find DePBO-based tools."""
+	stop = False
 
-	reg = winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)
+	if regKey == "HKCU":
+		reg = winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)
+		stop = True
+	else:
+		reg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
+
 	try:
 		k = winreg.OpenKey(reg, r"Software\Mikero\pboProject")
 		try:
@@ -218,7 +224,10 @@ def find_depbo_tools():
 		except:
 			print_error("Could not find makepbo.")
 	except:
-		raise Exception("BadDePBO", "DePBO tools not installed correctly")
+		if stop == True:
+			raise Exception("BadDePBO", "DePBO tools not installed correctly")
+		return -1
+
 
 	#Strip any quotations from the path due to a MikeRo tool bug which leaves a trailing space in some of its registry paths.
 	return [pboproject_path.strip('"'),rapify_path.strip('"'),makepbo_path.strip('"')]
@@ -260,7 +269,7 @@ def print_blue(msg):
 	color("blue")
 	print(msg)
 	color("reset")
-	
+
 def print_yellow(msg):
 	color("yellow")
 	print(msg)
@@ -283,7 +292,7 @@ def main(argv):
 		winreg.CloseKey(k)
 	except:
 		raise Exception("BadTools","Arma 3 Tools are not installed correctly or the P: drive needs to be created.")
-	
+
 	# Default behaviors
 	test = False # Copy to Arma 3 directory?
 	arg_modules = False # Only build modules on command line?
@@ -303,22 +312,22 @@ make.py [help] [test] [force] [key <name>] [target <name>] [release <version>]
 test -- Copy result to Arma 3.
 release <version> -- Make archive with <version>.
 force -- Ignore cache and build all.
-target <name> -- Use rules in make.cfg under heading [<name>] rather than 
+target <name> -- Use rules in make.cfg under heading [<name>] rather than
    default [Make]
-key <name> -- Use key in working directory with <name> to sign. If it does not 
+key <name> -- Use key in working directory with <name> to sign. If it does not
    exist, create key.
 quiet -- Suppress command line output from build tool.
 
 If module names are specified, only those modules will be built.
 
 Examples:
-   make.py force test 
-      Build all modules (ignoring cache) and copy the mod folder to the Arma 3 
+   make.py force test
+      Build all modules (ignoring cache) and copy the mod folder to the Arma 3
       directory.
    make.py mymodule_gun
       Only build the module named 'mymodule_gun'.
    make.py force key MyNewKey release 1.0
-      Build all modules (ignoring cache), sign them with NewKey, and pack them 
+      Build all modules (ignoring cache), sign them with NewKey, and pack them
       into a zip file for release with version 1.0.
 
 
@@ -399,7 +408,7 @@ See the make.cfg file for additional build options.
 			modules = [x.strip() for x in modules.split(',')]
 		else:
 			modules = []
-		
+
 		# List of directories to ignore when detecting
 		ignore = [x.strip() for x in cfg.get(make_target, "ignore",  fallback="release").split(',')]
 
@@ -414,8 +423,8 @@ See the make.cfg file for additional build options.
 
 		# Project PBO file prefix (files are renamed to prefix_name.pbo)
 		pbo_name_prefix = cfg.get(make_target, "pbo_name_prefix", fallback=None)
-		
-		# Project module Root 
+
+		# Project module Root
 		module_root_parent = os.path.abspath(os.path.join(os.path.join(work_drive, prefix), os.pardir))
 		module_root = cfg.get(make_target, "module_root", fallback=os.path.join(make_root_parent, "addons"))
 		print_green ("module_root: " + module_root)
@@ -430,8 +439,8 @@ See the make.cfg file for additional build options.
 		print_error("Could not parse make.cfg.")
 		sys.exit(1)
 
-		
-		
+
+
 	# See if we have been given specific modules to build from command line.
 	if len(argv) > 1 and not make_release:
 		arg_modules = True
@@ -451,7 +460,9 @@ See the make.cfg file for additional build options.
 
 	if build_tool == "pboproject":
 		try:
-			depbo_tools = find_depbo_tools()
+			depbo_tools = find_depbo_tools("HKLM")
+			if depbo_tools == -1:
+				depbo_tools = find_depbo_tools("HKCU")
 			pboproject = depbo_tools[0]
 			rapifyTool = depbo_tools[1]
 			makepboTool = depbo_tools[2]
@@ -576,7 +587,7 @@ See the make.cfg file for additional build options.
 		# Build the module into a pbo
 		print_blue("Building: " + os.path.join(work_drive, prefix, module))
 		print_blue("Destination: " + os.path.join(module_root, release_dir, project, "Addons"))
-		
+
 		# Make destination folder (if needed)
 		try:
 			os.makedirs(os.path.join(module_root, release_dir, project, "Addons"))
@@ -589,16 +600,16 @@ See the make.cfg file for additional build options.
 			try:
 				#PABST: Convert config (run the macro'd config.cpp through CfgConvert twice to produce a de-macro'd cpp that pboProject can read without fucking up:
 				shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
-				
+
 				os.chdir("P:\\")
-				
-				cmd = [os.path.join(work_drive, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
+
+				cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
 				ret = subprocess.call(cmd)
 				if ret != 0:
 					print_error("CfgConvert -bin return code == " + str(ret))
 					input("Press Enter to continue...")
-				
-				cmd = [os.path.join(work_drive, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
+
+				cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
 				ret = subprocess.call(cmd)
 				if ret != 0:
 					print_error("CfgConvert -txt) return code == " + str(ret))
@@ -622,11 +633,11 @@ See the make.cfg file for additional build options.
 					raise
 					print_error("Failed to include build number")
 					continue
-				
+
 				if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
 					print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
 					cmd = [makepboTool, "-P","-A","-L","-N","-G", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"Addons")]
-									
+
 				else:
 					cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "+X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
@@ -655,12 +666,12 @@ See the make.cfg file for additional build options.
 							ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "Addons", pbo_name_prefix + module + ".pbo")])
 						else:
 							ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "Addons", module + ".pbo")])
-						
+
 						if ret == 0:
 							build_successful = True
 					else:
 						build_successful = True
-						
+
 				if not build_successful:
 					print_error("pboProject return code == " + str(ret))
 					print_error("Module not successfully built/signed.")
@@ -673,8 +684,8 @@ See the make.cfg file for additional build options.
 				os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
 				os.remove(os.path.join(work_drive, prefix, module, "config.bin"))
 				os.rename(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
- 
-				# Back to the root	
+
+				# Back to the root
 				os.chdir(module_root)
 
 			except:
@@ -722,7 +733,7 @@ See the make.cfg file for additional build options.
 					except:
 						raise
 						print_error("Could not rename built PBO with prefix.")
-				
+
 				if ret == 0:
 					# Sign result
 					if key:
@@ -731,7 +742,7 @@ See the make.cfg file for additional build options.
 							ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "Addons", pbo_name_prefix + module + ".pbo")])
 						else:
 							ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "Addons", module + ".pbo")])
-						
+
 						if ret == 0:
 							build_successful = True
 					else:
@@ -740,7 +751,7 @@ See the make.cfg file for additional build options.
 				if not build_successful:
 					print_error("Module not successfully built.")
 
-				# Back to the root	
+				# Back to the root
 				os.chdir(make_root)
 
 			except:
@@ -749,7 +760,7 @@ See the make.cfg file for additional build options.
 				input("Press Enter to continue...")
 				print ("Resuming build...")
 				continue
-			
+
 		else:
 			print_error("Unknown build_tool " + build_tool + "!")
 
@@ -776,7 +787,7 @@ See the make.cfg file for additional build options.
 	# Make release
 	if make_release:
 		print_blue("\nMaking release: " + project + "-" + release_version + ".zip")
-		
+
 		try:
 			# Delete all log files
 			for root, dirs, files in os.walk(os.path.join(module_root, release_dir, project, "Addons")):
