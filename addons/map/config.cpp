@@ -58,13 +58,15 @@ class RscMapControl {
     maxSatelliteAlpha = 0.5;
 
     // From Arma 2
-    colorTracks[] = {1.0,0.0,0.0,1};
-    colorTracksFill[] = {1.0,1.0,0.0,1};
-    colorRoads[] = {0.0,0.0,0.0,1};
-    colorRoadsFill[] = {1,1,0,1};
+    colorTracks[] = {0.2,0.13,0,1};
+    colorTracksFill[] = {1,0.88,0.65,0.3};
+    colorRoads[] = {0.2,0.13,0,1};
+    colorRoadsFill[] = {1,0.88,0.65,1};
     colorMainRoads[] = {0.0,0.0,0.0,1};
-    colorMainRoadsFill[] = {1,0.6,0.4,1};
+    colorMainRoadsFill[] = {0.94,0.69,0.2,1};
     colorRailWay[] = {0.8,0.2,0,1};
+    colorGrid[] = {0.05,0.1,0,0.6};
+    colorGridMap[] = {0.05,0.1,0,0.4};
 
     // From ACE2
     colorBackground[] = {0.929412, 0.929412, 0.929412, 1.0};
