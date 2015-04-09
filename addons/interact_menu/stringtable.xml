@@ -4,18 +4,23 @@
   <Package name="Interact_Menu">
     <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
       <English>Always display cursor for self interaction</English>
+      <Spanish>Mostrar siempre el cursor para la interacción propia</Spanish>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_InteractKey">
       <English>Interact Key</English>
+      <Spanish>Tecla de interacción</Spanish>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
       <English>Self Interaction Key</English>
+      <Spanish>Tecla de interacción propia</Spanish>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
       <English>Self Actions</English>
+      <Spanish>Acciones propias</Spanish>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
       <English>Vehicle Actions</English>
+      <Spanish>Acciones de vehículo</Spanish>
     </Key>
   </Package>
 </Project>
