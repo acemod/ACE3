@@ -63,7 +63,7 @@ if (_lightSource isKindOf "CAManBase") then {
     _lightLevel = (linearConversion [0, 30, _distance, 1, 0, true]) * (linearConversion [_innerAngle, _outerAngle, _angle, 1, 0, true]);
 
 } else {
-    // handle any object, strcutures, cars, tanks, etc.
+    // handle any object, strcutures, cars, tanks, etc. @todo campfires, burning vehicles
 
     private "_lights";
     _lights = [_lightSource] call FUNC(getTurnedOnLights);

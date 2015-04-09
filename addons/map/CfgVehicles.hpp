@@ -36,6 +36,15 @@ class CfgVehicles {
                     class No { name = "No"; value = 0; default = 1;};
                 };
             };
+            class MapShowCursorCoordinates {
+                displayName = "Show cursor coordinates?";
+                description = "Show the grid coordinates on the mouse pointer?";
+                typeName = "BOOL";
+                class values {
+                    class Yes { name = "Yes"; value = 1; };
+                    class No { name = "No"; value = 0; default = 1;};
+                };
+            };
         };
     };
 
