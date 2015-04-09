@@ -1,6 +1,8 @@
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
+#define TIMESTEP_FACTOR 0.01
+
 private["_args", "_stateParams", "_launchParams", "_targetLaunchParams", "_config", "_flightParams", "_seekerParams", "_seekerTargetPos"];
 private["_lastRunTime", "_runtimeDelta", "_profileAdjustedTargetPos", "_targetVectorSeeker", "_targetVector"];
 private["_minDeflection", "_maxDeflection", "_incDeflection"];
@@ -72,8 +74,8 @@ if(!isNil "_seekerTargetPos") then {
     if(accTime > 0) then {
         private["_adjustTime", "_outVector", "_vectorTo"];
         _adjustTime = 1/accTime;
-        _adjustTime = _adjustTime *  ( 1 / (_runtimeDelta / 0.1));
-        TRACE_4("Adjust timing", 1/accTime, _adjustTime, _runtimeDelta,  ( 1 / (_runtimeDelta / 0.1)) );
+        _adjustTime = _adjustTime *  (_runtimeDelta / TIMESTEP_FACTOR);
+        TRACE_4("Adjust timing", 1/accTime, _adjustTime, _runtimeDelta, (_runtimeDelta / TIMESTEP_FACTOR) );
         
         _outVector = [_projectile, [_xVec, _yVec, _zVec], [_yaw, _adjustTime, _pitch]] call FUNC(translateToModelSpace);
         _vectorTo = _projectilePos vectorFromTo _outVector;
