@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_interaction", "ace_laser"};
+        requiredAddons[] = {"ace_laser"};
         version = VERSION;
     };
 };
