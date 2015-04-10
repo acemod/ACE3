@@ -4,34 +4,42 @@
   <Package name="Interaction">
     <Key ID="STR_ACE_Interaction_MainAction">
       <English>Interactions</English>
+      <French>Interactions</French>
       <German>Interaktion</German>
     </Key>
     <Key ID="STR_ACE_Interaction_Torso">
       <English>Torso</English>
+      <French>Torse</French>
       <German>Torso</German>
     </Key>
     <Key ID="STR_ACE_Interaction_Head">
       <English>Head</English>
+      <French>Tête</French>
       <German>Kopf</German>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmLeft">
       <English>Left Arm</English>
+      <French>Bras gauche</French>
       <German>Arm links</German>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmRight">
       <English>Right Arm</English>
+      <French>Bras droit</French>
       <German>Arm rechts</German>
     </Key>
     <Key ID="STR_ACE_Interaction_LegLeft">
       <English>Left Leg</English>
+      <French>Jambe gauche</French>
       <German>Bein links</German>
     </Key>
     <Key ID="STR_ACE_Interaction_LegRight">
       <English>Right Leg</English>
+      <French>Jambe droite</French>
       <German>Bein rechts</German>
     </Key>
     <Key ID="STR_ACE_Interaction_Weapon">
       <English>Weapon</English>
+      <French>Arme</French>
       <German>Waffe</German>
     </Key>
     <Key ID="STR_ACE_Interaction_InteractionMenu">
@@ -374,7 +382,7 @@
       <English>You were tapped on the RIGHT shoulder</English>
       <Spanish>Te tocaron el hombro DERECHO</Spanish>
       <German>Dir wurde auf die Rechte Schulter geklopft</German>
-      <French>On te tape sur l'épaule</French>
+      <French>On te tape sur l'épaule droite</French>
       <Polish>Zostałeś klepnięty po ramieniu</Polish>
       <Hungarian>Vállonveregettek</Hungarian>
       <Czech>Někdo tě poklepal na rameno</Czech>
@@ -386,7 +394,7 @@
       <English>You were tapped on the LEFT shoulder.</English>
       <Spanish>Te tocaron el hombro IZQUIERDO.</Spanish>
       <German>Dir wurde auf die Linke Schulter geklopft</German>
-      <French>On te tape sur l'épaule.</French>
+      <French>On te tape sur l'épaule gauche</French>
       <Polish>Zostałeś klepnięty po ramieniu</Polish>
       <Hungarian>Vállonveregettek</Hungarian>
       <Czech>Někdo tě poklepal na rameno.</Czech>
@@ -637,7 +645,7 @@
       <English>Equipment</English>
       <German>Ausrüstung</German>
       <Spanish>Equipamiento</Spanish>
-      <French>Équipment</French>
+      <French>Équipement</French>
       <Polish>Ekwipunek</Polish>
       <Czech>Vybavení</Czech>
       <Hungarian>Felszerelés</Hungarian>
@@ -656,6 +664,7 @@
     <Key ID="STR_ACE_Interaction_Interact">
       <English>Interact</English>
       <German>Interagiere</German>
+      <French>Interagir</French>
       <Czech>Interakce</Czech>
       <Russian>Взаимодействовать</Russian>
       <Polish>Interakcja</Polish>
@@ -664,6 +673,7 @@
     <Key ID="STR_ACE_Interaction_Passengers">
       <English>Passengers</English>
       <German>Passagiere</German>
+      <French>Passagers</French>
     </Key>
   </Package>
 </Project>
