@@ -5,7 +5,7 @@ enum {
 
 class CfgAmmo {
     class MissileBase;
-
+    
     class M_PG_AT : MissileBase {
         model = "\A3\Weapons_F\Ammo\Rocket_01_fly_F";
 		proxyShape = "\A3\Weapons_F\Ammo\Rocket_01_F";

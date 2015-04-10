@@ -33,10 +33,10 @@ if( ((ASLtoATL _projectilePos) select 2) < 5 && _distanceToShooter < 15) then {
 
 // Handle arcing terminal low for high decent
 if( (_projectilePos select 2) > (_seekerTargetPos select 2) && _distanceToTarget < 100) then {
-    _addHeight = _addHeight vectorDiff [0,0, ((_projectilePos select 2) - (_seekerTargetPos select 2)) * 0.5];
+    _addHeight = _addHeight vectorDiff [0,0, ((_projectilePos select 2) - (_seekerTargetPos select 2))];
 } else {
     if((_projectilePos select 2) > (_seekerTargetPos select 2) && _distanceToTarget > 100) then {
-        _addHeight = _addHeight vectorAdd [0,0, _distanceToTarget*0.02];
+        _addHeight = _addHeight vectorAdd [0,0, _distanceToTarget];
     };
 };
 

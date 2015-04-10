@@ -1,4 +1,4 @@
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 // Bail if guidance is disabled
@@ -34,6 +34,20 @@ if ( isNil "_attackProfile" || { ! ( _attackProfile in (getArray (_config >> "at
 };
 if ( isNil "_lockMode" || { ! ( _lockMode in (getArray (_config >> "seekerLockModes" ) ) ) } ) then { 
     _lockMode = getText (_config >> "defaultSeekerLockMode"); 
+};
+
+// If we didn't get a target, try to fall back on tab locking
+if(isNil "_target") then {
+    _canUseLock = getNumber (_config >> "canVanillaLock");
+    if(_canUseLock > 0) then {
+        // @TODO: Get vanilla target
+        _vanillaTarget = cursorTarget;
+        
+        TRACE_1("Using Vanilla Locking", _vanillaTarget);
+        if(!isNil "_vanillaTarget") then {
+            _target = _vanillaTarget;
+        };
+    };
 };
 
 TRACE_4("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile);
