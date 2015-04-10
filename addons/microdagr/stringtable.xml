@@ -20,7 +20,7 @@
     </Key>
     <Key ID="STR_ACE_microdagr_settingShowWP">
       <English>Show Waypoints On Map:</English>
-      <Polish>Pokaż pkt. trasy na mapie:</Polish>
+      <Polish>Pokaż PT na mapie:</Polish>
     </Key>
     <Key ID="STR_ACE_microdagr_settingDegrees">
       <English>Degrees</English>
@@ -67,7 +67,7 @@
     <Key ID="STR_ACE_microdagr_controlRange">
       <English>Range:</English>
       <German>Reichweite:</German>
-      <Polish>Odległość:</Polish>
+      <Polish>Dystans:</Polish>
     </Key>
     <Key ID="STR_ACE_microdagr_compasDirection">
       <English>Compass Direction</English>
