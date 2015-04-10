@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-02-13 -->
+<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Inventory">
     <Key ID="STR_ACE_Inventory_SettingName">
       <English>Make Inventory Display Bigger</English>
+      <French>Augmente la taille d'affichage de l'inventaire</French>
     </Key>    
     <Key ID="STR_ACE_Inventory_SettingDescription">
       <English>Normally inventory display is scaled by UI size. This allows scaling the Inventory UI size up, but doesn't increase font size allowing more rows displayed.</English>
+      <French>Normalement, l'inventaire est automatiquement messuré par la taille de l'interface de l'utilisateur. Cette option vous permet d'augmenter la taille d'affichage de l'inventaire, cependant, cette option n'augmente pas la police d'écriture et le nombre de place.</French>
     </Key>
   </Package>
 </Project>
