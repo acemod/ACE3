@@ -156,6 +156,7 @@
       <Portuguese>Colocar</Portuguese>
       <Italian>Posiziona</Italian>
       <Hungarian>Elhelyez</Hungarian>
+      <Russian>Установить</Russian>
     </Key>
     <Key ID="STR_ACE_Attach_CancelAction">
       <English>Cancel</English>
@@ -167,12 +168,13 @@
       <Portuguese>Cancelar</Portuguese>
       <Italian>Annulla</Italian>
       <Hungarian>Mégse</Hungarian>
+      <Russian>Отмена</Russian>
     </Key>
     <Key ID="STR_ACE_Attach_Failed">
       <English>Attach Failed</English>
       <French>Échec du Attacher</French>
       <German>Befestigen fehlgeschlagen</German>
-      <Russian>Присоединить Ошибка</Russian>
+      <Russian>Не удалось присоединить</Russian>
       <Spanish>Error al acoplar</Spanish>
     </Key>
   </Package>
