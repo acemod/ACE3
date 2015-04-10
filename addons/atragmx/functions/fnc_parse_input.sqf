@@ -13,7 +13,7 @@ GVAR(targetRange) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 340))
 private ["_boreHeight", "_bulletMass", "_airFriction", "_muzzleVelocity"];
 _boreHeight = parseNumber(ctrlText 100);
 _bulletMass = parseNumber(ctrlText 110);
-if (EGVAR(advanced_ballistics,AdvancedBallistics) && EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
+if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false])) then {
     _airFriction = 0.1 max parseNumber(ctrlText 120) min 2;
 } else {
     _airFriction = parseNumber(ctrlText 120) / -1000;

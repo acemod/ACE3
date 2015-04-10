@@ -15,7 +15,7 @@ if (GVAR(currentUnit) == 1) then
 {
     ctrlSetText [ 110, Str(Round((GVAR(workingMemory) select GVAR(currentTarget)) select 12))];
 };
-if (EGVAR(advanced_ballistics,AdvancedBallistics) && EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
+if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false])) then {
     ctrlSetText [ 120, Str(Round(((GVAR(workingMemory) select GVAR(currentTarget)) select 15) * 1000) / 1000)];
 } else {
     ctrlSetText [ 120, Str(Round(((GVAR(workingMemory) select GVAR(currentTarget)) select 4) * -1000 * 1000) / 1000)];

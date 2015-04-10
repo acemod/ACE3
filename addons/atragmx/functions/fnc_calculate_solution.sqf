@@ -49,10 +49,8 @@ if (_storeRangeCardData) then {
 
 private ["_wind"];
 _wind = [cos(270 - _windDirection * 30) * _windSpeed, sin(270 - _windDirection * 30) * _windSpeed, 0];
-if (EGVAR(advanced_ballistics,AdvancedBallistics)) then {
-    if (EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
-        _bc = [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel] call EFUNC(advanced_ballistics,calculateAtmosphericCorrection);
-    };
+if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false])) then {
+    _bc = [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel] call EFUNC(advanced_ballistics,calculateAtmosphericCorrection);
 };
 
 _TOF = 0;
@@ -71,8 +69,8 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
     _trueVelocity = _bulletVelocity vectorDiff _wind;
     _trueSpeed = vectorMagnitude _trueVelocity;
 
-    if (EGVAR(advanced_ballistics,AdvancedBallistics)) then {
-        if (EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
+    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+        if (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false]) then {
             private ["_drag"];
             _drag = -1 * ([_dragModel, _bc, _trueSpeed] call EFUNC(advanced_ballistics,calculateRetardation));
             _bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (_drag);

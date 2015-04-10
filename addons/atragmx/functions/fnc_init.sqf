@@ -1,8 +1,5 @@
 #include "script_component.hpp"
 
-if (isNil QUOTE(EGVAR(advanced_ballistics,AdvancedBallistics))) then { EGVAR(advanced_ballistics,AdvancedBallistics) = false; };
-if (isNil QUOTE(EGVAR(advanced_ballistics,AdvancedAirDragEnabled))) then { EGVAR(advanced_ballistics,AdvancedAirDragEnabled) = false; };
-
 GVAR(workingMemory) = [+(GVAR(gunList) select 0), +(GVAR(gunList) select 0), +(GVAR(gunList) select 0), +(GVAR(gunList) select 0)];
 
 GVAR(scopeUnits) = ["MILs", "TMOA", "SMOA", "Clicks"];
