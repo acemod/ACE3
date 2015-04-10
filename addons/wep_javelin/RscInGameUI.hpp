@@ -12,7 +12,7 @@ class RscLine;
 class RscInGameUI {
     class RscOptics_titan {
         idd = 300;
-        controls[] = {"ACE_javelin_elements_group"};
+        controls[] = {"ACE_javelin_elements_group", "CA_Distance", "ACE_TargetingConstrains", "ACE_TargetingGate", "ACE_TargetingLines"};
         onLoad = QUOTE(_this call FUNC(onOpticLoad));
         onUnload = "uiNameSpace setVariable ['ACE_RscOptics_javelin',nil];";
         
@@ -24,6 +24,169 @@ class RscInGameUI {
             y = 0;
             w = 0;
             h = 0;
+        };
+        
+        class ACE_TargetingConstrains: RscControlsGroup {
+            idc = 699100;
+            x = "SafezoneX";
+            y = "SafezoneY";
+            w = "SafezoneW-SafezoneX";
+            h = "SafezoneH-SafezoneY";
+            enabled = 0;
+            class VScrollbar {
+                autoScrollSpeed = -1;
+                autoScrollDelay = 5;
+                autoScrollRewind = 0;
+                color[] = {1,1,1,0};
+                width = 0.001;
+            };
+            class HScrollbar {
+                color[] = {1,1,1,0};
+                height = 0.001;
+            };
+            class Controls {
+                class Top: RscPicture {
+                    idc = 699101;
+                    text = "#(argb,8,8,3)color(1,1,1,1)";
+                    colorText[] = {0.2941,0.2941,0.2941,1};
+                    x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
+                    y = "0.15*SafezoneH-SafezoneY";
+                    w = "(3/4)*SafezoneH";
+                    h = "0.21*SafezoneH";
+                };
+                class Bottom: Top {
+                    idc = 699102;
+                    y = "0.64*SafezoneH-SafezoneY";
+                };
+                class Left: Top {
+                    idc = 699103;
+                    x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
+                    y = "0.36*SafezoneH-SafezoneY";
+                    w = "0.31*(3/4)*SafezoneH";
+                    h = "0.28*SafezoneH";
+                };
+                class Right: Left {
+                    idc = 699104;
+                    x = "((SafezoneW -(3/4)*SafezoneH)/2)+ 0.69*(3/4)*SafezoneH - SafezoneX";
+                };
+                class OpticsBorders: RscPicture {
+                    idc = 699105;
+                    text = PATHTOF(data\javelin_ui_border_ca.paa);
+                    colorText[] = {0,0,0,1};
+                    x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
+                    y = "0.15*SafezoneH-SafezoneY";
+                    w = "(3/4)*SafezoneH";
+                    h = "0.7*SafezoneH";
+                };
+            };
+        };
+        
+        class ACE_TargetingGate : ACE_TargetingConstrains {
+            idc = 699200;
+            class Controls {
+                class TargetingGateTL: TargetingConstrains {
+                    x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
+                    y = "0.15*SafezoneH - SafezoneY";
+                    idc = 699201;
+                    class Controls {
+                        class LineH: RscLine {
+                            idc = 699210;
+                            x = "0";
+                            y = "0";
+                            w = "0.025*(3/4)*SafezoneH";
+                            h = "0";
+                            colorText[] = {0.8745,0.8745,0.8745,1};
+                        };
+                        class LineV: LineH {
+                            idc = 699211;
+                            w = "0";
+                            h = "0.025*SafezoneH";
+                        };
+                    };
+                };
+                class TargetingGateTR: TargetingGateTL {
+                    x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX + 0.975*(3/4)*SafezoneH";
+                    y = "0.15*SafezoneH - SafezoneY";
+                    idc = 699202;
+                    class Controls {
+                        class LineH: RscLine {
+                            idc = 699220;
+                            x = "0";
+                            y = "0";
+                            w = "0.025*(3/4)*SafezoneH";
+                            h = "0";
+                            colorText[] = {0.8745,0.8745,0.8745,1};
+                        };
+                        class LineV: LineH {
+                            idc = 699221;
+                            x = "0.025*(3/4)*SafezoneH";
+                            w = "0";
+                            h = "0.025*SafezoneH";
+                        };
+                    };
+                };
+                class TargetingGateBL: TargetingGateTL {
+                    x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
+                    y = "0.825*SafezoneH - SafezoneY";
+                    idc = 699203;
+                    class Controls {
+                        class LineH: RscLine {
+                            x = "0";
+                            y = "0.025*SafezoneH";
+                            w = "0.025*(3/4)*SafezoneH";
+                            h = "0";
+                            colorText[] = {0.8745,0.8745,0.8745,1};
+                        };
+                        class LineV: LineH {
+                            y = "0";
+                            w = "0";
+                            h = "0.025*SafezoneH";
+                        };
+                    };
+                };
+                class TargetingGateBR: TargetingGateBL {
+                    x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX + 0.975*(3/4)*SafezoneH";
+                    y = "0.825*SafezoneH - SafezoneY";
+                    idc = 699204;
+                    class Controls {
+                        class LineH: RscLine {
+                            x = "0";
+                            y = "0.025*SafezoneH";
+                            w = "0.025*(3/4)*SafezoneH";
+                            h = "0";
+                            colorText[] = {0.8745,0.8745,0.8745,1};
+                        };
+                        class LineV: LineH {
+                            x = "0.025*(3/4)*SafezoneH";
+                            y = "0";
+                            w = "0";
+                            h = "0.025*SafezoneH";
+                        };
+                    };
+                };
+            };
+        };
+        
+        class ACE_TargetingLines: ACE_TargetingConstrains {
+            idc = 699300;
+            class Controls {
+                class LineH: RscLine {
+                    idc = 699301;
+                    x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
+                    y = "0.5*SafezoneH - SafezoneY";
+                    w = "(3/4)*SafezoneH";
+                    h = "0";
+                    colorText[] = {0.8745,0.8745,0.8745,1};
+                };
+                class LineV: RscLine {
+                    idc = 699302;
+                    x = "0.5*SafezoneW - SafezoneX";
+                    y = "0.15*SafezoneH - SafezoneY";
+                    w = "0";
+                    h = "0.7*SafezoneH";
+                    colorText[] = {0.8745,0.8745,0.8745,1};
+                };
+            };
         };
         
         class ACE_javelin_elements_group: RscControlsGroup
@@ -211,170 +374,7 @@ class RscInGameUI {
                         };
                     };
                 };
-                /*
-                class TargetingConstrains: RscControlsGroup {
-                    idc = 699100;
-                    x = "SafezoneX";
-                    y = "SafezoneY";
-                    w = "SafezoneW-SafezoneX";
-                    h = "SafezoneH-SafezoneY";
-                    class VScrollbar {
-                        autoScrollSpeed = -1;
-                        autoScrollDelay = 5;
-                        autoScrollRewind = 0;
-                        color[] = {1,1,1,0};
-                        width = 0.001;
-                    };
-                    class HScrollbar {
-                        color[] = {1,1,1,0};
-                        height = 0.001;
-                    };
-                    class Controls {
-                        class Top: RscPicture {
-                            idc = 699101;
-                            text = "#(argb,8,8,3)color(1,1,1,1)";
-                            colorText[] = {0.2941,0.2941,0.2941,1};
-                            x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
-                            y = "0.15*SafezoneH-SafezoneY";
-                            w = "(3/4)*SafezoneH";
-                            h = "0.21*SafezoneH";
-                        };
-                        class Bottom: Top {
-                            idc = 699102;
-                            y = "0.64*SafezoneH-SafezoneY";
-                        };
-                        class Left: Top {
-                            idc = 699103;
-                            x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
-                            y = "0.36*SafezoneH-SafezoneY";
-                            w = "0.31*(3/4)*SafezoneH";
-                            h = "0.28*SafezoneH";
-                        };
-                        class Right: Left {
-                            idc = 699104;
-                            x = "((SafezoneW -(3/4)*SafezoneH)/2)+ 0.69*(3/4)*SafezoneH - SafezoneX";
-                        };
-                        class OpticsBorders: RscPicture {
-                            idc = 699105;
-                            text = PATHTOF(data\javelin_ui_border_ca.paa);
-                            colorText[] = {0,0,0,1};
-                            x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
-                            y = "0.15*SafezoneH-SafezoneY";
-                            w = "(3/4)*SafezoneH";
-                            h = "0.7*SafezoneH";
-                        };
-                    };
-                };
-                
-                class TargetingGate: TargetingConstrains {
-                    idc = 699200;
-                    class Controls {
-                        class TargetingGateTL: TargetingConstrains {
-                            x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
-                            y = "0.15*SafezoneH - SafezoneY";
-                            idc = 699201;
-                            class Controls {
-                                class LineH: RscLine {
-                                    idc = 699210;
-                                    x = "0";
-                                    y = "0";
-                                    w = "0.025*(3/4)*SafezoneH";
-                                    h = "0";
-                                    colorText[] = {0.8745,0.8745,0.8745,1};
-                                };
-                                class LineV: LineH {
-                                    idc = 699211;
-                                    w = "0";
-                                    h = "0.025*SafezoneH";
-                                };
-                            };
-                        };
-                        class TargetingGateTR: TargetingGateTL {
-                            x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX + 0.975*(3/4)*SafezoneH";
-                            y = "0.15*SafezoneH - SafezoneY";
-                            idc = 699202;
-                            class Controls {
-                                class LineH: RscLine {
-                                    idc = 699220;
-                                    x = "0";
-                                    y = "0";
-                                    w = "0.025*(3/4)*SafezoneH";
-                                    h = "0";
-                                    colorText[] = {0.8745,0.8745,0.8745,1};
-                                };
-                                class LineV: LineH {
-                                    idc = 699221;
-                                    x = "0.025*(3/4)*SafezoneH";
-                                    w = "0";
-                                    h = "0.025*SafezoneH";
-                                };
-                            };
-                        };
-                        class TargetingGateBL: TargetingGateTL {
-                            x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
-                            y = "0.825*SafezoneH - SafezoneY";
-                            idc = 699203;
-                            class Controls {
-                                class LineH: RscLine {
-                                    x = "0";
-                                    y = "0.025*SafezoneH";
-                                    w = "0.025*(3/4)*SafezoneH";
-                                    h = "0";
-                                    colorText[] = {0.8745,0.8745,0.8745,1};
-                                };
-                                class LineV: LineH {
-                                    y = "0";
-                                    w = "0";
-                                    h = "0.025*SafezoneH";
-                                };
-                            };
-                        };
-                        class TargetingGateBR: TargetingGateBL {
-                            x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX + 0.975*(3/4)*SafezoneH";
-                            y = "0.825*SafezoneH - SafezoneY";
-                            idc = 699204;
-                            class Controls {
-                                class LineH: RscLine {
-                                    x = "0";
-                                    y = "0.025*SafezoneH";
-                                    w = "0.025*(3/4)*SafezoneH";
-                                    h = "0";
-                                    colorText[] = {0.8745,0.8745,0.8745,1};
-                                };
-                                class LineV: LineH {
-                                    x = "0.025*(3/4)*SafezoneH";
-                                    y = "0";
-                                    w = "0";
-                                    h = "0.025*SafezoneH";
-                                };
-                            };
-                        };
-                    };
-                };
-                
-                class TargetingLines: TargetingConstrains {
-                    idc = 699300;
-                    class Controls {
-                        class LineH: RscLine {
-                            idc = 699301;
-                            x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
-                            y = "0.5*SafezoneH - SafezoneY";
-                            w = "(3/4)*SafezoneH";
-                            h = "0";
-                            colorText[] = {0.8745,0.8745,0.8745,1};
-                        };
-                        class LineV: RscLine {
-                            idc = 699302;
-                            x = "0.5*SafezoneW - SafezoneX";
-                            y = "0.15*SafezoneH - SafezoneY";
-                            w = "0";
-                            h = "0.7*SafezoneH";
-                            colorText[] = {0.8745,0.8745,0.8745,1};
-                        };
-                    };
-                };
-                */
-                
+
                 class ACE_javelin_SEEK_off: ACE_javelin_Day_mode_off {
                     idc = 699000;
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.863/4)*3*SafezoneH - SafezoneX";

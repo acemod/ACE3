@@ -11,6 +11,10 @@ ACE_player setVariable ["ace_missileguidance_target",nil, false];
 __JavelinIGUISeek ctrlSetTextColor __ColorGray;
 __JavelinIGUINFOV ctrlSetTextColor __ColorGray;
 
+__JavelinIGUITargetingConstrains ctrlShow false;
+__JavelinIGUITargetingGate ctrlShow false;
+__JavelinIGUITargetingLines ctrlShow false;
+
 uiNameSpace setVariable [QGVAR(arguments), 
     [
         0,         // Last runtime

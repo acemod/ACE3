@@ -1,6 +1,8 @@
-//#define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 //TRACE_1("enter", _this);
+
+TRACE_1("Control", (__JavelinIGUITargetingConstrains));
 
 #define __TRACKINTERVAL 0.1    // how frequent the check should be.
 #define __LOCKONTIME 1.85    // Lock on won't occur sooner
