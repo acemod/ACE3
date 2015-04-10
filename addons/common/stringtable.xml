@@ -276,6 +276,7 @@
       <French>Désactiver Menu Commande</French>
       <Russian>Выключить командное меню</Russian>
       <Hungarian>Parancsnoki menü kikapcsolása</Hungarian>
+      <Italian>Disabilita Menù di comando</Italian>
     </Key>
     <Key ID="STR_ACE_Common_Unknown">
       <English>Unknown</English>
@@ -285,6 +286,7 @@
       <Czech>Neznámý</Czech>
       <Russian>Неизвестно</Russian>
       <Hungarian>Ismeretlen</Hungarian>
+      <Italian>Sconosciuto</Italian>
     </Key>
     <Key ID="STR_ACE_Common_NoVoice">
       <English>No Voice</English>
@@ -294,70 +296,85 @@
       <Czech>Žádný hlas</Czech>
       <Russian>Без голоса</Russian>
       <Hungarian>Nincs hang</Hungarian>
+      <Italian>Senza voce</Italian>
     </Key>
     <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TITLE">
       <Polish>Akceptuj prośby</Polish>
       <Spanish>Aceptar Peticiones</Spanish>
       <English>Accept Requests</English>
       <German>Anfrage annehmen</German>
+      <Italian>Accetta Richieste</Italian>
     </Key>
     <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TITLE">
       <Polish>Ignoruj prośby</Polish>
       <Spanish>Rechazar Peticiones</Spanish>
       <English>Decline Requests</English>
       <German>Anfrage ablehnen</German>
+      <Italian>Rifiuta Richieste</Italian>
     </Key>
     <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
       <Polish>Akceptuj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
       <Spanish>Acepta Peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
       <English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
       <German>Anfragen anderer Spieler annehmen. Diese Anfragen können sich auf das Benutzen / Teilen von Equipment beziehen oder das Ausführen bestimmter Aktionen.</German>
+      <Italian>Accetta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
     </Key>
     <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
       <Polish>Ignoruj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
       <Spanish>Rechazar Peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
       <English>Decline Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
       <German>Anfragen anderer Spieler ablehnen. Diese Anfragen können sich auf das Benutzen / Teilen von Equipment beziehen oder das Ausführen bestimmter Aktionen.</German>
+      <Italian>Rifiuta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
     </Key>
     <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
       <English>Feedback icons</English>
       <German>Feedback-Icons</German>
+      <Italian>Icone informative</Italian>
     </Key>
     <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
       <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
       <German>Wähle die Position der Feedback-Icons aus oder deaktiviere Sie. Die Feedback-Icons zeigen den Status deiner Einheit an, oder die ausgeführte Aktion.</German>
+      <Italian>Seleziona la posizione o disabilita le icone informative sul tuo schermo. Queste saranno mostrate per fornire informazioni aggiuntive sullo stato o sulle azioni del giocatore.</Italian>
     </Key>
     <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
       <English>Progress bar location</English>
       <German>Position des Fortschrittsanzeige</German>
+      <Italian>Posizione della barra di avanzamento</Italian>
     </Key>
     <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
       <English>Set the desired location of the progress bar on your screen.</English>
       <German>Wähle die Position der Fortschrittsanzeige.</German>
+      <Italian>Modifica la posizione su schermo della barra di avanzamento.</Italian>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
       <English>Hint Background color</English>
       <German>Hinweis Hintergrundfarbe</German>
+      <Italian>Sfondo dei Suggerimenti</Italian>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
       <English>The color of the background from the ACE hints.</English>
       <German>Wähle die Hintergrundfarbe für ACE-Hinweise.</German>
+      <Italian>Il colore di sfondo dei suggerimenti dell'ACE.</Italian>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
       <English>Hint text font color</English>
       <German>Hinweis Textfarbe</German>
+      <Italian>Testo dei Suggerimenti</Italian>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
       <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
       <German>Wähle die Textfarbe für ACE-Hinweise. </German>
+      <Italian>Il colore del testo dei suggerimenti dell'ACE. Questo è il colore standard per tutti i caratteri mostrati dal sistema di suggerimenti dell'ACE, se questo non è altrimenti specificato.</Italian>
     </Key>
     <Key ID="STR_ACE_Common_bananaDisplayName">
       <English>Banana</English>
       <German>Banane</German>
+      <Italian>Banana</Italian>
     </Key>
     <Key ID="STR_ACE_Common_bananaDescr">
       <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
       <German>Die Bananen (Musa) sind eine Pflanzengattung in der Familie der Bananengewächse (Musaceae) innerhalb der Einkeimblättrigen Pflanzen (Monokotyledonen).</German>
+      <Italian>Una banana è un frutto commestibile, nello specifico una bacca cuoiosa, prodotto da un gran numero di grandi pianti erbacee dotate di fiori, della famiglia delle Musaceae.</Italian>
     </Key>
   </Package>
 </Project>
