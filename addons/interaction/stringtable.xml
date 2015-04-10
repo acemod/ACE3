@@ -1,30 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-20 -->
+<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
   <Package name="Interaction">
     <Key ID="STR_ACE_Interaction_MainAction">
       <English>Interactions</English>
+      <German>Interaktion</German>
     </Key>
     <Key ID="STR_ACE_Interaction_Torso">
       <English>Torso</English>
+      <German>Torso</German>
     </Key>
     <Key ID="STR_ACE_Interaction_Head">
       <English>Head</English>
+      <German>Kopf</German>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmLeft">
       <English>Left Arm</English>
+      <German>Arm links</German>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmRight">
       <English>Right Arm</English>
+      <German>Arm rechts</German>
     </Key>
     <Key ID="STR_ACE_Interaction_LegLeft">
       <English>Left Leg</English>
+      <German>Bein links</German>
     </Key>
     <Key ID="STR_ACE_Interaction_LegRight">
       <English>Right Leg</English>
+      <German>Bein rechts</German>
     </Key>
     <Key ID="STR_ACE_Interaction_Weapon">
       <English>Weapon</English>
+      <German>Waffe</German>
     </Key>
     <Key ID="STR_ACE_Interaction_InteractionMenu">
       <English>Interaction Menu</English>
@@ -365,7 +373,7 @@
     <Key ID="STR_ACE_Interaction_YouWereTappedRight">
       <English>You were tapped on the RIGHT shoulder</English>
       <Spanish>Te tocaron el hombro DERECHO</Spanish>
-      <German>Dir wurde auf die Schulter geklopft</German>
+      <German>Dir wurde auf die Rechte Schulter geklopft</German>
       <French>On te tape sur l'épaule</French>
       <Polish>Zostałeś klepnięty po ramieniu</Polish>
       <Hungarian>Vállonveregettek</Hungarian>
@@ -377,7 +385,7 @@
     <Key ID="STR_ACE_Interaction_YouWereTappedLeft">
       <English>You were tapped on the LEFT shoulder.</English>
       <Spanish>Te tocaron el hombro IZQUIERDO.</Spanish>
-      <German>Dir wurde auf die Schulter geklopft</German>
+      <German>Dir wurde auf die Linke Schulter geklopft</German>
       <French>On te tape sur l'épaule.</French>
       <Polish>Zostałeś klepnięty po ramieniu</Polish>
       <Hungarian>Vállonveregettek</Hungarian>
@@ -655,6 +663,7 @@
     </Key>
     <Key ID="STR_ACE_Interaction_Passengers">
       <English>Passengers</English>
+      <German>Passagiere</German>
     </Key>
   </Package>
 </Project>
