@@ -30,7 +30,7 @@
       <English>Earplugs in</English>
       <German>Ohrenstöpsel drinnen</German>
       <Spanish>Poner tapones</Spanish>
-      <Polish>Załóż stopery</Polish>
+      <Polish>Włóż stopery</Polish>
       <Czech>Dát špunty do uší</Czech>
       <Russian>Беруши надеты</Russian>
       <French>Bouchons mis</French>
@@ -42,7 +42,7 @@
       <English>Earplugs out</English>
       <German>Ohrenstöpsel raus</German>
       <Spanish>Quitar tapones</Spanish>
-      <Polish>Zdejmij stopery</Polish>
+      <Polish>Wyjmij stopery</Polish>
       <Czech>Vyndat špunty z uší</Czech>
       <Russian>Беруши сняты</Russian>
       <French>Bouchons enlevés</French>
@@ -54,7 +54,7 @@
       <English>Earplugs in</English>
       <German>Ohrenstöpsel drinnen</German>
       <Spanish>Tapones puestos</Spanish>
-      <Polish>Stopery założone</Polish>
+      <Polish>Stopery włożone</Polish>
       <Czech>Špunty v uších</Czech>
       <Russian>Беруши надеты</Russian>
       <French>Bouchons mis</French>
@@ -66,7 +66,7 @@
       <English>Earplugs out</English>
       <German>Ohrenstöpsel raus</German>
       <Spanish>Tapones quitados</Spanish>
-      <Polish>Stopery zdjęte</Polish>
+      <Polish>Stopery wyjęte</Polish>
       <Czech>Špunty venku z uší</Czech>
       <Russian>Беруши сняты</Russian>
       <French>Bouchons enlevés</French>
@@ -101,6 +101,7 @@
     <Key ID="STR_ACE_Hearing_DisableEarRinging">
       <English>Disable ear ringing</English>
       <Spanish>Desactivar zumbido de oídos</Spanish>
+      <Polish>Wyłącz dzwonienie w uszach</Polish>
     </Key>
   </Package>
 </Project>
