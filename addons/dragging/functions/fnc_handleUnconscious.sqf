@@ -9,6 +9,8 @@ _isUnconscious = _this select 1;
 private "_player";
 _player = ACE_player;
 
+if ((_unit getHitPointDamage "HitLeftLeg") + (_unit getHitPointDamage "HitRightLeg") > 0.4) exitwith {};
+
 if (_player getVariable [QGVAR(isDragging), false]) then {
 
     private "_draggedObject";

@@ -27,7 +27,6 @@ if (!isNull _hitTarget && {_hitTarget isKindOf "AllVehicles"}) then {
     [{
         EXPLODE_2_PVT(_this,_player,_explosive);
         private "_pos";
-        _player setVariable [QGVAR(PlantingExplosive), false];
         if (surfaceIsWater _pos) then {
             _pos = getPosASL _explosive;
             _explosive setPosASL _pos;

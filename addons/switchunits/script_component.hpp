@@ -1,4 +1,4 @@
-#define COMPONENT SwitchUnits
+#define COMPONENT switchunits
 #include "\z\ace\addons\main\script_mod.hpp"
 
 #ifdef DEBUG_ENABLED_SWITCHUNITS
