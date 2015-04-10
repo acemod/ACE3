@@ -84,7 +84,7 @@ class RscInGameUI {
         class ACE_TargetingGate : ACE_TargetingConstrains {
             idc = 699200;
             class Controls {
-                class TargetingGateTL: TargetingConstrains {
+                class TargetingGateTL: ACE_TargetingConstrains {
                     x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
                     y = "0.15*SafezoneH - SafezoneY";
                     idc = 699201;

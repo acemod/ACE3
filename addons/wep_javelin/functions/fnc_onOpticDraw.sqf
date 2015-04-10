@@ -83,9 +83,59 @@ if (isNull _newTarget) then {
         } else {
             if(diag_tickTime - _lockTime > 3) then {
                 TRACE_2("LOCKED!", _currentTarget, _lockTime);
+                
                 __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
                 __JavelinIGUINFOV ctrlSetTextColor __ColorNull;
                 __JavelinIGUITargetingConstrains ctrlShow true;
+                __JavelinIGUITargetingGate ctrlShow true;
+                __JavelinIGUITargetingLines ctrlShow true;
+                
+
+                _apos = worldToScreen (_newTarget modelToWorld _randomPosWithinBounds);
+                   
+                _aposX = 0;
+                _aposY = 0;
+				if (count _apos < 2) then {
+					_aposX = 1;
+					_aposY = 0;
+				} else {
+					_aposX = (_apos select 0) + _offsetX;
+					_aposY = (_apos select 1) + _offsetY;
+				};
+                
+                // Move target marker to coords.
+                __JavelinIGUITargetingLineV ctrlSetPosition [_aposX,ctrlPosition __JavelinIGUITargetingLineV select 1];
+                __JavelinIGUITargetingLineH ctrlSetPosition [ctrlPosition __JavelinIGUITargetingLineH select 0,_aposY];
+                {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingLineH,__JavelinIGUITargetingLineV];
+                
+                _boundsInput = if (_currentTarget isKindOf "CAManBase") then {
+                    [_currentTarget,[-1,-1,-2],_currentTarget selectionPosition "body"];
+                } else {
+                    [_currentTarget,[-1,-1,-2],_currentTarget selectionPosition "zamerny"];
+                };
+                
+                _bpos = _boundsInput call FUNC(worldToScreenBounds);
+                
+                _constraintTop = __ConstraintTop;
+                _constraintLeft = __ConstraintLeft;
+                _constraintBottom = __ConstraintBottom;
+                _constraintRight = __ConstraintRight;
+                
+                _offsetX = __OffsetX;
+                _offsetY = __OffsetY;
+                
+                _minX = ((_bpos select 0) + _offsetX) max _constraintLeft;
+                _minY = ((_bpos select 1) + _offsetY) max _constraintTop;
+                _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025*(3/4)*SafezoneH);
+                _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025*SafezoneH);
+                
+                __JavelinIGUITargetingGateTL ctrlSetPosition [_minX,_minY];
+                __JavelinIGUITargetingGateTR ctrlSetPosition [_maxX,_minY];
+                __JavelinIGUITargetingGateBL ctrlSetPosition [_minX,_maxY];
+                __JavelinIGUITargetingGateBR ctrlSetPosition [_maxX,_maxY];
+                
+                {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
+                
                 
                 ACE_player setVariable["ace_missileguidance_target", _currentTarget, false];
                 

@@ -178,6 +178,9 @@ PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
 
+// Model and drawing helpers
+PREP(worldToScreenBounds);
+
 // config items
 PREP(getConfigType);
 PREP(getItemType);
