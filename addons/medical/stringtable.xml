@@ -227,7 +227,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckPulse">
             <English>Check Pulse</English>
-            <German>Plus überprüfen</German>
+            <German>Puls überprüfen</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure">
             <English>Check Blood Pressure</English>
