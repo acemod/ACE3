@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-01-23 -->
+<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="OptionsMenu">
     <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -16,19 +16,23 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_FixAnimation">
       <English>Fix Animation</English>
+      <French>Corriger l'Animation</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_ResetAll">
       <English>Reset All</English>
+      <French>Par défaut</French>
       <German>Rücksetzen</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabColors">
       <English>Colors</English>
+      <French>Couleurs</French>
       <German>Farben</German>
       <Russian>цвета</Russian>
       <Spanish>Colors</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabOptions">
       <English>Options</English>
+      <French>Options</French>
       <German>Optionen</German>
       <Spanish>Opciones</Spanish>
       <Polish>Opcje</Polish>
@@ -41,6 +45,7 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabValues">
       <English>Values</English>
+      <French>Valeurs</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Enabled">
       <English>Yes</English>
@@ -75,33 +80,42 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Export">
       <English>Export</English>
+      <French>Exporter</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_OpenExport">
       <English>Open Export Menu</English>
+      <French>Ouvrir le menu d'exportation</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_stringType">
       <English>String input.</English>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_arrayType">
       <English>Array. Seperate elements by using ,.</English>
+      <French>Array. Séparer les élements en utilisant ,.</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_scalarType">
       <English>Number</English>
+      <French>Nombre</French>
     </Key>
     <Key ID="STR_ACE_optionsMenu_unknownType">
-      <English>Uknown input type</English>
+      <English>Unknown input type</English>
+      <French>Input inconnue</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_SaveInput">
       <English>Save input</English>
+      <French>Sauvegarder les inputs</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_inClientSettings">
       <English>Include Client Settings</English>
+      <French>Inclure les paramètres de client</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_exClientSettings">
       <English>Exclude Client Settings</English>
+      <French>Exclure les paramètres de client</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_settingsExported">
       <English>Settings exported to clipboard</English>
+      <French>Paramètres exportés dans le presse-papier</French>
     </Key>
   </Package>
 </Project>
