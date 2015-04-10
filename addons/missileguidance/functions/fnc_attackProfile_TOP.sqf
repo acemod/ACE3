@@ -1,4 +1,4 @@
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
@@ -32,15 +32,13 @@ if( ((ASLtoATL _projectilePos) select 2) < 140 && _distanceToShooter < 50) then 
 };
 
 // Handle arcing terminal low for high decent
-if( (_projectilePos select 2) > (_seekerTargetPos select 2) && _distanceToTarget < 100) then {
+if( (_projectilePos select 2) > (_seekerTargetPos select 2) && _distanceToTarget < 140) then {
     _addHeight = _addHeight vectorDiff [0,0, ((_projectilePos select 2) - (_seekerTargetPos select 2)) * 0.5];
 } else {
-    if((_projectilePos select 2) > (_seekerTargetPos select 2) && _distanceToTarget > 100) then {
-       _addHeight = _addHeight vectorDiff [0,0, ((_projectilePos select 2) - (_seekerTargetPos select 2)) * 0.5];
+    if((_projectilePos select 2) > (_seekerTargetPos select 2) && _distanceToTarget > 140) then {
+       _addHeight = _addHeight vectorAdd [0,0, ((_projectilePos select 2) - (_seekerTargetPos select 2)) * 0.02];
     };
 };
-
-
 
 TRACE_3("", _distanceToTarget,_distanceToShooter,_addHeight);
 

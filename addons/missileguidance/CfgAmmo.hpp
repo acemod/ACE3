@@ -99,6 +99,8 @@ class CfgAmmo {
         // Turn off arma crosshair-guidance
         manualControl = 0;
         
+        hit = 1400;
+        
         // ACE uses these values
         //trackOversteer = 1;
         //trackLead = 0;
