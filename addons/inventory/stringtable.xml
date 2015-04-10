@@ -4,9 +4,12 @@
   <Package name="Inventory">
     <Key ID="STR_ACE_Inventory_SettingName">
       <English>Make Inventory Display Bigger</English>
+      <Portuguese>Aumentar o Tamanho da Tela do Inventário</Portuguese>
     </Key>    
     <Key ID="STR_ACE_Inventory_SettingDescription">
       <English>Normally inventory display is scaled by UI size. This allows scaling the Inventory UI size up, but doesn't increase font size allowing more rows displayed.</English>
+      <Portuguese>Normalmente o tamanho da tela do inventário é ditada pelo tamanho da UI. Isso permite aumentar o tamanho da tela de inventário, mas não aumenta o tamanho da fonte, permitindo que mais linhas sejam visualizadas.</Portuguese>
+    
     </Key>
   </Package>
 </Project>
