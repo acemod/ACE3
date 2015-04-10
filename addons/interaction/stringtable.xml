@@ -1,30 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-20 -->
+<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Interaction">
     <Key ID="STR_ACE_Interaction_MainAction">
       <English>Interactions</English>
+      <French>Interactions</French>
     </Key>
     <Key ID="STR_ACE_Interaction_Torso">
       <English>Torso</English>
+      <French>Torse</French>
     </Key>
     <Key ID="STR_ACE_Interaction_Head">
       <English>Head</English>
+      <French>Tête</French>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmLeft">
       <English>Left Arm</English>
+      <French>Bras Gauche</French>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmRight">
       <English>Right Arm</English>
+      <French>Bras Droit</French>
     </Key>
     <Key ID="STR_ACE_Interaction_LegLeft">
       <English>Left Leg</English>
+      <French>Jambe Gauche</French>
     </Key>
     <Key ID="STR_ACE_Interaction_LegRight">
       <English>Right Leg</English>
+      <French>Jambe Droite</French>
     </Key>
     <Key ID="STR_ACE_Interaction_Weapon">
       <English>Weapon</English>
+      <French>Arme</French>
     </Key>
     <Key ID="STR_ACE_Interaction_InteractionMenu">
       <English>Interaction Menu</English>
@@ -647,6 +655,7 @@
     </Key>
     <Key ID="STR_ACE_Interaction_Interact">
       <English>Interact</English>
+      <French>Intéragir</French>
       <German>Interagiere</German>
       <Czech>Interakce</Czech>
       <Russian>Взаимодействовать</Russian>
@@ -655,6 +664,7 @@
     </Key>
     <Key ID="STR_ACE_Interaction_Passengers">
       <English>Passengers</English>
+      <French>Passagers</French>
     </Key>
   </Package>
 </Project>
