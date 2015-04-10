@@ -38,78 +38,6 @@
       <Hungarian>Tárgy lecsatolása</Hungarian>
       <Russian>Отсоединить</Russian>
     </Key>
-    <Key ID="STR_ACE_Attach_IrStrobe_Attached">
-      <English>IR Strobe Attached</English>
-      <German>IR-Stroboskop befestigt</German>
-      <Spanish>Marcador IR acoplado</Spanish>
-      <Polish>Przyczepiono stroboskop IR</Polish>
-      <French>Strobe IR attaché</French>
-      <Czech>IR Značkovač Připnutý</Czech>
-      <Portuguese>Marcador IV Acoplado</Portuguese>
-      <Italian>Strobo IR attaccata</Italian>
-      <Hungarian>Infravörös jeladó hozzácsatolva</Hungarian>
-      <Russian>ИК строб присоединён</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_IrStrobe_Detached">
-      <English>IR Strobe Detached</English>
-      <German>IR-Stroboskop entfernt</German>
-      <Spanish>Marcador IR quitado</Spanish>
-      <Polish>Odczepiono stroboskop IR</Polish>
-      <French>Strobe IR détaché</French>
-      <Czech>IR Značkovač Odepnutý</Czech>
-      <Portuguese>Marcador IV Separado</Portuguese>
-      <Italian>Strobo IR staccata</Italian>
-      <Hungarian>Infravörös jeladó lecsatolva</Hungarian>
-      <Russian>ИК строб отсоединён</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_IrGrenade_Attached">
-      <English>IR Grenade Attached</English>
-      <German>IR-Granate befestigt</German>
-      <Spanish>Granada IR acoplada</Spanish>
-      <Polish>Przyczepiono granat IR</Polish>
-      <French>Grenade IR attachée</French>
-      <Czech>IR Granát Připnutý</Czech>
-      <Portuguese>Granada IV Acoplada</Portuguese>
-      <Italian>Granata IR attaccata</Italian>
-      <Hungarian>Infravörös gránát hozzácsatolva</Hungarian>
-      <Russian>ИК граната присоединена</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_IrGrenade_Detached">
-      <English>IR Grenade Detached</English>
-      <German>IR-Granate entfernt</German>
-      <Spanish>Granada IR quitada</Spanish>
-      <Polish>Odczepiono granat IR</Polish>
-      <French>Grenade IR détachée</French>
-      <Czech>IR Granát Odepnutý</Czech>
-      <Portuguese>Granada IV Separada</Portuguese>
-      <Italian>Granata IR staccata</Italian>
-      <Hungarian>Infravörös gránát lecsatolva</Hungarian>
-      <Russian>ИК граната отсоединена</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_Chemlight_Attached">
-      <English>Chemlight Attached</English>
-      <German>Leuchtstab befestigt</German>
-      <Spanish>Barra de luz acoplada</Spanish>
-      <Polish>Przyczepiono światło chemiczne</Polish>
-      <French>Chemlight attaché</French>
-      <Czech>Chemické světlo Připnuto</Czech>
-      <Portuguese>Chemlight Acoplada</Portuguese>
-      <Italian>Chemlight attaccata</Italian>
-      <Hungarian>Chemlight hozzácsatolva</Hungarian>
-      <Russian>Химсвет присоединён</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_Chemlight_Detached">
-      <English>Chemlight Detached</English>
-      <German>Leuchtstab entfernt</German>
-      <Spanish>Barra de luz quitada</Spanish>
-      <Polish>Odczepiono światło chemiczne</Polish>
-      <French>Chemlight détaché</French>
-      <Czech>Chemické světlo Odepnuto</Czech>
-      <Portuguese>Chemlight Separada</Portuguese>
-      <Italian>Chemlight staccata</Italian>
-      <Hungarian>Chemlight hozzácsatolva</Hungarian>
-      <Russian>Химсвет отсоединён</Russian>
-    </Key>
     <Key ID="STR_ACE_Attach_Inventory_Full">
       <English>No inventory space</English>
       <German>Kein Platz im Inventar</German>
@@ -174,6 +102,30 @@
       <German>Befestigen Fehlgeschlagen</German>
       <Russian>Присоединить Ошибка</Russian>
       <Spanish>Error al acoplar</Spanish>
+    </Key>
+    <Key ID="STR_ACE_Attach_Item_Attached">
+      <English>%1 Attached</English>
+      <German>%1 befestigt</German>
+      <Spanish>%1 acoplada</Spanish>
+      <Polish>Przyczepiono %1</Polish>
+      <French>%1 attachée</French>
+      <Czech>%1 Připnutý</Czech>
+      <Portuguese>%1 Acoplada</Portuguese>
+      <Italian>%1 attaccata</Italian>
+      <Hungarian>%1 hozzácsatolva</Hungarian>
+      <Russian>%1 присоединена</Russian>
+    </Key>
+    <Key ID="STR_ACE_Attach_Item_Detached">
+      <English>%1 Detached</English>
+      <German>%1 entfernt</German>
+      <Spanish>%1 quitada</Spanish>
+      <Polish>Odczepiono %1</Polish>
+      <French>%1 détachée</French>
+      <Czech>%1 Odepnutý</Czech>
+      <Portuguese>%1 Separada</Portuguese>
+      <Italian>%1 staccata</Italian>
+      <Hungarian>%1 lecsatolva</Hungarian>
+      <Russian>%1 отсоединена</Russian>
     </Key>
   </Package>
 </Project>
