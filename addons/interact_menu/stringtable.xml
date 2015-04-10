@@ -1,21 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-03 -->
+<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Interact_Menu">
     <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
       <English>Always display cursor for self interaction</English>
+      <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_InteractKey">
       <English>Interact Key</English>
+      <French>Touche d'interaction</French>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
       <English>Self Interaction Key</English>
+      <French>Touche d'Interaction sur soi-même</French>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
       <English>Self Actions</English>
+      <French>Actions sur soi-même</French>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
       <English>Vehicle Actions</English>
+      <French>Actions sur les véhicules</French>
     </Key>
   </Package>
 </Project>
