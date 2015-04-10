@@ -20,10 +20,11 @@ _dragModel          = _this select 15;
 _atmosphereModel    = _this select 16;
 _storeRangeCardData = _this select 17;
 
-private ["_bulletPos", "_bulletVelocity", "_bulletSpeed", "_bulletAccel", "_gravity", "_deltaT"];
+private ["_bulletPos", "_bulletVelocity", "_bulletAccel", "_bulletSpeed", "_gravity", "_deltaT"];
 _bulletPos = [0, 0, 0];
 _bulletVelocity = [0, 0, 0];
 _bulletAccel = [0, 0, 0];
+_bulletSpeed = 0;
 _gravity = [0, sin(_scopeBaseAngle + _inclinationAngle) * -9.80665, cos(_scopeBaseAngle + _inclinationAngle) * -9.80665];
 _deltaT = 1 / _simSteps;
 
