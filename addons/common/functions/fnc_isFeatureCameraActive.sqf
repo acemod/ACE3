@@ -23,7 +23,7 @@
 #include "script_component.hpp"
 
 (
-	!isNull (missionNamespace getVariable ["BIS_DEBUG_CAM", objNull]) || // Classic camera
+    !isNull (missionNamespace getVariable ["BIS_DEBUG_CAM", objNull]) || // Classic camera
     {!isNull (missionNamespace getVariable ["BIS_fnc_camera_cam", objNull])} || // Splendid camera
     {!isNull (uiNamespace getVariable ["BIS_fnc_arsenal_cam", objNull])} || // Arsenal camera
     {!isNull (uiNamespace getVariable ["BIS_fnc_animViewer_cam", objNull])} || // Animation viewer camera
