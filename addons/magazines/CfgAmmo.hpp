@@ -107,4 +107,18 @@ class CfgAmmo {
         //typicalspeed = 792;
         //airfriction = -0.0008577;
     };
+	
+	/* .338 Lapua Magnum */
+    
+    // IR Dim
+    class B_338_Ball;
+    class ACE_B_338_Ball_Tracer_Dim: B_338_Ball {
+        nvgOnly = 1;
+    };
+    
+    /* .338 Norma Magnum */
+    class B_338_NM_Ball;
+    class ACE_B_338_NM_Ball_Tracer_Dim: B_338_NM_Ball {
+        nvgOnly = 1;
+    };
 };

@@ -486,5 +486,53 @@
       <Russian>Калибр: 7.62x51mm M118LR&lt;br /&gt;Патронов: 20&lt;br /&gt;Тип: M14</Russian>
       <Italian>Calibro: 7.62x51mm M118LR&lt;br /&gt;Munizioni:20&lt;br /&gt;In uso su: M14</Italian>
     </Key>
+    <Key ID="STR_ACE_10Rnd_388_Mag_TracerName">
+        <English>.338 LM 10Rnd Tracer Mag</English>
+        <German>.338 LM 10-Schuss-Magazin Leuchtspur</German>
+    </Key>
+    <Key ID="STR_ACE_10Rnd_388_Mag_TracerNameShort">
+        <English>.338 LM Tracer</English>
+        <German>.338 LM Leuchtspur</German>
+    </Key>
+    <Key ID="STR_ACE_10Rnd_388_Mag_TracerDescription">
+        <English>Caliber: .338 Lapua Magnum Tracer&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: MAR-10</English>
+        <German>Kaliber: .338 Lapua Magnum Leuchtspur&lt;br /&gt;Schuss: 10&lt;br /&gt;Verwendet für: MAR-10</German>
+    </Key>
+    <Key ID="STR_ACE_10Rnd_388_Mag_Tracer_DimName">
+        <English>.338 LM 10Rnd IR-DIM Mag</English>
+        <German>.338 LM 10-Schuss-Magazin Leuchtspur IR-DIM</German>
+    </Key>
+    <Key ID="STR_ACE_10Rnd_388_Mag_Tracer_DimNameShort">
+        <English>.338 LM IR-DIM</English>
+        <German>.338 LM IR-DIM</German>
+    </Key>
+    <Key ID="STR_ACE_10Rnd_388_Mag_Tracer_DimDescription">
+        <English>Caliber: .338 Lapua Magnum Tracer IR-DIM&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: MAR-10</English>
+        <German>Kaliber: .338 Lapua Magnum Leuchtspur IR-DIM&lt;br /&gt;Schuss: 10&lt;br /&gt;Verwendet für: MAR-10</German>
+    </Key>
+    <Key ID="STR_ACE_130Rnd_388_Mag_TracerName">
+        <English>.338 NM 130Rnd Tracer Belt</English>
+        <German>.338 NM 130-Schuss-Gurt Leuchtspur</German>
+    </Key>
+    <Key ID="STR_ACE_130Rnd_388_Mag_TracerNameShort">
+        <English>.338 NM Tracer</English>
+        <German>.338 NM Leuchtspur</German>
+    </Key>
+    <Key ID="STR_ACE_130Rnd_388_Mag_TracerDescription">
+        <English>Caliber: .338 Norma Magnum Tracer&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
+        <German>Kaliber: .338 Norma Magnum Leuchtspur&lt;br /&gt;Schuss: 130&lt;br /&gt;Verwendet für: SPMG</German>
+    </Key>
+    <Key ID="STR_ACE_130Rnd_388_Mag_Tracer_DimName">
+        <English>.338 NM 130Rnd IR-DIM Belt</English>
+        <German>.338 NM 130-Schuss-Gurt Leuchtspur IR-DIM</German>
+    </Key>
+    <Key ID="STR_ACE_130Rnd_388_Mag_Tracer_DimNameShort">
+        <English>.338 NM IR-DIM</English>
+        <German>.338 LM IR-DIM</German>
+    </Key>
+    <Key ID="STR_ACE_130Rnd_388_Mag_Tracer_DimDescription">
+        <English>Caliber: .338 Norma Magnum Tracer IR-DIM&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
+        <German>Kaliber: .338 Norma Magnum Leuchtspur IR-DIM&lt;br /&gt;Schuss: 130&lt;br /&gt;Verwendet für: SPMG</German>
+    </Key>
   </Package>
 </Project>

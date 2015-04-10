@@ -136,4 +136,36 @@ class CfgMagazines {
         displayNameShort = "$STR_ACE_20Rnd_762x51_mag_APNameShort";
         descriptionShort = "$STR_ACE_20Rnd_762x51_mag_APDescription";
     };
+    class 10Rnd_338_Mag;
+    /* .338 Lapua Magnum */
+    class ACE_10Rnd_338_Mag_Tracer: 10Rnd_338_Mag {
+        author="$STR_ACE_Common_ACETeam"
+        displayName = "$STR_ACE_10Rnd_388_Mag_TracerName";
+        displayNameShort = "$STR_ACE_10Rnd_388_Mag_TracerNameShort";
+        descriptionShort = "$STR_ACE_10Rnd_388_Mag_TracerDescription";
+        tracersEvery = 1;
+    };
+    class ACE_10Rnd_338_Mag_Tracer_Dim: ACE_10Rnd_338_Mag_Tracer {
+        author="$STR_ACE_Common_ACETeam"
+        ammo = "ACE_B_338_Ball_Tracer_Dim"
+        displayName = "$STR_ACE_10Rnd_388_Mag_Tracer_DimName";
+        displayNameShort = "$STR_ACE_10Rnd_388_Mag_Tracer_DimNameShort";
+        descriptionShort = "$STR_ACE_10Rnd_388_Mag_Tracer_DimDescription";
+    };
+    /* .333 Norma Magnum */
+    class 130Rnd_338_Mag;
+    class ACE_130Rnd_338_Mag_Tracer: 130Rnd_338_Mag {
+        author="$STR_ACE_Common_ACETeam"
+        displayName = "$STR_ACE_130Rnd_388_Mag_TracerName";
+        displayNameShort = "$STR_ACE_130Rnd_388_Mag_TracerNameShort";
+        descriptionShort = "$STR_ACE_130Rnd_388_Mag_TracerDescription";
+        tracersEvery = 1;
+    };
+    class ACE_130Rnd_338_Mag_Tracer_Dim: ACE_130Rnd_338_Mag_Tracer {
+        author="$STR_ACE_Common_ACETeam"
+        ammo = "ACE_B_338_NM_Ball_Tracer_Dim"
+        displayName = "$STR_ACE_130Rnd_388_Mag_Tracer_DimName";
+        displayNameShort = "$STR_ACE_130Rnd_388_Mag_Tracer_DimNameShort";
+        descriptionShort = "$STR_ACE_130Rnd_388_Mag_Tracer_DimDescription";
+    }
 };

@@ -103,6 +103,20 @@ class CfgWeapons {
             };
         };
     };
+    
+    class DMR_02_base_F: Rifle_Long_Base_F {
+        magazines[] += {
+            "ACE_10Rnd_338_Mag_Tracer",
+            "ACE_10Rnd_338_Mag_Tracer_Dim"
+        };
+    };
+    
+    class  MMG_02_base_F: Rifle_Long_Base_F {
+        magazines[] += {
+            "ACE_130Rnd_338_Mag_Tracer",
+            "ACE_130Rnd_338_Mag_Tracer_Dim"
+        };
+    };
 
 
     /* Assault Rifles */
