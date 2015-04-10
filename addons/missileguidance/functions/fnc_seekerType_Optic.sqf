@@ -21,4 +21,12 @@ if(!isNil "_target") then {
 
 TRACE_2("", _target, _foundTargetPos);
 
+_projectileSpeed = (vectorMagnitude velocity _projectile);
+_distanceToTarget = (getPosASL _projectile) vectorDistance _foundTargetPos; 
+
+_eta = _distanceToTarget / _projectileSpeed;
+
+_adjustVelocity = (velocity _target) vectorMultiply _eta;
+_foundTargetPos = _foundTargetPos vectorAdd _adjustVelocity;
+
 _foundTargetPos;
