@@ -40,6 +40,7 @@ PREP(onTapShoulder);
             <th>Event Key</th>
             <th>Description</th>
             <th>Source(s)</th>
+            <th>Passed Parameter(s) (_this)</th>
             <th>Locality</th>
         </tr>
     </thead>
@@ -48,6 +49,7 @@ PREP(onTapShoulder);
             <td>"playerChanged"</td>
             <td>`player` changed (zeus/respawn)</td>
             <td>common</td>
+            <td>[_newPlayer, _oldPlayer]</td>
             <td>local</td>
         </tr>
         </tr>    
@@ -55,6 +57,7 @@ PREP(onTapShoulder);
             <td>"playerInventoryChanged"</td>
             <td>Inventory changed</td>
             <td>common</td>
+            <td>getAllGear-Array</td>
             <td>local</td>
         </tr>  
         </tr>    
@@ -62,13 +65,23 @@ PREP(onTapShoulder);
             <td>"playerVisionModeChanged"</td>
             <td>Vision mode changed (e.g. NVG on)</td>
             <td>common</td>
+            <td>[_unit, _newVisionMode]</td>
             <td>local</td>
         </tr>  
+        </tr>    
+         <tr>
+            <td>"inventoryDisplayChanged"</td>
+            <td>Inventory display opened/closed</td>
+            <td>common</td>
+            <td>[_unit, _isOpen]</td>
+            <td>local</td>
+        </tr>
         </tr>    
          <tr>
             <td>"zeusDisplayChanged"</td>
             <td>Zeus display opened/closed</td>
             <td>common</td>
+            <td>[_unit, _isOpen]</td>
             <td>local</td>
         </tr>
         </tr>    
@@ -76,72 +89,91 @@ PREP(onTapShoulder);
             <td>"cameraViewChanged"</td>
             <td>Camera view changed</td>
             <td>common</td>
+            <td>[_unit, _newCameraView]</td>
             <td>local</td>
         </tr>    
         <tr>
             <td>"playerVehicleChanged"</td>
             <td>Player vehicle changed</td>
             <td>common</td>
+            <td>[_unit, _newVehicle]</td>
             <td>local</td>
         </tr>    
         <tr>
             <td>"playerTurretChanged"</td>
             <td>Player turret changed</td>
             <td>common</td>
+            <td>[_unit, _newTurretIndexArray]</td>
             <td>local</td>
         </tr>  
         <tr>
             <td>"infoDisplayChanged"</td>
             <td>On info box change (e.g. entering and leaving a vehicle)</td>
             <td>common</td>
+            <td>[_display, _type]</td>
             <td>local</td>
         </tr>  
          <tr>
             <td>"inventoryDisplayLoaded"</td>
             <td>On opening the inventory display</td>
             <td>common</td>
+            <td>[_display]</td>
+            <td>local</td>
+        </tr>  
+         <tr>
+            <td>"mapDisplayLoaded"</td>
+            <td>On loading the map (briefing and mission start)</td>
+            <td>common</td>
+            <td>[_display, _mapType]</td>
             <td>local</td>
         </tr>  
         <tr>
             <td>"interactionMenuOpened"</td>
             <td>Interaction Menu Opened</td>
             <td>interaction</td>
+            <td></td>
             <td>local</td>
         </tr>    
          <tr>
             <td>"killedByFriendly"</td>
             <td>On TK/Civilian Killed</td>
             <td>respawn</td>
+            <td></td>
             <td>local</td>
         </tr>
          <tr>
             <td>"drawing_requestMarkers"</td>
             <td>Request Drawing Markers</td>
             <td>map</td>
+            <td></td>
             <td>target</td>
         </tr>  
          <tr>
             <td>"drawing_sendbackMarkers"</td>
             <td>Send Drawing Markers</td>
             <td>map</td>
+            <td></td>
             <td>target</td>
         </tr>
          <tr>
             <td>"drawing_addLineMarker"</td>
             <td>Line Drawn</td>
             <td>map</td>
+            <td></td>
             <td>global</td>
         </tr>  
          <tr>
             <td>"drawing_removeLineMarker"</td>
             <td>Line Deleted</td>
             <td>map</td>
+            <td></td>
             <td>global</td>
         </tr>     
         <tr>
             <td>"flashbangExplosion"</td>
             <td>Flashbang Goes Bang</td>
             <td>grenades</td>
+            <td></td>
             <td>target</td>
         </tr> 
     </tbody>
