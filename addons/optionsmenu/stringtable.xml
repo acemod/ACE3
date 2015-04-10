@@ -16,16 +16,19 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_FixAnimation">
       <English>Fix Animation</English>
+      <Polish>Napraw animację</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_ResetAll">
       <English>Reset All</English>
       <German>Rücksetzen</German>
+      <Polish>Resetuj wszystko</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabColors">
       <English>Colors</English>
       <German>Farben</German>
       <Russian>цвета</Russian>
       <Spanish>Colors</Spanish>
+      <Polish>Kolory</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabOptions">
       <English>Options</English>
@@ -41,6 +44,7 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabValues">
       <English>Values</English>
+      <Polish>Wartości</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Enabled">
       <English>Yes</English>
@@ -72,36 +76,47 @@
       <German>Einstellung:</German>
       <Russian>Yстановки:</Russian>
       <Spanish>Ajuste:</Spanish>
+      <Polish>Ustawienie:</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Export">
       <English>Export</English>
+      <Polish>Eksport</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_OpenExport">
       <English>Open Export Menu</English>
+      <Polish>Otwórz menu eksportowania</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_stringType">
       <English>String input.</English>
+      <Polish>Wpisywanie tekstu.</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_arrayType">
       <English>Array. Seperate elements by using ,.</English>
+      <Polish>Tablica. Oddziel elementy używając ,.</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_scalarType">
       <English>Number</English>
+      <Polish>Cyfra</Polish>
     </Key>
     <Key ID="STR_ACE_optionsMenu_unknownType">
       <English>Uknown input type</English>
+      <Polish>Nieznany rodzaj danych</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_SaveInput">
       <English>Save input</English>
+      <Polish>Zapisz dane</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_inClientSettings">
       <English>Include Client Settings</English>
+      <Polish>Zawrzyj ustawienia klienta</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_exClientSettings">
       <English>Exclude Client Settings</English>
+      <Polish>Wyklucz ustawienia klienta</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_settingsExported">
       <English>Settings exported to clipboard</English>
+      <Polish>Ustawienia wyeksportowano do schowka</Polish>
     </Key>
   </Package>
 </Project>
