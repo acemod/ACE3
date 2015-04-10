@@ -16,4 +16,4 @@
 #include "script_component.hpp"
 
 if (GVAR(showInThirdPerson)) exitWith { false };
-(cameraView == "External")
+(cameraView == "EXTERNAL" || cameraView == "GROUP")
