@@ -31,7 +31,6 @@ The mod is **built modularly** — almost any PBO can be removed, thus a team ca
 *   Realistic names for vehicles and weapons
 *   Realistic ballistics including wind and humidity
 *   Backblast simulation
-*   Weapon resting and bipod deployment
 *   A fire control system for armored vehicles and helicopters  
     ***and more...***
 
