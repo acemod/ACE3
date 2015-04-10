@@ -1,1 +1,0 @@
-#include "script_component.hpp"ADDON = false;["player", [ace_sys_interaction_key_self], 4, [QPATHTO_F(fnc_menuDef_self), "main"]] call CBA_ui_fnc_add;ADDON = true;

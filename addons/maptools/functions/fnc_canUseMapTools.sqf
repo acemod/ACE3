@@ -1,5 +1,15 @@
-// by esteldunedain
-
+/*
+ * Author: esteldunedain
+ * canUseMapTools
+ *
+ * Arguments:
+ * None
+ *
+ * Return value:
+ * <BOOL>
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 visibleMap &&
