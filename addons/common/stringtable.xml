@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2015-04-06 -->
 <Project name="ACE">
   <Package name="Common">
@@ -276,6 +276,7 @@
       <French>Désactiver Menu Commande</French>
       <Russian>Выключить командное меню</Russian>
       <Hungarian>Parancsnoki menü kikapcsolása</Hungarian>
+      <Portuguese>Desabilitar menu de comando</Portuguese>
     </Key>
     <Key ID="STR_ACE_Common_Unknown">
       <English>Unknown</English>
@@ -285,6 +286,7 @@
       <Czech>Neznámý</Czech>
       <Russian>Неизвестно</Russian>
       <Hungarian>Ismeretlen</Hungarian>
+      <Portuguese>Desconhecido</Portuguese>
     </Key>
     <Key ID="STR_ACE_Common_NoVoice">
       <English>No Voice</English>
@@ -294,56 +296,71 @@
       <Czech>Žádný hlas</Czech>
       <Russian>Без голоса</Russian>
       <Hungarian>Nincs hang</Hungarian>
+      <Portuguese>Sem voz</Portuguese>
     </Key>
     <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TITLE">
       <Polish>Akceptuj prośby</Polish>
       <Spanish>Aceptar Peticiones</Spanish>
       <English>Accept Requests</English>
+      <Portuguese>Aceitar Pedido</Portuguese>
     </Key>
     <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TITLE">
       <Polish>Ignoruj prośby</Polish>
       <Spanish>Rechazar Peticiones</Spanish>
       <English>Decline Requests</English>
+      <Portuguese>Rejeitar pedido</Portuguese>
     </Key>
     <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
       <Polish>Akceptuj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
       <Spanish>Acepta Peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
       <English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
+      <Portuguese>Aceitar pedidos enviados por outros jogadores. Podem ser pedidos para usar/ compartilhar equipamento, realizar certas ações.</Portuguese>
     </Key>
     <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
       <Polish>Ignoruj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
       <Spanish>Rechazar Peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
       <English>Decline Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
+      <Portuguese>Rejeita pedidos enviados por outros jogadores. Podem ser pedidos para usar/ compartilhar equipamento, realizar certas ações.</Portuguese>
     </Key>
     <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
       <English>Feedback icons</English>
+      <Portuguese>Ícones de Feedback</Portuguese>
     </Key>
     <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
       <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
+      <Portuguese>Selecione a posição ou disabilite a posição dos ícones de feedback na sua tela. Esses ícones irão aparecer para mostrar feedback extra do status do seu personagem e ações realizadas.</Portuguese>
     </Key>
     <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
       <English>Progress bar location</English>
+      <Portuguese>Local da barra de progresso</Portuguese>
     </Key>
     <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
       <English>Set the desired location of the progress bar on your screen.</English>
+      <Portuguese>Define o local desejado da barra de progresso na sua tela.</Portuguese>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
       <English>Hint Background color</English>
+      <Portuguese>Cor do fundo da hint</Portuguese>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
       <English>The color of the background from the ACE hints.</English>
+      <Portuguese>A cor de fundo das hints do ACE.</Portuguese>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
       <English>Hint text font color</English>
+      <Portuguese>Cor do do texto da hint</Portuguese>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
       <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
+      <Portuguese>A cor do texto das hints do ACE. Essa cor é a cor default para todos os texos exibidos pelo sistema de hints do ACE , caso o texto da hint não tem outra cor especificada.</English>
     </Key>
     <Key ID="STR_ACE_Common_bananaDisplayName">
       <English>Banana</English>
+      <Portuguese>Banana</Portuguese>
     </Key>
     <Key ID="STR_ACE_Common_bananaDescr">
       <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
+      <Portuguese>A banana é uma fruta comestível, botanicamente uma baga, produzida por vários tipos de plantas herbáceas grandes do genero Musa.</Portuguese>
     </Key>
   </Package>
 </Project>
