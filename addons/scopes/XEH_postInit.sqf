@@ -33,7 +33,7 @@ if !(hasInterface) exitWith {};
 
 
 // Add keybinds
-["ACE3", QGVAR(AdjustUp), localize "STR_ACE_Scopes_AdjustUp",
+["ACE3", QGVAR(AdjustUpMinor), localize "STR_ACE_Scopes_AdjustUpMinor",
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -48,7 +48,7 @@ if !(hasInterface) exitWith {};
 {false},
 [201, [false, false, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustDown), localize "STR_ACE_Scopes_AdjustDown",
+["ACE3", QGVAR(AdjustDownMinor), localize "STR_ACE_Scopes_AdjustDownMinor",
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -63,7 +63,7 @@ if !(hasInterface) exitWith {};
 {false},
 [209, [false, false, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustLeft), localize "STR_ACE_Scopes_AdjustLeft",
+["ACE3", QGVAR(AdjustLeftMinor), localize "STR_ACE_Scopes_AdjustLeftMinor",
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -78,7 +78,7 @@ if !(hasInterface) exitWith {};
 {false},
 [209, [false, true, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustRight), localize "STR_ACE_Scopes_AdjustRight",
+["ACE3", QGVAR(AdjustRightMinor), localize "STR_ACE_Scopes_AdjustRightMinor",
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -93,7 +93,7 @@ if !(hasInterface) exitWith {};
 {false},
 [201, [false, true, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustUp), localize "STR_ACE_Scopes_AdjustUp1mil",
+["ACE3", QGVAR(AdjustUpMajor), localize "STR_ACE_Scopes_AdjustUpMajor",
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -108,7 +108,7 @@ if !(hasInterface) exitWith {};
 {false},
 [201, [true, false, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustDown), localize "STR_ACE_Scopes_AdjustDown1mil",
+["ACE3", QGVAR(AdjustDownMajor), localize "STR_ACE_Scopes_AdjustDownMajor",
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -123,7 +123,7 @@ if !(hasInterface) exitWith {};
 {false},
 [209, [true, false, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustLeft), localize "STR_ACE_Scopes_AdjustLeft1mil",
+["ACE3", QGVAR(AdjustLeftMajor), localize "STR_ACE_Scopes_AdjustLeftMajor",
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -138,7 +138,7 @@ if !(hasInterface) exitWith {};
 {false},
 [209, [true, true, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustRight), localize "STR_ACE_Scopes_AdjustRight1mil",
+["ACE3", QGVAR(AdjustRightMajor), localize "STR_ACE_Scopes_AdjustRightMajor",
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
