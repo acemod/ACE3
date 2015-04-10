@@ -18,6 +18,10 @@ if (GVAR(currentUnit) != 2) then
 {
     _zeroRange = _zeroRange / 1.0936133;
 };
+if (_zeroRange < 10) exitWith {
+    (GVAR(workingMemory) select GVAR(currentTarget)) set [2, _zeroRange];
+    (GVAR(workingMemory) select GVAR(currentTarget)) set [3, 0];
+};
 
 private ["_temperature", "_barometricPressure", "_relativeHumidity"];
 _temperature = (GVAR(temperature) select GVAR(currentTarget));
