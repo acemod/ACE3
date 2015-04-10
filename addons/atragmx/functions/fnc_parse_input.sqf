@@ -31,7 +31,7 @@ _muzzleVelocity = 100 max _muzzleVelocity min 1400;
 
 (GVAR(workingMemory) select GVAR(currentTarget)) set [5, _boreHeight];
 (GVAR(workingMemory) select GVAR(currentTarget)) set [12, _bulletMass];
-if (EGVAR(advanced_ballistics,AdvancedBallistics) && EGVAR(advanced_ballistics,AdvancedAirDragEnabled)) then {
+if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false])) then {
     (GVAR(workingMemory) select GVAR(currentTarget)) set [15, _airFriction];
 } else {
     (GVAR(workingMemory) select GVAR(currentTarget)) set [4, _airFriction];
