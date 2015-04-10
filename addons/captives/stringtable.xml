@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2015-02-24 -->
 <Project name="ACE">
   <Package name="Captives">
@@ -133,10 +133,12 @@
     <Key ID="STR_ACE_Captives_StartSurrendering">
       <English>Surrender</English>
       <German>Kapitulieren</German>
+      <Portuguese>Render-se</Portuguese>
     </Key>
     <Key ID="STR_ACE_Captives_StopSurrendering">
       <English>Stop Surrendering</English>
       <German>Den Kampf erneut aufnehmen</German>
+      <Portuguese>Parar de se render</Portuguese>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
       <English>Only use on alive units</English>
@@ -149,6 +151,7 @@
     <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
       <English>Nothing under mouse</English>
       <German>Es wurde nichts ausgewählt</German>
+      <Portuguese>Nada debaixo do mouse</Portuguese>
     </Key>
   </Package>
 </Project>
