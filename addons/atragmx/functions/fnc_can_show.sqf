@@ -6,10 +6,10 @@
  * Nothing
  *
  * Return Value:
- * canShow (bool)
+ * can_show (bool)
  *
  * Example:
- * call ace_atragmx_fnc_canShow
+ * call ace_atragmx_fnc_can_show
  *
  * Public: No
  */

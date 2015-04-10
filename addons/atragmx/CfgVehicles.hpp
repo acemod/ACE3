@@ -5,11 +5,12 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(open) {
                     displayName = "$STR_ACE_ATragMX_OpenATragMXDialog";
-                    condition = QUOTE(call FUNC(canShow));
+                    condition = QUOTE(call FUNC(can_show));
                     statement = QUOTE(call FUNC(create_dialog));
                     showDisabled = 0;
                     priority = 2;
                     icon = PATHTOF(UI\ATRAG_Icon.paa);
+                    exceptions[] = {"notOnMap", "isNotInside"};
                 };
             };
         };
