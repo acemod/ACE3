@@ -93,6 +93,66 @@ if !(hasInterface) exitWith {};
 {false},
 [201, [false, true, false]], true] call cba_fnc_addKeybind;
 
+["ACE3", QGVAR(AdjustUp), localize "STR_ACE_Scopes_AdjustUp1mil",
+{
+    // Conditions: canInteract
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    // Conditions: specific
+    [ACE_player] call FUNC(inventoryCheck);
+    if !([ACE_player, 0, 1.0] call FUNC(canAdjustScope)) exitWith {false};
+
+    // Statement
+    [ACE_player, 0, 1.0] call FUNC(adjustScope);
+    true
+},
+{false},
+[201, [true, false, false]], true] call cba_fnc_addKeybind;
+
+["ACE3", QGVAR(AdjustDown), localize "STR_ACE_Scopes_AdjustDown1mil",
+{
+    // Conditions: canInteract
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    // Conditions: specific
+    [ACE_player] call FUNC(inventoryCheck);
+    if !([ACE_player, 0, -1.0] call FUNC(canAdjustScope)) exitWith {false};
+
+    // Statement
+    [ACE_player, 0, -1.0] call FUNC(adjustScope);
+    true
+},
+{false},
+[209, [true, false, false]], true] call cba_fnc_addKeybind;
+
+["ACE3", QGVAR(AdjustLeft), localize "STR_ACE_Scopes_AdjustLeft1mil",
+{
+    // Conditions: canInteract
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    // Conditions: specific
+    [ACE_player] call FUNC(inventoryCheck);
+    if !([ACE_player, -1.0, 0] call FUNC(canAdjustScope)) exitWith {false};
+
+    // Statement
+    [ACE_player, -1.0, 0] call FUNC(adjustScope);
+    true
+},
+{false},
+[209, [true, true, false]], true] call cba_fnc_addKeybind;
+
+["ACE3", QGVAR(AdjustRight), localize "STR_ACE_Scopes_AdjustRight1mil",
+{
+    // Conditions: canInteract
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    // Conditions: specific
+    [ACE_player] call FUNC(inventoryCheck);
+    if !([ACE_player, 1.0, 0] call FUNC(canAdjustScope)) exitWith {false};
+
+    // Statement
+    [ACE_player, 1.0, 0] call FUNC(adjustScope);
+    true
+},
+{false},
+[201, [true, true, false]], true] call cba_fnc_addKeybind;
+
 // init shortdot
 GVAR(showShortdot) = false;
 

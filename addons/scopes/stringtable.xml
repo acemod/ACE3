@@ -3,48 +3,92 @@
 <Project name="ACE">
   <Package name="Scopes">
     <Key ID="STR_ACE_Scopes_AdjustUp">
-      <English>Adjust Elevation Up</English>
-      <Hungarian>Magasság Állítása Felfelé</Hungarian>
-      <German>Optik-Elevation erhöhen</German>
-      <Portuguese>Ajustar Elevação Acima</Portuguese>
-      <French>Hausse +</French>
-      <Polish>Regulacja krzyża w pionie +</Polish>
-      <Czech>Zvýšit náměr</Czech>
-      <Spanish>Ajustar elevación arriba</Spanish>
-      <Russian>Вверх по вертикали</Russian>
+      <English>Adjust Elevation Up 0.1 mil</English>
+      <Hungarian>Magasság Állítása Felfelé 0.1 mil</Hungarian>
+      <German>Optik-Elevation erhöhen 0.1 mil</German>
+      <Portuguese>Ajustar Elevação Acima 0.1 mil</Portuguese>
+      <French>Hausse + 0.1 mil</French>
+      <Polish>Regulacja krzyża w pionie + 0.1 mil</Polish>
+      <Czech>Zvýšit náměr 0.1 mil</Czech>
+      <Spanish>Ajustar elevación arriba 0.1 mil</Spanish>
+      <Russian>Вверх по вертикали 0.1 mil</Russian>
     </Key>
     <Key ID="STR_ACE_Scopes_AdjustDown">
-      <English>Adjust Elevation Down</English>
-      <Hungarian>Magasság Állítása Lefelé</Hungarian>
-      <German>Optik-Elevation verringern</German>
-      <Portuguese>Ajustar Elevação Abaixo</Portuguese>
-      <French>Hausse -</French>
-      <Polish>Regulacja krzyża w pionie -</Polish>
-      <Czech>Snížit náměr</Czech>
-      <Spanish>Ajustar elevación abajo</Spanish>
-      <Russian>Вниз по вертикали</Russian>
+      <English>Adjust Elevation Down 0.1 mil</English>
+      <Hungarian>Magasság Állítása Lefelé 0.1 mil</Hungarian>
+      <German>Optik-Elevation verringern 0.1 mil</German>
+      <Portuguese>Ajustar Elevação Abaixo 0.1 mil</Portuguese>
+      <French>Hausse - 0.1 mil</French>
+      <Polish>Regulacja krzyża w pionie - 0.1 mil</Polish>
+      <Czech>Snížit náměr 0.1 mil</Czech>
+      <Spanish>Ajustar elevación abajo 0.1 mil</Spanish>
+      <Russian>Вниз по вертикали 0.1 mil</Russian>
     </Key>
     <Key ID="STR_ACE_Scopes_AdjustRight">
-      <English>Adjust Windage Right</English>
-      <Hungarian>Oldalirány Állítása Jobbra</Hungarian>
-      <German>Optik-Azimuth erhöhen</German>
-      <Portuguese>Ajustar Azimute à Direita</Portuguese>
-      <French>Dérive +</French>
-      <Polish>Regulacja krzyża w poziomie +</Polish>
-      <Czech>Náměr doprava (vítr)</Czech>
-      <Spanish>Ajustar deriva a la derecha</Spanish>
-      <Russian>Вправо на уровне</Russian>
+      <English>Adjust Windage Right 0.1 mil</English>
+      <Hungarian>Oldalirány Állítása Jobbra 0.1 mil</Hungarian>
+      <German>Optik-Azimuth erhöhen 0.1 mil</German>
+      <Portuguese>Ajustar Azimute à Direita 0.1 mil</Portuguese>
+      <French>Dérive + 0.1 mil</French>
+      <Polish>Regulacja krzyża w poziomie + 0.1 mil</Polish>
+      <Czech>Náměr doprava (vítr) 0.1 mil</Czech>
+      <Spanish>Ajustar deriva a la derecha 0.1 mil</Spanish>
+      <Russian>Вправо на уровне 0.1 mil</Russian>
     </Key>
     <Key ID="STR_ACE_Scopes_AdjustLeft">
-      <English>Adjust Windage Left</English>
-      <Hungarian>Oldalirány Állítása Balra</Hungarian>
-      <German>Optik-Azimuth verringern</German>
-      <Portuguese>Ajustar Azimute à Esquerda</Portuguese>
-      <French>Dérive -</French>
-      <Polish>Regulacja krzyża w poziomie -</Polish>
-      <Czech>Náměr doleva (vítr)</Czech>
-      <Spanish>Ajustar deriva a la izquierda</Spanish>
-      <Russian>Влево на уровне</Russian>
+      <English>Adjust Windage Left 0.1 mil</English>
+      <Hungarian>Oldalirány Állítása Balra 0.1 mil</Hungarian>
+      <German>Optik-Azimuth verringern 0.1 mil</German>
+      <Portuguese>Ajustar Azimute à Esquerda 0.1 mil</Portuguese>
+      <French>Dérive - 0.1 mil</French>
+      <Polish>Regulacja krzyża w poziomie - 0.1 mil</Polish>
+      <Czech>Náměr doleva (vítr) 0.1 mil</Czech>
+      <Spanish>Ajustar deriva a la izquierda 0.1 mil</Spanish>
+      <Russian>Влево на уровне 0.1 mil</Russian>
+    </Key>
+    <Key ID="STR_ACE_Scopes_AdjustUp1mil">
+      <English>Adjust Elevation Up 1 mil</English>
+      <Hungarian>Magasság Állítása Felfelé 1 mil</Hungarian>
+      <German>Optik-Elevation erhöhen 1 mil</German>
+      <Portuguese>Ajustar Elevação Acima 1 mil</Portuguese>
+      <French>Hausse + 1 mil</French>
+      <Polish>Regulacja krzyża w pionie + 1 mil</Polish>
+      <Czech>Zvýšit náměr 1 mil</Czech>
+      <Spanish>Ajustar elevación arriba 1 mil</Spanish>
+      <Russian>Вверх по вертикали 1 mil</Russian>
+    </Key>
+    <Key ID="STR_ACE_Scopes_AdjustDown1mil">
+      <English>Adjust Elevation Down 1 mil</English>
+      <Hungarian>Magasság Állítása Lefelé 1 mil</Hungarian>
+      <German>Optik-Elevation verringern 1 mil</German>
+      <Portuguese>Ajustar Elevação Abaixo 1 mil</Portuguese>
+      <French>Hausse - 1 mil</French>
+      <Polish>Regulacja krzyża w pionie - 1 mil</Polish>
+      <Czech>Snížit náměr 1 mil</Czech>
+      <Spanish>Ajustar elevación abajo 1 mil</Spanish>
+      <Russian>Вниз по вертикали 1 mil</Russian>
+    </Key>
+    <Key ID="STR_ACE_Scopes_AdjustRight1mil">
+      <English>Adjust Windage Right 1 mil</English>
+      <Hungarian>Oldalirány Állítása Jobbra 1 mil</Hungarian>
+      <German>Optik-Azimuth erhöhen 1 mil</German>
+      <Portuguese>Ajustar Azimute à Direita 1 mil</Portuguese>
+      <French>Dérive + 1 mil</French>
+      <Polish>Regulacja krzyża w poziomie + 1 mil</Polish>
+      <Czech>Náměr doprava (vítr) 1 mil</Czech>
+      <Spanish>Ajustar deriva a la derecha 1 mil</Spanish>
+      <Russian>Вправо на уровне 1 mil</Russian>
+    </Key>
+    <Key ID="STR_ACE_Scopes_AdjustLeft1mil">
+      <English>Adjust Windage Left 1 mil</English>
+      <Hungarian>Oldalirány Állítása Balra 1 mil</Hungarian>
+      <German>Optik-Azimuth verringern 1 mil</German>
+      <Portuguese>Ajustar Azimute à Esquerda 1 mil</Portuguese>
+      <French>Dérive - 1 mil</French>
+      <Polish>Regulacja krzyża w poziomie - 1 mil</Polish>
+      <Czech>Náměr doleva (vítr) 1 mil</Czech>
+      <Spanish>Ajustar deriva a la izquierda 1 mil</Spanish>
+      <Russian>Влево на уровне 1 mil</Russian>
     </Key>
   </Package>
 </Project>
