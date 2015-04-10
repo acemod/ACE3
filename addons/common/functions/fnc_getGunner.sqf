@@ -17,7 +17,7 @@ _vehicle = _this select 0;
 _weapon = _this select 1;
 
 // on foot
-if (gunner _vehicle == _vehicle && {_weapon in weapons _vehicle}) exitWith {gunner _vehicle};
+if (gunner _vehicle == _vehicle && {_weapon in weapons _vehicle || {toLower _weapon in ["throw", "put"]}}) exitWith {gunner _vehicle};
 
 // inside vehicle
 private "_gunner";
