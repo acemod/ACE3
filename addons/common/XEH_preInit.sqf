@@ -178,6 +178,9 @@ PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
 
+PREP(translateToWeaponSpace);
+PREP(translateToModelSpace);
+
 // config items
 PREP(getConfigType);
 PREP(getItemType);

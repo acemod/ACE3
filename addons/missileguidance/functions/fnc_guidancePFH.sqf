@@ -43,7 +43,7 @@ if(!isNil "_seekerTargetPos") then {
 
     _projectilePos = getPosASL _projectile;
         
-    _targetVectorSeeker = [_projectile, [_xVec, _yVec, _zVec], _profileAdjustedTargetPos] call FUNC(translateToWeaponSpace);
+    _targetVectorSeeker = [_projectile, [_xVec, _yVec, _zVec], _profileAdjustedTargetPos] call EFUNC(common,translateToWeaponSpace);
     _targetVector = [0,0,0] vectorFromTo _targetVectorSeeker;
     TRACE_1("", _targetVectorSeeker, _targetVector);
     
@@ -80,7 +80,7 @@ if(!isNil "_seekerTargetPos") then {
         // @TODO: Apply velocity multiplier to yaw/pitch. Basically, it can adjust faster at lower speeds
         //_adjustDeflection = (vectorMagnitude velocity _projectile);
         
-        _outVector = [_projectile, [_xVec, _yVec, _zVec], [_yaw, _adjustTime, _pitch]] call FUNC(translateToModelSpace);
+        _outVector = [_projectile, [_xVec, _yVec, _zVec], [_yaw, _adjustTime, _pitch]] call EFUNC(common,translateToModelSpace);
         _vectorTo = _projectilePos vectorFromTo _outVector;
         
         _projectile setVectorDirAndUp [_vectorTo, vectorUp _projectile];
