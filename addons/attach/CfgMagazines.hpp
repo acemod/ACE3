@@ -21,17 +21,14 @@ class CfgMagazines {
     };
 
     class Chemlight_blue: Chemlight_green {
-        ACE_Attachable = 1;
         ACE_attachable_effect = "Chemlight_blue";
     };
 
     class Chemlight_red: Chemlight_green {
-        ACE_Attachable = 1;
         ACE_attachable_effect = "Chemlight_red";
     };
 
     class Chemlight_yellow: Chemlight_green {
-        ACE_Attachable = 1;
         ACE_attachable_effect = "Chemlight_yellow";
     };
 };
