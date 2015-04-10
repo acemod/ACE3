@@ -1,22 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Laserpointer">
+
     <Key ID="STR_ACE_Laserpointer_red">
       <English>Laser Pointer (red)</English>
       <German>Laserpointer (rot)</German>
-      <Russian>Лазерный прицел (красный)</Russian>
     </Key>
     <Key ID="STR_ACE_Laserpointer_green">
       <English>Laser Pointer (green)</English>
       <German>Laserpointer (grün)</German>
-      <Russian>Лазерный прицел (зелёный)</Russian>
     </Key>
+
     <Key ID="STR_ACE_Laserpointer_Description">
       <English>Emits visible light. </English>
       <German>Strahlt sichtbares Licht aus. </German>
-      <Russian>Испускает узкий пучок видимого света.</Russian>
     </Key>
+
     <Key ID="STR_ACE_Laserpointer_useLaser">
       <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</English>
       <Czech>&lt;t color='#9cf953'&gt;Použití: &lt;/t&gt;Zapnout/vypnout laser</Czech>
@@ -28,5 +27,6 @@
       <Russian>&lt;t color='#9cf953'&gt;Использовать: &lt;/t&gt;вкл/выкл лазер</Russian>
       <Spanish>&lt;t color='#9cf953'&gt;Usar: &lt;/t&gt;encender/apagar láser</Spanish>
     </Key>
+
   </Package>
 </Project>

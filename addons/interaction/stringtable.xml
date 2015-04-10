@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
+<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
   <Package name="Interaction">
     <Key ID="STR_ACE_Interaction_MainAction">
@@ -616,7 +616,7 @@
       <Polish>Modyfikator</Polish>
       <French>Modifier la touche</French>
       <Spanish>Tecla modificadora</Spanish>
-      <Russian>Клавиша-модификатор</Russian>
+      <Russian>клавиша-модификатор</Russian>
       <Portuguese>Tecla Modificadora</Portuguese>
       <Italian>Modifica Tasto</Italian>
       <Hungarian>Módosító billentyű</Hungarian>
@@ -664,7 +664,6 @@
     <Key ID="STR_ACE_Interaction_Passengers">
       <English>Passengers</English>
       <German>Passagiere</German>
-      <Russian>Пассажиры</Russian>
     </Key>
   </Package>
 </Project>

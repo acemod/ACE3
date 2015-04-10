@@ -1,14 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
+<!-- Edited with tabler - 2014-12-20 -->
 <Project name="ACE">
   <Package name="WeaponSelect">
     <Key ID="STR_ACE_Weaponselect_SettingDisplayTextName">
       <English>Display text on grenade throw</English>
-      <Russian>Показывать текст при броске</Russian>
     </Key>
     <Key ID="STR_ACE_Weaponselect_SettingDisplayTextDesc">
       <English>Display a hint or text on grenade throw.</English>
-      <Russian>Показывать текст или подсказку при броске гранаты.</Russian>
     </Key>
     <Key ID="STR_ACE_WeaponSelect_SelectPistol">
       <English>Select Pistol</English>
@@ -228,7 +226,7 @@
       <Czech>Už nejsou žádné ostatní granáty</Czech>
       <Portuguese>Não há outras granadas restantes</Portuguese>
       <Italian>Nessun'altra granata rimanente.</Italian>
-      <Russian>Летальные гранаты закончились</Russian>
+      <Russian>Невзрывоопасные гранаты закончились</Russian>
     </Key>
     <Key ID="STR_ACE_WeaponSelect_NoGrenadeSelected">
       <English>No grenade selected</English>

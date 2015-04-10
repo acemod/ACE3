@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
+<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
   <Package name="Attach">
     <Key ID="STR_ACE_Attach_AttachDetach">
@@ -48,7 +48,7 @@
       <Portuguese>Marcador IV Acoplado</Portuguese>
       <Italian>Strobo IR attaccata</Italian>
       <Hungarian>Infravörös jeladó hozzácsatolva</Hungarian>
-      <Russian>ИК-маяк присоединён</Russian>
+      <Russian>ИК строб присоединён</Russian>
     </Key>
     <Key ID="STR_ACE_Attach_IrStrobe_Detached">
       <English>IR Strobe Detached</English>
@@ -60,7 +60,7 @@
       <Portuguese>Marcador IV Separado</Portuguese>
       <Italian>Strobo IR staccata</Italian>
       <Hungarian>Infravörös jeladó lecsatolva</Hungarian>
-      <Russian>ИК-маяк отсоединён</Russian>
+      <Russian>ИК строб отсоединён</Russian>
     </Key>
     <Key ID="STR_ACE_Attach_IrGrenade_Attached">
       <English>IR Grenade Attached</English>
@@ -72,7 +72,7 @@
       <Portuguese>Granada IV Acoplada</Portuguese>
       <Italian>Granata IR attaccata</Italian>
       <Hungarian>Infravörös gránát hozzácsatolva</Hungarian>
-      <Russian>ИК-граната присоединена</Russian>
+      <Russian>ИК граната присоединена</Russian>
     </Key>
     <Key ID="STR_ACE_Attach_IrGrenade_Detached">
       <English>IR Grenade Detached</English>
@@ -84,7 +84,7 @@
       <Portuguese>Granada IV Separada</Portuguese>
       <Italian>Granata IR staccata</Italian>
       <Hungarian>Infravörös gránát lecsatolva</Hungarian>
-      <Russian>ИК-граната отсоединена</Russian>
+      <Russian>ИК граната отсоединена</Russian>
     </Key>
     <Key ID="STR_ACE_Attach_Chemlight_Attached">
       <English>Chemlight Attached</English>
@@ -132,7 +132,7 @@
       <Portuguese>Marcador IV</Portuguese>
       <Italian>Strobo IR</Italian>
       <Hungarian>Infravörös jeladó</Hungarian>
-      <Russian>ИК-маяк</Russian>
+      <Russian>ИК строб</Russian>
     </Key>
     <Key ID="STR_ACE_IrStrobe_Description">
       <English>IR Strobe allows you to signal your position through a pulsating beacon only visible with NVGs.</English>
@@ -144,7 +144,7 @@
       <Portuguese>O Marcador IV permite que você sinalize sua posição através de um pulso visível somente com equipamento de visão noturna.</Portuguese>
       <Italian>La Strobo IR è una luce stroboscopica che ti permette di segnalare la tua posizione grazie all'emissione di impulsi ad infrarossi visibili solo con i visori notturni.</Italian>
       <Hungarian>Az infravörös jeladóval megjelölheted a helyzetedet úgy, hogy annak pulzáló fénye csak éjjellátó készülékkel látható.</Hungarian>
-      <Russian>ИК-маяк позволяет сигнализировать о своём местоположении через пульсирующий свет, видимый только через ПНВ.</Russian>
+      <Russian>ИК строб позволяет сигнализировать свое местоположение через пульсирующий маяк, видимый только через ПНВ.</Russian>
     </Key>
     <Key ID="STR_ACE_Attach_PlaceAction">
       <English>Place</English>
@@ -156,7 +156,6 @@
       <Portuguese>Colocar</Portuguese>
       <Italian>Posiziona</Italian>
       <Hungarian>Elhelyez</Hungarian>
-      <Russian>Установить</Russian>
     </Key>
     <Key ID="STR_ACE_Attach_CancelAction">
       <English>Cancel</English>
@@ -168,13 +167,12 @@
       <Portuguese>Cancelar</Portuguese>
       <Italian>Annulla</Italian>
       <Hungarian>Mégse</Hungarian>
-      <Russian>Отмена</Russian>
     </Key>
     <Key ID="STR_ACE_Attach_Failed">
       <English>Attach Failed</English>
       <French>Échec du Attacher</French>
       <German>Befestigen fehlgeschlagen</German>
-      <Russian>Соединение прервано</Russian>
+      <Russian>Присоединить Ошибка</Russian>
       <Spanish>Error al acoplar</Spanish>
     </Key>
   </Package>

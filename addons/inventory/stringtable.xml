@@ -1,16 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
+<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
   <Package name="Inventory">
     <Key ID="STR_ACE_Inventory_SettingName">
       <English>Make Inventory Display Bigger</English>
       <German>Die Anzeige des Inventar vergrößern.</German>
-      <Russian>Сделать окно инвентаря больше</Russian>
     </Key>
     <Key ID="STR_ACE_Inventory_SettingDescription">
       <English>Normally inventory display is scaled by UI size. This allows scaling the Inventory UI size up, but doesn't increase font size allowing more rows displayed.</English>
       <German>Normalerweise wird die Größe des Inventars mit der Größe der UI skaliert. Diese Einstellung allerdings vergrößert das Inventar bei gleichbleibender Schriftgröße, so dass mehr Einträge angzeigt werden können.</German>
-      <Russian>Обычно, окно инвентаря зависит от размеров пользовательского интерфейса. Эта настройка позволяет увеличить размер окна инвентаря в пользовательском интерфейсе, не увеличивая размера шрифтов, так что отображется большее количество строк.</Russian>
     </Key>
   </Package>
 </Project>

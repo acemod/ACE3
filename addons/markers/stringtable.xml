@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
+<!-- Edited with tabler - 2014-12-22 -->
 <Project name="ACE">
   <Package name="Markers">
     <Key ID="STR_ACE_Markers_MarkerDirection">
@@ -9,7 +9,7 @@
       <Czech>Směr: %1°</Czech>
       <Polish>Kierunek: %1°</Polish>
       <Spanish>Dirección: %1°</Spanish>
-      <Russian>Направление: %1°</Russian>
+      <Russian>Направление: %1</Russian>
     </Key>
   </Package>
 </Project>
