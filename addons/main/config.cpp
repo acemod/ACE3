@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+﻿#include "script_component.hpp"
 
 class CfgPatches {
     class ADDON {
@@ -546,7 +546,7 @@ class CfgPatches {
         author[] = {"ACE Team"};
         authorUrl = "";
         versionDesc = "A.C.E.";
-        versionAct = "['MAIN',_this] execVM '\z\ace\addons\main\about.sqf';";
+        versionAct = QUOTE(['MAIN',_this] execVM '\z\ace\addons\main\about.sqf';);
         VERSION_CONFIG;
     };
 };
