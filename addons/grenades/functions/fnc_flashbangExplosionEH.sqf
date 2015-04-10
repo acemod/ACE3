@@ -19,12 +19,14 @@ private ["_affected", "_strength", "_posGrenade", "_posUnit", "_angleGrenade", "
 
 PARAMS_1(_grenade);
 
-_affected = _grenade nearEntities ["CAManBase", 50];
+_affected = _grenade nearEntities ["CAManBase", 20];
 
 {
     if ((local _x) && {alive _x}) then {
 
         _strength = 1 - ((_x distance _grenade) min 15) / 15;
+
+        TRACE_3("FlashBangEffect Start",_x,(_x distance _grenade),_strength);
 
         if (_x != ACE_player) then {
             //must be AI
@@ -48,30 +50,31 @@ _affected = _grenade nearEntities ["CAManBase", 50];
             //Do effects for player
             // is there line of sight to the grenade?
             _posGrenade = getPosASL _grenade;
+            _eyePos = eyePos ACE_player; //PositionASL
             _posGrenade set [2, (_posGrenade select 2) + 0.2]; // compensate for grenade glitching into ground
-            if (lineIntersects [_posGrenade, getPosASL _x, _grenade, _x]) then {
+
+            //Check for line of sight:
+            if (lineIntersects [_posGrenade, _eyePos, _grenade, _x]) then {
                 _strength = _strength / 10;
             };
 
-            // beeeeeeeeeeeeeeeeeeeeeeeeeeeeep
-            if (isClass (configFile >> "CfgPatches" >> "ACE_Hearing") and _strength > 0) then {
+            //Add ace_hearing ear ringing sound effect
+            if ((isClass (configFile >> "CfgPatches" >> "ACE_Hearing")) && {_strength > 0}) then {
                 [_x, 0.5 + (_strength / 2)] call EFUNC(hearing,earRinging);
             };
 
             // account for people looking away by slightly
             // reducing the effect for visual effects.
-            _posUnit = getPos _x;
-            _posGrenade = getPos _grenade;
-            _angleGrenade = ((_posGrenade select 0) - (_posUnit select 0)) atan2 ((_posGrenade select 1) - (_posUnit select 1));
-            _angleGrenade = (_angleGrenade + 360) % 360;
+            _eyeDir = (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]);
+            _dirToUnitVector = _eyePos vectorFromTo _posGrenade;
+            _angleDiff = acos (_eyeDir vectorDotProduct _dirToUnitVector);
 
-            _angleView = (eyeDirection ACE_player select 0) atan2 (eyeDirection ACE_player select 1);
-            _angleView = (_angleView + 360) % 360;
+            //From 0-45deg, full effect
+            if (_angleDiff > 45) then {
+                _strength = _strength - _strength * ((_angleDiff - 45) / 120);
+            };
 
-            _angleDiff = 180 - abs (abs (_angleGrenade - _angleView) - 180);
-            _angleDiff = ((_angleDiff - 45) max 0);
-
-            _strength = _strength - _strength * (_angleDiff  / 135);
+            TRACE_1("Final strength for player %1",_strength);
 
             // create flash to illuminate environment
             _light = "#lightpoint" createVehicleLocal (getPos _grenade);
