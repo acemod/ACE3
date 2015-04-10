@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-21 -->
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Dragging">
     <Key ID="STR_ACE_Dragging_Drag">
@@ -40,6 +40,7 @@
       <Portuguese>Não é possível carregar o item devido a seu peso</Portuguese>
       <Italian>Non è possibile trascinare l'oggetto a causa del suo peso</Italian>
       <Hungarian>Túl nehéz ahhoz, hogy elhúzd</Hungarian> -->
+      <Russian>Слишком тяжело</Russian>
     </Key>
     <Key ID="STR_ACE_Dragging_Carry">
       <English>Carry</English>

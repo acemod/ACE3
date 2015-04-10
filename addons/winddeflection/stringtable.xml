@@ -1,32 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<Project name="ACE"> 
-	<Package name="WindDeflection">
-		<Container ID="Weather_Meter">
-			<Key ID="STR_ACE_WEATHER_METER_WIND_CATEGORY"> 
-				<English>Wind Information</English>
-				<Polish>Informacje o wietrze</Polish>
-				<Spanish>Información del viento</Spanish>
-			</Key>
-			<Key ID="STR_ACE_WEATHER_METER_WIND_DIRECTION">
-				<English>Direction: %1</English>
-				<Polish>Kierunek: %1</Polish>
-				<Spanish>Dirección: %1</Spanish>
-			</Key>
-			<Key ID="STR_ACE_WEATHER_METER_WIND_SPEED">
-				<English>Speed: %1 m/s</English>
-				<Polish>Prędkość: %1</Polish>
-				<Spanish>Velocidad: %1 m/s</Spanish>
-			</Key>
-			<Key ID="STR_ACE_WEATHER_METER_WEATHER_CATEGORY">
-				<English>Weather Information</English>
-				<Polish>Informacje o pogodzie</Polish>
-				<Spanish>Información Meteorológica</Spanish>
-			</Key>
-			<Key ID="STR_ACE_WEATHER_METER_WEATHER_HUMIDITY">
-				<English>Humidity: %1%</English>
-				<Polish>Wilgotność: %1</Polish>
-				<Spanish>Humedad: %1%</Spanish>
-			</Key>
-		</Container>
-	</Package> 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2015-04-10 -->
+<Project name="ACE">
+  <Package name="WindDeflection">
+    <Container ID="Weather_Meter">
+      <Key ID="STR_ACE_WEATHER_METER_WIND_CATEGORY">
+        <English>Wind Information</English>
+        <Polish>Informacje o wietrze</Polish>
+        <Spanish>Información del viento</Spanish>
+        <Russian>Ветер</Russian>
+      </Key>
+      <Key ID="STR_ACE_WEATHER_METER_WIND_DIRECTION">
+        <English>Direction: %1</English>
+        <Polish>Kierunek: %1</Polish>
+        <Spanish>Dirección: %1</Spanish>
+        <Russian>Направление:</Russian>
+      </Key>
+      <Key ID="STR_ACE_WEATHER_METER_WIND_SPEED">
+        <English>Speed: %1 m/s</English>
+        <Polish>Prędkość: %1</Polish>
+        <Spanish>Velocidad: %1 m/s</Spanish>
+        <Russian>Скорость: %1 м/с</Russian>
+      </Key>
+      <Key ID="STR_ACE_WEATHER_METER_WEATHER_CATEGORY">
+        <English>Weather Information</English>
+        <Polish>Informacje o pogodzie</Polish>
+        <Spanish>Información Meteorológica</Spanish>
+        <Russian>Погода</Russian>
+      </Key>
+      <Key ID="STR_ACE_WEATHER_METER_WEATHER_HUMIDITY">
+        <English>Humidity: %1%</English>
+        <Polish>Wilgotność: %1</Polish>
+        <Spanish>Humedad: %1%</Spanish>
+        <Russian>Влажность: %1%</Russian>
+      </Key>
+    </Container>
+  </Package>
 </Project>
