@@ -134,6 +134,7 @@
       <English>Surrender</English>
       <German>Kapitulieren</German>
       <Spanish>Rendirse</Spanish>
+      <Russian>Сдаться</Russian>
     </Key>
     <Key ID="STR_ACE_Captives_StopSurrendering">
       <English>Stop Surrendering</English>
