@@ -4,21 +4,27 @@
   <Package name="microdagr">
     <Key ID="STR_ACE_microdagr_itemName">
       <English>MicroDAGR GPS</English>
+      <French>GPS MicroDAGR</French>
     </Key>
     <Key ID="STR_ACE_microdagr_itemDescription">
       <English>MicroDAGR advanced GPS receiver</English>
+      <French>MicroDAGR un GPS avancé</French>
     </Key>
     <Key ID="STR_ACE_microdagr_settingUseMils">
       <English>Angular Unit:</English>
+      <French>Unité angulaire:</French>
     </Key>
     <Key ID="STR_ACE_microdagr_settingMils">
       <English>Mils</English>
+      <French>Mils</French>
     </Key>
     <Key ID="STR_ACE_microdagr_settingShowWP">
       <English>Show Waypoints On Map:</English>
+      <French>Afficher les points de passage sur la carte :</French>
     </Key>
     <Key ID="STR_ACE_microdagr_settingDegrees">
       <English>Degrees</English>
+      <French>Degrés</French>
     </Key>
     <Key ID="STR_ACE_microdagr_settingOn">
       <English>On</English>
@@ -44,35 +50,45 @@
     </Key>
     <Key ID="STR_ACE_microdagr_wpEnterCords">
       <English>Enter Grid Cords:</English>
+      <French>Entrer Grid Cords :</French>
     </Key>
     <Key ID="STR_ACE_microdagr_wpEnterName">
       <English>Name of [%1]</English>
+      <French>Nom de [%1]</French>
     </Key>
     <Key ID="STR_ACE_microdagr_controlMGRS">
       <English>MGRS-New</English>
+      <French>Nouveau MGRS</French>
     </Key>
     <Key ID="STR_ACE_microdagr_controlWGD">
       <English>WGD</English>
+      <French>WGD</French>
     </Key>
     <Key ID="STR_ACE_microdagr_controlRange">
       <English>Range:</English>
+      <French>Distance :</French>
       <German>Reichweite:</German>
     </Key>
     <Key ID="STR_ACE_microdagr_compasDirection">
       <English>Compass Direction</English>
+      <French>Direction de la boussole</French>
     </Key>
     <Key ID="STR_ACE_microdagr_menuMark">
       <English>Mark</English>
+      <French>Marqueur</French>
     </Key>
     <Key ID="STR_ACE_microdagr_menuWaypoints">
       <English>Waypoints</English>
+      <French>Point de passage</French>
       <German>Wegpunkte</German>
     </Key>
     <Key ID="STR_ACE_microdagr_menuConnectTo">
       <English>Connect To</English>
+      <French>Connexion a</French>
     </Key>
     <Key ID="STR_ACE_microdagr_menuSettings">
       <English>Settings</English>
+      <French>Paramètres</French>
       <German>Einstellungen</German>
       <Spanish>Configuración</Spanish>
     </Key>
@@ -81,6 +97,7 @@
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsAdd">
       <English>Add</English>
+      <French>Ajouter</French>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsDelete">
       <English>Delete</English>
@@ -95,15 +112,19 @@
     </Key>
     <Key ID="STR_ACE_microdagr_toggleUnit">
       <English>Toggle MicroDAGR Display Mode</English>
+      <French>Basculer sur l'affichage du MicroDAGR</French>
     </Key>
     <Key ID="STR_ACE_microdagr_show">
       <English>Show MicoDAGR</English>
+      <French>Afficher le MicroDAGR</French>
     </Key>
     <Key ID="STR_ACE_microdagr_configure">
       <English>Configure MicroDAGR</English>
+      <French>Configurer le MicroDAGR</French>
     </Key>
     <Key ID="STR_ACE_microdagr_closeUnit">
       <English>Close MicroDAGR</English>
+      <French>Fermer le MicroDAGR</French>
     </Key>
   </Package>
 </Project>
