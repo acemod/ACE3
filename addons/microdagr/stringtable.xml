@@ -4,21 +4,27 @@
   <Package name="microdagr">
     <Key ID="STR_ACE_microdagr_itemName">
       <English>MicroDAGR GPS</English>
+      <Spanish>GPS MicroDAGR</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_itemDescription">
       <English>MicroDAGR advanced GPS receiver</English>
+      <Spanish>Receptor avanzado GPS MicroDAGR</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_settingUseMils">
       <English>Angular Unit:</English>
+      <Spanish>Unidad angular:</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_settingMils">
       <English>Mils</English>
+      <Spanish>Mils</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_settingShowWP">
       <English>Show Waypoints On Map:</English>
+      <Spanish>Mostrar puntos de ruta en el mapa:</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_settingDegrees">
       <English>Degrees</English>
+      <Spanish>Grados</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_settingOn">
       <English>On</English>
@@ -29,7 +35,7 @@
       <Polish>Wł.</Polish>
       <Portuguese>Ativar</Portuguese>
       <Russian>Вкл.</Russian>
-      <Spanish>Sí</Spanish>
+      <Spanish>Encendido</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_settingOff">
       <English>Off</English>
@@ -40,36 +46,45 @@
       <Polish>Wył.</Polish>
       <Portuguese>Desativar</Portuguese>
       <Russian>Выкл.</Russian>
-      <Spanish>No</Spanish>
+      <Spanish>Apagado</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_wpEnterCords">
       <English>Enter Grid Cords:</English>
+      <Spanish>Introducir coordenadas de cuadrícula:</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_wpEnterName">
       <English>Name of [%1]</English>
+      <Spanish>Nombre de [%1]</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_controlMGRS">
       <English>MGRS-New</English>
+      <Spanish>Nuevo-MGRS</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_controlWGD">
       <English>WGD</English>
+      <Spanish>WGD</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_controlRange">
       <English>Range:</English>
+      <Spanish>Distancia</Spanish>
       <German>Reichweite:</German>
     </Key>
     <Key ID="STR_ACE_microdagr_compasDirection">
       <English>Compass Direction</English>
+      <Spanish>Dirección de la brújula</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_menuMark">
       <English>Mark</English>
+      <Spanish>Marca</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_menuWaypoints">
       <English>Waypoints</English>
+      <Spanish>Puntos de ruta</Spanish>
       <German>Wegpunkte</German>
     </Key>
     <Key ID="STR_ACE_microdagr_menuConnectTo">
       <English>Connect To</English>
+      <Spanish>Conectar a</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_menuSettings">
       <English>Settings</English>
@@ -78,9 +93,11 @@
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsSet">
       <English>SetWP</English>
+      <Spanish>Establecer PR</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsAdd">
       <English>Add</English>
+      <Spanish>Añadir</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsDelete">
       <English>Delete</English>
@@ -91,19 +108,23 @@
       <Polish>Usuń</Polish>
       <Portuguese>Excluir</Portuguese>
       <Russian>Удалить</Russian>
-      <Spanish>Suprimir</Spanish>
+      <Spanish>Borrar</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_toggleUnit">
       <English>Toggle MicroDAGR Display Mode</English>
+      <Spanish>Conmutar modo de pantalla del MicroDAGR</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_show">
       <English>Show MicoDAGR</English>
+      <Spanish>Mostrar MicroDAGR</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_configure">
       <English>Configure MicroDAGR</English>
+      <Spanish>Configurar MicroDAGR</Spanish>
     </Key>
     <Key ID="STR_ACE_microdagr_closeUnit">
       <English>Close MicroDAGR</English>
+      <Spanish>Cerrar MicroDAGR</Spanish>
     </Key>
   </Package>
 </Project>
