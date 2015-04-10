@@ -22,11 +22,11 @@ TRACE_2("", _distanceToTarget, _distanceToShooter);
 _addHeight = [0,0,0];
 
 // Always climb an arc on initial launch if we are close to the round
-if( ((ASLtoATL _projectilePos) select 2) < 50 && _distanceToShooter < 50) then {
+if( ((ASLtoATL _projectilePos) select 2) < 140 && _distanceToShooter < 50) then {
         _addHeight = _addHeight vectorAdd [0,0,_distanceToTarget];
 } else {
     // If we are below the target, increase the climbing arc
-    if((_projectilePos select 2) < (_seekerTargetPos select 2) && _distanceToTarget > 100) then {
+    if((_projectilePos select 2) < (_seekerTargetPos select 2) + 140 && _distanceToTarget > 100) then {
         _addHeight = _addHeight vectorAdd [0,0, ((_seekerTargetPos select 2) - (_projectilePos select 2))+50];
     };
 };
@@ -36,7 +36,7 @@ if( (_projectilePos select 2) > (_seekerTargetPos select 2) && _distanceToTarget
     _addHeight = _addHeight vectorDiff [0,0, ((_projectilePos select 2) - (_seekerTargetPos select 2)) * 0.5];
 } else {
     if((_projectilePos select 2) > (_seekerTargetPos select 2) && _distanceToTarget > 100) then {
-        _addHeight = _addHeight vectorAdd [0,0, _distanceToTarget*0.02];
+       _addHeight = _addHeight vectorDiff [0,0, ((_projectilePos select 2) - (_seekerTargetPos select 2)) * 0.5];
     };
 };
 

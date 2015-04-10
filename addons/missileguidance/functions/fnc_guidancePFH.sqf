@@ -77,6 +77,9 @@ if(!isNil "_seekerTargetPos") then {
         _adjustTime = _adjustTime *  (_runtimeDelta / TIMESTEP_FACTOR);
         TRACE_4("Adjust timing", 1/accTime, _adjustTime, _runtimeDelta, (_runtimeDelta / TIMESTEP_FACTOR) );
         
+        // @TODO: Apply velocity multiplier to yaw/pitch. Basically, it can adjust faster at lower speeds
+        //_adjustDeflection = (vectorMagnitude velocity _projectile);
+        
         _outVector = [_projectile, [_xVec, _yVec, _zVec], [_yaw, _adjustTime, _pitch]] call FUNC(translateToModelSpace);
         _vectorTo = _projectilePos vectorFromTo _outVector;
         

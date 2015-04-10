@@ -9,15 +9,11 @@ class CfgAmmo {
     class M_PG_AT : MissileBase {
         model = "\A3\Weapons_F\Ammo\Rocket_01_fly_F";
 		proxyShape = "\A3\Weapons_F\Ammo\Rocket_01_F";
-        
+
         irLock = 0;
 		laserLock = 0;
 		airLock = 0;
 		weaponLockSystem = "2 + 16";
-        
-        hit = 600;
-		indirectHit = 50;
-		indirectHitRange = 4;
 
 		maxSpeed = 720;
 		maxControlRange = 5000;
@@ -29,7 +25,7 @@ class CfgAmmo {
 		initTime = 0.002;
 		thrustTime = 1.07;
 		thrust = 530;
-		fuseDistance = 5;
+		fuseDistance = 2;
         
 		effectsMissileInit = "MissileDAR1";
 		effectsMissile = "missile2";
@@ -132,7 +128,7 @@ class CfgAmmo {
             seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
             
             // Attack profile type selection
-            defaultAttackProfile = "TOP";
+            defaultAttackProfile = "LIN";
             attackProfiles[] = { "TOP", "LIN" };
         };
     };

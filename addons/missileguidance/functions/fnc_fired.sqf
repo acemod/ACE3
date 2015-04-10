@@ -35,7 +35,6 @@ if ( isNil "_attackProfile" || { ! ( _attackProfile in (getArray (_config >> "at
 if ( isNil "_lockMode" || { ! ( _lockMode in (getArray (_config >> "seekerLockModes" ) ) ) } ) then { 
     _lockMode = getText (_config >> "defaultSeekerLockMode"); 
 };
- 
 
 TRACE_4("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile);
 [FUNC(guidancePFH), 0, [_this, 
@@ -58,3 +57,10 @@ TRACE_4("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile
                             [ diag_tickTime ]
                         ]
 ] call cba_fnc_addPerFrameHandler;
+
+/* Clears locking settings
+(vehicle _shooter) setVariable [QGVAR(target), nil];
+(vehicle _shooter) setVariable [QGVAR(seekerType), nil];
+(vehicle _shooter) setVariable [QGVAR(attackProfile), nil];
+(vehicle _shooter) setVariable [QGVAR(lockMode), nil];
+*/
