@@ -13,7 +13,6 @@
 ADDON = false;
 
 PREP(handleFired);
-PREP(initalizeModule);
 PREP(updateTrajectoryPFH);
 
 ADDON = true;

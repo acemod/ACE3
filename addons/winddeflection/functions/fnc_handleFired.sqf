@@ -30,7 +30,7 @@ _bullet = _this select 6;
 if (!hasInterface) exitWith {false};
 if (!(_bullet isKindOf "BulletBase")) exitWith {false};
 if (_unit distanceSqr ACE_player > 9000000) exitWith {false};
-if (!GVAR(EnableForAI) && !([_unit] call EFUNC(common,isPlayer))) exitWith {false}; // TODO: Remove this?
+if (!([_unit] call EFUNC(common,isPlayer))) exitWith {false};
 
 [_bullet, getNumber(configFile >> "cfgAmmo" >> (_this select 4) >> "airFriction")] call FUNC(updateTrajectoryPFH);
 
