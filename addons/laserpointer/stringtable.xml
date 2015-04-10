@@ -5,15 +5,18 @@
     <Key ID="STR_ACE_Laserpointer_red">
       <English>Laser Pointer (red)</English>
       <German>Laserpointer (rot)</German>
+      <Portuguese>Laser (vermelho)</Portuguese>
     </Key>
     <Key ID="STR_ACE_Laserpointer_green">
       <English>Laser Pointer (green)</English>
       <German>Laserpointer (grün)</German>
+      <Portuguese>Laser (verde)</Portuguese>
     </Key>
 
     <Key ID="STR_ACE_Laserpointer_Description">
       <English>Emits visible light. </English>
       <German>Strahlt sichtbares Licht aus. </German>
+      <Portuguese>Emite luz visível</Portuguese>
     </Key>
 
     <Key ID="STR_ACE_Laserpointer_useLaser">
