@@ -1,15 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-07 -->
+<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Wirecutter">
     <Key ID="STR_ACE_logistics_wirecutter_wirecutterName">
       <English>Wirecutter</English>
       <German>Drahtschneider</German>
       <Spanish>Wirecutter</Spanish>
+      <Russian>Клещи-кусачки</Russian>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_wirecutterDescription">
       <English>Wirecutter</English>
       <German>Schneidet Draht.</German>
+      <Russian>Позволяют быстро перекусывать сеточные конструкции.</Russian>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_CutFence">
       <English>Cut Fence</English>
@@ -21,7 +23,7 @@
       <Portuguese>Cortar Cerca</Portuguese>
       <Italian>Taglia</Italian>
       <Hungarian>Drótkerítés átvágása</Hungarian>
-      <Russian>Вырезать забор</Russian>
+      <Russian>Разрезать забор</Russian>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_CuttingFence">
       <English>Cutting Fences / Wires ...</English>
@@ -33,7 +35,7 @@
       <Portuguese>Cortando Cerca / Arame ...</Portuguese>
       <Italian>Sto tagliando ...</Italian>
       <Hungarian>Drótok elvágása ...</Hungarian>
-      <Russian>Вырезаем забор / провода ...</Russian>
+      <Russian>Разрезаем забор / провода ...</Russian>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_FenceCut">
       <English>Fence cut</English>
@@ -45,7 +47,7 @@
       <Portuguese>Cerca cortada</Portuguese>
       <Italian>Fatto!</Italian>
       <Hungarian>Drótkerítés átvágva</Hungarian>
-      <Russian>Забор вырезан</Russian>
+      <Russian>Забор разрезан</Russian>
     </Key>
   </Package>
 </Project>

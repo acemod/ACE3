@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-17 -->
+<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Overheating">
     <Key ID="STR_ACE_overheating_SettingDisplayTextName">
       <English>Display text on jam</English>
+      <Russian>Показывать текст, когда клинит оружие</Russian>
     </Key>
     <Key ID="STR_ACE_overheating_SettingDisplayTextDesc">
       <English>Display a notification whenever your weapon gets jammed</English>
+      <Russian>Демонстровать уведомление, каждый раз, когда клинит Ваше оружие.</Russian>
     </Key>
     <Key ID="STR_ACE_Overheating_SpareBarrelName">
       <English>Spare barrel</English>
