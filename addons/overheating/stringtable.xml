@@ -4,9 +4,11 @@
   <Package name="Overheating">
     <Key ID="STR_ACE_overheating_SettingDisplayTextName">
       <English>Display text on jam</English>
+      <Polish>Wyświetl tekst przy zacięciu broni</Polish>
     </Key>
     <Key ID="STR_ACE_overheating_SettingDisplayTextDesc">
       <English>Display a notification whenever your weapon gets jammed</English>
+      <Polish>Wyświetl powiadomienie za każdym razem, kiedy Twoja broń ulegnie zacięciu</Polish>
     </Key>
     <Key ID="STR_ACE_Overheating_SpareBarrelName">
       <English>Spare barrel</English>
