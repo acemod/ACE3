@@ -33,15 +33,19 @@ GVAR(Module) = true;
 if (isServer) then {
     if (GVAR(RemoveDeadBodiesDisconnected)) then {
         _fnc_deleteDisconnected = {
-            _this spawn {
-                _unit = _this select 0;
+            [
+                {
+                  _unit = (_this select 0) select 0;
 
-                sleep 4;
-
-                if (!alive _unit) then {
+                  if (!alive _unit) then {
                     deleteVehicle _unit;
-                };
-            };
+
+                    [_this select 0] call CBA_fnc_removePerFrameHandler;
+                  };
+                },
+                4,
+                [_this]
+            ] call CBA_fnc_addPerFrameHandler
             false
         };
 
