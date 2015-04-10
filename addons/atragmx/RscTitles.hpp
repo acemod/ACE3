@@ -942,7 +942,7 @@ class ATragMX_Display {
             y=0.265*safezoneH+safezoneY+0.2;
             colorBackground[]={0,0,0,0};
             colorBackgroundActive[]={0,0,0,0};
-            action=QUOTE(GVAR(speedAssistTimer=false));
+            action=QUOTE(GVAR(speedAssistTimer)=false);
         };
         class TEXT_TARGET_SPEED_ASSIST_TIME_OUTPUT: ATragMX_RscText {
             idc=9001;
@@ -964,7 +964,7 @@ class ATragMX_Display {
             colorBackground[]={0.15,0.21,0.23,0.3};
             colorFocused[]={0.15,0.21,0.23,0.2};
             text="Stop";
-            action=QUOTE(GVAR(speedAssistTimer=false));
+            action=QUOTE(GVAR(speedAssistTimer)=false);
         };
 
         class TEXT_RANGE_CARD_SETUP_START_RANGE: TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE {
