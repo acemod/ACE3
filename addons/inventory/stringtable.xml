@@ -4,7 +4,7 @@
   <Package name="Inventory">
     <Key ID="STR_ACE_Inventory_SettingName">
       <English>Make Inventory Display Bigger</English>
-      <French>Agrandir la taille de l'affichage de l'inventaire</French>
+      <French>Agrandir la taille d'affichage de l'inventaire</French>
       <German>Die Anzeige des Inventar vergrößern.</German>
     </Key>
     <Key ID="STR_ACE_Inventory_SettingDescription">
