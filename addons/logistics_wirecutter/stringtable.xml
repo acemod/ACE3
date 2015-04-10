@@ -6,9 +6,11 @@
       <English>Wirecutter</English>
       <German>Drahtschneider</German>
       <Spanish>Wirecutter</Spanish>
+      <Polish>Nożyce do cięcia drutu</Polish>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_wirecutterDescription">
       <English>Wirecutter</English>
+      <Polish>Służą do... cięcia drutu i płotów</Polish>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_CutFence">
       <English>Cut Fence</English>
