@@ -46,7 +46,7 @@ GVAR(AssignedItemsInfo) = [];
             case ("radio"): {
                 _shownItems set [3, false];
             };
-            case ("GPS"): {
+            case ("gps"): {
                 _shownItems set [4, false];
             };
         };
