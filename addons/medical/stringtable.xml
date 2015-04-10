@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-03-23 -->
+<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Medical">
     <Container name="Basic">
       <Key ID="STR_ACE_Medical_Inject_Atropine">
         <English>Inject Atropine</English>
+        <French>Injecter de l'atropine</French>
       </Key>
       <Key ID="STR_ACE_Medical_Inject_Epinephrine">
         <English>Inject Epinephrine</English>
@@ -44,12 +45,15 @@
       </Key>
       <Key ID="STR_ACE_Medical_Transfuse_Plasma">
         <English>Transfuse Plasma</English>
+        <French>Transfuser du Plasma</French>
       </Key>
       <Key ID="STR_ACE_Medical_Transfuse_Saline">
         <English>Transfuse Saline</English>
+        <French>Transfuser de la Saline</French>
       </Key>
       <Key ID="STR_ACE_Medical_Apply_Tourniquet">
         <English>Apply Tourniquet</English>
+        <French>Appliquer un garrot</French>
       </Key>
       <Key ID="STR_ACE_Medical_Bandage">
         <English>Bandage</English>
@@ -161,6 +165,7 @@
       </Key>
       <Key ID="STR_ACE_Medical_Injecting_Atropine">
         <English>Injecting Atropine ...</English>
+        <French>Injection d'Atropine ...</French>
       </Key>
       <Key ID="STR_ACE_Medical_Transfusing_Blood">
         <English>Transfusing Blood ...</English>
@@ -176,9 +181,11 @@
       </Key>
       <Key ID="STR_ACE_Medical_Transfusing_Saline">
         <English>Transfusing Saline ...</English>
+        <French>Transfusion de saline ...</French>
       </Key>
       <Key ID="STR_ACE_Medical_Transfusing_Plasma">
         <English>Transfusing Plasma ...</English>
+        <French>Transfusion de Plasma ...</French>
       </Key>
       <Key ID="STR_ACE_Medical_Bandaging">
         <English>Bandaging ...</English>
@@ -194,6 +201,7 @@
       </Key>
       <Key ID="STR_ACE_Medical_Applying_Tourniquet">
         <English>Applying Tourniquet ...</English>
+        <French>Mise en place du garrot</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Medical">
         <English>Medical</English>
@@ -208,74 +216,94 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_FieldDressing">
         <English>Field Dressing</English>
+        <FRENCH>Bandage rapide</FRENCH>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_PackingBandage">
         <English>Packing Bandage</English>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_ElasticBandage">
         <English>Elastic Bandage</English>
+        <French>Bandage Élastique</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_QuikClot">
         <English>QuikClot</English>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckPulse">
         <English>Check Pulse</English>
+        <French>Vérifier les pulsations</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure">
         <English>Check Blood Pressure</English>
+        <French>Vérifier la pression sanguine</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_TriageCard">
         <English>Triage Card</English>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Tourniquet">
         <English>Tourniquet</English>
+        <French>Garrot</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet">
         <English>Remove Tourniquet</English>
+        <French>Enlever le garrot</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_1000">
         <English>Give Blood IV (1000ml)</English>
+        <French>Mettre une poche de Sang IV (1000ml)</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_500">
         <English>Give Blood IV (500ml)</English>
+        <French>Mettre une poche de Sang IV (500ml)</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_250">
         <English>Give Blood IV (250ml)</English>
+        <French>Mettre une poche de Sang IV (250ml)</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_1000">
         <English>Give Plasma IV (1000ml)</English>
+        <French>Mettre une poche de Plasma IV (1000ml)</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_500">
         <English>Give Plasma IV (500ml)</English>
+        <French>Mettre une poche de Plasma IV (500ml)</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_250">
         <English>Give Plasma IV (250ml)</English>
+        <French>Mettre une poche de Plasma IV (250ml)</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_1000">
         <English>Give Saline IV (1000ml)</English>
+        <French>Mettre une poche de Saline IV (1000ml)</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_500">
         <English>Give Saline IV (500ml)</English>
+        <French>Mettre une poche de Saline IV (500ml)</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_250">
         <English>Give Saline IV (250ml)</English>
+        <French>Mettre une poche de Saline IV (250ml)</French>
       </Key>
     </Container>
     <Container name="UI">
       <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_MINOR">
         <English>Minor</English>
+        <French>Mineur</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DELAYED">
         <English>Delayed</English>
+        <French>Délayé</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_IMMEDIATE">
         <English>Immediate</English>
+        <French>Immédiat</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DECEASED">
         <English>Deceased</English>
+        <French>Décédé</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_NONE">
         <English>None</English>
+        <French>Aucun</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_NORMAL_BREATHING">
         <English>Normal breathing</English>
@@ -330,11 +358,12 @@
         <English>Tourniquet [CAT]</English>
         <Russian>Жгут</Russian>
         <Spanish>Torniquete [CAT]</Spanish>
-        <French>Garot [CAT]</French>
+        <French>Garrot [CAT]</French>
         <Polish>Opaska uciskowa [CAT]</Polish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_receivingIvVolume">
         <English>Receiving IV [%1ml]</English>
+        <French>Réception IV [%1ml]</French>
       </Key>
     </Container>
     <Container name="CfgWeapons">
@@ -633,31 +662,37 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_SURGICALKIT_DISPLAY">
         <English>Surgical Kit</English>
+        <French>Kit de chirurgien</French>
         <Russian>Хирургический набор</Russian>
         <Spanish>Kit Quirúrgico</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_SURGICALKIT_DESC_SHORT">
         <English>Surgical Kit for in field advanced medical treatment</English>
+        <French>Kit de chirurgien pour les soins avancés sur le terrain</French>
         <Russian>Набор для хирургической помощи в полевых условиях</Russian>
         <Spanish>Kit Quirúrgico para el tratamiento avanzado en el campo de batalla</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_SURGICALKIT_DESC_USE">
+        <English>Surgical Kit for in field advanced medical treatment</English>
         <English>Surgical Kit for in field advanced medical treatment</English>
         <Russian>Набор для хирургической помощи в полевых условиях</Russian>
         <Spanish>Kit Quirúrgico para el tratamiento avanzado en el campo de batalla</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_BODYBAG_DISPLAY">
         <English>Bodybag</English>
+        <French>Sac à corps</French>
         <Russian>Мешок для трупов</Russian>
         <Spanish>Bolsa para cadáveres</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_BODYBAG_DESC_SHORT">
         <English>A bodybag for dead bodies</English>
+        <French>Un sac pour les cadavres</French>
         <Russian>Мешок для упаковки трупов</Russian>
         <Spanish>Bolsa para cadáveres</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_BODYBAG_DESC_USE">
         <English>A bodybag for dead bodies</English>
+        <French>Un sac pour les cadavres</French>
         <Russian>Мешок для упаковки трупов</Russian>
         <Spanish>Bolsa para cadáveres</Spanish>
       </Key>
@@ -665,126 +700,151 @@
     <Container name="Actions">
       <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE">
         <English>Blood Pressure</English>
+        <French>Pression sanguine</French>
         <Russian>Артериальное давление</Russian>
         <Spanish>Presión Arterial</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CONTENT">
         <English>Checking Blood Pressure..</English>
+        <French>Vérification de la pression sanguine</French>
         <Russian>Проверка артериального давления...</Russian>
         <Spanish>Comprobando Presión Arterial...</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CHECKED_MEDIC">
         <English>You checked %1</English>
+        <French>Vous diagnostiquez %1</French>
         <Russian>Вы осмотрели раненого %1</Russian>
         <Spanish>Examinando a %1</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_1">
         <English>You find a blood pressure of %2/%3</English>
+        <French>Vous pris une pression sanguine de %2/%3<French>
         <Russian>Артериальное давление %2/%3</Russian>
         <Spanish>La Presión Arterial es %2/%3</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_2">
         <English>You find a low blood pressure</English>
+        <French>Vous avez trouvé une pression sanguine base</French>
         <Russian>Давление низкое</Russian>
         <Spanish>La Presión Arterial es baja</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_3">
         <English>You find a normal blood pressure</English>
+        <French>Vous avez trouvé une pression sanguine normale</French>
         <Russian>Давление нормальное</Russian>
         <Spanish>La Presión Arterial es normal</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_4">
         <English>You find a high blood pressure</English>
+        <French>Vous avez trouvé une forte pression sanguine</French>
         <Russian>Давление высокое</Russian>
         <Spanish>La Presión Arterial es alta</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_5">
         <English>You find no blood pressure</English>
+        <French>Vous n'avez pas trouvé de pression sanguine</French>
         <Russian>Давления нет</Russian>
         <Spanish>No hay Presión Arterial</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_6">
         <English>You fail to find a blood pressure</English>
+        <French>Vous avez raté le diagnostique de la pression sanguine</French>
         <Russian>Артериальное давление не определяется</Russian>
         <Spanish>No puedes encontrar Presión Arterial</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_PULSE">
         <English>Pulse</English>
+        <French>Pulsations</French>
         <Russian>Пульс</Russian>
         <Spanish>Pulso</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_CONTENT">
         <English>Checking Heart Rate..</English>
+        <French>Diagnostique de la fréquence cardiaque</French>
         <Russian>Проверка пульса...</Russian>
         <Spanish>Comprobando Pulso...</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_CHECKED_MEDIC">
         <English>You checked %1</English>
+        <French>Vous avez Diagnostiqué %1</French>
         <Russian>Вы осмотрели раненого %1</Russian>
         <Spanish>Examinando a %1</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_1">
         <English>You find a Heart Rate of %2</English>
+        <French>Vous avez trouvé une fréquence cardiaque de %2</French>
         <Russian>Пульс %2 уд./мин.</Russian>
         <Spanish>El Pulso es %2</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_2">
-        <English>You find a weak Heart Rate</English>
+        <English>You find a faible fréquence cardiaque</English>
+        <French>Vous avez trouvé une fréquence cardiaque de %2</French>
         <Russian>Пульс слабый</Russian>
         <Spanish>El Pulso es débil</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_3">
         <English>You find a strong Heart Rate</English>
+        <French>Vous avez trouvé une forte fréquence cardiaque</French>
         <Russian>Пульс учащенный</Russian>
         <Spanish>El Pulso está acelerado</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_4">
         <English>You find a normal Heart Rate</English>
+        <French>Vous avez trouvé une fréquence cardiaque normale</French>
         <Russian>Пульс в норме</Russian>
         <Spanish>El Pulso es bueno</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_5">
         <English>You find no Heart Rate</English>
+        <French>Vous n'avez trouvé de fréquence cardiaque</French>
         <Russian>Пульс не прощупывается</Russian>
         <Spanish>No tiene Pulso</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_RESPONSE">
         <English>Response</English>
+        <French>Réponse</French>
         <Russian>Реакция</Russian>
         <Spanish>Reacciona</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_RESPONSE_CONTENT">
         <English>You check response of patient</English>
+        <French>Vous vérifiez la réponse du patient</French>
         <Russian>Вы проверяете реакцию раненого</Russian>
         <Spanish>Compruebas si el paciente reacciona</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_RESPONSIVE">
         <English>%1 is responsive</English>
+        <French>%1 est conscient</French>
         <Russian>%1 реагирует на раздражители</Russian>
         <Spanish>%1 ha reaccionado</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_UNRESPONSIVE">
         <English>%1 is not responsive</English>
+        <French>%1 n'est pas conscient</French>
         <Russian>%1 не реагирует</Russian>
         <Spanish>%1 no reacciona</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_YOU_CHECKED">
         <English>You checked %1</English>
+        <French>Vous diagnostiqué %1</French>
         <Russian>Вы осмотрели раненого %1</Russian>
         <Spanish>Examinas a %1</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_BANDAGED">
         <English>Bandaged</English>
+        <French>Bandé</French>
         <Russian>Повязка наложена</Russian>
         <Spanish>Vendado</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_APPLY_BANDAGE">
         <English>You bandage %1 (%2)</English>
+        <French>Vous bandez %1 (%2)</French>
         <Russian>Вы перевязали раненого %1 (%2)</Russian>
         <Spanish>Aplicas vendaje a %1 en %2</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_IS_BANDAGING_YOU">
         <English>%1 is bandaging you</English>
+        <French>%1 vous bande</French>
         <Russian>%1 перевязывает вас</Russian>
         <Spanish>%1 te está vendando</Spanish>
       </Key>
@@ -875,29 +935,37 @@
       </Key>
       <Key ID="STR_ACE_Medical_UnloadPatient">
         <English>Unload patient</English>
+        <French>Décharger le patient</French>
       </Key>
       <Key ID="STR_ACE_Medical_LoadPatient">
         <English>Load patient</English>
+        <French>Charger le patient</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_PlaceInBodyBag"> 
         <English>Place body in bodybag</English>
+        <French>Placer le corps dans le sac à cadavre</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_PlacingInBodyBag"> 
         <English>Placing body in bodybag</English>
+        <French>Mise en sac du corps dans le sac à cadavre</French>
       </Key>
     </Container>
     <Container name="Activities">
       <Key ID="STR_ACE_MEDICAL_ACTIVITY_bandagedPatient">
         <English>%1 has bandaged patient</English>
+        <French>%1 à bandé un patient</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIVITY_usedItem">
         <English>%1 used %2</English>
+        <French>%1 utilise %2</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIVITY_gaveIV">
         <English>%1 has given an IV</English>
+        <French>%1 à donné un IV</French>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIVITY_appliedTourniquet">
         <English>%1 applied a tourniquet</English>
+        <French>%1 à appliqué un garrot</French>
       </Key>
     </Container>
   </Package>
