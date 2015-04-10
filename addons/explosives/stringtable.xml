@@ -143,7 +143,7 @@
             <Czech>M57 Odpalovací Zařízení</Czech>
             <Italian>Detonatore M57</Italian>
             <Hungarian>M57 Detonátor</Hungarian>
-            <Portuguese>M57 Dispositivo de Detonação</Portuguese>
+            <Portuguese> Dispositivo de Detonação M57</Portuguese>
             <Russian>Взрыватель M57</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_clacker_description">
@@ -251,7 +251,7 @@
             <Czech>Nahoru</Czech>
             <Italian>Sopra</Italian>
             <Hungarian>Fel</Hungarian>
-            <Portuguese>Cima</Portuguese>
+            <Portuguese>Para cima</Portuguese>
             <Russian>Поднять</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_Phone_Down">
@@ -263,7 +263,7 @@
             <Czech>Dolu</Czech>
             <Italian>Sotto</Italian>
             <Hungarian>Le</Hungarian>
-            <Portuguese>Baixo</Portuguese>
+            <Portuguese>Para Baixo</Portuguese>
             <Russian>Опустить</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_Cancel">
@@ -407,7 +407,7 @@
             <Czech>Nástražný drát</Czech>
             <Italian>Filo a Inciampo</Italian>
             <Hungarian>Botlódrót</Hungarian>
-            <Portuguese>Linha de tração</Portuguese>
+            <Portuguese>Fio de ativação</Portuguese>
             <Russian>Натяжной</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_IRSensor">
@@ -478,6 +478,7 @@
             <Polish>Czuwak</Polish>
             <Spanish>Detonador de hombre muerto</Spanish>
             <Hungarian>Dead Man's Switch</Hungarian>
+            <Portuguese>Detonador do homem morto</Portuguese>
             <Russian>Кнопка мертвеца</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_DeadManSwitch_description">
@@ -488,10 +489,12 @@
             <Polish>Używany w celu zdalnej detonacji ładunków kiedy jego operator zostanie zabity.</Polish>
             <Spanish>Utilizado para detonar explosivos remotamente al soltarlo.</Spanish>
             <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
+            <Portuguese>Usado para detonar remotamente o explosivo quando solto.</Portuguese>
             <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_Pickup">
             <English>Pick up</English>
+            <Portuguese>Pegar</Portuguese>
         </Key>
     </Package>
 </Project>
