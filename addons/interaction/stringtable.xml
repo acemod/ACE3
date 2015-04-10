@@ -4,27 +4,35 @@
   <Package name="Interaction">
     <Key ID="STR_ACE_Interaction_MainAction">
       <English>Interactions</English>
+      <Polish>Interakcje</Polish>
     </Key>
     <Key ID="STR_ACE_Interaction_Torso">
       <English>Torso</English>
+      <Polish>Tors</Polish>
     </Key>
     <Key ID="STR_ACE_Interaction_Head">
       <English>Head</English>
+      <Polish>Głowa</Polish>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmLeft">
       <English>Left Arm</English>
+      <Polish>Lewe ramię</Polish>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmRight">
       <English>Right Arm</English>
+      <Polish>Prawe ramię</Polish>
     </Key>
     <Key ID="STR_ACE_Interaction_LegLeft">
       <English>Left Leg</English>
+      <Polish>Lewa noga</Polish>
     </Key>
     <Key ID="STR_ACE_Interaction_LegRight">
       <English>Right Leg</English>
+      <Polish>Prawa noga</Polish>
     </Key>
     <Key ID="STR_ACE_Interaction_Weapon">
       <English>Weapon</English>
+      <Polish>Broń</Polish>
     </Key>
     <Key ID="STR_ACE_Interaction_InteractionMenu">
       <English>Interaction Menu</English>
@@ -42,7 +50,7 @@
       <English>Interaction Menu (Self)</English>
       <German>Interaktionsmenü (Selbst)</German>
       <Spanish>Menú de interacción (Propia)</Spanish>
-      <Polish>Menu interakcji (na siebie)</Polish>
+      <Polish>Menu interakcji (własne)</Polish>
       <Czech>Menu interakce (vlastní)</Czech>
       <French>Menu d'interaction (Perso)</French>
       <Russian>Меню взаимодействия (с собой)</Russian>
@@ -655,6 +663,7 @@
     </Key>
     <Key ID="STR_ACE_Interaction_Passengers">
       <English>Passengers</English>
+      <Polish>Pasażerowie</Polish>
     </Key>
   </Package>
 </Project>
