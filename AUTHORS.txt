@@ -62,6 +62,7 @@ Raspu86
 Riccardo Petricca <petriccarcc@gmail.com>
 Robert Boklahánics <bokirobi@gmail.com>
 simon84
+Sniperwolf572 <tenga6@gmail.com>
 Tonic
 Tourorist <tourorist@gmail.com>
 Valentin Torikian <valentin.torikian@gmail.com>
