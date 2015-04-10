@@ -76,6 +76,15 @@ _affected = _grenade nearEntities ["CAManBase", 20];
 
             TRACE_1("Final strength for player %1",_strength);
 
+
+            //Add ace_medical pain effect:
+            if ((isClass (configFile >> "CfgPatches" >> "ACE_Medical")) && {_strength > 0}) then {
+                private "_curPain";
+                _curPain = ACE_player getVariable [QEGVAR(medical,pain), 0];
+                _curPain = (_curPain + (_strength / 2)) min 1;
+                ACE_player setVariable [QEGVAR(medical,pain), _curPain];
+            };
+
             // create flash to illuminate environment
             _light = "#lightpoint" createVehicleLocal (getPos _grenade);
             _light setLightBrightness 200;
