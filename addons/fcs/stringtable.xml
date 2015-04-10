@@ -32,7 +32,7 @@
         <Key ID="STR_ACE_FCS_AdjustRangeUp">
             <English>Adjust FCS Range (Up)</English>
             <German>Entfernung des FLS erhöhen</German>
-            <Polish>Zwiększ zasięg FCS</Polish>
+            <Polish>Zwiększ zasięg SKO</Polish>
             <Spanish>Ajustar distancia del FCS (arriba)</Spanish>
             <Czech>Nastavit FCS Náměr (nahoru)</Czech>
             <French>Augmenter la distance du SCT</French>
@@ -44,7 +44,7 @@
         <Key ID="STR_ACE_FCS_AdjustRangeDown">
             <English>Adjust FCS Range (Down)</English>
             <German>Entfernung des FLS verringern</German>
-            <Polish>Zmniejsz zasięg FCS</Polish>
+            <Polish>Zmniejsz zasięg SKO</Polish>
             <Spanish>Ajustar distancia del FCS (abajo)</Spanish>
             <Czech>Nastavit FCS Náměr (dolů)</Czech>
             <French>Réduire la distance du SCT</French>
@@ -58,7 +58,7 @@
             <German>FLS zurücksetzen</German>
             <Spanish>Reiniciar FCS</Spanish>
             <French>Réinitialiser le SCT</French>
-            <Polish>Resetuj FCS</Polish>
+            <Polish>Resetuj SKO</Polish>
             <Czech>Resetovat FCS</Czech>
             <Hungarian>FCS visszaállítása</Hungarian>
             <Portuguese>Reiniciar FCS</Portuguese>
@@ -70,7 +70,7 @@
             <German>FLS wurde zurückgesetzt.</German>
             <Spanish>FCS reiniciado</Spanish>
             <French>SCT réinitialisé.</French>
-            <Polish>FCS został zresetowany.</Polish>
+            <Polish>SKO został zresetowany.</Polish>
             <Czech>FCS byl resetován.</Czech>
             <Hungarian>Az FCS visszaállítva</Hungarian>
             <Portuguese>FCS reiniciado.</Portuguese>
