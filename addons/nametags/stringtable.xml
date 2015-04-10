@@ -60,6 +60,7 @@
     </Key>
     <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo">
       <English>Show vehicle crew info</English>
+      <French>Afficher les informations de l'équipage</French>
       <German>Zeige Fahrzeugbesatzung</German>
       <Spanish>Mostrar tripulantes</Spanish>
       <Polish>Pokaż informacje o załodze pojazdu</Polish>
@@ -68,14 +69,17 @@
     </Key>
     <Key ID="STR_ACE_NameTags_ShowNamesForAI">
       <English>Show name tags for AI units</English>
+      <French>Afficher les noms des IA</French>
     </Key>
     <Key ID="STR_ACE_NameTags_ShowSoundWaves">
       <English>Show SoundWaves (requires player names)</English>
+      <French>Afficher "qui parle" (si noms affichés)</French>
       <German>Zeigen Schallwelle  (benötigt spielernamen)</German>
       <Spanish>Mostrar onda sonora  (requiere Mostrar nombres de jugadores)</Spanish>
     </Key>
     <Key ID="STR_ACE_NameTags_DefaultNametagColor">
       <English>Default Nametag Color (Non Group Members)</English>
+      <French>Couleur d'affichage par défaut (si dans aucun groupe)</French>
     </Key>
   </Package>
 </Project>
