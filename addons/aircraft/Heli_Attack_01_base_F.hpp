@@ -903,7 +903,7 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
                     initFov = 0.466;
                     minFov = 0.466;
                     maxFov = 0.466;
-                    visionMode[] = {"Normal","NVG","Ti"};
+                    visionMode[] = {"Normal","Ti"};
                     thermalMode[] = {0,1};
                     gunnerOpticsColor[] = {0,0,0,1};
                     directionStabilized = 1;
