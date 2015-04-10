@@ -1,24 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-03-24 -->
+<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="microdagr">
     <Key ID="STR_ACE_microdagr_itemName">
       <English>MicroDAGR GPS</English>
+      <German>MicroDAGR GPS</German>
     </Key>
     <Key ID="STR_ACE_microdagr_itemDescription">
       <English>MicroDAGR advanced GPS receiver</English>
+      <German>MicroDAGR Verbesserter GPS Empfänger</German>
     </Key>
     <Key ID="STR_ACE_microdagr_settingUseMils">
       <English>Angular Unit:</English>
+      <German>Winkeleinheit:</German>
     </Key>
     <Key ID="STR_ACE_microdagr_settingMils">
       <English>Mils</English>
+      <German>Mils</German>
     </Key>
     <Key ID="STR_ACE_microdagr_settingShowWP">
       <English>Show Waypoints On Map:</English>
+      <German>Zeige Wegpunkte auf Karte</German>
     </Key>
     <Key ID="STR_ACE_microdagr_settingDegrees">
       <English>Degrees</English>
+      <German>Grad</German>
     </Key>
     <Key ID="STR_ACE_microdagr_settingOn">
       <English>On</English>
@@ -44,6 +50,7 @@
     </Key>
     <Key ID="STR_ACE_microdagr_wpEnterCords">
       <English>Enter Grid Cords:</English>
+      <German>Gitter Koordinaten eingeben:</German>
     </Key>
     <Key ID="STR_ACE_microdagr_wpEnterName">
       <English>Name of [%1]</English>
@@ -60,9 +67,11 @@
     </Key>
     <Key ID="STR_ACE_microdagr_compasDirection">
       <English>Compass Direction</English>
+      <German>Kompass Richtung</German>
     </Key>
     <Key ID="STR_ACE_microdagr_menuMark">
       <English>Mark</English>
+      <German>Markieren</German>
     </Key>
     <Key ID="STR_ACE_microdagr_menuWaypoints">
       <English>Waypoints</English>
@@ -70,6 +79,7 @@
     </Key>
     <Key ID="STR_ACE_microdagr_menuConnectTo">
       <English>Connect To</English>
+      <German>Verbinde zu</German>
     </Key>
     <Key ID="STR_ACE_microdagr_menuSettings">
       <English>Settings</English>
@@ -78,9 +88,11 @@
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsSet">
       <English>SetWP</English>
+      <German>WP setzen</German>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsAdd">
       <English>Add</English>
+      <German>Hinzufügen</German>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsDelete">
       <English>Delete</English>
@@ -95,15 +107,19 @@
     </Key>
     <Key ID="STR_ACE_microdagr_toggleUnit">
       <English>Toggle MicroDAGR Display Mode</English>
+      <German>MicoDAGR Anzeigemodus wählen</German>
     </Key>
     <Key ID="STR_ACE_microdagr_show">
       <English>Show MicoDAGR</English>
+      <German>Zeige MicroDAGR</German>
     </Key>
     <Key ID="STR_ACE_microdagr_configure">
       <English>Configure MicroDAGR</English>
+      <German>Konfiguriere MicroDAGR</German>
     </Key>
     <Key ID="STR_ACE_microdagr_closeUnit">
       <English>Close MicroDAGR</English>
+      <German>Schließe MicroDAGR</German>
     </Key>
   </Package>
 </Project>

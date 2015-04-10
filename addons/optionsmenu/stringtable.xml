@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-01-23 -->
+<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="OptionsMenu">
     <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -41,6 +41,7 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabValues">
       <English>Values</English>
+      <German>Werte</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Enabled">
       <English>Yes</English>
@@ -75,9 +76,11 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Export">
       <English>Export</English>
+      <German>Exportieren</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_OpenExport">
       <English>Open Export Menu</English>
+      <German>Öffne Exportier Menü</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_stringType">
       <English>String input.</English>
@@ -93,6 +96,7 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_SaveInput">
       <English>Save input</English>
+      <German>Speichere Eingabe</German>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_inClientSettings">
       <English>Include Client Settings</English>
