@@ -35,7 +35,7 @@ if (_itemVehClass == "") then {
     _onAtachText = getText (configFile >> "CfgMagazines" >> _itemClassname >> "displayName");
 };
 
-if (_itemVehClass == "") exitWith {ERROR("no ACE_attachable_effect for Item"); ERROR(_itemClassname);};
+if (_itemVehClass == "") exitWith {ERROR("no ACE_attachable_effect for Item");};
 
 _onAtachText = format [localize "STR_ACE_Attach_Item_Attached", _onAtachText];
 
