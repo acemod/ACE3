@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 private ["_result", "_item", "_children"];
-call EFUNC(interaction,hideMenu);
+
 EXPLODE_2_PVT(_this,_unit,_detonator);
 _range = GetNumber (ConfigFile >> "CfgWeapons" >> _detonator >> "ACE_Range");
 
