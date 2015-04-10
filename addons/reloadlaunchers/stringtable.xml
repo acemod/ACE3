@@ -8,15 +8,18 @@
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
             <English>Loading launcher ...</English>
+            <French>Chargement du tube ...</French>
             <German>Panzerabwehr wird geladen ...</German>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LauncherLoaded">
             <English>Launcher loaded</English>
+            <French>Tube chargé</French>
             <German>Panzerabwehr geladen</German>
         </Key>
 
         <Key ID="STR_ACE_ReloadLaunchers_LoadMagazine">
             <English>Load %1</English>
+            <French>Chargé %1</French>
             <German>Lade %1</German>
         </Key>
     </Package>
