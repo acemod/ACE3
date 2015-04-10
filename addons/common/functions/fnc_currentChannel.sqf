@@ -7,11 +7,20 @@
  * NONE.
  *
  * Return value:
- * The current channel. Can be "group", "side", "global", "command", "vehicle" or "direct" (String)
+ * The current channel. Can be "group", "side", "global", "command", "vehicle", "direct" or "custom_X" (String)
  */
 #include "script_component.hpp"
 
-#define CHANNELS ["group", "side", "global", "command", "vehicle", "direct"]
-#define CHANNELS_LOCALIZED [localize "str_channel_group", localize "str_channel_side", localize "str_channel_global", localize "str_channel_command", localize "str_channel_vehicle", localize "str_channel_direct"]
+#define CHANNELS ["global", "side", "command", "group", "vehicle", "direct"]
+#define CHANNELS_LOCALIZED [localize "str_channel_global", localize "str_channel_side", localize "str_channel_command", localize "str_channel_group", localize "str_channel_vehicle", localize "str_channel_direct"]
 
-CHANNELS select (CHANNELS_LOCALIZED find (uiNamespace getVariable [QGVAR(currentChannel), ""])) max 0
+private "_currentChannel";
+_currentChannel = currentChannel;
+
+if (_currentChannel < count CHANNELS) then {
+    _currentChannel = CHANNELS select _currentChannel;
+} else {
+    _currentChannel = format ["custom_%1", _currentChannel - count CHANNELS - 1];
+};
+
+_currentChannel

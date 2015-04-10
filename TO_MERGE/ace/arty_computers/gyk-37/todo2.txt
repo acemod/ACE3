@@ -1,5 +1,0 @@
-bcs todo 2!
-
-1. initialize main screen (just need to populate the battery type list for now)
-2. hook up mission screen to buttons, hide/display appropriate targeting section
-3. populate the ammunition list from someplace (parsing configs of the gun battery type?)
