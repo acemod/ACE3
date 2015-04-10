@@ -4,11 +4,11 @@
   <Package name="Laser_SelfDesignate">
     <Key ID="STR_ACE_Laser_SelfDesignate_DesignatorOn">
       <English>Laser&lt;br/&gt;Designator On</English>
-      <Polish>Laser&lt;br/&gt;Dezygnator wł.</Polish>
+      <Polish>Desygnator&lt;br/&gt;laserowy wł.</Polish>
     </Key>
     <Key ID="STR_ACE_Laser_SelfDesignate_DesignatorOff">
       <English>Laser&lt;br/&gt;Designator Off</English>
-      <Polish>Laser&lt;br/&gt;Dezygnator wył.</Polish>
+      <Polish>Desygnator&lt;br/&gt;laserowy wył.</Polish>
     </Key>
   </Package>
 </Project>
