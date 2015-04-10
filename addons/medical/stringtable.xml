@@ -232,11 +232,11 @@
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckPulse">
         <English>Check Pulse</English>
-        <Spanish>Comprovar pulso</Spanish>
+        <Spanish>Comprobar pulso</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure">
         <English>Check Blood Pressure</English>
-        <Spanish>Comprovar presión arterial</Spanish>
+        <Spanish>Comprobar presión arterial</Spanish>
       </Key>
       <Key ID="STR_ACE_MEDICAL_ACTIONS_TriageCard">
         <English>Triage Card</English>
