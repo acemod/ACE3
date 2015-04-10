@@ -84,6 +84,10 @@ class CfgAmmo {
 		displayNameShort = "ACE_Hellfire_AGM114K";
 		descriptionShort = "ACE_Hellfire_AGM114K";
         
+        // @TODO: placeholder model to at least make it look different
+        model = "\A3\Weapons_F\Ammo\Missile_AT_03_fly_F";
+        proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
+        
         hit = 1400;
         indirectHit = 71;
 		indirectHitRange = 4.5;
