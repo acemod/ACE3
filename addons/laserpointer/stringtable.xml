@@ -16,7 +16,7 @@
     <Key ID="STR_ACE_Laserpointer_Description">
       <English>Emits visible light. </English>
       <German>Strahlt sichtbares Licht aus. </German>
-      <Portuguese>Emite luz visível</Portuguese>
+      <Portuguese>Emite luz visível. </Portuguese>
     </Key>
 
     <Key ID="STR_ACE_Laserpointer_useLaser">
