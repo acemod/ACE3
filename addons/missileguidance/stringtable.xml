@@ -26,5 +26,82 @@
       <Hungarian></Hungarian>
       <Russian></Russian>
     </Key>
+    
+    /* Weapons */
+    <Key ID="STR_ACE_Hydra70_DAGR">
+      <English>Hydra-70 DAGR Missile</English>
+      <Spanish></Spanish>
+      <French></French>
+      <Polish></Polish>
+      <German></German>
+      <Czech></Czech>
+      <Italian></Italian>
+      <Portuguese></Portuguese>
+      <Hungarian></Hungarian>
+      <Russian></Russian>
+    </Key>
+    <Key ID="STR_ACE_Hydra70_DAGR_Short">
+      <English>DAGR</English>
+      <Spanish></Spanish>
+      <French></French>
+      <Polish></Polish>
+      <German></German>
+      <Czech></Czech>
+      <Italian></Italian>
+      <Portuguese></Portuguese>
+      <Hungarian></Hungarian>
+      <Russian></Russian>
+    </Key>
+    <Key ID="STR_ACE_Hydra70_DAGR_Desc">
+      <English>Hydra-70 DAGR Laser Guided Missile</English>
+      <Spanish></Spanish>
+      <French></French>
+      <Polish></Polish>
+      <German></German>
+      <Czech></Czech>
+      <Italian></Italian>
+      <Portuguese></Portuguese>
+      <Hungarian></Hungarian>
+      <Russian></Russian>
+    </Key>
+    
+        /* Weapons */
+    <Key ID="STR_ACE_Hellfire_AGM114K">
+      <English>Hellfire II AGM-114K Missile</English>
+      <Spanish></Spanish>
+      <French></French>
+      <Polish></Polish>
+      <German></German>
+      <Czech></Czech>
+      <Italian></Italian>
+      <Portuguese></Portuguese>
+      <Hungarian></Hungarian>
+      <Russian></Russian>
+    </Key>
+    <Key ID="STR_ACE_Hellfire_AGM114K_Short">
+      <English>AGM-114K</English>
+      <Spanish></Spanish>
+      <French></French>
+      <Polish></Polish>
+      <German></German>
+      <Czech></Czech>
+      <Italian></Italian>
+      <Portuguese></Portuguese>
+      <Hungarian></Hungarian>
+      <Russian></Russian>
+    </Key>
+    <Key ID="STR_ACE_Hellfire_AGM114K_desc">
+      <English>Hellfire II AGM-114K Laser Guided Missile</English>
+      <Spanish></Spanish>
+      <French></French>
+      <Polish></Polish>
+      <German></German>
+      <Czech></Czech>
+      <Italian></Italian>
+      <Portuguese></Portuguese>
+      <Hungarian></Hungarian>
+      <Russian></Russian>
+    </Key>
+    
   </Package>
 </Project>
