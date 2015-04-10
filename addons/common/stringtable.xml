@@ -317,33 +317,43 @@
     </Key>
     <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
       <English>Feedback icons</English>
+      <Polish>Ikony pomocnicze</Polish>
     </Key>
     <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
       <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
+      <Polish>Ustaw pozycję lub wyłącz całkowicie ikony pomocnicze na ekranie. Te ikony dostarczają dodatkowych informacji na temat statusu Twojej postaci i wykonywanych przez nią akcji.</Polish>
     </Key>
     <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
       <English>Progress bar location</English>
+      <Polish>Lokalizacja paska postępu</Polish>
     </Key>
     <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
       <English>Set the desired location of the progress bar on your screen.</English>
+      <Polish>Ustaw pożądaną lokalizację paska postępu na ekranie</Polish>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
       <English>Hint Background color</English>
+      <Polish>Kolor tła powiadomień</Polish>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
       <English>The color of the background from the ACE hints.</English>
+      <Polish>Kolor tła dla powiadomień ACE</Polish>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
       <English>Hint text font color</English>
+      <Polish>Kolor tekstu powiadomień</Polish>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
       <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
+      <Polish>Kolor tekstu dla powiadomień ACE. Ten kolor jest domyślnym dla wszystkich tekstów wyświetlanych poprzez System Powiadomień ACE, jeżeli dla powiadomienia nie określono innego koloru.</Polish>
     </Key>
     <Key ID="STR_ACE_Common_bananaDisplayName">
       <English>Banana</English>
+      <Polish>Banan</Polish>
     </Key>
     <Key ID="STR_ACE_Common_bananaDescr">
       <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
+      <Polish>Rodzaj roślin z rodziny bananowatych, obejmujący około 80 gatunków. Przedstawiciele są typowymi przedstawicielami flory międzyzwrotnikowej Azji, Afryki i Australii. Część gatunków dostarcza jadalnych owoców. Słowo banan pochodzi prawdopodobnie od arabskiego słowa banan, co oznacza palec, lub afrykańskiego języka wolof, w którym rośliny te określa się mianem banaana.</Polish>
     </Key>
   </Package>
 </Project>
