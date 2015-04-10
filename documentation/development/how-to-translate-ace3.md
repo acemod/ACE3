@@ -12,7 +12,7 @@ This page describes in short how you can help translating ACE3 into your languag
 2. Open the ACE3 repository at https://github.com/acemod/ACE3
 3. In the top right corner press the "Fork" button
 4. You are being redirected to your personal fork, a version that is hosted on your GitHub account (it says "yourUsername/ACE3")
-5. Clone that fork to your PC (There are a lot of tools and tutorials how to do this (e.g. [GitHub for Windows](https://windows.github.com))
+5. Clone that fork to your PC (There are a lot of tools and tutorials how to do this (e.g. [GitHub for Windows](https://windows.github.com)))
 6. Download [tabler](https://github.com/bux578/tabler/releases) and extract it somewhere
 7. Open the tabler.exe and in the menu click "File > Open language files"
 8. Point tabler to the cloned ACE3 directory
