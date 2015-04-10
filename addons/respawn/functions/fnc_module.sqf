@@ -32,24 +32,23 @@ GVAR(Module) = true;
 
 if (isServer) then {
     if (GVAR(RemoveDeadBodiesDisconnected)) then {
-        _fnc_deleteDisconnected = {
-            [
-                {
-                  _unit = (_this select 0) select 0;
+      addMissionEventHandler ["HandleDisconnect",
+        {
+          [
+            {
+              _unit = _this select 0;
 
-                  if (!alive _unit) then {
-                    deleteVehicle _unit;
-
-                    [_this select 0] call CBA_fnc_removePerFrameHandler;
-                  };
-                },
-                4,
-                [_this]
-            ] call CBA_fnc_addPerFrameHandler
-            false
-        };
-
-        addMissionEventHandler ["HandleDisconnect", _fnc_deleteDisconnected];
+              if (!alive _unit) then {
+                deleteVehicle _unit;
+              };
+            },
+            _this,
+            4,
+            1
+          ] call EFUNC(common,waitAndExecute);
+          false
+        }
+      ];
     };
 };
 

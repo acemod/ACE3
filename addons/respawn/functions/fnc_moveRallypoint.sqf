@@ -37,23 +37,25 @@ if (count _position == 0) then {_position = getPosATL _unit};
 
 _position set [2, 0];
 
-[localize "STR_ACE_Respawn_Deploy"] call EFUNC(common,displayTextStructured);
+[
+  {
+    _rallypoint = _this select 0;
+    _unit = _this select 1;
+    _position = _this select 2;
+    _rallypoint = _this select 3;
 
-[{
-  _args = _this select 0;
-  _rallypoint = _args select 0;
-  _unit = _args select 1;
-  _position = _args select 2;
-  _rallypoint = _args select 3;
+    _rallypoint setPosATL _position;
+    _unit reveal _rallypoint;
 
-  _rallypoint setPosATL _position;
-  _unit reveal _rallypoint;
+    /*
+    _marker = format ["AGM_RallyPoint_%1", _side];
+    _marker setMarkerPos _position;
+    _marker setMarkerTextLocal format ["%1:%2", [date select 3, 2, 0] call CBA_fnc_FORMATNumber, [date select 4, 2, 0] call CBA_fnc_FORMATNumber];
+    */
 
-  /*
-  _marker = format ["AGM_RallyPoint_%1", _side];
-  _marker setMarkerPos _position;
-  _marker setMarkerTextLocal format ["%1:%2", [date select 3, 2, 0] call CBA_fnc_FORMATNumber, [date select 4, 2, 0] call CBA_fnc_FORMATNumber];
-  */
-
-  [localize "STR_ACE_Respawn_Deploy"] call EFUNC(common,displayTextStructured);
-}, 5, [_rallypoint, _unit, _position, _rallypoint]]
+    [localize "STR_ACE_Respawn_Deploy"] call EFUNC(common,displayTextStructured);
+  },
+  [_rallypoint, _unit, _position, _rallypoint],
+  5,
+  1
+] call EFUNC(common,waitAndExecute);
