@@ -27,15 +27,15 @@ if ((_itemClassname == "") || {!(_this call FUNC(canAttach))}) exitWith {ERROR("
 
 _selfAttachPosition = [_unit, [-0.05, 0, 0.12], "rightshoulder"];
 
-_itemVehClass = getText (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_attachable_effect");
+_itemVehClass = getText (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_Attachable");
 _onAtachText = getText (configFile >> "CfgWeapons" >> _itemClassname >> "displayName");
 
 if (_itemVehClass == "") then {
-    _itemVehClass = getText (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_attachable_effect");
+    _itemVehClass = getText (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_Attachable");
     _onAtachText = getText (configFile >> "CfgMagazines" >> _itemClassname >> "displayName");
 };
 
-if (_itemVehClass == "") exitWith {ERROR("no ACE_attachable_effect for Item");};
+if (_itemVehClass == "") exitWith {ERROR("no ACE_Attachable for Item");};
 
 _onAtachText = format [localize "STR_ACE_Attach_Item_Attached", _onAtachText];
 
