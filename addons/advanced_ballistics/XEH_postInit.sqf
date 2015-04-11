@@ -34,6 +34,7 @@ GVAR(AtmosphericDensitySimulationEnabled) = true;
 GVAR(BarrelLengthInfluenceEnabled) = true;
 GVAR(VehicleGunnerEnabled) = true;
 
+GVAR(currentGrid) = 0;
 GVAR(INIT_MESSAGE_ENABLED) = false;
 
 [] call FUNC(initializeTerrainExtension);
