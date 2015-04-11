@@ -4,9 +4,9 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
 				class ACE_BackpackToFront {
-					displayName = "Backpack to Front";
-                    condition = "(backpack _player != '') and (vehicle _player == _player)";
-                    //exceptions[] = {"isNotInside"};
+					displayName = "$STR_ACE_Backpack_BackpackToFront";
+                    condition = "(backpack _player != '') and (vehicle _player == _player) and (!(_player getVariable ['ACE_Backpack', [objNull, false]] select 1))";
+                    exceptions[] = {"isNotInside"};
                     statement = QUOTE([_player] call FUNC(backpackToFront));
                     showDisabled = 0;
                     priority = 2.5;
@@ -14,9 +14,9 @@ class CfgVehicles {
                     hotkey = "B";
 				};
 				class ACE_BackpackToBack {
-					displayName = "Backpack to Back";
-                    condition = "(backpack _player == '') and (vehicle _player == _player)";
-                    //exceptions[] = {"isNotInside"};
+					displayName = "$STR_ACE_Backpack_BackpackToBack";
+                    condition = "(backpack _player == '') and (vehicle _player == _player) and (_player getVariable ['ACE_Backpack', [objNull, false]] select 1)";
+                    exceptions[] = {"isNotInside"};
                     statement = QUOTE([_player] call FUNC(backpackToBack));
                     showDisabled = 0;
                     priority = 2.5;

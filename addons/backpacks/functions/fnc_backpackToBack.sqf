@@ -18,3 +18,4 @@ _backpack = (attachedObjects _unit) select 0;
 detach _backpack;
 
 _unit action ["AddBag",_backpack,(backpackCargo _backpack) select 0];
+_unit setVariable ["ACE_Backpack", [objNull, false]];
