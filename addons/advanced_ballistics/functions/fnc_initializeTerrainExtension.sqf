@@ -18,7 +18,7 @@
     _initStartTime = time;
     _mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize");
     
-    if (("AdvancedBallistics" callExtension format["init:%1:%2", worldName, _mapSize]) == "Terrain already initialized") exitWith {
+    if (("ace_advanced_ballistics" callExtension format["init:%1:%2", worldName, _mapSize]) == "Terrain already initialized") exitWith {
         if (GVAR(INIT_MESSAGE_ENABLED)) then {
             systemChat "AdvancedBallistics: Terrain already initialized";
         };
@@ -32,7 +32,7 @@
             _gridHeight = round(getTerrainHeightASL _gridCenter);
             _gridNumObjects = count (_gridCenter nearObjects ["Building", 50]);
             _gridSurfaceIsWater = if (surfaceIsWater _gridCenter) then {1} else {0};
-            "AdvancedBallistics" callExtension format["set:%1:%2:%3", _gridHeight, _gridNumObjects, _gridSurfaceIsWater];
+            "ace_advanced_ballistics" callExtension format["set:%1:%2:%3", _gridHeight, _gridNumObjects, _gridSurfaceIsWater];
         };
         sleep 0.001;
     };

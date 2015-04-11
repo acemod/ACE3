@@ -159,7 +159,7 @@ if (count GVAR(bulletDatabaseFreeIndices) > 0) then {
 };
 
 #ifdef USE_ADVANCEDBALLISTICS_DLL
-    "AdvancedBallistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", _index, _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _muzzleVelocity, _transonicStabilityCoef, getPosASL _bullet, EGVAR(weather,Latitude), EGVAR(weather,currentTemperature), EGVAR(weather,Altitude), EGVAR(weather,currentHumidity), overcast, floor(time), time - floor(time)];
+    "ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", _index, _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _muzzleVelocity, _transonicStabilityCoef, getPosASL _bullet, EGVAR(weather,Latitude), EGVAR(weather,currentTemperature), EGVAR(weather,Altitude), EGVAR(weather,currentHumidity), overcast, floor(time), time - floor(time)];
     GVAR(bulletDatabase) set[_index, [_bullet, _caliber, _bulletTraceVisible, _index]];
 
     if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
@@ -198,7 +198,7 @@ if (count GVAR(bulletDatabaseFreeIndices) > 0) then {
                     drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.4*_caliber,0.2*_caliber],[[0,0,0,0.6],[0,0,0,0.4]],[1,0],0,0,"","",""];
                 };
 
-                call compile ("AdvancedBallistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, floor(time), time - floor(time)]);
+                call compile ("ace_advanced_ballistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, floor(time), time - floor(time)]);
 
                 true
             } count GVAR(bulletDatabaseOccupiedIndices);
