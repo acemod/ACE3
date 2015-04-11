@@ -1,12 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-03 -->
+<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
   <Package name="Laser_SelfDesignate">
     <Key ID="STR_ACE_Laser_SelfDesignate_DesignatorOn">
       <English>Laser&lt;br/&gt;Designator On</English>
+      <German>Lasermarkierer&lt;br/&gt;an</German>
+      <Spanish>Laser&lt;br/&gt;Designador encendido</Spanish>
     </Key>
     <Key ID="STR_ACE_Laser_SelfDesignate_DesignatorOff">
       <English>Laser&lt;br/&gt;Designator Off</English>
+      <German>Lasermarkierer&lt;br/&gt;aus</German>
+      <Spanish>Laser&lt;br/&gt;Designador apagado</Spanish>
     </Key>
   </Package>
 </Project>

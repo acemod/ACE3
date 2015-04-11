@@ -1,15 +1,9 @@
-class SlotInfo;
-class MuzzleSlot;
 
 class CfgWeapons {
 
     /* MX */
 
-    class Rifle;
-    class Rifle_Base_F: Rifle {
-        class WeaponSlotsInfo;
-    };
-
+    class Rifle_Base_F;
     class arifle_MX_Base_F: Rifle_Base_F {
         magazines[] += {
             "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
@@ -18,26 +12,12 @@ class CfgWeapons {
             "100Rnd_65x39_caseless_mag",
             "100Rnd_65x39_caseless_mag_Tracer"
         };
-
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_H"};
-            };
-        };
     };
 
     class arifle_MX_SW_F: arifle_MX_Base_F {
         magazines[] += {
             "30Rnd_65x39_caseless_mag",
             "30Rnd_65x39_caseless_mag_Tracer"
-        };
-
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                // Shit is broken again
-                //compatibleItems[] += {"ACE_muzzle_mzls_H"};
-                compatibleItems[] = {"muzzle_snds_H","muzzle_snds_H_SW","ACE_muzzle_mzls_H"};
-            };
         };
     };
 
@@ -57,51 +37,6 @@ class CfgWeapons {
             "ACE_30Rnd_65x39_caseless_green_mag_SD",
             "ACE_30Rnd_65x39_caseless_green_mag_AP"
         };
-
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_H"};
-            };
-        };
-    };
-
-
-    /* Other */
-
-    class Rifle_Long_Base_F: Rifle_Base_F {
-        class WeaponSlotsInfo;
-    };
-
-    class EBR_base_F: Rifle_Long_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_B"};
-            };
-        };
-    };
-
-    class DMR_01_base_F: Rifle_Long_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_B"};
-            };
-        };
-    };
-
-    class LMG_Mk200_F: Rifle_Long_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_H"};
-            };
-        };
-    };
-
-    class LMG_Zafir_F: Rifle_Long_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_B"};
-            };
-        };
     };
 
 
@@ -113,12 +48,6 @@ class CfgWeapons {
             "ACE_30Rnd_556x45_Stanag_SD",
             "ACE_30Rnd_556x45_Stanag_AP"
         };
-
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_L"};
-            };
-        };
     };
 
     class mk20_base_F: Rifle_Base_F {
@@ -126,12 +55,6 @@ class CfgWeapons {
             "ACE_30Rnd_556x45_Stanag_Tracer_Dim",
             "ACE_30Rnd_556x45_Stanag_SD",
             "ACE_30Rnd_556x45_Stanag_AP"
-        };
-
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_L"};
-            };
         };
     };
 
@@ -145,81 +68,6 @@ class CfgWeapons {
             "ACE_30Rnd_556x45_Stanag_AP"
         };
     };
-
-    class pdw2000_base_F: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
-            };
-        };
-    };
-
-    class SMG_01_Base: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
-            };
-        };
-    };
-
-    class SMG_02_base_F: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
-            };
-        };
-    };
-
-
-    /* Pistols */
-
-    class Pistol;
-    class Pistol_Base_F: Pistol {
-        class WeaponSlotsInfo;
-    };
-
-    class hgun_P07_F: Pistol_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
-            };
-        };
-    };
-
-    class hgun_Rook40_F: Pistol_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
-            };
-        };
-    };
-
-    class hgun_ACPC2_F: Pistol_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
-            };
-        };
-    };
-
-    class hgun_Pistol_heavy_01_F: Pistol_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
-            };
-        };
-    };
-
-    /*class hgun_Pistol_heavy_02_F: Pistol_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot {
-                linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
-            };
-        };
-    };*/
 
 
     /* Silencers */

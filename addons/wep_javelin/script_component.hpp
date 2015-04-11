@@ -46,6 +46,15 @@
 #define __JavelinIGUITargetingLineH (__JavelinIGUI displayCtrl 699301)
 #define __JavelinIGUITargetingLineV (__JavelinIGUI displayCtrl 699302)
 
+#define __ConstraintTop (((ctrlPosition __JavelinIGUITargetingConstrainTop) select 1) + ((ctrlPosition (__JavelinIGUITargetingConstrainTop)) select 3))
+#define __ConstraintBottom ((ctrlPosition __JavelinIGUITargetingConstrainBottom) select 1)
+#define __ConstraintLeft (((ctrlPosition __JavelinIGUITargetingConstrainLeft) select 0) + ((ctrlPosition (__JavelinIGUITargetingConstrainLeft)) select 2))
+#define __ConstraintRight ((ctrlPosition __JavelinIGUITargetingConstrainRight) select 0)
+
+#define __OffsetX ((ctrlPosition __JavelinIGUITargetingLineV) select 0) - 0.5
+#define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5
+
+
 // Colors for controls
 #define __ColorOrange [0.9255,0.5216,0.1216,1]
 #define __ColorGreen [0.2941,0.8745,0.2157,1]

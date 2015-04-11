@@ -33,7 +33,7 @@ if (isNil "_triggerConfig") exitWith {
 };
 
 _magazineTrigger = ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> _triggerConfig;
-_triggerConfig = ConfigFile >> "CfgACE_Triggers" >> _triggerConfig;
+_triggerConfig = ConfigFile >> "ACE_Triggers" >> _triggerConfig;
 
 if (isNil "_triggerConfig") exitWith {
     diag_log format ["ACE_Explosives: Error config not found in PlaceExplosive: %1", _this];

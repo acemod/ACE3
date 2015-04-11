@@ -8,7 +8,7 @@
             <French>Lock Target (Hold)</French>
             <Polish>Lock Target (Hold)</Polish>
             <Czech>Lock Target (Hold)</Czech>
-            <Spanish>Lock Target (Hold)</Spanish>
+            <Spanish>Fijar objetivo (Mantener)</Spanish>
             <Russian>Lock Target (Hold)</Russian>
         </Key>
          <Key ID="STR_ACE_WEP_JAVELIN_CycleFireMode">
@@ -17,7 +17,7 @@
             <French>Cycle Fire Mode</French>
             <Polish>Cycle Fire Mode</Polish>
             <Czech>Cycle Fire Mode</Czech>
-            <Spanish>Cycle Fire Mode</Spanish>
+            <Spanish>Cambiar modo de fuego</Spanish>
             <Russian>Cycle Fire Mode</Russian>
         </Key>
     </Package>

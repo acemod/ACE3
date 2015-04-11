@@ -1,1 +1,0 @@
-#include "\z\ace\addons\resting\script_component.hpp"
