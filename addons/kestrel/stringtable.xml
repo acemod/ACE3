@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-11 -->
+<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Wind">
     <Key ID="STR_ACE_Wind_ApproximateTemp">
@@ -34,7 +34,7 @@
       <Italian>Monitoraggio Balistico Attivo</Italian>
       <Hungarian>Applied Ballistics Meter</Hungarian>
       <Portuguese>Medidor Balístico Ativo</Portuguese>
-      <Russian>метеостанция</Russian>
+      <Russian>Метеостанция</Russian>
     </Key>
     <Key ID="STR_ACE_Wind_OpenKestrel">
       <English>Open Kestrel</English>

@@ -1,21 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Interaction">
     <Key ID="STR_ACE_Respawn_Deploy">
       <English>Deploy in 5 seconds ...</English>
       <German>Wird in 5 Sekunden errichtet ...</German>
+      <Russian>Возрождение через 5 секунд ...</Russian>
     </Key>
     <Key ID="STR_ACE_Respawn_Deployed">
       <English>Rallypoint deployed</English>
       <German>Rallypoint errichtet</German>
+      <Russian>Точка сбора установлена</Russian>
     </Key>
     <Key ID="STR_ACE_Respawn_TeleportedToBase">
       <English>Teleported to Base</English>
       <German>Zur Basis teleportiert</German>
+      <Russian>Телепорт на базу</Russian>
     </Key>
     <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
       <English>Teleported to Rallypoint</English>
       <German>Zum Rallypoint teleportiert</German>
+      <Russian>Телепорт на точку сбора</Russian>
     </Key>
   </Package>
 </Project>

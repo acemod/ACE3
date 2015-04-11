@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-02-13 -->
+<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="NameTags">
     <Key ID="STR_ACE_NameTags_ShowNames">
@@ -68,14 +68,17 @@
     </Key>
     <Key ID="STR_ACE_NameTags_ShowNamesForAI">
       <English>Show name tags for AI units</English>
+      <Russian>Показывать именые метки ИИ</Russian>
     </Key>
     <Key ID="STR_ACE_NameTags_ShowSoundWaves">
       <English>Show SoundWaves (requires player names)</English>
       <German>Zeigen Schallwelle  (benötigt spielernamen)</German>
       <Spanish>Mostrar onda sonora  (requiere Mostrar nombres de jugadores)</Spanish>
+      <Russian>Показывать звуковые волны (требует имен игроков)</Russian>
     </Key>
     <Key ID="STR_ACE_NameTags_DefaultNametagColor">
       <English>Default Nametag Color (Non Group Members)</English>
+      <Russian>Цвет меток игроков (не членов групп)</Russian>
     </Key>
   </Package>
 </Project>
