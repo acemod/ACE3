@@ -8,7 +8,8 @@ class CfgWeapons {
         scope = 2;
         displayName = "$STR_ACE_ATragMX_Name";
         descriptionShort = "$STR_ACE_ATragMX_Description";
-        picture = PATHTOF(UI\ATRAG.paa);
+        model = PATHTOF(data\tdsrecon.p3d);
+        picture = PATHTOF(UI\ATRAG_Icon.paa);
         icon = "iconObject_circle";
         mapSize = 0.034;
 
