@@ -5,13 +5,13 @@ class Extended_PreInit_EventHandlers {
 };
 
 class Extended_PostInit_EventHandlers {
-    class ADDON    {
+    class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_post_init));
     };
 };
 
 class Extended_FiredBIS_EventHandlers {
-    class AllVehicles {
+    class All {
         ADDON = QUOTE(_this call FUNC(fired));
     };
 };

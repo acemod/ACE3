@@ -40,7 +40,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 ["ACE3", QGVAR(IncreaseNVGBrightness), localize "STR_ACE_NightVision_IncreaseNVGBrightness",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if ((currentVisionMode _player != 1)) exitWith {false};
 
@@ -54,7 +54,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 ["ACE3", QGVAR(DecreaseNVGBrightness), localize "STR_ACE_NightVision_DecreaseNVGBrightness",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if ((currentVisionMode _player != 1)) exitWith {false};
 

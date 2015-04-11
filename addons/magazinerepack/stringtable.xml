@@ -77,12 +77,12 @@
     <Key ID="STR_ACE_MagazineRepack_RepackComplete">
       <English>Repacking Finished</English>
       <German>Wiederverpacken Fertig</German>
-      <Spanish>Reembalaje Finalizado</Spanish>
+      <Spanish>Reembalaje finalizado</Spanish>
     </Key>
     <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
       <English>Repacking Interrupted</English>
       <German>Umpacken Unterbrochen</German>
-      <Spanish>Reempaque Interrupted</Spanish>
+      <Spanish>Reembalaje interrumpido</Spanish>
     </Key>
     <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
       <English>%1 Full and %2 Partial</English>
