@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi and esteldunedain
+ * Author: KoffeinFlummi, esteldunedain, Ruthberg
  *
  * Watches for scope changes.
  * Defines key bindings
@@ -39,10 +39,9 @@ if !(hasInterface) exitWith {};
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
-    if !([ACE_player, 0, 0.1] call FUNC(canAdjustScope)) exitWith {false};
-
+    
     // Statement
-    [ACE_player, 0, 0.1] call FUNC(adjustScope);
+    [ACE_player, ELEVATION_UP, MINOR_INCREMENT] call FUNC(adjustScope);
     true
 },
 {false},
@@ -54,10 +53,9 @@ if !(hasInterface) exitWith {};
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
-    if !([ACE_player, 0, -0.1] call FUNC(canAdjustScope)) exitWith {false};
 
     // Statement
-    [ACE_player, 0, -0.1] call FUNC(adjustScope);
+    [ACE_player, ELEVATION_DOWN, MINOR_INCREMENT] call FUNC(adjustScope);
     true
 },
 {false},
@@ -69,10 +67,9 @@ if !(hasInterface) exitWith {};
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
-    if !([ACE_player, -0.1, 0] call FUNC(canAdjustScope)) exitWith {false};
 
     // Statement
-    [ACE_player, -0.1, 0] call FUNC(adjustScope);
+    [ACE_player, WINDAGE_LEFT, MINOR_INCREMENT] call FUNC(adjustScope);
     true
 },
 {false},
@@ -84,10 +81,9 @@ if !(hasInterface) exitWith {};
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
-    if !([ACE_player, 0.1, 0] call FUNC(canAdjustScope)) exitWith {false};
 
     // Statement
-    [ACE_player, 0.1, 0] call FUNC(adjustScope);
+    [ACE_player, WINDAGE_RIGHT, MINOR_INCREMENT] call FUNC(adjustScope);
     true
 },
 {false},
@@ -99,10 +95,9 @@ if !(hasInterface) exitWith {};
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
-    if !([ACE_player, 0, 1.0] call FUNC(canAdjustScope)) exitWith {false};
 
     // Statement
-    [ACE_player, 0, 1.0] call FUNC(adjustScope);
+    [ACE_player, ELEVATION_UP, MAJOR_INCREMENT] call FUNC(adjustScope);
     true
 },
 {false},
@@ -114,10 +109,9 @@ if !(hasInterface) exitWith {};
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
-    if !([ACE_player, 0, -1.0] call FUNC(canAdjustScope)) exitWith {false};
 
     // Statement
-    [ACE_player, 0, -1.0] call FUNC(adjustScope);
+    [ACE_player, ELEVATION_DOWN, MAJOR_INCREMENT] call FUNC(adjustScope);
     true
 },
 {false},
@@ -129,10 +123,9 @@ if !(hasInterface) exitWith {};
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
-    if !([ACE_player, -1.0, 0] call FUNC(canAdjustScope)) exitWith {false};
 
     // Statement
-    [ACE_player, -1.0, 0] call FUNC(adjustScope);
+    [ACE_player, WINDAGE_LEFT, MAJOR_INCREMENT] call FUNC(adjustScope);
     true
 },
 {false},
@@ -144,10 +137,9 @@ if !(hasInterface) exitWith {};
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
-    if !([ACE_player, 1.0, 0] call FUNC(canAdjustScope)) exitWith {false};
 
     // Statement
-    [ACE_player, 1.0, 0] call FUNC(adjustScope);
+    [ACE_player, WINDAGE_RIGHT, MAJOR_INCREMENT] call FUNC(adjustScope);
     true
 },
 {false},

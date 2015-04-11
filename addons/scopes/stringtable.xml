@@ -26,5 +26,8 @@
     <Key ID="STR_ACE_Scopes_AdjustLeftMajor">
       <English>Major adjustment left</English>
     </Key>
+    <Key ID="STR_ACE_Scopes_AdjustZero">
+      <English>Set zero adjustment</English>
+    </Key>
   </Package>
 </Project>
