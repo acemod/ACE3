@@ -27,6 +27,7 @@ class ACE_Settings {
         value = 0;
         typeName = "BOOL";
         isClientSetable = 1;
-        displayName = "Keep cursor centered";
+        displayName = "$STR_ACE_Interact_cursorKeepCentered";
+        description = "$STR_ACE_Interact_cursorKeepCenteredDescription";
     };
 };

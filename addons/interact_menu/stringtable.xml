@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-03 -->
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="Interact_Menu">
     <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -16,6 +16,12 @@
     </Key>
     <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
       <English>Vehicle Actions</English>
+    </Key>
+    <Key ID="STR_ACE_Interact_cursorKeepCentered">
+      <English>Keep cursor centered</English>
+    </Key>
+    <Key ID="STR_ACE_Interact_cursorKeepCenteredDescription">
+      <English>Keeps cursor centered and pans the option menu around.  Useful if screen size is limited.</English>
     </Key>
   </Package>
 </Project>
