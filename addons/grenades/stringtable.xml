@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-09-11 -->
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="Grenades">
     <Key ID="STR_ACE_Grenades_SwitchGrenadeMode">
@@ -19,7 +19,7 @@
       <German>Normaler Wurf</German>
       <Spanish>Lanzamiento normal</Spanish>
       <Polish>Normalny rzut</Polish>
-      <Czech>Normální</Czech>
+      <Czech>Normální hod</Czech>
       <French>Lancer Normal</French>
       <Russian>Нормальный бросок</Russian>
       <Hungarian>Normál dobás</Hungarian>
@@ -31,7 +31,7 @@
       <German>Hoher Wurf</German>
       <Spanish>Lanzamiento alto</Spanish>
       <Polish>Rzut lobem</Polish>
-      <Czech>Vysoko</Czech>
+      <Czech>Vysoký hod</Czech>
       <French>Lancer Haut</French>
       <Russian>Высокий бросок</Russian>
       <Hungarian>Magas dobás</Hungarian>
@@ -43,7 +43,7 @@
       <German>Präziser Wurf</German>
       <Spanish>Lanzamiento preciso</Spanish>
       <Polish>Precyzyjny rzut</Polish>
-      <Czech>Přesně</Czech>
+      <Czech>Přesný hod</Czech>
       <French>Lancer Précis</French>
       <Russian>Точный бросок</Russian>
       <Hungarian>Pontos dobás</Hungarian>
@@ -80,7 +80,7 @@
       <Spanish>Granada aturdidora M84</Spanish>
       <French>M84 Grenade Incapacitante</French>
       <Polish>Granat hukowy M84</Polish>
-      <Czech>M84 Omračující granát</Czech>
+      <Czech>Omračující granát M84</Czech>
       <Russian>M84 светозвуковая граната</Russian>
       <Hungarian>M84 Villanógránát</Hungarian>
       <Italian>Granata Stordente M84</Italian>
@@ -101,7 +101,7 @@
     <Key ID="STR_ACE_Grenades_M127A1_White_Name">
       <English>M127A1 Hand Held Signal (White)</English>
       <German>M127A1 Leuchtmittel (Weiß)</German>
-      <Czech> M127A1 Světlice (Bílá)</Czech>
+      <Czech>Světlice M127A1 (Bílá)</Czech>
       <Hungarian>M127A1 Jelzőrakéta (Fehér)</Hungarian>
       <Italian>M127A1 Bengala (Bianco)</Italian>
       <Polish>Flara ręczna sygnałowa M127A1 (biała)</Polish>
@@ -113,7 +113,7 @@
     <Key ID="STR_ACE_Grenades_M127A1_Red_Name">
       <English>M127A1 Hand Held Signal (Red)</English>
       <German>M127A1 Leuchtmittel (Rot)</German>
-      <Czech>M127A1 Světlice (Červená)</Czech>
+      <Czech>Světlice M127A1 (Červená)</Czech>
       <Hungarian>M127A1 Jelzőrakéta (Piros)</Hungarian>
       <Italian>M127A1 Bengala (Rosso)</Italian>
       <Polish>Flara ręczna sygnałowa M127A1 (czerwona)</Polish>
@@ -125,7 +125,7 @@
     <Key ID="STR_ACE_Grenades_M127A1_Green_Name">
       <English>M127A1 Hand Held Signal (Green)</English>
       <German>M127A1 Leuchtmittel (Grün)</German>
-      <Czech>M127A1 Světlice (Zelená)</Czech>
+      <Czech>Světlice M127A1 (Zelená)</Czech>
       <Hungarian>M127A1 Jelzőrakéta (Zöld)</Hungarian>
       <Italian>M127A1 Bengala (Verde)</Italian>
       <Polish>Flara ręczna sygnałowa M127A1 (zielona)</Polish>
@@ -137,7 +137,7 @@
     <Key ID="STR_ACE_Grenades_M127A1_Yellow_Name">
       <English>M127A1 Hand Held Signal (Yellow)</English>
       <German>M127A1 Leuchtmittel (Gelb)</German>
-      <Czech>M127A1 Světlice (Žlutá)</Czech>
+      <Czech>Světlice M127A1 (Žlutá)</Czech>
       <Hungarian>M127A1 Jelzőrakéta (Sárga)</Hungarian>
       <Italian>M127A1 Bengala (Giallo)</Italian>
       <Polish>Flara ręczna sygnałowa M127A1 (żółta)</Polish>
@@ -185,7 +185,7 @@
     <Key ID="STR_ACE_Grenades_M127A1_Yellow_Description">
       <English>Yellow Hand Flare</English>
       <German>Gelbe Leuchtkugel, wird wie eine Granate geworfen.</German>
-      <Czech>Světlice Žlutá</Czech>
+      <Czech>Světlice (Žlutá)</Czech>
       <Hungarian>Jelzőrakéta (Sárga)</Hungarian>
       <Italian>Bengala (Giallo)</Italian>
       <Polish>Flara ręczna (żółta)</Polish>

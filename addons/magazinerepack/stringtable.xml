@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-02-08 -->
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="MagazineRepack">
     <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
@@ -20,7 +20,7 @@
       <Spanish>Menú de selección de cargador</Spanish>
       <French>Sélectionner menu des chargeurs</French>
       <Polish>Menu wyboru magazynków</Polish>
-      <Czech>Zvolit Menu Zásobníků</Czech>
+      <Czech>Zvolit Menu zásobníků</Czech>
       <Italian>Seleziona Menù di Ricarica</Italian>
       <Portuguese>Menu de Seleção de Carregador</Portuguese>
       <Hungarian>Fegyvertár menü kiválasztás</Hungarian>
@@ -32,7 +32,7 @@
       <Spanish>Seleccionar cargador</Spanish>
       <French>Sélectionner chargeur</French>
       <Polish>Wybierz magazynek</Polish>
-      <Czech>Zvolit Zásobník</Czech>
+      <Czech>Zvolit zásobník</Czech>
       <Italian>Seleziona Caricatore</Italian>
       <Portuguese>Selecionar Carregador</Portuguese>
       <Hungarian>Tár kiválasztása</Hungarian>
@@ -44,7 +44,7 @@
       <Spanish>Reorganizando cargadores ...</Spanish>
       <French>Réorganisation des chargeurs ...</French>
       <Polish>Przepakowywanie magazynków ...</Polish>
-      <Czech>Páskuji Zásobníky ...</Czech>
+      <Czech>Páskuji zásobníky ...</Czech>
       <Italian>Sto ricaricando le munizioni ...</Italian>
       <Portuguese>Reorganizando Carregadores ...</Portuguese>
       <Hungarian>Újratárazás ...</Hungarian>
@@ -56,7 +56,7 @@
       <Spanish>Cargadores reorganizados</Spanish>
       <French>Chargeurs réorganisés</French>
       <Polish>Magazynki przepakowane</Polish>
-      <Czech>Přepáskované Zásobníky</Czech>
+      <Czech>Přepáskované zásobníky</Czech>
       <Italian>Caricatore ricaricato</Italian>
       <Portuguese>Carregadores Reorganizados</Portuguese>
       <Hungarian>Újratárazott tárak</Hungarian>
@@ -78,16 +78,19 @@
       <English>Repacking Finished</English>
       <German>Wiederverpacken Fertig</German>
       <Spanish>Reembalaje finalizado</Spanish>
+      <Czech>Páskování dokončeno</Czech>
     </Key>
     <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
       <English>Repacking Interrupted</English>
       <German>Umpacken Unterbrochen</German>
       <Spanish>Reembalaje interrumpido</Spanish>
+      <Czech>Páskování přerušeno</Czech>
     </Key>
     <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
       <English>%1 Full and %2 Partial</English>
       <German>%1 Vollständigen und %2 Teilweisen</German>
       <Spanish>%1 Total y %2 Parcial</Spanish>
+      <Czech>%1 plný a %2 částečně</Czech>
     </Key>
   </Package>
 </Project>

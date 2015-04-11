@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-07 -->
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="Medical">
     <Key ID="STR_ACE_Medical_Inject_Atropine">
       <English>Inject Atropine</English>
       <German>Atropin</German>
       <Spanish>Inyectar atropina</Spanish>
+      <Czech>Aplikovat atropin</Czech>
     </Key>
     <Key ID="STR_ACE_Medical_Inject_Epinephrine">
       <English>Inject Epinephrine</English>
       <German>Epinephrine injizieren</German>
       <Spanish>Inyectar Epinefrina</Spanish>
       <Polish>Wtrzyknij adrenalinę</Polish>
-      <Czech>Aplikovat Adrenalin</Czech>
+      <Czech>Aplikovat adrenalin</Czech>
       <Russian>Ввести андреналил</Russian>
       <French>Adrénaline</French>
       <Hungarian>Adrenalin</Hungarian>
@@ -24,7 +25,7 @@
       <German>Morphin injizieren</German>
       <Spanish>Inyectar Morfina</Spanish>
       <Polish>Wstrzyknij morfinę</Polish>
-      <Czech>Aplikovat Morfin</Czech>
+      <Czech>Aplikovat morfin</Czech>
       <Russian>Ввести морфин</Russian>
       <French>Morphine</French>
       <Hungarian>Morfium</Hungarian>
@@ -47,16 +48,19 @@
       <English>Transfuse Plasma</English>
       <German>Plasmatransfusion</German>
       <Spanish>Transfundir plasma</Spanish>
+      <Czech>Transfúze plazmy</Czech>
     </Key>
     <Key ID="STR_ACE_Medical_Transfuse_Saline">
       <English>Transfuse Saline</English>
       <German>Salzlösungtransfusion</German>
       <Spanish>Transfundir salina</Spanish>
+      <Czech>Transfúze fyziologický roztoku</Czech>
     </Key>
     <Key ID="STR_ACE_Medical_Apply_Tourniquet">
       <English>Apply Tourniquet</English>
       <German>Aderpresse anwenden</German>
       <Spanish>Aplicar torniquete</Spanish>
+      <Czech>Aplikovat škrtidlo</Czech>
     </Key>
     <Key ID="STR_ACE_Medical_Bandage">
       <English>Bandage</English>
@@ -147,7 +151,7 @@
       <German>Morphin injizieren ...</German>
       <Spanish>Inyectando Morfina ...</Spanish>
       <Polish>Wstrzykiwanie morfiny ...</Polish>
-      <Czech>Aplikuju Morfin ...</Czech>
+      <Czech>Aplikuji morfin ...</Czech>
       <Russian>Введение морфина...</Russian>
       <French>Injection de Morphine...</French>
       <Hungarian>Morfium beadása...</Hungarian>
@@ -159,7 +163,7 @@
       <German>Epinephrin injizieren ...</German>
       <Spanish>Inyectando Epinefrina ...</Spanish>
       <Polish>Wstrzykiwanie adrenaliny ...</Polish>
-      <Czech>Aplikuju Adrenalin ...</Czech>
+      <Czech>Aplikuji adrenalin ...</Czech>
       <Russian>Введение андреналина</Russian>
       <French>Injection d'Adrénaline ...</French>
       <Hungarian>Adrenalin beadása...</Hungarian>
@@ -169,6 +173,7 @@
     <Key ID="STR_ACE_Medical_Injecting_Atropine">
       <English>Injecting Atropine ...</English>
       <German>Atropin injizieren ...</German>
+      <Czech>Aplikuji atropin ...</Czech>
     </Key>
     <Key ID="STR_ACE_Medical_Transfusing_Blood">
       <English>Transfusing Blood ...</English>
@@ -186,11 +191,13 @@
       <English>Transfusing Saline ...</English>
       <German>Sallösungtransfusion ...</German>
       <Spanish>Transfusión de salina ...</Spanish>
+      <Czech>Probíha transfúze fyziologický roztoku ...</Czech>
     </Key>
     <Key ID="STR_ACE_Medical_Transfusing_Plasma">
       <English>Transfusing Plasma ...</English>
       <German>Plasmatransfusion ...</German>
       <Spanish>Transfusión de plasma ...</Spanish>
+      <Czech>Probíha transfúze plazmy ...</Czech>
     </Key>
     <Key ID="STR_ACE_Medical_Bandaging">
       <English>Bandaging ...</English>
@@ -208,6 +215,7 @@
       <English>Applying Tourniquet ...</English>
       <German>Aderpresse ...</German>
       <Spanish>Aplicando torniquete ...</Spanish>
+      <Czech>Aplikuji škrtidlo</Czech>
     </Key>
     <Key ID="STR_ACE_MEDICAL_ACTIONS_Medical">
       <English>Medical</English>
@@ -223,6 +231,7 @@
     <Key ID="STR_ACE_MEDICAL_ACTIONS_FieldDressing">
       <English>Field Dressing</English>
       <Spanish>Compresa de campaña</Spanish>
+      <Czech>Obinadlo</Czech>
     </Key>
     <Key ID="STR_ACE_MEDICAL_ACTIONS_PackingBandage">
       <English>Packing Bandage</English>
@@ -231,6 +240,7 @@
     <Key ID="STR_ACE_MEDICAL_ACTIONS_ElasticBandage">
       <English>Elastic Bandage</English>
       <Spanish>Vendaje elástico</Spanish>
+      <Czech>Elastické obinadlo</Czech>
     </Key>
     <Key ID="STR_ACE_MEDICAL_ACTIONS_QuikClot">
       <English>QuikClot</English>
@@ -240,11 +250,13 @@
       <English>Check Pulse</English>
       <German>Puls überprüfen</German>
       <Spanish>Comprobar pulso</Spanish>
+      <Czech>Zkontrolovat pulz</Czech>
     </Key>
     <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure">
       <English>Check Blood Pressure</English>
       <German>Blutdruck messen</German>
       <Spanish>Comprobar presión arterial</Spanish>
+      <Czech>Zkontrolovat krevní tlak</Czech>
     </Key>
     <Key ID="STR_ACE_MEDICAL_ACTIONS_TriageCard">
       <English>Triage Card</English>
@@ -255,11 +267,13 @@
       <English>Tourniquet</English>
       <German>Tourniquet</German>
       <Spanish>Torniquete</Spanish>
+      <Czech>Škrtidlo</Czech>
     </Key>
     <Key ID="STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet">
       <English>Remove Tourniquet</English>
       <German>Entferne Tourniquet</German>
       <Spanish>Quitar torniquete</Spanish>
+      <Czech>Sundat škrtidlo</Czech>
     </Key>
     <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_1000">
       <English>Give Blood IV (1000ml)</English>
@@ -378,7 +392,6 @@
       <English>Receiving IV [%1ml]</English>
       <Spanish>Reciviendo IV [%1ml]</Spanish>
     </Key>
-
     <Key ID="STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY">
       <English>Bandage (Basic)</English>
       <Russian>Повязка (обычная)</Russian>
@@ -764,7 +777,6 @@
       <Russian>Мешок для упаковки трупов</Russian>
       <Spanish>Bolsa para cadáveres</Spanish>
     </Key>
-
     <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE">
       <English>Blood Pressure</English>
       <Russian>Артериальное давление</Russian>
@@ -991,7 +1003,6 @@
       <English>Placing body in bodybag</English>
       <Spanish>Colocando cuerpo en bolsa para cadáveres</Spanish>
     </Key>
-
     <Key ID="STR_ACE_MEDICAL_ACTIVITY_bandagedPatient">
       <English>%1 has bandaged patient</English>
       <Spanish>%1 has vendado al paciente</Spanish>

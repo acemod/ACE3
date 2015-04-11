@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-09-09 -->
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="Reload">
     <Key ID="STR_ACE_reload_SettingDisplayTextName">
       <English>Check ammo on weapon reload</English>
       <Spanish>Comprovar munición al recargar el arma</Spanish>
+      <Czech>Zkontrolovat munici při nabití</Czech>
     </Key>
     <Key ID="STR_ACE_reload_SettingDisplayTextDesc">
       <English>Check the ammo in your new magazine on magazine reload.</English>
       <Spanish>Comprueva la munición del nuevo cargador al recargar.</Spanish>
+      <Czech>Kontroluje munice při nabití nového zásobníku.</Czech>
     </Key>
     <Key ID="STR_ACE_Reload_checkAmmo">
       <English>Check Ammo</English>
@@ -37,10 +39,12 @@
     <Key ID="STR_ACE_Reload_LinkBelt">
       <English>Link belt</English>
       <Spanish>Enlazar cinta</Spanish>
+      <Czech>Spojit pás munice</Czech>
     </Key>
     <Key ID="STR_ACE_Reload_LinkingBelt">
       <English>Linking belt...</English>
       <Spanish>Enlazando cinta...</Spanish>
+      <Czech>Spojuji pás...</Czech>
     </Key>
   </Package>
 </Project>

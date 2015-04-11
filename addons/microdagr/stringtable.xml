@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-03-24 -->
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="microdagr">
     <Key ID="STR_ACE_microdagr_itemName">
       <English>MicroDAGR GPS</English>
       <Spanish>GPS MicroDAGR</Spanish>
+      <Czech>MicroDAGR GPS</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_itemDescription">
       <English>MicroDAGR advanced GPS receiver</English>
@@ -81,23 +82,28 @@
       <English>Waypoints</English>
       <Spanish>Puntos de ruta</Spanish>
       <German>Wegpunkte</German>
+      <Czech>Waypointy</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_menuConnectTo">
       <English>Connect To</English>
       <Spanish>Conectar a</Spanish>
+      <Czech>Připojit k</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_menuSettings">
       <English>Settings</English>
       <German>Einstellungen</German>
       <Spanish>Configuración</Spanish>
+      <Czech>Nastavení</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsSet">
       <English>SetWP</English>
       <Spanish>Establecer PR</Spanish>
+      <Czech>Nastavit WP</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsAdd">
       <English>Add</English>
       <Spanish>Añadir</Spanish>
+      <Czech>Přidat</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsDelete">
       <English>Delete</English>
@@ -117,14 +123,17 @@
     <Key ID="STR_ACE_microdagr_show">
       <English>Show MicoDAGR</English>
       <Spanish>Mostrar MicroDAGR</Spanish>
+      <Czech>Ukázat MicroDAGR GPS</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_configure">
       <English>Configure MicroDAGR</English>
       <Spanish>Configurar MicroDAGR</Spanish>
+      <Czech>Konfigurovat MicroDAGR GPS</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_closeUnit">
       <English>Close MicroDAGR</English>
       <Spanish>Cerrar MicroDAGR</Spanish>
+      <Czech>Zavřít MicroDAGR GPS</Czech>
     </Key>
   </Package>
 </Project>

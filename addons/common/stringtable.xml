@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-07 -->
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="Common">
     <Key ID="STR_ACE_Common_ACETeam">
@@ -43,7 +43,7 @@
       <German>ACE Optionen</German>
       <Spanish>Opciones ACE</Spanish>
       <Polish>Opcje ACE</Polish>
-      <Czech>ACE Nastavení</Czech>
+      <Czech>Nastavení ACE</Czech>
       <French>ACE Options</French>
       <Russian>ACE Настройки</Russian>
       <Portuguese>Opções do ACE</Portuguese>
@@ -248,7 +248,7 @@
       <German>Aktion abgebrochen.</German>
       <Spanish>Acción cancelada.</Spanish>
       <Polish>Przerwano czynność</Polish>
-      <Czech>Akce přerušena</Czech>
+      <Czech>Akce přerušena.</Czech>
       <French>Action annulée.</French>
       <Russian>Действие отменено.</Russian>
       <Portuguese>Ação cancelada.</Portuguese>
@@ -300,12 +300,14 @@
       <German>Anfrage annehmen</German>
       <Spanish>Aceptar peticiones</Spanish>
       <Polish>Akceptuj prośby</Polish>
+      <Czech>Přijmout žádost</Czech>
     </Key>
     <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TITLE">
       <English>Decline Requests</English>
       <German>Anfrage ablehnen</German>
       <Spanish>Rechazar peticiones</Spanish>
       <Polish>Ignoruj prośby</Polish>
+      <Czech>Zamítnout žádost</Czech>
     </Key>
     <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
       <English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
@@ -363,11 +365,13 @@
       <English>Banana</English>
       <German>Banane</German>
       <Spanish>Banana</Spanish>
+      <Czech>Banán</Czech>
     </Key>
     <Key ID="STR_ACE_Common_bananaDescr">
       <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
       <German>Die Bananen (Musa) sind eine Pflanzengattung in der Familie der Bananengewächse (Musaceae) innerhalb der Einkeimblättrigen Pflanzen (Monokotyledonen).</German>
       <Spanish>Una banana es una fruta comestible, botanicamente una baya, producida por varios tipos de grandes plantas herbáceas del género Musa.</Spanish>
+      <Czech>Banán je protáhlé ovoce a plod banánovníku (epigeická bobule).</Czech>
     </Key>
   </Package>
 </Project>

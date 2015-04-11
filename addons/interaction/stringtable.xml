@@ -1,46 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-07 -->
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="Interaction">
     <Key ID="STR_ACE_Interaction_MainAction">
       <English>Interactions</English>
       <German>Interaktion</German>
       <Spanish>Interacciones</Spanish>
+      <Czech>Interakce</Czech>
     </Key>
     <Key ID="STR_ACE_Interaction_Torso">
       <English>Torso</English>
       <German>Torso</German>
       <Spanish>Torso</Spanish>
+      <Czech>Trup</Czech>
     </Key>
     <Key ID="STR_ACE_Interaction_Head">
       <English>Head</English>
       <German>Kopf</German>
       <Spanish>Cabeza</Spanish>
+      <Czech>Hlava</Czech>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmLeft">
       <English>Left Arm</English>
       <German>Arm links</German>
       <Spanish>Brazo izquierdo</Spanish>
+      <Czech>Levá paže</Czech>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmRight">
       <English>Right Arm</English>
       <German>Arm rechts</German>
       <Spanish>Brazo derecho</Spanish>
+      <Czech>Pravá paže</Czech>
     </Key>
     <Key ID="STR_ACE_Interaction_LegLeft">
       <English>Left Leg</English>
       <German>Bein links</German>
       <Spanish>Pierna izquierda</Spanish>
+      <Czech>Levá noha</Czech>
     </Key>
     <Key ID="STR_ACE_Interaction_LegRight">
       <English>Right Leg</English>
       <German>Bein rechts</German>
       <Spanish>Pierna derecha</Spanish>
+      <Czech>Pravá hona</Czech>
     </Key>
     <Key ID="STR_ACE_Interaction_Weapon">
       <English>Weapon</English>
       <German>Waffe</German>
       <Spanish>Arma</Spanish>
+      <Czech>Zbraň</Czech>
     </Key>
     <Key ID="STR_ACE_Interaction_InteractionMenu">
       <English>Interaction Menu</English>
@@ -143,7 +151,7 @@
       <German>Gruppe verlassen</German>
       <Spanish>Dejar grupo</Spanish>
       <Polish>Opuść grupę</Polish>
-      <Czech>Odejít ze skupiny</Czech>
+      <Czech>Opustit skupinu</Czech>
       <French>Quitter Groupe</French>
       <Russian>Выйти из группы</Russian>
       <Hungarian>Csoport elhagyása</Hungarian>
@@ -203,7 +211,7 @@
       <German>Gesten</German>
       <Spanish>Gestos</Spanish>
       <Polish>Gesty</Polish>
-      <Czech>Gesta</Czech>
+      <Czech>Posunky</Czech>
       <French>Signaux</French>
       <Russian>Жесты</Russian>
       <Hungarian>Kézjelek</Hungarian>
@@ -385,7 +393,7 @@
       <French>On te tape sur l'épaule</French>
       <Polish>Zostałeś klepnięty po ramieniu</Polish>
       <Hungarian>Vállonveregettek</Hungarian>
-      <Czech>Někdo tě poklepal na rameno</Czech>
+      <Czech>Někdo tě poklepal na PRAVÉ rameno</Czech>
       <Russian>Вас похлопали по плечу</Russian>
       <Portuguese>Você foi tocado no ombro</Portuguese>
       <Italian>Ti è stato dato un colpetto sulla spalla</Italian>
@@ -397,7 +405,7 @@
       <French>On te tape sur l'épaule.</French>
       <Polish>Zostałeś klepnięty po ramieniu</Polish>
       <Hungarian>Vállonveregettek</Hungarian>
-      <Czech>Někdo tě poklepal na rameno.</Czech>
+      <Czech>Někdo tě poklepal na LEVÉ rameno.</Czech>
       <Russian>Вас похлопали по плечу</Russian>
       <Portuguese>Você foi tocado no ombro.</Portuguese>
       <Italian>Ti è stato dato un colpetto sulla spalla</Italian>
@@ -516,7 +524,7 @@
       <Spanish>Unirse al&lt;br/&gt;equipo rojo</Spanish>
       <French>Rejoindre&lt;br/&gt;Rouge</French>
       <Polish>Dołącz do drużyny&lt;br/&gt;czerwonej</Polish>
-      <Czech>Připojit do&lt;br/&gt;Červeného Týmu</Czech>
+      <Czech>Připojit do&lt;br/&gt;Červeného týmu</Czech>
       <Russian>Присоединиться&lt;br/&gt;к красной группе</Russian>
       <Portuguese>Unir-se à&lt;br/&gt;Equipe Vermelha</Portuguese>
       <Italian>Entra nella&lt;br/&gt;Squadra Rossa</Italian>
@@ -528,7 +536,7 @@
       <Spanish>Unirse al&lt;br/&gt;equipo verde</Spanish>
       <French>Rejoindre&lt;br/&gt;Verte</French>
       <Polish>Dołącz do&lt;br/&gt;drużyny zielonej</Polish>
-      <Czech>Připojit do&lt;br/&gt;Zeleného Týmu</Czech>
+      <Czech>Připojit do&lt;br/&gt;Zeleného týmu</Czech>
       <Russian>Присоединиться&lt;br/&gt;к зеленой группе</Russian>
       <Portuguese>Unir-se à&lt;br/&gt;Equipe Verde</Portuguese>
       <Italian>Entra nella&lt;br/&gt;Squadra Verde</Italian>
@@ -540,7 +548,7 @@
       <Spanish>Unirse al&lt;br/&gt;equipo azul</Spanish>
       <French>Rejoindre&lt;br/&gt;Bleue</French>
       <Polish>Dołącz do&lt;br/&gt;drużyny niebieskiej</Polish>
-      <Czech>Připojit do&lt;br/&gt;Modrého Týmu</Czech>
+      <Czech>Připojit do&lt;br/&gt;Modrého týmu</Czech>
       <Russian>Присоединиться&lt;br/&gt;к синей группе</Russian>
       <Portuguese>Unir-se à&lt;br/&gt;Equipe Azul</Portuguese>
       <Italian>Entra nella&lt;br/&gt;Squadra Blu</Italian>
@@ -552,7 +560,7 @@
       <Spanish>Unirse al&lt;br/&gt;equipo amarillo</Spanish>
       <French>Rejoindre&lt;br/&gt;Jaune</French>
       <Polish>Dołącz do&lt;br/&gt;drużyny żółtej</Polish>
-      <Czech>Připojit do&lt;br/&gt;Žlutého Týmu</Czech>
+      <Czech>Připojit do&lt;br/&gt;Žlutého týmu</Czech>
       <Russian>Присоединиться&lt;br/&gt;к желтой группе</Russian>
       <Portuguese>Unir-se à&lt;br/&gt;Equipe Amarela</Portuguese>
       <Italian>Entra nella&lt;br/&gt;Squadra Gialla</Italian>
@@ -564,7 +572,7 @@
       <Spanish>Te has unido al equipo %1</Spanish>
       <French>Tu as rejoint l'équipe %1</French>
       <Polish>Dołączyłeś do drużyny %1</Polish>
-      <Czech>Připojil ses do Týmu %1</Czech>
+      <Czech>Připojil ses do %1 týmu</Czech>
       <Russian>Вы присоединились к группе %1</Russian>
       <Portuguese>Você uniu-se à Equipe %1</Portuguese>
       <Italian>Sei entrato nella Squadra %1</Italian>
@@ -673,6 +681,7 @@
       <English>Passengers</English>
       <German>Passagiere</German>
       <Spanish>Pasajeros</Spanish>
+      <Czech>Pasažéři</Czech>
     </Key>
   </Package>
 </Project>

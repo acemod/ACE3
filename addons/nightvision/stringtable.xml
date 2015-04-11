@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-17 -->
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="NightVision">
     <Key ID="STR_ACE_NightVision_NVG_Gen1">
@@ -84,7 +84,7 @@
       <German>NS-Brille (Weitwinkel)</German>
       <Spanish>Sistema de visión nocturna (Panorámicas)</Spanish>
       <Polish>Gogle noktowizyjne (panoramiczne)</Polish>
-      <Czech>Noktovizor (Široký)</Czech>
+      <Czech>Noktovizor (Širokoúhlý)</Czech>
       <Russian>ПНВ (Широкий)</Russian>
     </Key>
     <Key ID="STR_ACE_NightVision_NVGBrightness">
@@ -92,7 +92,7 @@
       <German>Helligkeit: %1</German>
       <Spanish>Brillo: %1</Spanish>
       <Polish>Czułość: %1</Polish>
-      <Czech>Zvýšení: %1</Czech>
+      <Czech>Jas: %1</Czech>
       <French>Luminosité : %1</French>
       <Russian>Контраст: </Russian>
       <Hungarian>Fényerő: %1</Hungarian>

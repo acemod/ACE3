@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-07 -->
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="Attach">
     <Key ID="STR_ACE_Attach_AttachDetach">
@@ -44,7 +44,7 @@
       <Spanish>Marcador IR acoplado</Spanish>
       <Polish>Przyczepiono stroboskop IR</Polish>
       <French>Strobe IR attaché</French>
-      <Czech>IR Značkovač Připnutý</Czech>
+      <Czech>IR Značkovač připnutý</Czech>
       <Portuguese>Marcador IV Acoplado</Portuguese>
       <Italian>Strobo IR attaccata</Italian>
       <Hungarian>Infravörös jeladó hozzácsatolva</Hungarian>
@@ -56,7 +56,7 @@
       <Spanish>Marcador IR quitado</Spanish>
       <Polish>Odczepiono stroboskop IR</Polish>
       <French>Strobe IR détaché</French>
-      <Czech>IR Značkovač Odepnutý</Czech>
+      <Czech>IR Značkovač odepnutý</Czech>
       <Portuguese>Marcador IV Separado</Portuguese>
       <Italian>Strobo IR staccata</Italian>
       <Hungarian>Infravörös jeladó lecsatolva</Hungarian>
@@ -68,7 +68,7 @@
       <Spanish>Granada IR acoplada</Spanish>
       <Polish>Przyczepiono granat IR</Polish>
       <French>Grenade IR attachée</French>
-      <Czech>IR Granát Připnutý</Czech>
+      <Czech>IR Granát připnutý</Czech>
       <Portuguese>Granada IV Acoplada</Portuguese>
       <Italian>Granata IR attaccata</Italian>
       <Hungarian>Infravörös gránát hozzácsatolva</Hungarian>
@@ -80,7 +80,7 @@
       <Spanish>Granada IR quitada</Spanish>
       <Polish>Odczepiono granat IR</Polish>
       <French>Grenade IR détachée</French>
-      <Czech>IR Granát Odepnutý</Czech>
+      <Czech>IR Granát odepnutý</Czech>
       <Portuguese>Granada IV Separada</Portuguese>
       <Italian>Granata IR staccata</Italian>
       <Hungarian>Infravörös gránát lecsatolva</Hungarian>
@@ -92,7 +92,7 @@
       <Spanish>Barra de luz acoplada</Spanish>
       <Polish>Przyczepiono światło chemiczne</Polish>
       <French>Chemlight attaché</French>
-      <Czech>Chemické světlo Připnuto</Czech>
+      <Czech>Chemické světlo připnuto</Czech>
       <Portuguese>Chemlight Acoplada</Portuguese>
       <Italian>Chemlight attaccata</Italian>
       <Hungarian>Chemlight hozzácsatolva</Hungarian>
@@ -104,7 +104,7 @@
       <Spanish>Barra de luz quitada</Spanish>
       <Polish>Odczepiono światło chemiczne</Polish>
       <French>Chemlight détaché</French>
-      <Czech>Chemické světlo Odepnuto</Czech>
+      <Czech>Chemické světlo odepnuto</Czech>
       <Portuguese>Chemlight Separada</Portuguese>
       <Italian>Chemlight staccata</Italian>
       <Hungarian>Chemlight hozzácsatolva</Hungarian>
@@ -174,6 +174,7 @@
       <German>Befestigen fehlgeschlagen</German>
       <Russian>Присоединить Ошибка</Russian>
       <Spanish>Error al acoplar</Spanish>
+      <Czech>Připnutí selhalo</Czech>
     </Key>
   </Package>
 </Project>

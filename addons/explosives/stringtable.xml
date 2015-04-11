@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-07 -->
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="Explosives">
     <Key ID="STR_ACE_Explosives_Menu">
@@ -80,7 +80,7 @@
       <Spanish>+ Modificador, girar</Spanish>
       <French>+ Modificateur, tourner</French>
       <Italian>+ Modificatore, rotazione</Italian>
-      <Czech>+ Otočit</Czech>
+      <Czech>+ Modifikátor, otočit</Czech>
       <Hungarian>+ Változtatás, forgatás</Hungarian>
       <Polish>+ modyfikator, obracanie</Polish>
       <Portuguese>+ Modificador, rotaciona</Portuguese>
@@ -140,7 +140,7 @@
       <Spanish>Dispositivo de detonación M57</Spanish>
       <Polish>Zapalnik M57</Polish>
       <French>M57 Dispositif de mise à feu</French>
-      <Czech>M57 Odpalovací Zařízení</Czech>
+      <Czech>Odpalovací zařízení M57</Czech>
       <Italian>Detonatore M57</Italian>
       <Hungarian>M57 Detonátor</Hungarian>
       <Portuguese>M57 Dispositivo de Detonação</Portuguese>
@@ -152,7 +152,7 @@
       <Spanish>Usado para detonar remotamente explosivos</Spanish>
       <Polish>Używany do zdalnego detonowania ładunków wybuchowych</Polish>
       <French>Utilisé pour déclencher des explosifs à distance</French>
-      <Czech>Použévané ke vzdálenému odpalování výbušnin</Czech>
+      <Czech>Používané ke vzdálenému odpalování výbušnin</Czech>
       <Italian>Usato per l'attivazione a distanza degli esplosivi</Italian>
       <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
       <Portuguese>Usado para acionar explosivos remotamente</Portuguese>
@@ -164,7 +164,7 @@
       <Spanish>Dispositivo de detonación MK26</Spanish>
       <Polish>Zapalnik M26</Polish>
       <French>M26 Dispositif de mise à feu</French>
-      <Czech>M26 Odpalovací Zařízení</Czech>
+      <Czech>Odpalovací zařízení M26</Czech>
       <Italian>Detonatore M26</Italian>
       <Hungarian>M26 Detonátor</Hungarian>
       <Portuguese>M26 Dispositivo de Detonação</Portuguese>
@@ -494,6 +494,7 @@
       <English>Pick up</English>
       <German>Aufnehmen</German>
       <Spanish>Recoger</Spanish>
+      <Czech>Sebrat</Czech>
     </Key>
   </Package>
 </Project>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-01-23 -->
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="OptionsMenu">
     <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -17,17 +17,20 @@
     <Key ID="STR_ACE_OptionsMenu_FixAnimation">
       <English>Fix Animation</English>
       <Spanish>Arreglar animación</Spanish>
+      <Czech>Opravit animace</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_ResetAll">
       <English>Reset All</English>
       <German>Rücksetzen</German>
       <Spanish>Reiniciar todo</Spanish>
+      <Czech>Vyresetovat vše</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabColors">
       <English>Colors</English>
       <German>Farben</German>
       <Russian>цвета</Russian>
       <Spanish>Colores</Spanish>
+      <Czech>Barvy</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabOptions">
       <English>Options</English>
@@ -44,6 +47,7 @@
     <Key ID="STR_ACE_OptionsMenu_TabValues">
       <English>Values</English>
       <Spanish>Valores</Spanish>
+      <Czech>Hodnoty</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Enabled">
       <English>Yes</English>
@@ -79,10 +83,12 @@
     <Key ID="STR_ACE_OptionsMenu_Export">
       <English>Export</English>
       <Spanish>Exportar</Spanish>
+      <Czech>Exportovat</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_OpenExport">
       <English>Open Export Menu</English>
       <Spanish>Abrir menu d'exportación</Spanish>
+      <Czech>Otevřít exportovací menu</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_stringType">
       <English>String input.</English>
@@ -95,26 +101,32 @@
     <Key ID="STR_ACE_OptionsMenu_scalarType">
       <English>Number</English>
       <Spanish>Numero</Spanish>
+      <Czech>Číslo</Czech>
     </Key>
     <Key ID="STR_ACE_optionsMenu_unknownType">
-      <English>Uknown input type</English>
+      <English>Unknown input type</English>
       <Spanish>Tipo de entrada desconocida</Spanish>
+      <Czech>Neznámý vstup</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_SaveInput">
       <English>Save input</English>
       <Spanish>Guardar entrada</Spanish>
+      <Czech>Uložit vstup</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_inClientSettings">
       <English>Include Client Settings</English>
       <Spanish>Incluir configuración de cliente</Spanish>
+      <Czech>Zahrnout nastavení klienta</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_exClientSettings">
       <English>Exclude Client Settings</English>
       <Spanish>Excluir configuración de cliente</Spanish>
+      <Czech>Nezahrnout nastavení klienta</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_settingsExported">
       <English>Settings exported to clipboard</English>
       <Spanish>Configuración exportada al portapapeles</Spanish>
+      <Czech>Nastevení exportována do schránky</Czech>
     </Key>
   </Package>
 </Project>

@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-20 -->
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="WeaponSelect">
     <Key ID="STR_ACE_Weaponselect_SettingDisplayTextName">
       <English>Display text on grenade throw</English>
       <Spanish>Mostrar texto al lanzar granada</Spanish>
+      <Czech>Zobrazí text při hodu granátem</Czech>
     </Key>
     <Key ID="STR_ACE_Weaponselect_SettingDisplayTextDesc">
       <English>Display a hint or text on grenade throw.</English>
       <Spanish>Muestra una notificación o texto al lanzar granada</Spanish>
+      <Czech>Zobrazí upozornění nebo text při hodu granátem.</Czech>
     </Key>
     <Key ID="STR_ACE_WeaponSelect_SelectPistol">
       <English>Select Pistol</English>
