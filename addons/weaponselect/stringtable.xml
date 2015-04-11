@@ -47,7 +47,7 @@
             <French>Sélectionner Fusil</French>
             <Hungarian>Puska Kiválasztása</Hungarian>
             <Portuguese>Selecionar Rifle</Portuguese>
-            <Italian>Seleziona il Fucile</Italian>
+            <Italian>Seleziona il fucile</Italian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectLauncher">
             <English>Select Launcher</English>
@@ -59,7 +59,7 @@
             <French>Sélectionner Lanceur</French>
             <Hungarian>Rakétavető Kiválasztása</Hungarian>
             <Portuguese>Selecionar Lançador</Portuguese>
-            <Italian>Seleziona il Lanciamissili</Italian>
+            <Italian>Seleziona il lanciamissili</Italian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectRifleMuzzle">
             <English>Select Grenade Launcher</English>
@@ -71,7 +71,7 @@
             <French>Sélectionner Lance-grenades</French>
             <Hungarian>Gránátvető Kiválasztása</Hungarian>
             <Portuguese>Selecionar Lança-Granadas</Portuguese>
-            <Italian>Seleziona il Lanciagranate</Italian>
+            <Italian>Seleziona il lanciagranate</Italian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectBinocular">
             <English>Select Binoculars</English>
