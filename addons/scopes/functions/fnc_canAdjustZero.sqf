@@ -14,6 +14,7 @@
 
 if (cameraView == "GUNNER") exitWith {false};
 if !(vehicle _unit == _unit) exitWith {false};
+if !(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) exitWith {false};
 
 private ["_unit", "_adjustment", "_elevation"];
 _unit = _this select 0;
