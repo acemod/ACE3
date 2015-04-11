@@ -4,7 +4,7 @@ class CfgPatches
 {
     class ADDON
     {
-        units[] = {};
+    	units[] = {};
 	weapons[] = {};
 	requiredVersion = REQUIRED_VERSION;
 	requiredAddons[] = {"asdg_jointrails","ace_laserpointer","ace_optics"};
