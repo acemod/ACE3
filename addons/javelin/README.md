@@ -1,4 +1,4 @@
-ace_wep_javelin
+ace_javelin
 ===============
 
 Adds the Javelin AT launcher.

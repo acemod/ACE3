@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-19 -->
 <Project name="ACE">
-    <Package name="WEP_JAVELIN">
-        <Key ID="STR_ACE_WEP_JAVELIN_LockTarget">
+    <Package name="JAVELIN">
+        <Key ID="STR_ACE_JAVELIN_LockTarget">
             <English>Lock Target (Hold)</English>
             <German>Lock Target (Hold)</German>
             <French>Lock Target (Hold)</French>
@@ -11,7 +11,7 @@
             <Spanish>Fijar objetivo (Mantener)</Spanish>
             <Russian>Lock Target (Hold)</Russian>
         </Key>
-         <Key ID="STR_ACE_WEP_JAVELIN_CycleFireMode">
+         <Key ID="STR_ACE_JAVELIN_CycleFireMode">
             <English>Cycle Fire Mode</English>
             <German>Cycle Fire Mode</German>
             <French>Cycle Fire Mode</French>

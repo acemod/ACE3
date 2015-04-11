@@ -1,1 +1,1 @@
-#include "\z\ace\addons\wep_javelin\script_component.hpp"
+#include "\z\ace\addons\javelin\script_component.hpp"
