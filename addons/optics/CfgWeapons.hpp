@@ -230,6 +230,7 @@ class CfgWeapons {
                 class Snip: Snip {
                     modelOptics[] = {QUOTE(PATHTOF(models\ace_optics_pip.p3d)),QUOTE(PATHTOF(models\ace_optics_pip.p3d))};
                 };
+                class Iron: Iron {};
             };
         };
     };

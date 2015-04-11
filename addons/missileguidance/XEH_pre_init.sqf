@@ -3,9 +3,6 @@
 PREP(rotateVectLineGetMap);
 PREP(rotateVectLine);
 
-PREP(translateToModelSpace);
-PREP(translateToWeaponSpace);
-
 PREP(fired);
 
 PREP(guidancePFH);

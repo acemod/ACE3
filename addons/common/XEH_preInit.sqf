@@ -39,6 +39,7 @@ PREP(displayText);
 PREP(displayTextPicture);
 PREP(displayTextStructured);
 PREP(doAnimation);
+PREP(dropBackpack);
 PREP(endRadioTransmission);
 PREP(eraseCache);
 PREP(execNextFrame);
@@ -177,6 +178,9 @@ PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
+
+PREP(translateToWeaponSpace);
+PREP(translateToModelSpace);
 
 // Model and drawing helpers
 PREP(worldToScreenBounds);
