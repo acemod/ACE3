@@ -67,9 +67,9 @@ _newUnit selectWeapon (primaryWeapon _newUnit);
 // We are attaching the old unit and hiding it, so we can keep the original unit until later.
 _oldBody attachTo [_newUnit, [0,0,0]];
 if (isMultiplayer) then {
-	hideObjectGlobal _oldBody;
+    hideObjectGlobal _oldBody;
 } else {
-	hideObject _oldBody;
+    hideObject _oldBody;
 };
 
 _newUnit setvariable [QGVAR(copyOfUnit), _oldBody, true];

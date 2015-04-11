@@ -46,7 +46,7 @@ if !(hasInterface) exitWith {};
     true
 },
 {false},
-[201, [false, false, false]], false] call cba_fnc_addKeybind;
+[201, [false, false, false]], true] call cba_fnc_addKeybind;
 
 ["ACE3", QGVAR(AdjustDown), localize "STR_ACE_Scopes_AdjustDown",
 {
@@ -61,7 +61,7 @@ if !(hasInterface) exitWith {};
     true
 },
 {false},
-[209, [false, false, false]], false] call cba_fnc_addKeybind;
+[209, [false, false, false]], true] call cba_fnc_addKeybind;
 
 ["ACE3", QGVAR(AdjustLeft), localize "STR_ACE_Scopes_AdjustLeft",
 {
@@ -76,7 +76,7 @@ if !(hasInterface) exitWith {};
     true
 },
 {false},
-[209, [false, true, false]], false] call cba_fnc_addKeybind;
+[209, [false, true, false]], true] call cba_fnc_addKeybind;
 
 ["ACE3", QGVAR(AdjustRight), localize "STR_ACE_Scopes_AdjustRight",
 {
@@ -91,7 +91,7 @@ if !(hasInterface) exitWith {};
     true
 },
 {false},
-[201, [false, true, false]], false] call cba_fnc_addKeybind;
+[201, [false, true, false]], true] call cba_fnc_addKeybind;
 
 // init shortdot
 GVAR(showShortdot) = false;

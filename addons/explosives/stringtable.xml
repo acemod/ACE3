@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-16 -->
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
   <Package name="Explosives">
     <Key ID="STR_ACE_Explosives_Menu">
@@ -280,7 +280,7 @@
     </Key>
     <Key ID="STR_ACE_Explosives_DetonateMenu">
       <English>Detonate Menu</English>
-      <German>&quot;Zünden&quot;-Menü</German>
+      <German>"Zünden"-Menü</German>
       <Spanish>Menú de detonación</Spanish>
       <Polish>Menu detonowania</Polish>
       <French>Menu de mise à feu</French>
@@ -292,7 +292,7 @@
     </Key>
     <Key ID="STR_ACE_Explosives_PlaceMenu">
       <English>Place Menu</English>
-      <German>&quot;Platzieren&quot;-Menü</German>
+      <German>"Platzieren"-Menü</German>
       <Spanish>Menú de colocación</Spanish>
       <Polish>Menu umieszczania</Polish>
       <French>Menu Placement</French>
@@ -489,6 +489,11 @@
       <Spanish>Utilizado para detonar explosivos remotamente al soltarlo.</Spanish>
       <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
       <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
+    </Key>
+    <Key ID="STR_ACE_Explosives_Pickup">
+      <English>Pick up</English>
+      <German>Aufnehmen</German>
+      <Spanish>Recoger</Spanish>
     </Key>
   </Package>
 </Project>

@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-21 -->
+<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
   <Package name="Wirecutter">
     <Key ID="STR_ACE_logistics_wirecutter_wirecutterName">
       <English>Wirecutter</English>
       <German>Drahtschneider</German>
-      <Spanish>Wirecutter</Spanish>
+      <Spanish>Cortador de cables</Spanish>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_wirecutterDescription">
       <English>Wirecutter</English>
+      <German>Schneidet Draht.</German>
+      <Spanish>Cortador de cables</Spanish>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_CutFence">
       <English>Cut Fence</English>

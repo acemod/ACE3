@@ -73,6 +73,16 @@ PREP(getStringFromMissionSQM);
 PREP(getTargetAzimuthAndInclination);
 PREP(getTargetDistance);
 PREP(getTargetObject);
+PREP(getTurnedOnLights);
+PREP(getTurretCommander);
+PREP(getTurretConfigPath);
+PREP(getTurretCopilot);
+PREP(getTurretGunner);
+PREP(getTurretIndex);
+PREP(getTurrets);
+PREP(getTurretsFFV);
+PREP(getTurretsOther);
+PREP(getTurretDirection);
 PREP(getUavControlPosition);
 PREP(getVehicleCargo);
 PREP(getVehicleCodriver);
@@ -97,11 +107,13 @@ PREP(isAutoWind);
 PREP(isAwake);
 PREP(isEngineer);
 PREP(isEOD);
+PREP(isFeatureCameraActive);
 PREP(isInBuilding);
 PREP(isModLoaded);
 PREP(isPlayer);
 PREP(isTurnedOut);
 PREP(letterToCode);
+PREP(lightIntensityFromObject);
 PREP(loadPerson);
 PREP(loadPersonLocal);
 PREP(loadSettingsFromProfile);
@@ -113,8 +125,8 @@ PREP(moveToTempGroup);
 PREP(muteUnit);
 PREP(numberToDigits);
 PREP(numberToDigitsString);
+PREP(numberToString);
 PREP(onAnswerRequest);
-PREP(onLoadRscDisplayChannel);
 PREP(owned);
 PREP(player);
 PREP(playerSide);
@@ -166,6 +178,9 @@ PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
 
+PREP(translateToWeaponSpace);
+PREP(translateToModelSpace);
+
 // config items
 PREP(getConfigType);
 PREP(getItemType);
@@ -179,6 +194,9 @@ PREP(getConfigGunner);
 PREP(getConfigCommander);
 PREP(getHitPoints);
 PREP(getHitPointsWithSelections);
+PREP(getReflectorsWithSelections);
+PREP(getLightProperties);
+PREP(getLightPropertiesWeapon);
 PREP(getVehicleCrew);
 
 // turrets
@@ -258,10 +276,10 @@ ACE_player = player;
 if (hasInterface) then {
     // PFH to update the ACE_player variable
     [{
-        if !(ACE_player isEqualTo (missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player])) then {
+        if !(ACE_player isEqualTo (call FUNC(player))) then {
             _oldPlayer = ACE_player;
 
-            ACE_player = missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player];
+            ACE_player = call FUNC(player);
             uiNamespace setVariable ["ACE_player", ACE_player];
 
             // Raise ACE event

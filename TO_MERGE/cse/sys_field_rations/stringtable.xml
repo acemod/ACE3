@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<Project name="Combat Space Enhancement"> 
-	<Package name="cse_sys_field_rations">
-		<Container ID="FieldRations">
-		</Container>
-	</Package> 
-</Project>

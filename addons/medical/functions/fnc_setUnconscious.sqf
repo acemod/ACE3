@@ -28,16 +28,13 @@ if !(_set) exitwith {
 
 if !(!(isNull _unit) && {(_unit isKindOf "CaManBase") && ([_unit] call EFUNC(common,isAwake))}) exitwith{};
 
-// We only want this function to work on local machines
 if (!local _unit) exitwith {
     [[_unit], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
-// Set the unit in the unconscious state.
 _unit setvariable ["ACE_isUnconscious", true, true];
 _unit setUnconscious true;
 
-// @todo: mute player?
 if (_unit == ACE_player) then {
     if (visibleMap) then {openMap false};
     closeDialog 0;
@@ -86,9 +83,8 @@ _startingTime = time;
     _startingTime = _args select 3;
     _minWaitingTime = _args select 4;
     _hasMovedOut = _args select 5;
-    // Since the unit is no longer alive, get rid of this PFH.
+
     if (!alive _unit) exitwith {
-        // EXIT PFH
         [(_this select 1)] call cba_fnc_removePerFrameHandler;
     };
 
@@ -99,7 +95,12 @@ _startingTime = time;
         // Wait until the unit isn't being carried anymore, so we won't end up with wierd animations
         if !(([_unit] call FUNC(isBeingCarried)) || ([_unit] call FUNC(isBeingDragged))) then {
             if (vehicle _unit == _unit) then {
-                [_unit,"amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
+                if (animationState _unit == "AinjPpneMstpSnonWrflDnon") then {
+                    [_unit,"AinjPpneMstpSnonWrflDnon_rolltofront", 2] call EFUNC(common,doAnimation);
+                    [_unit,"amovppnemstpsnonwnondnon", 1] call EFUNC(common,doAnimation);
+                } else {
+                    [_unit,"amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
+                };
             } else {
                 // Switch to the units original animation, assuming
                 // TODO: what if the unit switched vehicle?
@@ -115,7 +116,7 @@ _startingTime = time;
             // Swhich the unit back to its original group
             [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 
-            [_unit, false] call EFUNC(common,disableAI_F);
+            [_unit, false] call EFUNC(common,disableAI);
             _unit setUnitPos _originalPos; // This is not position but stance (DOWN, MIDDLE, UP)
 
             _unit setUnconscious false;
@@ -128,19 +129,10 @@ _startingTime = time;
     // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
     if ((time - _startingTime) >= _minWaitingTime) exitwith {
 
-        // Wait until the unit is no longer unconscious
         if (!([_unit] call FUNC(getUnconsciousCondition))) then {
-            // Move unit out of unconscious state
             _unit setvariable ["ACE_isUnconscious", false, true];
         };
     };
-
-    // A check to ensure that the animation is being played properly.
-    // TODO: Might no longer be necessary: Have to test this in MP.
-    if (vehicle _unit == _unit && {animationState _unit != "deadState" && animationState _unit != "unconscious"} && {(isNull ([_unit] call EFUNC(common,getCarriedBy)))} && (time - _startingTime >= 0.5)) then {
-        [_unit,([_unit] call FUNC(getDeathAnim)), 1, true] call EFUNC(common,doAnimation); // Reset animations if unit starts doing wierd things.
-    };
-
 }, 0.1, [_unit,_animState, _originalPos, _startingTime, _minWaitingTime, false] ] call CBA_fnc_addPerFrameHandler;
 
 ["medical_onUnconscious", [_unit, true]] call EFUNC(common,globalEvent);
