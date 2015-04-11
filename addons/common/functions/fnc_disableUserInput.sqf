@@ -67,15 +67,20 @@ if (_state) then {
         };
 
         if (_key in actionKeys "TeamSwitch" && {teamSwitchEnabled}) then {
-            (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0; teamSwitch
-        };//_acc = accTime; teamSwitch; setAccTime _acc};
+            (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
+            _acc = accTime;
+            teamSwitch;
+            setAccTime _acc;
+        };
 
         if (_key in actionKeys "CuratorInterface" && {getAssignedCuratorLogic player in allCurators})    then {
-            (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0; openCuratorInterface;
+            (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
+            openCuratorInterface;
         };
 
         if (_key in actionKeys "ShowMap" && {player getVariable ["ACE_canSwitchUnits", false]}) then {
-            (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0; openMap true
+            (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
+            openMap true;
         };
 
         if (serverCommandAvailable "#missions" || {player getVariable ["ACE_isUnconscious", false] && {(call FUNC(player)) getVariable [QEGVAR(medical,AllowChatWhileUnconscious), missionNamespace getVariable [QEGVAR(medical,AllowChatWhileUnconscious), false]]}}) then {
