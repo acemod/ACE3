@@ -2,12 +2,13 @@
 #include "script_component.hpp"
 //TRACE_1("enter", _this);
 
-TRACE_1("Control", (__JavelinIGUITargetingConstrains));
-
 #define __TRACKINTERVAL 0.1    // how frequent the check should be.
 #define __LOCKONTIME 1.85    // Lock on won't occur sooner
 #define __LOCKONTIMERANDOM 0.3    // Deviation in lock on time
 #define __SENSORSQUARE 1    // Locking on sensor square side in angles
+
+#define __OffsetX ((ctrlPosition __JavelinIGUITargetingLineV) select 0) - 0.5
+#define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5
 
 private["_args", "_lastTick", "_runTime", "_soundTime", "_lockTime", "_newTarget", "_currentTarget", "_range", "_pos", "_targetArray"];
 
@@ -90,8 +91,18 @@ if (isNull _newTarget) then {
                 __JavelinIGUITargetingGate ctrlShow true;
                 __JavelinIGUITargetingLines ctrlShow true;
                 
+                _constraintTop = __ConstraintTop;
+                _constraintLeft = __ConstraintLeft;
+                _constraintBottom = __ConstraintBottom;
+                _constraintRight = __ConstraintRight;
+                
+                _offsetX = __OffsetX;
+                _offsetY = __OffsetY;
+                
+                _zamerny = if (_currentTarget isKindOf "CAManBase") then {_currentTarget selectionPosition "body"} else {_currentTarget selectionPosition "zamerny"};
+				_randomPosWithinBounds = [(_zamerny select 0) + 1 - (random 2.0),(_zamerny select 1) + 1 - (random 2.0),(_zamerny select 2) + 0.5 - (random 1.0)];
 
-                _apos = worldToScreen (_newTarget modelToWorld _randomPosWithinBounds);
+                _apos = worldToScreen (_currentTarget modelToWorld _randomPosWithinBounds);
                    
                 _aposX = 0;
                 _aposY = 0;
@@ -114,20 +125,14 @@ if (isNull _newTarget) then {
                     [_currentTarget,[-1,-1,-2],_currentTarget selectionPosition "zamerny"];
                 };
                 
-                _bpos = _boundsInput call FUNC(worldToScreenBounds);
-                
-                _constraintTop = __ConstraintTop;
-                _constraintLeft = __ConstraintLeft;
-                _constraintBottom = __ConstraintBottom;
-                _constraintRight = __ConstraintRight;
-                
-                _offsetX = __OffsetX;
-                _offsetY = __OffsetY;
-                
+                _bpos = _boundsInput call EFUNC(common,worldToScreenBounds);
+
                 _minX = ((_bpos select 0) + _offsetX) max _constraintLeft;
                 _minY = ((_bpos select 1) + _offsetY) max _constraintTop;
                 _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025*(3/4)*SafezoneH);
                 _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025*SafezoneH);
+                
+                TRACE_4("", _boundsInput, _bpos, _minX, _minY);
                 
                 __JavelinIGUITargetingGateTL ctrlSetPosition [_minX,_minY];
                 __JavelinIGUITargetingGateTR ctrlSetPosition [_maxX,_minY];
