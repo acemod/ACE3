@@ -1,4 +1,18 @@
-// by commy2
+/*
+* Author: commy2, Glowbal
+* Unlock safety the weapon of a unit
+*
+* Arguments:
+* 0: The unit <OBJECT>
+* 1: The weapon <STRING>
+* 2: The muzzle <STRING>
+*
+* Return Value:
+* NONE
+*
+* Public: No
+*/
+
 #include "script_component.hpp"
 
 EXPLODE_3_PVT(_this,_unit,_weapon,_muzzle);

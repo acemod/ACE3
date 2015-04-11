@@ -24,7 +24,7 @@ GVAR(safetyLockedOnInteract) = false;
 
 ["interactMenuOpened", {
 	private ["_safedWeapons"];
-	_safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
+	_safedWeapons = ACE_player getVariable [QGVAR(safedWeapons), []];
 
 	if (currentWeapon ACE_player in _safedWeapons) exitWith {};
 	GVAR(safetyLockedOnInteract) = true;
@@ -35,9 +35,7 @@ GVAR(safetyLockedOnInteract) = false;
 
 ["interactMenuClosed", {
 	if (GVAR(safetyLockedOnInteract)) then {
-		[ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call FUNC(lockSafety);
+		[ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call FUNC(unlockSafety);
 		GVAR(safetyLockedOnInteract) = false;
 	};
 }] call ace_common_fnc_addEventHandler;
-
-
