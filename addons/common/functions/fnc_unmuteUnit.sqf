@@ -28,6 +28,9 @@ if (_reason in _muteUnitReasons) then {
     _unit setVariable [QGVAR(muteUnitReasons), _muteUnitReasons, true];
 };
 
+// don't unmute if there is another mute reason!
+if (count _muteUnitReasons > 0) exitWith {};
+
 private "_speaker";
 _speaker = _unit getVariable ["ACE_OriginalSpeaker", ""];
 
