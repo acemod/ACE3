@@ -107,6 +107,7 @@ PREP(isAutoWind);
 PREP(isAwake);
 PREP(isEngineer);
 PREP(isEOD);
+PREP(isFeatureCameraActive);
 PREP(isInBuilding);
 PREP(isModLoaded);
 PREP(isPlayer);
@@ -176,6 +177,9 @@ PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
+
+PREP(translateToWeaponSpace);
+PREP(translateToModelSpace);
 
 // config items
 PREP(getConfigType);

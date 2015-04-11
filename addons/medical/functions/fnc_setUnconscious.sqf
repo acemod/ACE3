@@ -116,7 +116,7 @@ _startingTime = time;
             // Swhich the unit back to its original group
             [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 
-            [_unit, false] call EFUNC(common,disableAI_F);
+            [_unit, false] call EFUNC(common,disableAI);
             _unit setUnitPos _originalPos; // This is not position but stance (DOWN, MIDDLE, UP)
 
             _unit setUnconscious false;

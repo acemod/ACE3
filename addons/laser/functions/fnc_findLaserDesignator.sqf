@@ -1,16 +1,20 @@
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-private ["_missile", "_headingPitch", "_found", "_vectorTo", "_polarTo", "_dir", "_vertOk", "_horzOk", "_fov",
+private ["_seeker", "_headingPitch", "_found", "_vectorTo", "_polarTo", "_dir", "_vertOk", "_horzOk", "_fov",
          "_closestDistance", "_pos1", "_pos2", "_disCheck", "_currentTarget", "_potentialTargets", "_offset", "_vector"];
-_missile = _this select 0;
+
+_seeker = _this select 0;
 _laserCode = _this select 1;
 _fov = if (count _this > 2) then {_this select 2} else {75};
-_vector = if (count _this > 3) then {_this select 3} else {vectorDir _missile};
+_vector = if (count _this > 3) then {_this select 3} else {vectorDir _seeker};
 _offset = if (count _this > 4) then {_this select 4} else {[0,0,0]};
 
 _headingPitch = _vector call CBA_fnc_vect2polar;    
 _currentTarget = nil;
 _found = false;
+
+_getPosASL = {visiblePositionASL (_this select 0)};
 
 LOG("Searching lasers");
 if(!(isNil "ACE_LASERS")) then {
@@ -19,8 +23,8 @@ if(!(isNil "ACE_LASERS")) then {
     
     {
         if(!(isNull _x)) then {
-            _sensorPos = ATLtoASL(_missile modelToWorldVisual _offset);
-            _vectorTo = [_sensorPos, ([_x] call FUNC(getPosASL))] call BIS_fnc_vectorFromXToY;
+            _sensorPos = ATLtoASL(_seeker modelToWorldVisual _offset);
+            _vectorTo = [_sensorPos, ([_x] call _getPosASL)] call BIS_fnc_vectorFromXToY;
             _polarTo = _vectorTo call CBA_fnc_vect2polar;
             _dir = _polarTo select 1;
             _dir = _dir - (_headingPitch select 1);
@@ -42,7 +46,7 @@ if(!(isNil "ACE_LASERS")) then {
             
             if(_vertOk && {_horzOk}) then {
                 // Does the laser currently have our current code, if we have one?
-                _targetCode = _x getVariable ["ACE_LASERTARGET_CODE", ACE_DEFAULT_LASER_CODE];
+                _targetCode = _x getVariable ["ACE_LASER_CODE", ACE_DEFAULT_LASER_CODE];
                 TRACE_1("Target in sight, checking code", _targetCode, _laserCode);
                 if(_targetCode == _laserCode) then {
                     _potentialTargets set[(count _potentialTargets), _x];
@@ -56,11 +60,11 @@ if(!(isNil "ACE_LASERS")) then {
     
     _closestDistance = 100000;
     {
-        _pos1 = (getPosASL _missile);
-        _pos2 = ([_x] call FUNC(getPosASL));
+        _pos1 = (getPosASL _seeker);
+        _pos2 = ([_x] call _getPosASL);
         _disCheck = _pos1 distance _pos2;
         // shouldn't this bail out when a valid target is found instead of iterating over all potential targets ?
-        if(_disCheck < _closestDistance && {[_pos1, _pos2, _x, _missile] call FUNC(checkLos)}) then {
+        if(_disCheck < _closestDistance && {[_pos1, _pos2, _x, _seeker] call FUNC(checkLos)}) then {
             _found = true;
             _currentTarget = _x;
             _closestDistance = _disCheck;

@@ -4,9 +4,11 @@
   <Package name="WeaponSelect">
     <Key ID="STR_ACE_Weaponselect_SettingDisplayTextName">
       <English>Display text on grenade throw</English>
+      <Spanish>Mostrar texto al lanzar granada</Spanish>
     </Key>
     <Key ID="STR_ACE_Weaponselect_SettingDisplayTextDesc">
       <English>Display a hint or text on grenade throw.</English>
+      <Spanish>Muestra una notificación o texto al lanzar granada</Spanish>
     </Key>
     <Key ID="STR_ACE_WeaponSelect_SelectPistol">
       <English>Select Pistol</English>

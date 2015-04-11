@@ -28,7 +28,7 @@ GVAR(initializedClasses) = _initializedClasses;
 
     if (getNumber (_turretConfig >> QGVAR(Enabled)) == 1) exitWith {
         // @todo: Add the state variables to the vehicle, instead of to the client
-        // e.g.: _vehicle setVariable [format ["%1_%2", QGVAR(laserActive),  _x], false];
+        // e.g.: _vehicle setVariable [format ["%1_%2", QGVAR(active),  _x], false];
 
         // Add actions
         _onAction = [QGVAR(LaserOn), localize "STR_ACE_Laser_SelfDesignate_DesignatorOn", "",
@@ -38,7 +38,7 @@ GVAR(initializedClasses) = _initializedClasses;
         },
         {
             // Condition
-            !GVAR(laserActive) && {[ACE_player] call FUNC(unitTurretHasDesignator)}
+            !GVAR(active) && {[ACE_player] call FUNC(unitTurretHasDesignator)}
         }] call EFUNC(interact_menu,createAction);
 
         _offAction = [QGVAR(LaserOff), localize "STR_ACE_Laser_SelfDesignate_DesignatorOff", "",
@@ -48,7 +48,7 @@ GVAR(initializedClasses) = _initializedClasses;
         },
         {
             // Condition
-            GVAR(laserActive) && {[ACE_player] call FUNC(unitTurretHasDesignator)}
+            GVAR(active) && {[ACE_player] call FUNC(unitTurretHasDesignator)}
         }] call EFUNC(interact_menu,createAction);
 
         [_type, 1, ["ACE_SelfActions"], _onAction] call EFUNC(interact_menu,addActionToClass);
