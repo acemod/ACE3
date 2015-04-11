@@ -7,15 +7,6 @@
 #define __LOCKONTIMERANDOM 0.3    // Deviation in lock on time
 #define __SENSORSQUARE 1    // Locking on sensor square side in angles
 
-#define __ConstraintTop (((ctrlPosition __JavelinIGUITargetingConstrainTop) select 1) + ((ctrlPosition (__JavelinIGUITargetingConstrainTop)) select 3))
-#define __ConstraintBottom ((ctrlPosition __JavelinIGUITargetingConstrainBottom) select 1)
-#define __ConstraintLeft (((ctrlPosition __JavelinIGUITargetingConstrainLeft) select 0) + ((ctrlPosition (__JavelinIGUITargetingConstrainLeft)) select 2))
-#define __ConstraintRight ((ctrlPosition __JavelinIGUITargetingConstrainRight) select 0)
-
-#define __OffsetX ((ctrlPosition __JavelinIGUITargetingLineV) select 0) - 0.5
-#define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5
-
-
 private["_args", "_lastTick", "_runTime", "_soundTime", "_lockTime", "_newTarget", "_currentTarget", "_range", "_pos", "_targetArray"];
 
 // Reset arguments if we havnt rendered in over a second
@@ -40,6 +31,9 @@ _newTarget = objNull;
 if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && {cameraOn == ACE_player}) exitWith {    // keep it steady.
     ACE_player switchCamera "INTERNAL";
 };
+
+// Refresh the firemode
+[] call FUNC(showFireMode);
 
 // Only start locking on holding tab
 if(!GVAR(isLockKeyDown)) exitWith { false };
@@ -68,7 +62,7 @@ if (isNull _newTarget) then {
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
     
-    ACE_player setVariable [QGVAR(currentTarget),nil, false];
+    ACE_player setVariable ["ace_missileguidance_target",nil, false];
     
     // Disallow fire
     //if (ACE_player ammo "Javelin" > 0 || {ACE_player ammo "ACE_Javelin_Direct" > 0}) then {ACE_player setWeaponReloadingTime //[player, "Javelin", 0.2];};    
@@ -91,8 +85,7 @@ if (isNull _newTarget) then {
                 __JavelinIGUINFOV ctrlSetTextColor __ColorNull;
                 __JavelinIGUITargetingConstrains ctrlShow true;
                 
-                ACE_player setVariable[QGVAR(currentTarget), _currentTarget, false];
-                ACE_player setVariable[QGVAR(currentTargetPos), getPosASL _currentTarget, false];
+                ACE_player setVariable["ace_missileguidance_target", _currentTarget, false];
                 
                 if(diag_tickTime > _soundTime) then {
                     playSound "ACE_Javelin_Locked";
@@ -115,7 +108,7 @@ if (isNull _newTarget) then {
         __JavelinIGUITargetingGate ctrlShow false;
         __JavelinIGUITargetingLines ctrlShow false;
 
-        ACE_player setVariable [QGVAR(currentTarget),nil, false];
+        ACE_player setVariable ["ace_missileguidance_target",nil, false];
    };
    
 };
