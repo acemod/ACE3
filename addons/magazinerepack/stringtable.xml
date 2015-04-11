@@ -78,16 +78,19 @@
       <English>Repacking Finished</English>
       <German>Wiederverpacken Fertig</German>
       <Spanish>Reembalaje Finalizado</Spanish>
+      <Portuguese>Reorganização Terminada</Portuguese>
     </Key>
     <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
       <English>Repacking Interrupted</English>
       <German>Umpacken Unterbrochen</German>
       <Spanish>Reempaque Interrupted</Spanish>
+      <Portuguese>Reorganização Interrompida</Portuguese>
     </Key>
     <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
       <English>%1 Full and %2 Partial</English>
       <German>%1 Vollständigen und %2 Teilweisen</German>
       <Spanish>%1 Total y %2 Parcial</Spanish>
+      <Portuguese>%1 Total e %2 Parcial </Portuguese>
     </Key>
   </Package>
 </Project>
