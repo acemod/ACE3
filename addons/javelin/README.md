@@ -1,4 +1,4 @@
-ace_wep_javelin
+ace_javelin
 ===============
 
 Adds the Javelin AT launcher.
@@ -9,4 +9,3 @@ Adds the Javelin AT launcher.
 The people responsible for merging changes to this component or answering potential questions.
 
 - [jaynus](https://github.com/walterpearce)
-- [NouberNou](https://github.com/NouberNou)
