@@ -21,17 +21,17 @@
  */
 #include "script_component.hpp"
 
-private ["_silencer", "_audibleFireCoef", "_loudness", "_strength"];
+private ["_silencer", "_audibleFireCoef", "_loudness", "_strength", "_vehAttenuation"];
 
 PARAMS_7(_object,_firer,_distance,_weapon,_muzzle,_mode,_ammo);
 
 //Only run if combatDeafness enabled:
 if (!GVAR(enableCombatDeafness)) exitWith {};
 //Only run if firedNear object is player or player's vehicle:
-if ((ACE_player != (_this select 0)) && {(vehicle ACE_player) != (_this select 0)}) exitWith {};
+if ((ACE_player != _object) && {(vehicle ACE_player) != _object}) exitWith {};
 if (_weapon in ["Throw", "Put"]) exitWith {};
 
-_attenuation = if ((ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}) then {1} else {GVAR(playerVehAttunation)};
+_vehAttenuation = if ((ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}) then {1} else {GVAR(playerVehAttunation)};
 
 if (_distance < 1) then {_distance = 1;};
 
@@ -53,7 +53,7 @@ _audibleFire = getNumber (configFile >> "CfgAmmo" >> _ammo >> "audibleFire");
 //_audibleFireTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "audibleFireTime");
 
 _loudness = _audibleFireCoef * _audibleFire / 64;
-_strength = _attenuation * (_loudness - (_loudness/50 * _distance)); // linear drop off
+_strength = _vehAttenuation * (_loudness - (_loudness/50 * _distance)); // linear drop off
 
 if (_strength < 0.01) exitWith {};
 
