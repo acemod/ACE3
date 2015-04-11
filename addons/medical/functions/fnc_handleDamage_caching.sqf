@@ -34,18 +34,8 @@ if (_selectionName in _hitSelections) then {
     _newDamage = _damage - (_unit getHitPointDamage (_hitPoints select (_hitSelections find _selectionName)));
 };
 
-
-// we want to move damage to another selection; have to do it ourselves.
-// this is only the case for limbs, so this will not impact the killed EH.
-if (_selectionName != (_this select 1)) then {
-    _unit setHitPointDamage [_hitPoints select (_hitSelections find _selectionName), _damage + _newDamage];
-    _newDamage = 0;
-};
-//  ??????
-_damage = _damage + _newDamage;
-
 // Check for vehicle crash
-if (vehicle _unit != _unit && !(vehicle _unit isKindOf "StaticWeapon") && {isNull _source} && {_projectile == ""} && {_selectionName == ""}) then {
+if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _source} && {_projectile == ""} && {_selectionName == ""}) then {
     if (missionNamespace getvariable [QGVAR(allowVehicleCrashDamage), true]) then {
         _selectionName = _hitSelections select (floor(random(count _hitSelections)));
         _projectile = "vehiclecrash";
@@ -54,10 +44,11 @@ if (vehicle _unit != _unit && !(vehicle _unit isKindOf "StaticWeapon") && {isNul
 
 // From AGM medical:
 // Exclude falling damage to everything other than legs; reduce structural damage.
-if (((velocity _unit) select 2 < -5) &&  (vehicle _unit == _unit)) then {
+if (((velocity _unit) select 2 < -5) && {(vehicle _unit == _unit)}) then {
     _unit setVariable [QGVAR(isFalling), True];
 };
-if (_unit getVariable [QGVAR(isFalling), false] && !(_selectionName in ["", "leg_l", "leg_r"])) exitWith {};
+
+if (_unit getVariable [QGVAR(isFalling), false] && {!(_selectionName in ["", "leg_l", "leg_r"])}) exitWith {};
 if (_unit getVariable [QGVAR(isFalling), false]) then {
     _newDamage = _newDamage * 0.7;
 };
@@ -69,21 +60,14 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) t
 
     // handle the cached damages 3 frames later
     [{
-        private ["_args","_unit","_frameNo"];
+        private "_args";
         _args = _this select 0;
-        _unit = _args select 0;
-        _frameNo = _args select 1;
 
-        if (diag_frameno > _frameNo + 2) then {
-            _cache_projectiles = _unit getVariable [QGVAR(cachedProjectiles), []];
-            _cache_hitpoints = _unit getVariable [QGVAR(cachedHitPoints), []];
-            _cache_damages = _unit getVariable [QGVAR(cachedDamages), []];
-            _cache_params = _unit getVariable [QGVAR(cachedHandleDamageParams), []];
+        if (diag_frameno > (_args select 1) + 2) then {
+            _cache_params = (_args select 0) getVariable [QGVAR(cachedHandleDamageParams), []];
             {
-                if (typeName _x == typeName "") then {
-                    (_cache_params select _foreachIndex) call FUNC(handleDamage_advanced);
-                };
-            }foreach _cache_projectiles;
+                _x call FUNC(handleDamage_advanced);
+            }foreach _cache_params;
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
         };
     }, 0, [_unit, diag_frameno] ] call CBA_fnc_addPerFrameHandler;
@@ -102,40 +86,32 @@ _cache_params = _unit getVariable QGVAR(cachedHandleDamageParams);
 
 // Caching of the damage events
 if (_selectionName != "") then {
-
+    private ["_index","_otherDamage"];
+    _index = _cache_projectiles find _projectile;
     // Check if the current projectile has already been handled once
-    if (_projectile in _cache_projectiles) then {
-        private ["_index","_otherDamage"];
-        // if it has been handled, find the index in the cache
-        _index = _cache_projectiles find _projectile;
-
+    if (_index >= 0) exitwith {
         // Find the previous damage this projectile has done
         _otherDamage = (_cache_damages select _index);
 
         // Take the highest damage of the two
-        if (_otherDamage > _newDamage) then {
-            _newDamage = 0;
-        } else {
+        if (_newDamage > _otherDamage) then {
             private ["_hitPoint", "_restore"];
             // Restore the damage before the previous damage was processed
             _hitPoint = _cache_hitpoints select _index;
             _restore = ((_unit getHitPointDamage _hitPoint) - _otherDamage) max 0;
             _unit setHitPointDamage [_hitPoint, _restore];
 
-            // Make entry unfindable and add the new damage cache
-            _cache_projectiles set [_index, objNull];
-            _cache_projectiles pushBack _projectile;
-            _cache_hitpoints pushBack (_hitPoints select (_hitSelections find _selectionName));
-            _cache_damages pushBack _newDamage;
-            _cache_params pushBack [_unit, _selectionName, _damage, _source, _projectile];
+            _cache_hitpoints set [_index, (_hitPoints select (_hitSelections find _selectionName))];
+            _cache_damages set [_index, _newDamage];
+            _cache_params set[_index, _this];
         };
-    } else {
-        // This is an unhandled projectile
-        _cache_projectiles pushBack _projectile;
-        _cache_hitpoints pushBack (_hitPoints select (_hitSelections find _selectionName));
-        _cache_damages pushBack _newDamage;
-        _cache_params pushBack [_unit, _selectionName, _damage, _source, _projectile];
     };
+
+    // This is an unhandled projectile
+    _cache_projectiles pushBack _projectile;
+    _cache_hitpoints pushBack (_hitPoints select (_hitSelections find _selectionName));
+    _cache_damages pushBack _newDamage;
+    _cache_params pushBack _this;
 };
 
 // Store the new cached values
