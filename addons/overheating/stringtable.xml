@@ -4,9 +4,11 @@
   <Package name="Overheating">
     <Key ID="STR_ACE_overheating_SettingDisplayTextName">
       <English>Display text on jam</English>
+      <Spanish>Mostrar texto al encasquillar</Spanish>
     </Key>
     <Key ID="STR_ACE_overheating_SettingDisplayTextDesc">
       <English>Display a notification whenever your weapon gets jammed</English>
+      <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>
     </Key>
     <Key ID="STR_ACE_Overheating_SpareBarrelName">
       <English>Spare barrel</English>

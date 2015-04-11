@@ -39,6 +39,7 @@ PREP(displayText);
 PREP(displayTextPicture);
 PREP(displayTextStructured);
 PREP(doAnimation);
+PREP(dropBackpack);
 PREP(endRadioTransmission);
 PREP(eraseCache);
 PREP(execNextFrame);
@@ -107,6 +108,7 @@ PREP(isAutoWind);
 PREP(isAwake);
 PREP(isEngineer);
 PREP(isEOD);
+PREP(isFeatureCameraActive);
 PREP(isInBuilding);
 PREP(isModLoaded);
 PREP(isPlayer);
@@ -176,6 +178,12 @@ PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
+
+PREP(translateToWeaponSpace);
+PREP(translateToModelSpace);
+
+// Model and drawing helpers
+PREP(worldToScreenBounds);
 
 // config items
 PREP(getConfigType);

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-02-24 -->
+<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
   <Package name="Captives">
     <Key ID="STR_ACE_Captives_SetCaptive">
@@ -145,7 +145,7 @@
       <German>Nur bei lebenden Einheiten verwendbar</German>
       <Spanish>Utilizar solo en unidades vivas</Spanish>
     </Key>
-    <Key ID="STR_ACE_Captives_Zeus_OnlyInfentry">
+    <Key ID="STR_ACE_Captives_Zeus_OnlyInfantry">
       <English>Only use on dismounted inf</English>
       <German>Nur bei abgesessener Infanterie verwendbar</German>
       <Spanish>Utilizar solo en infanteria desmontada</Spanish>

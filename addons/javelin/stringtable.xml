@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2014-12-19 -->
+<Project name="ACE">
+    <Package name="JAVELIN">
+        <Key ID="STR_ACE_JAVELIN_LockTarget">
+            <English>Lock Target (Javelin)</English>
+            <German></German>
+            <French></French>
+            <Polish></Polish>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+        </Key>
+         <Key ID="STR_ACE_JAVELIN_CycleFireMode">
+            <English>Cycle Attack Mode (Javelin)</English>
+            <German></German>
+            <French></French>
+            <Polish></Polish>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+        </Key>
+    </Package>
+</Project>
