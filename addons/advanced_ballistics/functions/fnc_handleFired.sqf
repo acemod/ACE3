@@ -36,7 +36,7 @@ if (underwater _unit) exitWith {};
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
 if (_unit distanceSqr ACE_player > 9000000) exitWith {};
 if (GVAR(ONLY_ACTIVE_FOR_LOCAL_PLAYER) && _unit != ACE_player) exitWith {};
-if (!GVAR(VehicleGunnerEnabled) && !(_unit isKindOf "Man")) exitWith {};
+//if (!GVAR(VehicleGunnerEnabled) && !(_unit isKindOf "Man")) exitWith {};
 if (GVAR(DISABLED_IN_FULL_AUTO_MODE) && getNumber(configFile >> "cfgWeapons" >> _weapon >> _mode >> "autoFire") == 1) exitWith {};
 
 // Decide whether normal winddeflection is good enough
