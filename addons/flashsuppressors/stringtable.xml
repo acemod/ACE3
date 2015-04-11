@@ -62,5 +62,29 @@
       <Russian>Пламегаситель (9 мм)</Russian>
       <Spanish>Supresor (9 mm)</Spanish>
     </Key>
+    <Key ID="STR_ACE_muzzle_mzls_338">
+      <English>Flash Suppressor (.338)</English>
+      <Hungarian>Lángrejtő (.338)</Hungarian>
+      <German>Mündungsfeuerdämpfer (.338)</German>
+      <Italian>Soppressore di fiamma (.338)</Italian>
+      <Portuguese>Supressor de Clarão (.338)</Portuguese>
+      <Polish>Tłumik płomieni (.338)</Polish>
+      <Czech>Tlumič záblesku (.338)</Czech>
+      <French>Cache-flamme (.338)</French>
+      <Russian>Пламегаситель (.338)</Russian>
+      <Spanish>Supresor (.338)</Spanish>
+    </Key>
+    <Key ID="STR_ACE_muzzle_mzls_93mmg">
+      <English>Flash Suppressor (9.3 mm)</English>
+      <Hungarian>Lángrejtő (9,3 mm)</Hungarian>
+      <German>Mündungsfeuerdämpfer (9,3 mm)</German>
+      <Italian>Soppressore di fiamma (9.3mm)</Italian>
+      <Portuguese>Supressor de Clarão (9,3mm)</Portuguese>
+      <Polish>Tłumik płomieni (9,3 mm)</Polish>
+      <Czech>Tlumič záblesku (9,3 mm)</Czech>
+      <French>Cache-flamme (9,3 mm)</French>
+      <Russian>Пламегаситель (9,3 мм)</Russian>
+      <Spanish>Supresor (9,3 mm)</Spanish>
+    </Key>
   </Package>
 </Project>
