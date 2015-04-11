@@ -6,9 +6,11 @@
       <English>Wirecutter</English>
       <German>Drahtschneider</German>
       <Spanish>Wirecutter</Spanish>
+      <Portuguese>Cortador de Arame</Portuguese>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_wirecutterDescription">
       <English>Wirecutter</English>
+      <Portuguese>Cortador de Arame</Portuguese>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_CutFence">
       <English>Cut Fence</English>
