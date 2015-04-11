@@ -42,6 +42,20 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo), -3]) + 2) then {
     _unit setVariable [QGVAR(damages), []];
     _unit setVariable [QGVAR(structDamage), 0];
     _unit setVariable [QGVAR(preventDeath), false];
+    // Assign orphan structural damage to torso
+    [{
+        private ["_unit", "_damagesum"];
+        _unit = _this select 0;
+        _damagesum = (_unit getHitPointDamage "HitHead") +
+            (_unit getHitPointDamage "HitBody") +
+            (_unit getHitPointDamage "HitLeftArm") +
+            (_unit getHitPointDamage "HitRightArm") +
+            (_unit getHitPointDamage "HitLeftLeg") +
+            (_unit getHitPointDamage "HitRightLeg");
+        if (_damagesum < 0.06 and damage _unit > 0.06 and alive _unit) then {
+            _unit setHitPointDamage ["HitBody", damage _unit];
+        };
+    }, [_unit], 2, 0.1] call EFUNC(common,waitAndExecute);
 };
 
 _newDamage = _damage - (damage _unit);
@@ -105,29 +119,11 @@ if (_selectionName == "") then {
     };
 };
 
-
-// Assign orphan structural damage to torso
-[{
-    private ["_unit", "_damagesum"];
-    _unit = _this select 0;
-    _damagesum = (_unit getHitPointDamage "HitHead") +
-        (_unit getHitPointDamage "HitBody") +
-        (_unit getHitPointDamage "HitLeftArm") +
-        (_unit getHitPointDamage "HitRightArm") +
-        (_unit getHitPointDamage "HitLeftLeg") +
-        (_unit getHitPointDamage "HitRightLeg");
-    if (_damagesum < 0.06 and damage _unit > 0.06 and alive _unit) then {
-        _unit setHitPointDamage ["HitBody", damage _unit];
-    };
-}, [_unit], 2, 0.1] call EFUNC(common,waitAndExecute);
-
-
 if (_selectionName == "") then {
     _damage = _damage + (_unit getVariable QGVAR(structDamage));
 } else {
     _damage = _damage + _newDamage;
 };
-
 
 // Leg Damage
 _legdamage = (_unit getHitPointDamage "HitLeftLeg") + (_unit getHitPointDamage "HitRightLeg");
@@ -139,9 +135,9 @@ if (_selectionName == "leg_r") then {
 };
 
 if (_legdamage >= LEGDAMAGETRESHOLD1) then {
-    if (_unit getHitPointDamage "HitLegs" != 1) then {_unit setHitPointDamage ["HitLegs", 1]};
+    _unit setHitPointDamage ["HitLegs", 1];
 } else {
-    if (_unit getHitPointDamage "HitLegs" != 0) then {_unit setHitPointDamage ["HitLegs", 0]};
+    _unit setHitPointDamage ["HitLegs", 0];
 };
 // @todo: force prone for completely fucked up legs.
 
@@ -156,9 +152,9 @@ if (_selectionName == "hand_r") then {
 };
 
 if (_armdamage >= ARMDAMAGETRESHOLD1) then {
-    if (_unit getHitPointDamage "HitHands" != 1) then {_unit setHitPointDamage ["HitHands", 1]};
+    _unit setHitPointDamage ["HitHands", 1];
 } else {
-    if (_unit getHitPointDamage "HitHands" != 0) then {_unit setHitPointDamage ["HitHands", 0]};
+    _unit setHitPointDamage ["HitHands", 0];
 };
 // @todo: Drop weapon for full damage.
 
@@ -169,7 +165,6 @@ if (_selectionName == "") then {
     _pain = _pain + _newDamage * (1 - (_unit getVariable [QGVAR(morphine), 0]));
     _unit setVariable [QGVAR(pain), _pain min 1, true];
 };
-
 
 // Unconsciousness
 if (_selectionName == "" and
