@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
+<!-- Edited with tabler - 2014-12-21 -->
 <Project name="ACE">
   <Package name="logistics_uavbattery">
     <Key ID="STR_ACE_logistics_uavbattery_Full">
@@ -24,7 +24,7 @@
       <Czech>Potřebuješ UAV-Baterii</Czech>
       <Portuguese>Você precisa de uma Bateria para VANT</Portuguese>
       <Italian>Hai bisogno di una Batteria UAV</Italian>
-      <Russian>Требуется аккумулятор для БПЛА</Russian>
+      <Russian>Требуется аккумулятор БПЛА</Russian>
     </Key>
     <Key ID="STR_ACE_logistics_uavbattery_Recharge">
       <English>Recharge</English>
@@ -36,7 +36,7 @@
       <Czech>Dobít</Czech>
       <Portuguese>Recarregar</Portuguese>
       <Italian>Ricarica</Italian>
-      <Russian>Зарядить</Russian>
+      <Russian>Подзарядить</Russian>
     </Key>
     <Key ID="STR_ACE_logistics_uavbattery_Battery_Name">
       <English>UAV Battery</English>
@@ -60,7 +60,7 @@
       <Czech>Používané k dobíjení UAV</Czech>
       <Portuguese>Usada para reabastecer VANT</Portuguese>
       <Italian>Usata per ricaricare la Batteria dell'UAV</Italian>
-      <Russian>Используется для зарядки БПЛА</Russian>
+      <Russian>Используется для подзарядки БПЛА</Russian>
     </Key>
     <Key ID="STR_ACE_logistics_uavbattery_Battery_Recharge">
       <English>Recharging ...</English>
@@ -72,7 +72,7 @@
       <Czech>Dobíjení ...</Czech>
       <Portuguese>Recarregando ...</Portuguese>
       <Italian>In ricarica ...</Italian>
-      <Russian>Заряжается ...</Russian>
+      <Russian>Подзаряжаем ...</Russian>
     </Key>
   </Package>
 </Project>

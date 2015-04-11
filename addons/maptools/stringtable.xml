@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
+<!-- Edited with tabler - 2014-12-22 -->
 <Project name="ACE">
   <Package name="Map">
     <Key ID="STR_ACE_MapTools_Name">
@@ -142,7 +142,7 @@
       <Polish>Kierunek: %1°</Polish>
       <Spanish>Dirección: %1°</Spanish>
       <Hungarian>Irány: %1</Hungarian>
-      <Russian>Направление: %1°</Russian>
+      <Russian>Направление:%1</Russian>
     </Key>
   </Package>
 </Project>

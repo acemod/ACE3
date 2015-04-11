@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
+<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
   <Package name="Explosives">
     <Key ID="STR_ACE_Explosives_Menu">
@@ -48,7 +48,7 @@
       <Italian>Codice dell'esplosivo : %1</Italian>
       <Hungarian>Robbanóanyag kódja: %1</Hungarian>
       <Portuguese>Código do explosivo: %1</Portuguese>
-      <Russian>Код подрыва: %1</Russian>
+      <Russian>Взрывная код: %1</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_PlaceAction">
       <English>Place</English>
@@ -60,7 +60,7 @@
       <Italian>Piazza</Italian>
       <Hungarian>Elhelyezés</Hungarian>
       <Portuguese>Colocar</Portuguese>
-      <Russian>Установить</Russian>
+      <Russian>Положить</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_CancelAction">
       <English>Cancel</English>
@@ -132,7 +132,7 @@
       <Italian>Usato per l'attivazione a distanza degli esplosivi</Italian>
       <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
       <Portuguese>Usado para acionar explosivos remotamente</Portuguese>
-      <Russian>Используется для удаленной детонации СВУ</Russian>
+      <Russian>Используется для удаленного запуска взрывчатку</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_clacker_displayName">
       <English>M57 Firing Device</English>
@@ -156,7 +156,7 @@
       <Italian>Usato per l'attivazione a distanza degli esplosivi</Italian>
       <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
       <Portuguese>Usado para acionar explosivos remotamente</Portuguese>
-      <Russian>Используется для удаленной детонации зарядов</Russian>
+      <Russian>Используется для удаленного запуска взрывчатку</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_M26_displayName">
       <English>M26 Firing Device</English>
@@ -192,7 +192,7 @@
       <Italian>Kit E.O.D.</Italian>
       <Hungarian>Hatástalanító felszerelés</Hungarian>
       <Portuguese>Kit de desarme</Portuguese>
-      <Russian>Комплект разминирования</Russian>
+      <Russian>Разминирование комплект</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_DefusalKit_description">
       <English>Allows defusing of explosives</English>
@@ -204,7 +204,7 @@
       <Italian>Consente la disattivazione degli ordigni esplosivi</Italian>
       <Hungarian>Robbanóanyagok hatástalanításához</Hungarian>
       <Portuguese>Permite o desarme de explosivos</Portuguese>
-      <Russian>Позволяет обезвреживать ВУ</Russian>
+      <Russian>Allows defusing of explosives</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_Phone_AddToSpeedDial">
       <English>Add to Speed Dial</English>
@@ -228,7 +228,7 @@
       <Italian>Libera</Italian>
       <Hungarian>Törlés</Hungarian>
       <Portuguese>Limpar</Portuguese>
-      <Russian>Очистить</Russian>
+      <Russian>Pассеиваться</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_Phone_Dial">
       <English>Dial</English>
@@ -252,7 +252,7 @@
       <Italian>Sopra</Italian>
       <Hungarian>Fel</Hungarian>
       <Portuguese>Cima</Portuguese>
-      <Russian>Вызов</Russian>
+      <Russian>Поднять</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_Phone_Down">
       <English>Down</English>
@@ -264,7 +264,7 @@
       <Italian>Sotto</Italian>
       <Hungarian>Le</Hungarian>
       <Portuguese>Baixo</Portuguese>
-      <Russian>Сброс</Russian>
+      <Russian>Опустить</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_Cancel">
       <English>Cancel</English>
@@ -288,7 +288,7 @@
       <Italian>Menù di detonazione</Italian>
       <Hungarian>Robbantás menü</Hungarian>
       <Portuguese>Menu de detonação</Portuguese>
-      <Russian>Меню подрыва</Russian>
+      <Russian>Меню Подрыв</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_PlaceMenu">
       <English>Place Menu</English>
@@ -300,7 +300,7 @@
       <Italian>Menù di collocamento</Italian>
       <Hungarian>Lerakás menü</Hungarian>
       <Portuguese>Menu de posicionamento</Portuguese>
-      <Russian>Меню детонации</Russian>
+      <Russian>Меню Установить</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_Defuse">
       <English>Defuse</English>
@@ -336,7 +336,7 @@
       <Italian>Cronometro</Italian>
       <Hungarian>Időzített</Hungarian>
       <Portuguese>Timer</Portuguese>
-      <Russian>Таймер</Russian>
+      <Russian>Временной</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_TimerMenu">
       <English>Time: %1m %2s</English>
@@ -348,7 +348,7 @@
       <Italian>Tempo : %1m %2s</Italian>
       <Hungarian>Idő: %1m %2s</Hungarian>
       <Portuguese>Tempo: %1m %2s</Portuguese>
-      <Russian>Время: %1m %2c</Russian>
+      <Russian>Tемп: %1m %2c</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_SetTime">
       <English>Set Time</English>
@@ -360,7 +360,7 @@
       <Italian>Modifica il conto alla rovescia</Italian>
       <Hungarian>Idő állítása</Hungarian>
       <Portuguese>Configurar Tempo</Portuguese>
-      <Russian>Установить время</Russian>
+      <Russian>Xронометр</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_TriggerMenu">
       <English>Select a Trigger</English>
@@ -372,7 +372,7 @@
       <Italian>Seleziona un Attivatore</Italian>
       <Hungarian>Detonátor kiválasztása</Hungarian>
       <Portuguese>Selecionar um Gatilho</Portuguese>
-      <Russian>Выберите детонатор</Russian>
+      <Russian>Выберите</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_SelectTrigger">
       <English>Select</English>
@@ -384,7 +384,7 @@
       <Italian>Seleziona</Italian>
       <Hungarian>Kiválasztás</Hungarian>
       <Portuguese>Selecionar</Portuguese>
-      <Russian>Выбрать</Russian>
+      <Russian>Выбрать защелка</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_PressurePlate">
       <English>Pressure Plate</English>
@@ -408,7 +408,7 @@
       <Italian>Filo a Inciampo</Italian>
       <Hungarian>Botlódrót</Hungarian>
       <Portuguese>Linha de tração</Portuguese>
-      <Russian>Растяжка</Russian>
+      <Russian>Натяжной</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_IRSensor">
       <English>IR Sensor</English>
@@ -420,7 +420,7 @@
       <Italian>Sensore IR</Italian>
       <Hungarian>IR szenzor</Hungarian>
       <Portuguese>Sensor IV</Portuguese>
-      <Russian>ИК сенсор</Russian>
+      <Russian>ИК</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_NoTriggersAvailable">
       <English>No triggers available for %1</English>
@@ -432,7 +432,7 @@
       <Italian>Nessun attivatore disponibile per %1</Italian>
       <Hungarian>Nincs detonátor a %1</Hungarian>
       <Portuguese>Nenhum gatilho disponível para %1</Portuguese>
-      <Russian>Нет доступных взрывателей для %1</Russian>
+      <Russian>Нет защелка доступны для %1</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_SLAME_IRSensor">
       <English>IR Sensor (Side Attack)</English>
@@ -444,7 +444,7 @@
       <Italian>Sensore IR (Attacco laterale)</Italian>
       <Hungarian>IR Sensor (Side Attack)</Hungarian>
       <Portuguese>Sensor infravermelho (ataque lateral)</Portuguese>
-      <Russian>ИК (детонация вбок)</Russian>
+      <Russian>ИК (боковая атака)</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_SLAME_Magnetic">
       <English>Magnetic Influence Sensor (Bottom Attack)</English>
@@ -456,7 +456,7 @@
       <Italian>Sensore Magnetico di Prossimità (Attacco inferiore)</Italian>
       <Hungarian>Mágneses (Bottom Attack)</Hungarian>
       <Portuguese>Influência magnética (ataque inferior)</Portuguese>
-      <Russian>Магнитный (детонация вверх)</Russian>
+      <Russian>Магнитный (дно атака)</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_NoExplosivesAvailable">
       <English>No explosives on trigger.</English>
@@ -468,7 +468,7 @@
       <Hungarian>Nincs robbanóanyag a detonátorhoz.</Hungarian>
       <Polish>Brak ładunków na zapalnik.</Polish>
       <Portuguese>Nenhum explosivo no gatilho.</Portuguese>
-      <Russian>Нет доступных ВУ для взрывателя.</Russian>
+      <Russian>Нет взрывчатки на курок.</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_DeadManSwitch_displayName">
       <English>Dead Man's Switch</English>
@@ -478,7 +478,7 @@
       <Polish>Czuwak</Polish>
       <Spanish>Detonador de hombre muerto</Spanish>
       <Hungarian>Dead Man's Switch</Hungarian>
-      <Russian>Ловушка мертвеца</Russian>
+      <Russian>Кнопка мертвеца</Russian>
     </Key>
     <Key ID="STR_ACE_Explosives_DeadManSwitch_description">
       <English>Used to remotely trigger explosives when released.</English>

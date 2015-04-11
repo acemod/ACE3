@@ -1,1010 +1,974 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
+<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
-  <Package name="Medical">
-    <Key ID="STR_ACE_Medical_Inject_Atropine">
-      <English>Inject Atropine</English>
-      <German>Atropin</German>
-      <Russian>Ввести атропин</Russian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Inject_Epinephrine">
-      <English>Inject Epinephrine</English>
-      <German>Epinephrine injizieren</German>
-      <Spanish>Inyectar Epinefrina</Spanish>
-      <Polish>Wtrzyknij adrenalinę</Polish>
-      <Czech>Aplikovat Adrenalin</Czech>
-      <Russian>Ввести андреналил</Russian>
-      <French>Adrénaline</French>
-      <Hungarian>Adrenalin</Hungarian>
-      <Portuguese>Injetar Epinefrina</Portuguese>
-      <Italian>Inietta Epinefrina</Italian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Inject_Morphine">
-      <English>Inject Morphine</English>
-      <German>Morphin injizieren</German>
-      <Spanish>Inyectar Morfina</Spanish>
-      <Polish>Wstrzyknij morfinę</Polish>
-      <Czech>Aplikovat Morfin</Czech>
-      <Russian>Ввести морфин</Russian>
-      <French>Morphine</French>
-      <Hungarian>Morfium</Hungarian>
-      <Portuguese>Injetar Morfina</Portuguese>
-      <Italian>Inietta Morfina</Italian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Transfuse_Blood">
-      <English>Transfuse Blood</English>
-      <German>Bluttransfusion</German>
-      <Spanish>Transfundir sangre</Spanish>
-      <Polish>Przetocz krew</Polish>
-      <Czech>Transfúze krve</Czech>
-      <Russian>Перелить кровь</Russian>
-      <French>Transfusion</French>
-      <Hungarian>Infúzió</Hungarian>
-      <Portuguese>Transfundir Sangue</Portuguese>
-      <Italian>Effettua Trasfusione</Italian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Transfuse_Plasma">
-      <English>Transfuse Plasma</English>
-      <German>Plasmatransfusion</German>
-      <Russian>Перелить плазму</Russian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Transfuse_Saline">
-      <English>Transfuse Saline</English>
-      <German>Salzlösungtransfusion</German>
-      <Russian>Влить физраствор</Russian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Apply_Tourniquet">
-      <English>Apply Tourniquet</English>
-      <German>Aderpresse anwenden</German>
-      <Russian>Наложить жгут</Russian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Bandage">
-      <English>Bandage</English>
-      <German>Verbinden</German>
-      <Spanish>Venda</Spanish>
-      <Polish>Bandaż</Polish>
-      <Czech>Obvázat</Czech>
-      <French>Pansement</French>
-      <Italian>Benda</Italian>
-      <Hungarian>Kötözés</Hungarian>
-      <Portuguese>Atadura</Portuguese>
-      <Russian>Перевязать</Russian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Bandage_HitHead">
-      <English>Bandage Head</English>
-      <German>Kopf verbinden</German>
-      <Spanish>Vendar la cabeza</Spanish>
-      <Polish>Bandażuj głowę</Polish>
-      <Czech>Obvázat hlavu</Czech>
-      <Russian>Перевязать голову</Russian>
-      <French>Pansement Tête</French>
-      <Hungarian>Fej kötözése</Hungarian>
-      <Portuguese>Atar Cabeça</Portuguese>
-      <Italian>Benda la testa</Italian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Bandage_HitBody">
-      <English>Bandage Torso</English>
-      <German>Torso verbinden</German>
-      <Spanish>Vendar el torso</Spanish>
-      <Polish>Bandażuj tors</Polish>
-      <Czech>Obvázat hruď</Czech>
-      <Russian>Перевязать торс</Russian>
-      <French>Pansement Torse</French>
-      <Hungarian>Felsőtest kötözése</Hungarian>
-      <Portuguese>Atar Tronco</Portuguese>
-      <Italian>Benda il torso</Italian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Bandage_HitLeftArm">
-      <English>Bandage Left Arm</English>
-      <German>Arm links verbinden</German>
-      <Spanish>Vendar el brazo izquierdo</Spanish>
-      <Polish>Bandażuj lewe ramię</Polish>
-      <Czech>Obvázat levou ruku</Czech>
-      <Russian>Перевязать левую руку</Russian>
-      <French>Pansement Bras Gauche</French>
-      <Hungarian>Bal kar kötözése</Hungarian>
-      <Portuguese>Atar Braço Esquerdo</Portuguese>
-      <Italian>Benda il braccio sinistro</Italian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Bandage_HitRightArm">
-      <English>Bandage Right Arm</English>
-      <German>Arm rechts verbinden</German>
-      <Spanish>Vendar el brazo derecho</Spanish>
-      <Polish>Bandażuj prawe ramię</Polish>
-      <Czech>Obvázat pravou ruku</Czech>
-      <Russian>Перевязать правую руку</Russian>
-      <French>Pansement Bras Droit</French>
-      <Hungarian>Jobb kar kötözése</Hungarian>
-      <Portuguese>Atar Braço Direito</Portuguese>
-      <Italian>Benda il braccio destro</Italian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Bandage_HitLeftLeg">
-      <English>Bandage Left Leg</English>
-      <German>Bein links verbinden</German>
-      <Spanish>Vendar la pierna izquierda</Spanish>
-      <Polish>Bandażuj lewą nogę</Polish>
-      <Czech>Obvázat levou nohu</Czech>
-      <Russian>Перевязать левую ногу</Russian>
-      <French>Pansement Jambe Gauche</French>
-      <Hungarian>Bal láb kötözése</Hungarian>
-      <Portuguese>Atar Perna Esquerda</Portuguese>
-      <Italian>Benda la gamba sinistra</Italian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Bandage_HitRightLeg">
-      <English>Bandage Right Leg</English>
-      <German>Bein rechts verbinden</German>
-      <Spanish>Vendar la pierna derecha</Spanish>
-      <Polish>Bandażuj prawą nogę</Polish>
-      <Czech>Obvázat pravou nohu</Czech>
-      <Russian>Перевязать правую ногу</Russian>
-      <French>Pansement Jambe Droite</French>
-      <Hungarian>Jobb láb kötözése</Hungarian>
-      <Portuguese>Atar Perna Direita</Portuguese>
-      <Italian>Benda la gamba destra</Italian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Injecting_Morphine">
-      <English>Injecting Morphine ...</English>
-      <German>Morphin injizieren ...</German>
-      <Spanish>Inyectando Morfina ...</Spanish>
-      <Polish>Wstrzykiwanie morfiny ...</Polish>
-      <Czech>Aplikuju Morfin ...</Czech>
-      <Russian>Введение морфина...</Russian>
-      <French>Injection de Morphine...</French>
-      <Hungarian>Morfium beadása...</Hungarian>
-      <Portuguese>Injetando Morfina ...</Portuguese>
-      <Italian>Inietto la morfina ...</Italian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Injecting_Epinephrine">
-      <English>Injecting Epinephrine ...</English>
-      <German>Epinephrin injizieren ...</German>
-      <Spanish>Inyectando Epinefrina ...</Spanish>
-      <Polish>Wstrzykiwanie adrenaliny ...</Polish>
-      <Czech>Aplikuju Adrenalin ...</Czech>
-      <Russian>Введение андреналина ...</Russian>
-      <French>Injection d'Adrénaline ...</French>
-      <Hungarian>Adrenalin beadása...</Hungarian>
-      <Portuguese>Injetando Epinefrina ...</Portuguese>
-      <Italian>Inietto l'epinefrina ...</Italian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Injecting_Atropine">
-      <English>Injecting Atropine ...</English>
-      <German>Atropin injizieren ...</German>
-      <Russian>Введение атропина ...</Russian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Transfusing_Blood">
-      <English>Transfusing Blood ...</English>
-      <German>Bluttransfusion ...</German>
-      <Spanish>Realizando transfusión ...</Spanish>
-      <Polish>Przetaczanie krwi ...</Polish>
-      <Czech>Probíhá transfúze krve ...</Czech>
-      <Russian>Переливание крови...</Russian>
-      <French>Transfusion Sanguine ...</French>
-      <Hungarian>Infúzió...</Hungarian>
-      <Portuguese>Transfundindo Sangue ...</Portuguese>
-      <Italian>Effettuo la trasfusione ...</Italian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Transfusing_Saline">
-      <English>Transfusing Saline ...</English>
-      <German>Sallösungtransfusion ...</German>
-      <Russian>Вливание физраствора ...</Russian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Transfusing_Plasma">
-      <English>Transfusing Plasma ...</English>
-      <German>Plasmatransfusion ...</German>
-      <Russian>Переливание плзмы ...</Russian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Bandaging">
-      <English>Bandaging ...</English>
-      <German>Verbinden ...</German>
-      <Spanish>Vendando ...</Spanish>
-      <Polish>Bandażowanie ...</Polish>
-      <Czech>Obvazuji ...</Czech>
-      <French>Pansement ...</French>
-      <Italian>Sto applicando la benda ...</Italian>
-      <Hungarian>Bekötözés...</Hungarian>
-      <Portuguese>Atando ...</Portuguese>
-      <Russian>Перевязывание ...</Russian>
-    </Key>
-    <Key ID="STR_ACE_Medical_Applying_Tourniquet">
-      <English>Applying Tourniquet ...</English>
-      <German>Aderpresse ...</German>
-      <Russian>Наложение жгута ...</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_Medical">
-      <English>Medical</English>
-      <Czech>Zdravotní</Czech>
-      <French>Médical</French>
-      <German>Sanitäter</German>
-      <Italian>Medico</Italian>
-      <Polish>Medyczne</Polish>
-      <Portuguese>Médico</Portuguese>
-      <Russian>Медик</Russian>
-      <Spanish>Médico</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_FieldDressing">
-      <English>Field Dressing</English>
-      <Russian>Бинтовая повязка</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_PackingBandage">
-      <English>Packing Bandage</English>
-      <Russian>Компресионный пакет</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_ElasticBandage">
-      <English>Elastic Bandage</English>
-      <Russian>Давящая повязка</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_QuikClot">
-      <English>QuikClot</English>
-      <Russian>QuickClot</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckPulse">
-      <English>Check Pulse</English>
-      <German>Puls überprüfen</German>
-      <Russian>Проверить пульс</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure">
-      <English>Check Blood Pressure</English>
-      <German>Blutdruck messen</German>
-      <Russian>Проверить кровяное давление</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_TriageCard">
-      <English>Triage Card</English>
-      <German>Triage Karte</German>
-      <Russian>Медкарта</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_Tourniquet">
-      <English>Tourniquet</English>
-      <German>Tourniquet</German>
-      <Russian>Жгут</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet">
-      <English>Remove Tourniquet</English>
-      <German>Entferne Tourniquet</German>
-      <Russian>Снять жгут</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_1000">
-      <English>Give Blood IV (1000ml)</English>
-      <Russian>Дать кровь для в/в вливания (1000 мл)</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_500">
-      <English>Give Blood IV (500ml)</English>
-      <Russian>Дать кровь для в/в вливания (500 мл)</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_250">
-      <English>Give Blood IV (250ml)</English>
-      <Russian>Дать кровь для в/в вливания (250 мл)</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_1000">
-      <English>Give Plasma IV (1000ml)</English>
-      <Russian>Дать плазму для в/в вливания (1000 мл)</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_500">
-      <English>Give Plasma IV (500ml)</English>
-      <Russian>Дать плазму для в/в вливания (500 мл)</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_250">
-      <English>Give Plasma IV (250ml)</English>
-      <Russian>Дать плазму для в/в вливания (250 мл)</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_1000">
-      <English>Give Saline IV (1000ml)</English>
-      <Russian>Дать физраствор для в/в вливания (1000 мл)</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_500">
-      <English>Give Saline IV (500ml)</English>
-      <Russian>Дать физраствор для в/в вливания (500 мл)</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_250">
-      <English>Give Saline IV (250ml)</English>
-      <Russian>Дать физраствор для в/в вливания (250 мл)</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_MINOR">
-      <English>Minor</English>
-      <German>Gering</German>
-      <Russian>Незначительные травмы</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DELAYED">
-      <English>Delayed</English>
-      <Russian>Груз 300</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_IMMEDIATE">
-      <English>Immediate</English>
-      <Russian>Помощь отложена</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DECEASED">
-      <English>Deceased</English>
-      <Russian>Груз 200</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_NONE">
-      <English>None</English>
-      <Russian>Нет</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_NORMAL_BREATHING">
-      <English>Normal breathing</English>
-      <Russian>Дыхание в норме</Russian>
-      <Spanish>Respiración normal</Spanish>
-      <French>Respiration Normale</French>
-      <Polish>Normalny oddech</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_NO_BREATHING">
-      <English>No breathing</English>
-      <Russian>Дыхания нет</Russian>
-      <Spanish>No respira</Spanish>
-      <French>Apnée</French>
-      <Polish>Brak oddechu</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_DIFFICULT_BREATHING">
-      <English>Difficult breathing</English>
-      <Russian>Дыхание затруднено</Russian>
-      <Spanish>Dificultad para respirar</Spanish>
-      <French>Difficultée Respiratoire</French>
-      <Polish>Trudności z oddychaniem</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ALMOST_NO_BREATHING">
-      <English>Almost no breathing</English>
-      <Russian>Дыхания почти нет</Russian>
-      <Spanish>Casi sin respirar</Spanish>
-      <French>Respiration Faible</French>
-      <Polish>Prawie brak oddechu</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_STATUS_BLEEDING">
-      <English>Bleeding</English>
-      <Russian>Кровотечение</Russian>
-      <Spanish>Sangrando</Spanish>
-      <French>Seignement</French>
-      <Polish>Krwawienie zewnętrzne</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_STATUS_PAIN">
-      <English>In Pain</English>
-      <Russian>Испытывает боль</Russian>
-      <Spanish>Con Dolor</Spanish>
-      <French>A De La Douleur</French>
-      <Polish>W bólu</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_STATUS_LOST_BLOOD">
-      <English>Lost a lot of Blood</English>
-      <Russian>Большая кровопотеря</Russian>
-      <Spanish>Mucha Sangre perdida</Spanish>
-      <French>A Perdu Bcp de Sang</French>
-      <Polish>Stracił dużo krwi</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_STATUS_TOURNIQUET_APPLIED">
-      <English>Tourniquet [CAT]</English>
-      <Russian>Жгут</Russian>
-      <Spanish>Torniquete [CAT]</Spanish>
-      <French>Garot [CAT]</French>
-      <Polish>Opaska uciskowa [CAT]</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_receivingIvVolume">
-      <English>Receiving IV [%1ml]</English>
-      <Russian>Принимается переливание [%1 мл]</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY">
-      <English>Bandage (Basic)</English>
-      <Russian>Повязка (обычная)</Russian>
-      <Spanish>Vendaje (Básico)</Spanish>
-      <French>Bandage (Standard)</French>
-      <Polish>Bandaż (jałowy)</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BANDAGE_BASIC_DESC_SHORT">
-      <English>Used to cover a wound</English>
-      <Russian>Для перевязки ран</Russian>
-      <Spanish>Utilizado para cubrir una herida</Spanish>
-      <French>Utilisé Pour Couvrir Une Blessure</French>
-      <Polish>Używany w celu przykrycia i ochrony miejsca zranienia</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BANDAGE_BASIC_DESC_USE">
-      <English>A dressing, that is a particular material used to cover a wound, which is applied over the wound
+    <Package name="Medical">
+        <Key ID="STR_ACE_Medical_Inject_Atropine">
+            <English>Inject Atropine</English>
+            <German>Atropin</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Inject_Epinephrine">
+            <English>Inject Epinephrine</English>
+            <German>Epinephrine injizieren</German>
+            <Spanish>Inyectar Epinefrina</Spanish>
+            <Polish>Wtrzyknij adrenalinę</Polish>
+            <Czech>Aplikovat Adrenalin</Czech>
+            <Russian>Ввести андреналил</Russian>
+            <French>Adrénaline</French>
+            <Hungarian>Adrenalin</Hungarian>
+            <Portuguese>Injetar Epinefrina</Portuguese>
+            <Italian>Inietta Epinefrina</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Inject_Morphine">
+            <English>Inject Morphine</English>
+            <German>Morphin injizieren</German>
+            <Spanish>Inyectar Morfina</Spanish>
+            <Polish>Wstrzyknij morfinę</Polish>
+            <Czech>Aplikovat Morfin</Czech>
+            <Russian>Ввести морфин</Russian>
+            <French>Morphine</French>
+            <Hungarian>Morfium</Hungarian>
+            <Portuguese>Injetar Morfina</Portuguese>
+            <Italian>Inietta Morfina</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Transfuse_Blood">
+            <English>Transfuse Blood</English>
+            <German>Bluttransfusion</German>
+            <Spanish>Transfundir sangre</Spanish>
+            <Polish>Przetocz krew</Polish>
+            <Czech>Transfúze krve</Czech>
+            <Russian>Перелить кровь</Russian>
+            <French>Transfusion</French>
+            <Hungarian>Infúzió</Hungarian>
+            <Portuguese>Transfundir Sangue</Portuguese>
+            <Italian>Effettua Trasfusione</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Transfuse_Plasma">
+            <English>Transfuse Plasma</English>
+            <German>Plasmatransfusion</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Transfuse_Saline">
+            <English>Transfuse Saline</English>
+            <German>Salzlösungtransfusion</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Apply_Tourniquet">
+            <English>Apply Tourniquet</English>
+            <German>Aderpresse anwenden</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Bandage">
+            <English>Bandage</English>
+            <German>Verbinden</German>
+            <Spanish>Venda</Spanish>
+            <Polish>Bandaż</Polish>
+            <Czech>Obvázat</Czech>
+            <French>Pansement</French>
+            <Italian>Benda</Italian>
+            <Hungarian>Kötözés</Hungarian>
+            <Portuguese>Atadura</Portuguese>
+            <Russian>Перевязать</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Bandage_HitHead">
+            <English>Bandage Head</English>
+            <German>Kopf verbinden</German>
+            <Spanish>Vendar la cabeza</Spanish>
+            <Polish>Bandażuj głowę</Polish>
+            <Czech>Obvázat hlavu</Czech>
+            <Russian>Перевязать голову</Russian>
+            <French>Pansement Tête</French>
+            <Hungarian>Fej kötözése</Hungarian>
+            <Portuguese>Atar Cabeça</Portuguese>
+            <Italian>Benda la testa</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Bandage_HitBody">
+            <English>Bandage Torso</English>
+            <German>Torso verbinden</German>
+            <Spanish>Vendar el torso</Spanish>
+            <Polish>Bandażuj tors</Polish>
+            <Czech>Obvázat hruď</Czech>
+            <Russian>Перевязать торс</Russian>
+            <French>Pansement Torse</French>
+            <Hungarian>Felsőtest kötözése</Hungarian>
+            <Portuguese>Atar Tronco</Portuguese>
+            <Italian>Benda il torso</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Bandage_HitLeftArm">
+            <English>Bandage Left Arm</English>
+            <German>Arm links verbinden</German>
+            <Spanish>Vendar el brazo izquierdo</Spanish>
+            <Polish>Bandażuj lewe ramię</Polish>
+            <Czech>Obvázat levou ruku</Czech>
+            <Russian>Перевязать левую руку</Russian>
+            <French>Pansement Bras Gauche</French>
+            <Hungarian>Bal kar kötözése</Hungarian>
+            <Portuguese>Atar Braço Esquerdo</Portuguese>
+            <Italian>Benda il braccio sinistro</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Bandage_HitRightArm">
+            <English>Bandage Right Arm</English>
+            <German>Arm rechts verbinden</German>
+            <Spanish>Vendar el brazo derecho</Spanish>
+            <Polish>Bandażuj prawe ramię</Polish>
+            <Czech>Obvázat pravou ruku</Czech>
+            <Russian>Перевязать правую руку</Russian>
+            <French>Pansement Bras Droit</French>
+            <Hungarian>Jobb kar kötözése</Hungarian>
+            <Portuguese>Atar Braço Direito</Portuguese>
+            <Italian>Benda il braccio destro</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Bandage_HitLeftLeg">
+            <English>Bandage Left Leg</English>
+            <German>Bein links verbinden</German>
+            <Spanish>Vendar la pierna izquierda</Spanish>
+            <Polish>Bandażuj lewą nogę</Polish>
+            <Czech>Obvázat levou nohu</Czech>
+            <Russian>Перевязать левую ногу</Russian>
+            <French>Pansement Jambe Gauche</French>
+            <Hungarian>Bal láb kötözése</Hungarian>
+            <Portuguese>Atar Perna Esquerda</Portuguese>
+            <Italian>Benda la gamba sinistra</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Bandage_HitRightLeg">
+            <English>Bandage Right Leg</English>
+            <German>Bein rechts verbinden</German>
+            <Spanish>Vendar la pierna derecha</Spanish>
+            <Polish>Bandażuj prawą nogę</Polish>
+            <Czech>Obvázat pravou nohu</Czech>
+            <Russian>Перевязать правую ногу</Russian>
+            <French>Pansement Jambe Droite</French>
+            <Hungarian>Jobb láb kötözése</Hungarian>
+            <Portuguese>Atar Perna Direita</Portuguese>
+            <Italian>Benda la gamba destra</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Injecting_Morphine">
+            <English>Injecting Morphine ...</English>
+            <German>Morphin injizieren ...</German>
+            <Spanish>Inyectando Morfina ...</Spanish>
+            <Polish>Wstrzykiwanie morfiny ...</Polish>
+            <Czech>Aplikuju Morfin ...</Czech>
+            <Russian>Введение морфина...</Russian>
+            <French>Injection de Morphine...</French>
+            <Hungarian>Morfium beadása...</Hungarian>
+            <Portuguese>Injetando Morfina ...</Portuguese>
+            <Italian>Inietto la morfina ...</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Injecting_Epinephrine">
+            <English>Injecting Epinephrine ...</English>
+            <German>Epinephrin injizieren ...</German>
+            <Spanish>Inyectando Epinefrina ...</Spanish>
+            <Polish>Wstrzykiwanie adrenaliny ...</Polish>
+            <Czech>Aplikuju Adrenalin ...</Czech>
+            <Russian>Введение андреналина</Russian>
+            <French>Injection d'Adrénaline ...</French>
+            <Hungarian>Adrenalin beadása...</Hungarian>
+            <Portuguese>Injetando Epinefrina ...</Portuguese>
+            <Italian>Inietto l'epinefrina ...</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Injecting_Atropine">
+            <English>Injecting Atropine ...</English>
+            <German>Atropin injizieren ...</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Transfusing_Blood">
+            <English>Transfusing Blood ...</English>
+            <German>Bluttransfusion ...</German>
+            <Spanish>Realizando transfusión ...</Spanish>
+            <Polish>Przetaczanie krwi ...</Polish>
+            <Czech>Probíhá transfúze krve ...</Czech>
+            <Russian>Переливание крови...</Russian>
+            <French>Transfusion Sanguine ...</French>
+            <Hungarian>Infúzió...</Hungarian>
+            <Portuguese>Transfundindo Sangue ...</Portuguese>
+            <Italian>Effettuo la trasfusione ...</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Transfusing_Saline">
+            <English>Transfusing Saline ...</English>
+            <German>Sallösungtransfusion ...</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Transfusing_Plasma">
+            <English>Transfusing Plasma ...</English>
+            <German>Plasmatransfusion ...</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Bandaging">
+            <English>Bandaging ...</English>
+            <German>Verbinden ...</German>
+            <Spanish>Vendando ...</Spanish>
+            <Polish>Bandażowanie ...</Polish>
+            <Czech>Obvazuji ...</Czech>
+            <French>Pansement ...</French>
+            <Italian>Sto applicando la benda ...</Italian>
+            <Hungarian>Bekötözés...</Hungarian>
+            <Portuguese>Atando ...</Portuguese>
+            <Russian>Перевязывание....</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Applying_Tourniquet">
+            <English>Applying Tourniquet ...</English>
+            <German>Aderpresse ...</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_Medical">
+            <English>Medical</English>
+            <Czech>Zdravotní</Czech>
+            <French>Médical</French>
+            <German>Sanitäter</German>
+            <Italian>Medico</Italian>
+            <Polish>Medyczne</Polish>
+            <Portuguese>Médico</Portuguese>
+            <Russian>Медик</Russian>
+            <Spanish>Médico</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_FieldDressing">
+            <English>Field Dressing</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_PackingBandage">
+            <English>Packing Bandage</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_ElasticBandage">
+            <English>Elastic Bandage</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_QuikClot">
+            <English>QuikClot</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckPulse">
+            <English>Check Pulse</English>
+            <German>Puls überprüfen</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure">
+            <English>Check Blood Pressure</English>
+            <German>Blutdruck messen</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_TriageCard">
+            <English>Triage Card</English>
+            <German>Triage Karte</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_Tourniquet">
+            <English>Tourniquet</English>
+            <German>Tourniquet</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet">
+            <English>Remove Tourniquet</English>
+            <German>Entferne Tourniquet</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_1000">
+            <English>Give Blood IV (1000ml)</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_500">
+            <English>Give Blood IV (500ml)</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_250">
+            <English>Give Blood IV (250ml)</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_1000">
+            <English>Give Plasma IV (1000ml)</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_500">
+            <English>Give Plasma IV (500ml)</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_250">
+            <English>Give Plasma IV (250ml)</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_1000">
+            <English>Give Saline IV (1000ml)</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_500">
+            <English>Give Saline IV (500ml)</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_250">
+            <English>Give Saline IV (250ml)</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_MINOR">
+            <English>Minor</English>
+            <German>Gering</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DELAYED">
+            <English>Delayed</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_IMMEDIATE">
+            <English>Immediate</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DECEASED">
+            <English>Deceased</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_NONE">
+            <English>None</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_NORMAL_BREATHING">
+            <English>Normal breathing</English>
+            <Russian>Дыхание в норме</Russian>
+            <Spanish>Respiración normal</Spanish>
+            <French>Respiration Normale</French>
+            <Polish>Normalny oddech</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_NO_BREATHING">
+            <English>No breathing</English>
+            <Russian>Дыхания нет</Russian>
+            <Spanish>No respira</Spanish>
+            <French>Apnée</French>
+            <Polish>Brak oddechu</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_DIFFICULT_BREATHING">
+            <English>Difficult breathing</English>
+            <Russian>Дыхание затруднено</Russian>
+            <Spanish>Dificultad para respirar</Spanish>
+            <French>Difficultée Respiratoire</French>
+            <Polish>Trudności z oddychaniem</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ALMOST_NO_BREATHING">
+            <English>Almost no breathing</English>
+            <Russian>Дыхания почти нет</Russian>
+            <Spanish>Casi sin respirar</Spanish>
+            <French>Respiration Faible</French>
+            <Polish>Prawie brak oddechu</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_STATUS_BLEEDING">
+            <English>Bleeding</English>
+            <Russian>Кровотечение</Russian>
+            <Spanish>Sangrando</Spanish>
+            <French>Seignement</French>
+            <Polish>Krwawienie zewnętrzne</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_STATUS_PAIN">
+            <English>In Pain</English>
+            <Russian>Испытывает боль</Russian>
+            <Spanish>Con Dolor</Spanish>
+            <French>A De La Douleur</French>
+            <Polish>W bólu</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_STATUS_LOST_BLOOD">
+            <English>Lost a lot of Blood</English>
+            <Russian>Большая кровопотеря</Russian>
+            <Spanish>Mucha Sangre perdida</Spanish>
+            <French>A Perdu Bcp de Sang</French>
+            <Polish>Stracił dużo krwi</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_STATUS_TOURNIQUET_APPLIED">
+            <English>Tourniquet [CAT]</English>
+            <Russian>Жгут</Russian>
+            <Spanish>Torniquete [CAT]</Spanish>
+            <French>Garot [CAT]</French>
+            <Polish>Opaska uciskowa [CAT]</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_receivingIvVolume">
+            <English>Receiving IV [%1ml]</English>
+        </Key>
+
+        <Key ID="STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY">
+            <English>Bandage (Basic)</English>
+            <Russian>Повязка (обычная)</Russian>
+            <Spanish>Vendaje (Básico)</Spanish>
+            <French>Bandage (Standard)</French>
+            <Polish>Bandaż (jałowy)</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_BANDAGE_BASIC_DESC_SHORT">
+            <English>Used to cover a wound</English>
+            <Russian>Для перевязки ран</Russian>
+            <Spanish>Utilizado para cubrir una herida</Spanish>
+            <French>Utilisé Pour Couvrir Une Blessure</French>
+            <Polish>Używany w celu przykrycia i ochrony miejsca zranienia</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_BANDAGE_BASIC_DESC_USE">
+            <English>A dressing, that is a particular material used to cover a wound, which is applied over the wound
                 once bleeding has been stemmed.
             </English>
-      <Russian>Повязка, накладываемая поверх раны после остановки кровотечения.</Russian>
-      <Spanish>Un apósito, material específico utilizado para cubrir una herida, se aplica sobre la herida una vez
+            <Russian>Повязка, накладываемая поверх раны после остановки кровотечения.</Russian>
+            <Spanish>Un apósito, material específico utilizado para cubrir una herida, se aplica sobre la herida una vez
                 ha dejado de sangrar.
             </Spanish>
-      <French>C'est un bandage, qui est fait d'un matériel spécial utiliser pour couvrir une blessure, qui peut
+            <French>C'est un bandage, qui est fait d'un matériel spécial utiliser pour couvrir une blessure, qui peut
                 etre appliquer des que le seignement as ete stopper.
             </French>
-      <Polish>Opatrunek materiałowy, używany do przykrywania ran, zakładany na ranę po zatamowaniu krwawienia.
+            <Polish>Opatrunek materiałowy, używany do przykrywania ran, zakładany na ranę po zatamowaniu krwawienia.
             </Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_PACKING_BANDAGE_DISPLAY">
-      <English>Packing Bandage</English>
-      <Russian>Тампонирующая повязка</Russian>
-      <Spanish>Vendaje Compresivo</Spanish>
-      <French>Bandage Mèche</French>
-      <Polish>Bandaż (uciskowy)</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_PACKING_BANDAGE_DESC_SHORT">
-      <English>Used to pack medium to large wounds and stem the bleeding</English>
-      <Russian>Для тампонирования ран среднего и большого размера и остановки кровотечения.</Russian>
-      <Spanish>Se utiliza para vendar heridas medianas y grandes y detener el sangrado</Spanish>
-      <French>Utiliser pour remplire la cavité créé dans une blessure moyenne et grande.</French>
-      <Polish>Używany w celu opatrywania średnich i dużych ran oraz tamowania krwawienia.</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_PACKING_BANDAGE_DESC_USE">
-      <English>A bandage used to pack the wound to stem bleeding and facilitate wound healing. Packing a wound is
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_PACKING_BANDAGE_DISPLAY">
+            <English>Packing Bandage</English>
+            <Russian>Тампонирующая повязка</Russian>
+            <Spanish>Vendaje Compresivo</Spanish>
+            <French>Bandage Mèche</French>
+            <Polish>Bandaż (uciskowy)</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_PACKING_BANDAGE_DESC_SHORT">
+            <English>Used to pack medium to large wounds and stem the bleeding</English>
+            <Russian>Для тампонирования ран среднего и большого размера и остановки кровотечения.</Russian>
+            <Spanish>Se utiliza para vendar heridas medianas y grandes y detener el sangrado</Spanish>
+            <French>Utiliser pour remplire la cavité créé dans une blessure moyenne et grande.</French>
+            <Polish>Używany w celu opatrywania średnich i dużych ran oraz tamowania krwawienia.</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_PACKING_BANDAGE_DESC_USE">
+            <English>A bandage used to pack the wound to stem bleeding and facilitate wound healing. Packing a wound is
                 an option in large polytrauma injuries.
             </English>
-      <Russian>Повязка для тампонирования раны, остановки кровотечения и лучшего заживления. При тяжелых
+            <Russian>Повязка для тампонирования раны, остановки кровотечения и лучшего заживления. При тяжелых
                 сочетанных ранениях возможно тампонирование раны.
             </Russian>
-      <Spanish>Se utiliza para detener la hemorragia de una herida y favorecer su cicatrización. Se usa en grandes
+            <Spanish>Se utiliza para detener la hemorragia de una herida y favorecer su cicatrización. Se usa en grandes
                 lesiones o politraumatismos.
             </Spanish>
-      <French>Un bandage servent a etre inseré dans les blessure pour éponger le seignement et faciliter la
+            <French>Un bandage servent a etre inseré dans les blessure pour éponger le seignement et faciliter la
                 guerrison. Ce bandage est une option pour soigner les lession de politrauma.
             </French>
-      <Polish>Opatrunek stosowany w celu zatrzymania krwawienia i osłony większych ran.</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY">
-      <English>Bandage (Elastic)</English>
-      <Russian>Повязка (давящая)</Russian>
-      <Spanish>Vendaje (Elástico)</Spanish>
-      <French>Bandage (Élastique)</French>
-      <Polish>Bandaż (elastyczny)</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DESC_SHORT">
-      <English>Bandage kit, Elastic</English>
-      <Russian>Давящая повязка</Russian>
-      <Spanish>Vendaje (Elástico)</Spanish>
-      <French>Bandage Compressif Élastique</French>
-      <Polish>Zestaw bandaży elastycznych.</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DESC_USE">
-      <English></English>
-      <Russian></Russian>
-      <French>Ce bandage peut etre utiliser pour compresser la plaie afin de ralentire le seignement et assurer la
+            <Polish>Opatrunek stosowany w celu zatrzymania krwawienia i osłony większych ran.</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY">
+            <English>Bandage (Elastic)</English>
+            <Russian>Повязка (давящая)</Russian>
+            <Spanish>Vendaje (Elástico)</Spanish>
+            <French>Bandage (Élastique)</French>
+            <Polish>Bandaż (elastyczny)</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DESC_SHORT">
+            <English>Bandage kit, Elastic</English>
+            <Russian>Давящая повязка</Russian>
+            <Spanish>Vendaje (Elástico)</Spanish>
+            <French>Bandage Compressif Élastique</French>
+            <Polish>Zestaw bandaży elastycznych.</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DESC_USE">
+            <English></English>
+            <Russian></Russian>
+            <French>Ce bandage peut etre utiliser pour compresser la plaie afin de ralentire le seignement et assurer la
                 tenue du bandage lors de mouvment.
             </French>
-      <Polish>Elastyczna opaska podtrzymująca opatrunek oraz usztywniająca okolice stawów.</Polish>
-      <Spanish>Brinda una compresión uniforme y ofrece soporte extra a una zona lesionada</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_TOURNIQUET_DISPLAY">
-      <English>Tourniquet (CAT)</English>
-      <Russian>Жгут</Russian>
-      <Spanish>Torniquete (CAT)</Spanish>
-      <French>Garot (CAT)</French>
-      <Polish>Staza (typ. CAT)</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_TOURNIQUET_DESC_SHORT">
-      <English>Slows down blood loss when bleeding</English>
-      <Russian>Уменьшает кровопотерю при кровотечении.</Russian>
-      <Spanish>Reduce la velocidad de pérdida de sangre</Spanish>
-      <French>Ralentit le seignement</French>
-      <Polish>Zmniejsza ubytek krwi z kończyn w przypadku krwawienia.</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_TOURNIQUET_DESC_USE">
-      <English>A constricting device used to compress venous and arterial circulation in effect inhibiting or
+            <Polish>Elastyczna opaska podtrzymująca opatrunek oraz usztywniająca okolice stawów.</Polish>
+            <Spanish>Brinda una compresión uniforme y ofrece soporte extra a una zona lesionada</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_TOURNIQUET_DISPLAY">
+            <English>Tourniquet (CAT)</English>
+            <Russian>Жгут</Russian>
+            <Spanish>Torniquete (CAT)</Spanish>
+            <French>Garot (CAT)</French>
+            <Polish>Staza (typ. CAT)</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_TOURNIQUET_DESC_SHORT">
+            <English>Slows down blood loss when bleeding</English>
+            <Russian>Уменьшает кровопотерю при кровотечении.</Russian>
+            <Spanish>Reduce la velocidad de pérdida de sangre</Spanish>
+            <French>Ralentit le seignement</French>
+            <Polish>Zmniejsza ubytek krwi z kończyn w przypadku krwawienia.</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_TOURNIQUET_DESC_USE">
+            <English>A constricting device used to compress venous and arterial circulation in effect inhibiting or
                 slowing blood flow and therefore decreasing loss of blood.
             </English>
-      <Russian>Жгут используется для прижатия сосудов, приводящего к остановке или значительному уменьшению
+            <Russian>Жгут используется для прижатия сосудов, приводящего к остановке или значительному уменьшению
                 кровотечения и сокращению кровопотери.
             </Russian>
-      <Spanish>Dispositivo utilizado para eliminar el pulso distal y de ese modo controlar la pérdida de sangre
+            <Spanish>Dispositivo utilizado para eliminar el pulso distal y de ese modo controlar la pérdida de sangre
             </Spanish>
-      <French>Un appareil servent a compresser les artères et veines afin de reduire la perte de sang.</French>
-      <Polish>Opaska zaciskowa CAT służy do tamowanie krwotoków w sytuacji zranienia kończyn z masywnym
+            <French>Un appareil servent a compresser les artères et veines afin de reduire la perte de sang.</French>
+            <Polish>Opaska zaciskowa CAT służy do tamowanie krwotoków w sytuacji zranienia kończyn z masywnym
                 krwawieniem tętniczym lub żylnym.
             </Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_MORPHINE_DISPLAY">
-      <English>Morphine autoinjector</English>
-      <Russian>Морфин в пневмошприце</Russian>
-      <Spanish>Morfina auto-inyectable</Spanish>
-      <French>Auto-injecteur de Morphine</French>
-      <Polish>Autostrzykawka z morfiną</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_MORPHINE_DESC_SHORT">
-      <English>Used to combat moderate to severe pain experiences</English>
-      <Russian>Для снятия средних и сильных болевых ощущений.</Russian>
-      <Spanish>Usado para combatir los estados dolorosos moderados a severos</Spanish>
-      <French>Utiliser pour contrer les douleurs modéré à severes.</French>
-      <Polish>Morfina. Ma silne działanie przeciwbólowe.</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_MORPHINE_DESC_USE">
-      <English>An analgesic used to combat moderate to severe pain experiences.</English>
-      <Russian>Анальгетик для снятия средних и сильных болевых ощущений.</Russian>
-      <Spanish>Analgésico usado para combatir los estados dolorosos de moderado a severo.</Spanish>
-      <French>Un Analgésique puissant servant a contrer les douleur modéré a severe.</French>
-      <Polish>Organiczny związek chemiczny z grupy alkaloidów. Ma silne działanie przeciwbólowe.</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ATROPINE_DISPLAY">
-      <English>Atropin autoinjector</English>
-      <Russian>Атропин в пневмошприце</Russian>
-      <Spanish>Atropina auto-inyectable</Spanish>
-      <French>Auto-injecteur d'Atropine</French>
-      <Polish>Autostrzykawka AtroPen</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ATROPINE_DESC_SHORT">
-      <English>Used in NBC scenarios</English>
-      <Russian>Применяется для защиты от ОМП</Russian>
-      <Spanish>Usado en escenarios NBQ</Spanish>
-      <French>Utiliser en cas d'attaque CBRN</French>
-      <Polish>Atropina. Stosowana jako lek rozkurczowy i środek rozszerzający źrenice.</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ATROPINE_DESC_USE">
-      <English>A drug used by the Military in NBC scenarios.</English>
-      <Russian>Препарат, используемый в войсках для защиты от оружия массового поражения.</Russian>
-      <Spanish>Medicamento usado por Militares en escenarios NBQ</Spanish>
-      <French>Médicament utilisé par l'armée en cas d'attaque CBRN</French>
-      <Polish>Atropina. Stosowana jako lek rozkurczowy i środek rozszerzający źrenice. Środek stosowany w
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_MORPHINE_DISPLAY">
+            <English>Morphine autoinjector</English>
+            <Russian>Морфин в автоматическом шприце</Russian>
+            <Spanish>Morfina auto-inyectable</Spanish>
+            <French>Auto-injecteur de Morphine</French>
+            <Polish>Autostrzykawka z morfiną</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_MORPHINE_DESC_SHORT">
+            <English>Used to combat moderate to severe pain experiences</English>
+            <Russian>Для снятия средних и сильных болевых ощущений.</Russian>
+            <Spanish>Usado para combatir los estados dolorosos moderados a severos</Spanish>
+            <French>Utiliser pour contrer les douleurs modéré à severes.</French>
+            <Polish>Morfina. Ma silne działanie przeciwbólowe.</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_MORPHINE_DESC_USE">
+            <English>An analgesic used to combat moderate to severe pain experiences.</English>
+            <Russian>Анальгетик для снятия средних и сильных болевых ощущений.</Russian>
+            <Spanish>Analgésico usado para combatir los estados dolorosos de moderado a severo.</Spanish>
+            <French>Un Analgésique puissant servant a contrer les douleur modéré a severe.</French>
+            <Polish>Organiczny związek chemiczny z grupy alkaloidów. Ma silne działanie przeciwbólowe.</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ATROPINE_DISPLAY">
+            <English>Atropin autoinjector</English>
+            <Russian>Атропин в автоматическом шприце</Russian>
+            <Spanish>Atropina auto-inyectable</Spanish>
+            <French>Auto-injecteur d'Atropine</French>
+            <Polish>Autostrzykawka AtroPen</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ATROPINE_DESC_SHORT">
+            <English>Used in NBC scenarios</English>
+            <Russian>Применяется для защиты от ОМП</Russian>
+            <Spanish>Usado en escenarios NBQ</Spanish>
+            <French>Utiliser en cas d'attaque CBRN</French>
+            <Polish>Atropina. Stosowana jako lek rozkurczowy i środek rozszerzający źrenice.</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ATROPINE_DESC_USE">
+            <English>A drug used by the Military in NBC scenarios.</English>
+            <Russian>Препарат, используемый в войсках для защиты от оружия массового поражения.</Russian>
+            <Spanish>Medicamento usado por Militares en escenarios NBQ</Spanish>
+            <French>Médicament utilisé par l'armée en cas d'attaque CBRN</French>
+            <Polish>Atropina. Stosowana jako lek rozkurczowy i środek rozszerzający źrenice. Środek stosowany w
                 przypadku zagrożeń NBC.
             </Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_EPINEPHRINE_DISPLAY">
-      <English>Epinephrine autoinjector</English>
-      <Russian>Адреналин в пневмошприце</Russian>
-      <Spanish>Epinefrina auto-inyectable</Spanish>
-      <French>Auto-injecteur d'épinéphrine</French>
-      <Polish>Autostrzykawka EpiPen</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_EPINEPHRINE_DESC_SHORT">
-      <English>Increase heart rate and counter effects given by allergic reactions</English>
-      <Russian>Стимулирует работу сердца и купирует аллергические реакции.</Russian>
-      <Spanish>Aumenta la frecuencia cardiaca y contraresta los efectos de las reacciones alérgicas</Spanish>
-      <French>Augmente la Fréquance cadiaque et contré les effet d'une reaction Anaphylactique</French>
-      <Polish>Adrenalina. Zwiększa puls i przeciwdziała efektom wywołanym przez reakcje alergiczne</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_EPINEPHRINE_DESC_USE">
-      <English>A drug that works on a sympathetic response to dilate the bronchi, increase heart rate and counter
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_EPINEPHRINE_DISPLAY">
+            <English>Epinephrine autoinjector</English>
+            <Russian>Адреналин в автоматическом шприце</Russian>
+            <Spanish>Epinefrina auto-inyectable</Spanish>
+            <French>Auto-injecteur d'épinéphrine</French>
+            <Polish>Autostrzykawka EpiPen</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_EPINEPHRINE_DESC_SHORT">
+            <English>Increase heart rate and counter effects given by allergic reactions</English>
+            <Russian>Стимулирует работу сердца и купирует аллергические реакции.</Russian>
+            <Spanish>Aumenta la frecuencia cardiaca y contraresta los efectos de las reacciones alérgicas</Spanish>
+            <French>Augmente la Fréquance cadiaque et contré les effet d'une reaction Anaphylactique</French>
+            <Polish>Adrenalina. Zwiększa puls i przeciwdziała efektom wywołanym przez reakcje alergiczne</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_EPINEPHRINE_DESC_USE">
+            <English>A drug that works on a sympathetic response to dilate the bronchi, increase heart rate and counter
                 such effects given by allergic reactions (anaphylaxis). Used in sudden cardiac arrest scenarios with
                 decreasing positive outcomes.
             </English>
-      <Russian>Препарат, вызывающий симпатическую реакцию, приводящую к расширению бронхов, увеличению частоты
+            <Russian>Препарат, вызывающий симпатическую реакцию, приводящую к расширению бронхов, увеличению частоты
                 сердечных сокращений и купированию аллергических реакций (анафилактического шока). Применяется при
                 остановке сердца с уменьшением вероятности благоприятного исхода.
             </Russian>
-      <Spanish>Medicamento que dilata los bronquios, aumenta la frecuencia cardiaca y contrarresta los efectos de
+            <Spanish>Medicamento que dilata los bronquios, aumenta la frecuencia cardiaca y contrarresta los efectos de
                 las reacciones alérgicas (anafilaxis). Se utiliza en caso de paros cardiacos repentinos.
             </Spanish>
-      <French>Un medicament qui fonctione sur le systeme sympatique créan une dilatation des bronches, augmente la
+            <French>Un medicament qui fonctione sur le systeme sympatique créan une dilatation des bronches, augmente la
                 fréquance cardiaque et contre les effet d'une reaction alergique (anaphylaxie). Utiliser lors d'arret
                 cardio-respiratoire pour augmenté les chances retrouver un ryhtme.
             </French>
-      <Polish>EpiPen z adrenaliną ma działanie sympatykomimetyczne, tj. pobudza receptory alfa- i
+            <Polish>EpiPen z adrenaliną ma działanie sympatykomimetyczne, tj. pobudza receptory alfa- i
                 beta-adrenergiczne. Pobudzenie układu współczulnego prowadzi do zwiększenia częstotliwości pracy serca,
                 zwiększenia pojemności wyrzutowej serca i przyśpieszenia krążenia wieńcowego. Pobudzenie oskrzelowych
                 receptorów beta-adrenergicznych wywołuje rozkurcz mięśni gładkich oskrzeli, co w efekcie zmniejsza
                 towarzyszące oddychaniu świsty i duszności.
             </Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_PLASMA_IV">
-      <English>Plasma IV (1000ml)</English>
-      <Russian>Плазма для в/в вливания (1000 мл)</Russian>
-      <Spanish>Plasma Intravenoso (1000ml)</Spanish>
-      <French>Plasma Sanguin IV (1000ml)</French>
-      <Polish>Osocze IV (1000ml)</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_PLASMA_IV_DESC_SHORT">
-      <English>A volume-expanding blood supplement.</English>
-      <Russian>Дополнительный препарат, применяемый при возмещении объема крови.</Russian>
-      <Spanish>Suplemento para expandir el volumen sanguíneo.</Spanish>
-      <French>Supplement visant a remplacer les volume sanguin</French>
-      <Polish>Składnik krwi, używany do zwiększenia jej objętości.</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_PLASMA_IV_DESC_USE">
-      <English>A volume-expanding blood supplement.</English>
-      <Russian>Дополнительный препарат, применяемый при возмещении объема крови.</Russian>
-      <Spanish>Suplemento para expandir el volumen sanguíneo.</Spanish>
-      <French>Supplement visant a remplacer le volume sanguin et remplace les plaquettes.</French>
-      <Polish>Składnik krwi, używany do zwiększenia jej objętości.</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_PLASMA_IV_500">
-      <English>Plasma IV (500ml)</English>
-      <Russian>Плазма для в/в вливания (500 мл)</Russian>
-      <Spanish>Plasma Intravenoso (500ml)</Spanish>
-      <French>Plasma Sanguin IV (500ml)</French>
-      <Polish>Osocze IV (500ml)</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_PLASMA_IV_250">
-      <English>Plasma IV (250ml)</English>
-      <Russian>Плазма для в/в вливания (250 мл)</Russian>
-      <Spanish>Plasma Intravenoso (250ml)</Spanish>
-      <French>Plasma Sanguin (250ml)</French>
-      <Polish>Osocze IV (250ml)</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BLOOD_IV">
-      <English>Blood IV (1000ml)</English>
-      <Russian>Кровь для переливания (1000 мл)</Russian>
-      <Spanish>Sangre Intravenosa (1000ml)</Spanish>
-      <French>Cullot Sanguin IV (1000ml)</French>
-      <Polish>Krew IV (1000ml)</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BLOOD_IV_DESC_SHORT">
-      <English>Blood IV, for restoring a patients blood (keep cold)</English>
-      <Russian>Пакет крови для возмещения объема потерянной крови (хранить в холодильнике)</Russian>
-      <Spanish>Sangre Intravenosa, para restarurar el volumen sanguíneo (mantener frío)</Spanish>
-      <French>Cullot Sanguin IV, pour remplacer le volume sanguin (garder Réfrigeré)</French>
-      <Polish>Krew IV, używana do uzupełnienia krwi u pacjenta, trzymać w warunkach chłodniczych</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BLOOD_IV_DESC_USE">
-      <English>O Negative infusion blood used in strict and rare events to replenish blood supply usually
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_PLASMA_IV">
+            <English>Plasma IV (1000ml)</English>
+            <Russian>Плазма для в/в вливания (1000 мл)</Russian>
+            <Spanish>Plasma Intravenoso (1000ml)</Spanish>
+            <French>Plasma Sanguin IV (1000ml)</French>
+            <Polish>Osocze IV (1000ml)</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_PLASMA_IV_DESC_SHORT">
+            <English>A volume-expanding blood supplement.</English>
+            <Russian>Дополнительный препарат, применяемый при возмещении объема крови.</Russian>
+            <Spanish>Suplemento para expandir el volumen sanguíneo.</Spanish>
+            <French>Supplement visant a remplacer les volume sanguin</French>
+            <Polish>Składnik krwi, używany do zwiększenia jej objętości.</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_PLASMA_IV_DESC_USE">
+            <English>A volume-expanding blood supplement.</English>
+            <Russian>Дополнительный препарат, применяемый при возмещении объема крови.</Russian>
+            <Spanish>Suplemento para expandir el volumen sanguíneo.</Spanish>
+            <French>Supplement visant a remplacer le volume sanguin et remplace les plaquettes.</French>
+            <Polish>Składnik krwi, używany do zwiększenia jej objętości.</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_PLASMA_IV_500">
+            <English>Plasma IV (500ml)</English>
+            <Russian>Плазма для в/в вливания (500 мл)</Russian>
+            <Spanish>Plasma Intravenoso (500ml)</Spanish>
+            <French>Plasma Sanguin IV (500ml)</French>
+            <Polish>Osocze IV (500ml)</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_PLASMA_IV_250">
+            <English>Plasma IV (250ml)</English>
+            <Russian>Плазма для в/в вливания (250 мл)</Russian>
+            <Spanish>Plasma Intravenoso (250ml)</Spanish>
+            <French>Plasma Sanguin (250ml)</French>
+            <Polish>Osocze IV (250ml)</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_BLOOD_IV">
+            <English>Blood IV (1000ml)</English>
+            <Russian>Кровь для переливания (1000 мл)</Russian>
+            <Spanish>Sangre Intravenosa (1000ml)</Spanish>
+            <French>Cullot Sanguin IV (1000ml)</French>
+            <Polish>Krew IV (1000ml)</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_BLOOD_IV_DESC_SHORT">
+            <English>Blood IV, for restoring a patients blood (keep cold)</English>
+            <Russian>Пакет крови для возмещения объема потерянной крови (хранить в холодильнике)</Russian>
+            <Spanish>Sangre Intravenosa, para restarurar el volumen sanguíneo (mantener frío)</Spanish>
+            <French>Cullot Sanguin IV, pour remplacer le volume sanguin (garder Réfrigeré)</French>
+            <Polish>Krew IV, używana do uzupełnienia krwi u pacjenta, trzymać w warunkach chłodniczych</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_BLOOD_IV_DESC_USE">
+            <English>O Negative infusion blood used in strict and rare events to replenish blood supply usually
                 conducted in the transport phase of medical care.
             </English>
-      <Russian>Кровь I группы, резус-отрицательная, применяется по жизненным показаниям для возмещения объема
+            <Russian>Кровь I группы, резус-отрицательная, применяется по жизненным показаниям для возмещения объема
                 потерянной крови на догоспитальном этапе оказания медицинской помощи.
             </Russian>
-      <French>Cullot Sanguin O- ,utiliser seulement lors de perte sanguine majeur afin de remplacer le volume
+            <French>Cullot Sanguin O- ,utiliser seulement lors de perte sanguine majeur afin de remplacer le volume
                 sanguin perdu. Habituelment utiliser lors du transport ou dans un etablisement de soin.
             </French>
-      <Polish>Krew 0 Rh-, używana w rzadkich i szczególnych przypadkach do uzupełnienia krwi u pacjenta, zazwyczaj
+            <Polish>Krew 0 Rh-, używana w rzadkich i szczególnych przypadkach do uzupełnienia krwi u pacjenta, zazwyczaj
                 w trakcie fazie transportu rannej osoby do szpitala.
             </Polish>
-      <Spanish>Utilice sólo durante gran pérdida de sangre para reemplazar el volumen de sangre perdido. Uso
+            <Spanish>Utilice sólo durante gran pérdida de sangre para reemplazar el volumen de sangre perdido. Uso
                 habitual durante el transporte de heridos.
             </Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BLOOD_IV_500">
-      <English>Blood IV (500ml)</English>
-      <Russian>Кровь для переливания (500 мл)</Russian>
-      <Spanish>Sangre Intravenosa (500ml)</Spanish>
-      <French>Cullot Sanguin IV (500ml)</French>
-      <Polish>Krew IV (500ml)</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BLOOD_IV_250">
-      <English>Blood IV (250ml)</English>
-      <Russian>Кровь для переливания (250 мл)</Russian>
-      <Spanish>Sangre Intravenosa (250ml)</Spanish>
-      <French>Cullot Sanguin IV (250ml)</French>
-      <Polish>Krew IV (250ml)</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_SALINE_IV">
-      <English>Saline IV (1000ml)</English>
-      <Russian>Физраствор для в/в вливания (1000 мл)</Russian>
-      <Spanish>Solución Salina Intravenosa (1000ml)</Spanish>
-      <French>solution Saline 0.9% IV (1000ml)</French>
-      <Polish>Solanka 0,9% IV (1000ml)</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_SALINE_IV_DESC_SHORT">
-      <English>Saline IV, for restoring a patients blood</English>
-      <Russian>Пакет физраствора для возмещения объема потерянной крови</Russian>
-      <Spanish>Solución Salina Intravenosa, para restaurar el volumen sanguíneo</Spanish>
-      <French>Solution Saline 0.9% IV, pour retablir temporairement la tention arteriel</French>
-      <Polish>Solanka 0,9%, podawana dożylnie (IV), używana w celu uzupełnienia krwi u pacjenta</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_SALINE_IV_DESC_USE">
-      <English>A medical volume-replenishing agent introduced into the blood system through an IV infusion.
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_BLOOD_IV_500">
+            <English>Blood IV (500ml)</English>
+            <Russian>Кровь для переливания (500 мл)</Russian>
+            <Spanish>Sangre Intravenosa (500ml)</Spanish>
+            <French>Cullot Sanguin IV (500ml)</French>
+            <Polish>Krew IV (500ml)</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_BLOOD_IV_250">
+            <English>Blood IV (250ml)</English>
+            <Russian>Кровь для переливания (250 мл)</Russian>
+            <Spanish>Sangre Intravenosa (250ml)</Spanish>
+            <French>Cullot Sanguin IV (250ml)</French>
+            <Polish>Krew IV (250ml)</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_SALINE_IV">
+            <English>Saline IV (1000ml)</English>
+            <Russian>Физраствор для в/в вливания (1000 мл)</Russian>
+            <Spanish>Solución Salina Intravenosa (1000ml)</Spanish>
+            <French>solution Saline 0.9% IV (1000ml)</French>
+            <Polish>Solanka 0,9% IV (1000ml)</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_SALINE_IV_DESC_SHORT">
+            <English>Saline IV, for restoring a patients blood</English>
+            <Russian>Пакет физраствора для возмещения объема потерянной крови</Russian>
+            <Spanish>Solución Salina Intravenosa, para restaurar el volumen sanguíneo</Spanish>
+            <French>Solution Saline 0.9% IV, pour retablir temporairement la tention arteriel</French>
+            <Polish>Solanka 0,9%, podawana dożylnie (IV), używana w celu uzupełnienia krwi u pacjenta</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_SALINE_IV_DESC_USE">
+            <English>A medical volume-replenishing agent introduced into the blood system through an IV infusion.
             </English>
-      <Russian>Пакет физиологического раствора для возмещения объема потерянной крови путем внутривенного
+            <Russian>Пакет физиологического раствора для возмещения объема потерянной крови путем внутривенного
                 вливания.
             </Russian>
-      <Spanish>Suero fisiológico inoculado al torrente sanguíneo de forma intravenosa.</Spanish>
-      <French>Un remplacment temporaire pour rétablir la tention artériel lors de perte sanguine, étant ajouter
+            <Spanish>Suero fisiológico inoculado al torrente sanguíneo de forma intravenosa.</Spanish>
+            <French>Un remplacment temporaire pour rétablir la tention artériel lors de perte sanguine, étant ajouter
                 par intraveineuse
             </French>
-      <Polish>Używany w medycynie w formie płynu infuzyjnego jako środek nawadniający i uzupełniający niedobór
+            <Polish>Używany w medycynie w formie płynu infuzyjnego jako środek nawadniający i uzupełniający niedobór
                 elektrolitów, podawany dożylnie (IV).
             </Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_SALINE_IV_500">
-      <English>Saline IV (500ml)</English>
-      <Russian>Физраствор для в/в вливания (500 мл)</Russian>
-      <Spanish>Solución Salina Intravenosa (500ml)</Spanish>
-      <French>Solution Saline 0.9% IV (500ml)</French>
-      <Polish>Solanka 0,9% IV (500ml)</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_SALINE_IV_250">
-      <English>Saline IV (250ml)</English>
-      <Russian>Физраствор для в/в вливания (250 мл)</Russian>
-      <Spanish>Solución Salina Intravenosa (250ml)</Spanish>
-      <French>Solution Saline 0.9% IV (250ml)</French>
-      <Polish>Solanka 0,9% IV (250ml)</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_QUIKCLOT_DISPLAY">
-      <English>Basic Field Dressing (QuikClot)</English>
-      <Russian>Первичный перевязочный пакет (QuikClot)</Russian>
-      <Spanish>Vendaje Básico (Coagulante)</Spanish>
-      <French>Bandage Regulier (Coagulant)</French>
-      <Polish>Opatrunek QuikClot</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_QUIKCLOT_DESC_SHORT">
-      <English>QuikClot bandage</English>
-      <Russian>Гемостатический пакет QuikClot</Russian>
-      <Spanish>Venda Coagulante</Spanish>
-      <French>Bandage coagulant</French>
-      <Polish>Podstawowy opatrunek stosowany na rany</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_QUIKCLOT_DESC_USE">
-      <English></English>
-      <Russian></Russian>
-      <French>Un bandage servant a coaguler les seignements mineur à moyen.</French>
-      <Polish>Proszkowy opatrunek adsorbcyjny przeznaczony do tamowania zagrażających życiu krwawień średniej i
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_SALINE_IV_500">
+            <English>Saline IV (500ml)</English>
+            <Russian>Физраствор для в/в вливания (500 мл)</Russian>
+            <Spanish>Solución Salina Intravenosa (500ml)</Spanish>
+            <French>Solution Saline 0.9% IV (500ml)</French>
+            <Polish>Solanka 0,9% IV (500ml)</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_SALINE_IV_250">
+            <English>Saline IV (250ml)</English>
+            <Russian>Физраствор для в/в вливания (250 мл)</Russian>
+            <Spanish>Solución Salina Intravenosa (250ml)</Spanish>
+            <French>Solution Saline 0.9% IV (250ml)</French>
+            <Polish>Solanka 0,9% IV (250ml)</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_QUIKCLOT_DISPLAY">
+            <English>Basic Field Dressing (QuikClot)</English>
+            <Russian>Первичный перевязочный пакет (QuikClot)</Russian>
+            <Spanish>Vendaje Básico (Coagulante)</Spanish>
+            <French>Bandage Regulier (Coagulant)</French>
+            <Polish>Opatrunek QuikClot</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_QUIKCLOT_DESC_SHORT">
+            <English>QuikClot bandage</English>
+            <Russian>Гемостатический пакет QuikClot</Russian>
+            <Spanish>Venda Coagulante</Spanish>
+            <French>Bandage coagulant</French>
+            <Polish>Podstawowy opatrunek stosowany na rany</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_QUIKCLOT_DESC_USE">
+            <English></English>
+            <Russian></Russian>
+            <French>Un bandage servant a coaguler les seignements mineur à moyen.</French>
+            <Polish>Proszkowy opatrunek adsorbcyjny przeznaczony do tamowania zagrażających życiu krwawień średniej i
                 dużej intensywności.
             </Polish>
-      <Spanish>Vendaje Hemostático con coagulante que detiene el sangrado.</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_AID_KIT_DISPLAY">
-      <English>Personal Aid Kit</English>
-      <Russian>Аптечка</Russian>
-      <Spanish>Kit de Soporte Vital Avanzado</Spanish>
-      <French>Équipement de support Vitale</French>
-      <Polish>Apteczka osobista</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_AID_KIT_DESC_SHORT">
-      <English>Includes various treatment kit needed for stitching or advanced treatment</English>
-      <Russian>Содержит различные материалы и инструменты для зашивания ран и оказания специальной медпомощи.
+            <Spanish>Vendaje Hemostático con coagulante que detiene el sangrado.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_AID_KIT_DISPLAY">
+            <English>Personal Aid Kit</English>
+            <Russian>Аптечка</Russian>
+            <Spanish>Kit de Soporte Vital Avanzado</Spanish>
+            <French>Équipement de support Vitale</French>
+            <Polish>Apteczka osobista</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_AID_KIT_DESC_SHORT">
+            <English>Includes various treatment kit needed for stitching or advanced treatment</English>
+            <Russian>Содержит различные материалы и инструменты для зашивания ран и оказания специальной медпомощи.
             </Russian>
-      <Spanish>Incluye material médico para tratamientos avanzados</Spanish>
-      <French>Inclue du matériel medical pour les traitement avancé, tel les point de suture.</French>
-      <Polish>Zestaw środków medycznych do opatrywania ran i dodatkowego leczenia po-urazowego</Polish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_AID_KIT_DESC_USE">
-      <English></English>
-      <Russian></Russian>
-      <French></French>
-      <Spanish></Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_SURGICALKIT_DISPLAY">
-      <English>Surgical Kit</English>
-      <Russian>Хирургический набор</Russian>
-      <Spanish>Kit Quirúrgico</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_SURGICALKIT_DESC_SHORT">
-      <English>Surgical Kit for in field advanced medical treatment</English>
-      <Russian>Набор для хирургической помощи в полевых условиях</Russian>
-      <Spanish>Kit Quirúrgico para el tratamiento avanzado en el campo de batalla</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_SURGICALKIT_DESC_USE">
-      <English>Surgical Kit for in field advanced medical treatment</English>
-      <Russian>Набор для хирургической помощи в полевых условиях</Russian>
-      <Spanish>Kit Quirúrgico para el tratamiento avanzado en el campo de batalla</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BODYBAG_DISPLAY">
-      <English>Bodybag</English>
-      <Russian>Мешок для трупов</Russian>
-      <Spanish>Bolsa para cadáveres</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BODYBAG_DESC_SHORT">
-      <English>A bodybag for dead bodies</English>
-      <Russian>Мешок для упаковки трупов</Russian>
-      <Spanish>Bolsa para cadáveres</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BODYBAG_DESC_USE">
-      <English>A bodybag for dead bodies</English>
-      <Russian>Мешок для упаковки трупов</Russian>
-      <Spanish>Bolsa para cadáveres</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE">
-      <English>Blood Pressure</English>
-      <Russian>Артериальное давление</Russian>
-      <Spanish>Presión Arterial</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CONTENT">
-      <English>Checking Blood Pressure..</English>
-      <Russian>Проверка артериального давления...</Russian>
-      <Spanish>Comprobando Presión Arterial...</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CHECKED_MEDIC">
-      <English>You checked %1</English>
-      <Russian>Вы осмотрели раненого %1</Russian>
-      <Spanish>Examinando a %1</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_1">
-      <English>You find a blood pressure of %2/%3</English>
-      <Russian>Артериальное давление %2/%3</Russian>
-      <Spanish>La Presión Arterial es %2/%3</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_2">
-      <English>You find a low blood pressure</English>
-      <Russian>Давление низкое</Russian>
-      <Spanish>La Presión Arterial es baja</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_3">
-      <English>You find a normal blood pressure</English>
-      <Russian>Давление нормальное</Russian>
-      <Spanish>La Presión Arterial es normal</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_4">
-      <English>You find a high blood pressure</English>
-      <Russian>Давление высокое</Russian>
-      <Spanish>La Presión Arterial es alta</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_5">
-      <English>You find no blood pressure</English>
-      <Russian>Давления нет</Russian>
-      <Spanish>No hay Presión Arterial</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_6">
-      <English>You fail to find a blood pressure</English>
-      <Russian>Артериальное давление не определяется</Russian>
-      <Spanish>No puedes encontrar Presión Arterial</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_PULSE">
-      <English>Pulse</English>
-      <Russian>Пульс</Russian>
-      <Spanish>Pulso</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_CONTENT">
-      <English>Checking Heart Rate..</English>
-      <Russian>Проверка пульса...</Russian>
-      <Spanish>Comprobando Pulso...</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_CHECKED_MEDIC">
-      <English>You checked %1</English>
-      <Russian>Вы осмотрели раненого %1</Russian>
-      <Spanish>Examinando a %1</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_1">
-      <English>You find a Heart Rate of %2</English>
-      <Russian>Пульс %2 уд./мин.</Russian>
-      <Spanish>El Pulso es %2</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_2">
-      <English>You find a weak Heart Rate</English>
-      <Russian>Пульс слабый</Russian>
-      <Spanish>El Pulso es débil</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_3">
-      <English>You find a strong Heart Rate</English>
-      <Russian>Пульс учащенный</Russian>
-      <Spanish>El Pulso está acelerado</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_4">
-      <English>You find a normal Heart Rate</English>
-      <Russian>Пульс в норме</Russian>
-      <Spanish>El Pulso es bueno</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_5">
-      <English>You find no Heart Rate</English>
-      <Russian>Пульс не прощупывается</Russian>
-      <Spanish>No tiene Pulso</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_RESPONSE">
-      <English>Response</English>
-      <Russian>Реакция</Russian>
-      <Spanish>Reacciona</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_RESPONSE_CONTENT">
-      <English>You check response of patient</English>
-      <Russian>Вы проверяете реакцию раненого</Russian>
-      <Spanish>Compruebas si el paciente reacciona</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_RESPONSIVE">
-      <English>%1 is responsive</English>
-      <Russian>%1 реагирует на раздражители</Russian>
-      <Spanish>%1 ha reaccionado</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_UNRESPONSIVE">
-      <English>%1 is not responsive</English>
-      <Russian>%1 не реагирует</Russian>
-      <Spanish>%1 no reacciona</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_YOU_CHECKED">
-      <English>You checked %1</English>
-      <Russian>Вы осмотрели раненого %1</Russian>
-      <Spanish>Examinas a %1</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_BANDAGED">
-      <English>Bandaged</English>
-      <Russian>Повязка наложена</Russian>
-      <Spanish>Vendado</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_APPLY_BANDAGE">
-      <English>You bandage %1 (%2)</English>
-      <Russian>Вы перевязали раненого %1 (%2)</Russian>
-      <Spanish>Aplicas vendaje a %1 en %2</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_IS_BANDAGING_YOU">
-      <English>%1 is bandaging you</English>
-      <Russian>%1 перевязывает вас</Russian>
-      <Spanish>%1 te está vendando</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_START_STITCHING_INJURIES">
-      <English>You start stitching injures from %1 (%2)</English>
-      <Russian>Вы зашиваете ранения от %1 (%2)</Russian>
-      <Spanish>Estás suturando heridas de %1 en %2</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_STITCHING">
-      <English>Stitching</English>
-      <Russian>Наложение швов</Russian>
-      <Spanish>Suturando</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_YOU_TREAT_AIRWAY">
-      <English>You treat the airway of %1</English>
-      <Russian>Вы интубируете раненого %1</Russian>
-      <Spanish>Estás intubando a %1</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_AIRWAY">
-      <English>Airway</English>
-      <Russian>Дыхательные пути</Russian>
-      <Spanish>Vías Aéreas</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_IS_TREATING_YOUR_AIRWAY">
-      <English>%1 is treating your airway</English>
-      <Russian>%1 проводит вам интубацию</Russian>
-      <Spanish>%1 te está intubando</Spanish>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_DRAG">
-      <English>Drag</English>
-      <German>Ziehen</German>
-      <Spanish>Arrastrar</Spanish>
-      <Polish>Ciągnij</Polish>
-      <Czech>Táhnout</Czech>
-      <Russian>Тащить</Russian>
-      <French>Tracter</French>
-      <Hungarian>Húzás</Hungarian>
-      <Portuguese>Arrastar</Portuguese>
-      <Italian>Trascina</Italian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_CARRY">
-      <English>Carry</English>
-      <German>Tragen</German>
-      <Spanish>Cargar</Spanish>
-      <Polish>Nieś</Polish>
-      <Czech>Nést</Czech>
-      <Russian>Нести</Russian>
-      <French>Porter</French>
-      <Hungarian>Cipelés</Hungarian>
-      <Portuguese>Carregar</Portuguese>
-      <Italian>Trasporta</Italian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_RELEASE">
-      <English>Release</English>
-      <German>Loslassen</German>
-      <Spanish>Soltar</Spanish>
-      <Polish>Połóż</Polish>
-      <Czech>Položit</Czech>
-      <Russian>Отпустить</Russian>
-      <French>Déposer</French>
-      <Hungarian>Elenged</Hungarian>
-      <Portuguese>Largar</Portuguese>
-      <Italian>Lascia</Italian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_LOAD">
-      <English>Load Patient Into</English>
-      <German>Patient Einladen</German>
-      <Spanish>Cargar el paciente en</Spanish>
-      <Polish>Załaduj pacjenta</Polish>
-      <Czech>Naložit pacianta do</Czech>
-      <Russian>Погрузить пациента в</Russian>
-      <French>Embarquer le Patient</French>
-      <Hungarian>Sebesült berakása</Hungarian>
-      <Portuguese>Carregar Paciente Em</Portuguese>
-      <Italian>Carica paziente nel</Italian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_UNLOAD">
-      <English>Unload Patient</English>
-      <German>Patient Ausladen</German>
-      <Spanish>Descargar el paciente</Spanish>
-      <Polish>Wyładuj pacjenta</Polish>
-      <Czech>Vyložit pacienta</Czech>
-      <Russian>Выгрузить пациента</Russian>
-      <French>Débarquer le Patient</French>
-      <Hungarian>Sebesült kihúzása</Hungarian>
-      <Portuguese>Descarregar Paciente</Portuguese>
-      <Italian>Scarica il paziente</Italian>
-    </Key>
-    <Key ID="STR_ACE_Medical_UnloadPatient">
-      <English>Unload patient</English>
-      <Russian>Выгрузить пациента</Russian>
-    </Key>
-    <Key ID="STR_ACE_Medical_LoadPatient">
-      <English>Load patient</English>
-      <Russian>Погрузить пациента</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_PlaceInBodyBag">
-      <English>Place body in bodybag</English>
-      <Russian>Поместить тело в мешок</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_PlacingInBodyBag">
-      <English>Placing body in bodybag</English>
-      <Russian>Помещение тела в мешок ...</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIVITY_bandagedPatient">
-      <English>%1 has bandaged patient</English>
-      <Russian>%1 перевязал пациента</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIVITY_usedItem">
-      <English>%1 used %2</English>
-      <Russian>%1 применил %2</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIVITY_gaveIV">
-      <English>%1 has given an IV</English>
-      <Russian>%1 провел переливание</Russian>
-    </Key>
-    <Key ID="STR_ACE_MEDICAL_ACTIVITY_appliedTourniquet">
-      <English>%1 applied a tourniquet</English>
-      <Russian>%1 наложил жгут</Russian>
-    </Key>
-  </Package>
+            <Spanish>Incluye material médico para tratamientos avanzados</Spanish>
+            <French>Inclue du matériel medical pour les traitement avancé, tel les point de suture.</French>
+            <Polish>Zestaw środków medycznych do opatrywania ran i dodatkowego leczenia po-urazowego</Polish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_AID_KIT_DESC_USE">
+            <English></English>
+            <Russian></Russian>
+            <French></French>
+            <Spanish></Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_SURGICALKIT_DISPLAY">
+            <English>Surgical Kit</English>
+            <Russian>Хирургический набор</Russian>
+            <Spanish>Kit Quirúrgico</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_SURGICALKIT_DESC_SHORT">
+            <English>Surgical Kit for in field advanced medical treatment</English>
+            <Russian>Набор для хирургической помощи в полевых условиях</Russian>
+            <Spanish>Kit Quirúrgico para el tratamiento avanzado en el campo de batalla</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_SURGICALKIT_DESC_USE">
+            <English>Surgical Kit for in field advanced medical treatment</English>
+            <Russian>Набор для хирургической помощи в полевых условиях</Russian>
+            <Spanish>Kit Quirúrgico para el tratamiento avanzado en el campo de batalla</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_BODYBAG_DISPLAY">
+            <English>Bodybag</English>
+            <Russian>Мешок для трупов</Russian>
+            <Spanish>Bolsa para cadáveres</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_BODYBAG_DESC_SHORT">
+            <English>A bodybag for dead bodies</English>
+            <Russian>Мешок для упаковки трупов</Russian>
+            <Spanish>Bolsa para cadáveres</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_BODYBAG_DESC_USE">
+            <English>A bodybag for dead bodies</English>
+            <Russian>Мешок для упаковки трупов</Russian>
+            <Spanish>Bolsa para cadáveres</Spanish>
+        </Key>
+
+        <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE">
+            <English>Blood Pressure</English>
+            <Russian>Артериальное давление</Russian>
+            <Spanish>Presión Arterial</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CONTENT">
+            <English>Checking Blood Pressure..</English>
+            <Russian>Проверка артериального давления...</Russian>
+            <Spanish>Comprobando Presión Arterial...</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CHECKED_MEDIC">
+            <English>You checked %1</English>
+            <Russian>Вы осмотрели раненого %1</Russian>
+            <Spanish>Examinando a %1</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_1">
+            <English>You find a blood pressure of %2/%3</English>
+            <Russian>Артериальное давление %2/%3</Russian>
+            <Spanish>La Presión Arterial es %2/%3</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_2">
+            <English>You find a low blood pressure</English>
+            <Russian>Давление низкое</Russian>
+            <Spanish>La Presión Arterial es baja</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_3">
+            <English>You find a normal blood pressure</English>
+            <Russian>Давление нормальное</Russian>
+            <Spanish>La Presión Arterial es normal</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_4">
+            <English>You find a high blood pressure</English>
+            <Russian>Давление высокое</Russian>
+            <Spanish>La Presión Arterial es alta</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_5">
+            <English>You find no blood pressure</English>
+            <Russian>Давления нет</Russian>
+            <Spanish>No hay Presión Arterial</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_6">
+            <English>You fail to find a blood pressure</English>
+            <Russian>Артериальное давление не определяется</Russian>
+            <Spanish>No puedes encontrar Presión Arterial</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_PULSE">
+            <English>Pulse</English>
+            <Russian>Пульс</Russian>
+            <Spanish>Pulso</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_CONTENT">
+            <English>Checking Heart Rate..</English>
+            <Russian>Проверка пульса...</Russian>
+            <Spanish>Comprobando Pulso...</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_CHECKED_MEDIC">
+            <English>You checked %1</English>
+            <Russian>Вы осмотрели раненого %1</Russian>
+            <Spanish>Examinando a %1</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_1">
+            <English>You find a Heart Rate of %2</English>
+            <Russian>Пульс %2 уд./мин.</Russian>
+            <Spanish>El Pulso es %2</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_2">
+            <English>You find a weak Heart Rate</English>
+            <Russian>Пульс слабый</Russian>
+            <Spanish>El Pulso es débil</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_3">
+            <English>You find a strong Heart Rate</English>
+            <Russian>Пульс учащенный</Russian>
+            <Spanish>El Pulso está acelerado</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_4">
+            <English>You find a normal Heart Rate</English>
+            <Russian>Пульс в норме</Russian>
+            <Spanish>El Pulso es bueno</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_5">
+            <English>You find no Heart Rate</English>
+            <Russian>Пульс не прощупывается</Russian>
+            <Spanish>No tiene Pulso</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_RESPONSE">
+            <English>Response</English>
+            <Russian>Реакция</Russian>
+            <Spanish>Reacciona</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_RESPONSE_CONTENT">
+            <English>You check response of patient</English>
+            <Russian>Вы проверяете реакцию раненого</Russian>
+            <Spanish>Compruebas si el paciente reacciona</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_RESPONSIVE">
+            <English>%1 is responsive</English>
+            <Russian>%1 реагирует на раздражители</Russian>
+            <Spanish>%1 ha reaccionado</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_UNRESPONSIVE">
+            <English>%1 is not responsive</English>
+            <Russian>%1 не реагирует</Russian>
+            <Spanish>%1 no reacciona</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_YOU_CHECKED">
+            <English>You checked %1</English>
+            <Russian>Вы осмотрели раненого %1</Russian>
+            <Spanish>Examinas a %1</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_BANDAGED">
+            <English>Bandaged</English>
+            <Russian>Повязка наложена</Russian>
+            <Spanish>Vendado</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_APPLY_BANDAGE">
+            <English>You bandage %1 (%2)</English>
+            <Russian>Вы перевязали раненого %1 (%2)</Russian>
+            <Spanish>Aplicas vendaje a %1 en %2</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_IS_BANDAGING_YOU">
+            <English>%1 is bandaging you</English>
+            <Russian>%1 перевязывает вас</Russian>
+            <Spanish>%1 te está vendando</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_START_STITCHING_INJURIES">
+            <English>You start stitching injures from %1 (%2)</English>
+            <Russian>Вы зашиваете ранения от %1 (%2)</Russian>
+            <Spanish>Estás suturando heridas de %1 en %2</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_STITCHING">
+            <English>Stitching</English>
+            <Russian>Наложение швов</Russian>
+            <Spanish>Suturando</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_YOU_TREAT_AIRWAY">
+            <English>You treat the airway of %1</English>
+            <Russian>Вы интубируете раненого %1</Russian>
+            <Spanish>Estás intubando a %1</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_AIRWAY">
+            <English>Airway</English>
+            <Russian>Дыхательные пути</Russian>
+            <Spanish>Vías Aéreas</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_IS_TREATING_YOUR_AIRWAY">
+            <English>%1 is treating your airway</English>
+            <Russian>%1 проводит вам интубацию</Russian>
+            <Spanish>%1 te está intubando</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_DRAG">
+            <English>Drag</English>
+            <German>Ziehen</German>
+            <Spanish>Arrastrar</Spanish>
+            <Polish>Ciągnij</Polish>
+            <Czech>Táhnout</Czech>
+            <Russian>Тащить</Russian>
+            <French>Tracter</French>
+            <Hungarian>Húzás</Hungarian>
+            <Portuguese>Arrastar</Portuguese>
+            <Italian>Trascina</Italian>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CARRY">
+            <English>Carry</English>
+            <German>Tragen</German>
+            <Spanish>Cargar</Spanish>
+            <Polish>Nieś</Polish>
+            <Czech>Nést</Czech>
+            <Russian>Нести</Russian>
+            <French>Porter</French>
+            <Hungarian>Cipelés</Hungarian>
+            <Portuguese>Carregar</Portuguese>
+            <Italian>Trasporta</Italian>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_RELEASE">
+            <English>Release</English>
+            <German>Loslassen</German>
+            <Spanish>Soltar</Spanish>
+            <Polish>Połóż</Polish>
+            <Czech>Položit</Czech>
+            <Russian>Отпустить</Russian>
+            <French>Déposer</French>
+            <Hungarian>Elenged</Hungarian>
+            <Portuguese>Largar</Portuguese>
+            <Italian>Lascia</Italian>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_LOAD">
+            <English>Load Patient Into</English>
+            <German>Patient Einladen</German>
+            <Spanish>Cargar el paciente en</Spanish>
+            <Polish>Załaduj pacjenta</Polish>
+            <Czech>Naložit pacianta do</Czech>
+            <Russian>Погрузить пациента в</Russian>
+            <French>Embarquer le Patient</French>
+            <Hungarian>Sebesült berakása</Hungarian>
+            <Portuguese>Carregar Paciente Em</Portuguese>
+            <Italian>Carica paziente nel</Italian>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_UNLOAD">
+            <English>Unload Patient</English>
+            <German>Patient Ausladen</German>
+            <Spanish>Descargar el paciente</Spanish>
+            <Polish>Wyładuj pacjenta</Polish>
+            <Czech>Vyložit pacienta</Czech>
+            <Russian>Выгрузить пациента</Russian>
+            <French>Débarquer le Patient</French>
+            <Hungarian>Sebesült kihúzása</Hungarian>
+            <Portuguese>Descarregar Paciente</Portuguese>
+            <Italian>Scarica il paziente</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_UnloadPatient">
+            <English>Unload patient</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_LoadPatient">
+            <English>Load patient</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_PlaceInBodyBag">
+            <English>Place body in bodybag</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_PlacingInBodyBag">
+            <English>Placing body in bodybag</English>
+        </Key>
+
+        <Key ID="STR_ACE_MEDICAL_ACTIVITY_bandagedPatient">
+            <English>%1 has bandaged patient</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIVITY_usedItem">
+            <English>%1 used %2</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIVITY_gaveIV">
+            <English>%1 has given an IV</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIVITY_appliedTourniquet">
+            <English>%1 applied a tourniquet</English>
+        </Key>
+
+    </Package>
 </Project>
