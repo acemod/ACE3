@@ -142,6 +142,12 @@ class CfgAmmo {
     class ACE_B_338_NM_Ball_Tracer_Dim: B_338_NM_Ball {
         nvgOnly = 1;
     };
+    
+    //AP
+    class ACE_B_338_NM_Ball_AP: B_338_NM_Ball {
+        caliber = 3.2;
+        hit = 16.8;
+    };
 
 
     /* 9.3x64mm */

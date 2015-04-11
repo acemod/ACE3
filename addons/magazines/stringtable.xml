@@ -560,7 +560,19 @@
             <English>Caliber: .338 Norma Magnum Tracer IR-DIM&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
             <German>Kaliber: .338 Norma Magnum Leuchtspur IR-DIM&lt;br /&gt;Schuss: 130&lt;br /&gt;Verwendet für: SPMG</German>
         </Key>
-        <!-- 9.3x64mm -->
+        <Key ID="STR_ACE_130Rnd_338_Mag_APName">
+            <English>.338 NM 130Rnd AP Belt</English>
+            <German>.338 NM 130-Schuss-Gurt Hartkern</German>
+        </Key>
+        <Key ID="STR_ACE_130Rnd_338_Mag_APNameShort">
+            <English>.338 NM AP</English>
+            <German>.338 NM AP</German>
+        </Key>
+        <Key ID="STR_ACE_130Rnd_338_Mag_APDescription">
+            <English>Caliber: .338 Norma Magnum AP&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
+            <German>Kaliber: .338 Norma Magnum Hartkern&lt;br /&gt;Schuss: 130&lt;br /&gt;Verwendet für: SPMG</German>
+        </Key>
+        <!-- 9.3x64mm 10Rnd -->
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_TracerName">
             <English>9.3mm 10Rnd Tracer Mag</English>
             <German>9,3mm 10-Schuss-Magazin Leuchtspur</German>
@@ -608,6 +620,43 @@
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_SDDescription">
             <English>Caliber: 9.3x64mm SD&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
             <German>Kaliber: 9,3x64mm Unterschall&lt;br /&gt;Schuss: 10&lt;br /&gt;Verwendet für: Cyrus</German>
+        </Key>
+        <!-- 9.3x64mm 150Rnd Belt-->
+        <Key ID="STR_ACE_150Rnd_93x64_Mag_TracerName">
+            <English>9.3mm 150Rnd Tracer Belt</English>
+            <German>9,3mm 150-Schuss-Gurt Leuchtspur</German>
+        </Key>
+        <Key ID="STR_ACE_150Rnd_93x64_Mag_TracerNameShort">
+            <English>9.3mm Tracer</English>
+            <German>9,3mm Leuchtspur</German>
+        </Key>
+        <Key ID="STR_ACE_150Rnd_93x64_Mag_TracerDescription">
+            <English>Caliber: 9.3x64mm Tracer&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
+            <German>Kaliber: 9,3x64mm Leuchtspur&lt;br /&gt;Schuss: 150&lt;br /&gt;Verwendet für: Navid</German>
+        </Key>
+        <Key ID="STR_ACE_150Rnd_93x64_Mag_Tracer_DimName">
+            <English>9.3mm 150Rnd Tracer IR-DIM Belt</English>
+            <German>9,3mm 150-Schuss-Gurt Leuchtspur IR-DIM</German>
+        </Key>
+        <Key ID="STR_ACE_150Rnd_93x64_Mag_Tracer_DimNameShort">
+            <English>9.3mm IR-DIM</English>
+            <German>9,3mm IR-DIM</German>
+        </Key>
+        <Key ID="STR_ACE_150Rnd_93x64_Mag_Tracer_DimDescription">
+            <English>Caliber: 9.3x64mm Tracer IR-DIM&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
+            <German>Kaliber: 9,3x64mm Leuchtspur IR-DIM&lt;br /&gt;Schuss: 150&lt;br /&gt;Verwendet für: Navid</German>
+        </Key>
+        <Key ID="STR_ACE_150Rnd_93x64_Mag_APName">
+            <English>9.3mm 150Rnd AP Belt</English>
+            <German>9,3mm 150-Schuss-Gurt Hartkern</German>
+        </Key>
+        <Key ID="STR_ACE_150Rnd_93x64_Mag_APNameShort">
+            <English>9.3mm AP</English>
+            <German>9,3mm AP</German>
+        </Key>
+        <Key ID="STR_ACE_150Rnd_93x64_Mag_APDescription">
+            <English>Caliber: 9.3x64mm AP&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
+            <German>Kaliber: 9,3x64mm Hartkern&lt;br /&gt;Schuss: 150&lt;br /&gt;Verwendet für: Navid</German>
         </Key>
     </Package>
 </Project>

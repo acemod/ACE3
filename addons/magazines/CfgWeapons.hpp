@@ -113,10 +113,11 @@ class CfgWeapons {
         };
     };
 
-    class  MMG_02_base_F: Rifle_Long_Base_F {
+    class MMG_02_base_F: Rifle_Long_Base_F {
         magazines[] += {
             "ACE_130Rnd_338_Mag_Tracer",
-            "ACE_130Rnd_338_Mag_Tracer_Dim"
+            "ACE_130Rnd_338_Mag_Tracer_Dim",
+            "ACE_130Rnd_338_Mag_AP"
         };
     };
 
@@ -126,6 +127,14 @@ class CfgWeapons {
             "ACE_10Rnd_93x64_DMR_05_Mag_Tracer_Dim",
             "ACE_10Rnd_93x64_DMR_05_Mag_AP",
             "ACE_10Rnd_93x64_DMR_05_Mag_SD"
+        };
+    };
+    
+    class MMG_01_base_F: Rifle_Long_Base_F {
+        magazines[] += {
+            "ACE_150Rnd_93x64_Mag_Tracer",
+            "ACE_150Rnd_93x64_Mag_Tracer_Dim",
+            "ACE_150Rnd_93x64_Mag_AP"
         };
     };
 
