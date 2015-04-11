@@ -61,6 +61,7 @@ if (isNull _newTarget) then {
     
     __JavelinIGUISeek ctrlSetTextColor __ColorGray;
     __JavelinIGUINFOV ctrlSetTextColor __ColorGreen;
+    __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUITargetingConstrains ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
@@ -87,6 +88,7 @@ if (isNull _newTarget) then {
                 
                 __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
                 __JavelinIGUINFOV ctrlSetTextColor __ColorNull;
+                __JavelinIGUITargeting ctrlShow true;
                 __JavelinIGUITargetingConstrains ctrlShow true;
                 __JavelinIGUITargetingGate ctrlShow true;
                 __JavelinIGUITargetingLines ctrlShow true;

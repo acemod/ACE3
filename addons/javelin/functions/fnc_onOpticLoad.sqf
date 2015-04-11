@@ -2,6 +2,7 @@
 #include "script_component.hpp"
 TRACE_1("enter", _this);
 
+
 if((count _this) > 0) then {
     uiNameSpace setVariable ['ACE_RscOptics_javelin',_this select 0];
 };
@@ -11,6 +12,7 @@ ACE_player setVariable ["ace_missileguidance_target",nil, false];
 __JavelinIGUISeek ctrlSetTextColor __ColorGray;
 __JavelinIGUINFOV ctrlSetTextColor __ColorGray;
 
+__JavelinIGUITargeting ctrlShow false;
 __JavelinIGUITargetingConstrains ctrlShow false;
 __JavelinIGUITargetingGate ctrlShow false;
 __JavelinIGUITargetingLines ctrlShow false;
