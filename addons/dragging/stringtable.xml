@@ -32,7 +32,7 @@
             <Polish>Przedmiot jest zbyt ciężki</Polish>
             <French>Objet trop lourd</French>
             <Portuguese>Objeto muito pesado</Portuguese>
-            <Italian>Non è possibile trascinare l'oggetto a causa del suo peso</Italian>
+            <Italian>L'oggetto pesa troppo</Italian>
             <Russian>Предмет слишком тяжёлый</Russian>
             <Czech>Moc težké</Czech>
             <Hungarian>Az objektum túl nehéz</Hungarian>
@@ -45,7 +45,7 @@
             <French>Porter</French>
             <Czech>Nést</Czech>
             <Portuguese>Carregar</Portuguese>
-            <Italian>Trascina</Italian>
+            <Italian>Porta</Italian>
             <Hungarian>Felvevés</Hungarian>
             <Russian>Нести</Russian>
         </Key>

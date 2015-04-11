@@ -10,7 +10,7 @@
             <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
             <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
             <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
-            <Italian>Mostra sempre il cursore per le auto interazioni</Italian>
+            <Italian>Mostra sempre il cursore per le interazioni su se stessi</Italian>
             <Portuguese>Sempre mostrar cursor para interação pessoal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorInteraction">
@@ -58,7 +58,7 @@
             <Polish>Klawisz własnej interakcji</Polish>
             <French>Touche d'interaction personnelle</French>
             <Hungarian>Saját cselekvő gomb</Hungarian>
-            <Italian>Tasto per auto interazioni</Italian>
+	    <Italian>Tasto interazione su se stessi</Italian>
             <Portuguese>Tecla de Interação Pessoal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
@@ -70,7 +70,7 @@
             <Polish>Własne akcje</Polish>
             <French>Interaction personnelle</French>
             <Hungarian>Saját cselekvések</Hungarian>
-            <Italian>Auto interazioni</Italian>
+	    <Italian>Interazioni su se stessi</Italian>
             <Portuguese>Ações Pessoais</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">

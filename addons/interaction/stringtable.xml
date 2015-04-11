@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Interaction_MainAction">
@@ -443,7 +443,7 @@
             <Czech>Někdo tě poklepal na PRAVÉ rameno</Czech>
             <Russian>Вас похлопали по ПРАВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro</Portuguese>
-            <Italian>Ti è stato dato un colpetto sulla spalla</Italian>
+            <Italian>Ti è stato dato un colpetto sulla spalla destra</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_YouWereTappedLeft">
             <English>You were tapped on the LEFT shoulder.</English>
@@ -455,7 +455,7 @@
             <Czech>Někdo tě poklepal na LEVÉ rameno</Czech>
             <Russian>Вас похлопали по ЛЕВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro.</Portuguese>
-            <Italian>Ti è stato dato un colpetto sulla spalla</Italian>
+            <Italian>Ti è stato dato un colpetto sulla spalla sinistra</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_CancelSelection">
             <English>Cancel</English>
@@ -575,6 +575,7 @@
             <Czech>Přiřadit k červeným</Czech>
             <Russian>Назначить в Красную группу</Russian>
             <French>Assigner à rouge</French>
+	    <Italian>Assegna al team rosso</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamGreen">
             <English>Assign Green</English>
@@ -586,6 +587,7 @@
             <Czech>Přiřadit k zeleným</Czech>
             <Russian>Назначить в Зеленую группу</Russian>
             <French>Assigner à vert</French>
+	    <Italian>Assegna al team verde</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamBlue">
             <English>Assign Blue</English>
@@ -597,6 +599,7 @@
             <Czech>Přiřadit k modrým</Czech>
             <Russian>Назначить в Синюю группу</Russian>
             <French>Assigner à bleu</French>
+	    <Italian>Assegna al team blu</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamYellow">
             <English>Assign Yellow</English>
@@ -608,6 +611,7 @@
             <Czech>Přiřadit ke žlutým</Czech>
             <Russian>Назначить в Желтую группу</Russian>
             <French>Assigner à jaune</French>
+	    <Italian>Assegna al team giallo</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamRed">
             <English>Join Red</English>
@@ -619,6 +623,7 @@
             <Czech>Připojit k červeným</Czech>
             <Russian>Присоединиться к Красной группе</Russian>
             <French>Rejoindre rouge</French>
+	    <Italian>Unirsi al team rosso</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamGreen">
             <English>Join Green</English>
@@ -630,6 +635,7 @@
             <Czech> Připojit k zeleným</Czech>
             <Russian>Присоединиться к Зеленой группе</Russian>
             <French>Rejoindre vert</French>
+	    <Italian>Unirsi al team verde</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamBlue">
             <English>Join Blue</English>
@@ -641,6 +647,7 @@
             <Czech>Připojit k modrým</Czech>
             <Russian>Присоединиться к Синей группе</Russian>
             <French>Rejoindre bleu</French>
+	    <Italian>Unirsi al team blu</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamYellow">
             <English>Join Yellow</English>
@@ -652,6 +659,7 @@
             <Czech>Připojit ke žlutým</Czech>
             <Russian>Присоединиться к Жёлтой группе</Russian>
             <French>Rejoindre jaune</French>
+	    <Italian>Unirsi al team giallo</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
@@ -735,7 +743,7 @@
             <Hungarian>Hatótávolságon kívül</Hungarian>
             <Polish>Poza zasięgiem</Polish>
             <Czech>Mimo dosah</Czech>
-            <Italian>Non in raggio</Italian>
+            <Italian>Fuori limite</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Equipment">
             <English>Equipment</English>
@@ -758,8 +766,8 @@
             <Czech>Odstrčit</Czech>
             <Hungarian>Tolás</Hungarian>
             <Russian>Толкать</Russian>
-            <Italian>Spingi</Italian>
             <Portuguese>Empurrar</Portuguese>
+            <Italian>Spingere</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
@@ -770,7 +778,7 @@
             <Polish>Interakcja</Polish>
             <Spanish>Interactuar</Spanish>
             <Hungarian>Cselekvés</Hungarian>
-            <Italian>Interagisci</Italian>
+            <Italian>Interagire</Italian>
             <Portuguese>Interagir</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
