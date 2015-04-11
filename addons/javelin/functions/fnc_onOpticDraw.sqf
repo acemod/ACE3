@@ -1,9 +1,9 @@
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 //TRACE_1("enter", _this);
 
 #define __TRACKINTERVAL 0.1    // how frequent the check should be.
-#define __LOCKONTIME 1.85    // Lock on won't occur sooner
+#define __LOCKONTIME 3.0    // Lock on won't occur sooner
 #define __LOCKONTIMERANDOM 0.3    // Deviation in lock on time
 #define __SENSORSQUARE 1    // Locking on sensor square side in angles
 
@@ -83,7 +83,7 @@ if (isNull _newTarget) then {
             
             playSound "ACE_Javelin_Locking";
         } else {
-            if(diag_tickTime - _lockTime > 3) then {
+            if(diag_tickTime - _lockTime > __LOCKONTIME) then {
                 TRACE_2("LOCKED!", _currentTarget, _lockTime);
                 
                 __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
@@ -142,7 +142,6 @@ if (isNull _newTarget) then {
                 __JavelinIGUITargetingGateBR ctrlSetPosition [_maxX,_maxY];
                 
                 {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
-                
                 
                 ACE_player setVariable["ace_missileguidance_target", _currentTarget, false];
                 
