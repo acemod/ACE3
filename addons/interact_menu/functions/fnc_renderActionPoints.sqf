@@ -23,7 +23,7 @@ _fnc_renderNearbyActions = {
     #define MAXINTERACTOBJECTS 3
 
     _numInteractObjects = 0;
-    _nearestObjects = nearestObjects [(getPos ACE_player), ["All"], 15];
+    _nearestObjects = nearestObjects [ACE_player, ["All"], 15];
     {
         _target = _x;
 
