@@ -28,10 +28,10 @@ class RscInGameUI {
         
         class ACE_TargetingConstrains: RscControlsGroup {
             idc = 699100;
-            x = "SafezoneX-SafezoneW";
-            y = "SafezoneY-SafezoneH";
-            w = "SafezoneW";
-            h = "SafezoneH";
+            x = "SafezoneX";
+            y = "SafezoneY";
+            w = "SafezoneW-SafezoneX";
+            h = "SafezoneH-SafezoneY";
             enabled = 0;
             class VScrollbar {
                 autoScrollSpeed = -1;
