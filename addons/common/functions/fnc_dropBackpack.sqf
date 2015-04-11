@@ -1,13 +1,13 @@
 /*
  * Author: commy2
  *
- * Drops a backback. Also returns the object of the dropped backpack.
+ * Drops a backback. Also returns the ground wepaon holder object of the dropped backpack.
  *
  * Argument:
  * 0: Unit that has a backpack (Object)
  *
  * Return value:
- * Backpack object (Object)
+ * Ground wepaon holder with backpack (Object)
  *
  */
 #include "script_component.hpp"
