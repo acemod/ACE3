@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 //TRACE_1("enter", _this);
 
-#define __TRACKINTERVAL 0.1    // how frequent the check should be.
+#define __TRACKINTERVAL 0    // how frequent the check should be.
 #define __LOCKONTIME 3.0    // Lock on won't occur sooner
 #define __LOCKONTIMERANDOM 0.3    // Deviation in lock on time
 #define __SENSORSQUARE 1    // Locking on sensor square side in angles
@@ -54,6 +54,18 @@ if (isNull _newTarget) then {
     _newTarget = cursorTarget;
 };
 
+// Create constants
+_constraintTop = __ConstraintTop;
+_constraintLeft = __ConstraintLeft;
+_constraintBottom = __ConstraintBottom;
+_constraintRight = __ConstraintRight;
+
+_offsetX = __OffsetX;
+_offsetY = __OffsetY;
+
+__JavelinIGUITargeting ctrlShow true;
+__JavelinIGUITargetingConstrains ctrlShow true;
+
 if (isNull _newTarget) then {
     // No targets found
     _currentTarget = objNull;
@@ -61,8 +73,6 @@ if (isNull _newTarget) then {
     
     __JavelinIGUISeek ctrlSetTextColor __ColorGray;
     __JavelinIGUINFOV ctrlSetTextColor __ColorGreen;
-    __JavelinIGUITargeting ctrlShow false;
-    __JavelinIGUITargetingConstrains ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
     
@@ -92,15 +102,7 @@ if (isNull _newTarget) then {
                 __JavelinIGUITargetingConstrains ctrlShow true;
                 __JavelinIGUITargetingGate ctrlShow true;
                 __JavelinIGUITargetingLines ctrlShow true;
-                
-                _constraintTop = __ConstraintTop;
-                _constraintLeft = __ConstraintLeft;
-                _constraintBottom = __ConstraintBottom;
-                _constraintRight = __ConstraintRight;
-                
-                _offsetX = __OffsetX;
-                _offsetY = __OffsetY;
-                
+              
                 _zamerny = if (_currentTarget isKindOf "CAManBase") then {_currentTarget selectionPosition "body"} else {_currentTarget selectionPosition "zamerny"};
 				_randomPosWithinBounds = [(_zamerny select 0) + 1 - (random 2.0),(_zamerny select 1) + 1 - (random 2.0),(_zamerny select 2) + 0.5 - (random 1.0)];
 
@@ -150,6 +152,32 @@ if (isNull _newTarget) then {
                     _soundTime = diag_tickTime + 0.25;
                 };
             } else {
+                __JavelinIGUITargeting ctrlShow true;
+                __JavelinIGUITargetingGate ctrlShow true;
+                __JavelinIGUITargetingLines ctrlShow false;
+
+                ACE_player setVariable["ace_missileguidance_target", nil, false];
+                
+                _boundsInput = if (_currentTarget isKindOf "CAManBase") then {
+                    [_newTarget,[-1,-1,-2],_currentTarget selectionPosition "body"];
+                } else {
+                    [_newTarget,[-1,-1,-1],_currentTarget selectionPosition "zamerny"];
+                };
+                
+                _bpos = _boundsInput call EFUNC(common,worldToScreenBounds);
+                
+                _minX = ((_bpos select 0) + _offsetX) max _constraintLeft;
+                _minY = ((_bpos select 1) + _offsetY) max _constraintTop;
+                _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025*(3/4)*SafezoneH);
+                _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025*SafezoneH);
+                
+                __JavelinIGUITargetingGateTL ctrlSetPosition [_minX,_minY];
+                __JavelinIGUITargetingGateTR ctrlSetPosition [_maxX,_minY];
+                __JavelinIGUITargetingGateBL ctrlSetPosition [_minX,_maxY];
+                __JavelinIGUITargetingGateBR ctrlSetPosition [_maxX,_maxY];
+                
+                {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
+
                 if(diag_tickTime > _soundTime) then {
                     playSound "ACE_Javelin_Locking";
                     _soundTime = diag_tickTime + 0.25;

@@ -10,7 +10,7 @@ class RscLine;
 // Taken from AGM for optics management.
 
 class RscInGameUI {
-    class RscOptics_titan {
+    class ACE_RscOptics_javelin {
         idd = 300;
         controls[] = { "ACE_javelin_elements_group", "CA_Distance", "ACE_Targeting" }; //, "ACE_TargetingConstrains", "ACE_TargetingGate", "ACE_TargetingLines"};
         onLoad = QUOTE(_this call FUNC(onOpticLoad));
@@ -94,6 +94,7 @@ class RscInGameUI {
                             x = "((SafezoneW -SafezoneH*3/4)/2)+ (0.307/4)*3*SafezoneH - SafezoneX";
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
+                        /*
                         class StadiaL: RscLine {
                             x = "0.4899*SafezoneW - SafezoneX";
                             y = "0.171*SafezoneH - SafezoneY";
@@ -136,6 +137,7 @@ class RscInGameUI {
                             h = 0;
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
+                        */
                     };
                 };
                 class ACE_javelin_NFOV_mode_off: ACE_javelin_Day_mode_off {
@@ -167,6 +169,7 @@ class RscInGameUI {
                             y = "0.031*SafezoneH - SafezoneY";
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
+                        /*
                         class StadiaL: RscLine {
                             x = "0.4788*SafezoneW - SafezoneX";
                             y = "0.171*SafezoneH - SafezoneY";
@@ -209,6 +212,7 @@ class RscInGameUI {
                             h = "0.1895*SafezoneH";
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
+                        */
                     };
                 };
 
