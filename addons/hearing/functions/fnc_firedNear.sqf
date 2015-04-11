@@ -21,23 +21,23 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_silencer", "_audibleFireCoef", "_loudness", "_strength"];
+private ["_silencer", "_audibleFireCoef", "_loudness", "_strength"];
 
-_unit = _this select 0;
-_firer = _this select 1;
-_distance = (_this select 2) max 1;
-_weapon = _this select 3;
-_muzzle = _this select 4;
-_mode = _this select 5;
-_ammo = _this select 6;
+PARAMS_7(_object,_firer,_distance,_weapon,_muzzle,_mode,_ammo);
 
+//Only run if combatDeafness enabled:
+if (!GVAR(enableCombatDeafness)) exitWith {};
+//Only run if firedNear object is player or player's vehicle:
+if ((ACE_player != (_this select 0)) && {(vehicle ACE_player) != (_this select 0)}) exitWith {};
 if (_weapon in ["Throw", "Put"]) exitWith {};
 if (_unit != vehicle _unit && {!([_unit] call EFUNC(common,isTurnedOut))}) exitWith {};
 
+if (_distance < 1) then {_distance = 1;};
+
 _silencer = switch (_weapon) do {
-    case (primaryWeapon _firer) : {(primaryWeaponItems _firer) select 0};
-    case (secondaryWeapon _firer) : {(secondaryWeaponItems _firer) select 0};
-    case (handgunWeapon _firer) : {(handgunItems _firer) select 0};
+case (primaryWeapon _firer) : {(primaryWeaponItems _firer) select 0};
+case (secondaryWeapon _firer) : {(secondaryWeaponItems _firer) select 0};
+case (handgunWeapon _firer) : {(handgunItems _firer) select 0};
     default {""};
 };
 
@@ -56,4 +56,4 @@ _strength = _loudness - (_loudness/50 * _distance); // linear drop off
 
 if (_strength < 0.01) exitWith {};
 
-[{_this call FUNC(earRinging)}, [_unit, _strength], 0.2, 0] call EFUNC(common,waitAndExecute);
+[{_this call FUNC(earRinging)}, [ACE_player, _strength], 0.2, 0] call EFUNC(common,waitAndExecute);
