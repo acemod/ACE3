@@ -136,36 +136,97 @@ class CfgMagazines {
         displayNameShort = "$STR_ACE_20Rnd_762x51_mag_APNameShort";
         descriptionShort = "$STR_ACE_20Rnd_762x51_mag_APDescription";
     };
+
+
+    /* 338 Lapua Magnum */
     class 10Rnd_338_Mag;
-    /* .338 Lapua Magnum */
     class ACE_10Rnd_338_Mag_Tracer: 10Rnd_338_Mag {
-        author="$STR_ACE_Common_ACETeam"
-        displayName = "$STR_ACE_10Rnd_388_Mag_TracerName";
-        displayNameShort = "$STR_ACE_10Rnd_388_Mag_TracerNameShort";
-        descriptionShort = "$STR_ACE_10Rnd_388_Mag_TracerDescription";
+        author = "$STR_ACE_Common_ACETeam";
+        displayName = "$STR_ACE_10Rnd_338_Mag_TracerName";
+        displayNameShort = "$STR_ACE_10Rnd_338_Mag_TracerNameShort";
+        descriptionShort = "$STR_ACE_10Rnd_338_Mag_TracerDescription";
         tracersEvery = 1;
     };
+
     class ACE_10Rnd_338_Mag_Tracer_Dim: ACE_10Rnd_338_Mag_Tracer {
-        author="$STR_ACE_Common_ACETeam"
-        ammo = "ACE_B_338_Ball_Tracer_Dim"
+        author = "$STR_ACE_Common_ACETeam";
+        ammo = "ACE_B_338_Ball_Tracer_Dim";
         displayName = "$STR_ACE_10Rnd_388_Mag_Tracer_DimName";
-        displayNameShort = "$STR_ACE_10Rnd_388_Mag_Tracer_DimNameShort";
-        descriptionShort = "$STR_ACE_10Rnd_388_Mag_Tracer_DimDescription";
+        displayNameShort = "$STR_ACE_10Rnd_338_Mag_Tracer_DimNameShort";
+        descriptionShort = "$STR_ACE_10Rnd_338_Mag_Tracer_DimDescription";
     };
+
+    class ACE_10Rnd_338_Mag_AP: 10Rnd_338_Mag {
+        author = "$STR_ACE_Common_ACETeam";
+        ammo ="ACE_B_338_Ball_AP";
+        displayName = "$STR_ACE_10Rnd_338_Mag_APName";
+        displayNameShort = "$STR_ACE_10Rnd_338_Mag_APNameShort";
+        descriptionShort = "$STR_ACE_10Rnd_338_Mag_APDescription";
+    };
+
+    class ACE_10Rnd_338_Mag_SD: 10Rnd_338_Mag {
+        author = "$STR_ACE_Common_ACETeam";
+        ammo = "ACE_B_338_Ball_SD";
+        displayName = "$STR_ACE_10Rnd_338_Mag_SDName";
+        displayNameShort = "$STR_ACE_10Rnd_338_Mag_SDNameShort";
+        descriptionShort = "$STR_ACE_10Rnd_338_Mag_SDDescription";
+        initSpeed = 320;
+    };
+
+
     /* .333 Norma Magnum */
+
     class 130Rnd_338_Mag;
     class ACE_130Rnd_338_Mag_Tracer: 130Rnd_338_Mag {
-        author="$STR_ACE_Common_ACETeam"
-        displayName = "$STR_ACE_130Rnd_388_Mag_TracerName";
-        displayNameShort = "$STR_ACE_130Rnd_388_Mag_TracerNameShort";
-        descriptionShort = "$STR_ACE_130Rnd_388_Mag_TracerDescription";
+        author = "$STR_ACE_Common_ACETeam";
+        displayName = "$STR_ACE_130Rnd_338_Mag_TracerName";
+        displayNameShort = "$STR_ACE_130Rnd_338_Mag_TracerNameShort";
+        descriptionShort = "$STR_ACE_130Rnd_338_Mag_TracerDescription";
         tracersEvery = 1;
     };
+
     class ACE_130Rnd_338_Mag_Tracer_Dim: ACE_130Rnd_338_Mag_Tracer {
-        author="$STR_ACE_Common_ACETeam"
-        ammo = "ACE_B_338_NM_Ball_Tracer_Dim"
-        displayName = "$STR_ACE_130Rnd_388_Mag_Tracer_DimName";
-        displayNameShort = "$STR_ACE_130Rnd_388_Mag_Tracer_DimNameShort";
-        descriptionShort = "$STR_ACE_130Rnd_388_Mag_Tracer_DimDescription";
-    }
+        author = "$STR_ACE_Common_ACETeam";
+        ammo = "ACE_B_338_NM_Ball_Tracer_Dim";
+        displayName = "$STR_ACE_130Rnd_338_Mag_Tracer_DimName";
+        displayNameShort = "$STR_ACE_130Rnd_338_Mag_Tracer_DimNameShort";
+        descriptionShort = "$STR_ACE_130Rnd_338_Mag_Tracer_DimDescription";
+    };
+
+
+    /* 9.3x64mm */
+
+    class 10Rnd_93x64_DMR_05_Mag;
+    class ACE_10Rnd_93x64_DMR_05_Mag_Tracer:  10Rnd_93x64_DMR_05_Mag {
+        author = "$STR_ACE_Common_ACEETeam";
+        displayName = "$STR_ACE_10Rnd_93x64_DMR_05_Mag_TracerName";
+        displayNameShort = "$STR_ACE_10Rnd_93x64_DMR_05_Mag_TracerNameShort";
+        descriptionShort = "$STR_ACE_10Rnd_93x64_DMR_05_Mag_TracerDescription";
+        tracersEvery = 1;
+    };
+
+    class ACE_10Rnd_93x64_DMR_05_Mag_Tracer_Dim:  ACE_10Rnd_93x64_DMR_05_Mag_Tracer {
+        author = "$STR_ACE_Common_ACEETeam";
+        ammo ="ACE_B_93x64_Ball_Tracer_Dim";
+        displayName = "$STR_ACE_10Rnd_93x64_DMR_05_Mag_Tracer_DimName";
+        displayNameShort = "$STR_ACE_10Rnd_93x64_DMR_05_Mag_Tracer_DimNameShort";
+        descriptionShort = "$STR_ACE_10Rnd_93x64_DMR_05_Mag_Tracer_DimDescription";
+    };
+
+    class ACE_10Rnd_93x64_DMR_05_Mag_AP:  10Rnd_93x64_DMR_05_Mag {
+        author = "$STR_ACE_Common_ACEETeam";
+        ammo = "ACE_B_93x64_Ball_AP";
+        displayName = "$STR_ACE_10Rnd_93x64_DMR_05_Mag_APName";
+        displayNameShort = "$STR_ACE_10Rnd_93x64_DMR_05_Mag_APNameShort";
+        descriptionShort = "$STR_ACE_10Rnd_93x64_DMR_05_Mag_APDescription";
+    };
+
+    class ACE_10Rnd_93x64_DMR_05_Mag_SD:  10Rnd_93x64_DMR_05_Mag {
+        author = "$STR_ACE_Common_ACEETeam";
+        ammo = "ACE_B_93x64_Ball_SD";
+        displayName = "$STR_ACE_10Rnd_93x64_DMR_05_Mag_SDName";
+        displayNameShort = "$STR_ACE_10Rnd_93x64_DMR_05_Mag_SDNameShort";
+        descriptionShort = "$STR_ACE_10Rnd_93x64_DMR_05_Mag_SDDescription";
+        initSpeed = 320;
+    };
 };

@@ -107,18 +107,65 @@ class CfgAmmo {
         //typicalspeed = 792;
         //airfriction = -0.0008577;
     };
-	
-	/* .338 Lapua Magnum */
-    
+
+
+    /* .338 Lapua Magnum */
+
     // IR Dim
     class B_338_Ball;
     class ACE_B_338_Ball_Tracer_Dim: B_338_Ball {
         nvgOnly = 1;
     };
-    
+
+    //AP
+    class ACE_B_338_Ball_AP: B_338_Ball {
+        caliber = 3.6;
+        hit = 18.9;
+    };
+
+    //SD
+    class ACE_B_338_Ball_SD: B_338_Ball {
+        airFriction = -0.00036;
+        hit = 15.75;
+        supersonicCrackFar[] = {};
+        supersonicCrackNear[] = {};
+        typicalSpeed = 320;
+        audibleFire = 1.2;
+        visibleFire = 4.0;
+    };
+
+
     /* .338 Norma Magnum */
+
+    //IR Dim
     class B_338_NM_Ball;
     class ACE_B_338_NM_Ball_Tracer_Dim: B_338_NM_Ball {
         nvgOnly = 1;
+    };
+
+
+    /* 9.3x64mm */
+
+    //IR Dim
+    class B_93x64_Ball;
+    class ACE_B_93x64_Ball_Tracer_Dim: B_93x64_Ball {
+        nvgOnly = 1;
+    };
+
+    //AP
+    class ACE_B_93x64_Ball_AP: B_93x64_Ball {
+        caliber = 4.0;
+        hit = 21;
+    };
+
+    //SD
+    class ACE_B_93x64_Ball_SD: B_93x64_Ball {
+        airFriction = -0.00042;
+        hit = 17.5;
+        supersonicCrackFar[] = {};
+        supersonicCrackNear[] = {};
+        typicalSpeed = 320;
+        audibleFire = 1.2;
+        visibleFire = 4.0;
     };
 };
