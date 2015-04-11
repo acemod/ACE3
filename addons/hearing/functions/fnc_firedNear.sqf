@@ -30,7 +30,8 @@ if (!GVAR(enableCombatDeafness)) exitWith {};
 //Only run if firedNear object is player or player's vehicle:
 if ((ACE_player != (_this select 0)) && {(vehicle ACE_player) != (_this select 0)}) exitWith {};
 if (_weapon in ["Throw", "Put"]) exitWith {};
-if (_unit != vehicle _unit && {!([_unit] call EFUNC(common,isTurnedOut))}) exitWith {};
+
+_attenuation = if ((ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}) then {1} else {GVAR(playerVehAttunation)};
 
 if (_distance < 1) then {_distance = 1;};
 
@@ -52,7 +53,7 @@ _audibleFire = getNumber (configFile >> "CfgAmmo" >> _ammo >> "audibleFire");
 //_audibleFireTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "audibleFireTime");
 
 _loudness = _audibleFireCoef * _audibleFire / 64;
-_strength = _loudness - (_loudness/50 * _distance); // linear drop off
+_strength = _attenuation * (_loudness - (_loudness/50 * _distance)); // linear drop off
 
 if (_strength < 0.01) exitWith {};
 
