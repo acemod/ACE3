@@ -29,13 +29,8 @@ if (_forceRemove) then {
   _bodyRemoveTimer = 2;
 };
 
-[
-  {
+[{
     // hideBody takes ~20s till body is fully underground
     // a better hideBody would make this more aesthetic
     deleteVehicle _this;
-  },
-  _body,
-  _bodyRemoveTimer,
-  1
-] call EFUNC(common,waitAndExecute);
+}, _body, _bodyRemoveTimer, 1] call EFUNC(common,waitAndExecute);

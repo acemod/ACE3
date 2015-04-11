@@ -37,8 +37,7 @@ if (count _position == 0) then {_position = getPosATL _unit};
 
 _position set [2, 0];
 
-[
-  {
+[{
     _rallypoint = _this select 0;
     _unit = _this select 1;
     _position = _this select 2;
@@ -54,8 +53,5 @@ _position set [2, 0];
     */
 
     [localize "STR_ACE_Respawn_Deploy"] call EFUNC(common,displayTextStructured);
-  },
-  [_rallypoint, _unit, _position, _rallypoint],
-  5,
-  1
-] call EFUNC(common,waitAndExecute);
+},
+[_rallypoint, _unit, _position, _rallypoint], 5, 1] call EFUNC(common,waitAndExecute);

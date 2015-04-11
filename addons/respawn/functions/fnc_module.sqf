@@ -32,23 +32,17 @@ GVAR(Module) = true;
 
 if (isServer) then {
     if (GVAR(RemoveDeadBodiesDisconnected)) then {
-      addMissionEventHandler ["HandleDisconnect",
-        {
-          [
-            {
-              _unit = _this select 0;
+        addMissionEventHandler ["HandleDisconnect", {
+            [{
+                _unit = _this select 0;
 
-              if (!alive _unit) then {
-                deleteVehicle _unit;
-              };
+                if (!alive _unit) then {
+                    deleteVehicle _unit;
+                };
             },
-            _this,
-            4,
-            1
-          ] call EFUNC(common,waitAndExecute);
-          false
-        }
-      ];
+            _this, 4, 1] call EFUNC(common,waitAndExecute);
+            false
+        }];
     };
 };
 
