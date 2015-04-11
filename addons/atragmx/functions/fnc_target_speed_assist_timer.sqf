@@ -4,8 +4,8 @@
 
 if !(ctrlVisible 9000) then {
 
-    false execVM QUOTE(PATHTOF(functions\fnc_show_target_speed_assist.sqf));
-    true execVM QUOTE(PATHTOF(functions\fnc_show_target_speed_assist_timer.sqf));
+    false call FUNC(show_target_speed_assist);
+    true call FUNC(show_target_speed_assist_timer);
 
     ctrlSetFocus (_dsp displayCtrl 9002);
     
@@ -21,8 +21,8 @@ if !(ctrlVisible 9000) then {
 
             [] call FUNC(calculate_target_speed_assist);
 
-            false execVM QUOTE(PATHTOF(functions\fnc_show_target_speed_assist_timer.sqf));
-            true execVM QUOTE(PATHTOF(functions\fnc_show_target_speed_assist.sqf));
+            false call FUNC(show_target_speed_assist_timer);
+            true call FUNC(show_target_speed_assist);
             
             [_this select 1] call cba_fnc_removePerFrameHandler;
         };

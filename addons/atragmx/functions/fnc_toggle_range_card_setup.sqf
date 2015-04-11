@@ -4,8 +4,8 @@
 
 if (ctrlVisible 10000) then
 {
-    false execVM QUOTE(PATHTOF(functions\fnc_show_range_card_setup.sqf));
-    true execVM QUOTE(PATHTOF(functions\fnc_show_range_card.sqf));
+    false call FUNC(show_range_card_setup);
+    true call FUNC(show_range_card);
     
     if (_this == 1) then
     {
@@ -18,8 +18,8 @@ if (ctrlVisible 10000) then
     };
 } else
 {
-    false execVM QUOTE(PATHTOF(functions\fnc_show_range_card.sqf));
-    true execVM QUOTE(PATHTOF(functions\fnc_show_range_card_setup.sqf));
+    false call FUNC(show_range_card);
+    true call FUNC(show_range_card_setup);
     
     ctrlSetFocus (_dsp displayCtrl 10006);
     
