@@ -2,7 +2,8 @@
 
 #include "initKeybinds.sqf"
 
-GVAR(enabled) = true;
+// AB is disabled by default
+GVAR(enabled) = false;
 
 GVAR(bulletDatabase) = [];
 GVAR(bulletDatabaseStartTime) = [];
