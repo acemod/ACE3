@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Calculates the target range and updates the output fields
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_calculate_target_range_assist
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_targetSize", "_imageSize", "_angle", "_estRange"];

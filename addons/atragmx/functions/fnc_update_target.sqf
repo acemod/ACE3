@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Updates all target column input fields
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_fnc_update_target
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 if (!isNil QGVAR(windSpeed)) then

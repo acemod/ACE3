@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Calculates the range card output based on the current data set
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_calculate_range_card
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 [] call FUNC(parse_input);
@@ -45,4 +60,3 @@ GVAR(rangeCardData) = [];
 private ["_result"];
 _result = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 1000,
             _windSpeed, _windDirection, _inclinationAngle, _targetSpeed, _targetRange, _bc, _dragModel, _atmosphereModel, true] call FUNC(calculate_solution);
-

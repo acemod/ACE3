@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Creates the ATragMX dialog
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_create_dialog
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 //if (dialog) exitWith { false };

@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Updates the range card listbox content
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_fnc_update_range_card
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_range", "_elevation", "_windage", "_lead", "_TOF", "_velocity", "_kineticEnergy", "_rangeOutput", "_elevationOutput", "_windageOutput", "_lastColumnOutput"];

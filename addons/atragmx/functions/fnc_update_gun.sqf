@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Updates all gun column input fields
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_fnc_update_gun
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 ctrlSetText [1000, (GVAR(workingMemory) select GVAR(currentTarget)) select 0];

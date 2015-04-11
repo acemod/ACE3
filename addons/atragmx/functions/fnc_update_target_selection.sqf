@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Updates all input fields based on the currently selected target
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_fnc_update_target_selection
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 #define _dsp (uiNamespace getVariable "ATragMX_Display")

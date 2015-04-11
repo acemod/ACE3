@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Calculates the fireing solution and updates the result input/output fields
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_calculate_target_solution
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 [] call FUNC(parse_input);

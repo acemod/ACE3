@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Resets the relative click memory and updates the result input/output fields
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_reset_relative_click_memory
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 (GVAR(workingMemory) select GVAR(currentTarget)) set [10, 0];

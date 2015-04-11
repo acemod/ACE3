@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Hook the rangefinder lazing event
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_sord
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 GVAR(COMPAT_LRF) = ["Rangefinder", "Laserdesignator"];

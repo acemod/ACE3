@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Updates the result input and output fields
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_fnc_update_result
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_elevationAbs", "_elevationRel", "_elevationCur", "_windageAbs", "_windageRel", "_windageCur", "_lead", "_elevationScopeStep", "_windageScopeStep"];

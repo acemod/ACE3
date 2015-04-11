@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Shows and starts the target speed assist timer
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_fnc_target_speed_assist_timer
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 #define _dsp (uiNamespace getVariable "ATragMX_Display")

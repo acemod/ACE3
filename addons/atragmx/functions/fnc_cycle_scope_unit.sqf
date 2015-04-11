@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Cycles through the scope units
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_cycle_scope_unit
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 [] call FUNC(parse_input);

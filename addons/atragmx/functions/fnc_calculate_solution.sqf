@@ -1,3 +1,40 @@
+/*
+ * Author: Ruthberg
+ * Calculates the fireing solution
+ *
+ * Arguments:
+ * 0: Scope base angle <NUMBER>
+ * 1: Bullet mass <NUMBER>
+ * 2: Bore height <NUMBER>
+ * 3: air friction <NUMBER>
+ * 4: muzzle velocity <NUMBER>
+ * 5: temperature <NUMBER>
+ * 6: barometric pressure <NUMBER>
+ * 7: relative humidity <NUMBER>
+ * 8: simulation steps <NUMBER>
+ * 9: wind speed <NUMBER>
+ * 10: wind direction <NUMBER>
+ * 11: inclination angle <NUMBER>
+ * 12: target speed <NUMBER>
+ * 13: target range <NUMBER>
+ * 14: ballistic coefficient <NUMBER>
+ * 15: drag model <NUMBER>
+ * 16: atmosphere model <STRING>
+ * 17: Store range card data? <BOOL>
+ *
+ * Return Value:
+ * 0: Elevation <NUMBER>
+ * 1: Windage <NUMBER>
+ * 2: Lead <NUMBER>
+ * 3: Time of fligth <NUMBER>
+ * 4: Remaining velocity <NUMBER>
+ * 4: Remaining kinetic energy <NUMBER>
+ *
+ * Example:
+ * call ace_atragmx_calculate_target_range_assist
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_bc", "_dragModel", "_atmosphereModel", "_storeRangeCardData"];

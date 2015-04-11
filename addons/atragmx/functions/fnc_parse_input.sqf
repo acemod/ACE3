@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Parses all input fields in the gun, atmosphere and target column and the result input fields
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_parse_input
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 GVAR(temperature) set [GVAR(currentTarget), parseNumber(ctrlText 200)];

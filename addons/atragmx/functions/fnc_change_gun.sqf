@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Selects a new gun profile and updates the gun column and the result input/output fields
+ *
+ * Arguments:
+ * gunID <number>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_change_gun
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 if (_this < 0 || _this > (count GVAR(gunList)) - 1) exitWith {};

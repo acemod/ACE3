@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Saves the currently select gun profile into the profileNamespace
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_save_gun
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_index"];

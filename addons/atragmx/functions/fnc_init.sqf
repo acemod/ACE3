@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Inits all global variables with the default values
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_init
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 GVAR(workingMemory) = [+(GVAR(gunList) select 0), +(GVAR(gunList) select 0), +(GVAR(gunList) select 0), +(GVAR(gunList) select 0)];

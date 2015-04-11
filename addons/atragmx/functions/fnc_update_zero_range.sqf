@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Updates the scope base angle based on the zero range input
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_fnc_update_zero_range
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_scopeBaseAngle"];

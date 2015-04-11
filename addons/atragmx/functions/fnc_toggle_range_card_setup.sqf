@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Toggles the range card setup screen on/off
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_fnc_toggle_range_card_setup
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 #define _dsp (uiNamespace getVariable "ATragMX_Display")

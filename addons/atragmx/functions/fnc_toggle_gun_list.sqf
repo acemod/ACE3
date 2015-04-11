@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Toggles the gun list screen on/off
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_fnc_toggle_gun_list
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 #define _dsp (uiNamespace getVariable "ATragMX_Display")

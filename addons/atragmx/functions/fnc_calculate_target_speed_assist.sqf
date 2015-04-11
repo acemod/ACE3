@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Calculates the target speed and updates the output fields
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_calculate_target_speed_assist
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_targetRange", "_numTicks", "_timeSecs", "_estSpeed"];

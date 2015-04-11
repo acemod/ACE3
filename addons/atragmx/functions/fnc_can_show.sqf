@@ -1,12 +1,12 @@
 /*
  * Authors: Ruthberg
- * Tests if the ATragMX can be shown
+ * Tests if the ATragMX dialog can be shown
  *
  * Arguments:
  * Nothing
  *
  * Return Value:
- * can_show (bool)
+ * can_show <BOOL>
  *
  * Example:
  * call ace_atragmx_fnc_can_show

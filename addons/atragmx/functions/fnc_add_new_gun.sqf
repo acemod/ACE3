@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Adds a new (default) gun profile to the profileNamespace
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_add_new_gun
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_gunName", "_gunProfileEntry"];

@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Deletes the currently selected gun profile from the profileNamespace
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_delete_gun
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_index"];

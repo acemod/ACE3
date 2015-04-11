@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Cycles through the range card columns
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_cycle_range_card_columns
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 GVAR(rangeCardCurrentColumn) = (GVAR(rangeCardCurrentColumn) + 1) % (count GVAR(rangeCardLastColumns));

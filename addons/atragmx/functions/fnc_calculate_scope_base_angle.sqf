@@ -1,3 +1,22 @@
+/*
+ * Author: Ruthberg
+ * Calculates a new scope base angle
+ *
+ * Arguments:
+ * 0: Bullet mass <NUMBER>
+ * 1: Bore height <NUMBER>
+ * 2: air friction <NUMBER>
+ * 3: muzzle velocity <NUMBER>
+ * 4: zero range <NUMBER>
+ *
+ * Return Value:
+ * scope base angle <NUMBER>
+ *
+ * Example:
+ * call ace_atragmx_calculate_scope_base_angle
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_zeroRange"];

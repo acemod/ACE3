@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ * Toggles the target speed assist screen on/off
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_atragmx_fnc_toggle_target_speed_assist
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 #define _dsp (uiNamespace getVariable "ATragMX_Display")
