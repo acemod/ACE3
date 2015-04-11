@@ -17,7 +17,7 @@
 
 private ["_playerDir", "_windSpeed", "_windDir", "_crosswind", "_headwind", "_humidity", "_temperature", "_humidity", "_barometricPressure", "_altitude"];
 
-if (isNil QUOTE(GVAR(MIN)) || isNil QUOTE(GVAR(MAX))) then {
+if (isNil QGVAR(MIN) || isNil QGVAR(MAX)) then {
     _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL ACE_player) select 2);
     _humidity = EGVAR(weather,currentHumidity);
     _barometricPressure = 1013.25 * exp(-(EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast;
@@ -45,23 +45,31 @@ if (GVAR(MinAvgMaxMode) == 1) then {
     _windSpeed = vectorMagnitude ACE_wind;
     _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
 
-    if (isClass (configFile >> "CfgPatches" >> "ACE_Advanced_Ballistics")) then {
+    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
         _windSpeed = (eyePos ACE_player) call EFUNC(advanced_ballistics,calculateWindSpeed);
+        _windSpeed = cos(_playerDir - _windDir) * _windSpeed;
     };
-
-    _windSpeed = cos(_playerDir - _windDir) * _windSpeed;
+    
     GVAR(MIN) set [1, (GVAR(MIN) select 1) min abs(_windSpeed)];
     GVAR(MAX) set [1, abs(_windSpeed) max (GVAR(MAX) select 1)];
     GVAR(TOTAL) set [1, (GVAR(TOTAL) select 1) + abs(_windSpeed)];
 
     // CROSSWIND
-    _crosswind = abs(sin(GVAR(RefHeading) - _playerDir) * _windSpeed);
+    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+        _crosswind = abs(sin(GVAR(RefHeading) - _playerDir) * _windSpeed);
+    } else {
+        _crosswind = abs(sin(GVAR(RefHeading)) * _windSpeed);
+    };
     GVAR(MIN) set [2, (GVAR(MIN) select 2) min _crosswind];
     GVAR(MAX) set [2, _crosswind max (GVAR(MAX) select 2)];
     GVAR(TOTAL) set [2, (GVAR(TOTAL) select 2) + _crosswind];
 
     // HEADWIND
-    _headwind = abs(cos(GVAR(RefHeading) - _playerDir) * _windSpeed);
+    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+        _headwind = abs(cos(GVAR(RefHeading) - _playerDir) * _windSpeed);
+    } else {
+        _headwind = abs(cos(GVAR(RefHeading)) * _windSpeed);
+    };
     GVAR(MIN) set [3, (GVAR(MIN) select 3) min _headwind];
     GVAR(MAX) set [3, _headwind max (GVAR(MAX) select 3)];
     GVAR(TOTAL) set [3, (GVAR(TOTAL) select 3) + _headwind];

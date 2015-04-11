@@ -17,11 +17,11 @@
 
 switch (_this) do {
     case 0: { // Enter
-        if (!GVAR(MinAvgMAx) && (GVAR(Menu) == 2 || GVAR(Menu) == 3)) then {
+        if (!GVAR(MinAvgMax) && (GVAR(Menu) == 2 || GVAR(Menu) == 3)) then {
             GVAR(RefHeading) = getDir ACE_player;
         };
-        if (GVAR(MinAvgMAx) && GVAR(Menu) > 0 && GVAR(Menu) < 4) then {
-            if (GVAR(MinAvgMAxMode) != 1) then {
+        if (GVAR(MinAvgMax) && GVAR(Menu) > 0 && GVAR(Menu) < 4) then {
+            if (GVAR(MinAvgMaxMode) != 1) then {
                 {
                     GVAR(MIN) set [_x, 0];
                     GVAR(MAX) set [_x, 0];
@@ -29,7 +29,7 @@ switch (_this) do {
                     GVAR(ENTRIES) set [_x, 0];
                 } forEach [1, 2, 3];
             };
-            GVAR(MinAvgMaxMode) = GVAR(MinAvgMaxMode + 1) % 3;
+            GVAR(MinAvgMaxMode) = (GVAR(MinAvgMaxMode) + 1) % 3;
         };
     };
     case 1: { // Top
@@ -39,10 +39,10 @@ switch (_this) do {
         GVAR(Menu) = (GVAR(Menu) + 1 + (count GVAR(Menus))) % (count GVAR(Menus));
     };
     case 3: { // Left
-        GVAR(MinAvgMaxMode) = !GVAR(MinAvgMaxMode);
+        GVAR(MinAvgMax) = !GVAR(MinAvgMax);
     };
     case 4: { // Right
-        GVAR(MinAvgMaxMode) = !GVAR(MinAvgMaxMode);
+        GVAR(MinAvgMax) = !GVAR(MinAvgMax);
     };
     case 5: { // Memory
     };
