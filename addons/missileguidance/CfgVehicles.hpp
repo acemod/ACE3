@@ -5,7 +5,7 @@ class CfgVehicles {
         class Turrets {
             class MainTurret;
         };
-    }
+    };
 
     class ACE_Comanche_Test : B_Heli_Attack_01_F {
 		displayName = "ACE_Comanche_Test";
