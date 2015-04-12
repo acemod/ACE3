@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-02-08 -->
 <Project name="ACE">
   <Package name="MagazineRepack">
     <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
@@ -77,17 +76,20 @@
     <Key ID="STR_ACE_MagazineRepack_RepackComplete">
       <English>Repacking Finished</English>
       <German>Wiederverpacken Fertig</German>
-      <Spanish>Reembalaje Finalizado</Spanish>
+      <Spanish>Reembalaje finalizado</Spanish>
+      <Russian>Перепаковка завершена</Russian>
     </Key>
     <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
       <English>Repacking Interrupted</English>
       <German>Umpacken Unterbrochen</German>
-      <Spanish>Reempaque Interrupted</Spanish>
+      <Spanish>Reembalaje interrumpido</Spanish>
+      <Russian>Перепаковка прервана</Russian>
     </Key>
     <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
       <English>%1 Full and %2 Partial</English>
       <German>%1 Vollständigen und %2 Teilweisen</German>
       <Spanish>%1 Total y %2 Parcial</Spanish>
+      <Russian>%1 полных и %2 неполных</Russian>
     </Key>
   </Package>
 </Project>
