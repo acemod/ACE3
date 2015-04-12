@@ -41,8 +41,6 @@ if (GVAR(onlyActiveForLocalPlayers) && _unit != ACE_player) then { _abort = true
 //if (!GVAR(vehicleGunnerEnabled) && !(_unit isKindOf "Man")) then { _abort = true; }; // TODO: We currently do not have firedEHs on vehicles
 if (GVAR(disabledInFullAutoMode) && getNumber(configFile >> "cfgWeapons" >> _weapon >> _mode >> "autoFire") == 1) then { _abort = true; };
 
-systemChat format["%1, %2, %3", getNumber(configFile >> "cfgWeapons" >> _weapon >> _mode >> "autoFire"), _abort, GVAR(disabledInFullAutoMode)];
-
 if (_abort && alwaysSimulateForSnipers) then {
     // The shooter is non local
     if (currentWeapon _unit == primaryWeapon _unit && count primaryWeaponItems _unit > 2) then {
@@ -54,8 +52,6 @@ if (_abort && alwaysSimulateForSnipers) then {
 if (_abort) exitWith {
     [_bullet, getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction")] call EFUNC(winddeflection,updateTrajectoryPFH);
 };
-
-systemChat "AB";
 
 _airFriction = getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction");
 _muzzleVelocity = getNumber(configFile >> "cfgMagazines" >> _magazine >> "initSpeed");
