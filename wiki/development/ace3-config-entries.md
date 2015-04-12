@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: ACE3 Config Entries
-group: dev
+group: development
 parent: wiki
 order: 2
 ---
