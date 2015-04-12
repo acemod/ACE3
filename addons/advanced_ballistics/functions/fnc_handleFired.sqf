@@ -218,9 +218,9 @@ if (count GVAR(bulletDatabaseFreeIndices) > 0) then {
             private ["_bulletDatabaseEntry", "_bullet", "_caliber", "_muzzleVelocity", "_frames", "_speed", "_airFriction", "_airFrictionRef", "_dragModel", "_atmosphereModel", "_ballisticCoefficient", "_ballisticCoefficients", "_velocityBoundaries", "_airDensity", "_stabilityFactor", "_transonicStabilityCoef", "_twistDirection", "_unit", "_bulletTraceVisible", "_index", "_temperature", "_humidity", "_deltaT", "_TOF", "_bulletPosition", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueSpeed", "_bulletSpeedAvg", "_wind", "_drag", "_dragRef", "_vect", "_accel", "_accelRef", "_centripetalAccel", "_pressure", "_pressureDeviation", "_windSourceObstacle", "_windSourceTerrain", "_height", "_roughnessLength"];
 
             {
-                _bullet = (GVAR(bulletDatabase) select _x) select 0;
-                _index  = (GVAR(bulletDatabase) select _x) select 13;
-                if (!alive _bullet) then {
+                _bulletDatabaseEntry = (GVAR(bulletDatabase) select _x);
+                if (!alive _bulletDatabaseEntry select 0) then {
+                    _index  = _bulletDatabaseEntry select 13;
                     GVAR(bulletDatabaseOccupiedIndices) = GVAR(bulletDatabaseOccupiedIndices) - [_index];
                     GVAR(bulletDatabaseFreeIndices) pushBack _index;
                 };
