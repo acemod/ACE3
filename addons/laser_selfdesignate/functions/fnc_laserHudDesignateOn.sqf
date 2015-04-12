@@ -40,7 +40,10 @@ FUNC(laserHudDesignatePFH) = {
     _turretInfo = [_vehicle, _gunnerInfo select 1] call EFUNC(common,getTurretDirection);
     _povPos = _turretInfo select 0;
     
-    _laserResult = [_povPos, [1550,1550], 1001] call EFUNC(laser,seekerFindLaserSpot);
+    _laserCode = (vehicle ACE_player) getVariable[QGVAR(currentCode), ACE_DEFAULT_LASER_CODE];
+    _beamSpread = (vehicle ACE_player) getVariable[QGVAR(currentBeamSpread), ACE_DEFAULT_LASER_BEAMSPREAD];
+    
+    _laserResult = [_povPos, [_beamSpread,_beamSpread], _laserCode] call EFUNC(laser,seekerFindLaserSpot);
     _laserResultPosition = _laserResult select 0;
     TRACE_1("Search", _laserResult);
 
