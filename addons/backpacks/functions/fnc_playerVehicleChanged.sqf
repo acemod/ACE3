@@ -3,7 +3,7 @@
 private ["_unit", "_holder"];
 
 _unit = _this select 0;
-_holder = _unit getVariable "ACE_Backpack" select 0;
+_holder = _unit getVariable ["ACE_Backpack", objNull];
 
 if (vehicle _unit != _unit) then {
 	if (vehicle _unit isKindOf "ParachuteBase") then {

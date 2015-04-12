@@ -5,6 +5,8 @@
  * Arguments:
  * 0: Player <OBJECT>
  *
+ * Return Value:
+ * NONE.
  */
 
 #include "script_component.hpp"
@@ -16,4 +18,4 @@ _holder = [_unit] call EFUNC(common,dropBackpack);
 _holder attachTo [_player, [-0.1,0.8,-0.05], "Pelvis"];
 _holder setVectorDirAndUp [[0, 0, -1], [0, 1, 0]];
 
-_unit setVariable ["ACE_Backpack", [_holder, true]];
+_unit setVariable ["ACE_Backpack", _holder];
