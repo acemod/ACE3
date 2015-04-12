@@ -41,4 +41,9 @@ class Extended_Respawn_EventHandlers {
             respawn = QUOTE(_this call FUNC(resetAllDefaults));
         };
     };
+    class CAManBase {
+        class GVAR(muteUnit) {
+            respawn = QUOTE(_this call FUNC(muteUnitHandleRespawn));
+        };
+    };
 };
