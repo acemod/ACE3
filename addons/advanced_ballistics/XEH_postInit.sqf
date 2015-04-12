@@ -2,17 +2,6 @@
 
 #include "initKeybinds.sqf"
 
-GVAR(enabled) = true;
-
-//GVAR(vehicleGunnerEnabled) = true; // TODO: We currently do not have firedEHs on vehicles
-GVAR(ammoTemperatureEnabled) = true;
-GVAR(barrelLengthInfluenceEnabled) = true;
-GVAR(bulletTraceEnabled) = true;
-GVAR(onlyActiveForLocalPlayers) = false;
-GVAR(disabledInFullAutoMode) = false;
-GVAR(alwaysSimulateForSnipers) = true;
-GVAR(simulationRadius) = 3000;
-
 GVAR(bulletDatabase) = [];
 GVAR(bulletDatabaseStartTime) = [];
 GVAR(bulletDatabaseSpeed) = [];
