@@ -61,6 +61,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class simulationInterval {
+                displayName = "Simulation Interval";
+                description = "Defines the interval between every calculation step";
+                typeName = "NUMBER";
+                defaultValue = 0.05;
+            };
             class simulationRadius {
                 displayName = "Simulation Radius";
                 description = "Defines the radius (in meters) in which advanced ballistics are applied";

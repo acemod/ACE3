@@ -49,6 +49,12 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
+    class GVAR(simulationInterval) {
+        displayName = "Simulation Interval";
+        description = "Defines the interval between every calculation step";
+        typeName = "SCALAR";
+        value = 0.0;
+    };
     class GVAR(simulationRadius) {
         displayName = "Simulation Radius";
         description = "Defines the radius (in meters) in which advanced ballistics are applied";

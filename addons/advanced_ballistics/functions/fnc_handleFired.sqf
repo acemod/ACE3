@@ -201,7 +201,7 @@ if (count GVAR(bulletDatabaseFreeIndices) > 0) then {
                 true
             } count GVAR(bulletDatabaseOccupiedIndices);
 
-        }, 0, []] call CBA_fnc_addPerFrameHandler;
+        }, GVAR(simulationInterval), []] call CBA_fnc_addPerFrameHandler;
     };
 #else
     GVAR(bulletDatabase)          set[_index, [_bullet, _caliber, _airFriction, _muzzleVelocity, _stabilityFactor, _transonicStabilityCoef, _twistDirection, _unit, _bulletTraceVisible, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _index]];
@@ -401,6 +401,6 @@ if (count GVAR(bulletDatabaseFreeIndices) > 0) then {
                 true
             } count GVAR(bulletDatabaseOccupiedIndices);
 
-        }, 0, []] call CBA_fnc_addPerFrameHandler;
+        }, GVAR(simulationInterval), []] call CBA_fnc_addPerFrameHandler;
     };
 #endif
