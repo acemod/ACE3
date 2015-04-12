@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Wind">
     <Key ID="STR_ACE_Wind_ApproximateTemp">
@@ -30,7 +29,7 @@
       <Spanish>Anemómetro balístico</Spanish>
       <French>Applied Ballistics Meter</French>
       <Polish>Urządzenie do monitorowania pogody</Polish>
-      <Czech>Zařízení pro měření vítru</Czech>
+      <Czech>Zařízení pro měření větru</Czech>
       <Italian>Monitoraggio Balistico Attivo</Italian>
       <Hungarian>Applied Ballistics Meter</Hungarian>
       <Portuguese>Medidor Balístico Ativo</Portuguese>

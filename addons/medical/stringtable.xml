@@ -6,13 +6,14 @@
       <German>Atropin injizieren</German>
       <Spanish>Inyectar atropina</Spanish>
       <Russian>Ввести атропин</Russian>
+      <Czech>Aplikovat atropin</Czech>
     </Key>
     <Key ID="STR_ACE_Medical_Inject_Epinephrine">
       <English>Inject Epinephrine</English>
       <German>Epinephrine injizieren</German>
       <Spanish>Inyectar Epinefrina</Spanish>
       <Polish>Wtrzyknij adrenalinę</Polish>
-      <Czech>Aplikovat Adrenalin</Czech>
+      <Czech>Aplikovat adrenalin</Czech>
       <Russian>Ввести андреналил</Russian>
       <French>Adrénaline</French>
       <Hungarian>Adrenalin</Hungarian>
@@ -24,7 +25,7 @@
       <German>Morphin injizieren</German>
       <Spanish>Inyectar Morfina</Spanish>
       <Polish>Wstrzyknij morfinę</Polish>
-      <Czech>Aplikovat Morfin</Czech>
+      <Czech>Aplikovat morfin</Czech>
       <Russian>Ввести морфин</Russian>
       <French>Morphine</French>
       <Hungarian>Morfium</Hungarian>
@@ -48,18 +49,21 @@
       <German>Plasmatransfusion</German>
       <Spanish>Transfundir plasma</Spanish>
       <Russian>Перелить плазму</Russian>
+      <Czech>Transfúze plazmy</Czech>
     </Key>
     <Key ID="STR_ACE_Medical_Transfuse_Saline">
       <English>Transfuse Saline</English>
       <German>Salzlösungtransfusion</German>
       <Spanish>Transfundir salina</Spanish>
       <Russian>Влить физраствор</Russian>
+      <Czech>Transfúze fyziologický roztoku</Czech>
     </Key>
     <Key ID="STR_ACE_Medical_Apply_Tourniquet">
       <English>Apply Tourniquet</English>
       <German>Aderpresse anwenden</German>
       <Spanish>Aplicar torniquete</Spanish>
       <Russian>Наложить жгут</Russian>
+      <Czech>Aplikovat škrtidlo</Czech>
     </Key>
     <Key ID="STR_ACE_Medical_Bandage">
       <English>Bandage</English>
@@ -150,7 +154,7 @@
       <German>Morphin injizieren ...</German>
       <Spanish>Inyectando Morfina ...</Spanish>
       <Polish>Wstrzykiwanie morfiny ...</Polish>
-      <Czech>Aplikuju Morfin ...</Czech>
+      <Czech>Aplikuji morfin ...</Czech>
       <Russian>Введение морфина...</Russian>
       <French>Injection de Morphine...</French>
       <Hungarian>Morfium beadása...</Hungarian>
@@ -162,7 +166,7 @@
       <German>Epinephrin injizieren ...</German>
       <Spanish>Inyectando Epinefrina ...</Spanish>
       <Polish>Wstrzykiwanie adrenaliny ...</Polish>
-      <Czech>Aplikuju Adrenalin ...</Czech>
+      <Czech>Aplikuji adrenalin ...</Czech>
       <Russian>Введение андреналина ...</Russian>
       <French>Injection d'Adrénaline ...</French>
       <Hungarian>Adrenalin beadása...</Hungarian>
@@ -173,6 +177,7 @@
       <English>Injecting Atropine ...</English>
       <German>Atropin injizieren ...</German>
       <Russian>Введение атропина ...</Russian>
+      <Czech>Aplikuji atropin ...</Czech>
     </Key>
     <Key ID="STR_ACE_Medical_Transfusing_Blood">
       <English>Transfusing Blood ...</English>
@@ -191,12 +196,14 @@
       <German>Sallösungtransfusion ...</German>
       <Spanish>Transfusión de salina ...</Spanish>
       <Russian>Вливание физраствора ...</Russian>
+      <Czech>Probíha transfúze fyziologický roztoku ...</Czech>
     </Key>
     <Key ID="STR_ACE_Medical_Transfusing_Plasma">
       <English>Transfusing Plasma ...</English>
       <German>Plasmatransfusion ...</German>
       <Spanish>Transfusión de plasma ...</Spanish>
       <Russian>Переливание плзмы ...</Russian>
+      <Czech>Probíha transfúze plazmy ...</Czech>
     </Key>
     <Key ID="STR_ACE_Medical_Bandaging">
       <English>Bandaging ...</English>
@@ -215,6 +222,7 @@
       <German>Setze Aderpresse an ...</German>
       <Spanish>Aplicando torniquete ...</Spanish>
       <Russian>Наложение жгута ...</Russian>
+      <Czech>Aplikuji škrtidlo</Czech>
     </Key>
     <Key ID="STR_ACE_MEDICAL_ACTIONS_Medical">
       <English>Medical</English>
@@ -232,6 +240,7 @@
       <German>Notverband</German>
       <Spanish>Compresa de campaña</Spanish>
       <Russian>Бинтовая повязка</Russian>
+      <Czech>Obinadlo</Czech>
     </Key>
     <Key ID="STR_ACE_MEDICAL_ACTIONS_PackingBandage">
       <English>Packing Bandage</English>
@@ -244,6 +253,7 @@
       <German>Elastische Binde</German>
       <Spanish>Vendaje elástico</Spanish>
       <Russian>Давящая повязка</Russian>
+      <Czech>Elastické obinadlo</Czech>
     </Key>
     <Key ID="STR_ACE_MEDICAL_ACTIONS_QuikClot">
       <English>QuikClot</English>
@@ -256,12 +266,14 @@
       <German>Puls überprüfen</German>
       <Spanish>Comprobar pulso</Spanish>
       <Russian>Проверить пульс</Russian>
+      <Czech>Zkontrolovat pulz</Czech>
     </Key>
     <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckBloodPressure">
       <English>Check Blood Pressure</English>
       <German>Blutdruck überprüfen</German>
       <Spanish>Comprobar presión arterial</Spanish>
       <Russian>Проверить кровяное давление</Russian>
+      <Czech>Zkontrolovat krevní tlak</Czech>
     </Key>
     <Key ID="STR_ACE_MEDICAL_ACTIONS_TriageCard">
       <English>Triage Card</English>
@@ -274,12 +286,14 @@
       <German>Aderpresse</German>
       <Spanish>Torniquete</Spanish>
       <Russian>Жгут</Russian>
+      <Czech>Škrtidlo</Czech>
     </Key>
     <Key ID="STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet">
       <English>Remove Tourniquet</English>
       <German>Entferne Aderpresse</German>
       <Spanish>Quitar torniquete</Spanish>
       <Russian>Снять жгут</Russian>
+      <Czech>Sundat škrtidlo</Czech>
     </Key>
     <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_1000">
       <English>Give Blood IV (1000ml)</English>

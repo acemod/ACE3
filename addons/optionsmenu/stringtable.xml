@@ -18,18 +18,21 @@
       <German>Behebe Animation</German>
       <Spanish>Arreglar animación</Spanish>
       <Russian>Фикс анимации</Russian>
+      <Czech>Opravit animace</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_ResetAll">
       <English>Reset All</English>
       <German>Alles Zurücksetzen</German>
       <Spanish>Reiniciar todo</Spanish>
       <Russian>Полный сброс</Russian>
+      <Czech>Vyresetovat vše</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabColors">
       <English>Colors</English>
       <German>Farben</German>
       <Spanish>Colores</Spanish>
       <Russian>Цвета</Russian>
+      <Czech>Barvy</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabOptions">
       <English>Options</English>
@@ -47,6 +50,7 @@
       <English>Values</English>
       <Spanish>Valores</Spanish>
       <Russian>Значения</Russian>
+      <Czech>Hodnoty</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Enabled">
       <English>Yes</English>
@@ -84,12 +88,14 @@
       <German>Exportieren</German>
       <Spanish>Exportar</Spanish>
       <Russian>Экспорт</Russian>
+      <Czech>Exportovat</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_OpenExport">
       <English>Open Export Menu</English>
       <German>Öffne Exportmenü</German>
       <Spanish>Abrir menu d'exportación</Spanish>
       <Russian>Открыть меню экспорта</Russian>
+      <Czech>Otevřít exportovací menu</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_stringType">
       <English>String input.</English>
@@ -108,36 +114,42 @@
       <German>Nummer</German>
       <Spanish>Numero</Spanish>
       <Russian>Число</Russian>
+      <Czech>Číslo</Czech>
     </Key>
     <Key ID="STR_ACE_optionsMenu_unknownType">
       <English>Uknown input type</English>
       <German>Unbekannter Eingabetyp</German>
       <Spanish>Tipo de entrada desconocida</Spanish>
       <Russian>Неизвестный тип ввода</Russian>
+      <Czech>Neznámý vstup</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_SaveInput">
       <English>Save input</English>
       <German>Speichere Eingabe</German>
       <Spanish>Guardar entrada</Spanish>
       <Russian>Сохранить ввод</Russian>
+      <Czech>Uložit vstup</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_inClientSettings">
       <English>Include Client Settings</English>
       <German>Beinhalte Client-Einstellungen</German>
       <Spanish>Incluir configuración de cliente</Spanish>
       <Russian>Включить настройки клиента</Russian>
+      <Czech>Zahrnout nastavení klienta</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_exClientSettings">
       <English>Exclude Client Settings</English>
       <German>Schließe Client-Einstellungen aus</German>
       <Spanish>Excluir configuración de cliente</Spanish>
       <Russian>Исключить настройки клиента</Russian>
+      <Czech>Nezahrnout nastavení klienta</Czech>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_settingsExported">
       <English>Settings exported to clipboard</English>
       <German>Einstellungen in die Zwischenablage exportiert</German>
       <Spanish>Configuración exportada al portapapeles</Spanish>
       <Russian>Настройки экспортированы в буфер обмена</Russian>
+      <Czech>Nastevení exportována do schránky</Czech>
     </Key>
   </Package>
 </Project>

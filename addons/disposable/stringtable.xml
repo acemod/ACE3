@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-16 -->
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="Disposable">
     <Key ID="STR_ACE_Disposable_UsedTube">
@@ -26,7 +26,7 @@
       <English>Preloaded Missile Dummy</English>
       <German>Vorgeladene Racketennachbildung</German>
       <French>Preloaded Missile Dummy</French>
-      <Czech>Preloaded Missile Dummy</Czech>
+      <Czech>Přednabitá dummy střela</Czech>
       <Polish>Preloaded Missile Dummy</Polish>
       <Spanish>Preloaded Missile Dummy</Spanish>
       <Hungarian>Preloaded Missile Dummy</Hungarian>

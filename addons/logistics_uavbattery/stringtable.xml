@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="logistics_uavbattery">
     <Key ID="STR_ACE_logistics_uavbattery_Full">
@@ -21,7 +20,7 @@
       <French>Pas de batterie UAV</French>
       <Polish>Potrzebujesz baterii UAV</Polish>
       <Hungarian>Szükséged van egy UAV akkumulátorra</Hungarian>
-      <Czech>Potřebuješ UAV-Baterii</Czech>
+      <Czech>Potřebuješ UAV baterii</Czech>
       <Portuguese>Você precisa de uma Bateria para VANT</Portuguese>
       <Italian>Hai bisogno di una Batteria UAV</Italian>
       <Russian>Требуется аккумулятор для БПЛА</Russian>
@@ -45,7 +44,7 @@
       <French>Batterie UAV</French>
       <Polish>Bateria UAV</Polish>
       <Hungarian>UAV akkumulátor</Hungarian>
-      <Czech>UAV-Baterie</Czech>
+      <Czech>UAV baterie</Czech>
       <Portuguese>Bateria para VANT</Portuguese>
       <Italian>Batteria UAV</Italian>
       <Russian>Аккумулятор БПЛА</Russian>

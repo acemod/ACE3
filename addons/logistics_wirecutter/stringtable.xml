@@ -6,12 +6,14 @@
       <German>Drahtschneider</German>
       <Spanish>Cortador de cables</Spanish>
       <Russian>Клещи-кусачки</Russian>
+      <Czech>Štípací kleště</Czech>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_wirecutterDescription">
       <English>Wirecutter</English>
       <German>Schneidet Draht.</German>
       <Spanish>Cortador de cables</Spanish>
       <Russian>Позволяют быстро перекусывать сеточные конструкции.</Russian>
+      <Czech>Štípačky</Czech>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_CutFence">
       <English>Cut Fence</English>

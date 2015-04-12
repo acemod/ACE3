@@ -6,6 +6,7 @@
       <German>MicroDAGR GPS</German>
       <Spanish>GPS MicroDAGR</Spanish>
       <Russian>MicroDAGR GPS</Russian>
+      <Czech>MicroDAGR GPS</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_itemDescription">
       <English>MicroDAGR advanced GPS receiver</English>
@@ -104,30 +105,35 @@
       <Spanish>Puntos de ruta</Spanish>
       <German>Wegpunkte</German>
       <Russian>Машрутные точки</Russian>
+      <Czech>Waypointy</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_menuConnectTo">
       <English>Connect To</English>
       <Spanish>Conectar a</Spanish>
       <Russian>Соединиться с </Russian>
       <German>Verbinde zu</German>
+      <Czech>Připojit k</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_menuSettings">
       <English>Settings</English>
       <German>Einstellungen</German>
       <Spanish>Configuración</Spanish>
       <Russian>Настройки</Russian>
+      <Czech>Nastavení</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsSet">
       <English>SetWP</English>
       <German>SetzeWP</German>
       <Spanish>Establecer PR</Spanish>
       <Russian>Установить МТ</Russian>
+      <Czech>Nastavit WP</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsAdd">
       <English>Add</English>
       <German>Hinzufügen</German>
       <Spanish>Añadir</Spanish>
       <Russian>Добавить</Russian>
+      <Czech>Přidat</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsDelete">
       <English>Delete</English>
@@ -151,18 +157,21 @@
       <German>Zeige MicroDAGR</German>
       <Spanish>Mostrar MicroDAGR</Spanish>
       <Russian>Показать MicroDAGR</Russian>
+      <Czech>Ukázat MicroDAGR GPS</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_configure">
       <English>Configure MicroDAGR</English>
       <German>Stelle MicroDAGR ein</German>
       <Spanish>Configurar MicroDAGR</Spanish>
       <Russian>Настроить MicroDAGR</Russian>
+      <Czech>Konfigurovat MicroDAGR GPS</Czech>
     </Key>
     <Key ID="STR_ACE_microdagr_closeUnit">
       <English>Close MicroDAGR</English>
       <German>Schließe MicroDAGR</German>
       <Spanish>Cerrar MicroDAGR</Spanish>
       <Russian>Закрыть MicroDAGR</Russian>
+      <Czech>Zavřít MicroDAGR GPS</Czech>
     </Key>
   </Package>
 </Project>
