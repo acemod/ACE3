@@ -3,6 +3,8 @@
 PREP(rotateVectLineGetMap);
 PREP(rotateVectLine);
 
+PREP(checkSeekerAngle);
+
 PREP(fired);
 
 PREP(guidancePFH);
