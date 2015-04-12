@@ -1,30 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-03-24 -->
 <Project name="ACE">
   <Package name="microdagr">
     <Key ID="STR_ACE_microdagr_itemName">
       <English>MicroDAGR GPS</English>
       <Spanish>GPS MicroDAGR</Spanish>
+      <Russian>MicroDAGR GPS</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_itemDescription">
       <English>MicroDAGR advanced GPS receiver</English>
       <Spanish>Receptor avanzado GPS MicroDAGR</Spanish>
+      <Russian>Многофункциональный GPS-приёмник.</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_settingUseMils">
       <English>Angular Unit:</English>
       <Spanish>Unidad angular:</Spanish>
+      <Russian>Угловые единицы:</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_settingMils">
       <English>Mils</English>
       <Spanish>Mils</Spanish>
+      <Russian>Тысячные</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_settingShowWP">
       <English>Show Waypoints On Map:</English>
       <Spanish>Mostrar puntos de ruta en el mapa:</Spanish>
+      <Russian>Показывать маршрутные точки на карте:</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_settingDegrees">
       <English>Degrees</English>
       <Spanish>Grados</Spanish>
+      <Russian>Градусы</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_settingOn">
       <English>On</English>
@@ -51,53 +56,65 @@
     <Key ID="STR_ACE_microdagr_wpEnterCords">
       <English>Enter Grid Cords:</English>
       <Spanish>Introducir coordenadas de cuadrícula:</Spanish>
+      <Russian>Введите координаты:</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_wpEnterName">
       <English>Name of [%1]</English>
       <Spanish>Nombre de [%1]</Spanish>
+      <Russian>Название [%1]</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_controlMGRS">
       <English>MGRS-New</English>
       <Spanish>Nuevo-MGRS</Spanish>
+      <Russian>MGRS-Новая</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_controlWGD">
       <English>WGD</English>
       <Spanish>WGD</Spanish>
+      <Russian>WGD</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_controlRange">
       <English>Range:</English>
       <Spanish>Distancia</Spanish>
       <German>Reichweite:</German>
+      <Russian>Дистанция:</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_compasDirection">
       <English>Compass Direction</English>
       <Spanish>Dirección de la brújula</Spanish>
+      <Russian>Азимут</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_menuMark">
       <English>Mark</English>
       <Spanish>Marca</Spanish>
+      <Russian>Отметка</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_menuWaypoints">
       <English>Waypoints</English>
       <Spanish>Puntos de ruta</Spanish>
       <German>Wegpunkte</German>
+      <Russian>Машрутные точки</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_menuConnectTo">
       <English>Connect To</English>
       <Spanish>Conectar a</Spanish>
+      <Russian>Соединиться с </Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_menuSettings">
       <English>Settings</English>
       <German>Einstellungen</German>
       <Spanish>Configuración</Spanish>
+      <Russian>Настройки</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsSet">
       <English>SetWP</English>
       <Spanish>Establecer PR</Spanish>
+      <Russian>Установить МТ</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsAdd">
       <English>Add</English>
       <Spanish>Añadir</Spanish>
+      <Russian>Добавить</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_waypointsDelete">
       <English>Delete</English>
@@ -113,18 +130,22 @@
     <Key ID="STR_ACE_microdagr_toggleUnit">
       <English>Toggle MicroDAGR Display Mode</English>
       <Spanish>Conmutar modo de pantalla del MicroDAGR</Spanish>
+      <Russian>Сменить режим показа MicroDAGR</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_show">
       <English>Show MicoDAGR</English>
       <Spanish>Mostrar MicroDAGR</Spanish>
+      <Russian>Показать MicroDAGR</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_configure">
       <English>Configure MicroDAGR</English>
       <Spanish>Configurar MicroDAGR</Spanish>
+      <Russian>Настроить MicroDAGR</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_closeUnit">
       <English>Close MicroDAGR</English>
       <Spanish>Cerrar MicroDAGR</Spanish>
+      <Russian>Закрыть MicroDAGR</Russian>
     </Key>
   </Package>
 </Project>
