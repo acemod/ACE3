@@ -30,20 +30,15 @@ _affected = _grenade nearEntities ["CAManBase", 20];
 
         if (_x != ACE_player) then {
             //must be AI
-            _x disableAI "MOVE";
-            _x disableAI "ANIM";
-            _x disableAI "AUTOTARGET";
-            _x disableAI "TARGET";
-            _x disableAI "FSM";
+            [_x, true] call EFUNC(common,disableAI);
             _x setSkill ((skill _x) / 50);
 
             [{
                 PARAMS_1(_unit);
-                _unit enableAI "MOVE";
-                _unit enableAI "ANIM";
-                _unit enableAI "AUTOTARGET";
-                _unit enableAI "TARGET";
-                _unit enableAI "FSM";
+                //Make sure we don't enable AI for unconscious units
+                if (!(_unit getVariable ["ace_isunconscious", false])) then {
+                    [_unit, false] call EFUNC(common,disableAI);
+                };
                 _unit setSkill (skill _unit * 50);
             }, [_x], (7 * _strength), 0.1] call EFUNC(common,waitAndExecute);  //0.1 precision is fine for AI
         } else {
