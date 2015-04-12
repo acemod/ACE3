@@ -28,10 +28,7 @@ _ammo     = _this select 4;
 _magazine = _this select 5;
 _bullet   = _this select 6;
 
-systemChat format["AB_simulationRadius: %1", GVAR(simulationRadius)];
-
 _abort = false;
-
 if (!hasInterface) exitWith {};
 if (!alive _bullet) exitWith {};
 if (!GVAR(enabled)) exitWith {};
@@ -76,7 +73,7 @@ if (_muzzleAccessory != "" && isNumber(configFile >> "cfgWeapons" >> _muzzleAcce
     _muzzleVelocity = _muzzleVelocity * _initSpeedCoef;
 };
 
-if (GVAR(BarrelLengthInfluenceEnabled)) then {
+if (GVAR(barrelLengthInfluenceEnabled)) then {
     _muzzleVelocityShift = [_ammo, _weapon, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
     if (_muzzleVelocityShift != 0) then {
         _bulletVelocity = velocity _bullet;
@@ -87,7 +84,7 @@ if (GVAR(BarrelLengthInfluenceEnabled)) then {
     };
 };
 
-if (GVAR(AmmoTemperatureEnabled)) then {
+if (GVAR(ammoTemperatureEnabled)) then {
     _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL _unit) select 2);
     _muzzleVelocityShift = [_ammo, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift);
     if (_muzzleVelocityShift != 0) then {
@@ -101,7 +98,7 @@ if (GVAR(AmmoTemperatureEnabled)) then {
 
 // TODO: Make _bulletTraceVisible global and toggle it with events
 _bulletTraceVisible = false;
-if (GVAR(BulletTraceEnabled) && currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
+if (GVAR(bulletTraceEnabled) && currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
     _opticsName = (primaryWeaponItems ACE_player) select 2;
     _opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
     _bulletTraceVisible = (_opticType == 2 || currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]) && cameraView == "GUNNER";
@@ -170,7 +167,7 @@ if (count GVAR(bulletDatabaseFreeIndices) > 0) then {
 
             {
                 _bulletDatabaseEntry = (GVAR(bulletDatabase) select _x);
-                if (!alive _bulletDatabaseEntry select 0) then {
+                if (!alive (_bulletDatabaseEntry select 0)) then {
                     _index  = _bulletDatabaseEntry select 3;
                     GVAR(bulletDatabaseOccupiedIndices) = GVAR(bulletDatabaseOccupiedIndices) - [_index];
                     GVAR(bulletDatabaseFreeIndices) pushBack _index;
@@ -221,7 +218,7 @@ if (count GVAR(bulletDatabaseFreeIndices) > 0) then {
 
             {
                 _bulletDatabaseEntry = (GVAR(bulletDatabase) select _x);
-                if (!alive _bulletDatabaseEntry select 0) then {
+                if (!alive (_bulletDatabaseEntry select 0)) then {
                     _index  = _bulletDatabaseEntry select 13;
                     GVAR(bulletDatabaseOccupiedIndices) = GVAR(bulletDatabaseOccupiedIndices) - [_index];
                     GVAR(bulletDatabaseFreeIndices) pushBack _index;
