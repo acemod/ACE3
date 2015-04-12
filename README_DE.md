@@ -19,22 +19,22 @@
 
 **ACE3** ist ein Gemeinschaftsprojekt der Moddinggruppen von **ACE2**, **AGM** und **CSE** um den Realismus und die Spieltiefe von Arma 3 zu steigern.
 
-Da die MOD vollkommen als **open-source** Projekt gestaltet ist, steht es jedem frei Änderungen vorzuschlagen, oder seine eigene, modifizierte Version zu erstellen, solange diese ebenfalls der Öffentlichkeit zugänglich ist und mit GNU General Public License konformt geht. (Weitere Informationen ist der Lizenzdatei in diesem Projekt entnehmbar)
+Da die MOD vollkommen als **open-source** Projekt gestaltet ist, steht es jedem frei Änderungen vorzuschlagen, oder seine eigene, modifizierte Version zu erstellen, solange diese ebenfalls der Öffentlichkeit zugänglich ist und mit GNU General Public License übereinstimmt. (Weitere Informationen ist der Lizenzdatei in diesem Projekt entnehmbar)
 
-Die Mod ist  **modular gestaltet** — beinahe jede PBO kann entfernt werden, sodass jede Gemeinschaft ihre eigene, thus a team can maintain its own tailored version of ACE, which excludes a select number of components that they don't like, or which conflict with other add-ons. Components themselves, like e.g. the medical system, also include various customization options, allowing mission designers to tweak the overall experience.
+Die Mod ist  **modular gestaltet** — beinahe jede PBO kann entfernt werden, sodass jede Gemeinschaft ihre eigene Version der Mod unterhalten kann. Dies kann zum Beispiel einige Funktionalitäten auschließen, da das Feature nicht gewünscht ist, oder es mit einer anderen MOD in Konflikt gerät etc. .Ebenfalls können viele Einstellungen vom Missionsersteller vorgenommen werden (u.a. am medizinischem System), sodass eine individuelle Erfahrung gewährleistet wird. 
 
 ### Features
-*   Improved medical system
-*   Logistics system including cargo transport and vehicle maintenance
-*   Explosives system including different trigger types
+*   Verbessertes medizinisches System
+*   Logistik System: U.a. Transport und Fahrzeugreperatur
+*   Sprengstoffsystem mit unterschiedlichen Auslösern
 *   Captivity system
-*   Realistic names for vehicles and weapons
-*   Realistic ballistics including wind and humidity
-*   Backblast simulation
-*   A fire control system for armored vehicles and helicopters  
+*   Reale Namen für vanilla Fahrzeuge und Waffen
+*   Realistisches ballistisches Verhalten (Wind und Luftfeuchtigkeit)
+*   Simulation der Rückstrahlzone
+*   Ein Feuerleitsystem für gepanzerte Fahrzeuge und Hubschrauber  
     ***and more...***
 
-#### Guides & How-Tos
+#### Anleitungen
 If you installed ACE3, but have trouble understanding how it all works, or where to start — see [Getting Started](https://github.com/acemod/ACE3/blob/master/documentation/user/getting-started.md).
 
 #### Contributing
