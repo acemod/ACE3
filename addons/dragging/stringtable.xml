@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Dragging">
     <Key ID="STR_ACE_Dragging_Drag">
@@ -28,7 +27,7 @@
     </Key>
     <Key ID="STR_ACE_Dragging_UnableToDrag">
       <English>Item to heavy</English>
-      <German>Gegenstand zu schwer</German>
+      <German>Gegenstand ist zu schwer</German>
       <Spanish>Articulo demasiado pesado</Spanish>
       <!-- <English>Unable to drag item due to weight</English>
       <Russian>Слишком тяжелый предмет</Russian>

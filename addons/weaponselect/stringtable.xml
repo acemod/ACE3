@@ -3,11 +3,13 @@
   <Package name="WeaponSelect">
     <Key ID="STR_ACE_Weaponselect_SettingDisplayTextName">
       <English>Display text on grenade throw</English>
+      <German>Zeige Text beim Granatwurf</German>
       <Spanish>Mostrar texto al lanzar granada</Spanish>
       <Russian>Показывать текст при броске</Russian>
     </Key>
     <Key ID="STR_ACE_Weaponselect_SettingDisplayTextDesc">
       <English>Display a hint or text on grenade throw.</English>
+      <German>Zeige Hinweis oder Text beim Granatwurf</German>
       <Spanish>Muestra una notificación o texto al lanzar granada</Spanish>
       <Russian>Показывать текст или подсказку при броске гранаты.</Russian>
     </Key>

@@ -299,7 +299,7 @@
     </Key>
     <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TITLE">
       <English>Accept Requests</English>
-      <German>Anfrage annehmen</German>
+      <German>Anfrage akzeptieren</German>
       <Spanish>Aceptar peticiones</Spanish>
       <Polish>Akceptuj prośby</Polish>
       <Italian>Accetta Richieste</Italian>
@@ -315,7 +315,7 @@
     </Key>
     <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
       <English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
-      <German>Anfragen anderer Spieler annehmen. Diese Anfragen können sich auf das Benutzen / Teilen von Equipment beziehen oder das Ausführen bestimmter Aktionen.</German>
+      <German>Anfragen werden von anderen Mitspielen gestellt. Diese können Anfragen u.a. zum Teilen/Verwenden von Ausrüstungsgegenständen, oder auch zum Ausführen von Handlungen sein. </German>
       <Spanish>Acepta peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
       <Polish>Akceptuj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
       <Italian>Accetta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
@@ -323,7 +323,7 @@
     </Key>
     <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
       <English>Decline Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
-      <German>Anfragen anderer Spieler ablehnen. Diese Anfragen können sich auf das Benutzen / Teilen von Equipment beziehen oder das Ausführen bestimmter Aktionen.</German>
+      <German>Anfragen werden von anderen Mitspielen gestellt. Diese können Anfragen u.a. zum Teilen/Verwenden von Ausrüstungsgegenständen, oder auch zum Ausführen von Handlungen sein. </German>
       <Spanish>Rechazar peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
       <Polish>Ignoruj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
       <Italian>Rifiuta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
@@ -331,49 +331,49 @@
     </Key>
     <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
       <English>Feedback icons</English>
-      <German>Feedback-Icons</German>
+      <German>Rückmeldungssymbole</German>
       <Spanish>Iconos de respuesta</Spanish>
       <Italian>Icone informative</Italian>
       <Russian>Иконки состояний</Russian>
     </Key>
     <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
       <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
-      <German>Wähle die Position der Feedback-Icons aus oder deaktiviere Sie. Die Feedback-Icons zeigen den Status deiner Einheit an, oder die ausgeführte Aktion.</German>
+      <German>Wähle die Position der Rückmeldungssymbole, oder deaktiviere sie. Diese Symbole stellen eine zusätzliche Rückmeldung über die Lage und Handlungen deines Soldaten dar.</German>
       <Spanish>Seleccionar la posición de o desactivar los íconos de respuesta en la pantalla. Estos iconos se mostrarán para proporcionar información adicional sobre el estado de su personaje y las acciones a realizar.</Spanish>
       <Italian>Seleziona la posizione o disabilita le icone informative sul tuo schermo. Queste saranno mostrate per fornire informazioni aggiuntive sullo stato o sulle azioni del giocatore.</Italian>
       <Russian>Выберите положение или или отключите отображение иконок состояний на Вашем экране. Эти иконки предоставят дополнительную информацию о состоянии персонажа и выполняемых действиях.</Russian>
     </Key>
     <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
       <English>Progress bar location</English>
-      <German>Position des Fortschrittsanzeige</German>
+      <German>Position der Fortschrittsanzeige</German>
       <Spanish>Ubicación de la barra de progreso</Spanish>
       <Italian>Posizione della barra di avanzamento</Italian>
       <Russian>Положение прогресс-бара</Russian>
     </Key>
     <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
       <English>Set the desired location of the progress bar on your screen.</English>
-      <German>Wähle die Position der Fortschrittsanzeige.</German>
+      <German>Setze die gewünschte Position der Fortschrittsanzeige fest</German>
       <Spanish>Seleccionar la ubicación deseada de la barra de progreso en tu pantalla</Spanish>
       <Italian>Modifica la posizione su schermo della barra di avanzamento.</Italian>
       <Russian>Установите желаемое положение строки состояния на экране.</Russian>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
       <English>Hint Background color</English>
-      <German>Hinweis Hintergrundfarbe</German>
+      <German>Hintergrundfarbe der Hinweise</German>
       <Spanish>Color de fondo de las notificaciones</Spanish>
       <Italian>Sfondo dei Suggerimenti</Italian>
       <Russian>Цвет фона всплывающих подсказок</Russian>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
       <English>The color of the background from the ACE hints.</English>
-      <German>Wähle die Hintergrundfarbe für ACE-Hinweise.</German>
+      <German>Die Hintergrundfarbe der ACE-Hinweise.</German>
       <Spanish>El color de fondo de las notificaciones del ACE</Spanish>
       <Italian>Il colore di sfondo dei suggerimenti dell'ACE.</Italian>
       <Russian>Цвет фона всплывающий подсказок АСЕ.</Russian>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
       <English>Hint text font color</English>
-      <German>Hinweis Textfarbe</German>
+      <German>Textfarbe der Hinweise</German>
       <Spanish>Color del texto de las notificaciones</Spanish>
       <Italian>Testo dei Suggerimenti</Italian>
       <Russian>Цвет шрифта всплывающих подсказок</Russian>
@@ -394,7 +394,7 @@
     </Key>
     <Key ID="STR_ACE_Common_bananaDescr">
       <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
-      <German>Die Bananen (Musa) sind eine Pflanzengattung in der Familie der Bananengewächse (Musaceae) innerhalb der Einkeimblättrigen Pflanzen (Monokotyledonen).</German>
+      <German>Die Banane ist eine essbare Frucht, biologisch betrachtet jedoch eine Beere. Sie wächst an unterschiedlichen, krautartigen Gewächsen aus der Familie der Musa.</German>
       <Spanish>Una banana es una fruta comestible, botanicamente una baya, producida por varios tipos de grandes plantas herbáceas del género Musa.</Spanish>
       <Italian>Una banana è un frutto commestibile, nello specifico una bacca cuoiosa, prodotto da un gran numero di grandi pianti erbacee dotate di fiori, della famiglia delle Musaceae.</Italian>
       <Russian>Банан - это съедобный фрукт, ягода с ботанической точки зрения, произрастающий на нескольких видах травянистых растениях рода Банан (Musa).</Russian>

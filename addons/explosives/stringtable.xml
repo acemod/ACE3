@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Explosives">
     <Key ID="STR_ACE_Explosives_Menu">
@@ -492,7 +491,7 @@
     </Key>
     <Key ID="STR_ACE_Explosives_Pickup">
       <English>Pick up</English>
-      <German>Aufnehmen</German>
+      <German>Aufheben</German>
       <Spanish>Recoger</Spanish>
     </Key>
   </Package>

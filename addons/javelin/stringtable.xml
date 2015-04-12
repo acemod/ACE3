@@ -3,10 +3,12 @@
   <Package name="WEP_JAVELIN">
     <Key ID="STR_ACE_WEP_JAVELIN_LockTarget">
       <English>Lock Target (Hold)</English>
+      <German>Ziel aufschalten</German>
       <Russian>Захватить цель (удерживать)</Russian>
     </Key>
     <Key ID="STR_ACE_WEP_JAVELIN_CycleFireMode">
       <English>Cycle Fire Mode</English>
+      <German>Wechsle Feuermodus</German>
       <Russian>Переключение режимов огня</Russian>
     </Key>
   </Package>

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-07 -->
 <Project name="Arma2">
   <Package name="ACE2">
     <Container name="frag">
       <Key ID="STR_DN_ACE_FRAG">
         <English>Disable Fragmentation</English>
+        <German>Keine Schrapnelle</German>
         <Czech>Zakázat fragmentaci granátů</Czech>
         <German>Weapons: Keine Schrapnelle</German>
         <Spanish>Desactivar fragmentación</Spanish>
