@@ -21,4 +21,5 @@ if (count (profileNamespace getVariable ["ACE_ATragMX_gunList", []]) > 0) then {
 };
 
 [] call FUNC(init);
-//[] call FUNC(sord); // Connection to Vector
+
+["RangerfinderData", {_this call FUNC(sord)}] call EFUNC(common,addEventHandler);
