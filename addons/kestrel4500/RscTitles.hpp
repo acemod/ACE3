@@ -65,7 +65,7 @@ class Kestrel4500_Display
             type=0;
             font="TahomaB";
             SizeEX=0.025;
-            idc=-1;
+            idc=74000;
             style=48;
             x=safezoneX;
             y=safezoneY;
@@ -73,7 +73,7 @@ class Kestrel4500_Display
             h=1.024*4/3;
             colorBackground[]={1,1,1,1};
             colorText[]={1,1,1,1};
-            text=PATHTOF(UI\kestrel4500.paa);
+            text=PATHTOF(UI\Kestrel4500.paa);
         };
         class POWER: Kestrel4500_RscButton
         {
@@ -237,7 +237,7 @@ class RscTitles
                 h=1.024*4/3*0.75;
                 colorBackground[]={1,1,1,1};
                 colorText[]={1,1,1,1};
-                text=PATHTOF(UI\kestrel4500.paa);
+                text=PATHTOF(UI\Kestrel4500.paa);
             };
             class RscTextTop: Kestrel4500_RscText
             {

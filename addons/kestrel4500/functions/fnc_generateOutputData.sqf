@@ -47,6 +47,18 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
     _windSpeed = cos(_playerDir - _windDir) * _windSpeed;
 };
 
+if (_windSpeed > 0.3) then {
+    GVAR(MeasuredWindSpeed) = _windSpeed;
+} else {
+    GVAR(MeasuredWindSpeed) = GVAR(MeasuredWindSpeed) * 0.99;
+    if (GVAR(MeasuredWindSpeed) < 0.05) then {
+        GVAR(MeasuredWindSpeed) = 0;
+    };
+};
+
+GVAR(WheelState) = GVAR(WheelState) + (ceil(GVAR(MeasuredWindSpeed)) min 1) max GVAR(MeasuredWindSpeed);
+if (GVAR(WheelState) > 1000) then { GVAR(WheelState) = 0 };
+
 GVAR(Direction) = 4 * floor(_playerDir / 90);
 if (_playerDir % 90 > 10) then { GVAR(Direction) = GVAR(Direction) + 1};
 if (_playerDir % 90 > 35) then { GVAR(Direction) = GVAR(Direction) + 1};
@@ -69,7 +81,7 @@ switch (GVAR(Menu)) do {
     };
     case 1: { // Wind SPD
         if (!GVAR(MinAvgMax)) then {
-            _textCenterBig = Str(round(abs(_windSpeed) * 10) / 10);
+            _textCenterBig = Str(round(abs(GVAR(MeasuredWindSpeed)) * 10) / 10);
         } else {
             _textCenterLine1Left = "Max";
             _textCenterLine2Left = "Avg";
@@ -95,11 +107,11 @@ switch (GVAR(Menu)) do {
     case 2: { // CROSSWIND
         if (!GVAR(MinAvgMax)) then {
             if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-                _textCenterBig = Str(round(abs(sin(GVAR(RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
-                _textInfoLine1 = format["%1 m/s @ %2", round((cos(_playerDir - _windDir) * _windSpeed) * 10) / 10, round(_playerDir)];
+                _textCenterBig = Str(round(abs(sin(GVAR(RefHeading) - _playerDir) * GVAR(MeasuredWindSpeed)) * 10) / 10);
+                _textInfoLine1 = format["%1 m/s @ %2", round((cos(_playerDir - _windDir) * GVAR(MeasuredWindSpeed)) * 10) / 10, round(_playerDir)];
             } else {
-                _textCenterBig = Str(round(abs(sin(GVAR(RefHeading)) * _windSpeed) * 10) / 10);
-                _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_windDir)];
+                _textCenterBig = Str(round(abs(sin(GVAR(RefHeading)) * GVAR(MeasuredWindSpeed)) * 10) / 10);
+                _textInfoLine1 = format["%1 m/s @ %2", round(GVAR(MeasuredWindSpeed) * 10) / 10, round(_windDir)];
             };
             _textInfoLine2 = "- set heading";
         } else {
@@ -127,11 +139,11 @@ switch (GVAR(Menu)) do {
     case 3: { // HEADWIND
         if (!GVAR(MinAvgMax)) then {
             if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-                _textCenterBig = Str(round(abs(cos(GVAR(RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
-                _textInfoLine1 = format["%1 m/s @ %2", round((cos(_playerDir - _windDir) * _windSpeed) * 10) / 10, round(_playerDir)];
+                _textCenterBig = Str(round(abs(cos(GVAR(RefHeading) - _playerDir) * GVAR(MeasuredWindSpeed)) * 10) / 10);
+                _textInfoLine1 = format["%1 m/s @ %2", round((cos(_playerDir - _windDir) * GVAR(MeasuredWindSpeed)) * 10) / 10, round(_playerDir)];
             } else {
-                _textCenterBig = Str(round(abs(cos(GVAR(RefHeading)) * _windSpeed) * 10) / 10);
-                _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_windDir)];
+                _textCenterBig = Str(round(abs(cos(GVAR(RefHeading)) * GVAR(MeasuredWindSpeed)) * 10) / 10);
+                _textInfoLine1 = format["%1 m/s @ %2", round(GVAR(MeasuredWindSpeed) * 10) / 10, round(_windDir)];
             };
             _textInfoLine2 = "- set heading";
         } else {
@@ -207,7 +219,7 @@ switch (GVAR(Menu)) do {
     case 8: { // User Screen 1
         _textCenterLine1Left = Str(round(_playerDir));
         _textCenterLine2Left = Str(round(EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2)));
-        _textCenterLine3Left = Str(round(abs(_windSpeed) * 10) / 10);
+        _textCenterLine3Left = Str(round(abs(GVAR(MeasuredWindSpeed)) * 10) / 10);
         _textCenterLine1Right = GVAR(Directions) select GVAR(Direction);
         _textCenterLine2Right = "m";
         _textCenterLine3Right = "m/s";

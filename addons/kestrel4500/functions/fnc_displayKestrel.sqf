@@ -27,8 +27,6 @@
 #define __ctrlInfoLine1 (__dsp displayCtrl 75400)
 #define __ctrlInfoLine2 (__dsp displayCtrl 75401)
 
-private ["_outputData"];
-
 if (GVAR(Overlay)) exitWith {
     GVAR(Overlay) = false;
     3 cutText ["", "PLAIN"];
@@ -45,6 +43,8 @@ if (GVAR(Kestrel4500) && dialog) then {
 GVAR(Overlay) = true;
 
 [{
+    private ["_outputData", "_updateTimer"];
+    
     // abort condition
     if (!GVAR(Overlay) || {!(("ACE_Kestrel4500" in (uniformItems ACE_player)) || ("ACE_Kestrel4500" in (vestItems ACE_player)))}) exitWith {
         GVAR(Overlay) = false;
@@ -54,7 +54,16 @@ GVAR(Overlay) = true;
     
     _outputData = [] call FUNC(generateOutputData);
     
+    if (diag_tickTime > GVAR(updateTimer)) then {
+        GVAR(updateTimer) = diag_tickTime + 1;
+        GVAR(outputData) = _outputData;
+    };
+    
+    _outputData = GVAR(outputData);
+    
     3 cutRsc ["RscKestrel4500", "PLAIN", 1, false];
+    
+    __ctrlKestrel4500 ctrlSetText format [QUOTE(PATHTOF(UI\Kestrel4500_%1.paa)), floor(GVAR(WheelState) % 7)];
     
     __ctrlTop ctrlSetText (_outputData select 0);
     __ctrlCenterBig ctrlSetText (_outputData select 1);
@@ -72,6 +81,6 @@ GVAR(Overlay) = true;
 
     __ctrlInfoLine1 ctrlSetText (_outputData select 8);
     __ctrlInfoLine2 ctrlSetText (_outputData select 9);
-}, 1, _this select 0] call CBA_fnc_addPerFrameHandler;
+}, 0.01, []] call CBA_fnc_addPerFrameHandler;
 
 true

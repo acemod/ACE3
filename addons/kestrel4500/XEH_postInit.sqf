@@ -16,5 +16,10 @@ GVAR(Direction) = 0;
 
 GVAR(RefHeading) = 0;
 
+GVAR(updateTimer) = 0;
+GVAR(outputData) = ["", "", "", "", "", "", "", "", "", ""];
+GVAR(MeasuredWindSpeed) = 0;
+GVAR(WheelState) = 0;
+
 GVAR(Kestrel4500) = false;
 GVAR(Overlay) = false;
