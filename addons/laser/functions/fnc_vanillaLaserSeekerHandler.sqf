@@ -19,8 +19,8 @@ _owner = _this select 1;
 
 // Not in a vehicle....
 // @TODO: handle lasering from turrets
-if( (vehicle _owner) == _owner && alive _owner ) exitWith {
-    [(eyePos _owner), (eyeDirection _owner)]
+if( (vehicle _emmiter) == _emmiter && alive _emmiter && (currentWeapon _emmiter) == "LaserDesignator") exitWith {
+    [(eyePos _emmiter), (eyeDirection _emmiter)]
 };
 
 [-1,-1]
