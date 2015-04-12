@@ -3,7 +3,7 @@
   <Package name="SwitchUnits">
     <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
       <English>Switched unit</English>
-      <French>Unité à transférée</French>
+      <French>Unité à transférer</French>
       <German>Einheit gewechselt</German>
       <Russian>Юнит переключен</Russian>
       <Czech>Prohozená jednotka</Czech>
