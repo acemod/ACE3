@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+systemChat format["WD_simulationInterval: %1", GVAR(simulationInterval)];
+
 [{
     private ["_bullet", "_airFriction", "_args", "_deltaT", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueVelocity", "_dragRef", "_drag", "_accelRef", "_accel"];
 

@@ -28,6 +28,8 @@ _ammo     = _this select 4;
 _magazine = _this select 5;
 _bullet   = _this select 6;
 
+systemChat format["AB_simulationRadius: %1", GVAR(simulationRadius)];
+
 _abort = false;
 
 if (!hasInterface) exitWith {};
