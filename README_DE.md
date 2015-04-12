@@ -25,7 +25,7 @@ Die Mod ist  **modular gestaltet** — beinahe jede PBO kann entfernt werden, so
 
 ### Features
 *   Verbessertes medizinisches System
-*   Logistik System: U.a. Transport und Fahrzeugreperatur
+*   Logistik System: U.a. Transport und Fahrzeugreparatur
 *   Sprengstoffsystem mit unterschiedlichen Zündern
 *   Gefangenensystem
 *   Reale Namen für Arma 3 Fahrzeuge und Waffen
