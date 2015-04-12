@@ -8,6 +8,7 @@ class CfgWeapons {
         scope = 2;
         displayName = "$STR_ACE_Kestrel_Name";
         descriptionShort = "$STR_ACE_Kestrel_Description";
+        model = PATHTOF(kestrel4500.p3d);
         picture = PATHTOF(UI\Kestrel4500.paa);
         icon = "iconObject_circle";
         mapSize = 0.034;
