@@ -26,6 +26,9 @@ class Extended_InitPost_EventHandlers {
         class GVAR(forceWalk) {
             init = QUOTE(if (local (_this select 0)) then {_this call FUNC(applyForceWalkStatus);};);
         };
+        class GVAR(muteUnit) {
+            init = QUOTE(_this call FUNC(muteUnitHandleInitPost));
+        };
     };
 };
 

@@ -33,6 +33,6 @@ _speaker = speaker _unit;
 
 if (_speaker == "ACE_NoVoice") exitWith {};
 
-["setSpeaker", _unit, [_unit, "ACE_NoVoice"]] call FUNC(targetEvent);
+["setSpeaker", [_unit, "ACE_NoVoice"]] call FUNC(globalEvent);
 
 _unit setVariable ["ACE_OriginalSpeaker", _speaker, true];
