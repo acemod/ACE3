@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2015-03-17 -->
+<Project name="ACE">
+  <Package name="Disarming">
+    <Key ID="STR_ACE_Disarming_OpenInventory">
+      <English>Open Inventory</English>
+    </Key>
+  </Package>
+</Project>

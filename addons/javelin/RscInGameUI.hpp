@@ -10,9 +10,9 @@ class RscLine;
 // Taken from AGM for optics management.
 
 class RscInGameUI {
-    class RscOptics_titan {
+    class ACE_RscOptics_javelin {
         idd = 300;
-        controls[] = {"ACE_javelin_elements_group"};
+        controls[] = { "ACE_javelin_elements_group", "CA_Distance", "ACE_Targeting" }; //, "ACE_TargetingConstrains", "ACE_TargetingGate", "ACE_TargetingLines"};
         onLoad = QUOTE(_this call FUNC(onOpticLoad));
         onUnload = "uiNameSpace setVariable ['ACE_RscOptics_javelin',nil];";
         
@@ -94,6 +94,7 @@ class RscInGameUI {
                             x = "((SafezoneW -SafezoneH*3/4)/2)+ (0.307/4)*3*SafezoneH - SafezoneX";
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
+                        /*
                         class StadiaL: RscLine {
                             x = "0.4899*SafezoneW - SafezoneX";
                             y = "0.171*SafezoneH - SafezoneY";
@@ -136,6 +137,7 @@ class RscInGameUI {
                             h = 0;
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
+                        */
                     };
                 };
                 class ACE_javelin_NFOV_mode_off: ACE_javelin_Day_mode_off {
@@ -167,6 +169,7 @@ class RscInGameUI {
                             y = "0.031*SafezoneH - SafezoneY";
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
+                        /*
                         class StadiaL: RscLine {
                             x = "0.4788*SafezoneW - SafezoneX";
                             y = "0.171*SafezoneH - SafezoneY";
@@ -209,15 +212,83 @@ class RscInGameUI {
                             h = "0.1895*SafezoneH";
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
+                        */
                     };
                 };
-                /*
-                class TargetingConstrains: RscControlsGroup {
-                    idc = 699100;
+
+                class ACE_javelin_SEEK_off: ACE_javelin_Day_mode_off {
+                    idc = 699000;
+                    x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.863/4)*3*SafezoneH - SafezoneX";
+                    text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\seek_co.paa";
+                };
+                class ACE_javelin_SEEK: ACE_javelin_SEEK_off {
+                    idc = 166;
+                    colorText[] = {0.2941,0.8745,0.2157,0};
+                };
+                class ACE_javelin_Missle_off: ACE_javelin_Day_mode_off {
+                    idc = 1032;
+                    x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (-0.134/4)*3*SafezoneH - SafezoneX";
+                    y = "(SafezoneY + 0.208*SafezoneH) - SafezoneY";
+                    colorText[] = {0.2941,0.2941,0.2941,1};
+                    text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\missle_co.paa";
+                };
+                class ACE_javelin_Missle: ACE_javelin_Missle_off {
+                    idc = 167;
+                    colorText[] = {0.9255,0.5216,0.1216,0};
+                };
+                class ACE_javelin_CLU_off: ACE_javelin_Missle_off {
+                    idc = 1027;
+                    y = "(SafezoneY + 0.436*SafezoneH) - SafezoneY";
+                    text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\clu_co.paa";
+                };
+                class ACE_javelin_HangFire_off: ACE_javelin_Missle_off {
+                    idc = 1028;
+                    y = "(SafezoneY + 0.669*SafezoneH) - SafezoneY";
+                    text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\hangfire_co.paa";
+                };
+                class ACE_javelin_TOP_off: ACE_javelin_Day_mode_off {
+                    idc = 699001;
+                    x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (1.023/4)*3*SafezoneH - SafezoneX";
+                    y = "(SafezoneY + 0.208*SafezoneH) - SafezoneY";
+                    text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\top_co.paa";
+                    colorText[] = {0.2941,0.8745,0.2157,1};
+                };
+                class ACE_javelin_DIR: ACE_javelin_Day_mode {
+                    idc = 699002;
+                    x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (1.023/4)*3*SafezoneH - SafezoneX";
+                    y = "(SafezoneY + 0.436*SafezoneH)    - SafezoneY";
+                    text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\dir_co.paa";
+                    colorText[] = {0.2941,0.2941,0.2941,1};
+                };
+                class ACE_javelin_FLTR_mode_off: ACE_javelin_Day_mode_off {
+                    idc = 1002;
+                    x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (1.023/4)*3*SafezoneH - SafezoneX";
+                    y = "(SafezoneY + 0.669*SafezoneH)    - SafezoneY";
+                    text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\fltr_co.paa";
+                };
+                class ACE_javelin_FLTR_mode: ACE_javelin_FLTR_mode_off {
+                    idc = 161;
+                    colorText[] = {0.2941,0.8745,0.2157,1};
+                };
+            };
+        };
+        class ACE_Targeting : RscControlsGroup {
+            idc = 6999;
+            
+            x = "SafezoneX";
+			y = "SafezoneY";
+			w = "SafezoneW";
+			h = "SafezoneH";
+            
+            enabled = 0;
+            class Controls {
+                class ACE_TargetingConstrains: RscControlsGroup {
                     x = "SafezoneX";
                     y = "SafezoneY";
                     w = "SafezoneW-SafezoneX";
                     h = "SafezoneH-SafezoneY";
+                    
+                    enabled = 0;
                     class VScrollbar {
                         autoScrollSpeed = -1;
                         autoScrollDelay = 5;
@@ -258,18 +329,18 @@ class RscInGameUI {
                             idc = 699105;
                             text = PATHTOF(data\javelin_ui_border_ca.paa);
                             colorText[] = {0,0,0,1};
-                            x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
+                            x = "((SafezoneW -(3.1/4)*SafezoneH)/2) - SafezoneX";
                             y = "0.15*SafezoneH-SafezoneY";
-                            w = "(3/4)*SafezoneH";
+                            w = "(3.1/4)*SafezoneH";
                             h = "0.7*SafezoneH";
                         };
                     };
                 };
                 
-                class TargetingGate: TargetingConstrains {
+                class ACE_TargetingGate : ACE_TargetingConstrains {
                     idc = 699200;
                     class Controls {
-                        class TargetingGateTL: TargetingConstrains {
+                        class TargetingGateTL: ACE_TargetingConstrains {
                             x = "((SafezoneW -(3/4)*SafezoneH)/2) - SafezoneX";
                             y = "0.15*SafezoneH - SafezoneY";
                             idc = 699201;
@@ -351,8 +422,9 @@ class RscInGameUI {
                         };
                     };
                 };
-                
-                class TargetingLines: TargetingConstrains {
+            
+            
+                class ACE_TargetingLines: ACE_TargetingConstrains {
                     idc = 699300;
                     class Controls {
                         class LineH: RscLine {
@@ -372,62 +444,6 @@ class RscInGameUI {
                             colorText[] = {0.8745,0.8745,0.8745,1};
                         };
                     };
-                };
-                */
-                
-                class ACE_javelin_SEEK_off: ACE_javelin_Day_mode_off {
-                    idc = 699000;
-                    x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.863/4)*3*SafezoneH - SafezoneX";
-                    text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\seek_co.paa";
-                };
-                class ACE_javelin_SEEK: ACE_javelin_SEEK_off {
-                    idc = 166;
-                    colorText[] = {0.2941,0.8745,0.2157,0};
-                };
-                class ACE_javelin_Missle_off: ACE_javelin_Day_mode_off {
-                    idc = 1032;
-                    x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (-0.134/4)*3*SafezoneH - SafezoneX";
-                    y = "(SafezoneY + 0.208*SafezoneH) - SafezoneY";
-                    colorText[] = {0.2941,0.2941,0.2941,1};
-                    text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\missle_co.paa";
-                };
-                class ACE_javelin_Missle: ACE_javelin_Missle_off {
-                    idc = 167;
-                    colorText[] = {0.9255,0.5216,0.1216,0};
-                };
-                class ACE_javelin_CLU_off: ACE_javelin_Missle_off {
-                    idc = 1027;
-                    y = "(SafezoneY + 0.436*SafezoneH) - SafezoneY";
-                    text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\clu_co.paa";
-                };
-                class ACE_javelin_HangFire_off: ACE_javelin_Missle_off {
-                    idc = 1028;
-                    y = "(SafezoneY + 0.669*SafezoneH) - SafezoneY";
-                    text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\hangfire_co.paa";
-                };
-                class ACE_javelin_TOP_off: ACE_javelin_Day_mode_off {
-                    idc = 699001;
-                    x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (1.023/4)*3*SafezoneH - SafezoneX";
-                    y = "(SafezoneY + 0.208*SafezoneH) - SafezoneY";
-                    text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\top_co.paa";
-                    colorText[] = {0.2941,0.8745,0.2157,1};
-                };
-                class ACE_javelin_DIR: ACE_javelin_Day_mode {
-                    idc = 699002;
-                    x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (1.023/4)*3*SafezoneH - SafezoneX";
-                    y = "(SafezoneY + 0.436*SafezoneH)    - SafezoneY";
-                    text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\dir_co.paa";
-                    colorText[] = {0.2941,0.2941,0.2941,1};
-                };
-                class ACE_javelin_FLTR_mode_off: ACE_javelin_Day_mode_off {
-                    idc = 1002;
-                    x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (1.023/4)*3*SafezoneH - SafezoneX";
-                    y = "(SafezoneY + 0.669*SafezoneH)    - SafezoneY";
-                    text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\fltr_co.paa";
-                };
-                class ACE_javelin_FLTR_mode: ACE_javelin_FLTR_mode_off {
-                    idc = 161;
-                    colorText[] = {0.2941,0.8745,0.2157,1};
                 };
             };
         };
