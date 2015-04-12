@@ -15,7 +15,7 @@ class CfgVehicles {
                 displayName = "Simulation Interval";
                 description = "Defines the interval between every calculation step";
                 typeName = "NUMBER";
-                defaultValue = 0;
+                defaultValue = 0.05;
             };
             class simulationRadius {
                 displayName = "Simulation Radius";

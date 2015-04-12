@@ -3,7 +3,7 @@ class ACE_Settings {
         displayName = "Simulation Interval";
         description = "Defines the interval between every calculation step";
         typeName = "SCALAR";
-        value = 0;
+        value = 0.05;
     };
     class GVAR(simulationRadius) {
         displayName = "Simulation Radius";
