@@ -50,7 +50,8 @@ FUNC(laserHudDesignatePFH) = {
              _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
         };
         
-        _localLaserTarget setPosASL _laserResultPosition;
+        // @TODO: Nou gets to field all tickets about missing lasers.
+        //_localLaserTarget setPosASL _laserResultPosition;
         
 #ifdef DEBUG_MODE_FULL
         drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _laserResultPosition, 0.75, 0.75, 0, "", 0.5, 0.025, "TahomaB"];
@@ -69,9 +70,10 @@ if(!GVAR(active)) then {
     _laserUuid = [(vehicle ACE_player), ACE_player, FUNC(findLaserSource), 1550, 1001, 1] call EFUNC(laser,laserOn);
     
     // @TODO: Create the local target for the players side
-    _localLaserTarget = "LaserTargetW" createVehicleLocal (getpos ACE_player);
+    // @TODO: Nou gets to field all tickets about missing lasers.
+    //_localLaserTarget = "LaserTargetW" createVehicleLocal (getpos ACE_player);
          
-    _handle = [FUNC(laserHudDesignatePFH), 0.25, [ACE_player, _laserUuid, _localLaserTarget]] call cba_fnc_addPerFrameHandler;
+    _handle = [FUNC(laserHudDesignatePFH), 0.25, [ACE_player, _laserUuid, nil]] call cba_fnc_addPerFrameHandler;
 } else {
     [] call FUNC(laserHudDesignateOff);
     [] call FUNC(laserHudDesignateOn);
