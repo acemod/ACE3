@@ -21,7 +21,7 @@
 
 Da die MOD vollkommen als **open-source** Projekt gestaltet ist, steht es jedem frei Änderungen vorzuschlagen, oder seine eigene, modifizierte Version zu erstellen, solange diese ebenfalls der Öffentlichkeit zugänglich ist und mit GNU General Public License übereinstimmt. (Weitere Informationen ist der Lizenzdatei in diesem Projekt entnehmbar)
 
-Die Mod ist  **modular gestaltet** — beinahe jede PBO kann entfernt werden, sodass jede Gemeinschaft ihre eigene Version der Mod unterhalten kann. Dies kann zum Beispiel einige Funktionalitäten auschließen, da das Feature nicht gewünscht ist, oder es mit einer anderen MOD in Konflikt gerät etc. .Ebenfalls können viele Einstellungen vom Missionsersteller vorgenommen werden (u.a. am medizinischem System), sodass eine individuelle Erfahrung gewährleistet wird. 
+Die Mod ist  **modular gestaltet** — beinahe jede PBO kann entfernt werden, sodass jede Gemeinschaft ihre eigene Version der Mod unterhalten kann. Dies kann zum Beispiel einige Funktionalitäten ausschließen, da das Feature nicht gewünscht ist, oder es mit einer anderen MOD in Konflikt gerät etc. .Ebenfalls können viele Einstellungen vom Missionsersteller vorgenommen werden (u.a. am medizinischem System), sodass eine individuelle Erfahrung gewährleistet wird. 
 
 ### Features
 *   Verbessertes medizinisches System
