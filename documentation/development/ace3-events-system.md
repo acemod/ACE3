@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: ACE3 Events System
-group: dev
+group: development
 parent: wiki
 order: 3
 ---

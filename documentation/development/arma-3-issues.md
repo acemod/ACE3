@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Arma 3 Issues
-group: dev
+group: development
 parent: wiki
 order: 6
 ---

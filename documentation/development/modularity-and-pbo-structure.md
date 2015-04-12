@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Modularity And PBO Structure
-group: dev
+group: development
 parent: wiki
 order: 4
 ---
