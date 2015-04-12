@@ -12,7 +12,7 @@
     </Key>
     <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
       <English>This unit is too close to the enemy.</English>
-      <French>Cette unité est trop prêt d'un ennemi.</French>
+      <French>Cette unité est trop près d'un ennemi.</French>
       <German>Diese Einheit ist zu nah am Feind.</German>
       <Russian>Юнит слишком близок к противнику</Russian>
       <Czech>Tato jednotka je moc blízko k nepříteli.</Czech>
