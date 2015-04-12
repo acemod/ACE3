@@ -307,4 +307,38 @@ class RscTitles
             };
         };
     };
+    
+    class RscKestrel4500_Preload {
+        idd = -1;
+        movingEnable = 0;
+        duration = 1e+011;
+        fadein = 0;
+        fadeout = 0;
+        class controls {
+            class Preload_0 {
+                text = PATHTOF(UI\Kestrel4500_0.paa);
+            };
+            class Preload_1 {
+                text = PATHTOF(UI\Kestrel4500_1.paa);
+            };
+            class Preload_2 {
+                text = PATHTOF(UI\Kestrel4500_2.paa);
+            };
+            class Preload_3 {
+                text = PATHTOF(UI\Kestrel4500_3.paa);
+            };
+            class Preload_4 {
+                text = PATHTOF(UI\Kestrel4500_4.paa);
+            };
+            class Preload_5 {
+                text = PATHTOF(UI\Kestrel4500_5.paa);
+            };
+            class Preload_6 {
+                text = PATHTOF(UI\Kestrel4500_6.paa);
+            };
+            class Preload_7 {
+                text = PATHTOF(UI\Kestrel4500_7.paa);
+            };
+        };
+    };
 };
