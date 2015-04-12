@@ -1,7 +1,8 @@
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-PARAMS_1(_laserTarget);
-
 TRACE_1("enter", _this);
+
+PARAMS_1(_laserTarget);
 
 // Add the target to the global targets array
 // Everyone tracks them
@@ -9,7 +10,9 @@ TRACE_1("enter", _this);
 PUSH(ACE_LASERS, _laserTarget);
 
 // Check the vehicle, otherwise use the default
-_laserTarget setVariable ["ACE_LASER_CODE", ACE_DEFAULT_LASER_CODE, false];
+_laserTarget setVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE, false];
+_laserTarget setVariable [QGVAR(beamSpread), ACE_DEFAULT_LASER_BEAMSPREAD, false];
+_laserTarget setVariable [QGVAR(waveLength), ACE_DEFAULT_LASER_WAVELENGTH, false];
 
 // Clean the lasers of any null objects while we are here
 REM(ACE_LASERS, objNull);
@@ -18,9 +21,11 @@ if(!(local _laserTarget)) exitWith { };
 
 // The target is local, so its on this client
 if(!isDedicated) then {
-    _laserTarget setVariable [QGVAR(owner), ACE_player, true];
-    
-    [FUNC(laserTargetPFH), 0, [_laserTarget, ACE_player]] call cba_fnc_addPerFrameHandler;
+    // @TODO: Get ownership variables and set them on the vehicle
+
+    _uuid = [(vehicle ACE_player), ACE_player, QFUNC(vanillaLaserSeekerHandler), ACE_DEFAULT_LASER_WAVELENGTH, ACE_DEFAULT_LASER_CODE, ACE_DEFAULT_LASER_BEAMSPREAD] call FUNC(laserOn);
+    _laserTarget setVariable [QGVAR(uuid), _uuid, false];   
+   [FUNC(laserTargetPFH), 1, [_laserTarget, ACE_player, _uuid]] call cba_fnc_addPerFrameHandler;
 } else {
     // server side ownership of laser 
     _laserTarget setVariable [QGVAR(owner), nil, true];

@@ -20,7 +20,7 @@ PREP(handleLaserOff);
 PREP(drawVisibleLaserTargets);
 
 PREP(laser_init);
-
+PREP(vanillaLaserSeekerHandler);
 PREP(laserTargetPFH);
 
 ACE_LASERS = [];
