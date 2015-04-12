@@ -7,7 +7,7 @@
             <Spanish>Avanzada Misiles Orientación</Spanish>
             <French>Avancée Missile orientation</French>
             <Polish>Asystent Missile</Polish>
-            <German>Erweiterte Missile Guidance</German>
+            <German>Erweitertes Raketenlenksystem</German>
             <Czech>Pokročilé řízení střel</Czech>
             <Italian>Avanzato Missile Guidance</Italian>
             <Portuguese>Avançado Missile Guidance</Portuguese>
@@ -19,7 +19,7 @@
             <Spanish></Spanish>
             <French></French>
             <Polish></Polish>
-            <German></German>
+            <German>Aktiviert erweitertes Raketenlenksystem und Auswahl von verschiedenen Raketen und Feuermodi</German>
             <Czech>Povoluje pokročilou mechaniku řízení střel.</Czech>
             <Italian></Italian>
             <Portuguese></Portuguese>
@@ -33,7 +33,7 @@
           <Spanish></Spanish>
           <French></French>
           <Polish></Polish>
-          <German></German>
+          <German>Hydra-70 DAGR Rakete</German>
           <Czech>Hydra-70 DAGR</Czech>
           <Italian></Italian>
           <Portuguese></Portuguese>
@@ -45,7 +45,7 @@
           <Spanish></Spanish>
           <French></French>
           <Polish></Polish>
-          <German></German>
+          <German>DAGR</German>
           <Czech>DAGR</Czech>
           <Italian></Italian>
           <Portuguese></Portuguese>
@@ -57,7 +57,7 @@
           <Spanish></Spanish>
           <French></French>
           <Polish></Polish>
-          <German></German>
+          <German>Hydra-70 DAGR lasergelenkte Rakete</German>
           <Czech>Hydra-70 DAGR laserem naváděná střela</Czech>
           <Italian></Italian>
           <Portuguese></Portuguese>
@@ -71,7 +71,7 @@
           <Spanish></Spanish>
           <French></French>
           <Polish></Polish>
-          <German></German>
+          <German>Hellfire II AGM-114K Rakete</German>
           <Czech>Hellfire II AGM-114K</Czech>
           <Italian></Italian>
           <Portuguese></Portuguese>
@@ -83,7 +83,7 @@
           <Spanish></Spanish>
           <French></French>
           <Polish></Polish>
-          <German></German>
+          <German>AGM-114K</German>
           <Czech>AGM-114K</Czech>
           <Italian></Italian>
           <Portuguese></Portuguese>
@@ -95,7 +95,7 @@
           <Spanish></Spanish>
           <French></French>
           <Polish></Polish>
-          <German></German>
+          <German>Hellfire II AGM-114K lasergelenkte Rakete</German>
           <Czech>Hellfire II AGM-114K laserem naváděná střela</Czech>
           <Italian></Italian>
           <Portuguese></Portuguese>
