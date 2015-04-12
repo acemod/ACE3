@@ -36,6 +36,9 @@ FUNC(laserHudDesignatePFH) = {
     };
     _forceUpdateTime = _args select 3;
 
+    // @TODO: We don't have anything here we need to do the calculations for right now
+    /*
+    
     _gunnerInfo = [_vehicle, (currentWeapon _vehicle)] call CBA_fnc_getFirer;
     _turretInfo = [_vehicle, _gunnerInfo select 1] call EFUNC(common,getTurretDirection);
     _povPos = _turretInfo select 0;
@@ -43,24 +46,22 @@ FUNC(laserHudDesignatePFH) = {
     _laserCode = (vehicle ACE_player) getVariable[QGVAR(currentCode), ACE_DEFAULT_LASER_CODE];
     _waveLength = (vehicle ACE_player) getVariable[QGVAR(currentWaveLength), ACE_DEFAULT_LASER_WAVELENGTH];
     
+    
     _laserResult = [_povPos, [_waveLength,_waveLength], _laserCode] call EFUNC(laser,seekerFindLaserSpot);
     _laserResultPosition = _laserResult select 0;
     TRACE_1("Search", _laserResult);
 
     if((count _laserResult) > 0) then {
-        if(diag_tickTime > _forceUpdateTime) then {
-            ["ace_fcs_forceUpdate", []] call ace_common_fnc_localEvent;
-             _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
-        };
-        
         // @TODO: Nou gets to field all tickets about missing lasers.
         //_localLaserTarget setPosASL _laserResultPosition;
-        
-#ifdef DEBUG_MODE_FULL
-        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _laserResultPosition, 0.75, 0.75, 0, "", 0.5, 0.025, "TahomaB"];
-        drawLine3d [ASLToATL _povPos, ASLToATL _laserResultPosition, [0,0,1,1] ];
-#endif
     };
+    */
+    
+    if(diag_tickTime > _forceUpdateTime) then {
+        ["ace_fcs_forceUpdate", []] call ace_common_fnc_localEvent;
+         _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
+    };
+    
     _this set[0, _args];
 };
 
@@ -82,7 +83,7 @@ if(!GVAR(active)) then {
     // @TODO: Nou gets to field all tickets about missing lasers.
     //_localLaserTarget = "LaserTargetW" createVehicleLocal (getpos ACE_player);
          
-    _handle = [FUNC(laserHudDesignatePFH), 0.25, [ACE_player, _laserUuid, nil]] call cba_fnc_addPerFrameHandler;
+    _handle = [FUNC(laserHudDesignatePFH), 0.1, [ACE_player, _laserUuid, nil]] call cba_fnc_addPerFrameHandler;
 } else {
     [] call FUNC(laserHudDesignateOff);
     [] call FUNC(laserHudDesignateOn);
