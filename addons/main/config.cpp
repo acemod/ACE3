@@ -585,3 +585,5 @@ class CfgSettings {
  */
     };
 };
+
+#include "CfgModuleCategories.hpp"
