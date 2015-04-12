@@ -13,5 +13,6 @@ PREP(calculateWindSpeed);
 PREP(displayProtractor);
 PREP(handleFired);
 PREP(initializeTerrainExtension);
+PREP(initModuleSettings);
 
 ADDON = true;

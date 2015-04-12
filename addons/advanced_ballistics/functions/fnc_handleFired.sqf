@@ -28,20 +28,22 @@ _ammo     = _this select 4;
 _magazine = _this select 5;
 _bullet   = _this select 6;
 
+_abort = false;
+
 if (!hasInterface) exitWith {};
 if (!alive _bullet) exitWith {};
 if (!GVAR(enabled)) exitWith {};
 if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
 if (underwater _unit) exitWith {};
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
-if (_unit distanceSqr ACE_player > 9000000) exitWith {};
-if (GVAR(ONLY_ACTIVE_FOR_LOCAL_PLAYER) && _unit != ACE_player) exitWith {};
-//if (!GVAR(VehicleGunnerEnabled) && !(_unit isKindOf "Man")) exitWith {};
-if (GVAR(DISABLED_IN_FULL_AUTO_MODE) && getNumber(configFile >> "cfgWeapons" >> _weapon >> _mode >> "autoFire") == 1) exitWith {};
+if (_unit distanceSqr ACE_player > GVAR(simulationRadius)) exitWith {};
+if (GVAR(onlyActiveForLocalPlayers) && _unit != ACE_player) then { _abort = true; };
+//if (!GVAR(vehicleGunnerEnabled) && !(_unit isKindOf "Man")) then { _abort = true; }; // TODO: We currently do not have firedEHs on vehicles
+if (GVAR(disabledInFullAutoMode) && getNumber(configFile >> "cfgWeapons" >> _weapon >> _mode >> "autoFire") == 1) then { _abort = true; };
 
-// Decide whether normal winddeflection is good enough
-_abort = !(local _unit);
-if (_abort) then {
+systemChat format["%1, %2, %3", getNumber(configFile >> "cfgWeapons" >> _weapon >> _mode >> "autoFire"), _abort, GVAR(disabledInFullAutoMode)];
+
+if (_abort && alwaysSimulateForSnipers) then {
     // The shooter is non local
     if (currentWeapon _unit == primaryWeapon _unit && count primaryWeaponItems _unit > 2) then {
         _opticsName = (primaryWeaponItems _unit) select 2;
@@ -52,6 +54,8 @@ if (_abort) then {
 if (_abort) exitWith {
     [_bullet, getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction")] call EFUNC(winddeflection,updateTrajectoryPFH);
 };
+
+systemChat "AB";
 
 _airFriction = getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction");
 _muzzleVelocity = getNumber(configFile >> "cfgMagazines" >> _magazine >> "initSpeed");
