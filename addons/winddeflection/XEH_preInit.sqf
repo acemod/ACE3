@@ -14,5 +14,6 @@ ADDON = false;
 
 PREP(handleFired);
 PREP(updateTrajectoryPFH);
+PREP(initModuleSettings);
 
 ADDON = true;

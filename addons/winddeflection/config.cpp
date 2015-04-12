@@ -21,13 +21,6 @@ class CfgAddons {
     };
 };
 
-class ACE_Settings {
-    class GVAR(EnableForAI) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSetable = 0;
-    };
-};
-
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
+#include "ACE_Settings.hpp"

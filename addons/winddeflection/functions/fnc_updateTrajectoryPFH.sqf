@@ -47,4 +47,4 @@
     };
     _bullet setVelocity _bulletVelocity;
     
-}, 0, [_this select 0, _this select 1, time]] call CBA_fnc_addPerFrameHandler;
+}, GVAR(simulationInterval), [_this select 0, _this select 1, time]] call CBA_fnc_addPerFrameHandler;

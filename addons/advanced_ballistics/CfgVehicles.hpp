@@ -1,8 +1,8 @@
 class CfgVehicles {
     class ACE_Module;
-    class GVAR(Module): ACE_Module {
+    class GVAR(ModuleSettings): ACE_Module {
         scope = 2;
-        displayName = "Advanced Ballistics [ACE]";
+        displayName = "Advanced Ballistics";
         icon = QUOTE(PATHTOF(UI\Icon_Module_Wind_ca.paa));
         category = "ACE";
         function = QUOTE(DFUNC(initModuleSettings));
