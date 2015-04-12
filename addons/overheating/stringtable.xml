@@ -8,7 +8,7 @@
     </Key>
     <Key ID="STR_ACE_overheating_SettingDisplayTextDesc">
       <English>Display a notification whenever your weapon gets jammed</English>
-      <German>Zeige stets einen Hinweis wenn die Waffe eine Ladehemmung hat</German>
+      <German>Zeige einen Hinweis wenn die Waffe eine Ladehemmung hat</German>
     </Key>
     <Key ID="STR_ACE_Overheating_SpareBarrelName">
       <English>Spare barrel</English>
