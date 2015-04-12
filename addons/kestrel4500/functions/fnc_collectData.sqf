@@ -47,7 +47,7 @@ if (GVAR(MinAvgMaxMode) == 1) then {
 
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
         _windSpeed = (eyePos ACE_player) call EFUNC(advanced_ballistics,calculateWindSpeed);
-        _windSpeed = cos(_playerDir - _windDir) * _windSpeed;
+        _windSpeed = abs(cos(_playerDir - _windDir)) * _windSpeed;
     };
     
     GVAR(MIN) set [1, (GVAR(MIN) select 1) min abs(_windSpeed)];
