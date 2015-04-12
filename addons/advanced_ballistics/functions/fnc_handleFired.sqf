@@ -168,9 +168,8 @@ if (count GVAR(bulletDatabaseFreeIndices) > 0) then {
 
             {
                 _bulletDatabaseEntry = (GVAR(bulletDatabase) select _x);
-                _bullet = _bulletDatabaseEntry select 0;
-                _index  = _bulletDatabaseEntry select 3;
-                if (!alive _bullet) then {
+                if (!alive _bulletDatabaseEntry select 0) then {
+                    _index  = _bulletDatabaseEntry select 3;
                     GVAR(bulletDatabaseOccupiedIndices) = GVAR(bulletDatabaseOccupiedIndices) - [_index];
                     GVAR(bulletDatabaseFreeIndices) pushBack _index;
                 };
