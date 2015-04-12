@@ -61,13 +61,19 @@ FUNC(laserHudDesignatePFH) = {
     _this set[0, _args];
 };
 
-private ["_laserTarget", "_handle", "_vehicle", "_laserUuid"];
+private ["_laserTarget", "_handle", "_vehicle", "_laserUuid", "_waveLength", "_beamSpread", "_laserCode"];
 
 if(!GVAR(active)) then {
     GVAR(active) = true;
     
     TRACE_1("Activating laser", "");
-    _laserUuid = [(vehicle ACE_player), ACE_player, QFUNC(findLaserSource), 1550, 1001, 1] call EFUNC(laser,laserOn);
+    
+    // Get the self-designation variables, or use defaults
+    _laserCode = (vehicle ACE_player) getVariable[QGVAR(currentCode), ACE_DEFAULT_LASER_CODE];
+    _waveLength = (vehicle ACE_player) getVariable[QGVAR(currentWaveLength), ACE_DEFAULT_LASER_WAVELENGTH];
+    _beamSpread = (vehicle ACE_player) getVariable[QGVAR(currentBeamSpread), ACE_DEFAULT_LASER_BEAMSPREAD];
+    
+    _laserUuid = [(vehicle ACE_player), ACE_player, QFUNC(findLaserSource), _waveLength, _laserCode, _beamSpread] call EFUNC(laser,laserOn);
     
     // @TODO: Create the local target for the players side
     // @TODO: Nou gets to field all tickets about missing lasers.

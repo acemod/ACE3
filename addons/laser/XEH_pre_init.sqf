@@ -25,6 +25,10 @@ PREP(laser_init);
 PREP(laserTargetPFH);
 
 ACE_LASERS = [];
+
+// Laser default variables
 ACE_DEFAULT_LASER_CODE = 1001;
+ACE_DEFAULT_LASER_WAVELENGTH = 1550;
+ACE_DEFAULT_LASER_BEAMSPREAD = 1;
 
 GVAR(laserEmitters) = HASH_CREATE;
