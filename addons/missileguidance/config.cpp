@@ -5,11 +5,16 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = { "ace_common", "ace_laser" };
+        requiredAddons[] = {"ace_laser"};
         VERSION_CONFIG;
     };
 };
 
+#include "ACE_GuidanceConfig.hpp"
+#include "ACE_Settings.hpp"
+
 #include "CfgEventhandlers.hpp"
 #include "CfgAmmo.hpp"
+#include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"

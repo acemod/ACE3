@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-17 -->
 <Project name="ACE">
   <Package name="Hearing">
     <Key ID="STR_ACE_Hearing_EarPlugs_Name">
@@ -100,7 +99,11 @@
     </Key>
     <Key ID="STR_ACE_Hearing_DisableEarRinging">
       <English>Disable ear ringing</English>
+      <German>Deaktiviere Ohrfiepen</German>
       <Spanish>Desactivar zumbido de oídos</Spanish>
+      <Russian>Отключить эффект баротравмы</Russian>
+      <German>Knalltrauma deaktivieren</German>
+      <Czech>Vypnout pískání v uších</Czech>
     </Key>
   </Package>
 </Project>

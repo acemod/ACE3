@@ -440,8 +440,29 @@ class CfgVehicles {
                     statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
                     icon = PATHTOF(UI\icons\medical_cross.paa);
 
+                    #undef EXCEPTIONS
                     #define EXCEPTIONS exceptions[] = {"isNotInside"};
                     #include "ACE_Medical_Actions.hpp"
+                };
+                class GVAR(loadPatient) {
+                    displayName = "$STR_ACE_Medical_LoadPatient";
+                    distance = 5;
+                    condition = QUOTE(_target getvariable[ARR_2(QUOTE(QUOTE(ACE_isUnconscious)),false)] && vehicle _target == _target);
+                    statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionLoadUnit));
+                    showDisabled = 0;
+                    priority = 2;
+                    icon = PATHTOF(UI\icons\medical_cross.paa);
+                    exceptions[] = {"isNotDragging", "isNotCarrying"};
+                };
+                class GVAR(UnLoadPatient) {
+                    displayName = "$STR_ACE_Medical_UnloadPatient";
+                    distance = 5;
+                    condition = QUOTE(_target getvariable[ARR_2(QUOTE(QUOTE(ACE_isUnconscious)),false)] && vehicle _target != _target);
+                    statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionUnloadUnit));
+                    showDisabled = 0;
+                    priority = 2;
+                    icon = PATHTOF(UI\icons\medical_cross.paa);
+                    exceptions[] = {"isNotDragging", "isNotCarrying"};
                 };
             };
         };
@@ -968,86 +989,6 @@ class CfgVehicles {
             class ACE_bodyBag {
                 name = "ACE_bodyBag";
                 count = 5;
-            };
-        };
-    };
-
-    // Patient unload from vehicle actions
-    class LandVehicle;
-    class Car: LandVehicle {
-        class ACE_Actions {
-            class ACE_MainActions {
-                class ACE_UnloadPatients {
-                    displayName = "$STR_ACE_Medical_UnloadPatient";
-                    condition = "true";
-                    statement = "";
-                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
-                };
-            };
-        };
-    };
-    class Tank: LandVehicle {
-        class ACE_Actions {
-            class ACE_MainActions {
-                class ACE_UnloadPatients {
-                    displayName = "$STR_ACE_Medical_UnloadPatient";
-                    condition = "true";
-                    statement = "";
-                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
-                };
-            };
-        };
-    };
-
-    class Air;
-    class Helicopter: Air {
-        class ACE_Actions {
-            class ACE_MainActions {
-                class ACE_UnloadPatients {
-                    displayName = "$STR_ACE_Medical_UnloadPatient";
-                    condition = "true";
-                    statement = "";
-                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
-                };
-            };
-        };
-    };
-    class Plane: Air {
-        class ACE_Actions {
-            class ACE_MainActions {
-                class ACE_UnloadPatients {
-                    displayName = "$STR_ACE_Medical_UnloadPatient";
-                    condition = "true";
-                    statement = "";
-                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
-                };
-            };
-        };
-    };
-
-    class Ship;
-    class Ship_F: Ship {
-        class ACE_Actions {
-            class ACE_MainActions {
-                class ACE_UnloadPatients {
-                    displayName = "$STR_ACE_Medical_UnloadPatient";
-                    condition = "true";
-                    statement = "";
-                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
-                };
-            };
-        };
-    };
-
-    class StaticWeapon: LandVehicle {
-        class ACE_Actions {
-            class ACE_MainActions {
-                class ACE_UnloadPatients {
-                    displayName = "$STR_ACE_Medical_UnloadPatient";
-                    condition = "true";
-                    statement = "";
-                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
-                };
             };
         };
     };

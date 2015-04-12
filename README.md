@@ -1,17 +1,17 @@
 <p align="center">
-    <img src="https://github.com/KoffeinFlummi/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" height="80" />
+    <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" height="80" />
 </p>
 <p align="center">
-    <a href="https://github.com/KoffeinFlummi/ACE3/releases">
+    <a href="https://github.com/acemod/ACE3/releases">
         <img src="http://img.shields.io/badge/release-3.0-green.svg?style=flat" alt="ACE version">
     </a>
     <a href="#">
         <img src="http://img.shields.io/badge/download-22_MB-blue.svg?style=flat" alt="ACE download">
     </a>
-    <a href="https://github.com/KoffeinFlummi/ACE3/issues">
-        <img src="http://img.shields.io/github/issues/KoffeinFlummi/ACE3.svg?style=flat" alt="ACE issues">
+    <a href="https://github.com/acemod/ACE3/issues">
+        <img src="http://img.shields.io/github/issues/acemod/ACE3.svg?style=flat" alt="ACE issues">
     </a>
-    <a href="https://github.com/KoffeinFlummi/ACE3/blob/master/LICENSE">
+    <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="http://img.shields.io/badge/license-GPLv2-red.svg?style=flat" alt="ACE license">
     </a>
 </p>
@@ -23,8 +23,6 @@ This mod is entirely **open-source**, and everyone is free to propose changes or
 
 The mod is **built modularly** — almost any PBO can be removed, thus a team can maintain its own tailored version of ACE, which excludes a select number of components that they don't like, or which conflict with other add-ons. Components themselves, like e.g. the medical system, also include various customization options, allowing mission designers to tweak the overall experience.
 
-More information on the purpose of the different components of ACE and which ones they rely on can be found [here](https://github.com/KoffeinFlummi/ACE3/wiki#features).
-
 ### Features
 *   Improved medical system
 *   Logistics system including cargo transport and vehicle maintenance
@@ -33,23 +31,18 @@ More information on the purpose of the different components of ACE and which one
 *   Realistic names for vehicles and weapons
 *   Realistic ballistics including wind and humidity
 *   Backblast simulation
-*   Weapon resting and bipod deployment
-*   A fire control system for armored vehicles and helicopters
+*   A fire control system for armored vehicles and helicopters  
     ***and more...***
 
-For a full list of current features, check [the official wiki](https://github.com/KoffeinFlummi/ACE3/wiki).
-
 #### Guides & How-Tos
-If you installed ACE3, but have trouble understanding how it all works, or where to start — see [Getting Started](https://github.com/KoffeinFlummi/ACE3/wiki/Getting-Started).
+If you installed ACE3, but have trouble understanding how it all works, or where to start — see [Getting Started](https://github.com/acemod/ACE3/blob/master/documentation/user/getting-started.md).
 
 #### Contributing
-If you want to help put with the ongoing development, you can do so by looking for possible bugs or by contributing new features. To contribute something to ACE, simply fork this repository and submit your pull requests for review by other collaborators. In the process, feel free to add yourself to the author array of any .pbo you will be editing and the AUTHORS.txt file.
+If you want to help put with the ongoing development, you can do so by looking for possible bugs or by contributing new features. To contribute something to ACE, simply fork this repository and submit your pull requests for review by other collaborators. In the process, please add yourself to the author array of any .pbo you will be editing and the AUTHORS.txt file; including a valid email address.
 
-To report a bug, propose a feature, or suggest a change to the existing one — please, use our [Issue Tracker](https://github.com/KoffeinFlummi/ACE3/issues).
-
-For detailed information on how to make your weapons or vehicles compatible with ACE — read [this article](https://github.com/KoffeinFlummi/ACE3/wiki/For-Addon-Makers).
+To report a bug, propose a feature, or suggest a change to the existing one — please, use our [Issue Tracker](https://github.com/acemod/ACE3/issues).
 
 #### Testing & Building
-If you want to help us test the latest development changes, feel free to download our master branch, using either git — if familiar with the process — or directly, by following [this link](https://github.com/KoffeinFlummi/ACE3/archive/master.zip).
+If you want to help us test the latest development changes, feel free to download our master branch, using either git — if familiar with the process — or directly, by following [this link](https://github.com/acemod/ACE3/archive/master.zip).
 
-To find out how to build a version of ACE for testing, follow [these instructions](https://github.com/KoffeinFlummi/ACE3/wiki/Developers-::-Setting-up-your-development-environment).
+To find out how to set up your development environment and build a version of ACE for testing, follow [these instructions](https://github.com/acemod/ACE3/blob/master/documentation/development/setting-up-the-development-environment.md).

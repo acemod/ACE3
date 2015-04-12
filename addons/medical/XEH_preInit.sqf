@@ -11,8 +11,6 @@ PREP(actionPlaceInBodyBag);
 PREP(actionRemoveTourniquet);
 PREP(actionLoadUnit);
 PREP(actionUnloadUnit);
-PREP(actionCarryUnit);
-PREP(actionDropUnit);
 PREP(addHeartRateAdjustment);
 PREP(addToInjuredCollection);
 PREP(addToLog);
@@ -22,7 +20,6 @@ PREP(addUnloadPatientActions);
 PREP(canAccessMedicalEquipment);
 PREP(canTreat);
 PREP(canTreatCached);
-PREP(canCarry);
 PREP(createLitter);
 PREP(determineIfFatal);
 PREP(getBloodLoss);
@@ -61,7 +58,6 @@ PREP(itemCheck);
 PREP(onMedicationUsage);
 PREP(onWoundUpdateRequest);
 PREP(onPropagateWound);
-PREP(onCarryObjectDropped);
 PREP(parseConfigForInjuries);
 PREP(playInjuredSound);
 PREP(selectionNameToNumber);
@@ -105,5 +101,8 @@ GVAR(injuredUnitCollection) = [];
 GVAR(IVBags) = [];
 
 call FUNC(parseConfigForInjuries);
+
+GVAR(HITPOINTS) = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
+GVAR(SELECTIONS) = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
 
 ADDON = true;
