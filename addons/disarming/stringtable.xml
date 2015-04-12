@@ -4,6 +4,7 @@
   <Package name="Disarming">
     <Key ID="STR_ACE_Disarming_OpenInventory">
       <English>Open Inventory</English>
+      <Spanish>Abrir inventario</Spanish>
     </Key>
   </Package>
 </Project>
