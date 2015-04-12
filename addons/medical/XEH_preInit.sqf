@@ -17,6 +17,7 @@ PREP(addToLog);
 PREP(addToTriageCard);
 PREP(addUnconsciousCondition);
 PREP(addUnloadPatientActions);
+PREP(adjustPainLevel);
 PREP(canAccessMedicalEquipment);
 PREP(canTreat);
 PREP(canTreatCached);
