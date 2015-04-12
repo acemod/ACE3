@@ -40,12 +40,16 @@ _finalOwner = nil;
         if(IS_CODE(_method)) then {
             _laser = _x call _method;
         } else {
-            if(IS_ARRAY(_method)) then {
-                if(count _method == 2) then {
-                    _laser = [ATLtoASL (_obj modelToWorldVisual (_method select 0)), _obj weaponDirection (_method select 1)];
-                } else {
-                    if(count _method == 3) then {
-                        _laser = [ATLtoASL (_obj modelToWorldVisual (_method select 0)), (ATLtoASL (_obj modelToWorldVisual (_method select 1))) vectorFromTo (ATLtoASL (_obj modelToWorldVisual (_method select 2)))];
+            if(IS_STRING(_method)) then {
+                _laser = _x call (missionNamespace getVariable [_method, {}]);
+            } else {
+                if(IS_ARRAY(_method)) then {
+                    if(count _method == 2) then {
+                        _laser = [ATLtoASL (_obj modelToWorldVisual (_method select 0)), _obj weaponDirection (_method select 1)];
+                    } else {
+                        if(count _method == 3) then {
+                            _laser = [ATLtoASL (_obj modelToWorldVisual (_method select 0)), (ATLtoASL (_obj modelToWorldVisual (_method select 1))) vectorFromTo (ATLtoASL (_obj modelToWorldVisual (_method select 2)))];
+                        };
                     };
                 };
             };
