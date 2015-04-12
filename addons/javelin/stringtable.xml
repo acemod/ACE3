@@ -1,24 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-19 -->
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="JAVELIN">
-        <Key ID="STR_ACE_JAVELIN_LockTarget">
-            <English>Lock Target (Javelin)</English>
-            <German></German>
-            <French></French>
-            <Polish></Polish>
-            <Czech></Czech>
-            <Spanish></Spanish>
-            <Russian></Russian>
-        </Key>
-         <Key ID="STR_ACE_JAVELIN_CycleFireMode">
-            <English>Cycle Attack Mode (Javelin)</English>
-            <German></German>
-            <French></French>
-            <Polish></Polish>
-            <Czech></Czech>
-            <Spanish></Spanish>
-            <Russian></Russian>
-        </Key>
-    </Package>
+  <Package name="WEP_JAVELIN">
+    <Key ID="STR_ACE_WEP_JAVELIN_LockTarget">
+      <English>Lock Target (Hold)</English>
+      <German>Ziel aufschalten</German>
+      <Russian>Захватить цель (удерживать)</Russian>
+    </Key>
+    <Key ID="STR_ACE_WEP_JAVELIN_CycleFireMode">
+      <English>Cycle Fire Mode</English>
+      <German>Wechsle Feuermodus</German>
+      <Russian>Переключение режимов огня</Russian>
+    </Key>
+  </Package>
 </Project>
