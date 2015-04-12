@@ -675,7 +675,6 @@ See the make.cfg file for additional build options.
 				if not build_successful:
 					print_error("pboProject return code == " + str(ret))
 					print_error("Module not successfully built/signed.")
-					input("Press Enter to continue...")
 					print ("Resuming build...")
 					continue
 
