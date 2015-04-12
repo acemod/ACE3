@@ -336,9 +336,6 @@ class RscTitles
             class Preload_6 {
                 text = PATHTOF(UI\Kestrel4500_6.paa);
             };
-            class Preload_7 {
-                text = PATHTOF(UI\Kestrel4500_7.paa);
-            };
         };
     };
 };
