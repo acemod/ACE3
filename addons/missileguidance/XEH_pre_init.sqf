@@ -4,6 +4,7 @@ PREP(rotateVectLineGetMap);
 PREP(rotateVectLine);
 
 PREP(checkSeekerAngle);
+PREP(checkLos);
 
 PREP(fired);
 
