@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-#define BLOODLOSSRATE_BASIC 0.4
+#define BLOODLOSSRATE_BASIC 0.08
 
 private ["_totalBloodLoss","_tourniquets","_openWounds", "_value", "_cardiacOutput", "_internalWounds"];
 // TODO Only use this calculation if medium or higher, otherwise use vanilla calculations (for basic medical).
