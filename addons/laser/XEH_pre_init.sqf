@@ -18,6 +18,7 @@ PREP(laserOff);
 PREP(handleLaserOn);
 PREP(handleLaserOff);
 
+PREP(drawVisibleLaserTargets);
 
 PREP(laser_init);
 

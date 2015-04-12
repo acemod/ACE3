@@ -13,7 +13,7 @@
  * Return value:
  * String, UUID for sending to laserOff function.
  */
- 
+
 #include "script_component.hpp"
 
 private ["_uuid", "_args"];
