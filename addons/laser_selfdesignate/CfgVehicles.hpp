@@ -8,12 +8,6 @@ class CfgVehicles {
         class Turrets {
             class MainTurret;
         };
-
-    // TODO: move these to a different HUD addon
-    //  commanderCanSee = 2+32;
-    //  gunnerCanSee = 2+32;
-    //  driverCanSee = 2+32;
-
     };
 
     class Helicopter_Base_F: Helicopter {};
