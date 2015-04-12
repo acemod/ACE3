@@ -7,6 +7,9 @@
       <German>Immer den Cursor für Selbst-Interaktionen anzeigen.</German>
       <Spanish>Mostrar siempre el cursor para la interacción propia</Spanish>
     </Key>
+    <Key ID="STR_ACE_Interact_Menu_UseListMenu">
+      <English>Display interact menu as a list</English>
+    </Key>
     <Key ID="STR_ACE_Interact_Menu_InteractKey">
       <English>Interact Key</English>
       <German>Interaktionstaste</German>
