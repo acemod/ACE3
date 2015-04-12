@@ -17,7 +17,7 @@
 #include <vector>
 #include <string>
 
-#define MAXCHARACTERS 11
+#define MAXCHARACTERS 14
 
 static char version[] = "1.0";
 
@@ -30,23 +30,32 @@ std::vector<std::string> splitString(std::string input) {
     std::string token;
 
     std::vector<std::string> output;
-    while (std::getline(ss, token, ',')) {
+    while (std::getline(ss, token, ' ')) {
         output.push_back(token);
     }
 
     return output;
 }
 
-std::string addLineBreaks(std::string input) {
+std::string addLineBreaks(const std::vector<std::string> &words) {
+
     std::stringstream sstream;
     int numChar = 0;
-    for ( int i = 0 ; i < input.length(); i++) {
-        if (numChar >= MAXCHARACTERS && input[i] == ' ') {
-            sstream << "<br/>";//"&lt;br/&gt;";
-            numChar = 0;
+    int i = 0;
+    while (i < words.size()) {
+        if (numChar == 0) {
+            sstream << words[i];
+            numChar += words[i].size();
+            i++;
         } else {
-            sstream << input[i];
-            numChar++;
+            if (numChar + 1 + words[i].size() > MAXCHARACTERS) {
+                sstream << "<br/>";
+                numChar = 0;
+            } else {
+                sstream << " " << words[i];
+                numChar += 1 + words[i].size();
+                i++;
+            }
         }
     }
     return sstream.str();
@@ -57,13 +66,12 @@ std::string addLineBreaks(std::string input) {
 #pragma warning( disable : 4996 )
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
+    //strncpy(output, function, outputSize);
+
     if (!strcmp(function, "version")) {
         strncpy(output, version, outputSize);
     } else {
-        std::vector<std::string> argStrings = splitString(function);
-        std::string originalString = argStrings[0];
-
-        strcpy(output, addLineBreaks(originalString).c_str());
+        strcpy(output, addLineBreaks(splitString(function)).c_str());
         output[outputSize - 1] = '\0';
     }
 }
