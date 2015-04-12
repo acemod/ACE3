@@ -17,7 +17,7 @@
 </p>
 <p align="center"><sup><strong>Benötigt eine Aktuelle Version von <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a> | <a href="#">BIF thread</a></strong></sup></p>
 
-**ACE3** ist ein Gemeinschaftsprojekt der Moddinggruppen von **ACE2**, **AGM** und **CSE** um den Realismus und die Spieltiefe von Arma 3 zu steigern.
+**ACE3** ist ein Gemeinschaftsprojekt der sich zusammengeschlossenenModdinggruppen von **ACE2**, **AGM** und **CSE** mit dem Ziel den Realismus und die Spieltiefe von Arma 3 zu steigern.
 
 Da die MOD vollkommen als **open-source** Projekt gestaltet ist, steht es jedem frei Änderungen vorzuschlagen, oder seine eigene, modifizierte Version zu erstellen, solange diese ebenfalls der Öffentlichkeit zugänglich ist und mit GNU General Public License übereinstimmt. (Weitere Informationen ist der Lizenzdatei in diesem Projekt entnehmbar)
 
@@ -26,10 +26,10 @@ Die Mod ist  **modular gestaltet** — beinahe jede PBO kann entfernt werden, so
 ### Features
 *   Verbessertes medizinisches System
 *   Logistik System: U.a. Transport und Fahrzeugreperatur
-*   Sprengstoffsystem mit unterschiedlichen Auslösern
-*   Captivity system
-*   Reale Namen für vanilla Fahrzeuge und Waffen
-*   Realistisches ballistisches Verhalten (Wind und Luftfeuchtigkeit)
+*   Sprengstoffsystem mit unterschiedlichen Zündern
+*   Gefangenensystem
+*   Reale Namen für Arma 3 Fahrzeuge und Waffen
+*   Realistisches, ballistisches Verhalten (Wind und Luftfeuchtigkeit)
 *   Simulation der Rückstrahlzone
 *   Ein Feuerleitsystem für gepanzerte Fahrzeuge und Hubschrauber  
     ***und noch viel mehr...***
@@ -38,11 +38,11 @@ Die Mod ist  **modular gestaltet** — beinahe jede PBO kann entfernt werden, so
 Du hast ACE3 installiert, hast aber keine Ahnung was und wie alles funktioniert und wo sich was befindet? [Erste Schritte](https://github.com/acemod/ACE3/blob/master/documentation/user/getting-started.md).
 
 #### Mitwirken
-Wenn du bei der Entwicklung der MOD mithelfen möchtest, so kannst du dies tun, indem du nach BUGS Ausschau hältst, oder neue Funktionen vorschlägst. Um etwas Beizutragen, "Forke" einfach dieses Archiv (bzw. repository) und erstelle deine "Pull-Request", welche von anderen Entwicklern und Beiträgern überprüft wird. Bitte trage dich dabei in "AUTHORS.txt"  mit deinem Nutzernamen und einer gütligen Email-Adresse ein.  
+Wenn du bei der Entwicklung der MOD mithelfen möchtest, so kannst du dies tun, indem du nach Fehlern Ausschau hältst, oder neue Funktionen vorschlägst. Um etwas beizutragen, "Forke" einfach dieses Archiv (bzw. repository) und erstelle deine "Pull-Request", welche von anderen Entwicklern und Beiträgern überprüft wird. Bitte trage dich dabei in "AUTHORS.txt"  mit deinem Nutzernamen und einer gütligen Email-Adresse ein.  
 
-Um einen Bug oder ein Feature zu melden bzw. ein bereits Bestehendes zu ändern - nutze unseren [Issue Tracker](https://github.com/acemod/ACE3/issues).
+Um einen Fehler oder ein Feature zu melden bzw. ein bereits Bestehendes zu ändern - nutze unseren [Issue Tracker](https://github.com/acemod/ACE3/issues).
 
 #### Testing & Building
-If you want to help us test the latest development changes, feel free to download our master branch, using either git — if familiar with the process — or directly, by following [this link](https://github.com/acemod/ACE3/archive/master.zip).
+Wenn du die neusten Entwicklungen erleben und uns dabei helfen möchtest bestehende Fehler zu entdecken, lade dir einfach die "Master Branch" herunter. Entweder nutzt du Git - wenn die Schritte bekannt sind - oder du lädst es dir direkt über [diesen Link] herunter (https://github.com/acemod/ACE3/archive/master.zip).
 
-To find out how to set up your development environment and build a version of ACE for testing, follow [these instructions](https://github.com/acemod/ACE3/blob/master/documentation/development/setting-up-the-development-environment.md).
+Wie du deine eigene Entwicklungsumgebung und eine Testversion von ACE erstellst folge [dieser Anleitung](https://github.com/acemod/ACE3/blob/master/documentation/development/setting-up-the-development-environment.md).
