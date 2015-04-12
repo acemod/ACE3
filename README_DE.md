@@ -42,7 +42,7 @@ Wenn du bei der Entwicklung der MOD mithelfen möchtest, so kannst du dies tun, 
 
 Um einen Fehler oder ein Feature zu melden bzw. ein bereits Bestehendes zu ändern - nutze unseren [Issue Tracker](https://github.com/acemod/ACE3/issues).
 
-#### Testing & Building
+#### Testen & MOD erstellen
 Wenn du die neusten Entwicklungen erleben und uns dabei helfen möchtest bestehende Fehler zu entdecken, lade dir einfach die "Master Branch" herunter. Entweder nutzt du Git - wenn die Schritte bekannt sind - oder du lädst es dir direkt über [diesen Link] (https://github.com/acemod/ACE3/archive/master.zip) herunter.
 
 Wie du deine eigene Entwicklungsumgebung und eine Testversion von ACE erstellst folge [dieser Anleitung](https://github.com/acemod/ACE3/blob/master/documentation/development/setting-up-the-development-environment.md).
