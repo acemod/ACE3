@@ -8,6 +8,10 @@ _vec = _this select 1;
 if(count _this > 2) then {
     _divergence = _this select 2;
 };
+_count = 3;
+if(count _this > 3) then {
+    _count = _this select 3;
+};
 _longestReturn = -1000000000;
 _shortestReturn = 1000000000;
 _resultPositions = [];
@@ -35,7 +39,7 @@ if(!isNil "_resultPos") then {
     drawLine3D [ASLtoATL _pos, ASLtoATL _resultPos, [1,0,0,1]];
 #endif
 };
-_count = 3;
+
 
 _pos2 = _pos vectorAdd (_vec vectorMultiply 1000);
 {
