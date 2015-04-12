@@ -79,10 +79,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
 
             //Add ace_medical pain effect:
             if ((isClass (configFile >> "CfgPatches" >> "ACE_Medical")) && {_strength > 0}) then {
-                private "_curPain";
-                _curPain = ACE_player getVariable [QEGVAR(medical,pain), 0];
-                _curPain = (_curPain + (_strength / 2)) min 1;
-                ACE_player setVariable [QEGVAR(medical,pain), _curPain];
+                [ACE_player, (_strength / 2)] call EFUNC(medical,adjustPainLevel);
             };
 
             // create flash to illuminate environment
