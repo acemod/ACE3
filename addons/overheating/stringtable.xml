@@ -119,8 +119,8 @@
       <Russian>Проверить температуру оружия</Russian>
     </Key>
     <Key ID="STR_ACE_Overheating_CheckTemperatureShort">
-      <English>Check weapon&lt;br/&gt;temperature</English>
-      <Spanish>Verificar temperatura&lt;br/&gt;del arma</Spanish>
+      <English>Check weapon temperature</English>
+      <Spanish>Verificar temperatura del arma</Spanish>
     </Key>
     <Key ID="STR_ACE_Overheating_CheckingTemperature">
       <English>Checking temperature ...</English>
