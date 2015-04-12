@@ -101,7 +101,7 @@
     </Key>
     <Key ID="STR_ACE_NightVision_IncreaseNVGBrightness">
       <English>Increase NVG Brightness</English>
-      <German>Nachtsichtgerätshelligkeit erhöhen</German>
+      <German>NS-Helligkeit erhöhen</German>
       <Spanish>Aumentar el brillo de las NVG</Spanish>
       <Polish>Zwiększ czułość noktowizji</Polish>
       <Czech>Zvýšení jasu noktovizoru</Czech>
@@ -113,7 +113,7 @@
     </Key>
     <Key ID="STR_ACE_NightVision_DecreaseNVGBrightness">
       <English>Decrease NVG Brightness</English>
-      <German>Nachtsichtgerätshelligkeit verringern</German>
+      <German>NS-Helligkeit verringern</German>
       <Spanish>Disminuir el brillo de las NVG</Spanish>
       <Polish>Zmniejsz czułość noktowizji</Polish>
       <Czech>Snížení jasu noktovizoru</Czech>
