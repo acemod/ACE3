@@ -3,15 +3,15 @@
 <Project name="ACE">
   <Package name="Attach">
     <Key ID="STR_ACE_Attach_AttachDetach">
-      <English>Attach item &gt;&gt;</English>
-      <German>Gegenstand befestigen &gt;&gt;</German>
-      <Spanish>Acoplar objeto &gt;&gt;</Spanish>
-      <Polish>Przyczep przedmiot &gt;&gt;</Polish>
-      <French>Attacher l'objet &gt;&gt;</French>
-      <Czech>Připnout předmět &gt;&gt;</Czech>
-      <Portuguese>Acoplar item &gt;&gt;</Portuguese>
-      <Italian>Attacca l'oggetto &gt;&gt;</Italian>
-      <Hungarian>Tárgy hozzácsatolása &gt;&gt;</Hungarian>
+      <English>Attach item</English>
+      <German>Gegenstand befestigen</German>
+      <Spanish>Acoplar objeto</Spanish>
+      <Polish>Przyczep przedmiot</Polish>
+      <French>Attacher l'objet</French>
+      <Czech>Připnout předmět</Czech>
+      <Portuguese>Acoplar item</Portuguese>
+      <Italian>Attacca l'oggetto</Italian>
+      <Hungarian>Tárgy hozzácsatolása</Hungarian>
       <Russian>Добавить приспособления</Russian>
     </Key>
     <Key ID="STR_ACE_Attach_Attach">
