@@ -26,7 +26,7 @@ Walter Pearce <jaynus@gmail.com>
 # CONTRIBUTORS
 11RDP-LoupVert <loupvert@11rdp.fr>
 [BIG]Bull
-ACCtomeek
+ACCtomeek <tomeek99@gmail.com>
 Adanteh
 aeroson
 Aggr094 <bastards4glory@gmail.com>
@@ -43,7 +43,7 @@ Filip Basara <filip.basara93@googlemail.com> (Logo)
 FreeZbe <freeseb@gmail.com>
 geraldbolso1899
 Ghost
-gienkov
+GieNkoV <gienkov.grzegorz@gmail.com>
 gpgpgpgp
 Grzegorz
 Hamburger SV
