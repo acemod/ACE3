@@ -24,7 +24,6 @@ DEFAULT_PARAM(2,_container,"");
 DEFAULT_PARAM(3,_ammoCount,-1);
 
 private "_addedToPlayer";
-private "_container";
 private "_canAdd";
 private "_type";
 
