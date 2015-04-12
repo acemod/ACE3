@@ -10,6 +10,11 @@ class CfgPatches {
     };
 };
 
+#include "ACE_GuidanceConfig.hpp"
+#include "ACE_Settings.hpp"
+
 #include "CfgEventhandlers.hpp"
 #include "CfgAmmo.hpp"
+#include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"

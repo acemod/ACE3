@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [player, _explosive, "SatchelCharge_Remote_Mag", [ConfigFile >> "CfgACE_Triggers" >> "Command"]] call ACE_Explosives_fnc_addClacker;
+ * [player, _explosive, "SatchelCharge_Remote_Mag", [ConfigFile >> "ACE_Triggers" >> "Command"]] call ACE_Explosives_fnc_addClacker;
  *
  * Public: Yes
  */

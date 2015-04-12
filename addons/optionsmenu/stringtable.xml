@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-01-23 -->
 <Project name="ACE">
   <Package name="OptionsMenu">
     <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -16,16 +15,21 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_FixAnimation">
       <English>Fix Animation</English>
+      <German>Behebe Animation</German>
+      <Spanish>Arreglar animación</Spanish>
+      <Russian>Фикс анимации</Russian>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_ResetAll">
       <English>Reset All</English>
-      <German>Rücksetzen</German>
+      <German>Alles Zurücksetzen</German>
+      <Spanish>Reiniciar todo</Spanish>
+      <Russian>Полный сброс</Russian>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabColors">
       <English>Colors</English>
       <German>Farben</German>
-      <Russian>цвета</Russian>
-      <Spanish>Colors</Spanish>
+      <Spanish>Colores</Spanish>
+      <Russian>Цвета</Russian>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabOptions">
       <English>Options</English>
@@ -41,6 +45,8 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabValues">
       <English>Values</English>
+      <Spanish>Valores</Spanish>
+      <Russian>Значения</Russian>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Enabled">
       <English>Yes</English>
@@ -70,38 +76,68 @@
       <English>Setting:</English>
       <Czech>Nastavení:</Czech>
       <German>Einstellung:</German>
-      <Russian>Yстановки:</Russian>
+      <Russian>Установки:</Russian>
       <Spanish>Ajuste:</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Export">
       <English>Export</English>
+      <German>Exportieren</German>
+      <Spanish>Exportar</Spanish>
+      <Russian>Экспорт</Russian>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_OpenExport">
       <English>Open Export Menu</English>
+      <German>Öffne Exportmenü</German>
+      <Spanish>Abrir menu d'exportación</Spanish>
+      <Russian>Открыть меню экспорта</Russian>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_stringType">
       <English>String input.</English>
+      <German>String input.</German>
+      <Spanish>Introducir frase</Spanish>
+      <Russian>Строчный ввод.</Russian>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_arrayType">
       <English>Array. Seperate elements by using ,.</English>
+      <German>Array. Teile unterschiedliche Elemente mit ,.</German>
+      <Spanish>Matriz. Separa elementos usando ,.</Spanish>
+      <Russian>Массив. Разделяйте элемены, используя запятую.</Russian>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_scalarType">
       <English>Number</English>
+      <German>Nummer</German>
+      <Spanish>Numero</Spanish>
+      <Russian>Число</Russian>
     </Key>
     <Key ID="STR_ACE_optionsMenu_unknownType">
       <English>Uknown input type</English>
+      <German>Unbekannter Eingabetyp</German>
+      <Spanish>Tipo de entrada desconocida</Spanish>
+      <Russian>Неизвестный тип ввода</Russian>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_SaveInput">
       <English>Save input</English>
+      <German>Speichere Eingabe</German>
+      <Spanish>Guardar entrada</Spanish>
+      <Russian>Сохранить ввод</Russian>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_inClientSettings">
       <English>Include Client Settings</English>
+      <German>Beinhalte Client-Einstellungen</German>
+      <Spanish>Incluir configuración de cliente</Spanish>
+      <Russian>Включить настройки клиента</Russian>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_exClientSettings">
       <English>Exclude Client Settings</English>
+      <German>Schließe Client-Einstellungen aus</German>
+      <Spanish>Excluir configuración de cliente</Spanish>
+      <Russian>Исключить настройки клиента</Russian>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_settingsExported">
       <English>Settings exported to clipboard</English>
+      <German>Einstellungen in die Zwischenablage exportiert</German>
+      <Spanish>Configuración exportada al portapapeles</Spanish>
+      <Russian>Настройки экспортированы в буфер обмена</Russian>
     </Key>
   </Package>
 </Project>
