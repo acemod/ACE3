@@ -13,7 +13,7 @@ _seekerParams = _launchParams select 3;
 //_targets = [_projectile, ACE_DEFAULT_LASER_CODE, (_seekerParams select 0)] call ace_laser_fnc_findLaserDesignator;
 //_foundTargetPos = getPosASL (_targets select 1);
 
-_laserResult = [(getPosASL _projectile), [1550,1550], 1001] call EFUNC(laser,seekerFindLaserSpot);
+_laserResult = [(getPosASL _projectile), [ACE_DEFAULT_WAVELENGTH,ACE_DEFAULT_WAVELENGTH], ACE_DEFAULT_LASER_CODE] call EFUNC(laser,seekerFindLaserSpot);
 _foundTargetPos = _laserResult select 0;
 TRACE_1("Search", _laserResult);
 
