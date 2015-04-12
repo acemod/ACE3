@@ -1,12 +1,12 @@
-#define COMPONENT wep_javelin
+#define COMPONENT javelin
 #include "\z\ace\Addons\main\script_mod.hpp"
 
-#ifdef DEBUG_ENABLED_WEP_JAVELIN
+#ifdef DEBUG_ENABLED_JAVELIN
     #define DEBUG_MODE_FULL
 #endif
 
-#ifdef DEBUG_SETTINGS_WEP_JAVELIN
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_WEP_JAVELIN
+#ifdef DEBUG_SETTINGS_JAVELIN
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_JAVELIN
 #endif
 
 #include "\z\ace\Addons\main\script_macros.hpp"
@@ -19,6 +19,8 @@
 #define __JavelinIGUI (uinamespace getVariable "ACE_RscOptics_javelin")
 
 // Custom controls
+#define __JavelinIGUITargeting (__JavelinIGUI displayCtrl 6999)
+
 #define __JavelinIGUISeek (__JavelinIGUI displayCtrl 699000)
 #define __JavelinIGUITop (__JavelinIGUI displayCtrl 699001)
 #define __JavelinIGUIDir (__JavelinIGUI displayCtrl 699002)
@@ -50,10 +52,6 @@
 #define __ConstraintBottom ((ctrlPosition __JavelinIGUITargetingConstrainBottom) select 1)
 #define __ConstraintLeft (((ctrlPosition __JavelinIGUITargetingConstrainLeft) select 0) + ((ctrlPosition (__JavelinIGUITargetingConstrainLeft)) select 2))
 #define __ConstraintRight ((ctrlPosition __JavelinIGUITargetingConstrainRight) select 0)
-
-#define __OffsetX ((ctrlPosition __JavelinIGUITargetingLineV) select 0) - 0.5
-#define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5
-
 
 // Colors for controls
 #define __ColorOrange [0.9255,0.5216,0.1216,1]

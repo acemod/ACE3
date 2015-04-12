@@ -1,10 +1,10 @@
-class CfgACE_Triggers {
+class ACE_Triggers {
 /* onPlace parameters:
 0: OBJECT - unit placing
 1: OBJECT - Placed explosive
 2: STRING - Magazine classname
 3: ARRAY - vars
-Last Index: CfgACE_Triggers config of trigger type.
+Last Index: ACE_Triggers config of trigger type.
 onSetup parameters:
 0: STRING - Magazine Classname
 */

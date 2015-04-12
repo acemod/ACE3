@@ -1,8 +1,5 @@
 #include "script_component.hpp"
 
-PREP(translateToWeaponSpace);
-PREP(translateToModelSpace);
-
 PREP(lockKeyDown);
 PREP(lockKeyUp);
 

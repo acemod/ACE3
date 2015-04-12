@@ -4,10 +4,12 @@
   <Package name="Reload">
     <Key ID="STR_ACE_reload_SettingDisplayTextName">
       <English>Check ammo on weapon reload</English>
+      <French>Vérifier munitions au rechargement</French>
       <Spanish>Comprovar munición al recargar el arma</Spanish>
     </Key>
     <Key ID="STR_ACE_reload_SettingDisplayTextDesc">
       <English>Check the ammo in your new magazine on magazine reload.</English>
+      <French>Vérifie les munitions disponibles dans le nouveau chargeur</French>
       <Spanish>Comprueva la munición del nuevo cargador al recargar.</Spanish>
     </Key>
     <Key ID="STR_ACE_Reload_checkAmmo">
@@ -36,10 +38,12 @@
     </Key>
     <Key ID="STR_ACE_Reload_LinkBelt">
       <English>Link belt</English>
+      <French>Attacher bande</French>
       <Spanish>Enlazar cinta</Spanish>
     </Key>
     <Key ID="STR_ACE_Reload_LinkingBelt">
       <English>Linking belt...</English>
+      <French>Attachement de la bande ..</French>
       <Spanish>Enlazando cinta...</Spanish>
     </Key>
   </Package>

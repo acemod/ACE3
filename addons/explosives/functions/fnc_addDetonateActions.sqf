@@ -24,7 +24,7 @@ _result = [_unit] call FUNC(getPlacedExplosives);
 _children = [];
 {
     if (!isNull(_x select 0)) then {
-        _required = getArray (ConfigFile >> "CfgACE_Triggers" >> (_x select 4) >> "requires");
+        _required = getArray (ConfigFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
         if (_detonator in _required) then {
             _item = ConfigFile >> "CfgMagazines" >> (_x select 3);
 
