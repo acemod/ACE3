@@ -32,12 +32,12 @@ Die Mod ist  **modular gestaltet** — beinahe jede PBO kann entfernt werden, so
 *   Realistisches ballistisches Verhalten (Wind und Luftfeuchtigkeit)
 *   Simulation der Rückstrahlzone
 *   Ein Feuerleitsystem für gepanzerte Fahrzeuge und Hubschrauber  
-    ***and more...***
+    ***und viel mehr...***
 
 #### Anleitungen
-If you installed ACE3, but have trouble understanding how it all works, or where to start — see [Getting Started](https://github.com/acemod/ACE3/blob/master/documentation/user/getting-started.md).
+Du hast ACE3 installiert, hast aber keine Ahnung was und wie alles funktioniert und wo sich was befindet? [Erste Schritte](https://github.com/acemod/ACE3/blob/master/documentation/user/getting-started.md).
 
-#### Contributing
+#### Mitwirken
 If you want to help put with the ongoing development, you can do so by looking for possible bugs or by contributing new features. To contribute something to ACE, simply fork this repository and submit your pull requests for review by other collaborators. In the process, please add yourself to the author array of any .pbo you will be editing and the AUTHORS.txt file; including a valid email address.
 
 To report a bug, propose a feature, or suggest a change to the existing one — please, use our [Issue Tracker](https://github.com/acemod/ACE3/issues).
