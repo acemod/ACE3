@@ -3,6 +3,7 @@
 <Project name="ACE">
     <Package name="Common">
         <Key ID="STR_ACE_Common_ACETeam">
+            <English>ACE-Team</English>
             <German>ACE-Team</German>
             <Spanish>ACE-Team</Spanish>
             <Polish>ACE-Team</Polish>
