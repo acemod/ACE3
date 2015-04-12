@@ -16,16 +16,18 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_FixAnimation">
       <English>Fix Animation</English>
+      <Spanish>Arreglar animación</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_ResetAll">
       <English>Reset All</English>
       <German>Rücksetzen</German>
+      <Spanish>Reiniciar todo</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabColors">
       <English>Colors</English>
       <German>Farben</German>
       <Russian>цвета</Russian>
-      <Spanish>Colors</Spanish>
+      <Spanish>Colores</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabOptions">
       <English>Options</English>
@@ -38,6 +40,10 @@
       <Portuguese>Opções</Portuguese>
       <Hungarian>Opciók</Hungarian>
       <Italian>Opzioni</Italian>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_TabValues">
+      <English>Values</English>
+      <Spanish>Valores</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Enabled">
       <English>Yes</English>
@@ -69,6 +75,46 @@
       <German>Einstellung:</German>
       <Russian>Yстановки:</Russian>
       <Spanish>Ajuste:</Spanish>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_Export">
+      <English>Export</English>
+      <Spanish>Exportar</Spanish>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_OpenExport">
+      <English>Open Export Menu</English>
+      <Spanish>Abrir menu d'exportación</Spanish>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_stringType">
+      <English>String input.</English>
+      <Spanish>Introducir frase</Spanish>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_arrayType">
+      <English>Array. Seperate elements by using ,.</English>
+      <Spanish>Matriz. Separa elementos usando ,.</Spanish>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_scalarType">
+      <English>Number</English>
+      <Spanish>Numero</Spanish>
+    </Key>
+    <Key ID="STR_ACE_optionsMenu_unknownType">
+      <English>Uknown input type</English>
+      <Spanish>Tipo de entrada desconocida</Spanish>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_SaveInput">
+      <English>Save input</English>
+      <Spanish>Guardar entrada</Spanish>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_inClientSettings">
+      <English>Include Client Settings</English>
+      <Spanish>Incluir configuración de cliente</Spanish>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_exClientSettings">
+      <English>Exclude Client Settings</English>
+      <Spanish>Excluir configuración de cliente</Spanish>
+    </Key>
+    <Key ID="STR_ACE_OptionsMenu_settingsExported">
+      <English>Settings exported to clipboard</English>
+      <Spanish>Configuración exportada al portapapeles</Spanish>
     </Key>
   </Package>
 </Project>

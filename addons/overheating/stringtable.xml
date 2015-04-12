@@ -4,9 +4,11 @@
   <Package name="Overheating">
     <Key ID="STR_ACE_overheating_SettingDisplayTextName">
       <English>Display text on jam</English>
+      <Spanish>Mostrar texto al encasquillar</Spanish>
     </Key>
     <Key ID="STR_ACE_overheating_SettingDisplayTextDesc">
       <English>Display a notification whenever your weapon gets jammed</English>
+      <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>
     </Key>
     <Key ID="STR_ACE_Overheating_SpareBarrelName">
       <English>Spare barrel</English>
@@ -117,16 +119,8 @@
       <Russian>Проверить температуру оружия</Russian>
     </Key>
     <Key ID="STR_ACE_Overheating_CheckTemperatureShort">
-      <English>Check temperature</English>
-      <German>Temperatur prüfen</German>
-      <Spanish>Verificar temperatura</Spanish>
-      <Polish>Sprawdź temperaturę</Polish>
-      <French>Vérifier la température</French>
-      <Hungarian>Hőmérséklet ellenőrzése</Hungarian>
-      <Czech>Zjistit teplotu</Czech>
-      <Portuguese>Conferir temperatura</Portuguese>
-      <Italian>Controlla la temperatura</Italian>
-      <Russian>Проверить температуру</Russian>
+      <English>Check weapon temperature</English>
+      <Spanish>Verificar temperatura del arma</Spanish>
     </Key>
     <Key ID="STR_ACE_Overheating_CheckingTemperature">
       <English>Checking temperature ...</English>

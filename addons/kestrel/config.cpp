@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {"ACE_Item_Kestrel"};
         weapons[] = {"ACE_Kestrel"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common","ace_interaction"};
+        requiredAddons[] = {"ace_interaction"};
         author[] = {"Falke","commy2","KoffeinFlummi","esteldunedain"};
         authorUrl = "https://github.com/KoffeinFlummi/";
         VERSION_CONFIG;

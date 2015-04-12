@@ -23,10 +23,11 @@ _target = _this select 1;
 _selectionName = _this select 2;
 _className = _this select 3;
 _items = _this select 4;
-_specificSpot = if (count _this > 5) then {_this select 5} else {-1};
+
+_specificSpot = if (count _this > 6) then {_this select 6} else {-1};
 
 if !([_target] call FUNC(hasMedicalEnabled)) exitwith {
-	_this call FUNC(treatmentBasic_bandage);
+    _this call FUNC(treatmentBasic_bandage);
 };
 
 [[_target, _className, _selectionName, _specificSpot], QUOTE(DFUNC(treatmentAdvanced_bandageLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
@@ -36,7 +37,6 @@ if !([_target] call FUNC(hasMedicalEnabled)) exitwith {
     };
 }foreach _items;*/
 
-["Medical_treatmentCompleted", [_caller, _target, _selectionName, _className, true]] call ace_common_fnc_localEvent;
 [_target, "activity", "STR_ACE_MEDICAL_ACTIVITY_bandagedPatient", [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
 
 true;

@@ -23,7 +23,7 @@ class CfgVehicles {
     class B_Heli_Attack_01_F: Heli_Attack_01_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                stabilizedInAxes = 4;       // This stablizes the turret a bit more for laser designation
+                GVAR(Enabled) = 1;      // Enable laser self-designation
             };
         };
     };
