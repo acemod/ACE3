@@ -45,6 +45,8 @@ _playerDir = getDir ACE_player;
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     _windSpeed = (eyePos ACE_player) call EFUNC(advanced_ballistics,calculateWindSpeed);
     _windSpeed = abs(cos(_playerDir - _windDir)) * _windSpeed;
+} else {
+    _windSpeed = (eyePos ACE_player) call FUNC(calculateWindSpeed);
 };
 
 if (_windSpeed > 0.3) then {
