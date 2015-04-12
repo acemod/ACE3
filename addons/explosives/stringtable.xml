@@ -492,6 +492,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_Pickup">
             <English>Pick up</English>
+            <French>Prendre</French>
         </Key>
     </Package>
 </Project>
