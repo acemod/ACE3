@@ -3,7 +3,6 @@
 <Project name="ACE">
   <Package name="Optics">
     <Key ID="STR_ACE_optic_hamr">
-      <Original>RCO (2D)</Original>
       <English>RCO (2D)</English>
       <Czech>RCO (2D)</Czech>
       <French>RCO (2D)</French>
@@ -16,7 +15,6 @@
     </Key>
 
     <Key ID="STR_ACE_optic_hamr_pip">
-      <Original>RCO (PIP)</Original>
       <English>RCO (PIP)</English>
       <Czech>RCO (PIP)</Czech>
       <French>RCO (PIP)</French>
@@ -29,7 +27,6 @@
     </Key>
 
     <Key ID="STR_ACE_optic_arco">
-      <Original>ARCO (2D)</Original>
       <English>ARCO (2D)</English>
       <Czech>ARCO (2D)</Czech>
       <French>ARCO (2D)</French>
@@ -42,7 +39,6 @@
     </Key>
 
     <Key ID="STR_ACE_optic_arco_pip">
-      <Original>ARCO (PIP)</Original>
       <English>ARCO (PIP)</English>
       <Czech>ARCO (PIP)</Czech>
       <French>ARCO (PIP)</French>
@@ -55,7 +51,6 @@
     </Key>
 
     <Key ID="STR_ACE_optic_valdada">
-      <Original>MRCO (2D)</Original>
       <English>MRCO (2D)</English>
       <Czech>MRCO (2D)</Czech>
       <French>MRCO (2D)</French>
@@ -68,7 +63,6 @@
     </Key>
 
     <Key ID="STR_ACE_optic_valdada_pip">
-      <Original>MRCO (PIP)</Original>
       <English>MRCO (PIP)</English>
       <Czech>MRCO (PIP)</Czech>
       <French>MRCO (PIP)</French>
@@ -81,7 +75,6 @@
     </Key>
 
     <Key ID="STR_ACE_optic_sos">
-      <Original>MOS (2D)</Original>
       <English>MOS (2D)</English>
       <Czech>MOS (2D)</Czech>
       <French>MOS (2D)</French>
@@ -94,7 +87,6 @@
     </Key>
 
     <Key ID="STR_ACE_optic_sos_pip">
-      <Original>MOS (PIP)</Original>
       <English>MOS (PIP)</English>
       <Czech>MOS (PIP)</Czech>
       <French>MOS (PIP)</French>
@@ -107,7 +99,6 @@
     </Key>
 
     <Key ID="STR_ACE_optic_lrps">
-      <Original>LRPS (2D)</Original>
       <English>LRPS (2D)</English>
       <Czech>LRPS (2D)</Czech>
       <French>LRPS (2D)</French>
@@ -120,7 +111,6 @@
     </Key>
 
     <Key ID="STR_ACE_optic_lrps_pip">
-      <Original>LRPS (PIP)</Original>
       <English>LRPS (PIP)</English>
       <Czech>LRPS (PIP)</Czech>
       <French>LRPS (PIP)</French>
