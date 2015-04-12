@@ -36,7 +36,7 @@ if (!GVAR(enabled)) exitWith {};
 if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
 if (underwater _unit) exitWith {};
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
-if (_unit distanceSqr ACE_player > GVAR(simulationRadius)) exitWith {};
+if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith {};
 if (GVAR(onlyActiveForLocalPlayers) && _unit != ACE_player) then { _abort = true; };
 //if (!GVAR(vehicleGunnerEnabled) && !(_unit isKindOf "Man")) then { _abort = true; }; // TODO: We currently do not have firedEHs on vehicles
 if (GVAR(disabledInFullAutoMode) && getNumber(configFile >> "cfgWeapons" >> _weapon >> _mode >> "autoFire") == 1) then { _abort = true; };
