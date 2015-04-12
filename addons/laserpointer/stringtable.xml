@@ -6,16 +6,19 @@
       <English>Laser Pointer (red)</English>
       <German>Laserpointer (rot)</German>
       <Russian>Лазерный прицел (красный)</Russian>
+      <Spanish>Puntero láser (rojo)</Spanish>
     </Key>
     <Key ID="STR_ACE_Laserpointer_green">
       <English>Laser Pointer (green)</English>
       <German>Laserpointer (grün)</German>
       <Russian>Лазерный прицел (зелёный)</Russian>
+      <Spanish>Puntero láser (verde)</Spanish>
     </Key>
     <Key ID="STR_ACE_Laserpointer_Description">
       <English>Emits visible light. </English>
       <German>Strahlt sichtbares Licht aus. </German>
       <Russian>Испускает узкий пучок видимого света.</Russian>
+      <Spanish>Emite luz visible.</Spanish>
     </Key>
     <Key ID="STR_ACE_Laserpointer_useLaser">
       <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</English>
