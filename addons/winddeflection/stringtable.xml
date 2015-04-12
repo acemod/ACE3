@@ -10,8 +10,8 @@
         <Russian>Ветер</Russian>
       </Key>
       <Key ID="STR_ACE_WEATHER_METER_WIND_DIRECTION">
-        <English>Windrichtung: %1</English>
-        <German>Interaktionen</German>
+        <English>Direction: %1</English>
+        <German>Windrichtung: %1</German>
         <Polish>Kierunek: %1</Polish>
         <Spanish>Dirección: %1</Spanish>
         <Russian>Направление: %1</Russian>
