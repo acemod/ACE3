@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-// #define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 private ["_divergence","_pos","_vec","_longestReturn","_shortestReturn","_resultPositions","_p1","_p2","_p","_v","_cp","_vecRotateMap","_result",
             "_resultPos","_distance","_count","_pos2","_radOffset","_offset","_offsetPos","_offsetVector"];
 _divergence = 0.3;
@@ -35,7 +35,7 @@ if(!isNil "_resultPos") then {
     drawLine3D [ASLtoATL _pos, ASLtoATL _resultPos, [1,0,0,1]];
 #endif
 };
-_count = 8;
+_count = 3;
 
 _pos2 = _pos vectorAdd (_vec vectorMultiply 1000);
 {
