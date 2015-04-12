@@ -8,7 +8,7 @@
       <Spanish>Opciones ACE</Spanish>
       <Polish>Opcje ACE</Polish>
       <Czech>ACE Nastavení</Czech>
-      <French>ACE Options</French>
+      <French>Options ACE</French>
       <Russian>ACE Настройки</Russian>
       <Portuguese>Opções do ACE</Portuguese>
       <Hungarian>ACE Opciók</Hungarian>
@@ -16,16 +16,19 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_FixAnimation">
       <English>Fix Animation</English>
+      <French>Fixer animation</French>
       <Spanish>Arreglar animación</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_ResetAll">
       <English>Reset All</English>
       <German>Rücksetzen</German>
+      <French>Défaut</French>
       <Spanish>Reiniciar todo</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabColors">
       <English>Colors</English>
       <German>Farben</German>
+      <French>Couleurs</French>
       <Russian>цвета</Russian>
       <Spanish>Colores</Spanish>
     </Key>
@@ -43,6 +46,7 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabValues">
       <English>Values</English>
+      <French>Valeurs</French>
       <Spanish>Valores</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Enabled">
@@ -72,16 +76,19 @@
     <Key ID="STR_ACE_OptionsMenu_Setting">
       <English>Setting:</English>
       <Czech>Nastavení:</Czech>
+      <French>Options:</French>
       <German>Einstellung:</German>
       <Russian>Yстановки:</Russian>
       <Spanish>Ajuste:</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Export">
       <English>Export</English>
+      <French>Exporter</French>
       <Spanish>Exportar</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_OpenExport">
       <English>Open Export Menu</English>
+      <French>Ouvrir le menu d'exportation</French>
       <Spanish>Abrir menu d'exportación</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_stringType">
@@ -94,26 +101,32 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_scalarType">
       <English>Number</English>
+      <French>Numéro</French>
       <Spanish>Numero</Spanish>
     </Key>
     <Key ID="STR_ACE_optionsMenu_unknownType">
       <English>Uknown input type</English>
+      <French>Type d'entrée inconnue</French>
       <Spanish>Tipo de entrada desconocida</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_SaveInput">
       <English>Save input</English>
+      <French>Sauver entrée</French>
       <Spanish>Guardar entrada</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_inClientSettings">
       <English>Include Client Settings</English>
+      <French>Inclure les options client</French>
       <Spanish>Incluir configuración de cliente</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_exClientSettings">
       <English>Exclude Client Settings</English>
+      <French>Exclure les options client</French>
       <Spanish>Excluir configuración de cliente</Spanish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_settingsExported">
       <English>Settings exported to clipboard</English>
+      <French>Options exportées dans le presse papier</French>
       <Spanish>Configuración exportada al portapapeles</Spanish>
     </Key>
   </Package>
