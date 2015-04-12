@@ -23,7 +23,7 @@ PREP(laser_init);
 PREP(vanillaLaserSeekerHandler);
 PREP(laserTargetPFH);
 
-ACE_LASERS = [];
+GVAR(VanillaLasers) = [];
 
 // Laser default variables
 ACE_DEFAULT_LASER_CODE = 1001;

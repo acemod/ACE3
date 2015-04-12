@@ -1,4 +1,4 @@
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 TRACE_1("enter", _this);
 
@@ -11,7 +11,7 @@ _uuid = _args select 2;
 
 if(isNull _laserTarget || !alive _shooter) exitWith {
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
-    REM(ACE_LASERS, _laserTarget);
+    REM(GVAR(VanillaLasers), _laserTarget);
     
     // Remove laseron
     [_uuid] call FUNC(laserOff);
