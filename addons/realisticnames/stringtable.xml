@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-11 -->
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="RealisticNames">
         <Key ID="STR_ACE_RealisticNames_HMG_01_Name">
@@ -117,6 +117,7 @@
             <Polish>YABHON-R3 (CAS)</Polish>
             <Czech>YABHON-R3 (CAS)</Czech>
             <Russian>YABHON-R3 (штурмовик)</Russian>
+            <French>YABHON-R3 (CAS)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_01_Name">
             <English>M-ATV</English>
@@ -725,6 +726,7 @@
             <Polish>CH-47I Chinook (nieuzbrojony)</Polish>
             <Russian>CH-47I Chinook (невооруженный)</Russian>
             <Czech>CH-47I Chinook (Neozbrojený)</Czech>
+            <French>CH-47I Chinook (Neozbrojený)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_CAS_01_Name">
             <English>A-10D Thunderbolt II</English>
@@ -1041,270 +1043,334 @@
         <Key ID="STR_ACE_RealisticNames_hgun_P07_Name">
             <English>P99</English>
             <German>P99</German>
+            <French>P99</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Rook40_Name">
             <English>MP-443 Grach</English>
             <German>MP-443 Grach</German>
+            <French>MP-443 Grach</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_ACPC2_Name">
             <English>ACP-C2</English>
             <German>ACP-C2</German>
+            <French>ACP-C2</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_Name">
             <English>FNX-45 Tactical</English>
             <German>FNX-45 Tactical</German>
+            <French>FNX-45 Tactical</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_02_Name">
             <English>Chiappa Rhino 60DS</English>
             <German>Chiappa Rhino 60DS</German>
+            <French>Chiappa Rhino 60DS</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_Signal_Name">
             <English>Taurus Judge</English>
             <German>Taurus Judge</German>
+            <French>Taurus Judge</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_NLAW_Name">
             <English>NLAW</English>
             <German>NLAW</German>
+            <French>NLAW</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_RPG32_Name">
             <English>RPG-32</English>
             <German>RPG-32</German>
+            <French>RPG-32</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_Name">
             <English>Mini-Spike (AA)</English>
             <German>Mini-Spike (AA)</German>
+            <French>Mini-Spike (AA)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_short_Name">
             <English>Mini-Spike (AT)</English>
             <German>Mini-Spike (AT)</German>
+            <French>Mini-Spike (AT)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Name">
             <English>MX</English>
             <German>MX</German>
+            <French>MX</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Black_Name">
             <English>MX (Black)</English>
             <German>MX (Black)</German>
+            <French>MX ( Noir)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Name">
             <English>MXC</English>
             <German>MXC</German>
+            <French>MXC</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Black_Name">
             <English>MXC (Black)</English>
             <German>MXC (Black)</German>
+            <French>MXC (Noir)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Name">
             <English>MX 3GL</English>
             <German>MX 3GL</German>
+            <French>MX 3GL</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Black_Name">
             <English>MX 3GL (Black)</English>
             <German>MX 3GL (Black)</German>
+            <French>MX 3 GL (Noir)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Name">
             <English>MX LSW</English>
             <German>MX LSW</German>
+            <French>MX LSW</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Black_Name">
             <English>MX LSW (Black)</English>
             <German>MX LSW (Black)</German>
+            <French>MX LSW (Noir)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Name">
             <English>MXM</English>
             <German>MXM</German>
+            <French>MXM</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Black_Name">
             <English>MXM (Black)</English>
             <German>MXM (Black)</German>
+            <French>MXM (Noir)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_Name">
             <English>KT2002 Katiba</English>
             <German>KT2002 Katiba</German>
+            <French>KT2002 Katiba</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_C_Name">
             <English>KT2002C Katiba</English>
             <German>KT2002C Katiba</German>
+            <French>KT2002C Katiba</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_GL_Name">
             <English>KT2002 Katiba KGL</English>
             <German>KT2002 Katiba KGL</German>
+            <French>KT2002 Katiba KGL</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_Name">
             <English>F2000 (Camo)</English>
             <German>F2000 (Camo)</German>
+            <French>F2000 (Camo)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_plain_Name">
             <English>F2000</English>
             <German>F2000</German>
+            <French>F2000</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20C_Name">
             <English>F2000 Tactical (Camo)</English>
             <German>F2000 Tactical (Camo)</German>
+            <French>F2000 Tactical (Camo)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20C_plain_Name">
             <English>F2000 Tactical</English>
             <German>F2000 Tactical</German>
+            <French>F2000 Tactical</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_GL_Name">
             <English>F2000 EGLM (Camo)</English>
             <German>F2000 EGLM (Camo)</German>
+            <French>F2000 EGLM (Camo)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_GL_plain_Name">
             <English>F2000 EGLM</English>
             <German>F2000 EGLM</German>
+            <French>F2000 EGLM</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG21_Name">
             <English>TAR-21</English>
             <German>TAR-21</German>
+            <French>TAR-21</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG20_Name">
             <English>CTAR-21</English>
             <German>CTAR-21</German>
+            <French>CTAR-21</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG21_GL_Name">
             <English>TAR-21 EGLM</English>
             <German>TAR-21 EGLM</German>
+            <French>TAR-21 EGLM</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_01_Name">
             <English>Vector SMG</English>
             <German>Vector SMG</German>
+            <French>Vector SMG</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_02_Name">
             <English>Scorpion Evo 3 A1</English>
             <German>Scorpion Evo 3 A1</German>
+            <French>Scorpion Evo 3 A1</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_PDW2000_Name">
             <English>CPW</English>
             <German>CPW</German>
+            <French>CPW</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SDAR_Name">
             <English>RFB SDAR</English>
             <German>RFB SDAR</German>
+            <French>RFB SDAR</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Mk200_Name">
             <English>Stoner 99 LMG</English>
             <German>Stoner 99 LMG</German>
+            <French>Stoner 99 LMG</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Zafir_Name">
             <English>Negev NG7</English>
             <German>Negev NG7</German>
+            <French>Negev NG7</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_EBR_Name">
             <English>Mk14 Mod 1 EBR</English>
             <German>Mk14 Mod 1 EBR</German>
+            <French>Mk 14 Mod 1 EBR</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_Name">
             <English>GM6 Lynx</English>
             <German>GM6 Lynx</German>
+            <French>GM6 Lynx</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_camo_Name">
             <English>GM6 Lynx (Camo)</English>
             <German>GM6 Lynx (Camo)</German>
+            <French>GM6 Lynx (Camo)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_Name">
             <English>M200 Intervention</English>
             <German>M200 Intervention</German>
+            <French>M200 Intervention</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_camo_Name">
             <English>M200 Intervention (Camo)</English>
             <German>M200 Intervention (Camo)</German>
+            <French>M200 Intervention (Camo)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_01_Name">
             <English>VS-121</English>
             <German>VS-121</German>
+            <French>VS-121</French>
         </Key>
-
         <Key ID="STR_ACE_RealisticNames_DMR_02">
             <English>TODO: MAR-10 .338</English>
+            <French>MAR-10 .338</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02">
             <English>TODO: MAR-10 .338 (Black)</English>
+            <French>MAR-10 .338 (Noir)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_camo">
             <English>TODO: MAR-10 .338 (Camo)</English>
+            <French>MAR-10 .338 (Camo)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_sniper">
             <English>TODO: MAR-10 .338 (Sand)</English>
+            <French>MAR-10 .338 (Beige)</French>
         </Key>
-
         <Key ID="STR_ACE_RealisticNames_DMR_03">
             <English>TODO: Mk-I EMR 7.62 mm</English>
+            <French>Mk-l EMR 7.62 mm</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03">
             <English>TODO: Mk-I EMR 7.62 mm (Black)</English>
+            <French>Mk-l EMR 7.62 mm (Noir)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_khaki">
             <English>TODO: Mk-I EMR 7.62 mm (Khaki)</English>
+            <French>Mk-l EMR 7.62 mm (Kaki)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_tan">
             <English>TODO: Mk-I EMR 7.62 mm (Sand)</English>
+            <French>Mk-l EMR 7.62 mm (Beige)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_multicam">
             <English>TODO: Mk-I EMR 7.62 mm (Camo)</English>
+            <French>Mk-l EMR 7.62 mm (Camo)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_woodland">
             <English>TODO: Mk-I EMR 7.62 mm (Woodland)</English>
+            <French>Mk-l EMR 7.62 mm (Woodland)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
             <English>TODO: NATO DMR (provisional) spotter</English>
+            <French>NATO DMR (provisoire) Observateur</French>
         </Key>
-
         <Key ID="STR_ACE_RealisticNames_DMR_04">
             <English>TODO: ASP-1 Kir 12.7 mm</English>
+            <French>ASP-1 Kir 12.7 mm</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04">
             <English>TODO: ASP-1 Kir 12.7 mm (Black)</English>
+            <French>ASP-1 Kir 12.7 mm (Noir)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04_Tan">
             <English>TODO: ASP-1 Kir 12.7 mm (Tan)</English>
+            <French>ASP-1 Kir 12.7 mm (Tan)</French>
         </Key>
-
         <Key ID="STR_ACE_RealisticNames_DMR_05">
             <English>TODO: Cyrus 9.3 mm</English>
+            <French>Cyrus 9.3 mm</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_blk">
             <English>TODO: Cyrus 9.3 mm (Black)</English>
+            <French>Cyrus 9.3 mm (Noir)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_hex">
             <English>TODO: Cyrus 9.3 mm (Hex)</English>
+            <French>Cyrus 9.3 mm (Hex)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_tan">
             <English>TODO: Cyrus 9.3 mm (Tan)</English>
+            <French>Cyrus 9.3 mm (Tan)</French>
         </Key>
-
         <Key ID="STR_ACE_RealisticNames_DMR_06">
             <English>TODO: Mk14 7.62 mm</English>
+            <French>Mk 14 7.62 mm</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_camo">
             <English>TODO: Mk14 7.62 mm (Camo)</English>
+            <French>Mk 14 7.62 mm (Camo)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_olive">
             <English>TODO: Mk14 7.62 mm (Olive)</English>
+            <French>Mk 14 7.62 mm (Olive)</French>
         </Key>
-
         <Key ID="STR_ACE_RealisticNames_MMG_01">
             <English>TODO: Navid 9.3 mm</English>
+            <French>Navid 9.3 mm</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_hex">
             <English>TODO: Navid 9.3 mm (Hex)</English>
+            <French>Navid 9.3 mm (Hex)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_tan">
             <English>TODO: Navid 9.3 mm (Tan)</English>
+            <French>Navid 9.3 mm (Tan)</French>
         </Key>
-
         <Key ID="STR_ACE_RealisticNames_MMG_02">
             <English>TODO: SPMG .338</English>
+            <French>SPMG .338</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_camo">
             <English>TODO: SPMG .338 (MTP)</English>
+            <French>SPMG .338 (MTP)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_black">
             <English>TODO: SPMG .338 (Black)</English>
+            <French>SPMG .338 (Noir)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_sand">
             <English>TODO: SPMG .338 (Sand)</English>
+            <French>SPMG .338 (Beige)</French>
         </Key>
-
     </Package>
 </Project>

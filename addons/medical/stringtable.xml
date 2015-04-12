@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-07 -->
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Inject_Atropine">
@@ -226,7 +226,6 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_PackingBandage">
             <English>Packing Bandage</English>
-            
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_ElasticBandage">
             <English>Elastic Bandage</English>
@@ -378,7 +377,6 @@
             <English>Receiving IV [%1ml]</English>
             <French>Transfusion en IV [%1ml]</French>
         </Key>
-
         <Key ID="STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY">
             <English>Bandage (Basic)</English>
             <Russian>Повязка (обычная)</Russian>
@@ -707,7 +705,7 @@
         <Key ID="STR_ACE_MEDICAL_QUIKCLOT_DESC_USE">
             <English></English>
             <Russian></Russian>
-            <French>Un bandage aidnat à coaguler les saignements mineurs à moyens.</French>
+            <French>Un bandage aidant à coaguler les saignements mineurs à moyens.</French>
             <Polish>Proszkowy opatrunek adsorbcyjny przeznaczony do tamowania zagrażających życiu krwawień średniej i
                 dużej intensywności.
             </Polish>
@@ -770,7 +768,6 @@
             <French>Housse de transport des corps</French>
             <Spanish>Bolsa para cadáveres</Spanish>
         </Key>
-
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE">
             <English>Blood Pressure</English>
             <Russian>Артериальное давление</Russian>
@@ -1025,8 +1022,8 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_PlacingInBodyBag">
             <English>Placing body in bodybag</English>
+            <French>Placement du corps dans la housse</French>
         </Key>
-
         <Key ID="STR_ACE_MEDICAL_ACTIVITY_bandagedPatient">
             <English>%1 has bandaged patient</English>
             <French>%1 a pansé le patient</French>
@@ -1043,6 +1040,5 @@
             <English>%1 applied a tourniquet</English>
             <French>%1 a appliqué un garrot</French>
         </Key>
-
     </Package>
 </Project>

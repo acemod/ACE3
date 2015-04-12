@@ -1,42 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-09-09 -->
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
-  <Package name="Reload">
-    <Key ID="STR_ACE_reload_SettingDisplayTextName">
-      <English>Check ammo on weapon reload</English>
-    </Key>
-    <Key ID="STR_ACE_reload_SettingDisplayTextDesc">
-      <English>Check the ammo in your new magazine on magazine reload.</English>
-    </Key>
-    <Key ID="STR_ACE_Reload_checkAmmo">
-      <English>Check Ammo</English>
-      <German>Munition prüfen</German>
-      <Spanish>Verificar munición</Spanish>
-      <Polish>Sprawdź amunicję</Polish>
-      <French>Vérifier Munitions</French>
-      <Hungarian>Lőszerellenőrzés</Hungarian>
-      <Czech>Zkontrolovat Munici</Czech>
-      <Italian>Controlla le munizioni</Italian>
-      <Portuguese>Conferir munições</Portuguese>
-      <Russian>Kонтроль Боеприпасы</Russian>
-    </Key>
-    <Key ID="STR_ACE_Reload_Ammo">
-      <English>Ammo</English>
-      <German>Munition</German>
-      <Spanish>Munición</Spanish>
-      <Polish>Amunicja</Polish>
-      <French>Munitions</French>
-      <Hungarian>Lőszer</Hungarian>
-      <Czech>Munice</Czech>
-      <Italian>Munizioni</Italian>
-      <Portuguese>Munições</Portuguese>
-      <Russian>Боеприпасы</Russian>
-    </Key>
-    <Key ID="STR_ACE_Reload_LinkBelt">
-      <English>Link belt</English>
-    </Key>
-    <Key ID="STR_ACE_Reload_LinkingBelt">
-      <English>Linking belt...</English>
-    </Key>
-  </Package>
+    <Package name="Reload">
+        <Key ID="STR_ACE_reload_SettingDisplayTextName">
+            <English>Check ammo on weapon reload</English>
+            <French>Vérification des munitions au rechargement</French>
+        </Key>
+        <Key ID="STR_ACE_reload_SettingDisplayTextDesc">
+            <English>Check the ammo in your new magazine on magazine reload.</English>
+            <French>Vérification du nombre de munition au rechargement</French>
+        </Key>
+        <Key ID="STR_ACE_Reload_checkAmmo">
+            <English>Check Ammo</English>
+            <German>Munition prüfen</German>
+            <Spanish>Verificar munición</Spanish>
+            <Polish>Sprawdź amunicję</Polish>
+            <French>Vérifier Munitions</French>
+            <Hungarian>Lőszerellenőrzés</Hungarian>
+            <Czech>Zkontrolovat Munici</Czech>
+            <Italian>Controlla le munizioni</Italian>
+            <Portuguese>Conferir munições</Portuguese>
+            <Russian>Kонтроль Боеприпасы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Reload_Ammo">
+            <English>Ammo</English>
+            <German>Munition</German>
+            <Spanish>Munición</Spanish>
+            <Polish>Amunicja</Polish>
+            <French>Munitions</French>
+            <Hungarian>Lőszer</Hungarian>
+            <Czech>Munice</Czech>
+            <Italian>Munizioni</Italian>
+            <Portuguese>Munições</Portuguese>
+            <Russian>Боеприпасы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Reload_LinkBelt">
+            <English>Link belt</English>
+            <French>Attacher bande</French>
+        </Key>
+        <Key ID="STR_ACE_Reload_LinkingBelt">
+            <English>Linking belt...</English>
+            <French>Attache d'une bande</French>
+        </Key>
+    </Package>
 </Project>

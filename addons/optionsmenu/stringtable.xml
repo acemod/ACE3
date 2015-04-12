@@ -1,107 +1,122 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-01-23 -->
+<!-- Edited with tabler. -->
 <Project name="ACE">
-  <Package name="OptionsMenu">
-    <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
-      <English>ACE Options</English>
-      <German>ACE Optionen</German>
-      <Spanish>Opciones ACE</Spanish>
-      <Polish>Opcje ACE</Polish>
-      <Czech>ACE Nastavení</Czech>
-      <French>ACE Options</French>
-      <Russian>ACE Настройки</Russian>
-      <Portuguese>Opções do ACE</Portuguese>
-      <Hungarian>ACE Opciók</Hungarian>
-      <Italian>Opzioni ACE</Italian>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_FixAnimation">
-      <English>Fix Animation</English>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_ResetAll">
-      <English>Reset All</English>
-      <German>Rücksetzen</German>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_TabColors">
-      <English>Colors</English>
-      <German>Farben</German>
-      <Russian>цвета</Russian>
-      <Spanish>Colors</Spanish>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_TabOptions">
-      <English>Options</English>
-      <German>Optionen</German>
-      <Spanish>Opciones</Spanish>
-      <Polish>Opcje</Polish>
-      <Czech>Nastavení</Czech>
-      <French>Options</French>
-      <Russian>Настройки</Russian>
-      <Portuguese>Opções</Portuguese>
-      <Hungarian>Opciók</Hungarian>
-      <Italian>Opzioni</Italian>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_TabValues">
-      <English>Values</English>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_Enabled">
-      <English>Yes</English>
-      <German>Ja</German>
-      <Spanish>Si</Spanish>
-      <Polish>Tak</Polish>
-      <Czech>Ano</Czech>
-      <French>Oui</French>
-      <Russian>Да</Russian>
-      <Hungarian>Igen</Hungarian>
-      <Portuguese>Sim</Portuguese>
-      <Italian>Si</Italian>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_Disabled">
-      <English>No</English>
-      <German>Nein</German>
-      <Spanish>No</Spanish>
-      <Polish>Nie</Polish>
-      <Czech>Ne</Czech>
-      <French>Non</French>
-      <Russian>Нет</Russian>
-      <Hungarian>Nem</Hungarian>
-      <Portuguese>Não</Portuguese>
-      <Italian>No</Italian>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_Setting">
-      <English>Setting:</English>
-      <Czech>Nastavení:</Czech>
-      <German>Einstellung:</German>
-      <Russian>Yстановки:</Russian>
-      <Spanish>Ajuste:</Spanish>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_Export">
-      <English>Export</English>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_OpenExport">
-      <English>Open Export Menu</English>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_stringType">
-      <English>String input.</English>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_arrayType">
-      <English>Array. Seperate elements by using ,.</English>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_scalarType">
-      <English>Number</English>
-    </Key>
-    <Key ID="STR_ACE_optionsMenu_unknownType">
-      <English>Uknown input type</English>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_SaveInput">
-      <English>Save input</English>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_inClientSettings">
-      <English>Include Client Settings</English>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_exClientSettings">
-      <English>Exclude Client Settings</English>
-    </Key>
-    <Key ID="STR_ACE_OptionsMenu_settingsExported">
-      <English>Settings exported to clipboard</English>
-    </Key>
-  </Package>
+    <Package name="OptionsMenu">
+        <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
+            <English>ACE Options</English>
+            <German>ACE Optionen</German>
+            <Spanish>Opciones ACE</Spanish>
+            <Polish>Opcje ACE</Polish>
+            <Czech>ACE Nastavení</Czech>
+            <French>Options ACE</French>
+            <Russian>ACE Настройки</Russian>
+            <Portuguese>Opções do ACE</Portuguese>
+            <Hungarian>ACE Opciók</Hungarian>
+            <Italian>Opzioni ACE</Italian>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_FixAnimation">
+            <English>Fix Animation</English>
+            <French>Corriger animation</French>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_ResetAll">
+            <English>Reset All</English>
+            <German>Rücksetzen</German>
+            <French>Défaut</French>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_TabColors">
+            <English>Colors</English>
+            <German>Farben</German>
+            <Russian>цвета</Russian>
+            <Spanish>Colors</Spanish>
+            <French>Couleurs</French>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_TabOptions">
+            <English>Options</English>
+            <German>Optionen</German>
+            <Spanish>Opciones</Spanish>
+            <Polish>Opcje</Polish>
+            <Czech>Nastavení</Czech>
+            <French>Options</French>
+            <Russian>Настройки</Russian>
+            <Portuguese>Opções</Portuguese>
+            <Hungarian>Opciók</Hungarian>
+            <Italian>Opzioni</Italian>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_TabValues">
+            <English>Values</English>
+            <French>Valeurs</French>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_Enabled">
+            <English>Yes</English>
+            <German>Ja</German>
+            <Spanish>Si</Spanish>
+            <Polish>Tak</Polish>
+            <Czech>Ano</Czech>
+            <French>Oui</French>
+            <Russian>Да</Russian>
+            <Hungarian>Igen</Hungarian>
+            <Portuguese>Sim</Portuguese>
+            <Italian>Si</Italian>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_Disabled">
+            <English>No</English>
+            <German>Nein</German>
+            <Spanish>No</Spanish>
+            <Polish>Nie</Polish>
+            <Czech>Ne</Czech>
+            <French>Non</French>
+            <Russian>Нет</Russian>
+            <Hungarian>Nem</Hungarian>
+            <Portuguese>Não</Portuguese>
+            <Italian>No</Italian>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_Setting">
+            <English>Setting:</English>
+            <Czech>Nastavení:</Czech>
+            <German>Einstellung:</German>
+            <Russian>Yстановки:</Russian>
+            <Spanish>Ajuste:</Spanish>
+            <French>Paramètres</French>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_Export">
+            <English>Export</English>
+            <French>Exporter</French>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_OpenExport">
+            <English>Open Export Menu</English>
+            <French>Ouvrir le menu d'exportation</French>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_stringType">
+            <English>String input.</English>
+            <French>Entrée</French>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_arrayType">
+            <English>Array. Seperate elements by using ,.</English>
+            <French>Tableau. Séparation par ,.</French>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_scalarType">
+            <English>Number</English>
+            <French>Nombre</French>
+        </Key>
+        <Key ID="STR_ACE_optionsMenu_unknownType">
+            <English>Uknown input type</English>
+            <French>Type d'entrée inconnue</French>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_SaveInput">
+            <English>Save input</English>
+            <French>Sauvegarder</French>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_inClientSettings">
+            <English>Include Client Settings</English>
+            <French>Inclure paramètres client</French>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_exClientSettings">
+            <English>Exclude Client Settings</English>
+            <French>Exclure paramètres client</French>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_settingsExported">
+            <English>Settings exported to clipboard</English>
+            <French>Paramètres exportés dans le presse papier</French>
+        </Key>
+    </Package>
 </Project>

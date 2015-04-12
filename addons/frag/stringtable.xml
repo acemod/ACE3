@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-07 -->
+<!-- Edited with tabler. -->
 <Project name="Arma2">
-  <Package name="ACE2">
-    <Container name="frag">
-      <Key ID="STR_DN_ACE_FRAG">
-        <English>Disable Fragmentation</English>
-        <Czech>Zakázat fragmentaci granátů</Czech>
-        <German>Weapons: Keine Schrapnelle</German>
-        <Polish>Wyłącz głowice fragmentacyjne</Polish>
-        <Russian>Выключить разлёт осколков</Russian>
-      </Key>
-    </Container>
-  </Package>
+    <Package name="ACE2">
+        <Container name="frag">
+            <Key ID="STR_DN_ACE_FRAG">
+                <English>Disable Fragmentation</English>
+                <Czech>Zakázat fragmentaci granátů</Czech>
+                <German>Weapons: Keine Schrapnelle</German>
+                <Polish>Wyłącz głowice fragmentacyjne</Polish>
+                <Russian>Выключить разлёт осколков</Russian>
+                <French>Désactive la fragmentation</French>
+            </Key>
+        </Container>
+    </Package>
 </Project>

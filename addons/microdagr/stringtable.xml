@@ -1,109 +1,131 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-03-24 -->
+<!-- Edited with tabler. -->
 <Project name="ACE">
-  <Package name="microdagr">
-    <Key ID="STR_ACE_microdagr_itemName">
-      <English>MicroDAGR GPS</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_itemDescription">
-      <English>MicroDAGR advanced GPS receiver</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_settingUseMils">
-      <English>Angular Unit:</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_settingMils">
-      <English>Mils</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_settingShowWP">
-      <English>Show Waypoints On Map:</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_settingDegrees">
-      <English>Degrees</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_settingOn">
-      <English>On</English>
-      <Czech>Zapnuto</Czech>
-      <French>Oui</French>
-      <German>Ein</German>
-      <Italian>Sì</Italian>
-      <Polish>Wł.</Polish>
-      <Portuguese>Ativar</Portuguese>
-      <Russian>Вкл.</Russian>
-      <Spanish>Sí</Spanish>
-    </Key>
-    <Key ID="STR_ACE_microdagr_settingOff">
-      <English>Off</English>
-      <Czech>Vypnuto</Czech>
-      <French>Non</French>
-      <German>Aus</German>
-      <Italian>No</Italian>
-      <Polish>Wył.</Polish>
-      <Portuguese>Desativar</Portuguese>
-      <Russian>Выкл.</Russian>
-      <Spanish>No</Spanish>
-    </Key>
-    <Key ID="STR_ACE_microdagr_wpEnterCords">
-      <English>Enter Grid Cords:</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_wpEnterName">
-      <English>Name of [%1]</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_controlMGRS">
-      <English>MGRS-New</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_controlWGD">
-      <English>WGD</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_controlRange">
-      <English>Range:</English>
-      <German>Reichweite:</German>
-    </Key>
-    <Key ID="STR_ACE_microdagr_compasDirection">
-      <English>Compass Direction</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_menuMark">
-      <English>Mark</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_menuWaypoints">
-      <English>Waypoints</English>
-      <German>Wegpunkte</German>
-    </Key>
-    <Key ID="STR_ACE_microdagr_menuConnectTo">
-      <English>Connect To</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_menuSettings">
-      <English>Settings</English>
-      <German>Einstellungen</German>
-      <Spanish>Configuración</Spanish>
-    </Key>
-    <Key ID="STR_ACE_microdagr_waypointsSet">
-      <English>SetWP</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_waypointsAdd">
-      <English>Add</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_waypointsDelete">
-      <English>Delete</English>
-      <Czech>Smazat</Czech>
-      <French>Supprimer</French>
-      <German>Löschen</German>
-      <Italian>Elimina</Italian>
-      <Polish>Usuń</Polish>
-      <Portuguese>Excluir</Portuguese>
-      <Russian>Удалить</Russian>
-      <Spanish>Suprimir</Spanish>
-    </Key>
-    <Key ID="STR_ACE_microdagr_toggleUnit">
-      <English>Toggle MicroDAGR Display Mode</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_show">
-      <English>Show MicoDAGR</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_configure">
-      <English>Configure MicroDAGR</English>
-    </Key>
-    <Key ID="STR_ACE_microdagr_closeUnit">
-      <English>Close MicroDAGR</English>
-    </Key>
-  </Package>
+    <Package name="microdagr">
+        <Key ID="STR_ACE_microdagr_itemName">
+            <English>MicroDAGR GPS</English>
+            <French>MicroDAGR GPS</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_itemDescription">
+            <English>MicroDAGR advanced GPS receiver</English>
+            <French>Récepteur GPS MicroDAGR</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_settingUseMils">
+            <English>Angular Unit:</English>
+            <French>Unité angulaire</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_settingMils">
+            <English>Mils</English>
+            <French>Mils</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_settingShowWP">
+            <English>Show Waypoints On Map:</English>
+            <French>Montrer points de passage sur la carte</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_settingDegrees">
+            <English>Degrees</English>
+            <French>Degrés</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_settingOn">
+            <English>On</English>
+            <Czech>Zapnuto</Czech>
+            <French>Allumé</French>
+            <German>Ein</German>
+            <Italian>Sì</Italian>
+            <Polish>Wł.</Polish>
+            <Portuguese>Ativar</Portuguese>
+            <Russian>Вкл.</Russian>
+            <Spanish>Sí</Spanish>
+        </Key>
+        <Key ID="STR_ACE_microdagr_settingOff">
+            <English>Off</English>
+            <Czech>Vypnuto</Czech>
+            <French>Eteint</French>
+            <German>Aus</German>
+            <Italian>No</Italian>
+            <Polish>Wył.</Polish>
+            <Portuguese>Desativar</Portuguese>
+            <Russian>Выкл.</Russian>
+            <Spanish>No</Spanish>
+        </Key>
+        <Key ID="STR_ACE_microdagr_wpEnterCords">
+            <English>Enter Grid Cords:</English>
+            <French>Entrer coordonnées</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_wpEnterName">
+            <English>Name of [%1]</English>
+            <French>Nom de %1</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_controlMGRS">
+            <English>MGRS-New</English>
+            <French>Info-MGRS</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_controlWGD">
+            <English>WGD</English>
+            <French>WGD</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_controlRange">
+            <English>Range:</English>
+            <German>Reichweite:</German>
+            <French>Distance:</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_compasDirection">
+            <English>Compass Direction</English>
+            <French>Azimut</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_menuMark">
+            <English>Mark</English>
+            <French>Marque</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_menuWaypoints">
+            <English>Waypoints</English>
+            <German>Wegpunkte</German>
+            <French>Point de passage</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_menuConnectTo">
+            <English>Connect To</English>
+            <French>Connecter</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_menuSettings">
+            <English>Settings</English>
+            <German>Einstellungen</German>
+            <Spanish>Configuración</Spanish>
+            <French>Paramètres</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_waypointsSet">
+            <English>SetWP</English>
+            <French>Définir point de passage</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_waypointsAdd">
+            <English>Add</English>
+            <French>Ajouter</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_waypointsDelete">
+            <English>Delete</English>
+            <Czech>Smazat</Czech>
+            <French>Supprimer</French>
+            <German>Löschen</German>
+            <Italian>Elimina</Italian>
+            <Polish>Usuń</Polish>
+            <Portuguese>Excluir</Portuguese>
+            <Russian>Удалить</Russian>
+            <Spanish>Suprimir</Spanish>
+        </Key>
+        <Key ID="STR_ACE_microdagr_toggleUnit">
+            <English>Toggle MicroDAGR Display Mode</English>
+            <French>Basculer le mode d'affichage MicroDAGR</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_show">
+            <English>Show MicroDAGR</English>
+            <French>Afficher MicroDAGR</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_configure">
+            <English>Configure MicroDAGR</English>
+            <French>Configurer MicroDAGR</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_closeUnit">
+            <English>Close MicroDAGR</English>
+            <French>Fermer MicroDAGR</French>
+        </Key>
+    </Package>
 </Project>

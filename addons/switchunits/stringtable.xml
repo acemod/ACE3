@@ -1,21 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
-  <Package name="SwitchUnits">
-    <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
-      <English>Switched unit</English>
-      <German>Einheit gewechselt</German>
-      <Russian>Юнит переключен</Russian>
-      <Czech>Prohozená jednotka</Czech>
-      <Polish>Przełącz jednostkę</Polish>
-      <Spanish>Cambiado de unidad</Spanish>
-    </Key>
-    <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
-      <English>This unit is too close to the enemy.</English>
-      <German>Diese Einheit ist zu nah am Feind.</German>
-      <Russian>Юнит слишком близок к противнику</Russian>
-      <Czech>Tato jednotka je moc blízko k nepříteli.</Czech>
-      <Polish>Ta jednostka jest zbyt blisko przeciwnika.</Polish>
-      <Spanish>Esta unidad está demasiado cerca del enemigo.</Spanish>
-    </Key>
-  </Package>
+    <Package name="SwitchUnits">
+        <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
+            <English>Switched unit</English>
+            <German>Einheit gewechselt</German>
+            <Russian>Юнит переключен</Russian>
+            <Czech>Prohozená jednotka</Czech>
+            <Polish>Przełącz jednostkę</Polish>
+            <Spanish>Cambiado de unidad</Spanish>
+            <French>Unité changée</French>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
+            <English>This unit is too close to the enemy.</English>
+            <German>Diese Einheit ist zu nah am Feind.</German>
+            <Russian>Юнит слишком близок к противнику</Russian>
+            <Czech>Tato jednotka je moc blízko k nepříteli.</Czech>
+            <Polish>Ta jednostka jest zbyt blisko przeciwnika.</Polish>
+            <Spanish>Esta unidad está demasiado cerca del enemigo.</Spanish>
+            <French>Cette unité est trop proche des ennemis</French>
+        </Key>
+    </Package>
 </Project>
