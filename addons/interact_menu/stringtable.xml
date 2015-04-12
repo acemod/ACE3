@@ -1,31 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
   <Package name="Interact_Menu">
     <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
       <English>Always display cursor for self interaction</English>
       <German>Immer den Cursor für Selbst-Interaktionen anzeigen.</German>
       <Spanish>Mostrar siempre el cursor para la interacción propia</Spanish>
+      <Russian>Всегда показывать курсор для взаимодействия с собой</Russian>
+      <Czech>Zobrazit kurzor v menu pro vlastní interakci</Czech>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_InteractKey">
       <English>Interact Key</English>
-      <German>Interaktionstaste</German>
+      <German>Fremdinteraktionsmenü-Taste</German>
       <Spanish>Tecla de interacción</Spanish>
+      <Russian>Клавиша взаимодействия</Russian>
+      <Czech>Klávesa pro interakci</Czech>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
       <English>Self Interaction Key</English>
-      <German>Selbst-Interaktionstaste</German>
+      <German>Eigeninteraktionsmenü-Taste</German>
       <Spanish>Tecla de interacción propia</Spanish>
+      <Russian>Клавиша взаимодействия (с собой)</Russian>
+      <Czech>Klávesa pro vlastní interakci</Czech>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
       <English>Self Actions</English>
-      <German>Selbst-Interaktion</German>
+      <German>Selbst-Aktionen</German>
       <Spanish>Acciones propias</Spanish>
+      <Russian>Действия с собой</Russian>
+      <Czech>Vlastní akce</Czech>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
       <English>Vehicle Actions</English>
-      <German>Fahrzeug-Interaktion</German>
+      <German>Fahrzeug-Aktionen</German>
       <Spanish>Acciones de vehículo</Spanish>
+      <Russian>Действия на транспорте</Russian>
+      <Czech>Interakce s vozidly</Czech>
     </Key>
   </Package>
 </Project>

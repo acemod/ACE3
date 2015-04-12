@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-22 -->
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="Movement">
     <Key ID="STR_ACE_Movement_UseImperial">
@@ -8,7 +8,7 @@
       <Spanish>Mostrar peso en libras</Spanish>
       <French>Afficher le poids en lb</French>
       <Polish>Pokaż ciężar w funtach</Polish>
-      <Czech>Zobrazit váhu v lb</Czech>
+      <Czech>Zobrazit váhu v librách</Czech>
       <Italian>Mostra peso in libbre</Italian>
       <Portuguese>Mostrar peso em libras</Portuguese>
       <Hungarian>Súly megjelenítése fontban.</Hungarian>

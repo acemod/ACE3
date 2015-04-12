@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-11 -->
+<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="Vector">
     <Key ID="STR_ACE_Vector_VectorName">
@@ -32,7 +32,7 @@
       <Spanish>Vector - Tecla de acimut</Spanish>
       <French>Vector - Touche Azimuth</French>
       <Polish>Vector - Azymut</Polish>
-      <Czech>Vector - Zobrazit Azimut</Czech>
+      <Czech>Vector - Zobrazit azimut</Czech>
       <Italian>Vector - Tasto Azimuth</Italian>
       <Portuguese>Vector - Tecla de Azimute</Portuguese>
       <Hungarian>Vector - Irányszög gomb</Hungarian>

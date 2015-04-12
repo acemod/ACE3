@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
   <Package name="Captives">
     <Key ID="STR_ACE_Captives_SetCaptive">
@@ -134,26 +133,36 @@
       <English>Surrender</English>
       <German>Kapitulieren</German>
       <Spanish>Rendirse</Spanish>
+      <Russian>Сдаться</Russian>
+      <Czech>Vzdát se</Czech>
     </Key>
     <Key ID="STR_ACE_Captives_StopSurrendering">
       <English>Stop Surrendering</English>
       <German>Den Kampf erneut aufnehmen</German>
       <Spanish>Dejar de rendirse</Spanish>
+      <Russian>Остановить сдачу</Russian>
+      <Czech>Přestat se vzdávat</Czech>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
       <English>Only use on alive units</English>
       <German>Nur bei lebenden Einheiten verwendbar</German>
       <Spanish>Utilizar solo en unidades vivas</Spanish>
+      <Russian>Только для живых юнитов</Russian>
+      <Czech>Použitelné jen na živé jednotky</Czech>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_OnlyInfantry">
       <English>Only use on dismounted inf</English>
       <German>Nur bei abgesessener Infanterie verwendbar</German>
       <Spanish>Utilizar solo en infanteria desmontada</Spanish>
+      <Russian>Только для спеш. солдат</Russian>
+      <Czech>Použitelné jen na pěsích jednotkách</Czech>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
       <English>Nothing under mouse</English>
       <German>Es wurde nichts ausgewählt</German>
       <Spanish>Nada bajo el ratón</Spanish>
+      <Russian>Объекты под мышью отсутствуют</Russian>
+      <Czech>Nic není vybráno</Czech>
     </Key>
   </Package>
 </Project>

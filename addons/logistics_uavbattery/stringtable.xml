@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-21 -->
 <Project name="ACE">
   <Package name="logistics_uavbattery">
     <Key ID="STR_ACE_logistics_uavbattery_Full">
@@ -21,10 +20,10 @@
       <French>Pas de batterie UAV</French>
       <Polish>Potrzebujesz baterii UAV</Polish>
       <Hungarian>Szükséged van egy UAV akkumulátorra</Hungarian>
-      <Czech>Potřebuješ UAV-Baterii</Czech>
+      <Czech>Potřebuješ UAV baterii</Czech>
       <Portuguese>Você precisa de uma Bateria para VANT</Portuguese>
       <Italian>Hai bisogno di una Batteria UAV</Italian>
-      <Russian>Требуется аккумулятор БПЛА</Russian>
+      <Russian>Требуется аккумулятор для БПЛА</Russian>
     </Key>
     <Key ID="STR_ACE_logistics_uavbattery_Recharge">
       <English>Recharge</English>
@@ -36,7 +35,7 @@
       <Czech>Dobít</Czech>
       <Portuguese>Recarregar</Portuguese>
       <Italian>Ricarica</Italian>
-      <Russian>Подзарядить</Russian>
+      <Russian>Зарядить</Russian>
     </Key>
     <Key ID="STR_ACE_logistics_uavbattery_Battery_Name">
       <English>UAV Battery</English>
@@ -45,7 +44,7 @@
       <French>Batterie UAV</French>
       <Polish>Bateria UAV</Polish>
       <Hungarian>UAV akkumulátor</Hungarian>
-      <Czech>UAV-Baterie</Czech>
+      <Czech>UAV baterie</Czech>
       <Portuguese>Bateria para VANT</Portuguese>
       <Italian>Batteria UAV</Italian>
       <Russian>Аккумулятор БПЛА</Russian>
@@ -60,7 +59,7 @@
       <Czech>Používané k dobíjení UAV</Czech>
       <Portuguese>Usada para reabastecer VANT</Portuguese>
       <Italian>Usata per ricaricare la Batteria dell'UAV</Italian>
-      <Russian>Используется для подзарядки БПЛА</Russian>
+      <Russian>Используется для зарядки БПЛА</Russian>
     </Key>
     <Key ID="STR_ACE_logistics_uavbattery_Battery_Recharge">
       <English>Recharging ...</English>
@@ -72,7 +71,7 @@
       <Czech>Dobíjení ...</Czech>
       <Portuguese>Recarregando ...</Portuguese>
       <Italian>In ricarica ...</Italian>
-      <Russian>Подзаряжаем ...</Russian>
+      <Russian>Заряжается ...</Russian>
     </Key>
   </Package>
 </Project>
