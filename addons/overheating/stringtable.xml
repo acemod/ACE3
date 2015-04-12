@@ -4,7 +4,7 @@
   <Package name="Overheating">
     <Key ID="STR_ACE_overheating_SettingDisplayTextName">
       <English>Display text on jam</English>
-      <French>Afficher un text à la surchauffe</French>
+      <French>Afficher un texte à la surchauffe</French>
     </Key>
     <Key ID="STR_ACE_overheating_SettingDisplayTextDesc">
       <English>Display a notification whenever your weapon gets jammed</English>
