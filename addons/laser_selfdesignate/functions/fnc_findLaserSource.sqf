@@ -1,4 +1,15 @@
-//findLaserSource.sqf
+/*
+ * Author: jaynus
+ * Handler function for laser network code.
+ *
+ * Argument:
+ * 0: Emitter
+ * 1: Owner
+ * 
+ * Return value:
+ *    [position, direction]
+ */
+ //findLaserSource.sqf
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 

@@ -1,4 +1,14 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: jaynus
+ * Turns on laser self designation from this vehicle based on the turret.
+ * There are no arguments, because it is all strictly based on the users vehicle.
+ *
+ * Argument:
+ *
+ * Return value:
+ *    N/A
+ */
+ //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 TRACE_1("enter", _this);
@@ -14,7 +24,7 @@ FUNC(laserHudDesignatePFH) = {
     _vehicle = vehicle _shooter;
     TRACE_1("", _args);
    
-    if((vehicle _shooter) == _shooter || !alive _shooter || isNull _vehicle || !GVAR(active) ) exitWith { 
+    if((vehicle _shooter) == _shooter || {!alive _shooter} || {isNull _vehicle} || {!GVAR(active)} ) exitWith { 
         _args call FUNC(laserHudDesignateOff);
     };
     if(!([_shooter] call FUNC(unitTurretHasDesignator)) ) exitWith {
@@ -35,18 +45,8 @@ FUNC(laserHudDesignatePFH) = {
     TRACE_1("Search", _laserResult);
 
     if((count _laserResult) > 0) then {
-        // If the laser has moved less than a half meter, then dont move it.
-        // Just regular use of lasers will commonly make them move this much,
-        // but not across multiple close frames.
-        // This loses accuracy a little, but saves position updates per frame.
-        TRACE_4("", diag_tickTime, _forceUpdateTime, _laserResultPosition, (_laserResultPosition vectorDistance _pos));
-
         if(diag_tickTime > _forceUpdateTime) then {
-            TRACE_1("FCS Update", "");
             ["ace_fcs_forceUpdate", []] call ace_common_fnc_localEvent;
-        };
-
-        if(diag_tickTime > _forceUpdateTime) then {
              _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
         };
         
@@ -67,7 +67,7 @@ if(!GVAR(active)) then {
     GVAR(active) = true;
     
     TRACE_1("Activating laser", "");
-    _laserUuid = [(vehicle ACE_player), ACE_player, FUNC(findLaserSource), 1550, 1001, 1] call EFUNC(laser,laserOn);
+    _laserUuid = [(vehicle ACE_player), ACE_player, QFUNC(findLaserSource), 1550, 1001, 1] call EFUNC(laser,laserOn);
     
     // @TODO: Create the local target for the players side
     // @TODO: Nou gets to field all tickets about missing lasers.

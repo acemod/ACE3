@@ -1,3 +1,15 @@
+/*
+ * Author: jaynus
+ * Turns off passed laser self designation.
+ *
+ * Argument:
+ * 0: Shooter, player shooting the laser
+ * 1: LaserUUID, the UUID of the laser returned by EFUNC(laser,laserOn)
+ * 2: Local laser target, unused.
+ * 
+ * Return value:
+ *    true
+ */
 #include "script_component.hpp"
 
 if( (count _this) > 2) then {
