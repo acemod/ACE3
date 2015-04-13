@@ -15,7 +15,7 @@ class CfgVehicles {
                 displayName = "Advanced Ballistics";
                 description = "Enables advanced ballistics";
                 typeName = "BOOL";
-                defaultValue = 1;
+                defaultValue = 0;
             };
             class alwaysSimulateForSnipers {
                 displayName = "Always Enabled For Snipers";

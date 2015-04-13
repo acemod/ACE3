@@ -3,7 +3,7 @@ class ACE_Settings {
         displayName = "Advanced Ballistics";
         description = "Enables advanced ballistics";
         typeName = "BOOL";
-        value = 1;
+        value = 0;
     };
     class GVAR(alwaysSimulateForSnipers) {
         displayName = "Always Enabled For Snipers";
