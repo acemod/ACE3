@@ -8,7 +8,7 @@
     </Key>    
     <Key ID="STR_ACE_Inventory_SettingDescription">
       <English>Normally inventory display is scaled by UI size. This allows scaling the Inventory UI size up, but doesn't increase font size allowing more rows displayed.</English>
-      <French>Normalement, l'inventaire est automatiquement messuré par la taille de l'interface de l'utilisateur. Cette option vous permet d'augmenter la taille d'affichage de l'inventaire, cependant, cette option n'augmente pas la police d'écriture et le nombre de place.</French>
+      <French>Normalement, l'inventaire est automatiquement mesuré par la taille de l'interface de l'utilisateur. Cette option vous permet d'augmenter la taille d'affichage de l'inventaire, cependant, cette option n'augmente pas la police d'écriture et le nombre de place.</French>
     </Key>
   </Package>
 </Project>
