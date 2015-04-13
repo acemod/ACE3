@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
-  <Package name="Frag">
-      <Key ID="STR_DN_ACE_FRAG">
-        <English>Disable Fragmentation</English>
-        <German>Keine Schrapnelle</German>
-        <Czech>Zakázat fragmentaci granátů</Czech>
-        <Spanish>Desactivar fragmentación</Spanish>
-        <Polish>Wyłącz głowice fragmentacyjne</Polish>
-        <Russian>Выключить разлёт осколков</Russian>
-      </Key>
-  </Package>
+    <Package name="Frag">
+        <Key ID="STR_DN_ACE_FRAG">
+            <English>Disable Fragmentation</English>
+            <German>Keine Schrapnelle</German>
+            <Czech>Zakázat fragmentaci granátů</Czech>
+            <Spanish>Desactivar fragmentación</Spanish>
+            <Polish>Wyłącz głowice fragmentacyjne</Polish>
+            <Russian>Выключить разлёт осколков</Russian>
+            <Hungarian>Repeszek letiltása</Hungarian>
+        </Key>
+    </Package>
 </Project>

@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Common">
         <Key ID="STR_ACE_Common_ACETeam">
@@ -46,7 +47,7 @@
             <French>ACE Options</French>
             <Russian>ACE Настройки</Russian>
             <Portuguese>Opções do ACE</Portuguese>
-            <Hungarian>ACE Opciók</Hungarian>
+            <Hungarian>ACE Beállítások</Hungarian>
             <Italian>Opzioni ACE</Italian>
         </Key>
         <!-- These are cardinal directions, in case you didn't guess. -->
@@ -306,6 +307,7 @@
             <Czech>Přijmout žádost</Czech>
             <Italian>Accetta Richieste</Italian>
             <Russian>Подтвердить запросы</Russian>
+            <Hungarian>Kérések elfogadása</Hungarian>
         </Key>
         <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TITLE">
             <English>Decline Requests</English>
@@ -315,6 +317,7 @@
             <Czech>Zamítnout žádost</Czech>
             <Italian>Rifiuta Richieste</Italian>
             <Russian>Отклонить запросы</Russian>
+            <Hungarian>Kérések elutasítása</Hungarian>
         </Key>
         <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
             <English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
@@ -323,6 +326,7 @@
             <Polish>Akceptuj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
             <Italian>Accetta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
             <Russian>Подтвердить запросы, посланные другими игроками. Это могут быть просьбы о передаче снаряжения или выполнении определённых действий.</Russian>
+            <Hungarian>Más játékosok általi kérések elfogadása. Ezek a kérések vonatkozhatnak a felszerelés használatára/megosztására, valamint különböző cselekményekre.</Hungarian>
         </Key>
         <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
             <English>Decline Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
@@ -331,6 +335,7 @@
             <Polish>Ignoruj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
             <Italian>Rifiuta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
             <Russian>Отклонить запросы, посланные другими игроками. Это могут быть просьбы о передаче снаряжения или выполнении определённых действий.</Russian>
+            <Hungarian>Más játékosok általi kérések elutasítása. Ezek a kérések vonatkozhatnak a felszerelés használatára/megosztására, valamint különböző cselekményekre.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -338,6 +343,7 @@
             <Spanish>Iconos de respuesta</Spanish>
             <Italian>Icone informative</Italian>
             <Russian>Иконки состояний</Russian>
+            <Hungarian>Visszajelző ikonok</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
             <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
@@ -345,6 +351,7 @@
             <Spanish>Seleccionar la posición de o desactivar los íconos de respuesta en la pantalla. Estos iconos se mostrarán para proporcionar información adicional sobre el estado de su personaje y las acciones a realizar.</Spanish>
             <Italian>Seleziona la posizione o disabilita le icone informative sul tuo schermo. Queste saranno mostrate per fornire informazioni aggiuntive sullo stato o sulle azioni del giocatore.</Italian>
             <Russian>Выберите положение или или отключите отображение иконок состояний на Вашем экране. Эти иконки предоставят дополнительную информацию о состоянии персонажа и выполняемых действиях.</Russian>
+            <Hungarian>Itt beállítható a visszajelző ikonok képernyőn lévő helyzete és jelenléte. Ezek az ikonok extra visszajelzést biztosítanak a karaktered állapotán és végrehajtott cselekvésein.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
             <English>Progress bar location</English>
@@ -352,6 +359,7 @@
             <Spanish>Ubicación de la barra de progreso</Spanish>
             <Italian>Posizione della barra di avanzamento</Italian>
             <Russian>Положение прогресс-бара</Russian>
+            <Hungarian>Állapotjelző sáv helyzete</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
             <English>Set the desired location of the progress bar on your screen.</English>
@@ -359,6 +367,7 @@
             <Spanish>Seleccionar la ubicación deseada de la barra de progreso en tu pantalla</Spanish>
             <Italian>Modifica la posizione su schermo della barra di avanzamento.</Italian>
             <Russian>Установите желаемое положение строки состояния на экране.</Russian>
+            <Hungarian>Itt beállítható az állapotjelző sáv képernyődön lévő helyzete.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
             <English>Hint Background color</English>
@@ -366,6 +375,7 @@
             <Spanish>Color de fondo de las notificaciones</Spanish>
             <Italian>Sfondo dei Suggerimenti</Italian>
             <Russian>Цвет фона всплывающих подсказок</Russian>
+            <Hungarian>Súgó háttérszíne</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
             <English>The color of the background from the ACE hints.</English>
@@ -373,6 +383,7 @@
             <Spanish>El color de fondo de las notificaciones del ACE</Spanish>
             <Italian>Il colore di sfondo dei suggerimenti dell'ACE.</Italian>
             <Russian>Цвет фона всплывающий подсказок АСЕ.</Russian>
+            <Hungarian>Az ACE-súgók hátterének színe.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
             <English>Hint text font color</English>
@@ -380,6 +391,7 @@
             <Spanish>Color del texto de las notificaciones</Spanish>
             <Italian>Testo dei Suggerimenti</Italian>
             <Russian>Цвет шрифта всплывающих подсказок</Russian>
+            <Hungarian>Súgószöveg betűinek színe</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
             <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
@@ -387,6 +399,7 @@
             <Spanish>El color del texto de las notificaciones del ACE. Este es el color predeterminado para todo el texto que se muestra a través del sistema de notificaciones del ACE, si el texto de notificación no tiene otro color especificado.</Spanish>
             <Italian>Il colore del testo dei suggerimenti dell'ACE. Questo è il colore standard per tutti i caratteri mostrati dal sistema di suggerimenti dell'ACE, se questo non è altrimenti specificato.</Italian>
             <Russian>Цвет шрифта текста всплывающих подсказок АСЕ. Этот цвет является стандартным для всего текста, транслирующегося через систему подсказок АСЕ, если не установлено другого цвета для текста подсказок.</Russian>
+            <Hungarian>Az ACE-súgók betűkészletének színek. Ez a szín alapértelmezett az összes szövegre az ACE-súgórendszerben, ha a súgószöveg maga nem ad meg más színt.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -395,6 +408,7 @@
             <Czech>Banán</Czech>
             <Italian>Banana</Italian>
             <Russian>Банан</Russian>
+            <Hungarian>Banán</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_bananaDescr">
             <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
@@ -403,6 +417,7 @@
             <Czech>Banán je protáhlé ovoce a plod banánovníku (epigeická bobule).</Czech>
             <Italian>Una banana è un frutto commestibile, nello specifico una bacca cuoiosa, prodotto da un gran numero di grandi pianti erbacee dotate di fiori, della famiglia delle Musaceae.</Italian>
             <Russian>Банан - это съедобный фрукт, ягода с ботанической точки зрения, произрастающий на нескольких видах травянистых растениях рода Банан (Musa).</Russian>
+            <Hungarian>A banán egy ehető gyümölcs, technikai szempontból bogyótermés, melyet több fürtvirágzatú növény termel a Musa rendszertani nemzetségben.</Hungarian>
         </Key>
     </Package>
 </Project>
