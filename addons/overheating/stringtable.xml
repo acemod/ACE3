@@ -1,14 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-17 -->
 <Project name="ACE">
   <Package name="Overheating">
     <Key ID="STR_ACE_overheating_SettingDisplayTextName">
       <English>Display text on jam</English>
+      <German>Zeige Text bei Ladehemmung</German>
       <Spanish>Mostrar texto al encasquillar</Spanish>
+      <Russian>Показывать текст, когда клинит оружие</Russian>
+      <Czech>Zobrazit upozornění při zaseknutí</Czech>
+      <Polish>Wyświetl tekst przy zacięciu broni</Polish>
+      <French>Afficher un texte à la surchauffe</French>
     </Key>
     <Key ID="STR_ACE_overheating_SettingDisplayTextDesc">
       <English>Display a notification whenever your weapon gets jammed</English>
+      <German>Zeige einen Hinweis wenn die Waffe eine Ladehemmung hat</German>
       <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>
+      <Russian>Демонстровать уведомление, каждый раз, когда клинит Ваше оружие.</Russian>
+      <Czech>Zobrazí upozornění při zaseknutí zbraně</Czech>
+      <Polish>Wyświetl powiadomienie za każdym razem, kiedy Twoja broń ulegnie zacięciu</Polish>
+      <French>Afficher un texte quand votre arme surchauffe</French>
     </Key>
     <Key ID="STR_ACE_Overheating_SpareBarrelName">
       <English>Spare barrel</English>
@@ -119,16 +128,8 @@
       <Russian>Проверить температуру оружия</Russian>
     </Key>
     <Key ID="STR_ACE_Overheating_CheckTemperatureShort">
-      <English>Check&lt;br/&gt;temperature</English>
-      <German>Temperatur&lt;br/&gt;prüfen</German>
-      <Spanish>Verificar&lt;br/&gt;temperatura</Spanish>
-      <Polish>Sprawdź&lt;br/&gt;temperaturę</Polish>
-      <French>Vérifier la&lt;br/&gt;température</French>
-      <Hungarian>Hőmérséklet&lt;br/&gt;ellenőrzése</Hungarian>
-      <Czech>Zjistit&lt;br/&gt;teplotu</Czech>
-      <Portuguese>Conferir&lt;br/&gt;temperatura</Portuguese>
-      <Italian>Controlla la&lt;br/&gt;temperatura</Italian>
-      <Russian>Проверить&lt;br/&gt;температуру</Russian>
+      <English>Check weapon&lt;br/&gt;temperature</English>
+      <Spanish>Verificar temperatura&lt;br/&gt;del arma</Spanish>
     </Key>
     <Key ID="STR_ACE_Overheating_CheckingTemperature">
       <English>Checking temperature ...</English>

@@ -32,7 +32,7 @@ GVAR(openedMenuType) = _menuType;
 
 GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
                       visibleMap ||
-                      {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction)}};
+                      {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}};
 if (GVAR(useCursorMenu)) then {
     createDialog QGVAR(cursorMenu);
     // The dialog sets:

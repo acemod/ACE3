@@ -18,6 +18,16 @@ ACE_B_762x51_Ball_SD
 ACE_B_762x51_Ball_AP
 ACE_B_762x51_M118LR
 
+ACE_B_338_Ball_Tracer_Dim
+ACE_B_338_Ball_AP
+ACE_B_338_Ball_SD
+
+ACE_B_338_NM_Ball_Tracer_Dim
+ACE_B_338_NM_Ball_AP
+
+ACE_B_93x64_Ball_Tracer_Dim
+ACE_B_93x64_Ball_AP
+ACE_B_93x64_Ball_SD
 
 // CFGMagazines
 
@@ -37,3 +47,21 @@ ACE_20Rnd_762x51_Mag_Tracer
 ACE_20Rnd_762x51_Mag_Tracer_Dim
 ACE_20Rnd_762x51_Mag_SD
 ACE_20Rnd_762x51_Mag_AP
+
+ACE_10Rnd_338_Mag_Tracer
+ACE_10Rnd_338_Mag_Tracer_Dim
+ACE_10Rnd_338_Mag_AP
+ACE_10Rnd_338_Mag_SD
+
+ACE_130Rnd_338_Mag_Tracer
+ACE_130Rnd_338_Mag_Tracer_Dim
+ACE_130Rnd_338_Mag_AP
+
+ACE_10Rnd_93x64_DMR_05_Mag_Tracer
+ACE_10Rnd_93x64_DMR_05_Mag_Tracer_Dim
+ACE_10Rnd_93x64_DMR_05_Mag_AP
+ACE_10Rnd_93x64_DMR_05_Mag_SD
+
+ACE_150Rnd_93x64_Mag_Tracer
+ACE_150Rnd_93x64_Mag_Tracer_Dim
+ACE_150Rnd_93x64_Mag_AP
