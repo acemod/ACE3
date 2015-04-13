@@ -329,7 +329,7 @@
     </Key>
     <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
       <English>Set the desired location of the progress bar on your screen.</English>
-      <French>Définisez l'endroit que vous désirer pour faire appraître la barre de progression.</French>
+      <French>Définisez l'endroit que vous désirez pour faire appraître la barre de progression.</French>
     </Key>
     <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
       <English>Hint Background color</English>
