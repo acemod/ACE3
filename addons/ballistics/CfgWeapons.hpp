@@ -254,32 +254,32 @@ class CfgWeapons {
         ACE_barrelLength=43.3;
     };
     class srifle_DMR_02_F: DMR_02_base_F {
-		ACE_barrelTwist=10;
-		ACE_barrelLength=26;
+        ACE_barrelTwist=10;
+        ACE_barrelLength=26;
     };
     class srifle_DMR_03_F: DMR_03_base_F {
-		ACE_barrelTwist=10;
-		ACE_barrelLength=20;
+        ACE_barrelTwist=10;
+        ACE_barrelLength=20;
     };
     class srifle_DMR_04_F: DMR_04_base_F {
-		ACE_barrelTwist=8;
-		ACE_barrelLength=17.72;
+        ACE_barrelTwist=8;
+        ACE_barrelLength=17.72;
     };
     class srifle_DMR_05_blk_F: DMR_05_base_F {
-		ACE_barrelTwist=14.17;
-		ACE_barrelLength=24.41;
+        ACE_barrelTwist=14.17;
+        ACE_barrelLength=24.41;
     };
     class srifle_DMR_06_camo_F: DMR_06_base_F {
-		ACE_barrelTwist=12;
-		ACE_barrelLength=22;
+        ACE_barrelTwist=12;
+        ACE_barrelLength=22;
     };
     class MMG_01_hex_F: MMG_01_base_F {
-		ACE_barrelTwist=14.17;
-		ACE_barrelLength=21.65;
+        ACE_barrelTwist=14.17;
+        ACE_barrelLength=21.65;
     };
     class MMG_02_camo_F: MMG_02_base_F {
-		ACE_barrelTwist=9.25;
-		ACE_barrelLength=24;
+        ACE_barrelTwist=9.25;
+        ACE_barrelLength=24;
     };
     
     class HMG_127 : LMG_RCWS {
