@@ -30,7 +30,7 @@ class CfgWeapons {
 
 
     /* Katiba */
-
+    class Rifle_Long_Base_F;
     class arifle_katiba_Base_F: Rifle_Base_F {
         magazines[] += {
             "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim",
