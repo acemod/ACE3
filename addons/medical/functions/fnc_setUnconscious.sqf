@@ -52,7 +52,7 @@ if (animationState _unit in ["ladderriflestatic","laddercivilstatic"]) then {
 };
 if (vehicle _unit == _unit) then {
     if (primaryWeapon _unit == "") then {
-        _unit addWeapon "ACE_fakeWeapon";
+        _unit addWeapon "ACE_FakePrimaryWeapon";
     };
     _unit selectWeapon (primaryWeapon _unit);
     _unit switchMove "";
@@ -67,7 +67,8 @@ _unit setUnitPos "DOWN";
 [_unit, true] call EFUNC(common,disableAI);
 
 // So the AI does not get stuck, we are moving the unit to a temp group on its own.
-[_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
+//Unconscious units shouldn't be put in another group #527:
+// [_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 
 [_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
 [_unit, [_unit] call EFUNC(common,getDeathAnim), 1, true] call EFUNC(common,doAnimation);
@@ -114,9 +115,10 @@ _startingTime = time;
             [_unit, QGVAR(unconscious), false] call EFUNC(common,setCaptivityStatus);
 
             // Swhich the unit back to its original group
-            [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
+            //Unconscious units shouldn't be put in another group #527:
+            // [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 
-            [_unit, false] call EFUNC(common,disableAI_F);
+            [_unit, false] call EFUNC(common,disableAI);
             _unit setUnitPos _originalPos; // This is not position but stance (DOWN, MIDDLE, UP)
 
             _unit setUnconscious false;

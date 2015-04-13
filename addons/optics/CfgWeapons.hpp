@@ -2,6 +2,23 @@
 class CfgWeapons {
     class ItemCore;
     class InventoryOpticsItem_Base_F;
+    class Default;
+    
+    class Binocular: Default {
+		forceOptics = 0; 			// Allow using compass with Binocular
+		opticsZoomMin = 0.056889; 	// 5.25x power
+		opticsZoomMax = 0.056889; 	// 9 px/mil
+		modelOptics = "\z\ace\addons\optics\models\NWD_M22_5x"; // 7° horizontal field of view
+		visionMode[] = {"Normal"}; // Can't use nvgs with binoculars any more than you can with scopes
+		// Fix AI using Binocs on short range - #18737
+        // minRange = 300; // 300 = uses Rangefinder often (runs a few meters, stops, uses RF, repeats)
+        minRange = 500; //500 = seem almost never use it..? 
+		minRangeProbab = 0.001;
+        midRange = 1000;
+        midRangeProbab = 0.01;
+        maxRange = 5000;
+        maxRangeProbab = 0.01;
+	};
 
     // zooming reticle scopes
     class optic_DMS: ItemCore {
@@ -13,7 +30,7 @@ class CfgWeapons {
         };
     };
 
-    class ACE_optic_DMS: optic_DMS {
+    /*class ACE_optic_DMS: optic_DMS {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_DMS";
         scope = 1;
@@ -36,7 +53,7 @@ class CfgWeapons {
                 class Iron: Iron {};
             };
         };
-    };
+    };*/
 
     // PIP scopes
     class optic_Hamr: ItemCore {
@@ -230,6 +247,7 @@ class CfgWeapons {
                 class Snip: Snip {
                     modelOptics[] = {QUOTE(PATHTOF(models\ace_optics_pip.p3d)),QUOTE(PATHTOF(models\ace_optics_pip.p3d))};
                 };
+                class Iron: Iron {};
             };
         };
     };
@@ -297,7 +315,7 @@ class CowsSlot: SlotInfo {
         "ACE_optic_SOS_2D",
         "ACE_optic_SOS_PIP",
         "ACE_optic_LRPS_2D",
-        "ACE_optic_LRPS_PIP",
-        "ACE_optic_DMS"
+        "ACE_optic_LRPS_PIP"
+        //"ACE_optic_DMS"
     };
 };
