@@ -19,7 +19,11 @@ _seekerParams = _args select 3;
 _stateParams = _args select 4;
 
 _lastRunTime = _stateParams select 0;
+
 _runtimeDelta = diag_tickTime - _lastRunTime;
+_adjustTime = 1/accTime;
+_adjustTime = _adjustTime *  (_runtimeDelta / TIMESTEP_FACTOR);
+TRACE_4("Adjust timing", 1/accTime, _adjustTime, _runtimeDelta, (_runtimeDelta / TIMESTEP_FACTOR) );
 
 _config = configFile >> "CfgAmmo" >> _ammo >> "ACE_MissileGuidance";
 
@@ -33,8 +37,8 @@ if(!isNil "_seekerTargetPos") then {
 
     _profileAdjustedTargetPos = [_seekerTargetPos,_args] call FUNC(doAttackProfile);
 
-    _minDeflection = _flightParams select 0;
-    _maxDeflection = _flightParams select 1;
+    _minDeflection = ((_flightParams select 0) - ((_flightParams select 0) * _adjustTime)) max 0;
+    _maxDeflection = (_flightParams select 1) * _adjustTime;
     _incDeflection = _flightParams select 2;
    
     _yVec = vectorDir _projectile;
@@ -72,15 +76,12 @@ if(!isNil "_seekerTargetPos") then {
 #endif        
 
     if(accTime > 0) then {
-        private["_adjustTime", "_outVector", "_vectorTo"];
-        _adjustTime = 1/accTime;
-        _adjustTime = _adjustTime *  (_runtimeDelta / TIMESTEP_FACTOR);
-        TRACE_4("Adjust timing", 1/accTime, _adjustTime, _runtimeDelta, (_runtimeDelta / TIMESTEP_FACTOR) );
-        
+        private["_outVector", "_vectorTo"];
+
         // @TODO: Apply velocity multiplier to yaw/pitch. Basically, it can adjust faster at lower speeds
         //_adjustDeflection = (vectorMagnitude velocity _projectile);
         
-        _outVector = [_projectile, [_xVec, _yVec, _zVec], [_yaw, _adjustTime, _pitch]] call EFUNC(common,translateToModelSpace);
+        _outVector = [_projectile, [_xVec, _yVec, _zVec], [_yaw, 1, _pitch]] call EFUNC(common,translateToModelSpace);
         _vectorTo = _projectilePos vectorFromTo _outVector;
         
         _projectile setVectorDirAndUp [_vectorTo, vectorUp _projectile];
