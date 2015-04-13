@@ -1,4 +1,4 @@
-//#define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 TRACE_1("enter", _this);
 
@@ -94,13 +94,20 @@ if (count _apos < 2) then {
     _aposY = (_apos select 1) + _offsetY;
 };
 
+if((call CBA_fnc_getFoV) select 1 > 9) then {  
+    __JavelinIGUINFOV ctrlSetTextColor __ColorGreen;
+    __JavelinIGUIWFOV ctrlSetTextColor __ColorGray;
+} else {
+    __JavelinIGUINFOV ctrlSetTextColor __ColorGray;
+    __JavelinIGUIWFOV ctrlSetTextColor __ColorGreen;
+};
+
 if (isNull _newTarget) then {
     // No targets found
     _currentTarget = objNull;
     _lockTime = 0;
     
     __JavelinIGUISeek ctrlSetTextColor __ColorGray;
-    __JavelinIGUINFOV ctrlSetTextColor __ColorGreen;
     __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
@@ -128,7 +135,6 @@ if (isNull _newTarget) then {
                 TRACE_2("LOCKED!", _currentTarget, _lockTime);
                 
                 __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
-                __JavelinIGUINFOV ctrlSetTextColor __ColorNull;
                 
                 __JavelinIGUITargeting ctrlShow true;
                 __JavelinIGUITargetingConstrains ctrlShow false;
@@ -210,7 +216,6 @@ if (isNull _newTarget) then {
         ACE_player setVariable["ace_missileguidance_target", nil, false];
         
         __JavelinIGUISeek ctrlSetTextColor __ColorGray;
-        __JavelinIGUINFOV ctrlSetTextColor __ColorGray;
         __JavelinIGUITargeting ctrlShow false;
         __JavelinIGUITargetingGate ctrlShow false;
         __JavelinIGUITargetingLines ctrlShow false;
