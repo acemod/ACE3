@@ -26,8 +26,6 @@
             <Hungarian></Hungarian>
             <Russian></Russian>
         </Key>
-    
-        /* Weapons */
         <Key ID="STR_ACE_Hydra70_DAGR">
             <English>Hydra-70 DAGR Missile</English>
             <Spanish></Spanish>
@@ -64,8 +62,6 @@
             <Hungarian></Hungarian>
             <Russian></Russian>
         </Key>
-        
-        /* Weapons */
         <Key ID="STR_ACE_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
             <Spanish></Spanish>
