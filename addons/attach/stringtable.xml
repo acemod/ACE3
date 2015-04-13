@@ -178,5 +178,29 @@
       <Czech>Připnutí selhalo</Czech>
       <Polish>Przyczepianie nie powiodło się</Polish>
     </Key>
+    <Key ID="STR_ACE_Attach_Item_Attached">
+      <English>%1&lt;br/&gt;Attached</English>
+      <German>%1&lt;br/&gt;befestigt</German>
+      <Spanish>%1&lt;br/&gt;acoplada</Spanish>
+      <Polish>%1&lt;br/&gt;Przyczepiono</Polish>
+      <French>%1&lt;br/&gt;attachée</French>
+      <Czech>%1&lt;br/&gt;Připnutý</Czech>
+      <Portuguese>%1&lt;br/&gt;Acoplada</Portuguese>
+      <Italian>%1&lt;br/&gt;attaccata</Italian>
+      <Hungarian>%1&lt;br/&gt;hozzácsatolva</Hungarian>
+      <Russian>%1&lt;br/&gt;присоединена</Russian>
+    </Key>
+    <Key ID="STR_ACE_Attach_Item_Detached">
+      <English>%1&lt;br/&gt;Detached</English>
+      <German>%1&lt;br/&gt;entfernt</German>
+      <Spanish>%1&lt;br/&gt;quitada</Spanish>
+      <Polish>%1&lt;br/&gt;Odczepiono</Polish>
+      <French>%1&lt;br/&gt;détachée</French>
+      <Czech>%1&lt;br/&gt;Odepnutý</Czech>
+      <Portuguese>%1&lt;br/&gt;Separada</Portuguese>
+      <Italian>%1&lt;br/&gt;staccata</Italian>
+      <Hungarian>%1&lt;br/&gt;lecsatolva</Hungarian>
+      <Russian>%1&lt;br/&gt;отсоединена</Russian>
+    </Key>
   </Package>
 </Project>
