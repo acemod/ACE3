@@ -97,11 +97,13 @@ if (!surfaceIsWater _pL) then {
   _pL = ASLtoATL _pL;
 };
 
-drawLine3D [
-    _p0Pos,
-    _pL,
-    [[1,0,0,1], [0,1,0,1]] select _isGreen
-];
+if (call EFUNC(common,ambientBrightness) < 0.2) then {
+    drawLine3D [
+        _p0Pos,
+        _pL,
+        [[1,0,0,1], [0,1,0,1]] select _isGreen
+    ];
+};
 
 _size = 2 * (_range - (positionCameraToWorld [0,0,0] distance _pL)) / _range;
 
