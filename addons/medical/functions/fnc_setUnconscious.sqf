@@ -52,7 +52,7 @@ if (animationState _unit in ["ladderriflestatic","laddercivilstatic"]) then {
 };
 if (vehicle _unit == _unit) then {
     if (primaryWeapon _unit == "") then {
-        _unit addWeapon "ACE_fakeWeapon";
+        _unit addWeapon "ACE_FakePrimaryWeapon";
     };
     _unit selectWeapon (primaryWeapon _unit);
     _unit switchMove "";
