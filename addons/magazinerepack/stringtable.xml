@@ -75,6 +75,7 @@
     </Key>
     <Key ID="STR_ACE_MagazineRepack_RepackComplete">
       <English>Repacking Finished</English>
+      <French>Réorganisation terminé</French>
       <German>Wiederverpacken Fertig</German>
       <Spanish>Reembalaje finalizado</Spanish>
       <Russian>Перепаковка завершена</Russian>
@@ -83,6 +84,7 @@
     </Key>
     <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
       <English>Repacking Interrupted</English>
+      <French>Réorganisation Interrompue</French>
       <German>Umpacken Unterbrochen</German>
       <Spanish>Reembalaje interrumpido</Spanish>
       <Russian>Перепаковка прервана</Russian>
@@ -91,6 +93,7 @@
     </Key>
     <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
       <English>%1 Full and %2 Partial</English>
+      <French>%1 Complet et %2 Partiellement</French>
       <German>%1 Vollständigen und %2 Teilweisen</German>
       <Spanish>%1 Total y %2 Parcial</Spanish>
       <Russian>%1 полных и %2 неполных</Russian>

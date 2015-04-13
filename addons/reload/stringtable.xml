@@ -9,6 +9,7 @@
       <Russian>Проверять боезапас при перезарядке</Russian>
       <Czech>Zkontrolovat munici při nabití</Czech>
       <Polish>Sprawdź stan amunicji przy przeładowaniu broni</Polish>
+      <French>Vérifier les munitions pendant le rechargement d'une arme</French>
     </Key>
     <Key ID="STR_ACE_reload_SettingDisplayTextDesc">
       <English>Check the ammo in your new magazine on magazine reload.</English>
@@ -18,6 +19,7 @@
       <Russian>Проверяет количество патронов в новом магазине при перезарядке.</Russian>
       <Czech>Kontroluje munice při nabití nového zásobníku.</Czech>
       <Polish>Pokaż stan amunicji w nowym magazynku przy przeładowaniu broni</Polish>
+      <French>Vérifier les munitions dans votre nouveau chargeur au rechargement de vos chargeurs.</French>
     </Key>
     <Key ID="STR_ACE_Reload_checkAmmo">
       <English>Check Ammo</English>

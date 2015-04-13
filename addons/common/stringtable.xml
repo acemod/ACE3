@@ -339,6 +339,7 @@
             <Italian>Icone informative</Italian>
             <Russian>Иконки состояний</Russian>
             <Polish>Ikony pomocnicze</Polish>
+            <French>Icônes de Feedback</French>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
             <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
@@ -347,6 +348,7 @@
             <Italian>Seleziona la posizione o disabilita le icone informative sul tuo schermo. Queste saranno mostrate per fornire informazioni aggiuntive sullo stato o sulle azioni del giocatore.</Italian>
             <Russian>Выберите положение или или отключите отображение иконок состояний на Вашем экране. Эти иконки предоставят дополнительную информацию о состоянии персонажа и выполняемых действиях.</Russian>
             <Polish>Ustaw pozycję lub wyłącz całkowicie ikony pomocnicze na ekranie. Te ikony dostarczają dodatkowych informacji na temat statusu Twojej postaci i wykonywanych przez nią akcji.</Polish>
+            <French>Sélectionner la position de ou désactiver les îcones de feedback sur votre écran. Ces îcones sont là pour vous fournir un feedback du statut votre personnage et les actions à effectuer.</French>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
             <English>Progress bar location</English>
@@ -355,6 +357,7 @@
             <Italian>Posizione della barra di avanzamento</Italian>
             <Russian>Положение прогресс-бара</Russian>
             <Polish>Lokalizacja paska postępu</Polish>
+            <French>Localisation de la barre de progression</French>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
             <English>Set the desired location of the progress bar on your screen.</English>
@@ -363,6 +366,7 @@
             <Italian>Modifica la posizione su schermo della barra di avanzamento.</Italian>
             <Russian>Установите желаемое положение строки состояния на экране.</Russian>
             <Polish>Ustaw pożądaną lokalizację paska postępu na ekranie</Polish>
+            <French>Définisez l'endroit que vous désirez pour faire appraître la barre de progression.</French>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
             <English>Hint Background color</English>
@@ -371,6 +375,7 @@
             <Italian>Sfondo dei Suggerimenti</Italian>
             <Russian>Цвет фона всплывающих подсказок</Russian>
             <Polish>Kolor tła powiadomień</Polish>
+            <French>Couleur de fond des astuces</French>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
             <English>The color of the background from the ACE hints.</English>
@@ -379,6 +384,7 @@
             <Italian>Il colore di sfondo dei suggerimenti dell'ACE.</Italian>
             <Russian>Цвет фона всплывающий подсказок АСЕ.</Russian>
             <Polish>Kolor tła dla powiadomień ACE</Polish>
+            <French>Définisez la couleur de fond pour les astuces fournies par ACE.</French>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
             <English>Hint text font color</English>
@@ -387,6 +393,7 @@
             <Italian>Testo dei Suggerimenti</Italian>
             <Russian>Цвет шрифта всплывающих подсказок</Russian>
             <Polish>Kolor tekstu powiadomień</Polish>
+            <French>Couleur du texte des astuces</French>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
             <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
@@ -395,6 +402,7 @@
             <Italian>Il colore del testo dei suggerimenti dell'ACE. Questo è il colore standard per tutti i caratteri mostrati dal sistema di suggerimenti dell'ACE, se questo non è altrimenti specificato.</Italian>
             <Russian>Цвет шрифта текста всплывающих подсказок АСЕ. Этот цвет является стандартным для всего текста, транслирующегося через систему подсказок АСЕ, если не установлено другого цвета для текста подсказок.</Russian>
             <Polish>Kolor tekstu dla powiadomień ACE. Ten kolor jest domyślnym dla wszystkich tekstów wyświetlanych poprzez System Powiadomień ACE, jeżeli dla powiadomienia nie określono innego koloru.</Polish>
+            <French>Définisez la couleur du texte des astuces fournies par ACE. La couleur est celle par défaut affichée à travers toutes les astuces de ACE seulement si aucune couleur n'est défnie.</French>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -404,6 +412,7 @@
             <Italian>Banana</Italian>
             <Russian>Банан</Russian>
             <Polish>Banan</Polish>
+            <French>Banane</French>
         </Key>
         <Key ID="STR_ACE_Common_bananaDescr">
             <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
@@ -413,6 +422,7 @@
             <Italian>Una banana è un frutto commestibile, nello specifico una bacca cuoiosa, prodotto da un gran numero di grandi pianti erbacee dotate di fiori, della famiglia delle Musaceae.</Italian>
             <Russian>Банан - это съедобный фрукт, ягода с ботанической точки зрения, произрастающий на нескольких видах травянистых растениях рода Банан (Musa).</Russian>
             <Polish>Rodzaj roślin z rodziny bananowatych, obejmujący około 80 gatunków. Przedstawiciele są typowymi przedstawicielami flory międzyzwrotnikowej Azji, Afryki i Australii. Część gatunków dostarcza jadalnych owoców. Słowo banan pochodzi prawdopodobnie od arabskiego słowa banan, co oznacza palec, lub afrykańskiego języka wolof, w którym rośliny te określa się mianem banaana.</Polish>
+            <French>Une banane est un fruit comestible, botaniquement une baie, produite par plusieurs types de grandes plantes herbacées à fleurs dans le genre Musa.</French>
         </Key>
     </Package>
 </Project>

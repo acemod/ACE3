@@ -151,6 +151,7 @@
     </Key>
     <Key ID="STR_ACE_WeaponSelect_LoadGrenade">
       <English>Grenade %1</English>
+      <French>Grenade %1</French>
       <German>Granate %1</German>
       <Spanish>Granada %1</Spanish>
       <Polish>Granat %1</Polish>
@@ -160,6 +161,7 @@
     </Key>
     <Key ID="STR_ACE_WeaponSelect_ReadyGrenade">
       <English>Ready Grenade</English>
+      <French>Grenade Prête</French>
       <German>Granate nehmen</German>
       <Spanish>Granada lista</Spanish>
       <Polish>Przygotuj granat</Polish>
@@ -172,7 +174,7 @@
       <German>Explosive Granate auswählen</German>
       <Spanish>Seleccionar granada de fragmenación</Spanish>
       <Polish>Wybierz granat odłamkowy</Polish>
-      <French>Sélectionner grenade à fragmentation</French>
+      <French>Sélectionner une grenade à fragmentation</French>
       <Hungarian>Repeszgránát Kiválasztása</Hungarian>
       <Czech>Zvolit Výbušný Granát</Czech>
       <Portuguese>Selecionar Granada de Fragmentação</Portuguese>

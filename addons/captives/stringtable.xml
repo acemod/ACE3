@@ -131,6 +131,7 @@
     </Key>
     <Key ID="STR_ACE_Captives_StartSurrendering">
       <English>Surrender</English>
+      <French>Se rendre</French>
       <German>Kapitulieren</German>
       <Spanish>Rendirse</Spanish>
       <Russian>Сдаться</Russian>
@@ -139,6 +140,7 @@
     </Key>
     <Key ID="STR_ACE_Captives_StopSurrendering">
       <English>Stop Surrendering</English>
+      <French>Arrêt de se rendre</French>
       <German>Den Kampf erneut aufnehmen</German>
       <Spanish>Dejar de rendirse</Spanish>
       <Russian>Остановить сдачу</Russian>
@@ -147,6 +149,7 @@
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
       <English>Only use on alive units</English>
+      <French>Utilisation uniquement sur les unités en vie</French>
       <German>Nur bei lebenden Einheiten verwendbar</German>
       <Spanish>Utilizar solo en unidades vivas</Spanish>
       <Russian>Только для живых юнитов</Russian>
@@ -155,6 +158,7 @@
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_OnlyInfantry">
       <English>Only use on dismounted inf</English>
+      <French>Utilisation uniquement sur les infanteries</French>
       <German>Nur bei abgesessener Infanterie verwendbar</German>
       <Spanish>Utilizar solo en infanteria desmontada</Spanish>
       <Russian>Только для спеш. солдат</Russian>
@@ -163,6 +167,7 @@
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
       <English>Nothing under mouse</English>
+      <French>Rien sous la souris</French>
       <German>Es wurde nichts ausgewählt</German>
       <Spanish>Nada bajo el ratón</Spanish>
       <Russian>Объекты под мышью отсутствуют</Russian>

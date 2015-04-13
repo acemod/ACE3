@@ -3,6 +3,7 @@
   <Package name="Wirecutter">
     <Key ID="STR_ACE_logistics_wirecutter_wirecutterName">
       <English>Wirecutter</English>
+      <French>Coupe clôture</French>
       <German>Drahtschneider</German>
       <Spanish>Cortador de cables</Spanish>
       <Russian>Клещи-кусачки</Russian>
@@ -16,6 +17,7 @@
       <Russian>Позволяют быстро перекусывать сеточные конструкции.</Russian>
       <Czech>Štípačky</Czech>
       <Polish>Służą do... cięcia drutu i płotów</Polish>
+      <French>Coupe clôture</French>
     </Key>
     <Key ID="STR_ACE_logistics_wirecutter_CutFence">
       <English>Cut Fence</English>

@@ -7,6 +7,7 @@
       <Russian>Захватить цель (удерживать)</Russian>
       <Czech>Zamknout cíl(držet)</Czech>
       <Polish>Namierz cel (przytrzymaj)</Polish>
+      <French>Vérouiller la Cible (Maintenir)</French>
     </Key>
     <Key ID="STR_ACE_JAVELIN_CycleFireMode">
       <English>Cycle Fire Mode</English>
@@ -14,6 +15,7 @@
       <Russian>Переключение режимов огня</Russian>
       <Czech>Cyklování režimů palby</Czech>
       <Polish>Przełącz tryb ognia</Polish>
+      <French>Mode de Tir (Cycle)</French>
     </Key>
   </Package>
 </Project>

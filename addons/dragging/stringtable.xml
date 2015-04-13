@@ -30,11 +30,12 @@
       <German>Gegenstand ist zu schwer</German>
       <Spanish>Articulo demasiado pesado</Spanish>
       <Polish>Przedmiot zbyt ciężki</Polish>
+      <French>Objet trop lourd</French>
       <!-- <English>Unable to drag item due to weight</English>
       <Russian>Слишком тяжелый предмет</Russian>
       <Spanish>No se puede arrastrar el objeto debido a su peso</Spanish>
       <Czech>Předmět je příliž těžký!</Czech>
-      <French>Trop lourd pour être tracté</French>
+      <French>Trop lourd pour être tracté</French> <!-- Added above -->
       <German>Dieser Gegenstand kann nicht gezogen werden, da er zu schwer ist.</German>
       <Portuguese>Não é possível carregar o item devido a seu peso</Portuguese>
       <Italian>Non è possibile trascinare l'oggetto a causa del suo peso</Italian>

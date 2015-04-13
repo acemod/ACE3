@@ -171,7 +171,7 @@
     </Key>
     <Key ID="STR_ACE_Attach_Failed">
       <English>Attach Failed</English>
-      <French>Échec du Attacher</French>
+      <French>Échec de l'attachement</French>
       <German>Befestigen fehlgeschlagen</German>
       <Russian>Соединение прервано</Russian>
       <Spanish>Error al acoplar</Spanish>

@@ -11,6 +11,7 @@
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
             <English>Loading launcher ...</English>
+            <French>Chargement du tube ...</French>
             <German>Panzerabwehr wird geladen ...</German>
             <Spanish>Cargando lanzador ...</Spanish>
             <Russian>Зарядка ПУ ...</Russian>
@@ -19,6 +20,7 @@
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LauncherLoaded">
             <English>Launcher loaded</English>
+            <French>Tube chargé</French>
             <German>Panzerabwehr geladen</German>
             <Spanish>Lanzador cargado</Spanish>
             <Russian>ПУ заряжено</Russian>
@@ -27,6 +29,7 @@
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadMagazine">
             <English>Load %1</English>
+            <French>Chargé %1</French>
             <German>Lade %1</German>
             <Spanish>Cargar %1</Spanish>
             <Russian>Загрузка %1</Russian>

@@ -20,6 +20,7 @@
       <Russian>Фикс анимации</Russian>
       <Czech>Opravit animace</Czech>
       <Polish>Napraw animację</Polish>
+      <French>Corriger l'Animation</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_ResetAll">
       <English>Reset All</English>
@@ -28,9 +29,11 @@
       <Russian>Полный сброс</Russian>
       <Czech>Vyresetovat vše</Czech>
       <Polish>Resetuj wszystko</Polish>
+      <French>Par défaut</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabColors">
       <English>Colors</English>
+      <French>Couleurs</French>
       <German>Farben</German>
       <Spanish>Colores</Spanish>
       <Russian>Цвета</Russian>
@@ -39,6 +42,7 @@
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabOptions">
       <English>Options</English>
+      <French>Options</French>
       <German>Optionen</German>
       <Spanish>Opciones</Spanish>
       <Polish>Opcje</Polish>
@@ -55,6 +59,7 @@
       <Russian>Значения</Russian>
       <Czech>Hodnoty</Czech>
       <Polish>Wartości</Polish>
+      <French>Valeurs</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Enabled">
       <English>Yes</English>
@@ -95,6 +100,7 @@
       <Russian>Экспорт</Russian>
       <Czech>Exportovat</Czech>
       <Polish>Eksport</Polish>
+      <French>Exporter</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_OpenExport">
       <English>Open Export Menu</English>
@@ -103,6 +109,7 @@
       <Russian>Открыть меню экспорта</Russian>
       <Czech>Otevřít exportovací menu</Czech>
       <Polish>Otwórz menu eksportowania</Polish>
+      <French>Ouvrir le menu d'exportation</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_stringType">
       <English>String input.</English>
@@ -117,6 +124,7 @@
       <Spanish>Matriz. Separa elementos usando ,.</Spanish>
       <Russian>Массив. Разделяйте элемены, используя запятую.</Russian>
       <Polish>Tablica. Oddziel elementy używając ,.</Polish>
+      <French>Array. Séparer les élements en utilisant ,.</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_scalarType">
       <English>Number</English>
@@ -125,6 +133,7 @@
       <Russian>Число</Russian>
       <Czech>Číslo</Czech>
       <Polish>Cyfra</Polish>
+      <French>Nombre</French>
     </Key>
     <Key ID="STR_ACE_optionsMenu_unknownType">
       <English>Uknown input type</English>
@@ -133,6 +142,7 @@
       <Russian>Неизвестный тип ввода</Russian>
       <Czech>Neznámý vstup</Czech>
       <Polish>Nieznany rodzaj danych</Polish>
+      <French>Input inconnue</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_SaveInput">
       <English>Save input</English>
@@ -141,6 +151,7 @@
       <Russian>Сохранить ввод</Russian>
       <Czech>Uložit vstup</Czech>
       <Polish>Zapisz dane</Polish>
+      <French>Sauvegarder les inputs</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_inClientSettings">
       <English>Include Client Settings</English>
@@ -149,6 +160,7 @@
       <Russian>Включить настройки клиента</Russian>
       <Czech>Zahrnout nastavení klienta</Czech>
       <Polish>Zawrzyj ustawienia klienta</Polish>
+      <French>Inclure les paramètres de client</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_exClientSettings">
       <English>Exclude Client Settings</English>
@@ -157,6 +169,7 @@
       <Russian>Исключить настройки клиента</Russian>
       <Czech>Nezahrnout nastavení klienta</Czech>
       <Polish>Wyklucz ustawienia klienta</Polish>
+      <French>Exclure les paramètres de client</French>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_settingsExported">
       <English>Settings exported to clipboard</English>
@@ -165,6 +178,7 @@
       <Russian>Настройки экспортированы в буфер обмена</Russian>
       <Czech>Nastevení exportována do schránky</Czech>
       <Polish>Ustawienia wyeksportowano do schowka</Polish>
+      <French>Paramètres exportés dans le presse-papier</French>
     </Key>
   </Package>
 </Project>
