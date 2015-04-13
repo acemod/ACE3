@@ -7,6 +7,7 @@
       <Spanish>Mostrar texto al lanzar granada</Spanish>
       <Russian>Показывать текст при броске</Russian>
       <Czech>Zobrazí text při hodu granátem</Czech>
+      <Polish>Wyświetl tekst przy rzucie granatem</Polish>
     </Key>
     <Key ID="STR_ACE_Weaponselect_SettingDisplayTextDesc">
       <English>Display a hint or text on grenade throw.</English>
@@ -14,6 +15,7 @@
       <Spanish>Muestra una notificación o texto al lanzar granada</Spanish>
       <Russian>Показывать текст или подсказку при броске гранаты.</Russian>
       <Czech>Zobrazí upozornění nebo text při hodu granátem.</Czech>
+      <Polish>Wyświetla powiadomienie lub tekst przy rzucie granatem.</Polish>
     </Key>
     <Key ID="STR_ACE_WeaponSelect_SelectPistol">
       <English>Select Pistol</English>

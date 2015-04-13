@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-11 -->
 <Project name="ACE">
   <Package name="Disposable">
     <Key ID="STR_ACE_Disposable_UsedTube">
@@ -7,7 +6,7 @@
       <German>Benutze Einwegwaffe</German>
       <French>Tube utilisé</French>
       <Czech>Použitý odpalovač</Czech>
-      <Polish>Zużyta tuba</Polish>
+      <Polish>Zużyta rura</Polish>
       <Spanish>Lanzador utilizado</Spanish>
       <Hungarian>Használt cső</Hungarian>
       <Russian>Отстрелянная труба</Russian>
@@ -17,7 +16,7 @@
       <German>Benutzter Einweg-Raketenwerfer</German>
       <French>Lance-roquette à usage unique utilisé</French>
       <Czech>Použitý raketomet</Czech>
-      <Polish>Zużyta tuba granatnika jednorazowego użytku</Polish>
+      <Polish>Zużyta rura granatnika jednorazowego użytku</Polish>
       <Spanish>Lanzador desechable utilizado</Spanish>
       <Hungarian>Használt rakétavető</Hungarian>
       <Russian>Отстрелянная одноразовая пусковая установка</Russian>
@@ -27,7 +26,7 @@
       <German>Vorgeladene Racketennachbildung</German>
       <French>Preloaded Missile Dummy</French>
       <Czech>Přednabitá dummy střela</Czech>
-      <Polish>Preloaded Missile Dummy</Polish>
+      <Polish>Wstępnie załadowana atrapa pocisku</Polish>
       <Spanish>Preloaded Missile Dummy</Spanish>
       <Hungarian>Preloaded Missile Dummy</Hungarian>
       <Russian>Заряженная ракетная пустышка</Russian>
