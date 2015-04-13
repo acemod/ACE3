@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Common">
         <Key ID="STR_ACE_Common_ACETeam">
@@ -41,7 +42,7 @@
             <English>ACE Options</English>
             <German>ACE Optionen</German>
             <Spanish>Opciones ACE</Spanish>
-            <Polish>Opcje ACE</Polish>
+            <Polish>Ustawienia ACE</Polish>
             <Czech>Nastavení ACE</Czech>
             <French>ACE Options</French>
             <Russian>ACE Настройки</Russian>
@@ -421,7 +422,7 @@
             <Czech>Banán je protáhlé ovoce a plod banánovníku (epigeická bobule).</Czech>
             <Italian>Una banana è un frutto commestibile, nello specifico una bacca cuoiosa, prodotto da un gran numero di grandi pianti erbacee dotate di fiori, della famiglia delle Musaceae.</Italian>
             <Russian>Банан - это съедобный фрукт, ягода с ботанической точки зрения, произрастающий на нескольких видах травянистых растениях рода Банан (Musa).</Russian>
-            <Polish>Rodzaj roślin z rodziny bananowatych, obejmujący około 80 gatunków. Przedstawiciele są typowymi przedstawicielami flory międzyzwrotnikowej Azji, Afryki i Australii. Część gatunków dostarcza jadalnych owoców. Słowo banan pochodzi prawdopodobnie od arabskiego słowa banan, co oznacza palec, lub afrykańskiego języka wolof, w którym rośliny te określa się mianem banaana.</Polish>
+            <Polish>Rodzaj roślin z rodziny bananowatych, obejmujący około 80 gatunków.&lt;br /&gt;Przedstawiciele są typowymi przedstawicielami flory międzyzwrotnikowej Azji, Afryki i Australii.&lt;br /&gt;Część gatunków dostarcza jadalnych owoców. Słowo banan pochodzi prawdopodobnie od arabskiego słowa banan, co oznacza palec, lub afrykańskiego języka wolof, w którym rośliny te określa się mianem banaana.</Polish>
             <French>Une banane est un fruit comestible, botaniquement une baie, produite par plusieurs types de grandes plantes herbacées à fleurs dans le genre Musa.</French>
         </Key>
     </Package>
