@@ -2,6 +2,8 @@
 
 #include "initKeybinds.sqf"
 
+GVAR(currentbulletID) = -1;
+
 GVAR(bulletDatabase) = [];
 GVAR(bulletDatabaseStartTime) = [];
 GVAR(bulletDatabaseSpeed) = [];
@@ -30,5 +32,14 @@ GVAR(AtmosphericDensitySimulationEnabled) = true;
 
 GVAR(currentGrid) = 0;
 GVAR(INIT_MESSAGE_ENABLED) = false;
+
+GVAR(extensionAvailable) = "ace_advanced_ballistics" callExtension "version" == "1.0";
+if (!GVAR(extensionAvailable)) exitWith {
+    if ("ace_advanced_ballistics" callExtension "version" == "") then {
+        diag_log text "[ACE] ERROR: ace_advanced_ballistics.dll is missing";
+    } else {
+        diag_log text "[ACE] ERROR: ace_advanced_ballistics.dll is incompatible";
+    };
+};
 
 [] call FUNC(initializeTerrainExtension);

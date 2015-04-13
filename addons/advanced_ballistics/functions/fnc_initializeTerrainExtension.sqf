@@ -12,7 +12,8 @@
  */
 #include "script_component.hpp"
 
-if ("ace_advanced_ballistics" callExtension "version" != "1.0") exitWith {};
+if (!hasInterface) exitWith {};
+if (!GVAR(extensionAvailable)) exitWith {};
 
 private ["_initStartTime", "_mapSize", "_mapGrids", "_gridCells", "_x", "_y", "_gridCenter", "_gridHeight", "_gridNumObjects", "_gridSurfaceIsWater"];
 
