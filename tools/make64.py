@@ -606,14 +606,17 @@ See the make.cfg file for additional build options.
 				cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
 				ret = subprocess.call(cmd)
 				if ret != 0:
-					print_error("CfgConvert -bin return code == " + str(ret))
-					input("Press Enter to continue...")
+					print_error("CfgConvert -bin return code == " + str(ret) + ". Usually means there is a syntax error within the config.cpp file.")
+					os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
+					shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
 
 				cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
 				ret = subprocess.call(cmd)
 				if ret != 0:
-					print_error("CfgConvert -txt) return code == " + str(ret))
-					input("Press Enter to continue...")
+					print_error("CfgConvert -txt return code == " + str(ret) + ". Usually means there is a syntax error within the config.cpp file.")
+					os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
+					shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
+					
 
 				# Include build number
 				try:
@@ -622,13 +625,16 @@ See the make.cfg file for additional build options.
 					configtext = f.read()
 					f.close()
 
-					patchestext = re.search(r"class CfgPatches\n\{(.*?)\n\}", configtext, re.DOTALL).group(1)
-					patchestext = re.sub(r'version(.*?)="(.*?)"', r'version\1="\2-{}"'.format(commit_id), patchestext)
-					configtext = re.sub(r"class CfgPatches\n\{(.*?)\n\}", "class CfgPatches\n{"+patchestext+"\n}", configtext, flags=re.DOTALL)
-
-					f = open(configpath, "w")
-					f.write(configtext)
-					f.close()
+					if configtext:
+						patchestext = re.search(r"class CfgPatches\n\{(.*?)\n\}", configtext, re.DOTALL).group(1)
+						patchestext = re.sub(r'version(.*?)="(.*?)"', r'version\1="\2-{}"'.format(commit_id), patchestext)
+						configtext = re.sub(r"class CfgPatches\n\{(.*?)\n\}", "class CfgPatches\n{"+patchestext+"\n}", configtext, flags=re.DOTALL)
+						f = open(configpath, "w")
+						f.write(configtext)
+						f.close()
+					else:
+						os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
+						os.rename(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))	
 				except:
 					raise
 					print_error("Failed to include build number")
