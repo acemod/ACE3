@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Fragmentation Configuration
-group: dev
+group: development
 parent: wiki
 order: 7
 ---

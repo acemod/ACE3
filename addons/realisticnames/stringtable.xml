@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-11 -->
 <Project name="ACE">
     <Package name="RealisticNames">
         <Key ID="STR_ACE_RealisticNames_HMG_01_Name">
@@ -591,7 +590,7 @@
             <German>Typhoon Transport</German>
             <Spanish>Typhoon de transporte</Spanish>
             <Polish>Typhoon Transportowy</Polish>
-            <Czech>Typhoon Valník</Czech>
+            <Czech>Typhoon valník</Czech>
             <French>Typhoon Transport</French>
             <Russian>Тайфун Транспортный</Russian>
             <Portuguese>Typhoon Transporte</Portuguese>
@@ -603,7 +602,7 @@
             <German>Typhoon Transport (bedeckt)</German>
             <Spanish>Typhoon de transporte (cubierto)</Spanish>
             <Polish>Typhoon Transportowy (przykryty)</Polish>
-            <Czech>Typhoon Valník (krytý)</Czech>
+            <Czech>Typhoon valník (krytý)</Czech>
             <French>Typhoon Transport (bâché)</French>
             <Russian>Тайфун Транспортный (kрытый)</Russian>
             <Portuguese>Typhoon Transporte (coberto)</Portuguese>
@@ -615,7 +614,7 @@
             <German>Typhoon Gerät</German>
             <Spanish>Typhoon de dispositivo</Spanish>
             <Polish>Typhoon Urządzenie</Polish>
-            <Czech>Typhoon Zařízení</Czech>
+            <Czech>Typhoon zařízení</Czech>
             <French>Typhoon Dispositif</French>
             <Russian>Тайфун Устройство</Russian>
             <Portuguese>Typhoon Dispositivo</Portuguese>
@@ -627,7 +626,7 @@
             <German>Typhoon Munition</German>
             <Spanish>Typhoon de munición</Spanish>
             <Polish>Typhoon Amunicyjny</Polish>
-            <Czech>Typhoon Muniční</Czech>
+            <Czech>Typhoon muniční</Czech>
             <French>Typhoon Munitions</French>
             <Russian>Тайфун Боеприпасы</Russian>
             <Portuguese>Typhoon Munições</Portuguese>
@@ -639,7 +638,7 @@
             <German>Typhoon Treibstoff</German>
             <Spanish>Typhoon de combustible</Spanish>
             <Polish>Typhoon Cysterna</Polish>
-            <Czech>Typhoon Cisterna</Czech>
+            <Czech>Typhoon cisterna</Czech>
             <French>Typhoon Citerne</French>
             <Russian>Тайфун Заправщик</Russian>
             <Portuguese>Typhoon Combustível</Portuguese>
@@ -651,7 +650,7 @@
             <German>Typhoon Instandsetzung</German>
             <Spanish>Typhoon de reparación</Spanish>
             <Polish>Typhoon Naprawczy</Polish>
-            <Czech>Typhoon Opravárenský</Czech>
+            <Czech>Typhoon opravárenský</Czech>
             <French>Typhoon Réparation</French>
             <Russian>Тайфун Ремонтный</Russian>
             <Portuguese>Typhoon Reparador</Portuguese>
@@ -663,7 +662,7 @@
             <German>Typhoon Sanitäter</German>
             <Spanish>Typhoon médico</Spanish>
             <Polish>Typhoon Medyczny</Polish>
-            <Czech>Typhoon Zdravotnický</Czech>
+            <Czech>Typhoon zdravotnický</Czech>
             <French>Typhoon Sanitaire</French>
             <Russian>Тайфун Медицинский</Russian>
             <Portuguese>Typhoon Médico</Portuguese>
@@ -724,7 +723,7 @@
             <Spanish>CH-47I Chinnok (Desarmado)</Spanish>
             <Polish>CH-47I Chinook (nieuzbrojony)</Polish>
             <Russian>CH-47I Chinook (невооруженный)</Russian>
-            <Czech>CH-47I Chinook (Neozbrojený)</Czech>
+            <Czech>CH-47I Chinook (neozbrojený)</Czech>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_CAS_01_Name">
             <English>A-10D Thunderbolt II</English>
@@ -863,7 +862,7 @@
             <German>M18A1 Claymore</German>
             <Spanish>M18A1 Claymore</Spanish>
             <Polish>Mina kierunkowa M18A1 Claymore</Polish>
-            <Czech>M18A1 Mina Claymore</Czech>
+            <Czech>Mina Claymore M18A1</Czech>
             <French>M18A1 Claymore Mine antipersonnel à effet dirigé</French>
             <Russian>M18A1 Клеймор</Russian>
             <Portuguese>M18A1 Claymore</Portuguese>
@@ -875,7 +874,7 @@
             <German>M183 Geballte Sprengladung</German>
             <Spanish>Conjunto de carga de demolición M183</Spanish>
             <Polish>Ładunek burzący M183</Polish>
-            <Czech>M183 Demoliční nálož</Czech>
+            <Czech>Demoliční nálož M183</Czech>
             <French>M183 Charge de Démolition</French>
             <Russian>M183 Комплектный подрывной заряд</Russian>
             <Portuguese>M183 Sacola de Demolição</Portuguese>
@@ -887,7 +886,7 @@
             <German>M112 Sprengladung</German>
             <Spanish>Bloque de demolición M112</Spanish>
             <Polish>Ładunek burzący M112</Polish>
-            <Czech>M112 Výbušná nálož</Czech>
+            <Czech>Výbušná nálož M112 </Czech>
             <French>Pétard M112</French>
             <Russian>M112 подрывной заряд</Russian>
             <Portuguese>M112 Carga de Demolição</Portuguese>
@@ -899,7 +898,7 @@
             <German>M67 Splittergranate</German>
             <Spanish>Granada de fragmentación M67</Spanish>
             <Polish>Granat obronny M67</Polish>
-            <Czech>M67 Granát</Czech>
+            <Czech>Granát M67 </Czech>
             <French>M67 Grenade à fragmentation</French>
             <Russian>M67 ручная осколочная граната</Russian>
             <Portuguese>M67 Granada de fragmentação</Portuguese>
@@ -911,9 +910,9 @@
             <German>M83 Rauchgranate (Weiss)</German>
             <Spanish>Granada de humo M83 (Blanco)</Spanish>
             <Polish>Granat dymny M83 (Biały)</Polish>
-            <Czech>M83 Kouřový Granát (Bílý)</Czech>
+            <Czech>M83 Kouřový Granát (bílý)</Czech>
             <French>M83 Grenade fumigène (Blanche)</French>
-            <Russian>M83 дымовой гранаты (Белый)</Russian>
+            <Russian>M83 дымовая граната (Белый)</Russian>
             <Portuguese>M83 Granada de fumaça (Branca)</Portuguese>
             <Hungarian>M83 füstgránát (Fehér)</Hungarian>
             <Italian>M83 Granata fumogena (Bianco)</Italian>
@@ -923,9 +922,9 @@
             <German>M18 Rauchgranate (Blau)</German>
             <Spanish>Granada de humo M18 (Azul)</Spanish>
             <Polish>Granat dymny M18 (Niebieski)</Polish>
-            <Czech>M18 Kouřový Granát (Modrý)</Czech>
+            <Czech>M18 Kouřový Granát (modrý)</Czech>
             <French>M18 Grenade fumigène (Bleue)</French>
-            <Russian>M18 дымовой гранаты (Синий)</Russian>
+            <Russian>M18 дымовая граната (Синий)</Russian>
             <Portuguese>M18 Granada de fumaça (Azul)</Portuguese>
             <Hungarian>M18 füstgránát (Kék)</Hungarian>
             <Italian>M18 Granata fumogena (Blu)</Italian>
@@ -935,9 +934,9 @@
             <German>M18 Rauchgranate (Grün)</German>
             <Spanish>Granada de humo M18 (Verde)</Spanish>
             <Polish>Granat dymny M18 (Zielony)</Polish>
-            <Czech>M18 Kouřový Granát (Zelený)</Czech>
+            <Czech>M18 Kouřový Granát (zelený)</Czech>
             <French>M18 Grenade fumigène (Verte)</French>
-            <Russian>M18 дымовой гранаты (Зелёный)</Russian>
+            <Russian>M18 дымовая граната (Зелёный)</Russian>
             <Portuguese>M18 Granada de fumaça (Verde)</Portuguese>
             <Hungarian>M18 füstgránát (Zöld)</Hungarian>
             <Italian>M18 Granata fumogena (Verde)</Italian>
@@ -947,9 +946,9 @@
             <German>M18 Rauchgranate (Orange)</German>
             <Spanish>Granada de humo M18 (Naranja)</Spanish>
             <Polish>Granat dymny M18 (Pomarańczowy)</Polish>
-            <Czech>M18 Kouřový Granát (Oranžový)</Czech>
+            <Czech>M18 Kouřový Granát (oranžový)</Czech>
             <French>M18 Grenade fumigène (Orange)</French>
-            <Russian>M18 дымовой гранаты (Оранжевый)</Russian>
+            <Russian>M18 дымовая граната (Оранжевый)</Russian>
             <Portuguese>M18 Granada de fumaça (Laranja)</Portuguese>
             <Hungarian>M18 füstgránát (Narancssárga)</Hungarian>
             <Italian>M18 Granata fumogena (Arancione)</Italian>
@@ -959,9 +958,9 @@
             <German>M18 Rauchgranate (Violett)</German>
             <Spanish>Granada de humo M18 (Púrpura)</Spanish>
             <Polish>Granat dymny M18 (Fioletowy)</Polish>
-            <Czech>M18 Kouřový Granát (Fialový)</Czech>
+            <Czech>M18 Kouřový Granát (fialový)</Czech>
             <French>M18 Grenade fumigène (Pourpre)</French>
-            <Russian>M18 дымовой гранаты (Пурпурный)</Russian>
+            <Russian>M18 дымовая граната (Пурпурный)</Russian>
             <Portuguese>M18 Granada de fumaça (Roxa)</Portuguese>
             <Hungarian>M18 füstgránát (Lila)</Hungarian>
             <Italian>M18 Granata fumogena (Viola)</Italian>
@@ -971,9 +970,9 @@
             <German>M18 Rauchgranate (Rot)</German>
             <Spanish>Granada de humo M18 (Rojo)</Spanish>
             <Polish>Granat dymny M18 (Czerwony)</Polish>
-            <Czech>M18 Kouřový Granát (Červený)</Czech>
+            <Czech>M18 Kouřový Granát (červený)</Czech>
             <French>M18 Grenade fumigène (Rouge)</French>
-            <Russian>M18 дымовой гранаты (Красный)</Russian>
+            <Russian>M18 дымовая граната (Красный)</Russian>
             <Portuguese>M18 Granada de fumaça (Vermelha)</Portuguese>
             <Hungarian>M18 füstgránát (Piros)</Hungarian>
             <Italian>M18 Granata fumogena (Rosso)</Italian>
@@ -983,9 +982,9 @@
             <German>M18 Rauchgranate (Gelb)</German>
             <Spanish>Granada de humo M18 (Amarillo)</Spanish>
             <Polish>Granat dymny M18 (Żółty)</Polish>
-            <Czech>M18 Kouřový Granát (Žlutý)</Czech>
+            <Czech>M18 Kouřový Granát (žlutý)</Czech>
             <French>M18 Grenade fumigène (Jaune)</French>
-            <Russian>M183 дымовой гранаты (Жёлтые)</Russian>
+            <Russian>M183 дымовая граната (Жёлтые)</Russian>
             <Portuguese>M18 Granada de fumaça (Amarela)</Portuguese>
             <Hungarian>M18 füstgránát (Sárga)</Hungarian>
             <Italian>M18 Granata fumogena (Giallo)</Italian>
@@ -995,7 +994,7 @@
             <German>M15 Panzerabwehrmine</German>
             <Spanish>Mina antitanque M15</Spanish>
             <Polish>Mina przeciwpancerna M15</Polish>
-            <Czech>M15 Protitanková Mina</Czech>
+            <Czech>Protitanková mina M15 </Czech>
             <French>M15 Mine antichar</French>
             <Russian>M15 противотанковая мина</Russian>
             <Portuguese>M15 Mina anticarro</Portuguese>
@@ -1007,7 +1006,7 @@
             <German>VS-50 Antipersonenmine</German>
             <Spanish>Mina antipersona VS-50</Spanish>
             <Polish>Mina przeciwpiechotna VS-50</Polish>
-            <Czech>VS-50 Protipěchotní Mina</Czech>
+            <Czech>Protipěchotní mina VS-50 </Czech>
             <French>VS-50 Mine antipersonnel à pression</French>
             <Russian>VS-50 Противопехотная мина</Russian>
             <Portuguese>VS-50 Mina antipessoal</Portuguese>
@@ -1019,7 +1018,7 @@
             <German>M26 Antipersonensprungmine</German>
             <Spanish>Mina antipersona M26</Spanish>
             <Polish>Mina przeciwpiechotna M26</Polish>
-            <Czech>M26 Šrapnelová Mina</Czech>
+            <Czech>Šrapnelová mina M26</Czech>
             <French>M26  Mine antipersonnel bondissante</French>
             <Russian>M26 Противопехотная мина</Russian>
             <Portuguese>M26 Mina saltadora antipessoal</Portuguese>
@@ -1031,7 +1030,7 @@
             <German>PMR-3 Antipersonenstolperdrahtmine</German>
             <Spanish>Mina antipersona de alambre PMR-3</Spanish>
             <Polish>Mina przeciwpiechotna PMR-3</Polish>
-            <Czech>PMR-3 Nástražná Mina</Czech>
+            <Czech>Nástražná mina PMR-3</Czech>
             <French>PMR-3 Mine antipersonnel à traction</French>
             <Russian>PMR-3 Противопехотная мина</Russian>
             <Portuguese>PMR-3 Mina antipessoal (armadilha)</Portuguese>
@@ -1041,180 +1040,256 @@
         <Key ID="STR_ACE_RealisticNames_hgun_P07_Name">
             <English>P99</English>
             <German>P99</German>
+            <Polish>P99</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Rook40_Name">
             <English>MP-443 Grach</English>
             <German>MP-443 Grach</German>
+            <Czech>MP-443 Grach</Czech>
+            <Polish>MP-443 Grach</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_ACPC2_Name">
             <English>ACP-C2</English>
             <German>ACP-C2</German>
+            <Czech>ACP-C2</Czech>
+            <Polish>ACP-C2</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_Name">
             <English>FNX-45 Tactical</English>
             <German>FNX-45 Tactical</German>
+            <Czech>FNX-45 Tactical</Czech>
+            <Polish>FNX-45 Tactical</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_02_Name">
             <English>Chiappa Rhino 60DS</English>
             <German>Chiappa Rhino 60DS</German>
+            <Czech>Chiappa Rhino 60DS</Czech>
+            <Polish>Chiappa Rhino 60DS</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_Signal_Name">
             <English>Taurus Judge</English>
             <German>Taurus Judge</German>
+            <Czech>Taurus Judge</Czech>
+            <Polish>Taurus Judge</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_NLAW_Name">
             <English>NLAW</English>
             <German>NLAW</German>
+            <Czech>NLAW</Czech>
+            <Polish>NLAW</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_RPG32_Name">
             <English>RPG-32</English>
             <German>RPG-32</German>
+            <Czech>RPG-32</Czech>
+            <Polish>RPG-32</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_Name">
             <English>Mini-Spike (AA)</English>
             <German>Mini-Spike (AA)</German>
+            <Czech>Mini-Spike (PL)</Czech>
+            <Polish>Mini-Spike (AA)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_short_Name">
             <English>Mini-Spike (AT)</English>
             <German>Mini-Spike (AT)</German>
+            <Czech>Mini-Spike (PT)</Czech>
+            <Polish>Mini-Spike (AA)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Name">
             <English>MX</English>
             <German>MX</German>
+            <Czech>MX</Czech>
+            <Polish>MX</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Black_Name">
             <English>MX (Black)</English>
             <German>MX (Black)</German>
+            <Polish>MX (Czarny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Name">
             <English>MXC</English>
             <German>MXC</German>
+            <Czech>MXC</Czech>
+            <Polish>MXC</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Black_Name">
             <English>MXC (Black)</English>
             <German>MXC (Black)</German>
+            <Polish>MXC (Czarny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Name">
             <English>MX 3GL</English>
             <German>MX 3GL</German>
+            <Czech>MX 3GL</Czech>
+            <Polish>MX 3GL</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Black_Name">
             <English>MX 3GL (Black)</English>
             <German>MX 3GL (Black)</German>
+            <Polish>MX 3GL (Czarny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Name">
             <English>MX LSW</English>
             <German>MX LSW</German>
+            <Czech>MX LSW</Czech>
+            <Polish>MX LSW</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Black_Name">
             <English>MX LSW (Black)</English>
             <German>MX LSW (Black)</German>
+            <Polish>MX LSW (Czarny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Name">
             <English>MXM</English>
             <German>MXM</German>
+            <Czech>MXM</Czech>
+            <Polish>MXM</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Black_Name">
             <English>MXM (Black)</English>
             <German>MXM (Black)</German>
+            <Polish>MXM (Czarny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_Name">
             <English>KT2002 Katiba</English>
             <German>KT2002 Katiba</German>
+            <Czech>KT2002 Katiba</Czech>
+            <Polish>KT2002 Katiba</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_C_Name">
             <English>KT2002C Katiba</English>
             <German>KT2002C Katiba</German>
+            <Czech>KT2002C Katiba</Czech>
+            <Polish>KT2002C Katiba</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_GL_Name">
             <English>KT2002 Katiba KGL</English>
             <German>KT2002 Katiba KGL</German>
+            <Czech>KT2002 Katiba KGL</Czech>
+            <Polish>KT2002 Katiba KGL</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_Name">
             <English>F2000 (Camo)</English>
             <German>F2000 (Camo)</German>
+            <Polish>F2000 (kamuflaż)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_plain_Name">
             <English>F2000</English>
             <German>F2000</German>
+            <Czech>F2000</Czech>
+            <Polish>F2000</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20C_Name">
             <English>F2000 Tactical (Camo)</English>
             <German>F2000 Tactical (Camo)</German>
+            <Polish>F2000 Tactical (kamuflaż)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20C_plain_Name">
             <English>F2000 Tactical</English>
             <German>F2000 Tactical</German>
+            <Czech>F2000 Tactical</Czech>
+            <Polish>F2000 Tactical</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_GL_Name">
             <English>F2000 EGLM (Camo)</English>
             <German>F2000 EGLM (Camo)</German>
+            <Polish>F2000 EGLM (kamuflaż)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_GL_plain_Name">
             <English>F2000 EGLM</English>
             <German>F2000 EGLM</German>
+            <Czech>F2000 EGLM</Czech>
+            <Polish>F2000 EGLM</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG21_Name">
             <English>TAR-21</English>
             <German>TAR-21</German>
+            <Czech>TAR-21</Czech>
+            <Polish>TAR-21</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG20_Name">
             <English>CTAR-21</English>
             <German>CTAR-21</German>
+            <Czech>CTAR-21</Czech>
+            <Polish>CTAR-21</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG21_GL_Name">
             <English>TAR-21 EGLM</English>
             <German>TAR-21 EGLM</German>
+            <Czech>TAR-21 EGLM</Czech>
+            <Polish>TAR-21 EGLM</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_01_Name">
             <English>Vector SMG</English>
             <German>Vector SMG</German>
+            <Czech>Vector SMG</Czech>
+            <Polish>Vector SMG</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_02_Name">
             <English>Scorpion Evo 3 A1</English>
             <German>Scorpion Evo 3 A1</German>
+            <Czech>Scorpion Evo 3 A1</Czech>
+            <Polish>Scorpion Evo 3 A1</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_PDW2000_Name">
             <English>CPW</English>
             <German>CPW</German>
+            <Czech>CPW</Czech>
+            <Polish>CPW</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SDAR_Name">
             <English>RFB SDAR</English>
             <German>RFB SDAR</German>
+            <Czech>RFB SDAR</Czech>
+            <Polish>RFB SDAR</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Mk200_Name">
             <English>Stoner 99 LMG</English>
             <German>Stoner 99 LMG</German>
+            <Czech>Stoner 99 LMG</Czech>
+            <Polish>Stoner 99 LMG</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Zafir_Name">
             <English>Negev NG7</English>
             <German>Negev NG7</German>
+            <Czech>Negev NG7</Czech>
+            <Polish>Negev NG7</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_EBR_Name">
             <English>Mk14 Mod 1 EBR</English>
             <German>Mk14 Mod 1 EBR</German>
+            <Czech>Mk14 Mod 1 EBR</Czech>
+            <Polish>Mk14 Mod 1 EBR</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_Name">
             <English>GM6 Lynx</English>
             <German>GM6 Lynx</German>
+            <Czech>GM6 Lynx</Czech>
+            <Polish>GM6 Lynx</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_camo_Name">
             <English>GM6 Lynx (Camo)</English>
             <German>GM6 Lynx (Camo)</German>
+            <Polish>GM6 Lynx (kamuflaż)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_Name">
             <English>M200 Intervention</English>
             <German>M200 Intervention</German>
+            <Czech>M200 Intervention</Czech>
+            <Polish>M200 Intervention</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_camo_Name">
             <English>M200 Intervention (Camo)</English>
             <German>M200 Intervention (Camo)</German>
+            <Polish>M200 Intervention (kamuflaż)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_01_Name">
             <English>VS-121</English>
             <German>VS-121</German>
+            <Czech>VS-121</Czech>
+            <Polish>VS-121</Polish>
         </Key>
-
         <Key ID="STR_ACE_RealisticNames_DMR_02">
             <English>TODO: MAR-10 .338</English>
         </Key>
@@ -1227,7 +1302,6 @@
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_sniper">
             <English>TODO: MAR-10 .338 (Sand)</English>
         </Key>
-
         <Key ID="STR_ACE_RealisticNames_DMR_03">
             <English>TODO: Mk-I EMR 7.62 mm</English>
         </Key>
@@ -1249,7 +1323,6 @@
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
             <English>TODO: NATO DMR (provisional) spotter</English>
         </Key>
-
         <Key ID="STR_ACE_RealisticNames_DMR_04">
             <English>TODO: ASP-1 Kir 12.7 mm</English>
         </Key>
@@ -1259,7 +1332,6 @@
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04_Tan">
             <English>TODO: ASP-1 Kir 12.7 mm (Tan)</English>
         </Key>
-
         <Key ID="STR_ACE_RealisticNames_DMR_05">
             <English>TODO: Cyrus 9.3 mm</English>
         </Key>
@@ -1272,7 +1344,6 @@
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_tan">
             <English>TODO: Cyrus 9.3 mm (Tan)</English>
         </Key>
-
         <Key ID="STR_ACE_RealisticNames_DMR_06">
             <English>TODO: Mk14 7.62 mm</English>
         </Key>
@@ -1282,7 +1353,6 @@
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_olive">
             <English>TODO: Mk14 7.62 mm (Olive)</English>
         </Key>
-
         <Key ID="STR_ACE_RealisticNames_MMG_01">
             <English>TODO: Navid 9.3 mm</English>
         </Key>
@@ -1292,7 +1362,6 @@
         <Key ID="STR_ACE_RealisticNames_MMG_01_tan">
             <English>TODO: Navid 9.3 mm (Tan)</English>
         </Key>
-
         <Key ID="STR_ACE_RealisticNames_MMG_02">
             <English>TODO: SPMG .338</English>
         </Key>
@@ -1305,6 +1374,5 @@
         <Key ID="STR_ACE_RealisticNames_MMG_02_sand">
             <English>TODO: SPMG .338 (Sand)</English>
         </Key>
-
     </Package>
 </Project>

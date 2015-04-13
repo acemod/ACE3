@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="SwitchUnits">
     <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
       <English>Switched unit</English>
+      <French>Unité à transférer</French>
       <German>Einheit gewechselt</German>
       <Russian>Юнит переключен</Russian>
       <Czech>Prohozená jednotka</Czech>
@@ -11,8 +13,9 @@
     </Key>
     <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
       <English>This unit is too close to the enemy.</English>
+      <French>Cette unité est trop près d'un ennemi.</French>
       <German>Diese Einheit ist zu nah am Feind.</German>
-      <Russian>Юнит слишком близок к противнику</Russian>
+      <Russian>Юнит слишком близок к противнику.</Russian>
       <Czech>Tato jednotka je moc blízko k nepříteli.</Czech>
       <Polish>Ta jednostka jest zbyt blisko przeciwnika.</Polish>
       <Spanish>Esta unidad está demasiado cerca del enemigo.</Spanish>

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Setting Up The Development Environment
-group: dev
+group: development
 parent: wiki
 order: 0
 ---

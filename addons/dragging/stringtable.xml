@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-21 -->
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
   <Package name="Dragging">
     <Key ID="STR_ACE_Dragging_Drag">
@@ -28,18 +27,21 @@
     </Key>
     <Key ID="STR_ACE_Dragging_UnableToDrag">
       <English>Item to heavy</English>
-      <German>Gegenstand zu schwer</German>
+      <German>Gegenstand ist zu schwer</German>
       <Spanish>Articulo demasiado pesado</Spanish>
+      <Polish>Przedmiot zbyt ciężki</Polish>
+      <French>Objet trop lourd</French>
       <!-- <English>Unable to drag item due to weight</English>
       <Russian>Слишком тяжелый предмет</Russian>
       <Spanish>No se puede arrastrar el objeto debido a su peso</Spanish>
-      <Polish>Nie można ciągnąć tego przedmiotu z powodu jego wagi</Polish>
       <Czech>Předmět je příliž těžký!</Czech>
-      <French>Trop lourd pour être tracté</French>
+      <French>Trop lourd pour être tracté</French> <!-- Added above -->
       <German>Dieser Gegenstand kann nicht gezogen werden, da er zu schwer ist.</German>
       <Portuguese>Não é possível carregar o item devido a seu peso</Portuguese>
       <Italian>Non è possibile trascinare l'oggetto a causa del suo peso</Italian>
       <Hungarian>Túl nehéz ahhoz, hogy elhúzd</Hungarian> -->
+      <Russian>Слишком тяжело</Russian>
+      <Czech>Moc težké</Czech>
     </Key>
     <Key ID="STR_ACE_Dragging_Carry">
       <English>Carry</English>

@@ -182,6 +182,9 @@ PREP(waitAndExecute);
 PREP(translateToWeaponSpace);
 PREP(translateToModelSpace);
 
+// Model and drawing helpers
+PREP(worldToScreenBounds);
+
 // config items
 PREP(getConfigType);
 PREP(getItemType);
