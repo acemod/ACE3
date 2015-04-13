@@ -6,48 +6,56 @@
       <German>Interaktionen</German>
       <Spanish>Interacciones</Spanish>
       <Czech>Interakce</Czech>
+      <Russian>Взаимодействия</Russian>
     </Key>
     <Key ID="STR_ACE_Interaction_Torso">
       <English>Torso</English>
       <German>Torso</German>
       <Spanish>Torso</Spanish>
       <Czech>Trup</Czech>
+      <Russian>Торс</Russian>
     </Key>
     <Key ID="STR_ACE_Interaction_Head">
       <English>Head</English>
       <German>Kopf</German>
       <Spanish>Cabeza</Spanish>
       <Czech>Hlava</Czech>
+      <Russian>Голова</Russian>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmLeft">
       <English>Left Arm</English>
       <German>Linker Arm</German>
       <Spanish>Brazo izquierdo</Spanish>
       <Czech>Levá paže</Czech>
+      <Russian>Левая рука</Russian>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmRight">
       <English>Right Arm</English>
       <German>Rechter Arm</German>
       <Spanish>Brazo derecho</Spanish>
       <Czech>Pravá paže</Czech>
+      <Russian>Правая рука</Russian>
     </Key>
     <Key ID="STR_ACE_Interaction_LegLeft">
       <English>Left Leg</English>
       <German>Linkes Bein</German>
       <Spanish>Pierna izquierda</Spanish>
       <Czech>Levá noha</Czech>
+      <Russian>Левая нога</Russian>
     </Key>
     <Key ID="STR_ACE_Interaction_LegRight">
       <English>Right Leg</English>
       <German>Rechtes Bein</German>
       <Spanish>Pierna derecha</Spanish>
       <Czech>Pravá hona</Czech>
+      <Russian>Правая нога</Russian>
     </Key>
     <Key ID="STR_ACE_Interaction_Weapon">
       <English>Weapon</English>
       <German>Waffe</German>
       <Spanish>Arma</Spanish>
       <Czech>Zbraň</Czech>
+      <Russian>Оружие</Russian>
     </Key>
     <Key ID="STR_ACE_Interaction_InteractionMenu">
       <English>Interaction Menu</English>
@@ -393,7 +401,7 @@
       <Polish>Zostałeś klepnięty po ramieniu</Polish>
       <Hungarian>Vállonveregettek</Hungarian>
       <Czech>Někdo tě poklepal na PRAVÉ rameno</Czech>
-      <Russian>Вас похлопали по плечу</Russian>
+      <Russian>Вас похлопали по ПРАВОМУ плечу</Russian>
       <Portuguese>Você foi tocado no ombro</Portuguese>
       <Italian>Ti è stato dato un colpetto sulla spalla</Italian>
     </Key>
@@ -405,7 +413,7 @@
       <Polish>Zostałeś klepnięty po ramieniu</Polish>
       <Hungarian>Vállonveregettek</Hungarian>
       <Czech>Někdo tě poklepal na LEVÉ rameno.</Czech>
-      <Russian>Вас похлопали по плечу</Russian>
+      <Russian>Вас похлопали по ЛЕВОМУ плечу</Russian>
       <Portuguese>Você foi tocado no ombro.</Portuguese>
       <Italian>Ti è stato dato un colpetto sulla spalla</Italian>
     </Key>
