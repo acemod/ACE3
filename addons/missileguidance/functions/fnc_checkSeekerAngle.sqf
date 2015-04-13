@@ -24,7 +24,7 @@ _sensorPos = getPosASL _seeker;
 _testPointVector = vectorNormalized (_targetPos vectorDiff _sensorPos);
 _testDotProduct = (vectorNormalized (velocity _seeker)) vectorDotProduct _testPointVector;
 
-if(_testDotProduct < (cos _seekerMaxAngle) exitWith {
+if(_testDotProduct < (cos _seekerMaxAngle)) exitWith {
     false 
 };
 
