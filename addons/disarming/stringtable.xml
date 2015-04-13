@@ -5,6 +5,7 @@
         <Key ID="STR_ACE_Disarming_OpenInventory">
             <English>Open Inventory</English>
             <Polish>Otwórz ekwipunek</Polish>
+            <Czech>Otevřít inventář</Czech>
         </Key>
     </Package>
 </Project>

@@ -132,6 +132,7 @@
             <English>Check weapon&lt;br/&gt;temperature</English>
             <Spanish>Verificar temperatura&lt;br/&gt;del arma</Spanish>
             <Polish>Sprawdź temperaturę&lt;br/&gt;broni</Polish>
+            <Czech>Zkontrolovat teplotu&lt;br/&gt;zbraně</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingTemperature">
             <English>Checking temperature ...</English>

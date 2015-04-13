@@ -126,6 +126,7 @@
             <Russian>Массив. Разделяйте элемены, используя запятую.</Russian>
             <Polish>Tablica. Oddziel elementy używając ,.</Polish>
             <French>Array. Séparer les élements en utilisant ,.</French>
+            <Czech>Tabulka. Odděl elementy použitím ,.</Czech>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_scalarType">
             <English>Number</English>
