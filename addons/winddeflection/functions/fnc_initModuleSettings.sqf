@@ -24,3 +24,5 @@ if !(_activated) exitWith {};
 
 [_logic, QGVAR(simulationInterval), "simulationInterval"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(simulationRadius), "simulationRadius"] call EFUNC(common,readSettingFromModule);
+
+GVAR(simulationInterval) = 0 max GVAR(simulationInterval) min 0.2;
