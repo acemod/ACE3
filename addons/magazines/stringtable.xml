@@ -491,11 +491,13 @@
             <English>.338 LM 10Rnd Tracer Mag</English>
             <German>.338 LM 10-Schuss-Magazin Leuchtspur</German>
             <Polish>Magazynek .338 LM 10rd Smugacz</Polish>
+            <Czech>.338 LM 10Rnd Svítící Zásobník</Czech>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_Mag_TracerNameShort">
             <English>.338 LM Tracer</English>
             <German>.338 LM Leuchtspur</German>
             <Polish>.338 LM Smugacz</Polish>
+            <Czech>.338 LM Svítící</Czech>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_Mag_TracerDescription">
             <English>Caliber: .338 Lapua Magnum Tracer&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: MAR-10</English>
@@ -511,6 +513,7 @@
             <English>.338 LM IR-DIM</English>
             <German>.338 LM IR-DIM</German>
             <Polish>.338 LM IR-DIM</Polish>
+            <Czech>.338 LM IR-DIM</Czech>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_Mag_Tracer_DimDescription">
             <English>Caliber: .338 Lapua Magnum Tracer IR-DIM&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: MAR-10</English>
@@ -526,6 +529,7 @@
             <English>.338 LM AP</English>
             <German>.338 LM AP</German>
             <Polish>.338 LM AP</Polish>
+            <Czech>.338 LM AP</Czech>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_Mag_APDescription">
             <English>Caliber: .338 Lapua Magnum AP&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: MAR-10</English>
@@ -541,6 +545,7 @@
             <English>.338 LM SD</English>
             <German>.338 LM SD</German>
             <Polish>.338 LM SD</Polish>
+            <Czech>.338 LM SD</Czech>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_Mag_SDDescription">
             <English>Caliber: .338 Lapua Magnum SD&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: MAR-10</English>
@@ -557,6 +562,7 @@
             <English>.338 NM Tracer</English>
             <German>.338 NM Leuchtspur</German>
             <Polish>.338 NM Tracer</Polish>
+            <Czech>.338 NM Svítící</Czech>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_TracerDescription">
             <English>Caliber: .338 Norma Magnum Tracer&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
@@ -572,6 +578,7 @@
             <English>.338 NM IR-DIM</English>
             <German>.338 LM IR-DIM</German>
             <Polish>.338 NM IR-DIM</Polish>
+            <Czech>.338 NM IR-DIM</Czech>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_Tracer_DimDescription">
             <English>Caliber: .338 Norma Magnum Tracer IR-DIM&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
@@ -587,6 +594,7 @@
             <English>.338 NM AP</English>
             <German>.338 NM AP</German>
             <Polish>.338 NM AP</Polish>
+            <Czech>.338 NM AP</Czech>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_APDescription">
             <English>Caliber: .338 Norma Magnum AP&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
@@ -603,6 +611,7 @@
             <English>9.3mm Tracer</English>
             <German>9,3mm Leuchtspur</German>
             <Polish>9,3mm Smugacz</Polish>
+            <Czech>9.3mm Svítící</Czech>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_TracerDescription">
             <English>Caliber: 9.3x64mm Tracer&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
@@ -618,6 +627,7 @@
             <English>9.3mm IR-DIM</English>
             <German>9,3mm IR-DIM</German>
             <Polish>9,3mm IR-DIM</Polish>
+            <Czech>9.3mm IR-DIM</Czech>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_Tracer_DimDescription">
             <English>Caliber: 9.3x64mm Tracer IR-DIM&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
@@ -633,6 +643,7 @@
             <English>9.3mm AP</English>
             <German>9,3mm AP</German>
             <Polish>9,3mm AP</Polish>
+            <Czech>9.3mm AP</Czech>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_APDescription">
             <English>Caliber: 9.3x64mm AP&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
@@ -648,6 +659,7 @@
             <English>9.3mm SD</English>
             <German>9,3mm SD</German>
             <Polish>9,3mm SD</Polish>
+            <Czech>9.3mm SD</Czech>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_SDDescription">
             <English>Caliber: 9.3x64mm SD&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
@@ -664,6 +676,7 @@
             <English>9.3mm Tracer</English>
             <German>9,3mm Leuchtspur</German>
             <Polish>9,3mm Smugacz</Polish>
+            <Czech>9.3mm Svítící</Czech>
         </Key>
         <Key ID="STR_ACE_150Rnd_93x64_Mag_TracerDescription">
             <English>Caliber: 9.3x64mm Tracer&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
@@ -679,6 +692,7 @@
             <English>9.3mm IR-DIM</English>
             <German>9,3mm IR-DIM</German>
             <Polish>9,3mm IR-DIM</Polish>
+            <Czech>9.3mm IR-DIM</Czech>
         </Key>
         <Key ID="STR_ACE_150Rnd_93x64_Mag_Tracer_DimDescription">
             <English>Caliber: 9.3x64mm Tracer IR-DIM&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
@@ -694,6 +708,7 @@
             <English>9.3mm AP</English>
             <German>9,3mm AP</German>
             <Polish>9,3mm AP</Polish>
+            <Czech>9.3mm AP</Czech>
         </Key>
         <Key ID="STR_ACE_150Rnd_93x64_Mag_APDescription">
             <English>Caliber: 9.3x64mm AP&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>

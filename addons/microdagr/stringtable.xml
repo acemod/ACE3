@@ -18,6 +18,7 @@
             <Russian>Многофункциональный GPS-приёмник.</Russian>
             <Polish>Zaawansowany odbiornik GPS MicroDAGR</Polish>
             <French>MicroDAGR un GPS avancé</French>
+            <Czech>MicroDAGR pokročílá GPS příjímač</Czech>
         </Key>
         <Key ID="STR_ACE_microdagr_settingUseMils">
             <English>Angular Unit:</English>
@@ -26,6 +27,7 @@
             <Polish>Jednostka kątowa:</Polish>
             <French>Unité angulaire:</French>
             <German>Winkeleinheit:</German>
+            <Czech>Úhlová jednotka:</Czech>
         </Key>
         <Key ID="STR_ACE_microdagr_settingMils">
             <English>Mils</English>
@@ -34,6 +36,7 @@
             <Russian>Тысячные</Russian>
             <Polish>Tysiączne</Polish>
             <French>Mils</French>
+            <Czech>Mils</Czech>
         </Key>
         <Key ID="STR_ACE_microdagr_settingShowWP">
             <English>Show Waypoints On Map:</English>
@@ -42,6 +45,7 @@
             <Russian>Показывать маршрутные точки на карте:</Russian>
             <Polish>Pokaż PT na mapie:</Polish>
             <French>Afficher les points de passage sur la carte :</French>
+            <Czech>Ukázat waypointy na mapě:</Czech>
         </Key>
         <Key ID="STR_ACE_microdagr_settingDegrees">
             <English>Degrees</English>
@@ -50,6 +54,7 @@
             <Russian>Градусы</Russian>
             <Polish>Stopnie</Polish>
             <French>Degrés</French>
+            <Czech>Stupně</Czech>
         </Key>
         <Key ID="STR_ACE_microdagr_settingOn">
             <English>On</English>
@@ -80,6 +85,7 @@
             <Polish>Wprowadź współrzędne:</Polish>
             <French>Entrer Grid Cords :</French>
             <German>Koordinaten eingeben:</German>
+            <Czech>Napiš souřadnice:</Czech>
         </Key>
         <Key ID="STR_ACE_microdagr_wpEnterName">
             <English>Name of [%1]</English>
@@ -88,6 +94,7 @@
             <Russian>Название [%1]</Russian>
             <Polish>Nazwa [%1]</Polish>
             <French>Nom de [%1]</French>
+            <Czech>Název [%1]</Czech>
         </Key>
         <Key ID="STR_ACE_microdagr_controlMGRS">
             <English>MGRS-New</English>
@@ -96,6 +103,7 @@
             <Russian>MGRS-Новая</Russian>
             <Polish>MGRS-Nowy</Polish>
             <French>Nouveau MGRS</French>
+            <Czech>MGRS-Nový</Czech>
         </Key>
         <Key ID="STR_ACE_microdagr_controlWGD">
             <English>WGD</English>
@@ -104,6 +112,7 @@
             <Russian>WGD</Russian>
             <Polish>WGD</Polish>
             <French>WGD</French>
+            <Czech>WGD</Czech>
         </Key>
         <Key ID="STR_ACE_microdagr_controlRange">
             <English>Range:</English>
@@ -112,6 +121,7 @@
             <Russian>Дистанция:</Russian>
             <Polish>Dystans:</Polish>
             <French>Distance :</French>
+            <Czech>Vzdálenost:</Czech>
         </Key>
         <Key ID="STR_ACE_microdagr_compasDirection">
             <English>Compass Direction</English>
@@ -120,6 +130,7 @@
             <Russian>Азимут</Russian>
             <Polish>Azymut</Polish>
             <French>Direction de la boussole</French>
+            <Czech>Azimut:</Czech>
         </Key>
         <Key ID="STR_ACE_microdagr_menuMark">
             <English>Mark</English>
@@ -128,6 +139,7 @@
             <Russian>Отметка</Russian>
             <Polish>Oznacz</Polish>
             <French>Marqueur</French>
+            <Czech>Označit</Czech>
         </Key>
         <Key ID="STR_ACE_microdagr_menuWaypoints">
             <English>Waypoints</English>
@@ -191,6 +203,7 @@
             <Russian>Сменить режим показа MicroDAGR</Russian>
             <Polish>Przełącz tryb wyświetlania MicroDAGR</Polish>
             <French>Basculer sur l'affichage du MicroDAGR</French>
+            <Czech>Přepnout zobrazení MircroDAGRu</Czech>
         </Key>
         <Key ID="STR_ACE_microdagr_show">
             <English>Show MicoDAGR</English>
