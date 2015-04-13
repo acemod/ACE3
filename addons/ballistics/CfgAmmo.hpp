@@ -1,8 +1,10 @@
+
 class CfgAmmo {
     class BulletCore;
 
     class BulletBase: BulletCore {
-        timeToLive = 15;        // Default: 6, doubleplusgood all munition range.
+        // Default: 6 | More is good, but too much is bad (especially with wind deflection / advanced ballistics)
+        timeToLive = 10;
     };
 
     class B_20mm : BulletBase {
@@ -17,9 +19,7 @@ class CfgAmmo {
     class B_30mm_AP : BulletBase {
         timeToLive = 30;
     };
-
-    class B_556x45_Ball_Tracer_Red;
-    class B_762x51_Tracer_Red;
+    
     class B_556x45_Ball : BulletBase {
         airFriction=-0.001265;
         hit=8;
@@ -69,6 +69,10 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={780, 886, 950};
         ACE_barrelLengths[]={10, 15.5, 20};
     };
+    class B_556x45_Ball_Tracer_Red;
+    class ACE_B_556x45_Ball_Tracer_Dim: B_556x45_Ball_Tracer_Red {
+        nvgOnly = 1;
+    };
     class ACE_545x39_Ball_7N6M : B_556x45_Ball {
         airFriction=-0.001162;
         caliber=0.5;
@@ -114,8 +118,12 @@ class CfgAmmo {
         ACE_velocityBoundaries[]={};
         ACE_standardAtmosphere="ICAO";
         ACE_dragModel=7;
-        ACE_muzzleVelocities[]={760, 788, 800, 805};
-        ACE_barrelLengths[]={16, 20, 24, 26};
+        ACE_muzzleVelocities[]={730, 760, 788, 800, 810, 830};
+        ACE_barrelLengths[]={10, 16, 20, 24, 26, 30};
+    };
+    class B_65x39_Case_yellow;
+    class ACE_B_65x39_Caseless_Tracer_Dim : B_65x39_Case_yellow {
+        nvgOnly = 1;
     };
     class B_762x51_Ball : BulletBase {
         airFriction=-0.001035;
@@ -131,6 +139,10 @@ class CfgAmmo {
         ACE_dragModel=7;
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={10, 16, 20, 24, 26};
+    };
+    class B_762x51_Tracer_Red;
+    class ACE_B_762x51_Tracer_Dim: B_762x51_Tracer_Red {
+        nvgOnly = 1;
     };
     class ACE_762x51_Ball_M118LR : B_762x51_Ball {
         airFriction=-0.0008525;
@@ -266,7 +278,7 @@ class CfgAmmo {
         ACE_velocityBoundaries[]={};
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
-        ACE_muzzleVelocities[]={350, 390, 420};
+        ACE_muzzleVelocities[]={440, 460, 480};
         ACE_barrelLengths[]={4, 5, 9};
     };
     class ACE_9x18_Ball_57N181S : B_9x21_Ball {
