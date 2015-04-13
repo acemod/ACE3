@@ -1,222 +1,223 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
-  <Package name="microdagr">
-    <Key ID="STR_ACE_microdagr_itemName">
-      <English>MicroDAGR GPS</English>
-      <German>MicroDAGR GPS</German>
-      <Spanish>GPS MicroDAGR</Spanish>
-      <Russian>MicroDAGR GPS</Russian>
-      <Czech>MicroDAGR GPS</Czech>
-      <Polish>MicroDAGR GPS</Polish>
-      <French>GPS MicroDAGR</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_itemDescription">
-      <English>MicroDAGR advanced GPS receiver</English>
-      <German>MicroDAGR verbesserter GPS Empfänger</German>
-      <Spanish>Receptor avanzado GPS MicroDAGR</Spanish>
-      <Russian>Многофункциональный GPS-приёмник.</Russian>
-      <Polish>Zaawansowany odbiornik GPS MicroDAGR</Polish>
-      <French>MicroDAGR un GPS avancé</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_settingUseMils">
-      <English>Angular Unit:</English>
-      <Spanish>Unidad angular:</Spanish>
-      <Russian>Угловые единицы:</Russian>
-      <Polish>Jednostka kątowa:</Polish>
-      <French>Unité angulaire:</French>
-      <German>Winkeleinheit:</German>
-    </Key>
-    <Key ID="STR_ACE_microdagr_settingMils">
-      <English>Mils</English>
-      <German>Mils</German>
-      <Spanish>Mils</Spanish>
-      <Russian>Тысячные</Russian>
-      <Polish>Milsy</Polish>
-      <French>Mils</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_settingShowWP">
-      <English>Show Waypoints On Map:</English>
-      <German>Zeige Wegpunkte auf Karte</German>
-      <Spanish>Mostrar puntos de ruta en el mapa:</Spanish>
-      <Russian>Показывать маршрутные точки на карте:</Russian>
-      <Polish>Pokaż PT na mapie:</Polish>
-      <French>Afficher les points de passage sur la carte :</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_settingDegrees">
-      <English>Degrees</English>
-      <German>Grad</German>
-      <Spanish>Grados</Spanish>
-      <Russian>Градусы</Russian>
-      <Polish>Stopnie</Polish>
-      <French>Degrés</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_settingOn">
-      <English>On</English>
-      <Czech>Zapnuto</Czech>
-      <French>Oui</French>
-      <German>Ein</German>
-      <Italian>Sì</Italian>
-      <Polish>Wł.</Polish>
-      <Portuguese>Ativar</Portuguese>
-      <Russian>Вкл.</Russian>
-      <Spanish>Encendido</Spanish>
-    </Key>
-    <Key ID="STR_ACE_microdagr_settingOff">
-      <English>Off</English>
-      <Czech>Vypnuto</Czech>
-      <French>Non</French>
-      <German>Aus</German>
-      <Italian>No</Italian>
-      <Polish>Wył.</Polish>
-      <Portuguese>Desativar</Portuguese>
-      <Russian>Выкл.</Russian>
-      <Spanish>Apagado</Spanish>
-    </Key>
-    <Key ID="STR_ACE_microdagr_wpEnterCords">
-      <English>Enter Grid Cords:</English>
-      <Spanish>Introducir coordenadas de cuadrícula:</Spanish>
-      <Russian>Введите координаты:</Russian>
-      <Polish>Wprowadź współrzędne:</Polish>
-      <French>Entrer Grid Cords :</French>
-      <German>Koordinaten eingeben:</German>
-    </Key>
-    <Key ID="STR_ACE_microdagr_wpEnterName">
-      <English>Name of [%1]</English>
-      <German>Name von [%1]</German>
-      <Spanish>Nombre de [%1]</Spanish>
-      <Russian>Название [%1]</Russian>
-      <Polish>Nazwa [%1]</Polish>
-      <French>Nom de [%1]</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_controlMGRS">
-      <English>MGRS-New</English>
-      <German>MGRS-NEU</German>
-      <Spanish>Nuevo-MGRS</Spanish>
-      <Russian>MGRS-Новая</Russian>
-      <Polish>MGRS-Nowy</Polish>
-      <French>Nouveau MGRS</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_controlWGD">
-      <English>WGD</English>
-      <German>WGD</German> 
-      <Spanish>WGD</Spanish>
-      <Russian>WGD</Russian>
-      <Polish>WGD</Polish>
-      <French>WGD</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_controlRange">
-      <English>Range:</English>
-      <Spanish>Distancia:</Spanish>
-      <German>Reichweite:</German>
-      <Russian>Дистанция:</Russian>
-      <Polish>Dystans:</Polish>
-      <French>Distance :</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_compasDirection">
-      <English>Compass Direction</English>
-      <German>Kompass Richtung</German>
-      <Spanish>Dirección de la brújula</Spanish>
-      <Russian>Азимут</Russian>
-      <Polish>Kierunek</Polish>
-      <French>Direction de la boussole</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_menuMark">
-      <English>Mark</English>
-      <German>Markieren</German>
-      <Spanish>Marca</Spanish>
-      <Russian>Отметка</Russian>
-      <Polish>Oznacz</Polish>
-      <French>Marqueur</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_menuWaypoints">
-      <English>Waypoints</English>
-      <Spanish>Puntos de ruta</Spanish>
-      <German>Wegpunkte</German>
-      <Russian>Машрутные точки</Russian>
-      <Czech>Waypointy</Czech>
-      <Polish>Punkty trasy</Polish>
-      <French>Point de passage</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_menuConnectTo">
-      <English>Connect To</English>
-      <Spanish>Conectar a</Spanish>
-      <Russian>Соединиться с </Russian>
-      <German>Verbinde zu</German>
-      <Czech>Připojit k</Czech>
-      <Polish>Podłącz do</Polish>
-      <French>Connexion à</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_menuSettings">
-      <English>Settings</English>
-      <French>Paramètres</French>
-      <German>Einstellungen</German>
-      <Spanish>Configuración</Spanish>
-      <Russian>Настройки</Russian>
-      <Czech>Nastavení</Czech>
-      <Polish>Ustawienia</Polish>
-    </Key>
-    <Key ID="STR_ACE_microdagr_waypointsSet">
-      <English>SetWP</English>
-      <German>WP setzen</German>
-      <Spanish>Establecer PR</Spanish>
-      <Russian>Установить МТ</Russian>
-      <Czech>Nastavit WP</Czech>
-      <Polish>UstawPT</Polish>
-    </Key>
-    <Key ID="STR_ACE_microdagr_waypointsAdd">
-      <English>Add</English>
-      <German>Hinzufügen</German>
-      <Spanish>Añadir</Spanish>
-      <Russian>Добавить</Russian>
-      <Czech>Přidat</Czech>
-      <Polish>Dodaj</Polish>
-      <French>Ajouter</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_waypointsDelete">
-      <English>Delete</English>
-      <Czech>Smazat</Czech>
-      <French>Supprimer</French>
-      <German>Löschen</German>
-      <Italian>Elimina</Italian>
-      <Polish>Usuń</Polish>
-      <Portuguese>Excluir</Portuguese>
-      <Russian>Удалить</Russian>
-      <Spanish>Borrar</Spanish>
-    </Key>
-    <Key ID="STR_ACE_microdagr_toggleUnit">
-      <English>Toggle MicroDAGR Display Mode</English>
-      <German>MicoDAGR Anzeigemodus wählen</German>
-      <Spanish>Conmutar modo de pantalla del MicroDAGR</Spanish>
-      <Russian>Сменить режим показа MicroDAGR</Russian>
-      <Polish>Przełącz tryb wyświetlania MicroDAGR</Polish>
-      <French>Basculer sur l'affichage du MicroDAGR</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_show">
-      <English>Show MicoDAGR</English>
-      <German>Zeige MicroDAGR</German>
-      <Spanish>Mostrar MicroDAGR</Spanish>
-      <Russian>Показать MicroDAGR</Russian>
-      <Czech>Ukázat MicroDAGR GPS</Czech>
-      <Polish>Pokaż MicroDAGR</Polish>
-      <French>Afficher le MicroDAGR</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_configure">
-      <English>Configure MicroDAGR</English>
-      <German>Konfiguriere MicroDAGR</German>
-      <Spanish>Configurar MicroDAGR</Spanish>
-      <Russian>Настроить MicroDAGR</Russian>
-      <Czech>Konfigurovat MicroDAGR GPS</Czech>
-      <Polish>Konfiguruj MicroDAGR</Polish>
-      <French>Configurer le MicroDAGR</French>
-    </Key>
-    <Key ID="STR_ACE_microdagr_closeUnit">
-      <English>Close MicroDAGR</English>
-      <German>Schließe MicroDAGR</German>
-      <Spanish>Cerrar MicroDAGR</Spanish>
-      <Russian>Закрыть MicroDAGR</Russian>
-      <Czech>Zavřít MicroDAGR GPS</Czech>
-      <Polish>Zamknij MicroDAGR</Polish>
-      <French>Fermer le MicroDAGR</French>
-    </Key>
-  </Package>
+    <Package name="microdagr">
+        <Key ID="STR_ACE_microdagr_itemName">
+            <English>MicroDAGR GPS</English>
+            <German>MicroDAGR GPS</German>
+            <Spanish>GPS MicroDAGR</Spanish>
+            <Russian>MicroDAGR GPS</Russian>
+            <Czech>MicroDAGR GPS</Czech>
+            <Polish>MicroDAGR GPS</Polish>
+            <French>GPS MicroDAGR</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_itemDescription">
+            <English>MicroDAGR advanced GPS receiver</English>
+            <German>MicroDAGR verbesserter GPS Empfänger</German>
+            <Spanish>Receptor avanzado GPS MicroDAGR</Spanish>
+            <Russian>Многофункциональный GPS-приёмник.</Russian>
+            <Polish>Zaawansowany odbiornik GPS MicroDAGR</Polish>
+            <French>MicroDAGR un GPS avancé</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_settingUseMils">
+            <English>Angular Unit:</English>
+            <Spanish>Unidad angular:</Spanish>
+            <Russian>Угловые единицы:</Russian>
+            <Polish>Jednostka kątowa:</Polish>
+            <French>Unité angulaire:</French>
+            <German>Winkeleinheit:</German>
+        </Key>
+        <Key ID="STR_ACE_microdagr_settingMils">
+            <English>Mils</English>
+            <German>Mils</German>
+            <Spanish>Mils</Spanish>
+            <Russian>Тысячные</Russian>
+            <Polish>Tysiączne</Polish>
+            <French>Mils</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_settingShowWP">
+            <English>Show Waypoints On Map:</English>
+            <German>Zeige Wegpunkte auf Karte</German>
+            <Spanish>Mostrar puntos de ruta en el mapa:</Spanish>
+            <Russian>Показывать маршрутные точки на карте:</Russian>
+            <Polish>Pokaż PT na mapie:</Polish>
+            <French>Afficher les points de passage sur la carte :</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_settingDegrees">
+            <English>Degrees</English>
+            <German>Grad</German>
+            <Spanish>Grados</Spanish>
+            <Russian>Градусы</Russian>
+            <Polish>Stopnie</Polish>
+            <French>Degrés</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_settingOn">
+            <English>On</English>
+            <Czech>Zapnuto</Czech>
+            <French>Oui</French>
+            <German>Ein</German>
+            <Italian>Sì</Italian>
+            <Polish>Wł.</Polish>
+            <Portuguese>Ativar</Portuguese>
+            <Russian>Вкл.</Russian>
+            <Spanish>Encendido</Spanish>
+        </Key>
+        <Key ID="STR_ACE_microdagr_settingOff">
+            <English>Off</English>
+            <Czech>Vypnuto</Czech>
+            <French>Non</French>
+            <German>Aus</German>
+            <Italian>No</Italian>
+            <Polish>Wył.</Polish>
+            <Portuguese>Desativar</Portuguese>
+            <Russian>Выкл.</Russian>
+            <Spanish>Apagado</Spanish>
+        </Key>
+        <Key ID="STR_ACE_microdagr_wpEnterCords">
+            <English>Enter Grid Cords:</English>
+            <Spanish>Introducir coordenadas de cuadrícula:</Spanish>
+            <Russian>Введите координаты:</Russian>
+            <Polish>Wprowadź współrzędne:</Polish>
+            <French>Entrer Grid Cords :</French>
+            <German>Koordinaten eingeben:</German>
+        </Key>
+        <Key ID="STR_ACE_microdagr_wpEnterName">
+            <English>Name of [%1]</English>
+            <German>Name von [%1]</German>
+            <Spanish>Nombre de [%1]</Spanish>
+            <Russian>Название [%1]</Russian>
+            <Polish>Nazwa [%1]</Polish>
+            <French>Nom de [%1]</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_controlMGRS">
+            <English>MGRS-New</English>
+            <German>MGRS-NEU</German>
+            <Spanish>Nuevo-MGRS</Spanish>
+            <Russian>MGRS-Новая</Russian>
+            <Polish>MGRS-Nowy</Polish>
+            <French>Nouveau MGRS</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_controlWGD">
+            <English>WGD</English>
+            <German>WGD</German>
+            <Spanish>WGD</Spanish>
+            <Russian>WGD</Russian>
+            <Polish>WGD</Polish>
+            <French>WGD</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_controlRange">
+            <English>Range:</English>
+            <Spanish>Distancia:</Spanish>
+            <German>Reichweite:</German>
+            <Russian>Дистанция:</Russian>
+            <Polish>Dystans:</Polish>
+            <French>Distance :</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_compasDirection">
+            <English>Compass Direction</English>
+            <German>Kompass Richtung</German>
+            <Spanish>Dirección de la brújula</Spanish>
+            <Russian>Азимут</Russian>
+            <Polish>Azymut</Polish>
+            <French>Direction de la boussole</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_menuMark">
+            <English>Mark</English>
+            <German>Markieren</German>
+            <Spanish>Marca</Spanish>
+            <Russian>Отметка</Russian>
+            <Polish>Oznacz</Polish>
+            <French>Marqueur</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_menuWaypoints">
+            <English>Waypoints</English>
+            <Spanish>Puntos de ruta</Spanish>
+            <German>Wegpunkte</German>
+            <Russian>Машрутные точки</Russian>
+            <Czech>Waypointy</Czech>
+            <Polish>Punkty trasy</Polish>
+            <French>Point de passage</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_menuConnectTo">
+            <English>Connect To</English>
+            <Spanish>Conectar a</Spanish>
+            <Russian>Соединиться с </Russian>
+            <German>Verbinde zu</German>
+            <Czech>Připojit k</Czech>
+            <Polish>Podłącz do</Polish>
+            <French>Connexion à</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_menuSettings">
+            <English>Settings</English>
+            <French>Paramètres</French>
+            <German>Einstellungen</German>
+            <Spanish>Configuración</Spanish>
+            <Russian>Настройки</Russian>
+            <Czech>Nastavení</Czech>
+            <Polish>Ustawienia</Polish>
+        </Key>
+        <Key ID="STR_ACE_microdagr_waypointsSet">
+            <English>SetWP</English>
+            <German>WP setzen</German>
+            <Spanish>Establecer PR</Spanish>
+            <Russian>Установить МТ</Russian>
+            <Czech>Nastavit WP</Czech>
+            <Polish>UstawPT</Polish>
+        </Key>
+        <Key ID="STR_ACE_microdagr_waypointsAdd">
+            <English>Add</English>
+            <German>Hinzufügen</German>
+            <Spanish>Añadir</Spanish>
+            <Russian>Добавить</Russian>
+            <Czech>Přidat</Czech>
+            <Polish>Dodaj</Polish>
+            <French>Ajouter</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_waypointsDelete">
+            <English>Delete</English>
+            <Czech>Smazat</Czech>
+            <French>Supprimer</French>
+            <German>Löschen</German>
+            <Italian>Elimina</Italian>
+            <Polish>Usuń</Polish>
+            <Portuguese>Excluir</Portuguese>
+            <Russian>Удалить</Russian>
+            <Spanish>Borrar</Spanish>
+        </Key>
+        <Key ID="STR_ACE_microdagr_toggleUnit">
+            <English>Toggle MicroDAGR Display Mode</English>
+            <German>MicoDAGR Anzeigemodus wählen</German>
+            <Spanish>Conmutar modo de pantalla del MicroDAGR</Spanish>
+            <Russian>Сменить режим показа MicroDAGR</Russian>
+            <Polish>Przełącz tryb wyświetlania MicroDAGR</Polish>
+            <French>Basculer sur l'affichage du MicroDAGR</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_show">
+            <English>Show MicoDAGR</English>
+            <German>Zeige MicroDAGR</German>
+            <Spanish>Mostrar MicroDAGR</Spanish>
+            <Russian>Показать MicroDAGR</Russian>
+            <Czech>Ukázat MicroDAGR GPS</Czech>
+            <Polish>Pokaż MicroDAGR</Polish>
+            <French>Afficher le MicroDAGR</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_configure">
+            <English>Configure MicroDAGR</English>
+            <German>Konfiguriere MicroDAGR</German>
+            <Spanish>Configurar MicroDAGR</Spanish>
+            <Russian>Настроить MicroDAGR</Russian>
+            <Czech>Konfigurovat MicroDAGR GPS</Czech>
+            <Polish>Konfiguruj MicroDAGR</Polish>
+            <French>Configurer le MicroDAGR</French>
+        </Key>
+        <Key ID="STR_ACE_microdagr_closeUnit">
+            <English>Close MicroDAGR</English>
+            <German>Schließe MicroDAGR</German>
+            <Spanish>Cerrar MicroDAGR</Spanish>
+            <Russian>Закрыть MicroDAGR</Russian>
+            <Czech>Zavřít MicroDAGR GPS</Czech>
+            <Polish>Zamknij MicroDAGR</Polish>
+            <French>Fermer le MicroDAGR</French>
+        </Key>
+    </Package>
 </Project>
