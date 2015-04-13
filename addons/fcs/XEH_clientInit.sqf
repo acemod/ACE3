@@ -4,6 +4,8 @@ GVAR(enabled) = false;
 GVAR(time) = 0;
 GVAR(position) = [0,0,0];
 
+if (!hasInterface) exitWith {};
+
 #include "initKeybinds.sqf"
 
 ["infoDisplayChanged", {
