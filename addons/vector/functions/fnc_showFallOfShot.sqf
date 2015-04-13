@@ -53,3 +53,5 @@ if !(_this select 0) then {
     (_dlgVector displayCtrl 1319) ctrlSetText "";
 
 };
+
+[GVAR(illuminate)] call FUNC(illuminate);
