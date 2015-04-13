@@ -4,6 +4,12 @@
 
 ACE_Modifier = 0;
 
+//SelectLeader Event Handler for BecomeLeader action:
+[QGVAR(selectLeader), {
+    PARAMS_2(_group,_leader);
+    _group selectLeader _leader;
+}] call EFUNC(common,addEventHandler);
+
 if (!hasInterface) exitWith {};
 
 GVAR(isOpeningDoor) = false;
