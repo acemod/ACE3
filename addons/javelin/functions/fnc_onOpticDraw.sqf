@@ -53,9 +53,11 @@ if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && 
 [] call FUNC(showFireMode);
         
 _range = parseNumber (ctrlText __JavelinIGUIRangefinder);
+TRACE_1("Viewing range", _range);
 if (_range > 50 && {_range < 2500}) then {
     _pos = positionCameraToWorld [0,0,_range];
     _targetArray = _pos nearEntities ["AllVehicles", _range/25];
+    TRACE_1("Searching at range", _targetArray);
     if (count (_targetArray) > 0) then {
         _newTarget = _targetArray select 0;
     };
@@ -76,6 +78,21 @@ _offsetY = __OffsetY;
 
 __JavelinIGUITargeting ctrlShow true;
 __JavelinIGUITargetingConstrains ctrlShow true;
+
+_zamerny = if (_currentTarget isKindOf "CAManBase") then {_currentTarget selectionPosition "body"} else {_currentTarget selectionPosition "zamerny"};
+_randomPosWithinBounds = [(_zamerny select 0) + 1 - (random 2.0),(_zamerny select 1) + 1 - (random 2.0),(_zamerny select 2) + 0.5 - (random 1.0)];
+
+_apos = worldToScreen (_currentTarget modelToWorld _randomPosWithinBounds);
+   
+_aposX = 0;
+_aposY = 0;
+if (count _apos < 2) then {
+    _aposX = 1;
+    _aposY = 0;
+} else {
+    _aposX = (_apos select 0) + _offsetX;
+    _aposY = (_apos select 1) + _offsetY;
+};
 
 if (isNull _newTarget) then {
     // No targets found
@@ -117,26 +134,11 @@ if (isNull _newTarget) then {
                 __JavelinIGUITargetingConstrains ctrlShow false;
                 __JavelinIGUITargetingGate ctrlShow true;
                 __JavelinIGUITargetingLines ctrlShow true;
-              
-                _zamerny = if (_currentTarget isKindOf "CAManBase") then {_currentTarget selectionPosition "body"} else {_currentTarget selectionPosition "zamerny"};
-				_randomPosWithinBounds = [(_zamerny select 0) + 1 - (random 2.0),(_zamerny select 1) + 1 - (random 2.0),(_zamerny select 2) + 0.5 - (random 1.0)];
 
-                _apos = worldToScreen (_currentTarget modelToWorld _randomPosWithinBounds);
-                   
-                _aposX = 0;
-                _aposY = 0;
-				if (count _apos < 2) then {
-					_aposX = 1;
-					_aposY = 0;
-				} else {
-					_aposX = (_apos select 0) + _offsetX;
-					_aposY = (_apos select 1) + _offsetY;
-				};
-                
                 // Move target marker to coords.
-                __JavelinIGUITargetingLineV ctrlSetPosition [_aposX,ctrlPosition __JavelinIGUITargetingLineV select 1];
-                __JavelinIGUITargetingLineH ctrlSetPosition [ctrlPosition __JavelinIGUITargetingLineH select 0,_aposY];
-                {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingLineH,__JavelinIGUITargetingLineV];
+                //__JavelinIGUITargetingLineV ctrlSetPosition [_aposX,ctrlPosition __JavelinIGUITargetingLineV select 1];
+                //__JavelinIGUITargetingLineH ctrlSetPosition [ctrlPosition __JavelinIGUITargetingLineH select 0,_aposY];
+                //{_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingLineH,__JavelinIGUITargetingLineV];
                 
                 _boundsInput = if (_currentTarget isKindOf "CAManBase") then {
                     [_currentTarget,[-1,-1,-2],_currentTarget selectionPosition "body"];
@@ -169,6 +171,7 @@ if (isNull _newTarget) then {
             } else {
                 __JavelinIGUITargeting ctrlShow true;
                 __JavelinIGUITargetingGate ctrlShow true;
+                 __JavelinIGUITargetingConstrains ctrlShow true;
                 __JavelinIGUITargetingLines ctrlShow false;
 
                 ACE_player setVariable["ace_missileguidance_target", nil, false];
@@ -186,6 +189,8 @@ if (isNull _newTarget) then {
                 _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025*(3/4)*SafezoneH);
                 _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025*SafezoneH);
                 
+                TRACE_4("", _boundsInput, _bpos, _minX, _minY);
+                                
                 __JavelinIGUITargetingGateTL ctrlSetPosition [_minX,_minY];
                 __JavelinIGUITargetingGateTR ctrlSetPosition [_maxX,_minY];
                 __JavelinIGUITargetingGateBL ctrlSetPosition [_minX,_maxY];
