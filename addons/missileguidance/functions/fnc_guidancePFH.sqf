@@ -32,10 +32,10 @@ if(!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
 };
 
 // TODO: placeholder for "last seek target position"
-_seekerTargetPos = [ [0,0,0], _args] call FUNC(doSeekerSearch);
+_seekerTargetPos = [ [0,0,0], _args, (_stateParams select 1)] call FUNC(doSeekerSearch);
 if(!isNil "_seekerTargetPos") then {
 
-    _profileAdjustedTargetPos = [_seekerTargetPos,_args] call FUNC(doAttackProfile);
+    _profileAdjustedTargetPos = [_seekerTargetPos,_args, (_stateParams select 2)] call FUNC(doAttackProfile);
 
     _minDeflection = ((_flightParams select 0) - ((_flightParams select 0) * _adjustTime)) max 0;
     _maxDeflection = (_flightParams select 1) * _adjustTime;

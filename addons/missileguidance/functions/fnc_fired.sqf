@@ -68,7 +68,7 @@ TRACE_4("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile
                                 getNumber ( _config >> "seekerAccuracy" ),
                                 getNumber ( _config >> "seekerMaxRange" )
                             ],
-                            [ diag_tickTime ]
+                            [ diag_tickTime, [], [] ]
                         ]
 ] call cba_fnc_addPerFrameHandler;
 
