@@ -69,7 +69,9 @@ class CfgVehicles {
     };
 
     // static
-    class ACE_Rallypoint_West : Flag_NATO_F {
+    class ACE_Rallypoint_West: Flag_NATO_F {
+        XEH_ENABLED;
+
         author = "$STR_ACE_Common_ACETeam";
         displayName = "Rallypoint West Base";
         vehicleClass = QGVAR(Rallypoints);
@@ -94,7 +96,9 @@ class CfgVehicles {
         };
     };
 
-    class ACE_Rallypoint_East : Flag_CSAT_F {
+    class ACE_Rallypoint_East: Flag_CSAT_F {
+        XEH_ENABLED;
+
         author = "$STR_ACE_Common_ACETeam";
         displayName = "Rallypoint East Base";
         vehicleClass = QGVAR(Rallypoints);
@@ -119,7 +123,9 @@ class CfgVehicles {
         };
     };
 
-    class ACE_Rallypoint_Independent : Flag_AAF_F {
+    class ACE_Rallypoint_Independent: Flag_AAF_F {
+        XEH_ENABLED;
+
         author = "$STR_ACE_Common_ACETeam";
         displayName = "Rallypoint Independent Base";
         vehicleClass = QGVAR(Rallypoints);
@@ -145,7 +151,9 @@ class CfgVehicles {
     };
 
     // moveable
-    class ACE_RallypointExit_West : Flag_NATO_F {
+    class ACE_RallypointExit_West: Flag_NATO_F {
+        XEH_ENABLED;
+
         author = "$STR_ACE_Common_ACETeam";
         displayName = "Rallypoint West";
         vehicleClass = QGVAR(Rallypoints);
@@ -170,7 +178,9 @@ class CfgVehicles {
         };
     };
 
-    class ACE_RallypointExit_East : Flag_CSAT_F {
+    class ACE_RallypointExit_East: Flag_CSAT_F {
+        XEH_ENABLED;
+
         author = "$STR_ACE_Common_ACETeam";
         displayName = "Rallypoint East";
         vehicleClass = QGVAR(Rallypoints);
@@ -195,7 +205,9 @@ class CfgVehicles {
         };
     };
 
-    class ACE_RallypointExit_Independent : Flag_AAF_F {
+    class ACE_RallypointExit_Independent: Flag_AAF_F {
+        XEH_ENABLED;
+
         author = "$STR_ACE_Common_ACETeam";
         displayName = "Rallypoint Independent";
         vehicleClass = QGVAR(Rallypoints);
