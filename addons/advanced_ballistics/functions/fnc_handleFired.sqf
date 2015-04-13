@@ -48,7 +48,7 @@ if (_abort && alwaysSimulateForSnipers) then {
         _abort = _opticType != 2; // We only abort if the non local shooter is not a sniper
     };
 };
-if (_abort) exitWith {
+if (_abort || !(GVAR(extensionAvailable))) exitWith {
     [_bullet, getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction")] call EFUNC(winddeflection,updateTrajectoryPFH);
 };
 
@@ -151,59 +151,36 @@ if (GVAR(AdvancedAirDragEnabled)) then {
     };
 };
 
-_index = count GVAR(bulletDatabase);
-if (count GVAR(bulletDatabaseFreeIndices) > 0) then {
-    _index = GVAR(bulletDatabaseFreeIndices) select 0;
-    GVAR(bulletDatabaseFreeIndices) = GVAR(bulletDatabaseFreeIndices) - [_index];
-};
-
 #ifdef USE_ADVANCEDBALLISTICS_DLL
-    "ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", _index, _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _muzzleVelocity, _transonicStabilityCoef, getPosASL _bullet, EGVAR(weather,Latitude), EGVAR(weather,currentTemperature), EGVAR(weather,Altitude), EGVAR(weather,currentHumidity), overcast, floor(time), time - floor(time)];
-    GVAR(bulletDatabase) set[_index, [_bullet, _caliber, _bulletTraceVisible, _index]];
+    GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
+    
+    "ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _muzzleVelocity, _transonicStabilityCoef, getPosASL _bullet, EGVAR(weather,Latitude), EGVAR(weather,currentTemperature), EGVAR(weather,Altitude), EGVAR(weather,currentHumidity), overcast, floor(time), time - floor(time)];
+    
+    [{
+        private ["_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];
+        EXPLODE_4_PVT(_this select 0,_bullet,_caliber,_bulletTraceVisible,_index);
+        
+        if (!alive _bullet) exitWith {
+            [_this select 1] call cba_fnc_removePerFrameHandler;
+        };
+        
+        _bulletVelocity = velocity _bullet;
+        _bulletPosition = getPosASL _bullet;
 
-    if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
-        [{
-            private ["_bulletDatabaseEntry", "_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];
+        if (_bulletTraceVisible && vectorMagnitude _bulletVelocity > 600) then {
+            drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.4*_caliber,0.2*_caliber],[[0,0,0,0.6],[0,0,0,0.4]],[1,0],0,0,"","",""];
+        };
 
-            {
-                _bulletDatabaseEntry = (GVAR(bulletDatabase) select _x);
-                if (!alive (_bulletDatabaseEntry select 0)) then {
-                    _index  = _bulletDatabaseEntry select 3;
-                    GVAR(bulletDatabaseOccupiedIndices) = GVAR(bulletDatabaseOccupiedIndices) - [_index];
-                    GVAR(bulletDatabaseFreeIndices) pushBack _index;
-                };
-                true
-            } count GVAR(bulletDatabaseOccupiedIndices);
+        call compile ("ace_advanced_ballistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, floor(time), time - floor(time)]);
 
-            if (count GVAR(bulletDatabaseOccupiedIndices) == 0) exitWith {
-                GVAR(bulletDatabase) = [];
-                GVAR(bulletDatabaseOccupiedIndices) = [];
-                GVAR(bulletDatabaseFreeIndices) = [];
-                [_this select 1] call cba_fnc_removePerFrameHandler;
-            };
-
-            {
-                _bulletDatabaseEntry = (GVAR(bulletDatabase) select _x);
-                _bullet              = _bulletDatabaseEntry select 0;
-                _caliber             = _bulletDatabaseEntry select 1;
-                _bulletTraceVisible  = _bulletDatabaseEntry select 2;
-                _index               = _bulletDatabaseEntry select 3;
-
-                _bulletVelocity = velocity _bullet;
-                _bulletPosition = getPosASL _bullet;
-
-                if (_bulletTraceVisible && vectorMagnitude _bulletVelocity > 600) then {
-                    drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.4*_caliber,0.2*_caliber],[[0,0,0,0.6],[0,0,0,0.4]],[1,0],0,0,"","",""];
-                };
-
-                call compile ("ace_advanced_ballistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, floor(time), time - floor(time)]);
-
-                true
-            } count GVAR(bulletDatabaseOccupiedIndices);
-
-        }, GVAR(simulationInterval), []] call CBA_fnc_addPerFrameHandler;
-    };
+    }, GVAR(simulationInterval), [_bullet, _caliber, _bulletTraceVisible, GVAR(currentbulletID)]] call CBA_fnc_addPerFrameHandler;
 #else
+    _index = count GVAR(bulletDatabase);
+    if (count GVAR(bulletDatabaseFreeIndices) > 0) then {
+        _index = GVAR(bulletDatabaseFreeIndices) select 0;
+        GVAR(bulletDatabaseFreeIndices) = GVAR(bulletDatabaseFreeIndices) - [_index];
+    };
+
     GVAR(bulletDatabase)          set[_index, [_bullet, _caliber, _airFriction, _muzzleVelocity, _stabilityFactor, _transonicStabilityCoef, _twistDirection, _unit, _bulletTraceVisible, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _index]];
     GVAR(bulletDatabaseStartTime) set[_index, time];
     GVAR(bulletDatabaseSpeed)     set[_index, 0];
