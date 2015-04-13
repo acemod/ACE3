@@ -9,6 +9,8 @@ PREP(collectData);
 PREP(createKestrelDialog);
 PREP(displayKestrel);
 PREP(generateOutputData);
+PREP(measureWindSpeed);
 PREP(updateDisplay);
+PREP(updateImpellerState);
 
 ADDON = true;

@@ -42,21 +42,13 @@ if (GVAR(MinAvgMaxMode) == 1) then {
     } forEach [1, 2, 3];
     
     // Wind SPD
-    _windSpeed = vectorMagnitude ACE_wind;
-    _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
-
-    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-        _windSpeed = (eyePos ACE_player) call EFUNC(advanced_ballistics,calculateWindSpeed);
-        _windSpeed = abs(cos(_playerDir - _windDir)) * _windSpeed;
-    } else {
-        _windSpeed = (eyePos ACE_player) call FUNC(calculateWindSpeed);
-    };
-    
+    _windSpeed = call FUNC(measureWindSpeed);
     GVAR(MIN) set [1, (GVAR(MIN) select 1) min abs(_windSpeed)];
     GVAR(MAX) set [1, abs(_windSpeed) max (GVAR(MAX) select 1)];
     GVAR(TOTAL) set [1, (GVAR(TOTAL) select 1) + abs(_windSpeed)];
 
     // CROSSWIND
+    _crosswind = 0;
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
         _crosswind = abs(sin(GVAR(RefHeading) - _playerDir) * _windSpeed);
     } else {
@@ -67,6 +59,7 @@ if (GVAR(MinAvgMaxMode) == 1) then {
     GVAR(TOTAL) set [2, (GVAR(TOTAL) select 2) + _crosswind];
 
     // HEADWIND
+    _headwind = 0;
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
         _headwind = abs(cos(GVAR(RefHeading) - _playerDir) * _windSpeed);
     } else {

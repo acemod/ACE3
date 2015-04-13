@@ -19,7 +19,10 @@ GVAR(RefHeading) = 0;
 GVAR(updateTimer) = 0;
 GVAR(outputData) = ["", "", "", "", "", "", "", "", "", ""];
 GVAR(MeasuredWindSpeed) = 0;
-GVAR(WheelState) = 0;
+GVAR(ImpellerState) = 0;
 
 GVAR(Kestrel4500) = false;
 GVAR(Overlay) = false;
+
+// TODO: Remove this, after merging the ab branch
+if (isNil QUOTE(EGVAR(weather,Altitude))) then {EGVAR(weather,Altitude) = 0};

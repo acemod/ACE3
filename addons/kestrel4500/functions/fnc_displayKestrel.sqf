@@ -52,35 +52,34 @@ GVAR(Overlay) = true;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
     
-    _outputData = [] call FUNC(generateOutputData);
-    
     if (diag_tickTime > GVAR(updateTimer)) then {
         GVAR(updateTimer) = diag_tickTime + 1;
-        GVAR(outputData) = _outputData;
+        
+        _outputData = [] call FUNC(generateOutputData);
+        
+        3 cutRsc ["RscKestrel4500", "PLAIN", 1, false];
+        
+        __ctrlTop ctrlSetText (_outputData select 0);
+        __ctrlCenterBig ctrlSetText (_outputData select 1);
+        
+        __ctrlTop ctrlSetText (_outputData select 0);
+        __ctrlCenterBig ctrlSetText (_outputData select 1);
+        
+        __ctrlCenterLine1Left ctrlSetText (_outputData select 2);
+        __ctrlCenterLine2Left ctrlSetText (_outputData select 3);
+        __ctrlCenterLine3Left ctrlSetText (_outputData select 4);
+
+        __ctrlCenterLine1Right ctrlSetText (_outputData select 5);
+        __ctrlCenterLine2Right ctrlSetText (_outputData select 6);
+        __ctrlCenterLine3Right ctrlSetText (_outputData select 7);
+
+        __ctrlInfoLine1 ctrlSetText (_outputData select 8);
+        __ctrlInfoLine2 ctrlSetText (_outputData select 9);
     };
     
-    _outputData = GVAR(outputData);
+    call FUNC(updateImpellerState);
+    __ctrlKestrel4500 ctrlSetText format [QUOTE(PATHTOF(UI\Kestrel4500_%1.paa)), floor(GVAR(ImpellerState) % 7)];
     
-    3 cutRsc ["RscKestrel4500", "PLAIN", 1, false];
-    
-    __ctrlKestrel4500 ctrlSetText format [QUOTE(PATHTOF(UI\Kestrel4500_%1.paa)), floor(GVAR(WheelState) % 7)];
-    
-    __ctrlTop ctrlSetText (_outputData select 0);
-    __ctrlCenterBig ctrlSetText (_outputData select 1);
-    
-    __ctrlTop ctrlSetText (_outputData select 0);
-    __ctrlCenterBig ctrlSetText (_outputData select 1);
-    
-    __ctrlCenterLine1Left ctrlSetText (_outputData select 2);
-    __ctrlCenterLine2Left ctrlSetText (_outputData select 3);
-    __ctrlCenterLine3Left ctrlSetText (_outputData select 4);
-
-    __ctrlCenterLine1Right ctrlSetText (_outputData select 5);
-    __ctrlCenterLine2Right ctrlSetText (_outputData select 6);
-    __ctrlCenterLine3Right ctrlSetText (_outputData select 7);
-
-    __ctrlInfoLine1 ctrlSetText (_outputData select 8);
-    __ctrlInfoLine2 ctrlSetText (_outputData select 9);
 }, 0.01, []] call CBA_fnc_addPerFrameHandler;
 
 true
