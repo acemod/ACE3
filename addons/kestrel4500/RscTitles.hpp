@@ -231,13 +231,13 @@ class RscTitles
                 font="TahomaB";
                 SizeEX=0.025*0.75;
                 style=48;
-                x=safezoneX-0.05;
+                x=safezoneX+0.14;
                 y=safezoneY+0.7;
-                w=1.024*0.75;
+                w=0.512*0.75;
                 h=1.024*4/3*0.75;
                 colorBackground[]={1,1,1,1};
                 colorText[]={1,1,1,1};
-                text=PATHTOF(UI\Kestrel4500.paa);
+                text=PATHTOF(UI\Kestrel4500_0.paa);
             };
             class RscTextTop: Kestrel4500_RscText
             {
