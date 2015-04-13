@@ -5,7 +5,7 @@
 
 private["_args", "_stateParams", "_launchParams", "_targetLaunchParams", "_config", "_flightParams", "_seekerParams", "_seekerTargetPos"];
 private["_lastRunTime", "_runtimeDelta", "_profileAdjustedTargetPos", "_targetVectorSeeker", "_targetVector"];
-private["_minDeflection", "_maxDeflection", "_incDeflection"];
+private["_minDeflection", "_maxDeflection", "_incDeflection", "_adjustTime"];
 private["_yVec", "_zVec", "_xVec"];
     
 _args = _this select 0;
@@ -21,10 +21,14 @@ _stateParams = _args select 4;
 _lastRunTime = _stateParams select 0;
 
 _runtimeDelta = diag_tickTime - _lastRunTime;
-_adjustTime = 1/accTime;
-_adjustTime = _adjustTime *  (_runtimeDelta / TIMESTEP_FACTOR);
-TRACE_4("Adjust timing", 1/accTime, _adjustTime, _runtimeDelta, (_runtimeDelta / TIMESTEP_FACTOR) );
-
+_adjustTime = 1;
+if(accTime > 0) then {
+    _adjustTime = 1/accTime;
+    _adjustTime = _adjustTime *  (_runtimeDelta / TIMESTEP_FACTOR);
+    TRACE_4("Adjust timing", 1/accTime, _adjustTime, _runtimeDelta, (_runtimeDelta / TIMESTEP_FACTOR) );
+} else {
+    _adjustTime = 0;
+};
 _config = configFile >> "CfgAmmo" >> _ammo >> "ACE_MissileGuidance";
 
 if(!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
