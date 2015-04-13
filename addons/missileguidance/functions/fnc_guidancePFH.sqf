@@ -1,4 +1,4 @@
-//#define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 #define TIMESTEP_FACTOR 0.01
@@ -44,15 +44,11 @@ if(!isNil "_seekerTargetPos") then {
     _minDeflection = ((_flightParams select 0) - ((_flightParams select 0) * _adjustTime)) max 0;
     _maxDeflection = (_flightParams select 1) * _adjustTime;
     _incDeflection = _flightParams select 2;
-   
-    _yVec = vectorDir _projectile;
-    _zVec = vectorUp _projectile;
-    _xVec = vectorNormalized (_yVec vectorCrossProduct _zVec);
 
     _projectilePos = getPosASL _projectile;
         
-    _targetVectorSeeker = [_projectile, [_xVec, _yVec, _zVec], _profileAdjustedTargetPos] call EFUNC(common,translateToWeaponSpace);
-    _targetVector = [0,0,0] vectorFromTo _targetVectorSeeker;
+    _targetVector = _projectile worldToModelVisual _profileAdjustedTargetPos;
+    _targetVectorSeeker = [0,0,0] vectorFromTo _targetVector;
     TRACE_1("", _targetVectorSeeker, _targetVector);
     
     private["_yaw", "_pitch"];
@@ -73,25 +69,17 @@ if(!isNil "_seekerTargetPos") then {
             _pitch = ( (_minDeflection max ((_targetVector select 2) min _maxDeflection) ) );
         };
     };
-   
-#ifdef DEBUG_MODE_FULL
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _projectilePos, 0.75, 0.75, 0, str _vectorTo, 1, 0.025, "TahomaB"];
-    drawLine3D [ASLtoATL _projectilePos, ASLtoATL _profileAdjustedTargetPos, [1,0,0,1]];
-#endif        
-
+     
     if(accTime > 0) then {
         private["_outVector", "_vectorTo"];
-
-        // @TODO: Apply velocity multiplier to yaw/pitch. Basically, it can adjust faster at lower speeds
-        //_adjustDeflection = (vectorMagnitude velocity _projectile);
-        
-        _outVector = [_projectile, [_xVec, _yVec, _zVec], [_yaw, 1, _pitch]] call EFUNC(common,translateToModelSpace);
-        _vectorTo = _projectilePos vectorFromTo _outVector;
-        
-        _projectile setVectorDirAndUp [_vectorTo, vectorUp _projectile];
+        _finalVector = _projectilePos vectorFromTo _profileAdjustedTargetPos;
+        _projectile setVectorDirAndUp [_finalVector, vectorUp _projectile];
     };
     
 #ifdef DEBUG_MODE_FULL
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _projectilePos, 0.75, 0.75, 0, str _vectorTo, 1, 0.025, "TahomaB"];
+    drawLine3D [ASLtoATL _projectilePos, ASLtoATL _profileAdjustedTargetPos, [1,0,0,1]];
+
     hintSilent format["d: %1", _distanceToTarget];
 #endif
 };
