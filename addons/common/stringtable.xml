@@ -42,8 +42,8 @@
             <English>ACE Options</English>
             <German>ACE Optionen</German>
             <Spanish>Opciones ACE</Spanish>
-            <Polish>Opcje ACE</Polish>
-            <Czech>ACE Nastavení</Czech>
+            <Polish>Ustawienia ACE</Polish>
+            <Czech>Nastavení ACE</Czech>
             <French>ACE Options</French>
             <Russian>ACE Настройки</Russian>
             <Portuguese>Opções do ACE</Portuguese>
@@ -248,7 +248,7 @@
             <German>Aktion abgebrochen.</German>
             <Spanish>Acción cancelada.</Spanish>
             <Polish>Przerwano czynność</Polish>
-            <Czech>Akce přerušena</Czech>
+            <Czech>Akce přerušena.</Czech>
             <French>Action annulée.</French>
             <Russian>Действие отменено.</Russian>
             <Portuguese>Ação cancelada.</Portuguese>
@@ -304,6 +304,7 @@
             <German>Anfrage akzeptieren</German>
             <Spanish>Aceptar peticiones</Spanish>
             <Polish>Akceptuj prośby</Polish>
+            <Czech>Přijmout žádost</Czech>
             <Italian>Accetta Richieste</Italian>
             <Russian>Подтвердить запросы</Russian>
         </Key>
@@ -312,6 +313,7 @@
             <German>Anfrage ablehnen</German>
             <Spanish>Rechazar peticiones</Spanish>
             <Polish>Ignoruj prośby</Polish>
+            <Czech>Zamítnout žádost</Czech>
             <Italian>Rifiuta Richieste</Italian>
             <Russian>Отклонить запросы</Russian>
         </Key>
@@ -337,6 +339,8 @@
             <Spanish>Iconos de respuesta</Spanish>
             <Italian>Icone informative</Italian>
             <Russian>Иконки состояний</Russian>
+            <Polish>Ikony pomocnicze</Polish>
+            <French>Icônes de Feedback</French>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
             <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
@@ -344,6 +348,8 @@
             <Spanish>Seleccionar la posición de o desactivar los íconos de respuesta en la pantalla. Estos iconos se mostrarán para proporcionar información adicional sobre el estado de su personaje y las acciones a realizar.</Spanish>
             <Italian>Seleziona la posizione o disabilita le icone informative sul tuo schermo. Queste saranno mostrate per fornire informazioni aggiuntive sullo stato o sulle azioni del giocatore.</Italian>
             <Russian>Выберите положение или или отключите отображение иконок состояний на Вашем экране. Эти иконки предоставят дополнительную информацию о состоянии персонажа и выполняемых действиях.</Russian>
+            <Polish>Ustaw pozycję lub wyłącz całkowicie ikony pomocnicze na ekranie. Te ikony dostarczają dodatkowych informacji na temat statusu Twojej postaci i wykonywanych przez nią akcji.</Polish>
+            <French>Sélectionner la position de ou désactiver les îcones de feedback sur votre écran. Ces îcones sont là pour vous fournir un feedback du statut votre personnage et les actions à effectuer.</French>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
             <English>Progress bar location</English>
@@ -351,6 +357,8 @@
             <Spanish>Ubicación de la barra de progreso</Spanish>
             <Italian>Posizione della barra di avanzamento</Italian>
             <Russian>Положение прогресс-бара</Russian>
+            <Polish>Lokalizacja paska postępu</Polish>
+            <French>Localisation de la barre de progression</French>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
             <English>Set the desired location of the progress bar on your screen.</English>
@@ -358,6 +366,8 @@
             <Spanish>Seleccionar la ubicación deseada de la barra de progreso en tu pantalla</Spanish>
             <Italian>Modifica la posizione su schermo della barra di avanzamento.</Italian>
             <Russian>Установите желаемое положение строки состояния на экране.</Russian>
+            <Polish>Ustaw pożądaną lokalizację paska postępu na ekranie</Polish>
+            <French>Définisez l'endroit que vous désirez pour faire appraître la barre de progression.</French>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
             <English>Hint Background color</English>
@@ -365,6 +375,8 @@
             <Spanish>Color de fondo de las notificaciones</Spanish>
             <Italian>Sfondo dei Suggerimenti</Italian>
             <Russian>Цвет фона всплывающих подсказок</Russian>
+            <Polish>Kolor tła powiadomień</Polish>
+            <French>Couleur de fond des astuces</French>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
             <English>The color of the background from the ACE hints.</English>
@@ -372,6 +384,8 @@
             <Spanish>El color de fondo de las notificaciones del ACE</Spanish>
             <Italian>Il colore di sfondo dei suggerimenti dell'ACE.</Italian>
             <Russian>Цвет фона всплывающий подсказок АСЕ.</Russian>
+            <Polish>Kolor tła dla powiadomień ACE</Polish>
+            <French>Définisez la couleur de fond pour les astuces fournies par ACE.</French>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
             <English>Hint text font color</English>
@@ -379,6 +393,8 @@
             <Spanish>Color del texto de las notificaciones</Spanish>
             <Italian>Testo dei Suggerimenti</Italian>
             <Russian>Цвет шрифта всплывающих подсказок</Russian>
+            <Polish>Kolor tekstu powiadomień</Polish>
+            <French>Couleur du texte des astuces</French>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
             <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
@@ -386,20 +402,28 @@
             <Spanish>El color del texto de las notificaciones del ACE. Este es el color predeterminado para todo el texto que se muestra a través del sistema de notificaciones del ACE, si el texto de notificación no tiene otro color especificado.</Spanish>
             <Italian>Il colore del testo dei suggerimenti dell'ACE. Questo è il colore standard per tutti i caratteri mostrati dal sistema di suggerimenti dell'ACE, se questo non è altrimenti specificato.</Italian>
             <Russian>Цвет шрифта текста всплывающих подсказок АСЕ. Этот цвет является стандартным для всего текста, транслирующегося через систему подсказок АСЕ, если не установлено другого цвета для текста подсказок.</Russian>
+            <Polish>Kolor tekstu dla powiadomień ACE. Ten kolor jest domyślnym dla wszystkich tekstów wyświetlanych poprzez System Powiadomień ACE, jeżeli dla powiadomienia nie określono innego koloru.</Polish>
+            <French>Définisez la couleur du texte des astuces fournies par ACE. La couleur est celle par défaut affichée à travers toutes les astuces de ACE seulement si aucune couleur n'est défnie.</French>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
             <German>Banane</German>
             <Spanish>Banana</Spanish>
+            <Czech>Banán</Czech>
             <Italian>Banana</Italian>
             <Russian>Банан</Russian>
+            <Polish>Banan</Polish>
+            <French>Banane</French>
         </Key>
         <Key ID="STR_ACE_Common_bananaDescr">
             <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
             <German>Die Banane ist eine essbare Frucht, biologisch betrachtet jedoch eine Beere. Sie wächst an unterschiedlichen, krautartigen Gewächsen aus der Familie der Musa.</German>
             <Spanish>Una banana es una fruta comestible, botanicamente una baya, producida por varios tipos de grandes plantas herbáceas del género Musa.</Spanish>
+            <Czech>Banán je protáhlé ovoce a plod banánovníku (epigeická bobule).</Czech>
             <Italian>Una banana è un frutto commestibile, nello specifico una bacca cuoiosa, prodotto da un gran numero di grandi pianti erbacee dotate di fiori, della famiglia delle Musaceae.</Italian>
             <Russian>Банан - это съедобный фрукт, ягода с ботанической точки зрения, произрастающий на нескольких видах травянистых растениях рода Банан (Musa).</Russian>
+            <Polish>Rodzaj roślin z rodziny bananowatych, obejmujący około 80 gatunków.&lt;br /&gt;Przedstawiciele są typowymi przedstawicielami flory międzyzwrotnikowej Azji, Afryki i Australii.&lt;br /&gt;Część gatunków dostarcza jadalnych owoców. Słowo banan pochodzi prawdopodobnie od arabskiego słowa banan, co oznacza palec, lub afrykańskiego języka wolof, w którym rośliny te określa się mianem banaana.</Polish>
+            <French>Une banane est un fruit comestible, botaniquement une baie, produite par plusieurs types de grandes plantes herbacées à fleurs dans le genre Musa.</French>
         </Key>
     </Package>
 </Project>

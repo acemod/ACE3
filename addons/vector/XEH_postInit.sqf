@@ -1,6 +1,8 @@
 // by commy2
 #include "script_component.hpp"
 
+if (!hasInterface) exitWith {};
+
 GVAR(holdKeyHandler) = -1;
 GVAR(isKeyDownAzimuth) = false;
 GVAR(isKeyDownDistance) = false;

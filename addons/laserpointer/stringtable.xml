@@ -1,29 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Laserpointer">
     <Key ID="STR_ACE_Laserpointer_red">
       <English>Laser Pointer (red)</English>
+      <French>Pointeur laser (rouge)</French>
       <German>Laserpointer (rot)</German>
       <Russian>Лазерный прицел (красный)</Russian>
+      <Czech>Laserové ukazovátko (červené)</Czech>
+      <Polish>Wskaźnik laserowy (czerwony)</Polish>
     </Key>
     <Key ID="STR_ACE_Laserpointer_green">
       <English>Laser Pointer (green)</English>
+      <French>Pointeur laser (vert)</French>
       <German>Laserpointer (grün)</German>
       <Russian>Лазерный прицел (зелёный)</Russian>
+      <Czech>Laserové ukazovátko (zelené)</Czech>
+      <Polish>Wskaźnik laserowy (zielony)</Polish>
     </Key>
     <Key ID="STR_ACE_Laserpointer_Description">
       <English>Emits visible light. </English>
+      <French>Diffuse un rayon lumineux visible.</French>
       <German>Strahlt sichtbares Licht aus. </German>
       <Russian>Испускает узкий пучок видимого света.</Russian>
+      <Czech>Vyzařuje viditelné světlo.</Czech>
+      <Polish>Wydziela widzialne światło.</Polish>
     </Key>
     <Key ID="STR_ACE_Laserpointer_useLaser">
       <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</English>
       <Czech>&lt;t color='#9cf953'&gt;Použití: &lt;/t&gt;Zapnout/vypnout laser</Czech>
-      <French>&lt;t color='#9cf953'&gt;Utiliser : &lt;/t&gt;laser on/off</French>
+      <French>&lt;t color='#9cf953'&gt;Utiliser : &lt;/t&gt;laser allumé/éteint</French>
       <German>&lt;t color='#9cf953'&gt;Benutzen: &lt;/t&gt;Laser EIN/AUS</German>
       <Italian>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Laser ON/OFF</Italian>
-      <Polish>&lt;t color='#9cf953'&gt;Użyj: &lt;/t&gt;wł./wył. lasera</Polish>
+      <Polish>&lt;t color='#9cf953'&gt;Użyj: &lt;/t&gt;wł./wył. laser</Polish>
       <Portuguese>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Ativar/Desativar laser</Portuguese>
       <Russian>&lt;t color='#9cf953'&gt;Использовать: &lt;/t&gt;вкл/выкл лазер</Russian>
       <Spanish>&lt;t color='#9cf953'&gt;Usar: &lt;/t&gt;encender/apagar láser</Spanish>

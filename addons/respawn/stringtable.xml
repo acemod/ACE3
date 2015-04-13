@@ -3,27 +3,35 @@
   <Package name="Interaction">
     <Key ID="STR_ACE_Respawn_Deploy">
       <English>Deploy in 5 seconds ...</English>
+      <French>Déploiement dans 5 secondes ...</French>
       <German>Wird in 5 Sekunden errichtet ...</German>
       <Spanish>Desplegando en 5 segundos ...</Spanish>
       <Russian>Возрождение через 5 секунд ...</Russian>
+      <Polish>Rozmieszczenie za 5 sekund ...</Polish>
     </Key>
     <Key ID="STR_ACE_Respawn_Deployed">
       <English>Rallypoint deployed</English>
+      <French>Point de ralliement déployé</French>
       <German>Rallypoint errichtet</German>
       <Spanish>Punto de reunión desplegado</Spanish>
       <Russian>Точка сбора установлена</Russian>
+      <Polish>Punkt zbiórki rozmieszczony</Polish>
     </Key>
     <Key ID="STR_ACE_Respawn_TeleportedToBase">
       <English>Teleported to Base</English>
+      <French>Téléporté à la base</French>
       <German>Zur Basis teleportiert</German>
       <Spanish>Teletransportado a base</Spanish>
       <Russian>Телепорт на базу</Russian>
+      <Polish>Przeteleportowano do bazy</Polish>
     </Key>
     <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
       <English>Teleported to Rallypoint</English>
+      <French>Téléporté au point de ralliement</French>
       <German>Zum Rallypoint teleportiert</German>
       <Spanish>Teletransportado al punto de reunión</Spanish>
       <Russian>Телепорт на точку сбора</Russian>
+      <Polish>Przeteleportowano do punktu zbiórki</Polish>
     </Key>
   </Package>
 </Project>

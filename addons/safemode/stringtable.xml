@@ -4,6 +4,7 @@
   <Package name="SafeMode">
     <Key ID="STR_ACE_SafeMode_SafeMode">
       <English>Safe Mode</English>
+      <French>Mode de sécurité</French>
       <German>Waffe sichern</German>
       <Spanish>Seguro puesto</Spanish>
       <Polish>Bezpiecznik</Polish>
@@ -13,6 +14,7 @@
     </Key>
     <Key ID="STR_ACE_SafeMode_TakeOffSafety">
       <English>Take off Safety</English>
+      <French>Retirer le cran de sureté</French>
       <German>Waffe entsichern</German>
       <Spanish>Quitar seguro</Spanish>
       <Polish>Zwolnij bezpiecznik</Polish>
@@ -22,6 +24,7 @@
     </Key>
     <Key ID="STR_ACE_SafeMode_PutOnSafety">
       <English>Put on Safety</English>
+      <French>Mettre le cran de sureté</French>
       <German>Waffe gesichert</German>
       <Spanish>Poner seguro</Spanish>
       <Polish>Zabezpiecz broń</Polish>
@@ -31,6 +34,7 @@
     </Key>
     <Key ID="STR_ACE_SafeMode_TookOffSafety">
       <English>Took off Safety</English>
+      <French>Enlever le cran de sureté</French>
       <German>Waffe entsichert</German>
       <Spanish>Seguro quitado</Spanish>
       <Polish>Odbezpieczono broń</Polish>
