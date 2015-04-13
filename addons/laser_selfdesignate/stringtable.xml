@@ -7,6 +7,7 @@
       <Spanish>Laser&lt;br/&gt;Designador encendido</Spanish>
       <Russian>ЛЦУ&lt;br/&gt;ВКЛ</Russian>
       <Czech>Laserový&lt;br/&gt;značkovač zapnut</Czech>
+      <Polish>Desygnator&lt;br/&gt;laserowy wł.</Polish>
     </Key>
     <Key ID="STR_ACE_Laser_SelfDesignate_DesignatorOff">
       <English>Laser&lt;br/&gt;Designator Off</English>
@@ -14,6 +15,7 @@
       <Spanish>Laser&lt;br/&gt;Designador apagado</Spanish>
       <Russian>ЛЦУ&lt;br/&gt;ВЫКЛ</Russian>
       <Czech>Laserový&lt;br/&gt;značkovat vypnut</Czech>
+      <Polish>Desygnator&lt;br/&gt;laserowy wył.</Polish>
     </Key>
   </Package>
 </Project>

@@ -135,6 +135,7 @@
       <Spanish>Rendirse</Spanish>
       <Russian>Сдаться</Russian>
       <Czech>Vzdát se</Czech>
+      <Polish>Poddaj się</Polish>
     </Key>
     <Key ID="STR_ACE_Captives_StopSurrendering">
       <English>Stop Surrendering</English>
@@ -142,6 +143,7 @@
       <Spanish>Dejar de rendirse</Spanish>
       <Russian>Остановить сдачу</Russian>
       <Czech>Přestat se vzdávat</Czech>
+      <Polish>Podejmij walkę ponownie</Polish>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
       <English>Only use on alive units</English>
@@ -149,6 +151,7 @@
       <Spanish>Utilizar solo en unidades vivas</Spanish>
       <Russian>Только для живых юнитов</Russian>
       <Czech>Použitelné jen na živé jednotky</Czech>
+      <Polish>Używaj tylko na żywych jednostkach</Polish>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_OnlyInfantry">
       <English>Only use on dismounted inf</English>
@@ -156,6 +159,7 @@
       <Spanish>Utilizar solo en infanteria desmontada</Spanish>
       <Russian>Только для спеш. солдат</Russian>
       <Czech>Použitelné jen na pěsích jednotkách</Czech>
+      <Polish>Używaj tylko na piechocie poza wszelkimi pojazdami</Polish>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
       <English>Nothing under mouse</English>
@@ -163,6 +167,7 @@
       <Spanish>Nada bajo el ratón</Spanish>
       <Russian>Объекты под мышью отсутствуют</Russian>
       <Czech>Nic není vybráno</Czech>
+      <Polish>Nie ma nic pod kursorem</Polish>
     </Key>
   </Package>
 </Project>

@@ -7,6 +7,7 @@
       <Spanish>Mostrar texto al encasquillar</Spanish>
       <Russian>Показывать текст, когда клинит оружие</Russian>
       <Czech>Zobrazit upozornění při zaseknutí</Czech>
+      <Polish>Wyświetl tekst przy zacięciu broni</Polish>
     </Key>
     <Key ID="STR_ACE_overheating_SettingDisplayTextDesc">
       <English>Display a notification whenever your weapon gets jammed</English>
@@ -14,6 +15,7 @@
       <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>
       <Russian>Демонстровать уведомление, каждый раз, когда клинит Ваше оружие.</Russian>
       <Czech>Zobrazí upozornění při zaseknutí zbraně</Czech>
+      <Polish>Wyświetl powiadomienie za każdym razem, kiedy Twoja broń ulegnie zacięciu</Polish>
     </Key>
     <Key ID="STR_ACE_Overheating_SpareBarrelName">
       <English>Spare barrel</English>

@@ -7,6 +7,7 @@
       <Spanish>Mostrar siempre el cursor para la interacción propia</Spanish>
       <Russian>Всегда показывать курсор для взаимодействия с собой</Russian>
       <Czech>Zobrazit kurzor v menu pro vlastní interakci</Czech>
+      <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_InteractKey">
       <English>Interact Key</English>
@@ -14,6 +15,7 @@
       <Spanish>Tecla de interacción</Spanish>
       <Russian>Клавиша взаимодействия</Russian>
       <Czech>Klávesa pro interakci</Czech>
+      <Polish>Klawisz interakcji</Polish>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
       <English>Self Interaction Key</English>
@@ -21,6 +23,7 @@
       <Spanish>Tecla de interacción propia</Spanish>
       <Russian>Клавиша взаимодействия (с собой)</Russian>
       <Czech>Klávesa pro vlastní interakci</Czech>
+      <Polish>Klawisz własnej interakcji</Polish>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
       <English>Self Actions</English>
@@ -28,6 +31,7 @@
       <Spanish>Acciones propias</Spanish>
       <Russian>Действия с собой</Russian>
       <Czech>Vlastní akce</Czech>
+      <Polish>Własne akcje</Polish>
     </Key>
     <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
       <English>Vehicle Actions</English>
@@ -35,6 +39,7 @@
       <Spanish>Acciones de vehículo</Spanish>
       <Russian>Действия на транспорте</Russian>
       <Czech>Interakce s vozidly</Czech>
+      <Polish>Akcje pojazdu</Polish>
     </Key>
   </Package>
 </Project>

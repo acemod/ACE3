@@ -19,6 +19,7 @@
       <Spanish>Arreglar animación</Spanish>
       <Russian>Фикс анимации</Russian>
       <Czech>Opravit animace</Czech>
+      <Polish>Napraw animację</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_ResetAll">
       <English>Reset All</English>
@@ -26,6 +27,7 @@
       <Spanish>Reiniciar todo</Spanish>
       <Russian>Полный сброс</Russian>
       <Czech>Vyresetovat vše</Czech>
+      <Polish>Resetuj wszystko</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabColors">
       <English>Colors</English>
@@ -33,6 +35,7 @@
       <Spanish>Colores</Spanish>
       <Russian>Цвета</Russian>
       <Czech>Barvy</Czech>
+      <Polish>Kolory</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_TabOptions">
       <English>Options</English>
@@ -51,6 +54,7 @@
       <Spanish>Valores</Spanish>
       <Russian>Значения</Russian>
       <Czech>Hodnoty</Czech>
+      <Polish>Wartości</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Enabled">
       <English>Yes</English>
@@ -82,6 +86,7 @@
       <German>Einstellung:</German>
       <Russian>Установки:</Russian>
       <Spanish>Ajuste:</Spanish>
+      <Polish>Ustawienie:</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_Export">
       <English>Export</English>
@@ -89,6 +94,7 @@
       <Spanish>Exportar</Spanish>
       <Russian>Экспорт</Russian>
       <Czech>Exportovat</Czech>
+      <Polish>Eksport</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_OpenExport">
       <English>Open Export Menu</English>
@@ -96,18 +102,21 @@
       <Spanish>Abrir menu d'exportación</Spanish>
       <Russian>Открыть меню экспорта</Russian>
       <Czech>Otevřít exportovací menu</Czech>
+      <Polish>Otwórz menu eksportowania</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_stringType">
       <English>String input.</English>
       <German>String input.</German>
       <Spanish>Introducir frase</Spanish>
       <Russian>Строчный ввод.</Russian>
+      <Polish>Wpisywanie tekstu.</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_arrayType">
       <English>Array. Seperate elements by using ,.</English>
       <German>Array. Teile unterschiedliche Elemente mit ,.</German>
       <Spanish>Matriz. Separa elementos usando ,.</Spanish>
       <Russian>Массив. Разделяйте элемены, используя запятую.</Russian>
+      <Polish>Tablica. Oddziel elementy używając ,.</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_scalarType">
       <English>Number</English>
@@ -115,6 +124,7 @@
       <Spanish>Numero</Spanish>
       <Russian>Число</Russian>
       <Czech>Číslo</Czech>
+      <Polish>Cyfra</Polish>
     </Key>
     <Key ID="STR_ACE_optionsMenu_unknownType">
       <English>Uknown input type</English>
@@ -122,6 +132,7 @@
       <Spanish>Tipo de entrada desconocida</Spanish>
       <Russian>Неизвестный тип ввода</Russian>
       <Czech>Neznámý vstup</Czech>
+      <Polish>Nieznany rodzaj danych</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_SaveInput">
       <English>Save input</English>
@@ -129,6 +140,7 @@
       <Spanish>Guardar entrada</Spanish>
       <Russian>Сохранить ввод</Russian>
       <Czech>Uložit vstup</Czech>
+      <Polish>Zapisz dane</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_inClientSettings">
       <English>Include Client Settings</English>
@@ -136,6 +148,7 @@
       <Spanish>Incluir configuración de cliente</Spanish>
       <Russian>Включить настройки клиента</Russian>
       <Czech>Zahrnout nastavení klienta</Czech>
+      <Polish>Zawrzyj ustawienia klienta</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_exClientSettings">
       <English>Exclude Client Settings</English>
@@ -143,6 +156,7 @@
       <Spanish>Excluir configuración de cliente</Spanish>
       <Russian>Исключить настройки клиента</Russian>
       <Czech>Nezahrnout nastavení klienta</Czech>
+      <Polish>Wyklucz ustawienia klienta</Polish>
     </Key>
     <Key ID="STR_ACE_OptionsMenu_settingsExported">
       <English>Settings exported to clipboard</English>
@@ -150,6 +164,7 @@
       <Spanish>Configuración exportada al portapapeles</Spanish>
       <Russian>Настройки экспортированы в буфер обмена</Russian>
       <Czech>Nastevení exportována do schránky</Czech>
+      <Polish>Ustawienia wyeksportowano do schowka</Polish>
     </Key>
   </Package>
 </Project>
