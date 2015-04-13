@@ -10,6 +10,7 @@
       <Czech>Zkontrolovat munici při nabití</Czech>
       <Polish>Sprawdź stan amunicji przy przeładowaniu broni</Polish>
       <French>Vérifier les munitions pendant le rechargement d'une arme</French>
+      <German>Munition beim Nachladen prüfen</German>
     </Key>
     <Key ID="STR_ACE_reload_SettingDisplayTextDesc">
       <English>Check the ammo in your new magazine on magazine reload.</English>
@@ -20,6 +21,7 @@
       <Czech>Kontroluje munice při nabití nového zásobníku.</Czech>
       <Polish>Pokaż stan amunicji w nowym magazynku przy przeładowaniu broni</Polish>
       <French>Vérifier les munitions dans votre nouveau chargeur au rechargement de vos chargeurs.</French>
+      <German>Munition im neuen Magazin beim Magazinfüllen prüfen</German>
     </Key>
     <Key ID="STR_ACE_Reload_checkAmmo">
       <English>Check Ammo</English>
@@ -53,6 +55,7 @@
       <Russian>Сцепить ленты</Russian>
       <Czech>Spojit pás munice</Czech>
       <Polish>Podłącz taśmę</Polish>
+      <German>Gurt anhängen</German>
     </Key>
     <Key ID="STR_ACE_Reload_LinkingBelt">
       <English>Linking belt...</English>
@@ -62,6 +65,7 @@
       <Russian>Сцепка лент ...</Russian>
       <Czech>Spojuji pás...</Czech>
       <Polish>Podłączanie taśmy...</Polish>
+      <German>Gurt anhängen...</German>
     </Key>
   </Package>
 </Project>
