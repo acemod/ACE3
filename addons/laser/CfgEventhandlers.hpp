@@ -9,3 +9,11 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_post_init));
     };
 };
+
+class Extended_Init_EventHandlers {
+    class LaserTargetBase {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(laser_init));
+        };
+    };
+};

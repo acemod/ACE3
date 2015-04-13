@@ -1,4 +1,4 @@
-/*
+ï»¿/*
  * Author: PabstMirror
  * Updates the display (several times a second) called from the pfeh
  *
@@ -53,7 +53,7 @@ case (APP_MODE_INFODISPLAY): {
         _compassAngleText = if (GVAR(settingUseMils)) then {
             [(floor ((6400 / 360) * (getDir ace_player))), 4, 0] call CBA_fnc_formatNumber;
         } else {
-            ([(floor (getDir ace_player)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+            ([(floor (getDir ace_player)), 3, 1] call CBA_fnc_formatNumber) + "Â°" //degree symbol is in UTF-8
         };
         (_display displayCtrl IDC_MODEDISPLAY_HEADINGNUM) ctrlSetText _compassAngleText;
 
@@ -92,7 +92,7 @@ case (APP_MODE_INFODISPLAY): {
                 _bearingText = if (GVAR(settingUseMils)) then {
                     [(floor ((6400 / 360) * (_bearing))), 4, 0] call CBA_fnc_formatNumber;
                 } else {
-                    ([(floor (_bearing)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+                    ([(floor (_bearing)), 3, 1] call CBA_fnc_formatNumber) + "Â°" //degree symbol is in UTF-8
                 };
                 _2dDistanceKm = ((GVAR(gpsPositionASL) select [0,2]) distance (_targetPosLocationASL select [0,2])) / 1000;
                 _rangeText = format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)];
@@ -112,7 +112,7 @@ case (APP_MODE_COMPASS): {
         _compassAngleText = if (GVAR(settingUseMils)) then {
             [(floor ((6400 / 360) * (getDir ace_player))), 4, 0] call CBA_fnc_formatNumber;
         } else {
-            ([(floor (getDir ace_player)), 3, 1] call CBA_fnc_formatNumber) + "°M" //degree symbol is in UTF-8
+            ([(floor (getDir ace_player)), 3, 1] call CBA_fnc_formatNumber) + "Â°" //degree symbol is in UTF-8
         };
         (_display displayCtrl IDC_MODECOMPASS_HEADING) ctrlSetText _compassAngleText;
 
@@ -149,7 +149,7 @@ case (APP_MODE_COMPASS): {
                 _bearingText = if (GVAR(settingUseMils)) then {
                     [(floor ((6400 / 360) * (_bearing))), 4, 0] call CBA_fnc_formatNumber;
                 } else {
-                    ([(floor (_bearing)), 3, 1] call CBA_fnc_formatNumber) + "°M" //degree symbol is in UTF-8
+                    ([(floor (_bearing)), 3, 1] call CBA_fnc_formatNumber) + "Â°" //degree symbol is in UTF-8
                 };
                 _2dDistanceKm = ((GVAR(gpsPositionASL) select [0,2]) distance (_targetPosLocationASL select [0,2])) / 1000;
                 _rangeText = format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)];

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Arma 3 Issues
-group: dev
+group: development
 parent: wiki
 order: 6
 ---
@@ -18,6 +18,8 @@ Keeping track of Arma 3 issues that need to be fixed. If you want to support us 
 * [commy2: 0021443: Unexpected behavior of += array in configs](http://feedback.arma3.com/view.php?id=21443)
 * [commy2: 0022671: setVariable is not always JIP persistent](http://feedback.arma3.com/view.php?id=22671)
 * [CorruptedHeart: 0022318: Can no longer use "MenuBack" shortcut in AddAction](http://feedback.arma3.com/view.php?id=22318)
+* [James2464: 0023725: All Environment Rocks Should Have PhysX LODs](http://feedback.arma3.com/view.php?id=23725)
+* [Jaynus: 0023679: Display event handler return values for mouse buttons should be respected](http://feedback.arma3.com/view.php?id=23679)
 
 **Resolved:**
 

@@ -5,7 +5,8 @@ PREP(laserHudDesignateOn);
 PREP(laserHudDesignateOff);
 PREP(unitTurretHasDesignator);
 
-GVAR(laser) = nil;
-GVAR(laserActive) = false;
+PREP(findLaserSource);
+
+GVAR(active) = false;
 
 FUNC(getPosASL) = {visiblePositionASL (_this select 0)};

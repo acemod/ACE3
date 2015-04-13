@@ -32,7 +32,5 @@ if (_d != 0) then {
 };
 
 /* Inverse of step 1 */
-_q1 set[0, (_q2 select 0) + (_p1 select 0)];
-_q1 set[1, (_q2 select 1) + (_p1 select 1)];
-_q1 set[2, (_q2 select 2) + (_p1 select 2)];
+_q1 = _q2 vectorAdd _p1;
 _q1;

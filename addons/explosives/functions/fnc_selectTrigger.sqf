@@ -19,7 +19,7 @@
 private ["_config"];
 
 EXPLODE_3_PVT(_this,_explosive,_magazine,_trigger);
-_config = ConfigFile >> "CfgACE_Triggers" >> _trigger;
+_config = ConfigFile >> "ACE_Triggers" >> _trigger;
 
 // If the onSetup function returns true, it is handled elsewhere
 if (isText(_config >> "onSetup") && {[_explosive,_magazine] call compile getText (_config >> "onSetup")}) exitWith {};

@@ -3,12 +3,24 @@
 PREP(rotateVectLineGetMap);
 PREP(rotateVectLine);
 
-PREP(translateToModelSpace);
-PREP(translateToWeaponSpace);
+PREP(checkSeekerAngle);
+PREP(checkLos);
 
 PREP(fired);
 
-PREP(guidance_DAGR);
-PREP(guidance_LGB);
-PREP(guidance_HellfireII);
-FUNC(getPosASL) = {visiblePositionASL (_this select 0)};
+PREP(guidancePFH);
+PREP(doAttackProfile); 
+PREP(doSeekerSearch);
+
+// Attack Profiles
+PREP(attackProfile_LIN);
+PREP(attackProfile_DIR);
+PREP(attackProfile_MID);
+PREP(attackProfile_HI);
+PREP(attackProfile_TOP);
+PREP(attackprofile_PYM);
+PREP(attackProfile_AIR);
+
+// Seeker search functions
+PREP(seekerType_SALH);
+PREP(seekerType_Optic);
