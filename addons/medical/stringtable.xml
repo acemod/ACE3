@@ -441,7 +441,6 @@
     </Key>
     <Key ID="STR_ACE_MEDICAL_NORMAL_BREATHING">
       <English>Normal breathing</English>
-      <German>Normales Atmen</German>
       <Russian>Дыхание в норме</Russian>
       <Spanish>Respiración normal</Spanish>
       <French>Respiration Normale</French>
@@ -458,7 +457,6 @@
     </Key>
     <Key ID="STR_ACE_MEDICAL_DIFFICULT_BREATHING">
       <English>Difficult breathing</English>
-      <German>Schweres Atmen</German>
       <Russian>Дыхание затруднено</Russian>
       <Spanish>Dificultad para respirar</Spanish>
       <French>Difficultée Respiratoire</French>
@@ -594,7 +592,6 @@
     </Key>
     <Key ID="STR_ACE_MEDICAL_TOURNIQUET_DESC_SHORT">
       <English>Slows down blood loss when bleeding</English>
-      <German>Veringert den Blutverlust</German>
       <Russian>Уменьшает кровопотерю при кровотечении.</Russian>
       <Spanish>Reduce la velocidad de pérdida de sangre</Spanish>
       <French>Ralentit le seignement</French>
@@ -914,7 +911,7 @@
     </Key>
     <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_1">
       <English>You find a blood pressure of %2/%3</English>
-      <French>Vous pris une pression sanguine de %2/%3<French>
+      <French>Vous pris une pression sanguine de %2/%3</French>
       <Russian>Артериальное давление %2/%3</Russian>
       <Spanish>La presión arterial es %2/%3</Spanish>
       <Polish>Ciśnienie krwi wynosi %2/%3</Polish>
