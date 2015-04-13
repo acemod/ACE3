@@ -73,7 +73,7 @@
       <Russian>Показывать именые метки ИИ</Russian>
       <Czech>Zobrazit jména AI</Czech>
       <Polish>Wyświetl imiona jednostek AI</Polish>
-      <French>Afficher les noms pour les unités IA</French></fRENCH>
+      <French>Afficher les noms pour les unités IA</French>
     </Key>
     <Key ID="STR_ACE_NameTags_ShowSoundWaves">
       <English>Show SoundWaves (requires player names)</English>
