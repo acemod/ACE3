@@ -10,8 +10,18 @@
         30 setFog        (ACE_MISC_PARAMS select 2);
     };
 };
-ACE_wind = wind;
-if (true) exitwith {};
+
+["ACE3", QGVAR(WindInfoKey), localize "STR_ACE_Weather_WindInfoKey",
+{
+    // Conditions: canInteract
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+
+    // Statement
+    [] call FUNC(displayWindInfo);
+    false
+},
+{false},
+[37, [true, false, false]], false, 0] call CBA_fnc_addKeybind; // (SHIFT + K)
 
 // Update Wind
 simulWeatherSync;
@@ -54,7 +64,7 @@ _fnc_updateTemperature = {
     _hourlyCoef = -0.5 * sin(360 * ((3 + (date select 3))/24 + (date select 4)/1440));
 
     GVAR(currentTemperature) = (GVAR(TempDay) select (_month - 1)) * (1 - _hourlyCoef) + (GVAR(TempNight) select (_month - 1)) * _hourlyCoef;
-    GVAR(currentTemperature) = GVAR(currentTemperature) + GVAR(currentTemperature) - 2 * humidity - 4 * overcast;
+    GVAR(currentTemperature) = GVAR(currentTemperature) - 2 * humidity - 4 * overcast;
     GVAR(currentTemperature) = round(GVAR(currentTemperature) * 10) / 10;
 
     // Humidity

@@ -10,5 +10,10 @@
 
 #include "script_component.hpp"
 
+ADDON = false;
+
 PREP(handleFired);
-PREP(initalizeModule);
+PREP(updateTrajectoryPFH);
+PREP(initModuleSettings);
+
+ADDON = true;

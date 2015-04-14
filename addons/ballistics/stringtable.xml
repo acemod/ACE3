@@ -715,5 +715,17 @@
             <German>Kaliber: 9,3x64mm Hartkern&lt;br /&gt;Schuss: 150&lt;br /&gt;Verwendet für: Navid</German>
             <Polish>Kaliber: 9,3 x 64 mm AP&lt;br /&gt;Pociski: 150&lt;br /&gt;Używane w: Navid</Polish>
         </Key>
+        <Key ID="STR_ACE_16Rnd_9x19_mag_Name">
+        </Key>
+        <Key ID="STR_ACE_16Rnd_9x19_mag_NameShort">
+        </Key>
+        <Key ID="STR_ACE_16Rnd_9x19_mag_Description">
+        </Key>
+        <Key ID="STR_ACE_30Rnd_9x19_mag_Name">
+        </Key>
+        <Key ID="STR_ACE_30Rnd_9x19_mag_NameShort">
+        </Key>
+        <Key ID="STR_ACE_30Rnd_9x19_mag_Description">
+        </Key>
     </Package>
 </Project>
