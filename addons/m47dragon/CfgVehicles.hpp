@@ -45,7 +45,8 @@ class CfgVehicles {
 				minElev = -20;
 				weapons[] = {"missiles_titan_static"};
 				magazines[] = {"1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles"};
-				gunnerAction = "gunner_staticlauncher";
+				//gunnerOpticsModel = "\ca\Weapons_e\optics_m47";
+                gunnerAction = "gunner_staticlauncher";
 				gunnergetInAction = "";
 				gunnergetOutAction = "";
 				displayName = "";
@@ -65,43 +66,32 @@ class CfgVehicles {
 				};
 				gunnerRightHandAnimName = "OtocHlaven_shake";
 				gunnerLeftHandAnimName = "OtocHlaven_shake";
-				gunBeg = "Usti hlavne";
-				gunEnd = "Konec hlavne";
-				memoryPointGunnerOptics = "look";
+				//gunBeg = "Usti hlavne";
+				//gunEnd = "Konec hlavne";
+				//memoryPointGunnerOptics = "look";
 			};
 		};
-		class AnimationSources
-		{
-			class autonomous_unhide
-			{
-				source = "user";
-				animPeriod = 1e-006;
-				initPhase = 0;
+		class AnimationSources {
+			class rest_rotate {
+				source="user";
+				animPeriod=0.00001;
+				initPhase=-0.35;
+				maxValue="3.60";
+				minValue="-3.60";
 			};
-			class muzzle_source
-			{
-				source = "reload";
-				weapon = "missiles_titan";
+			class optic_hide {
+				source="user";
+				animPeriod=0.0001;
+				initPhase=1;
+				maxValue="1";
+				minValue="0";
 			};
-			class muzzle_source_rot
-			{
-				source = "ammorandom";
-				weapon = "missiles_titan";
-			};
-			class ReloadAnim
-			{
-				source = "reload";
-				weapon = "missiles_titan";
-			};
-			class ReloadMagazine
-			{
-				source = "reloadmagazine";
-				weapon = "missiles_titan";
-			};
-			class Revolving
-			{
-				source = "revolving";
-				weapon = "missiles_titan";
+			class missile_hide {
+				source="user";
+				animPeriod=0.0001;
+				initPhase=0;
+				maxValue="1";
+				minValue="0";
 			};
 		};
 		soundGetOut[] = {"A3\sounds_f\dummysound",0.001,1,5};
