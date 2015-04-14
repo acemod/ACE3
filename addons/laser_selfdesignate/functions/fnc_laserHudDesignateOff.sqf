@@ -22,4 +22,9 @@ if( (count _this) > 2) then {
 
 GVAR(active) = false;
 
+if(!isNil QGVAR(selfDesignateHandle)) then {
+    [GVAR(selfDesignateHandle)] call CBA_fnc_removePerFrameHandler;
+    GVAR(selfDesignateHandle) = nil;
+};
+
 true

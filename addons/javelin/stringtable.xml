@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-  <Package name="WEP_JAVELIN">
-    <Key ID="STR_ACE_JAVELIN_LockTarget">
-      <English>Lock Target (Hold)</English>
-      <German>Ziel aufschalten</German>
-      <Russian>Захватить цель (удерживать)</Russian>
-      <Czech>Zamknout cíl(držet)</Czech>
-      <Polish>Namierz cel (przytrzymaj)</Polish>
-      <French>Vérouiller la Cible (Maintenir)</French>
-    </Key>
-    <Key ID="STR_ACE_JAVELIN_CycleFireMode">
-      <English>Cycle Fire Mode</English>
-      <German>Wechsle Feuermodus</German>
-      <Russian>Переключение режимов огня</Russian>
-      <Czech>Cyklování režimů palby</Czech>
-      <Polish>Przełącz tryb ognia</Polish>
-      <French>Mode de Tir (Cycle)</French>
-    </Key>
-  </Package>
+    <Package name="WEP_JAVELIN">
+        <Key ID="STR_ACE_JAVELIN_LockTarget">
+            <English>Lock Target (Hold)</English>
+            <German>Ziel aufschalten</German>
+            <Russian>Захватить цель (удерживать)</Russian>
+            <Czech>Zamknout cíl(držet)</Czech>
+            <Polish>Namierz cel (przytrzymaj)</Polish>
+            <French>Verrouiller cible (maintenir)</French>
+        </Key>
+        <Key ID="STR_ACE_JAVELIN_CycleFireMode">
+            <English>Cycle Fire Mode</English>
+            <German>Wechsle Feuermodus</German>
+            <Russian>Переключение режимов огня</Russian>
+            <Czech>Cyklování režimů palby</Czech>
+            <Polish>Przełącz tryb ognia</Polish>
+            <French>Cycle mode de tir</French>
+        </Key>
+    </Package>
 </Project>
