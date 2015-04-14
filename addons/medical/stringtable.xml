@@ -1284,6 +1284,18 @@
             <Polish>%1 założył stazę</Polish>
             <French>%1 a appliqué un garrot</French>
         </Key>
+        <Key ID="STR_ACE_Medical_HeavilyWounded">
+            <English>Heavily wounded</English>
+            <German>Schwer verwundet:</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_LightlyWounded">
+            <English>Lightly wounded</English>
+            <German>Leicht verwundet:</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_VeryLightlyWounded">
+            <English>Very lightly wounded</English>
+            <German>Sehr leicht verwundet:</German>
+        </Key>
         <Key ID="STR_ACE_Medical_Head">
             <English>Head</English>
             <German>Kopf</German>
