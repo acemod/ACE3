@@ -257,42 +257,6 @@
             <Italian>Calibro: 5.56x45 mm Traccianti IR-DIM&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Italian>
             <Russian>Калибр: 5.56x45 мм трассирующие под ПНВ&lt;br /&gt;Патронов: 30&lt;br /&gt;Применимы в: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Russian>
         </Key>
-        <Key ID="STR_ACE_30Rnd_556x45_mag_SDName">
-            <English>5.56mm 30Rnd SD Mag</English>
-            <Hungarian>5,56 mm Hangtompítós 30-as Tár</Hungarian>
-            <German>5,56 mm 30-Schuss-Magazin SD</German>
-            <Spanish>Cargador de 30 balas SD de 5,56 mm</Spanish>
-            <French>Ch. 5,56mm 30Cps SD</French>
-            <Polish>Magazynek 5,56mm 30rd SD</Polish>
-            <Czech>5.56mm 30ks SD Zásobník</Czech>
-            <Portuguese>Carregador de 30 projéteis SD de 5,56mm</Portuguese>
-            <Italian>Caricatore 5.56mm 30Rnd Sil.</Italian>
-            <Russian>Магазин из 30-ти 5.56 мм дозвуковых</Russian>
-        </Key>
-        <Key ID="STR_ACE_30Rnd_556x45_mag_SDNameShort">
-            <English>5.56mm SD</English>
-            <Hungarian>5,56 mm Hangtompítós</Hungarian>
-            <German>5,56mm SD</German>
-            <Spanish>5,56 mm SD</Spanish>
-            <French>5,56mm SD</French>
-            <Polish>5,56mm SD</Polish>
-            <Czech>5.56mm SD</Czech>
-            <Portuguese>5,56mm SD</Portuguese>
-            <Italian>5.56 Sil.</Italian>
-            <Russian>5.56 мм дозвуковые</Russian>
-        </Key>
-        <Key ID="STR_ACE_30Rnd_556x45_mag_SDDescription">
-            <English>Caliber: 5.56x45 mm SD&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</English>
-            <Hungarian>Kaliber: 5,56x45 mm Hangtompítós&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Hungarian>
-            <German>Kaliber: 5,56x45 mm SD&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</German>
-            <Spanish>Calibre: 5,56x45 mm SD&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Spanish>
-            <French>Calibre: 5.56x45 mm SD&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</French>
-            <Polish>Kaliber: 5,56 x 45 mm SD&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Polish>
-            <Czech>Ráže: 5.56x45 mm SD&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Czech>
-            <Portuguese>Calibre: 5,56x45 mm SD&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Portuguese>
-            <Italian>Calibro: 5.56x45 mm Sil.&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Italian>
-            <Russian>Калибр: 5.56x45 мм дозвуковые&lt;br /&gt;Патронов: 30&lt;br /&gt;Применимы в: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Russian>
-        </Key>
         <Key ID="STR_ACE_30Rnd_556x45_mag_APName">
             <English>5.56mm 30Rnd AP Mag</English>
             <Hungarian>5,56 mm Páncéltörő 30-as Tár</Hungarian>
@@ -474,52 +438,7 @@
             <Italian>Calibro: 7.62x51 mm AP&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
             <Russian>Калибр: 7.62x51 мм дозвуковые&lt;br /&gt;Патронов: 20&lt;br /&gt;Применимы в: Mk18 ABR</Russian>
         </Key>
-        <Key ID="STR_ACE_20Rnd_762x51_mag_LRDescription">
-            <English>Caliber: 7.62x51mm M118LR&lt;br /&gt;Rounds: 20&lt;br /&gt;Type: M14</English>
-            <Hungarian>Kaliber: 7,62x51 mm M118LR&lt;br /&gt;Lőszerek: 20&lt;br /&gt;Típus: M14</Hungarian>
-            <German>Kaliber: 7,62x51mm M118LR&lt;br /&gt;Schuss: 20&lt;br /&gt;Typ: M14</German>
-            <Spanish>Calibre: 7,62x51mm M118LR&lt;br /&gt;Balas: 20&lt;br /&gt;Tipo: M14</Spanish>
-            <Polish>Kaliber: 7,62 x 51 mm M118LR&lt;br /&gt;Pociski: 20&lt;br /&gt;Typ: M14</Polish>
-            <Czech>Kalibr: 7.62x51mm M118LR&lt;br /&gt;Náboje: 20&lt;br /&gt;Typ: M14</Czech>
-            <French>Calibre : 7,62x51mm M118LR&lt;br /&gt;Cartouches: 20&lt;br /&gt;Type: M14</French>
-            <Portuguese>Calibre: 7,62x51mm M118LR&lt;br /&gt;Projéteis: 20&lt;br /&gt;Tipo: M14</Portuguese>
-            <Russian>Калибр: 7.62x51mm M118LR&lt;br /&gt;Патронов: 20&lt;br /&gt;Тип: M14</Russian>
-            <Italian>Calibro: 7.62x51mm M118LR&lt;br /&gt;Munizioni:20&lt;br /&gt;In uso su: M14</Italian>
-        </Key>
         <!-- .338 Lapua Magnum -->
-        <Key ID="STR_ACE_10Rnd_338_Mag_TracerName">
-            <English>.338 LM 10Rnd Tracer Mag</English>
-            <German>.338 LM 10-Schuss-Magazin Leuchtspur</German>
-            <Polish>Magazynek .338 LM 10rd Smugacz</Polish>
-            <Czech>.338 LM 10Rnd Svítící Zásobník</Czech>
-        </Key>
-        <Key ID="STR_ACE_10Rnd_338_Mag_TracerNameShort">
-            <English>.338 LM Tracer</English>
-            <German>.338 LM Leuchtspur</German>
-            <Polish>.338 LM Smugacz</Polish>
-            <Czech>.338 LM Svítící</Czech>
-        </Key>
-        <Key ID="STR_ACE_10Rnd_338_Mag_TracerDescription">
-            <English>Caliber: .338 Lapua Magnum Tracer&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: MAR-10</English>
-            <German>Kaliber: .338 Lapua Magnum Leuchtspur&lt;br /&gt;Schuss: 10&lt;br /&gt;Verwendet für: MAR-10</German>
-            <Polish>Kaliber: .338 Lapua Magnum Smugacz&lt;br /&gt;Pociski: 10&lt;br /&gt;Używane w: MAR-10</Polish>
-        </Key>
-        <Key ID="STR_ACE_10Rnd_388_Mag_Tracer_DimName">
-            <English>.338 LM 10Rnd IR-DIM Mag</English>
-            <German>.338 LM 10-Schuss-Magazin Leuchtspur IR-DIM</German>
-            <Polish>Magazynek .338 LM 10rd IR-DIM</Polish>
-        </Key>
-        <Key ID="STR_ACE_10Rnd_338_Mag_Tracer_DimNameShort">
-            <English>.338 LM IR-DIM</English>
-            <German>.338 LM IR-DIM</German>
-            <Polish>.338 LM IR-DIM</Polish>
-            <Czech>.338 LM IR-DIM</Czech>
-        </Key>
-        <Key ID="STR_ACE_10Rnd_338_Mag_Tracer_DimDescription">
-            <English>Caliber: .338 Lapua Magnum Tracer IR-DIM&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: MAR-10</English>
-            <German>Kaliber: .338 Lapua Magnum Leuchtspur IR-DIM&lt;br /&gt;Schuss: 10&lt;br /&gt;Verwendet für: MAR-10</German>
-            <Polish>Kaliber: .338 Lapua Magnum Smugacz IR-DIM&lt;br /&gt;Pociski: 10&lt;br /&gt;Używane w: MAR-10</Polish>
-        </Key>
         <Key ID="STR_ACE_10Rnd_338_Mag_APName">
             <English>.338 LM 10Rnd AP Mag</English>
             <German>.338 LM 10-Schuss-Magazin Hartkern</German>
@@ -535,22 +454,6 @@
             <English>Caliber: .338 Lapua Magnum AP&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: MAR-10</English>
             <German>Kaliber: .338 Lapua Magnum Hartkern&lt;br /&gt;Schuss: 10&lt;br /&gt;Verwendet für: MAR-10</German>
             <Polish>Kaliber: .338 Lapua Magnum AP&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: MAR-10</Polish>
-        </Key>
-        <Key ID="STR_ACE_10Rnd_338_Mag_SDName">
-            <English>.338 LM 10Rnd SD Mag</English>
-            <German>.338 LM 10-Schuss-Magazin Unterschall</German>
-            <Polish>Magazynek .338 LM 10rd SD</Polish>
-        </Key>
-        <Key ID="STR_ACE_10Rnd_338_Mag_SDNameShort">
-            <English>.338 LM SD</English>
-            <German>.338 LM SD</German>
-            <Polish>.338 LM SD</Polish>
-            <Czech>.338 LM SD</Czech>
-        </Key>
-        <Key ID="STR_ACE_10Rnd_338_Mag_SDDescription">
-            <English>Caliber: .338 Lapua Magnum SD&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: MAR-10</English>
-            <German>Kaliber: .338 Lapua Magnum Unterschall&lt;br /&gt;Schuss: 10&lt;br /&gt;Verwendet für: MAR-10</German>
-            <Polish>Kaliber: .338 Lapua Magnum SD&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: MAR-10</Polish>
         </Key>
         <!-- .338 Norma Magnum -->
         <Key ID="STR_ACE_130Rnd_338_Mag_TracerName">
@@ -650,22 +553,6 @@
             <German>Kaliber: 9,3x64mm Hartkern&lt;br /&gt;Schuss: 10&lt;br /&gt;Verwendet für: Cyrus</German>
             <Polish>Kaliber: 9,3 x 64 mm AP&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: Cyrus</Polish>
         </Key>
-        <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_SDName">
-            <English>9.3mm 10Rnd SD Mag</English>
-            <German>9,3mm 10-Schuss-Magazin Unterschall</German>
-            <Polish>Magazynek 9,3mm 10rd SD</Polish>
-        </Key>
-        <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_SDNameShort">
-            <English>9.3mm SD</English>
-            <German>9,3mm SD</German>
-            <Polish>9,3mm SD</Polish>
-            <Czech>9.3mm SD</Czech>
-        </Key>
-        <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_SDDescription">
-            <English>Caliber: 9.3x64mm SD&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
-            <German>Kaliber: 9,3x64mm Unterschall&lt;br /&gt;Schuss: 10&lt;br /&gt;Verwendet für: Cyrus</German>
-            <Polish>Kaliber: 9,3 x 64 mm SD&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: Cyrus</Polish>
-        </Key>
         <!-- 9.3x64mm 150Rnd Belt-->
         <Key ID="STR_ACE_150Rnd_93x64_Mag_TracerName">
             <English>9.3mm 150Rnd Tracer Belt</English>
@@ -716,16 +603,112 @@
             <Polish>Kaliber: 9,3 x 64 mm AP&lt;br /&gt;Pociski: 150&lt;br /&gt;Używane w: Navid</Polish>
         </Key>
         <Key ID="STR_ACE_16Rnd_9x19_mag_Name">
+            <English>9x19mm 16Rnd Mag</English>
         </Key>
         <Key ID="STR_ACE_16Rnd_9x19_mag_NameShort">
+            <English>9x19mm</English>
         </Key>
         <Key ID="STR_ACE_16Rnd_9x19_mag_Description">
+            <English>9x19mm 16Rnd Mag</English>
         </Key>
         <Key ID="STR_ACE_30Rnd_9x19_mag_Name">
+            <English>9x19mm 30Rnd Mag</English>
         </Key>
         <Key ID="STR_ACE_30Rnd_9x19_mag_NameShort">
+            <English>9x19mm</English>
         </Key>
         <Key ID="STR_ACE_30Rnd_9x19_mag_Description">
+            <English>9x19mm 30Rnd Mag</English>
+        </Key>
+        <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_Name">
+            <English>7.62x54mm 10Rnd Tracer IR-DIM Mag</English>
+        </Key>
+        <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_NameShort">
+            <English>7.62mm IR-DIM</English>
+        </Key>
+        <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_Description">
+            <English>7.62x54mm 10Rnd Tracer IR-DIM Mag</English>
+        </Key>
+        <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimName">
+            <English>6.5mm 100Rnd Tracer IR-DIM Mag</English>
+        </Key>
+        <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimNameShort">
+            <English>6.5mm IR-DIM</English>
+        </Key>
+        <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimDescription">
+            <English>6.5mm 100Rnd Tracer IR-DIM Mag</English>
+        </Key>
+        <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimName">
+            <English>6.5mm 200Rnd Tracer IR-DIM Belt</English>
+        </Key>
+        <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimNameShort">
+            <English>6.5mm IR-DIM</English>
+        </Key>
+        <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimDescription">
+            <English>6.5mm 200Rnd Tracer IR-DIM Belt</English>
+        </Key>
+        <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk262_mag_Name">
+            <English>5.56mm 30Rnd Mag (Mk262)</English>
+        </Key>
+        <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk262_mag_NameShort">
+            <English>5.56mm (Mk262)</English>
+        </Key>
+        <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk262_mag_Description">
+            <English>Caliber: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Rounds: 30</English>
+        </Key>
+        <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_Name">
+            <English>5.56mm 30Rnd Mag (Mk318)</English>
+        </Key>
+        <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_NameShort">
+            <English>5.56mm (Mk318)</English>
+        </Key>
+        <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_Description">
+            <English>Caliber: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Rounds: 30</English>
+        </Key>
+        <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_Name">
+            <English>7.62mm 10Rnd Mag (M118LR)</English>
+        </Key>
+        <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_NameShort">
+            <English>7.62mm (M118LR)</English>
+        </Key>
+        <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_Description">
+            <English>Caliber: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Rounds: 10</English>
+        </Key>
+        <Key ID="STR_ACE_20Rnd_762x51_M118LR_Mag_Name">
+            <English>7.62mm 20Rnd Mag (M118LR)</English>
+        </Key>
+        <Key ID="STR_ACE_20Rnd_762x51_M118LR_Mag_NameShort">
+            <English>7.62mm (M118LR)</English>
+        </Key>
+        <Key ID="STR_ACE_20Rnd_762x51_M118LR_Mag_Description">
+            <English>Caliber: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Rounds: 20</English>
+        </Key>
+        <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Name">
+            <English>7.62mm 20Rnd Mag (Mk248 Mod 0)</English>
+        </Key>
+        <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_NameShort">
+            <English>7.62mm (Mk248 Mod 0)</English>
+        </Key>
+        <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Description">
+            <English>Caliber: 7.62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Rounds: 20</English>
+        </Key>
+        <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_Name">
+            <English>7.62mm 20Rnd Mag (Mk248 Mod 1)</English>
+        </Key>
+        <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_NameShort">
+            <English>7.62mm (Mk248 Mod 1)</English>
+        </Key>
+        <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_Description">
+            <English>Caliber: 7.62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Rounds: 20</English>
+        </Key>
+        <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Name">
+            <English>7.62mm 20Rnd Mag (Berger Hybrid OTM)</English>
+        </Key>
+        <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_NameShort">
+            <English>7.62mm (OTM)</English>
+        </Key>
+        <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Description">
+            <English>Caliber: 7.62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Rounds: 20</English>
         </Key>
     </Package>
 </Project>
