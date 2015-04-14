@@ -3,9 +3,8 @@
 TRACE_1("enter", _this);
 
 #define __TRACKINTERVAL 0    // how frequent the check should be.
-#define __LOCKONTIME 3.0    // Lock on won't occur sooner
-#define __LOCKONTIMERANDOM 0.3    // Deviation in lock on time
-#define __SENSORSQUARE 1    // Locking on sensor square side in angles
+#define __LOCKONTIME 3    // Lock on won't occur sooner
+#define __LOCKONTIMERANDOM 2    // Deviation in lock on time
 
 #define __OffsetX ((ctrlPosition __JavelinIGUITargetingLineV) select 0) - 0.5
 #define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5
@@ -52,10 +51,16 @@ if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && 
 // Refresh the firemode
 [] call FUNC(showFireMode);
         
+        
+// bail on not loaded
+if (ACE_player ammo (currentWeapon ACE_player) == 0) exitWith {  };  
+        
 _range = parseNumber (ctrlText __JavelinIGUIRangefinder);
+TRACE_1("Viewing range", _range);
 if (_range > 50 && {_range < 2500}) then {
     _pos = positionCameraToWorld [0,0,_range];
     _targetArray = _pos nearEntities ["AllVehicles", _range/25];
+    TRACE_1("Searching at range", _targetArray);
     if (count (_targetArray) > 0) then {
         _newTarget = _targetArray select 0;
     };
@@ -77,22 +82,45 @@ _offsetY = __OffsetY;
 __JavelinIGUITargeting ctrlShow true;
 __JavelinIGUITargetingConstrains ctrlShow true;
 
+_zamerny = if (_currentTarget isKindOf "CAManBase") then {_currentTarget selectionPosition "body"} else {_currentTarget selectionPosition "zamerny"};
+_randomPosWithinBounds = [(_zamerny select 0) + 1 - (random 2.0),(_zamerny select 1) + 1 - (random 2.0),(_zamerny select 2) + 0.5 - (random 1.0)];
+
+_apos = worldToScreen (_currentTarget modelToWorld _randomPosWithinBounds);
+   
+_aposX = 0;
+_aposY = 0;
+if (count _apos < 2) then {
+    _aposX = 1;
+    _aposY = 0;
+} else {
+    _aposX = (_apos select 0) + _offsetX;
+    _aposY = (_apos select 1) + _offsetY;
+};
+
+if((call CBA_fnc_getFoV) select 1 > 9) then {  
+    __JavelinIGUINFOV ctrlSetTextColor __ColorGreen;
+    __JavelinIGUIWFOV ctrlSetTextColor __ColorGray;
+} else {
+    __JavelinIGUINFOV ctrlSetTextColor __ColorGray;
+    __JavelinIGUIWFOV ctrlSetTextColor __ColorGreen;
+};
+
 if (isNull _newTarget) then {
     // No targets found
     _currentTarget = objNull;
     _lockTime = 0;
     
     __JavelinIGUISeek ctrlSetTextColor __ColorGray;
-    __JavelinIGUINFOV ctrlSetTextColor __ColorGreen;
     __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
     __JavelinIGUITargetingConstraints ctrlShow false;
     
-    ACE_player setVariable ["ace_missileguidance_target",nil, false];
+    ACE_player setVariable ["ace_missileguidance_target",nil, false];  
     
     // Disallow fire
-    //if (ACE_player ammo "Javelin" > 0 || {ACE_player ammo "ACE_Javelin_Direct" > 0}) then {ACE_player setWeaponReloadingTime //[player, "Javelin", 0.2];};    
+    if (ACE_player ammo (currentWeapon ACE_player) > 0) then { ACE_player setWeaponReloadingTime [player, (currentWeapon ACE_player), 0.2]; };  
+
 } else {
     if (_newTarget distance ACE_player < 2500
             && {(call CBA_fnc_getFoV) select 1 > 9} 
@@ -107,36 +135,20 @@ if (isNull _newTarget) then {
             
             playSound "ACE_Javelin_Locking";
         } else {
-            if(diag_tickTime - _lockTime > __LOCKONTIME) then {
+            if(diag_tickTime - _lockTime > __LOCKONTIME + (random __LOCKONTIMERANDOM)) then {
                 TRACE_2("LOCKED!", _currentTarget, _lockTime);
                 
                 __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
-                __JavelinIGUINFOV ctrlSetTextColor __ColorNull;
                 
                 __JavelinIGUITargeting ctrlShow true;
                 __JavelinIGUITargetingConstrains ctrlShow false;
                 __JavelinIGUITargetingGate ctrlShow true;
                 __JavelinIGUITargetingLines ctrlShow true;
-              
-                _zamerny = if (_currentTarget isKindOf "CAManBase") then {_currentTarget selectionPosition "body"} else {_currentTarget selectionPosition "zamerny"};
-				_randomPosWithinBounds = [(_zamerny select 0) + 1 - (random 2.0),(_zamerny select 1) + 1 - (random 2.0),(_zamerny select 2) + 0.5 - (random 1.0)];
 
-                _apos = worldToScreen (_currentTarget modelToWorld _randomPosWithinBounds);
-                   
-                _aposX = 0;
-                _aposY = 0;
-				if (count _apos < 2) then {
-					_aposX = 1;
-					_aposY = 0;
-				} else {
-					_aposX = (_apos select 0) + _offsetX;
-					_aposY = (_apos select 1) + _offsetY;
-				};
-                
                 // Move target marker to coords.
-                __JavelinIGUITargetingLineV ctrlSetPosition [_aposX,ctrlPosition __JavelinIGUITargetingLineV select 1];
-                __JavelinIGUITargetingLineH ctrlSetPosition [ctrlPosition __JavelinIGUITargetingLineH select 0,_aposY];
-                {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingLineH,__JavelinIGUITargetingLineV];
+                //__JavelinIGUITargetingLineV ctrlSetPosition [_aposX,ctrlPosition __JavelinIGUITargetingLineV select 1];
+                //__JavelinIGUITargetingLineH ctrlSetPosition [ctrlPosition __JavelinIGUITargetingLineH select 0,_aposY];
+                //{_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingLineH,__JavelinIGUITargetingLineV];
                 
                 _boundsInput = if (_currentTarget isKindOf "CAManBase") then {
                     [_currentTarget,[-1,-1,-2],_currentTarget selectionPosition "body"];
@@ -162,6 +174,9 @@ if (isNull _newTarget) then {
                 
                 ACE_player setVariable["ace_missileguidance_target", _currentTarget, false];
                 
+                // Allow fire
+                ACE_player setWeaponReloadingTime [player, (currentWeapon ACE_player), 0];
+                
                 if(diag_tickTime > _soundTime) then {
                     playSound "ACE_Javelin_Locked";
                     _soundTime = diag_tickTime + 0.25;
@@ -169,6 +184,7 @@ if (isNull _newTarget) then {
             } else {
                 __JavelinIGUITargeting ctrlShow true;
                 __JavelinIGUITargetingGate ctrlShow true;
+                 __JavelinIGUITargetingConstrains ctrlShow true;
                 __JavelinIGUITargetingLines ctrlShow false;
 
                 ACE_player setVariable["ace_missileguidance_target", nil, false];
@@ -186,6 +202,8 @@ if (isNull _newTarget) then {
                 _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025*(3/4)*SafezoneH);
                 _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025*SafezoneH);
                 
+                TRACE_4("", _boundsInput, _bpos, _minX, _minY);
+                                
                 __JavelinIGUITargetingGateTL ctrlSetPosition [_minX,_minY];
                 __JavelinIGUITargetingGateTR ctrlSetPosition [_maxX,_minY];
                 __JavelinIGUITargetingGateBL ctrlSetPosition [_minX,_maxY];
@@ -197,22 +215,26 @@ if (isNull _newTarget) then {
                     playSound "ACE_Javelin_Locking";
                     _soundTime = diag_tickTime + 0.25;
                 };
+                // Disallow fire
+                if (ACE_player ammo (currentWeapon ACE_player) > 0) then { ACE_player setWeaponReloadingTime [player, (currentWeapon ACE_player), 0.2]; };  
             };
         };
    } else { 
-        // Something is wrong with our seek
+        // No targets found
         _currentTarget = objNull;
-        ACE_player setVariable["ace_missileguidance_target", nil, false];
+        _lockTime = 0;
         
         __JavelinIGUISeek ctrlSetTextColor __ColorGray;
-        __JavelinIGUINFOV ctrlSetTextColor __ColorGray;
         __JavelinIGUITargeting ctrlShow false;
         __JavelinIGUITargetingGate ctrlShow false;
         __JavelinIGUITargetingLines ctrlShow false;
-
+        __JavelinIGUITargetingConstraints ctrlShow false;
+        
         ACE_player setVariable ["ace_missileguidance_target",nil, false];
-   };
-   
+        
+        // Disallow fire
+        if (ACE_player ammo (currentWeapon ACE_player) > 0) then { ACE_player setWeaponReloadingTime [player, (currentWeapon ACE_player), 0.2]; };  
+    };  
 };
 
 //TRACE_2("", _newTarget, _currentTarget);
