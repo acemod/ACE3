@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="logistics_uavbattery">
         <Key ID="STR_ACE_logistics_uavbattery_Full">
@@ -18,7 +17,7 @@
             <English>You need a UAV Battery</English>
             <German>Du brauchst eine UAV-Batterie</German>
             <Spanish>Necesitas una batería para VANT</Spanish>
-            <French>Pas de batterie UAV</French>
+            <French>L'UAV nécessite une  batterie</French>
             <Polish>Potrzebujesz baterii UAV</Polish>
             <Hungarian>Szükséged van egy UAV akkumulátorra</Hungarian>
             <Czech>Potřebuješ UAV baterii</Czech>
