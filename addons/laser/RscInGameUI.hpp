@@ -40,8 +40,8 @@ class RscInGameUI {
 					w = "4.5 * 		(0.01875 * SafezoneH)";
 					h = "1.1 * 		(0.025 * SafezoneH)";
 				};
-				class CA_Distance: RscText {
-					idc = 151;
+                class ACE_Distance: RscText {
+					idc = 123002;
 					style = 0;
 					sizeEx = "0.038*SafezoneH";
 					colorText[] = {0.706,0.0745,0.0196,1};
@@ -52,6 +52,19 @@ class RscInGameUI {
 					y = "3 * 		(0.025 * SafezoneH)";
 					w = "4 * 		(0.01875 * SafezoneH)";
 					h = "1.5 * 		(0.025 * SafezoneH)";
+				};
+				class CA_Distance: RscText {
+					idc = 151;
+					style = 0;
+					sizeEx = "0.038*SafezoneH";
+					colorText[] = {0.706,0.0745,0.0196,1};
+					shadow = 0;
+					font = "EtelkaMonospacePro";
+					text = "2456";
+					x = 0;
+                    y = 0;
+                    w = 0;
+                    h = 0;
 				};
 				class CA_Elev: RscText {
 					idc = 175;
