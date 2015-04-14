@@ -14,13 +14,13 @@
       <Russian>Многофункциональный GPS-приёмник.</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_settingUseMils">
-      <English>Angular Unit:</English>
+      <English>Winkeleinheit:</English>
       <Spanish>Unidad angular:</Spanish>
       <Russian>Угловые единицы:</Russian>
     </Key>
     <Key ID="STR_ACE_microdagr_settingMils">
       <English>Mils</English>
-      <German>Mils</German>
+      <German>Mil</German>
       <Spanish>Mils</Spanish>
       <Russian>Тысячные</Russian>
     </Key>
@@ -60,6 +60,7 @@
     </Key>
     <Key ID="STR_ACE_microdagr_wpEnterCords">
       <English>Enter Grid Cords:</English>
+      <German>Gebe Koordinaten ein:</German>
       <Spanish>Introducir coordenadas de cuadrícula:</Spanish>
       <Russian>Введите координаты:</Russian>
     </Key>
@@ -71,7 +72,7 @@
     </Key>
     <Key ID="STR_ACE_microdagr_controlMGRS">
       <English>MGRS-New</English>
-      <German>MGRS-NEU</German>
+      <German>UTMREF-NEU</German>
       <Spanish>Nuevo-MGRS</Spanish>
       <Russian>MGRS-Новая</Russian>
     </Key>
