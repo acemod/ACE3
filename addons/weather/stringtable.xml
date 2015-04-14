@@ -1,8 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Weather">
         <Key ID="STR_ACE_Weather_WindInfoKey">
             <English>Show Wind Info</English>
+            <Polish>Pokaż inf. o wietrze</Polish>
         </Key>
     </Package>
 </Project>
