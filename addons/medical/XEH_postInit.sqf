@@ -197,7 +197,7 @@ if (isNil QGVAR(level)) then {
         } else {
             GVAR(effectPainCA) ppEffectEnable false;
             if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
-                _strength = _strength * 0.6;
+                _strength = _strength * 0.9;
                 GVAR(effectPainCC) ppEffectEnable true;
                 GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - _strength,1 - _strength,0,0,0,0.2,2]];
                 GVAR(effectPainCC) ppEffectCommit 0.01;
