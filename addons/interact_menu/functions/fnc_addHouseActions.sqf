@@ -61,13 +61,22 @@ systemChat "starting";
                         _houseHelpers = [];
 
 
-                        systemChat format ["Looking At %1 [%2]", _theHouse, (typeOf _theHouse)];
+                        // systemChat format ["Looking At %1 [%2]", _theHouse, (typeOf _theHouse)];
                         {
                             _displayName = getText (_x >> "displayName");
                             _position = getText (_x >> "position");
                             _condition = getText (_x >> "condition");
                             _statement = getText (_x >> "statement");
+                            _maxDistance = getNumber (_x >> "radius");
 
+                            if (_displayName == "") then {_displayName = (configName _x);};
+                            // if (_position == "") then {_condition = "true";}; //????
+                            if (_condition == "") then {_condition = "true";};
+                            // if (_statement == "") then {_condition = "true";};
+                            // if (_maxDistance < 0.1) then {_condition = "true";};
+
+                            _maxDistance = _maxDistance + 0.25; //fudge it up a little
+                            
                             _helperObject = objNull;
                             _actionOffset = [0,0,0];
                             {
@@ -87,7 +96,7 @@ systemChat "starting";
                                 _helperObject setPos _helperPos;
                                 _helperObject hideObject true;
                                 _addedHelpers pushBack _helperObject;
-                                diag_log text format ["Making New Helper %1", [_helperObject, _helperPos, _theHouse]];
+                                // diag_log text format ["Making New Helper %1", [_helperObject, _helperPos, _theHouse]];
                             };
 
                             _fncStatement = {
@@ -105,7 +114,7 @@ systemChat "starting";
 
                             _variable = [_theHouse, compile _statement, compile _condition];
                             
-                            _action = [(configName _x), _displayName, "", _fncStatement, _fncCondition, {}, _variable, _actionOffset, 5] call EFUNC(interact_menu,createAction);
+                            _action = [(configName _x), _displayName, "", _fncStatement, _fncCondition, {}, _variable, _actionOffset, _maxDistance] call EFUNC(interact_menu,createAction);
                             [_helperObject, 0, [],_action] call EFUNC(interact_menu,addActionToObject);
 
                         } foreach configproperties [(_configPath >> "UserActions")];
