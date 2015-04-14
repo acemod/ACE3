@@ -12,7 +12,6 @@
         </Key>
         <Key ID="STR_ACE_Interaction_Torso">
             <English>Torso</English>
-            <French>Torse</French>
             <German>Torso</German>
             <Spanish>Torso</Spanish>
             <Czech>Trup</Czech>
@@ -22,7 +21,6 @@
         </Key>
         <Key ID="STR_ACE_Interaction_Head">
             <English>Head</English>
-            <French>Tête</French>
             <German>Kopf</German>
             <Spanish>Cabeza</Spanish>
             <Czech>Hlava</Czech>
@@ -68,7 +66,6 @@
         </Key>
         <Key ID="STR_ACE_Interaction_Weapon">
             <English>Weapon</English>
-            <French>Arme</French>
             <German>Waffe</German>
             <Spanish>Arma</Spanish>
             <Czech>Zbraň</Czech>
@@ -697,7 +694,6 @@
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
-            <French>Interagir</French>
             <German>Interagiere</German>
             <French>Interagir</French>
             <Czech>Interakce</Czech>
