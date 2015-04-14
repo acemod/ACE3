@@ -153,11 +153,6 @@ GVAR(effectTimeBlood) = time;
 GVAR(lastHeartBeat) = time;
 GVAR(lastHeartBeatSound) = time;
 
-// @todo, remove once parameters are set up
-if (isNil QGVAR(level)) then {
-  GVAR(level) = 0;
-};
-
 // HEARTRATE BASED EFFECTS
 [{
     _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
