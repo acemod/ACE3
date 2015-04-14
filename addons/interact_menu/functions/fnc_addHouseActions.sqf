@@ -104,7 +104,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
                                 if (_memPoint == _position) exitWith {
                                     _helperObject = _object;
                                     //make sure actions don't overlap (although they are usualy mutually exclusive)
-                                    _actionOffset = [0,0,(_count * 0.1)];
+                                    _actionOffset = [0,0,(_count * 0.05)];
                                     _x set [2, (_count + 1)];
                                 };
                             } forEach _houseHelpers;
@@ -113,8 +113,12 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
                                 _helperObject = "Sign_Sphere25cm_F" createVehicleLocal (getpos _theHouse);
                                 _houseHelpers pushBack [_position, _helperObject, 1];
                                 _helperPos = _theHouse modelToWorld (_theHouse selectionPosition _position);
-                                //double check ASL/ATL bullshit
-                                _helperObject setPos _helperPos;
+                                //ASL/ATL bullshit:
+                                if (surfaceIsWater _helperPos) then {
+                                    _helperObject setPosAslw _helperPos;
+                                } else {
+                                    _helperObject setPos _helperPos;
+                                };
                                 _helperObject hideObject true;
                                 _addedHelpers pushBack _helperObject;
                                 TRACE_3("Making New Helper %1",_helperObject,_helperPos,_theHouse);
