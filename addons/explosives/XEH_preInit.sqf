@@ -1,28 +1,35 @@
 /*
-Name: XEH_preInit.sqf
-
-Author(s):
-Garth de Wet (LH)
-
-Description:
-Prepares the functions
-
-Parameters:
-None
-
-Returns:
-None
-
-Example:
-None
-*/
+ * Author: Garth 'L-H' de Wet
+ * Initialises the explosives system
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
+ADDON = false;
+
+PREP(addCellphoneIED);
 PREP(addClacker);
+PREP(addDetonateActions);
+PREP(addExplosiveActions);
+PREP(addToSpeedDial);
+PREP(addTransmitterActions);
+PREP(addTriggerActions);
 PREP(canDefuse);
 PREP(canDetonate);
 PREP(defuseExplosive);
 PREP(detonateExplosive);
+PREP(dialPhone);
+PREP(dialingPhone);
 
 PREP(handleScrollWheel);
 
@@ -31,21 +38,24 @@ PREP(hasPlacedExplosives);
 
 PREP(getDetonators);
 PREP(getPlacedExplosives);
+PREP(getSpeedDialExplosive);
 
-PREP(openDetonateUI);
-PREP(openPlaceUI);
-PREP(openTransmitterUI);
+PREP(onLanded);
+
 PREP(openTimerSetUI);
-PREP(openTriggerSelectionUI);
 
 PREP(place_Approve);
 PREP(place_Cancel);
 
 PREP(placeExplosive);
+PREP(removeFromSpeedDial);
 
 PREP(selectTrigger);
 PREP(setupExplosive);
 PREP(setPosition);
+PREP(setSpeedDial);
 PREP(startDefuse);
 PREP(startTimer);
 PREP(triggerType);
+
+ADDON = true;

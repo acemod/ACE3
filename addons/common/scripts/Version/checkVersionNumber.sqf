@@ -13,7 +13,7 @@ if (missionNamespace getVariable ["ACE_Version_CheckAll", false]) then {
   } forEach activatedAddons;
 } else {
   {
-    if (toLower _x find "ACE_" == 0) then {
+    if (toLower _x find "ace_" == 0) then {
       _files pushBack _x;
     };
   } forEach activatedAddons;
@@ -27,11 +27,14 @@ _versions = [];
   _versions set [_forEachIndex, _version];
 } forEach _files;
 
+_versionFull = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "versionStr");
+diag_log text format ["[ACE] Full Version Number: %1", _versionFull];
+
 if (isServer) then {
   diag_log text format ["[ACE] Server: ACE_Common is Version %1.", _versionMain];
 
   {
-    if (toLower _x find "ACE_" == 0) then {//
+    if (toLower _x find "ace_" == 0) then {//
       _version = _versions select _forEachIndex;
       if (_version != _versionMain) then {
         diag_log text format ["[ACE] Server: %1 is Version %2.", _x, _version];
@@ -45,7 +48,7 @@ if (isServer) then {
   diag_log text format ["[ACE] Client: ACE_Common is Version %1.", _versionMain];
 
   {
-    if (toLower _x find "ACE_" == 0) then {//
+    if (toLower _x find "ace_" == 0) then {//
       _version = _versions select _forEachIndex;
       if (_version != _versionMain) then {
         diag_log text format ["[ACE] Client: %1 is Version %2.", _x, _version];
@@ -81,7 +84,7 @@ if (!isServer) then {
 
     _index = _files find _x;
     if (_index == -1) then {
-      _missingAddons pushBack _x;
+        if (_x != "ace_serverconfig") then {_missingAddons pushBack _x;};
     } else {
 
       _clientVersion = _versions select _index;

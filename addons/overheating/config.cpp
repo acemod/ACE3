@@ -5,8 +5,8 @@ class CfgPatches {
         units[] = {};
         weapons[] = {"ACE_SpareBarrel"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common", "ace_interaction"};
-        author[] = {"commy2", "KoffeinFlummi", "CAA-Picard"};
+        requiredAddons[] = {"ace_interaction"};
+        author[] = {"commy2", "KoffeinFlummi", "esteldunedain"};
         authorUrl = "https://github.com/commy2/";
         VERSION_CONFIG;
     };
@@ -14,20 +14,19 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 
-class ACE_Default_Keys {
-    class clearJam {
-        displayName = "$STR_ACE_Overheating_UnjamWeapon";
-        condition = QUOTE( [_player] call EFUNC(common,canUseWeapon) && {currentWeapon _player in (_player getVariable [ARR_2(QUOTE(QGVAR(jammedWeapons)), [])])} );
-        statement = QUOTE( [ARR_3(_player, currentMuzzle _player, false)] call FUNC(clearJam); );
-        key = 19;
-        shift = 1;
-        control = 0;
-        alt = 0;
-    };
-};
-
 #include "CfgSounds.hpp"
 
 #include "CfgVehicles.hpp"
 
 #include "CfgWeapons.hpp"
+
+class ACE_Settings {
+    class GVAR(DisplayTextOnJam) {
+        typeName = "BOOL";
+        isClientSetable = 1;
+        value = 1;
+        displayName = "$STR_ACE_overheating_SettingDisplayTextName";
+        description = "$STR_ACE_overheating_SettingDisplayTextDesc";
+    };
+};
+

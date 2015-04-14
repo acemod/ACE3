@@ -4,62 +4,71 @@ class CfgPatches {
     class ADDON {
         units[] = {};
         weapons[] = {};
-        requiredVersion = 0.60;
-        requiredAddons[] = { "ace_main", "ace_common", "ace_interaction" };
-        version = QUOTE(VERSION);
-        versionStr = QUOTE(VERSION);
-        versionAr[] = { VERSION_AR };
-        author[] = { "commy2", "CAA-Picard" };
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {"ace_interaction"};
+        author[] = { "commy2", "esteldunedain" };
         authorUrl = "https://github.com/commy2/";
+        VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 
-class ACE_Common_Default_Keys {
-    class showNames {
-        displayName = "$STR_ACE_NameTags_ShowNames";
-        condition = "true";
-        statement = QUOTE(GVAR(ShowNamesTime) = time; if (call FUNC(canShow)) then{ call FUNC(doShow); };);
-        key = 29;
-        shift = 0;
-        control = 0;
-        alt = 0;
-        allowHolding = 1;
+class ACE_Settings {
+    class GVAR(defaultNametagColor) {
+        value[] = {0.77, 0.51, 0.08, 1};
+        typeName = "COLOR";
+        isClientSetable = 1;
+        displayName = "$STR_ACE_NameTags_DefaultNametagColor";
     };
-};
-
-class ACE_Common_Options {
-    class showPlayerNames {
+    class GVAR(showPlayerNames) {
+        value = 1;
+        typeName = "SCALAR";
+        isClientSetable = 1;
         displayName = "$STR_ACE_NameTags_ShowPlayerNames";
-        default = 1;
+        values[] = {"Disabled", "Enabled", "Only Cursor", "Only On Keypress", "Only Cursor and KeyPress"};
     };
-    class showPlayerNamesOnlyOnCursor {
-        displayName = "$STR_ACE_NameTags_ShowPlayerNamesOnlyOnCursor";
-        default = 1;
-    };
-    class showPlayerNamesOnlyOnKeyPress {
-        displayName = "$STR_ACE_NameTags_ShowPlayerNamesOnlyOnKeyPress";
-        default = 0;
-    };
-    class showPlayerRanks {
+    class GVAR(showPlayerRanks) {
+        value = 1;
+        typeName = "BOOL";
+        isClientSetable = 1;
         displayName = "$STR_ACE_NameTags_ShowPlayerRanks";
-        default = 1;
     };
-    class showVehicleCrewInfo {
-        displayName = "$STR_ACE_CrewInfo_ShowVehicleCrewInfo";
-        default = 1;
+    class GVAR(showVehicleCrewInfo) {
+        value = 1;
+        typeName = "BOOL";
+        isClientSetable = 1;
+        displayName = "$STR_ACE_NameTags_ShowVehicleCrewInfo";
     };
-};
-
-class ACE_Parameters_Numeric {
-    GVAR(PlayerNamesViewDistance) = 5;
-    GVAR(PlayerNamesMaxAlpha) = 0.8;
-    GVAR(CrewInfoVisibility) = 0;
-};
-class ACE_Parameters_Boolean {
-    GVAR(ShowNamesForAI) = 0;
+    class GVAR(showNamesForAI) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSetable = 1;
+        displayName = "$STR_ACE_NameTags_ShowNamesForAI";
+    };
+    class GVAR(showCursorTagForVehicles) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSetable = 0;
+    };
+    class GVAR(showSoundWaves) {
+        value = 1;
+        typeName = "SCALAR";
+        isClientSetable = 1;
+        displayName = "$STR_ACE_NameTags_ShowSoundWaves";
+        values[] = {"Disabled", "Use Nametag settings", "Always Show All"};
+    };
+    class GVAR(PlayerNamesViewDistance) {
+        value = 5;
+        typeName = "SCALAR";
+        isClientSetable = 0;
+    };
+    class GVAR(PlayerNamesMaxAlpha) {
+        value = 0.8;
+        typeName = "SCALAR";
+        isClientSetable = 0;
+    };
 };
 
 #include <RscTitles.hpp>

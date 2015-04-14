@@ -1,17 +1,17 @@
  /*
   Name: ACE_Respawn_fnc_module
-  
+
   Author(s):
-    KoffeinFlummi, bux578, CAA-Picard, commy2
-  
+    KoffeinFlummi, bux578, esteldunedain, commy2
+
   Description:
     initializes the respawn module
-  
+
   Parameters:
     0: OBJECT - logic
     1: ARRAY<OBJECT> - synced units
     2: BOOLEAN - activated
-  
+
   Returns:
     VOID
 */
@@ -27,8 +27,8 @@ if !(_activated) exitWith {};
 
 GVAR(Module) = true;
 
-[_logic, QGVAR(SavePreDeathGear),             "SavePreDeathGear"]             call EFUNC(common,readBooleanParameterFromModule);
-[_logic, QGVAR(RemoveDeadBodiesDisconnected), "RemoveDeadBodiesDisconnected"] call EFUNC(common,readBooleanParameterFromModule);
+[_logic, QGVAR(SavePreDeathGear),             "SavePreDeathGear"]             call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(RemoveDeadBodiesDisconnected), "RemoveDeadBodiesDisconnected"] call EFUNC(common,readSettingFromModule);
 
 if (isServer) then {
     if (GVAR(RemoveDeadBodiesDisconnected)) then {

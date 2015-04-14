@@ -1,12 +1,22 @@
-// by commy2
+/*
+ * Author: Commy2
+ * Make the unit clear the jam from a weapon
+ *
+ * Arguments:
+ * 0: Player <OBJECT>
+ * 1: Weapon <STRING>
+ * 2: Skip anim? <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-private ["_unit", "_weapon", "_skipAnim", "_jammedWeapons"];
+EXPLODE_3_PVT(_this,_unit,_weapon,_skipAnim);
 
-_unit = _this select 0;
-_weapon = _this select 1;
-_skipAnim = _this select 2;
-
+private ["_jammedWeapons"];
 _jammedWeapons = _unit getVariable [QGVAR(jammedWeapons), []];
 
 if (_weapon in _jammedWeapons) then {
@@ -32,7 +42,16 @@ if (_weapon in _jammedWeapons) then {
     };
 
     _unit playActionNow _clearJamAction;
+    if (_weapon == primaryWeapon _unit) then {
+      playSound QGVAR(fixing_rifle);
+    } else {
+      if (_weapon == secondaryWeapon _unit) then {
+        playSound QGVAR(fixing_pistol);
+      };
+    };
   };
 
-  [localize "STR_ACE_Overheating_WeaponUnjammed"] call EFUNC(common,displayTextStructured);
+  if (GVAR(DisplayTextOnJam)) then {
+    [localize "STR_ACE_Overheating_WeaponUnjammed"] call EFUNC(common,displayTextStructured);
+  };
 };

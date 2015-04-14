@@ -69,7 +69,7 @@ switch (_position) do {
 
   case "gunner" : {
     private "_turretConfig";
-    _turret = [typeOf _vehicle] call FUNC(getTurretGunner);
+    _turret = [_vehicle] call FUNC(getTurretGunner);
     if (_turret isEqualTo []) exitWith {false};
 
     _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
@@ -82,7 +82,7 @@ switch (_position) do {
 
   case "commander" : {
     private "_turretConfig";
-    _turret = [typeOf _vehicle] call FUNC(getTurretCommander);
+    _turret = [_vehicle] call FUNC(getTurretCommander);
     if (_turret isEqualTo []) exitWith {false};
 
     _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
@@ -95,7 +95,7 @@ switch (_position) do {
 
   case "copilot" : {
     private "_turretConfig";
-    _turret = [typeOf _vehicle] call FUNC(getTurretCopilot);
+    _turret = [_vehicle] call FUNC(getTurretCopilot);
     if (_turret isEqualTo []) exitWith {false};
 
     _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
@@ -108,7 +108,7 @@ switch (_position) do {
 
   case "turret" : {
     private ["_turrets", "_turretConfig"];
-    _turrets = [typeOf _vehicle] call FUNC(getTurretsOther);
+    _turrets = [_vehicle] call FUNC(getTurretsOther);
 
     if (_index != -1 && {_turret = _turrets select _index;
       CANGETINTURRETINDEX
@@ -136,7 +136,7 @@ switch (_position) do {
 
   case "ffv" : {
     private ["_turrets", "_turretConfig"];
-    _turrets = [typeOf _vehicle] call FUNC(getTurretsFFV);
+    _turrets = [_vehicle] call FUNC(getTurretsFFV);
 
     if (_index != -1 && {_turret = _turrets select _index;
       CANGETINTURRETINDEX
@@ -242,10 +242,10 @@ _fnc_isInRange = {
   private ["_unitPosition", "_distance"];
   _unitPosition = getPos _unit;
 
-  _distance = _unitPosition distance (_vehicle modelToWorld _selectionPosition);
+  _distance = _unitPosition distance (_vehicle modelToWorldVisual _selectionPosition);
 
   if (!isNil "_selectionPosition2") then {
-    _distance = _distance min (_unitPosition distance (_vehicle modelToWorld _selectionPosition2));
+    _distance = _distance min (_unitPosition distance (_vehicle modelToWorldVisual _selectionPosition2));
   };
 
   _distance < _radius

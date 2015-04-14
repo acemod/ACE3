@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
+<Project name="ACE">
+    <Package name="AdvancedBallistics">
+        <Key ID="STR_ACE_AdvancedBallistics_WindInfoKey">
+            <English>Show Wind Info</English>
+            <Polish>Pokaż inf. o wietrze</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_ProtractorKey">
+            <English>Show Protractor</English>
+            <Polish>Pokaż kątomierz</Polish>
+        </Key>
+    </Package>
+</Project>

@@ -1,5 +1,5 @@
 /*
- * Author: CAA-Picard
+ * Author: esteldunedain
  *
  * Initializes the name tags module.
  *
@@ -22,8 +22,9 @@ if !(_activated) exitWith {};
 
 GVAR(Module) = true;
 
-[_logic, QGVAR(PlayerNamesViewDistance),  "PlayerNamesViewDistance"     ] call EFUNC(common,readNumericParameterFromModule);
-[_logic, QGVAR(ShowNamesForAI),           "ShowNamesForAI"              ] call EFUNC(common,readBooleanParameterFromModule);
-[_logic, QGVAR(CrewInfoVisibility),       "Visibility"                  ] call EFUNC(common,readNumericParameterFromModule);
+[_logic, QGVAR(PlayerNamesViewDistance),  "PlayerNamesViewDistance"     ] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(ShowNamesForAI),           "ShowNamesForAI"              ] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(showVehicleCrewInfo),      "showVehicleCrewInfo"         ] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(showCursorTagForVehicles),  "showCursorTagForVehicles"    ] call EFUNC(common,readSettingFromModule);
 
 diag_log text "[ACE]: NameTags Module Initialized.";

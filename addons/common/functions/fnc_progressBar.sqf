@@ -1,61 +1,105 @@
 /*
- * Author: commy2
+ * Author: commy2, Glowbal, PabstMirror
  *
  * Draw progress bar and execute given function if succesful.
+ * Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
  *
  * Argument:
- * 0: Duration of the action (Number)
- * 1: Arguments of the callback function (Array)
- * 2: Callback function name (String)
- * 3: Title of the loading bar (String)
- * 4: Name of the function that is called when the action is aborted via ESC (String, optional)
+ * 0: NUMBER - Total Time (in game "time" seconds)
+ * 1: ARRAY - Arguments, passed to condition, fail and finish
+ * 2: CODE or STRING - On Finish: Code called or STRING raised as event.
+ * 3: CODE or STRING - On Failure: Code called or STRING raised as event.
+ * 4: STRING - (Optional) Localized Title
+ * 5: CODE - (Optional) Code to check each frame
+ * 6: ARRAY - (Optional) Exceptions for checking EFUNC(common,canInteractWith)
  *
  * Return value:
  * Nothing
+ *
+ * Example:
+ * [5, [], {Hint "Finished!"}, {hint "Failure!"}, "My Title"] call ace_common_fnc_progressBar
  */
+
 #include "script_component.hpp"
 
+PARAMS_4(_totalTime,_args,_onFinish,_onFail);
+DEFAULT_PARAM(4,_localizedTitle,"");
+DEFAULT_PARAM(5,_condition,{true});
+DEFAULT_PARAM(6,_exceptions,[]);
+private ["_player", "_perFrameFunction"];
+
+_player = ACE_player;
+
+//Open Dialog and set the title
 closeDialog 0;
 createDialog QGVAR(ProgressBar_Dialog);
+(uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetText _localizedTitle;
 
-_this spawn {
-  _time = _this select 0;
-  _arguments = _this select 1;
-  _function = call compile (_this select 2);
-  _title = _this select 3;
-  _function2 = call compile (_this select 4);
-
-  disableSerialization;
-  _ctrlProgressBar = uiNamespace getVariable QGVAR(ctrlProgressBar);
-  _ctrlProgressBarTitle = uiNamespace getVariable QGVAR(ctrlProgressBarTitle);
-
-  _ctrlProgressBar ctrlSetPosition [
-    safezoneX + 0.1 * safezoneW,
-    safezoneY + 0.2 * safezoneH,
-    0.8 * safezoneW,
-    0.01 * safezoneH
-  ];
-  _ctrlProgressBar ctrlCommit (_time / accTime);
-
-  _ctrlProgressBarTitle ctrlSetText _title;
-  //_ctrlProgressBarTitle ctrlSetStructuredText _title;
-
-  _time = time + _time;
-  waitUntil {
-    //make sure the progressBar is still open, not just any dialog
-    (isNull (uiNamespace getVariable [QGVAR(ctrlProgressBar), controlNull])) || {!alive ACE_player} || {time > _time}
-  };
-
-  closeDialog 0;
-
-  _progress = 1;
-  if (time > _time) then {
-    _arguments call _function;
-  } else {
-    [localize QUOTE(DOUBLES(STR,GVAR(ActionAborted)))] call FUNC(displayTextStructured);
-    if (!isNil "_function2") then {
-      _progress = 1 - ((_time - time) / (_this select 0)) max 0 min 1;
-      _arguments call _function2;
-    };
-  };
+if (GVAR(SettingProgressBarLocation) == 1) then {
+    private "_ctrlPos";
+    _ctrlPos =  [1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2), 29 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2), 38 * (((safezoneW / safezoneH) min 1.2) / 40), 0.8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)];
+    (uiNamespace getVariable QGVAR(ctrlProgressBar)) ctrlSetPosition _ctrlPos;
+    (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetPosition _ctrlPos;
+    (uiNamespace getVariable QGVAR(ctrlProgressBar)) ctrlCommit 0;
+    (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlCommit 0;
 };
+
+
+_perFrameFunction = {
+    PARAMS_2(_parameters,_pfhID);
+    EXPLODE_8_PVT(_parameters,_args,_onFinish,_onFail,_condition,_player,_startTime,_totalTime,_exceptions);
+    private ["_elapsedTime", "_errorCode"];
+
+    _elapsedTime = time - _startTime;
+    _errorCode = -1;
+
+    // this does not check: target fell unconscious, target died, target moved inside vehicle / left vehicle, target moved outside of players range, target moves at all.
+    if (isNull (uiNamespace getVariable [QGVAR(ctrlProgressBar), controlNull])) then {
+        _errorCode = 1;
+    } else {
+        if (ACE_player != _player) then {
+            _errorCode = 2;
+        } else {
+            if (!([_args, _elapsedTime, _totalTime, _errorCode] call _condition)) then {
+                _errorCode = 3;
+            } else {
+                if (!([_player, objNull, _exceptions] call EFUNC(common,canInteractWith))) then {
+                    _errorCode = 4;
+                } else {
+                    if (_elapsedTime >= _totalTime) then {
+                        _errorCode = 0;
+                    };
+                };
+            };
+        };
+    };
+
+    if (_errorCode != -1) then {
+        //Error or Success, close dialog and remove PFEH
+
+        //Only close dialog if it's the progressBar:
+        if (!isNull (uiNamespace getVariable [QGVAR(ctrlProgressBar), controlNull])) then {
+            closeDialog 0;
+        };
+        [_pfhID] call CBA_fnc_removePerFrameHandler;
+
+        if (_errorCode == 0) then {
+            if ((typeName _onFinish) == (typeName "")) then {
+                [_onFinish, [_args, _elapsedTime, _totalTime, _errorCode]] call FUNC(localEvent);
+            } else {
+                [_args, _elapsedTime, _totalTime, _errorCode] call _onFinish;
+            };
+        } else {
+            if ((typeName _onFail) == (typeName "")) then {
+                [_onFail, [_args, _elapsedTime, _totalTime, _errorCode]] call FUNC(localEvent);
+            } else {
+                [_args, _elapsedTime, _totalTime, _errorCode] call _onFail;
+            };
+        };
+    } else {
+        //Update Progress Bar (ratio of elepased:total)
+        (uiNamespace getVariable QGVAR(ctrlProgressBar)) progressSetPosition (_elapsedTime / _totalTime);
+    };
+};
+
+[_perFrameFunction, 0, [_args, _onFinish, _onFail, _condition, _player, time, _totalTime, _exceptions]] call CBA_fnc_addPerFrameHandler;

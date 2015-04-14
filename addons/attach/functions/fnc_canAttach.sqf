@@ -1,21 +1,30 @@
-#include "script_component.hpp"
-
 /*
  * Author: commy2
- *
  * Check if a unit can attach a specific item.
- * 
- * Argument:
- * 0: Unit that wants to attach the object (Object)
- * 1: Name of the attachable item (String)
- * 
- * Return value:
- * Boolean (Bool)
+ *
+ * Arguments:
+ * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
+ * 1: unit doing the attach (player) <OBJECT>
+ * 2: Array empty or containing a string of the attachable item <ARRAY>
+ *
+ * Return Value:
+ * Can Attach <BOOL>
+ *
+ * Example:
+ * [bob, bob, ["light"]] call ace_attach_fnc_canAttach;
+ *
+ * Public: No
  */
+#include "script_component.hpp"
 
-private ["_unit", "_item"];
+PARAMS_3(_attachToVehicle,_player,_args);
 
-_unit = _this select 0;
-_item = _this select 1;
+private ["_itemName", "_attachLimit", "_attachedObjects"];
 
-canStand _unit && {_unit getVariable [QGVAR(ItemName), ""] == ""} && {_item in (magazines _unit + items _unit + [""])}
+_itemName = [_args, 0, ""] call CBA_fnc_defaultParam;
+_attachLimit = [6, 1] select (_player == _attachToVehicle);
+_attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
+
+_playerPos = (ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot"));
+
+(canStand _player) && {(_attachToVehicle distance _player) < 7} && {alive _attachToVehicle} && {(count _attachedObjects) < _attachLimit} && {_itemName in ((itemsWithMagazines _player) + [""])};

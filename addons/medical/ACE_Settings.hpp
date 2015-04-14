@@ -1,0 +1,120 @@
+class ACE_Settings {
+    class GVAR(level) {
+        value = 1;
+        typeName = "SCALAR";
+        values[] = {"Disabled", "Basic", "Advanced"};
+    };
+    class GVAR(medicSetting) {
+        value = 1;
+        typeName = "SCALAR";
+        values[] = {"Disabled", "Normal", "Advanced"};
+    };
+    class GVAR(enableFor) {
+        value = 0;
+        typeName = "SCALAR";
+        values[] = {"Players only", "Players and AI"};
+    };
+    class GVAR(enableOverdosing) {
+        typeName = "BOOL";
+        value = 1;
+    };
+    class GVAR(bleedingCoefficient) {
+        typeName = "SCALAR";
+        value = 1;
+    };
+    class GVAR(enableAirway) {
+        typeName = "BOOL";
+        value = false;
+    };
+    class GVAR(enableFractures) {
+        typeName = "BOOL";
+        value = false;
+    };
+    class GVAR(enableAdvancedWounds) {
+        typeName = "BOOL";
+        value = false;
+    };
+    class GVAR(enableVehicleCrashes) {
+        typeName = "BOOL";
+        value = 1;
+    };
+    class GVAR(enableScreams) {
+        typeName = "BOOL";
+        value = 1;
+    };
+    class GVAR(playerDamageThreshold) {
+        typeName = "SCALAR";
+        value = 1;
+    };
+    class GVAR(AIDamageThreshold) {
+        typeName = "SCALAR";
+        value = 1;
+    };
+    class GVAR(enableUnsconsiousnessAI) {
+        value = 1;
+        typeName = "SCALAR";
+        values[] = {"Disabled", "Enabled", "50/50"};
+    };
+    class GVAR(preventInstaDeath) {
+        typeName = "BOOL";
+        value = 0;
+    };
+    class GVAR(maxReviveTime) {
+        typeName = "SCALAR";
+        value = 120;
+    };
+    class GVAR(amountOfReviveLives) {
+        typeName = "SCALAR";
+        value = -1;
+    };
+    class GVAR(allowDeadBodyMovement) {
+        typeName = "BOOL";
+        value = 0;
+    };
+    class GVAR(allowLitterCreation) {
+        typeName = "BOOL";
+        value = true;
+    };
+    class GVAR(litterCleanUpDelay) {
+        typeName = "SCALAR";
+        value = 1800;
+    };
+    class GVAR(medicSetting_PAK) {
+        typeName = "SCALAR";
+        value = 1;
+        values[] = {"Anyone", "Medics only", "Doctors only"};
+    };
+    class GVAR(medicSetting_SurgicalKit) {
+        typeName = "SCALAR";
+        value = 1;
+        values[] = {"Anyone", "Medics only", "Doctors only"};
+    };
+    class GVAR(consumeItem_PAK) {
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"No", "Yes"};
+    };
+    class GVAR(consumeItem_SurgicalKit) {
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"No", "Yes"};
+    };
+    class GVAR(useLocation_PAK) {
+        typeName = "SCALAR";
+        value = 3;
+        values[] = {"Anywhere", "Medical vehicles", "Medical facility", "vehicle & facility", "Disabled"};
+    };
+    class GVAR(useLocation_SurgicalKit) {
+        typeName = "SCALAR";
+        value = 2;
+        values[] = {"Anywhere", "Medical vehicles", "Medical facility", "vehicle & facility", "Disabled"};
+    };
+    class GVAR(keepLocalSettingsSynced) {
+        typeName = "BOOL";
+        value = 1;
+    };
+    class GVAR(healHitPointAfterAdvBandage) {
+        typeName = "BOOL";
+        value = 1;
+    };
+};

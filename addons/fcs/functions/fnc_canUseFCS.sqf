@@ -12,6 +12,5 @@
 
 #include "script_component.hpp"
 
-_player == gunner _vehicle
-&& {getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(Enabled)) == 1}
+getNumber ([configFile >> "CfgVehicles" >> typeOf vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex)] call EFUNC(common,getTurretConfigPath) >> QGVAR(Enabled)) == 1
 && {cameraView == "GUNNER"}

@@ -36,14 +36,10 @@ if (count _this > 3) then {
 };
 
 // don't overwrite more important animations
-if (_unit getVariable ["ACE_isUnconscious", false] && {!_force}) exitWith {
-  if (_animation != "Unconscious") then {
-    [_unit, "Unconscious", 2] call FUNC(doAnimation);
-  };
-};
+if (_unit getVariable ["ACE_isUnconscious", false] && {(_animation != "Unconscious")} && {!_force}) exitWith {};
 
 // don't go unconscious if the unit isn't unconscious
-if (_animation == "Unconscious" && {!(_unit getVariable ["ACE_isUnconscious", false])}) exitWith {};
+if (_animation == "Unconscious" && {!((_unit getVariable ["ACE_isUnconscious", false]) || (_unit getVariable ["ACE_isDead", false]))}) exitWith {};
 
 // switchMove "" no longer works in dev 1.37
 if (_animation == "") then {

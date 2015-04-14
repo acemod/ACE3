@@ -2,25 +2,24 @@
 #include "script_component.hpp"
 
 #define MIN_DISTANCE 10
-#define MAX_DISTANCE ([6000, 9000] select (AGM_vectorSettings select 3))
-#define INTERVAL 2
+#define MAX_DISTANCE [6000, 9000] select GVAR(useFeet)
 
-private ["_dlgVectorOptics", "_distance"];
+private ["_dlgVector", "_distance"];
 
 disableSerialization;
-_dlgVectorOptics = uiNamespace getVariable ['AGM_dlgVectorOptics', displayNull];
+_dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
-_distance = ctrlText (_dlgVectorOptics displayCtrl 151);
+_distance = ctrlText (_dlgVector displayCtrl 151);
 
-if (_distance == "----") exitWith {-9999};
+if (_distance == "----") exitWith {-1000};
 
 _distance = round parseNumber _distance;
 
-if (AGM_vectorSettings select 3) then {
-  _distance = 3.28084 * _distance;
+if (GVAR(useFeet)) then {
+    _distance = 3.28084 * _distance;
 };
 
-if (_distance > MAX_DISTANCE) exitWith {-9999};
-if (_distance < MIN_DISTANCE) exitWith {-9999};
+if (_distance > MAX_DISTANCE) exitWith {-1000};
+if (_distance < MIN_DISTANCE) exitWith {-1000};
 
 _distance

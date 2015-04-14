@@ -1,62 +1,89 @@
+/*
+ * Author: eRazeri, esteldunedain, PabstMirror
+ * Attach an item to the unit
+ *
+ * Arguments:
+ * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
+ * 1: unit doing the attach (player) <OBJECT>
+ * 2: Array containing a string of the attachable item <ARRAY>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [bob, bob, ["light"]] call ace_attach_fnc_attach;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-/*
-Author: eRazeri and CAA-Picard
+private ["_itemClassname", "_itemVehClass", "_onAtachText", "_selfAttachPosition", "_attachedItem", "_tempObject", "_actionID"];
 
-Attach an item to the unit
+PARAMS_3(_attachToVehicle,_unit,_args);
+_itemClassname = [_args, 0, ""] call CBA_fnc_defaultParam;
 
-Arguments:
-0: unit
-1: Item name
+//Sanity Check (_unit has item in inventory, not over attach limit)
+if ((_itemClassname == "") || {!(_this call FUNC(canAttach))}) exitWith {ERROR("Tried to attach, but check failed");};
 
-Return Value:
-none
-*/
+_selfAttachPosition = [_unit, [-0.05, 0, 0.12], "rightshoulder"];
 
-private ["_unit", "_itemName", "_attachedItem"];
+_itemVehClass = getText (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_Attachable");
+_onAtachText = getText (configFile >> "CfgWeapons" >> _itemClassname >> "displayName");
 
-_unit = _this select 0;
-_itemName = _this select 1;
-
-// Check if unit has an attached item
-if (_unit getVariable [QGVAR(ItemName), ""] != "") exitWith {};
-
-// Check if the unit still has the item
-if !((_itemName in items _unit) or (_itemName in magazines _unit)) exitWith {};
-
-// Attach item
-switch true do {
-  case (_itemName == "ACE_IR_Strobe_Item") : {
-    _attachedItem = "ACE_IR_Strobe_Effect" createVehicle [0,0,0];
-    _attachedItem attachTo [_unit,[0,-0.11,0.16],"pilot"];//makes it attach to the head a bit better, shoulder is not good for visibility - eRazeri
-    [localize "STR_ACE_Attach_IrStrobe_Attached"] call EFUNC(common,displayTextStructured);
-  };
-  case (_itemName == "B_IR_Grenade") : {
-    _attachedItem = "B_IRStrobe" createVehicle [0,0,0];
-    _attachedItem attachTo [_unit,[-0.05,0,0.12],"rightshoulder"];
-    [localize "STR_ACE_Attach_IrGrenade_Attached"] call EFUNC(common,displayTextStructured);
-  };
-  case (_itemName == "O_IR_Grenade") : {
-    _attachedItem = "O_IRStrobe" createVehicle [0,0,0];
-    _attachedItem attachTo [_unit,[-0.05,0,0.12],"rightshoulder"];
-    [localize "STR_ACE_Attach_IrGrenade_Attached"] call EFUNC(common,displayTextStructured);
-  };
-  case (_itemName == "I_IR_Grenade") : {
-    _attachedItem = "I_IRStrobe" createVehicle [0,0,0];
-    _attachedItem attachTo [_unit,[-0.05,0,0.12],"rightshoulder"];
-    [localize "STR_ACE_Attach_IrGrenade_Attached"] call EFUNC(common,displayTextStructured);
-  };
-  case (_itemName == "Chemlight_blue" or {_itemName == "Chemlight_green"} or {_itemName == "Chemlight_red"} or {_itemName == "Chemlight_yellow"}) : {
-    _attachedItem = _itemName createVehicle [0,0,0];
-    _attachedItem attachTo [_unit,[-0.05,0,0.12],"rightshoulder"];
-    [localize "STR_ACE_Attach_Chemlight_Attached"] call EFUNC(common,displayTextStructured);;
-  };
-  default {
-    if (true) exitWith {};
-  };
+if (_itemVehClass == "") then {
+    _itemVehClass = getText (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_Attachable");
+    _onAtachText = getText (configFile >> "CfgMagazines" >> _itemClassname >> "displayName");
 };
 
-// Remove item
-_unit removeItem _itemName;
-_unit setVariable [QGVAR(ItemName), _itemName, true];
-_unit setVariable [QGVAR(Item), _attachedItem, true];
+if (_itemVehClass == "") exitWith {ERROR("no ACE_Attachable for Item");};
+
+_onAtachText = format [localize "STR_ACE_Attach_Item_Attached", _onAtachText];
+
+if (_unit == _attachToVehicle) then {  //Self Attachment
+    _unit removeItem _itemClassname;  // Remove item
+    _attachedItem = _itemVehClass createVehicle [0,0,0];
+    _attachedItem attachTo _selfAttachPosition;
+    [_onAtachText] call EFUNC(common,displayTextStructured);
+    _attachToVehicle setVariable [QGVAR(Objects), [_attachedItem], true];
+    _attachToVehicle setVariable [QGVAR(ItemNames), [_itemClassname], true];
+} else {
+    GVAR(placeAction) = -1;
+
+    _tempObject = _itemVehClass createVehicleLocal [0,0,-10000];
+    _tempObject enableSimulationGlobal false;
+
+    [_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
+
+    //MenuBack isn't working for now (localize "STR_ACE_Attach_CancelAction")
+    [{[localize "STR_ACE_Attach_PlaceAction", ""] call EFUNC(interaction,showMouseHint)}, [], 0, 0] call EFUNC(common,waitAndExecute);
+    _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = 1;}] call EFUNC(common,AddActionEventHandler)];
+    // _unit setVariable [QGVAR(cancelActionEH), [_unit, "MenuBack", {true}, {GVAR(placeAction) = 0;}] call EFUNC(common,AddActionEventHandler)];
+
+    _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize "STR_ACE_Attach_CancelAction"], {GVAR(placeAction) = 0}];
+
+    [{
+        PARAMS_2(_args,_pfID);
+        EXPLODE_7_PVT(_args,_unit,_attachToVehicle,_itemClassname,_itemVehClass,_tempObject,_onAtachText,_actionID);
+
+        if ((GVAR(placeAction) != -1) ||
+                {_unit != ACE_player} ||
+                {!([_unit, _attachToVehicle, []] call EFUNC(common,canInteractWith))} ||
+                {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) then {
+
+            [_pfID] call CBA_fnc_removePerFrameHandler;
+            [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+            [] call EFUNC(interaction,hideMouseHint);
+            [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
+            //[_unit, "MenuBack", (_unit getVariable [QGVAR(cancelActionEH), -1])] call EFUNC(common,removeActionEventHandler);
+            _unit removeAction _actionID;
+
+            if (GVAR(placeAction) == 1) then {
+                _startingPosition = _tempObject modelToWorldVisual [0,0,0];
+                [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAtachText, _startingPosition] call FUNC(placeApprove);
+            };
+            deleteVehicle _tempObject;
+        } else {
+            _tempObject setPosATL ((ASLtoATL eyePos _unit) vectorAdd (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]));;
+        };
+    }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _tempObject, _onAtachText, _actionID]] call CBA_fnc_addPerFrameHandler;
+};

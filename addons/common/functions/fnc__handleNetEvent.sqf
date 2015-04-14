@@ -7,18 +7,26 @@ private ["_eventType", "_event", "_eventName", "_eventArgs", "_eventNames", "_ev
 _eventType = _this select 0;
 _event = _this select 1;
 
-
 if(_eventType == "ACEg") then {
     _eventName = _event select 0;
     _eventArgs = _event select 1;
     
-    _eventNames = GVAR(netEvents) select 0;
+    _eventNames = GVAR(events) select 0;
     _eventIndex = _eventNames find _eventName;
     if(_eventIndex != -1) then {
-        _events = (GVAR(netEvents) select 1) select _eventIndex;
+        _events = (GVAR(events) select 1) select _eventIndex;
+        
+        #ifdef DEBUG_EVENTS
+            diag_log text format[ARR_2("* Net Event %1",_eventName)];
+            diag_log text format[ARR_2("    args=%1",_eventArgs)];
+        #endif
+        
         {
             if(!isNil "_x") then {
                 _eventArgs call CALLSTACK_NAMED(_x, format[ARR_3("Net Event %1 ID: %2",_eventName,_forEachIndex)]);
+                #ifdef DEBUG_EVENTS_CALLSTACK
+                    diag_log text format[ARR_2("    ID: %1",_forEachIndex)];
+                #endif
             };
         } forEach _events;
     };
@@ -34,6 +42,13 @@ if(_eventType == "ACEc") then {
         if(!IS_ARRAY(_eventTargets)) then {
             _eventTargets = [_eventTargets];
         };
+
+        //If not multiplayer, and there are targets, then just run localy
+        if ((!isMultiplayer) && {(count _eventTargets) > 0}) exitWith {
+          ACEg = [_eventName, _eventArgs];
+          ["ACEg", ACEg] call FUNC(_handleNetEvent);
+        };
+
         _serverFlagged = false;
         {
             _owner = _x;

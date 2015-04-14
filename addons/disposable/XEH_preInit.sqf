@@ -1,6 +1,9 @@
 #include "script_component.hpp"
 
-PREP(aiDropWeaponCallback);
+ADDON = false;
+
 PREP(replaceATWeapon);
 PREP(takeLoadedATWeapon);
 PREP(updateInventoryDisplay);
+
+ADDON = true;

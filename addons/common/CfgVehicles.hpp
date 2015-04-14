@@ -33,7 +33,7 @@ class CfgVehicles {
     function = QFUNC(moduleCheckPBOs);
     scope = 2;
     isGlobal = 1;
-    icon = QUOTE(PATHTOF(UI\IconCheckPBO_ca.paa));
+    icon = QUOTE(PATHTOF(UI\Icon_Module_CheckPBO_ca.paa));
     class Arguments {
       class Action {
         displayName = "Action";
@@ -87,6 +87,7 @@ class CfgVehicles {
     displayName = "LSD Vehicles";
     function = "ACE_Common_fnc_moduleLSDVehicles";
     scope = 2;
+    icon = QUOTE(PATHTOF(UI\Icon_Module_LSD_ca.paa));
     isGlobal = 1;
     class Arguments {
     };
@@ -99,11 +100,28 @@ class CfgVehicles {
     transportMaxWeapons = 9001;
     transportMaxMagazines = 9001;
     transportMaxItems = 9001;
-    maximumload = 2000;
+    maximumload = 9001;
 
     class TransportWeapons {};
     class TransportMagazines {};
     class TransportItems {};
     class TransportBackpacks {};
   };
+
+    class Item_Base_F;
+    class ACE_bananaItem: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "$STR_ACE_Common_bananaDisplayName";
+        author = "$STR_ACE_Common_ACETeam";
+        vehicleClass = "Items";
+        class TransportItems
+        {
+            class ACE_banana
+            {
+                name = "ACE_banana";
+                count = 1;
+            };
+        };
+    };
 };

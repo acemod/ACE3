@@ -16,7 +16,8 @@ private ["_unit", "_vehicle", "_turrets", "_units", "_index"];
 _unit = _this select 0;
 _vehicle = vehicle _unit;
 
-//_turrets = [typeOf _vehicle] call FUNC(getTurrets);
+if (_unit == _vehicle) exitWith {[]};
+
 _turrets = allTurrets [_vehicle, true];
 
 _units = [];

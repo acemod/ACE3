@@ -1,13 +1,16 @@
 // by commy2
+#include "script_component.hpp"
 
-/*player setVariable ["AGM_cooldownVector", 0, false];
+if (!hasInterface) exitWith {};
 
-AGM_isVectorReady = true;
-AGM_vectorKey = [false, false];
-AGM_vectorConfig = [0, 0];
-AGM_vectorSettings = [false, false, false, false];
+GVAR(holdKeyHandler) = -1;
+GVAR(isKeyDownAzimuth) = false;
+GVAR(isKeyDownDistance) = false;
+GVAR(keyDownTimeAzimuth) = -1;
+GVAR(keyDownTimeDistance) = -1;
+GVAR(useMil) = false;
+GVAR(useFeet) = false;
+GVAR(modeReticle) = 0;
+GVAR(illuminate) = false;
 
-0 spawn {
-  waitUntil {preloadTitleRsc ["AGM_Digit_Preload", "PLAIN"]};
-  waitUntil {preloadTitleRsc ["AGM_Debug_Crosshair", "PLAIN"]};
-};*/
+#include "initKeybinds.sqf"
