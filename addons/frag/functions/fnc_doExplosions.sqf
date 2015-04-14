@@ -5,7 +5,7 @@ private ["_params", "_explosions", "_index", "_i", "_exp", "_refExp", "_bpos", "
 _params = _this select 0;
 _explosions = _params select 0;
 _index = _params select 1;
-for "_i" from _index to ((_index+1) min (count _explosions)) do {
+for "_i" from _index to ((_index+2) min (count _explosions)) do {
     _exp = _explosions select _i;
     _refExp = _exp select 0;
     _bpos = _exp select 1;
@@ -18,7 +18,7 @@ for "_i" from _index to ((_index+1) min (count _explosions)) do {
         // [_bpos, _refExp, _depth] call FUNC(doReflections);
     // };
 };
-_index = _index + 1;
+_index = _index + 2;
 if(_index >= (count _explosions)) then {
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
 } else {
