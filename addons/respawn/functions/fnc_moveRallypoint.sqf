@@ -26,8 +26,8 @@ _this spawn {
     _rallypoint = [
         objNull,
         missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
-        missionNamespace getVariable ["ACE_RallypointExit_East", objNull],
-        missionNamespace getVariable ["ACE_RallypointExit_Independent", objNull]
+        missionNamespace getVariable ["ACE_Rallypoint_East", objNull],
+        missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]
     ] select ([west, east, independent] find _side) + 1;
 
     if (isNull _rallypoint) exitWith {};
@@ -50,5 +50,5 @@ _this spawn {
     _marker setMarkerTextLocal format ["%1:%2", [date select 3, 2, 0] call CBA_fnc_FORMATNumber, [date select 4, 2, 0] call CBA_fnc_FORMATNumber];
     */
 
-    [localize "STR_ACE_Respawn_Deploy"] call EFUNC(common,displayTextStructured);
+    [localize "STR_ACE_Respawn_Deployed"] call EFUNC(common,displayTextStructured);
 };
