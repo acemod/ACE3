@@ -12,7 +12,7 @@
  *    Boolean
  */
  
- #define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 private["_seeker", "_targetPos", "_seekerMaxAngle", "_vectorTo", "_sensorPos", "_vertOk", "_horzOk", "_dir", "_headingPitch"];
 
