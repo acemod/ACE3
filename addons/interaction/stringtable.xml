@@ -8,6 +8,7 @@
             <Czech>Interakce</Czech>
             <Polish>Interakcje</Polish>
             <French>Interactions</French>
+            <Russian>Взаимодействия</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_Torso">
             <English>Torso</English>
@@ -17,6 +18,7 @@
             <Czech>Trup</Czech>
             <Polish>Tors</Polish>
             <French>Torse</French>
+            <Russian>Торс</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_Head">
             <English>Head</English>
@@ -26,6 +28,7 @@
             <Czech>Hlava</Czech>
             <Polish>Głowa</Polish>
             <French>Tête</French>
+            <Russian>Голова</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmLeft">
             <English>Left Arm</English>
@@ -34,6 +37,7 @@
             <Czech>Levá paže</Czech>
             <Polish>Lewe ramię</Polish>
             <French>Bras gauche</French>
+            <Russian>Левая рука</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmRight">
             <English>Right Arm</English>
@@ -42,6 +46,7 @@
             <Czech>Pravá paže</Czech>
             <Polish>Prawe ramię</Polish>
             <French>Bras droit</French>
+            <Russian>Правая рука</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_LegLeft">
             <English>Left Leg</English>
@@ -50,6 +55,7 @@
             <Czech>Levá noha</Czech>
             <Polish>Lewa noga</Polish>
             <French>Jambe gauche</French>
+            <Russian>Левая нога</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_LegRight">
             <English>Right Leg</English>
@@ -58,6 +64,7 @@
             <Czech>Pravá hona</Czech>
             <Polish>Prawa noga</Polish>
             <French>Jambe droite</French>
+            <Russian>Правая нога</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_Weapon">
             <English>Weapon</English>
@@ -67,6 +74,7 @@
             <Czech>Zbraň</Czech>
             <Polish>Broń</Polish>
             <French>Arme</French>
+            <Russian>Оружие</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_InteractionMenu">
             <English>Interaction Menu</English>
@@ -412,7 +420,7 @@
             <Polish>Zostałeś klepnięty po ramieniu</Polish>
             <Hungarian>Vállonveregettek</Hungarian>
             <Czech>Někdo tě poklepal na PRAVÉ rameno</Czech>
-            <Russian>Вас похлопали по плечу</Russian>
+            <Russian>Вас похлопали по ПРАВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro</Portuguese>
             <Italian>Ti è stato dato un colpetto sulla spalla</Italian>
         </Key>
@@ -424,7 +432,7 @@
             <Polish>Zostałeś klepnięty po ramieniu</Polish>
             <Hungarian>Vállonveregettek</Hungarian>
             <Czech>Někdo tě poklepal na LEVÉ rameno</Czech>
-            <Russian>Вас похлопали по плечу</Russian>
+            <Russian>Вас похлопали по ЛЕВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro.</Portuguese>
             <Italian>Ti è stato dato un colpetto sulla spalla</Italian>
         </Key>
