@@ -1,4 +1,4 @@
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 #define STAGE_LAUNCH 1
@@ -64,7 +64,7 @@ switch( (_state select 0) ) do {
     };
     case STAGE_TERMINAL: {
         TRACE_1("STAGE_TERMINAL","");
-        
+        //_returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget * 0.02];
     };
 };
 

@@ -43,8 +43,8 @@ class CfgAmmo {
         class ADDON {
             enabled = 1;
             
-            minDeflection = 0.0005;      // Minium flap deflection for guidance
-            maxDeflection = 0.0025;       // Maximum flap deflection for guidance
+            minDeflection = 0.00025;      // Minium flap deflection for guidance
+            maxDeflection = 0.00025;       // Maximum flap deflection for guidance
             incDeflection = 0.0005;      // The incrmeent in which deflection adjusts.
             //minDeflection = 0.005; 
             //maxDeflection = 0.5;
@@ -113,9 +113,9 @@ class CfgAmmo {
         class ADDON {
             enabled = 1;
             
-            minDeflection = 0.005;      // Minium flap deflection for guidance
-            maxDeflection = 0.25;       // Maximum flap deflection for guidance
-            incDeflection = 0.005;      // The incrmeent in which deflection adjusts.
+            minDeflection = 0.00005;      // Minium flap deflection for guidance
+            maxDeflection = 0.025;       // Maximum flap deflection for guidance
+            incDeflection = 0.00005;      // The incrmeent in which deflection adjusts.
             //minDeflection = 0.005; 
             //maxDeflection = 0.5;
             //incDeflection = 0.005;

@@ -2,6 +2,7 @@
 
 PREP(rotateVectLineGetMap);
 PREP(rotateVectLine);
+PREP(changeMissileDirection);
 
 PREP(checkSeekerAngle);
 PREP(checkLos);

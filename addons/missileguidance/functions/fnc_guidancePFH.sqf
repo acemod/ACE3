@@ -85,8 +85,7 @@ TRACE_4("", _targetVector, _targetRelativeVector, _adjustVector, _finalAdjustVec
 
 if(accTime > 0) then {
     _changeVector = (vectorDir _projectile) vectorAdd _finalAdjustVector;
-    //_changeVector = (vectorDir _projectile) vectorAdd _adjustVector; // Test direct to target
-    _projectile setVectorDirAndUp [_changeVector, vectorUp _projectile];
+    [_projectile, _changeVector] call FUNC(changeMissileDirection);
 };
 
 #ifdef DEBUG_MODE_FULL
