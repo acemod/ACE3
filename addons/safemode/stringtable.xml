@@ -42,5 +42,11 @@
       <Hungarian>veszélyes</Hungarian>
       <Russian>Снят с предохранителя</Russian>
     </Key>
+    <Key ID="STR_ACE_SafeMode_SettingDisplayTextName">
+      <English>Display text on weapon safety</English>
+    </Key>
+    <Key ID="STR_ACE_SafeMode_SettingDisplayTextDesc">
+      <English>Display a hint or text on weapon safety.</English>
+    </Key>
   </Package>
 </Project>

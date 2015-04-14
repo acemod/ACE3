@@ -21,3 +21,23 @@ if (!hasInterface) exitWith {};
 },
 {false},
 [41, [false, true, false]], false] call cba_fnc_addKeybind;
+
+GVAR(safetyLockedOnInteract) = false;
+
+["interactMenuOpened", {
+	private ["_safedWeapons"];
+	_safedWeapons = ACE_player getVariable [QGVAR(safedWeapons), []];
+
+	if (currentWeapon ACE_player in _safedWeapons) exitWith {};
+	GVAR(safetyLockedOnInteract) = true;
+
+	[ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call FUNC(lockSafety);
+
+}] call ace_common_fnc_addEventHandler;
+
+["interactMenuClosed", {
+	if (GVAR(safetyLockedOnInteract)) then {
+		[ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call FUNC(unlockSafety);
+		GVAR(safetyLockedOnInteract) = false;
+	};
+}] call ace_common_fnc_addEventHandler;
