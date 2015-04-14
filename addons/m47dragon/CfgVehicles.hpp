@@ -52,17 +52,10 @@ class CfgVehicles {
 				displayName = "";
 				class ViewOptics: ViewOptics
 				{
-					initAngleX = 0;
-					minAngleX = -30;
-					maxAngleX = 30;
-					initAngleY = 0;
-					minAngleY = -100;
-					maxAngleY = 100;
-					initFov = 0.08333;
-					minFov = 0.04167;
-					maxFov = 0.08333;
-					visionMode[] = {"Normal","Ti"};
-					thermalMode[] = {0,1};
+					initFov = 0.015;
+					minFov = 0.015;
+					maxFov = 0.015;
+					visionMode[] = {"Normal"};
 				};
 				gunnerRightHandAnimName = "OtocHlaven_shake";
 				gunnerLeftHandAnimName = "OtocHlaven_shake";
