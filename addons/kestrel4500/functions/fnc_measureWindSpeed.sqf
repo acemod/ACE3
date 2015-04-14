@@ -28,8 +28,6 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
     _windSpeed = (eyePos ACE_player) call FUNC(calculateWindSpeed);
 };
 
-hintSilent format["%1, %2", GVAR(MeasuredWindSpeed), _windSpeed];
-
 if (_windSpeed > 0.3 || {GVAR(MeasuredWindSpeed) > 0.1 && _windSpeed > 0.125}) then {
    GVAR(MeasuredWindSpeed) = _windSpeed;
 } else {
