@@ -46,20 +46,20 @@ _zero      = _zeroing select 2;
 
 switch (_turretAndDirection) do
 {
-	case ELEVATION_UP:   { _elevation = _elevation + _increment };
-	case ELEVATION_DOWN: { _elevation = _elevation - _increment };
-	case WINDAGE_LEFT:   { _windage = _windage - _increment };
-	case WINDAGE_RIGHT:  { _windage = _windage + _increment };
+    case ELEVATION_UP:   { _elevation = _elevation + _increment };
+    case ELEVATION_DOWN: { _elevation = _elevation - _increment };
+    case WINDAGE_LEFT:   { _windage = _windage - _increment };
+    case WINDAGE_RIGHT:  { _windage = _windage + _increment };
 };
 
 if (_majorStep) then {
-	switch (_turretAndDirection) do
-	{
-		case ELEVATION_UP:   { _elevation = ceil(_elevation) };
-		case ELEVATION_DOWN: { _elevation = floor(_elevation) };
-		case WINDAGE_LEFT:   { _windage = floor(_windage) };
-		case WINDAGE_RIGHT:  { _windage = ceil(_windage) };
-	};
+    switch (_turretAndDirection) do
+    {
+        case ELEVATION_UP:   { _elevation = ceil(_elevation) };
+        case ELEVATION_DOWN: { _elevation = floor(_elevation) };
+        case WINDAGE_LEFT:   { _windage = floor(_windage) };
+        case WINDAGE_RIGHT:  { _windage = ceil(_windage) };
+    };
 };
 
 _elevation = round(_elevation * 10) / 10;
