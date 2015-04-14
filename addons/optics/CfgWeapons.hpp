@@ -215,6 +215,11 @@ class CfgWeapons {
     };
 
     class ACE_optic_SOS_2D: optic_SOS {
+        GVAR(BodyDay) = QUOTE(PATHTOF(reticles\sos-body_ca.paa));
+        GVAR(BodyNight) = QUOTE(PATHTOF(reticles\sos-bodyNight_ca.paa));
+        GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\sos-reticleMLR_ca.paa));
+        GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\sos-reticleMLRIllum_ca.paa));
+
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_SOS_2D";
         displayName = "$STR_ACE_optic_sos";
@@ -232,11 +237,6 @@ class CfgWeapons {
     };
 
     class ACE_optic_SOS_PIP: ACE_optic_SOS_2D {
-        GVAR(BodyDay) = QUOTE(PATHTOF(reticles\sos-body_ca.paa));
-        GVAR(BodyNight) = QUOTE(PATHTOF(reticles\sos-bodyNight_ca.paa));
-        GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\sos-reticleMLR_ca.paa));
-        GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\sos-reticleMLRIllum_ca.paa));
-
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_SOS_PIP";
         scopeArsenal = 1;

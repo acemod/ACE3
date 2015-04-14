@@ -27,4 +27,4 @@
     [ACE_player] call FUNC(cycleFireMode);
     false
 },
-[15, [false, true, false]], false] call cba_fnc_addKeybind;  //Shift+Tab Key
+[15, [false, true, false]], false] call cba_fnc_addKeybind;  //Ctrl+Tab Key
