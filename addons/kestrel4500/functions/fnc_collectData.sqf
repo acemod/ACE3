@@ -13,7 +13,6 @@
  * Public: No
  */
 #include "script_component.hpp"
-#include "defines.h"
 
 private ["_playerDir", "_windSpeed", "_windDir", "_crosswind", "_headwind", "_humidity", "_temperature", "_humidity", "_barometricPressure", "_altitude"];
 
@@ -40,7 +39,7 @@ if (GVAR(MinAvgMaxMode) == 1) then {
     {
         GVAR(ENTRIES) set [_x, (GVAR(ENTRIES) select _x) + 1];
     } forEach [1, 2, 3];
-    
+
     // Wind SPD
     _windSpeed = call FUNC(measureWindSpeed);
     GVAR(MIN) set [1, (GVAR(MIN) select 1) min abs(_windSpeed)];
