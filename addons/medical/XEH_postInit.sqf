@@ -153,11 +153,6 @@ GVAR(effectTimeBlood) = time;
 GVAR(lastHeartBeat) = time;
 GVAR(lastHeartBeatSound) = time;
 
-// @todo, remove once parameters are set up
-if (isNil QGVAR(level)) then {
-  GVAR(level) = 0;
-};
-
 // HEARTRATE BASED EFFECTS
 [{
     _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
@@ -172,8 +167,7 @@ if (isNil QGVAR(level)) then {
         // Pain effect
         _strength = ACE_player getVariable [QGVAR(pain), 0];
         // _strength = _strength * (ACE_player getVariable [QGVAR(coefPain), GVAR(coefPain)]); @todo
-        GVAR(alternativePainEffect) = false; // @todo
-        if (GVAR(alternativePainEffect)) then {
+        if (GVAR(painEffectType) == 1) then {
             GVAR(effectPainCC) ppEffectEnable false;
             if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
                 _strength = _strength * 0.15;
@@ -198,7 +192,7 @@ if (isNil QGVAR(level)) then {
         } else {
             GVAR(effectPainCA) ppEffectEnable false;
             if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
-                _strength = _strength * 0.6;
+                _strength = _strength * 0.9;
                 GVAR(effectPainCC) ppEffectEnable true;
                 GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - _strength,1 - _strength,0,0,0,0.2,2]];
                 GVAR(effectPainCC) ppEffectCommit 0.01;
@@ -266,3 +260,8 @@ if (USE_WOUND_EVENT_SYNC) then {
 // Prevent all types of interaction while unconscious
 // @todo: probably remove this when CBA keybind hold key works properly
 ["isNotUnconscious", {!((_this select 0) getVariable ["ACE_isUnconscious", false])}] call EFUNC(common,addCanInteractWithCondition);
+
+// Item Event Handler
+["playerInventoryChanged", {
+    [ACE_player] call FUNC(itemCheck);
+}] call EFUNC(common,addEventHandler);
