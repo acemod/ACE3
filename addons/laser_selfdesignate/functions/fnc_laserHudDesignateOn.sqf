@@ -43,8 +43,8 @@ FUNC(laserHudDesignatePFH) = {
     _turretInfo = [_vehicle, _gunnerInfo select 1] call EFUNC(common,getTurretDirection);
     _povPos = _turretInfo select 0;
     
-    _laserCode = (vehicle ACE_player) getVariable[QGVAR(currentCode), ACE_DEFAULT_LASER_CODE];
-    _waveLength = (vehicle ACE_player) getVariable[QGVAR(currentWaveLength), ACE_DEFAULT_LASER_WAVELENGTH];
+    _laserCode = (vehicle ACE_player) getVariable["ace_laser_code", ACE_DEFAULT_LASER_CODE];
+    _waveLength = (vehicle ACE_player) getVariable["ace_laser_waveLength", ACE_DEFAULT_LASER_WAVELENGTH];
     
     
     _laserResult = [_povPos, [_waveLength,_waveLength], _laserCode] call EFUNC(laser,seekerFindLaserSpot);
@@ -73,9 +73,9 @@ if(!GVAR(active)) then {
     TRACE_1("Activating laser", "");
     
     // Get the self-designation variables, or use defaults
-    _laserCode = (vehicle ACE_player) getVariable[QGVAR(currentCode), ACE_DEFAULT_LASER_CODE];
-    _waveLength = (vehicle ACE_player) getVariable[QGVAR(currentWaveLength), ACE_DEFAULT_LASER_WAVELENGTH];
-    _beamSpread = (vehicle ACE_player) getVariable[QGVAR(currentBeamSpread), ACE_DEFAULT_LASER_BEAMSPREAD];
+    _laserCode = (vehicle ACE_player) getVariable["ace_laser_code", ACE_DEFAULT_LASER_CODE];
+    _waveLength = (vehicle ACE_player) getVariable["ace_laser_waveLength", ACE_DEFAULT_LASER_WAVELENGTH];
+    _beamSpread = (vehicle ACE_player) getVariable["ace_laser_beamSpread", ACE_DEFAULT_LASER_BEAMSPREAD];
     
     _laserUuid = [(vehicle ACE_player), ACE_player, QFUNC(findLaserSource), _waveLength, _laserCode, _beamSpread] call EFUNC(laser,laserOn);
     
