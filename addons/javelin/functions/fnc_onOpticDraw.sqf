@@ -51,6 +51,10 @@ if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && 
 // Refresh the firemode
 [] call FUNC(showFireMode);
         
+        
+// bail on not loaded
+if (ACE_player ammo (currentWeapon ACE_player) == 0) exitWith {  };  
+        
 _range = parseNumber (ctrlText __JavelinIGUIRangefinder);
 TRACE_1("Viewing range", _range);
 if (_range > 50 && {_range < 2500}) then {
