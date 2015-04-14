@@ -878,7 +878,7 @@ class CfgVehicles {
     class ACE_medicalSupplyCrate: NATO_Box_Base {
         scope = 2;
         accuracy = 1000;
-        displayName = "[ACE] Medical Supply Crate (basic)";
+        displayName = "[ACE] Medical Supply Crate (Basic)";
         model = PATHTOF(data\ace_medcrate.p3d);
         author = "$STR_ACE_Common_ACETeam";
         class TransportItems {
@@ -913,7 +913,7 @@ class CfgVehicles {
         };
     };
     class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate {
-        displayName = "[ACE] Medical Supply Crate (advanced)";
+        displayName = "[ACE] Medical Supply Crate (Advanced)";
         class TransportItems {
             class ACE_fieldDressing {
                 name = "ACE_fieldDressing";
