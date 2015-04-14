@@ -4,6 +4,7 @@ ADDON = false;
 
 PREP(addActionToClass);
 PREP(addActionToObject);
+PREP(addHouseActions);
 PREP(compileMenu);
 PREP(compileMenuSelfAction);
 PREP(collectActiveActionTree);
