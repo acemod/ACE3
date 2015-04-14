@@ -1284,5 +1284,29 @@
             <Polish>%1 założył stazę</Polish>
             <French>%1 a appliqué un garrot</French>
         </Key>
+        <Key ID="STR_ACE_Medical_Head">
+            <English>Head</English>
+            <German>Kopf</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Torso">
+            <English>Torso</English>
+            <German>Torso</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_LeftArm">
+            <English>Left Arm</English>
+            <German>Linker Arm</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_RightArm">
+            <English>Right Arm</English>
+            <German>Rechter Arm</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_LeftLeg">
+            <English>Left Leg</English>
+            <German>Linkes Bein</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_RightLeg">
+            <English>Right Leg</English>
+            <German>Rechtes Bein</German>
+        </Key>
     </Package>
 </Project>
