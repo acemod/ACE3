@@ -4,5 +4,6 @@ ADDON = false;
 
 PREP(drawLaserpoint);
 PREP(onDraw);
+PREP(switchLaserLightMode);
 
 ADDON = true;

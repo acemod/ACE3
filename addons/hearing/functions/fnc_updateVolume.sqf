@@ -56,7 +56,7 @@ if (!(missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false])) then {
     0.1 fadeSound _volume;
     0.1 fadeSpeech _volume;
     ACE_player setVariable ["tf_globalVolume", _volume];
-    if (!isNil "acre_api_fnc_setGlobalVolume") then {[_volume] call acre_api_fnc_setGlobalVolume;};
+    if (!isNil "acre_api_fnc_setGlobalVolume") then {[_volume^(0.33)] call acre_api_fnc_setGlobalVolume;};
 };
 
 //hintSilent format ["GVAR(currentDeafness), _Volume = %1, %2", GVAR(currentDeafness), _volume];

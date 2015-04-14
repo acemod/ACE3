@@ -36,5 +36,17 @@
             <Russian>&lt;t color='#9cf953'&gt;Использовать: &lt;/t&gt;вкл/выкл лазер</Russian>
             <Spanish>&lt;t color='#9cf953'&gt;Usar: &lt;/t&gt;encender/apagar láser</Spanish>
         </Key>
+        <Key ID="STR_ACE_Laserpointer_Laser">
+            <English>Laser</English>
+            <German>Laser</German>
+        </Key>
+        <Key ID="STR_ACE_Laserpointer_IRLaser">
+            <English>IR Laser</English>
+            <German>IR-Laser</German>
+        </Key>
+        <Key ID="STR_ACE_Laserpointer_switchLaserLight">
+            <English>Switch Laser / IR Laser</English>
+            <German>Umschalten Laser / IR-Laser</German>
+        </Key>
     </Package>
 </Project>

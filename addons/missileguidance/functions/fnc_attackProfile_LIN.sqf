@@ -16,7 +16,7 @@ _projectilePos = getPosASL _projectile;
 _distanceToTarget = _projectilePos vectorDistance _seekerTargetPos;    
 _distanceToShooter = _projectilePos vectorDistance _shooterPos;
 
-TRACE_2("", _distanceToTarget, _distanceToShooter);
+TRACE_3("", _distanceToTarget, _distanceToShooter, _seekerTargetPos);
 
 // Add height depending on distance for compensate
 _addHeight = [0,0,0];
@@ -40,11 +40,7 @@ if( (_projectilePos select 2) > (_seekerTargetPos select 2) && _distanceToTarget
     };
 };
 
-
-
-TRACE_3("", _distanceToTarget,_distanceToShooter,_addHeight);
-
- _returnTargetPos = _seekerTargetPos vectorAdd _addHeight;
+_returnTargetPos = _seekerTargetPos vectorAdd _addHeight;
 
 #ifdef DEBUG_MODE_FULL
 drawLine3D [(ASLtoATL _returnTargetPos) vectorAdd _addHeight, ASLtoATL _returnTargetPos, [0,1,0,1]];

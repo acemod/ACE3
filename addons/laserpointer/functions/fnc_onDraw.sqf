@@ -28,7 +28,7 @@ _isIR = _isIR == 1;
     _laserID = ["ACE_acc_pointer_red", "ACE_acc_pointer_green"] find _laser;
 
     if (_laserID > -1 && {_x isFlashlightOn _weapon}) then {
-        [_x, 30, _laserID == 1 || _isIR] call FUNC(drawLaserpoint);
+        [_x, 50, _laserID == 1 || _isIR] call FUNC(drawLaserpoint);
     };
 
 } forEach GVAR(nearUnits);

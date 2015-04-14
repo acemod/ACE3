@@ -24,7 +24,9 @@
 #define __JavelinIGUISeek (__JavelinIGUI displayCtrl 699000)
 #define __JavelinIGUITop (__JavelinIGUI displayCtrl 699001)
 #define __JavelinIGUIDir (__JavelinIGUI displayCtrl 699002)
-#define __JavelinIGUINFOV (__JavelinIGUI displayCtrl 699003)
+#define __JavelinIGUINFOV (__JavelinIGUI displayCtrl 1003)
+#define __JavelinIGUIWFOV (__JavelinIGUI displayCtrl 1004)
+#define __JavelinIGUIRangefinder (__JavelinIGUI displayCtrl 151)
 
 // Constrains
 #define __JavelinIGUITargetingConstrains (__JavelinIGUI displayCtrl 699100)
