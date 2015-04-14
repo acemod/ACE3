@@ -13,3 +13,7 @@
 
 
 #define FIREMODE_DIRECT_LOAL 1
+
+
+#define __LaserDesignatorIGUI (uiNamespace getVariable ["ACE_RscOptics_LaserDesignator", nil])
+#define __LaserDesignatorIGUI_LaserCode (__LaserDesignatorIGUI displayCtrl 123001)
