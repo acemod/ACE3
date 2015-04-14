@@ -128,7 +128,7 @@ if (_show) then {
             {
                 _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _x];
 
-                if (_target getHitPointDamage _x > 0.1 && {_forEachIndex == _selectionN}) then {
+                if (_target getHitPointDamage _x > 0 && {_forEachIndex == _selectionN}) then {
                     // @todo localize
                     _allInjuryTexts pushBack [format ["%1 %2",
                         ["Lightly wounded", "Heavily wounded"] select (_target getHitPointDamage _x > 0.5),
