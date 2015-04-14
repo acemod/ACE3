@@ -25,3 +25,9 @@ uiNameSpace setVariable [QGVAR(arguments),
         0           // Sound timer
     ]
 ];
+
+_pfh_handle = uiNamespace getVariable ["ACE_RscOptics_javelin_PFH", nil];
+if(isNil "_pfh_handle") then {
+    _pfh_handle = [FUNC(onOpticDraw), 0, []] call CBA_fnc_addPerFrameHandler;
+    uiNamespace setVariable["ACE_RscOptics_javelin_PFH", _pfh_handle];
+};
