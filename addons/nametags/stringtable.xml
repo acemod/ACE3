@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="NameTags">
         <Key ID="STR_ACE_NameTags_ShowNames">
@@ -60,7 +59,7 @@
         </Key>
         <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo">
             <English>Show vehicle crew info</English>
-            <French>Afficher les informations de l'équipage du véhicule</French>
+            <French>Afficher les informations de l'équipage</French>
             <German>Zeige Fahrzeugbesatzung</German>
             <Spanish>Mostrar tripulantes</Spanish>
             <Polish>Pokaż załogę pojazdu</Polish>
@@ -74,7 +73,7 @@
             <Russian>Показывать именые метки ИИ</Russian>
             <Czech>Zobrazit jména AI</Czech>
             <Polish>Wyświetl imiona jednostek AI</Polish>
-            <French>Afficher les noms pour les unités IA</French>
+            <French>Afficher les noms des IA</French>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves">
             <English>Show SoundWaves (requires player names)</English>
@@ -83,7 +82,7 @@
             <Russian>Показывать звуковые волны (требует имен игроков)</Russian>
             <Czech>Zobrazit SoundWaves (vyžaduje jména hráčů)</Czech>
             <Polish>Pokaż fale dźwiękowe (wymagana opcja Pokaż imiona graczy)</Polish>
-            <French>Afficher l'ondulation audio (requiert les noms des joueurs)</French>
+            <French>Afficher "qui parle" (si noms affichés)</French>
         </Key>
         <Key ID="STR_ACE_NameTags_DefaultNametagColor">
             <English>Default Nametag Color (Non Group Members)</English>
@@ -91,7 +90,7 @@
             <Russian>Цвет меток игроков (не членов групп)</Russian>
             <Spanish>Color de etiquetas de nombre por defecto (No miembros de grupo)</Spanish>
             <Polish>Domyślny kolor imion (członkowie spoza grupy)</Polish>
-            <French>Couleur par défaut pour les noms (unités non groupées)</French>
+            <French>Couleur d'affichage par défaut (si dans aucun groupe)</French>
             <Czech>Standardní barva jmenovek (pro nečleny jednotky)</Czech>
         </Key>
     </Package>

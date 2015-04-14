@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Respawn_Deploy">
@@ -31,7 +30,7 @@
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
             <English>Teleported to Rallypoint</English>
-            <French>Téléporté au point de ralliement</French>
+            <French>Téléporté au point de déploiement</French>
             <German>Zum Rallypoint teleportiert</German>
             <Spanish>Teletransportado al punto de reunión</Spanish>
             <Russian>Телепорт на точку сбора</Russian>

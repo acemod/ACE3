@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Overheating">
         <Key ID="STR_ACE_overheating_SettingDisplayTextName">
@@ -9,16 +8,16 @@
             <Russian>Показывать текст, когда клинит оружие</Russian>
             <Czech>Zobrazit upozornění při zaseknutí</Czech>
             <Polish>Wyświetl tekst przy zacięciu broni</Polish>
-            <French>Afficher un texte à la surchauffe</French>
+            <French>Affiche texte si enrayé</French>
         </Key>
         <Key ID="STR_ACE_overheating_SettingDisplayTextDesc">
             <English>Display a notification whenever your weapon gets jammed</English>
-            <German>Zeige einen Hinweis wenn die Waffe eine Ladehemmung hat</German>
+            <German>Zeige einen Hinweis, wenn die Waffe eine Ladehemmung hat.</German>
             <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>
             <Russian>Демонстровать уведомление, каждый раз, когда клинит Ваше оружие.</Russian>
             <Czech>Zobrazí upozornění při zaseknutí zbraně</Czech>
             <Polish>Wyświetl powiadomienie za każdym razem, kiedy Twoja broń ulegnie zacięciu</Polish>
-            <French>Afficher un texte quand votre arme surchauffe</French>
+            <French>Affiche une notification lors d'un enrayement</French>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -133,6 +132,7 @@
             <Spanish>Verificar temperatura&lt;br/&gt;del arma</Spanish>
             <Polish>Sprawdź temperaturę&lt;br/&gt;broni</Polish>
             <Czech>Zkontrolovat teplotu&lt;br/&gt;zbraně</Czech>
+            <French>Vérifier la&lt;br/&gt;température</French>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingTemperature">
             <English>Checking temperature ...</English>
