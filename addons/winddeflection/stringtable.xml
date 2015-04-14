@@ -18,7 +18,7 @@
                 <Russian>Направление: %1</Russian>
                 <Czech>Směr: %1</Czech>
                 <French>Direction %1</French>
-                <German>Richtung: %1</German>
+                <German>Windrichtung: %1</German>
             </Key>
             <Key ID="STR_ACE_WEATHER_METER_WIND_SPEED">
                 <English>Speed: %1 m/s</English>
@@ -45,7 +45,7 @@
                 <Russian>Влажность: %1%</Russian>
                 <Czech>Vlhkost: %1%</Czech>
                 <French>Humidité: %1%</French>
-                <German>Feuchtigkeit: %1%</German>
+                <German>Luftfeuchtigkeit: %1</German>
             </Key>
         </Container>
     </Package>

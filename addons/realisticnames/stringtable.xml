@@ -75,7 +75,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_static_AT_Name">
             <English>Mini-Spike Launcher (AT)</English>
-            <German>Mini-Spike Lenkflugkörper (AT)</German>
+            <German>Mini-Spike Lenkflugkörper (PALR)</German>
             <Spanish>Lanzador Mini-Spike (AT)</Spanish>
             <French>Poste de tir Mini-Spike (AC)</French>
             <Czech>Mini-Spike Odpalovač (AT)</Czech>
@@ -87,7 +87,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_static_AA_Name">
             <English>Mini-Spike Launcher (AA)</English>
-            <German>Mini-Spike Lenkflugkörper (AA)</German>
+            <German>Mini-Spike Lenkflugkörper (FlaRak)</German>
             <Spanish>Lanzador Mini-Spike (AA)</Spanish>
             <French>Poste de tir Mini-Spike (AA)</French>
             <Czech>Mini-Spike Odpalovač (AA)</Czech>
@@ -1097,14 +1097,14 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_Name">
             <English>Mini-Spike (AA)</English>
-            <German>Mini-Spike (AA)</German>
+            <German>Mini-Spike (FlaRak)</German>
             <Czech>Mini-Spike (PL)</Czech>
             <Polish>Mini-Spike (AA)</Polish>
             <French>Mini-Spike (AA)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_short_Name">
             <English>Mini-Spike (AT)</English>
-            <German>Mini-Spike (AT)</German>
+            <German>Mini-Spike (PALR)</German>
             <Czech>Mini-Spike (PT)</Czech>
             <Polish>Mini-Spike (AA)</Polish>
             <French>Mini-Spike (AT)</French>
@@ -1118,7 +1118,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Black_Name">
             <English>MX (Black)</English>
-            <German>MX (Black)</German>
+            <German>MX (Schwarz)</German>
             <Polish>MX (Czarny)</Polish>
             <Czech>MX (černý)</Czech>
             <French>MX ( Noir)</French>
@@ -1132,7 +1132,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Black_Name">
             <English>MXC (Black)</English>
-            <German>MXC (Black)</German>
+            <German>MXC (Schwarz)</German>
             <Polish>MXC (Czarny)</Polish>
             <Czech>MXC (černý)</Czech>
             <French>MXC (Noir)</French>
@@ -1146,7 +1146,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Black_Name">
             <English>MX 3GL (Black)</English>
-            <German>MX 3GL (Black)</German>
+            <German>MX 3GL (Schwarz)</German>
             <Polish>MX 3GL (Czarny)</Polish>
             <Czech>MX 3GL (černý)</Czech>
             <French>MX 3 GL (Noir)</French>
@@ -1160,7 +1160,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Black_Name">
             <English>MX LSW (Black)</English>
-            <German>MX LSW (Black)</German>
+            <German>MX LSW (Schwarz)</German>
             <Polish>MX LSW (Czarny)</Polish>
             <Czech>MX LSW (černý)</Czech>
             <French>MX LSW (Noir)</French>
@@ -1174,7 +1174,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Black_Name">
             <English>MXM (Black)</English>
-            <German>MXM (Black)</German>
+            <German>MXM (Schwarz)</German>
             <Polish>MXM (Czarny)</Polish>
             <Czech>MXM (černý)</Czech>
             <French>MXM (Noir)</French>
@@ -1202,7 +1202,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_Name">
             <English>F2000 (Camo)</English>
-            <German>F2000 (Camo)</German>
+            <German>F2000 (Tarnmuster)</German>
             <Polish>F2000 (kamuflaż)</Polish>
             <Czech>F2000 (kamufláž</Czech>
             <French>F2000 (Camo)</French>
@@ -1216,7 +1216,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20C_Name">
             <English>F2000 Tactical (Camo)</English>
-            <German>F2000 Tactical (Camo)</German>
+            <German>F2000 Tactical (Tarnmuster)</German>
             <Polish>F2000 Tactical (kamuflaż)</Polish>
             <Czech>F2000 Tactical (černý)</Czech>
             <French>F2000 Tactical (Camo)</French>
@@ -1230,7 +1230,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_GL_Name">
             <English>F2000 EGLM (Camo)</English>
-            <German>F2000 EGLM (Camo)</German>
+            <German>F2000 EGLM (Tarnmuster)</German>
             <Polish>F2000 EGLM (kamuflaż)</Polish>
             <Czech>F2000 EGLM (kamufláž)</Czech>
             <French>F2000 EGLM (Camo)</French>
@@ -1321,7 +1321,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_camo_Name">
             <English>GM6 Lynx (Camo)</English>
-            <German>GM6 Lynx (Camo)</German>
+            <German>GM6 Lynx (Tarnmuster)</German>
             <Polish>GM6 Lynx (kamuflaż)</Polish>
             <Czech>GM6 Lynx (kamufláž)</Czech>
             <French>GM6 Lynx (Camo)</French>
@@ -1335,7 +1335,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_camo_Name">
             <English>M200 Intervention (Camo)</English>
-            <German>M200 Intervention (Camo)</German>
+            <German>M200 Intervention (Tarnmuster)</German>
             <Polish>M200 Intervention (kamuflaż)</Polish>
             <Czech>M200 Intervention (kamufláž)</Czech>
             <French>M200 Intervention (Camo)</French>

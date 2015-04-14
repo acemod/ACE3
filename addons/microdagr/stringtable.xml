@@ -12,7 +12,7 @@
         </Key>
         <Key ID="STR_ACE_microdagr_itemDescription">
             <English>MicroDAGR advanced GPS receiver</English>
-            <German>MicroDAGR verbesserter GPS Empfänger</German>
+            <German>MicroDAGR - Fortgeschrittener GPS-Empfänger</German>
             <Spanish>Receptor avanzado GPS MicroDAGR</Spanish>
             <Russian>Многофункциональный GPS-приёмник.</Russian>
             <Polish>Zaawansowany odbiornik GPS MicroDAGR</Polish>
@@ -30,7 +30,7 @@
         </Key>
         <Key ID="STR_ACE_microdagr_settingMils">
             <English>Mils</English>
-            <German>Mils</German>
+            <German>Mil</German>
             <Spanish>Mils</Spanish>
             <Russian>Тысячные</Russian>
             <Polish>Tysiączne</Polish>
@@ -97,7 +97,7 @@
         </Key>
         <Key ID="STR_ACE_microdagr_controlMGRS">
             <English>MGRS-New</English>
-            <German>MGRS-NEU</German>
+            <German>UTMREF-NEU</German>
             <Spanish>Nuevo-MGRS</Spanish>
             <Russian>MGRS-Новая</Russian>
             <Polish>MGRS-Nowy</Polish>
@@ -198,7 +198,7 @@
         </Key>
         <Key ID="STR_ACE_microdagr_toggleUnit">
             <English>Toggle MicroDAGR Display Mode</English>
-            <German>MicoDAGR Anzeigemodus wählen</German>
+            <German>MicoDAGR Anzeigemodus Wechseln</German>
             <Spanish>Conmutar modo de pantalla del MicroDAGR</Spanish>
             <Russian>Сменить режим показа MicroDAGR</Russian>
             <Polish>Przełącz tryb wyświetlania MicroDAGR</Polish>
@@ -216,7 +216,7 @@
         </Key>
         <Key ID="STR_ACE_microdagr_configure">
             <English>Configure MicroDAGR</English>
-            <German>Konfiguriere MicroDAGR</German>
+            <German>MicroDAGR Konfiguriere</German>
             <Spanish>Configurar MicroDAGR</Spanish>
             <Russian>Настроить MicroDAGR</Russian>
             <Czech>Konfigurovat MicroDAGR GPS</Czech>

@@ -12,7 +12,7 @@
         </Key>
         <Key ID="STR_ACE_overheating_SettingDisplayTextDesc">
             <English>Display a notification whenever your weapon gets jammed</English>
-            <German>Zeige einen Hinweis wenn die Waffe eine Ladehemmung hat</German>
+            <German>Zeige einen Hinweis, wenn die Waffe eine Ladehemmung hat.</German>
             <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>
             <Russian>Демонстровать уведомление, каждый раз, когда клинит Ваше оружие.</Russian>
             <Czech>Zobrazí upozornění při zaseknutí zbraně</Czech>
