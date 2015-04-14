@@ -9,6 +9,10 @@ PREP(trackFragRound);
 PREP(spallTrack);
 PREP(doSpall);
 PREP(vectorDiffFast);
+PREP(findReflections);
+PREP(doExplosions);
+PREP(doReflections);
+
 
 GVAR(trackedObjects) = [];
 GVAR(blackList) = [];
