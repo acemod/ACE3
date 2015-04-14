@@ -52,4 +52,4 @@ _lowestVolume = 1;
 
 // Set Radio mod variables.
 player setVariable ["tf_globalVolume", _lowestVolume];
-[_lowestVolume] call acre_api_fnc_setGlobalVolume;
+if (!isNil "acre_api_fnc_setGlobalVolume") then { [_lowestVolume^0.33] call acre_api_fnc_setGlobalVolume; };
