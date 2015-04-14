@@ -4,7 +4,7 @@ TRACE_1("enter", _this);
 
 #define __TRACKINTERVAL 0    // how frequent the check should be.
 #define __LOCKONTIME 3    // Lock on won't occur sooner
-#define __LOCKONTIMERANDOM 2    // Deviation in lock on time
+
 
 #define __OffsetX ((ctrlPosition __JavelinIGUITargetingLineV) select 0) - 0.5
 #define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5
@@ -39,6 +39,7 @@ _currentTarget = _args select 1;
 _runTime = _args select 2;
 _lockTime = _args select 3;
 _soundTime = _args select 4;
+_randomLockInterval = _args select 5;
 
 // Find a target within the optic range
 _newTarget = objNull;
@@ -135,7 +136,7 @@ if (isNull _newTarget) then {
             
             playSound "ACE_Javelin_Locking";
         } else {
-            if(diag_tickTime - _lockTime > __LOCKONTIME + (random __LOCKONTIMERANDOM)) then {
+            if(diag_tickTime - _lockTime > __LOCKONTIME + _randomLockInterval) then {
                 TRACE_2("LOCKED!", _currentTarget, _lockTime);
                 
                 __JavelinIGUISeek ctrlSetTextColor __ColorGreen;

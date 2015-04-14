@@ -69,3 +69,5 @@ if ((_elevation + _zero) < _maxVertical select 0 or (_elevation + _zero) > _maxV
 if (_windage < _maxHorizontal select 0 or _windage > _maxHorizontal select 1) exitWith {false};
 
 [_unit, _elevation, _windage, _zero] call FUNC(applyScopeAdjustment);
+
+true
