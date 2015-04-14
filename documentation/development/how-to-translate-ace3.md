@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: How to translate ACE3
-group: dev
+group: development
 parent: wiki
 order: 20
 ---

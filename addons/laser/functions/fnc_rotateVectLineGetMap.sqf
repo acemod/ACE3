@@ -5,19 +5,12 @@ _p = _this select 0;
 _p1 = _this select 1;
 _p2 = _this select 2;
 
-_q1 = [];
 _q2 = [];
-_u = [];
 
 /* Step 1 */
-_q1 set[0, (_p select 0) - (_p1 select 0)];
-_q1 set[1, (_p select 1) - (_p1 select 1)];
-_q1 set[2, (_p select 2) - (_p1 select 2)];
-
-_u set[0, (_p2 select 0) - (_p1 select 0)];
-_u set[1, (_p2 select 1) - (_p1 select 1)];
-_u set[2, (_p2 select 2) - (_p1 select 2)];
-_u = _u call BIS_fnc_unitVector;
+_q1 = _p vectorDiff _p1;
+_u = _p2 vectorDiff _p1;
+_u = vectorNormalized _u;
 _d = sqrt((_u select 1)*(_u select 1) + (_u select 2)*(_u select 2));
 
 /* Step 2 */
