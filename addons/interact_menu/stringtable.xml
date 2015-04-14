@@ -1,35 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-  <Package name="Interact_Menu">
-    <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
-      <English>Always display cursor for self interaction</English>
-      <German>Immer den Cursor für Selbst-Interaktionen anzeigen.</German>
-      <Spanish>Mostrar siempre el cursor para la interacción propia</Spanish>
-      <Russian>Всегда показывать курсор для взаимодействия с собой</Russian>
-    </Key>
-    <Key ID="STR_ACE_Interact_Menu_InteractKey">
-      <English>Interact Key</English>
-      <German>Fremdinteraktionsmenü-Taste</German>
-      <Spanish>Tecla de interacción</Spanish>
-      <Russian>Клавиша взаимодействия</Russian>
-    </Key>
-    <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
-      <English>Self Interaction Key</English>
-      <German>Eigeninteraktionsmenü-Taste</German>
-      <Spanish>Tecla de interacción propia</Spanish>
-      <Russian>Клавиша взаимодействия (с собой)</Russian>
-    </Key>
-    <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
-      <English>Self Actions</English>
-      <German>Selbst-Aktionen</German>
-      <Spanish>Acciones propias</Spanish>
-      <Russian>Действия с собой</Russian>
-    </Key>
-    <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
-      <English>Vehicle Actions</English>
-      <German>Fahrzeug-Aktionen</German>
-      <Spanish>Acciones de vehículo</Spanish>
-      <Russian>Действия на транспорте</Russian>
-    </Key>
-  </Package>
+    <Package name="Interact_Menu">
+        <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
+            <English>Always display cursor for self interaction</English>
+            <French>Toujours afficher le curseur pour l'interaction personnelle</French>
+            <German>Immer den Cursor für Selbst-Interaktionen anzeigen.</German>
+            <Spanish>Mostrar siempre el cursor para la interacción propia</Spanish>
+            <Russian>Всегда показывать курсор для взаимодействия с собой</Russian>
+            <Czech>Zobrazit kurzor v menu pro vlastní interakci</Czech>
+            <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
+            <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_InteractKey">
+            <English>Interact Key</English>
+            <German>Fremdinteraktionsmenü-Taste</German>
+            <Spanish>Tecla de interacción</Spanish>
+            <Russian>Клавиша взаимодействия</Russian>
+            <Czech>Klávesa pro interakci</Czech>
+            <Polish>Klawisz interakcji</Polish>
+            <French>Touche d'interaction</French>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
+            <English>Self Interaction Key</English>
+            <German>Eigeninteraktionsmenü-Taste</German>
+            <Spanish>Tecla de interacción propia</Spanish>
+            <Russian>Клавиша взаимодействия (с собой)</Russian>
+            <Czech>Klávesa pro vlastní interakci</Czech>
+            <Polish>Klawisz własnej interakcji</Polish>
+            <French>Touche d'interaction personnelle</French>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
+            <English>Self Actions</English>
+            <German>Selbst-Aktionen</German>
+            <Spanish>Acciones propias</Spanish>
+            <Russian>Действия с собой</Russian>
+            <Czech>Vlastní akce</Czech>
+            <Polish>Własne akcje</Polish>
+            <French>Interaction personnelle</French>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
+            <English>Vehicle Actions</English>
+            <German>Fahrzeug-Aktionen</German>
+            <Spanish>Acciones de vehículo</Spanish>
+            <Russian>Действия на транспорте</Russian>
+            <Czech>Interakce s vozidly</Czech>
+            <Polish>Akcje pojazdu</Polish>
+            <French>Interaction véhicule</French>
+        </Key>
+    </Package>
 </Project>

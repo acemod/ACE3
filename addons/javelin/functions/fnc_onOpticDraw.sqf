@@ -1,6 +1,6 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-//TRACE_1("enter", _this);
+TRACE_1("enter", _this);
 
 #define __TRACKINTERVAL 0    // how frequent the check should be.
 #define __LOCKONTIME 3.0    // Lock on won't occur sooner
@@ -10,7 +10,19 @@
 #define __OffsetX ((ctrlPosition __JavelinIGUITargetingLineV) select 0) - 0.5
 #define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5
 
-private["_args", "_lastTick", "_runTime", "_soundTime", "_lockTime", "_newTarget", "_currentTarget", "_range", "_pos", "_targetArray"];
+private["_isJavelin", "_args", "_lastTick", "_runTime", "_soundTime", "_lockTime", "_newTarget", "_currentTarget", "_range", "_pos", "_targetArray"];
+
+if( ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "launch_Titan_base"] call EFUNC(common,inheritsFrom))
+    || { (vehicle ACE_player) != ACE_player }
+  ) exitWith {
+    __JavelinIGUITargeting ctrlShow false;
+    __JavelinIGUITargetingGate ctrlShow false;
+    __JavelinIGUITargetingLines ctrlShow false;
+    __JavelinIGUITargetingConstraints ctrlShow false;
+    
+    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    uiNamespace setVariable["ACE_RscOptics_javelin_PFH", nil];
+};
 
 // Reset arguments if we havnt rendered in over a second
 _args = uiNamespace getVariable[QGVAR(arguments), [] ];
@@ -20,6 +32,8 @@ if( (count _args) > 0) then {
         [] call FUNC(onOpticLoad);
     };
 };
+
+TRACE_1("Running", "Running");
 
 // Pull the arguments
 _currentTarget = _args select 1;
@@ -37,9 +51,6 @@ if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && 
 
 // Refresh the firemode
 [] call FUNC(showFireMode);
-
-// Only start locking on holding tab
-if(!GVAR(isLockKeyDown)) exitWith { false };
         
 _range = parseNumber (ctrlText __JavelinIGUIRangefinder);
 if (_range > 50 && {_range < 2500}) then {
@@ -73,8 +84,10 @@ if (isNull _newTarget) then {
     
     __JavelinIGUISeek ctrlSetTextColor __ColorGray;
     __JavelinIGUINFOV ctrlSetTextColor __ColorGreen;
+    __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
+    __JavelinIGUITargetingConstraints ctrlShow false;
     
     ACE_player setVariable ["ace_missileguidance_target",nil, false];
     
@@ -82,8 +95,9 @@ if (isNull _newTarget) then {
     //if (ACE_player ammo "Javelin" > 0 || {ACE_player ammo "ACE_Javelin_Direct" > 0}) then {ACE_player setWeaponReloadingTime //[player, "Javelin", 0.2];};    
 } else {
     if (_newTarget distance ACE_player < 2500
-            // && {(call CBA_fnc_getFoV) select 1 > 7} 
-            // && { (currentVisionMode ACE_player == 2)}
+            && {(call CBA_fnc_getFoV) select 1 > 9} 
+             && { (currentVisionMode ACE_player == 2)}
+             && GVAR(isLockKeyDown)
     ) then {
         // Lock on after 3 seconds
          if(_currentTarget != _newTarget) then {
@@ -98,8 +112,9 @@ if (isNull _newTarget) then {
                 
                 __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
                 __JavelinIGUINFOV ctrlSetTextColor __ColorNull;
+                
                 __JavelinIGUITargeting ctrlShow true;
-                __JavelinIGUITargetingConstrains ctrlShow true;
+                __JavelinIGUITargetingConstrains ctrlShow false;
                 __JavelinIGUITargetingGate ctrlShow true;
                 __JavelinIGUITargetingLines ctrlShow true;
               
@@ -187,10 +202,11 @@ if (isNull _newTarget) then {
    } else { 
         // Something is wrong with our seek
         _currentTarget = objNull;
-
+        ACE_player setVariable["ace_missileguidance_target", nil, false];
+        
         __JavelinIGUISeek ctrlSetTextColor __ColorGray;
         __JavelinIGUINFOV ctrlSetTextColor __ColorGray;
-        __JavelinIGUITargetingConstrains ctrlShow false;
+        __JavelinIGUITargeting ctrlShow false;
         __JavelinIGUITargetingGate ctrlShow false;
         __JavelinIGUITargetingLines ctrlShow false;
 

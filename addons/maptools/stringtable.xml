@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-10 -->
 <Project name="ACE">
   <Package name="Map">
     <Key ID="STR_ACE_MapTools_Name">
@@ -8,7 +7,7 @@
       <French>Outils de navigation</French>
       <Polish>Narzędzia nawigacyjne</Polish>
       <German>Kartenwerkzeug</German>
-      <Czech>Pomůcky k Mapě</Czech>
+      <Czech>Pomůcky k mapě</Czech>
       <Italian>Strumenti Cartografici</Italian>
       <Portuguese>Ferramentas de Mapa</Portuguese>
       <Hungarian>Térképészeti eszközök</Hungarian>
@@ -32,7 +31,7 @@
       <French>Outils de navigation</French>
       <Polish>Narzędzia nawigacyjne</Polish>
       <German>Kartenwerkzeug</German>
-      <Czech>Pomůcky k Mapě</Czech>
+      <Czech>Pomůcky k mapě</Czech>
       <Italian>Strumenti Cartografici</Italian>
       <Portuguese>Ferramentas de Mapa</Portuguese>
       <Hungarian>Térképészeti eszközök</Hungarian>

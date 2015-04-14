@@ -102,4 +102,7 @@ GVAR(IVBags) = [];
 
 call FUNC(parseConfigForInjuries);
 
+GVAR(HITPOINTS) = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
+GVAR(SELECTIONS) = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
+
 ADDON = true;

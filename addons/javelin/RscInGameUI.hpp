@@ -14,7 +14,7 @@ class RscInGameUI {
         idd = 300;
         controls[] = { "ACE_javelin_elements_group", "CA_Distance", "ACE_Targeting" }; //, "ACE_TargetingConstrains", "ACE_TargetingGate", "ACE_TargetingLines"};
         onLoad = QUOTE(_this call FUNC(onOpticLoad));
-        onUnload = "uiNameSpace setVariable ['ACE_RscOptics_javelin',nil];";
+        onUnload = "uiNameSpace setVariable ['ACE_RscOptics_javelin',nil];uiNameSpace setVariable ['ACE_RscOptics_javelin_PFH',nil];";
         
         class CA_Distance: RscOpticsValue {
             idc = 151;
@@ -45,13 +45,6 @@ class RscInGameUI {
                 height = 0.001;
             };
             class Controls {
-                 class JavelinLocking : RscMapControl {
-                    onDraw = QUOTE(_this call FUNC(onOpticDraw));
-                    idc = -1;
-                    w = 0;
-                    h = 0;
-                };
-                
                 class ACE_javelin_Day_mode_off: RscPicture {
                     idc = 1001;
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.03/4)*3*SafezoneH    - SafezoneX";
