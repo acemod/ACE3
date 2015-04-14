@@ -1,21 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Scopes">
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
-            <English>"Minor adjustment up</English>
+            <English>Minor adjustment up</English>
             <Polish>Zerowanie powoli w górę</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMinor">
-            <English>"Minor adjustment down</English>
+            <English>Minor adjustment down</English>
             <Polish>Zerowanie powoli w dół</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMinor">
-            <English>"Minor adjustment right</English>
+            <English>Minor adjustment right</English>
             <Polish>Zerowanie powoli w prawo</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMinor">
-            <English>"Minor adjustment left</English>
+            <English>Minor adjustment left</English>
             <Polish>Zerowanie powoli w lewo</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMajor">
