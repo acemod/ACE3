@@ -11,11 +11,16 @@ GVAR(nearUnits) = [];
 // @todo. Maybe move to common?
 [{
     private "_nearUnits";
-    _nearUnits = nearestObjects [positionCameraToWorld [0,0,0], ["CAManBase"], 50]; // when moving this, search also for units inside vehicles. currently breaks the laser in FFV
+    _nearUnits = [];
 
-    if (count _nearUnits > 10) then {
-        _nearUnits resize 10;
-    };
+    {
+        _nearUnits append crew _x;
+
+        if (count _nearUnits > 10) exitWith {
+            _nearUnits resize 10;
+        };
+
+    } forEach nearestObjects [positionCameraToWorld [0,0,0], ["AllVehicles"], 50]; // when moving this, search also for units inside vehicles. currently breaks the laser in FFV
 
     GVAR(nearUnits) = _nearUnits;
 
@@ -25,15 +30,4 @@ addMissionEventHandler ["Draw3D", {
     call FUNC(onDraw);
 }];
 
-// init keybinds
-["ACE3", QGVAR(switchLaserLightMode), localize "STR_ACE_Laserpointer_switchLaserLight",
-{
-    // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
-    // Conditions: specific
-    if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
-
-    [ACE_player, currentWeapon ACE_player] call FUNC(switchLaserLightMode);
-    true
-},
-{false}, [38, [false, true, false]], false] call CBA_fnc_addKeybind;
+#include "initKeybinds.sqf"
