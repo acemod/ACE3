@@ -18,7 +18,6 @@
  * Public: No
  */
 #include "script_component.hpp"
-#include "defines.h"
 
 private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_abort", "_index", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_bulletMass", "_bulletLength", "_bulletTranslation", "_airFriction", "_dragModel", "_velocityBoundaryData", "_muzzleVelocity", "_muzzleVelocityCoef", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_bulletWeight", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef", "_ACE_Elevation", "_ACE_Windage", "_ID"];
 _unit     = _this select 0;
@@ -153,17 +152,17 @@ if (GVAR(AdvancedAirDragEnabled)) then {
 
 #ifdef USE_ADVANCEDBALLISTICS_DLL
     GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
-    
+
     "ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _muzzleVelocity, _transonicStabilityCoef, getPosASL _bullet, EGVAR(weather,Latitude), EGVAR(weather,currentTemperature), EGVAR(weather,Altitude), EGVAR(weather,currentHumidity), overcast, floor(time), time - floor(time)];
-    
+
     [{
         private ["_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];
         EXPLODE_4_PVT(_this select 0,_bullet,_caliber,_bulletTraceVisible,_index);
-        
+
         if (!alive _bullet) exitWith {
             [_this select 1] call cba_fnc_removePerFrameHandler;
         };
-        
+
         _bulletVelocity = velocity _bullet;
         _bulletPosition = getPosASL _bullet;
 
