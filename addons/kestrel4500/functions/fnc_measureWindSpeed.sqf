@@ -13,7 +13,6 @@
  * Public: No
  */
 #include "script_component.hpp"
-#include "defines.h"
 
 private ["_playerDir", "_windSpeed", "_windDir"];
 

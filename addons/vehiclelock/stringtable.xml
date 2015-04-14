@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="VehicleLock">
         <Key ID="STR_ACE_Vehicle_Action_UnLock">
@@ -76,7 +75,7 @@
             <English>A key that should open most WEST vehicles.</English>
             <German>Ein Schlüssel der die meisten westlichen Fahrzeuge öffnen sollte...</German>
             <Spanish>Una llave que puede abrir la mayoría de vehículos occidentales.</Spanish>
-            <French>Une clé qui ouvrira la plupart des véhicules WEST.</French>
+            <French>Une clé qui ouvrira la plupart des véhicules OUEST.</French>
             <Polish>Klucz, który powinien otworzyć większość pojazdów ZACHODU.</Polish>
             <Czech>Klíč který by měl otevřít většinou Západních vozidel.</Czech>
             <Hungarian>Általános kulcs WEST járművekhez</Hungarian>
@@ -86,7 +85,7 @@
             <English>A key that should open most EAST vehicle.</English>
             <German>Ein Schlüssel der die meisten östlichen Fahrzeuge öffnen sollte...</German>
             <Spanish>Una llave que puede abrir la mayoría de vehículos orientales.</Spanish>
-            <French>Une clé qui ouvrira la plupart des véhicules EAST.</French>
+            <French>Une clé qui ouvrira la plupart des véhicules EST.</French>
             <Polish>Klucz, który powinien otworzyć większość pojazdów WSCHODU.</Polish>
             <Hungarian>Általános kulcs EAST járművekhez</Hungarian>
             <Czech>Klíč který by měl otevřít vetšinu Východních vozidel.</Czech>
