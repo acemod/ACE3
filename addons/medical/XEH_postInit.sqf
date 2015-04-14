@@ -172,8 +172,7 @@ if (isNil QGVAR(level)) then {
         // Pain effect
         _strength = ACE_player getVariable [QGVAR(pain), 0];
         // _strength = _strength * (ACE_player getVariable [QGVAR(coefPain), GVAR(coefPain)]); @todo
-        GVAR(alternativePainEffect) = false; // @todo
-        if (GVAR(alternativePainEffect)) then {
+        if (GVAR(painEffectType) == 1) then {
             GVAR(effectPainCC) ppEffectEnable false;
             if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
                 _strength = _strength * 0.15;

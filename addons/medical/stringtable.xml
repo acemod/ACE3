@@ -1308,5 +1308,13 @@
             <English>Right Leg</English>
             <German>Rechtes Bein</German>
         </Key>
+        <Key ID="STR_ACE_Medical_PainEffect_Flash">
+            <English>Colour Flashing</English>
+            <German>Farbblinken</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_PainEffect_Chroma">
+            <English>Chromatic Aberration</English>
+            <German>Chromatische Aberration</German>
+        </Key>
     </Package>
 </Project>
