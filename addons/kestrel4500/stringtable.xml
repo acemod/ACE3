@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Project name="ACE"> 
+    <Package name="Kestrel4500">
+        <Key ID="STR_ACE_Kestrel_Name">
+          <English>Kestrel 4500NV</English>
+          <German>Kestrel 4500NV</German>
+          <Spanish>Kestrel 4500NV</Spanish>
+          <French>Kestrel 4500NV</French>
+          <Polish>Kestrel 4500NV</Polish>
+          <Czech>Kestrel 4500NV</Czech>
+          <Italian>Kestrel 4500NV</Italian>
+          <Hungarian>Kestrel 4500NV</Hungarian>
+          <Portuguese>Kestrel 4500NV</Portuguese>
+          <Russian>Kestrel 4500NV</Russian>
+        </Key>
+        <Key ID="STR_ACE_Kestrel_Description">
+          <English>Kestrel 4500 Pocket Weather Tracker</English>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_OpenKestrel">
+          <English>Open Kestrel 4500</English>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_ShowKestrel">
+          <English>Show Kestrel 4500</English>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_HideKestrel">
+          <English>Hide Kestrel 4500</English>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_KestrelDialogKey">
+          <English>Open Kestrel 4500</English>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_DisplayKestrelKey">
+          <English>Show Kestrel 4500</English>
+        </Key>
+    </Package> 
+</Project>

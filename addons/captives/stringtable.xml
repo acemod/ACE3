@@ -131,38 +131,48 @@
     </Key>
     <Key ID="STR_ACE_Captives_StartSurrendering">
       <English>Surrender</English>
+      <French>Se rendre</French>
       <German>Kapitulieren</German>
       <Spanish>Rendirse</Spanish>
-      <Russian>Сдаться</Russian>
       <Czech>Vzdát se</Czech>
+      <Polish>Poddaj się</Polish>
+      <Russian>Сдаться в плен</Russian>
     </Key>
     <Key ID="STR_ACE_Captives_StopSurrendering">
       <English>Stop Surrendering</English>
+      <French>Arrêt de se rendre</French>
       <German>Den Kampf erneut aufnehmen</German>
       <Spanish>Dejar de rendirse</Spanish>
-      <Russian>Остановить сдачу</Russian>
       <Czech>Přestat se vzdávat</Czech>
+      <Polish>Podejmij walkę ponownie</Polish>
+      <Russian>Отменить сдачу в плен</Russian>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
       <English>Only use on alive units</English>
+      <French>Utilisation uniquement sur les unités en vie</French>
       <German>Nur bei lebenden Einheiten verwendbar</German>
       <Spanish>Utilizar solo en unidades vivas</Spanish>
-      <Russian>Только для живых юнитов</Russian>
       <Czech>Použitelné jen na živé jednotky</Czech>
+      <Polish>Używaj tylko na żywych jednostkach</Polish>
+      <Russian>Применимо только к живым юнитам</Russian>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_OnlyInfantry">
       <English>Only use on dismounted inf</English>
+      <French>Utilisation uniquement sur les infanteries</French>
       <German>Nur bei abgesessener Infanterie verwendbar</German>
       <Spanish>Utilizar solo en infanteria desmontada</Spanish>
-      <Russian>Только для спеш. солдат</Russian>
       <Czech>Použitelné jen na pěsích jednotkách</Czech>
+      <Polish>Używaj tylko na piechocie poza wszelkimi pojazdami</Polish>
+      <Russian>Применимо только к пехоте вне техники</Russian>
     </Key>
     <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
       <English>Nothing under mouse</English>
+      <French>Rien sous la souris</French>
       <German>Es wurde nichts ausgewählt</German>
       <Spanish>Nada bajo el ratón</Spanish>
-      <Russian>Объекты под мышью отсутствуют</Russian>
       <Czech>Nic není vybráno</Czech>
+      <Polish>Nie ma nic pod kursorem</Polish>
+      <Russian>Ничего не выделено</Russian>
     </Key>
   </Package>
 </Project>

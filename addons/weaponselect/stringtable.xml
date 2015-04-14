@@ -7,6 +7,7 @@
       <Spanish>Mostrar texto al lanzar granada</Spanish>
       <Russian>Показывать текст при броске</Russian>
       <Czech>Zobrazí text při hodu granátem</Czech>
+      <Polish>Wyświetl tekst przy rzucie granatem</Polish>
     </Key>
     <Key ID="STR_ACE_Weaponselect_SettingDisplayTextDesc">
       <English>Display a hint or text on grenade throw.</English>
@@ -14,6 +15,7 @@
       <Spanish>Muestra una notificación o texto al lanzar granada</Spanish>
       <Russian>Показывать текст или подсказку при броске гранаты.</Russian>
       <Czech>Zobrazí upozornění nebo text při hodu granátem.</Czech>
+      <Polish>Wyświetla powiadomienie lub tekst przy rzucie granatem.</Polish>
     </Key>
     <Key ID="STR_ACE_WeaponSelect_SelectPistol">
       <English>Select Pistol</English>
@@ -149,6 +151,7 @@
     </Key>
     <Key ID="STR_ACE_WeaponSelect_LoadGrenade">
       <English>Grenade %1</English>
+      <French>Grenade %1</French>
       <German>Granate %1</German>
       <Spanish>Granada %1</Spanish>
       <Polish>Granat %1</Polish>
@@ -158,6 +161,7 @@
     </Key>
     <Key ID="STR_ACE_WeaponSelect_ReadyGrenade">
       <English>Ready Grenade</English>
+      <French>Grenade Prête</French>
       <German>Granate nehmen</German>
       <Spanish>Granada lista</Spanish>
       <Polish>Przygotuj granat</Polish>
@@ -170,7 +174,7 @@
       <German>Explosive Granate auswählen</German>
       <Spanish>Seleccionar granada de fragmenación</Spanish>
       <Polish>Wybierz granat odłamkowy</Polish>
-      <French>Sélectionner grenade à fragmentation</French>
+      <French>Sélectionner une grenade à fragmentation</French>
       <Hungarian>Repeszgránát Kiválasztása</Hungarian>
       <Czech>Zvolit Výbušný Granát</Czech>
       <Portuguese>Selecionar Granada de Fragmentação</Portuguese>

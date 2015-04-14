@@ -6,48 +6,64 @@
       <German>Interaktionen</German>
       <Spanish>Interacciones</Spanish>
       <Czech>Interakce</Czech>
+      <Polish>Interakcje</Polish>
+      <French>Interactions</French>
     </Key>
     <Key ID="STR_ACE_Interaction_Torso">
       <English>Torso</English>
       <German>Torso</German>
       <Spanish>Torso</Spanish>
       <Czech>Trup</Czech>
+      <Polish>Tors</Polish>
+      <French>Torse</French>
     </Key>
     <Key ID="STR_ACE_Interaction_Head">
       <English>Head</English>
       <German>Kopf</German>
       <Spanish>Cabeza</Spanish>
       <Czech>Hlava</Czech>
+      <Polish>Głowa</Polish>
+      <French>Tête</French>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmLeft">
       <English>Left Arm</English>
       <German>Linker Arm</German>
       <Spanish>Brazo izquierdo</Spanish>
       <Czech>Levá paže</Czech>
+      <Polish>Lewe ramię</Polish>
+      <French>Bras Gauche</French>
     </Key>
     <Key ID="STR_ACE_Interaction_ArmRight">
       <English>Right Arm</English>
       <German>Rechter Arm</German>
       <Spanish>Brazo derecho</Spanish>
       <Czech>Pravá paže</Czech>
+      <Polish>Prawe ramię</Polish>
+      <French>Bras Droit</French>
     </Key>
     <Key ID="STR_ACE_Interaction_LegLeft">
       <English>Left Leg</English>
       <German>Linkes Bein</German>
       <Spanish>Pierna izquierda</Spanish>
       <Czech>Levá noha</Czech>
+      <Polish>Lewa noga</Polish>
+      <French>Jambe Gauche</French>
     </Key>
     <Key ID="STR_ACE_Interaction_LegRight">
       <English>Right Leg</English>
       <German>Rechtes Bein</German>
       <Spanish>Pierna derecha</Spanish>
       <Czech>Pravá hona</Czech>
+      <Polish>Prawa noga</Polish>
+      <French>Jambe Droite</French>
     </Key>
     <Key ID="STR_ACE_Interaction_Weapon">
       <English>Weapon</English>
       <German>Waffe</German>
       <Spanish>Arma</Spanish>
       <Czech>Zbraň</Czech>
+      <Polish>Broń</Polish>
+      <French>Arme</French>
     </Key>
     <Key ID="STR_ACE_Interaction_InteractionMenu">
       <English>Interaction Menu</English>
@@ -65,7 +81,7 @@
       <English>Interaction Menu (Self)</English>
       <German>Interaktionsmenü (Selbst)</German>
       <Spanish>Menú de interacción (Propia)</Spanish>
-      <Polish>Menu interakcji (na siebie)</Polish>
+      <Polish>Menu interakcji (własne)</Polish>
       <Czech>Menu interakce (vlastní)</Czech>
       <French>Menu d'interaction (Perso)</French>
       <Russian>Меню взаимодействия (с собой)</Russian>
@@ -670,6 +686,7 @@
     </Key>
     <Key ID="STR_ACE_Interaction_Interact">
       <English>Interact</English>
+      <French>Interagir</French>
       <German>Interagiere</German>
       <Czech>Interakce</Czech>
       <Russian>Взаимодействовать</Russian>
@@ -682,6 +699,8 @@
       <Spanish>Pasajeros</Spanish>
       <Russian>Пассажиры</Russian>
       <Czech>Pasažéři</Czech>
+      <Polish>Pasażerowie</Polish>
+      <French>Passagers</French>
     </Key>
   </Package>
 </Project>
