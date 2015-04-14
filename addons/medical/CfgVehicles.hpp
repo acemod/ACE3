@@ -878,9 +878,42 @@ class CfgVehicles {
     class ACE_medicalSupplyCrate: NATO_Box_Base {
         scope = 2;
         accuracy = 1000;
-        displayName = "[ACE] Medical Supply Crate";
+        displayName = "[ACE] Medical Supply Crate (basic)";
         model = PATHTOF(data\ace_medcrate.p3d);
         author = "$STR_ACE_Common_ACETeam";
+        class TransportItems {
+            class ACE_fieldDressing {
+                name = "ACE_fieldDressing";
+                count = 50;
+            };
+            class ACE_morphine {
+                name = "ACE_morphine";
+                count = 25;
+            };
+            class ACE_epinephrine {
+                name = "ACE_epinephrine";
+                count = 25;
+            };
+            class ACE_bloodIV {
+                name = "ACE_bloodIV";
+                count = 15;
+            };
+            class ACE_bloodIV_500 {
+                name = "ACE_bloodIV_500";
+                count = 15;
+            };
+            class ACE_bloodIV_250 {
+                name = "ACE_bloodIV_250";
+                count = 15;
+            };
+            class ACE_bodyBag {
+                name = "ACE_bodyBag";
+                count = 10;
+            };
+        };
+    };
+    class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate {
+        displayName = "[ACE] Medical Supply Crate (advanced)";
         class TransportItems {
             class ACE_fieldDressing {
                 name = "ACE_fieldDressing";
