@@ -1,6 +1,7 @@
 /*
  * Author: PabstMirror
- * When interact_menu starts rendering (from "interact_keyDown" event)
+ * Scans for nearby "Static" objects (buildings) and adds the UserActions to them.
+ * Called when interact_menu starts rendering (from "interact_keyDown" event)
  *
  * Arguments:
  * Interact Menu Type (0 - world, 1 - self) <NUMBER>
@@ -23,7 +24,7 @@ if (_interactionType != 0) exitWith {};
 if ((vehicle ACE_player) != ACE_player) exitWith {};
 
 [{
-    private ["_fncStatement", "_player", "_fncCondition", "_variable", "_theHouse", "_statement", "_condition", "_configPath", "_houseHelpers", "_displayName", "_position", "_maxDistance", "_helperObject", "_actionOffset", "_memPoint", "_object", "_count", "_helperPos", "_action"];
+    private ["_fncStatement", "_player", "_fncCondition", "_variable", "_theHouse", "_statement", "_condition", "_configPath", "_houseHelpers", "_displayName", "_displayNameDefault", "_iconImage", "_position", "_maxDistance", "_helperObject", "_actionOffset", "_memPoint", "_object", "_count", "_helperPos", "_action"];
     PARAMS_2(_args,_pfID);
     EXPLODE_3_PVT(_args,_setPosition,_addedHelpers,_housesScaned);
 
@@ -61,6 +62,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
 
                         {
                             _displayName = getText (_x >> "displayName");
+                            _displayNameDefault = getText (_x >> "displayNameDefault");
                             _position = getText (_x >> "position");
                             _condition = getText (_x >> "condition");
                             _statement = getText (_x >> "statement");
@@ -73,7 +75,26 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
 
                             _statement = compile _statement;
                             _condition = compile _condition;
-                            _maxDistance = _maxDistance + 1; //increase range slightly
+                            _maxDistance = _maxDistance + 0.1; //increase range slightly
+                            _iconImage = "";
+
+                            if (_displayNameDefault != "") then {
+                                //something like: "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+
+                                //find the end [.paa']
+                                _endIndex = _displayNameDefault find ".paa'";
+                                if (_endIndex == -1) exitWith {};
+                                _startIndex = _endIndex - 1;
+                                _endIndex = _endIndex + 4;
+                                //work backwards to find the starting [']
+                                while {(_startIndex > 0) && {_iconImage == ""}} do {
+                                    if ((_displayNameDefault select [_startIndex, 1]) == "'") then {
+                                        _startIndex = _startIndex + 1;
+                                        _iconImage = _displayNameDefault select [_startIndex, (_endIndex - _startIndex)];
+                                    };
+                                    _startIndex = _startIndex - 1;
+                                };
+                            };
 
                             //Find a helper object, if one exists on the selection position
                             _helperObject = objNull;
@@ -82,7 +103,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
                                 EXPLODE_3_PVT(_x,_memPoint,_object,_count);
                                 if (_memPoint == _position) exitWith {
                                     _helperObject = _object;
-                                    //make sure actions dont' overlap (although they are usualy mutually exclusive)
+                                    //make sure actions don't overlap (although they are usualy mutually exclusive)
                                     _actionOffset = [0,0,(_count * 0.1)];
                                     _x set [2, (_count + 1)];
                                 };
@@ -99,7 +120,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
                                 TRACE_3("Making New Helper %1",_helperObject,_helperPos,_theHouse);
                             };
 
-                            _action = [(configName _x), _displayName, "", _fncStatement, _fncCondition, {}, [_theHouse, _statement, _condition], _actionOffset, _maxDistance] call EFUNC(interact_menu,createAction);
+                            _action = [(configName _x), _displayName, _iconImage, _fncStatement, _fncCondition, {}, [_theHouse, _statement, _condition], _actionOffset, _maxDistance] call EFUNC(interact_menu,createAction);
                             [_helperObject, 0, [],_action] call EFUNC(interact_menu,addActionToObject);
 
                         } foreach configproperties [(_configPath >> "UserActions")];
