@@ -134,8 +134,8 @@ class CfgAmmo {
             seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
             
             // Attack profile type selection
-            defaultAttackProfile = "TOP";
-            attackProfiles[] = { "TOP", "LIN" };
+            defaultAttackProfile = "JAV_TOP";
+            attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
         };
     };
 };

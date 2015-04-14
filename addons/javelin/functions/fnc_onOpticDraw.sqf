@@ -3,9 +3,8 @@
 TRACE_1("enter", _this);
 
 #define __TRACKINTERVAL 0    // how frequent the check should be.
-#define __LOCKONTIME 3.0    // Lock on won't occur sooner
-#define __LOCKONTIMERANDOM 0.3    // Deviation in lock on time
-#define __SENSORSQUARE 1    // Locking on sensor square side in angles
+#define __LOCKONTIME 3    // Lock on won't occur sooner
+#define __LOCKONTIMERANDOM 2    // Deviation in lock on time
 
 #define __OffsetX ((ctrlPosition __JavelinIGUITargetingLineV) select 0) - 0.5
 #define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5
@@ -113,10 +112,11 @@ if (isNull _newTarget) then {
     __JavelinIGUITargetingLines ctrlShow false;
     __JavelinIGUITargetingConstraints ctrlShow false;
     
-    ACE_player setVariable ["ace_missileguidance_target",nil, false];
+    ACE_player setVariable ["ace_missileguidance_target",nil, false];  
     
     // Disallow fire
-    //if (ACE_player ammo "Javelin" > 0 || {ACE_player ammo "ACE_Javelin_Direct" > 0}) then {ACE_player setWeaponReloadingTime //[player, "Javelin", 0.2];};    
+    if (ACE_player ammo (currentWeapon ACE_player) > 0) then { ACE_player setWeaponReloadingTime [player, (currentWeapon ACE_player), 0.2]; };  
+
 } else {
     if (_newTarget distance ACE_player < 2500
             && {(call CBA_fnc_getFoV) select 1 > 9} 
@@ -131,7 +131,7 @@ if (isNull _newTarget) then {
             
             playSound "ACE_Javelin_Locking";
         } else {
-            if(diag_tickTime - _lockTime > __LOCKONTIME) then {
+            if(diag_tickTime - _lockTime > __LOCKONTIME + (random __LOCKONTIMERANDOM)) then {
                 TRACE_2("LOCKED!", _currentTarget, _lockTime);
                 
                 __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
@@ -169,6 +169,9 @@ if (isNull _newTarget) then {
                 {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
                 
                 ACE_player setVariable["ace_missileguidance_target", _currentTarget, false];
+                
+                // Allow fire
+                ACE_player setWeaponReloadingTime [player, (currentWeapon ACE_player), 0];
                 
                 if(diag_tickTime > _soundTime) then {
                     playSound "ACE_Javelin_Locked";
@@ -208,21 +211,26 @@ if (isNull _newTarget) then {
                     playSound "ACE_Javelin_Locking";
                     _soundTime = diag_tickTime + 0.25;
                 };
+                // Disallow fire
+                if (ACE_player ammo (currentWeapon ACE_player) > 0) then { ACE_player setWeaponReloadingTime [player, (currentWeapon ACE_player), 0.2]; };  
             };
         };
    } else { 
-        // Something is wrong with our seek
+        // No targets found
         _currentTarget = objNull;
-        ACE_player setVariable["ace_missileguidance_target", nil, false];
+        _lockTime = 0;
         
         __JavelinIGUISeek ctrlSetTextColor __ColorGray;
         __JavelinIGUITargeting ctrlShow false;
         __JavelinIGUITargetingGate ctrlShow false;
         __JavelinIGUITargetingLines ctrlShow false;
-
+        __JavelinIGUITargetingConstraints ctrlShow false;
+        
         ACE_player setVariable ["ace_missileguidance_target",nil, false];
-   };
-   
+        
+        // Disallow fire
+        if (ACE_player ammo (currentWeapon ACE_player) > 0) then { ACE_player setWeaponReloadingTime [player, (currentWeapon ACE_player), 0.2]; };  
+    };  
 };
 
 //TRACE_2("", _newTarget, _currentTarget);

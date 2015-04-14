@@ -40,12 +40,6 @@ if( (_projectilePos select 2) > (_seekerTargetPos select 2) && _distanceToTarget
     };
 };
 
-
-
-TRACE_3("", _distanceToTarget,_distanceToShooter,_addHeight);
-
- _returnTargetPos = _seekerTargetPos vectorAdd _addHeight;
-
 #ifdef DEBUG_MODE_FULL
 drawLine3D [(ASLtoATL _returnTargetPos) vectorAdd _addHeight, ASLtoATL _returnTargetPos, [0,1,0,1]];
 #endif
