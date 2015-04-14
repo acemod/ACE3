@@ -1,20 +1,27 @@
+class RscControlsGroup;
+class VScrollbar;
+class HScrollbar;
+class RscText;
+
 class RscInGameUI {
     class RscOptics_LaserDesignator {
 		idd = 300;
 		controls[] = {"CA_IGUI_elements_group"};
+        
 		class CA_IGUI_elements_group: RscControlsGroup {
 			idc = 170;
+
+            x = "0 * 		(0.01875 * SafezoneH) + 		(SafezoneX + ((SafezoneW - SafezoneH) / 2))";
+			y = "0 * 		(0.025 * SafezoneH) + 		(SafezoneY)";
+			w = "53.5 * 		(0.01875 * SafezoneH)";
+			h = "40 * 		(0.025 * SafezoneH)";
 			class VScrollbar: VScrollbar {
 				width = 0;
 			};
 			class HScrollbar: HScrollbar {
 				height = 0;
 			};
-			x = "0 * 		(0.01875 * SafezoneH) + 		(SafezoneX + ((SafezoneW - SafezoneH) / 2))";
-			y = "0 * 		(0.025 * SafezoneH) + 		(SafezoneY)";
-			w = "53.5 * 		(0.01875 * SafezoneH)";
-			h = "40 * 		(0.025 * SafezoneH)";
-			class controls {
+            class controls {
 				class CA_OpticsZoom: RscText {
 					idc = 180;
 					style = 1;
@@ -102,11 +109,12 @@ class RscInGameUI {
 					shadow = 0;
 					font = "EtelkaMonospacePro";
 					text = "Code: 1001";
-					x = "20.1 * 		(0.01875 * SafezoneH)";
-					y = "3 * 		(0.025 * SafezoneH)";
-					w = "3.5 * 		(0.01875 * SafezoneH)";
+					x = "32.7 * 		(0.01875 * SafezoneH)";
+					y = "35.5 * 		(0.025 * SafezoneH)";
+					w = "12 * 		(0.01875 * SafezoneH)";
 					h = "1.6 * 		(0.025 * SafezoneH)";
 				};
 			};
 		};
 	};
+};
