@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Common">
         <Key ID="STR_ACE_Common_ACETeam">
@@ -307,6 +306,7 @@
             <Czech>Přijmout žádost</Czech>
             <Italian>Accetta Richieste</Italian>
             <Russian>Подтвердить запросы</Russian>
+            <Russian>Принять запросы</Russian>
         </Key>
         <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TITLE">
             <English>Decline Requests</English>
@@ -325,6 +325,7 @@
             <Italian>Accetta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
             <Russian>Подтвердить запросы, посланные другими игроками. Это могут быть просьбы о передаче снаряжения или выполнении определённых действий.</Russian>
             <Czech>Přijimutí žádosti poslané jinými hráči. Mohou to být žádosti k použítí/sdílení vybavení nebo k vykonání určité činnosti.</Czech>
+            <Russian>Принять запросы, отправленные другими игроками. Например, запросы на использование/совместное использование снаряжения, выполнение определенных действий</Russian>
         </Key>
         <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
             <English>Decline Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
@@ -334,6 +335,7 @@
             <Italian>Rifiuta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
             <Russian>Отклонить запросы, посланные другими игроками. Это могут быть просьбы о передаче снаряжения или выполнении определённых действий.</Russian>
             <Czech>Zamítnutí žádostii poslané jinými hráči. Mohou to být žádosti k použítí/sdílení vybavení nebo k vykonání určité činnosti.</Czech>
+            <Russian>Отклонить запросы, отправленные другими игроками. Например, запросы на использование/совместное использование снаряжения, выполнение определенных действий</Russian>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>

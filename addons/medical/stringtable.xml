@@ -6,10 +6,10 @@
             <English>Inject Atropine</English>
             <German>Atropin injizieren</German>
             <Spanish>Inyectar Atropina</Spanish>
-            <Russian>Ввести атропин</Russian>
             <Czech>Aplikovat atropin</Czech>
             <Polish>Wstrzyknij atropinę</Polish>
             <French>Injecter de l'atropine</French>
+            <Russian>Ввести атропин</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Epinephrine">
             <English>Inject Epinephrine</English>
@@ -17,8 +17,9 @@
             <Spanish>Inyectar Epinefrina</Spanish>
             <Polish>Wstrzyknij adrenalinę</Polish>
             <Czech>Aplikovat adrenalin</Czech>
-            <Russian>Ввести андреналил</Russian>
             <French>Injecter de l'épinéphrine</French>
+            <Russian>Ввести адреналин</Russian>
+            <French>Adrénaline</French>
             <Hungarian>Adrenalin</Hungarian>
             <Portuguese>Injetar Epinefrina</Portuguese>
             <Italian>Inietta Epinefrina</Italian>
@@ -51,25 +52,24 @@
             <English>Transfuse Plasma</English>
             <German>Plasmatransfusion</German>
             <Spanish>Transfundir plasma</Spanish>
-            <Russian>Перелить плазму</Russian>
             <Czech>Transfúze plazmy</Czech>
             <Polish>Przetocz osocze</Polish>
             <French>Transfuser du Plasma</French>
+            <Russian>Перелить плазму</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Transfuse_Saline">
             <English>Transfuse Saline</English>
             <German>Salzlösungtransfusion</German>
             <Spanish>Transfundir salino</Spanish>
-            <Russian>Влить физраствор</Russian>
             <Czech>Transfúze fyziologický roztoku</Czech>
             <Polish>Przetocz solankę</Polish>
             <French>Transfuser de la Saline</French>
+            <Russian>Перелить физраствор</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Apply_Tourniquet">
             <English>Apply Tourniquet</English>
             <German>Aderpresse anwenden</German>
             <Spanish>Aplicar torniquete</Spanish>
-            <Russian>Наложить жгут</Russian>
             <Czech>Aplikovat škrtidlo</Czech>
             <Polish>Załóż stazę</Polish>
             <French>Appliquer un garrot</French>
@@ -176,7 +176,7 @@
             <Spanish>Inyectando Epinefrina ...</Spanish>
             <Polish>Wstrzykiwanie adrenaliny ...</Polish>
             <Czech>Aplikuji adrenalin ...</Czech>
-            <Russian>Введение андреналина ...</Russian>
+            <Russian>Введение адреналина...</Russian>
             <French>Injection d'Adrénaline ...</French>
             <Hungarian>Adrenalin beadása...</Hungarian>
             <Portuguese>Injetando Epinefrina ...</Portuguese>
@@ -186,10 +186,10 @@
             <English>Injecting Atropine ...</English>
             <German>Atropin injizieren ...</German>
             <Spanish>Inyectando Atropina ...</Spanish>
-            <Russian>Введение атропина ...</Russian>
             <Czech>Aplikuji atropin ...</Czech>
             <Polish>Wstrzykiwanie atropiny ...</Polish>
             <French>Injection d'Atropine ...</French>
+            <Russian>Введение атропина...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Blood">
             <English>Transfusing Blood ...</English>
@@ -207,19 +207,19 @@
             <English>Transfusing Saline ...</English>
             <German>Sallösungtransfusion ...</German>
             <Spanish>Transfusión de salino ...</Spanish>
-            <Russian>Вливание физраствора ...</Russian>
             <Czech>Probíha transfúze fyziologický roztoku ...</Czech>
             <Polish>Przetaczanie solanki ...</Polish>
             <French>Transfusion de saline ...</French>
+            <Russian>Переливание физраствора...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Plasma">
             <English>Transfusing Plasma ...</English>
             <German>Plasmatransfusion ...</German>
             <Spanish>Transfusión de plasma ...</Spanish>
-            <Russian>Переливание плзмы ...</Russian>
             <Czech>Probíha transfúze plazmy ...</Czech>
             <Polish>Przetaczanie osocza ...</Polish>
             <French>Transfusion de Plasma ...</French>
+            <Russian>Переливание плазмы...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Bandaging">
             <English>Bandaging ...</English>
@@ -231,16 +231,16 @@
             <Italian>Sto applicando la benda ...</Italian>
             <Hungarian>Bekötözés...</Hungarian>
             <Portuguese>Atando ...</Portuguese>
-            <Russian>Перевязывание....</Russian>
+            <Russian>Перевязывание...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Applying_Tourniquet">
             <English>Applying Tourniquet ...</English>
             <German>Setze Aderpresse an ...</German>
             <Spanish>Aplicando torniquete ...</Spanish>
-            <Russian>Наложение жгута ...</Russian>
             <Czech>Aplikuji škrtidlo</Czech>
             <Polish>Zakładanie stazy ...</Polish>
             <French>Mise en place du garrot</French>
+            <Russian>Наложение жгута...</Russian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Medical">
             <English>Medical</English>
@@ -299,7 +299,7 @@
             <English>Check Blood Pressure</English>
             <German>Blutdruck überprüfen</German>
             <Spanish>Comprobar presión arterial</Spanish>
-            <Russian>Проверить кровяное давление</Russian>
+            <Russian>Проверить давление</Russian>
             <Czech>Zkontrolovat krevní tlak</Czech>
             <Polish>Sprawdź ciśnienie krwi</Polish>
             <French>Vérifier la pression sanguine</French>
@@ -415,7 +415,7 @@
             <English>Minor</English>
             <German>Gering</German>
             <Spanish>Menor</Spanish>
-            <Russian>Незначительные травмы</Russian>
+            <Russian>Незначительная</Russian>
             <Polish>Normalny</Polish>
             <French>Mineur</French>
             <Czech>Minimální</Czech>
@@ -468,7 +468,7 @@
         <Key ID="STR_ACE_MEDICAL_NO_BREATHING">
             <English>No breathing</English>
             <German>Keine Atmung</German>
-            <Russian>Дыхания нет</Russian>
+            <Russian>Дыхание отсутствует</Russian>
             <Spanish>No respira</Spanish>
             <French>Apnée</French>
             <Polish>Brak oddechu</Polish>
@@ -486,7 +486,7 @@
         <Key ID="STR_ACE_MEDICAL_ALMOST_NO_BREATHING">
             <English>Almost no breathing</English>
             <German>Fast keine Atmung</German>
-            <Russian>Дыхания почти нет</Russian>
+            <Russian>Дыхание очень слабое</Russian>
             <Spanish>Casi sin respiración</Spanish>
             <French>Respiration Faible</French>
             <Polish>Prawie brak oddechu</Polish>
@@ -605,7 +605,7 @@
         <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DESC_USE">
             <English>Allows an even compression and extra support to the injured area.</English>
             <German></German>
-            <Russian></Russian>
+            <Russian>Давящая повязка обеспечивает равномерное сжатие и дополнительную поддержку поврежденной области</Russian>
             <French>Ce bandage peut etre utiliser pour compresser la plaie afin de ralentire le seignement et assurer la tenue du bandage lors de mouvment.</French>
             <Polish>Elastyczna opaska podtrzymująca opatrunek oraz usztywniająca okolice stawów.</Polish>
             <Spanish>Brinda una compresión uniforme y ofrece soporte extra a una zona lesionada</Spanish>
@@ -621,7 +621,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_TOURNIQUET_DESC_SHORT">
             <English>Slows down blood loss when bleeding</English>
-            <Russian>Уменьшает кровопотерю при кровотечении.</Russian>
+            <Russian>Замедляет кровопотерю при кровотечении</Russian>
             <Spanish>Reduce la velocidad de pérdida de sangre</Spanish>
             <French>Ralentit le seignement</French>
             <Polish>Zmniejsza ubytek krwi z kończyn w przypadku krwawienia.</Polish>
@@ -629,7 +629,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_TOURNIQUET_DESC_USE">
             <English>A constricting device used to compress venous and arterial circulation in effect inhibiting or slowing blood flow and therefore decreasing loss of blood.</English>
-            <Russian>Жгут используется для прижатия сосудов, приводящего к остановке или значительному уменьшению кровотечения и сокращению кровопотери.</Russian>
+            <Russian>Жгут используется для прижатия сосудов к костным выступам, которое приводит к остановке или значительному уменьшению кровотечения</Russian>
             <Spanish>Dispositivo utilizado para eliminar el pulso distal y de ese modo controlar la pérdida de sangre</Spanish>
             <French>Un appareil servent a compresser les artères et veines afin de reduire la perte de sang.</French>
             <Polish>Opaska uciskowa CAT służy do tamowanie krwotoków w sytuacji zranienia kończyn z masywnym krwawieniem tętniczym lub żylnym.</Polish>
@@ -647,14 +647,14 @@
         <Key ID="STR_ACE_MEDICAL_MORPHINE_DESC_SHORT">
             <English>Used to combat moderate to severe pain experiences</English>
             <German>Wird verwendet um moderate bis starke Schmärzen zu lindern.</German>
-            <Russian>Для снятия средних и сильных болевых ощущений.</Russian>
+            <Russian>Для снятия средних и сильных болевых ощущений</Russian>
             <Spanish>Usado para combatir los estados dolorosos de moderados a severos</Spanish>
             <French>Utiliser pour contrer les douleurs modéré à severes.</French>
             <Polish>Morfina. Ma silne działanie przeciwbólowe.</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_MORPHINE_DESC_USE">
             <English>An analgesic used to combat moderate to severe pain experiences.</English>
-            <Russian>Анальгетик для снятия средних и сильных болевых ощущений.</Russian>
+            <Russian>Обезболивающее для снятия средних и сильных болевых ощущений.</Russian>
             <Spanish>Analgésico usado para combatir los estados dolorosos de moderados a severos.</Spanish>
             <French>Un Analgésique puissant servant a contrer les douleur modéré a severe.</French>
             <Polish>Organiczny związek chemiczny z grupy alkaloidów. Ma silne działanie przeciwbólowe.</Polish>
@@ -696,7 +696,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_EPINEPHRINE_DESC_SHORT">
             <English>Increase heart rate and counter effects given by allergic reactions</English>
-            <Russian>Стимулирует работу сердца и купирует аллергические реакции.</Russian>
+            <Russian>Стимулирует работу сердца и купирует аллергические реакции</Russian>
             <Spanish>Aumenta la frecuencia cardiaca y contraresta los efectos de las reacciones alérgicas</Spanish>
             <French>Augmente la Fréquance cadiaque et contré les effet d'une reaction Anaphylactique</French>
             <Polish>Adrenalina. Zwiększa puls i przeciwdziała efektom wywołanym przez reakcje alergiczne</Polish>
@@ -704,7 +704,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_EPINEPHRINE_DESC_USE">
             <English>A drug that works on a sympathetic response to dilate the bronchi, increase heart rate and counter such effects given by allergic reactions (anaphylaxis). Used in sudden cardiac arrest scenarios with decreasing positive outcomes.</English>
-            <Russian>Препарат, вызывающий симпатическую реакцию, приводящую к расширению бронхов, увеличению частоты сердечных сокращений и купированию аллергических реакций (анафилактического шока). Применяется при остановке сердца с уменьшением вероятности благоприятного исхода.</Russian>
+            <Russian>Препарат, вызывающий симпатическую реакцию, приводящую к расширению бронхов, увеличению частоты сердечных сокращений и купированию аллергических реакций (анафилактического шока). Применяется при остановке сердца с уменьшенной вероятностью благоприятного исхода.</Russian>
             <Spanish>Medicamento que dilata los bronquios, aumenta la frecuencia cardiaca y contrarresta los efectos de las reacciones alérgicas (anafilaxis). Se utiliza en caso de paros cardiacos repentinos.</Spanish>
             <French>Un medicament qui fonctione sur le systeme sympatique créan une dilatation des bronches, augmente la fréquance cardiaque et contre les effet d'une reaction alergique (anaphylaxie). Utiliser lors d'arret cardio-respiratoire pour augmenté les chances retrouver un ryhtme.</French>
             <Polish>EpiPen z adrenaliną ma działanie sympatykomimetyczne, tj. pobudza receptory alfa- i beta-adrenergiczne. Pobudzenie układu współczulnego prowadzi do zwiększenia częstotliwości pracy serca, zwiększenia pojemności wyrzutowej serca i przyśpieszenia krążenia wieńcowego. Pobudzenie oskrzelowych receptorów beta-adrenergicznych wywołuje rozkurcz mięśni gładkich oskrzeli, co w efekcie zmniejsza towarzyszące oddychaniu świsty i duszności.</Polish>
@@ -802,7 +802,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_SALINE_IV_DESC_USE">
             <English>A medical volume-replenishing agent introduced into the blood system through an IV infusion.</English>
-            <Russian>Пакет физиологического раствора для возмещения объема потерянной крови путем внутривенного вливания.</Russian>
+            <Russian>Пакет физиологического раствора для возмещения объема потерянной крови путем внутривенного вливания</Russian>
             <Spanish>Suero fisiológico inoculado al torrente sanguíneo de forma intravenosa.</Spanish>
             <French>Un remplacment temporaire pour rétablir la tention artériel lors de perte sanguine, étant ajouter par intraveineuse</French>
             <Polish>Używany w medycynie w formie płynu infuzyjnego jako środek nawadniający i uzupełniający niedobór elektrolitów, podawany dożylnie (IV).</Polish>
@@ -841,7 +841,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_QUIKCLOT_DESC_USE">
             <English>Hemostatic bandage with coagulant that stops bleeding.</English>
-            <Russian></Russian>
+            <Russian>Медицинский коагулянт для экстренной остановки кровотечения</Russian>
             <French>Un bandage servant a coaguler les seignements mineur à moyen.</French>
             <Polish>Proszkowy opatrunek adsorpcyjny przeznaczony do tamowania zagrażających życiu krwawień średniej i dużej intensywności.</Polish>
             <Spanish>Vendaje hemostático con coagulante que detiene el sangrado.</Spanish>
@@ -1222,14 +1222,14 @@
         <Key ID="STR_ACE_MEDICAL_PlaceInBodyBag">
             <English>Place body in bodybag</English>
             <Spanish>Colocar cuerpo en bolsa para cadáveres</Spanish>
-            <Russian>Поместить тело в мешок</Russian>
+            <Russian>Поместить тело в мешок для трупов</Russian>
             <Polish>Zapakuj ciało do worka na zwłoki</Polish>
             <French>Placer le corps dans le sac à cadavre</French>
         </Key>
         <Key ID="STR_ACE_MEDICAL_PlacingInBodyBag">
             <English>Placing body in bodybag</English>
             <Spanish>Colocando cuerpo en bolsa para cadáveres</Spanish>
-            <Russian>Помещение тела в мешок ...</Russian>
+            <Russian>Упаковка тела</Russian>
             <Polish>Pakowanie ciała do worka na zwłoki</Polish>
             <French>Mise en sac du corps dans le sac à cadavre</French>
         </Key>
@@ -1243,7 +1243,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIVITY_usedItem">
             <English>%1 used %2</English>
             <Spanish>%1 usó %2</Spanish>
-            <Russian>%1 применил %2</Russian>
+            <Russian>%1 использовал %2</Russian>
             <Polish>%1 użył %2</Polish>
             <French>%1 utilise %2</French>
         </Key>
