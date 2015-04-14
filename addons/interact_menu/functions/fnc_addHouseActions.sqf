@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * [0] call ace_logistics_wirecutter_fnc_interactEH
+ * [0] call ace_interact_menu_fnc_addHouseActions
  *
  * Public: Yes
  */
@@ -17,17 +17,13 @@
 
 PARAMS_1(_interactionType);
 
-//Ignore self-interaction menu
+//Ignore self-interaction menu:
 if (_interactionType != 0) exitWith {};
-
-//for performance only do stuff it they have a wirecutter item
-//(if they somehow get one durring keydown they'll just have to reopen)
-// if (!("ACE_wirecutter" in (items ace_player))) exitWith {};
-
-systemChat "starting";
+//Ignore when mounted:
+if ((vehicle ACE_player) != ACE_player) exitWith {};
 
 [{
-    private ["_fncStatement", "_attachedFence", "_fncCondition", "_helper"];
+    private ["_fncStatement", "_player", "_fncCondition", "_variable", "_theHouse", "_statement", "_condition", "_configPath", "_houseHelpers", "_displayName", "_position", "_maxDistance", "_helperObject", "_actionOffset", "_memPoint", "_object", "_count", "_helperPos", "_action"];
     PARAMS_2(_args,_pfID);
     EXPLODE_3_PVT(_args,_setPosition,_addedHelpers,_housesScaned);
 
@@ -42,14 +38,17 @@ systemChat "starting";
         if (((getPosASL ace_player) distance _setPosition) < 5) exitWith {};
 
         _fncStatement = {
-            PARAMS_3(_dummyTarget,_player,_attachedFence);
-            [_player, _attachedFence] call FUNC(cutDownFence);
+            PARAMS_3(_target,_player,_variable);
+            EXPLODE_3_PVT(_variable,_theHouse,_statement,_condition);
+            this = _theHouse; //this feels dirty
+            call _statement;
         };
         _fncCondition = {
-            PARAMS_3(_dummyTarget,_player,_attachedFence);
-            ((!isNull _attachedFence) && {(damage _attachedFence) < 1} && {("ACE_wirecutter" in (items _player))})
+            PARAMS_3(_target,_player,_variable);
+            EXPLODE_3_PVT(_variable,_theHouse,_statement,_condition);
+            this = _theHouse; //this feels dirty
+            call _condition;
         };
-
 
         {
             _theHouse = _x;
@@ -60,8 +59,6 @@ systemChat "starting";
                     if (isClass (_configPath >> "UserActions")) then {
                         _houseHelpers = [];
 
-
-                        // systemChat format ["Looking At %1 [%2]", _theHouse, (typeOf _theHouse)];
                         {
                             _displayName = getText (_x >> "displayName");
                             _position = getText (_x >> "position");
@@ -70,20 +67,23 @@ systemChat "starting";
                             _maxDistance = getNumber (_x >> "radius");
 
                             if (_displayName == "") then {_displayName = (configName _x);};
-                            // if (_position == "") then {_condition = "true";}; //????
+                            if (_position == "") then {ERROR("Bad Position");};
                             if (_condition == "") then {_condition = "true";};
-                            // if (_statement == "") then {_condition = "true";};
-                            // if (_maxDistance < 0.1) then {_condition = "true";};
+                            if (_statement == "") then {ERROR("No Statement");};
 
-                            _maxDistance = _maxDistance + 0.25; //fudge it up a little
-                            
+                            _statement = compile _statement;
+                            _condition = compile _condition;
+                            _maxDistance = _maxDistance + 1; //increase range slightly
+
+                            //Find a helper object, if one exists on the selection position
                             _helperObject = objNull;
                             _actionOffset = [0,0,0];
                             {
                                 EXPLODE_3_PVT(_x,_memPoint,_object,_count);
                                 if (_memPoint == _position) exitWith {
                                     _helperObject = _object;
-                                    _offset = [0,0,(_count * 0.1)];
+                                    //make sure actions dont' overlap (although they are usualy mutually exclusive)
+                                    _actionOffset = [0,0,(_count * 0.1)];
                                     _x set [2, (_count + 1)];
                                 };
                             } forEach _houseHelpers;
@@ -96,32 +96,18 @@ systemChat "starting";
                                 _helperObject setPos _helperPos;
                                 _helperObject hideObject true;
                                 _addedHelpers pushBack _helperObject;
-                                // diag_log text format ["Making New Helper %1", [_helperObject, _helperPos, _theHouse]];
+                                TRACE_3("Making New Helper %1",_helperObject,_helperPos,_theHouse);
                             };
 
-                            _fncStatement = {
-                                PARAMS_3(_target,_player,_variable);
-                                EXPLODE_3_PVT(_variable,_theHouse,_statement,_condition);
-                                this = _theHouse; //this feels dirty
-                                call _statement;
-                            };
-                            _fncCondition = {
-                                PARAMS_3(_target,_player,_variable);
-                                EXPLODE_3_PVT(_variable,_theHouse,_statement,_condition);
-                                this = _theHouse; //this feels dirty
-                                call _condition;
-                            };
-
-                            _variable = [_theHouse, compile _statement, compile _condition];
-                            
-                            _action = [(configName _x), _displayName, "", _fncStatement, _fncCondition, {}, _variable, _actionOffset, _maxDistance] call EFUNC(interact_menu,createAction);
+                            _action = [(configName _x), _displayName, "", _fncStatement, _fncCondition, {}, [_theHouse, _statement, _condition], _actionOffset, _maxDistance] call EFUNC(interact_menu,createAction);
                             [_helperObject, 0, [],_action] call EFUNC(interact_menu,addActionToObject);
 
                         } foreach configproperties [(_configPath >> "UserActions")];
                     };
                 };
             };
-        } forEach nearestObjects [ace_player, ["Static"], 25];
+            //Need to scan fairly far, because houses are big. You can be 25m from center of building but right next to a door.
+        } forEach nearestObjects [ace_player, ["Static"], 30];
 
         _args set [0, (getPosASL ace_player)];
     };
