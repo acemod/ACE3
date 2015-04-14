@@ -13,7 +13,7 @@ PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 // Bail on not missile
 if(! (_ammo isKindOf "MissileBase") ) exitWith { false }; 
 
-_config = configFile >> "CfgAmmo" >> _ammo >> "ACE_MissileGuidance";
+_config = configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON);
 _enabled = getNumber ( _config >> "enabled");
 
 // Bail if guidance is not enabled

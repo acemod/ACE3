@@ -40,12 +40,12 @@ class CfgAmmo {
         trackLead = 0;
        
         // Begin ACE guidance Configs
-        class ACE_MissileGuidance {
+        class ADDON {
             enabled = 1;
             
-            minDeflection = 0.005;      // Minium flap deflection for guidance
-            maxDeflection = 0.025;       // Maximum flap deflection for guidance
-            incDeflection = 0.005;      // The incrmeent in which deflection adjusts.
+            minDeflection = 0.0005;      // Minium flap deflection for guidance
+            maxDeflection = 0.0025;       // Maximum flap deflection for guidance
+            incDeflection = 0.0005;      // The incrmeent in which deflection adjusts.
             //minDeflection = 0.005; 
             //maxDeflection = 0.5;
             //incDeflection = 0.005;
@@ -110,7 +110,7 @@ class CfgAmmo {
         //trackLead = 0;
        
         // Begin ACE guidance Configs
-        class ACE_MissileGuidance {
+        class ADDON {
             enabled = 1;
             
             minDeflection = 0.005;      // Minium flap deflection for guidance
