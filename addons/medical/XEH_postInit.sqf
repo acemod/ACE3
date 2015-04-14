@@ -266,3 +266,8 @@ if (USE_WOUND_EVENT_SYNC) then {
 // Prevent all types of interaction while unconscious
 // @todo: probably remove this when CBA keybind hold key works properly
 ["isNotUnconscious", {!((_this select 0) getVariable ["ACE_isUnconscious", false])}] call EFUNC(common,addCanInteractWithCondition);
+
+// Item Event Handler
+["playerInventoryChanged", {
+    [ACE_player] call FUNC(itemCheck);
+}] call EFUNC(common,addEventHandler);
