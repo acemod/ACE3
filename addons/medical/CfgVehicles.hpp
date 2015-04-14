@@ -645,7 +645,7 @@ class CfgVehicles {
         EGVAR(dragging,dragPosition[]) = {0,1.2,0};
         EGVAR(dragging,dragDirection) = 0;
         class ACE_Actions {
-              class ACE_MainActions {
+            class ACE_MainActions {
                 displayName = "$STR_ACE_Interaction_MainAction";
                 distance = 5;
                 condition = QUOTE(true);
@@ -696,10 +696,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_fieldDressing
-            {
+        class TransportItems {
+            class ACE_fieldDressing {
                 name = "ACE_fieldDressing";
                 count = 1;
             };
@@ -711,10 +709,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_PACKING_BANDAGE_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_packingBandage
-            {
+        class TransportItems {
+            class ACE_packingBandage {
                 name = "ACE_packingBandage";
                 count = 1;
             };
@@ -726,10 +722,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_elasticBandage
-            {
+        class TransportItems {
+            class ACE_elasticBandage {
                 name = "ACE_elasticBandage";
                 count = 1;
             };
@@ -741,10 +735,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_TOURNIQUET_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_tourniquet
-            {
+        class TransportItems {
+            class ACE_tourniquet {
                 name = "ACE_tourniquet";
                 count = 1;
             };
@@ -756,10 +748,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_MORPHINE_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_morphine
-            {
+        class TransportItems {
+            class ACE_morphine {
                 name = "ACE_morphine";
                 count = 1;
             };
@@ -771,10 +761,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_ATROPINE_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_atropine
-            {
+        class TransportItems {
+            class ACE_atropine {
                 name = "ACE_atropine";
                 count = 1;
             };
@@ -786,10 +774,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_EPINEPHRINE_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_epinephrine
-            {
+        class TransportItems {
+            class ACE_epinephrine {
                 name = "ACE_epinephrine";
                 count = 1;
             };
@@ -801,10 +787,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_PLASMA_IV;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_plasmaIV
-            {
+        class TransportItems {
+            class ACE_plasmaIV {
                 name = "ACE_plasmaIV";
                 count = 1;
             };
@@ -817,10 +801,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_BLOOD_IV;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_bloodIV
-            {
+        class TransportItems {
+            class ACE_bloodIV {
                 name = "ACE_bloodIV";
                 count = 1;
             };
@@ -832,10 +814,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_SALINE_IV;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_salineIV
-            {
+        class TransportItems {
+            class ACE_salineIV {
                 name = "ACE_salineIV";
                 count = 1;
             };
@@ -847,10 +827,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_QUIKCLOT_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_quikClot
-            {
+        class TransportItems {
+            class ACE_quikClot {
                 name = "ACE_quikclot";
                 count = 1;
             };
@@ -862,10 +840,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_AID_KIT_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_personalAidKit
-            {
+        class TransportItems {
+            class ACE_personalAidKit {
                 name = "ACE_personalAidKit";
                 count = 1;
             };
@@ -877,10 +853,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_SURGICALKIT_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_surgicalKit
-            {
+        class TransportItems {
+            class ACE_surgicalKit {
                 name = "ACE_surgicalKit";
                 count = 1;
             };
@@ -892,10 +866,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_bodyBag
-            {
+        class TransportItems {
+            class ACE_bodyBag {
                 name = "ACE_bodyBag";
                 count = 1;
             };
