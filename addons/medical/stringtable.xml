@@ -1308,11 +1308,15 @@
             <English>Right Leg</English>
             <German>Rechtes Bein</German>
         </Key>
-        <Key ID="STR_ACE_Medical_PainEffect_Flash">
+        <Key ID="STR_ACE_Medical_painEffectType">
+            <English>Pain Effect Type</English>
+            <German>Schmerzeffekt-Typ</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_painEffect_Flash">
             <English>Colour Flashing</English>
             <German>Farbblinken</German>
         </Key>
-        <Key ID="STR_ACE_Medical_PainEffect_Chroma">
+        <Key ID="STR_ACE_Medical_painEffect_Chroma">
             <English>Chromatic Aberration</English>
             <German>Chromatische Aberration</German>
         </Key>
