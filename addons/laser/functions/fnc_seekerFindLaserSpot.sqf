@@ -4,8 +4,10 @@
  *
  * Arguments:
  * 0: Position of seeker (ASL) <position>
- * 1: Seeker wavelength sensitivity range, [1550,1550] is common eye safe. <array>
- * 2: Seeker laser code. <number>
+ * 1: Direction vector (will be normalized) <vector>
+ * 2: Seeker FOV in degrees <number>
+ * 3: Seeker wavelength sensitivity range, [1550,1550] is common eye safe. <array>
+ * 4: Seeker laser code. <number>
  *
  * Return value:
  * Array, [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found.
@@ -18,8 +20,13 @@ private ["_pos", "_seekerWavelengths", "_seekerCode", "_spots", "_buckets", "_ex
     "_testPos", "_finalBuckets", "_largest", "_largestIndex", "_finalBucket", "_owners", "_avgX", "_avgY", "_avgZ", "_count", "_maxOwner", "_maxOwnerIndex", "_finalOwner"];
     
 _pos = _this select 0;
-_seekerWavelengths = _this select 1;
-_seekerCode = _this select 2;
+_dir = vectorNormalized (_this select 1);
+_seekerFov = _this select 2;
+_seekerWavelengths = _this select 3;
+_seekerCode = _this select 4;
+
+
+_seekerCos = cos _seekerFov;
 
 _spots = [];
 _buckets = [];
@@ -58,7 +65,12 @@ _finalOwner = nil;
         _laserDir = _laser select 1;
         _res = [_laserPos, _laserDir, _divergence] call FUNC(shootCone);
         {
-            _spots pushBack [_x select 0, _owner];
+            _testPoint = _x select 0;
+            _testPointVector = vectorNormalized (_testPoint vectorDiff _pos);
+            _testDotProduct = _dir vectorDotProduct _testPointVector;
+            if(_testDotProduct > _seekerCos) then {
+                _spots pushBack [_testPoint, _owner];
+            };
         } forEach (_res select 2);
     };
 } forEach (GVAR(laserEmitters) select 1);
