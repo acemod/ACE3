@@ -10,6 +10,7 @@
       <Polish>Kierunek: %1°</Polish>
       <Spanish>Dirección: %1°</Spanish>
       <Russian>Направление: %1°</Russian>
+      <Italian>Direzione: %1°</Italian>
     </Key>
   </Package>
 </Project>
