@@ -503,6 +503,7 @@ class CfgWeapons {
             "20Rnd_762x51_Mag",
             "ACE_20Rnd_762x51_Mag_Tracer_Dim",
             "ACE_20Rnd_762x51_M118LR_Mag",
+            "ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
             "ACE_20Rnd_762x51_Mag_SD"
         };
         initSpeed = -0.9724;
@@ -550,6 +551,7 @@ class CfgWeapons {
             "20Rnd_762x51_Mag",
             "ACE_20Rnd_762x51_Mag_Tracer_Dim",
             "ACE_20Rnd_762x51_M118LR_Mag",
+            "ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
             "ACE_20Rnd_762x51_Mag_SD"
         };
         initSpeed = -0.9843;
@@ -571,6 +573,7 @@ class CfgWeapons {
             "20Rnd_762x51_Mag",
             "ACE_20Rnd_762x51_Mag_Tracer_Dim",
             "ACE_20Rnd_762x51_M118LR_Mag",
+            "ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
             "ACE_20Rnd_762x51_Mag_SD"
         };
         initSpeed = -0.9916;

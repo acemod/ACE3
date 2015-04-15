@@ -117,11 +117,20 @@ class CfgMagazines {
     class ACE_10Rnd_762x51_M118LR_Mag: 10Rnd_762x51_Mag {
         author = "$STR_ACE_Common_ACETeam";
         ammo = "ACE_762x51_Ball_M118LR";
-        count=10;
+        count = 10;
         displayName = "$STR_ACE_10Rnd_762x51_M118LR_Mag_Name";
         displayNameShort = "$STR_ACE_10Rnd_762x51_M118LR_Mag_NameShort";
         descriptionShort = "$STR_ACE_10Rnd_762x51_M118LR_Mag_Description";
         initSpeed = 780;
+    };
+    class ACE_10Rnd_762x51_Mk319_Mod_0_Mag: 10Rnd_762x51_Mag {
+        author = "$STR_ACE_Common_ACETeam";
+        ammo = "ACE_762x51_Ball_Mk319_Mod_0";
+        count = 10;
+        displayName = "$STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_Name";
+        displayNameShort = "$STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_NameShort";
+        descriptionShort = "$STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_Description";
+        initSpeed = 900;
     };
     class ACE_20Rnd_762x51_M118LR_Mag: 20Rnd_762x51_Mag {
         author = "$STR_ACE_Common_ACETeam";
@@ -130,6 +139,14 @@ class CfgMagazines {
         displayNameShort = "$STR_ACE_20Rnd_762x51_M118LR_Mag_NameShort";
         descriptionShort = "$STR_ACE_20Rnd_762x51_M118LR_Mag_Description";
         initSpeed = 780;
+    };
+    class ACE_20Rnd_762x51_Mk319_Mod_0_Mag: 20Rnd_762x51_Mag {
+        author = "$STR_ACE_Common_ACETeam";
+        ammo = "ACE_762x51_Ball_Mk319_Mod_0";
+        displayName = "$STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_Name";
+        displayNameShort = "$STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_NameShort";
+        descriptionShort = "$STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_Description";
+        initSpeed = 900;
     };
     class ACE_20Rnd_762x67_Mk248_Mod_0_Mag: 20Rnd_762x51_Mag {
         author = "$STR_ACE_Common_ACETeam";
