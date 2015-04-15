@@ -48,9 +48,12 @@ switch( (_state select 0) ) do {
             _cruisAlt = 140 * (_distanceShooterToTarget/1250);
             TRACE_1("_cruisAlt", _cruisAlt);
         };
-        
         if( ((ASLToATL _projectilePos) select 2) - ((ASLToATL _seekerTargetPos) select 2) >= _cruisAlt) then {
-            _state set[0, STAGE_COAST];
+            if(_cruisAlt < 140) then {
+                _state set[0, STAGE_TERMINAL];
+            } else {
+                _state set[0, STAGE_COAST];
+            };
         } else {
              _returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget*2];
         };
