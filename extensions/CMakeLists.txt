@@ -27,6 +27,7 @@ include_directories(AFTER "common")
 
 # Add extensions to build here
 add_subdirectory(fcs)
+add_subdirectory(breakline)
 add_subdirectory(advanced_ballistics)
 
 message("Build Type: ${CMAKE_BUILD_TYPE}")

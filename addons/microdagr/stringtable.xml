@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="microdagr">
         <Key ID="STR_ACE_microdagr_itemName">
@@ -201,7 +202,7 @@
             <German>MicoDAGR Anzeigemodus Wechseln</German>
             <Spanish>Conmutar modo de pantalla del MicroDAGR</Spanish>
             <Russian>Сменить режим показа MicroDAGR</Russian>
-            <Polish>Przełącz tryb wyświetlania MicroDAGR</Polish>
+            <Polish>Przełącz GUI MicroDAGR</Polish>
             <French>Basculer le mode d'affichage MicroDAGR</French>
             <Czech>Přepnout zobrazení MircroDAGRu</Czech>
         </Key>
@@ -211,7 +212,7 @@
             <Spanish>Mostrar MicroDAGR</Spanish>
             <Russian>Показать MicroDAGR</Russian>
             <Czech>Ukázat MicroDAGR GPS</Czech>
-            <Polish>Pokaż MicroDAGR</Polish>
+            <Polish>Pokaż&lt;br /&gt;MicroDAGR</Polish>
             <French>Afficher MicroDAGR</French>
         </Key>
         <Key ID="STR_ACE_microdagr_configure">
@@ -220,7 +221,7 @@
             <Spanish>Configurar MicroDAGR</Spanish>
             <Russian>Настроить MicroDAGR</Russian>
             <Czech>Konfigurovat MicroDAGR GPS</Czech>
-            <Polish>Konfiguruj MicroDAGR</Polish>
+            <Polish>Konfiguruj&lt;br /&gt;MicroDAGR</Polish>
             <French>Configurer MicroDAGR</French>
         </Key>
         <Key ID="STR_ACE_microdagr_closeUnit">
@@ -229,7 +230,7 @@
             <Spanish>Cerrar MicroDAGR</Spanish>
             <Russian>Закрыть MicroDAGR</Russian>
             <Czech>Zavřít MicroDAGR GPS</Czech>
-            <Polish>Zamknij MicroDAGR</Polish>
+            <Polish>Zamknij&lt;br /&gt;MicroDAGR</Polish>
             <French>Fermer MicroDAGR</French>
         </Key>
     </Package>

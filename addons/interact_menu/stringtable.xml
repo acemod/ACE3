@@ -3,7 +3,6 @@
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
             <English>Always display cursor for self interaction</English>
-            <French>Toujours afficher le curseur pour l'interaction personnelle</French>
             <German>Immer den Cursor für Selbst-Interaktionen anzeigen.</German>
             <Spanish>Mostrar siempre el cursor para la interacción propia</Spanish>
             <Russian>Всегда показывать курсор для взаимодействия с собой</Russian>

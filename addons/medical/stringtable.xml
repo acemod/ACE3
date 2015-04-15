@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Inject_Atropine">
@@ -18,7 +19,6 @@
             <Czech>Aplikovat adrenalin</Czech>
             <French>Injecter de l'épinéphrine</French>
             <Russian>Ввести адреналин</Russian>
-            <French>Adrénaline</French>
             <Hungarian>Adrenalin</Hungarian>
             <Portuguese>Injetar Epinefrina</Portuguese>
             <Italian>Inietta Epinefrina</Italian>
@@ -49,7 +49,6 @@
         </Key>
         <Key ID="STR_ACE_Medical_Transfuse_Plasma">
             <English>Transfuse Plasma</English>
-            <French>Plasma</French>
             <German>Plasmatransfusion</German>
             <Spanish>Transfundir plasma</Spanish>
             <Czech>Transfúze plazmy</Czech>
@@ -59,7 +58,6 @@
         </Key>
         <Key ID="STR_ACE_Medical_Transfuse_Saline">
             <English>Transfuse Saline</English>
-            <French>Solution Saline</French>
             <German>Salzlösungtransfusion</German>
             <Spanish>Transfundir salino</Spanish>
             <Czech>Transfúze fyziologický roztoku</Czech>
@@ -69,7 +67,6 @@
         </Key>
         <Key ID="STR_ACE_Medical_Apply_Tourniquet">
             <English>Apply Tourniquet</English>
-            <French>Garrot</French>
             <German>Aderpresse anwenden</German>
             <Spanish>Aplicar torniquete</Spanish>
             <Czech>Aplikovat škrtidlo</Czech>
@@ -186,7 +183,6 @@
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
             <English>Injecting Atropine ...</English>
-            <French>Injection d'Atropine ...</French>
             <German>Atropin injizieren ...</German>
             <Spanish>Inyectando Atropina ...</Spanish>
             <Czech>Aplikuji atropin ...</Czech>
@@ -208,7 +204,6 @@
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Saline">
             <English>Transfusing Saline ...</English>
-            <French>Transfusion de Solution Saline</French>
             <German>Sallösungtransfusion ...</German>
             <Spanish>Transfusión de salino ...</Spanish>
             <Czech>Probíha transfúze fyziologický roztoku ...</Czech>
@@ -218,7 +213,6 @@
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Plasma">
             <English>Transfusing Plasma ...</English>
-            <French>Transfusion de Plasma</French>
             <German>Plasmatransfusion ...</German>
             <Spanish>Transfusión de plasma ...</Spanish>
             <Czech>Probíha transfúze plazmy ...</Czech>
@@ -294,7 +288,6 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_CheckPulse">
             <English>Check Pulse</English>
-            <French>Vérification du Pouls</French>
             <German>Puls überprüfen</German>
             <Spanish>Comprobar pulso</Spanish>
             <Russian>Проверить пульс</Russian>
@@ -421,7 +414,6 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_MINOR">
             <English>Minor</English>
-            <French>Blessé léger</French>
             <German>Gering</German>
             <Spanish>Menor</Spanish>
             <Russian>Незначительная</Russian>
@@ -906,7 +898,6 @@
             <English>Bodybag</English>
             <French>Sac à corps</French>
             <Russian>Мешок для трупов</Russian>
-            <French>Housse mortuaire</French>
             <Spanish>Bolsa para cadáveres</Spanish>
             <Polish>Worek na zwłoki</Polish>
             <German>Leichensack</German>
@@ -947,7 +938,6 @@
             <English>You checked %1</English>
             <French>Vous diagnostiquez %1</French>
             <Russian>Вы осмотрели раненого %1</Russian>
-            <French>Vous examinez %1</French>
             <Spanish>Examinando a %1</Spanish>
             <Polish>Zbadałeś %1</Polish>
             <German>Kontrolliert %1</German>
@@ -957,6 +947,7 @@
             <French>Vous avez trouvé une tension de %2/%3</French>
             <Russian>Артериальное давление %2/%3</Russian>
             <Spanish>La Presión Arterial es %2/%3</Spanish>
+            <Polish>Wyczuwasz ciśnienie krwi o wartości %2/%3</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_2">
             <English>You find a low blood pressure</English>
@@ -1000,7 +991,6 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE">
             <English>Pulse</English>
-            <French>Pulsations</French>
             <Russian>Пульс</Russian>
             <French>Pouls</French>
             <Spanish>Pulso</Spanish>
@@ -1017,7 +1007,6 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_CHECKED_MEDIC">
             <English>You checked %1</English>
-            <French>Vous avez Diagnostiqué %1</French>
             <Russian>Вы осмотрели раненого %1</Russian>
             <French>Vous examinez %1</French>
             <Spanish>Examinando a %1</Spanish>
@@ -1076,14 +1065,12 @@
             <English>You check response of patient</English>
             <French>Vous vérifiez la réponse du patient</French>
             <Russian>Вы проверяете реакцию раненого</Russian>
-            <French>Vérification de l'état de conscience du patient</French>
             <Spanish>Compruebas si el paciente reacciona</Spanish>
             <Polish>Sprawdzasz przytomność pacjenta</Polish>
             <German>Du prüfst ob der Patient ansprechbar ist</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_RESPONSIVE">
             <English>%1 is responsive</English>
-            <French>%1 est conscient</French>
             <Russian>%1 реагирует на раздражители</Russian>
             <French>%1 est conscient</French>
             <Spanish>%1 ha reaccionado</Spanish>
@@ -1092,7 +1079,6 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_UNRESPONSIVE">
             <English>%1 is not responsive</English>
-            <French>%1 n'est pas conscient</French>
             <Russian>%1 не реагирует</Russian>
             <French>%1 est inconscient</French>
             <Spanish>%1 no reacciona</Spanish>
@@ -1101,7 +1087,6 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_YOU_CHECKED">
             <English>You checked %1</English>
-            <French>Vous diagnostiqué %1</French>
             <Russian>Вы осмотрели раненого %1</Russian>
             <French>Vous avez examiné %1</French>
             <Spanish>Examinas a %1</Spanish>
@@ -1112,7 +1097,6 @@
             <English>Bandaged</English>
             <French>Bandé</French>
             <Russian>Повязка наложена</Russian>
-            <French>Pansement appliqué</French>
             <Spanish>Vendado</Spanish>
             <Polish>Zabandażowano</Polish>
         </Key>
@@ -1120,7 +1104,6 @@
             <English>You bandage %1 (%2)</English>
             <French>Vous bandez %1 (%2)</French>
             <Russian>Вы перевязали раненого %1 (%2)</Russian>
-            <French>Vous avez pansé %1 (%2)</French>
             <Spanish>Aplicas vendaje a %1 en %2</Spanish>
             <Polish>Bandażujesz %1 (%2)</Polish>
         </Key>
@@ -1128,7 +1111,6 @@
             <English>%1 is bandaging you</English>
             <French>%1 vous bande</French>
             <Russian>%1 перевязывает вас</Russian>
-            <French>%1 vous applique un pansement</French>
             <Spanish>%1 te está vendando</Spanish>
             <Polish>%1 bandażuje Ciebie</Polish>
         </Key>
@@ -1287,50 +1269,62 @@
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
             <German>Schwer verwundet:</German>
+            <Polish>Ciężko ranny</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_LightlyWounded">
             <English>Lightly wounded</English>
             <German>Leicht verwundet:</German>
+            <Polish>Lekko ranny</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_VeryLightlyWounded">
             <English>Very lightly wounded</English>
             <German>Sehr leicht verwundet:</German>
+            <Polish>B. lekko ranny</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Head">
             <English>Head</English>
             <German>Kopf</German>
+            <Polish>Głowa</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Torso">
             <English>Torso</English>
             <German>Torso</German>
+            <Polish>Tors</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_LeftArm">
             <English>Left Arm</English>
             <German>Linker Arm</German>
+            <Polish>Lewe ramię</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_RightArm">
             <English>Right Arm</English>
             <German>Rechter Arm</German>
+            <Polish>Prawe ramię</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_LeftLeg">
             <English>Left Leg</English>
             <German>Linkes Bein</German>
+            <Polish>Lewa noga</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_RightLeg">
             <English>Right Leg</English>
             <German>Rechtes Bein</German>
+            <Polish>Prawa noga</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
             <German>Schmerzeffekt-Typ</German>
+            <Polish>Rodzaj efektu bólu</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Flash">
             <English>Colour Flashing</English>
             <German>Farbblinken</German>
+            <Polish>Pulsujące kolory</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Chroma">
             <English>Chromatic Aberration</English>
             <German>Chromatische Aberration</German>
+            <Polish>Aberracja chromatyczna</Polish>
         </Key>
     </Package>
 </Project>
