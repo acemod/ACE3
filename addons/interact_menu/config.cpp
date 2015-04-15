@@ -23,4 +23,10 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction";
     };
+    class GVAR(UseListMenu) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSettable = 1;
+        displayName = "$STR_ACE_Interact_Menu_UseListMenu";
+    };
 };

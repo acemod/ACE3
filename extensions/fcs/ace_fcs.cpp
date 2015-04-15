@@ -12,7 +12,7 @@
  */
 
 #include "ace_common.h"
- 
+
 #define _USE_MATH_DEFINES
 
 #include <math.h>
@@ -113,9 +113,11 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
         double distance = std::stod(argStrings[3]);
 
         double result = getSolution(initSpeed, airFriction, angleTarget, distance);
-        std::string resultString = std::to_string(result);
 
-        strcpy(output, resultString.c_str());
+        std::stringstream sstream;
+        sstream << result;
+
+        strcpy(output, sstream.str().c_str());
         output[outputSize - 1] = '\0';
     }
 }

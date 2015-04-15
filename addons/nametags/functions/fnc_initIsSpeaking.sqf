@@ -42,7 +42,7 @@ _pfEHCode = switch (true) do {
 case (isClass (configFile >> "cfgPatches" >> "acre_api")): {
         {
             _oldSetting = ACE_player getVariable [QGVAR(isSpeaking), false];
-            _newSetting = ([ACE_player] call ACRE_api_fnc_isBroadcasting) || {!(isNull findDisplay 55)};
+            _newSetting = ([ACE_player] call acre_api_fnc_isSpeaking) || ([ACE_player] call acre_api_fnc_isBroadcasting) || {!(isNull findDisplay 55)};
             if (!(_oldSetting isEqualTo _newSetting)) then {
                 ACE_player setVariable [QGVAR(isSpeaking), _newSetting, true];
             };
