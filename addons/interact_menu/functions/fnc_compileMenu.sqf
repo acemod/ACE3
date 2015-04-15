@@ -43,7 +43,7 @@ _recurseFnc = {
             if (isArray ( _entryCfg >> "selection" )) then {
                 _selection = getArray ( _entryCfg >> "selection" )
             } else {
-                _selection = getText (_entryCfg >> "selection")
+                _selection = getText (_entryCfg >> "selection");
                 if (_selection == "") then {
                     _selection = [0,0,0];
                 };
