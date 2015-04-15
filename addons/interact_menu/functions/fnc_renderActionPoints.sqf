@@ -29,44 +29,44 @@ _fnc_renderNearbyActions = {
     {
         _target = _x;
 
-        // Quick oclussion test. Exit for object more than 2 m behind the camera plane
+        // Quick oclussion test. Exit for object more than 1 m behind the camera plane
         _lambda = ((getPosASL _x) vectorDiff _cameraPos) vectorDotProduct _cameraDir;
-        if (_lambda < -2) exitWith {};
+        if (_lambda > -1) then {
+            _numInteractions = 0;
+            // Prevent interacting with yourself or your own vehicle
+            if (_target != ACE_player && {_target != vehicle ACE_player}) then {
 
-        _numInteractions = 0;
-        // Prevent interacting with yourself or your own vehicle
-        if (_target != ACE_player && {_target != vehicle ACE_player}) then {
+                // Iterate through object actions, find base level actions and render them if appropiate
+                _actionsVarName = format [QGVAR(Act_%1), typeOf _target];
+                GVAR(objectActionList) = _target getVariable [QGVAR(actions), []];
+                {
+                    // Only render them directly if they are base level actions
+                    if (count (_x select 1) == 0) then {
+                        // Try to render the menu
+                        _action = _x;
+                        if ([_target, _action] call FUNC(renderBaseMenu)) then {
+                            _numInteractions = _numInteractions + 1;
+                        };
+                    };
+                } forEach GVAR(objectActionList);
 
-            // Iterate through object actions, find base level actions and render them if appropiate
-            _actionsVarName = format [QGVAR(Act_%1), typeOf _target];
-            GVAR(objectActionList) = _target getVariable [QGVAR(actions), []];
-            {
-                // Only render them directly if they are base level actions
-                if (count (_x select 1) == 0) then {
-                    // Try to render the menu
+                // Iterate through base level class actions and render them if appropiate
+                _classActions = missionNamespace getVariable [_actionsVarName, []];
+                {
                     _action = _x;
+                    // Try to render the menu
                     if ([_target, _action] call FUNC(renderBaseMenu)) then {
                         _numInteractions = _numInteractions + 1;
                     };
-                };
-            } forEach GVAR(objectActionList);
+                } forEach _classActions;
 
-            // Iterate through base level class actions and render them if appropiate
-            _classActions = missionNamespace getVariable [_actionsVarName, []];
-            {
-                _action = _x;
-                // Try to render the menu
-                if ([_target, _action] call FUNC(renderBaseMenu)) then {
-                    _numInteractions = _numInteractions + 1;
+                // Limit the amount of objects the player can interact with
+                if (_numInteractions > 0) then {
+                    _numInteractObjects = _numInteractObjects + 1;
                 };
-            } forEach _classActions;
-
-            // Limit the amount of objects the player can interact with
-            if (_numInteractions > 0) then {
-                _numInteractObjects = _numInteractObjects + 1;
             };
+            if (_numInteractObjects >= MAXINTERACTOBJECTS) exitWith {};
         };
-        if (_numInteractObjects >= MAXINTERACTOBJECTS) exitWith {};
 
     } forEach _nearestObjects;
 };
