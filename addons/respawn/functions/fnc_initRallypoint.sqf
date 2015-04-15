@@ -16,9 +16,10 @@
 
 #include "script_component.hpp"
 
-private ["_rallypoint", "_name"];
+private ["_rallypoint", "_respawnMarker", "_name"];
 
 _rallypoint = _this select 0;
+_respawnMarker = _this select 1;
 
 if (!local _rallypoint) exitWith {};
 
@@ -30,4 +31,8 @@ if (isNil _name) then {
 } else {
     deleteVehicle _rallypoint;
     diag_log text "[ACE] Respawn: ERROR Multiple Rallypoints of same type.";
+};
+
+if (isServer && {_respawnMarker != ""} && {!(_respawnMarker in allMapMarkers)}) then {
+    createMarker [_respawnMarker, _rallypoint];
 };
