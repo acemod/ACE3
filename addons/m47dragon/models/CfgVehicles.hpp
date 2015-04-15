@@ -46,8 +46,7 @@ class CfgVehicles {
 				weapons[] = {"missiles_titan_static"};
 				magazines[] = {"1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles"};
 				//gunnerOpticsModel = "\ca\Weapons_e\optics_m47";
-                //gunnerAction = "gunner_staticlauncher";
-                gunnerAction = "gunner_static_low01";
+                gunnerAction = "gunner_staticlauncher";
 				gunnergetInAction = "";
 				gunnergetOutAction = "";
 				displayName = "";
