@@ -46,7 +46,7 @@ _this spawn {
 
     _rallypoint setVariable [QGVAR(markerDate), format ["%1:%2", date select 3, date select 4], true];
 
-    ["rallypointMoved", [_rallypoint, _side]] call EFUNC(common,globalEvent);
+    ["rallypointMoved", [_rallypoint, _side, _position]] call EFUNC(common,globalEvent);
 
     [localize "STR_ACE_Respawn_Deployed"] call EFUNC(common,displayTextStructured);
 };

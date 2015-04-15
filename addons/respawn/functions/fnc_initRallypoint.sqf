@@ -27,25 +27,31 @@ _name = typeOf _rallypoint;
 
 // init visible marker
 if (hasInterface) then {
-    private ["_marker", "_type"];
+    // fix init having wrong position, vars etc.
+    [_rallypoint, _respawnMarker, _side, _name] spawn {
+        _rallypoint = _this select 0;
+        _respawnMarker = _this select 1;
+        _side = _this select 2;
+        _name = _this select 3;
 
-    _marker = format ["ACE_Marker_%1", _name];
+        _marker = format ["ACE_Marker_%1", _name];
 
-    // exit if it already exist
-    if (_marker in allMapMarkers) exitWith {};
+        // exit if it already exist
+        if (_marker in allMapMarkers) exitWith {};
 
-    _marker = createMarkerLocal [_marker, getPosASL _rallypoint];
-    _type = ["selector_selectedFriendly", "selector_selectedEnemy"] select (_respawnMarker == "");
+        _marker = createMarkerLocal [_marker, getPosASL _rallypoint];
+        _type = ["selector_selectedFriendly", "selector_selectedEnemy"] select (_respawnMarker == "");
 
-    _marker setMarkerTypeLocal _type;
-    _marker setMarkerAlphaLocal ([0,1] select (_side == playerSide));  // playerSide to guarantee init
+        _marker setMarkerTypeLocal _type;
+        _marker setMarkerAlphaLocal ([0,1] select (_side == playerSide));  // playerSide to guarantee init
 
-    private "_markerDate";
-    _markerDate = _rallypoint getVariable [QGVAR(markerDate), ""];
+        private "_markerDate";
+        _markerDate = _rallypoint getVariable [QGVAR(markerDate), ""];
 
-    _marker setMarkerTextLocal _markerDate;
+        _marker setMarkerTextLocal _markerDate;
 
-    _rallypoint setVariable [QGVAR(marker), _marker];
+        _rallypoint setVariable [QGVAR(marker), _marker];
+    };
 };
 
 if (!isServer) exitWith {};
