@@ -15,7 +15,7 @@
             <English>Display a notification whenever your weapon gets jammed</English>
             <German>Zeige einen Hinweis, wenn die Waffe eine Ladehemmung hat.</German>
             <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>
-            <Russian>Демонстровать уведомление, каждый раз, когда клинит Ваше оружие.</Russian>
+            <Russian>Показывать уведомление каждый раз, когда клинит Ваше оружие.</Russian>
             <Czech>Zobrazí upozornění při zaseknutí zbraně</Czech>
             <Polish>Wyświetl powiadomienie za każdym razem, kiedy Twoja broń ulegnie zacięciu</Polish>
             <French>Affiche une notification lors d'un enrayement</French>
@@ -64,7 +64,7 @@
             <Polish>Usuń zacięcie</Polish>
             <Czech>Uvolnit zbraň</Czech>
             <French>Désenrayer l'arme</French>
-            <Russian>Исправить клин оружия.</Russian>
+            <Russian>Исправить клин оружия</Russian>
             <Hungarian>Akadás elhárítása</Hungarian>
             <Portuguese>Destravar arma</Portuguese>
             <Italian>Ripulisci l'arma</Italian>
@@ -100,7 +100,7 @@
             <Polish>Wymienianie lufy...</Polish>
             <Czech>Vyměňuji hlaveň ...</Czech>
             <French>Changement du canon...</French>
-            <Russian>Смена ствола...</Russian>
+            <Russian>Смена ствола ...</Russian>
             <Hungarian>Cső kicserélése folyamatban...</Hungarian>
             <Portuguese>Substituindo cano...</Portuguese>
             <Italian>Sto sostituendo la canna ...</Italian>
@@ -136,6 +136,7 @@
             <Czech>Zkontrolovat teplotu zbraně</Czech>
             <French>Vérifier la température</French>
             <Hungarian>Fegyverhő ellenőrzése</Hungarian>
+            <Russian>Проверить температуру оружия</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingTemperature">
             <English>Checking temperature ...</English>
