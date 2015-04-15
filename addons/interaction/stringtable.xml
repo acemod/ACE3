@@ -9,6 +9,7 @@
             <Polish>Interakcje</Polish>
             <French>Interactions</French>
             <Russian>Взаимодействия</Russian>
+            <Hungarian>Cselekvések</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_Torso">
             <English>Torso</English>
@@ -17,8 +18,8 @@
             <Spanish>Torso</Spanish>
             <Czech>Trup</Czech>
             <Polish>Tors</Polish>
-            <French>Torse</French>
             <Russian>Торс</Russian>
+            <Hungarian>Testtörzs</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_Head">
             <English>Head</English>
@@ -27,17 +28,18 @@
             <Spanish>Cabeza</Spanish>
             <Czech>Hlava</Czech>
             <Polish>Głowa</Polish>
-            <French>Tête</French>
             <Russian>Голова</Russian>
+            <Hungarian>Fej</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmLeft">
             <English>Left Arm</English>
+            <French>Bras gauche</French>
             <German>Linker Arm</German>
             <Spanish>Brazo izquierdo</Spanish>
             <Czech>Levá paže</Czech>
             <Polish>Lewe ramię</Polish>
-            <French>Bras gauche</French>
             <Russian>Левая рука</Russian>
+            <Hungarian>Bal kar</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmRight">
             <English>Right Arm</English>
@@ -47,6 +49,7 @@
             <Polish>Prawe ramię</Polish>
             <French>Bras droit</French>
             <Russian>Правая рука</Russian>
+            <Hungarian>Jobb kar</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_LegLeft">
             <English>Left Leg</English>
@@ -56,6 +59,7 @@
             <Polish>Lewa noga</Polish>
             <French>Jambe gauche</French>
             <Russian>Левая нога</Russian>
+            <Hungarian>Bal láb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_LegRight">
             <English>Right Leg</English>
@@ -65,6 +69,7 @@
             <Polish>Prawa noga</Polish>
             <French>Jambe droite</French>
             <Russian>Правая нога</Russian>
+            <Hungarian>Jobb láb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_Weapon">
             <English>Weapon</English>
@@ -73,8 +78,8 @@
             <Spanish>Arma</Spanish>
             <Czech>Zbraň</Czech>
             <Polish>Broń</Polish>
-            <French>Arme</French>
             <Russian>Оружие</Russian>
+            <Hungarian>Fegyver</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_InteractionMenu">
             <English>Interaction Menu</English>
@@ -84,7 +89,7 @@
             <Czech>Menu interakce</Czech>
             <French>Menu d'interaction</French>
             <Russian>Меню взаимодействия</Russian>
-            <Hungarian>Interakció</Hungarian>
+            <Hungarian>Cselekvő menü</Hungarian>
             <Portuguese>Menu de Interação</Portuguese>
             <Italian>Menù Interattivo</Italian>
         </Key>
@@ -96,7 +101,7 @@
             <Czech>Menu interakce (vlastní)</Czech>
             <French>Menu d'interaction (Perso)</French>
             <Russian>Меню взаимодействия (с собой)</Russian>
-            <Hungarian>Interakció (saját) </Hungarian>
+            <Hungarian>Cselekvő menü (saját) </Hungarian>
             <Portuguese>Menu de Interação (Individual)</Portuguese>
             <Italian>Menù Interattivo (Individuale)</Italian>
         </Key>
@@ -108,7 +113,7 @@
             <Czech>Otevřít / Zavřít dveře</Czech>
             <French>Ouvrir / Fermer Portes</French>
             <Russian>Открыть / Закрыть двери</Russian>
-            <Hungarian>Ajtó nyitás / zárás</Hungarian>
+            <Hungarian>Ajtó nyitása / zárása</Hungarian>
             <Portuguese>Abrir / Fechar Porta</Portuguese>
             <Italian>Apri / Chiudi la porta</Italian>
         </Key>
@@ -132,7 +137,7 @@
             <Italian>Sblocca la porta</Italian>
             <Russian>Разблокировать дверь</Russian>
             <Portuguese>Destrancar Porta</Portuguese>
-            <Hungarian> Zár kinyitása</Hungarian>
+            <Hungarian>Zár kinyitása</Hungarian>
             <Polish>Odblokuj drzwi</Polish>
             <Czech>Odemknout dveře</Czech>
         </Key>
@@ -168,7 +173,7 @@
             <Czech>Přidat se do skupiny</Czech>
             <French>Rejoindre Groupe</French>
             <Russian>Вступить в группу</Russian>
-            <Hungarian>Csatlakozás</Hungarian>
+            <Hungarian>Csatlakozás a csoporthoz</Hungarian>
             <Portuguese>Unir-se ao grupo</Portuguese>
             <Italian>Unisciti alla squadra</Italian>
         </Key>
@@ -190,7 +195,7 @@
             <Spanish>Asumir el liderazgo</Spanish>
             <Polish>Przejmij dowodzenie</Polish>
             <Czech>Stát se velitelem</Czech>
-            <French>Devenir Leader</French>
+            <French>Devenir Chef de groupe</French>
             <Russian>Стать лидером</Russian>
             <Hungarian>Vezetés átvétele</Hungarian>
             <Portuguese>Tornar-se Líder</Portuguese>
@@ -360,7 +365,7 @@
             <Czech>Ahoj</Czech>
             <French>Salut</French>
             <Russian>Привет</Russian>
-            <Hungarian>Szeva</Hungarian>
+            <Hungarian>Helló</Hungarian>
             <Portuguese>Olá</Portuguese>
             <Italian>Ciao</Italian>
         </Key>
@@ -418,7 +423,7 @@
             <German>Dir wurde auf die rechte Schulter geklopft</German>
             <French>On te tape sur l'épaule droite</French>
             <Polish>Zostałeś klepnięty po ramieniu</Polish>
-            <Hungarian>Vállonveregettek</Hungarian>
+            <Hungarian>Megveregették a JOBB válladat.</Hungarian>
             <Czech>Někdo tě poklepal na PRAVÉ rameno</Czech>
             <Russian>Вас похлопали по ПРАВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro</Portuguese>
@@ -430,7 +435,7 @@
             <German>Dir wurde auf die linke Schulter geklopft</German>
             <French>On te tape sur l'épaule gauche</French>
             <Polish>Zostałeś klepnięty po ramieniu</Polish>
-            <Hungarian>Vállonveregettek</Hungarian>
+            <Hungarian>Megveregették a BAL válladat.</Hungarian>
             <Czech>Někdo tě poklepal na LEVÉ rameno</Czech>
             <Russian>Вас похлопали по ЛЕВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro.</Portuguese>
@@ -494,7 +499,7 @@
             <Russian>Управление&lt;br/&gt;группой</Russian>
             <Portuguese>Gerenciamento&lt;br/&gt;de Equipe</Portuguese>
             <Italian>Organizzazione&lt;br/&gt;Squadra</Italian>
-            <Hungarian>Csapat&lt;br/&gt;kezelés</Hungarian>
+            <Hungarian>Csapat&lt;br/&gt;kezelése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamRED">
             <English>Red</English>
@@ -560,7 +565,7 @@
             <English>Join Team&lt;br/&gt;Green</English>
             <German>Team Grün&lt;br/&gt;beitreten</German>
             <Spanish>Unirse al&lt;br/&gt;equipo verde</Spanish>
-            <French>Rejoindre&lt;br/&gt;Verte</French>
+            <French>Rejoindre&lt;br/&gt;Vert</French>
             <Polish>Dołącz do&lt;br/&gt;drużyny zielonej</Polish>
             <Czech>Připojit do&lt;br/&gt;Zeleného týmu</Czech>
             <Russian>Присоединиться&lt;br/&gt;к зеленой группе</Russian>
@@ -572,7 +577,7 @@
             <English>Join Team&lt;br/&gt;Blue</English>
             <German>Team Blau&lt;br/&gt;beitreten</German>
             <Spanish>Unirse al&lt;br/&gt;equipo azul</Spanish>
-            <French>Rejoindre&lt;br/&gt;Bleue</French>
+            <French>Rejoindre&lt;br/&gt;Bleu</French>
             <Polish>Dołącz do&lt;br/&gt;drużyny niebieskiej</Polish>
             <Czech>Připojit do&lt;br/&gt;Modrého týmu</Czech>
             <Russian>Присоединиться&lt;br/&gt;к синей группе</Russian>
@@ -699,11 +704,11 @@
             <English>Interact</English>
             <French>Interagir</French>
             <German>Interagiere</German>
-            <French>Interagir</French>
             <Czech>Interakce</Czech>
             <Russian>Взаимодействовать</Russian>
             <Polish>Interakcja</Polish>
             <Spanish>Interactuar</Spanish>
+            <Hungarian>Cselekvés</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
             <English>Passengers</English>
@@ -713,6 +718,7 @@
             <Czech>Pasažéři</Czech>
             <Polish>Pasażerowie</Polish>
             <French>Passagers</French>
+            <Hungarian>Utasok</Hungarian>
         </Key>
     </Package>
 </Project>

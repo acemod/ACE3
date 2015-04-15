@@ -69,9 +69,9 @@ class ACE_Settings {
     *    force = 0;
     *
     * Does it appear on the options menu?
-    *    isClientSetable = 1;
+    *    isClientSettable = 1;
     *
-    * The following settings only apply when isClientSetable == 1
+    * The following settings only apply when isClientSettable == 1
     * Stringtable entry with the setting name
     *    displayName = "$STR_ACE_Common_SettingName";
     *
@@ -90,14 +90,14 @@ class ACE_Settings {
     /*class GVAR(enableNumberHotkeys) {
         value = 1;
         typeName = "BOOL";
-        isClientSetable = 1;
+        isClientSettable = 1;
         displayName = "$STR_ACE_Common_EnableNumberHotkeys";
     };*/
     class GVAR(settingFeedbackIcons) {
         value = 1;
         typeName = "SCALAR";
         force = 0;
-        isClientSetable = 1;
+        isClientSettable = 1;
         displayName = "$STR_ACE_Common_SettingFeedbackIconsName";
         description = "$STR_ACE_Common_SettingFeedbackIconsDesc";
         values[] = {"Hide", "Top right, downwards", "Top right, to the left", "Top left, downwards", "Top left, to the right"};
@@ -106,7 +106,7 @@ class ACE_Settings {
         value = 0;
         typeName = "SCALAR";
         force = 0;
-        isClientSetable = 1;
+        isClientSettable = 1;
         displayName = "$STR_ACE_Common_SettingProgressbarLocationName";
         description = "$STR_ACE_Common_SettingProgressbarLocationDesc";
         values[] = {"Top", "Bottom"};
@@ -114,14 +114,14 @@ class ACE_Settings {
     class GVAR(displayTextColor) {
         value[] = {0,0,0,0.1};
         typeName = "COLOR";
-        isClientSetable = 1;
+        isClientSettable = 1;
         displayName = "$STR_ACE_Common_SettingDisplayTextColorName";
         description = "$STR_ACE_Common_SettingDisplayTextColorDesc";
     };
     class GVAR(displayTextFontColor) {
         value[] = {1,1,1,1};
         typeName = "COLOR";
-        isClientSetable = 1;
+        isClientSettable = 1;
         displayName = "$STR_ACE_Common_SettingDisplayTextFontColorName";
         description = "$STR_ACE_Common_SettingDisplayTextFontColorDesc";
     };

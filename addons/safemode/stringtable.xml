@@ -7,7 +7,7 @@
             <Spanish>Seguro puesto</Spanish>
             <Polish>Bezpiecznik</Polish>
             <Czech>Pojistka</Czech>
-            <Hungarian>Veszélytelenités</Hungarian>
+            <Hungarian>Biztonságos mód</Hungarian>
             <Russian>Предохранитель</Russian>
             <French>Sécurité</French>
         </Key>
@@ -17,7 +17,7 @@
             <Spanish>Quitar seguro</Spanish>
             <Polish>Zwolnij bezpiecznik</Polish>
             <Czech>Uvolnit pojistku</Czech>
-            <Hungarian>Veszélyesités</Hungarian>
+            <Hungarian>Biztonsági kapcsoló eltolása</Hungarian>
             <Russian>Снять с предохранителя</Russian>
             <French>Enlever sécurité</French>
         </Key>
@@ -25,9 +25,9 @@
             <English>Put on Safety</English>
             <German>Waffe gesichert</German>
             <Spanish>Poner seguro</Spanish>
-            <Polish>Zabezpiecz broń</Polish>
+            <Polish>Zabezpieczono broń</Polish>
             <Czech>Přepnout pojistku</Czech>
-            <Hungarian>Veszélytelenitve</Hungarian>
+            <Hungarian>Biztonsági kapcsoló helyretolása</Hungarian>
             <Russian>Поставить на предохранитель</Russian>
             <French>Sécurité mise</French>
         </Key>
@@ -37,7 +37,7 @@
             <Spanish>Seguro quitado</Spanish>
             <Polish>Odbezpieczono broń</Polish>
             <Czech>Odstranit pojistku</Czech>
-            <Hungarian>veszélyes</Hungarian>
+            <Hungarian>Biztonságos mód megszüntetve</Hungarian>
             <Russian>Снят с предохранителя</Russian>
             <French>Sécurité enlevée</French>
         </Key>

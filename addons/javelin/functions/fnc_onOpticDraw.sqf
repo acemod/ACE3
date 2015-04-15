@@ -11,18 +11,6 @@ TRACE_1("enter", _this);
 
 private["_isJavelin", "_args", "_lastTick", "_runTime", "_soundTime", "_lockTime", "_newTarget", "_currentTarget", "_range", "_pos", "_targetArray"];
 
-if( ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "launch_Titan_base"] call EFUNC(common,inheritsFrom))
-    || { (vehicle ACE_player) != ACE_player }
-  ) exitWith {
-    __JavelinIGUITargeting ctrlShow false;
-    __JavelinIGUITargetingGate ctrlShow false;
-    __JavelinIGUITargetingLines ctrlShow false;
-    __JavelinIGUITargetingConstraints ctrlShow false;
-    
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
-    uiNamespace setVariable["ACE_RscOptics_javelin_PFH", nil];
-};
-
 // Reset arguments if we havnt rendered in over a second
 _args = uiNamespace getVariable[QGVAR(arguments), [] ];
 if( (count _args) > 0) then {
@@ -40,6 +28,19 @@ _runTime = _args select 2;
 _lockTime = _args select 3;
 _soundTime = _args select 4;
 _randomLockInterval = _args select 5;
+_fireDisabledEH = _args select 6;
+
+if( ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "launch_Titan_base"] call EFUNC(common,inheritsFrom)) ) exitWith {
+    __JavelinIGUITargeting ctrlShow false;
+    __JavelinIGUITargetingGate ctrlShow false;
+    __JavelinIGUITargetingLines ctrlShow false;
+    __JavelinIGUITargetingConstraints ctrlShow false;
+    
+    _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
+    
+    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    uiNamespace setVariable["ACE_RscOptics_javelin_PFH", nil];
+};
 
 // Find a target within the optic range
 _newTarget = objNull;
@@ -106,6 +107,27 @@ if((call CBA_fnc_getFoV) select 1 > 9) then {
     __JavelinIGUIWFOV ctrlSetTextColor __ColorGreen;
 };
 
+FUNC(disableFire) = {
+    _firedEH = _this select 0;
+    
+    if(_firedEH < 0 && difficulty > 0) then {
+        _firedEH = [ACE_player, "DefaultAction", {true}, { 
+            _canFire = ACE_player getVariable["ace_missileguidance_target", nil];
+            if(!isNil "_canFire") exitWith { false };
+            true
+        }] call EFUNC(common,addActionEventHandler);
+    };
+    _firedEH
+};
+FUNC(enableFire) = {
+    _firedEH = _this select 0;
+    
+    if(_firedEH > 0 && difficulty > 0) then {
+        [ACE_player, "DefaultAction", _firedEH] call EFUNC(common,removeActionEventHandler);
+    };
+    -1
+};
+
 if (isNull _newTarget) then {
     // No targets found
     _currentTarget = objNull;
@@ -120,8 +142,7 @@ if (isNull _newTarget) then {
     ACE_player setVariable ["ace_missileguidance_target",nil, false];  
     
     // Disallow fire
-    if (ACE_player ammo (currentWeapon ACE_player) > 0) then { ACE_player setWeaponReloadingTime [player, (currentWeapon ACE_player), 0.2]; };  
-
+    _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
 } else {
     if (_newTarget distance ACE_player < 2500
             && {(call CBA_fnc_getFoV) select 1 > 9} 
@@ -176,7 +197,7 @@ if (isNull _newTarget) then {
                 ACE_player setVariable["ace_missileguidance_target", _currentTarget, false];
                 
                 // Allow fire
-                ACE_player setWeaponReloadingTime [player, (currentWeapon ACE_player), 0];
+                _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
                 
                 if(diag_tickTime > _soundTime) then {
                     playSound "ACE_Javelin_Locked";
@@ -217,7 +238,7 @@ if (isNull _newTarget) then {
                     _soundTime = diag_tickTime + 0.25;
                 };
                 // Disallow fire
-                if (ACE_player ammo (currentWeapon ACE_player) > 0) then { ACE_player setWeaponReloadingTime [player, (currentWeapon ACE_player), 0.2]; };  
+               _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
             };
         };
    } else { 
@@ -234,7 +255,7 @@ if (isNull _newTarget) then {
         ACE_player setVariable ["ace_missileguidance_target",nil, false];
         
         // Disallow fire
-        if (ACE_player ammo (currentWeapon ACE_player) > 0) then { ACE_player setWeaponReloadingTime [player, (currentWeapon ACE_player), 0.2]; };  
+        _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
     };  
 };
 
@@ -246,5 +267,6 @@ _args set[1, _currentTarget];
 _args set[2, _runTime];
 _args set[3, _lockTime];
 _args set[4, _soundTime];
+_args set[6, _fireDisabledEH];
 
 uiNamespace setVariable[QGVAR(arguments), _args ];

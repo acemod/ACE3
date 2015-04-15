@@ -18,7 +18,6 @@
 
     // Statement
     [] call FUNC(displayWindInfo);
-    false
 },
 {false},
 [37, [true, false, false]], false, 0] call CBA_fnc_addKeybind; // (SHIFT + K)
