@@ -9,6 +9,7 @@
                 <Polish>Wyłącz fragmentację odłamków</Polish>
                 <Russian>Выключить разлёт осколков</Russian>
                 <French>Désactive la fragmentation</French>
+                <Italian>Disattiva la frammentazione</Italian>
             </Key>
     </Package>
 </Project>
