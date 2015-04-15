@@ -1,35 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-  <Package name="Disposable">
-    <Key ID="STR_ACE_Disposable_UsedTube">
-      <English>Used Tube</English>
-      <German>Benutze Einwegwaffe</German>
-      <French>Tube utilisé</French>
-      <Czech>Použitý odpalovač</Czech>
-      <Polish>Zużyta rura</Polish>
-      <Spanish>Lanzador utilizado</Spanish>
-      <Hungarian>Használt cső</Hungarian>
-      <Russian>Отстрелянная труба</Russian>
-    </Key>
-    <Key ID="STR_ACE_Disposable_UsedTubeDescription">
-      <English>Used disposable rocket launcher</English>
-      <German>Benutzter Einweg-Raketenwerfer</German>
-      <French>Lance-roquette à usage unique utilisé</French>
-      <Czech>Použitý raketomet</Czech>
-      <Polish>Zużyta rura granatnika jednorazowego użytku</Polish>
-      <Spanish>Lanzador desechable utilizado</Spanish>
-      <Hungarian>Használt rakétavető</Hungarian>
-      <Russian>Отстрелянная одноразовая пусковая установка</Russian>
-    </Key>
-    <Key ID="STR_ACE_Disposable_PreloadedMissileDummy">
-      <English>Preloaded Missile Dummy</English>
-      <German>Vorgeladene Racketennachbildung</German>
-      <French>Missile préchargé Dummy</French>
-      <Czech>Přednabitá dummy střela</Czech>
-      <Polish>Wstępnie załadowana atrapa pocisku</Polish>
-      <Spanish>Preloaded Missile Dummy</Spanish>
-      <Hungarian>Preloaded Missile Dummy</Hungarian>
-      <Russian>Заряженная ракетная пустышка</Russian>
-    </Key>
-  </Package>
+    <Package name="Disposable">
+        <Key ID="STR_ACE_Disposable_UsedTube">
+            <English>Used Tube</English>
+            <German>Benutze Einwegwaffe</German>
+            <French>Tube utilisé</French>
+            <Czech>Použitý odpalovač</Czech>
+            <Polish>Zużyta rura</Polish>
+            <Spanish>Lanzador utilizado</Spanish>
+            <Hungarian>Elhasznált kilövőcső</Hungarian>
+            <Russian>Отстрелянная труба</Russian>
+        </Key>
+        <Key ID="STR_ACE_Disposable_UsedTubeDescription">
+            <English>Used disposable rocket launcher</English>
+            <German>Benutzter Einweg-Raketenwerfer</German>
+            <French>Lance-roquette à usage unique utilisé</French>
+            <Czech>Použitý raketomet</Czech>
+            <Polish>Zużyta rura granatnika jednorazowego użytku</Polish>
+            <Spanish>Lanzador desechable utilizado</Spanish>
+            <Hungarian>Elhasznált eldobható rakétavető</Hungarian>
+            <Russian>Отстрелянная одноразовая пусковая установка</Russian>
+        </Key>
+        <Key ID="STR_ACE_Disposable_PreloadedMissileDummy">
+            <English>Preloaded Missile Dummy</English>
+            <German>Vorgeladene Racketennachbildung</German>
+            <French>Missile préchargé Dummy</French>
+            <Czech>Přednabitá dummy střela</Czech>
+            <Polish>Wstępnie załadowana atrapa pocisku</Polish>
+            <Spanish>Preloaded Missile Dummy</Spanish>
+            <Hungarian>Előtöltött műrakéta</Hungarian>
+            <Russian>Заряженная ракетная пустышка</Russian>
+        </Key>
+    </Package>
 </Project>

@@ -19,8 +19,8 @@ if (GVAR(WindInfo)) exitWith {
     0 cutText ["", "PLAIN"];
     true
 };
-if (underwater ACE_player) exitWith { true };
-if (vehicle ACE_player != ACE_player) exitWith { true };
+if (underwater ACE_player) exitWith { false };
+if (vehicle ACE_player != ACE_player) exitWith { false };
 
 2 cutText ["", "PLAIN"];
 EGVAR(advanced_ballistics,Protractor) = false;

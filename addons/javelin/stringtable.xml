@@ -8,6 +8,7 @@
             <Czech>Zamknout cíl(držet)</Czech>
             <Polish>Namierz cel (przytrzymaj)</Polish>
             <French>Verrouiller cible (maintenir)</French>
+            <Hungarian>Célpontra állás (Lenyomva tartott)</Hungarian>
         </Key>
         <Key ID="STR_ACE_JAVELIN_CycleFireMode">
             <English>Cycle Fire Mode</English>
@@ -16,6 +17,7 @@
             <Czech>Cyklování režimů palby</Czech>
             <Polish>Przełącz tryb ognia</Polish>
             <French>Cycle mode de tir</French>
+            <Hungarian>Tüzelési mód váltása</Hungarian>
         </Key>
     </Package>
 </Project>
