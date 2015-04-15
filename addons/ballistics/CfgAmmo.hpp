@@ -181,7 +181,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={16, 20, 24, 26};
     };
     class ACE_762x51_Ball_Mk319_Mod_0 : B_762x51_Ball {
-        airFriction=-0.0014;
+        airFriction=-0.00103;
         caliber=0.85;
         hit=14;
         typicalSpeed=890;
@@ -189,7 +189,7 @@ class CfgAmmo {
         ACE_bulletLength=1.24;
         ACE_bulletMass=130;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
-        ACE_ballisticCoefficients[]={0.277};
+        ACE_ballisticCoefficients[]={0.377};
         ACE_velocityBoundaries[]={};
         ACE_standardAtmosphere="ICAO";
         ACE_dragModel=1;
