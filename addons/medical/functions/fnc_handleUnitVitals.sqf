@@ -28,9 +28,8 @@ if (_syncValues) then {
 };
 
 _bloodVolume = (_unit getvariable [QGVAR(bloodVolume), 0]) + ([_unit] call FUNC(getBloodVolumeChange));
-if (_bloodVolume <= 0) then {
-    _bloodVolume = 0;
-};
+_bloodVolume = _bloodVolume max 0;
+
 _unit setvariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
 
 // Set variables for synchronizing information across the net
@@ -78,15 +77,11 @@ if (GVAR(level) == 1) then {
 
     // bleeding
     _blood = _unit getVariable [QGVAR(bloodVolume), 100];
-    _blood = (_blood - 0.4 * (damage _unit) * _interval) max 0;
-    if (_blood != (_unit getVariable [QGVAR(bloodVolume), 100])) then {
-        _unit setVariable [QGVAR(bloodVolume), _blood, _syncValues];
-        if (_blood <= 35 and !(_unit getVariable ["ACE_isUnconscious", false])) then {
-            [_unit, true] call FUNC(setUnconscious);
-        };
-        if (_blood == 0) then {
-            [_unit] call FUNC(setDead);
-        };
+    if (_blood <= 35 and !(_unit getVariable ["ACE_isUnconscious", false])) then {
+        [_unit, true] call FUNC(setUnconscious);
+    };
+    if (_blood == 0) then {
+        [_unit] call FUNC(setDead);
     };
 };
 

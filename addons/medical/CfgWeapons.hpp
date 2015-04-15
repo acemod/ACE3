@@ -19,7 +19,6 @@ class CfgWeapons {
         };
     };
 
-    // @todo localize
     class ACE_ItemCore;
     class ACE_fieldDressing: ACE_ItemCore {
         scope = 2;

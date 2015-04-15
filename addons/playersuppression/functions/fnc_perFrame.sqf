@@ -17,33 +17,27 @@ _pPos       = getPosATL _projectile;
 
 if !(alive _projectile) then {
     [_this select 1] call CBA_fnc_removePerFrameHandler
-} else
-{
+} else {
     if ((ACE_player distance _projectile) <= _dDist) then {
         private ["_divisor"];
-        _divisor =  GVAR(overhead_divisor);
+        _divisor =  OVERHEADDIVISOR;
         if (lineIntersects [ATLtoASL _pPos, eyePos ACE_player, ACE_player]) then {
             _dDist = _dDist * 0.65
         };
 
         if ((_pPos distance ACE_player) <= _dDist) then {
-            _divisor = GVAR(impact_divisor);
+            _divisor = IMPACTDIVISOR;
             GVAR(lastShotAt) = time;
 			
             if ((_pPos distance ACE_player) <= 4.3) then {
-                [] spawn FUNC(impact);
+                [] call FUNC(impact);
             };
         };
-		
         if (_divisor != 0) then {
             if ((vehicle ACE_player == ACE_player) || (isTurnedOut ACE_player)) then {
                 GVAR(threshold) = GVAR(threshold) + (_hit/_divisor);
-                if (GVAR(threshold) >= GVAR(border)) then {
-
-                    if (GVAR(threshold) > GVAR(maxValue)) then {
-                        GVAR(threshold) = GVAR(maxValue);
-                    };
-
+                if (GVAR(threshold) >= BORDER) then {
+                    GVAR(threshold) = GVAR(threshold) min MAXVALUE;
                     if !(GVAR(isSuppressed)) then
                     {
                         [FUNC(pinnedDown), 0.5, [] ] call CBA_fnc_addPerFrameHandler;	
@@ -51,6 +45,6 @@ if !(alive _projectile) then {
                 };		
             };
         };
-        [_this select 1] call CBA_fnc_removePerFrameHandler
+        [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 };

@@ -33,9 +33,9 @@
             <French>Objet trop lourd</French>
             <Portuguese>Não é possível carregar o item devido a seu peso</Portuguese>
             <Italian>Non è possibile trascinare l'oggetto a causa del suo peso</Italian>
-            <Hungarian>Túl nehéz ahhoz, hogy elhúzd</Hungarian>
             <Russian>Слишком тяжело</Russian>
             <Czech>Moc težké</Czech>
+            <Hungarian>Az objektum túl nehéz</Hungarian>
         </Key>
         <Key ID="STR_ACE_Dragging_Carry">
             <English>Carry</English>
@@ -46,7 +46,7 @@
             <Czech>Nést</Czech>
             <Portuguese>Carregar</Portuguese>
             <Italian>Trascina</Italian>
-            <Hungarian>Felvesz</Hungarian>
+            <Hungarian>Felvevés</Hungarian>
             <Russian>Нести</Russian>
         </Key>
     </Package>

@@ -33,6 +33,7 @@ Aggr094 <bastards4glory@gmail.com>
 Anthariel <Contact@storm-simulation.com>
 BlackQwar
 Brakoviejo
+Clon1998 <ps.patti1998@gmail.com>
 Codingboy
 Crusty
 eRazeri
@@ -48,6 +49,7 @@ GieNkoV <gienkov.grzegorz@gmail.com>
 gpgpgpgp
 Grzegorz
 Hamburger SV
+Harakhti <shadowdragonphd@gmail.com>
 havena <silveredenis@gmail.com>
 Hawkins
 jokoho48
@@ -59,12 +61,14 @@ MarcBook
 meat <p.humberdroz@gmail.com>
 Michail Nikolaev
 nic547 <nic547@outlook.com>
+nomisum <nomisum@gmail.com>
 oscarmolinadev
 pokertour
 rakowozz
 Raspu86
 Riccardo Petricca <petriccarcc@gmail.com>
 Robert Boklahánics <bokirobi@gmail.com>
+ramius86 <pasini86@hotmail.com>
 simon84
 Sniperwolf572 <tenga6@gmail.com>
 Tonic
@@ -76,5 +80,9 @@ ruPaladin <happyworm24@rambler.ru>
 BlackPixxel
 Asgar Serran <piechottaf@web.de>
 Kavinsky <nmunozfernandez@gmail.com>
+<<<<<<< HEAD
 BlackPixxel
 LAxemann <Leon.Beilmann@freenet.de>
+=======
+Coren <coren4@gmail.com>
+>>>>>>> upstream/master

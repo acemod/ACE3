@@ -7,11 +7,7 @@ GVAR(enablePlayerSuppression) = true;
 if (isDedicated) exitWith {};
 
 GVAR(threshold)         = 0;	 // Changing value
-GVAR(maxValue)          = 30;	 // max. value that can be reached
-GVAR(border)            = 8;	 // The border value for the effects to start
 GVAR(lastShotAt)        = 0;	 // The time the player got shot at last time (Just creates the variable)
-GVAR(overhead_divisor)  = 22.15;
-GVAR(impact_divisor)    = 15.50;
 GVAR(isSuppressed)      = false;
 
 // PPEffects

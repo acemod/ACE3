@@ -1,11 +1,11 @@
 #include "script_component.hpp"
 
-if (GVAR(Threshold) >= GVAR(border)) then {
+if (GVAR(Threshold) >= BORDER) then {
     GVAR(isSuppressed) = true;
 	
     if (alive ACE_player) then {
-		private "_worValue";
-        _workValue = GVAR(intensity) * ((GVAR(Threshold) - GVAR(border)) / (GVAR(maxValue) - GVAR(border)));
+		private "_workValue";
+        _workValue = GVAR(intensity) * ((GVAR(Threshold) - BORDER) / (MAXVALUE - BORDER));
         addCamShake 
         [
             (_workValue * 1),		// Power
@@ -19,7 +19,7 @@ if (GVAR(Threshold) >= GVAR(border)) then {
         GVAR(cc) ppEffectAdjust [1, 1, 0, [0,0,0,0], [1,1,1,(1 - (_workValue * 0.40))],[1,1,1,0]];
         GVAR(cc) ppEffectCommit 0.5;
 			
-        GVAR(rBlur) ppEffectAdjust [(_workValue * 0.011), (_workValue * 0.011), 0.2, 0.2];
+        GVAR(rBlur) ppEffectAdjust [(_workValue * 0.013), (_workValue * 0.013), 0.21, 0.21];
         GVAR(rBlur) ppEffectCommit 0.05;
     };
 } else {	

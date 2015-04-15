@@ -42,7 +42,6 @@ if !(hasInterface) exitWith {};
     
     // Statement
     [ACE_player, ELEVATION_UP, MINOR_INCREMENT] call FUNC(adjustScope);
-    true
 },
 {false},
 [201, [false, false, false]], true] call cba_fnc_addKeybind;
@@ -56,7 +55,6 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, ELEVATION_DOWN, MINOR_INCREMENT] call FUNC(adjustScope);
-    true
 },
 {false},
 [209, [false, false, false]], true] call cba_fnc_addKeybind;
@@ -70,7 +68,6 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, WINDAGE_LEFT, MINOR_INCREMENT] call FUNC(adjustScope);
-    true
 },
 {false},
 [209, [false, true, false]], true] call cba_fnc_addKeybind;
@@ -84,7 +81,6 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, WINDAGE_RIGHT, MINOR_INCREMENT] call FUNC(adjustScope);
-    true
 },
 {false},
 [201, [false, true, false]], true] call cba_fnc_addKeybind;
@@ -98,7 +94,6 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, ELEVATION_UP, MAJOR_INCREMENT] call FUNC(adjustScope);
-    true
 },
 {false},
 [201, [true, false, false]], true] call cba_fnc_addKeybind;
@@ -112,7 +107,6 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, ELEVATION_DOWN, MAJOR_INCREMENT] call FUNC(adjustScope);
-    true
 },
 {false},
 [209, [true, false, false]], true] call cba_fnc_addKeybind;
@@ -126,7 +120,6 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, WINDAGE_LEFT, MAJOR_INCREMENT] call FUNC(adjustScope);
-    true
 },
 {false},
 [209, [true, true, false]], true] call cba_fnc_addKeybind;
@@ -140,7 +133,6 @@ if !(hasInterface) exitWith {};
 
     // Statement
     [ACE_player, WINDAGE_RIGHT, MAJOR_INCREMENT] call FUNC(adjustScope);
-    true
 },
 {false},
 [201, [true, true, false]], true] call cba_fnc_addKeybind;

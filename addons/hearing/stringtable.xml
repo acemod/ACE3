@@ -81,7 +81,7 @@
             <Czech>Nemáš žádné špunty</Czech>
             <Russian>У вас нет беруш</Russian>
             <French>Vous n'avez pas de Bouchons Anti-Bruits</French>
-            <Hungarian>Nincs füldugód</Hungarian>
+            <Hungarian>Nincsen füldugód</Hungarian>
             <Portuguese>Você não possui protetores auriculares</Portuguese>
             <Italian>Non hai i tappi auricolari</Italian>
         </Key>
@@ -105,6 +105,8 @@
             <German>Knalltrauma deaktivieren</German>
             <Czech>Vypnout pískání v uších</Czech>
             <Polish>Wyłącz dzwonienie w uszach</Polish>
+            <Hungarian>Fülcsengés letiltása</Hungarian>
+            <Italian>Disabilita il ronzio</Italian>
         </Key>
     </Package>
 </Project>

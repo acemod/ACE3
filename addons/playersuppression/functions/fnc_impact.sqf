@@ -1,7 +1,13 @@
+/*
+ * Author: LAxemann
+ * Creates a ppFffect when a bullet impacts nearby
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 
-private ["_rBlur","_cc"];
 if (((vehicle ACE_player) == ACE_player) || (isTurnedOut ACE_player)) then {
+    private ["_rBlur","_cc"];
     // RBlur
     _rBlur = ppEffectCreate ["RadialBlur", 1002]; 
     _rBlur ppEffectAdjust [0.015, 0.015, 0.2, 0.2];
@@ -14,7 +20,6 @@ if (((vehicle ACE_player) == ACE_player) || (isTurnedOut ACE_player)) then {
     _cc ppEffectEnable true;
     _cc ppEffectCommit 0;
 
-
     _rBlur ppEffectAdjust [0, 0, 0, 0];
     _rBlur ppEffectCommit 0.5;
     _cc ppEffectAdjust [1, 1, 0, [0,0,0,0], [1,1,1,1],[1,1,1,0]];
@@ -24,7 +29,5 @@ if (((vehicle ACE_player) == ACE_player) || (isTurnedOut ACE_player)) then {
     if ((time - GVAR(lastShotAt)) >= 120) then {
         addCamShake [3,0.4, 80];
     };
-
-    sleep 0.5;
-    ppEffectDestroy [_cc, _rBlur];
+	[FUNC(destroyEffect), 0.5, [time + 0.5, _cc, _rBlur] ] call CBA_fnc_addPerFrameHandler;	
 };

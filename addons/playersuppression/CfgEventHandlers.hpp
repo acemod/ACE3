@@ -4,10 +4,10 @@ class Extended_PreInit_EventHandlers {
     };
 };
 
-class Extended_Fired_EventHandlers {
+class Extended_FiredBIS_EventHandlers {
     class All {
         class ADDON {
-            clientFired = QUOTE(if ((GVAR(enablePlayerSuppression) && !isDedicated)) then {_this call FUNC(fired)});
+            clientFiredBIS = QUOTE(if ((GVAR(enablePlayerSuppression) && hasInterface)) then {_this call FUNC(fired)});
         };
     };
 };

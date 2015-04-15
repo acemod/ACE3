@@ -2,6 +2,7 @@
 
 ADDON = false;
 
+PREP(destroyEffect);
 PREP(fired);
 PREP(impact);
 PREP(main);
