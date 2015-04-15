@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{{ page.title }} · ACE3</title>
+        <title>{% if page.browserTitle != null %}{{ page.browserTitle }}{% else %}{{ page.title }}{% endif %} · ACE3</title>
 
         <meta name="description" content="{{site.description}}" />
         <meta name="keywords" content="$name" />
