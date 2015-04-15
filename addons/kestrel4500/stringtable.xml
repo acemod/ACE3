@@ -21,22 +21,27 @@
         <Key ID="STR_ACE_Kestrel4500_OpenKestrel">
             <English>Open Kestrel 4500</English>
             <Polish>Otwórz Kestrel 4500</Polish>
+            <Italian>Accendi Kestrel 4500</Italian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_ShowKestrel">
             <English>Show Kestrel 4500</English>
             <Polish>Pokaż Kestrel 4500</Polish>
+            <Italian>Mostra Kestrel 4500</Italian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_HideKestrel">
             <English>Hide Kestrel 4500</English>
             <Polish>Ukryj Kestrel 4500</Polish>
+            <Italian>Nascondi Kestrel 4500</Italian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_KestrelDialogKey">
             <English>Open Kestrel 4500</English>
             <Polish>Otwórz Kestrel 4500</Polish>
+            <Italian>Accendi Kestrel 4500</Italian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_DisplayKestrelKey">
             <English>Show Kestrel 4500</English>
             <Polish>Pokaż Kestrel 4500</Polish>
+            <Italian>Mostra Kestrel 4500</Italian>
         </Key>
     </Package>
 </Project>
