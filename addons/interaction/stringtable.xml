@@ -33,6 +33,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_ArmLeft">
             <English>Left Arm</English>
+            <French>Bras gauche</French>
             <German>Linker Arm</German>
             <Spanish>Brazo izquierdo</Spanish>
             <Czech>Levá paže</Czech>
@@ -194,7 +195,7 @@
             <Spanish>Asumir el liderazgo</Spanish>
             <Polish>Przejmij dowodzenie</Polish>
             <Czech>Stát se velitelem</Czech>
-            <French>Devenir Leader</French>
+            <French>Devenir Chef de groupe</French>
             <Russian>Стать лидером</Russian>
             <Hungarian>Vezetés átvétele</Hungarian>
             <Portuguese>Tornar-se Líder</Portuguese>
@@ -564,7 +565,7 @@
             <English>Join Team&lt;br/&gt;Green</English>
             <German>Team Grün&lt;br/&gt;beitreten</German>
             <Spanish>Unirse al&lt;br/&gt;equipo verde</Spanish>
-            <French>Rejoindre&lt;br/&gt;Verte</French>
+            <French>Rejoindre&lt;br/&gt;Vert</French>
             <Polish>Dołącz do&lt;br/&gt;drużyny zielonej</Polish>
             <Czech>Připojit do&lt;br/&gt;Zeleného týmu</Czech>
             <Russian>Присоединиться&lt;br/&gt;к зеленой группе</Russian>
@@ -576,7 +577,7 @@
             <English>Join Team&lt;br/&gt;Blue</English>
             <German>Team Blau&lt;br/&gt;beitreten</German>
             <Spanish>Unirse al&lt;br/&gt;equipo azul</Spanish>
-            <French>Rejoindre&lt;br/&gt;Bleue</French>
+            <French>Rejoindre&lt;br/&gt;Bleu</French>
             <Polish>Dołącz do&lt;br/&gt;drużyny niebieskiej</Polish>
             <Czech>Připojit do&lt;br/&gt;Modrého týmu</Czech>
             <Russian>Присоединиться&lt;br/&gt;к синей группе</Russian>
