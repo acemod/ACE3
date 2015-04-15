@@ -1,0 +1,8 @@
+body {
+background-color: $oil;
+}
+
+body > main {
+    padding: rem-calc(40) 0;
+    background-color: $white;
+}
