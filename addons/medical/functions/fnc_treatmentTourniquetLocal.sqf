@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-private ["_target", "_tourniquetItem", "_part", "_tourniquets", "_applyingTo"];
+private ["_target", "_tourniquetItem", "_part", "_tourniquets", "_applyingTo", "_selectionName"];
 _target = _this select 0;
 _tourniquetItem = _this select 1;
 _selectionName = _this select 2;
