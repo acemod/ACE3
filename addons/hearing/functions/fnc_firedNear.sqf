@@ -31,7 +31,7 @@ _muzzle = _this select 4;
 _mode = _this select 5;
 _ammo = _this select 6;
 
-if (_weapon in ["Throw", "Put"]) exitWith {};
+if (toLower _weapon in ["throw", "put"]) exitWith {};
 if (_unit != vehicle _unit && {!([_unit] call EFUNC(common,isTurnedOut))}) exitWith {};
 
 _silencer = switch (_weapon) do {
