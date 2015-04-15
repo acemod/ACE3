@@ -10,6 +10,10 @@
             <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
             <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_UseListMenu">
+            <English>Display interaction menus as lists</English>
+            <Spanish>Mostrar los menus de interacción como listas</Spanish>
+        </Key>
         <Key ID="STR_ACE_Interact_Menu_InteractKey">
             <English>Interact Key</English>
             <German>Fremdinteraktionsmenü-Taste</German>
