@@ -74,6 +74,7 @@
             <Czech>Aplikovat škrtidlo</Czech>
             <Polish>Załóż stazę</Polish>
             <French>Appliquer un garrot</French>
+            <Russian>Наложить жгут</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage">
             <English>Bandage</English>
@@ -165,7 +166,7 @@
             <Spanish>Inyectando Morfina ...</Spanish>
             <Polish>Wstrzykiwanie morfiny ...</Polish>
             <Czech>Aplikuji morfin ...</Czech>
-            <Russian>Введение морфина...</Russian>
+            <Russian>Введение морфина ...</Russian>
             <French>Injection de Morphine...</French>
             <Hungarian>Morfium beadása ...</Hungarian>
             <Portuguese>Injetando Morfina ...</Portuguese>
@@ -177,7 +178,7 @@
             <Spanish>Inyectando Epinefrina ...</Spanish>
             <Polish>Wstrzykiwanie adrenaliny ...</Polish>
             <Czech>Aplikuji adrenalin ...</Czech>
-            <Russian>Введение адреналина...</Russian>
+            <Russian>Введение адреналина ...</Russian>
             <French>Injection d'Adrénaline ...</French>
             <Hungarian>Epinefrin beadása ...</Hungarian>
             <Portuguese>Injetando Epinefrina ...</Portuguese>
@@ -190,7 +191,7 @@
             <Czech>Aplikuji atropin ...</Czech>
             <Polish>Wstrzykiwanie atropiny ...</Polish>
             <French>Injection d'Atropine ...</French>
-            <Russian>Введение атропина...</Russian>
+            <Russian>Введение атропина ...</Russian>
             <Hungarian>Atropin beadása ...</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Blood">
@@ -199,7 +200,7 @@
             <Spanish>Transfusión de sangre ...</Spanish>
             <Polish>Przetaczanie krwi ...</Polish>
             <Czech>Probíhá transfúze krve ...</Czech>
-            <Russian>Переливание крови...</Russian>
+            <Russian>Переливание крови ...</Russian>
             <French>Transfusion Sanguine ...</French>
             <Hungarian>Infúzió vérrel ...</Hungarian>
             <Portuguese>Transfundindo Sangue ...</Portuguese>
@@ -212,7 +213,7 @@
             <Czech>Probíha transfúze fyziologický roztoku ...</Czech>
             <Polish>Przetaczanie solanki ...</Polish>
             <French>Transfusion de saline ...</French>
-            <Russian>Переливание физраствора...</Russian>
+            <Russian>Переливание физраствора ...</Russian>
             <Hungarian>Infúzió sós vizzel ...</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Plasma">
@@ -222,7 +223,7 @@
             <Czech>Probíha transfúze plazmy ...</Czech>
             <Polish>Przetaczanie osocza ...</Polish>
             <French>Transfusion de Plasma ...</French>
-            <Russian>Переливание плазмы...</Russian>
+            <Russian>Переливание плазмы ...</Russian>
             <Hungarian>Infúzió vérplazmával ...</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Bandaging">
@@ -235,7 +236,7 @@
             <Italian>Sto applicando la benda ...</Italian>
             <Hungarian>Bekötözés ...</Hungarian>
             <Portuguese>Atando ...</Portuguese>
-            <Russian>Перевязывание...</Russian>
+            <Russian>Перевязывание ...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Applying_Tourniquet">
             <English>Applying Tourniquet ...</English>
@@ -244,7 +245,7 @@
             <Czech>Aplikuji škrtidlo</Czech>
             <Polish>Zakładanie stazy ...</Polish>
             <French>Mise en place du Garrot ...</French>
-            <Russian>Наложение жгута...</Russian>
+            <Russian>Наложение жгута ...</Russian>
             <Hungarian>Érszorító felhelyezése ...</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Medical">
@@ -1014,7 +1015,7 @@
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CONTENT">
             <English>Checking Blood Pressure..</English>
             <French>Mesure de la tension ...</French>
-            <Russian>Проверка артериального давления...</Russian>
+            <Russian>Проверка артериального давления ...</Russian>
             <Spanish>Comprobando presión arterial...</Spanish>
             <Polish>Sprawdzanie ciśnienia krwi...</Polish>
             <German>Blutdruck kontrollieren...</German>
@@ -1093,7 +1094,7 @@
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_CONTENT">
             <English>Checking Heart Rate..</English>
             <French>Vérification du rythme cardiaque ...</French>
-            <Russian>Проверка пульса...</Russian>
+            <Russian>Проверка пульса ...</Russian>
             <Spanish>Comprobando ritmo cardíaco...</Spanish>
             <Polish>Sprawdzanie tętna...</Polish>
             <German>Kontrolliere Herzfrequenz</German>
@@ -1182,7 +1183,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_UNRESPONSIVE">
             <English>%1 is not responsive</English>
-            <Russian>%1 не реагирует</Russian>
+            <Russian>%1 не реагирует на раздражители</Russian>
             <French>%1 est inconscient</French>
             <Spanish>%1 no reacciona</Spanish>
             <Polish>%1 jest nieprzytomny</Polish>
@@ -1350,7 +1351,7 @@
         <Key ID="STR_ACE_MEDICAL_PlacingInBodyBag">
             <English>Placing body in bodybag</English>
             <Spanish>Colocando cuerpo en bolsa para cadáveres</Spanish>
-            <Russian>Упаковка тела</Russian>
+            <Russian>Упаковка тела ...</Russian>
             <Polish>Pakowanie ciała do worka na zwłoki</Polish>
             <French>Placement du corps dans la housse</French>
             <Hungarian>Test hullazsákba helyezése ...</Hungarian>
@@ -1391,61 +1392,73 @@
             <English>Heavily wounded</English>
             <German>Schwer verwundet:</German>
             <Polish>Ciężko ranny</Polish>
+            <Russian>Сильно ранен</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_LightlyWounded">
             <English>Lightly wounded</English>
             <German>Leicht verwundet:</German>
             <Polish>Lekko ranny</Polish>
+            <Russian>Легко ранен</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_VeryLightlyWounded">
             <English>Very lightly wounded</English>
             <German>Sehr leicht verwundet:</German>
             <Polish>B. lekko ranny</Polish>
+            <Russian>Очень легко ранен</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Head">
             <English>Head</English>
             <German>Kopf</German>
             <Polish>Głowa</Polish>
+            <Russian>Голова</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Torso">
             <English>Torso</English>
             <German>Torso</German>
             <Polish>Tors</Polish>
+            <Russian>Торс</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_LeftArm">
             <English>Left Arm</English>
             <German>Linker Arm</German>
             <Polish>Lewe ramię</Polish>
+            <Russian>Левая рука</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_RightArm">
             <English>Right Arm</English>
             <German>Rechter Arm</German>
             <Polish>Prawe ramię</Polish>
+            <Russian>Правая рука</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_LeftLeg">
             <English>Left Leg</English>
             <German>Linkes Bein</German>
             <Polish>Lewa noga</Polish>
+            <Russian>Левая нога</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_RightLeg">
             <English>Right Leg</English>
             <German>Rechtes Bein</German>
             <Polish>Prawa noga</Polish>
+            <Russian>Правая нога</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
             <German>Schmerzeffekt-Typ</German>
             <Polish>Rodzaj efektu bólu</Polish>
+            <Russian>Вид боли</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Flash">
             <English>Colour Flashing</English>
             <German>Farbblinken</German>
             <Polish>Pulsujące kolory</Polish>
+            <Russian>Разноцветные вспышки</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Chroma">
             <English>Chromatic Aberration</English>
             <German>Chromatische Aberration</German>
             <Polish>Aberracja chromatyczna</Polish>
+            <Russian>Хроматическая аберрация</Russian>
         </Key>
     </Package>
 </Project>
