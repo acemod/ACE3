@@ -48,6 +48,7 @@
             <Hungarian>Robbanóanyag kódja: %1</Hungarian>
             <Portuguese>Código do explosivo: %1</Portuguese>
             <Russian>Код подрыва: %1</Russian>
+            <Italian>Codice esplosivo: %1</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_PlaceAction">
             <English>Place</English>
@@ -488,6 +489,7 @@
             <Spanish>Utilizado para detonar explosivos remotamente al soltarlo.</Spanish>
             <Hungarian>Robbanóanyagok távoli robbantásához való, elengedéskor gyújt.</Hungarian>
             <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
+            <Italian>Usato per attivare esplosivi quando rilasciato</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_Pickup">
             <English>Pick up</English>
@@ -498,6 +500,7 @@
             <French>Ramasser</French>
             <Hungarian>Felszedés</Hungarian>
             <Russian>Поднять</Russian>
+            <Italian>Raccogli</Italian>
         </Key>
     </Package>
 </Project>
