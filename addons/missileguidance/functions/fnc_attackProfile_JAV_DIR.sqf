@@ -48,12 +48,12 @@ switch( (_state select 0) ) do {
         if( ((ASLToATL _projectilePos) select 2) - ((ASLToATL _seekerTargetPos) select 2) >= _cruisAlt) then {
             _state set[0, STAGE_TERMINAL];
         } else {
-             _returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget*2];
+             _returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget*1.5];
         };
     };
     case STAGE_TERMINAL: {
         TRACE_1("STAGE_TERMINAL","");
-        //_returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget * 0.02];
+        _returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget * 0.002];
     };
 };
 

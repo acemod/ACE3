@@ -11,6 +11,7 @@
             <Polish>MicroDAGR GPS</Polish>
             <French>MicroDAGR GPS</French>
             <Hungarian>MicroDAGR GPS</Hungarian>
+            <Italian>MicroDAGR GPS</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_itemDescription">
             <English>MicroDAGR advanced GPS receiver</English>
@@ -21,6 +22,7 @@
             <French>Récepteur GPS MicroDAGR</French>
             <Czech>MicroDAGR pokročílá GPS příjímač</Czech>
             <Hungarian>MicroDAGR fejlett GPS vevőegység</Hungarian>
+            <Italian>MicroDAGR ricevitore GPS avanzato</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_settingUseMils">
             <English>Angular Unit:</English>
@@ -31,6 +33,7 @@
             <German>Winkeleinheit:</German>
             <Czech>Úhlová jednotka:</Czech>
             <Hungarian>Szögmértékegység:</Hungarian>
+            <Italian>Unità angolare:</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_settingMils">
             <English>Mils</English>
@@ -41,6 +44,7 @@
             <French>Mils</French>
             <Czech>Mils</Czech>
             <Hungarian>Mil</Hungarian>
+            <Italian>Miglia</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_settingShowWP">
             <English>Show Waypoints On Map:</English>
@@ -51,6 +55,7 @@
             <French>Montrer points de passage sur la carte</French>
             <Czech>Ukázat waypointy na mapě:</Czech>
             <Hungarian>Útvonalpontok mutatása a térképen:</Hungarian>
+            <Italian>Mostra waypoint sulla mappa:</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_settingDegrees">
             <English>Degrees</English>
@@ -61,13 +66,14 @@
             <French>Degrés</French>
             <Czech>Stupně</Czech>
             <Hungarian>Fok</Hungarian>
+            <Italian>Gradi</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_settingOn">
             <English>On</English>
             <Czech>Zapnuto</Czech>
             <French>Allumé</French>
             <German>Ein</German>
-            <Italian>Sì</Italian>
+            <Italian>Acceso</Italian>
             <Polish>Wł.</Polish>
             <Portuguese>Ativar</Portuguese>
             <Russian>Вкл.</Russian>
@@ -79,7 +85,7 @@
             <Czech>Vypnuto</Czech>
             <French>Eteint</French>
             <German>Aus</German>
-            <Italian>No</Italian>
+            <Italian>Spento</Italian>
             <Polish>Wył.</Polish>
             <Portuguese>Desativar</Portuguese>
             <Russian>Выкл.</Russian>
@@ -95,6 +101,7 @@
             <German>Koordinaten eingeben:</German>
             <Czech>Napiš souřadnice:</Czech>
             <Hungarian>Add meg a rácskoordinátákat:</Hungarian>
+            <Italian>Introduci griglia coordinate:</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_wpEnterName">
             <English>Name of [%1]</English>
@@ -105,6 +112,7 @@
             <French>Nom de %1</French>
             <Czech>Název [%1]</Czech>
             <Hungarian>[%1] neve</Hungarian>
+            <Italian>Nome di [%1]</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_controlMGRS">
             <English>MGRS-New</English>
@@ -115,6 +123,7 @@
             <French>Info-MGRS</French>
             <Czech>MGRS-Nový</Czech>
             <Hungarian>MGRS-új</Hungarian>
+            <Italian>Nuovo MGRS</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_controlWGD">
             <English>WGD</English>
@@ -125,6 +134,7 @@
             <French>WGD</French>
             <Czech>WGD</Czech>
             <Hungarian>WGD</Hungarian>
+            <Italian>WGD</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_controlRange">
             <English>Range:</English>
@@ -135,6 +145,7 @@
             <French>Distance:</French>
             <Czech>Vzdálenost:</Czech>
             <Hungarian>Távolság:</Hungarian>
+            <Italian>Distanza:</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_compasDirection">
             <English>Compass Direction</English>
@@ -145,6 +156,7 @@
             <French>Azimut</French>
             <Czech>Azimut:</Czech>
             <Hungarian>Irányszög</Hungarian>
+            <Italian>Azimut</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_menuMark">
             <English>Mark</English>
@@ -155,6 +167,7 @@
             <French>Marque</French>
             <Czech>Označit</Czech>
             <Hungarian>Jelölés</Hungarian>
+            <Italian>Marca</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_menuWaypoints">
             <English>Waypoints</English>
@@ -165,6 +178,7 @@
             <Polish>Punkty trasy</Polish>
             <French>Point de passage</French>
             <Hungarian>Útvonalpontok</Hungarian>
+            <Italian>waypoints</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_menuConnectTo">
             <English>Connect To</English>
@@ -175,6 +189,7 @@
             <Polish>Podłącz do</Polish>
             <French>Connecter</French>
             <Hungarian>Csatlakozás</Hungarian>
+            <Italian>Collega a </Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_menuSettings">
             <English>Settings</English>
@@ -185,6 +200,7 @@
             <Czech>Nastavení</Czech>
             <Polish>Ustawienia</Polish>
             <Hungarian>Beállítások</Hungarian>
+            <Italian>Impostaizoni</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_waypointsSet">
             <English>SetWP</English>
@@ -195,6 +211,7 @@
             <Polish>UstawPT</Polish>
             <French>Définir point de passage</French>
             <Hungarian>UP Beállítása</Hungarian>
+            <Italian>Definisci WayPoints</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_waypointsAdd">
             <English>Add</English>
@@ -205,6 +222,7 @@
             <Polish>Dodaj</Polish>
             <French>Ajouter</French>
             <Hungarian>Hozzáadás</Hungarian>
+            <Italian>Aggiungi</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_waypointsDelete">
             <English>Delete</English>
@@ -226,6 +244,7 @@
             <French>Basculer le mode d'affichage MicroDAGR</French>
             <Czech>Přepnout zobrazení MircroDAGRu</Czech>
             <Hungarian>MicroDAGR kijelzési mód váltása</Hungarian>
+            <Italian>Alterna modalità display MicroDAGR</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_show">
             <English>Show MicoDAGR</English>
@@ -236,6 +255,7 @@
             <Polish>Pokaż&lt;br /&gt;MicroDAGR</Polish>
             <French>Afficher MicroDAGR</French>
             <Hungarian>MicroDAGR mutatása</Hungarian>
+            <Italian>Mostra MicroDAGR</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_configure">
             <English>Configure MicroDAGR</English>
@@ -246,6 +266,7 @@
             <Polish>Konfiguruj&lt;br /&gt;MicroDAGR</Polish>
             <French>Configurer MicroDAGR</French>
             <Hungarian>MicroDAGR konfigurálása</Hungarian>
+            <Italian>ConfiguraMicroDAGR</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_closeUnit">
             <English>Close MicroDAGR</English>
@@ -256,6 +277,7 @@
             <Polish>Zamknij&lt;br /&gt;MicroDAGR</Polish>
             <French>Fermer MicroDAGR</French>
             <Hungarian>MicroDAGR elrejtése</Hungarian>
+            <Italian>Chiudi MicroDAGR</Italian>
         </Key>
     </Package>
 </Project>

@@ -10,6 +10,7 @@
             <Polish>Wskaźnik laserowy (czerwony)</Polish>
             <Hungarian>Lézer-pointer (piros)</Hungarian>
             <Spanish>Puntero láser (rojo)</Spanish>
+            <Italian>Puntatore laser (rosso)</Italian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_green">
             <English>Laser Pointer (green)</English>
@@ -20,6 +21,7 @@
             <Polish>Wskaźnik laserowy (zielony)</Polish>
             <Hungarian>Lézer-pointer (zöld)</Hungarian>
             <Spanish>Puntero láser (verde)</Spanish>
+            <Italian>Puntatore laser (verde)</Italian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_Description">
             <English>Emits visible light. </English>
@@ -30,6 +32,7 @@
             <Polish>Wydziela widzialne światło.</Polish>
             <Hungarian>Látható fényt bocsát ki.</Hungarian>
             <Spanish>Emite luz visible.</Spanish>
+            <Italian>Emette luce visibile</Italian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_useLaser">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</English>
@@ -47,16 +50,23 @@
             <English>Laser</English>
             <German>Laser</German>
             <Polish>Laser</Polish>
+            <Russian>Лазер</Russian>
+            <French>Laser</French>
         </Key>
         <Key ID="STR_ACE_Laserpointer_IRLaser">
             <English>IR Laser</English>
             <German>IR-Laser</German>
             <Polish>Laser IR</Polish>
+            <Russian>ИК-лазер</Russian>
+            <French>Laser IR</French>
         </Key>
         <Key ID="STR_ACE_Laserpointer_switchLaserLight">
             <English>Switch Laser / IR Laser</English>
             <German>Umschalten Laser / IR-Laser</German>
             <Polish>Przełącz Laser / Laser IR</Polish>
+            <Russian>Изменить режим Лазер / ИК-лазер</Russian>
+            <French>Changer Laser / Laser IR</French>
+            <Italian>Alterna Laser / IR Laser</Italian>
         </Key>
     </Package>
 </Project>
