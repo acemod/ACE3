@@ -746,5 +746,23 @@
             <English>Caliber: 7.62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Pociski: 20</Polish>
         </Key>
+        <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_Name">
+            <English>6.5x47mm 30Rnd Mag (HPBT Scenar)</English>
+        </Key>
+        <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_NameShort">
+            <English>6.5mm Scenar</English>
+        </Key>
+        <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_Description">
+            <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 30</English>
+        </Key>
+        <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Name">
+            <English>8.6x70mm 10Rnd Mag (300gr Sierra MatchKing HPBT)</English>
+        </Key>
+        <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_NameShort">
+            <English>.338 (HPBT)</English>
+        </Key>
+        <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Description">
+            <English>Caliber: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Rounds: 10</English>
+        </Key>
     </Package>
 </Project>

@@ -304,9 +304,9 @@ class CfgWeapons {
     };
     class arifle_Katiba_F: arifle_katiba_Base_F {
         magazines[] = {
-            "30Rnd_65x39_caseless_mag",
-            "30Rnd_65x39_caseless_mag_Tracer",
-            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim"
+            "30Rnd_65x39_caseless_green",
+            "30Rnd_65x39_caseless_green_mag_Tracer",
+            "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim"
         };
         initSpeed = -1.08;
         ACE_barrelTwist=8;
@@ -314,9 +314,9 @@ class CfgWeapons {
     };
     class arifle_Katiba_C_F: arifle_katiba_Base_F {
         magazines[] = {
-            "30Rnd_65x39_caseless_mag",
-            "30Rnd_65x39_caseless_mag_Tracer",
-            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim"
+            "30Rnd_65x39_caseless_green",
+            "30Rnd_65x39_caseless_green_mag_Tracer",
+            "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim"
         };
         initSpeed = -1.07;
         ACE_barrelTwist=8;
@@ -324,9 +324,9 @@ class CfgWeapons {
     };
     class arifle_Katiba_GL_F: arifle_katiba_Base_F {
         magazines[] = {
-            "30Rnd_65x39_caseless_mag",
-            "30Rnd_65x39_caseless_mag_Tracer",
-            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim"
+            "30Rnd_65x39_caseless_green",
+            "30Rnd_65x39_caseless_green_mag_Tracer",
+            "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim"
         };
         initSpeed = -1.08;
         ACE_barrelTwist=8;
@@ -527,9 +527,16 @@ class CfgWeapons {
         ACE_barrelLength=43.3;
     };
     class srifle_DMR_02_F: DMR_02_base_F {
-        initSpeed = -1.0;
+        magazines[] = {
+            "10Rnd_338_Mag",
+            "ACE_10Rnd_338_300gr_HPBT_Mag",
+            "ACE_20Rnd_762x67_Mk248_Mod_0_Mag",
+            "ACE_20Rnd_762x67_Mk248_Mod_1_Mag",
+            "ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag"
+        };
+        initSpeed = -0.962;
         ACE_barrelTwist=10;
-        ACE_barrelLength=26;
+        ACE_barrelLength=20;
     };
     class srifle_DMR_03_F: DMR_03_base_F {
         magazines[] = {
