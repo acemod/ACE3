@@ -9,6 +9,7 @@
             <Czech>Zobrazí text při hodu granátem</Czech>
             <Polish>Wyświetl tekst przy rzucie granatem</Polish>
             <French>Afficher texte lors d'un lancé de grenade</French>
+            <Hungarian>Szöveg mutatása gránát eldobásakor</Hungarian>
         </Key>
         <Key ID="STR_ACE_Weaponselect_SettingDisplayTextDesc">
             <English>Display a hint or text on grenade throw.</English>
@@ -18,6 +19,7 @@
             <Czech>Zobrazí upozornění nebo text při hodu granátem.</Czech>
             <Polish>Wyświetla powiadomienie lub tekst przy rzucie granatem.</Polish>
             <French>Afficher texte/info au lancé de grenade</French>
+            <Hungarian>Jelez egy súgót vagy szöveget a gránát eldobásakor.</Hungarian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectPistol">
             <English>Select Pistol</English>
@@ -157,7 +159,7 @@
             <Spanish>Granada %1</Spanish>
             <Polish>Granat %1</Polish>
             <Czech>Granát %1</Czech>
-            <Hungarian>Gránát Kiválasztása</Hungarian>
+            <Hungarian>Gránát: %1</Hungarian>
             <Russian>Граната %1</Russian>
             <French>Grenade %1</French>
         </Key>
@@ -167,7 +169,7 @@
             <Spanish>Granada lista</Spanish>
             <Polish>Przygotuj granat</Polish>
             <Czech>Odjistit granát</Czech>
-            <Hungarian>Kész Gránát</Hungarian>
+            <Hungarian>Gránát előkészítése</Hungarian>
             <Russian>Подготовить гранату</Russian>
             <French>Grenade prête</French>
         </Key>
@@ -189,7 +191,7 @@
             <Spanish>Seleccionar granada de no fragmentación</Spanish>
             <Polish>Wybierz granat nieodłamkowy</Polish>
             <French>Sélectionner grenade non-léthale</French>
-            <Hungarian>Nem Robbanó Gránát Kiválasztása</Hungarian>
+            <Hungarian>Nem-robbanó Gránát Kiválasztása</Hungarian>
             <Czech>Zvolit Ne-Výbušný Granát</Czech>
             <Portuguese>Selecionar Granada</Portuguese>
             <Italian>Seleziona Altre Granate</Italian>
@@ -247,7 +249,7 @@
             <Spanish>Granada no seleccionada</Spanish>
             <Polish>Nie wybrano żadnego granatu</Polish>
             <French>Aucune grenade sélectionnée</French>
-            <Hungarian>Nincs kiválasztva gránát</Hungarian>
+            <Hungarian>Nincs semmilyen gránát kiválasztva</Hungarian>
             <Czech>Není zvolen žádný granát</Czech>
             <Portuguese>Nenhuma granada selecionada</Portuguese>
             <Italian>Nessuna granata selezionata</Italian>
@@ -260,7 +262,7 @@
             <Czech>Kouřový odpalovač</Czech>
             <French>Tirer le lance-pots fumigènes</French>
             <Polish>Wystrzel granat dymny</Polish>
-            <Hungarian>Füst kilövése</Hungarian>
+            <Hungarian>Füstvető eltüzelése</Hungarian>
             <Russian>Запустить дымовую завесу</Russian>
         </Key>
     </Package>

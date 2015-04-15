@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="ReloadLaunchers">
         <Key ID="STR_ACE_ReloadLaunchers_LoadLauncher">
@@ -9,6 +10,7 @@
             <Czech>Nabít odpalovač</Czech>
             <Polish>Załaduj wyrzutnię</Polish>
             <French>Charger lanceur</French>
+            <Hungarian>Kilövö betöltése</Hungarian>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
             <English>Loading launcher ...</English>
@@ -18,6 +20,7 @@
             <Russian>Зарядка ПУ ...</Russian>
             <Czech>Nabíjím odpalovač  ...</Czech>
             <Polish>Ładowanie wyrzutni ...</Polish>
+            <Hungarian>Kilövő betöltés alatt ...</Hungarian>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LauncherLoaded">
             <English>Launcher loaded</English>
@@ -27,6 +30,7 @@
             <Russian>ПУ заряжено</Russian>
             <Czech>Odpalovač nabit</Czech>
             <Polish>Wyrzutnia załadowana</Polish>
+            <Hungarian>Kilövő betöltve</Hungarian>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadMagazine">
             <English>Load %1</English>
@@ -36,6 +40,7 @@
             <Russian>Загрузка %1</Russian>
             <Czech>Nabít %1</Czech>
             <Polish>Załadowano %1</Polish>
+            <Hungarian>%1 betöltése</Hungarian>
         </Key>
     </Package>
 </Project>

@@ -29,7 +29,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimDescription">
             <English>Caliber: 6.5x39 mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
-            <Hungarian>Kaliber: 6,5x39 mm Nyomjelző IR-DIM&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
+            <Hungarian>Kaliber: 6,5x39 mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
             <German>Kaliber: 6,5x39 mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MX/C/M/SW/3GL</German>
             <Spanish>Calibre: 6,5x39 mm Trazadoras IR-DIM&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MX/C/M/SW/3GL</Spanish>
             <French>Calibre: 6,5x39 mm Traçantes IR-DIM&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: MX/C/M/SW/3GL</French>
@@ -41,7 +41,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_SDName">
             <English>6.5mm 30Rnd SD Mag</English>
-            <Hungarian>6,5 mm Hangtompítós 30-as Tár</Hungarian>
+            <Hungarian>6,5 mm Halk 30-as Tár</Hungarian>
             <German>6,5 mm 30-Schuss-Magazin SD</German>
             <Spanish>Cargador de 30 balas SD de 6,5mm</Spanish>
             <French>Ch. 6,5mm 30Cps SD</French>
@@ -53,7 +53,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_SDNameShort">
             <English>6.5mm SD</English>
-            <Hungarian>6,5 mm Hangtompítós</Hungarian>
+            <Hungarian>6,5 mm Halk</Hungarian>
             <German>6,5mm SD</German>
             <Spanish>6,5mm SD</Spanish>
             <French>6,5mm SD</French>
@@ -65,7 +65,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_SDDescription">
             <English>Caliber: 6.5x39 mm SD&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
-            <Hungarian>Kaliber: 6,5x39 mm Hangtompítós&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
+            <Hungarian>Kaliber: 6,5x39 mm Halk&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
             <German>Kaliber: 6,5x39 mm SD&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MX/C/M/SW/3GL</German>
             <Spanish>Calibre: 6,5x39 mm SD&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MX/C/M/SW/3GL</Spanish>
             <French>Calibre: 6,5x39 mm SD&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: MX/C/M/SW/3GL</French>
@@ -101,7 +101,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_APDescription">
             <English>Caliber: 6.5x39 mm AP&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
-            <Hungarian>Kaliber: 6,5x39 mm Páncéltörő&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
+            <Hungarian>Kaliber: 6,5x39 mm Páncéltörő&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
             <German>Kaliber: 6,5x39 mm AP&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MX/C/M/SW/3GL</German>
             <Spanish>Calibre: 6,5x39 mm AP&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MX/C/M/SW/3GL</Spanish>
             <French>Calibre: 6,5x39 mm AP&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: MX/C/M/SW/3GL</French>
@@ -138,7 +138,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_Tracer_DimDescription">
             <English>Caliber: 6.5x39 mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
-            <Hungarian>Kaliber: 6,5x39 mm Nyomjelző IR-DIM&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
+            <Hungarian>Kaliber: 6,5x39 mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
             <German>Kaliber: 6,5x39 mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Katiba</German>
             <Spanish>Calibre: 6,5x39 mm Trazadoras IR-DIM&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: Katiba</Spanish>
             <French>Calibre: 6,5x39 mm Traçantes IR-DIM&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: Katiba</French>
@@ -150,7 +150,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_SDName">
             <English>6.5mm 30Rnd SD Mag</English>
-            <Hungarian>6,5 mm Hangtompítós 30-as Tár</Hungarian>
+            <Hungarian>6,5 mm Halk 30-as Tár</Hungarian>
             <German>6,5 mm 30-Schuss-Magazin SD</German>
             <Spanish>Cargador de 30 balas SD de 6,5mm</Spanish>
             <French>Ch. 6,5mm 30Cps SD</French>
@@ -162,7 +162,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_SDNameShort">
             <English>6.5mm SD</English>
-            <Hungarian>6,5 mm Hangtompítós</Hungarian>
+            <Hungarian>6,5 mm Halk</Hungarian>
             <German>6,5mm SD</German>
             <Spanish>6,5mm SD</Spanish>
             <French>6,5mm SD</French>
@@ -174,7 +174,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_SDDescription">
             <English>Caliber: 6.5x39 mm SD&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
-            <Hungarian>Kaliber: 6,5x39 mm Hangtompítós&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
+            <Hungarian>Kaliber: 6,5x39 mm Halk&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
             <German>Kaliber: 6,5x39 mm SD&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Katiba</German>
             <Spanish>Calibre: 6,5x39 mm SD&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: Katiba</Spanish>
             <French>Calibre: 6,5x39 mm SD&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: Katiba</French>
@@ -210,7 +210,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_APDescription">
             <English>Caliber: 6.5x39 mm AP&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
-            <Hungarian>Kaliber: 6,5x39 mm Páncéltörő&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
+            <Hungarian>Kaliber: 6,5x39 mm Páncéltörő&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
             <German>Kaliber: 6,5x39 mm AP&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Katiba</German>
             <Spanish>Calibre: 6,5x39 mm AP&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: Katiba</Spanish>
             <French>Calibre: 6,5x39 mm AP&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: Katiba</French>
@@ -247,7 +247,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_mag_Tracer_DimDescription">
             <English>Caliber: 5.56x45 mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</English>
-            <Hungarian>Kaliber: 5,56x45 mm Nyomjelző IR-DIM&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Hungarian>
+            <Hungarian>Kaliber: 5,56x45 mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Hungarian>
             <German>Kaliber: 5,56x45 mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</German>
             <Spanish>Calibre: 5,56x45 mm Trazadoras IR-DIM&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Spanish>
             <French>Calibre: 5,56x45 mm Traçantes IR-DIM&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</French>
@@ -283,7 +283,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_mag_APDescription">
             <English>Caliber: 5.56x45 mm AP&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</English>
-            <Hungarian>Kaliber: 5,56x45 mm Páncéltörő&lt;br /&gt;Lőszerek: 30&lt;br /&gt;Használható: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Hungarian>
+            <Hungarian>Kaliber: 5,56x45 mm Páncéltörő&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Hungarian>
             <German>Kaliber: 5,56x45 mm AP&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</German>
             <Spanish>Calibre: 5,56x45 mm AP&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Spanish>
             <French>Calibre: 5,56x45 mm AP&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</French>
@@ -320,7 +320,7 @@
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_TracerDescription">
             <English>Caliber: 7.62x51 mm Tracer&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
-            <Hungarian>Kaliber: 7,62x51 mm Nyomjelző&lt;br /&gt;Lőszerek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
+            <Hungarian>Kaliber: 7,62x51 mm Nyomjelző&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
             <German>Kaliber: 7,62x51 mm Leuchtspur&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
             <Spanish>Calibre: 7,62x51 mm Trazadora&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
             <French>Calibre: 7,62x51 mm Traçantes&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé dans: EBR</French>
@@ -356,7 +356,7 @@
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_Tracer_DimDescription">
             <English>Caliber: 7.62x51 mm Tracer IR-DIM&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
-            <Hungarian>Kaliber: 7,62x51 mm Nyomjelző IR-DIM&lt;br /&gt;Lőszerek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
+            <Hungarian>Kaliber: 7,62x51 mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
             <German>Kaliber: 7,62x51 mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
             <Spanish>Calibre: 7,62x51 mm Trazadoras IR-DIM&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
             <French>Calibre: 7,62x51 mm Traçantes IR-DIM&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé dans: EBR</French>
@@ -368,7 +368,7 @@
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_SDName">
             <English>7.62mm 20Rnd SD Mag</English>
-            <Hungarian>7,62 mm Hangtompítós 20-as Tár</Hungarian>
+            <Hungarian>7,62 mm Halk 20-as Tár</Hungarian>
             <German>7,62 mm 20-Schuss-Magazin SD</German>
             <Spanish>Cargador de 20 balas SD de 7,62mm</Spanish>
             <French>Ch. 7,62mm 20Cps SD</French>
@@ -380,7 +380,7 @@
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_SDNameShort">
             <English>7.62mm SD</English>
-            <Hungarian>7,62 mm Hangtompítós</Hungarian>
+            <Hungarian>7,62 mm Halk</Hungarian>
             <German>7,62mm SD</German>
             <Spanish>7,62mm SD</Spanish>
             <French>7,62mm SD</French>
@@ -392,7 +392,7 @@
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_SDDescription">
             <English>Caliber: 7.62x51 mm SD&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
-            <Hungarian>Kaliber: 7,62x51 mm Hangtompítós&lt;br /&gt;Lőszerek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
+            <Hungarian>Kaliber: 7,62x51 mm Halk&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
             <German>Kaliber: 7,62x51 mm SD&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
             <Spanish>Calibre: 7,62x51 mm SD&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
             <French>Calibre: 7,62x51 mm SD&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé dans: EBR</French>
@@ -428,7 +428,7 @@
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_APDescription">
             <English>Caliber: 7.62x51 mm AP&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
-            <Hungarian>Kaliber: 7,62x51 mm Páncéltörő&lt;br /&gt;Lőszerek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
+            <Hungarian>Kaliber: 7,62x51 mm Páncéltörő&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
             <German>Kaliber: 7,62x51 mm AP&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
             <Spanish>Calibre: 7,62x51 mm AP&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
             <French>Calibre: 7,62x51 mm AP&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé dans: EBR</French>

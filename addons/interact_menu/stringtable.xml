@@ -9,6 +9,7 @@
             <Czech>Zobrazit kurzor v menu pro vlastní interakci</Czech>
             <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
             <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
+            <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
@@ -22,6 +23,7 @@
             <Czech>Klávesa pro interakci</Czech>
             <Polish>Klawisz interakcji</Polish>
             <French>Touche d'interaction</French>
+            <Hungarian>Cselekvő gomb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
             <English>Self Interaction Key</English>
@@ -31,6 +33,7 @@
             <Czech>Klávesa pro vlastní interakci</Czech>
             <Polish>Klawisz własnej interakcji</Polish>
             <French>Touche d'interaction personnelle</French>
+            <Hungarian>Saját cselekvő gomb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
             <English>Self Actions</English>
@@ -40,6 +43,7 @@
             <Czech>Vlastní akce</Czech>
             <Polish>Własne akcje</Polish>
             <French>Interaction personnelle</French>
+            <Hungarian>Saját cselekvések</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
             <English>Vehicle Actions</English>
@@ -49,6 +53,7 @@
             <Czech>Interakce s vozidly</Czech>
             <Polish>Akcje pojazdu</Polish>
             <French>Interaction véhicule</French>
+            <Hungarian>Járműves cselekvések</Hungarian>
         </Key>
     </Package>
 </Project>
