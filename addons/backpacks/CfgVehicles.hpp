@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class ACE_BackpackToFront {
                     displayName = "$STR_ACE_Backpack_BackpackToFront";
-                    condition = "(backpack _player != '') and (vehicle _player == _player) and (isNull (_player getVariable ['ACE_Backpack', objNull]))";
+                    condition = "(backpack _player != '') and (isNull (_player getVariable ['ACE_Backpack', objNull]))";
                     exceptions[] = {"isNotInside"};
                     statement = QUOTE([_player] call FUNC(backpackToFront));
                     showDisabled = 0;
@@ -15,7 +15,7 @@ class CfgVehicles {
                 };
                 class ACE_BackpackToBack {
                     displayName = "$STR_ACE_Backpack_BackpackToBack";
-                    condition = "(backpack _player == '') and (vehicle _player == _player) and (!isNull (_player getVariable ['ACE_Backpack', objNull]))";
+                    condition = "(backpack _player == '') and (!isNull (_player getVariable ['ACE_Backpack', objNull]))";
                     exceptions[] = {"isNotInside"};
                     statement = QUOTE([_player] call FUNC(backpackToBack));
                     showDisabled = 0;
