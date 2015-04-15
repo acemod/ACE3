@@ -5,6 +5,7 @@
 
 if (!hasInterface) exitWith {};
 
+GVAR(ShowNamesTime) = -10;
 
 // Add keybinds
 ["ACE3", QGVAR(showNameTags), localize "STR_ACE_NameTags_ShowNames",
