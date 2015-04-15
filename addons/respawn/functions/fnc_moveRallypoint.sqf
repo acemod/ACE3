@@ -44,11 +44,9 @@ _this spawn {
     _rallypoint setPosATL _position;
     _unit reveal _rallypoint;
 
-    /*
-    _marker = format ["AGM_RallyPoint_%1", _side];
-    _marker setMarkerPos _position;
-    _marker setMarkerTextLocal format ["%1:%2", [date select 3, 2, 0] call CBA_fnc_FORMATNumber, [date select 4, 2, 0] call CBA_fnc_FORMATNumber];
-    */
+    _rallypoint setVariable [QGVAR(markerDate), format ["%1:%2", date select 3, date select 4], true];
+
+    ["rallypointMoved", [_rallypoint, _side]] call EFUNC(common,globalEvent);
 
     [localize "STR_ACE_Respawn_Deployed"] call EFUNC(common,displayTextStructured);
 };

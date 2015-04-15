@@ -4,6 +4,7 @@ ADDON = false;
 
 PREP(canMoveRallypoint);
 PREP(handleKilled);
+PREP(handlePlayerChanged);
 PREP(handleRespawn);
 PREP(handleInitPostServer);
 PREP(initRallypoint);
@@ -16,5 +17,6 @@ PREP(removeDisconnectedPlayer);
 PREP(restoreGear);
 PREP(showFriendlyFireMessage);
 PREP(teleportToRallypoint);
+PREP(updateRallypoint);
 
 ADDON = true;
