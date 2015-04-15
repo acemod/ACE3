@@ -6,6 +6,7 @@
             <English>Show Wind Info</English>
             <Polish>Pokaż inf. o wietrze</Polish>
             <Russian>Показать информацию о погоде</Russian>
+            <French>Afficher information du vent</French>
         </Key>
     </Package>
 </Project>
