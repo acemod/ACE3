@@ -74,6 +74,3 @@ GVAR(isOpeningDoor) = false;
 [29, [false, false, false]], false] call cba_fnc_addKeybind;
 
 ["isNotSwimming", {!underwater (_this select 0)}] call EFUNC(common,addCanInteractWithCondition);
-
-// disable firing while the interact menu is is is opened
-["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventHandler);

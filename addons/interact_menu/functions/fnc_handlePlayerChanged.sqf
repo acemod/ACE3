@@ -1,21 +1,17 @@
 /*
  * Author: commy2
- *
  * Disables firing while the menu is opened. Called from playerChanged eh.
  *
  * Argument:
- * 0: New unit to add the addAction eh (Object)
- * 1: Old unit to remove the addAction eh (String)
+ * 0: New unit to add the addAction eh <OBJECT>
+ * 1: Old unit to remove the addAction eh <STRING>
  *
  * Return value:
- * NOPE
+ * None
  */
 #include "script_component.hpp"
 
-private ["_newUnit", "_oldUnit"];
-
-_newUnit = _this select 0;
-_oldUnit = _this select 1;
+EXPLODE_2_PVT(_this,_newUnit,_oldUnit);
 
 // add to new unit
 private "_ehid";
