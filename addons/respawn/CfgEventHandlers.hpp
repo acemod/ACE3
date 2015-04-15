@@ -64,7 +64,7 @@ class Extended_Init_EventHandlers {
 class Extended_InitPost_EventHandlers {
     class CAManBase {
         class ADDON {
-            init = QUOTE(_this call FUNC(handleInitPostServer));
+            serverInit = QUOTE(_this call FUNC(handleInitPostServer));
         };
     };
 };
