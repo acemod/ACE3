@@ -9,7 +9,7 @@ class CfgVehicles {
         };
     };
     
-    class StaticMGWeapon: StaticWeapon{
+    class StaticATWeapon: StaticWeapon {
 		class Turrets : Turrets  {
 			class MainTurret : MainTurret {
                 class ViewOptics;
@@ -17,7 +17,7 @@ class CfgVehicles {
 		};
 	};
     
-    class ACE_M47_Dragon_Static_Base : StaticMGWeapon {
+    class ACE_M47_Dragon_Static_Base : StaticATWeapon {
 		features = "Balls";
         scope = 0;
 		displayName = "ACE M47 Dragon";
