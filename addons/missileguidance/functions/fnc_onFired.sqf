@@ -48,7 +48,7 @@ if(isNil "_target") then {
     } else {
         _canUseLock = getNumber (_config >> "canVanillaLock");
         // @TODO: Get vanilla target
-        if(_canUseLock > 0 || cadetMode) then {
+        if(_canUseLock > 0 || difficulty < 1) then {
             _vanillaTarget = cursorTarget;
             
             TRACE_1("Using Vanilla Locking", _vanillaTarget);
