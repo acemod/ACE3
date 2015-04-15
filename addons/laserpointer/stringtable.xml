@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Laserpointer">
         <Key ID="STR_ACE_Laserpointer_red">
@@ -10,6 +9,7 @@
             <Czech>Laserové ukazovátko (červené)</Czech>
             <Polish>Wskaźnik laserowy (czerwony)</Polish>
             <Hungarian>Lézer-pointer (piros)</Hungarian>
+            <Spanish>Puntero láser (rojo)</Spanish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_green">
             <English>Laser Pointer (green)</English>
@@ -19,6 +19,7 @@
             <Czech>Laserové ukazovátko (zelené)</Czech>
             <Polish>Wskaźnik laserowy (zielony)</Polish>
             <Hungarian>Lézer-pointer (zöld)</Hungarian>
+            <Spanish>Puntero láser (verde)</Spanish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_Description">
             <English>Emits visible light. </English>
@@ -28,6 +29,7 @@
             <Czech>Vyzařuje viditelné světlo.</Czech>
             <Polish>Wydziela widzialne światło.</Polish>
             <Hungarian>Látható fényt bocsát ki.</Hungarian>
+            <Spanish>Emite luz visible.</Spanish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_useLaser">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</English>
