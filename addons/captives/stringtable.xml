@@ -71,6 +71,7 @@
             <Hungarian>Fogoly berakása</Hungarian>
             <Russian>Загрузить пленного</Russian>
             <Portuguese>Embarcar Prisioneiro</Portuguese>
+            <Italian>Carica il prigioniero</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_UnloadCaptive">
             <English>Unload Captive</English>
@@ -82,6 +83,7 @@
             <Hungarian>Fogoly kivevése</Hungarian>
             <Russian>Выгрузить пленного</Russian>
             <Portuguese>Desembarcar Prisioneiro</Portuguese>
+            <Italian>Scarica il prigioniero</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
@@ -128,6 +130,7 @@
             <Hungarian>Motozás</Hungarian>
             <Russian>Обыскать человека</Russian>
             <Portuguese>Revistar</Portuguese>
+            <Italian>Perquisisci la persona/Italian>
         </Key>
         <Key ID="STR_ACE_Captives_StartSurrendering">
             <English>Surrender</English>
@@ -137,6 +140,7 @@
             <Czech>Vzdát se</Czech>
             <Polish>Poddaj się</Polish>
             <Russian>Сдаться в плен</Russian>
+            <Italian>Arreso</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_StopSurrendering">
             <English>Stop Surrendering</English>
@@ -146,6 +150,7 @@
             <Czech>Přestat se vzdávat</Czech>
             <Polish>Podejmij walkę ponownie</Polish>
             <Russian>Отменить сдачу в плен</Russian>
+            <Italian>Annulla la resa</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
             <English>Only use on alive units</English>
@@ -155,6 +160,7 @@
             <Czech>Použitelné jen na živé jednotky</Czech>
             <Polish>Używaj tylko na żywych jednostkach</Polish>
             <Russian>Применимо только к живым юнитам</Russian>
+            <Italian>Si può fare solo su persone vive</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_OnlyInfantry">
             <English>Only use on dismounted inf</English>
@@ -164,6 +170,7 @@
             <Czech>Použitelné jen na pěsích jednotkách</Czech>
             <Polish>Używaj tylko na piechocie poza wszelkimi pojazdami</Polish>
             <Russian>Применимо только к пехоте вне техники</Russian>
+            <Italian>Si può usare solo su fanteria a piedi</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
             <English>Nothing under mouse</English>
@@ -173,6 +180,7 @@
             <Czech>Nic není vybráno</Czech>
             <Polish>Nie ma nic pod kursorem</Polish>
             <Russian>Ничего не выделено</Russian>
+            <Italian>Niente selezionato</Italian>
         </Key>
     </Package>
 </Project>
