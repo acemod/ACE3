@@ -7,14 +7,14 @@ title: Sitemap
    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>{{site.productionUrl}}/</loc>
-        <lastmod>{{site.date}}</lastmod>
+        <lastmod>{{site.time}}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     {% for page in site.pages %}
     <url>
         <loc>{{site.productionUrl}}{{ page.url }}</loc>
-        <lastmod>{{site.date}}</lastmod>
+        <lastmod>{{site.time}}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
