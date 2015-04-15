@@ -522,14 +522,21 @@ class CfgWeapons {
         ACE_barrelLength=29;
     };
     class srifle_GM6_F: GM6_base_F {
+        magazines[] = {
+            "5Rnd_127x108_Mag",
+            "5Rnd_127x108_APDS_Mag",
+            "ACE_5Rnd_127x99_Mag",
+            "ACE_5Rnd_127x99_AMAX_Mag"
+        };
         initSpeed = -1.0;
         ACE_barrelTwist=15;
-        ACE_barrelLength=43.3;
+        ACE_barrelLength=36.6;
     };
     class srifle_DMR_02_F: DMR_02_base_F {
         magazines[] = {
             "10Rnd_338_Mag",
             "ACE_10Rnd_338_300gr_HPBT_Mag",
+            "ACE_10Rnd_338_API526_Mag",
             "ACE_20Rnd_762x67_Mk248_Mod_0_Mag",
             "ACE_20Rnd_762x67_Mk248_Mod_1_Mag",
             "ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag"
