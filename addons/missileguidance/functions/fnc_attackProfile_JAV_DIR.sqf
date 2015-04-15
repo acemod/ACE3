@@ -43,12 +43,8 @@ switch( (_state select 0) ) do {
     };
     case STAGE_CLIMB: {
         TRACE_1("STAGE_CLIMB","");
-        _cruisAlt = 60;
-        if(_distanceShooterToTarget < w) then {
-            _cruisAlt = 60 * (_distanceShooterToTarget/2000);
-            TRACE_1("_cruisAlt", _cruisAlt);
-        };
-        
+        _cruisAlt = 60 * (_distanceShooterToTarget/2000);
+
         if( ((ASLToATL _projectilePos) select 2) - ((ASLToATL _seekerTargetPos) select 2) >= _cruisAlt) then {
             _state set[0, STAGE_TERMINAL];
         } else {
