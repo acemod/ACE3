@@ -15,7 +15,7 @@ EXPLODE_2_PVT(_this,_newUnit,_oldUnit);
 
 // add to new unit
 private "_ehid";
-_ehid = [_newUnit, "DefaultAction", {EGVAR(interact_menu,openedMenuType) >= 0}, {systemChat "snap"}] call EFUNC(common,addActionEventHandler);
+_ehid = [_newUnit, "DefaultAction", {EGVAR(interact_menu,openedMenuType) >= 0}, {}] call EFUNC(common,addActionEventHandler);
 
 _newUnit setVariable [QGVAR(AAEHID), _ehid];
 
