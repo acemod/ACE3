@@ -13,24 +13,6 @@
             <Hungarian>Részletes rakéta irányító</Hungarian>
             <Russian>Расширенный ракетой</Russian>
         </Key>
-          <Key ID="STR_ACE_MissileGuidance_AI">
-            <English>Advanced Missile Guidance for AI</English>
-        </Key>
-        <Key ID="STR_ACE_MissileGuidance_AI_Desc">
-            <English>Enables advanced guidance on AI units.</English>
-        </Key>
-        <Key ID="STR_ACE_MissileGuidance_Desc">
-            <English>Enables advanced guidance mechanics and selection for different missiles and fire modes.</English>
-            <Spanish></Spanish>
-            <French></French>
-            <Polish>Włącza zaawansowaną mechanikę i wybór dla różnych rakiet i trybów strzału.</Polish>
-            <German>Aktiviert die erweiterten Mechaniken für unterschiedliche Raketen und Feuermodi.</German>
-            <Czech>Povoluje pokročilou mechaniku řízení střel.</Czech>
-            <Italian></Italian>
-            <Portuguese></Portuguese>
-            <Hungarian></Hungarian>
-            <Russian></Russian>
-        </Key>
         <Key ID="STR_ACE_Hydra70_DAGR">
             <English>Hydra-70 DAGR Missile</English>
             <Spanish></Spanish>
