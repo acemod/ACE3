@@ -26,6 +26,26 @@ parent:
             </nav>
         </div>
         <div class="large-4 medium-4 columns">
+             <h3>Features</h3>
+            <p>Overviews and details on feature usage and implementations.</p>
+            <nav>
+                <ul>
+                    {% assign pages_list = site.pages | sort: "order" %}
+                    {% assign group = 'feature' %}
+                    {% include pages_list %}
+                </ul>
+            </nav>
+        </div>
+        <div class="large-4 medium-4 columns">
+            <h3>Frameworks</h3>
+            <p>These are features and frameworks implemented by ACE which other mods should implement.</p>
+            <nav>
+                <ul>
+                    {% assign pages_list = site.pages | sort: "order"%}
+                    {% assign group = 'framework' %}
+                    {% include pages_list %}
+                </ul>
+            </nav>
             <h3>Mission Maker</h3>
             <p>Want to make a mission using ACE3? Here you'll find everything you need to know.</p>
             <nav>
@@ -35,8 +55,6 @@ parent:
                     {% include pages_list %}
                 </ul>
             </nav>
-        </div>
-        <div class="large-4 medium-4 columns">
             <h3>Developer</h3>
             <p>If you're an aspiring developer, you'll find all necessary information here.</p>
             <nav>
