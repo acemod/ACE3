@@ -126,6 +126,10 @@ class CfgAmmo {
     class ACE_65x39_Caseless_Tracer_Dim : B_65x39_Case_yellow {
         nvgOnly = 1;
     };
+    class B_65x39_Caseless_green;
+    class ACE_65x39_Caseless_green_Tracer_Dim : B_65x39_Caseless_green {
+        nvgOnly = 1;
+    };
     class ACE_65x47_Ball_Scenar: B_65x39_Caseless
     {
         airFriction=-0.00078;
@@ -463,23 +467,6 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={960};
         ACE_barrelLengths[]={29};
     };
-    class ACE_338_Ball : B_408_Ball {
-        airFriction=-0.000526;
-        caliber=1.55;
-        deflecting=12;
-        hit=20;
-        typicalSpeed=826;
-        ACE_caliber=0.338;
-        ACE_bulletLength=1.70;
-        ACE_bulletMass=300;
-        ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
-        ACE_ballisticCoefficients[]={0.381};
-        ACE_velocityBoundaries[]={};
-        ACE_standardAtmosphere="ICAO";
-        ACE_dragModel=7;
-        ACE_muzzleVelocities[]={820, 826, 830};
-        ACE_barrelLengths[]={24, 26.5, 28};
-    };
     class B_338_Ball : BulletBase {
         ACE_caliber=0.338;
         ACE_bulletLength=1.558;
@@ -503,6 +490,23 @@ class CfgAmmo {
         ACE_dragModel=7;
         ACE_muzzleVelocities[]={790, 807, 820};
         ACE_barrelLengths[]={20, 24, 26};
+    };
+    class ACE_338_Ball : B_338_Ball {
+        airFriction=-0.000526;
+        caliber=1.55;
+        deflecting=12;
+        hit=20;
+        typicalSpeed=826;
+        ACE_caliber=0.338;
+        ACE_bulletLength=1.70;
+        ACE_bulletMass=300;
+        ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
+        ACE_ballisticCoefficients[]={0.381};
+        ACE_velocityBoundaries[]={};
+        ACE_standardAtmosphere="ICAO";
+        ACE_dragModel=7;
+        ACE_muzzleVelocities[]={800, 820, 826, 830};
+        ACE_barrelLengths[]={20, 24, 26.5, 28};
     };
     class B_127x54_Ball : BulletBase {
         ACE_caliber=0.50;
