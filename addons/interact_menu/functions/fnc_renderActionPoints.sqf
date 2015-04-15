@@ -25,11 +25,11 @@ _fnc_renderNearbyActions = {
     _cameraDir = ((positionCameraToWorld [0, 0, 1]) call EFUNC(common,positionToASL)) vectorDiff _cameraPos;
 
     _numInteractObjects = 0;
-    _nearestObjects = nearestObjects [ACE_player, ["All"], 13];
+    _nearestObjects = nearestObjects [((getPosASL ACE_player) vectorAdd (_cameraDir vectorMultiply 5)) call EFUNC(common,ASLToPosition), ["All"], 8];
     {
         _target = _x;
 
-        // Quick oclussion test. Exit for object more than 1 m behind the camera plane
+        // Quick oclussion test. Skip objects more than 1 m behind the camera plane
         _lambda = ((getPosASL _x) vectorDiff _cameraPos) vectorDotProduct _cameraDir;
         if (_lambda > -1) then {
             _numInteractions = 0;
@@ -65,8 +65,8 @@ _fnc_renderNearbyActions = {
                     _numInteractObjects = _numInteractObjects + 1;
                 };
             };
-            if (_numInteractObjects >= MAXINTERACTOBJECTS) exitWith {};
         };
+        if (_numInteractObjects >= MAXINTERACTOBJECTS) exitWith {};
 
     } forEach _nearestObjects;
 };
