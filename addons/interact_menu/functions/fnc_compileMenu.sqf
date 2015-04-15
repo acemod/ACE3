@@ -38,10 +38,17 @@ _recurseFnc = {
             _distance = getNumber (_entryCfg >> "distance");
             _icon = getText (_entryCfg >> "icon");
             _statement = compile (getText (_entryCfg >> "statement"));
-            _selection = getText (_entryCfg >> "selection");
-            if (_selection == "") then {
-                _selection = [0,0,0];
+
+            _selection = "";
+            if (isArray ( _entryCfg >> "selection" )) then {
+                _selection = getArray ( _entryCfg >> "selection" )
+            } else {
+                _selection = getText (_entryCfg >> "selection");
+                if (_selection == "") then {
+                    _selection = [0,0,0];
+                };
             };
+
             _condition = getText (_entryCfg >> "condition");
             if (_condition == "") then {_condition = "true"};
 

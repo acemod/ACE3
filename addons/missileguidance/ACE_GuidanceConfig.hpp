@@ -27,19 +27,19 @@ class GVAR(AttackProfiles) {
         
         functionName = QFUNC(attackProfile_HI);
     };
-    class TOP {
+     class JAV_DIR {
         name = "";
         visualName = "";
         description = "";
         
-        functionName = QFUNC(attackProfile_TOP);
+        functionName = QFUNC(attackProfile_JAV_DIR);
     };
-    class PYM {
+    class JAV_TOP {
         name = "";
         visualName = "";
         description = "";
         
-        functionName = QFUNC(attackProfile_PYM);
+        functionName = QFUNC(attackProfile_JAV_TOP);
     };
 };
 

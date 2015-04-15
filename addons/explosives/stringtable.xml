@@ -81,7 +81,7 @@
             <Italian>+ Modificatore, rotazione</Italian>
             <Czech>+ Modifikátor, otočit</Czech>
             <Hungarian>+ Változtatás, forgatás</Hungarian>
-            <Polish>+ modyfikator, obracanie</Polish>
+            <Polish>+ Modyfikator, obrót</Polish>
             <Portuguese>+ Modificador, rotaciona</Portuguese>
             <Russian>+ Bращать</Russian>
         </Key>
@@ -330,7 +330,7 @@
             <German>Zeitzünder</German>
             <Spanish>Temporizador</Spanish>
             <Polish>Czasomierz</Polish>
-            <French>Retard</French>
+            <French>Minuteur</French>
             <Czech>Časovač</Czech>
             <Italian>Cronometro</Italian>
             <Hungarian>Időzített</Hungarian>
@@ -354,7 +354,7 @@
             <German>Zeit einstellen</German>
             <Spanish>Configurar tiempo</Spanish>
             <Polish>Ustaw czas</Polish>
-            <French>Régler retard</French>
+            <French>Régler minuteur</French>
             <Czech>Nastavit Čas</Czech>
             <Italian>Modifica il conto alla rovescia</Italian>
             <Hungarian>Idő állítása</Hungarian>
@@ -402,7 +402,7 @@
             <Polish>Linka naciągu</Polish>
             <Spanish>Cable trampa</Spanish>
             <German>Stolperdraht</German>
-            <French>Fil de butée</French>
+            <French>Fil de détente</French>
             <Czech>Nástražný drát</Czech>
             <Italian>Filo a Inciampo</Italian>
             <Hungarian>Botlódrót</Hungarian>
@@ -495,7 +495,7 @@
             <Spanish>Recoger</Spanish>
             <Czech>Sebrat</Czech>
             <Polish>Podnieś</Polish>
-            <French>Prendre</French>
+            <French>Ramasser</French>
         </Key>
     </Package>
 </Project>

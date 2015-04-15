@@ -25,3 +25,5 @@ _digits = [_azimuthDistance select 1] call FUNC(convertToTexturesDistance);
 (_dlgVector displayCtrl 1312) ctrlSetText (_digits select 1);
 (_dlgVector displayCtrl 1313) ctrlSetText (_digits select 2);
 (_dlgVector displayCtrl 1314) ctrlSetText (_digits select 3);
+
+[GVAR(illuminate)] call FUNC(illuminate);
