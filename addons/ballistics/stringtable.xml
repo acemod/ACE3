@@ -438,23 +438,6 @@
             <Italian>Calibro: 7.62x51 mm AP&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
             <Russian>Калибр: 7.62x51 мм дозвуковые&lt;br /&gt;Патронов: 20&lt;br /&gt;Применимы в: Mk18 ABR</Russian>
         </Key>
-        <!-- .338 Lapua Magnum -->
-        <Key ID="STR_ACE_10Rnd_338_Mag_APName">
-            <English>.338 LM 10Rnd AP Mag</English>
-            <German>.338 LM 10-Schuss-Magazin Hartkern</German>
-            <Polish>Magazynek .338 LM 10rd AP</Polish>
-        </Key>
-        <Key ID="STR_ACE_10Rnd_338_Mag_APNameShort">
-            <English>.338 LM AP</English>
-            <German>.338 LM AP</German>
-            <Polish>.338 LM AP</Polish>
-            <Czech>.338 LM AP</Czech>
-        </Key>
-        <Key ID="STR_ACE_10Rnd_338_Mag_APDescription">
-            <English>Caliber: .338 Lapua Magnum AP&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: MAR-10</English>
-            <German>Kaliber: .338 Lapua Magnum Hartkern&lt;br /&gt;Schuss: 10&lt;br /&gt;Verwendet für: MAR-10</German>
-            <Polish>Kaliber: .338 Lapua Magnum AP&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: MAR-10</Polish>
-        </Key>
         <!-- .338 Norma Magnum -->
         <Key ID="STR_ACE_130Rnd_338_Mag_TracerName">
             <English>.338 NM 130Rnd Tracer Belt</English>
@@ -756,13 +739,40 @@
             <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 30</English>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Name">
-            <English>8.6x70mm 10Rnd Mag (300gr Sierra MatchKing HPBT)</English>
+            <English>.338 10Rnd Mag (300gr Sierra MatchKing HPBT)</English>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_NameShort">
             <English>.338 (HPBT)</English>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Description">
             <English>Caliber: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Rounds: 10</English>
+        </Key>
+        <Key ID="STR_ACE_10Rnd_338_API526_Mag_Name">
+            <English>.338 10Rnd Mag (API526)</English>
+        </Key>
+        <Key ID="STR_ACE_10Rnd_338_API526_Mag_NameShort">
+            <English>.338 AP</English>
+        </Key>
+        <Key ID="STR_ACE_10Rnd_338_API526_Mag_Description">
+            <English>Caliber: 8.6x70mm (API526)&lt;br /&gt;Rounds: 10</English>
+        </Key>
+        <Key ID="STR_ACE_5Rnd_127x99_Mag_Name">
+            <English>12.7x99mm 5Rnd Mag</English>
+        </Key>
+        <Key ID="STR_ACE_5Rnd_127x99_Mag_NameShort">
+            <English>12.7mm</English>
+        </Key>
+        <Key ID="STR_ACE_5Rnd_127x99_Mag_Description">
+            <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 5</English>
+        </Key>
+        <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Name">
+            <English>12.7x99mm 5Rnd Mag (AMAX)</English>
+        </Key>
+        <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_NameShort">
+            <English>12.7mm</English>
+        </Key>
+        <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Description">
+            <English>Caliber: 12.7x99mm (AMAX)&lt;br /&gt;Rounds: 5</English>
         </Key>
     </Package>
 </Project>
