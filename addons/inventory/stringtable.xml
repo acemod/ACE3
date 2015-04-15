@@ -9,6 +9,7 @@
             <Czech>Zvětšit zobrazení inventáře</Czech>
             <Polish>Powiększ UI ekwipunku</Polish>
             <French>Agrandir la taille d'affichage de l'inventaire</French>
+            <Italian>Ingrandisci il menù inventario</Italian>
         </Key>
         <Key ID="STR_ACE_Inventory_SettingDescription">
             <English>Normally inventory display is scaled by UI size. This allows scaling the Inventory UI size up, but doesn't increase font size allowing more rows displayed.</English>
@@ -18,6 +19,7 @@
             <Czech>Normálně se velikost invetáře škáluje s velikostí UI. Toto nastavení dovoluje škálování velikost inventáře ale nežvětšuje velikost fontu. To dovoluje zobrazení více řad v inventáři.</Czech>
             <Polish>Ekwipunek skalowany jest poprzez rozmiar UI. Ta opcja pozwala powiększyć rozmiar UI ekwipunku, lecz nie zwiększa rozmiaru fontu pozwalając na wyświetlanie większej ilości wierszy.</Polish>
             <French>L'inventaire est normalement affiché en fonction de la taille de l'UI. Cette option permet d'agrandir l'affichage de l'inventaire, mais n'a aucun effet sur la taille des polices permettant d'afficher plus de ligne</French>
+            <Italian>Normalmente il menù inventario è scalato in base alle dimensioni interfaccia. Questa opzione di permette di ingrandirlo ulteriormente ma senza aumentare la dimensione del testo.</Italian>
         </Key>
     </Package>
 </Project>
