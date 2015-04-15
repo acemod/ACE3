@@ -81,6 +81,7 @@
             <Russian>Перепаковка завершена</Russian>
             <Czech>Páskování dokončeno</Czech>
             <Polish>Przepakowywanie zakończone</Polish>
+            <Italian>Riempi caricatore</Italian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
             <English>Repacking Interrupted</English>
@@ -90,6 +91,7 @@
             <Russian>Перепаковка прервана</Russian>
             <Czech>Páskování přerušeno</Czech>
             <Polish>Przepakowywanie przerwane</Polish>
+            <Italian>Riempimento interrotto</Italian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
             <English>%1 Full and %2 Partial</English>
@@ -99,6 +101,7 @@
             <Russian>%1 полных и %2 неполных</Russian>
             <Czech>%1 plný a %2 částečně</Czech>
             <Polish>Pełnych: %1.&lt;br /&gt;Częściowo pełnych: %2.</Polish>
+            <Italian>%1 pieno e %2 parziale</Italian>
         </Key>
     </Package>
 </Project>
