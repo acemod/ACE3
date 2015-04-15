@@ -3,9 +3,9 @@
 
 // Bail if guidance is disabled
 // Bail on locality of the projectile, it should be local to us
-if(!GVAR(enabled) || {!local _projectile} ) exitWith { false };
+if(GVAR(enabled) < 1 || {!local _projectile} ) exitWith { false };
 
-if(!GVAR(enableForAI) && {!isPlayer _shooter} ) exitWith { false };
+if( !isPlayer _shooter && { GVAR(enabled) < 2 } ) exitWith { false };
 
 private["_config", "_enabled", "_target", "_seekerType", "_attackProfile"];
 PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
