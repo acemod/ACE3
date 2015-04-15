@@ -41,15 +41,14 @@ if ( isNil "_lockMode" || { ! ( _lockMode in (getArray (_config >> "seekerLockMo
 
 // If we didn't get a target, try to fall back on tab locking
 if(isNil "_target") then {
-    
     if(!isPlayer _shooter) then {
         // This was an AI shot, lets still guide it on the AI target
         _target = _shooter getVariable[QGVAR(vanilla_target), nil];
         TRACE_1("Detected AI Shooter!", _target);
     } else {
         _canUseLock = getNumber (_config >> "canVanillaLock");
-        if(_canUseLock > 0) then {
-            // @TODO: Get vanilla target
+        // @TODO: Get vanilla target
+        if(_canUseLock > 0 || cadetMode) then {
             _vanillaTarget = cursorTarget;
             
             TRACE_1("Using Vanilla Locking", _vanillaTarget);
