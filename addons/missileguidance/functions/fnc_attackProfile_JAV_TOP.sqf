@@ -57,7 +57,8 @@ switch( (_state select 0) ) do {
     };
     case STAGE_COAST: {
         TRACE_1("STAGE_COAST","");
-        if(_distanceShooterToTarget < 1250 || _distanceToTarget < ( ((ASLToATL _projectilePos) select 2) - (( ASLToATL _seekerTargetPos) select 2) )) then {
+        TRACE_1("", ((ASLToATL _projectilePos) select 2) - (( ASLToATL _seekerTargetPos) select 2) );
+        if(_distanceShooterToTarget < 1250 || _distanceToTarget < ( ((ASLToATL _projectilePos) select 2) - (( ASLToATL _seekerTargetPos) select 2) ) * 1.5) then {
             _state set[0, STAGE_TERMINAL];
         };
         _returnTargetPos = _seekerTargetPos vectorAdd [0,0,(_projectilePos select 2)];
