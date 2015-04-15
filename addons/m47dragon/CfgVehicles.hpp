@@ -41,21 +41,28 @@ class CfgVehicles {
 			{
 				optics = 1;
 				turretInfoType = "RscOptics_titan";
-				gunnerOpticsModel = "\A3\Weapons_F_Beta\acc\reticle_titan.p3d";
 				minElev = -20;
 				weapons[] = {"missiles_titan_static"};
 				magazines[] = {"1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles"};
-				//gunnerOpticsModel = "\ca\Weapons_e\optics_m47";
-                gunnerAction = "gunner_staticlauncher";
+				gunnerOpticsModel = PATHTOF(models\optics_m47.p3d);
+                gunnerAction = "gunner_static_low01";
 				gunnergetInAction = "";
 				gunnergetOutAction = "";
+
 				displayName = "";
 				class ViewOptics: ViewOptics
 				{
 					initFov = 0.015;
 					minFov = 0.015;
 					maxFov = 0.015;
-					visionMode[] = {"Normal"};
+                    
+                    initAngleX = 5;
+                    minAngleX = -85;
+                    maxAngleX = 85;
+                    initAngleY = 0;
+                    minAngleY = -150;
+                    maxAngleY = 150;
+                    isionMode[] = {"Normal"};
 				};
 				gunnerRightHandAnimName = "OtocHlaven_shake";
 				gunnerLeftHandAnimName = "OtocHlaven_shake";
