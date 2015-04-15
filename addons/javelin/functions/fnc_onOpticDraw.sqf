@@ -110,7 +110,7 @@ if((call CBA_fnc_getFoV) select 1 > 9) then {
 FUNC(disableFire) = {
     _firedEH = _this select 0;
     
-    if(_firedEH < 0) then {
+    if(_firedEH < 0 && difficulty > 0) then {
         _firedEH = [ACE_player, "DefaultAction", {true}, { 
             _canFire = ACE_player getVariable["ace_missileguidance_target", nil];
             if(!isNil "_canFire") exitWith { false };
@@ -122,7 +122,7 @@ FUNC(disableFire) = {
 FUNC(enableFire) = {
     _firedEH = _this select 0;
     
-    if(_firedEH > 0) then {
+    if(_firedEH > 0 && difficulty > 0) then {
         [ACE_player, "DefaultAction", _firedEH] call EFUNC(common,removeActionEventHandler);
     };
     -1
