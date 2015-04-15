@@ -28,6 +28,7 @@ _unit setvariable [QGVAR(tourniquets), [0,0,0,0,0,0], true];
 _unit setvariable [QGVAR(openWounds), [], true];
 _unit setvariable [QGVAR(bandagedWounds), [], true];
 _unit setVariable [QGVAR(internalWounds), [], true];
+_unit setvariable [QGVAR(lastUniqueWoundID), 1];
 
 // vitals
 _unit setVariable [QGVAR(heartRate), 80];
