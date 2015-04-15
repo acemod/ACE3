@@ -91,7 +91,7 @@ class CfgVehicles {
         XEH_ENABLED;
 
         author = "$STR_ACE_Common_ACETeam";
-        displayName = "Rallypoint West Base";
+        displayName = "$STR_ACE_Respawn_RallypointWestBase";
         vehicleClass = QGVAR(Rallypoints);
 
         class ACE_Actions: ACE_Actions {
@@ -111,7 +111,7 @@ class CfgVehicles {
         XEH_ENABLED;
 
         author = "$STR_ACE_Common_ACETeam";
-        displayName = "Rallypoint East Base";
+        displayName = "$STR_ACE_Respawn_RallypointEastBase";
         vehicleClass = QGVAR(Rallypoints);
 
         class ACE_Actions: ACE_Actions {
@@ -131,7 +131,7 @@ class CfgVehicles {
         XEH_ENABLED;
 
         author = "$STR_ACE_Common_ACETeam";
-        displayName = "Rallypoint Independent Base";
+        displayName = "$STR_ACE_Respawn_RallypointIndependentBase";
         vehicleClass = QGVAR(Rallypoints);
 
         class ACE_Actions: ACE_Actions {
@@ -152,7 +152,7 @@ class CfgVehicles {
         XEH_ENABLED;
 
         author = "$STR_ACE_Common_ACETeam";
-        displayName = "Rallypoint West";
+        displayName = "STR_ACE_Respawn_RallypointWest";
         vehicleClass = QGVAR(Rallypoints);
 
         class ACE_Actions: ACE_Actions {
@@ -172,7 +172,7 @@ class CfgVehicles {
         XEH_ENABLED;
 
         author = "$STR_ACE_Common_ACETeam";
-        displayName = "Rallypoint East";
+        displayName = "STR_ACE_Respawn_RallypointEast";
         vehicleClass = QGVAR(Rallypoints);
 
         class ACE_Actions: ACE_Actions {
@@ -192,7 +192,7 @@ class CfgVehicles {
         XEH_ENABLED;
 
         author = "$STR_ACE_Common_ACETeam";
-        displayName = "Rallypoint Independent";
+        displayName = "STR_ACE_Respawn_RallypointIndependent";
         vehicleClass = QGVAR(Rallypoints);
 
         class ACE_Actions: ACE_Actions {

@@ -5,6 +5,7 @@ ADDON = false;
 PREP(canMoveRallypoint);
 PREP(handleKilled);
 PREP(handleRespawn);
+PREP(handleInitPostServer);
 PREP(initRallypoint);
 PREP(module);
 PREP(moduleFriendlyFire);

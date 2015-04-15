@@ -59,3 +59,12 @@ class Extended_Init_EventHandlers {
 
     //respawn_civilian
 };
+
+// auto assign rallypoint leader
+class Extended_InitPost_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            init = QUOTE(_this call FUNC(handleInitPostServer));
+        };
+    };
+};

@@ -37,5 +37,29 @@
             <Polish>Przeteleportowano do punktu zbiórki</Polish>
             <Czech>Odteleportován na rallypoint</Czech>
         </Key>
+        <Key ID="STR_ACE_Respawn_RallypointWestBase">
+            <English>Rallypoint West (Base)</English>
+            <German>Sammelpunkt West (Basis)</German>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RallypointEastBase">
+            <English>Rallypoint East (Base)</English>
+            <German>Sammelpunkt Ost (Basis)</German>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RallypointIndependentBase">
+            <English>Rallypoint Independent (Base)</English>
+            <German>Sammelpunkt Widerstand (Basis)</German>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RallypointWest">
+            <English>Rallypoint West</English>
+            <German>Sammelpunkt West</German>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RallypointEast">
+            <English>Rallypoint East</English>
+            <German>Sammelpunkt Ost</German>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RallypointIndependent">
+            <English>Rallypoint Independent</English>
+            <German>Sammelpunkt Widerstand</German>
+        </Key>
     </Package>
 </Project>
