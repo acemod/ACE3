@@ -14,18 +14,24 @@
 
 GVAR(currentOptions) = [];
 
-private ["_player","_numInteractObjects","_numInteractions","_actionsVarName","_classActions","_objectActions","_target","_player","_action","_actionData","_active"];
+private ["_player","_numInteractObjects","_numInteractions","_actionsVarName","_classActions","_objectActions","_target","_player","_action","_actionData","_active","_cameraPos","_cameraDir"];
 _player = ACE_player;
-
 
 _fnc_renderNearbyActions = {
     // Render all nearby interaction menus
     #define MAXINTERACTOBJECTS 3
 
+    _cameraPos = (positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL);
+    _cameraDir = ((positionCameraToWorld [0, 0, 1]) call EFUNC(common,positionToASL)) vectorDiff _cameraPos;
+
     _numInteractObjects = 0;
-    _nearestObjects = nearestObjects [ACE_player, ["All"], 15];
+    _nearestObjects = nearestObjects [ACE_player, ["All"], 13];
     {
         _target = _x;
+
+        // Quick oclussion test. Exit for object more than 1 m behind the camera plane
+        _lambda = ((getPosASL _x) vectorDiff _cameraPos) vectorDotProduct _cameraDir;
+        if (_lambda < -1) exitWith {};
 
         _numInteractions = 0;
         // Prevent interacting with yourself or your own vehicle
