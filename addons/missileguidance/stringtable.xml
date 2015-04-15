@@ -8,7 +8,7 @@
             <Polish>Zaawansowane naprowadzanie rakiet</Polish>
             <German>Erweiterte Raketenlenkung</German>
             <Czech>Pokročilé řízení střel</Czech>
-            <Italian>Avanzato Missile Guidance</Italian>
+            <Italian>Guida missili avanzata</Italian>
             <Portuguese>Avançado Missile Guidance</Portuguese>
             <Hungarian>Részletes rakéta irányító</Hungarian>
             <Russian>Расширенный ракетой</Russian>
@@ -20,7 +20,7 @@
             <Polish>Hydra-70 DAGR</Polish>
             <German>Hydra-70 DAGR Rackete</German>
             <Czech>Hydra-70 DAGR</Czech>
-            <Italian></Italian>
+            <Italian>Missile Hydra-70 DAGR</Italian>
             <Portuguese></Portuguese>
             <Hungarian></Hungarian>
             <Russian></Russian>
@@ -32,7 +32,7 @@
             <Polish>DAGR</Polish>
             <German>DAGR</German>
             <Czech>DAGR</Czech>
-            <Italian></Italian>
+            <Italian>DAGR</Italian>
             <Portuguese></Portuguese>
             <Hungarian></Hungarian>
             <Russian></Russian>
@@ -44,7 +44,7 @@
             <Polish>Laserowo naprowadzana rakieta Hydra-70 DAGR</Polish>
             <German>Hydra-70 Lasergelenkte DAGR Rakete</German>
             <Czech>Hydra-70 DAGR laserem naváděná střela</Czech>
-            <Italian></Italian>
+            <Italian>Hydra-70 DAGR missile guida laser</Italian>
             <Portuguese></Portuguese>
             <Hungarian></Hungarian>
             <Russian></Russian>
@@ -56,7 +56,7 @@
             <Polish>Hellfire II AGM-114K</Polish>
             <German>Hellfire II AGM-114K</German>
             <Czech>Hellfire II AGM-114K</Czech>
-            <Italian></Italian>
+            <Italian>Missile Hellfire II AGM-114K</Italian>
             <Portuguese></Portuguese>
             <Hungarian></Hungarian>
             <Russian></Russian>
@@ -68,7 +68,7 @@
             <Polish>AGM-114K</Polish>
             <German>AGM-114K</German>
             <Czech>AGM-114K</Czech>
-            <Italian></Italian>
+            <Italian>AGM-114K</Italian>
             <Portuguese></Portuguese>
             <Hungarian></Hungarian>
             <Russian></Russian>
@@ -80,7 +80,7 @@
             <Polish>Laserowo naprowadzana rakieta Hellfire II AGM-114K</Polish>
             <German>Hellfire II AGM-114K Lasergelenkte Rakete</German>
             <Czech>Hellfire II AGM-114K laserem naváděná střela</Czech>
-            <Italian></Italian>
+            <Italian>Missile guida laser Hellfire II AGM-114K</Italian>
             <Portuguese></Portuguese>
             <Hungarian></Hungarian>
             <Russian></Russian>
