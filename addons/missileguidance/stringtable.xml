@@ -10,7 +10,7 @@
             <Czech>Pokročilé řízení střel</Czech>
             <Italian>Avanzato Missile Guidance</Italian>
             <Portuguese>Avançado Missile Guidance</Portuguese>
-            <Hungarian>Részletes rakéta irányító</Hungarian>
+            <Hungarian>Fejlett rakétairányító</Hungarian>
             <Russian>Расширенный ракетой</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Desc">
@@ -22,7 +22,7 @@
             <Czech>Povoluje pokročilou mechaniku řízení střel.</Czech>
             <Italian></Italian>
             <Portuguese></Portuguese>
-            <Hungarian></Hungarian>
+            <Hungarian>Engedélyezi a haladó irányító mechanizmusokat, valamint különböző rakéták és tüzelési módok kiválasztását.</Hungarian>
             <Russian></Russian>
         </Key>
         <Key ID="STR_ACE_Hydra70_DAGR">
@@ -34,7 +34,7 @@
             <Czech>Hydra-70 DAGR</Czech>
             <Italian></Italian>
             <Portuguese></Portuguese>
-            <Hungarian></Hungarian>
+            <Hungarian>Hydra-70 DAGR rakéta</Hungarian>
             <Russian></Russian>
         </Key>
         <Key ID="STR_ACE_Hydra70_DAGR_Short">
@@ -46,7 +46,7 @@
             <Czech>DAGR</Czech>
             <Italian></Italian>
             <Portuguese></Portuguese>
-            <Hungarian></Hungarian>
+            <Hungarian>DAGR</Hungarian>
             <Russian></Russian>
         </Key>
         <Key ID="STR_ACE_Hydra70_DAGR_Desc">
@@ -58,7 +58,7 @@
             <Czech>Hydra-70 DAGR laserem naváděná střela</Czech>
             <Italian></Italian>
             <Portuguese></Portuguese>
-            <Hungarian></Hungarian>
+            <Hungarian>Hydra-70 DAGR lÃ©zer-irÃ¡nyÃ­tott rakÃ©ta</Hungarian>
             <Russian></Russian>
         </Key>
         <Key ID="STR_ACE_Hellfire_AGM114K">
@@ -70,7 +70,7 @@
             <Czech>Hellfire II AGM-114K</Czech>
             <Italian></Italian>
             <Portuguese></Portuguese>
-            <Hungarian></Hungarian>
+            <Hungarian>Hellfire II AGM-114K rakÃ©ta</Hungarian>
             <Russian></Russian>
         </Key>
         <Key ID="STR_ACE_Hellfire_AGM114K_Short">
@@ -82,7 +82,7 @@
             <Czech>AGM-114K</Czech>
             <Italian></Italian>
             <Portuguese></Portuguese>
-            <Hungarian></Hungarian>
+            <Hungarian>AGM-114K</Hungarian>
             <Russian></Russian>
         </Key>
         <Key ID="STR_ACE_Hellfire_AGM114K_desc">
@@ -94,7 +94,7 @@
             <Czech>Hellfire II AGM-114K laserem naváděná střela</Czech>
             <Italian></Italian>
             <Portuguese></Portuguese>
-            <Hungarian></Hungarian>
+            <Hungarian>Hellfire II AGM-114K lÃ©zer-irÃ¡nyÃ­tott rakÃ©ta</Hungarian>
             <Russian></Russian>
         </Key>
     </Package>

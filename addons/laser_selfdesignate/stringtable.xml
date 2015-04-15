@@ -9,6 +9,7 @@
             <Czech>Laserový&lt;br/&gt;značkovač zapnut</Czech>
             <Polish>Desygnator&lt;br/&gt;laserowy wł.</Polish>
             <French>Désignateur&lt;br/&gt;Laser Allumé</French>
+            <Hungarian>Lézeres&lt;br/&gt;Megjelölő Be</Hungarian>
         </Key>
         <Key ID="STR_ACE_Laser_SelfDesignate_DesignatorOff">
             <English>Laser&lt;br/&gt;Designator Off</English>
@@ -18,6 +19,7 @@
             <Czech>Laserový&lt;br/&gt;značkovat vypnut</Czech>
             <Polish>Desygnator&lt;br/&gt;laserowy wył.</Polish>
             <French>Désignateur&lt;br/&gt;Laser Éteint</French>
+            <Hungarian>Lézeres&lt;br/&gt;Megjelölő Ki</Hungarian>
         </Key>
     </Package>
 </Project>

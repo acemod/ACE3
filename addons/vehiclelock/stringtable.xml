@@ -38,7 +38,7 @@
             <French>Crochetage...</French>
             <Polish>Otwieranie zamka...</Polish>
             <Czech>Páčim vozidlo...</Czech>
-            <Hungarian>Feltörés...</Hungarian>
+            <Hungarian>Zár feltörése...</Hungarian>
             <Russian>Взламываем замок...</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_Custom_Description">
@@ -48,7 +48,7 @@
             <French>Une clé propre à un seul véhicule.</French>
             <Polish>Unikatowy klucz, który otworzy konkretny pojazd.</Polish>
             <Czech>Vlastní klíč, který otevře konkrétní vozidlo.</Czech>
-            <Hungarian>Kulcs egy járműhez</Hungarian>
+            <Hungarian>Egy egyedi kulcs, ami egy meghatározott járművet nyit ki.</Hungarian>
             <Russian>Ключ от конкретной машины.</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_Master_Description">
@@ -58,7 +58,7 @@
             <French>Un passe-partout qui ouvrira n'importe quelle serrure.</French>
             <Polish>Uniwersalny klucz, który otworzy każdy zamek.</Polish>
             <Czech>Hlavní klíč otevře libovolný zámek, bez vyjímek!</Czech>
-            <Hungarian>Általános kulcs minden járműhez</Hungarian>
+            <Hungarian>Egy főkulcs, ami minden zárat kinyit, helyzettől függetlenül!</Hungarian>
             <Russian>Универсальный ключ, открывающий любой замок.</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_Lockpick_Description">
@@ -68,7 +68,7 @@
             <French>Un crochet qui ouvrira la plupart des véhicules.</French>
             <Polish>Zestaw wytrychów, dzięki któremu można otworzyć zamki w większości pojazdów.</Polish>
             <Czech>Sada paklíčů, která dokáže odemknout zámky u většiny vozidel.</Czech>
-            <Hungarian>Álkulcs melyik minden járműt nyitni tud</Hungarian>
+            <Hungarian>Egy tolvajkulcs-készlet, mely a legtöbb jármű zárjait fel tudja törni.</Hungarian>
             <Russian>Набор отмычек, которым можно взломать почти любую машину.</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_West_Description">
@@ -78,7 +78,7 @@
             <French>Une clé qui ouvrira la plupart des véhicules OUEST.</French>
             <Polish>Klucz, który powinien otworzyć większość pojazdów ZACHODU.</Polish>
             <Czech>Klíč který by měl otevřít většinou Západních vozidel.</Czech>
-            <Hungarian>Általános kulcs WEST járművekhez</Hungarian>
+            <Hungarian>Egy kulcs, ami a NYUGAT egységeinek legtöbb járművét ki tudja nyitni.</Hungarian>
             <Russian>Ключ для открытия большинства машин Запада.</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_East_Description">
@@ -87,7 +87,7 @@
             <Spanish>Una llave que puede abrir la mayoría de vehículos orientales.</Spanish>
             <French>Une clé qui ouvrira la plupart des véhicules EST.</French>
             <Polish>Klucz, który powinien otworzyć większość pojazdów WSCHODU.</Polish>
-            <Hungarian>Általános kulcs EAST járművekhez</Hungarian>
+            <Hungarian>Egy kulcs, ami a KELET egységeinek legtöbb járművét ki tudja nyitni.</Hungarian>
             <Czech>Klíč který by měl otevřít vetšinu Východních vozidel.</Czech>
             <Russian>Ключ для открытия большинства машин Востока.</Russian>
         </Key>
@@ -97,7 +97,7 @@
             <Spanish>Una llave que puede abrir la mayoría de vehículos independientes.</Spanish>
             <French>Une clé qui ouvrira la plupart des véhicules INDEP.</French>
             <Polish>Klucz, który powinien otworzyć większość pojazdów INDFOR.</Polish>
-            <Hungarian>Általános kulcs INDEPENDENT járművekhez</Hungarian>
+            <Hungarian>Egy kulcs, ami a FÜGGETLEN egységek legtöbb járművét ki tudja nyitni.</Hungarian>
             <Czech>Klíč který by měl otevřít většinu Nezávislých vozidel.</Czech>
             <Russian>Ключ для открытия большинства машин Независимых.</Russian>
         </Key>
@@ -108,7 +108,7 @@
             <French>Une clé qui ouvrira la plupart des véhicules CIV.</French>
             <Polish>Klucz, który powinien otworzyć większość pojazdów CYWILNYCH.</Polish>
             <Czech>Klíč který by měl otevřít většinu Civilních vozidel.</Czech>
-            <Hungarian>Általános kulcs CIVILIAN járművekhez</Hungarian>
+            <Hungarian>Egy kulcs, ami a CIVIL járművek többségét ki tudja nyitni.</Hungarian>
             <Russian>Ключ для открытия большинства машин Гражданских.</Russian>
         </Key>
     </Package>
