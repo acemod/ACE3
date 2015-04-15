@@ -174,7 +174,7 @@ class CfgVehicles {
             MACRO_ADDMAGAZINE(ACE_10Rnd_338_300gr_HPBT_Mag,4);
             MACRO_ADDMAGAZINE(ACE_10Rnd_338_API526_Mag,4);
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_Mag,4);
-            MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_AMAX_Mag,4);I a
+            MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_AMAX_Mag,4);
         };
     };
 };
