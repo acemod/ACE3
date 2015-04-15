@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         units[] = {};
-        weapons[] = {};
+        weapons[] = {"ACE_wirecutter"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author[] = {"gpgpgpgp", "PabstMirror"};
