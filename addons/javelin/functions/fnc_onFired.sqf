@@ -4,7 +4,9 @@
 PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
 // Bail on not missile
-if( _shooter != ACE_player || { ! (_weapon in ["launch_Titan_short_F"]) } ) exitWith { false }; 
+if( _shooter != ACE_player) exitWith { false }; 
+
+if( ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "launch_Titan_base"] call EFUNC(common,inheritsFrom)) ) exitWith { };
 
 _pfh_handle = uiNamespace getVariable ["ACE_RscOptics_javelin_PFH", nil];
 if(!isNil "_pfh_handle") then {
