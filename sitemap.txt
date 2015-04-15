@@ -1,0 +1,6 @@
+---
+title : Sitemap
+---
+{% for page in site.pages %}
+    {{site.productionUrl}}{{ page.url }}
+{% endfor %}
