@@ -41,7 +41,7 @@ if (_leaderVarName == "") then {
     private "_leaderID";
     _leaderID = GETGVAR(NextLeaderID,0);
 
-    _leaderVarName = format [QGVAR(Rallypoint_Leader_%1), _leaderID];
+    _leaderVarName = format [QUOTE(ACE_Rallypoint_Leader_%1), _leaderID];
 
     _unit setVehicleVarName _leaderVarName;
 
