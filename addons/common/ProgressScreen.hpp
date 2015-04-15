@@ -32,7 +32,7 @@ class GVAR(ProgressBar_Dialog) {
       w = "38 * (((safezoneW / safezoneH) min 1.2) / 40)";
       h = ".8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
       colorFrame[] = {0,0,0,0.0};
-      colorBar[] = {0.27,0.5,0.31,0.8};
+      colorBar[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5]", 0.8};
       texture = "#(argb,8,8,3)color(1,1,1,0.7)";
     };
 
