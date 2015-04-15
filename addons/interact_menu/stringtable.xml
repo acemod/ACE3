@@ -9,10 +9,12 @@
             <Czech>Zobrazit kurzor v menu pro vlastní interakci</Czech>
             <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
             <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
+            <Italian>Mostra sempre il cursore per le auto interazioni</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
             <Spanish>Mostrar los menus de interacción como listas</Spanish>
+            <Italian>Mostra il menù di interazione come lista</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_InteractKey">
             <English>Interact Key</English>
@@ -22,6 +24,7 @@
             <Czech>Klávesa pro interakci</Czech>
             <Polish>Klawisz interakcji</Polish>
             <French>Touche d'interaction</French>
+            <Italian>Tasto interazione</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
             <English>Self Interaction Key</English>
@@ -31,6 +34,7 @@
             <Czech>Klávesa pro vlastní interakci</Czech>
             <Polish>Klawisz własnej interakcji</Polish>
             <French>Touche d'interaction personnelle</French>
+            <Italian>Tasto per auto interazioni</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
             <English>Self Actions</English>
@@ -40,6 +44,7 @@
             <Czech>Vlastní akce</Czech>
             <Polish>Własne akcje</Polish>
             <French>Interaction personnelle</French>
+            <Italian>Auto interazioni</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
             <English>Vehicle Actions</English>
@@ -49,6 +54,7 @@
             <Czech>Interakce s vozidly</Czech>
             <Polish>Akcje pojazdu</Polish>
             <French>Interaction véhicule</French>
+            <Italian>Interazioni con veicoli</Italian>
         </Key>
     </Package>
 </Project>
