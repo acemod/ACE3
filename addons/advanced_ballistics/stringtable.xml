@@ -5,10 +5,12 @@
         <Key ID="STR_ACE_AdvancedBallistics_WindInfoKey">
             <English>Show Wind Info</English>
             <Polish>Pokaż inf. o wietrze</Polish>
+            <Italian>Mostra indicazioni del vento</Italian>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_ProtractorKey">
             <English>Show Protractor</English>
             <Polish>Pokaż kątomierz</Polish>
+            <Italian>Mostra il rapportatore</Italian>
         </Key>
     </Package>
 </Project>
