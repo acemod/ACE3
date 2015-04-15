@@ -1,29 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-  <Package name="Interaction">
-    <Key ID="STR_ACE_Respawn_Deploy">
-      <English>Deploy in 5 seconds ...</English>
-      <German>Wird in 5 Sekunden errichtet ...</German>
-      <Spanish>Desplegando en 5 segundos ...</Spanish>
-      <Russian>Возрождение через 5 секунд ...</Russian>
-    </Key>
-    <Key ID="STR_ACE_Respawn_Deployed">
-      <English>Rallypoint deployed</English>
-      <German>Rallypoint errichtet</German>
-      <Spanish>Punto de reunión desplegado</Spanish>
-      <Russian>Точка сбора установлена</Russian>
-    </Key>
-    <Key ID="STR_ACE_Respawn_TeleportedToBase">
-      <English>Teleported to Base</English>
-      <German>Zur Basis teleportiert</German>
-      <Spanish>Teletransportado a base</Spanish>
-      <Russian>Телепорт на базу</Russian>
-    </Key>
-    <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
-      <English>Teleported to Rallypoint</English>
-      <German>Zum Rallypoint teleportiert</German>
-      <Spanish>Teletransportado al punto de reunión</Spanish>
-      <Russian>Телепорт на точку сбора</Russian>
-    </Key>
-  </Package>
+    <Package name="Interaction">
+        <Key ID="STR_ACE_Respawn_Deploy">
+            <English>Deploy in 5 seconds ...</English>
+            <French>Déploiement dans 5 secondes ...</French>
+            <German>Wird in 5 Sekunden errichtet ...</German>
+            <Spanish>Desplegando en 5 segundos ...</Spanish>
+            <Russian>Возрождение через 5 секунд ...</Russian>
+            <Polish>Rozmieszczenie za 5 sekund ...</Polish>
+            <Czech>Respawn za 5 sekund...</Czech>
+            <Hungarian>Kihelyezés 5 másodperc múlva ...</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_Deployed">
+            <English>Rallypoint deployed</English>
+            <French>Point de ralliement déployé</French>
+            <German>Rallypoint errichtet</German>
+            <Spanish>Punto de reunión desplegado</Spanish>
+            <Russian>Точка сбора установлена</Russian>
+            <Polish>Punkt zbiórki rozmieszczony</Polish>
+            <Czech>Rallypoint umístěn</Czech>
+            <Hungarian>Gyülekezőpont elhelyezve</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_TeleportedToBase">
+            <English>Teleported to Base</English>
+            <French>Téléporté à la base</French>
+            <German>Zur Basis teleportiert</German>
+            <Spanish>Teletransportado a base</Spanish>
+            <Russian>Телепорт на базу</Russian>
+            <Polish>Przeteleportowano do bazy</Polish>
+            <Czech>Odteleportován na základnu</Czech>
+            <Hungarian>Bázisra teleportálva</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
+            <English>Teleported to Rallypoint</English>
+            <French>Téléporté au point de déploiement</French>
+            <German>Zum Rallypoint teleportiert</German>
+            <Spanish>Teletransportado al punto de reunión</Spanish>
+            <Russian>Телепорт на точку сбора</Russian>
+            <Polish>Przeteleportowano do punktu zbiórki</Polish>
+            <Czech>Odteleportován na rallypoint</Czech>
+            <Hungarian>Gyülekezőpontra teleportálva</Hungarian>
+        </Key>
+    </Package>
 </Project>

@@ -58,7 +58,7 @@ if (isNil _name) then {
     /*_settingData = [
         _name,
         _typeName,
-        _isClientSetable,
+        _isClientSettable,
         _localizedName,
         _localizedDescription,
         _possibleValues,
@@ -68,7 +68,7 @@ if (isNil _name) then {
     _settingData = [
         _name,
         _typeName,
-        (getNumber (_optionEntry >> "isClientSetable")) > 0,
+        (getNumber (_optionEntry >> "isClientSettable")) > 0,
         getText (_optionEntry >> "displayName"),
         getText (_optionEntry >> "description"),
         getArray (_optionEntry >> "values"),

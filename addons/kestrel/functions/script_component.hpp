@@ -1,1 +1,0 @@
-#include "\z\ace\addons\kestrel\script_component.hpp"

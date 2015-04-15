@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
+<Project name="ACE">
+    <Package name="Kestrel4500">
+        <Key ID="STR_ACE_Kestrel_Name">
+            <English>Kestrel 4500NV</English>
+            <German>Kestrel 4500NV</German>
+            <Spanish>Kestrel 4500NV</Spanish>
+            <French>Kestrel 4500NV</French>
+            <Polish>Kestrel 4500NV</Polish>
+            <Czech>Kestrel 4500NV</Czech>
+            <Italian>Kestrel 4500NV</Italian>
+            <Hungarian>Kestrel 4500NV</Hungarian>
+            <Portuguese>Kestrel 4500NV</Portuguese>
+            <Russian>Kestrel 4500NV</Russian>
+        </Key>
+        <Key ID="STR_ACE_Kestrel_Description">
+            <English>Kestrel 4500 Pocket Weather Tracker</English>
+            <Polish>Anemomentr skrzydełkowy Kestrel 4500</Polish>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_OpenKestrel">
+            <English>Open Kestrel 4500</English>
+            <Polish>Otwórz Kestrel 4500</Polish>
+            <Hungarian>Kestrel 4500 elővétele</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_ShowKestrel">
+            <English>Show Kestrel 4500</English>
+            <Polish>Pokaż Kestrel 4500</Polish>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_HideKestrel">
+            <English>Hide Kestrel 4500</English>
+            <Polish>Ukryj Kestrel 4500</Polish>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_KestrelDialogKey">
+            <English>Open Kestrel 4500</English>
+            <Polish>Otwórz Kestrel 4500</Polish>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_DisplayKestrelKey">
+            <English>Show Kestrel 4500</English>
+            <Polish>Pokaż Kestrel 4500</Polish>
+        </Key>
+    </Package>
+</Project>

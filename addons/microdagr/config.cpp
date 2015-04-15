@@ -21,6 +21,6 @@ class ACE_Settings {
     class GVAR(MapDataAvailable) {
         value = 2;
         typeName = "SCALAR";
-        isClientSetable = 0;
+        isClientSettable = 0;
     };
 };
