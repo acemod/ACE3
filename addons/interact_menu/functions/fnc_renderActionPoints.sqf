@@ -29,9 +29,9 @@ _fnc_renderNearbyActions = {
     {
         _target = _x;
 
-        // Quick oclussion test. Exit for object more than 1 m behind the camera plane
+        // Quick oclussion test. Exit for object more than 2 m behind the camera plane
         _lambda = ((getPosASL _x) vectorDiff _cameraPos) vectorDotProduct _cameraDir;
-        if (_lambda < -1) exitWith {};
+        if (_lambda < -2) exitWith {};
 
         _numInteractions = 0;
         // Prevent interacting with yourself or your own vehicle
