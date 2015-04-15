@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Laserpointer">
         <Key ID="STR_ACE_Laserpointer_red">
@@ -47,16 +48,19 @@
             <English>Laser</English>
             <German>Laser</German>
             <Polish>Laser</Polish>
+            <Spanish>Laser</Spanish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_IRLaser">
             <English>IR Laser</English>
             <German>IR-Laser</German>
             <Polish>Laser IR</Polish>
+            <Spanish>Laser IR</Spanish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_switchLaserLight">
             <English>Switch Laser / IR Laser</English>
             <German>Umschalten Laser / IR-Laser</German>
             <Polish>Przełącz Laser / Laser IR</Polish>
+            <Spanish>Cambiar Laser / Laser IR</Spanish>
         </Key>
     </Package>
 </Project>

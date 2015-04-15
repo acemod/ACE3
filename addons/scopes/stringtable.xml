@@ -1,41 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Scopes">
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
             <Polish>Zerowanie powoli w górę</Polish>
+            <Spanish>Ajuste menor arriba</Spanish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMinor">
             <English>Minor adjustment down</English>
             <Polish>Zerowanie powoli w dół</Polish>
+            <Spanish>Ajuste menor abajo</Spanish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMinor">
             <English>Minor adjustment right</English>
             <Polish>Zerowanie powoli w prawo</Polish>
+            <Spanish>Ajuste menor derecha</Spanish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMinor">
             <English>Minor adjustment left</English>
             <Polish>Zerowanie powoli w lewo</Polish>
+            <Spanish>Ajuste menor izquierda</Spanish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMajor">
             <English>Major adjustment up</English>
             <Polish>Zerowanie w górę</Polish>
+            <Spanish>Ajuste mayor arriba</Spanish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMajor">
             <English>Major adjustment down</English>
             <Polish>Zerowanie w dół</Polish>
+            <Spanish>Ajuste mayor abajo</Spanish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMajor">
             <English>Major adjustment right</English>
             <Polish>Zerowanie w prawo</Polish>
+            <Spanish>Ajuste mayor derecha</Spanish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMajor">
             <English>Major adjustment left</English>
             <Polish>Zerowanie w lewo</Polish>
+            <Spanish>Ajuste mayor izquierda</Spanish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustZero">
             <English>Set zero adjustment</English>
             <Polish>Zresetuj wyzerowanie</Polish>
+            <Spanish>Establecer ajuste a cero</Spanish>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Inject_Atropine">
@@ -1391,61 +1392,73 @@
             <English>Heavily wounded</English>
             <German>Schwer verwundet:</German>
             <Polish>Ciężko ranny</Polish>
+            <Spanish>Gravemente herido</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_LightlyWounded">
             <English>Lightly wounded</English>
             <German>Leicht verwundet:</German>
             <Polish>Lekko ranny</Polish>
+            <Spanish>Levemente herido</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_VeryLightlyWounded">
             <English>Very lightly wounded</English>
             <German>Sehr leicht verwundet:</German>
             <Polish>B. lekko ranny</Polish>
+            <Spanish>Muy levemente herido</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Head">
             <English>Head</English>
             <German>Kopf</German>
             <Polish>Głowa</Polish>
+            <Spanish>Cabeza</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Torso">
             <English>Torso</English>
             <German>Torso</German>
             <Polish>Tors</Polish>
+            <Spanish>Torso</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_LeftArm">
             <English>Left Arm</English>
             <German>Linker Arm</German>
             <Polish>Lewe ramię</Polish>
+            <Spanish>Brazo izquierdo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_RightArm">
             <English>Right Arm</English>
             <German>Rechter Arm</German>
             <Polish>Prawe ramię</Polish>
+            <Spanish>Brazo derecho</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_LeftLeg">
             <English>Left Leg</English>
             <German>Linkes Bein</German>
             <Polish>Lewa noga</Polish>
+            <Spanish>Pierna izquierda</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_RightLeg">
             <English>Right Leg</English>
             <German>Rechtes Bein</German>
             <Polish>Prawa noga</Polish>
+            <Spanish>Pierna derecha</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
             <German>Schmerzeffekt-Typ</German>
             <Polish>Rodzaj efektu bólu</Polish>
+            <Spanish>Tipo de efecto de dolor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Flash">
             <English>Colour Flashing</English>
             <German>Farbblinken</German>
             <Polish>Pulsujące kolory</Polish>
+            <Spanish>Parpadeo de color</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Chroma">
             <English>Chromatic Aberration</English>
             <German>Chromatische Aberration</German>
             <Polish>Aberracja chromatyczna</Polish>
+            <Spanish>Aberración cromática</Spanish>
         </Key>
     </Package>
 </Project>

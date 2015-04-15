@@ -5,6 +5,7 @@
         <Key ID="STR_ACE_Weather_WindInfoKey">
             <English>Show Wind Info</English>
             <Polish>Pokaż inf. o wietrze</Polish>
+            <Spanish>Mostrar información del viento</Spanish>
         </Key>
     </Package>
 </Project>

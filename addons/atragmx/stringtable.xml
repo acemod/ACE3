@@ -17,14 +17,17 @@
         <Key ID="STR_ACE_ATragMX_OpenATragMXDialog">
             <English>Open ATragMX</English>
             <Polish>Otwórz ATragMX</Polish>
+            <Spanish>Abrir ATragMX</Spanish>
         </Key>
         <Key ID="STR_ACE_ATragMX_Description">
             <English>Rugged PDA with ATragMX</English>
             <Polish>Przenośny PDA z kalkulatorem balistycznym ATragMX</Polish>
+            <Spanish>PDA rugerizada con ATragMX</Spanish>
         </Key>
         <Key ID="STR_ACE_ATragMX_ATragMXDialogKey">
             <English>Open ATragMX</English>
             <Polish>Otwórz ATragMX</Polish>
+            <Spanish>Abrir ATragMX</Spanish>
         </Key>
     </Package>
 </Project>
