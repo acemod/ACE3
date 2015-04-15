@@ -22,9 +22,9 @@ if (GVAR(Protractor)) exitWith {
     1 cutText ["", "PLAIN"];
     true
 };
-if (weaponLowered ACE_player) exitWith { true };
-if (vehicle ACE_player != ACE_player) exitWith { true };
-if (currentWeapon ACE_player != primaryWeapon ACE_player) exitWith { true };
+if (weaponLowered ACE_player) exitWith { false };
+if (vehicle ACE_player != ACE_player) exitWith { false };
+if (currentWeapon ACE_player != primaryWeapon ACE_player) exitWith { false };
 
 2 cutText ["", "PLAIN"];
 EGVAR(weather,WindInfo) = false;

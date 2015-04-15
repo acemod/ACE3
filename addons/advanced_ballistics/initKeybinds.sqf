@@ -5,7 +5,6 @@
 
     // Statement
     [] call FUNC(displayProtractor);
-    false
 },
 {false},
 [37, [true, true, false]], false, 0] call CBA_fnc_addKeybind; // (CTRL + SHIFT + K)

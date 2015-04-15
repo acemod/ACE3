@@ -30,15 +30,21 @@ class CfgMagazines {
         descriptionShort = "$STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimDescription";
         picture = "\A3\weapons_f\data\ui\m_200rnd_65x39_yellow_ca.paa";
     };
-    class 30Rnd_65x39_caseless_mag_Tracer: 30Rnd_65x39_caseless_mag {
-    };
+    class 30Rnd_65x39_caseless_mag_Tracer;
     class ACE_30Rnd_65x39_caseless_mag_Tracer_Dim: 30Rnd_65x39_caseless_mag_Tracer {
         author = "$STR_ACE_Common_ACETeam";
         ammo = "ACE_65x39_Caseless_Tracer_Dim";
         displayName = "$STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimName";
         displayNameShort = "$STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimNameShort";
         descriptionShort = "$STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimDescription";
-        picture = "\A3\weapons_f\data\ui\m_30stanag_caseless_yellow_ca.paa";
+    };
+    class 30Rnd_65x39_caseless_green_mag_Tracer;
+    class ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim: 30Rnd_65x39_caseless_green_mag_Tracer {
+        author = "$STR_ACE_Common_ACETeam";
+        ammo = "ACE_65x39_Caseless_green_Tracer_Dim";
+        displayName = "$STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimName";
+        displayNameShort = "$STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimNameShort";
+        descriptionShort = "$STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimDescription";
     };
 
     class 30Rnd_556x45_Stanag: CA_Magazine {
@@ -108,8 +114,7 @@ class CfgMagazines {
         initSpeed = 325;
     };
     
-    class ACE_10Rnd_762x51_M118LR_Mag: 10Rnd_762x51_Mag
-    {
+    class ACE_10Rnd_762x51_M118LR_Mag: 10Rnd_762x51_Mag {
         author = "$STR_ACE_Common_ACETeam";
         ammo = "ACE_762x51_Ball_M118LR";
         count=10;
@@ -118,8 +123,7 @@ class CfgMagazines {
         descriptionShort = "$STR_ACE_10Rnd_762x51_M118LR_Mag_Description";
         initSpeed = 780;
     };
-    class ACE_20Rnd_762x51_M118LR_Mag: 20Rnd_762x51_Mag
-    {
+    class ACE_20Rnd_762x51_M118LR_Mag: 20Rnd_762x51_Mag {
         author = "$STR_ACE_Common_ACETeam";
         ammo = "ACE_762x51_Ball_M118LR";
         displayName = "$STR_ACE_20Rnd_762x51_M118LR_Mag_Name";
@@ -127,40 +131,45 @@ class CfgMagazines {
         descriptionShort = "$STR_ACE_20Rnd_762x51_M118LR_Mag_Description";
         initSpeed = 780;
     };
-    class ACE_20Rnd_762x67_Mk248_Mod_0_Mag: 20Rnd_762x51_Mag
-    {
+    class ACE_20Rnd_762x67_Mk248_Mod_0_Mag: 20Rnd_762x51_Mag {
         author = "$STR_ACE_Common_ACETeam";
         ammo = "ACE_762x67_Ball_Mk248_Mod_0";
         displayName = "$STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Name";
         displayNameShort = "$STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_NameShort";
         descriptionShort = "$STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Description";
-        initSpeed = 865;
+        initSpeed = 900;
     };
-    class ACE_20Rnd_762x67_Mk248_Mod_1_Mag: 20Rnd_762x51_Mag
-    {
+    class ACE_20Rnd_762x67_Mk248_Mod_1_Mag: 20Rnd_762x51_Mag {
         author = "$STR_ACE_Common_ACETeam";
         ammo = "ACE_762x67_Ball_Mk248_Mod_1";
         displayName = "$STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_Name";
         displayNameShort = "$STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_NameShort";
         descriptionShort = "$STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_Description";
-        initSpeed = 847;
+        initSpeed = 880;
     };
-    class ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag: 20Rnd_762x51_Mag
-    {
+    class ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag: 20Rnd_762x51_Mag {
         author = "$STR_ACE_Common_ACETeam";
         ammo = "ACE_762x67_Ball_Berger_Hybrid_OTM";
         displayName = "$STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Name";
         displayNameShort = "$STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_NameShort";
         descriptionShort = "$STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Description";
-        initSpeed = 800;
+        initSpeed = 832;
     };
-    class ACE_30Rnd_65x47_Scenar_mag: 30Rnd_65x39_caseless_mag
-    {
+    class ACE_30Rnd_65x47_Scenar_mag: 30Rnd_65x39_caseless_mag {
         author = "$STR_ACE_Common_ACETeam";
         ammo = "ACE_65x47_Ball_Scenar";
-        count=30;
-        displayName = "30rnd 6.5mm Mag (HPBT Scenar)";
-        descriptionshort = "Caliber: 65x47 mm (HPBT Scenar)<br />Rounds: 30<br />Used in: MXM";
+        displayName = "$STR_ACE_30Rnd_65x47_Scenar_mag_Name";
+        displayNameShort = "$STR_ACE_30Rnd_65x47_Scenar_mag_NameShort";
+        descriptionShort = "$STR_ACE_30Rnd_65x47_Scenar_mag_Description";
+    };
+    class 10Rnd_338_Mag;
+    class ACE_10Rnd_338_300gr_HPBT_Mag: 10Rnd_338_Mag {
+        author = "$STR_ACE_Common_ACETeam";
+        ammo = "ACE_338_Ball";
+        displayName = "$STR_ACE_10Rnd_338_300gr_HPBT_Mag_Name";
+        displayNameShort = "$STR_ACE_10Rnd_338_300gr_HPBT_Mag_NameShort";
+        descriptionShort = "$STR_ACE_10Rnd_338_300gr_HPBT_Mag_Description";
+        initSpeed = 800;
     };
     
     class 30Rnd_9x21_Mag: CA_Magazine {
