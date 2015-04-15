@@ -578,7 +578,7 @@
             <Czech>Připojil ses do %1 týmu</Czech>
             <Russian>Вы присоединились к группе %1</Russian>
             <Portuguese>Você uniu-se à Equipe %1</Portuguese>
-            <Italian>Sei entrato nella team %1</Italian>
+            <Italian>Sei entrato nel team %1</Italian>
             <Hungarian>Csatlakoztál a %1 csapathoz</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_LeaveTeam">
