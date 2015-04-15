@@ -9,6 +9,7 @@
             <Russian>Лазерный прицел (красный)</Russian>
             <Czech>Laserové ukazovátko (červené)</Czech>
             <Polish>Wskaźnik laserowy (czerwony)</Polish>
+            <Italian>Puntatore laser (rosso)</Italian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_green">
             <English>Laser Pointer (green)</English>
@@ -17,6 +18,7 @@
             <Russian>Лазерный прицел (зелёный)</Russian>
             <Czech>Laserové ukazovátko (zelené)</Czech>
             <Polish>Wskaźnik laserowy (zielony)</Polish>
+            <Italian>Puntatore laser (verde)</Italian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_Description">
             <English>Emits visible light. </English>
@@ -25,6 +27,7 @@
             <Russian>Испускает узкий пучок видимого света.</Russian>
             <Czech>Vyzařuje viditelné světlo.</Czech>
             <Polish>Wydziela widzialne światło.</Polish>
+            <Italian>Emette luce visibile</Italian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_useLaser">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</English>
@@ -51,6 +54,7 @@
             <English>Switch Laser / IR Laser</English>
             <German>Umschalten Laser / IR-Laser</German>
             <Polish>Przełącz Laser / Laser IR</Polish>
+            <Italian>Alterna Laser / IR Laser</Italian>
         </Key>
     </Package>
 </Project>
