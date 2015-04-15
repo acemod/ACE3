@@ -659,7 +659,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_ModifierKey">
             <English>Modifier Key</English>
-            <German>Modifikator Taste</German>
+            <German>Modifikator-Taste</German>
             <Polish>Modyfikator</Polish>
             <French>Modifier la touche</French>
             <Spanish>Tecla modificadora</Spanish>
@@ -712,7 +712,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
             <English>Passengers</English>
-            <German>Fahrzeuginsassen</German>
+            <German>Passagiere</German>
             <Spanish>Pasajeros</Spanish>
             <Russian>Пассажиры</Russian>
             <Czech>Pasažéři</Czech>
