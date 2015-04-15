@@ -260,7 +260,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={800, 853, 884};
         ACE_barrelLengths[]={20, 24, 26};
     };
-    class B_762x54_Ball : BulletBase {
+    class B_762x54_Ball: B_762x51_Ball {
         airFriction=-0.001023;
         typicalSpeed=820;
         ACE_caliber=0.312;
@@ -485,7 +485,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={29};
     };
     class B_338_Ball : BulletBase {
-        airFriction=-0.000606
+        airFriction=-0.000606;
         typicalSpeed=915;
         ACE_caliber=0.338;
         ACE_bulletLength=1.558;
