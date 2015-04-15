@@ -36,32 +36,33 @@ if (!hasInterface) exitWith {};
     };
 }] call EFUNC(common,addEventHandler);
 
-//PFEH to watch the internal VON icon
-//Note:  class RscDisplayVoiceChat {idd = 55};  //only present when talking
-[{
-    _oldSetting = ACE_player getVariable [QGVAR(isSpeakingInGame), false];
-    _newSetting = (!(isNull findDisplay 55));
-    if (!(_oldSetting isEqualTo _newSetting)) then {
-        ACE_player setVariable [QGVAR(isSpeakingInGame), _newSetting, true];
-    };
-} , 0.1, []] call CBA_fnc_addPerFrameHandler;
 
+if (isClass (configFile >> "cfgPatches" >> "acre_api")) then {
+    diag_log text format ["[ACE_nametags] - ACRE Detected"];
+    DFUNC(isSpeaking) = {
+        PARAMS_1(_unit);
+        ([_unit] call acre_api_fnc_isSpeaking) || ([ACE_player] call acre_api_fnc_isBroadcasting)
+    };
+} else {
+    if (isClass (configFile >> "cfgPatches" >> "task_force_radio")) then {
+        diag_log text format ["[ACE_nametags] - TFR Detected"];
+        DFUNC(isSpeaking) =     {
+            PARAMS_1(_unit);
+            (_unit getVariable ["tf_isSpeaking", false])
+        };
+    } else {
+        //No Radio Mod - Start a PFEH to watch the internal VON icon
+        //Note: class RscDisplayVoiceChat {idd = 55} - only present when talking
 
-DFUNC(isSpeaking) = switch (true) do {
-case (isClass (configFile >> "cfgPatches" >> "acre_api")): {
-        {
-            PARAMS_1(_unit);
-            (_unit getVariable [QGVAR(isSpeakingInGame), false]) || ([_unit] call acre_api_fnc_isSpeaking) || ([ACE_player] call acre_api_fnc_isBroadcasting)
-        };
-    };
-case (isClass (configFile >> "cfgPatches" >> "task_force_radio")): {
-        {
-            PARAMS_1(_unit);
-            (_unit getVariable [QGVAR(isSpeakingInGame), false]) || (_unit getVariable ["tf_isSpeaking", false])
-        };
-    };
-    default {
-        {
+        [{
+            _oldSetting = ACE_player getVariable [QGVAR(isSpeakingInGame), false];
+            _newSetting = (!(isNull findDisplay 55));
+            if (!(_oldSetting isEqualTo _newSetting)) then {
+                ACE_player setVariable [QGVAR(isSpeakingInGame), _newSetting, true];
+            };
+        } , 0.1, []] call CBA_fnc_addPerFrameHandler;
+
+        DFUNC(isSpeaking) = {
             PARAMS_1(_unit);
             (_unit getVariable [QGVAR(isSpeakingInGame), false])
         };
