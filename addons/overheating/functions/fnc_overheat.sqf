@@ -143,11 +143,11 @@ private "_jamChance";
 
 _jamChance = getArray (configFile >> "CfgWeapons" >> _weapon >> "ACE_Overheating_jamChance");
 
-if (count _jamChance < 2) then {
-    _jamChance = [0,0];
+if (count _jamChance == 0) then {
+    _jamChance = [0];
 };
 
-_jamChance = linearConversion [0, 1, _scaledTemperature, _jamChance select 0, _jamChance select 1, false];
+_jamChance = [_jamChance, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray);
 
 // increase jam chance on dusty grounds if prone
 if (stance _unit == "PRONE") then {
