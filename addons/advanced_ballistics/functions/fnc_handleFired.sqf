@@ -95,12 +95,11 @@ if (GVAR(ammoTemperatureEnabled)) then {
     };
 };
 
-// TODO: Make _bulletTraceVisible global and toggle it with events
 _bulletTraceVisible = false;
-if (GVAR(bulletTraceEnabled) && currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
+if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER" && currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
     _opticsName = (primaryWeaponItems ACE_player) select 2;
     _opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
-    _bulletTraceVisible = (_opticType == 2 || currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]) && cameraView == "GUNNER";
+    _bulletTraceVisible = (_opticType == 2 || currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]);
 };
 
 _caliber = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_caliber");
