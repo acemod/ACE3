@@ -16,7 +16,7 @@ _part = _this select 1;
 _withDamage = if (count _this > 2) then { _this select 2} else {0};
 
 if (!alive _unit) exitwith {true};
-if (_part < 0 || _part > 5) exitwith {};
+if (_part < 0 || _part > 5) exitwith {false};
 if ((vehicle _unit != _unit) && {!alive (vehicle _unit)}) exitwith { true };
 
 // Find the correct Damage threshold for unit.

@@ -6,21 +6,28 @@ PREP(shootRay);
 PREP(shootCone);
 PREP(checkLos);
 
-PREP(findLaserDesignator);
 PREP(findStrongestRay);
 
 PREP(translateToModelSpace);
 PREP(translateToWeaponSpace);
 
+PREP(seekerFindLaserSpot);
+PREP(laserOn);
+PREP(laserOff);
+PREP(handleLaserOn);
+PREP(handleLaserOff);
+
+PREP(drawVisibleLaserTargets);
+
 PREP(laser_init);
-
-GVAR(laser) = nil;			// a single hud draws 1 laser at a time
-
+PREP(vanillaLaserSeekerHandler);
 PREP(laserTargetPFH);
 
-ACE_LASERS = [];
+GVAR(VanillaLasers) = [];
 
-ACE_DEFAULT_LASER_CODE = 1000;
-ACE_DEFAULT_FIRE_SELECTION = [FIREMODE_DIRECT_LOAL, ACE_DEFAULT_LASER_CODE];
+// Laser default variables
+ACE_DEFAULT_LASER_CODE = 1001;
+ACE_DEFAULT_LASER_WAVELENGTH = 1550;
+ACE_DEFAULT_LASER_BEAMSPREAD = 1;
 
-FUNC(getPosASL) = {visiblePositionASL (_this select 0)};
+GVAR(laserEmitters) = HASH_CREATE;

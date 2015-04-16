@@ -35,6 +35,7 @@ if (hasInterface) then {
 
 ["setDir", {(_this select 0) setDir (_this select 1)}] call FUNC(addEventhandler);
 ["setFuel", {(_this select 0) setFuel (_this select 1)}] call FUNC(addEventhandler);
+["setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call FUNC(addEventhandler);
 
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
@@ -156,7 +157,7 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
     };
 
     // "playerTurretChanged" event
-    [ACE_player] call FUNC(getTurretIndex);
+    _newPlayerTurret = [ACE_player] call FUNC(getTurretIndex);
     if !(_newPlayerTurret isEqualTo GVAR(OldPlayerTurret)) then {
         // Raise ACE event locally
         GVAR(OldPlayerTurret) = _newPlayerTurret;

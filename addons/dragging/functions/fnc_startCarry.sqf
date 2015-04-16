@@ -56,10 +56,11 @@ if (_target isKindOf "CAManBase") then {
 
     [_unit, "isDragging", true] call EFUNC(common,setforceWalkStatus);
 
-    // prevent multiple players from accessing the same object
-    [_unit, _target, true] call EFUNC(common,claim);
-
 };
+
+// prevent multiple players from accessing the same object
+[_unit, _target, true] call EFUNC(common,claim);
+
 
 // prevents draging and carrying at the same time
 _unit setVariable [QGVAR(isCarrying), true, true];

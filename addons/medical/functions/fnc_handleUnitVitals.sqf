@@ -22,15 +22,14 @@ _unit setVariable [QGVAR(lastMomentVitalsHandled), time];
 if (_interval == 0) exitWith {};
 
 _lastTimeValuesSynced = _unit getvariable [QGVAR(lastMomentValuesSynced), 0];
-_syncValues = time - _lastTimeValuesSynced >= (10 + floor(random(10)));
+_syncValues = (time - _lastTimeValuesSynced >= (10 + floor(random(10))) && GVAR(keepLocalSettingsSynced));
 if (_syncValues) then {
     _unit setvariable [QGVAR(lastMomentValuesSynced), time];
 };
 
 _bloodVolume = (_unit getvariable [QGVAR(bloodVolume), 0]) + ([_unit] call FUNC(getBloodVolumeChange));
-if (_bloodVolume <= 0) then {
-    _bloodVolume = 0;
-};
+_bloodVolume = _bloodVolume max 0;
+
 _unit setvariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
 
 // Set variables for synchronizing information across the net
@@ -78,15 +77,11 @@ if (GVAR(level) == 1) then {
 
     // bleeding
     _blood = _unit getVariable [QGVAR(bloodVolume), 100];
-    _blood = (_blood - 0.4 * (damage _unit) * _interval) max 0;
-    if (_blood != (_unit getVariable [QGVAR(bloodVolume), 100])) then {
-        _unit setVariable [QGVAR(bloodVolume), _blood, _syncValues];
-        if (_blood <= 35 and !(_unit getVariable ["ACE_isUnconscious", false])) then {
-            [_unit, true] call FUNC(setUnconscious);
-        };
-        if (_blood == 0) then {
-            [_unit] call FUNC(setDead);
-        };
+    if (_blood <= 35 and !(_unit getVariable ["ACE_isUnconscious", false])) then {
+        [_unit, true] call FUNC(setUnconscious);
+    };
+    if (_blood == 0) then {
+        [_unit] call FUNC(setDead);
     };
 };
 
@@ -166,5 +161,16 @@ if (GVAR(level) >= 2) then {
         if (_heartRate < 20) then {
             [_unit] call FUNC(setCardiacArrest);
         };
+    };
+
+    // syncing any remaining values
+    if (_syncValues) then {
+        {
+            private "_value";
+            _value = _unit getvariable _x;
+            if !(isnil "_value") then {
+                _unit setvariable [_x,(_unit getvariable [_x, 0]), true];
+            };
+        }foreach GVAR(IVBags);
     };
 };

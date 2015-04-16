@@ -49,5 +49,5 @@ if (_heartRate > 1.0) then {
 ["displayTextStructured", [_caller], [[_heartRateOutput, [_unit] call EFUNC(common,getName), round(_heartRate)], 1.5, _caller]] call EFUNC(common,targetEvent);
 
 if (_logOutPut != "") then {
-    [_unit,"examine","%1 checked Heart Rate: %2",[[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToLog);
+    [_unit,"activity","%1 checked Heart Rate: %2",[[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToLog);
 };

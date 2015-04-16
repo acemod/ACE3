@@ -35,8 +35,18 @@ GVAR(iconCount) = GVAR(iconCount) + 1;
 if(_icon == "") then {
     _icon = DEFAULT_ICON;
 };
-_text = format ["<img image='%1' color='%2' align='center'/><br/><t color='%3' size='0.80' align='center'>%4</t>", _icon, _color, _color, _text];
+
+_text = if (GVAR(UseListMenu)) then {
+	format ["<img image='%1' color='%2' align='left'/><t color='%3' size='0.80' shadow='1' shadowColor='#000000' shadowOffset='0.07'>%4</t>", _icon, _color, _color, _text]
+} else {
+	format ["<img image='%1' color='%2' align='center'/><br/><t color='%3' size='0.80' align='center' shadow='1' shadowColor='#000000' shadowOffset='0.07'>%4</t>", _icon, _color, _color, "ace_breakLine" callExtension _text];
+};
+
 _ctrl ctrlSetStructuredText (parseText _text);
-_ctrl ctrlSetPosition [(_sPos select 0)-(0.125*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.25*SafeZoneW, 0.1*SafeZoneW];
-//_ctrl ctrlSetBackgroundColor [1, 0, 0, 0.1];
+_text = if (GVAR(UseListMenu)) then {
+	_ctrl ctrlSetPosition [(_sPos select 0)-(0.0095*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.20*SafeZoneW, 0.035*SafeZoneW];
+} else {
+	_ctrl ctrlSetPosition [(_sPos select 0)-(0.0750*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.15*SafeZoneW, 0.100*SafeZoneW];
+};
+//_ctrl ctrlSetBackgroundColor [0, 1, 0, 0.1];
 _ctrl ctrlCommit 0;

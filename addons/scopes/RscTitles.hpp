@@ -1,3 +1,6 @@
+
+class RscText;
+
 class RscTitles {
     class ACE_Scopes_Zeroing {
         idd = -1;
@@ -67,6 +70,7 @@ class RscTitles {
     };
 };
 
+/*
 class RscInGameUI {
     class RscUnitInfo;
     class RscWeaponZeroing : RscUnitInfo {
@@ -74,3 +78,4 @@ class RscInGameUI {
         //onLoad = "[""onLoad"",_this,""RscUnitInfo"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; uiNamespace setVariable ['ACE_dlgWeaponZeroing', _this select 0];";
     };
 };
+*/

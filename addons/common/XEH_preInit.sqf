@@ -4,13 +4,11 @@
 ADDON = false;
 
 // ACE Common Function
-PREP(addActionEventHandler);
-PREP(addActionMenuEventHandler);
+
 PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
-PREP(addMapMarkerCreatedEventHandler);
-PREP(addScrollWheelEventHandler);
 PREP(addSetting);
+PREP(addToInventory);
 PREP(adminKick);
 PREP(ambientBrightness);
 PREP(applyForceWalkStatus);
@@ -41,6 +39,7 @@ PREP(displayText);
 PREP(displayTextPicture);
 PREP(displayTextStructured);
 PREP(doAnimation);
+PREP(dropBackpack);
 PREP(endRadioTransmission);
 PREP(eraseCache);
 PREP(execNextFrame);
@@ -55,20 +54,15 @@ PREP(fixPosition);
 PREP(getAllDefinedSetVariables);
 PREP(getAllGear);
 PREP(getCaptivityStatus);
-PREP(getConfigCommander);
-PREP(getConfigGunner);
 PREP(getDeathAnim);
 PREP(getDefaultAnim);
 PREP(getDefinedVariable);
 PREP(getDefinedVariableDefault);
 PREP(getDefinedVariableInfo);
-PREP(getDoorTurrets);
 PREP(getFirstObjectIntersection);
 PREP(getFirstTerrainIntersection);
 PREP(getForceWalkStatus);
 PREP(getGunner);
-PREP(getHitPoints);
-PREP(getHitPointsWithSelections);
 PREP(getInPosition);
 PREP(getMarkerType);
 PREP(getName);
@@ -80,6 +74,7 @@ PREP(getStringFromMissionSQM);
 PREP(getTargetAzimuthAndInclination);
 PREP(getTargetDistance);
 PREP(getTargetObject);
+PREP(getTurnedOnLights);
 PREP(getTurretCommander);
 PREP(getTurretConfigPath);
 PREP(getTurretCopilot);
@@ -88,18 +83,16 @@ PREP(getTurretIndex);
 PREP(getTurrets);
 PREP(getTurretsFFV);
 PREP(getTurretsOther);
+PREP(getTurretDirection);
 PREP(getUavControlPosition);
 PREP(getVehicleCargo);
 PREP(getVehicleCodriver);
-PREP(getVehicleCrew);
 PREP(getVersion);
 PREP(getWeaponAzimuthAndInclination);
 PREP(getWeaponIndex);
-PREP(getWeaponModes);
-PREP(getWeaponMuzzles);
 PREP(getWeaponState);
-PREP(getWeaponType);
 PREP(getWindDirection);
+PREP(getZoom);
 PREP(goKneeling);
 PREP(hadamardProduct);
 PREP(hasItem);
@@ -115,11 +108,13 @@ PREP(isAutoWind);
 PREP(isAwake);
 PREP(isEngineer);
 PREP(isEOD);
+PREP(isFeatureCameraActive);
 PREP(isInBuilding);
 PREP(isModLoaded);
 PREP(isPlayer);
 PREP(isTurnedOut);
 PREP(letterToCode);
+PREP(lightIntensityFromObject);
 PREP(loadPerson);
 PREP(loadPersonLocal);
 PREP(loadSettingsFromProfile);
@@ -129,10 +124,12 @@ PREP(moduleCheckPBOs);
 PREP(moduleLSDVehicles);
 PREP(moveToTempGroup);
 PREP(muteUnit);
+PREP(muteUnitHandleInitPost);
+PREP(muteUnitHandleRespawn);
 PREP(numberToDigits);
 PREP(numberToDigitsString);
+PREP(numberToString);
 PREP(onAnswerRequest);
-PREP(onLoadRscDisplayChannel);
 PREP(owned);
 PREP(player);
 PREP(playerSide);
@@ -141,11 +138,7 @@ PREP(progressBar);
 PREP(queueAnimation);
 PREP(readSettingFromModule);
 PREP(receiveRequest);
-PREP(removeActionEventHandler);
-PREP(removeActionMenuEventHandler);
 PREP(removeCanInteractWithCondition);
-PREP(removeMapMarkerCreatedEventHandler);
-PREP(removeScrollWheelEventHandler);
 PREP(removeSpecificMagazine);
 PREP(requestCallback);
 PREP(resetAllDefaults);
@@ -188,6 +181,41 @@ PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
 
+PREP(translateToWeaponSpace);
+PREP(translateToModelSpace);
+
+// Model and drawing helpers
+PREP(worldToScreenBounds);
+
+// config items
+PREP(getConfigType);
+PREP(getItemType);
+PREP(getWeaponType);
+PREP(getWeaponModes);
+PREP(getWeaponMuzzles);
+
+// config objects
+PREP(getConfigTypeObject);
+PREP(getConfigGunner);
+PREP(getConfigCommander);
+PREP(getHitPoints);
+PREP(getHitPointsWithSelections);
+PREP(getReflectorsWithSelections);
+PREP(getLightProperties);
+PREP(getLightPropertiesWeapon);
+PREP(getVehicleCrew);
+
+// turrets
+PREP(getTurrets);
+PREP(getTurretIndex);
+PREP(getTurretConfigPath);
+PREP(getTurretGunner);
+PREP(getTurretCommander);
+PREP(getTurretCopilot);
+PREP(getDoorTurrets);
+PREP(getTurretsFFV);
+PREP(getTurretsOther);
+
 // ACE_Debug
 PREP(exportConfig);
 PREP(getChildren);
@@ -195,6 +223,7 @@ PREP(getDisplayConfigName);
 PREP(log);
 PREP(logControls);
 PREP(logDisplays);
+PREP(logModEntries);
 PREP(monitor);
 PREP(showUser);
 
@@ -216,6 +245,17 @@ PREP(serverEvent);
 PREP(localEvent);
 PREP(removeEventHandler);
 PREP(removeAlLEventHandlers);
+
+// other eventhandlers
+PREP(addActionEventHandler);
+PREP(addActionMenuEventHandler);
+PREP(addScrollWheelEventHandler);
+PREP(addMapMarkerCreatedEventHandler);
+
+PREP(removeActionEventHandler);
+PREP(removeActionMenuEventHandler);
+PREP(removeScrollWheelEventHandler);
+PREP(removeMapMarkerCreatedEventHandler);
 
 // hashes
 PREP(hashCreate);
@@ -242,10 +282,10 @@ ACE_player = player;
 if (hasInterface) then {
     // PFH to update the ACE_player variable
     [{
-        if !(ACE_player isEqualTo (missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player])) then {
+        if !(ACE_player isEqualTo (call FUNC(player))) then {
             _oldPlayer = ACE_player;
 
-            ACE_player = missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player];
+            ACE_player = call FUNC(player);
             uiNamespace setVariable ["ACE_player", ACE_player];
 
             // Raise ACE event

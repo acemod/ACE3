@@ -260,12 +260,11 @@ class CfgVehicles {
           icon = PATHTOF(UI\team\team_white_ca.paa);
           hotkey = "N";
         };
-
         class ACE_BecomeLeader {
           displayName = "$STR_ACE_Interaction_BecomeLeader";
-          condition = QUOTE(count (units group _player) > 1 && {leader group _player != _player});
+          condition = QUOTE(_this call FUNC(canBecomeLeader));
           exceptions[] = {"isNotInside"};
-          statement = QUOTE(_newGroup = createGroup side group _player; (units group _player) joinSilent _newGroup; _newGroup selectLeader _player;);
+          statement = QUOTE(_this call FUNC(doBecomeLeader));
           showDisabled = 1;
           priority = 1.0;
           icon = PATHTOF(UI\team\team_white_ca.paa);
@@ -507,26 +506,6 @@ class CfgVehicles {
   };
 
   class StaticWeapon: LandVehicle {
-    class ACE_Actions {
-      class ACE_MainActions {
-        displayName = "$STR_ACE_Interaction_MainAction";
-        selection = "gunnerview";
-        distance = 2;
-        condition = "true";
-      };
-    };
-    class ACE_SelfActions {
-      class ACE_Passengers {
-        displayName = "$STR_ACE_Interaction_Passengers";
-        condition = "true";
-        statement = "";
-        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
-      };
-    };
-  };
-
-  class StaticMortar;
-  class Mortar_01_base_F: StaticMortar {
     class ACE_Actions {
       class ACE_MainActions {
         displayName = "$STR_ACE_Interaction_MainAction";

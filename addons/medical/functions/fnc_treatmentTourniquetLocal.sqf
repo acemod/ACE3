@@ -13,14 +13,12 @@
  */
 #include "script_component.hpp"
 
-private ["_target", "_tourniquetItem", "_part", "_tourniquets", "_applyingTo"];
+private ["_target", "_tourniquetItem", "_part", "_tourniquets", "_applyingTo", "_selectionName"];
 _target = _this select 0;
 _tourniquetItem = _this select 1;
+_selectionName = _this select 2;
 
-//[_target,"treatment",format["%1 applied a tourniquet on %2",[_caller] call EFUNC(common,getName),_selectionName]] call FUNC(addActivityToLog);
-//[_target,_removeItem] call FUNC(addToTriageList);
 [_target] call FUNC(addToInjuredCollection);
-
 
 _part = [_selectionName] call FUNC(selectionNameToNumber);
 

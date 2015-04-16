@@ -37,7 +37,7 @@ _medicalFacility =
         "USMC_WarfareBFieldhHospital"
     ];
 
-_objects = (lineIntersectsWith [_unit modelToWorld [0, 0, (_eyePos select 2)], _unit modelToWorld [0, 0, (_eyePos select 2) +10], _unit]);
+_objects = (lineIntersectsWith [_unit modelToWorldVisual [0, 0, (_eyePos select 2)], _unit modelToWorldVisual [0, 0, (_eyePos select 2) +10], _unit]);
 {
     if (((typeOf _x) in _medicalFacility) || (_x getVariable [QGVAR(isMedicalFacility),false])) exitwith {
         _isInBuilding = true;
