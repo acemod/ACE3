@@ -1446,7 +1446,7 @@
             <English>Pain Effect Type</English>
             <German>Schmerzeffekt-Typ</German>
             <Polish>Rodzaj efektu bólu</Polish>
-            <Russian>Визуализация боли</Russian>
+            <Russian>Эффект боли</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Flash">
             <English>Colour Flashing</English>
