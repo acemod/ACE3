@@ -1,4 +1,4 @@
-http://koffeinflummi.github.io/ACE3
+http://ace3mod.com/
 
 ### How to install Jekyll on your local machine:
 
