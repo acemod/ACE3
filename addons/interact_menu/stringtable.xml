@@ -5,7 +5,7 @@
             <English>Always display cursor for self interaction</English>
             <German>Immer den Cursor für Selbst-Interaktionen anzeigen.</German>
             <Spanish>Mostrar siempre el cursor para la interacción propia</Spanish>
-            <Russian>Всегда показывать курсор для взаимодействия с собой</Russian>
+            <Russian>Показывать курсор (взаимодействия с собой)</Russian>
             <Czech>Zobrazit kurzor v menu pro vlastní interakci</Czech>
             <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
             <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
@@ -14,7 +14,7 @@
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
             <Spanish>Mostrar los menus de interacción como listas</Spanish>
-            <Russian>Показывать меню взаимодействия в виде списка</Russian>
+            <Russian>Меню взаимодействия в виде списка</Russian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_InteractKey">
             <English>Interact Key</English>
