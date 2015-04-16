@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 [{
-    private ["_bullet", "_airFriction", "_args", "_deltaT", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueVelocity", "_dragRef", "_drag", "_accelRef", "_accel"];
+    private ["_args", "_bullet", "_airFriction", "_time", "_deltaT", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueSpeed", "_dragRef", "_drag", "_accelRef", "_accel"];
 
     _args = _this select 0;
     _bullet = _args select 0;

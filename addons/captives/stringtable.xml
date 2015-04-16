@@ -95,7 +95,7 @@
             <Portuguese>Algema Plástica</Portuguese>
             <Italian>Fascietta</Italian>
             <Hungarian>Gyorskötöző</Hungarian>
-            <Russian>Кабельная стяжка</Russian>
+            <Russian>Пластиковые наручники</Russian>
         </Key>
         <Key ID="STR_ACE_Captives_CableTieDescription">
             <English>Cable ties that allow you to restrain prisoners.</English>
@@ -107,7 +107,7 @@
             <Portuguese>A algema plástica permite que você contenha prisioneiros.</Portuguese>
             <Italian>Fascietta che ti consente di arrestare i prigionieri.</Italian>
             <Hungarian>Gyorskötöző, emberek foglyulejtéséhez használható.</Hungarian>
-            <Russian>Кабельные стяжки позволяют связывать пленников.</Russian>
+            <Russian>Пластиковые наручники позволяют связывать пленников.</Russian>
         </Key>
         <Key ID="STR_ACE_Captives_FriskMenuHeader">
             <English>Inventory of frisked person</English>
@@ -117,7 +117,7 @@
             <Hungarian>Motozott személy felszerelése</Hungarian>
             <Czech>Inventář prohledávané osoby</Czech>
             <Polish>Ekwipunek rewidowanej osoby</Polish>
-            <Russian>Инвентарь обысканных лиц</Russian>
+            <Russian>Инвентарь обысканного человека</Russian>
             <Portuguese>Inventário da pessoa revistada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Captives_FriskPerson">
@@ -139,7 +139,7 @@
             <Spanish>Rendirse</Spanish>
             <Czech>Vzdát se</Czech>
             <Polish>Poddaj się</Polish>
-            <Russian>Сдаться в плен</Russian>
+            <Russian>Сдаться</Russian>
             <Hungarian>Megadás</Hungarian>
             <Italian>Arreso</Italian>
         </Key>
@@ -150,7 +150,7 @@
             <Spanish>Dejar de rendirse</Spanish>
             <Czech>Přestat se vzdávat</Czech>
             <Polish>Podejmij walkę ponownie</Polish>
-            <Russian>Отменить сдачу в плен</Russian>
+            <Russian>Прекратить сдачу в плен</Russian>
             <Hungarian>Megadás abbahagyása</Hungarian>
             <Italian>Annulla la resa</Italian>
         </Key>
