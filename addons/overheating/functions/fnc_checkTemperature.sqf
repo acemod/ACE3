@@ -1,5 +1,5 @@
 /*
- * Author: Commy2 and esteldunedain
+ * Author: commy2 and esteldunedain
  * Make the player check the temperature of his weapon
  *
  * Arguments:
@@ -16,16 +16,16 @@
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-EXPLODE_2_PVT(_this,_player,_weapon);
+EXPLODE_2_PVT(_this,_unit,_weapon);
 
 // Play animation and report temperature
 _action = getText (configFile >> "CfgWeapons" >> _weapon >> "ACE_checkTemperatureAction");
 
 if (_action == "") then {
-  _action = "Gear";
+    _action = "Gear";
 };
 
-_player playActionNow _action;
+_unit playActionNow _action;
 
 // Launch a PFH that waits a sec before displaying the temperature
-[FUNC(displayTemperature), [_player, _weapon], 1.0, 0] call EFUNC(common,waitAndExecute);
+[FUNC(displayTemperature), [_unit, _weapon], 1.0, 0] call EFUNC(common,waitAndExecute);

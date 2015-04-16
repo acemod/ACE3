@@ -1,5 +1,5 @@
 /*
- * Author: Commy2
+ * Author: commy2
  * Make a unit start swapping it's barrel
  *
  * Argument:
@@ -16,7 +16,7 @@
 EXPLODE_2_PVT(_this,_player,_weapon);
 
 if (stance _player != "PRONE") then {
-  [_player, "amovpknlmstpsraswrfldnon", 1] call EFUNC(common,doAnimation);
+    [_player, "amovpknlmstpsraswrfldnon", 1] call EFUNC(common,doAnimation);
 };
 _player playActionNow "GestureDismountMuzzle";
 _player playAction "GestureMountMuzzle";
