@@ -41,14 +41,14 @@ if (isClass (configFile >> "cfgPatches" >> "acre_api")) then {
     diag_log text format ["[ACE_nametags] - ACRE Detected"];
     DFUNC(isSpeaking) = {
         PARAMS_1(_unit);
-        ([_unit] call acre_api_fnc_isSpeaking) || ([ACE_player] call acre_api_fnc_isBroadcasting)
+        (([_unit] call acre_api_fnc_isSpeaking) || ([ACE_player] call acre_api_fnc_isBroadcasting)) && {!(_unit getVariable ["ACE_isUnconscious", false])}
     };
 } else {
     if (isClass (configFile >> "cfgPatches" >> "task_force_radio")) then {
         diag_log text format ["[ACE_nametags] - TFR Detected"];
         DFUNC(isSpeaking) =     {
             PARAMS_1(_unit);
-            (_unit getVariable ["tf_isSpeaking", false])
+            (_unit getVariable ["tf_isSpeaking", false]) && {!(_unit getVariable ["ACE_isUnconscious", false])}
         };
     } else {
         //No Radio Mod - Start a PFEH to watch the internal VON icon
@@ -64,7 +64,7 @@ if (isClass (configFile >> "cfgPatches" >> "acre_api")) then {
 
         DFUNC(isSpeaking) = {
             PARAMS_1(_unit);
-            (_unit getVariable [QGVAR(isSpeakingInGame), false])
+            (_unit getVariable [QGVAR(isSpeakingInGame), false]) && {!(_unit getVariable ["ACE_isUnconscious", false])}
         };
     };
 };

@@ -15,13 +15,11 @@
  */
 #include "script_component.hpp"
 
-#define _dsp (uiNamespace getVariable "ATragMX_Display")
+(__DSP displayCtrl 600) ctrlEnable true;
+(__DSP displayCtrl 601) ctrlEnable true;
+(__DSP displayCtrl 602) ctrlEnable true;
 
-(_dsp displayCtrl 600) ctrlEnable true;
-(_dsp displayCtrl 601) ctrlEnable true;
-(_dsp displayCtrl 602) ctrlEnable true;
-
-(_dsp displayCtrl 600 + GVAR(currentUnit)) ctrlEnable false;
+(__DSP displayCtrl 600 + GVAR(currentUnit)) ctrlEnable false;
 
 [] call FUNC(update_gun);
 [] call FUNC(update_atmosphere);

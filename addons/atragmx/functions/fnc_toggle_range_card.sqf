@@ -15,8 +15,6 @@
  */
 #include "script_component.hpp"
 
-#define _dsp (uiNamespace getVariable "ATragMX_Display")
-
 if (ctrlVisible 5006) then
 {
     false call FUNC(show_range_card);
@@ -26,7 +24,7 @@ if (ctrlVisible 5006) then
     false call FUNC(show_main_page);
     true call FUNC(show_range_card);
     
-    ctrlSetFocus (_dsp displayCtrl 5001);
+    ctrlSetFocus (__DSP displayCtrl 5001);
     
     [] call FUNC(calculate_range_card);
     [] call FUNC(update_range_card);

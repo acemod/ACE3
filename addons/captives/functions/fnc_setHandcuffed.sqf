@@ -50,6 +50,7 @@ if (_state) then {
 
             //Adds an animation changed eh
             //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
+            private "_animChangedEHID";
             _animChangedEHID = _unit addEventHandler ["AnimChanged", {
                 PARAMS_2(_unit,_newAnimation);
                 if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
@@ -66,6 +67,7 @@ if (_state) then {
     [_unit, QGVAR(Handcuffed), false] call EFUNC(common,setCaptivityStatus);
 
     //remove AnimChanged EH
+    private "_animChangedEHID";
     _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
     _unit removeEventHandler ["AnimChanged", _animChangedEHID];
     _unit setVariable [QGVAR(handcuffAnimEHID), -1];

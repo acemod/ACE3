@@ -20,7 +20,7 @@
  */
 #include "script_component.hpp"
 
-private ["_problem", "_beginingArray"];
+private ["_problem", "_beginingArray", "_index"];
 
 PARAMS_4(_startA,_endA,_startB,_endB);
 

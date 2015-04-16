@@ -5,7 +5,6 @@
 #include "script_component.hpp"
 
 ["inventoryDisplayLoaded",{
-    _player = ACE_player;
-    [_player] call FUNC(takeLoadedATWeapon);
-    [_player, (_this select 0)] call FUNC(updateInventoryDisplay);
+    [ACE_player] call FUNC(takeLoadedATWeapon);
+    [ACE_player, (_this select 0)] call FUNC(updateInventoryDisplay);
 }] call EFUNC(common,addEventHandler);
