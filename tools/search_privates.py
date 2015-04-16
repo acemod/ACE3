@@ -4,11 +4,38 @@ import fnmatch
 import os
 import re
 import ntpath
-from pyparsing import *
+import sys
+import argparse
 
+def get_private_declare(content):
+    priv_declared = []
+    
+    srch = re.compile('private.*')
+    priv_srch_declared = srch.findall(content)
+    priv_srch_declared = sorted(set(priv_srch_declared))
+    
+    priv_dec_str = ''.join(priv_srch_declared)
+    
+    srch = re.compile('')
+    priv_split = srch.findall(priv_dec_str)
+    priv_split = sorted(set(priv_split))
+    priv_declared += priv_split;
+    
+    srch = re.compile('PARAMS_[0-9].*|EXPLODE_PVT_[0-9].*')
+    priv_srch_declared = srch.findall(content)
+    priv_srch_declared = sorted(set(priv_srch_declared))
+    
+    priv_dec_str = ''.join(priv_srch_declared)
+    
+    srch = re.compile('(?<![_a-zA-Z])(_[a-zA-Z]*?)[ ,\}\]\)";]')
+    priv_split = srch.findall(priv_dec_str)
+    priv_split = sorted(set(priv_split))
 
-
-            
+    priv_declared += priv_split;
+    
+    
+    return priv_declared
+        
 def check_privates(filepath):
     
     def pushClosing(t):
@@ -23,7 +50,7 @@ def check_privates(filepath):
         
         priv_use = []
         priv_use = []
-        priv_declared = []
+        
         
         # Regex search privates
         srch = re.compile('(?<![_a-zA-Z])(_[a-zA-Z]*?)[ ,\}\]\)";]')
@@ -31,16 +58,7 @@ def check_privates(filepath):
         priv_use = sorted(set(priv_use))
         
         # Private declaration search
-        srch = re.compile('private.*')
-        priv_srch_declared = srch.findall(content)
-        priv_srch_declared = sorted(set(priv_srch_declared))
-        
-        priv_dec_str = ''.join(priv_srch_declared)
-        
-        srch = re.compile('"(.+?)"')
-        priv_split = srch.findall(priv_dec_str)
-        priv_split = sorted(set(priv_split))
-        priv_declared += priv_split;
+        priv_declared = get_private_declare(content)
       
         if '_this' in priv_declared: priv_declared.remove('_this')
         if '_this' in priv_use: priv_use.remove('_this')
@@ -50,6 +68,8 @@ def check_privates(filepath):
         
         if '_forEachIndex' in priv_declared: priv_declared.remove('_forEachIndex')
         if '_forEachIndex' in priv_use: priv_use.remove('_forEachIndex')
+        if '_foreachIndex' in priv_declared: priv_declared.remove('_foreachIndex')
+        if '_foreachIndex' in priv_use: priv_use.remove('_foreachIndex')
         
         missing = []
         for s in priv_use:
