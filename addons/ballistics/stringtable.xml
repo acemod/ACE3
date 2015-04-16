@@ -480,7 +480,7 @@
             <English>Caliber: .338 Norma Magnum Tracer IR-DIM&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
             <German>Kaliber: .338 Norma Magnum Leuchtspur IR-DIM&lt;br /&gt;Schuss: 130&lt;br /&gt;Verwendet für: SPMG</German>
             <Polish>Kaliber: .338 Norma Magnum Smugacz IR-DIM&lt;br /&gt;Pociski: 130&lt;br /&gt;Używany w: SPMG</Polish>
-            <French>Calibre: .338 Norma Magnum Traçante IR-DIM&lt;br /&gt;Cartouches: 130&lt;br /&gt;Utilisé dans: SPMG</French>            
+            <French>Calibre: .338 Norma Magnum Traçante IR-DIM&lt;br /&gt;Cartouches: 130&lt;br /&gt;Utilisé dans: SPMG</French>
             <Spanish>Calibre: .338 Norma Magnum trazadora IR-DIM&lt;br /&gt;Balas: 130&lt;br /&gt;Se usa en: SPMG</Spanish>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_APName">
@@ -805,31 +805,37 @@
             <English>7.62mm 10Rnd Mag (Mk319 Mod 0)</English>
             <Polish>Magazynek 7,62mm 10rd (Mk319 Mod 0)</Polish>
             <French>7.62mm 10Cps (Mk319 Mod 0)</French>
+            <Spanish>Cargador de 10 balas de 7.62mm (Mk319 Mod 0)</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_NameShort">
             <English>7.62mm Mk319</English>
             <Polish>7,62mm Mk319</Polish>
             <French>7.62mm Mk319</French>
+            <Spanish>7.62mm Mk319</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Rounds: 10</English>
             <Polish>Kaliber: 7,62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Pociski: 10</Polish>
             <French>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Cartouches: 10</French>
+            <Spanish>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Balas: 10</Spanish>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk319 Mod 0)</English>
             <Polish>Magazynek 7,62mm 20rd (Mk319 Mod 0)</Polish>
             <French>7.62mm 20Cps (Mk319 Mod 0)</French>
+            <Spanish>Cargador de 20 balas de 7.62mm (Mk319 Mod 0)</Spanish>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_NameShort">
             <English>7.62mm Mk319</English>
             <Polish>7,62mm Mk319</Polish>
             <French>7.62mm Mk319</French>
+            <Spanish>7.62mm Mk319</Spanish>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Cartouches: 20</French>
+            <Spanish>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk248 Mod 0)</English>
@@ -918,38 +924,47 @@
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Name">
             <English>.338 10Rnd Mag (API526)</English>
             <French>.338 10Cps (API526)</French>
+            <Spanish>Cargador de 10 balas de .338 (API526)</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_NameShort">
             <English>.338 AP</English>
             <French>.338 AP</French>
+            <Spanish>.338 AP</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Description">
             <English>Caliber: 8.6x70mm (API526)&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 8.6x70mm (API526)&lt;br /&gt;Cartouches: 10</French>
+            <Spanish>Calibre: 8.6x70mm (API526)&lt;br /&gt;Balas: 10</Spanish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Name">
             <English>12.7x99mm 5Rnd Mag</English>
             <French>12.7x99mm 5Cps</French>
+            <Spanish>Cargador de 5 balas de 12.7x99mm</Spanish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_NameShort">
             <English>12.7mm</English>
             <French>12.7mm</French>
+            <Spanish>12.7mm</Spanish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Description">
             <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm&lt;br /&gt;Cartouches: 5</French>
+            <Spanish>Calibre: 12.7x99mm&lt;br /&gt;Balas: 5</Spanish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Name">
             <English>12.7x99mm 5Rnd Mag (AMAX)</English>
             <French>12.7x99mm 5Rnd Mag (AMAX)</French>
+            <Spanish>Cargador de 5 balas de 12.7x99mm (AMAX)</Spanish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_NameShort">
             <English>12.7mm</English>
             <French>12.7mm</French>
+            <Spanish>12.7mm</Spanish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Description">
             <English>Caliber: 12.7x99mm (AMAX)&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Cartouches: 5</French>
+            <Spanish>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Balas: 5</Spanish>
         </Key>
     </Package>
 </Project>

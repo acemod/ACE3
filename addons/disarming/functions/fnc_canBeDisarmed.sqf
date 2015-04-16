@@ -17,6 +17,8 @@
 
 PARAMS_1(_target);
 
+private ["_animationStateCfgMoves", "_putDownAnim"];
+
 //Check animationState for putDown anim
 //This ensures the unit doesn't have to actualy do any animation to drop something
 //This should always be true for the 3 possible status effects that allow disarming
