@@ -21,9 +21,8 @@ class CfgVehicles {
 		features = "Balls";
         scope = 0;
 		displayName = "ACE M47 Dragon";
-		class Armory
-		{
-			description = "$STR_A3_CfgVehicles_HMG_01_Base_Armory0";
+		class Armory {
+			description = "Balls";
 		};
 		model = QUOTE(PATHTOF(models\ace_m47_static.p3d));
 		picture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
@@ -40,17 +39,18 @@ class CfgVehicles {
 			class MainTurret: MainTurret
 			{
 				optics = 1;
-				turretInfoType = "RscOptics_titan";
-				gunnerOpticsModel = "\A3\Weapons_F_Beta\acc\reticle_titan.p3d";
+				turretInfoType = "RscWeaponEmpty";
+				gunnerOpticsModel = PATHTOF(models\optics_m47.p3d);
 				minElev = -20;
-				weapons[] = {"missiles_titan_static"};
-				magazines[] = {"1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles"};
-				//gunnerOpticsModel = "\ca\Weapons_e\optics_m47";
-                //gunnerAction = "gunner_staticlauncher";
+				weapons[] = {"ACE_M47_Dragon_Static"};
+				magazines[] = {};
+                
                 gunnerAction = "gunner_static_low01";
 				gunnergetInAction = "";
 				gunnergetOutAction = "";
-				displayName = "";
+                
+				displayName = "Balls in your face";
+                
 				class ViewOptics: ViewOptics
 				{
 					initAngleX = 0;
@@ -67,8 +67,8 @@ class CfgVehicles {
 				};
 				gunnerRightHandAnimName = "OtocHlaven_shake";
 				gunnerLeftHandAnimName = "OtocHlaven_shake";
-				//gunBeg = "Usti hlavne";
-				//gunEnd = "Konec hlavne";
+				gunBeg = "spice hlavne";
+				gunEnd = "Konec rakety";
 				memoryPointGunnerOptics = "look";
 			};
 		};

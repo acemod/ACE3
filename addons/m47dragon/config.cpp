@@ -13,5 +13,5 @@ class CfgPatches {
 #include "CfgEventhandlers.hpp"
 //#include "RscInGameUI.hpp"
 //#include "CfgSounds.hpp"
-//#include "CfgWeapons.hpp"
+#include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
