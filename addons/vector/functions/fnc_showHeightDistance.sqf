@@ -25,3 +25,5 @@ _digits = [_heightDistance select 1] call FUNC(convertToTexturesDistance);
 (_dlgVector displayCtrl 1316) ctrlSetText (_digits select 1);
 (_dlgVector displayCtrl 1317) ctrlSetText (_digits select 2);
 (_dlgVector displayCtrl 1318) ctrlSetText (_digits select 3);
+
+[GVAR(illuminate)] call FUNC(illuminate);

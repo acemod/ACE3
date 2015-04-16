@@ -40,15 +40,17 @@ class CfgAmmo {
         trackLead = 0;
        
         // Begin ACE guidance Configs
-        class ACE_MissileGuidance {
+        class ADDON {
             enabled = 1;
             
-            minDeflection = 0.005;      // Minium flap deflection for guidance
-            maxDeflection = 0.025;       // Maximum flap deflection for guidance
-            incDeflection = 0.005;      // The incrmeent in which deflection adjusts.
+            minDeflection = 0.00025;      // Minium flap deflection for guidance
+            maxDeflection = 0.001;       // Maximum flap deflection for guidance
+            incDeflection = 0.0005;      // The incrmeent in which deflection adjusts.
             //minDeflection = 0.005; 
             //maxDeflection = 0.5;
             //incDeflection = 0.005;
+            
+            canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
             
             // Guidance type for munitions
             defaultSeekerType = "SALH";
@@ -65,7 +67,7 @@ class CfgAmmo {
             
             // Attack profile type selection
             defaultAttackProfile = "LIN";
-            attackProfiles[] = { "LIN", "DIR", "MID", "HI", "TOP", "PYM" };
+            attackProfiles[] = { "LIN", "DIR", "MID", "HI" };
         };
     };
     
@@ -110,15 +112,17 @@ class CfgAmmo {
         //trackLead = 0;
        
         // Begin ACE guidance Configs
-        class ACE_MissileGuidance {
+        class ADDON {
             enabled = 1;
             
-            minDeflection = 0.005;      // Minium flap deflection for guidance
-            maxDeflection = 0.25;       // Maximum flap deflection for guidance
-            incDeflection = 0.005;      // The incrmeent in which deflection adjusts.
+            minDeflection = 0.00005;      // Minium flap deflection for guidance
+            maxDeflection = 0.025;       // Maximum flap deflection for guidance
+            incDeflection = 0.00005;      // The incrmeent in which deflection adjusts.
             //minDeflection = 0.005; 
             //maxDeflection = 0.5;
             //incDeflection = 0.005;
+            
+            canVanillaLock = 0;
             
             // Guidance type for munitions
             defaultSeekerType = "Optic";
@@ -127,15 +131,15 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOBL";
             seekerLockModes[] = { "LOBL" };
             
-            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAngle = 180;           // Angle in front of the missile which can be searched
             seekerAccuracy = 1;         // seeker accuracy multiplier
             
-            seekerMinRange = 1;
+            seekerMinRange = 0;
             seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
             
             // Attack profile type selection
-            defaultAttackProfile = "LIN";
-            attackProfiles[] = { "TOP", "LIN" };
+            defaultAttackProfile = "JAV_TOP";
+            attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
         };
     };
 };

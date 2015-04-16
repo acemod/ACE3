@@ -76,6 +76,8 @@ if (_goggles != "") then {
     _unit addItemToVest _x;
 }forEach _vestitems;
 
+private "_flagRemoveDummyBag";
+_flagRemoveDummyBag = false;
 
 if(format["%1", _backpack] != "") then {
     _unit addBackpack _backpack;
@@ -87,6 +89,12 @@ if(format["%1", _backpack] != "") then {
     {
         _unit addItemToBackpack _x;
     } forEach _backpackitems;
+
+} else {
+    // dummy backpack to ensure mags being loaded
+    _unit addBackpack "B_Kitbag_Base";
+
+    _flagRemoveDummyBag = true;
 };
 
 
@@ -135,6 +143,12 @@ if (_handgunweapon != "") then {
             _unit addHandgunItem _x;
         };
     } forEach _handgunweaponitems;
+};
+
+
+// remove dummy bagpack
+if (_flagRemoveDummyBag) then {
+    removeBackpack _unit;
 };
 
 

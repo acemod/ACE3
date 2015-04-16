@@ -1,24 +1,26 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-19 -->
 <Project name="ACE">
-    <Package name="JAVELIN">
+    <Package name="WEP_JAVELIN">
         <Key ID="STR_ACE_JAVELIN_LockTarget">
-            <English>Lock Target (Javelin)</English>
-            <German></German>
-            <French></French>
-            <Polish></Polish>
-            <Czech></Czech>
-            <Spanish></Spanish>
-            <Russian></Russian>
+            <English>Lock Target (Hold)</English>
+            <German>Ziel aufschalten</German>
+            <Russian>Захватить цель (удерживать)</Russian>
+            <Czech>Zamknout cíl(držet)</Czech>
+            <Polish>Namierz cel (przytrzymaj)</Polish>
+            <French>Verrouiller cible (maintenir)</French>
+            <Hungarian>Célpontra állás (Lenyomva tartott)</Hungarian>
+            <Italian>Aggangia il bersagio</Italian>
         </Key>
-         <Key ID="STR_ACE_JAVELIN_CycleFireMode">
-            <English>Cycle Attack Mode (Javelin)</English>
-            <German></German>
-            <French></French>
-            <Polish></Polish>
-            <Czech></Czech>
-            <Spanish></Spanish>
-            <Russian></Russian>
+        <Key ID="STR_ACE_JAVELIN_CycleFireMode">
+            <English>Cycle Fire Mode</English>
+            <German>Wechsle Feuermodus</German>
+            <Russian>Переключение режимов огня</Russian>
+            <Czech>Cyklování režimů palby</Czech>
+            <Polish>Przełącz tryb ognia</Polish>
+            <French>Cycle mode de tir</French>
+            <Hungarian>Tüzelési mód váltása</Hungarian>
+            <Italian>Alterna le modalità di fuoco</Italian>
         </Key>
     </Package>
 </Project>
