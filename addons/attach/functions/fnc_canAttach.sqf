@@ -19,7 +19,7 @@
 
 PARAMS_3(_attachToVehicle,_player,_args);
 
-private ["_itemName", "_attachLimit", "_attachedObjects"];
+private ["_itemName", "_attachLimit", "_attachedObjects","_playerPos"];
 
 _itemName = [_args, 0, ""] call CBA_fnc_defaultParam;
 _attachLimit = [6, 1] select (_player == _attachToVehicle);

@@ -47,8 +47,10 @@ if (_show) then {
         _allInjuryTexts = [];
         _genericMessages = [];
 
-        _partText = ["STR_ACE_Interaction_Head", "STR_ACE_Interaction_Torso", "STR_ACE_Interaction_ArmLeft" ,"STR_ACE_Interaction_ArmRight" ,"STR_ACE_Interaction_LegLeft", "STR_ACE_Interaction_LegRight"] select _selectionN;
-        _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
+        if (GVAR(level) >= 2) then {
+            _partText = ["STR_ACE_Interaction_Head", "STR_ACE_Interaction_Torso", "STR_ACE_Interaction_ArmLeft" ,"STR_ACE_Interaction_ArmRight" ,"STR_ACE_Interaction_LegLeft", "STR_ACE_Interaction_LegRight"] select _selectionN;
+            _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
+        };
 
         if (_target getvariable[QGVAR(isBleeding), false]) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_BLEEDING", [1, 0.1, 0.1, 1]];
@@ -126,12 +128,22 @@ if (_show) then {
             {
                 _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _x];
 
-                if (_target getHitPointDamage _x > 0.1 && {_forEachIndex == _selectionN}) then {
-                    // @todo localize
-                    _allInjuryTexts pushBack [format ["%1 %2",
-                        ["Lightly wounded", "Heavily wounded"] select (_target getHitPointDamage _x > 0.5),
-                        ["head", "torso", "left arm", "right arm", "left leg", "right leg"] select _forEachIndex
-                    ], [1,1,1,1]];
+                if (_target getHitPointDamage _x > 0 && {_forEachIndex == _selectionN}) then {
+                    _pointDamage = _target getHitPointDamage _x;
+                    _severity = switch (true) do {
+                        case (_pointDamage > 0.5): {localize "STR_ACE_Medical_HeavilyWounded"};
+                        case (_pointDamage > 0.1): {localize "STR_ACE_Medical_LightlyWounded"};
+                        default                    {localize "STR_ACE_Medical_VeryLightlyWounded"};
+                    };
+                    _part = localize ([
+                        "STR_ACE_Medical_Head",
+                        "STR_ACE_Medical_Torso",
+                        "STR_ACE_Medical_LeftArm",
+                        "STR_ACE_Medical_RightArm",
+                        "STR_ACE_Medical_LeftLeg",
+                        "STR_ACE_Medical_RightLeg"
+                    ] select _forEachIndex);
+                    _allInjuryTexts pushBack [format ["%1 %2", _severity, toLower _part], [1,1,1,1]];
                 };
             } forEach ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
         };

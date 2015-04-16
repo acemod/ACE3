@@ -23,7 +23,7 @@ if (_id == -1) exitWith {};
 
 _name = format ["ACE_Action_%1", _action];
 
-_actionsVar = _unit getVariable [_name, [-1, [-1, [], []]]];
+_actionsVar = _unit getVariable [_name, [-1, [-1, [], []], objNull]];
 
 _actionID = _actionsVar select 0;
 _actions = _actionsVar select 1;
@@ -31,6 +31,8 @@ _actions = _actionsVar select 1;
 _currentID = _actions select 0;
 _actionIDs = _actions select 1;
 _actions = _actions select 2;
+
+if (_unit != _actionsVar select 2) exitWith {};
 
 _id = _actionIDs find _id;
 
@@ -47,4 +49,4 @@ if (count _actions == 0) then {
   _actionID = -1;
 };
 
-_unit setVariable [_name, [_actionID, [_currentID, _actionIDs, _actions]], false];
+_unit setVariable [_name, [_actionID, [_currentID, _actionIDs, _actions], _unit], false];

@@ -26,3 +26,7 @@ _color = [[1,0,0,0.5], [1,0,0,1]] select (_this select 0);
 (_dlgVector displayCtrl 1322) ctrlSetTextColor _color;
 (_dlgVector displayCtrl 1323) ctrlSetTextColor _color;
 (_dlgVector displayCtrl 1324) ctrlSetTextColor _color;
+
+GVAR(illuminate) = _this select 0;
+
+_this call FUNC(illuminate);

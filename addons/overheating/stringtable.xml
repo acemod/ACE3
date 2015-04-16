@@ -8,13 +8,19 @@
             <Spanish>Mostrar texto al encasquillar</Spanish>
             <Russian>Показывать текст, когда клинит оружие</Russian>
             <Czech>Zobrazit upozornění při zaseknutí</Czech>
+            <Polish>Wyświetl tekst przy zacięciu broni</Polish>
+            <French>Affiche texte si enrayé</French>
+            <Hungarian>Szöveges értesítés kijelzése a fegyver elakadásakor</Hungarian>
         </Key>
         <Key ID="STR_ACE_overheating_SettingDisplayTextDesc">
             <English>Display a notification whenever your weapon gets jammed</English>
-            <German>Zeige einen Hinweis wenn die Waffe eine Ladehemmung hat</German>
+            <German>Zeige einen Hinweis, wenn die Waffe eine Ladehemmung hat.</German>
             <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>
-            <Russian>Демонстровать уведомление, каждый раз, когда клинит Ваше оружие.</Russian>
+            <Russian>Показывать уведомление каждый раз, когда клинит Ваше оружие.</Russian>
             <Czech>Zobrazí upozornění při zaseknutí zbraně</Czech>
+            <Polish>Wyświetl powiadomienie za każdym razem, kiedy Twoja broń ulegnie zacięciu</Polish>
+            <French>Affiche une notification lors d'un enrayement</French>
+            <Hungarian>Egy szöveges értesítés jelenik meg, amikor a fegyver megakad</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -36,7 +42,7 @@
             <Czech>Používané k výměně hlavně</Czech>
             <French>Utilisé pour changer de canon.</French>
             <Russian>Используется для смены ствола.</Russian>
-            <Hungarian>Cső kicseréléséhez.</Hungarian>
+            <Hungarian>Használd a cső kicseréléséhez.</Hungarian>
             <Portuguese>Use para trocar o cano/estriamento.</Portuguese>
             <Italian>Usata per cambiare la canna.</Italian>
         </Key>
@@ -44,11 +50,11 @@
             <English>Weapon jammed!</English>
             <German>Ladehemmung!</German>
             <Spanish>Arma encasquillada!</Spanish>
-            <Polish>Broń się zacięła!</Polish>
+            <Polish>Zacięcie!</Polish>
             <Czech>Zbraň se zasekla!</Czech>
             <French>Arme enrayée</French>
             <Russian>Оружие заклинило!</Russian>
-            <Hungarian>Elakadt a fegyver!</Hungarian>
+            <Hungarian>Megakadt a fegyver!</Hungarian>
             <Portuguese>Arma travada!</Portuguese>
             <Italian>Arma inceppata!</Italian>
         </Key>
@@ -60,7 +66,7 @@
             <Czech>Uvolnit zbraň</Czech>
             <French>Désenrayer l'arme</French>
             <Russian>Исправить клин оружия.</Russian>
-            <Hungarian>Hárítsd el az akadályt!</Hungarian>
+            <Hungarian>Akadás elhárítása</Hungarian>
             <Portuguese>Destravar arma</Portuguese>
             <Italian>Ripulisci l'arma</Italian>
         </Key>
@@ -72,7 +78,7 @@
             <Czech>Zbraň uvolněna</Czech>
             <French>Arme désenrayée</French>
             <Russian>Оружие исправлено</Russian>
-            <Hungarian>Akadály elhárítva!</Hungarian>
+            <Hungarian>Akadás elhárítva</Hungarian>
             <Portuguese>Arma destravada</Portuguese>
             <Italian>Arma pronta al fuoco</Italian>
         </Key>
@@ -84,7 +90,7 @@
             <Czech>Vyměnit hlaveň</Czech>
             <French>Changer de canon</French>
             <Russian>Сменить ствол</Russian>
-            <Hungarian>Cserélj csövet!</Hungarian>
+            <Hungarian>Cső cserélése</Hungarian>
             <Portuguese>Substituir cano</Portuguese>
             <Italian>Sostiuisci la canna</Italian>
         </Key>
@@ -95,8 +101,8 @@
             <Polish>Wymienianie lufy...</Polish>
             <Czech>Vyměňuji hlaveň ...</Czech>
             <French>Changement du canon...</French>
-            <Russian>Смена ствола...</Russian>
-            <Hungarian>Cső cserélése...</Hungarian>
+            <Russian>Смена ствола ...</Russian>
+            <Hungarian>Cső kicserélése folyamatban...</Hungarian>
             <Portuguese>Substituindo cano...</Portuguese>
             <Italian>Sto sostituendo la canna ...</Italian>
         </Key>
@@ -108,7 +114,7 @@
             <Czech>Hlaveň vyměněna</Czech>
             <French>Canon changé</French>
             <Russian>Ствол сменен</Russian>
-            <Hungarian>Cső kicserélve!</Hungarian>
+            <Hungarian>Cső kicserélve</Hungarian>
             <Portuguese>Cano substituído</Portuguese>
             <Italian>Canna sostituita</Italian>
         </Key>
@@ -118,16 +124,21 @@
             <Spanish>Verificar temperatura del arma</Spanish>
             <Polish>Sprawdź temperaturę broni</Polish>
             <French>Vérifier la température de l'arme</French>
-            <Hungarian>Hőmérséklet ellenőrzése</Hungarian>
+            <Hungarian>Fegyver hőmérsékletének ellenőrzése</Hungarian>
             <Czech>Zjistit teplotu zbraně</Czech>
             <Portuguese>Conferir temperatura da arma</Portuguese>
             <Italian>Controlla la temperatura della canna</Italian>
             <Russian>Проверить температуру оружия</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckTemperatureShort">
-            <English>Check weapon&lt;br/&gt;temperature</English>
-            <Spanish>Verificar temperatura&lt;br/&gt;del arma</Spanish>
             <German>Waffentemperatur&lt;br/&gt;prüfen</German>
+            <English>Check weapon temperature</English>
+            <Spanish>Verificar temperatura del arma</Spanish>
+            <Polish>Sprawdź temperaturę broni</Polish>
+            <Czech>Zkontrolovat teplotu zbraně</Czech>
+            <French>Vérifier la température</French>
+            <Hungarian>Fegyverhő ellenőrzése</Hungarian>
+            <Russian>Проверить температуру оружия</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingTemperature">
             <English>Checking temperature ...</English>
@@ -135,7 +146,7 @@
             <Spanish>Verificando temperatura ...</Spanish>
             <Polish>Sprawdzanie temperatury ...</Polish>
             <French>Vérification de la température ...</French>
-            <Hungarian>Hőmérséklet ellenőrzése...</Hungarian>
+            <Hungarian>Hőmérséklet ellenőrzése ...</Hungarian>
             <Czech>Zjišťuju teplotu ...</Czech>
             <Portuguese>Conferindo temperatura ...</Portuguese>
             <Italian>Sto controllando la temperatura ...</Italian>

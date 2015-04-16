@@ -32,7 +32,7 @@ private ["_onSuccess", "_onFailure", "_condition"];
 
 _onSuccess =  {
     (_this select 0 select 0) removeMagazine (_this select 0 select 3);
-    ["reloadLauncher", _this select 0 select 0, _this select 0] call DEFUNC(common,targetEvent);
+    ["reloadLauncher", _this select 0 select 1, _this select 0] call DEFUNC(common,targetEvent);
 
     [localize "STR_ACE_ReloadLaunchers_LauncherLoaded"] call DEFUNC(common,displayTextStructured);
 };
