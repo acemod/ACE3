@@ -443,34 +443,40 @@
             <English>.338 LM 10Rnd AP Mag</English>
             <German>.338 LM 10-Schuss-Magazin Hartkern</German>
             <Polish>Magazynek .338 LM 10rd AP</Polish>
+            <Russian>Магазин из 10-ти .338 LM бронебойных</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_Mag_APNameShort">
             <English>.338 LM AP</English>
             <German>.338 LM AP</German>
             <Polish>.338 LM AP</Polish>
             <Czech>.338 LM AP</Czech>
+            <Russian>.338 LM бронебойные</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_Mag_APDescription">
             <English>Caliber: .338 Lapua Magnum AP&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: MAR-10</English>
             <German>Kaliber: .338 Lapua Magnum Hartkern&lt;br /&gt;Schuss: 10&lt;br /&gt;Verwendet für: MAR-10</German>
             <Polish>Kaliber: .338 Lapua Magnum AP&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: MAR-10</Polish>
+            <Russian>Калибр: .338 Lapua Magnum бронебойные&lt;br /&gt;Патронов: 10&lt;br /&gt;Применимы в: MAR-10</Russian>
         </Key>
         <!-- .338 Norma Magnum -->
         <Key ID="STR_ACE_130Rnd_338_Mag_TracerName">
             <English>.338 NM 130Rnd Tracer Belt</English>
             <German>.338 NM 130-Schuss-Gurt Leuchtspur</German>
             <Polish>Taśma .338 NM 130rd Smugacz</Polish>
+            <Russian>Лента из 130-ти .338 NM трассирующих</Russian>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_TracerNameShort">
             <English>.338 NM Tracer</English>
             <German>.338 NM Leuchtspur</German>
             <Polish>.338 NM Tracer</Polish>
             <Czech>.338 NM Svítící</Czech>
+            <Russian>.338 NM трассирующие</Russian>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_TracerDescription">
             <English>Caliber: .338 Norma Magnum Tracer&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
             <German>Kaliber: .338 Norma Magnum Leuchtspur&lt;br /&gt;Schuss: 130&lt;br /&gt;Verwendet für: SPMG</German>
             <Polish>Kaliber: .338 Norma Magnum Smugacz&lt;br /&gt;Pociski: 130&lt;br /&gt;Używany w: SPMG</Polish>
+            <Russian>Калибр: .338 Norma Magnum трассирующие&lt;br /&gt;Патронов: 130&lt;br /&gt;Применимы в: SPMG</Russian>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_Tracer_DimName">
             <English>.338 NM 130Rnd IR-DIM Belt</English>
