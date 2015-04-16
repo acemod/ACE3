@@ -50,6 +50,8 @@ class CfgAmmo {
             //maxDeflection = 0.5;
             //incDeflection = 0.005;
             
+            canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
+            
             // Guidance type for munitions
             defaultSeekerType = "SALH";
             seekerTypes[] = { "SALH", "LIDAR", "SARH", "Optic", "Thermal", "GPS", "SACLOS", "MCLOS" };  
@@ -119,6 +121,8 @@ class CfgAmmo {
             //minDeflection = 0.005; 
             //maxDeflection = 0.5;
             //incDeflection = 0.005;
+            
+            canVanillaLock = 0;
             
             // Guidance type for munitions
             defaultSeekerType = "Optic";

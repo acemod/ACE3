@@ -19,15 +19,15 @@ private ["_elevationAbs", "_elevationRel", "_elevationCur", "_windageAbs", "_win
 _elevationAbs = (GVAR(elevationOutput) select GVAR(currentTarget));
 _windageAbs = (GVAR(windageOutput) select GVAR(currentTarget));
 
-_elevationCur = (GVAR(workingMemory) select GVAR(currentTarget)) select 10;
-_windageCur = (GVAR(workingMemory) select GVAR(currentTarget)) select 11;
+_elevationCur = GVAR(workingMemory) select 10;
+_windageCur = GVAR(workingMemory) select 11;
 
 _elevationRel = _elevationAbs - _elevationCur;
 _windageRel = _windageAbs - _windageCur;
 
 _lead = (GVAR(leadOutput) select GVAR(currentTarget));
 
-switch ((GVAR(currentScopeUnit) select GVAR(currentTarget))) do
+switch (GVAR(currentScopeUnit)) do
 {
     case 0:
     {
@@ -55,8 +55,8 @@ switch ((GVAR(currentScopeUnit) select GVAR(currentTarget))) do
     
     case 3:
     {
-        _elevationScopeStep = ((GVAR(workingMemory) select GVAR(currentTarget)) select 7);
-        _windageScopeStep = ((GVAR(workingMemory) select GVAR(currentTarget)) select 8);
+        _elevationScopeStep = (GVAR(workingMemory) select 7);
+        _windageScopeStep = (GVAR(workingMemory) select 8);
         
         _elevationAbs = Round(_elevationAbs / _elevationScopeStep);
         _windageAbs = Round(_windageAbs / _windageScopeStep);

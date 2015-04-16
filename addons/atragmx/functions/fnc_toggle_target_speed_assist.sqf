@@ -15,8 +15,6 @@
  */
 #include "script_component.hpp"
 
-#define _dsp (uiNamespace getVariable "ATragMX_Display")
-
 if (ctrlVisible 8000) then
 {
     false call FUNC(show_target_speed_assist);
@@ -31,24 +29,4 @@ if (ctrlVisible 8000) then
 {
     false call FUNC(show_main_page);
     true call FUNC(show_target_speed_assist);
-    
-    ctrlSetFocus (_dsp displayCtrl 8012);
-    
-    ctrlSetText [8004, Str(Round((GVAR(targetRange) select GVAR(currentTarget))))];
-
-    if (GVAR(currentUnit) != 2) then
-    {
-        ctrlSetText [8008, "Yards"];
-    } else
-    {
-        ctrlSetText [8008, "Meters"];
-    };
-    
-    if (GVAR(currentUnit) != 1) then
-    {
-        ctrlSetText [8011, "m/s"];
-    } else
-    {
-        ctrlSetText [8011, "mph"];
-    };
 };

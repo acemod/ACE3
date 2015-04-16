@@ -7,6 +7,8 @@
             <Polish>Otwórz ekwipunek</Polish>
             <Czech>Otevřít inventář</Czech>
             <Spanish>Abrir inventario</Spanish>
+            <Russian>Открыть инвентарь</Russian>
+            <Italian>Apri l'inventario</Italian>
         </Key>
     </Package>
 </Project>

@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-GVAR(workingMemory) = [+(GVAR(gunList) select 0), +(GVAR(gunList) select 0), +(GVAR(gunList) select 0), +(GVAR(gunList) select 0)];
+GVAR(workingMemory) = +(GVAR(gunList) select 0);
 
 GVAR(scopeUnits) = ["MILs", "TMOA", "SMOA", "Clicks"];
 
@@ -37,13 +37,13 @@ GVAR(speedAssistNumTicksUnit) = 0;
 GVAR(speedAssistTimer) = true;
 
 GVAR(currentUnit) = 2;
-GVAR(currentGun) = [0, 0, 0, 0];
+GVAR(currentGun) = 0;
 GVAR(currentTarget) = 0;
-GVAR(currentScopeUnit) = [0, 0, 0, 0];
+GVAR(currentScopeUnit) = 0;
 
-GVAR(temperature) = [15, 15, 15, 15];
-GVAR(barometricPressure) = [1013.25, 1013.25, 1013.25, 1013.25];
-GVAR(relativeHumidity) = [0.5, 0.5, 0.5, 0.5];
+GVAR(temperature) = 15;
+GVAR(barometricPressure) = 1013.25;
+GVAR(relativeHumidity) = 0.5;
 
 GVAR(windSpeed) = [0, 0, 0, 0];
 GVAR(windDirection) = [12, 12, 12, 12];
@@ -56,3 +56,13 @@ GVAR(windageOutput) = [0, 0, 0, 0];
 GVAR(leadOutput) = [0, 0, 0, 0];
 GVAR(tofOutput) = [0, 0, 0, 0];
 GVAR(velocityOutput) = [0, 0, 0, 0];
+
+GVAR(showMainPage) = true;
+GVAR(showAddNewGun) = false;
+GVAR(showGunList) = false;
+GVAR(showRangeCard) = false;
+GVAR(showRangeCardSetup) = false;
+GVAR(showTargetRangeAssist) = false;
+GVAR(showTargetSpeedAssist) = false;
+GVAR(showTargetSpeedAssistTimer) = false;
+

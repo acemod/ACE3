@@ -8,6 +8,9 @@ class CfgWeapons {
         weaponInfoType = "ACE_RscOptics_javelin";
         modelOptics = PATHTOF(data\reticle_titan.p3d);
          
+        canLock = 1;
+        
+         
         lockingTargetSound[] = {"",0,1};
 		lockedTargetSound[] = {"",0,1};
     };

@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_range", "_elevation", "_windage", "_lead", "_TOF", "_velocity", "_kineticEnergy", "_rangeOutput", "_elevationOutput", "_windageOutput", "_lastColumnOutput"];
+private ["_range", "_elevation", "_windage", "_elevationScopeStep", "_windageScopeStep", "_lead", "_TOF", "_velocity", "_kineticEnergy", "_rangeOutput", "_elevationOutput", "_windageOutput", "_lastColumnOutput"];
 _lastColumnOutput = "";
 
 ctrlSetText [5006, (GVAR(rangeCardLastColumns) select GVAR(rangeCardCurrentColumn))];
@@ -39,7 +39,7 @@ lnbClear 5007;
     _velocity = _x select 5;
     _kineticEnergy = _x select 6;
     
-    switch ((GVAR(currentScopeUnit) select GVAR(currentTarget))) do
+    switch (GVAR(currentScopeUnit)) do
     {
         case 0:
         {
@@ -55,8 +55,8 @@ lnbClear 5007;
         
         case 3:
         {
-            _elevationScopeStep = ((GVAR(workingMemory) select GVAR(currentTarget)) select 7);
-            _windageScopeStep = ((GVAR(workingMemory) select GVAR(currentTarget)) select 8);
+            _elevationScopeStep = (GVAR(workingMemory) select 7);
+            _windageScopeStep = (GVAR(workingMemory) select 8);
             
             _elevation = Round(_elevation / _elevationScopeStep);
             _windage = Round(_windage / _windageScopeStep);

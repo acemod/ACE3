@@ -10,6 +10,7 @@
             <Polish>Desygnator laserowy wł.</Polish>
             <French>Désignateur Laser Allumé</French>
             <Hungarian>Lézeres Megjelölő Be</Hungarian>
+            <Italian>Designatore laser acceso</Italian>
         </Key>
         <Key ID="STR_ACE_Laser_SelfDesignate_DesignatorOff">
             <English>Laser Designator Off</English>
@@ -20,6 +21,7 @@
             <Polish>Desygnator laserowy wył.</Polish>
             <French>Désignateur Laser Éteint</French>
             <Hungarian>Lézeres Megjelölő Ki</Hungarian>
+            <Italian>Designatore laser spento</Italian>
         </Key>
     </Package>
 </Project>

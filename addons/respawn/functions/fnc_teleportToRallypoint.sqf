@@ -18,30 +18,19 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_side", "_toBase", "_rallypoint"];
+private ["_unit", "_side", "_rallypoint", "_toBase"];
 
 _unit = _this select 0;
 _side = _this select 1;
-_toBase = _this select 2;
+_rallypoint = _this select 2;
 
 // rallypoint names are defined in CfgVehicles.hpp
 
-_rallypoint = ([
-    [
-        objNull,
-        missionNamespace getVariable ["ACE_RallypointExit_West", objNull],
-        missionNamespace getVariable ["ACE_RallypointExit_East", objNull],
-        missionNamespace getVariable ["ACE_RallypointExit_Independent", objNull]
-    ],
-    [
-        objNull,
-        missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
-        missionNamespace getVariable ["ACE_Rallypoint_East", objNull],
-        missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]
-    ]
-] select _toBase) select ([west, east, independent] find _side) + 1;
+_toBase = _rallypoint find "_Base" != -1;
+
+_rallypoint = missionNamespace getVariable [_rallypoint, objNull],
 
 if (isNull _rallypoint) exitWith {};
 
-_unit setPosASL (getPosASL _rallypoint);
+_unit setPosASL getPosASL _rallypoint;
 [[localize "STR_ACE_Respawn_TeleportedToRallypoint", localize "STR_ACE_Respawn_TeleportedToBase"] select _toBase] call EFUNC(common,displayTextStructured);
