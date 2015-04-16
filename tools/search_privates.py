@@ -21,7 +21,7 @@ def get_private_declare(content):
     priv_split = sorted(set(priv_split))
     priv_declared += priv_split;
     
-    srch = re.compile('PARAMS_[0-9].*|EXPLODE_PVT_[0-9].*')
+    srch = re.compile('PARAMS_[0-9].*|EXPLODE_[0-9]_PVT.*')
     priv_srch_declared = srch.findall(content)
     priv_srch_declared = sorted(set(priv_srch_declared))
     
@@ -89,7 +89,12 @@ def main():
     print("#########################")
 
     sqf_list = []
-    for root, dirnames, filenames in os.walk('../addons'):
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-m','--module', help='only search specified module addon folder', required=False, default=".")
+    args = parser.parse_args()
+ 
+    for root, dirnames, filenames in os.walk('../addons' + '/' + args.module):
       for filename in fnmatch.filter(filenames, '*.sqf'):
         sqf_list.append(os.path.join(root, filename))
         
