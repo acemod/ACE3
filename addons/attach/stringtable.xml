@@ -11,7 +11,7 @@
             <Portuguese>Acoplar item &gt;&gt;</Portuguese>
             <Italian>Attacca l'oggetto &gt;&gt;</Italian>
             <Hungarian>Tárgy hozzácsatolása &gt;&gt;</Hungarian>
-            <Russian>Добавить приспособления</Russian>
+            <Russian>Прикрепить предмет</Russian>
         </Key>
         <Key ID="STR_ACE_Attach_Attach">
             <English>Attach</English>
@@ -23,7 +23,7 @@
             <Portuguese>Acoplar</Portuguese>
             <Italian>Attacca</Italian>
             <Hungarian>Hozzácsatolás</Hungarian>
-            <Russian>Присоединить</Russian>
+            <Russian>Прикрепить</Russian>
         </Key>
         <Key ID="STR_ACE_Attach_Detach">
             <English>Detach item</English>
@@ -47,7 +47,7 @@
             <Portuguese>Marcador IV Acoplado</Portuguese>
             <Italian>Strobo IR attaccata</Italian>
             <Hungarian>Infravörös jeladó hozzácsatolva</Hungarian>
-            <Russian>ИК-маяк присоединён</Russian>
+            <Russian>ИК-маяк прикреплён</Russian>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Detached">
             <English>IR Strobe Detached</English>
@@ -71,7 +71,7 @@
             <Portuguese>Granada IV Acoplada</Portuguese>
             <Italian>Granata IR attaccata</Italian>
             <Hungarian>Infravörös gránát hozzácsatolva</Hungarian>
-            <Russian>ИК-граната присоединена</Russian>
+            <Russian>ИК-граната прикреплена</Russian>
         </Key>
         <Key ID="STR_ACE_Attach_IrGrenade_Detached">
             <English>IR Grenade Detached</English>
@@ -95,7 +95,7 @@
             <Portuguese>Chemlight Acoplada</Portuguese>
             <Italian>Chemlight attaccata</Italian>
             <Hungarian>Chemlight hozzácsatolva</Hungarian>
-            <Russian>Химсвет присоединён</Russian>
+            <Russian>Химсвет прикреплён</Russian>
         </Key>
         <Key ID="STR_ACE_Attach_Chemlight_Detached">
             <English>Chemlight Detached</English>
