@@ -37,10 +37,11 @@ The mod is **built modularly** — almost any PBO can be removed, thus a team ca
 #### Guides & How-Tos
 If you installed ACE3, but have trouble understanding how it all works, or where to start — see [Getting Started](https://github.com/acemod/ACE3/blob/master/documentation/user/getting-started.md).
 
+
 #### Contributing
 If you want to help put with the ongoing development, you can do so by looking for possible bugs or by contributing new features. To contribute something to ACE, simply fork this repository and submit your pull requests for review by other collaborators. In the process, please add yourself to the author array of any .pbo you will be editing and the AUTHORS.txt file; including a valid email address.
 
-To report a bug, propose a feature, or suggest a change to the existing one — please, use our [Issue Tracker](https://github.com/acemod/ACE3/issues).
+To report a bug, propose a feature, or suggest a change to the existing one — please, use our [Issue Tracker](https://github.com/acemod/ACE3/issues). See [this link](http://ace3mod.com/wiki/user/how-to-report-an-issue.html) for details.
 
 #### Testing & Building
 If you want to help us test the latest development changes, feel free to download our master branch, using either git — if familiar with the process — or directly, by following [this link](https://github.com/acemod/ACE3/archive/master.zip).
