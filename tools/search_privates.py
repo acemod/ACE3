@@ -27,7 +27,7 @@ def get_private_declare(content):
     
     priv_dec_str = ''.join(priv_srch_declared)
     
-    srch = re.compile('(?<![_a-zA-Z])(_[a-zA-Z]*?)[ ,\}\]\)";]')
+    srch = re.compile('(?<![_a-zA-Z0-9])(_[a-zA-Z]*?)[ ,\}\]\)";]')
     priv_split = srch.findall(priv_dec_str)
     priv_split = sorted(set(priv_split))
 
