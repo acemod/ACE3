@@ -21,14 +21,37 @@ class CfgAmmo {
 
     class DirectionalBombCore:TimeBombCore;
     class DirectionalBombBase:DirectionalBombCore;
-    class APERSTripMine_Wire_Ammo:DirectionalBombBase;
 
     class SLAMDirectionalMine_Wire_Ammo:DirectionalBombBase;
 
     class PipeBombCore: TimeBombCore;
     class PipeBombBase:PipeBombCore;
     */
+
+
     class DirectionalBombBase;
+
+    class APERSTripMine_Wire_Ammo: DirectionalBombBase {};
+
+    class ACE_APERSTripFlare_Wire_Ammo: APERSTripMine_Wire_Ammo {
+        hit = 0.1;
+        indirectHit = 0.1;
+        indirectHitRange = 1;
+        model = "\A3\Weapons_F\explosives\mine_AP_tripwire";
+        mineModelDisabled = "\A3\Weapons_F\explosives\mine_AP_tripwire_d";
+        defaultMagazine = "ACE_APERSTripFlare_Wire_Mag";
+        icon = "iconExplosiveAP";
+        soundHit[] = {"",1,1};
+        minimumSafeZone = 0;
+        explosionAngle = 360;
+        explosionEffects = "";
+        CraterEffects = "";
+        whistleDist = 1;
+        cost = 200;
+        mineTrigger = "WireTrigger";
+        mineInconspicuousness = 50;
+    };
+
     class ClaymoreDirectionalMine_Remote_Ammo:DirectionalBombBase{
         ACE_Explosive = "ClaymoreDirectionalMine_Remote_Ammo_Scripted";
         soundActivation[] = {"",0,0,0};
