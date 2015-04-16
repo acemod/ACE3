@@ -160,7 +160,12 @@ class CfgVehicles {
         };
     };
 
-    class ACE_Box_Misc: Box_NATO_Support_F {
+    class ACE_Box_Ammo: NATO_Box_Base {
+        scope = 2;
+        accuracy = 1000;
+        displayName = "[ACE] Ammo Supply Crate";
+        // TODO: model = "...";
+        author = "$STR_ACE_Common_ACETeam";
         class TransportMagazines {
             MACRO_ADDMAGAZINE(ACE_20Rnd_762x51_Mag_SD,4);
             MACRO_ADDMAGAZINE(ACE_10Rnd_762x51_M118LR_Mag,4);
