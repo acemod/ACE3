@@ -1520,6 +1520,7 @@
             <Polish>Ciężko ranny</Polish>
             <Russian>Сильно ранен</Russian>
             <Italian>Gravemente ferito</Italian>
+            <Spanish>Gravemente herido</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_LightlyWounded">
             <English>Lightly wounded</English>
@@ -1527,6 +1528,7 @@
             <Polish>Lekko ranny</Polish>
             <Russian>Легко ранен</Russian>
             <Italian>Leggermente ferito</Italian>
+            <Spanish>Levemente herido</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_VeryLightlyWounded">
             <English>Very lightly wounded</English>
@@ -1534,6 +1536,7 @@
             <Polish>B. lekko ranny</Polish>
             <Russian>Очень легко ранен</Russian>
             <Italian>Ferito lievemente</Italian>
+            <Spanish>Muy levemente herido</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Head">
             <English>Head</English>
@@ -1541,6 +1544,7 @@
             <Polish>Głowa</Polish>
             <Russian>Голова</Russian>
             <Italian>Testa</Italian>
+            <Spanish>Cabeza</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Torso">
             <English>Torso</English>
@@ -1548,6 +1552,7 @@
             <Polish>Tors</Polish>
             <Russian>Торс</Russian>
             <Italian>Torso</Italian>
+            <Spanish>Torso</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_LeftArm">
             <English>Left Arm</English>
@@ -1555,6 +1560,7 @@
             <Polish>Lewe ramię</Polish>
             <Russian>Левая рука</Russian>
             <Italian>Braccio sinistro</Italian>
+            <Spanish>Brazo izquierdo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_RightArm">
             <English>Right Arm</English>
@@ -1562,6 +1568,7 @@
             <Polish>Prawe ramię</Polish>
             <Russian>Правая рука</Russian>
             <Italian>Braccio destro</Italian>
+            <Spanish>Brazo derecho</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_LeftLeg">
             <English>Left Leg</English>
@@ -1569,6 +1576,7 @@
             <Polish>Lewa noga</Polish>
             <Russian>Левая нога</Russian>
             <Italian>Gamba sinistra</Italian>
+            <Spanish>Pierna izquierda</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_RightLeg">
             <English>Right Leg</English>
@@ -1576,6 +1584,7 @@
             <Polish>Prawa noga</Polish>
             <Russian>Правая нога</Russian>
             <Italian>Gamba destra</Italian>
+            <Spanish>Pierna derecha</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
@@ -1583,6 +1592,7 @@
             <Polish>Rodzaj efektu bólu</Polish>
             <Russian>Вид боли</Russian>
             <Italian>Pain Effect Type</Italian>
+            <Spanish>Tipo de efecto de dolor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Flash">
             <English>Colour Flashing</English>
@@ -1590,6 +1600,7 @@
             <Polish>Pulsujące kolory</Polish>
             <Russian>Разноцветные вспышки</Russian>
             <Italian>Colore lampeggiante</Italian>
+            <Spanish>Parpadeo de color</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Chroma">
             <English>Chromatic Aberration</English>
@@ -1597,6 +1608,7 @@
             <Polish>Aberracja chromatyczna</Polish>
             <Russian>Хроматическая аберрация</Russian>
             <Italian>Aberrazione cromatica</Italian>
+            <Spanish>Aberración cromática</Spanish>
         </Key>
     </Package>
 </Project>

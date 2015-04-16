@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Weather">
         <Key ID="STR_ACE_Weather_WindInfoKey">
@@ -7,6 +6,7 @@
             <Polish>Pokaż inf. o wietrze</Polish>
             <Russian>Показать информацию о погоде</Russian>
             <French>Afficher information du vent</French>
+            <Spanish>Mostrar información del viento</Spanish>
         </Key>
     </Package>
 </Project>
