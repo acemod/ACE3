@@ -143,8 +143,10 @@ private "_jamChance";
 
 _jamChance = getArray (configFile >> "CfgWeapons" >> _weapon >> "ACE_Overheating_jamChance");
 
-if (count _jamChance == 0) then {
+_count = count _jamChance;
+if (_count == 0) then {
     _jamChance = [0];
+    _count = 1;
 };
 
 _jamChance = [_jamChance, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray);
