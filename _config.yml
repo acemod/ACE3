@@ -19,4 +19,4 @@ highlighter: pygments
 safe: true
 lsi: false
 
-exclude: [.editorconfig,README.md, src]
+exclude: [src, .editorconfig, .gitignore, CNAME, Gemfile, Gemfile.lock,  README.md, src]

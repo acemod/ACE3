@@ -11,12 +11,14 @@ title: Sitemap
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    {% for page in site.pages %}
+    {% for curPage in site.pages | sort: "group" %}
+    {% if curPage.title != page.title %}
     <url>
-        <loc>{{site.productionUrl}}{{ page.url }}</loc>
+        <loc>{{site.productionUrl}}{{ curPage.url }}</loc>
         <lastmod>{{site.time}}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
+    {% endif %}
     {% endfor %}
 </urlset>
