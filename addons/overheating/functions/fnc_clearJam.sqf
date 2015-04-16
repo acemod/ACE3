@@ -1,5 +1,5 @@
 /*
- * Author: Commy2
+ * Author: commy2
  * Make the unit clear the jam from a weapon
  *
  * Arguments:
@@ -20,38 +20,38 @@ private ["_jammedWeapons"];
 _jammedWeapons = _unit getVariable [QGVAR(jammedWeapons), []];
 
 if (_weapon in _jammedWeapons) then {
-  _jammedWeapons = _jammedWeapons - [_weapon];
+    _jammedWeapons deleteAt (_jammedWeapons find _weapon);
 
-  _unit setVariable [QGVAR(jammedWeapons), _jammedWeapons];
+    _unit setVariable [QGVAR(jammedWeapons), _jammedWeapons];
 
-  if (count _jammedWeapons == 0) then {
-    private "_id";
+    if (count _jammedWeapons == 0) then {
+        private "_id";
 
-    _id = _unit getVariable [QGVAR(JammingActionID), -1];
-    [_unit, "DefaultAction", _id] call EFUNC(common,removeActionEventHandler);
-    _unit setVariable [QGVAR(JammingActionID), -1];
-  };
-
-  if !(_skipAnim) then {
-    private "_clearJamAction";
-
-    _clearJamAction = getText (configFile >> "CfgWeapons" >> _weapon >> "ACE_clearJamAction");
-
-    if (_clearJamAction == "") then {
-      _clearJamAction = getText (configFile >> "CfgWeapons" >> _weapon >> "reloadAction");
+        _id = _unit getVariable [QGVAR(JammingActionID), -1];
+        [_unit, "DefaultAction", _id] call EFUNC(common,removeActionEventHandler);
+        _unit setVariable [QGVAR(JammingActionID), -1];
     };
 
-    _unit playActionNow _clearJamAction;
-    if (_weapon == primaryWeapon _unit) then {
-      playSound QGVAR(fixing_rifle);
-    } else {
-      if (_weapon == secondaryWeapon _unit) then {
-        playSound QGVAR(fixing_pistol);
-      };
-    };
-  };
+    if !(_skipAnim) then {
+        private "_clearJamAction";
 
-  if (GVAR(DisplayTextOnJam)) then {
-    [localize "STR_ACE_Overheating_WeaponUnjammed"] call EFUNC(common,displayTextStructured);
-  };
+        _clearJamAction = getText (configFile >> "CfgWeapons" >> _weapon >> "ACE_clearJamAction");
+
+        if (_clearJamAction == "") then {
+            _clearJamAction = getText (configFile >> "CfgWeapons" >> _weapon >> "reloadAction");
+        };
+
+        _unit playActionNow _clearJamAction;
+        if (_weapon == primaryWeapon _unit) then {
+            playSound QGVAR(fixing_rifle);
+        } else {
+            if (_weapon == secondaryWeapon _unit) then {
+                playSound QGVAR(fixing_pistol);
+            };
+        };
+    };
+
+    if (GVAR(DisplayTextOnJam)) then {
+        [localize "STR_ACE_Overheating_WeaponUnjammed"] call EFUNC(common,displayTextStructured);
+    };
 };

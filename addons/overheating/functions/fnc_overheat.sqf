@@ -1,5 +1,5 @@
 /*
- * Author: Commy2 and esteldunedain
+ * Author: commy2 and esteldunedain
  * Handle weapon fire, heat up the weapon
  *
  * Argument:
@@ -39,8 +39,8 @@ _time = _overheat select 1;
 // Bullet mass is read from config in grains and converted to grams
 _bulletMass = (getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_BulletMass")) * 0.06480;
 if (_bulletMass == 0) then {
-  // If the bullet mass is not configured, estimate it directly in grams
-  _bulletMass = 3.4334 + 0.5171 * (getNumber (configFile >> "CfgAmmo" >> _ammo >> "hit") + getNumber (configFile >> "CfgAmmo" >> _ammo >> "caliber"));
+    // If the bullet mass is not configured, estimate it directly in grams
+    _bulletMass = 3.4334 + 0.5171 * (getNumber (configFile >> "CfgAmmo" >> _ammo >> "hit") + getNumber (configFile >> "CfgAmmo" >> _ammo >> "caliber"));
 };
 _energyIncrement = 0.75 * 0.0005 * _bulletMass * (vectorMagnitudeSqr _velocity);
 _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
@@ -60,57 +60,57 @@ private "_intensity";
 
 _intensity = (_scaledTemperature - 0.2) * 1.25;
 if (_intensity > 0) then {
-  private ["_position", "_direction"];
+    private ["_position", "_direction"];
 
-  _position = position _projectile;
-  _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;
+    _position = position _projectile;
+    _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;
 
-  drop [
-    "\A3\data_f\ParticleEffects\Universal\Refract",
-    "",
-    "Billboard",
-    1.1,
-    2,
-    _position,
-    _direction,
-    1,
-    1.2,
-    1.0,
-    0.1,
-    [0.1,0.15],
-    [[0.06,0.06,0.06,0.32*_scaledTemperature], [0.3,0.3,0.3,0.28*_scaledTemperature], [0.3,0.3,0.3,0.25*_scaledTemperature], [0.3,0.3,0.3,0.22*_scaledTemperature], [0.3,0.3,0.3,0.1*_scaledTemperature]],
-    [1,0],
-    0.1,
-    0.05,
-    "",
-    "",
-    ""
-  ];
-
-  _intensity = (_scaledTemperature - 0.5) * 2;
-  if (_intensity > 0) then {
     drop [
-      ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 12, 1, 16],
-      "",
-      "Billboard",
-      1,
-      1.2,
-      _position,
-      [0,0,0.25],
-      0,
-      1.275,
-      1,
-      0.025,
-      [0.28,0.33,0.37],
-      [[0.6,0.6,0.6,0.3*_intensity]],
-      [0.2],
-      1,
-      0.04,
-      "",
-      "",
-      ""
+        "\A3\data_f\ParticleEffects\Universal\Refract",
+        "",
+        "Billboard",
+        1.1,
+        2,
+        _position,
+        _direction,
+        1,
+        1.2,
+        1.0,
+        0.1,
+        [0.1,0.15],
+        [[0.06,0.06,0.06,0.32*_scaledTemperature], [0.3,0.3,0.3,0.28*_scaledTemperature], [0.3,0.3,0.3,0.25*_scaledTemperature], [0.3,0.3,0.3,0.22*_scaledTemperature], [0.3,0.3,0.3,0.1*_scaledTemperature]],
+        [1,0],
+        0.1,
+        0.05,
+        "",
+        "",
+        ""
     ];
-  };
+
+    _intensity = (_scaledTemperature - 0.5) * 2;
+    if (_intensity > 0) then {
+        drop [
+            ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 12, 1, 16],
+            "",
+            "Billboard",
+            1,
+            1.2,
+            _position,
+            [0,0,0.25],
+            0,
+            1.275,
+            1,
+            0.025,
+            [0.28,0.33,0.37],
+            [[0.6,0.6,0.6,0.3*_intensity]],
+            [0.2],
+            1,
+            0.04,
+            "",
+            "",
+            ""
+        ];
+    };
 };
 
 
@@ -121,18 +121,18 @@ _dispersion = getArray (configFile >> "CfgWeapons" >> _weapon >> "ACE_Overheatin
 
 _count = count _dispersion;
 if (_count > 0) then {
-  _dispersion = ([_dispersion, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray)) max 0;
+    _dispersion = ([_dispersion, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray)) max 0;
 } else {
-  _dispersion = 0;
+    _dispersion = 0;
 };
 
 _slowdownFactor = getArray (configFile >> "CfgWeapons" >> _weapon >> "ACE_Overheating_slowdownFactor");
 
 _count = count _slowdownFactor;
 if (_count > 0) then {
-  _slowdownFactor = ([_slowdownFactor, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray)) max 0;
+    _slowdownFactor = ([_slowdownFactor, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray)) max 0;
 } else {
-  _slowdownFactor = 1;
+    _slowdownFactor = 1;
 };
 
 [_projectile, _dispersion - 2 * random _dispersion, _dispersion - 2 * random _dispersion, (_slowdownFactor - 1) * vectorMagnitude _velocity] call EFUNC(common,changeProjectileDirection);
@@ -143,32 +143,29 @@ private "_jamChance";
 
 _jamChance = getArray (configFile >> "CfgWeapons" >> _weapon >> "ACE_Overheating_jamChance");
 
-_count = count _jamChance;
-if (_count == 0) then {
-  _jamChance = [0];
-  _count = 1;
+if (count _jamChance < 2) then {
+    _jamChance = [0,0];
 };
 
-_jamChance = [_jamChance, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray);
+_jamChance = linearConversion [0, 1, _scaledTemperature, _jamChance select 0, _jamChance select 1, false];
 
 // increase jam chance on dusty grounds if prone
 if (stance _unit == "PRONE") then {
-  private "_surface";
-  _surface = toArray (surfaceType getPosASL _unit);
-  _surface deleteAt 0;
+    private "_surface";
+    _surface = toArray (surfaceType getPosASL _unit);
+    _surface deleteAt 0;
 
-  _surface = configFile >> "CfgSurfaces" >> toString _surface;
-  if (isClass _surface) then {
-    _jamChance = _jamChance + (getNumber (_surface >> "dust")) * _jamChance;
-  };
+    _surface = configFile >> "CfgSurfaces" >> toString _surface;
+    if (isClass _surface) then {
+        _jamChance = _jamChance + (getNumber (_surface >> "dust")) * _jamChance;
+    };
 };
 
-if ("Jam" in (missionNamespace getvariable ["ACE_Debug", []])) then {
-  _jamChance = 0.5;
-};
+//_jamChance = 0.5;
 
-["Overheating", [_temperature, _jamChance], {format ["Temperature: %1 - JamChance: %2", _this select 0, _this select 1]}] call EFUNC(common,log);
+systemChat format ["Temperature: %1 - JamChance: %2", _scaledTemperature, _jamChance];
+copyToClipboard format ["Temperature: %1 - JamChance: %2", _scaledTemperature, _jamChance];
 
 if (random 1 < _jamChance) then {
-  [_unit, _weapon] call FUNC(jamWeapon);
+    [_unit, _weapon] call FUNC(jamWeapon);
 };

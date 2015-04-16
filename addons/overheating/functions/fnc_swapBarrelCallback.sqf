@@ -1,5 +1,5 @@
 /*
- * Author: Commy2
+ * Author: commy2
  * Swap barrel callback
  *
  * Argument:
