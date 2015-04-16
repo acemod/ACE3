@@ -2,19 +2,21 @@
 
 EXPLODE_4_PVT(_this,_unit,_explosive,_magazineClass,_extra);
 
-systemChat str _this;
-
 _list = attachedObjects _explosive;
 
+if ((count _list) != 1) exitWith {ERROR("attachedObjects count wrong");};
+
 _defuseHelper = _list select 0;
-systemChat str _defuseHelper;
 
 _defuseHelper addEventHandler ["Explosion", {
     PARAMS_1(_defuseHelper);
     _explosive = _defuseHelper getVariable [QGVAR(Explosive), objNull];
-    systemChat "trigger";
+
+    //Only explode if _explosive still exists and it took "lethal" damage
+    //So we know the ExplosionEH was triggered by the mine exploding
     if ((isNull _explosive) || {(damage _explosive) < 1}) exitWith {};
-    systemChat "boom";
-    _flare = "ACE_F_Hand_Red" createVehicle (getpos _defuseHelper);
+
+    _flare = "ACE_TripFlare_FlareEffect" createVehicle (getpos _defuseHelper);
     _flare attachTo [_defuseHelper, [-2,0,0]];
+
 }];

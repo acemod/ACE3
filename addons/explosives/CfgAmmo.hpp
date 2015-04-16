@@ -2,6 +2,19 @@ class CfgAmmo {
     // All explosive based Ammo classes. These are all listed in case they become required.
     class Default;
 
+    class F_20mm_Red;
+    class ACE_TripFlare_FlareEffect: F_20mm_Red { //pretty much ACE_F_Hand_Red from grenades (with a diff triggerTime)
+        grenadeBurningSound[] = {"SmokeShellSoundLoop1",0.5,"SmokeShellSoundLoop2",0.5};
+        grenadeFireSound[] = {"SmokeShellSoundHit1",0.25,"SmokeShellSoundHit2",0.25,"SmokeShellSoundHit3",0.5};
+        soundTrigger[] = {"SmokeShellSoundLoop1",0.5,"SmokeShellSoundLoop2",0.5};
+        SmokeShellSoundHit1[] = {"A3\Sounds_F\weapons\smokeshell\smoke_1",1.25893,1,100};
+        SmokeShellSoundHit2[] = {"A3\Sounds_F\weapons\smokeshell\smoke_2",1.25893,1,100};
+        SmokeShellSoundHit3[] = {"A3\Sounds_F\weapons\smokeshell\smoke_3",1.25893,1,100};
+        SmokeShellSoundLoop1[] = {"A3\Sounds_F\weapons\smokeshell\smoke_loop1",0.125893,1,70};
+        SmokeShellSoundLoop2[] = {"A3\Sounds_F\weapons\smokeshell\smoke_loop2",0.125893,1,70};
+        timeToLive = 60;
+        triggerTime = 0.1;
+    };
     class TimeBombCore:Default {
         ACE_DefuseTime = 5;
     };
