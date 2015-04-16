@@ -15,8 +15,6 @@
  */
 #include "script_component.hpp"
 
-#define _dsp (uiNamespace getVariable "ATragMX_Display")
-
 if !(ctrlVisible 9000) then {
 
     false call FUNC(show_target_speed_assist);

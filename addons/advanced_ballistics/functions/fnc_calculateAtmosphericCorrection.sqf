@@ -16,7 +16,6 @@
  * Public: No
  */
 #include "script_component.hpp"
-#include "defines.h"
 
 private ["_ballisticCoefficient", "_temperature", "_pressure", "_relativeHumidity", "_atmosphereModel", "_airDensity"];
 _ballisticCoefficient = _this select 0;

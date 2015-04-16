@@ -16,7 +16,7 @@ class CfgAmmo {
 		explosionEffects = "ExploAmmoExplosion";
         model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
     };
-    class ACE_20mm_HEDP : B_20mm {};
+    class ACE_20mm_HE : B_20mm {};
     class ACE_20mm_AP : B_20mm {
         hit = 50;
         indirectHit = 12;

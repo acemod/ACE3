@@ -15,7 +15,6 @@
  * None
  */
 #include "script_component.hpp"
-#include "defines.h"
 
 private ["_temperature", "_pressure", "_relativeHumidity"];
 _temperature      = _this select 0; // in C
@@ -30,7 +29,7 @@ if (_relativeHumidity > 0) then {
     _pSat = 6.1078 * 10 ^ ((7.5 * _temperature) / (_temperature + 237.3));
     _vaporPressure = _relativeHumidity * _pSat;
     _partialPressure = _pressure - _vaporPressure;
-    
+
     (_partialPressure * DRY_AIR_MOLAR_MASS + _vaporPressure * WATER_VAPOR_MOLAR_MASS) / (UNIVERSAL_GAS_CONSTANT * KELVIN(_temperature))
 } else {
     _pressure / (SPECIFIC_GAS_CONSTANT_DRY_AIR * KELVIN(_temperature))

@@ -13,7 +13,6 @@
  * Public: No
  */
 #include "script_component.hpp"
-#include "defines.h"
 
 private ["_playerDir", "_textTop", "_textCenterBig", "_textCenterLine1Left", "_textCenterLine2Left", "_textCenterLine3Left", "_textCenterLine1Right", "_textCenterLine2Right", "_textCenterLine3Right", "_textInfoLine1", "_textInfoLine2", "_temperature", "_humidity", "_windSpeed", "_windDir", "_newWindSpeed", "_windSource", "_height"];
 
@@ -57,7 +56,7 @@ switch (GVAR(Menu)) do {
             _textCenterLine3Left = "Max";
             _textCenterLine1Right = "N/A";
             _textCenterLine2Right = "N/A";
-            _textCenterLine3Right = "N/A";			
+            _textCenterLine3Right = "N/A";
         };
     };
     case 1: { // Wind SPD

@@ -15,8 +15,6 @@
  */
 #include "script_component.hpp"
 
-#define _dsp (uiNamespace getVariable "ATragMX_Display")
-
 (_dsp displayCtrl 600) ctrlEnable true;
 (_dsp displayCtrl 601) ctrlEnable true;
 (_dsp displayCtrl 602) ctrlEnable true;

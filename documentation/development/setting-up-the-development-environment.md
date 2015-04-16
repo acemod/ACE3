@@ -70,12 +70,12 @@ mklink /D "[Arma 3 installation folder]\z\ace" "[location of the ACE3 project]"
 mklink /D "P:\z\ace" "[location of the ACE3 project]"
 ```
 
-Then, copy the `cba` folder from the `tools` folder to `P:\x\cba`. Create the `x` folder if needed. That folder contains the part of the CBA source code that are required for the macros to work.
+Then, copy the `cba` folder from the `tools` folder to `P:\x\cba`. Create the `x` folder if needed. That folder contains the parts of the CBA source code that are required for the macros to work.
 
 
 ## Creating a Test Build
 
-To create a development build of ACE to test changes or to debug something, run the `build.bat` file in the `tools` folder. This will populate the `addons` folder with binarized PBOs. These PBOs still point to the source files in their respective folders however, which allows you to use [file patching](#file-patching).
+To create a development build of ACE to test changes or to debug something, run the `build.py` file in the `tools` folder. This will populate the `addons` folder with binarized PBOs. These PBOs still point to the source files in their respective folders however, which allows you to use [file patching](#file-patching).
 
 This also means that you cannot distribute this build to others.
 

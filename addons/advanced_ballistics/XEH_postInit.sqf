@@ -33,9 +33,10 @@ GVAR(AtmosphericDensitySimulationEnabled) = true;
 GVAR(currentGrid) = 0;
 GVAR(INIT_MESSAGE_ENABLED) = false;
 
-GVAR(extensionAvailable) = "ace_advanced_ballistics" callExtension "version" == "1.0";
+GVAR(extensionVersion) = ("ace_advanced_ballistics" callExtension "version");
+GVAR(extensionAvailable) = (GVAR(extensionVersion) == EXTENSION_REQUIRED_VERSION);
 if (!GVAR(extensionAvailable)) exitWith {
-    if ("ace_advanced_ballistics" callExtension "version" == "") then {
+    if (GVAR(extensionVersion) == "") then {
         diag_log text "[ACE] ERROR: ace_advanced_ballistics.dll is missing";
     } else {
         diag_log text "[ACE] ERROR: ace_advanced_ballistics.dll is incompatible";

@@ -8,7 +8,7 @@
     false
 },
 {false},
-[70, [false, false, false]], false, 0] call CBA_fnc_addKeybind; // (SCROLL)
+[0, [false, false, false]], false, 0] call CBA_fnc_addKeybind; // (empty default key)
 
 ["ACE3", QGVAR(DisplayKestrelKey), localize "STR_ACE_Kestrel4500_DisplayKestrelKey",
 {
@@ -20,4 +20,4 @@
     false
 },
 {false},
-[70, [true, false, false]], false, 0] call CBA_fnc_addKeybind; // (SHIFT + SCROLL)
+[0, [true, false, false]], false, 0] call CBA_fnc_addKeybind; // (empty default key)

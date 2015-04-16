@@ -55,15 +55,6 @@ class ACE_Medical_Actions {
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = {};
         };
-        class Tourniquet: Bandage {
-            displayName = "$STR_ACE_Medical_Apply_Tourniquet";
-            displayNameProgress = "$STR_ACE_Medical_Applying_Tourniquet";
-            items[] = {"ACE_tourniquet"};
-            treatmentTime = 6;
-            callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
-            condition = QUOTE(!([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo)));
-            litter[] = {};
-        };
         class BodyBag: Bandage {
             displayName = "$STR_ACE_MEDICAL_PlaceInBodyBag";
             displayNameProgress = "$STR_ACE_MEDICAL_PlacingInBodyBag";
@@ -79,6 +70,27 @@ class ACE_Medical_Actions {
             animationPatientUnconscious = "";
             itemConsumed = 1;
             litter[] = {};
+        };
+        class CheckPulse: Bandage {
+            displayName = "";
+            displayNameProgress = "";
+            treatmentLocations[] = {"All"};
+            requiredMedic = 0;
+            treatmentTime = 2;
+            items[] = {};
+            callbackSuccess = QUOTE(DFUNC(actionCheckPulse));
+            callbackFailure = "";
+            callbackProgress = "";
+            animationPatient = "";
+            animationCaller = ""; // TODO
+            itemConsumed = 0;
+            litter[] = {};
+        };
+        class CheckBloodPressure: CheckPulse {
+            callbackSuccess = QUOTE(DFUNC(actionCheckBloodPressure));
+        };
+        class CheckResponse: CheckPulse {
+            callbackSuccess = QUOTE(DFUNC(actionCheckResponse));
         };
     };
 

@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Wirecutter">
         <Key ID="STR_ACE_logistics_wirecutter_wirecutterName">
             <English>Wirecutter</English>
-            <French>Coupe clôture</French>
+            <French>Pince coupante</French>
             <German>Drahtschneider</German>
             <Spanish>Cortador de cables</Spanish>
             <Russian>Клещи-кусачки</Russian>
             <Czech>Štípací kleště</Czech>
             <Polish>Nożyce do cięcia drutu</Polish>
+            <Hungarian>Drótvágó</Hungarian>
         </Key>
         <Key ID="STR_ACE_logistics_wirecutter_wirecutterDescription">
             <English>Wirecutter</English>
@@ -18,7 +18,8 @@
             <Russian>Позволяют быстро перекусывать сеточные конструкции.</Russian>
             <Czech>Štípačky</Czech>
             <Polish>Służą do cięcia drutu i płotów</Polish>
-            <French>Coupe clôture</French>
+            <French>Pince coupante</French>
+            <Hungarian>Drótok, huzalok, és kábelek vágására alkalmas olló.</Hungarian>
         </Key>
         <Key ID="STR_ACE_logistics_wirecutter_CutFence">
             <English>Cut Fence</English>

@@ -116,10 +116,10 @@ class ATragMX_RscListBox {
         color[]={1,1,1,0.6};
         colorActive[]={1,1,1,1};
         colorDisabled[]={1,1,1,0.3};
-        thumb=QUOTE(PATHTOF(ui\data\igui_scrollbar_thumb_ca.paa));
-        arrowFull=QUOTE(PATHTOF(ui\data\igui_arrow_top_active_ca.paa));
-        arrowEmpty=QUOTE(PATHTOF(ui\data\igui_arrow_top_ca.paa));
-        border=QUOTE(PATHTOF(ui\data\igui_border_scroll_ca.paa));
+        //thumb="\ca\ui\data\igui_scrollbar_thumb_ca.paa";
+        //arrowFull="\ca\ui\data\igui_arrow_top_active_ca.paa";
+        //arrowEmpty="\ca\ui\data\igui_arrow_top_ca.paa";
+        //border="\ca\ui\data\igui_border_scroll_ca.paa";
     };
 
     class ListScrollBar : ScrollBar {
