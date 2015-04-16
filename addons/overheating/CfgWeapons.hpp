@@ -15,6 +15,10 @@ class CfgWeapons {
 
     class Rifle;
     class Rifle_Base_F : Rifle {
+        ACE_MRBS = 3000;
+        ACE_Dispersion = 0;
+        ACE_SlowdownFactor = 1;
+
         // Dispersion, SlowdownFactor and JamChance arrays have 4 values for different temperatures, which are interpolated between.
         // These values correspond to temperatures Converted to real life values: 0: 0°C, 1: 333°C, 2: 666°C, 3: 1000°C.
 
