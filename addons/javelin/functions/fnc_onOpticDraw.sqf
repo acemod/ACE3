@@ -30,7 +30,10 @@ _soundTime = _args select 4;
 _randomLockInterval = _args select 5;
 _fireDisabledEH = _args select 6;
 
-if( ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "launch_Titan_base"] call EFUNC(common,inheritsFrom)) ) exitWith {
+if( ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "launch_Titan_base"] call EFUNC(common,inheritsFrom)) 
+    &&
+    { ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "missiles_titan"] call EFUNC(common,inheritsFrom)) }
+    ) exitWith {
     __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
@@ -55,8 +58,16 @@ if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && 
         
         
 // bail on not loaded
-if (ACE_player ammo (currentWeapon ACE_player) == 0) exitWith {  };  
-        
+if( (vehicle ACE_player) != ACE_player) then {
+    if( (vehicle player) magazineTurretAmmo ["1Rnd_GAT_missiles", [0]] < 1) exitWith { 
+        TRACE_1("No turret ammo, exit", "");
+    };
+} else {
+    if (ACE_player ammo (currentWeapon ACE_player) < 1 ) exitWith { 
+        TRACE_1("No ammo, exit", "");
+    };  
+};
+          
 _range = parseNumber (ctrlText __JavelinIGUIRangefinder);
 TRACE_1("Viewing range", _range);
 if (_range > 50 && {_range < 2500}) then {
@@ -144,6 +155,8 @@ if (isNull _newTarget) then {
     // Disallow fire
     _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
 } else {
+    _fov = [] call CBA_fnc_getFoV;
+    TRACE_1("FOV", _fov);
     if (_newTarget distance ACE_player < 2500
             && {(call CBA_fnc_getFoV) select 1 > 9} 
              && { (currentVisionMode ACE_player == 2)}
