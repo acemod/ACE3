@@ -41,6 +41,7 @@ PREP(getPlacedExplosives);
 PREP(getSpeedDialExplosive);
 
 PREP(onLanded);
+PREP(onPlaceTripFlare);
 
 PREP(openTimerSetUI);
 
