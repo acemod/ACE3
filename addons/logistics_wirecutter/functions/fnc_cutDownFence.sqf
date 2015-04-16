@@ -31,7 +31,7 @@ _progressCheck = {
     EXPLODE_2_PVT(_args,_fenceObject,_lastSoundEffectTime);
     if (_passedTime > (_lastSoundEffectTime + SOUND_CLIP_TIME_SPACEING)) then {
         // playSound "ACE_wirecutter_sound";
-        playSound3D [QUOTE(PATHTO_R(sound\wirecut.ogg)), objNull, false, (getPosASL ACE_player), 1, 1, 10];
+        playSound3D [QUOTE(PATHTO_R(sound\wirecut.ogg)), objNull, false, (getPosASL ACE_player), 3, 1, 10];
         _args set [1, _passedTime];
     };
 
