@@ -56,3 +56,13 @@ GVAR(windageOutput) = [0, 0, 0, 0];
 GVAR(leadOutput) = [0, 0, 0, 0];
 GVAR(tofOutput) = [0, 0, 0, 0];
 GVAR(velocityOutput) = [0, 0, 0, 0];
+
+GVAR(showMainPage) = true;
+GVAR(showAddNewGun) = false;
+GVAR(showGunList) = false;
+GVAR(showRangeCard) = false;
+GVAR(showRangeCardSetup) = false;
+GVAR(showTargetRangeAssist) = false;
+GVAR(showTargetSpeedAssist) = false;
+GVAR(showTargetSpeedAssistTimer) = false;
+
