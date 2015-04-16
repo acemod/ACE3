@@ -244,7 +244,7 @@ class CfgMagazines {
         initSpeed = 250;
     };
     
-    class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green: CA_Magazine {
+    class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green: 30Rnd_45ACP_Mag_SMG_01 {
         initSpeed = 250;
     };
     
