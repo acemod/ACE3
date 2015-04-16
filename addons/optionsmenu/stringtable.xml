@@ -23,7 +23,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_ResetAll">
             <English>Reset All</English>
-            <German>Alles Zurücksetzen</German>
+            <German>Alles zurücksetzen</German>
             <Spanish>Reiniciar todo</Spanish>
             <Russian>Полный сброс</Russian>
             <Czech>Vyresetovat vše</Czech>
@@ -101,7 +101,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_stringType">
             <English>String input.</English>
-            <German>String input.</German>
+            <German>Zeichenketteneingabe.</German>
             <Spanish>Introducir frase</Spanish>
             <Russian>Строчный ввод.</Russian>
         </Key>
@@ -113,7 +113,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_scalarType">
             <English>Number</English>
-            <German>Nummer</German>
+            <German>Zahl</German>
             <Spanish>Numero</Spanish>
             <Russian>Число</Russian>
             <Czech>Číslo</Czech>

@@ -897,13 +897,13 @@
             <English>Response</English>
             <Russian>Реакция</Russian>
             <Spanish>Respuesta</Spanish>
-            <German>Ansprache</German>
+            <German>Ansprechbarkeit</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_RESPONSE_CONTENT">
             <English>You check response of patient</English>
             <Russian>Вы проверяете реакцию раненого</Russian>
             <Spanish>Compruebas si el paciente reacciona</Spanish>
-            <German>Du überprüfst die Ansprache des Patienten</German>
+            <German>Du überprüfst die Ansprachbarkeit des Patienten</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_REPONSE_RESPONSIVE">
             <English>%1 is responsive</English>

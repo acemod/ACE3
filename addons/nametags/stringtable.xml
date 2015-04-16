@@ -28,7 +28,7 @@
             <English>Show player name only on cursor (requires player names)</English>
             <Polish>Pokaż nazwę gracza tylko pod kursorem</Polish>
             <Spanish>Mostrar nombres solo en el cursor (requiere Mostrar nombres de jugadores)</Spanish>
-            <German>Zeige Spielernamen nur an, wenn die Maus auf sie gerrichtet ist (benötigt Spielernamen)</German>
+            <German>Zeige Spielernamen nur an, wenn die Maus auf sie gerichtet ist (benötigt Spielernamen)</German>
             <French>Noms uniquement sous le curseur (si noms affichés)</French>
             <Czech>Zobrazit jméno hráče jenom na kurzor (vyžaduje jména hráčů)</Czech>
             <Italian>Mostra i nomi solo se puntati (richiede i nomi dei giocatori abilitati)</Italian>
@@ -68,7 +68,7 @@
         </Key>
         <Key ID="STR_ACE_NameTags_ShowNamesForAI">
             <English>Show name tags for AI units</English>
-            <German>KI namen anzeigen</German>
+            <German>KI Namen anzeigen</German>
             <Spanish>Mostrar etiquetas de nombre para unidades IA </Spanish>
             <Russian>Показывать именые метки ИИ</Russian>
             <Czech>Zobrazit jména AI</Czech>

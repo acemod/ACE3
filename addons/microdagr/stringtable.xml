@@ -88,7 +88,7 @@
         <Key ID="STR_ACE_microdagr_controlRange">
             <English>Range:</English>
             <Spanish>Distancia</Spanish>
-            <German>Reichweite:</German>
+            <German>Entfernung:</German>
             <Russian>Дистанция:</Russian>
         </Key>
         <Key ID="STR_ACE_microdagr_compasDirection">
