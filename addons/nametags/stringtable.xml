@@ -9,7 +9,7 @@
             <Czech>Zobrazit jména</Czech>
             <Polish>Pokaż imiona</Polish>
             <Hungarian>Nevek mutatása</Hungarian>
-            <Russian>Показать имена</Russian>
+            <Russian>Показывать имена</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames">
             <English>Show player names</English>
@@ -21,7 +21,7 @@
             <Czech>Zobrazit jména hráčů</Czech>
             <Portuguese>Mostrar nomes de jogadores</Portuguese>
             <Italian>Mostra i nomi dei giocatori</Italian>
-            <Russian>Показать имена игроков</Russian>
+            <Russian>Показывать имена игроков</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnCursor">
             <English>Show player name only on cursor (requires player names)</English>
