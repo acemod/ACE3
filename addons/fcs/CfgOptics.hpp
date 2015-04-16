@@ -35,13 +35,6 @@ class RscInGameUI {
             };
         };
     };
-    class RscOptics_LaserDesignator {
-        class CA_IGUI_elements_group: RscControlsGroup {
-            class controls {
-                MACRO_RANGEFINDER
-            };
-        };
-    };
     class RscWeaponRangeFinderMAAWS {
         class CA_IGUI_elements_group: RscControlsGroup {
             class controls {

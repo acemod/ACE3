@@ -13,5 +13,6 @@ class CfgWeapons {
          
         lockingTargetSound[] = {"",0,1};
 		lockedTargetSound[] = {"",0,1};
+
     };
 };
