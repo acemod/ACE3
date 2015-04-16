@@ -22,17 +22,17 @@
     _bullet = _args select 0;
     _airFriction = _args select 1;
     _time = _args select 2;
-
-    if (!alive _bullet) exitwith {
-        [_this select 1] call cba_fnc_removePerFrameHandler;
-    };
-
-    _deltaT = time - _time;
-    _args set[2, time];
-
+    
     _bulletVelocity = velocity _bullet;
     _bulletSpeed = vectorMagnitude _bulletVelocity;
-
+    
+    if (!alive _bullet || _bulletSpeed < 100) exitwith {
+        [_this select 1] call cba_fnc_removePerFrameHandler;
+    };
+    
+    _deltaT = time - _time;
+    _args set[2, time];
+    
     if (vectorMagnitude ACE_wind > 0) then {
         _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
         _trueSpeed = vectorMagnitude _trueVelocity;

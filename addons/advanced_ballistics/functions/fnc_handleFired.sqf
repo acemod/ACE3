@@ -158,15 +158,17 @@ if (GVAR(AdvancedAirDragEnabled)) then {
     [{
         private ["_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];
         EXPLODE_4_PVT(_this select 0,_bullet,_caliber,_bulletTraceVisible,_index);
-
-        if (!alive _bullet) exitWith {
-            [_this select 1] call cba_fnc_removePerFrameHandler;
-        };
-
+        
         _bulletVelocity = velocity _bullet;
         _bulletPosition = getPosASL _bullet;
-
-        if (_bulletTraceVisible && vectorMagnitude _bulletVelocity > 600) then {
+        
+        _bulletSpeed = vectorMagnitude _bulletVelocity;
+        
+        if (!alive _bullet || _bulletSpeed < 100) exitWith {
+            [_this select 1] call cba_fnc_removePerFrameHandler;
+        };
+        
+        if (_bulletTraceVisible && _bulletSpeed > 600) then {
             drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.4*_caliber,0.2*_caliber],[[0,0,0,0.6],[0,0,0,0.4]],[1,0],0,0,"","",""];
         };
 
