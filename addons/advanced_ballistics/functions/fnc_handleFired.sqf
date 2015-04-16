@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_abort", "_index", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_bulletMass", "_bulletLength", "_bulletTranslation", "_airFriction", "_dragModel", "_velocityBoundaryData", "_muzzleVelocity", "_muzzleVelocityCoef", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_bulletWeight", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef", "_ACE_Elevation", "_ACE_Windage", "_ID"];
+private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_abort", "_index", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_bulletMass", "_bulletLength", "_airFriction", "_dragModel", "_muzzleVelocity", "_muzzleVelocityCoef", "_muzzleAccessory", "_initSpeedCoef", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_bulletWeight", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef"];
 _unit     = _this select 0;
 _weapon   = _this select 1;
 _mode     = _this select 3;
@@ -191,7 +191,7 @@ if (GVAR(AdvancedAirDragEnabled)) then {
 
     if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
         [{
-            private ["_bulletDatabaseEntry", "_bullet", "_caliber", "_muzzleVelocity", "_frames", "_speed", "_airFriction", "_airFrictionRef", "_dragModel", "_atmosphereModel", "_ballisticCoefficient", "_ballisticCoefficients", "_velocityBoundaries", "_airDensity", "_stabilityFactor", "_transonicStabilityCoef", "_twistDirection", "_unit", "_bulletTraceVisible", "_index", "_temperature", "_humidity", "_deltaT", "_TOF", "_bulletPosition", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueSpeed", "_bulletSpeedAvg", "_wind", "_drag", "_dragRef", "_vect", "_accel", "_accelRef", "_centripetalAccel", "_pressure", "_pressureDeviation", "_windSourceObstacle", "_windSourceTerrain", "_height", "_roughnessLength"];
+            private ["_bulletDatabaseEntry", "_bullet", "_caliber", "_muzzleVelocity", "_frames", "_speed", "_airFriction", "_airFrictionRef", "_dragModel", "_atmosphereModel", "_ballisticCoefficient", "_ballisticCoefficients", "_velocityBoundaries", "_airDensity", "_stabilityFactor", "_transonicStabilityCoef", "_twistDirection", "_unit", "_bulletTraceVisible", "_index", "_temperature", "_humidity", "_deltaT", "_TOF", "_bulletPosition", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueSpeed", "_bulletSpeedAvg", "_wind", "_drag", "_dragRef", "_vect", "_accel", "_accelRef", "_centripetalAccel", "_pressure", "_pressureDeviation", "_windSourceObstacle", "_windSourceTerrain", "_height", "_roughnessLength", "_bulletDir", "_horizontalDeflection", "_horizontalDeflectionPartial", "_spinDrift", "_spinDriftPartial"];
 
             {
                 _bulletDatabaseEntry = (GVAR(bulletDatabase) select _x);
