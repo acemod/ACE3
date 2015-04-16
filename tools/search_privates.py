@@ -78,9 +78,9 @@ def check_privates(filepath):
                     missing.append(s)
         
         if len(missing) > 0:
-            print filepath
+            print (filepath)
             for bad_priv in missing:
-                print '\t' + bad_priv
+                print ('\t' + bad_priv)
             
 def main():
 
