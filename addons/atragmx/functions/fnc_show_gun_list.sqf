@@ -22,5 +22,5 @@ GVAR(showGunList) = _this;
 if (_this) then {
     ctrlSetFocus (_dsp displayCtrl 6002);
     
-    lbSetCurSel [6000, (GVAR(currentGun) select GVAR(currentTarget))];
+    lbSetCurSel [6000, GVAR(currentGun)];
 };

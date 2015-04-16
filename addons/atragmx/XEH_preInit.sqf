@@ -11,6 +11,7 @@ PREP(calculate_target_solution);
 PREP(calculate_target_speed_assist);
 PREP(can_show);
 PREP(change_gun);
+PREP(change_target_slot);
 PREP(create_dialog);
 PREP(cycle_range_card_columns);
 PREP(cycle_scope_unit);
