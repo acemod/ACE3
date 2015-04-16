@@ -10,6 +10,7 @@
             <Polish>Rozmieszczenie za 5 sekund ...</Polish>
             <Czech>Respawn za 5 sekund...</Czech>
             <Hungarian>Kihelyezés 5 másodperc múlva ...</Hungarian>
+            <Italian>Dispiegamento in 5 secondi ...</Italian>
         </Key>
         <Key ID="STR_ACE_Respawn_Deployed">
             <English>Rallypoint deployed</English>
@@ -20,6 +21,7 @@
             <Polish>Punkt zbiórki rozmieszczony</Polish>
             <Czech>Rallypoint umístěn</Czech>
             <Hungarian>Gyülekezőpont elhelyezve</Hungarian>
+            <Italian>Rallypoint dispiegato</Italian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToBase">
             <English>Teleported to Base</English>
@@ -30,6 +32,7 @@
             <Polish>Przeteleportowano do bazy</Polish>
             <Czech>Odteleportován na základnu</Czech>
             <Hungarian>Bázisra teleportálva</Hungarian>
+            <Italian>Teleportato alla base</Italian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
             <English>Teleported to Rallypoint</English>
@@ -40,6 +43,7 @@
             <Polish>Przeteleportowano do punktu zbiórki</Polish>
             <Czech>Odteleportován na rallypoint</Czech>
             <Hungarian>Gyülekezőpontra teleportálva</Hungarian>
+            <Italian>Teleportato al rallypoint</Italian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWestBase">
             <English>Rallypoint West (Base)</English>
