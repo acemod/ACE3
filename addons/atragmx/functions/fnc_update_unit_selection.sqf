@@ -15,11 +15,11 @@
  */
 #include "script_component.hpp"
 
-(__DSP displayCtrl 600) ctrlEnable true;
-(__DSP displayCtrl 601) ctrlEnable true;
-(__DSP displayCtrl 602) ctrlEnable true;
+((uiNamespace getVariable "ATragMX_Display") displayCtrl 600) ctrlEnable true;
+((uiNamespace getVariable "ATragMX_Display") displayCtrl 601) ctrlEnable true;
+((uiNamespace getVariable "ATragMX_Display") displayCtrl 602) ctrlEnable true;
 
-(__DSP displayCtrl 600 + GVAR(currentUnit)) ctrlEnable false;
+((uiNamespace getVariable "ATragMX_Display") displayCtrl 600 + GVAR(currentUnit)) ctrlEnable false;
 
 [] call FUNC(update_gun);
 [] call FUNC(update_atmosphere);

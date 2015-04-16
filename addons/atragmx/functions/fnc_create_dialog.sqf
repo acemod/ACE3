@@ -29,7 +29,7 @@ GVAR(showAddNewGun) call FUNC(show_add_new_gun);
 GVAR(showGunList) call FUNC(show_gun_list);
 GVAR(showRangeCard) call FUNC(show_range_card);
 if (GVAR(showRangeCard)) then {
-    ctrlSetFocus (__DSP displayCtrl 5001);
+    ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 5001);
     [] call FUNC(update_range_card);
 };
 GVAR(showRangeCardSetup) call FUNC(show_range_card_setup);
