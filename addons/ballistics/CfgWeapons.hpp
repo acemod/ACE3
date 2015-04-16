@@ -422,7 +422,7 @@ class CfgWeapons {
         ACE_barrelTwist=7;
         ACE_barrelLength=18.1;
     };
-    class arifle_TRG21_GL_F: Tavor_base_F {
+    class arifle_TRG21_GL_F: arifle_TRG21_F {
         magazines[] = {
             "30Rnd_556x45_Stanag",
             "30Rnd_556x45_Stanag_Tracer_Red",
