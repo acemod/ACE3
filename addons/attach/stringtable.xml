@@ -11,7 +11,7 @@
             <Portuguese>Acoplar item &gt;&gt;</Portuguese>
             <Italian>Attacca l'oggetto &gt;&gt;</Italian>
             <Hungarian>Tárgy hozzácsatolása &gt;&gt;</Hungarian>
-            <Russian>Присоединить предмет</Russian>
+            <Russian>Присоединить</Russian>
         </Key>
         <Key ID="STR_ACE_Attach_Attach">
             <English>Attach</English>
@@ -35,7 +35,7 @@
             <Portuguese>Separar item</Portuguese>
             <Italian>Stacca l'oggetto</Italian>
             <Hungarian>Tárgy lecsatolása</Hungarian>
-            <Russian>Отсоединить предмет</Russian>
+            <Russian>Отсоединить</Russian>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Attached">
             <English>IR Strobe Attached</English>
@@ -189,7 +189,7 @@
             <Portuguese>%1&lt;br/&gt;Acoplada</Portuguese>
             <Italian>%1&lt;br/&gt;attaccata</Italian>
             <Hungarian>%1&lt;br/&gt;hozzácsatolva</Hungarian>
-            <Russian>%1&lt;br/&gt;присоединен(-а)</Russian>
+            <Russian>%1&lt;br/&gt;присоединен</Russian>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Detached">
             <English>%1&lt;br/&gt;Detached</English>
@@ -201,7 +201,7 @@
             <Portuguese>%1&lt;br/&gt;Separada</Portuguese>
             <Italian>%1&lt;br/&gt;staccata</Italian>
             <Hungarian>%1&lt;br/&gt;lecsatolva</Hungarian>
-            <Russian>%1&lt;br/&gt;отсоединен(-а)</Russian>
+            <Russian>%1&lt;br/&gt;отсоединен</Russian>
         </Key>
     </Package>
 </Project>
