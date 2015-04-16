@@ -62,7 +62,7 @@
         <Key ID="STR_ACE_Medical_Transfuse_Saline">
             <English>Transfuse Saline</English>
             <German>Salzlösungtransfusion</German>
-            <Spanish>Transfundir salino</Spanish>
+            <Spanish>Transfundir salina</Spanish>
             <Czech>Transfúze fyziologický roztoku</Czech>
             <Polish>Przetocz solankę</Polish>
             <French>Transfuser de la Saline</French>
@@ -95,7 +95,7 @@
         <Key ID="STR_ACE_Medical_Bandage_HitHead">
             <English>Bandage Head</English>
             <German>Kopf verbinden</German>
-            <Spanish>Vendar la cabeza</Spanish>
+            <Spanish>Vendar cabeza</Spanish>
             <Polish>Bandażuj głowę</Polish>
             <Czech>Obvázat hlavu</Czech>
             <Russian>Перевязать голову</Russian>
@@ -107,7 +107,7 @@
         <Key ID="STR_ACE_Medical_Bandage_HitBody">
             <English>Bandage Torso</English>
             <German>Torso verbinden</German>
-            <Spanish>Vendar el torso</Spanish>
+            <Spanish>Vendar torso</Spanish>
             <Polish>Bandażuj tors</Polish>
             <Czech>Obvázat hruď</Czech>
             <Russian>Перевязать торс</Russian>
@@ -119,7 +119,7 @@
         <Key ID="STR_ACE_Medical_Bandage_HitLeftArm">
             <English>Bandage Left Arm</English>
             <German>Arm links verbinden</German>
-            <Spanish>Vendar el brazo izquierdo</Spanish>
+            <Spanish>Vendar brazo izquierdo</Spanish>
             <Polish>Bandażuj lewe ramię</Polish>
             <Czech>Obvázat levou ruku</Czech>
             <Russian>Перевязать левую руку</Russian>
@@ -131,7 +131,7 @@
         <Key ID="STR_ACE_Medical_Bandage_HitRightArm">
             <English>Bandage Right Arm</English>
             <German>Arm rechts verbinden</German>
-            <Spanish>Vendar el brazo derecho</Spanish>
+            <Spanish>Vendar brazo derecho</Spanish>
             <Polish>Bandażuj prawe ramię</Polish>
             <Czech>Obvázat pravou ruku</Czech>
             <Russian>Перевязать правую руку</Russian>
@@ -143,7 +143,7 @@
         <Key ID="STR_ACE_Medical_Bandage_HitLeftLeg">
             <English>Bandage Left Leg</English>
             <German>Bein links verbinden</German>
-            <Spanish>Vendar la pierna izquierda</Spanish>
+            <Spanish>Vendar pierna izquierda</Spanish>
             <Polish>Bandażuj lewą nogę</Polish>
             <Czech>Obvázat levou nohu</Czech>
             <Russian>Перевязать левую ногу</Russian>
@@ -155,7 +155,7 @@
         <Key ID="STR_ACE_Medical_Bandage_HitRightLeg">
             <English>Bandage Right Leg</English>
             <German>Bein rechts verbinden</German>
-            <Spanish>Vendar la pierna derecha</Spanish>
+            <Spanish>Vendar pierna derecha</Spanish>
             <Polish>Bandażuj prawą nogę</Polish>
             <Czech>Obvázat pravou nohu</Czech>
             <Russian>Перевязать правую ногу</Russian>
@@ -202,7 +202,7 @@
         <Key ID="STR_ACE_Medical_Transfusing_Blood">
             <English>Transfusing Blood ...</English>
             <German>Bluttransfusion ...</German>
-            <Spanish>Transfusión de sangre ...</Spanish>
+            <Spanish>Transfundiendo sangre ...</Spanish>
             <Polish>Przetaczanie krwi ...</Polish>
             <Czech>Probíhá transfúze krve ...</Czech>
             <Russian>Переливание крови ...</Russian>
@@ -214,7 +214,7 @@
         <Key ID="STR_ACE_Medical_Transfusing_Saline">
             <English>Transfusing Saline ...</English>
             <German>Sallösungtransfusion ...</German>
-            <Spanish>Transfusión de salino ...</Spanish>
+            <Spanish>Transfundiendo salina ...</Spanish>
             <Czech>Probíha transfúze fyziologický roztoku ...</Czech>
             <Polish>Przetaczanie solanki ...</Polish>
             <French>Transfusion de saline ...</French>
@@ -225,7 +225,7 @@
         <Key ID="STR_ACE_Medical_Transfusing_Plasma">
             <English>Transfusing Plasma ...</English>
             <German>Plasmatransfusion ...</German>
-            <Spanish>Transfusión de plasma ...</Spanish>
+            <Spanish>Transfundiendo plasma ...</Spanish>
             <Czech>Probíha transfúze plazmy ...</Czech>
             <Polish>Przetaczanie osocza ...</Polish>
             <French>Transfusion de Plasma ...</French>
@@ -271,7 +271,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_FieldDressing">
             <English>Field Dressing</English>
             <German>Verbandpäckchen</German>
-            <Spanish>Compresa de campaña</Spanish>
+            <Spanish>Vendaje de campaña</Spanish>
             <Russian>Бинтовая повязка</Russian>
             <Czech>Obinadlo</Czech>
             <Polish>Bandaż jałowy</Polish>
@@ -302,7 +302,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_QuikClot">
             <English>QuikClot</English>
             <German>QuikClot</German>
-            <Spanish>QuikClot</Spanish>
+            <Spanish>QuikClot(coagulación rápida)</Spanish>
             <Russian>QuickClot</Russian>
             <Polish>Opatrunek QuikClot</Polish>
             <Czech>QuikClot</Czech>
@@ -335,7 +335,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_TriageCard">
             <English>Triage Card</English>
             <German>Verletztenanhängekarte</German>
-            <Spanish>Tarjeta de triaje</Spanish>
+            <Spanish>Tarjeta de triage</Spanish>
             <Russian>Медкарта</Russian>
             <Polish>Karta segregacyjna</Polish>
             <Czech>Karta Triage</Czech>
@@ -368,7 +368,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
             <German>Bluttransfusion IV (1000ml)</German>
-            <Spanish>Dar Sangre IV (1000ml)</Spanish>
+            <Spanish>Administrar Sangre IV (1000ml)</Spanish>
             <Russian>Дать кровь для в/в вливания (1000 мл)</Russian>
             <Polish>Podaj krew IV (1000ml)</Polish>
             <French>Administrer du Sang en IV (1000ml)</French>
@@ -379,7 +379,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_500">
             <English>Give Blood IV (500ml)</English>
             <German>Bluttransfusion IV (500ml)</German>
-            <Spanish>Dar Sangre IV (500ml)</Spanish>
+            <Spanish>Administrar Sangre IV (500ml)</Spanish>
             <Russian>Дать кровь для в/в вливания (500 мл)</Russian>
             <Polish>Podaj krew IV (500ml)</Polish>
             <French>Administrer du Sang en IV (500ml)</French>
@@ -390,7 +390,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_250">
             <English>Give Blood IV (250ml)</English>
             <German>Bluttransfusion IV (250ml)</German>
-            <Spanish>Dar Sangre IV (250ml)</Spanish>
+            <Spanish>Administrar Sangre IV (250ml)</Spanish>
             <Russian>Дать кровь для в/в вливания (250 мл)</Russian>
             <Polish>Podaj krew IV (250ml)</Polish>
             <French>Administrer du Sang en IV (250ml)</French>
@@ -401,7 +401,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_1000">
             <English>Give Plasma IV (1000ml)</English>
             <German>Plasmatransfusion IV (1000ml)</German>
-            <Spanish>Dar Plasma IV (1000ml)</Spanish>
+            <Spanish>Administrar Plasma IV (1000ml)</Spanish>
             <Russian>Дать плазму для в/в вливания (1000 мл)</Russian>
             <Polish>Podaj osocze IV (1000ml)</Polish>
             <French>Administrer du Plasma en IV (1000ml)</French>
@@ -412,7 +412,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_500">
             <English>Give Plasma IV (500ml)</English>
             <German>Plasmatransfusion IV (500ml)</German>
-            <Spanish>Dar Plasma IV (500ml)</Spanish>
+            <Spanish>Administrar Plasma IV (500ml)</Spanish>
             <Russian>Дать плазму для в/в вливания (500 мл)</Russian>
             <Polish>Podaj osocze IV (500ml)</Polish>
             <French>Administrer du Plasma en IV (500ml)</French>
@@ -423,7 +423,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_250">
             <English>Give Plasma IV (250ml)</English>
             <German>Plasmatransfusion IV (250ml)</German>
-            <Spanish>Dar Plasma IV (250ml)</Spanish>
+            <Spanish>Administrar Plasma IV (250ml)</Spanish>
             <Russian>Дать плазму для в/в вливания (250 мл)</Russian>
             <Polish>Podaj osocze IV (250ml)</Polish>
             <French>Administrer du Plasma en IV (250ml)</French>
@@ -434,7 +434,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_1000">
             <English>Give Saline IV (1000ml)</English>
             <German>Kochsaltzlösung IV (1000ml)</German>
-            <Spanish>Dar Salino IV (1000ml)</Spanish>
+            <Spanish>Administrar Salina IV (1000ml)</Spanish>
             <Russian>Дать физраствор для в/в вливания (1000 мл)</Russian>
             <Polish>Podaj solankę IV (1000ml)</Polish>
             <French>Administrer de la Solution Saline en IV (1000ml)</French>
@@ -445,7 +445,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_500">
             <English>Give Saline IV (500ml)</English>
             <German>Kochsaltzlösung IV (500ml)</German>
-            <Spanish>Dar Salino IV (500ml)</Spanish>
+            <Spanish>Administrar Salina IV (500ml)</Spanish>
             <Russian>Дать физраствор для в/в вливания (500 мл)</Russian>
             <Polish>Podaj solankę IV (500ml)</Polish>
             <French>Administrer de la Solution Saline en IV (500ml)</French>
@@ -456,7 +456,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_250">
             <English>Give Saline IV (250ml)</English>
             <German>Kochsaltzlösung IV (250ml)</German>
-            <Spanish>Dar Salino IV (250ml)</Spanish>
+            <Spanish>Administrar Salina IV (250ml)</Spanish>
             <Russian>Дать физраствор для в/в вливания (250 мл)</Russian>
             <Polish>Podaj solankę IV (250ml)</Polish>
             <French>Administrer de la Solution Saline en IV (250ml)</French>
@@ -956,7 +956,7 @@
         <Key ID="STR_ACE_MEDICAL_SALINE_IV_500">
             <English>Saline IV (500ml)</English>
             <Russian>Физраствор для в/в вливания (500 мл)</Russian>
-            <Spanish>Salino IV (500ml)</Spanish>
+            <Spanish>Solución Salina IV (500ml)</Spanish>
             <French>Solution Saline 0.9% IV (500ml)</French>
             <Polish>Solanka 0,9% IV (500ml)</Polish>
             <German>Kochsalzlösung (500ml)</German>
@@ -966,7 +966,7 @@
         <Key ID="STR_ACE_MEDICAL_SALINE_IV_250">
             <English>Saline IV (250ml)</English>
             <Russian>Физраствор для в/в вливания (250 мл)</Russian>
-            <Spanish>Salino IV (250ml)</Spanish>
+            <Spanish>Solución Salina IV (250ml)</Spanish>
             <French>Solution Saline 0.9% IV (250ml)</French>
             <Polish>Solanka 0,9% IV (250ml)</Polish>
             <German>Kochsalzlösung (250ml)</German>
@@ -1115,7 +1115,7 @@
             <English>You checked %1</English>
             <French>Vous diagnostiquez %1</French>
             <Russian>Вы осмотрели раненого %1</Russian>
-            <Spanish>Examinando a %1</Spanish>
+            <Spanish>Has comprobado la  %1</Spanish>
             <Polish>Zbadałeś %1</Polish>
             <German>Kontrolliert %1</German>
             <Hungarian>A %1 ellenőrizve</Hungarian>
@@ -1203,7 +1203,7 @@
             <English>You checked %1</English>
             <Russian>Вы осмотрели раненого %1</Russian>
             <French>Vous examinez %1</French>
-            <Spanish>Examinando a %1</Spanish>
+            <Spanish>Has examinado el %1</Spanish>
             <Polish>Zbadałeś %1</Polish>
             <German>Kontrolliertt %1</German>
             <Hungarian>A %1 ellenőrizve</Hungarian>
@@ -1273,7 +1273,7 @@
             <English>You check response of patient</English>
             <French>Vous vérifiez la réponse du patient</French>
             <Russian>Вы проверяете реакцию раненого</Russian>
-            <Spanish>Compruebas si el paciente reacciona</Spanish>
+            <Spanish>Compruebas la respuesta del paciente</Spanish>
             <Polish>Sprawdzasz przytomność pacjenta</Polish>
             <German>Du prüfst ob der Patient ansprechbar ist</German>
             <Hungarian>Ellenőrzöd a páciens reagálóképességét</Hungarian>
@@ -1303,7 +1303,7 @@
             <English>You checked %1</English>
             <Russian>Вы осмотрели раненого %1</Russian>
             <French>Vous avez examiné %1</French>
-            <Spanish>Examinas a %1</Spanish>
+            <Spanish>Has examinado a %1</Spanish>
             <Polish>Zbadałeś %1</Polish>
             <German>Du versucht %1 anzusprechen</German>
             <Hungarian>Megnézted %1-t</Hungarian>
@@ -1322,7 +1322,7 @@
             <English>You bandage %1 (%2)</English>
             <French>Vous bandez %1 (%2)</French>
             <Russian>Вы перевязали раненого %1 (%2)</Russian>
-            <Spanish>Aplicas vendaje a %1 en %2</Spanish>
+            <Spanish>Aplicas vendaje a %1 (%2)</Spanish>
             <Polish>Bandażujesz %1 (%2)</Polish>
             <Hungarian>Bekötözöd %1-t (%2)</Hungarian>
             <Italian>Stai bendando %1 (%2)</Italian>
@@ -1340,7 +1340,7 @@
             <English>You start stitching injures from %1 (%2)</English>
             <Russian>Вы зашиваете ранения от %1 (%2)</Russian>
             <French>Vous suturez %1 (%2)</French>
-            <Spanish>Estás suturando heridas de %1 en %2</Spanish>
+            <Spanish>Estás suturando heridas de %1       (%2)</Spanish>
             <Polish>Zszywasz rany %1 (%2)</Polish>
             <Hungarian>Elkezded összevarni %1 sérüléseit (%2)</Hungarian>
             <Italian>Stai suturando le ferite di %1 (%2)</Italian>
@@ -1366,7 +1366,7 @@
         <Key ID="STR_ACE_MEDICAL_AIRWAY">
             <English>Airway</English>
             <Russian>Дыхательные пути</Russian>
-            <Spanish>Vías aéreas</Spanish>
+            <Spanish>Vías respiratorias</Spanish>
             <Polish>Drogi oddechowe</Polish>
             <German>Atemwege</German>
             <French>Voies respiratoires</French>
@@ -1397,7 +1397,7 @@
         <Key ID="STR_ACE_MEDICAL_CARRY">
             <English>Carry</English>
             <German>Tragen</German>
-            <Spanish>Cargar</Spanish>
+            <Spanish>Transportar</Spanish>
             <Polish>Nieś</Polish>
             <Czech>Nést</Czech>
             <Russian>Нести</Russian>
@@ -1453,7 +1453,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_LoadPatient">
             <English>Load patient</English>
-            <Spanish>Cargar el paciente en</Spanish>
+            <Spanish>Cargar paciente</Spanish>
             <Russian>Погрузить пациента</Russian>
             <Polish>Załaduj pacjenta</Polish>
             <French>Embarquer le Patient</French>
@@ -1507,7 +1507,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIVITY_appliedTourniquet">
             <English>%1 applied a tourniquet</English>
-            <Spanish>%1 aplicado torniquete</Spanish>
+            <Spanish>%1 ha aplicado un torniquete</Spanish>
             <Russian>%1 наложил жгут</Russian>
             <Polish>%1 założył stazę</Polish>
             <French>%1 a appliqué un garrot</French>
@@ -1520,6 +1520,7 @@
             <Polish>Ciężko ranny</Polish>
             <Russian>Сильно ранен</Russian>
             <Italian>Gravemente ferito</Italian>
+            <Spanish>Gravemente herido</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_LightlyWounded">
             <English>Lightly wounded</English>
@@ -1527,6 +1528,7 @@
             <Polish>Lekko ranny</Polish>
             <Russian>Легко ранен</Russian>
             <Italian>Leggermente ferito</Italian>
+            <Spanish>Ligeramente herido</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_VeryLightlyWounded">
             <English>Very lightly wounded</English>
@@ -1534,6 +1536,7 @@
             <Polish>B. lekko ranny</Polish>
             <Russian>Очень легко ранен</Russian>
             <Italian>Ferito lievemente</Italian>
+            <Spanish>Herido leve</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Head">
             <English>Head</English>
@@ -1541,6 +1544,7 @@
             <Polish>Głowa</Polish>
             <Russian>Голова</Russian>
             <Italian>Testa</Italian>
+            <Spanish>Cabeza</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Torso">
             <English>Torso</English>
@@ -1548,6 +1552,7 @@
             <Polish>Tors</Polish>
             <Russian>Торс</Russian>
             <Italian>Torso</Italian>
+            <Spanish>Torso</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_LeftArm">
             <English>Left Arm</English>
@@ -1555,6 +1560,7 @@
             <Polish>Lewe ramię</Polish>
             <Russian>Левая рука</Russian>
             <Italian>Braccio sinistro</Italian>
+            <Spanish>Brazo izq.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_RightArm">
             <English>Right Arm</English>
@@ -1562,6 +1568,7 @@
             <Polish>Prawe ramię</Polish>
             <Russian>Правая рука</Russian>
             <Italian>Braccio destro</Italian>
+            <Spanish>Brazo dcha.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_LeftLeg">
             <English>Left Leg</English>
@@ -1569,6 +1576,7 @@
             <Polish>Lewa noga</Polish>
             <Russian>Левая нога</Russian>
             <Italian>Gamba sinistra</Italian>
+            <Spanish>Pierna izq.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_RightLeg">
             <English>Right Leg</English>
@@ -1576,6 +1584,7 @@
             <Polish>Prawa noga</Polish>
             <Russian>Правая нога</Russian>
             <Italian>Gamba destra</Italian>
+            <Spanish>Pierna dcha.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
@@ -1583,6 +1592,7 @@
             <Polish>Rodzaj efektu bólu</Polish>
             <Russian>Вид боли</Russian>
             <Italian>Pain Effect Type</Italian>
+            <Spanish>Efecto de dolor-Tipo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Flash">
             <English>Colour Flashing</English>
@@ -1590,6 +1600,7 @@
             <Polish>Pulsujące kolory</Polish>
             <Russian>Разноцветные вспышки</Russian>
             <Italian>Colore lampeggiante</Italian>
+            <Spanish>Parpadeos de colores</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Chroma">
             <English>Chromatic Aberration</English>
@@ -1597,6 +1608,7 @@
             <Polish>Aberracja chromatyczna</Polish>
             <Russian>Хроматическая аберрация</Russian>
             <Italian>Aberrazione cromatica</Italian>
+            <Spanish>Aberración cromática</Spanish>
         </Key>
     </Package>
 </Project>

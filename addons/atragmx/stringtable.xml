@@ -18,6 +18,7 @@
             <English>Open ATragMX</English>
             <Polish>Otwórz ATragMX</Polish>
             <Russian>Открыть ATragMX</Russian>
+            <Spanish>Abrir ATragMX</Spanish>
         </Key>
         <Key ID="STR_ACE_ATragMX_Description">
             <English>Rugged PDA with ATragMX</English>
@@ -28,6 +29,7 @@
             <English>Open ATragMX</English>
             <Polish>Otwórz ATragMX</Polish>
             <Russian>Открыть ATragMX</Russian>
+            <Spanish>Abrir ATragMX</Spanish>
         </Key>
     </Package>
 </Project>

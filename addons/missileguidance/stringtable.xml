@@ -3,7 +3,7 @@
     <Package name="missileguidance">
         <Key ID="STR_ACE_MissileGuidance">
             <English>Advanced Missile Guidance</English>
-            <Spanish>Avanzada Misiles Orientación</Spanish>
+            <Spanish>Cohete Guiado Avanzado</Spanish>
             <French>Avancée Missile orientation</French>
             <Polish>Zaawansowane naprowadzanie rakiet</Polish>
             <German>Erweitertes Raketenlenksystem</German>
@@ -15,7 +15,7 @@
         </Key>
         <Key ID="STR_ACE_Hydra70_DAGR">
             <English>Hydra-70 DAGR Missile</English>
-            <Spanish></Spanish>
+            <Spanish>Cohete          Hydra-70 DAGR</Spanish>
             <French></French>
             <Polish>Hydra-70 DAGR</Polish>
             <German>Hydra-70 DAGR Rackete</German>
@@ -27,7 +27,7 @@
         </Key>
         <Key ID="STR_ACE_Hydra70_DAGR_Short">
             <English>DAGR</English>
-            <Spanish></Spanish>
+            <Spanish>DAGR</Spanish>
             <French></French>
             <Polish>DAGR</Polish>
             <German>DAGR</German>
@@ -39,7 +39,7 @@
         </Key>
         <Key ID="STR_ACE_Hydra70_DAGR_Desc">
             <English>Hydra-70 DAGR Laser Guided Missile</English>
-            <Spanish></Spanish>
+            <Spanish>Cohete laser guiado Hydra-70 DAGR</Spanish>
             <French></French>
             <Polish>Laserowo naprowadzana rakieta Hydra-70 DAGR</Polish>
             <German>Hydra-70 DAGR lasergelenkte Rakete</German>
@@ -51,7 +51,7 @@
         </Key>
         <Key ID="STR_ACE_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
-            <Spanish></Spanish>
+            <Spanish>Misil Hellfire II AGM-114K</Spanish>
             <French></French>
             <Polish>Hellfire II AGM-114K</Polish>
             <German>Hellfire II AGM-114K</German>
@@ -63,7 +63,7 @@
         </Key>
         <Key ID="STR_ACE_Hellfire_AGM114K_Short">
             <English>AGM-114K</English>
-            <Spanish></Spanish>
+            <Spanish>AGM-114K</Spanish>
             <French></French>
             <Polish>AGM-114K</Polish>
             <German>AGM-114K</German>
@@ -75,7 +75,7 @@
         </Key>
         <Key ID="STR_ACE_Hellfire_AGM114K_desc">
             <English>Hellfire II AGM-114K Laser Guided Missile</English>
-            <Spanish></Spanish>
+            <Spanish>Misil laser guiado Hellfire II         AGM-114K</Spanish>
             <French></French>
             <Polish>Laserowo naprowadzana rakieta Hellfire II AGM-114K</Polish>
             <German>Hellfire II AGM-114K Lasergelenkte Rakete</German>

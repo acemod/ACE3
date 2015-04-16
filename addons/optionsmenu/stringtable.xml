@@ -94,7 +94,7 @@
             <Czech>Nastavení:</Czech>
             <German>Einstellung:</German>
             <Russian>Установки:</Russian>
-            <Spanish>Ajuste:</Spanish>
+            <Spanish>Ajustes:</Spanish>
             <Polish>Ustawienie:</Polish>
             <French>Paramètres</French>
             <Hungarian>Opció:</Hungarian>
@@ -112,7 +112,7 @@
         <Key ID="STR_ACE_OptionsMenu_OpenExport">
             <English>Open Export Menu</English>
             <German>Öffne Exportmenü</German>
-            <Spanish>Abrir menu d'exportación</Spanish>
+            <Spanish>Abrir menu de exportación</Spanish>
             <Russian>Открыть меню экспорта</Russian>
             <Czech>Otevřít exportovací menu</Czech>
             <Polish>Otwórz menu eksportowania</Polish>

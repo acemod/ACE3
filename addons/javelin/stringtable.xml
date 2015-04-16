@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="WEP_JAVELIN">
         <Key ID="STR_ACE_JAVELIN_LockTarget">
@@ -10,6 +10,7 @@
             <French>Verrouiller cible (maintenir)</French>
             <Hungarian>Célpontra állás (Lenyomva tartott)</Hungarian>
             <Italian>Aggangia il bersagio</Italian>
+            <Spanish>Fijar objetivo (mantener)</Spanish>
         </Key>
         <Key ID="STR_ACE_JAVELIN_CycleFireMode">
             <English>Cycle Fire Mode</English>
@@ -20,6 +21,7 @@
             <French>Cycle mode de tir</French>
             <Hungarian>Tüzelési mód váltása</Hungarian>
             <Italian>Alterna le modalità di fuoco</Italian>
+            <Spanish>Altenar modo de tiro</Spanish>
         </Key>
     </Package>
 </Project>

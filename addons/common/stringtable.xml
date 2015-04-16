@@ -269,7 +269,7 @@
         <Key ID="STR_ACE_Common_EnableNumberHotkeys">
             <English>Disable Command Menu</English>
             <German>Befehlsmenü ausschalten</German>
-            <Spanish>Desactivar menú de mando</Spanish>
+            <Spanish>Desactivar menú de comando</Spanish>
             <Polish>Wyłącz menu dowodzenia</Polish>
             <Czech>Vypnout velící menu</Czech>
             <French>Désactiver Menu Commande</French>
@@ -346,7 +346,7 @@
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
             <German>Rückmeldungssymbole</German>
-            <Spanish>Iconos de respuesta</Spanish>
+            <Spanish>Iconos de información</Spanish>
             <Italian>Icone informative</Italian>
             <Russian>Иконки состояний</Russian>
             <Polish>Ikony pomocnicze</Polish>
@@ -357,7 +357,7 @@
         <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
             <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
             <German>Wähle die Position der Rückmeldungssymbole, oder deaktiviere sie. Diese Symbole stellen eine zusätzliche Rückmeldung über die Lage und Handlungen deines Soldaten dar.</German>
-            <Spanish>Seleccionar la posición de o desactivar los íconos de respuesta en la pantalla. Estos iconos se mostrarán para proporcionar información adicional sobre el estado de su personaje y las acciones a realizar.</Spanish>
+            <Spanish>Seleccionar la posición o desactivar los íconos de información en la pantalla. Estos iconos se mostrarán para proporcionar información adicional sobre el estado de su personaje y las acciones a realizar.</Spanish>
             <Italian>Seleziona la posizione o disabilita le icone informative sul tuo schermo. Queste saranno mostrate per fornire informazioni aggiuntive sullo stato o sulle azioni del giocatore.</Italian>
             <Russian>Выберите положение или или отключите отображение иконок состояний на Вашем экране. Эти иконки предоставят дополнительную информацию о состоянии персонажа и выполняемых действиях.</Russian>
             <Polish>Ustaw pozycję lub wyłącz całkowicie ikony pomocnicze na ekranie. Te ikony dostarczają dodatkowych informacji na temat statusu Twojej postaci i wykonywanych przez nią akcji.</Polish>

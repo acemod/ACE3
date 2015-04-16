@@ -28,7 +28,7 @@
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item to heavy</English>
             <German>Gegenstand ist zu schwer</German>
-            <Spanish>Articulo demasiado pesado</Spanish>
+            <Spanish>Objeto demasiado pesado</Spanish>
             <Polish>Przedmiot zbyt ciężki</Polish>
             <French>Objet trop lourd</French>
             <Portuguese>Não é possível carregar o item devido a seu peso</Portuguese>
@@ -40,7 +40,7 @@
         <Key ID="STR_ACE_Dragging_Carry">
             <English>Carry</English>
             <German>Tragen</German>
-            <Spanish>Portar</Spanish>
+            <Spanish>Transportar</Spanish>
             <Polish>Nieś</Polish>
             <French>Porter</French>
             <Czech>Nést</Czech>

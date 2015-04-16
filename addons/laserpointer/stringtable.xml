@@ -52,6 +52,7 @@
             <Polish>Laser</Polish>
             <Russian>Лазер</Russian>
             <French>Laser</French>
+            <Spanish>Láser</Spanish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_IRLaser">
             <English>IR Laser</English>
@@ -59,6 +60,7 @@
             <Polish>Laser IR</Polish>
             <Russian>ИК-лазер</Russian>
             <French>Laser IR</French>
+            <Spanish>Láser IR</Spanish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_switchLaserLight">
             <English>Switch Laser / IR Laser</English>
@@ -67,6 +69,7 @@
             <Russian>Изменить режим Лазер / ИК-лазер</Russian>
             <French>Changer Laser / Laser IR</French>
             <Italian>Alterna Laser / IR Laser</Italian>
+            <Spanish>Alternar Láser / Láser IR</Spanish>
         </Key>
     </Package>
 </Project>

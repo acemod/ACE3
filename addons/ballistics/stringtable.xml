@@ -451,6 +451,7 @@
             <Polish>.338 NM Tracer</Polish>
             <Czech>.338 NM Svítící</Czech>
             <French>.338 NM Traçante</French>
+            <Spanish>.338 NM Trazadora</Spanish>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_TracerDescription">
             <English>Caliber: .338 Norma Magnum Tracer&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
@@ -475,7 +476,7 @@
             <English>Caliber: .338 Norma Magnum Tracer IR-DIM&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
             <German>Kaliber: .338 Norma Magnum Leuchtspur IR-DIM&lt;br /&gt;Schuss: 130&lt;br /&gt;Verwendet für: SPMG</German>
             <Polish>Kaliber: .338 Norma Magnum Smugacz IR-DIM&lt;br /&gt;Pociski: 130&lt;br /&gt;Używany w: SPMG</Polish>
-            <French>Calibre: .338 Norma Magnum Traçante IR-DIM&lt;br /&gt;Cartouches: 130&lt;br /&gt;Utilisé dans: SPMG</French>            
+            <French>Calibre: .338 Norma Magnum Traçante IR-DIM&lt;br /&gt;Cartouches: 130&lt;br /&gt;Utilisé dans: SPMG</French>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_APName">
             <English>.338 NM 130Rnd AP Belt</English>
