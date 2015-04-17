@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 
 import fnmatch
 import os
@@ -21,7 +21,7 @@ def get_private_declare(content):
     priv_split = sorted(set(priv_split))
     priv_declared += priv_split;
     
-    srch = re.compile('PARAMS_[0-9].*|EXPLODE_[0-9]_PVT.*|DEFAULT_PARAM.*|KEY_PARAM.*')
+    srch = re.compile('PARAMS_[0-9].*|EXPLODE_[0-9]_PVT.*|DEFAULT_PARAM.*|KEY_PARAM.*|IGNORE_PRIVATE_WARNING.*')
     priv_srch_declared = srch.findall(content)
     priv_srch_declared = sorted(set(priv_srch_declared))
     
@@ -37,7 +37,7 @@ def get_private_declare(content):
     return priv_declared
         
 def check_privates(filepath):
-    
+    bad_count_file = 0
     def pushClosing(t):
         closingStack.append(closing.expr)
         closing << Literal( closingFor[t[0]] )
@@ -81,6 +81,9 @@ def check_privates(filepath):
             print (filepath)
             for bad_priv in missing:
                 print ('\t' + bad_priv)
+                bad_count_file = bad_count_file + 1
+                
+    return bad_count_file
             
 def main():
 
@@ -89,6 +92,7 @@ def main():
     print("#########################")
 
     sqf_list = []
+    bad_count = 0
     
     parser = argparse.ArgumentParser()
     parser.add_argument('-m','--module', help='only search specified module addon folder', required=False, default=".")
@@ -99,7 +103,10 @@ def main():
         sqf_list.append(os.path.join(root, filename))
         
     for filename in sqf_list:
-        check_privates(filename)
+        bad_count = bad_count + check_privates(filename)
+    
+    
+    print ("Bad Count {0}".format(bad_count))
     
 if __name__ == "__main__":
     main()
