@@ -1,27 +1,27 @@
 <p align="center">
     <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg"
-         height="112" />
+         height="112">
 </p>
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
         <img src="http://img.shields.io/badge/Version-3.0.0-blue.svg?style=flat"
-             alt="ACE3 Version" />
+             alt="ACE version">
     </a>
     <a href="https://github.com/acemod/ACE3/archive/master.zip">
         <img src="http://img.shields.io/badge/Download-48.3_MB-green.svg?style=flat"
-             alt="ACE3 Download" />
+             alt="ACE download">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="http://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat&label=Issues"
-             alt="ACE3 Issues" />
+             alt="ACE issues">
     </a>
     <a href="http://forums.bistudio.com/showthread.php?190433-ACE3-A-collaborative-merger-between-AGM-CSE-and-ACE&p=2910796&viewfull=1#post2910796">
         <img src="https://img.shields.io/badge/BIF-Thread-lightgrey.svg?style=flat"
-             alt="BIF Thread" />
+             alt="BIF thread">
     </a>
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="http://img.shields.io/badge/License-GPLv2-red.svg?style=flat"
-             alt="ACE3 License" />
+             alt="ACE license">
     </a>
 </p>
 <p align="center"><sup><strong>Requires the latest version of <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a>. Visit us on <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
@@ -41,7 +41,7 @@ The mod is **built modularly**, so almost any included PBO can be easily removed
 * Realistic names for vehicles and weapons
 * Realistic ballistics including wind and humidity
 * Backblast area simulation
-* A fire control system for armored vehicles and helicopters<br />
+* A fire control system for armored vehicles and helicopters<br>
 ***and more...***
 
 #### Guides & how-tos
