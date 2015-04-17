@@ -33,18 +33,42 @@ The project is entirely **open-source** and all contributions are welcome. Feel 
 
 The mod is **built modularly**, so almost any included PBO can be easily removed from the configuration. This way, a team can maintain its own tailored version of ACE by simply excluding any components they don't need, or those possibly in conflict with other add-ons. Modules themselves, e.g. the medical system, also include various customization options, allowing mission designers to tweak the overall experience.
 
-### Features
-* Improved medical system
-* Logistics system including cargo transport and vehicle maintenance
-* Explosives system including different trigger types
+### Core features
+* Brand new 3D interaction/action system
+* Performance and reliability framework
+* Focus on modularity and customization
+* New flexible client and server settings & configuration
+* Improved medical system with various levels (Basic/Advanced) focus on gameplay/realism
+* Proper & consistent network-synced weather
+* Wind and weather-based ballistics
 * Captivity system
-* Realistic names for vehicles and weapons
-* Realistic ballistics including wind and humidity
-* Backblast area simulation
-* A fire control system for armored vehicles and helicopters<br>
-***and more...***
+* Explosives system, including different trigger types
+* Map screen improvements – marker placement and map tools
+* Advanced missile guidance and laser designation
 
-#### Guides & how-tos
+#### Additional features
+* Carrying and dragging
+* Realistic names for vehicles and weapons
+A fire control system (FCS) for armored vehicles and helicopters
+* Realistic ballistics/FCS calculated in C/C++ extensions
+* Backblast area and overpressure simulation
+* Disposable launchers
+* Realistic G-forces
+* Vehicle locking
+* Realistic night and thermal vision modes
+* Magazine repacking
+* Realistic weapon overheating mechanic
+* Combat deafness (temporary loss of hearing) simulation
+* Improved ragdoll physics
+* Improved interactions for AARs and ammo bearers
+* Adjustable sniper scopes
+* No idle animation with lowered weapon
+* No talking player avatar
+* Jumping over obstacles, climbing over walls and cutting down fences
+* Vector, MicroDAGR and Kestrel devices<br>
+***and much more...***
+
+### Guides & how-tos
 If you installed ACE3 but have trouble understanding how it all works, or where to start, read this first:
 * [Getting started](https://github.com/acemod/ACE3/blob/master/documentation/user/getting-started.md)
 
