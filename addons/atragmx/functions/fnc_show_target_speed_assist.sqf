@@ -20,7 +20,7 @@ GVAR(showTargetSpeedAssist) = _this;
 {ctrlShow [_x, _this]} forEach [8000, 8001, 8002, 8003, 8004, 8005, 8006, 8007, 8008, 8009, 8010, 8011, 8012, 8013, 8014, 8015];
 
 if (_this) then {
-    ctrlSetFocus (__DSP displayCtrl 8012);
+    ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 8012);
     
     ctrlSetText [8004, Str(Round((GVAR(targetRange) select GVAR(currentTarget))))];
 

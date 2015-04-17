@@ -20,7 +20,7 @@ if !(ctrlVisible 9000) then {
     false call FUNC(show_target_speed_assist);
     true call FUNC(show_target_speed_assist_timer);
 
-    ctrlSetFocus (__DSP displayCtrl 9002);
+    ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 9002);
     
     [{
         private ["_args", "_startTime"];

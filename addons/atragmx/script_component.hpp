@@ -10,5 +10,3 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
-
-#define __DSP (uiNamespace getVariable "ATragMX_Display")
