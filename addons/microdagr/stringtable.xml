@@ -95,7 +95,7 @@
         <Key ID="STR_ACE_microdagr_wpEnterCords">
             <English>Enter Grid Cords:</English>
             <Spanish>Introducir coordenadas de cuadrícula:</Spanish>
-            <Russian>Введите координаты:</Russian>
+            <Russian>Введите Сеточные Координаты:</Russian>
             <Polish>Wprowadź współrzędne:</Polish>
             <French>Entrer coordonnées</French>
             <German>Koordinaten eingeben:</German>
@@ -183,7 +183,7 @@
         <Key ID="STR_ACE_microdagr_menuConnectTo">
             <English>Connect To</English>
             <Spanish>Conectar a</Spanish>
-            <Russian>Соединиться с </Russian>
+            <Russian>Подключиться к</Russian>
             <German>Verbinde zu</German>
             <Czech>Připojit k</Czech>
             <Polish>Podłącz do</Polish>
