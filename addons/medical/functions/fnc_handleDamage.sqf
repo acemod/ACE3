@@ -36,7 +36,7 @@ if !(_selection in (GVAR(SELECTIONS) + [""])) exitWith {0};
 
 _damageReturn = _damage;
 if (GVAR(level) < 2) then {
-    if ([_unit] call EFUNC(isPlayer)) then {
+    if ([_unit] call EFUNC(common,isPlayer)) then {
         _this set [2, _damage / (GVAR(playerDamageThreshold) max 0.01)];
     } else {
         _this set [2, _damage / (GVAR(AIDamageThreshold) max 0.01)];

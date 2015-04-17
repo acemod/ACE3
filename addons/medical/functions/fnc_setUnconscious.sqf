@@ -81,7 +81,7 @@ _unit setUnitPos "DOWN";
 _startingTime = time;
 
 [{
-    private ["_unit", "_vehicleOfUnit","_minWaitingTime", "_oldAnimation", "_captiveSwitch", "_hasMovedOut"];
+    private ["_unit", "_vehicleOfUnit","_minWaitingTime", "_oldAnimation", "_captiveSwitch", "_hasMovedOut", "_parachuteCheck"];
     _args = _this select 0;
     _unit = _args select 0;
     _oldAnimation = _args select 1;
@@ -89,6 +89,7 @@ _startingTime = time;
     _startingTime = _args select 3;
     _minWaitingTime = _args select 4;
     _hasMovedOut = _args select 5;
+    _parachuteCheck = _args select 6;
 
     if (!alive _unit) exitwith {
         [_unit, QGVAR(unconscious), false] call EFUNC(common,setCaptivityStatus);
@@ -140,6 +141,13 @@ _startingTime = time;
         };
     };
 
+    if (_parachuteCheck) then {
+        if !(vehicle _unit isKindOf "ParachuteBase") then {
+            [_unit, [_unit] call EFUNC(common,getDeathAnim), 1, true] call EFUNC(common,doAnimation);
+            _args set [6, false];
+        };
+    };
+
     // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
     if ((time - _startingTime) >= _minWaitingTime) exitwith {
 
@@ -147,6 +155,6 @@ _startingTime = time;
             _unit setvariable ["ACE_isUnconscious", false, true];
         };
     };
-}, 0.1, [_unit,_animState, _originalPos, _startingTime, _minWaitingTime, false] ] call CBA_fnc_addPerFrameHandler;
+}, 0.1, [_unit,_animState, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
 
 ["medical_onUnconscious", [_unit, true]] call EFUNC(common,globalEvent);
