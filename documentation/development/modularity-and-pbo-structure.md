@@ -17,16 +17,16 @@ Main principles:
 Main principles:
 
 - Try to keep single module dependencies as much as possible
-- InteractionMenu would be the requirement for most modules.
-- Anything that is 100% config should require common and not interaction.
+- Interact_Menu would be the requirement for most modules.
+- Anything that is 100% config should require Common and not Interact_Menu.
 
 ```
-Main -> Common -> OptionsMenu -> InteractionMenu -> Most things
+Main -> Common -> OptionsMenu -> Interact_Menu -> Most things
 
 Main -> Common -> Config things
 
-Main -> Common -> 3D Models      |
-                 InteractionMenu | -> Feature
+Main -> Common -> 3D Models     |
+                  Interact_Menu | -> Feature
 ```
 
 
