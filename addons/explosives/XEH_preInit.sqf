@@ -41,7 +41,6 @@ PREP(getPlacedExplosives);
 PREP(getSpeedDialExplosive);
 
 PREP(onLanded);
-PREP(onPlaceTripFlare);
 
 PREP(openTimerSetUI);
 
@@ -58,5 +57,8 @@ PREP(setSpeedDial);
 PREP(startDefuse);
 PREP(startTimer);
 PREP(triggerType);
+
+PREP(tripFlareExplosionEH);
+PREP(tripFlareOnPlace);
 
 ADDON = true;

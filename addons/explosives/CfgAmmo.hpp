@@ -47,14 +47,15 @@ class CfgAmmo {
     class APERSTripMine_Wire_Ammo: DirectionalBombBase {};
 
     class ACE_APERSTripFlare_Wire_Ammo: APERSTripMine_Wire_Ammo {
-        hit = 0.1;
-        indirectHit = 0.1;
+        hit = 0.01;
+        indirectHit = 0.01;
         indirectHitRange = 1;
         model = "\A3\Weapons_F\explosives\mine_AP_tripwire";
         mineModelDisabled = "\A3\Weapons_F\explosives\mine_AP_tripwire_d";
         defaultMagazine = "ACE_APERSTripFlare_Wire_Mag";
         icon = "iconExplosiveAP";
         soundHit[] = {"",1,1};
+        soundTrigger[] = {"",1,1};
         minimumSafeZone = 0;
         explosionAngle = 360;
         explosionEffects = "";

@@ -27,20 +27,6 @@ GVAR(CurrentSpeedDial) = 0;
     };
 }] call EFUNC(common,addEventHandler);
 
-//Server: setup tripFlare
-[QGVAR(serverSetupTripFlare), {
-    PARAMS_1(_defuseHelper);
-    _defuseHelper addEventHandler ["Explosion", {
-        PARAMS_1(_defuseHelper);
-        _explosive = _defuseHelper getVariable [QGVAR(Explosive), objNull];
-        //Only explode if _explosive still exists and it took "lethal" damage
-        //So we know the ExplosionEH was triggered by the mine exploding
-        if ((isNull _explosive) || {(damage _explosive) < 1}) exitWith {};
-        _flare = "ACE_TripFlare_FlareEffect" createVehicle (getpos _defuseHelper);
-        _flare attachTo [_defuseHelper, [-2,0,0]];
-    }];
-}] call EFUNC(common,addEventHandler);
-
 
 [{(_this select 0) call FUNC(handleScrollWheel);}] call EFUNC(Common,addScrollWheelEventHandler);
 player addEventHandler ["Killed", {

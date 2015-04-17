@@ -8,5 +8,5 @@ _attachedObjects = attachedObjects _explosive;
 if ((count _attachedObjects) != 1) exitWith {ERROR("attachedObjects count wrong");};
 
 _defuseHelper = _attachedObjects select 0;
-
-[QGVAR(serverSetupTripFlare), [_defuseHelper]] call EFUNC(common,serverEvent);
+systemChat "Place";
+[QGVAR(serverSetupTripFlare), [_defuseHelper]] call EFUNC(common,globalEvent);
