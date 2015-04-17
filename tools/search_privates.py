@@ -70,6 +70,8 @@ def check_privates(filepath):
         if '_forEachIndex' in priv_use: priv_use.remove('_forEachIndex')
         if '_foreachIndex' in priv_declared: priv_declared.remove('_foreachIndex')
         if '_foreachIndex' in priv_use: priv_use.remove('_foreachIndex')
+        if '_foreachindex' in priv_declared: priv_declared.remove('_foreachindex')
+        if '_foreachindex' in priv_use: priv_use.remove('_foreachindex')
         
         missing = []
         for s in priv_use:
