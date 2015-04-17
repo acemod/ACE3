@@ -14,12 +14,13 @@
  * Public: No
  */
 #include "script_component.hpp"
+
 if (!hasInterface) exitWith {};
 
 ["ACE3", QGVAR(showAltimeter), localize "STR_ACE_Parachute_showAltimeter",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     if (!('ACE_Altimeter' in assignedItems ace_player)) exitWith {false};
     if (!(missionNamespace getVariable [QGVAR(AltimeterActive), false])) then {
         [ace_player] call FUNC(showAltimeter);
