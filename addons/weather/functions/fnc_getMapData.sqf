@@ -1,6 +1,5 @@
 /*
  * Author: Ruthberg, esteldunedain
- *
  * Get the weather data for the current map
  *
  * Argument:
