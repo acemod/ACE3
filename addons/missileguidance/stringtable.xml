@@ -3,7 +3,7 @@
     <Package name="missileguidance">
         <Key ID="STR_ACE_MissileGuidance">
             <English>Advanced Missile Guidance</English>
-            <Spanish>Cohete Guiado Avanzado</Spanish>
+            <Spanish>Guía de misiles avanzada</Spanish>
             <French>Avancée Missile orientation</French>
             <Polish>Zaawansowane naprowadzanie rakiet</Polish>
             <German>Erweitertes Raketenlenksystem</German>
