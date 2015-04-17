@@ -129,7 +129,7 @@ if (isNil _callbackProgress) then {
 
 // Patient Animation
 _patientAnim = getText (_config >> "animationPatient");
-if (_target getvariable ["ACE_isUnconscious", false]) then {
+if (_target getvariable ["ACE_isUnconscious", false] && GVAR(allowUnconsciousAnimationOnTreatment)) then {
     if !(animationState _target in (getArray (_config >> "animationPatientUnconsciousExcludeOn"))) then {
         _patientAnim = getText (_config >> "animationPatientUnconscious");
     };
