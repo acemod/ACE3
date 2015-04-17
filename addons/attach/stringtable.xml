@@ -189,7 +189,7 @@
             <Portuguese>%1&lt;br/&gt;Acoplada</Portuguese>
             <Italian>%1&lt;br/&gt;attaccata</Italian>
             <Hungarian>%1&lt;br/&gt;hozzácsatolva</Hungarian>
-            <Russian>%1&lt;br/&gt;присоединена</Russian>
+            <Russian>%1&lt;br/&gt;присоединен(-а)</Russian>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Detached">
             <English>%1&lt;br/&gt;Detached</English>
@@ -201,7 +201,7 @@
             <Portuguese>%1&lt;br/&gt;Separada</Portuguese>
             <Italian>%1&lt;br/&gt;staccata</Italian>
             <Hungarian>%1&lt;br/&gt;lecsatolva</Hungarian>
-            <Russian>%1&lt;br/&gt;отсоединена</Russian>
+            <Russian>%1&lt;br/&gt;отсоединен(-а)</Russian>
         </Key>
     </Package>
 </Project>
