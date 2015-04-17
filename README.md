@@ -31,7 +31,7 @@
 The project is entirely **open-source** and all contributions are welcome. Feel free to maintain your own custom version, so long as the changes you make are open to the public in accordance with the GNU General Public License:
 * [`LICENSE`](https://github.com/acemod/ACE3/blob/master/LICENSE)
 
-The mod is **built modularly**, so almost any included PBO can be easily removed from the configuration. This way, a team can maintain its own tailored version of ACE by simply excluding any components they don't need, or those that might possibly conflict with other add-ons. Modules themselves, e.g. the medical system, also include various customization options, allowing mission designers to tweak the overall experience.
+The mod is **built modularly**, so almost any included PBO can be easily removed from the configuration. This way, a team can maintain its own tailored version of ACE by simply excluding any components they don't need, or those possibly in conflict with other add-ons. Modules themselves, e.g. the medical system, also include various customization options, allowing mission designers to tweak the overall experience.
 
 ### Features
 * Improved medical system
@@ -40,7 +40,7 @@ The mod is **built modularly**, so almost any included PBO can be easily removed
 * Captivity system
 * Realistic names for vehicles and weapons
 * Realistic ballistics including wind and humidity
-* Backblast simulation
+* Backblast area simulation
 * A fire control system for armored vehicles and helicopters<br />
 ***and more...***
 
