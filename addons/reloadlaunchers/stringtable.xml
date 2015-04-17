@@ -11,6 +11,7 @@
             <Polish>Załaduj wyrzutnię</Polish>
             <French>Charger lanceur</French>
             <Hungarian>Kilövö betöltése</Hungarian>
+            <Italian>Carica lanciamissili</Italian>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
             <English>Loading launcher ...</English>
@@ -21,6 +22,7 @@
             <Czech>Nabíjím odpalovač  ...</Czech>
             <Polish>Ładowanie wyrzutni ...</Polish>
             <Hungarian>Kilövő betöltés alatt ...</Hungarian>
+            <Italian>Carico il lanciamissili ...</Italian>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LauncherLoaded">
             <English>Launcher loaded</English>
@@ -31,6 +33,7 @@
             <Czech>Odpalovač nabit</Czech>
             <Polish>Wyrzutnia załadowana</Polish>
             <Hungarian>Kilövő betöltve</Hungarian>
+            <Italian>Lanciamissili caricato</Italian>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadMagazine">
             <English>Load %1</English>
@@ -41,6 +44,7 @@
             <Czech>Nabít %1</Czech>
             <Polish>Załadowano %1</Polish>
             <Hungarian>%1 betöltése</Hungarian>
+            <Italian>Caricato %1</Italian>
         </Key>
     </Package>
 </Project>
