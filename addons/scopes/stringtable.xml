@@ -6,54 +6,63 @@
             <Polish>Zerowanie powoli w górę</Polish>
             <Russian>Малая корректировка ВВЕРХ</Russian>
             <Spanish>Ajuste menor arriba</Spanish>
+            <German>Kleine Korrektur nach oben</German>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMinor">
             <English>Minor adjustment down</English>
             <Polish>Zerowanie powoli w dół</Polish>
             <Russian>Малая корректировка ВНИЗ</Russian>
             <Spanish>Ajuste menor abajo</Spanish>
+            <German>Kleine Korrektur nach unten</German>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMinor">
             <English>Minor adjustment right</English>
             <Polish>Zerowanie powoli w prawo</Polish>
             <Russian>Малая корректировка ВПРАВО</Russian>
             <Spanish>Ajuste menor derecha</Spanish>
+            <German>Kleine Korrektur nach rechts</German>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMinor">
             <English>Minor adjustment left</English>
             <Polish>Zerowanie powoli w lewo</Polish>
             <Russian>Малая корректировка ВЛЕВО</Russian>
             <Spanish>Ajuste menor izquierda</Spanish>
+            <German>Kleine Korrektur nach links</German>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMajor">
             <English>Major adjustment up</English>
             <Polish>Zerowanie w górę</Polish>
             <Russian>Большая корректировка ВВЕРХ</Russian>
             <Spanish>Ajuste mayor arriba</Spanish>
+            <German>Große Korrektur nach oben</German>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMajor">
             <English>Major adjustment down</English>
             <Polish>Zerowanie w dół</Polish>
             <Russian>Большая корректировка ВНИЗ</Russian>
             <Spanish>Ajuste mayor abajo</Spanish>
+            <German>Große Korrektur nach unten</German>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMajor">
             <English>Major adjustment right</English>
             <Polish>Zerowanie w prawo</Polish>
             <Russian>Большая корректировка ВПРАВО</Russian>
             <Spanish>Ajuste mayor derecha</Spanish>
+            <German>Große Korrektur nach rechts</German>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMajor">
             <English>Major adjustment left</English>
             <Polish>Zerowanie w lewo</Polish>
             <Russian>Большая корректировка ВЛЕВО</Russian>
             <Spanish>Ajuste mayor izquierda</Spanish>
+            <German>Große Korrektur nach links</German>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustZero">
             <English>Set zero adjustment</English>
             <Polish>Zresetuj wyzerowanie</Polish>
             <Russian>Сбросить корректировку</Russian>
             <Spanish>Establecer ajuste a cero</Spanish>
+            <German>Auf 0 justieren</German>
         </Key>
     </Package>
 </Project>
