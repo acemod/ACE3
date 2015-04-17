@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-PARMAS_1(_originalPlayerUnit);
+PARAMS_1(_originalPlayerUnit);
 
 [_originalPlayerUnit] joinSilent GVAR(OriginalGroup);
 

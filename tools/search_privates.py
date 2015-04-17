@@ -73,8 +73,8 @@ def check_privates(filepath):
         
         missing = []
         for s in priv_use:
-            if s not in priv_declared:
-                if s not in missing:
+            if s.lower() not in map(str.lower,priv_declared):
+                if s.lower() not in map(str.lower,missing):
                     missing.append(s)
         
         if len(missing) > 0:
