@@ -56,5 +56,5 @@ Please, use our [Issue Tracker](https://github.com/acemod/ACE3/issues) to report
 * [How to make a feature request](http://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
 
 #### Testing & building
-To help us test the latest development changes, download our master branch ([directly](https://github.com/acemod/ACE3/archive/master.zip), or with [git commands](https://help.github.com/articles/fetching-a-remote/)), then assemble a test build:
+To help us test the latest development changes, download our master branch ([directly](https://github.com/acemod/ACE3/archive/master.zip), or [with git](https://help.github.com/articles/fetching-a-remote/)), then assemble a test build:
 * [Setting up the development environment](https://github.com/acemod/ACE3/blob/master/documentation/development/setting-up-the-development-environment.md) – step-by-step instructions on how to properly setup and build a version of ACE for testing purposes.
