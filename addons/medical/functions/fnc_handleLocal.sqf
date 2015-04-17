@@ -23,7 +23,7 @@ if (_local) then {
         [_unit, true] call FUNC(addToInjuredCollection);
     };
 
-    if (count (_unit getvariable [QGVAR(unconsciousArguments), []]) >= 7) then {
+    if ((_unit getvariable ["ACE_isUnconscious",false]) && {count (_unit getvariable [QGVAR(unconsciousArguments), []]) >= 7}) then {
     	private "_arguments";
     	_arguments = (_unit getvariable [QGVAR(unconsciousArguments), []]);
     	_arguments set [ 3, time];
