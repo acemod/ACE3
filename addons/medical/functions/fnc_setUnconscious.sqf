@@ -91,6 +91,12 @@ _startingTime = time;
     _hasMovedOut = _args select 5;
 
     if (!alive _unit) exitwith {
+        [_unit, QGVAR(unconscious), false] call EFUNC(common,setCaptivityStatus);
+        [_unit, false] call EFUNC(common,disableAI);
+        _unit setUnitPos _originalPos;
+        _unit setUnconscious false;
+        ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
+
         [(_this select 1)] call cba_fnc_removePerFrameHandler;
     };
 
