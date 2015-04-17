@@ -1,12 +1,8 @@
 <p align="center">
     <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg"
-         height="80" />
+         height="96" />
 </p>
 <p align="center">
-    <a href="http://ace3mod.com/wiki/index.html">
-        <img src="https://img.shields.io/badge/ACE3-Wiki-orange.svg?style=flat"
-             alt="ACE3 Wiki" />
-  </a>
     <a href="https://github.com/acemod/ACE3/releases">
         <img src="http://img.shields.io/badge/Version-3.0.0-blue.svg?style=flat"
              alt="ACE3 Version" />
@@ -46,11 +42,11 @@ The mod is **built modularly**, so almost any included PBO can be easily removed
 * Realistic ballistics including wind and humidity
 * Backblast simulation
 * A fire control system for armored vehicles and helicopters<br />
-  ***and more...***
+***and more...***
 
 #### Guides & how-tos
-If you installed ACE3 but have trouble understanding how it all works, or where to start, read this:
-*  [Getting started](https://github.com/acemod/ACE3/blob/master/documentation/user/getting-started.md)
+If you installed ACE3 but have trouble understanding how it all works, or where to start, read this first:
+* [Getting started](https://github.com/acemod/ACE3/blob/master/documentation/user/getting-started.md)
 
 #### Contributing
 You can help out with the ongoing development by looking for potential bugs in our code base, or by contributing new features. To contribute something to ACE, simply fork this repository and submit your pull requests for review by other collaborators. Remember to add yourself to the author array of any PBO you will be editing and the [`AUTHORS.txt`](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) file; including a valid email address.
@@ -60,5 +56,5 @@ Please, use our [Issue Tracker](https://github.com/acemod/ACE3/issues) to report
 * [How to make a feature request](http://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
 
 #### Testing & building
-To help us test the latest development changes, first, download our master branch ([directly](https://github.com/acemod/ACE3/archive/master.zip), or with [git commands](https://help.github.com/articles/fetching-a-remote/)), then assemble a local test build:
-*  [Setting up the development environment](https://github.com/acemod/ACE3/blob/master/documentation/development/setting-up-the-development-environment.md) — step-by-step instructions on how to properly setup and build a version of ACE for testing purposes.
+To help us test the latest development changes, download our master branch ([directly](https://github.com/acemod/ACE3/archive/master.zip), or with [git commands](https://help.github.com/articles/fetching-a-remote/)), then assemble a test build:
+* [Setting up the development environment](https://github.com/acemod/ACE3/blob/master/documentation/development/setting-up-the-development-environment.md) – step-by-step instructions on how to properly setup and build a version of ACE for testing purposes.
