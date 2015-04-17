@@ -23,7 +23,7 @@ _set = if (count _this > 1) then {_this select 1} else {true};
 _minWaitingTime = if (count _this > 2) then {_this select 2} else {DEFAULT_DELAY};
 
 if !(_set) exitwith {
-    _unit setvariable ["ACE_isUnconscious", false,true];
+    _unit setvariable ["ACE_isUnconscious", false, true];
 };
 
 if !(!(isNull _unit) && {(_unit isKindOf "CaManBase") && ([_unit] call EFUNC(common,isAwake))}) exitwith{};
@@ -38,6 +38,11 @@ _unit setUnconscious true;
 if (_unit == ACE_player) then {
     if (visibleMap) then {openMap false};
     closeDialog 0;
+};
+
+// if we have unconsciousness for AI disabled, we will kill the unit instead
+if (!([_unit] call EFUNC(common,IsPlayer)) && (GVAR(enableUnsconsiousnessAI) == 0 || (GVAR(enableUnsconsiousnessAI) == 2 && random(1) <= 0.5))) exitwith {
+    [_unit, true] call FUNC(setDead); // force, to avoid getting into a loop in case revive is enabled.
 };
 
 // If a unit has the launcher out, it will sometimes start selecting the primairy weapon while unconscious,
