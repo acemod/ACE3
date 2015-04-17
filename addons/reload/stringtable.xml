@@ -9,6 +9,8 @@
             <Czech>Zkontrolovat munici při nabití</Czech>
             <Polish>Sprawdź stan amunicji przy przeładowaniu broni</Polish>
             <French>Vérification des munitions au rechargement</French>
+            <Hungarian>Lőszer ellenőrzése a fegyver újratöltésekor</Hungarian>
+            <Italian>Controlla le munizioni ricaricando</Italian>
         </Key>
         <Key ID="STR_ACE_reload_SettingDisplayTextDesc">
             <English>Check the ammo in your new magazine on magazine reload.</English>
@@ -18,6 +20,8 @@
             <Czech>Kontroluje munice při nabití nového zásobníku.</Czech>
             <Polish>Pokaż stan amunicji w nowym magazynku przy przeładowaniu broni</Polish>
             <French>Vérification du nombre de munition au rechargement</French>
+            <Hungarian>A lőszer ellenőrzése az új tárad behelyezésekor újratöltés közben.</Hungarian>
+            <Italian>Controlla le munizioni rimanenti nel caricatore in fase di cambio caricatore.</Italian>
         </Key>
         <Key ID="STR_ACE_Reload_checkAmmo">
             <English>Check Ammo</English>
@@ -51,6 +55,8 @@
             <Czech>Spojit pás munice</Czech>
             <Polish>Podłącz taśmę</Polish>
             <German>Gurt anhängen</German>
+            <Hungarian>Töltényheveder összekötése</Hungarian>
+            <Italian>Attacca la tracolla</Italian>
         </Key>
         <Key ID="STR_ACE_Reload_LinkingBelt">
             <English>Linking belt...</English>
@@ -60,6 +66,8 @@
             <Czech>Spojuji pás...</Czech>
             <Polish>Podłączanie taśmy...</Polish>
             <German>Gurt anhängen ...</German>
+            <Hungarian>Töltényheveder összekötése folyamatban...</Hungarian>
+            <Italian>Attacco la tracolla...</Italian>
         </Key>
     </Package>
 </Project>

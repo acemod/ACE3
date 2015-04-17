@@ -7,7 +7,8 @@ PREP(changeMissileDirection);
 PREP(checkSeekerAngle);
 PREP(checkLos);
 
-PREP(fired);
+PREP(onFired);
+PREP(onIncomingMissile);
 
 PREP(guidancePFH);
 PREP(doAttackProfile); 

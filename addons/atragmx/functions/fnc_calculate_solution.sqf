@@ -109,8 +109,12 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
         if (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false]) then {
             private ["_drag"];
-            _drag = -1 * ([_dragModel, _bc, _trueSpeed] call EFUNC(advanced_ballistics,calculateRetardation));
-            _bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (_drag);
+            _drag = if (missionNamespace getVariable [QEGVAR(advanced_ballistics,extensionAvailable), false]) then {
+                parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3", _dragModel, _bc, _trueSpeed]))
+            } else {
+                ([_dragModel, _bc, _trueSpeed] call EFUNC(advanced_ballistics,calculateRetardation))
+            };
+            _bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (-1 * _drag);
         };
     } else {
         _bulletAccel = _trueVelocity vectorMultiply (_trueSpeed * _airFriction);

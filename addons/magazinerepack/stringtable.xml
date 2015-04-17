@@ -2,16 +2,16 @@
 <Project name="ACE">
     <Package name="MagazineRepack">
         <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
-            <English>Repack&lt;br/&gt;Magazines</English>
-            <German>Magazine&lt;br/&gt;umpacken</German>
-            <Spanish>Reorganizar&lt;br/&gt;cargadores</Spanish>
-            <French>Réorganiser&lt;br/&gt;chargeurs</French>
-            <Polish>Przepakuj&lt;br/&gt;magazynki</Polish>
-            <Czech>Přepáskovat&lt;br/&gt;Zásobníky</Czech>
-            <Italian>Ricarica&lt;br/&gt;Caricatori</Italian>
-            <Portuguese>Reorganizar&lt;br/&gt;Carregadores</Portuguese>
-            <Hungarian>Újratárazás&lt;br/&gt;</Hungarian>
-            <Russian>Перепаковать&lt;br/&gt;магазины</Russian>
+            <English>Repack Magazines</English>
+            <German>Magazine umpacken</German>
+            <Spanish>Reorganizar cargadores</Spanish>
+            <French>Réorganiser chargeurs</French>
+            <Polish>Przepakuj magazynki</Polish>
+            <Czech>Přepáskovat Zásobníky</Czech>
+            <Italian>Ricarica Caricatori</Italian>
+            <Portuguese>Reorganizar Carregadores</Portuguese>
+            <Hungarian>Újratárazás </Hungarian>
+            <Russian>Перепаковать магазины</Russian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_SelectMagazineMenu">
             <English>Select Magazine Menu</English>
@@ -70,7 +70,7 @@
             <Czech>%1 plný zásobník(y) a %2 munice navíc</Czech>
             <Italian>%1 caricatore/i pieno e %2 munizioni extra</Italian>
             <Portuguese>%1 carregador(es) cheio(s) e %2 disparo(s) a mais</Portuguese>
-            <Hungarian>%1 tejles tár és %2 extra lőszer.</Hungarian>
+            <Hungarian>%1 teljes tár és %2 extra lőszer</Hungarian>
             <Russian>%1 полных магазина(ов) и %2 патрона(ов)</Russian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackComplete">
@@ -81,6 +81,8 @@
             <Russian>Перепаковка завершена</Russian>
             <Czech>Páskování dokončeno</Czech>
             <Polish>Przepakowywanie zakończone</Polish>
+            <Hungarian>Újratárazás befejezve</Hungarian>
+            <Italian>Riempi caricatore</Italian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
             <English>Repacking Interrupted</English>
@@ -90,6 +92,8 @@
             <Russian>Перепаковка прервана</Russian>
             <Czech>Páskování přerušeno</Czech>
             <Polish>Przepakowywanie przerwane</Polish>
+            <Hungarian>Újratárazás megszakítva</Hungarian>
+            <Italian>Riempimento interrotto</Italian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
             <English>%1 Full and %2 Partial</English>
@@ -99,6 +103,8 @@
             <Russian>%1 полных и %2 неполных</Russian>
             <Czech>%1 plný a %2 částečně</Czech>
             <Polish>Pełnych: %1.&lt;br /&gt;Częściowo pełnych: %2.</Polish>
+            <Hungarian>%1 teljes és %2 részleges</Hungarian>
+            <Italian>%1 pieno e %2 parziale</Italian>
         </Key>
     </Package>
 </Project>

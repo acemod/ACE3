@@ -8,10 +8,14 @@ _launchParams = _this select 1;
 _seekerParams = _launchParams select 3;
 _angleFov = _seekerParams select 0;
 
-_laserResult = [(getPosASL _projectile), (velocity _projectile), _angleFov, [ACE_DEFAULT_LASER_WAVELENGTH,ACE_DEFAULT_LASER_WAVELENGTH], ACE_DEFAULT_LASER_CODE] call EFUNC(laser,seekerFindLaserSpot);
-_foundTargetPos = _laserResult select 0;
-TRACE_1("Search", _laserResult);
-
+if(!isNil "_target") then {
+    // Handle AI or moving vanilla lasers
+    _foundTargetPos = getPosASL _target;
+} else {
+    _laserResult = [(getPosASL _projectile), (velocity _projectile), _angleFov, [ACE_DEFAULT_LASER_WAVELENGTH,ACE_DEFAULT_LASER_WAVELENGTH], ACE_DEFAULT_LASER_CODE] call EFUNC(laser,seekerFindLaserSpot);
+    _foundTargetPos = _laserResult select 0;
+    TRACE_1("Search", _laserResult);
+};
 
 if(!isNil "_foundTargetPos") then {
     //_canSeeTarget = [_projectile, _foundTargetPos, _angleFov] call FUNC(checkSeekerAngle);

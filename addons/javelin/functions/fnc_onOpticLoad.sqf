@@ -25,7 +25,8 @@ uiNameSpace setVariable [QGVAR(arguments),
         0,         // Run Time
         0,          // Lock Time
         0,           // Sound timer
-        (random __LOCKONTIMERANDOM) // random lock time addition
+        (random __LOCKONTIMERANDOM), // random lock time addition
+        -1
     ]
 ];
 

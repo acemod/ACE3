@@ -46,7 +46,7 @@
             <French>Options ACE</French>
             <Russian>ACE Настройки</Russian>
             <Portuguese>Opções do ACE</Portuguese>
-            <Hungarian>ACE Opciók</Hungarian>
+            <Hungarian>ACE Beállítások</Hungarian>
             <Italian>Opzioni ACE</Italian>
         </Key>
         <!-- These are cardinal directions, in case you didn't guess. -->
@@ -308,6 +308,7 @@
             <Italian>Accetta Richieste</Italian>
             <French>Accepter requête</French>
             <Russian>Принять запросы</Russian>
+            <Hungarian>Kérések elfogadása</Hungarian>
         </Key>
         <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TITLE">
             <English>Decline Requests</English>
@@ -318,6 +319,7 @@
             <Italian>Rifiuta Richieste</Italian>
             <Russian>Отклонить запросы</Russian>
             <French>Rejeter requête</French>
+            <Hungarian>Kérések elutasítása</Hungarian>
         </Key>
         <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
             <English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
@@ -325,10 +327,10 @@
             <Spanish>Acepta peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
             <Polish>Akceptuj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
             <Italian>Accetta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
-            <Russian>Подтвердить запросы, посланные другими игроками. Это могут быть просьбы о передаче снаряжения или выполнении определённых действий.</Russian>
             <Czech>Přijimutí žádosti poslané jinými hráči. Mohou to být žádosti k použítí/sdílení vybavení nebo k vykonání určité činnosti.</Czech>
             <Russian>Принять запросы, отправленные другими игроками. Например, запросы на использование/совместное использование снаряжения, выполнение определенных действий</Russian>
             <French>Accepter les requêtes d'autres joueurs. Comme l'utilisation / l'échange d'équipement, la réalistion d'actions.</French>
+            <Hungarian>Más játékosok általi kérések elfogadása. Ezek a kérések vonatkozhatnak a felszerelés használatára/megosztására, valamint különböző cselekményekre.</Hungarian>
         </Key>
         <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
             <English>Decline Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
@@ -336,10 +338,10 @@
             <Spanish>Rechazar peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
             <Polish>Ignoruj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
             <Italian>Rifiuta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
-            <Russian>Отклонить запросы, посланные другими игроками. Это могут быть просьбы о передаче снаряжения или выполнении определённых действий.</Russian>
             <Czech>Zamítnutí žádostii poslané jinými hráči. Mohou to být žádosti k použítí/sdílení vybavení nebo k vykonání určité činnosti.</Czech>
             <Russian>Отклонить запросы, отправленные другими игроками. Например, запросы на использование/совместное использование снаряжения, выполнение определенных действий</Russian>
             <French>Rejeter les requêtes d'autres joueurs. Comme l'utilisation / l'échange d'équipement, la réalistion d'actions.</French>
+            <Hungarian>Más játékosok általi kérések elutasítása. Ezek a kérések vonatkozhatnak a felszerelés használatára/megosztására, valamint különböző cselekményekre.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -350,6 +352,7 @@
             <Polish>Ikony pomocnicze</Polish>
             <French>Icones d'information</French>
             <Czech>Pomocné ikony</Czech>
+            <Hungarian>Visszajelző ikonok</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
             <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
@@ -360,6 +363,7 @@
             <Polish>Ustaw pozycję lub wyłącz całkowicie ikony pomocnicze na ekranie. Te ikony dostarczają dodatkowych informacji na temat statusu Twojej postaci i wykonywanych przez nią akcji.</Polish>
             <French>Sélection de la position ou la désactivation des icones de feedback. Ces icones vous apportent des informations complémentaires sur votre status et sur les actions en cours.</French>
             <Czech>Nastavuje pozici nebo vypíná pomocné ikony. Tyto ikony ukazují extra informace ke stavu postavy a vykonávaných činností.</Czech>
+            <Hungarian>Itt beállítható a visszajelző ikonok képernyőn lévő helyzete és jelenléte. Ezek az ikonok extra visszajelzést biztosítanak a karaktered állapotán és végrehajtott cselekvésein.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
             <English>Progress bar location</English>
@@ -370,6 +374,7 @@
             <Polish>Lokalizacja paska postępu</Polish>
             <French>Position de la barre de progression</French>
             <Czech>Pozice ukazetele průběhu činnosti</Czech>
+            <Hungarian>Állapotjelző sáv helyzete</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
             <English>Set the desired location of the progress bar on your screen.</English>
@@ -380,6 +385,7 @@
             <Polish>Ustaw pożądaną lokalizację paska postępu na ekranie</Polish>
             <French>Appliquer la postion de la barre de progression sur l'écran</French>
             <Czech>Nastavuje pozici ukazetele průběhu činnosti na vaší obrazovce.</Czech>
+            <Hungarian>Itt beállítható az állapotjelző sáv képernyődön lévő helyzete.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
             <English>Hint Background color</English>
@@ -390,16 +396,18 @@
             <Polish>Kolor tła powiadomień</Polish>
             <French>Notification: couleur de l'arrière plan</French>
             <Czech>Barva pozadí nápovědy</Czech>
+            <Hungarian>Súgó háttérszíne</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
             <English>The color of the background from the ACE hints.</English>
             <German>Die Hintergrundfarbe der ACE-Hinweise.</German>
             <Spanish>El color de fondo de las notificaciones del ACE</Spanish>
             <Italian>Il colore di sfondo dei suggerimenti dell'ACE.</Italian>
-            <Russian>Цвет фона всплывающий подсказок АСЕ.</Russian>
+            <Russian>Цвет фона всплывающих подсказок АСЕ.</Russian>
             <Polish>Kolor tła dla powiadomień ACE</Polish>
             <French>Notifications ACE: couleur de l'arrière plan</French>
             <Czech>Barva pozadí ACE nápověd.</Czech>
+            <Hungarian>Az ACE-súgók hátterének színe.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
             <English>Hint text font color</English>
@@ -410,6 +418,7 @@
             <Polish>Kolor tekstu powiadomień</Polish>
             <French>Notification: couleur du texte</French>
             <Czech>Barva fontu nápověd.</Czech>
+            <Hungarian>Súgószöveg betűinek színe</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
             <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
@@ -420,6 +429,7 @@
             <Polish>Kolor tekstu dla powiadomień ACE. Ten kolor jest domyślnym dla wszystkich tekstów wyświetlanych poprzez System Powiadomień ACE, jeżeli dla powiadomienia nie określono innego koloru.</Polish>
             <French>Notification ACE: couleur du texte. C'est la couleur par défaut de tout texte afficher dans les notifications ACE, si aucune couleur n'est spécifiée pour les notifications</French>
             <Czech>Barva fontu ACE nápověd. Toto je standardní barva pro všechen text zobrazovaný ACE nápovědami, pokud nemá nápověda žádnou specifikanou barvu.</Czech>
+            <Hungarian>Az ACE-súgók betűkészletének színek. Ez a szín alapértelmezett az összes szövegre az ACE-súgórendszerben, ha a súgószöveg maga nem ad meg más színt.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -430,20 +440,18 @@
             <Russian>Банан</Russian>
             <Polish>Banan</Polish>
             <French>Banane</French>
+            <Hungarian>Banán</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_bananaDescr">
             <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
-            <German>Die Banane ist eine essbare Frucht, biologisch betrachtet jedoch eine Beere. Sie wächst an unterschiedlichen, krautartigen Gewächsen aus der Familie der Musa.</German>
+            <German>Die Bananen (Musa) sind eine Pflanzengattung in der Familie der Bananengewächse (Musaceae) innerhalb der Einkeimblättrigen Pflanzen (Monokotyledonen).</German>
             <Spanish>Una banana es una fruta comestible, botanicamente una baya, producida por varios tipos de grandes plantas herbáceas del género Musa.</Spanish>
             <Czech>Banán je protáhlé ovoce a plod banánovníku (epigeická bobule).</Czech>
             <Italian>Una banana è un frutto commestibile, nello specifico una bacca cuoiosa, prodotto da un gran numero di grandi pianti erbacee dotate di fiori, della famiglia delle Musaceae.</Italian>
             <Russian>Банан - это съедобный фрукт, ягода с ботанической точки зрения, произрастающий на нескольких видах травянистых растениях рода Банан (Musa).</Russian>
+            <Hungarian>A banán egy ehető gyümölcs, technikai szempontból bogyótermés, melyet több fürtvirágzatú növény termel a Musa rendszertani nemzetségben.</Hungarian>
             <Polish>Rodzaj roślin z rodziny bananowatych, obejmujący około 80 gatunków.&lt;br /&gt;Przedstawiciele są typowymi przedstawicielami flory międzyzwrotnikowej Azji, Afryki i Australii.&lt;br /&gt;Część gatunków dostarcza jadalnych owoców. Słowo banan pochodzi prawdopodobnie od arabskiego słowa banan, co oznacza palec, lub afrykańskiego języka wolof, w którym rośliny te określa się mianem banaana.</Polish>
             <French>Une banane est un fruit qui, d'un point de vue botanique, fait partie du groupe des baies. Produite par plusieurs sortes de grandes plantes à fleurs herbacées du type Musa.</French>
-        </Key>
-    </Package>
-</Project>
-            <German>Die Bananen (Musa) sind eine Pflanzengattung in der Familie der Bananengewächse (Musaceae) innerhalb der Einkeimblättrigen Pflanzen (Monokotyledonen).</German>
         </Key>
     </Package>
 </Project>

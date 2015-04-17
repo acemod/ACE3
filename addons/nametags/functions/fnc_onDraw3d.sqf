@@ -50,9 +50,9 @@ if ((GVAR(showPlayerNames) in [2,4]) && {_onKeyPressAlphaMax > 0}) then {
         _alpha = _alpha min _onKeyPressAlphaMax;
         _icon = ICON_NONE;
         if (GVAR(showSoundWaves) == 2) then {  //icon will be drawn below, so only show name here
-            _icon = if ((_target getVariable [QGVAR(isSpeaking), false]) && {(vehicle _target) == _target}) then {ICON_NAME} else {_defaultIcon};
+            _icon = if (([_target] call FUNC(isSpeaking)) && {(vehicle _target) == _target}) then {ICON_NAME} else {_defaultIcon};
         } else {
-            _icon = if ((_target getVariable [QGVAR(isSpeaking), false]) && {(vehicle _target) == _target} && {GVAR(showSoundWaves) > 0}) then {ICON_NAME_SPEAK} else {_defaultIcon};
+            _icon = if (([_target] call FUNC(isSpeaking)) && {(vehicle _target) == _target} && {GVAR(showSoundWaves) > 0}) then {ICON_NAME_SPEAK} else {_defaultIcon};
         };
 
         [_player, _target, _alpha, _distance * 0.026, _icon] call FUNC(drawNameTagIcon);
@@ -77,10 +77,10 @@ if (((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) || {GVAR(sho
 
         _icon = ICON_NONE;
         if ((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) then {
-            if ((_target getVariable [QGVAR(isSpeaking), false]) && {(vehicle _target) == _target} && {GVAR(showSoundWaves) > 0}) then {_icon = ICON_NAME_SPEAK;} else {_icon = _defaultIcon};
+            if (([_target] call FUNC(isSpeaking)) && {(vehicle _target) == _target} && {GVAR(showSoundWaves) > 0}) then {_icon = ICON_NAME_SPEAK;} else {_icon = _defaultIcon};
         } else {
             //showSoundWaves must be 2, only draw speak icon
-            if ((_target getVariable [QGVAR(isSpeaking), false]) && {(vehicle _target) == _target}) then {_icon = ICON_SPEAK;};
+            if (([_target] call FUNC(isSpeaking)) && {(vehicle _target) == _target}) then {_icon = ICON_SPEAK;};
         };
 
         if ((_icon != ICON_NONE) &&
@@ -96,7 +96,7 @@ if (((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) || {GVAR(sho
 
             _alpha = ((1 - 0.2 * (_distance - GVAR(PlayerNamesViewDistance))) min (1 - 0.15 * (_projDist * 5 - _distance - 3)) min 1) * GVAR(PlayerNamesMaxAlpha);
 
-            if ((GVAR(showSoundWaves) == 2) && {(_target getVariable [QGVAR(isSpeaking), false]) && {(vehicle _target) == _target}}) then {
+            if ((GVAR(showSoundWaves) == 2) && {([_target] call FUNC(isSpeaking)) && {(vehicle _target) == _target}}) then {
                 _alpha = 1;
             } else {
                 _alpha = _alpha min _onKeyPressAlphaMax;

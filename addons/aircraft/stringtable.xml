@@ -32,8 +32,9 @@
             <French>Ourvir rampe cargo</French>
             <Polish>Otwórz drzwi ładowni</Polish>
             <Czech>Otevřít nákladní prostor</Czech>
-            <Hungarian>Rámpát kinyitni</Hungarian>
+            <Hungarian>Rakodórámpa nyitása</Hungarian>
             <Russian>Открыть грузовой отсек</Russian>
+            <Italian>Apri la porta del cargo</Italian>
         </Key>
         <Key ID="STR_ACE_Aircraft_CloseCargoRamp">
             <English>Close Cargo Door</English>
@@ -42,8 +43,9 @@
             <French>Fermer rampe cargo</French>
             <Polish>Zamknij drzwi ładowni</Polish>
             <Czech>Zavřít nákladní prostor</Czech>
-            <Hungarian>Rámpát zárni</Hungarian>
+            <Hungarian>Rakodórámpa zárása</Hungarian>
             <Russian>Закрыть грузовой отсек</Russian>
+            <Italian>Chiudi la porta del cargo</Italian>
         </Key>
     </Package>
 </Project>

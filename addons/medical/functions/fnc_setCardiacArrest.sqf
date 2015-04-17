@@ -33,7 +33,7 @@ _timeInCardiacArrest = 120 + round(random(600));
     _startTime = _args select 1;
     _timeInCardiacArrest = _args select 2;
 
-    _heartRate = _unit getvariable [QGVAR(heartRate), 0];
+    _heartRate = _unit getvariable [QGVAR(heartRate), 80];
     if (_heartRate > 0 || !alive _unit) exitwith {
         [(_this select 1)] call cba_fnc_removePerFrameHandler;
         _unit setvariable [QGVAR(inCardiacArrest), nil,true];

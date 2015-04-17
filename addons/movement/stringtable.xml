@@ -33,6 +33,8 @@
             <Spanish>Trepar</Spanish>
             <Czech>Vylézt</Czech>
             <Russian>Подняться</Russian>
+            <Hungarian>Mászás</Hungarian>
+            <Italian>Arrampicati</Italian>
         </Key>
         <Key ID="STR_ACE_Movement_CanNotClimb">
             <English>Can't climb here</English>
@@ -42,6 +44,8 @@
             <Spanish>No se puede trepar aquí</Spanish>
             <Czech>Zde není možné vylézt</Czech>
             <Russian>Не можете подняться здесь</Russian>
+            <Hungarian>Itt nem tudsz mászni</Hungarian>
+            <Italian>Non puoi arrampicarti qui</Italian>
         </Key>
     </Package>
 </Project>
