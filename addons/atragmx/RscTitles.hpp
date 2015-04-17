@@ -230,12 +230,12 @@ class ATragMX_Display {
             w=0.03;
             h=0.03;
             colorBackground[]={0,0,0,0.0};
-            action=QUOTE((GVAR(currentGun) + (count GVAR(gunList)) - 1) % (count GVAR(gunList)) call FUNC(change_gun));
+            action=QUOTE(-1 call FUNC(cycle_gun_list));
         };
         class BOTTOM: TOP {
             idc=-1;
             y=0.265*safezoneH+safezoneY+0.955;
-            action=QUOTE((GVAR(currentGun) + (count GVAR(gunList)) + 1) % (count GVAR(gunList)) call FUNC(change_gun));
+            action=QUOTE(+1 call FUNC(cycle_gun_list));
         };
         class LEFT: ATragMX_RscButton {
             idc=-1;
@@ -316,6 +316,7 @@ class ATragMX_Display {
             colorBackground[]={0.15,0.21,0.23,0.3};
             colorFocused[]={0.15,0.21,0.23,0.2};
             text="Gun";
+            action=QUOTE(call FUNC(toggle_gun_ammo_data));
         };
         class TEXT_BORE_HEIGHT: TEXT_GUN_PROFILE {
             idc=10;
@@ -323,12 +324,12 @@ class ATragMX_Display {
             y=0.265*safezoneH+safezoneY+0.285;
             text="BH";
         };
-        class TEXT_BORE_HEIGHT_INPUT: ATragMX_RscEdit {
+        class TEXT_BORE_HEIGHT_OUTPUT: TEXT_BORE_HEIGHT {
             idc=100;
+            style=ST_RIGHT;
             w=0.058;
             x=0.550*safezoneW+safezoneX+0.145;
             y=0.265*safezoneH+safezoneY+0.285;
-            onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(calculate_target_solution)});
         };
         class TEXT_BULLET_MASS: TEXT_BORE_HEIGHT {
             idc=11;
@@ -336,7 +337,7 @@ class ATragMX_Display {
             y=0.265*safezoneH+safezoneY+0.320;
             text="BW";
         };
-        class TEXT_BULLET_MASS_INPUT: TEXT_BORE_HEIGHT_INPUT {
+        class TEXT_BULLET_MASS_OUTPUT: TEXT_BORE_HEIGHT_OUTPUT {
             idc=110;
             y=0.265*safezoneH+safezoneY+0.320;
         };
@@ -345,7 +346,7 @@ class ATragMX_Display {
             y=0.265*safezoneH+safezoneY+0.355;
             text="C1";
         };
-        class TEXT_AIR_FRICTION_INPUT: TEXT_BORE_HEIGHT_INPUT {
+        class TEXT_AIR_FRICTION_OUTPUT: TEXT_BORE_HEIGHT_OUTPUT {
             idc=120;
             y=0.265*safezoneH+safezoneY+0.355;
         };
@@ -359,7 +360,7 @@ class ATragMX_Display {
             colorFocused[]={0.15,0.21,0.23,0.2};
             text="MV";
         };
-        class TEXT_MUZZLE_VELOCITY_INPUT: TEXT_BORE_HEIGHT_INPUT {
+        class TEXT_MUZZLE_VELOCITY_OUTPUT: TEXT_BORE_HEIGHT_OUTPUT {
             idc=130;
             y=0.265*safezoneH+safezoneY+0.390;
         };
@@ -368,35 +369,35 @@ class ATragMX_Display {
             y=0.265*safezoneH+safezoneY+0.425;
             text="ZR";
         };
-        class TEXT_ZERO_RANGE_INPUT: TEXT_BORE_HEIGHT_INPUT {
+        class TEXT_ZERO_RANGE_OUTPUT: TEXT_BORE_HEIGHT_OUTPUT {
             idc=140;
             y=0.265*safezoneH+safezoneY+0.425;
-            onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(update_zero_range)});
         };
         class TEXT_ATMOSPHERE: TEXT_GUN {
             idc=4001;
             x=0.550*safezoneW+safezoneX+0.205;
             text="Atmsphr";
+            action=QUOTE(0 call FUNC(toggle_atmo_env_data));
         };
         class TEXT_TEMPERATURE: TEXT_BULLET_MASS {
             idc=20;
             x=0.550*safezoneW+safezoneX+0.20;
             text="Tmp";
         };
-        class TEXT_TEMPERATURE_INPUT: ATragMX_RscEdit {
+        class TEXT_TEMPERATURE_OUTPUT: TEXT_TEMPERATURE {
             idc=200;
+            style=ST_RIGHT;
             w=0.050;
             x=0.550*safezoneW+safezoneX+0.245;
             y=0.265*safezoneH+safezoneY+0.320;
             text="";
-            onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(calculate_target_solution)});
         };
         class TEXT_BAROMETRIC_PRESSURE: TEXT_AIR_FRICTION {
             idc=21;
             x=0.550*safezoneW+safezoneX+0.20;
             text="BP";
         };
-        class TEXT_BAROMETRIC_PRESSURE_INPUT: TEXT_TEMPERATURE_INPUT {
+        class TEXT_BAROMETRIC_PRESSURE_OUTPUT: TEXT_TEMPERATURE_OUTPUT {
             idc=210;
             y=0.265*safezoneH+safezoneY+0.355;
         };
@@ -406,9 +407,18 @@ class ATragMX_Display {
             y=0.265*safezoneH+safezoneY+0.390;
             text="RH";
         };
-        class TEXT_RELATIVE_HUMIDITY_INPUT: TEXT_TEMPERATURE_INPUT {
+        class TEXT_RELATIVE_HUMIDITY_OUTPUT: TEXT_TEMPERATURE_OUTPUT {
             idc=220;
             y=0.265*safezoneH+safezoneY+0.390;
+        };
+        class TEXT_ALTITUDE: TEXT_BORE_HEIGHT {
+            idc=23;
+            x=0.550*safezoneW+safezoneX+0.20;
+            text="Alt";
+        };
+        class TEXT_ALTITUDE_OUTPUT: TEXT_TEMPERATURE_OUTPUT {
+            idc=230;
+            y=0.265*safezoneH+safezoneY+0.285;
         };
         class TEXT_TARGET_A: ATragMX_RscButton {
             idc=500;
@@ -445,18 +455,18 @@ class ATragMX_Display {
             idc=4002;
             x=0.550*safezoneW+safezoneX+0.3;
             text="Target";
+            action=QUOTE(0 call FUNC(toggle_target_data));
         };
         class TEXT_WIND_SPEED: TEXT_BORE_HEIGHT {
             idc=30;
             x=0.550*safezoneW+safezoneX+0.3;
             text="WS";
         };
-        class TEXT_WIND_SPEED_INPUT: ATragMX_RscEdit {
+        class TEXT_WIND_SPEED_OUTPUT: TEXT_BORE_HEIGHT_OUTPUT {
             idc=300;
             w=0.058;
             x=0.550*safezoneW+safezoneX+0.335;
             y=0.265*safezoneH+safezoneY+0.285;
-            onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(calculate_target_solution)});
             text="0";
         };
         class TEXT_WIND_DIRECTION: TEXT_BULLET_MASS {
@@ -464,7 +474,7 @@ class ATragMX_Display {
             x=0.550*safezoneW+safezoneX+0.3;
             text="WD";
         };
-        class TEXT_WIND_DIRECTION_INPUT: TEXT_WIND_SPEED_INPUT {
+        class TEXT_WIND_DIRECTION_OUTPUT: TEXT_WIND_SPEED_OUTPUT {
             idc=310;
             y=0.265*safezoneH+safezoneY+0.32;
         };
@@ -473,7 +483,7 @@ class ATragMX_Display {
             x=0.550*safezoneW+safezoneX+0.3;
             text="IA";
         };
-        class TEXT_INCLINATION_ANGLE_INPUT: TEXT_WIND_SPEED_INPUT {
+        class TEXT_INCLINATION_ANGLE_OUTPUT: TEXT_WIND_SPEED_OUTPUT {
             idc=320;
             y=0.265*safezoneH+safezoneY+0.355;
         };
@@ -481,9 +491,9 @@ class ATragMX_Display {
             idc=33;
             x=0.550*safezoneW+safezoneX+0.3;
             text="TS";
-            action=QUOTE(call FUNC(toggle_target_speed_assist));
+            action=QUOTE(0 call FUNC(toggle_target_speed_assist));
         };
-        class TEXT_TARGET_SPEED_INPUT: TEXT_WIND_SPEED_INPUT {
+        class TEXT_TARGET_SPEED_OUTPUT: TEXT_WIND_SPEED_OUTPUT {
             idc=330;
             y=0.265*safezoneH+safezoneY+0.39;
         };
@@ -493,7 +503,7 @@ class ATragMX_Display {
             text="TR";
             action=QUOTE(0 call FUNC(toggle_target_range_assist));
         };
-        class TEXT_TARGET_RANGE_INPUT: TEXT_WIND_SPEED_INPUT {
+        class TEXT_TARGET_RANGE_INPUT: TEXT_WIND_SPEED_OUTPUT {
             idc=340;
             y=0.265*safezoneH+safezoneY+0.425;
         };
@@ -563,6 +573,7 @@ class ATragMX_Display {
             x=0.550*safezoneW+safezoneX+0.11;
             y=0.265*safezoneH+safezoneY+0.57;
             text="Lead";
+            action="";
         };
         class TEXT_LEAD_OUTPUT: TEXT_ELEVATION_OUTPUT_ABSOLUTE {
             idc=420;
@@ -814,13 +825,13 @@ class ATragMX_Display {
             w=0.07;
             x=0.550*safezoneW+safezoneX+0.32;
             text="cm";
-            action=QUOTE(GVAR(rangeAssistTargetSizeUnit)=(GVAR(rangeAssistTargetSizeUnit)+1) % (count GVAR(GVAR(rangeAssistTargetSizeUnit)s)); ctrlSetText [7014, GVAR(GVAR(rangeAssistTargetSizeUnit)s) select GVAR(rangeAssistTargetSizeUnit)]);
+            action=QUOTE(call FUNC(cycle_target_size_units));
         };
         class TEXT_TARGET_RANGE_ASSIST_IMAGE_SIZE_UNIT: TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE_UNIT {
             idc=7015;
             y=0.265*safezoneH+safezoneY+0.45;
             text="MIL";
-            action=QUOTE(GVAR(rangeAssistImageSizeUnit)=(GVAR(rangeAssistImageSizeUnit)+1) % (count GVAR(rangeAssistImageSizeUnits)); ctrlSetText [7015, GVAR(rangeAssistImageSizeUnits) select GVAR(rangeAssistImageSizeUnit)]);
+            action=QUOTE(call FUNC(cycle_image_size_units));
         };
         class TEXT_TARGET_RANGE_ASSIST_ESTIMATED_RANGE_UNIT: TEXT_TARGET_RANGE_ASSIST_ESTIMATED_RANGE {
             idc=7016;
@@ -861,22 +872,22 @@ class ATragMX_Display {
 
         class TEXT_TARGET_SPEED_ASSIST_TARGET_RANGE: TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE {
             idc=8000;
-            x=0.550*safezoneW+safezoneX+0.12;
+            x=0.550*safezoneW+safezoneX+0.13;
             text="Target Range";
         };
         class TEXT_TARGET_SPEED_ASSIST_NUM_TICKS: TEXT_TARGET_RANGE_ASSIST_IMAGE_SIZE {
             idc=8001;
-            x=0.550*safezoneW+safezoneX+0.12;
+            x=0.550*safezoneW+safezoneX+0.13;
             text="Num Ticks";
         };
         class TEXT_TARGET_SPEED_ASSIST_TIME: TEXT_TARGET_RANGE_ASSIST_ANGLE {
             idc=8002;
-            x=0.550*safezoneW+safezoneX+0.12;
+            x=0.550*safezoneW+safezoneX+0.13;
             text="Time (secs)";
         };
         class TEXT_TARGET_SPEED_ASSIST_TARGET_ESTIMATED_SPEED: TEXT_TARGET_RANGE_ASSIST_ESTIMATED_RANGE {
             idc=8003;
-            x=0.550*safezoneW+safezoneX+0.12;
+            x=0.550*safezoneW+safezoneX+0.13;
             text="Est Speed";
         };
         class TEXT_TARGET_SPEED_ASSIST_TARGET_RANGE_INPUT: TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE_INPUT {
@@ -907,7 +918,7 @@ class ATragMX_Display {
         class TEXT_TARGET_SPEED_ASSIST_NUM_TICKS_UNIT: TEXT_TARGET_RANGE_ASSIST_IMAGE_SIZE_UNIT {
             idc=8009;
             text="MIL";
-            action=QUOTE(GVAR(speedAssistNumTicksUnit)=(GVAR(speedAssistNumTicksUnit)+1) % (count GVAR(speedAssistNumTicksUnits)); ctrlSetText [8009, GVAR(speedAssistNumTicksUnits) select GVAR(speedAssistNumTicksUnit)]; call FUNC(calculate_target_speed_assist));
+            action=QUOTE(call FUNC(cycle_num_ticks_units));
         };
         class TEXT_TARGET_SPEED_ASSIST_TIMER_START: TEXT_TARGET_RANGE_ASSIST_IMAGE_SIZE_UNIT {
             idc=8010;
@@ -1045,6 +1056,259 @@ class ATragMX_Display {
             x=0.550*safezoneW+safezoneX+0.245;
             text="Cancel";
             action=QUOTE(false call FUNC(show_add_new_gun); true call FUNC(show_gun_list));
+        };
+        
+        class TEXT_GUN_AMMO_DATA_BORE_HEIGHT: TEXT_BORE_HEIGHT {
+            idc=12000;
+            w=0.22;
+            y=0.265*safezoneH+safezoneY+0.28;
+            text="Bore     (cm)";
+        };
+        class TEXT_GUN_AMMO_DATA_BORE_HEIGHT_INPUT: ATragMX_RscEdit {
+            idc=120000;
+            w=0.06;
+            x=0.550*safezoneW+safezoneX+0.335;
+            y=0.265*safezoneH+safezoneY+0.28;
+        };
+        class TEXT_GUN_AMMO_DATA_BULLET_MASS: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
+            idc=12001;
+            y=0.265*safezoneH+safezoneY+0.320;
+            text="Bullet Weight    (grams)";
+        };
+        class TEXT_GUN_AMMO_DATA_BULLET_MASS_INPUT: TEXT_GUN_AMMO_DATA_BORE_HEIGHT_INPUT {
+            idc=120010;
+            y=0.265*safezoneH+safezoneY+0.320;
+        };
+        class TEXT_GUN_AMMO_DATA_BULLET_DIAMETER: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
+            idc=12002;
+            y=0.265*safezoneH+safezoneY+0.360;
+            text="Bullet Diam  (cm)";
+        };
+        class TEXT_GUN_AMMO_DATA_BULLET_DIAMETER_INPUT: TEXT_GUN_AMMO_DATA_BORE_HEIGHT_INPUT {
+            idc=120020;
+            y=0.265*safezoneH+safezoneY+0.360;
+        };
+        class TEXT_GUN_AMMO_DATA_AIR_FRICTION: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
+            idc=12003;
+            y=0.265*safezoneH+safezoneY+0.400;
+            text="C1 Coefficient";
+        };
+        class TEXT_GUN_AMMO_DATA_AIR_FRICTION_INPUT: TEXT_GUN_AMMO_DATA_BORE_HEIGHT_INPUT {
+            idc=120030;
+            y=0.265*safezoneH+safezoneY+0.400;
+        };
+        class TEXT_GUN_AMMO_DATA_RIFLE_TWIST: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
+            idc=12004;
+            y=0.265*safezoneH+safezoneY+0.440;
+            text="Rifle Twist (cm/trn)";
+        };
+        class TEXT_GUN_AMMO_DATA_RIFLE_TWIST_INPUT: TEXT_GUN_AMMO_DATA_BORE_HEIGHT_INPUT {
+            idc=120040;
+            y=0.265*safezoneH+safezoneY+0.440;
+        };
+        class TEXT_GUN_AMMO_DATA_MUZZLE_VELOCITY: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
+            idc=12005;
+            y=0.265*safezoneH+safezoneY+0.480;
+            text="Muzzle Velocity (m/s)";
+        };
+        class TEXT_GUN_AMMO_DATA_MUZZLE_VELOCITY_INPUT: TEXT_GUN_AMMO_DATA_BORE_HEIGHT_INPUT {
+            idc=120050;
+            y=0.265*safezoneH+safezoneY+0.480;
+        };
+        class TEXT_GUN_AMMO_DATA_ZERO_RANGE: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
+            idc=12006;
+            y=0.265*safezoneH+safezoneY+0.520;
+            text="Zero Range   (meters)";
+        };
+        class TEXT_GUN_AMMO_DATA_ZERO_RANGE_INPUT: TEXT_GUN_AMMO_DATA_BORE_HEIGHT_INPUT {
+            idc=120060;
+            y=0.265*safezoneH+safezoneY+0.520;
+        };
+        class TEXT_GUN_AMMO_DATA_DONE: TEXT_TARGET_SPEED_ASSIST_DONE {
+            idc=12008;
+            action=QUOTE(1 call FUNC(toggle_gun_ammo_data));
+        };
+        class TEXT_GUN_AMMO_DATA_CANCEL: TEXT_TARGET_SPEED_ASSIST_CANCEL {
+            idc=12009;
+            action=QUOTE(0 call FUNC(toggle_gun_ammo_data));
+        };
+        class TEXT_GUN_AMMO_DATA_PREV: TEXT_TARGET_SPEED_ASSIST_PREV {
+            idc=12010;
+        };
+        class TEXT_GUN_AMMO_DATA_NEXT: TEXT_TARGET_SPEED_ASSIST_NEXT {
+            idc=12011;
+        };
+        
+        class TEXT_ATMO_ENV_DATA_DEFAULT: TEXT_LEAD {
+            idc=13000;
+            w=0.08;
+            x=0.550*safezoneW+safezoneX+0.15;
+            y=0.265*safezoneH+safezoneY+0.320;
+            text="Default";
+            action=QUOTE(call FUNC(restore_atmo_default));
+        };
+        class TEXT_ATMO_ENV_DATA_AT: TEXT_TARGET_A {
+            idc=13001;
+            w=0.04;
+            x=0.550*safezoneW+safezoneX+0.24;
+            y=0.265*safezoneH+safezoneY+0.320;
+            text="AT";
+            action=QUOTE(GVAR(atmosphereModeTBH) = false; call FUNC(update_atmo_selection));
+        };
+        class TEXT_ATMO_ENV_DATA_TBH: TEXT_ATMO_ENV_DATA_AT {
+            idc=13002;
+            x=0.550*safezoneW+safezoneX+0.28;
+            text="TBH";
+            action=QUOTE(GVAR(atmosphereModeTBH) = true; call FUNC(update_atmo_selection));
+        };
+        class TEXT_ATMO_ENV_DATA_ALTITUDE: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
+            idc=13003;
+            x=0.550*safezoneW+safezoneX+0.115;
+            y=0.265*safezoneH+safezoneY+0.400;
+            text="Altitude (ft)";
+        };
+        class TEXT_ATMO_ENV_DATA_ALTITUDE_INPUT: TEXT_GUN_AMMO_DATA_BORE_HEIGHT_INPUT {
+            idc=130030;
+            x=0.550*safezoneW+safezoneX+0.330;
+            y=0.265*safezoneH+safezoneY+0.400;
+        };
+        class TEXT_ATMO_ENV_DATA_TEMPERATURE: TEXT_ATMO_ENV_DATA_ALTITUDE {
+            idc=13004;
+            y=0.265*safezoneH+safezoneY+0.440;
+            text="temperature (F)";
+        };
+        class TEXT_ATMO_ENV_DATA_TEMPERATURE_INPUT: TEXT_ATMO_ENV_DATA_ALTITUDE_INPUT {
+            idc=130040;
+            y=0.265*safezoneH+safezoneY+0.440;
+        };
+        class TEXT_ATMO_ENV_DATA_BAROMETRIC_PRESSURE: TEXT_ATMO_ENV_DATA_ALTITUDE {
+            idc=13005;
+            y=0.265*safezoneH+safezoneY+0.480;
+            text="Barom Pres (in.merc.)";
+        };
+        class TEXT_ATMO_ENV_DATA_BAROMETRIC_PRESSURE_INPUT: TEXT_ATMO_ENV_DATA_ALTITUDE_INPUT {
+            idc=130050;
+            y=0.265*safezoneH+safezoneY+0.480;
+        };
+        class TEXT_ATMO_ENV_DATA_RELATIVE_HUMIDITY: TEXT_ATMO_ENV_DATA_ALTITUDE {
+            idc=13006;
+            y=0.265*safezoneH+safezoneY+0.520;
+            text="Relative Humidity (%)";
+        };
+        class TEXT_ATMO_ENV_DATA_RELATIVE_HUMIDITY_INPUT: TEXT_ATMO_ENV_DATA_ALTITUDE_INPUT {
+            idc=130060;
+            y=0.265*safezoneH+safezoneY+0.520;
+        };
+        class TEXT_ATMO_ENV_DATA_DONE: TEXT_TARGET_SPEED_ASSIST_DONE {
+            idc=13007;
+            action=QUOTE(1 call FUNC(toggle_atmo_env_data));
+        };
+        class TEXT_ATMO_ENV_DATA_CANCEL: TEXT_TARGET_SPEED_ASSIST_CANCEL {
+            idc=13008;
+            action=QUOTE(0 call FUNC(toggle_atmo_env_data));
+        };
+        class TEXT_ATMO_ENV_DATA_PREV: TEXT_TARGET_SPEED_ASSIST_PREV {
+            idc=13009;
+        };
+        class TEXT_ATMO_ENV_DATA_NEXT: TEXT_TARGET_SPEED_ASSIST_NEXT {
+            idc=13010;
+        };
+        
+        class TEXT_TARGET_DATA_LATITUDE: TEXT_BORE_HEIGHT {
+            idc=14000;
+            w=0.22;
+            y=0.265*safezoneH+safezoneY+0.28;
+            text="Latitude";
+        };
+        class TEXT_TARGET_DATA_LATITUDE_INPUT: ATragMX_RscEdit {
+            idc=140000;
+            w=0.06;
+            x=0.550*safezoneW+safezoneX+0.335;
+            y=0.265*safezoneH+safezoneY+0.28;
+        };
+        class TEXT_TARGET_DATA_DIR_OF_FIRE: TEXT_TARGET_DATA_LATITUDE {
+            idc=14001;
+            y=0.265*safezoneH+safezoneY+0.320;
+            text="Dir of Fire (deg from N)";
+        };
+        class TEXT_TARGET_DATA_DIR_OF_FIRE_INPUT: TEXT_TARGET_DATA_LATITUDE_INPUT {
+            idc=140010;
+            y=0.265*safezoneH+safezoneY+0.320;
+        };
+        class TEXT_TARGET_DATA_WIND_SPEED: TEXT_TARGET_DATA_LATITUDE {
+            idc=14002;
+            y=0.265*safezoneH+safezoneY+0.360;
+            text="Wind Speed (m/s)";
+        };
+        class TEXT_TARGET_DATA_WIND_SPEED_INPUT_1: TEXT_TARGET_DATA_LATITUDE_INPUT {
+            idc=140020;
+            w=0.045;
+            x=0.550*safezoneW+safezoneX+0.300;
+            y=0.265*safezoneH+safezoneY+0.360;
+        };
+        class TEXT_TARGET_DATA_WIND_SPEED_INPUT_2: TEXT_TARGET_DATA_LATITUDE_INPUT {
+            idc=140021;
+            w=0.045;
+            x=0.550*safezoneW+safezoneX+0.350;
+            y=0.265*safezoneH+safezoneY+0.360;
+        };
+        class TEXT_TARGET_DATA_WIND_DIRECTION: TEXT_TARGET_DATA_LATITUDE {
+            idc=14003;
+            y=0.265*safezoneH+safezoneY+0.400;
+            text="Wind Direction (clock)";
+        };
+        class TEXT_TARGET_DATA_WIND_DIRECTION_INPUT: TEXT_TARGET_DATA_LATITUDE_INPUT {
+            idc=140030;
+            y=0.265*safezoneH+safezoneY+0.400;
+        };
+        class TEXT_TARGET_DATA_INCLINATION_ANGLE: TEXT_TARGET_DATA_LATITUDE {
+            idc=14004;
+            y=0.265*safezoneH+safezoneY+0.440;
+            text="Inclination Angle";
+        };
+        class TEXT_TARGET_DATA_INCLINATION_ANGLE_INPUT_COSINE: TEXT_TARGET_DATA_LATITUDE_INPUT {
+            idc=140041;
+            w=0.045;
+            x=0.550*safezoneW+safezoneX+0.300;
+            y=0.265*safezoneH+safezoneY+0.440;
+        };
+        class TEXT_TARGET_DATA_INCLINATION_ANGLE_INPUT_DEGREE: TEXT_TARGET_DATA_LATITUDE_INPUT {
+            idc=140040;
+            w=0.045;
+            x=0.550*safezoneW+safezoneX+0.350;
+            y=0.265*safezoneH+safezoneY+0.440;
+        };
+        class TEXT_TARGET_DATA_TARGET_SPEED: TEXT_TARGET_DATA_LATITUDE {
+            idc=14005;
+            y=0.265*safezoneH+safezoneY+0.480;
+            text="Target Speed (m/s)";
+        };
+        class TEXT_TARGET_DATA_TARGET_SPEED_INPUT: TEXT_TARGET_DATA_LATITUDE_INPUT {
+            idc=140050;
+            y=0.265*safezoneH+safezoneY+0.480;
+        };
+        class TEXT_TARGET_DATA_TARGET_RANGE: TEXT_TARGET_DATA_LATITUDE {
+            idc=14006;
+            y=0.265*safezoneH+safezoneY+0.520;
+            text="Target Range (meters)";
+        };
+        class TEXT_TARGET_DATA_TARGET_RANGE_INPUT: TEXT_TARGET_DATA_LATITUDE_INPUT {
+            idc=140060;
+            y=0.265*safezoneH+safezoneY+0.520;
+        };
+        class TEXT_TARGET_DATA_DONE: TEXT_TARGET_SPEED_ASSIST_DONE {
+            idc=14008;
+            action=QUOTE(1 call FUNC(toggle_target_data));
+        };
+        class TEXT_TARGET_DATA_CANCEL: TEXT_TARGET_SPEED_ASSIST_CANCEL {
+            idc=14009;
+            action=QUOTE(0 call FUNC(toggle_target_data));
+        };
+        class TEXT_TARGET_DATA_PREV: TEXT_TARGET_SPEED_ASSIST_PREV {
+            idc=14010;
+        };
+        class TEXT_TARGET_DATA_NEXT: TEXT_TARGET_SPEED_ASSIST_NEXT {
+            idc=14011;
         };
     };
 };
