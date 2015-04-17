@@ -222,7 +222,7 @@
         <Key ID="STR_ACE_WeaponSelect_NoFragsLeft">
             <English>No frags left</English>
             <German>Keine explosiven Granaten übrig</German>
-            <Spanish>No quedan granadas de fragmentación</Spanish>
+            <Spanish>No quedan granadas no fragmentarias</Spanish>
             <Polish>Brak granatów odłamkowych</Polish>
             <French>Plus de grenades à fragmentation</French>
             <Hungarian>Nincs több repeszgránát</Hungarian>
