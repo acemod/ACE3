@@ -427,8 +427,8 @@ class ACE_ArmRight {
     };
     class PlasmaIV: BloodIV {
         displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_1000";
-        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(treatment));
+        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV')] call DFUNC(treatment));
         EXCEPTIONS
     };
     class PlasmaIV_500: PlasmaIV {
@@ -583,8 +583,8 @@ class ACE_LegLeft {
     };
     class PlasmaIV: BloodIV {
         displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_1000";
-        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(treatment));
+        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV')] call DFUNC(treatment));
         EXCEPTIONS
     };
     class PlasmaIV_500: PlasmaIV {
@@ -724,8 +724,8 @@ class ACE_LegRight {
     };
     class PlasmaIV: BloodIV {
         displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_1000";
-        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(treatment));
+        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV')] call DFUNC(treatment));
         EXCEPTIONS
     };
     class PlasmaIV_500: PlasmaIV {
