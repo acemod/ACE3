@@ -38,7 +38,7 @@ The mod is **built modularly**, so almost any included PBO can be easily removed
 * Performance and reliability framework
 * Focus on modularity and customization
 * New flexible client and server settings & configuration
-* Improved medical system with various levels (Basic/Advanced) focus on gameplay/realism
+* Improved medical system with various levels (basic/advanced) focus on gameplay/realism
 * Proper & consistent network-synced weather
 * Wind and weather-based ballistics
 * Captivity system
@@ -49,7 +49,7 @@ The mod is **built modularly**, so almost any included PBO can be easily removed
 #### Additional features
 * Carrying and dragging
 * Realistic names for vehicles and weapons
-A fire control system (FCS) for armored vehicles and helicopters
+* A fire control system (FCS) for armored vehicles and helicopters
 * Realistic ballistics/FCS calculated in C/C++ extensions
 * Backblast area and overpressure simulation
 * Disposable launchers
