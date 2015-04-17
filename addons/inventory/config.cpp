@@ -21,7 +21,7 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = "$STR_ACE_Inventory_SettingName";
         description = "$STR_ACE_Inventory_SettingDescription";
-        values[] = {"Normal (Default Size)", "Medium", "Bigger"};
+        values[] = {"$str_medium", "$str_large", "$str_very_large"};
     };
 };
 
