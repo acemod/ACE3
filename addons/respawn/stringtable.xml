@@ -54,22 +54,22 @@
         <Key ID="STR_ACE_Respawn_RallypointIndependentBase">
             <English>Rallypoint Independent (Base)</English>
             <German>Sammelpunkt Widerstand (Basis)</German>
-            <Spanish>Punto de reunion Independiente (Base)</Spanish>
+            <Spanish>Punto de reunión Independiente (Base)</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWest">
             <English>Rallypoint West</English>
             <German>Sammelpunkt West</German>
-            <Spanish>Punto de reunion Oeste</Spanish>
+            <Spanish>Punto de reunión Oeste</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEast">
             <English>Rallypoint East</English>
             <German>Sammelpunkt Ost</German>
-            <Spanish>Punto de reunion Este</Spanish>
+            <Spanish>Punto de reunión Este</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependent">
             <English>Rallypoint Independent</English>
             <German>Sammelpunkt Widerstand</German>
-            <Spanish>Punto de reunion Independiente</Spanish>
+            <Spanish>Punto de reunión Independiente</Spanish>
         </Key>
     </Package>
 </Project>

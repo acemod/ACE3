@@ -112,7 +112,7 @@
         <Key ID="STR_ACE_Attach_Inventory_Full">
             <English>No inventory space</English>
             <German>Kein Platz im Inventar</German>
-            <Spanish>Sin espacio en inventario</Spanish>
+            <Spanish>Sin espacio en el inventario</Spanish>
             <Polish>Brak miejsca w ekwipunku</Polish>
             <French>Pas de place dans l'inventaire</French>
             <Czech>Není místo v inventáři</Czech>
@@ -137,7 +137,7 @@
             <English>IR Strobe allows you to signal your position through a pulsating beacon only visible with NVGs.</English>
             <German>Das IR-Stroboskop erlaubt es dir deine Position mit einem blinkenden Leuchtfeuer zu signalisieren, welches nur mit Nachtsichtgerät zu erkennen ist.</German>
             <Polish>Stroboskop światła podczerwieni umożliwia oznaczenie swojej pozycji pulsacyjnym światłem widocznym tylko przez optykę noktowizyjną i gogle noktowizyjne.</Polish>
-            <Spanish>El Marcador IR permite señalizar su posisición a través de una baliza visible solo a través de dispositivos de visión nocturna. </Spanish>
+            <Spanish>El Marcador IR permite señalizar tu posición a través de un pulso infrarrojo solo visible con equipo de visión nocturna. </Spanish>
             <French>Le Strobe IR permet de signaler votre position grace à un clignotement visible par des JVN.</French>
             <Czech>IR Značkovač je Infračerveně zářící stroboskop umožňující signalizaci vaší pozice díky blikajícímu světlu, které je vidět pouze při užití noktovizoru.</Czech>
             <Portuguese>O Marcador IV permite que você sinalize sua posição através de um pulso visível somente com equipamento de visão noturna.</Portuguese>

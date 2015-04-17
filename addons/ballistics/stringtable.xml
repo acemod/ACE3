@@ -298,7 +298,7 @@
             <English>7.62mm 20rnd Tracer Mag</English>
             <Hungarian>7,62 mm Nyomjelző IR-DIM 20-as Tár</Hungarian>
             <German>7,62 mm 20-Schuss-Magazin Leuchtspur</German>
-            <Spanish>Cargador de 20 balas trazadores de 7,62mm</Spanish>
+            <Spanish>Cargador de 20 balas trazadoras de 7,62mm</Spanish>
             <French>Ch. 7,62mm 20Cps Traçantes </French>
             <Polish>Magazynek 7,62mm 20rd Smugacz</Polish>
             <Czech>7.62mm 20ks Svítící Zásobník</Czech>
@@ -444,6 +444,7 @@
             <German>.338 NM 130-Schuss-Gurt Leuchtspur</German>
             <Polish>Taśma .338 NM 130rd Smugacz</Polish>
             <French>Bande .338 NM 130Cps Traçante</French>
+            <Spanish>Cinta de 130 balas trazadoras de .338 NM </Spanish>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_TracerNameShort">
             <English>.338 NM Tracer</English>
@@ -458,12 +459,14 @@
             <German>Kaliber: .338 Norma Magnum Leuchtspur&lt;br /&gt;Schuss: 130&lt;br /&gt;Verwendet für: SPMG</German>
             <Polish>Kaliber: .338 Norma Magnum Smugacz&lt;br /&gt;Pociski: 130&lt;br /&gt;Używany w: SPMG</Polish>
             <French>Calibre: .338 Norma Magnum Traçante&lt;br /&gt;Cartouches: 130&lt;br /&gt;Utilisé dans: SPMG</French>
+            <Spanish>Calibre: .338 Norma Magnum Trazadora&lt;br/&gt;Balas: 130&lt;br/&gt;Utilizado en: SPMG</Spanish>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_Tracer_DimName">
             <English>.338 NM 130Rnd IR-DIM Belt</English>
             <German>.338 NM 130-Schuss-Gurt Leuchtspur IR-DIM</German>
             <Polish>Taśma .338 NM 130rd IR-DIM</Polish>
             <French>Bande .338 NM 130Cps IR-DIM</French>
+            <Spanish>Cinta de 130 balas IR-DIM de .338 NM</Spanish>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_Tracer_DimNameShort">
             <English>.338 NM IR-DIM</English>
@@ -471,18 +474,21 @@
             <Polish>.338 NM IR-DIM</Polish>
             <Czech>.338 NM IR-DIM</Czech>
             <French>.338 NM IR-DIM</French>
+            <Spanish>.338 NM IR-DIM</Spanish>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_Tracer_DimDescription">
             <English>Caliber: .338 Norma Magnum Tracer IR-DIM&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
             <German>Kaliber: .338 Norma Magnum Leuchtspur IR-DIM&lt;br /&gt;Schuss: 130&lt;br /&gt;Verwendet für: SPMG</German>
             <Polish>Kaliber: .338 Norma Magnum Smugacz IR-DIM&lt;br /&gt;Pociski: 130&lt;br /&gt;Używany w: SPMG</Polish>
             <French>Calibre: .338 Norma Magnum Traçante IR-DIM&lt;br /&gt;Cartouches: 130&lt;br /&gt;Utilisé dans: SPMG</French>
+            <Spanish>Calibre: .338 Norma Magnum Trazadora IR-DIM&lt;br/&gt;Balas: 130&lt;br/&gt;Utilizado en: SPMG</Spanish>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_APName">
             <English>.338 NM 130Rnd AP Belt</English>
             <German>.338 NM 130-Schuss-Gurt Hartkern</German>
             <Polish>Taśma .338 NM 130rd AP</Polish>
             <French>Bande .338 NM 130Cps AP</French>
+            <Spanish>Cinta de 130 balas AP de .338 NM</Spanish>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_APNameShort">
             <English>.338 NM AP</English>
@@ -490,12 +496,14 @@
             <Polish>.338 NM AP</Polish>
             <Czech>.338 NM AP</Czech>
             <French>.338 NM AP</French>
+            <Spanish>.338 NM AP</Spanish>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_APDescription">
             <English>Caliber: .338 Norma Magnum AP&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
             <German>Kaliber: .338 Norma Magnum Hartkern&lt;br /&gt;Schuss: 130&lt;br /&gt;Verwendet für: SPMG</German>
             <Polish>Kaliber: .338 Norma Magnum AP&lt;br /&gt;Pociski: 130&lt;br /&gt;Używane w: SPMG</Polish>
             <French>Calibre: .338 Norma Magnum AP&lt;br /&gt;Cartouches: 130&lt;br /&gt;Utilisé dans: SPMG</French>
+            <Spanish>Calibre: .338 Norma Magnum AP&lt;br/&gt;Balas: 130&lt;br/&gt;Utilizado en: SPMG</Spanish>
         </Key>
         <!-- 9.3x64mm 10Rnd -->
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_TracerName">
@@ -503,6 +511,7 @@
             <German>9,3mm 10-Schuss-Magazin Leuchtspur</German>
             <Polish>Magazynek 9.3mm 10rd Smugacz</Polish>
             <French>Chargeur 9.3mm 10Cps Traçante</French>
+            <Spanish>Cargador de 10 balas trazadoras de 9.3mm</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_TracerNameShort">
             <English>9.3mm Tracer</English>
@@ -510,18 +519,21 @@
             <Polish>9,3mm Smugacz</Polish>
             <Czech>9.3mm Svítící</Czech>
             <French>9.3mm Traçante</French>
+            <Spanish>9.3mm Trazadora</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_TracerDescription">
             <English>Caliber: 9.3x64mm Tracer&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
             <German>Kaliber: 9,3x64mm Leuchtspur&lt;br /&gt;Schuss: 10&lt;br /&gt;Verwendet für: Cyrus</German>
             <Polish>Kaliber: 9,3x64 mm Smugacz&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: Cyrus</Polish>
             <French>Calibre: 9.3x64mm Traçante&lt;br /&gt;Cartouches: 10&lt;br /&gt;Utilisé dans: Cyrus</French>
+            <Spanish>Calibre: 9.3x64mm Trazadora&lt;br/&gt;Balas: 10&lt;br/&gt;Utilizado en: Cyrus</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_Tracer_DimName">
             <English>9.3mm 10Rnd Tracer IR-DIM Mag</English>
             <German>9,3mm 10-Schuss-Magazin Leuchtspur IR-DIM</German>
             <Polish>Magazynek 9,3mm 10rd Smugacz IR-DIM</Polish>
             <French>Chargeur 9.3mm 10Cps Traçante IR-DIM</French>
+            <Spanish>Cargador de 10 balas trazadoras IR-DIM de 9.3mm</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_Tracer_DimNameShort">
             <English>9.3mm IR-DIM</English>
@@ -529,18 +541,21 @@
             <Polish>9,3mm IR-DIM</Polish>
             <Czech>9.3mm IR-DIM</Czech>
             <French>9.3mm IR-DIM</French>
+            <Spanish>9.3mm IR-DIM</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_Tracer_DimDescription">
             <English>Caliber: 9.3x64mm Tracer IR-DIM&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
             <German>Kaliber: 9,3x64mm Leuchtspur IR-DIM&lt;br /&gt;Schuss: 10&lt;br /&gt;Verwendet für: Cyrus</German>
             <Polish>Kaliber: 9,3x64 mm Smugacz IR-DIM&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: Cyrus</Polish>
             <French>Calibre: 9.3x64mm Traçante IR-DIM&lt;br /&gt;Cartouches: 10&lt;br /&gt;Utilisé dans: Cyrus</French>
+            <Spanish>Calibre: 9.3x64mm Trazadora IR-DIM&lt;br/&gt;Balas: 10&lt;br/&gt;Utilizado en: Cyrus</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_APName">
             <English>9.3mm 10Rnd AP Mag</English>
             <German>9,3mm 10-Schuss-Magazin Hartkern</German>
             <Polish>Magazynek 9,3mm 10rd AP</Polish>
             <French>Chargeur 9.3mm 10Cps AP</French>
+            <Spanish>Cargador de 10 balas AP de 9.3mm</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_APNameShort">
             <English>9.3mm AP</English>
@@ -548,6 +563,7 @@
             <Polish>9,3mm AP</Polish>
             <Czech>9.3mm AP</Czech>
             <French>9.3mm AP</French>
+            <Spanish>9.3mm AP</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_APDescription">
             <English>Caliber: 9.3x64mm AP&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
@@ -854,34 +870,42 @@
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_NameShort">
             <English>.338 AP</English>
             <French>.338 AP</French>
+            <Spanish>.338 AP</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Description">
             <English>Caliber: 8.6x70mm (API526)&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 8.6x70mm (API526)&lt;br /&gt;Cartouches: 10</French>
+            <Spanish>Calibre: 8.6x70mm (API526)&lt;br/&gt;Balas: 10</Spanish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Name">
             <English>12.7x99mm 5Rnd Mag</English>
             <French>12.7x99mm 5Cps</French>
+            <Spanish>Cargador de 5 balas de 12.7x99mm</Spanish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_NameShort">
             <English>12.7mm</English>
             <French>12.7mm</French>
+            <Spanish>12.7mm</Spanish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Description">
             <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm&lt;br /&gt;Cartouches: 5</French>
+            <Spanish>Calibre: 12.7x99mm&lt;br/&gt;Balas: 5</Spanish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Name">
             <English>12.7x99mm 5Rnd Mag (AMAX)</English>
             <French>12.7x99mm 5Rnd Mag (AMAX)</French>
+            <Spanish>Cargador de 5 balas (AMAX) de 12.7x99mm</Spanish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_NameShort">
             <English>12.7mm</English>
             <French>12.7mm</French>
+            <Spanish>12.7mm</Spanish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Description">
             <English>Caliber: 12.7x99mm (AMAX)&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Cartouches: 5</French>
+            <Spanish>Calibre: 12.7x99mm (AMAX)&lt;br/&gt;Balas: 5</Spanish>
         </Key>
     </Package>
 </Project>
