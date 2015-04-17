@@ -79,7 +79,7 @@
             <Polish>Klucz, który powinien otworzyć większość pojazdów ZACHODU.</Polish>
             <Czech>Klíč který by měl otevřít většinou Západních vozidel.</Czech>
             <Hungarian>Egy kulcs, ami a NYUGAT egységeinek legtöbb járművét ki tudja nyitni.</Hungarian>
-            <Russian>Ключ для открытия большинства машин Запада.</Russian>
+            <Russian>Ключ для открытия большинства машин Красных.</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_East_Description">
             <English>A key that should open most EAST vehicle.</English>
@@ -89,7 +89,7 @@
             <Polish>Klucz, który powinien otworzyć większość pojazdów WSCHODU.</Polish>
             <Hungarian>Egy kulcs, ami a KELET egységeinek legtöbb járművét ki tudja nyitni.</Hungarian>
             <Czech>Klíč který by měl otevřít vetšinu Východních vozidel.</Czech>
-            <Russian>Ключ для открытия большинства машин Востока.</Russian>
+            <Russian>Ключ для открытия большинства машин Синих.</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_Indp_Description">
             <English>A key that should open most INDEP vehicle.</English>

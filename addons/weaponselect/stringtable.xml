@@ -229,7 +229,7 @@
             <Czech>Už nejsou granáty</Czech>
             <Portuguese>Não há granadas de fragmentação restantes</Portuguese>
             <Italian>Nessuna granata a frammentazione rimanente</Italian>
-            <Russian>Осколочныких гранат нет</Russian>
+            <Russian>Осколочных гранат нет</Russian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoMiscGrenadeLeft">
             <English>No misc. grenades left</English>
