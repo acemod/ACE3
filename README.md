@@ -28,8 +28,7 @@
 
 **ACE3** is a joint effort by the teams behind **ACE2**, **AGM** and **CSE** to improve the realism and authenticity of Arma 3.
 
-The project is entirely **open-source** and all contributions are welcome. Feel free to maintain your own custom version, so long as the changes you make are open to the public in accordance with the GNU General Public License:
-* [`LICENSE`](https://github.com/acemod/ACE3/blob/master/LICENSE)
+The project is entirely **open-source** and all contributions are welcome. Feel free to maintain your own custom version, so long as the changes you make are open to the public in accordance with the GNU General Public License ([GPLv2](https://github.com/acemod/ACE3/blob/master/LICENSE)).
 
 The mod is **built modularly**, so almost any included PBO can be easily removed from the configuration. This way, a team can maintain its own tailored version of ACE by simply excluding any components they don't need, or those possibly in conflict with other add-ons. Modules themselves, e.g. the medical system, also include various customization options, allowing mission designers to tweak the overall experience.
 
