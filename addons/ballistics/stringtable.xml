@@ -994,7 +994,7 @@
             <English>Caliber: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Balas: 10</Spanish>
-            <Russian>Калибр: 8,6x70 мм (300 гран Sierra MatchKing HPBT)&lt;br /&gt;Патронов: 10</Russian>
+            <Russian>Калибр: .338 (300 гран Sierra MatchKing HPBT)&lt;br /&gt;Патронов: 10</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Name">
             <English>.338 10Rnd Mag (API526)</English>
@@ -1012,7 +1012,7 @@
             <English>Caliber: 8.6x70mm (API526)&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 8.6x70mm (API526)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 8.6x70mm (API526)&lt;br /&gt;Balas: 10</Spanish>
-            <Russian>Калибр: 8,6x70 мм (API526)&lt;br /&gt;Патронов: 10</Russian>
+            <Russian>Калибр: .338 (API526)&lt;br /&gt;Патронов: 10</Russian>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Name">
             <English>12.7x99mm 5Rnd Mag</English>
