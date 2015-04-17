@@ -1518,7 +1518,7 @@
             <English>Heavily wounded</English>
             <German>Schwer verwundet:</German>
             <Polish>Ciężko ranny</Polish>
-            <Russian>Сильно ранен</Russian>
+            <Russian>Сильные ранения</Russian>
             <Italian>Gravemente ferito</Italian>
             <Spanish>Gravemente herido</Spanish>
         </Key>
@@ -1526,7 +1526,7 @@
             <English>Lightly wounded</English>
             <German>Leicht verwundet:</German>
             <Polish>Lekko ranny</Polish>
-            <Russian>Легко ранен</Russian>
+            <Russian>Легкие ранения</Russian>
             <Italian>Leggermente ferito</Italian>
             <Spanish>Levemente herido</Spanish>
         </Key>
@@ -1534,7 +1534,7 @@
             <English>Very lightly wounded</English>
             <German>Sehr leicht verwundet:</German>
             <Polish>B. lekko ranny</Polish>
-            <Russian>Очень легко ранен</Russian>
+            <Russian>Царапины</Russian>
             <Italian>Ferito lievemente</Italian>
             <Spanish>Muy levemente herido</Spanish>
         </Key>
@@ -1542,7 +1542,7 @@
             <English>Head</English>
             <German>Kopf</German>
             <Polish>Głowa</Polish>
-            <Russian>Голова</Russian>
+            <Russian>Головы</Russian>
             <Italian>Testa</Italian>
             <Spanish>Cabeza</Spanish>
         </Key>
@@ -1550,7 +1550,7 @@
             <English>Torso</English>
             <German>Torso</German>
             <Polish>Tors</Polish>
-            <Russian>Торс</Russian>
+            <Russian>Торса</Russian>
             <Italian>Torso</Italian>
             <Spanish>Torso</Spanish>
         </Key>
@@ -1558,7 +1558,7 @@
             <English>Left Arm</English>
             <German>Linker Arm</German>
             <Polish>Lewe ramię</Polish>
-            <Russian>Левая рука</Russian>
+            <Russian>Левой руки</Russian>
             <Italian>Braccio sinistro</Italian>
             <Spanish>Brazo izquierdo</Spanish>
         </Key>
@@ -1566,7 +1566,7 @@
             <English>Right Arm</English>
             <German>Rechter Arm</German>
             <Polish>Prawe ramię</Polish>
-            <Russian>Правая рука</Russian>
+            <Russian>Правой руки</Russian>
             <Italian>Braccio destro</Italian>
             <Spanish>Brazo derecho</Spanish>
         </Key>
@@ -1574,7 +1574,7 @@
             <English>Left Leg</English>
             <German>Linkes Bein</German>
             <Polish>Lewa noga</Polish>
-            <Russian>Левая нога</Russian>
+            <Russian>Левой ноги</Russian>
             <Italian>Gamba sinistra</Italian>
             <Spanish>Pierna izquierda</Spanish>
         </Key>
@@ -1582,7 +1582,7 @@
             <English>Right Leg</English>
             <German>Rechtes Bein</German>
             <Polish>Prawa noga</Polish>
-            <Russian>Правая нога</Russian>
+            <Russian>Правой ноги</Russian>
             <Italian>Gamba destra</Italian>
             <Spanish>Pierna derecha</Spanish>
         </Key>
