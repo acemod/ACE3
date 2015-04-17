@@ -124,6 +124,8 @@ PREP(moduleCheckPBOs);
 PREP(moduleLSDVehicles);
 PREP(moveToTempGroup);
 PREP(muteUnit);
+PREP(muteUnitHandleInitPost);
+PREP(muteUnitHandleRespawn);
 PREP(numberToDigits);
 PREP(numberToDigitsString);
 PREP(numberToString);

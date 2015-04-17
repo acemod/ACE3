@@ -23,3 +23,5 @@ if (_this select 0) then {
     (_dlgVector displayCtrl 1323) ctrlSetText "";
     (_dlgVector displayCtrl 1324) ctrlSetText "";
 };
+
+[GVAR(illuminate)] call FUNC(illuminate);
