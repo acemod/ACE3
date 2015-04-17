@@ -198,5 +198,8 @@
             <French>Paramètres exportés dans le presse papier</French>
             <Hungarian>Beállítások exportálva a vágólapba</Hungarian>
         </Key>
+        <Key ID="STR_ACE_optionsMenu_uiScaing">
+            <English>Option Menu UI Scaling</English>
+        </Key>
     </Package>
 </Project>
