@@ -70,6 +70,12 @@ class ACE_Head {
         statement = QUOTE([ARR_4(_player, _target, 'head', 'CheckResponse')] call DFUNC(treatment));
         EXCEPTIONS
     };
+    class Diagnose: CheckPulse {
+        displayName = "Diagnose";
+        condition = QUOTE([ARR_4(_player, _target, 'head', 'Diagnose')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'head', 'Diagnose')] call DFUNC(treatment));
+        EXCEPTIONS
+    };
 };
 class ACE_Torso {
     displayName = "$STR_ACE_Interaction_Torso";
