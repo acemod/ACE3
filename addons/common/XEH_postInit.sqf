@@ -87,7 +87,7 @@ enableCamShake true;
 // Set the name for the current player
 ["playerChanged", {
     EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
-
+    diag_log text format["PLAYER CHANGED!", _this];
     if (alive _newPlayer) then {
         [_newPlayer] call FUNC(setName)
     };
@@ -188,3 +188,8 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
     // Players can always interact with passengers of the same vehicle
     {!((_this select 0) isEqualTo (_this select 1)) && {vehicle (_this select 0) == vehicle (_this select 1)}}
 }] call FUNC(addCanInteractWithCondition);
+
+// Synced ACE events
+["SEH", FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
+["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
+[FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
