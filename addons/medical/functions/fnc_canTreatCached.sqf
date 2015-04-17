@@ -19,4 +19,4 @@
 #define MAX_DURATION_CACHE 2
 
 // parameters, function, namespace, uid
-[_this, DFUNC(canTreat), _this select 0, format[QGVAR(canTreat_%1_%2), _this select 2, _this select 3], MAX_DURATION_CACHE, "clearConditionCaches"] call EFUNC(common,cachedCall);
+[_this, DFUNC(canTreat), _this select 1, format[QGVAR(canTreat_%1_%2), _this select 2, _this select 3], MAX_DURATION_CACHE, "clearConditionCaches"] call EFUNC(common,cachedCall);

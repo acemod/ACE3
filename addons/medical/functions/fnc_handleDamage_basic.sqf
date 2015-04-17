@@ -63,6 +63,12 @@ if (_selectionName in GVAR(SELECTIONS)) then {
     _newDamage = _damage - (_unit getHitPointDamage (GVAR(HITPOINTS) select (GVAR(SELECTIONS) find _selectionName)));
 };
 
+if ([_unit] call EFUNC(common,isPlayer)) then {
+   _newDamage = _newDamage / (GVAR(playerDamageThreshold) max 0.01);
+} else {
+    _newDamage = _newDamage / (GVAR(AIDamageThreshold) max 0.01);
+};
+
 _damage = _damage - _newDamage;
 
 

@@ -38,7 +38,7 @@ if (_selectionName in _hitSelections) then {
 
 // Check for vehicle crash
 if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _source} && {_projectile == ""} && {_selectionName == ""}) then {
-    if (missionNamespace getvariable [QGVAR(allowVehicleCrashDamage), true]) then {
+    if (GVAR(enableVehicleCrashes)) then {
         _selectionName = _hitSelections select (floor(random(count _hitSelections)));
         _projectile = "vehiclecrash";
     };

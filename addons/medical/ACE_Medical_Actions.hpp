@@ -4,6 +4,7 @@ class ACE_Head {
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
     modifierFunction = QUOTE([ARR_4(_target,_player,0,_this select 3)] call FUNC(modifyMedicalAction));
+    condition = "true";
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -82,6 +83,7 @@ class ACE_Torso {
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 1)] call DFUNC(displayPatientInformation));
     modifierFunction = QUOTE([ARR_4(_target,_player,1,_this select 3)] call FUNC(modifyMedicalAction));
+    condition = "true";
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -182,6 +184,7 @@ class ACE_ArmLeft {
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 2)] call DFUNC(displayPatientInformation));
     modifierFunction = QUOTE([ARR_4(_target,_player,2,_this select 3)] call FUNC(modifyMedicalAction));
+    condition = "true";
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -339,6 +342,7 @@ class ACE_ArmRight {
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 3)] call DFUNC(displayPatientInformation));
     modifierFunction = QUOTE([ARR_4(_target,_player,3,_this select 3)] call FUNC(modifyMedicalAction));
+    condition = "true";
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -433,8 +437,8 @@ class ACE_ArmRight {
     };
     class PlasmaIV: BloodIV {
         displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_1000";
-        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(treatment));
+        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV')] call DFUNC(treatment));
         EXCEPTIONS
     };
     class PlasmaIV_500: PlasmaIV {
@@ -493,6 +497,7 @@ class ACE_LegLeft {
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 4)] call DFUNC(displayPatientInformation));
     modifierFunction = QUOTE([ARR_4(_target,_player,4,_this select 3)] call FUNC(modifyMedicalAction));
+    condition = "true";
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -589,8 +594,8 @@ class ACE_LegLeft {
     };
     class PlasmaIV: BloodIV {
         displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_1000";
-        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(treatment));
+        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV')] call DFUNC(treatment));
         EXCEPTIONS
     };
     class PlasmaIV_500: PlasmaIV {
@@ -635,6 +640,7 @@ class ACE_LegRight {
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
     modifierFunction = QUOTE([ARR_4(_target,_player,5,_this select 3)] call FUNC(modifyMedicalAction));
+    condition = "true";
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -730,8 +736,8 @@ class ACE_LegRight {
     };
     class PlasmaIV: BloodIV {
         displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_1000";
-        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(treatment));
+        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV')] call DFUNC(treatment));
         EXCEPTIONS
     };
     class PlasmaIV_500: PlasmaIV {
