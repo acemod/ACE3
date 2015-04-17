@@ -1650,32 +1650,32 @@
             <Russian>TODO: Navid 9.3 мм (бронза)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02">
-            <English>TODO: SPMG .338</English>
-            <Czech>TODO: SPMG .338</Czech>
-            <French>SPMG .338</French>
-            <Spanish>TODO: SPMG .338</Spanish>
-            <Russian>TODO: SPMG .338</Russian>
+            <English>LWMMG .338</English>
+            <Czech>LWMMG .338</Czech>
+            <French>LWMMG .338</French>
+            <Spanish>LWMMG .338</Spanish>
+            <Russian>LWMMG .338</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_camo">
-            <English>TODO: SPMG .338 (MTP)</English>
-            <Czech>TODO: SPMG .338 (MTP)</Czech>
-            <French>SPMG .338 (MTP)</French>
-            <Spanish>TODO: SPMG .338 (MTP)</Spanish>
-            <Russian>TODO: SPMG .338 (MTP)</Russian>
+            <English>LWMMG .338 (MTP)</English>
+            <Czech>LWMMG .338 (MTP)</Czech>
+            <French>LWMMG .338 (MTP)</French>
+            <Spanish>LWMMG .338 (MTP)</Spanish>
+            <Russian>LWMMG .338 (MTP)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_black">
-            <English>TODO: SPMG .338 (Black)</English>
-            <Czech>TODO: SPMG .338 (Black)</Czech>
-            <French>SPMG .338 (Noir)</French>
-            <Spanish>TODO: SPMG .338 (Negro)</Spanish>
-            <Russian>TODO: SPMG .338 (черный)</Russian>
+            <English>LWMMG .338 (Black)</English>
+            <Czech>LWMMG .338 (Black)</Czech>
+            <French>LWMMG .338 (Noir)</French>
+            <Spanish>LWMMG .338 (Negro)</Spanish>
+            <Russian>LWMMG .338 (Черный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_sand">
-            <English>TODO: SPMG .338 (Sand)</English>
-            <Czech>TODO: SPMG .338 (Sand)</Czech>
+            <English>LWMMG .338 (Sand)</English>
+            <Czech>LWMMG .338 (Sand)</Czech>
             <French>SPMG .338 (Beige)</French>
-            <Spanish>TODO: SPMG .338 (Arena)</Spanish>
-            <Russian>TODO: SPMG .338 (песочный)</Russian>
+            <Spanish>LWMMG .338 (Arena)</Spanish>
+            <Russian>LWMMG .338 (Песочный)</Russian>
         </Key>
     </Package>
 </Project>
