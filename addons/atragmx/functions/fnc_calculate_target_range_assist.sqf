@@ -46,7 +46,7 @@ switch (GVAR(rangeAssistImageSizeUnit)) do {
     };
 };
 _estRange = parseNumber(ctrlText 7013);
-if (GVAR(currentUnit) != 2) then {
+if (GVAR(currentUnit) == 1) then {
     _estRange = _estRange / 1.0936133;
 };
 
