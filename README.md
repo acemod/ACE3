@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg"
-         height="96" />
+         height="112" />
 </p>
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
@@ -24,7 +24,7 @@
              alt="ACE3 License" />
     </a>
 </p>
-<p align="center"><sup><strong>Requires the latest version of <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a>. Visit us on <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a></strong></sup></p>
+<p align="center"><sup><strong>Requires the latest version of <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a>. Visit us on <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
 
 **ACE3** is a joint effort by the teams behind **ACE2**, **AGM** and **CSE** to improve the realism and authenticity of Arma 3.
 
