@@ -1510,53 +1510,53 @@
             <Russian>TODO: MAR-10 .338 (песочный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_03">
-            <English>TODO: Mk-I EMR 7.62 mm</English>
-            <Czech>TODO: Mk-I EMR 7.62 mm</Czech>
-            <French>Mk-l EMR 7.62 mm</French>
-            <Spanish>TODO: Mk-I EMR 7.62 mm</Spanish>
-            <Russian>TODO: Mk-I EMR 7.62 мм</Russian>
+            <English>SG 556 7.62 mm</English>
+            <Czech>SG 556 7.62 mm</Czech>
+            <French>SG 556 7.62 mm</French>
+            <Spanish>SG 556 7.62 mm</Spanish>
+            <Russian>SG 556 7.62 мм</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03">
-            <English>TODO: Mk-I EMR 7.62 mm (Black)</English>
-            <Czech>TODO: Mk-I EMR 7.62 mm (Black)</Czech>
-            <French>Mk-l EMR 7.62 mm (Noir)</French>
-            <Spanish>TODO: Mk-I EMR 7.62 mm (Negro)</Spanish>
-            <Russian>TODO: Mk-I EMR 7.62 мм (черный)</Russian>
+            <English>SG 556 7.62 mm (Black)</English>
+            <Czech>SG 556 7.62 mm (Black)</Czech>
+            <French>SG 556 7.62 mm (Noir)</French>
+            <Spanish>SG 556 7.62 mm (Negro)</Spanish>
+            <Russian>SG 556 7.62 мм (черный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_khaki">
-            <English>TODO: Mk-I EMR 7.62 mm (Khaki)</English>
-            <Czech>TODO: Mk-I EMR 7.62 mm (Khaki)</Czech>
-            <French>Mk-l EMR 7.62 mm (Kaki)</French>
-            <Spanish>TODO: Mk-I EMR 7.62 mm (Caqui)</Spanish>
-            <Russian>TODO: Mk-I EMR 7.62 мм (хаки)</Russian>
+            <English>SG 556 7.62 mm (Khaki)</English>
+            <Czech>SG 556 7.62 mm (Khaki)</Czech>
+            <French>SG 556 7.62 mm (Kaki)</French>
+            <Spanish>SG 556 7.62 mm (Caqui)</Spanish>
+            <Russian>SG 556 7.62 мм (хаки)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_tan">
-            <English>TODO: Mk-I EMR 7.62 mm (Sand)</English>
-            <Czech>TODO: Mk-I EMR 7.62 mm (Sand)</Czech>
-            <French>Mk-l EMR 7.62 mm (Beige)</French>
-            <Spanish>TODO: Mk-I EMR 7.62 mm (Arena)</Spanish>
-            <Russian>TODO: Mk-I EMR 7.62 мм (песочный)</Russian>
+            <English>SG 556 7.62 mm (Sand)</English>
+            <Czech>SG 556 7.62 mm (Sand)</Czech>
+            <French>SG 556 7.62 mm (Beige)</French>
+            <Spanish>SG 556 7.62 mm (Arena)</Spanish>
+            <Russian>SG 556 7.62 мм (песочный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_multicam">
-            <English>TODO: Mk-I EMR 7.62 mm (Camo)</English>
-            <Czech>TODO: Mk-I EMR 7.62 mm (Camo)</Czech>
-            <French>Mk-l EMR 7.62 mm (Camo)</French>
-            <Spanish>TODO: Mk-I EMR 7.62 mm (Camuflaje)</Spanish>
-            <Russian>TODO: Mk-I EMR 7.62 мм (камо)</Russian>
+            <English>SG 556 7.62 mm (Camo)</English>
+            <Czech>SG 556 7.62 mm (Camo)</Czech>
+            <French>SG 556 7.62 mm (Camo)</French>
+            <Spanish>SG 556 7.62 mm (Camuflaje)</Spanish>
+            <Russian>SG 556 7.62 мм (камо)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_woodland">
-            <English>TODO: Mk-I EMR 7.62 mm (Woodland)</English>
-            <Czech>TODO: Mk-I EMR 7.62 mm (Woodland)</Czech>
-            <French>Mk-l EMR 7.62 mm (Woodland)</French>
-            <Spanish>TODO: Mk-I EMR 7.62 mm (Bosque)</Spanish>
-            <Russian>TODO: Mk-I EMR 7.62 мм (лесной)</Russian>
+            <English>SG 556 7.62 mm (Woodland)</English>
+            <Czech>SG 556 7.62 mm (Woodland)</Czech>
+            <French>SG 556 7.62 mm (Woodland)</French>
+            <Spanish>SG 556 7.62 mm (Bosque)</Spanish>
+            <Russian>SG 556 7.62 мм (лесной)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
-            <English>TODO: NATO DMR (provisional) spotter</English>
-            <Czech>TODO: NATO DMR (provisional) spotter</Czech>
-            <French>NATO DMR (provisoire) Observateur</French>
-            <Spanish>TODO: NATO DMR (provisional) observador</Spanish>
-            <Russian>TODO: NATO DMR (provisional) корректировщик</Russian>
+            <English>SG 556 7.62 mm (provisional) spotter</English>
+            <Czech>SG 556 7.62 mm (provisional) spotter</Czech>
+            <French>SG 556 7.62 mm (provisoire) Observateur</French>
+            <Spanish>SG 556 7.62 mm (provisional) observador</Spanish>
+            <Russian>SG 556 7.62 мм (provisional) корректировщик</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_04">
             <English>TODO: ASP-1 Kir 12.7 mm</English>
