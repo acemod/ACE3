@@ -13,7 +13,7 @@
             <Czech>6.5mm 30ks Svítící IR-DIM Zásobník</Czech>
             <Portuguese>Carregador de 30 projéteis traçantes IR-DIM de 6,5mm</Portuguese>
             <Italian>Caricatore 6.5mm 30Rnd Traccianti IR-DIM</Italian>
-            <Russian>Магазин из 30-ти 6,5 мм трассирующих под ПНВ</Russian>
+            <Russian>Магазин из 30-ти 6,5 мм ИК-трассирующих</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
@@ -37,7 +37,7 @@
             <Czech>Ráže: 6.5x39 mm Svítící IR-DIM&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: MX/C/M/SW/3GL</Czech>
             <Portuguese>Calibre: 6,5x39 mm Traçante IR-DIM&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
             <Italian>Calibro: 6.5x39 mm Traccianti IR-DIM &lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MX/C/M/SW/3GL</Italian>
-            <Russian>Калибр: 6,5x39 мм трассирующие под ПНВ&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: MX/C/M/SW/3GL</Russian>
+            <Russian>Калибр: 6,5x39 мм ИК-трассирующие&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: MX/C/M/SW/3GL</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_SDName">
             <English>6.5mm 30Rnd SD Mag</English>
@@ -122,7 +122,7 @@
             <Czech>6.5mm 30ks Svítící IR-DIM Zásobník</Czech>
             <Portuguese>Carregador de 30 projéteis traçantes IR-DIM de 6,5mm</Portuguese>
             <Italian>Caricatore 6.5mm 30Rnd Traccianti IR-DIM</Italian>
-            <Russian>Магазин из 30-ти 6,5 мм трассирующих под ПНВ</Russian>
+            <Russian>Магазин из 30-ти 6,5 мм ИК-трассирующих</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
@@ -146,7 +146,7 @@
             <Czech>Ráže: 6.5x39 mm Svítící IR-DIM&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: Katiba</Czech>
             <Portuguese>Calibre: 6,5x39 mm Traçante IR-DIM&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: Katiba</Portuguese>
             <Italian>Calibro: 6.5x39 mm Tracciant IR-DIM&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: Katiba</Italian>
-            <Russian>Калибр: 6,5x39 мм трассирующие под ПНВ&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: Katiba</Russian>
+            <Russian>Калибр: 6,5x39 мм ИК-трассирующие&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: Katiba</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_SDName">
             <English>6.5mm 30Rnd SD Mag</English>
@@ -168,7 +168,7 @@
             <French>6,5mm SD</French>
             <Polish>6,5mm SD</Polish>
             <Czech>6.5mm SD</Czech>
-            <Portuguese>6,5mm SD</Portuguese>
+            <Portuguese>6,5 мм SD</Portuguese>
             <Italian>6.5mm Sil.</Italian>
             <Russian>6,5 мм дозвуковые</Russian>
         </Key>
@@ -231,7 +231,7 @@
             <Czech>5.56mm 30ks Svítící IR-DIM Zásobník</Czech>
             <Portuguese>Carregador de 30 projéteis traçantes IR-DIM de 5,56mm</Portuguese>
             <Italian>Caricatore 5.56mm 30rnd Traccianti IR-DIM</Italian>
-            <Russian>Магазин из 30-ти 5,56 мм трассирующих под ПНВ</Russian>
+            <Russian>Магазин из 30-ти 5,56 мм ИК-трассирующих</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_mag_Tracer_DimNameShort">
             <English>5.56mm IR-DIM</English>
@@ -255,7 +255,7 @@
             <Czech>Ráže: 5.56x45 mm Svítící IR-DIM&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Czech>
             <Portuguese>Calibre: 5,56x45 mm Traçante IR-DIM&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Portuguese>
             <Italian>Calibro: 5.56x45 mm Traccianti IR-DIM&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Italian>
-            <Russian>Калибр: 5,56x45 мм трассирующие под ПНВ&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Russian>
+            <Russian>Калибр: 5,56x45 мм ИК-трассирующие&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_mag_APName">
             <English>5.56mm 30Rnd AP Mag</English>
@@ -340,7 +340,7 @@
             <Czech>7.62mm 20ks Svítící IR-DIM Zásobník</Czech>
             <Portuguese>Carregador de 20 projéteis IR-DIM de 7,62mm</Portuguese>
             <Italian>Caricatore 7.62mm 20rnd Traccianti IR-DIM</Italian>
-            <Russian>Магазин из 20-ти 7,62 мм трассирующих под ПНВ</Russian>
+            <Russian>Магазин из 20-ти 7,62 мм ИК-трассирующих</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_Tracer_DimNameShort">
             <English>7.62mm IR-DIM</English>
@@ -364,7 +364,7 @@
             <Czech>Ráže: 7.62x51 mm Svítící IR-DIM&lt;br /&gt;Munice: 20&lt;br /&gt;Použití: Mk18 ABR</Czech>
             <Portuguese>Calibre: 7,62x51 mm Traçante IR-DIM&lt;br /&gt;Projéteis: 20&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
             <Italian>Calibro: 7.62x51 mm Traccianti IR-DIM&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
-            <Russian>Калибр: 7,62x51 мм трассирующие под ПНВ&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются с: Mk18 ABR</Russian>
+            <Russian>Калибр: 7,62x51 мм ИК-трассирующие&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются с: Mk18 ABR</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_SDName">
             <English>7.62mm 20Rnd SD Mag</English>
@@ -470,7 +470,7 @@
             <Polish>Taśma .338 NM 130rd IR-DIM</Polish>
             <French>Bande .338 NM 130Cps IR-DIM</French>
             <Spanish>Cinta de 130 balas IR-DIM de .338 NM</Spanish>
-            <Russian>Лента из 130-ти .338 NM трасирующих под ПНВ</Russian>
+            <Russian>Лента из 130-ти .338 NM ИК-трассирующих</Russian>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_Tracer_DimNameShort">
             <English>.338 NM IR-DIM</English>
@@ -734,7 +734,7 @@
             <Polish>Magazynek 6,5mm 100rd Smugacz IR-DIM</Polish>
             <French>Chargeur 6.5mm 100Rnd Traçante IR-DIM</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
-            <Russian>Магазин из 100-ти 6,5 мм ИК-трассирующих</Russian>
+            <Russian>Магазин из 100 6,5 мм ИК-трассирующих</Russian>
         </Key>
         <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
@@ -748,14 +748,14 @@
             <Polish>Magazynek 6,5mm 100rd Smugacz IR-DIM</Polish>
             <French>Chargeur 6.5mm 100Rnd Traçante IR-DIM</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
-            <Russian>Магазин из 100-ти 6,5 мм ИК-трассирующих</Russian>
+            <Russian>Магазин из 100 6,5 мм ИК-трассирующих</Russian>
         </Key>
         <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimName">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt</English>
             <Polish>Magazynek 6,5mm 200rd Smugacz IR-DIM</Polish>
             <French>Bande 6.5mm 200Rnd Traçante IR-DIM</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
-            <Russian>Магазин из 200-ти 6,5 мм ИК-трассирующих</Russian>
+            <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
         </Key>
         <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
@@ -769,7 +769,7 @@
             <Polish>Magazynek 6,5mm 200rd Smugacz IR-DIM</Polish>
             <French>Bande 6.5mm 200Cps Traçante IR-DIM</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
-            <Russian>Магазин из 200-ти 6,5 мм ИК-трассирующих</Russian>
+            <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk262_mag_Name">
             <English>5.56mm 30Rnd Mag (Mk262)</English>
@@ -790,7 +790,7 @@
             <Polish>Kaliber: 5,56x45 mm NATO (Mk262)&lt;br /&gt;Pociski: 30</Polish>
             <French>Calibre: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Balas: 30</Spanish>
-            <Russian>Калибр: 5,56x45 mm NATO (Mk262)&lt;br /&gt;Патронов: 30</Russian>
+            <Russian>Калибр: 5,56x45 мм NATO (Mk262)&lt;br /&gt;Патронов: 30</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_Name">
             <English>5.56mm 30Rnd Mag (Mk318)</English>
@@ -811,7 +811,7 @@
             <Polish>Kaliber: 5,56x45 mm NATO (Mk318)&lt;br /&gt;Pociski: 30</Polish>
             <French>Calibre: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Balas: 30</Spanish>
-            <Russian>Калибр: 5,56x45 mm NATO (Mk318)&lt;br /&gt;Патронов: 30</Russian>
+            <Russian>Калибр: 5,56x45 мм NATO (Mk318)&lt;br /&gt;Патронов: 30</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_Name">
             <English>7.62mm 10Rnd Mag (M118LR)</English>
@@ -1012,7 +1012,7 @@
             <English>Caliber: 8.6x70mm (API526)&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 8.6x70mm (API526)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 8.6x70mm (API526)&lt;br /&gt;Balas: 10</Spanish>
-            <Russian>Калибр: 8,6x70mm (API526)&lt;br /&gt;Патронов: 10</Russian>
+            <Russian>Калибр: 8,6x70 мм (API526)&lt;br /&gt;Патронов: 10</Russian>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Name">
             <English>12.7x99mm 5Rnd Mag</English>
@@ -1030,7 +1030,7 @@
             <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm&lt;br /&gt;Cartouches: 5</French>
             <Spanish>Calibre: 12.7x99mm&lt;br /&gt;Balas: 5</Spanish>
-            <Russian>Калибр: 12,7x99mm&lt;br /&gt;Патронов: 5</Russian>
+            <Russian>Калибр: 12,7x99 мм&lt;br /&gt;Патронов: 5</Russian>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Name">
             <English>12.7x99mm 5Rnd Mag (AMAX)</English>
