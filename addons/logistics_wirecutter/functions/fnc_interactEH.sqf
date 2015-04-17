@@ -35,7 +35,7 @@ if (!("ACE_wirecutter" in (items ace_player))) exitWith {};
     } else {
         // Prevent Rare Error when ending mission with interact key down:
         if (isNull ace_player) exitWith {};
-    
+
         //If player moved >5 meters from last pos, then rescan
         if (((getPosASL ace_player) distance _setPosition) > 5) then {
 
