@@ -118,6 +118,7 @@ _startingTime = time;
                 // TODO: what if the unit switched vehicle?
                 [_unit, _oldAnimation, 2] call EFUNC(common,doAnimation);
             };
+            ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
             // EXIT PFH
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
         };
@@ -133,7 +134,7 @@ _startingTime = time;
             _unit setUnitPos _originalPos; // This is not position but stance (DOWN, MIDDLE, UP)
 
             _unit setUnconscious false;
-            ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
+
             // ensure this statement runs only once
             _args set [5, true];
         };
