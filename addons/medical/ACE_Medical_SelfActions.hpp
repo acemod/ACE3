@@ -80,7 +80,6 @@ class Medical {
         runOnHover = 1;
         exceptions[] = {"isNotInside"};
         statement = QUOTE([ARR_3(_target, true, 1)] call DFUNC(displayPatientInformation));
-        condition = "true";
         showDisabled = 1;
         priority = 2;
         hotkey = "";
