@@ -321,6 +321,7 @@ make.py [help] [test] [force] [key <name>] [target <name>] [release <version>]
 test -- Copy result to Arma 3.
 release <version> -- Make archive with <version>.
 force -- Ignore cache and build all.
+checkexternal -- Check External Files
 target <name> -- Use rules in make.cfg under heading [<name>] rather than
    default [Make]
 key <name> -- Use key in working directory with <name> to sign. If it does not
@@ -377,6 +378,12 @@ See the make.cfg file for additional build options.
 	if "quiet" in argv:
 		quiet = True
 		argv.remove("quiet")
+
+	if "checkexternal" in argv:
+		argv.remove("checkexternal")
+		check_external = True
+	else:
+		check_external = False
 
 	# Get the directory the make script is in.
 	make_root = os.path.dirname(os.path.realpath(__file__))
@@ -658,8 +665,12 @@ See the make.cfg file for additional build options.
 					cmd = [makepboTool, "-P","-A","-L","-N","-G", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"Addons")]
 
 				else:
-					cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "+X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+                                        if check_external:
+                                                cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "+X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+                                        else:
+                                                cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "-X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
+				print_yellow(cmd)
 				color("grey")
 				if quiet:
 					devnull = open(os.devnull, 'w')
