@@ -10,7 +10,7 @@ order: 4
 
 Main principles:
 - As much stuff as possible should be modular
-- Strive to make as much stuff as possible run-time toogable. Adding/removing PBOS would still be requiring to toogle any feature relying on config changes.
+- Strive to make as much stuff as possible run-time togglable. Adding/removing PBOS would still be requiring to toggle any feature relying on config changes.
 
 ### PBO Structure
 
