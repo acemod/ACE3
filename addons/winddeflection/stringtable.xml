@@ -1,4 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
+<!-- Edited with tabler. -->
+=======
+>>>>>>> acemod/master
 <Project name="ACE">
     <Package name="WindDeflection">
         <Container ID="Weather_Meter">
@@ -31,7 +35,7 @@
                 <Russian>Скорость: %1 м/с</Russian>
                 <Czech>Rychlost: %1 m/s</Czech>
                 <French>Vitesse %1 m/s</French>
-                <German>Geschwindigkeit: %1m/s</German>
+                <German>Geschwindigkeit: %1 m/s</German>
                 <Hungarian>Sebesség: %1 m/s</Hungarian>
                 <Italian>Velocità: %1 m/s</Italian>
             </Key>

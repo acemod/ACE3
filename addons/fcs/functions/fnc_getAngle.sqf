@@ -19,7 +19,7 @@
 #include "script_component.hpp"
 #define PRECISION 0.1
 
-private ["_distance","_angleTarget","_maxElev","_initSpeed","_airFriction","_timeToLive","_timeToLive","_simulationStep","_angle","_posTargetX","_posTargetY","_posX","_posY","_velocityX","_velocityY","_velocityMagnitude"];
+private ["_distance","_angleTarget","_maxElev","_initSpeed","_airFriction","_timeToLive","_timeToLive","_simulationStep","_angle","_posTargetX","_posTargetY","_posX","_posY","_velocityX","_velocityY","_velocityMagnitude","_angle1","_angle2","_f1","_f2","_temp"];
 
 _distance       = _this select 0;
 _angleTarget    = _this select 1;
@@ -73,7 +73,7 @@ if ((_this + [_maxElev]) call FUNC(traceBullet) < 0) exitWith {_maxElev - _angle
 // Newton Method / Secand Method
 _angle1 = _angleTarget;
 _angle2 = _maxElev;
-_it2 = 0;
+//_it2 = 0;
 _f1 = (_this + [_angle1]) call FUNC(traceBullet);
 
 if ((abs _f1) <= PRECISION) exitWith {0};
@@ -83,7 +83,7 @@ while {(abs _f1) > PRECISION} do {
     _angle1 = _angle2;
     _angle2 = _temp;
     _f1 = _f2;
-    _it2 = _it2+1;
+    //_it2 = _it2+1;
 };
 //player globalChat format ["it1: %1 | _angle1: %2 | it2: %3 | _angle2: %4",_it1, _angle-_angleTarget, _it2, _angle2-_angleTarget];
 

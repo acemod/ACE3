@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -26,7 +27,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_ResetAll">
             <English>Reset All</English>
-            <German>Alles Zurücksetzen</German>
+            <German>Alles zurücksetzen</German>
             <Spanish>Reiniciar todo</Spanish>
             <Russian>Полный сброс</Russian>
             <Czech>Vyresetovat vše</Czech>
@@ -128,7 +129,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_stringType">
             <English>String input.</English>
-            <German>String input.</German>
+            <German>Zeichenketteneingabe</German>
             <Spanish>Introducir frase</Spanish>
             <Russian>Строчный ввод.</Russian>
             <Polish>Wpisywanie tekstu.</Polish>
@@ -149,7 +150,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_scalarType">
             <English>Number</English>
-            <German>Nummer</German>
+            <German>Zahl</German>
             <Spanish>Numero</Spanish>
             <Russian>Число</Russian>
             <Czech>Číslo</Czech>
@@ -182,7 +183,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_inClientSettings">
             <English>Include Client Settings</English>
-            <German>Beinhalte Client-Einstellungen</German>
+            <German>Schließe Client-Einstellungen ein</German>
             <Spanish>Incluir configuración de cliente</Spanish>
             <Russian>Включить настройки клиента</Russian>
             <Czech>Zahrnout nastavení klienta</Czech>

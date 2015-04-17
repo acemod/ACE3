@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Inject_Atropine">
@@ -1205,7 +1206,7 @@
             <French>Vous examinez %1</French>
             <Spanish>Examinando a %1</Spanish>
             <Polish>Zbadałeś %1</Polish>
-            <German>Kontrolliertt %1</German>
+            <German>Kontrolliert %1</German>
             <Hungarian>A %1 ellenőrizve</Hungarian>
             <Italian>Hai diagnosticato %1</Italian>
         </Key>
@@ -1305,7 +1306,7 @@
             <French>Vous avez examiné %1</French>
             <Spanish>Examinas a %1</Spanish>
             <Polish>Zbadałeś %1</Polish>
-            <German>Du versucht %1 anzusprechen</German>
+            <German>Du hast versucht %1 anzusprechen</German>
             <Hungarian>Megnézted %1-t</Hungarian>
             <Italian>Hai controllato %1</Italian>
         </Key>
@@ -1339,6 +1340,7 @@
         <Key ID="STR_ACE_MEDICAL_START_STITCHING_INJURIES">
             <English>You start stitching injures from %1 (%2)</English>
             <Russian>Вы зашиваете ранения от %1 (%2)</Russian>
+            <German>Du nähst die Wunden von %1 (%2)</German>
             <French>Vous suturez %1 (%2)</French>
             <Spanish>Estás suturando heridas de %1 en %2</Spanish>
             <Polish>Zszywasz rany %1 (%2)</Polish>
@@ -1348,6 +1350,8 @@
         <Key ID="STR_ACE_MEDICAL_STITCHING">
             <English>Stitching</English>
             <Russian>Наложение швов</Russian>
+            <Spanish>Suturando</Spanish>
+            <German>Nähen</German>
             <French>Sutures</French>
             <Spanish>Suturando</Spanish>
             <Polish>Szycie</Polish>
@@ -1357,6 +1361,8 @@
         <Key ID="STR_ACE_MEDICAL_YOU_TREAT_AIRWAY">
             <English>You treat the airway of %1</English>
             <Russian>Вы интубируете раненого %1</Russian>
+            <Spanish>Estás intubando a %1</Spanish>
+            <German>Du behandelst den Atemweg von %1</German>
             <French>Vous traitez les voies respiratoires de %1</French>
             <Spanish>Estás intubando a %1</Spanish>
             <Polish>Udrażniasz drogi oddechowe %1</Polish>
@@ -1379,6 +1385,7 @@
             <French>%1 traite vos voies respiratoires</French>
             <Spanish>%1 te está intubando</Spanish>
             <Polish>%1 udrażnia Twoje drogi oddechowe</Polish>
+            <German>%1 behandelt deinen Atemweg</German>
             <Hungarian>%1 kezeli a légútadat</Hungarian>
             <Italian>%1 ti sta trattando le vie respiratorie</Italian>
         </Key>
@@ -1420,7 +1427,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_LOAD">
             <English>Load Patient Into</English>
-            <German>Patient Einladen</German>
+            <German>Patient einladen</German>
             <Spanish>Cargar el paciente en</Spanish>
             <Polish>Załaduj pacjenta</Polish>
             <Czech>Naložit pacianta do</Czech>
@@ -1432,7 +1439,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_UNLOAD">
             <English>Unload Patient</English>
-            <German>Patient Ausladen</German>
+            <German>Patient ausladen</German>
             <Spanish>Descargar el paciente</Spanish>
             <Polish>Wyładuj pacjenta</Polish>
             <Czech>Vyložit pacienta</Czech>
@@ -1446,6 +1453,7 @@
             <English>Unload patient</English>
             <Spanish>Descargar el paciente</Spanish>
             <Russian>Выгрузить пациента</Russian>
+            <German>Patient ausladen</German>
             <Polish>Wyładuj pacjenta</Polish>
             <French>Débarquer le Patient</French>
             <Hungarian>Sebesült kihúzása</Hungarian>
@@ -1455,6 +1463,7 @@
             <English>Load patient</English>
             <Spanish>Cargar el paciente en</Spanish>
             <Russian>Погрузить пациента</Russian>
+            <German>Patient einladen</German>
             <Polish>Załaduj pacjenta</Polish>
             <French>Embarquer le Patient</French>
             <Hungarian>Sebesült berakása</Hungarian>
@@ -1464,6 +1473,7 @@
             <English>Place body in bodybag</English>
             <Spanish>Colocar cuerpo en bolsa para cadáveres</Spanish>
             <Russian>Поместить тело в мешок для трупов</Russian>
+            <German>Körper in Leichesack verstauen</German>
             <Polish>Zapakuj ciało do worka na zwłoki</Polish>
             <French>Mettre le corps dans la housse mortuaire</French>
             <Hungarian>Test hullazsákba helyezése</Hungarian>
@@ -1473,6 +1483,7 @@
             <English>Placing body in bodybag</English>
             <Spanish>Colocando cuerpo en bolsa para cadáveres</Spanish>
             <Russian>Упаковка тела ...</Russian>
+            <German>Verstaue Körper in Leichensack</German>
             <Polish>Pakowanie ciała do worka na zwłoki</Polish>
             <French>Placement du corps dans la housse</French>
             <Hungarian>Test hullazsákba helyezése ...</Hungarian>
@@ -1482,6 +1493,7 @@
             <English>%1 has bandaged patient</English>
             <Spanish>%1 has vendado al paciente</Spanish>
             <Russian>%1 перевязал пациента</Russian>
+            <German>%1 hat Patient bandagiert</German>
             <Polish>%1 zabandażował pacjenta</Polish>
             <French>%1 a pansé le patient</French>
             <Hungarian>%1 bekötözte a pácienst</Hungarian>
@@ -1490,6 +1502,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIVITY_usedItem">
             <English>%1 used %2</English>
             <Spanish>%1 usó %2</Spanish>
+            <German>%1 hat %2 genutzt</German>
             <Russian>%1 использовал %2</Russian>
             <Polish>%1 użył %2</Polish>
             <French>%1 utilise %2</French>
@@ -1500,6 +1513,7 @@
             <English>%1 has given an IV</English>
             <Spanish>%1 has puesto una IV</Spanish>
             <Russian>%1 провел переливание</Russian>
+            <German>%1 hat eine Infusion gegeben</German>
             <Polish>%1 podał IV</Polish>
             <French>%1 a administré une IV</French>
             <Hungarian>%1 infúziót adott</Hungarian>
@@ -1509,6 +1523,7 @@
             <English>%1 applied a tourniquet</English>
             <Spanish>%1 aplicado torniquete</Spanish>
             <Russian>%1 наложил жгут</Russian>
+            <German>%1 hat eine Aderpresse angelegt</German>
             <Polish>%1 założył stazę</Polish>
             <French>%1 a appliqué un garrot</French>
             <Hungarian>%1 felhelyezett egy érszorítót</Hungarian>
