@@ -188,3 +188,14 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
     // Players can always interact with passengers of the same vehicle
     {!((_this select 0) isEqualTo (_this select 1)) && {vehicle (_this select 0) == vehicle (_this select 1)}}
 }] call FUNC(addCanInteractWithCondition);
+
+// check dlls
+{
+    if (_x callExtension "version" == "") then {
+        private "_errorMsg";
+        _errorMsg = format ["Extension %1.dll not installed.", _x];
+
+        diag_log text format ["[ACE] ERROR: %1", _errorMsg];
+        ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+    };
+} forEach ["ace_breakLine", "ace_advanced_ballistics", "ace_fcs"];
