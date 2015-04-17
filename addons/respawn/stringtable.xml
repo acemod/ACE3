@@ -45,31 +45,37 @@
             <English>Rallypoint West (Base)</English>
             <German>Sammelpunkt West (Basis)</German>
             <Spanish>Punto de reunión Oeste (Base)</Spanish>
+            <Russian>Точка сбора Синих (База)</Russian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEastBase">
             <English>Rallypoint East (Base)</English>
             <German>Sammelpunkt Ost (Basis)</German>
             <Spanish>Punto de reunión Este (Base)</Spanish>
+            <Russian>Точка сбора Красных (База)</Russian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependentBase">
             <English>Rallypoint Independent (Base)</English>
             <German>Sammelpunkt Widerstand (Basis)</German>
             <Spanish>Punto de reunión Independiente (Base)</Spanish>
+            <Russian>Точка сбора Независимых (База</Russian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWest">
             <English>Rallypoint West</English>
             <German>Sammelpunkt West</German>
             <Spanish>Punto de reunión Oeste</Spanish>
+            <Russian>Точка сбора Синих</Russian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEast">
             <English>Rallypoint East</English>
             <German>Sammelpunkt Ost</German>
             <Spanish>Punto de reunión Este</Spanish>
+            <Russian>Точка сбора Красных</Russian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependent">
             <English>Rallypoint Independent</English>
             <German>Sammelpunkt Widerstand</German>
             <Spanish>Punto de reunión Independiente</Spanish>
+            <Russian>Точка сбора Независимых</Russian>
         </Key>
     </Package>
 </Project>
