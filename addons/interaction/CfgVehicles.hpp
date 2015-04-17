@@ -44,7 +44,7 @@ class CfgVehicles {
           hotkey = "M";
 
           class ACE_JoinTeamRed {
-            displayName = "$STR_ACE_Interaction_JoinTeamRed";
+            displayName = "$STR_ACE_Interaction_AssignTeamRed";
             distance = 5;
             condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
             statement = QUOTE([ARR_2(_target,'RED')] call DFUNC(joinTeam));
@@ -54,7 +54,7 @@ class CfgVehicles {
             hotkey = "R";
           };
           class ACE_JoinTeamGreen {
-            displayName = "$STR_ACE_Interaction_JoinTeamGreen";
+            displayName = "$STR_ACE_Interaction_AssignTeamGreen";
             distance = 5;
             condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
             statement = QUOTE([ARR_2(_target,'GREEN')] call DFUNC(joinTeam));
@@ -64,7 +64,7 @@ class CfgVehicles {
             hotkey = "G";
           };
           class ACE_JoinTeamBlue {
-            displayName = "$STR_ACE_Interaction_JoinTeamBlue";
+            displayName = "$STR_ACE_Interaction_AssignTeamBlue";
             distance = 5;
             condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
             statement = QUOTE([ARR_2(_target,'BLUE')] call DFUNC(joinTeam));
@@ -74,7 +74,7 @@ class CfgVehicles {
             hotkey = "B";
           };
           class ACE_JoinTeamYellow {
-            displayName = "$STR_ACE_Interaction_JoinTeamYellow";
+            displayName = "$STR_ACE_Interaction_AssignTeamYellow";
             distance = 5;
             condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
             statement = QUOTE([ARR_2(_target,'YELLOW')] call DFUNC(joinTeam));

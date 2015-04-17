@@ -549,6 +549,22 @@
             <Italian>Giallo</Italian>
             <Hungarian>Sárga</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Interaction_AssignTeamRed">
+            <English>Assign Red</English>
+            <Spanish>Asignar a rojo</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Interaction_AssignTeamGreen">
+            <English>Assign Green</English>
+            <Spanish>Asignar a verde</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Interaction_AssignTeamBlue">
+            <English>Assign Blue</English>
+            <Spanish>Asignar a azul</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Interaction_AssignTeamYellow">
+            <English>Assign Yellow</English>
+            <Spanish>Asignar a amarillo</Spanish>
+        </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamRed">
             <English>Join Red</English>
             <Spanish>Unirse a rojo</Spanish>
