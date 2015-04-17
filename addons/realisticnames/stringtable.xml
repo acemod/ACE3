@@ -1608,25 +1608,25 @@
             <Russian>TODO: Cyrus 9.3 мм (бронза)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_06">
-            <English>TODO: Mk14 7.62 mm</English>
-            <Czech>TODO: Mk14 7.62 mm</Czech>
-            <French>Mk 14 7.62 mm</French>
-            <Spanish>TODO: Mk14 7.62 mm</Spanish>
-            <Russian>TODO: Mk14 7.62 мм</Russian>
+            <English>M14 7.62 mm</English>
+            <Czech>M14 7.62 mm</Czech>
+            <French>M14 7.62 mm</French>
+            <Spanish>M14 7.62 mm</Spanish>
+            <Russian>M14 7.62 мм</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_camo">
-            <English>TODO: Mk14 7.62 mm (Camo)</English>
-            <Czech>TODO: Mk14 7.62 mm (Camo)</Czech>
-            <French>Mk 14 7.62 mm (Camo)</French>
-            <Spanish>TODO: Mk14 7.62 mm (Camuflaje)</Spanish>
-            <Russian>TODO: Mk14 7.62 мм (камо)</Russian>
+            <English>M14 7.62 mm (Camo)</English>
+            <Czech>M14 7.62 mm (Camo)</Czech>
+            <French>M14 7.62 mm (Camo)</French>
+            <Spanish>M14 7.62 mm (Camuflaje)</Spanish>
+            <Russian>M14 7.62 мм (Камо)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_olive">
-            <English>TODO: Mk14 7.62 mm (Olive)</English>
-            <Czech>TODO: Mk14 7.62 mm (Olive)</Czech>
-            <French>Mk 14 7.62 mm (Olive)</French>
-            <Spanish>TODO: Mk14 7.62 mm (Oliva)</Spanish>
-            <Russian>TODO: Mk14 7.62 мм (олива)</Russian>
+            <English>M14 7.62 mm (Olive)</English>
+            <Czech>M14 7.62 mm (Olive)</Czech>
+            <French>M14 7.62 mm (Olive)</French>
+            <Spanish>M14 7.62 mm (Oliva)</Spanish>
+            <Russian>M14 7.62 мм (Олива)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01">
             <English>TODO: Navid 9.3 mm</English>
