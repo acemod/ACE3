@@ -3,7 +3,7 @@
  * Stops simulation and opens a textbox with error message.
  *
  * Arguments:
- * 0: Error name <STRING>
+ * ?
  *
  * Return Value:
  * None
@@ -26,7 +26,7 @@ if (typeName _textMessage == "STRING") then {
     _textMessage = parseText _textMessage;
 };
 
-(call BIS_fnc_displayMission) createDisplay "RscDisplayCommonMessagePause";
+(ARR_SELECT(_this,4,call BIS_fnc_displayMission)) createDisplay "RscDisplayCommonMessagePause";
 
 private ["_display", "_ctrlRscMessageBox", "_ctrlBcgCommonTop", "_ctrlBcgCommon", "_ctrlText", "_ctrlBackgroundButtonOK", "_ctrlBackgroundButtonMiddle", "_ctrlBackgroundButtonCancel", "_ctrlButtonOK", "_ctrlButtonCancel"];
 
