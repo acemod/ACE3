@@ -56,6 +56,7 @@ PREP(isInMedicalVehicle);
 PREP(isMedic);
 PREP(isMedicalVehicle);
 PREP(itemCheck);
+PREP(modifyMedicalAction);
 PREP(onMedicationUsage);
 PREP(onWoundUpdateRequest);
 PREP(onPropagateWound);
