@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Magazines">
@@ -895,76 +895,91 @@
             <English>6.5x47mm 30Rnd Mag (HPBT Scenar)</English>
             <French>6.5x47mm 30Cps (HPBT Scenar)</French>
             <Spanish>Cargador de 30 balas de 6.5x47mm (HPBT Scenar)</Spanish>
+            <Polish>Magazynek 6.5x47mm 30 szt. (HPBT Scenar)</Polish>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_NameShort">
             <English>6.5mm Scenar</English>
             <French>6.5mm Scenar</French>
             <Spanish>6.5mm Scenar</Spanish>
+            <Polish>6.5mm Scenar</Polish>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_Description">
             <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 30</English>
             <French>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 30</Spanish>
+            <Polish>Kaliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Pociski: 30</Polish>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Name">
             <English>.338 10Rnd Mag (300gr Sierra MatchKing HPBT)</English>
             <French>.338 10 Cps (300gr Sierra MatchKing HPBT)</French>
             <Spanish>Cargador de 10 balas de 8.6x70mm (300gr Sierra MatchKing HPBT)</Spanish>
+            <Polish>Mayazynek .338 10szt. (300gr Sierra MatchKing HPBT)</Polish>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_NameShort">
             <English>.338 (HPBT)</English>
             <French>.338 (HPBT)</French>
             <Spanish>.338 (HPBT)</Spanish>
+            <Polish>.338 (HPBT)</Polish>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Description">
             <English>Caliber: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Balas: 10</Spanish>
+            <Polish>Kaliber: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Pociski: 10</Polish>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Name">
             <English>.338 10Rnd Mag (API526)</English>
             <French>.338 10Cps (API526)</French>
             <Spanish>Cargador de 10 balas de .338 (API526)</Spanish>
+            <Polish>Magazynek .338 10szt. (API526)</Polish>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_NameShort">
             <English>.338 AP</English>
             <French>.338 AP</French>
             <Spanish>.338 AP</Spanish>
+            <Polish>.338 AP</Polish>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Description">
             <English>Caliber: 8.6x70mm (API526)&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 8.6x70mm (API526)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 8.6x70mm (API526)&lt;br /&gt;Balas: 10</Spanish>
+            <Polish>Kaliber: 8.6x70mm (API526)&lt;br /&gt;Pociski: 10</Polish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Name">
             <English>12.7x99mm 5Rnd Mag</English>
             <French>12.7x99mm 5Cps</French>
             <Spanish>Cargador de 5 balas de 12.7x99mm</Spanish>
+            <Polish>Magazynek 12.7x99mm 5szt.</Polish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_NameShort">
             <English>12.7mm</English>
             <French>12.7mm</French>
             <Spanish>12.7mm</Spanish>
+            <Polish>12.7mm</Polish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Description">
             <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm&lt;br /&gt;Cartouches: 5</French>
             <Spanish>Calibre: 12.7x99mm&lt;br /&gt;Balas: 5</Spanish>
+            <Polish>Kaliber: 12.7x99mm&lt;br /&gt;Pociski: 5</Polish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Name">
             <English>12.7x99mm 5Rnd Mag (AMAX)</English>
             <French>12.7x99mm 5Rnd Mag (AMAX)</French>
             <Spanish>Cargador de 5 balas de 12.7x99mm (AMAX)</Spanish>
+            <Polish>Magazynek 12.7x99mm 5szt. (AMAX)</Polish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_NameShort">
             <English>12.7mm</English>
             <French>12.7mm</French>
             <Spanish>12.7mm</Spanish>
+            <Polish>12.7mm</Polish>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Description">
             <English>Caliber: 12.7x99mm (AMAX)&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Cartouches: 5</French>
             <Spanish>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Balas: 5</Spanish>
+            <Polish>Kaliber: 12.7x99mm (AMAX)&lt;br /&gt;Pociski: 5</Polish>
         </Key>
     </Package>
 </Project>
