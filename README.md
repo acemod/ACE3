@@ -69,7 +69,7 @@ The mod is **built modularly**, so almost any included PBO can be easily removed
 
 ### Guides & how-tos
 If you installed ACE3 but have trouble understanding how it all works, or where to start, read this first:
-* [Getting started](https://github.com/acemod/ACE3/blob/master/documentation/user/getting-started.md)
+* [Getting started](http://ace3mod.com/wiki/user/getting-started.html)
 
 #### Contributing
 You can help out with the ongoing development by looking for potential bugs in our code base, or by contributing new features. To contribute something to ACE, simply fork this repository and submit your pull requests for review by other collaborators. Remember to add yourself to the author array of any PBO you will be editing and the [`AUTHORS.txt`](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) file; including a valid email address.
@@ -80,4 +80,4 @@ Please, use our [Issue Tracker](https://github.com/acemod/ACE3/issues) to report
 
 #### Testing & building
 To help us test the latest development changes, download our master branch ([directly](https://github.com/acemod/ACE3/archive/master.zip), or [with git](https://help.github.com/articles/fetching-a-remote/)), then assemble a test build:
-* [Setting up the development environment](https://github.com/acemod/ACE3/blob/master/documentation/development/setting-up-the-development-environment.md) – step-by-step instructions on how to properly setup and build a version of ACE for testing purposes.
+* [Setting up the development environment](http://ace3mod.com/wiki/development/setting-up-the-development-environment.html) – step-by-step instructions on how to properly setup and build a version of ACE for testing purposes.
