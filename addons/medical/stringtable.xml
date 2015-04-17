@@ -369,7 +369,7 @@
             <English>Give Blood IV (1000ml)</English>
             <German>Bluttransfusion IV (1000ml)</German>
             <Spanish>Dar Sangre IV (1000ml)</Spanish>
-            <Russian>Дать кровь для в/в вливания (1000 мл)</Russian>
+            <Russian>Перелить пакет крови (1000 мл)</Russian>
             <Polish>Podaj krew IV (1000ml)</Polish>
             <French>Administrer du Sang en IV (1000ml)</French>
             <Czech>Podat krev. transfúzi (1000ml)</Czech>
@@ -380,7 +380,7 @@
             <English>Give Blood IV (500ml)</English>
             <German>Bluttransfusion IV (500ml)</German>
             <Spanish>Dar Sangre IV (500ml)</Spanish>
-            <Russian>Дать кровь для в/в вливания (500 мл)</Russian>
+            <Russian>Перелить пакет крови (500 мл)</Russian>
             <Polish>Podaj krew IV (500ml)</Polish>
             <French>Administrer du Sang en IV (500ml)</French>
             <Czech>Podat krev. transfúzi (500ml) </Czech>
@@ -391,7 +391,7 @@
             <English>Give Blood IV (250ml)</English>
             <German>Bluttransfusion IV (250ml)</German>
             <Spanish>Dar Sangre IV (250ml)</Spanish>
-            <Russian>Дать кровь для в/в вливания (250 мл)</Russian>
+            <Russian>Перелить пакет крови (250 мл)</Russian>
             <Polish>Podaj krew IV (250ml)</Polish>
             <French>Administrer du Sang en IV (250ml)</French>
             <Czech>Podat krev. transfúzi (250ml)</Czech>
@@ -402,7 +402,7 @@
             <English>Give Plasma IV (1000ml)</English>
             <German>Plasmatransfusion IV (1000ml)</German>
             <Spanish>Dar Plasma IV (1000ml)</Spanish>
-            <Russian>Дать плазму для в/в вливания (1000 мл)</Russian>
+            <Russian>Перелить пакет плазмы (1000 мл)</Russian>
             <Polish>Podaj osocze IV (1000ml)</Polish>
             <French>Administrer du Plasma en IV (1000ml)</French>
             <Czech>Podat plazmu (1000ml)</Czech>
@@ -413,7 +413,7 @@
             <English>Give Plasma IV (500ml)</English>
             <German>Plasmatransfusion IV (500ml)</German>
             <Spanish>Dar Plasma IV (500ml)</Spanish>
-            <Russian>Дать плазму для в/в вливания (500 мл)</Russian>
+            <Russian>Перелить пакет плазмы (500 мл)</Russian>
             <Polish>Podaj osocze IV (500ml)</Polish>
             <French>Administrer du Plasma en IV (500ml)</French>
             <Czech>Podat plazmu (500ml)</Czech>
@@ -424,7 +424,7 @@
             <English>Give Plasma IV (250ml)</English>
             <German>Plasmatransfusion IV (250ml)</German>
             <Spanish>Dar Plasma IV (250ml)</Spanish>
-            <Russian>Дать плазму для в/в вливания (250 мл)</Russian>
+            <Russian>Перелить пакет плазмы (250 мл)</Russian>
             <Polish>Podaj osocze IV (250ml)</Polish>
             <French>Administrer du Plasma en IV (250ml)</French>
             <Czech>Podat plazmu (250ml)</Czech>
@@ -435,7 +435,7 @@
             <English>Give Saline IV (1000ml)</English>
             <German>Kochsaltzlösung IV (1000ml)</German>
             <Spanish>Dar Salino IV (1000ml)</Spanish>
-            <Russian>Дать физраствор для в/в вливания (1000 мл)</Russian>
+            <Russian>Перелить пакет физраствора (1000 мл)</Russian>
             <Polish>Podaj solankę IV (1000ml)</Polish>
             <French>Administrer de la Solution Saline en IV (1000ml)</French>
             <Czech>Podaz fyz. roztok (1000ml)</Czech>
@@ -446,7 +446,7 @@
             <English>Give Saline IV (500ml)</English>
             <German>Kochsaltzlösung IV (500ml)</German>
             <Spanish>Dar Salino IV (500ml)</Spanish>
-            <Russian>Дать физраствор для в/в вливания (500 мл)</Russian>
+            <Russian>Перелить пакет физраствора (500 мл)</Russian>
             <Polish>Podaj solankę IV (500ml)</Polish>
             <French>Administrer de la Solution Saline en IV (500ml)</French>
             <Czech>Podaz fyz. roztok (500ml)</Czech>
@@ -457,7 +457,7 @@
             <English>Give Saline IV (250ml)</English>
             <German>Kochsaltzlösung IV (250ml)</German>
             <Spanish>Dar Salino IV (250ml)</Spanish>
-            <Russian>Дать физраствор для в/в вливания (250 мл)</Russian>
+            <Russian>Перелить пакет физраствора (250 мл)</Russian>
             <Polish>Podaj solankę IV (250ml)</Polish>
             <French>Administrer de la Solution Saline en IV (250ml)</French>
             <Czech>Podaz fyz. roztok (250ml)</Czech>
@@ -468,7 +468,7 @@
             <English>Minor</English>
             <German>Gering</German>
             <Spanish>Menor</Spanish>
-            <Russian>Незначительная</Russian>
+            <Russian>Легкие ранения</Russian>
             <Polish>Normalny</Polish>
             <French>Mineur</French>
             <Czech>Minimální</Czech>
@@ -478,7 +478,7 @@
         <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DELAYED">
             <English>Delayed</English>
             <Spanish>Retrasado</Spanish>
-            <Russian>Груз 300</Russian>
+            <Russian>Средние ранения</Russian>
             <Polish>Opóźniony</Polish>
             <French>Différé</French>
             <German>Verzögert</German>
@@ -489,7 +489,7 @@
         <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_IMMEDIATE">
             <English>Immediate</English>
             <Spanish>Inmediato</Spanish>
-            <Russian>Помощь отложена</Russian>
+            <Russian>Тяжелые ранения</Russian>
             <Polish>Natychmiastowy</Polish>
             <French>Urgence Immédiate</French>
             <German>Sofort</German>
@@ -500,7 +500,7 @@
         <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DECEASED">
             <English>Deceased</English>
             <Spanish>Fallecido</Spanish>
-            <Russian>Груз 200</Russian>
+            <Russian>Труп</Russian>
             <Polish>Nie żyje</Polish>
             <French>Décédé</French>
             <German>Verstorben</German>
@@ -511,7 +511,7 @@
         <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_NONE">
             <English>None</English>
             <Spanish>Ninguno</Spanish>
-            <Russian>Нет</Russian>
+            <Russian>Отсутствует</Russian>
             <Polish>Brak</Polish>
             <French>Aucun</French>
             <German>Keine</German>
@@ -1590,7 +1590,7 @@
             <English>Pain Effect Type</English>
             <German>Schmerzeffekt-Typ</German>
             <Polish>Rodzaj efektu bólu</Polish>
-            <Russian>Вид боли</Russian>
+            <Russian>Эффект боли</Russian>
             <Italian>Pain Effect Type</Italian>
             <Spanish>Tipo de efecto de dolor</Spanish>
         </Key>
@@ -1598,7 +1598,7 @@
             <English>Colour Flashing</English>
             <German>Farbblinken</German>
             <Polish>Pulsujące kolory</Polish>
-            <Russian>Разноцветные вспышки</Russian>
+            <Russian>Пульсирующий свет</Russian>
             <Italian>Colore lampeggiante</Italian>
             <Spanish>Parpadeo de color</Spanish>
         </Key>
