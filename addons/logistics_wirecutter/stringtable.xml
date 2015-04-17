@@ -24,7 +24,7 @@
         <Key ID="STR_ACE_logistics_wirecutter_CutFence">
             <English>Cut Fence</English>
             <German>Zaun schneiden</German>
-            <Spanish>Cortar valla</Spanish>
+            <Spanish>Cortar alambrado</Spanish>
             <Polish>Przetnij płot</Polish>
             <Czech>Přestřihnout plot</Czech>
             <French>Cisailler Clôture</French>
@@ -36,7 +36,7 @@
         <Key ID="STR_ACE_logistics_wirecutter_CuttingFence">
             <English>Cutting Fences / Wires ...</English>
             <German>Zaun / Draht schneiden ...</German>
-            <Spanish>Cortando valla / cables ...</Spanish>
+            <Spanish>Cortando alambrado / cables ...</Spanish>
             <Polish>Przecinanie płotu / drutów ...</Polish>
             <Czech>Přestřihnout plot / dráty ...</Czech>
             <French>Cisaille l'obstacle ...</French>
@@ -48,7 +48,7 @@
         <Key ID="STR_ACE_logistics_wirecutter_FenceCut">
             <English>Fence cut</English>
             <German>Zaun geschnitten</German>
-            <Spanish>Valla cortada</Spanish>
+            <Spanish>Alambrado cortado</Spanish>
             <Polish>Płot przecięty</Polish>
             <Czech>Plot přestřižen</Czech>
             <French>Clôture cisaillée</French>

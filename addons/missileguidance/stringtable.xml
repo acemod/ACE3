@@ -39,7 +39,7 @@
         </Key>
         <Key ID="STR_ACE_Hydra70_DAGR_Desc">
             <English>Hydra-70 DAGR Laser Guided Missile</English>
-            <Spanish>Cohete laser guiado Hydra-70 DAGR</Spanish>
+            <Spanish>Misil guiado por láser Hydra-70 DAGR</Spanish>
             <French></French>
             <Polish>Laserowo naprowadzana rakieta Hydra-70 DAGR</Polish>
             <German>Hydra-70 DAGR lasergelenkte Rakete</German>
@@ -75,7 +75,7 @@
         </Key>
         <Key ID="STR_ACE_Hellfire_AGM114K_desc">
             <English>Hellfire II AGM-114K Laser Guided Missile</English>
-            <Spanish>Misil laser guiado Hellfire II AGM-114K</Spanish>
+            <Spanish>Misil guiado por laser Hellfire II AGM-114K</Spanish>
             <French></French>
             <Polish>Laserowo naprowadzana rakieta Hellfire II AGM-114K</Polish>
             <German>Hellfire II AGM-114K Lasergelenkte Rakete</German>

@@ -40,7 +40,7 @@
         <Key ID="STR_ACE_logistics_uavbattery_Battery_Name">
             <English>UAV Battery</English>
             <German>UAV-Batterie</German>
-            <Spanish>Batería VANT</Spanish>
+            <Spanish>Batería para VANT</Spanish>
             <French>Batterie UAV</French>
             <Polish>Bateria UAV</Polish>
             <Hungarian>UAV akkumulátor</Hungarian>
@@ -52,7 +52,7 @@
         <Key ID="STR_ACE_logistics_uavbattery_Battery_Description">
             <English>Used to refuel Carried UAV's</English>
             <German>Verwendet zum Aufladen von tragbaren UAVs</German>
-            <Spanish>Utilizado para reabastecer el VANT</Spanish>
+            <Spanish>Usada para reabastecer el VANT</Spanish>
             <French>Utilisée pour recharger l'UAV</French>
             <Polish>Używana do naładowania baterii przenośnego UAV</Polish>
             <Hungarian>Hordozható UAV-k feltöltéséhez való akkumulátor</Hungarian>
