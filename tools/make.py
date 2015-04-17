@@ -200,7 +200,10 @@ def find_depbo_tools(regKey):
 		reg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
 
 	try:
-		k = winreg.OpenKey(reg, r"Software\Mikero\pboProject")
+		try:
+			k = winreg.OpenKey(reg, r"Software\Wow6432Node\Mikero\pboProject")
+		except FileNotFoundError:
+			k = winreg.OpenKey(reg, r"Software\Mikero\pboProject")
 		try:
 			pboproject_path = winreg.QueryValueEx(k, "exe")[0]
 			winreg.CloseKey(k)
@@ -208,7 +211,10 @@ def find_depbo_tools(regKey):
 		except:
 			print_error("ERROR: Could not find pboProject.")
 
-		k = winreg.OpenKey(reg, r"Software\Mikero\rapify")
+		try:
+			k = winreg.OpenKey(reg, r"Software\Wow6432Node\Mikero\rapify")
+		except FileNotFoundError:
+			k = winreg.OpenKey(reg, r"Software\Mikero\rapify")
 		try:
 			rapify_path = winreg.QueryValueEx(k, "exe")[0]
 			winreg.CloseKey(k)
@@ -216,7 +222,10 @@ def find_depbo_tools(regKey):
 		except:
 			print_error("Could not find rapify.")
 
-		k = winreg.OpenKey(reg, r"Software\Mikero\MakePbo")
+		try:
+			k = winreg.OpenKey(reg, r"Software\Wow6432Node\Mikero\MakePbo")
+		except FileNotFoundError:
+			k = winreg.OpenKey(reg, r"Software\Mikero\MakePbo")
 		try:
 			makepbo_path = winreg.QueryValueEx(k, "exe")[0]
 			winreg.CloseKey(k)
