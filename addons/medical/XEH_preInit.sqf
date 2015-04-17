@@ -97,6 +97,7 @@ PREP(moduleAssignMedicalFacility);
 PREP(moduleTreatmentConfiguration);
 PREP(copyDeadBody);
 PREP(requestWoundSync);
+PREP(unconsciousPFH);
 
 GVAR(injuredUnitCollection) = [];
 GVAR(IVBags) = [];
