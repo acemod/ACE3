@@ -27,7 +27,7 @@ if (_syncValues) then {
     _unit setvariable [QGVAR(lastMomentValuesSynced), time];
 };
 
-_bloodVolume = (_unit getvariable [QGVAR(bloodVolume), 0]) + ([_unit] call FUNC(getBloodVolumeChange));
+_bloodVolume = (_unit getvariable [QGVAR(bloodVolume), 100]) + ([_unit] call FUNC(getBloodVolumeChange));
 _bloodVolume = _bloodVolume max 0;
 
 _unit setvariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
@@ -100,7 +100,7 @@ if (GVAR(level) >= 2) then {
     };
 
     // Set the vitals
-    _heartRate = (_unit getvariable [QGVAR(heartRate), 0]) + (([_unit] call FUNC(getHeartRateChange)) * _interval);
+    _heartRate = (_unit getvariable [QGVAR(heartRate), 80]) + (([_unit] call FUNC(getHeartRateChange)) * _interval);
     _unit setvariable  [QGVAR(heartRate), _heartRate, _syncValues];
 
     _bloodPressure = [_unit] call FUNC(getBloodPressure);
