@@ -39,6 +39,7 @@ _fnc_updateWind = {
 
 // Update Rain
 _fnc_updateRain = {
+    private ["_oldStrength","_rainStrength","_transitionTime","_periodPosition","_periodPercent"];
     if(GVAR(enableRain)) then {
         if(!isNil "ACE_RAIN_PARAMS" && {!isNil QGVAR(rain_period_start_time)}) then {
             _oldStrength = ACE_RAIN_PARAMS select 0;
@@ -56,6 +57,7 @@ _fnc_updateRain = {
 
 // Update Temperature
 _fnc_updateTemperature = {
+    private ["_time","_month","_hourlyCoef","_avgTemperature","_pS1","_pS2"];
     _time = daytime;
     _month = date select 1;
 

@@ -94,6 +94,8 @@ class ACE_settingsMenu {
       periodFocus = 1;
       periodOver = 1;
       action = QUOTE([MENU_TAB_OPTIONS] call FUNC(onListBoxShowSelectionChanged););
+      SizeEx = (UNITY * 1);
+      Size = (UNITY * 1);
     };
     class selectionAction_2: selectionAction_1 {
       idc = 1001;
@@ -221,6 +223,8 @@ class ACE_settingsMenu {
       periodFocus = 1;
       periodOver = 1;
       action = "closedialog 0;";
+      SizeEx = (UNITY * 1);
+      Size = (UNITY * 1);
     };
     class action_reset: actionClose {
       idc = 1100;

@@ -230,12 +230,12 @@ class ATragMX_Display {
             w=0.03;
             h=0.03;
             colorBackground[]={0,0,0,0.0};
-            action=QUOTE(((GVAR(currentGun) select GVAR(currentTarget)) + (count GVAR(gunList)) - 1) % (count GVAR(gunList)) call FUNC(change_gun));
+            action=QUOTE((GVAR(currentGun) + (count GVAR(gunList)) - 1) % (count GVAR(gunList)) call FUNC(change_gun));
         };
         class BOTTOM: TOP {
             idc=-1;
             y=0.265*safezoneH+safezoneY+0.955;
-            action=QUOTE(((GVAR(currentGun) select GVAR(currentTarget)) + (count GVAR(gunList)) + 1) % (count GVAR(gunList)) call FUNC(change_gun));
+            action=QUOTE((GVAR(currentGun) + (count GVAR(gunList)) + 1) % (count GVAR(gunList)) call FUNC(change_gun));
         };
         class LEFT: ATragMX_RscButton {
             idc=-1;
@@ -244,12 +244,12 @@ class ATragMX_Display {
             w=0.05;
             h=0.03;
             colorBackground[]={0,0,0,0};
-            action=QUOTE(call FUNC(parse_input); GVAR(currentTarget) = (4 + GVAR(currentTarget) - 1) % 4; call FUNC(update_target_selection));
+            action=QUOTE(((4 + GVAR(currentTarget) - 1) % 4) call FUNC(change_target_slot));
         };
         class RIGHT: LEFT {
             idc=-1;
             x=0.55*safezoneW+safezoneX+0.2725;
-            action=QUOTE(call FUNC(parse_input); GVAR(currentTarget) = (4 + GVAR(currentTarget) + 1) % 4; call FUNC(update_target_selection));
+            action=QUOTE(((4 + GVAR(currentTarget) + 1) % 4) call FUNC(change_target_slot));
         };
         class TOP_LEFT: ATragMX_RscButton {
             idc=-1;
@@ -420,25 +420,25 @@ class ATragMX_Display {
             colorBackgroundDisabled[]={0,0,0,1};
             colorBackgroundActive[]={0,0,0,0};
             text="A";
-            action=QUOTE(call FUNC(parse_input); GVAR(currentTarget)=0; call FUNC(update_target_selection));
+            action=QUOTE(0 call FUNC(change_target_slot));
         };
         class TEXT_TARGET_B: TEXT_TARGET_A {
             idc=501;
             x=0.550*safezoneW+safezoneX+0.2281;
             text="B";
-            action=QUOTE(call FUNC(parse_input); GVAR(currentTarget)=1; call FUNC(update_target_selection));
+            action=QUOTE(1 call FUNC(change_target_slot));
         };
         class TEXT_TARGET_C: TEXT_TARGET_B {
             idc=502;
             x=0.550*safezoneW+safezoneX+0.2512;
             text="C";
-            action=QUOTE(call FUNC(parse_input); GVAR(currentTarget)=2; call FUNC(update_target_selection));
+            action=QUOTE(2 call FUNC(change_target_slot));
         };
         class TEXT_TARGET_D: TEXT_TARGET_B {
             idc=503;
             x=0.550*safezoneW+safezoneX+0.2743;
             text="D";
-            action=QUOTE(call FUNC(parse_input); GVAR(currentTarget)=3; call FUNC(update_target_selection));
+            action=QUOTE(3 call FUNC(change_target_slot));
         };
 
         class TEXT_TARGET: TEXT_GUN {
