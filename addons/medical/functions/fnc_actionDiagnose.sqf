@@ -14,8 +14,6 @@
 
 #include "script_component.hpp"
 
-systemChat "actionDiagnose";
-
 private ["_caller","_target","_title","_content"];
 _caller = _this select 0;
 _target = _this select 1;
