@@ -23,6 +23,11 @@ Events can be removed or cleared with the following commands.
 * `[eventName, eventHandlerId] call ace_common_fnc_removeEventHandler` <br/> will remove a specific event handler of the event name, using the ID returned from `ace_common_fnc_addEventHandler`.
 * `[eventName] call ace_common_fnc_removeAllEventHandlers` <br/> will remove all event handlers for that type of event.
 
+### Synchronized Events
+* `[eventName, eventCodeBlock, ttlNumberOrCodeBlock] call ace_common_fnc_addSyncedEventHandler` <br/> adds a globally synchronized event handler which will expire events after the provided TTL, or the code returns true.
+* `[eventName] call ace_common_fnc_removeSyncedEventHandler` <br/> will remove a specific event handler of the event name, using the ID returned from `ace_common_fnc_addSyncedEventHandler`.
+* * `[eventName, args, ttlNumberOrCodeBlock] call ace_common_fnc_syncedEvent` <br/> calls a global synchronized event, which will also be run on JIP players unless it has expired; event will expire after the provided TTL, or the code returns true.
+
 ### Pattern:
 ```c++
 // tapper machine
@@ -50,6 +55,13 @@ PREP(onTapShoulder);
             <td>`player` changed (zeus/respawn)</td>
             <td>common</td>
             <td>[_newPlayer, _oldPlayer]</td>
+            <td>local</td>
+        </tr>
+        <tr>
+            <td>"PlayerJIP"</td>
+            <td>Player was a JIP player, and `player` object is now created.</td>
+            <td>common</td>
+            <td>[_player]</td>
             <td>local</td>
         </tr>
         </tr>    
