@@ -265,7 +265,3 @@ if (USE_WOUND_EVENT_SYNC) then {
 ["playerInventoryChanged", {
     [ACE_player] call FUNC(itemCheck);
 }] call EFUNC(common,addEventHandler);
-
-
-// Synchronized litter creation
-[QGVAR(createLitter), FUNC(_handleCreateLitter)] call EFUNC(common,addEventHandler);
