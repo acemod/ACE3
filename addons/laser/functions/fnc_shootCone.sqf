@@ -1,7 +1,6 @@
 #include "script_component.hpp"
 //#define DEBUG_MODE_FULL
-private ["_divergence","_pos","_vec","_longestReturn","_shortestReturn","_resultPositions","_p1","_p2","_p","_v","_cp","_vecRotateMap","_result",
-            "_resultPos","_distance","_count","_pos2","_radOffset","_offset","_offsetPos","_offsetVector"];
+private ["_i", "_divergence","_pos","_vec","_longestReturn","_shortestReturn","_resultPositions","_p1","_p2","_p","_v","_cp","_vecRotateMap","_result", "_resultPos","_distance","_count","_pos2","_radOffset","_offset","_offsetPos","_offsetVector"];
 _divergence = 0.3;
 _pos = _this select 0;
 _vec = _this select 1;

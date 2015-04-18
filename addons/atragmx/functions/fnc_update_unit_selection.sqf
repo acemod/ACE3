@@ -22,6 +22,10 @@
 ((uiNamespace getVariable "ATragMX_Display") displayCtrl 600 + GVAR(currentUnit)) ctrlEnable false;
 
 [] call FUNC(update_gun);
+[] call FUNC(update_gun_ammo_data);
 [] call FUNC(update_atmosphere);
+[] call FUNC(update_atmo_env_data);
 [] call FUNC(update_target);
+[] call FUNC(update_target_data);
+
 [] call FUNC(update_result);

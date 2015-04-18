@@ -1135,7 +1135,7 @@
             <English>Mini-Spike (AT)</English>
             <German>Mini-Spike (PALR)</German>
             <Czech>Mini-Spike (PT)</Czech>
-            <Polish>Mini-Spike (AA)</Polish>
+            <Polish>Mini-Spike (AT)</Polish>
             <French>Mini-Spike (AT)</French>
             <Hungarian>Mini-Spike (Tankelhárító)</Hungarian>
             <Spanish>Mini-Spike (AT)</Spanish>
@@ -1554,7 +1554,7 @@
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
             <English>TODO: NATO DMR (provisional) spotter</English>
             <Czech>TODO: NATO DMR (provisional) spotter</Czech>
-            <French>NATO DMR (provisoire) Observateur</French>
+            <French>NATO DMR (provisoire) observateur</French>
             <Spanish>TODO: NATO DMR (provisional) observador</Spanish>
             <Russian>TODO: NATO DMR (provisional) корректировщик</Russian>
         </Key>

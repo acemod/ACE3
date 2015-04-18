@@ -3,6 +3,7 @@
 TRACE_1("enter", _this);
 
 PARAMS_1(_laserTarget);
+private["_uuid"];
 
 // Add the target to the global targets array
 // Everyone tracks them

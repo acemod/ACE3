@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_MissileGuidance">
             <English>Advanced Missile Guidance</English>
             <Spanish>Avanzada Misiles Orientación</Spanish>
-            <French>Avancée Missile orientation</French>
+            <French>Guidage avancé de missile</French>
             <Polish>Zaawansowane naprowadzanie rakiet</Polish>
             <German>Erweitertes Raketenlenksystem</German>
             <Czech>Pokročilé řízení střel</Czech>
@@ -13,10 +13,13 @@
             <Hungarian>Fejlett rakétairányító</Hungarian>
             <Russian>Расширенный ракетой</Russian>
         </Key>
+        <Key ID="STR_ACE_MissileGuidance_Desc">
+            <English>Advanced missile guidance, or AMG, provides multiple enhancements to missile locking and firing. It is also a framework required for missile weapon types.</English>
+        </Key>
         <Key ID="STR_ACE_Hydra70_DAGR">
             <English>Hydra-70 DAGR Missile</English>
             <Spanish></Spanish>
-            <French></French>
+            <French>Hydra-70 DAGR</French>
             <Polish>Hydra-70 DAGR</Polish>
             <German>Hydra-70 DAGR Rackete</German>
             <Czech>Hydra-70 DAGR</Czech>
@@ -28,7 +31,7 @@
         <Key ID="STR_ACE_Hydra70_DAGR_Short">
             <English>DAGR</English>
             <Spanish></Spanish>
-            <French></French>
+            <French>DAGR</French>
             <Polish>DAGR</Polish>
             <German>DAGR</German>
             <Czech>DAGR</Czech>
@@ -40,7 +43,7 @@
         <Key ID="STR_ACE_Hydra70_DAGR_Desc">
             <English>Hydra-70 DAGR Laser Guided Missile</English>
             <Spanish></Spanish>
-            <French></French>
+            <French>Missile à guidage Hydra-70 DAGR</French>
             <Polish>Laserowo naprowadzana rakieta Hydra-70 DAGR</Polish>
             <German>Hydra-70 DAGR lasergelenkte Rakete</German>
             <Czech>Hydra-70 DAGR laserem naváděná střela</Czech>
@@ -52,7 +55,7 @@
         <Key ID="STR_ACE_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
             <Spanish></Spanish>
-            <French></French>
+            <French>Hellfire II AGM-114K</French>
             <Polish>Hellfire II AGM-114K</Polish>
             <German>Hellfire II AGM-114K</German>
             <Czech>Hellfire II AGM-114K</Czech>
@@ -64,7 +67,7 @@
         <Key ID="STR_ACE_Hellfire_AGM114K_Short">
             <English>AGM-114K</English>
             <Spanish></Spanish>
-            <French></French>
+            <French>AGM-114K</French>
             <Polish>AGM-114K</Polish>
             <German>AGM-114K</German>
             <Czech>AGM-114K</Czech>
@@ -76,7 +79,7 @@
         <Key ID="STR_ACE_Hellfire_AGM114K_desc">
             <English>Hellfire II AGM-114K Laser Guided Missile</English>
             <Spanish></Spanish>
-            <French></French>
+            <French>Missile à guidage laser Hellfire II AGM-114K</French>
             <Polish>Laserowo naprowadzana rakieta Hellfire II AGM-114K</Polish>
             <German>Hellfire II AGM-114K Lasergelenkte Rakete</German>
             <Czech>Hellfire II AGM-114K laserem naváděná střela</Czech>

@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_affected", "_strength", "_posGrenade", "_posUnit", "_angleGrenade", "_angleView", "_angleDiff", "_light", "_losCount"];
+private ["_affected", "_strength", "_posGrenade", "_posUnit", "_angleGrenade", "_angleView", "_angleDiff", "_light", "_losCount", "_dirToUnitVector", "_eyeDir", "_eyePos"];
 
 PARAMS_1(_grenade);
 
