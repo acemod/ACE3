@@ -204,7 +204,7 @@ if(!isServer) then{
 
 
 // JIP Detection and event trigger. Run this at the very end, just in case anything uses it
-if(isNull player) then {
+if(!isServer && {isNull player}) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
         PARAMS_2(_args,_handle);
