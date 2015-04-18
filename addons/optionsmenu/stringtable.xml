@@ -213,5 +213,8 @@
             <Hungarian>Beállítások exportálva a vágólapba</Hungarian>
             <Italian>Parametri esportati alla clipboard</Italian>
         </Key>
+        <Key ID="STR_ACE_optionsMenu_uiScaing">
+            <English>Option Menu UI Scaling</English>
+        </Key>
     </Package>
 </Project>
