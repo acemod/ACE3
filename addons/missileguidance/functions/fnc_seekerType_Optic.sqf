@@ -17,6 +17,7 @@ TRACE_1("", _launchParams);
 _foundTargetPos = [0,0,0];
 if(!isNil "_target") then {
     _foundTargetPos = getPosASL _target;
+    //_foundTargetPos = (_target modelToWorldVisual (getCenterOfMass _target));
 };
 
 // @TODO: This is seeker LOS and angle checks for LOAL only; LOBL does not need visual
