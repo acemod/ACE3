@@ -4,7 +4,7 @@
 if !(hasInterface) exitWith {};
 
 // Add keybinds
-["ACE3", QGVAR(SelectPistol), localize "STR_ACE_WeaponSelect_SelectPistol",
+/*["ACE3", QGVAR(SelectPistol), localize "STR_ACE_WeaponSelect_SelectPistol",
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -72,7 +72,7 @@ if !(hasInterface) exitWith {};
     true
 },
 {false},
-[6, [false, false, false]], false] call cba_fnc_addKeybind; //5 Key
+[6, [false, false, false]], false] call cba_fnc_addKeybind; //5 Key*/
 
 ["ACE3", QGVAR(SelectGrenadeFrag), localize "STR_ACE_WeaponSelect_SelectGrenadeFrag",
 {
@@ -144,7 +144,7 @@ if !(hasInterface) exitWith {};
 {false},
 [2, [false, false, false]], false] call cba_fnc_addKeybind; //1 Key
 
-["ACE3", QGVAR(SelectMainGun), localize "STR_ACE_WeaponSelect_SelectMainGun",
+/*["ACE3", QGVAR(SelectMainGun), localize "STR_ACE_WeaponSelect_SelectMainGun",
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -184,7 +184,7 @@ if !(hasInterface) exitWith {};
     true
 },
 {false},
-[6, [false, false, false]], false] call cba_fnc_addKeybind; //5 Key
+[6, [false, false, false]], false] call cba_fnc_addKeybind; //5 Key*/
 
 ["ACE3", QGVAR(FireSmokeLauncher), localize "STR_ACE_WeaponSelect_FireSmokeLauncher",
 {
