@@ -12,6 +12,7 @@
             <Portuguese>Arrastar</Portuguese>
             <Italian>Trascina</Italian>
             <Hungarian>Húzás</Hungarian>
+            <Dutch>Sleep</Dutch>
         </Key>
         <Key ID="STR_ACE_Dragging_Drop">
             <English>Release</English>
@@ -24,6 +25,7 @@
             <Portuguese>Largar</Portuguese>
             <Italian>Lascia</Italian>
             <Hungarian>Elengedés</Hungarian>
+            <Dutch>Los laten</Dutch>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item to heavy</English>
@@ -36,6 +38,7 @@
             <Russian>Слишком тяжело</Russian>
             <Czech>Moc težké</Czech>
             <Hungarian>Az objektum túl nehéz</Hungarian>
+            <Dutch>Object is te zwaar</Dutch>
         </Key>
         <Key ID="STR_ACE_Dragging_Carry">
             <English>Carry</English>
@@ -48,6 +51,7 @@
             <Italian>Trascina</Italian>
             <Hungarian>Felvevés</Hungarian>
             <Russian>Нести</Russian>
+            <Dutch>Tillen</Dutch>
         </Key>
     </Package>
 </Project>
