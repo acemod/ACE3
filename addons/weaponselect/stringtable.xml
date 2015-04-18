@@ -41,7 +41,7 @@
             <Spanish>Seleccionar fusil</Spanish>
             <Polish>Wybierz karabin</Polish>
             <Czech>Zvolit hlavní zbraň</Czech>
-            <Russian>Выбрать автомат</Russian>
+            <Russian>Выбрать винтовку</Russian>
             <French>Sélectionner Fusil</French>
             <Hungarian>Puska Kiválasztása</Hungarian>
             <Portuguese>Selecionar Rifle</Portuguese>
@@ -246,7 +246,7 @@
             <Czech>Už nejsou žádné ostatní granáty</Czech>
             <Portuguese>Não há outras granadas restantes</Portuguese>
             <Italian>Nessun'altra granata rimanente.</Italian>
-            <Russian>Летальные гранаты закончились</Russian>
+            <Russian>Нелетальные гранаты закончились</Russian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoGrenadeSelected">
             <English>No grenade selected</English>
