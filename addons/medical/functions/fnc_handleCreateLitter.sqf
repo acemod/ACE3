@@ -31,10 +31,10 @@ if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
             if (time - (_x select 0) >= GVAR(litterCleanUpDelay)) then {
                 {
                     deleteVehicle _x;
-                } foreach (_this select 1);
+                } forEach (_x select 1);
                 GVAR(allCreatedLitter) set[_foreachIndex, objNull];
             };
-        }foreach GVAR(allCreatedLitter);
+        } forEach GVAR(allCreatedLitter);
         GVAR(allCreatedLitter) = GVAR(allCreatedLitter) - [objNull];
 
         if ( (count GVAR(allCreatedLitter)) == 0) exitwith {

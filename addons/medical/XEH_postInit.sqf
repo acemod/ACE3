@@ -268,4 +268,4 @@ if (USE_WOUND_EVENT_SYNC) then {
 
 
 // Networked litter
-[QGVAR(createLitter), FUNC(handleCreateLitter)] call EFUNC(common,addSyncedEventHandler);
+[QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);

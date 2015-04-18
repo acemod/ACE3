@@ -47,6 +47,8 @@ _createLitter = {
     };
     _direction = (random 360);
     
+    // Create the litter, and timeout the event based on the cleanup delay
+    // The cleanup delay for events in MP is handled by the server side 
     [QGVAR(createLitter), [_litterClass,_position,_direction], 0] call EFUNC(common,syncedEvent);
     
     true

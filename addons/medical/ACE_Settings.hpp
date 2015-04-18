@@ -84,7 +84,7 @@ class ACE_Settings {
     };
     class GVAR(litterCleanUpDelay) {
         typeName = "SCALAR";
-        value = -1;
+        value = 0;  
     };
     class GVAR(medicSetting_PAK) {
         typeName = "SCALAR";
