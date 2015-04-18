@@ -73,8 +73,8 @@ class CfgVehicles {
                 defaultValue = 0;
             };
             class enableVehicleCrashes {
-                displayName = "Vehicle Crashes";
-                description = "Do units take damage from a vehicle crash?";
+                displayName = "$STR_ACE_enableVehicleCrashes";
+                description = "$STR_ACE_enableVehicleCrashes_Desc";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
@@ -85,20 +85,20 @@ class CfgVehicles {
                 defaultValue = 1;
             };
             class playerDamageThreshold {
-                displayName = "Player Damage";
-                description = "What is the damage a player can take before being killed?";
+                displayName = "$STR_ACE_playerDamageThreshold";
+                description = "$STR_ACE_playerDamageThreshold_Desc";
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
             class AIDamageThreshold {
-                displayName = "AI Damage";
-                description = "What is the damage an AI can take before being killed?";
+                displayName = "$STR_ACE_AIDamageThreshold";
+                description = "$STR_ACE_AIDamageThreshold_Desc";
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
             class enableUnsconsiousnessAI {
-                displayName = "AI Unconsciousness";
-                description = "Allow AI to go unconscious";
+                displayName = "$STR_ACE_enableUnsconsiousnessAI";
+                description = "$STR_ACE_enableUnsconsiousnessAI_Desc";
                 typeName = "NUMBER";
                 class values {
                     class disable {
@@ -117,8 +117,8 @@ class CfgVehicles {
                 };
             };
             class preventInstaDeath {
-                displayName = "Prevent instant death";
-                description = "Have a unit move to unconscious instead of death";
+                displayName = "$STR_ACE_Medical_preventInstaDeath";
+                description = "$STR_ACE_Medical_preventInstaDeath_Desc";
                 typeName = "BOOL";
                 defaultValue = 0;
             };
@@ -129,8 +129,8 @@ class CfgVehicles {
                 defaultValue = 1;
             };
             class keepLocalSettingsSynced {
-                displayName = "Sync status";
-                description = "Keep unit status synced. Recommended on.";
+                displayName = "$STR_ACE_Medical_keepLocalSettingsSynced";
+                description = "$STR_ACE_Medical_keepLocalSettingsSynced_Desc";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
@@ -154,8 +154,8 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class medicSetting {
-                displayName = "Medics setting";
-                description = "What is the level of detail prefered for medics?";
+                displayName = "$STR_ACE_Medical_medicSetting";
+                description = "$STR_ACE_Medical_medicSetting_Desc";
                 typeName = "NUMBER";
                 class values {
                     class disable {
@@ -174,38 +174,38 @@ class CfgVehicles {
                 };
             };
             class maxReviveTime {
-                displayName = "Max Revive time";
-                description = "Max amount of seconds a unit can spend in revive state";
+                displayName = "$STR_ACE_Medical_maxReviveTime";
+                description = "$STR_ACE_Medical_maxReviveTime_Desc";
                 typeName = "NUMBER";
                 defaultValue = 120;
             };
             class amountOfReviveLives {
-                displayName = "Max Revive lives";
-                description = "Max amount of lives a unit. 0 or -1 is disabled.";
+                displayName = "$STR_ACE_Medical_amountOfReviveLives";
+                description = "$STR_ACE_Medical_amountOfReviveLives_Desc";
                 typeName = "NUMBER";
                 defaultValue = -1;
             };
             class enableOverdosing {
-                displayName = "";
-                description = "";
+                displayName = "$STR_ACE_enableOverdosing";
+                description = "$STR_ACE_enableOverdosing_Desc";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class allowLitterCreation {
-                displayName = "Enable Litter";
-                description = "Enable litter being created upon treatment";
+                displayName = "$STR_ACE_Medical_allowLitterCreation";
+                description = "$STR_ACE_Medical_allowLitterCreation_Desc";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class litterCleanUpDelay {
-                displayName = "Life time of litter objects";
-                description = "How long should litter objects stay? In seconds. -1 is forever.";
+                displayName = "$STR_ACE_Medical_litterCleanUpDelay";
+                description = "$STR_ACE_Medical_litterCleanUpDelay_Desc";
                 typeName = "NUMBER";
                 defaultValue = 1800;
             };
             class medicSetting_PAK {
-                displayName = "Allow PAK (Adv)";
-                description = "Who can use the PAK for full heal?";
+                displayName = "$STR_ACE_Medical_medicSetting_PAK";
+                description = "$STR_ACE_Medical_medicSetting_PAK_Desc";
                 typeName = "NUMBER";
                 class values {
                     class anyone { name = "Anyone"; value = 0; };
@@ -223,8 +223,8 @@ class CfgVehicles {
                 };
             };
             class useLocation_PAK {
-                displayName = "Locations PAK (Adv)";
-                description = "Where can the personal aid kit be used?";
+                displayName = "$STR_ACE_Medical_useLocation_PAK";
+                description = "$STR_ACE_Medical_useLocation_PAK_Desc";
                 typeName = "NUMBER";
                 class values {
                     class anywhere { name = "Anywhere"; value = 0; };
@@ -235,16 +235,16 @@ class CfgVehicles {
                 };
             };
             class medicSetting_SurgicalKit: medicSetting_PAK {
-                displayName = "Allow Surgical kit (Adv)";
-                description = "Who can use the surgical kit?";
+                displayName = "$STR_ACE_Medical_medicSetting_SurgicalKit";
+                description = "$STR_ACE_Medical_medicSetting_SurgicalKit_Desc";
             };
             class consumeItem_SurgicalKit: consumeItem_PAK {
-                displayName = "Remove Surgical kit (Adv)";
-                description = "Should Surgical kit be removed on usage?";
+                displayName = "$STR_ACE_Medical_consumeItem_SurgicalKit";
+                description = "$STR_ACE_Medical_consumeItem_SurgicalKit_Desc";
             };
             class useLocation_SurgicalKit: useLocation_PAK {
-                displayName = "Locations Surgical kit (Adv)";
-                description = "Where can the Surgical kit be used?";
+                displayName = "$STR_ACE_Medical_useLocation_SurgicalKit";
+                description = "$STR_ACE_Medical_useLocation_SurgicalKit_Desc";
             };
 
         };

@@ -1775,5 +1775,17 @@
         <Key ID="STR_ACE_Medical_medicSetting_Desc">
             <English>What is the level of detail prefered for medics?</English>
         </Key>
+
+
+
+        <Key ID="STR_ACE_MedicalLevel_Disabled">
+            <English>Disabled (Currently WIP and not activ)</English>
+        </Key>
+        <Key ID="STR_ACE_MedicalLevel_Basic">
+            <English>Basic</English>
+        </Key>
+        <Key ID="STR_ACE_MedicalLevel_Advanced">
+            <English>Advanced</English>
+        </Key>        
     </Package>
 </Project>
