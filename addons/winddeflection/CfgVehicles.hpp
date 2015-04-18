@@ -17,6 +17,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class vehicleEnabled {
+                displayName = "Vehicle Enabled";
+                description = "Enables wind deflection for static/vehicle gunners";
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
             class simulationInterval {
                 displayName = "Simulation Interval";
                 description = "Defines the interval between every calculation step";
