@@ -25,12 +25,21 @@ if (GVAR(currentUnit) == 1) then {
     GVAR(barometricPressure) = GVAR(barometricPressure) * 33.86389;
 };
 
+private ["_inclinationAngleCosine", "_inclinationAngleDegree"];
 GVAR(latitude) set [GVAR(currentTarget), -90 max Round(parseNumber(ctrlText 140000)) min 90];
 GVAR(directionOfFire) set [GVAR(currentTarget), 0 max abs(Round(parseNumber(ctrlText 140010))) min 359];
 GVAR(windSpeed1) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140020)) min 50];
 GVAR(windSpeed2) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140021)) min 50];
 GVAR(windDirection) set [GVAR(currentTarget), 1 max Round(parseNumber(ctrlText 140030)) min 12];
-GVAR(inclinationAngle) set [GVAR(currentTarget), -60 max parseNumber(ctrlText 140040) min 60];
+_inclinationAngleCosine = 0.5 max parseNumber(ctrlText 140041) max 1;
+_inclinationAngleDegree = -60 max parseNumber(ctrlText 140040) min 60;
+if (_inclinationAngleDegree != GVAR(inclinationAngle) select GVAR(currentTarget)) then {
+    GVAR(inclinationAngle) set [GVAR(currentTarget), _inclinationAngleDegree];
+} else {
+    if (_inclinationAngleCosine != cos(GVAR(inclinationAngle) select GVAR(currentTarget))) then {
+        GVAR(inclinationAngle) set [GVAR(currentTarget), acos(_inclinationAngleCosine)];
+    };
+};
 GVAR(targetSpeed) set [GVAR(currentTarget), -50 max abs(parseNumber(ctrlText 140050)) min 50];
 GVAR(targetRange) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140060)) min 4000];
 if (GVAR(currentUnit) != 2) then {

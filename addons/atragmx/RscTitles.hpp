@@ -1271,12 +1271,14 @@ class ATragMX_Display {
             w=0.045;
             x=0.550*safezoneW+safezoneX+0.300;
             y=0.265*safezoneH+safezoneY+0.440;
+            onKeyUp=QUOTE(if (_this select 1 == 28) then {0 call FUNC(update_inclination_angle)});
         };
         class TEXT_TARGET_DATA_INCLINATION_ANGLE_INPUT_DEGREE: TEXT_TARGET_DATA_LATITUDE_INPUT {
             idc=140040;
             w=0.045;
             x=0.550*safezoneW+safezoneX+0.350;
             y=0.265*safezoneH+safezoneY+0.440;
+            onKeyUp=QUOTE(if (_this select 1 == 28) then {1 call FUNC(update_inclination_angle)});
         };
         class TEXT_TARGET_DATA_TARGET_SPEED: TEXT_TARGET_DATA_LATITUDE {
             idc=14005;

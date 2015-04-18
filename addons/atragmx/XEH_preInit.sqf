@@ -53,6 +53,7 @@ PREP(update_atmo_env_data);
 PREP(update_atmo_selection);
 PREP(update_gun);
 PREP(update_gun_ammo_data);
+PREP(update_inclination_angle);
 PREP(update_range_card);
 PREP(update_relative_click_memory);
 PREP(update_result);
