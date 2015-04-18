@@ -52,6 +52,13 @@ PREP(onTapShoulder);
             <td>[_newPlayer, _oldPlayer]</td>
             <td>local</td>
         </tr>
+        <tr>
+            <td>"PlayerJIP"</td>
+            <td>Player was a JIP player, and `player` object is now created.</td>
+            <td>common</td>
+            <td>[_player]</td>
+            <td>local</td>
+        </tr>
         </tr>    
          <tr>
             <td>"playerInventoryChanged"</td>
