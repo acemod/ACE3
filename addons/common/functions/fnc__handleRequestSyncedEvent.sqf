@@ -7,7 +7,7 @@
  * Return value:
  * Boolean of success
  */
- #define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 //SEH_s

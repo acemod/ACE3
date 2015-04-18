@@ -107,7 +107,6 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 
 // PFH to raise varios events
 [{
-
     // "playerInventoryChanged" event
     _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
     if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
@@ -190,6 +189,32 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 }] call FUNC(addCanInteractWithCondition);
 
 // Synced ACE events
+// Handle JIP scenario
+if(!isServer) then{
+    ["PlayerJip", { 
+        diag_log text format["[ACE] - JIP event synchronization initialized"];
+        ["SEH_all", [player]] call FUNC(serverEvent);
+    }] call FUNC(addEventHandler);
+} else {
+    ["SEH_all", FUNC(_handleRequestAllSyncedEvents)] call FUNC(addEventHandler);
+};
 ["SEH", FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
 ["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
 [FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
+
+
+// JIP Detection and event trigger. Run this at the very end, just in case anything uses it
+if(isNull player) then {
+    // We are jipping! Get ready and wait, and throw the event
+    [{
+        PARAMS_2(_args,_handle);
+        
+        if(!isNull player) then {   
+            ["PlayerJip", [player] ] call FUNC(localEvent);
+            [_handle] call cba_fnc_removePerFrameHandler;
+        }; 
+    }, 0, []] call cba_fnc_addPerFrameHandler;
+};
+
+
+
