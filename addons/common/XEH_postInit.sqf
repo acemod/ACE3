@@ -215,7 +215,6 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 if(isMultiplayer && { time > 0 || isNull player } ) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
-        diag_log text format["JIP Detected, waiting"];
         if(!(isNull player)) then {   
             ["PlayerJip", [player] ] call FUNC(localEvent);
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
