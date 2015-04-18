@@ -1,4 +1,10 @@
 class ACE_Settings {
+    class GVAR(enabled) {
+        displayName = "Wind Deflection";
+        description = "Enables wind deflection";
+        typeName = "BOOL";
+        value = 1;
+    };
     class GVAR(simulationInterval) {
         displayName = "Simulation Interval";
         description = "Defines the interval between every calculation step";
