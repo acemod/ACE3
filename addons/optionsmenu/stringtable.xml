@@ -216,7 +216,10 @@
         </Key>
         <Key ID="STR_ACE_optionsMenu_uiScaing">
             <English>Option Menu UI Scaling</English>
+<<<<<<< HEAD
             <French>Menu option: taille de l'UI</French>
+=======
+>>>>>>> b2edeb01e48ce6e618b18f38f295cb5d6f0efb1d
             <Polish>Skalowanie UI menu ustawień</Polish>
         </Key>
     </Package>
