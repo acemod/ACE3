@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Magazines">
         <!-- MX -->
@@ -445,6 +444,7 @@
             <Polish>Taśma .338 NM 130rd Smugacz</Polish>
             <French>Bande .338 NM 130Cps Traçante</French>
             <Spanish>Cinta de 130 balas trazadoras de .338 NM</Spanish>
+            <Russian>Лента из 130-ти .338 NM трассирующих</Russian>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_TracerNameShort">
             <English>.338 NM Tracer</English>
@@ -453,6 +453,7 @@
             <Czech>.338 NM Svítící</Czech>
             <French>.338 NM Traçante</French>
             <Spanish>.338 NM trazadora</Spanish>
+            <Russian>.338 NM трассирующие</Russian>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_TracerDescription">
             <English>Caliber: .338 Norma Magnum Tracer&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
@@ -460,6 +461,7 @@
             <Polish>Kaliber: .338 Norma Magnum Smugacz&lt;br /&gt;Pociski: 130&lt;br /&gt;Używany w: SPMG</Polish>
             <French>Calibre: .338 Norma Magnum Traçante&lt;br /&gt;Cartouches: 130&lt;br /&gt;Utilisé dans: SPMG</French>
             <Spanish>Calibre: .338 Norma Magnum trazadora&lt;br /&gt;Balas: 130&lt;br /&gt;Se usa en: SPMG</Spanish>
+            <Russian>Калибр: .338 Norma Magnum трассирующие&lt;br /&gt;Патронов: 130&lt;br /&gt;Применимы в: SPMG</Russian>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_Tracer_DimName">
             <English>.338 NM 130Rnd IR-DIM Belt</English>
@@ -467,6 +469,7 @@
             <Polish>Taśma .338 NM 130rd IR-DIM</Polish>
             <French>Bande .338 NM 130Cps IR-DIM</French>
             <Spanish>Cinta de 130 balas IR-DIM de .338 NM</Spanish>
+            <Russian>Лента из 130-ти .338 NM трассирующих под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_Tracer_DimNameShort">
             <English>.338 NM IR-DIM</English>
@@ -475,6 +478,7 @@
             <Czech>.338 NM IR-DIM</Czech>
             <French>.338 NM IR-DIM</French>
             <Spanish>.338 NM IR-DIM</Spanish>
+            <Russian>.338 NM трассирующих под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_Tracer_DimDescription">
             <English>Caliber: .338 Norma Magnum Tracer IR-DIM&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
@@ -482,6 +486,7 @@
             <Polish>Kaliber: .338 Norma Magnum Smugacz IR-DIM&lt;br /&gt;Pociski: 130&lt;br /&gt;Używany w: SPMG</Polish>
             <French>Calibre: .338 Norma Magnum Traçante IR-DIM&lt;br /&gt;Cartouches: 130&lt;br /&gt;Utilisé dans: SPMG</French>
             <Spanish>Calibre: .338 Norma Magnum trazadora IR-DIM&lt;br /&gt;Balas: 130&lt;br /&gt;Se usa en: SPMG</Spanish>
+            <Russian>Калибр: .338 Norma Magnum трассирующие под ПНВ&lt;br /&gt;Патронов: 130&lt;br /&gt;Применимы в: SPMG</Russian>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_APName">
             <English>.338 NM 130Rnd AP Belt</English>
@@ -489,6 +494,7 @@
             <Polish>Taśma .338 NM 130rd AP</Polish>
             <French>Bande .338 NM 130Cps AP</French>
             <Spanish>Cinta de 130 balas AP de .338 NM</Spanish>
+            <Russian>Лента из 130-ти .338 NM бронебойных</Russian>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_APNameShort">
             <English>.338 NM AP</English>
@@ -497,6 +503,7 @@
             <Czech>.338 NM AP</Czech>
             <French>.338 NM AP</French>
             <Spanish>.338 NM AP</Spanish>
+            <Russian>.338 NM бронебойные</Russian>
         </Key>
         <Key ID="STR_ACE_130Rnd_338_Mag_APDescription">
             <English>Caliber: .338 Norma Magnum AP&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
@@ -504,6 +511,7 @@
             <Polish>Kaliber: .338 Norma Magnum AP&lt;br /&gt;Pociski: 130&lt;br /&gt;Używane w: SPMG</Polish>
             <French>Calibre: .338 Norma Magnum AP&lt;br /&gt;Cartouches: 130&lt;br /&gt;Utilisé dans: SPMG</French>
             <Spanish>Calibre: .338 Norma Magnum AP&lt;br /&gt;Balas: 130&lt;br /&gt;Se usa en: SPMG</Spanish>
+            <Russian>Калибр: .338 Norma Magnum бронебойные&lt;br /&gt;Патронов: 130&lt;br /&gt;Применимы в: SPMG</Russian>
         </Key>
         <!-- 9.3x64mm 10Rnd -->
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_TracerName">
@@ -512,6 +520,7 @@
             <Polish>Magazynek 9.3mm 10rd Smugacz</Polish>
             <French>Chargeur 9.3mm 10Cps Traçante</French>
             <Spanish>Cargador de 10 balas trazadoras de 9.3mm</Spanish>
+            <Russian>Магазин из 10-ти 9.3 мм трассирующих</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_TracerNameShort">
             <English>9.3mm Tracer</English>
@@ -520,6 +529,7 @@
             <Czech>9.3mm Svítící</Czech>
             <French>9.3mm Traçante</French>
             <Spanish>9.3mm trazadora</Spanish>
+            <Russian>9.3 мм трассирующие</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_TracerDescription">
             <English>Caliber: 9.3x64mm Tracer&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
@@ -527,6 +537,7 @@
             <Polish>Kaliber: 9,3x64 mm Smugacz&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: Cyrus</Polish>
             <French>Calibre: 9.3x64mm Traçante&lt;br /&gt;Cartouches: 10&lt;br /&gt;Utilisé dans: Cyrus</French>
             <Spanish>Calibre: 9.3x64mm trazadora&lt;br /&gt;Balas: 10&lt;br /&gt;Se usa en: Cyrus</Spanish>
+            <Russian>Калибр: 9.3x64 мм трассирующие&lt;br /&gt;Патронов: 10&lt;br /&gt;Применимы в: Cyrus</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_Tracer_DimName">
             <English>9.3mm 10Rnd Tracer IR-DIM Mag</English>
@@ -534,6 +545,7 @@
             <Polish>Magazynek 9,3mm 10rd Smugacz IR-DIM</Polish>
             <French>Chargeur 9.3mm 10Cps Traçante IR-DIM</French>
             <Spanish>Cargador de 10 balas trazadoras IR-DIM de 9.3mm</Spanish>
+            <Russian>Магазин из 10-ти 9.3 мм трассирующих под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_Tracer_DimNameShort">
             <English>9.3mm IR-DIM</English>
@@ -542,6 +554,7 @@
             <Czech>9.3mm IR-DIM</Czech>
             <French>9.3mm IR-DIM</French>
             <Spanish>9.3mm IR-DIM</Spanish>
+            <Russian>9.3 мм трассирующие под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_Tracer_DimDescription">
             <English>Caliber: 9.3x64mm Tracer IR-DIM&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
@@ -549,6 +562,7 @@
             <Polish>Kaliber: 9,3x64 mm Smugacz IR-DIM&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: Cyrus</Polish>
             <French>Calibre: 9.3x64mm Traçante IR-DIM&lt;br /&gt;Cartouches: 10&lt;br /&gt;Utilisé dans: Cyrus</French>
             <Spanish>Calibre: 9.3x64mm trazadora IR-DIM&lt;br /&gt;Balas: 10&lt;br /&gt;Se usa en: Cyrus</Spanish>
+            <Russian>Калибр: 9.3x64 мм трассирующие под ПНВ&lt;br /&gt;Патронов: 10&lt;br /&gt;Применимы в: Cyrus</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_APName">
             <English>9.3mm 10Rnd AP Mag</English>
@@ -556,6 +570,7 @@
             <Polish>Magazynek 9,3mm 10rd AP</Polish>
             <French>Chargeur 9.3mm 10Cps AP</French>
             <Spanish>Cargador de 10 balas AP de 9.3mm</Spanish>
+            <Russian>Магазин из 10-ти 9.3 мм бронебойных</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_APNameShort">
             <English>9.3mm AP</English>
@@ -564,6 +579,7 @@
             <Czech>9.3mm AP</Czech>
             <French>9.3mm AP</French>
             <Spanish>9.3mm AP</Spanish>
+            <Russian>9.3 мм бронебойные</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_APDescription">
             <English>Caliber: 9.3x64mm AP&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
@@ -571,6 +587,7 @@
             <Polish>Kaliber: 9,3x64 mm AP&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: Cyrus</Polish>
             <French>Calibre: 9.3x64mm AP&lt;br /&gt;Cartouches: 10&lt;br /&gt;Utilisé dans: Cyrus</French>
             <Spanish>Calibre: 9.3x64mm AP&lt;br /&gt;Balas: 10&lt;br /&gt;Se usa en: Cyrus</Spanish>
+            <Russian>Калибр: 9.3x64 мм бронебойные&lt;br /&gt;Патронов: 10&lt;br /&gt;Применимы в: Cyrus</Russian>
         </Key>
         <!-- 9.3x64mm 150Rnd Belt-->
         <Key ID="STR_ACE_150Rnd_93x64_Mag_TracerName">
@@ -579,6 +596,7 @@
             <Polish>Taśma 9,3mm 150rd Smugacz</Polish>
             <French>Bande 9.3mm 150Cps Traçante</French>
             <Spanish>Cinta de 150 balas trazadoras de 9.3mm</Spanish>
+            <Russian>Лента из 150-ти 9.3 мм трассирующих</Russian>
         </Key>
         <Key ID="STR_ACE_150Rnd_93x64_Mag_TracerNameShort">
             <English>9.3mm Tracer</English>
@@ -587,6 +605,7 @@
             <Czech>9.3mm Svítící</Czech>
             <French>9.3mm Traçante</French>
             <Spanish>9.3mm trazadora</Spanish>
+            <Russian>9.3 мм трассирующие</Russian>
         </Key>
         <Key ID="STR_ACE_150Rnd_93x64_Mag_TracerDescription">
             <English>Caliber: 9.3x64mm Tracer&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
@@ -594,6 +613,7 @@
             <Polish>Kaliber: 9,3x64 mm Smugacz&lt;br /&gt;Pociski: 150&lt;br /&gt;Używane w: Navid</Polish>
             <French>Calibre: 9.3x64mm Traçante&lt;br /&gt;Cartouches: 150&lt;br /&gt;Utilisé dans: Navid</French>
             <Spanish>Calibre: 9.3x64mm trazadora&lt;br /&gt;Balas: 150&lt;br /&gt;Se usa en: Navid</Spanish>
+            <Russian>Калибр: 9.3x64 мм трассирующие&lt;br /&gt;Патронов: 150&lt;br /&gt;Применимы в: Navid</Russian>
         </Key>
         <Key ID="STR_ACE_150Rnd_93x64_Mag_Tracer_DimName">
             <English>9.3mm 150Rnd Tracer IR-DIM Belt</English>
@@ -601,6 +621,7 @@
             <Polish>Taśma 9,3mm 150rd Smugacz IR-DIM</Polish>
             <French>Bande 9.3mm 150Cps Traçante IR-DIM</French>
             <Spanish>Cinta de 150 balas trazadoras IR-DIM de 9.3mm</Spanish>
+            <Russian>Лента из 150-ти 9.3 мм трассирующих под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_150Rnd_93x64_Mag_Tracer_DimNameShort">
             <English>9.3mm IR-DIM</English>
@@ -609,6 +630,7 @@
             <Czech>9.3mm IR-DIM</Czech>
             <French>9.3mm IR-DIM</French>
             <Spanish>9.3mm IR-DIM</Spanish>
+            <Russian>9.3 мм трассирующие под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_150Rnd_93x64_Mag_Tracer_DimDescription">
             <English>Caliber: 9.3x64mm Tracer IR-DIM&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
@@ -616,6 +638,7 @@
             <Polish>Kaliber: 9,3x64 mm Smugacz IR-DIM&lt;br /&gt;Pociski: 150&lt;br /&gt;Używane w: Navid</Polish>
             <French>Calibre: 9.3x64mm Traçante IR-DIM&lt;br /&gt;Cartouches: 150&lt;br /&gt;Utilisé dans: Navid</French>
             <Spanish>Calibre: 9.3x64mm trazadora IR-DIM&lt;br /&gt;Balas: 150&lt;br /&gt;Se usa en: Navid</Spanish>
+            <Russian>Калибр: 9.3x64 мм трассирующие под ПНВ&lt;br /&gt;Патронов: 150&lt;br /&gt;Применимы в: Navid</Russian>
         </Key>
         <Key ID="STR_ACE_150Rnd_93x64_Mag_APName">
             <English>9.3mm 150Rnd AP Belt</English>
@@ -623,6 +646,7 @@
             <Polish>Taśma 9,3mm 150rd AP</Polish>
             <French>Bande 9.3mm 150Cps AP</French>
             <Spanish>Cinta de 150 balas AP de 9.3mm</Spanish>
+            <Russian>Лента из 150-ти 9.3 мм бронебойных</Russian>
         </Key>
         <Key ID="STR_ACE_150Rnd_93x64_Mag_APNameShort">
             <English>9.3mm AP</English>
@@ -631,6 +655,7 @@
             <Czech>9.3mm AP</Czech>
             <French>9.3mm AP</French>
             <Spanish>9.3mm AP</Spanish>
+            <Russian>9.3 мм бронебойные</Russian>
         </Key>
         <Key ID="STR_ACE_150Rnd_93x64_Mag_APDescription">
             <English>Caliber: 9.3x64mm AP&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
@@ -638,348 +663,406 @@
             <Polish>Kaliber: 9,3x64 mm AP&lt;br /&gt;Pociski: 150&lt;br /&gt;Używane w: Navid</Polish>
             <French>Calibre: 9.3x64mm AP&lt;br /&gt;Cartouches: 150&lt;br /&gt;Utilisé dans: Navid</French>
             <Spanish>Calibre: 9.3x64mm AP&lt;br /&gt;Balas: 150&lt;br /&gt;Se usa en: Navid</Spanish>
+            <Russian>Калибр: 9.3x64 мм бронебойные&lt;br /&gt;Патронов: 150&lt;br /&gt;Применимы в: Navid</Russian>
         </Key>
         <Key ID="STR_ACE_16Rnd_9x19_mag_Name">
             <English>9x19mm 16Rnd Mag</English>
             <Polish>Magazynek 9x19mm 16rd</Polish>
             <French>Chargeur 9x19mm 16Cps</French>
             <Spanish>Cargador de 16 balas de 9x19mm</Spanish>
+            <Russian>Магазин из 16-ти 9x19 мм патронов</Russian>
         </Key>
         <Key ID="STR_ACE_16Rnd_9x19_mag_NameShort">
             <English>9x19mm</English>
             <Polish>9x19mm</Polish>
             <French>9x19mm</French>
             <Spanish>9x19mm</Spanish>
+            <Russian>9x19 мм патрон</Russian>
         </Key>
         <Key ID="STR_ACE_16Rnd_9x19_mag_Description">
             <English>9x19mm 30Rnd Mag</English>
             <Polish>Magazynek 9x19mm 16rd</Polish>
             <French>9x19mm 30Cps</French>
             <Spanish>Cargador de 16 balas de 9x19mm</Spanish>
+            <Russian>Магазин из 16-ти 9x19 мм патронов</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_9x19_mag_Name">
             <English>9x19mm 30Rnd Mag</English>
             <Polish>Magazynek 9x19mm 30rd</Polish>
             <French>9x19mm 30Cps</French>
             <Spanish>Cargador de 30 balas de 9x19mm</Spanish>
+            <Russian>Магазин из 30-ти 9x19 мм патронов</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_9x19_mag_NameShort">
             <English>9x19mm</English>
             <Polish>9x19mm</Polish>
             <French>9x19mm</French>
             <Spanish>9x19mm</Spanish>
+            <Russian>9x19 мм патрон</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_9x19_mag_Description">
             <English>9x19mm 30Rnd Mag</English>
             <Polish>Magazynek 9x19mm 30rd</Polish>
             <French>9x19mm 30Cps</French>
             <Spanish>Cargador de 30 balas de 9x19mm</Spanish>
+            <Russian>Магазин из 30-ти 9x19 мм патронов</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_Name">
             <English>7.62x54mm 10Rnd Tracer IR-DIM Mag</English>
             <Polish>Magazynek 7,62x54 mm 10rd Smugacz IR-DIM</Polish>
             <French>Chargeur 7.62x54mm 10Rnd Traçante IR-DIM</French>
             <Spanish>Cargador de 10 balas trazadoras IR-DIM de 7.62x54mm</Spanish>
+            <Russian>Магазин из 10-ти 7.62x54 мм трассирующих под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_NameShort">
             <English>7.62mm IR-DIM</English>
             <Polish>7,62mm IR-DIM</Polish>
             <French>7.62mm IR-DIM</French>
             <Spanish>7.62mm IR-DIM</Spanish>
+            <Russian>7.62x54 мм трассирующие под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_Description">
             <English>7.62x54mm 10Rnd Tracer IR-DIM Mag</English>
             <Polish>Magazynek 7,62x54 mm 10rd Smugacz IR-DIM</Polish>
             <French>Chargeur 7.62x54mm 10Cps Traçante IR-DIM</French>
             <Spanish>Cargador de 10 balas trazadoras IR-DIM de 7.62x54mm</Spanish>
+            <Russian>Магазин из 10-ти 7.62x54 мм трассирующих под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimName">
             <English>6.5mm 100Rnd Tracer IR-DIM Mag</English>
             <Polish>Magazynek 6,5mm 100rd Smugacz IR-DIM</Polish>
             <French>Chargeur 6.5mm 100Rnd Traçante IR-DIM</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
+            <Russian>Магазин из 100-та 6.5 мм трассирующих под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
             <Polish>6,5mm IR-DIM</Polish>
             <French>6.5mm IR-DIM</French>
             <Spanish>6.5mm IR-DIM</Spanish>
+            <Russian>6.5 мм трассирующие под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimDescription">
             <English>6.5mm 100Rnd Tracer IR-DIM Mag</English>
             <Polish>Magazynek 6,5mm 100rd Smugacz IR-DIM</Polish>
             <French>Chargeur 6.5mm 100Rnd Traçante IR-DIM</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
+            <Russian>Магазин из 100-та 6.5 мм трассирующих под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimName">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt</English>
             <Polish>Magazynek 6,5mm 200rd Smugacz IR-DIM</Polish>
             <French>Bande 6.5mm 200Rnd Traçante IR-DIM</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
+            <Russian>Лента из 200-от 6.5 мм трассирующих под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
             <Polish>6,5mm IR-DIM</Polish>
             <French>6.5mm IR-DIM</French>
             <Spanish>6.5mm IR-DIM</Spanish>
+            <Russian>6.5 мм трассирующие под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimDescription">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt</English>
             <Polish>Magazynek 6,5mm 200rd Smugacz IR-DIM</Polish>
             <French>Bande 6.5mm 200Cps Traçante IR-DIM</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
+            <Russian>Лента из 200-от 6.5 мм трассирующих под ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk262_mag_Name">
             <English>5.56mm 30Rnd Mag (Mk262)</English>
             <Polish>Magazynek 5,56mm 30rd Mk262</Polish>
             <French>5.56mm 30Cps (Mk262)</French>
             <Spanish>Cargador de 30 balas de 5.56mm (Mk262)</Spanish>
+            <Russian>Магазин из 30-ти 5.56 мм (Mk262)</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk262_mag_NameShort">
             <English>5.56mm Mk262</English>
             <Polish>5,56mm Mk262</Polish>
             <French>5.56mm Mk262</French>
             <Spanish>5.56mm (Mk262)</Spanish>
+            <Russian>5.56 мм (Mk262) патрон</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk262_mag_Description">
             <English>Caliber: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Rounds: 30</English>
             <Polish>Kaliber: 5,56x45 mm NATO (Mk262)&lt;br /&gt;Pociski: 30</Polish>
             <French>Calibre: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Balas: 30</Spanish>
+            <Russian>Калибр: 5.56x45 мм НАТО (Mk262)&lt;br /&gt;Патронов: 30</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_Name">
             <English>5.56mm 30Rnd Mag (Mk318)</English>
             <Polish>Magazynek 5,56mm 30rd Mk318</Polish>
             <French>5.56mm 30Cps (Mk318)</French>
             <Spanish>Cargador de 30 balas de 5.56mm (Mk318)</Spanish>
+            <Russian>Магазин из 30-ти 5.56 мм (Mk318)</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_NameShort">
             <English>5.56mm Mk318</English>
             <Polish>5,56mm Mk318</Polish>
             <French>5.56mm Mk318</French>
             <Spanish>5.56mm (Mk318)</Spanish>
+            <Russian>5.56 мм (Mk318) патрон</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_Description">
             <English>Caliber: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Rounds: 30</English>
             <Polish>Kaliber: 5,56x45 mm NATO (Mk318)&lt;br /&gt;Pociski: 30</Polish>
             <French>Calibre: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Balas: 30</Spanish>
+            <Russian>Калибр: 5.56x45 мм НАТО (Mk318)&lt;br /&gt;Патронов: 30</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_Name">
             <English>7.62mm 10Rnd Mag (M118LR)</English>
             <Polish>Magazynek 7,62mm 10rd (M118LR)</Polish>
             <French>7.62mm 10Cps (M118LR)</French>
             <Spanish>Cargador de 10 balas de 7.62mm (M118LR)</Spanish>
+            <Russian>Магазин из 10-ти 7.62 мм (M118LR)</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_NameShort">
             <English>7.62mm M118LR</English>
             <Polish>7,62mm M118LR</Polish>
             <French>7.62mm M118LR</French>
             <Spanish>7.62mm (M118LR)</Spanish>
+            <Russian>7.62 мм (M118LR) патрон</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Rounds: 10</English>
             <Polish>Kaliber: 7,62x51 mm NATO (M118LR)&lt;br /&gt;Pociski: 10</Polish>
             <French>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Balas: 10</Spanish>
+            <Russian>Калибр: 7.62x51 мм НАТО (M118LR)&lt;br /&gt;Патронов: 10</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M118LR_Mag_Name">
             <English>7.62mm 20Rnd Mag (M118LR)</English>
             <Polish>Magazynek 7,62mm 20rd (M118LR)</Polish>
             <French>7.62mm 20Cps (M118LR)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (M118LR)</Spanish>
+            <Russian>Магазин из 20-ти 7.62 мм (M118LR)</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M118LR_Mag_NameShort">
             <English>7.62mm M118LR</English>
             <Polish>7,62mm M118LR</Polish>
             <French>7.62mm M118LR</French>
             <Spanish>7.62mm (M118LR)</Spanish>
+            <Russian>7.62 мм (M118LR) патрон</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M118LR_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x51 mm NATO (M118LR)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Balas: 20</Spanish>
+            <Russian>Калибр: 7.62x51 мм НАТО (M118LR)&lt;br /&gt;Патронов: 20</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_Name">
             <English>7.62mm 10Rnd Mag (Mk319 Mod 0)</English>
             <Polish>Magazynek 7,62mm 10rd (Mk319 Mod 0)</Polish>
             <French>7.62mm 10Cps (Mk319 Mod 0)</French>
             <Spanish>Cargador de 10 balas de 7.62mm (Mk319 Mod 0)</Spanish>
+            <Russian>Магазин из 10-ти 7.62 мм (Mk319 Mod 0)</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_NameShort">
             <English>7.62mm Mk319</English>
             <Polish>7,62mm Mk319</Polish>
             <French>7.62mm Mk319</French>
             <Spanish>7.62mm Mk319</Spanish>
+            <Russian>7.62 мм Mk319 патрон</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Rounds: 10</English>
             <Polish>Kaliber: 7,62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Pociski: 10</Polish>
             <French>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Balas: 10</Spanish>
+            <Russian>Калибр: 7.62x51 мм НАТО (Mk319 Mod 0)&lt;br /&gt;Патронов: 10</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk319 Mod 0)</English>
             <Polish>Magazynek 7,62mm 20rd (Mk319 Mod 0)</Polish>
             <French>7.62mm 20Cps (Mk319 Mod 0)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Mk319 Mod 0)</Spanish>
+            <Russian>Магазин из 20-ти 7.62 мм (Mk319 Mod 0)</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_NameShort">
             <English>7.62mm Mk319</English>
             <Polish>7,62mm Mk319</Polish>
             <French>7.62mm Mk319</French>
             <Spanish>7.62mm Mk319</Spanish>
+            <Russian>7.62 мм Mk319 патрон</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
+            <Russian>Калибр: 7.62x51 мм НАТО (Mk319 Mod 0)&lt;br /&gt;Патронов: 20</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk248 Mod 0)</English>
             <Polish>Magazynek 7,62mm 20rd (Mk248 Mod 0)</Polish>
             <French>7.62mm 20Cps (Mk248 Mod 0)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Mk248 Mod 0)</Spanish>
+            <Russian>Магазин из 20-ти 7.62 мм (Mk248 Mod 0)</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_NameShort">
             <English>7.62mm (Mk248 Mod 0)</English>
             <Polish>7,62mm (Mk248 Mod 0)</Polish>
             <French>7.62mm (Mk248 Mod 0)</French>
             <Spanish>7.62mm (Mk248 Mod 0)</Spanish>
+            <Russian>7.62 мм (Mk248 Mod 0) патрон</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Description">
             <English>Caliber: 7.62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
+            <Russian>Калибр: 7.62x67 мм НАТО (Mk248 Mod 0)&lt;br /&gt;Патронов: 20</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk248 Mod 1)</English>
             <Polish>Magazynek 7,62mm 20rd (Mk248 Mod 1)</Polish>
             <French>7.62mm 20Cps (Mk248 Mod 1)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Mk248 Mod 1)</Spanish>
+            <Russian>Магазин из 20-ти 7.62 мм (Mk248 Mod 1)</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_NameShort">
             <English>7.62mm (Mk248 Mod 1)</English>
             <Polish>7,62mm (Mk248 Mod 1)</Polish>
             <French>7.62mm (Mk248 Mod 1)</French>
             <Spanish>7.62mm (Mk248 Mod 1)</Spanish>
+            <Russian>7.62 мм (Mk248 Mod 1) патрон</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_Description">
             <English>Caliber: 7.62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Balas: 20</Spanish>
+            <Russian>Калибр: 7.62x67 мм НАТО (Mk248 Mod 1)&lt;br /&gt;Патронов: 20</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Name">
             <English>7.62mm 20Rnd Mag (Berger Hybrid OTM)</English>
             <Polish>Magazynek 7,62mm 20rd (Berger Hybrid OTM)</Polish>
             <French>7.62 20Cps (Berger Hybrid OTM)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Berger Hybrid OTM)</Spanish>
+            <Russian>Магазин из 20-ти 7.62 мм (Berger Hybrid OTM)</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_NameShort">
             <English>7.62mm (OTM)</English>
             <Polish>7,62mm (OTM)</Polish>
             <French>7.62mm (OTM)</French>
             <Spanish>7.62mm (OTM)</Spanish>
+            <Russian>7.62 мм (OTM) патрон</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Description">
             <English>Caliber: 7.62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Balas: 20</Spanish>
+            <Russian>Калибр: 7.62x67 мм НАТО (Berger Hybrid OTM)&lt;br /&gt;Патронов: 20</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_Name">
             <English>6.5x47mm 30Rnd Mag (HPBT Scenar)</English>
             <French>6.5x47mm 30Cps (HPBT Scenar)</French>
             <Spanish>Cargador de 30 balas de 6.5x47mm (HPBT Scenar)</Spanish>
             <Polish>Magazynek 6,5x47 mm 30rd (HPBT Scenar)</Polish>
+            <Russian>Магазин из 30-ти 6.5x47 мм (HPBT Scenar)</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_NameShort">
             <English>6.5mm Scenar</English>
             <French>6.5mm Scenar</French>
             <Spanish>6.5mm Scenar</Spanish>
             <Polish>6,5mm Scenar</Polish>
+            <Russian>6.5 мм (Scenar) патрон</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_Description">
             <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 30</English>
             <French>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 30</Spanish>
             <Polish>Kaliber: 6,5x47 mm (HPBT Scenar)&lt;br /&gt;Pociski: 30</Polish>
+            <Russian>Калибр: 6.5x47 мм (HPBT Scenar)&lt;br /&gt;Патронов: 30</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Name">
             <English>.338 10Rnd Mag (300gr Sierra MatchKing HPBT)</English>
             <French>.338 10 Cps (300gr Sierra MatchKing HPBT)</French>
             <Spanish>Cargador de 10 balas de 8.6x70mm (300gr Sierra MatchKing HPBT)</Spanish>
             <Polish>Magazynek .338 10rd (300gr Sierra MatchKing HPBT)</Polish>
+            <Russian>Магазин из 10-ти .338 (300gr Sierra MatchKing HPBT)</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_NameShort">
             <English>.338 (HPBT)</English>
             <French>.338 (HPBT)</French>
             <Spanish>.338 (HPBT)</Spanish>
             <Polish>.338 (HPBT)</Polish>
+            <Russian>.338 (HPBT) патрон</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Description">
             <English>Caliber: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Balas: 10</Spanish>
             <Polish>Kaliber: 8,6x70 mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Pociski: 10</Polish>
+            <Russian>Калибр: .338 (300gr Sierra MatchKing HPBT)&lt;br /&gt;Патронов: 10</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Name">
             <English>.338 10Rnd Mag (API526)</English>
             <French>.338 10Cps (API526)</French>
             <Spanish>Cargador de 10 balas de .338 (API526)</Spanish>
             <Polish>Magazynek .338 10rd (API526)</Polish>
+            <Russian>Магазин из 10-ти .338 (API526)</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_NameShort">
             <English>.338 AP</English>
             <French>.338 AP</French>
             <Spanish>.338 AP</Spanish>
             <Polish>.338 AP</Polish>
+            <Russian>.338 бронебойные</Russian>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Description">
             <English>Caliber: 8.6x70mm (API526)&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 8.6x70mm (API526)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 8.6x70mm (API526)&lt;br /&gt;Balas: 10</Spanish>
             <Polish>Kaliber: 8,6x70 mm (API526)&lt;br /&gt;Pociski: 10</Polish>
+            <Russian>Калибр: .338 (API526)&lt;br /&gt;Патронов: 10</Russian>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Name">
             <English>12.7x99mm 5Rnd Mag</English>
             <French>12.7x99mm 5Cps</French>
             <Spanish>Cargador de 5 balas de 12.7x99mm</Spanish>
             <Polish>Magazynek 12,7x99 mm 5rd</Polish>
+            <Russian>Магазин из 5-ти 12.7x99 мм патронов</Russian>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_NameShort">
             <English>12.7mm</English>
             <French>12.7mm</French>
             <Spanish>12.7mm</Spanish>
             <Polish>12,7mm</Polish>
+            <Russian>12.7x99 мм патрон</Russian>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Description">
             <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm&lt;br /&gt;Cartouches: 5</French>
             <Spanish>Calibre: 12.7x99mm&lt;br /&gt;Balas: 5</Spanish>
             <Polish>Kaliber: 12,7x99 mm&lt;br /&gt;Pociski: 5</Polish>
+            <Russian>Калибр: 12.7x99 мм&lt;br /&gt;Патронов: 5</Russian>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Name">
             <English>12.7x99mm 5Rnd Mag (AMAX)</English>
             <French>12.7x99mm 5Rnd Mag (AMAX)</French>
             <Spanish>Cargador de 5 balas de 12.7x99mm (AMAX)</Spanish>
             <Polish>Magazynek 12,7x99 mm 5rd (AMAX)</Polish>
+            <Russian>Магазин из 5-ти 12.7x99 мм (AMAX)</Russian>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_NameShort">
             <English>12.7mm</English>
             <French>12.7mm</French>
             <Spanish>12.7mm</Spanish>
             <Polish>12,7mm</Polish>
+            <Russian>12.7x99 мм (AMAX)</Russian>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Description">
             <English>Caliber: 12.7x99mm (AMAX)&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Cartouches: 5</French>
             <Spanish>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Balas: 5</Spanish>
             <Polish>Kaliber: 12,7x99 mm (AMAX)&lt;br /&gt;Pociski: 5</Polish>
+            <Russian>Калибр: 12.7x99 мм (AMAX)&lt;br /&gt;Патронов: 5</Russian>
         </Key>
     </Package>
 </Project>

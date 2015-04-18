@@ -57,7 +57,7 @@
             <Italian>Mostra i gradi (richiede mostra nomi abilitato)</Italian>
             <Portuguese>Mostrar patente de jogadores (requer nome de jogadores)</Portuguese>
             <Hungarian>Játékosok rendfokozatának mutatása (a nevek mutatása szükséges)</Hungarian>
-            <Russian>Показать звания игроков (требует имен игроков)</Russian>
+            <Russian>Показать звания игроков (имена обязательны)</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo">
             <English>Show vehicle crew info</English>
@@ -74,7 +74,7 @@
             <English>Show name tags for AI units</English>
             <German>Zeige Namen für KI Einheiten</German>
             <Spanish>Mostrar etiquetas de nombre para unidades IA </Spanish>
-            <Russian>Показывать именые метки ИИ</Russian>
+            <Russian>Показывать имена ботов</Russian>
             <Czech>Zobrazit jména AI</Czech>
             <Polish>Wyświetl imiona jednostek AI</Polish>
             <French>Afficher les noms des IA</French>
@@ -85,7 +85,7 @@
             <English>Show SoundWaves (requires player names)</English>
             <German>Zeigen Schallwellen  (benötigt Spielernamen)</German>
             <Spanish>Mostrar onda sonora  (requiere Mostrar nombres de jugadores)</Spanish>
-            <Russian>Показывать звуковые волны (требует имен игроков)</Russian>
+            <Russian>Индикатор разговора (имена обязательны)</Russian>
             <Czech>Zobrazit SoundWaves (vyžaduje jména hráčů)</Czech>
             <Polish>Pokaż fale dźwiękowe (wymagana opcja Pokaż imiona graczy)</Polish>
             <French>Afficher "qui parle" (si noms affichés)</French>
