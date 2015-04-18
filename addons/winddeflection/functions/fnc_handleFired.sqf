@@ -28,6 +28,7 @@ _unit = _this select 0;
 _bullet = _this select 6;
 
 if (!hasInterface) exitWith {false};
+if (!(GVAR(enabled))) exitWith {false};
 if (!(_bullet isKindOf "BulletBase")) exitWith {false};
 if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith {false};
 if (!([_unit] call EFUNC(common,isPlayer))) exitWith {false};

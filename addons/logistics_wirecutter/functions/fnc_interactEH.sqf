@@ -25,7 +25,7 @@ if (_interactionType != 0) exitWith {};
 if (!("ACE_wirecutter" in (items ace_player))) exitWith {};
 
 [{
-    private ["_fncStatement", "_attachedFence", "_fncCondition", "_helper"];
+    private ["_fncStatement", "_attachedFence", "_fncCondition", "_helper", "_action"];
     PARAMS_2(_args,_pfID);
     EXPLODE_3_PVT(_args,_setPosition,_addedHelpers,_fencesHelped);
 
@@ -35,7 +35,7 @@ if (!("ACE_wirecutter" in (items ace_player))) exitWith {};
     } else {
         // Prevent Rare Error when ending mission with interact key down:
         if (isNull ace_player) exitWith {};
-    
+
         //If player moved >5 meters from last pos, then rescan
         if (((getPosASL ace_player) distance _setPosition) > 5) then {
 

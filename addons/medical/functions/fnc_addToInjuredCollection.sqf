@@ -33,10 +33,10 @@ if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
            [_this select 1] call CBA_fnc_removePerFrameHandler;
            if (!local _unit) then {
                 if (GVAR(level) >= 2) then {
-                    _unit setvariable [QGVAR(heartRate), _unit getvariable [QGVAR(heartRate), 0], true];
-                    _unit setvariable [QGVAR(bloodPressure), _unit getvariable [QGVAR(bloodPressure), [0, 0]], true];
+                    _unit setvariable [QGVAR(heartRate), _unit getvariable [QGVAR(heartRate), 80], true];
+                    _unit setvariable [QGVAR(bloodPressure), _unit getvariable [QGVAR(bloodPressure), [80, 120]], true];
                 };
-                _unit setvariable [QGVAR(bloodVolume), _unit getvariable [QGVAR(bloodVolume), 0], true];
+                _unit setvariable [QGVAR(bloodVolume), _unit getvariable [QGVAR(bloodVolume), 100], true];
            };
         } else {
             [_unit] call FUNC(handleUnitVitals);

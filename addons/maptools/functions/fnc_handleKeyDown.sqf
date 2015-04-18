@@ -15,13 +15,10 @@
 
 #include "script_component.hpp"
 
-private ["_dir", "_params", "_control", "_button", "_screenPos", "_shiftKey", "_ctrlKey", "_handled", "_pos"];
+PARAMS_5(_display,_code,_shiftKey,_ctrlKey,_altKey);
 
-_display  = _this select 0;
-_code     = _this select 1;
-_shiftKey = _this select 2;
-_ctrlKey  = _this select 3;
-_altKey   = _this select 4;
+private ["_handled", "_relPos", "_diffVector", "_magDiffVector", "_lambdaLong", "_lambdaTrasAbs"];
+
 _handled   = false;
 
 #define DIK_ESCAPE          0x01

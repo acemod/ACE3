@@ -10,8 +10,7 @@
  */
 #include "script_component.hpp"
 
-_logic = _this select 0;
-_activated = _this select 2;
+PARAMS_3(_logic,_units,_activated);
 
 if !(_activated) exitWith {};
 

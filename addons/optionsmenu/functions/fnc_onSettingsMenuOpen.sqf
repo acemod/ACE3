@@ -16,9 +16,12 @@
 
 #include "script_component.hpp"
 
+private ["_setting", "_menu"];
+
 // Filter only user setable setting
 GVAR(clientSideOptions) = [];
 GVAR(clientSideColors) = [];
+
 {
     // If the setting is user setable and not forced
     if ((_x select 2) && !(_x select 6)) then {
@@ -40,7 +43,6 @@ GVAR(clientSideColors) = [];
 //Delay a frame
 [{ [MENU_TAB_OPTIONS] call FUNC(onListBoxShowSelectionChanged) }, []] call EFUNC(common,execNextFrame);
 
-private "_menu";
 disableSerialization;
 _menu = uiNamespace getvariable "ACE_settingsMenu";
 (_menu displayCtrl 1002) ctrlEnable false;

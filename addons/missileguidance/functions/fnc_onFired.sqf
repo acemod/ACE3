@@ -8,6 +8,8 @@ if(GVAR(enabled) < 1 || {!local _projectile} ) exitWith { false };
 if( !isPlayer _shooter && { GVAR(enabled) < 2 } ) exitWith { false };
 
 private["_config", "_enabled", "_target", "_seekerType", "_attackProfile"];
+private["_args", "_canUseLock", "_guidingUnit", "_launchPos", "_lockMode", "_targetPos", "_vanillaTarget"];
+
 PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
 // Bail on not missile
@@ -60,27 +62,37 @@ if(isNil "_target") then {
 };
 
 TRACE_4("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile);
-[FUNC(guidancePFH), 0, [_this, 
-                            [_shooter, 
-                                [_target, _targetPos, _launchPos], 
-                                _seekerType, 
-                                _attackProfile,
-                                _lockMode
-                            ], 
-                            [
-                                getNumber ( _config >> "minDeflection" ),
-                                getNumber ( _config >> "maxDeflection" ),
-                                getNumber ( _config >> "incDeflection" )
-                            ],
-                            [
-                                getNumber ( _config >> "seekerAngle" ),
-                                getNumber ( _config >> "seekerAccuracy" ),
-                                getNumber ( _config >> "seekerMaxRange" )
-                            ],
-                            [ diag_tickTime, [], [] ]
-                        ]
-] call cba_fnc_addPerFrameHandler;
+_args = [_this, 
+            [_shooter, 
+                [_target, _targetPos, _launchPos], 
+                _seekerType, 
+                _attackProfile,
+                _lockMode
+            ], 
+            [
+                getNumber ( _config >> "minDeflection" ),
+                getNumber ( _config >> "maxDeflection" ),
+                getNumber ( _config >> "incDeflection" )
+            ],
+            [
+                getNumber ( _config >> "seekerAngle" ),
+                getNumber ( _config >> "seekerAccuracy" ),
+                getNumber ( _config >> "seekerMaxRange" )
+            ],
+            [ diag_tickTime, [], [] ]
+        ];
+  
+// Hand off to the guiding unit. We just use local player so local PFH fires for now
+// Laser code needs to give us a shooter for LOBL, or the seeker unit needs to be able to shift locality
+// Based on its homing laser
+// Lasers need to be handled in a special LOAL/LOBL case
+_guidingUnit = ACE_player;
 
+if(local _guidingUnit) then {
+    [FUNC(guidancePFH), 0, _args ] call cba_fnc_addPerFrameHandler;
+} else {
+    [QGVAR(handoff), [_guidingUnit, _args] ] call FUNC(doHandoff);
+};
 /* Clears locking settings
 (vehicle _shooter) setVariable [QGVAR(target), nil];
 (vehicle _shooter) setVariable [QGVAR(seekerType), nil];

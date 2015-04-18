@@ -18,6 +18,8 @@
 
 PARAMS_1(_wpIndex);
 
+private "_waypoints";
+
 _waypoints = ace_player getVariable [QGVAR(waypoints), []];
 
 if ((_wpIndex < 0) || (_wpIndex > ((count _waypoints) - 1))) exitWith {ERROR("out of bounds wp");};

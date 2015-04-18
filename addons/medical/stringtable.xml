@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="TR_ACE_Medical_litterSimulationDetail">
@@ -70,7 +71,7 @@
             <German>Salzlösungtransfusion</German>
             <Spanish>Transfundir salino</Spanish>
             <Czech>Transfúze fyziologický roztoku</Czech>
-            <Polish>Przetocz solankę</Polish>
+            <Polish>Przetocz sól fizjologiczną</Polish>
             <French>Transfuser de la Saline</French>
             <Russian>Перелить физраствор</Russian>
             <Hungarian>Infúzió (sós víz)</Hungarian>
@@ -222,7 +223,7 @@
             <German>Sallösungtransfusion ...</German>
             <Spanish>Transfusión de salino ...</Spanish>
             <Czech>Probíha transfúze fyziologický roztoku ...</Czech>
-            <Polish>Przetaczanie solanki ...</Polish>
+            <Polish>Przetaczanie soli fizjologicznej ...</Polish>
             <French>Transfusion de saline ...</French>
             <Russian>Переливание физраствора ...</Russian>
             <Hungarian>Infúzió sós vizzel ...</Hungarian>
@@ -442,7 +443,7 @@
             <German>Kochsaltzlösung IV (1000ml)</German>
             <Spanish>Dar Salino IV (1000ml)</Spanish>
             <Russian>Дать физраствор для в/в вливания (1000 мл)</Russian>
-            <Polish>Podaj solankę IV (1000ml)</Polish>
+            <Polish>Podaj sól fizjologiczną IV (1000ml)</Polish>
             <French>Administrer de la Solution Saline en IV (1000ml)</French>
             <Czech>Podaz fyz. roztok (1000ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (1000ml)</Hungarian>
@@ -453,7 +454,7 @@
             <German>Kochsaltzlösung IV (500ml)</German>
             <Spanish>Dar Salino IV (500ml)</Spanish>
             <Russian>Дать физраствор для в/в вливания (500 мл)</Russian>
-            <Polish>Podaj solankę IV (500ml)</Polish>
+            <Polish>Podaj sól fizjologiczną IV (500ml)</Polish>
             <French>Administrer de la Solution Saline en IV (500ml)</French>
             <Czech>Podaz fyz. roztok (500ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (500ml)</Hungarian>
@@ -464,7 +465,7 @@
             <German>Kochsaltzlösung IV (250ml)</German>
             <Spanish>Dar Salino IV (250ml)</Spanish>
             <Russian>Дать физраствор для в/в вливания (250 мл)</Russian>
-            <Polish>Podaj solankę IV (250ml)</Polish>
+            <Polish>Podaj sól fizjologiczną IV (250ml)</Polish>
             <French>Administrer de la Solution Saline en IV (250ml)</French>
             <Czech>Podaz fyz. roztok (250ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (250ml)</Hungarian>
@@ -936,7 +937,7 @@
             <Russian>Физраствор для в/в вливания (1000 мл)</Russian>
             <Spanish>Solución Salina IV (1000ml)</Spanish>
             <French>Solution Saline 0.9% IV (1000ml)</French>
-            <Polish>Solanka 0,9% IV (1000ml)</Polish>
+            <Polish>Sól fizjologiczna IV (1000ml)</Polish>
             <German>Kochsalzlösung (1000ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (1000ml)</Hungarian>
             <Italian>Soluzione salina IV (1000ml)</Italian>
@@ -946,7 +947,7 @@
             <Russian>Пакет физраствора для возмещения объема потерянной крови</Russian>
             <Spanish>Solución salina intravenosa, para restaurar el volumen sanguíneo</Spanish>
             <French>Solution Saline 0.9% IV, pour rétablir temporairement la tension artérielle</French>
-            <Polish>Solanka 0,9%, podawana dożylnie (IV), używana w celu uzupełnienia krwi u pacjenta</Polish>
+            <Polish>Sól fizjologiczna, podawana dożylnie (IV), używana w celu uzupełnienia krwi u pacjenta</Polish>
             <Hungarian>0,9%-os sósvíz-infúzió, a páciens vérmennyiségének helyreállítására</Hungarian>
             <Italian>Soluzione salina, usata per ripristinare sangue nei pazienti.</Italian>
         </Key>
@@ -964,7 +965,7 @@
             <Russian>Физраствор для в/в вливания (500 мл)</Russian>
             <Spanish>Salino IV (500ml)</Spanish>
             <French>Solution Saline 0.9% IV (500ml)</French>
-            <Polish>Solanka 0,9% IV (500ml)</Polish>
+            <Polish>Sól fizjologiczna IV (500ml)</Polish>
             <German>Kochsalzlösung (500ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (500ml)</Hungarian>
             <Italian>Soluzione salina IV (500ml)</Italian>
@@ -974,7 +975,7 @@
             <Russian>Физраствор для в/в вливания (250 мл)</Russian>
             <Spanish>Salino IV (250ml)</Spanish>
             <French>Solution Saline 0.9% IV (250ml)</French>
-            <Polish>Solanka 0,9% IV (250ml)</Polish>
+            <Polish>Sól fizjologiczna IV (250ml)</Polish>
             <German>Kochsalzlösung (250ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (250ml)</Hungarian>
             <Italian>Soluzione salina IV (250ml)</Italian>
@@ -1134,6 +1135,7 @@
             <Spanish>La Presión Arterial es %2/%3</Spanish>
             <Hungarian>A vérnyomás %2/%3</Hungarian>
             <Italian>Hai riscontrato una pressione di %2/%3</Italian>
+            <Polish>Wyczuwasz ciśnienie krwi o wartości %2/%3</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_2">
             <English>You find a low blood pressure</English>

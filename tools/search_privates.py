@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 
 import fnmatch
 import os
@@ -21,7 +21,7 @@ def get_private_declare(content):
     priv_split = sorted(set(priv_split))
     priv_declared += priv_split;
     
-    srch = re.compile('PARAMS_[0-9].*|EXPLODE_[0-9]_PVT.*')
+    srch = re.compile('PARAMS_[0-9].*|EXPLODE_[0-9]_PVT.*|DEFAULT_PARAM.*|KEY_PARAM.*|IGNORE_PRIVATE_WARNING.*')
     priv_srch_declared = srch.findall(content)
     priv_srch_declared = sorted(set(priv_srch_declared))
     
@@ -37,7 +37,7 @@ def get_private_declare(content):
     return priv_declared
         
 def check_privates(filepath):
-    
+    bad_count_file = 0
     def pushClosing(t):
         closingStack.append(closing.expr)
         closing << Literal( closingFor[t[0]] )
@@ -70,17 +70,37 @@ def check_privates(filepath):
         if '_forEachIndex' in priv_use: priv_use.remove('_forEachIndex')
         if '_foreachIndex' in priv_declared: priv_declared.remove('_foreachIndex')
         if '_foreachIndex' in priv_use: priv_use.remove('_foreachIndex')
+        if '_foreachindex' in priv_declared: priv_declared.remove('_foreachindex')
+        if '_foreachindex' in priv_use: priv_use.remove('_foreachindex')
         
         missing = []
         for s in priv_use:
-            if s not in priv_declared:
-                if s not in missing:
+            if s.lower() not in map(str.lower,priv_declared):
+                if s.lower() not in map(str.lower,missing):
                     missing.append(s)
         
         if len(missing) > 0:
             print (filepath)
+            
+            private_output = 'private[';
+            first = True
+            for bad_priv in missing:
+                if first:
+                    first = False
+                    private_output = private_output + '"' + bad_priv
+                else: 
+                    private_output = private_output + '", "' + bad_priv
+                
+            private_output = private_output + '"];';
+            print private_output
+            
             for bad_priv in missing:
                 print ('\t' + bad_priv)
+                bad_count_file = bad_count_file + 1
+           
+           
+            
+    return bad_count_file
             
 def main():
 
@@ -89,6 +109,7 @@ def main():
     print("#########################")
 
     sqf_list = []
+    bad_count = 0
     
     parser = argparse.ArgumentParser()
     parser.add_argument('-m','--module', help='only search specified module addon folder', required=False, default=".")
@@ -99,7 +120,10 @@ def main():
         sqf_list.append(os.path.join(root, filename))
         
     for filename in sqf_list:
-        check_privates(filename)
+        bad_count = bad_count + check_privates(filename)
+    
+    
+    print ("Bad Count {0}".format(bad_count))
     
 if __name__ == "__main__":
     main()

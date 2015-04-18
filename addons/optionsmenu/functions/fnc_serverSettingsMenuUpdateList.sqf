@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_settingsMenu", "_ctrlList", "_settingsText", "_color", "_settingsColor", "_updateKeyView"];
+private ["_settingsMenu", "_ctrlList", "_settingsText", "_color", "_settingsColor", "_updateKeyView", "_settingsValue"];
 DEFAULT_PARAM(0,_updateKeyView,true);
 
 disableSerialization;

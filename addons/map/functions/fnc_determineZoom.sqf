@@ -12,7 +12,7 @@
 */
 #include "script_component.hpp"
 
-private ["_grids", "_fourSize", "_sixSize", "_continue", "_size"];
+private ["_grids", "_fourSize", "_sixSize", "_continue", "_size", "_i"];
 _grids = configFile >> "CfgWorlds" >> worldName >> "Grid";
 _fourSize = -1;
 _sixSize = -1;

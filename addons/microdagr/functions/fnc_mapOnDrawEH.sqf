@@ -17,7 +17,8 @@
 
 PARAMS_1(_theMap);
 
-_theMap = _this select 0;
+private ["_mapSize", "_waypoints", "_size", "_targetPos", "_relBearing", "_wpName", "_wpPos", "_alpha"];
+
 _mapSize = (ctrlPosition _theMap) select 3;
 
 _waypoints = [] call FUNC(deviceGetWaypoints);
