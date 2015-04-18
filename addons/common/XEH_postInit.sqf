@@ -174,6 +174,31 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 
 }, 0, []] call cba_fnc_addPerFrameHandler;
 
+
+// PFH to raise camera created event. Only works on these cams by BI.
+#define ALL_CAMERAS [ \
+    missionNamespace getVariable ["BIS_DEBUG_CAM", objNull], \
+    missionNamespace getVariable ["BIS_fnc_camera_cam", objNull], \
+    uiNamespace getVariable ["BIS_fnc_arsenal_cam", objNull], \
+    uiNamespace getVariable ["BIS_fnc_animViewer_cam", objNull], \
+    missionNamespace getVariable ["BIS_fnc_establishingShot_fakeUAV", objNull] \
+]
+
+GVAR(OldIsCamera) = false;
+
+[{
+
+    // "activeCameraChanged" event
+    _isCamera = {!isNull _x} count ALL_CAMERAS > 0;
+    if !(_isCamera isEqualTo GVAR(OldIsCamera)) then {
+        // Raise ACE event locally
+        GVAR(OldIsCamera) = _isCamera;
+        ["activeCameraChanged", [ACE_player, _isCamera]] call FUNC(localEvent);
+    };
+
+}, 1, []] call cba_fnc_addPerFrameHandler; // feel free to decrease the sleep time if you need it.
+
+
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
 
 ["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
