@@ -92,7 +92,7 @@ def check_privates(filepath):
                     private_output = private_output + '", "' + bad_priv
                 
             private_output = private_output + '"];';
-            print private_output
+            print (private_output)
             
             for bad_priv in missing:
                 print ('\t' + bad_priv)
