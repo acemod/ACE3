@@ -5,20 +5,20 @@ class CfgWeapons {
     class Default;
     
     class Binocular: Default {
-		forceOptics = 0; 			// Allow using compass with Binocular
-		opticsZoomMin = 0.056889; 	// 5.25x power
-		opticsZoomMax = 0.056889; 	// 9 px/mil
-		modelOptics = "\z\ace\addons\optics\models\NWD_M22_5x"; // 7° horizontal field of view
-		visionMode[] = {"Normal"}; // Can't use nvgs with binoculars any more than you can with scopes
-		// Fix AI using Binocs on short range - #18737
+        forceOptics = 0;             // Allow using compass with Binocular
+        opticsZoomMin = 0.056889;     // 5.25x power
+        opticsZoomMax = 0.056889;     // 9 px/mil
+        modelOptics = "\z\ace\addons\optics\models\NWD_M22_5x"; // 7° horizontal field of view
+        visionMode[] = {"Normal"}; // Can't use nvgs with binoculars any more than you can with scopes
+        // Fix AI using Binocs on short range - #18737
         // minRange = 300; // 300 = uses Rangefinder often (runs a few meters, stops, uses RF, repeats)
         minRange = 500; //500 = seem almost never use it..? 
-		minRangeProbab = 0.001;
+        minRangeProbab = 0.001;
         midRange = 1000;
         midRangeProbab = 0.01;
         maxRange = 5000;
         maxRangeProbab = 0.01;
-	};
+    };
 
     // zooming reticle scopes
     class optic_DMS: ItemCore {
@@ -215,6 +215,11 @@ class CfgWeapons {
     };
 
     class ACE_optic_SOS_2D: optic_SOS {
+        GVAR(BodyDay) = QUOTE(PATHTOF(reticles\sos-body_ca.paa));
+        GVAR(BodyNight) = QUOTE(PATHTOF(reticles\sos-bodyNight_ca.paa));
+        GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\sos-reticleMLR_ca.paa));
+        GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\sos-reticleMLRIllum_ca.paa));
+
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_SOS_2D";
         displayName = "$STR_ACE_optic_sos";
@@ -232,11 +237,6 @@ class CfgWeapons {
     };
 
     class ACE_optic_SOS_PIP: ACE_optic_SOS_2D {
-        GVAR(BodyDay) = QUOTE(PATHTOF(reticles\sos-body_ca.paa));
-        GVAR(BodyNight) = QUOTE(PATHTOF(reticles\sos-bodyNight_ca.paa));
-        GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\sos-reticleMLR_ca.paa));
-        GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\sos-reticleMLRIllum_ca.paa));
-
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_SOS_PIP";
         scopeArsenal = 1;

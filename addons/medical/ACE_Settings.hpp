@@ -117,4 +117,11 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
+    class GVAR(painEffectType) {
+        displayName = "$STR_ACE_Medical_painEffectType";
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"$STR_ACE_Medical_painEffect_Flash", "$STR_ACE_Medical_painEffect_Chroma"};
+        isClientSettable = 1;
+    };
 };

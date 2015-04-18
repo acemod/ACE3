@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Explosives">
         <Key ID="STR_ACE_Explosives_Menu">
@@ -22,7 +21,7 @@
             <French>Placer &gt;&gt;</French>
             <Czech>Položit &gt;&gt;</Czech>
             <Italian>Piazza &gt;&gt;</Italian>
-            <Hungarian>Lerakás &gt;&gt;</Hungarian>
+            <Hungarian>Elhelyezés &gt;&gt;</Hungarian>
             <Portuguese>Colocar &gt;&gt;</Portuguese>
             <Russian>Установить &gt;&gt;</Russian>
         </Key>
@@ -45,10 +44,10 @@
             <Polish>Kod ładunku: %1</Polish>
             <French>Code explosif: %1</French>
             <Czech>Kód výbušniny: %1</Czech>
-            <Italian>Codice dell'esplosivo : %1</Italian>
             <Hungarian>Robbanóanyag kódja: %1</Hungarian>
             <Portuguese>Código do explosivo: %1</Portuguese>
             <Russian>Код подрыва: %1</Russian>
+            <Italian>Codice esplosivo: %1</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_PlaceAction">
             <English>Place</English>
@@ -118,7 +117,7 @@
             <French>Téléphone Portable</French>
             <Czech>Telefon</Czech>
             <Italian>Cellulare</Italian>
-            <Hungarian>Mobil</Hungarian>
+            <Hungarian>Mobiltelefon</Hungarian>
             <Portuguese>Celular</Portuguese>
             <Russian>Сотовый телефон</Russian>
         </Key>
@@ -130,7 +129,7 @@
             <French>Utilisé pour déclencher des explosifs à distance</French>
             <Czech>Používaný ke vzdálenému odpalování výbušnin</Czech>
             <Italian>Usato per l'attivazione a distanza degli esplosivi</Italian>
-            <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
+            <Hungarian>Robbanóanyagok távoli robbantásához való</Hungarian>
             <Portuguese>Usado para acionar explosivos remotamente</Portuguese>
             <Russian>Используется для удаленной детонации СВУ</Russian>
         </Key>
@@ -142,7 +141,7 @@
             <French>M57 Dispositif de mise à feu</French>
             <Czech>Odpalovací zařízení M57</Czech>
             <Italian>Detonatore M57</Italian>
-            <Hungarian>M57 Detonátor</Hungarian>
+            <Hungarian>M57 Gyújtóeszköz</Hungarian>
             <Portuguese>M57 Dispositivo de Detonação</Portuguese>
             <Russian>Взрыватель M57</Russian>
         </Key>
@@ -166,7 +165,7 @@
             <French>M26 Dispositif de mise à feu</French>
             <Czech>Odpalovací zařízení M26</Czech>
             <Italian>Detonatore M26</Italian>
-            <Hungarian>M26 Detonátor</Hungarian>
+            <Hungarian>M26 Gyújtóeszköz</Hungarian>
             <Portuguese>M26 Dispositivo de Detonação</Portuguese>
             <Russian>Взрыватель M26</Russian>
         </Key>
@@ -202,7 +201,7 @@
             <French>Permet de désamorçer des explosifs</French>
             <Czech>Dovoluje zneškodňování výbušnin</Czech>
             <Italian>Consente la disattivazione degli ordigni esplosivi</Italian>
-            <Hungarian>Robbanóanyagok hatástalanításához</Hungarian>
+            <Hungarian>Robbanóanyagok hatástalanítását teszi lehetővé</Hungarian>
             <Portuguese>Permite o desarme de explosivos</Portuguese>
             <Russian>Позволяет обезвреживать ВУ</Russian>
         </Key>
@@ -214,7 +213,7 @@
             <French>Ajouter à la composition rapide</French>
             <Czech>Přidat jako rychlou volbu</Czech>
             <Italian>Aggiungi alla selezione rapida</Italian>
-            <Hungarian>Hozzáadás gyorshíváshoz</Hungarian>
+            <Hungarian>Hozzáadás a gyorstárcsázóhoz</Hungarian>
             <Portuguese>Adicionar à ligação rápida</Portuguese>
             <Russian>Добавить в ускоренный набор</Russian>
         </Key>
@@ -286,7 +285,7 @@
             <French>Menu de mise à feu</French>
             <Czech>Menu Detonace</Czech>
             <Italian>Menù di detonazione</Italian>
-            <Hungarian>Robbantás menü</Hungarian>
+            <Hungarian>Robbantási menü</Hungarian>
             <Portuguese>Menu de detonação</Portuguese>
             <Russian>Меню подрыва</Russian>
         </Key>
@@ -298,7 +297,7 @@
             <French>Menu Placement</French>
             <Czech>Menu Umístění</Czech>
             <Italian>Menù di collocamento</Italian>
-            <Hungarian>Lerakás menü</Hungarian>
+            <Hungarian>Elhelyezési menü</Hungarian>
             <Portuguese>Menu de posicionamento</Portuguese>
             <Russian>Меню детонации</Russian>
         </Key>
@@ -322,7 +321,7 @@
             <French>Désamorçage des explosifs...</French>
             <Czech>Zneškodňuji Výbušninu...</Czech>
             <Italian>Esposivo in fase di disattivazione...</Italian>
-            <Hungarian>Robbanóanyag hatástalaníása...</Hungarian>
+            <Hungarian>Robbanóanyag hatástalanítása...</Hungarian>
             <Portuguese>Desarmando Explosivo...</Portuguese>
             <Russian>Обезвреживание...</Russian>
         </Key>
@@ -331,10 +330,10 @@
             <German>Zeitzünder</German>
             <Spanish>Temporizador</Spanish>
             <Polish>Czasomierz</Polish>
-            <French>Retard</French>
+            <French>Minuteur</French>
             <Czech>Časovač</Czech>
             <Italian>Cronometro</Italian>
-            <Hungarian>Időzített</Hungarian>
+            <Hungarian>Időzítő</Hungarian>
             <Portuguese>Timer</Portuguese>
             <Russian>Таймер</Russian>
         </Key>
@@ -355,10 +354,10 @@
             <German>Zeit einstellen</German>
             <Spanish>Configurar tiempo</Spanish>
             <Polish>Ustaw czas</Polish>
-            <French>Régler retard</French>
+            <French>Régler minuteur</French>
             <Czech>Nastavit Čas</Czech>
             <Italian>Modifica il conto alla rovescia</Italian>
-            <Hungarian>Idő állítása</Hungarian>
+            <Hungarian>Idő beállítása</Hungarian>
             <Portuguese>Configurar Tempo</Portuguese>
             <Russian>Установить время</Russian>
         </Key>
@@ -370,7 +369,7 @@
             <French>Sélectionner une mise à feu</French>
             <Czech>Zvolit Detonátor</Czech>
             <Italian>Seleziona un Attivatore</Italian>
-            <Hungarian>Detonátor kiválasztása</Hungarian>
+            <Hungarian>Gyújtóeszköz kiválasztása</Hungarian>
             <Portuguese>Selecionar um Gatilho</Portuguese>
             <Russian>Выберите детонатор</Russian>
         </Key>
@@ -403,7 +402,7 @@
             <Polish>Linka naciągu</Polish>
             <Spanish>Cable trampa</Spanish>
             <German>Stolperdraht</German>
-            <French>Fil de butée</French>
+            <French>Fil de détente</French>
             <Czech>Nástražný drát</Czech>
             <Italian>Filo a Inciampo</Italian>
             <Hungarian>Botlódrót</Hungarian>
@@ -418,7 +417,7 @@
             <French>Capteur IR</French>
             <Czech>IR Značkovač</Czech>
             <Italian>Sensore IR</Italian>
-            <Hungarian>IR szenzor</Hungarian>
+            <Hungarian>Infravörös szenzor</Hungarian>
             <Portuguese>Sensor IV</Portuguese>
             <Russian>ИК сенсор</Russian>
         </Key>
@@ -430,7 +429,7 @@
             <French>Pas de mise à feu disponible pour %1</French>
             <Czech>Žádný detonátor k dispozici pro %1</Czech>
             <Italian>Nessun attivatore disponibile per %1</Italian>
-            <Hungarian>Nincs detonátor a %1</Hungarian>
+            <Hungarian>Nincs elérhető gyújtóeszköz ide: %1</Hungarian>
             <Portuguese>Nenhum gatilho disponível para %1</Portuguese>
             <Russian>Нет доступных взрывателей для %1</Russian>
         </Key>
@@ -442,7 +441,7 @@
             <French>Capteur IR (de flanc)</French>
             <Czech>IR Značkovač (Výbuch stranou)</Czech>
             <Italian>Sensore IR (Attacco laterale)</Italian>
-            <Hungarian>IR Sensor (Side Attack)</Hungarian>
+            <Hungarian>Infravörös szenzor (Side Attack)</Hungarian>
             <Portuguese>Sensor infravermelho (ataque lateral)</Portuguese>
             <Russian>ИК (детонация вбок)</Russian>
         </Key>
@@ -454,7 +453,7 @@
             <French>Capteur Magnétique (par le bas)</French>
             <Czech>Magnetický Senzor (Výbuch ze spoda)</Czech>
             <Italian>Sensore Magnetico di Prossimità (Attacco inferiore)</Italian>
-            <Hungarian>Mágneses (Bottom Attack)</Hungarian>
+            <Hungarian>Mágneses mező érzékelő (Bottom Attack)</Hungarian>
             <Portuguese>Influência magnética (ataque inferior)</Portuguese>
             <Russian>Магнитный (детонация вверх)</Russian>
         </Key>
@@ -465,7 +464,7 @@
             <French>Pas d'explosif à mettre à feu.</French>
             <Italian>Nessun esplosivo sul sensore.</Italian>
             <Czech>Žádná výbušnina k odpálení.</Czech>
-            <Hungarian>Nincs robbanóanyag a detonátorhoz.</Hungarian>
+            <Hungarian>Nincs robbanóanyag a gyújtóeszközhöz kötve.</Hungarian>
             <Polish>Brak ładunków na zapalnik.</Polish>
             <Portuguese>Nenhum explosivo no gatilho.</Portuguese>
             <Russian>Нет доступных ВУ для взрывателя.</Russian>
@@ -487,8 +486,9 @@
             <Czech>Používaný k vzdálenému odpálení, při uvolnění odpálí výbušniny</Czech>
             <Polish>Używany w celu zdalnej detonacji ładunków kiedy jego operator zostanie zabity.</Polish>
             <Spanish>Utilizado para detonar explosivos remotamente al soltarlo.</Spanish>
-            <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
+            <Hungarian>Robbanóanyagok távoli robbantásához való, elengedéskor gyújt.</Hungarian>
             <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
+            <Italian>Usato per attivare esplosivi quando rilasciato</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_Pickup">
             <English>Pick up</English>
@@ -496,7 +496,10 @@
             <Spanish>Recoger</Spanish>
             <Czech>Sebrat</Czech>
             <Polish>Podnieś</Polish>
-            <French>Prendre</French>
+            <French>Ramasser</French>
+            <Hungarian>Felszedés</Hungarian>
+            <Russian>Поднять</Russian>
+            <Italian>Raccogli</Italian>
         </Key>
     </Package>
 </Project>

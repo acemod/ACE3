@@ -20,6 +20,9 @@
 
 #define TIME_MAX_WAIT 5
 
+private ["_fncSumArray", "_return", "_holder", "_dropPos", "_targetMagazinesStart", "_holderMagazinesStart", "_xClassname", "_xAmmo", "_targetMagazinesEnd", "_holderMagazinesEnd", "_holderItemsStart", "_targetItemsStart", "_addToCrateClassnames", "_addToCrateCount", "_index", "_holderItemsEnd", "_targetItemsEnd", "_holderIsEmpty"];
+
+
 PARAMS_3(_caller,_target,_listOfItemsToRemove);
 DEFAULT_PARAM(3,_doNotDropAmmo,false); //By default units drop all weapon mags when dropping a weapon
 
@@ -154,6 +157,8 @@ if (_holderIsEmpty) then {
 
 //Start the PFEH to do the actions (which could take >1 frame)
 [{
+    private ["_needToRemoveWeapon", "_needToRemoveMagazines", "_needToRemoveBackpack", "_needToRemoveVest", "_needToRemoveUniform", "_error", "_magsToPickup", "_index", "_magazinesInHolder"];
+
     PARAMS_2(_args,_pfID);
     EXPLODE_8_PVT(_args,_caller,_target,_listOfItemsToRemove,_holder,_holderIsEmpty,_maxWaitTime,_doNotDropAmmo,_startingMagazines);
 

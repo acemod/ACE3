@@ -4,10 +4,10 @@
 ADDON = false;
 LOG(MSG_INIT);
 
-PREP(serverController);
+PREP(displayWindInfo);
 PREP(getMapData);
 PREP(getWind);
-
+PREP(serverController);
 
 
 // Rain variables

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
+<Project name="ACE">
+    <Package name="ATragMX">
+        <Key ID="STR_ACE_ATragMX_Name">
+            <English>ATragMX</English>
+            <German>ATragMX</German>
+            <Spanish>ATragMX</Spanish>
+            <French>ATragMX</French>
+            <Polish>ATragMX</Polish>
+            <Czech>ATragMX</Czech>
+            <Italian>ATragMX</Italian>
+            <Hungarian>ATragMX</Hungarian>
+            <Portuguese>ATragMX</Portuguese>
+            <Russian>ATragMX</Russian>
+        </Key>
+        <Key ID="STR_ACE_ATragMX_OpenATragMXDialog">
+            <English>Open ATragMX</English>
+            <Polish>Otwórz ATragMX</Polish>
+            <Russian>Открыть ATragMX</Russian>
+            <Spanish>Abrir ATragMX</Spanish>
+        </Key>
+        <Key ID="STR_ACE_ATragMX_Description">
+            <English>Rugged PDA with ATragMX</English>
+            <Polish>Przenośny PDA z kalkulatorem balistycznym ATragMX</Polish>
+            <Russian>Защищенный КПК с ATragMX</Russian>
+            <Spanish>PDA rugerizada con ATragMX</Spanish>
+        </Key>
+        <Key ID="STR_ACE_ATragMX_ATragMXDialogKey">
+            <English>Open ATragMX</English>
+            <Polish>Otwórz ATragMX</Polish>
+            <Russian>Открыть ATragMX</Russian>
+            <Spanish>Abrir ATragMX</Spanish>
+        </Key>
+    </Package>
+</Project>
