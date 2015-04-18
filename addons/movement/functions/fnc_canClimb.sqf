@@ -9,15 +9,15 @@
  * The return value <BOOL>
  *
  * Example:
- * _bool = [player] call ace_movement_fnc_canClimb
+ * [player] call ace_movement_fnc_canClimb
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_pos", "_dir"];
+private ["_pos", "_dir"];
 
-_unit = _this select 0;
+PARAMS_1(_unit);
 
 _pos = getPosASL _unit;
 _dir = getDir _unit;

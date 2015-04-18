@@ -21,6 +21,7 @@ PARAMS_2(_unit,_container);
 //Only check for player:
 if (_unit != ace_player) exitWith {false};
 
+private "_handeled";
 _handeled = false;
 
 if (GVAR(LockVehicleInventory) && //if setting not enabled
