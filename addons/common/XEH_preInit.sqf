@@ -119,6 +119,7 @@ PREP(loadPerson);
 PREP(loadPersonLocal);
 PREP(loadSettingsFromProfile);
 PREP(loadSettingsOnServer);
+PREP(loadSettingsLocalizedText);
 PREP(map);
 PREP(moduleCheckPBOs);
 PREP(moduleLSDVehicles);
