@@ -19,3 +19,11 @@ class Extended_GetOut_Eventhandlers {
         };
     };
 };
+
+class Extended_FiredBIS_EventHandlers {
+	class ACE_M47_Dragon_Static {
+		class GVAR(dragon_x) {
+			firedBis = QUOTE(if (local (_this select 0)) then { _this call FUNC(onFired); });
+		};
+	};
+};

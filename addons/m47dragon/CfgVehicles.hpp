@@ -49,6 +49,22 @@ class CfgVehicles {
 				gunnergetInAction = "";
 				gunnergetOutAction = "";
                 
+                discreteDistance[] = {};
+				discreteDistanceInitIndex = 0;
+                
+                class OpticsIn 
+                {
+                    class Wide: ViewOptics
+                    {
+                        initFov = 0.015;
+                        minFov = 0.015;
+                        maxFov = 0.015;
+                        gunnerOpticsModel = PATHTOF(models\optics_m47.p3d);
+                        gunnerOutOpticsModel = "\A3\weapons_f\reticle\optics_empty";
+                        gunnerOpticsEffect[] = {"TankGunnerOptics1","OpticsBlur2","OpticsCHAbera2"};
+                    };
+                };
+                
 				displayName = "Balls in your face";
                 
 				class ViewOptics: ViewOptics
@@ -56,19 +72,19 @@ class CfgVehicles {
 					initAngleX = 0;
 					minAngleX = -30;
 					maxAngleX = 30;
-					initAngleY = 0;
+					initAngleY = 5;
 					minAngleY = -100;
 					maxAngleY = 100;
-					initFov = 0.08333;
-					minFov = 0.04167;
-					maxFov = 0.08333;
-					visionMode[] = {"Normal","Ti"};
-					thermalMode[] = {0,1};
+					initFov = 0.015;
+					minFov = 0.015;
+					maxFov = 0.015;
+					visionMode[] = {"Normal"};
+					thermalMode[] = {0};
 				};
 				gunnerRightHandAnimName = "OtocHlaven_shake";
 				gunnerLeftHandAnimName = "OtocHlaven_shake";
-				gunBeg = "spice hlavne";
-				gunEnd = "Konec rakety";
+				gunBeg = "spice rakety";
+				gunEnd = "konec rakety";
 				memoryPointGunnerOptics = "look";
 			};
 		};
