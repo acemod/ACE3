@@ -26,13 +26,16 @@ call FUNC(update_target_selection);
 GVAR(showMainPage) call FUNC(show_main_page);
 
 GVAR(showAddNewGun) call FUNC(show_add_new_gun);
+GVAR(showAtmoEnvData) call FUNC(show_atmo_env_data);
+GVAR(showGunAmmoData) call FUNC(show_gun_ammo_data);
 GVAR(showGunList) call FUNC(show_gun_list);
 GVAR(showRangeCard) call FUNC(show_range_card);
 if (GVAR(showRangeCard)) then {
-    ctrlSetFocus (_dsp displayCtrl 5001);
+    ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 5001);
     [] call FUNC(update_range_card);
 };
 GVAR(showRangeCardSetup) call FUNC(show_range_card_setup);
+GVAR(showTargetData)  call FUNC(show_target_data);
 GVAR(showTargetRangeAssist) call FUNC(show_target_range_assist);
 GVAR(showTargetSpeedAssist) call FUNC(show_target_speed_assist);
 GVAR(showTargetSpeedAssistTimer) call FUNC(show_target_speed_assist_timer);

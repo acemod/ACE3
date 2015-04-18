@@ -53,7 +53,7 @@ switch( (_state select 0) ) do {
     };
     case STAGE_TERMINAL: {
         TRACE_1("STAGE_TERMINAL","");
-        _returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget * 0.002];
+        _returnTargetPos = _seekerTargetPos;
     };
 };
 

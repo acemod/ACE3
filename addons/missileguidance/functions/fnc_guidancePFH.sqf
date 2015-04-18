@@ -92,6 +92,10 @@ if(accTime > 0) then {
 drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _projectilePos, 0.75, 0.75, 0, str _vectorTo, 1, 0.025, "TahomaB"];
 drawLine3D [ASLtoATL _projectilePos, ASLtoATL _profileAdjustedTargetPos, [1,0,0,1]];
 
+_ps = "#particlesource" createVehicleLocal (ASLtoATL _projectilePos);
+_PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 2], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
+_PS setDropInterval 3.0;
+
 hintSilent format["d: %1", _distanceToTarget];
 #endif
 

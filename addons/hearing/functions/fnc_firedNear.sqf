@@ -21,7 +21,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_silencer", "_audibleFireCoef", "_loudness", "_strength"];
+private ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_silencer", "_audibleFireCoef", "_loudness", "_strength", "_audibleFire", "_audibleFireTime", "_audibleFireTimeCoef"];
 
 _unit = _this select 0;
 _firer = _this select 1;
