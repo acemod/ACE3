@@ -18,7 +18,7 @@ private ["_unit", "_allUsedMedication", "_logs", "_forceNew"];
 _unit = _this select 0;
 _forceNew = if (count _this > 1) then {_this select 1} else {false};
 
-if (!(isnil {_unit getvariable QGVAR(triageLevel)}) && !_forceNew) exitwith {};
+if (!(isnil {_unit getvariable QGVAR(pain)}) && !_forceNew) exitwith {};
 
 _unit setVariable [QGVAR(pain), 0];
 _unit setVariable [QGVAR(morphine), 0];
