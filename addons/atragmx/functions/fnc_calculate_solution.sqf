@@ -12,7 +12,7 @@
  * 6: barometric pressure <NUMBER>
  * 7: relative humidity <NUMBER>
  * 8: simulation steps <NUMBER>
- * 9: wind speed <NUMBER>
+ * 9: wind speed <ARRAY>
  * 10: wind direction <NUMBER>
  * 11: inclination angle <NUMBER>
  * 12: target speed <NUMBER>
@@ -26,15 +26,15 @@
  * 20: Latitude <NUMBER>
  *
  * Return Value:
- * 0: Elevation <NUMBER>
- * 1: Windage <NUMBER>
- * 2: Lead <NUMBER>
- * 3: Time of fligth <NUMBER>
- * 4: Remaining velocity <NUMBER>
- * 5: Remaining kinetic energy <NUMBER>
- * 6: Vertical coriolis drift <NUMBER>
- * 7: Horizontal coriolis drift <NUMBER>
- * 8: Spin drift <NUMBER>
+ * 0: Elevation (MOA) <NUMBER>
+ * 1: Windage (MOA) <ARRAY>
+ * 2: Lead (MOA) <NUMBER>
+ * 3: Time of fligth (SECONDS) <NUMBER>
+ * 4: Remaining velocity (m/s) <NUMBER>
+ * 5: Remaining kinetic energy (ft·lb) <NUMBER>
+ * 6: Vertical coriolis drift (MOA) <NUMBER>
+ * 7: Horizontal coriolis drift (MOA) <NUMBER>
+ * 8: Spin drift (MOA) <NUMBER>
  *
  * Example:
  * call ace_atragmx_calculate_target_range_assist
@@ -43,7 +43,7 @@
  */
 #include "script_component.hpp"
 
-private ["_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_bc", "_dragModel", "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude"];
+private ["_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed1", "_windSpeed2", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_bc", "_dragModel", "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude"];
 _scopeBaseAngle     = _this select 0;
 _bulletMass         = _this select 1;
 _boreHeight         = _this select 2;
@@ -53,7 +53,8 @@ _temperature        = _this select 5;
 _barometricPressure = _this select 6;
 _relativeHumidity   = _this select 7;
 _simSteps           = _this select 8;
-_windSpeed          = _this select 9;
+_windSpeed1          = (_this select 9) select 0;
+_windSpeed2          = (_this select 9) select 1;
 _windDirection      = _this select 10;
 _inclinationAngle   = _this select 11;
 _targetSpeed        = _this select 12;
@@ -74,9 +75,10 @@ _bulletSpeed = 0;
 _gravity = [0, sin(_scopeBaseAngle + _inclinationAngle) * -9.80665, cos(_scopeBaseAngle + _inclinationAngle) * -9.80665];
 _deltaT = 1 / _simSteps;
 
-private ["_elevation", "_windage", "_lead", "_TOF", "_trueVelocity", "_trueSpeed", "_kineticEnergy", "_verticalCoriolis", "_verticalDeflection", "_horizontalCoriolis", "_horizontalDeflection", "_spinDrift", "_spinDeflection"];
+private ["_elevation", "_windage1", "_windage2", "_lead", "_TOF", "_trueVelocity", "_trueSpeed", "_kineticEnergy", "_verticalCoriolis", "_verticalDeflection", "_horizontalCoriolis", "_horizontalDeflection", "_spinDrift", "_spinDeflection"];
 _elevation = 0;
-_windage = 0;
+_windage1 = 0;
+_windage2 = 0;
 _lead = 0;
 _TOF = 0;
 _trueVelocity = [0, 0, 0];
@@ -99,8 +101,10 @@ if (_storeRangeCardData) then {
     GVAR(rangeCardData) = [];
 };
 
-private ["_wind"];
-_wind = [cos(270 - _windDirection * 30) * _windSpeed, sin(270 - _windDirection * 30) * _windSpeed, 0];
+private ["_wind1", "_wind2", "_windDrift"];
+_wind1 = [cos(270 - _windDirection * 30) * _windSpeed1, sin(270 - _windDirection * 30) * _windSpeed1, 0];
+_wind2 = [cos(270 - _windDirection * 30) * _windSpeed2, sin(270 - _windDirection * 30) * _windSpeed2, 0];
+_windDrift = 0;
 if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false])) then {
     _bc = [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel] call EFUNC(advanced_ballistics,calculateAtmosphericCorrection);
 };
@@ -127,7 +131,7 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
     _stepsTotal = _stepsTotal + 1;
     _speedAverage = (_speedTotal / _stepsTotal);
 
-    _trueVelocity = _bulletVelocity vectorDiff _wind;
+    _trueVelocity = _bulletVelocity vectorDiff _wind1;
     _trueSpeed = vectorMagnitude _trueVelocity;
 
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
@@ -156,7 +160,9 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
         if ((_bulletPos select 1) * _rangeFactor >= _range && _range <= GVAR(rangeCardEndRange)) then {
             if ((_bulletPos select 1) > 0) then {
                 _elevation = - atan((_bulletPos select 2) / (_bulletPos select 1));
-                _windage = - atan((_bulletPos select 0) / (_bulletPos select 1));
+                _windage1 = - atan((_bulletPos select 0) / (_bulletPos select 1));
+                _windDrift = (_wind2 select 0) * (_TOF - (_range / _rangeFactor) / _muzzleVelocity);
+                _windage2 = - atan(_windDrift / (_bulletPos select 1));
             };
             if (_range != 0) then {
                 _lead = (_targetSpeed * _TOF) / (Tan(3.38 / 60) * _range);
@@ -166,20 +172,22 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
             
             if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,CoriolisEnabled), false])) then {
                 if ((_bulletPos select 1) > 0) then {
-                    _horizontalDeflection = 0.0000729 * ((_bulletPos select 0) ^ 2) * sin(_latitude) / _speedAverage;
+                    _horizontalDeflection = 0.0000729 * ((_bulletPos select 1) ^ 2) * sin(_latitude) / _speedAverage;
                     _horizontalCoriolis = - atan(_horizontalDeflection / (_bulletPos select 1));
-                    _windage = _windage + _horizontalCoriolis;
+                    _windage1 = _windage1 + _horizontalCoriolis;
+                    _windage2 = _windage2 + _horizontalCoriolis;
                 };
             };
             if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,SpinDriftEnabled), false])) then {
                 if ((_bulletPos select 1) > 0) then {
                     _spinDeflection = _twistDirection * 0.0254 * 1.25 * (_stabilityFactor + 1.2) * _TOF ^ 1.83;
                     _spinDrift = - atan(_spinDeflection / (_bulletPos select 1));
-                    _windage = _windage + _spinDrift;
+                    _windage1 = _windage1 + _spinDrift;
+                    _windage2 = _windage2 + _spinDrift;
                 };
             };
             
-            GVAR(rangeCardData) set [_n, [_range, _elevation * 60, _windage * 60, _lead, _TOF, _bulletSpeed, _kineticEnergy]];
+            GVAR(rangeCardData) set [_n, [_range, _elevation * 60, [_windage1 * 60, _windage2 * 60], _lead, _TOF, _bulletSpeed, _kineticEnergy]];
             _n = _n + 1;
         };
     };
@@ -187,7 +195,9 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
 
 if ((_bulletPos select 1) > 0) then {
     _elevation = - atan((_bulletPos select 2) / (_bulletPos select 1));
-    _windage = - atan((_bulletPos select 0) / (_bulletPos select 1));
+    _windage1 = - atan((_bulletPos select 0) / (_bulletPos select 1));
+    _windDrift = (_wind2 select 0) * (_TOF - _targetRange / _muzzleVelocity);
+    _windage2 = - atan(_windDrift / (_bulletPos select 1));
 };
 
 if (_targetRange != 0) then {
@@ -199,17 +209,19 @@ _kineticEnergy = _kineticEnergy * 0.737562149;
 
 if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,CoriolisEnabled), false])) then {
     if ((_bulletPos select 1) > 0) then {
-        _horizontalDeflection = 0.0000729 * ((_bulletPos select 0) ^ 2) * sin(_latitude) / _speedAverage;
+        _horizontalDeflection = 0.0000729 * ((_bulletPos select 1) ^ 2) * sin(_latitude) / _speedAverage;
         _horizontalCoriolis = - atan(_horizontalDeflection / (_bulletPos select 1));
-        _windage = _windage + _horizontalCoriolis;
+        _windage1 = _windage1 + _horizontalCoriolis;
+        _windage2 = _windage2 + _horizontalCoriolis;
     };
 };
 if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,SpinDriftEnabled), false])) then {
     if ((_bulletPos select 1) > 0) then {
         _spinDeflection = _twistDirection * 0.0254 * 1.25 * (_stabilityFactor + 1.2) * _TOF ^ 1.83;
         _spinDrift = - atan(_spinDeflection / (_bulletPos select 1));
-        _windage = _windage + _spinDrift;
+        _windage1 = _windage1 + _spinDrift;
+        _windage2 = _windage2 + _spinDrift;
     };
 };
 
-[_elevation * 60, _windage * 60, _lead, _TOF, _bulletSpeed, _kineticEnergy, _verticalCoriolis, _horizontalCoriolis, _spinDrift]
+[_elevation * 60, [_windage1 * 60, _windage2 * 60], _lead, _TOF, _bulletSpeed, _kineticEnergy, _verticalCoriolis * 60, _horizontalCoriolis * 60, _spinDrift * 60]

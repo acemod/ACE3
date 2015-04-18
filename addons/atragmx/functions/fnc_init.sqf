@@ -56,8 +56,10 @@ GVAR(inclinationAngle) = [0, 0, 0, 0];
 GVAR(targetSpeed) = [0, 0, 0, 0];
 GVAR(targetRange) = [0, 0, 0, 0];
 
+GVAR(showWind2) = false;
 GVAR(elevationOutput) = [0, 0, 0, 0];
-GVAR(windageOutput) = [0, 0, 0, 0];
+GVAR(windage1Output) = [0, 0, 0, 0];
+GVAR(windage2Output) = [0, 0, 0, 0];
 GVAR(leadOutput) = [0, 0, 0, 0];
 GVAR(tofOutput) = [0, 0, 0, 0];
 GVAR(velocityOutput) = [0, 0, 0, 0];

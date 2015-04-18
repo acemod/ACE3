@@ -60,10 +60,11 @@ if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) 
     };
 };
 
-private ["_latitude", "_directionOfFire", "_windSpeed", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange"];
+private ["_latitude", "_directionOfFire", "_windSpeed1", "_windSpeed2", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange"];
 _latitude = GVAR(latitude) select GVAR(currentTarget);
 _directionOfFire = GVAR(directionOfFire) select GVAR(currentTarget);
-_windSpeed = (GVAR(windSpeed1) select GVAR(currentTarget));
+_windSpeed1 = (GVAR(windSpeed1) select GVAR(currentTarget));
+_windSpeed2 = (GVAR(windSpeed2) select GVAR(currentTarget));
 _windDirection = (GVAR(windDirection) select GVAR(currentTarget));
 _inclinationAngle = (GVAR(inclinationAngle) select GVAR(currentTarget));
 _targetSpeed = (GVAR(targetSpeed) select GVAR(currentTarget));
@@ -76,4 +77,4 @@ GVAR(rangeCardData) = [];
 
 private ["_result"];
 _result = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 1000,
-            _windSpeed, _windDirection, _inclinationAngle, _targetSpeed, _targetRange, _bc, _dragModel, _atmosphereModel, true, _stabilityFactor, _twistDirection, _latitude] call FUNC(calculate_solution);
+            [_windSpeed1, _windSpeed2], _windDirection, _inclinationAngle, _targetSpeed, _targetRange, _bc, _dragModel, _atmosphereModel, true, _stabilityFactor, _twistDirection, _latitude] call FUNC(calculate_solution);

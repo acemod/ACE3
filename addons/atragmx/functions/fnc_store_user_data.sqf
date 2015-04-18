@@ -26,6 +26,7 @@ profileNamespace setVariable ["ACE_ATragMX_temperature", GVAR(temperature)];
 profileNamespace setVariable ["ACE_ATragMX_barometricPressure", GVAR(barometricPressure)];
 profileNamespace setVariable ["ACE_ATragMX_relativeHumidity", GVAR(relativeHumidity)];
 
+profileNamespace setVariable ["ACE_ATragMX_showWind2", GVAR(showWind2)];
 profileNamespace setVariable ["latitude", GVAR(latitude)];
 profileNamespace setVariable ["directionOfFire", GVAR(directionOfFire)];
 profileNamespace setVariable ["ACE_ATragMX_windSpeed1", GVAR(windSpeed1)];
