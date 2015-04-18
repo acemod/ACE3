@@ -22,8 +22,8 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class level {
-                displayName = "Medical Level";
-                description = "What is the medical simulation level?";
+                displayName = "$STR_ACE_MedicalLevel";
+                description = "$STR_ACE_MedicalLevel_Desc";
                 typeName = "NUMBER";
                 class values {
                     class normal {
@@ -38,8 +38,8 @@ class CfgVehicles {
                 };
             };
             class enableFor {
-                displayName = "Enabled for";
-                description = "Select what units the medical system will be enabled for (Adv only)";
+                displayName = "$STR_ACE_enableFor";
+                description = "$STR_ACE_enableFor_Desc";
                 typeName = "NUMBER";
                 class values {
                     class playableUnits {
@@ -55,20 +55,20 @@ class CfgVehicles {
             };
             // TODO Disabled until the features are implemented
             /*class enableAirway {
-                displayName = "Enable Airway";
-                description = "Enable Advanced medical Airway (Adv only)";
+                displayName = "$STR_ACE_enableAirway";
+                description = "$STR_ACE_enableAirway_Desc";
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class enableFractures {
-                displayName = "Enable Fractures";
-                description = "Enable Advanced medical Fractures (Adv only)";
+                displayName = "$STR_ACE_enableFractures";
+                description = "$STR_ACE_enableFractures_Desc";
                 typeName = "BOOL";
                 defaultValue = 0;
             };*/
             class enableAdvancedWounds {
-                displayName = "Enable Advanced wounds";
-                description = "Allow reopening of bandaged wounds? (Adv only)";
+                displayName = "$STR_ACE_enableAdvancedWounds";
+                description = "$STR_ACE_enableAdvancedWounds_Desc";
                 typeName = "BOOL";
                 defaultValue = 0;
             };
@@ -123,8 +123,8 @@ class CfgVehicles {
                 defaultValue = 0;
             };
             class bleedingCoefficient {
-                displayName = "Bleeding coefficient";
-                description = "Coefficient to modify the bleeding speed";
+                displayName = "$STR_ACE_bleedingCoefficient";
+                description = "$STR_ACE_bleedingCoefficient_Desc";
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
@@ -186,8 +186,8 @@ class CfgVehicles {
                 defaultValue = -1;
             };
             class enableOverdosing {
-                displayName = "Enable Overdosing";
-                description = "Enable overdosing of medications";
+                displayName = "";
+                description = "";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
