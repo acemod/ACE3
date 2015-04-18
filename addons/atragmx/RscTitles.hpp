@@ -1213,6 +1213,12 @@ class ATragMX_Display {
         class TEXT_ATMO_ENV_DATA_NEXT: TEXT_TARGET_SPEED_ASSIST_NEXT {
             idc=13010;
         };
+        class TEXT_ATMO_ENV_DATA_CALC_METHOD: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
+            idc=13011;
+            x=0.550*safezoneW+safezoneX+0.24;
+            y=0.265*safezoneH+safezoneY+0.29;
+            text="Calc Method";
+        };
         
         class TEXT_TARGET_DATA_LATITUDE: TEXT_BORE_HEIGHT {
             idc=14000;
@@ -1237,14 +1243,30 @@ class ATragMX_Display {
         };
         class TEXT_TARGET_DATA_WIND_SPEED: TEXT_TARGET_DATA_LATITUDE {
             idc=14002;
+            w=1.2;
             y=0.265*safezoneH+safezoneY+0.360;
             text="Wind Speed (m/s)";
+        };
+        class TEXT_TARGET_DATA_WIND_SPEED_1: TEXT_TARGET_DATA_LATITUDE {
+            idc=141020;
+            colorText[]={0,0,0,0.6};
+            w=0.05;
+            h=0.03;
+            sizeEx=0.025;
+            x=0.550*safezoneW+safezoneX+0.270;
+            y=0.265*safezoneH+safezoneY+0.357;
+            text="1";
         };
         class TEXT_TARGET_DATA_WIND_SPEED_INPUT_1: TEXT_TARGET_DATA_LATITUDE_INPUT {
             idc=140020;
             w=0.045;
-            x=0.550*safezoneW+safezoneX+0.300;
+            x=0.550*safezoneW+safezoneX+0.290;
             y=0.265*safezoneH+safezoneY+0.360;
+        };
+        class TEXT_TARGET_DATA_WIND_SPEED_2: TEXT_TARGET_DATA_WIND_SPEED_1 {
+            idc=141021;
+            x=0.550*safezoneW+safezoneX+0.330;
+            text="2";
         };
         class TEXT_TARGET_DATA_WIND_SPEED_INPUT_2: TEXT_TARGET_DATA_LATITUDE_INPUT {
             idc=140021;
@@ -1263,15 +1285,31 @@ class ATragMX_Display {
         };
         class TEXT_TARGET_DATA_INCLINATION_ANGLE: TEXT_TARGET_DATA_LATITUDE {
             idc=14004;
+            w=1.2;
             y=0.265*safezoneH+safezoneY+0.440;
             text="Inclination Angle";
+        };
+        class TEXT_TARGET_DATA_INCLINATION_ANGLE_COSINE: TEXT_TARGET_DATA_LATITUDE {
+            idc=141041;
+            colorText[]={0,0,0,0.6};
+            w=0.05;
+            h=0.03;
+            sizeEx=0.025;
+            x=0.550*safezoneW+safezoneX+0.270;
+            y=0.265*safezoneH+safezoneY+0.437;
+            text="c";
         };
         class TEXT_TARGET_DATA_INCLINATION_ANGLE_INPUT_COSINE: TEXT_TARGET_DATA_LATITUDE_INPUT {
             idc=140041;
             w=0.045;
-            x=0.550*safezoneW+safezoneX+0.300;
+            x=0.550*safezoneW+safezoneX+0.290;
             y=0.265*safezoneH+safezoneY+0.440;
             onKeyUp=QUOTE(if (_this select 1 == 28) then {0 call FUNC(update_inclination_angle)});
+        };
+        class TEXT_TARGET_DATA_INCLINATION_ANGLE_DEGREE: TEXT_TARGET_DATA_INCLINATION_ANGLE_COSINE {
+            idc=141040;
+            x=0.550*safezoneW+safezoneX+0.330;
+            text="d";
         };
         class TEXT_TARGET_DATA_INCLINATION_ANGLE_INPUT_DEGREE: TEXT_TARGET_DATA_LATITUDE_INPUT {
             idc=140040;
