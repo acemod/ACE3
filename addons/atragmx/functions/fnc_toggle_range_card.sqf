@@ -15,12 +15,10 @@
  */
 #include "script_component.hpp"
 
-if (ctrlVisible 5006) then
-{
+if (ctrlVisible 5006) then {
     false call FUNC(show_range_card);
     true call FUNC(show_main_page);
-} else
-{
+} else {
     false call FUNC(show_main_page);
     true call FUNC(show_range_card);
     
