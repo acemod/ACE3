@@ -126,8 +126,10 @@ class ACE_Settings {
     };
     
     class GVAR(litterSimulationDetail) {
+        displayName = "$STR_ACE_Medical_litterSimulationDetail";
+        description = "$STR_ACE_Medical_litterSimulationDetail_Desc";
         typeName = "SCALAR";
-        value = 2;
-        values[] = {"None", "500", "All"};
+        value = 500;
+        isClientSettable = 1;
     };
 };
