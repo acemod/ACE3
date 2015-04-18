@@ -11,7 +11,7 @@
  * Return value:
  * Boolean of success
  */
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 PARAMS_2(_name,_args);
 private["_ttl", "_eventData", "_internalData", "_eventLog"];

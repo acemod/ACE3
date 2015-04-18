@@ -1,13 +1,15 @@
 /*
  * Author: jaynus
  *
+ * Send a request to synchronize an event name from the client->server. Execute on client only.
  *
  * Argument:
+ * 0: eventName (String)
  * 
  * Return value:
  * Boolean of success
  */
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 PARAMS_1(_eventName);
 

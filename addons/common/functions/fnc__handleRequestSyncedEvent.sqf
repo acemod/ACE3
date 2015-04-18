@@ -1,13 +1,20 @@
 /*
  * Author: jaynus
+ * 
+ * Receives either requests for synchronization from clients, or the synchronization data from the server.
  *
- *
- * Argument:
+ * Arguments [Client] :
+ * 0: eventName (String)
+ * 1: eventLog (Array)
+ * 
+ * Arguments [Server] :
+ * 0: eventName (String)
+ * 1: client (Object)
  * 
  * Return value:
  * Boolean of success
  */
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 //SEH_s
@@ -32,6 +39,7 @@ if(isServer) then {
         _eventArgs = _x select 1;
         [_eventName, _eventArgs, (_x select 2)] call FUNC(_handleSyncedEvent);
     } forEach _eventLog;
+    diag_log text format["[ACE] + [%1] synchronized", _eventName];
 };
 
 true

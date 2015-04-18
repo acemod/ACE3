@@ -1,13 +1,15 @@
 /*
  * Author: jaynus
  *
+ * Handles a server-side request for synchronization ALL events on JIP to a client.
  *
  * Argument:
+ * 0: client (object)
  * 
  * Return value:
  * Boolean of success
  */
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 PARAMS_1(_client);
 

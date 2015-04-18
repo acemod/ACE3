@@ -273,10 +273,13 @@ PREP(hashListPush);
 PREP(syncedEventPFH);
 PREP(addSyncedEventHandler);
 PREP(removeSyncedEventHandler);
+PREP(requestSyncedEvent);
 PREP(syncedEvent);
+
 PREP(_handleSyncedEvent);
 PREP(_handleRequestSyncedEvent);
-PREP(requestSyncedEvent);
+PREP(_handleRequestAllSyncedEvents);
+
 GVAR(syncedEvents) = HASH_CREATE;
 
 // @TODO: Generic local-managed global-synced objects (createVehicleLocal)
