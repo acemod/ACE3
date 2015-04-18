@@ -215,6 +215,7 @@
         </Key>
         <Key ID="STR_ACE_optionsMenu_uiScaing">
             <English>Option Menu UI Scaling</English>
+            <French>Menu option: taille de l'UI</French>
         </Key>
     </Package>
 </Project>
