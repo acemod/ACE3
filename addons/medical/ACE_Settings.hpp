@@ -124,4 +124,10 @@ class ACE_Settings {
         values[] = {"$STR_ACE_Medical_painEffect_Flash", "$STR_ACE_Medical_painEffect_Chroma"};
         isClientSettable = 1;
     };
+    
+    class GVAR(litterSimulationDetail) {
+        typeName = "SCALAR";
+        value = 2;
+        values[] = {"None", "500", "All"};
+    };
 };
