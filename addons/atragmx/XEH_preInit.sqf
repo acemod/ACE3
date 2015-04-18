@@ -12,6 +12,7 @@ PREP(calculate_target_speed_assist);
 PREP(can_show);
 PREP(change_gun);
 PREP(change_target_slot);
+PREP(clear_user_data);
 PREP(create_dialog);
 PREP(cycle_gun_list);
 PREP(cycle_image_size_units);

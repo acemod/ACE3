@@ -31,12 +31,12 @@ GVAR(directionOfFire) set [GVAR(currentTarget), 0 max abs(Round(parseNumber(ctrl
 GVAR(windSpeed1) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140020)) min 50];
 GVAR(windSpeed2) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140021)) min 50];
 GVAR(windDirection) set [GVAR(currentTarget), 1 max Round(parseNumber(ctrlText 140030)) min 12];
-_inclinationAngleCosine = 0.5 max parseNumber(ctrlText 140041) max 1;
+_inclinationAngleCosine = 0.5 max parseNumber(ctrlText 140041) min 1;
 _inclinationAngleDegree = -60 max parseNumber(ctrlText 140040) min 60;
 if (_inclinationAngleDegree != GVAR(inclinationAngle) select GVAR(currentTarget)) then {
     GVAR(inclinationAngle) set [GVAR(currentTarget), _inclinationAngleDegree];
 } else {
-    if (_inclinationAngleCosine != cos(GVAR(inclinationAngle) select GVAR(currentTarget))) then {
+    if (_inclinationAngleCosine != Round(cos(GVAR(inclinationAngle) select GVAR(currentTarget)) * 100) / 100) then {
         GVAR(inclinationAngle) set [GVAR(currentTarget), acos(_inclinationAngleCosine)];
     };
 };
@@ -120,5 +120,6 @@ GVAR(workingMemory) set [11, _windageCur];
 [] call FUNC(update_atmosphere);
 [] call FUNC(update_atmo_env_data);
 [] call FUNC(update_target);
+[] call FUNC(update_target_data);
 
 [] call FUNC(store_user_data);

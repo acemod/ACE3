@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+profileNamespace setVariable ["ACE_ATragMX_profileNamespaceVersion", ATRAGMX_PROFILE_NAMESPACE_VERSION];
+
 profileNamespace setVariable ["ACE_ATragMX_currentUnit", GVAR(currentUnit)];
 profileNamespace setVariable ["ACE_ATragMX_currentGun", GVAR(currentGun)];
 profileNamespace setVariable ["ACE_ATragMX_currentTarget", GVAR(currentTarget)];

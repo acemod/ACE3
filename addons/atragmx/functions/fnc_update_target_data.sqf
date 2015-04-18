@@ -26,7 +26,7 @@ if (GVAR(currentUnit) != 2) then {
 };
 ctrlSetText [140030, Str(Round((GVAR(windDirection) select GVAR(currentTarget))))];
 ctrlSetText [140040, Str(Round((GVAR(inclinationAngle) select GVAR(currentTarget))))];
-ctrlSetText [140041, Str(floor(cos(GVAR(inclinationAngle) select GVAR(currentTarget)) * 100) / 100)];
+ctrlSetText [140041, Str(Round(cos(GVAR(inclinationAngle) select GVAR(currentTarget)) * 100) / 100)];
 if (GVAR(currentUnit) != 2) then {
     ctrlSetText [140050, Str(Round((GVAR(targetSpeed) select GVAR(currentTarget)) * 2.23693629 * 100) / 100)];
 } else {

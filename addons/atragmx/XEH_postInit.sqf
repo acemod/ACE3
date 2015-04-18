@@ -2,7 +2,7 @@
 
 #include "initKeybinds.sqf"
 
-if (count (profileNamespace getVariable ["ACE_ATragMX_gunList", []]) > 0) then {
+if ((profileNamespace getVariable ["ACE_ATragMX_profileNamespaceVersion", 0]) == ATRAGMX_PROFILE_NAMESPACE_VERSION && count (profileNamespace getVariable ["ACE_ATragMX_gunList", []]) > 0) then {
     GVAR(gunList) = profileNamespace getVariable "ACE_ATragMX_gunList";
 } else {
     // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Elevation Scope Step, Windage Scope Step, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model
@@ -39,6 +39,7 @@ if (count (profileNamespace getVariable ["ACE_ATragMX_gunList", []]) > 0) then {
                       ["5.56x45mm Mk262"   , 820, 100, 0.0671, -0.0011250, 3.81, 0, 0.338, 0.338, 120, 0, 0, 4.990, 5.70, 17.78, 0.361, 1, "ASM" ],
                       ["5.56x45mm Mk318"   , 880, 100, 0.0616, -0.0011200, 3.81, 0, 0.338, 0.338, 120, 0, 0, 4.018, 5.70, 17.78, 0.307, 1, "ASM" ]];
     
+    [] call FUNC(clear_user_data);
     profileNamespace setVariable ["ACE_ATragMX_gunList", GVAR(gunList)];
 };
 
