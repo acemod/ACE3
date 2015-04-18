@@ -31,8 +31,16 @@ GVAR(windSpeed1) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140020
 GVAR(windSpeed2) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140021)) min 50];
 GVAR(windDirection) set [GVAR(currentTarget), 1 max Round(parseNumber(ctrlText 140030)) min 12];
 GVAR(inclinationAngle) set [GVAR(currentTarget), -60 max parseNumber(ctrlText 140040) min 60];
-GVAR(targetSpeed) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140050)) min 50];
+GVAR(targetSpeed) set [GVAR(currentTarget), -50 max abs(parseNumber(ctrlText 140050)) min 50];
 GVAR(targetRange) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140060)) min 4000];
+if (GVAR(currentUnit) != 2) then {
+    GVAR(windSpeed1) set [GVAR(currentTarget), (GVAR(windSpeed1) select GVAR(currentTarget)) * 0.44704];
+    GVAR(windSpeed2) set [GVAR(currentTarget), (GVAR(windSpeed2) select GVAR(currentTarget))  * 0.44704];
+    GVAR(targetSpeed) set [GVAR(currentTarget), (GVAR(targetSpeed) select GVAR(currentTarget))  * 0.44704];
+};
+if (GVAR(currentUnit) == 1) then {
+    GVAR(targetRange) set [GVAR(currentTarget), (GVAR(targetRange) select GVAR(currentTarget))  * 0.9144];
+};
 
 private ["_boreHeight", "_bulletMass", "_bulletDiameter", "_airFriction", "_rifleTwist", "_muzzleVelocity", "_zeroRange"];
 _boreHeight = parseNumber(ctrlText 120000);

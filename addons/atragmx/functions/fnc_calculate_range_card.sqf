@@ -68,10 +68,6 @@ _windDirection = (GVAR(windDirection) select GVAR(currentTarget));
 _inclinationAngle = (GVAR(inclinationAngle) select GVAR(currentTarget));
 _targetSpeed = (GVAR(targetSpeed) select GVAR(currentTarget));
 _targetRange = GVAR(rangeCardEndRange);
-if (GVAR(currentUnit) != 2) then {
-    _windSpeed = _windSpeed / 2.23693629;
-    _targetSpeed = _targetSpeed / 2.23693629;
-};
 if (GVAR(currentUnit) == 1) then {
     _targetRange = _targetRange / 1.0936133;
 };

@@ -43,6 +43,8 @@
  */
 #include "script_component.hpp"
 
+systemChat format["%1", _this];
+
 private ["_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_bc", "_dragModel", "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude"];
 _scopeBaseAngle     = _this select 0;
 _bulletMass         = _this select 1;

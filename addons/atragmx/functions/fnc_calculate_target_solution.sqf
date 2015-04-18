@@ -68,13 +68,6 @@ _windDirection = GVAR(windDirection) select GVAR(currentTarget);
 _inclinationAngle = GVAR(inclinationAngle) select GVAR(currentTarget);
 _targetSpeed = GVAR(targetSpeed) select GVAR(currentTarget);
 _targetRange = GVAR(targetRange) select GVAR(currentTarget);
-if (GVAR(currentUnit) != 2) then {
-    _windSpeed = _windSpeed / 2.23693629;
-    _targetSpeed = _targetSpeed / 2.23693629;
-};
-if (GVAR(currentUnit) == 1) then {
-    _targetRange = _targetRange / 1.0936133;
-};
 
 private ["_result"];
 _result = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 1000,
