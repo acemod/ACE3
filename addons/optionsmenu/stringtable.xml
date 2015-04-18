@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -215,6 +216,7 @@
         </Key>
         <Key ID="STR_ACE_optionsMenu_uiScaing">
             <English>Option Menu UI Scaling</English>
+            <Polish>Skalowanie UI menu ustawień</Polish>
         </Key>
     </Package>
 </Project>
