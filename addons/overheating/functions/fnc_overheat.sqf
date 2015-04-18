@@ -17,15 +17,14 @@
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-private ["_unit", "_weapon", "_ammo", "_projectile"];
+private ["_unit", "_weapon", "_ammo", "_projectile", "_velocity", "_variableName", "_overheat", "_temperature", "_time", "_bulletMass", "_energyIncrement", "_barrelMass", "_scaledTemperature", "_intensity", "_position", "_direction", "_dispersion", "_count", "_slowdownFactor", "_jamChance", "_surface"];
+
 _unit = _this select 0;
 _weapon = _this select 1;
 _ammo = _this select 4;
 _projectile = _this select 6;
 
 _velocity = velocity _projectile;
-
-private ["_variableName", "_overheat", "_temperature", "_time", "_energyIncrement", "_barrelMass", "_scaledTemperature"];
 
 // each weapon has it's own variable. Can't store the temperature in the weapon since they are not objects unfortunately.
 _variableName = format [QGVAR(%1), _weapon];

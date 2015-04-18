@@ -18,6 +18,8 @@
 #define STRENGHTODEAFNESS 3
 #define MAXDEAFNESS 1.1
 
+private ["_recoverRate", "_volume"];
+
 // Exit if combat deafness is disabled
 if !(GVAR(enableCombatDeafness)) exitWith {};
 
