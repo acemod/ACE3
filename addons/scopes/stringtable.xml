@@ -7,6 +7,7 @@
             <Russian>Малая корректировка ВВЕРХ</Russian>
             <Spanish>Ajuste menor arriba</Spanish>
             <Italian>Regola leggermente alzata in alto</Italian>
+            <French>Hausse +</French>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMinor">
             <English>Minor adjustment down</English>
@@ -14,6 +15,7 @@
             <Russian>Малая корректировка ВНИЗ</Russian>
             <Spanish>Ajuste menor abajo</Spanish>
             <Italian>Regola leggermente alzata in basso</Italian>
+            <French>Hausse -</French>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMinor">
             <English>Minor adjustment right</English>
@@ -21,6 +23,7 @@
             <Russian>Малая корректировка ВПРАВО</Russian>
             <Spanish>Ajuste menor derecha</Spanish>
             <Italian>Regola leggermente il tiro a destra</Italian>
+            <French>Dérive +</French>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMinor">
             <English>Minor adjustment left</English>
@@ -28,6 +31,7 @@
             <Russian>Малая корректировка ВЛЕВО</Russian>
             <Spanish>Ajuste menor izquierda</Spanish>
             <Italian>Regola leggermete il tiro a sinistra</Italian>
+            <French>Dérive -</French>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMajor">
             <English>Major adjustment up</English>
@@ -35,6 +39,7 @@
             <Russian>Большая корректировка ВВЕРХ</Russian>
             <Spanish>Ajuste mayor arriba</Spanish>
             <Italian>Regola l'alzata in alto</Italian>
+            <French>Hausse +++</French>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMajor">
             <English>Major adjustment down</English>
@@ -42,6 +47,7 @@
             <Russian>Большая корректировка ВНИЗ</Russian>
             <Spanish>Ajuste mayor abajo</Spanish>
             <Italian>Regola l'alzata in basso</Italian>
+            <French>Hausse ---</French>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMajor">
             <English>Major adjustment right</English>
@@ -49,6 +55,7 @@
             <Russian>Большая корректировка ВПРАВО</Russian>
             <Spanish>Ajuste mayor derecha</Spanish>
             <Italian>Regola il tiro a destra</Italian>
+            <French>Dérive +++</French>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMajor">
             <English>Major adjustment left</English>
@@ -56,6 +63,7 @@
             <Russian>Большая корректировка ВЛЕВО</Russian>
             <Spanish>Ajuste mayor izquierda</Spanish>
             <Italian>Regola il tiro a sinistra</Italian>
+            <French>Dérive ---</French>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustZero">
             <English>Set zero adjustment</English>
@@ -63,6 +71,7 @@
             <Russian>Сбросить корректировку</Russian>
             <Spanish>Establecer ajuste a cero</Spanish>
             <Italian>Resetta i valori del tiro</Italian>
+            <French>RAZ corrections</French>
         </Key>
     </Package>
 </Project>
