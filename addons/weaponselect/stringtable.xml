@@ -246,7 +246,7 @@
             <Czech>Už nejsou žádné ostatní granáty</Czech>
             <Portuguese>Não há outras granadas restantes</Portuguese>
             <Italian>Nessun'altra granata rimanente.</Italian>
-            <Russian>Летальные гранаты закончились</Russian>
+            <Russian>Нелетальные гранаты закончились</Russian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoGrenadeSelected">
             <English>No grenade selected</English>
@@ -268,7 +268,7 @@
             <French>Tirer le lance-pots fumigènes</French>
             <Polish>Wystrzel granat dymny</Polish>
             <Hungarian>Füstvető eltüzelése</Hungarian>
-            <Russian>Запустить дымовую завесу</Russian>
+            <Russian>Пустить дымовую завесу</Russian>
             <Italian>Lancia fumogeno</Italian>
         </Key>
     </Package>
