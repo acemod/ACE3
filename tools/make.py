@@ -284,6 +284,50 @@ def print_yellow(msg):
 	print(msg)
 	color("reset")
 
+	
+def copy_important_files(source_dir,destination_dir):
+	
+	originalDir = os.getcwd()
+	importantFiles = ["mod.cpp",
+	"README.md",
+	"AUTHORS.txt",
+	"LICENSE",
+	"logo_ace3_ca.paa"
+	]
+	
+	print_yellow ("source_dir: " + source_dir)
+	print_yellow("destination_dir: " + destination_dir)
+	
+	#copy importantFiles
+	try:
+		print_blue("Searching for important files in " + source_dir)
+		for file in importantFiles:
+			print_green("Copying file => " + os.path.join(source_dir,file))
+			shutil.copyfile(os.path.join(source_dir,file),os.path.join(destination_dir,file))
+	except:
+		print_error("COPYING IMPORTANT FILES.")
+		raise
+	
+	print("")
+	
+	#copy all extension dlls
+	try:
+		os.chdir(os.path.join(source_dir))
+		print_blue("Searching for DLLs in " + os.getcwd())
+		filenames = glob.glob("*.dll")
+		
+		if not filenames:
+			print ("Empty SET")
+			
+		for dll in filenames:
+			print_green("Copying dll => " + os.path.join(source_dir,dll))
+			if os.path.isfile(dll):
+				shutil.copyfile(os.path.join(source_dir,dll),os.path.join(destination_dir,dll))
+	except:
+		print_error("COPYING DLL FILES.")
+		raise
+	finally:
+		os.chdir(originalDir)
 ###############################################################################
 
 def main(argv):
@@ -436,26 +480,35 @@ See the make.cfg file for additional build options.
 
 		# Release/build directory, relative to script dir
 		release_dir = cfg.get(make_target, "release_dir", fallback="release")
-
+		
 		# Project PBO file prefix (files are renamed to prefix_name.pbo)
 		pbo_name_prefix = cfg.get(make_target, "pbo_name_prefix", fallback=None)
 
 		# Project module Root
 		module_root_parent = os.path.abspath(os.path.join(os.path.join(work_drive, prefix), os.pardir))
 		module_root = cfg.get(make_target, "module_root", fallback=os.path.join(make_root_parent, "addons"))
+		ace_optionals_root = os.path.join(module_root_parent, "optionals")
 		print_green ("module_root: " + module_root)
+		
 		if (os.path.isdir(module_root)):
 			os.chdir(module_root)
 		else:
 			print_error ("Directory " + module_root + " does not exist.")
 			sys.exit()
 
+		if (os.path.isdir(ace_optionals_root)):
+			print_green ("ace_optionals_root: " + ace_optionals_root)
+		else:
+			print_error ("Directory " + ace_optionals_root + " does not exist.")
+			sys.exit()
+		
+		print_green ("release_dir: " + release_dir)
+		copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
+		
 	except:
 		raise
 		print_error("Could not parse make.cfg.")
 		sys.exit(1)
-
-
 
 	# See if we have been given specific modules to build from command line.
 	if len(argv) > 1 and not make_release:
@@ -501,7 +554,7 @@ See the make.cfg file for additional build options.
 
 	# Get list of subdirs in make root.
 	dirs = next(os.walk(module_root))[1]
-
+	
 	# Autodetect what directories to build.
 	if module_autodetect and not arg_modules:
 		modules = []
@@ -670,7 +723,6 @@ See the make.cfg file for additional build options.
 					else:
 						cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "-X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
-				print_yellow(cmd)
 				color("grey")
 				if quiet:
 					devnull = open(os.devnull, 'w')
