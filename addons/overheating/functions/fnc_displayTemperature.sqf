@@ -16,7 +16,7 @@
 EXPLODE_2_PVT(_this,_player,_weapon);
 
 // Calculate cool down of weapon since last shot
-private ["_string", "_overheat", "_temperature", "_time", "_barrelMass"];
+private ["_string", "_overheat", "_temperature", "_time", "_barrelMass", "_a"];
 _string = format [QGVAR(%1), _weapon];
 _overheat = _player getVariable [_string, [0, 0]];
 _temperature = _overheat select 0;

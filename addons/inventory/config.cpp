@@ -18,10 +18,10 @@ class ACE_Settings {
     class GVAR(inventoryDisplaySize) {
         value = 0;
         typeName = "SCALAR";
-        isClientSetable = 1;
+        isClientSettable = 1;
         displayName = "$STR_ACE_Inventory_SettingName";
         description = "$STR_ACE_Inventory_SettingDescription";
-        values[] = {"Normal (Default Size)", "Medium", "Bigger"};
+        values[] = {"$str_medium", "$str_large", "$str_very_large"};
     };
 };
 

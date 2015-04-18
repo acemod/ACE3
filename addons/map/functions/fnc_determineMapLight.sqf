@@ -15,7 +15,7 @@
 
 EXPLODE_1_PVT(_this,_unit);
 
-private ["_isEnclosed","_nearObjects","_light","_ll","_flashlight"];
+private ["_isEnclosed","_nearObjects","_light","_ll","_flashlight", "_flareTint", "_lightTint", "_l"];
 
 // Blend two colors
 _fnc_blendColor = {

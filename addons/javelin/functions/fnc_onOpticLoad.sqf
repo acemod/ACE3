@@ -2,6 +2,8 @@
 #include "script_component.hpp"
 TRACE_1("enter", _this);
 
+#define __LOCKONTIMERANDOM 2    // Deviation in lock on time
+
 if((count _this) > 0) then {
     uiNameSpace setVariable ['ACE_RscOptics_javelin',_this select 0];
 };
@@ -22,9 +24,13 @@ uiNameSpace setVariable [QGVAR(arguments),
         objNull,   // currentTargetObject
         0,         // Run Time
         0,          // Lock Time
-        0           // Sound timer
+        0,           // Sound timer
+        (random __LOCKONTIMERANDOM), // random lock time addition
+        -1
     ]
 ];
+
+
 
 _pfh_handle = uiNamespace getVariable ["ACE_RscOptics_javelin_PFH", nil];
 if(isNil "_pfh_handle") then {

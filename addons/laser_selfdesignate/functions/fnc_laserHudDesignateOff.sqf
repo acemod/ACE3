@@ -13,7 +13,7 @@
 #include "script_component.hpp"
 
 if( (count _this) > 2) then {
-    EXPLODE_3_PVT(_this,_shooter,_laserUuid, _localLaserTarget);
+    EXPLODE_3_PVT(_this,_shooter,_laserUuid,_localLaserTarget);
 
     [_laserUuid] call EFUNC(laser,laserOff);
     // @TODO: Nou gets to field all tickets about missing lasers.
@@ -21,5 +21,10 @@ if( (count _this) > 2) then {
 };
 
 GVAR(active) = false;
+
+if(!isNil QGVAR(selfDesignateHandle)) then {
+    [GVAR(selfDesignateHandle)] call CBA_fnc_removePerFrameHandler;
+    GVAR(selfDesignateHandle) = nil;
+};
 
 true

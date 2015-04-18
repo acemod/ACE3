@@ -17,9 +17,10 @@ TRACE_1("", _launchParams);
 _foundTargetPos = [0,0,0];
 if(!isNil "_target") then {
     _foundTargetPos = getPosASL _target;
+    //_foundTargetPos = (_target modelToWorldVisual (getCenterOfMass _target));
 };
 
-/* @TODO: This is seeker LOS and angle checks for LOAL only; LOBL does not need visual
+// @TODO: This is seeker LOS and angle checks for LOAL only; LOBL does not need visual
 _angleFov = _seekerParams select 0;
 _angleOkay = [_projectile, _foundTargetPos, _angleFov] call FUNC(checkSeekerAngle);
 
@@ -34,7 +35,7 @@ if(!_angleOkay || !_losOkay) then {
     _foundTargetPos = _sensorPos vectorAdd ((velocity _projectile) vectorMultiply 5);
 } else {
     TRACE_2("", _target, _foundTargetPos);
-
+    private["_projectileSpeed", "_distanceToTarget", "_eta", "_adjustVelocity"];
     // @TODO: Configurable lead for seekers
     _projectileSpeed = (vectorMagnitude velocity _projectile);
     _distanceToTarget = (getPosASL _projectile) vectorDistance _foundTargetPos; 
@@ -45,5 +46,5 @@ if(!_angleOkay || !_losOkay) then {
     _foundTargetPos = _foundTargetPos vectorAdd _adjustVelocity;
 };
 
-*/
+
 _foundTargetPos;

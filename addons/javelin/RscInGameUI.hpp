@@ -12,19 +12,9 @@ class RscLine;
 class RscInGameUI {
     class ACE_RscOptics_javelin {
         idd = 300;
-        controls[] = { "ACE_javelin_elements_group", "CA_Distance", "ACE_Targeting" }; //, "ACE_TargetingConstrains", "ACE_TargetingGate", "ACE_TargetingLines"};
+        controls[] = { "ACE_javelin_elements_group", "ACE_Targeting" }; //, "ACE_TargetingConstrains", "ACE_TargetingGate", "ACE_TargetingLines"};
         onLoad = QUOTE(_this call FUNC(onOpticLoad));
-        onUnload = "uiNameSpace setVariable ['ACE_RscOptics_javelin',nil];uiNameSpace setVariable ['ACE_RscOptics_javelin_PFH',nil];";
-        
-        class CA_Distance: RscOpticsValue {
-            idc = 151;
-            sizeEx = "0";
-            colorText[] = {0,0,0,0};
-            x = 0;
-            y = 0;
-            w = 0;
-            h = 0;
-        };
+        onUnload = QUOTE(_this call FUNC(onOpticUnload));
         
         class ACE_javelin_elements_group: RscControlsGroup
         {
@@ -45,6 +35,16 @@ class RscInGameUI {
                 height = 0.001;
             };
             class Controls {
+                class CA_Distance: RscOpticsValue {
+                    idc = 151;
+                    sizeEx = "0";
+                    colorText[] = {0,0,0,0};
+                    x = 0;
+                    y = 0;
+                    w = 0;
+                    h = 0;
+                };
+        
                 class ACE_javelin_Day_mode_off: RscPicture {
                     idc = 1001;
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.03/4)*3*SafezoneH    - SafezoneX";
@@ -58,7 +58,7 @@ class RscInGameUI {
                     idc = 160;
                     colorText[] = {0.2941,0.8745,0.2157,1};
                 };
-                class ACE_javelin_WFOV_mode_off: ACE_javelin_Day_mode_off {
+                class CA_Javelin_WFOV_mode_off : ACE_javelin_Day_mode_off {
                     idc = 1004;
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.307/4)*3*SafezoneH - SafezoneX";
                     text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\wfov_co.paa";
@@ -81,13 +81,6 @@ class RscInGameUI {
                         height = 0.001;
                     };
                     class Controls {
-                        class ACE_javelin_WFOV_mode: ACE_javelin_WFOV_mode_off {
-                            idc = -1;
-                            y = "0.031*SafezoneH - SafezoneY";
-                            x = "((SafezoneW -SafezoneH*3/4)/2)+ (0.307/4)*3*SafezoneH - SafezoneX";
-                            colorText[] = {0.2941,0.8745,0.2157,1};
-                        };
-                        /*
                         class StadiaL: RscLine {
                             x = "0.4899*SafezoneW - SafezoneX";
                             y = "0.171*SafezoneH - SafezoneY";
@@ -130,10 +123,10 @@ class RscInGameUI {
                             h = 0;
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
-                        */
+                        
                     };
                 };
-                class ACE_javelin_NFOV_mode_off: ACE_javelin_Day_mode_off {
+                class CA_Javelin_NFOV_mode_off: ACE_javelin_Day_mode_off {
                     idc = 1003;
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.586/4)*3*SafezoneH - SafezoneX";
                     text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\nfov_co.paa";
@@ -156,13 +149,6 @@ class RscInGameUI {
                         height = 0.001;
                     };
                     class Controls {
-                        class ACE_javelin_NFOV_mode: ACE_javelin_NFOV_mode_off {
-                            idc = 699003;
-                            x = "((SafezoneW -SafezoneH*3/4)/2)+ (0.586/4)*3*SafezoneH - SafezoneX";
-                            y = "0.031*SafezoneH - SafezoneY";
-                            colorText[] = {0.2941,0.8745,0.2157,1};
-                        };
-                        /*
                         class StadiaL: RscLine {
                             x = "0.4788*SafezoneW - SafezoneX";
                             y = "0.171*SafezoneH - SafezoneY";
@@ -205,7 +191,7 @@ class RscInGameUI {
                             h = "0.1895*SafezoneH";
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
-                        */
+                        
                     };
                 };
 
@@ -269,9 +255,9 @@ class RscInGameUI {
             idc = 6999;
             
             x = "SafezoneX";
-			y = "SafezoneY";
-			w = "SafezoneW";
-			h = "SafezoneH";
+            y = "SafezoneY";
+            w = "SafezoneW";
+            h = "SafezoneH";
             
             enabled = 0;
             class Controls {

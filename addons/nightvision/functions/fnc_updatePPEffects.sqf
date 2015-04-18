@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_currentVehicle", "_grainSetting", "_blurSetting", "_radBlurSetting", "_config"];
+private ["_currentVehicle", "_grainSetting", "_blurSetting", "_radBlurSetting", "_config", "_hmd", "_cameraView", "_turret"];
 
 _currentVehicle = vehicle ACE_player;
 
@@ -41,7 +41,7 @@ _fnc_isUsingHMD = {
         !("NVG" in getArray (_config >> "ViewOptics" >> "visionMode"));
     };
 
-    private ["_result", "_turretConfig", "_turretConfigOpticsIn"];
+    private ["_result", "_turretConfig", "_turretConfigOpticsIn", "_index"];
     _result = true;
     _turretConfig = [_config, _turret] call EFUNC(common,getTurretConfigPath);
     _turretConfigOpticsIn = _turretConfig >> "OpticsIn";

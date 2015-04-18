@@ -1,7 +1,7 @@
 /*
  * Author: PabstMirror
  * Saves the current mode and sets a new mode
- * Used to backup display when switching display modes 
+ * Used to backup display when switching display modes
  *
  * Arguments:
  * 0: New Mode <NUMBER>
@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_display", "_theMap", "_mapSize", "_centerPos"];
+private ["_display", "_theMap", "_mapSize", "_centerPos", "_mapCtrlPos"];
 
 PARAMS_1(_newMode);
 
@@ -36,16 +36,16 @@ if (GVAR(currentApplicationPage) == 2) then {
     _centerPos = [((_mapCtrlPos select 0) + (_mapCtrlPos select 2) / 2), ((_mapCtrlPos select 1) + (_mapCtrlPos select 3) / 2)];
     GVAR(mapPosition) = _theMap ctrlMapScreenToWorld _centerPos;
     GVAR(mapZoom) = (ctrlMapScale _theMap) * _mapSize;
-    
+
     //Hit button again, toggle map modes:
     if (_newMode == 2) then {
-       if (GVAR(mapShowTexture)) then {
-         GVAR(mapShowTexture) = false;
-       } else {
+        if (GVAR(mapShowTexture)) then {
+            GVAR(mapShowTexture) = false;
+        } else {
             if (GVAR(MapDataAvailable) == MAP_DETAIL_SAT) then {
                 GVAR(mapShowTexture) = true;
             };
-       };
+        };
     };
 };
 

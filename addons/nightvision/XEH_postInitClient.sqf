@@ -42,7 +42,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if ((currentVisionMode _player != 1)) exitWith {false};
+    if ((currentVisionMode ACE_player != 1)) exitWith {false};
 
     // Statement
     [ACE_player, 1] call FUNC(changeNVGBrightness);
@@ -56,7 +56,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if ((currentVisionMode _player != 1)) exitWith {false};
+    if ((currentVisionMode ACE_player != 1)) exitWith {false};
 
     // Statement
     [ACE_player, -1] call FUNC(changeNVGBrightness);
