@@ -21,7 +21,6 @@ PREP(adjustPainLevel);
 PREP(canAccessMedicalEquipment);
 PREP(canTreat);
 PREP(canTreatCached);
-PREP(createLitter);
 PREP(determineIfFatal);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
@@ -97,6 +96,10 @@ PREP(moduleAssignMedicalFacility);
 PREP(moduleTreatmentConfiguration);
 PREP(copyDeadBody);
 PREP(requestWoundSync);
+
+// Litter handling functionality test
+PREP(createLitter);
+PREP(_handleCreateLitter);
 
 GVAR(injuredUnitCollection) = [];
 GVAR(IVBags) = [];
