@@ -20,11 +20,9 @@ _lastColumnOutput = "";
 
 ctrlSetText [5006, (GVAR(rangeCardLastColumns) select GVAR(rangeCardCurrentColumn))];
 
-if (GVAR(currentUnit) != 2) then
-{
+if (GVAR(currentUnit) == 1) then {
     ctrlSetText [5003, "Yards"];
-} else
-{
+} else {
     ctrlSetText [5003, "Meters"];
 };
 
@@ -39,22 +37,16 @@ lnbClear 5007;
     _velocity = _x select 5;
     _kineticEnergy = _x select 6;
     
-    switch (GVAR(currentScopeUnit)) do
-    {
-        case 0:
-        {
+    switch (GVAR(currentScopeUnit)) do {
+        case 0: {
             _elevation = _elevation / 3.38;
             _windage = _windage / 3.38;
-        };
-        
-        case 2:
-        {
+        }; 
+        case 2: {
             _elevation = _elevation * 1.047;
             _windage = _windage * 1.047;
         };
-        
-        case 3:
-        {
+        case 3: {
             _elevationScopeStep = (GVAR(workingMemory) select 7);
             _windageScopeStep = (GVAR(workingMemory) select 8);
             
@@ -67,35 +59,25 @@ lnbClear 5007;
     _windageOutput = Str(Round(_windage * 100) / 100);
     
     _rangeOutput = Str(_range);
-    if (_velocity < 340.29) then
-    {
+    if (_velocity < 340.29) then {
         _rangeOutput = _rangeOutput + "*";
     };
     
-    if (GVAR(currentUnit) == 1) then
-    {
+    if (GVAR(currentUnit) == 1) then {
         _velocity = _velocity * 3.2808399;
     };
     
-    switch (GVAR(rangeCardCurrentColumn)) do
-    {
-        case 0:
-        {
+    switch (GVAR(rangeCardCurrentColumn)) do {
+        case 0: {
             _lastColumnOutput = Str(Round(_lead * 100) / 100);
         };
-        
-        case 1:
-        {
+        case 1: {
             _lastColumnOutput = Str(Round(_velocity));
         };
-        
-        case 2:
-        {
+        case 2: {
             _lastColumnOutput = Str(Round(_kineticEnergy));
         };
-        
-        case 3:
-        {
+        case 3: {
             _lastColumnOutput = Str(Round(_TOF * 100) / 100);
         }
     };

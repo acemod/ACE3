@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Inject_Atropine">
@@ -64,7 +65,7 @@
             <German>Salzlösungtransfusion</German>
             <Spanish>Transfundir salino</Spanish>
             <Czech>Transfúze fyziologický roztoku</Czech>
-            <Polish>Przetocz solankę</Polish>
+            <Polish>Przetocz sól fizjologiczną</Polish>
             <French>Transfuser de la Saline</French>
             <Russian>Перелить физраствор</Russian>
             <Hungarian>Infúzió (sós víz)</Hungarian>
@@ -216,7 +217,7 @@
             <German>Sallösungtransfusion ...</German>
             <Spanish>Transfusión de salino ...</Spanish>
             <Czech>Probíha transfúze fyziologický roztoku ...</Czech>
-            <Polish>Przetaczanie solanki ...</Polish>
+            <Polish>Przetaczanie soli fizjologicznej ...</Polish>
             <French>Transfusion de saline ...</French>
             <Russian>Переливание физраствора ...</Russian>
             <Hungarian>Infúzió sós vizzel ...</Hungarian>
@@ -436,7 +437,7 @@
             <German>Kochsaltzlösung IV (1000ml)</German>
             <Spanish>Dar Salino IV (1000ml)</Spanish>
             <Russian>Дать физраствор для в/в вливания (1000 мл)</Russian>
-            <Polish>Podaj solankę IV (1000ml)</Polish>
+            <Polish>Podaj sól fizjologiczną IV (1000ml)</Polish>
             <French>Administrer de la Solution Saline en IV (1000ml)</French>
             <Czech>Podaz fyz. roztok (1000ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (1000ml)</Hungarian>
@@ -447,7 +448,7 @@
             <German>Kochsaltzlösung IV (500ml)</German>
             <Spanish>Dar Salino IV (500ml)</Spanish>
             <Russian>Дать физраствор для в/в вливания (500 мл)</Russian>
-            <Polish>Podaj solankę IV (500ml)</Polish>
+            <Polish>Podaj sól fizjologiczną IV (500ml)</Polish>
             <French>Administrer de la Solution Saline en IV (500ml)</French>
             <Czech>Podaz fyz. roztok (500ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (500ml)</Hungarian>
@@ -458,7 +459,7 @@
             <German>Kochsaltzlösung IV (250ml)</German>
             <Spanish>Dar Salino IV (250ml)</Spanish>
             <Russian>Дать физраствор для в/в вливания (250 мл)</Russian>
-            <Polish>Podaj solankę IV (250ml)</Polish>
+            <Polish>Podaj sól fizjologiczną IV (250ml)</Polish>
             <French>Administrer de la Solution Saline en IV (250ml)</French>
             <Czech>Podaz fyz. roztok (250ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (250ml)</Hungarian>
@@ -930,7 +931,7 @@
             <Russian>Физраствор для в/в вливания (1000 мл)</Russian>
             <Spanish>Solución Salina IV (1000ml)</Spanish>
             <French>Solution Saline 0.9% IV (1000ml)</French>
-            <Polish>Solanka 0,9% IV (1000ml)</Polish>
+            <Polish>Sól fizjologiczna IV (1000ml)</Polish>
             <German>Kochsalzlösung (1000ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (1000ml)</Hungarian>
             <Italian>Soluzione salina IV (1000ml)</Italian>
@@ -940,7 +941,7 @@
             <Russian>Пакет физраствора для возмещения объема потерянной крови</Russian>
             <Spanish>Solución salina intravenosa, para restaurar el volumen sanguíneo</Spanish>
             <French>Solution Saline 0.9% IV, pour rétablir temporairement la tension artérielle</French>
-            <Polish>Solanka 0,9%, podawana dożylnie (IV), używana w celu uzupełnienia krwi u pacjenta</Polish>
+            <Polish>Sól fizjologiczna, podawana dożylnie (IV), używana w celu uzupełnienia krwi u pacjenta</Polish>
             <Hungarian>0,9%-os sósvíz-infúzió, a páciens vérmennyiségének helyreállítására</Hungarian>
             <Italian>Soluzione salina, usata per ripristinare sangue nei pazienti.</Italian>
         </Key>
@@ -958,7 +959,7 @@
             <Russian>Физраствор для в/в вливания (500 мл)</Russian>
             <Spanish>Salino IV (500ml)</Spanish>
             <French>Solution Saline 0.9% IV (500ml)</French>
-            <Polish>Solanka 0,9% IV (500ml)</Polish>
+            <Polish>Sól fizjologiczna IV (500ml)</Polish>
             <German>Kochsalzlösung (500ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (500ml)</Hungarian>
             <Italian>Soluzione salina IV (500ml)</Italian>
@@ -968,7 +969,7 @@
             <Russian>Физраствор для в/в вливания (250 мл)</Russian>
             <Spanish>Salino IV (250ml)</Spanish>
             <French>Solution Saline 0.9% IV (250ml)</French>
-            <Polish>Solanka 0,9% IV (250ml)</Polish>
+            <Polish>Sól fizjologiczna IV (250ml)</Polish>
             <German>Kochsalzlösung (250ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (250ml)</Hungarian>
             <Italian>Soluzione salina IV (250ml)</Italian>
@@ -1128,6 +1129,7 @@
             <Spanish>La Presión Arterial es %2/%3</Spanish>
             <Hungarian>A vérnyomás %2/%3</Hungarian>
             <Italian>Hai riscontrato una pressione di %2/%3</Italian>
+            <Polish>Wyczuwasz ciśnienie krwi o wartości %2/%3</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_2">
             <English>You find a low blood pressure</English>
@@ -1610,5 +1612,180 @@
             <Italian>Aberrazione cromatica</Italian>
             <Spanish>Aberración cromática</Spanish>
         </Key>
+        <Key ID="STR_ACE_MedicalLevel">
+            <English>Medical Level</English>
+        </Key>
+        <Key ID="STR_ACE_MedicalLevel_Desc">
+            <English>What is the medical simulation level?</English>
+        </Key>
+        <Key ID="STR_ACE_enableFor">
+            <English>Enabled for</English>
+            <German>Aktivieren für</German>
+        </Key>
+        <Key ID="STR_ACE_enableFor_Desc">
+            <English>Select what units the medical system will be enabled for (Adv only)</English>
+        </Key>
+        <Key ID="STR_ACE_enableOverdosing">
+            <English>Enable Overdosing</English>
+        </Key>
+        <Key ID="STR_ACE_enableOverdosing_Desc">
+            <English>Enable overdosing of medications</English>
+        </Key>
+        <Key ID="STR_ACE_bleedingCoefficient">
+            <English>Bleeding coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_bleedingCoefficient_Desc">
+            <English>Coefficient to modify the bleeding speed</English>
+        </Key>
+        <Key ID="STR_ACE_enableAirway">
+            <English>Enable Airway</English>
+        </Key>
+        <Key ID="STR_ACE_enableAirway_Desc">
+            <English>Enable Advanced medical Airway (Adv only)</English>
+        </Key>
+        <Key ID="STR_ACE_enableFractures">
+            <English>Enable Fractures</English>
+        </Key>
+        <Key ID="STR_ACE_enableFractures_Desc">
+            <English>Enable Advanced medical Fractures (Adv only)</English>
+        </Key>
+        <Key ID="STR_ACE_enableAdvancedWounds">
+            <English>Enable Advanced wounds</English>
+        </Key>
+        <Key ID="STR_ACE_enableAdvancedWounds_Desc">
+            <English>Allow reopening of bandaged wounds? (Adv only)</English>
+        </Key>
+        <Key ID="STR_ACE_enableVehicleCrashes">
+            <English>Vehicle Crashes</English>
+        </Key>
+        <Key ID="STR_ACE_enableVehicleCrashes_Desc">
+            <English>Do units take damage from a vehicle crash?</English>
+        </Key>
+        <Key ID="STR_ACE_enableScreams">
+            <English>Enable Screams</English>
+        </Key>
+        <Key ID="STR_ACE_enableScreams_Desc">
+            <English>Enable screaming by injuried units</English>
+        </Key>
+        <Key ID="STR_ACE_playerDamageThreshold">
+            <English>Player Damage</English>
+        </Key>
+        <Key ID="STR_ACE_playerDamageThreshold_Desc">
+            <English>What is the damage a player can take before being killed?</English>
+        </Key>
+        <Key ID="STR_ACE_AIDamageThreshold">
+            <English>AI Damage</English>
+        </Key>
+        <Key ID="STR_ACE_AIDamageThreshold_Desc">
+            <English>What is the damage an AI can take before being killed?</English>
+        </Key>
+        <Key ID="STR_ACE_enableUnsconsiousnessAI">
+            <English>AI Unconsciousness</English>
+        </Key>
+        <Key ID="STR_ACE_enableUnsconsiousnessAI_Desc">
+            <English>Allow AI to go unconscious</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_preventInstaDeath">
+            <English>Prevent instant death</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_preventInstaDeath_Desc">
+            <English>Have a unit move to unconscious instead of death</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_maxReviveTime">
+            <English>Max Revive time</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_maxReviveTime_Desc">
+            <English>Max amount of seconds a unit can spend in revive state</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_amountOfReviveLives">
+            <English>Max Revive lives</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_amountOfReviveLives_Desc">
+            <English>Max amount of lives a unit. 0 or -1 is disabled.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_allowDeadBodyMovement">
+            <English>Allow Dead Body movement</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_allowDeadBodyMovement_Desc">
+            <English>Allow the movement of Deadbodys</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_allowLitterCreation">
+            <English>Enable Litter</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_allowLitterCreation_Desc">
+            <English>Enable litter being created upon treatment</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_litterCleanUpDelay">
+            <English>Life time of litter objects</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_litterCleanUpDelay_Desc">
+            <English>How long should litter objects stay? In seconds. -1 is forever.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_medicSetting_PAK">
+            <English>Allow PAK (Adv)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_medicSetting_PAK_Desc">
+            <English>Who can use the PAK for full heal?</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_medicSetting_SurgicalKit">
+            <English>Allow Surgical kit (Adv)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_medicSetting_SurgicalKit_Desc">
+            <English>Who can use the surgical kit?</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_consumeItem_PAK">
+            <English>Remove PAK on use (Adv)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_consumeItem_PAK_Desc">
+            <English>Should PAK be removed on usage?</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_consumeItem_SurgicalKit">
+            <English>Should Surgical kit be removed on usage?</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_consumeItem_SurgicalKit_Desc">
+            <English>Who can use the surgical kit?</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_useLocation_PAK">
+            <English>Locations PAK (Adv)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_useLocation_PAK_Desc">
+            <English>Where can the personal aid kit be used?</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_useLocation_SurgicalKit">
+            <English>Locations Surgical kit (Adv)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_useLocation_SurgicalKit_Desc">
+            <English>Where can the Surgical kit be used?</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_keepLocalSettingsSynced">
+            <English>Sync status</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_keepLocalSettingsSynced_Desc">
+            <English>Keep unit status synced. Recommended on.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_healHitPointAfterAdvBandage">
+            <English>Heal Hitpoint after Advanced Bandage?</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_healHitPointAfterAdvBandage_Desc">
+            <English>Enables final Healing for a Bodypart with Advanced Bandage</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_medicSetting">
+            <English>Medics setting</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_medicSetting_Desc">
+            <English>What is the level of detail prefered for medics?</English>
+        </Key>
+
+
+
+        <Key ID="STR_ACE_MedicalLevel_Disabled">
+            <English>Disabled (Currently WIP and not activ)</English>
+        </Key>
+        <Key ID="STR_ACE_MedicalLevel_Basic">
+            <English>Basic</English>
+        </Key>
+        <Key ID="STR_ACE_MedicalLevel_Advanced">
+            <English>Advanced</English>
+        </Key>        
     </Package>
 </Project>

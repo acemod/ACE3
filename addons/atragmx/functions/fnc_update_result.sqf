@@ -27,10 +27,8 @@ _windageRel = _windageAbs - _windageCur;
 
 _lead = (GVAR(leadOutput) select GVAR(currentTarget));
 
-switch (GVAR(currentScopeUnit)) do
-{
-    case 0:
-    {
+switch (GVAR(currentScopeUnit)) do {
+    case 0: {
         _elevationAbs = _elevationAbs / 3.38;
         _windageAbs = _windageAbs / 3.38;
         
@@ -40,9 +38,7 @@ switch (GVAR(currentScopeUnit)) do
         _elevationCur = _elevationCur / 3.38;
         _windageCur = _windageCur / 3.38;
     };
-    
-    case 2:
-    {
+    case 2: {
         _elevationAbs = _elevationAbs * 1.047;
         _windageAbs = _windageAbs * 1.047;
         
@@ -52,9 +48,7 @@ switch (GVAR(currentScopeUnit)) do
         _elevationCur = _elevationCur * 1.047;
         _windageCur = _windageCur * 1.047;
     };
-    
-    case 3:
-    {
+    case 3: {
         _elevationScopeStep = (GVAR(workingMemory) select 7);
         _windageScopeStep = (GVAR(workingMemory) select 8);
         
