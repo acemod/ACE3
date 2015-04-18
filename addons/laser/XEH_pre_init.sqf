@@ -11,6 +11,8 @@ PREP(findStrongestRay);
 PREP(translateToModelSpace);
 PREP(translateToWeaponSpace);
 
+PREP(onLaserDesignatorDraw);
+
 PREP(seekerFindLaserSpot);
 PREP(laserOn);
 PREP(laserOff);
