@@ -8,6 +8,8 @@ if(GVAR(enabled) < 1 || {!local _projectile} ) exitWith { false };
 if( !isPlayer _shooter && { GVAR(enabled) < 2 } ) exitWith { false };
 
 private["_config", "_enabled", "_target", "_seekerType", "_attackProfile"];
+private["_args", "_canUseLock", "_guidingUnit", "_launchPos", "_lockMode", "_targetPos", "_vanillaTarget"];
+
 PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
 // Bail on not missile

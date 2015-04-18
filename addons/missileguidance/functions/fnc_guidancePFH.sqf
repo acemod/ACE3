@@ -7,6 +7,7 @@ private["_launchParams", "_targetLaunchParams", "_flightParams", "_seekerParams"
 private["_lastRunTime", "_runtimeDelta", "_adjustTime", "_args", "_seekerTargetPos", "_projectilePos"];
 private["_profileAdjustedTargetPos", "_incDeflection", "_minDeflection", "_maxDeflection"];
 private["_targetVector", "_adjustVector", "_finalAdjustVector", "_changeVector", "_pitch", "_yaw", "_roll"];
+private["_PS", "_distanceToTarget", "_targetRelativeVector", "_vectorTo"];
 
 _args = _this select 0;
 EXPLODE_7_PVT((_args select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);

@@ -5,11 +5,14 @@ TRACE_1("enter", _this);
 #define __TRACKINTERVAL 0    // how frequent the check should be.
 #define __LOCKONTIME 3    // Lock on won't occur sooner
 
+private["_apos", "_aposX", "_aposY", "_args", "_boundsInput", "_bpos", "_canFire", "_constraintBottom"];
+private["_constraintLeft", "_constraintRight", "_constraintTop", "_currentTarget", "_fireDisabledEH"];
+private["_firedEH", "_fov", "_lastTick", "_lockTime", "_maxX", "_maxY", "_minX", "_minY", "_newTarget"]; 
+private["_offsetX", "_offsetY", "_pos", "_randomLockInterval", "_randomPosWithinBounds", "_range"];
+private["_runTime", "_soundTime", "_targetArray", "_zamerny"];
 
 #define __OffsetX ((ctrlPosition __JavelinIGUITargetingLineV) select 0) - 0.5
 #define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5
-
-private["_isJavelin", "_args", "_lastTick", "_runTime", "_soundTime", "_lockTime", "_newTarget", "_currentTarget", "_range", "_pos", "_targetArray"];
 
 // Reset arguments if we havnt rendered in over a second
 _args = uiNamespace getVariable[QGVAR(arguments), [] ];
