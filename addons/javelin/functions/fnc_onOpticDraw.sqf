@@ -72,7 +72,7 @@ _range = parseNumber (ctrlText __JavelinIGUIRangefinder);
 TRACE_1("Viewing range", _range);
 if (_range > 50 && {_range < 2500}) then {
     _pos = positionCameraToWorld [0,0,_range];
-    _targetArray = _pos nearEntities ["AllVehicles", _range/25];
+    _targetArray = _pos nearEntities ["AllVehicles", _range/100];
     TRACE_1("Searching at range", _targetArray);
     if (count (_targetArray) > 0) then {
         _newTarget = _targetArray select 0;
