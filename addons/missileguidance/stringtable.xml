@@ -13,6 +13,9 @@
             <Hungarian>Fejlett rakétairányító</Hungarian>
             <Russian>Расширенный ракетой</Russian>
         </Key>
+        <Key ID="STR_ACE_MissileGuidance_Desc">
+            <English>Advanced missile guidance, or AMG, provides multiple enhancements to missile locking and firing. It is also a framework required for missile weapon types.</English>
+        </Key>
         <Key ID="STR_ACE_Hydra70_DAGR">
             <English>Hydra-70 DAGR Missile</English>
             <Spanish></Spanish>

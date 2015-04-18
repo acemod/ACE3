@@ -46,9 +46,6 @@ class CfgAmmo {
             minDeflection = 0.00025;      // Minium flap deflection for guidance
             maxDeflection = 0.001;       // Maximum flap deflection for guidance
             incDeflection = 0.0005;      // The incrmeent in which deflection adjusts.
-            //minDeflection = 0.005; 
-            //maxDeflection = 0.5;
-            //incDeflection = 0.005;
             
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
             
@@ -119,9 +116,6 @@ class CfgAmmo {
             minDeflection = 0.00005;      // Minium flap deflection for guidance
             maxDeflection = 0.025;       // Maximum flap deflection for guidance
             incDeflection = 0.00005;      // The incrmeent in which deflection adjusts.
-            //minDeflection = 0.005; 
-            //maxDeflection = 0.5;
-            //incDeflection = 0.005;
             
             canVanillaLock = 0;
             
