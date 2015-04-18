@@ -30,16 +30,18 @@ _soundTime = _args select 4;
 _randomLockInterval = _args select 5;
 _fireDisabledEH = _args select 6;
 
-if( ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "launch_Titan_base"] call EFUNC(common,inheritsFrom)) 
+if( ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "launch_Titan_short_base"] call EFUNC(common,inheritsFrom)) 
     &&
-    { ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "missiles_titan"] call EFUNC(common,inheritsFrom)) }
+    { ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "missiles_titan_at"] call EFUNC(common,inheritsFrom)) }
     ) exitWith {
     __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
     __JavelinIGUITargetingConstraints ctrlShow false;
     
-    _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
+    if(!isNil "_fireDisabledEH") then {
+        _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
+    };
     
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
     uiNamespace setVariable["ACE_RscOptics_javelin_PFH", nil];

@@ -14,6 +14,9 @@ class CfgVehicles {
     class AT_01_base_F: StaticMGWeapon {
         class Turrets : Turrets {
             class MainTurret : MainTurret {
+                weapons[] = { "missiles_titan_static_at" };
+                magazines[] = {"1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles"};
+				
                 turretInfoType = "ACE_RscOptics_javelin";
                 gunnerOpticsModel = PATHTOF(data\reticle_titan.p3d);
                 opticsZoomMin = 0.08333;
