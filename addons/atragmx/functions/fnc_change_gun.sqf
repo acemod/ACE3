@@ -35,7 +35,8 @@ if ((GVAR(scopeUnits) select GVAR(currentScopeUnit)) != "Clicks") then {
 [] call FUNC(update_gun_ammo_data);
 
 GVAR(elevationOutput) set [GVAR(currentTarget), 0];
-GVAR(windageOutput) set [GVAR(currentTarget), 0];
+GVAR(windage1Output) set [GVAR(currentTarget), 0];
+GVAR(windage2Output) set [GVAR(currentTarget), 0];
 GVAR(leadOutput) set [GVAR(currentTarget), 0];
 GVAR(tofOutput) set [GVAR(currentTarget), 0];
 GVAR(velocityOutput) set [GVAR(currentTarget), 0];

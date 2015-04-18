@@ -15,10 +15,18 @@
  */
 #include "script_component.hpp"
 
-if (GVAR(currentUnit) != 2) then {
-    ctrlSetText [300, Str(Round((GVAR(windSpeed1) select GVAR(currentTarget)) * 2.23693629 * 100) / 100)];
+if (GVAR(showWind2)) then {
+    if (GVAR(currentUnit) != 2) then {
+        ctrlSetText [300, format["%1/%2", Round((GVAR(windSpeed1) select GVAR(currentTarget)) * 2.23693629), Round((GVAR(windSpeed2) select GVAR(currentTarget)) * 2.23693629)]];
+    } else {
+        ctrlSetText [300, format["%1/%2", Round(GVAR(windSpeed1) select GVAR(currentTarget)), Round(GVAR(windSpeed2) select GVAR(currentTarget))]];
+    };
 } else {
-    ctrlSetText [300, Str(Round((GVAR(windSpeed1) select GVAR(currentTarget)) * 100) / 100)];
+    if (GVAR(currentUnit) != 2) then {
+        ctrlSetText [300, Str(Round((GVAR(windSpeed1) select GVAR(currentTarget)) * 2.23693629 * 100) / 100)];
+    } else {
+        ctrlSetText [300, Str(Round((GVAR(windSpeed1) select GVAR(currentTarget)) * 100) / 100)];
+    };
 };
 ctrlSetText [310, Str(Round((GVAR(windDirection) select GVAR(currentTarget))))];
 ctrlSetText [320, Str(Round((GVAR(inclinationAngle) select GVAR(currentTarget))))];

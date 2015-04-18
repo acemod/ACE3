@@ -573,7 +573,7 @@ class ATragMX_Display {
             x=0.550*safezoneW+safezoneX+0.11;
             y=0.265*safezoneH+safezoneY+0.57;
             text="Lead";
-            action="";
+            action=QUOTE(GVAR(showWind2) = !GVAR(showWind2); call FUNC(update_result); call FUNC(update_target));
         };
         class TEXT_LEAD_OUTPUT: TEXT_ELEVATION_OUTPUT_ABSOLUTE {
             idc=420;

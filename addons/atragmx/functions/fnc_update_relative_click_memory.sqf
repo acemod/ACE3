@@ -16,6 +16,6 @@
 #include "script_component.hpp"
 
 GVAR(workingMemory) set [10, (GVAR(elevationOutput) select GVAR(currentTarget))];
-GVAR(workingMemory) set [11, (GVAR(windageOutput) select GVAR(currentTarget))];
+GVAR(workingMemory) set [11, (GVAR(windage1Output) select GVAR(currentTarget))];
 
 [] call FUNC(update_result);
