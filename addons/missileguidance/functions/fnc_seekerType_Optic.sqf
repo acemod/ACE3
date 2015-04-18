@@ -3,6 +3,7 @@
 
 EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 private["_targets", "_foundTargetPos", "_launchParams", "_seekerParams", "_targetLaunchParams"];
+private["_angleFov", "_angleOkay", "_losOkay", "_seekerTargetPos", "_sensorPos", "_target"];
 
 _seekerTargetPos = _this select 0;
 
