@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Interaction_MainAction">
@@ -430,7 +431,7 @@
             <Spanish>Te tocaron el hombro DERECHO</Spanish>
             <German>Dir wurde auf die rechte Schulter geklopft</German>
             <French>On te tape sur l'épaule droite</French>
-            <Polish>Zostałeś klepnięty po ramieniu</Polish>
+            <Polish>Zostałeś klepnięty w prawe ramię</Polish>
             <Hungarian>Megveregették a JOBB válladat.</Hungarian>
             <Czech>Někdo tě poklepal na PRAVÉ rameno</Czech>
             <Russian>Вас похлопали по ПРАВОМУ плечу</Russian>
@@ -442,7 +443,7 @@
             <Spanish>Te tocaron el hombro IZQUIERDO.</Spanish>
             <German>Dir wurde auf die linke Schulter geklopft</German>
             <French>On te tape sur l'épaule gauche</French>
-            <Polish>Zostałeś klepnięty po ramieniu</Polish>
+            <Polish>Zostałeś klepnięty w lewe ramię</Polish>
             <Hungarian>Megveregették a BAL válladat.</Hungarian>
             <Czech>Někdo tě poklepal na LEVÉ rameno</Czech>
             <Russian>Вас похлопали по ЛЕВОМУ плечу</Russian>
