@@ -13,6 +13,7 @@
             <Polish>Włącz efekty gogli w trzeciej osobie</Polish>
             <Portuguese>Mostrar efeitos de óculos em Terceira Pessoa</Portuguese>
             <Italian>Attiva l'effetto degli occhiali in terza persona</Italian>
+            <Dutch>Toon bril effects in 3de persoon</Dutch>
         </Key>
         <Key ID="STR_ACE_Goggles_WipeGlasses">
             <English>Wipe Goggles</English>
@@ -25,6 +26,7 @@
             <Polish>Wytrzyj gogle</Polish>
             <Portuguese>Limpar Óculos</Portuguese>
             <Italian>Pulisci gli occhiali</Italian>
+            <Dutch>Bril afvegen</Dutch>
         </Key>
     </Package>
 </Project>

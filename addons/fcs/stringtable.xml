@@ -10,6 +10,7 @@
             <Spanish>Iluminar objetivo / Medir distancia</Spanish>
             <Russian>Подсветить цель / Замерить расстояние</Russian>
             <Hungarian>Célpont lézerezése / Távolság Bemérése</Hungarian>
+            <Dutch>Lazer doel / Meet afstand</Dutch>
         </Key>
         <Key ID="STR_ACE_FCS_ZeroedTo">
             <English>Zeroed To</English>
@@ -22,6 +23,7 @@
             <Hungarian>Nullázási táv</Hungarian>
             <Portuguese>Fixado em</Portuguese>
             <Italian>Azzeramento a</Italian>
+            <Dutch>Nulstellen</Dutch>
         </Key>
         <Key ID="STR_ACE_FCS_AdjustRangeUp">
             <English>Adjust FCS Range (Up)</English>
@@ -34,6 +36,7 @@
             <Portuguese>Ajustar distância do FCS (Acima)</Portuguese>
             <Italian>Aumentare la distanza dell'FCS</Italian>
             <Russian>Диапазон СУО (Выше)</Russian>
+            <Dutch>Pas FCS afstand aan (Omhoog)</Dutch>
         </Key>
         <Key ID="STR_ACE_FCS_AdjustRangeDown">
             <English>Adjust FCS Range (Down)</English>
@@ -46,6 +49,7 @@
             <Portuguese>Ajustar distância do FCS (Abaixo)</Portuguese>
             <Italian>Ridurre la distanza dell'FCS</Italian>
             <Russian>Диапазон СУО (Ниже)</Russian>
+            <Dutch>Pas FCS afstand aan (Omlaag)</Dutch>
         </Key>
         <Key ID="STR_ACE_FCS_ResetFCS">
             <English>Reset FCS</English>
@@ -58,6 +62,7 @@
             <Portuguese>Reiniciar FCS</Portuguese>
             <Italian>Azzeramento dell'FCS</Italian>
             <Russian>Обнулить СУО</Russian>
+            <Dutch>Reset FCS</Dutch>
         </Key>
         <Key ID="STR_ACE_FCS_HasBeenReset">
             <English>FCS has been reset.</English>
@@ -70,6 +75,7 @@
             <Portuguese>FCS reiniciado.</Portuguese>
             <Italian>L'FCS è stato azzerato</Italian>
             <Russian>СУО обнулен.</Russian>
+            <Dutch>FCS is gereset.</Dutch>
         </Key>
     </Package>
 </Project>

@@ -683,6 +683,7 @@
             <Polish>Taśma 9,3mm 150rd AP</Polish>
             <French>Bande 9.3mm 150Cps AP</French>
             <Spanish>Cinta de 150 balas AP de 9.3mm</Spanish>
+            <Dutch>9.3mm 150Rnd AP Riem</Dutch>
         </Key>
         <Key ID="STR_ACE_150Rnd_93x64_Mag_APNameShort">
             <English>9.3mm AP</English>
@@ -691,6 +692,7 @@
             <Czech>9.3mm AP</Czech>
             <French>9.3mm AP</French>
             <Spanish>9.3mm AP</Spanish>
+            <Dutch>9.3mm AP</Dutch>
         </Key>
         <Key ID="STR_ACE_150Rnd_93x64_Mag_APDescription">
             <English>Caliber: 9.3x64mm AP&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
@@ -698,348 +700,406 @@
             <Polish>Kaliber: 9,3x64 mm AP&lt;br /&gt;Pociski: 150&lt;br /&gt;Używane w: Navid</Polish>
             <French>Calibre: 9.3x64mm AP&lt;br /&gt;Cartouches: 150&lt;br /&gt;Utilisé dans: Navid</French>
             <Spanish>Calibre: 9.3x64mm AP&lt;br /&gt;Balas: 150&lt;br /&gt;Se usa en: Navid</Spanish>
+            <Dutch>Kaliber: 9.3x64mm AP&lt;br /&gt;Kogels: 150&lt;br /&gt;Gebruikt in: Navid</Dutch>
         </Key>
         <Key ID="STR_ACE_16Rnd_9x19_mag_Name">
             <English>9x19mm 16Rnd Mag</English>
             <Polish>Magazynek 9x19mm 16rd</Polish>
             <French>Chargeur 9x19mm 16Cps</French>
             <Spanish>Cargador de 16 balas de 9x19mm</Spanish>
+            <Dutch>9x19mm 16Rnd Magazijn</Dutch>
         </Key>
         <Key ID="STR_ACE_16Rnd_9x19_mag_NameShort">
             <English>9x19mm</English>
             <Polish>9x19mm</Polish>
             <French>9x19mm</French>
             <Spanish>9x19mm</Spanish>
+            <Dutch>9x19mm</Dutch>
         </Key>
         <Key ID="STR_ACE_16Rnd_9x19_mag_Description">
             <English>9x19mm 30Rnd Mag</English>
             <Polish>Magazynek 9x19mm 16rd</Polish>
             <French>9x19mm 30Cps</French>
             <Spanish>Cargador de 16 balas de 9x19mm</Spanish>
+            <Dutch>9x19mm 30Rnd Magazijn</Dutch>
         </Key>
         <Key ID="STR_ACE_30Rnd_9x19_mag_Name">
             <English>9x19mm 30Rnd Mag</English>
             <Polish>Magazynek 9x19mm 30rd</Polish>
             <French>9x19mm 30Cps</French>
             <Spanish>Cargador de 30 balas de 9x19mm</Spanish>
+            <Dutch>9x19mm 30Rnd Magazijn</Dutch>
         </Key>
         <Key ID="STR_ACE_30Rnd_9x19_mag_NameShort">
             <English>9x19mm</English>
             <Polish>9x19mm</Polish>
             <French>9x19mm</French>
             <Spanish>9x19mm</Spanish>
+            <Dutch>9x19mm</Dutch>
         </Key>
         <Key ID="STR_ACE_30Rnd_9x19_mag_Description">
             <English>9x19mm 30Rnd Mag</English>
             <Polish>Magazynek 9x19mm 30rd</Polish>
             <French>9x19mm 30Cps</French>
             <Spanish>Cargador de 30 balas de 9x19mm</Spanish>
+            <Dutch>9x19mm 30Rnd Magazijn</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_Name">
             <English>7.62x54mm 10Rnd Tracer IR-DIM Mag</English>
             <Polish>Magazynek 7,62x54 mm 10rd Smugacz IR-DIM</Polish>
             <French>Chargeur 7.62x54mm 10Rnd Traçante IR-DIM</French>
             <Spanish>Cargador de 10 balas trazadoras IR-DIM de 7.62x54mm</Spanish>
+            <Dutch>7.62x54mm 10Rnd Lichtspoor IR-DIM Magazijn</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_NameShort">
             <English>7.62mm IR-DIM</English>
             <Polish>7,62mm IR-DIM</Polish>
             <French>7.62mm IR-DIM</French>
             <Spanish>7.62mm IR-DIM</Spanish>
+            <Dutch>7.62mm IR-DIM</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_Description">
             <English>7.62x54mm 10Rnd Tracer IR-DIM Mag</English>
             <Polish>Magazynek 7,62x54 mm 10rd Smugacz IR-DIM</Polish>
             <French>Chargeur 7.62x54mm 10Cps Traçante IR-DIM</French>
             <Spanish>Cargador de 10 balas trazadoras IR-DIM de 7.62x54mm</Spanish>
+            <Dutch>7.62x54mm 10Rnd Lichtspoor IR-DIM Magazijn</Dutch>
         </Key>
         <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimName">
             <English>6.5mm 100Rnd Tracer IR-DIM Mag</English>
             <Polish>Magazynek 6,5mm 100rd Smugacz IR-DIM</Polish>
             <French>Chargeur 6.5mm 100Rnd Traçante IR-DIM</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
+            <Dutch>6.5mm 100Rnd Lichtspoor IR-DIM Magazijn</Dutch>
         </Key>
         <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
             <Polish>6,5mm IR-DIM</Polish>
             <French>6.5mm IR-DIM</French>
             <Spanish>6.5mm IR-DIM</Spanish>
+            <Dutch>6.5mm IR-DIM</Dutch>
         </Key>
         <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimDescription">
             <English>6.5mm 100Rnd Tracer IR-DIM Mag</English>
             <Polish>Magazynek 6,5mm 100rd Smugacz IR-DIM</Polish>
             <French>Chargeur 6.5mm 100Rnd Traçante IR-DIM</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
+            <Dutch>6.5mm 100Rnd Lichtspoor IR-DIM Magazijn</Dutch>
         </Key>
         <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimName">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt</English>
             <Polish>Magazynek 6,5mm 200rd Smugacz IR-DIM</Polish>
             <French>Bande 6.5mm 200Rnd Traçante IR-DIM</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
+            <Dutch>6.5mm 200Rnd Lichtspoor IR-DIM Riem</Dutch>
         </Key>
         <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
             <Polish>6,5mm IR-DIM</Polish>
             <French>6.5mm IR-DIM</French>
             <Spanish>6.5mm IR-DIM</Spanish>
+            <Dutch>6.5mm IR-DIM</Dutch>
         </Key>
         <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimDescription">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt</English>
             <Polish>Magazynek 6,5mm 200rd Smugacz IR-DIM</Polish>
             <French>Bande 6.5mm 200Cps Traçante IR-DIM</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
+            <Dutch>6.5mm 200Rnd Lichtspoor IR-DIM Riem</Dutch>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk262_mag_Name">
             <English>5.56mm 30Rnd Mag (Mk262)</English>
             <Polish>Magazynek 5,56mm 30rd Mk262</Polish>
             <French>5.56mm 30Cps (Mk262)</French>
             <Spanish>Cargador de 30 balas de 5.56mm (Mk262)</Spanish>
+            <Dutch>5.56mm 30Rnd Magazijn (Mk262)</Dutch>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk262_mag_NameShort">
             <English>5.56mm Mk262</English>
             <Polish>5,56mm Mk262</Polish>
             <French>5.56mm Mk262</French>
             <Spanish>5.56mm (Mk262)</Spanish>
+            <Dutch>5.56mm Mk262</Dutch>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk262_mag_Description">
             <English>Caliber: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Rounds: 30</English>
             <Polish>Kaliber: 5,56x45 mm NATO (Mk262)&lt;br /&gt;Pociski: 30</Polish>
             <French>Calibre: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Balas: 30</Spanish>
+            <Dutch>Kaliber: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Kogels: 30</Dutch>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_Name">
             <English>5.56mm 30Rnd Mag (Mk318)</English>
             <Polish>Magazynek 5,56mm 30rd Mk318</Polish>
             <French>5.56mm 30Cps (Mk318)</French>
             <Spanish>Cargador de 30 balas de 5.56mm (Mk318)</Spanish>
+            <Dutch>5.56mm 30Rnd Magazijn (Mk318)</Dutch>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_NameShort">
             <English>5.56mm Mk318</English>
             <Polish>5,56mm Mk318</Polish>
             <French>5.56mm Mk318</French>
             <Spanish>5.56mm (Mk318)</Spanish>
+            <Dutch>5.56mm Mk318</Dutch>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_Description">
             <English>Caliber: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Rounds: 30</English>
             <Polish>Kaliber: 5,56x45 mm NATO (Mk318)&lt;br /&gt;Pociski: 30</Polish>
             <French>Calibre: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Balas: 30</Spanish>
+            <Dutch>Kaliber: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Kogels: 30</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_Name">
             <English>7.62mm 10Rnd Mag (M118LR)</English>
             <Polish>Magazynek 7,62mm 10rd (M118LR)</Polish>
             <French>7.62mm 10Cps (M118LR)</French>
             <Spanish>Cargador de 10 balas de 7.62mm (M118LR)</Spanish>
+            <Dutch>7.62mm 10Rnd Magazijn (M118LR)</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_NameShort">
             <English>7.62mm M118LR</English>
             <Polish>7,62mm M118LR</Polish>
             <French>7.62mm M118LR</French>
             <Spanish>7.62mm (M118LR)</Spanish>
+            <Dutch>7.62mm M118LR</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Rounds: 10</English>
             <Polish>Kaliber: 7,62x51 mm NATO (M118LR)&lt;br /&gt;Pociski: 10</Polish>
             <French>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Balas: 10</Spanish>
+            <Dutch>Kaliber: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Kogels: 10</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M118LR_Mag_Name">
             <English>7.62mm 20Rnd Mag (M118LR)</English>
             <Polish>Magazynek 7,62mm 20rd (M118LR)</Polish>
             <French>7.62mm 20Cps (M118LR)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (M118LR)</Spanish>
+            <Dutch>7.62mm 20Rnd Magazijn (M118LR)</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M118LR_Mag_NameShort">
             <English>7.62mm M118LR</English>
             <Polish>7,62mm M118LR</Polish>
             <French>7.62mm M118LR</French>
             <Spanish>7.62mm (M118LR)</Spanish>
+            <Dutch>7.62mm M118LR</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M118LR_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x51 mm NATO (M118LR)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Balas: 20</Spanish>
+            <Dutch>Kaliber: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Kogels: 20</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_Name">
             <English>7.62mm 10Rnd Mag (Mk319 Mod 0)</English>
             <Polish>Magazynek 7,62mm 10rd (Mk319 Mod 0)</Polish>
             <French>7.62mm 10Cps (Mk319 Mod 0)</French>
             <Spanish>Cargador de 10 balas de 7.62mm (Mk319 Mod 0)</Spanish>
+            <Dutch>7.62mm 10Rnd Magazijn (Mk319 Mod 0)</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_NameShort">
             <English>7.62mm Mk319</English>
             <Polish>7,62mm Mk319</Polish>
             <French>7.62mm Mk319</French>
             <Spanish>7.62mm Mk319</Spanish>
+            <Dutch>7.62mm Mk319</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Rounds: 10</English>
             <Polish>Kaliber: 7,62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Pociski: 10</Polish>
             <French>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Balas: 10</Spanish>
+            <Dutch>Kaliber: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Kogels: 10</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk319 Mod 0)</English>
             <Polish>Magazynek 7,62mm 20rd (Mk319 Mod 0)</Polish>
             <French>7.62mm 20Cps (Mk319 Mod 0)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Mk319 Mod 0)</Spanish>
+            <Dutch>7.62mm 20Rnd Magazijn (Mk319 Mod 0)</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_NameShort">
             <English>7.62mm Mk319</English>
             <Polish>7,62mm Mk319</Polish>
             <French>7.62mm Mk319</French>
             <Spanish>7.62mm Mk319</Spanish>
+            <Dutch>7.62mm Mk319</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
+            <Dutch>Kaliber: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Kogels: 20</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk248 Mod 0)</English>
             <Polish>Magazynek 7,62mm 20rd (Mk248 Mod 0)</Polish>
             <French>7.62mm 20Cps (Mk248 Mod 0)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Mk248 Mod 0)</Spanish>
+            <Dutch>7.62mm 20Rnd Magazijn (Mk248 Mod 0)</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_NameShort">
             <English>7.62mm (Mk248 Mod 0)</English>
             <Polish>7,62mm (Mk248 Mod 0)</Polish>
             <French>7.62mm (Mk248 Mod 0)</French>
             <Spanish>7.62mm (Mk248 Mod 0)</Spanish>
+            <Dutch>7.62mm (Mk248 Mod 0)</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Description">
             <English>Caliber: 7.62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
+            <Dutch>Kaliber: 7.62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Kogels: 20</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk248 Mod 1)</English>
             <Polish>Magazynek 7,62mm 20rd (Mk248 Mod 1)</Polish>
             <French>7.62mm 20Cps (Mk248 Mod 1)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Mk248 Mod 1)</Spanish>
+            <Dutch>7.62mm 20Rnd Magazijn (Mk248 Mod 1)</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_NameShort">
             <English>7.62mm (Mk248 Mod 1)</English>
             <Polish>7,62mm (Mk248 Mod 1)</Polish>
             <French>7.62mm (Mk248 Mod 1)</French>
             <Spanish>7.62mm (Mk248 Mod 1)</Spanish>
+            <Dutch>7.62mm (Mk248 Mod 1)</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_Description">
             <English>Caliber: 7.62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Balas: 20</Spanish>
+            <Dutch>Kaliber: 7.62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Kogels: 20</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Name">
             <English>7.62mm 20Rnd Mag (Berger Hybrid OTM)</English>
             <Polish>Magazynek 7,62mm 20rd (Berger Hybrid OTM)</Polish>
             <French>7.62 20Cps (Berger Hybrid OTM)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Berger Hybrid OTM)</Spanish>
+            <Dutch>7.62mm 20Rnd Mag (Berger Hybrid OTM)</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_NameShort">
             <English>7.62mm (OTM)</English>
             <Polish>7,62mm (OTM)</Polish>
             <French>7.62mm (OTM)</French>
             <Spanish>7.62mm (OTM)</Spanish>
+            <Dutch>7.62mm (OTM)</Dutch>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Description">
             <English>Caliber: 7.62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Balas: 20</Spanish>
+            <Dutch>Kaliber: 7.62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Kogels: 20</Dutch>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_Name">
             <English>6.5x47mm 30Rnd Mag (HPBT Scenar)</English>
             <French>6.5x47mm 30Cps (HPBT Scenar)</French>
             <Spanish>Cargador de 30 balas de 6.5x47mm (HPBT Scenar)</Spanish>
             <Polish>Magazynek 6,5x47 mm 30rd (HPBT Scenar)</Polish>
+            <Dutch>6.5x47mm 30Rnd Magazijn (HPBT Scenar)</Dutch>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_NameShort">
             <English>6.5mm Scenar</English>
             <French>6.5mm Scenar</French>
             <Spanish>6.5mm Scenar</Spanish>
             <Polish>6,5mm Scenar</Polish>
+            <Dutch>6.5mm Scenar</Dutch>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_Description">
             <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 30</English>
             <French>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 30</Spanish>
             <Polish>Kaliber: 6,5x47 mm (HPBT Scenar)&lt;br /&gt;Pociski: 30</Polish>
+            <Dutch>Kaliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Kogels: 30</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Name">
             <English>.338 10Rnd Mag (300gr Sierra MatchKing HPBT)</English>
             <French>.338 10 Cps (300gr Sierra MatchKing HPBT)</French>
             <Spanish>Cargador de 10 balas de 8.6x70mm (300gr Sierra MatchKing HPBT)</Spanish>
             <Polish>Magazynek .338 10rd (300gr Sierra MatchKing HPBT)</Polish>
+            <Dutch>.338 10Rnd Magazijn (300gr Sierra MatchKing HPBT)</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_NameShort">
             <English>.338 (HPBT)</English>
             <French>.338 (HPBT)</French>
             <Spanish>.338 (HPBT)</Spanish>
             <Polish>.338 (HPBT)</Polish>
+            <Dutch>.338 (HPBT)</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Description">
             <English>Caliber: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Balas: 10</Spanish>
             <Polish>Kaliber: 8,6x70 mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Pociski: 10</Polish>
+            <Dutch>Kaliber: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Kogels: 10</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Name">
             <English>.338 10Rnd Mag (API526)</English>
             <French>.338 10Cps (API526)</French>
             <Spanish>Cargador de 10 balas de .338 (API526)</Spanish>
             <Polish>Magazynek .338 10rd (API526)</Polish>
+            <Dutch>.338 10Rnd Mag (API526)</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_NameShort">
             <English>.338 AP</English>
             <French>.338 AP</French>
             <Spanish>.338 AP</Spanish>
             <Polish>.338 AP</Polish>
+            <Dutch>.338 AP</Dutch>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Description">
             <English>Caliber: 8.6x70mm (API526)&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 8.6x70mm (API526)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 8.6x70mm (API526)&lt;br /&gt;Balas: 10</Spanish>
             <Polish>Kaliber: 8,6x70 mm (API526)&lt;br /&gt;Pociski: 10</Polish>
+            <Dutch>Kaliber: 8.6x70mm (API526)&lt;br /&gt;Kogels: 10</Dutch>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Name">
             <English>12.7x99mm 5Rnd Mag</English>
             <French>12.7x99mm 5Cps</French>
             <Spanish>Cargador de 5 balas de 12.7x99mm</Spanish>
             <Polish>Magazynek 12,7x99 mm 5rd</Polish>
+            <Dutch>12.7x99mm 5Rnd Magazijn</Dutch>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_NameShort">
             <English>12.7mm</English>
             <French>12.7mm</French>
             <Spanish>12.7mm</Spanish>
             <Polish>12,7mm</Polish>
+            <Dutch>12.7mm</Dutch>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Description">
             <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm&lt;br /&gt;Cartouches: 5</French>
             <Spanish>Calibre: 12.7x99mm&lt;br /&gt;Balas: 5</Spanish>
             <Polish>Kaliber: 12,7x99 mm&lt;br /&gt;Pociski: 5</Polish>
+            <Dutch>Kaliber: 12.7x99mm&lt;br /&gt;Kogels: 5</Dutch>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Name">
             <English>12.7x99mm 5Rnd Mag (AMAX)</English>
             <French>12.7x99mm 5Rnd Mag (AMAX)</French>
             <Spanish>Cargador de 5 balas de 12.7x99mm (AMAX)</Spanish>
             <Polish>Magazynek 12,7x99 mm 5rd (AMAX)</Polish>
+            <Dutch>12.7x99mm 5Rnd Magazijn (AMAX)</Dutch>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_NameShort">
             <English>12.7mm</English>
             <French>12.7mm</French>
             <Spanish>12.7mm</Spanish>
             <Polish>12,7mm</Polish>
+            <Dutch>12.7mm</Dutch>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Description">
             <English>Caliber: 12.7x99mm (AMAX)&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Cartouches: 5</French>
             <Spanish>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Balas: 5</Spanish>
             <Polish>Kaliber: 12,7x99 mm (AMAX)&lt;br /&gt;Pociski: 5</Polish>
+            <Dutch>Kaliber: 12.7x99mm (AMAX)&lt;br /&gt;Kogels: 5</Dutch>
         </Key>
     </Package>
 </Project>

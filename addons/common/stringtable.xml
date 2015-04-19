@@ -12,6 +12,7 @@
             <Portuguese>ACE-Team</Portuguese>
             <Hungarian>ACE-Team</Hungarian>
             <Italian>ACE-Team</Italian>
+            <Dutch>ACE-Team</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_Save">
             <English>Save</English>
@@ -24,6 +25,7 @@
             <Portuguese>Salvar</Portuguese>
             <Hungarian>Mentés</Hungarian>
             <Italian>Salva</Italian>
+            <Dutch>Opslaan</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_Cancel">
             <English>Cancel</English>
@@ -36,6 +38,7 @@
             <Portuguese>Cancelar</Portuguese>
             <Hungarian>Mégse</Hungarian>
             <Italian>Annulla</Italian>
+            <Dutch>Annuleren</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_Options">
             <English>ACE Options</English>
@@ -48,6 +51,7 @@
             <Portuguese>Opções do ACE</Portuguese>
             <Hungarian>ACE Beállítások</Hungarian>
             <Italian>Opzioni ACE</Italian>
+            <Dutch>ACE Opties</Dutch>
         </Key>
         <!-- These are cardinal directions, in case you didn't guess. -->
         <Key ID="STR_ACE_Common_N">
@@ -61,6 +65,7 @@
             <Portuguese>N</Portuguese>
             <Hungarian>É</Hungarian>
             <Italian>N</Italian>
+            <Dutch>N</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_NNE">
             <English>NNE</English>
@@ -73,6 +78,7 @@
             <Portuguese>NNE</Portuguese>
             <Hungarian>ÉÉK</Hungarian>
             <Italian>NNE</Italian>
+            <Dutch>NNO</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_NE">
             <English>NE</English>
@@ -85,6 +91,7 @@
             <Portuguese>NE</Portuguese>
             <Hungarian>ÉK</Hungarian>
             <Italian>NE</Italian>
+            <Dutch>NO</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_ENE">
             <English>ENE</English>
@@ -97,6 +104,7 @@
             <Portuguese>LNE</Portuguese>
             <Hungarian>KÉK</Hungarian>
             <Italian>ENE</Italian>
+            <Dutch>ONO</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_E">
             <English>E</English>
@@ -109,6 +117,7 @@
             <Portuguese>L</Portuguese>
             <Hungarian>K</Hungarian>
             <Italian>E</Italian>
+            <Dutch>O</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_ESE">
             <English>ESE</English>
@@ -121,6 +130,7 @@
             <Portuguese>LSE</Portuguese>
             <Hungarian>KDK</Hungarian>
             <Italian>ESE</Italian>
+            <Dutch>OZO</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_SE">
             <English>SE</English>
@@ -133,6 +143,7 @@
             <Portuguese>SE</Portuguese>
             <Hungarian>DK</Hungarian>
             <Italian>SE</Italian>
+            <Dutch>ZO</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_SSE">
             <English>SSE</English>
@@ -145,6 +156,7 @@
             <Portuguese>SSE</Portuguese>
             <Hungarian>DDK</Hungarian>
             <Italian>SSE</Italian>
+            <Dutch>ZZO</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_S">
             <English>S</English>
@@ -157,6 +169,7 @@
             <Portuguese>S</Portuguese>
             <Hungarian>D</Hungarian>
             <Italian>S</Italian>
+            <Dutch>Z</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_SSW">
             <English>SSW</English>
@@ -169,6 +182,7 @@
             <Portuguese>SSO</Portuguese>
             <Hungarian>DDNy</Hungarian>
             <Italian>SSO</Italian>
+            <Dutch>ZZW</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_SW">
             <English>SW</English>
@@ -181,6 +195,7 @@
             <Portuguese>SO</Portuguese>
             <Hungarian>DNy</Hungarian>
             <Italian>SO</Italian>
+            <Dutch>ZW</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_WSW">
             <English>WSW</English>
@@ -193,6 +208,7 @@
             <Portuguese>OSO</Portuguese>
             <Hungarian>NyDNy</Hungarian>
             <Italian>OSO</Italian>
+            <Dutch>WZW</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_W">
             <English>W</English>
@@ -205,6 +221,7 @@
             <Portuguese>O</Portuguese>
             <Hungarian>Ny</Hungarian>
             <Italian>O</Italian>
+            <Dutch>W</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_WNW">
             <English>WNW</English>
@@ -217,6 +234,7 @@
             <Portuguese>ONO</Portuguese>
             <Hungarian>NyÉNy</Hungarian>
             <Italian>ONO</Italian>
+            <Dutch>WNW</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_NW">
             <English>NW</English>
@@ -229,6 +247,7 @@
             <Portuguese>NO</Portuguese>
             <Hungarian>ÉNy</Hungarian>
             <Italian>NO</Italian>
+            <Dutch>NW</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_NNW">
             <English>NNW</English>
@@ -241,6 +260,7 @@
             <Portuguese>NNO</Portuguese>
             <Hungarian>ÉÉNy</Hungarian>
             <Italian>NNO</Italian>
+            <Dutch>NNW</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_ActionAborted">
             <English>Action cancelled.</English>
@@ -253,6 +273,7 @@
             <Portuguese>Ação cancelada.</Portuguese>
             <Hungarian>Művelet megszakítva.</Hungarian>
             <Italian>Azione cancellata.</Italian>
+            <Dutch>Actie geannuleerd.</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_MiscItems">
             <English>[ACE] Miscellaneous Items</English>
@@ -265,6 +286,7 @@
             <Portuguese>[ACE] Itens diversos</Portuguese>
             <Hungarian>[ACE] Egyéb tárgyak</Hungarian>
             <Italian>[ACE] Oggetti vari</Italian>
+            <Dutch>[ACE] Overige onderdelen</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_EnableNumberHotkeys">
             <English>Disable Command Menu</English>
@@ -276,6 +298,7 @@
             <Russian>Выключить командное меню</Russian>
             <Hungarian>Parancsnoki menü kikapcsolása</Hungarian>
             <Italian>Disabilita Menù di comando</Italian>
+            <Dutch>Deactiveer Commandeer Menu</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_Unknown">
             <English>Unknown</English>
@@ -287,6 +310,7 @@
             <Hungarian>Ismeretlen</Hungarian>
             <Italian>Sconosciuto</Italian>
             <French>Inconnu</French>
+            <Dutch>Onbekend</Dutch>
         </Key>
         <Key ID="STR_ACE_Common_NoVoice">
             <English>No Voice</English>
@@ -298,6 +322,7 @@
             <Hungarian>Nincs hang</Hungarian>
             <Italian>Senza voce</Italian>
             <French>Pas de voix</French>
+            <Dutch>Geen stem</Dutch>
         </Key>
         <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TITLE">
             <English>Accept Requests</English>
@@ -309,6 +334,7 @@
             <French>Accepter requête</French>
             <Russian>Принять запросы</Russian>
             <Hungarian>Kérések elfogadása</Hungarian>
+            <Dutch>Accepteer verzoek</Dutch>
         </Key>
         <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TITLE">
             <English>Decline Requests</English>
@@ -320,6 +346,7 @@
             <Russian>Отклонить запросы</Russian>
             <French>Rejeter requête</French>
             <Hungarian>Kérések elutasítása</Hungarian>
+            <Dutch>Weiger verzoek</Dutch>
         </Key>
         <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
             <English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>

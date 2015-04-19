@@ -12,6 +12,7 @@
             <Portuguese>Tomar Prisioneiro</Portuguese>
             <Hungarian>Foglyul ejtés</Hungarian>
             <Russian>Взять в плен</Russian>
+            <Dutch>Gevangen nemen</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_ReleaseCaptive">
             <English>Free Prisoner</English>
@@ -24,6 +25,7 @@
             <Portuguese>Libertar Prisioneiro</Portuguese>
             <Hungarian>Fogoly szabadon engedése</Hungarian>
             <Russian>Освободить пленника</Russian>
+            <Dutch>Gevangene vrijlaten</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_EscortCaptive">
             <English>Escort Prisoner</English>
@@ -36,6 +38,7 @@
             <Portuguese>Escoltar Prisioneiro</Portuguese>
             <Hungarian>Fogoly kísérése</Hungarian>
             <Russian>Конвоировать пленника</Russian>
+            <Dutch>Gevangene escorteren</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_StopEscorting">
             <English>Release Prisoner</English>
@@ -48,6 +51,7 @@
             <Portuguese>Largar Prisioneiro</Portuguese>
             <Hungarian>Fogoly elengedése</Hungarian>
             <Russian>Прекратить конвоирование</Russian>
+            <Dutch>Gevangene los laten</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_NoCaptive">
             <English>You need to take him as prisoner first!</English>
@@ -60,6 +64,7 @@
             <Portuguese>Você deve tomá-lo como prisioneiro primeiro!</Portuguese>
             <Hungarian>Először foglyul kell ejtened őt!</Hungarian>
             <Russian>Вы должны сначала взять его в плен!</Russian>
+            <Dutch>Je zult hem eerst gevangen moeten nemen!</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_LoadCaptive">
             <English>Load Captive</English>
@@ -72,6 +77,7 @@
             <Russian>Загрузить пленного</Russian>
             <Portuguese>Embarcar Prisioneiro</Portuguese>
             <Italian>Carica il prigioniero</Italian>
+            <Dutch>Gevangene inladen</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_UnloadCaptive">
             <English>Unload Captive</English>
@@ -84,6 +90,7 @@
             <Russian>Выгрузить пленного</Russian>
             <Portuguese>Desembarcar Prisioneiro</Portuguese>
             <Italian>Scarica il prigioniero</Italian>
+            <Dutch>Gevangene uitladen</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
@@ -96,6 +103,7 @@
             <Italian>Fascietta</Italian>
             <Hungarian>Gyorskötöző</Hungarian>
             <Russian>Кабельная стяжка</Russian>
+            <Dutch>Kabelbinder</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_CableTieDescription">
             <English>Cable ties that allow you to restrain prisoners.</English>
@@ -108,6 +116,7 @@
             <Italian>Fascietta che ti consente di arrestare i prigionieri.</Italian>
             <Hungarian>Gyorskötöző, emberek foglyulejtéséhez használható.</Hungarian>
             <Russian>Кабельные стяжки позволяют связывать пленников.</Russian>
+            <Dutch>Kabelbinders maken het mogelijk om de gevangende te bedwingen.</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_FriskMenuHeader">
             <English>Inventory of frisked person</English>
@@ -119,6 +128,7 @@
             <Polish>Ekwipunek rewidowanej osoby</Polish>
             <Russian>Инвентарь обысканного человека</Russian>
             <Portuguese>Inventário da pessoa revistada</Portuguese>
+            <Dutch>Inventarisatie van gefouilleerde persoon</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_FriskPerson">
             <English>Frisk person</English>
@@ -131,6 +141,7 @@
             <Russian>Обыскать человека</Russian>
             <Portuguese>Revistar</Portuguese>
             <Italian>Perquisisci la persona</Italian>
+            <Dutch>Fouilleer persoon</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_StartSurrendering">
             <English>Surrender</English>
@@ -142,6 +153,7 @@
             <Russian>Сдаться</Russian>
             <Hungarian>Megadás</Hungarian>
             <Italian>Arreso</Italian>
+            <Dutch>Zich overgeven</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_StopSurrendering">
             <English>Stop Surrendering</English>
@@ -153,6 +165,7 @@
             <Russian>Прекратить сдачу в плен</Russian>
             <Hungarian>Megadás abbahagyása</Hungarian>
             <Italian>Annulla la resa</Italian>
+            <Dutch>Stop overgave</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
             <English>Only use on alive units</English>
@@ -164,6 +177,7 @@
             <Russian>Применимо только к живым юнитам</Russian>
             <Hungarian>Csak élő egységeken használni</Hungarian>
             <Italian>Si può fare solo su persone vive</Italian>
+            <Dutch>Gebruik alleen op levende eenheden</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_OnlyInfantry">
             <English>Only use on dismounted inf</English>
@@ -175,6 +189,7 @@
             <Russian>Применимо только к пехоте вне техники</Russian>
             <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
             <Italian>Si può usare solo su fanteria a piedi</Italian>
+            <Dutch>Gebruik alleen op uitgestapte infanterie</Dutch>
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
             <English>Nothing under mouse</English>
@@ -186,6 +201,7 @@
             <Russian>Ничего не выделено</Russian>
             <Hungarian>Semmi sincs az egér alatt</Hungarian>
             <Italian>Niente selezionato</Italian>
+            <Dutch>Niets onder de muis</Dutch>
         </Key>
     </Package>
 </Project>
