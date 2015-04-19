@@ -20,7 +20,7 @@ if (ctrlVisible 6000) then {
     true call FUNC(show_main_page);
     
     if (_this) then {
-        [lbCurSel 6000, true] call FUNC(change_gun);
+        [lbCurSel 6000, true, true] call FUNC(change_gun);
     };
 } else {
     false call FUNC(show_main_page);

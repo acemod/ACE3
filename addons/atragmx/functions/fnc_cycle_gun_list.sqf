@@ -17,4 +17,4 @@
 
 if (!(GVAR(showMainPage) || GVAR(showGunList))) exitWith {};
 
-[(GVAR(currentGun) + (count GVAR(gunList)) + _this) % (count GVAR(gunList)), true] call FUNC(change_gun);
+[(GVAR(currentGun) + (count GVAR(gunList)) + _this) % (count GVAR(gunList)), true, true] call FUNC(change_gun);
