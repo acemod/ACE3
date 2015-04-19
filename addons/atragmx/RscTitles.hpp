@@ -133,40 +133,6 @@ class ATragMX_RscListNBox: ATragMX_RscListBox {
     idcLeft=-1;
     idcRight=-1;
 };
-class ATragMX_RscControlsGroup {
-    type=15;
-    idc=-1;
-    style=16;
-    x=0;
-    y=0;
-    w=1;
-    h=1;
-    shadow=0;
-    class VScrollbar {
-        color[]={1,1,1,0.6};
-        width=0.021;
-        autoScrollSpeed=-1;
-        autoScrollDelay=5;
-        autoScrollRewind=0;
-        shadow=0;
-    };
-    class HScrollbar {
-        color[]={1,1,1,0.6};
-        height=0.028;
-        shadow=0;
-    };
-    class ScrollBar {
-        color[]={1,1,1,0.6};
-        colorActive[]={1,1,1,1};
-        colorDisabled[]={1,1,1,0.3};
-        thumb="#(argb,8,8,3)color(1,1,1,1)";
-        arrowEmpty="#(argb,8,8,3)color(1,1,1,1)";
-        arrowFull="#(argb,8,8,3)color(1,1,1,1)";
-        border="#(argb,8,8,3)color(1,1,1,1)";
-    };
-    class Controls {
-    };
-};
 class ATragMX_RscLineBreak {
     idc=-1;
     type=98;
