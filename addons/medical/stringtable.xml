@@ -477,7 +477,7 @@
             <English>Minor</English>
             <German>Gering</German>
             <Spanish>Menor</Spanish>
-            <Russian>Легкие ранения</Russian>
+            <Russian>Несрочная помощь</Russian>
             <Polish>Normalny</Polish>
             <French>Léger</French>
             <Czech>Minimální</Czech>
@@ -487,7 +487,7 @@
         <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DELAYED">
             <English>Delayed</English>
             <Spanish>Retrasado</Spanish>
-            <Russian>Средние ранения</Russian>
+            <Russian>Срочная помощь</Russian>
             <Polish>Opóźniony</Polish>
             <French>Différé</French>
             <German>Verzögert</German>
@@ -498,7 +498,7 @@
         <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_IMMEDIATE">
             <English>Immediate</English>
             <Spanish>Inmediato</Spanish>
-            <Russian>Тяжелые ранения</Russian>
+            <Russian>Неотложная помощь</Russian>
             <Polish>Natychmiastowy</Polish>
             <French>Urgence Immédiate</French>
             <German>Sofort</German>
@@ -1610,7 +1610,7 @@
             <English>Pain Effect Type</English>
             <German>Schmerzeffekt-Typ</German>
             <Polish>Rodzaj efektu bólu</Polish>
-            <Russian>Эффект боли</Russian>
+            <Russian>Тип эффекта боли</Russian>
             <Italian>Pain Effect Type</Italian>
             <Spanish>Tipo de efecto de dolor</Spanish>
             <French>Type d'effet de douleur</French>
