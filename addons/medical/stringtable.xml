@@ -377,7 +377,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
             <German>Bluttransfusion IV (1000ml)</German>
-            <Spanish>Dar Sangre IV (1000ml)</Spanish>
+            <Spanish>Administrar Sangre IV (1000ml)</Spanish>
             <Russian>Дать кровь для в/в вливания (1000 мл)</Russian>
             <Polish>Podaj krew IV (1000ml)</Polish>
             <French>Administrer du sang en IV (1000ml)</French>
@@ -388,7 +388,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_500">
             <English>Give Blood IV (500ml)</English>
             <German>Bluttransfusion IV (500ml)</German>
-            <Spanish>Dar Sangre IV (500ml)</Spanish>
+            <Spanish>Administrar Sangre IV (500ml)</Spanish>
             <Russian>Дать кровь для в/в вливания (500 мл)</Russian>
             <Polish>Podaj krew IV (500ml)</Polish>
             <French>Administrer du sang en IV (500ml)</French>
@@ -399,7 +399,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_250">
             <English>Give Blood IV (250ml)</English>
             <German>Bluttransfusion IV (250ml)</German>
-            <Spanish>Dar Sangre IV (250ml)</Spanish>
+            <Spanish>Administrar Sangre IV (250ml)</Spanish>
             <Russian>Дать кровь для в/в вливания (250 мл)</Russian>
             <Polish>Podaj krew IV (250ml)</Polish>
             <French>Administrer du sang en IV (250ml)</French>
@@ -410,7 +410,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_1000">
             <English>Give Plasma IV (1000ml)</English>
             <German>Plasmatransfusion IV (1000ml)</German>
-            <Spanish>Dar Plasma IV (1000ml)</Spanish>
+            <Spanish>Administrar Plasma IV (1000ml)</Spanish>
             <Russian>Дать плазму для в/в вливания (1000 мл)</Russian>
             <Polish>Podaj osocze IV (1000ml)</Polish>
             <French>Administrer du plasma en IV (1000ml)</French>
@@ -421,7 +421,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_500">
             <English>Give Plasma IV (500ml)</English>
             <German>Plasmatransfusion IV (500ml)</German>
-            <Spanish>Dar Plasma IV (500ml)</Spanish>
+            <Spanish>Administrar Plasma IV (500ml)</Spanish>
             <Russian>Дать плазму для в/в вливания (500 мл)</Russian>
             <Polish>Podaj osocze IV (500ml)</Polish>
             <French>Administrer du plasma en IV (500ml)</French>
@@ -432,7 +432,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Plasma4_250">
             <English>Give Plasma IV (250ml)</English>
             <German>Plasmatransfusion IV (250ml)</German>
-            <Spanish>Dar Plasma IV (250ml)</Spanish>
+            <Spanish>Administrar Plasma IV (250ml)</Spanish>
             <Russian>Дать плазму для в/в вливания (250 мл)</Russian>
             <Polish>Podaj osocze IV (250ml)</Polish>
             <French>Administrer du plasma en IV (250ml)</French>
@@ -443,7 +443,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_1000">
             <English>Give Saline IV (1000ml)</English>
             <German>Kochsaltzlösung IV (1000ml)</German>
-            <Spanish>Dar Salino IV (1000ml)</Spanish>
+            <Spanish>Administrar Salino IV (1000ml)</Spanish>
             <Russian>Дать физраствор для в/в вливания (1000 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (1000ml)</Polish>
             <French>Administrer de la solution saline en IV (1000ml)</French>
@@ -454,7 +454,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_500">
             <English>Give Saline IV (500ml)</English>
             <German>Kochsaltzlösung IV (500ml)</German>
-            <Spanish>Dar Salino IV (500ml)</Spanish>
+            <Spanish>Administrar Salino IV (500ml)</Spanish>
             <Russian>Дать физраствор для в/в вливания (500 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (500ml)</Polish>
             <French>Administrer de la solution saline en IV (500ml)</French>
@@ -465,7 +465,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_250">
             <English>Give Saline IV (250ml)</English>
             <German>Kochsaltzlösung IV (250ml)</German>
-            <Spanish>Dar Salino IV (250ml)</Spanish>
+            <Spanish>Administrar Salino IV (250ml)</Spanish>
             <Russian>Дать физраствор для в/в вливания (250 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (250ml)</Polish>
             <French>Administrer de la solution saline en IV (250ml)</French>

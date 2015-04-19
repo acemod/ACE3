@@ -5,7 +5,7 @@
             <English>Wirecutter</English>
             <French>Pince coupante</French>
             <German>Drahtschneider</German>
-            <Spanish>Cortador de cables</Spanish>
+            <Spanish>Tenazas</Spanish>
             <Russian>Клещи-кусачки</Russian>
             <Czech>Štípací kleště</Czech>
             <Polish>Nożyce do cięcia drutu</Polish>
@@ -14,7 +14,7 @@
         <Key ID="STR_ACE_logistics_wirecutter_wirecutterDescription">
             <English>Wirecutter</English>
             <German>Schneidet Draht.</German>
-            <Spanish>Cortador de cables</Spanish>
+            <Spanish>Tenazas</Spanish>
             <Russian>Позволяют быстро перекусывать сеточные конструкции.</Russian>
             <Czech>Štípačky</Czech>
             <Polish>Służą do cięcia drutu i płotów</Polish>
