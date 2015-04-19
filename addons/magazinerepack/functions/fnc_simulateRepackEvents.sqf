@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-private ["_newMagFnc", "_time", "_events", "_swapAmmoFnc", "_ammoSwaped", "_lowIndex", "_highIndex", "_ammoToTransfer", "_ammoAvailable", "_ammoNeeded"];
+private ["_newMagFnc", "_time", "_events", "_swapAmmoFnc", "_ammoSwaped", "_lowIndex", "_highIndex", "_ammoToTransfer", "_ammoAvailable", "_ammoNeeded", "_swapProgress"];
 
 PARAMS_3(_fullMagazineCount,_arrayOfAmmoCounts,_isBelt);
 

@@ -272,7 +272,7 @@
             <Spanish>Desactivar menú de mando</Spanish>
             <Polish>Wyłącz menu dowodzenia</Polish>
             <Czech>Vypnout velící menu</Czech>
-            <French>Désactiver Menu Commande</French>
+            <French>Désactiver menu commande</French>
             <Russian>Выключить командное меню</Russian>
             <Hungarian>Parancsnoki menü kikapcsolása</Hungarian>
             <Italian>Disabilita Menù di comando</Italian>
@@ -329,7 +329,7 @@
             <Italian>Accetta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
             <Czech>Přijimutí žádosti poslané jinými hráči. Mohou to být žádosti k použítí/sdílení vybavení nebo k vykonání určité činnosti.</Czech>
             <Russian>Принять запросы, отправленные другими игроками. Например, запросы на использование/совместное использование снаряжения, выполнение определенных действий</Russian>
-            <French>Accepter les requêtes d'autres joueurs. Comme l'utilisation / l'échange d'équipement, la réalistion d'actions.</French>
+            <French>Accepter les requêtes d'autres joueurs. Comme l'utilisation / l'échange d'équipement, la réalisation d'actions.</French>
             <Hungarian>Más játékosok általi kérések elfogadása. Ezek a kérések vonatkozhatnak a felszerelés használatára/megosztására, valamint különböző cselekményekre.</Hungarian>
         </Key>
         <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
@@ -340,7 +340,7 @@
             <Italian>Rifiuta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
             <Czech>Zamítnutí žádostii poslané jinými hráči. Mohou to být žádosti k použítí/sdílení vybavení nebo k vykonání určité činnosti.</Czech>
             <Russian>Отклонить запросы, отправленные другими игроками. Например, запросы на использование/совместное использование снаряжения, выполнение определенных действий</Russian>
-            <French>Rejeter les requêtes d'autres joueurs. Comme l'utilisation / l'échange d'équipement, la réalistion d'actions.</French>
+            <French>Rejeter les requêtes d'autres joueurs. Comme l'utilisation / l'échange d'équipement, la réalisation d'actions.</French>
             <Hungarian>Más játékosok általi kérések elutasítása. Ezek a kérések vonatkozhatnak a felszerelés használatára/megosztására, valamint különböző cselekményekre.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
@@ -383,7 +383,7 @@
             <Italian>Modifica la posizione su schermo della barra di avanzamento.</Italian>
             <Russian>Установите желаемое положение строки состояния на экране.</Russian>
             <Polish>Ustaw pożądaną lokalizację paska postępu na ekranie</Polish>
-            <French>Appliquer la postion de la barre de progression sur l'écran</French>
+            <French>Appliquer la position de la barre de progression sur l'écran</French>
             <Czech>Nastavuje pozici ukazetele průběhu činnosti na vaší obrazovce.</Czech>
             <Hungarian>Itt beállítható az állapotjelző sáv képernyődön lévő helyzete.</Hungarian>
         </Key>
@@ -405,7 +405,7 @@
             <Italian>Il colore di sfondo dei suggerimenti dell'ACE.</Italian>
             <Russian>Цвет фона всплывающих подсказок АСЕ.</Russian>
             <Polish>Kolor tła dla powiadomień ACE</Polish>
-            <French>Notifications ACE: couleur de l'arrière plan</French>
+            <French>Notification ACE: couleur de l'arrière plan</French>
             <Czech>Barva pozadí ACE nápověd.</Czech>
             <Hungarian>Az ACE-súgók hátterének színe.</Hungarian>
         </Key>
@@ -427,7 +427,7 @@
             <Italian>Il colore del testo dei suggerimenti dell'ACE. Questo è il colore standard per tutti i caratteri mostrati dal sistema di suggerimenti dell'ACE, se questo non è altrimenti specificato.</Italian>
             <Russian>Цвет шрифта текста всплывающих подсказок АСЕ. Этот цвет является стандартным для всего текста, транслирующегося через систему подсказок АСЕ, если не установлено другого цвета для текста подсказок.</Russian>
             <Polish>Kolor tekstu dla powiadomień ACE. Ten kolor jest domyślnym dla wszystkich tekstów wyświetlanych poprzez System Powiadomień ACE, jeżeli dla powiadomienia nie określono innego koloru.</Polish>
-            <French>Notification ACE: couleur du texte. C'est la couleur par défaut de tout texte afficher dans les notifications ACE, si aucune couleur n'est spécifiée pour les notifications</French>
+            <French>Notification ACE: couleur du texte. C'est la couleur par défaut de tout texte affiché dans les notifications ACE, si aucune couleur n'est spécifiée pour les notifications</French>
             <Czech>Barva fontu ACE nápověd. Toto je standardní barva pro všechen text zobrazovaný ACE nápovědami, pokud nemá nápověda žádnou specifikanou barvu.</Czech>
             <Hungarian>Az ACE-súgók betűkészletének színek. Ez a szín alapértelmezett az összes szövegre az ACE-súgórendszerben, ha a súgószöveg maga nem ad meg más színt.</Hungarian>
         </Key>

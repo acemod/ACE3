@@ -73,11 +73,18 @@ class ACE_Settings {
     };
     class GVAR(allowLitterCreation) {
         typeName = "BOOL";
-        value = true;
+        value = 1;
+    };
+    class GVAR(litterSimulationDetail) {
+        displayName = "$STR_ACE_Medical_litterSimulationDetail";
+        description = "$STR_ACE_Medical_litterSimulationDetail_Desc";
+        typeName = "SCALAR";
+        value = 500;
+        isClientSettable = 1;
     };
     class GVAR(litterCleanUpDelay) {
         typeName = "SCALAR";
-        value = 1800;
+        value = 0;  
     };
     class GVAR(medicSetting_PAK) {
         typeName = "SCALAR";

@@ -35,8 +35,8 @@ Tabs can be tricky sometimes, especially when it comes to sharing code with othe
 
 ## Braces
 
-- opening bracket on the same line as keyword
-- closing bracket in own line, same level of indentation as keyword
+- opening brace on the same line as keyword
+- closing brace in own line, same level of indentation as keyword
 
 **Yes:**
 
@@ -70,7 +70,7 @@ class Something : Or {
     };
 ```
 
-When using `if`/`else`, it is encouraged to put `else` on the same line as the closing bracket to save space:
+When using `if`/`else`, it is encouraged to put `else` on the same line as the closing brace to save space:
 
 ```c++
 if (alive player) then {
@@ -90,7 +90,7 @@ class Three {foo = 3;};
 
 #### Reasoning
 
-Putting the opening bracket in it's own line wastes a lot of space, and keeping the closing bracket on the same level as the keyword makes it easier to recognize what exactly the bracket closes.
+Putting the opening brace in it's own line wastes a lot of space, and keeping the closing brace on the same level as the keyword makes it easier to recognize what exactly the brace closes.
 
 
 ## How to create a new module

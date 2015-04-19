@@ -27,7 +27,7 @@ if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
 private "_recurseFnc";
 _recurseFnc = {
     private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_selection", "_condition", "_showDisabled",
-            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren"];
+            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction"];
     EXPLODE_1_PVT(_this,_actionsCfg);
     _actions = [];
 
@@ -56,6 +56,7 @@ _recurseFnc = {
             _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
 
             _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
+            _modifierFunction = compile (getText (_entryCfg >> "modifierFunction"));
 
             _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
             _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
@@ -76,7 +77,8 @@ _recurseFnc = {
                             [],
                             _selection,
                             _distance,
-                            [_showDisabled,_enableInside,_canCollapse,_runOnHover]
+                            [_showDisabled,_enableInside,_canCollapse,_runOnHover],
+                            _modifierFunction
                         ],
                         _children
                     ];

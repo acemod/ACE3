@@ -4,6 +4,7 @@
  *
  * Arguments:
  * gunID <number>
+ * update solution <BOOL>
  *
  * Return Value:
  * Nothing
@@ -15,24 +16,31 @@
  */
 #include "script_component.hpp"
 
-if (_this < 0 || _this > (count GVAR(gunList)) - 1) exitWith {};
+private ["_gunID", "_updateSolution"];
+_gunID          = _this select 0;
+_updateSolution = _this select 1;
 
-GVAR(workingMemory) = +(GVAR(gunList) select _this);
-GVAR(currentGun) = _this;
+if (_gunID < 0 || _gunID > (count GVAR(gunList)) - 1) exitWith {};
+
+GVAR(workingMemory) = +(GVAR(gunList) select _gunID);
+GVAR(currentGun) = _gunID;
 
 lbSetCurSel [6000, GVAR(currentGun)];
 
-if ((GVAR(scopeUnits) select GVAR(currentScopeUnit)) != "Clicks") then
-{
+if ((GVAR(scopeUnits) select GVAR(currentScopeUnit)) != "Clicks") then {
     GVAR(currentScopeUnit) = GVAR(workingMemory) select 6;
 };
 
 [] call FUNC(update_gun);
+[] call FUNC(update_gun_ammo_data);
 
 GVAR(elevationOutput) set [GVAR(currentTarget), 0];
-GVAR(windageOutput) set [GVAR(currentTarget), 0];
+GVAR(windage1Output) set [GVAR(currentTarget), 0];
+GVAR(windage2Output) set [GVAR(currentTarget), 0];
 GVAR(leadOutput) set [GVAR(currentTarget), 0];
 GVAR(tofOutput) set [GVAR(currentTarget), 0];
 GVAR(velocityOutput) set [GVAR(currentTarget), 0];
 
-[] call FUNC(calculate_target_solution);
+if (_updateSolution) then {
+    [] call FUNC(calculate_target_solution);
+};

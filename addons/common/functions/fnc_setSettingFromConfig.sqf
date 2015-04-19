@@ -76,6 +76,18 @@ if (isNil _name) then {
         _value
     ];
 
+    //Strings in the values array won't be localized from the config, so just do that now:
+    /*private "_values";
+    _values = _settingData select 5;
+    {
+        _text = _x;
+        if (((typeName _text) == "STRING") && {(count _text) > 1} && {(_text select [0,1]) == "$"}) then {
+            _text = localize (_text select [1, ((count _text) - 1)]); //chop off the leading $
+            _values set [_forEachIndex, _text];
+        };
+    } forEach _values;*/
+
+
     GVAR(settings) pushBack _settingData;
 
 } else {
