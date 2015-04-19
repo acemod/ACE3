@@ -19,7 +19,7 @@ GVAR(altitude) = -1000 max parseNumber(ctrlText 130030) min 20000;
 GVAR(temperature) = -50 max parseNumber(ctrlText 130040) min 160;
 GVAR(barometricPressure) = 0 max parseNumber(ctrlText 130050) min 1350;
 GVAR(relativeHumidity) = (0 max parseNumber(ctrlText 130060) min 100) / 100;
-if (GVAR(currentUnit) == 1) then {
+if (GVAR(currentUnit) != 2) then {
     GVAR(altitude) = GVAR(altitude) * 0.3048;
     GVAR(temperature) = (GVAR(temperature) - 32) / 1.8;
     GVAR(barometricPressure) = GVAR(barometricPressure) * 33.86389;
