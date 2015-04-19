@@ -1529,7 +1529,7 @@
             <English>Heavily wounded</English>
             <German>Schwer verwundet:</German>
             <Polish>Ciężko ranny</Polish>
-            <Russian>Сильные ранения</Russian>
+            <Russian>Сильно ранен</Russian>
             <Italian>Gravemente ferito</Italian>
             <Spanish>Gravemente herido</Spanish>
             <French>Lourdement blessé</French>
@@ -1538,7 +1538,7 @@
             <English>Lightly wounded</English>
             <German>Leicht verwundet:</German>
             <Polish>Lekko ranny</Polish>
-            <Russian>Легкие ранения</Russian>
+            <Russian>Легко ранен</Russian>
             <Italian>Leggermente ferito</Italian>
             <Spanish>Levemente herido</Spanish>
             <French>Légèrement blessé</French>
@@ -1547,7 +1547,7 @@
             <English>Very lightly wounded</English>
             <German>Sehr leicht verwundet:</German>
             <Polish>B. lekko ranny</Polish>
-            <Russian>Царапины</Russian>
+            <Russian>Очень легко ранен</Russian>
             <Italian>Ferito lievemente</Italian>
             <Spanish>Muy levemente herido</Spanish>
             <French>Très légèrement blessé</French>
