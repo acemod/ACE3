@@ -16,10 +16,8 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private "_ex";
-_ex = _this select 0;
-_ex setDir (_this select 1);
-if ((_this select 2) != 0) then {
-	[_ex, _this select 2, 0] call CALLSTACK(BIS_fnc_setPitchBank);
+EXPLODE_3_PVT(_this,_explosive,_direction,_pitch);
+_explosive setDir _direction;
+if (_pitch != 0) then {
+    [_explosive, _pitch, 0] call CALLSTACK(BIS_fnc_setPitchBank);
 };
-//_ex setVectorUp (surfaceNormal _pos);

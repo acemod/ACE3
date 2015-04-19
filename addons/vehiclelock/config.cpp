@@ -5,7 +5,7 @@ class CfgPatches {
     units[] = {};
     weapons[] = {};
     requiredVersion = REQUIRED_VERSION;
-    requiredAddons[] = {"ace_common", "ace_interaction"};
+    requiredAddons[] = {"ace_interaction"};
     author[] = {"PabstMirror"};
     authorUrl = "https://github.com/PabstMirror/";
     VERSION_CONFIG;

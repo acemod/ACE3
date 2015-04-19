@@ -24,11 +24,12 @@ GVAR(drawing_controls) = [36732, 36733, 36734, 36735, 36736, 36737];
 // The thread dies as soon as the mission start, so it's not really compiting for scheduler space.
 [] spawn {
     _fnc_installMapEvents = {
+        private "_d";
         _d = _this;
         ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["MouseMoving", {_this call FUNC(handleMouseMove);}];
         ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["MouseButtonDown", {[1, _this] call FUNC(handleMouseButton);}];
         ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["MouseButtonUp", {[0, _this] call FUNC(handleMouseButton)}];
-        ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["Draw", {[] call FUNC(updateMapToolMarkers);}];
+        ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["Draw", {_this call FUNC(updateMapToolMarkers);}];
         (finddisplay _d) displayAddEventHandler ["KeyDown", {_this call FUNC(handleKeyDown);}];
     };
 

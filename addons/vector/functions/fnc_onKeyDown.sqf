@@ -128,11 +128,11 @@ switch (_this select 0) do {
         };
 
         // prevent additinal modifier input if advanced mode it set, spaghetti
-        if (GETGVAR(isKeyDownAzimuth,false) && {GETGVAR(currentMode,"") in ["relative_azimuth+distance", "fall_of_short"]}) exitWith {};
+        if (GETGVAR(isKeyDownAzimuth,false) && {GETGVAR(currentMode,"") in ["relative_azimuth+distance", "fall_of_shot"]}) exitWith {};
 
         // toggle fos values
-        if (GETGVAR(currentMode,"") == "fall_of_short") exitWith {
-            [!(GETGVAR(FOSState,true))] call FUNC(showFallOfShort);
+        if (GETGVAR(currentMode,"") == "fall_of_shot") exitWith {
+            [!(GETGVAR(FOSState,true))] call FUNC(showFallOfShot);
         };
 
         ["distance"] call FUNC(clearDisplay);

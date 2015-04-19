@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"TaoSensai","commy2"};
+        author[] = {"TaoSensai","commy2","Ruthberg"};
         authorUrl = "https://github.com/Taosenai/tmr";
         VERSION_CONFIG;
     };
@@ -14,5 +14,5 @@ class CfgPatches {
 
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"

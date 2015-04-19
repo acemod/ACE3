@@ -16,6 +16,8 @@ class CfgPatches {
 
 #include "CfgSounds.hpp"
 
+#include "CfgVehicles.hpp"
+
 #include "CfgWeapons.hpp"
 
 #include "RscTitles.hpp"

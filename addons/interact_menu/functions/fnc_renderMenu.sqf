@@ -92,7 +92,12 @@ if (_numChildren == 1) then {
 };
 
 // Scale menu based on the amount of children
-_scale = 0.17 * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.1) max 0.5);
+_scale = if (GVAR(UseListMenu)) then {
+    0.17
+} else {
+    0.17 * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.1) max 0.5)
+};
+
 // Animate menu scale
 if (_menuInSelectedPath && (_menuDepth == count _path)) then {
     _scale = _scale * (0.3 + 0.7 * (((diag_tickTime - GVAR(expandedTime)) * 8) min 1));
@@ -106,8 +111,13 @@ _angle = _centerAngle - _angleSpan / 2;
 {
     //BEGIN_COUNTER(children);
     private ["_offset","_newPos"];
-    _newPos = [(_sPos select 0) -_scale * cos _angle,
-               (_sPos select 1) +_scale * (sin _angle) * 4/3];
+    _newPos =  if (GVAR(UseListMenu)) then {
+                    [(_sPos select 0) + _scale * 1.10,
+                     (_sPos select 1) + _scale * 0.30 * 4/3 * (_foreachindex - _numChildren/2 + 0.5)];
+               } else {
+                    [(_sPos select 0) -_scale * cos _angle,
+                     (_sPos select 1) +_scale * (sin _angle) * 4/3];
+               };
 
     //drawLine3D [_pos, _newPos, [1,0,0,0.8]];
     //END_COUNTER(children);

@@ -48,7 +48,14 @@ _offset = 0;
 _velocityCorrection = (vectorMagnitude velocity _projectile) -
                       getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
 
-[_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, _velocityCorrection] call EFUNC(common,changeProjectileDirection);
+[_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, -_velocityCorrection] call EFUNC(common,changeProjectileDirection);
+
+// Remove the platform velocity 
+if( (vectorMagnitude velocity _vehicle) > 2) then {
+    _sumVelocity = (velocity _projectile) vectorDiff (velocity _vehicle);
+    _projectile setVelocity _sumVelocity;
+};
+
 // Air burst missile
 
 // handle locally only
