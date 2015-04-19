@@ -30,7 +30,7 @@
 
 ###############################################################################
 
-__version__ = "0.3dev"
+__version__ = "0.4"
 
 import sys
 
@@ -53,6 +53,13 @@ import re
 
 if sys.platform == "win32":
 	import winreg
+
+######## GLOBALS #########
+work_drive = ""
+module_root = ""
+release_dir = ""
+module_root_parent = ""
+optionals_root = ""
 
 ###############################################################################
 # http://akiscode.com/articles/sha-1directoryhash.shtml
@@ -300,7 +307,7 @@ def copy_important_files(source_dir,destination_dir):
 	
 	#copy importantFiles
 	try:
-		print_blue("Searching for important files in " + source_dir)
+		print_blue("\nSearching for important files in " + source_dir)
 		for file in importantFiles:
 			print_green("Copying file => " + os.path.join(source_dir,file))
 			shutil.copyfile(os.path.join(source_dir,file),os.path.join(destination_dir,file))
@@ -308,12 +315,10 @@ def copy_important_files(source_dir,destination_dir):
 		print_error("COPYING IMPORTANT FILES.")
 		raise
 	
-	print("")
-	
 	#copy all extension dlls
 	try:
 		os.chdir(os.path.join(source_dir))
-		print_blue("Searching for DLLs in " + os.getcwd())
+		print_blue("\nSearching for DLLs in " + os.getcwd())
 		filenames = glob.glob("*.dll")
 		
 		if not filenames:
@@ -328,11 +333,42 @@ def copy_important_files(source_dir,destination_dir):
 		raise
 	finally:
 		os.chdir(originalDir)
+
+def copy_optionals_for_building(mod):
+	src_directories = os.listdir(optionals_root)
+	print("")
+	try:
+		for dir_name in src_directories:
+			mod.append(dir_name)
+			if (dir_name == "userconfig"):
+				destination = os.path.join(work_drive,dir_name)
+			else:
+				destination = os.path.join(module_root,dir_name)
+				
+			print("Temporarily copying " + os.path.join(optionals_root,dir_name) + " => " + destination + " for building.")
+			shutil.rmtree(destination, True)
+			shutil.copytree(os.path.join(optionals_root,dir_name), destination)
+	except:
+		print_error("Copy Optionals Failed")
+		raise
+		
+def cleanup_optionals(mod):
+	try:
+		for dir_name in mod:
+			if (dir_name == "userconfig"):
+				destination = os.path.join(work_drive,dir_name)
+			else:
+				destination = os.path.join(module_root,dir_name)
+			print("Cleaning " + destination)
+			shutil.rmtree(destination)
+	except:
+		print_error("Cleaning Optionals Failed")
+		raise
 ###############################################################################
 
 def main(argv):
 	"""Build an Arma addon suite in a directory from rules in a make.cfg file."""
-	print_blue(("\nmake.py for Arma, v" + __version__))
+	print_blue(("\nmake.py for Arma, modified for Advanced Combat Environment v" + __version__))
 
 	if sys.platform != "win32":
 		print_error("Non-Windows platform (Cygwin?). Please re-run from cmd.")
@@ -447,6 +483,12 @@ See the make.cfg file for additional build options.
 
 	cfg = configparser.ConfigParser();
 	try:
+		global work_drive
+		global module_root
+		global release_dir
+		global module_root_parent
+		global optionals_root
+		
 		cfg.read(os.path.join(make_root, "make.cfg"))
 
 		# Project name (with @ symbol)
@@ -487,7 +529,7 @@ See the make.cfg file for additional build options.
 		# Project module Root
 		module_root_parent = os.path.abspath(os.path.join(os.path.join(work_drive, prefix), os.pardir))
 		module_root = cfg.get(make_target, "module_root", fallback=os.path.join(make_root_parent, "addons"))
-		ace_optionals_root = os.path.join(module_root_parent, "optionals")
+		optionals_root = os.path.join(module_root_parent, "optionals")
 		print_green ("module_root: " + module_root)
 		
 		if (os.path.isdir(module_root)):
@@ -496,10 +538,10 @@ See the make.cfg file for additional build options.
 			print_error ("Directory " + module_root + " does not exist.")
 			sys.exit()
 
-		if (os.path.isdir(ace_optionals_root)):
-			print_green ("ace_optionals_root: " + ace_optionals_root)
+		if (os.path.isdir(optionals_root)):
+			print_green ("optionals_root: " + optionals_root)
 		else:
-			print_error ("Directory " + ace_optionals_root + " does not exist.")
+			print_error ("Directory " + optionals_root + " does not exist.")
 			sys.exit()
 		
 		print_green ("release_dir: " + release_dir)
@@ -552,6 +594,10 @@ See the make.cfg file for additional build options.
 		print ("No cache found.")
 		cache = {}
 
+	#Temporarily copy optionals_root for building. They will be removed later. 
+	optionals_modules = []
+	copy_optionals_for_building(optionals_modules)	
+	
 	# Get list of subdirs in make root.
 	dirs = next(os.walk(module_root))[1]
 	
@@ -910,6 +956,7 @@ See the make.cfg file for additional build options.
 			except:
 				print_error("Could not copy files. Is Arma 3 running?")
 
+	cleanup_optionals(optionals_modules)
 if __name__ == "__main__":
 	main(sys.argv)
 input("Press Enter to continue...")
