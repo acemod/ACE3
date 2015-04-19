@@ -27,9 +27,9 @@ GVAR(currentGun) = _gunID;
 
 lbSetCurSel [6000, GVAR(currentGun)];
 
-if ((GVAR(scopeUnits) select GVAR(currentScopeUnit)) != "Clicks") then {
-    GVAR(currentScopeUnit) = GVAR(workingMemory) select 6;
-};
+GVAR(currentScopeUnit) = 0 max (GVAR(workingMemory) select 6) min 3;
+GVAR(currentScopeClickUnit) = 0 max (GVAR(workingMemory) select 7) min 2;
+GVAR(currentScopeClickNumber) = 1 max (GVAR(workingMemory) select 8) min 10;
 
 [] call FUNC(update_gun);
 [] call FUNC(update_gun_ammo_data);
