@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 GVAR(currentUnit) = 0 max (profileNamespace getVariable ["ACE_ATragMX_currentUnit", 2]) min 2;
-[profileNamespace getVariable ["ACE_ATragMX_currentGun", 0], false] call FUNC(change_gun);
+GVAR(currentGun) = 0 max (profileNamespace getVariable ["ACE_ATragMX_currentGun", 0]);
 GVAR(currentTarget) = 0 max (profileNamespace getVariable ["ACE_ATragMX_currentTarget", 0]) min 3;
 GVAR(currentScopeUnit) = 0 max (profileNamespace getVariable ["ACE_ATragMX_currentScopeUnit", 0]) min 3;
 
