@@ -334,8 +334,30 @@ def copy_important_files(source_dir,destination_dir):
 	finally:
 		os.chdir(originalDir)
 
-def copy_optionals_for_building(mod):
+def copy_optionals_for_building(mod,pbos):
 	src_directories = os.listdir(optionals_root)
+	current_dir = os.getcwd()
+	
+	print("")
+	try:
+		
+		#special server.pbo processing
+		files = glob.glob(os.path.join(release_dir, "@ace","optionals","*.pbo"))
+		for file in files:
+			file_name = os.path.basename(file)
+			print ("Adding the following file: " + file_name)
+			pbos.append(file_name)
+			pbo_path = os.path.join(release_dir, "@ace","optionals",file_name)
+			if (os.path.isfile(pbo_path)):
+				print("Moving " + pbo_path + " for processing.")
+				shutil.move(pbo_path, os.path.join(release_dir,"@ace","addons",file_name))
+
+	except:
+		print_error("Error in moving")
+		raise
+	finally:
+		os.chdir(current_dir)
+
 	print("")
 	try:
 		for dir_name in src_directories:
@@ -344,23 +366,39 @@ def copy_optionals_for_building(mod):
 				destination = os.path.join(work_drive,dir_name)
 			else:
 				destination = os.path.join(module_root,dir_name)
-				
+
 			print("Temporarily copying " + os.path.join(optionals_root,dir_name) + " => " + destination + " for building.")
 			shutil.rmtree(destination, True)
 			shutil.copytree(os.path.join(optionals_root,dir_name), destination)
 	except:
 		print_error("Copy Optionals Failed")
 		raise
+	finally:
+		os.chdir(current_dir)
 		
-def cleanup_optionals(mod):
-	try:
+def cleanup_optionals(mod,pbos):
+	print("")
+	try:			
 		for dir_name in mod:
 			if (dir_name == "userconfig"):
 				destination = os.path.join(work_drive,dir_name)
 			else:
 				destination = os.path.join(module_root,dir_name)
+			
 			print("Cleaning " + destination)
+			
+			try:
+				file_name = "ace_{}.pbo".format(dir_name)
+				src_file_path = os.path.join(release_dir, "@ace","addons",file_name)
+				dst_file_path = os.path.join(release_dir, "@ace","optionals",file_name)
+				if (os.path.isfile(src_file_path)):
+					#print("Preserving " + file_name)
+					os.renames(src_file_path,dst_file_path)
+			except FileExistsError:
+				print_error(file_name + " already exists")
+				continue
 			shutil.rmtree(destination)
+			
 	except:
 		print_error("Cleaning Optionals Failed")
 		raise
@@ -596,7 +634,8 @@ See the make.cfg file for additional build options.
 
 	#Temporarily copy optionals_root for building. They will be removed later. 
 	optionals_modules = []
-	copy_optionals_for_building(optionals_modules)	
+	optional_files = []
+	copy_optionals_for_building(optionals_modules,optional_files)	
 	
 	# Get list of subdirs in make root.
 	dirs = next(os.walk(module_root))[1]
@@ -955,8 +994,8 @@ See the make.cfg file for additional build options.
 				shutil.copytree(os.path.join(module_root, release_dir, project), os.path.join(a3_path, project))
 			except:
 				print_error("Could not copy files. Is Arma 3 running?")
-
-	cleanup_optionals(optionals_modules)
+				
+	cleanup_optionals(optionals_modules,optional_files)
 if __name__ == "__main__":
 	main(sys.argv)
 input("Press Enter to continue...")
