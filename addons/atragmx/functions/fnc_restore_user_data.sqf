@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 GVAR(currentUnit) = 0 max (profileNamespace getVariable ["ACE_ATragMX_currentUnit", 2]) min 2;
-[profileNamespace getVariable ["ACE_ATragMX_currentGun", 0], false] call FUNC(change_gun);
+GVAR(currentGun) = 0 max (profileNamespace getVariable ["ACE_ATragMX_currentGun", 0]);
 GVAR(currentTarget) = 0 max (profileNamespace getVariable ["ACE_ATragMX_currentTarget", 0]) min 3;
 GVAR(currentScopeUnit) = 0 max (profileNamespace getVariable ["ACE_ATragMX_currentScopeUnit", 0]) min 3;
 
@@ -35,3 +35,8 @@ GVAR(windDirection) = profileNamespace getVariable ["ACE_ATragMX_windDirection",
 GVAR(inclinationAngle) = profileNamespace getVariable ["ACE_ATragMX_inclinationAngle", [0, 0, 0, 0]];
 GVAR(targetSpeed) = profileNamespace getVariable ["ACE_ATragMX_targetSpeed", [0, 0, 0, 0]];
 GVAR(targetRange) = profileNamespace getVariable ["ACE_ATragMX_targetRange", [0, 0, 0, 0]];
+
+GVAR(rangeCardStartRange) = 0 max (profileNamespace getVariable ["ACE_ATragMX_rangeCardStartRange", 200]) min 3000;
+GVAR(rangeCardEndRange) = 0 max (profileNamespace getVariable ["ACE_ATragMX_rangeCardEndRange", 2000]) min 3000;
+GVAR(rangeCardIncrement) = 1 max (profileNamespace getVariable ["ACE_ATragMX_rangeCardIncrement", 50]) min 3000;
+GVAR(rangeCardCurrentColumn) = 0 max (profileNamespace getVariable ["ACE_ATragMX_rangeCardCurrentColumn", 3]) min 3;

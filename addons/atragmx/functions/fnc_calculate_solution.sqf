@@ -43,7 +43,7 @@
  */
 #include "script_component.hpp"
 
-private ["_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed1", "_windSpeed2", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_bc", "_dragModel", "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude"];
+private ["_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed1", "_windSpeed2", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_drag", "_bc", "_dragModel", "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude"];
 _scopeBaseAngle     = _this select 0;
 _bulletMass         = _this select 1;
 _boreHeight         = _this select 2;
@@ -136,7 +136,6 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
 
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
         if (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false]) then {
-            private ["_drag"];
             _drag = if (missionNamespace getVariable [QEGVAR(advanced_ballistics,extensionAvailable), false]) then {
                 parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3", _dragModel, _bc, _trueSpeed]))
             } else {

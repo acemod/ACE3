@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Respawn_Deploy">
@@ -66,7 +65,7 @@
             <English>Rallypoint Independent (Base)</English>
             <German>Sammelpunkt Widerstand (Basis)</German>
             <Spanish>Punto de reunión Independiente (Base)</Spanish>
-            <Russian>Точка сбора Независимых (База</Russian>
+            <Russian>Точка сбора Независимых (База)</Russian>
             <Polish>Punkt zbiórki Ruchu oporu (Baza)</Polish>
             <French>Point de ralliement Indépendant (Base)</French>
         </Key>

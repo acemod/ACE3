@@ -35,8 +35,14 @@ if (GVAR(currentUnit) != 2) then {
 } else {
     ctrlSetText [330, Str(Round((GVAR(targetSpeed) select GVAR(currentTarget)) * 100) / 100)];
 };
-if (GVAR(currentUnit) == 1) then {
-    ctrlSetText [340, Str(Round((GVAR(targetRange) select GVAR(currentTarget)) * 1.0936133))];
-} else {
-    ctrlSetText [340, Str(Round((GVAR(targetRange) select GVAR(currentTarget))))];
+switch (GVAR(currentUnit)) do {
+    case 0: {
+        ctrlSetText [340, format["*%1", Round((GVAR(targetRange) select GVAR(currentTarget)))]];
+    };
+    case 1: {
+        ctrlSetText [340, Str(Round((GVAR(targetRange) select GVAR(currentTarget)) * 1.0936133))];
+    };
+    case 2: {
+        ctrlSetText [340, Str(Round((GVAR(targetRange) select GVAR(currentTarget))))];
+    };
 };

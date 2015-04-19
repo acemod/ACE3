@@ -133,40 +133,6 @@ class ATragMX_RscListNBox: ATragMX_RscListBox {
     idcLeft=-1;
     idcRight=-1;
 };
-class ATragMX_RscControlsGroup {
-    type=15;
-    idc=-1;
-    style=16;
-    x=0;
-    y=0;
-    w=1;
-    h=1;
-    shadow=0;
-    class VScrollbar {
-        color[]={1,1,1,0.6};
-        width=0.021;
-        autoScrollSpeed=-1;
-        autoScrollDelay=5;
-        autoScrollRewind=0;
-        shadow=0;
-    };
-    class HScrollbar {
-        color[]={1,1,1,0.6};
-        height=0.028;
-        shadow=0;
-    };
-    class ScrollBar {
-        color[]={1,1,1,0.6};
-        colorActive[]={1,1,1,1};
-        colorDisabled[]={1,1,1,0.3};
-        thumb="#(argb,8,8,3)color(1,1,1,1)";
-        arrowEmpty="#(argb,8,8,3)color(1,1,1,1)";
-        arrowFull="#(argb,8,8,3)color(1,1,1,1)";
-        border="#(argb,8,8,3)color(1,1,1,1)";
-    };
-    class Controls {
-    };
-};
 class ATragMX_RscLineBreak {
     idc=-1;
     type=98;
@@ -263,7 +229,31 @@ class ATragMX_Display {
             idc=-1;
             x=0.55*safezoneW+safezoneX+0.315;
         };
-
+        
+        class TEXT_GUN_FRAME: ATragMX_RscText {
+            idc=1001;
+            style=64;
+            x=0.550*safezoneW+safezoneX+0.11;
+            y=0.265*safezoneH+safezoneY+0.25;
+            w=0.0925;
+            h=0.205;
+            text="";
+        };
+        class TEXT_ATMOSPHERE_FRAME: TEXT_GUN_FRAME {
+            idc=1002;
+            x=0.550*safezoneW+safezoneX+0.205;
+        };
+        class TEXT_TARGET_FRAME: TEXT_GUN_FRAME {
+            idc=1003;
+            x=0.550*safezoneW+safezoneX+0.3;
+        };
+        class TEXT_RESULT_FRAME: TEXT_GUN_FRAME {
+            idc=1004;
+            x=0.550*safezoneW+safezoneX+0.11;
+            y=0.265*safezoneH+safezoneY+0.46;
+            w=0.2825;
+            h=0.15;
+        };
         class TEXT_GUN_PROFILE: ATragMX_RscText {
             idc=1000;
             x=0.550*safezoneW+safezoneX+0.11;
@@ -438,13 +428,13 @@ class ATragMX_Display {
             text="B";
             action=QUOTE(1 call FUNC(change_target_slot));
         };
-        class TEXT_TARGET_C: TEXT_TARGET_B {
+        class TEXT_TARGET_C: TEXT_TARGET_A {
             idc=502;
             x=0.550*safezoneW+safezoneX+0.2512;
             text="C";
             action=QUOTE(2 call FUNC(change_target_slot));
         };
-        class TEXT_TARGET_D: TEXT_TARGET_B {
+        class TEXT_TARGET_D: TEXT_TARGET_A {
             idc=503;
             x=0.550*safezoneW+safezoneX+0.2743;
             text="D";
@@ -511,7 +501,7 @@ class ATragMX_Display {
         class TEXT_ELEVATION: TEXT_GUN_PROFILE {
             idc=40;
             w=0.05;
-            x=0.550*safezoneW+safezoneX+0.11;
+            x=0.550*safezoneW+safezoneX+0.115;
             y=0.265*safezoneH+safezoneY+0.50;
             text="Elev";
         };
@@ -570,7 +560,7 @@ class ATragMX_Display {
         class TEXT_LEAD: TEXT_GUN {
             idc=42;
             w=0.05;
-            x=0.550*safezoneW+safezoneX+0.11;
+            x=0.550*safezoneW+safezoneX+0.115;
             y=0.265*safezoneH+safezoneY+0.57;
             text="Lead";
             action=QUOTE(GVAR(showWind2) = !GVAR(showWind2); call FUNC(update_result); call FUNC(update_target));
@@ -679,6 +669,7 @@ class ATragMX_Display {
             h=0.45;
             x=0.550*safezoneW+safezoneX+0.11;
             y=0.265*safezoneH+safezoneY+0.24;
+            sizeEx=0.025;
             colorSelectBackground[]={0.15,0.21,0.23,0.3};
             colorSelectBackground2[]={0.15,0.21,0.23,0.3};
             onMouseButtonDblClick=QUOTE(true call FUNC(toggle_gun_list));

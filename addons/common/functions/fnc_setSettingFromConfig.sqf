@@ -75,9 +75,9 @@ if (isNil _name) then {
         getNumber (_optionEntry >> "force") > 0,
         _value
     ];
-    
+
     //Strings in the values array won't be localized from the config, so just do that now:
-    private "_values";
+    /*private "_values";
     _values = _settingData select 5;
     {
         _text = _x;
@@ -85,8 +85,8 @@ if (isNil _name) then {
             _text = localize (_text select [1, ((count _text) - 1)]); //chop off the leading $
             _values set [_forEachIndex, _text];
         };
-    } forEach _values;
-    
+    } forEach _values;*/
+
 
     GVAR(settings) pushBack _settingData;
 
