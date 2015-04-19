@@ -36,10 +36,10 @@ if (GVAR(currentUnit) != 2) then {
 } else {
     ctrlSetText [130, Str(Round(GVAR(workingMemory) select 1))];
 };
-if (GVAR(currentUnit) != 1) then {
-    ctrlSetText [140, Str(Round(GVAR(workingMemory) select 2))];
+if (GVAR(currentUnit) == 1) then {
+    ctrlSetText [140, format["*%1", Round((GVAR(workingMemory) select 2) * 1.0936133)]];
 } else {
-    ctrlSetText [140, Str(Round((GVAR(workingMemory) select 2) * 1.0936133))];
+    ctrlSetText [140, Str(Round(GVAR(workingMemory) select 2))];
 };
 
 [] call FUNC(update_scope_unit);

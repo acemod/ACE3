@@ -36,7 +36,7 @@ if (GVAR(currentUnit) != 2) then {
     ctrlSetText [330, Str(Round((GVAR(targetSpeed) select GVAR(currentTarget)) * 100) / 100)];
 };
 if (GVAR(currentUnit) == 1) then {
-    ctrlSetText [340, Str(Round((GVAR(targetRange) select GVAR(currentTarget)) * 1.0936133))];
+    ctrlSetText [340, format["*%1", Round((GVAR(workingMemory) select 2) * 1.0936133)]];
 } else {
     ctrlSetText [340, Str(Round((GVAR(targetRange) select GVAR(currentTarget))))];
 };
