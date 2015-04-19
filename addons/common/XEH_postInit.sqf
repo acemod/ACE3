@@ -4,6 +4,7 @@
 // Load settings from profile
 if (hasInterface) then {
     call FUNC(loadSettingsFromProfile);
+    call FUNC(loadSettingsLocalizedText);
 };
 
 // Listens for global "SettingChanged" events, to update the force status locally
