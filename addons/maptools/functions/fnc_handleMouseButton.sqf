@@ -13,10 +13,9 @@
 
 #include "script_component.hpp"
 
-private ["_dir", "_params", "_control", "_button", "_screenPos", "_shiftKey", "_ctrlKey", "_handled", "_pos"];
+private ["_control", "_button", "_screenPos", "_shiftKey", "_ctrlKey", "_handled", "_pos", "_altKey", "_gui", "_marker"];
 
-_dir       = _this select 0;
-_params    = _this select 1;
+PARAMS_2(_dir,_params);
 _control   = _params select 0;
 _button    = _params select 1;
 _screenPos = [_params select 2, _params select 3];

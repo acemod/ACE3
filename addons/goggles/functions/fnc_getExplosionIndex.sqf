@@ -9,7 +9,7 @@
  * The rating [0-3] <NUMBER>
  *
  * Example:
- * _rating = 0.05 call ace_goggles_fnc_getExplosionIndex;
+ * 0.05 call ace_goggles_fnc_getExplosionIndex;
  *
  * Public: No
  */

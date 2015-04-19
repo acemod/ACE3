@@ -18,9 +18,10 @@
 #include "script_component.hpp"
 
 _this spawn {
-    _unit = _this select 0;
-    _side = _this select 1;
-
+    PARAMS_2(_unit,_side); 
+    
+    private ["_rallypoint", "_position"];
+    
     // rallypoint names are defined in CfgVehicles.hpp
 
     _rallypoint = [

@@ -1,4 +1,15 @@
+/*
+ * Author: ACE2 Team
+ * Calculate current wind locally from the data broadcasted by the server
+ *
+ * Argument:
+ * None
+ *
+ * Return value:
+ * Wind <ARRAY>
+ */
 #include "script_component.hpp"
+private ["_dir","_dirInc","_dirRange","_period","_periodPercent","_periodPosition","_return","_spd","_spdInc","_spdRange"];
 
 _return = [0,0,0];
 if(!isNil "ACE_WIND_PARAMS") then {

@@ -11,13 +11,14 @@
             <Polish>Pokaż imiona</Polish>
             <Hungarian>Nevek mutatása</Hungarian>
             <Russian>Показать имена</Russian>
+            <Italian>Mostra i nomi</Italian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames">
             <English>Show player names</English>
             <German>Spielernamen anzeigen</German>
             <Spanish>Mostrar nombres de jugadores</Spanish>
             <Polish>Pokaż imiona graczy</Polish>
-            <French>Afficher nom des joueurs</French>
+            <French>Afficher les nom des joueurs</French>
             <Hungarian>Játékosnevek mutatása</Hungarian>
             <Czech>Zobrazit jména hráčů</Czech>
             <Portuguese>Mostrar nomes de jogadores</Portuguese>
@@ -31,7 +32,7 @@
             <German>Zeige Spielernamen nur an, wenn die Maus auf sie gerrichtet ist (benötigt Spielernamen)</German>
             <French>Noms uniquement sous le curseur (si noms affichés)</French>
             <Czech>Zobrazit jméno hráče jenom na kurzor (vyžaduje jména hráčů)</Czech>
-            <Italian>Mostra i nomi solo se puntati (richiede i nomi dei giocatori abilitati)</Italian>
+            <Italian>Mostra i nomi solo se puntati (richiede mostra nomi abilitato)</Italian>
             <Portuguese>Mostrar nome de jogador somente no cursor (requer nome de jogadores)</Portuguese>
             <Hungarian>Játékosok nevének mutatása csak a kurzoron (a nevek mutatása szükséges)</Hungarian>
             <Russian>Показать имена игроков только под курсором (требует имен игроков)</Russian>
@@ -45,6 +46,7 @@
             <Polish>Pokaż imiona graczy tylko po przytrzymaniu klawisza (wymagana opcja Pokaż imiona graczy)</Polish>
             <Hungarian>Játékosnevek mutatása csak gombnyomásra (a nevek mutatása szükséges)</Hungarian>
             <Russian>Показать имена игроков только по нажатию клавиши (требует имен игроков)</Russian>
+            <Italian>Mostra i nomi solo se si preme il tasto (richiede mostra nomi abilitato)</Italian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerRanks">
             <English>Show player ranks (requires player names)</English>
@@ -53,10 +55,10 @@
             <Spanish>Mostrar rango de los jugadores (requiere Mostrar nombres de jugadores)</Spanish>
             <French>Grade des joueurs  (si noms affichés)</French>
             <Czech>Zobrazit hodnosti hráčů (vyžaduje jména hráčů)</Czech>
-            <Italian>Mostra i gradi (richiede i nomi dei giocatori abilitati)</Italian>
+            <Italian>Mostra i gradi (richiede mostra nomi abilitato)</Italian>
             <Portuguese>Mostrar patente de jogadores (requer nome de jogadores)</Portuguese>
             <Hungarian>Játékosok rendfokozatának mutatása (a nevek mutatása szükséges)</Hungarian>
-            <Russian>Показать звания игроков (требует имен игроков)</Russian>
+            <Russian>Показывать звания игроков (требует имен игроков)</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo">
             <English>Show vehicle crew info</English>
@@ -65,8 +67,9 @@
             <Spanish>Mostrar tripulantes</Spanish>
             <Polish>Pokaż załogę pojazdu</Polish>
             <Czech>Zobrazit info o posádce vozidla</Czech>
-            <Russian>Показать экипаж</Russian>
+            <Russian>Показывать информацию об экипаже</Russian>
             <Hungarian>Jármű-legénység adatainak mutatása</Hungarian>
+            <Italian>Mostra le informazioni sull'equipaggio del veicolo</Italian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowNamesForAI">
             <English>Show name tags for AI units</English>
@@ -77,6 +80,7 @@
             <Polish>Wyświetl imiona jednostek AI</Polish>
             <French>Afficher les noms des IA</French>
             <Hungarian>Névcímkék mutatása MI-egységeknél</Hungarian>
+            <Italian>Mostra le tag nomi per le unità AI</Italian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves">
             <English>Show SoundWaves (requires player names)</English>
@@ -87,6 +91,7 @@
             <Polish>Pokaż fale dźwiękowe (wymagana opcja Pokaż imiona graczy)</Polish>
             <French>Afficher "qui parle" (si noms affichés)</French>
             <Hungarian>"Hanghullámok" mutatása (a nevek mutatása szükséges)</Hungarian>
+            <Italian>Mostra barra movimento audio (richiede mostra nomi abilitato)</Italian>
         </Key>
         <Key ID="STR_ACE_NameTags_DefaultNametagColor">
             <English>Default Nametag Color (Non Group Members)</English>
@@ -97,6 +102,7 @@
             <French>Couleur d'affichage par défaut (si dans aucun groupe)</French>
             <Czech>Standardní barva jmenovek (pro nečleny jednotky)</Czech>
             <Hungarian>Alap névcímke-szín (csoporton kívüli személyek)</Hungarian>
+            <Italian>Colore nametag di default (membri non del gruppo)</Italian>
         </Key>
     </Package>
 </Project>

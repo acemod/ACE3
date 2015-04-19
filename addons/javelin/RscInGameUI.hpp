@@ -255,9 +255,9 @@ class RscInGameUI {
             idc = 6999;
             
             x = "SafezoneX";
-			y = "SafezoneY";
-			w = "SafezoneW";
-			h = "SafezoneH";
+            y = "SafezoneY";
+            w = "SafezoneW";
+            h = "SafezoneH";
             
             enabled = 0;
             class Controls {
