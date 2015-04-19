@@ -4,7 +4,7 @@
 if(!hasInterface) exitWith { false };
 
 PARAMS_3(_litterClass,_position,_direction);
-private["_litterObject"];
+private["_litterObject", "_maxLitterCount"];
 
 if (isNil QGVAR(allCreatedLitter)) then {
     GVAR(allCreatedLitter) = [];
@@ -14,7 +14,8 @@ if (isNil QGVAR(allCreatedLitter)) then {
 _litterObject = _litterClass createVehicleLocal _position;
 _litterObject setDir _direction;
 
-if((count GVAR(allCreatedLitter)) > GVAR(litterSimulationDetail) ) then {
+_maxLitterCount = getArray (configFile >> "ACE_Settings" >> QGVAR(litterSimulationDetail) >> "_values") select GVAR(litterSimulationDetail); 
+if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {
     // gank the first litter object, and spawn ours.
     private["_oldLitter"];
     _oldLitter = GVAR(allCreatedLitter) deleteAt 0;
