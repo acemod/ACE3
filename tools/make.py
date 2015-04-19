@@ -583,7 +583,6 @@ See the make.cfg file for additional build options.
 			sys.exit()
 		
 		print_green ("release_dir: " + release_dir)
-		copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
 		
 	except:
 		raise
@@ -635,7 +634,7 @@ See the make.cfg file for additional build options.
 	#Temporarily copy optionals_root for building. They will be removed later. 
 	optionals_modules = []
 	optional_files = []
-	copy_optionals_for_building(optionals_modules,optional_files)	
+	copy_optionals_for_building(optionals_modules,optional_files)
 	
 	# Get list of subdirs in make root.
 	dirs = next(os.walk(module_root))[1]
@@ -994,7 +993,8 @@ See the make.cfg file for additional build options.
 				shutil.copytree(os.path.join(module_root, release_dir, project), os.path.join(a3_path, project))
 			except:
 				print_error("Could not copy files. Is Arma 3 running?")
-				
+
+	copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
 	cleanup_optionals(optionals_modules,optional_files)
 if __name__ == "__main__":
 	main(sys.argv)
