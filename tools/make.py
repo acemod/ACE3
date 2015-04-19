@@ -597,7 +597,8 @@ See the make.cfg file for additional build options.
 	# For each module, prep files and then build.
 	for module in modules:
 		print_green("\nMaking " + module + "-"*max(1, (60-len(module))))
-
+		missing = False
+		
 		# Cache check
 		if module in cache:
 			old_sha = cache[module]
@@ -610,10 +611,15 @@ See the make.cfg file for additional build options.
 
 		# Hash the module
 		new_sha = get_directory_hash(os.path.join(module_root, module))
+		
+		# Is the pbo file missing?
+		missing = not os.path.isfile(os.path.join(release_dir, project, "addons", "ace_{}.pbo".format(module)))
+		if missing:
+			print("ace_{}.pbo".format(module) + " is missing. Building...")
 
 		# Check if it needs rebuilt
 		# print ("Hash:", new_sha)
-		if old_sha == new_sha:
+		if old_sha == new_sha and not missing:
 			if not force_build:
 				print("Module has not changed.")
 				# Skip everything else
