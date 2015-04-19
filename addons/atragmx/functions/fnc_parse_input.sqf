@@ -32,12 +32,12 @@ GVAR(windSpeed1) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140020
 GVAR(windSpeed2) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140021)) min 50];
 GVAR(windDirection) set [GVAR(currentTarget), 1 max Round(parseNumber(ctrlText 140030)) min 12];
 _inclinationAngleCosine = 0.5 max parseNumber(ctrlText 140041) min 1;
-_inclinationAngleDegree = -60 max parseNumber(ctrlText 140040) min 60;
+_inclinationAngleDegree = -60 max round(parseNumber(ctrlText 140040)) min 60;
 if (_inclinationAngleDegree != GVAR(inclinationAngle) select GVAR(currentTarget)) then {
     GVAR(inclinationAngle) set [GVAR(currentTarget), _inclinationAngleDegree];
 } else {
     if (_inclinationAngleCosine != Round(cos(GVAR(inclinationAngle) select GVAR(currentTarget)) * 100) / 100) then {
-        GVAR(inclinationAngle) set [GVAR(currentTarget), acos(_inclinationAngleCosine)];
+        GVAR(inclinationAngle) set [GVAR(currentTarget), round(acos(_inclinationAngleCosine))];
     };
 };
 GVAR(targetSpeed) set [GVAR(currentTarget), -50 max abs(parseNumber(ctrlText 140050)) min 50];
