@@ -17,11 +17,10 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_allGear", "_headgear", "_goggles", "_uniform", "_uniformitems", "_vest", "_vestitems", "_backpack", "_backpackitems", "_primaryweapon", "_primaryweaponitems", "_primaryweaponmagazine", "_handgunweapon", "_handgunweaponitems", "_handgunweaponmagazine", "_assigneditems", "_binocular"];
+PARAMS_2(_unit,_allGear);
 
+private ["_unit", "_allGear", "_headgear", "_goggles", "_uniform", "_uniformitems", "_vest", "_vestitems", "_backpack", "_backpackitems", "_primaryweapon", "_primaryweaponitems", "_primaryweaponmagazine", "_handgunweapon", "_handgunweaponitems", "_handgunweaponmagazine", "_assigneditems", "_binocular", "_backpa", "_secondaryweapon", "_secondaryweaponitems", "_secondaryweaponmagazine"];
 
-_unit = _this select 0;
-_allGear = _this select 1;
 
 // remove all starting gear of a player
 removeAllWeapons _unit;

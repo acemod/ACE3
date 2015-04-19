@@ -11,7 +11,7 @@
             <Czech>Dron je nabitý</Czech>
             <Portuguese>O VANT está cheio</Portuguese>
             <Italian>Il drone è pieno</Italian>
-            <Russian>БПЛА заполнен</Russian>
+            <Russian>БПЛА полностью заряжен</Russian>
         </Key>
         <Key ID="STR_ACE_logistics_uavbattery_NoBattery">
             <English>You need a UAV Battery</English>
@@ -59,7 +59,7 @@
             <Czech>Používané k dobíjení UAV</Czech>
             <Portuguese>Usada para reabastecer VANT</Portuguese>
             <Italian>Usata per ricaricare la Batteria dell'UAV</Italian>
-            <Russian>Используется для зарядки БПЛА</Russian>
+            <Russian>Используется для зарядки переносных БПЛА</Russian>
         </Key>
         <Key ID="STR_ACE_logistics_uavbattery_Battery_Recharge">
             <English>Recharging ...</English>

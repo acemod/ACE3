@@ -3,21 +3,20 @@ class CfgAmmo {
     class BulletCore;
 
     class BulletBase: BulletCore {
-        // Default: 6 | More is good, but too much is bad (especially with wind deflection / advanced ballistics)
-        timeToLive = 10;
+        timeToLive=6;
     };
 
     class B_20mm : BulletBase {
-        timeToLive = 30;
+        timeToLive=30;
     };
     class B_25mm : BulletBase {
-        timeToLive = 30;
+        timeToLive=30;
     };
     class B_35mm_AA : BulletBase {
-        timeToLive = 30;
+        timeToLive=30;
     };
     class B_30mm_AP : BulletBase {
-        timeToLive = 30;
+        timeToLive=30;
     };
     
     class B_556x45_Ball : BulletBase {
@@ -458,6 +457,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={20, 24.41, 26};
     };
     class B_408_Ball : BulletBase {
+        timeToLive=10;
         airFriction=-0.000395;
         typicalSpeed=910;
         ACE_caliber=0.408;
@@ -473,6 +473,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={29};
     };
     class ACE_106x83mm_Ball : B_408_Ball {
+        timeToLive=10;
         ACE_caliber=0.416;
         ACE_bulletLength=2.089;
         ACE_bulletMass=398;
@@ -485,6 +486,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={29};
     };
     class B_338_Ball : BulletBase {
+        timeToLive=10;
         airFriction=-0.000606;
         typicalSpeed=915;
         ACE_caliber=0.338;
@@ -513,6 +515,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={20, 24, 26};
     };
     class ACE_338_Ball : B_338_Ball {
+        timeToLive=10;
         airFriction=-0.000535;
         caliber=1.55;
         typicalSpeed=826;
@@ -528,6 +531,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={20, 24, 26.5, 28};
     };
     class ACE_338_Ball_API526 : B_338_Ball {
+        timeToLive=10;
         airFriction=-0.000673;
         caliber=2.4;
         typicalSpeed=826;
@@ -557,6 +561,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={17.2};
     };
     class B_127x99_Ball : BulletBase {
+        timeToLive=10;
         airFriction=-0.0006;
         typicalSpeed=853;
         ACE_caliber=0.510;
@@ -571,6 +576,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={29};
     };
     class ACE_127x99_Ball_AMAX : B_127x99_Ball {
+        timeToLive=10;
         airFriction=-0.000374;
         typicalSpeed=860;
         ACE_caliber=0.510;
@@ -585,6 +591,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={29};
     };
     class B_127x108_Ball : BulletBase {
+        timeToLive=10;
         airFriction=-0.00064;
         typicalSpeed=820;
         ACE_caliber=0.511;

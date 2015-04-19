@@ -62,6 +62,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize "STR_ACE_Attach_CancelAction"], {GVAR(placeAction) = 0}];
 
     [{
+        private "_startingPosition";
         PARAMS_2(_args,_pfID);
         EXPLODE_7_PVT(_args,_unit,_attachToVehicle,_itemClassname,_itemVehClass,_tempObject,_onAtachText,_actionID);
 

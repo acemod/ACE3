@@ -25,7 +25,7 @@ _fnc_renderNearbyActions = {
     _cameraDir = ((positionCameraToWorld [0, 0, 1]) call EFUNC(common,positionToASL)) vectorDiff _cameraPos;
 
     _numInteractObjects = 0;
-    _nearestObjects = nearestObjects [((getPosASL ACE_player) vectorAdd (_cameraDir vectorMultiply 5)) call EFUNC(common,ASLToPosition), ["All"], 8];
+    _nearestObjects = nearestObjects [ACE_player, ["All"], 13];
     {
         _target = _x;
 
