@@ -133,7 +133,6 @@ if (count _woundsCreated > 0) then {
 };
 
 if (USE_WOUND_EVENT_SYNC) then {
-    // TODO Should this be done in a single broadcast?
     // Broadcast the new injuries across the net in parts. One broadcast per injury. Prevents having to broadcast one massive array of injuries.
     {
         ["medical_propagateWound", [_unit, _x]] call EFUNC(common,globalEvent);

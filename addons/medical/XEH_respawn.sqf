@@ -6,8 +6,7 @@ _unit = _this select 0;
 
 if !(local _unit) exitWith {};
 
-diag_log "running respawn";
-[_unit] call FUNC(init);
+[_unit, true] call FUNC(init);
 
 //Reset captive status for respawning unit
 if (!(_unit getVariable ["ACE_isUnconscious", false])) then {

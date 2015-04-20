@@ -11,4 +11,4 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define USE_WOUND_EVENT_SYNC false
+#define USE_WOUND_EVENT_SYNC true
