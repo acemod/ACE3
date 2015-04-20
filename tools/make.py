@@ -30,7 +30,7 @@
 
 ###############################################################################
 
-__version__ = "0.3dev"
+__version__ = "0.4"
 
 import sys
 
@@ -53,6 +53,13 @@ import re
 
 if sys.platform == "win32":
 	import winreg
+
+######## GLOBALS #########
+work_drive = ""
+module_root = ""
+release_dir = ""
+module_root_parent = ""
+optionals_root = ""
 
 ###############################################################################
 # http://akiscode.com/articles/sha-1directoryhash.shtml
@@ -284,11 +291,122 @@ def print_yellow(msg):
 	print(msg)
 	color("reset")
 
+	
+def copy_important_files(source_dir,destination_dir):
+	
+	originalDir = os.getcwd()
+	importantFiles = ["mod.cpp",
+	"README.md",
+	"AUTHORS.txt",
+	"LICENSE",
+	"logo_ace3_ca.paa"
+	]
+	
+	print_yellow ("source_dir: " + source_dir)
+	print_yellow("destination_dir: " + destination_dir)
+	
+	#copy importantFiles
+	try:
+		print_blue("\nSearching for important files in " + source_dir)
+		for file in importantFiles:
+			print_green("Copying file => " + os.path.join(source_dir,file))
+			shutil.copyfile(os.path.join(source_dir,file),os.path.join(destination_dir,file))
+	except:
+		print_error("COPYING IMPORTANT FILES.")
+		raise
+	
+	#copy all extension dlls
+	try:
+		os.chdir(os.path.join(source_dir))
+		print_blue("\nSearching for DLLs in " + os.getcwd())
+		filenames = glob.glob("*.dll")
+		
+		if not filenames:
+			print ("Empty SET")
+			
+		for dll in filenames:
+			print_green("Copying dll => " + os.path.join(source_dir,dll))
+			if os.path.isfile(dll):
+				shutil.copyfile(os.path.join(source_dir,dll),os.path.join(destination_dir,dll))
+	except:
+		print_error("COPYING DLL FILES.")
+		raise
+	finally:
+		os.chdir(originalDir)
+
+def copy_optionals_for_building(mod,pbos):
+	src_directories = os.listdir(optionals_root)
+	current_dir = os.getcwd()
+	
+	print("")
+	try:
+		
+		#special server.pbo processing
+		files = glob.glob(os.path.join(release_dir, "@ace","optionals","*.pbo"))
+		for file in files:
+			file_name = os.path.basename(file)
+			print ("Adding the following file: " + file_name)
+			pbos.append(file_name)
+			pbo_path = os.path.join(release_dir, "@ace","optionals",file_name)
+			if (os.path.isfile(pbo_path)):
+				print("Moving " + pbo_path + " for processing.")
+				shutil.move(pbo_path, os.path.join(release_dir,"@ace","addons",file_name))
+
+	except:
+		print_error("Error in moving")
+		raise
+	finally:
+		os.chdir(current_dir)
+
+	print("")
+	try:
+		for dir_name in src_directories:
+			mod.append(dir_name)
+			if (dir_name == "userconfig"):
+				destination = os.path.join(work_drive,dir_name)
+			else:
+				destination = os.path.join(module_root,dir_name)
+
+			print("Temporarily copying " + os.path.join(optionals_root,dir_name) + " => " + destination + " for building.")
+			shutil.rmtree(destination, True)
+			shutil.copytree(os.path.join(optionals_root,dir_name), destination)
+	except:
+		print_error("Copy Optionals Failed")
+		raise
+	finally:
+		os.chdir(current_dir)
+		
+def cleanup_optionals(mod,pbos):
+	print("")
+	try:			
+		for dir_name in mod:
+			if (dir_name == "userconfig"):
+				destination = os.path.join(work_drive,dir_name)
+			else:
+				destination = os.path.join(module_root,dir_name)
+			
+			print("Cleaning " + destination)
+			
+			try:
+				file_name = "ace_{}.pbo".format(dir_name)
+				src_file_path = os.path.join(release_dir, "@ace","addons",file_name)
+				dst_file_path = os.path.join(release_dir, "@ace","optionals",file_name)
+				if (os.path.isfile(src_file_path)):
+					#print("Preserving " + file_name)
+					os.renames(src_file_path,dst_file_path)
+			except FileExistsError:
+				print_error(file_name + " already exists")
+				continue
+			shutil.rmtree(destination)
+			
+	except:
+		print_error("Cleaning Optionals Failed")
+		raise
 ###############################################################################
 
 def main(argv):
 	"""Build an Arma addon suite in a directory from rules in a make.cfg file."""
-	print_blue(("\nmake.py for Arma, v" + __version__))
+	print_blue(("\nmake.py for Arma, modified for Advanced Combat Environment v" + __version__))
 
 	if sys.platform != "win32":
 		print_error("Non-Windows platform (Cygwin?). Please re-run from cmd.")
@@ -321,6 +439,7 @@ make.py [help] [test] [force] [key <name>] [target <name>] [release <version>]
 test -- Copy result to Arma 3.
 release <version> -- Make archive with <version>.
 force -- Ignore cache and build all.
+checkexternal -- Check External Files
 target <name> -- Use rules in make.cfg under heading [<name>] rather than
    default [Make]
 key <name> -- Use key in working directory with <name> to sign. If it does not
@@ -378,6 +497,12 @@ See the make.cfg file for additional build options.
 		quiet = True
 		argv.remove("quiet")
 
+	if "checkexternal" in argv:
+		argv.remove("checkexternal")
+		check_external = True
+	else:
+		check_external = False
+
 	# Get the directory the make script is in.
 	make_root = os.path.dirname(os.path.realpath(__file__))
 	make_root_parent = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
@@ -396,6 +521,12 @@ See the make.cfg file for additional build options.
 
 	cfg = configparser.ConfigParser();
 	try:
+		global work_drive
+		global module_root
+		global release_dir
+		global module_root_parent
+		global optionals_root
+		
 		cfg.read(os.path.join(make_root, "make.cfg"))
 
 		# Project name (with @ symbol)
@@ -429,26 +560,34 @@ See the make.cfg file for additional build options.
 
 		# Release/build directory, relative to script dir
 		release_dir = cfg.get(make_target, "release_dir", fallback="release")
-
+		
 		# Project PBO file prefix (files are renamed to prefix_name.pbo)
 		pbo_name_prefix = cfg.get(make_target, "pbo_name_prefix", fallback=None)
 
 		# Project module Root
 		module_root_parent = os.path.abspath(os.path.join(os.path.join(work_drive, prefix), os.pardir))
 		module_root = cfg.get(make_target, "module_root", fallback=os.path.join(make_root_parent, "addons"))
+		optionals_root = os.path.join(module_root_parent, "optionals")
 		print_green ("module_root: " + module_root)
+		
 		if (os.path.isdir(module_root)):
 			os.chdir(module_root)
 		else:
 			print_error ("Directory " + module_root + " does not exist.")
 			sys.exit()
 
+		if (os.path.isdir(optionals_root)):
+			print_green ("optionals_root: " + optionals_root)
+		else:
+			print_error ("Directory " + optionals_root + " does not exist.")
+			sys.exit()
+		
+		print_green ("release_dir: " + release_dir)
+		
 	except:
 		raise
 		print_error("Could not parse make.cfg.")
 		sys.exit(1)
-
-
 
 	# See if we have been given specific modules to build from command line.
 	if len(argv) > 1 and not make_release:
@@ -492,9 +631,14 @@ See the make.cfg file for additional build options.
 		print ("No cache found.")
 		cache = {}
 
+	#Temporarily copy optionals_root for building. They will be removed later. 
+	optionals_modules = []
+	optional_files = []
+	copy_optionals_for_building(optionals_modules,optional_files)
+	
 	# Get list of subdirs in make root.
 	dirs = next(os.walk(module_root))[1]
-
+	
 	# Autodetect what directories to build.
 	if module_autodetect and not arg_modules:
 		modules = []
@@ -537,7 +681,8 @@ See the make.cfg file for additional build options.
 	# For each module, prep files and then build.
 	for module in modules:
 		print_green("\nMaking " + module + "-"*max(1, (60-len(module))))
-
+		missing = False
+		
 		# Cache check
 		if module in cache:
 			old_sha = cache[module]
@@ -550,10 +695,15 @@ See the make.cfg file for additional build options.
 
 		# Hash the module
 		new_sha = get_directory_hash(os.path.join(module_root, module))
+		
+		# Is the pbo file missing?
+		missing = not os.path.isfile(os.path.join(release_dir, project, "addons", "ace_{}.pbo".format(module)))
+		if missing:
+			print("ace_{}.pbo".format(module) + " is missing. Building...")
 
 		# Check if it needs rebuilt
 		# print ("Hash:", new_sha)
-		if old_sha == new_sha:
+		if old_sha == new_sha and not missing:
 			if not force_build:
 				print("Module has not changed.")
 				# Skip everything else
@@ -658,7 +808,10 @@ See the make.cfg file for additional build options.
 					cmd = [makepboTool, "-P","-A","-L","-N","-G", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"Addons")]
 
 				else:
-					cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "+X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+					if check_external:
+						cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "+X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+					else:
+						cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "-X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
 				color("grey")
 				if quiet:
@@ -841,6 +994,8 @@ See the make.cfg file for additional build options.
 			except:
 				print_error("Could not copy files. Is Arma 3 running?")
 
+	copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
+	cleanup_optionals(optionals_modules,optional_files)
 if __name__ == "__main__":
 	main(sys.argv)
 input("Press Enter to continue...")
