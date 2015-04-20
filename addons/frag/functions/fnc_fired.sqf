@@ -35,7 +35,11 @@ if(_doSpall) then {
     };
 };
 // ACE_player sideChat format["c: %1", GVAR(spallIsTrackingCount)];
+
+#ifdef DEBUG_MODE_FULL
 [ACE_player, _round, [1,0,0,1]] call FUNC(addTrack);
+#endif
+
 if(_doFragTrack && alive _round) then {
     GVAR(trackedObjects) pushBack _round;
     _spallTrack = [];
