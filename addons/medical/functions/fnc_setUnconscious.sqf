@@ -37,7 +37,9 @@ _unit setUnconscious true;
 
 if (_unit == ACE_player) then {
     if (visibleMap) then {openMap false};
-    closeDialog 0;
+    while {dialog} do {
+        closeDialog 0;
+    };
 };
 
 // if we have unconsciousness for AI disabled, we will kill the unit instead
