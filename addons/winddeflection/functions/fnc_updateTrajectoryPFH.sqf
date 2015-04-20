@@ -26,7 +26,7 @@
     _bulletVelocity = velocity _bullet;
     _bulletSpeed = vectorMagnitude _bulletVelocity;
     
-    if (!alive _bullet || _bulletSpeed < 100) exitwith {
+    if (!alive _bullet || ((_bullet isKindOf "BulletBase") && _bulletSpeed < 100)) exitwith {
         [_this select 1] call cba_fnc_removePerFrameHandler;
     };
     

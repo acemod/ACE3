@@ -81,10 +81,25 @@ def check_privates(filepath):
         
         if len(missing) > 0:
             print (filepath)
+            
+            private_output = 'private[';
+            first = True
+            for bad_priv in missing:
+                if first:
+                    first = False
+                    private_output = private_output + '"' + bad_priv
+                else: 
+                    private_output = private_output + '", "' + bad_priv
+                
+            private_output = private_output + '"];';
+            print (private_output)
+            
             for bad_priv in missing:
                 print ('\t' + bad_priv)
                 bad_count_file = bad_count_file + 1
-                
+           
+           
+            
     return bad_count_file
             
 def main():

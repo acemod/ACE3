@@ -1,5 +1,6 @@
 /*
  * Author: ACE2 Team
+ *
  * Calculate current wind locally from the data broadcasted by the server
  *
  * Argument:

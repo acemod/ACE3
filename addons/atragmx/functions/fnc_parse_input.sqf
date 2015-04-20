@@ -17,20 +17,29 @@
 
 GVAR(altitude) = -1000 max parseNumber(ctrlText 130030) min 20000;
 GVAR(temperature) = -50 max parseNumber(ctrlText 130040) min 160;
-GVAR(barometricPressure) = 0 max parseNumber(ctrlText 130050) min 1350;
+GVAR(barometricPressure) = 10 max parseNumber(ctrlText 130050) min 1350;
 GVAR(relativeHumidity) = (0 max parseNumber(ctrlText 130060) min 100) / 100;
-if (GVAR(currentUnit) == 1) then {
+if (GVAR(currentUnit) != 2) then {
     GVAR(altitude) = GVAR(altitude) * 0.3048;
     GVAR(temperature) = (GVAR(temperature) - 32) / 1.8;
     GVAR(barometricPressure) = GVAR(barometricPressure) * 33.86389;
 };
 
+private ["_inclinationAngleCosine", "_inclinationAngleDegree"];
 GVAR(latitude) set [GVAR(currentTarget), -90 max Round(parseNumber(ctrlText 140000)) min 90];
 GVAR(directionOfFire) set [GVAR(currentTarget), 0 max abs(Round(parseNumber(ctrlText 140010))) min 359];
 GVAR(windSpeed1) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140020)) min 50];
 GVAR(windSpeed2) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140021)) min 50];
 GVAR(windDirection) set [GVAR(currentTarget), 1 max Round(parseNumber(ctrlText 140030)) min 12];
-GVAR(inclinationAngle) set [GVAR(currentTarget), -60 max parseNumber(ctrlText 140040) min 60];
+_inclinationAngleCosine = 0.5 max parseNumber(ctrlText 140041) min 1;
+_inclinationAngleDegree = -60 max round(parseNumber(ctrlText 140040)) min 60;
+if (_inclinationAngleDegree != GVAR(inclinationAngle) select GVAR(currentTarget)) then {
+    GVAR(inclinationAngle) set [GVAR(currentTarget), _inclinationAngleDegree];
+} else {
+    if (_inclinationAngleCosine != Round(cos(GVAR(inclinationAngle) select GVAR(currentTarget)) * 100) / 100) then {
+        GVAR(inclinationAngle) set [GVAR(currentTarget), round(acos(_inclinationAngleCosine))];
+    };
+};
 GVAR(targetSpeed) set [GVAR(currentTarget), -50 max abs(parseNumber(ctrlText 140050)) min 50];
 GVAR(targetRange) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140060)) min 4000];
 if (GVAR(currentUnit) != 2) then {
@@ -111,5 +120,6 @@ GVAR(workingMemory) set [11, _windageCur];
 [] call FUNC(update_atmosphere);
 [] call FUNC(update_atmo_env_data);
 [] call FUNC(update_target);
+[] call FUNC(update_target_data);
 
 [] call FUNC(store_user_data);

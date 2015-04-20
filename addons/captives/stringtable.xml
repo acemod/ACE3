@@ -6,7 +6,7 @@
             <German>Gefangen nehmen</German>
             <Spanish>Tomar prisionero</Spanish>
             <French>Capturer le prisonnier</French>
-            <Polish>Weź więźnia</Polish>
+            <Polish>Aresztuj</Polish>
             <Czech>Zajmout Osobu</Czech>
             <Italian>Arresta il Prigioniero</Italian>
             <Portuguese>Tomar Prisioneiro</Portuguese>
@@ -53,7 +53,7 @@
             <English>You need to take him as prisoner first!</English>
             <German>Du musst ihn zuerst gefangen nehmen.</German>
             <Spanish>Necesitas hacerle prisionero primero!</Spanish>
-            <Polish>Najpierw musisz wziąć go jako więźnia!</Polish>
+            <Polish>Najpierw musisz go aresztować!</Polish>
             <French>Vous devez d'abord le capturer!</French>
             <Czech>Musíš ho nejdříve zajmout!</Czech>
             <Italian>Prima devi arrestarlo!</Italian>
@@ -134,7 +134,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_StartSurrendering">
             <English>Surrender</English>
-            <French>Capituler</French>
+            <French>Se rendre</French>
             <German>Kapitulieren</German>
             <Spanish>Rendirse</Spanish>
             <Czech>Vzdát se</Czech>
@@ -156,7 +156,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
             <English>Only use on alive units</English>
-            <French>Utiliser uniquement sur unité vivante</French>
+            <French>Utiliser uniquement sur une unité vivante</French>
             <German>Nur bei lebenden Einheiten verwendbar</German>
             <Spanish>Utilizar solo en unidades vivas</Spanish>
             <Czech>Použitelné jen na živé jednotky</Czech>
@@ -167,7 +167,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_OnlyInfantry">
             <English>Only use on dismounted inf</English>
-            <French>Utiliser uniquement sur personnel à pied</French>
+            <French>Utiliser uniquement sur du personnel à pied</French>
             <German>Nur bei abgesessener Infanterie verwendbar</German>
             <Spanish>Utilizar solo en infanteria desmontada</Spanish>
             <Czech>Použitelné jen na pěsích jednotkách</Czech>
@@ -178,7 +178,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
             <English>Nothing under mouse</English>
-            <French>Rien sous la souris</French>
+            <French>Rien sous le curseur</French>
             <German>Es wurde nichts ausgewählt</German>
             <Spanish>Nada bajo el ratón</Spanish>
             <Czech>Nic není vybráno</Czech>

@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -99,7 +100,7 @@
             <German>Einstellung:</German>
             <Russian>Установки:</Russian>
             <Spanish>Ajuste:</Spanish>
-            <Polish>Ustawienie:</Polish>
+            <Polish>Ustaw:</Polish>
             <French>Paramètres</French>
             <Hungarian>Opció:</Hungarian>
             <Italian>Parametri:</Italian>
@@ -215,6 +216,8 @@
         </Key>
         <Key ID="STR_ACE_optionsMenu_uiScaing">
             <English>Option Menu UI Scaling</English>
+            <French>Menu option: taille de l'UI</French>
+            <Polish>Skalowanie UI menu ustawień</Polish>
         </Key>
     </Package>
 </Project>

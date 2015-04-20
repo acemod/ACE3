@@ -5,6 +5,12 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
+    class GVAR(vehicleEnabled) {
+        displayName = "Vehicle Enabled";
+        description = "Enables wind deflection for static/vehicle gunners";
+        typeName = "BOOL";
+        value = 1;
+    };
     class GVAR(simulationInterval) {
         displayName = "Simulation Interval";
         description = "Defines the interval between every calculation step";
