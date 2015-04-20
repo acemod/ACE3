@@ -3,11 +3,12 @@ class ACE_Head {
     displayName = "$STR_ACE_Interaction_Head";
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
+    condition = "true";
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
     class Bandage {
-        displayName = "$STR_ACE_Medical_Bandage_HitHead";
+        displayName = "$STR_ACE_Medical_Bandage";
         distance = 2.0;
         condition = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(treatment));
@@ -74,11 +75,12 @@ class ACE_Torso {
     displayName = "$STR_ACE_Interaction_Torso";
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 1)] call DFUNC(displayPatientInformation));
+    condition = "true";
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
     class Bandage {
-        displayName = "$STR_ACE_Medical_Bandage_HitBody";
+        displayName = "$STR_ACE_Medical_Bandage";
         distance = 2.0;
         condition = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(treatment));
@@ -173,12 +175,13 @@ class ACE_ArmLeft {
     displayName = "$STR_ACE_Interaction_ArmLeft";
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 2)] call DFUNC(displayPatientInformation));
+    condition = "true";
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
 
     class Bandage {
-        displayName = "$STR_ACE_Medical_Bandage_HitLeftArm";
+        displayName = "$STR_ACE_Medical_Bandage";
         distance = 2.0;
         condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call DFUNC(treatment));
@@ -329,12 +332,13 @@ class ACE_ArmRight {
     displayName = "$STR_ACE_Interaction_ArmRight";
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 3)] call DFUNC(displayPatientInformation));
+    condition = "true";
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
 
     class Bandage {
-        displayName = "$STR_ACE_Medical_Bandage_HitRightArm";
+        displayName = "$STR_ACE_Medical_Bandage";
         distance = 2.0;
         condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(treatment));
@@ -423,8 +427,8 @@ class ACE_ArmRight {
     };
     class PlasmaIV: BloodIV {
         displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_1000";
-        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(treatment));
+        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'PlasmaIV')] call DFUNC(treatment));
         EXCEPTIONS
     };
     class PlasmaIV_500: PlasmaIV {
@@ -482,12 +486,13 @@ class ACE_LegLeft {
     displayName = "$STR_ACE_Interaction_LegLeft";
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 4)] call DFUNC(displayPatientInformation));
+    condition = "true";
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
 
     class Bandage {
-        displayName = "$STR_ACE_Medical_Bandage_HitLeftLeg";
+        displayName = "$STR_ACE_Medical_Bandage";
         distance = 2.0;
         condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(treatment));
@@ -578,8 +583,8 @@ class ACE_LegLeft {
     };
     class PlasmaIV: BloodIV {
         displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_1000";
-        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(treatment));
+        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'PlasmaIV')] call DFUNC(treatment));
         EXCEPTIONS
     };
     class PlasmaIV_500: PlasmaIV {
@@ -623,12 +628,13 @@ class ACE_LegRight {
     displayName = "$STR_ACE_Interaction_LegRight";
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
+    condition = "true";
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
 
     class Bandage {
-        displayName = "$STR_ACE_Medical_Bandage_HitRightLeg";
+        displayName = "$STR_ACE_Medical_Bandage";
         distance = 2.0;
         condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(treatment));
@@ -718,8 +724,8 @@ class ACE_LegRight {
     };
     class PlasmaIV: BloodIV {
         displayName = "$STR_ACE_MEDICAL_ACTIONS_Plasma4_1000";
-        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(treatment));
+        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'PlasmaIV')] call DFUNC(treatment));
         EXCEPTIONS
     };
     class PlasmaIV_500: PlasmaIV {

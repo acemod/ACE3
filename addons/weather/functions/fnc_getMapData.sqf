@@ -11,6 +11,30 @@
  */
 #include "script_component.hpp"
 
+GVAR(Altitude) = getNumber(configFile >> "CfgWorlds" >> worldName >> "elevationOffset");
+GVAR(Latitude) = getNumber(configFile >> "CfgWorlds" >> worldName >> "latitude");
+
+if (worldName in ["Chernarus", "Bootcamp_ACR", "Woodland_ACR", "utes"]) then { GVAR(Latitude) = 50; GVAR(Altitude) = 0; };
+if (worldName in ["Altis", "Stratis"]) then { GVAR(Latitude) = 40; GVAR(Altitude) = 0; };
+if (worldName in ["Takistan", "Zargabad", "Mountains_ACR"]) then { GVAR(Latitude) = 35; GVAR(Altitude) = 2000; };
+if (worldName in ["Shapur_BAF", "ProvingGrounds_PMC"]) then { GVAR(Latitude) = 35; GVAR(Altitude) = 100; };
+if (worldName in ["fallujah"]) then { GVAR(Latitude) = 33; GVAR(Altitude) = 0; };
+if (worldName in ["fata", "Abbottabad"]) then { GVAR(Latitude) = 30; GVAR(Altitude) = 1000; };
+if (worldName in ["sfp_wamako"]) then { GVAR(Latitude) = 14; GVAR(Altitude) = 0; };
+if (worldName in ["sfp_sturko"]) then { GVAR(Latitude) = 56; GVAR(Altitude) = 0; };
+if (worldName in ["Bornholm"]) then { GVAR(Latitude) = 55; GVAR(Altitude) = 0; };
+if (worldName in ["Imrali"]) then { GVAR(Latitude) = 40; GVAR(Altitude) = 0; };
+if (worldName in ["Caribou"]) then { GVAR(Latitude) = 68; GVAR(Altitude) = 0; };
+if (worldName in ["Namalsk"]) then { GVAR(Latitude) = 65; GVAR(Altitude) = 0; };
+if (worldName in ["MCN_Aliabad"]) then { GVAR(Latitude) = 36; GVAR(Altitude) = 0; };
+if (worldName in ["Clafghan"]) then { GVAR(Latitude) = 34; GVAR(Altitude) = 640; };
+if (worldName in ["Sangin", "hellskitchen"]) then { GVAR(Latitude) = 32; GVAR(Altitude) = 0; };
+if (worldName in ["Sara"]) then { GVAR(Latitude) = 40; GVAR(Altitude) = 0; };
+if (worldName in ["reshmaan"]) then { GVAR(Latitude) = 35; GVAR(Altitude) = 2000; };
+if (worldName in ["Thirsk"]) then { GVAR(Latitude) = 65; GVAR(Altitude) = 0; };
+if (worldName in ["lingor"]) then { GVAR(Latitude) = -4; GVAR(Altitude) = 0; };
+if (worldName in ["Panthera3"]) then { GVAR(Latitude) = 46; GVAR(Altitude) = 0; };
+
 // Check if the weather data is defined in the map config
 if (isArray (configFile >> "CfgWorlds" >> worldName >> "ACE_TempDay")) exitWith {
     GVAR(TempDay)   = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_TempDay");
@@ -86,3 +110,6 @@ if (worldName in ["Imrali"]) exitWith {
 GVAR(TempDay) = [1, 3, 9, 14, 19, 23, 25, 24, 21, 13, 7, 2];
 GVAR(TempNight) = [-4, -3, 0, 4, 9, 12, 14, 14, 10, 6, 2, -2];
 GVAR(Humidity) = [82, 80, 78, 70, 71, 72, 70, 73, 78, 80, 83, 82];
+
+GVAR(currentTemperature) = 20;
+GVAR(currentHumidity) = 0.5;

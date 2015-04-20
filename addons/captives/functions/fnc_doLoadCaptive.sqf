@@ -18,6 +18,7 @@
 #include "script_component.hpp"
 
 PARAMS_3(_unit,_target,_vehicle);
+private "_objects";
 
 if (isNull _target) then {
     _objects = attachedObjects _unit;

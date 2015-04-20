@@ -9,6 +9,7 @@ PREP(compileMenuSelfAction);
 PREP(collectActiveActionTree);
 PREP(createAction);
 PREP(findActionNode);
+PREP(handlePlayerChanged);
 PREP(isSubPath);
 PREP(keyDown);
 PREP(keyUp);
@@ -47,5 +48,8 @@ GVAR(startHoverTime) = diag_tickTime;
 GVAR(expandedTime) = diag_tickTime;
 GVAR(iconCtrls) = [];
 GVAR(iconCount) = 0;
+
+GVAR(foundActions) = [];
+GVAR(lastTimeSearchedActions) = -1000;
 
 ADDON = true;

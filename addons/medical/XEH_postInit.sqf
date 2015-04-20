@@ -21,14 +21,14 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
             _unit setVariable ["tf_unable_to_use_radio", true, true];
 
             _unit setVariable ["acre_sys_core_isDisabled", true, true];
-            _unit setVariable ["acre_sys_core_globalVolume", 0.4];
+            if (!isNil "acre_api_fnc_setGlobalVolume") then { [0.4^0.33] call acre_api_fnc_setGlobalVolume; };
         } else {
             _unit setVariable ["tf_globalVolume", 1];
             _unit setVariable ["tf_voiceVolume", 1, true];
             _unit setVariable ["tf_unable_to_use_radio", false, true];
 
             _unit setVariable ["acre_sys_core_isDisabled", false, true];
-            _unit setVariable ["acre_sys_core_globalVolume", 1];
+            if (!isNil "acre_api_fnc_setGlobalVolume") then { [1] call acre_api_fnc_setGlobalVolume; };
         };
     };
 }] call ace_common_fnc_addEventHandler;
@@ -153,11 +153,6 @@ GVAR(effectTimeBlood) = time;
 GVAR(lastHeartBeat) = time;
 GVAR(lastHeartBeatSound) = time;
 
-// @todo, remove once parameters are set up
-if (isNil QGVAR(level)) then {
-  GVAR(level) = 0;
-};
-
 // HEARTRATE BASED EFFECTS
 [{
     _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
@@ -172,8 +167,7 @@ if (isNil QGVAR(level)) then {
         // Pain effect
         _strength = ACE_player getVariable [QGVAR(pain), 0];
         // _strength = _strength * (ACE_player getVariable [QGVAR(coefPain), GVAR(coefPain)]); @todo
-        GVAR(alternativePainEffect) = false; // @todo
-        if (GVAR(alternativePainEffect)) then {
+        if (GVAR(painEffectType) == 1) then {
             GVAR(effectPainCC) ppEffectEnable false;
             if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
                 _strength = _strength * 0.15;
@@ -198,7 +192,7 @@ if (isNil QGVAR(level)) then {
         } else {
             GVAR(effectPainCA) ppEffectEnable false;
             if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
-                _strength = _strength * 0.6;
+                _strength = _strength * 0.9;
                 GVAR(effectPainCC) ppEffectEnable true;
                 GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - _strength,1 - _strength,0,0,0,0.2,2]];
                 GVAR(effectPainCC) ppEffectCommit 0.01;
@@ -247,14 +241,14 @@ if (USE_WOUND_EVENT_SYNC) then {
                 // We are only pulling the wounds for the units in the player group. Anything else will come when the unit interacts with them.
                 {
                     [_x, _newPlayer] call FUNC(requestWoundSync);
-                }foreach units group player;
+                }foreach units group _newPlayer;
             };
         }] call EFUNC(common,addEventhandler);
     };
 };
 
 [
-    {(((_this select 0) getvariable [QGVAR(bloodVolume), 0]) < 65)},
+    {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 65)},
     {(((_this select 0) getvariable [QGVAR(pain), 0]) > 0.9)},
     {(((_this select 0) call FUNC(getBloodLoss)) > 0.25)},
     {((_this select 0) getvariable [QGVAR(inReviveState), false])},
@@ -266,3 +260,12 @@ if (USE_WOUND_EVENT_SYNC) then {
 // Prevent all types of interaction while unconscious
 // @todo: probably remove this when CBA keybind hold key works properly
 ["isNotUnconscious", {!((_this select 0) getVariable ["ACE_isUnconscious", false])}] call EFUNC(common,addCanInteractWithCondition);
+
+// Item Event Handler
+["playerInventoryChanged", {
+    [ACE_player] call FUNC(itemCheck);
+}] call EFUNC(common,addEventHandler);
+
+
+// Networked litter
+[QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);

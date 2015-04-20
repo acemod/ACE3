@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Extension Guidelines
-group: dev
+group: development
 parent: wiki
 order: 9
 ---
@@ -11,7 +11,7 @@ order: 9
 ### Requirements
 
 - A compiler (VS/GCC/Clang) 
-    - If starting with visual studio, you need to make sure to use the Visual studio command prompt
+    - If starting with Visual Studio, you need to make sure to use the Visual studio command prompt
 - cmake 3.0 or later in your path
 
 ### Cross-Platform Guidelines

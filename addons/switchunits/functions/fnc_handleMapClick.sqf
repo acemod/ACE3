@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_unit, _sides] call FUNC(handleMapClick)
+ * [unit, _sides] call FUNC(handleMapClick)
  *
  * Public: No
  */

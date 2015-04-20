@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Modules
-group: missionMaker
+group: missionmaker
 order: 5
 parent: wiki
 ---
