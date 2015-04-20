@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="RealisticNames">
         <Key ID="STR_ACE_RealisticNames_HMG_01_Name">
@@ -519,7 +520,7 @@
             <English>Punisher (GMG)</English>
             <German>Punisher (GMW)</German>
             <Spanish>Punisher (GMG)</Spanish>
-            <Polish>Punisher (CKM)</Polish>
+            <Polish>Punisher (GMG)</Polish>
             <Czech>Punisher (granátomet)</Czech>
             <French>Punisher (GMG)</French>
             <Russian>Kаратель (Гранатомет)</Russian>
