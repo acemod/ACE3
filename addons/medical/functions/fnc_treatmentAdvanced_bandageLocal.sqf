@@ -92,8 +92,7 @@ if (USE_WOUND_EVENT_SYNC) then {
 };
 // Handle the reopening of bandaged wounds
 if (_impact > 0 && {GVAR(enableAdvancedWounds)}) then {
-// TODO temp disabled until bandaged wounds are supported by event sync.
-//    [_target, _impact, _part, _mostEffectiveSpot, _mostEffectiveInjury, _bandage] call FUNC(handleBandageOpening);
+    [_target, _impact, _part, _mostEffectiveSpot, _mostEffectiveInjury, _bandage] call FUNC(handleBandageOpening);
 };
 
 // If all wounds have been bandaged, we will reset all damage to 0, so the unit is not showing any blood on the model anymore.
