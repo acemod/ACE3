@@ -14,6 +14,8 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 
+#include "CfgActions.hpp"
+
 #include "CursorMenus.hpp"
 
 class ACE_Settings {
