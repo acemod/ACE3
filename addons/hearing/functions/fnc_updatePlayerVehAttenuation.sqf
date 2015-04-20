@@ -36,7 +36,18 @@ if (ACE_player != _vehicle) then {
             };
         };
     };
+
     _newAttenuation = switch (true) do {
+        case (_effectType == ""): {1};
+        case (_effectType == "CarAttenuation"): {0.5};
+        case (_effectType == "RHS_CarAttenuation"): {0.5};
+        case (_effectType == "OpenCarAttenuation"): {1};
+        case (_effectType == "TankAttenuation"): {0.1};
+        case (_effectType == "HeliAttenuation"): {0.3};
+        case (_effectType == "OpenHeliAttenuation"): {0.9};
+        case (_effectType == "SemiOpenHeliAttenuation"): {0.6};
+        case (_effectType == "HeliAttenuationGunner"): {0.85};
+        case (_effectType == "HeliAttenuationRamp"): {0.85};
         default {1};
     };
 };
@@ -44,4 +55,3 @@ if (ACE_player != _vehicle) then {
 TRACE_2("New vehicle attenuation",_vehicle,_newAttenuation);
 
 GVAR(playerVehAttenuation) = _newAttenuation;
-

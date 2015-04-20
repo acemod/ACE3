@@ -31,26 +31,23 @@ if (!GVAR(enableCombatDeafness)) exitWith {};
 if ((ACE_player != _object) && {(vehicle ACE_player) != _object}) exitWith {};
 if (_weapon in ["Throw", "Put"]) exitWith {};
 
-_vehAttenuation = if ((ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}) then {1} else {GVAR(playerVehAttunation)};
+_vehAttenuation = if ((ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}) then {1} else {GVAR(playerVehAttenuation)};
 
 if (_distance < 1) then {_distance = 1;};
 
 _silencer = switch (_weapon) do {
-case (primaryWeapon _firer) : {(primaryWeaponItems _firer) select 0};
-case (secondaryWeapon _firer) : {(secondaryWeaponItems _firer) select 0};
-case (handgunWeapon _firer) : {(handgunItems _firer) select 0};
+    case (primaryWeapon _firer) : {(primaryWeaponItems _firer) select 0};
+    case (secondaryWeapon _firer) : {(secondaryWeaponItems _firer) select 0};
+    case (handgunWeapon _firer) : {(handgunItems _firer) select 0};
     default {""};
 };
 
 _audibleFireCoef = 1;
-//_audibleFireTimeCoef = 1;
 if (_silencer != "") then {
     _audibleFireCoef = getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFire");
-    //_audibleFireTimeCoef = getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFireTime");
 };
 
 _audibleFire = getNumber (configFile >> "CfgAmmo" >> _ammo >> "audibleFire");
-//_audibleFireTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "audibleFireTime");
 
 _loudness = _audibleFireCoef * _audibleFire / 64;
 _strength = _vehAttenuation * (_loudness - (_loudness/50 * _distance)); // linear drop off
