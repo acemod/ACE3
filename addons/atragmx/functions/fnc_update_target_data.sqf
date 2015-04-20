@@ -37,6 +37,11 @@ if (GVAR(currentUnit) == 1) then {
 } else {
     ctrlSetText [140060, Str(Round((GVAR(targetRange) select GVAR(currentTarget))))];
 };
+if (GVAR(currentUnit) == 0) then {
+    ctrlSetText [140061, "*"];
+} else {
+    ctrlSetText [140061, ""];
+};
 
 if (GVAR(currentUnit) == 2) then {
     ctrlSetText [14002, "Wind Speed (m/s)"];

@@ -52,6 +52,11 @@ if (GVAR(currentUnit) == 1) then {
 } else {
     ctrlSetText [120060, Str(Round(GVAR(workingMemory) select 2))];
 };
+if (GVAR(currentUnit) == 0) then {
+    ctrlSetText [120061, "*"];
+} else {
+    ctrlSetText [120061, ""];
+};
 
 if (GVAR(currentUnit) == 2) then {
     ctrlSetText [12000, "Bore       (cm)"];
