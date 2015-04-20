@@ -23,10 +23,20 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction";
     };
+    class GVAR(AlwaysUseCursorInteraction) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSettable = 1;
+        displayName = "$STR_ACE_Interact_Menu_AlwaysUseCursorInteraction";
+    };
     class GVAR(UseListMenu) {
         value = 0;
         typeName = "BOOL";
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_UseListMenu";
     };
+};
+
+class ACE_Extensions {
+    extensions[] += {"ace_breakLine"};
 };

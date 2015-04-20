@@ -40,6 +40,8 @@ GVAR(showTargetRangeAssist) call FUNC(show_target_range_assist);
 GVAR(showTargetSpeedAssist) call FUNC(show_target_speed_assist);
 GVAR(showTargetSpeedAssistTimer) call FUNC(show_target_speed_assist_timer);
 
+[GVAR(currentGun), false, true] call FUNC(change_gun);
+
 {
     lbAdd [6000, _x select 0];
 } forEach GVAR(gunList);

@@ -133,40 +133,6 @@ class ATragMX_RscListNBox: ATragMX_RscListBox {
     idcLeft=-1;
     idcRight=-1;
 };
-class ATragMX_RscControlsGroup {
-    type=15;
-    idc=-1;
-    style=16;
-    x=0;
-    y=0;
-    w=1;
-    h=1;
-    shadow=0;
-    class VScrollbar {
-        color[]={1,1,1,0.6};
-        width=0.021;
-        autoScrollSpeed=-1;
-        autoScrollDelay=5;
-        autoScrollRewind=0;
-        shadow=0;
-    };
-    class HScrollbar {
-        color[]={1,1,1,0.6};
-        height=0.028;
-        shadow=0;
-    };
-    class ScrollBar {
-        color[]={1,1,1,0.6};
-        colorActive[]={1,1,1,1};
-        colorDisabled[]={1,1,1,0.3};
-        thumb="#(argb,8,8,3)color(1,1,1,1)";
-        arrowEmpty="#(argb,8,8,3)color(1,1,1,1)";
-        arrowFull="#(argb,8,8,3)color(1,1,1,1)";
-        border="#(argb,8,8,3)color(1,1,1,1)";
-    };
-    class Controls {
-    };
-};
 class ATragMX_RscLineBreak {
     idc=-1;
     type=98;
@@ -1149,6 +1115,13 @@ class ATragMX_Display {
             idc=120060;
             y=0.265*safezoneH+safezoneY+0.520;
         };
+        class TEXT_GUN_AMMO_DATA_ZERO_RANGE_METER_INDICATOR: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
+            idc=120061;
+            w=0.05;
+            x=0.550*safezoneW+safezoneX+0.315;
+            y=0.265*safezoneH+safezoneY+0.520;
+            text="";
+        };
         class TEXT_GUN_AMMO_DATA_DONE: TEXT_TARGET_SPEED_ASSIST_DONE {
             idc=12008;
             action=QUOTE(1 call FUNC(toggle_gun_ammo_data));
@@ -1360,6 +1333,13 @@ class ATragMX_Display {
         class TEXT_TARGET_DATA_TARGET_RANGE_INPUT: TEXT_TARGET_DATA_LATITUDE_INPUT {
             idc=140060;
             y=0.265*safezoneH+safezoneY+0.520;
+        };
+        class TEXT_TARGET_DATA_TARGET_RANGE_METER_INDICATOR: TEXT_TARGET_DATA_LATITUDE {
+            idc=140061;
+            w=0.05;
+            x=0.550*safezoneW+safezoneX+0.315;
+            y=0.265*safezoneH+safezoneY+0.520;
+            text="";
         };
         class TEXT_TARGET_DATA_DONE: TEXT_TARGET_SPEED_ASSIST_DONE {
             idc=14008;
