@@ -25,11 +25,9 @@ if (_this) then {
     ctrlSetText [7012, Str(parseNumber(ctrlText 320))];
     ctrlSetText [7013, Str(parseNumber(ctrlText 340))];
 
-    if (GVAR(currentUnit) != 2) then
-    {
+    if (GVAR(currentUnit) == 1) then {
         ctrlSetText [7016, "Yards"];
-    } else
-    {
+    } else {
         ctrlSetText [7016, "Meters"];
     };
 };

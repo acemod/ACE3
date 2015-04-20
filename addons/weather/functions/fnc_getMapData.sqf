@@ -110,3 +110,6 @@ if (worldName in ["Imrali"]) exitWith {
 GVAR(TempDay) = [1, 3, 9, 14, 19, 23, 25, 24, 21, 13, 7, 2];
 GVAR(TempNight) = [-4, -3, 0, 4, 9, 12, 14, 14, 10, 6, 2, -2];
 GVAR(Humidity) = [82, 80, 78, 70, 71, 72, 70, 73, 78, 80, 83, 82];
+
+GVAR(currentTemperature) = 20;
+GVAR(currentHumidity) = 0.5;

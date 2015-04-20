@@ -28,7 +28,7 @@ _unitMagCounts = [];
     _xFullMagazineCount = getNumber (configfile >> "CfgMagazines" >> _xClassname >> "count");
 
     //for every partial magazine, that is either in inventory or can be moved there
-    if ((_xCount < _xFullMagazineCount) && {_xCount > 0} && {(!_xLoaded) || {_player canAdd _magazineClassname}}) then {
+    if ((_xCount < _xFullMagazineCount) && {_xCount > 0} && {(!_xLoaded) || {_player canAdd _xClassname}}) then {
         _index = _unitMagazines find _xClassname;
         if (_index == -1) then {
             _unitMagazines pushBack _xClassname;

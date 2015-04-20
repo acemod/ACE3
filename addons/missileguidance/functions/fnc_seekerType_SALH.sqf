@@ -2,8 +2,8 @@
 #include "script_component.hpp"
 
 EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
+private["_angleFov", "_canSeeTarget", "_foundTargetPos", "_laserResult", "_launchParams", "_seekerParams", "_seekerTargetPos", "_sensorPos", "_target"];
 _seekerTargetPos = _this select 0;
-
 _launchParams = _this select 1;
 _seekerParams = _launchParams select 3;
 _angleFov = _seekerParams select 0;
