@@ -45,19 +45,17 @@ _menuInSelectedPath = true;
 
 // Render icon
 // ARGB Color (First Hex Pair is transparancy)
-_color = "#FFFFFFFF";
+_textColor = GVAR(colorSelected);
+_shadowColor = GVAR(colorSelectedShadow);
 if(!_menuInSelectedPath) then {
-    if (_menuDepth > 0) then {
-        _color = format ["#%1FFFFFF", [255 * ((((count _path) - 1)/_menuDepth) max 0.25)] call EFUNC(common,toHex)];
-    } else {
-        _color = format ["#%1FFFFFF", [255 * 0.75] call EFUNC(common,toHex)];
-    };
+    _textColor = (GVAR(colorNotSelectedMatrix) select (count _path)) select _menuDepth;
+    _shadowColor = (GVAR(colorShadowNotSelectedMatrix) select (count _path)) select _menuDepth;
 };
 
 //END_COUNTER(constructing_colors);
 //BEGIN_COUNTER(fnc_renderIcons);
 
-[_actionData select 1, _color, _sPos, 1, 1, 0, _actionData select 2, 0.5, 0.025, "TahomaB"] call FUNC(renderIcon);
+[_actionData select 1, _actionData select 2, _sPos, _textColor, _shadowColor, "#FFFFFFFF"] call FUNC(renderIcon);
 
 //END_COUNTER(fnc_renderIcons);
 
