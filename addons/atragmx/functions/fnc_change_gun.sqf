@@ -4,6 +4,8 @@
  *
  * Arguments:
  * gunID <number>
+ * restore workingMemory from gunList <BOOL>
+ * update display <BOOL>
  *
  * Return Value:
  * Nothing
@@ -15,24 +17,38 @@
  */
 #include "script_component.hpp"
 
-if (_this < 0 || _this > (count GVAR(gunList)) - 1) exitWith {};
+private ["_gunID", "_restoreMemory", "_updateDisplay"];
+_gunID         = _this select 0;
+_restoreMemory = _this select 1;
+_updateDisplay = _this select 2;
 
-GVAR(workingMemory) set [GVAR(currentTarget), +(GVAR(gunList) select _this)];
-GVAR(currentGun) set [GVAR(currentTarget), _this];
+if (_gunID < 0 || _gunID > (count GVAR(gunList)) - 1) exitWith {};
 
-lbSetCurSel [6000, (GVAR(currentGun) select GVAR(currentTarget))];
+if (_restoreMemory) then {
+    GVAR(workingMemory) = +(GVAR(gunList) select _gunID);
+};
+GVAR(currentGun) = _gunID;
 
-if ((GVAR(scopeUnits) select (GVAR(currentScopeUnit) select GVAR(currentTarget))) != "Clicks") then
-{
-    GVAR(currentScopeUnit) set [GVAR(currentTarget), (GVAR(workingMemory) select GVAR(currentTarget)) select 6];
+if (_updateDisplay) then {
+    lbSetCurSel [6000, GVAR(currentGun)];
 };
 
-[] call FUNC(update_gun);
+GVAR(currentScopeUnit) = 0 max (GVAR(workingMemory) select 6) min 3;
+GVAR(currentScopeClickUnit) = 0 max (GVAR(workingMemory) select 7) min 2;
+GVAR(currentScopeClickNumber) = 1 max (GVAR(workingMemory) select 8) min 10;
+
+if (_updateDisplay) then {
+    [] call FUNC(update_gun);
+    [] call FUNC(update_gun_ammo_data);
+};
 
 GVAR(elevationOutput) set [GVAR(currentTarget), 0];
-GVAR(windageOutput) set [GVAR(currentTarget), 0];
+GVAR(windage1Output) set [GVAR(currentTarget), 0];
+GVAR(windage2Output) set [GVAR(currentTarget), 0];
 GVAR(leadOutput) set [GVAR(currentTarget), 0];
 GVAR(tofOutput) set [GVAR(currentTarget), 0];
 GVAR(velocityOutput) set [GVAR(currentTarget), 0];
 
-[] call FUNC(update_result);
+if (_updateDisplay) then {
+    [] call FUNC(calculate_target_solution);
+};

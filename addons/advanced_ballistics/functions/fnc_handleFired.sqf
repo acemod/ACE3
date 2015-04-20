@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_abort", "_index", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_bulletMass", "_bulletLength", "_bulletTranslation", "_airFriction", "_dragModel", "_velocityBoundaryData", "_muzzleVelocity", "_muzzleVelocityCoef", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_bulletWeight", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef", "_ACE_Elevation", "_ACE_Windage", "_ID"];
+private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_abort", "_index", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_bulletMass", "_bulletLength", "_airFriction", "_dragModel", "_muzzleVelocity", "_muzzleVelocityCoef", "_muzzleAccessory", "_initSpeedCoef", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_bulletWeight", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef"];
 _unit     = _this select 0;
 _weapon   = _this select 1;
 _mode     = _this select 3;
@@ -95,12 +95,11 @@ if (GVAR(ammoTemperatureEnabled)) then {
     };
 };
 
-// TODO: Make _bulletTraceVisible global and toggle it with events
 _bulletTraceVisible = false;
-if (GVAR(bulletTraceEnabled) && currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
+if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER" && currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
     _opticsName = (primaryWeaponItems ACE_player) select 2;
     _opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
-    _bulletTraceVisible = (_opticType == 2 || currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]) && cameraView == "GUNNER";
+    _bulletTraceVisible = (_opticType == 2 || currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]);
 };
 
 _caliber = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_caliber");
@@ -111,7 +110,7 @@ _stabilityFactor = 1.5;
 
 if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
     _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL _unit) select 2);
-    _barometricPressure = 1013.25 * exp(-(EGVAR(weather,Altitude) + ((getPosASL _bullet) select 2)) / 7990) - 10 * overcast;
+    _barometricPressure = ((getPosASL _bullet) select 2) call EFUNC(weather,calculateBarometricPressure);
     _stabilityFactor = [_caliber, _bulletLength, _bulletMass, _barrelTwist, _muzzleVelocity, _temperature, _barometricPressure] call FUNC(calculateStabilityFactor);
 };
 
@@ -158,15 +157,17 @@ if (GVAR(AdvancedAirDragEnabled)) then {
     [{
         private ["_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];
         EXPLODE_4_PVT(_this select 0,_bullet,_caliber,_bulletTraceVisible,_index);
-
-        if (!alive _bullet) exitWith {
-            [_this select 1] call cba_fnc_removePerFrameHandler;
-        };
-
+        
         _bulletVelocity = velocity _bullet;
         _bulletPosition = getPosASL _bullet;
-
-        if (_bulletTraceVisible && vectorMagnitude _bulletVelocity > 600) then {
+        
+        _bulletSpeed = vectorMagnitude _bulletVelocity;
+        
+        if (!alive _bullet || _bulletSpeed < 100) exitWith {
+            [_this select 1] call cba_fnc_removePerFrameHandler;
+        };
+        
+        if (_bulletTraceVisible && _bulletSpeed > 600) then {
             drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.4*_caliber,0.2*_caliber],[[0,0,0,0.6],[0,0,0,0.4]],[1,0],0,0,"","",""];
         };
 
@@ -190,7 +191,7 @@ if (GVAR(AdvancedAirDragEnabled)) then {
 
     if ((GVAR(bulletDatabaseOccupiedIndices) pushBack _index) == 0) then {
         [{
-            private ["_bulletDatabaseEntry", "_bullet", "_caliber", "_muzzleVelocity", "_frames", "_speed", "_airFriction", "_airFrictionRef", "_dragModel", "_atmosphereModel", "_ballisticCoefficient", "_ballisticCoefficients", "_velocityBoundaries", "_airDensity", "_stabilityFactor", "_transonicStabilityCoef", "_twistDirection", "_unit", "_bulletTraceVisible", "_index", "_temperature", "_humidity", "_deltaT", "_TOF", "_bulletPosition", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueSpeed", "_bulletSpeedAvg", "_wind", "_drag", "_dragRef", "_vect", "_accel", "_accelRef", "_centripetalAccel", "_pressure", "_pressureDeviation", "_windSourceObstacle", "_windSourceTerrain", "_height", "_roughnessLength"];
+            private ["_bulletDatabaseEntry", "_bullet", "_caliber", "_muzzleVelocity", "_frames", "_speed", "_airFriction", "_airFrictionRef", "_dragModel", "_atmosphereModel", "_ballisticCoefficient", "_ballisticCoefficients", "_velocityBoundaries", "_airDensity", "_stabilityFactor", "_transonicStabilityCoef", "_twistDirection", "_unit", "_bulletTraceVisible", "_index", "_temperature", "_humidity", "_deltaT", "_TOF", "_bulletPosition", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueSpeed", "_bulletSpeedAvg", "_wind", "_drag", "_dragRef", "_vect", "_accel", "_accelRef", "_centripetalAccel", "_pressure", "_pressureDeviation", "_windSourceObstacle", "_windSourceTerrain", "_height", "_roughnessLength", "_bulletDir", "_horizontalDeflection", "_horizontalDeflectionPartial", "_spinDrift", "_spinDriftPartial"];
 
             {
                 _bulletDatabaseEntry = (GVAR(bulletDatabase) select _x);
@@ -287,7 +288,7 @@ if (GVAR(AdvancedAirDragEnabled)) then {
                         };
 
                         if (GVAR(AtmosphericDensitySimulationEnabled)) then {
-                            _pressure = 1013.25 * exp(-(EGVAR(weather,Altitude) + (_bulletPosition select 2)) / 7990) - 10 * overcast;
+                            _pressure = (_bulletPosition select 2) call EFUNC(weather,calculateBarometricPressure);
                             _temperature = GET_TEMPERATURE_AT_HEIGHT(_bulletPosition select 2);
                             _humidity = EGVAR(weather,currentHumidity);
                             _airDensity = STD_AIR_DENSITY_ICAO;
@@ -314,7 +315,7 @@ if (GVAR(AdvancedAirDragEnabled)) then {
                         _bulletVelocity = _bulletVelocity vectorDiff _accel;
                     } else {
                         if (GVAR(AtmosphericDensitySimulationEnabled)) then {
-                            _pressureDeviation = 1013.25 * exp(-(EGVAR(weather,Altitude) + (_bulletPosition select 2)) / 7990) - 1013.25 - 10 * overcast;
+                            _pressureDeviation = (_bulletPosition select 2) call EFUNC(weather,calculateBarometricPressure) - 1013.25;
                             _temperature = GET_TEMPERATURE_AT_HEIGHT(_bulletPosition select 2);
                             _humidity = EGVAR(weather,currentHumidity);
                             _airFriction = _airFriction + ((_temperature - 15) * 0.0000015 + _humidity * 0.0000040 + _pressureDeviation * -0.0000009);

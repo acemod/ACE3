@@ -8,4 +8,4 @@
     false
 },
 {false},
-[197, [false, false, false]], false, 0] call CBA_fnc_addKeybind; // (PRINT)
+[0, [false, false, false]], false, 0] call CBA_fnc_addKeybind; // (empty default key)

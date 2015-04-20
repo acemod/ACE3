@@ -8,8 +8,9 @@
             <Russian>ЛЦУ ВКЛ</Russian>
             <Czech>Laserový značkovač zapnut</Czech>
             <Polish>Desygnator laserowy wł.</Polish>
-            <French>Désignateur Laser Allumé</French>
+            <French>Désignateur laser allumé</French>
             <Hungarian>Lézeres Megjelölő Be</Hungarian>
+            <Italian>Designatore laser acceso</Italian>
         </Key>
         <Key ID="STR_ACE_Laser_SelfDesignate_DesignatorOff">
             <English>Laser Designator Off</English>
@@ -18,8 +19,9 @@
             <Russian>ЛЦУ ВЫКЛ</Russian>
             <Czech>Laserový značkovat vypnut</Czech>
             <Polish>Desygnator laserowy wył.</Polish>
-            <French>Désignateur Laser Éteint</French>
+            <French>Désignateur laser éteint</French>
             <Hungarian>Lézeres Megjelölő Ki</Hungarian>
+            <Italian>Designatore laser spento</Italian>
         </Key>
     </Package>
 </Project>

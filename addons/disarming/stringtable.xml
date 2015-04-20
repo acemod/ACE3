@@ -6,6 +6,10 @@
             <German>Öffne Inventar</German>
             <Polish>Otwórz ekwipunek</Polish>
             <Czech>Otevřít inventář</Czech>
+            <Spanish>Abrir inventario</Spanish>
+            <Russian>Открыть инвентарь</Russian>
+            <Italian>Apri l'inventario</Italian>
+            <French>Ouvrir l'inventaire</French>
         </Key>
     </Package>
 </Project>

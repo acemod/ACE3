@@ -10,6 +10,7 @@
             <French>Interactions</French>
             <Russian>Взаимодействия</Russian>
             <Hungarian>Cselekvések</Hungarian>
+            <Italian>Interazioni</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Torso">
             <English>Torso</English>
@@ -20,6 +21,7 @@
             <Polish>Tors</Polish>
             <Russian>Торс</Russian>
             <Hungarian>Testtörzs</Hungarian>
+            <Italian>Torso</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Head">
             <English>Head</English>
@@ -30,15 +32,18 @@
             <Polish>Głowa</Polish>
             <Russian>Голова</Russian>
             <Hungarian>Fej</Hungarian>
+            <Italian>Testa</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmLeft">
             <English>Left Arm</English>
+            <French>Bras gauche</French>
             <German>Linker Arm</German>
             <Spanish>Brazo izquierdo</Spanish>
             <Czech>Levá paže</Czech>
             <Polish>Lewe ramię</Polish>
             <Russian>Левая рука</Russian>
             <Hungarian>Bal kar</Hungarian>
+            <Italian>Braccio sinistro</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmRight">
             <English>Right Arm</English>
@@ -49,6 +54,7 @@
             <French>Bras droit</French>
             <Russian>Правая рука</Russian>
             <Hungarian>Jobb kar</Hungarian>
+            <Italian>Braccio destro</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_LegLeft">
             <English>Left Leg</English>
@@ -59,6 +65,7 @@
             <French>Jambe gauche</French>
             <Russian>Левая нога</Russian>
             <Hungarian>Bal láb</Hungarian>
+            <Italian>Gamba sinistra</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_LegRight">
             <English>Right Leg</English>
@@ -69,6 +76,7 @@
             <French>Jambe droite</French>
             <Russian>Правая нога</Russian>
             <Hungarian>Jobb láb</Hungarian>
+            <Italian>Gamba destra</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Weapon">
             <English>Weapon</English>
@@ -79,6 +87,7 @@
             <Polish>Broń</Polish>
             <Russian>Оружие</Russian>
             <Hungarian>Fegyver</Hungarian>
+            <Italian>Arma</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_InteractionMenu">
             <English>Interaction Menu</English>
@@ -90,7 +99,7 @@
             <Russian>Меню взаимодействия</Russian>
             <Hungarian>Cselekvő menü</Hungarian>
             <Portuguese>Menu de Interação</Portuguese>
-            <Italian>Menù Interattivo</Italian>
+            <Italian>Menù interazione</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_InteractionMenuSelf">
             <English>Interaction Menu (Self)</English>
@@ -102,7 +111,7 @@
             <Russian>Меню взаимодействия (с собой)</Russian>
             <Hungarian>Cselekvő menü (saját) </Hungarian>
             <Portuguese>Menu de Interação (Individual)</Portuguese>
-            <Italian>Menù Interattivo (Individuale)</Italian>
+            <Italian>Menù interazione (Individuale)</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_OpenDoor">
             <English>Open / Close Door</English>
@@ -194,7 +203,7 @@
             <Spanish>Asumir el liderazgo</Spanish>
             <Polish>Przejmij dowodzenie</Polish>
             <Czech>Stát se velitelem</Czech>
-            <French>Devenir Leader</French>
+            <French>Devenir Chef de groupe</French>
             <Russian>Стать лидером</Russian>
             <Hungarian>Vezetés átvétele</Hungarian>
             <Portuguese>Tornar-se Líder</Portuguese>
@@ -210,7 +219,7 @@
             <Russian>ТАНЦЕВАТЬ!</Russian>
             <Hungarian>TÁNC!</Hungarian>
             <Portuguese>DANCE!</Portuguese>
-            <Italian>Balla!</Italian>
+            <Italian>DANZA!</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_StopDancing">
             <English>Stop Dancing</English>
@@ -564,7 +573,7 @@
             <English>Join Team&lt;br/&gt;Green</English>
             <German>Team Grün&lt;br/&gt;beitreten</German>
             <Spanish>Unirse al&lt;br/&gt;equipo verde</Spanish>
-            <French>Rejoindre&lt;br/&gt;Verte</French>
+            <French>Rejoindre&lt;br/&gt;Vert</French>
             <Polish>Dołącz do&lt;br/&gt;drużyny zielonej</Polish>
             <Czech>Připojit do&lt;br/&gt;Zeleného týmu</Czech>
             <Russian>Присоединиться&lt;br/&gt;к зеленой группе</Russian>
@@ -576,7 +585,7 @@
             <English>Join Team&lt;br/&gt;Blue</English>
             <German>Team Blau&lt;br/&gt;beitreten</German>
             <Spanish>Unirse al&lt;br/&gt;equipo azul</Spanish>
-            <French>Rejoindre&lt;br/&gt;Bleue</French>
+            <French>Rejoindre&lt;br/&gt;Bleu</French>
             <Polish>Dołącz do&lt;br/&gt;drużyny niebieskiej</Polish>
             <Czech>Připojit do&lt;br/&gt;Modrého týmu</Czech>
             <Russian>Присоединиться&lt;br/&gt;к синей группе</Russian>
@@ -605,7 +614,7 @@
             <Czech>Připojil ses do %1 týmu</Czech>
             <Russian>Вы присоединились к группе %1</Russian>
             <Portuguese>Você uniu-se à Equipe %1</Portuguese>
-            <Italian>Sei entrato nella Squadra %1</Italian>
+            <Italian>Sei entrato nel team %1</Italian>
             <Hungarian>Csatlakoztál a %1 csapathoz</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_LeaveTeam">
@@ -617,7 +626,7 @@
             <Czech>Opustit tým</Czech>
             <Russian>Покинуть группу</Russian>
             <Portuguese>Deixar Equipe</Portuguese>
-            <Italian>Lascia la Squadra</Italian>
+            <Italian>Lascia il team</Italian>
             <Hungarian>Csapat elhagyása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_LeftTeam">
@@ -629,7 +638,7 @@
             <Czech>Opustil si tým</Czech>
             <Russian>Вы покинули группу</Russian>
             <Portuguese>Você deixou a Equipe</Portuguese>
-            <Italian>Hai lasciato la squadra</Italian>
+            <Italian>Hai lasciato il team</Italian>
             <Hungarian>Elhagytad a csapatot</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_Pardon">
@@ -658,13 +667,13 @@
         </Key>
         <Key ID="STR_ACE_Interaction_ModifierKey">
             <English>Modifier Key</English>
-            <German>Modifikator Taste</German>
+            <German>Modifikator-Taste</German>
             <Polish>Modyfikator</Polish>
             <French>Modifier la touche</French>
             <Spanish>Tecla modificadora</Spanish>
             <Russian>Клавиша-модификатор</Russian>
             <Portuguese>Tecla Modificadora</Portuguese>
-            <Italian>Modifica Tasto</Italian>
+            <Italian>Modifica tasto</Italian>
             <Hungarian>Módosító billentyű</Hungarian>
             <Czech>Modifikátor</Czech>
         </Key>
@@ -678,6 +687,7 @@
             <Hungarian>Hatótávolságon kívül</Hungarian>
             <Polish>Poza zasięgiem</Polish>
             <Czech>Mimo dosah</Czech>
+            <Italian>Non in raggio</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Equipment">
             <English>Equipment</English>
@@ -688,6 +698,7 @@
             <Czech>Vybavení</Czech>
             <Hungarian>Felszerelés</Hungarian>
             <Russian>Снаряжение</Russian>
+            <Italian>Equipaggiamento</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Push">
             <English>Push</English>
@@ -698,6 +709,7 @@
             <Czech>Odstrčit</Czech>
             <Hungarian>Tolás</Hungarian>
             <Russian>Толкать</Russian>
+            <Italian>Spingi</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
@@ -708,16 +720,18 @@
             <Polish>Interakcja</Polish>
             <Spanish>Interactuar</Spanish>
             <Hungarian>Cselekvés</Hungarian>
+            <Italian>Interagisci</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
             <English>Passengers</English>
-            <German>Fahrzeuginsassen</German>
+            <German>Passagiere</German>
             <Spanish>Pasajeros</Spanish>
             <Russian>Пассажиры</Russian>
             <Czech>Pasažéři</Czech>
             <Polish>Pasażerowie</Polish>
             <French>Passagers</French>
             <Hungarian>Utasok</Hungarian>
+            <Italian>Passeggeri</Italian>
         </Key>
     </Package>
 </Project>

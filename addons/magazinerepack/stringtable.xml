@@ -5,7 +5,7 @@
             <English>Repack Magazines</English>
             <German>Magazine umpacken</German>
             <Spanish>Reorganizar cargadores</Spanish>
-            <French>Réorganiser chargeurs</French>
+            <French>Réorganiser les chargeurs</French>
             <Polish>Przepakuj magazynki</Polish>
             <Czech>Přepáskovat Zásobníky</Czech>
             <Italian>Ricarica Caricatori</Italian>
@@ -82,6 +82,7 @@
             <Czech>Páskování dokončeno</Czech>
             <Polish>Przepakowywanie zakończone</Polish>
             <Hungarian>Újratárazás befejezve</Hungarian>
+            <Italian>Riempi caricatore</Italian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
             <English>Repacking Interrupted</English>
@@ -92,6 +93,7 @@
             <Czech>Páskování přerušeno</Czech>
             <Polish>Przepakowywanie przerwane</Polish>
             <Hungarian>Újratárazás megszakítva</Hungarian>
+            <Italian>Riempimento interrotto</Italian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
             <English>%1 Full and %2 Partial</English>
@@ -102,6 +104,7 @@
             <Czech>%1 plný a %2 částečně</Czech>
             <Polish>Pełnych: %1.&lt;br /&gt;Częściowo pełnych: %2.</Polish>
             <Hungarian>%1 teljes és %2 részleges</Hungarian>
+            <Italian>%1 pieno e %2 parziale</Italian>
         </Key>
     </Package>
 </Project>

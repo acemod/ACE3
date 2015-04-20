@@ -29,13 +29,13 @@ GVAR(WindInfo) = true;
 
 [{
     private ["_windSpeed", "_windDir", "_playerDir", "_windIndex", "_windColor", "_newWindSpeed", "_windSource", "_height"];
-    
+
     if !(GVAR(WindInfo) && !(underwater ACE_player) && vehicle ACE_player == ACE_player) exitWith {
         GVAR(WindInfo) = false;
         0 cutText ["", "PLAIN"];
         [_this select 1] call cba_fnc_removePerFrameHandler;
     };
-    
+
     _windIndex = 12;
     _windColor = [1, 1, 1, 1];
 
@@ -46,7 +46,7 @@ GVAR(WindInfo) = true;
     } else {
         vectorMagnitude ACE_wind;
     };
-    
+
     if (_windSpeed > 0.2) then {
         _playerDir = getDir ACE_player;
         _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);

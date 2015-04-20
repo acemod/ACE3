@@ -9,6 +9,8 @@
 EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 private["_targetPos", "_projectilePos", "_target", "_seekerTargetPos", "_launchParams", "_targetLaunchParams"];
 private["_distanceToTarget", "_distanceToShooter", "_addHeight", "_returnTargetPos", "_state"];
+private["_cruisAlt", "_distanceShooterToTarget", "_shooterPos"];
+
 _seekerTargetPos = _this select 0;
 _launchParams = _this select 1;
 
@@ -48,24 +50,29 @@ switch( (_state select 0) ) do {
             _cruisAlt = 140 * (_distanceShooterToTarget/1250);
             TRACE_1("_cruisAlt", _cruisAlt);
         };
-        
         if( ((ASLToATL _projectilePos) select 2) - ((ASLToATL _seekerTargetPos) select 2) >= _cruisAlt) then {
-            _state set[0, STAGE_COAST];
+            if(_cruisAlt < 140) then {
+                _state set[0, STAGE_TERMINAL];
+            } else {
+                _state set[0, STAGE_COAST];
+            };
         } else {
-             _returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget*2];
+             _returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget*1.5];
         };
     };
     case STAGE_COAST: {
         TRACE_1("STAGE_COAST","");
         TRACE_1("", ((ASLToATL _projectilePos) select 2) - (( ASLToATL _seekerTargetPos) select 2) );
-        if(_distanceShooterToTarget < 1250 || _distanceToTarget < ( ((ASLToATL _projectilePos) select 2) - (( ASLToATL _seekerTargetPos) select 2) ) * 1.5) then {
+        if(_distanceToTarget < ( ((ASLToATL _projectilePos) select 2) - (( ASLToATL _seekerTargetPos) select 2) ) * 1.5) then {
             _state set[0, STAGE_TERMINAL];
+        } else {
+            _returnTargetPos = _seekerTargetPos vectorAdd [0,0,(_projectilePos select 2)];
         };
-        _returnTargetPos = _seekerTargetPos vectorAdd [0,0,(_projectilePos select 2)];
     };
     case STAGE_TERMINAL: {
         TRACE_1("STAGE_TERMINAL","");
         //_returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget * 0.02];
+        _returnTargetPos = _seekerTargetPos;
     };
 };
 

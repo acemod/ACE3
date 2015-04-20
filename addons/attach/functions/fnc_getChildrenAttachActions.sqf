@@ -17,6 +17,7 @@
  */
 #include "script_component.hpp"
 
+private ["_listed", "_actions", "_item", "_displayName", "_picture", "_action"];
 PARAMS_2(_target,_player);
 
 _listed = [];

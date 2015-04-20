@@ -4,6 +4,7 @@
 // Load settings from profile
 if (hasInterface) then {
     call FUNC(loadSettingsFromProfile);
+    call FUNC(loadSettingsLocalizedText);
 };
 
 // Listens for global "SettingChanged" events, to update the force status locally
@@ -65,8 +66,30 @@ if (_currentVersion != _previousVersion) then {
 
 0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber);
 
+// ACE events
 "ACEg" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
 "ACEc" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
+
+// Synced ACE events
+// Handle JIP scenario
+if(!isServer) then {
+    ["PlayerJip", { 
+        diag_log text format["[ACE] * JIP event synchronization initialized"];
+        ["SEH_all", [player]] call FUNC(serverEvent);
+    }] call FUNC(addEventHandler);
+} else {
+    ["SEH_all", FUNC(_handleRequestAllSyncedEvents)] call FUNC(addEventHandler);
+};
+["SEH", FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
+["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
+[FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
+
+
+/***************************************************************/
+/***************************************************************/
+/***************************************************************/
+/***************************************************************/
+/***************************************************************/
 
 // everything that only player controlled machines need, goes below this
 if (!hasInterface) exitWith {};
@@ -87,7 +110,7 @@ enableCamShake true;
 // Set the name for the current player
 ["playerChanged", {
     EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
-
+    
     if (alive _newPlayer) then {
         [_newPlayer] call FUNC(setName)
     };
@@ -107,7 +130,6 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 
 // PFH to raise varios events
 [{
-
     // "playerInventoryChanged" event
     _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
     if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
@@ -174,6 +196,31 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 
 }, 0, []] call cba_fnc_addPerFrameHandler;
 
+
+// PFH to raise camera created event. Only works on these cams by BI.
+#define ALL_CAMERAS [ \
+    missionNamespace getVariable ["BIS_DEBUG_CAM", objNull], \
+    missionNamespace getVariable ["BIS_fnc_camera_cam", objNull], \
+    uiNamespace getVariable ["BIS_fnc_arsenal_cam", objNull], \
+    uiNamespace getVariable ["BIS_fnc_animViewer_cam", objNull], \
+    missionNamespace getVariable ["BIS_fnc_establishingShot_fakeUAV", objNull] \
+]
+
+GVAR(OldIsCamera) = false;
+
+[{
+
+    // "activeCameraChanged" event
+    _isCamera = {!isNull _x} count ALL_CAMERAS > 0;
+    if !(_isCamera isEqualTo GVAR(OldIsCamera)) then {
+        // Raise ACE event locally
+        GVAR(OldIsCamera) = _isCamera;
+        ["activeCameraChanged", [ACE_player, _isCamera]] call FUNC(localEvent);
+    };
+
+}, 1, []] call cba_fnc_addPerFrameHandler; // feel free to decrease the sleep time if you need it.
+
+
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
 
 ["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
@@ -188,3 +235,18 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
     // Players can always interact with passengers of the same vehicle
     {!((_this select 0) isEqualTo (_this select 1)) && {vehicle (_this select 0) == vehicle (_this select 1)}}
 }] call FUNC(addCanInteractWithCondition);
+
+// Lastly, do JIP events
+// JIP Detection and event trigger. Run this at the very end, just in case anything uses it
+if(isMultiplayer && { time > 0 || isNull player } ) then {
+    // We are jipping! Get ready and wait, and throw the event
+    [{
+        if(!(isNull player)) then {   
+            ["PlayerJip", [player] ] call FUNC(localEvent);
+            [(_this select 1)] call cba_fnc_removePerFrameHandler;
+        }; 
+    }, 0, []] call cba_fnc_addPerFrameHandler;
+};
+
+
+

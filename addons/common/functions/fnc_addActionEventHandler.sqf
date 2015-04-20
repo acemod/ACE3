@@ -31,7 +31,11 @@ if (typeName _statement == "STRING") then {
 
 _name = format ["ACE_Action_%1", _action];
 
-_actionsVar = _unit getVariable [_name, [-1, [-1, [], []]]];
+_actionsVar = _unit getVariable [_name, [-1, [-1, [], []], objNull]];
+
+if (_unit != _actionsVar select 2) then {  // check if the unit is still valid, fixes respawn issues
+  _actionsVar = [-1, [-1, [], []], objNull];
+};
 
 _actionID = _actionsVar select 0;
 _actions = _actionsVar select 1;
@@ -65,6 +69,6 @@ if (_actionID == -1) then {
   _actionID = _unit addAction _addAction;
 };
 
-_unit setVariable [_name, [_actionID, [_id, _actionIDs, _actions]], false];
+_unit setVariable [_name, [_actionID, [_id, _actionIDs, _actions], _unit], false];
 
 _id

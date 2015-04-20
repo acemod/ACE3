@@ -15,10 +15,11 @@
  
 #include "script_component.hpp"
 
-private ["_pos", "_seekerWavelengths", "_seekerCode", "_spots", "_buckets", "_excludes", "_bucketIndex", "_finalPos", "_owner", "_obj", "_x", "_method", 
-    "_emitterWavelength", "_laserCode", "_divergence", "_laser", "_laserPos", "_laserDir", "_res", "_bucketPos", "_bucketList", "_c", "_forEachIndex", "_index", 
-    "_testPos", "_finalBuckets", "_largest", "_largestIndex", "_finalBucket", "_owners", "_avgX", "_avgY", "_avgZ", "_count", "_maxOwner", "_maxOwnerIndex", "_finalOwner"];
-    
+private ["_pos", "_seekerWavelengths", "_seekerCode", "_spots", "_buckets", "_excludes", "_bucketIndex", "_finalPos", "_owner", "_obj", "_x", "_method"]; 
+private ["_emitterWavelength", "_laserCode", "_divergence", "_laser", "_laserPos", "_laserDir", "_res", "_bucketPos", "_bucketList", "_c", "_forEachIndex", "_index"]; 
+private ["_testPos", "_finalBuckets", "_largest", "_largestIndex", "_finalBucket", "_owners", "_avgX", "_avgY", "_avgZ", "_count", "_maxOwner", "_maxOwnerIndex", "_finalOwner"];
+private["_dir", "_seekerCos", "_seekerFov", "_testDotProduct", "_testPoint", "_testPointVector"]; 
+
 _pos = _this select 0;
 _dir = vectorNormalized (_this select 1);
 _seekerFov = _this select 2;

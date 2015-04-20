@@ -26,7 +26,7 @@ PARAMS_4(_totalTime,_args,_onFinish,_onFail);
 DEFAULT_PARAM(4,_localizedTitle,"");
 DEFAULT_PARAM(5,_condition,{true});
 DEFAULT_PARAM(6,_exceptions,[]);
-private ["_player", "_perFrameFunction"];
+private ["_player", "_perFrameFunction", "_ctrlPos"];
 
 _player = ACE_player;
 
@@ -35,14 +35,17 @@ closeDialog 0;
 createDialog QGVAR(ProgressBar_Dialog);
 (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetText _localizedTitle;
 
-if (GVAR(SettingProgressBarLocation) == 1) then {
-    private "_ctrlPos";
-    _ctrlPos =  [1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2), 29 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2), 38 * (((safezoneW / safezoneH) min 1.2) / 40), 0.8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)];
-    (uiNamespace getVariable QGVAR(ctrlProgressBar)) ctrlSetPosition _ctrlPos;
-    (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetPosition _ctrlPos;
-    (uiNamespace getVariable QGVAR(ctrlProgressBar)) ctrlCommit 0;
-    (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlCommit 0;
-};
+//Adjust position based on user setting:
+_ctrlPos = ctrlPosition (uiNamespace getVariable QGVAR(ctrlProgressBarTitle));
+_ctrlPos set [1, ((0 + 29 * GVAR(SettingProgressBarLocation)) * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2))];
+
+(uiNamespace getVariable QGVAR(ctrlProgressBG)) ctrlSetPosition _ctrlPos;
+(uiNamespace getVariable QGVAR(ctrlProgressBG)) ctrlCommit 0;
+(uiNamespace getVariable QGVAR(ctrlProgressBar)) ctrlSetPosition _ctrlPos;
+(uiNamespace getVariable QGVAR(ctrlProgressBar)) ctrlCommit 0;
+(uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetPosition _ctrlPos;
+(uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlCommit 0;
+
 
 
 _perFrameFunction = {
