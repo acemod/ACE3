@@ -18,21 +18,21 @@ DFUNC(getIn) = {
 				GVAR(dragonLauncher) selectWeapon "ACE_M47_Dragon_static";
 				reload GVAR(dragonLauncher);
                 
-                TEST_TARGET_LINE_PFH = [{
-                    _launcher = (vehicle player);
-                    _pos1 = ATLtoASL (_launcher modelToWorldVisual (_launcher selectionPosition "konec rakety"));
-                    _pos2 = ATLtoASL (_launcher modelToWorldVisual (_launcher selectionPosition "spice rakety"));
-                    _oPos = ATLtoASL (_launcher modelToWorldVisual (_launcher selectionPosition "look"));
-                    _launcherVec = _pos1 vectorFromTo _pos2;
-                    _dp1 = _oPos;
-                    _dp2 = _oPos vectorAdd (_launcherVec vectorMultiply 800);
-                    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _dp2, 0.75, 0.75, 0, "OP", 0.5, 0.025, "TahomaB"];
-                    drawLine3D [ASLtoATL _dp1, ASLtoATL _dp2, [1, 0, 0, 1]];
-                    _dp1 = _oPos;
-                    _dp2 = _oPos vectorAdd ((_launcher weaponDirection (currentWeapon _launcher)) vectorMultiply 800);
-                    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _dp2, 0.75, 0.75, 0, "WD", 0.5, 0.025, "TahomaB"];
-                    drawLine3D [ASLtoATL _dp1, ASLtoATL _dp2, [0, 1, 0, 1]];
-                }, 0, []] call cba_fnc_addPerFrameHandler;
+                // TEST_TARGET_LINE_PFH = [{
+                    // _launcher = (vehicle player);
+                    // _pos1 = ATLtoASL (_launcher modelToWorldVisual (_launcher selectionPosition "konec rakety"));
+                    // _pos2 = ATLtoASL (_launcher modelToWorldVisual (_launcher selectionPosition "spice rakety"));
+                    // _oPos = ATLtoASL (_launcher modelToWorldVisual (_launcher selectionPosition "look"));
+                    // _launcherVec = _pos1 vectorFromTo _pos2;
+                    // _dp1 = _oPos;
+                    // _dp2 = _oPos vectorAdd (_launcherVec vectorMultiply 800);
+                    // drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _dp2, 0.75, 0.75, 0, "OP", 0.5, 0.025, "TahomaB"];
+                    // drawLine3D [ASLtoATL _dp1, ASLtoATL _dp2, [1, 0, 0, 1]];
+                    // _dp1 = _oPos;
+                    // _dp2 = _oPos vectorAdd ((_launcher weaponDirection (currentWeapon _launcher)) vectorMultiply 800);
+                    // drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _dp2, 0.75, 0.75, 0, "WD", 0.5, 0.025, "TahomaB"];
+                    // drawLine3D [ASLtoATL _dp1, ASLtoATL _dp2, [0, 1, 0, 1]];
+                // }, 0, []] call cba_fnc_addPerFrameHandler;
                 
 			};
 		} else {
@@ -60,7 +60,7 @@ DFUNC(onFired) = {
 };
 
 #define DRAGON_VELOCITY	100
-#define SERVICE_INTERVAL	0.3
+#define SERVICE_INTERVAL	0.33
 #define DRAGON_SERVICE_COUNT	60
 #define DRAGON_TRIM 1.5
 #define TRACKINTERVAL 0.025
@@ -69,8 +69,8 @@ DFUNC(onFired) = {
 #define CHARGE_VEL 6.5 
 
 DFUNC(guidance) = {
-    player sideChat format["t: %1", _this];
-    setAccTime 0;
+    // player sideChat format["t: %1", _this];
+    // setAccTime 0;
     if ((_this select 0) == ACE_player || {(gunner (_this select 0)) == ACE_player}) then {
         if ((typeOf (_this select 6)) == "ace_missile_dragon") then {
             _missile = (_this select 6);
@@ -117,13 +117,13 @@ DFUNC(guidance) = {
                 _pos2 = ATLtoASL (_launcher modelToWorldVisual (_launcher selectionPosition "spice rakety"));
                 _oPos = ATLtoASL (_launcher modelToWorldVisual (_launcher selectionPosition "look"));
                 
-                _launcherVec = _pos1 vectorFromTo _pos2;
+                _launcherVec = _launcher weaponDirection (currentWeapon _launcher);//_pos1 vectorFromTo _pos2;
                 // if(_serviceTime <= time) then {
                     // hintSilent format["%1", vectorMagnitude (velocity _missile)];
                     // [(_this select 1)] call cba_fnc_removePerFrameHandler;
                 // };
                 if(alive _missile && _serviceCount > 0) then { 
-                    hintSilent format["%1", vectorMagnitude (velocity _missile)];
+                    // hintSilent format["%1", vectorMagnitude (velocity _missile)];
                     
                     _mPos = getPosASL _missile;
                     if(_mPos vectorDistance _pos1 > 1500) exitWith { [(_this select 1)] call cba_fnc_removePerFrameHandler; };
@@ -146,7 +146,7 @@ DFUNC(guidance) = {
                         _vectorTo = _mPos vectorFromTo _vectorToPos;
                         
                         if((_vectorTo select 2) <= 0) then {
-                            player sideChat "PLIP";
+                            // player sideChat "PLIP";
                             _vectorTo set[2, 0];
                         };
                         _velocity = (velocity _missile) vectorAdd (_vectorTo vectorMultiply CHARGE_VEL);
@@ -154,8 +154,9 @@ DFUNC(guidance) = {
                         // TEST_PAIRS pushBack [_mPos, _mPos vectorAdd _velocity, [0,1,0,1]];
                         
                         _missile setVelocity _velocity;
+                        _missile setVectorDir (vectorNormalized _velocity);
                         
-                        "ace_m47_dragon_serviceCharge" createVehicle (ASLtoATL _mPos);
+                        "ace_m47_dragon_serviceCharge" createVehicle ((ASLtoATL _mPos) vectorAdd ((_vectorToCenter vectorMultiply -1) vectorMultiply 0.025));
                         _serviceCount = _serviceCount - 1;
                         
                     } else {
@@ -165,7 +166,7 @@ DFUNC(guidance) = {
                             
                             _centerLinePos = _oPos vectorAdd (_launcherVec vectorMultiply _centerDistance);
                             if(_mPos vectorDistance _centerLinePos > 1) then {
-                                diag_log text "pop!!!!!!!!!";
+                                // diag_log text "pop!!!!!!!!!";
                                 _params set[2, time+SERVICE_INTERVAL];
                                 
                                 _centerDistance = (_mPos vectorDistance _oPos);
@@ -181,7 +182,7 @@ DFUNC(guidance) = {
                                 _vectorTo = _mPos vectorFromTo _vectorToPos;
                                 
                                 if((_vectorTo select 2) <= 0) then {
-                                    player sideChat "PLIP";
+                                    // player sideChat "PLIP";
                                     _vectorTo set[2, 0];
                                 };
                                 _velocity = (velocity _missile) vectorAdd (_vectorTo vectorMultiply CHARGE_VEL);
@@ -189,8 +190,9 @@ DFUNC(guidance) = {
                                 // TEST_PAIRS pushBack [_mPos, _mPos vectorAdd _velocity, [0,1,0,1]];
                                 
                                 _missile setVelocity _velocity;
+                                _missile setVectorDir (vectorNormalized _velocity);
                                 
-                                "ace_m47_dragon_serviceCharge" createVehicle (ASLtoATL _mPos);
+                                "ace_m47_dragon_serviceCharge" createVehicle ((ASLtoATL _mPos) vectorAdd ((_vectorToCenter vectorMultiply -1) vectorMultiply 0.025));
                                 _serviceCount = _serviceCount - 1;
                             };
                         };
