@@ -16,7 +16,7 @@
 
 PARAMS_3(_unit,_turretAndDirection,_majorStep);
 
-if (vehicle _unit != _unit) exitWith {false};
+if (!(_unit isKindOf "Man")) exitWith {false};
 
 private ["_weaponIndex", "_zeroing", "_optic", "_increment", "_maxVertical", "_maxHorizontal", "_elevation", "_windage", "_zero", "_adjustment"];
 

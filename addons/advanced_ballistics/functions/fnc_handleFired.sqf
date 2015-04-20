@@ -110,7 +110,7 @@ _stabilityFactor = 1.5;
 
 if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
     _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL _unit) select 2);
-    _barometricPressure = 1013.25 * exp(-(EGVAR(weather,Altitude) + ((getPosASL _bullet) select 2)) / 7990) - 10 * overcast;
+    _barometricPressure = ((getPosASL _bullet) select 2) call EFUNC(weather,calculateBarometricPressure);
     _stabilityFactor = [_caliber, _bulletLength, _bulletMass, _barrelTwist, _muzzleVelocity, _temperature, _barometricPressure] call FUNC(calculateStabilityFactor);
 };
 
@@ -288,7 +288,7 @@ if (GVAR(AdvancedAirDragEnabled)) then {
                         };
 
                         if (GVAR(AtmosphericDensitySimulationEnabled)) then {
-                            _pressure = 1013.25 * exp(-(EGVAR(weather,Altitude) + (_bulletPosition select 2)) / 7990) - 10 * overcast;
+                            _pressure = (_bulletPosition select 2) call EFUNC(weather,calculateBarometricPressure);
                             _temperature = GET_TEMPERATURE_AT_HEIGHT(_bulletPosition select 2);
                             _humidity = EGVAR(weather,currentHumidity);
                             _airDensity = STD_AIR_DENSITY_ICAO;
@@ -315,7 +315,7 @@ if (GVAR(AdvancedAirDragEnabled)) then {
                         _bulletVelocity = _bulletVelocity vectorDiff _accel;
                     } else {
                         if (GVAR(AtmosphericDensitySimulationEnabled)) then {
-                            _pressureDeviation = 1013.25 * exp(-(EGVAR(weather,Altitude) + (_bulletPosition select 2)) / 7990) - 1013.25 - 10 * overcast;
+                            _pressureDeviation = (_bulletPosition select 2) call EFUNC(weather,calculateBarometricPressure) - 1013.25;
                             _temperature = GET_TEMPERATURE_AT_HEIGHT(_bulletPosition select 2);
                             _humidity = EGVAR(weather,currentHumidity);
                             _airFriction = _airFriction + ((_temperature - 15) * 0.0000015 + _humidity * 0.0000040 + _pressureDeviation * -0.0000009);

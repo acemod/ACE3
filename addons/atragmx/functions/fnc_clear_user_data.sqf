@@ -29,11 +29,16 @@ profileNamespace setVariable ["ACE_ATragMX_barometricPressure", nil];
 profileNamespace setVariable ["ACE_ATragMX_relativeHumidity", nil];
 
 profileNamespace setVariable ["ACE_ATragMX_showWind2", nil];
-profileNamespace setVariable ["latitude", nil];
-profileNamespace setVariable ["directionOfFire", nil];
+profileNamespace setVariable ["ACE_ATragMX_latitude", nil];
+profileNamespace setVariable ["ACE_ATragMX_directionOfFire", nil];
 profileNamespace setVariable ["ACE_ATragMX_windSpeed1", nil];
 profileNamespace setVariable ["ACE_ATragMX_windSpeed2", nil];
 profileNamespace setVariable ["ACE_ATragMX_windDirection", nil];
 profileNamespace setVariable ["ACE_ATragMX_inclinationAngle", nil];
 profileNamespace setVariable ["ACE_ATragMX_targetSpeed", nil];
 profileNamespace setVariable ["ACE_ATragMX_targetRange", nil];
+
+profileNamespace setVariable ["ACE_ATragMX_rangeCardStartRange", nil];
+profileNamespace setVariable ["ACE_ATragMX_rangeCardEndRange", nil];
+profileNamespace setVariable ["ACE_ATragMX_rangeCardIncrement", nil];
+profileNamespace setVariable ["ACE_ATragMX_rangeCardCurrentColumn", nil];

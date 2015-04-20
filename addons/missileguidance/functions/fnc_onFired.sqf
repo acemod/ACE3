@@ -86,13 +86,20 @@ _args = [_this,
 // Laser code needs to give us a shooter for LOBL, or the seeker unit needs to be able to shift locality
 // Based on its homing laser
 // Lasers need to be handled in a special LOAL/LOBL case
-_guidingUnit = ACE_player;
 
-if(local _guidingUnit) then {
+//if(isPlayer _shooter) then {
+//    _guidingUnit = ACE_player;
+//
+//    if(local _guidingUnit) then {
+//        [FUNC(guidancePFH), 0, _args ] call cba_fnc_addPerFrameHandler;
+//    } else {
+//        [QGVAR(handoff), [_guidingUnit, _args] ] call FUNC(doHandoff);
+//    };
+//} else {
     [FUNC(guidancePFH), 0, _args ] call cba_fnc_addPerFrameHandler;
-} else {
-    [QGVAR(handoff), [_guidingUnit, _args] ] call FUNC(doHandoff);
-};
+//};
+
+
 /* Clears locking settings
 (vehicle _shooter) setVariable [QGVAR(target), nil];
 (vehicle _shooter) setVariable [QGVAR(seekerType), nil];

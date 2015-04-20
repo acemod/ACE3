@@ -18,6 +18,7 @@
 GVAR(workingMemory) = +(GVAR(gunList) select 0);
 
 GVAR(scopeUnits) = ["MILs", "TMOA", "SMOA", "Clicks"];
+GVAR(scopeClickUnits) = ["TMOA", "SMOA", "MILs"];
 
 GVAR(rangeCardStartRange) = 200;
 GVAR(rangeCardEndRange) = 2000;
@@ -40,6 +41,8 @@ GVAR(currentUnit) = 2;
 GVAR(currentGun) = 0;
 GVAR(currentTarget) = 0;
 GVAR(currentScopeUnit) = 0;
+GVAR(currentScopeClickUnit) = 2;
+GVAR(currentScopeClickNumber) = 10;
 
 GVAR(atmosphereModeTBH) = true;
 GVAR(altitude) = 0;

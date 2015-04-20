@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="TR_ACE_Medical_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
+            <Polish>Detale zużytych medykamentów</Polish>
         </Key>
         <Key ID="TR_ACE_Medical_litterSimulationDetail_Desc">
             <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
+            <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -91,7 +92,7 @@
             <English>Bandage</English>
             <German>Verbinden</German>
             <Spanish>Venda</Spanish>
-            <Polish>Bandaż</Polish>
+            <Polish>Bandażuj</Polish>
             <Czech>Obvázat</Czech>
             <French>Pansement</French>
             <Italian>Benda</Italian>
@@ -377,7 +378,7 @@
             <English>Give Blood IV (1000ml)</English>
             <German>Bluttransfusion IV (1000ml)</German>
             <Spanish>Dar Sangre IV (1000ml)</Spanish>
-            <Russian>Дать кровь для в/в вливания (1000 мл)</Russian>
+            <Russian>Перелить пакет крови (1000 мл)</Russian>
             <Polish>Podaj krew IV (1000ml)</Polish>
             <French>Administrer du sang en IV (1000ml)</French>
             <Czech>Podat krev. transfúzi (1000ml)</Czech>
@@ -388,7 +389,7 @@
             <English>Give Blood IV (500ml)</English>
             <German>Bluttransfusion IV (500ml)</German>
             <Spanish>Dar Sangre IV (500ml)</Spanish>
-            <Russian>Дать кровь для в/в вливания (500 мл)</Russian>
+            <Russian>Перелить пакет крови (500 мл)</Russian>
             <Polish>Podaj krew IV (500ml)</Polish>
             <French>Administrer du sang en IV (500ml)</French>
             <Czech>Podat krev. transfúzi (500ml) </Czech>
@@ -399,7 +400,7 @@
             <English>Give Blood IV (250ml)</English>
             <German>Bluttransfusion IV (250ml)</German>
             <Spanish>Dar Sangre IV (250ml)</Spanish>
-            <Russian>Дать кровь для в/в вливания (250 мл)</Russian>
+            <Russian>Перелить пакет крови (250 мл)</Russian>
             <Polish>Podaj krew IV (250ml)</Polish>
             <French>Administrer du sang en IV (250ml)</French>
             <Czech>Podat krev. transfúzi (250ml)</Czech>
@@ -410,7 +411,7 @@
             <English>Give Plasma IV (1000ml)</English>
             <German>Plasmatransfusion IV (1000ml)</German>
             <Spanish>Dar Plasma IV (1000ml)</Spanish>
-            <Russian>Дать плазму для в/в вливания (1000 мл)</Russian>
+            <Russian>Перелить пакет плазмы (1000 мл)</Russian>
             <Polish>Podaj osocze IV (1000ml)</Polish>
             <French>Administrer du plasma en IV (1000ml)</French>
             <Czech>Podat plazmu (1000ml)</Czech>
@@ -421,7 +422,7 @@
             <English>Give Plasma IV (500ml)</English>
             <German>Plasmatransfusion IV (500ml)</German>
             <Spanish>Dar Plasma IV (500ml)</Spanish>
-            <Russian>Дать плазму для в/в вливания (500 мл)</Russian>
+            <Russian>Перелить пакет плазмы (500 мл)</Russian>
             <Polish>Podaj osocze IV (500ml)</Polish>
             <French>Administrer du plasma en IV (500ml)</French>
             <Czech>Podat plazmu (500ml)</Czech>
@@ -432,7 +433,7 @@
             <English>Give Plasma IV (250ml)</English>
             <German>Plasmatransfusion IV (250ml)</German>
             <Spanish>Dar Plasma IV (250ml)</Spanish>
-            <Russian>Дать плазму для в/в вливания (250 мл)</Russian>
+            <Russian>Перелить пакет плазмы (250 мл)</Russian>
             <Polish>Podaj osocze IV (250ml)</Polish>
             <French>Administrer du plasma en IV (250ml)</French>
             <Czech>Podat plazmu (250ml)</Czech>
@@ -443,7 +444,7 @@
             <English>Give Saline IV (1000ml)</English>
             <German>Kochsaltzlösung IV (1000ml)</German>
             <Spanish>Dar Salino IV (1000ml)</Spanish>
-            <Russian>Дать физраствор для в/в вливания (1000 мл)</Russian>
+            <Russian>Перелить пакет физраствора (1000 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (1000ml)</Polish>
             <French>Administrer de la solution saline en IV (1000ml)</French>
             <Czech>Podaz fyz. roztok (1000ml)</Czech>
@@ -454,7 +455,7 @@
             <English>Give Saline IV (500ml)</English>
             <German>Kochsaltzlösung IV (500ml)</German>
             <Spanish>Dar Salino IV (500ml)</Spanish>
-            <Russian>Дать физраствор для в/в вливания (500 мл)</Russian>
+            <Russian>Перелить пакет физраствора (500 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (500ml)</Polish>
             <French>Administrer de la solution saline en IV (500ml)</French>
             <Czech>Podaz fyz. roztok (500ml)</Czech>
@@ -465,7 +466,7 @@
             <English>Give Saline IV (250ml)</English>
             <German>Kochsaltzlösung IV (250ml)</German>
             <Spanish>Dar Salino IV (250ml)</Spanish>
-            <Russian>Дать физраствор для в/в вливания (250 мл)</Russian>
+            <Russian>Перелить пакет физраствора (250 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (250ml)</Polish>
             <French>Administrer de la solution saline en IV (250ml)</French>
             <Czech>Podaz fyz. roztok (250ml)</Czech>
@@ -476,7 +477,7 @@
             <English>Minor</English>
             <German>Gering</German>
             <Spanish>Menor</Spanish>
-            <Russian>Незначительная</Russian>
+            <Russian>Несрочная помощь</Russian>
             <Polish>Normalny</Polish>
             <French>Léger</French>
             <Czech>Minimální</Czech>
@@ -486,7 +487,7 @@
         <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DELAYED">
             <English>Delayed</English>
             <Spanish>Retrasado</Spanish>
-            <Russian>Груз 300</Russian>
+            <Russian>Срочная помощь</Russian>
             <Polish>Opóźniony</Polish>
             <French>Différé</French>
             <German>Verzögert</German>
@@ -497,7 +498,7 @@
         <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_IMMEDIATE">
             <English>Immediate</English>
             <Spanish>Inmediato</Spanish>
-            <Russian>Помощь отложена</Russian>
+            <Russian>Неотложная помощь</Russian>
             <Polish>Natychmiastowy</Polish>
             <French>Urgence Immédiate</French>
             <German>Sofort</German>
@@ -508,7 +509,7 @@
         <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_DECEASED">
             <English>Deceased</English>
             <Spanish>Fallecido</Spanish>
-            <Russian>Груз 200</Russian>
+            <Russian>Труп</Russian>
             <Polish>Nie żyje</Polish>
             <French>Décédé</French>
             <German>Verstorben</German>
@@ -519,7 +520,7 @@
         <Key ID="STR_ACE_MEDICAL_TRIAGE_STATUS_NONE">
             <English>None</English>
             <Spanish>Ninguno</Spanish>
-            <Russian>Нет</Russian>
+            <Russian>Отсутствует</Russian>
             <Polish>Brak</Polish>
             <French>Aucun</French>
             <German>Keine</German>
@@ -1528,7 +1529,7 @@
             <English>Heavily wounded</English>
             <German>Schwer verwundet:</German>
             <Polish>Ciężko ranny</Polish>
-            <Russian>Сильно ранен</Russian>
+            <Russian>Тяжелые ранения</Russian>
             <Italian>Gravemente ferito</Italian>
             <Spanish>Gravemente herido</Spanish>
             <French>Lourdement blessé</French>
@@ -1537,7 +1538,7 @@
             <English>Lightly wounded</English>
             <German>Leicht verwundet:</German>
             <Polish>Lekko ranny</Polish>
-            <Russian>Легко ранен</Russian>
+            <Russian>Легкие ранения</Russian>
             <Italian>Leggermente ferito</Italian>
             <Spanish>Levemente herido</Spanish>
             <French>Légèrement blessé</French>
@@ -1546,7 +1547,7 @@
             <English>Very lightly wounded</English>
             <German>Sehr leicht verwundet:</German>
             <Polish>B. lekko ranny</Polish>
-            <Russian>Очень легко ранен</Russian>
+            <Russian>Царапины</Russian>
             <Italian>Ferito lievemente</Italian>
             <Spanish>Muy levemente herido</Spanish>
             <French>Très légèrement blessé</French>
@@ -1555,7 +1556,7 @@
             <English>Head</English>
             <German>Kopf</German>
             <Polish>Głowa</Polish>
-            <Russian>Голова</Russian>
+            <Russian>Головы</Russian>
             <Italian>Testa</Italian>
             <Spanish>Cabeza</Spanish>
             <French>Tête</French>
@@ -1564,7 +1565,7 @@
             <English>Torso</English>
             <German>Torso</German>
             <Polish>Tors</Polish>
-            <Russian>Торс</Russian>
+            <Russian>Торса</Russian>
             <Italian>Torso</Italian>
             <Spanish>Torso</Spanish>
             <French>Torse</French>
@@ -1573,7 +1574,7 @@
             <English>Left Arm</English>
             <German>Linker Arm</German>
             <Polish>Lewe ramię</Polish>
-            <Russian>Левая рука</Russian>
+            <Russian>Левой руки</Russian>
             <Italian>Braccio sinistro</Italian>
             <Spanish>Brazo izquierdo</Spanish>
             <French>Bras gouche</French>
@@ -1582,7 +1583,7 @@
             <English>Right Arm</English>
             <German>Rechter Arm</German>
             <Polish>Prawe ramię</Polish>
-            <Russian>Правая рука</Russian>
+            <Russian>Правой руки</Russian>
             <Italian>Braccio destro</Italian>
             <Spanish>Brazo derecho</Spanish>
             <French>Bras droit</French>
@@ -1591,7 +1592,7 @@
             <English>Left Leg</English>
             <German>Linkes Bein</German>
             <Polish>Lewa noga</Polish>
-            <Russian>Левая нога</Russian>
+            <Russian>Левой ноги</Russian>
             <Italian>Gamba sinistra</Italian>
             <Spanish>Pierna izquierda</Spanish>
             <French>Jambe gauche</French>
@@ -1600,7 +1601,7 @@
             <English>Right Leg</English>
             <German>Rechtes Bein</German>
             <Polish>Prawa noga</Polish>
-            <Russian>Правая нога</Russian>
+            <Russian>Правой ноги</Russian>
             <Italian>Gamba destra</Italian>
             <Spanish>Pierna derecha</Spanish>
             <French>Jambe droite</French>
@@ -1609,7 +1610,7 @@
             <English>Pain Effect Type</English>
             <German>Schmerzeffekt-Typ</German>
             <Polish>Rodzaj efektu bólu</Polish>
-            <Russian>Вид боли</Russian>
+            <Russian>Визуальный эффект боли</Russian>
             <Italian>Pain Effect Type</Italian>
             <Spanish>Tipo de efecto de dolor</Spanish>
             <French>Type d'effet de douleur</French>
@@ -1618,7 +1619,7 @@
             <English>Colour Flashing</English>
             <German>Farbblinken</German>
             <Polish>Pulsujące kolory</Polish>
-            <Russian>Разноцветные вспышки</Russian>
+            <Russian>Пульсирующий свет</Russian>
             <Italian>Colore lampeggiante</Italian>
             <Spanish>Parpadeo de color</Spanish>
             <French>Flash de couleur</French>
