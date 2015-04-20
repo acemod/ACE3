@@ -12,3 +12,5 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define ACE_DLLS ["ace_breakLine","ace_advanced_ballistics","ace_fcs"]

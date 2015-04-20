@@ -2,13 +2,11 @@
 // execute on server only!
 #include "script_component.hpp"
 
-private "_unit";
-
-_unit = _this select 0;
+PARAMS_1(_unit);
 
 private ["_group0", "_rallypoint"];
 
-_group0 = group _unit;  // _group is a reserved veriable and shouldn't be used
+_group0 = group _unit;  // _group-is a reserved veriable and shouldn't be used
 
 _rallypoint = [
     objNull,

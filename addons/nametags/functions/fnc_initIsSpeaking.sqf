@@ -55,6 +55,7 @@ if (isClass (configFile >> "cfgPatches" >> "acre_api")) then {
         //Note: class RscDisplayVoiceChat {idd = 55} - only present when talking
 
         [{
+            private ["_oldSetting", "_newSetting"];
             _oldSetting = ACE_player getVariable [QGVAR(isSpeakingInGame), false];
             _newSetting = (!(isNull findDisplay 55));
             if (!(_oldSetting isEqualTo _newSetting)) then {

@@ -120,6 +120,7 @@ PREP(loadPerson);
 PREP(loadPersonLocal);
 PREP(loadSettingsFromProfile);
 PREP(loadSettingsOnServer);
+PREP(loadSettingsLocalizedText);
 PREP(map);
 PREP(moduleCheckPBOs);
 PREP(moduleLSDVehicles);
@@ -269,6 +270,21 @@ PREP(hashListCreateHash);
 PREP(hashListSelect);
 PREP(hashListSet);
 PREP(hashListPush);
+
+// Synchronized Events
+PREP(syncedEventPFH);
+PREP(addSyncedEventHandler);
+PREP(removeSyncedEventHandler);
+PREP(requestSyncedEvent);
+PREP(syncedEvent);
+
+PREP(_handleSyncedEvent);
+PREP(_handleRequestSyncedEvent);
+PREP(_handleRequestAllSyncedEvents);
+
+GVAR(syncedEvents) = HASH_CREATE;
+
+// @TODO: Generic local-managed global-synced objects (createVehicleLocal)
 
 //Debug
 ACE_COUNTERS = [];

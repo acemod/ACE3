@@ -24,7 +24,7 @@ _pressure             = _this select 2; // in hPa
 _relativeHumidity     = _this select 3; // as ratio 0-1
 _atmosphereModel      = _this select 4; // "ICAO" or "ASM"
 
-_airDensity = [_temperature, _pressure, _relativeHumidity] call FUNC(calculateAirDensity);
+_airDensity = [_temperature, _pressure, _relativeHumidity] call EFUNC(weather,calculateAirDensity);
 
 if (_atmosphereModel == "ICAO") then {
     (STD_AIR_DENSITY_ICAO / _airDensity) * _ballisticCoefficient

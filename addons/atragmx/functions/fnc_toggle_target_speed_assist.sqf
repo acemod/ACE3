@@ -21,9 +21,13 @@ if (ctrlVisible 8000) then {
     
     if (_this == 1) then {
         [] call FUNC(calculate_target_speed_assist);
-        ctrlSetText [330, Str(parseNumber(ctrlText 8007))];
-        ctrlSetText [140050, Str(parseNumber(ctrlText 8007))];
-        [] call FUNC(calculate_target_solution);
+        private ["_targetSpeed"];
+        _targetSpeed = parseNumber(ctrlText 8007);
+        if (_targetSpeed != 0) then {
+            ctrlSetText [330, Str(_targetSpeed)];
+            ctrlSetText [140050, Str(_targetSpeed)];
+            [] call FUNC(calculate_target_solution);
+        };
     };
 } else {
     false call FUNC(show_main_page);

@@ -5,11 +5,14 @@ TRACE_1("enter", _this);
 #define __TRACKINTERVAL 0    // how frequent the check should be.
 #define __LOCKONTIME 3    // Lock on won't occur sooner
 
+private["_apos", "_aposX", "_aposY", "_args", "_boundsInput", "_bpos", "_canFire", "_constraintBottom"];
+private["_constraintLeft", "_constraintRight", "_constraintTop", "_currentTarget", "_fireDisabledEH"];
+private["_firedEH", "_fov", "_lastTick", "_lockTime", "_maxX", "_maxY", "_minX", "_minY", "_newTarget"]; 
+private["_offsetX", "_offsetY", "_pos", "_randomLockInterval", "_randomPosWithinBounds", "_range"];
+private["_runTime", "_soundTime", "_targetArray", "_zamerny"];
 
 #define __OffsetX ((ctrlPosition __JavelinIGUITargetingLineV) select 0) - 0.5
 #define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5
-
-private["_isJavelin", "_args", "_lastTick", "_runTime", "_soundTime", "_lockTime", "_newTarget", "_currentTarget", "_range", "_pos", "_targetArray"];
 
 // Reset arguments if we havnt rendered in over a second
 _args = uiNamespace getVariable[QGVAR(arguments), [] ];
@@ -30,13 +33,18 @@ _soundTime = _args select 4;
 _randomLockInterval = _args select 5;
 _fireDisabledEH = _args select 6;
 
-if( ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "launch_Titan_base"] call EFUNC(common,inheritsFrom)) ) exitWith {
+if( ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "launch_Titan_short_base"] call EFUNC(common,inheritsFrom)) 
+    &&
+    { ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "missiles_titan_at"] call EFUNC(common,inheritsFrom)) }
+    ) exitWith {
     __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
     __JavelinIGUITargetingConstraints ctrlShow false;
     
-    _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
+    if(!isNil "_fireDisabledEH") then {
+        _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
+    };
     
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
     uiNamespace setVariable["ACE_RscOptics_javelin_PFH", nil];
@@ -55,13 +63,21 @@ if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && 
         
         
 // bail on not loaded
-if (ACE_player ammo (currentWeapon ACE_player) == 0) exitWith {  };  
-        
+if( (vehicle ACE_player) != ACE_player) then {
+    if( (vehicle player) magazineTurretAmmo ["1Rnd_GAT_missiles", [0]] < 1) exitWith { 
+        TRACE_1("No turret ammo, exit", "");
+    };
+} else {
+    if (ACE_player ammo (currentWeapon ACE_player) < 1 ) exitWith { 
+        TRACE_1("No ammo, exit", "");
+    };  
+};
+          
 _range = parseNumber (ctrlText __JavelinIGUIRangefinder);
 TRACE_1("Viewing range", _range);
 if (_range > 50 && {_range < 2500}) then {
     _pos = positionCameraToWorld [0,0,_range];
-    _targetArray = _pos nearEntities ["AllVehicles", _range/25];
+    _targetArray = _pos nearEntities ["AllVehicles", _range/100];
     TRACE_1("Searching at range", _targetArray);
     if (count (_targetArray) > 0) then {
         _newTarget = _targetArray select 0;
@@ -144,6 +160,8 @@ if (isNull _newTarget) then {
     // Disallow fire
     _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
 } else {
+    _fov = [] call CBA_fnc_getFoV;
+    TRACE_1("FOV", _fov);
     if (_newTarget distance ACE_player < 2500
             && {(call CBA_fnc_getFoV) select 1 > 9} 
              && { (currentVisionMode ACE_player == 2)}

@@ -88,7 +88,7 @@ switch (GVAR(Menu)) do {
         if (!GVAR(MinAvgMax)) then {
             if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
                 _textCenterBig = Str(round(abs(sin(GVAR(RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
-                _textInfoLine1 = format["%1 m/s @ %2", round((cos(_playerDir - _windDir) * _windSpeed) * 10) / 10, round(_playerDir)];
+                _textInfoLine1 = format["%1 m/s @ %2", round((abs(cos(_playerDir - _windDir)) * _windSpeed) * 10) / 10, round(_playerDir)];
             } else {
                 _textCenterBig = Str(round(abs(sin(GVAR(RefHeading)) * _windSpeed) * 10) / 10);
                 _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_windDir)];
@@ -120,7 +120,7 @@ switch (GVAR(Menu)) do {
         if (!GVAR(MinAvgMax)) then {
             if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
                 _textCenterBig = Str(round(abs(cos(GVAR(RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
-                _textInfoLine1 = format["%1 m/s @ %2", round((cos(_playerDir - _windDir) * _windSpeed) * 10) / 10, round(_playerDir)];
+                _textInfoLine1 = format["%1 m/s @ %2", round((abs(cos(_playerDir - _windDir)) * _windSpeed) * 10) / 10, round(_playerDir)];
             } else {
                 _textCenterBig = Str(round(abs(cos(GVAR(RefHeading)) * _windSpeed) * 10) / 10);
                 _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_windDir)];
@@ -174,7 +174,7 @@ switch (GVAR(Menu)) do {
     };
     case 6: { // BARO
         if (!GVAR(MinAvgMax)) then {
-            _textCenterBig = Str(round((1013.25 * exp(-(EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast) * 10) / 10);
+            _textCenterBig = Str(round((((getPosASL ACE_player) select 2) call EFUNC(weather,calculateBarometricPressure)) * 10) / 10);
         } else {
             _textCenterLine1Left = "Min";
             _textCenterLine2Left = "Avg";

@@ -137,6 +137,7 @@
             <French>Vérifier la température</French>
             <Hungarian>Fegyverhő ellenőrzése</Hungarian>
             <Russian>Проверить температуру оружия</Russian>
+            <German>Waffentemperatur prüfen</German>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingTemperature">
             <English>Checking temperature ...</English>

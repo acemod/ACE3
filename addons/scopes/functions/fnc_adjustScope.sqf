@@ -14,11 +14,11 @@
  */
 #include "script_component.hpp"
 
-if !(vehicle _unit == _unit) exitWith {false};
+PARAMS_3(_unit,_turretAndDirection,_majorStep);
 
-private ["_unit", "_turretAndDirection", "_majorStep", "_weaponIndex", "_zeroing", "_optic", "_increment", "_maxVertical", "_maxHorizontal", "_elevation", "_windage", "_zero"];
+if (!(_unit isKindOf "Man")) exitWith {false};
 
-EXPLODE_3_PVT(_this,_unit,_turretAndDirection,_majorStep);
+private ["_weaponIndex", "_zeroing", "_optic", "_increment", "_maxVertical", "_maxHorizontal", "_elevation", "_windage", "_zero", "_adjustment"];
 
 _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {false};

@@ -12,10 +12,11 @@
  */
 #include "script_component.hpp"
 
-if !(vehicle _unit == _unit) exitWith {false};
+PARAMS_1(_unit);
 
-private ["_unit", "_adjustment", "_zeroing", "_elevation", "_windage", "_zero"];
-_unit = _this select 0;
+if (vehicle _unit != _unit) exitWith {false};
+
+private ["_weaponIndex", "_adjustment", "_zeroing", "_elevation", "_windage", "_zero"];
 
 _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {false};

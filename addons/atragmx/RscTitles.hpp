@@ -133,40 +133,6 @@ class ATragMX_RscListNBox: ATragMX_RscListBox {
     idcLeft=-1;
     idcRight=-1;
 };
-class ATragMX_RscControlsGroup {
-    type=15;
-    idc=-1;
-    style=16;
-    x=0;
-    y=0;
-    w=1;
-    h=1;
-    shadow=0;
-    class VScrollbar {
-        color[]={1,1,1,0.6};
-        width=0.021;
-        autoScrollSpeed=-1;
-        autoScrollDelay=5;
-        autoScrollRewind=0;
-        shadow=0;
-    };
-    class HScrollbar {
-        color[]={1,1,1,0.6};
-        height=0.028;
-        shadow=0;
-    };
-    class ScrollBar {
-        color[]={1,1,1,0.6};
-        colorActive[]={1,1,1,1};
-        colorDisabled[]={1,1,1,0.3};
-        thumb="#(argb,8,8,3)color(1,1,1,1)";
-        arrowEmpty="#(argb,8,8,3)color(1,1,1,1)";
-        arrowFull="#(argb,8,8,3)color(1,1,1,1)";
-        border="#(argb,8,8,3)color(1,1,1,1)";
-    };
-    class Controls {
-    };
-};
 class ATragMX_RscLineBreak {
     idc=-1;
     type=98;
@@ -263,7 +229,31 @@ class ATragMX_Display {
             idc=-1;
             x=0.55*safezoneW+safezoneX+0.315;
         };
-
+        
+        class TEXT_GUN_FRAME: ATragMX_RscText {
+            idc=1001;
+            style=64;
+            x=0.550*safezoneW+safezoneX+0.11;
+            y=0.265*safezoneH+safezoneY+0.25;
+            w=0.0925;
+            h=0.205;
+            text="";
+        };
+        class TEXT_ATMOSPHERE_FRAME: TEXT_GUN_FRAME {
+            idc=1002;
+            x=0.550*safezoneW+safezoneX+0.205;
+        };
+        class TEXT_TARGET_FRAME: TEXT_GUN_FRAME {
+            idc=1003;
+            x=0.550*safezoneW+safezoneX+0.3;
+        };
+        class TEXT_RESULT_FRAME: TEXT_GUN_FRAME {
+            idc=1004;
+            x=0.550*safezoneW+safezoneX+0.11;
+            y=0.265*safezoneH+safezoneY+0.46;
+            w=0.2825;
+            h=0.15;
+        };
         class TEXT_GUN_PROFILE: ATragMX_RscText {
             idc=1000;
             x=0.550*safezoneW+safezoneX+0.11;
@@ -438,13 +428,13 @@ class ATragMX_Display {
             text="B";
             action=QUOTE(1 call FUNC(change_target_slot));
         };
-        class TEXT_TARGET_C: TEXT_TARGET_B {
+        class TEXT_TARGET_C: TEXT_TARGET_A {
             idc=502;
             x=0.550*safezoneW+safezoneX+0.2512;
             text="C";
             action=QUOTE(2 call FUNC(change_target_slot));
         };
-        class TEXT_TARGET_D: TEXT_TARGET_B {
+        class TEXT_TARGET_D: TEXT_TARGET_A {
             idc=503;
             x=0.550*safezoneW+safezoneX+0.2743;
             text="D";
@@ -511,7 +501,7 @@ class ATragMX_Display {
         class TEXT_ELEVATION: TEXT_GUN_PROFILE {
             idc=40;
             w=0.05;
-            x=0.550*safezoneW+safezoneX+0.11;
+            x=0.550*safezoneW+safezoneX+0.115;
             y=0.265*safezoneH+safezoneY+0.50;
             text="Elev";
         };
@@ -570,10 +560,10 @@ class ATragMX_Display {
         class TEXT_LEAD: TEXT_GUN {
             idc=42;
             w=0.05;
-            x=0.550*safezoneW+safezoneX+0.11;
+            x=0.550*safezoneW+safezoneX+0.115;
             y=0.265*safezoneH+safezoneY+0.57;
             text="Lead";
-            action="";
+            action=QUOTE(GVAR(showWind2) = !GVAR(showWind2); call FUNC(update_result); call FUNC(update_target));
         };
         class TEXT_LEAD_OUTPUT: TEXT_ELEVATION_OUTPUT_ABSOLUTE {
             idc=420;
@@ -679,6 +669,7 @@ class ATragMX_Display {
             h=0.45;
             x=0.550*safezoneW+safezoneX+0.11;
             y=0.265*safezoneH+safezoneY+0.24;
+            sizeEx=0.025;
             colorSelectBackground[]={0.15,0.21,0.23,0.3};
             colorSelectBackground2[]={0.15,0.21,0.23,0.3};
             onMouseButtonDblClick=QUOTE(true call FUNC(toggle_gun_list));
@@ -1124,6 +1115,13 @@ class ATragMX_Display {
             idc=120060;
             y=0.265*safezoneH+safezoneY+0.520;
         };
+        class TEXT_GUN_AMMO_DATA_ZERO_RANGE_METER_INDICATOR: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
+            idc=120061;
+            w=0.05;
+            x=0.550*safezoneW+safezoneX+0.315;
+            y=0.265*safezoneH+safezoneY+0.520;
+            text="";
+        };
         class TEXT_GUN_AMMO_DATA_DONE: TEXT_TARGET_SPEED_ASSIST_DONE {
             idc=12008;
             action=QUOTE(1 call FUNC(toggle_gun_ammo_data));
@@ -1213,6 +1211,12 @@ class ATragMX_Display {
         class TEXT_ATMO_ENV_DATA_NEXT: TEXT_TARGET_SPEED_ASSIST_NEXT {
             idc=13010;
         };
+        class TEXT_ATMO_ENV_DATA_CALC_METHOD: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
+            idc=13011;
+            x=0.550*safezoneW+safezoneX+0.24;
+            y=0.265*safezoneH+safezoneY+0.29;
+            text="Calc Method";
+        };
         
         class TEXT_TARGET_DATA_LATITUDE: TEXT_BORE_HEIGHT {
             idc=14000;
@@ -1237,14 +1241,30 @@ class ATragMX_Display {
         };
         class TEXT_TARGET_DATA_WIND_SPEED: TEXT_TARGET_DATA_LATITUDE {
             idc=14002;
+            w=1.2;
             y=0.265*safezoneH+safezoneY+0.360;
             text="Wind Speed (m/s)";
+        };
+        class TEXT_TARGET_DATA_WIND_SPEED_1: TEXT_TARGET_DATA_LATITUDE {
+            idc=141020;
+            colorText[]={0,0,0,0.6};
+            w=0.05;
+            h=0.03;
+            sizeEx=0.025;
+            x=0.550*safezoneW+safezoneX+0.270;
+            y=0.265*safezoneH+safezoneY+0.357;
+            text="1";
         };
         class TEXT_TARGET_DATA_WIND_SPEED_INPUT_1: TEXT_TARGET_DATA_LATITUDE_INPUT {
             idc=140020;
             w=0.045;
-            x=0.550*safezoneW+safezoneX+0.300;
+            x=0.550*safezoneW+safezoneX+0.290;
             y=0.265*safezoneH+safezoneY+0.360;
+        };
+        class TEXT_TARGET_DATA_WIND_SPEED_2: TEXT_TARGET_DATA_WIND_SPEED_1 {
+            idc=141021;
+            x=0.550*safezoneW+safezoneX+0.330;
+            text="2";
         };
         class TEXT_TARGET_DATA_WIND_SPEED_INPUT_2: TEXT_TARGET_DATA_LATITUDE_INPUT {
             idc=140021;
@@ -1263,20 +1283,38 @@ class ATragMX_Display {
         };
         class TEXT_TARGET_DATA_INCLINATION_ANGLE: TEXT_TARGET_DATA_LATITUDE {
             idc=14004;
+            w=1.2;
             y=0.265*safezoneH+safezoneY+0.440;
             text="Inclination Angle";
+        };
+        class TEXT_TARGET_DATA_INCLINATION_ANGLE_COSINE: TEXT_TARGET_DATA_LATITUDE {
+            idc=141041;
+            colorText[]={0,0,0,0.6};
+            w=0.05;
+            h=0.03;
+            sizeEx=0.025;
+            x=0.550*safezoneW+safezoneX+0.270;
+            y=0.265*safezoneH+safezoneY+0.437;
+            text="c";
         };
         class TEXT_TARGET_DATA_INCLINATION_ANGLE_INPUT_COSINE: TEXT_TARGET_DATA_LATITUDE_INPUT {
             idc=140041;
             w=0.045;
-            x=0.550*safezoneW+safezoneX+0.300;
+            x=0.550*safezoneW+safezoneX+0.290;
             y=0.265*safezoneH+safezoneY+0.440;
+            onKeyUp=QUOTE(if (_this select 1 == 28) then {0 call FUNC(update_inclination_angle)});
+        };
+        class TEXT_TARGET_DATA_INCLINATION_ANGLE_DEGREE: TEXT_TARGET_DATA_INCLINATION_ANGLE_COSINE {
+            idc=141040;
+            x=0.550*safezoneW+safezoneX+0.330;
+            text="d";
         };
         class TEXT_TARGET_DATA_INCLINATION_ANGLE_INPUT_DEGREE: TEXT_TARGET_DATA_LATITUDE_INPUT {
             idc=140040;
             w=0.045;
             x=0.550*safezoneW+safezoneX+0.350;
             y=0.265*safezoneH+safezoneY+0.440;
+            onKeyUp=QUOTE(if (_this select 1 == 28) then {1 call FUNC(update_inclination_angle)});
         };
         class TEXT_TARGET_DATA_TARGET_SPEED: TEXT_TARGET_DATA_LATITUDE {
             idc=14005;
@@ -1295,6 +1333,13 @@ class ATragMX_Display {
         class TEXT_TARGET_DATA_TARGET_RANGE_INPUT: TEXT_TARGET_DATA_LATITUDE_INPUT {
             idc=140060;
             y=0.265*safezoneH+safezoneY+0.520;
+        };
+        class TEXT_TARGET_DATA_TARGET_RANGE_METER_INDICATOR: TEXT_TARGET_DATA_LATITUDE {
+            idc=140061;
+            w=0.05;
+            x=0.550*safezoneW+safezoneX+0.315;
+            y=0.265*safezoneH+safezoneY+0.520;
+            text="";
         };
         class TEXT_TARGET_DATA_DONE: TEXT_TARGET_SPEED_ASSIST_DONE {
             idc=14008;
