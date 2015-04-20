@@ -385,19 +385,20 @@ def cleanup_optionals(mod,pbos):
 			else:
 				destination = os.path.join(module_root,dir_name)
 			
-			print("Cleaning " + destination)
-			
-			try:
-				file_name = "ace_{}.pbo".format(dir_name)
-				src_file_path = os.path.join(release_dir, "@ace","addons",file_name)
-				dst_file_path = os.path.join(release_dir, "@ace","optionals",file_name)
-				if (os.path.isfile(src_file_path)):
-					#print("Preserving " + file_name)
-					os.renames(src_file_path,dst_file_path)
-			except FileExistsError:
-				print_error(file_name + " already exists")
-				continue
-			shutil.rmtree(destination)
+				print("Cleaning " + destination)
+				
+				try:
+					file_name = "ace_{}.pbo".format(dir_name)
+					src_file_path = os.path.join(release_dir, "@ace","addons",file_name)
+					dst_file_path = os.path.join(release_dir, "@ace","optionals",file_name)
+					print_green("Moving " + file_name + " to optionals from \n" + src_file_path + "\nto\n" + dst_file_path)
+					if (os.path.isfile(src_file_path)):
+						#print("Preserving " + file_name)
+						os.renames(src_file_path,dst_file_path)
+				except FileExistsError:
+					print_error(file_name + " already exists")
+					continue
+				shutil.rmtree(destination)
 			
 	except:
 		print_error("Cleaning Optionals Failed")
@@ -954,7 +955,10 @@ See the make.cfg file for additional build options.
 			print_error("ERROR: Could not delete pboProject temp files.")
 
 	print_green("\nDone.")
-
+	print_green("\Copying important Files.")
+	copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
+	print_green("\nCleaning Optionals.")
+	cleanup_optionals(optionals_modules,optional_files)
 	# Make release
 	if make_release:
 		print_blue("\nMaking release: " + project + "-" + release_version + ".zip")
@@ -993,9 +997,6 @@ See the make.cfg file for additional build options.
 				shutil.copytree(os.path.join(module_root, release_dir, project), os.path.join(a3_path, project))
 			except:
 				print_error("Could not copy files. Is Arma 3 running?")
-
-	copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
-	cleanup_optionals(optionals_modules,optional_files)
 if __name__ == "__main__":
 	main(sys.argv)
 input("Press Enter to continue...")
