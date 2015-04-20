@@ -50,3 +50,6 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     GVAR(actionSelected) = false;
     [] call FUNC(keyUp);
 }] call EFUNC(common,addEventhandler);
+
+// disable firing while the interact menu is is is opened
+["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventHandler);

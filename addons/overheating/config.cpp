@@ -23,7 +23,7 @@ class CfgPatches {
 class ACE_Settings {
     class GVAR(DisplayTextOnJam) {
         typeName = "BOOL";
-        isClientSetable = 1;
+        isClientSettable = 1;
         value = 1;
         displayName = "$STR_ACE_overheating_SettingDisplayTextName";
         description = "$STR_ACE_overheating_SettingDisplayTextDesc";

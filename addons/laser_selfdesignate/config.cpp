@@ -10,8 +10,6 @@ class CfgPatches {
     };
 };
 
-#include "CfgUI.hpp"
-
 #include "CfgEventhandlers.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"

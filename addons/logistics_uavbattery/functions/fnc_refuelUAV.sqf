@@ -18,6 +18,8 @@
 
 PARAMS_2(_caller,_target);
 
+private ["_onFinish", "_onFailure"];
+
 if (!(_this call FUNC(canRefuelUAV))) exitWith {};
 
 _onFinish = {

@@ -56,6 +56,7 @@ FUNC(CheckGlasses) = {
 };
 
 player addEventHandler ["Explosion", {
+    private "_effects";
     if (alive ace_player) then {
         call FUNC(ApplyDirtEffect);
         if (GETBROKEN) exitWith {};

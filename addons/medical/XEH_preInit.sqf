@@ -17,10 +17,10 @@ PREP(addToLog);
 PREP(addToTriageCard);
 PREP(addUnconsciousCondition);
 PREP(addUnloadPatientActions);
+PREP(adjustPainLevel);
 PREP(canAccessMedicalEquipment);
 PREP(canTreat);
 PREP(canTreatCached);
-PREP(createLitter);
 PREP(determineIfFatal);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
@@ -97,9 +97,16 @@ PREP(moduleTreatmentConfiguration);
 PREP(copyDeadBody);
 PREP(requestWoundSync);
 
+// Networked litter
+PREP(createLitter);
+PREP(handleCreateLitter);
+
 GVAR(injuredUnitCollection) = [];
 GVAR(IVBags) = [];
 
 call FUNC(parseConfigForInjuries);
+
+GVAR(HITPOINTS) = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
+GVAR(SELECTIONS) = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
 
 ADDON = true;

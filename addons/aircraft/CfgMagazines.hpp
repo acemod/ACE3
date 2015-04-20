@@ -10,7 +10,7 @@ class CfgMagazines {
     // an extended magazine for the comanche
     class 300Rnd_20mm_shells;
     class ACE_500Rnd_20mm_shells_Comanche: 300Rnd_20mm_shells {
-        ammo = "ACE_20mm_HEDP";
+        ammo = "ACE_20mm_HE";
         count = 500;
     };
 };
