@@ -233,7 +233,7 @@
             <English>Dial</English>
             <German>Wählen</German>
             <Spanish>Marcar</Spanish>
-            <Polish>Wybierz mumer</Polish>
+            <Polish>Wybierz numer</Polish>
             <French>Composer</French>
             <Czech>Vytočit</Czech>
             <Italian>Composizione numero</Italian>
@@ -281,7 +281,7 @@
             <English>Detonate Menu</English>
             <German>"Zünden"-Menü</German>
             <Spanish>Menú de detonación</Spanish>
-            <Polish>Menu detonowania</Polish>
+            <Polish>Menu detonacji</Polish>
             <French>Menu de mise à feu</French>
             <Czech>Menu Detonace</Czech>
             <Italian>Menù di detonazione</Italian>
@@ -484,7 +484,7 @@
             <German>Zündet Sprengladungen wenn losgelassen.</German>
             <French>Déclenche la mise à feu d'un explosif lorsqu'il est libéré.</French>
             <Czech>Používaný k vzdálenému odpálení, při uvolnění odpálí výbušniny</Czech>
-            <Polish>Używany w celu zdalnej detonacji ładunków kiedy jego operator zostanie zabity.</Polish>
+            <Polish>Używany w celu zdalnej detonacji ładunków, kiedy jego operator zostanie zabity.</Polish>
             <Spanish>Utilizado para detonar explosivos remotamente al soltarlo.</Spanish>
             <Hungarian>Robbanóanyagok távoli robbantásához való, elengedéskor gyújt.</Hungarian>
             <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
