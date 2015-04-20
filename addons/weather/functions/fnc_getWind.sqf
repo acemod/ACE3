@@ -36,14 +36,15 @@ _c4 = 0.7 + random 0.2;
 
 _month = date select 1;
 _windDirectionProbabilities = _AB_Wind_Direction_Probabilities select (_month - 1);
-while {isNil QGVAR(windDirection)} do {
+while {isNil QGVAR(windDirectionReference)} do {
     _random = random 1;
     for "_i" from 0 to 7 do {
         if (_random < (_windDirectionProbabilities select _i)) exitWith {
-            GVAR(windDirection) = 45 * _i;
+            GVAR(windDirectionReference) = 45 * _i;
         };
     };
-    GVAR(windDirection) = GVAR(windDirection) + (random 22.5) - (random 22.5);
+    GVAR(windDirectionReference) = GVAR(windDirectionReference) + (random 22.5) - (random 22.5);
+    GVAR(windDirectionVariance) = (random 10) - (random 10);
 };
 
 if (isNil QGVAR(minWindSpeed) || isNil QGVAR(maxWindSpeed)) then {
@@ -55,10 +56,19 @@ if (isNil QGVAR(minWindSpeed) || isNil QGVAR(maxWindSpeed)) then {
     GVAR(maxWindSpeed) = 0 max GVAR(maxWindSpeed);
 };
 
+if ((random 30) < 1) then {
+    GVAR(windDirectionVariance) = (random 10) - (random 10);
+};
+_windDirection = GVAR(windDirectionReference) + GVAR(windDirectionVariance);
+
 _x = time * 180 / _PI;
 _ratio = 0 max ((1 + _c1 * sin(_x/1.5) + _c2 * sin(_x/3) + _c3 * sin(_x/12) + _c4 * sin(_x/18)) / (1 + _c1 + _c2 + _c3 + _c4));
 _windSpeed = GVAR(minWindSpeed) + (GVAR(maxWindSpeed) - GVAR(minWindSpeed)) * _ratio;
 
-systemChat format["Speed: %1, Direction: %2", _windSpeed, GVAR(windDirection)];
+systemChat " ";
+systemChat format["(Min/Current/Max) : (%1/%2/%3)", Round(GVAR(minWindSpeed) * 10) / 10, Round(_windSpeed * 10) / 10, Round(GVAR(maxWindSpeed) * 10) / 10];
+systemChat format["(Reference/Current/Variance):(%1/%2/%3)", Round(GVAR(windDirectionReference)), Round(_windDirection), Round(GVAR(windDirectionVariance))];
+systemChat " ";
+systemChat " ";
 
-[-1 * sin(GVAR(windDirection)) * _windSpeed, -1 * cos(GVAR(windDirection)) * _windSpeed, 0]
+[-1 * sin(_windDirection) * _windSpeed, -1 * cos(_windDirection) * _windSpeed, 0]
