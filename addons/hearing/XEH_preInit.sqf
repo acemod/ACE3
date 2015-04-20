@@ -10,7 +10,7 @@ PREP(hasEarPlugsIn);
 PREP(moduleHearing);
 PREP(putInEarPlugs);
 PREP(removeEarPlugs);
-PREP(updatePlayerVehicleAttunation);
+PREP(updatePlayerVehAttenuation);
 PREP(updateVolume);
 
 ADDON = true;

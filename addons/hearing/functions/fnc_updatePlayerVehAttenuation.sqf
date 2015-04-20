@@ -1,15 +1,15 @@
 /*
  * Author: PabstMirror
- * Gets the sound attunation of a player to the outside.
+ * Gets the sound attenuation of a player to the outside.
  *
  * Arguments:
- * 0: Unit (player) <OBJECT>
+ * None
  *
  * Return Value:
  * Ammount that unit can hear outside <NUMBER>
  *
  * Example:
- * [] call ace_hearing_fnc_updatePlayerVehicleAttunation
+ * [] call ace_hearing_fnc_updatePlayerVehAttenuation
  *
  * Public: No
  */
@@ -19,10 +19,8 @@ _vehicle = vehicle ACE_player;
 
 if (isNull _vehicle) exitWith {};
 
-_newAttenuation = -1;
-if (ACE_player == _vehicle) then {
-    _newAttenuation = 1;
-} else {
+_newAttenuation = 1;
+if (ACE_player != _vehicle) then {
     _effectType = "";
     _turretPath = [ACE_player] call EFUNC(common,getTurretIndex);
     _effectType = getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "attenuationEffectType");
@@ -38,19 +36,12 @@ if (ACE_player == _vehicle) then {
             };
         };
     };
-
     _newAttenuation = switch (true) do {
-    case (_effectType == ""): {1};
-    case (_effectType == "CarAttenuation"): {0.7};
-    case (_effectType == "OpenCarAttenuation"): {1};
-    case (_effectType == "TankAttenuation"): {0.1};
-    case (_effectType == "HeliAttenuation"): {0.25};
-    case (_effectType == "OpenHeliAttenuation"): {0.7};
-    case (_effectType == "SemiOpenHeliAttenuation"): {0.5};
-    case (_effectType == "HeliAttenuationGunner"): {0.75};
-    case (_effectType == "HeliAttenuationRamp"): {0.75};
         default {1};
     };
 };
 
-GVAR(playerVehAttunation) = _newAttenuation;
+TRACE_2("New vehicle attenuation",_vehicle,_newAttenuation);
+
+GVAR(playerVehAttenuation) = _newAttenuation;
+
