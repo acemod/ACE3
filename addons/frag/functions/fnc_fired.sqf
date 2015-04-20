@@ -11,10 +11,10 @@ if(_round in GVAR(blackList)) exitWith {
 };
 
 _doFragTrack = false;
-if(_gun == player) then {
+if(_gun == ACE_player) then {
     _doFragTrack = true;
 } else {
-    if((gunner _gun) == player) then {
+    if((gunner _gun) == ACE_player) then {
         _doFragTrack = true;
     } else {
         if(local _gun && {!(isPlayer (gunner _gun))} && {!(isPlayer _gun)}) then {
@@ -28,14 +28,14 @@ if(_doSpall) then {
         GVAR(spallHPData) = [];
     };
     if(GVAR(spallIsTrackingCount) > 5) then {
-        // player sideChat "LIMT!";
+        // ACE_player sideChat "LIMT!";
         _doSpall = false;
     } else {
         GVAR(spallIsTrackingCount) = GVAR(spallIsTrackingCount) + 1;
     };
 };
-// player sideChat format["c: %1", GVAR(spallIsTrackingCount)];
-[player, _round, [1,0,0,1]] call nou_fnc_addTrack;
+// ACE_player sideChat format["c: %1", GVAR(spallIsTrackingCount)];
+[ACE_player, _round, [1,0,0,1]] call FUNC(addTrack);
 if(_doFragTrack && alive _round) then {
     GVAR(trackedObjects) pushBack _round;
     _spallTrack = [];
@@ -44,5 +44,5 @@ if(_doFragTrack && alive _round) then {
     if(_doSpall) then {
         [_round, 2, _spallTrack, _spallTrackID] call FUNC(spallTrack);
     };
-    // player sideChat "WTF2";
+    // ACE_player sideChat "WTF2";
 };
