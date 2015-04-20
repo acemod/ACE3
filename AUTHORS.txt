@@ -81,4 +81,9 @@ ruPaladin <happyworm24@rambler.ru>
 BlackPixxel
 Asgar Serran <piechottaf@web.de>
 Kavinsky <nmunozfernandez@gmail.com>
+<<<<<<< HEAD
+BlackPixxel
+LAxemann <Leon.Beilmann@freenet.de>
+=======
 Coren <coren4@gmail.com>
+>>>>>>> upstream/master
