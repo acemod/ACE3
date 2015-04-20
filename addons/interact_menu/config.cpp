@@ -14,6 +14,8 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 
+#include "CfgActions.hpp"
+
 #include "CursorMenus.hpp"
 
 class ACE_Settings {
@@ -35,4 +37,8 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_UseListMenu";
     };
+};
+
+class ACE_Extensions {
+    extensions[] += {"ace_breakLine"};
 };
