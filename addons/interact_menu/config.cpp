@@ -30,3 +30,7 @@ class ACE_Settings {
         displayName = "$STR_ACE_Interact_Menu_UseListMenu";
     };
 };
+
+class ACE_Extensions {
+    extensions[] += {"ace_breakLine"};
+};

@@ -257,4 +257,4 @@ if(isMultiplayer && { time > 0 || isNull player } ) then {
         diag_log text format ["[ACE] ERROR: %1", _errorMsg];
         ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
     };
-} forEach ACE_DLLS;
+} forEach getArray (configFile >> "ACE_Extensions" >> "extensions");
