@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target","_selectionName","_className","_config","_callback"];
+private ["_caller", "_target","_selectionName","_className","_config","_callback", "_weaponSelect"];
 _args = _this select 0;
 _caller = _args select 0;
 _target = _args select 1;
@@ -31,6 +31,13 @@ if (vehicle _caller == _caller) then {
     [_caller, _caller getvariable [QGVAR(treatmentPrevAnimCaller), ""], 1] call EFUNC(common,doAnimation);
 };
 _caller setvariable [QGVAR(treatmentPrevAnimCaller), nil];
+
+_weaponSelect = (_caller getvariable [QGVAR(selectedWeaponOnTreatment), ""]);
+if (_weaponSelect != "") then {
+    _caller selectWeapon _weaponSelect;
+} else {
+    _caller action ["SwitchWeapon", _caller, _caller, 99];
+};
 
 // Record specific callback
 _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
