@@ -47,10 +47,10 @@ if (GVAR(currentUnit) != 2) then {
 } else {
     ctrlSetText [120050, Str(Round(GVAR(workingMemory) select 1))];
 };
-if (GVAR(currentUnit) == 2) then {
-    ctrlSetText [120060, Str(Round(GVAR(workingMemory) select 2))];
-} else {
+if (GVAR(currentUnit) == 1) then {
     ctrlSetText [120060, Str(Round((GVAR(workingMemory) select 2) * 1.0936133))];
+} else {
+    ctrlSetText [120060, Str(Round(GVAR(workingMemory) select 2))];
 };
 
 if (GVAR(currentUnit) == 2) then {
