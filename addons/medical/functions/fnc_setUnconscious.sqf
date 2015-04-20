@@ -73,7 +73,9 @@ _unit setUnitPos "DOWN";
 
 // So the AI does not get stuck, we are moving the unit to a temp group on its own.
 //Unconscious units shouldn't be put in another group #527:
-// [_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
+if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
+    [_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
+};
 
 [_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
 [_unit, [_unit] call EFUNC(common,getDeathAnim), 1, true] call EFUNC(common,doAnimation);
