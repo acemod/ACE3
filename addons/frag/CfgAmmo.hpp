@@ -19,7 +19,7 @@ class CfgAmmo {
         airFriction = 0.04;
         laserLock = 0;
     };
-    
+
     class GrenadeBase;
     class Grenade;
     class GrenadeHand: Grenade {
@@ -42,24 +42,24 @@ class CfgAmmo {
     class SmokeShell: GrenadeHand {
         ACE_FRAG_SKIP = 1;
     };
-    
+
     class RocketBase;
     //class R_Hydra_HE: RocketBase {
     //    ACE_FRAG_SKIP = 1;
     //};
-    
+
     //class R_57mm_HE: RocketBase {
     //    ACE_FRAG_SKIP = 1;
     //};
-    
+
     class R_80mm_HE: RocketBase {
         ACE_FRAG_SKIP = 1;
     };
-    
+
     //class R_S8T_AT: RocketBase {
     //    ACE_FRAG_SKIP = 1;
     //};
-    
+
     class BombCore;
     class Bo_Mk82: BombCore {
         ACE_FRAG_CLASSES[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
@@ -68,13 +68,13 @@ class CfgAmmo {
         ACE_FRAG_GURNEY_C = 2320;
         ACE_FRAG_GURNEY_K = 1/2;
     };
-    
-    
+
+
     class G_40mm_HE: GrenadeBase {
         ACE_FRAG_SKIP = 0;
         ACE_FRAG_FORCE = 1;
     };
-    
+
     class ACE_G_40mm_HEDP: G_40mm_HE {
     };
     class ACE_G_40mm_HE: ACE_G_40mm_HEDP {
@@ -86,19 +86,47 @@ class CfgAmmo {
         ACE_FRAG_SKIP = 0;
         ACE_FRAG_FORCE = 1;
     };
-    
+
+    // curator ammo entries
+    class Sh_82mm_AMOS;
+    class ModuleOrdnanceMortar_F_Ammo: Sh_82mm_AMOS {
+        ACE_FRAG_CLASSES[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        ACE_FRAG_METAL = 800;
+        ACE_FRAG_CHARGE = 4200;
+        ACE_FRAG_GURNEY_C = 2320;
+        ACE_FRAG_GURNEY_K = 1/2;
+    };
+
+    class Sh_155mm_AMOS;
+    class ModuleOrdnanceHowitzer_F_ammo: Sh_155mm_AMOS {
+        ACE_FRAG_CLASSES[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
+        ACE_FRAG_METAL = 1950;
+        ACE_FRAG_CHARGE = 15800;
+        ACE_FRAG_GURNEY_C = 2320;
+        ACE_FRAG_GURNEY_K = 1/2;
+    };
+
+    //class R_230mm_HE;
+    //class ModuleOrdnanceRocket_F_ammo: R_230mm_HE {
+    //};
+
+    //class R_230mm_fly;
+    //class ModuleOrdnanceRocket_F_subammo: R_230mm_fly {
+    //};
+    // end of curator ammo entries
+
     //class R_SMAW_HEDP;
     //class R_MEEWS_HEDP : R_SMAW_HEDP {
     //    ACE_FRAG_FORCE = 1;
     //    ACE_FRAG_MULTIPLIER = 1.2;
     //};
-    
+
     //class MissileBase;
     //class M_Hellfire_AT: MissileBase {
     //    ACE_FRAG_FORCE = 1;
     //    ACE_FRAG_MULTIPLIER = 1.75;
     //};
-    
+
     /*
     class B_762x51_Ball;
     class ACE_frag_base: B_762x51_Ball { ////TODO: B_762x45_Ball no longer exists, is this a valid replacement?
@@ -253,51 +281,51 @@ class CfgAmmo {
         bulletFly8[] = {"A3\sounds_f\weapons\hits\bullet_by_8.wav",1,1,35};
         bulletFly[] = {"bulletFly1",0.166,"bulletFly2",0.166,"bulletFly3",0.166,"bulletFly4",0.166,"bulletFly5",0.166,"bulletFly6",0.167,"bulletFly7",0.166,"bulletFly8",0.167};
         supersonicCrackNear[] = {"A3\sounds_f\weapons\hits\sscrack1.wav",1,1,35};
-        supersonicCrackFar[] = {"A3\sounds_f\weapons\hits\sscrack2.wav",1,1,135};        
+        supersonicCrackFar[] = {"A3\sounds_f\weapons\hits\sscrack2.wav",1,1,135};
     };
     */
-    
+
     class B_65x39_Caseless;
     class ACE_frag_base: B_65x39_Caseless {
         timeToLive = 12;
         typicalSpeed = 1500;
         deflecting = 65;
     };
-    
+
     class ACE_frag_tiny: ACE_frag_base {
         hit = 6;
         airFriction = BASE_DRAG;
         caliber = 0.75;
     };
-    
+
     class ACE_frag_tiny_HD: ACE_frag_base {
         hit = 6;
         airFriction = BASE_DRAG_HD;
         caliber = 0.75;
     };
-    
+
     class ACE_frag_small: ACE_frag_base {
         hit = 12;
         airFriction = BASE_DRAG*0.9;
     };
-    
+
     class ACE_frag_small_HD: ACE_frag_base {
         hit = 12;
         airFriction = BASE_DRAG_HD*0.9;
     };
-    
+
     class ACE_frag_medium: ACE_frag_base {
         hit = 14;
         airFriction = BASE_DRAG*0.75;
         caliber = 1.2;
     };
-    
+
     class ACE_frag_medium_HD: ACE_frag_base {
         hit = 14;
         airFriction = BASE_DRAG_HD*0.75;
         caliber = 1.2;
     };
-    
+
     class ACE_frag_large: ACE_frag_base {
         hit = 28;
         indirectHit = 2;
@@ -305,19 +333,19 @@ class CfgAmmo {
         airFriction = BASE_DRAG*0.65;
         caliber = 2;
         explosive = 0;
-    
+
     };
-    
+
     class ACE_frag_large_HD: ACE_frag_large {
         hit =  28;
         indirectHit = 2;
         indirectHitRange = 0.25;
         airFriction = BASE_DRAG_HD*0.65;
         caliber = 2;
-        
-        
+
+
     };
-    
+
     class ACE_frag_huge: ACE_frag_large {
         hit = 40;
         indirectHit = 4;
@@ -325,7 +353,7 @@ class CfgAmmo {
         airFriction = BASE_DRAG*0.5;
         caliber = 2.8;
     };
-    
+
     class ACE_frag_huge_HD: ACE_frag_large {
         hit = 40;
         indirectHit = 4;
@@ -333,19 +361,19 @@ class CfgAmmo {
         airFriction = BASE_DRAG_HD*0.5;
         caliber = 2.8;
     };
-    
+
     class ACE_frag_spall_small: ACE_frag_small {
         timeToLive = 0.1;
     };
-    
+
     class ACE_frag_spall_medium: ACE_frag_medium {
         timeToLive = 0.15;
     };
-    
+
     class ACE_frag_spall_large: ACE_frag_large {
         timeToLive = 0.25;
     };
-    
+
     class ACE_frag_spall_huge: ACE_frag_huge {
         timeToLive = 0.3;
     };

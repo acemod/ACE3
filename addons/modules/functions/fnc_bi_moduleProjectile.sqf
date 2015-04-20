@@ -123,7 +123,7 @@ if (_activated) then {
             if (_attach) then {_projectile attachto [_logic,[0,0,_altitude]];};
 
            	// This is our addition to this function
-            [ACE_player, "", "", "", _ammo, "", _projectile] call ace_frag_fnc_fired;
+            [_logic, "", "", "", _ammo, "", _projectile] call ace_frag_fnc_fired;
 
             //--- Play sound
             if (_sound != "") then {[[_logic,_sound,"say3D"],"bis_fnc_sayMessage"] call bis_fnc_mp;};
