@@ -20,7 +20,6 @@ profileNamespace setVariable ["ACE_ATragMX_profileNamespaceVersion", ATRAGMX_PRO
 profileNamespace setVariable ["ACE_ATragMX_currentUnit", GVAR(currentUnit)];
 profileNamespace setVariable ["ACE_ATragMX_currentGun", GVAR(currentGun)];
 profileNamespace setVariable ["ACE_ATragMX_currentTarget", GVAR(currentTarget)];
-profileNamespace setVariable ["ACE_ATragMX_currentScopeUnit", GVAR(currentScopeUnit)];
 
 profileNamespace setVariable ["ACE_ATragMX_atmosphereModeTBH", GVAR(atmosphereModeTBH)];
 profileNamespace setVariable ["ACE_ATragMX_altitude", GVAR(altitude)];

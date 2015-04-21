@@ -595,11 +595,20 @@ class ATragMX_Display {
         class TEXT_SCOPE_UNIT: TEXT_GUN_LIST {
             idc=2000;
             style=ST_CENTER;
+            w=0.06;
             x=0.550*safezoneW+safezoneX+0.205;
             colorBackground[]={0,0,0,0};
             text="TMOA";
             action=QUOTE(call FUNC(cycle_scope_unit));
         };
+        class TEXT_SCOPE_CLICK_NUMBER: TEXT_GUN_LIST {
+            idc=2001;
+            style=ST_CENTER;
+            w=0.03;
+            x=0.550*safezoneW+safezoneX+0.27;
+            text="4";
+            action="";
+        };        
         class TEXT_CALCULATE: TEXT_SCOPE_UNIT {
             idc=3000;
             style=ST_RIGHT;
