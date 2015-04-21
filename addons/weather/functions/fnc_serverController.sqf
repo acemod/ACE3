@@ -1,5 +1,6 @@
 /*
  * Author: ACE2 Team, esteldunedain
+ *
  * Calculate the wind and rain evolution on the server. Broadcast the current and next values to the clients
  *
  * Argument:

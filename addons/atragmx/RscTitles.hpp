@@ -1115,6 +1115,13 @@ class ATragMX_Display {
             idc=120060;
             y=0.265*safezoneH+safezoneY+0.520;
         };
+        class TEXT_GUN_AMMO_DATA_ZERO_RANGE_METER_INDICATOR: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
+            idc=120061;
+            w=0.05;
+            x=0.550*safezoneW+safezoneX+0.315;
+            y=0.265*safezoneH+safezoneY+0.520;
+            text="";
+        };
         class TEXT_GUN_AMMO_DATA_DONE: TEXT_TARGET_SPEED_ASSIST_DONE {
             idc=12008;
             action=QUOTE(1 call FUNC(toggle_gun_ammo_data));
@@ -1326,6 +1333,13 @@ class ATragMX_Display {
         class TEXT_TARGET_DATA_TARGET_RANGE_INPUT: TEXT_TARGET_DATA_LATITUDE_INPUT {
             idc=140060;
             y=0.265*safezoneH+safezoneY+0.520;
+        };
+        class TEXT_TARGET_DATA_TARGET_RANGE_METER_INDICATOR: TEXT_TARGET_DATA_LATITUDE {
+            idc=140061;
+            w=0.05;
+            x=0.550*safezoneW+safezoneX+0.315;
+            y=0.265*safezoneH+safezoneY+0.520;
+            text="";
         };
         class TEXT_TARGET_DATA_DONE: TEXT_TARGET_SPEED_ASSIST_DONE {
             idc=14008;

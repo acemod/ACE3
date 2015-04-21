@@ -44,7 +44,7 @@ _barometricPressure = GVAR(barometricPressure);
 _relativeHumidity = GVAR(relativeHumidity);
 
 private ["_result"];
-_result = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 1000, [0, 0], 0, 0, 0, _zeroRange, _bc, _dragModel, _atmosphereModel, false, 1.5, 0, 0] call FUNC(calculate_solution);
+_result = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 1000, [0, 0], 0, 0, 0, _zeroRange, _bc, _dragModel, _atmosphereModel, false, 1.5, 0, 0, 0] call FUNC(calculate_solution);
 
 GVAR(workingMemory) set [2, _zeroRange];
 GVAR(workingMemory) set [3, _scopeBaseAngle + (_result select 0) / 60];

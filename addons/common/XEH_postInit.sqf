@@ -248,5 +248,13 @@ if(isMultiplayer && { time > 0 || isNull player } ) then {
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
 
+// check dlls
+{
+    if (_x callExtension "version" == "") then {
+        private "_errorMsg";
+        _errorMsg = format ["Extension %1.dll not installed.", _x];
 
-
+        diag_log text format ["[ACE] ERROR: %1", _errorMsg];
+        ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+    };
+} forEach getArray (configFile >> "ACE_Extensions" >> "extensions");
