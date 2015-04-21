@@ -8,6 +8,7 @@ PREP(calculateBarometricPressure);
 PREP(displayWindInfo);
 PREP(getMapData);
 PREP(getWind);
+PREP(initWind);
 PREP(serverController);
 PREP(updateHumidity);
 PREP(updateRain);

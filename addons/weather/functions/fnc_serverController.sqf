@@ -1,7 +1,7 @@
 /*
- * Author: ACE2 Team, esteldunedain
+ * Author: ACE2 Team, esteldunedain, ruthberg
  *
- * Calculate the wind and rain evolution on the server. Broadcast the current and next values to the clients
+ * Calculate the wind and rain evolution on the server. Broadcasts the current and next values to the clients
  *
  * Argument:
  * None
@@ -10,7 +10,8 @@
  * None
  */
 #include "script_component.hpp"
-private ["_gustCount","_gustDir","_gustSpeed","_gustTime","_gusts","_i","_lastRain","_maxInterval","_rainOverCast","_startDir","_startSpeed","_time","_timeTillGust","_transitionTime"];
+
+private ["_i", "_lastRain", "_rainOverCast", "_transitionTime", "_windDirectionVariance", "_windDirection", "_time", "_c1", "_c2", "_c3", "_c4"];
 
 // Rain simulation
 if(GVAR(rain_period_count) > GVAR(rain_next_period)) then {
@@ -44,49 +45,29 @@ if(GVAR(rain_period_count) > GVAR(rain_next_period)) then {
 
 // Wind simulation
 if(GVAR(wind_period_count) > GVAR(wind_next_period)) then {
-    _startDir = GVAR(wind_current_dir);
-    _startSpeed = GVAR(wind_current_speed);
-    GVAR(wind_current_dir) = (GVAR(wind_current_dir)+(((GVAR(wind_current_dir)))*((overcast*(GVAR(overcast_multiplier)))/8)*GVAR(wind_current_range_dir)));
-
-    GVAR(wind_current_speed) = (GVAR(wind_current_speed)+(((GVAR(wind_current_speed)))*(overcast*(GVAR(overcast_multiplier))/12)*GVAR(wind_current_range_speed)));
-    GVAR(wind_current_speed) = GVAR(wind_current_speed) max 0.01;
-
-    if(GVAR(wind_current_dir) < 0) then {
-        GVAR(wind_current_dir) = GVAR(wind_current_dir)+360;
-    };
-    GVAR(wind_current_dir) = GVAR(wind_current_dir) % 360;
-
-    GVAR(wind_current_range_speed) = (-1)+(random 2);
-
-    GVAR(wind_current_range_dir) = (-1)+(random 2);
-
-    GVAR(wind_next_period) = ceil((2+random(5))/(GVAR(overcast_multiplier)));
+    
+    GVAR(wind_next_period) = ceil((2 + (random 5)) / GVAR(overcast_multiplier));
     GVAR(wind_period_count) = 0;
-
-    _gustCount = floor(random(GVAR(wind_next_period)*(overcast*((GVAR(overcast_multiplier)^3)))));
-
-    _time = GVAR(wind_next_period)*60;
-    _gusts = [];
-    if(_gustCount > 0) then {
-        _maxInterval = _time/_gustCount;
-        for "_i" from 0 to _gustCount-1 do {
-            _gustTime = (random (3 min _maxInterval));
-            _timeTillGust = (_maxInterval*_i)+(random (_maxInterval - _gustTime));
-            _gustSpeed = (random 1);
-            _gustDir = (GVAR(wind_current_dir)+(GVAR(wind_current_dir)*(-1+(random 2))))*(overcast*(GVAR(overcast_multiplier)));
-            _gusts set[(count _gusts), [_timeTillGust, _gustTime, _gustSpeed, _gustDir]];
-        };
-    };
-
-    GVAR(wind_total_time) = GVAR(wind_total_time) + GVAR(wind_next_period);
-
-    ACE_WIND_PARAMS = [_startDir,
-                        GVAR(wind_current_dir),
-                        _startSpeed,
-                        GVAR(wind_current_speed),
-                        _time,
-                        _gusts];
-
+    
+    _windDirectionVariance = (90 - (random 180)) * overcast;
+    _windDirection = (360 + GVAR(wind_direction_reference) + _windDirectionVariance) % 360;
+    
+    _c1 = (0.1 + random 0.1) * overcast;
+    _c2 = (0.2 + random 0.1) * overcast;
+    _c3 = (0.5 + random 0.2);
+    _c4 = (0.7 + random 0.2);
+    
+    _time = GVAR(wind_next_period) * 60;
+    
+    ACE_WIND_PARAMS = [_windDirection,
+                       GVAR(min_wind_speed),
+                       GVAR(max_wind_speed),
+                       _c1,
+                       _c2,
+                       _c3,
+                       _c4,
+                       _time];
+                       
     GVAR(wind_period_start_time) = time;
     publicVariable "ACE_WIND_PARAMS";
 };
