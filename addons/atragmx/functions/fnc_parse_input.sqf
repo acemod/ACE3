@@ -95,9 +95,9 @@ if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) 
 GVAR(workingMemory) set [1, _muzzleVelocity];
 GVAR(workingMemory) set [2, _zeroRange];
 
-private ["_elevationCur", "_windageCur", "_elevationScopeStep", "_windageScopeStep"];
-_elevationCur = parseNumber(ctrlText 402);
-_windageCur = parseNumber(ctrlText 412);
+private ["_elevationCur", "_windageCur", "_clickSize", "_clickNumber", "_clickInterval"];
+_elevationCur = GVAR(workingMemory) select 10;
+_windageCur = GVAR(workingMemory) select 11;
 
 switch (GVAR(currentScopeUnit)) do {
     case 0: {
@@ -109,11 +109,16 @@ switch (GVAR(currentScopeUnit)) do {
         _windageCur = _windageCur / 1.047;
     };
     case 3: {
-        _elevationScopeStep = (GVAR(workingMemory) select 7);
-        _windageScopeStep = (GVAR(workingMemory) select 8);
+        switch (GVAR(workingMemory) select 7) do {
+            case 0: { _clickSize = 1; };
+            case 1: { _clickSize = 1 / 1.047; };
+            case 2: { _clickSize = 3.38; };
+        };
+        _clickNumber = GVAR(workingMemory) select 8;
+        _clickInterval = _clickSize / _clickNumber;
         
-        _elevationCur = _elevationCur * _elevationScopeStep;
-        _windageCur = _windageCur * _windageScopeStep;
+        _elevationCur = Round(_elevationCur / _clickInterval);
+        _windageCur = Round(_windageCur / _clickInterval);
     };
 };
 
