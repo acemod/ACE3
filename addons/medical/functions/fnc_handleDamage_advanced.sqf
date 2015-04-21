@@ -33,10 +33,12 @@ if (isNull _sourceOfDamage && {_typeOfProjectile == ""} && {vehicle _unit == _un
 };
 _typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
 _part = [_selectionName] call FUNC(selectionNameToNumber);
+if (_part < 0) exitwith {};
 
 _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
 // Sorting out the damage
 _damageBodyParts = _unit getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
+
 _damageBodyParts set [_part, (_damageBodyParts select _part) + _newDamage];
 _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 

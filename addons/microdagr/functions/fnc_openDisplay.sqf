@@ -83,7 +83,6 @@ if ((_oldShowMode == DISPLAY_MODE_CLOSED) && {GVAR(currentShowMode) != DISPLAY_M
             };
             [_pfID] call CBA_fnc_removePerFrameHandler;
         } else {
-            GVAR(gpsPositionASL) = getPosAsl ace_player;
             if (GVAR(currentShowMode) == DISPLAY_MODE_HIDDEN) then {
                 //If display is hidden, and we can show, then swithc modes:
                 if ([DISPLAY_MODE_DISPLAY] call FUNC(canShow)) then {
