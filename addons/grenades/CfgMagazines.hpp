@@ -1,6 +1,7 @@
 class CfgMagazines {
     class HandGrenade;
     class ACE_HandFlare_Base: HandGrenade {
+        author = "$STR_ACE_Common_ACETeam";
         value = 2;
         nameSoundWeapon = "smokeshell";
         nameSound = "smokeshell";
@@ -41,19 +42,23 @@ class CfgMagazines {
     };
     class ACE_M84: HandGrenade {
         ammo = "ACE_G_M84";
+        author = "$STR_ACE_Common_ACETeam";
         displayname = "$STR_ACE_Grenades_M84_Name";
         descriptionshort = "$STR_ACE_Grenades_M84_Description";
         displayNameShort = "M84";
+        mass = 4;
         model = PATHTOF(models\ACE_m84.p3d);
         picture = PATHTOF(UI\ACE_m84_x_ca.paa);
     };
 
     class 3Rnd_UGL_FlareGreen_F;
     class 6Rnd_GreenSignal_F: 3Rnd_UGL_FlareGreen_F {
+        author = "$STR_ACE_Common_ACETeam";
         ammo = "F_40mm_Green";
         initSpeed = 120;
     };
     class 6Rnd_RedSignal_F: 6Rnd_GreenSignal_F {
+        author = "$STR_ACE_Common_ACETeam";
         ammo = "F_40mm_Red";
         initSpeed = 120;
     };

@@ -71,5 +71,17 @@
             <Hungarian>Járműves cselekvések</Hungarian>
             <Italian>Interazioni con veicoli</Italian>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
+            <English>Interaction - Text Max</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
+            <English>Interaction - Text Min</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
+            <English>Interaction - Shadow Max</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
+            <English>Interaction - Shadow Min</English>
+        </Key>
     </Package>
 </Project>

@@ -21,6 +21,7 @@ PREP(renderBaseMenu);
 PREP(renderIcon);
 PREP(renderMenu);
 PREP(renderSelector);
+PREP(setupTextColors);
 PREP(splitPath);
 
 GVAR(keyDown) = false;
