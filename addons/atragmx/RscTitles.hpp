@@ -128,7 +128,7 @@ class ATragMX_RscListBox {
 class ATragMX_RscListNBox: ATragMX_RscListBox {
     idc=-1;
     type=102;
-    columns[]={0.0, 0.225, 0.475, 0.725};
+    columns[]={0.0, 0.225, 0.475, 0.7};
     drawSideArrows=0;
     idcLeft=-1;
     idcRight=-1;
