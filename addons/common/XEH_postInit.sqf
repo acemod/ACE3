@@ -232,6 +232,8 @@ GVAR(OldIsCamera) = false;
     vehicle (_this select 0) == (_this select 0) ||
     // Players can always interact with his vehicle
     {vehicle (_this select 0) == (_this select 1)} ||
+    // Player can interact turned out
+    { vehicle (_this select 0) != (_this select 0) && isTurnedOut (_this select 0) } ||
     // Players can always interact with passengers of the same vehicle
     {!((_this select 0) isEqualTo (_this select 1)) && {vehicle (_this select 0) == vehicle (_this select 1)}}
 }] call FUNC(addCanInteractWithCondition);
