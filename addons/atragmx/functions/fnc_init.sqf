@@ -42,7 +42,9 @@ GVAR(currentGun) = 0;
 GVAR(currentTarget) = 0;
 GVAR(currentScopeUnit) = 0;
 GVAR(currentScopeClickUnit) = 2;
+GVAR(currentScopeClickUnitTemp) = 2;
 GVAR(currentScopeClickNumber) = 10;
+GVAR(currentScopeClickNumberTemp) = 10;
 
 GVAR(atmosphereModeTBH) = true;
 GVAR(altitude) = 0;
@@ -74,6 +76,7 @@ GVAR(showGunAmmoData) = false;
 GVAR(showGunList) = false;
 GVAR(showRangeCard) = false;
 GVAR(showRangeCardSetup) = false;
+GVAR(showSolutionSetup) = false;
 GVAR(showTargetData) = false;
 GVAR(showTargetRangeAssist) = false;
 GVAR(showTargetSpeedAssist) = false;

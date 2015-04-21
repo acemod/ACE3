@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_elevationAbs", "_elevationRel", "_elevationCur", "_windageAbs", "_wind2", "_windageRel", "_windageCur", "_lead", "_elevationScopeStep", "_windageScopeStep"];
+private ["_elevationAbs", "_elevationRel", "_elevationCur", "_windageAbs", "_wind2", "_windageRel", "_windageCur", "_lead", "_clickSize", "_clickNumber", "_clickInterval"];
 _elevationAbs = GVAR(elevationOutput) select GVAR(currentTarget);
 _windageAbs = GVAR(windage1Output) select GVAR(currentTarget);
 
@@ -55,19 +55,24 @@ switch (GVAR(currentScopeUnit)) do {
         _windageCur = _windageCur * 1.047;
     };
     case 3: {
-        _elevationScopeStep = (GVAR(workingMemory) select 7);
-        _windageScopeStep = (GVAR(workingMemory) select 8);
+        switch (GVAR(workingMemory) select 7) do {
+            case 0: { _clickSize = 1; };
+            case 1: { _clickSize = 1 / 1.047; };
+            case 2: { _clickSize = 3.38; };
+        };
+        _clickNumber = GVAR(workingMemory) select 8;
+        _clickInterval = _clickSize / _clickNumber;
         
-        _elevationAbs = Round(_elevationAbs / _elevationScopeStep);
-        _windageAbs = Round(_windageAbs / _windageScopeStep);
+        _elevationAbs = Round(_elevationAbs / _clickInterval);
+        _windageAbs = Round(_windageAbs / _clickInterval);
         
-        _wind2 = Round(_wind2 / _windageScopeStep);
+        _wind2 = Round(_wind2 / _clickInterval);
         
-        _elevationRel = Round(_elevationRel / _elevationScopeStep);
-        _windageRel = Round(_windageRel / _windageScopeStep);
+        _elevationRel = Round(_elevationRel / _clickInterval);
+        _windageRel = Round(_windageRel / _clickInterval);
         
-        _elevationCur = Round(_elevationCur / _elevationScopeStep);
-        _windageCur = Round(_windageCur / _windageScopeStep);
+        _elevationCur = Round(_elevationCur / _clickInterval);
+        _windageCur = Round(_windageCur / _clickInterval);
     };
 };
 

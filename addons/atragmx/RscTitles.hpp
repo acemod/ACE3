@@ -608,7 +608,7 @@ class ATragMX_Display {
             w=0.03;
             x=0.550*safezoneW+safezoneX+0.27;
             text="4";
-            action="";
+            action=QUOTE(call FUNC(toggle_solution_setup));
         };        
         class TEXT_CALCULATE: TEXT_SCOPE_UNIT {
             idc=3000;
@@ -1367,6 +1367,95 @@ class ATragMX_Display {
         };
         class TEXT_TARGET_DATA_NEXT: TEXT_TARGET_SPEED_ASSIST_NEXT {
             idc=14011;
+        };
+        
+        class TEXT_SOLUTION_SETUP_SHOW_RESULT_IN: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
+            idc=15000;
+            style=64;
+            w=0.25;
+            h=0.07;
+            x=0.550*safezoneW+safezoneX+0.13;
+            y=0.265*safezoneH+safezoneY+0.32;
+            text="Show result in";
+        };
+        class TEXT_SOLUTION_SETUP_SHOW_RESULT_IN_1: TEXT_TARGET_A {
+            idc=15001;
+            w=0.04;
+            x=0.550*safezoneW+safezoneX+0.14;
+            y=0.265*safezoneH+safezoneY+0.35;
+            text="1";
+            action=QUOTE(GVAR(currentScopeClickNumberTemp) = 1; call FUNC(update_solution_setup));
+        };
+        class TEXT_SOLUTION_SETUP_SHOW_RESULT_IN_2: TEXT_SOLUTION_SETUP_SHOW_RESULT_IN_1 {
+            idc=15002;
+            x=0.550*safezoneW+safezoneX+0.18;
+            text="2";
+            action=QUOTE(GVAR(currentScopeClickNumberTemp) = 2; call FUNC(update_solution_setup));
+        };
+        class TEXT_SOLUTION_SETUP_SHOW_RESULT_IN_3: TEXT_SOLUTION_SETUP_SHOW_RESULT_IN_1 {
+            idc=15003;
+            x=0.550*safezoneW+safezoneX+0.22;
+            text="3";
+            action=QUOTE(GVAR(currentScopeClickNumberTemp) = 3; call FUNC(update_solution_setup));
+        };
+        class TEXT_SOLUTION_SETUP_SHOW_RESULT_IN_4: TEXT_SOLUTION_SETUP_SHOW_RESULT_IN_1 {
+            idc=15004;
+            x=0.550*safezoneW+safezoneX+0.26;
+            text="4";
+            action=QUOTE(GVAR(currentScopeClickNumberTemp) = 4; call FUNC(update_solution_setup));
+        };
+        class TEXT_SOLUTION_SETUP_SHOW_RESULT_IN_8: TEXT_SOLUTION_SETUP_SHOW_RESULT_IN_1 {
+            idc=15005;
+            x=0.550*safezoneW+safezoneX+0.30;
+            text="8";
+            action=QUOTE(GVAR(currentScopeClickNumberTemp) = 8; call FUNC(update_solution_setup));
+        };
+        class TEXT_SOLUTION_SETUP_SHOW_RESULT_IN_10: TEXT_SOLUTION_SETUP_SHOW_RESULT_IN_1 {
+            idc=15006;
+            x=0.550*safezoneW+safezoneX+0.34;
+            text="10";
+            action=QUOTE(GVAR(currentScopeClickNumberTemp) = 10; call FUNC(update_solution_setup));
+        };
+        class TEXT_SOLUTION_SETUP_CLICKS_PER: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
+            idc=15007;
+            style=64;
+            w=0.25;
+            h=0.07;
+            x=0.550*safezoneW+safezoneX+0.13;
+            y=0.265*safezoneH+safezoneY+0.42;
+            text="Clicks per";
+        };
+        class TEXT_SOLUTION_SETUP_CLICKS_PER_TMOA: TEXT_TARGET_A {
+            idc=15008;
+            w=0.05;
+            x=0.550*safezoneW+safezoneX+0.15;
+            y=0.265*safezoneH+safezoneY+0.45;
+            text="TMOA";
+            action=QUOTE(GVAR(currentScopeClickUnitTemp) = 0; call FUNC(update_solution_setup));
+        };
+        class TEXT_SOLUTION_SETUP_CLICKS_PER_SMOA: TEXT_SOLUTION_SETUP_CLICKS_PER_TMOA {
+            idc=15009;
+            x=0.550*safezoneW+safezoneX+0.23;
+            text="SMOA";
+            action=QUOTE(GVAR(currentScopeClickUnitTemp) = 1; call FUNC(update_solution_setup));
+        };
+        class TEXT_SOLUTION_SETUP_CLICKS_PER_MILS: TEXT_SOLUTION_SETUP_CLICKS_PER_TMOA {
+            idc=15010;
+            x=0.550*safezoneW+safezoneX+0.31;
+            text="MILS";
+            action=QUOTE(GVAR(currentScopeClickUnitTemp) = 2; call FUNC(update_solution_setup));
+        };
+        class TEXT_SOLUTION_SETUP_DONE: TEXT_TARGET_SPEED_ASSIST_DONE {
+            idc=15011;
+            x=0.550*safezoneW+safezoneX+0.18;
+            y=0.265*safezoneH+safezoneY+0.55;
+            action=QUOTE(1 call FUNC(toggle_solution_setup));
+        };
+        class TEXT_SOLUTION_SETUP_CANCEL: TEXT_TARGET_SPEED_ASSIST_CANCEL {
+            idc=15012;
+            x=0.550*safezoneW+safezoneX+0.26;
+            y=0.265*safezoneH+safezoneY+0.55;
+            action=QUOTE(0 call FUNC(toggle_solution_setup));
         };
     };
 };
