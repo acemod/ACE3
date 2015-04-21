@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_range", "_elevation", "_windage1", "_windage2", "_elevationScopeStep", "_windageScopeStep", "_lead", "_TOF", "_velocity", "_kineticEnergy", "_rangeOutput", "_elevationOutput", "_windageOutput", "_lastColumnOutput"];
+private ["_range", "_elevation", "_windage1", "_windage2", "_clickSize", "_clickNumber", "_clickInterval", "_lead", "_TOF", "_velocity", "_kineticEnergy", "_rangeOutput", "_elevationOutput", "_windageOutput", "_lastColumnOutput"];
 _lastColumnOutput = "";
 
 if (GVAR(showWind2) && GVAR(rangeCardCurrentColumn) == 0) then {
@@ -54,12 +54,17 @@ lnbClear 5007;
             _windage2 = _windage2 * 1.047;
         };
         case 3: {
-            _elevationScopeStep = (GVAR(workingMemory) select 7);
-            _windageScopeStep = (GVAR(workingMemory) select 8);
+            switch (GVAR(workingMemory) select 7) do {
+                case 0: { _clickSize = 1; };
+                case 1: { _clickSize = 1 / 1.047; };
+                case 2: { _clickSize = 3.38; };
+            };
+            _clickNumber = GVAR(workingMemory) select 8;
+            _clickInterval = _clickSize / _clickNumber;
             
-            _elevation = Round(_elevation / _elevationScopeStep);
-            _windage1 = Round(_windage1 / _windageScopeStep);
-            _windage2 = Round(_windage2 / _windageScopeStep);
+            _elevation = Round(_elevation / _clickInterval);
+            _windage1 = Round(_windage1 / _clickInterval);
+            _windage2 = Round(_windage2 / _clickInterval);
         };
     };
     

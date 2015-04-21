@@ -15,10 +15,7 @@
  */
 #include "script_component.hpp"
 
-((uiNamespace getVariable "ATragMX_Display") displayCtrl 500) ctrlEnable true;
-((uiNamespace getVariable "ATragMX_Display") displayCtrl 501) ctrlEnable true;
-((uiNamespace getVariable "ATragMX_Display") displayCtrl 502) ctrlEnable true;
-((uiNamespace getVariable "ATragMX_Display") displayCtrl 503) ctrlEnable true;
+{((uiNamespace getVariable "ATragMX_Display") displayCtrl _x) ctrlEnable true} forEach [500, 501, 502, 503];
 
 ((uiNamespace getVariable "ATragMX_Display") displayCtrl 500 + GVAR(currentTarget)) ctrlEnable false;
 
