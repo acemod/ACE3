@@ -72,7 +72,7 @@ _vehicle = vehicle _unit;
 // Do not obscure the map if the player is on a enclosed vehicle (assume internal illumination)
 if (_vehicle != _unit) then {
     // Player is in a vehicle
-    if (isTurnedOut _unit && {_vehicle isKindOf "Tank" || {_vehicle isKindOf "Wheeled_APC"}}) then {
+    if (isTurnedOut _unit && { _vehicle isKindOf "Tank" || { _vehicle isKindOf "Helicopter" && { (gunner _vehicle) == _unit } } || {_vehicle isKindOf "Wheeled_APC"}}) then {
         _isEnclosed = true;
     };
 };
