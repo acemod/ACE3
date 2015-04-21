@@ -11,6 +11,12 @@ class CfgMovesBasic {
         };
         class RifleProneActions: RifleBaseStandActions {
             Civil = "AmovPpneMstpSnonWnonDnon";
+            SecondaryWeapon = "AmovPpneMstpSrasWlnrDnon";
+        };
+
+        class PistolStandActions;
+        class PistolProneActions: PistolStandActions {
+            SecondaryWeapon = "AmovPpneMstpSrasWlnrDnon";
         };
 
         // WEAPON RAISED - RUNNING
