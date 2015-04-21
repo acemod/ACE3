@@ -293,9 +293,9 @@ def print_yellow(msg):
     print(msg)
     color("reset")
 
-    
+
 def copy_important_files(source_dir,destination_dir):
-    
+
     originalDir = os.getcwd()
     importantFiles = ["mod.cpp",
     "README.md",
@@ -303,10 +303,10 @@ def copy_important_files(source_dir,destination_dir):
     "LICENSE",
     "logo_ace3_ca.paa"
     ]
-    
+
     print_yellow ("source_dir: " + source_dir)
     print_yellow("destination_dir: " + destination_dir)
-    
+
     #copy importantFiles
     try:
         print_blue("\nSearching for important files in " + source_dir)
@@ -316,16 +316,16 @@ def copy_important_files(source_dir,destination_dir):
     except:
         print_error("COPYING IMPORTANT FILES.")
         raise
-    
+
     #copy all extension dlls
     try:
         os.chdir(os.path.join(source_dir))
         print_blue("\nSearching for DLLs in " + os.getcwd())
         filenames = glob.glob("*.dll")
-        
+
         if not filenames:
             print ("Empty SET")
-            
+
         for dll in filenames:
             print_green("Copying dll => " + os.path.join(source_dir,dll))
             if os.path.isfile(dll):
@@ -339,15 +339,15 @@ def copy_important_files(source_dir,destination_dir):
 def copy_optionals_for_building(mod,pbos):
     src_directories = os.listdir(optionals_root)
     current_dir = os.getcwd()
-    
-    print("")
+
+    print_blue("\nChecking Optionals folder...")
     try:
-        
+
         #special server.pbo processing
         files = glob.glob(os.path.join(release_dir, "@ace","optionals","*.pbo"))
         for file in files:
             file_name = os.path.basename(file)
-            print ("Adding the following file: " + file_name)
+            #print ("Adding the following file: " + file_name)
             pbos.append(file_name)
             pbo_path = os.path.join(release_dir, "@ace","optionals",file_name)
             if (os.path.isfile(pbo_path)):
@@ -364,31 +364,38 @@ def copy_optionals_for_building(mod,pbos):
     try:
         for dir_name in src_directories:
             mod.append(dir_name)
+            #userconfig requires special handling since it is not a PBO source folder.
+            #CfgConvert fails to build server.pbo if userconfig is not found in P:\
             if (dir_name == "userconfig"):
+                if (os.path.exists(os.path.join(release_dir, "@ace","optionals",dir_name))):
+                    shutil.rmtree(os.path.join(release_dir, "@ace","optionals",dir_name), True)
+                shutil.copytree(os.path.join(optionals_root,dir_name), os.path.join(release_dir, "@ace","optionals",dir_name))
                 destination = os.path.join(work_drive,dir_name)
             else:
                 destination = os.path.join(module_root,dir_name)
 
             print("Temporarily copying " + os.path.join(optionals_root,dir_name) + " => " + destination + " for building.")
-            shutil.rmtree(destination, True)
+            if (os.path.exists(destination)):
+                shutil.rmtree(destination, True)
             shutil.copytree(os.path.join(optionals_root,dir_name), destination)
     except:
         print_error("Copy Optionals Failed")
         raise
     finally:
         os.chdir(current_dir)
-        
+
 def cleanup_optionals(mod,pbos):
     print("")
-    try:            
+    try:
         for dir_name in mod:
+            #userconfig requires special handling since it is not a PBO source folder.
             if (dir_name == "userconfig"):
                 destination = os.path.join(work_drive,dir_name)
             else:
                 destination = os.path.join(module_root,dir_name)
-            
+
             print("Cleaning " + destination)
-            
+
             try:
                 file_name = "ace_{}.pbo".format(dir_name)
                 src_file_path = os.path.join(release_dir, "@ace","addons",file_name)
@@ -400,7 +407,7 @@ def cleanup_optionals(mod,pbos):
                 print_error(file_name + " already exists")
                 continue
             shutil.rmtree(destination)
-            
+
     except:
         print_error("Cleaning Optionals Failed")
         raise
@@ -528,7 +535,7 @@ See the make.cfg file for additional build options.
         global release_dir
         global module_root_parent
         global optionals_root
-        
+
         cfg.read(os.path.join(make_root, "make.cfg"))
 
         # Project name (with @ symbol)
@@ -562,7 +569,7 @@ See the make.cfg file for additional build options.
 
         # Release/build directory, relative to script dir
         release_dir = cfg.get(make_target, "release_dir", fallback="release")
-        
+
         # Project PBO file prefix (files are renamed to prefix_name.pbo)
         pbo_name_prefix = cfg.get(make_target, "pbo_name_prefix", fallback=None)
 
@@ -571,7 +578,7 @@ See the make.cfg file for additional build options.
         module_root = cfg.get(make_target, "module_root", fallback=os.path.join(make_root_parent, "addons"))
         optionals_root = os.path.join(module_root_parent, "optionals")
         print_green ("module_root: " + module_root)
-        
+
         if (os.path.isdir(module_root)):
             os.chdir(module_root)
         else:
@@ -583,9 +590,9 @@ See the make.cfg file for additional build options.
         else:
             print_error ("Directory " + optionals_root + " does not exist.")
             sys.exit()
-        
+
         print_green ("release_dir: " + release_dir)
-        
+
     except:
         raise
         print_error("Could not parse make.cfg.")
@@ -633,14 +640,14 @@ See the make.cfg file for additional build options.
         print ("No cache found.")
         cache = {}
 
-    #Temporarily copy optionals_root for building. They will be removed later. 
+    #Temporarily copy optionals_root for building. They will be removed later.
     optionals_modules = []
     optional_files = []
     copy_optionals_for_building(optionals_modules,optional_files)
-    
+
     # Get list of subdirs in make root.
     dirs = next(os.walk(module_root))[1]
-    
+
     # Autodetect what directories to build.
     if module_autodetect and not arg_modules:
         modules = []
@@ -681,10 +688,11 @@ See the make.cfg file for additional build options.
 
 
     # For each module, prep files and then build.
+    print_blue("\nBuilding...")
     for module in modules:
         print_green("\nMaking " + module + "-"*max(1, (60-len(module))))
         missing = False
-        
+
         # Cache check
         if module in cache:
             old_sha = cache[module]
@@ -697,7 +705,7 @@ See the make.cfg file for additional build options.
 
         # Hash the module
         new_sha = get_directory_hash(os.path.join(module_root, module))
-        
+
         # Is the pbo file missing?
         missing = not os.path.isfile(os.path.join(release_dir, project, "addons", "ace_{}.pbo".format(module)))
         if missing:
@@ -781,7 +789,7 @@ See the make.cfg file for additional build options.
                     print_error("CfgConvert -txt return code == " + str(ret) + ". Usually means there is a syntax error within the config.cpp file.")
                     os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
                     shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
-                    
+
 
                 # Include build number
                 try:
@@ -799,7 +807,7 @@ See the make.cfg file for additional build options.
                         f.close()
                     else:
                         os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-                        os.rename(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))    
+                        os.rename(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
                 except:
                     raise
                     print_error("Failed to include build number")

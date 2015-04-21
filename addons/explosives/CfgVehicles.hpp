@@ -50,7 +50,7 @@ class CfgVehicles {
     class Items_base_F;
     class ACE_DefuseObject: Items_base_F {
         XEH_ENABLED;
-        author = "ACE";
+        author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_DefuseObject";
         displayName = "ACE Defuse Helper";
         mapSize = 0.2;
@@ -80,7 +80,7 @@ class CfgVehicles {
     };
     class ACE_Explosives_Place: Items_base_F {
         XEH_ENABLED;
-        author = "ACE";
+        author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_Explosives_Place";
         displayName = "Multi-meter";
         mapSize = 0.2;
