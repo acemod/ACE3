@@ -2,6 +2,11 @@
 
 call FUNC(getMapData);
 
+// Randomization
+GVAR(temperatureShift) = 3 - random 6;
+GVAR(badWeatherShift) = (random 1) ^ 2 * 10;
+GVAR(humidityShift) = (5 - random 10) / 100;
+
 // Rain variables
 GVAR(enableRain) = true;
 GVAR(rain_next_period) = -1;
@@ -24,6 +29,11 @@ call FUNC(initWind);
         30 setLightnings (ACE_MISC_PARAMS select 0);
         30 setRainbow    (ACE_MISC_PARAMS select 1);
         30 setFog        (ACE_MISC_PARAMS select 2);
+        GVAR(temperatureShift) = (ACE_MISC_PARAMS select 3);
+        GVAR(badWeatherShift)  = (ACE_MISC_PARAMS select 4);
+        GVAR(humidityShift)    = (ACE_MISC_PARAMS select 5);
+        call FUNC(updateTemperature);
+        call FUNC(updateHumidity);
     };
 };
 

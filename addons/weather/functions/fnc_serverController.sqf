@@ -73,7 +73,7 @@ if(GVAR(wind_period_count) > GVAR(wind_next_period)) then {
 };
 
 // Sync misc. parameters
-ACE_MISC_PARAMS = [lightnings, rainbow, fogParams];
+ACE_MISC_PARAMS = [lightnings, rainbow, fogParams, GVAR(temperatureShift), GVAR(badWeatherShift), GVAR(humidityShift)];
 publicVariable "ACE_MISC_PARAMS";
 
 GVAR(rain_period_count) = GVAR(rain_period_count) + 1;
