@@ -24,12 +24,12 @@ _windSpeed = _min_wind_speed + (_max_wind_speed - _min_wind_speed) * _ratio;
 
 //GVAR(wind_speed_debug_output) pushBack _windspeed;
 //copyToClipboard Str(GVAR(wind_speed_debug_output));
-
+/*
 systemChat " ";
 systemChat format["(Min/Current/Max) : (%1/%2/%3)", Round(_min_wind_speed * 10) / 10, Round(_windSpeed * 10) / 10, Round(_max_wind_speed * 10) / 10];
 systemChat format["Direction: %1", Round(_windDirection)];
 systemChat format["(Period/PeriodPosition) : (%1/%2)", Round(_period), Round(_periodPosition)];
 systemChat format["Ratio: %1", _ratio];
 systemChat " ";
-
+*/
 [-1 * sin(_windDirection) * _windSpeed, -1 * cos(_windDirection) * _windSpeed, 0]
