@@ -19,8 +19,6 @@
 
 #define MAXCHARACTERS 14
 
-static char VERSION[] = "1.0";
-
 extern "C" {
     __declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
 };
@@ -68,7 +66,7 @@ std::string addLineBreaks(const std::vector<std::string> &words) {
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     if (!strcmp(function, "version")) {
-        strncpy(output, VERSION, outputSize);
+        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
     } else {
         strncpy(output, addLineBreaks(splitString(function)).c_str(), outputSize);
         output[outputSize - 1] = '\0';
