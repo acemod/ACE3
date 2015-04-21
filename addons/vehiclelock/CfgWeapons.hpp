@@ -3,7 +3,6 @@ class CfgWeapons {
     class ACE_ItemCore;
 
     class ACE_key_master: ACE_ItemCore {
-        author = "$STR_ACE_Common_ACETeam";
         displayName = "Vehicle Key: Master";
         descriptionShort = "$STR_ACE_Vehicle_Item_Master_Description";
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
