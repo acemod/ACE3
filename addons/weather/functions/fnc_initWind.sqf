@@ -11,21 +11,23 @@
  */
 #include "script_component.hpp"
 
-private ["_j", "_i", "_month", "_windDirectionProbabilities"];
+private ["_j", "_i", "_directionFound", "_month", "_windDirectionProbabilities"];
 _month = date select 1;
 _windDirectionProbabilities = GVAR(WindDirectionProbabilities) select (_month - 1);
 
 ACE_wind = [0, 0, 0];
  
 GVAR(wind_direction_reference) = random 360;
+_directionFound = false;
 for "_j" from 0 to 10 do {
      _random = random 1;
     for "_i" from 0 to 7 do {
         if (_random < (_windDirectionProbabilities select _i)) exitWith {
+            _directionFound = true;
             GVAR(wind_direction_reference) = 45 * _i;
         };
     };
-    if (_i < 7) exitWith {};
+    if (_directionFound) exitWith {};
 };
 GVAR(wind_mean_dir) = GVAR(wind_direction_reference);
 GVAR(wind_direction_reference) = GVAR(wind_direction_reference) + (random 22.5) - (random 22.5);
