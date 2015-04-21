@@ -21,7 +21,7 @@ class CfgVehicles {
     class ACE_moduleRepairSettings: ACE_Module {
         scope = 2;
         displayName = "Repair Settings";
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));   //@todo
+        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));   //@todo
         category = "ACE";
         function = QUOTE(DFUNC(moduleRepairSettings));
         functionPriority = 1;
