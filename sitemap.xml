@@ -15,7 +15,7 @@ title: Sitemap
     {% if curPage.title != page.title %}
     <url>
         <loc>{{site.productionUrl}}{{ curPage.url }}</loc>
-        <lastmod>{{site.time}}</lastmod>
+        <lastmod>{{site.time | date: "%Y-%m-%d"}}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
