@@ -5,6 +5,7 @@ class CfgWeapons {
 
     class ACE_IR_Strobe_Item: ACE_ItemCore {
         ACE_attachable = "ACE_IR_Strobe_Effect";
+        author = "$STR_ACE_Common_ACETeam";
         scope = 2;
         displayName = "$STR_ACE_IrStrobe_Name";
         descriptionShort = "$STR_ACE_IrStrobe_Description";
