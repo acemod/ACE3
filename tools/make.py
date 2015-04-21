@@ -340,14 +340,14 @@ def copy_optionals_for_building(mod,pbos):
     src_directories = os.listdir(optionals_root)
     current_dir = os.getcwd()
     
-    print("")
+    print_blue("\nChecking Optionals folder...")
     try:
         
         #special server.pbo processing
         files = glob.glob(os.path.join(release_dir, "@ace","optionals","*.pbo"))
         for file in files:
             file_name = os.path.basename(file)
-            print ("Adding the following file: " + file_name)
+            #print ("Adding the following file: " + file_name)
             pbos.append(file_name)
             pbo_path = os.path.join(release_dir, "@ace","optionals",file_name)
             if (os.path.isfile(pbo_path)):
@@ -364,13 +364,19 @@ def copy_optionals_for_building(mod,pbos):
     try:
         for dir_name in src_directories:
             mod.append(dir_name)
+            #userconfig requires special handling since it is not a PBO source folder.
+            #CfgConvert fails to build server.pbo if userconfig is not found in P:\
             if (dir_name == "userconfig"):
+                if (os.path.exists(os.path.join(release_dir, "@ace","optionals",dir_name))):
+                    shutil.rmtree(os.path.join(release_dir, "@ace","optionals",dir_name), True)
+                shutil.copytree(os.path.join(optionals_root,dir_name), os.path.join(release_dir, "@ace","optionals",dir_name))
                 destination = os.path.join(work_drive,dir_name)
             else:
                 destination = os.path.join(module_root,dir_name)
 
             print("Temporarily copying " + os.path.join(optionals_root,dir_name) + " => " + destination + " for building.")
-            shutil.rmtree(destination, True)
+            if (os.path.exists(destination)):
+                shutil.rmtree(destination, True)
             shutil.copytree(os.path.join(optionals_root,dir_name), destination)
     except:
         print_error("Copy Optionals Failed")
@@ -382,6 +388,7 @@ def cleanup_optionals(mod,pbos):
     print("")
     try:            
         for dir_name in mod:
+            #userconfig requires special handling since it is not a PBO source folder.
             if (dir_name == "userconfig"):
                 destination = os.path.join(work_drive,dir_name)
             else:
@@ -681,6 +688,7 @@ See the make.cfg file for additional build options.
 
 
     # For each module, prep files and then build.
+    print_blue("\nBuilding...")
     for module in modules:
         print_green("\nMaking " + module + "-"*max(1, (60-len(module))))
         missing = False
