@@ -2,7 +2,6 @@
 class CfgWeapons {
     class ItemCore;
     class ACE_ItemCore: ItemCore {
-        author = "$STR_ACE_Common_ACETeam";
         type = 4096;//4;
         detectRange = -1;
         simulation = "ItemMineDetector";
@@ -14,7 +13,6 @@ class CfgWeapons {
     };
 
     class ACE_FakePrimaryWeapon: Rifle_Base_F {
-        author = "$STR_ACE_Common_ACETeam";
         scope = 2;
         scopeCurator = 1;
         
@@ -32,6 +30,7 @@ class CfgWeapons {
 
     class InventoryItem_Base_F;
     class ACE_Banana: ACE_ItemCore {
+        author = "$STR_ACE_Common_ACETeam";
         scope = 2;
         displayName = "$STR_ACE_Common_bananaDisplayName";
         descriptionShort = "$STR_ACE_Common_bananaDescr";
