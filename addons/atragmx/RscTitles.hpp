@@ -1338,6 +1338,16 @@ class ATragMX_Display {
             idc=140050;
             y=0.265*safezoneH+safezoneY+0.480;
         };
+        class TEXT_TARGET_DATA_TARGET_SPEED_DIRECTION: ATragMX_RscButton {
+            idc=140051;
+            colorBackground[]={0.15,0.21,0.23,0.3};
+            colorFocused[]={0.15,0.21,0.23,0.2};
+            w=0.0231;
+            x=0.550*safezoneW+safezoneX+0.305;
+            y=0.265*safezoneH+safezoneY+0.480;
+            text=">";
+            action=QUOTE(call FUNC(cycle_target_speed_direction));
+        };
         class TEXT_TARGET_DATA_TARGET_RANGE: TEXT_TARGET_DATA_LATITUDE {
             idc=14006;
             y=0.265*safezoneH+safezoneY+0.520;

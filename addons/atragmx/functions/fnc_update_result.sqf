@@ -82,16 +82,88 @@ if (GVAR(showWind2)) then {
     ctrlSetText [42, "Lead"];
 };
 
-ctrlSetText [400, Str(Round(_elevationAbs * 100) / 100)];
-ctrlSetText [401, Str(Round(_elevationRel * 100) / 100)];
-ctrlSetText [402, Str(Round(_elevationCur * 100) / 100)];
+_elevationAbs = Round(_elevationAbs * 100) / 100;
+if (_elevationAbs > 0) then {
+    ctrlSetText [400, format["%1", abs(_elevationAbs)]];
+} else {
+    if (_elevationAbs < 0) then {
+        ctrlSetText [400, format["%1D", abs(_elevationAbs)]];
+    } else {
+        ctrlSetText [400, "0.0"];
+    };
+};
+_elevationRel = Round(_elevationRel * 100) / 100;
+if (_elevationRel > 0) then {
+    ctrlSetText [401, format["%1", abs(_elevationRel)]];
+} else {
+    if (_elevationRel < 0) then {
+        ctrlSetText [401, format["%1D", abs(_elevationRel)]];
+    } else {
+        ctrlSetText [401, "0.0"];
+    };
+};
+_elevationCur = Round(_elevationCur * 100) / 100;
+if (_elevationCur > 0) then {
+    ctrlSetText [402, format["%1", abs(_elevationCur)]];
+} else {
+    if (_elevationCur < 0) then {
+        ctrlSetText [402, format["%1D", abs(_elevationCur)]];
+    } else {
+        ctrlSetText [402, "0.0"];
+    };
+};
 
-ctrlSetText [410, Str(Round(_windageAbs * 100) / 100)];
-ctrlSetText [411, Str(Round(_windageRel * 100) / 100)];
-ctrlSetText [412, Str(Round(_windageCur * 100) / 100)];
+_windageAbs = Round(_windageAbs * 100) / 100;
+if (_windageAbs > 0) then {
+    ctrlSetText [410, format["%1R", abs(_windageAbs)]];
+} else {
+    if (_windageAbs < 0) then {
+        ctrlSetText [410, format["%1L", abs(_windageAbs)]];
+    } else {
+        ctrlSetText [410, "0.0"];
+    };
+};
+_windageRel = Round(_windageRel * 100) / 100;
+if (_windageRel > 0) then {
+    ctrlSetText [411, format["%1R", abs(_windageRel)]];
+} else {
+    if (_windageRel < 0) then {
+        ctrlSetText [411, format["%1L", abs(_windageRel)]];
+    } else {
+        ctrlSetText [411, "0.0"];
+    };
+};
+_windageCur = Round(_windageCur * 100) / 100;
+if (_windageCur > 0) then {
+    ctrlSetText [412, format["%1R", abs(_windageCur)]];
+} else {
+    if (_windageCur < 0) then {
+        ctrlSetText [412, format["%1L", abs(_windageCur)]];
+    } else {
+        ctrlSetText [412, "0.0"];
+    };
+};
 
 if (GVAR(showWind2)) then {
-    ctrlSetText [420, Str(Round(_wind2 * 100) / 100)];
+    _wind2 = Round(_wind2 * 100) / 100;
+    if (_wind2 > 0) then {
+        ctrlSetText [420, format["%1R", abs(_wind2)]];
+    } else {
+        if (_wind2 < 0) then {
+            ctrlSetText [420, format["%1L", abs(_wind2)]];
+        } else {
+            ctrlSetText [420, "0.0"];
+        };
+    };
 } else {
-    ctrlSetText [420, Str(Round(_lead * 100) / 100)];
+    _lead = Round(_lead * 100) / 100;
+    if (_lead > 0) then {
+        if ((GVAR(targetSpeedDirection) select GVAR(currentTarget)) == 1) then {
+            ctrlSetText [420, format["%1R", abs(_lead)]];
+        } else {
+            ctrlSetText [420, format["%1L", abs(_lead)]];
+        };
+    } else {
+        ctrlSetText [420, "0.0"];
+    };
 };

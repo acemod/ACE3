@@ -40,7 +40,12 @@ if (_inclinationAngleDegree != GVAR(inclinationAngle) select GVAR(currentTarget)
         GVAR(inclinationAngle) set [GVAR(currentTarget), round(acos(_inclinationAngleCosine))];
     };
 };
-GVAR(targetSpeed) set [GVAR(currentTarget), -50 max abs(parseNumber(ctrlText 140050)) min 50];
+GVAR(targetSpeed) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140050)) min 50];
+if ((ctrlText 140051) == ">") then {
+    GVAR(targetSpeedDirection) set [GVAR(currentTarget), +1];
+} else {
+    GVAR(targetSpeedDirection) set [GVAR(currentTarget), -1];
+};
 GVAR(targetRange) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140060)) min 4000];
 if (GVAR(currentUnit) != 2) then {
     GVAR(windSpeed1) set [GVAR(currentTarget), (GVAR(windSpeed1) select GVAR(currentTarget)) * 0.44704];

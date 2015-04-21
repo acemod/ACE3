@@ -20,6 +20,7 @@ PREP(cycle_num_ticks_units);
 PREP(cycle_range_card_columns);
 PREP(cycle_scope_unit);
 PREP(cycle_target_size_units);
+PREP(cycle_target_speed_direction);
 PREP(delete_gun);
 PREP(init);
 PREP(parse_input);

@@ -59,6 +59,7 @@ GVAR(windSpeed2) = [0, 0, 0, 0];
 GVAR(windDirection) = [12, 12, 12, 12];
 GVAR(inclinationAngle) = [0, 0, 0, 0];
 GVAR(targetSpeed) = [0, 0, 0, 0];
+GVAR(targetSpeedDirection) = [1, 1, 1, 1];
 GVAR(targetRange) = [0, 0, 0, 0];
 
 GVAR(showWind2) = false;
