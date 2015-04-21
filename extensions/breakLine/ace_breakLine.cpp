@@ -37,8 +37,8 @@ std::vector<std::string> splitString(const std::string & input) {
 
 std::string addLineBreaks(const std::vector<std::string> &words) {
     std::stringstream sstream;
-    int numChar = 0;
-    int i = 0;
+    size_t numChar = 0;
+    size_t i = 0;
 
     while (i < words.size()) {
         if (numChar == 0) {
