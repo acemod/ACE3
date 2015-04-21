@@ -386,7 +386,7 @@ def copy_optionals_for_building(mod,pbos):
         
 def cleanup_optionals(mod,pbos):
     print("")
-    try:            
+    try:
         for dir_name in mod:
             #userconfig requires special handling since it is not a PBO source folder.
             if (dir_name == "userconfig"):
