@@ -293,7 +293,7 @@ class ACE_Medical_Actions {
         };
     };
 };
-Class ACE_Medical {
+class ACE_Medical {
     blacklistedAmmo[] = {};
 };
 
