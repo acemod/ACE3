@@ -1222,7 +1222,10 @@ class ATragMX_Display {
         };
         class TEXT_ATMO_ENV_DATA_CALC_METHOD: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
             idc=13011;
-            x=0.550*safezoneW+safezoneX+0.24;
+            style=64;
+            w=0.14;
+            h=0.07;
+            x=0.550*safezoneW+safezoneX+0.235;
             y=0.265*safezoneH+safezoneY+0.29;
             text="Calc Method";
         };
