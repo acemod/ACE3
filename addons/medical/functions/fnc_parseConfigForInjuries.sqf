@@ -119,3 +119,7 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
     };
     missionNamespace setvariable [_varName, [_typeThresholds, _selectionSpecificType > 0, _woundTypes]];
 }foreach _allFoundDamageTypes;
+
+// blacklisted ammuniations
+
+GVAR(handleDamageAmmoBlacklist) = getArray (configFile >> "ACE_Medical" >> "blacklistedAmmo");

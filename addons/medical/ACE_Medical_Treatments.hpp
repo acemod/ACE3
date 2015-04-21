@@ -293,6 +293,9 @@ class ACE_Medical_Actions {
         };
     };
 };
+Class ACE_Medical {
+    blacklistedAmmo[] = {};
+};
 
 class ACE_Medical_Advanced {
     // Defines all the possible injury types for advanced medical
