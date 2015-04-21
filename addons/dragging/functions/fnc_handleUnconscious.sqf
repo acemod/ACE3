@@ -20,9 +20,9 @@ if (_player getVariable [QGVAR(isDragging), false]) then {
     };
 
     // handle waking up dragged unit
-    if (_unit == _draggedObject) then {
-        [_player, _draggedObject] call FUNC(dropObject);
-    };
+    //if (_unit == _draggedObject) then {
+        // [_player, _draggedObject] call FUNC(dropObject);
+    //};
 
 };
 
@@ -37,8 +37,8 @@ if (_player getVariable [QGVAR(isCarrying), false]) then {
     };
 
     // handle waking up dragged unit
-    if (_unit == _carriedObject) then {
-        [_player, _carriedObject] call FUNC(dropObject_carry);
-    };
+    //if (_unit == _carriedObject) then {
+        // [_player, _carriedObject] call FUNC(dropObject_carry);
+    //};
 
 };

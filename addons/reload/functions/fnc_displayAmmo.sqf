@@ -14,7 +14,7 @@
 
 EXPLODE_1_PVT(_this,_target);
 
-private ["_weapon","_muzzle","_magazine","_showNumber","_ammo","_maxRounds","_count","_text","_color","_picture"];
+private ["_weapon","_muzzle","_magazine","_showNumber","_ammo","_maxRounds","_count","_text","_color","_picture", "_a", "_string"];
 
 _weapon = currentWeapon _target;
 _muzzle = currentMuzzle _target;

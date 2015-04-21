@@ -1,3 +1,3 @@
 #include "script_component.hpp"
-NO_DEDICATED;
 
+[QGVAR(handoff), {_this call FUNC(handleHandoff)}] call EFUNC(common,addEventHandler);

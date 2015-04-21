@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {"ACE_SpareBarrel"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common", "ace_interaction"};
+        requiredAddons[] = {"ace_interaction"};
         author[] = {"commy2", "KoffeinFlummi", "esteldunedain"};
         authorUrl = "https://github.com/commy2/";
         VERSION_CONFIG;
@@ -23,7 +23,7 @@ class CfgPatches {
 class ACE_Settings {
     class GVAR(DisplayTextOnJam) {
         typeName = "BOOL";
-        isClientSetable = 1;
+        isClientSettable = 1;
         value = 1;
         displayName = "$STR_ACE_overheating_SettingDisplayTextName";
         description = "$STR_ACE_overheating_SettingDisplayTextDesc";

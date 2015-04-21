@@ -19,12 +19,12 @@
 
 PARAMS_3(_attachToVehicle,_player,_args);
 
-private ["_itemName", "_attachLimit", "_attachedObjects"];
+private ["_itemName", "_attachLimit", "_attachedObjects","_playerPos"];
 
 _itemName = [_args, 0, ""] call CBA_fnc_defaultParam;
 _attachLimit = [6, 1] select (_player == _attachToVehicle);
 _attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
 
-_playerPos = (ACE_player modelToWorld (ACE_player selectionPosition "pilot"));
+_playerPos = (ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot"));
 
 (canStand _player) && {(_attachToVehicle distance _player) < 7} && {alive _attachToVehicle} && {(count _attachedObjects) < _attachLimit} && {_itemName in ((itemsWithMagazines _player) + [""])};

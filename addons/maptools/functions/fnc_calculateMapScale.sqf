@@ -1,16 +1,18 @@
 /*
  * Author: esteldunedain
- *
  * Returns the equivalent of 100m in screen coordinates
  *
- * Argument:
+ * Arguments:
  * None
  *
  * Return value:
- * Return
+ * No
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
+
+private ["_screenOffset", "_pos"];
 
 _pos          = ((finddisplay 12) displayctrl 51) ctrlMapScreenToWorld [0.5, 0.5];
 _screenOffset = ((finddisplay 12) displayctrl 51) posWorldToScreen [(_pos select 0) + 100, (_pos select 1)];

@@ -260,12 +260,11 @@ class CfgVehicles {
           icon = PATHTOF(UI\team\team_white_ca.paa);
           hotkey = "N";
         };
-
         class ACE_BecomeLeader {
           displayName = "$STR_ACE_Interaction_BecomeLeader";
-          condition = QUOTE(count (units group _player) > 1 && {leader group _player != _player});
+          condition = QUOTE(_this call FUNC(canBecomeLeader));
           exceptions[] = {"isNotInside"};
-          statement = QUOTE(_newGroup = createGroup side group _player; (units group _player) joinSilent _newGroup; _newGroup selectLeader _player;);
+          statement = QUOTE(_this call FUNC(doBecomeLeader));
           showDisabled = 1;
           priority = 1.0;
           icon = PATHTOF(UI\team\team_white_ca.paa);

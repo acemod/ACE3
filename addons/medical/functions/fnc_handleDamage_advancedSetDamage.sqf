@@ -16,9 +16,7 @@
 private ["_unit", "_bodyStatus", "_headDamage", "_torsoDamage", "_handsDamage", "_legsDamage"];
 _unit = _this select 0;
 
-if (!local _unit) exitwith {
-    // execute only local
-};
+if (!local _unit) exitwith {};
 
 _bodyStatus = _unit getvariable [QGVAR(bodyPartStatus),[0,0,0,0,0,0]];
 // ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]

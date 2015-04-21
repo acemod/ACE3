@@ -16,8 +16,6 @@
 
 EXPLODE_3_PVT(_this,_vehicle,_player,_parameters);
 
-diag_log "addPassengerActions";
-
 private ["_unit","_actions"];
 _unit = _parameters select 0;
 
@@ -26,6 +24,10 @@ _actionTrees = missionNamespace getVariable [_varName, []];
 
 _actions = [];
 // Mount unit MainActions menu
-_actions pushBack [(_actionTrees select 0) select 0, (_actionTrees select 0) select 1, _unit];
+
+{
+	EXPLODE_2_PVT(_x,_actionData,_children);
+	_actions pushBack [_actionData, _children, _unit];
+} forEach ((_actionTrees select 0) select 1);
 
 _actions

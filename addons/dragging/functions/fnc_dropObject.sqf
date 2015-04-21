@@ -23,8 +23,10 @@ _unit removeAction (_unit getVariable [QGVAR(ReleaseActionID), -1]);
 private "_inBuilding";
 _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
-// play release animation
-_unit playAction "released";
+if !(_unit getvariable ["ACE_isUnconscious", false]) then {
+	// play release animation
+	_unit playAction "released";
+};
 
 // prevent collision damage
 ["fixCollision", _unit] call EFUNC(common,localEvent);
@@ -57,4 +59,8 @@ _unit setVariable [QGVAR(draggedObject), objNull, true];
 if !(_target isKindOf "CAManBase") then {
     ["fixPosition", _target, _target] call EFUNC(common,targetEvent);
     ["fixFloating", _target, _target] call EFUNC(common,targetEvent);
+};
+
+if (_unit getvariable ["ACE_isUnconscious", false]) then {
+    [_unit, "unconscious", 2, true] call EFUNC(common,doAnimation);
 };

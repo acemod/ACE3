@@ -18,7 +18,7 @@
 
 PARAMS_2(_attachToVehicle,_unit);
 
-private ["_attachedObjects", "_attachedItems"];
+private ["_attachedObjects", "_attachedItems", "_itemDisplayName"];
 
 _attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
 _attachedItems = _attachToVehicle getVariable [QGVAR(ItemNames), []];
@@ -73,14 +73,9 @@ _attachToVehicle setVariable [QGVAR(Objects), _attachedObjects, true];
 _attachToVehicle setVariable [QGVAR(ItemNames), _attachedItems, true];
 
 // Display message
-switch (true) do {
-case (_itemName == "ACE_IR_Strobe_Item") : {
-        [localize "STR_ACE_Attach_IrStrobe_Detached"] call EFUNC(common,displayTextStructured);
-    };
-case (toLower _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) : {
-        [localize "STR_ACE_Attach_IrGrenade_Detached"] call EFUNC(common,displayTextStructured);
-    };
-case (toLower _itemName in ["chemlight_blue", "chemlight_green", "chemlight_red", "chemlight_yellow"]) : {
-        [localize "STR_ACE_Attach_Chemlight_Detached"] call EFUNC(common,displayTextStructured);
-    };
+_itemDisplayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");
+if (_itemDisplayName == "") then {
+    _itemDisplayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");
 };
+
+[format [localize "STR_ACE_Attach_Item_Detached", _itemDisplayName]] call EFUNC(common,displayTextStructured);

@@ -18,9 +18,9 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_allNearestPlayers", "_oldUnit", "_leave"];
+private ["_nearestEnemyPlayers", "_allNearestPlayers", "_oldUnit", "_leave"];
 
-_unit = _this select 1;
+PARAMS_1(_unit);
 
 // don't switch to original player units
 if (!([_unit] call FUNC(isValidAi))) exitWith {};

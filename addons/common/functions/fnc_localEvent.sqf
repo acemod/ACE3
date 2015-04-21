@@ -12,8 +12,7 @@
  */
 #include "script_component.hpp"
 
-_eventName = _this select 0;
-_eventArgs = _this select 1;
+PARAMS_2(_eventName,_eventArgs);
 
 _eventNames = GVAR(events) select 0;
 _eventIndex = _eventNames find _eventName;

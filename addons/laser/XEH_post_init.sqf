@@ -1,3 +1,5 @@
 #include "script_component.hpp"
-NO_DEDICATED;
+
+["laser_laserOn", {_this call DFUNC(handleLaserOn)}] call EFUNC(common,addEventHandler);
+["laser_laserOff", {_this call DFUNC(handleLaserOff)}] call EFUNC(common,addEventHandler);
 

@@ -1,4 +1,16 @@
+/*
+ * Author: ACE2 Team, esteldunedain
+ *
+ * Calculate the wind and rain evolution on the server. Broadcast the current and next values to the clients
+ *
+ * Argument:
+ * None
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
+private ["_gustCount","_gustDir","_gustSpeed","_gustTime","_gusts","_i","_lastRain","_maxInterval","_rainOverCast","_startDir","_startSpeed","_time","_timeTillGust","_transitionTime"];
 
 // Rain simulation
 if(GVAR(rain_period_count) > GVAR(rain_next_period)) then {

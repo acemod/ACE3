@@ -21,7 +21,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_silencer", "_audibleFireCoef", "_loudness", "_strength"];
+private ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_silencer", "_audibleFireCoef", "_loudness", "_strength", "_audibleFire", "_audibleFireTime", "_audibleFireTimeCoef"];
 
 _unit = _this select 0;
 _firer = _this select 1;
@@ -31,7 +31,7 @@ _muzzle = _this select 4;
 _mode = _this select 5;
 _ammo = _this select 6;
 
-if (_weapon in ["Throw", "Put"]) exitWith {};
+if (toLower _weapon in ["throw", "put"]) exitWith {};
 if (_unit != vehicle _unit && {!([_unit] call EFUNC(common,isTurnedOut))}) exitWith {};
 
 _silencer = switch (_weapon) do {

@@ -1,31 +1,27 @@
 // by commy2
-
 #include "script_component.hpp"
 
-_setupPlayer = {
-  if (!isNull ACE_player) then {
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+/*
+[{
+    if (!isNull ACE_player) then {
+        [(_this select 1)] call cba_fnc_removePerFrameHandler;
 
-    [ACE_player] call EFUNC(common,muteUnit);
-    ACE_player setVariable [QGVAR(isMuted), true, true];
-  };
-};
+        [ACE_player, "isPlayer"] call EFUNC(common,muteUnit);
+    };
+}, 0, []] call CBA_fnc_addPerFrameHandler;
+*/
 
-[_setupPlayer, 0, []] call CBA_fnc_addPerFrameHandler;
+if (!hasInterface) exitWith {};
 
 // Mutes/unmutes units when the player changes
 ["playerChanged", {
-  EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
+    EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
 
-  // On player change mute the new player
-  [_newPlayer] call EFUNC(common,muteUnit);
-  _newPlayer setVariable [QGVAR(isMuted), true, true];
+    // On player change mute the new player
+    [_newPlayer, "isPlayer"] call EFUNC(common,muteUnit);
 
-  // Unmute the old player
-  //@todo: sort interaction with medical system
-  if (!(_oldPlayer getVariable ["ACE_isUnconscious", false]) && {alive _oldPlayer}) then {
-    [_oldPlayer] call EFUNC(common,unMuteUnit);
-  };
-  _oldPlayer setVariable [QGVAR(isMuted), false, true];
-
+    // Unmute the old player
+    if (alive _oldPlayer) then {
+        [_oldPlayer, "isPlayer"] call EFUNC(common,unmuteUnit);
+    };
 }] call EFUNC(common,addEventhandler);
