@@ -164,7 +164,7 @@ class CfgVehicles {
         scope = 2;
         accuracy = 1000;
         displayName = "[ACE] Ammo Supply Crate";
-        // TODO: model = "...";
+        model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
         author = "$STR_ACE_Common_ACETeam";
         class TransportMagazines {
             MACRO_ADDMAGAZINE(ACE_20Rnd_762x51_Mag_SD,4);
