@@ -10,6 +10,7 @@ PREP(doRemoveWheel);
 PREP(doRepair);
 PREP(doReplaceWheel);
 PREP(getWheelHitPointsWithSelections);
+PREP(moduleRepairSettings);
 PREP(normalizeHitPoints);
 PREP(removeWheel);
 PREP(repairVehicle);

@@ -16,6 +16,67 @@
     };
 
 class CfgVehicles {
+    class ACE_Module;
+    // @todo localization for all the modules
+    class ACE_moduleRepairSettings: ACE_Module {
+        scope = 2;
+        displayName = "Repair Settings";
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));   //@todo
+        category = "ACE";
+        function = QUOTE(DFUNC(moduleRepairSettings));
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        author = "$STR_ACE_Common_ACETeam";
+        class Arguments {
+            class engineerSetting_Repair {
+                displayName = "Allow Repair";
+                description = "Who can use the toolkit to fully repair?";
+                typeName = "NUMBER";
+                class values {
+                    class anyone { name = "Anyone"; value = 0; };
+                    class Medic { name = "Engineers only"; value = 1; default = 1; };
+                    class Special { name = "Repair Specialists only"; value = 2; };
+                };
+            };
+            class engineerSetting_Wheel {
+                displayName = "Allow Wheel";
+                description = "Who can remove and replace wheels?";
+                typeName = "NUMBER";
+                class values {
+                    class anyone { name = "Anyone"; value = 0; default = 1; };
+                    class Medic { name = "Engineers only"; value = 1; };
+                    class Special { name = "Repair Specialists only"; value = 2; };
+                };
+            };
+            class repairDamageThreshold {
+                displayName = "Repair Threshold";
+                description = "What is the maximum damage that can be repaired with a toolkit?";
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
+            class repairDamageThreshold_Engineer {
+                displayName = "Repair Threshold (Engineer)";
+                description = "What is the maximum damage that can be repaired by an engineer?";
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
+            class consumeItem_ToolKit {
+                displayName = "Remove toolkit on use";
+                description = "Should the toolkit be removed on usage?";
+                typeName = "NUMBER";
+                class values {
+                    class keep { name = "No"; value = 0; default = 1; };
+                    class remove { name = "Yes"; value = 1; };
+                };
+            };
+        };
+        class ModuleDescription {
+            description = "Provides a repair system for all types of vehicles.";
+            sync[] = {};
+        };
+    };
+
     class LandVehicle;
     class Car: LandVehicle {
         MACRO_REPAIRVEHICLE
