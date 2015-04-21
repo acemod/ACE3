@@ -295,6 +295,7 @@ class ACE_Medical_Actions {
 };
 class ACE_Medical {
     blacklistedAmmo[] = {};
+    inVehicleBlacklistedAmmo[] = {};
 };
 
 class ACE_Medical_Advanced {

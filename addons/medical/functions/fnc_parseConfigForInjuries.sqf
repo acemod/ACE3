@@ -123,3 +123,4 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
 // blacklisted ammuniations
 
 GVAR(handleDamageAmmoBlacklist) = getArray (configFile >> "ACE_Medical" >> "blacklistedAmmo");
+GVAR(handleDamageAmmoBlacklistInVehicle) = getArray (configFile >> "ACE_Medical" >> "inVehicleBlacklistedAmmo");

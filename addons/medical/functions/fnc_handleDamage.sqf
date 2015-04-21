@@ -34,6 +34,7 @@ if (typeName _projectile == "OBJECT") then {
 if !(_selection in (GVAR(SELECTIONS) + [""])) exitWith {0};
 
 if (_projectile in GVAR(handleDamageAmmoBlacklist)) exitwith {_unit getHitPointDamage _selection};
+if (vehicle _unit != _unit && {_projectile in GVAR(handleDamageAmmoBlacklistInVehicle)}) exitwith {_unit getHitPointDamage _selection};
 
 _damageReturn = _damage;
 if (GVAR(level) < 2) then {
