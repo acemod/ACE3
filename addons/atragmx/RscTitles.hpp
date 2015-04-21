@@ -523,9 +523,12 @@ class ATragMX_Display {
             x=0.550*safezoneW+safezoneX+0.32;
             text="Cur";
         };
-        class TEXT_ELEVATION_OUTPUT_ABSOLUTE: ATragMX_RscEdit {
+        class TEXT_ELEVATION_OUTPUT_ABSOLUTE: ATragMX_RscText {
             idc=400;
-            w=0.07;
+            style=160;
+            sizeEx=0.025;
+            w=0.065;
+            h=0.032;
             x=0.550*safezoneW+safezoneX+0.17;
             y=0.265*safezoneH+safezoneY+0.50;
             text="";
@@ -537,7 +540,6 @@ class ATragMX_Display {
         class TEXT_ELEVATION_INPUT_CURRENT: TEXT_ELEVATION_OUTPUT_ABSOLUTE {
             idc=402;
             x=0.550*safezoneW+safezoneX+0.323;
-            onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(parse_input); call FUNC(update_result)});
         };
         class TEXT_WINDAGE: TEXT_ELEVATION {
             idc=41;
@@ -555,7 +557,6 @@ class ATragMX_Display {
         class TEXT_WINDAGE_INPUT_CURRENT: TEXT_WINDAGE_OUTPUT_ABSOLUTE {
             idc=412;
             x=0.550*safezoneW+safezoneX+0.323;
-            onKeyUp=QUOTE(if (_this select 1 == 28) then {call FUNC(parse_input); call FUNC(update_result)});
         };
         class TEXT_LEAD: TEXT_GUN {
             idc=42;
