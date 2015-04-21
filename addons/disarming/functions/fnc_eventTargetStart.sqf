@@ -20,6 +20,8 @@
 
 PARAMS_3(_caller,_target,_listOfObjectsToRemove);
 
+private "_itemsToAdd";
+
 _itemsToAdd = [];
 {
     if (_x == (uniform _target)) then {

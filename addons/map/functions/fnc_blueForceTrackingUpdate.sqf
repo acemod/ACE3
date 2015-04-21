@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+private ["_groupsToDrawMarkers", "_playerSide", "_anyPlayers", "_markerType", "_colour", "_marker"];
+
 // Delete last set of markers (always)
 {
     deleteMarkerLocal _x;

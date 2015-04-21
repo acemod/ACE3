@@ -15,13 +15,10 @@
  */
 #include "script_component.hpp"
 
-(_dsp displayCtrl 500) ctrlEnable true;
-(_dsp displayCtrl 501) ctrlEnable true;
-(_dsp displayCtrl 502) ctrlEnable true;
-(_dsp displayCtrl 503) ctrlEnable true;
+{((uiNamespace getVariable "ATragMX_Display") displayCtrl _x) ctrlEnable true} forEach [500, 501, 502, 503];
 
-(_dsp displayCtrl 500 + GVAR(currentTarget)) ctrlEnable false;
+((uiNamespace getVariable "ATragMX_Display") displayCtrl 500 + GVAR(currentTarget)) ctrlEnable false;
 
-ctrlSetFocus (_dsp displayCtrl 3000);
+ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 3000);
 
 [] call FUNC(update_unit_selection);

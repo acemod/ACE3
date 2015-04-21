@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 [{
-    private ["_bullet", "_airFriction", "_args", "_deltaT", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueVelocity", "_dragRef", "_drag", "_accelRef", "_accel"];
+    private ["_args", "_bullet", "_airFriction", "_time", "_deltaT", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueSpeed", "_dragRef", "_drag", "_accelRef", "_accel"];
 
     _args = _this select 0;
     _bullet = _args select 0;
@@ -26,7 +26,7 @@
     _bulletVelocity = velocity _bullet;
     _bulletSpeed = vectorMagnitude _bulletVelocity;
     
-    if (!alive _bullet || _bulletSpeed < 100) exitwith {
+    if (!alive _bullet || ((_bullet isKindOf "BulletBase") && _bulletSpeed < 100)) exitwith {
         [_this select 1] call cba_fnc_removePerFrameHandler;
     };
     

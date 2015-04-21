@@ -29,5 +29,5 @@ if (GVAR(SavePreDeathGear)) then {
 };
 
 if (missionNamespace getVariable [QGVAR(showFriendlyFireMessage), false]) then {
-    [_this, FUNC(showFriendlyFireMessage), 2] call EFUNC(common,execRemoteFnc);
+    [_this, QUOTE(DFUNC(showFriendlyFireMessage)), 2] call EFUNC(common,execRemoteFnc);
 };

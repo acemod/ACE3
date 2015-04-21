@@ -18,10 +18,9 @@
 
 #include "script_component.hpp"
 
-if !(isServer) exitWith {};
+PARAMS_3(_logic,_units,_activated); 
 
-_logic = _this select 0;
-_activated = _this select 2;
+if !(isServer) exitWith {};
 
 if !(_activated) exitWith {};
 
@@ -32,9 +31,10 @@ GVAR(Module) = true;
 
 if (isServer) then {
     if (GVAR(RemoveDeadBodiesDisconnected)) then {
+        private "_fnc_deleteDisconnected";
         _fnc_deleteDisconnected = {
             _this spawn {
-                _unit = _this select 0;
+                PARAMS_1(_unit);
 
                 sleep 4;
 

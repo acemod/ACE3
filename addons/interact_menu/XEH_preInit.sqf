@@ -49,4 +49,7 @@ GVAR(expandedTime) = diag_tickTime;
 GVAR(iconCtrls) = [];
 GVAR(iconCount) = 0;
 
+GVAR(foundActions) = [];
+GVAR(lastTimeSearchedActions) = -1000;
+
 ADDON = true;
