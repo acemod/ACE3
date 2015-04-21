@@ -19,6 +19,19 @@ class CfgMovesBasic {
             SecondaryWeapon = "AmovPpneMstpSrasWlnrDnon";
         };
 
+        class LauncherKneelActions;
+        class LauncherStandActions: LauncherKneelActions {
+            PlayerProne = "AmovPpneMstpSrasWlnrDnon";
+            Down = "AmovPpneMstpSrasWlnrDnon";
+        };
+
+        class LauncherProneActions: LauncherKneelActions {
+            TurnL = "AmovPpneMstpSrasWlnrDnon_turnl";
+            TurnLRelaxed = "AmovPpneMstpSrasWlnrDnon_turnl";
+            TurnR = "AmovPpneMstpSrasWlnrDnon_turnr";
+            TurnRRelaxed = "AmovPpneMstpSrasWlnrDnon_turnr";
+        };
+
         // WEAPON RAISED - RUNNING
         class RifleStandActionsNoAdjust;
         class RifleStandActionsRunF: RifleStandActionsNoAdjust {
