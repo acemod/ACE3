@@ -20,7 +20,7 @@ class CfgVehicles {
     
     class ACE_Comanche_Test : B_Heli_Attack_01_F {
         displayName = "ACE_Comanche_Test";
-        author = "ACE Team";
+        author = "$STR_ACE_Common_ACETeam";
         class Library {
             libTextDesc = "ACE_Comanche_Test";
         };
