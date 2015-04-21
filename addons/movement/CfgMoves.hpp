@@ -20,10 +20,10 @@ class CfgMovesBasic {
         };
 
         class LauncherKneelActions;
-        class LauncherStandActions: LauncherKneelActions {
+        /*class LauncherStandActions: LauncherKneelActions {
             PlayerProne = "AmovPpneMstpSrasWlnrDnon";
             Down = "AmovPpneMstpSrasWlnrDnon";
-        };
+        };*/
 
         class LauncherProneActions: LauncherKneelActions {
             TurnL = "AmovPpneMstpSrasWlnrDnon_turnl";
