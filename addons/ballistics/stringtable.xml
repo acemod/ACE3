@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Magazines">
         <!-- MX -->
@@ -982,6 +983,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_Name">
             <English>6.5mm Creedmor 30Rnd Mag</English>
+            <Polish>Magazynek 6,5mm Creedmor 30rd</Polish>
         </Key>
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_NameShort">
             <English>6.5mm CM</English>
@@ -992,6 +994,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_Description">
             <English>Caliber: 6.5mm Creedmor&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
+            <Polish>Kaliber: 6,5mm Creedmor&lt;br /&gt;Pociski: 30&lt;br /&gt;Używany w: MXM</Polish>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Name">
             <English>.338 10Rnd Mag (300gr Sierra MatchKing HPBT)</English>
