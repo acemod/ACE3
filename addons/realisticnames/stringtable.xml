@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="RealisticNames">
         <Key ID="STR_ACE_RealisticNames_HMG_01_Name">
@@ -520,7 +519,7 @@
             <English>Punisher (GMG)</English>
             <German>Punisher (GMW)</German>
             <Spanish>Punisher (GMG)</Spanish>
-            <Polish>Punisher (GMG)</Polish>
+            <Polish>Punisher (CKM)</Polish>
             <Czech>Punisher (granátomet)</Czech>
             <French>Punisher (GMG)</French>
             <Russian>Kаратель (Гранатомет)</Russian>
@@ -1136,7 +1135,7 @@
             <English>Mini-Spike (AT)</English>
             <German>Mini-Spike (PALR)</German>
             <Czech>Mini-Spike (PT)</Czech>
-            <Polish>Mini-Spike (AT)</Polish>
+            <Polish>Mini-Spike (AA)</Polish>
             <French>Mini-Spike (AT)</French>
             <Hungarian>Mini-Spike (Tankelhárító)</Hungarian>
             <Spanish>Mini-Spike (AT)</Spanish>
@@ -1511,53 +1510,53 @@
             <Russian>TODO: MAR-10 .338 (песочный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_03">
-            <English>TODO: Mk-I EMR 7.62 mm</English>
-            <Czech>TODO: Mk-I EMR 7.62 mm</Czech>
-            <French>Mk-l EMR 7.62 mm</French>
-            <Spanish>TODO: Mk-I EMR 7.62 mm</Spanish>
-            <Russian>TODO: Mk-I EMR 7.62 мм</Russian>
+            <English>SG 556 7.62 mm</English>
+            <Czech>SG 556 7.62 mm</Czech>
+            <French>SG 556 7.62 mm</French>
+            <Spanish>SG 556 7.62 mm</Spanish>
+            <Russian>SG 556 7.62 мм</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03">
-            <English>TODO: Mk-I EMR 7.62 mm (Black)</English>
-            <Czech>TODO: Mk-I EMR 7.62 mm (Black)</Czech>
-            <French>Mk-l EMR 7.62 mm (Noir)</French>
-            <Spanish>TODO: Mk-I EMR 7.62 mm (Negro)</Spanish>
-            <Russian>TODO: Mk-I EMR 7.62 мм (черный)</Russian>
+            <English>SG 556 7.62 mm (Black)</English>
+            <Czech>SG 556 7.62 mm (Black)</Czech>
+            <French>SG 556 7.62 mm (Noir)</French>
+            <Spanish>SG 556 7.62 mm (Negro)</Spanish>
+            <Russian>SG 556 7.62 мм (черный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_khaki">
-            <English>TODO: Mk-I EMR 7.62 mm (Khaki)</English>
-            <Czech>TODO: Mk-I EMR 7.62 mm (Khaki)</Czech>
-            <French>Mk-l EMR 7.62 mm (Kaki)</French>
-            <Spanish>TODO: Mk-I EMR 7.62 mm (Caqui)</Spanish>
-            <Russian>TODO: Mk-I EMR 7.62 мм (хаки)</Russian>
+            <English>SG 556 7.62 mm (Khaki)</English>
+            <Czech>SG 556 7.62 mm (Khaki)</Czech>
+            <French>SG 556 7.62 mm (Kaki)</French>
+            <Spanish>SG 556 7.62 mm (Caqui)</Spanish>
+            <Russian>SG 556 7.62 мм (хаки)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_tan">
-            <English>TODO: Mk-I EMR 7.62 mm (Sand)</English>
-            <Czech>TODO: Mk-I EMR 7.62 mm (Sand)</Czech>
-            <French>Mk-l EMR 7.62 mm (Beige)</French>
-            <Spanish>TODO: Mk-I EMR 7.62 mm (Arena)</Spanish>
-            <Russian>TODO: Mk-I EMR 7.62 мм (песочный)</Russian>
+            <English>SG 556 7.62 mm (Sand)</English>
+            <Czech>SG 556 7.62 mm (Sand)</Czech>
+            <French>SG 556 7.62 mm (Beige)</French>
+            <Spanish>SG 556 7.62 mm (Arena)</Spanish>
+            <Russian>SG 556 7.62 мм (песочный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_multicam">
-            <English>TODO: Mk-I EMR 7.62 mm (Camo)</English>
-            <Czech>TODO: Mk-I EMR 7.62 mm (Camo)</Czech>
-            <French>Mk-l EMR 7.62 mm (Camo)</French>
-            <Spanish>TODO: Mk-I EMR 7.62 mm (Camuflaje)</Spanish>
-            <Russian>TODO: Mk-I EMR 7.62 мм (камо)</Russian>
+            <English>SG 556 7.62 mm (Camo)</English>
+            <Czech>SG 556 7.62 mm (Camo)</Czech>
+            <French>SG 556 7.62 mm (Camo)</French>
+            <Spanish>SG 556 7.62 mm (Camuflaje)</Spanish>
+            <Russian>SG 556 7.62 мм (камо)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_woodland">
-            <English>TODO: Mk-I EMR 7.62 mm (Woodland)</English>
-            <Czech>TODO: Mk-I EMR 7.62 mm (Woodland)</Czech>
-            <French>Mk-l EMR 7.62 mm (Woodland)</French>
-            <Spanish>TODO: Mk-I EMR 7.62 mm (Bosque)</Spanish>
-            <Russian>TODO: Mk-I EMR 7.62 мм (лесной)</Russian>
+            <English>SG 556 7.62 mm (Woodland)</English>
+            <Czech>SG 556 7.62 mm (Woodland)</Czech>
+            <French>SG 556 7.62 mm (Woodland)</French>
+            <Spanish>SG 556 7.62 mm (Bosque)</Spanish>
+            <Russian>SG 556 7.62 мм (лесной)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
-            <English>TODO: NATO DMR (provisional) spotter</English>
-            <Czech>TODO: NATO DMR (provisional) spotter</Czech>
-            <French>NATO DMR (provisoire) observateur</French>
-            <Spanish>TODO: NATO DMR (provisional) observador</Spanish>
-            <Russian>TODO: NATO DMR (provisional) корректировщик</Russian>
+            <English>SG 556 7.62 mm (provisional) spotter</English>
+            <Czech>SG 556 7.62 mm (provisional) spotter</Czech>
+            <French>SG 556 7.62 mm (provisoire) Observateur</French>
+            <Spanish>SG 556 7.62 mm (provisional) observador</Spanish>
+            <Russian>SG 556 7.62 мм (provisional) корректировщик</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_04">
             <English>TODO: ASP-1 Kir 12.7 mm</English>
@@ -1609,25 +1608,25 @@
             <Russian>TODO: Cyrus 9.3 мм (бронза)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_06">
-            <English>TODO: Mk14 7.62 mm</English>
-            <Czech>TODO: Mk14 7.62 mm</Czech>
-            <French>Mk 14 7.62 mm</French>
-            <Spanish>TODO: Mk14 7.62 mm</Spanish>
-            <Russian>TODO: Mk14 7.62 мм</Russian>
+            <English>M14 7.62 mm</English>
+            <Czech>M14 7.62 mm</Czech>
+            <French>M14 7.62 mm</French>
+            <Spanish>M14 7.62 mm</Spanish>
+            <Russian>M14 7.62 мм</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_camo">
-            <English>TODO: Mk14 7.62 mm (Camo)</English>
-            <Czech>TODO: Mk14 7.62 mm (Camo)</Czech>
-            <French>Mk 14 7.62 mm (Camo)</French>
-            <Spanish>TODO: Mk14 7.62 mm (Camuflaje)</Spanish>
-            <Russian>TODO: Mk14 7.62 мм (камо)</Russian>
+            <English>M14 7.62 mm (Camo)</English>
+            <Czech>M14 7.62 mm (Camo)</Czech>
+            <French>M14 7.62 mm (Camo)</French>
+            <Spanish>M14 7.62 mm (Camuflaje)</Spanish>
+            <Russian>M14 7.62 мм (Камо)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_olive">
-            <English>TODO: Mk14 7.62 mm (Olive)</English>
-            <Czech>TODO: Mk14 7.62 mm (Olive)</Czech>
-            <French>Mk 14 7.62 mm (Olive)</French>
-            <Spanish>TODO: Mk14 7.62 mm (Oliva)</Spanish>
-            <Russian>TODO: Mk14 7.62 мм (олива)</Russian>
+            <English>M14 7.62 mm (Olive)</English>
+            <Czech>M14 7.62 mm (Olive)</Czech>
+            <French>M14 7.62 mm (Olive)</French>
+            <Spanish>M14 7.62 mm (Oliva)</Spanish>
+            <Russian>M14 7.62 мм (Олива)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01">
             <English>TODO: Navid 9.3 mm</English>
@@ -1651,32 +1650,32 @@
             <Russian>TODO: Navid 9.3 мм (бронза)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02">
-            <English>TODO: SPMG .338</English>
-            <Czech>TODO: SPMG .338</Czech>
-            <French>SPMG .338</French>
-            <Spanish>TODO: SPMG .338</Spanish>
-            <Russian>TODO: SPMG .338</Russian>
+            <English>LWMMG .338</English>
+            <Czech>LWMMG .338</Czech>
+            <French>LWMMG .338</French>
+            <Spanish>LWMMG .338</Spanish>
+            <Russian>LWMMG .338</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_camo">
-            <English>TODO: SPMG .338 (MTP)</English>
-            <Czech>TODO: SPMG .338 (MTP)</Czech>
-            <French>SPMG .338 (MTP)</French>
-            <Spanish>TODO: SPMG .338 (MTP)</Spanish>
-            <Russian>TODO: SPMG .338 (MTP)</Russian>
+            <English>LWMMG .338 (MTP)</English>
+            <Czech>LWMMG .338 (MTP)</Czech>
+            <French>LWMMG .338 (MTP)</French>
+            <Spanish>LWMMG .338 (MTP)</Spanish>
+            <Russian>LWMMG .338 (MTP)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_black">
-            <English>TODO: SPMG .338 (Black)</English>
-            <Czech>TODO: SPMG .338 (Black)</Czech>
-            <French>SPMG .338 (Noir)</French>
-            <Spanish>TODO: SPMG .338 (Negro)</Spanish>
-            <Russian>TODO: SPMG .338 (черный)</Russian>
+            <English>LWMMG .338 (Black)</English>
+            <Czech>LWMMG .338 (Black)</Czech>
+            <French>LWMMG .338 (Noir)</French>
+            <Spanish>LWMMG .338 (Negro)</Spanish>
+            <Russian>LWMMG .338 (Черный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_sand">
-            <English>TODO: SPMG .338 (Sand)</English>
-            <Czech>TODO: SPMG .338 (Sand)</Czech>
+            <English>LWMMG .338 (Sand)</English>
+            <Czech>LWMMG .338 (Sand)</Czech>
             <French>SPMG .338 (Beige)</French>
-            <Spanish>TODO: SPMG .338 (Arena)</Spanish>
-            <Russian>TODO: SPMG .338 (песочный)</Russian>
+            <Spanish>LWMMG .338 (Arena)</Spanish>
+            <Russian>LWMMG .338 (Песочный)</Russian>
         </Key>
     </Package>
 </Project>
