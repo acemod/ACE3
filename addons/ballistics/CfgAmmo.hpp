@@ -129,8 +129,7 @@ class CfgAmmo {
     class ACE_65x39_Caseless_green_Tracer_Dim : B_65x39_Caseless_green {
         nvgOnly = 1;
     };
-    class ACE_65x47_Ball_Scenar: B_65x39_Caseless
-    {
+    class ACE_65x47_Ball_Scenar: B_65x39_Caseless {
         airFriction=-0.00078;
         typicalSpeed=820 ;
         ACE_caliber=0.264;
@@ -144,8 +143,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={730, 760, 790, 820, 830};
         ACE_barrelLengths[]={10, 16, 20, 24, 26};
     };
-    class ACE_65_Creedmore_Ball: B_65x39_Caseless
-    {
+    class ACE_65_Creedmore_Ball: B_65x39_Caseless {
         airFriction=-0.00078;
         typicalSpeed=860 ;
         ACE_caliber=0.264;
