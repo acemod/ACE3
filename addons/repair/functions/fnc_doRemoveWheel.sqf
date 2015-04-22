@@ -31,7 +31,7 @@ if (_hitPointDamage >= 1) exitWith {};
 // spawn wheel
 private "_wheel";
 _wheel = ["ACE_Wheel", getPosASL _unit] call FUNC(spawnObject);
-_wheel setdamage _damage;
+_wheel setdamage _hitPointDamage;
 
 // raise event to set the new hitpoint damage
 ["setWheelHitPointDamage", _vehicle, [_vehicle, _hitPoint, 1]] call EFUNC(common,targetEvent);

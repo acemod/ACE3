@@ -21,6 +21,8 @@ _hitPoint = _this select 2;
 
 if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
+if !([_unit, GVAR(engineerSetting_Wheel)] call FUNC(isEngineer)) exitWith {false};
+
 // check for a near wheel
 private "_wheel";
 _wheel = objNull;

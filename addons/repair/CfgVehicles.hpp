@@ -4,7 +4,7 @@
         class ACE_MainActions { \
             class GVAR(Repair) { \
                 displayName = "$STR_ACE_Repair_Repair"; \
-                condition = ""; \
+                condition = QUOTE([ARR_2(_this select 0, GVAR(engineerSetting_Repair))] call DFUNC(isEngineer)); \
                 statement = "'show a hint with the hitpart damage'"; \
                 runOnHover = 1; \
                 showDisabled = 0; \

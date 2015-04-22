@@ -11,10 +11,11 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_hitPoint", "_elapsedTime", "_totalTime"];
+private ["_unit", "_vehicle", "_hitPoint", "_elapsedTime", "_totalTime"];
 
-_vehicle = _this select 0 select 0;
-_hitPoint = _this select 0 select 1;
+_unit = _this select 0 select 0;
+_vehicle = _this select 0 select 1;
+_hitPoint = _this select 0 select 2;
 
 _elapsedTime = _this select 1;
 _totalTime = _this select 2;
@@ -27,7 +28,7 @@ _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
 _hitPointDamage = _hitPointDamage - _hitPointDamage * (_elapsedTime / _totalTime);
 
 // don't use negative values for damage
-_hitPointDamage = _hitPointDamage max 0;
+_hitPointDamage = _hitPointDamage max ([_unit] call FUNC(getPostRepairDamage));
 
 // raise event to set the new hitpoint damage
 ["setVehicleHitPointDamage", _vehicle, [_vehicle, _hitPoint, _hitPointDamage]] call EFUNC(common,targetEvent);

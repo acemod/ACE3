@@ -21,4 +21,6 @@ _hitPoint = _this select 2;
 
 if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
-alive _target && {_target getHitPointDamage _hitPoint > 0}
+if !([_unit, GVAR(engineerSetting_Repair)] call FUNC(isEngineer)) exitWith {false};
+
+alive _target && {_target getHitPointDamage _hitPoint > ([_unit] call FUNC(getPostRepairDamage))}
