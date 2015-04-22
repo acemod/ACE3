@@ -28,4 +28,6 @@ TRACE_2("Dir: Current/Change",Round(_dir),Round(_dirChange));
 TRACE_2("Spd: Current/Change",Round(_spd * 10) / 10,Round(_spdChange * 10) / 10);
 TRACE_3("Period/Position/Percent",Round(_period),Round(_periodPosition),Round(_periodPercent * 100) / 100);
 
+// TODO: Add some deterministic noise
+
 [-_spd * sin(_dir), -_spd * cos(_dir), 0]

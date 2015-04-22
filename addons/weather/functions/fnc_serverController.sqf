@@ -53,10 +53,10 @@ if(GVAR(wind_period_count) > GVAR(wind_next_period)) then {
     _windDirection = (360 + GVAR(wind_direction_reference) + _windDirectionVariance) % 360;
     _windDirectionChange = _windDirection - GVAR(current_wind_direction);
     if (_windDirectionChange > 180) then {
-        _windDirectionChange = 360 - _windDirectionChange;
+        _windDirectionChange = _windDirectionChange - 360;
     };
     if (_windDirectionChange < -180) then {
-        _windDirectionChange = -360 - _windDirectionChange;
+        _windDirectionChange = 360 + _windDirectionChange;
     };
     
     _windMaxDiff = GVAR(mean_wind_speed) - GVAR(max_wind_speed);
