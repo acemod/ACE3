@@ -42,9 +42,9 @@ class CfgMagazines {
     class ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim: 30Rnd_65x39_caseless_green_mag_Tracer {
         author = "$STR_ACE_Common_ACETeam";
         ammo = "ACE_65x39_Caseless_green_Tracer_Dim";
-        displayName = "$STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimName";
-        displayNameShort = "$STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimNameShort";
-        descriptionShort = "$STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimDescription";
+        displayName = "$STR_ACE_30Rnd_65x39_caseless_green_mag_Tracer_DimName";
+        displayNameShort = "$STR_ACE_30Rnd_65x39_caseless_green_mag_Tracer_DimNameShort";
+        descriptionShort = "$STR_ACE_30Rnd_65x39_caseless_green_mag_Tracer_DimDescription";
     };
 
     class 30Rnd_556x45_Stanag: CA_Magazine {
