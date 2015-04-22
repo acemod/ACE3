@@ -41,7 +41,7 @@ private "_time";
 _time = 10;
 
 // open the loading bar
-[_time, [_unit, _vehicle, _hitPoint, _wheel], {(_this select 0) call DFUNC(doReplaceWheel)}, {[objNull, _this select 0 select 3] call DEFUNC(common,claim); [localize "STR_ACE_Common_ActionAborted"] call EFUNC(common,displayTextStructured);}, localize "STR_ACE_Repair_ReplacingWheel", {true}, []] call EFUNC(common,progressBar);
+[_time, [_unit, _vehicle, _hitPoint, _wheel], {(_this select 0) call DFUNC(doReplaceWheel)}, {[objNull, _this select 0 select 3] call DEFUNC(common,claim); [localize "STR_ACE_Common_ActionAborted"] call EFUNC(common,displayTextStructured);}, localize "STR_ACE_Repair_ReplacingWheel", {(_this select 0) call DFUNC(canReplaceWheel)}, []] call EFUNC(common,progressBar);
 
 // do animation
 [_unit] call EFUNC(common,goKneeling);

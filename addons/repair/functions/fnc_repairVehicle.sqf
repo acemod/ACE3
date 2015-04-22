@@ -40,7 +40,7 @@ if (isLocalized _text) then {
 };
 
 // open the loading bar
-[_time, [_unit, _vehicle, _hitPoint], {_this call DFUNC(doRepair)}, {_this call DFUNC(doRepair)}, _text, {true}, []] call EFUNC(common,progressBar);
+[_time, [_unit, _vehicle, _hitPoint], {_this call DFUNC(doRepair)}, {_this call DFUNC(doRepair)}, _text, {(_this select 0) call DFUNC(canRepair)}, []] call EFUNC(common,progressBar);
 
 // do animation
 [_unit] call EFUNC(common,goKneeling);
