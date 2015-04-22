@@ -145,7 +145,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={10, 16, 20, 24, 26};
     };
     class ACE_65_Creedmor_Ball: B_65x39_Caseless {
-        airFriction=-0.00078;
+        airFriction=-0.000651;
         typicalSpeed=860 ;
         caliber=0.7;
         ACE_caliber=0.264;
