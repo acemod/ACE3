@@ -33,7 +33,9 @@ GVAR(lastTimeSearchedActions) = -1000;
 
 GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
                       visibleMap ||
-                      {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}};
+                      {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}} ||
+                      {(_menuType == 0) && GVAR(AlwaysUseCursorInteraction)};
+
 if (GVAR(useCursorMenu)) then {
     createDialog QGVAR(cursorMenu);
     // The dialog sets:
