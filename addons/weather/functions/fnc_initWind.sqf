@@ -11,24 +11,32 @@
  */
 #include "script_component.hpp"
 
-private ["_j", "_i", "_directionFound", "_month", "_windDirectionProbabilities"];
+private ["_sum", "_rand", "_csum", "_index", "_month", "_windDirectionProbabilities"];
 _month = date select 1;
 _windDirectionProbabilities = GVAR(WindDirectionProbabilities) select (_month - 1);
 
 ACE_wind = [0, 0, 0];
  
 GVAR(wind_direction_reference) = random 360;
-_directionFound = false;
-for "_j" from 0 to 10 do {
-     _random = random 1;
-    for "_i" from 0 to 7 do {
-        if (_random < (_windDirectionProbabilities select _i)) exitWith {
-            _directionFound = true;
-            GVAR(wind_direction_reference) = 45 * _i;
-        };
-    };
-    if (_directionFound) exitWith {};
+_sum = 0;
+for "_i" from 0 to 7 do {
+    _sum = _sum + (_windDirectionProbabilities select _i);
 };
+_rand = random _sum;
+_csum = [0, 0, 0, 0, 0, 0, 0, 0];
+for "_i" from 0 to 7 do {
+    for "_j" from 0 to _i do {
+        _csum set [_i, (_csum select _i) + (_windDirectionProbabilities select _j)];
+    };
+};
+_index = 0;
+for "_i" from 0 to 7 do {
+    if (_rand > (_csum select _i)) then {
+        _index = _index + 1;
+    };
+};
+GVAR(wind_direction_reference) = 45 * _index;
+
 GVAR(wind_mean_dir) = GVAR(wind_direction_reference);
 GVAR(wind_direction_reference) = GVAR(wind_direction_reference) + (random 22.5) - (random 22.5);
 GVAR(wind_direction_reference) = (360 + GVAR(wind_direction_reference)) % 360;
