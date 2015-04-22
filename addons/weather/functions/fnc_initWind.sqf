@@ -31,18 +31,18 @@ for "_j" from 0 to 10 do {
 };
 GVAR(wind_mean_dir) = GVAR(wind_direction_reference);
 GVAR(wind_direction_reference) = GVAR(wind_direction_reference) + (random 22.5) - (random 22.5);
+GVAR(wind_direction_reference) = (360 + GVAR(wind_direction_reference)) % 360;
 
 GVAR(min_wind_speed) = GVAR(WindSpeedMin) select (_month - 1);
 GVAR(min_wind_speed) = (GVAR(min_wind_speed) select 0) + (random (GVAR(min_wind_speed) select 1)) - (random (GVAR(min_wind_speed) select 1));
 GVAR(min_wind_speed) = 0 max GVAR(min_wind_speed);
+GVAR(mean_wind_speed) = GVAR(WindSpeedMean) select (_month - 1);
 GVAR(max_wind_speed) = GVAR(WindSpeedMax) select (_month - 1);
 GVAR(max_wind_speed) = (GVAR(max_wind_speed) select 0) + (random (GVAR(max_wind_speed) select 1)) - (random (GVAR(max_wind_speed) select 1));
 GVAR(max_wind_speed) = 0 max GVAR(max_wind_speed);
 
-GVAR(c1) = 0.1 + random 0.1;
-GVAR(c2) = 0.2 + random 0.1;
-GVAR(c3) = 0.5 + random 0.2;
-GVAR(c4) = 0.7 + random 0.2;
+GVAR(current_wind_direction) = GVAR(wind_direction_reference);
+GVAR(current_wind_speed) = GVAR(min_wind_speed) + (GVAR(max_wind_speed) - GVAR(min_wind_speed)) * (random 1);
 
 GVAR(wind_period_count) = 0;
 GVAR(wind_next_period) = -1;

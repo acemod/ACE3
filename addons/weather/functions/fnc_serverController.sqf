@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-private ["_i", "_lastRain", "_rainOverCast", "_transitionTime", "_windDirectionVariance", "_windDirection", "_time", "_c1", "_c2", "_c3", "_c4"];
+private ["_i", "_lastRain", "_rainOverCast", "_transitionTime", "_windDirectionVariance", "_windSpeed", "_windSpeedChange", "_windMaxDiff", "_windMinDiff", "_windDirection", "_windDirectionChange", "_time"];
 
 // Rain simulation
 if(GVAR(rain_period_count) > GVAR(rain_next_period)) then {
@@ -49,25 +49,38 @@ if(GVAR(wind_period_count) > GVAR(wind_next_period)) then {
     GVAR(wind_next_period) = ceil((2 + (random 5)) / GVAR(overcast_multiplier));
     GVAR(wind_period_count) = 0;
     
-    _windDirectionVariance = (90 - (random 180)) * overcast;
+    _windDirectionVariance = (90 - (random 180)) * (overcast ^ 2);
     _windDirection = (360 + GVAR(wind_direction_reference) + _windDirectionVariance) % 360;
+    _windDirectionChange = _windDirection - GVAR(current_wind_direction);
+    if (_windDirectionChange > 180) then {
+        _windDirectionChange = 360 - _windDirectionChange;
+    };
+    if (_windDirectionChange < -180) then {
+        _windDirectionChange = -360 - _windDirectionChange;
+    };
     
-    _c1 = (0.1 + random 0.1) * overcast;
-    _c2 = (0.2 + random 0.1) * overcast;
-    _c3 = (0.5 + random 0.2);
-    _c4 = (0.7 + random 0.2);
+    _windMaxDiff = GVAR(mean_wind_speed) - GVAR(max_wind_speed);
+    _windMinDiff = GVAR(min_wind_speed) - GVAR(mean_wind_speed);
+    
+    _ratioMax = (random 1) ^ 2;
+    _ratioMin = (random 1) ^ 2;
+    
+    _windSpeed = GVAR(mean_wind_speed) + _windMaxDiff * _ratioMax + _windMinDiff * _ratioMin;
+    _windSpeedChange = _windSpeed - GVAR(current_wind_speed);
     
     _time = GVAR(wind_next_period) * 60;
     
-    ACE_WIND_PARAMS = [_windDirection,
-                       GVAR(min_wind_speed),
-                       GVAR(max_wind_speed),
-                       _c1,
-                       _c2,
-                       _c3,
-                       _c4,
+    TRACE_5("dirCur/dirNew/spdCur/spdNew/period",GVAR(current_wind_direction),_windDirection,GVAR(current_wind_speed),_windSpeed,_time);
+    
+    ACE_WIND_PARAMS = [GVAR(current_wind_direction),
+                        _windDirectionChange,
+                       GVAR(current_wind_speed),
+                       _windSpeedChange,
                        _time];
-                       
+    
+    GVAR(current_wind_direction) = _windDirection;
+    GVAR(current_wind_speed) = _windSpeed;
+    
     GVAR(wind_period_start_time) = time;
     publicVariable "ACE_WIND_PARAMS";
 };
@@ -78,3 +91,5 @@ publicVariable "ACE_MISC_PARAMS";
 
 GVAR(rain_period_count) = GVAR(rain_period_count) + 1;
 GVAR(wind_period_count) = GVAR(wind_period_count) + 1;
+
+GVAR(overcast_multiplier) = 1 max (2* overcast) min 2; // 0 (@ overcast 0), 2 (@ overcast 1)
