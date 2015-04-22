@@ -1,10 +1,11 @@
 module.exports = function (grunt) {
 
-    var header = [
-        "js/vendor/modernizr/modernizr.custom.18747.js"
-    ];
+    /*var header = [
+
+    ];*/
 
     var footer = [
+        "js/vendor/modernizr/modernizr.custom.18747.js",
         "js/vendor/picturefill/picturefill.js",
         "js/vendor/jquery/jquery-2.1.3.min.js",
         "js/vendor/foundation/foundation.js",
@@ -45,29 +46,29 @@ module.exports = function (grunt) {
             }
         },
         concat: {
-            header: {
-                src: [header],
-                dest: "../js/header.dev.js"
-            },
+            //header: {
+            //    src: [header],
+            //    dest: "../js/header.dev.js"
+            //},
             footer: {
                 src: [footer],
                 dest: "../js/footer.dev.js"
             }
         },
         uglify: {
-            "header": {
-                options: {
-                    sourceMap: "../js/header-source-map.js",
-                    sourceMappingURL: "header-source-map.js",
-                    sourceMapPrefix: 2,
-                    sourceMapRoot: "../../dist/js/",
-                    mangle: true,
-                    compress: true
-                },
-                files: {
-                    "../js/header.min.js": [header]
-                }
-            },
+            //"header": {
+            //    options: {
+            //        sourceMap: "../js/header-source-map.js",
+            //        sourceMappingURL: "header-source-map.js",
+            //        sourceMapPrefix: 2,
+            //        sourceMapRoot: "../../dist/js/",
+            //        mangle: true,
+            //        compress: true
+            //    },
+            //    files: {
+            //        "../js/header.min.js": [header]
+            //    }
+            //},
             "footer": {
                 options: {
                     sourceMap: "../js/footer-source-map.js",
@@ -100,6 +101,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-imagemin");
 
-    grunt.registerTask("build", ["sass", "concat", "uglify:header", "uglify:footer", "imagemin"]);
+    grunt.registerTask("build", ["sass", "concat", /*"uglify:header",*/ "uglify:footer", "imagemin"]);
     grunt.registerTask("default", ["build", "watch"]);
 };

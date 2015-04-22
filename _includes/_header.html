@@ -6,25 +6,17 @@
         <title>{% if page.browserTitle != null %}{{ page.browserTitle }}{% else %}{{ page.title }}{% endif %} · ACE3</title>
 
         <meta name="description" content="{{site.description}}" />
-        <meta name="keywords" content="$name" />
+        <meta name="keywords" content="{{site.keywords}}" />
         <meta name="robots" content="INDEX,FOLLOW" />
         <link rel="canonical" href="http://ace3mod.com{{ page.url }}" />
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <link type="text/plain" rel="author" href="{{ site.baseurl }}/humans.txt" />
         
         <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon-32x32.png" sizes="32x32" />
         <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png" sizes="16x16" />
         
-        <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="{{ site.baseurl }}/css/app.css" />
-        <script>
-            // temporary domain redirect
-            if (window.location.href.indexOf("github.io") > -1) {
-                alert("ACE3 has moved to http://ace3mod.com \nYou will be redirected now.");
-                window.location.href = "http://ace3mod.com";
-            }
-        </script>
-        <script src="{{ site.baseurl }}/js/header.min.js"></script>
     </head>
     <body>
     <header>
