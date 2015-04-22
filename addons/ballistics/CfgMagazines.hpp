@@ -179,6 +179,13 @@ class CfgMagazines {
         displayNameShort = "$STR_ACE_30Rnd_65x47_Scenar_mag_NameShort";
         descriptionShort = "$STR_ACE_30Rnd_65x47_Scenar_mag_Description";
     };
+    class ACE_30Rnd_65_Creedmor_mag: 30Rnd_65x39_caseless_mag {
+        author = "$STR_ACE_Common_ACETeam";
+        ammo = "ACE_65_Creedmor_Ball";
+        displayName = "$STR_ACE_30Rnd_65_Creedmor_mag_Name";
+        displayNameShort = "$STR_ACE_30Rnd_65_Creedmor_mag_NameShort";
+        descriptionShort = "$STR_ACE_30Rnd_65_Creedmor_mag_Description";
+    };
     class 10Rnd_338_Mag;
     class ACE_10Rnd_338_300gr_HPBT_Mag: 10Rnd_338_Mag {
         author = "$STR_ACE_Common_ACETeam";

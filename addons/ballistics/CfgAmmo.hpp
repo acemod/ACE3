@@ -132,6 +132,7 @@ class CfgAmmo {
     class ACE_65x47_Ball_Scenar: B_65x39_Caseless {
         airFriction=-0.00078;
         typicalSpeed=820 ;
+        caliber=0.6;
         ACE_caliber=0.264;
         ACE_bulletLength=1.364;
         ACE_bulletMass=139;
@@ -143,9 +144,10 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={730, 760, 790, 820, 830};
         ACE_barrelLengths[]={10, 16, 20, 24, 26};
     };
-    class ACE_65_Creedmore_Ball: B_65x39_Caseless {
+    class ACE_65_Creedmor_Ball: B_65x39_Caseless {
         airFriction=-0.00078;
         typicalSpeed=860 ;
+        caliber=0.7;
         ACE_caliber=0.264;
         ACE_bulletLength=1.426;
         ACE_bulletMass=140;
@@ -227,6 +229,7 @@ class CfgAmmo {
     class ACE_30_06_M1_Ball : B_762x51_Ball {
         airFriction=-0.0009;
         typicalSpeed=800;
+        caliber=1.3;
         hit=10;
         ACE_caliber=0.308;
         ACE_bulletLength=1.21;
@@ -242,6 +245,7 @@ class CfgAmmo {
     class ACE_7_Remington_Magnum_Ball : B_762x51_Ball {
         airFriction=-0.0008;
         typicalSpeed=820;
+        caliber=1.4;
         hit=8;
         ACE_caliber=0.284;
         ACE_bulletLength=1.529;
@@ -257,6 +261,7 @@ class CfgAmmo {
     class ACE_243_Winchester_Ball : B_762x51_Ball {
         airFriction=-0.00095;
         typicalSpeed=915;
+        caliber=0.8;
         hit=6;
         ACE_caliber=0.243;
         ACE_bulletLength=1.282;

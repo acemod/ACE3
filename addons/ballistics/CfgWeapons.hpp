@@ -88,7 +88,8 @@ class CfgWeapons {
             "30Rnd_65x39_caseless_mag",
             "30Rnd_65x39_caseless_mag_Tracer",
             "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
-            "ACE_30Rnd_65x47_Scenar_mag"
+            "ACE_30Rnd_65x47_Scenar_mag",
+            "ACE_30Rnd_65_Creedmor_mag"
         };
         initSpeed = -1.018;
         ACE_barrelTwist=9;
