@@ -24,6 +24,7 @@ _dir = _dir + _dirChange * _periodPercent;
 
 _dir = (360 + _dir) % 360;
 
+TRACE_1("PeriodStartTime",Round(GVAR(wind_period_start_time)));
 TRACE_2("Dir: Current/Change",Round(_dir),Round(_dirChange));
 TRACE_2("Spd: Current/Change",Round(_spd * 10) / 10,Round(_spdChange * 10) / 10);
 TRACE_3("Period/Position/Percent",Round(_period),Round(_periodPosition),Round(_periodPercent * 100) / 100);

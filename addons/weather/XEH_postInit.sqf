@@ -1,26 +1,9 @@
 #include "script_component.hpp"
 
-call FUNC(getMapData);
-
-// Randomization
-GVAR(temperatureShift) = 3 - random 6;
-GVAR(badWeatherShift) = (random 1) ^ 2 * 10;
-GVAR(humidityShift) = (5 - random 10) / 100;
-
-// Rain variables
 GVAR(enableRain) = true;
-GVAR(rain_next_period) = -1;
-GVAR(rain_period_count) = 0;
-GVAR(rain_initial_rain) = 0;
-if(overcast >= 0.7) then {
-    GVAR(rain_initial_rain) = (random ((overcast-0.7)/0.3));
-};
-GVAR(current_rain) = GVAR(rain_initial_rain);
-GVAR(rain_current_range) = -1+(random 2);
-GVAR(overcast_multiplier) = 1;
 
-// Wind Variables
-call FUNC(initWind);
+GVAR(wind_period_start_time) = time;
+GVAR(rain_period_start_time) = time;
 
 "ACE_WIND_PARAMS" addPublicVariableEventHandler { GVAR(wind_period_start_time) = time; };
 "ACE_RAIN_PARAMS" addPublicVariableEventHandler { GVAR(rain_period_start_time) = time; };

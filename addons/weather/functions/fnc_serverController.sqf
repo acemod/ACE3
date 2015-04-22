@@ -68,7 +68,7 @@ if(GVAR(wind_period_count) > GVAR(wind_next_period)) then {
     _windSpeed = GVAR(mean_wind_speed) + _windMaxDiff * _ratioMax + _windMinDiff * _ratioMin;
     _windSpeedChange = _windSpeed - GVAR(current_wind_speed);
     
-    _time = GVAR(wind_next_period) * 60;
+    _time = GVAR(wind_next_period) * GVAR(serverUpdateInterval);
     
     TRACE_5("dirCur/dirNew/spdCur/spdNew/period",GVAR(current_wind_direction),_windDirection,GVAR(current_wind_speed),_windSpeed,_time);
     

@@ -15,4 +15,7 @@ PREP(updateRain);
 PREP(updateTemperature);
 PREP(updateWind);
 
+// Make sure this data is read before client/server postInit
+call FUNC(getMapData);
+
 ADDON = true;

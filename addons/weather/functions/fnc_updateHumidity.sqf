@@ -24,6 +24,8 @@ if (rain > 0 && overcast > 0.7) then {
     _PS2 = 6.112 * exp((17.62 * GVAR(currentTemperature)) / (243.12 + GVAR(currentTemperature)));
     GVAR(currentHumidity) = GVAR(currentHumidity) * _PS1 / _PS2;
     GVAR(currentHumidity) = GVAR(currentHumidity) + GVAR(humidityShift);
+    
+    TRACE_1("humidityShift",GVAR(humidityShift));
 };
 
 GVAR(currentHumidity) = 0 max GVAR(currentHumidity) min 1;
