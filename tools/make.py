@@ -60,6 +60,7 @@ module_root = ""
 release_dir = ""
 module_root_parent = ""
 optionals_root = ""
+key_name = "ace_preAlpha"
 
 ###############################################################################
 # http://akiscode.com/articles/sha-1directoryhash.shtml
@@ -416,7 +417,14 @@ def cleanup_optionals(mod,pbos):
 def main(argv):
     """Build an Arma addon suite in a directory from rules in a make.cfg file."""
     print_blue(("\nmake.py for Arma, modified for Advanced Combat Environment v" + __version__))
-
+    
+    global work_drive
+    global module_root
+    global release_dir
+    global module_root_parent
+    global optionals_root
+    global key_name
+    
     if sys.platform != "win32":
         print_error("Non-Windows platform (Cygwin?). Please re-run from cmd.")
         sys.exit(1)
@@ -436,7 +444,7 @@ def main(argv):
     release_version = 0 # Version of release
     use_pboproject = True # Default to pboProject build tool
     make_target = "DEFAULT" # Which section in make.cfg to use for the build
-    new_key = False # Make a new key and use it to sign?
+    new_key = True # Make a new key and use it to sign?
     quiet = False # Suppress output from build tool?
 
     # Parse arguments
@@ -524,18 +532,13 @@ See the make.cfg file for additional build options.
 
         commit_id = subprocess.check_output(["git", "rev-parse", "HEAD"])
         commit_id = str(commit_id, "utf-8")[:8]
+        key_name = str(key_name+"-"+commit_id)
     except:
         print_error("FAILED TO DETERMINE COMMIT ID.")
         commit_id = "NOGIT"
 
     cfg = configparser.ConfigParser();
     try:
-        global work_drive
-        global module_root
-        global release_dir
-        global module_root_parent
-        global optionals_root
-
         cfg.read(os.path.join(make_root, "make.cfg"))
 
         # Project name (with @ symbol)
@@ -663,7 +666,7 @@ See the make.cfg file for additional build options.
             print_green("\nRequested key does not exist.")
             ret = subprocess.call([dscreatekey, key_name]) # Created in make_root
             if ret == 0:
-                print_blue("Created: " + os.path.join(module_root, key_name + ".biprivatekey"))
+                print_green("Created: " + os.path.join(module_root, key_name + ".biprivatekey"))
             else:
                 print_error("Failed to create key!")
 
