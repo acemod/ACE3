@@ -1,7 +1,7 @@
 set(ACE_EXTENSION_NAME "ace_fcs")
 
 file(GLOB SOURCES *.h *.hpp *.c *.cpp)
-add_library( ${ACE_EXTENSION_NAME} SHARED ${SOURCES})
+add_library( ${ACE_EXTENSION_NAME} SHARED ${GLOBAL_SOURCES} ${SOURCES})
 add_dependencies(${ACE_EXTENSION_NAME} ace_common)
 SET_TARGET_PROPERTIES(${ACE_EXTENSION_NAME} PROPERTIES PREFIX "")
 

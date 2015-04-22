@@ -743,7 +743,7 @@
             <Russian>6,5 мм ИК-трассирующие</Russian>
         </Key>
         <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimDescription">
-            <English>6.5mm 100Rnd Tracer IR-DIM Mag</English>
+            <English>6.5mm 100Rnd Tracer IR-DIM Mag&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX LSW</English>
             <Polish>Magazynek 6,5mm 100rd Smugacz IR-DIM</Polish>
             <French>Chargeur 6.5mm 100Rnd Traçante IR-DIM</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
@@ -764,7 +764,7 @@
             <Russian>6,5 мм ИК-трассирующие</Russian>
         </Key>
         <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimDescription">
-            <English>6.5mm 200Rnd Tracer IR-DIM Belt</English>
+            <English>6.5mm 200Rnd Tracer IR-DIM Belt&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Stoner 99 LMG</English>
             <Polish>Magazynek 6,5mm 200rd Smugacz IR-DIM</Polish>
             <French>Bande 6.5mm 200Cps Traçante IR-DIM</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
@@ -967,18 +967,31 @@
             <Russian>Магазин из 30-ти 6,5x47 мм (HPBT Scenar)</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_NameShort">
-            <English>6.5mm Scenar</English>
-            <French>6.5mm Scenar</French>
-            <Spanish>6.5mm Scenar</Spanish>
-            <Polish>6,5mm Scenar</Polish>
-            <Russian>6,5 мм Scenar</Russian>
+            <English>6.5mm Lapua</English>
+            <French>6.5mm Lapua</French>
+            <Spanish>6.5mm Lapua</Spanish>
+            <Polish>6,5mm Lapua</Polish>
+            <Russian>6,5 мм Lapua</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_Description">
-            <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 30</English>
+            <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
             <French>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 30</Spanish>
             <Polish>Kaliber: 6,5x47 mm (HPBT Scenar)&lt;br /&gt;Pociski: 30</Polish>
             <Russian>Калибр: 6,5x47 мм (HPBT Scenar)&lt;br /&gt;Патронов: 30</Russian>
+        </Key>
+        <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_Name">
+            <English>6.5mm Creedmor 30Rnd Mag</English>
+        </Key>
+        <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_NameShort">
+            <English>6.5mm CM</English>
+            <French>6.5mm CM</French>
+            <Spanish>6.5mm CM</Spanish>
+            <Polish>6,5mm CM</Polish>
+            <Russian>6,5 мм CM</Russian>
+        </Key>
+        <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_Description">
+            <English>Caliber: 6.5mm Creedmor&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Name">
             <English>.338 10Rnd Mag (300gr Sierra MatchKing HPBT)</English>

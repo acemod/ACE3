@@ -7,7 +7,12 @@
  * 1: Target <OBJECT>
  *
  * Return value:
- * Can link belt<BOOL>
+ * Can link belt<BOOL> 
+ *
+ * Example:
+ * [player, bob] call ace_reload_fnc_canCheckAmmo
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
