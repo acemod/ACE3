@@ -46,4 +46,4 @@ if (GVAR(level) >= 2) then {
 } else {
      _totalBloodLoss = BLOODLOSSRATE_BASIC * (damage _unit);
 };
-_totalBloodLoss * (GVAR(bleedingCoefficient) max 0);
+_totalBloodLoss * ((_unit getVariable [QGVAR(bleedingCoefficient), GVAR(bleedingCoefficient)]) max 0);
