@@ -20,7 +20,7 @@ _unit = _this select 0;
 _hrIncrease = 0;
 if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
     _heartRate = _unit getvariable [QGVAR(heartRate), 80];
-    _bloodLoss = _unit call FUNC(getBloodLoss);
+    _bloodLoss = [_unit] call FUNC(getBloodLoss);
 
     _adjustment = _unit getvariable [QGVAR(heartRateAdjustments), []];
     {

@@ -131,7 +131,7 @@ GVAR(effectTimeBlood) = time;
         };
     };
 
-    _bleeding = ACE_player call FUNC(getBloodLoss);
+    _bleeding = [ACE_player] call FUNC(getBloodLoss);
     // Bleeding Indicator
     if (_bleeding > 0 and GVAR(effectTimeBlood) + 3.5 < time) then {
         GVAR(effectTimeBlood) = time;
@@ -250,7 +250,7 @@ if (USE_WOUND_EVENT_SYNC) then {
 [
     {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 65)},
     {(((_this select 0) getvariable [QGVAR(pain), 0]) > 0.9)},
-    {(((_this select 0) call FUNC(getBloodLoss)) > 0.25)},
+    {(([_this select 0] call FUNC(getBloodLoss)) > 0.25)},
     {((_this select 0) getvariable [QGVAR(inReviveState), false])},
     {((_this select 0) getvariable [QGVAR(inCardiacArrest), false])},
     {((_this select 0) getvariable ["ACE_isDead", false])},
