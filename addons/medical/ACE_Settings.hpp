@@ -22,6 +22,10 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 1;
     };
+    class GVAR(painCoefficient) {
+        typeName = "SCALAR";
+        value = 1;
+    };
     class GVAR(enableAirway) {
         typeName = "BOOL";
         value = false;

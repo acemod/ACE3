@@ -128,6 +128,12 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
+            class painCoefficient {
+                displayName = "Pain coefficient";
+                description = "Coefficient to modify the pain intensity";
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
             class keepLocalSettingsSynced {
                 displayName = "Sync status";
                 description = "Keep unit status synced. Recommended on.";

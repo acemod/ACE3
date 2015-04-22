@@ -166,7 +166,7 @@ GVAR(lastHeartBeatSound) = time;
 
         // Pain effect
         _strength = ACE_player getVariable [QGVAR(pain), 0];
-        // _strength = _strength * (ACE_player getVariable [QGVAR(coefPain), GVAR(coefPain)]); @todo
+        _strength = _strength * (ACE_player getVariable [QGVAR(painCoefficient), GVAR(painCoefficient)]);
         if (GVAR(painEffectType) == 1) then {
             GVAR(effectPainCC) ppEffectEnable false;
             if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
