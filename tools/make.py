@@ -412,6 +412,14 @@ def cleanup_optionals(mod,pbos):
     except:
         print_error("Cleaning Optionals Failed")
         raise
+
+
+def purge(dir, pattern, friendlyPattern="files"):
+    print_yellow("Deleting " + friendlyPattern + " files from directory: " + dir)
+    for f in os.listdir(dir):
+        if re.search(pattern, f):
+            os.remove(os.path.join(dir, f))
+            print_yellow("Deleting file => " + f)
 ###############################################################################
 
 def main(argv):
@@ -663,15 +671,17 @@ See the make.cfg file for additional build options.
     # Make the key specified from command line if necessary.
     if new_key:
         if not os.path.isfile(os.path.join(module_root, key_name + ".biprivatekey")):
-            print_green("\nRequested key does not exist.")
+            print_yellow("\nRequested key does not exist.")
             ret = subprocess.call([dscreatekey, key_name]) # Created in make_root
             if ret == 0:
                 print_green("Created: " + os.path.join(module_root, key_name + ".biprivatekey"))
+                print("Removing any old signature keys...")
+                purge(os.path.join(module_root, release_dir, project, "Addons"), "^.*\.bisign$","*.bisign")
             else:
                 print_error("Failed to create key!")
 
             try:
-                print_blue("Copying public key to release directory.")
+                print("Copying public key to release directory.")
 
                 try:
                     os.makedirs(os.path.join(module_root, release_dir, "Keys"))
