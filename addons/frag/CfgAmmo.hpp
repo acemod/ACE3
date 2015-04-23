@@ -6,15 +6,15 @@ class CfgAmmo {
     //class ace_arty_105mm_m1_m782_time;
     //class ace_arty_105mm_m1_m782_prox: ace_arty_105mm_m1_m782_time {};
     //class ace_arty_105mm_m1_m782_delay: ace_arty_105mm_m1_m782_prox {
-    //    ACE_FRAG_SKIP = 1;
+    //    GVAR(skip) = 1;
     //};
     class Bo_GBU12_LGB;
     class Nou_GBU12 : Bo_GBU12_LGB {
-        ACE_FRAG_CLASSES[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
-        ACE_FRAG_METAL = 140000;
-        ACE_FRAG_CHARGE = 87000;
-        ACE_FRAG_GURNEY_C = 2320;
-        ACE_FRAG_GURNEY_K = 1/2;
+        GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
+        GVAR(metal) = 140000;
+        GVAR(charge) = 87000;
+        GVAR(gurney_c) = 2320;
+        GVAR(gurney_k) = 1/2;
         sideAirFriction = 0.04;
         airFriction = 0.04;
         laserLock = 0;
@@ -23,90 +23,90 @@ class CfgAmmo {
     class GrenadeBase;
     class Grenade;
     class GrenadeHand: Grenade {
-        ACE_FRAG_SKIP = 0;
-        ACE_FRAG_FORCE = 1;
+        GVAR(skip) = 0;
+        GVAR(force) = 1;
         // This is a good high-drag frag type for grenades.
-        ACE_FRAG_CLASSES[] = {"ACE_frag_tiny_HD"};
+        GVAR(classes)[] = {"ACE_frag_tiny_HD"};
         /*
         These values are based on the M67 Grenade, should be tweaked for
         individual grenades.
         */
-        ACE_FRAG_METAL = 210;         // metal in grams
-        ACE_FRAG_CHARGE = 185;        // explosive in grams
-        ACE_FRAG_GURNEY_C = 2843;    // Gurney velocity constant for explosive type. See: http://en.wikipedia.org/wiki/Gurney_equations
-        ACE_FRAG_GURNEY_K = 3/5;    // Gurney shape factor, in this case a sphere. See: http://en.wikipedia.org/wiki/Gurney_equations
+        GVAR(metal) = 210;         // metal in grams
+        GVAR(charge) = 185;        // explosive in grams
+        GVAR(gurney_c) = 2843;    // Gurney velocity constant for explosive type. See: http://en.wikipedia.org/wiki/Gurney_equations
+        GVAR(gurney_k) = 3/5;    // Gurney shape factor, in this case a sphere. See: http://en.wikipedia.org/wiki/Gurney_equations
     };
     class GrenadeHand_stone: GrenadeHand {
-        ACE_FRAG_SKIP = 1;
+        GVAR(skip) = 1;
     };
     class SmokeShell: GrenadeHand {
-        ACE_FRAG_SKIP = 1;
+        GVAR(skip) = 1;
     };
     
     class RocketBase;
     //class R_Hydra_HE: RocketBase {
-    //    ACE_FRAG_SKIP = 1;
+    //    GVAR(skip) = 1;
     //};
     
     //class R_57mm_HE: RocketBase {
-    //    ACE_FRAG_SKIP = 1;
+    //    GVAR(skip) = 1;
     //};
     
     class R_80mm_HE: RocketBase {
-        ACE_FRAG_SKIP = 1;
+        GVAR(skip) = 1;
     };
     
     //class R_S8T_AT: RocketBase {
-    //    ACE_FRAG_SKIP = 1;
+    //    GVAR(skip) = 1;
     //};
     
     class BombCore;
     class Bo_Mk82: BombCore {
-        ACE_FRAG_CLASSES[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
-        ACE_FRAG_METAL = 140000;
-        ACE_FRAG_CHARGE = 87000;
-        ACE_FRAG_GURNEY_C = 2320;
-        ACE_FRAG_GURNEY_K = 1/2;
+        GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
+        GVAR(metal) = 140000;
+        GVAR(charge) = 87000;
+        GVAR(gurney_c) = 2320;
+        GVAR(gurney_k) = 1/2;
     };
     
     
     class G_40mm_HE: GrenadeBase {
-        ACE_FRAG_SKIP = 0;
-        ACE_FRAG_FORCE = 1;
+        GVAR(skip) = 0;
+        GVAR(force) = 1;
     };
     
     class ACE_G_40mm_HEDP: G_40mm_HE {
-        ACE_FRAG_CLASSES[] = {"ACE_frag_tiny_HD"};
-        ACE_FRAG_METAL = 200;
-        ACE_FRAG_CHARGE = 45;
-        ACE_FRAG_GURNEY_C = 2830;
-        ACE_FRAG_GURNEY_K = 3/5;
+        GVAR(classes)[] = {"ACE_frag_tiny_HD"};
+        GVAR(metal) = 200;
+        GVAR(charge) = 45;
+        GVAR(gurney_c) = 2830;
+        GVAR(gurney_k) = 3/5;
     };
     class ACE_G_40mm_HE: ACE_G_40mm_HEDP {
-        ACE_FRAG_CLASSES[] = {"ACE_frag_tiny_HD"};
-        ACE_FRAG_METAL = 200;
-        ACE_FRAG_CHARGE = 32;
-        ACE_FRAG_GURNEY_C = 2700;
-        ACE_FRAG_GURNEY_K = 3/5;
+        GVAR(classes)[] = {"ACE_frag_tiny_HD"};
+        GVAR(metal) = 200;
+        GVAR(charge) = 32;
+        GVAR(gurney_c) = 2700;
+        GVAR(gurney_k) = 3/5;
     };
     class ACE_G_40mm_Practice: ACE_G_40mm_HE {
-        ACE_FRAG_SKIP = 1;
+        GVAR(skip) = 1;
     };
     class ACE_G40mm_HE_VOG25P: G_40mm_HE {
-        ACE_FRAG_SKIP = 0;
-        ACE_FRAG_FORCE = 1;
+        GVAR(skip) = 0;
+        GVAR(force) = 1;
     };
     
     //class R_SMAW_HEDP;
     //class R_MEEWS_HEDP : R_SMAW_HEDP {
-    //    ACE_FRAG_FORCE = 1;
-    //    ACE_FRAG_MULTIPLIER = 1.2;
+    //    GVAR(force) = 1;
+    //    GVAR(multiplier) = 1.2;
     //};
     
     //class MissileBase;
     //class M_Hellfire_AT: MissileBase {
-    //    ACE_FRAG_FORCE = 1;
-    //    ACE_FRAG_MULTIPLIER = 1.75;
+    //    GVAR(force) = 1;
+    //    GVAR(multiplier) = 1.75;
     //};
     
     /*
