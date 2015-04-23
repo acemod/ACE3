@@ -719,6 +719,8 @@ See the make.cfg file for additional build options.
                 print_green("Created: " + os.path.join(private_key_path, key_name + ".biprivatekey"))
                 print("Removing any old signature keys...")
                 purge(os.path.join(module_root, release_dir, project, "Addons"), "^.*\.bisign$","*.bisign")
+                purge(os.path.join(module_root, release_dir, project, "optionals"), "^.*\.bisign$","*.bisign")
+                purge(os.path.join(module_root, release_dir, project, "keys"), "^.*\.bikey$","*.bikey")
             else:
                 print_error("Failed to create key!")
 
