@@ -1046,6 +1046,9 @@ See the make.cfg file for additional build options.
 
     print_green("\nDone.")
 
+    copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
+    cleanup_optionals(optionals_modules)
+
     # Make release
     if make_release:
         print_blue("\nMaking release: " + project + "-" + release_version + ".zip")
@@ -1084,10 +1087,6 @@ See the make.cfg file for additional build options.
                 shutil.copytree(os.path.join(module_root, release_dir, project), os.path.join(a3_path, project))
             except:
                 print_error("Could not copy files. Is Arma 3 running?")
-
-    copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
-    cleanup_optionals(optionals_modules)
-
 
 if __name__ == "__main__":
     main(sys.argv)
