@@ -587,6 +587,9 @@ See the make.cfg file for additional build options.
         # Private key path
         key = cfg.get(make_target, "key", fallback=None)
 
+        # Private key creation directory
+        private_key_path = cfg.get(make_target, "private_key_path", fallback=os.path.join(work_drive, "private_keys"))
+
         # Project prefix (folder path)
         prefix = cfg.get(make_target, "prefix", fallback="")
 
@@ -704,9 +707,16 @@ See the make.cfg file for additional build options.
     if new_key:
         if not os.path.isfile(os.path.join(module_root, key_name + ".biprivatekey")):
             print_yellow("\nRequested key does not exist.")
+            try:
+                os.makedirs(private_key_path)
+            except:
+                pass
+            curDir = os.getcwd()
+            os.chdir(private_key_path)
             ret = subprocess.call([dscreatekey, key_name]) # Created in make_root
+            os.chdir(curDir)
             if ret == 0:
-                print_green("Created: " + os.path.join(module_root, key_name + ".biprivatekey"))
+                print_green("Created: " + os.path.join(private_key_path, key_name + ".biprivatekey"))
                 print("Removing any old signature keys...")
                 purge(os.path.join(module_root, release_dir, project, "Addons"), "^.*\.bisign$","*.bisign")
             else:
@@ -720,16 +730,16 @@ See the make.cfg file for additional build options.
                 except:
                     pass
 
-                shutil.copyfile(os.path.join(module_root, key_name + ".bikey"), os.path.join(module_root, release_dir, project, "keys", key_name + ".bikey"))
+                shutil.copyfile(os.path.join(private_key_path, key_name + ".bikey"), os.path.join(module_root, release_dir, project, "keys", key_name + ".bikey"))
 
             except:
                 print_error("Could not copy key to release directory.")
                 raise
 
         else:
-            print_green("\nNOTE: Using key " + os.path.join(module_root, key_name + ".biprivatekey"))
+            print_green("\nNOTE: Using key " + os.path.join(private_key_path, key_name + ".biprivatekey"))
 
-        key = os.path.join(module_root, key_name + ".biprivatekey")
+        key = os.path.join(private_key_path, key_name + ".biprivatekey")
 
 
     # For each module, prep files and then build.
