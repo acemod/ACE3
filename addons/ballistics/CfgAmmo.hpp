@@ -24,7 +24,7 @@ class CfgAmmo {
         hit=8;
         typicalSpeed=750;
     	tracerStartTime = 0.073; 		//M856 tracer burns out to 800m
-	    tracerEndTime = 1.579;			//Time in seconds calculated with ballistics calculator
+	tracerEndTime = 1.579;			//Time in seconds calculated with ballistics calculator
         ACE_caliber=0.224;
         ACE_bulletLength=0.906;
         ACE_bulletMass=62;
@@ -98,8 +98,8 @@ class CfgAmmo {
         deflecting=18;
         hit=7;
         typicalSpeed=883;
-        tracerStartTime = 0.073;        //7T3M tracer burns out to 850m
-		tracerEndTime = 1.736;          //Time in seconds calculated with ballistics calculator
+        tracerStartTime = 0.073;        	//7T3M tracer burns out to 850m
+	tracerEndTime = 1.736;  		 //Time in seconds calculated with ballistics calculator
         ACE_caliber=0.220;
         ACE_bulletLength=0.85;
         ACE_bulletMass=49.8;
@@ -364,8 +364,8 @@ class CfgAmmo {
         caliber=0.9;
         hit=15;
         typicalSpeed=800;
-        tracerStartTime = 0.073; 	//Based on the 7T2 which burns three seconds
-		tracerEndTime = 3;
+        tracerStartTime = 0.073; 		//Based on the 7T2 which burns three seconds
+	tracerEndTime = 3;
         ACE_caliber=0.312;
         ACE_bulletLength=1.14;
         ACE_bulletMass=149;
@@ -412,8 +412,8 @@ class CfgAmmo {
         airFriction=-0.0015168;
         hit=12;
         typicalSpeed=716;
-        tracerStartTime = 0.073; 	//57N231P tracer burns out to 800m
-		tracerEndTime = 2.082;      //Time in seconds calculated with ballistics calculator
+        tracerStartTime = 0.073; 		//57N231P tracer burns out to 800m
+	tracerEndTime = 2.082;  		//Time in seconds calculated with ballistics calculator
         ACE_caliber=0.308;
         ACE_bulletLength=1.14;
         ACE_bulletMass=117;
