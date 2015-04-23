@@ -686,6 +686,20 @@ See the make.cfg file for additional build options.
         print ("No cache found.")
         cache = {}
 
+    if not os.path.isdir(os.path.join(release_dir, project, "addons")):
+        try:
+            os.makedirs(os.path.join(release_dir, project, "addons"))
+        except:
+            print_error("Cannot create release directory")
+            raise
+
+    if not os.path.isdir(os.path.join(release_dir, project, "keys")):
+        try:
+            os.makedirs(os.path.join(release_dir, project, "keys"))
+        except:
+            print_error("Cannot create release directory")
+            raise
+
     #Temporarily copy optionals_root for building. They will be removed later.
     optionals_modules = []
     optional_files = []
