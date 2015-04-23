@@ -65,8 +65,12 @@ if(GVAR(wind_period_count) > GVAR(wind_next_period)) then {
     _ratioMax = (random 1) ^ 2;
     _ratioMin = (random 1) ^ 2;
     
-    _windSpeed = GVAR(mean_wind_speed) + _windMaxDiff * _ratioMax + _windMinDiff * _ratioMin;
-    _windSpeedChange = _windSpeed - GVAR(current_wind_speed);
+    _windSpeed = GVAR(current_wind_speed);
+    _windSpeedChange = 0;
+    if ((random 1) < (0.3 max overcast)) then {
+        _windSpeed = GVAR(mean_wind_speed) + _windMaxDiff * _ratioMax + _windMinDiff * _ratioMin;
+        _windSpeedChange = _windSpeed - GVAR(current_wind_speed);
+    };
     
     _time = GVAR(wind_next_period) * GVAR(serverUpdateInterval);
     
