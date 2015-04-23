@@ -716,15 +716,15 @@ See the make.cfg file for additional build options.
                 print("Copying public key to release directory.")
 
                 try:
-                    os.makedirs(os.path.join(module_root, release_dir, "Keys"))
+                    os.makedirs(os.path.join(module_root, release_dir, project, "keys"))
                 except:
                     pass
 
-                shutil.copyfile(os.path.join(module_root, key_name + ".bikey"), os.path.join(module_root, release_dir, "Keys", key_name + ".bikey"))
+                shutil.copyfile(os.path.join(module_root, key_name + ".bikey"), os.path.join(module_root, release_dir, project, "keys", key_name + ".bikey"))
 
             except:
-                raise
                 print_error("Could not copy key to release directory.")
+                raise
 
         else:
             print_green("\nNOTE: Using key " + os.path.join(module_root, key_name + ".biprivatekey"))
