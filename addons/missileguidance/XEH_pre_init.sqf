@@ -2,13 +2,32 @@
 
 PREP(rotateVectLineGetMap);
 PREP(rotateVectLine);
+PREP(changeMissileDirection);
 
-PREP(translateToModelSpace);
-PREP(translateToWeaponSpace);
+PREP(checkSeekerAngle);
+PREP(checkLos);
 
-PREP(fired);
+PREP(onFired);
+PREP(onIncomingMissile);
 
-PREP(guidance_DAGR);
-PREP(guidance_LGB);
-PREP(guidance_HellfireII);
-FUNC(getPosASL) = {visiblePositionASL (_this select 0)};
+PREP(guidancePFH);
+PREP(doAttackProfile); 
+PREP(doSeekerSearch);
+
+PREP(doHandoff);
+PREP(handleHandoff);
+
+// Attack Profiles
+PREP(attackProfile_LIN);
+PREP(attackProfile_DIR);
+PREP(attackProfile_MID);
+PREP(attackProfile_HI);
+PREP(attackProfile_AIR);
+
+// Javelin profiles
+PREP(attackProfile_JAV_DIR);
+PREP(attackProfile_JAV_TOP);
+
+// Seeker search functions
+PREP(seekerType_SALH);
+PREP(seekerType_Optic);

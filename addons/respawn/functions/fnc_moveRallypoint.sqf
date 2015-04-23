@@ -18,16 +18,17 @@
 #include "script_component.hpp"
 
 _this spawn {
-    _unit = _this select 0;
-    _side = _this select 1;
-
+    PARAMS_2(_unit,_side); 
+    
+    private ["_rallypoint", "_position"];
+    
     // rallypoint names are defined in CfgVehicles.hpp
 
     _rallypoint = [
         objNull,
         missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
-        missionNamespace getVariable ["ACE_RallypointExit_East", objNull],
-        missionNamespace getVariable ["ACE_RallypointExit_Independent", objNull]
+        missionNamespace getVariable ["ACE_Rallypoint_East", objNull],
+        missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]
     ] select ([west, east, independent] find _side) + 1;
 
     if (isNull _rallypoint) exitWith {};
@@ -44,11 +45,9 @@ _this spawn {
     _rallypoint setPosATL _position;
     _unit reveal _rallypoint;
 
-    /*
-    _marker = format ["AGM_RallyPoint_%1", _side];
-    _marker setMarkerPos _position;
-    _marker setMarkerTextLocal format ["%1:%2", [date select 3, 2, 0] call CBA_fnc_FORMATNumber, [date select 4, 2, 0] call CBA_fnc_FORMATNumber];
-    */
+    _rallypoint setVariable [QGVAR(markerDate), format ["%1:%2", date select 3, date select 4], true];
 
-    [localize "STR_ACE_Respawn_Deploy"] call EFUNC(common,displayTextStructured);
+    ["rallypointMoved", [_rallypoint, _side, _position]] call EFUNC(common,globalEvent);
+
+    [localize "STR_ACE_Respawn_Deployed"] call EFUNC(common,displayTextStructured);
 };

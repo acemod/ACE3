@@ -25,6 +25,7 @@ if (alive _target) exitwith {
 
     // wounds and injuries
     _target setvariable [QGVAR(openWounds), [], true];
+    _target setvariable [QGVAR(bandagedWounds), [], true];
     _target setVariable [QGVAR(internalWounds), [], true];
 
     // vitals

@@ -71,9 +71,11 @@ if (alive _target) then {
     };
 };
 
-// Reduce the pain level
-_pain = _target getvariable [QGVAR(pain), 0];
-_target setvariable [QGVAR(pain), (_pain - _painReduce) max 0];
+if (_painReduce > 0) then {
+    // Reduce the pain level
+    _pain = _target getvariable [QGVAR(pain), 0];
+    _target setvariable [QGVAR(pain), (_pain - (_pain * _painReduce)) max 0];
+};
 
 _resistance = _unit getvariable [QGVAR(peripheralResistance), 100];
 _resistance = _resistance + _viscosityChange;

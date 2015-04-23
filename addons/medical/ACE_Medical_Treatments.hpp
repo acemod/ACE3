@@ -55,15 +55,6 @@ class ACE_Medical_Actions {
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = {};
         };
-        class Tourniquet: Bandage {
-            displayName = "$STR_ACE_Medical_Apply_Tourniquet";
-            displayNameProgress = "$STR_ACE_Medical_Applying_Tourniquet";
-            items[] = {"ACE_tourniquet"};
-            treatmentTime = 6;
-            callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
-            condition = QUOTE(!([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo)));
-            litter[] = {};
-        };
         class BodyBag: Bandage {
             displayName = "$STR_ACE_MEDICAL_PlaceInBodyBag";
             displayNameProgress = "$STR_ACE_MEDICAL_PlacingInBodyBag";
@@ -77,21 +68,30 @@ class ACE_Medical_Actions {
             callbackProgress = "";
             animationPatient = "";
             animationPatientUnconscious = "";
+            itemConsumed = 1;
+            litter[] = {};
+        };
+        class CheckPulse: Bandage {
+            displayName = "";
+            displayNameProgress = "";
+            treatmentLocations[] = {"All"};
+            requiredMedic = 0;
+            treatmentTime = 2;
+            items[] = {};
+            callbackSuccess = QUOTE(DFUNC(actionCheckPulse));
+            callbackFailure = "";
+            callbackProgress = "";
+            animationPatient = "";
+            animationCaller = ""; // TODO
             itemConsumed = 0;
             litter[] = {};
         };
-        /*class PersonalAidKit: Bandage {
-            displayName = "";
-            displayNameProgress = "";
-            items[] = {"ACE_personalAidKit"};
-            treatmentLocations[] = {"All"};
-            requiredMedic = 1;
-            treatmentTime = 15;
-            callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
-            itemConsumed = 0;
-            animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medic";
-            litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"}},  {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}, {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}} };
-        };*/
+        class CheckBloodPressure: CheckPulse {
+            callbackSuccess = QUOTE(DFUNC(actionCheckBloodPressure));
+        };
+        class CheckResponse: CheckPulse {
+            callbackSuccess = QUOTE(DFUNC(actionCheckResponse));
+        };
     };
 
     class Advanced {
@@ -204,7 +204,7 @@ class ACE_Medical_Actions {
             displayName = "";
             displayNameProgress = "";
             items[] = {"ACE_surgicalKit"};
-            treatmentLocations[] = {"MedicalFacility", "MedicalVehicle"};
+            treatmentLocations[] = {QGVAR(useLocation_SurgicalKit)};
             requiredMedic = QGVAR(medicSetting_SurgicalKit);
             treatmentTime = 10;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_surgicalKit));
@@ -216,7 +216,7 @@ class ACE_Medical_Actions {
             displayName = "";
             displayNameProgress = "";
             items[] = {"ACE_personalAidKit"};
-            treatmentLocations[] = {"All"};
+            treatmentLocations[] = {QGVAR(useLocation_PAK)};
             requiredMedic = QGVAR(medicSetting_PAK);
             treatmentTime = 10;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
@@ -265,7 +265,7 @@ class ACE_Medical_Actions {
             condition = "((_this select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
-            callbackProgress = "((_this select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
+            callbackProgress = "(((_this select 0) select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
@@ -288,7 +288,7 @@ class ACE_Medical_Actions {
             callbackProgress = "";
             animationPatient = "";
             animationPatientUnconscious = "";
-            itemConsumed = 0;
+            itemConsumed = 1;
             litter[] = {};
         };
     };
@@ -307,14 +307,16 @@ class ACE_Medical_Advanced {
                 selections[] = {"All"};
                 bleedingRate = 0.0001;
                 pain = 0.01;
-                causes[] = {"falling", "ropeburn", "vehiclecrash"};
+                causes[] = {"falling", "ropeburn", "vehiclecrash", "unknown"};
                 minDamage = 0.01;
                 class Minor {
                     minDamage = 0.01;
+                    maxDamage = 0.2;
                     bleedingRate = 0.0001;
                 };
                 class Medium {
                     minDamage = 0.2;
+                    maxDamage = 0.3;
                     bleedingRate = 0.00015;
                 };
                 class Large {
@@ -333,10 +335,12 @@ class ACE_Medical_Advanced {
                 minDamage = 0.2;
                 class Minor {
                     minDamage = 0.2;
+                    maxDamage = 0.3;
                     bleedingRate = 0.01;
                 };
                 class Medium {
                     minDamage = 0.3;
+                    maxDamage = 0.6;
                     bleedingRate = 0.02;
                 };
                 class Large {
@@ -353,14 +357,18 @@ class ACE_Medical_Advanced {
                 pain = 0.05;
                 causes[] = {"bullet", "backblast", "punch","vehiclecrash","falling"};
                 minDamage = 0.01;
+                maxDamage = 0.1;
                 class Minor {
                     minDamage = 0.01;
+                    maxDamage = 0.1;
                 };
                 class Medium {
                     minDamage = 0.1;
+                    maxDamage = 0.15;
                 };
                 class Large {
-                    minDamage = 0.3;
+                    minDamage = 0.15;
+                    maxDamage = 0.2;
                 };
             };
 
@@ -370,14 +378,16 @@ class ACE_Medical_Advanced {
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.1;
-                causes[] = {"falling", "vehiclecrash", "punch"};
+                causes[] = {"falling", "vehiclecrash", "punch", "unknown"};
                 minDamage = 0.1;
                 class Minor {
                     minDamage = 0.1;
+                    maxDamage = 0.45;
                     bleedingRate = 0.005;
                 };
                 class Medium {
                     minDamage = 0.4;
+                    maxDamage = 0.7;
                     bleedingRate = 0.007;
                 };
                 class Large {
@@ -392,14 +402,16 @@ class ACE_Medical_Advanced {
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.075;
-                causes[] = {"vehiclecrash", "grenade", "explosive", "shell", "backblast", "stab"};
+                causes[] = {"vehiclecrash", "grenade", "explosive", "shell", "backblast", "stab", "unknown"};
                 minDamage = 0.1;
                 class Minor {
                     minDamage = 0.1;
+                    maxDamage = 0.3;
                     bleedingRate = 0.005;
                 };
                 class Medium {
                     minDamage = 0.3;
+                    maxDamage = 0.65;
                     bleedingRate = 0.02;
                 };
                 class Large {
@@ -418,10 +430,12 @@ class ACE_Medical_Advanced {
                 minDamage = 0.01;
                 class Minor {
                     minDamage = 0.1;
+                    maxDamage = 0.5;
                     bleedingRate = 0.005;
                 };
                 class Medium {
                     minDamage = 0.5;
+                    maxDamage = 0.7;
                     bleedingRate = 0.01;
                 };
                 class Large {
@@ -436,10 +450,11 @@ class ACE_Medical_Advanced {
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.2;
-                causes[] = {"bullet", "grenade","explosive", "shell"};
+                causes[] = {"bullet", "grenade","explosive", "shell", "unknown"};
                 minDamage = 0.15;
                 class Minor {
                     minDamage = 0.15;
+                    maxDamage = 0.3;
                     bleedingRate = 0.025;
                 };
                 class Medium {
@@ -462,10 +477,12 @@ class ACE_Medical_Advanced {
                 minDamage = 0.01;
                 class Minor {
                     minDamage = 0.01;
+                    maxDamage = 0.5;
                     bleedingRate = 0.01;
                 };
                 class Medium {
                     minDamage = 0.5;
+                    maxDamage = 0.75;
                     bleedingRate = 0.03;
                 };
                 class Large {
@@ -529,6 +546,9 @@ class ACE_Medical_Advanced {
             class ropeburn {
                 thresholds[] = {{0.1, 1}};
                 selectionSpecific = 1;
+            };
+            class unknown {
+                thresholds[] = {{0.1, 1}};
             };
         };
     };
@@ -763,7 +783,7 @@ class ACE_Medical_Advanced {
 
             // specific details for the ACE_Morphine treatment action
             class Morphine {
-                painReduce = 0.7;
+                painReduce = 1;
                 hrIncreaseLow[] = {-10, -30, 35};
                 hrIncreaseNormal[] = {-10, -50, 40};
                 hrIncreaseHigh[] = {-10, -40, 50};

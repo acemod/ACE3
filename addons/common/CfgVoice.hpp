@@ -199,6 +199,8 @@ class ACE_RadioProtocolNoRadio: RadioProtocolBase {
         Ready[] = {};
         Waiting[] = {};
         StandingBy[] = {};
+        RallyUp[] = {};
+        UnderFireE[] = {};
         /*IAmReady[] = {};
         ReadyForOrders[] = {};
         AwaitingOrders[] = {};*/

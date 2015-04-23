@@ -77,10 +77,26 @@ if (!_return) exitwith {false};
 if ("All" in _locations) then {
     _return = true;
 } else {
+    private [ "_medFacility", "_medVeh"];
+    _medFacility = {([_caller] call FUNC(isInMedicalFacility)) || ([_target] call FUNC(isInMedicalFacility))};
+    _medVeh = {([_caller] call FUNC(isInMedicalVehicle)) || ([_target] call FUNC(isInMedicalVehicle))};
+
     {
         if (_x == "field") exitwith {_return = true;};
-        if (_x == "MedicalFacility" && {([_caller] call FUNC(isInMedicalFacility)) || ([_target] call FUNC(isInMedicalFacility))}) exitwith {_return = true;};
-        if (_x == "MedicalVehicle" && {([vehicle _caller] call FUNC(isMedicalVehicle)) || ([vehicle _target] call FUNC(isMedicalVehicle))}) exitwith {_return = true;};
+        if (_x == "MedicalFacility" && _medFacility) exitwith {_return = true;};
+        if (_x == "MedicalVehicle" && _medVeh) exitwith {_return = true;};
+        if !(isnil _x) exitwith {
+            private "_val";
+            _val = missionNamespace getvariable _x;
+            if (typeName _val == "SCALAR") then {
+                _return = switch (_val) do {
+                    case 0: {true};
+                    case 1: _medVeh;
+                    case 2: _medFacility;
+                    case 3: {call _medFacility || call _medVeh};
+                };
+            };
+        };
     }foreach _locations;
 };
 
@@ -113,7 +129,7 @@ if (isNil _callbackProgress) then {
 
 // Patient Animation
 _patientAnim = getText (_config >> "animationPatient");
-if (_target getvariable ["ACE_isUnconscious", false]) then {
+if (_target getvariable ["ACE_isUnconscious", false] && GVAR(allowUnconsciousAnimationOnTreatment)) then {
     if !(animationState _target in (getArray (_config >> "animationPatientUnconsciousExcludeOn"))) then {
         _patientAnim = getText (_config >> "animationPatientUnconscious");
     };
@@ -132,6 +148,8 @@ _callerAnim = [getText (_config >> "animationCaller"), getText (_config >> "anim
 if (_caller == _target) then {
     _callerAnim = [getText (_config >> "animationCallerSelf"), getText (_config >> "animationCallerSelfProne")] select (stance _caller == "PRONE");
 };
+
+_caller setvariable [QGVAR(selectedWeaponOnTreatment), currentWeapon _caller];
 
 // Cannot use secondairy weapon for animation
 if (currentWeapon _caller == secondaryWeapon _caller) then {

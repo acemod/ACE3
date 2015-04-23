@@ -16,13 +16,12 @@ class ACE_Settings {
     };
     class GVAR(enableOverdosing) {
         typeName = "BOOL";
-        value = true;
+        value = 1;
     };
     class GVAR(bleedingCoefficient) {
         typeName = "SCALAR";
         value = 1;
     };
-
     class GVAR(enableAirway) {
         typeName = "BOOL";
         value = false;
@@ -37,11 +36,11 @@ class ACE_Settings {
     };
     class GVAR(enableVehicleCrashes) {
         typeName = "BOOL";
-        value = true;
+        value = 1;
     };
     class GVAR(enableScreams) {
         typeName = "BOOL";
-        value = true;
+        value = 1;
     };
     class GVAR(playerDamageThreshold) {
         typeName = "SCALAR";
@@ -58,7 +57,7 @@ class ACE_Settings {
     };
     class GVAR(preventInstaDeath) {
         typeName = "BOOL";
-        value = false;
+        value = 0;
     };
     class GVAR(maxReviveTime) {
         typeName = "SCALAR";
@@ -70,30 +69,78 @@ class ACE_Settings {
     };
     class GVAR(allowDeadBodyMovement) {
         typeName = "BOOL";
-        value = false;
+        value = 0;
     };
     class GVAR(allowLitterCreation) {
         typeName = "BOOL";
-        value = true;
+        value = 1;
+    };
+    class GVAR(litterSimulationDetail) {
+        displayName = "$STR_ACE_Medical_litterSimulationDetail";
+        description = "$STR_ACE_Medical_litterSimulationDetail_Desc";
+        typeName = "SCALAR";
+
+        value = 3;
+        values[] = {"Off", "Low", "Medium", "High", "Ultra"};
+        _values[] = { 0, 50, 100, 1000, 5000 };
+
+        isClientSettable = 1;
     };
     class GVAR(litterCleanUpDelay) {
         typeName = "SCALAR";
-        value = 1800;
+        value = 0;
     };
     class GVAR(medicSetting_PAK) {
         typeName = "SCALAR";
         value = 1;
+        values[] = {"Anyone", "Medics only", "Doctors only"};
     };
     class GVAR(medicSetting_SurgicalKit) {
         typeName = "SCALAR";
         value = 1;
+        values[] = {"Anyone", "Medics only", "Doctors only"};
     };
     class GVAR(consumeItem_PAK) {
         typeName = "SCALAR";
         value = 0;
+        values[] = {"No", "Yes"};
     };
     class GVAR(consumeItem_SurgicalKit) {
         typeName = "SCALAR";
+        value = 0;
+        values[] = {"No", "Yes"};
+    };
+    class GVAR(useLocation_PAK) {
+        typeName = "SCALAR";
+        value = 3;
+        values[] = {"Anywhere", "Medical vehicles", "Medical facility", "vehicle & facility", "Disabled"};
+    };
+    class GVAR(useLocation_SurgicalKit) {
+        typeName = "SCALAR";
+        value = 2;
+        values[] = {"Anywhere", "Medical vehicles", "Medical facility", "vehicle & facility", "Disabled"};
+    };
+    class GVAR(keepLocalSettingsSynced) {
+        typeName = "BOOL";
+        value = 1;
+    };
+    class GVAR(healHitPointAfterAdvBandage) {
+        typeName = "BOOL";
+        value = 1;
+    };
+    class GVAR(painEffectType) {
+        displayName = "$STR_ACE_Medical_painEffectType";
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"$STR_ACE_Medical_painEffect_Flash", "$STR_ACE_Medical_painEffect_Chroma"};
+        isClientSettable = 1;
+    };
+    class GVAR(allowUnconsciousAnimationOnTreatment) {
+        typeName = "BOOL";
+        value = 0;
+    };
+    class GVAR(moveUnitsFromGroupOnUnconscious) {
+        typeName = "BOOL";
         value = 0;
     };
 };

@@ -29,7 +29,7 @@ private "_index";
 _index = _conditionNames find _conditionName;
 
 if (_index == -1) then {
-	_index = count _conditionNames;
+    _index = count _conditionNames;
 };
 
 _conditionNames set [_index, _conditionName];

@@ -23,6 +23,3 @@ _respawnVariables pushBack "ACE_PersistentFunctions";
 {
   _unit setVariable [_x, _unit getVariable _x, true];
 } forEach _respawnVariables;
-
-// fix speaker after respawn
-[_unit, format ["{_this setSpeaker '%1'}", speaker _unit], 2] call FUNC(execRemoteFnc);
