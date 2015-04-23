@@ -361,7 +361,7 @@ def copy_optionals_for_building(mod,pbos):
             if (os.path.isfile(pbo_path)):
                 print("Moving " + pbo_path + " for processing.")
                 shutil.move(pbo_path, os.path.join(release_dir,"@ace","addons",file_name))
-                
+
             if (os.path.isfile(sig_path)):
                 #print("Moving " + sig_path + " for processing.")
                 shutil.move(sig_path, os.path.join(release_dir,"@ace","addons",sigFile_name))
@@ -412,11 +412,11 @@ def cleanup_optionals(mod):
                 file_name = "ace_{}.pbo".format(dir_name)
                 src_file_path = os.path.join(release_dir, "@ace","addons",file_name)
                 dst_file_path = os.path.join(release_dir, "@ace","optionals",file_name)
-                
+
                 sigFile_name = file_name +"."+ key_name + ".bisign"
                 src_sig_path = os.path.join(release_dir, "@ace","addons",sigFile_name)
                 dst_sig_path = os.path.join(release_dir, "@ace","optionals",sigFile_name)
-                
+
                 if (os.path.isfile(src_file_path)):
                     #print("Preserving " + file_name)
                     os.renames(src_file_path,dst_file_path)
@@ -747,7 +747,7 @@ See the make.cfg file for additional build options.
 
         #We always build ACE_common so we can properly show the correct version stamp in the RPT file.
         if module == "common":
-            old_sha = old_sha
+            old_sha = ""
 
         # Hash the module
         new_sha = get_directory_hash(os.path.join(module_root, module))
