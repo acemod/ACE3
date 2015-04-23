@@ -76,7 +76,7 @@ class CfgAmmo {
         typicalSpeed=886;
         ACE_caliber=0.224;
         ACE_bulletLength=0.906;
-        ACE_bulletMass=52;
+        ACE_bulletMass=46;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.151};
         ACE_velocityBoundaries[]={};
@@ -211,7 +211,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={750, 780, 790, 794};
         ACE_barrelLengths[]={16, 20, 24, 26};
     };
-    class ACE_762x51_Ball_MK316_Mod_0 : B_762x51_Ball {
+    class ACE_762x51_Ball_Mk316_Mod_0 : B_762x51_Ball {
         airFriction=-0.0008525;
         caliber=1.8;
         hit=16;
@@ -689,7 +689,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={900};
         ACE_barrelLengths[]={29};
     };
-    class B_127x99_API : BulletBase {
+    class ACE_127x99_API : BulletBase {
         timeToLive=10;
         airFriction=-0.0006;
         typicalSpeed=900;
