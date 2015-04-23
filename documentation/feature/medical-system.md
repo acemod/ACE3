@@ -10,7 +10,7 @@ parent: wiki
 ACE provide users with a more realistic medical system and comes in both a basic and advanced version. This page will detail the differences between both systems and what they do. It is split into two parts; basic and advanced. Both versions have overlapse but each have their unique characteristics. 
 
 
-## Basic Medical
+## 2. Basic Medical
 ACE's basic medical system is quite a bit more complex than Arma's default system, but not really difficult to grasp. ACE basic medical is a mixture between the ACE2 and AGM medical systems.
 
 The four main elements that basic medical introduces are:
@@ -31,7 +31,7 @@ To stop the bleeding, the combat life saver needs to bandage every wounded limb.
 
 Should a unit be in pain, materializing itself with a chromatic aberration screen effect, he can be given morphine.
 
-## Advanced Medical
+## 3. Advanced Medical
 The advanced medical system provides a more complex and detailed medical simulation and is based off the CSE/CMS medical system. It focuses on a more realistic model for injuries and treatment, thus resulting in a more important and prominent role for combat medics, and a bigger incentive to not get shot.
 
 The system behind advanced medical is designed to attempt to mimic important parts of the human body, as well as react to any injuries sustained and treatments applied in a realistic manner. The available treatments and supplies in advanced medical are based of the Tactical Combat Casualty Care (TCCC) guidelines, which are the same guidelines used by real-life combat medics around the world.
