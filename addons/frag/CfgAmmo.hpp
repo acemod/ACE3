@@ -76,8 +76,18 @@ class CfgAmmo {
     };
     
     class ACE_G_40mm_HEDP: G_40mm_HE {
+        ACE_FRAG_CLASSES[] = {"ACE_frag_tiny_HD"};
+        ACE_FRAG_METAL = 200;
+        ACE_FRAG_CHARGE = 45;
+        ACE_FRAG_GURNEY_C = 2830;
+        ACE_FRAG_GURNEY_K = 3/5;
     };
     class ACE_G_40mm_HE: ACE_G_40mm_HEDP {
+        ACE_FRAG_CLASSES[] = {"ACE_frag_tiny_HD"};
+        ACE_FRAG_METAL = 200;
+        ACE_FRAG_CHARGE = 32;
+        ACE_FRAG_GURNEY_C = 2700;
+        ACE_FRAG_GURNEY_K = 3/5;
     };
     class ACE_G_40mm_Practice: ACE_G_40mm_HE {
         ACE_FRAG_SKIP = 1;
