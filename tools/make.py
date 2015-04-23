@@ -199,6 +199,7 @@ def find_bi_tools(work_drive):
     else:
         raise Exception("BadTools","Arma 3 Tools are not installed correctly or the P: drive needs to be created.")
 
+
 def find_depbo_tools(regKey):
     """Use registry entries to find DePBO-based tools."""
     stop = False
@@ -250,6 +251,7 @@ def find_depbo_tools(regKey):
 
     #Strip any quotations from the path due to a MikeRo tool bug which leaves a trailing space in some of its registry paths.
     return [pboproject_path.strip('"'),rapify_path.strip('"'),makepbo_path.strip('"')]
+
 
 def color(color):
     """Set the color. Works on Win32 and normal terminals."""
@@ -339,6 +341,7 @@ def copy_important_files(source_dir,destination_dir):
     finally:
         os.chdir(originalDir)
 
+
 def copy_optionals_for_building(mod,pbos):
     src_directories = os.listdir(optionals_root)
     current_dir = os.getcwd()
@@ -387,7 +390,8 @@ def copy_optionals_for_building(mod,pbos):
     finally:
         os.chdir(current_dir)
 
-def cleanup_optionals(mod,pbos):
+
+def cleanup_optionals(mod):
     print("")
     try:
         for dir_name in mod:
@@ -434,6 +438,7 @@ def build_signature_file(file_name):
     else:
         return False
 ###############################################################################
+
 
 def main(argv):
     """Build an Arma addon suite in a directory from rules in a make.cfg file."""
@@ -1043,6 +1048,8 @@ See the make.cfg file for additional build options.
 
     copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
     cleanup_optionals(optionals_modules,optional_files)
+
+
 if __name__ == "__main__":
     main(sys.argv)
 input("Press Enter to continue...")
