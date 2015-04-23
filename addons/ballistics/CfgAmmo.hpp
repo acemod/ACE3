@@ -98,8 +98,8 @@ class CfgAmmo {
         deflecting=18;
         hit=7;
         typicalSpeed=883;
-        tracerStartTime = 0.073;        //7T3M tracer burns out to 850m
-        tracerEndTime = 1.736;          //Time in seconds calculated with ballistics calculator
+        tracerStartTime = 0.073;            //7T3M tracer burns out to 850m
+        tracerEndTime = 1.736;              //Time in seconds calculated with ballistics calculator
         ACE_caliber=0.220;
         ACE_bulletLength=0.85;
         ACE_bulletMass=49.8;
@@ -168,7 +168,7 @@ class CfgAmmo {
         typicalSpeed=833;
         hit=9;
         tracerStartTime = 0.073;		//Based on the British L5A1 which burns out to 1000m 
-        tracerEndTime = 2.058; 			//Time in seconds calculated with ballistics calculator
+        tracerEndTime = 2.058;          //Time in seconds calculated with ballistics calculator
         ACE_caliber=0.308;
         ACE_bulletLength=1.14;
         ACE_bulletMass=146;
