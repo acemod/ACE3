@@ -718,7 +718,7 @@ See the make.cfg file for additional build options.
             if ret == 0:
                 print_green("Created: " + os.path.join(private_key_path, key_name + ".biprivatekey"))
                 print("Removing any old signature keys...")
-                purge(os.path.join(module_root, release_dir, project, "Addons"), "^.*\.bisign$","*.bisign")
+                purge(os.path.join(module_root, release_dir, project, "addons"), "^.*\.bisign$","*.bisign")
                 purge(os.path.join(module_root, release_dir, project, "optionals"), "^.*\.bisign$","*.bisign")
                 purge(os.path.join(module_root, release_dir, project, "keys"), "^.*\.bikey$","*.bikey")
             else:
@@ -780,7 +780,7 @@ See the make.cfg file for additional build options.
                 if sigMissing:
                     if key:
                         print("Missing Signature key " + sigFile)
-                        build_signature_file(os.path.join(module_root, release_dir, project, "Addons", pbo_name_prefix + module + ".pbo"))
+                        build_signature_file(os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo"))
                 # Skip everything else
                 continue
 
@@ -805,13 +805,13 @@ See the make.cfg file for additional build options.
 
         try:
             # Remove the old pbo, key, and log
-            old = os.path.join(module_root, release_dir, project, "Addons", pbo_name_prefix+module) + "*"
+            old = os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix+module) + "*"
             files = glob.glob(old)
             for f in files:
                 os.remove(f)
 
             if pbo_name_prefix:
-                old = os.path.join(module_root, release_dir, project, "Addons", pbo_name_prefix+module) + "*"
+                old = os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix+module) + "*"
                 files = glob.glob(old)
                 for f in files:
                     os.remove(f)
@@ -824,11 +824,11 @@ See the make.cfg file for additional build options.
 
         # Build the module into a pbo
         print_blue("Building: " + os.path.join(work_drive, prefix, module))
-        print_blue("Destination: " + os.path.join(module_root, release_dir, project, "Addons"))
+        print_blue("Destination: " + os.path.join(module_root, release_dir, project, "addons"))
 
         # Make destination folder (if needed)
         try:
-            os.makedirs(os.path.join(module_root, release_dir, project, "Addons"))
+            os.makedirs(os.path.join(module_root, release_dir, project, "addons"))
         except:
             pass
 
@@ -880,7 +880,7 @@ See the make.cfg file for additional build options.
 
                 if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                     print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
-                    cmd = [makepboTool, "-P","-A","-L","-N","-G", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"Addons")]
+                    cmd = [makepboTool, "-P","-A","-L","-N","-G", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
 
                 else:
                     if check_external:
@@ -902,7 +902,7 @@ See the make.cfg file for additional build options.
                     # Prettyprefix rename the PBO if requested.
                     if pbo_name_prefix:
                         try:
-                            os.rename(os.path.join(module_root, release_dir, project, "Addons", module+".pbo"), os.path.join(module_root, release_dir, project, "Addons", pbo_name_prefix+module+".pbo"))
+                            os.rename(os.path.join(module_root, release_dir, project, "addons", module+".pbo"), os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix+module+".pbo"))
                         except:
                             raise
                             print_error("Could not rename built PBO with prefix.")
@@ -910,9 +910,9 @@ See the make.cfg file for additional build options.
                     if key:
                         print("Signing with " + key + ".")
                         if pbo_name_prefix:
-                            ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "Addons", pbo_name_prefix + module + ".pbo")])
+                            ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo")])
                         else:
-                            ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "Addons", module + ".pbo")])
+                            ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", module + ".pbo")])
 
                         if ret == 0:
                             build_successful = True
@@ -952,7 +952,7 @@ See the make.cfg file for additional build options.
                 # Call AddonBuilder
                 os.chdir("P:\\")
 
-                cmd = [addonbuilder, os.path.join(work_drive, prefix, module), os.path.join(make_root, release_dir, project, "Addons"), "-clear", "-project="+work_drive]
+                cmd = [addonbuilder, os.path.join(work_drive, prefix, module), os.path.join(make_root, release_dir, project, "addons"), "-clear", "-project="+work_drive]
                 if not do_binarize:
                     cmd.append("-packonly")
 
@@ -975,7 +975,7 @@ See the make.cfg file for additional build options.
                 # Prettyprefix rename the PBO if requested.
                 if pbo_name_prefix:
                     try:
-                        os.rename(os.path.join(make_root, release_dir, project, "Addons", module+".pbo"), os.path.join(make_root, release_dir, project, "Addons", pbo_name_prefix+module+".pbo"))
+                        os.rename(os.path.join(make_root, release_dir, project, "addons", module+".pbo"), os.path.join(make_root, release_dir, project, "addons", pbo_name_prefix+module+".pbo"))
                     except:
                         raise
                         print_error("Could not rename built PBO with prefix.")
@@ -985,9 +985,9 @@ See the make.cfg file for additional build options.
                     if key:
                         print("Signing with " + key + ".")
                         if pbo_name_prefix:
-                            ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "Addons", pbo_name_prefix + module + ".pbo")])
+                            ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo")])
                         else:
-                            ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "Addons", module + ".pbo")])
+                            ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons", module + ".pbo")])
 
                         if ret == 0:
                             build_successful = True
@@ -1036,7 +1036,7 @@ See the make.cfg file for additional build options.
 
         try:
             # Delete all log files
-            for root, dirs, files in os.walk(os.path.join(module_root, release_dir, project, "Addons")):
+            for root, dirs, files in os.walk(os.path.join(module_root, release_dir, project, "addons")):
                 for currentFile in files:
                     if currentFile.lower().endswith("log"):
                         os.remove(os.path.join(root, currentFile))
