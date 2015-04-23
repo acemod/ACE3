@@ -584,6 +584,9 @@ See the make.cfg file for additional build options.
         # Project name (with @ symbol)
         project = cfg.get(make_target, "project", fallback="@"+os.path.basename(os.getcwd()))
 
+        # BI Tools work drive on Windows
+        work_drive = cfg.get(make_target, "work_drive",  fallback="P:\\")
+
         # Private key path
         key = cfg.get(make_target, "key", fallback=None)
 
@@ -606,9 +609,6 @@ See the make.cfg file for additional build options.
 
         # List of directories to ignore when detecting
         ignore = [x.strip() for x in cfg.get(make_target, "ignore",  fallback="release").split(',')]
-
-        # BI Tools work drive on Windows
-        work_drive = cfg.get(make_target, "work_drive",  fallback="P:\\")
 
         # Which build tool should we use?
         build_tool = cfg.get(make_target, "build_tool", fallback="addonbuilder").lower()
