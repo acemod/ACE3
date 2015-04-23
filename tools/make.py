@@ -767,7 +767,7 @@ See the make.cfg file for additional build options.
                 print("Module has not changed.")
                 if sigMissing:
                     if key:
-                        print_yellow("Missing Signature key " + sigFile)
+                        print("Missing Signature key " + sigFile)
                         build_signature_file(os.path.join(module_root, release_dir, project, "Addons", pbo_name_prefix + module + ".pbo"))
                 # Skip everything else
                 continue
