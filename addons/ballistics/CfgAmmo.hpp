@@ -156,7 +156,7 @@ class CfgAmmo {
         ACE_velocityBoundaries[]={};
         ACE_standardAtmosphere="ICAO";
         ACE_dragModel=7;
-        ACE_muzzleVelocities[]={750, 830, 850, 860, 865};
+        ACE_muzzleVelocities[]={750, 820, 840, 852, 860};
         ACE_barrelLengths[]={10, 16, 20, 24, 26};
     };
     class B_762x51_Ball : BulletBase {
