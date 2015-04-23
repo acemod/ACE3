@@ -560,6 +560,8 @@ See the make.cfg file for additional build options.
     else:
         check_external = False
 
+    print_yellow("\nCheck external references is set to " + str(check_external))
+
     # Get the directory the make script is in.
     make_root = os.path.dirname(os.path.realpath(__file__))
     make_root_parent = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
