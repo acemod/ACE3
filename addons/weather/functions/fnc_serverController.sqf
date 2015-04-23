@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-private ["_i", "_lastRain", "_rainOverCast", "_transitionTime", "_windDirectionVariance", "_windSpeed", "_windSpeedChange", "_windMaxDiff", "_windMinDiff", "_windDirection", "_windDirectionChange", "_time"];
+private ["_i", "_lastRain", "_rainOverCast", "_transitionTime", "_windDirectionVariance", "_windSpeed", "_windSpeedChange", "_windMaxDiff", "_windMinDiff", "_windDirection", "_windDirectionChange", "_time", "_ratioMin", "_ratioMax"];
 
 // Rain simulation
 if(GVAR(rain_period_count) > GVAR(rain_next_period)) then {
