@@ -61,6 +61,8 @@ release_dir = ""
 module_root_parent = ""
 optionals_root = ""
 key_name = "ace_preAlpha"
+key = ""
+dssignfile = ""
 
 ###############################################################################
 # http://akiscode.com/articles/sha-1directoryhash.shtml
@@ -420,19 +422,32 @@ def purge(dir, pattern, friendlyPattern="files"):
         if re.search(pattern, f):
             os.remove(os.path.join(dir, f))
             print_yellow("Deleting file => " + f)
+
+
+def build_signature_file(file_name):
+    global key
+    global dssignfile
+    print("Signing with " + key + ".")
+    ret = subprocess.call([dssignfile, key, file_name])
+    if ret == 0:
+        return True
+    else:
+        return False
 ###############################################################################
 
 def main(argv):
     """Build an Arma addon suite in a directory from rules in a make.cfg file."""
     print_blue(("\nmake.py for Arma, modified for Advanced Combat Environment v" + __version__))
-    
+
     global work_drive
     global module_root
     global release_dir
     global module_root_parent
     global optionals_root
     global key_name
-    
+    global key
+    global dssignfile
+
     if sys.platform != "win32":
         print_error("Non-Windows platform (Cygwin?). Please re-run from cmd.")
         sys.exit(1)
@@ -705,6 +720,7 @@ See the make.cfg file for additional build options.
     for module in modules:
         print_green("\nMaking " + module + "-"*max(1, (60-len(module))))
         missing = False
+        sigMissing = False
 
         # Cache check
         if module in cache:
@@ -719,8 +735,12 @@ See the make.cfg file for additional build options.
         # Hash the module
         new_sha = get_directory_hash(os.path.join(module_root, module))
 
-        # Is the pbo file missing?
+        # Is the pbo or sig file missing?
         missing = not os.path.isfile(os.path.join(release_dir, project, "addons", "ace_{}.pbo".format(module)))
+        sigFile = pbo_name_prefix+module + ".pbo." + key_name + ".bisign"
+        print("Checking sig file => " + sigFile)
+        sigMissing = not os.path.isfile(os.path.join(release_dir, project, "addons", sigFile ))
+
         if missing:
             print("ace_{}.pbo".format(module) + " is missing. Building...")
 
@@ -729,6 +749,10 @@ See the make.cfg file for additional build options.
         if old_sha == new_sha and not missing:
             if not force_build:
                 print("Module has not changed.")
+                if sigMissing:
+                    if key:
+                        print_yellow("Signature key " + sigFile + " is missing.")
+                        build_signature_file(os.path.join(module_root, release_dir, project, "Addons", pbo_name_prefix + module + ".pbo"))
                 # Skip everything else
                 continue
 
@@ -753,7 +777,7 @@ See the make.cfg file for additional build options.
 
         try:
             # Remove the old pbo, key, and log
-            old = os.path.join(module_root, release_dir, project, "Addons", module) + "*"
+            old = os.path.join(module_root, release_dir, project, "Addons", pbo_name_prefix+module) + "*"
             files = glob.glob(old)
             for f in files:
                 os.remove(f)
