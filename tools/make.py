@@ -767,6 +767,7 @@ See the make.cfg file for additional build options.
         key = os.path.join(private_key_path, key_name + ".biprivatekey")
 
     # Remove any obsolete files.
+    print_blue("\nChecking for obsolete files...")
     obsolete_check_path = os.path.join(module_root, release_dir, project,"addons")
     for file in os.listdir(obsolete_check_path):
         if (file.endswith(".pbo") and os.path.isfile(os.path.join(obsolete_check_path,file))):
