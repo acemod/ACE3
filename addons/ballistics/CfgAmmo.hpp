@@ -23,6 +23,8 @@ class CfgAmmo {
         airFriction=-0.001265;
         hit=8;
         typicalSpeed=750;
+        tracerStartTime = 0.073;        //M856 tracer burns out to 800m
+        tracerEndTime = 1.579;          //Time in seconds calculated with ballistics calculator
         ACE_caliber=0.224;
         ACE_bulletLength=0.906;
         ACE_bulletMass=62;
@@ -106,13 +108,15 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={780, 880, 920};
         ACE_barrelLengths[]={10, 16.3, 20};
     };
-    class B_556x45_Ball_Tracer_Yellow;
-    class ACE_545x39_Ball_7T3M : B_556x45_Ball_Tracer_Yellow {
+    class B_556x45_Ball_Tracer_Green;
+    class ACE_545x39_Ball_7T3M : B_556x45_Ball_Tracer_Green {
         airFriction=-0.001162;
         caliber=0.6;
         deflecting=18;
         hit=7;
         typicalSpeed=883;
+        tracerStartTime = 0.073;            //7T3M tracer burns out to 850m
+        tracerEndTime = 1.736;              //Time in seconds calculated with ballistics calculator
         ACE_caliber=0.220;
         ACE_bulletLength=0.85;
         ACE_bulletMass=49.8;
@@ -180,6 +184,8 @@ class CfgAmmo {
         airFriction=-0.001035;
         typicalSpeed=833;
         hit=9;
+        tracerStartTime = 0.073;            //Based on the British L5A1 which burns out to 1000m 
+        tracerEndTime = 2.058;              //Time in seconds calculated with ballistics calculator
         ACE_caliber=0.308;
         ACE_bulletLength=1.14;
         ACE_bulletMass=146;
@@ -407,6 +413,8 @@ class CfgAmmo {
         caliber=1.5;
         hit=15;
         typicalSpeed=800;
+        tracerStartTime = 0.073;            //Based on the 7T2 which burns three seconds
+        tracerEndTime = 3;
         ACE_caliber=0.312;
         ACE_bulletLength=1.14;
         ACE_bulletMass=149;
@@ -450,11 +458,13 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={10, 16.3, 20};
     };
-    class ACE_762x39_Ball_57N231P : B_762x51_Tracer_Yellow {
+    class ACE_762x39_Ball_57N231P : B_762x54_Tracer_Green {
         airFriction=-0.0015168;
         hit=12;
         caliber=1.5;
         typicalSpeed=716;
+        tracerStartTime = 0.073;            //57N231P tracer burns out to 800m
+        tracerEndTime = 2.082;              //Time in seconds calculated with ballistics calculator
         ACE_caliber=0.308;
         ACE_bulletLength=1.14;
         ACE_bulletMass=117;
