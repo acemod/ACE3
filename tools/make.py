@@ -772,7 +772,7 @@ See the make.cfg file for additional build options.
         if (file.endswith(".pbo") and os.path.isfile(os.path.join(obsolete_check_path,file))):
             if check_for_obsolete_pbos(module_root, file):
                 fileName = os.path.splitext(file)[0]
-                print_yellow("Removing obsolete file => " + file))
+                print_yellow("Removing obsolete file => " + file)
                 purge(obsolete_check_path,fileName+"\..",fileName+".*")
 
     # For each module, prep files and then build.
