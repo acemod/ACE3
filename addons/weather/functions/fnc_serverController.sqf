@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-private ["_lastRain", "_rainOverCast", "_transitionTime", "_windDirectionVariance", "_windSpeed", "_windSpeedChange", "_windMaxDiff", "_windMinDiff", "_windDirection", "_windDirectionChange", "_time", "_ratioMin", "_ratioMax"];
+private ["_lastRain", "_rainOverCast", "_transitionTime", "_windDirectionVariance", "_windSpeed", "_windSpeedChange", "_windMaxDiff", "_windMinDiff", "_windDirection", "_windDirectionChange", "_ratioMin", "_ratioMax"];
 
 // Rain simulation
 if (GVAR(syncRain) && GVAR(rain_period_count) > GVAR(rain_next_period)) then {
@@ -19,27 +19,30 @@ if (GVAR(syncRain) && GVAR(rain_period_count) > GVAR(rain_next_period)) then {
     GVAR(rain_next_period) = ceil((1 + (random 10)) / GVAR(overcast_multiplier));
     GVAR(rain_period_count) = 0;
     
+    _lastRain = GVAR(current_rain);
+    
     if (overcast >= 0.7) then {
-        _lastRain = GVAR(current_rain);
-        _rainOverCast = ((overcast-0.7)/0.3);
-
-        GVAR(current_rain) = (GVAR(current_rain)+(((GVAR(current_rain)))*((_rainOverCast*(GVAR(overcast_multiplier)))/8)*GVAR(rain_current_range)));
-        GVAR(current_rain) = (GVAR(current_rain) max 0.01) min 1;
-
-        _transitionTime = (_rainOverCast*5)+(random (_rainOverCast*20))+1;
-        GVAR(rain_current_range) = -1+(random 2);
-
-        ACE_RAIN_PARAMS = [_lastRain, GVAR(current_rain), _transitionTime];
-        TRACE_4("",_lastRain,_rainOverCast,_transitionTime, overcast);
+        _rainOverCast = (overcast - 0.7) / 0.3;
+        if (GVAR(current_rain) == 0) then {
+            // Initialize rain with a random strength depending on the current overcast value
+            GVAR(current_rain) = 0.25 + (random 0.25) + (random 0.5) * _rainOverCast;
+        };
+        hintSilent format["%1, %2", ((_rainOverCast * GVAR(overcast_multiplier)) / 8), GVAR(rain_current_range)];
+        GVAR(current_rain) = GVAR(current_rain) + GVAR(current_rain) * ((_rainOverCast * GVAR(overcast_multiplier)) / 8) * GVAR(rain_current_range);
+        GVAR(current_rain) = 0.01 max GVAR(current_rain) min 1;
+        
+        GVAR(rain_current_range) = -1 + (random 2);
     } else {
-        GVAR(current_rain) = 0;
-        _lastRain = GVAR(current_rain);
         _rainOverCast = 1;
-        _transitionTime = (_rainOverCast*5)+(random (_rainOverCast*20))+1;
-
-        ACE_RAIN_PARAMS = [_lastRain, GVAR(current_rain), _transitionTime];
-        TRACE_4("",_lastRain,_rainOverCast,_transitionTime, overcast);
+        
+        GVAR(current_rain) = 0;
     };
+    
+    _transitionTime = 1 + (_rainOverCast * 5) + (random (_rainOverCast * 20));
+    
+    systemChat format["%1, %2, %3", _lastRain, GVAR(current_rain), _transitionTime];
+    ACE_RAIN_PARAMS = [_lastRain, GVAR(current_rain), _transitionTime];
+    TRACE_4("",_lastRain,_rainOverCast,_transitionTime,overcast);
 
     GVAR(rain_period_start_time) = time;
     publicVariable "ACE_RAIN_PARAMS";
@@ -74,15 +77,15 @@ if (GVAR(syncWind) && GVAR(wind_period_count) > GVAR(wind_next_period)) then {
         _windSpeedChange = _windSpeed - GVAR(current_wind_speed);
     };
     
-    _time = GVAR(wind_next_period) * GVAR(serverUpdateInterval);
+    _transitionTime = GVAR(wind_next_period) * GVAR(serverUpdateInterval);
     
-    TRACE_5("dirCur/dirNew/spdCur/spdNew/period",GVAR(current_wind_direction),_windDirection,GVAR(current_wind_speed),_windSpeed,_time);
+    TRACE_5("dirCur/dirNew/spdCur/spdNew/period",GVAR(current_wind_direction),_windDirection,GVAR(current_wind_speed),_windSpeed,_transitionTime);
     
     ACE_WIND_PARAMS = [GVAR(current_wind_direction),
                         _windDirectionChange,
                        GVAR(current_wind_speed),
                        _windSpeedChange,
-                       _time];
+                       _transitionTime];
     
     GVAR(current_wind_direction) = _windDirection;
     GVAR(current_wind_speed) = _windSpeed;
