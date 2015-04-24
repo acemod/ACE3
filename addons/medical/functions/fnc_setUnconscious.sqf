@@ -71,8 +71,6 @@ if (vehicle _unit == _unit) then {
         _unit addWeapon "ACE_FakePrimaryWeapon";
     };
     _unit selectWeapon (primaryWeapon _unit);
-    _unit switchMove "";
-    _unit playmoveNow "";
 };
 
 // We are storing the current animation, so we can use it later on when waking the unit up inside a vehicle
@@ -89,7 +87,15 @@ if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
 };
 
 [_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
-[_unit, [_unit] call EFUNC(common,getDeathAnim), 1, true] call EFUNC(common,doAnimation);
+_anim = [_unit] call EFUNC(common,getDeathAnim)
+[_unit, _anim, 1, true] call EFUNC(common,doAnimation);
+[{
+    _unit = _this select 0;
+    _anim = _this select 1;
+    if (_unit getVariable "ACE_isUnconscious") then {
+        [_unit, _anim, 2, true] call EFUNC(common,doAnimation);
+    };
+}, [_unit, _anim], 2, 1] call EFUNC(common,waitAndExecute);
 
 _startingTime = time;
 
