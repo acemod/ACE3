@@ -309,12 +309,12 @@ def copy_important_files(source_dir,destination_dir):
     "logo_ace3_ca.paa"
     ]
 
-    print_yellow ("source_dir: " + source_dir)
-    print_yellow("destination_dir: " + destination_dir)
-
     #copy importantFiles
     try:
         print_blue("\nSearching for important files in " + source_dir)
+        print("Source_dir: " + source_dir)
+        print("Destination_dir: " + destination_dir)
+
         for file in importantFiles:
             print_green("Copying file => " + os.path.join(source_dir,file))
             shutil.copyfile(os.path.join(source_dir,file),os.path.join(destination_dir,file))
@@ -1060,8 +1060,6 @@ See the make.cfg file for additional build options.
         except:
             print_error("ERROR: Could not delete pboProject temp files.")
 
-    print_green("\nDone.")
-
     copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
     cleanup_optionals(optionals_modules)
 
@@ -1103,6 +1101,9 @@ See the make.cfg file for additional build options.
                 shutil.copytree(os.path.join(module_root, release_dir, project), os.path.join(a3_path, project))
             except:
                 print_error("Could not copy files. Is Arma 3 running?")
+                
+    print_green("\nDone.")
+
 
 if __name__ == "__main__":
     main(sys.argv)
