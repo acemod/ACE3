@@ -445,7 +445,7 @@ class CfgAmmo {
     class ACE_762x39_Ball : B_762x51_Ball {
         airFriction=-0.0015168;
         hit=12;
-        caliber=1.5
+        caliber=1.5;
         typicalSpeed=716;
         ACE_caliber=0.308;
         ACE_bulletLength=1.14;
