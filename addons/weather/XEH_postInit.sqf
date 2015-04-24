@@ -1,9 +1,5 @@
 #include "script_component.hpp"
 
-GVAR(syncRain) = true; 
-GVAR(syncWind) = true; // Wind, Gusts, Waves
-GVAR(syncMisc) = true; // Lightnings, Rainbow, Fog
-
 GVAR(wind_period_start_time) = time;
 GVAR(rain_period_start_time) = time;
 

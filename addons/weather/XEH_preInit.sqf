@@ -15,6 +15,14 @@ PREP(updateRain);
 PREP(updateTemperature);
 PREP(updateWind);
 
+// Control server side weather propagation
+GVAR(enableServerController) = true;
+
+// Control client side weather effects
+GVAR(syncRain) = true; 
+GVAR(syncWind) = true; // Wind, Gusts, Waves
+GVAR(syncMisc) = true; // Lightnings, Rainbow, Fog
+
 // Make sure this data is read before client/server postInit
 call FUNC(getMapData);
 

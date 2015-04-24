@@ -11,6 +11,8 @@
  */
 #include "script_component.hpp"
 
+if (!GVAR(enableServerController)) exitWith {};
+
 private ["_lastRain", "_rainOverCast", "_transitionTime", "_windDirectionVariance", "_windSpeed", "_windSpeedChange", "_windMaxDiff", "_windMinDiff", "_windDirection", "_windDirectionChange", "_ratioMin", "_ratioMax"];
 
 // Rain simulation
@@ -27,7 +29,7 @@ if (GVAR(syncRain) && GVAR(rain_period_count) > GVAR(rain_next_period)) then {
             // Initialize rain with a random strength depending on the current overcast value
             GVAR(current_rain) = 0.25 + (random 0.25) + (random 0.5) * _rainOverCast;
         };
-        hintSilent format["%1, %2", ((_rainOverCast * GVAR(overcast_multiplier)) / 8), GVAR(rain_current_range)];
+        
         GVAR(current_rain) = GVAR(current_rain) + GVAR(current_rain) * ((_rainOverCast * GVAR(overcast_multiplier)) / 8) * GVAR(rain_current_range);
         GVAR(current_rain) = 0.01 max GVAR(current_rain) min 1;
         
