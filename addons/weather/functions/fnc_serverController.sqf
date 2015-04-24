@@ -42,7 +42,6 @@ if (GVAR(syncRain) && GVAR(rain_period_count) > GVAR(rain_next_period)) then {
     
     _transitionTime = 1 + (_rainOverCast * 5) + (random (_rainOverCast * 20));
     
-    systemChat format["%1, %2, %3", _lastRain, GVAR(current_rain), _transitionTime];
     ACE_RAIN_PARAMS = [_lastRain, GVAR(current_rain), _transitionTime];
     TRACE_4("",_lastRain,_rainOverCast,_transitionTime,overcast);
 

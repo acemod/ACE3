@@ -1,5 +1,5 @@
 /*
- * Author: ACE2 Team
+ * Author: ACE2 Team, Ruthberg
  *
  * Updates wind, gusts and waves based on ACE_wind
  *
