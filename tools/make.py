@@ -449,6 +449,13 @@ def build_signature_file(file_name):
         return True
     else:
         return False
+
+
+def check_for_obsolete_pbos(addonspath, file):
+    module = file[4:-4]
+    if not os.path.exists(os.path.join(addonspath, module)):
+        return True
+    return False
 ###############################################################################
 
 
@@ -759,6 +766,14 @@ See the make.cfg file for additional build options.
 
         key = os.path.join(private_key_path, key_name + ".biprivatekey")
 
+    # Remove any obsolete files.
+    obsolete_check_path = os.path.join(module_root, release_dir, project,"addons")
+    for file in os.listdir(obsolete_check_path):
+        if (file.endswith(".pbo") and os.path.isfile(os.path.join(obsolete_check_path,file))):
+            if check_for_obsolete_pbos(module_root, file):
+                fileName = os.path.splitext(file)[0]
+                print_yellow("Removing obsolete file => " + file))
+                purge(obsolete_check_path,fileName+"\..",fileName+".*")
 
     # For each module, prep files and then build.
     print_blue("\nBuilding...")
