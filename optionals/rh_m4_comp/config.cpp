@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"asdg_jointrails","RH_m4_cfg"};
+        requiredAddons[] = {"RH_m4_cfg"};
         author[]={"Ruthberg"};
         VERSION_CONFIG;
     };
