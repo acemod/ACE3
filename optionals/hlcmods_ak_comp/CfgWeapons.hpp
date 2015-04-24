@@ -1,6 +1,7 @@
 class CfgWeapons
 {
 	class hlc_ak_base;
+    class hlc_rifle_ak12;
 	class hlc_rifle_ak74: hlc_ak_base
 	{
 		ACE_barrelTwist=7.8699999;

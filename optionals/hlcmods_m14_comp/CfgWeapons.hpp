@@ -2,6 +2,7 @@
 class CfgWeapons
 {
 	class Rifle_Base_F;
+    class hlc_rifle_M14;
 	class hlc_M14_base: Rifle_Base_F
 	{
 		ACE_barrelTwist=12;
