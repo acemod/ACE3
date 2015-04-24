@@ -38,7 +38,7 @@ _lastTestResult = [];
 _numberOfAttempts = 0;
 
 //(binary search)
-while {(_numberOfAttempts < MAX_ATTEMPTS) && ((abs _error) > 0.2)} do {
+while {(_numberOfAttempts < MAX_ATTEMPTS) && {(abs _error) > 0.2}} do {
     _numberOfAttempts = _numberOfAttempts + 1;
     _solutionElevation = (_maxElev + _minElev) / 2;
     _lastTestResult = [_solutionElevation, _muzzleVelocity, _airFriction, 15, 1, 0, 0, _heightToHit, _timeStep] call FUNC(dev_simulateShot);

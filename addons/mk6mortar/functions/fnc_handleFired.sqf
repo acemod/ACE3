@@ -21,7 +21,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_shooterMan", "_bisAirFriction", "_temperature", "_newMuzzleVelocityCoefficent", "_bulletVelocity", "_bulletSpeed", "_muzzleVelocity", "_muzzleVelocityShift"];
+private ["_shooterMan", "_bisAirFriction", "_temperature", "_newMuzzleVelocityCoefficent", "_bulletVelocity", "_bulletSpeed", "_muzzleVelocity", "_muzzleVelocityShift"];
 
 disableSerialization;
 
@@ -39,17 +39,19 @@ if (!([_shooterMan] call EFUNC(common,isPlayer))) exitWith {false};
 _bisAirFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
 if (_bisAirFriction != 0) exitWith {ERROR("Non zero base airFriction");};
 
-//Hack Until these are intergrated:
-if (isNil QEGVAR(weather,currentRelativeDensity)) then {
-    EGVAR(weather,currentRelativeDensity) = 1;
-};
-if (isNil QEGVAR(weather,currentTemperature)) then {
-    EGVAR(weather,currentTemperature) = 15;
-};
 
+//Calculate air density:
+_altitude = (getPosASL _vehicle) select 2;
+#define GET_TEMPERATURE_AT_HEIGHT(h) (EGVAR(weather,currentTemperature) - 0.0065 * (h))
+_temperature = GET_TEMPERATURE_AT_HEIGHT(_altitude);
+_pressure = _altitude call EFUNC(weather,calculateBarometricPressure);
+_relativeHumidity = EGVAR(weather,currentHumidity);
+_airDensity = [_temperature, _pressure, _relativeHumidity] call EFUNC(weather,calculateAirDensity);
+_relativeDensity = _airDensity / 1.225;
+
+TRACE_5("FiredWeather",_temperature,_pressure,_relativeHumidity,_airDensity,_relativeDensity);
 
 //powder effects:
-_temperature = EGVAR(weather,currentTemperature);
 _newMuzzleVelocityCoefficent = (((_temperature + 273.13) / 288.13 - 1) / 40 + 1);
 if (_newMuzzleVelocityCoefficent != 1) then {
     _bulletVelocity = velocity _projectile;
@@ -59,10 +61,11 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
 };
 
+
 [{
     private ["_deltaT", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueSpeed", "_dragRef", "_accelRef", "_drag", "_accel"];
     PARAMS_2(_args,_pfID);
-    EXPLODE_3_PVT(_args,_shell,_airFriction,_time);
+    EXPLODE_4_PVT(_args,_shell,_airFriction,_time,_relativeDensity);
 
     if (isNull _shell || {!alive _shell}) exitwith {
         [_pfID] call cba_fnc_removePerFrameHandler;
@@ -77,10 +80,10 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
     _trueSpeed = vectorMagnitude _trueVelocity;
 
-    _drag = _deltaT * _airFriction * _trueSpeed * EGVAR(weather,currentRelativeDensity);
+    _drag = _deltaT * _airFriction * _trueSpeed * _relativeDensity;
     _accel = _trueVelocity vectorMultiply (_drag);
     _bulletVelocity = _bulletVelocity vectorAdd _accel;
 
     _shell setVelocity _bulletVelocity;
 
-}, 0, [_projectile, MK6_82mm_AIR_FRICTION, time]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_projectile, MK6_82mm_AIR_FRICTION, time, _relativeDensity]] call CBA_fnc_addPerFrameHandler;

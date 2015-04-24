@@ -28,7 +28,7 @@ _increasePerRow = 50;
 _outputArray = [];
 
 
-//[_rangeToHit, _lineElevation, _lineHeightElevation, _lineTimeOfFlight, _lineCrosswindDeg, _lineHeadwindMeters, _lineTailWindMeters, _lineTempDec, _lineTempInc, _lineAirDensDec, _lineAirDensInc]
+//[_rangeToHit, _lineElevation, _lineHeightElevation, _lineHeightTimeDelta, _lineTimeOfFlight, _lineCrosswindDeg, _lineHeadwindMeters, _lineTailWindMeters, _lineTempDec, _lineTempInc, _lineAirDensDec, _lineAirDensInc]
 
 while {_stillInRange} do {
     _result = [_muzzleVelocity, _currentRange, _airFriction] call FUNC(dev_simulateCalcRangeTableLine);
@@ -50,13 +50,14 @@ while {_stillInRange} do {
             ([(_result select 1),  "mil", true] call FUNC(dev_formatNumber)),
             ([(_result select 2),  "mil", true] call FUNC(dev_formatNumber)),
             ([(_result select 3),  "sec", false] call FUNC(dev_formatNumber)),
-            ([(_result select 4),  "milPrecise", true] call FUNC(dev_formatNumber)),
-            ([(_result select 5),  "metersprecise", false] call FUNC(dev_formatNumber)),
+            ([(_result select 4),  "sec", false] call FUNC(dev_formatNumber)),
+            ([(_result select 5),  "milPrecise", true] call FUNC(dev_formatNumber)),
             ([(_result select 6),  "metersprecise", false] call FUNC(dev_formatNumber)),
             ([(_result select 7),  "metersprecise", false] call FUNC(dev_formatNumber)),
             ([(_result select 8),  "metersprecise", false] call FUNC(dev_formatNumber)),
             ([(_result select 9),  "metersprecise", false] call FUNC(dev_formatNumber)),
-            ([(_result select 10), "metersprecise", false] call FUNC(dev_formatNumber))
+            ([(_result select 10),  "metersprecise", false] call FUNC(dev_formatNumber)),
+            ([(_result select 11), "metersprecise", false] call FUNC(dev_formatNumber))
             ];
         };
         _currentRange = _currentRange + _increasePerRow;
@@ -65,7 +66,7 @@ while {_stillInRange} do {
 };
 
 //handle floating point rounding errors
-_outputString = format ["case ((abs(_muzzleVelocity - %1) < 0.00001) && ((abs(_airFriction - %2) < 0.00001))): {
+_outputString = format ["case ((abs(_muzzleVelocity - %1) < 0.00001) && {(abs(_airFriction - %2) < 0.00001)}): {
 [
 ", _muzzleVelocity, _airFriction];
 

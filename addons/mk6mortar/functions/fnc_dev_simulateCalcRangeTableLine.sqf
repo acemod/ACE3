@@ -1,6 +1,4 @@
 /*
-Name: AGM_Artillery_fnc_simulateCalcRangeTableLine
-
 Author: Pabst Mirror
 
 Description:
@@ -15,13 +13,13 @@ Returns:
 ARRAY - Range Table Line Data (see return line)
 
 Example:
-[300, -0.0001, 3000] call AGM_Artillery_fnc_simulateCalcRangeTableLine
+[300, -0.0001, 3000] call ace_mk6mortar_fnc_simulateCalcRangeTableLine
  */
 #include "script_component.hpp"
 
 #define TIME_STEP (1/50)
 
-private ["_startTime", "_muzzleVelocity", "_rangeToHit", "_airFriction", "_vacElevation", "_radicand", "_maxElev", "_minElev", "_error", "_solutionElevation", "_lastTestResult", "_numberOfAttempts", "_lineElevation", "_lineTimeOfFlight", "_lineHeightElevation", "_lineHeightTime", "_lineCrosswindDeg", "_lineHeadwindMeters", "_lineTailWindMeters", "_result"];
+private ["_startTime", "_muzzleVelocity", "_rangeToHit", "_airFriction", "_vacElevation", "_radicand", "_maxElev", "_minElev", "_error", "_solutionElevation", "_lastTestResult", "_numberOfAttempts", "_lineElevation", "_lineTimeOfFlight", "_lineHeightElevation", "_lineHeightTimeDelta", "_lineCrosswindDeg", "_lineHeadwindMeters", "_lineTailWindMeters", "_result"];
 
 _startTime = diag_tickTime;
 
@@ -44,7 +42,7 @@ _solution = [_rangeToHit, -100, _muzzleVelocity, _airFriction, TIME_STEP] call F
 if (_solution isEqualTo []) exitWith {[]};//should never be triggered (lower elevation easier to hit)
 
 _lineHeightElevation = ((_solution select 0) - _lineElevation);
-// _lineHeightTime = (_lastTestResult select 1) - _lineTimeOfFlight;
+_lineHeightTimeDelta = (_solution select 1) - _lineTimeOfFlight;
 
 //Compute for 10x and divide to minimize rounding errors
 
@@ -78,4 +76,4 @@ _lineAirDensInc = (_rangeToHit - (_lastTestResult select 0)) / 10;
 
 // systemChat format ["debug: Range %1 - in %2 sec", _rangeToHit, (diag_tickTime - _startTime)];
 
-[_rangeToHit, _lineElevation, _lineHeightElevation, _lineTimeOfFlight, _lineCrosswindDeg, _lineHeadwindMeters, _lineTailWindMeters, _lineTempDec, _lineTempInc, _lineAirDensDec, _lineAirDensInc]
+[_rangeToHit, _lineElevation, _lineHeightElevation, _lineHeightTimeDelta, _lineTimeOfFlight, _lineCrosswindDeg, _lineHeadwindMeters, _lineTailWindMeters, _lineTempDec, _lineTempInc, _lineAirDensDec, _lineAirDensInc]

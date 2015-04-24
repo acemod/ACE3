@@ -1,6 +1,4 @@
 /*
-Name: AGM_Artillery_fnc_formatNumber
-
 Author: Pabst Mirror
 
 Description:
@@ -15,7 +13,7 @@ Returns:
 STRING - Formatted number
 
 Example:
-[45, "mil4", true] call AGM_Artillery_fnc_formatNumber = "0800"
+[45, "mil4", true] call ace_mk6mortar_fnc_dev_formatNumber = "0800"
  */
 #include "script_component.hpp"
 
