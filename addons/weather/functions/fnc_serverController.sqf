@@ -16,10 +16,12 @@ private ["_lastRain", "_rainOverCast", "_transitionTime", "_windDirectionVarianc
 // Rain simulation
 if (GVAR(syncRain) && GVAR(rain_period_count) > GVAR(rain_next_period)) then {
 
+    GVAR(rain_next_period) = ceil((1 + (random 10)) / GVAR(overcast_multiplier));
+    GVAR(rain_period_count) = 0;
+    
     if (overcast >= 0.7) then {
         _lastRain = GVAR(current_rain);
         _rainOverCast = ((overcast-0.7)/0.3);
-        GVAR(rain_next_period) = ceil((1+random(10))/GVAR(overcast_multiplier));
 
         GVAR(current_rain) = (GVAR(current_rain)+(((GVAR(current_rain)))*((_rainOverCast*(GVAR(overcast_multiplier)))/8)*GVAR(rain_current_range)));
         GVAR(current_rain) = (GVAR(current_rain) max 0.01) min 1;
