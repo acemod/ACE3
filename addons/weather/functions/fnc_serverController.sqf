@@ -11,12 +11,12 @@
  */
 #include "script_component.hpp"
 
-private ["_i", "_lastRain", "_rainOverCast", "_transitionTime", "_windDirectionVariance", "_windSpeed", "_windSpeedChange", "_windMaxDiff", "_windMinDiff", "_windDirection", "_windDirectionChange", "_time", "_ratioMin", "_ratioMax"];
+private ["_lastRain", "_rainOverCast", "_transitionTime", "_windDirectionVariance", "_windSpeed", "_windSpeedChange", "_windMaxDiff", "_windMinDiff", "_windDirection", "_windDirectionChange", "_time", "_ratioMin", "_ratioMax"];
 
 // Rain simulation
-if(GVAR(rain_period_count) > GVAR(rain_next_period)) then {
+if (GVAR(syncRain) && GVAR(rain_period_count) > GVAR(rain_next_period)) then {
 
-    if(overcast >= 0.7) then {
+    if (overcast >= 0.7) then {
         _lastRain = GVAR(current_rain);
         _rainOverCast = ((overcast-0.7)/0.3);
         GVAR(rain_next_period) = ceil((1+random(10))/GVAR(overcast_multiplier));
@@ -44,7 +44,7 @@ if(GVAR(rain_period_count) > GVAR(rain_next_period)) then {
 };
 
 // Wind simulation
-if(GVAR(wind_period_count) > GVAR(wind_next_period)) then {
+if (GVAR(syncWind) && GVAR(wind_period_count) > GVAR(wind_next_period)) then {
     
     GVAR(wind_next_period) = ceil((2 + (random 5)) / GVAR(overcast_multiplier));
     GVAR(wind_period_count) = 0;
@@ -89,9 +89,11 @@ if(GVAR(wind_period_count) > GVAR(wind_next_period)) then {
     publicVariable "ACE_WIND_PARAMS";
 };
 
-// Sync misc. parameters
-ACE_MISC_PARAMS = [lightnings, rainbow, fogParams, GVAR(temperatureShift), GVAR(badWeatherShift), GVAR(humidityShift)];
-publicVariable "ACE_MISC_PARAMS";
+
+if (GVAR(syncMisc)) then {
+    ACE_MISC_PARAMS = [lightnings, rainbow, fogParams, GVAR(temperatureShift), GVAR(badWeatherShift), GVAR(humidityShift)];
+    publicVariable "ACE_MISC_PARAMS";
+};
 
 GVAR(rain_period_count) = GVAR(rain_period_count) + 1;
 GVAR(wind_period_count) = GVAR(wind_period_count) + 1;

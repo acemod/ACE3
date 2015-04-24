@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_oldStrength", "_rainStrength", "_transitionTime", "_periodPosition", "_periodPercent"];
+if (!GVAR(syncRain)) exitWith {};
 
-if (!GVAR(enableRain)) exitWith {};
+private ["_oldStrength", "_rainStrength", "_transitionTime", "_periodPosition", "_periodPercent"];
 
 if (!isNil "ACE_RAIN_PARAMS" && {!isNil QGVAR(rain_period_start_time)}) then {
     _oldStrength = ACE_RAIN_PARAMS select 0;
