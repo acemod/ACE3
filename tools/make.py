@@ -721,7 +721,7 @@ See the make.cfg file for additional build options.
 
     # Make the key specified from command line if necessary.
     if new_key:
-        if not os.path.isfile(os.path.join(module_root, key_name + ".biprivatekey")):
+        if not os.path.isfile(os.path.join(private_key_path, key_name + ".biprivatekey")):
             print_yellow("\nRequested key does not exist.")
             try:
                 os.makedirs(private_key_path)
