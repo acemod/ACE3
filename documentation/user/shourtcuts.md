@@ -7,198 +7,198 @@ parent: wiki
 ---
 
 <table>
-  <thead>
-    <tr>
-      <th>PBO</th>
-      <th>Command</th>
-      <th>Shortcut</th>
-    </tr>
-  </thead>
-  <tbody>
-     <tr>
-      <td>ACE_Interaction</td>
-      <td>Interaction Menu</td>
-      <td><kbd>Win_Left</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_Interaction</td>
-      <td>Interaction Menu (Self)</td>
-      <td><kbd>Ctrl</kbd> <kbd>Win_Left</kbd></td>
-    </tr>    
-     <tr>
-      <td>ACE_Interaction</td>
-      <td>Open / Close Door</td>
-      <td><kbd>Ctrl</kbd> <kbd>Space</kbd></td>
-    </tr>    
-     <tr>
-      <td>ACE_Interaction</td>
-      <td>Tap Shoulder</td>
-      <td><kbd>Ctrl</kbd> <kbd>T</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_Logistics</td>
-      <td>Modifier Key</td>
-      <td><kbd>Ctrl_Left</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_Goggles</td>
-      <td>Wipe Goggles</td>
-      <td><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>T</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_Grenades</td>
-      <td>Switch Grenade Mode</td>
-      <td><kbd>8</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_NameTags</td>
-      <td>Show Names</td>
-      <td><kbd>Ctrl_Left</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_NightVision</td>
-      <td>Increase NVG Brightness</td>
-      <td><kbd>Alt</kbd> <kbd>Page Up</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_NightVision</td>
-      <td>Decrease NVG Brightness</td>
-      <td><kbd>Alt</kbd> <kbd>Page Down</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_Overheating</td>
-      <td>Clear jam</td>
-      <td><kbd>Shift</kbd> <kbd>R</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_Parachute</td>
-      <td>Show Altimeter</td>
-      <td><kbd>O</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_Reload</td>
-      <td>Check Ammo</td>
-      <td><kbd>Ctrl</kbd> <kbd>R</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_SafeMode</td>
-      <td>Safe Mode</td>
-      <td><kbd>`</kbd>(en) | <kbd>^</kbd>(de)</td>
-    </tr>
-    <tr>
-      <td>ACE_Scopes</td>
-      <td>Adjust Elevation Up</td>
-      <td><kbd>Page Up</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_Scopes</td>
-      <td>Adjust Elevation Down</td>
-      <td><kbd>Page Down</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_Scopes</td>
-      <td>Adjust Windage Left</td>
-      <td><kbd>Ctrl</kbd> <kbd>Page Up</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_Scopes</td>
-      <td>Adjust Windage Right</td>
-      <td><kbd>Ctrl</kbd> <kbd>Page Down</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_Vector</td>
-      <td>Vector - Azimuth Key</td>
-      <td><kbd>Tab</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_Vector</td>
-      <td>Vector - Distance Key</td>
-      <td><kbd>R</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_Vehicles</td>
-      <td>Speed Limiter</td>
-      <td><kbd>Del</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_WeaponSelect</td>
-      <td>Select Pistol</td>
-      <td><kbd>1</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_WeaponSelect</td>
-      <td>Select Rifle</td>
-      <td><kbd>2</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_WeaponSelect</td>
-      <td>Select Grenade Launcher</td>
-      <td><kbd>3</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_WeaponSelect</td>
-      <td>Select Binoculars</td>
-      <td><kbd>5</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_WeaponSelect</td>
-      <td>Select Frag Grenade</td>
-      <td><kbd>6</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_WeaponSelect</td>
-      <td>Select Non-Frag Grenade</td>
-      <td><kbd>7</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_WeaponSelect</td>
-      <td>Holster Weapon</td>
-      <td><kbd>0</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_WeaponSelect</td>
-      <td>Engine on</td>
-      <td><kbd>2</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_WeaponSelect</td>
-      <td>Engine off</td>
-      <td><kbd>1</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_WeaponSelect</td>
-      <td>Select Main Gun</td>
-      <td><kbd>3</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_WeaponSelect</td>
-      <td>Select Machine Gun</td>
-      <td><kbd>4</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_WeaponSelect</td>
-      <td>Select Missiles</td>
-      <td><kbd>5</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_WeaponSelect</td>
-      <td>Fire Smoke Launcher</td>
-      <td><kbd>9</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_FireControlSsystem</td>
-      <td>Lase Target / Measure Distance</td>
-      <td><kbd>Tab</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_FireControlSsystem</td>
-      <td>Adjust FCS Range (Up)</td>
-      <td><kbd>Page Up</kbd></td>
-    </tr>
-    <tr>
-      <td>ACE_FireControlSsystem</td>
-      <td>Adjust FCS Range (Down)</td>
-      <td><kbd>Page Down</kbd></td>
-    </tr>
-  </tbody>
+    <thead>
+        <tr>
+            <th>Shortcut</th>
+            <th>Action</th>
+            <th>PBO</th>
+        </tr>
+    </thead>
+    <tbody>
+         <tr>
+            <td><kbd>⊞&nbsp;Win</kbd></td>
+            <td>Interaction menu</td>
+            <td><code>ACE_Interaction</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd>+<kbd>⊞&nbsp;Win</kbd></td>
+            <td>Self-interaction menu</td>
+            <td><code>ACE_Interaction</code></td>
+        </tr>
+         <tr>
+            <td><kbd>Ctrl</kbd>+<kbd>Space</kbd></td>
+            <td>Open/close door</td>
+            <td><code>ACE_Interaction</code></td>
+        </tr>
+         <tr>
+            <td><kbd>Ctrl</kbd>+<kbd>T</kbd></td>
+            <td>Tap on the shoulder</td>
+            <td><code>ACE_Interaction</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd></td>
+            <td>Modifier key</td>
+            <td><code>ACE_Logistics</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd>+<kbd>⇧&nbsp;Shift</kbd>+<kbd>T</kbd></td>
+            <td>Wipe off goggles</td>
+            <td><code>ACE_Goggles</code></td>
+        </tr>
+        <tr>
+            <td><kbd>8</kbd></td>
+            <td>Switch grenade mode</td>
+            <td><code>ACE_Grenades</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd></td>
+            <td>Show names</td>
+            <td><code>ACE_NameTags</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Alt</kbd>+<kbd>Page&nbsp;Up</kbd></td>
+            <td>NVG: Increase brightness</td>
+            <td><code>ACE_NightVision</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Alt</kbd>+<kbd>Page&nbsp;Down</kbd></td>
+            <td>NVG: Decrease brightness</td>
+            <td><code>ACE_NightVision</code></td>
+        </tr>
+        <tr>
+            <td><kbd>⇧&nbsp;Shift</kbd>+<kbd>R</kbd></td>
+            <td>Clear firearm malfunction</td>
+            <td><code>ACE_Overheating</code></td>
+        </tr>
+        <tr>
+            <td><kbd>O</kbd></td>
+            <td>Altimeter</td>
+            <td><code>ACE_Parachute</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd>+<kbd>R</kbd></td>
+            <td>Check ammunition</td>
+            <td><code>ACE_Reload</code></td>
+        </tr>
+        <tr>
+            <td><kbd>`</kbd></td>
+            <td>Safety toggle</td>
+            <td><code>ACE_SafeMode</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Page&nbsp;Up</kbd></td>
+            <td>Scope: Elevation up</td>
+            <td><code>ACE_Scopes</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Page&nbsp;Down</kbd></td>
+            <td>Scope: Elevation down</td>
+            <td><code>ACE_Scopes</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd>+<kbd>Page&nbsp;Up</kbd></td>
+            <td>Scope: Windage left</td>
+            <td><code>ACE_Scopes</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd>+<kbd>Page&nbsp;Down</kbd></td>
+            <td>Scope: Windage right</td>
+            <td><code>ACE_Scopes</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Tab&nbsp;↹</kbd></td>
+            <td>Vector: Azimuth key</td>
+            <td><code>ACE_Vector</code></td>
+        </tr>
+        <tr>
+            <td><kbd>R</kbd></td>
+            <td>Vector: Distance key</td>
+            <td><code>ACE_Vector</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Del</kbd></td>
+            <td>Speed limiter</td>
+            <td><code>ACE_Vehicles</code></td>
+        </tr>
+        <tr>
+            <td><kbd>1</kbd></td>
+            <td>Pistol</td>
+            <td><code>ACE_WeaponSelect</code></td>
+        </tr>
+        <tr>
+            <td><kbd>2</kbd></td>
+            <td>Rifle</td>
+            <td><code>ACE_WeaponSelect</code></td>
+        </tr>
+        <tr>
+            <td><kbd>3</kbd></td>
+            <td>Grenade launcher</td>
+            <td><code>ACE_WeaponSelect</code></td>
+        </tr>
+        <tr>
+            <td><kbd>5</kbd></td>
+            <td>Binoculars</td>
+            <td><code>ACE_WeaponSelect</code></td>
+        </tr>
+        <tr>
+            <td><kbd>6</kbd></td>
+            <td>Frag grenade</td>
+            <td><code>ACE_WeaponSelect</code></td>
+        </tr>
+        <tr>
+            <td><kbd>7</kbd></td>
+            <td>Non-frag grenade</td>
+            <td><code>ACE_WeaponSelect</code></td>
+        </tr>
+        <tr>
+            <td><kbd>0</kbd></td>
+            <td>Holster weapon</td>
+            <td><code>ACE_WeaponSelect</code></td>
+        </tr>
+        <tr>
+            <td><kbd>2</kbd></td>
+            <td>Engine on</td>
+            <td><code>ACE_WeaponSelect</code></td>
+        </tr>
+        <tr>
+            <td><kbd>1</kbd></td>
+            <td>Engine off</td>
+            <td><code>ACE_WeaponSelect</code></td>
+        </tr>
+        <tr>
+            <td><kbd>3</kbd></td>
+            <td>Primary weapon</td>
+            <td><code>ACE_WeaponSelect</code></td>
+        </tr>
+        <tr>
+            <td><kbd>4</kbd></td>
+            <td>Machine gun</td>
+            <td><code>ACE_WeaponSelect</code></td>
+        </tr>
+        <tr>
+            <td><kbd>5</kbd></td>
+            <td>Missiles</td>
+            <td><code>ACE_WeaponSelect</code></td>
+        </tr>
+        <tr>
+            <td><kbd>9</kbd></td>
+            <td>Fire smoke launcher</td>
+            <td><code>ACE_WeaponSelect</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Tab&nbsp;↹</kbd></td>
+            <td>FCS: Lase target (measure distance)</td>
+            <td><code>ACE_FireControlSsystem</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Page&nbsp;Up</kbd></td>
+            <td>FCS: Range up</td>
+            <td><code>ACE_FireControlSsystem</code></td>
+        </tr>
+        <tr>
+            <td><kbd>Page&nbsp;Down</kbd></td>
+            <td>FCS: Range down</td>
+            <td><code>ACE_FireControlSsystem</code></td>
+        </tr>
+    </tbody>
 </table>
