@@ -337,7 +337,7 @@ class CfgAmmo {
         ACE_caliber=0.308;
         ACE_bulletLength=1.353;
         ACE_bulletMass=190;
-        ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
+        ACE_ammoTempMuzzleVelocityShifts[]={-5.3, -5.1, -4.6, -4.2, -3.4, -2.6, -1.4, -0.3, 1.4, 3.0, 5.2};
         ACE_ballisticCoefficients[]={0.268};
         ACE_velocityBoundaries[]={};
         ACE_standardAtmosphere="ICAO";
@@ -353,7 +353,7 @@ class CfgAmmo {
         ACE_caliber=0.308;
         ACE_bulletLength=1.489;
         ACE_bulletMass=220;
-        ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
+        ACE_ammoTempMuzzleVelocityShifts[]={-5.3, -5.1, -4.6, -4.2, -3.4, -2.6, -1.4, -0.3, 1.4, 3.0, 5.2};
         ACE_ballisticCoefficients[]={0.310};
         ACE_velocityBoundaries[]={};
         ACE_standardAtmosphere="ICAO";
