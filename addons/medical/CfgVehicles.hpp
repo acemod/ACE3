@@ -428,6 +428,7 @@ class CfgVehicles {
         class ACE_Actions {
             // Include actions in body parts for treatment while in the open
             #define EXCEPTIONS exceptions[] = {};
+            #define ACTION_CONDITION condition = QUOTE(GVAR(menuTypeStyle) == 0);
             #include "ACE_Medical_Actions.hpp"
 
             // Create a consolidates medical menu for treatment while boarded
@@ -436,12 +437,14 @@ class CfgVehicles {
                     displayName = "$STR_ACE_MEDICAL_ACTIONS_Medical";
                     runOnHover = 1;
                     exceptions[] = {"isNotInside"};
-                    condition = QUOTE(vehicle _target != _target);
+                    condition = QUOTE(vehicle _target != _target || GVAR(menuTypeStyle) == 1);
                     statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
                     icon = PATHTOF(UI\icons\medical_cross.paa);
 
                     #undef EXCEPTIONS
+                    #undef ACTION_CONDITION
                     #define EXCEPTIONS exceptions[] = {"isNotInside"};
+                    #define ACTION_CONDITION condition = "true";
                     #include "ACE_Medical_Actions.hpp"
                 };
                 class GVAR(loadPatient) {

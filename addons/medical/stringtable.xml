@@ -1635,5 +1635,18 @@
             <Spanish>Aberración cromática</Spanish>
             <French>Aberration chromatique</French>
         </Key>
+        <Key ID="STR_ACE_Medical_menuTypeDisplay">
+            <English>Style of menu (Medical)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_menuTypeDescription">
+            <English>Select the type of menu you prefer; default 3d selections or radial.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_useSelection">
+            <English>Selections (3d)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_useRadial">
+            <English>Radial</English>
+        </Key>
+        
     </Package>
 </Project>

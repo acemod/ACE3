@@ -3,7 +3,7 @@ class ACE_Head {
     displayName = "$STR_ACE_Interaction_Head";
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
-    condition = "true";
+    ACTION_CONDITION
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -75,7 +75,7 @@ class ACE_Torso {
     displayName = "$STR_ACE_Interaction_Torso";
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 1)] call DFUNC(displayPatientInformation));
-    condition = "true";
+    ACTION_CONDITION
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -175,7 +175,7 @@ class ACE_ArmLeft {
     displayName = "$STR_ACE_Interaction_ArmLeft";
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 2)] call DFUNC(displayPatientInformation));
-    condition = "true";
+    ACTION_CONDITION
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -332,7 +332,7 @@ class ACE_ArmRight {
     displayName = "$STR_ACE_Interaction_ArmRight";
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 3)] call DFUNC(displayPatientInformation));
-    condition = "true";
+    ACTION_CONDITION
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -486,7 +486,7 @@ class ACE_LegLeft {
     displayName = "$STR_ACE_Interaction_LegLeft";
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 4)] call DFUNC(displayPatientInformation));
-    condition = "true";
+    ACTION_CONDITION
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -628,7 +628,7 @@ class ACE_LegRight {
     displayName = "$STR_ACE_Interaction_LegRight";
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
-    condition = "true";
+    ACTION_CONDITION
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
