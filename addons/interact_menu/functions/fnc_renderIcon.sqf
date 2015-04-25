@@ -33,12 +33,12 @@ if(_icon == "") then {
 };
 
 _text = if (GVAR(UseListMenu)) then {
-    format ["<img image='%1' color='%2' align='left'/><t color='%3' size='0.80' shadow='1' shadowColor='%4' shadowOffset='0.06'>%5</t>", _icon, _iconColor, _textColor, _shadowColor, _text]
+    format ["<img image='%1' color='%2' align='left'/><t color='%3' size='0.80' shadow='2' shadowColor='%4' shadowOffset='0.06'>%5</t>", _icon, _iconColor, _textColor, _shadowColor, _text]
 } else {
-    format ["<img image='%1' color='%2' align='center'/><br/><t color='%3' size='0.80' align='center' shadow='1' shadowColor='%4' shadowOffset='0.06'>%5</t>", _icon, _iconColor, _textColor, _shadowColor, "ace_breakLine" callExtension _text];
+    format ["<img image='%1' color='%2' align='center'/><br/><t color='%3' size='0.80' align='center' shadow='2' shadowColor='%4' shadowOffset='0.06'>%5</t>", _icon, _iconColor, _textColor, _shadowColor, "ace_breakLine" callExtension _text];
 };
 
-_ctrl ctrlSetStructuredText (parseText _text);
+[_ctrl, GVAR(iconCount), _text] call FUNC(ctrlSetParsedTextCached);
 _text = if (GVAR(UseListMenu)) then {
     _ctrl ctrlSetPosition [(_sPos select 0)-(0.0095*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.20*SafeZoneW, 0.035*SafeZoneW];
 } else {
