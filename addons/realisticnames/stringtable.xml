@@ -1515,6 +1515,7 @@
             <French>SG 556 7.62 mm</French>
             <Spanish>SG 556 7.62 mm</Spanish>
             <Russian>SG 556 7.62 мм</Russian>
+            <Polish>SG 556 7,62 mm</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03">
             <English>SG 556 7.62 mm (Black)</English>
@@ -1522,6 +1523,7 @@
             <French>SG 556 7.62 mm (Noir)</French>
             <Spanish>SG 556 7.62 mm (Negro)</Spanish>
             <Russian>SG 556 7.62 мм (черный)</Russian>
+            <Polish>SG 556 7,62 mm (czarny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_khaki">
             <English>SG 556 7.62 mm (Khaki)</English>
@@ -1529,6 +1531,7 @@
             <French>SG 556 7.62 mm (Kaki)</French>
             <Spanish>SG 556 7.62 mm (Caqui)</Spanish>
             <Russian>SG 556 7.62 мм (хаки)</Russian>
+            <Polish>SG 556 7,62 mm (khaki)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_tan">
             <English>SG 556 7.62 mm (Sand)</English>
@@ -1536,6 +1539,7 @@
             <French>SG 556 7.62 mm (Beige)</French>
             <Spanish>SG 556 7.62 mm (Arena)</Spanish>
             <Russian>SG 556 7.62 мм (песочный)</Russian>
+            <Polish>SG 556 7,62 mm (piaskowy)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_multicam">
             <English>SG 556 7.62 mm (Camo)</English>
@@ -1543,6 +1547,7 @@
             <French>SG 556 7.62 mm (Camo)</French>
             <Spanish>SG 556 7.62 mm (Camuflaje)</Spanish>
             <Russian>SG 556 7.62 мм (камо)</Russian>
+            <Polish>SG 556 7,62 mm (kamuflaż)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_woodland">
             <English>SG 556 7.62 mm (Woodland)</English>
@@ -1550,6 +1555,7 @@
             <French>SG 556 7.62 mm (Woodland)</French>
             <Spanish>SG 556 7.62 mm (Bosque)</Spanish>
             <Russian>SG 556 7.62 мм (лесной)</Russian>
+            <Polish>SG 556 7,62 mm (leśny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
             <English>SG 556 7.62 mm (provisional) spotter</English>
@@ -1557,6 +1563,7 @@
             <French>SG 556 7.62 mm (provisoire) Observateur</French>
             <Spanish>SG 556 7.62 mm (provisional) observador</Spanish>
             <Russian>SG 556 7.62 мм (provisional) корректировщик</Russian>
+            <Polish>SG 556 7,62 mm (prowizoryczny) obserwator</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_04">
             <English>TODO: ASP-1 Kir 12.7 mm</English>
@@ -1613,6 +1620,7 @@
             <French>M14 7.62 mm</French>
             <Spanish>M14 7.62 mm</Spanish>
             <Russian>M14 7.62 мм</Russian>
+            <Polish>M14 7,62 mm</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_camo">
             <English>M14 7.62 mm (Camo)</English>
@@ -1620,6 +1628,7 @@
             <French>M14 7.62 mm (Camo)</French>
             <Spanish>M14 7.62 mm (Camuflaje)</Spanish>
             <Russian>M14 7.62 мм (Камо)</Russian>
+            <Polish>M14 7,62 mm (kamuflaż)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_olive">
             <English>M14 7.62 mm (Olive)</English>
@@ -1627,6 +1636,7 @@
             <French>M14 7.62 mm (Olive)</French>
             <Spanish>M14 7.62 mm (Oliva)</Spanish>
             <Russian>M14 7.62 мм (Олива)</Russian>
+            <Polish>M14 7,62 mm (oliwkowy)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01">
             <English>TODO: Navid 9.3 mm</English>
@@ -1655,6 +1665,7 @@
             <French>LWMMG .338</French>
             <Spanish>LWMMG .338</Spanish>
             <Russian>LWMMG .338</Russian>
+            <Polish>LWMMG .338</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_camo">
             <English>LWMMG .338 (MTP)</English>
@@ -1662,6 +1673,7 @@
             <French>LWMMG .338 (MTP)</French>
             <Spanish>LWMMG .338 (MTP)</Spanish>
             <Russian>LWMMG .338 (MTP)</Russian>
+            <Polish>LWMMG .338 (MTP)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_black">
             <English>LWMMG .338 (Black)</English>
@@ -1669,6 +1681,7 @@
             <French>LWMMG .338 (Noir)</French>
             <Spanish>LWMMG .338 (Negro)</Spanish>
             <Russian>LWMMG .338 (Черный)</Russian>
+            <Polish>LWMMG .338 (czarny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_sand">
             <English>LWMMG .338 (Sand)</English>
@@ -1676,6 +1689,7 @@
             <French>SPMG .338 (Beige)</French>
             <Spanish>LWMMG .338 (Arena)</Spanish>
             <Russian>LWMMG .338 (Песочный)</Russian>
+            <Polish>LWMMG .338 (piaskowy)</Polish>
         </Key>
     </Package>
 </Project>

@@ -17,6 +17,7 @@
             <Spanish>Mostrar siempre el cursor para la interacción</Spanish>
             <French>Toujours afficher le curseur pour les interactions</French>
             <Italian>Mostra sempre il cursore per le interazioni</Italian>
+            <Polish>Zawsze wyświetlaj kursor dla interakcji</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
@@ -73,15 +74,19 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
             <English>Interaction - Text Max</English>
+            <Polish>Interakcja - Tekst max</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
             <English>Interaction - Text Min</English>
+            <Polish>Interakcja - Tekst min</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
             <English>Interaction - Shadow Max</English>
+            <Polish>Interakcja - Cień max</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
+            <Polish>Interakcja - Cień min</Polish>
         </Key>
     </Package>
 </Project>
