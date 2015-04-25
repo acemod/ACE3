@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_abort", "_index", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_bulletMass", "_bulletLength", "_airFriction", "_dragModel", "_muzzleVelocity", "_muzzleVelocityCoef", "_muzzleAccessory", "_initSpeedCoef", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef"];
+private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_abort", "_index", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_bulletMass", "_bulletLength", "_airFriction", "_dragModel", "_muzzleVelocity", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef", "_ballisticCoefficients", "_velocityBoundaries"];
 _unit     = _this select 0;
 _weapon   = _this select 1;
 _mode     = _this select 3;
@@ -52,32 +52,14 @@ if (_abort || !(GVAR(extensionAvailable))) exitWith {
 };
 
 _airFriction = getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction");
-_muzzleVelocity = getNumber(configFile >> "cfgMagazines" >> _magazine >> "initSpeed");
-_muzzleVelocityCoef = getNumber(configFile >> "cfgWeapons" >> _weapon >> "initSpeed");
-if (_muzzleVelocityCoef > 0) then {
-    _muzzleVelocity = _muzzleVelocityCoef;
-};
-if (_muzzleVelocityCoef < 0) then {
-    _muzzleVelocity = _muzzleVelocity * (-1 * _muzzleVelocityCoef);
-};
 
-_muzzleAccessory = "";
-switch (currentWeapon _unit) do {
-    case primaryWeapon _unit: { _muzzleAccessory = (primaryWeaponItems _unit) select 0; };
-    case handgunWeapon _unit: { _muzzleAccessory = (handgunItems _unit) select 0; };
-};
-
-if (_muzzleAccessory != "" && isNumber(configFile >> "cfgWeapons" >> _muzzleAccessory >> "ItemInfo" >> "MagazineCoef" >> "initSpeed")) then {
-    _initSpeedCoef = getNumber(configFile >> "cfgWeapons" >> _muzzleAccessory >> "ItemInfo" >> "MagazineCoef" >> "initSpeed");
-    _muzzleVelocity = _muzzleVelocity * _initSpeedCoef;
-};
+_bulletVelocity = velocity _bullet;
+_muzzleVelocity = vectorMagnitude _bulletVelocity;
 
 if (GVAR(barrelLengthInfluenceEnabled)) then {
     _muzzleVelocityShift = [_ammo, _weapon, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
     if (_muzzleVelocityShift != 0) then {
-        _bulletVelocity = velocity _bullet;
-        _bulletSpeed = vectorMagnitude _bulletVelocity;
-        _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift * (_bulletSpeed / _muzzleVelocity)));
+        _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
         _bullet setVelocity _bulletVelocity;
         _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
     };
@@ -87,9 +69,7 @@ if (GVAR(ammoTemperatureEnabled)) then {
     _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL _unit) select 2);
     _muzzleVelocityShift = [_ammo, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift);
     if (_muzzleVelocityShift != 0) then {
-        _bulletVelocity = velocity _bullet;
-        _bulletSpeed = vectorMagnitude _bulletVelocity;
-        _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift * (_bulletSpeed / _muzzleVelocity)));
+        _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
         _bullet setVelocity _bulletVelocity;
         _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
     };
