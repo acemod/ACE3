@@ -237,7 +237,7 @@
         <Key ID="STR_ACE_microdagr_toggleUnit">
             <English>Toggle MicroDAGR Display Mode</English>
             <German>MicoDAGR Anzeigemodus Wechseln</German>
-            <Spanish>Conmutar modo de pantalla del MicroDAGR</Spanish>
+            <Spanish>Cambiar modo de pantalla del MicroDAGR</Spanish>
             <Russian>Сменить режим показа MicroDAGR</Russian>
             <Polish>Przełącz GUI MicroDAGR</Polish>
             <French>Basculer le mode d'affichage MicroDAGR</French>

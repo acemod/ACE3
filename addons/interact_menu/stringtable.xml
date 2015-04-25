@@ -73,15 +73,19 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
             <English>Interaction - Text Max</English>
+            <Spanish>Interacción - Ampliar texto</Spanish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
             <English>Interaction - Text Min</English>
+            <Spanish>Interacción - Reducir texto</Spanish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
             <English>Interaction - Shadow Max</English>
+            <Spanish>Interacción - Ampliar sombra</Spanish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
+            <Spanish>Interacción - Reducir sombra</Spanish>
         </Key>
     </Package>
 </Project>

@@ -1343,7 +1343,6 @@
         <Key ID="STR_ACE_MEDICAL_noPain">
             <English>He is not in pain</English>
         </Key>
-
         <Key ID="STR_ACE_MEDICAL_BANDAGED">
             <English>Bandaged</English>
             <French>Bandé</French>
@@ -1456,7 +1455,7 @@
         <Key ID="STR_ACE_MEDICAL_LOAD">
             <English>Load Patient Into</English>
             <German>Patient Einladen</German>
-            <Spanish>Cargar el paciente en</Spanish>
+            <Spanish>Cargar al paciente en</Spanish>
             <Polish>Załaduj pacjenta</Polish>
             <Czech>Naložit pacianta do</Czech>
             <Russian>Погрузить пациента в</Russian>
@@ -1468,7 +1467,7 @@
         <Key ID="STR_ACE_MEDICAL_UNLOAD">
             <English>Unload Patient</English>
             <German>Patient Ausladen</German>
-            <Spanish>Descargar el paciente</Spanish>
+            <Spanish>Descargar al paciente</Spanish>
             <Polish>Wyładuj pacjenta</Polish>
             <Czech>Vyložit pacienta</Czech>
             <Russian>Выгрузить пациента</Russian>
@@ -1479,7 +1478,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_UnloadPatient">
             <English>Unload patient</English>
-            <Spanish>Descargar el paciente</Spanish>
+            <Spanish>Descargar al paciente</Spanish>
             <Russian>Выгрузить пациента</Russian>
             <Polish>Wyładuj pacjenta</Polish>
             <French>Débarquer le patient</French>
@@ -1488,7 +1487,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_LoadPatient">
             <English>Load patient</English>
-            <Spanish>Cargar el paciente en</Spanish>
+            <Spanish>Cargar al paciente en</Spanish>
             <Russian>Погрузить пациента</Russian>
             <Polish>Załaduj pacjenta</Polish>
             <French>Embarquer le patient</French>
@@ -1533,7 +1532,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIVITY_gaveIV">
             <English>%1 has given an IV</English>
-            <Spanish>%1 has puesto una IV</Spanish>
+            <Spanish>%1 ha puesto una IV</Spanish>
             <Russian>%1 провел переливание</Russian>
             <Polish>%1 podał IV</Polish>
             <French>%1 a administré une IV</French>

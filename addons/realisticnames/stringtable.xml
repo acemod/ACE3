@@ -290,7 +290,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_01_box_Name">
             <English>HEMTT Container</English>
             <German>HEMTT Container</German>
-            <Spanish>HEMTT de contenedor</Spanish>
+            <Spanish>HEMTT con contenedor</Spanish>
             <Polish>HEMTT Kontener</Polish>
             <Czech>HEMTT Skříňový</Czech>
             <French>HEMTT Conteneur</French>
@@ -614,7 +614,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_03_device_Name">
             <English>Typhoon Device</English>
             <German>Typhoon Gerät</German>
-            <Spanish>Typhoon de dispositivo</Spanish>
+            <Spanish>Typhoon con dispositivo</Spanish>
             <Polish>Typhoon Urządzenie</Polish>
             <Czech>Typhoon zařízení</Czech>
             <French>Typhoon Dispositif</French>

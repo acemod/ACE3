@@ -53,7 +53,7 @@
         <Key ID="STR_ACE_Grenades_RollGrenade">
             <English>Roll Grenade</English>
             <German>Granate rollen</German>
-            <Spanish>Rodar granada</Spanish>
+            <Spanish>Lanzamiento raso</Spanish>
             <Polish>Po ziemi</Polish>
             <Czech>Po zemi</Czech>
             <French>Lancer roulé</French>
@@ -89,7 +89,7 @@
         <Key ID="STR_ACE_Grenades_M84_Description">
             <English>Also known as flashbang. Causes immediate flash blindness, deafness, tinnitus, and inner ear disturbance.</English>
             <German>Verursacht temporäre Blind- und Taubheit.</German>
-            <Spanish>Produce de manera inmediata ceguera, sordera, tinitus y afecta el oído interior.</Spanish>
+            <Spanish>Tambien conocida como granada cegadora. Produce de manera inmediata ceguera, sordera, tinitus y afecta el oído interior.</Spanish>
             <French>Les grenades incapacitantes servent à désorienter ou distraire une menace pendant quelques secondes.</French>
             <Polish>Znany też jako flashbang. Powoduje natychmiastową tymczasową ślepotę, głuchotę, dzwonienie w uszach i inne zaburzenia ucha wewnętrznego.</Polish>
             <Czech>Omračující granát je taktická nesmrtící zbraň používaná při záchraně rukojmí a zvládání davu.</Czech>

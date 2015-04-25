@@ -119,7 +119,7 @@
         <Key ID="STR_ACE_OptionsMenu_OpenExport">
             <English>Open Export Menu</English>
             <German>Öffne Exportmenü</German>
-            <Spanish>Abrir menu d'exportación</Spanish>
+            <Spanish>Abrir menu de exportación</Spanish>
             <Russian>Открыть меню экспорта</Russian>
             <Czech>Otevřít exportovací menu</Czech>
             <Polish>Otwórz menu eksportowania</Polish>
@@ -130,7 +130,7 @@
         <Key ID="STR_ACE_OptionsMenu_stringType">
             <English>String input.</English>
             <German>String input.</German>
-            <Spanish>Introducir frase</Spanish>
+            <Spanish>Introducir cadena de texto.</Spanish>
             <Russian>Строчный ввод.</Russian>
             <Polish>Wpisywanie tekstu.</Polish>
             <French>Entrée</French>
@@ -151,7 +151,7 @@
         <Key ID="STR_ACE_OptionsMenu_scalarType">
             <English>Number</English>
             <German>Nummer</German>
-            <Spanish>Numero</Spanish>
+            <Spanish>Número</Spanish>
             <Russian>Число</Russian>
             <Czech>Číslo</Czech>
             <Polish>Cyfra</Polish>
@@ -218,7 +218,7 @@
             <English>Option Menu UI Scaling</English>
             <French>Menu option: taille de l'UI</French>
             <Polish>Skalowanie UI menu ustawień</Polish>
-            <Spanish>Opción de escalado del menú UI</Spanish>
+            <Spanish>Menú de opciónes de escalado de la interfaz de usuario</Spanish>
         </Key>
     </Package>
 </Project>
