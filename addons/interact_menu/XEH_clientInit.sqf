@@ -3,6 +3,8 @@
 
 if (!hasInterface) exitWith {};
 
+GVAR(ParsedTextCached) = [];
+
 //Setup text/shadow color matrix
 [] call FUNC(setupTextColors);
 ["SettingChanged", {
