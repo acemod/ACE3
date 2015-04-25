@@ -8,7 +8,6 @@ PREP(actionCheckPulse);
 PREP(actionCheckPulseLocal);
 PREP(actionCheckResponse);
 PREP(actionDiagnose);
-PREP(actionDiagnoseLocal);
 PREP(actionPlaceInBodyBag);
 PREP(actionRemoveTourniquet);
 PREP(actionLoadUnit);
