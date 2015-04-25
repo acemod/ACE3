@@ -32,8 +32,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Statement
     [0] call FUNC(keyDown)
-},
-{[0] call FUNC(keyUp)},
+},{[0,false] call FUNC(keyUp)},
 [219, [false, false, false]], false] call cba_fnc_addKeybind;  //Left Windows Key
 
 ["ACE3", QGVAR(SelfInteractKey), (localize "STR_ACE_Interact_Menu_SelfInteractKey"),
@@ -42,8 +41,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Statement
     [1] call FUNC(keyDown)
-},
-{[1] call FUNC(keyUp)},
+},{[1,false] call FUNC(keyUp)},
 [219, [false, true, false]], false] call cba_fnc_addKeybind; //Left Windows Key + Ctrl/Strg
 
 

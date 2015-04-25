@@ -83,5 +83,9 @@
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_ActionOnKeyRelease">
+            <English>Do action when releasing menu key</English>
+            <German>Aktion nach Loslassen der Taste ausführen</German>
+        </Key>
     </Package>
 </Project>
