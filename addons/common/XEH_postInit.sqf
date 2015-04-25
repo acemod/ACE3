@@ -103,7 +103,7 @@ DFUNC(mouseZHandler) = {
     [false] call FUNC(disableUserInput);
 };
 
-addMissionEventHandler ["Loaded", FUNC(mouseZHandler)];
+addMissionEventHandler ["Loaded", {[] spawn FUNC(mouseZHandler)}];
 [] spawn FUNC(mouseZHandler);
 
 
