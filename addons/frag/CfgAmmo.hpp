@@ -100,20 +100,20 @@ class CfgAmmo {
     // curator ammo entries
     class Sh_82mm_AMOS;
     class ModuleOrdnanceMortar_F_Ammo: Sh_82mm_AMOS {
-        ACE_FRAG_CLASSES[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
-        ACE_FRAG_METAL = 800;
-        ACE_FRAG_CHARGE = 4200;
-        ACE_FRAG_GURNEY_C = 2320;
-        ACE_FRAG_GURNEY_K = 1/2;
+        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(metal) = 800;
+        GVAR(charge) = 4200;
+        GVAR(gurney_c) = 2320;
+        GVAR(gurney_k) = 1/2;
     };
 
     class Sh_155mm_AMOS;
     class ModuleOrdnanceHowitzer_F_ammo: Sh_155mm_AMOS {
-        ACE_FRAG_CLASSES[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
-        ACE_FRAG_METAL = 1950;
-        ACE_FRAG_CHARGE = 15800;
-        ACE_FRAG_GURNEY_C = 2320;
-        ACE_FRAG_GURNEY_K = 1/2;
+        GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
+        GVAR(metal) = 1950;
+        GVAR(charge) = 15800;
+        GVAR(gurney_c) = 2320;
+        GVAR(gurney_k) = 1/2;
     };
 
     //class R_230mm_HE;
