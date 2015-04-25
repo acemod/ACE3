@@ -26,7 +26,7 @@ if (!local _unit) exitwith {
     false;
 };
 
-if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) && !_force) exitwith {
+if ((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) && !_force) exitwith {
     if (_unit getvariable [QGVAR(inReviveState), false]) exitwith {
         if (GVAR(amountOfReviveLives) > 0) then {
             _lifesLeft = _unit getvariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];

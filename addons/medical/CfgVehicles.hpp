@@ -37,46 +37,37 @@ class CfgVehicles {
                     };
                 };
             };
-            class enableFor {
-                displayName = "Enabled for";
-                description = "Select what units the medical system will be enabled for (Adv only)";
+            class medicSetting {
+                displayName = "Medics setting";
+                description = "What is the level of detail prefered for medics?";
                 typeName = "NUMBER";
                 class values {
-                    class playableUnits {
-                        name = "Players only.";
+                    class disable {
+                        name = "Disable medics";
                         value = 0;
+                    };
+                    class normal {
+                        name = "Normal";
+                        value = 1;
                         default = 1;
                     };
-                    class playableUnitsAndAI {
-                        name = "Players and AI";
-                        value = 1;
+                    class full  {
+                        name = "Advanced";
+                        value = 2;
                     };
                 };
             };
-            // TODO Disabled until the features are implemented
-            /*class enableAirway {
-                displayName = "Enable Airway";
-                description = "Enable Advanced medical Airway (Adv only)";
-                typeName = "BOOL";
-                defaultValue = 0;
-            };
-            class enableFractures {
-                displayName = "Enable Fractures";
-                description = "Enable Advanced medical Fractures (Adv only)";
-                typeName = "BOOL";
-                defaultValue = 0;
-            };*/
-            class enableAdvancedWounds {
-                displayName = "Enable Advanced wounds";
-                description = "Allow reopening of bandaged wounds? (Adv only)";
-                typeName = "BOOL";
-                defaultValue = 0;
-            };
-            class enableVehicleCrashes {
-                displayName = "Vehicle Crashes";
-                description = "Do units take damage from a vehicle crash?";
+            class allowLitterCreation {
+                displayName = "Enable Litter";
+                description = "Enable litter being created upon treatment";
                 typeName = "BOOL";
                 defaultValue = 1;
+            };
+            class litterCleanUpDelay {
+                displayName = "Life time of litter objects";
+                description = "How long should litter objects stay? In seconds. -1 is forever.";
+                typeName = "NUMBER";
+                defaultValue = 1800;
             };
             class enableScreams {
                 displayName = "Enable Screams";
@@ -141,80 +132,58 @@ class CfgVehicles {
         };
     };
 
-    class ACE_moduleTreatmentSettings: ACE_Module {
+    class ACE_moduleAdvancedMedicalSettings: ACE_Module {
         scope = 2;
-        displayName = "Treatment Settings [ACE]";
+        displayName = "Advanced Medical Settings [ACE]";
         icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
-        function = QUOTE(FUNC(moduleTreatmentConfiguration));
+        function = QUOTE(FUNC(moduleAdvancedMedicalSettings));
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
         author = "$STR_ACE_Common_ACETeam";
         class Arguments {
-            class medicSetting {
-                displayName = "Medics setting";
-                description = "What is the level of detail prefered for medics?";
+            class enableFor {
+                displayName = "Enabled for";
+                description = "Select what units the advanced medical system will be enabled for";
                 typeName = "NUMBER";
                 class values {
-                    class disable {
-                        name = "Disable medics";
+                    class playableUnits {
+                        name = "Players only.";
                         value = 0;
-                    };
-                    class normal {
-                        name = "Normal";
-                        value = 1;
                         default = 1;
                     };
-                    class full  {
-                        name = "Advanced";
-                        value = 2;
+                    class playableUnitsAndAI {
+                        name = "Players and AI";
+                        value = 1;
                     };
                 };
             };
-            class maxReviveTime {
-                displayName = "Max Revive time";
-                description = "Max amount of seconds a unit can spend in revive state";
-                typeName = "NUMBER";
-                defaultValue = 120;
+            class enableAdvancedWounds {
+                displayName = "Enable Advanced wounds";
+                description = "Allow reopening of bandaged wounds?";
+                typeName = "BOOL";
+                defaultValue = 0;
             };
-            class amountOfReviveLives {
-                displayName = "Max Revive lives";
-                description = "Max amount of lives a unit. 0 or -1 is disabled.";
-                typeName = "NUMBER";
-                defaultValue = -1;
-            };
-            class enableOverdosing {
-                displayName = "Enable Overdosing";
-                description = "Enable overdosing of medications";
+            class enableVehicleCrashes {
+                displayName = "Vehicle Crashes";
+                description = "Do units take damage from a vehicle crash?";
                 typeName = "BOOL";
                 defaultValue = 1;
-            };
-            class allowLitterCreation {
-                displayName = "Enable Litter";
-                description = "Enable litter being created upon treatment";
-                typeName = "BOOL";
-                defaultValue = 1;
-            };
-            class litterCleanUpDelay {
-                displayName = "Life time of litter objects";
-                description = "How long should litter objects stay? In seconds. -1 is forever.";
-                typeName = "NUMBER";
-                defaultValue = 1800;
             };
             class medicSetting_PAK {
-                displayName = "Allow PAK (Adv)";
+                displayName = "Allow PAK";
                 description = "Who can use the PAK for full heal?";
                 typeName = "NUMBER";
                 class values {
                     class anyone { name = "Anyone"; value = 0; };
                     class Medic { name = "Medics only"; value = 1; default = 1; };
-                    class Special { name = "Doctors only (Adv)"; value = 2; };
+                    class Special { name = "Doctors only"; value = 2; };
                 };
             };
             class consumeItem_PAK {
-                displayName = "Remove PAK on use (Adv)";
+                displayName = "Remove PAK on use";
                 description = "Should PAK be removed on usage?";
                 typeName = "NUMBER";
                 class values {
@@ -223,7 +192,7 @@ class CfgVehicles {
                 };
             };
             class useLocation_PAK {
-                displayName = "Locations PAK (Adv)";
+                displayName = "Locations PAK";
                 description = "Where can the personal aid kit be used?";
                 typeName = "NUMBER";
                 class values {
@@ -254,6 +223,42 @@ class CfgVehicles {
         };
     };
 
+
+    class ACE_moduleReviveSettings: ACE_Module {
+        scope = 2;
+        displayName = "Revive Settings [ACE]";
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
+        category = "ACE_medical";
+        function = QUOTE(DFUNC(moduleReviveSettings));
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        author = "$STR_ACE_Common_ACETeam";
+        class Arguments {
+            class enableRevive {
+                displayName = "Enable Revive";
+                description = "Enable a basic revive system";
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
+            class maxReviveTime {
+                displayName = "Max Revive time";
+                description = "Max amount of seconds a unit can spend in revive state";
+                typeName = "NUMBER";
+                defaultValue = 120;
+            };
+            class amountOfReviveLives {
+                displayName = "Max Revive lives";
+                description = "Max amount of lives a unit. 0 or -1 is disabled.";
+                typeName = "NUMBER";
+                defaultValue = -1;
+            };
+        };
+        class ModuleDescription {
+            description = "Provides a medical system for both players and AI.";
+            sync[] = {};
+        };
+    };
     class ACE_moduleAssignMedicRoles: Module_F {
         scope = 2;
         displayName = "Set Medic Class [ACE]";
