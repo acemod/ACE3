@@ -79,16 +79,16 @@ class ACE_Settings {
         displayName = "$STR_ACE_Medical_litterSimulationDetail";
         description = "$STR_ACE_Medical_litterSimulationDetail_Desc";
         typeName = "SCALAR";
-      
+
         value = 3;
         values[] = {"Off", "Low", "Medium", "High", "Ultra"};
         _values[] = { 0, 50, 100, 1000, 5000 };
-        
+
         isClientSettable = 1;
     };
     class GVAR(litterCleanUpDelay) {
         typeName = "SCALAR";
-        value = 0;  
+        value = 0;
     };
     class GVAR(medicSetting_PAK) {
         typeName = "SCALAR";
@@ -136,6 +136,10 @@ class ACE_Settings {
         isClientSettable = 1;
     };
     class GVAR(allowUnconsciousAnimationOnTreatment) {
+        typeName = "BOOL";
+        value = 0;
+    };
+    class GVAR(moveUnitsFromGroupOnUnconscious) {
         typeName = "BOOL";
         value = 0;
     };

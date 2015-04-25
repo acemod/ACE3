@@ -33,6 +33,8 @@ GVAR(AtmosphericDensitySimulationEnabled) = true;
 GVAR(currentGrid) = 0;
 GVAR(INIT_MESSAGE_ENABLED) = false;
 
+GVAR(extensionAvailable) = true;
+/* @TODO: Remove this until verisoning is in sync with cmake/build versioning
 GVAR(extensionVersion) = ("ace_advanced_ballistics" callExtension "version");
 GVAR(extensionAvailable) = (GVAR(extensionVersion) == EXTENSION_REQUIRED_VERSION);
 if (!GVAR(extensionAvailable)) exitWith {
@@ -42,5 +44,5 @@ if (!GVAR(extensionAvailable)) exitWith {
         diag_log text "[ACE] ERROR: ace_advanced_ballistics.dll is incompatible";
     };
 };
-
+*/
 [] call FUNC(initializeTerrainExtension);

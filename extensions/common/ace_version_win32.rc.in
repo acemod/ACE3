@@ -1,0 +1,47 @@
+#ifdef _WIN32
+
+    #include <windows.h>
+
+    #ifndef DEBUG
+    #define VER_DEBUG                   0
+    #else
+    #define VER_DEBUG                   VS_FF_DEBUG
+    #endif
+
+    VS_VERSION_INFO VERSIONINFO
+    FILEVERSION    			@ACE_VERSION_MAJOR@, @ACE_VERSION_MINOR@, @ACE_VERSION_REVISION@
+    PRODUCTVERSION 			@ACE_VERSION_MAJOR@, @ACE_VERSION_MINOR@, @ACE_VERSION_REVISION@
+    FILEFLAGSMASK  			VS_FFI_FILEFLAGSMASK
+    FILEFLAGS      			(VS_FF_PRIVATEBUILD|VS_FF_PRERELEASE|VER_DEBUG)
+    FILEOS         			VOS__WINDOWS32
+    FILETYPE       			VFT_DLL
+    FILESUBTYPE    			VFT2_UNKNOWN
+    BEGIN
+        BLOCK "StringFileInfo"
+        BEGIN
+            BLOCK "040904E4"
+            BEGIN
+                VALUE "CompanyName",      	"ACE3 Team"
+                VALUE "FileDescription",  	"@ACE_VERSION_MAJOR@.@ACE_VERSION_MINOR@.@ACE_VERSION_REVISION@-@ACE_VERSION_BUILD@"
+                VALUE "FileVersion",      	"@ACE_VERSION_MAJOR@.@ACE_VERSION_MINOR@.@ACE_VERSION_REVISION@-@ACE_VERSION_BUILD@"
+                VALUE "ProductName",      	"ACE3"
+                VALUE "ProductVersion",   	"@ACE_VERSION_MAJOR@.@ACE_VERSION_MINOR@.@ACE_VERSION_REVISION@-@ACE_VERSION_BUILD@"
+                VALUE "Build Date", 		"@ACE_BUILDSTAMP@"
+            END
+        END
+
+        BLOCK "VarFileInfo"
+        BEGIN
+            /* The following line should only be modified for localized versions.     */
+            /* It consists of any number of WORD,WORD pairs, with each pair           */
+            /* describing a language,codepage combination supported by the file.      */
+            /*                                                                        */
+            /* For example, a file might have values "0x409,1252" indicating that it  */
+            /* supports English language (0x409) in the Windows ANSI codepage (1252). */
+
+            VALUE "Translation", 0x409, 1252
+
+        END
+    END
+    
+#endif

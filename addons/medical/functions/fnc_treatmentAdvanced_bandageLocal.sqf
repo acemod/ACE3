@@ -15,7 +15,7 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_bandage", "_part", "_selectionName", "_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact", "_exit"];
+private ["_target", "_bandage", "_part", "_selectionName", "_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact", "_exit", "_specificClass", "_classID", "_effectivenessFound"];
 _target = _this select 0;
 _bandage = _this select 1;
 _selectionName = _this select 2;
@@ -92,8 +92,7 @@ if (USE_WOUND_EVENT_SYNC) then {
 };
 // Handle the reopening of bandaged wounds
 if (_impact > 0 && {GVAR(enableAdvancedWounds)}) then {
-// TODO temp disabled until bandaged wounds are supported by event sync.
-//    [_target, _impact, _part, _mostEffectiveSpot, _mostEffectiveInjury, _bandage] call FUNC(handleBandageOpening);
+    [_target, _impact, _part, _mostEffectiveSpot, _mostEffectiveInjury, _bandage] call FUNC(handleBandageOpening);
 };
 
 // If all wounds have been bandaged, we will reset all damage to 0, so the unit is not showing any blood on the model anymore.

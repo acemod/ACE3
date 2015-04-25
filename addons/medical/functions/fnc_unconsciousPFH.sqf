@@ -24,6 +24,9 @@ _hasMovedOut = _args select 5;
 _parachuteCheck = _args select 6;
 
 if (!alive _unit) exitwith {
+    if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
+        [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
+    };
     [_unit, QGVAR(unconscious), false] call EFUNC(common,setCaptivityStatus);
     [_unit, false] call EFUNC(common,disableAI);
     //_unit setUnitPos _originalPos;
@@ -60,8 +63,9 @@ if !(_unit getvariable ["ACE_isUnconscious",false]) exitwith {
 
         // Swhich the unit back to its original group
         //Unconscious units shouldn't be put in another group #527:
-        // [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
-
+        if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
+            [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
+        };
         [_unit, false] call EFUNC(common,disableAI);
         _unit setUnitPos _originalPos; // This is not position but stance (DOWN, MIDDLE, UP)
 
