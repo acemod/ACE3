@@ -141,8 +141,12 @@ GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
 "ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _muzzleVelocity, _transonicStabilityCoef, getPosASL _bullet, EGVAR(weather,Latitude), EGVAR(weather,currentTemperature), EGVAR(weather,Altitude), EGVAR(weather,currentHumidity), overcast, floor(time), time - floor(time)];
 
 [{
-    private ["_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];
-    EXPLODE_4_PVT(_this select 0,_bullet,_caliber,_bulletTraceVisible,_index);
+    private ["_args", "_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];
+    _args = _this select 0;
+    _bullet = _args select 0;
+    _caliber = _args select 1;
+    _bulletTraceVisible = _args select 2;
+    _index = _args select 3;
     
     _bulletVelocity = velocity _bullet;
     _bulletPosition = getPosASL _bullet;
