@@ -1,35 +1,7 @@
-class Mode_SemiAuto;
-class Mode_Burst;
-class Mode_FullAuto;
-class SlotInfo;
-class MuzzleSlot;
-class CowsSlot;
-class PointerSlot;
-class UnderBarrelSlot;
-class asdg_SlotInfo;
-class asdg_FrontSideRail;
-class asdg_OpticRail;
-class asdg_OpticRail1913;
-class asdg_OpticRail1913_short;
-class asdg_MuzzleSlot_556;
-class asdg_MuzzleSlot_762;
-class asdg_MuzzleSlot_9MM;
-class asdg_UnderSlot;
 
 class CfgWeapons
 {
-    class Rifle;
-    class UGL_F;
-    class Rifle_Base_F: Rifle
-    {
-    };
-    class ItemCore;
-    class ItemInfo;
-    class InventoryItem_Base_F;
-    class InventoryMuzzleItem_Base_F;
-    class InventoryOpticsItem_Base_F;
-    class InventoryFlashLightItem_Base_F;
-    class Zasleh2;
+    class Rifle_Base_F;
     class RH_ar10: Rifle_Base_F
     {
         ACE_barrelTwist=11.25;
