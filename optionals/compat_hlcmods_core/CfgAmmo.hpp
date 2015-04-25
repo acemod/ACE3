@@ -4,6 +4,7 @@ class CfgAmmo
     class B_556x45_Ball;
     class B_127x99_Ball;
     class B_127x99_Ball_Tracer_Red;
+    class HLC_762x51_tracer;
     class HLC_762x51_ball;
     class HLC_556NATO_EPR: B_556x45_Ball
     {
