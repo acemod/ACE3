@@ -112,7 +112,7 @@ class CfgVehicles {
 
     class ACE_Track: ACE_RepairItem_Base {
         author = "Hawkins";
-        scope = 2;
+        //scope = 2;
         model = QUOTE(PATHTOF(ace_track.p3d));
         displayName = "$STR_ACE_Repair_SpareTrack";
     };
@@ -123,5 +123,64 @@ class CfgVehicles {
         model = QUOTE(PATHTOF(ace_wheel.p3d));
         displayName = "$STR_ACE_Repair_SpareWheel";
         picture = QUOTE(PATHTOF(ui\tire_ca.paa));
+    };
+
+    // disable vanilla repair
+    // "getNumber (_x >> ""transportRepair"") > 0" configClasses (configFile >> "CfgVehicles")
+
+    class Slingload_01_Base_F;
+    class B_Slingload_01_Repair_F: Slingload_01_Base_F {
+        GVAR(canRepair) = 1;
+        transportRepair = 0;
+    };
+
+    class Heli_Transport_04_base_F;
+    class O_Heli_Transport_04_repair_F: Heli_Transport_04_base_F {
+        GVAR(canRepair) = 1;
+        transportRepair = 0;
+    };
+
+    class Pod_Heli_Transport_04_base_F;
+    class Land_Pod_Heli_Transport_04_repair_F: Pod_Heli_Transport_04_base_F {
+        GVAR(canRepair) = 1;
+        transportRepair = 0;
+    };
+
+    class B_APC_Tracked_01_base_F;
+    class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
+        GVAR(canRepair) = 1;
+        transportRepair = 0;
+    };
+
+    class Offroad_01_base_F;
+    class Offroad_01_repair_base_F: Offroad_01_base_F {
+        GVAR(canRepair) = 1;
+        transportRepair = 0;
+    };
+
+    class B_Truck_01_mover_F;
+    class B_Truck_01_Repair_F: B_Truck_01_mover_F {
+        GVAR(canRepair) = 1;
+        transportRepair = 0;
+    };
+
+    class B_Truck_01_fuel_F: B_Truck_01_mover_F {  // the fuel hemet apparently can repair. GJ BI
+        transportRepair = 0;
+    };
+
+    class Truck_02_base_F;
+    class Truck_02_box_base_F: Truck_02_base_F {
+        GVAR(canRepair) = 1;
+        transportRepair = 0;
+    };
+
+    class Truck_02_medical_base_F: Truck_02_box_base_F {
+        GVAR(canRepair) = 0;
+    };
+
+    class Truck_03_base_F;
+    class O_Truck_03_repair_F: Truck_03_base_F {
+        GVAR(canRepair) = 1;
+        transportRepair = 0;
     };
 };
