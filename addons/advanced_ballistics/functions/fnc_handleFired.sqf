@@ -120,22 +120,20 @@ _dragModel = 1;
 _ballisticCoefficients = [];
 _velocityBoundaries = [];
 _atmosphereModel = "ICAO";
-if (GVAR(AdvancedAirDragEnabled)) then {
-    if (isNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_dragModel")) then {
-        _dragModel = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_dragModel");
-        if (!(_dragModel in [1, 2, 5, 6, 7, 8])) then {
-            _dragModel = 1;
-        };
+if (isNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_dragModel")) then {
+    _dragModel = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_dragModel");
+    if (!(_dragModel in [1, 2, 5, 6, 7, 8])) then {
+        _dragModel = 1;
     };
-    if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ballisticCoefficients")) then {
-        _ballisticCoefficients = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ballisticCoefficients");
-    };
-    if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_velocityBoundaries")) then {
-        _velocityBoundaries = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_velocityBoundaries");
-    };
-    if (isText(configFile >> "cfgAmmo" >> _ammo >> "ACE_standardAtmosphere")) then {
-        _atmosphereModel = getText(configFile >> "cfgAmmo" >> _ammo >> "ACE_standardAtmosphere");
-    };
+};
+if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ballisticCoefficients")) then {
+    _ballisticCoefficients = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ballisticCoefficients");
+};
+if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_velocityBoundaries")) then {
+    _velocityBoundaries = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_velocityBoundaries");
+};
+if (isText(configFile >> "cfgAmmo" >> _ammo >> "ACE_standardAtmosphere")) then {
+    _atmosphereModel = getText(configFile >> "cfgAmmo" >> _ammo >> "ACE_standardAtmosphere");
 };
 
 GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
