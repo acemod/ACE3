@@ -1322,6 +1322,28 @@
             <Hungarian>Megnézted %1-t</Hungarian>
             <Italian>Hai controllato %1</Italian>
         </Key>
+        <Key ID="STR_ACE_MEDICAL_diagnoseMessage">
+            <English>Patient %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_diagnoseAlive">
+            <English>alive</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_diagnoseDead">
+            <English>dead</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_lostBlood">
+            <English>He's lost some blood</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_noBloodloss">
+            <English>He hasn't lost blood</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_inPain">
+            <English>He is in pain</English>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_noPain">
+            <English>He is not in pain</English>
+        </Key>
+
         <Key ID="STR_ACE_MEDICAL_BANDAGED">
             <English>Bandaged</English>
             <French>Bandé</French>
