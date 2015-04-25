@@ -294,7 +294,7 @@ class CfgWeapons
     class RH_gsh18 : Pistol_Base_F
     {
         ACE_barrelTwist=9.8;
-        ACE_barrelLength=4.1;	
+        ACE_barrelLength=4.1;
     };
     class RH_mateba : Pistol_Base_F
     {
@@ -329,7 +329,7 @@ class CfgWeapons
     class RH_fn57 : Pistol_Base_F
     {
         ACE_barrelTwist=9.1;
-        ACE_barrelLength=4.8;		
+        ACE_barrelLength=4.8;	
     };
     class RH_vp70 : Pistol_Base_F
     {

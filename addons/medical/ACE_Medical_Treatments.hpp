@@ -71,26 +71,20 @@ class ACE_Medical_Actions {
             itemConsumed = 1;
             litter[] = {};
         };
-        class CheckPulse: Bandage {
-            displayName = "";
-            displayNameProgress = "";
+        class Diagnose: Bandage {
+            displayName = "Diagnose";
+            displayNameProgress = "Diagnosing...";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
-            treatmentTime = 2;
+            treatmentTime = 1;
             items[] = {};
-            callbackSuccess = QUOTE(DFUNC(actionCheckPulse));
+            callbackSuccess = QUOTE(DFUNC(actionDiagnose));
             callbackFailure = "";
             callbackProgress = "";
             animationPatient = "";
             animationCaller = ""; // TODO
             itemConsumed = 0;
             litter[] = {};
-        };
-        class CheckBloodPressure: CheckPulse {
-            callbackSuccess = QUOTE(DFUNC(actionCheckBloodPressure));
-        };
-        class CheckResponse: CheckPulse {
-            callbackSuccess = QUOTE(DFUNC(actionCheckResponse));
         };
     };
 

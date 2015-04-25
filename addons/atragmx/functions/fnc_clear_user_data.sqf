@@ -36,6 +36,7 @@ profileNamespace setVariable ["ACE_ATragMX_windSpeed2", nil];
 profileNamespace setVariable ["ACE_ATragMX_windDirection", nil];
 profileNamespace setVariable ["ACE_ATragMX_inclinationAngle", nil];
 profileNamespace setVariable ["ACE_ATragMX_targetSpeed", nil];
+profileNamespace setVariable ["ACE_ATragMX_targetSpeedDirection", nil];
 profileNamespace setVariable ["ACE_ATragMX_targetRange", nil];
 
 profileNamespace setVariable ["ACE_ATragMX_rangeCardStartRange", nil];

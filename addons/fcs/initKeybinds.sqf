@@ -35,7 +35,7 @@
     // Conditions: canInteract
     if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !(call FUNC(canUseRangefinder) || FUNC(canUseFCS)) exitWith {false};
+    if !(call FUNC(canUseFCS)) exitWith {false};
 
     // Statement
     [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), 50] call FUNC(adjustRange);
@@ -49,7 +49,7 @@
     // Conditions: canInteract
     if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !(call FUNC(canUseRangefinder) || FUNC(canUseFCS)) exitWith {false};
+    if !(call FUNC(canUseFCS)) exitWith {false};
 
     // Statement
     [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), -50] call FUNC(adjustRange);
