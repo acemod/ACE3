@@ -35,18 +35,21 @@ if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
 if (underwater _unit) exitWith {};
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
 if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith {};
-if (GVAR(onlyActiveForLocalPlayers) && _unit != ACE_player) then { _abort = true; };
+if (GVAR(onlyActiveForLocalPlayers) && !(local _unit)) then {
+    if (GVAR(alwaysSimulateForSnipers)) then {
+        // The shooter is non local
+        if (currentWeapon _unit == primaryWeapon _unit && count primaryWeaponItems _unit > 2) then {
+            _opticsName = (primaryWeaponItems _unit) select 2;
+            _opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
+            _abort = _opticType != 2; // We only abort if the non local shooter is not a sniper
+        };
+    } else {
+        _abort = true;
+    };
+};
 //if (!GVAR(vehicleGunnerEnabled) && !(_unit isKindOf "Man")) then { _abort = true; }; // TODO: We currently do not have firedEHs on vehicles
 if (GVAR(disabledInFullAutoMode) && getNumber(configFile >> "cfgWeapons" >> _weapon >> _mode >> "autoFire") == 1) then { _abort = true; };
 
-if (_abort && alwaysSimulateForSnipers) then {
-    // The shooter is non local
-    if (currentWeapon _unit == primaryWeapon _unit && count primaryWeaponItems _unit > 2) then {
-        _opticsName = (primaryWeaponItems _unit) select 2;
-        _opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
-        _abort = _opticType != 2; // We only abort if the non local shooter is not a sniper
-    };
-};
 if (_abort || !(GVAR(extensionAvailable))) exitWith {
     [_bullet, getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction")] call EFUNC(winddeflection,updateTrajectoryPFH);
 };
