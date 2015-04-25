@@ -77,7 +77,7 @@ class CfgWeapons
         ACE_barrelTwist=7;
         ACE_barrelLength=20;
     };
-    class RH_M16A4 : Rifle_Base_F
+    class RH_M16A4 : RH_M4_ris
     {
         ACE_barrelTwist=7;
         ACE_barrelLength=20;
