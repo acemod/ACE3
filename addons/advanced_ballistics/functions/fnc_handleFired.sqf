@@ -79,10 +79,16 @@ if (GVAR(ammoTemperatureEnabled)) then {
 };
 
 _bulletTraceVisible = false;
-if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER" && currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
-    _opticsName = (primaryWeaponItems ACE_player) select 2;
-    _opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
-    _bulletTraceVisible = (_opticType == 2 || currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]);
+if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER") then {
+    if (currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]) then {
+        _bulletTraceVisible = true;
+    } else {
+        if (currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
+            _opticsName = (primaryWeaponItems ACE_player) select 2;
+            _opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
+            _bulletTraceVisible = _opticType == 2;
+        };
+    };
 };
 
 _caliber = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_caliber");
