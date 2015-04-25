@@ -1,11 +1,11 @@
 
 #define KICKBACK 1.4
 
-#define MUZZLETEMP 1
+#define MUZZLETEMP 1.2
 #define MUZZLEPERM 0.4
 
 #define MUZZLECLIMB_POS 1
-#define MUZZLERIGHT_POS 0.4
+#define MUZZLERIGHT_POS 0.2
 
 #define MUZZLECLIMB_MAG 1
 #define MUZZLERIGHT_MAG 1
