@@ -241,27 +241,6 @@ class ACE_ArmLeft {
         EXCEPTIONS
         icon = PATHTOF(UI\icons\tourniquet.paa);
     };
-    class Morphine: fieldDressing {
-        displayName = "$STR_ACE_Medical_Inject_Morphine";
-        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Morphine')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Morphine')] call DFUNC(treatment));
-        EXCEPTIONS
-        icon = PATHTOF(UI\icons\autoInjector.paa);
-    };
-    class Atropine: Morphine {
-        displayName = "$STR_ACE_Medical_Inject_Atropine";
-        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Atropine')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Atropine')] call DFUNC(treatment));
-        EXCEPTIONS
-        icon = PATHTOF(UI\icons\autoInjector.paa);
-    };
-    class Epinephrine: Morphine {
-        displayName = "$STR_ACE_Medical_Inject_Epinephrine";
-        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Epinephrine')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Epinephrine')] call DFUNC(treatment));
-        EXCEPTIONS
-        icon = PATHTOF(UI\icons\autoInjector.paa);
-    };
     class BloodIV: fieldDressing {
         displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_1000";
         condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV')] call DFUNC(canTreatCached));
@@ -396,25 +375,6 @@ class ACE_ArmRight {
         statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Tourniquet')] call DFUNC(treatment));
         EXCEPTIONS
         icon = PATHTOF(UI\icons\tourniquet.paa);
-    };
-    class Morphine: fieldDressing {
-        displayName = "$STR_ACE_Medical_Inject_Morphine";
-        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call DFUNC(treatment));
-        EXCEPTIONS
-        icon = PATHTOF(UI\icons\autoInjector.paa);
-    };
-    class Atropine: Morphine {
-        displayName = "$STR_ACE_Medical_Inject_Atropine";
-        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Atropine')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Atropine')] call DFUNC(treatment));
-        EXCEPTIONS
-    };
-    class Epinephrine: Morphine {
-        displayName = "$STR_ACE_Medical_Inject_Epinephrine";
-        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Epinephrine')] call DFUNC(canTreatCached));
-        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Epinephrine')] call DFUNC(treatment));
-        EXCEPTIONS
     };
     class BloodIV: fieldDressing {
         displayName = "$STR_ACE_MEDICAL_ACTIONS_Blood4_1000";
