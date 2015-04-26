@@ -72,8 +72,8 @@ class ACE_Medical_Actions {
             litter[] = {};
         };
         class Diagnose: Bandage {
-            displayName = "Diagnose";
-            displayNameProgress = "Diagnosing...";
+            displayName = "$STR_ACE_MEDICAL_ACTIONS_Diagnose";
+            displayNameProgress = "$STR_ACE_MEDICAL_ACTIONS_Diagnosing";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 1;
@@ -250,8 +250,8 @@ class ACE_Medical_Actions {
             condition = QUOTE([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo));
         };
         class CPR: fieldDressing {
-            displayName = "CPR";
-            displayNameProgress = "Performing CPR";
+            displayName = "$STR_ACE_MEDICAL_ACTIONS_CPR";
+            displayNameProgress = "$STR_ACE_MEDICAL_ACTIONS_PerformingCPR";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 15;
@@ -297,7 +297,7 @@ class ACE_Medical_Advanced {
             // Source: Scarle
             //  Also called scrapes, they occur when the skin is rubbed away by friction against another rough surface (e.g. rope burns and skinned knees).
             class Abrasion {
-                name = "Scrape";
+                name = "$STR_ACE_Medical_Wounds_Abrasion";
                 selections[] = {"All"};
                 bleedingRate = 0.0001;
                 pain = 0.01;
@@ -321,23 +321,29 @@ class ACE_Medical_Advanced {
 
             // Occur when an entire structure or part of it is forcibly pulled away, such as the loss of a permanent tooth or an ear lobe. Explosions, gunshots, and animal bites may cause avulsions.
             class Avulsions {
-                name = "Avulsion";
+                name = "$STR_ACE_Medical_Wounds_Avulsion";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.3;
                 causes[] = {"explosive", "vehiclecrash", "grenade", "shell", "bullet", "backblast", "bite"};
                 minDamage = 0.2;
                 class Minor {
+                    name = "Fisch";
+                    displayName = "Fisch2";
                     minDamage = 0.2;
                     maxDamage = 0.3;
                     bleedingRate = 0.01;
                 };
                 class Medium {
+                    name = "Fisch";
+                    displayName = "Fisch2";
                     minDamage = 0.3;
                     maxDamage = 0.6;
                     bleedingRate = 0.02;
                 };
                 class Large {
+                    name = "Fisch";
+                    displayName = "Fisch2";
                     minDamage = 0.5;
                     bleedingRate = 0.05;
                 };
@@ -345,11 +351,11 @@ class ACE_Medical_Advanced {
 
             // Also called bruises, these are the result of a forceful trauma that injures an internal structure without breaking the skin. Blows to the chest, abdomen, or head with a blunt instrument (e.g. a football or a fist) can cause contusions.
             class Contusion {
-                name = "Bruise";
+                name = "$STR_ACE_Medical_Wounds_Contusion";
                 selections[] = {"All"};
                 bleedingRate = 0.0;
                 pain = 0.05;
-                causes[] = {"bullet", "backblast", "punch","vehiclecrash","falling"};
+                causes[] = {"bullet", "backblast", "punch", "vehiclecrash", "falling"};
                 minDamage = 0.01;
                 maxDamage = 0.1;
                 class Minor {
@@ -368,7 +374,7 @@ class ACE_Medical_Advanced {
 
             // Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
             class CrushWound {
-                name = "Crushed tissue";
+                name = "$STR_ACE_Medical_Wounds_Crush";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.1;
@@ -392,7 +398,7 @@ class ACE_Medical_Advanced {
 
             // Slicing wounds made with a sharp instrument, leaving even edges. They may be as minimal as a paper cut or as significant as a surgical incision.
             class Cut {
-                name = "Cut";
+                name = "$STR_ACE_Medical_Wounds_Cut";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.075;
@@ -416,7 +422,7 @@ class ACE_Medical_Advanced {
 
             // Also called tears, these are separating wounds that produce ragged edges. They are produced by a tremendous force against the body, either from an internal source as in childbirth, or from an external source like a punch.
             class Laceration {
-                name = "Tear";
+                name = "$STR_ACE_Medical_Wounds_Laceration";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.075;
@@ -440,7 +446,7 @@ class ACE_Medical_Advanced {
 
             // Also called velocity wounds, they are caused by an object entering the body at a high speed, typically a bullet or small peices of shrapnel.
             class velocityWound {
-                name = "Velocity Wound";
+                name = "$STR_ACE_Medical_Wounds_VelocityWound";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.2;
@@ -463,7 +469,7 @@ class ACE_Medical_Advanced {
 
             // Deep, narrow wounds produced by sharp objects such as nails, knives, and broken glass.
             class punctureWound {
-                name = "Puncture Wound";
+                name = "$STR_ACE_Medical_Wounds_PunctureWound";
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.075;
@@ -487,7 +493,7 @@ class ACE_Medical_Advanced {
         };
         class fractures {
             class Femur {
-                name = "Broken Femur";
+                name = "$STR_ACE_Medical_Wounds_Femur";
                 selections[] = {"Head", "Torso"};
                 pain = 0.2;
                 causes[] = {"Bullet", "VehicleCrash", "Backblast", "Explosive", "Shell", "Grenade"};
