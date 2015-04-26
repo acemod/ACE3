@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-16 -->
 <Project name="ACE">
     <Package name="Explosives">
@@ -251,7 +251,7 @@
             <Czech>Nahoru</Czech>
             <Italian>Sopra</Italian>
             <Hungarian>Fel</Hungarian>
-            <Portuguese>Para cima</Portuguese>
+            <Portuguese>Para Cima</Portuguese>
             <Russian>Поднять</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_Phone_Down">
@@ -280,7 +280,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateMenu">
             <English>Detonate Menu</English>
-            <German>&quot;Zünden&quot;-Menü</German>
+            <German>"Zünden"-Menü</German>
             <Spanish>Menú de detonación</Spanish>
             <Polish>Menu detonowania</Polish>
             <French>Menu de mise à feu</French>
@@ -292,7 +292,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_PlaceMenu">
             <English>Place Menu</English>
-            <German>&quot;Platzieren&quot;-Menü</German>
+            <German>"Platzieren"-Menü</German>
             <Spanish>Menú de colocación</Spanish>
             <Polish>Menu umieszczania</Polish>
             <French>Menu Placement</French>

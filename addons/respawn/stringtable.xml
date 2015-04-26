@@ -1,21 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-  <Package name="Interaction">
-    <Key ID="STR_ACE_Respawn_Deploy">
-      <English>Deploy in 5 seconds ...</English>
-      <German>Wird in 5 Sekunden errichtet ...</German>
-    </Key>
-    <Key ID="STR_ACE_Respawn_Deployed">
-      <English>Rallypoint deployed</English>
-      <German>Rallypoint errichtet</German>
-    </Key>
-    <Key ID="STR_ACE_Respawn_TeleportedToBase">
-      <English>Teleported to Base</English>
-      <German>Zur Basis teleportiert</German>
-    </Key>
-    <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
-      <English>Teleported to Rallypoint</English>
-      <German>Zum Rallypoint teleportiert</German>
-    </Key>
-  </Package>
+    <Package name="Interaction">
+        <Key ID="STR_ACE_Respawn_Deploy">
+            <English>Deploy in 5 seconds ...</English>
+            <German>Wird in 5 Sekunden errichtet ...</German>
+            <Portuguese>Será posicionado em 5 segundos ...</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Respawn_Deployed">
+            <English>Rallypoint deployed</English>
+            <German>Rallypoint errichtet</German>
+            <Portuguese>Rallypoints posicionado</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Respawn_TeleportedToBase">
+            <English>Teleported to Base</English>
+            <German>Zur Basis teleportiert</German>
+            <Portuguese>Teletransportado para a Base</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
+            <English>Teleported to Rallypoint</English>
+            <German>Zum Rallypoint teleportiert</German>
+            <Portuguese>Teletransportado para o Rallypoints</Portuguese>
+        </Key>
+    </Package>
 </Project>
