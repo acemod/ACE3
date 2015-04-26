@@ -186,7 +186,6 @@ if (_show) then {
             _lbCtrl lbSetColor [_foreachIndex + _amountOfGeneric, _x select 1];
         }foreach _allInjuryTexts;
         if (count _allInjuryTexts == 0) then {
-            //_lbCtrl lbAdd "No injuries on this bodypart..";
             _lbCtrl lbAdd (localize "STR_ACE_Medical_NoInjuriesBodypart");
         };
 
