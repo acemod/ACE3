@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
+        <Key ID="STR_ACE_Medical_Injuries">
+            <English>INJURIES</English>
+            <German>VERLETZUNGEN</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_NoInjuriesBodypart">
+            <English>No injuries on this bodypart ...</English>
+            <German>Körperteil nicht verletzt ...</German>
+        </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
             <Polish>Detale zużytych medykamentów</Polish>
@@ -356,6 +364,10 @@
             <Hungarian>Orvosi lap</Hungarian>
             <Italian>Triage Card</Italian>
         </Key>
+        <Key ID="STR_ACE_MEDICAL_TriageCard_NoEntry">
+            <English>No entries on this triage card.</English>
+            <German>Keine Einträge auf der Triagekarte</German>
+        </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Tourniquet">
             <English>Tourniquet</English>
             <German>Aderpresse</German>
@@ -377,6 +389,22 @@
             <French>Enlever le garrot</French>
             <Hungarian>Érszorító leszedése</Hungarian>
             <Italian>Rimuovi laccio emostatico</Italian>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_Diagnose">
+            <English>Diagnose</English>
+            <German>Diagnose</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_Diagnosing">
+            <English>Diagnosing ...</English>
+            <German>Diagnostizieren ...</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_CPR">
+            <English>CPR</English>
+            <German>HLW</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_ACTIONS_PerformingCPR">
+            <English>Performing CPR ...</English>
+            <German>HLW durchführen ...</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
@@ -446,7 +474,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_1000">
             <English>Give Saline IV (1000ml)</English>
-            <German>Kochsaltzlösung IV (1000ml)</German>
+            <German>Kochsalzlösung IV (1000ml)</German>
             <Spanish>Dar Salino IV (1000ml)</Spanish>
             <Russian>Перелить пакет физраствора (1000 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (1000ml)</Polish>
@@ -457,7 +485,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_500">
             <English>Give Saline IV (500ml)</English>
-            <German>Kochsaltzlösung IV (500ml)</German>
+            <German>Kochsalzlösung IV (500ml)</German>
             <Spanish>Dar Salino IV (500ml)</Spanish>
             <Russian>Перелить пакет физраствора (500 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (500ml)</Polish>
@@ -468,7 +496,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Saline4_250">
             <English>Give Saline IV (250ml)</English>
-            <German>Kochsaltzlösung IV (250ml)</German>
+            <German>Kochsalzlösung IV (250ml)</German>
             <Spanish>Dar Salino IV (250ml)</Spanish>
             <Russian>Перелить пакет физраствора (250 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (250ml)</Polish>
@@ -1038,12 +1066,12 @@
             <Italian>Include vario materiale medico per trattamenti avanzati.</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_AID_KIT_DESC_USE">
-            <English></English>
-            <Russian></Russian>
-            <French></French>
-            <Spanish></Spanish>
+            <English>Personal Aid Kit for in field stitching or advanced treatment</English>
             <Polish>W znacznym stopniu poprawia stan pacjenta</Polish>
-            <Italian></Italian>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_USE_AID_KIT">
+            <English>Use Personal Aid Kit</English>
+            <German>Verbandpäckchen benutzen</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_SURGICALKIT_DISPLAY">
             <English>Surgical Kit</English>
@@ -1074,6 +1102,10 @@
             <French>Trousse chirurgicale pour le traitement sur le terrain</French>
             <Hungarian>Sebészeti készlet komplex orvosi feladatok terepen való ellátására</Hungarian>
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_USE_SURGICALKIT">
+            <English>Use Surgical Kit</English>
+            <German>Operationsset benutzen</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BODYBAG_DISPLAY">
             <English>Bodybag</English>
@@ -1124,6 +1156,10 @@
             <German>Blutdruck kontrollieren...</German>
             <Hungarian>Vérnyomás megmérése...</Hungarian>
             <Italian>Controllando la pressione sanguigna..</Italian>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_LOG">
+            <English>%1 checked Blood Pressure: %2</English>
+            <German>%1 kontrollierte Blutdruck: %2</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CHECKED_MEDIC">
             <English>You checked %1</English>
@@ -1194,6 +1230,22 @@
             <Hungarian>Nem sikerült a vérnyomás megmérése</Hungarian>
             <Italian>Manca strumento per misurare pressione sanguigna</Italian>
         </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_LOW">
+            <English>Low</English>
+            <German>Niedrig</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_NORMAL">
+            <English>Normal</English>
+            <German>Normal</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_HIGH">
+            <English>High</English>
+            <German>Hoch</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_NOBLOODPRESSURE">
+            <English>No Blood Pressure</English>
+            <German>Kein Blutdruck</German>
+        </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE">
             <English>Pulse</English>
             <Russian>Пульс</Russian>
@@ -1205,14 +1257,14 @@
             <Italian>Polso</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_CONTENT">
-            <English>Checking Heart Rate..</English>
+            <English>Checking Heart Rate ...</English>
             <French>Vérification du rythme cardiaque ...</French>
             <Russian>Проверка пульса ...</Russian>
-            <Spanish>Comprobando ritmo cardíaco...</Spanish>
-            <Polish>Sprawdzanie tętna...</Polish>
-            <German>Kontrolliere Herzfrequenz</German>
+            <Spanish>Comprobando ritmo cardíaco ...</Spanish>
+            <Polish>Sprawdzanie tętna ...</Polish>
+            <German>Kontrolliere Herzfrequenz ...</German>
             <Hungarian>Szívverés-szám mérése...</Hungarian>
-            <Italian>Controllando il battito cardiaco..</Italian>
+            <Italian>Controllando il battito cardiaco ...</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_CHECKED_MEDIC">
             <English>You checked %1</English>
@@ -1223,6 +1275,22 @@
             <German>Kontrolliertt %1</German>
             <Hungarian>A %1 ellenőrizve</Hungarian>
             <Italian>Hai diagnosticato %1</Italian>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_LOG">
+            <English>%1 checked Heart Rate: %2</English>
+            <German>%1 kontrollierte Herzfrequenz: %2</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_WEAK">
+            <English>Weak</English>
+            <German>Schwach</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_NORMAL">
+            <English>Normal</English>
+            <German>Normal</German>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_STRONG">
+            <English>Strong</English>
+            <German>Stark</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_1">
             <English>You find a Heart Rate of %2</English>
@@ -1658,6 +1726,146 @@
             <Italian>Aberrazione cromatica</Italian>
             <Spanish>Aberración cromática</Spanish>
             <French>Aberration chromatique</French>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Abrasion">
+            <English>Scrape</English>
+            <German>Kratzer</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Abrasion_Minor">
+            <English>Minor Scrape</English>
+            <German>Kleiner Kratzer</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Abrasion_Medium">
+            <English>Medium Scrape</English>
+            <German>Mittlerer Kratzer</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Abrasion_Large">
+            <English>Large Scrape</English>
+            <German>Großer Kratzer</German>
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Wounds_Avulsion">
+            <English>Avulsion</English>
+            <German>Avulsion</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Avulsion_Minor">
+            <English>Minor Avulsion</English>
+            <German>Kleine Avulsion</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Avulsion_Medium">
+            <English>Medium Avulsion</English>
+            <German>Mittlere Avulsion</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Avulsion_Large">
+            <English>Large Avulsion</English>
+            <German>Große Avulsion</German>
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Wounds_Contusion">
+            <English>Bruise</English>
+            <German>Prellung</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Contusion_Minor">
+            <English>Minor Bruise</English>
+            <German>Kleine Prellung</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Contusion_Medium">
+            <English>Medium Bruise</English>
+            <German>Mittlere Prellung</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Contusion_Large">
+            <English>Large Bruise</English>
+            <German>Große Prellung</German>
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Wounds_Crush">
+            <English>Crushed tissue</English>
+            <German>Quetschverletzung</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Crush_Minor">
+            <English>Minor crushed tissue</English>
+            <German>Kleine Quetschverletzung</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Crush_Medium">
+            <English>Medium crushed tissue</English>
+            <German>Mittlere Quetschverletzung</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Crush_Large">
+            <English>Large crushed tissue</English>
+            <German>Große Quetschverletzung</German>
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Wounds_Cut">
+            <English>Cut</English>
+            <German>Schnittwunde</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Cut_Minor">
+            <English>Small Cut</English>
+            <German>Kleine Schnittwunde</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Cut_Medium">
+            <English>Medium Cut</English>
+            <German>Mittlere Schnittwunde</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Cut_Large">
+            <English>Large Cut</English>
+            <German>Große Schnittwunde</German>
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Wounds_Laceration">
+            <English>Tear</English>
+            <German>Riss</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Laceration_Minor">
+            <English>Small Tear</English>
+            <German>Kleiner Riss</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Laceration_Medium">
+            <English>Medium Tear</English>
+            <German>Mittlerer Riss</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Laceration_Large">
+            <English>Large Tear</English>
+            <German>Großer Riss</German>
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Wounds_VelocityWound">
+            <English>Velocity Wound</English>
+            <German>Ballistisches Trauma</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Minor">
+            <English>Smal Velocity Wound</English>
+            <German>Kleines Ballistisches Trauma</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Medium">
+            <English>Medium Velocity Wound</English>
+            <German>Mittleres Ballistisches Trauma</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Large">
+            <English>Large Velocity Wound</English>
+            <German>Großes Ballistisches Trauma</German>
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Wounds_PunctureWound">
+            <English>Puncture Wound</English>
+            <German>Stichwunde</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Minor">
+            <English>Minor Puncture Wound</English>
+            <German>Kleine Stichwunde</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Medium">
+            <English>Medium Puncture Wound</English>
+            <German>Mittlere Stichwunde</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Large">
+            <English>Large Puncture Wound</English>
+            <German>Große Stichwunde</German>
+        </Key>
+        
+        <Key ID="STR_ACE_Medical_Wounds_Femur">
+            <English>Broken Femur</English>
+            <German>Gebrochener Oberschenkelknochen</German>
         </Key>
     </Package>
 </Project>
