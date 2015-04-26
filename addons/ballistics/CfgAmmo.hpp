@@ -572,7 +572,6 @@ class CfgAmmo {
         ACE_caliber=0.366;
         ACE_bulletLength=1.350;
         ACE_bulletMass=230;
-        ACE_transonicStabilityCoef=1;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.368};
         ACE_velocityBoundaries[]={};
