@@ -467,7 +467,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2;
                     icon = PATHTOF(UI\icons\medical_cross.paa);
-                    exceptions[] = {"isNotDragging", "isNotCarrying"};
+                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside"};
                 };
             };
         };
