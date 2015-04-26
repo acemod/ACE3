@@ -1731,38 +1731,138 @@
             <English>Scrape</English>
             <German>Kratzer</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Abrasion_Minor">
+            <English>Minor Scrape</English>
+            <German>Kleiner Kratzer</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Abrasion_Medium">
+            <English>Medium Scrape</English>
+            <German>Mittlerer Kratzer</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Abrasion_Large">
+            <English>Large Scrape</English>
+            <German>Großer Kratzer</German>
+        </Key>
+        
         <Key ID="STR_ACE_Medical_Wounds_Avulsion">
             <English>Avulsion</English>
             <German>Avulsion</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Avulsion_Minor">
+            <English>Minor Avulsion</English>
+            <German>Kleine Avulsion</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Avulsion_Medium">
+            <English>Medium Avulsion</English>
+            <German>Mittlere Avulsion</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Avulsion_Large">
+            <English>Large Avulsion</English>
+            <German>Große Avulsion</German>
+        </Key>
+        
         <Key ID="STR_ACE_Medical_Wounds_Contusion">
             <English>Bruise</English>
             <German>Prellung</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Contusion_Minor">
+            <English>Minor Bruise</English>
+            <German>Kleine Prellung</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Contusion_Medium">
+            <English>Medium Bruise</English>
+            <German>Mittlere Prellung</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Contusion_Large">
+            <English>Large Bruise</English>
+            <German>Große Prellung</German>
+        </Key>
+        
         <Key ID="STR_ACE_Medical_Wounds_Crush">
             <English>Crushed tissue</English>
             <German>Quetschverletzung</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Crush_Minor">
+            <English>Minor crushed tissue</English>
+            <German>Kleine Quetschverletzung</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Crush_Medium">
+            <English>Medium crushed tissue</English>
+            <German>Mittlere Quetschverletzung</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Crush_Large">
+            <English>Large crushed tissue</English>
+            <German>Große Quetschverletzung</German>
+        </Key>
+        
         <Key ID="STR_ACE_Medical_Wounds_Cut">
             <English>Cut</English>
             <German>Schnittwunde</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Cut_Minor">
+            <English>Small Cut</English>
+            <German>Kleine Schnittwunde</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Cut_Medium">
+            <English>Medium Cut</English>
+            <German>Mittlere Schnittwunde</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Cut_Large">
+            <English>Large Cut</English>
+            <German>Große Schnittwunde</German>
+        </Key>
+        
         <Key ID="STR_ACE_Medical_Wounds_Laceration">
             <English>Tear</English>
             <German>Riss</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Laceration_Minor">
+            <English>Small Tear</English>
+            <German>Kleiner Riss</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Laceration_Medium">
+            <English>Medium Tear</English>
+            <German>Mittlerer Riss</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_Laceration_Large">
+            <English>Large Tear</English>
+            <German>Großer Riss</German>
+        </Key>
+        
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound">
             <English>Velocity Wound</English>
             <German>Ballistisches Trauma</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Minor">
+            <English>Smal Velocity Wound</English>
+            <German>Kleines Ballistisches Trauma</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Medium">
+            <English>Medium Velocity Wound</English>
+            <German>Mittleres Ballistisches Trauma</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Large">
+            <English>Large Velocity Wound</English>
+            <German>Großes Ballistisches Trauma</German>
+        </Key>
+        
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound">
             <English>Puncture Wound</English>
             <German>Stichwunde</German>
         </Key>
-        <Key ID="STR_ACE_Medical_Wounds_PunctureWound">
-            <English>Puncture Wound</English>
-            <German>Stichwunde</German>
+        <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Minor">
+            <English>Minor Puncture Wound</English>
+            <German>Kleine Stichwunde</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Medium">
+            <English>Medium Puncture Wound</English>
+            <German>Mittlere Stichwunde</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Large">
+            <English>Large Puncture Wound</English>
+            <German>Große Stichwunde</German>
+        </Key>
+        
         <Key ID="STR_ACE_Medical_Wounds_Femur">
             <English>Broken Femur</English>
             <German>Gebrochener Oberschenkelknochen</German>

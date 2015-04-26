@@ -304,16 +304,19 @@ class ACE_Medical_Advanced {
                 causes[] = {"falling", "ropeburn", "vehiclecrash", "unknown"};
                 minDamage = 0.01;
                 class Minor {
+                    name = "$STR_ACE_Medical_Wounds_Abrasion_Minor";
                     minDamage = 0.01;
                     maxDamage = 0.2;
                     bleedingRate = 0.0001;
                 };
                 class Medium {
+                    name = "$STR_ACE_Medical_Wounds_Abrasion_Medium";
                     minDamage = 0.2;
                     maxDamage = 0.3;
                     bleedingRate = 0.00015;
                 };
                 class Large {
+                    name = "$STR_ACE_Medical_Wounds_Abrasion_Large";
                     minDamage = 0.3;
                     bleedingRate = 0.0002;
                 };
@@ -328,16 +331,19 @@ class ACE_Medical_Advanced {
                 causes[] = {"explosive", "vehiclecrash", "grenade", "shell", "bullet", "backblast", "bite"};
                 minDamage = 0.2;
                 class Minor {
+                    name = "$STR_ACE_Medical_Wounds_Avulsion_Minor";
                     minDamage = 0.2;
                     maxDamage = 0.3;
                     bleedingRate = 0.01;
                 };
                 class Medium {
+                    name = "$STR_ACE_Medical_Wounds_Avulsion_Medium";
                     minDamage = 0.3;
                     maxDamage = 0.6;
                     bleedingRate = 0.02;
                 };
                 class Large {
+                    name = "$STR_ACE_Medical_Wounds_Avulsion_Large";
                     minDamage = 0.5;
                     bleedingRate = 0.05;
                 };
@@ -353,14 +359,17 @@ class ACE_Medical_Advanced {
                 minDamage = 0.01;
                 maxDamage = 0.1;
                 class Minor {
+                    name = "$STR_ACE_Medical_Wounds_Contusion_Minor";
                     minDamage = 0.01;
                     maxDamage = 0.1;
                 };
                 class Medium {
+                    name = "$STR_ACE_Medical_Wounds_Contusion_Medium";
                     minDamage = 0.1;
                     maxDamage = 0.15;
                 };
                 class Large {
+                    name = "$STR_ACE_Medical_Wounds_Contusion_Large";
                     minDamage = 0.15;
                     maxDamage = 0.2;
                 };
@@ -375,16 +384,19 @@ class ACE_Medical_Advanced {
                 causes[] = {"falling", "vehiclecrash", "punch", "unknown"};
                 minDamage = 0.1;
                 class Minor {
+                    name = "$STR_ACE_Medical_Wounds_Crush_Minor";
                     minDamage = 0.1;
                     maxDamage = 0.45;
                     bleedingRate = 0.005;
                 };
                 class Medium {
+                    name = "$STR_ACE_Medical_Wounds_Crush_Medium";
                     minDamage = 0.4;
                     maxDamage = 0.7;
                     bleedingRate = 0.007;
                 };
                 class Large {
+                    name = "$STR_ACE_Medical_Wounds_Crush_Large";
                     minDamage = 0.6;
                     bleedingRate = 0.0095;
                 };
@@ -399,16 +411,19 @@ class ACE_Medical_Advanced {
                 causes[] = {"vehiclecrash", "grenade", "explosive", "shell", "backblast", "stab", "unknown"};
                 minDamage = 0.1;
                 class Minor {
+                    name = "$STR_ACE_Medical_Wounds_Cut_Minor";
                     minDamage = 0.1;
                     maxDamage = 0.3;
                     bleedingRate = 0.005;
                 };
                 class Medium {
+                    name = "$STR_ACE_Medical_Wounds_Cut_Medium";
                     minDamage = 0.3;
                     maxDamage = 0.65;
                     bleedingRate = 0.02;
                 };
                 class Large {
+                    name = "$STR_ACE_Medical_Wounds_Cut_Large";
                     minDamage = 0.65;
                     bleedingRate = 0.05;
                 };
@@ -423,16 +438,19 @@ class ACE_Medical_Advanced {
                 causes[] = {"vehiclecrash", "punch"};
                 minDamage = 0.01;
                 class Minor {
+                    name = "$STR_ACE_Medical_Wounds_Laceration_Minor";
                     minDamage = 0.1;
                     maxDamage = 0.5;
                     bleedingRate = 0.005;
                 };
                 class Medium {
+                    name = "$STR_ACE_Medical_Wounds_Laceration_Medium";
                     minDamage = 0.5;
                     maxDamage = 0.7;
                     bleedingRate = 0.01;
                 };
                 class Large {
+                    name = "$STR_ACE_Medical_Wounds_Laceration_Large";
                     minDamage = 0.7;
                     bleedingRate = 0.03;
                 };
@@ -447,15 +465,18 @@ class ACE_Medical_Advanced {
                 causes[] = {"bullet", "grenade","explosive", "shell", "unknown"};
                 minDamage = 0.15;
                 class Minor {
+                    name = "$STR_ACE_Medical_Wounds_VelocityWound_Minor";
                     minDamage = 0.15;
                     maxDamage = 0.3;
                     bleedingRate = 0.025;
                 };
                 class Medium {
+                    name = "$STR_ACE_Medical_Wounds_VelocityWound_Medium";
                     minDamage = 0.3;
                     bleedingRate = 0.05;
                 };
                 class Large {
+                    name = "$STR_ACE_Medical_Wounds_VelocityWound_Large";
                     minDamage = 0.75;
                     bleedingRate = 0.1;
                 };
@@ -470,16 +491,19 @@ class ACE_Medical_Advanced {
                 causes[] = {"stab", "grenade"};
                 minDamage = 0.01;
                 class Minor {
+                    name = "$STR_ACE_Medical_Wounds_PunctureWound_Minor";
                     minDamage = 0.01;
                     maxDamage = 0.5;
                     bleedingRate = 0.01;
                 };
                 class Medium {
+                    name = "$STR_ACE_Medical_Wounds_PunctureWound_Medium";
                     minDamage = 0.5;
                     maxDamage = 0.75;
                     bleedingRate = 0.03;
                 };
                 class Large {
+                    name = "$STR_ACE_Medical_Wounds_PunctureWound_Large";
                     minDamage = 0.65;
                     bleedingRate = 0.08;
                 };
