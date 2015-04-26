@@ -1,17 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
-  <Package name="mk6mortar">
-    <Key ID="STR_ACE_MK6MORTAR_rangetable_name">
-      <English>82mm Rangetable</English>
-    </Key>
-    <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
-      <English>Range Table for the MK6 82mm Mortar</English>
-    </Key>
-    <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
-      <English>Open 82mm Rangetable</English>
-    </Key>
-    <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
-      <English>Charge</English>
-    </Key>
-  </Package>
+    <Package name="mk6mortar">
+        <Key ID="STR_ACE_MK6MORTAR_rangetable_name">
+            <English>82mm Rangetable</English>
+            <Polish>Tabela strzelnicza 82mm</Polish>
+        </Key>
+        <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
+            <English>Range Table for the MK6 82mm Mortar</English>
+            <Polish>Tabela strzelnicza dla moździerza 82mm MK6</Polish>
+        </Key>
+        <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
+            <English>Open 82mm Rangetable</English>
+            <Polish>Otwórz tabelę strzelniczą 82mm</Polish>
+        </Key>
+        <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
+            <English>Charge</English>
+            <Polish>Ładunek</Polish>
+        </Key>
+    </Package>
 </Project>
