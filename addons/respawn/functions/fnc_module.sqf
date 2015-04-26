@@ -1,19 +1,19 @@
  /*
-  Name: ACE_Respawn_fnc_module
+    Name: ACE_Respawn_fnc_module
 
-  Author(s):
-    KoffeinFlummi, bux578, esteldunedain, commy2
+    Author(s):
+        KoffeinFlummi, bux578, esteldunedain, commy2
 
-  Description:
-    initializes the respawn module
+    Description:
+        initializes the respawn module
 
-  Parameters:
-    0: OBJECT - logic
-    1: ARRAY<OBJECT> - synced units
-    2: BOOLEAN - activated
+    Parameters:
+        0: OBJECT - logic
+        1: ARRAY<OBJECT> - synced units
+        2: BOOLEAN - activated
 
-  Returns:
-    VOID
+    Returns:
+        VOID
 */
 
 #include "script_component.hpp"
@@ -31,21 +31,17 @@ GVAR(Module) = true;
 
 if (isServer) then {
     if (GVAR(RemoveDeadBodiesDisconnected)) then {
-        private "_fnc_deleteDisconnected";
-        _fnc_deleteDisconnected = {
-            _this spawn {
+        addMissionEventHandler ["HandleDisconnect", {
+            [{
                 PARAMS_1(_unit);
-
-                sleep 4;
 
                 if (!alive _unit) then {
                     deleteVehicle _unit;
                 };
-            };
+            },
+            _this, 4, 1] call EFUNC(common,waitAndExecute);
             false
-        };
-
-        addMissionEventHandler ["HandleDisconnect", _fnc_deleteDisconnected];
+        }];
     };
 };
 
