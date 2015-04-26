@@ -45,8 +45,8 @@ if(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) then {
     _vm = 1;
     _velocity = _initialData select 5;
 
-    _oldVelocity = _velocity call BIS_fnc_magnitude;
-    _curVelocity = (velocity _round) call BIS_fnc_magnitude;
+    _oldVelocity = vectorMagnitude _velocity;
+    _curVelocity = vectorMagnitude (velocity _round);
 
     if(alive _round) then {
         _diff = _velocity vectorDiff (velocity _round);

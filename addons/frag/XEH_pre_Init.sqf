@@ -22,9 +22,6 @@ GVAR(traceID) = -1;
 GVAR(traces) = [];
 GVAR(tracesStarted) = false;
 
-// TODO setting
-GVAR(enabled) = true;
-
 // * Other Shit */
 PREP(addTrack);
 PREP(drawTraces);
