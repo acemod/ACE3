@@ -10,7 +10,5 @@ class CfgPatches {
     };
 };
 
-//PRELOAD_ADDONS;
-
 #include "CfgEventhandlers.hpp"
 #include "CfgAmmo.hpp"
