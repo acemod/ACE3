@@ -27,7 +27,6 @@ if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
     GVAR(iconCtrls) pushBack ((findDisplay _displayNum) ctrlCreate ["RscStructuredText", 54021+GVAR(iconCount)]);
 };
 _ctrl = GVAR(iconCtrls) select GVAR(iconCount);
-GVAR(iconCount) = GVAR(iconCount) + 1;
 if(_icon == "") then {
     _icon = DEFAULT_ICON;
 };
@@ -38,8 +37,11 @@ _text = if (GVAR(UseListMenu)) then {
     format ["<img image='%1' color='%2' align='center'/><br/><t color='%3' size='0.80' align='center' shadow='1' shadowColor='%4' shadowOffset='0.06'>%5</t>", _icon, _iconColor, _textColor, _shadowColor, "ace_breakLine" callExtension _text];
 };
 
-_ctrl ctrlSetStructuredText (parseText _text);
-_text = if (GVAR(UseListMenu)) then {
+//_ctrl ctrlSetStructuredText parseText _text;
+[_ctrl, GVAR(iconCount), _text] call FUNC(ctrlSetParsedTextCached);
+GVAR(iconCount) = GVAR(iconCount) + 1;
+
+if (GVAR(UseListMenu)) then {
     _ctrl ctrlSetPosition [(_sPos select 0)-(0.0095*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.20*SafeZoneW, 0.035*SafeZoneW];
 } else {
     _ctrl ctrlSetPosition [(_sPos select 0)-(0.0750*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.15*SafeZoneW, 0.100*SafeZoneW];

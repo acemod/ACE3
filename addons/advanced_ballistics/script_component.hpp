@@ -1,8 +1,6 @@
 #define COMPONENT advanced_ballistics
 #include "\z\ace\addons\main\script_mod.hpp"
 
-#define USE_ADVANCEDBALLISTICS_DLL
-
 #ifdef DEBUG_ENABLED_ADVANCEDBALLISTICS
     #define DEBUG_MODE_FULL
 #endif

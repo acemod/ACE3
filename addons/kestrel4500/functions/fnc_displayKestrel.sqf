@@ -42,9 +42,7 @@ if (GVAR(Kestrel4500) && dialog) then {
 
 GVAR(Overlay) = true;
 
-[{
-    private ["_outputData", "_updateTimer"];
-    
+[{    
     // abort condition
     if (!GVAR(Overlay) || {!(("ACE_Kestrel4500" in (uniformItems ACE_player)) || ("ACE_Kestrel4500" in (vestItems ACE_player)))}) exitWith {
         GVAR(Overlay) = false;
@@ -55,6 +53,7 @@ GVAR(Overlay) = true;
     if (diag_tickTime > GVAR(updateTimer)) then {
         GVAR(updateTimer) = diag_tickTime + 1;
         
+        private ["_outputData"];
         _outputData = [] call FUNC(generateOutputData);
         
         3 cutRsc ["RscKestrel4500", "PLAIN", 1, false];
