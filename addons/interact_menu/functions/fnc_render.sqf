@@ -77,7 +77,6 @@ if (GVAR(openedMenuType) >= 0) then {
         GVAR(startHoverTime) = diag_tickTime;
         GVAR(lastPath) = _hoverPath;
         GVAR(expanded) = false;
-        GVAR(ParsedTextCached) = [];
     } else {
         if(!GVAR(expanded) && diag_tickTime-GVAR(startHoverTime) > 0.25) then {
             GVAR(expanded) = true;
@@ -120,6 +119,7 @@ if(!_foundTarget && GVAR(actionSelected)) then {
 };
 for "_i" from GVAR(iconCount) to (count GVAR(iconCtrls))-1 do {
     ctrlDelete (GVAR(iconCtrls) select _i);
+    GVAR(ParsedTextCached) set [_i, ""];
 };
 GVAR(iconCtrls) resize GVAR(iconCount);
 GVAR(iconCount) = 0;
