@@ -35,7 +35,6 @@ class CfgWeapons {
         scope = 2;
         value = 1;
         count = 1;
-        type = 16;
         displayName = $STR_ACE_MEDICAL_PACKING_BANDAGE_DISPLAY;
         picture = QUOTE(PATHTOF(ui\items\packingBandage_x_ca.paa));
         model = QUOTE(PATHTOF(data\packingbandage.p3d));
@@ -49,7 +48,6 @@ class CfgWeapons {
         scope = 2;
         value = 1;
         count = 1;
-        type = 16;
         displayName = $STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY;
         picture = QUOTE(PATHTOF(ui\items\elasticBandage_x_ca.paa));
         model = "\A3\Structures_F_EPA\Items\Medical\Bandage_F.p3d";
@@ -63,7 +61,6 @@ class CfgWeapons {
         scope = 2;
         value = 1;
         count = 1;
-        type = 16;
         displayName = $STR_ACE_MEDICAL_TOURNIQUET_DISPLAY;
         picture = QUOTE(PATHTOF(ui\items\tourniquet_x_ca.paa));
         model = QUOTE(PATHTOF(data\tourniquet.p3d));
@@ -77,7 +74,6 @@ class CfgWeapons {
         scope = 2;
         value = 1;
         count = 1;
-        type = 16;
         displayName = $STR_ACE_MEDICAL_MORPHINE_DISPLAY;
         picture = QUOTE(PATHTOF(ui\items\morphine_x_ca.paa));
         model = QUOTE(PATHTOF(data\morphine.p3d));
@@ -91,7 +87,6 @@ class CfgWeapons {
         scope = 2;
         value = 1;
         count = 1;
-        type = 16;
         displayName = $STR_ACE_MEDICAL_ATROPINE_DISPLAY;
         picture = QUOTE(PATHTOF(ui\items\atropine_x_ca.paa));
         model = QUOTE(PATHTOF(data\atropine.p3d));
@@ -106,7 +101,6 @@ class CfgWeapons {
         scope = 2;
         value = 1;
         count = 1;
-        type = 16;
         displayName = $STR_ACE_MEDICAL_EPINEPHRINE_DISPLAY;
         picture = QUOTE(PATHTOF(ui\items\epinephrine_x_ca.paa));
         model = QUOTE(PATHTOF(data\epinephrine.p3d));
@@ -193,7 +187,6 @@ class CfgWeapons {
         scope = 2;
         value = 1;
         count = 1;
-        type = 16;
         displayName = $STR_ACE_MEDICAL_QUIKCLOT_DISPLAY;
         picture = QUOTE(PATHTOF(ui\items\quickclot_x_ca.paa));
         descriptionShort = $STR_ACE_MEDICAL_QUIKCLOT_DESC_SHORT;
@@ -206,7 +199,6 @@ class CfgWeapons {
         scope = 2;
         value = 1;
         count = 1;
-        type = 16;
         displayName = $STR_ACE_MEDICAL_AID_KIT_DISPLAY;
         picture = QUOTE(PATHTOF(ui\items\personal_aid_kit_x_ca.paa));
         descriptionShort = $STR_ACE_MEDICAL_AID_KIT_DESC_SHORT;
