@@ -16,6 +16,11 @@ parent: wiki
     </thead>
     <tbody>
          <tr>
+            <td><kbd>Ctrl</kbd>+<kbd>⇧&nbsp;Shift</kbd>+<kbd>K</kbd></td>
+            <td>Show Protractor</td>
+            <td><code>ACE_Advanced_Ballistics</code></td>
+        </tr>
+         <tr>
             <td><kbd>⊞&nbsp;Win</kbd></td>
             <td>Interaction menu</td>
             <td><code>ACE_Interaction</code></td>
@@ -199,6 +204,11 @@ parent: wiki
             <td><kbd>Page&nbsp;Down</kbd></td>
             <td>FCS: Range down</td>
             <td><code>ACE_FireControlSsystem</code></td>
+        </tr>
+         <tr>
+            <td><kbd>⇧&nbsp;Shift</kbd>+<kbd>K</kbd></td>
+            <td>Show Wind Info</td>
+            <td><code>ACE_Weather</code></td>
         </tr>
     </tbody>
 </table>
