@@ -92,7 +92,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Apply_Tourniquet">
             <English>Apply Tourniquet</English>
-            <German>Aderpresse anwenden</German>
+            <German>Tourniquet anwenden</German>
             <Spanish>Aplicar torniquete</Spanish>
             <Czech>Aplikovat škrtidlo</Czech>
             <Polish>Załóż stazę</Polish>
@@ -267,7 +267,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Applying_Tourniquet">
             <English>Applying Tourniquet ...</English>
-            <German>Setze Aderpresse an ...</German>
+            <German>Setze Tourniquet an ...</German>
             <Spanish>Aplicando torniquete ...</Spanish>
             <Czech>Aplikuji škrtidlo</Czech>
             <Polish>Zakładanie stazy ...</Polish>
@@ -355,7 +355,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_TriageCard">
             <English>Triage Card</English>
-            <German>Verletztenanhängekarte</German>
+            <German>Triagekarte</German>
             <Spanish>Tarjeta de triaje</Spanish>
             <Russian>Медкарта</Russian>
             <Polish>Karta segregacyjna</Polish>
@@ -370,7 +370,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Tourniquet">
             <English>Tourniquet</English>
-            <German>Aderpresse</German>
+            <German>Tourniquet</German>
             <Spanish>Torniquete</Spanish>
             <Russian>Жгут</Russian>
             <Czech>Škrtidlo</Czech>
@@ -381,7 +381,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_RemoveTourniquet">
             <English>Remove Tourniquet</English>
-            <German>Aderpresse entfernen</German>
+            <German>Tourniquet entfernen</German>
             <Spanish>Quitar torniquete</Spanish>
             <Russian>Снять жгут</Russian>
             <Czech>Sundat škrtidlo</Czech>
@@ -639,7 +639,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>
-            <German>Aderpresse [CAT]</German>
+            <German>Tourniquet [CAT]</German>
             <Russian>Жгут</Russian>
             <Spanish>Torniquete [CAT]</Spanish>
             <French>Garrot [CAT]</French>
@@ -702,7 +702,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_PACKING_BANDAGE_DESC_SHORT">
             <English>Used to pack medium to large wounds and stem the bleeding</English>
-            <German>Verwendet, um mittlere bis große Wunden abzudecken und Blutungen zu stoppen</German>
+            <German>Wird verwendet, um mittlere bis große Wunden abzudecken und Blutungen zu stoppen</German>
             <Russian>Для тампонирования ран среднего и большого размера и остановки кровотечения.</Russian>
             <Spanish>Se utiliza para vendar heridas medianas o grandes y detener el sangrado</Spanish>
             <French>Utilisé pour couvrir des blessures de taille moyenne à grande. Arrête l'hémorragies</French>
@@ -718,6 +718,7 @@
             <Polish>Opatrunek stosowany w celu zatrzymania krwawienia i osłony większych ran.</Polish>
             <Hungarian>Egy kötszerfajta, melyet a sebek nyomására használnak a vérzés elállítása és sebgyógyulás érdekében. A nyomókötés egy lehetőség nagyobb polytraumatikus sérülések esetén.</Hungarian>
             <Italian>Un bendaggio usato per bendare ferite con emorragie e facilitare la guarigione. Bendare una ferita è una opzione su ferite di vario tipo.</Italian>
+            <German>Ein Verband, um die Wunde abzudecken und die Wundheilung zu fördern. Wunden abdecken ist eine Option bei größeren Polytraumen</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY">
             <English>Bandage (Elastic)</English>
@@ -742,7 +743,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DESC_USE">
             <English>Allows an even compression and extra support to the injured area.</English>
-            <German></German>
+            <German>Ermöglicht eine gleichmäßige Kompression und zusätzliche Unterstützung für den verletzten Bereich.</German>
             <Russian>Давящая повязка обеспечивает равномерное сжатие и дополнительную поддержку поврежденной области</Russian>
             <French>Ce bandage peut être utilisé pour compresser la plaie afin de ralentir le saignement et assurer la tenue du bandage lors de mouvement.</French>
             <Polish>Elastyczna opaska podtrzymująca opatrunek oraz usztywniająca okolice stawów.</Polish>
@@ -752,7 +753,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_TOURNIQUET_DISPLAY">
             <English>Tourniquet (CAT)</English>
-            <German>Aderpresse (CAT)</German>
+            <German>Tourniquet [CAT]</German>
             <Russian>Жгут</Russian>
             <Spanish>Torniquete (CAT)</Spanish>
             <French>Garrot (CAT)</French>
@@ -860,7 +861,7 @@
             <Spanish>Aumenta la frecuencia cardiaca y contraresta los efectos de las reacciones alérgicas</Spanish>
             <French>Augmente la fréquence cadiaque et annule les effets d'une réaction anaphylactique</French>
             <Polish>Adrenalina. Zwiększa puls i przeciwdziała efektom wywołanym przez reakcje alergiczne</Polish>
-            <German>Steigert die Herzfrequenz, um den Effekt von allergischen Reaktionen zu bekämpfen</German>
+            <German>Steigert die Herzfrequenz und bekämpft Symptome von allergischen Reaktionen.</German>
             <Hungarian>Növeli a szívverést és ellenzi az allergiás reakciók hatásait</Hungarian>
             <Italian>Aumenta il battito cardiaco e combatte gli effetti di reazioni allergiche.</Italian>
         </Key>
@@ -871,6 +872,7 @@
             <French>Medicament qui fonctionne sur le système nerveux sympathique créant une dilatation des bronches, augmente la fréquence cardiaque et annule les effets d'une réaction allergique (anaphylaxie). Utilisé lors d'arrêt cardio-respiratoire pour augmenter les chances de retrouver un pouls.</French>
             <Polish>EpiPen z adrenaliną ma działanie sympatykomimetyczne, tj. pobudza receptory alfa- i beta-adrenergiczne. Pobudzenie układu współczulnego prowadzi do zwiększenia częstotliwości pracy serca, zwiększenia pojemności wyrzutowej serca i przyśpieszenia krążenia wieńcowego. Pobudzenie oskrzelowych receptorów beta-adrenergicznych wywołuje rozkurcz mięśni gładkich oskrzeli, co w efekcie zmniejsza towarzyszące oddychaniu świsty i duszności.</Polish>
             <Italian>Una sostanza che permette di dilatare i bronchi, aumentare il battito cardiaco e combattere effetti di reazioni allergiche. Usato anche in casi di arresto cardiaco.</Italian>
+            <German>Ein Medikament, dass die Bronchien erweitert, die Herzfrequenz erhöht und Symptome von allergischen Reaktionen(Anaphylaxie) bekämpft. Wird bei plötzlichem Herzstillstand verabreicht.</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_PLASMA_IV">
             <English>Plasma IV (1000ml)</English>
@@ -890,6 +892,7 @@
             <Polish>Składnik krwi, używany do zwiększenia jej objętości.</Polish>
             <Hungarian>Egy térfogatnövelő vérkiegészítmény.</Hungarian>
             <Italian>Aiuta ad aumentare il volume sanguigno.</Italian>
+            <German>Volumenerweiterungsmittel (künstliches Blutvolumen)</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_PLASMA_IV_DESC_USE">
             <English>A volume-expanding blood supplement.</English>
@@ -899,6 +902,7 @@
             <Polish>Składnik krwi, używany do zwiększenia jej objętości.</Polish>
             <Hungarian>Egy térfogatnövelő vérkiegészítmény.</Hungarian>
             <Italian>Aiuta ad aumentare il volume sanguigno.</Italian>
+            <German>Volumenerweiterungsmittel (künstliches Blutvolumen)</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_PLASMA_IV_500">
             <English>Plasma IV (500ml)</English>
@@ -938,6 +942,7 @@
             <Polish>Krew IV, używana do uzupełnienia krwi u pacjenta, trzymać w warunkach chłodniczych</Polish>
             <Hungarian>Vér-infúzió, intravénás bejuttatásra egy páciensnek (hidegen tárolandó)</Hungarian>
             <Italian>Sangue usato per ripristinare pazienti in cui si è verificata una perdita di sangue (conservare al fresco)</Italian>
+            <German>Blut IV, Bluthaushalt des Patienten wiederherstellen. (Kühl halten)</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BLOOD_IV_DESC_USE">
             <English>O Negative infusion blood used in strict and rare events to replenish blood supply usually conducted in the transport phase of medical care.</English>
@@ -946,6 +951,7 @@
             <Spanish>Utilice sólo durante gran pérdida de sangre para reemplazar el volumen de sangre perdida. Uso habitual durante el transporte de heridos.</Spanish>
             <Italian>Sangue 0 negativo usato per ripristinare sangue in pazienti in cui si è verificata una perdita di sangue.</Italian>
             <French>Cullot sanguin O- utilisé dans de rares et stricts cas pour compléter une perte de sang importante. Administré normalement lors d'un MEDEVAC</French>
+            <German>O Negative Blutinfusion wird nur in seltenen Fällen verwendet, um den Bluthaushalt des Patienten zu ergänzen. Wird in der Regel wärend der Transportphase durchgeführt.</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BLOOD_IV_500">
             <English>Blood IV (500ml)</English>
@@ -985,6 +991,7 @@
             <Polish>Sól fizjologiczna, podawana dożylnie (IV), używana w celu uzupełnienia krwi u pacjenta</Polish>
             <Hungarian>0,9%-os sósvíz-infúzió, a páciens vérmennyiségének helyreállítására</Hungarian>
             <Italian>Soluzione salina, usata per ripristinare sangue nei pazienti.</Italian>
+            <German>Kochsalzlösung, ein medizinisches Volumenersatzmittel</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_SALINE_IV_DESC_USE">
             <English>A medical volume-replenishing agent introduced into the blood system through an IV infusion.</English>
@@ -994,6 +1001,7 @@
             <Polish>Używany w medycynie w formie płynu infuzyjnego jako środek nawadniający i uzupełniający niedobór elektrolitów, podawany dożylnie (IV).</Polish>
             <Hungarian>Egy orvosi térfogat-helyreállító készítmény, melyet intravénás módon lehet a szervezetbe juttatni.</Hungarian>
             <Italian>Una soluzione medica per ripristinare il volume del sangue introdotta tramite trasfusione IV.</Italian>
+            <German>Ein medizinisches Volumenersatzmittel, dass durch einen intravenösen Zugang in den Blutkreislauf verabreicht wird. </German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_SALINE_IV_500">
             <English>Saline IV (500ml)</English>
@@ -1179,6 +1187,7 @@
             <Hungarian>A vérnyomás %2/%3</Hungarian>
             <Italian>Hai riscontrato una pressione di %2/%3</Italian>
             <Polish>Wyczuwasz ciśnienie krwi o wartości %2/%3</Polish>
+            <German>Der Blutdruck liegt bei %2/%3</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_2">
             <English>You find a low blood pressure</English>
@@ -1388,7 +1397,7 @@
             <French>Vous avez examiné %1</French>
             <Spanish>Examinas a %1</Spanish>
             <Polish>Zbadałeś %1</Polish>
-            <German>Du hast versucht %1 anzusprechen</German>
+            <German>Du hast versucht, %1 anzusprechen</German>
             <Hungarian>Megnézted %1-t</Hungarian>
             <Italian>Hai controllato %1</Italian>
         </Key>
@@ -1422,6 +1431,7 @@
             <Polish>Zabandażowano</Polish>
             <Hungarian>Bekötözve</Hungarian>
             <Italian>Bendato</Italian>
+            <German>verbunden</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_APPLY_BANDAGE">
             <English>You bandage %1 (%2)</English>
@@ -1431,6 +1441,7 @@
             <Polish>Bandażujesz %1 (%2)</Polish>
             <Hungarian>Bekötözöd %1-t (%2)</Hungarian>
             <Italian>Stai bendando %1 (%2)</Italian>
+            <German>Du verbindest %1 (%2)</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_IS_BANDAGING_YOU">
             <English>%1 is bandaging you</English>
@@ -1440,9 +1451,10 @@
             <Polish>%1 bandażuje Ciebie</Polish>
             <Hungarian>%1 bekötöz téged</Hungarian>
             <Italian>%1 ti sta bendando</Italian>
+            <German>%1 verbindet dich</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_START_STITCHING_INJURIES">
-            <English>You start stitching injures from %1 (%2)</English>
+            <English>You start stitching injuries from %1 (%2)</English>
             <Russian>Вы зашиваете ранения от %1 (%2)</Russian>
             <German>Du nähst die Wunden von %1 (%2)</German>
             <French>Vous suturez %1 (%2)</French>
@@ -1465,7 +1477,7 @@
             <English>You treat the airway of %1</English>
             <Russian>Вы интубируете раненого %1</Russian>
             <Spanish>Estás intubando a %1</Spanish>
-            <German>Du behandelst den Atemweg von %1</German>
+            <German>Du behandelst die Atemwege von %1</German>
             <French>Vous traitez les voies respiratoires de %1</French>
             <Polish>Udrażniasz drogi oddechowe %1</Polish>
             <Hungarian>Kezeled %1 légútját</Hungarian>
@@ -1487,7 +1499,7 @@
             <French>%1 traite vos voies respiratoires</French>
             <Spanish>%1 te está intubando</Spanish>
             <Polish>%1 udrażnia Twoje drogi oddechowe</Polish>
-            <German>%1 behandelt deinen Atemweg</German>
+            <German>%1 behandelt deine Atemwege</German>
             <Hungarian>%1 kezeli a légútadat</Hungarian>
             <Italian>%1 ti sta trattando le vie respiratorie</Italian>
         </Key>
@@ -1529,7 +1541,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_LOAD">
             <English>Load Patient Into</English>
-            <German>Patient einladen</German>
+            <German>Patient Einladen</German>
             <Spanish>Cargar el paciente en</Spanish>
             <Polish>Załaduj pacjenta</Polish>
             <Czech>Naložit pacianta do</Czech>
@@ -1541,7 +1553,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_UNLOAD">
             <English>Unload Patient</English>
-            <German>Patient ausladen</German>
+            <German>Patient Ausladen</German>
             <Spanish>Descargar el paciente</Spanish>
             <Polish>Wyładuj pacjenta</Polish>
             <Czech>Vyložit pacienta</Czech>
@@ -1555,7 +1567,7 @@
             <English>Unload patient</English>
             <Spanish>Descargar el paciente</Spanish>
             <Russian>Выгрузить пациента</Russian>
-            <German>Patient ausladen</German>
+            <German>Patient Ausladen</German>
             <Polish>Wyładuj pacjenta</Polish>
             <French>Débarquer le patient</French>
             <Hungarian>Sebesült kihúzása</Hungarian>
@@ -1565,7 +1577,7 @@
             <English>Load patient</English>
             <Spanish>Cargar el paciente en</Spanish>
             <Russian>Погрузить пациента</Russian>
-            <German>Patient einladen</German>
+            <German>Patient Einladen</German>
             <Polish>Załaduj pacjenta</Polish>
             <French>Embarquer le patient</French>
             <Hungarian>Sebesült berakása</Hungarian>
@@ -1595,7 +1607,7 @@
             <English>%1 has bandaged patient</English>
             <Spanish>%1 has vendado al paciente</Spanish>
             <Russian>%1 перевязал пациента</Russian>
-            <German>%1 hat Patient bandagiert</German>
+            <German>%1 hat den Patienten verbunden</German>
             <Polish>%1 zabandażował pacjenta</Polish>
             <French>%1 a pansé le patient</French>
             <Hungarian>%1 bekötözte a pácienst</Hungarian>
@@ -1604,7 +1616,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIVITY_usedItem">
             <English>%1 used %2</English>
             <Spanish>%1 usó %2</Spanish>
-            <German>%1 hat %2 genutzt</German>
+            <German>%1 benutzt %2</German>
             <Russian>%1 использовал %2</Russian>
             <Polish>%1 użył %2</Polish>
             <French>%1 utilise %2</French>
@@ -1615,7 +1627,7 @@
             <English>%1 has given an IV</English>
             <Spanish>%1 has puesto una IV</Spanish>
             <Russian>%1 провел переливание</Russian>
-            <German>%1 hat eine Infusion gegeben</German>
+            <German>%1 hat eine Infusion verabreicht</German>
             <Polish>%1 podał IV</Polish>
             <French>%1 a administré une IV</French>
             <Hungarian>%1 infúziót adott</Hungarian>
@@ -1625,7 +1637,7 @@
             <English>%1 applied a tourniquet</English>
             <Spanish>%1 aplicado torniquete</Spanish>
             <Russian>%1 наложил жгут</Russian>
-            <German>%1 hat eine Aderpresse angelegt</German>
+            <German>%1 hat einen Tourniquet angelegt</German>
             <Polish>%1 założył stazę</Polish>
             <French>%1 a appliqué un garrot</French>
             <Hungarian>%1 felhelyezett egy érszorítót</Hungarian>
