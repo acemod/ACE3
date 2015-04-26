@@ -14,6 +14,8 @@
 
 #include "script_component.hpp"
 
+// Exit for basic medical
+if (GVAR(level) < 2) exitWith {};
 private ["_target", "_show", "_selectionN"];
 _target = _this select 0;
 _show = if (count _this > 1) then {_this select 1} else {true};

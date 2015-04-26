@@ -46,17 +46,20 @@ ace_gforcecoef
 ace_protection
 ace_scopeadjust_horizontal
 ace_scopeadjust_vertical
+ace_scopeadjust_increment
 ace_isusedlauncher
 ace_attachable
 ace_range
 ace_detonator
+ace_barrelTwist
+ace_twistDirection
+ace_barrelLength
 ```
 
 
 ### CfgAmmo
 
 ```c++
-ace_bulletmass
 ace_recoil_shakemultiplier
 ace_frag_skip
 ace_frag_force
@@ -68,6 +71,17 @@ ace_frag_gurney_k
 ace_explodeondefuse
 ace_explosive
 ace_fcs_airburst
+ace_caliber
+ace_bulletlength
+ace_bulletmass
+ace_transonicstabilitycoef
+ace_ammotempmuzzlevelocityshifts
+ace_ballisticcoefficients
+ace_velocityboundaries
+ace_standardatmosphere
+ace_dragmodel
+ace_muzzlevelocities
+ace_barrellengths
 ```
 
 

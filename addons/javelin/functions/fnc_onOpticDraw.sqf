@@ -130,7 +130,7 @@ FUNC(disableFire) = {
     
     if(_firedEH < 0 && difficulty > 0) then {
         _firedEH = [ACE_player, "DefaultAction", {true}, { 
-            _canFire = _currentShooter getVariable["ace_missileguidance_target", nil];
+            _canFire = _this getVariable["ace_missileguidance_target", nil];
             if(!isNil "_canFire") exitWith { false };
             true
         }] call EFUNC(common,addActionEventHandler);

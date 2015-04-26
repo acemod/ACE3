@@ -77,6 +77,7 @@ if (GVAR(openedMenuType) >= 0) then {
         GVAR(startHoverTime) = diag_tickTime;
         GVAR(lastPath) = _hoverPath;
         GVAR(expanded) = false;
+        GVAR(ParsedTextCached) = [];
     } else {
         if(!GVAR(expanded) && diag_tickTime-GVAR(startHoverTime) > 0.25) then {
             GVAR(expanded) = true;

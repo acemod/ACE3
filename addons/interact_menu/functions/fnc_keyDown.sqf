@@ -30,6 +30,7 @@ if (_menuType == 0) then {
 GVAR(keyDownTime) = diag_tickTime;
 GVAR(openedMenuType) = _menuType;
 GVAR(lastTimeSearchedActions) = -1000;
+GVAR(ParsedTextCached) = [];
 
 GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
                       visibleMap ||

@@ -1,10 +1,5 @@
 #include "script_component.hpp"
 
-// Randomization
-GVAR(temperatureShift) = 3 - random 6;
-GVAR(badWeatherShift) = (random 1) ^ 2 * 10;
-GVAR(humidityShift) = (5 - random 10) / 100;
-
 // Rain
 GVAR(rain_next_period) = -1;
 GVAR(rain_period_count) = 0;
