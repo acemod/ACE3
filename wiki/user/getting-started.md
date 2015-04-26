@@ -33,15 +33,16 @@ ACE3 adds a realistic depiction of the Vector 21 rangefinder to the game. Unlike
 The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Tab</kbd> and <kbd>R</kbd> by default. First you bring it up like every other binocular in the game and then, while looking through it you can access all the different functions.
 
 The Vector 21 rangefinder has the following usage modes:
-  1. Slope distance
-  2. Azimuth
-  3. Slope distance & Azimuth
-  4. Horizontal distance and height difference
-  5. Azimuth & Inclination
-  6. Distance between two points
-  7. Horizontal & vertical distance between two points
-  8. Horizontal distance & azimuth between two points
-  9. Fall of shot
+
+1. Slope distance
+2. Azimuth
+3. Slope distance & Azimuth
+4. Horizontal distance and height difference
+5. Azimuth & Inclination
+6. Distance between two points
+7. Horizontal & vertical distance between two points
+8. Horizontal distance & azimuth between two points
+9. Fall of shot
 
 #### 1. Slope distance
 <img src="{{ site.baseurl }}/img/wiki/user/vector1.png" alt="Measuring Slope distance" />
