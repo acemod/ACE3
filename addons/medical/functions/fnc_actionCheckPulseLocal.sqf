@@ -33,14 +33,14 @@ if (_heartRate > 1.0) then {
     } else {
         // non medical personel will only find a pulse/HR
         _heartRateOutput = "STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_2";
-        _logOutPut = "Weak";
+        _logOutPut = localize "STR_ACE_MEDICAL_CHECK_PULSE_WEAK";
         if (_heartRate > 60) then {
             if (_heartRate > 100) then {
                 _heartRateOutput = "STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_3";
-                _logOutPut = "Strong";
+                _logOutPut = localize "STR_ACE_MEDICAL_CHECK_PULSE_STRONG";
             } else {
                 _heartRateOutput = "STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_4";
-                _logOutPut = "Normal";
+                _logOutPut = localize "STR_ACE_MEDICAL_CHECK_PULSE_NORMAL";
             };
         };
     };
@@ -49,5 +49,5 @@ if (_heartRate > 1.0) then {
 ["displayTextStructured", [_caller], [[_heartRateOutput, [_unit] call EFUNC(common,getName), round(_heartRate)], 1.5, _caller]] call EFUNC(common,targetEvent);
 
 if (_logOutPut != "") then {
-    [_unit,"activity","%1 checked Heart Rate: %2",[[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToLog);
+    [_unit,"activity", localize "STR_ACE_MEDICAL_CHECK_PULSE_LOG",[[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToLog);
 };
