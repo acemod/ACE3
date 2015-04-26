@@ -1,20 +1,20 @@
 ---
 layout: wiki
-title: Getting Started
+title: Getting started
 group: user
 order: 0
 parent: wiki
 ---
 
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>This page is currently under construction. Please, come back later.</p>
+</div>
+<!--
+### Table of contents
+1. [Introduction](#introduction)
+2. [abc](#abc)
+3. [xyz](#xyz)
 
-**This page will get updated soon.**
-
-
-## Table of Contents
-
-  1. [xx](#xx)
-  2. [yy](#yy)
-  3. [zz](#zz)
-
-
-## What ACE3 has to offer
+### Introduction
+-->
