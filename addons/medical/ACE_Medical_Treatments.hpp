@@ -328,22 +328,16 @@ class ACE_Medical_Advanced {
                 causes[] = {"explosive", "vehiclecrash", "grenade", "shell", "bullet", "backblast", "bite"};
                 minDamage = 0.2;
                 class Minor {
-                    name = "Fisch";
-                    displayName = "Fisch2";
                     minDamage = 0.2;
                     maxDamage = 0.3;
                     bleedingRate = 0.01;
                 };
                 class Medium {
-                    name = "Fisch";
-                    displayName = "Fisch2";
                     minDamage = 0.3;
                     maxDamage = 0.6;
                     bleedingRate = 0.02;
                 };
                 class Large {
-                    name = "Fisch";
-                    displayName = "Fisch2";
                     minDamage = 0.5;
                     bleedingRate = 0.05;
                 };
