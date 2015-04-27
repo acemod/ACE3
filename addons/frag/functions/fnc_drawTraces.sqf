@@ -1,4 +1,7 @@
 #include "script_component.hpp"
+
+private ["_color", "_index", "_lastPos", "_lastSpd", "_max", "_positions", "_startSpeed"];
+
 {
     _positions = _x select 4;
     _color = _x select 5;

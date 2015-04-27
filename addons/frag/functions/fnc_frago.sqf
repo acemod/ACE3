@@ -14,7 +14,7 @@ private ["_round", "_lastPos", "_lastVel", "_shellType", "_gun", "_fragTypes", "
     "_manObjects", "_objects", "_crew", "_fragCount", "_fragArcs", "_doRandom", "_target", "_boundingBox",
     "_targetPos", "_distance", "_add", "_bbX", "_bbY", "_bbZ", "_cubic", "_targetVel", "_baseVec", "_dir",
     "_currentCount", "_count", "_vecVar", "_i", "_vec", "_fp", "_vel", "_fragType", "_fragObj", "_randomCount",
-    "_sectorSize", "_sectorOffset", "_randomDir"];
+    "_sectorSize", "_sectorOffset", "_randomDir", "_endTime"];
 
 
 _round = _this select 0;

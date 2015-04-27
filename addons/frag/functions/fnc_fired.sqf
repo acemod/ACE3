@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-private ["_gun", "_type", "_round", "_doFragTrack", "_doSpall"];
+private ["_gun", "_type", "_round", "_doFragTrack", "_doSpall", "_spallTrack", "_spallTrackID"];
 
 if (!GVAR(enabled)) exitWith {};
 
