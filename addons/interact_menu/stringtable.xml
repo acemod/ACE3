@@ -18,6 +18,7 @@
             <French>Toujours afficher le curseur pour les interactions</French>
             <Italian>Mostra sempre il cursore per le interazioni</Italian>
             <Polish>Zawsze wyświetlaj kursor dla interakcji</Polish>
+            <Russian>Показывать курсор (взаимодействие)</Russian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>

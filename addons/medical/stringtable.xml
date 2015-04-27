@@ -1329,23 +1329,28 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseAlive">
             <English>alive</English>
+            <Russian>жив</Russian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseDead">
             <English>dead</English>
+            <Russian>мёртв</Russian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_lostBlood">
             <English>He's lost some blood</English>
+            <Russian>Потерял немного крови</Russian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noBloodloss">
             <English>He hasn't lost blood</English>
+            <Russian>Не терял крови</Russian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_inPain">
             <English>He is in pain</English>
+            <Russian>Испытывает боль</Russian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noPain">
             <English>He is not in pain</English>
+            <Russian>Не испытывает боли</Russian>
         </Key>
-
         <Key ID="STR_ACE_MEDICAL_BANDAGED">
             <English>Bandaged</English>
             <French>Bandé</French>
@@ -1536,7 +1541,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIVITY_gaveIV">
             <English>%1 has given an IV</English>
             <Spanish>%1 has puesto una IV</Spanish>
-            <Russian>%1 провел переливание</Russian>
+            <Russian>%1 провёл переливание</Russian>
             <Polish>%1 podał IV</Polish>
             <French>%1 a administré une IV</French>
             <Hungarian>%1 infúziót adott</Hungarian>

@@ -1,18 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2015-04-06 -->
 <Project name="ACE">
-  <Package name="mk6mortar">
-    <Key ID="STR_ACE_MK6MORTAR_rangetable_name">
-      <English>82mm Rangetable</English>
-    </Key>
-    <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
-      <English>Range Table for the MK6 82mm Mortar</English>
-    </Key>
-    <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
-      <English>Open 82mm Rangetable</English>
-    </Key>
-    <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
-      <English>Charge</English>
-    </Key>
-  </Package>
+    <Package name="mk6mortar">
+        <Key ID="STR_ACE_MK6MORTAR_rangetable_name">
+            <English>82mm Rangetable</English>
+            <Russian>82 мм Таблица дальностей и прицелов</Russian>
+        </Key>
+        <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
+            <English>Range Table for the MK6 82mm Mortar</English>
+            <Russian>Таблица дальностей и прицелов для MK6 82 мм мортиры</Russian>
+        </Key>
+        <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
+            <English>Open 82mm Rangetable</English>
+            <Russian>Открыть 82 мм Таблицу дальностей и прицелов</Russian>
+        </Key>
+        <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
+            <English>Charge</English>
+            <Russian>Зарядить</Russian>
+        </Key>
+    </Package>
 </Project>
