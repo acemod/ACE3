@@ -47,7 +47,7 @@ if (GVAR(level) >= 2) then {
     };
     _newDamage = _this call FUNC(handleDamage_caching);
 
-    if (_damageReturn > 0.9) then {
+    //if (_damageReturn > 0.9) then {
 
         _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
 
@@ -63,7 +63,7 @@ if (GVAR(level) >= 2) then {
             };
         };
 
-        if ([_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)) then {
+        if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
             if ([_unit] call FUNC(setDead)) then {
                 _damageReturn = 1;
             } else {
@@ -72,7 +72,7 @@ if (GVAR(level) >= 2) then {
         } else {
             _damageReturn = _damageReturn min 0.89;
         };
-    };
+    //};
 };
 [_unit] call FUNC(addToInjuredCollection);
 
