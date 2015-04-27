@@ -57,4 +57,11 @@ class CfgWeapons
         ACE_barrelTwist=7.68;
         ACE_barrelLength=23.2;
     };
+    
+    class rhs_acc_sniper_base;
+    class rhs_acc_pso1m2: rhs_acc_sniper_base {
+        ACE_ScopeAdjust_Vertical[] = { 0, 0 };
+        ACE_ScopeAdjust_Horizontal[] = { -10, 10 };
+        ACE_ScopeAdjust_Increment = 0.5;
+    };
 };
