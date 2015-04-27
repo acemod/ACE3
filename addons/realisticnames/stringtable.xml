@@ -1482,32 +1482,32 @@
             <Russian>VS-121</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_02">
-            <English>Noreen Bad News</English>
-            <Czech>Noreen Bad News</Czech>
-            <French>Noreen Bad News</French>
-            <Spanish>Noreen Bad News</Spanish>
-            <Russian>Noreen Bad News</Russian>
+            <English>Noreen "Bad News" ULR</English>
+            <Czech>Noreen "Bad News" ULR</Czech>
+            <French>Noreen "Bad News" ULR</French>
+            <Spanish>Noreen "Bad News" ULR</Spanish>
+            <Russian>Noreen "Bad News" ULR</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02">
-            <English>Noreen Bad News (Black)</English>
-            <Czech>Noreen Bad News (Black)</Czech>
-            <French>Noreen Bad News (Noir)</French>
-            <Spanish>Noreen Bad News (Negro)</Spanish>
-            <Russian>Noreen Bad News (черный)</Russian>
+            <English>Noreen "Bad News" ULR (Black)</English>
+            <Czech>Noreen "Bad News" ULR (Black)</Czech>
+            <French>Noreen "Bad News" ULR (Noir)</French>
+            <Spanish>Noreen "Bad News" ULR (Negro)</Spanish>
+            <Russian>Noreen "Bad News" ULR (черный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_camo">
-            <English>Noreen Bad News (Camo)</English>
-            <Czech>Noreen Bad News (Camo)</Czech>
-            <French>Noreen Bad News (Camo)</French>
-            <Spanish>Noreen Bad News (Camuflaje)</Spanish>
-            <Russian>Noreen Bad News (камо)</Russian>
+            <English>Noreen "Bad News" ULR (Camo)</English>
+            <Czech>Noreen "Bad News" ULR (Camo)</Czech>
+            <French>Noreen "Bad News" ULR (Camo)</French>
+            <Spanish>Noreen "Bad News" ULR (Camuflaje)</Spanish>
+            <Russian>Noreen "Bad News" ULR (камо)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_sniper">
-            <English>Noreen Bad News (Sand)</English>
-            <Czech>Noreen Bad News (Sand)</Czech>
-            <French>Noreen Bad News (Beige)</French>
-            <Spanish>Noreen Bad News (Arena)</Spanish>
-            <Russian>Noreen Bad News (песочный)</Russian>
+            <English>Noreen "Bad News" ULR (Sand)</English>
+            <Czech>Noreen "Bad News" ULR (Sand)</Czech>
+            <French>Noreen "Bad News" ULR (Beige)</French>
+            <Spanish>Noreen "Bad News" ULR (Arena)</Spanish>
+            <Russian>Noreen "Bad News" ULR (песочный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_03">
             <English>SIG 556</English>
