@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-private ["_playerDir", "_windSpeed", "_windDir", "_crosswind", "_headwind", "_humidity", "_temperature", "_humidity", "_barometricPressure", "_altitude"];
+private ["_playerDir", "_windSpeed", "_crosswind", "_headwind", "_humidity", "_temperature", "_humidity", "_barometricPressure", "_altitude"];
 
 if (isNil QGVAR(MIN) || isNil QGVAR(MAX)) then {
     _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL ACE_player) select 2);

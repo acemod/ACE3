@@ -4,6 +4,7 @@ class Medical {
     hotkey = "M";
     exceptions[] = {"isNotInside"};
     statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
+    condition = "true";
     icon = PATHTOF(UI\icons\medical_cross.paa);
 
    class ACE_Head {
@@ -11,6 +12,8 @@ class Medical {
         icon = PATHTOF(UI\icons\medical_cross.paa);
         exceptions[] = {"isNotInside"};
         statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
+        modifierFunction = QUOTE([ARR_4(_target,_player,0,_this select 3)] call FUNC(modifyMedicalAction));
+        condition = "true";
         runOnHover = 1;
 
         class Bandage {
@@ -78,6 +81,7 @@ class Medical {
         runOnHover = 1;
         exceptions[] = {"isNotInside"};
         statement = QUOTE([ARR_3(_target, true, 1)] call DFUNC(displayPatientInformation));
+        modifierFunction = QUOTE([ARR_4(_target,_player,1,_this select 3)] call FUNC(modifyMedicalAction));
         showDisabled = 1;
         priority = 2;
         hotkey = "";
@@ -146,6 +150,8 @@ class Medical {
         runOnHover = 1;
         exceptions[] = {"isNotInside"};
         statement = QUOTE([ARR_3(_target, true, 2)] call DFUNC(displayPatientInformation));
+        modifierFunction = QUOTE([ARR_4(_target,_player,2,_this select 3)] call FUNC(modifyMedicalAction));
+        condition = "true";
         icon = PATHTOF(UI\icons\medical_cross.paa);
 
         class Bandage {
@@ -246,6 +252,8 @@ class Medical {
         runOnHover = 1;
         exceptions[] = {"isNotInside"};
         statement = QUOTE([ARR_3(_target, true, 3)] call DFUNC(displayPatientInformation));
+        modifierFunction = QUOTE([ARR_4(_target,_player,3,_this select 3)] call FUNC(modifyMedicalAction));
+        condition = "true";
         icon = PATHTOF(UI\icons\medical_cross.paa);
 
         class Bandage {
@@ -342,6 +350,8 @@ class Medical {
         runOnHover = 1;
         exceptions[] = {"isNotInside"};
         statement = QUOTE([ARR_3(_target, true, 4)] call DFUNC(displayPatientInformation));
+        modifierFunction = QUOTE([ARR_4(_target,_player,4,_this select 3)] call FUNC(modifyMedicalAction));
+        condition = "true";
         icon = PATHTOF(UI\icons\medical_cross.paa);
 
         class Bandage {
@@ -427,6 +437,8 @@ class Medical {
         runOnHover = 1;
         exceptions[] = {"isNotInside"};
         statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
+        modifierFunction = QUOTE([ARR_4(_target,_player,5,_this select 3)] call FUNC(modifyMedicalAction));
+        condition = "true";
         icon = PATHTOF(UI\icons\medical_cross.paa);
 
         class Bandage {

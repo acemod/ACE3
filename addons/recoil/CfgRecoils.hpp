@@ -1,11 +1,11 @@
 
-#define KICKBACK 1.6
+#define KICKBACK 1.4
 
-#define MUZZLETEMP 1
-#define MUZZLEPERM 0.1
+#define MUZZLETEMP 1.2
+#define MUZZLEPERM 0.4
 
 #define MUZZLECLIMB_POS 1
-#define MUZZLERIGHT_POS 0.4
+#define MUZZLERIGHT_POS 0.2
 
 #define MUZZLECLIMB_MAG 1
 #define MUZZLERIGHT_MAG 1
@@ -70,7 +70,7 @@ class CfgRecoils {
     class recoil_sw: recoil_default {
         muzzleOuter[] = {0.3*MUZZLERIGHT_POS,0.8*MUZZLECLIMB_POS,0.5*MUZZLERIGHT_MAG,0.2*MUZZLECLIMB_MAG};
         kickBack[] = {0.02*KICKBACK,0.04*KICKBACK};
-        temporary = 0.005*MUZZLETEMP;
+        temporary = 0.01*MUZZLETEMP; //0.005*MUZZLETEMP;
     };
 
     class recoil_mxm: recoil_default {
@@ -178,13 +178,13 @@ class CfgRecoils {
     class recoil_mk200: recoil_default {
         muzzleOuter[] = {0.4*MUZZLERIGHT_POS,0.6*MUZZLECLIMB_POS,0.6*MUZZLERIGHT_MAG,0.2*MUZZLECLIMB_MAG};
         kickBack[] = {0.03*KICKBACK,0.06*KICKBACK};
-        temporary = 0.005*MUZZLETEMP;
+        temporary = 0.01*MUZZLETEMP; //0.005*MUZZLETEMP;
     };
 
     class recoil_zafir: recoil_default {
         muzzleOuter[] = {0.5*MUZZLERIGHT_POS,1*MUZZLECLIMB_POS,0.7*MUZZLERIGHT_MAG,0.3*MUZZLECLIMB_MAG};
         kickBack[] = {0.02*KICKBACK,0.08*KICKBACK};
-        temporary = 0.005*MUZZLETEMP;
+        temporary = 0.01*MUZZLETEMP; //0.005*MUZZLETEMP;
     };
 
     class recoil_m320: recoil_default {
@@ -244,12 +244,12 @@ class CfgRecoils {
     class recoil_mmg_01: recoil_default {
         muzzleOuter[] = {0.6*MUZZLERIGHT_POS,1.5*MUZZLECLIMB_POS,0.8*MUZZLERIGHT_MAG,0.3*MUZZLECLIMB_MAG};
         kickBack[] = {0.02*KICKBACK,0.08*KICKBACK};
-        temporary = 0.005*MUZZLETEMP;
+        temporary = 0.01*MUZZLETEMP; //0.005*MUZZLETEMP;
     };
 
     class recoil_mmg_02: recoil_default {
         muzzleOuter[] = {0.5*MUZZLERIGHT_POS,1.5*MUZZLECLIMB_POS,0.6*MUZZLERIGHT_MAG,0.4*MUZZLECLIMB_MAG};
         kickBack[] = {0.04*KICKBACK,0.08*KICKBACK};
-        temporary = 0.005*MUZZLETEMP;
+        temporary = 0.01*MUZZLETEMP; //0.005*MUZZLETEMP;
     };
 };

@@ -1,6 +1,11 @@
 #include "\x\cba\addons\main\script_macros_common.hpp"
 #include "\x\cba\addons\xeh\script_xeh.hpp"
 
+//Faster Array Unwraping (skips the IS_ARRAY check normaly found in EXPLODE_1_SYS)
+#undef EXPLODE_2_SYS
+#define EXPLODE_1_SYS_FAST(ARRAY,A) A =(ARRAY) select 0
+#define EXPLODE_2_SYS(ARRAY,A,B) EXPLODE_1_SYS_FAST(ARRAY,A); B = (ARRAY) select 1
+
 // Default versioning level
 #define DEFAULT_VERSIONING_LEVEL 2
 

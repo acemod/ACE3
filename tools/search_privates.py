@@ -53,7 +53,7 @@ def check_privates(filepath):
         
         
         # Regex search privates
-        srch = re.compile('(?<![_a-zA-Z0-9])(_[a-zA-Z]*?)[ ,\}\]\)";]')
+        srch = re.compile('(?<![_a-zA-Z0-9])(_[a-zA-Z]*?)[ ,\^\-\+\/\*\%\}\]\)";]')
         priv_use = srch.findall(content)
         priv_use = sorted(set(priv_use))
         
