@@ -1639,25 +1639,25 @@
             <Polish>M14 (oliwkowy)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01">
-            <English>HK 121</English>
-            <Czech>HK 121</Czech>
-            <French>HK 121</French>
-            <Spanish>HK 121</Spanish>
-            <Russian>HK 121</Russian>
+            <English>HK121</English>
+            <Czech>HK121</Czech>
+            <French>HK121</French>
+            <Spanish>HK121</Spanish>
+            <Russian>HK121</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_hex">
-            <English>HK 121 (Hex)</English>
-            <Czech>HK 121 (Hex)</Czech>
-            <French>HK 121 (Hex)</French>
-            <Spanish>HK 121 (Hex)</Spanish>
-            <Russian>HK 121 (гекс)</Russian>
+            <English>HK121 (Hex)</English>
+            <Czech>HK121 (Hex)</Czech>
+            <French>HK121 (Hex)</French>
+            <Spanish>HK121 (Hex)</Spanish>
+            <Russian>HK121 (гекс)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_tan">
-            <English>HK 121 (Tan)</English>
-            <Czech>HK 121 (Tan)</Czech>
-            <French>HK 121 (Tan)</French>
-            <Spanish>HK 121 (Tan)</Spanish>
-            <Russian>HK 121 (бронза)</Russian>
+            <English>HK121 (Tan)</English>
+            <Czech>HK121 (Tan)</Czech>
+            <French>HK121 (Tan)</French>
+            <Spanish>HK121 (Tan)</Spanish>
+            <Russian>HK121 (бронза)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02">
             <English>LWMMG</English>
