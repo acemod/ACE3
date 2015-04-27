@@ -1443,7 +1443,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_inPain">
             <English>He is in pain</English>
-            <French>Ill souffre</French>
+            <French>Il souffre</French>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noPain">
             <English>He is not in pain</English>
