@@ -18,12 +18,14 @@
 #include "\z\ace\addons\overheating\script_component.hpp"
 
 private ["_unit", "_weapon", "_ammo", "_projectile"];
+
 _unit = _this select 0;
+_weapon = _this select 1;
+_ammo = _this select 4;
+_projectile = _this select 6;
 
 // Exit if the unit isn't a player
 if !([_unit] call EFUNC(common,isPlayer)) exitWith {};
-
-_weapon = _this select 1;
 
 // Compute new temperature if the unit is the local player
 if (_unit == ACE_player) then {
@@ -119,7 +121,7 @@ if (count GVAR(pseudoRandomList) == 0) exitWith {};
 private "_pseudoRandomPair";
 _pseudoRandomPair = GVAR(pseudoRandomList) select ((_unit ammo _weapon) mod count GVAR(pseudoRandomList));
 
-[_projectile, (_pseudoRandomPair select 0) * _dispersion, (_pseudoRandomPair select 1) * _dispersion, (_slowdownFactor - 1) * vectorMagnitude _velocity] call EFUNC(common,changeProjectileDirection);
+[_projectile, (_pseudoRandomPair select 0) * _dispersion, (_pseudoRandomPair select 1) * _dispersion, (_slowdownFactor - 1) * vectorMagnitude (velocity _projectile)] call EFUNC(common,changeProjectileDirection);
 
 
 
