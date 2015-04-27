@@ -1482,88 +1482,88 @@
             <Russian>VS-121</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_02">
-            <English>MAR-10</English>
-            <Czech>MAR-10</Czech>
-            <French>MAR-10</French>
-            <Spanish>MAR-10</Spanish>
-            <Russian>MAR-10</Russian>
+            <English>Noreen "Bad News" ULR</English>
+            <Czech>Noreen "Bad News" ULR</Czech>
+            <French>Noreen "Bad News" ULR</French>
+            <Spanish>Noreen "Bad News" ULR</Spanish>
+            <Russian>Noreen "Bad News" ULR</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02">
-            <English>MAR-10 (Black)</English>
-            <Czech>MAR-10 (Black)</Czech>
-            <French>MAR-10 (Noir)</French>
-            <Spanish>MAR-10 (Negro)</Spanish>
-            <Russian>MAR-10 (черный)</Russian>
+            <English>Noreen "Bad News" ULR (Black)</English>
+            <Czech>Noreen "Bad News" ULR (Black)</Czech>
+            <French>Noreen "Bad News" ULR (Noir)</French>
+            <Spanish>Noreen "Bad News" ULR (Negro)</Spanish>
+            <Russian>Noreen "Bad News" ULR (черный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_camo">
-            <English>MAR-10 (Camo)</English>
-            <Czech>MAR-10 (Camo)</Czech>
-            <French>MAR-10 (Camo)</French>
-            <Spanish>MAR-10 (Camuflaje)</Spanish>
-            <Russian>MAR-10 (камо)</Russian>
+            <English>Noreen "Bad News" ULR (Camo)</English>
+            <Czech>Noreen "Bad News" ULR (Camo)</Czech>
+            <French>Noreen "Bad News" ULR (Camo)</French>
+            <Spanish>Noreen "Bad News" ULR (Camuflaje)</Spanish>
+            <Russian>Noreen "Bad News" ULR (камо)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_sniper">
-            <English>MAR-10 (Sand)</English>
-            <Czech>MAR-10 (Sand)</Czech>
-            <French>MAR-10 (Beige)</French>
-            <Spanish>MAR-10 (Arena)</Spanish>
-            <Russian>MAR-10 (песочный)</Russian>
+            <English>Noreen "Bad News" ULR (Sand)</English>
+            <Czech>Noreen "Bad News" ULR (Sand)</Czech>
+            <French>Noreen "Bad News" ULR (Beige)</French>
+            <Spanish>Noreen "Bad News" ULR (Arena)</Spanish>
+            <Russian>Noreen "Bad News" ULR (песочный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_03">
-            <English>SG 556</English>
-            <Czech>SG 556</Czech>
-            <French>SG 556</French>
-            <Spanish>SG 556</Spanish>
-            <Russian>SG 556</Russian>
-            <Polish>SG 556</Polish>
+            <English>SIG 556</English>
+            <Czech>SIG 556</Czech>
+            <French>SIG 556</French>
+            <Spanish>SIG 556</Spanish>
+            <Russian>SIG 556</Russian>
+            <Polish>SIG 556</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03">
-            <English>SG 556 (Black)</English>
-            <Czech>SG 556 (Black)</Czech>
-            <French>SG 556 (Noir)</French>
-            <Spanish>SG 556 (Negro)</Spanish>
-            <Russian>SG 556 (черный)</Russian>
-            <Polish>SG 556 (czarny)</Polish>
+            <English>SIG 556 (Black)</English>
+            <Czech>SIG 556 (Black)</Czech>
+            <French>SIG 556 (Noir)</French>
+            <Spanish>SIG 556 (Negro)</Spanish>
+            <Russian>SIG 556 (черный)</Russian>
+            <Polish>SIG 556 (czarny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_khaki">
-            <English>SG 556 (Khaki)</English>
-            <Czech>SG 556 (Khaki)</Czech>
-            <French>SG 556 (Kaki)</French>
-            <Spanish>SG 556 (Caqui)</Spanish>
-            <Russian>SG 556 (хаки)</Russian>
-            <Polish>SG 556 (khaki)</Polish>
+            <English>SIG 556 (Khaki)</English>
+            <Czech>SIG 556 (Khaki)</Czech>
+            <French>SIG 556 (Kaki)</French>
+            <Spanish>SIG 556 (Caqui)</Spanish>
+            <Russian>SIG 556 (хаки)</Russian>
+            <Polish>SIG 556 (khaki)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_tan">
-            <English>SG 556 (Sand)</English>
-            <Czech>SG 556 (Sand)</Czech>
-            <French>SG 556 (Beige)</French>
-            <Spanish>SG 556 (Arena)</Spanish>
-            <Russian>SG 556 (песочный)</Russian>
-            <Polish>SG 556 (piaskowy)</Polish>
+            <English>SIG 556 (Sand)</English>
+            <Czech>SIG 556 (Sand)</Czech>
+            <French>SIG 556 (Beige)</French>
+            <Spanish>SIG 556 (Arena)</Spanish>
+            <Russian>SIG 556 (песочный)</Russian>
+            <Polish>SIG 556 (piaskowy)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_multicam">
-            <English>SG 556 (Camo)</English>
-            <Czech>SG 556 (Camo)</Czech>
-            <French>SG 556 (Camo)</French>
-            <Spanish>SG 556 (Camuflaje)</Spanish>
-            <Russian>SG 556 (камо)</Russian>
-            <Polish>SG 556 (kamuflaż)</Polish>
+            <English>SIG 556 (Camo)</English>
+            <Czech>SIG 556 (Camo)</Czech>
+            <French>SIG 556 (Camo)</French>
+            <Spanish>SIG 556 (Camuflaje)</Spanish>
+            <Russian>SIG 556 (камо)</Russian>
+            <Polish>SIG 556 (kamuflaż)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_woodland">
-            <English>SG 556 (Woodland)</English>
-            <Czech>SG 556 (Woodland)</Czech>
-            <French>SG 556 (Woodland)</French>
-            <Spanish>SG 556 (Bosque)</Spanish>
-            <Russian>SG 556 (лесной)</Russian>
-            <Polish>SG 556 (leśny)</Polish>
+            <English>SIG 556 (Woodland)</English>
+            <Czech>SIG 556 (Woodland)</Czech>
+            <French>SIG 556 (Woodland)</French>
+            <Spanish>SIG 556 (Bosque)</Spanish>
+            <Russian>SIG 556 (лесной)</Russian>
+            <Polish>SIG 556 (leśny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
-            <English>SG 556 (provisional) spotter</English>
-            <Czech>SG 556 (provisional) spotter</Czech>
-            <French>SG 556 (provisoire) Observateur</French>
-            <Spanish>SG 556 (provisional) observador</Spanish>
-            <Russian>SG 556 (provisional) корректировщик</Russian>
-            <Polish>SG 556 (prowizoryczny) obserwator</Polish>
+            <English>SIG 556 (provisional) spotter</English>
+            <Czech>SIG 556 (provisional) spotter</Czech>
+            <French>SIG 556 (provisoire) Observateur</French>
+            <Spanish>SIG 556 (provisional) observador</Spanish>
+            <Russian>SIG 556 (provisional) корректировщик</Russian>
+            <Polish>SIG 556 (prowizoryczny) obserwator</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_04">
             <English>ASP-1 Kir</English>
@@ -1639,25 +1639,25 @@
             <Polish>M14 (oliwkowy)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01">
-            <English>Navid</English>
-            <Czech>Navid</Czech>
-            <French>Navid</French>
-            <Spanish>Navid</Spanish>
-            <Russian>Navid</Russian>
+            <English>HK121</English>
+            <Czech>HK121</Czech>
+            <French>HK121</French>
+            <Spanish>HK121</Spanish>
+            <Russian>HK121</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_hex">
-            <English>Navid (Hex)</English>
-            <Czech>Navid (Hex)</Czech>
-            <French>Navid (Hex)</French>
-            <Spanish>Navid (Hex)</Spanish>
-            <Russian>Navid (гекс)</Russian>
+            <English>HK121 (Hex)</English>
+            <Czech>HK121 (Hex)</Czech>
+            <French>HK121 (Hex)</French>
+            <Spanish>HK121 (Hex)</Spanish>
+            <Russian>HK121 (гекс)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_tan">
-            <English>Navid (Tan)</English>
-            <Czech>Navid (Tan)</Czech>
-            <French>Navid (Tan)</French>
-            <Spanish>Navid (Tan)</Spanish>
-            <Russian>Navid (бронза)</Russian>
+            <English>HK121 (Tan)</English>
+            <Czech>HK121 (Tan)</Czech>
+            <French>HK121 (Tan)</French>
+            <Spanish>HK121 (Tan)</Spanish>
+            <Russian>HK121 (бронза)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02">
             <English>LWMMG</English>
