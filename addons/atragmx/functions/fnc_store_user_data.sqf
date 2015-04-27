@@ -20,7 +20,6 @@ profileNamespace setVariable ["ACE_ATragMX_profileNamespaceVersion", ATRAGMX_PRO
 profileNamespace setVariable ["ACE_ATragMX_currentUnit", GVAR(currentUnit)];
 profileNamespace setVariable ["ACE_ATragMX_currentGun", GVAR(currentGun)];
 profileNamespace setVariable ["ACE_ATragMX_currentTarget", GVAR(currentTarget)];
-profileNamespace setVariable ["ACE_ATragMX_currentScopeUnit", GVAR(currentScopeUnit)];
 
 profileNamespace setVariable ["ACE_ATragMX_atmosphereModeTBH", GVAR(atmosphereModeTBH)];
 profileNamespace setVariable ["ACE_ATragMX_altitude", GVAR(altitude)];
@@ -36,6 +35,7 @@ profileNamespace setVariable ["ACE_ATragMX_windSpeed2", GVAR(windSpeed2)];
 profileNamespace setVariable ["ACE_ATragMX_windDirection", GVAR(windDirection)];
 profileNamespace setVariable ["ACE_ATragMX_inclinationAngle", GVAR(inclinationAngle)];
 profileNamespace setVariable ["ACE_ATragMX_targetSpeed", GVAR(targetSpeed)];
+profileNamespace setVariable ["ACE_ATragMX_targetSpeedDirection", GVAR(targetSpeedDirection)];
 profileNamespace setVariable ["ACE_ATragMX_targetRange", GVAR(targetRange)];
 
 profileNamespace setVariable ["ACE_ATragMX_rangeCardStartRange", GVAR(rangeCardStartRange)];

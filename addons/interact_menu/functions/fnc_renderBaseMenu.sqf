@@ -41,9 +41,21 @@ if((count _this) > 2) then {
     };
 };
 
-// For non-self actions, exit if the action is too far away
+// For non-self actions, exit if the action is too far away or ocluded
 if (GVAR(openedMenuType) == 0 && vehicle ACE_player == ACE_player &&
-    {(ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot")) distance _pos >= _distance}) exitWith {false};
+    {
+        private ["_headPos","_actualDistance"];
+        _headPos = ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot");
+        _actualDistance = _headPos distance _pos;
+
+        if (_actualDistance > _distance) exitWith {true};
+
+        if (_distance > 1.0) exitWith {
+            // If distance to action is greater than 1.0 m, check LOS
+            _line = [_headPos call EFUNC(common,positionToASL), _pos call EFUNC(common,positionToASL), _object, ACE_player];
+            lineIntersects _line
+        };
+    }) exitWith {false};
 
 // Exit if the action is behind you
 _sPos = if (count _pos != 2) then {

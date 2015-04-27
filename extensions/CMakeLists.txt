@@ -25,6 +25,34 @@ file(GLOB ACE_COMMON_SOURCES common/*.h common/*.hpp common/*.c common/*.cpp)
 add_library(ace_common STATIC ${ACE_COMMON_SOURCES})
 include_directories(AFTER "common")
 
+string(TIMESTAMP ACE_BUILDSTAMP "%Y-%m-%dT%H:%M:%SZ")
+set(ACE_VERSION_MAJOR 3)
+set(ACE_VERSION_MINOR 0)
+set(ACE_VERSION_REVISION 1)
+EXECUTE_PROCESS(COMMAND git rev-parse --verify HEAD
+    OUTPUT_VARIABLE T_ACE_VERSION_BUILD
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+string(SUBSTRING ${T_ACE_VERSION_BUILD} 0 7 ACE_VERSION_BUILD )
+
+message("Building for: " ${ACE_VERSION_MAJOR}.${ACE_VERSION_MINOR}.${ACE_VERSION_REVISION}-${ACE_VERSION_BUILD})
+
+configure_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/common/ace_version.hpp.in" 
+    "${CMAKE_CURRENT_BINARY_DIR}/common/ace_version.hpp" 
+  @ONLY)
+
+if(MSVC)
+    configure_file(
+        "${CMAKE_CURRENT_SOURCE_DIR}/common/ace_version_win32.rc.in" 
+        "${CMAKE_CURRENT_BINARY_DIR}/common/ace_version_win32.rc" 
+      @ONLY)
+    set(GLOBAL_RC ${CMAKE_CURRENT_BINARY_DIR}/common/ace_version_win32.rc)
+endif()
+
+include_directories(AFTER ${CMAKE_CURRENT_BINARY_DIR}/common)
+set(GLOBAL_SOURCES ${GLOBAL_RC})
+
 # Add extensions to build here
 add_subdirectory(fcs)
 add_subdirectory(breakLine)

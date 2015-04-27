@@ -26,6 +26,9 @@ GVAR(tracesStarted) = false;
 GVAR(traceID) = -1;
 GVAR(autoTrace) = true;
 
+// TODO setting
+GVAR(enabled) = true;
+
 
 // * Other Shit */
 PREP(frag_trace);

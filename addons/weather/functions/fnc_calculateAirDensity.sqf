@@ -1,7 +1,7 @@
 /*
  * Author: Ruthberg
  *
- * Displays a wind info (colored arrow) in the top left corner of the screen
+ * Calculates the air density
  *
  * Arguments:
  * 0: temperature - degrees celcius <NUMBER>

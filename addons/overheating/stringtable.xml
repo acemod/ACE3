@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Overheating">
         <Key ID="STR_ACE_overheating_SettingDisplayTextName">
@@ -139,7 +138,6 @@
             <French>Vérifier la température</French>
             <Hungarian>Fegyverhő ellenőrzése</Hungarian>
             <Russian>Проверить температуру оружия</Russian>
-            <German>Waffentemperatur prüfen</German>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingTemperature">
             <English>Checking temperature ...</English>

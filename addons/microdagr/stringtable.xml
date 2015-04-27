@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="microdagr">
         <Key ID="STR_ACE_microdagr_itemName">
@@ -252,7 +251,7 @@
             <Spanish>Mostrar MicroDAGR</Spanish>
             <Russian>Показать MicroDAGR</Russian>
             <Czech>Ukázat MicroDAGR GPS</Czech>
-            <Polish>Pokaż&lt;br /&gt;MicroDAGR</Polish>
+            <Polish>Pokaż MicroDAGR</Polish>
             <French>Afficher MicroDAGR</French>
             <Hungarian>MicroDAGR mutatása</Hungarian>
             <Italian>Mostra MicroDAGR</Italian>
@@ -263,7 +262,7 @@
             <Spanish>Configurar MicroDAGR</Spanish>
             <Russian>Настроить MicroDAGR</Russian>
             <Czech>Konfigurovat MicroDAGR GPS</Czech>
-            <Polish>Konfiguruj&lt;br /&gt;MicroDAGR</Polish>
+            <Polish>Konfiguruj MicroDAGR</Polish>
             <French>Configurer MicroDAGR</French>
             <Hungarian>MicroDAGR konfigurálása</Hungarian>
             <Italian>ConfiguraMicroDAGR</Italian>
@@ -274,7 +273,7 @@
             <Spanish>Cerrar MicroDAGR</Spanish>
             <Russian>Закрыть MicroDAGR</Russian>
             <Czech>Zavřít MicroDAGR GPS</Czech>
-            <Polish>Zamknij&lt;br /&gt;MicroDAGR</Polish>
+            <Polish>Zamknij MicroDAGR</Polish>
             <French>Fermer MicroDAGR</French>
             <Hungarian>MicroDAGR elrejtése</Hungarian>
             <Italian>Chiudi MicroDAGR</Italian>
