@@ -1062,14 +1062,14 @@
             <Russian>МР-443 "Грач"</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_ACPC2_Name">
-            <English>ACP-C2</English>
-            <German>ACP-C2</German>
-            <Czech>ACP-C2</Czech>
-            <Polish>ACP-C2</Polish>
-            <French>ACP-C2</French>
-            <Hungarian>ACP-C2</Hungarian>
-            <Spanish>ACP-C2</Spanish>
-            <Russian>ACP-C2</Russian>
+            <English>Custom Covert II</English>
+            <German>Custom Covert II</German>
+            <Czech>Custom Covert II</Czech>
+            <Polish>Custom Covert II</Polish>
+            <French>Custom Covert II</French>
+            <Hungarian>Custom Covert II</Hungarian>
+            <Spanish>Custom Covert II</Spanish>
+            <Russian>Custom Covert II</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_Name">
             <English>FNX-45 Tactical</English>
@@ -1242,34 +1242,34 @@
             <Russian>MXM (черный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_Name">
-            <English>KT2002 Katiba</English>
-            <German>KT2002 Katiba</German>
-            <Czech>KT2002 Katiba</Czech>
-            <Polish>KT2002 Katiba</Polish>
-            <French>KT2002 Katiba</French>
-            <Hungarian>KT2002 Katiba</Hungarian>
-            <Spanish>KT2002 Katiba</Spanish>
-            <Russian>KT2002 Катиба</Russian>
+            <English>KH2002 Sama</English>
+            <German>KH2002 Sama</German>
+            <Czech>KH2002 Sama</Czech>
+            <Polish>KH2002 Sama</Polish>
+            <French>KH2002 Sama</French>
+            <Hungarian>KH2002 Sama</Hungarian>
+            <Spanish>KH2002 Sama</Spanish>
+            <Russian>KH2002 Сама</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_C_Name">
-            <English>KT2002C Katiba</English>
-            <German>KT2002C Katiba</German>
-            <Czech>KT2002C Katiba</Czech>
-            <Polish>KT2002C Katiba</Polish>
-            <French>KT2002C Katiba</French>
-            <Hungarian>KT2002C Katiba</Hungarian>
-            <Spanish>KT2002C Katiba</Spanish>
-            <Russian>KT2002C Катиба</Russian>
+            <English>KH2002C Sama</English>
+            <German>KH2002C Sama</German>
+            <Czech>KH2002C Sama</Czech>
+            <Polish>KH2002C Sama</Polish>
+            <French>KH2002C Sama</French>
+            <Hungarian>KH2002C Sama</Hungarian>
+            <Spanish>KH2002C Sama</Spanish>
+            <Russian>KH2002C Сама</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_GL_Name">
-            <English>KT2002 Katiba KGL</English>
-            <German>KT2002 Katiba KGL</German>
-            <Czech>KT2002 Katiba KGL</Czech>
-            <Polish>KT2002 Katiba KGL</Polish>
-            <French>KT2002 Katiba KGL</French>
-            <Hungarian>KT2002 Katiba KGL</Hungarian>
-            <Spanish>KT2002 Katiba KGL</Spanish>
-            <Russian>KT2002 Катиба KGL</Russian>
+            <English>KH2002 Sama KGL</English>
+            <German>KH2002 Sama KGL</German>
+            <Czech>KH2002 Sama KGL</Czech>
+            <Polish>KH2002 Sama KGL</Polish>
+            <French>KH2002 Sama KGL</French>
+            <Hungarian>KH2002 Sama KGL</Hungarian>
+            <Spanish>KH2002 Sama KGL</Spanish>
+            <Russian>KH2002 Сама KGL</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_Name">
             <English>F2000 (Camo)</English>
