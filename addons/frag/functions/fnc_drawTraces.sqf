@@ -7,10 +7,7 @@ private ["_color", "_index", "_lastPos", "_lastSpd", "_max", "_positions", "_sta
     _color = _x select 5;
     _index = 0;
     _max = count _positions;
-    _startSpeed = (_positions select 0) select 1;
-    if(_startSpeed <= 0) then {
-        _startSpeed = 0.01;
-    };
+    _startSpeed = 0.01 max ((_positions select 0) select 1);
     _lastSpd = [];
     _lastPos = [];
     while {_index < _max} do {

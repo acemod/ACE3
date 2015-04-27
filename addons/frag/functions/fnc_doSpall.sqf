@@ -65,16 +65,8 @@ if(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) then {
         _pos = _hpData select 3;
         _spallPos = nil;
         for "_i" from 0 to 100 do {
-            _pos1 = [
-                        (_pos select 0) + (((_unitDir select 0)*0.01)*_i),
-                        (_pos select 1) + (((_unitDir select 1)*0.01)*_i),
-                        (_pos select 2) + (((_unitDir select 2)*0.01)*_i)
-                    ];
-            _pos2 = [
-                        (_pos select 0) + (((_unitDir select 0)*0.01)*(_i+1)),
-                        (_pos select 1) + (((_unitDir select 1)*0.01)*(_i+1)),
-                        (_pos select 2) + (((_unitDir select 2)*0.01)*(_i+1))
-                    ];
+            _pos1 = _pos vectorAdd (_unitDir vectorMultiply (0.01 * _i));
+            _pos2 = _pos vectorAdd (_unitDir vectorMultiply (0.01 * (_i + 1)));
             // _blah = [_object, "FIRE"] intersect [_object worldToModel (ASLtoATL _pos1), _object worldToModel (ASLtoATL _pos2)];
             // diag_log text format["b: %1", _blah];
 
