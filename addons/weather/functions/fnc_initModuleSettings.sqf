@@ -32,3 +32,8 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(syncRain), "syncRain"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(syncWind), "syncWind"] call EFUNC(common,readSettingFromModule); // Wind, Gusts, Waves
 [_logic, QGVAR(syncMisc), "syncMisc"] call EFUNC(common,readSettingFromModule); // Lightnings, Rainbow, Fog
+
+// Server weather update interval
+[_logic, QGVAR(serverUpdateInterval), "serverUpdateInterval"] call EFUNC(common,readSettingFromModule);
+
+GVAR(serverUpdateInterval) = 1 max GVAR(serverUpdateInterval) min 600;

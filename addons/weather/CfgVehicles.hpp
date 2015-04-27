@@ -41,6 +41,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class serverUpdateInterval {
+                displayName = "Update Interval";
+                description = "Defines the interval (seconds) between weather updates";
+                typeName = "NUMBER";
+                defaultValue = 60;
+            };
         };
     };
 };

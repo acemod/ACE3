@@ -29,4 +29,10 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
+    class GVAR(serverUpdateInterval) {
+        displayName = "Update Interval";
+        description = "Defines the interval (seconds) between weather updates";
+        typeName = "SCALAR";
+        value = 60;
+    };
 };
