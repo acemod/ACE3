@@ -1084,6 +1084,7 @@
             <English>Personal Aid Kit for in field stitching or advanced treatment</English>
             <Polish>W znacznym stopniu poprawia stan pacjenta</Polish>
             <Russian>Полевая аптчека для продвинутого лечения и зашивания ран</Russian>
+            <German>Persönliches Verbandspäckchen zum ambulanten Nähen und fortgeschrittener Behandlung.</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_USE_AID_KIT">
             <English>Use Personal Aid Kit</English>
@@ -1423,30 +1424,37 @@
         <Key ID="STR_ACE_MEDICAL_diagnoseMessage">
             <English>Patient %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</English>
             <Russian>Пациент %1&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Russian>
+            <German>Patient %1&lt;br/&gt;ist %2.&lt;br/&gt;%3.&lt;br/&gt;%4</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseAlive">
             <English>alive</English>
             <Russian>жив</Russian>
+            <German>lebendig</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseDead">
             <English>dead</English>
             <Russian>мертв</Russian>
+            <German>tot</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_lostBlood">
             <English>He's lost some blood</English>
             <Russian>Есть кровопотеря</Russian>
+            <German>Er hat etwas Blut verloren</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noBloodloss">
             <English>He hasn't lost blood</English>
             <Russian>Нет кровопотери</Russian>
+            <German>Er hat kein Blut verloren</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_inPain">
             <English>He is in pain</English>
             <Russian>Испытывает боль</Russian>
+            <German>Er hat Schmerzen</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noPain">
             <English>He is not in pain</English>
             <Russian>Не испытывает боли</Russian>
+            <German>Er hat keine Schmerzen</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BANDAGED">
             <English>Bandaged</English>

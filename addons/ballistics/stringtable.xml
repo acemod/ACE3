@@ -574,6 +574,7 @@
             <French>Chargeur 9x19mm 16Cps</French>
             <Spanish>Cargador de 16 balas de 9x19mm</Spanish>
             <Russian>Магазин из 16-ти 9х19 мм</Russian>
+            <German>9x19mm 20-Schuss-Magazin</German>
         </Key>
         <Key ID="STR_ACE_16Rnd_9x19_mag_NameShort">
             <English>9x19mm</English>
@@ -581,6 +582,7 @@
             <French>9x19mm</French>
             <Spanish>9x19mm</Spanish>
             <Russian>9х19 мм</Russian>
+            <German>9x19mm</German>
         </Key>
         <Key ID="STR_ACE_16Rnd_9x19_mag_Description">
             <English>9x19mm 30Rnd Mag</English>
@@ -588,6 +590,7 @@
             <French>9x19mm 30Cps</French>
             <Spanish>Cargador de 16 balas de 9x19mm</Spanish>
             <Russian>Магазин из 16-ти 9х19 мм</Russian>
+            <German>9x19mm 30-Schuss-Magazin</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_9x19_mag_Name">
             <English>9x19mm 30Rnd Mag</English>
@@ -595,6 +598,7 @@
             <French>9x19mm 30Cps</French>
             <Spanish>Cargador de 30 balas de 9x19mm</Spanish>
             <Russian>Магазин из 30-ти 9х19 мм</Russian>
+            <German>9x19mm 30-Schuss-Magazin</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_9x19_mag_NameShort">
             <English>9x19mm</English>
@@ -602,6 +606,7 @@
             <French>9x19mm</French>
             <Spanish>9x19mm</Spanish>
             <Russian>9х19 мм</Russian>
+            <German>9x19mm</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_9x19_mag_Description">
             <English>9x19mm 30Rnd Mag</English>
@@ -609,6 +614,7 @@
             <French>9x19mm 30Cps</French>
             <Spanish>Cargador de 30 balas de 9x19mm</Spanish>
             <Russian>Магазин из 30-ти 9х19 мм</Russian>
+            <German>9x19mm 30-Schuss-Magazin</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_Name">
             <English>7.62x54mm 10Rnd Tracer IR-DIM Mag</English>
@@ -616,6 +622,7 @@
             <French>Chargeur 7.62x54mm 10Rnd Traçante IR-DIM</French>
             <Spanish>Cargador de 10 balas trazadoras IR-DIM de 7.62x54mm</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм ИК-трассирующих</Russian>
+            <German>7,62x54 10-Schuss-Magazin IR-DIM Leuchtspur</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_NameShort">
             <English>7.62mm IR-DIM</English>
@@ -623,6 +630,7 @@
             <French>7.62mm IR-DIM</French>
             <Spanish>7.62mm IR-DIM</Spanish>
             <Russian>7,62 мм ИК-трассирующие</Russian>
+            <German>7,62x54 IR-DIM </German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_Description">
             <English>7.62x54mm 10Rnd Tracer IR-DIM Mag</English>
@@ -630,6 +638,7 @@
             <French>Chargeur 7.62x54mm 10Cps Traçante IR-DIM</French>
             <Spanish>Cargador de 10 balas trazadoras IR-DIM de 7.62x54mm</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм ИК-трассирующих</Russian>
+            <German>7,62x54 10-Schuss-Magazin IR-DIM Leuchtspur</German>
         </Key>
         <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimName">
             <English>6.5mm 100Rnd Tracer IR-DIM Mag</English>
@@ -637,6 +646,7 @@
             <French>Chargeur 6.5mm 100Rnd Traçante IR-DIM</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 100 6,5 мм ИК-трассирующих</Russian>
+            <German>6,5mm 100-Schuss-Magazin IR-DIM Leuchtspur</German>
         </Key>
         <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
@@ -644,6 +654,7 @@
             <French>6.5mm IR-DIM</French>
             <Spanish>6.5mm IR-DIM</Spanish>
             <Russian>6,5 мм ИК-трассирующие</Russian>
+            <German>6,5mm IR-DIM </German>
         </Key>
         <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimDescription">
             <English>6.5mm 100Rnd Tracer IR-DIM Mag&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX LSW</English>
@@ -651,6 +662,7 @@
             <French>Chargeur 6.5mm 100Rnd Traçante IR-DIM</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 100 6,5 мм ИК-трассирующих</Russian>
+            <German>6,5mm 100-Schuss-Magazin IR-DIM Leuchtspur&lt;br /&gt;Schuss: 100&lt;br /&gt;Verwendet für: MXLSW</German>
         </Key>
         <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimName">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt</English>
@@ -658,6 +670,7 @@
             <French>Bande 6.5mm 200Rnd Traçante IR-DIM</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
+            <German>6,5mm 200-Schuss-Gurt IR-DIM Leuchtspur</German>
         </Key>
         <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
@@ -665,6 +678,7 @@
             <French>6.5mm IR-DIM</French>
             <Spanish>6.5mm IR-DIM</Spanish>
             <Russian>6,5 мм ИК-трассирующие</Russian>
+            <German>6,5mm IR-DIM</German>
         </Key>
         <Key ID="STR_ACE_200Rnd_65x39_cased_Box_Tracer_DimDescription">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Stoner 99 LMG</English>
@@ -672,6 +686,7 @@
             <French>Bande 6.5mm 200Cps Traçante IR-DIM</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
+            <German>6,5mm 200-Schuss-Gurt IR-DIM Leuchtspur&lt;br /&gt;Schuss: 200&lt;br /&gt;Verwendet für: Stoner 99 LMG</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk262_mag_Name">
             <English>5.56mm 30Rnd Mag (Mk262)</English>
@@ -679,6 +694,7 @@
             <French>5.56mm 30Cps (Mk262)</French>
             <Spanish>Cargador de 30 balas de 5.56mm (Mk262)</Spanish>
             <Russian>Магазин из 30-ти 5.56 мм Mk262</Russian>
+            <German>5,56mm 30-Schuss-Magazin (Mk262)</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk262_mag_NameShort">
             <English>5.56mm Mk262</English>
@@ -686,6 +702,7 @@
             <French>5.56mm Mk262</French>
             <Spanish>5.56mm Mk262</Spanish>
             <Russian>5,56 мм Mk262</Russian>
+            <German>5,56mm Mk262</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk262_mag_Description">
             <English>Caliber: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Rounds: 30</English>
@@ -693,6 +710,7 @@
             <French>Calibre: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Balas: 30</Spanish>
             <Russian>Калибр: 5,56x45 мм NATO (Mk262)&lt;br /&gt;Патронов: 30</Russian>
+            <German>Kaliber: 5,56x45mm NATO (Mk262)&lt;br /&gt;Schuss: 30</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_Name">
             <English>5.56mm 30Rnd Mag (Mk318)</English>
@@ -700,6 +718,7 @@
             <French>5.56mm 30Cps (Mk318)</French>
             <Spanish>Cargador de 30 balas de 5.56mm (Mk318)</Spanish>
             <Russian>Магазин из 30-ти 5.56 мм (Mk318)</Russian>
+            <German>5,56mm 30-Schuss-Magazin (Mk318)</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_NameShort">
             <English>5.56mm Mk318</English>
@@ -707,6 +726,7 @@
             <French>5.56mm Mk318</French>
             <Spanish>5.56mm Mk318</Spanish>
             <Russian>5.56 мм Mk318</Russian>
+            <German>5,56mm Mk318</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_Description">
             <English>Caliber: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Rounds: 30</English>
@@ -714,6 +734,7 @@
             <French>Calibre: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Balas: 30</Spanish>
             <Russian>Калибр: 5,56x45 мм NATO (Mk318)&lt;br /&gt;Патронов: 30</Russian>
+            <German>Kaliber: 5,56x45mm NATO (Mk318)&lt;br /&gt;Schuss: 30</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_M995_AP_mag_Name">
             <English>5.56mm 30Rnd Mag (M995 AP)</English>
@@ -721,6 +742,7 @@
             <French>5.56mm 30Cps (M995 AP)</French>
             <Spanish>Cargador de 30 balas de 5.56mm (M995 AP)</Spanish>
             <Russian>Магазин из 30-ти 5.56 мм (M995 AP)</Russian>
+            <German>5,56mm 30-Schuss-Magazin (M995AP)</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_M995_AP_mag_NameShort">
             <English>5.56mm AP</English>
@@ -728,6 +750,7 @@
             <French>5.56mm AP</French>
             <Spanish>5.56mm AP</Spanish>
             <Russian>5.56 мм AP</Russian>
+            <German>5,56mm AP</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_M995_AP_mag_Description">
             <English>Caliber: 5.56x45 mm NATO (M995 AP)&lt;br /&gt;Rounds: 30</English>
@@ -735,6 +758,7 @@
             <French>Calibre: 5.56x45 mm NATO (M995 AP)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 5.56x45 mm NATO (M995 AP)&lt;br /&gt;Balas: 30</Spanish>
             <Russian>Калибр: 5,56x45 мм NATO (M995 AP)&lt;br /&gt;Патронов: 30</Russian>
+            <German>Kaliber: 5,56x45mm NATO (M995 AP)&lt;br /&gt;Schuss: 30</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_Name">
             <English>7.62mm 10Rnd Mag (M118LR)</English>
@@ -742,6 +766,7 @@
             <French>7.62mm 10Cps (M118LR)</French>
             <Spanish>Cargador de 10 balas de 7.62mm (M118LR)</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм (M118LR)</Russian>
+            <German>7,62mm 10-Schuss-Magazin (M118LR)</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_NameShort">
             <English>7.62mm M118LR</English>
@@ -749,6 +774,7 @@
             <French>7.62mm M118LR</French>
             <Spanish>7.62mm (M118LR)</Spanish>
             <Russian>7,62 мм M118LR</Russian>
+            <German>7,62mm M118LR</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Rounds: 10</English>
@@ -756,6 +782,7 @@
             <French>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Balas: 10</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M118LR)&lt;br /&gt;Патронов: 10</Russian>
+            <German>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Schuss: 10</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M118LR_Mag_Name">
             <English>7.62mm 20Rnd Mag (M118LR)</English>
@@ -763,6 +790,7 @@
             <French>7.62mm 20Cps (M118LR)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (M118LR)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (M118LR)</Russian>
+            <German>7,62mm 20-Schuss-Magazin (M118LR)</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M118LR_Mag_NameShort">
             <English>7.62mm M118LR</English>
@@ -770,6 +798,7 @@
             <French>7.62mm M118LR</French>
             <Spanish>7.62mm (M118LR)</Spanish>
             <Russian>7,62 мм M118LR</Russian>
+            <German>7,62mm M118LR</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M118LR_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Rounds: 20</English>
@@ -777,6 +806,7 @@
             <French>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M118LR)&lt;br /&gt;Патронов: 20</Russian>
+            <German>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Schuss: 20</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk316_Mod_0_Mag_Name">
             <English>7.62mm 10Rnd Mag (Mk316 Mod 0)</English>
@@ -784,6 +814,7 @@
             <French>7.62mm 10Cps (Mk316 Mod 0)</French>
             <Spanish>Cargador de 10 balas de 7.62mm (Mk316 Mod 0)</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм (Mk316 Mod 0)</Russian>
+            <German>7,62mm 10-Schuss-Magazin (Mk316 Mod 0)</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk316_Mod_0_Mag_NameShort">
             <English>7.62mm Mk316</English>
@@ -791,6 +822,7 @@
             <French>7.62mm Mk316</French>
             <Spanish>7.62mm Mk316</Spanish>
             <Russian>7,62 мм Mk316</Russian>
+            <German>7.62mm Mk316</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk316_Mod_0_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Rounds: 10</English>
@@ -798,6 +830,7 @@
             <French>Calibre: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Balas: 10</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (Mk316 Mod 0)&lt;br /&gt;Патронов: 10</Russian>
+            <German>Kaliber: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Schuss: 10</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk316_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk316 Mod 0)</English>
@@ -805,6 +838,7 @@
             <French>7.62mm 20Cps (Mk316 Mod 0)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Mk316 Mod 0)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (Mk316 Mod 0)</Russian>
+            <German>7.62mm 20-Schuss-Magazin (Mk316 Mod 0)</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk316_Mod_0_Mag_NameShort">
             <English>7.62mm Mk316</English>
@@ -812,6 +846,7 @@
             <French>7.62mm Mk316</French>
             <Spanish>7.62mm Mk316</Spanish>
             <Russian>7,62 мм Mk316</Russian>
+            <German>7.62mm Mk316</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk316_Mod_0_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Rounds: 20</English>
@@ -819,6 +854,7 @@
             <French>Calibre: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (Mk316 Mod 0)&lt;br /&gt;Патронов: 20</Russian>
+            <German>Kaliber: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Schuss: 20</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_Name">
             <English>7.62mm 10Rnd Mag (Mk319 Mod 0)</English>
@@ -826,6 +862,7 @@
             <French>7.62mm 10Cps (Mk319 Mod 0)</French>
             <Spanish>Cargador de 10 balas de 7.62mm (Mk319 Mod 0)</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм (Mk319 Mod 0)</Russian>
+            <German>7,62mm 10-Schuss-Magazin (Mk319 Mod 0)</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_NameShort">
             <English>7.62mm Mk319</English>
@@ -833,6 +870,7 @@
             <French>7.62mm Mk319</French>
             <Spanish>7.62mm Mk319</Spanish>
             <Russian>7,62mm Mk319</Russian>
+            <German>7.62mm Mk319</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Rounds: 10</English>
@@ -840,6 +878,7 @@
             <French>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Balas: 10</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (Mk319 Mod 0)&lt;br /&gt;Патронов: 10</Russian>
+            <German>Kaliber: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Schuss: 10</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk319 Mod 0)</English>
@@ -847,6 +886,7 @@
             <French>7.62mm 20Cps (Mk319 Mod 0)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Mk319 Mod 0)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (Mk319 Mod 0)</Russian>
+            <German>7,62mm 20-Schuss-Magazin (Mk319 Mod 0)</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_NameShort">
             <English>7.62mm Mk319</English>
@@ -854,6 +894,7 @@
             <French>7.62mm Mk319</French>
             <Spanish>7.62mm Mk319</Spanish>
             <Russian>7,62 мм Mk319</Russian>
+            <German>7.62mm Mk319</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Rounds: 20</English>
@@ -861,6 +902,7 @@
             <French>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (Mk319 Mod 0)&lt;br /&gt;Патронов: 20</Russian>
+            <German>Kaliber: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Schuss: 20</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M993_AP_Mag_Name">
             <English>7.62mm 10Rnd Mag (M993 AP)</English>
@@ -868,6 +910,7 @@
             <French>7.62mm 10Cps (M993 AP)</French>
             <Spanish>Cargador de 10 balas de 7.62mm (M993 AP)</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм (M993 AP)</Russian>
+            <German>7,62mm 10-Schuss-Magazin (M993 AP)</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M993_AP_Mag_NameShort">
             <English>7.62mm AP</English>
@@ -875,6 +918,7 @@
             <French>7.62mm AP</French>
             <Spanish>7.62mm AP</Spanish>
             <Russian>7,62mm AP</Russian>
+            <German>7,62mm AP</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M993_AP_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Rounds: 10</English>
@@ -882,6 +926,7 @@
             <French>Calibre: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Balas: 10</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M993 AP)&lt;br /&gt;Патронов: 10</Russian>
+            <German>Kaliber: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Schuss: 10</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M993_AP_Mag_Name">
             <English>7.62mm 20Rnd Mag (M993 AP)</English>
@@ -889,6 +934,7 @@
             <French>7.62mm 20Cps (M993 AP)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (M993 AP)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (M993 AP)</Russian>
+            <German>7,62mm 20-Schuss-Magazin (M993 AP)</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M993_AP_Mag_NameShort">
             <English>7.62mm AP</English>
@@ -896,6 +942,7 @@
             <French>7.62mm AP</French>
             <Spanish>7.62mm AP</Spanish>
             <Russian>7,62 мм AP</Russian>
+            <German>7,62mm AP</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M993_AP_Mag_Description">
             <English>Caliber: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Rounds: 20</English>
@@ -903,13 +950,15 @@
             <French>Calibre: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M993 AP)&lt;br /&gt;Патронов: 20</Russian>
-        </Key>        
+            <German>Kaliber: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Schuss: 20</German>
+        </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk248 Mod 0)</English>
             <Polish>Magazynek 7,62mm 20rd (Mk248 Mod 0)</Polish>
             <French>7.62mm 20Cps (Mk248 Mod 0)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Mk248 Mod 0)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (Mk248 Mod 0)</Russian>
+            <German>7,62mm 20-Schuss-Magazin (Mk248 Mod 0)</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_NameShort">
             <English>7.62mm (Mk248 Mod 0)</English>
@@ -917,6 +966,7 @@
             <French>7.62mm (Mk248 Mod 0)</French>
             <Spanish>7.62mm (Mk248 Mod 0)</Spanish>
             <Russian>7,62 мм (Mk248 Mod 0)</Russian>
+            <German>7,62mm (Mk248 Mod 0)</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Description">
             <English>Caliber: 7.62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Rounds: 20</English>
@@ -924,6 +974,7 @@
             <French>Calibre: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x67 мм NATO (Mk248 Mod 0)&lt;br /&gt;Патронов: 20</Russian>
+            <German>Kaliber: 7.62x51 mm NATO (Mk248 Mod 0)&lt;br /&gt;Schuss: 20</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk248 Mod 1)</English>
@@ -931,6 +982,7 @@
             <French>7.62mm 20Cps (Mk248 Mod 1)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Mk248 Mod 1)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (Mk248 Mod 1)</Russian>
+            <German>7,62mm 20-Schuss-Magazin (Mk248 Mod 1)</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_NameShort">
             <English>7.62mm (Mk248 Mod 1)</English>
@@ -938,6 +990,7 @@
             <French>7.62mm (Mk248 Mod 1)</French>
             <Spanish>7.62mm (Mk248 Mod 1)</Spanish>
             <Russian>7,62 мм (Mk248 Mod 1)</Russian>
+            <German>7,62mm (Mk248 Mod 1)</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_Description">
             <English>Caliber: 7.62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Rounds: 20</English>
@@ -945,6 +998,7 @@
             <French>Calibre: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x67 мм NATO (Mk248 Mod 1)&lt;br /&gt;Патронов: 20</Russian>
+            <German>Kaliber: 7.62x51 mm NATO (Mk248 Mod 1)&lt;br /&gt;Schuss: 20</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Name">
             <English>7.62mm 20Rnd Mag (Berger Hybrid OTM)</English>
@@ -952,6 +1006,7 @@
             <French>7.62 20Cps (Berger Hybrid OTM)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Berger Hybrid OTM)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (Berger Hybrid OTM)</Russian>
+            <German>7,62mm 20-Schuss-Magazin (Berger Hybrid OTM)</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_NameShort">
             <English>7.62mm (OTM)</English>
@@ -959,6 +1014,7 @@
             <French>7.62mm (OTM)</French>
             <Spanish>7.62mm (OTM)</Spanish>
             <Russian>7,62 мм (OTM)</Russian>
+            <German>7,62mm (OTM)</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Description">
             <English>Caliber: 7.62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Rounds: 20</English>
@@ -966,6 +1022,7 @@
             <French>Calibre: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x67 мм NATO (Berger Hybrid OTM)&lt;br /&gt;Патронов: 20</Russian>
+            <German>Kaliber: 7.62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Schuss: 20</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_Name">
             <English>6.5x47mm 30Rnd Mag (HPBT Scenar)</English>
@@ -973,6 +1030,7 @@
             <Spanish>Cargador de 30 balas de 6.5x47mm (HPBT Scenar)</Spanish>
             <Polish>Magazynek 6,5x47 mm 30rd (HPBT Scenar)</Polish>
             <Russian>Магазин из 30-ти 6,5x47 мм (HPBT Scenar)</Russian>
+            <German>6,5x47mm 30-Schuss-Magazin (HPBT Scenar)</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_NameShort">
             <English>6.5mm Lapua</English>
@@ -980,6 +1038,7 @@
             <Spanish>6.5mm Lapua</Spanish>
             <Polish>6,5mm Lapua</Polish>
             <Russian>6,5 мм Lapua</Russian>
+            <German>6,5 Lapua</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_Description">
             <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
@@ -987,10 +1046,12 @@
             <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 30</Spanish>
             <Polish>Kaliber: 6,5x47 mm (HPBT Scenar)&lt;br /&gt;Pociski: 30</Polish>
             <Russian>Калибр: 6,5x47 мм (HPBT Scenar)&lt;br /&gt;Патронов: 30</Russian>
+            <German>Kaliber: 6,5x47 mm (HPBT Scenar)&lt;br /&gt;Schuss: 30&lt;br /&gt;Verwendet für: MXM</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_Name">
             <English>6.5mm Creedmor 30Rnd Mag</English>
             <Polish>Magazynek 6,5mm Creedmor 30rd</Polish>
+            <German>6,5mm Creedmor 30-Schuss-Magazin</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_NameShort">
             <English>6.5mm CM</English>
@@ -998,10 +1059,12 @@
             <Spanish>6.5mm CM</Spanish>
             <Polish>6,5mm CM</Polish>
             <Russian>6,5 мм CM</Russian>
+            <German>6,5mm CM</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_Description">
             <English>Caliber: 6.5mm Creedmor&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
             <Polish>Kaliber: 6,5mm Creedmor&lt;br /&gt;Pociski: 30&lt;br /&gt;Używany w: MXM</Polish>
+            <German>Kaliber: 6,5x47 mm  Creedmor&lt;br /&gt;Schuss: 30&lt;br /&gt;Verwendet für: MXM</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Name">
             <English>.338 10Rnd Mag (300gr Sierra MatchKing HPBT)</English>
@@ -1009,6 +1072,7 @@
             <Spanish>Cargador de 10 balas de 8.6x70mm (300gr Sierra MatchKing HPBT)</Spanish>
             <Polish>Magazynek .338 10rd (300gr Sierra MatchKing HPBT)</Polish>
             <Russian>Магазин из 10-ти .338 (300 гран Sierra MatchKing HPBT)</Russian>
+            <German>.338 10-Schuss-Magazin (300gr Sierra MatchKing HPBT)</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_NameShort">
             <English>.338 (HPBT)</English>
@@ -1016,6 +1080,7 @@
             <Spanish>.338 (HPBT)</Spanish>
             <Polish>.338 (HPBT)</Polish>
             <Russian>.338 (HPBT)</Russian>
+            <German>.338 (HPBT)</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Description">
             <English>Caliber: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Rounds: 10</English>
@@ -1023,6 +1088,7 @@
             <Spanish>Calibre: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Balas: 10</Spanish>
             <Polish>Kaliber: 8,6x70 mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Pociski: 10</Polish>
             <Russian>Калибр: .338 (300 гран Sierra MatchKing HPBT)&lt;br /&gt;Патронов: 10</Russian>
+            <German>Kaliber: 8,6x70 mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Schuss: 10</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Name">
             <English>.338 10Rnd Mag (API526)</English>
@@ -1030,6 +1096,7 @@
             <Spanish>Cargador de 10 balas de .338 (API526)</Spanish>
             <Polish>Magazynek .338 10rd (API526)</Polish>
             <Russian>Магазин из 10-ти .338 (API526)</Russian>
+            <German>.338 10-Schuss-Magazin (API526)</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_NameShort">
             <English>.338 AP</English>
@@ -1037,6 +1104,7 @@
             <Spanish>.338 AP</Spanish>
             <Polish>.338 AP</Polish>
             <Russian>.338 бронебойные</Russian>
+            <German>.338 (AP)</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Description">
             <English>Caliber: 8.6x70mm (API526)&lt;br /&gt;Rounds: 10</English>
@@ -1044,6 +1112,7 @@
             <Spanish>Calibre: 8.6x70mm (API526)&lt;br /&gt;Balas: 10</Spanish>
             <Polish>Kaliber: 8,6x70 mm (API526)&lt;br /&gt;Pociski: 10</Polish>
             <Russian>Калибр: .338 (API526)&lt;br /&gt;Патронов: 10</Russian>
+            <German>Kaliber: 8,6x70 mm (API526)&lt;br /&gt;Schuss: 10</German>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Name">
             <English>12.7x99mm 5Rnd Mag</English>
@@ -1051,6 +1120,7 @@
             <Spanish>Cargador de 5 balas de 12.7x99mm</Spanish>
             <Polish>Magazynek 12,7x99 mm 5rd</Polish>
             <Russian>Магазин из 5-ти 12,7x99 мм</Russian>
+            <German>12,7x99mm 5-Schuss-Magazin</German>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_NameShort">
             <English>12.7mm</English>
@@ -1058,6 +1128,7 @@
             <Spanish>12.7mm</Spanish>
             <Polish>12,7mm</Polish>
             <Russian>12,7 мм</Russian>
+            <German>12,7mm</German>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Description">
             <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 5</English>
@@ -1065,24 +1136,28 @@
             <Spanish>Calibre: 12.7x99mm&lt;br /&gt;Balas: 5</Spanish>
             <Polish>Kaliber: 12,7x99 mm&lt;br /&gt;Pociski: 5</Polish>
             <Russian>Калибр: 12,7x99 мм&lt;br /&gt;Патронов: 5</Russian>
+            <German>Kaliber: 12,7x99mm&lt;br /&gt;Schuss: 5</German>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_API_Mag_Name">
             <English>12.7x99mm API 5Rnd Mag</English>
             <French>12.7x99mm API 5Cps</French>
             <Spanish>Cargador de 5 balas de 12.7x99mm API</Spanish>
             <Polish>Magazynek 12,7x99mm API 5rd</Polish>
+            <German>12,7x99mm 5-Schuss-Magazin (API)</German>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_API_Mag_NameShort">
             <English>12.7mm API</English>
             <French>12.7mm API</French>
             <Spanish>12.7mm API</Spanish>
             <Polish>12,7mm API</Polish>
+            <German>12,7mm API</German>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_API_Mag_Description">
             <English>Caliber: 12.7x99mm API&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm API&lt;br /&gt;Cartouches: 5</French>
             <Spanish>Calibre: 12.7x99mm API&lt;br /&gt;Balas: 5</Spanish>
             <Polish>Kaliber: 12,7x99 mm API&lt;br /&gt;Pociski: 5</Polish>
+            <German>Kaliber:12,7x99mm API&lt;br /&gt;Schuss: 5</German>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Name">
             <English>12.7x99mm 5Rnd Mag (AMAX)</English>
@@ -1090,6 +1165,7 @@
             <Spanish>Cargador de 5 balas de 12.7x99mm (AMAX)</Spanish>
             <Polish>Magazynek 12,7x99 mm 5rd (AMAX)</Polish>
             <Russian>Магазин из 5-ти 12,7x99 мм (A-MAX)</Russian>
+            <German>12,7x99mm 5-Schuss-Magazin (AMAX)</German>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_NameShort">
             <English>12.7mm</English>
@@ -1097,6 +1173,7 @@
             <Spanish>12.7mm</Spanish>
             <Polish>12,7mm</Polish>
             <Russian>12,7 мм</Russian>
+            <German>12,7mm</German>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Description">
             <English>Caliber: 12.7x99mm (AMAX)&lt;br /&gt;Rounds: 5</English>
@@ -1104,6 +1181,7 @@
             <Spanish>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Balas: 5</Spanish>
             <Polish>Kaliber: 12,7x99 mm (AMAX)&lt;br /&gt;Pociski: 5</Polish>
             <Russian>Калибр: 12,7x99 мм (A-MAX)&lt;br /&gt;Патронов: 5</Russian>
+            <German>Kaliber:12,7x99mm (AMAX)&lt;br /&gt;Schuss: 5</German>
         </Key>
     </Package>
 </Project>

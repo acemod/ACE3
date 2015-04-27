@@ -1,17 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-  <Package name="mk6mortar">
-    <Key ID="STR_ACE_MK6MORTAR_rangetable_name">
-      <English>82mm Rangetable</English>
-    </Key>
-    <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
-      <English>Range Table for the MK6 82mm Mortar</English>
-    </Key>
-    <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
-      <English>Open 82mm Rangetable</English>
-    </Key>
-    <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
-      <English>Charge</English>
-    </Key>
-  </Package>
+    <Package name="mk6mortar">
+        <Key ID="STR_ACE_MK6MORTAR_rangetable_name">
+            <English>82mm Rangetable</English>
+            <German>82mm Distanztabelle</German>
+        </Key>
+        <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
+            <English>Range Table for the MK6 82mm Mortar</English>
+            <German>Distanztabelle für den Mk6 82mm Mortar</German>
+        </Key>
+        <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
+            <English>Open 82mm Rangetable</English>
+            <German>Öffne 82mm Distanztabelle</German>
+        </Key>
+        <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
+            <English>Charge</English>
+            <German>Ladung</German>
+        </Key>
+    </Package>
 </Project>
