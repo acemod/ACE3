@@ -24,61 +24,61 @@
              alt="ACE license">
     </a>
 </p>
-<p align="center"><sup><strong>Wymaga najnowszej wersji <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a>. OdwiedŸ nas na <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
+<p align="center"><sup><strong>Wymaga najnowszej wersji <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a>. OdwiedÅº nas na <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
 
 
-**ACE3** to efekt wspólnego wysi³ku grup moderów odpowiedzialnych za **ACE2**, **AGM** oraz **CSE** w celu zwiêkszenia realizmu i autentycznoœci Arma 3.
+**ACE3** to efekt wspÃ³lnego wysiÅ‚ku grup moderÃ³w odpowiedzialnych za **ACE2**, **AGM** oraz **CSE** w celu zwiÄ™kszenia realizmu i autentycznoÅ›ci Arma 3.
 
-Projekt ten jest ca³kowicie **otwarty Ÿród³owo** i wszelki wk³ad w rozwój jest mile widziany. Mo¿esz bez przeszkód prowadziæ swoj¹ w³asn¹ dostosowan¹ wersjê, o ile zmiany jakie wprowadzisz bêd¹ otwarte dla publiki zgodnie z GNU General Public License ([GPLv2](https://github.com/acemod/ACE3/blob/master/LICENSE)).
+Projekt ten jest caÅ‚kowicie **otwarty ÅºrÃ³dÅ‚owo** i wszelki wkÅ‚ad w rozwÃ³j jest mile widziany. MoÅ¼esz bez przeszkÃ³d prowadziÄ‡ swojÄ… wÅ‚asnÄ… dostosowanÄ… wersjÄ™, o ile zmiany jakie wprowadzisz bÄ™dÄ… otwarte dla publiki zgodnie z GNU General Public License ([GPLv2](https://github.com/acemod/ACE3/blob/master/LICENSE)).
 
-Modyfikacja ta jest **budowana modu³owo**, dziêki temu prawie ka¿dy dostarczony plik PBO mo¿e zostaæ ³atwo usuniêty z konfiguracji. Dziêki temu, grupa mo¿e prowadziæ w³asn¹, dostosowan¹ do siebie, wersjê ACE wy³¹czaj¹c elementy, których nie potrzebuj¹, lub które po prostu nie dzia³aj¹ z innymi addonami. Modu³y same w sobie np. system medyczny, posiadaj¹ wiele mo¿liwoœci konfiguracji, pozwalaj¹c mission designerom dostosowaæ ogólne doœwiadczenie z gry.
+Modyfikacja ta jest **budowana moduÅ‚owo**, dziÄ™ki temu prawie kaÅ¼dy dostarczony plik PBO moÅ¼e zostaÄ‡ Å‚atwo usuniÄ™ty z konfiguracji. DziÄ™ki temu, grupa moÅ¼e prowadziÄ‡ wÅ‚asnÄ…, dostosowanÄ… do siebie, wersjÄ™ ACE wyÅ‚Ä…czajÄ…c elementy, ktÃ³rych nie potrzebujÄ…, lub ktÃ³re po prostu nie dziaÅ‚ajÄ… z innymi addonami. ModuÅ‚y same w sobie np. system medyczny, posiadajÄ… wiele moÅ¼liwoÅ›ci konfiguracji, pozwalajÄ…c mission designerom dostosowaÄ‡ ogÃ³lne doÅ›wiadczenie z gry.
 
-### G³ówne cechy
-* Ca³kowicie nowy system akcji/interakcji 3D
+### GÅ‚Ã³wne cechy
+* CaÅ‚kowicie nowy system akcji/interakcji 3D
 * Wydajna i niezawodna struktura
-* Skupienie na modu³owoœci i customizacji
-* Elastyczny system ustawieñ i konfiguracji opcji u klienta i serwera
-* Ulepszony system medyczny z ró¿nymi stopniami zaawansowania (podstawowy/rozszerzony) skupiony na grywalnoœci i realizmowi
-* Prawid³owa i spójna synchronizowana pogoda
+* Skupienie na moduÅ‚owoÅ›ci i customizacji
+* Elastyczny system ustawieÅ„ i konfiguracji opcji u klienta i serwera
+* Ulepszony system medyczny z rÃ³Å¼nymi stopniami zaawansowania (podstawowy/rozszerzony) skupiony na grywalnoÅ›ci i realizmowi
+* PrawidÅ‚owa i spÃ³jna synchronizowana pogoda
 * Balistyka oparta na warunkach pogodowych i wietrze
-* Mo¿liwoœæ brania jeñców
-* Rozszerzony system ³adunków wybuchowych, w³¹czaj¹c w to u¿ycie ró¿nego rodzaju zapalników
-* Ulepszenia mapy - stawianie markerów i przybory mapy
+* MoÅ¼liwoÅ›Ä‡ brania jeÅ„cÃ³w
+* Rozszerzony system Å‚adunkÃ³w wybuchowych, wÅ‚Ä…czajÄ…c w to uÅ¼ycie rÃ³Å¼nego rodzaju zapalnikÃ³w
+* Ulepszenia mapy - stawianie markerÃ³w i przybory mapy
 * Zaawansowane naprowadzanie rakiet i wskazywanie laserem
 
 #### Dodatkowe cechy
-* Przeci¹ganie i przenoszenie
-* Realistyczne nazwy pojazdów i broni
-* System kontroli ognia (SKO) dla pojazdów opancerzonych oraz œmig³owców
+* PrzeciÄ…ganie i przenoszenie
+* Realistyczne nazwy pojazdÃ³w i broni
+* System kontroli ognia (SKO) dla pojazdÃ³w opancerzonych oraz Å›migÅ‚owcÃ³w
 * Realistyczna balistyka/SKO obliczana w rozszerzeniach C/C++
-* Symulacja strefy backblastu i podciœnienia
+* Symulacja strefy backblastu i podciÅ›nienia
 * Jednorazowe wyrzutnie
-* Realistyczne si³y G
-* Zamykanie pojazdów na kluczyk
+* Realistyczne siÅ‚y G
+* Zamykanie pojazdÃ³w na kluczyk
 * Realistyczne tryby termowizji oraz noktowizji
-* Przepakowywanie magazynków
+* Przepakowywanie magazynkÃ³w
 * Realistyczna mechanika przegrzewania broni
-* Symulacja g³uchoty bitewnej (tymczasowej utraty s³uchu)
+* Symulacja gÅ‚uchoty bitewnej (tymczasowej utraty sÅ‚uchu)
 * Ulepszona fizyka ragdoll
-* Ulepszona interakcja dla asystentów i amunicyjnych
+* Ulepszona interakcja dla asystentÃ³w i amunicyjnych
 * Regulowane celowniki snajperskie
-* Usuniête animacje bezczynnoœci z opuszczon¹ broni¹
-* Usuniête g³osy awatara gracza
-* Skakanie przez przeszkody, wspinanie siê na œciany i przecinanie p³otów
-* Urz¹dzenia Vector, MicroDAGR, Kestrel<br>
-***i wiele wiele wiêcej...***
+* UsuniÄ™te animacje bezczynnoÅ›ci z opuszczonÄ… broniÄ…
+* UsuniÄ™te gÅ‚osy awatara gracza
+* Skakanie przez przeszkody, wspinanie siÄ™ na Å›ciany i przecinanie pÅ‚otÃ³w
+* UrzÄ…dzenia Vector, MicroDAGR, Kestrel<br>
+***i wiele wiele wiÄ™cej...***
 
 ### Poradniki i instrukcje
-Je¿eli zainstalowa³eœ ACE3 lecz masz problem ze zrozumieniem jak to wszystko dzia³a, lub gdzie zacz¹æ, zacznij od przeczytania tego:
+JeÅ¼eli zainstalowaÅ‚eÅ› ACE3 lecz masz problem ze zrozumieniem jak to wszystko dziaÅ‚a, lub gdzie zaczÄ…Ä‡, zacznij od przeczytania tego:
 * [Wprowadzenie](http://ace3mod.com/wiki/user/getting-started.html)
 
-#### Wspó³praca
-Mo¿esz pomóc w rozwoju addonu szukaj¹c potencjalnych bugów w naszym kodzie, lub zg³aszaj¹c nowe funkcje. Aby wnieœæ swój wk³ad do ACE, po prostu zforkuj to repozytorium na swoje konto GitHub i zg³oœ swoje pull requesty do przegl¹du przez innych wspó³pracowników. Pamiêtaj, aby dodaæ siebie do listy autorów ka¿dego PBO jakie edytujesz oraz do pliku ['AUTHORS.txt'](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) dodaj¹c tak¿e swój adres e-mail.
+#### WspÃ³Å‚praca
+MoÅ¼esz pomÃ³c w rozwoju addonu szukajÄ…c potencjalnych bugÃ³w w naszym kodzie, lub zgÅ‚aszajÄ…c nowe funkcje. Aby wnieÅ›Ä‡ swÃ³j wkÅ‚ad do ACE, po prostu zforkuj to repozytorium na swoje konto GitHub i zgÅ‚oÅ› swoje pull requesty do przeglÄ…du przez innych wspÃ³Å‚pracownikÃ³w. PamiÄ™taj, aby dodaÄ‡ siebie do listy autorÃ³w kaÅ¼dego PBO jakie edytujesz oraz do pliku ['AUTHORS.txt'](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) dodajÄ…c takÅ¼e swÃ³j adres e-mail.
 
-U¿ywaj naszego [Issue Tracker-a](https://github.com/acemod/ACE3/issues) aby zg³aszaæ bugi, proponowaæ nowe funkcje lub sugerowaæ zmiany do aktualnie istniej¹cych. Zobacz tak¿e:
-* [Jak zg³osiæ bug-a](http://ace3mod.com/wiki/user/how-to-report-an-issue.html)
-* [Jak zg³osiæ feature request-a](http://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
+UÅ¼ywaj naszego [Issue Tracker-a](https://github.com/acemod/ACE3/issues) aby zgÅ‚aszaÄ‡ bugi, proponowaÄ‡ nowe funkcje lub sugerowaÄ‡ zmiany do aktualnie istniejÄ…cych. Zobacz takÅ¼e:
+* [Jak zgÅ‚osiÄ‡ bug-a](http://ace3mod.com/wiki/user/how-to-report-an-issue.html)
+* [Jak zgÅ‚osiÄ‡ feature request-a](http://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
 
 #### Testowanie i budowanie
-Aby pomóc nam w testowaniu najnowszych zmian rozwojowych, pobierz nasz master branch ([bezpoœrednio](https://github.com/acemod/ACE3/archive/master.zip), lub [korzystaj¹c z git](https://help.github.com/articles/fetching-a-remote/)), a nastêpnie z³ó¿ testowego build-a:
-* [Konfiguracja œrodowiska do testów](http://ace3mod.com/wiki/development/setting-up-the-development-environment.html) – intrukcja krok-po-kroku jak poprawnie ustawiæ i zbudowaæ wersjê ACE do celów testowych.
+Aby pomÃ³c nam w testowaniu najnowszych zmian rozwojowych, pobierz nasz master branch ([bezpoÅ›rednio](https://github.com/acemod/ACE3/archive/master.zip), lub [korzystajÄ…c z git](https://help.github.com/articles/fetching-a-remote/)), a nastÄ™pnie zÅ‚Ã³Å¼ testowego build-a:
+* [Konfiguracja Å›rodowiska do testÃ³w](http://ace3mod.com/wiki/development/setting-up-the-development-environment.html) â€“ intrukcja krok-po-kroku jak poprawnie ustawiÄ‡ i zbudowaÄ‡ wersjÄ™ ACE do celÃ³w testowych.
