@@ -1780,22 +1780,22 @@
         <Key ID="STR_ACE_Medical_Wounds_Abrasion">
             <English>Scrape</English>
             <German>Kratzer</German>
-            <French>éraflure</French>
+            <French>Eraflure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Minor">
             <English>Minor Scrape</English>
             <German>Kleiner Kratzer</German>
-            <French>éraflure Mineure</French>
+            <French>Eraflure Mineure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Medium">
             <English>Medium Scrape</English>
             <German>Mittlerer Kratzer</German>
-            <French>Moyenne éraflure</French>
+            <French>Moyenne Eraflure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Large">
             <English>Large Scrape</English>
             <German>Großer Kratzer</German>
-            <French>Large éraflure</French>
+            <French>Large Eraflure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion">
             <English>Avulsion</English>
@@ -1825,7 +1825,7 @@
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Minor">
             <English>Minor Bruise</English>
             <German>Kleine Prellung</German>
-            <French>Hématome mineur</French>
+            <French>Hématome Mineur</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Medium">
             <English>Medium Bruise</English>
@@ -1855,7 +1855,7 @@
         <Key ID="STR_ACE_Medical_Wounds_Crush_Large">
             <English>Large crushed tissue</English>
             <German>Große Quetschverletzung</German>
-            <French>tissu écrasé Large</French>
+            <French>Tissu écrasé Large</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut">
             <English>Cut</English>
@@ -1865,7 +1865,7 @@
         <Key ID="STR_ACE_Medical_Wounds_Cut_Minor">
             <English>Small Cut</English>
             <German>Kleine Schnittwunde</German>
-            <French>Petite coupure</French>
+            <French>Petite Coupure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Medium">
             <English>Medium Cut</English>
@@ -1915,7 +1915,7 @@
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Large">
             <English>Large Velocity Wound</English>
             <German>Großes Ballistisches Trauma</German>
-            <French>Large blessure de vélocité</French>
+            <French>Large Blessure de vélocité</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound">
             <English>Puncture Wound</English>
@@ -1925,12 +1925,12 @@
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Minor">
             <English>Minor Puncture Wound</English>
             <German>Kleine Stichwunde</German>
-            <French>Blessure de perforation mineure</French>
+            <French>Blessure de perforation Mineure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Medium">
             <English>Medium Puncture Wound</English>
             <German>Mittlere Stichwunde</German>
-            <French>Blessure de perforation moyenne</French>
+            <French>Blessure de perforation Moyenne</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Large">
             <English>Large Puncture Wound</English>
@@ -1940,7 +1940,7 @@
         <Key ID="STR_ACE_Medical_Wounds_Femur">
             <English>Broken Femur</English>
             <German>Gebrochener Oberschenkelknochen</German>
-            <French>Femur cassé</French>
+            <French>Femur Cassé</French>
         </Key>
     </Package>
 </Project>
