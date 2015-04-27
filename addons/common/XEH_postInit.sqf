@@ -97,14 +97,16 @@ if (!hasInterface) exitWith {};
 call COMPILE_FILE(scripts\assignedItemFix);
 call COMPILE_FILE(scripts\initScrollWheel);
 
-0 spawn {
-    while {true} do {
-        waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
-        findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call GVAR(onScrollWheel) )];
-        [false] call FUNC(disableUserInput);
-        waitUntil {isNull (findDisplay 46)};
-    };
+DFUNC(mouseZHandler) = {
+    waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
+    findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call GVAR(onScrollWheel) )];
+    [false] call FUNC(disableUserInput);
 };
+
+addMissionEventHandler ["Loaded", {[] spawn FUNC(mouseZHandler)}];
+[] spawn FUNC(mouseZHandler);
+
+
 enableCamShake true;
 
 // Set the name for the current player
@@ -248,5 +250,13 @@ if(isMultiplayer && { time > 0 || isNull player } ) then {
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
 
+// check dlls
+{
+    if (_x callExtension "version" == "") then {
+        private "_errorMsg";
+        _errorMsg = format ["Extension %1.dll not installed.", _x];
 
-
+        diag_log text format ["[ACE] ERROR: %1", _errorMsg];
+        ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+    };
+} forEach getArray (configFile >> "ACE_Extensions" >> "extensions");

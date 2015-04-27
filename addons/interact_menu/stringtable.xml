@@ -12,6 +12,13 @@
             <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
             <Italian>Mostra sempre il cursore per le auto interazioni</Italian>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorInteraction">
+            <English>Always display cursor for interaction</English>
+            <Spanish>Mostrar siempre el cursor para la interacción</Spanish>
+            <French>Toujours afficher le curseur pour les interactions</French>
+            <Italian>Mostra sempre il cursore per le interazioni</Italian>
+            <Polish>Zawsze wyświetlaj kursor dla interakcji</Polish>
+        </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
             <Spanish>Mostrar los menus de interacción como listas</Spanish>
@@ -64,6 +71,26 @@
             <French>Interaction véhicule</French>
             <Hungarian>Járműves cselekvések</Hungarian>
             <Italian>Interazioni con veicoli</Italian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
+            <English>Interaction - Text Max</English>
+            <Polish>Interakcja - Tekst max</Polish>
+            <French>Interaction -Texte Max</French>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
+            <English>Interaction - Text Min</English>
+            <Polish>Interakcja - Tekst min</Polish>
+            <French>Interaction - Texte Min</French>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
+            <English>Interaction - Shadow Max</English>
+            <Polish>Interakcja - Cień max</Polish>
+            <French>Interaction - Ombre Max</French>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
+            <English>Interaction - Shadow Min</English>
+            <Polish>Interakcja - Cień min</Polish>
+            <French>Interaction - Ombre Min</French>
         </Key>
     </Package>
 </Project>

@@ -57,6 +57,12 @@ if (GVAR(level) >= 2) then {
             _minLethalDamage = GVAR(minLethalDamages) select _typeIndex;
         };
 
+        if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _source} && {_projectile == ""} && {_selection == ""}) then {
+            if (GVAR(enableVehicleCrashes)) then {
+                _selection = GVAR(SELECTIONS) select (floor(random(count GVAR(SELECTIONS))));
+            };
+        };
+
         if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)} && {_selection in ["", "head", "body"]}) then {
             if ([_unit] call FUNC(setDead)) then {
                 _damageReturn = 1;

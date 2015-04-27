@@ -42,6 +42,7 @@ PREP(doAnimation);
 PREP(dropBackpack);
 PREP(endRadioTransmission);
 PREP(eraseCache);
+PREP(errorMessage);
 PREP(execNextFrame);
 PREP(execPersistentFnc);
 PREP(execRemoteFnc);

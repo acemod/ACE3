@@ -66,7 +66,7 @@
             <German>%1 volle(s) Magazin(e) und %2 übrig gebliebene Patrone(n)</German>
             <Spanish>%1 cargador(es) completo(s) y %2 bala(s) extra(s)</Spanish>
             <French>%1 chargeur(s) plein(s) et %2 cartouche(s) en rab</French>
-            <Polish>Pełnych magazynków: %1.&lt;br /&gt; Dodatkowych naboi: %2.</Polish>
+            <Polish>Pełnych magazynków: %1.&lt;br/&gt;Dodatkowych naboi: %2.</Polish>
             <Czech>%1 plný zásobník(y) a %2 munice navíc</Czech>
             <Italian>%1 caricatore/i pieno e %2 munizioni extra</Italian>
             <Portuguese>%1 carregador(es) cheio(s) e %2 disparo(s) a mais</Portuguese>
@@ -102,7 +102,7 @@
             <Spanish>%1 Total y %2 Parcial</Spanish>
             <Russian>%1 полных и %2 неполных</Russian>
             <Czech>%1 plný a %2 částečně</Czech>
-            <Polish>Pełnych: %1.&lt;br /&gt;Częściowo pełnych: %2.</Polish>
+            <Polish>Pełnych: %1.&lt;br/&gt;Częściowo pełnych: %2.</Polish>
             <Hungarian>%1 teljes és %2 részleges</Hungarian>
             <Italian>%1 pieno e %2 parziale</Italian>
         </Key>

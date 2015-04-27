@@ -58,7 +58,7 @@ if (_show) then {
         }foreach _log;
 
         if (count _triageCardTexts == 0) then {
-            _lbCtrl lbAdd "No entries on this triage card..";
+            _lbCtrl lbAdd (localize "STR_ACE_MEDICAL_TriageCard_NoEntry");
         };
         {
             _lbCtrl lbAdd _x;

@@ -19,8 +19,6 @@
 #define STD_AIR_DENSITY_ICAO 1.22498
 #define STD_AIR_DENSITY_ASM 1.20885
 
-static char version[] = "1.0";
-
 struct Bullet {
     double airFriction;
     double caliber;
@@ -242,7 +240,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
 {
     if (!strcmp(function, "version"))
     {
-        int n = sprintf_s(output, outputSize, "%s", version);
+        int n = sprintf_s(output, outputSize, "%s", ACE_FULL_VERSION_STR);
         return;
     }
 

@@ -57,7 +57,7 @@ class ACE_Settings {
     };
     class GVAR(simulationRadius) {
         displayName = "Simulation Radius";
-        description = "Defines the radius (in meters) in which advanced ballistics are applied";
+        description = "Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles";
         typeName = "SCALAR";
         value = 3000;
     };

@@ -40,7 +40,12 @@ if (_inclinationAngleDegree != GVAR(inclinationAngle) select GVAR(currentTarget)
         GVAR(inclinationAngle) set [GVAR(currentTarget), round(acos(_inclinationAngleCosine))];
     };
 };
-GVAR(targetSpeed) set [GVAR(currentTarget), -50 max abs(parseNumber(ctrlText 140050)) min 50];
+GVAR(targetSpeed) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140050)) min 50];
+if ((ctrlText 140051) == ">") then {
+    GVAR(targetSpeedDirection) set [GVAR(currentTarget), +1];
+} else {
+    GVAR(targetSpeedDirection) set [GVAR(currentTarget), -1];
+};
 GVAR(targetRange) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140060)) min 4000];
 if (GVAR(currentUnit) != 2) then {
     GVAR(windSpeed1) set [GVAR(currentTarget), (GVAR(windSpeed1) select GVAR(currentTarget)) * 0.44704];
@@ -55,7 +60,7 @@ private ["_boreHeight", "_bulletMass", "_bulletDiameter", "_airFriction", "_rifl
 _boreHeight = parseNumber(ctrlText 120000);
 _bulletMass = parseNumber(ctrlText 120010);
 _bulletDiameter = parseNumber(ctrlText 120020);
-if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false])) then {
+if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     _airFriction = 0.1 max parseNumber(ctrlText 120030) min 2;
 } else {
     _airFriction = parseNumber(ctrlText 120030) / -1000;
@@ -82,7 +87,7 @@ GVAR(workingMemory) set [5, _boreHeight];
 GVAR(workingMemory) set [12, _bulletMass];
 GVAR(workingMemory) set [13, _bulletDiameter];
 GVAR(workingMemory) set [14, _rifleTwist];
-if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false])) then {
+if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     GVAR(workingMemory) set [15, _airFriction];
 } else {
     GVAR(workingMemory) set [4, _airFriction];
@@ -90,9 +95,9 @@ if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) 
 GVAR(workingMemory) set [1, _muzzleVelocity];
 GVAR(workingMemory) set [2, _zeroRange];
 
-private ["_elevationCur", "_windageCur", "_elevationScopeStep", "_windageScopeStep"];
-_elevationCur = parseNumber(ctrlText 402);
-_windageCur = parseNumber(ctrlText 412);
+private ["_elevationCur", "_windageCur", "_clickSize", "_clickNumber", "_clickInterval"];
+_elevationCur = GVAR(workingMemory) select 10;
+_windageCur = GVAR(workingMemory) select 11;
 
 switch (GVAR(currentScopeUnit)) do {
     case 0: {
@@ -104,11 +109,16 @@ switch (GVAR(currentScopeUnit)) do {
         _windageCur = _windageCur / 1.047;
     };
     case 3: {
-        _elevationScopeStep = (GVAR(workingMemory) select 7);
-        _windageScopeStep = (GVAR(workingMemory) select 8);
+        switch (GVAR(workingMemory) select 7) do {
+            case 0: { _clickSize = 1; };
+            case 1: { _clickSize = 1 / 1.047; };
+            case 2: { _clickSize = 3.38; };
+        };
+        _clickNumber = GVAR(workingMemory) select 8;
+        _clickInterval = _clickSize / _clickNumber;
         
-        _elevationCur = _elevationCur * _elevationScopeStep;
-        _windageCur = _windageCur * _windageScopeStep;
+        _elevationCur = Round(_elevationCur / _clickInterval);
+        _windageCur = Round(_windageCur / _clickInterval);
     };
 };
 
