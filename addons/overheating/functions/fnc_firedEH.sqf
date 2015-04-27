@@ -36,11 +36,6 @@ if (_unit == ACE_player) then {
 _variableName = format [QGVAR(%1), _weapon];
 _scaledTemperature = 0 max (((_unit getVariable [_variableName, [0,0]]) select 0) / 1000) min 1;
 
-//////////////////////////////// FIX
-systemChat format ["%1", _scaledTemperature];
-_scaledTemperature = random 1;
-//////////////////////////////// FIX
-
 // Smoke SFX, beginning at TEMP 0.15
 private "_intensity";
 
@@ -144,10 +139,6 @@ if (stance _unit == "PRONE") then {
         _jamChance = _jamChance + (getNumber (_surface >> "dust")) * _jamChance;
     };
 };
-
-//_jamChance = 0.5;
-
-systemChat format ["Temperature: %1 - JamChance: %2", _scaledTemperature, _jamChance];
 
 if (random 1 < _jamChance) then {
     [_unit, _weapon] call FUNC(jamWeapon);
