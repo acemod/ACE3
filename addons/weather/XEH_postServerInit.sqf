@@ -9,7 +9,6 @@ GVAR(rain_current_range) = -1+(random 2);
 // Wind
 call FUNC(initWind);
 
-GVAR(overcast_multiplier) = 1;
 GVAR(serverUpdateInterval) = 60;
 
 [FUNC(serverController), GVAR(serverUpdateInterval)] call cba_fnc_addPerFrameHandler;
