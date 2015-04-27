@@ -63,14 +63,14 @@ if (GVAR(level) >= 2) then {
             };
         };
 
-        if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)} && {_selection in ["", "head", "body"]}) then {
+        if ([_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)) then {
             if ([_unit] call FUNC(setDead)) then {
                 _damageReturn = 1;
             } else {
-                _damageReturn = 0.89;
+                _damageReturn = _damageReturn min 0.89;
             };
         } else {
-            _damageReturn = 0.89;
+            _damageReturn = _damageReturn min 0.89;
         };
     };
 };
