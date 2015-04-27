@@ -15,6 +15,7 @@ class CfgWeapons
         ACE_barrelTwist=7;
         ACE_barrelLength=14.5;
 	};
+    class rhs_weap_m4a1;
 	class rhs_weap_mk18: rhs_weap_m4a1
 	{
         ACE_barrelTwist=7;

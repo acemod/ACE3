@@ -24,6 +24,7 @@ class CfgWeapons
         ACE_barrelTwist=7.87;
         ACE_barrelLength=16.3;
 	};
+    class rhs_weap_aks74;
 	class rhs_weap_aks74u: rhs_weap_aks74
 	{
         ACE_barrelTwist=6.3;
@@ -34,6 +35,7 @@ class CfgWeapons
         ACE_barrelTwist=9.4;
         ACE_barrelLength=24.4;
 	};
+    class rhs_weap_svdp;
 	class rhs_weap_svds: rhs_weap_svdp
 	{
         ACE_barrelTwist=9.4;
