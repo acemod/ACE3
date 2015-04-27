@@ -9,7 +9,7 @@ class CfgVehicles {
             //hitPart = "systemChat str _this";
         };
     };
-    
+
     class NATO_Box_Base;
     class Box_NATO_Wps_F: NATO_Box_Base {
         class TransportMagazines {
