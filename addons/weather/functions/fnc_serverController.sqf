@@ -23,7 +23,7 @@ if (GVAR(useACEWeather)) then {
         publicVariable "ACE_RAIN_PARAMS";
     };
     if (GVAR(syncWind)) then {
-        ACE_WIND_PARAMS = [wind call CBA_fnc_vectDir, 0, wind, 0, GVAR(serverUpdateInterval)];
+        ACE_WIND_PARAMS = [wind call CBA_fnc_vectDir, 0, vectorMagnitude wind, 0, GVAR(serverUpdateInterval)];
         publicVariable "ACE_WIND_PARAMS";
     };
     if (GVAR(syncMisc)) then {
