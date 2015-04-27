@@ -1484,11 +1484,27 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_inPain">
             <English>He is in pain</English>
+            <French>vivant</French>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_diagnoseDead">
+            <English>dead</English>
+            <French>mort</French>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_lostBlood">
+            <English>He's lost some blood</English>
+            <French>Il a perdu du sang</French>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_noBloodloss">
+            <English>He hasn't lost blood</English>
+            <French>Il n'a pas perdu de sang</French>
+        </Key>
+        <Key ID="STR_ACE_MEDICAL_inPain">
+            <English>He is in pain</English>
             <French>Il souffre</French>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noPain">
             <English>He is not in pain</English>
-            <French>Il ne souffre pas de douleurs</French>
+            <French>Il ne souffre pas</French>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BANDAGED">
             <English>Bandaged</English>
