@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Parachute">
         <Key ID="STR_ACE_Parachute_showAltimeter">
@@ -11,6 +10,7 @@
             <Spanish>Altímetro</Spanish>
             <Hungarian>Magasságmérő</Hungarian>
             <Russian>Высотомер</Russian>
+            <Italian>Altimetro</Italian>
         </Key>
         <Key ID="STR_ACE_Parachute_AltimeterDisplayName">
             <English>Altimeter Watch</English>
@@ -21,6 +21,7 @@
             <Spanish>Reloj altímetro</Spanish>
             <Hungarian>Magasságmérős karóra</Hungarian>
             <Russian>Часы с высотомером</Russian>
+            <Italian>Controlla l'altimetro</Italian>
         </Key>
         <Key ID="STR_ACE_Parachute_AltimeterDescription">
             <English>Used to show height, descent rate and the time.</English>
@@ -31,6 +32,7 @@
             <Spanish>Utilizado para mostrar altura, tasa de descenso y hora.</Spanish>
             <Hungarian>Mutatja a magasságot, a zuhanási sebességet, és az időt.</Hungarian>
             <Russian>Используется для определения высоты, скорости снижения и времени.</Russian>
+            <Italian>Usato per mostrare l'altitudine, la velocità di discesa e l'ora.</Italian>
         </Key>
         <Key ID="STR_ACE_Parachute_NonSteerableParachute">
             <English>Non-Steerable Parachute</English>
@@ -41,6 +43,7 @@
             <Czech>Neříditelný padák</Czech>
             <Hungarian>Irányíthatatlan ejtőernyő</Hungarian>
             <Russian>Неуправляемый парашют</Russian>
+            <Italian>Paracadute non manovrabile</Italian>
         </Key>
     </Package>
 </Project>

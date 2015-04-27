@@ -19,13 +19,11 @@
 
 #define MAXCHARACTERS 14
 
-static char version[] = "1.0";
-
 extern "C" {
     __declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
 };
 
-std::vector<std::string> splitString(std::string input) {
+std::vector<std::string> splitString(const std::string & input) {
     std::istringstream ss(input);
     std::string token;
 
@@ -38,10 +36,10 @@ std::vector<std::string> splitString(std::string input) {
 }
 
 std::string addLineBreaks(const std::vector<std::string> &words) {
-
     std::stringstream sstream;
-    int numChar = 0;
-    int i = 0;
+    size_t numChar = 0;
+    size_t i = 0;
+
     while (i < words.size()) {
         if (numChar == 0) {
             sstream << words[i];
@@ -58,6 +56,7 @@ std::string addLineBreaks(const std::vector<std::string> &words) {
             }
         }
     }
+    
     return sstream.str();
 }
 
@@ -66,12 +65,10 @@ std::string addLineBreaks(const std::vector<std::string> &words) {
 #pragma warning( disable : 4996 )
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
-    //strncpy(output, function, outputSize);
-
     if (!strcmp(function, "version")) {
-        strncpy(output, version, outputSize);
+        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
     } else {
-        strcpy(output, addLineBreaks(splitString(function)).c_str());
+        strncpy(output, addLineBreaks(splitString(function)).c_str(), outputSize);
         output[outputSize - 1] = '\0';
     }
 }

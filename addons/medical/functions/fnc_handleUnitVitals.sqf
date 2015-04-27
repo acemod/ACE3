@@ -27,7 +27,7 @@ if (_syncValues) then {
     _unit setvariable [QGVAR(lastMomentValuesSynced), time];
 };
 
-_bloodVolume = (_unit getvariable [QGVAR(bloodVolume), 0]) + ([_unit] call FUNC(getBloodVolumeChange));
+_bloodVolume = (_unit getvariable [QGVAR(bloodVolume), 100]) + ([_unit] call FUNC(getBloodVolumeChange));
 _bloodVolume = _bloodVolume max 0;
 
 _unit setvariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
@@ -94,13 +94,13 @@ if (GVAR(level) >= 2) then {
     if ([_unit] call EFUNC(common,isAwake)) then {
         if (_bloodVolume < 60) then {
             if (random(1) > 0.9) then {
-                [_unit] call FUNC(setUnconscious);
+                [_unit, true, 15 + random(20)] call FUNC(setUnconscious);
             };
         };
     };
 
     // Set the vitals
-    _heartRate = (_unit getvariable [QGVAR(heartRate), 0]) + (([_unit] call FUNC(getHeartRateChange)) * _interval);
+    _heartRate = (_unit getvariable [QGVAR(heartRate), 80]) + (([_unit] call FUNC(getHeartRateChange)) * _interval);
     _unit setvariable  [QGVAR(heartRate), _heartRate, _syncValues];
 
     _bloodPressure = [_unit] call FUNC(getBloodPressure);
@@ -136,7 +136,7 @@ if (GVAR(level) >= 2) then {
 
     if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
         if (_heartRate < 10 || _bloodPressureH < 30 || _bloodVolume < 20) then {
-            [_unit] call FUNC(setUnconscious); // safety check to ensure unconsciousness for units if they are not dead already.
+            [_unit, true, 10+ random(20)] call FUNC(setUnconscious); // safety check to ensure unconsciousness for units if they are not dead already.
         };
 
         if (_bloodPressureH > 260) then {

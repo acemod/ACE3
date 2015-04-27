@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Kestrel4500">
         <Key ID="STR_ACE_Kestrel_Name">
@@ -19,6 +18,8 @@
             <Polish>Anemomentr skrzydełkowy Kestrel 4500</Polish>
             <Russian>Карманная метеостанция Kestrel 4500NV</Russian>
             <French>Station météo portable Kestrel 4500</French>
+            <Spanish>Kestrel 4500 Pocket Weather Tracker</Spanish>
+            <German>Kestrel 4500 Taschenwettermessgerät</German>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_OpenKestrel">
             <English>Open Kestrel 4500</English>
@@ -27,6 +28,8 @@
             <Russian>Открыть Kestrel 4500NV</Russian>
             <French>Ouvrir Kestrel 4500</French>
             <Italian>Accendi Kestrel 4500</Italian>
+            <Spanish>Abrir Kestrel 4500</Spanish>
+            <German>Kestrel 4500 öffnen</German>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_ShowKestrel">
             <English>Show Kestrel 4500</English>
@@ -34,6 +37,8 @@
             <Russian>Показать Kestrel 4500NV</Russian>
             <French>Afficher Kestrel 4500</French>
             <Italian>Mostra Kestrel 4500</Italian>
+            <Spanish>Mostrar Kestrel 4500</Spanish>
+            <German>Kestrel 4500 anzeigen</German>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_HideKestrel">
             <English>Hide Kestrel 4500</English>
@@ -41,6 +46,8 @@
             <Russian>Убрать Kestrel 4500NV</Russian>
             <French>Cacher Kestrel 4500</French>
             <Italian>Nascondi Kestrel 4500</Italian>
+            <Spanish>Esconder Kestrel 4500</Spanish>
+            <German>Kestrel 4500 wegstecken</German>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_KestrelDialogKey">
             <English>Open Kestrel 4500</English>
@@ -48,6 +55,8 @@
             <Russian>Открыть Kestrel 4500NV</Russian>
             <French>Ouvrir Kestrel 4500</French>
             <Italian>Accendi Kestrel 4500</Italian>
+            <Spanish>Abrir Kestrel 4500</Spanish>
+            <German>Kestrel 4500 öffnen</German>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_DisplayKestrelKey">
             <English>Show Kestrel 4500</English>
@@ -55,6 +64,8 @@
             <Russian>Показать Kestrel 4500NV</Russian>
             <French>Afficher Kestrel 4500</French>
             <Italian>Mostra Kestrel 4500</Italian>
+            <Spanish>Mostrar Kestrel 4500</Spanish>
+            <German>Kestrel 4500 anzeigen</German>
         </Key>
     </Package>
 </Project>

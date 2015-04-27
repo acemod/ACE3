@@ -11,4 +11,4 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define _dsp (uiNamespace getVariable "ATragMX_Display")
+#define ATRAGMX_PROFILE_NAMESPACE_VERSION 1.3

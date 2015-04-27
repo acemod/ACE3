@@ -42,7 +42,7 @@
             <German>IR-Stroboskop befestigt</German>
             <Spanish>Marcador IR acoplado</Spanish>
             <Polish>Przyczepiono stroboskop IR</Polish>
-            <French>Strobe IR attaché</French>
+            <French>Balise IR attachée</French>
             <Czech>IR Značkovač připnutý</Czech>
             <Portuguese>Marcador IV Acoplado</Portuguese>
             <Italian>Strobo IR attaccata</Italian>
@@ -54,7 +54,7 @@
             <German>IR-Stroboskop entfernt</German>
             <Spanish>Marcador IR quitado</Spanish>
             <Polish>Odczepiono stroboskop IR</Polish>
-            <French>Strobe IR détaché</French>
+            <French>Balise IR détachée</French>
             <Czech>IR Značkovač odepnutý</Czech>
             <Portuguese>Marcador IV Separado</Portuguese>
             <Italian>Strobo IR staccata</Italian>
@@ -126,7 +126,7 @@
             <German>IR-Stroboskop</German>
             <Spanish>Marcador IR</Spanish>
             <Polish>Stroboskop IR</Polish>
-            <French>Strobe IR</French>
+            <French>Balise IR</French>
             <Czech>IR Značkovač</Czech>
             <Portuguese>Marcador IV</Portuguese>
             <Italian>Strobo IR</Italian>
@@ -138,7 +138,7 @@
             <German>Das IR-Stroboskop erlaubt es dir deine Position mit einem blinkenden Leuchtfeuer zu signalisieren, welches nur mit Nachtsichtgerät zu erkennen ist.</German>
             <Polish>Stroboskop światła podczerwieni umożliwia oznaczenie swojej pozycji pulsacyjnym światłem widocznym tylko przez optykę noktowizyjną i gogle noktowizyjne.</Polish>
             <Spanish>El Marcador IR permite señalizar su posisición a través de una baliza visible solo a través de dispositivos de visión nocturna. </Spanish>
-            <French>Le Strobe IR permet de signaler votre position grace à un clignotement visible par des JVN.</French>
+            <French>La balise IR permet de signaler votre position grace à un clignotement visible par des JVN.</French>
             <Czech>IR Značkovač je Infračerveně zářící stroboskop umožňující signalizaci vaší pozice díky blikajícímu světlu, které je vidět pouze při užití noktovizoru.</Czech>
             <Portuguese>O Marcador IV permite que você sinalize sua posição através de um pulso visível somente com equipamento de visão noturna.</Portuguese>
             <Italian>La Strobo IR è una luce stroboscopica che ti permette di segnalare la tua posizione grazie all'emissione di impulsi ad infrarossi visibili solo con i visori notturni.</Italian>
@@ -183,25 +183,25 @@
             <English>%1&lt;br/&gt;Attached</English>
             <German>%1&lt;br/&gt;befestigt</German>
             <Spanish>%1&lt;br/&gt;acoplada</Spanish>
-            <Polish>%1&lt;br/&gt;Przyczepiono</Polish>
+            <Polish>%1&lt;br/&gt;przyczepiono</Polish>
             <French>%1&lt;br/&gt;attachée</French>
             <Czech>%1&lt;br/&gt;Připnutý</Czech>
             <Portuguese>%1&lt;br/&gt;Acoplada</Portuguese>
             <Italian>%1&lt;br/&gt;attaccata</Italian>
             <Hungarian>%1&lt;br/&gt;hozzácsatolva</Hungarian>
-            <Russian>%1&lt;br/&gt;присоединена</Russian>
+            <Russian>%1&lt;br/&gt;присоединен(-а)</Russian>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Detached">
             <English>%1&lt;br/&gt;Detached</English>
             <German>%1&lt;br/&gt;entfernt</German>
             <Spanish>%1&lt;br/&gt;quitada</Spanish>
-            <Polish>%1&lt;br/&gt;Odczepiono</Polish>
+            <Polish>%1&lt;br/&gt;odczepiono</Polish>
             <French>%1&lt;br/&gt;détachée</French>
             <Czech>%1&lt;br/&gt;Odepnutý</Czech>
             <Portuguese>%1&lt;br/&gt;Separada</Portuguese>
             <Italian>%1&lt;br/&gt;staccata</Italian>
             <Hungarian>%1&lt;br/&gt;lecsatolva</Hungarian>
-            <Russian>%1&lt;br/&gt;отсоединена</Russian>
+            <Russian>%1&lt;br/&gt;отсоединен(-а)</Russian>
         </Key>
     </Package>
 </Project>

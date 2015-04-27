@@ -19,7 +19,7 @@
 disableSerialization;
 PARAMS_2(_listBoxCtrl,_itemsCountArray);
 
-private "_classname";
+private ["_classname", "_count", "_displayName", "_picture"];
 
 {
     _displayName = "";

@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="microdagr">
         <Key ID="STR_ACE_microdagr_itemName">
@@ -95,7 +94,7 @@
         <Key ID="STR_ACE_microdagr_wpEnterCords">
             <English>Enter Grid Cords:</English>
             <Spanish>Introducir coordenadas de cuadrícula:</Spanish>
-            <Russian>Введите координаты:</Russian>
+            <Russian>Введите сеточные координаты:</Russian>
             <Polish>Wprowadź współrzędne:</Polish>
             <French>Entrer coordonnées</French>
             <German>Koordinaten eingeben:</German>
@@ -139,7 +138,7 @@
         <Key ID="STR_ACE_microdagr_controlRange">
             <English>Range:</English>
             <Spanish>Distancia:</Spanish>
-            <German>Reichweite:</German>
+            <German>Distanz:</German>
             <Russian>Дистанция:</Russian>
             <Polish>Dystans:</Polish>
             <French>Distance:</French>
@@ -183,7 +182,7 @@
         <Key ID="STR_ACE_microdagr_menuConnectTo">
             <English>Connect To</English>
             <Spanish>Conectar a</Spanish>
-            <Russian>Соединиться с </Russian>
+            <Russian>Подключиться к</Russian>
             <German>Verbinde zu</German>
             <Czech>Připojit k</Czech>
             <Polish>Podłącz do</Polish>
@@ -237,7 +236,7 @@
         </Key>
         <Key ID="STR_ACE_microdagr_toggleUnit">
             <English>Toggle MicroDAGR Display Mode</English>
-            <German>MicoDAGR Anzeigemodus Wechseln</German>
+            <German>MicoDAGR Anzeigemodus wechseln</German>
             <Spanish>Conmutar modo de pantalla del MicroDAGR</Spanish>
             <Russian>Сменить режим показа MicroDAGR</Russian>
             <Polish>Przełącz GUI MicroDAGR</Polish>
@@ -252,18 +251,18 @@
             <Spanish>Mostrar MicroDAGR</Spanish>
             <Russian>Показать MicroDAGR</Russian>
             <Czech>Ukázat MicroDAGR GPS</Czech>
-            <Polish>Pokaż&lt;br /&gt;MicroDAGR</Polish>
+            <Polish>Pokaż MicroDAGR</Polish>
             <French>Afficher MicroDAGR</French>
             <Hungarian>MicroDAGR mutatása</Hungarian>
             <Italian>Mostra MicroDAGR</Italian>
         </Key>
         <Key ID="STR_ACE_microdagr_configure">
             <English>Configure MicroDAGR</English>
-            <German>MicroDAGR Konfiguriere</German>
+            <German>Konfiguriere MicroDAGR</German>
             <Spanish>Configurar MicroDAGR</Spanish>
             <Russian>Настроить MicroDAGR</Russian>
             <Czech>Konfigurovat MicroDAGR GPS</Czech>
-            <Polish>Konfiguruj&lt;br /&gt;MicroDAGR</Polish>
+            <Polish>Konfiguruj MicroDAGR</Polish>
             <French>Configurer MicroDAGR</French>
             <Hungarian>MicroDAGR konfigurálása</Hungarian>
             <Italian>ConfiguraMicroDAGR</Italian>
@@ -274,7 +273,7 @@
             <Spanish>Cerrar MicroDAGR</Spanish>
             <Russian>Закрыть MicroDAGR</Russian>
             <Czech>Zavřít MicroDAGR GPS</Czech>
-            <Polish>Zamknij&lt;br /&gt;MicroDAGR</Polish>
+            <Polish>Zamknij MicroDAGR</Polish>
             <French>Fermer MicroDAGR</French>
             <Hungarian>MicroDAGR elrejtése</Hungarian>
             <Italian>Chiudi MicroDAGR</Italian>

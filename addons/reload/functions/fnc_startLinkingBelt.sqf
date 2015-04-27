@@ -15,7 +15,7 @@ EXPLODE_2_PVT(_this,_player,_target);
 
 if (vehicle _target != _target) exitWith {false};
 
-private ["_magazineCfg","_magazineType"];
+private ["_magazineCfg","_magazineType", "_condition", "_onFailure", "_onFinish"];
 _magazineType = currentMagazine _target;
 _magazineCfg = configFile >> "CfgMagazines" >> _magazineType;
 if (getNumber (_magazineCfg >> "ACE_isBelt") == 0) exitWith {false};
@@ -54,7 +54,7 @@ _onFinish = {
 
 _onFailure = {
     EXPLODE_3_PVT((_this select 0),_player,_target,_magazine);
-    [_caller, "AmovPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
+    [_player, "AmovPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
 
     // Add back the magazine with the former ammo count
     _player addMagazine _magazine;

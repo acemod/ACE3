@@ -17,7 +17,7 @@
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-private ["_unit", "_weapon", "_ammo", "_projectile"];
+private ["_unit", "_weapon", "_ammo", "_projectile", "_variableName", "_scaledTemperature"];
 
 _unit = _this select 0;
 _weapon = _this select 1;
@@ -34,7 +34,7 @@ if (_unit == ACE_player) then {
 
 // Get current temperature from the unit variable
 _variableName = format [QGVAR(%1), _weapon];
-_scaledTemperature = (((_unit getVariable [_variableName, [0,0]]) select 0) / 1000) min 1 max 0;
+_scaledTemperature = 0 max (((_unit getVariable [_variableName, [0,0]]) select 0) / 1000) min 1;
 
 //////////////////////////////// FIX
 systemChat format ["%1", _scaledTemperature];

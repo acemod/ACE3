@@ -7,11 +7,18 @@
  * 1: Target <OBJECT>
  *
  * Return value:
- * Can link belt<BOOL>
+ * Can link belt<BOOL> 
+ *
+ * Example:
+ * [player, bob] call ace_reload_fnc_canCheckAmmo
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 EXPLODE_2_PVT(_this,_player,_target);
+
+private ["_magazineType", "_magazineCfg"];
 
 // Return true for static weapons if they have been fired once, @todo 1.40 this work-around doesn't work anymore
 if (_target isKindOf "StaticWeapon") exitWith {

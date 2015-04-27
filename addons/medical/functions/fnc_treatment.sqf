@@ -129,7 +129,7 @@ if (isNil _callbackProgress) then {
 
 // Patient Animation
 _patientAnim = getText (_config >> "animationPatient");
-if (_target getvariable ["ACE_isUnconscious", false]) then {
+if (_target getvariable ["ACE_isUnconscious", false] && GVAR(allowUnconsciousAnimationOnTreatment)) then {
     if !(animationState _target in (getArray (_config >> "animationPatientUnconsciousExcludeOn"))) then {
         _patientAnim = getText (_config >> "animationPatientUnconscious");
     };
@@ -148,6 +148,8 @@ _callerAnim = [getText (_config >> "animationCaller"), getText (_config >> "anim
 if (_caller == _target) then {
     _callerAnim = [getText (_config >> "animationCallerSelf"), getText (_config >> "animationCallerSelfProne")] select (stance _caller == "PRONE");
 };
+
+_caller setvariable [QGVAR(selectedWeaponOnTreatment), currentWeapon _caller];
 
 // Cannot use secondairy weapon for animation
 if (currentWeapon _caller == secondaryWeapon _caller) then {

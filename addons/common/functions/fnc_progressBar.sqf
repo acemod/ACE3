@@ -38,12 +38,14 @@ createDialog QGVAR(ProgressBar_Dialog);
 //Adjust position based on user setting:
 _ctrlPos = ctrlPosition (uiNamespace getVariable QGVAR(ctrlProgressBarTitle));
 _ctrlPos set [1, ((0 + 29 * GVAR(SettingProgressBarLocation)) * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2))];
-(uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetPosition _ctrlPos;
-(uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlCommit 0;
-_ctrlPos = ctrlPosition (uiNamespace getVariable QGVAR(ctrlProgressBar));
-_ctrlPos set [1, ((0.1 + 29 * GVAR(SettingProgressBarLocation)) * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2))];
+
+(uiNamespace getVariable QGVAR(ctrlProgressBG)) ctrlSetPosition _ctrlPos;
+(uiNamespace getVariable QGVAR(ctrlProgressBG)) ctrlCommit 0;
 (uiNamespace getVariable QGVAR(ctrlProgressBar)) ctrlSetPosition _ctrlPos;
 (uiNamespace getVariable QGVAR(ctrlProgressBar)) ctrlCommit 0;
+(uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetPosition _ctrlPos;
+(uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlCommit 0;
+
 
 
 _perFrameFunction = {

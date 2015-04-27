@@ -15,9 +15,9 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_elevation", "_windage", "_zero", "_adjustmentDifference", "_pitchbankyaw", "_pitch", "_bank", "_yaw"];
-
 EXPLODE_4_PVT(_this,_unit,_elevation,_windage,_zero);
+
+private ["_adjustmentDifference", "_pitchbankyaw", "_pitch", "_bank", "_yaw", "_adjustment", "_weaponIndex"];
 
 _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 

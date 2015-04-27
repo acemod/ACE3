@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_affected", "_strength", "_posGrenade", "_posUnit", "_angleGrenade", "_angleView", "_angleDiff", "_light", "_losCount"];
+private ["_affected", "_strength", "_posGrenade", "_posUnit", "_angleGrenade", "_angleView", "_angleDiff", "_light", "_losCount", "_dirToUnitVector", "_eyeDir", "_eyePos"];
 
 PARAMS_1(_grenade);
 
@@ -80,7 +80,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
 
 
             //Add ace_medical pain effect:
-            if ((isClass (configFile >> "CfgPatches" >> "ACE_Medical")) && {_strength > 0}) then {
+            if ((isClass (configFile >> "CfgPatches" >> "ACE_Medical")) && {_strength > 0.1}) then {
                 [ACE_player, (_strength / 2)] call EFUNC(medical,adjustPainLevel);
             };
 

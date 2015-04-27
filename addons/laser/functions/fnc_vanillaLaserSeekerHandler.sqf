@@ -12,7 +12,7 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-private["_emitter", "_owner", "_gunnerInfo", "_turretInfo", "_povPos", "_povDir"];
+private["_emmiter", "_owner", "_gunnerInfo", "_turretInfo", "_povPos", "_povDir"];
 
 _emmiter = _this select 0;
 _owner = _this select 1;

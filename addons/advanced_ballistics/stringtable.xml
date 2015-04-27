@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="AdvancedBallistics">
         <Key ID="STR_ACE_AdvancedBallistics_WindInfoKey">
@@ -7,7 +6,9 @@
             <Polish>Pokaż inf. o wietrze</Polish>
             <Italian>Mostra indicazioni del vento</Italian>
             <Russian>Показать информацию о ветре</Russian>
-            <French>Afficher les info du vent</French>
+            <French>Afficher les info sur le vent</French>
+            <Spanish>Mostrar información del viento</Spanish>
+            <German>Windinformationen anzeigen</German>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_ProtractorKey">
             <English>Show Protractor</English>
@@ -15,6 +16,8 @@
             <Italian>Mostra il rapportatore</Italian>
             <Russian>Показать транспортир</Russian>
             <French>Afficher le rapporteur</French>
+            <Spanish>Mostrar transportador</Spanish>
+            <German>Winkelmesser anzeigen</German>
         </Key>
     </Package>
 </Project>

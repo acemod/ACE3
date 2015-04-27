@@ -891,6 +891,25 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
             
             class OpticsIn
             {
+                class WideUnstabalized
+                {
+                    opticsDisplayName = "WU";
+                    initAngleX = 0;
+                    minAngleX = -35;
+                    maxAngleX = 10;
+                    initAngleY = 0;
+                    minAngleY = -100;
+                    maxAngleY = 100;
+                    initFov = 0.466;
+                    minFov = 0.466;
+                    maxFov = 0.466;
+                    visionMode[] = {"Normal","Ti"};
+                    thermalMode[] = {0,1};
+                    gunnerOpticsColor[] = {0,0,0,1};
+                    directionStabilized = 0;
+                    horizontallyStabilized = 1;
+                    gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
+                };
                 class Wide
                 {
                     opticsDisplayName = "W";
@@ -907,7 +926,7 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
                     thermalMode[] = {0,1};
                     gunnerOpticsColor[] = {0,0,0,1};
                     directionStabilized = 1;
-					horizontallyStabilized = 1;
+                    horizontallyStabilized = 1;
                     gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
                 };
                 class Medium: Wide
@@ -918,7 +937,7 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
                     maxFov = 0.093;
                     gunnerOpticsColor[] = {0,0,0,1};
                     directionStabilized = 1;
-					horizontallyStabilized = 1;
+                    horizontallyStabilized = 1;
                     gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_medium_F";
                 };
                 class Narrow: Wide
@@ -929,7 +948,7 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
                     maxFov = 0.029;
                     gunnerOpticsColor[] = {0,0,0,1};
                     directionStabilized = 1;
-					horizontallyStabilized = 1;
+                    horizontallyStabilized = 1;
                     gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_narrow_F";
 
                 };
@@ -941,7 +960,7 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
                     maxFov = 0.01;
                     gunnerOpticsColor[] = {0,0,0,1};
                     directionStabilized = 1;
-					horizontallyStabilized = 1;
+                    horizontallyStabilized = 1;
                     gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_narrow_F";
 
                 };
