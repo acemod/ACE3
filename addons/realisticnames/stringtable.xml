@@ -1510,60 +1510,60 @@
             <Russian>Noreen Bad News (песочный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_03">
-            <English>SIG 762</English>
-            <Czech>SIG 762</Czech>
-            <French>SIG 762</French>
-            <Spanish>SIG 762</Spanish>
-            <Russian>SIG 762</Russian>
-            <Polish>SIG 762</Polish>
+            <English>SIG 556</English>
+            <Czech>SIG 556</Czech>
+            <French>SIG 556</French>
+            <Spanish>SIG 556</Spanish>
+            <Russian>SIG 556</Russian>
+            <Polish>SIG 556</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03">
-            <English>SIG 762 (Black)</English>
-            <Czech>SIG 762 (Black)</Czech>
-            <French>SIG 762 (Noir)</French>
-            <Spanish>SIG 762 (Negro)</Spanish>
-            <Russian>SIG 762 (черный)</Russian>
-            <Polish>SIG 762 (czarny)</Polish>
+            <English>SIG 556 (Black)</English>
+            <Czech>SIG 556 (Black)</Czech>
+            <French>SIG 556 (Noir)</French>
+            <Spanish>SIG 556 (Negro)</Spanish>
+            <Russian>SIG 556 (черный)</Russian>
+            <Polish>SIG 556 (czarny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_khaki">
-            <English>SIG 762 (Khaki)</English>
-            <Czech>SIG 762 (Khaki)</Czech>
-            <French>SIG 762 (Kaki)</French>
-            <Spanish>SIG 762 (Caqui)</Spanish>
-            <Russian>SIG 762 (хаки)</Russian>
-            <Polish>SIG 762 (khaki)</Polish>
+            <English>SIG 556 (Khaki)</English>
+            <Czech>SIG 556 (Khaki)</Czech>
+            <French>SIG 556 (Kaki)</French>
+            <Spanish>SIG 556 (Caqui)</Spanish>
+            <Russian>SIG 556 (хаки)</Russian>
+            <Polish>SIG 556 (khaki)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_tan">
-            <English>SIG 762 (Sand)</English>
-            <Czech>SIG 762 (Sand)</Czech>
-            <French>SIG 762 (Beige)</French>
-            <Spanish>SIG 762 (Arena)</Spanish>
-            <Russian>SIG 762 (песочный)</Russian>
-            <Polish>SIG 762 (piaskowy)</Polish>
+            <English>SIG 556 (Sand)</English>
+            <Czech>SIG 556 (Sand)</Czech>
+            <French>SIG 556 (Beige)</French>
+            <Spanish>SIG 556 (Arena)</Spanish>
+            <Russian>SIG 556 (песочный)</Russian>
+            <Polish>SIG 556 (piaskowy)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_multicam">
-            <English>SIG 762 (Camo)</English>
-            <Czech>SIG 762 (Camo)</Czech>
-            <French>SIG 762 (Camo)</French>
-            <Spanish>SIG 762 (Camuflaje)</Spanish>
-            <Russian>SIG 762 (камо)</Russian>
-            <Polish>SIG 762 (kamuflaż)</Polish>
+            <English>SIG 556 (Camo)</English>
+            <Czech>SIG 556 (Camo)</Czech>
+            <French>SIG 556 (Camo)</French>
+            <Spanish>SIG 556 (Camuflaje)</Spanish>
+            <Russian>SIG 556 (камо)</Russian>
+            <Polish>SIG 556 (kamuflaż)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_woodland">
-            <English>SIG 762 (Woodland)</English>
-            <Czech>SIG 762 (Woodland)</Czech>
-            <French>SIG 762 (Woodland)</French>
-            <Spanish>SIG 762 (Bosque)</Spanish>
-            <Russian>SIG 762 (лесной)</Russian>
-            <Polish>SIG 762 (leśny)</Polish>
+            <English>SIG 556 (Woodland)</English>
+            <Czech>SIG 556 (Woodland)</Czech>
+            <French>SIG 556 (Woodland)</French>
+            <Spanish>SIG 556 (Bosque)</Spanish>
+            <Russian>SIG 556 (лесной)</Russian>
+            <Polish>SIG 556 (leśny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
-            <English>SIG 762 (provisional) spotter</English>
-            <Czech>SIG 762 (provisional) spotter</Czech>
-            <French>SIG 762 (provisoire) Observateur</French>
-            <Spanish>SIG 762 (provisional) observador</Spanish>
-            <Russian>SIG 762 (provisional) корректировщик</Russian>
-            <Polish>SIG 762 (prowizoryczny) obserwator</Polish>
+            <English>SIG 556 (provisional) spotter</English>
+            <Czech>SIG 556 (provisional) spotter</Czech>
+            <French>SIG 556 (provisoire) Observateur</French>
+            <Spanish>SIG 556 (provisional) observador</Spanish>
+            <Russian>SIG 556 (provisional) корректировщик</Russian>
+            <Polish>SIG 556 (prowizoryczny) obserwator</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_04">
             <English>ASP-1 Kir</English>
@@ -1639,25 +1639,25 @@
             <Polish>M14 (oliwkowy)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01">
-            <English>HK 122</English>
-            <Czech>HK 122</Czech>
-            <French>HK 122</French>
-            <Spanish>HK 122</Spanish>
-            <Russian>HK 122</Russian>
+            <English>HK 121</English>
+            <Czech>HK 121</Czech>
+            <French>HK 121</French>
+            <Spanish>HK 121</Spanish>
+            <Russian>HK 121</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_hex">
-            <English>HK 122 (Hex)</English>
-            <Czech>HK 122 (Hex)</Czech>
-            <French>HK 122 (Hex)</French>
-            <Spanish>HK 122 (Hex)</Spanish>
-            <Russian>HK 122 (гекс)</Russian>
+            <English>HK 121 (Hex)</English>
+            <Czech>HK 121 (Hex)</Czech>
+            <French>HK 121 (Hex)</French>
+            <Spanish>HK 121 (Hex)</Spanish>
+            <Russian>HK 121 (гекс)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_tan">
-            <English>HK 122 (Tan)</English>
-            <Czech>HK 122 (Tan)</Czech>
-            <French>HK 122 (Tan)</French>
-            <Spanish>HK 122 (Tan)</Spanish>
-            <Russian>HK 122 (бронза)</Russian>
+            <English>HK 121 (Tan)</English>
+            <Czech>HK 121 (Tan)</Czech>
+            <French>HK 121 (Tan)</French>
+            <Spanish>HK 121 (Tan)</Spanish>
+            <Russian>HK 121 (бронза)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02">
             <English>LWMMG</English>
