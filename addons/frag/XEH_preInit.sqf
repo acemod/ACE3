@@ -23,6 +23,7 @@ GVAR(traces) = [];
 GVAR(tracesStarted) = false;
 
 // * Other Shit */
+PREP(addBlackList);
 PREP(addTrack);
 PREP(drawTraces);
 PREP(removeTrack);
