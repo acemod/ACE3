@@ -119,6 +119,7 @@
             <Polish>Ekwipunek rewidowanej osoby</Polish>
             <Russian>Инвентарь обысканного человека</Russian>
             <Portuguese>Inventário da pessoa revistada</Portuguese>
+            <Italian>Inventario delle persone perquisite</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_FriskPerson">
             <English>Frisk person</English>
