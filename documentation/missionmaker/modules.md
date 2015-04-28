@@ -236,7 +236,33 @@ The safe zone around players from a different team (in meters)<br>
 ### 1.13 LSD Vehicles
 *Part of: ace_core*
 
-### 1.14 Wind Deflection
+### 1.14 Weather
+*Part of: ace_weather*
+
+This module allows you to customize the weather settings.
+
+**Settings:**
+
+1. **Weather propagation (Boolean)<br>**
+Enables sever side weather propagation.<br>
+`Default value: Yes`
+2. **ACE Weather (Boolean)<br>**
+Overrides the default weather (editor, mission settings) with ACE weather (map based).<br>
+`Default value: Yes`
+3. **Sync Rain (Boolean)<br>**
+Synchronizes rain.<br>
+`Default value: Yes`
+3. **Sync Wind (Boolean)<br>**
+Synchronizes wind.<br>
+`Default value: Yes`
+3. **Sync Misc (Boolean)<br>**
+Synchronizes lightnings, rainbow, fog, ...<br>
+`Default value: Yes`
+4. **Update Interval (Number)<br>**
+Defines the interval (seconds) between weather updates.<br>
+`Default value: 60`
+    
+### 1.15 Wind Deflection
 *Part of: ace_winddeflection*
 
 This module allows you to define when wind deflection is active.
