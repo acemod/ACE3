@@ -28,7 +28,7 @@ class ACE_Settings {
     class GVAR(cursorKeepCentered) {
         value = 0;
         typeName = "BOOL";
-        isClientSetable = 1;
+        isClientSettable = 1;
         displayName = "$STR_ACE_Interact_cursorKeepCentered";
         description = "$STR_ACE_Interact_cursorKeepCenteredDescription";
     };
