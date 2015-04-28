@@ -39,7 +39,6 @@ if (isClass (configFile >> "CfgRecoils" >> _recoil)) then {
         _recoil = [0, 0];
     };
 } else {
-    systemChat "noclass";
     _recoil = [0, 0];
 };
 
