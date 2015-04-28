@@ -33,8 +33,13 @@ _recoil = if (_muzzle == _weapon) then {
     getText (_config >> _muzzle >> "recoil")
 };
 
-_recoil = getArray (configFile >> "CfgRecoils" >> _recoil >> "kickBack");
-if (count _recoil < 2) then {
+if (isClass (configFile >> "CfgRecoils" >> _recoil)) then {
+    _recoil = getArray (configFile >> "CfgRecoils" >> _recoil >> "kickBack");
+    if (count _recoil < 2) then {
+        _recoil = [0, 0];
+    };
+} else {
+    systemChat "noclass";
     _recoil = [0, 0];
 };
 
