@@ -42,7 +42,7 @@
             <German>Sprengstoffcode: %1</German>
             <Spanish>Código del explosivo: %1</Spanish>
             <Polish>Kod ładunku: %1</Polish>
-            <French>Code explosif: %1</French>
+            <French>Code de l'explosif: %1</French>
             <Czech>Kód výbušniny: %1</Czech>
             <Hungarian>Robbanóanyag kódja: %1</Hungarian>
             <Portuguese>Código do explosivo: %1</Portuguese>
@@ -222,7 +222,7 @@
             <German>Löschen</German>
             <Spanish>Borrar</Spanish>
             <Polish>Usuń</Polish>
-            <French>Désamorçé</French>
+            <French>Effacer</French>
             <Czech>Čistý</Czech>
             <Italian>Libera</Italian>
             <Hungarian>Törlés</Hungarian>
