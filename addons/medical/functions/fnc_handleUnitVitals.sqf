@@ -33,13 +33,19 @@ _bloodVolume = _bloodVolume max 0;
 _unit setvariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
 
 // Set variables for synchronizing information across the net
-if (_bloodVolume < 90) then {
-    if !(_unit getvariable [QGVAR(hasLostBlood), false]) then {
-        _unit setvariable [QGVAR(hasLostBlood), true, true];
-    };
+if (_bloodVolume < 100) then {
+    if ((_bloodVolume < 90 && (GVAR(level) == 2)) || _bloodVolume <= 30) then {
+        if (_unit getvariable [QGVAR(hasLostBlood), 0] != 2) then {
+            _unit setvariable [QGVAR(hasLostBlood), 2, true];
+        };
+    } else {
+        if (_unit getvariable [QGVAR(hasLostBlood), 0] != 1) then {
+            _unit setvariable [QGVAR(hasLostBlood), 1, true];
+        };
+    }
 } else {
-    if (_unit getvariable [QGVAR(hasLostBlood),false]) then {
-        _unit setvariable [QGVAR(hasLostBlood), false, true];
+    if (_unit getvariable [QGVAR(hasLostBlood), 0] != 0) then {
+        _unit setvariable [QGVAR(hasLostBlood), 0, true];
     };
 };
 

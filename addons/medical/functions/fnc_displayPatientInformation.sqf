@@ -57,7 +57,7 @@ if (_show) then {
         if (_target getvariable[QGVAR(isBleeding), false]) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_BLEEDING", [1, 0.1, 0.1, 1]];
         };
-        if (_target getvariable[QGVAR(hasLostBlood), false]) then {
+        if (_target getvariable[QGVAR(hasLostBlood), 0] > 1) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_LOST_BLOOD", [1, 0.1, 0.1, 1]];
         };
 

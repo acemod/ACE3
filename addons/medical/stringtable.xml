@@ -1497,6 +1497,9 @@
             <French>Il à perdu du sang</French>
             <Polish>Stracił trochę krwi</Polish>
         </Key>
+        <Key ID="STR_ACE_MEDICAL_lostBloodALot">
+            <English>He's lost a lot of blood</English>
+        </Key>
         <Key ID="STR_ACE_MEDICAL_noBloodloss">
             <English>He hasn't lost blood</English>
             <Russian>Нет кровопотери</Russian>
