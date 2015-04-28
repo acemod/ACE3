@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Medical_Injuries">
             <English>INJURIES</English>
             <German>VERLETZUNGEN</German>
+            <Italian>LESIONI</Italian>
             <Russian>ТРАВМЫ</Russian>
             <French>BLESSURES</French>
             <Polish>OBRAŻENIA</Polish>
@@ -11,6 +12,7 @@
         <Key ID="STR_ACE_Medical_NoInjuriesBodypart">
             <English>No injuries on this bodypart ...</English>
             <German>Körperteil nicht verletzt ...</German>
+            <Italian>Non ci sono lesioni in questa parte del corpo ...</Italian>
             <Russian>Данная часть тела не повреждена ...</Russian>
             <French>Aucune blessures sur cette partie du corps</French>
             <Polish>Brak obrażeń na tej części ciała ...</Polish>
@@ -20,6 +22,7 @@
             <Polish>Detale zużytych medykamentów</Polish>
             <Spanish>Detalle de simulación de basura</Spanish>
             <Russian>Количество мусора от медицины</Russian>
+            <Italian>Dettagli Simulazione Rifiuti</Italian>
             <French>Niveau de simulation des détritus</French>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail_Desc">
@@ -27,6 +30,7 @@
             <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
             <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
             <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
+            <Italian>Il livello di dettagli della simulazione dei rifiuti indica il numero di rifiuti che verranno creati localmente nel client. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio client.</Italian>
             <French>Le nieau de simulation des détritus règle la quantité de déchets qui vont être créer localement dans le client. Des quantitées excessive dans certaines zones locales aurait pu causer des chutes D'IPS, donc c'est une option client uniquement.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
@@ -375,6 +379,7 @@
         <Key ID="STR_ACE_MEDICAL_TriageCard_NoEntry">
             <English>No entries on this triage card.</English>
             <German>Keine Einträge auf der Triagekarte</German>
+            <Italian>Nessuna voce sulla Triage Card</Italian>
             <Russian>Нет записей.</Russian>
             <French>Aucune entrée sur cette carte de triage</French>
             <Polish>Brak wpisów w tej karcie segregacyjnej.</Polish>
@@ -404,6 +409,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Diagnose">
             <English>Diagnose</English>
             <German>Diagnose</German>
+            <Italian>Diagnosi</Italian>
             <Russian>Диагностика</Russian>
             <French>Diagnostiquer</French>
             <Polish>Diagnoza</Polish>
@@ -411,6 +417,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Diagnosing">
             <English>Diagnosing ...</English>
             <German>Diagnostizieren ...</German>
+            <Italian>Diagnosi in corso...</Italian>
             <Russian>Диагностика ...</Russian>
             <French>Diagnostic en cours</French>
             <Polish>Diagnozowanie ...</Polish>
@@ -418,6 +425,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_CPR">
             <English>CPR</English>
             <German>HLW</German>
+            <Italian>RCP</Italian>
             <Russian>Сердечно-легочная реанимация</Russian>
             <French>RPC</French>
             <Polish>RKO</Polish>
@@ -425,6 +433,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_PerformingCPR">
             <English>Performing CPR ...</English>
             <German>HLW durchführen ...</German>
+            <Italian>Eseguendo RCP...</Italian>
             <Russian>Сердечно-легочная реанимация ...</Russian>
             <French>RPC en cours</French>
             <Polish>Przeprowadzanie RKO ...</Polish>
@@ -711,7 +720,7 @@
             <French>Bandage fait d'un matériel spécial utilisé pour couvrir une blessure, qui peut etre appliqué dès que le saignement a été stoppé.</French>
             <Polish>Opatrunek materiałowy, używany do przykrywania ran, zakładany na ranę po zatamowaniu krwawienia.</Polish>
             <Hungarian>Egy különleges anyagú kötszer sebek betakarására, amelyet a vérzés elállítása után helyeznek fel.</Hungarian>
-            <Italian>Una benda apposta, utilizzata per coprire una ferita, la quale è applicato sopra di essa una volta fermata l'emorragia.</Italian>
+            <Italian>Una benda apposita, utilizzata per coprire una ferita, la quale è applicata sopra di essa una volta fermata l'emorragia.</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_PACKING_BANDAGE_DISPLAY">
             <English>Packing Bandage</English>
@@ -740,7 +749,7 @@
             <French>Bandage servant à recouvrir les blessures pour arrêter les hémmoragies et faciliter la guérisson. Recouvrir une blessure est optionnel dans le cas de blessures polytraumatiques</French>
             <Polish>Opatrunek stosowany w celu zatrzymania krwawienia i osłony większych ran.</Polish>
             <Hungarian>Egy kötszerfajta, melyet a sebek nyomására használnak a vérzés elállítása és sebgyógyulás érdekében. A nyomókötés egy lehetőség nagyobb polytraumatikus sérülések esetén.</Hungarian>
-            <Italian>Un bendaggio usato per bendare ferite con emorragie e facilitare la guarigione. Bendare una ferita è una opzione su ferite di vario tipo.</Italian>
+            <Italian>Un bendaggio usato per coprire la ferita, fermare il sanguinamento e facilitarne la guarigione. Questa tecnica è opzionale su ferite multiple.</Italian>
             <German>Ein Verband, um die Wunde abzudecken und die Wundheilung zu fördern. Wunden abdecken ist eine Option bei größeren Polytraumen</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY">

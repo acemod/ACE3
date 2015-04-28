@@ -50,6 +50,7 @@ Ghost
 GieNkoV <gienkov.grzegorz@gmail.com>
 gpgpgpgp
 Grzegorz
+Gianmarco Varriale (TeamNuke) <admin@forhost.org>
 Hamburger SV
 Harakhti <shadowdragonphd@gmail.com>
 havena <silveredenis@gmail.com>
