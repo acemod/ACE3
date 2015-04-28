@@ -1324,24 +1324,31 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseMessage">
             <English>Patient %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</English>
+            <Spanish>El paciente %1&lt;br/&gt;está %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseAlive">
             <English>alive</English>
+            <Spanish>vivo</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseDead">
             <English>dead</English>
+            <Spanish>muerto</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_lostBlood">
             <English>He's lost some blood</English>
+            <Spanish>Ha perdido algo de sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noBloodloss">
             <English>He hasn't lost blood</English>
+            <Spanish>No ha perdido sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_inPain">
             <English>He is in pain</English>
+            <Spanish>Tiene dolor</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noPain">
             <English>He is not in pain</English>
+            <Spanish>No tiene dolor</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BANDAGED">
             <English>Bandaged</English>
