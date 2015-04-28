@@ -16,11 +16,6 @@ class Extended_InventoryOpened_EventHandlers {
     };
 };
 class Extended_InitPost_EventHandlers {
-    class CAManBase {
-        class ADDON {
-            serverInit = QUOTE(_this call FUNC(handleUnitInitPost));
-        };
-    };
     class Car {
         class ADDON {
             serverInit = QUOTE(_this call FUNC(handleVehicleInitPost));
@@ -37,4 +32,3 @@ class Extended_InitPost_EventHandlers {
         };
     };
 };
-
