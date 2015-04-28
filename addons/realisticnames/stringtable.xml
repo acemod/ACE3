@@ -1487,6 +1487,7 @@
             <French>Noreen "Bad News" ULR</French>
             <Spanish>Noreen "Bad News" ULR</Spanish>
             <Russian>Noreen "Bad News" ULR</Russian>
+            <German>Noreen "Bad News" ULR</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02">
             <English>Noreen "Bad News" ULR (Black)</English>
@@ -1494,6 +1495,7 @@
             <French>Noreen "Bad News" ULR (Noir)</French>
             <Spanish>Noreen "Bad News" ULR (Negro)</Spanish>
             <Russian>Noreen "Bad News" ULR (черный)</Russian>
+            <German>Noreen "Bad News" ULR (Schwarz)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_camo">
             <English>Noreen "Bad News" ULR (Camo)</English>
@@ -1501,6 +1503,7 @@
             <French>Noreen "Bad News" ULR (Camo)</French>
             <Spanish>Noreen "Bad News" ULR (Camuflaje)</Spanish>
             <Russian>Noreen "Bad News" ULR (камо)</Russian>
+            <German>Noreen "Bad News" ULR (Camo)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_sniper">
             <English>Noreen "Bad News" ULR (Sand)</English>
@@ -1508,6 +1511,7 @@
             <French>Noreen "Bad News" ULR (Beige)</French>
             <Spanish>Noreen "Bad News" ULR (Arena)</Spanish>
             <Russian>Noreen "Bad News" ULR (песочный)</Russian>
+            <German>Noreen "Bad News" ULR (Sand)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_03">
             <English>SIG 556</English>
@@ -1516,6 +1520,7 @@
             <Spanish>SIG 556</Spanish>
             <Russian>SIG 556</Russian>
             <Polish>SIG 556</Polish>
+            <German>SIG 556</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03">
             <English>SIG 556 (Black)</English>
@@ -1524,6 +1529,7 @@
             <Spanish>SIG 556 (Negro)</Spanish>
             <Russian>SIG 556 (черный)</Russian>
             <Polish>SIG 556 (czarny)</Polish>
+            <German>SIG 556 (Schwarz)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_khaki">
             <English>SIG 556 (Khaki)</English>
@@ -1532,6 +1538,7 @@
             <Spanish>SIG 556 (Caqui)</Spanish>
             <Russian>SIG 556 (хаки)</Russian>
             <Polish>SIG 556 (khaki)</Polish>
+            <German>SIG 556 (Khaki)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_tan">
             <English>SIG 556 (Sand)</English>
@@ -1540,6 +1547,7 @@
             <Spanish>SIG 556 (Arena)</Spanish>
             <Russian>SIG 556 (песочный)</Russian>
             <Polish>SIG 556 (piaskowy)</Polish>
+            <German>SIG 556 (Sand)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_multicam">
             <English>SIG 556 (Camo)</English>
@@ -1548,6 +1556,7 @@
             <Spanish>SIG 556 (Camuflaje)</Spanish>
             <Russian>SIG 556 (камо)</Russian>
             <Polish>SIG 556 (kamuflaż)</Polish>
+            <German>SIG 556 (Camo)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_woodland">
             <English>SIG 556 (Woodland)</English>
@@ -1556,6 +1565,7 @@
             <Spanish>SIG 556 (Bosque)</Spanish>
             <Russian>SIG 556 (лесной)</Russian>
             <Polish>SIG 556 (leśny)</Polish>
+            <German>SIG 556 (Woodland)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
             <English>SIG 556 (provisional) spotter</English>
@@ -1564,6 +1574,7 @@
             <Spanish>SIG 556 (provisional) observador</Spanish>
             <Russian>SIG 556 (provisional) корректировщик</Russian>
             <Polish>SIG 556 (prowizoryczny) obserwator</Polish>
+            <German>SIG 556 (provisorisch) Beobachter</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_04">
             <English>ASP-1 Kir</English>
@@ -1571,6 +1582,7 @@
             <French>ASP-1 Kir</French>
             <Spanish>ASP-1 Kir</Spanish>
             <Russian>ASP-1 Kir</Russian>
+            <German>ASP-1 Kir</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04">
             <English>ASP-1 Kir (Black)</English>
@@ -1578,6 +1590,7 @@
             <French>ASP-1 Kir (Noir)</French>
             <Spanish>ASP-1 Kir (Negro)</Spanish>
             <Russian>ASP-1 Kir (черный)</Russian>
+            <German>ASP-1 Kir (Schwarz)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04_Tan">
             <English>ASP-1 Kir (Tan)</English>
@@ -1585,6 +1598,7 @@
             <French>ASP-1 Kir (Tan)</French>
             <Spanish>ASP-1 Kir (Tan)</Spanish>
             <Russian>ASP-1 Kir (бронзовый)</Russian>
+            <German>ASP-1 Kir (Hellbraun)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_05">
             <English>Cyrus</English>
@@ -1592,6 +1606,7 @@
             <French>Cyrus</French>
             <Spanish>Cyrus</Spanish>
             <Russian>Cyrus</Russian>
+            <German>Cyrus</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_blk">
             <English>Cyrus (Black)</English>
@@ -1599,6 +1614,7 @@
             <French>Cyrus (Noir)</French>
             <Spanish>Cyrus (Negro)</Spanish>
             <Russian>Cyrus (черный)</Russian>
+            <German>Cyrus (Schwarz)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_hex">
             <English>Cyrus (Hex)</English>
@@ -1606,6 +1622,7 @@
             <French>Cyrus (Hex)</French>
             <Spanish>Cyrus (Hex)</Spanish>
             <Russian>Cyrus (гекс)</Russian>
+            <German>Cyrus (Hex)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_tan">
             <English>Cyrus (Tan)</English>
@@ -1613,6 +1630,7 @@
             <French>Cyrus (Tan)</French>
             <Spanish>Cyrus (Tan)</Spanish>
             <Russian>Cyrus (бронза)</Russian>
+            <German>Cyrus (Hellbraun)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_06">
             <English>M14</English>
@@ -1621,6 +1639,7 @@
             <Spanish>M14</Spanish>
             <Russian>M14</Russian>
             <Polish>M14</Polish>
+            <German>M14</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_camo">
             <English>M14 (Camo)</English>
@@ -1629,6 +1648,7 @@
             <Spanish>M14 (Camuflaje)</Spanish>
             <Russian>M14 (Камо)</Russian>
             <Polish>M14 (kamuflaż)</Polish>
+            <German>M14 (Camo)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_olive">
             <English>M14 (Olive)</English>
@@ -1637,6 +1657,7 @@
             <Spanish>M14 (Oliva)</Spanish>
             <Russian>M14 (Олива)</Russian>
             <Polish>M14 (oliwkowy)</Polish>
+            <German>M14 (Olive)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01">
             <English>HK121</English>
@@ -1644,6 +1665,7 @@
             <French>HK121</French>
             <Spanish>HK121</Spanish>
             <Russian>HK121</Russian>
+            <German>HK121</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_hex">
             <English>HK121 (Hex)</English>
@@ -1651,6 +1673,7 @@
             <French>HK121 (Hex)</French>
             <Spanish>HK121 (Hex)</Spanish>
             <Russian>HK121 (гекс)</Russian>
+            <German>HK121 (Hex)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_tan">
             <English>HK121 (Tan)</English>
@@ -1658,6 +1681,7 @@
             <French>HK121 (Tan)</French>
             <Spanish>HK121 (Tan)</Spanish>
             <Russian>HK121 (бронза)</Russian>
+            <German>HK121 (Hellbraun)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02">
             <English>LWMMG</English>
@@ -1666,6 +1690,7 @@
             <Spanish>LWMMG</Spanish>
             <Russian>LWMMG</Russian>
             <Polish>LWMMG</Polish>
+            <German>LWMMG</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_camo">
             <English>LWMMG (MTP)</English>
@@ -1674,6 +1699,7 @@
             <Spanish>LWMMG (MTP)</Spanish>
             <Russian>LWMMG (MTP)</Russian>
             <Polish>LWMMG (MTP)</Polish>
+            <German>LWMMG (MTP)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_black">
             <English>LWMMG (Black)</English>
@@ -1682,6 +1708,7 @@
             <Spanish>LWMMG (Negro)</Spanish>
             <Russian>LWMMG (Черный)</Russian>
             <Polish>LWMMG (czarny)</Polish>
+            <German>LWMMG (Schwarz)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_sand">
             <English>LWMMG (Sand)</English>
@@ -1690,6 +1717,7 @@
             <Spanish>LWMMG (Arena)</Spanish>
             <Russian>LWMMG (Песочный)</Russian>
             <Polish>LWMMG (piaskowy)</Polish>
+            <German>LWMMG (Sand)</German>
         </Key>
     </Package>
 </Project>
