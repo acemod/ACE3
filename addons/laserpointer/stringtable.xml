@@ -53,6 +53,7 @@
             <Russian>Лазер</Russian>
             <French>Laser</French>
             <Spanish>Laser</Spanish>
+            <Italian>Laser</Italian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_IRLaser">
             <English>IR Laser</English>
@@ -61,6 +62,7 @@
             <Russian>ИК-лазер</Russian>
             <French>Laser IR</French>
             <Spanish>Laser IR</Spanish>
+            <Italian>Laser IR</Italian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_switchLaserLight">
             <English>Switch Laser / IR Laser</English>

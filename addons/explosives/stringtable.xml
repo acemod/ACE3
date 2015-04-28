@@ -42,7 +42,7 @@
             <German>Sprengstoffcode: %1</German>
             <Spanish>Código del explosivo: %1</Spanish>
             <Polish>Kod ładunku: %1</Polish>
-            <French>Code explosif: %1</French>
+            <French>Code de l'explosif: %1</French>
             <Czech>Kód výbušniny: %1</Czech>
             <Hungarian>Robbanóanyag kódja: %1</Hungarian>
             <Portuguese>Código do explosivo: %1</Portuguese>
@@ -222,7 +222,7 @@
             <German>Löschen</German>
             <Spanish>Borrar</Spanish>
             <Polish>Usuń</Polish>
-            <French>Désamorçé</French>
+            <French>Effacer</French>
             <Czech>Čistý</Czech>
             <Italian>Libera</Italian>
             <Hungarian>Törlés</Hungarian>
@@ -478,6 +478,7 @@
             <Spanish>Detonador de hombre muerto</Spanish>
             <Hungarian>Dead Man's Switch</Hungarian>
             <Russian>Кнопка мертвеца</Russian>
+            <Italian>Detonatore a rilascio</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_DeadManSwitch_description">
             <English>Used to remotely trigger explosives when released.</English>
@@ -488,7 +489,7 @@
             <Spanish>Utilizado para detonar explosivos remotamente al soltarlo.</Spanish>
             <Hungarian>Robbanóanyagok távoli robbantásához való, elengedéskor gyújt.</Hungarian>
             <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
-            <Italian>Usato per attivare esplosivi quando rilasciato</Italian>
+            <Italian>Usato per attivare esplosivi al momento del rilascio</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_Pickup">
             <English>Pick up</English>
