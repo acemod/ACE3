@@ -903,7 +903,7 @@
             <French>Calibre: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M993 AP)&lt;br /&gt;Патронов: 20</Russian>
-        </Key>        
+        </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk248 Mod 0)</English>
             <Polish>Magazynek 7,62mm 20rd (Mk248 Mod 0)</Polish>
@@ -991,6 +991,7 @@
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_Name">
             <English>6.5mm Creedmor 30Rnd Mag</English>
             <Polish>Magazynek 6,5mm Creedmor 30rd</Polish>
+            <Spanish>Cargador de 30 balas Creedmor de 6.5mm</Spanish>
         </Key>
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_NameShort">
             <English>6.5mm CM</English>
@@ -1002,6 +1003,7 @@
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_Description">
             <English>Caliber: 6.5mm Creedmor&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
             <Polish>Kaliber: 6,5mm Creedmor&lt;br /&gt;Pociski: 30&lt;br /&gt;Używany w: MXM</Polish>
+            <Spanish>Calibre: 6.5mm Creedmor&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MXM</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Name">
             <English>.338 10Rnd Mag (300gr Sierra MatchKing HPBT)</English>

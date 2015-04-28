@@ -5,11 +5,13 @@
             <English>INJURIES</English>
             <German>VERLETZUNGEN</German>
             <Russian>ТРАВМЫ</Russian>
+            <Spanish>HERIDAS</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_NoInjuriesBodypart">
             <English>No injuries on this bodypart ...</English>
             <German>Körperteil nicht verletzt ...</German>
             <Russian>Данная часть тела не повреждена ...</Russian>
+            <Spanish>Sin heridas en esta parte del cuerpo ...</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
@@ -358,7 +360,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_TriageCard">
             <English>Triage Card</English>
             <German>Triagekarte</German>
-            <Spanish>Tarjeta de triaje</Spanish>
+            <Spanish>Tarjeta de clasificación</Spanish>
             <Russian>Медкарта</Russian>
             <Polish>Karta segregacyjna</Polish>
             <Czech>Karta Triage</Czech>
@@ -370,6 +372,7 @@
             <English>No entries on this triage card.</English>
             <German>Keine Einträge auf der Triagekarte</German>
             <Russian>Нет записей.</Russian>
+            <Spanish>Sin entradas en esta tarjeta de clasificación.</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Tourniquet">
             <English>Tourniquet</English>
@@ -397,21 +400,25 @@
             <English>Diagnose</English>
             <German>Diagnose</German>
             <Russian>Диагностика</Russian>
+            <Spanish>Diagnosticar</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Diagnosing">
             <English>Diagnosing ...</English>
             <German>Diagnostizieren ...</German>
             <Russian>Диагностика ...</Russian>
+            <Spanish>Diagnosticando ...</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_CPR">
             <English>CPR</English>
             <German>HLW</German>
             <Russian>Сердечно-легочная реанимация</Russian>
+            <Spanish>RCP</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_PerformingCPR">
             <English>Performing CPR ...</English>
             <German>HLW durchführen ...</German>
             <Russian>Сердечно-легочная реанимация ...</Russian>
+            <Spanish>Realizando RCP ...</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
@@ -1063,7 +1070,7 @@
         <Key ID="STR_ACE_MEDICAL_AID_KIT_DISPLAY">
             <English>Personal Aid Kit</English>
             <Russian>Аптечка</Russian>
-            <Spanish>Botiquín de primeros auxilios</Spanish>
+            <Spanish>Equipo de primeros auxilios</Spanish>
             <French>Équipement de support vital</French>
             <Polish>Apteczka osobista</Polish>
             <German>Persönliches Verbandpäckchen</German>
@@ -1084,11 +1091,13 @@
             <English>Personal Aid Kit for in field stitching or advanced treatment</English>
             <Polish>W znacznym stopniu poprawia stan pacjenta</Polish>
             <Russian>Полевая аптчека для продвинутого лечения и зашивания ран</Russian>
+            <Spanish>Equipo de primeros auxilios para costura de campaña o tratamiento avanzados</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_USE_AID_KIT">
             <English>Use Personal Aid Kit</English>
             <German>Verbandpäckchen benutzen</German>
             <Russian>Использовать аптечку</Russian>
+            <Spanish>Usar equipo de primeros auxilios</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_SURGICALKIT_DISPLAY">
             <English>Surgical Kit</English>
@@ -1124,6 +1133,7 @@
             <English>Use Surgical Kit</English>
             <German>Operationsset benutzen</German>
             <Russian>Использовать хирургический набор</Russian>
+            <Spanish>Usar equipo quirúrgico</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BODYBAG_DISPLAY">
             <English>Bodybag</English>
@@ -1179,6 +1189,7 @@
             <English>%1 checked Blood Pressure: %2</English>
             <German>%1 kontrollierte Blutdruck: %2</German>
             <Russian>%1 проверил артериальное давление: %2</Russian>
+            <Spanish>%1 verificada la presión arterial: %2</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CHECKED_MEDIC">
             <English>You checked %1</English>
@@ -1254,21 +1265,25 @@
             <English>Low</English>
             <German>Niedrig</German>
             <Russian>Низкое</Russian>
+            <Spanish>Baja</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_NORMAL">
             <English>Normal</English>
             <German>Normal</German>
             <Russian>Нормальное</Russian>
+            <Spanish>Normal</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_HIGH">
             <English>High</English>
             <German>Hoch</German>
             <Russian>Высокое</Russian>
+            <Spanish>Alta</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_NOBLOODPRESSURE">
             <English>No Blood Pressure</English>
             <German>Kein Blutdruck</German>
             <Russian>Артериальное давление отсутствует</Russian>
+            <Spanish>Sin presión arterial</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE">
             <English>Pulse</English>
@@ -1304,21 +1319,25 @@
             <English>%1 checked Heart Rate: %2</English>
             <German>%1 kontrollierte Herzfrequenz: %2</German>
             <Russian>%1 проверил пульс: %2</Russian>
+            <Spanish>%1 verificado el ritmo cardíaco: %2</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_WEAK">
             <English>Weak</English>
             <German>Schwach</German>
             <Russian>Слабый</Russian>
+            <Spanish>Débil</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_NORMAL">
             <English>Normal</English>
             <German>Normal</German>
             <Russian>Нормальный</Russian>
+            <Spanish>Normal</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_STRONG">
             <English>Strong</English>
             <German>Stark</German>
             <Russian>Сильный</Russian>
+            <Spanish>Fuerte</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_1">
             <English>You find a Heart Rate of %2</English>
@@ -1423,30 +1442,37 @@
         <Key ID="STR_ACE_MEDICAL_diagnoseMessage">
             <English>Patient %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</English>
             <Russian>Пациент %1&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Russian>
+            <Spanish>Paciente %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseAlive">
             <English>alive</English>
             <Russian>жив</Russian>
+            <Spanish>Vivo</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseDead">
             <English>dead</English>
             <Russian>мертв</Russian>
+            <Spanish>Muerto</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_lostBlood">
             <English>He's lost some blood</English>
             <Russian>Есть кровопотеря</Russian>
+            <Spanish>Ha perdido un poco de sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noBloodloss">
             <English>He hasn't lost blood</English>
             <Russian>Нет кровопотери</Russian>
+            <Spanish>No ha perdido la sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_inPain">
             <English>He is in pain</English>
             <Russian>Испытывает боль</Russian>
+            <Spanish>Siente dolor</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noPain">
             <English>He is not in pain</English>
             <Russian>Не испытывает боли</Russian>
+            <Spanish>No siente dolor</Spanish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BANDAGED">
             <English>Bandaged</English>
@@ -1780,166 +1806,199 @@
             <English>Scrape</English>
             <German>Kratzer</German>
             <Russian>Ссадина</Russian>
+            <Spanish>Arañazo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Minor">
             <English>Minor Scrape</English>
             <German>Kleiner Kratzer</German>
             <Russian>Малая ссадина</Russian>
+            <Spanish>Arañazo menor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Medium">
             <English>Medium Scrape</English>
             <German>Mittlerer Kratzer</German>
             <Russian>Средняя ссадина</Russian>
+            <Spanish>Arañazo medio</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Large">
             <English>Large Scrape</English>
             <German>Großer Kratzer</German>
             <Russian>Большая ссадина</Russian>
+            <Spanish>Arañazo severo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion">
             <English>Avulsion</English>
             <German>Avulsion</German>
             <Russian>Рваная рана</Russian>
+            <Spanish>Avulsión</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Minor">
             <English>Minor Avulsion</English>
             <German>Kleine Avulsion</German>
             <Russian>Малая рваная рана</Russian>
+            <Spanish>Avulsión menor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Medium">
             <English>Medium Avulsion</English>
             <German>Mittlere Avulsion</German>
             <Russian>Средняя рваная рана</Russian>
+            <Spanish>Avulsión media</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Large">
             <English>Large Avulsion</English>
             <German>Große Avulsion</German>
             <Russian>Большая рваная рана</Russian>
+            <Spanish>Avulsión severa</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion">
             <English>Bruise</English>
             <German>Prellung</German>
             <Russian>Ушиб</Russian>
+            <Spanish>Contusión</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Minor">
             <English>Minor Bruise</English>
             <German>Kleine Prellung</German>
             <Russian>Малый ушиб</Russian>
+            <Spanish>Contusión menor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Medium">
             <English>Medium Bruise</English>
             <German>Mittlere Prellung</German>
             <Russian>Средний ушиб</Russian>
+            <Spanish>Contusión media</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Large">
             <English>Large Bruise</English>
             <German>Große Prellung</German>
             <Russian>Большой ушиб</Russian>
+            <Spanish>Contusión severa</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush">
             <English>Crushed tissue</English>
             <German>Quetschverletzung</German>
             <Russian>Компресионная травма</Russian>
+            <Spanish>Tejido triturado</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Minor">
             <English>Minor crushed tissue</English>
             <German>Kleine Quetschverletzung</German>
             <Russian>Малая компрессионная травма</Russian>
+            <Spanish>Tejido triturado menor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Medium">
             <English>Medium crushed tissue</English>
             <German>Mittlere Quetschverletzung</German>
             <Russian>Средняя компрессионная травма</Russian>
+            <Spanish>Tejido triturado medio</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Large">
             <English>Large crushed tissue</English>
             <German>Große Quetschverletzung</German>
             <Russian>Большая компрессионная травма</Russian>
+            <Spanish>Tejido triturado severo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut">
             <English>Cut</English>
             <German>Schnittwunde</German>
             <Russian>Резаная рана</Russian>
+            <Spanish>Corte</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Minor">
             <English>Small Cut</English>
             <German>Kleine Schnittwunde</German>
             <Russian>Малая резаная рана</Russian>
+            <Spanish>Corte menor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Medium">
             <English>Medium Cut</English>
             <German>Mittlere Schnittwunde</German>
             <Russian>Средняя резаная рана</Russian>
+            <Spanish>Corte mediano</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Large">
             <English>Large Cut</English>
             <German>Große Schnittwunde</German>
             <Russian>Большая резаная рана</Russian>
+            <Spanish>Corte severo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration">
             <English>Tear</English>
             <German>Riss</German>
             <Russian>Рваная рана</Russian>
+            <Spanish>Desgarro</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Minor">
             <English>Small Tear</English>
             <German>Kleiner Riss</German>
             <Russian>Малая рваная рана</Russian>
+            <Spanish>Desgarro menor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Medium">
             <English>Medium Tear</English>
             <German>Mittlerer Riss</German>
             <Russian>Средняя рваная рана</Russian>
+            <Spanish>Desgarro medio</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Large">
             <English>Large Tear</English>
             <German>Großer Riss</German>
             <Russian>Большая рваная рана</Russian>
+            <Spanish>Desgarro severo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound">
             <English>Velocity Wound</English>
             <German>Ballistisches Trauma</German>
             <Russian>Огнестрельная рана</Russian>
+            <Spanish>Herida de bala</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Minor">
             <English>Smal Velocity Wound</English>
             <German>Kleines Ballistisches Trauma</German>
             <Russian>Малая огнестрельная рана</Russian>
+            <Spanish>Herida de bala menor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Medium">
             <English>Medium Velocity Wound</English>
             <German>Mittleres Ballistisches Trauma</German>
             <Russian>Средняя огнестрельная рана</Russian>
+            <Spanish>Herida de bala media</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Large">
             <English>Large Velocity Wound</English>
             <German>Großes Ballistisches Trauma</German>
             <Russian>Большая огнестрельная рана</Russian>
+            <Spanish>Herida de bala severa</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound">
             <English>Puncture Wound</English>
             <German>Stichwunde</German>
             <Russian>Колотая рана</Russian>
+            <Spanish>Herida punzante</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Minor">
             <English>Minor Puncture Wound</English>
             <German>Kleine Stichwunde</German>
             <Russian>Малая колотая рана</Russian>
+            <Spanish>Herida punzante menor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Medium">
             <English>Medium Puncture Wound</English>
             <German>Mittlere Stichwunde</German>
             <Russian>Средняя колотая рана</Russian>
+            <Spanish>Herida punzante media</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Large">
             <English>Large Puncture Wound</English>
             <German>Große Stichwunde</German>
             <Russian>Большая колотая рана</Russian>
+            <Spanish>Herida punzante severa</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Femur">
             <English>Broken Femur</English>
             <German>Gebrochener Oberschenkelknochen</German>
             <Russian>Перелом</Russian>
+            <Spanish>Femur roto</Spanish>
         </Key>
     </Package>
 </Project>

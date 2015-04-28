@@ -76,21 +76,25 @@
             <English>Interaction - Text Max</English>
             <Polish>Interakcja - Tekst max</Polish>
             <French>Interaction -Texte Max</French>
+            <Spanish>Interacción - Texto al max.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
             <English>Interaction - Text Min</English>
             <Polish>Interakcja - Tekst min</Polish>
             <French>Interaction - Texte Min</French>
+            <Spanish>Interacción - Texto al min.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
             <English>Interaction - Shadow Max</English>
             <Polish>Interakcja - Cień max</Polish>
             <French>Interaction - Ombre Max</French>
+            <Spanish>Interacción - Sombras al max.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
             <Polish>Interakcja - Cień min</Polish>
             <French>Interaction - Ombre Min</French>
+            <Spanish>Interacción - Sombras al min.</Spanish>
         </Key>
     </Package>
 </Project>
