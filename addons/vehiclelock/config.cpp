@@ -20,6 +20,10 @@ class ACE_Settings {
     class GVAR(LockVehicleInventory) {
         value = 0;
         typeName = "BOOL";
+    };    
+    class GVAR(VehicleStartingLockState) {
+        value = -1;
+        typeName = "SCALAR";
     };
 };
 
