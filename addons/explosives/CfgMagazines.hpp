@@ -40,7 +40,9 @@ class CfgMagazines {
     class ACE_APERSTripFlare_Wire_Mag: APERSTripMine_Wire_Mag {
         ACE_SetupObject = "ACE_Explosives_Place_APERSTripwireFlare";
         ammo = "ACE_APERSTripFlare_Wire_Ammo";
-        displayName = "Tripwire Flare"; //todo localize
+        displayName = "$STR_ACE_Explosives_TripFlare_Name";
+        descriptionShort = "$STR_ACE_Explosives_TripFlare_Description";
+        class Library {libTextDesc = "$STR_ACE_Explosives_TripFlare_Description";};
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire_Flare"};
             class Tripwire_Flare;

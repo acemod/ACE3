@@ -54,6 +54,6 @@ onSetup parameters:
     class Tripwire_Flare {
         displayName = $STR_ACE_Explosives_TripWire;
         picture = PATHTOF(Data\UI\Tripwire.paa);
-        onPlace = QUOTE(_this call FUNC(tripFlareOnPlace);false);
+        onPlace = QUOTE(false);
     };
 };

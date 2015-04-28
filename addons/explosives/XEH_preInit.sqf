@@ -59,6 +59,5 @@ PREP(startTimer);
 PREP(triggerType);
 
 PREP(tripFlareExplosionEH);
-PREP(tripFlareOnPlace);
 
 ADDON = true;
