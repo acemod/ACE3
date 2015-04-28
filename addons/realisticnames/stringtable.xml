@@ -305,7 +305,7 @@
             <Spanish>HEMTT médico</Spanish>
             <Polish>HEMTT Medyczny</Polish>
             <Czech>HEMTT Zdravotnický</Czech>
-            <French>HEMTT Sanitaire</French>
+            <French>HEMTT Médical</French>
             <Russian>HEMTT Медицинский</Russian>
             <Portuguese>HEMTT Médico</Portuguese>
             <Hungarian>HEMTT (egészségügyi)</Hungarian>
@@ -485,7 +485,7 @@
             <Spanish>KamAZ médico</Spanish>
             <Polish>KamAZ Medyczny</Polish>
             <Czech>KAMAZ Zdravotnický</Czech>
-            <French>KamAZ Sanitaire</French>
+            <French>KamAZ Médical</French>
             <Russian>КамАЗ Медицинский</Russian>
             <Portuguese>KamAZ Médico</Portuguese>
             <Hungarian>KamAZ (egészségügyi)</Hungarian>
@@ -665,7 +665,7 @@
             <Spanish>Typhoon médico</Spanish>
             <Polish>Typhoon Medyczny</Polish>
             <Czech>Typhoon zdravotnický</Czech>
-            <French>Typhoon Sanitaire</French>
+            <French>Typhoon Médical</French>
             <Russian>Тайфун Медицинский</Russian>
             <Portuguese>Typhoon Médico</Portuguese>
             <Hungarian>Typhoon (egészségügyi)</Hungarian>
@@ -726,7 +726,7 @@
             <Polish>CH-47I Chinook (nieuzbrojony)</Polish>
             <Russian>CH-47I Chinook (невооруженный)</Russian>
             <Czech>CH-47I Chinook (neozbrojený)</Czech>
-            <French>CH-47I Chinook (Neozbrojený)</French>
+            <French>CH-47I Chinook (non-armé)</French>
             <Hungarian>CH-47I Chinook (fegyvertelen)</Hungarian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_CAS_01_Name">
@@ -867,7 +867,7 @@
             <Spanish>M18A1 Claymore</Spanish>
             <Polish>Mina kierunkowa M18A1 Claymore</Polish>
             <Czech>Mina Claymore M18A1</Czech>
-            <French>M18A1 Claymore Mine antipersonnel à effet dirigé</French>
+            <French>M18A1 Claymore</French>
             <Russian>M18A1 Клеймор</Russian>
             <Portuguese>M18A1 Claymore</Portuguese>
             <Hungarian>M18A1 Claymore akna</Hungarian>
@@ -891,7 +891,7 @@
             <Spanish>Bloque de demolición M112</Spanish>
             <Polish>Ładunek burzący M112</Polish>
             <Czech>Výbušná nálož M112 </Czech>
-            <French>Pétard M112</French>
+            <French>M112 Block de Démolition</French>
             <Russian>M112 подрывной заряд</Russian>
             <Portuguese>M112 Carga de Demolição</Portuguese>
             <Hungarian>M112 romboló tömb</Hungarian>
@@ -1011,7 +1011,7 @@
             <Spanish>Mina antipersona VS-50</Spanish>
             <Polish>Mina przeciwpiechotna VS-50</Polish>
             <Czech>Protipěchotní mina VS-50 </Czech>
-            <French>VS-50 Mine antipersonnel à pression</French>
+            <French>VS-50 Mine AP</French>
             <Russian>VS-50 Противопехотная мина</Russian>
             <Portuguese>VS-50 Mina antipessoal</Portuguese>
             <Hungarian>VS-50 gyalogsági taposóakna</Hungarian>
@@ -1023,7 +1023,7 @@
             <Spanish>Mina antipersona M26</Spanish>
             <Polish>Mina przeciwpiechotna M26</Polish>
             <Czech>Šrapnelová mina M26</Czech>
-            <French>M26  Mine antipersonnel bondissante</French>
+            <French>M26  Mine AP bondissante</French>
             <Russian>M26 Противопехотная мина</Russian>
             <Portuguese>M26 Mina saltadora antipessoal</Portuguese>
             <Hungarian>M26 gyalogsági ugróakna</Hungarian>
@@ -1035,7 +1035,7 @@
             <Spanish>Mina antipersona de alambre PMR-3</Spanish>
             <Polish>Mina przeciwpiechotna PMR-3</Polish>
             <Czech>Nástražná mina PMR-3</Czech>
-            <French>PMR-3 Mine antipersonnel à traction</French>
+            <French>PMR-3 Mine AP à traction</French>
             <Russian>PMR-3 Противопехотная мина</Russian>
             <Portuguese>PMR-3 Mina antipessoal (armadilha)</Portuguese>
             <Hungarian>PMR-3 botlódrótos gyalogsági akna</Hungarian>
@@ -1136,7 +1136,7 @@
             <German>Mini-Spike (PALR)</German>
             <Czech>Mini-Spike (PT)</Czech>
             <Polish>Mini-Spike (AT)</Polish>
-            <French>Mini-Spike (AT)</French>
+            <French>Mini-Spike (AC)</French>
             <Hungarian>Mini-Spike (Tankelhárító)</Hungarian>
             <Spanish>Mini-Spike (AT)</Spanish>
             <Russian>Mini-Spike (AT)</Russian>
@@ -1156,7 +1156,7 @@
             <German>MX (Schwarz)</German>
             <Polish>MX (Czarny)</Polish>
             <Czech>MX (černý)</Czech>
-            <French>MX ( Noir)</French>
+            <French>MX (Noir)</French>
             <Hungarian>MX (Fekete)</Hungarian>
             <Spanish>MX (Negro)</Spanish>
             <Russian>MX (черный)</Russian>
@@ -1196,7 +1196,7 @@
             <German>MX 3GL (Schwarz)</German>
             <Polish>MX 3GL (Czarny)</Polish>
             <Czech>MX 3GL (černý)</Czech>
-            <French>MX 3 GL (Noir)</French>
+            <French>MX 3GL (Noir)</French>
             <Hungarian>MX 3GL (Fekete)</Hungarian>
             <Spanish>MX 3GL (Negro)</Spanish>
             <Russian>MX 3GL (черный)</Russian>
