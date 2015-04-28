@@ -269,7 +269,9 @@ if (USE_WOUND_EVENT_SYNC) then {
 // Networked litter
 [QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
 
-["PlayerJip", {
-    diag_log format["[ACE] JIP Medical init for player"];
-    [player] call FUNC(init);
-}] call FUNC(addEventHandler);
+if (hasInterface) then {
+    ["PlayerJip", {
+        diag_log format["[ACE] JIP Medical init for player"];
+        [player] call FUNC(init);
+    }] call FUNC(addEventHandler);
+};
