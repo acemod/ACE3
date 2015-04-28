@@ -4,18 +4,21 @@
         <Key ID="STR_ACE_MK6MORTAR_rangetable_name">
             <English>82mm Rangetable</English>
             <German>82mm Distanztabelle</German>
+            <Polish>Tabela strzelnicza 82mm</Polish>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
             <English>Range Table for the MK6 82mm Mortar</English>
             <German>Distanztabelle für den Mk6 82mm Mortar</German>
+            <Polish>Tabela strzelnicza dla moździerza 82mm MK6</Polish>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
             <English>Open 82mm Rangetable</English>
             <German>Öffne 82mm Distanztabelle</German>
+            <Polish>Otwórz tabelę strzelniczą 82mm</Polish>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
             <English>Charge</English>
-            <German>Ladung</German>
+            <Polish>Ładunek</Polish>
         </Key>
     </Package>
 </Project>
