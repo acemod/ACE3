@@ -7,7 +7,7 @@ class CfgPatches {
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {"ace_interaction"};
     author[] = {"PabstMirror"};
-    authorUrl = "https://github.com/PabstMirror/";
+    authorUrl = "https://github.com/acemod/ACE3";
     VERSION_CONFIG;
   };
 };

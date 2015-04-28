@@ -1,6 +1,7 @@
 /*
  * Author: PabstMirror
- * Function for sync module.  Assigns keys for all synced vehicles to any players that are synced.
+ * For every lockable vehicle, sets the starting lock state to a sane value.
+ * Only run if the InitModule is placed.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -18,9 +19,10 @@
 PARAMS_1(_vehicle);
 
 if (!isServer) exitWith {};
-if (GVAR(VehicleStartingLockState) == -1) exitWith {};
 
 [{
+    //If the module wasn't placed, just exit (needs to be in wait because objectInitEH is before moduleInit)
+    if (GVAR(VehicleStartingLockState) == -1) exitWith {};
     private ["_lock"];
     PARAMS_1(_vehicle);
     if ((_vehicle isKindOf "Car") || {_vehicle isKindOf "Tank"} || {_vehicle isKindOf "Helicopter"}) then {
