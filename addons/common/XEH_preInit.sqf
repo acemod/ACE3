@@ -39,8 +39,10 @@ PREP(displayText);
 PREP(displayTextPicture);
 PREP(displayTextStructured);
 PREP(doAnimation);
+PREP(dropBackpack);
 PREP(endRadioTransmission);
 PREP(eraseCache);
+PREP(errorMessage);
 PREP(execNextFrame);
 PREP(execPersistentFnc);
 PREP(execRemoteFnc);
@@ -107,6 +109,7 @@ PREP(isAutoWind);
 PREP(isAwake);
 PREP(isEngineer);
 PREP(isEOD);
+PREP(isFeatureCameraActive);
 PREP(isInBuilding);
 PREP(isModLoaded);
 PREP(isPlayer);
@@ -117,16 +120,18 @@ PREP(loadPerson);
 PREP(loadPersonLocal);
 PREP(loadSettingsFromProfile);
 PREP(loadSettingsOnServer);
+PREP(loadSettingsLocalizedText);
 PREP(map);
 PREP(moduleCheckPBOs);
 PREP(moduleLSDVehicles);
 PREP(moveToTempGroup);
 PREP(muteUnit);
+PREP(muteUnitHandleInitPost);
+PREP(muteUnitHandleRespawn);
 PREP(numberToDigits);
 PREP(numberToDigitsString);
 PREP(numberToString);
 PREP(onAnswerRequest);
-PREP(onLoadRscDisplayChannel);
 PREP(owned);
 PREP(player);
 PREP(playerSide);
@@ -177,6 +182,12 @@ PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
+
+PREP(translateToWeaponSpace);
+PREP(translateToModelSpace);
+
+// Model and drawing helpers
+PREP(worldToScreenBounds);
 
 // config items
 PREP(getConfigType);
@@ -260,6 +271,21 @@ PREP(hashListSelect);
 PREP(hashListSet);
 PREP(hashListPush);
 
+// Synchronized Events
+PREP(syncedEventPFH);
+PREP(addSyncedEventHandler);
+PREP(removeSyncedEventHandler);
+PREP(requestSyncedEvent);
+PREP(syncedEvent);
+
+PREP(_handleSyncedEvent);
+PREP(_handleRequestSyncedEvent);
+PREP(_handleRequestAllSyncedEvents);
+
+GVAR(syncedEvents) = HASH_CREATE;
+
+// @TODO: Generic local-managed global-synced objects (createVehicleLocal)
+
 //Debug
 ACE_COUNTERS = [];
 
@@ -273,10 +299,10 @@ ACE_player = player;
 if (hasInterface) then {
     // PFH to update the ACE_player variable
     [{
-        if !(ACE_player isEqualTo (missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player])) then {
+        if !(ACE_player isEqualTo (call FUNC(player))) then {
             _oldPlayer = ACE_player;
 
-            ACE_player = missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player];
+            ACE_player = call FUNC(player);
             uiNamespace setVariable ["ACE_player", ACE_player];
 
             // Raise ACE event

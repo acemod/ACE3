@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_damageReturn", "_hitPoints",  "_typeOfDamage"];
+private ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_damageReturn",  "_typeOfDamage"];
 _unit         = _this select 0;
 _selection    = _this select 1;
 _damage       = _this select 2;
@@ -32,8 +32,7 @@ if (typeName _projectile == "OBJECT") then {
 };
 
 // If the damage is being weird, we just tell it to fuck off.
-_hitSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
-if !(_selection in (_hitSelections + [""])) exitWith {0};
+if !(_selection in (GVAR(SELECTIONS) + [""])) exitWith {0};
 
 _damageReturn = _damage;
 if (GVAR(level) < 2) then {
@@ -46,8 +45,7 @@ if (GVAR(level) >= 2) then {
         // lets use basic for the time being..
         _damageReturn = _this call FUNC(handleDamage_basic);
     };
-
-    [_unit, _selection, _damage, _source, _projectile] call FUNC(handleDamage_caching);
+    _newDamage = _this call FUNC(handleDamage_caching);
 
     if (_damageReturn > 0.9) then {
 
@@ -59,10 +57,10 @@ if (GVAR(level) >= 2) then {
             _minLethalDamage = GVAR(minLethalDamages) select _typeIndex;
         };
 
-        _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
-        _newDamage = _damage - (damage _unit);
-        if (_selection in _hitSelections) then {
-            _newDamage = _damage - (_unit getHitPointDamage (_hitPoints select (_hitSelections find _selection)));
+        if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _source} && {_projectile == ""} && {_selection == ""}) then {
+            if (GVAR(enableVehicleCrashes)) then {
+                _selection = GVAR(SELECTIONS) select (floor(random(count GVAR(SELECTIONS))));
+            };
         };
 
         if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)} && {_selection in ["", "head", "body"]}) then {

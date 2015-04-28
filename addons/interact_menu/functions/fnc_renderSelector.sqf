@@ -24,14 +24,19 @@ private ["_ctrl", "_pos"];
 _ctrl = GVAR(iconCtrls) select GVAR(iconCount);
 GVAR(iconCount) = GVAR(iconCount) + 1;
 
-_ctrl ctrlSetStructuredText (parseText format ["<img image='%1' color='#FF0000' size='1.6' align='center'/>", _icon]);
-_pos = [(_sPos select 0)-(0.05*SafeZoneW), (_sPos select 1)-(0.014*SafeZoneW), 0.1*SafeZoneW, 0.035*SafeZoneW];
+_pos = [];
+if (GVAR(UseListMenu)) then {
+	[_ctrl, GVAR(iconCount), format ["<img image='%1' color='#FF0000' size='1.6'/>", _icon]] call FUNC(ctrlSetParsedTextCached);
+	_pos = [(_sPos select 0)-(0.014*SafeZoneW), (_sPos select 1)-(0.014*SafeZoneW), 0.05*SafeZoneW, 0.035*SafeZoneW];
+} else {
+	[_ctrl, GVAR(iconCount), format ["<img image='%1' color='#FF0000' size='1.6' align='center'/>", _icon]] call FUNC(ctrlSetParsedTextCached);
+	_pos = [(_sPos select 0)-(0.050*SafeZoneW), (_sPos select 1)-(0.014*SafeZoneW), 0.1*SafeZoneW, 0.035*SafeZoneW];
+};
 
 if (GVAR(cursorKeepCentered) && {uiNamespace getVariable [QGVAR(cursorMenuOpened),false]}) then {
     _pos set [0, ((_pos select 0) - (GVAR(cursorPos) select 0) + 0.5)];
     _pos set [1, ((_pos select 1) - (GVAR(cursorPos) select 1) + 0.5)];
 };
-_ctrl ctrlSetPosition _pos;
 
-//_ctrl ctrlSetBackgroundColor [1, 0, 0, 0.1];
+_ctrl ctrlSetPosition _pos;
 _ctrl ctrlCommit 0;

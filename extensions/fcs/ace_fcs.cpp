@@ -12,7 +12,7 @@
  */
 
 #include "ace_common.h"
- 
+
 #define _USE_MATH_DEFINES
 
 #include <math.h>
@@ -21,11 +21,9 @@
 #include <string>
 
 #define MAXELEVATION 20
-#define MAXITERATIONS 120
+#define MAXITERATIONS 600
 #define PRECISION 0.1
 #define RADIANS(X) (X / (180 / M_PI))
-
-static char version[] = "1.0";
 
 extern "C" {
     __declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
@@ -104,7 +102,7 @@ double getSolution(double initSpeed, double airFriction, double angleTarget, dou
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     if (!strcmp(function, "version")) {
-        strncpy(output, version, outputSize);
+        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
     } else {
         std::vector<std::string> argStrings = splitString(function);
         double initSpeed = std::stod(argStrings[0]);
@@ -113,9 +111,11 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
         double distance = std::stod(argStrings[3]);
 
         double result = getSolution(initSpeed, airFriction, angleTarget, distance);
-        std::string resultString = std::to_string(result);
 
-        strcpy(output, resultString.c_str());
+        std::stringstream sstream;
+        sstream << result;
+
+        strcpy(output, sstream.str().c_str());
         output[outputSize - 1] = '\0';
     }
 }

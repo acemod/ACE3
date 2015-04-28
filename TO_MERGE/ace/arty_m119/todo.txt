@@ -1,5 +1,0 @@
--- M119 to ACE ASAP checklist
-
---1. Move mission code for gun functionality to addon--
-2. Add point and click BCS (TEMPORARY) to display hi/low solution for first round available of each.
---3. Write script to automatically align aiming stakes (provide something to do that automatically)?--

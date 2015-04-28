@@ -440,8 +440,29 @@ class CfgVehicles {
                     statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
                     icon = PATHTOF(UI\icons\medical_cross.paa);
 
+                    #undef EXCEPTIONS
                     #define EXCEPTIONS exceptions[] = {"isNotInside"};
                     #include "ACE_Medical_Actions.hpp"
+                };
+                class GVAR(loadPatient) {
+                    displayName = "$STR_ACE_Medical_LoadPatient";
+                    distance = 5;
+                    condition = QUOTE(_target getvariable[ARR_2(QUOTE(QUOTE(ACE_isUnconscious)),false)] && vehicle _target == _target);
+                    statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionLoadUnit));
+                    showDisabled = 0;
+                    priority = 2;
+                    icon = PATHTOF(UI\icons\medical_cross.paa);
+                    exceptions[] = {"isNotDragging", "isNotCarrying"};
+                };
+                class GVAR(UnLoadPatient) {
+                    displayName = "$STR_ACE_Medical_UnloadPatient";
+                    distance = 5;
+                    condition = QUOTE(_target getvariable[ARR_2(QUOTE(QUOTE(ACE_isUnconscious)),false)] && vehicle _target != _target);
+                    statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionUnloadUnit));
+                    showDisabled = 0;
+                    priority = 2;
+                    icon = PATHTOF(UI\icons\medical_cross.paa);
+                    exceptions[] = {"isNotDragging", "isNotCarrying"};
                 };
             };
         };
@@ -624,7 +645,7 @@ class CfgVehicles {
         EGVAR(dragging,dragPosition[]) = {0,1.2,0};
         EGVAR(dragging,dragDirection) = 0;
         class ACE_Actions {
-              class ACE_MainActions {
+            class ACE_MainActions {
                 displayName = "$STR_ACE_Interaction_MainAction";
                 distance = 5;
                 condition = QUOTE(true);
@@ -675,10 +696,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_fieldDressing
-            {
+        class TransportItems {
+            class ACE_fieldDressing {
                 name = "ACE_fieldDressing";
                 count = 1;
             };
@@ -690,10 +709,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_PACKING_BANDAGE_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_packingBandage
-            {
+        class TransportItems {
+            class ACE_packingBandage {
                 name = "ACE_packingBandage";
                 count = 1;
             };
@@ -705,10 +722,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_elasticBandage
-            {
+        class TransportItems {
+            class ACE_elasticBandage {
                 name = "ACE_elasticBandage";
                 count = 1;
             };
@@ -720,10 +735,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_TOURNIQUET_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_tourniquet
-            {
+        class TransportItems {
+            class ACE_tourniquet {
                 name = "ACE_tourniquet";
                 count = 1;
             };
@@ -735,10 +748,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_MORPHINE_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_morphine
-            {
+        class TransportItems {
+            class ACE_morphine {
                 name = "ACE_morphine";
                 count = 1;
             };
@@ -750,10 +761,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_ATROPINE_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_atropine
-            {
+        class TransportItems {
+            class ACE_atropine {
                 name = "ACE_atropine";
                 count = 1;
             };
@@ -765,10 +774,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_EPINEPHRINE_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_epinephrine
-            {
+        class TransportItems {
+            class ACE_epinephrine {
                 name = "ACE_epinephrine";
                 count = 1;
             };
@@ -780,10 +787,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_PLASMA_IV;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_plasmaIV
-            {
+        class TransportItems {
+            class ACE_plasmaIV {
                 name = "ACE_plasmaIV";
                 count = 1;
             };
@@ -796,10 +801,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_BLOOD_IV;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_bloodIV
-            {
+        class TransportItems {
+            class ACE_bloodIV {
                 name = "ACE_bloodIV";
                 count = 1;
             };
@@ -811,10 +814,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_SALINE_IV;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_salineIV
-            {
+        class TransportItems {
+            class ACE_salineIV {
                 name = "ACE_salineIV";
                 count = 1;
             };
@@ -826,10 +827,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_QUIKCLOT_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_quikClot
-            {
+        class TransportItems {
+            class ACE_quikClot {
                 name = "ACE_quikclot";
                 count = 1;
             };
@@ -841,10 +840,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_AID_KIT_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_personalAidKit
-            {
+        class TransportItems {
+            class ACE_personalAidKit {
                 name = "ACE_personalAidKit";
                 count = 1;
             };
@@ -856,10 +853,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_SURGICALKIT_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_surgicalKit
-            {
+        class TransportItems {
+            class ACE_surgicalKit {
                 name = "ACE_surgicalKit";
                 count = 1;
             };
@@ -871,10 +866,8 @@ class CfgVehicles {
         displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
-        class TransportItems
-        {
-            class ACE_bodyBag
-            {
+        class TransportItems {
+            class ACE_bodyBag {
                 name = "ACE_bodyBag";
                 count = 1;
             };
@@ -885,9 +878,42 @@ class CfgVehicles {
     class ACE_medicalSupplyCrate: NATO_Box_Base {
         scope = 2;
         accuracy = 1000;
-        displayName = "[ACE] Medical Supply Crate";
+        displayName = "[ACE] Medical Supply Crate (Basic)";
         model = PATHTOF(data\ace_medcrate.p3d);
         author = "$STR_ACE_Common_ACETeam";
+        class TransportItems {
+            class ACE_fieldDressing {
+                name = "ACE_fieldDressing";
+                count = 50;
+            };
+            class ACE_morphine {
+                name = "ACE_morphine";
+                count = 25;
+            };
+            class ACE_epinephrine {
+                name = "ACE_epinephrine";
+                count = 25;
+            };
+            class ACE_bloodIV {
+                name = "ACE_bloodIV";
+                count = 15;
+            };
+            class ACE_bloodIV_500 {
+                name = "ACE_bloodIV_500";
+                count = 15;
+            };
+            class ACE_bloodIV_250 {
+                name = "ACE_bloodIV_250";
+                count = 15;
+            };
+            class ACE_bodyBag {
+                name = "ACE_bodyBag";
+                count = 10;
+            };
+        };
+    };
+    class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate {
+        displayName = "[ACE] Medical Supply Crate (Advanced)";
         class TransportItems {
             class ACE_fieldDressing {
                 name = "ACE_fieldDressing";
@@ -968,86 +994,6 @@ class CfgVehicles {
             class ACE_bodyBag {
                 name = "ACE_bodyBag";
                 count = 5;
-            };
-        };
-    };
-
-    // Patient unload from vehicle actions
-    class LandVehicle;
-    class Car: LandVehicle {
-        class ACE_Actions {
-            class ACE_MainActions {
-                class ACE_UnloadPatients {
-                    displayName = "$STR_ACE_Medical_UnloadPatient";
-                    condition = "true";
-                    statement = "";
-                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
-                };
-            };
-        };
-    };
-    class Tank: LandVehicle {
-        class ACE_Actions {
-            class ACE_MainActions {
-                class ACE_UnloadPatients {
-                    displayName = "$STR_ACE_Medical_UnloadPatient";
-                    condition = "true";
-                    statement = "";
-                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
-                };
-            };
-        };
-    };
-
-    class Air;
-    class Helicopter: Air {
-        class ACE_Actions {
-            class ACE_MainActions {
-                class ACE_UnloadPatients {
-                    displayName = "$STR_ACE_Medical_UnloadPatient";
-                    condition = "true";
-                    statement = "";
-                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
-                };
-            };
-        };
-    };
-    class Plane: Air {
-        class ACE_Actions {
-            class ACE_MainActions {
-                class ACE_UnloadPatients {
-                    displayName = "$STR_ACE_Medical_UnloadPatient";
-                    condition = "true";
-                    statement = "";
-                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
-                };
-            };
-        };
-    };
-
-    class Ship;
-    class Ship_F: Ship {
-        class ACE_Actions {
-            class ACE_MainActions {
-                class ACE_UnloadPatients {
-                    displayName = "$STR_ACE_Medical_UnloadPatient";
-                    condition = "true";
-                    statement = "";
-                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
-                };
-            };
-        };
-    };
-
-    class StaticWeapon: LandVehicle {
-        class ACE_Actions {
-            class ACE_MainActions {
-                class ACE_UnloadPatients {
-                    displayName = "$STR_ACE_Medical_UnloadPatient";
-                    condition = "true";
-                    statement = "";
-                    insertChildren = QUOTE(_this call FUNC(addUnloadPatientActions));
-                };
             };
         };
     };

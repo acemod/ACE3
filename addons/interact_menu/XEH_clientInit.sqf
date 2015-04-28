@@ -3,6 +3,17 @@
 
 if (!hasInterface) exitWith {};
 
+GVAR(ParsedTextCached) = [];
+
+//Setup text/shadow color matrix
+[] call FUNC(setupTextColors);
+["SettingChanged", {
+    PARAMS_2(_name,_value);
+    if ((_name == QGVAR(colorTextMax)) || {_name == QGVAR(colorTextMin)} || {_name == QGVAR(colorShadowMax)} || {_name == QGVAR(colorShadowMin)}) then {
+        [] call FUNC(setupTextColors);
+    };
+}] call EFUNC(common,addEventhandler);
+
 // Install the render EH on the main display
 addMissionEventHandler ["Draw3D", DFUNC(render)];
 
@@ -50,3 +61,6 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     GVAR(actionSelected) = false;
     [] call FUNC(keyUp);
 }] call EFUNC(common,addEventhandler);
+
+// disable firing while the interact menu is is is opened
+["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventHandler);

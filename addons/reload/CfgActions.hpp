@@ -1,4 +1,3 @@
-
 class CfgActions {
     class LoadMagazine;
     class LoadEmptyMagazine : LoadMagazine {

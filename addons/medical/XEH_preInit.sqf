@@ -7,23 +7,21 @@ PREP(actionCheckBloodPressureLocal);
 PREP(actionCheckPulse);
 PREP(actionCheckPulseLocal);
 PREP(actionCheckResponse);
+PREP(actionDiagnose);
 PREP(actionPlaceInBodyBag);
 PREP(actionRemoveTourniquet);
 PREP(actionLoadUnit);
 PREP(actionUnloadUnit);
-PREP(actionCarryUnit);
-PREP(actionDropUnit);
 PREP(addHeartRateAdjustment);
 PREP(addToInjuredCollection);
 PREP(addToLog);
 PREP(addToTriageCard);
 PREP(addUnconsciousCondition);
 PREP(addUnloadPatientActions);
+PREP(adjustPainLevel);
 PREP(canAccessMedicalEquipment);
 PREP(canTreat);
 PREP(canTreatCached);
-PREP(canCarry);
-PREP(createLitter);
 PREP(determineIfFatal);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
@@ -58,10 +56,10 @@ PREP(isInMedicalVehicle);
 PREP(isMedic);
 PREP(isMedicalVehicle);
 PREP(itemCheck);
+PREP(modifyMedicalAction);
 PREP(onMedicationUsage);
 PREP(onWoundUpdateRequest);
 PREP(onPropagateWound);
-PREP(onCarryObjectDropped);
 PREP(parseConfigForInjuries);
 PREP(playInjuredSound);
 PREP(selectionNameToNumber);
@@ -100,10 +98,18 @@ PREP(moduleAssignMedicalFacility);
 PREP(moduleTreatmentConfiguration);
 PREP(copyDeadBody);
 PREP(requestWoundSync);
+PREP(unconsciousPFH);
+
+// Networked litter
+PREP(createLitter);
+PREP(handleCreateLitter);
 
 GVAR(injuredUnitCollection) = [];
 GVAR(IVBags) = [];
 
 call FUNC(parseConfigForInjuries);
+
+GVAR(HITPOINTS) = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
+GVAR(SELECTIONS) = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
 
 ADDON = true;

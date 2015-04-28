@@ -54,6 +54,8 @@ GVAR(rangeFinderPositionASL) = [];
 
 GVAR(mapAltitude) = getNumber (configFile >> "CfgWorlds" >> worldName >> "elevationOffset");
 
+private ["_worldMapLong", "_worldMapLat", "_zone", "_band", "_squareID"];
+
 //Calculate the map's MGRS:
 _worldMapLong = getNumber (configFile >> "CfgWorlds" >> worldName >> "longitude");
 _worldMapLat = getNumber (configFile >> "CfgWorlds" >> worldName >> "latitude");

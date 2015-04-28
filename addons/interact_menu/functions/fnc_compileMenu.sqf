@@ -27,7 +27,7 @@ if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
 private "_recurseFnc";
 _recurseFnc = {
     private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_selection", "_condition", "_showDisabled",
-            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren"];
+            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction"];
     EXPLODE_1_PVT(_this,_actionsCfg);
     _actions = [];
 
@@ -38,17 +38,27 @@ _recurseFnc = {
             _distance = getNumber (_entryCfg >> "distance");
             _icon = getText (_entryCfg >> "icon");
             _statement = compile (getText (_entryCfg >> "statement"));
-            _selection = getText (_entryCfg >> "selection");
-            if (_selection == "") then {
-                _selection = [0,0,0];
+
+            _selection = "";
+            if (isArray ( _entryCfg >> "selection" )) then {
+                _selection = getArray ( _entryCfg >> "selection" )
+            } else {
+                _selection = getText (_entryCfg >> "selection");
+                if (_selection == "") then {
+                    _selection = [0,0,0];
+                };
             };
+
             _condition = getText (_entryCfg >> "condition");
             if (_condition == "") then {_condition = "true"};
 
             // Add canInteract (including exceptions) and canInteractWith to condition
-            _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
+            if ((configName _entryCfg) != "ACE_MainActions") then {
+                _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
+            };
 
             _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
+            _modifierFunction = compile (getText (_entryCfg >> "modifierFunction"));
 
             _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
             _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
@@ -69,7 +79,8 @@ _recurseFnc = {
                             [],
                             _selection,
                             _distance,
-                            [_showDisabled,_enableInside,_canCollapse,_runOnHover]
+                            [_showDisabled,_enableInside,_canCollapse,_runOnHover],
+                            _modifierFunction
                         ],
                         _children
                     ];
