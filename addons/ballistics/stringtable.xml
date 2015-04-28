@@ -4,7 +4,7 @@
         <!-- MX -->
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimName">
             <English>6.5mm 30Rnd Tracer IR-DIM Mag</English>
-            <Hungarian>6,5 mm Nyomjelző IR-DIM 30-as Tár</Hungarian>
+            <Hungarian>6,5mm Nyomjelző IR-DIM 30-as Tár</Hungarian>
             <German>6,5mm 30-Schuss-Magazin Leuchtspur IR-DIM</German>
             <Spanish>Cargador de 30 balas trazadoras IR-DIM de 6,5mm</Spanish>
             <French>Ch. 6,5mm 30Cps Traçantes IR-DIM</French>
@@ -16,31 +16,31 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
-            <Hungarian>6,5 mm IR-DIM</Hungarian>
+            <Hungarian>6,5mm IR-DIM</Hungarian>
             <German>6,5mm IR-DIM</German>
             <Spanish>6,5mm IR-DIM</Spanish>
             <French>6,5mm IR-DIM</French>
             <Polish>6,5mm IR-DIM</Polish>
             <Czech>6.5mm IR-DIM</Czech>
             <Portuguese>6,5mm IR-DIM</Portuguese>
-            <Italian>6.5 IR-DIM</Italian>
+            <Italian>6.5mm IR-DIM</Italian>
             <Russian>6,5 мм ИК-трассирующие</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_Tracer_DimDescription">
-            <English>Caliber: 6.5x39 mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
-            <Hungarian>Kaliber: 6,5x39 mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
+            <English>Caliber: 6.5x39mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
+            <Hungarian>Kaliber: 6,5x39mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
             <German>Kaliber: 6,5x39mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MX/C/M/SW/3GL</German>
-            <Spanish>Calibre: 6,5x39 mm Trazadoras IR-DIM&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MX/C/M/SW/3GL</Spanish>
-            <French>Calibre: 6,5x39 mm Traçantes IR-DIM&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: MX/C/M/SW/3GL</French>
-            <Polish>Kaliber: 6,5x39 mm Smugacz IR-DIM&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: MX/C/M/SW/3GL</Polish>
-            <Czech>Ráže: 6.5x39 mm Svítící IR-DIM&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: MX/C/M/SW/3GL</Czech>
-            <Portuguese>Calibre: 6,5x39 mm Traçante IR-DIM&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
-            <Italian>Calibro: 6.5x39 mm Traccianti IR-DIM &lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MX/C/M/SW/3GL</Italian>
+            <Spanish>Calibre: 6,5x39mm Trazadoras IR-DIM&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MX/C/M/SW/3GL</Spanish>
+            <French>Calibre: 6,5x39mm Traçantes IR-DIM&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: MX/C/M/SW/3GL</French>
+            <Polish>Kaliber: 6,5x39mm Smugacz IR-DIM&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: MX/C/M/SW/3GL</Polish>
+            <Czech>Ráže: 6.5x39mm Svítící IR-DIM&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: MX/C/M/SW/3GL</Czech>
+            <Portuguese>Calibre: 6,5x39mm Traçante IR-DIM&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
+            <Italian>Calibro: 6.5x39mm Traccianti IR-DIM &lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MX/C/M/SW/3GL</Italian>
             <Russian>Калибр: 6,5x39 мм ИК-трассирующие&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: MX/C/M/SW/3GL</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_SDName">
             <English>6.5mm 30Rnd SD Mag</English>
-            <Hungarian>6,5 mm Halk 30-as Tár</Hungarian>
+            <Hungarian>6,5mm Halk 30-as Tár</Hungarian>
             <German>6,5mm 30-Schuss-Magazin SD</German>
             <Spanish>Cargador de 30 balas SD de 6,5mm</Spanish>
             <French>Ch. 6,5mm 30Cps SD</French>
@@ -52,7 +52,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_SDNameShort">
             <English>6.5mm SD</English>
-            <Hungarian>6,5 mm Halk</Hungarian>
+            <Hungarian>6,5mm Halk</Hungarian>
             <German>6,5mm SD</German>
             <Spanish>6,5mm SD</Spanish>
             <French>6,5mm SD</French>
@@ -63,20 +63,20 @@
             <Russian>6,5 мм дозвуковые</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_SDDescription">
-            <English>Caliber: 6.5x39 mm SD&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
-            <Hungarian>Kaliber: 6,5x39 mm Halk&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
+            <English>Caliber: 6.5x39mm SD&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
+            <Hungarian>Kaliber: 6,5x39mm Halk&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
             <German>Kaliber: 6,5x39mm SD&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MX/C/M/SW/3GL</German>
-            <Spanish>Calibre: 6,5x39 mm SD&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MX/C/M/SW/3GL</Spanish>
-            <French>Calibre: 6,5x39 mm SD&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: MX/C/M/SW/3GL</French>
-            <Polish>Kaliber: 6,5x39 mm SD&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: MX/C/M/SW/3GL</Polish>
-            <Czech>Ráže: 6.5x39 mm SD&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: MX/C/M/SW/3GL</Czech>
-            <Portuguese>Calibre: 6,5x39 mm SD&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
-            <Italian>Calibro: 6.5x39 mm Sil.&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MX/C/M/SW/3GL </Italian>
+            <Spanish>Calibre: 6,5x39mm SD&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MX/C/M/SW/3GL</Spanish>
+            <French>Calibre: 6,5x39mm SD&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: MX/C/M/SW/3GL</French>
+            <Polish>Kaliber: 6,5x39mm SD&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: MX/C/M/SW/3GL</Polish>
+            <Czech>Ráže: 6.5x39mm SD&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: MX/C/M/SW/3GL</Czech>
+            <Portuguese>Calibre: 6,5x39mm SD&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
+            <Italian>Calibro: 6.5x39mm Sil.&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MX/C/M/SW/3GL </Italian>
             <Russian>Калибр: 6,5x39 мм дозвуковые&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: MX/C/M/SW/3GL</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_APName">
             <English>6.5mm 30Rnd AP Mag</English>
-            <Hungarian>6,5 mm Páncéltörő 30-as Tár</Hungarian>
+            <Hungarian>6,5mm Páncéltörő 30-as Tár</Hungarian>
             <German>6,5mm 30-Schuss-Magazin AP</German>
             <Spanish>Cargador de 30 balas AP de 6,5mm</Spanish>
             <French>Ch. 6,5mm 30Cps AP</French>
@@ -88,7 +88,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_APNameShort">
             <English>6.5mm AP</English>
-            <Hungarian>6,5 mm Páncéltörő</Hungarian>
+            <Hungarian>6,5mm Páncéltörő</Hungarian>
             <German>6,5mm AP</German>
             <Spanish>6,5mm AP</Spanish>
             <French>6,5mm AP</French>
@@ -99,15 +99,15 @@
             <Russian>6,5 мм бронебойные</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_mag_APDescription">
-            <English>Caliber: 6.5x39 mm AP&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
-            <Hungarian>Kaliber: 6,5x39 mm Páncéltörő&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
+            <English>Caliber: 6.5x39mm AP&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
+            <Hungarian>Kaliber: 6,5x39mm Páncéltörő&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
             <German>Kaliber: 6,5x39mm AP&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MX/C/M/SW/3GL</German>
-            <Spanish>Calibre: 6,5x39 mm AP&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MX/C/M/SW/3GL</Spanish>
-            <French>Calibre: 6,5x39 mm AP&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: MX/C/M/SW/3GL</French>
-            <Polish>Kaliber: 6,5x39 mm AP&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: MX/C/M/SW/3GL</Polish>
-            <Czech>Ráže: 6.5x39 mm AP&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: MX/C/M/SW/3GL</Czech>
-            <Portuguese>Calibre: 6,5x39 mm AP&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
-            <Italian>Calibro: 6.5x39 mm AP&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MX/C/M/SW/3GL</Italian>
+            <Spanish>Calibre: 6,5x39mm AP&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MX/C/M/SW/3GL</Spanish>
+            <French>Calibre: 6,5x39mm AP&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: MX/C/M/SW/3GL</French>
+            <Polish>Kaliber: 6,5x39mm AP&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: MX/C/M/SW/3GL</Polish>
+            <Czech>Ráže: 6.5x39mm AP&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: MX/C/M/SW/3GL</Czech>
+            <Portuguese>Calibre: 6,5x39mm AP&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
+            <Italian>Calibro: 6.5x39mm AP&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MX/C/M/SW/3GL</Italian>
             <Russian>Калибр: 6,5x39 мм бронебойные&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: MX/C/M/SW/3GL</Russian>
         </Key>
         <!-- KATIBA -->
@@ -136,20 +136,20 @@
             <Russian>6,5 мм ИК-трассирующие</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_Tracer_DimDescription">
-            <English>Caliber: 6.5x39 mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
-            <Hungarian>Kaliber: 6,5x39 mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
+            <English>Caliber: 6.5x39mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
+            <Hungarian>Kaliber: 6,5x39mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
             <German>Kaliber: 6,5x39mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Katiba</German>
-            <Spanish>Calibre: 6,5x39 mm Trazadoras IR-DIM&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: Katiba</Spanish>
-            <French>Calibre: 6,5x39 mm Traçantes IR-DIM&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: Katiba</French>
-            <Polish>Kaliber: 6,5x39 mm Smugacz IR-DIM&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: Katiba</Polish>
-            <Czech>Ráže: 6.5x39 mm Svítící IR-DIM&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: Katiba</Czech>
-            <Portuguese>Calibre: 6,5x39 mm Traçante IR-DIM&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: Katiba</Portuguese>
-            <Italian>Calibro: 6.5x39 mm Tracciant IR-DIM&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: Katiba</Italian>
+            <Spanish>Calibre: 6,5x39mm Trazadoras IR-DIM&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: Katiba</Spanish>
+            <French>Calibre: 6,5x39mm Traçantes IR-DIM&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: Katiba</French>
+            <Polish>Kaliber: 6,5x39mm Smugacz IR-DIM&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: Katiba</Polish>
+            <Czech>Ráže: 6.5x39mm Svítící IR-DIM&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: Katiba</Czech>
+            <Portuguese>Calibre: 6,5x39mm Traçante IR-DIM&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: Katiba</Portuguese>
+            <Italian>Calibro: 6.5x39mm Tracciant IR-DIM&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: Katiba</Italian>
             <Russian>Калибр: 6,5x39 мм ИК-трассирующие&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: Katiba</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_SDName">
             <English>6.5mm 30Rnd SD Mag</English>
-            <Hungarian>6,5 mm Halk 30-as Tár</Hungarian>
+            <Hungarian>6,5mm Halk 30-as Tár</Hungarian>
             <German>6,5mm 30-Schuss-Magazin SD</German>
             <Spanish>Cargador de 30 balas SD de 6,5mm</Spanish>
             <French>Ch. 6,5mm 30Cps SD</French>
@@ -161,7 +161,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_SDNameShort">
             <English>6.5mm SD</English>
-            <Hungarian>6,5 mm Halk</Hungarian>
+            <Hungarian>6,5mm Halk</Hungarian>
             <German>6,5mm SD</German>
             <Spanish>6,5mm SD</Spanish>
             <French>6,5mm SD</French>
@@ -172,20 +172,20 @@
             <Russian>6,5 мм дозвуковые</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_SDDescription">
-            <English>Caliber: 6.5x39 mm SD&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
-            <Hungarian>Kaliber: 6,5x39 mm Halk&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
+            <English>Caliber: 6.5x39mm SD&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
+            <Hungarian>Kaliber: 6,5x39mm Halk&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
             <German>Kaliber: 6,5x39mm SD&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Katiba</German>
-            <Spanish>Calibre: 6,5x39 mm SD&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: Katiba</Spanish>
-            <French>Calibre: 6,5x39 mm SD&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: Katiba</French>
-            <Polish>Kaliber: 6,5x39 mm SD&lt;br /&gt;Naboje: 30&lt;br /&gt;Używane w: Katiba</Polish>
-            <Czech>Ráže: 6.5x39 mm SD&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: Katiba</Czech>
-            <Portuguese>Calibre: 6,5x39 mm SD&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: Katiba</Portuguese>
-            <Italian>Calibro: 6.5x39 mm Sil.&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: Katiba</Italian>
+            <Spanish>Calibre: 6,5x39mm SD&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: Katiba</Spanish>
+            <French>Calibre: 6,5x39mm SD&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: Katiba</French>
+            <Polish>Kaliber: 6,5x39mm SD&lt;br /&gt;Naboje: 30&lt;br /&gt;Używane w: Katiba</Polish>
+            <Czech>Ráže: 6.5x39mm SD&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: Katiba</Czech>
+            <Portuguese>Calibre: 6,5x39mm SD&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: Katiba</Portuguese>
+            <Italian>Calibro: 6.5x39mm Sil.&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: Katiba</Italian>
             <Russian>Калибр: 6,5x39 мм дозвуковые&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: Katiba</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_APName">
             <English>6.5mm 30Rnd AP Mag</English>
-            <Hungarian>6,5 mm Páncéltörő 30-as Tár</Hungarian>
+            <Hungarian>6,5mm Páncéltörő 30-as Tár</Hungarian>
             <German>6,5mm 30-Schuss-Magazin AP</German>
             <Spanish>Cargador de 30 balas AP de 6,5mm</Spanish>
             <French>Ch. 6,5mm 30Cps AP</French>
@@ -197,7 +197,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_APNameShort">
             <English>6.5mm AP</English>
-            <Hungarian>6,5 mm Páncéltörő</Hungarian>
+            <Hungarian>6,5mm Páncéltörő</Hungarian>
             <German>6,5mm AP</German>
             <Spanish>6,5mm AP</Spanish>
             <French>6,5mm AP</French>
@@ -208,21 +208,21 @@
             <Russian>6,5 мм бронебойные</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x39_caseless_green_mag_APDescription">
-            <English>Caliber: 6.5x39 mm AP&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
-            <Hungarian>Kaliber: 6,5x39 mm Páncéltörő&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
+            <English>Caliber: 6.5x39mm AP&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
+            <Hungarian>Kaliber: 6,5x39mm Páncéltörő&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
             <German>Kaliber: 6,5x39mm AP&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Katiba</German>
-            <Spanish>Calibre: 6,5x39 mm AP&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: Katiba</Spanish>
-            <French>Calibre: 6,5x39 mm AP&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: Katiba</French>
-            <Polish>Kaliber: 6,5x39 mm AP&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: Katiba</Polish>
-            <Czech>Ráže: 6.5x39 mm AP&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: Katiba</Czech>
-            <Portuguese>Calibre: 6,5x39 mm AP&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: Katiba</Portuguese>
-            <Italian>Calibro: 6.5x39 mm AP&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: Katiba</Italian>
+            <Spanish>Calibre: 6,5x39mm AP&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: Katiba</Spanish>
+            <French>Calibre: 6,5x39mm AP&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: Katiba</French>
+            <Polish>Kaliber: 6,5x39mm AP&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: Katiba</Polish>
+            <Czech>Ráže: 6.5x39mm AP&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: Katiba</Czech>
+            <Portuguese>Calibre: 6,5x39mm AP&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: Katiba</Portuguese>
+            <Italian>Calibro: 6.5x39mm AP&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: Katiba</Italian>
             <Russian>Калибр: 6,5x39 мм бронебойные&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: Katiba</Russian>
         </Key>
         <!-- 5.56x45mm -->
         <Key ID="STR_ACE_30Rnd_556x45_mag_Tracer_DimName">
             <English>5.56mm 30rnd Tracer IR-DIM Mag</English>
-            <Hungarian>5,56 mm Nyomjelző IR-DIM 30-as Tár</Hungarian>
+            <Hungarian>5,56mm Nyomjelző IR-DIM 30-as Tár</Hungarian>
             <German>5,56mm 30-Schuss-Magazin Leuchtspur IR-DIM</German>
             <Spanish>Cargador de 30 balas trazadoras IR-DIM de 5,56mm</Spanish>
             <French>Ch. 5,56mm 30Cps Traçantes IR-DIM</French>
@@ -234,7 +234,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_mag_Tracer_DimNameShort">
             <English>5.56mm IR-DIM</English>
-            <Hungarian>5,56 mm IR-DIM</Hungarian>
+            <Hungarian>5,56mm IR-DIM</Hungarian>
             <German>5,56mm IR-DIM</German>
             <Spanish>5,56mm IR-DIM</Spanish>
             <French>5,56mm IR-DIM</French>
@@ -245,21 +245,21 @@
             <Russian>5,56 мм ИК-трассирующие</Russian>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_mag_Tracer_DimDescription">
-            <English>Caliber: 5.56x45 mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</English>
-            <Hungarian>Kaliber: 5,56x45 mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Hungarian>
+            <English>Caliber: 5.56x45mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</English>
+            <Hungarian>Kaliber: 5,56x45mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Hungarian>
             <German>Kaliber: 5,56x45mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</German>
-            <Spanish>Calibre: 5,56x45 mm Trazadoras IR-DIM&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Spanish>
-            <French>Calibre: 5,56x45 mm Traçantes IR-DIM&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</French>
-            <Polish>Kaliber: 5,56x45 mm Smugacz IR-DIM&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Polish>
-            <Czech>Ráže: 5.56x45 mm Svítící IR-DIM&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Czech>
-            <Portuguese>Calibre: 5,56x45 mm Traçante IR-DIM&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Portuguese>
-            <Italian>Calibro: 5.56x45 mm Traccianti IR-DIM&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Italian>
+            <Spanish>Calibre: 5,56x45mm Trazadoras IR-DIM&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Spanish>
+            <French>Calibre: 5,56x45mm Traçantes IR-DIM&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé dans: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</French>
+            <Polish>Kaliber: 5,56x45mm Smugacz IR-DIM&lt;br /&gt;Pociski: 30&lt;br /&gt;Używane w: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Polish>
+            <Czech>Ráže: 5.56x45mm Svítící IR-DIM&lt;br /&gt;Munice: 30&lt;br /&gt;Použití: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Czech>
+            <Portuguese>Calibre: 5,56x45mm Traçante IR-DIM&lt;br /&gt;Projéteis: 30&lt;br /&gt;Usado em: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Portuguese>
+            <Italian>Calibro: 5.56x45mm Traccianti IR-DIM&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Italian>
             <Russian>Калибр: 5,56x45 мм ИК-трассирующие&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Russian>
         </Key>
         <!-- 7.62x51mm -->
         <Key ID="STR_ACE_20Rnd_762x51_mag_TracerName">
             <English>7.62mm 20rnd Tracer Mag</English>
-            <Hungarian>7,62 mm Nyomjelző IR-DIM 20-as Tár</Hungarian>
+            <Hungarian>7,62mm Nyomjelző IR-DIM 20-as Tár</Hungarian>
             <German>7,62mm 20-Schuss-Magazin Leuchtspur</German>
             <Spanish>Cargador de 20 balas trazadores de 7,62mm</Spanish>
             <French>Ch. 7,62mm 20Cps Traçantes </French>
@@ -271,7 +271,7 @@
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_TracerNameShort">
             <English>7.62mm Tracer</English>
-            <Hungarian>7,62 mm Nyomjelző</Hungarian>
+            <Hungarian>7,62mm Nyomjelző</Hungarian>
             <German>7,62mm Leuchtspur</German>
             <Spanish>7,62mm trazadora</Spanish>
             <French>7,62mm Traçantes</French>
@@ -282,21 +282,21 @@
             <Russian>7,62 мм трассирущие</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_TracerDescription">
-            <English>Caliber: 7.62x51 mm Tracer&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
-            <Hungarian>Kaliber: 7,62x51 mm Nyomjelző&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
+            <English>Caliber: 7.62x51mm Tracer&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
+            <Hungarian>Kaliber: 7,62x51mm Nyomjelző&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
             <German>Kaliber: 7,62x51mm Leuchtspur&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
-            <Spanish>Calibre: 7,62x51 mm Trazadora&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
-            <French>Calibre: 7,62x51 mm Traçantes&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé dans: EBR</French>
-            <Polish>Kaliber: 7,62x51 mm Smugacz&lt;br /&gt;Pociski: 20&lt;br /&gt;Używane w: Mk18 ABR</Polish>
-            <Czech>Ráže: 7.62x51 mm Svítící&lt;br /&gt;Munice: 20&lt;br /&gt;Použití: Mk18 ABR</Czech>
-            <Portuguese>Calibre: 7,62x51 mm Traçante&lt;br /&gt;Projéteis: 20&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
-            <Italian>Calibro: 7.62x51 mm Traccianti&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
+            <Spanish>Calibre: 7,62x51mm Trazadora&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
+            <French>Calibre: 7,62x51mm Traçantes&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé dans: EBR</French>
+            <Polish>Kaliber: 7,62x51mm Smugacz&lt;br /&gt;Pociski: 20&lt;br /&gt;Używane w: Mk18 ABR</Polish>
+            <Czech>Ráže: 7.62x51mm Svítící&lt;br /&gt;Munice: 20&lt;br /&gt;Použití: Mk18 ABR</Czech>
+            <Portuguese>Calibre: 7,62x51mm Traçante&lt;br /&gt;Projéteis: 20&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
+            <Italian>Calibro: 7.62x51mm Traccianti&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
             <Russian>Калибр: 7,62x51 мм трассирующие&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются с: Mk18 ABR</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_Tracer_DimName">
             <English>7.62mm 20rnd Tracer IR-DIM Mag</English>
-            <Hungarian>7,62 mm Nyomjelző IR-DIM 20-as Tár</Hungarian>
-            <German>7,62 mm 20-Schuss-Magazin Leuchtspur IR-DIM</German>
+            <Hungarian>7,62mm Nyomjelző IR-DIM 20-as Tár</Hungarian>
+            <German>7,62mm 20-Schuss-Magazin Leuchtspur IR-DIM</German>
             <Spanish>Cargador de 20 balas trazadoras IR-DIM de 7,62mm</Spanish>
             <French>Ch. 7,62mm 20Cps Traçantes IR-DIM</French>
             <Polish>Magazynek 7,62mm 20rd Smugacz IR-DIM</Polish>
@@ -307,7 +307,7 @@
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_Tracer_DimNameShort">
             <English>7.62mm IR-DIM</English>
-            <Hungarian>7,62 mm IR-DIM</Hungarian>
+            <Hungarian>7,62mm IR-DIM</Hungarian>
             <German>7,62mm IR-DIM</German>
             <Spanish>7,62mm IR-DIM</Spanish>
             <French>7,62mm IR-DIM</French>
@@ -318,20 +318,20 @@
             <Russian>7,62 мм ИК-трассирующие</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_Tracer_DimDescription">
-            <English>Caliber: 7.62x51 mm Tracer IR-DIM&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
-            <Hungarian>Kaliber: 7,62x51 mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
+            <English>Caliber: 7.62x51mm Tracer IR-DIM&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
+            <Hungarian>Kaliber: 7,62x51mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
             <German>Kaliber: 7,62x51mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
-            <Spanish>Calibre: 7,62x51 mm Trazadoras IR-DIM&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
-            <French>Calibre: 7,62x51 mm Traçantes IR-DIM&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé dans: EBR</French>
-            <Polish>Kaliber: 7,62x51 mm Smugacz IR-DIM&lt;br /&gt;Pociski: 20&lt;br /&gt;Używane w: Mk18 ABR</Polish>
-            <Czech>Ráže: 7.62x51 mm Svítící IR-DIM&lt;br /&gt;Munice: 20&lt;br /&gt;Použití: Mk18 ABR</Czech>
-            <Portuguese>Calibre: 7,62x51 mm Traçante IR-DIM&lt;br /&gt;Projéteis: 20&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
-            <Italian>Calibro: 7.62x51 mm Traccianti IR-DIM&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
+            <Spanish>Calibre: 7,62x51mm Trazadoras IR-DIM&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
+            <French>Calibre: 7,62x51mm Traçantes IR-DIM&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé dans: EBR</French>
+            <Polish>Kaliber: 7,62x51mm Smugacz IR-DIM&lt;br /&gt;Pociski: 20&lt;br /&gt;Używane w: Mk18 ABR</Polish>
+            <Czech>Ráže: 7.62x51mm Svítící IR-DIM&lt;br /&gt;Munice: 20&lt;br /&gt;Použití: Mk18 ABR</Czech>
+            <Portuguese>Calibre: 7,62x51mm Traçante IR-DIM&lt;br /&gt;Projéteis: 20&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
+            <Italian>Calibro: 7.62x51mm Traccianti IR-DIM&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
             <Russian>Калибр: 7,62x51 мм ИК-трассирующие&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются с: Mk18 ABR</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_SDName">
             <English>7.62mm 20Rnd SD Mag</English>
-            <Hungarian>7,62 mm Halk 20-as Tár</Hungarian>
+            <Hungarian>7,62mm Halk 20-as Tár</Hungarian>
             <German>7,62mm 20-Schuss-Magazin SD</German>
             <Spanish>Cargador de 20 balas SD de 7,62mm</Spanish>
             <French>Ch. 7,62mm 20Cps SD</French>
@@ -343,7 +343,7 @@
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_SDNameShort">
             <English>7.62mm SD</English>
-            <Hungarian>7,62 mm Halk</Hungarian>
+            <Hungarian>7,62mm Halk</Hungarian>
             <German>7,62mm SD</German>
             <Spanish>7,62mm SD</Spanish>
             <French>7,62mm SD</French>
@@ -354,15 +354,15 @@
             <Russian>7,62 мм дозвуковые</Russian>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_mag_SDDescription">
-            <English>Caliber: 7.62x51 mm SD&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
-            <Hungarian>Kaliber: 7,62x51 mm Halk&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
+            <English>Caliber: 7.62x51mm SD&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
+            <Hungarian>Kaliber: 7,62x51mm Halk&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
             <German>Kaliber: 7,62x51mm SD&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
-            <Spanish>Calibre: 7,62x51 mm SD&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
-            <French>Calibre: 7,62x51 mm SD&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé dans: EBR</French>
-            <Polish>Kaliber: 7,62x51 mm SD&lt;br /&gt;Pociski: 20&lt;br /&gt;Używane w: Mk18 ABR</Polish>
-            <Czech>Ráže: 7.62x51 mm SD&lt;br /&gt;Munice: 20&lt;br /&gt;Použití: Mk18 ABR</Czech>
-            <Portuguese>Calibre: 7,62x51 mm SD&lt;br /&gt;Projéteis: 20&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
-            <Italian>Calibro: 7.62x51 mm Sil.&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
+            <Spanish>Calibre: 7,62x51mm SD&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
+            <French>Calibre: 7,62x51mm SD&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé dans: EBR</French>
+            <Polish>Kaliber: 7,62x51mm SD&lt;br /&gt;Pociski: 20&lt;br /&gt;Używane w: Mk18 ABR</Polish>
+            <Czech>Ráže: 7.62x51mm SD&lt;br /&gt;Munice: 20&lt;br /&gt;Použití: Mk18 ABR</Czech>
+            <Portuguese>Calibre: 7,62x51mm SD&lt;br /&gt;Projéteis: 20&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
+            <Italian>Calibro: 7.62x51mm Sil.&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: Mk18 ABR</Italian>
             <Russian>Калибр: 7,62x51 мм дозвуковые&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются с: Mk18 ABR</Russian>
         </Key>
         <!-- .338 Norma Magnum -->
@@ -462,7 +462,7 @@
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_TracerDescription">
             <English>Caliber: 9.3x64mm Tracer&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
             <German>Kaliber: 9,3x64mm Leuchtspur&lt;br /&gt;Patronen: 10&lt;br /&gt;Eingesetzt von: Cyrus</German>
-            <Polish>Kaliber: 9,3x64 mm Smugacz&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: Cyrus</Polish>
+            <Polish>Kaliber: 9,3x64mm Smugacz&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: Cyrus</Polish>
             <French>Calibre: 9.3x64mm Traçante&lt;br /&gt;Cartouches: 10&lt;br /&gt;Utilisé dans: Cyrus</French>
             <Spanish>Calibre: 9.3x64mm trazadora&lt;br /&gt;Balas: 10&lt;br /&gt;Se usa en: Cyrus</Spanish>
             <Russian>Калибр: 9,3x64 мм трассирующие&lt;br /&gt;Патронов: 10&lt;br /&gt;Используются с: Cyrus</Russian>
@@ -487,7 +487,7 @@
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_Tracer_DimDescription">
             <English>Caliber: 9.3x64mm Tracer IR-DIM&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
             <German>Kaliber: 9,3x64mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 10&lt;br /&gt;Eingesetzt von: Cyrus</German>
-            <Polish>Kaliber: 9,3x64 mm Smugacz IR-DIM&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: Cyrus</Polish>
+            <Polish>Kaliber: 9,3x64mm Smugacz IR-DIM&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: Cyrus</Polish>
             <French>Calibre: 9.3x64mm Traçante IR-DIM&lt;br /&gt;Cartouches: 10&lt;br /&gt;Utilisé dans: Cyrus</French>
             <Spanish>Calibre: 9.3x64mm trazadora IR-DIM&lt;br /&gt;Balas: 10&lt;br /&gt;Se usa en: Cyrus</Spanish>
             <Russian>Калибр: 9,3x64 мм ИК-трассирующие&lt;br /&gt;Патронов: 10&lt;br /&gt;Используются с: Cyrus</Russian>
@@ -513,7 +513,7 @@
         <Key ID="STR_ACE_150Rnd_93x64_Mag_TracerDescription">
             <English>Caliber: 9.3x64mm Tracer&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
             <German>Kaliber: 9,3x64mm Leuchtspur&lt;br /&gt;Patronen: 150&lt;br /&gt;Eingesetzt von: Navid</German>
-            <Polish>Kaliber: 9,3x64 mm Smugacz&lt;br /&gt;Pociski: 150&lt;br /&gt;Używane w: Navid</Polish>
+            <Polish>Kaliber: 9,3x64mm Smugacz&lt;br /&gt;Pociski: 150&lt;br /&gt;Używane w: Navid</Polish>
             <French>Calibre: 9.3x64mm Traçante&lt;br /&gt;Cartouches: 150&lt;br /&gt;Utilisé dans: Navid</French>
             <Spanish>Calibre: 9.3x64mm trazadora&lt;br /&gt;Balas: 150&lt;br /&gt;Se usa en: Navid</Spanish>
             <Russian>Калибр: 9,3x64 мм трассирующие&lt;br /&gt;Патронов: 150&lt;br /&gt;Используются с: Навид</Russian>
@@ -538,7 +538,7 @@
         <Key ID="STR_ACE_150Rnd_93x64_Mag_Tracer_DimDescription">
             <English>Caliber: 9.3x64mm Tracer IR-DIM&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
             <German>Kaliber: 9,3x64mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 150&lt;br /&gt;Eingesetzt von: Navid</German>
-            <Polish>Kaliber: 9,3x64 mm Smugacz IR-DIM&lt;br /&gt;Pociski: 150&lt;br /&gt;Używane w: Navid</Polish>
+            <Polish>Kaliber: 9,3x64mm Smugacz IR-DIM&lt;br /&gt;Pociski: 150&lt;br /&gt;Używane w: Navid</Polish>
             <French>Calibre: 9.3x64mm Traçante IR-DIM&lt;br /&gt;Cartouches: 150&lt;br /&gt;Utilisé dans: Navid</French>
             <Spanish>Calibre: 9.3x64mm trazadora IR-DIM&lt;br /&gt;Balas: 150&lt;br /&gt;Se usa en: Navid</Spanish>
             <Russian>Калибр: 9,3x64 мм ИК-трассирующие&lt;br /&gt;Патронов: 150&lt;br /&gt;Используются с: Навид</Russian>
@@ -563,7 +563,7 @@
         <Key ID="STR_ACE_150Rnd_93x64_Mag_APDescription">
             <English>Caliber: 9.3x64mm AP&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
             <German>Kaliber: 9,3x64mm Hartkern&lt;br /&gt;Patronen: 150&lt;br /&gt;Eingesetzt von: Navid</German>
-            <Polish>Kaliber: 9,3x64 mm AP&lt;br /&gt;Pociski: 150&lt;br /&gt;Używane w: Navid</Polish>
+            <Polish>Kaliber: 9,3x64mm AP&lt;br /&gt;Pociski: 150&lt;br /&gt;Używane w: Navid</Polish>
             <French>Calibre: 9.3x64mm AP&lt;br /&gt;Cartouches: 150&lt;br /&gt;Utilisé dans: Navid</French>
             <Spanish>Calibre: 9.3x64mm AP&lt;br /&gt;Balas: 150&lt;br /&gt;Se usa en: Navid</Spanish>
             <Russian>Калибр: 9,3x64 мм бронебойные&lt;br /&gt;Патронов: 150&lt;br /&gt;Используются с: Навид</Russian>
@@ -618,7 +618,7 @@
         </Key>
         <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_Name">
             <English>7.62x54mm 10Rnd Tracer IR-DIM Mag</English>
-            <Polish>Magazynek 7,62x54 mm 10rd Smugacz IR-DIM</Polish>
+            <Polish>Magazynek 7,62x54mm 10rd Smugacz IR-DIM</Polish>
             <French>Chargeur 7.62x54mm 10Rnd Traçante IR-DIM</French>
             <Spanish>Cargador de 10 balas trazadoras IR-DIM de 7.62x54mm</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм ИК-трассирующих</Russian>
@@ -634,7 +634,7 @@
         </Key>
         <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_Description">
             <English>7.62x54mm 10Rnd Tracer IR-DIM Mag</English>
-            <Polish>Magazynek 7,62x54 mm 10rd Smugacz IR-DIM</Polish>
+            <Polish>Magazynek 7,62x54mm 10rd Smugacz IR-DIM</Polish>
             <French>Chargeur 7.62x54mm 10Cps Traçante IR-DIM</French>
             <Spanish>Cargador de 10 balas trazadoras IR-DIM de 7.62x54mm</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм ИК-трассирующих</Russian>
@@ -705,10 +705,10 @@
             <German>5,56mm Mk262</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk262_mag_Description">
-            <English>Caliber: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Rounds: 30</English>
-            <Polish>Kaliber: 5,56x45 mm NATO (Mk262)&lt;br /&gt;Pociski: 30</Polish>
-            <French>Calibre: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Cartouches: 30</French>
-            <Spanish>Calibre: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Balas: 30</Spanish>
+            <English>Caliber: 5.56x45mm NATO (Mk262)&lt;br /&gt;Rounds: 30</English>
+            <Polish>Kaliber: 5,56x45mm NATO (Mk262)&lt;br /&gt;Pociski: 30</Polish>
+            <French>Calibre: 5.56x45mm NATO (Mk262)&lt;br /&gt;Cartouches: 30</French>
+            <Spanish>Calibre: 5.56x45mm NATO (Mk262)&lt;br /&gt;Balas: 30</Spanish>
             <Russian>Калибр: 5,56x45 мм NATO (Mk262)&lt;br /&gt;Патронов: 30</Russian>
             <German>Kaliber: 5,56x45mm NATO (Mk262)&lt;br /&gt;Schuss: 30</German>
         </Key>
@@ -729,10 +729,10 @@
             <German>5,56mm Mk318</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_Description">
-            <English>Caliber: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Rounds: 30</English>
-            <Polish>Kaliber: 5,56x45 mm NATO (Mk318)&lt;br /&gt;Pociski: 30</Polish>
-            <French>Calibre: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Cartouches: 30</French>
-            <Spanish>Calibre: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Balas: 30</Spanish>
+            <English>Caliber: 5.56x45mm NATO (Mk318)&lt;br /&gt;Rounds: 30</English>
+            <Polish>Kaliber: 5,56x45mm NATO (Mk318)&lt;br /&gt;Pociski: 30</Polish>
+            <French>Calibre: 5.56x45mm NATO (Mk318)&lt;br /&gt;Cartouches: 30</French>
+            <Spanish>Calibre: 5.56x45mm NATO (Mk318)&lt;br /&gt;Balas: 30</Spanish>
             <Russian>Калибр: 5,56x45 мм NATO (Mk318)&lt;br /&gt;Патронов: 30</Russian>
             <German>Kaliber: 5,56x45mm NATO (Mk318)&lt;br /&gt;Patronen: 30</German>
         </Key>
@@ -753,10 +753,10 @@
             <German>5,56mm AP</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_M995_AP_mag_Description">
-            <English>Caliber: 5.56x45 mm NATO (M995 AP)&lt;br /&gt;Rounds: 30</English>
-            <Polish>Kaliber: 5,56x45 mm NATO (M995 AP)&lt;br /&gt;Pociski: 30</Polish>
-            <French>Calibre: 5.56x45 mm NATO (M995 AP)&lt;br /&gt;Cartouches: 30</French>
-            <Spanish>Calibre: 5.56x45 mm NATO (M995 AP)&lt;br /&gt;Balas: 30</Spanish>
+            <English>Caliber: 5.56x45mm NATO (M995 AP)&lt;br /&gt;Rounds: 30</English>
+            <Polish>Kaliber: 5,56x45mm NATO (M995 AP)&lt;br /&gt;Pociski: 30</Polish>
+            <French>Calibre: 5.56x45mm NATO (M995 AP)&lt;br /&gt;Cartouches: 30</French>
+            <Spanish>Calibre: 5.56x45mm NATO (M995 AP)&lt;br /&gt;Balas: 30</Spanish>
             <Russian>Калибр: 5,56x45 мм NATO (M995 AP)&lt;br /&gt;Патронов: 30</Russian>
             <German>Kaliber: 5,56x45mm NATO (M995 AP)&lt;br /&gt;Patronen: 30</German>
         </Key>
@@ -777,10 +777,10 @@
             <German>7,62mm M118LR</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_Description">
-            <English>Caliber: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Rounds: 10</English>
-            <Polish>Kaliber: 7,62x51 mm NATO (M118LR)&lt;br /&gt;Pociski: 10</Polish>
-            <French>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Cartouches: 10</French>
-            <Spanish>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Balas: 10</Spanish>
+            <English>Caliber: 7.62x51mm NATO (M118LR)&lt;br /&gt;Rounds: 10</English>
+            <Polish>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Pociski: 10</Polish>
+            <French>Calibre: 7.62x51mm NATO (M118LR)&lt;br /&gt;Cartouches: 10</French>
+            <Spanish>Calibre: 7.62x51mm NATO (M118LR)&lt;br /&gt;Balas: 10</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M118LR)&lt;br /&gt;Патронов: 10</Russian>
             <German>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Patronen: 10</German>
         </Key>
@@ -801,10 +801,10 @@
             <German>7,62mm M118LR</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M118LR_Mag_Description">
-            <English>Caliber: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Rounds: 20</English>
-            <Polish>Kaliber: 7,62x51 mm NATO (M118LR)&lt;br /&gt;Pociski: 20</Polish>
-            <French>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Cartouches: 20</French>
-            <Spanish>Calibre: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Balas: 20</Spanish>
+            <English>Caliber: 7.62x51mm NATO (M118LR)&lt;br /&gt;Rounds: 20</English>
+            <Polish>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Pociski: 20</Polish>
+            <French>Calibre: 7.62x51mm NATO (M118LR)&lt;br /&gt;Cartouches: 20</French>
+            <Spanish>Calibre: 7.62x51mm NATO (M118LR)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M118LR)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Patronen: 20</German>
         </Key>
@@ -825,12 +825,12 @@
             <German>7.62mm Mk316</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk316_Mod_0_Mag_Description">
-            <English>Caliber: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Rounds: 10</English>
-            <Polish>Kaliber: 7,62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Pociski: 10</Polish>
-            <French>Calibre: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Cartouches: 10</French>
-            <Spanish>Calibre: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Balas: 10</Spanish>
+            <English>Caliber: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Rounds: 10</English>
+            <Polish>Kaliber: 7,62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Pociski: 10</Polish>
+            <French>Calibre: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Cartouches: 10</French>
+            <Spanish>Calibre: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Balas: 10</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (Mk316 Mod 0)&lt;br /&gt;Патронов: 10</Russian>
-            <German>Kaliber: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Patronen: 10</German>
+            <German>Kaliber: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Patronen: 10</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk316_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk316 Mod 0)</English>
@@ -849,12 +849,12 @@
             <German>7.62mm Mk316</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk316_Mod_0_Mag_Description">
-            <English>Caliber: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Rounds: 20</English>
-            <Polish>Kaliber: 7,62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Pociski: 20</Polish>
-            <French>Calibre: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Cartouches: 20</French>
-            <Spanish>Calibre: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
+            <English>Caliber: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Rounds: 20</English>
+            <Polish>Kaliber: 7,62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Pociski: 20</Polish>
+            <French>Calibre: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Cartouches: 20</French>
+            <Spanish>Calibre: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (Mk316 Mod 0)&lt;br /&gt;Патронов: 20</Russian>
-            <German>Kaliber: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Patronen: 20</German>
+            <German>Kaliber: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Patronen: 20</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_Name">
             <English>7.62mm 10Rnd Mag (Mk319 Mod 0)</English>
@@ -873,10 +873,10 @@
             <German>7,62mm Mk319</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_Description">
-            <English>Caliber: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Rounds: 10</English>
-            <Polish>Kaliber: 7,62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Pociski: 10</Polish>
-            <French>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Cartouches: 10</French>
-            <Spanish>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Balas: 10</Spanish>
+            <English>Caliber: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Rounds: 10</English>
+            <Polish>Kaliber: 7,62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Pociski: 10</Polish>
+            <French>Calibre: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Cartouches: 10</French>
+            <Spanish>Calibre: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Balas: 10</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (Mk319 Mod 0)&lt;br /&gt;Патронов: 10</Russian>
             <German>Kaliber: 7,62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Patronen: 10</German>
         </Key>
@@ -897,10 +897,10 @@
             <German>7,62mm Mk319</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_Description">
-            <English>Caliber: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Rounds: 20</English>
-            <Polish>Kaliber: 7,62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Pociski: 20</Polish>
-            <French>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Cartouches: 20</French>
-            <Spanish>Calibre: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
+            <English>Caliber: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Rounds: 20</English>
+            <Polish>Kaliber: 7,62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Pociski: 20</Polish>
+            <French>Calibre: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Cartouches: 20</French>
+            <Spanish>Calibre: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (Mk319 Mod 0)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Patronen: 20</German>
         </Key>
@@ -921,10 +921,10 @@
             <German>7,62mm AP</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M993_AP_Mag_Description">
-            <English>Caliber: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Rounds: 10</English>
-            <Polish>Kaliber: 7,62x51 mm NATO (M993 AP)&lt;br /&gt;Pociski: 10</Polish>
-            <French>Calibre: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Cartouches: 10</French>
-            <Spanish>Calibre: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Balas: 10</Spanish>
+            <English>Caliber: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Rounds: 10</English>
+            <Polish>Kaliber: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Pociski: 10</Polish>
+            <French>Calibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Cartouches: 10</French>
+            <Spanish>Calibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Balas: 10</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M993 AP)&lt;br /&gt;Патронов: 10</Russian>
             <German>Kaliber: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Patronen: 10</German>
         </Key>
@@ -945,10 +945,10 @@
             <German>7,62mm AP</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M993_AP_Mag_Description">
-            <English>Caliber: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Rounds: 20</English>
-            <Polish>Kaliber: 7,62x51 mm NATO (M993 AP)&lt;br /&gt;Pociski: 20</Polish>
-            <French>Calibre: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Cartouches: 20</French>
-            <Spanish>Calibre: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Balas: 20</Spanish>
+            <English>Caliber: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Rounds: 20</English>
+            <Polish>Kaliber: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Pociski: 20</Polish>
+            <French>Calibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Cartouches: 20</French>
+            <Spanish>Calibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M993 AP)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Patronen: 20</German>
         </Key>
@@ -969,10 +969,10 @@
             <German>7,62mm (Mk248 Mod 0)</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Description">
-            <English>Caliber: 7.62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Rounds: 20</English>
-            <Polish>Kaliber: 7,62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Pociski: 20</Polish>
+            <English>Caliber: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Rounds: 20</English>
+            <Polish>Kaliber: 7,62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Cartouches: 20</French>
-            <Spanish>Calibre: 7.62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
+            <Spanish>Calibre: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x67 мм NATO (Mk248 Mod 0)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (Mk248 Mod 0)&lt;br /&gt;Patronen: 20</German>
         </Key>
@@ -993,10 +993,10 @@
             <German>7,62mm (Mk248 Mod 1)</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_Description">
-            <English>Caliber: 7.62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Rounds: 20</English>
-            <Polish>Kaliber: 7,62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Pociski: 20</Polish>
+            <English>Caliber: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Rounds: 20</English>
+            <Polish>Kaliber: 7,62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Cartouches: 20</French>
-            <Spanish>Calibre: 7.62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Balas: 20</Spanish>
+            <Spanish>Calibre: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x67 мм NATO (Mk248 Mod 1)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7.62x51mm NATO (Mk248 Mod 1)&lt;br /&gt;Patronen: 20</German>
         </Key>
@@ -1017,10 +1017,10 @@
             <German>7,62mm (OTM)</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Description">
-            <English>Caliber: 7.62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Rounds: 20</English>
-            <Polish>Kaliber: 7,62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Pociski: 20</Polish>
+            <English>Caliber: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Rounds: 20</English>
+            <Polish>Kaliber: 7,62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Cartouches: 20</French>
-            <Spanish>Calibre: 7.62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Balas: 20</Spanish>
+            <Spanish>Calibre: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x67 мм NATO (Berger Hybrid OTM)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Patronen: 20</German>
         </Key>
@@ -1028,7 +1028,7 @@
             <English>6.5x47mm 30Rnd Mag (HPBT Scenar)</English>
             <French>6.5x47mm 30Cps (HPBT Scenar)</French>
             <Spanish>Cargador de 30 balas de 6.5x47mm (HPBT Scenar)</Spanish>
-            <Polish>Magazynek 6,5x47 mm 30rd (HPBT Scenar)</Polish>
+            <Polish>Magazynek 6,5x47mm 30rd (HPBT Scenar)</Polish>
             <Russian>Магазин из 30-ти 6,5x47 мм (HPBT Scenar)</Russian>
             <German>6,5x47mm 30-Schuss-Magazin (HPBT Scenar)</German>
         </Key>
@@ -1044,7 +1044,7 @@
             <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
             <French>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 30</Spanish>
-            <Polish>Kaliber: 6,5x47 mm (HPBT Scenar)&lt;br /&gt;Pociski: 30</Polish>
+            <Polish>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Pociski: 30</Polish>
             <Russian>Калибр: 6,5x47 мм (HPBT Scenar)&lt;br /&gt;Патронов: 30</Russian>
             <German>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MXM</German>
         </Key>
@@ -1075,18 +1075,18 @@
             <German>.338 10-Schuss-Magazin (300gr Sierra MatchKing HPBT)</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_NameShort">
-            <English>.338 (HPBT)</English>
-            <French>.338 (HPBT)</French>
-            <Spanish>.338 (HPBT)</Spanish>
-            <Polish>.338 (HPBT)</Polish>
-            <Russian>.338 (HPBT)</Russian>
-            <German>.338 (HPBT)</German>
+            <English>.338 HPBT</English>
+            <French>.338 HPBT</French>
+            <Spanish>.338 HPBT</Spanish>
+            <Polish>.338 HPBT</Polish>
+            <Russian>.338 HPBT</Russian>
+            <German>.338 HPBT</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Description">
             <English>Caliber: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Balas: 10</Spanish>
-            <Polish>Kaliber: 8,6x70 mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Pociski: 10</Polish>
+            <Polish>Kaliber: 8,6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Pociski: 10</Polish>
             <Russian>Калибр: .338 (300 гран Sierra MatchKing HPBT)&lt;br /&gt;Патронов: 10</Russian>
             <German>Kaliber: 8,6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Patronen: 10</German>
         </Key>
@@ -1104,13 +1104,13 @@
             <Spanish>.338 AP</Spanish>
             <Polish>.338 AP</Polish>
             <Russian>.338 бронебойные</Russian>
-            <German>.338 (AP)</German>
+            <German>.338 AP</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Description">
             <English>Caliber: 8.6x70mm (API526)&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 8.6x70mm (API526)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 8.6x70mm (API526)&lt;br /&gt;Balas: 10</Spanish>
-            <Polish>Kaliber: 8,6x70 mm (API526)&lt;br /&gt;Pociski: 10</Polish>
+            <Polish>Kaliber: 8,6x70mm (API526)&lt;br /&gt;Pociski: 10</Polish>
             <Russian>Калибр: .338 (API526)&lt;br /&gt;Патронов: 10</Russian>
             <German>Kaliber: 8,6x70mm (API526)&lt;br /&gt;Patronen: 10</German>
         </Key>
@@ -1118,7 +1118,7 @@
             <English>12.7x99mm 5Rnd Mag</English>
             <French>12.7x99mm 5Cps</French>
             <Spanish>Cargador de 5 balas de 12.7x99mm</Spanish>
-            <Polish>Magazynek 12,7x99 mm 5rd</Polish>
+            <Polish>Magazynek 12,7x99mm 5rd</Polish>
             <Russian>Магазин из 5-ти 12,7x99 мм</Russian>
             <German>12,7x99mm 5-Schuss-Magazin</German>
         </Key>
@@ -1134,7 +1134,7 @@
             <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm&lt;br /&gt;Cartouches: 5</French>
             <Spanish>Calibre: 12.7x99mm&lt;br /&gt;Balas: 5</Spanish>
-            <Polish>Kaliber: 12,7x99 mm&lt;br /&gt;Pociski: 5</Polish>
+            <Polish>Kaliber: 12,7x99mm&lt;br /&gt;Pociski: 5</Polish>
             <Russian>Калибр: 12,7x99 мм&lt;br /&gt;Патронов: 5</Russian>
             <German>Kaliber: 12,7x99mm&lt;br /&gt;Patronen: 5</German>
         </Key>
@@ -1156,14 +1156,14 @@
             <English>Caliber: 12.7x99mm API&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm API&lt;br /&gt;Cartouches: 5</French>
             <Spanish>Calibre: 12.7x99mm API&lt;br /&gt;Balas: 5</Spanish>
-            <Polish>Kaliber: 12,7x99 mm API&lt;br /&gt;Pociski: 5</Polish>
+            <Polish>Kaliber: 12,7x99mm API&lt;br /&gt;Pociski: 5</Polish>
             <German>Kaliber:12,7x99mm API&lt;br /&gt;Patronen: 5</German>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Name">
             <English>12.7x99mm 5Rnd Mag (AMAX)</English>
             <French>12.7x99mm 5Rnd Mag (AMAX)</French>
             <Spanish>Cargador de 5 balas de 12.7x99mm (AMAX)</Spanish>
-            <Polish>Magazynek 12,7x99 mm 5rd (AMAX)</Polish>
+            <Polish>Magazynek 12,7x99mm 5rd (AMAX)</Polish>
             <Russian>Магазин из 5-ти 12,7x99 мм (A-MAX)</Russian>
             <German>12,7x99mm 5-Schuss-Magazin (AMAX)</German>
         </Key>
@@ -1179,7 +1179,7 @@
             <English>Caliber: 12.7x99mm (AMAX)&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Cartouches: 5</French>
             <Spanish>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Balas: 5</Spanish>
-            <Polish>Kaliber: 12,7x99 mm (AMAX)&lt;br /&gt;Pociski: 5</Polish>
+            <Polish>Kaliber: 12,7x99mm (AMAX)&lt;br /&gt;Pociski: 5</Polish>
             <Russian>Калибр: 12,7x99 мм (A-MAX)&lt;br /&gt;Патронов: 5</Russian>
             <German>Kaliber:12,7x99mm (AMAX)&lt;br /&gt;Patronen: 5</German>
         </Key>
