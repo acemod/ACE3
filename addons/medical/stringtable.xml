@@ -4,22 +4,34 @@
         <Key ID="STR_ACE_Medical_Injuries">
             <English>INJURIES</English>
             <German>VERLETZUNGEN</German>
+            <Italian>LESIONI</Italian>
+            <Russian>ТРАВМЫ</Russian>
+            <French>BLESSURES</French>
+            <Polish>OBRAŻENIA</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_NoInjuriesBodypart">
             <English>No injuries on this bodypart ...</English>
             <German>Körperteil nicht verletzt ...</German>
+            <Italian>Non ci sono lesioni in questa parte del corpo ...</Italian>
+            <Russian>Данная часть тела не повреждена ...</Russian>
+            <French>Aucune blessures sur cette partie du corps</French>
+            <Polish>Brak obrażeń na tej części ciała ...</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
             <Polish>Detale zużytych medykamentów</Polish>
             <Spanish>Detalle de simulación de basura</Spanish>
             <Russian>Количество мусора от медицины</Russian>
+            <Italian>Dettagli Simulazione Rifiuti</Italian>
+            <French>Niveau de simulation des détritus</French>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail_Desc">
             <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
             <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
             <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
             <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
+            <Italian>Il livello di dettagli della simulazione dei rifiuti indica il numero di rifiuti che verranno creati localmente nel client. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio client.</Italian>
+            <French>Le nieau de simulation des détritus règle la quantité de déchets qui vont être créer localement dans le client. Des quantitées excessive dans certaines zones locales aurait pu causer des chutes D'IPS, donc c'est une option client uniquement.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -51,7 +63,7 @@
             <Polish>Wstrzyknij morfinę</Polish>
             <Czech>Aplikovat morfin</Czech>
             <Russian>Ввести морфин</Russian>
-            <French>Morphine</French>
+            <French>Injecter de la morphine</French>
             <Hungarian>Morfium beadása</Hungarian>
             <Portuguese>Injetar Morfina</Portuguese>
             <Italian>Inietta Morfina</Italian>
@@ -338,7 +350,7 @@
             <Russian>Проверить пульс</Russian>
             <Czech>Zkontrolovat pulz</Czech>
             <Polish>Sprawdź tętno</Polish>
-            <French>Vérifier les pulsations</French>
+            <French>Vérifier le pouls</French>
             <Hungarian>Pulzus ellenőrzése</Hungarian>
             <Italian>Controlla il polso</Italian>
         </Key>
@@ -367,6 +379,10 @@
         <Key ID="STR_ACE_MEDICAL_TriageCard_NoEntry">
             <English>No entries on this triage card.</English>
             <German>Keine Einträge auf der Triagekarte</German>
+            <Italian>Nessuna voce sulla Triage Card</Italian>
+            <Russian>Нет записей.</Russian>
+            <French>Aucune entrée sur cette carte de triage</French>
+            <Polish>Brak wpisów w tej karcie segregacyjnej.</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Tourniquet">
             <English>Tourniquet</English>
@@ -375,7 +391,7 @@
             <Russian>Жгут</Russian>
             <Czech>Škrtidlo</Czech>
             <Polish>Staza</Polish>
-            <French>Garrot</French>
+            <French>Tourniquet</French>
             <Hungarian>Érszorító</Hungarian>
             <Italian>Laccio emostatico</Italian>
         </Key>
@@ -386,25 +402,41 @@
             <Russian>Снять жгут</Russian>
             <Czech>Sundat škrtidlo</Czech>
             <Polish>Zdejmij stazę</Polish>
-            <French>Enlever le garrot</French>
+            <French>Enlever le Tourniquet</French>
             <Hungarian>Érszorító leszedése</Hungarian>
             <Italian>Rimuovi laccio emostatico</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Diagnose">
             <English>Diagnose</English>
             <German>Diagnose</German>
+            <Italian>Diagnosi</Italian>
+            <Russian>Диагностика</Russian>
+            <French>Diagnostiquer</French>
+            <Polish>Diagnoza</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Diagnosing">
             <English>Diagnosing ...</English>
             <German>Diagnostizieren ...</German>
+            <Italian>Diagnosi in corso...</Italian>
+            <Russian>Диагностика ...</Russian>
+            <French>Diagnostic en cours</French>
+            <Polish>Diagnozowanie ...</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_CPR">
             <English>CPR</English>
             <German>HLW</German>
+            <Italian>RCP</Italian>
+            <Russian>Сердечно-легочная реанимация</Russian>
+            <French>RPC</French>
+            <Polish>RKO</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_PerformingCPR">
             <English>Performing CPR ...</English>
             <German>HLW durchführen ...</German>
+            <Italian>Eseguendo RCP...</Italian>
+            <Russian>Сердечно-легочная реанимация ...</Russian>
+            <French>RPC en cours</French>
+            <Polish>Przeprowadzanie RKO ...</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
@@ -511,7 +543,7 @@
             <Spanish>Menor</Spanish>
             <Russian>Несрочная помощь</Russian>
             <Polish>Normalny</Polish>
-            <French>Léger</French>
+            <French>Mineur</French>
             <Czech>Minimální</Czech>
             <Hungarian>Enyhe</Hungarian>
             <Italian>Minore</Italian>
@@ -642,7 +674,7 @@
             <German>Tourniquet [CAT]</German>
             <Russian>Жгут</Russian>
             <Spanish>Torniquete [CAT]</Spanish>
-            <French>Garrot [CAT]</French>
+            <French>Tourniquet [CAT]</French>
             <Polish>Staza [typ. CAT]</Polish>
             <Czech>Škrtidlo [CAT]</Czech>
             <Hungarian>Érszorító [CAT]</Hungarian>
@@ -688,7 +720,7 @@
             <French>Bandage fait d'un matériel spécial utilisé pour couvrir une blessure, qui peut etre appliqué dès que le saignement a été stoppé.</French>
             <Polish>Opatrunek materiałowy, używany do przykrywania ran, zakładany na ranę po zatamowaniu krwawienia.</Polish>
             <Hungarian>Egy különleges anyagú kötszer sebek betakarására, amelyet a vérzés elállítása után helyeznek fel.</Hungarian>
-            <Italian>Una benda apposta, utilizzata per coprire una ferita, la quale è applicato sopra di essa una volta fermata l'emorragia.</Italian>
+            <Italian>Una benda apposita, utilizzata per coprire una ferita, la quale è applicata sopra di essa una volta fermata l'emorragia.</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_PACKING_BANDAGE_DISPLAY">
             <English>Packing Bandage</English>
@@ -717,7 +749,7 @@
             <French>Bandage servant à recouvrir les blessures pour arrêter les hémmoragies et faciliter la guérisson. Recouvrir une blessure est optionnel dans le cas de blessures polytraumatiques</French>
             <Polish>Opatrunek stosowany w celu zatrzymania krwawienia i osłony większych ran.</Polish>
             <Hungarian>Egy kötszerfajta, melyet a sebek nyomására használnak a vérzés elállítása és sebgyógyulás érdekében. A nyomókötés egy lehetőség nagyobb polytraumatikus sérülések esetén.</Hungarian>
-            <Italian>Un bendaggio usato per bendare ferite con emorragie e facilitare la guarigione. Bendare una ferita è una opzione su ferite di vario tipo.</Italian>
+            <Italian>Un bendaggio usato per coprire la ferita, fermare il sanguinamento e facilitarne la guarigione. Questa tecnica è opzionale su ferite multiple.</Italian>
             <German>Ein Verband, um die Wunde abzudecken und die Wundheilung zu fördern. Wunden abdecken ist eine Option bei größeren Polytraumen</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY">
@@ -756,7 +788,7 @@
             <German>Tourniquet [CAT]</German>
             <Russian>Жгут</Russian>
             <Spanish>Torniquete (CAT)</Spanish>
-            <French>Garrot (CAT)</French>
+            <French>Tourniquet (CAT)</French>
             <Polish>Staza (typ. CAT)</Polish>
             <Czech>Škrtidlo (CAT)</Czech>
             <Hungarian>Érszorító (CAT)</Hungarian>
@@ -1057,7 +1089,7 @@
             <English>Personal Aid Kit</English>
             <Russian>Аптечка</Russian>
             <Spanish>Botiquín de primeros auxilios</Spanish>
-            <French>Équipement de support vital</French>
+            <French>Trousse de premiers soins</French>
             <Polish>Apteczka osobista</Polish>
             <German>Persönliches Verbandpäckchen</German>
             <Hungarian>Elsősegélycsomag</Hungarian>
@@ -1076,10 +1108,16 @@
         <Key ID="STR_ACE_MEDICAL_AID_KIT_DESC_USE">
             <English>Personal Aid Kit for in field stitching or advanced treatment</English>
             <Polish>W znacznym stopniu poprawia stan pacjenta</Polish>
+            <Russian>Полевая аптчека для продвинутого лечения и зашивания ран</Russian>
+            <German>Persönliches Verbandspäckchen zum ambulanten Nähen und fortgeschrittener Behandlung.</German>
+            <French>Trousse de premiers soins pour coudre sur le terrain et traitements avancés.</French>
         </Key>
         <Key ID="STR_ACE_MEDICAL_USE_AID_KIT">
             <English>Use Personal Aid Kit</English>
             <German>Verbandpäckchen benutzen</German>
+            <Russian>Использовать аптечку</Russian>
+            <French>Utiliser la Trousse de premier soins</French>
+            <Polish>Użyj apteczki osobistej</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_SURGICALKIT_DISPLAY">
             <English>Surgical Kit</English>
@@ -1114,6 +1152,9 @@
         <Key ID="STR_ACE_MEDICAL_USE_SURGICALKIT">
             <English>Use Surgical Kit</English>
             <German>Operationsset benutzen</German>
+            <Russian>Использовать хирургический набор</Russian>
+            <French>Utiliser la trousse chirugicale</French>
+            <Polish>Zszyj rany</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BODYBAG_DISPLAY">
             <English>Bodybag</English>
@@ -1168,6 +1209,9 @@
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_LOG">
             <English>%1 checked Blood Pressure: %2</English>
             <German>%1 kontrollierte Blutdruck: %2</German>
+            <Russian>%1 проверил артериальное давление: %2</Russian>
+            <French>%1 à vérifié la tension: %2</French>
+            <Polish>%1 sprawdził ciśnienie krwi: %2</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CHECKED_MEDIC">
             <English>You checked %1</English>
@@ -1242,18 +1286,30 @@
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_LOW">
             <English>Low</English>
             <German>Niedrig</German>
+            <Russian>Низкое</Russian>
+            <French>Faible</French>
+            <Polish>Niskie</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_NORMAL">
             <English>Normal</English>
             <German>Normal</German>
+            <Russian>Нормальное</Russian>
+            <French>Normale</French>
+            <Polish>Normalne</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_HIGH">
             <English>High</English>
             <German>Hoch</German>
+            <Russian>Высокое</Russian>
+            <French>Haute</French>
+            <Polish>Wysokie</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_NOBLOODPRESSURE">
             <English>No Blood Pressure</English>
             <German>Kein Blutdruck</German>
+            <Russian>Артериальное давление отсутствует</Russian>
+            <French>Aucune tension</French>
+            <Polish>Brak ciśnienia krwi</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE">
             <English>Pulse</English>
@@ -1288,22 +1344,34 @@
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_LOG">
             <English>%1 checked Heart Rate: %2</English>
             <German>%1 kontrollierte Herzfrequenz: %2</German>
+            <Russian>%1 проверил пульс: %2</Russian>
+            <French>%1 à vérifié le rythme cardiaque: %2</French>
+            <Polish>%1 sprawdził tętno: %2</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_WEAK">
             <English>Weak</English>
             <German>Schwach</German>
+            <Russian>Слабый</Russian>
+            <French>Faible</French>
+            <Polish>Słabe</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_NORMAL">
             <English>Normal</English>
             <German>Normal</German>
+            <Russian>Нормальный</Russian>
+            <French>Normal</French>
+            <Polish>Normalne</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_STRONG">
             <English>Strong</English>
             <German>Stark</German>
+            <Russian>Сильный</Russian>
+            <French>Fort</French>
+            <Polish>Silne</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_1">
             <English>You find a Heart Rate of %2</English>
-            <French>Rythme carquiaque de %2</French>
+            <French>Rythme cardiaque de %2</French>
             <Russian>Пульс %2 уд./мин.</Russian>
             <Spanish>El ritmo cardíaco es de %2</Spanish>
             <Polish>Wyczuwasz tętno o wartości %2</Polish>
@@ -1403,26 +1471,53 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseMessage">
             <English>Patient %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</English>
+            <Russian>Пациент %1&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Russian>
+            <German>Patient %1&lt;br/&gt;ist %2.&lt;br/&gt;%3.&lt;br/&gt;%4</German>
+            <French>Patient %1&lt;br/&gt;est %2.&lt;br/&gt;%3.&lt;br/&gt;</French>
+            <Polish>Pacjent %1&lt;br/&gt;jest %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseAlive">
             <English>alive</English>
+            <Russian>жив</Russian>
+            <German>lebendig</German>
+            <French>vivant</French>
+            <Polish>żywy</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseDead">
             <English>dead</English>
+            <Russian>мертв</Russian>
+            <German>tot</German>
+            <French>mort</French>
+            <Polish>martwy</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_lostBlood">
             <English>He's lost some blood</English>
+            <Russian>Есть кровопотеря</Russian>
+            <German>Er hat etwas Blut verloren</German>
+            <French>Il à perdu du sang</French>
+            <Polish>Stracił trochę krwi</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noBloodloss">
             <English>He hasn't lost blood</English>
+            <Russian>Нет кровопотери</Russian>
+            <German>Er hat kein Blut verloren</German>
+            <French>il n'a pas perdu de sang</French>
+            <Polish>Nie stracił krwi</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_inPain">
             <English>He is in pain</English>
+            <Russian>Испытывает боль</Russian>
+            <German>Er hat Schmerzen</German>
+            <French>il souffre</French>
+            <Polish>Odczuwa ból</Polish>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noPain">
             <English>He is not in pain</English>
+            <Russian>Не испытывает боли</Russian>
+            <German>Er hat keine Schmerzen</German>
+            <French>Il ne souffre pas</French>
+            <Polish>Nie odczuwa bólu</Polish>
         </Key>
-
         <Key ID="STR_ACE_MEDICAL_BANDAGED">
             <English>Bandaged</English>
             <French>Bandé</French>
@@ -1754,142 +1849,233 @@
         <Key ID="STR_ACE_Medical_Wounds_Abrasion">
             <English>Scrape</English>
             <German>Kratzer</German>
+            <Russian>Ссадина</Russian>
+            <French>Eraflure</French>
+            <Polish>Draśnięcie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Minor">
             <English>Minor Scrape</English>
             <German>Kleiner Kratzer</German>
+            <Russian>Малая ссадина</Russian>
+            <French>Eraflure Mineure</French>
+            <Polish>Pomniejsze draśnięcie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Medium">
             <English>Medium Scrape</English>
             <German>Mittlerer Kratzer</German>
+            <Russian>Средняя ссадина</Russian>
+            <French>Moyenne Eraflure</French>
+            <Polish>Średnie draśnięcie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Large">
             <English>Large Scrape</English>
             <German>Großer Kratzer</German>
+            <Russian>Большая ссадина</Russian>
+            <French>Large Eraflure</French>
+            <Polish>Duże draśnięcie</Polish>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_Avulsion">
             <English>Avulsion</English>
             <German>Avulsion</German>
+            <Russian>Рваная рана</Russian>
+            <French>Avulsion</French>
+            <Polish>Rana płatowa</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Minor">
             <English>Minor Avulsion</English>
             <German>Kleine Avulsion</German>
+            <Russian>Малая рваная рана</Russian>
+            <French>Avulsion Mineure</French>
+            <Polish>Pomniejsza rana płatowa</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Medium">
             <English>Medium Avulsion</English>
             <German>Mittlere Avulsion</German>
+            <Russian>Средняя рваная рана</Russian>
+            <French>Avulsion Moyenne</French>
+            <Polish>Średnia rana płatowa</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Large">
             <English>Large Avulsion</English>
             <German>Große Avulsion</German>
+            <Russian>Большая рваная рана</Russian>
+            <French>Large Avulsion</French>
+            <Polish>Duża rana płatowa</Polish>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_Contusion">
             <English>Bruise</English>
             <German>Prellung</German>
+            <Russian>Ушиб</Russian>
+            <French>Hématome</French>
+            <Polish>Stłuczenie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Minor">
             <English>Minor Bruise</English>
             <German>Kleine Prellung</German>
+            <Russian>Малый ушиб</Russian>
+            <French>Hématome Mineur</French>
+            <Polish>Pomniejsze stłuczenie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Medium">
             <English>Medium Bruise</English>
             <German>Mittlere Prellung</German>
+            <Russian>Средний ушиб</Russian>
+            <French>Hématome Moyen</French>
+            <Polish>Średnie stłuczenie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Large">
             <English>Large Bruise</English>
             <German>Große Prellung</German>
+            <Russian>Большой ушиб</Russian>
+            <French>Large Hématome</French>
+            <Polish>Duże stłuczenie</Polish>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_Crush">
             <English>Crushed tissue</English>
             <German>Quetschverletzung</German>
+            <Russian>Компресионная травма</Russian>
+            <French>Tissu écrasé</French>
+            <Polish>Zgniecienie tkanek miękkich</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Minor">
             <English>Minor crushed tissue</English>
             <German>Kleine Quetschverletzung</German>
+            <Russian>Малая компрессионная травма</Russian>
+            <French>Tissu écrasé Mineur</French>
+            <Polish>Pomniejsze zgniecienie tkanek miękkich</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Medium">
             <English>Medium crushed tissue</English>
             <German>Mittlere Quetschverletzung</German>
+            <Russian>Средняя компрессионная травма</Russian>
+            <French>Tissu écrasé Moyen</French>
+            <Polish>Średnie zgniecienie tkanek miękkich</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Large">
             <English>Large crushed tissue</English>
             <German>Große Quetschverletzung</German>
+            <Russian>Большая компрессионная травма</Russian>
+            <French>Tissu écrasé Large</French>
+            <Polish>Duże zgniecienie tkanek miękkich</Polish>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_Cut">
             <English>Cut</English>
             <German>Schnittwunde</German>
+            <Russian>Резаная рана</Russian>
+            <French>Coupure</French>
+            <Polish>Rana cięta</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Minor">
             <English>Small Cut</English>
             <German>Kleine Schnittwunde</German>
+            <Russian>Малая резаная рана</Russian>
+            <Polish>Pomniejsza rana cięta</Polish>
+            <French>Petite Coupure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Medium">
             <English>Medium Cut</English>
             <German>Mittlere Schnittwunde</German>
+            <Russian>Средняя резаная рана</Russian>
+            <Polish>Średnia rana cięta</Polish>
+            <French>Moyenne Coupure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Large">
             <English>Large Cut</English>
             <German>Große Schnittwunde</German>
+            <Russian>Большая резаная рана</Russian>
+            <Polish>Duża rana cięta</Polish>
+            <French>Large Coupure</French>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_Laceration">
             <English>Tear</English>
             <German>Riss</German>
+            <Russian>Рваная рана</Russian>
+            <Polish>Rozerwanie skóry</Polish>
+            <French>Déchirure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Minor">
             <English>Small Tear</English>
             <German>Kleiner Riss</German>
+            <Russian>Малая рваная рана</Russian>
+            <Polish>Pomniejsze rozerwanie skóry</Polish>
+            <French>Petite Déchirure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Medium">
             <English>Medium Tear</English>
             <German>Mittlerer Riss</German>
+            <Russian>Средняя рваная рана</Russian>
+            <Polish>Średnie rozerwanie skóry</Polish>
+            <French>Moyenne Déchirure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Large">
             <English>Large Tear</English>
             <German>Großer Riss</German>
+            <Russian>Большая рваная рана</Russian>
+            <Polish>Duże rozerwanie skóry</Polish>
+            <French>Large Déchirure</French>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound">
             <English>Velocity Wound</English>
             <German>Ballistisches Trauma</German>
+            <Russian>Огнестрельная рана</Russian>
+            <Polish>Rana postrzałowa</Polish>
+            <French>Blessure de vélocité</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Minor">
             <English>Smal Velocity Wound</English>
             <German>Kleines Ballistisches Trauma</German>
+            <Russian>Малая огнестрельная рана</Russian>
+            <Polish>Pomniejsza rana postrzałowa</Polish>
+            <French>Petite Bessure de vélocité</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Medium">
             <English>Medium Velocity Wound</English>
             <German>Mittleres Ballistisches Trauma</German>
+            <Russian>Средняя огнестрельная рана</Russian>
+            <Polish>Średnia rana postrzałowa</Polish>
+            <French>Moyenne Blessure de vélocité</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Large">
             <English>Large Velocity Wound</English>
             <German>Großes Ballistisches Trauma</German>
+            <Russian>Большая огнестрельная рана</Russian>
+            <Polish>Duża rana postrzałowa</Polish>
+            <French>Large Blessure de vélocité</French>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound">
             <English>Puncture Wound</English>
             <German>Stichwunde</German>
+            <Russian>Колотая рана</Russian>
+            <Polish>Rana kłuta</Polish>
+            <French>Blessure de perforation</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Minor">
             <English>Minor Puncture Wound</English>
             <German>Kleine Stichwunde</German>
+            <Russian>Малая колотая рана</Russian>
+            <Polish>Pomniejsza rana kłuta</Polish>
+            <French>Blessure de perforation Mineure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Medium">
             <English>Medium Puncture Wound</English>
             <German>Mittlere Stichwunde</German>
+            <Russian>Средняя колотая рана</Russian>
+            <Polish>Średnia rana kłuta</Polish>
+            <French>Blessure de perforation Moyenne</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Large">
             <English>Large Puncture Wound</English>
             <German>Große Stichwunde</German>
+            <Russian>Большая колотая рана</Russian>
+            <Polish>Duża rana kłuta</Polish>
+            <French>Large Blessure de perforation</French>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_Femur">
             <English>Broken Femur</English>
             <German>Gebrochener Oberschenkelknochen</German>
+            <Russian>Перелом</Russian>
+            <Polish>Zkłamana kość udowa</Polish>
+            <French>Femur Cassé</French>
         </Key>
     </Package>
 </Project>

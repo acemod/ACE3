@@ -17,6 +17,8 @@
             <English>Advanced missile guidance, or AMG, provides multiple enhancements to missile locking and firing. It is also a framework required for missile weapon types.</English>
             <Polish>Zaawansowane namierzanie rakiet, lub ZNR, dostarcza wiele poprawek do systemu namierzania rakiet oraz dodaje nowe tryby strzału. Jest to wymagana opcja dla broni rakietowych.</Polish>
             <Spanish>Guía de misiles avanzada, o AMG en sus siglas en inglés, ofrece múltiples mejoras en el fijado y disparo de misiles. Es también un framework requerido para armas de tipo misil.</Spanish>
+            <German>Das Erweiterte Raketenlenksystem, auch AMG genannt, bietet viele Verbesserungen zum Aufschalten und Feuern mittels gelenkten Raketen. </German>
+            <French>Le guidage avancé de missile, ou AMG en anglais, apporte de multiple améliorations au verouillage et au tir de missiles. C'est aussi un framework requis pour tout arme de type missile.</French>
         </Key>
         <Key ID="STR_ACE_Hydra70_DAGR">
             <English>Hydra-70 DAGR Missile</English>
@@ -45,7 +47,7 @@
         <Key ID="STR_ACE_Hydra70_DAGR_Desc">
             <English>Hydra-70 DAGR Laser Guided Missile</English>
             <Spanish></Spanish>
-            <French>Missile à guidage Hydra-70 DAGR</French>
+            <French>Missile à guidage laser Hydra-70 DAGR</French>
             <Polish>Laserowo naprowadzana rakieta Hydra-70 DAGR</Polish>
             <German>Hydra-70 DAGR lasergelenkte Rakete</German>
             <Czech>Hydra-70 DAGR laserem naváděná střela</Czech>
