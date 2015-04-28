@@ -31,7 +31,7 @@ class CfgVehicles {
             };
             class simulationRadius {
                 displayName = "Simulation Radius";
-                description = "Defines the radius (in meters) in which advanced ballistics are applied";
+                description = "Defines the radius around the player (in meters) at which projectiles are wind deflected";
                 typeName = "NUMBER";
                 defaultValue = 3000;
             };

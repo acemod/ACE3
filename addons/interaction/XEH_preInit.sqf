@@ -8,6 +8,8 @@ PREP(addSelectableItem);
 PREP(applyButtons);
 PREP(canBecomeLeader);
 PREP(canInteractWithCivilian);
+PREP(canJoinGroup);
+PREP(canJoinTeam);
 PREP(canTapShoulder);
 PREP(doBecomeLeader);
 PREP(getDoor);

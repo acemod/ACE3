@@ -8,6 +8,7 @@ PREP(compileMenu);
 PREP(compileMenuSelfAction);
 PREP(collectActiveActionTree);
 PREP(createAction);
+PREP(ctrlSetParsedTextCached);
 PREP(findActionNode);
 PREP(handlePlayerChanged);
 PREP(isSubPath);
@@ -21,6 +22,7 @@ PREP(renderBaseMenu);
 PREP(renderIcon);
 PREP(renderMenu);
 PREP(renderSelector);
+PREP(setupTextColors);
 PREP(splitPath);
 
 GVAR(keyDown) = false;
