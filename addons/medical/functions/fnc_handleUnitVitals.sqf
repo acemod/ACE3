@@ -34,7 +34,7 @@ _unit setvariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
 
 // Set variables for synchronizing information across the net
 if (_bloodVolume < 100) then {
-    if ((_bloodVolume < 90 && (GVAR(level) == 2)) || _bloodVolume <= 30) then {
+    if ((_bloodVolume < 90 && (GVAR(level) == 2)) || _bloodVolume <= 45) then {
         if (_unit getvariable [QGVAR(hasLostBlood), 0] != 2) then {
             _unit setvariable [QGVAR(hasLostBlood), 2, true];
         };
