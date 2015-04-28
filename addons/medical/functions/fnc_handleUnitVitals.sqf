@@ -66,13 +66,13 @@ if (_painStatus > 0) then {
 
 if (GVAR(level) == 1) then {
     // reduce pain
-    if (_unit getVariable [QGVAR(pain), 0] > 0) then {
-        _unit setVariable [QGVAR(pain), ((_unit getVariable QGVAR(pain)) - 0.001 * _interval) max 0, _syncValues];
+    if (_painStatus > 0) then {
+        _unit setVariable [QGVAR(pain), (_painStatus - 0.001 * _interval) max 0, _syncValues];
     };
 
     // reduce painkillers
     if (_unit getVariable [QGVAR(morphine), 0] > 0) then {
-        _unit setVariable [QGVAR(morphine), ((_unit getVariable QGVAR(morphine)) - 0.0015 * _interval) max 0, _syncValues];
+        _unit setVariable [QGVAR(morphine), ((_unit getVariable [QGVAR(morphine), 0]) - 0.0015 * _interval) max 0, _syncValues];
     };
 
     // bleeding
