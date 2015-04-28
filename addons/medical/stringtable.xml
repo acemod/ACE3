@@ -1873,81 +1873,97 @@
             <English>Small Cut</English>
             <German>Kleine Schnittwunde</German>
             <Russian>Малая резаная рана</Russian>
+            <Polish>Pomniejsza rana cięta</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Medium">
             <English>Medium Cut</English>
             <German>Mittlere Schnittwunde</German>
             <Russian>Средняя резаная рана</Russian>
+            <Polish>Średnia rana cięta</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Large">
             <English>Large Cut</English>
             <German>Große Schnittwunde</German>
             <Russian>Большая резаная рана</Russian>
+            <Polish>Duża rana cięta</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration">
             <English>Tear</English>
             <German>Riss</German>
             <Russian>Рваная рана</Russian>
+            <Polish>Rozerwanie skóry</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Minor">
             <English>Small Tear</English>
             <German>Kleiner Riss</German>
             <Russian>Малая рваная рана</Russian>
+            <Polish>Pomniejsze rozerwanie skóry</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Medium">
             <English>Medium Tear</English>
             <German>Mittlerer Riss</German>
             <Russian>Средняя рваная рана</Russian>
+            <Polish>Średnie rozerwanie skóry</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Large">
             <English>Large Tear</English>
             <German>Großer Riss</German>
             <Russian>Большая рваная рана</Russian>
+            <Polish>Duże rozerwanie skóry</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound">
             <English>Velocity Wound</English>
             <German>Ballistisches Trauma</German>
             <Russian>Огнестрельная рана</Russian>
+            <Polish>Rana postrzałowa</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Minor">
             <English>Smal Velocity Wound</English>
             <German>Kleines Ballistisches Trauma</German>
             <Russian>Малая огнестрельная рана</Russian>
+            <Polish>Pomniejsza rana postrzałowa</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Medium">
             <English>Medium Velocity Wound</English>
             <German>Mittleres Ballistisches Trauma</German>
             <Russian>Средняя огнестрельная рана</Russian>
+            <Polish>Średnia rana postrzałowa</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Large">
             <English>Large Velocity Wound</English>
             <German>Großes Ballistisches Trauma</German>
             <Russian>Большая огнестрельная рана</Russian>
+            <Polish>Duża rana postrzałowa</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound">
             <English>Puncture Wound</English>
             <German>Stichwunde</German>
             <Russian>Колотая рана</Russian>
+            <Polish>Rana kłuta</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Minor">
             <English>Minor Puncture Wound</English>
             <German>Kleine Stichwunde</German>
             <Russian>Малая колотая рана</Russian>
+            <Polish>Pomniejsza rana kłuta</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Medium">
             <English>Medium Puncture Wound</English>
             <German>Mittlere Stichwunde</German>
             <Russian>Средняя колотая рана</Russian>
+            <Polish>Średnia rana kłuta</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Large">
             <English>Large Puncture Wound</English>
             <German>Große Stichwunde</German>
             <Russian>Большая колотая рана</Russian>
+            <Polish>Duża rana kłuta</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Femur">
             <English>Broken Femur</English>
             <German>Gebrochener Oberschenkelknochen</German>
             <Russian>Перелом</Russian>
+            <Polish>Zkłamana kość udowa</Polish>
         </Key>
     </Package>
 </Project>
