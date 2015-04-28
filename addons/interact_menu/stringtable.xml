@@ -101,5 +101,11 @@
             <German>Interaktionstextschatten Min</German>
             <Italian>Interazioni - Ombra Minima</Italian>
         </Key>
+        <Key ID="STR_ACE_Interact_cursorKeepCentered">
+            <English>Keep cursor centered</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_cursorKeepCenteredDescription">
+            <English>Keeps cursor centered and pans the option menu around.  Useful if screen size is limited.</English>
+        </Key>
     </Package>
 </Project>
