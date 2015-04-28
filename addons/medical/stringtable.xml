@@ -4,22 +4,26 @@
         <Key ID="STR_ACE_Medical_Injuries">
             <English>INJURIES</English>
             <German>VERLETZUNGEN</German>
+            <Italian>LESIONI</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_NoInjuriesBodypart">
             <English>No injuries on this bodypart ...</English>
             <German>Körperteil nicht verletzt ...</German>
+            <Italian>Non ci sono lesioni in questa parte del corpo ...</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
             <Polish>Detale zużytych medykamentów</Polish>
             <Spanish>Detalle de simulación de basura</Spanish>
             <Russian>Количество мусора от медицины</Russian>
+            <Italian>Dettagli Simulazione Rifiuti</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail_Desc">
             <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
             <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
             <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
             <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
+            <Italian>Il livello di dettagli della simulazione dei rifiuti indica il numero di rifiuti che verranno creati localmente nel client. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio client.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -367,6 +371,7 @@
         <Key ID="STR_ACE_MEDICAL_TriageCard_NoEntry">
             <English>No entries on this triage card.</English>
             <German>Keine Einträge auf der Triagekarte</German>
+            <Italian>Nessuna voce sulla Triage Card</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Tourniquet">
             <English>Tourniquet</English>
@@ -393,18 +398,22 @@
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Diagnose">
             <English>Diagnose</English>
             <German>Diagnose</German>
+            <Italian>Diagnosi</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Diagnosing">
             <English>Diagnosing ...</English>
             <German>Diagnostizieren ...</German>
+            <Italian>Diagnosi in corso...</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_CPR">
             <English>CPR</English>
             <German>HLW</German>
+            <Italian>RCP</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_PerformingCPR">
             <English>Performing CPR ...</English>
             <German>HLW durchführen ...</German>
+            <Italian>Eseguendo RCP...</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
@@ -688,7 +697,7 @@
             <French>Bandage fait d'un matériel spécial utilisé pour couvrir une blessure, qui peut etre appliqué dès que le saignement a été stoppé.</French>
             <Polish>Opatrunek materiałowy, używany do przykrywania ran, zakładany na ranę po zatamowaniu krwawienia.</Polish>
             <Hungarian>Egy különleges anyagú kötszer sebek betakarására, amelyet a vérzés elállítása után helyeznek fel.</Hungarian>
-            <Italian>Una benda apposta, utilizzata per coprire una ferita, la quale è applicato sopra di essa una volta fermata l'emorragia.</Italian>
+            <Italian>Una benda apposita, utilizzata per coprire una ferita, la quale è applicata sopra di essa una volta fermata l'emorragia.</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_PACKING_BANDAGE_DISPLAY">
             <English>Packing Bandage</English>
@@ -717,7 +726,7 @@
             <French>Bandage servant à recouvrir les blessures pour arrêter les hémmoragies et faciliter la guérisson. Recouvrir une blessure est optionnel dans le cas de blessures polytraumatiques</French>
             <Polish>Opatrunek stosowany w celu zatrzymania krwawienia i osłony większych ran.</Polish>
             <Hungarian>Egy kötszerfajta, melyet a sebek nyomására használnak a vérzés elállítása és sebgyógyulás érdekében. A nyomókötés egy lehetőség nagyobb polytraumatikus sérülések esetén.</Hungarian>
-            <Italian>Un bendaggio usato per bendare ferite con emorragie e facilitare la guarigione. Bendare una ferita è una opzione su ferite di vario tipo.</Italian>
+            <Italian>Un bendaggio usato per coprire la ferita, fermare il sanguinamento e facilitarne la guarigione. Questa tecnica è opzionale su ferite multiple.</Italian>
             <German>Ein Verband, um die Wunde abzudecken und die Wundheilung zu fördern. Wunden abdecken ist eine Option bei größeren Polytraumen</German>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY">
@@ -1422,7 +1431,6 @@
         <Key ID="STR_ACE_MEDICAL_noPain">
             <English>He is not in pain</English>
         </Key>
-
         <Key ID="STR_ACE_MEDICAL_BANDAGED">
             <English>Bandaged</English>
             <French>Bandé</French>
@@ -1767,7 +1775,6 @@
             <English>Large Scrape</English>
             <German>Großer Kratzer</German>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_Avulsion">
             <English>Avulsion</English>
             <German>Avulsion</German>
@@ -1784,7 +1791,6 @@
             <English>Large Avulsion</English>
             <German>Große Avulsion</German>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_Contusion">
             <English>Bruise</English>
             <German>Prellung</German>
@@ -1801,7 +1807,6 @@
             <English>Large Bruise</English>
             <German>Große Prellung</German>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_Crush">
             <English>Crushed tissue</English>
             <German>Quetschverletzung</German>
@@ -1818,7 +1823,6 @@
             <English>Large crushed tissue</English>
             <German>Große Quetschverletzung</German>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_Cut">
             <English>Cut</English>
             <German>Schnittwunde</German>
@@ -1835,7 +1839,6 @@
             <English>Large Cut</English>
             <German>Große Schnittwunde</German>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_Laceration">
             <English>Tear</English>
             <German>Riss</German>
@@ -1852,7 +1855,6 @@
             <English>Large Tear</English>
             <German>Großer Riss</German>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound">
             <English>Velocity Wound</English>
             <German>Ballistisches Trauma</German>
@@ -1869,7 +1871,6 @@
             <English>Large Velocity Wound</English>
             <German>Großes Ballistisches Trauma</German>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound">
             <English>Puncture Wound</English>
             <German>Stichwunde</German>
@@ -1886,7 +1887,6 @@
             <English>Large Puncture Wound</English>
             <German>Große Stichwunde</German>
         </Key>
-        
         <Key ID="STR_ACE_Medical_Wounds_Femur">
             <English>Broken Femur</English>
             <German>Gebrochener Oberschenkelknochen</German>
