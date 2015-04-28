@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_player, _sides] call FUNC(initPlayer)
+ * [player, [west]] call FUNC(initPlayer)
  *
  * Public: No
  */
@@ -19,8 +19,7 @@
 
 private ["_playerUnit", "_sides"];
 
-_playerUnit = _this select 0;
-_sides = _this select 1;
+PARAMS_2(_playerUnit,_sides);
 
 if (vehicle _playerUnit == _playerUnit) then {
 

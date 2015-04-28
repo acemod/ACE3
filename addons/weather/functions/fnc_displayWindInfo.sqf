@@ -1,5 +1,6 @@
 /*
  * Author: Ruthberg
+ *
  * Displays a wind info (colored arrow) in the top left corner of the screen
  *
  * Argument:
@@ -27,7 +28,7 @@ EGVAR(advanced_ballistics,Protractor) = false;
 GVAR(WindInfo) = true;
 
 [{
-    private ["_windSpeed", "_windDir", "_playerDir", "_windIndex", "_windColor", "_newWindSpeed", "_windSource", "_height"];
+    private ["_windSpeed", "_windDir", "_playerDir", "_windIndex", "_windColor"];
 
     if !(GVAR(WindInfo) && !(underwater ACE_player) && vehicle ACE_player == ACE_player) exitWith {
         GVAR(WindInfo) = false;

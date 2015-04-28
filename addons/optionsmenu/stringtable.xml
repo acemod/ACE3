@@ -26,7 +26,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_ResetAll">
             <English>Reset All</English>
-            <German>Alles Zurücksetzen</German>
+            <German>Alles zurücksetzen</German>
             <Spanish>Reiniciar todo</Spanish>
             <Russian>Полный сброс</Russian>
             <Czech>Vyresetovat vše</Czech>
@@ -99,7 +99,7 @@
             <German>Einstellung:</German>
             <Russian>Установки:</Russian>
             <Spanish>Ajuste:</Spanish>
-            <Polish>Ustawienie:</Polish>
+            <Polish>Ustaw:</Polish>
             <French>Paramètres</French>
             <Hungarian>Opció:</Hungarian>
             <Italian>Parametri:</Italian>
@@ -128,7 +128,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_stringType">
             <English>String input.</English>
-            <German>String input.</German>
+            <German>Zeichenketteneingabe</German>
             <Spanish>Introducir frase</Spanish>
             <Russian>Строчный ввод.</Russian>
             <Polish>Wpisywanie tekstu.</Polish>
@@ -149,7 +149,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_scalarType">
             <English>Number</English>
-            <German>Nummer</German>
+            <German>Zahl</German>
             <Spanish>Numero</Spanish>
             <Russian>Число</Russian>
             <Czech>Číslo</Czech>
@@ -182,7 +182,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_inClientSettings">
             <English>Include Client Settings</English>
-            <German>Beinhalte Client-Einstellungen</German>
+            <German>Schließe Client-Einstellungen ein</German>
             <Spanish>Incluir configuración de cliente</Spanish>
             <Russian>Включить настройки клиента</Russian>
             <Czech>Zahrnout nastavení klienta</Czech>
@@ -212,6 +212,13 @@
             <French>Paramètres exportés dans le presse papier</French>
             <Hungarian>Beállítások exportálva a vágólapba</Hungarian>
             <Italian>Parametri esportati alla clipboard</Italian>
+        </Key>
+        <Key ID="STR_ACE_optionsMenu_uiScaing">
+            <English>Option Menu UI Scaling</English>
+            <French>Menu option: taille de l'UI</French>
+            <Polish>Skalowanie UI menu ustawień</Polish>
+            <Spanish>Opción de escalado del menú UI</Spanish>
+            <German>UI Skalierung</German>
         </Key>
     </Package>
 </Project>

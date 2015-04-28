@@ -11,6 +11,18 @@ class CfgVehicles {
         isTriggerActivated = 0;
         author = "$STR_ACE_Common_ACETeam";
         class Arguments {
+            class enabled {
+                displayName = "Wind Deflection";
+                description = "Enables wind deflection";
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class vehicleEnabled {
+                displayName = "Vehicle Enabled";
+                description = "Enables wind deflection for static/vehicle gunners";
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
             class simulationInterval {
                 displayName = "Simulation Interval";
                 description = "Defines the interval between every calculation step";
@@ -19,7 +31,7 @@ class CfgVehicles {
             };
             class simulationRadius {
                 displayName = "Simulation Radius";
-                description = "Defines the radius (in meters) in which advanced ballistics are applied";
+                description = "Defines the radius around the player (in meters) at which projectiles are wind deflected";
                 typeName = "NUMBER";
                 defaultValue = 3000;
             };

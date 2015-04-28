@@ -25,8 +25,6 @@
 #define PRECISION 0.1
 #define RADIANS(X) (X / (180 / M_PI))
 
-static char version[] = "1.0";
-
 extern "C" {
     __declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
 };
@@ -104,7 +102,7 @@ double getSolution(double initSpeed, double airFriction, double angleTarget, dou
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     if (!strcmp(function, "version")) {
-        strncpy(output, version, outputSize);
+        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
     } else {
         std::vector<std::string> argStrings = splitString(function);
         double initSpeed = std::stod(argStrings[0]);

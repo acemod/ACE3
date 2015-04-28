@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 #define SOUND_CLIP_TIME_SPACEING    1.5
-private ["_timeToCut"];
+private ["_timeToCut", "_progressCheck"];
 
 PARAMS_2(_unit,_fenceObject);
 if (_unit != ACE_player) exitWith {};

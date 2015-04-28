@@ -18,6 +18,7 @@
 [] call FUNC(parse_input);
 
 GVAR(currentScopeUnit) = (GVAR(currentScopeUnit) + 1) % (count GVAR(scopeUnits));
+GVAR(workingMemory) set [6, GVAR(currentScopeUnit)];
 
 [] call FUNC(update_scope_unit);
 [] call FUNC(update_result);

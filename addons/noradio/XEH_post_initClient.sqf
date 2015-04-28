@@ -2,15 +2,13 @@
 #include "script_component.hpp"
 
 /*
-_setupPlayer = {
+[{
     if (!isNull ACE_player) then {
         [(_this select 1)] call cba_fnc_removePerFrameHandler;
 
         [ACE_player, "isPlayer"] call EFUNC(common,muteUnit);
     };
-};
-
-[_setupPlayer, 0, []] call CBA_fnc_addPerFrameHandler;
+}, 0, []] call CBA_fnc_addPerFrameHandler;
 */
 
 if (!hasInterface) exitWith {};

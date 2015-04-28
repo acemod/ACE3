@@ -24,19 +24,15 @@ if (_this) then {
     
     ctrlSetText [8004, Str(Round((GVAR(targetRange) select GVAR(currentTarget))))];
 
-    if (GVAR(currentUnit) != 2) then
-    {
+    if (GVAR(currentUnit) == 1) then {
         ctrlSetText [8008, "Yards"];
-    } else
-    {
+    } else {
         ctrlSetText [8008, "Meters"];
     };
     
-    if (GVAR(currentUnit) != 1) then
-    {
+    if (GVAR(currentUnit) == 2) then {
         ctrlSetText [8011, "m/s"];
-    } else
-    {
+    } else {
         ctrlSetText [8011, "mph"];
     };
 };

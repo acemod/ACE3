@@ -33,20 +33,20 @@ if ([_caller] call FUNC(isMedic)) then {
 } else {
     if (_bloodPressureHigh > 20) then {
         _output = "STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_2";
-        _logOutPut = "Low";
+        _logOutPut = localize "STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_LOW";
         if (_bloodPressureHigh > 100) then {
             _output = "STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_3";
-            _logOutPut = "Normal";
+            _logOutPut = localize "STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_NORMAL";
             if (_bloodPressureHigh > 160) then {
                 _output = "STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_4";
-                _logOutPut = "High";
+                _logOutPut = localize "STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_HIGH";
             };
 
         };
     } else {
         if (random(10) > 3) then {
             _output = "STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_5";
-            _logOutPut = "No Blood Pressure";
+            _logOutPut = localize "STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_NOBLOODPRESSURE";
         } else {
             _output = "STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_OUTPUT_6";
         };
@@ -56,5 +56,5 @@ if ([_caller] call FUNC(isMedic)) then {
 ["displayTextStructured", [_caller], [[_output, [_target] call EFUNC(common,getName), round(_bloodPressureHigh),round(_bloodPressureLow)], 1.75, _caller]] call EFUNC(common,targetEvent);
 
 if (_logOutPut != "") then {
-    [_target,"activity", "%1 checked Blood Pressure: %2", [[_caller] call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
+    [_target,"activity", localize "STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_LOG", [[_caller] call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
 };

@@ -24,8 +24,11 @@ _fnc_renderNearbyActions = {
     _cameraPos = (positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL);
     _cameraDir = ((positionCameraToWorld [0, 0, 1]) call EFUNC(common,positionToASL)) vectorDiff _cameraPos;
 
+    GVAR(foundActions) = [];
+    GVAR(lastTimeSearchedActions) = diag_tickTime;
+
     _numInteractObjects = 0;
-    _nearestObjects = nearestObjects [((getPosASL ACE_player) vectorAdd (_cameraDir vectorMultiply 5)) call EFUNC(common,ASLToPosition), ["All"], 8];
+    _nearestObjects = nearestObjects [ACE_player, ["All"], 13];
     {
         _target = _x;
 
@@ -46,6 +49,7 @@ _fnc_renderNearbyActions = {
                         _action = _x;
                         if ([_target, _action] call FUNC(renderBaseMenu)) then {
                             _numInteractions = _numInteractions + 1;
+                            GVAR(foundActions) pushBack [_target, _action];
                         };
                     };
                 } forEach GVAR(objectActionList);
@@ -57,6 +61,7 @@ _fnc_renderNearbyActions = {
                     // Try to render the menu
                     if ([_target, _action] call FUNC(renderBaseMenu)) then {
                         _numInteractions = _numInteractions + 1;
+                        GVAR(foundActions) pushBack [_target, _action];
                     };
                 } forEach _classActions;
 
@@ -71,7 +76,11 @@ _fnc_renderNearbyActions = {
     } forEach _nearestObjects;
 };
 
-
+_fnc_renderLastFrameActions = {
+    {
+        _x call FUNC(renderBaseMenu);
+    } forEach GVAR(foundActions);
+};
 
 _fnc_renderSelfActions = {
     _target = _this;
@@ -109,7 +118,13 @@ _fnc_renderSelfActions = {
 if (GVAR(openedMenuType) == 0) then {
 
     if (vehicle ACE_player == ACE_player) then {
-        call _fnc_renderNearbyActions;
+        if (diag_tickTime > GVAR(lastTimeSearchedActions) + 0.20) then {
+            // Once every 0.2 secs, collect nearby objects active and visible action points and render them
+            call _fnc_renderNearbyActions;
+        } else {
+            // The rest of the frames just draw the same action points rendered the last frame
+            call _fnc_renderLastFrameActions;
+        };
     } else {
         (vehicle ACE_player) call _fnc_renderSelfActions;
     };

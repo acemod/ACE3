@@ -241,7 +241,7 @@ if (USE_WOUND_EVENT_SYNC) then {
                 // We are only pulling the wounds for the units in the player group. Anything else will come when the unit interacts with them.
                 {
                     [_x, _newPlayer] call FUNC(requestWoundSync);
-                }foreach units group player;
+                }foreach units group _newPlayer;
             };
         }] call EFUNC(common,addEventhandler);
     };
@@ -265,3 +265,7 @@ if (USE_WOUND_EVENT_SYNC) then {
 ["playerInventoryChanged", {
     [ACE_player] call FUNC(itemCheck);
 }] call EFUNC(common,addEventHandler);
+
+
+// Networked litter
+[QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);

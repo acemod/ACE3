@@ -6,7 +6,7 @@
                 <English>Wind Information</English>
                 <Polish>Informacje o wietrze</Polish>
                 <Spanish>Información del viento</Spanish>
-                <Russian>Ветер</Russian>
+                <Russian>Информация о ветре</Russian>
                 <Czech>Informace o větru</Czech>
                 <French>Vent</French>
                 <German>Windinformationen</German>
@@ -17,7 +17,7 @@
                 <English>Direction: %1</English>
                 <Polish>Kierunek: %1</Polish>
                 <Spanish>Dirección: %1</Spanish>
-                <Russian>Направление: %1</Russian>
+                <Russian>Направление: %1°</Russian>
                 <Czech>Směr: %1</Czech>
                 <French>Direction %1</French>
                 <German>Windrichtung: %1</German>
@@ -31,7 +31,7 @@
                 <Russian>Скорость: %1 м/с</Russian>
                 <Czech>Rychlost: %1 m/s</Czech>
                 <French>Vitesse %1 m/s</French>
-                <German>Geschwindigkeit: %1m/s</German>
+                <German>Geschwindigkeit: %1 m/s</German>
                 <Hungarian>Sebesség: %1 m/s</Hungarian>
                 <Italian>Velocità: %1 m/s</Italian>
             </Key>
@@ -39,7 +39,7 @@
                 <English>Weather Information</English>
                 <Polish>Informacje o pogodzie</Polish>
                 <Spanish>Información Meteorológica</Spanish>
-                <Russian>Погода</Russian>
+                <Russian>Информация о погоде</Russian>
                 <Czech>Informace o počasí</Czech>
                 <French>Météo</French>
                 <German>Wetterinformationen</German>
