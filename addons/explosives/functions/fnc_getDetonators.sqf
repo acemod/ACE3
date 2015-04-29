@@ -21,7 +21,7 @@ _result = [];
 
 {
     _config = ConfigFile >> "CfgWeapons" >> _x;
-    if (getNumber (_config >> "ACE_Detonator") == 1) then {
+    if (getNumber (_config >> "ACE_Detonator") == 1 && {!(_x in _result)}) then {
         _result pushBack _x;
     };
 } forEach _items;
