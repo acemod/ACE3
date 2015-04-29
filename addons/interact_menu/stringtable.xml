@@ -76,7 +76,7 @@
         <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
             <English>Interaction - Text Max</English>
             <Polish>Interakcja - Tekst max</Polish>
-            <French>Interaction -Texte Max</French>
+            <French>Interaction - Texte Max</French>
             <German>Interaktionstextfarbe Max</German>
             <Italian>Interazioni - Testo Massimo</Italian>
         </Key>
@@ -103,9 +103,11 @@
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCentered">
             <English>Keep cursor centered</English>
+            <French>Garder le curseur au centre</French>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCenteredDescription">
             <English>Keeps cursor centered and pans the option menu around.  Useful if screen size is limited.</English>
+            <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
         </Key>
     </Package>
 </Project>
