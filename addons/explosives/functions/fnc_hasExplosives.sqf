@@ -14,6 +14,8 @@
  * Public: Yes
  */
 #include "script_component.hpp"
+// IGNORE_PRIVATE_WARNING(_hasExplosives);
+
 private ["_unit", "_result", "_magazines"];
 _result = false;
 _unit = _this select 0;
