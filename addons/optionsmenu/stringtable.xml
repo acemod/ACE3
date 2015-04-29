@@ -149,13 +149,8 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_scalarType">
             <English>Number</English>
-<<<<<<< HEAD
-            <German>Nummer</German>
-            <Spanish>Número</Spanish>
-=======
             <German>Zahl</German>
-            <Spanish>Numero</Spanish>
->>>>>>> acemod/master
+            <Spanish>Número</Spanish>
             <Russian>Число</Russian>
             <Czech>Číslo</Czech>
             <Polish>Cyfra</Polish>
@@ -222,12 +217,8 @@
             <English>Option Menu UI Scaling</English>
             <French>Menu option: taille de l'UI</French>
             <Polish>Skalowanie UI menu ustawień</Polish>
-<<<<<<< HEAD
-            <Spanish>Menú de opciónes de escalado de la interfaz de usuario</Spanish>
-=======
-            <Spanish>Opción de escalado del menú UI</Spanish>
+            <Spanish>Opción de escalado del menú IU</Spanish>
             <German>UI Skalierung</German>
->>>>>>> acemod/master
         </Key>
     </Package>
 </Project>
