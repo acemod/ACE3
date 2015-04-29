@@ -63,7 +63,7 @@ if (GVAR(level) >= 2) then {
             };
         };
 
-        if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
+        if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)} || !alive vehicle _unit) then {
             if ([_unit] call FUNC(setDead)) then {
                 _damageReturn = 1;
             } else {
