@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Aircraft">
         <Key ID="STR_ACE_Aircraft_CMFlareLauncher_Burst_Name">
@@ -35,6 +35,7 @@
             <Hungarian>Rakodórámpa nyitása</Hungarian>
             <Russian>Открыть грузовой отсек</Russian>
             <Italian>Apri la porta del cargo</Italian>
+            <Portuguese>Abrir porta de carga</Portuguese>
         </Key>
         <Key ID="STR_ACE_Aircraft_CloseCargoRamp">
             <English>Close Cargo Door</English>
@@ -46,6 +47,7 @@
             <Hungarian>Rakodórámpa zárása</Hungarian>
             <Russian>Закрыть грузовой отсек</Russian>
             <Italian>Chiudi la porta del cargo</Italian>
+            <Portuguese>Fechar porta de carga</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -98,7 +98,15 @@ class CfgAmmo {
     };
 
     // curator ammo entries
-    class Sh_82mm_AMOS;
+    class ShellBase;
+    class Sh_82mm_AMOS : ShellBase {
+        // Source: http://www.arsenal-bg.com/defense_police/mortar_bombs_82mm.htm
+        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(metal) = 3200;
+        GVAR(charge) = 420;
+        GVAR(gurney_c) = 1906;
+        GVAR(gurney_k) = 1/2;
+    };
     class ModuleOrdnanceMortar_F_Ammo: Sh_82mm_AMOS {
         GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
         GVAR(metal) = 800;
@@ -107,7 +115,14 @@ class CfgAmmo {
         GVAR(gurney_k) = 1/2;
     };
 
-    class Sh_155mm_AMOS;
+    class Sh_155mm_AMOS: ShellBase {
+        // Source: http://www.globalsecurity.org/military/systems/munitions/m795.htm
+        GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
+        GVAR(metal) = 36000;
+        GVAR(charge) = 9979;
+        GVAR(gurney_c) = 1906;
+        GVAR(gurney_k) = 1/2;
+    };
     class ModuleOrdnanceHowitzer_F_ammo: Sh_155mm_AMOS {
         GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
         GVAR(metal) = 1950;

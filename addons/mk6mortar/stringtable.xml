@@ -6,24 +6,28 @@
             <German>82mm Distanztabelle</German>
             <Polish>Tabela strzelnicza 82mm</Polish>
             <French>table de tir 82mm</French>
+            <Russian>82 мм Таблица дальностей и прицелов</Russian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
             <English>Range Table for the MK6 82mm Mortar</English>
             <German>Distanztabelle für den Mk6 82mm Mortar</German>
             <Polish>Tabela strzelnicza dla moździerza 82mm MK6</Polish>
             <French>Table de tir pour le mortier MK6 82mm</French>
+            <Russian>Таблица дальностей и прицелов для MK6 82 мм мортиры</Russian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
             <English>Open 82mm Rangetable</English>
             <German>Öffne 82mm Distanztabelle</German>
             <Polish>Otwórz tabelę strzelniczą 82mm</Polish>
             <French>ouvrir la table de tir 82mm</French>
+            <Russian>Открыть 82 мм Таблицу дальностей и прицелов</Russian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
             <English>Charge</English>
             <German>Ladung</German>
             <French>Charge</French>
             <Polish>Ładunek</Polish>
+            <Russian>Зарядить</Russian>
         </Key>
     </Package>
 </Project>

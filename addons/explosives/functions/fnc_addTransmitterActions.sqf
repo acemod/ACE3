@@ -14,7 +14,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_items", "_unit", "_children", "_config"];
+private ["_unit", "_children", "_config", "_detonators"];
 _unit = _this select 0;
 _detonators = [_unit] call FUNC(getDetonators);
 _children = [];

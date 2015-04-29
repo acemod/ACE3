@@ -8,7 +8,7 @@ GVAR(ParsedTextCached) = [];
 //Setup text/shadow color matrix
 [] call FUNC(setupTextColors);
 ["SettingChanged", {
-    PARAMS_2(_name,_value);
+    PARAMS_1(_name);
     if ((_name == QGVAR(colorTextMax)) || {_name == QGVAR(colorTextMin)} || {_name == QGVAR(colorShadowMax)} || {_name == QGVAR(colorShadowMin)}) then {
         [] call FUNC(setupTextColors);
     };

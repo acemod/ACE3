@@ -26,8 +26,7 @@ if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
 
 private "_recurseFnc";
 _recurseFnc = {
-    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_selection", "_condition", "_showDisabled",
-            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction"];
+    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_selection", "_condition", "_showDisabled", "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction", "_i"];
     EXPLODE_1_PVT(_this,_actionsCfg);
     _actions = [];
 

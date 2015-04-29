@@ -11,6 +11,7 @@
             <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
             <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
             <Italian>Mostra sempre il cursore per le auto interazioni</Italian>
+            <Portuguese>Sempre mostrar cursor para interação pessoal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorInteraction">
             <English>Always display cursor for interaction</English>
@@ -18,6 +19,7 @@
             <French>Toujours afficher le curseur pour les interactions</French>
             <Italian>Mostra sempre il cursore per le interazioni</Italian>
             <Polish>Zawsze wyświetlaj kursor dla interakcji</Polish>
+            <Russian>Показывать курсор (взаимодействие)</Russian>
             <German>Immer den Cursor für Fremd-Interaktionen anzeigen</German>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
@@ -39,6 +41,7 @@
             <French>Touche d'interaction</French>
             <Hungarian>Cselekvő gomb</Hungarian>
             <Italian>Tasto interazione</Italian>
+            <Portuguese>Tecla de Interação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
             <English>Self Interaction Key</English>
@@ -50,6 +53,7 @@
             <French>Touche d'interaction personnelle</French>
             <Hungarian>Saját cselekvő gomb</Hungarian>
             <Italian>Tasto per auto interazioni</Italian>
+            <Portuguese>Tecla de Interação Pessoal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
             <English>Self Actions</English>
@@ -61,6 +65,7 @@
             <French>Interaction personnelle</French>
             <Hungarian>Saját cselekvések</Hungarian>
             <Italian>Auto interazioni</Italian>
+            <Portuguese>Ações Pessoais</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
             <English>Vehicle Actions</English>
@@ -72,11 +77,12 @@
             <French>Interaction véhicule</French>
             <Hungarian>Járműves cselekvések</Hungarian>
             <Italian>Interazioni con veicoli</Italian>
+            <Portuguese>Ações de Veículos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
             <English>Interaction - Text Max</English>
             <Polish>Interakcja - Tekst max</Polish>
-            <French>Interaction -Texte Max</French>
+            <French>Interaction - Texte Max</French>
             <German>Interaktionstextfarbe Max</German>
             <Italian>Interazioni - Testo Massimo</Italian>
         </Key>
@@ -100,6 +106,14 @@
             <French>Interaction - Ombre Min</French>
             <German>Interaktionstextschatten Min</German>
             <Italian>Interazioni - Ombra Minima</Italian>
+        </Key>
+        <Key ID="STR_ACE_Interact_cursorKeepCentered">
+            <English>Keep cursor centered</English>
+            <French>Garder le curseur au centre</French>
+        </Key>
+        <Key ID="STR_ACE_Interact_cursorKeepCenteredDescription">
+            <English>Keeps cursor centered and pans the option menu around.  Useful if screen size is limited.</English>
+            <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
         </Key>
     </Package>
 </Project>

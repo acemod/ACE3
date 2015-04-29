@@ -1,6 +1,8 @@
 #define COMPONENT interact_menu
 #include "\z\ace\addons\main\script_mod.hpp"
 
+// #define DEBUG_MODE_FULL
+
 #ifdef DEBUG_ENABLED_INTERACT_MENU
     #define DEBUG_MODE_FULL
 #endif
