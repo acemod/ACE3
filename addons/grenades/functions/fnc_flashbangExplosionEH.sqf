@@ -56,7 +56,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
                 };
             } forEach [[0,0,0], [0,0,0.2], [0.1, 0.1, 0.1], [-0.1, -0.1, 0.1]];
             TRACE_1("Line of sight count (out of 4)",_losCount);
-            if (_losCount == 0) then {
+            if (_losCount <= 1) then {
                 _strength = _strength / 10;
             };
 

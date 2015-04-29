@@ -11,6 +11,7 @@
             <Hungarian>Jármű nyitása</Hungarian>
             <Russian>Открыть машину</Russian>
             <Italian>Apri il veicolo</Italian>
+            <Portuguese>Destravar veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Action_Lock">
             <English>Lock Vehicle</English>
@@ -22,6 +23,7 @@
             <Hungarian>Jármű zárása</Hungarian>
             <Russian>Закрыть машину</Russian>
             <Italian>Chiudi il veicolo</Italian>
+            <Portuguese>Travar Veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Action_Lockpick">
             <English>Lockpick Vehicle</English>
@@ -33,6 +35,7 @@
             <Hungarian>Jármű feltörése</Hungarian>
             <Russian>Взломать замок</Russian>
             <Italian>Scassina veicolo</Italian>
+            <Portuguese>Usar mixa no Veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Action_LockpickInUse">
             <English>Picking Lock....</English>
@@ -44,6 +47,7 @@
             <Hungarian>Zár feltörése...</Hungarian>
             <Russian>Взламываем замок...</Russian>
             <Italian>Scassino il veicolo....</Italian>
+            <Portuguese>Usando Mixa...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_Custom_Description">
             <English>A custom key that will open a specific vehicle.</English>
@@ -55,6 +59,7 @@
             <Hungarian>Egy egyedi kulcs, ami egy meghatározott járművet nyit ki.</Hungarian>
             <Russian>Ключ от конкретной машины.</Russian>
             <Italian>Una chiave personalizzata che apre determinati veicoli.</Italian>
+            <Portuguese>Uma chave específica que abre um veículo específico.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_Master_Description">
             <English>A Master Key will open any lock, no matter what!</English>
@@ -66,6 +71,7 @@
             <Hungarian>Egy főkulcs, ami minden zárat kinyit, helyzettől függetlenül!</Hungarian>
             <Russian>Универсальный ключ, открывающий любой замок.</Russian>
             <Italian>Una chiave principale che apre qualsiasi serratura!</Italian>
+            <Portuguese>Uma chave mestre irá abrir qualquer fechadura, não importa qual!</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_Lockpick_Description">
             <English>A lockpick set that can pick the locks of most vehicles.</English>
@@ -77,6 +83,7 @@
             <Hungarian>Egy tolvajkulcs-készlet, mely a legtöbb jármű zárjait fel tudja törni.</Hungarian>
             <Russian>Набор отмычек, которым можно взломать почти любую машину.</Russian>
             <Italian>Un grimardello per forzare la maggior parte dei veicoli</Italian>
+            <Portuguese>Um set de chave mixas que pode abrir a maioria dos veículos.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_West_Description">
             <English>A key that should open most WEST vehicles.</English>
@@ -88,6 +95,7 @@
             <Hungarian>Egy kulcs, ami a NYUGAT egységeinek legtöbb járművét ki tudja nyitni.</Hungarian>
             <Russian>Ключ для открытия большинства машин Красных.</Russian>
             <Italian>Una chiave che apre la maggior parte dei veicoli WEST</Italian>
+            <Portuguese>Uma chave que abre a maioria dos veículos ocidentais</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_East_Description">
             <English>A key that should open most EAST vehicle.</English>
@@ -99,6 +107,7 @@
             <Czech>Klíč který by měl otevřít vetšinu Východních vozidel.</Czech>
             <Russian>Ключ для открытия большинства машин Синих.</Russian>
             <Italian>Una chaive che apr ela maggior parte dei veicoli EAST</Italian>
+            <Portuguese>Uma chave que abre a maioria dos veículos orientais</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_Indp_Description">
             <English>A key that should open most INDEP vehicle.</English>
@@ -110,6 +119,7 @@
             <Czech>Klíč který by měl otevřít většinu Nezávislých vozidel.</Czech>
             <Russian>Ключ для открытия большинства машин Независимых.</Russian>
             <Italian>Una chaive che apr ela maggior parte dei veicoli INDEP</Italian>
+            <Portuguese>Uma chave que abre a maioria dos veículos independentes</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_Civ_Description">
             <English>A key that should open most CIV vehicle.</English>
@@ -121,6 +131,7 @@
             <Hungarian>Egy kulcs, ami a CIVIL járművek többségét ki tudja nyitni.</Hungarian>
             <Russian>Ключ для открытия большинства машин Гражданских.</Russian>
             <Italian>Una chaive che apr ela maggior parte dei veicoli CIV</Italian>
+            <Portuguese>Uma chave que abre a maioria dos veículos civis.</Portuguese>
         </Key>
     </Package>
 </Project>
