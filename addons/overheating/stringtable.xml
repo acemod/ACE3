@@ -94,15 +94,15 @@
             <Italian>Sostiuisci la canna</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_SwappingBarrel">
-            <English>Swapping barrel...</English>
-            <German>Lauf wird gewechselt...</German>
-            <Spanish>Cambiando el cañón...</Spanish>
-            <Polish>Wymienianie lufy...</Polish>
+            <English>Swapping barrel ...</English>
+            <German>Lauf wird gewechselt ...</German>
+            <Spanish>Cambiando el cañón ...</Spanish>
+            <Polish>Wymienianie lufy ...</Polish>
             <Czech>Vyměňuji hlaveň ...</Czech>
-            <French>Changement du canon...</French>
+            <French>Changement du canon ...</French>
             <Russian>Смена ствола ...</Russian>
-            <Hungarian>Cső kicserélése folyamatban...</Hungarian>
-            <Portuguese>Substituindo cano...</Portuguese>
+            <Hungarian>Cső kicserélése folyamatban ...</Hungarian>
+            <Portuguese>Substituindo cano ...</Portuguese>
             <Italian>Sto sostituendo la canna ...</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_SwappedBarrel">
@@ -118,7 +118,7 @@
             <Italian>Canna sostituita</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckTemperature">
-            <English>Check weapons temperature</English>
+            <English>Check weapon temperature</English>
             <German>Temperatur der Waffe prüfen</German>
             <Spanish>Verificar temperatura del arma</Spanish>
             <Polish>Sprawdź temperaturę broni</Polish>
@@ -131,13 +131,13 @@
         </Key>
         <Key ID="STR_ACE_Overheating_CheckTemperatureShort">
             <English>Check weapon temperature</English>
+            <German>Waffentemperatur prüfen</German>
             <Spanish>Verificar temperatura del arma</Spanish>
             <Polish>Sprawdź temperaturę broni</Polish>
             <Czech>Zkontrolovat teplotu zbraně</Czech>
             <French>Vérifier la température</French>
             <Hungarian>Fegyverhő ellenőrzése</Hungarian>
             <Russian>Проверить температуру оружия</Russian>
-            <German>Waffentemperatur prüfen</German>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingTemperature">
             <English>Checking temperature ...</English>
