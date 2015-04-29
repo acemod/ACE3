@@ -19,7 +19,7 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_result", "_ignoreRange", "_helper"];
+private ["_result", "_ignoreRange", "_helper", "_pos"];
 EXPLODE_3_PVT(_this,_unit,_range,_item);
 _ignoreRange = (_range == -1);
 _result = true;
@@ -46,10 +46,11 @@ if (getNumber (ConfigFile >> "CfgAmmo" >> typeof (_item select 0) >> "TriggerWhe
     };
 };
 [{
-        _explosive = _this;
-        if (!isNull _explosive) then {
-            _explosive setDamage 1;
-        };
+    private ["_explosive"];
+    _explosive = _this;
+    if (!isNull _explosive) then {
+        _explosive setDamage 1;
+    };
 }, _item select 0, _item select 1, 0] call EFUNC(common,waitAndExecute);
 
 _result

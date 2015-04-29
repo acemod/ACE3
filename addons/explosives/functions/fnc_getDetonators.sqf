@@ -14,6 +14,8 @@
  * Public: Yes
  */
 #include "script_component.hpp"
+// IGNORE_PRIVATE_WARNING(_detonators);
+
 private ["_unit", "_items", "_result", "_config"];
 _unit = _this select 0;
 _items = (items _unit);
