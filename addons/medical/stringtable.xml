@@ -1606,6 +1606,9 @@
             <French>Il à perdu du sang</French>
             <Polish>Stracił trochę krwi</Polish>
         </Key>
+        <Key ID="STR_ACE_MEDICAL_lostBloodALot">
+            <English>He's lost a lot of blood</English>
+        </Key>
         <Key ID="STR_ACE_MEDICAL_noBloodloss">
             <English>He hasn't lost blood</English>
             <Russian>Нет кровопотери</Russian>
@@ -2201,6 +2204,9 @@
             <Russian>Перелом</Russian>
             <Polish>Zkłamana kość udowa</Polish>
             <French>Femur Cassé</French>
+        </Key>
+        <Key ID="STR_ACE_Medical_TreatmentAction">
+            <English>Treating...</English>
         </Key>
     </Package>
 </Project>

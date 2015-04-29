@@ -196,7 +196,7 @@ class ACE_Medical_Actions {
         };
         class SurgicalKit: fieldDressing {
             displayName = "";
-            displayNameProgress = "";
+            displayNameProgress = "$STR_ACE_Medical_TreatmentAction";
             items[] = {"ACE_surgicalKit"};
             treatmentLocations[] = {QGVAR(useLocation_SurgicalKit)};
             requiredMedic = QGVAR(medicSetting_SurgicalKit);
@@ -208,7 +208,7 @@ class ACE_Medical_Actions {
         };
         class PersonalAidKit: fieldDressing {
             displayName = "";
-            displayNameProgress = "";
+            displayNameProgress = "$STR_ACE_Medical_TreatmentAction";
             items[] = {"ACE_personalAidKit"};
             treatmentLocations[] = {QGVAR(useLocation_PAK)};
             requiredMedic = QGVAR(medicSetting_PAK);
@@ -225,7 +225,7 @@ class ACE_Medical_Actions {
         };
         class CheckPulse: fieldDressing {
             displayName = "";
-            displayNameProgress = "";
+            displayNameProgress = "$STR_ACE_MEDICAL_CHECK_PULSE_CONTENT";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 2;
@@ -240,9 +240,11 @@ class ACE_Medical_Actions {
         };
         class CheckBloodPressure: CheckPulse {
             callbackSuccess = QUOTE(DFUNC(actionCheckBloodPressure));
+            displayNameProgress = "$STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CONTENT";
         };
         class CheckResponse: CheckPulse {
             callbackSuccess = QUOTE(DFUNC(actionCheckResponse));
+            displayNameProgress = "$STR_ACE_MEDICAL_CHECK_RESPONSE_CONTENT";
         };
         class RemoveTourniquet: CheckPulse {
             treatmentTime = 2.5;
