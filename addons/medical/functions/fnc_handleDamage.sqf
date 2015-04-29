@@ -62,7 +62,7 @@ if (GVAR(level) < 2) then {
         if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)])) exitwith {
             _damageReturn = 0.9;
         };
-        if ({[_unit] call FUNC(setDead)}) then {
+        if ([_unit] call FUNC(setDead)) then {
             _damageReturn = 1;
         } else {
             _damageReturn = _damageReturn min 0.89;
