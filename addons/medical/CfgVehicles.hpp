@@ -446,7 +446,7 @@ class CfgVehicles {
                     displayName = "$STR_ACE_MEDICAL_ACTIONS_Medical";
                     runOnHover = 1;
                     exceptions[] = {"isNotInside"};
-                    condition = QUOTE(vehicle _target != _target);
+                    condition = QUOTE(vehicle _target != _target && vehicle _target == vehicle _player);
                     statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
                     icon = PATHTOF(UI\icons\medical_cross.paa);
 
