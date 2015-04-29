@@ -119,6 +119,7 @@ if(!_foundTarget && GVAR(actionSelected)) then {
 };
 for "_i" from GVAR(iconCount) to (count GVAR(iconCtrls))-1 do {
     ctrlDelete (GVAR(iconCtrls) select _i);
+    GVAR(ParsedTextCached) set [_i, ""];
 };
 GVAR(iconCtrls) resize GVAR(iconCount);
 GVAR(iconCount) = 0;

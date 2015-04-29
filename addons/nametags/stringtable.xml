@@ -62,7 +62,7 @@
         <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo">
             <English>Show vehicle crew info</English>
             <French>Afficher les informations de l'équipage</French>
-            <German>Zeige Fahrzeugbesatzung</German>
+            <German>Fahrzeugbesatzung anzeigen</German>
             <Spanish>Mostrar tripulantes</Spanish>
             <Polish>Pokaż załogę pojazdu</Polish>
             <Czech>Zobrazit info o posádce vozidla</Czech>
@@ -72,7 +72,7 @@
         </Key>
         <Key ID="STR_ACE_NameTags_ShowNamesForAI">
             <English>Show name tags for AI units</English>
-            <German>Zeige Namen für KI Einheiten</German>
+            <German>Namen für KI Einheiten anzeigen</German>
             <Spanish>Mostrar etiquetas de nombre para unidades IA </Spanish>
             <Russian>Показывать имена ботов</Russian>
             <Czech>Zobrazit jména AI</Czech>
@@ -83,7 +83,7 @@
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves">
             <English>Show SoundWaves (requires player names)</English>
-            <German>Zeigen Schallwellen  (benötigt Spielernamen)</German>
+            <German>Schallwellen anzeigen  (benötigt Spielernamen)</German>
             <Spanish>Mostrar onda sonora  (requiere Mostrar nombres de jugadores)</Spanish>
             <Russian>Индикатор разговора (при вкл. именах)</Russian>
             <Czech>Zobrazit SoundWaves (vyžaduje jména hráčů)</Czech>

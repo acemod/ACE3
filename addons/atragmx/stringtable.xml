@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="ATragMX">
         <Key ID="STR_ACE_ATragMX_Name">
@@ -28,6 +27,7 @@
             <Russian>Защищенный КПК с ATragMX</Russian>
             <Spanish>PDA rugerizada con ATragMX</Spanish>
             <German>Robuster PDA mit ATragMX</German>
+            <French>PDA robuste avec ATragMX</French>
         </Key>
         <Key ID="STR_ACE_ATragMX_ATragMXDialogKey">
             <English>Open ATragMX</English>

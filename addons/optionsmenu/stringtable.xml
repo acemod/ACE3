@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -27,7 +26,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_ResetAll">
             <English>Reset All</English>
-            <German>Alles Zurücksetzen</German>
+            <German>Alles zurücksetzen</German>
             <Spanish>Reiniciar todo</Spanish>
             <Russian>Полный сброс</Russian>
             <Czech>Vyresetovat vše</Czech>
@@ -129,7 +128,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_stringType">
             <English>String input.</English>
-            <German>String input.</German>
+            <German>Zeichenketteneingabe</German>
             <Spanish>Introducir cadena de texto.</Spanish>
             <Russian>Строчный ввод.</Russian>
             <Polish>Wpisywanie tekstu.</Polish>
@@ -150,8 +149,13 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_scalarType">
             <English>Number</English>
+<<<<<<< HEAD
             <German>Nummer</German>
             <Spanish>Número</Spanish>
+=======
+            <German>Zahl</German>
+            <Spanish>Numero</Spanish>
+>>>>>>> acemod/master
             <Russian>Число</Russian>
             <Czech>Číslo</Czech>
             <Polish>Cyfra</Polish>
@@ -183,7 +187,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_inClientSettings">
             <English>Include Client Settings</English>
-            <German>Beinhalte Client-Einstellungen</German>
+            <German>Schließe Client-Einstellungen ein</German>
             <Spanish>Incluir configuración de cliente</Spanish>
             <Russian>Включить настройки клиента</Russian>
             <Czech>Zahrnout nastavení klienta</Czech>
@@ -218,7 +222,12 @@
             <English>Option Menu UI Scaling</English>
             <French>Menu option: taille de l'UI</French>
             <Polish>Skalowanie UI menu ustawień</Polish>
+<<<<<<< HEAD
             <Spanish>Menú de opciónes de escalado de la interfaz de usuario</Spanish>
+=======
+            <Spanish>Opción de escalado del menú UI</Spanish>
+            <German>UI Skalierung</German>
+>>>>>>> acemod/master
         </Key>
     </Package>
 </Project>

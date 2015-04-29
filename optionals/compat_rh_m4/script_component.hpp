@@ -1,4 +1,4 @@
-#define COMPONENT rh_m4_comp
+#define COMPONENT RH_m4_cfg_comp
 
 #include "\z\ace\addons\main\script_mod.hpp"
 

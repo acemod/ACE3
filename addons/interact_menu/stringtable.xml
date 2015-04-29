@@ -17,6 +17,8 @@
             <Spanish>Mostrar siempre el cursor para la interacción</Spanish>
             <French>Toujours afficher le curseur pour les interactions</French>
             <Italian>Mostra sempre il cursore per le interazioni</Italian>
+            <Polish>Zawsze wyświetlaj kursor dla interakcji</Polish>
+            <German>Immer den Cursor für Fremd-Interaktionen anzeigen</German>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
@@ -73,19 +75,31 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
             <English>Interaction - Text Max</English>
-            <Spanish>Interacción - Ampliar texto</Spanish>
+            <Polish>Interakcja - Tekst max</Polish>
+            <French>Interaction -Texte Max</French>
+            <German>Interaktionstextfarbe Max</German>
+            <Italian>Interazioni - Testo Massimo</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
             <English>Interaction - Text Min</English>
-            <Spanish>Interacción - Reducir texto</Spanish>
+            <Polish>Interakcja - Tekst min</Polish>
+            <French>Interaction - Texte Min</French>
+            <German>Interaktionstextfarbe Min</German>
+            <Italian>Interazioni - Testo Minimo</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
             <English>Interaction - Shadow Max</English>
-            <Spanish>Interacción - Ampliar sombra</Spanish>
+            <Polish>Interakcja - Cień max</Polish>
+            <French>Interaction - Ombre Max</French>
+            <German>Interaktionstextschatten Max</German>
+            <Italian>Interazioni - Ombra Massima</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
-            <Spanish>Interacción - Reducir sombra</Spanish>
+            <Polish>Interakcja - Cień min</Polish>
+            <French>Interaction - Ombre Min</French>
+            <German>Interaktionstextschatten Min</German>
+            <Italian>Interazioni - Ombra Minima</Italian>
         </Key>
     </Package>
 </Project>
