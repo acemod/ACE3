@@ -1123,6 +1123,7 @@
         <Key ID="STR_ACE_MEDICAL_USE_SURGICALKIT">
             <English>Use Surgical Kit</English>
             <German>Operationsset benutzen</German>
+            <Italian>Usa kit chirurgico</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BODYBAG_DISPLAY">
             <English>Bodybag</English>
@@ -1177,6 +1178,7 @@
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_LOG">
             <English>%1 checked Blood Pressure: %2</English>
             <German>%1 kontrollierte Blutdruck: %2</German>
+            <Italian>%1 controllata pressione sanguigna: %2</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CHECKED_MEDIC">
             <English>You checked %1</English>
@@ -1251,18 +1253,22 @@
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_LOW">
             <English>Low</English>
             <German>Niedrig</German>
+            <Italian>Basso</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_NORMAL">
             <English>Normal</English>
             <German>Normal</German>
+            <Italian>Normale</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_HIGH">
             <English>High</English>
             <German>Hoch</German>
+            <Italian>Alto</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_NOBLOODPRESSURE">
             <English>No Blood Pressure</English>
             <German>Kein Blutdruck</German>
+            <Italian>Nessuna Pressione Sanguigna</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE">
             <English>Pulse</English>
@@ -1297,18 +1303,22 @@
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_LOG">
             <English>%1 checked Heart Rate: %2</English>
             <German>%1 kontrollierte Herzfrequenz: %2</German>
+            <Italian>%1 Controllata Frequenza Cardiaca: %2</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_WEAK">
             <English>Weak</English>
             <German>Schwach</German>
+            <Italian>Lento</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_NORMAL">
             <English>Normal</English>
             <German>Normal</German>
+            <Italian>Normale</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_STRONG">
             <English>Strong</English>
             <German>Stark</German>
+            <Italian>Veloce</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_1">
             <English>You find a Heart Rate of %2</English>
@@ -1412,24 +1422,31 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseMessage">
             <English>Patient %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</English>
+            <Italian>Paziente %1&lt;br/&gt;è %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseAlive">
             <English>alive</English>
+            <Italian>Vivo</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseDead">
             <English>dead</English>
+            <Italian>Morto</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_lostBlood">
             <English>He's lost some blood</English>
+            <Italian>Ha perso molto sangue</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noBloodloss">
             <English>He hasn't lost blood</English>
+            <Italian>Non ha perso sangue</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_inPain">
             <English>He is in pain</English>
+            <Italian>è affetto da dolore</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noPain">
             <English>He is not in pain</English>
+            <Italian>Non è affetto da dolore</Italian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BANDAGED">
             <English>Bandaged</English>
@@ -1762,134 +1779,167 @@
         <Key ID="STR_ACE_Medical_Wounds_Abrasion">
             <English>Scrape</English>
             <German>Kratzer</German>
+            <Italian>Scorticatura</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Minor">
             <English>Minor Scrape</English>
             <German>Kleiner Kratzer</German>
+            <Italian>Minima Scorticatura</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Medium">
             <English>Medium Scrape</English>
             <German>Mittlerer Kratzer</German>
+            <Italian>Media Scorticatura</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Large">
             <English>Large Scrape</English>
             <German>Großer Kratzer</German>
+            <Italian>Alta Scorticatura</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion">
             <English>Avulsion</English>
             <German>Avulsion</German>
+            <Italian>Avulsione</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Minor">
             <English>Minor Avulsion</English>
             <German>Kleine Avulsion</German>
+            <Italian>Minima Avulsione</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Medium">
             <English>Medium Avulsion</English>
             <German>Mittlere Avulsion</German>
+            <Italian>Media Avulsione</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Large">
             <English>Large Avulsion</English>
             <German>Große Avulsion</German>
+            <Italian>Alta Avulsione</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion">
             <English>Bruise</English>
             <German>Prellung</German>
+            <Italian>Contusione</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Minor">
             <English>Minor Bruise</English>
             <German>Kleine Prellung</German>
+            <Italian>Minima Contusione</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Medium">
             <English>Medium Bruise</English>
             <German>Mittlere Prellung</German>
+            <Italian>Media Contusione</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Large">
             <English>Large Bruise</English>
             <German>Große Prellung</German>
+            <Italian>Alta Contusione</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush">
             <English>Crushed tissue</English>
             <German>Quetschverletzung</German>
+            <Italian>Tessuto Schiacciato</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Minor">
             <English>Minor crushed tissue</English>
             <German>Kleine Quetschverletzung</German>
+            <Italian>Minimo Tessuto Schiacciato</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Medium">
             <English>Medium crushed tissue</English>
             <German>Mittlere Quetschverletzung</German>
+            <Italian>Medio Tessuto Schiacciato</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Large">
             <English>Large crushed tissue</English>
             <German>Große Quetschverletzung</German>
+            <Italian>Alto Tessuto Schiacciato</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut">
             <English>Cut</English>
             <German>Schnittwunde</German>
+            <Italian>Taglio</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Minor">
             <English>Small Cut</English>
             <German>Kleine Schnittwunde</German>
+            <Italian>Piccolo Taglio</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Medium">
             <English>Medium Cut</English>
             <German>Mittlere Schnittwunde</German>
+            <Italian>Medio Taglio</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Large">
             <English>Large Cut</English>
             <German>Große Schnittwunde</German>
+            <Italian>Grande Taglio</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration">
             <English>Tear</English>
             <German>Riss</German>
+            <Italian>Strappo</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Minor">
             <English>Small Tear</English>
             <German>Kleiner Riss</German>
+            <Italian>Piccolo Strappo</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Medium">
             <English>Medium Tear</English>
             <German>Mittlerer Riss</German>
+            <Italian>Medio Strappo</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Large">
             <English>Large Tear</English>
             <German>Großer Riss</German>
+            <Italian>Grande Strappo</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound">
             <English>Velocity Wound</English>
             <German>Ballistisches Trauma</German>
+            <Italian>Velocità Ferita</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Minor">
             <English>Smal Velocity Wound</English>
             <German>Kleines Ballistisches Trauma</German>
+            <Italian>Lenta Velocità Ferita</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Medium">
             <English>Medium Velocity Wound</English>
             <German>Mittleres Ballistisches Trauma</German>
+            <Italian>Media Velocità Ferita</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Large">
             <English>Large Velocity Wound</English>
             <German>Großes Ballistisches Trauma</German>
+            <Italian>Alta Velocità Ferita</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound">
             <English>Puncture Wound</English>
             <German>Stichwunde</German>
+            <Italian>Puntura Ferita</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Minor">
             <English>Minor Puncture Wound</English>
             <German>Kleine Stichwunde</German>
+            <Italian>Piccola Puntura Ferita</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Medium">
             <English>Medium Puncture Wound</English>
             <German>Mittlere Stichwunde</German>
+            <Italian>Media Puntura Ferita</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Large">
             <English>Large Puncture Wound</English>
             <German>Große Stichwunde</German>
+            <Italian>Grande Puntura Ferita</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Femur">
             <English>Broken Femur</English>
             <German>Gebrochener Oberschenkelknochen</German>
+            <Italian>Femore Rotto</Italian>
         </Key>
     </Package>
 </Project>
