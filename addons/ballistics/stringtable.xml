@@ -741,7 +741,7 @@
             <Polish>Magazynek 5,56mm 30rd (M995 AP)</Polish>
             <French>5.56mm 30Cps (M995 AP)</French>
             <Spanish>Cargador de 30 balas de 5.56mm (M995 AP)</Spanish>
-            <Russian>Магазин из 30-ти 5.56 мм (M995 AP)</Russian>
+            <Russian>Магазин из 30-ти 5.56 мм (M995 бронебойные)</Russian>
             <German>5,56mm 30-Patronen-Magazin (M995AP)</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_M995_AP_mag_NameShort">
@@ -749,7 +749,7 @@
             <Polish>5,56mm AP</Polish>
             <French>5.56mm AP</French>
             <Spanish>5.56mm AP</Spanish>
-            <Russian>5.56 мм AP</Russian>
+            <Russian>5.56 мм бронебойные</Russian>
             <German>5,56mm AP</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_M995_AP_mag_Description">
@@ -757,7 +757,7 @@
             <Polish>Kaliber: 5,56x45mm NATO (M995 AP)&lt;br /&gt;Pociski: 30</Polish>
             <French>Calibre: 5.56x45mm NATO (M995 AP)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 5.56x45mm NATO (M995 AP)&lt;br /&gt;Balas: 30</Spanish>
-            <Russian>Калибр: 5,56x45 мм NATO (M995 AP)&lt;br /&gt;Патронов: 30</Russian>
+            <Russian>Калибр: 5,56x45 мм NATO (M995 бронебойные)&lt;br /&gt;Патронов: 30</Russian>
             <German>Kaliber: 5,56x45mm NATO (M995 AP)&lt;br /&gt;Patronen: 30</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_Name">
@@ -869,7 +869,7 @@
             <Polish>7,62mm Mk319</Polish>
             <French>7.62mm Mk319</French>
             <Spanish>7.62mm Mk319</Spanish>
-            <Russian>7,62mm Mk319</Russian>
+            <Russian>7,62 мм Mk319</Russian>
             <German>7,62mm Mk319</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_Description">
@@ -909,7 +909,7 @@
             <Polish>Magazynek 7,62mm 10rd (M993 AP)</Polish>
             <French>7.62mm 10Cps (M993 AP)</French>
             <Spanish>Cargador de 10 balas de 7.62mm (M993 AP)</Spanish>
-            <Russian>Магазин из 10-ти 7,62 мм (M993 AP)</Russian>
+            <Russian>Магазин из 10-ти 7,62 мм (M993 бронебойные)</Russian>
             <German>7,62mm 10-Patronen-Magazin (M993 AP)</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M993_AP_Mag_NameShort">
@@ -917,7 +917,7 @@
             <Polish>7,62mm AP</Polish>
             <French>7.62mm AP</French>
             <Spanish>7.62mm AP</Spanish>
-            <Russian>7,62mm AP</Russian>
+            <Russian>7,62mm бронебойные</Russian>
             <German>7,62mm AP</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x51_M993_AP_Mag_Description">
@@ -925,7 +925,7 @@
             <Polish>Kaliber: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Pociski: 10</Polish>
             <French>Calibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Balas: 10</Spanish>
-            <Russian>Калибр: 7,62x51 мм NATO (M993 AP)&lt;br /&gt;Патронов: 10</Russian>
+            <Russian>Калибр: 7,62x51 мм NATO (M993 бронебойные)&lt;br /&gt;Патронов: 10</Russian>
             <German>Kaliber: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Patronen: 10</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M993_AP_Mag_Name">
@@ -933,7 +933,7 @@
             <Polish>Magazynek 7,62mm 20rd (M993 AP)</Polish>
             <French>7.62mm 20Cps (M993 AP)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (M993 AP)</Spanish>
-            <Russian>Магазин из 20-ти 7,62 мм (M993 AP)</Russian>
+            <Russian>Магазин из 20-ти 7,62 мм (M993 бронебойные)</Russian>
             <German>7,62mm 20-Patronen-Magazin (M993 AP)</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M993_AP_Mag_NameShort">
@@ -941,7 +941,7 @@
             <Polish>7,62mm AP</Polish>
             <French>7.62mm AP</French>
             <Spanish>7.62mm AP</Spanish>
-            <Russian>7,62 мм AP</Russian>
+            <Russian>7,62 мм бронебойные</Russian>
             <German>7,62mm AP</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x51_M993_AP_Mag_Description">
@@ -949,7 +949,7 @@
             <Polish>Kaliber: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Balas: 20</Spanish>
-            <Russian>Калибр: 7,62x51 мм NATO (M993 AP)&lt;br /&gt;Патронов: 20</Russian>
+            <Russian>Калибр: 7,62x51 мм NATO (M993 бронебойные)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Patronen: 20</German>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Name">
@@ -1029,7 +1029,7 @@
             <French>6.5x47mm 30Cps (HPBT Scenar)</French>
             <Spanish>Cargador de 30 balas de 6.5x47mm (HPBT Scenar)</Spanish>
             <Polish>Magazynek 6,5x47mm 30rd (HPBT Scenar)</Polish>
-            <Russian>Магазин из 30-ти 6,5x47 мм (HPBT Scenar)</Russian>
+            <Russian>Магазин из 30-ти 6,5x47 мм (экспансивные Scenar)</Russian>
             <German>6,5x47mm 30-Patronen-Magazin (HPBT Scenar)</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_NameShort">
@@ -1045,12 +1045,13 @@
             <French>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 30</French>
             <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 30</Spanish>
             <Polish>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Pociski: 30</Polish>
-            <Russian>Калибр: 6,5x47 мм (HPBT Scenar)&lt;br /&gt;Патронов: 30</Russian>
+            <Russian>Калибр: 6,5x47 мм (экспансивные Scenar)&lt;br /&gt;Патронов: 30</Russian>
             <German>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MXM</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_Name">
             <English>6.5mm Creedmor 30Rnd Mag</English>
             <Polish>Magazynek 6,5mm Creedmor 30rd</Polish>
+			<Russian>Магазин из 30-ти 6,5 мм Creedmor</Russian>
             <German>6,5mm Creedmor 30-Patronen-Magazin</German>
         </Key>
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_NameShort">
@@ -1071,7 +1072,7 @@
             <French>.338 10 Cps (300gr Sierra MatchKing HPBT)</French>
             <Spanish>Cargador de 10 balas de 8.6x70mm (300gr Sierra MatchKing HPBT)</Spanish>
             <Polish>Magazynek .338 10rd (300gr Sierra MatchKing HPBT)</Polish>
-            <Russian>Магазин из 10-ти .338 (300 гран Sierra MatchKing HPBT)</Russian>
+            <Russian>Магазин из 10-ти .338 (300 гран Sierra MatchKing экспансивные)</Russian>
             <German>.338 10-Patronen-Magazin (300gr Sierra MatchKing HPBT)</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_NameShort">
@@ -1079,7 +1080,7 @@
             <French>.338 HPBT</French>
             <Spanish>.338 HPBT</Spanish>
             <Polish>.338 HPBT</Polish>
-            <Russian>.338 HPBT</Russian>
+            <Russian>.338 экспансивные</Russian>
             <German>.338 HPBT</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Description">
@@ -1087,7 +1088,7 @@
             <French>Calibre: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Balas: 10</Spanish>
             <Polish>Kaliber: 8,6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Pociski: 10</Polish>
-            <Russian>Калибр: 8,6x70mm (300 гран Sierra MatchKing HPBT)&lt;br /&gt;Патронов: 10</Russian>
+            <Russian>Калибр: 8,6x70mm (300 гран Sierra MatchKing экспансивные)&lt;br /&gt;Патронов: 10</Russian>
             <German>Kaliber: 8,6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Patronen: 10</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Name">
@@ -1103,7 +1104,7 @@
             <French>.338 AP</French>
             <Spanish>.338 AP</Spanish>
             <Polish>.338 AP</Polish>
-            <Russian>.338 бронебойные</Russian>
+            <Russian>.338 AP</Russian>
             <German>.338 AP</German>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Description">
@@ -1111,7 +1112,7 @@
             <French>Calibre: 8.6x70mm (API526)&lt;br /&gt;Cartouches: 10</French>
             <Spanish>Calibre: 8.6x70mm (API526)&lt;br /&gt;Balas: 10</Spanish>
             <Polish>Kaliber: 8,6x70mm (API526)&lt;br /&gt;Pociski: 10</Polish>
-            <Russian>Калибр: 8,6x70mm (API526)&lt;br /&gt;Патронов: 10</Russian>
+            <Russian>Калибр: 8,6x70 мм (API526)&lt;br /&gt;Патронов: 10</Russian>
             <German>Kaliber: 8,6x70mm (API526)&lt;br /&gt;Patronen: 10</German>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Name">
@@ -1143,6 +1144,7 @@
             <French>12.7x99mm API 5Cps</French>
             <Spanish>Cargador de 5 balas de 12.7x99mm API</Spanish>
             <Polish>Magazynek 12,7x99mm API 5rd</Polish>
+            <Russian>Магазин из 5-ти 12,7x99 мм (бронебойно-зажигательные)</Russian>
             <German>12,7x99mm 5-Patronen-Magazin (API)</German>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_API_Mag_NameShort">
@@ -1150,6 +1152,7 @@
             <French>12.7mm API</French>
             <Spanish>12.7mm API</Spanish>
             <Polish>12,7mm API</Polish>
+            <Russian>12.7 мм бронебойно-зажигательные</Russian>
             <German>12,7mm API</German>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_API_Mag_Description">
@@ -1157,6 +1160,7 @@
             <French>Calibre: 12.7x99mm API&lt;br /&gt;Cartouches: 5</French>
             <Spanish>Calibre: 12.7x99mm API&lt;br /&gt;Balas: 5</Spanish>
             <Polish>Kaliber: 12,7x99mm API&lt;br /&gt;Pociski: 5</Polish>
+            <Russian>Калибр: 12,7x99 мм бронебойно-зажигательные&lt;br /&gt;Патронов: 5</Russian>
             <German>Kaliber:12,7x99mm API&lt;br /&gt;Patronen: 5</German>
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Name">

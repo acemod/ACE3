@@ -1485,7 +1485,7 @@
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseDead">
             <English>dead</English>
-            <Russian>мертв</Russian>
+            <Russian>мёртв</Russian>
             <German>tot</German>
             <French>mort</French>
             <Polish>martwy</Polish>
@@ -1721,7 +1721,7 @@
         <Key ID="STR_ACE_MEDICAL_ACTIVITY_gaveIV">
             <English>%1 has given an IV</English>
             <Spanish>%1 has puesto una IV</Spanish>
-            <Russian>%1 провел переливание</Russian>
+            <Russian>%1 провёл переливание</Russian>
             <German>%1 hat eine Infusion verabreicht</German>
             <Polish>%1 podał IV</Polish>
             <French>%1 a administré une IV</French>
