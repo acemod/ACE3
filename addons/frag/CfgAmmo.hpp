@@ -101,6 +101,7 @@ class CfgAmmo {
     class ShellBase;
     class Sh_82mm_AMOS : ShellBase {
         // Source: http://www.arsenal-bg.com/defense_police/mortar_bombs_82mm.htm
+        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
         GVAR(metal) = 3200;
         GVAR(charge) = 420;
         GVAR(gurney_c) = 1906;
