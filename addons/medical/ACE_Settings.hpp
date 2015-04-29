@@ -60,8 +60,9 @@ class ACE_Settings {
         value = 0;
     };
     class GVAR(enableRevive) {
-        typeName = "BOOL";
+        typeName = "SCALAR";
         value = 0;
+        values[] = {"Disabled", "Players only", "Players and AI"};
     };
     class GVAR(maxReviveTime) {
         typeName = "SCALAR";

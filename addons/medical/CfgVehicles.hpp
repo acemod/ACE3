@@ -238,8 +238,13 @@ class CfgVehicles {
             class enableRevive {
                 displayName = "Enable Revive";
                 description = "Enable a basic revive system";
-                typeName = "BOOL";
+                typeName = "NUMBER";
                 defaultValue = 0;
+                class values {
+                    class disable { name = "Disabled"; value = 0; default = 1;};
+                    class playerOnly { name = "Player only"; value = 1; };
+                    class playerAndAI { name = "Player & AI"; value = 2; };
+                };
             };
             class maxReviveTime {
                 displayName = "Max Revive time";

@@ -76,7 +76,7 @@ if (GVAR(level) >= 2) then {
 };
 [_unit] call FUNC(addToInjuredCollection);
 
-if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)])) && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
+if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
     if (vehicle _unit != _unit and {damage _vehicle >= 1}) then {
         // @todo
         // [_unit] call FUNC(unload);
