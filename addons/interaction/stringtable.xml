@@ -11,6 +11,7 @@
             <Russian>Взаимодействия</Russian>
             <Hungarian>Cselekvések</Hungarian>
             <Italian>Interazioni</Italian>
+            <Portuguese>Interaçãoes</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_Torso">
             <English>Torso</English>
@@ -22,6 +23,7 @@
             <Russian>Торс</Russian>
             <Hungarian>Testtörzs</Hungarian>
             <Italian>Torso</Italian>
+            <Portuguese>Torso</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_Head">
             <English>Head</English>
@@ -33,6 +35,7 @@
             <Russian>Голова</Russian>
             <Hungarian>Fej</Hungarian>
             <Italian>Testa</Italian>
+            <Portuguese>Cabeça</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmLeft">
             <English>Left Arm</English>
@@ -44,6 +47,7 @@
             <Russian>Левая рука</Russian>
             <Hungarian>Bal kar</Hungarian>
             <Italian>Braccio sinistro</Italian>
+            <Portuguese>Braço Esquerdo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmRight">
             <English>Right Arm</English>
@@ -55,6 +59,7 @@
             <Russian>Правая рука</Russian>
             <Hungarian>Jobb kar</Hungarian>
             <Italian>Braccio destro</Italian>
+            <Portuguese>Braço Direito</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_LegLeft">
             <English>Left Leg</English>
@@ -66,6 +71,7 @@
             <Russian>Левая нога</Russian>
             <Hungarian>Bal láb</Hungarian>
             <Italian>Gamba sinistra</Italian>
+            <Portuguese>Perna Esquerda</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_LegRight">
             <English>Right Leg</English>
@@ -77,6 +83,7 @@
             <Russian>Правая нога</Russian>
             <Hungarian>Jobb láb</Hungarian>
             <Italian>Gamba destra</Italian>
+            <Portuguese>Perna Direita</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_Weapon">
             <English>Weapon</English>
@@ -88,6 +95,7 @@
             <Russian>Оружие</Russian>
             <Hungarian>Fegyver</Hungarian>
             <Italian>Arma</Italian>
+            <Portuguese>Arma</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_InteractionMenu">
             <English>Interaction Menu</English>
@@ -699,6 +707,7 @@
             <Hungarian>Felszerelés</Hungarian>
             <Russian>Снаряжение</Russian>
             <Italian>Equipaggiamento</Italian>
+            <Portuguese>Equipamento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_Push">
             <English>Push</English>
@@ -710,6 +719,7 @@
             <Hungarian>Tolás</Hungarian>
             <Russian>Толкать</Russian>
             <Italian>Spingi</Italian>
+            <Portuguese>Empurrar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
@@ -721,6 +731,7 @@
             <Spanish>Interactuar</Spanish>
             <Hungarian>Cselekvés</Hungarian>
             <Italian>Interagisci</Italian>
+            <Portuguese>Interagir</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
             <English>Passengers</English>
@@ -732,6 +743,7 @@
             <French>Passagers</French>
             <Hungarian>Utasok</Hungarian>
             <Italian>Passeggeri</Italian>
+            <Portuguese>Passageiros</Portuguese>
         </Key>
     </Package>
 </Project>
