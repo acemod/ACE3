@@ -30,9 +30,3 @@ if ([_target] call FUNC(isBeingDragged)) then {
 };
 
 _vehicle = [_caller, _target] call EFUNC(common,loadPerson);
-if (!isNull _vehicle) then {
-    if (!isnil QGVAR(DROP_ADDACTION)) then {
-        _caller removeAction GVAR(DROP_ADDACTION);
-        GVAR(DROP_ADDACTION) = nil;
-    };
-};
