@@ -98,7 +98,7 @@
             <Hungarian>Egy kulcs, ami a KELET egységeinek legtöbb járművét ki tudja nyitni.</Hungarian>
             <Czech>Klíč který by měl otevřít vetšinu Východních vozidel.</Czech>
             <Russian>Ключ для открытия большинства машин Синих.</Russian>
-            <Italian>Una chaive che apr ela maggior parte dei veicoli EAST</Italian>
+            <Italian>Una chaive che apre la maggior parte dei veicoli EAST</Italian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_Indp_Description">
             <English>A key that should open most INDEP vehicle.</English>
