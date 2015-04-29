@@ -19,12 +19,18 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_result", "_ignoreRange", "_pos"];
+private ["_result", "_ignoreRange", "_helpers", "_pos"];
 EXPLODE_3_PVT(_this,_unit,_range,_item);
 _ignoreRange = (_range == -1);
 _result = true;
 
 if (!_ignoreRange && {(_unit distance (_item select 0)) > _range}) exitWith {false};
+
+_helpers = attachedObjects (_item select 0);
+{
+    detach _x;
+    deleteVehicle _x;  
+} forEach _helpers;
 
 if (getNumber (ConfigFile >> "CfgAmmo" >> typeof (_item select 0) >> "TriggerWhenDestroyed") == 0) then {
     private ["_exp", "_previousExp"];
