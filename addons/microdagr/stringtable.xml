@@ -138,7 +138,7 @@
         <Key ID="STR_ACE_microdagr_controlRange">
             <English>Range:</English>
             <Spanish>Distancia:</Spanish>
-            <German>Reichweite:</German>
+            <German>Distanz:</German>
             <Russian>Дистанция:</Russian>
             <Polish>Dystans:</Polish>
             <French>Distance:</French>
@@ -236,7 +236,7 @@
         </Key>
         <Key ID="STR_ACE_microdagr_toggleUnit">
             <English>Toggle MicroDAGR Display Mode</English>
-            <German>MicoDAGR Anzeigemodus Wechseln</German>
+            <German>MicoDAGR Anzeigemodus wechseln</German>
             <Spanish>Conmutar modo de pantalla del MicroDAGR</Spanish>
             <Russian>Сменить режим показа MicroDAGR</Russian>
             <Polish>Przełącz GUI MicroDAGR</Polish>
@@ -258,7 +258,7 @@
         </Key>
         <Key ID="STR_ACE_microdagr_configure">
             <English>Configure MicroDAGR</English>
-            <German>MicroDAGR Konfiguriere</German>
+            <German>Konfiguriere MicroDAGR</German>
             <Spanish>Configurar MicroDAGR</Spanish>
             <Russian>Настроить MicroDAGR</Russian>
             <Czech>Konfigurovat MicroDAGR GPS</Czech>
