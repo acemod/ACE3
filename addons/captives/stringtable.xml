@@ -155,7 +155,6 @@
             <Russian>Прекратить сдачу в плен</Russian>
             <Hungarian>Megadás abbahagyása</Hungarian>
             <Italian>Annulla la resa</Italian>
-             <Portuguese>Parar de se render</Portuguese>
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
             <English>Only use on alive units</English>
