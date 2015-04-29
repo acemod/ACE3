@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-private ["_mixColor", "_rowT", "_rowS", "_menuDepth", "_pathCount", "_menuInSelectedPath", "_color", "_path"];
+private ["_mixColor", "_rowT", "_rowS", "_menuDepth", "_pathCount"];
 
 //Mixes 2 colors (number arrays) and makes a color string "#AARRGGBB" for structured text
 _mixColor = {

@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 #define DEFAULT_ICON QUOTE(\z\ace\addons\interaction\ui\dot_ca.paa)
-private ["_ctrl", "_pos"];
+private ["_ctrl", "_pos", "_displayNum"];
 PARAMS_6(_text,_icon,_sPos,_textColor,_shadowColor,_iconColor);
 
 //systemChat format ["Icon %1 - %2,%3", _text, _sPos select 0, _sPos select 1];
