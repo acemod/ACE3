@@ -121,5 +121,9 @@
             <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
             <Russian>Центрирует курсор и двигает само меню опций. Полезно при ограниченном размере экрана.</Russian>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_ActionOnKeyRelease">
+            <English>Do action when releasing menu key</English>
+            <German>Aktion nach Loslassen der Taste ausführen</German>
+        </Key>
     </Package>
 </Project>

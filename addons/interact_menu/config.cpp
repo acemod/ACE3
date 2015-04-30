@@ -49,24 +49,30 @@ class ACE_Settings {
         typeName = "COLOR";
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_ColorTextMax";
-    };    
+    };
     class GVAR(colorTextMin) {
         value[] = {1, 1, 1, 0.25};
         typeName = "COLOR";
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_ColorTextMin";
-    };   
+    };
     class GVAR(colorShadowMax) {
         value[] = {0, 0, 0, 1};
         typeName = "COLOR";
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_ColorShadowMax";
-    };    
+    };
     class GVAR(colorShadowMin) {
         value[] = {0, 0, 0, 0.25};
         typeName = "COLOR";
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_ColorShadowMin";
+    };
+    class GVAR(actionOnKeyRelease) {
+        value = 1;
+        typeName = "BOOL";
+        isClientSettable = 1;
+        displayName = "$STR_ACE_Interact_Menu_ActionOnKeyRelease";
     };
 };
 
