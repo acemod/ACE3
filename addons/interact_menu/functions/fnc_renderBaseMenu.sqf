@@ -16,7 +16,7 @@
 
 BEGIN_COUNTER(fnc_renderBaseMenu)
 
-private ["_distance","_pos","_weaponDir","_ref","_cameraPos","_sPos","_activeActionTree"];
+private ["_distance","_pos","_weaponDir","_ref","_sPos","_activeActionTree", "_line"];
 
 EXPLODE_2_PVT(_this,_object,_baseActionNode);
 EXPLODE_1_PVT(_baseActionNode,_actionData);
@@ -50,11 +50,12 @@ if (GVAR(openedMenuType) == 0 && vehicle ACE_player == ACE_player &&
 
         if (_actualDistance > _distance) exitWith {true};
 
-        if (_distance > 1.0) exitWith {
+        if (_actualDistance > 1.0) exitWith {
             // If distance to action is greater than 1.0 m, check LOS
             _line = [_headPos call EFUNC(common,positionToASL), _pos call EFUNC(common,positionToASL), _object, ACE_player];
             lineIntersects _line
         };
+        false
     }) exitWith {false};
 
 // Exit if the action is behind you

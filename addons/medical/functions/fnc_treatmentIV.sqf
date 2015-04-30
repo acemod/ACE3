@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_items", "_removeItem", "_attributes"];
+private ["_caller", "_target", "_selectionName", "_className", "_items", "_removeItem"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;

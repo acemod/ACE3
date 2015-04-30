@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="ATragMX">
         <Key ID="STR_ACE_ATragMX_Name">
@@ -21,6 +20,7 @@
             <Spanish>Abrir ATragMX</Spanish>
             <French>Ouvrir ATragMX</French>
             <German>ATragMX öffnen</German>
+            <Italian>Apri ATragMX</Italian>
         </Key>
         <Key ID="STR_ACE_ATragMX_Description">
             <English>Rugged PDA with ATragMX</English>
@@ -28,6 +28,8 @@
             <Russian>Защищенный КПК с ATragMX</Russian>
             <Spanish>PDA rugerizada con ATragMX</Spanish>
             <German>Robuster PDA mit ATragMX</German>
+            <French>PDA robuste avec ATragMX</French>
+            <Italian>PDA Robusto con ATragMX</Italian>
         </Key>
         <Key ID="STR_ACE_ATragMX_ATragMXDialogKey">
             <English>Open ATragMX</English>
@@ -36,6 +38,7 @@
             <Spanish>Abrir ATragMX</Spanish>
             <French>Ouvrir ATragMX</French>
             <German>ATragMX öffnen</German>
+            <Italian>Apri ATragMX</Italian>
         </Key>
     </Package>
 </Project>

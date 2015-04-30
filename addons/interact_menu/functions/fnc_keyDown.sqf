@@ -30,6 +30,7 @@ if (_menuType == 0) then {
 GVAR(keyDownTime) = diag_tickTime;
 GVAR(openedMenuType) = _menuType;
 GVAR(lastTimeSearchedActions) = -1000;
+GVAR(ParsedTextCached) = [];
 
 GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
                       visibleMap ||
@@ -42,8 +43,14 @@ if (GVAR(useCursorMenu)) then {
     // uiNamespace getVariable QGVAR(dlgCursorMenu);
     // uiNamespace getVariable QGVAR(cursorMenuOpened);
     ctrlEnable [91921, true];
+    GVAR(cursorPos) = [0.5,0.5,0];
     ((finddisplay 91919) displayctrl 91921) ctrlAddEventHandler ["MouseMoving", {
-        GVAR(cursorPos) = [_this select 1, _this select 2, 0];
+        if (GVAR(cursorKeepCentered)) then {
+            GVAR(cursorPos) = GVAR(cursorPos) vectorAdd [_this select 1, _this select 2, 0] vectorDiff [0.5, 0.5, 0];
+            setMousePosition [0.5, 0.5];
+        } else {
+            GVAR(cursorPos) = [_this select 1, _this select 2, 0];
+        };
     }];
     setMousePosition [0.5, 0.5];
 };

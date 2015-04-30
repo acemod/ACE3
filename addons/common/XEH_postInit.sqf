@@ -97,14 +97,16 @@ if (!hasInterface) exitWith {};
 call COMPILE_FILE(scripts\assignedItemFix);
 call COMPILE_FILE(scripts\initScrollWheel);
 
-0 spawn {
-    while {true} do {
-        waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
-        findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call GVAR(onScrollWheel) )];
-        [false] call FUNC(disableUserInput);
-        waitUntil {isNull (findDisplay 46)};
-    };
+DFUNC(mouseZHandler) = {
+    waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
+    findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call GVAR(onScrollWheel) )];
+    [false] call FUNC(disableUserInput);
 };
+
+addMissionEventHandler ["Loaded", {[] spawn FUNC(mouseZHandler)}];
+[] spawn FUNC(mouseZHandler);
+
+
 enableCamShake true;
 
 // Set the name for the current player

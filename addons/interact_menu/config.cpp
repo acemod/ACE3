@@ -24,6 +24,13 @@ class ACE_Settings {
         typeName = "BOOL";
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction";
+    };    
+    class GVAR(cursorKeepCentered) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSettable = 1;
+        displayName = "$STR_ACE_Interact_cursorKeepCentered";
+        description = "$STR_ACE_Interact_cursorKeepCenteredDescription";
     };
     class GVAR(AlwaysUseCursorInteraction) {
         value = 0;

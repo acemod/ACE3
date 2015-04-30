@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private["_unit"];
+private["_unit", "_openWounds"];
 _unit = _this select 0;
 if (!local _unit) exitwith {};
 

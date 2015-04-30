@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_caller", "_selectionName", "_className", "_items"];
+private ["_target", "_caller", "_selectionName", "_className", "_items"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;

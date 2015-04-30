@@ -34,7 +34,7 @@ def check_module(projectpath, module):
         diff = len(entries) - len(list(set(entries)))
         duplicates += diff
         if diff > 0:
-            print key.getAttribute("ID")
+            print(key.getAttribute("ID"))
 
     return duplicates
 
