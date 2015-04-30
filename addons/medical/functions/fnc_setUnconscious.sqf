@@ -17,7 +17,7 @@
 
 #define DEFAULT_DELAY   (round(random(10)+5))
 
-private ["_unit", "_set", "_animState", "_originalPos", "_captiveSwitch", "_startingTime","_minWaitingTime"];
+private ["_unit", "_set", "_animState", "_originalPos", "_startingTime","_minWaitingTime"];
 _unit = _this select 0;
 _set = if (count _this > 1) then {_this select 1} else {true};
 _minWaitingTime = if (count _this > 2) then {_this select 2} else {DEFAULT_DELAY};
@@ -26,7 +26,7 @@ if !(_set) exitwith {
     _unit setvariable ["ACE_isUnconscious", false, true];
 };
 
-if !(!(isNull _unit) && {(_unit isKindOf "CaManBase") && ([_unit] call EFUNC(common,isAwake))}) exitwith{};
+if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call EFUNC(common,isAwake))}) exitwith{};
 
 if (!local _unit) exitwith {
     [[_unit], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
@@ -85,5 +85,8 @@ if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
 _startingTime = time;
 
 [DFUNC(unconsciousPFH), 0.1, [_unit,_animState, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
+
+// unconscious can't talk
+[_unit, "isUnconscious"] call EFUNC(common,muteUnit);
 
 ["medical_onUnconscious", [_unit, true]] call EFUNC(common,globalEvent);

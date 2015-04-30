@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_damageReturn",  "_typeOfDamage"];
+private ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex"];
 _unit         = _this select 0;
 _selection    = _this select 1;
 _damage       = _this select 2;
@@ -37,47 +37,56 @@ if !(_selection in (GVAR(SELECTIONS) + [""])) exitWith {0};
 _damageReturn = _damage;
 if (GVAR(level) < 2) then {
     _damageReturn = _this call FUNC(handleDamage_basic);
-};
-
-if (GVAR(level) >= 2) then {
+} else {
     if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {
         // Because of the config changes, we cannot properly disable the medical system for a unit.
         // lets use basic for the time being..
         _damageReturn = _this call FUNC(handleDamage_basic);
     };
     _newDamage = _this call FUNC(handleDamage_caching);
+    _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
 
-    if (_damageReturn > 0.9) then {
+    _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
+    _minLethalDamage = 0.01;
+    if (_typeIndex >= 0) then {
+        _minLethalDamage = GVAR(minLethalDamages) select _typeIndex;
+    };
 
-        _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
-
-        _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
-        _minLethalDamage = 0.01;
-        if (_typeIndex >= 0) then {
-            _minLethalDamage = GVAR(minLethalDamages) select _typeIndex;
+    if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _shooter} && {_projectile == ""} && {_selection == ""}) then {
+        if (GVAR(enableVehicleCrashes)) then {
+            _selection = GVAR(SELECTIONS) select (floor(random(count GVAR(SELECTIONS))));
         };
+    };
 
-        if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _source} && {_projectile == ""} && {_selection == ""}) then {
-            if (GVAR(enableVehicleCrashes)) then {
-                _selection = GVAR(SELECTIONS) select (floor(random(count GVAR(SELECTIONS))));
-            };
+    if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)} || !alive vehicle _unit) then {
+        if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)])) exitwith {
+            _damageReturn = 0.9;
         };
-
-        if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)} && {_selection in ["", "head", "body"]}) then {
-            if ([_unit] call FUNC(setDead)) then {
-                _damageReturn = 1;
-            } else {
-                _damageReturn = 0.89;
-            };
+        if ([_unit] call FUNC(setDead)) then {
+            _damageReturn = 1;
         } else {
-            _damageReturn = 0.89;
+            _damageReturn = _damageReturn min 0.89;
         };
+    } else {
+        _damageReturn = _damageReturn min 0.89;
     };
 };
 [_unit] call FUNC(addToInjuredCollection);
 
-if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
-    if (vehicle _unit != _unit and {damage _vehicle >= 1}) then {
+if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitWith {
+    if (_damageReturn >= 0.9 && {_selection in ["", "head", "body"]}) exitWith {
+        if (_unit getvariable ["ACE_isUnconscious", false]) exitwith {
+            [_unit] call FUNC(setDead);
+            0.89
+        };
+        [{ [_this select 0, true] call FUNC(setUnconscious); }, [_unit]] call EFUNC(common,execNextFrame);
+        0.89
+    };
+    _damageReturn min 0.89;
+};
+
+if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
+    if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
         // @todo
         // [_unit] call FUNC(unload);
     };

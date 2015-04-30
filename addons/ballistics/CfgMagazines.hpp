@@ -322,13 +322,14 @@ class CfgMagazines {
     class 10Rnd_762x54_Mag: 10Rnd_762x51_Mag {
         initSpeed = 800;
     };
-    class ACE_10Rnd_762x54_Tracer_mag: 16Rnd_9x21_Mag {
+    class ACE_10Rnd_762x54_Tracer_mag: 10Rnd_762x54_Mag {
         author = "$STR_ACE_Common_ACETeam";
         ammo = "ACE_762x54_Ball_7T2";
         displayName = "$STR_ACE_10Rnd_762x54_Tracer_mag_Name";
         displayNameShort = "$STR_ACE_10Rnd_762x54_Tracer_mag_NameShort";
         descriptionShort = "$STR_ACE_10Rnd_762x54_Tracer_mag_Description";
         initSpeed = 800;
+        tracersEvery = 1;
     };
     
     class 150Rnd_762x54_Box: 150Rnd_762x51_Box {

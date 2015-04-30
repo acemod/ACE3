@@ -4,6 +4,7 @@ class ACE_Head {
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
     ACTION_CONDITION
+    modifierFunction = QUOTE([ARR_4(_target,_player,0,_this select 3)] call FUNC(modifyMedicalAction));
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -65,9 +66,15 @@ class ACE_Head {
         EXCEPTIONS
     };
     class CheckResponse: CheckPulse {
-        displayName = "Check Response";
+        displayName = "$STR_ACE_MEDICAL_CHECK_RESPONSE";
         condition = QUOTE([ARR_4(_player, _target, 'head', 'CheckResponse')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'head', 'CheckResponse')] call DFUNC(treatment));
+        EXCEPTIONS
+    };
+    class Diagnose: CheckPulse {
+        displayName = "$STR_ACE_MEDICAL_ACTIONS_Diagnose";
+        condition = QUOTE([ARR_4(_player, _target, 'head', 'Diagnose')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'head', 'Diagnose')] call DFUNC(treatment));
         EXCEPTIONS
     };
 };
@@ -76,6 +83,7 @@ class ACE_Torso {
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 1)] call DFUNC(displayPatientInformation));
     ACTION_CONDITION
+    modifierFunction = QUOTE([ARR_4(_target,_player,1,_this select 3)] call FUNC(modifyMedicalAction));
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -103,7 +111,7 @@ class ACE_Torso {
         enableInside = 1;
     };
     class TriageCard {
-        displayName = "Triage Card";
+        displayName = "$STR_ACE_MEDICAL_ACTIONS_TriageCard";
         distance = 2.0;
         condition = "true";
         statement = QUOTE([ARR_2(_target, true)] call DFUNC(displayTriageCard));
@@ -150,21 +158,21 @@ class ACE_Torso {
         icon = PATHTOF(UI\icons\bandage.paa);
     };
     class SurgicalKit: fieldDressing {
-        displayName = "Use Surgical Kit";
+        displayName = "$STR_ACE_MEDICAL_USE_SURGICALKIT";
         condition = QUOTE([ARR_4(_player, _target, 'body', 'SurgicalKit')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'body', 'SurgicalKit')] call DFUNC(treatment));
         EXCEPTIONS
         icon = PATHTOF(UI\icons\surgicalKit.paa);
     };
     class PersonalAidKit: fieldDressing {
-        displayName = "Use Personal Aid Kit";
+        displayName = "$STR_ACE_MEDICAL_USE_AID_KIT";
         condition = QUOTE([ARR_4(_player, _target, 'body', 'PersonalAidKit')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'body', 'PersonalAidKit')] call DFUNC(treatment));
         EXCEPTIONS
         icon = "";
     };
     class CPR: fieldDressing {
-        displayName = "CPR";
+        displayName = "$STR_ACE_MEDICAL_ACTIONS_CPR";
         condition = QUOTE([ARR_4(_player, _target, 'body', 'CPR')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'body', 'CPR')] call DFUNC(treatment));
         EXCEPTIONS
@@ -176,6 +184,7 @@ class ACE_ArmLeft {
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 2)] call DFUNC(displayPatientInformation));
     ACTION_CONDITION
+    modifierFunction = QUOTE([ARR_4(_target,_player,2,_this select 3)] call FUNC(modifyMedicalAction));
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -333,6 +342,7 @@ class ACE_ArmRight {
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 3)] call DFUNC(displayPatientInformation));
     ACTION_CONDITION
+    modifierFunction = QUOTE([ARR_4(_target,_player,3,_this select 3)] call FUNC(modifyMedicalAction));
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -487,6 +497,7 @@ class ACE_LegLeft {
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 4)] call DFUNC(displayPatientInformation));
     ACTION_CONDITION
+    modifierFunction = QUOTE([ARR_4(_target,_player,4,_this select 3)] call FUNC(modifyMedicalAction));
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
@@ -629,6 +640,7 @@ class ACE_LegRight {
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
     ACTION_CONDITION
+    modifierFunction = QUOTE([ARR_4(_target,_player,5,_this select 3)] call FUNC(modifyMedicalAction));
     EXCEPTIONS
     icon = PATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;

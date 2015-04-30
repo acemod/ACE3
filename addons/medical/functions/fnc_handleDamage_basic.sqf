@@ -24,7 +24,7 @@
 #define ARMDAMAGETRESHOLD2 1.7
 #define UNCONSCIOUSNESSTRESHOLD 0.7
 
-private ["_unit", "_selectionName", "_damage", "_shooter", "_projectile", "_damage"];
+private ["_unit", "_selectionName", "_damage", "_shooter", "_projectile", "_damage", "_armdamage", "_hitPoint", "_index", "_legdamage", "_newDamage", "_otherDamage", "_pain", "_restore"];
 
 _unit         = _this select 0;
 _selectionName    = _this select 1;

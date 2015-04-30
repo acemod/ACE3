@@ -73,7 +73,7 @@ if (_currentVersion != _previousVersion) then {
 // Synced ACE events
 // Handle JIP scenario
 if(!isServer) then {
-    ["PlayerJip", { 
+    ["PlayerJip", {
         diag_log text format["[ACE] * JIP event synchronization initialized"];
         ["SEH_all", [player]] call FUNC(serverEvent);
     }] call FUNC(addEventHandler);
@@ -97,20 +97,22 @@ if (!hasInterface) exitWith {};
 call COMPILE_FILE(scripts\assignedItemFix);
 call COMPILE_FILE(scripts\initScrollWheel);
 
-0 spawn {
-    while {true} do {
-        waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
-        findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call GVAR(onScrollWheel) )];
-        [false] call FUNC(disableUserInput);
-        waitUntil {isNull (findDisplay 46)};
-    };
+DFUNC(mouseZHandler) = {
+    waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
+    findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call GVAR(onScrollWheel) )];
+    [false] call FUNC(disableUserInput);
 };
+
+addMissionEventHandler ["Loaded", {[] spawn FUNC(mouseZHandler)}];
+[] spawn FUNC(mouseZHandler);
+
+
 enableCamShake true;
 
 // Set the name for the current player
 ["playerChanged", {
     EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
-    
+
     if (alive _newPlayer) then {
         [_newPlayer] call FUNC(setName)
     };
@@ -225,6 +227,7 @@ GVAR(OldIsCamera) = false;
 
 ["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
 ["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
+["medical_onUnconscious", {if (local (_this select 0) && {!(_this select 1)}) then {[ _this select 0, false, QUOTE(FUNC(loadPerson)), west /* dummy side */] call FUNC(switchToGroupSide);};}] call FUNC(addEventhandler);
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
 ["isNotInside", {
@@ -241,10 +244,10 @@ GVAR(OldIsCamera) = false;
 if(isMultiplayer && { time > 0 || isNull player } ) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
-        if(!(isNull player)) then {   
+        if(!(isNull player)) then {
             ["PlayerJip", [player] ] call FUNC(localEvent);
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
-        }; 
+        };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
 

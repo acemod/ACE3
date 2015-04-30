@@ -28,6 +28,7 @@
 
 EXPLODE_5_PVT(_this,_actionName,_displayName,_icon,_statement,_condition);
 
+// IGNORE_PRIVATE_WARNING(_target);
 private ["_insertChildren","_customParams","_position","_distance","_params", "_modifierFunction"];
 
 _insertChildren = if (count _this > 5) then {

@@ -37,3 +37,4 @@ if (isPlayer _unit) then {
     };
 }foreach ([_unit] call FUNC(getAllDefinedSetVariables));
 
+_unit setVariable ["ACE_forceWalkStatusNumber", 0, true];

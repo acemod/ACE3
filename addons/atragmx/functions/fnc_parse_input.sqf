@@ -60,7 +60,7 @@ private ["_boreHeight", "_bulletMass", "_bulletDiameter", "_airFriction", "_rifl
 _boreHeight = parseNumber(ctrlText 120000);
 _bulletMass = parseNumber(ctrlText 120010);
 _bulletDiameter = parseNumber(ctrlText 120020);
-if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false])) then {
+if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     _airFriction = 0.1 max parseNumber(ctrlText 120030) min 2;
 } else {
     _airFriction = parseNumber(ctrlText 120030) / -1000;
@@ -87,7 +87,7 @@ GVAR(workingMemory) set [5, _boreHeight];
 GVAR(workingMemory) set [12, _bulletMass];
 GVAR(workingMemory) set [13, _bulletDiameter];
 GVAR(workingMemory) set [14, _rifleTwist];
-if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false])) then {
+if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     GVAR(workingMemory) set [15, _airFriction];
 } else {
     GVAR(workingMemory) set [4, _airFriction];
