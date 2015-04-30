@@ -84,7 +84,7 @@ if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
 };
 
 [_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
-_anim = [_unit] call EFUNC(common,getDeathAnim)
+_anim = [_unit] call EFUNC(common,getDeathAnim);
 [_unit, _anim, 1, true] call EFUNC(common,doAnimation);
 [{
     _unit = _this select 0;
