@@ -56,9 +56,7 @@ if !([_unit] call EFUNC(common,isPlayer)) then {
 // If a unit has the launcher out, it will sometimes start selecting the primairy weapon while unconscious,
 // therefor we force it to select the primairy weapon before going unconscious
 if ((vehicle _unit) isKindOf "StaticWeapon") then {
-    moveOut _unit;
-    unassignVehicle _unit;
-    //_unit action ["eject", vehicle _unit];
+    [_unit] call EFUNC(common,unloadPerson);
 };
 if (animationState _unit in ["ladderriflestatic","laddercivilstatic"]) then {
     _unit action ["ladderOff", (nearestBuilding _unit)];
