@@ -85,6 +85,7 @@
             <French>Interaction - Texte Max</French>
             <German>Interaktionstextfarbe Max</German>
             <Italian>Interazioni - Testo Massimo</Italian>
+            <Russian>Взаимодействие - Текст Макс.</Russian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
             <English>Interaction - Text Min</English>
@@ -92,6 +93,7 @@
             <French>Interaction - Texte Min</French>
             <German>Interaktionstextfarbe Min</German>
             <Italian>Interazioni - Testo Minimo</Italian>
+            <Russian>Взаимодействие - Текст Мин.</Russian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
             <English>Interaction - Shadow Max</English>
@@ -99,6 +101,7 @@
             <French>Interaction - Ombre Max</French>
             <German>Interaktionstextschatten Max</German>
             <Italian>Interazioni - Ombra Massima</Italian>
+            <Russian>Взаимодействие - Тень Макс.</Russian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
@@ -106,14 +109,17 @@
             <French>Interaction - Ombre Min</French>
             <German>Interaktionstextschatten Min</German>
             <Italian>Interazioni - Ombra Minima</Italian>
+            <Russian>Взаимодействие - Тень Мин.</Russian>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCentered">
             <English>Keep cursor centered</English>
             <French>Garder le curseur au centre</French>
+            <Russian>Центрировать курсор</Russian>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCenteredDescription">
             <English>Keeps cursor centered and pans the option menu around.  Useful if screen size is limited.</English>
             <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
+            <Russian>Центрирует курсор и двигает само меню опций. Полезно при ограниченном размере экрана.</Russian>
         </Key>
     </Package>
 </Project>
