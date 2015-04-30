@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller","_target","_bloodPressure","_bloodPressureHigh","_bloodPressureLow","_title","_content"];
+private ["_caller","_target","_bloodPressure","_bloodPressureHigh","_bloodPressureLow", "_logOutPut", "_output"];
 _caller = _this select 0;
 _target = _this select 1;
 

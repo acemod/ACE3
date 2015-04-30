@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller","_unit", "_heartRateOutput", "_heartRate","_logOutPut","_content"];
+private ["_caller", "_unit", "_heartRateOutput", "_heartRate", "_logOutPut"];
 _caller = _this select 0;
 _unit = _this select 1;
 
