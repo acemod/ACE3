@@ -9,7 +9,7 @@ class CfgAmmo {
     //    GVAR(skip) = 1;
     //};
     class Bo_GBU12_LGB;
-    class Nou_GBU12 : Bo_GBU12_LGB {
+    class ACE_GBU12 : Bo_GBU12_LGB {
         GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
         GVAR(metal) = 140000;
         GVAR(charge) = 87000;
@@ -72,26 +72,27 @@ class CfgAmmo {
         GVAR(gurney_c) = 2320;
         GVAR(gurney_k) = 1/2;
     };
-
-
-    class G_40mm_HE: GrenadeBase {
-        GVAR(skip) = 0;
-        GVAR(force) = 1;
-    };
-
-    class ACE_G_40mm_HEDP: G_40mm_HE {
+    
+    class G_40mm_HEDP: GrenadeBase {
+        // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M433
         GVAR(classes)[] = {"ACE_frag_tiny_HD"};
         GVAR(metal) = 200;
         GVAR(charge) = 45;
         GVAR(gurney_c) = 2830;
-        GVAR(gurney_k) = 3/5;
+        GVAR(gurney_k) = 1/2;
     };
-    class ACE_G_40mm_HE: ACE_G_40mm_HEDP {
+    class G_40mm_HE: GrenadeBase {
+        // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M441
         GVAR(classes)[] = {"ACE_frag_tiny_HD"};
         GVAR(metal) = 200;
         GVAR(charge) = 32;
         GVAR(gurney_c) = 2700;
-        GVAR(gurney_k) = 3/5;
+        GVAR(gurney_k) = 1/2;
+    };
+    
+    class ACE_G_40mm_HEDP: G_40mm_HEDP {
+    };
+    class ACE_G_40mm_HE: G_40mm_HE {
     };
     class ACE_G_40mm_Practice: ACE_G_40mm_HE {
         GVAR(skip) = 1;
