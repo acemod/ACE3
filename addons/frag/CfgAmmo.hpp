@@ -103,6 +103,7 @@ class CfgAmmo {
 
     // curator ammo entries
     class ShellBase;
+    class Sh_125mm_HEAT;
     class Sh_82mm_AMOS : ShellBase {
         // Source: http://www.arsenal-bg.com/defense_police/mortar_bombs_82mm.htm
         GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
@@ -116,6 +117,13 @@ class CfgAmmo {
         GVAR(metal) = 800;
         GVAR(charge) = 4200;
         GVAR(gurney_c) = 2320;
+        GVAR(gurney_k) = 1/2;
+    };
+    class Sh_105mm_HEAT_MP : Sh_125mm_HEAT {
+        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(metal) = 11400;
+        GVAR(charge) = 7100;
+        GVAR(gurney_c) = 2800;
         GVAR(gurney_k) = 1/2;
     };
     class Sh_120mm_HE : ShellBase {
