@@ -27,7 +27,7 @@ class CfgVehicles {
     class ACE_Actions {
       class ACE_MainActions {
         displayName = "$STR_ACE_Interaction_MainAction";
-        distance = 5;
+        distance = 4;
         condition = QUOTE(true);
         statement = "";
         icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
@@ -35,8 +35,7 @@ class CfgVehicles {
 
         class ACE_TeamManagement {
           displayName = "$STR_ACE_Interaction_TeamManagement";
-          distance = 5;
-          condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player} && {GVAR(EnableTeamManagement)});
+          condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {GVAR(EnableTeamManagement)});
           statement = "";
           showDisabled = 0;
           priority = 3.2;
@@ -45,8 +44,7 @@ class CfgVehicles {
 
           class ACE_JoinTeamRed {
             displayName = "$STR_ACE_Interaction_JoinTeamRed";
-            distance = 5;
-            condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
+            condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
             statement = QUOTE([ARR_2(_target,'RED')] call DFUNC(joinTeam));
             showDisabled = 1;
             icon = PATHTOF(UI\team\team_red_ca.paa);
@@ -55,8 +53,7 @@ class CfgVehicles {
           };
           class ACE_JoinTeamGreen {
             displayName = "$STR_ACE_Interaction_JoinTeamGreen";
-            distance = 5;
-            condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
+            condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
             statement = QUOTE([ARR_2(_target,'GREEN')] call DFUNC(joinTeam));
             showDisabled = 1;
             icon = PATHTOF(UI\team\team_green_ca.paa);
@@ -65,8 +62,7 @@ class CfgVehicles {
           };
           class ACE_JoinTeamBlue {
             displayName = "$STR_ACE_Interaction_JoinTeamBlue";
-            distance = 5;
-            condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
+            condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
             statement = QUOTE([ARR_2(_target,'BLUE')] call DFUNC(joinTeam));
             showDisabled = 1;
             icon = PATHTOF(UI\team\team_blue_ca.paa);
@@ -75,8 +71,7 @@ class CfgVehicles {
           };
           class ACE_JoinTeamYellow {
             displayName = "$STR_ACE_Interaction_JoinTeamYellow";
-            distance = 5;
-            condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player});
+            condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
             statement = QUOTE([ARR_2(_target,'YELLOW')] call DFUNC(joinTeam));
             showDisabled = 1;
             icon = PATHTOF(UI\team\team_yellow_ca.paa);
@@ -86,8 +81,7 @@ class CfgVehicles {
 
           class ACE_LeaveTeam {
             displayName = "$STR_ACE_Interaction_LeaveTeam";
-            distance = 5;
-            condition = QUOTE(alive _target && {!isPlayer _target} && {_target in units group _player} && {assignedTeam _player != 'MAIN'});
+            condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _player != 'MAIN'});
             statement = QUOTE([ARR_2(_target,'MAIN')] call DFUNC(joinTeam));
             showDisabled = 1;
             icon = PATHTOF(UI\team\team_white_ca.paa);
@@ -98,9 +92,8 @@ class CfgVehicles {
 
         class ACE_JoinGroup {
           displayName = "$STR_ACE_Interaction_JoinGroup";
-          distance = 5;
-          condition = QUOTE(side group _player == side group _target && {group _player != group _target});
-          statement = QUOTE([_player] joinSilent group _target;);
+          condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinGroup));
+          statement = QUOTE([_player] joinSilent group _target);
           showDisabled = 0;
           priority = 2.6;
           icon = PATHTOF(UI\team\team_management_ca.paa);
@@ -109,7 +102,6 @@ class CfgVehicles {
 
         class ACE_GetDown {
           displayName = "$STR_ACE_Interaction_GetDown";
-          distance = 5;
           condition = QUOTE([_target] call DFUNC(canInteractWithCivilian));
           statement = QUOTE([_target] call DFUNC(getDown));
           showDisabled = 0;
@@ -117,7 +109,6 @@ class CfgVehicles {
         };
         class ACE_SendAway {
           displayName = "$STR_ACE_Interaction_SendAway";
-          distance = 5;
           condition = QUOTE([_target] call DFUNC(canInteractWithCivilian));
           statement = QUOTE([_target] call DFUNC(sendAway));
           showDisabled = 0;
@@ -125,7 +116,6 @@ class CfgVehicles {
         };
         class ACE_Pardon {
           displayName = "$STR_ACE_Interaction_Pardon";
-          distance = 5;
           condition = QUOTE(rating _target < -2000 && {alive _target} && {side group _player == side group _target});
           statement = QUOTE([ARR_3(_target,'{_this addRating -rating _this}',_target)] call DEFUNC(common,execRemoteFnc));
           showDisabled = 0;
@@ -233,7 +223,7 @@ class CfgVehicles {
           displayName = "$STR_ACE_Interaction_JoinTeamBlue";
           condition = QUOTE(true);
           exceptions[] = {"isNotInside"};
-          statement = QUOTE([ARR_2(_player,'BLUE')] call FUNC(joinTeam));
+          statement = QUOTE([ARR_2(_player,'BLUE')] call DFUNC(joinTeam));
           showDisabled = 1;
           priority = 2.2;
           icon = PATHTOF(UI\team\team_blue_ca.paa);
@@ -243,7 +233,7 @@ class CfgVehicles {
           displayName = "$STR_ACE_Interaction_JoinTeamYellow";
           condition = QUOTE(true);
           exceptions[] = {"isNotInside"};
-          statement = QUOTE([ARR_2(_player,'YELLOW')] call FUNC(joinTeam));
+          statement = QUOTE([ARR_2(_player,'YELLOW')] call DFUNC(joinTeam));
           showDisabled = 1;
           priority = 2.1;
           icon = PATHTOF(UI\team\team_yellow_ca.paa);
@@ -254,7 +244,7 @@ class CfgVehicles {
           displayName = "$STR_ACE_Interaction_LeaveTeam";
           condition = QUOTE(assignedTeam _player != 'MAIN');
           exceptions[] = {"isNotInside"};
-          statement = QUOTE([ARR_2(_player,'MAIN')] call FUNC(joinTeam));
+          statement = QUOTE([ARR_2(_player,'MAIN')] call DFUNC(joinTeam));
           showDisabled = 1;
           priority = 2.5;
           icon = PATHTOF(UI\team\team_white_ca.paa);
@@ -262,9 +252,9 @@ class CfgVehicles {
         };
         class ACE_BecomeLeader {
           displayName = "$STR_ACE_Interaction_BecomeLeader";
-          condition = QUOTE(_this call FUNC(canBecomeLeader));
+          condition = QUOTE(_this call DFUNC(canBecomeLeader));
           exceptions[] = {"isNotInside"};
-          statement = QUOTE(_this call FUNC(doBecomeLeader));
+          statement = QUOTE(_this call DFUNC(doBecomeLeader));
           showDisabled = 1;
           priority = 1.0;
           icon = PATHTOF(UI\team\team_white_ca.paa);
@@ -408,6 +398,12 @@ class CfgVehicles {
         selection = "";
         distance = 10;
         condition = "true";
+        class ACE_Passengers {
+          displayName = "$STR_ACE_Interaction_Passengers";
+          condition = "true";
+          statement = "";
+          insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+        };
       };
     };
     class ACE_SelfActions {
@@ -415,7 +411,7 @@ class CfgVehicles {
         displayName = "$STR_ACE_Interaction_Passengers";
         condition = "true";
         statement = "";
-        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+        insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
       };
     };
   };
@@ -426,6 +422,12 @@ class CfgVehicles {
         selection = "";
         distance = 10;
         condition = "true";
+        class ACE_Passengers {
+          displayName = "$STR_ACE_Interaction_Passengers";
+          condition = "true";
+          statement = "";
+          insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+        };
       };
     };
     class ACE_SelfActions {
@@ -433,7 +435,7 @@ class CfgVehicles {
         displayName = "$STR_ACE_Interaction_Passengers";
         condition = "true";
         statement = "";
-        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+        insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
       };
     };
   };
@@ -446,6 +448,12 @@ class CfgVehicles {
         selection = "";
         distance = 10;
         condition = "true";
+        class ACE_Passengers {
+          displayName = "$STR_ACE_Interaction_Passengers";
+          condition = "true";
+          statement = "";
+          insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+        };
       };
     };
     class ACE_SelfActions {
@@ -453,7 +461,7 @@ class CfgVehicles {
         displayName = "$STR_ACE_Interaction_Passengers";
         condition = "true";
         statement = "";
-        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+        insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
       };
     };
   };
@@ -464,6 +472,12 @@ class CfgVehicles {
         selection = "";
         distance = 10;
         condition = "true";
+        class ACE_Passengers {
+          displayName = "$STR_ACE_Interaction_Passengers";
+          condition = "true";
+          statement = "";
+          insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+        };
       };
     };
     class ACE_SelfActions {
@@ -471,7 +485,7 @@ class CfgVehicles {
         displayName = "$STR_ACE_Interaction_Passengers";
         condition = "true";
         statement = "";
-        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+        insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
       };
     };
   };
@@ -489,9 +503,15 @@ class CfgVehicles {
           displayName = "$STR_ACE_Interaction_Push";
           distance = 6;
           condition = QUOTE(getMass _target < 1000 && {alive _target});
-          statement = QUOTE([ARR_2(_target, [ARR_3(2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5)])] call FUNC(push););
+          statement = QUOTE([ARR_2(_target, [ARR_3(2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5)])] call DFUNC(push););
           showDisabled = 0;
           priority = -1;
+        };
+        class ACE_Passengers {
+          displayName = "$STR_ACE_Interaction_Passengers";
+          condition = "true";
+          statement = "";
+          insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
         };
       };
     };
@@ -500,7 +520,7 @@ class CfgVehicles {
         displayName = "$STR_ACE_Interaction_Passengers";
         condition = "true";
         statement = "";
-        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+        insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
       };
     };
   };
@@ -512,6 +532,12 @@ class CfgVehicles {
         selection = "gunnerview";
         distance = 2;
         condition = "true";
+        class ACE_Passengers {
+          displayName = "$STR_ACE_Interaction_Passengers";
+          condition = "true";
+          statement = "";
+          insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+        };
       };
     };
     class ACE_SelfActions {
@@ -519,7 +545,7 @@ class CfgVehicles {
         displayName = "$STR_ACE_Interaction_Passengers";
         condition = "true";
         statement = "";
-        insertChildren = QUOTE(_this call FUNC(addPassengersActions));
+        insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
       };
     };
   };

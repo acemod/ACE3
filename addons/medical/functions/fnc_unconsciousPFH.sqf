@@ -31,6 +31,8 @@ if (!alive _unit) exitwith {
     [_unit, false] call EFUNC(common,disableAI);
     //_unit setUnitPos _originalPos;
     _unit setUnconscious false;
+
+    [_unit, "isUnconscious"] call EFUNC(common,unmuteUnit);
     ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
 
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
@@ -70,6 +72,8 @@ if !(_unit getvariable ["ACE_isUnconscious",false]) exitwith {
         _unit setUnitPos _originalPos; // This is not position but stance (DOWN, MIDDLE, UP)
 
         _unit setUnconscious false;
+
+        [_unit, "isUnconscious"] call EFUNC(common,unmuteUnit);
 
         // ensure this statement runs only once
         _args set [5, true];

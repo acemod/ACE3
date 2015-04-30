@@ -11,6 +11,7 @@
             <Russian>Предохранитель</Russian>
             <French>Sécurité</French>
             <Italian>Sicura inserita</Italian>
+            <Portuguese>Modo de segurança</Portuguese>
         </Key>
         <Key ID="STR_ACE_SafeMode_TakeOffSafety">
             <English>Take off Safety</English>
@@ -22,6 +23,7 @@
             <Russian>Снять с предохранителя</Russian>
             <French>Enlever sécurité</French>
             <Italian>Togli la sicura</Italian>
+            <Portuguese>Tirar segurança</Portuguese>
         </Key>
         <Key ID="STR_ACE_SafeMode_PutOnSafety">
             <English>Put on Safety</English>
@@ -33,6 +35,7 @@
             <Russian>Поставить на предохранитель</Russian>
             <French>Sécurité mise</French>
             <Italian>Inserisci la sicura</Italian>
+            <Portuguese>Colocar Segurança</Portuguese>
         </Key>
         <Key ID="STR_ACE_SafeMode_TookOffSafety">
             <English>Took off Safety</English>
@@ -44,6 +47,7 @@
             <Russian>Снят с предохранителя</Russian>
             <French>Sécurité enlevée</French>
             <Italian>Togli la sicura</Italian>
+            <Portuguese>Tirou Segurança</Portuguese>
         </Key>
     </Package>
 </Project>

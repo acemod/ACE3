@@ -24,6 +24,13 @@ class ACE_Settings {
         typeName = "BOOL";
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction";
+    };    
+    class GVAR(cursorKeepCentered) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSettable = 1;
+        displayName = "$STR_ACE_Interact_cursorKeepCentered";
+        description = "$STR_ACE_Interact_cursorKeepCenteredDescription";
     };
     class GVAR(AlwaysUseCursorInteraction) {
         value = 0;
@@ -50,13 +57,13 @@ class ACE_Settings {
         displayName = "$STR_ACE_Interact_Menu_ColorTextMin";
     };   
     class GVAR(colorShadowMax) {
-        value[] = {1, 1, 1, 1};
+        value[] = {0, 0, 0, 1};
         typeName = "COLOR";
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_ColorShadowMax";
     };    
     class GVAR(colorShadowMin) {
-        value[] = {1, 1, 1, 0.25};
+        value[] = {0, 0, 0, 0.25};
         typeName = "COLOR";
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_ColorShadowMin";

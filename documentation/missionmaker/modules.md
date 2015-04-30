@@ -11,8 +11,42 @@ parent: wiki
 
 
 ## 1. Modules
-### 1.1 BlueForceTracking
-*Part of: ACE_Map*
+### 1.1 Advanced Ballistics
+*Part of: ace_advanced_ballistics*
+
+This module allows to enable advanced external- and internal ballistics.
+
+**Settings:**
+
+1. **Advanced Ballistics (Boolean)<br>**
+Enables advanced ballistics.<br>
+`Default value: No`
+2. **Always Enabled For Snipers (Boolean)<br>**
+Always enables advanced ballistics when high power optics are used.<br>
+`Default value: Yes`
+3. **Disabled In FullAuto Mode (Boolean)<br>**
+Disables the advanced ballistics during full auto fire.<br>
+`Default value: No`
+4. **Disabled For Non Local Players (Boolean)<br>**
+Disables the advanced ballistics for bullets coming from other players (enable this if you encounter frame drops during heavy firefights in multiplayer).<br>
+`Default value: Yes`
+5. **Enable Ammo Temperature Simulation (Boolean)<br>**
+Muzzle velocity varies with ammo temperature.<br>
+`Default value: Yes`
+6. **Enable Barrel Length Simulation (Boolean)<br>**
+Muzzle velocity varies with barrel length.<br>
+`Default value: Yes`
+7. **Enable Bullet Trace Effect (Boolean)<br>**
+Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics).<br>
+8. **Simulation Interval (Number)<br>**
+Defines the interval between every calculation step.<br>
+`Default value: 0.05`
+9. **Simulation Radius (Number)<br>**
+Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles.<br>
+`Default value: 3000`
+
+### 1.2 BlueForceTracking
+*Part of: ace_map*
 
 When adding the "BlueForceTracking" module to your mission it adds map markers to every group on the players side and refreshes them in certain configurable interval (in seconds). The module takes the group type into account and uses the proper NATO icon for each marker.
 
@@ -25,8 +59,8 @@ How often the markers should be refreshed (in seconds).<br>
 Hide markers for "AI only" groups.<br>
 `Default value: No`
 
-### 1.2 Check PBOs
-*Part of: ACE_Core*
+### 1.3 Check PBOs
+*Part of: ace_core*
 
 If you are worried that players haven't updated ACE or other mods to the version you're using on the server, you can place the "Check PBOs" module on your map. You can choose one of three posible actions that are being executed when a player joins that has a wrong version of ACE or an other mod:
 
@@ -61,8 +95,8 @@ Example 3: @JSRS + @Blastcore-A3:<br>
 [TBD, "warfxpe","blastcore_vep"]
 ```
 
-### 1.3 Explosive System
-*Part of: ACE_Explosive*
+### 1.4 Explosive System
+*Part of: ace_explosive*
 
 The "Explosive System" module lets you tweak the settings for the new explosive system that ACE introduces.
 
@@ -75,17 +109,17 @@ Require explosive specialists to disable explosives.<br>
 Increase the time it takes to complete actions for non-specialists.<br>
 `Default value: Yes`
 
-### 1.4 Fatigue System (deprecated)
+### 1.5 Fatigue System (deprecated)
 **Warning:**
 *This module is deprecated and only in there not to break older missions that have used this module. It will be removed in a future update. It serves no purpose.*
 
-### 1.5 Friendly Fire Messages
-*Part of: ACE_Respawn*
+### 1.6 Friendly Fire Messages
+*Part of: ace_respawn*
 
 The "Friendly Fire Messages" module triggers a message when a player kills a friendly or civilian unit. This module isn't needed on servers with a low difficulty setting.
 
-### 1.6 Interaction
-*Part of: ACE_Interaction*
+### 1.7 Interaction
+*Part of: ace_interaction*
 
 This module allows you to tweak the settings for player names tags.
 
@@ -95,8 +129,8 @@ This module allows you to tweak the settings for player names tags.
 Sets the distance (in meters) at which player name tags become visible.<br>
 `Default value: 5`
 
-### 1.7 Medical System
-*Part of: ACE_Medical*
+### 1.8 Medical System
+*Part of: ace_medical*
 
 When using the medical system ACE offers you probably want to fine tune some aspects of the wounding, healing or gameplay mechanics and fit them to your needs. The "Medical System" module offers a lot of settings to do just that.
 
@@ -133,16 +167,16 @@ Use one bandage to heal the entire body.<br>
 Allow all players to use chat while unconcious? Admin can always use the chat regardless.<br>
 `Default value: No`
 
-### 1.8 Rallypoint System
-*Part of: ACE_Respawn*
+### 1.9 Rallypoint System
+*Part of: ace_respawn*
 
 This module was introduced with 0.94 and enables Mission Makers to specificly enable units to move a rallypoint. Every unit that is synced with that module is able to move a rallypoint.
 
 **Note:**
 It's important to mention that this doesn't work for player who join during a mission (JIP = Join in progress). That's something we can't change because that's the way Bohemia has implemented their module framework. To enable JIP players to move rally points have a look at [3.1 ACE Rallypoints](#31-ace-rallypoints).
 
-### 1.9 Repair System
-*Part of: ACE_Logistics*
+### 1.10 Repair System
+*Part of: ace_logistics*
 
 Placing the "Repair System" module makes it possible to define the time it takes for certain repair actions.
 
@@ -161,8 +195,8 @@ Time to replace a track (in seconds).<br>
 Limits the amount of damage that can be repaired. 0 = Repair all damage, 1 = Cannot repair any damage.<br>
 `Default value: 0`
 
-### 1.10 Respawn System
-*Part of: ACE_Respawn*
+### 1.11 Respawn System
+*Part of: ace_respawn*
 
 The "Respawn System" module enables players to respawn with the gear they had before dying and to remove bodies of players after a configurable interval (in seconds).
 
@@ -172,8 +206,8 @@ The "Respawn System" module enables players to respawn with the gear they had be
 Respawn with the gear a player had just before his death.<br>
 `Default value: No`
 
-### 1.11 SwitchUnits System
-*Part of: ACE_SwitchUnits*
+### 1.12 SwitchUnits System
+*Part of: ace_switchunits*
 
 The [SwitchUnits System](#32-ace-switchunits) enables players to control certain AI units on the map. 
 
@@ -199,8 +233,54 @@ The safe zone around players from a different team (in meters)<br>
 `Default value: 200`
 
 
-### 1.12 LSD Vehicles
-*Part of: ACE_Core*
+### 1.13 LSD Vehicles
+*Part of: ace_core*
+
+### 1.14 Weather
+*Part of: ace_weather*
+
+This module allows you to customize the weather settings.
+
+**Settings:**
+
+1. **Weather propagation (Boolean)<br>**
+Enables sever side weather propagation.<br>
+`Default value: Yes`
+2. **ACE Weather (Boolean)<br>**
+Overrides the default weather (editor, mission settings) with ACE weather (map based).<br>
+`Default value: Yes`
+3. **Sync Rain (Boolean)<br>**
+Synchronizes rain.<br>
+`Default value: Yes`
+3. **Sync Wind (Boolean)<br>**
+Synchronizes wind.<br>
+`Default value: Yes`
+3. **Sync Misc (Boolean)<br>**
+Synchronizes lightnings, rainbow, fog, ...<br>
+`Default value: Yes`
+4. **Update Interval (Number)<br>**
+Defines the interval (seconds) between weather updates.<br>
+`Default value: 60`
+    
+### 1.15 Wind Deflection
+*Part of: ace_winddeflection*
+
+This module allows you to define when wind deflection is active.
+
+**Settings:**
+
+1. **Wind Deflection (Boolean)<br>**
+Enables wind deflection.<br>
+`Default value: Yes`
+2. **Vehicle Enabled (Boolean)<br>**
+Enables wind deflection for static/vehicle gunners.<br>
+`Default value: Yes`
+3. **Simulation Interval (Number)<br>**
+Defines the interval between every calculation step.<br>
+`Default value: 0.05`
+4. **Simulation Radius (Number)<br>**
+Defines the radius around the player (in meters) at which projectiles are wind deflected.<br>
+`Default value: 3000`
 
 And then there's the "LSD Vehicles" module &hellip; it does 'something' to all vehicles synced to that module.
 http://youtu.be/X3e0LTexEok

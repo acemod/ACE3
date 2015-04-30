@@ -19,7 +19,7 @@
 
 EXPLODE_2_PVT(_this,_actionTreeList,_parentPath);
 
-private ["_parentNode", "_foundParentNode", "_fnc_findFolder"];
+private ["_parentNode", "_foundParentNode", "_fnc_findFolder", "_actionTree"];
 
 // Hack to make this work on the root node too
 if (count _parentPath == 0) exitWith {

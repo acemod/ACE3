@@ -19,6 +19,7 @@
 EXPLODE_2_PVT(_this,_explosive,_delay);
 
 [{
+    private ["_explosive"];
     _explosive = _this;
     if (!isNull _explosive) then {
         [_explosive, -1, [_explosive, 0]] call FUNC(detonateExplosive);

@@ -35,7 +35,7 @@ if !(_set) exitwith {
     _unit setvariable ["ACE_isUnconscious", false, true];
 };
 
-if !(!(isNull _unit) && {(_unit isKindOf "CaManBase") && ([_unit] call EFUNC(common,isAwake))}) exitwith{};
+if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call EFUNC(common,isAwake))}) exitwith{};
 
 if (!local _unit) exitwith {
     [[_unit], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
@@ -110,5 +110,8 @@ if (_maxUnconTime >= 0) then {
     }, [_unit], _maxUnconTime, 0.5] call EFUNC(common,waitAndExecute);
     _unit setVariable [QGVAR(maxUnconTimeHandle), _handle];
 };
+
+// unconscious can't talk
+[_unit, "isUnconscious"] call EFUNC(common,muteUnit);
 
 ["medical_onUnconscious", [_unit, true]] call EFUNC(common,globalEvent);

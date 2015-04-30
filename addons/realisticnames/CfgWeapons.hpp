@@ -193,7 +193,7 @@ class CfgWeapons {
     };
 
     // marksmen marksman
-    /*class DMR_02_base_F: Rifle_Long_Base_F {
+    class DMR_02_base_F: Rifle_Long_Base_F {
         displayName = "$STR_ACE_RealisticNames_DMR_02"; //MAR-10 .338";
     };
 
@@ -208,7 +208,6 @@ class CfgWeapons {
     class srifle_DMR_02_sniper_F: srifle_DMR_02_F {
         displayName = "$STR_ACE_RealisticNames_srifle_DMR_02_sniper"; //MAR-10 .338 (Sand)";
     };
-    */
     class DMR_03_base_F: Rifle_Long_Base_F {
         displayName = "$STR_ACE_RealisticNames_DMR_03"; //Mk-I EMR 7.62 mm";
     };
@@ -236,7 +235,6 @@ class CfgWeapons {
     class srifle_DMR_03_spotter_F: srifle_DMR_03_F {
         displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_spotter"; //NATO DMR (provisional) spotter";
     };
-    /*
     class DMR_04_base_F: Rifle_Long_Base_F {
         displayName = "$STR_ACE_RealisticNames_DMR_04"; //ASP-1 Kir 12.7 mm";
     };
@@ -264,7 +262,6 @@ class CfgWeapons {
     class srifle_DMR_05_tan_f: srifle_DMR_05_blk_F {
         displayName = "$STR_ACE_RealisticNames_srifle_DMR_05_tan"; //Cyrus 9.3 mm (Tan)";
     };
-    */
     class DMR_06_base_F: Rifle_Long_Base_F {
         displayName = "$STR_ACE_RealisticNames_DMR_06"; //Mk14 7.62 mm";
     };
@@ -278,7 +275,6 @@ class CfgWeapons {
     };
 
     // marksmen mgs
-    /*
     class MMG_01_base_F: Rifle_Long_Base_F {
         displayName = "$STR_ACE_RealisticNames_MMG_01"; //Navid 9.3 mm";
     };
@@ -290,7 +286,6 @@ class CfgWeapons {
     class MMG_01_tan_F: MMG_01_hex_F {
         displayName = "$STR_ACE_RealisticNames_MMG_01_tan"; //Navid 9.3 mm (Tan)";
     };
-    */
     class MMG_02_base_F: Rifle_Long_Base_F {
         displayName = "$STR_ACE_RealisticNames_MMG_02"; //SPMG .338";
     };
