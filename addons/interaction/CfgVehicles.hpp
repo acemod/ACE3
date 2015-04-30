@@ -79,9 +79,9 @@ class CfgVehicles {
             hotkey = "Y";
           };
 
-          class ACE_LeaveTeam {
+          class ACE_UnassignTeam {
             displayName = "$STR_ACE_Interaction_LeaveTeam";
-            condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _player != 'MAIN'});
+            condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _target != 'MAIN'});
             statement = QUOTE([ARR_2(_target,'MAIN')] call DFUNC(joinTeam));
             showDisabled = 1;
             icon = PATHTOF(UI\team\team_white_ca.paa);
