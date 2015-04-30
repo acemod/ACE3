@@ -90,7 +90,7 @@ _anim = [_unit] call EFUNC(common,getDeathAnim);
     if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
         [_unit, _anim, 2, true] call EFUNC(common,doAnimation);
     };
-}, [_unit, _anim], 2, 1] call EFUNC(common,waitAndExecute);
+}, [_unit, _anim], 0.5, 0] call EFUNC(common,waitAndExecute);
 
 _startingTime = time;
 
