@@ -17,7 +17,7 @@ if(! (_ammo isKindOf "MissileBase") ) exitWith { false };
 
 _configs = configProperties [configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON), "true", false];
 if( (count _configs) < 1) exitWith {};
-_config = _configs select 1;
+_config = (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON));
 _enabled = getNumber ( _config >> "enabled");
 
 // Bail if guidance is not enabled
