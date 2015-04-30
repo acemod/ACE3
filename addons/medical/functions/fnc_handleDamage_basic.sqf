@@ -24,14 +24,13 @@
 #define ARMDAMAGETRESHOLD2 1.7
 #define UNCONSCIOUSNESSTRESHOLD 0.7
 
-<<<<<<< HEAD
-private ["_unit", "_selectionName", "_damage", "_shooter", "_projectile", "_threshold"];
+private ["_unit", "_selectionName", "_damage", "_shooter", "_projectile", "_damage", "_armdamage", "_hitPoint", "_index", "_legdamage", "_newDamage", "_otherDamage", "_pain", "_restore"];
 
-_unit = _this select 0;
+_unit          = _this select 0;
 _selectionName = _this select 1;
-_damage = _this select 2;
-_shooter = _this select 3;
-_projectile = _this select 4;
+_damage        = _this select 2;
+_shooter       = _this select 3;
+_projectile    = _this select 4;
 
 // Apply damage treshold / coefficient
 _threshold = [
@@ -39,15 +38,6 @@ _threshold = [
     _unit getVariable [QGVAR(damageThreshold), GVAR(playerDamageThreshold)]
 ] select ([_unit] call EFUNC(common,isPlayer));
 _damage = _damage * (1 / _threshold);
-=======
-private ["_unit", "_selectionName", "_damage", "_shooter", "_projectile", "_damage", "_armdamage", "_hitPoint", "_index", "_legdamage", "_newDamage", "_otherDamage", "_pain", "_restore"];
-
-_unit         = _this select 0;
-_selectionName    = _this select 1;
-_damage       = _this select 2;
-_shooter      = _this select 3;
-_projectile   = _this select 4;
->>>>>>> origin/master
 
 // This is a new hit, reset variables.
 // Note: sometimes handleDamage spans over 2 or even 3 frames.
