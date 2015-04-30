@@ -43,19 +43,16 @@ _menuInSelectedPath = true;
 //END_COUNTER(constructing_paths);
 //BEGIN_COUNTER(constructing_colors);
 
-// Render icon
-// ARGB Color (First Hex Pair is transparancy)
-_textColor = GVAR(colorSelected);
-_shadowColor = GVAR(colorSelectedShadow);
+//Get text color settings string
+_textSettings = GVAR(colorSelectedSettings);
 if(!_menuInSelectedPath) then {
-    _textColor = (GVAR(colorNotSelectedMatrix) select (count _path)) select _menuDepth;
-    _shadowColor = (GVAR(colorShadowNotSelectedMatrix) select (count _path)) select _menuDepth;
+    _textSettings = (GVAR(textSettingsMatrix) select (count _path)) select _menuDepth;
 };
 
 //END_COUNTER(constructing_colors);
 //BEGIN_COUNTER(fnc_renderIcons);
 
-[_actionData select 1, _actionData select 2, _sPos, _textColor, _shadowColor, "#FFFFFFFF"] call FUNC(renderIcon);
+[_actionData select 1, _actionData select 2, _sPos, _textSettings] call FUNC(renderIcon);
 
 //END_COUNTER(fnc_renderIcons);
 

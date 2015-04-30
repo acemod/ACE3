@@ -68,6 +68,22 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_ColorShadowMin";
     };
+    class GVAR(textSize) {
+        value = 2;
+        typeName = "SCALAR";
+        isClientSettable = 1;
+        displayName = "Interaction Text Size";
+        description = "Interaction Text Size 2";
+        values[] = {"$str_very_small", "$str_small", "$str_medium", "$str_large", "$str_very_large"};
+    };    
+    class GVAR(shadowSetting) {
+        value = 1;
+        typeName = "SCALAR";
+        isClientSettable = 1;
+        displayName = "Text Shadow";
+        description = "Interaction Text Size 2";
+        values[] = {"Disabled", "Enabled", "Outline"};
+    };
 };
 
 class ACE_Extensions {

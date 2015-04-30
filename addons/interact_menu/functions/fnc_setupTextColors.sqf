@@ -12,7 +12,6 @@
  */
 #include "script_component.hpp"
 
-private ["_mixColor", "_rowT", "_rowS", "_menuDepth", "_pathCount"];
 
 //Mixes 2 colors (number arrays) and makes a color string "#AARRGGBB" for structured text
 _mixColor = {
@@ -30,23 +29,30 @@ _mixColor = {
     _return
 };
 
-GVAR(colorSelected) = [GVAR(colorTextMin), GVAR(colorTextMax), 1] call _mixColor;
-GVAR(colorSelectedShadow) = [GVAR(colorShadowMin), GVAR(colorShadowMax), 1] call _mixColor;
-GVAR(colorNotSelectedMatrix) = [];
-GVAR(colorShadowNotSelectedMatrix) = [];
+_textColor = [GVAR(colorTextMin), GVAR(colorTextMax), 1] call _mixColor;
+_shadowColor = [GVAR(colorShadowMin), GVAR(colorShadowMax), 1] call _mixColor;
+_textSize = switch (GVAR(textSize)) do {
+    case (0): {0.6};
+    case (1): {0.7};
+    case (2): {0.8};
+    case (3): {0.9};
+    case (4): {1};
+};
 
+GVAR(colorSelectedSettings) = format ["color='%1' size='%2' shadow='%3' shadowColor='%4' shadowOffset='0.06'", _textColor, _textSize, GVAR(shadowSetting), _shadowColor];
+
+GVAR(textSettingsMatrix) = [];
 for "_pathCount" from 0 to 15 do {
-    _rowT = [];
-    _rowS = [];
+    _row = [];
     for "_menuDepth" from 0 to 15 do {
         if (_menuDepth > 0) then {
-            _rowT pushBack ([GVAR(colorTextMin), GVAR(colorTextMax), (((_pathCount - 1) / _menuDepth) max 0.25)] call _mixColor);
-            _rowS pushBack ([GVAR(colorShadowMin), GVAR(colorShadowMax), (((_pathCount - 1) / _menuDepth) max 0.25)] call _mixColor);
+            _textColor = [GVAR(colorTextMin), GVAR(colorTextMax), (((_pathCount - 1) / _menuDepth) max 0.25)] call _mixColor;
+            _shadowColor = [GVAR(colorShadowMin), GVAR(colorShadowMax), (((_pathCount - 1) / _menuDepth) max 0.25)] call _mixColor;
         } else {
-            _rowT pushBack ([GVAR(colorTextMin), GVAR(colorTextMax), 0] call _mixColor);
-            _rowS pushBack ([GVAR(colorShadowMin), GVAR(colorShadowMax), 0] call _mixColor);
+            _textColor = [GVAR(colorTextMin), GVAR(colorTextMax), 0] call _mixColor;
+            _shadowColor = [GVAR(colorShadowMin), GVAR(colorShadowMax), 0] call _mixColor;
         };
+        _row pushBack format ["color='%1' size='%2' shadow='%3' shadowColor='%4' shadowOffset='0.06'", _textColor, _textSize, GVAR(shadowSetting), _shadowColor];
     };
-    GVAR(colorNotSelectedMatrix) pushBack _rowT;
-    GVAR(colorShadowNotSelectedMatrix) pushBack _rowS;
+    GVAR(textSettingsMatrix) pushBack _row;
 };
