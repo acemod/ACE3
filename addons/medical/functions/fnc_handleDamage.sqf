@@ -17,12 +17,12 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex"];
-_unit         = _this select 0;
-_selection    = _this select 1;
-_damage       = _this select 2;
-_shooter      = _this select 3;
-_projectile   = _this select 4;
+private ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
+_unit       = _this select 0;
+_selection  = _this select 1;
+_damage     = _this select 2;
+_shooter    = _this select 3;
+_projectile = _this select 4;
 
 if !(local _unit) exitWith {nil};
 
