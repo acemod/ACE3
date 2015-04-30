@@ -55,17 +55,17 @@ if (_show) then {
         };
 
         if (_target getvariable[QGVAR(isBleeding), false]) then {
-            _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_BLEEDING", [1, 0.1, 0.1, 1]];
+            _genericMessages pushback [localize "STR_ACE_Medical_Status_Bleeding", [1, 0.1, 0.1, 1]];
         };
         if (_target getvariable[QGVAR(hasLostBlood), 0] > 1) then {
-            _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_LOST_BLOOD", [1, 0.1, 0.1, 1]];
+            _genericMessages pushback [localize "STR_ACE_Medical_Status_Lost_Blood", [1, 0.1, 0.1, 1]];
         };
 
         if (((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select _selectionN) > 0) then {
-            _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_TOURNIQUET_APPLIED", [0.77, 0.51, 0.08, 1]];
+            _genericMessages pushback [localize "STR_ACE_Medical_Status_Tourniquet_Applied", [0.77, 0.51, 0.08, 1]];
         };
         if (_target getvariable[QGVAR(hasPain), false]) then {
-            _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_PAIN", [1, 1, 1, 1]];
+            _genericMessages pushback [localize "STR_ACE_Medical_Status_Pain", [1, 1, 1, 1]];
         };
 
         _totalIvVolume = 0;
@@ -77,7 +77,7 @@ if (_show) then {
             };
         }foreach GVAR(IVBags);
         if (_totalIvVolume >= 1) then {
-            _genericMessages pushback [format[localize "STR_ACE_MEDICAL_receivingIvVolume", floor _totalIvVolume], [1, 1, 1, 1]];
+            _genericMessages pushback [format[localize "STR_ACE_Medical_receivingIvVolume", floor _totalIvVolume], [1, 1, 1, 1]];
         };
 
         _damaged = [false, false, false, false, false, false];
