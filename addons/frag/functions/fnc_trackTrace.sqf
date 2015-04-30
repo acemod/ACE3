@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-private ["_params", "_tracerObj", "_index", "_positions"];
+private ["_params", "_tracerObj", "_index", "_positions", "_data"];
 _params = _this select 0;
 _tracerObj = _params select 0;
 _index = _params select 1;
