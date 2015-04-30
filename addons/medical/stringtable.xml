@@ -8,6 +8,7 @@
             <Russian>ТРАВМЫ</Russian>
             <French>BLESSURES</French>
             <Polish>OBRAŻENIA</Polish>
+            <Hungarian>SÉRÜLÉSEK</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_NoInjuriesBodypart">
             <English>No injuries on this bodypart ...</English>
@@ -16,6 +17,7 @@
             <Russian>Данная часть тела не повреждена ...</Russian>
             <French>Aucune blessures sur cette partie du corps</French>
             <Polish>Brak obrażeń na tej części ciała ...</Polish>
+            <Hungarian>Ezen a testrészen nincs sérülés ...</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
@@ -24,6 +26,7 @@
             <Russian>Количество мусора от медицины</Russian>
             <Italian>Dettagli Simulazione Rifiuti</Italian>
             <French>Niveau de simulation des détritus</French>
+            <Hungarian>Hulladékszimuláció részletessége</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail_Desc">
             <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
@@ -32,6 +35,7 @@
             <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
             <Italian>Il livello di dettagli della simulazione dei rifiuti indica il numero di rifiuti che verranno creati localmente nel client. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio client.</Italian>
             <French>Le nieau de simulation des détritus règle la quantité de déchets qui vont être créer localement dans le client. Des quantitées excessive dans certaines zones locales aurait pu causer des chutes D'IPS, donc c'est une option client uniquement.</French>
+            <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -115,6 +119,7 @@
             <Russian>Наложить жгут</Russian>
             <Italian>Applica laccio emostatico</Italian>
             <Portuguese>Aplicar Torniquete</Portuguese>
+            <Hungarian>Érszorító alkalmazása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage">
             <English>Bandage</English>
@@ -398,6 +403,7 @@
             <Russian>Нет записей.</Russian>
             <French>Aucune entrée sur cette carte de triage</French>
             <Polish>Brak wpisów w tej karcie segregacyjnej.</Polish>
+            <Hungarian>Ez az orvosi lap nem tartalmaz bejegyzést.</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Tourniquet">
             <English>Tourniquet</English>
@@ -430,6 +436,7 @@
             <Russian>Диагностика</Russian>
             <French>Diagnostiquer</French>
             <Polish>Diagnoza</Polish>
+            <Hungarian>Diagnosztizálás</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Diagnosing">
             <English>Diagnosing ...</English>
@@ -438,6 +445,7 @@
             <Russian>Диагностика ...</Russian>
             <French>Diagnostic en cours</French>
             <Polish>Diagnozowanie ...</Polish>
+            <Hungarian>Diagnózis folyamatban...</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_CPR">
             <English>CPR</English>
@@ -446,6 +454,7 @@
             <Russian>Сердечно-легочная реанимация</Russian>
             <French>RPC</French>
             <Polish>RKO</Polish>
+            <Hungarian>Újraélesztés</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_PerformingCPR">
             <English>Performing CPR ...</English>
@@ -454,6 +463,7 @@
             <Russian>Сердечно-легочная реанимация ...</Russian>
             <French>RPC en cours</French>
             <Polish>Przeprowadzanie RKO ...</Polish>
+            <Hungarian>Újraélesztés folyamatban...</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_ACTIONS_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
@@ -966,6 +976,7 @@
             <Italian>Una sostanza che permette di dilatare i bronchi, aumentare il battito cardiaco e combattere effetti di reazioni allergiche. Usato anche in casi di arresto cardiaco.</Italian>
             <German>Ein Medikament, dass die Bronchien erweitert, die Herzfrequenz erhöht und Symptome von allergischen Reaktionen(Anaphylaxie) bekämpft. Wird bei plötzlichem Herzstillstand verabreicht.</German>
             <Portuguese>Uma droga trabalha dilatando os bronquios, aumentando a frequência cardíaca e combate efeitos de reações alérgicas(anáfilaticas). Usado em casos de parada cardiaca com poucas changes de recuperação.</Portuguese>
+            <Hungarian>Egy hormon, mely a szimpatikus idegrendszer által kitágítja a hörgőket, valamint megnöveli a szívverést, ezzel ellensúlyozva ilyen jellegű allergiás reakciókat (anafilaxiás sokk). Hirtelen szívmegállás esetén is használt, idő alatt csökkenő hatásfokkal.</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_PLASMA_IV">
             <English>Plasma IV (1000ml)</English>
@@ -1053,6 +1064,7 @@
             <French>Cullot sanguin O- utilisé dans de rares et stricts cas pour compléter une perte de sang importante. Administré normalement lors d'un MEDEVAC</French>
             <German>O Negative Blutinfusion wird nur in seltenen Fällen verwendet, um den Bluthaushalt des Patienten zu ergänzen. Wird in der Regel wärend der Transportphase durchgeführt.</German>
             <Portuguese>Sangue O- , utilizado em casos raros para rapidamente repor o sangue. Uso habitual ocorre durante o transporte ou em estações de tratamento. </Portuguese>
+            <Hungarian>Nullás vércsoportú, Rh-negatív vér-infúzió, melyet kritikus és ritka helyzetekben vérutánpótlásra használnak, jellemzően az orvosi ellátás szállítási fázisa közben.</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BLOOD_IV_500">
             <English>Blood IV (500ml)</English>
@@ -1192,6 +1204,7 @@
             <Russian>Полевая аптчека для продвинутого лечения и зашивания ран</Russian>
             <German>Persönliches Verbandspäckchen zum ambulanten Nähen und fortgeschrittener Behandlung.</German>
             <French>Trousse de premiers soins pour coudre sur le terrain et traitements avancés.</French>
+            <Hungarian>Elsősegélycsomag, terepen való sebvarráshoz és haladó ellátáshoz</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_USE_AID_KIT">
             <English>Use Personal Aid Kit</English>
@@ -1199,6 +1212,7 @@
             <Russian>Использовать аптечку</Russian>
             <French>Utiliser la Trousse de premier soins</French>
             <Polish>Użyj apteczki osobistej</Polish>
+            <Hungarian>Elsősegélycsomag használata</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_SURGICALKIT_DISPLAY">
             <English>Surgical Kit</English>
@@ -1239,6 +1253,7 @@
             <Russian>Использовать хирургический набор</Russian>
             <French>Utiliser la trousse chirugicale</French>
             <Polish>Zszyj rany</Polish>
+            <Hungarian>Sebészeti készlet használata</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BODYBAG_DISPLAY">
             <English>Bodybag</English>
@@ -1301,6 +1316,7 @@
             <Russian>%1 проверил артериальное давление: %2</Russian>
             <French>%1 à vérifié la tension: %2</French>
             <Polish>%1 sprawdził ciśnienie krwi: %2</Polish>
+            <Hungarian>%1 ellenőrizte a vérnyomást: %2</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CHECKED_MEDIC">
             <English>You checked %1</English>
@@ -1385,6 +1401,7 @@
             <Russian>Низкое</Russian>
             <French>Faible</French>
             <Polish>Niskie</Polish>
+            <Hungarian>Alacsony</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_NORMAL">
             <English>Normal</English>
@@ -1392,6 +1409,7 @@
             <Russian>Нормальное</Russian>
             <French>Normale</French>
             <Polish>Normalne</Polish>
+            <Hungarian>Normális</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_HIGH">
             <English>High</English>
@@ -1399,6 +1417,7 @@
             <Russian>Высокое</Russian>
             <French>Haute</French>
             <Polish>Wysokie</Polish>
+            <Hungarian>Magas</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_NOBLOODPRESSURE">
             <English>No Blood Pressure</English>
@@ -1406,6 +1425,7 @@
             <Russian>Артериальное давление отсутствует</Russian>
             <French>Aucune tension</French>
             <Polish>Brak ciśnienia krwi</Polish>
+            <Hungarian>Nincs vérnyomás</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE">
             <English>Pulse</English>
@@ -1446,6 +1466,7 @@
             <Russian>%1 проверил пульс: %2</Russian>
             <French>%1 à vérifié le rythme cardiaque: %2</French>
             <Polish>%1 sprawdził tętno: %2</Polish>
+            <Hungarian>%1 ellenőrizte a szívverés-számot: %2</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_WEAK">
             <English>Weak</English>
@@ -1453,6 +1474,7 @@
             <Russian>Слабый</Russian>
             <French>Faible</French>
             <Polish>Słabe</Polish>
+            <Hungarian>Gyenge</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_NORMAL">
             <English>Normal</English>
@@ -1460,6 +1482,7 @@
             <Russian>Нормальный</Russian>
             <French>Normal</French>
             <Polish>Normalne</Polish>
+            <Hungarian>Normális</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_STRONG">
             <English>Strong</English>
@@ -1467,6 +1490,7 @@
             <Russian>Сильный</Russian>
             <French>Fort</French>
             <Polish>Silne</Polish>
+            <Hungarian>Erős</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_CHECK_PULSE_OUTPUT_1">
             <English>You find a Heart Rate of %2</English>
@@ -1584,6 +1608,7 @@
             <German>Patient %1&lt;br/&gt;ist %2.&lt;br/&gt;%3.&lt;br/&gt;%4</German>
             <French>Patient %1&lt;br/&gt;est %2.&lt;br/&gt;%3.&lt;br/&gt;</French>
             <Polish>Pacjent %1&lt;br/&gt;jest %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Polish>
+            <Hungarian>A páciens, %1,&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseAlive">
             <English>alive</English>
@@ -1591,6 +1616,7 @@
             <German>lebendig</German>
             <French>vivant</French>
             <Polish>żywy</Polish>
+            <Hungarian>élő</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_diagnoseDead">
             <English>dead</English>
@@ -1598,6 +1624,7 @@
             <German>tot</German>
             <French>mort</French>
             <Polish>martwy</Polish>
+            <Hungarian>halott</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_lostBlood">
             <English>He's lost some blood</English>
@@ -1605,9 +1632,11 @@
             <German>Er hat etwas Blut verloren</German>
             <French>Il à perdu du sang</French>
             <Polish>Stracił trochę krwi</Polish>
+            <Hungarian>Valamennyi vért vesztett</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_lostBloodALot">
             <English>He's lost a lot of blood</English>
+            <Hungarian>Sok vért vesztett</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noBloodloss">
             <English>He hasn't lost blood</English>
@@ -1615,6 +1644,7 @@
             <German>Er hat kein Blut verloren</German>
             <French>il n'a pas perdu de sang</French>
             <Polish>Nie stracił krwi</Polish>
+            <Hungarian>Nem vesztett vért</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_inPain">
             <English>He is in pain</English>
@@ -1622,6 +1652,7 @@
             <German>Er hat Schmerzen</German>
             <French>il souffre</French>
             <Polish>Odczuwa ból</Polish>
+            <Hungarian>Fájdalmai vannak</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_noPain">
             <English>He is not in pain</English>
@@ -1629,6 +1660,7 @@
             <German>Er hat keine Schmerzen</German>
             <French>Il ne souffre pas</French>
             <Polish>Nie odczuwa bólu</Polish>
+            <Hungarian>Nincsenek fájdalmai</Hungarian>
         </Key>
         <Key ID="STR_ACE_MEDICAL_BANDAGED">
             <English>Bandaged</English>
@@ -1874,6 +1906,7 @@
             <Italian>Gravemente ferito</Italian>
             <Spanish>Gravemente herido</Spanish>
             <French>Lourdement blessé</French>
+            <Hungarian>Erősen sérült</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_LightlyWounded">
             <English>Lightly wounded</English>
@@ -1883,6 +1916,7 @@
             <Italian>Leggermente ferito</Italian>
             <Spanish>Levemente herido</Spanish>
             <French>Légèrement blessé</French>
+            <Hungarian>Enyhén sérült</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_VeryLightlyWounded">
             <English>Very lightly wounded</English>
@@ -1892,6 +1926,7 @@
             <Italian>Ferito lievemente</Italian>
             <Spanish>Muy levemente herido</Spanish>
             <French>Très légèrement blessé</French>
+            <Hungarian>Nagyon enyhén sérült</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Head">
             <English>Head</English>
@@ -1901,6 +1936,7 @@
             <Italian>Testa</Italian>
             <Spanish>Cabeza</Spanish>
             <French>Tête</French>
+            <Hungarian>Fej</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Torso">
             <English>Torso</English>
@@ -1910,6 +1946,7 @@
             <Italian>Torso</Italian>
             <Spanish>Torso</Spanish>
             <French>Torse</French>
+            <Hungarian>Testtörzs</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_LeftArm">
             <English>Left Arm</English>
@@ -1919,6 +1956,7 @@
             <Italian>Braccio sinistro</Italian>
             <Spanish>Brazo izquierdo</Spanish>
             <French>Bras gouche</French>
+            <Hungarian>Bal kar</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_RightArm">
             <English>Right Arm</English>
@@ -1928,6 +1966,7 @@
             <Italian>Braccio destro</Italian>
             <Spanish>Brazo derecho</Spanish>
             <French>Bras droit</French>
+            <Hungarian>Jobb kar</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_LeftLeg">
             <English>Left Leg</English>
@@ -1937,6 +1976,7 @@
             <Italian>Gamba sinistra</Italian>
             <Spanish>Pierna izquierda</Spanish>
             <French>Jambe gauche</French>
+            <Hungarian>Bal láb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_RightLeg">
             <English>Right Leg</English>
@@ -1946,6 +1986,7 @@
             <Italian>Gamba destra</Italian>
             <Spanish>Pierna derecha</Spanish>
             <French>Jambe droite</French>
+            <Hungarian>Jobb láb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
@@ -1955,6 +1996,7 @@
             <Italian>Pain Effect Type</Italian>
             <Spanish>Tipo de efecto de dolor</Spanish>
             <French>Type d'effet de douleur</French>
+            <Hungarian>Fájdalom-effekt típusa</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Flash">
             <English>Colour Flashing</English>
@@ -1964,6 +2006,7 @@
             <Italian>Colore lampeggiante</Italian>
             <Spanish>Parpadeo de color</Spanish>
             <French>Flash de couleur</French>
+            <Hungarian>Színvillódzás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Chroma">
             <English>Chromatic Aberration</English>
@@ -1973,6 +2016,7 @@
             <Italian>Aberrazione cromatica</Italian>
             <Spanish>Aberración cromática</Spanish>
             <French>Aberration chromatique</French>
+            <Hungarian>Kromatikus aberráció</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion">
             <English>Scrape</English>
@@ -1980,6 +2024,7 @@
             <Russian>Ссадина</Russian>
             <French>Eraflure</French>
             <Polish>Draśnięcie</Polish>
+            <Hungarian>Horzsolás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Minor">
             <English>Minor Scrape</English>
@@ -1987,6 +2032,7 @@
             <Russian>Малая ссадина</Russian>
             <French>Eraflure Mineure</French>
             <Polish>Pomniejsze draśnięcie</Polish>
+            <Hungarian>Kis horzsolás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Medium">
             <English>Medium Scrape</English>
@@ -1994,6 +2040,7 @@
             <Russian>Средняя ссадина</Russian>
             <French>Moyenne Eraflure</French>
             <Polish>Średnie draśnięcie</Polish>
+            <Hungarian>Közepes horzsolás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Large">
             <English>Large Scrape</English>
@@ -2001,6 +2048,7 @@
             <Russian>Большая ссадина</Russian>
             <French>Large Eraflure</French>
             <Polish>Duże draśnięcie</Polish>
+            <Hungarian>Nagy horzsolás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion">
             <English>Avulsion</English>
@@ -2008,6 +2056,7 @@
             <Russian>Рваная рана</Russian>
             <French>Avulsion</French>
             <Polish>Rana płatowa</Polish>
+            <Hungarian>Leszakadás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Minor">
             <English>Minor Avulsion</English>
@@ -2015,6 +2064,7 @@
             <Russian>Малая рваная рана</Russian>
             <French>Avulsion Mineure</French>
             <Polish>Pomniejsza rana płatowa</Polish>
+            <Hungarian>Kis leszakadás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Medium">
             <English>Medium Avulsion</English>
@@ -2022,6 +2072,7 @@
             <Russian>Средняя рваная рана</Russian>
             <French>Avulsion Moyenne</French>
             <Polish>Średnia rana płatowa</Polish>
+            <Hungarian>Közepes leszakadás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Large">
             <English>Large Avulsion</English>
@@ -2029,6 +2080,7 @@
             <Russian>Большая рваная рана</Russian>
             <French>Large Avulsion</French>
             <Polish>Duża rana płatowa</Polish>
+            <Hungarian>Nagy leszakadás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion">
             <English>Bruise</English>
@@ -2036,6 +2088,7 @@
             <Russian>Ушиб</Russian>
             <French>Hématome</French>
             <Polish>Stłuczenie</Polish>
+            <Hungarian>Zúzódás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Minor">
             <English>Minor Bruise</English>
@@ -2043,6 +2096,7 @@
             <Russian>Малый ушиб</Russian>
             <French>Hématome Mineur</French>
             <Polish>Pomniejsze stłuczenie</Polish>
+            <Hungarian>Kis zúzódás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Medium">
             <English>Medium Bruise</English>
@@ -2050,6 +2104,7 @@
             <Russian>Средний ушиб</Russian>
             <French>Hématome Moyen</French>
             <Polish>Średnie stłuczenie</Polish>
+            <Hungarian>Közepes zúzódás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Large">
             <English>Large Bruise</English>
@@ -2057,6 +2112,7 @@
             <Russian>Большой ушиб</Russian>
             <French>Large Hématome</French>
             <Polish>Duże stłuczenie</Polish>
+            <Hungarian>Nagy zúzódás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush">
             <English>Crushed tissue</English>
@@ -2064,6 +2120,7 @@
             <Russian>Компресионная травма</Russian>
             <French>Tissu écrasé</French>
             <Polish>Zgniecienie tkanek miękkich</Polish>
+            <Hungarian>Zúzott szövet</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Minor">
             <English>Minor crushed tissue</English>
@@ -2071,6 +2128,7 @@
             <Russian>Малая компрессионная травма</Russian>
             <French>Tissu écrasé Mineur</French>
             <Polish>Pomniejsze zgniecienie tkanek miękkich</Polish>
+            <Hungarian>Kis zúzott szövet</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Medium">
             <English>Medium crushed tissue</English>
@@ -2078,6 +2136,7 @@
             <Russian>Средняя компрессионная травма</Russian>
             <French>Tissu écrasé Moyen</French>
             <Polish>Średnie zgniecienie tkanek miękkich</Polish>
+            <Hungarian>Közepes zúzott szövet</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Large">
             <English>Large crushed tissue</English>
@@ -2085,6 +2144,7 @@
             <Russian>Большая компрессионная травма</Russian>
             <French>Tissu écrasé Large</French>
             <Polish>Duże zgniecienie tkanek miękkich</Polish>
+            <Hungarian>Nagy zúzött szövet</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut">
             <English>Cut</English>
@@ -2092,6 +2152,7 @@
             <Russian>Резаная рана</Russian>
             <French>Coupure</French>
             <Polish>Rana cięta</Polish>
+            <Hungarian>Vágás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Minor">
             <English>Small Cut</English>
@@ -2099,6 +2160,7 @@
             <Russian>Малая резаная рана</Russian>
             <Polish>Pomniejsza rana cięta</Polish>
             <French>Petite Coupure</French>
+            <Hungarian>Kis vágás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Medium">
             <English>Medium Cut</English>
@@ -2106,6 +2168,7 @@
             <Russian>Средняя резаная рана</Russian>
             <Polish>Średnia rana cięta</Polish>
             <French>Moyenne Coupure</French>
+            <Hungarian>Közepes vágás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Large">
             <English>Large Cut</English>
@@ -2113,6 +2176,7 @@
             <Russian>Большая резаная рана</Russian>
             <Polish>Duża rana cięta</Polish>
             <French>Large Coupure</French>
+            <Hungarian>Nagy vágás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration">
             <English>Tear</English>
@@ -2120,6 +2184,7 @@
             <Russian>Рваная рана</Russian>
             <Polish>Rozerwanie skóry</Polish>
             <French>Déchirure</French>
+            <Hungarian>Szakadás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Minor">
             <English>Small Tear</English>
@@ -2127,6 +2192,7 @@
             <Russian>Малая рваная рана</Russian>
             <Polish>Pomniejsze rozerwanie skóry</Polish>
             <French>Petite Déchirure</French>
+            <Hungarian>Kis szakadás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Medium">
             <English>Medium Tear</English>
@@ -2134,6 +2200,7 @@
             <Russian>Средняя рваная рана</Russian>
             <Polish>Średnie rozerwanie skóry</Polish>
             <French>Moyenne Déchirure</French>
+            <Hungarian>Közepes szakadás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Large">
             <English>Large Tear</English>
@@ -2141,6 +2208,7 @@
             <Russian>Большая рваная рана</Russian>
             <Polish>Duże rozerwanie skóry</Polish>
             <French>Large Déchirure</French>
+            <Hungarian>Nagy szakadás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound">
             <English>Velocity Wound</English>
@@ -2148,6 +2216,7 @@
             <Russian>Огнестрельная рана</Russian>
             <Polish>Rana postrzałowa</Polish>
             <French>Blessure de vélocité</French>
+            <Hungarian>Lőtt seb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Minor">
             <English>Smal Velocity Wound</English>
@@ -2155,6 +2224,7 @@
             <Russian>Малая огнестрельная рана</Russian>
             <Polish>Pomniejsza rana postrzałowa</Polish>
             <French>Petite Bessure de vélocité</French>
+            <Hungarian>Kis lőtt seb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Medium">
             <English>Medium Velocity Wound</English>
@@ -2162,6 +2232,7 @@
             <Russian>Средняя огнестрельная рана</Russian>
             <Polish>Średnia rana postrzałowa</Polish>
             <French>Moyenne Blessure de vélocité</French>
+            <Hungarian>Közepes lőtt seb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Large">
             <English>Large Velocity Wound</English>
@@ -2169,6 +2240,7 @@
             <Russian>Большая огнестрельная рана</Russian>
             <Polish>Duża rana postrzałowa</Polish>
             <French>Large Blessure de vélocité</French>
+            <Hungarian>Nagy lőtt seb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound">
             <English>Puncture Wound</English>
@@ -2176,6 +2248,7 @@
             <Russian>Колотая рана</Russian>
             <Polish>Rana kłuta</Polish>
             <French>Blessure de perforation</French>
+            <Hungarian>Szúrt seb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Minor">
             <English>Minor Puncture Wound</English>
@@ -2183,6 +2256,7 @@
             <Russian>Малая колотая рана</Russian>
             <Polish>Pomniejsza rana kłuta</Polish>
             <French>Blessure de perforation Mineure</French>
+            <Hungarian>Kis szúrt seb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Medium">
             <English>Medium Puncture Wound</English>
@@ -2190,6 +2264,7 @@
             <Russian>Средняя колотая рана</Russian>
             <Polish>Średnia rana kłuta</Polish>
             <French>Blessure de perforation Moyenne</French>
+            <Hungarian>Közepes szúrt seb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Large">
             <English>Large Puncture Wound</English>
@@ -2197,6 +2272,7 @@
             <Russian>Большая колотая рана</Russian>
             <Polish>Duża rana kłuta</Polish>
             <French>Large Blessure de perforation</French>
+            <Hungarian>Nagy szúrt seb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Femur">
             <English>Broken Femur</English>
@@ -2204,9 +2280,11 @@
             <Russian>Перелом</Russian>
             <Polish>Zkłamana kość udowa</Polish>
             <French>Femur Cassé</French>
+            <Hungarian>Törött combcsont</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_TreatmentAction">
             <English>Treating...</English>
+            <Hungarian>Ellátás...</Hungarian>
         </Key>
     </Package>
 </Project>

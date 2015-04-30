@@ -56,6 +56,7 @@
             <Russian>Точка сбора Синих (База)</Russian>
             <Polish>Punkt zbiórki Zachodu (Baza)</Polish>
             <French>Point de ralliement OUEST (Base)</French>
+            <Hungarian>Gyülekezőpont, Nyugat (Bázis)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEastBase">
             <English>Rallypoint East (Base)</English>
@@ -64,6 +65,7 @@
             <Russian>Точка сбора Красных (База)</Russian>
             <Polish>Punkt zbiórki Wschodu (Baza)</Polish>
             <French>Point de ralliement EST (Base)</French>
+            <Hungarian>Gyülekezőpont, Kelet (Bázis)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependentBase">
             <English>Rallypoint Independent (Base)</English>
@@ -72,6 +74,7 @@
             <Russian>Точка сбора Независимых (База)</Russian>
             <Polish>Punkt zbiórki Ruchu oporu (Baza)</Polish>
             <French>Point de ralliement Indépendant (Base)</French>
+            <Hungarian>Gyülekezőpont, Független (Bázis)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWest">
             <English>Rallypoint West</English>
@@ -80,6 +83,7 @@
             <Russian>Точка сбора Синих</Russian>
             <Polish>Punkt zbiórki Zachodu</Polish>
             <French>Point de ralliement OUEST</French>
+            <Hungarian>Gyülekezőpont, Nyugat</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEast">
             <English>Rallypoint East</English>
@@ -88,6 +92,7 @@
             <Russian>Точка сбора Красных</Russian>
             <Polish>Punkt zbiórki Wschodu</Polish>
             <French>Point de ralliement EST</French>
+            <Hungarian>Gyülekezőpont, Kelet</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependent">
             <English>Rallypoint Independent</English>
@@ -96,6 +101,7 @@
             <Russian>Точка сбора Независимых</Russian>
             <Polish>Punkt zbiórki Ruchu oporu</Polish>
             <French>Point de ralliement Indépendant</French>
+            <Hungarian>Gyülekezőpont, Független</Hungarian>
         </Key>
     </Package>
 </Project>

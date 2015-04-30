@@ -21,6 +21,7 @@
             <Polish>Zawsze wyświetlaj kursor dla interakcji</Polish>
             <Russian>Показывать курсор (взаимодействие)</Russian>
             <German>Immer den Cursor für Fremd-Interaktionen anzeigen</German>
+            <Hungarian>Mindig legyen a cselekvés kurzorja látható</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
@@ -30,6 +31,7 @@
             <Italian>Mostra il menù di interazione come lista</Italian>
             <Polish>Wyświetlaj menu interakcji jako listę</Polish>
             <German>Interaktionsmenü in Listen anzeigen</German>
+            <Hungarian>Cselekvő menük listaként való megjelenítése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_InteractKey">
             <English>Interact Key</English>
@@ -85,6 +87,7 @@
             <French>Interaction - Texte Max</French>
             <German>Interaktionstextfarbe Max</German>
             <Italian>Interazioni - Testo Massimo</Italian>
+            <Hungarian>Cselekvés - Szöveg max.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
             <English>Interaction - Text Min</English>
@@ -92,6 +95,7 @@
             <French>Interaction - Texte Min</French>
             <German>Interaktionstextfarbe Min</German>
             <Italian>Interazioni - Testo Minimo</Italian>
+            <Hungarian>Cselekvés - Szöveg min.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
             <English>Interaction - Shadow Max</English>
@@ -99,6 +103,7 @@
             <French>Interaction - Ombre Max</French>
             <German>Interaktionstextschatten Max</German>
             <Italian>Interazioni - Ombra Massima</Italian>
+            <Hungarian>Cselekvés - Árnyék max.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
@@ -106,14 +111,17 @@
             <French>Interaction - Ombre Min</French>
             <German>Interaktionstextschatten Min</German>
             <Italian>Interazioni - Ombra Minima</Italian>
+            <Hungarian>Cselekvés - Árnyék min.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCentered">
             <English>Keep cursor centered</English>
             <French>Garder le curseur au centre</French>
+            <Hungarian>Kurzor középen tartása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCenteredDescription">
             <English>Keeps cursor centered and pans the option menu around.  Useful if screen size is limited.</English>
             <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
+            <Hungarian>Középen tartja a kurzort, és a menüelemeket mozgatja. Hasznos lehetőség korlátozott képméretnél.</Hungarian>
         </Key>
     </Package>
 </Project>
