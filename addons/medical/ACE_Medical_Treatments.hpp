@@ -56,8 +56,8 @@ class ACE_Medical_Actions {
             litter[] = {};
         };
         class BodyBag: Bandage {
-            displayName = "$STR_ACE_MEDICAL_PlaceInBodyBag";
-            displayNameProgress = "$STR_ACE_MEDICAL_PlacingInBodyBag";
+            displayName = "$STR_ACE_Medical_PlaceInBodyBag";
+            displayNameProgress = "$STR_ACE_Medical_PlacingInBodyBag";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 2;
@@ -72,8 +72,8 @@ class ACE_Medical_Actions {
             litter[] = {};
         };
         class Diagnose: Bandage {
-            displayName = "$STR_ACE_MEDICAL_ACTIONS_Diagnose";
-            displayNameProgress = "$STR_ACE_MEDICAL_ACTIONS_Diagnosing";
+            displayName = "$STR_ACE_Medical_Actions_Diagnose";
+            displayNameProgress = "$STR_ACE_Medical_Actions_Diagnosing";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 1;
@@ -225,7 +225,7 @@ class ACE_Medical_Actions {
         };
         class CheckPulse: fieldDressing {
             displayName = "";
-            displayNameProgress = "$STR_ACE_MEDICAL_CHECK_PULSE_CONTENT";
+            displayNameProgress = "$STR_ACE_Medical_Check_Pulse_CONTENT";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 2;
@@ -240,11 +240,11 @@ class ACE_Medical_Actions {
         };
         class CheckBloodPressure: CheckPulse {
             callbackSuccess = QUOTE(DFUNC(actionCheckBloodPressure));
-            displayNameProgress = "$STR_ACE_MEDICAL_CHECK_BLOODPRESSURE_CONTENT";
+            displayNameProgress = "$STR_ACE_Medical_Check_Bloodpressure_CONTENT";
         };
         class CheckResponse: CheckPulse {
             callbackSuccess = QUOTE(DFUNC(actionCheckResponse));
-            displayNameProgress = "$STR_ACE_MEDICAL_CHECK_RESPONSE_CONTENT";
+            displayNameProgress = "$STR_ACE_Medical_Check_Response_CONTENT";
         };
         class RemoveTourniquet: CheckPulse {
             treatmentTime = 2.5;
@@ -252,8 +252,8 @@ class ACE_Medical_Actions {
             condition = QUOTE([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo));
         };
         class CPR: fieldDressing {
-            displayName = "$STR_ACE_MEDICAL_ACTIONS_CPR";
-            displayNameProgress = "$STR_ACE_MEDICAL_ACTIONS_PerformingCPR";
+            displayName = "$STR_ACE_Medical_Actions_CPR";
+            displayNameProgress = "$STR_ACE_Medical_Actions_PerformingCPR";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 15;
@@ -272,8 +272,8 @@ class ACE_Medical_Actions {
             litter[] = {};
         };
         class BodyBag: fieldDressing {
-            displayName = "$STR_ACE_MEDICAL_PlaceInBodyBag";
-            displayNameProgress = "$STR_ACE_MEDICAL_PlacingInBodyBag";
+            displayName = "$STR_ACE_Medical_PlaceInBodyBag";
+            displayNameProgress = "$STR_ACE_Medical_PlacingInBodyBag";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 2;
