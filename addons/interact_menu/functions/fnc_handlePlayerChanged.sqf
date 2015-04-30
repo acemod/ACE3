@@ -16,9 +16,9 @@ EXPLODE_2_PVT(_this,_newUnit,_oldUnit);
 // add to new unit
 private "_ehid";
 _ehid = [_newUnit, "DefaultAction", {GVAR(openedMenuType) >= 0}, {
-	if !(GVAR(actionOnKeyRelease)) then {
-		[GVAR(openedMenuType),true] call FUNC(keyUp);
-	};
+    if !(GVAR(actionOnKeyRelease)) then {
+        [GVAR(openedMenuType),true] call FUNC(keyUp);
+    };
 }] call EFUNC(common,addActionEventHandler);
 
 _newUnit setVariable [QGVAR(AAEHID), _ehid];
