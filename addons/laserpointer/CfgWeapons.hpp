@@ -20,6 +20,8 @@ class CfgWeapons {
         ACE_nextModeClass = "acc_pointer_IR";
         ACE_modeDescription = "$STR_ACE_Laserpointer_Laser";
 
+        ACE_laserpointer = 1;
+
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_acc_pointer_red";
         scope = 1;
@@ -78,6 +80,8 @@ class CfgWeapons {
     class ACE_acc_pointer_green: ACE_acc_pointer_red {
         ACE_nextModeClass = "ACE_acc_pointer_green_IR";
         ACE_modeDescription = "$STR_ACE_Laserpointer_Laser";
+
+        ACE_laserpointer = 2;
 
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_acc_pointer_green";
