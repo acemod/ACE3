@@ -113,12 +113,6 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 0;
             };
-            class maxUnconsciousTime {
-                displayName = "Max. Uncon. Time";
-                description = "Maximum time a unit can be unconscious before dying. Negative Values disable this.";
-                typeName = "NUMBER";
-                defaultValue = -1;
-            };
             class bleedingCoefficient {
                 displayName = "Bleeding coefficient";
                 description = "Coefficient to modify the bleeding speed";

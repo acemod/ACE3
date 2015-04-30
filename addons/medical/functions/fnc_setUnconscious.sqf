@@ -25,12 +25,6 @@ _minWaitingTime = if (count _this > 2) then {_this select 2} else {DEFAULT_DELAY
 // No change, fuck off. (why is there no xor?)
 if (_set isEqualTo (_unit getVariable ["ACE_isUnconscious", false])) exitWith {};
 
-// Remove maximum unconsciousness time handler
-_maxUnconHandle = _unit getVariable [QGVAR(maxUnconTimeHandle), -1];
-if (_maxUnconHandle > 0) then {
-    [_maxUnconHandle] call CBA_fnc_removePerFrameHandler;
-};
-
 if !(_set) exitwith {
     _unit setvariable ["ACE_isUnconscious", false, true];
 };
@@ -100,16 +94,6 @@ _anim = [_unit] call EFUNC(common,getDeathAnim)
 _startingTime = time;
 
 [DFUNC(unconsciousPFH), 0.1, [_unit,_animState, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
-
-// Maximum unconsciousness time
-_maxUnconTime = _unit getVariable [QGVAR(maxUnconsciousTime), GVAR(maxUnconsciousTime)];
-if (_maxUnconTime >= 0) then {
-    _handle = [{
-        _unit = _this select 0;
-        [_unit] call FUNC(setDead);
-    }, [_unit], _maxUnconTime, 0.5] call EFUNC(common,waitAndExecute);
-    _unit setVariable [QGVAR(maxUnconTimeHandle), _handle];
-};
 
 // unconscious can't talk
 [_unit, "isUnconscious"] call EFUNC(common,muteUnit);

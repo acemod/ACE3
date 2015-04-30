@@ -63,10 +63,6 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 0;
     };
-    class GVAR(maxUnconsciousTime) {
-        typeName = "SCALAR";
-        value = -1;
-    };
     class GVAR(enableRevive) {
         typeName = "SCALAR";
         value = 0;
