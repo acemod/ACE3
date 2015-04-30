@@ -89,7 +89,7 @@ _anim = [_unit] call EFUNC(common,getDeathAnim);
 [{
     _unit = _this select 0;
     _anim = _this select 1;
-    if (_unit getVariable "ACE_isUnconscious") then {
+    if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
         [_unit, _anim, 2, true] call EFUNC(common,doAnimation);
     };
 }, [_unit, _anim], 2, 1] call EFUNC(common,waitAndExecute);
