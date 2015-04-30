@@ -178,11 +178,7 @@ if (_selectionName == "" and
     _damage < 1 and
     !(_unit getVariable ["ACE_isUnconscious", False]
 )) then {
-    if (_unit getVariable [QGVAR(allowUnconscious), ([_unit] call EFUNC(common,isPlayer)) or random 1 > 0.3]) then {
-        [_unit, true] call FUNC(setUnconscious);
-    } else {
-        _damage = 1;
-    };
+    [_unit, true] call FUNC(setUnconscious);
 };
 
 _damage
