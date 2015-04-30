@@ -33,11 +33,11 @@ _mixColor = {
 _textColor = [GVAR(colorTextMin), GVAR(colorTextMax), 1] call _mixColor;
 _shadowColor = [GVAR(colorShadowMin), GVAR(colorShadowMax), 1] call _mixColor;
 _textSize = switch (GVAR(textSize)) do {
-    case (0): {0.6};
-    case (1): {0.7};
+    case (0): {0.4};
+    case (1): {0.6};
     case (2): {0.8};
-    case (3): {0.9};
-    case (4): {1};
+    case (3): {1};
+    case (4): {1.2};
 };
 
 GVAR(colorSelectedSettings) = format ["color='%1' size='%2' shadow='%3' shadowColor='%4' shadowOffset='0.06'", _textColor, _textSize, GVAR(shadowSetting), _shadowColor];

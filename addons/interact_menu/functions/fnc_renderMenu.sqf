@@ -68,7 +68,7 @@ if !(_menuInSelectedPath) exitWith {true};
 
 //BEGIN_COUNTER(children);
 
-private ["_numChildren","_angleSpan","_angle","_angleInterval","_scale","_offset"];
+private ["_numChildren","_angleSpan","_angle","_angleInterval","_scaleX", "_scaleY", "_offset", "_textSize"];
 _numChildren = count _activeChildren;
 _angleSpan = _maxAngleSpan min (55 * ((_numChildren) - 1));
 if (_angleSpan >= 305) then {
@@ -87,15 +87,30 @@ if (_numChildren == 1) then {
 };
 
 // Scale menu based on the amount of children
-_scale = if (GVAR(UseListMenu)) then {
-    0.17
+_scaleX = if (GVAR(UseListMenu)) then {
+    _textSize = switch (GVAR(textSize)) do {
+    case (0): {0.75};
+    case (1): {0.875};
+    case (2): {1};
+    case (3): {1.2};
+    case (4): {1.4};
+    };
+    0.17 * _textSize * 1.1
 } else {
-    0.17 * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.1) max 0.5)
+    _textSize = if (GVAR(textSize) > 2) then {1.3} else {1};
+    _textSize * 0.17 * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.1) max 0.5)
+};
+_scaleY = if (GVAR(UseListMenu)) then {
+    0.17 * 0.30 * 4/3
+} else {
+    _textSize = if (GVAR(textSize) > 2) then {1.3} else {1};
+    _textSize * 0.17 * 4/3 * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.1) max 0.5)
 };
 
 // Animate menu scale
 if (_menuInSelectedPath && (_menuDepth == count _path)) then {
-    _scale = _scale * (0.3 + 0.7 * (((diag_tickTime - GVAR(expandedTime)) * 8) min 1));
+    _scaleX = _scaleX * (0.3 + 0.7 * (((diag_tickTime - GVAR(expandedTime)) * 8) min 1));
+    _scaleY = _scaleY * (0.3 + 0.7 * (((diag_tickTime - GVAR(expandedTime)) * 8) min 1));
 };
 
 _target = _actionObject;
@@ -107,12 +122,12 @@ _angle = _centerAngle - _angleSpan / 2;
     //BEGIN_COUNTER(children);
     private ["_offset","_newPos"];
     _newPos =  if (GVAR(UseListMenu)) then {
-                    [(_sPos select 0) + _scale * 1.10,
-                     (_sPos select 1) + _scale * 0.30 * 4/3 * (_foreachindex - _numChildren/2 + 0.5)];
-               } else {
-                    [(_sPos select 0) -_scale * cos _angle,
-                     (_sPos select 1) +_scale * (sin _angle) * 4/3];
-               };
+        [(_sPos select 0) + _scaleX,
+        (_sPos select 1) + _scaleY * (_foreachindex - _numChildren/2 + 0.5)];
+    } else {
+        [(_sPos select 0) - _scaleX * (cos _angle),
+        (_sPos select 1) + _scaleY * (sin _angle)];
+    };
 
     //drawLine3D [_pos, _newPos, [1,0,0,0.8]];
     //END_COUNTER(children);
