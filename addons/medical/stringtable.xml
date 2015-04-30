@@ -978,7 +978,7 @@
             <Italian>Plasma IV (1000ml)</Italian>
             <Portuguese>Plasma IV (1000ml)</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Plasma_IV_DESC_SHORT">
+        <Key ID="STR_ACE_Medical_Plasma_IV_Desc_Short">
             <English>A volume-expanding blood supplement.</English>
             <Russian>Дополнительный препарат, применяемый при возмещении объема крови.</Russian>
             <Spanish>Suplemento para expandir el volumen sanguíneo.</Spanish>
@@ -989,7 +989,7 @@
             <German>Volumenerweiterungsmittel (künstliches Blutvolumen)</German>
             <Portuguese>Suplemento para expandir o volume sanguíneo.</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Plasma_IV_DESC_USE">
+        <Key ID="STR_ACE_Medical_Plasma_IV_Desc_Use">
             <English>A volume-expanding blood supplement.</English>
             <Russian>Дополнительный препарат, применяемый при возмещении объема крови.</Russian>
             <Spanish>Suplemento para expandir el volumen sanguíneo.</Spanish>
@@ -1033,7 +1033,7 @@
             <Italian>Sangue IV (1000ml)</Italian>
             <Portuguese>Sangue IV (1000ml)</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Blood_IV_DESC_SHORT">
+        <Key ID="STR_ACE_Medical_Blood_IV_Desc_Short">
             <English>Blood IV, for restoring a patients blood (keep cold)</English>
             <Russian>Пакет крови для возмещения объёма потерянной крови (хранить в холодильнике)</Russian>
             <Spanish>Sangre intravenosa, para restarurar el volumen sanguíneo (mantener frío)</Spanish>
@@ -1044,7 +1044,7 @@
             <German>Blut IV, Bluthaushalt des Patienten wiederherstellen. (Kühl halten)</German>
             <Portuguese>Sangue intravenoso, para restaurar o volume sanguinio do paciente.(Manter frio)</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Blood_IV_DESC_USE">
+        <Key ID="STR_ACE_Medical_Blood_IV_Desc_Use">
             <English>O Negative infusion blood used in strict and rare events to replenish blood supply usually conducted in the transport phase of medical care.</English>
             <Russian>Кровь I группы, резус-отрицательная, применяется по жизненным показаниям для возмещения объема потерянной крови на догоспитальном этапе оказания медицинской помощи.</Russian>
             <Polish>Krew 0 Rh-, używana w rzadkich i szczególnych przypadkach do uzupełnienia krwi u pacjenta, zazwyczaj w trakcie fazie transportu rannej osoby do szpitala.</Polish>
@@ -1087,7 +1087,7 @@
             <Italian>Soluzione salina IV (1000ml)</Italian>
             <Portuguese>Soro IV (1000ml)</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Saline_IV_DESC_SHORT">
+        <Key ID="STR_ACE_Medical_Saline_IV_Desc_Short">
             <English>Saline IV, for restoring a patients blood</English>
             <Russian>Пакет физраствора для возмещения объёма потерянной крови</Russian>
             <Spanish>Solución salina intravenosa, para restaurar el volumen sanguíneo</Spanish>
@@ -1098,7 +1098,7 @@
             <German>Kochsalzlösung, ein medizinisches Volumenersatzmittel</German>
             <Portuguese>Solução Salina Intravenosa 0.9%, para restaurar o volume de sangue temporariamente.</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Saline_IV_DESC_USE">
+        <Key ID="STR_ACE_Medical_Saline_IV_Desc_Use">
             <English>A medical volume-replenishing agent introduced into the blood system through an IV infusion.</English>
             <Russian>Пакет физиологического раствора для возмещения объёма потерянной крови путем внутривенного вливания</Russian>
             <Spanish>Suero fisiológico inoculado al torrente sanguíneo de forma intravenosa.</Spanish>
@@ -1285,7 +1285,7 @@
             <Italian>Pressione sanguigna</Italian>
             <Portuguese>Pressão Arterial</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_CONTENT">
+        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Content">
             <English>Checking Blood Pressure..</English>
             <French>Mesure de la tension ...</French>
             <Russian>Проверка артериального давления ...</Russian>
@@ -1296,7 +1296,7 @@
             <Italian>Controllando la pressione sanguigna..</Italian>
             <Portuguese>Aferindo Pressão Arterial...</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_LOG">
+        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Log">
             <English>%1 checked Blood Pressure: %2</English>
             <German>%1 kontrollierte Blutdruck: %2</German>
             <Italian>%1 controllata pressione sanguigna: %2</Italian>
@@ -1304,7 +1304,7 @@
             <French>%1 à vérifié la tension: %2</French>
             <Polish>%1 sprawdził ciśnienie krwi: %2</Polish>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_CHECKED_MEDIC">
+        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Checked_Medic">
             <English>You checked %1</English>
             <French>Vous diagnostiquez %1</French>
             <Russian>Вы осмотрели раненого %1</Russian>
@@ -1315,7 +1315,7 @@
             <Italian>Hai diagnosticato %1</Italian>
             <Portuguese>Você aferiu o paciente %1</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_OUTPUT_1">
+        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_1">
             <English>You find a blood pressure of %2/%3</English>
             <French>Vous avez trouvé une tension de %2/%3</French>
             <Russian>Артериальное давление %2/%3</Russian>
@@ -1326,7 +1326,7 @@
             <German>Der Blutdruck liegt bei %2/%3</German>
             <Portuguese>A Pressão Arterial é de %2/%3</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_OUTPUT_2">
+        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_2">
             <English>You find a low blood pressure</English>
             <French>Tension basse</French>
             <Russian>Давление низкое</Russian>
@@ -1337,7 +1337,7 @@
             <Italian>La pressione sanguigna è bassa</Italian>
             <Portuguese>Pressão Arterial baixa</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_OUTPUT_3">
+        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_3">
             <English>You find a normal blood pressure</English>
             <French>Tension normale</French>
             <Russian>Давление нормальное</Russian>
@@ -1348,7 +1348,7 @@
             <Italian>La pressione sanguigna è normale</Italian>
             <Portuguese>Pressão Arterial normal</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_OUTPUT_4">
+        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_4">
             <English>You find a high blood pressure</English>
             <French>Tension haute</French>
             <Russian>Давление высокое</Russian>
@@ -1359,7 +1359,7 @@
             <Italian>La pressione sanguigna è alta</Italian>
             <Portuguese>Pressão Arterial Alta</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_OUTPUT_5">
+        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_5">
             <English>You find no blood pressure</English>
             <French>Pas de tension</French>
             <Russian>Давления нет</Russian>
@@ -1370,7 +1370,7 @@
             <Italian>La pressione sanguigna è assente</Italian>
             <Portuguese>Sem Pressão Arterial</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_OUTPUT_6">
+        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_6">
             <English>You fail to find a blood pressure</English>
             <French>Vous n'avez pas pu mesurer de tension</French>
             <Russian>Артериальное давление не определяется</Russian>
@@ -1381,7 +1381,7 @@
             <Italian>Manca strumento per misurare pressione sanguigna</Italian>
             <Portuguese>Você falhou em aferir a Pressão Arterial</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_LOW">
+        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Low">
             <English>Low</English>
             <German>Niedrig</German>
             <Italian>Basso</Italian>
@@ -1389,7 +1389,7 @@
             <French>Faible</French>
             <Polish>Niskie</Polish>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_NORMAL">
+        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Normal">
             <English>Normal</English>
             <German>Normal</German>
             <Italian>Normale</Italian>
@@ -1397,7 +1397,7 @@
             <French>Normale</French>
             <Polish>Normalne</Polish>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_HIGH">
+        <Key ID="STR_ACE_Medical_Check_Bloodpressure_High">
             <English>High</English>
             <German>Hoch</German>
             <Italian>Alto</Italian>
@@ -1405,7 +1405,7 @@
             <French>Haute</French>
             <Polish>Wysokie</Polish>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_NOBLOODPRESSURE">
+        <Key ID="STR_ACE_Medical_Check_Bloodpressure_NoBloodpressure">
             <English>No Blood Pressure</English>
             <German>Kein Blutdruck</German>
             <Italian>Nessuna Pressione Sanguigna</Italian>
@@ -1424,7 +1424,7 @@
             <Italian>Polso</Italian>
             <Portuguese>Pulso</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_CONTENT">
+        <Key ID="STR_ACE_Medical_Check_Pulse_Content">
             <English>Checking Heart Rate ...</English>
             <French>Vérification du rythme cardiaque ...</French>
             <Russian>Проверка пульса ...</Russian>
@@ -1435,7 +1435,7 @@
             <Italian>Controllando il battito cardiaco ...</Italian>
             <Portuguese>Aferindo Pulso ...</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_CHECKED_MEDIC">
+        <Key ID="STR_ACE_Medical_Check_Pulse_Checked_Medic">
             <English>You checked %1</English>
             <Russian>Вы осмотрели раненого %1</Russian>
             <French>Vous examinez %1</French>
@@ -1446,7 +1446,7 @@
             <Italian>Hai diagnosticato %1</Italian>
             <Portuguese>Você aferiu o paciente %1</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_LOG">
+        <Key ID="STR_ACE_Medical_Check_Pulse_Log">
             <English>%1 checked Heart Rate: %2</English>
             <German>%1 kontrollierte Herzfrequenz: %2</German>
             <Italian>%1 Controllata Frequenza Cardiaca: %2</Italian>
@@ -1454,7 +1454,7 @@
             <French>%1 à vérifié le rythme cardiaque: %2</French>
             <Polish>%1 sprawdził tętno: %2</Polish>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_WEAK">
+        <Key ID="STR_ACE_Medical_Check_Pulse_Weak">
             <English>Weak</English>
             <German>Schwach</German>
             <Italian>Lento</Italian>
@@ -1462,7 +1462,7 @@
             <French>Faible</French>
             <Polish>Słabe</Polish>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_NORMAL">
+        <Key ID="STR_ACE_Medical_Check_Pulse_Normal">
             <English>Normal</English>
             <German>Normal</German>
             <Italian>Normale</Italian>
@@ -1470,7 +1470,7 @@
             <French>Normal</French>
             <Polish>Normalne</Polish>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_STRONG">
+        <Key ID="STR_ACE_Medical_Check_Pulse_Strong">
             <English>Strong</English>
             <German>Stark</German>
             <Italian>Veloce</Italian>
@@ -1478,7 +1478,7 @@
             <French>Fort</French>
             <Polish>Silne</Polish>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_OUTPUT_1">
+        <Key ID="STR_ACE_Medical_Check_Pulse_Output_1">
             <English>You find a Heart Rate of %2</English>
             <French>Rythme cardiaque de %2</French>
             <Russian>Пульс %2 уд./мин.</Russian>
@@ -1489,7 +1489,7 @@
             <Italian>Il battito cardiaco è %2</Italian>
             <Portuguese>A Freqüência Cardíaca é de %2</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_OUTPUT_2">
+        <Key ID="STR_ACE_Medical_Check_Pulse_Output_2">
             <English>You find a weak Heart Rate</English>
             <French>Rythme cardiaque faible</French>
             <Russian>Пульс слабый</Russian>
@@ -1500,7 +1500,7 @@
             <Italian>Hai riscontrato un debole battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca baixa</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_OUTPUT_3">
+        <Key ID="STR_ACE_Medical_Check_Pulse_Output_3">
             <English>You find a strong Heart Rate</English>
             <French>Rythme cardiaque élevé</French>
             <Russian>Пульс учащенный</Russian>
@@ -1511,7 +1511,7 @@
             <Italian>Hai riscontrato un forte battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca normal</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_OUTPUT_4">
+        <Key ID="STR_ACE_Medical_Check_Pulse_Output_4">
             <English>You find a normal Heart Rate</English>
             <French>Rythme cardiaque normal</French>
             <Russian>Пульс в норме</Russian>
@@ -1522,7 +1522,7 @@
             <Italian>Hai riscontrato un normale battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca alta</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_OUTPUT_5">
+        <Key ID="STR_ACE_Medical_Check_Pulse_Output_5">
             <English>You find no Heart Rate</English>
             <French>Pas de rythme cardiaque</French>
             <Russian>Пульс не прощупывается</Russian>
@@ -1544,7 +1544,7 @@
             <Italian>Risposta</Italian>
             <Portuguese>Reação</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Response_CONTENT">
+        <Key ID="STR_ACE_Medical_Check_Response_Content">
             <English>You check response of patient</English>
             <French>Vous vérifiez la réponse du patient</French>
             <Russian>Вы проверяете реакцию раненого</Russian>

@@ -102,8 +102,8 @@ class CfgWeapons {
         scope = 2;
         displayName = $STR_ACE_Medical_Plasma_IV;
         picture = QUOTE(PATHTOF(ui\items\plasmaIV_x_ca.paa));
-        descriptionShort = $STR_ACE_Medical_Plasma_IV_DESC_SHORT;
-        descriptionUse = $STR_ACE_Medical_Plasma_IV_DESC_USE;
+        descriptionShort = $STR_ACE_Medical_Plasma_IV_Desc_Short;
+        descriptionUse = $STR_ACE_Medical_Plasma_IV_Desc_Use;
         class ItemInfo: InventoryItem_Base_F {
             mass = 10;
         };
@@ -125,8 +125,8 @@ class CfgWeapons {
         model = "\A3\Structures_F_EPA\Items\Medical\BloodBag_F.p3d";
         displayName = $STR_ACE_Medical_Blood_IV;
         picture = QUOTE(PATHTOF(ui\items\bloodIV_x_ca.paa));
-        descriptionShort = $STR_ACE_Medical_Blood_IV_DESC_SHORT;
-        descriptionUse = $STR_ACE_Medical_Blood_IV_DESC_USE;
+        descriptionShort = $STR_ACE_Medical_Blood_IV_Desc_Short;
+        descriptionUse = $STR_ACE_Medical_Blood_IV_Desc_Use;
         class ItemInfo: InventoryItem_Base_F {
             mass = 10;
         };
@@ -147,8 +147,8 @@ class CfgWeapons {
         scope = 2;
         displayName = $STR_ACE_Medical_Saline_IV;
         picture = QUOTE(PATHTOF(ui\items\salineIV_x_ca.paa));
-        descriptionShort = $STR_ACE_Medical_Saline_IV_DESC_SHORT;
-        descriptionUse = $STR_ACE_Medical_Saline_IV_DESC_USE;
+        descriptionShort = $STR_ACE_Medical_Saline_IV_Desc_Short;
+        descriptionUse = $STR_ACE_Medical_Saline_IV_Desc_Use;
         class ItemInfo: InventoryItem_Base_F {
             mass = 10;
         };

@@ -225,7 +225,7 @@ class ACE_Medical_Actions {
         };
         class CheckPulse: fieldDressing {
             displayName = "";
-            displayNameProgress = "$STR_ACE_Medical_Check_Pulse_CONTENT";
+            displayNameProgress = "$STR_ACE_Medical_Check_Pulse_Content";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 2;
@@ -240,11 +240,11 @@ class ACE_Medical_Actions {
         };
         class CheckBloodPressure: CheckPulse {
             callbackSuccess = QUOTE(DFUNC(actionCheckBloodPressure));
-            displayNameProgress = "$STR_ACE_Medical_Check_Bloodpressure_CONTENT";
+            displayNameProgress = "$STR_ACE_Medical_Check_Bloodpressure_Content";
         };
         class CheckResponse: CheckPulse {
             callbackSuccess = QUOTE(DFUNC(actionCheckResponse));
-            displayNameProgress = "$STR_ACE_Medical_Check_Response_CONTENT";
+            displayNameProgress = "$STR_ACE_Medical_Check_Response_Content";
         };
         class RemoveTourniquet: CheckPulse {
             treatmentTime = 2.5;
