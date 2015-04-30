@@ -91,9 +91,10 @@
             <Spanish>Sistema de visión nocturna (Panorámicas)</Spanish>
             <Polish>Gogle noktowizyjne (panoramiczne)</Polish>
             <Czech>Noktovizor (Širokoúhlý)</Czech>
-            <Russian>ПНВ (Широкий)</Russian>
+            <Russian>ПНВ (Широкоугольный)</Russian>
             <French>JVN (Large)</French>
             <Hungarian>Éjjellátó szemüveg (széles látószögű)</Hungarian>
+            <Portuguese>Óculos de visão noturna (Panorâmico)</Portuguese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>
@@ -102,7 +103,7 @@
             <Polish>Czułość: %1</Polish>
             <Czech>Jas: %1</Czech>
             <French>Luminosité : %1</French>
-            <Russian>Контраст: </Russian>
+            <Russian>Яркость: %1</Russian>
             <Hungarian>Fényerő: %1</Hungarian>
             <Portuguese>Luminosidade: %1</Portuguese>
             <Italian>Luminosità: %1</Italian>

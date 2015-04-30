@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-
+private["_checkPos", "_i", "_largest", "_largestSpot", "_list", "_outliers", "_remainingSpots", "_samplePos", "_spot", "_spots", "_testPos"];
 _list = _this select 0;
 _checkPos = _this select 1;
 _spots = [];

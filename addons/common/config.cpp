@@ -22,6 +22,7 @@ class CfgPatches {
 #include "CfgActions.hpp"
 #include "CfgMoves.hpp"
 #include "CfgVoice.hpp"
+#include "CfgUnitInsignia.hpp"
 
 class ACE_Rsc_Display_Base {
     idd = -1;
@@ -151,4 +152,16 @@ class CfgUIGrids {
             };
         };
     };
+};
+
+/*
+// check dll
+class RscStandardDisplay;
+class RscDisplayMain: RscStandardDisplay {
+    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDisplayMain"",'GUI')] call  (uinamespace getvariable 'BIS_fnc_initDisplay'); [ARR_5('header','tail',{0},{},_this select 0)] call COMPILE_FILE(functions\fnc_errorMessage));
+};
+*/
+
+class ACE_Extensions {
+    extensions[] = {};
 };

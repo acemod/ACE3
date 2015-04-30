@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage", "_bodyPartn", "_woundType", "_injuryTypeInfo", "_allInjuriesForDamageType", "_allPossibleInjuries", "_highestPossibleDamage", "_highestPossibleSpot", "_minDamage", "_openWounds", "_woundID", "_toAddInjury", "_painToAdd"];
+private ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage", "_bodyPartn", "_injuryTypeInfo", "_allInjuriesForDamageType", "_allPossibleInjuries", "_highestPossibleDamage", "_highestPossibleSpot", "_minDamage", "_openWounds", "_woundID", "_toAddInjury", "_painToAdd", "_bloodLoss", "_bodyPartNToAdd", "_classType", "_damageLevels", "_foundIndex", "_i", "_injury", "_maxDamage", "_pain", "_painLevel", "_selections", "_toAddClassID", "_woundsCreated"];
 _unit = _this select 0;
 _selectionName = _this select 1;
 _damage = _this select 2;
@@ -133,7 +133,6 @@ if (count _woundsCreated > 0) then {
 };
 
 if (USE_WOUND_EVENT_SYNC) then {
-    // TODO Should this be done in a single broadcast?
     // Broadcast the new injuries across the net in parts. One broadcast per injury. Prevents having to broadcast one massive array of injuries.
     {
         ["medical_propagateWound", [_unit, _x]] call EFUNC(common,globalEvent);

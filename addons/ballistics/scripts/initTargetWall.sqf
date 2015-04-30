@@ -1,6 +1,8 @@
 // by commy2
 #include "script_component.hpp"
 
+private ["_wall", "_paper"];
+
 _wall = _this select 0;
 
 if (local _wall) then {

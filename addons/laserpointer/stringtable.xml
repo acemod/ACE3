@@ -11,6 +11,7 @@
             <Hungarian>Lézer-pointer (piros)</Hungarian>
             <Spanish>Puntero láser (rojo)</Spanish>
             <Italian>Puntatore laser (rosso)</Italian>
+            <Portuguese>Laser (vermelho)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Laserpointer_green">
             <English>Laser Pointer (green)</English>
@@ -22,6 +23,7 @@
             <Hungarian>Lézer-pointer (zöld)</Hungarian>
             <Spanish>Puntero láser (verde)</Spanish>
             <Italian>Puntatore laser (verde)</Italian>
+            <Portuguese>Laser (verde)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Laserpointer_Description">
             <English>Emits visible light. </English>
@@ -33,6 +35,7 @@
             <Hungarian>Látható fényt bocsát ki.</Hungarian>
             <Spanish>Emite luz visible.</Spanish>
             <Italian>Emette luce visibile</Italian>
+            <Portuguese>Emite luz visível. </Portuguese>
         </Key>
         <Key ID="STR_ACE_Laserpointer_useLaser">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</English>
@@ -42,7 +45,7 @@
             <Italian>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Laser ON/OFF</Italian>
             <Polish>&lt;t color='#9cf953'&gt;Użyj: &lt;/t&gt;wł./wył. laser</Polish>
             <Portuguese>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Ativar/Desativar laser</Portuguese>
-            <Russian>&lt;t color='#9cf953'&gt;Использовать: &lt;/t&gt;вкл/выкл лазер</Russian>
+            <Russian>&lt;t color='#9cf953'&gt;Использовать: &lt;/t&gt;ВКЛ/ВЫКЛ лазер</Russian>
             <Spanish>&lt;t color='#9cf953'&gt;Usar: &lt;/t&gt;encender/apagar láser</Spanish>
             <Hungarian>&lt;t color='#9cf953'&gt;Használat: &lt;/t&gt;Lézer BE/KI kapcsolása</Hungarian>
         </Key>
@@ -53,6 +56,7 @@
             <Russian>Лазер</Russian>
             <French>Laser</French>
             <Spanish>Laser</Spanish>
+            <Italian>Laser</Italian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_IRLaser">
             <English>IR Laser</English>
@@ -61,6 +65,7 @@
             <Russian>ИК-лазер</Russian>
             <French>Laser IR</French>
             <Spanish>Laser IR</Spanish>
+            <Italian>Laser IR</Italian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_switchLaserLight">
             <English>Switch Laser / IR Laser</English>

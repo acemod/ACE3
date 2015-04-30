@@ -59,6 +59,11 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 0;
     };
+    class GVAR(enableRevive) {
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"Disabled", "Players only", "Players and AI"};
+    };
     class GVAR(maxReviveTime) {
         typeName = "SCALAR";
         value = 120;
@@ -73,11 +78,22 @@ class ACE_Settings {
     };
     class GVAR(allowLitterCreation) {
         typeName = "BOOL";
-        value = true;
+        value = 1;
+    };
+    class GVAR(litterSimulationDetail) {
+        displayName = "$STR_ACE_Medical_litterSimulationDetail";
+        description = "$STR_ACE_Medical_litterSimulationDetail_Desc";
+        typeName = "SCALAR";
+
+        value = 3;
+        values[] = {"Off", "Low", "Medium", "High", "Ultra"};
+        _values[] = { 0, 50, 100, 1000, 5000 };
+
+        isClientSettable = 1;
     };
     class GVAR(litterCleanUpDelay) {
         typeName = "SCALAR";
-        value = 1800;
+        value = 0;
     };
     class GVAR(medicSetting_PAK) {
         typeName = "SCALAR";
@@ -123,5 +139,13 @@ class ACE_Settings {
         value = 0;
         values[] = {"$STR_ACE_Medical_painEffect_Flash", "$STR_ACE_Medical_painEffect_Chroma"};
         isClientSettable = 1;
+    };
+    class GVAR(allowUnconsciousAnimationOnTreatment) {
+        typeName = "BOOL";
+        value = 0;
+    };
+    class GVAR(moveUnitsFromGroupOnUnconscious) {
+        typeName = "BOOL";
+        value = 0;
     };
 };

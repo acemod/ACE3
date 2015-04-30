@@ -22,16 +22,20 @@
             <Polish>Napraw animację</Polish>
             <French>Corriger animation</French>
             <Hungarian>Animációk kijavítása</Hungarian>
+            <Italian>Fixa l'animazione</Italian>
+            <Portuguese>Arrumar  Animação</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_ResetAll">
             <English>Reset All</English>
-            <German>Alles Zurücksetzen</German>
+            <German>Alles zurücksetzen</German>
             <Spanish>Reiniciar todo</Spanish>
             <Russian>Полный сброс</Russian>
             <Czech>Vyresetovat vše</Czech>
             <Polish>Resetuj wszystko</Polish>
             <French>Défaut</French>
             <Hungarian>Minden visszaállítása</Hungarian>
+            <Italian>Resetta tutto</Italian>
+            <Portuguese>Resetar Tudo</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TabColors">
             <English>Colors</English>
@@ -42,6 +46,8 @@
             <Czech>Barvy</Czech>
             <Polish>Kolory</Polish>
             <Hungarian>Színek</Hungarian>
+            <Italian>Colori</Italian>
+            <Portuguese>Cores</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TabOptions">
             <English>Options</English>
@@ -64,6 +70,8 @@
             <French>Valeurs</French>
             <German>Werte</German>
             <Hungarian>Értékek</Hungarian>
+            <Italian>Valori</Italian>
+            <Portuguese>Valores</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Enabled">
             <English>Yes</English>
@@ -95,9 +103,11 @@
             <German>Einstellung:</German>
             <Russian>Установки:</Russian>
             <Spanish>Ajuste:</Spanish>
-            <Polish>Ustawienie:</Polish>
+            <Polish>Ustaw:</Polish>
             <French>Paramètres</French>
             <Hungarian>Opció:</Hungarian>
+            <Italian>Parametri:</Italian>
+            <Portuguese>Opção:</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Export">
             <English>Export</English>
@@ -108,6 +118,8 @@
             <Polish>Eksport</Polish>
             <French>Exporter</French>
             <Hungarian>Exportálás</Hungarian>
+            <Italian>Esporta</Italian>
+            <Portuguese>Exportar</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_OpenExport">
             <English>Open Export Menu</English>
@@ -118,15 +130,19 @@
             <Polish>Otwórz menu eksportowania</Polish>
             <French>Ouvrir le menu d'exportation</French>
             <Hungarian>Exportálási menü megnyitása</Hungarian>
+            <Italian>Apri menù esportazione</Italian>
+            <Portuguese>Abrir menu de exportação</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_stringType">
             <English>String input.</English>
-            <German>String input.</German>
+            <German>Zeichenketteneingabe</German>
             <Spanish>Introducir frase</Spanish>
             <Russian>Строчный ввод.</Russian>
             <Polish>Wpisywanie tekstu.</Polish>
             <French>Entrée</French>
             <Hungarian>String bevitel.</Hungarian>
+            <Italian>Stringa di unput.</Italian>
+            <Portuguese>Input de String</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_arrayType">
             <English>Array. Seperate elements by using ,.</English>
@@ -137,16 +153,20 @@
             <French>Tableau. Séparation par ,.</French>
             <Czech>Tabulka. Odděl elementy použitím ,.</Czech>
             <Hungarian>Array. Válasszad el az elemeket vesszővel.</Hungarian>
+            <Italian>Array. Separa gli elementi usando ,.</Italian>
+            <Portuguese>Vetor. Separe elementos usando *,*.</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_scalarType">
             <English>Number</English>
-            <German>Nummer</German>
+            <German>Zahl</German>
             <Spanish>Numero</Spanish>
             <Russian>Число</Russian>
             <Czech>Číslo</Czech>
             <Polish>Cyfra</Polish>
             <French>Nombre</French>
             <Hungarian>Szám</Hungarian>
+            <Italian>Numero</Italian>
+            <Portuguese>Número</Portuguese>
         </Key>
         <Key ID="STR_ACE_optionsMenu_unknownType">
             <English>Uknown input type</English>
@@ -157,6 +177,8 @@
             <Polish>Nieznany rodzaj danych</Polish>
             <French>Type d'entrée inconnue</French>
             <Hungarian>Ismeretlen beviteli típus</Hungarian>
+            <Italian>Input inserito sconosciuto</Italian>
+            <Portuguese>Tipo desonhecido de input</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_SaveInput">
             <English>Save input</English>
@@ -167,16 +189,20 @@
             <Polish>Zapisz dane</Polish>
             <French>Sauvegarder</French>
             <Hungarian>Bevitel elmentése</Hungarian>
+            <Italian>Salva input</Italian>
+            <Portuguese>Salvar input</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_inClientSettings">
             <English>Include Client Settings</English>
-            <German>Beinhalte Client-Einstellungen</German>
+            <German>Schließe Client-Einstellungen ein</German>
             <Spanish>Incluir configuración de cliente</Spanish>
             <Russian>Включить настройки клиента</Russian>
             <Czech>Zahrnout nastavení klienta</Czech>
             <Polish>Zawrzyj ustawienia klienta</Polish>
             <French>Inclure paramètres client</French>
             <Hungarian>Kliens-beállítások melléklése</Hungarian>
+            <Italian>Includi i parametri del client</Italian>
+            <Portuguese>Incluir opções do cliente</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_exClientSettings">
             <English>Exclude Client Settings</English>
@@ -187,6 +213,8 @@
             <Polish>Wyklucz ustawienia klienta</Polish>
             <French>Exclure paramètres client</French>
             <Hungarian>Kliens-beállítások elhagyása</Hungarian>
+            <Italian>Escludi i parametri del client</Italian>
+            <Portuguese>Excluir opções do cliente</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_settingsExported">
             <English>Settings exported to clipboard</English>
@@ -197,6 +225,16 @@
             <Polish>Ustawienia wyeksportowano do schowka</Polish>
             <French>Paramètres exportés dans le presse papier</French>
             <Hungarian>Beállítások exportálva a vágólapba</Hungarian>
+            <Italian>Parametri esportati alla clipboard</Italian>
+            <Portuguese>Opções exportadas para o clipboard.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_optionsMenu_uiScaing">
+            <English>Option Menu UI Scaling</English>
+            <French>Menu option: taille de l'UI</French>
+            <Polish>Skalowanie UI menu ustawień</Polish>
+            <Spanish>Opción de escalado del menú UI</Spanish>
+            <Russian>Размер интерфейса меню настройки</Russian>
+            <German>UI Skalierung</German>
         </Key>
     </Package>
 </Project>

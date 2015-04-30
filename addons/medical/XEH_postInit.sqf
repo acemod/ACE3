@@ -14,6 +14,7 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
 ["medical_onUnconscious", {
     if (local (_this select 0)) then {
+        private ["_unit"];
         _unit = _this select 0;
         if (_this select 1) then {
             _unit setVariable ["tf_globalVolume", 0.4];
@@ -36,7 +37,7 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
 // Initialize all effects
 _fnc_createEffect = {
-    private ["_type", "_layer", "_default"];
+    private ["_type", "_layer", "_default", "_effect"];
     _type = _this select 0;
     _layer = _this select 1;
     _default = _this select 2;
@@ -91,6 +92,7 @@ GVAR(effectTimeBlood) = time;
 
 // MAIN EFFECTS LOOP
 [{
+    private["_bleeding", "_blood"];
     // Zeus interface is open or player is dead; disable everything
     if (!(isNull (findDisplay 312)) or !(alive ACE_player)) exitWith {
         GVAR(effectUnconsciousCC) ppEffectEnable false;
@@ -155,6 +157,7 @@ GVAR(lastHeartBeatSound) = time;
 
 // HEARTRATE BASED EFFECTS
 [{
+    private["_heartRate", "_interval", "_minTime", "_sound", "_strength"];
     _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
     if (GVAR(level) == 1) then {
         _heartRate = 60 + 40 * (ACE_player getVariable [QGVAR(pain), 0]);
@@ -241,14 +244,14 @@ if (USE_WOUND_EVENT_SYNC) then {
                 // We are only pulling the wounds for the units in the player group. Anything else will come when the unit interacts with them.
                 {
                     [_x, _newPlayer] call FUNC(requestWoundSync);
-                }foreach units group player;
+                }foreach units group _newPlayer;
             };
         }] call EFUNC(common,addEventhandler);
     };
 };
 
 [
-    {(((_this select 0) getvariable [QGVAR(bloodVolume), 0]) < 65)},
+    {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 65)},
     {(((_this select 0) getvariable [QGVAR(pain), 0]) > 0.9)},
     {(((_this select 0) call FUNC(getBloodLoss)) > 0.25)},
     {((_this select 0) getvariable [QGVAR(inReviveState), false])},
@@ -265,3 +268,13 @@ if (USE_WOUND_EVENT_SYNC) then {
 ["playerInventoryChanged", {
     [ACE_player] call FUNC(itemCheck);
 }] call EFUNC(common,addEventHandler);
+
+// Networked litter
+[QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
+
+if (hasInterface) then {
+    ["PlayerJip", {
+        diag_log format["[ACE] JIP Medical init for player"];
+        [player] call FUNC(init);
+    }] call FUNC(addEventHandler);
+};

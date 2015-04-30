@@ -12,6 +12,8 @@ PREP(sendMarkersJIP);
 PREP(setMarkerJIP);
 PREP(setMarkerNetwork);
 
+private ["_config", "_marker", "_a", "_scope", "_icon", "_rgba", "_name"];
+
 // init marker types
 if (isNil QGVAR(MarkersCache)) then {
     _config = configfile >> "CfgMarkers";

@@ -15,7 +15,7 @@
 
 #define HEART_RATE_MODIFIER 0.02
 
-private ["_unit", "_heartRate", "_hrIncrease", "_bloodLoss", "_time", "_values", "_adjustment", "_adjustments", "_additionalIncrease", "_change", "_callBack", "_bloodVolume"];
+private ["_unit", "_heartRate", "_hrIncrease", "_bloodLoss", "_time", "_values", "_adjustment", "_change", "_callBack", "_bloodVolume"];
 _unit = _this select 0;
 _hrIncrease = 0;
 if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
