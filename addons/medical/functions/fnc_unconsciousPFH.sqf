@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_vehicleOfUnit","_minWaitingTime", "_oldAnimation", "_captiveSwitch", "_hasMovedOut", "_parachuteCheck"];
+private ["_unit", "_minWaitingTime", "_oldAnimation", "_hasMovedOut", "_parachuteCheck", "_args", "_originalPos", "_startingTime"];
 _args = _this select 0;
 _unit = _args select 0;
 _oldAnimation = _args select 1;

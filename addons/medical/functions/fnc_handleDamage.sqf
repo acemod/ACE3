@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_damageReturn",  "_typeOfDamage"];
+private ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex"];
 _unit         = _this select 0;
 _selection    = _this select 1;
 _damage       = _this select 2;
@@ -52,7 +52,7 @@ if (GVAR(level) < 2) then {
         _minLethalDamage = GVAR(minLethalDamages) select _typeIndex;
     };
 
-    if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _source} && {_projectile == ""} && {_selection == ""}) then {
+    if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _shooter} && {_projectile == ""} && {_selection == ""}) then {
         if (GVAR(enableVehicleCrashes)) then {
             _selection = GVAR(SELECTIONS) select (floor(random(count GVAR(SELECTIONS))));
         };
@@ -86,7 +86,7 @@ if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitW
 };
 
 if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
-    if (vehicle _unit != _unit and {damage _vehicle >= 1}) then {
+    if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
         // @todo
         // [_unit] call FUNC(unload);
     };

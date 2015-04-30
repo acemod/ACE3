@@ -12,6 +12,9 @@
  */
 #include "script_component.hpp"
 
+private "_calledByClicking";
+_calledByClicking = _this select 1;
+
 // Exit if there's no menu opened
 if (GVAR(openedMenuType) < 0) exitWith {true};
 
@@ -28,6 +31,9 @@ if(GVAR(actionSelected)) then {
 
     // Clear the conditions caches
     ["clearConditionCaches", []] call EFUNC(common,localEvent);
+
+    // exit scope if selecting an action on key release is disabled
+    if (!(GVAR(actionOnKeyRelease)) && !_calledByClicking) exitWith {};
 
     // Check the action conditions
     _actionData = GVAR(selectedAction) select 0;

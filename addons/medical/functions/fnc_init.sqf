@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_allUsedMedication", "_logs", "_forceNew"];
+private ["_unit", "_allUsedMedication", "_logs"];
 
 _unit = _this select 0;
 
