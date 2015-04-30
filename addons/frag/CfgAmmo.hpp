@@ -44,10 +44,14 @@ class CfgAmmo {
     };
 
     class RocketBase;
-    //class R_Hydra_HE: RocketBase {
-    //    GVAR(skip) = 1;
-    //};
-
+    class R_Hydra_HE: RocketBase {
+        // Source: http://fas.org/man/dod-101/sys/missile/hydra-70.htm
+        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(metal) = 3850;
+        GVAR(charge) = 1040;
+        GVAR(gurney_c) = 2700;
+        GVAR(gurney_k) = 1/2;
+    };
     //class R_57mm_HE: RocketBase {
     //    GVAR(skip) = 1;
     //};
@@ -104,7 +108,7 @@ class CfgAmmo {
         GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
         GVAR(metal) = 3200;
         GVAR(charge) = 420;
-        GVAR(gurney_c) = 1906;
+        GVAR(gurney_c) = 2440;
         GVAR(gurney_k) = 1/2;
     };
     class ModuleOrdnanceMortar_F_Ammo: Sh_82mm_AMOS {
@@ -114,13 +118,26 @@ class CfgAmmo {
         GVAR(gurney_c) = 2320;
         GVAR(gurney_k) = 1/2;
     };
-
+    class Sh_120mm_HE : ShellBase {
+        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(metal) = 23000;
+        GVAR(charge) = 3148;
+        GVAR(gurney_c) = 2830;
+        GVAR(gurney_k) = 1/2;
+    };
+    class Sh_125mm_HE: Sh_120mm_HE {
+        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(metal) = 16000;
+        GVAR(charge) = 3200;
+        GVAR(gurney_c) = 2440;
+        GVAR(gurney_k) = 1/2;
+    };
     class Sh_155mm_AMOS: ShellBase {
         // Source: http://www.globalsecurity.org/military/systems/munitions/m795.htm
         GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
         GVAR(metal) = 36000;
         GVAR(charge) = 9979;
-        GVAR(gurney_c) = 1906;
+        GVAR(gurney_c) = 2440;
         GVAR(gurney_k) = 1/2;
     };
     class ModuleOrdnanceHowitzer_F_ammo: Sh_155mm_AMOS {
@@ -146,11 +163,23 @@ class CfgAmmo {
     //    GVAR(multiplier) = 1.2;
     //};
 
-    //class MissileBase;
-    //class M_Hellfire_AT: MissileBase {
-    //    GVAR(force) = 1;
-    //    GVAR(multiplier) = 1.75;
-    //};
+    class MissileBase;
+    class Missile_AGM_02_F : MissileBase {
+        // Source: http://fas.org/man/dod-101/sys/smart/agm-65.htm
+        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(metal) = 56250;
+        GVAR(charge) = 39000;
+        GVAR(gurney_c) = 2700;
+        GVAR(gurney_k) = 1/2;
+    };
+    class M_Hellfire_AT: MissileBase {
+        // Source: http://www.designation-systems.net/dusrm/m-114.html
+        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(metal) = 8000;
+        GVAR(charge) = 2400;
+        GVAR(gurney_c) = 2700;
+        GVAR(gurney_k) = 1/2;
+    };
 
     /*
     class B_762x51_Ball;
