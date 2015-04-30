@@ -760,7 +760,7 @@ class ATragMX_Display {
             y=0.265*safezoneH+safezoneY+0.35;
             strings[]={"Height","Width"};
             values[]={1,0};
-            onToolBoxSelChanged="GVAR(rangeAssistUseTargetHeight)=((_this select 1)==0)";
+            onToolBoxSelChanged=QUOTE(GVAR(rangeAssistUseTargetHeight) = ((_this select 1) == 0));
         };
         class TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE: TEXT_TARGET_RANGE_ASSIST_MEASUREMENT_METHOD {
             idc=7003;

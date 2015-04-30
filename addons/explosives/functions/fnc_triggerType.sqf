@@ -14,7 +14,10 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private "_result";
+
+private["_result", "_config", "_count", "_index", "_supports"];
+// IGNORE_PRIVATE_WARNING(_supports);
+
 _result = [];
 _config = getArray (ConfigFile >> "CfgMagazines" >> (_this select 0) >> "ACE_Triggers" >> "SupportedTriggers");
 _count = count _config;

@@ -14,6 +14,8 @@
 
 #include "script_component.hpp"
 
+// Exit for basic medical
+if (GVAR(level) < 2) exitWith {};
 private ["_target", "_show", "_selectionN"];
 _target = _this select 0;
 _show = if (count _this > 1) then {_this select 1} else {true};
@@ -55,7 +57,7 @@ if (_show) then {
         if (_target getvariable[QGVAR(isBleeding), false]) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_BLEEDING", [1, 0.1, 0.1, 1]];
         };
-        if (_target getvariable[QGVAR(hasLostBlood), false]) then {
+        if (_target getvariable[QGVAR(hasLostBlood), 0] > 1) then {
             _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_LOST_BLOOD", [1, 0.1, 0.1, 1]];
         };
 
@@ -184,7 +186,7 @@ if (_show) then {
             _lbCtrl lbSetColor [_foreachIndex + _amountOfGeneric, _x select 1];
         }foreach _allInjuryTexts;
         if (count _allInjuryTexts == 0) then {
-            _lbCtrl lbAdd "No injuries on this bodypart..";
+            _lbCtrl lbAdd (localize "STR_ACE_Medical_NoInjuriesBodypart");
         };
 
         _logCtrl = (_display displayCtrl 302);

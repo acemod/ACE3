@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_abort", "_index", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_bulletMass", "_bulletLength", "_airFriction", "_dragModel", "_muzzleVelocity", "_muzzleVelocityCoef", "_muzzleAccessory", "_initSpeedCoef", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef"];
+private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_abort", "_index", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_bulletMass", "_bulletLength", "_airFriction", "_dragModel", "_muzzleVelocity", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef", "_ballisticCoefficients", "_velocityBoundaries"];
 _unit     = _this select 0;
 _weapon   = _this select 1;
 _mode     = _this select 3;
@@ -35,49 +35,34 @@ if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
 if (underwater _unit) exitWith {};
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
 if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith {};
-if (GVAR(onlyActiveForLocalPlayers) && _unit != ACE_player) then { _abort = true; };
+if (GVAR(onlyActiveForLocalPlayers) && !(local _unit)) then {
+    if (GVAR(alwaysSimulateForSnipers)) then {
+        // The shooter is non local
+        if (currentWeapon _unit == primaryWeapon _unit && count primaryWeaponItems _unit > 2) then {
+            _opticsName = (primaryWeaponItems _unit) select 2;
+            _opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
+            _abort = _opticType != 2; // We only abort if the non local shooter is not a sniper
+        };
+    } else {
+        _abort = true;
+    };
+};
 //if (!GVAR(vehicleGunnerEnabled) && !(_unit isKindOf "Man")) then { _abort = true; }; // TODO: We currently do not have firedEHs on vehicles
 if (GVAR(disabledInFullAutoMode) && getNumber(configFile >> "cfgWeapons" >> _weapon >> _mode >> "autoFire") == 1) then { _abort = true; };
 
-if (_abort && alwaysSimulateForSnipers) then {
-    // The shooter is non local
-    if (currentWeapon _unit == primaryWeapon _unit && count primaryWeaponItems _unit > 2) then {
-        _opticsName = (primaryWeaponItems _unit) select 2;
-        _opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
-        _abort = _opticType != 2; // We only abort if the non local shooter is not a sniper
-    };
-};
 if (_abort || !(GVAR(extensionAvailable))) exitWith {
     [_bullet, getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction")] call EFUNC(winddeflection,updateTrajectoryPFH);
 };
 
 _airFriction = getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction");
-_muzzleVelocity = getNumber(configFile >> "cfgMagazines" >> _magazine >> "initSpeed");
-_muzzleVelocityCoef = getNumber(configFile >> "cfgWeapons" >> _weapon >> "initSpeed");
-if (_muzzleVelocityCoef > 0) then {
-    _muzzleVelocity = _muzzleVelocityCoef;
-};
-if (_muzzleVelocityCoef < 0) then {
-    _muzzleVelocity = _muzzleVelocity * (-1 * _muzzleVelocityCoef);
-};
 
-_muzzleAccessory = "";
-switch (currentWeapon _unit) do {
-    case primaryWeapon _unit: { _muzzleAccessory = (primaryWeaponItems _unit) select 0; };
-    case handgunWeapon _unit: { _muzzleAccessory = (handgunItems _unit) select 0; };
-};
-
-if (_muzzleAccessory != "" && isNumber(configFile >> "cfgWeapons" >> _muzzleAccessory >> "ItemInfo" >> "MagazineCoef" >> "initSpeed")) then {
-    _initSpeedCoef = getNumber(configFile >> "cfgWeapons" >> _muzzleAccessory >> "ItemInfo" >> "MagazineCoef" >> "initSpeed");
-    _muzzleVelocity = _muzzleVelocity * _initSpeedCoef;
-};
+_bulletVelocity = velocity _bullet;
+_muzzleVelocity = vectorMagnitude _bulletVelocity;
 
 if (GVAR(barrelLengthInfluenceEnabled)) then {
     _muzzleVelocityShift = [_ammo, _weapon, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
     if (_muzzleVelocityShift != 0) then {
-        _bulletVelocity = velocity _bullet;
-        _bulletSpeed = vectorMagnitude _bulletVelocity;
-        _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift * (_bulletSpeed / _muzzleVelocity)));
+        _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
         _bullet setVelocity _bulletVelocity;
         _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
     };
@@ -87,19 +72,23 @@ if (GVAR(ammoTemperatureEnabled)) then {
     _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL _unit) select 2);
     _muzzleVelocityShift = [_ammo, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift);
     if (_muzzleVelocityShift != 0) then {
-        _bulletVelocity = velocity _bullet;
-        _bulletSpeed = vectorMagnitude _bulletVelocity;
-        _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift * (_bulletSpeed / _muzzleVelocity)));
+        _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
         _bullet setVelocity _bulletVelocity;
         _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
     };
 };
 
 _bulletTraceVisible = false;
-if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER" && currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
-    _opticsName = (primaryWeaponItems ACE_player) select 2;
-    _opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
-    _bulletTraceVisible = (_opticType == 2 || currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]);
+if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER") then {
+    if (currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]) then {
+        _bulletTraceVisible = true;
+    } else {
+        if (currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
+            _opticsName = (primaryWeaponItems ACE_player) select 2;
+            _opticType = getNumber(configFile >> "cfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
+            _bulletTraceVisible = _opticType == 2;
+        };
+    };
 };
 
 _caliber = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_caliber");
@@ -131,22 +120,20 @@ _dragModel = 1;
 _ballisticCoefficients = [];
 _velocityBoundaries = [];
 _atmosphereModel = "ICAO";
-if (GVAR(AdvancedAirDragEnabled)) then {
-    if (isNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_dragModel")) then {
-        _dragModel = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_dragModel");
-        if (!(_dragModel in [1, 2, 5, 6, 7, 8])) then {
-            _dragModel = 1;
-        };
+if (isNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_dragModel")) then {
+    _dragModel = getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_dragModel");
+    if (!(_dragModel in [1, 2, 5, 6, 7, 8])) then {
+        _dragModel = 1;
     };
-    if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ballisticCoefficients")) then {
-        _ballisticCoefficients = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ballisticCoefficients");
-    };
-    if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_velocityBoundaries")) then {
-        _velocityBoundaries = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_velocityBoundaries");
-    };
-    if (isText(configFile >> "cfgAmmo" >> _ammo >> "ACE_standardAtmosphere")) then {
-        _atmosphereModel = getText(configFile >> "cfgAmmo" >> _ammo >> "ACE_standardAtmosphere");
-    };
+};
+if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ballisticCoefficients")) then {
+    _ballisticCoefficients = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ballisticCoefficients");
+};
+if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_velocityBoundaries")) then {
+    _velocityBoundaries = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_velocityBoundaries");
+};
+if (isText(configFile >> "cfgAmmo" >> _ammo >> "ACE_standardAtmosphere")) then {
+    _atmosphereModel = getText(configFile >> "cfgAmmo" >> _ammo >> "ACE_standardAtmosphere");
 };
 
 GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
@@ -154,8 +141,12 @@ GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
 "ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _muzzleVelocity, _transonicStabilityCoef, getPosASL _bullet, EGVAR(weather,Latitude), EGVAR(weather,currentTemperature), EGVAR(weather,Altitude), EGVAR(weather,currentHumidity), overcast, floor(time), time - floor(time)];
 
 [{
-    private ["_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];
-    EXPLODE_4_PVT(_this select 0,_bullet,_caliber,_bulletTraceVisible,_index);
+    private ["_args", "_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];
+    _args = _this select 0;
+    _bullet = _args select 0;
+    _caliber = _args select 1;
+    _bulletTraceVisible = _args select 2;
+    _index = _args select 3;
     
     _bulletVelocity = velocity _bullet;
     _bulletPosition = getPosASL _bullet;

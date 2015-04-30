@@ -143,6 +143,7 @@
             <Hungarian>Irány: %1</Hungarian>
             <Russian>Направление: %1°</Russian>
             <Italian>Direzione : %1°</Italian>
+            <Portuguese>Direção: %1</Portuguese>
         </Key>
     </Package>
 </Project>
