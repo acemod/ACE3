@@ -42,7 +42,7 @@ class CfgVehicles {
           icon = PATHTOF(UI\team\team_management_ca.paa);
           hotkey = "M";
 
-          class ACE_JoinTeamRed {
+          class ACE_AssignTeamRed {
             displayName = "$STR_ACE_Interaction_AssignTeamRed";
             condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
             statement = QUOTE([ARR_2(_target,'RED')] call DFUNC(joinTeam));
@@ -51,7 +51,7 @@ class CfgVehicles {
             priority = 2.4;
             hotkey = "R";
           };
-          class ACE_JoinTeamGreen {
+          class ACE_AssignTeamGreen {
             displayName = "$STR_ACE_Interaction_AssignTeamGreen";
             condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
             statement = QUOTE([ARR_2(_target,'GREEN')] call DFUNC(joinTeam));
@@ -60,7 +60,7 @@ class CfgVehicles {
             priority = 2.3;
             hotkey = "G";
           };
-          class ACE_JoinTeamBlue {
+          class ACE_AssignTeamBlue {
             displayName = "$STR_ACE_Interaction_AssignTeamBlue";
             condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
             statement = QUOTE([ARR_2(_target,'BLUE')] call DFUNC(joinTeam));
@@ -69,7 +69,7 @@ class CfgVehicles {
             priority = 2.2;
             hotkey = "B";
           };
-          class ACE_JoinTeamYellow {
+          class ACE_AssignTeamYellow {
             displayName = "$STR_ACE_Interaction_AssignTeamYellow";
             condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
             statement = QUOTE([ARR_2(_target,'YELLOW')] call DFUNC(joinTeam));
