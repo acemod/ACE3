@@ -46,8 +46,11 @@ if (_unit == ACE_player) then {
 };
 
 // if we have unconsciousness for AI disabled, we will kill the unit instead
-if (!([_unit] call EFUNC(common,IsPlayer)) && (GVAR(enableUnsconsiousnessAI) == 0 || (GVAR(enableUnsconsiousnessAI) == 2 && random(1) <= 0.5))) exitwith {
-    [_unit, true] call FUNC(setDead); // force, to avoid getting into a loop in case revive is enabled.
+if !([_unit] call EFUNC(common,isPlayer)) then {
+    _enableUncon = _unit getVariable [QGVAR(enableUnconsciousnessAI), GVAR(enableUnconsciousnessAI)];
+    if (_enableUncon == 0 or {_enableUncon == 1 and (random 1) < 0.5}) exitWith {
+        [_unit, true] call FUNC(setDead);
+    };
 };
 
 // If a unit has the launcher out, it will sometimes start selecting the primairy weapon while unconscious,

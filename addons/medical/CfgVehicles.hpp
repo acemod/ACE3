@@ -87,7 +87,7 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
-            class enableUnsconsiousnessAI {
+            class enableUnconsiousnessAI {
                 displayName = "AI Unconsciousness";
                 description = "Allow AI to go unconscious";
                 typeName = "NUMBER";
@@ -97,12 +97,12 @@ class CfgVehicles {
                         value = 0;
                     };
                     class normal {
-                        name = "Enabled";
+                        name = "50/50";
                         value = 1;
                         default = 1;
                     };
-                    class full  {
-                        name = "50/50";
+                    class full {
+                        name = "Enabled";
                         value = 2;
                     };
                 };

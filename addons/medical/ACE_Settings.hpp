@@ -54,7 +54,7 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 1;
     };
-    class GVAR(enableUnsconsiousnessAI) {
+    class GVAR(enableUnconsiousnessAI) {
         value = 1;
         typeName = "SCALAR";
         values[] = {"Disabled", "Enabled", "50/50"};
