@@ -154,7 +154,7 @@ class ACE_Settings {
         description = "$STR_ACE_Medical_menuTypeDescription";
         typeName = "SCALAR";
         value = 0;
-        values[] = {"$STR_ACE_Medical_useSelection", "$STR_ACE_Medical_useRadial"};
+        values[] = {"$STR_ACE_Medical_useSelection"/*, "$STR_ACE_Medical_useRadial"*/};
         // isClientSettable = 1;
     };
 };
