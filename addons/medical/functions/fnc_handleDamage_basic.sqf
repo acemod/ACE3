@@ -41,14 +41,13 @@ _damage = _damage * (1 / _threshold);
 
 // This is a new hit, reset variables.
 // Note: sometimes handleDamage spans over 2 or even 3 frames.
-if (diag_frameno > (_unit getVariable [QGVAR(frameNo), -3]) + 2) then {
-    _unit setVariable [QGVAR(frameNo), diag_frameno];
+if (diag_frameno > (_unit getVariable [QGVAR(basic_frameNo), -3]) + 2) then {
+    _unit setVariable [QGVAR(basic_frameNo), diag_frameno];
     _unit setVariable [QGVAR(isFalling), false];
     _unit setVariable [QGVAR(projectiles), []];
     _unit setVariable [QGVAR(hitPoints), []];
     _unit setVariable [QGVAR(damages), []];
     _unit setVariable [QGVAR(structDamage), 0];
-    _unit setVariable [QGVAR(preventDeath), false];
     // Assign orphan structural damage to torso
     [{
         private ["_unit", "_damagesum"];
