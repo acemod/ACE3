@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller","_target","_title","_content"];
+private ["_caller", "_target", "_genericMessages"];
 _caller = _this select 0;
 _target = _this select 1;
 

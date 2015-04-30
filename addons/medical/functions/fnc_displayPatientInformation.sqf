@@ -16,7 +16,7 @@
 
 // Exit for basic medical
 if (GVAR(level) < 2) exitWith {};
-private ["_target", "_show", "_selectionN"];
+private ["_target", "_show", "_selectionN", "_amountOfGeneric", "_bandagedwounds", "_logCtrl", "_part", "_partText", "_pointDamage", "_severity", "_total", "_totalIvVolume", "_triageStatus", "_type"];
 _target = _this select 0;
 _show = if (count _this > 1) then {_this select 1} else {true};
 _selectionN = if (count _this > 2) then {_this select 2} else {0};
@@ -192,7 +192,7 @@ if (_show) then {
         _logCtrl = (_display displayCtrl 302);
         lbClear _logCtrl;
 
-        private ["_logs", "_log", "_message", "_moment", "_arguments", "_lbCtrl"];
+        private ["_logs", "_message", "_moment", "_arguments", "_lbCtrl"];
         _logs = _target getvariable [QGVAR(logFile_Activity), []];
         {
             // [_message,_moment,_type, _arguments]

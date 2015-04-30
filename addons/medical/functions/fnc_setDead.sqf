@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_force", "_reviveVal"];
+private ["_unit", "_force", "_reviveVal", "_lifesLeft"];
 _unit = _this select 0;
 _force = false;
 if (count _this >= 2) then {

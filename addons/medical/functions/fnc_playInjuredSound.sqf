@@ -15,7 +15,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_amountOfDamage","_bodyPartStatus","_availableSounds_A","_availableSounds_B","_availableSounds_C","_sound"];
+private ["_unit","_availableSounds_A","_availableSounds_B","_availableSounds_C","_sound", "_pain"];
 _unit = _this select 0;
 _pain = _this select 1;
 if (!local _unit || !GVAR(enableScreams)) exitwith{};
