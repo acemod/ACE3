@@ -8,6 +8,9 @@ class CfgAmmo {
     //class ace_arty_105mm_m1_m782_delay: ace_arty_105mm_m1_m782_prox {
     //    GVAR(skip) = 1;
     //};
+    
+    #include "CfgAmmoReflections.hpp"
+    
     class Bo_GBU12_LGB;
     class Nou_GBU12 : Bo_GBU12_LGB {
         GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
