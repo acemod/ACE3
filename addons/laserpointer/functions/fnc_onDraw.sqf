@@ -26,7 +26,7 @@ _isIR = _isIR == 1;
     };
 
     if (_laser != "") then {
-        _cacheName = format ["ACE_laserpointer_%1", _laser];
+        _cacheName = format [QGVAR(laser_%1), _laser];
         _laserID = missionNamespace getVariable [_cacheName, -1];
         if (missionNamespace getVariable [_cacheName, -1] == -1) then {
             _laserID = getNumber (configFile >> "CfgWeapons" >> _laser >> "ACE_laserpointer");
