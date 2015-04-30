@@ -155,6 +155,6 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0;
         values[] = {"$STR_ACE_Medical_useSelection", "$STR_ACE_Medical_useRadial"};
-        isClientSettable = 1;
+        // isClientSettable = 1;
     };
 };
