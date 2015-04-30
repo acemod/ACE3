@@ -115,5 +115,17 @@
             <English>Keeps cursor centered and pans the option menu around.  Useful if screen size is limited.</English>
             <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
         </Key>
+        <Key ID="STR_ACE_Interact_textSize">
+            <English>Interaction Text Size</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_shadowSetting">
+            <English>Interaction Text Shadow</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_shadowSettingDescription">
+            <English>Allows controlling the text's shadow.  Outline ignores custom shadow colors.</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_shadowOutline">
+            <English>Outline</English>
+        </Key>
     </Package>
 </Project>

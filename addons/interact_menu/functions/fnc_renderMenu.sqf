@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_menuInSelectedPath", "_path", "_menuDepth", "_x", "_offset", "_newPos", "_forEachIndex", "_player", "_pos", "_shadowColor", "_target", "_textColor"];
+private ["_menuInSelectedPath", "_path", "_menuDepth", "_x", "_offset", "_newPos", "_forEachIndex", "_player", "_pos", "_target", "_textSettings"];
 
 EXPLODE_4_PVT(_this,_parentPath,_action,_sPos,_angles);
 EXPLODE_3_PVT(_action,_actionData,_activeChildren,_actionObject);

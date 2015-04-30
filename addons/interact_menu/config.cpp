@@ -72,17 +72,16 @@ class ACE_Settings {
         value = 2;
         typeName = "SCALAR";
         isClientSettable = 1;
-        displayName = "Interaction Text Size";
-        description = "Interaction Text Size 2";
+        displayName = "$STR_ACE_Interact_textSize";
         values[] = {"$str_very_small", "$str_small", "$str_medium", "$str_large", "$str_very_large"};
     };    
     class GVAR(shadowSetting) {
-        value = 1;
+        value = 2;
         typeName = "SCALAR";
         isClientSettable = 1;
-        displayName = "Text Shadow";
-        description = "Interaction Text Size 2";
-        values[] = {"Disabled", "Enabled", "Outline"};
+        displayName = "$STR_ACE_Interact_shadowSetting";
+        description = "$STR_ACE_Interact_shadowSettingDescription";
+        values[] = {"$STR_A3_OPTIONS_DISABLED", "$STR_A3_OPTIONS_ENABLED", "$STR_ACE_Interact_shadowOutline"};
     };
 };
 
