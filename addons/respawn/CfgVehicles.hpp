@@ -96,7 +96,7 @@ class CfgVehicles {
 
         class ACE_Actions: ACE_Actions {
             class ACE_Teleport {
-                displayName = "$STR_ACE_Respawn_TeleportedToRallypoint";
+                displayName = "$STR_ACE_Respawn_TeleportToRallypoint";
                 distance = 4;
                 condition = QUOTE(side group _player == west);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_West')] call FUNC(teleportToRallypoint));
@@ -116,7 +116,7 @@ class CfgVehicles {
 
         class ACE_Actions: ACE_Actions {
             class ACE_Teleport {
-                displayName = "$STR_ACE_Respawn_TeleportedToRallypoint";
+                displayName = "$STR_ACE_Respawn_TeleportToRallypoint";
                 distance = 4;
                 condition = QUOTE(side group _player == east);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_East')] call FUNC(teleportToRallypoint));
@@ -136,7 +136,7 @@ class CfgVehicles {
 
         class ACE_Actions: ACE_Actions {
             class ACE_Teleport {
-                displayName = "$STR_ACE_Respawn_TeleportedToRallypoint";
+                displayName = "$STR_ACE_Respawn_TeleportToRallypoint";
                 distance = 4;
                 condition = QUOTE(side group _player == independent);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_Independent')] call FUNC(teleportToRallypoint));
@@ -157,7 +157,7 @@ class CfgVehicles {
 
         class ACE_Actions: ACE_Actions {
             class ACE_Teleport {
-                displayName = "$STR_ACE_Respawn_TeleportedToBase";
+                displayName = "$STR_ACE_Respawn_TeleportToBase";
                 distance = 4;
                 condition = QUOTE(side group _player == west);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_West_Base')] call FUNC(teleportToRallypoint));
@@ -177,7 +177,7 @@ class CfgVehicles {
 
         class ACE_Actions: ACE_Actions {
             class ACE_Teleport {
-                displayName = "$STR_ACE_Respawn_TeleportedToBase";
+                displayName = "$STR_ACE_Respawn_TeleportToBase";
                 distance = 4;
                 condition = QUOTE(side group _player == east);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_East_Base')] call FUNC(teleportToRallypoint));
@@ -197,7 +197,7 @@ class CfgVehicles {
 
         class ACE_Actions: ACE_Actions {
             class ACE_Teleport {
-                displayName = "$STR_ACE_Respawn_TeleportedToBase";
+                displayName = "$STR_ACE_Respawn_TeleportToBase";
                 distance = 4;
                 condition = QUOTE(side group _player == independent);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_Independent_Base')] call FUNC(teleportToRallypoint));

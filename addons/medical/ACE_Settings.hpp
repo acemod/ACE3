@@ -152,4 +152,13 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 0;
     };
+
+    class GVAR(menuTypeStyle) {
+        displayName = "$STR_ACE_Medical_menuTypeDisplay";
+        description = "$STR_ACE_Medical_menuTypeDescription";
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"$STR_ACE_Medical_useSelection"/*, "$STR_ACE_Medical_useRadial"*/};
+        // isClientSettable = 1;
+    };
 };

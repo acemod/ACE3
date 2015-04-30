@@ -444,20 +444,23 @@ class CfgVehicles {
         class ACE_Actions {
             // Include actions in body parts for treatment while in the open
             #define EXCEPTIONS exceptions[] = {};
+            #define ACTION_CONDITION condition = QUOTE(GVAR(menuTypeStyle) == 0);
             #include "ACE_Medical_Actions.hpp"
 
             // Create a consolidates medical menu for treatment while boarded
             class ACE_MainActions {
                 class Medical {
-                    displayName = "$STR_ACE_MEDICAL_ACTIONS_Medical";
+                    displayName = "$STR_ACE_Medical_Actions_Medical";
                     runOnHover = 1;
                     exceptions[] = {"isNotInside"};
-                    condition = QUOTE(vehicle _target != _target && vehicle _target == vehicle _player);
+                    condition = QUOTE((vehicle _target != _target && vehicle _target == vehicle _player) || GVAR(menuTypeStyle) == 1);
                     statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
                     icon = PATHTOF(UI\icons\medical_cross.paa);
 
                     #undef EXCEPTIONS
+                    #undef ACTION_CONDITION
                     #define EXCEPTIONS exceptions[] = {"isNotInside"};
+                    #define ACTION_CONDITION condition = "true";
                     #include "ACE_Medical_Actions.hpp"
                 };
                 class GVAR(loadPatient) {
@@ -656,7 +659,7 @@ class CfgVehicles {
         side = -1;
         model = QUOTE(PATHTOF(data\bodybag.p3d));
         icon = "";
-        displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
+        displayName = $STR_ACE_Medical_Bodybag_Display;
         EGVAR(dragging,canDrag) = 1;
         EGVAR(dragging,dragPosition[]) = {0,1.2,0};
         EGVAR(dragging,dragDirection) = 0;
@@ -709,7 +712,7 @@ class CfgVehicles {
     class ACE_fieldDressingItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_MEDICAL_BANDAGE_BASIC_DISPLAY;
+        displayName = $STR_ACE_Medical_Bandage_Basic_Display;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems {
@@ -722,7 +725,7 @@ class CfgVehicles {
     class ACE_packingBandageItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_MEDICAL_PACKING_BANDAGE_DISPLAY;
+        displayName = $STR_ACE_Medical_Packing_Bandage_Display;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems {
@@ -735,7 +738,7 @@ class CfgVehicles {
     class ACE_elasticBandageItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_MEDICAL_BANDAGE_ELASTIC_DISPLAY;
+        displayName = $STR_ACE_Medical_Bandage_Elastic_Display;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems {
@@ -748,7 +751,7 @@ class CfgVehicles {
     class ACE_tourniquetItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_MEDICAL_TOURNIQUET_DISPLAY;
+        displayName = $STR_ACE_Medical_Tourniquet_Display;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems {
@@ -761,7 +764,7 @@ class CfgVehicles {
     class ACE_morphineItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_MEDICAL_MORPHINE_DISPLAY;
+        displayName = $STR_ACE_Medical_Morphine_Display;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems {
@@ -774,7 +777,7 @@ class CfgVehicles {
     class ACE_atropineItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_MEDICAL_ATROPINE_DISPLAY;
+        displayName = $STR_ACE_Medical_Atropine_Display;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems {
@@ -787,7 +790,7 @@ class CfgVehicles {
     class ACE_epinephrineItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_MEDICAL_EPINEPHRINE_DISPLAY;
+        displayName = $STR_ACE_Medical_Epinephrine_Display;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems {
@@ -800,7 +803,7 @@ class CfgVehicles {
     class ACE_plasmaIVItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_MEDICAL_PLASMA_IV;
+        displayName = $STR_ACE_Medical_Plasma_IV;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems {
@@ -814,7 +817,7 @@ class CfgVehicles {
     class ACE_bloodIVItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_MEDICAL_BLOOD_IV;
+        displayName = $STR_ACE_Medical_Blood_IV;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems {
@@ -827,7 +830,7 @@ class CfgVehicles {
     class ACE_salineIVItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_MEDICAL_SALINE_IV;
+        displayName = $STR_ACE_Medical_Saline_IV;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems {
@@ -840,7 +843,7 @@ class CfgVehicles {
     class ACE_quikClotItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_MEDICAL_QUIKCLOT_DISPLAY;
+        displayName = $STR_ACE_Medical_QuikClot_Display;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems {
@@ -853,7 +856,7 @@ class CfgVehicles {
     class ACE_personalAidKitItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_MEDICAL_AID_KIT_DISPLAY;
+        displayName = $STR_ACE_Medical_Aid_Kit_Display;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems {
@@ -866,7 +869,7 @@ class CfgVehicles {
     class ACE_surgicalKitItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_MEDICAL_SURGICALKIT_DISPLAY;
+        displayName = $STR_ACE_Medical_SurgicalKit_Display;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems {
@@ -879,7 +882,7 @@ class CfgVehicles {
     class ACE_bodyBagItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_MEDICAL_BODYBAG_DISPLAY;
+        displayName = $STR_ACE_Medical_Bodybag_Display;
         author = "$STR_ACE_Common_ACETeam";
         vehicleClass = "Items";
         class TransportItems {
