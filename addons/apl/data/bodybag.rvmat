@@ -8,7 +8,7 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
 {
-	texture="z\ace\addons\medical\data\bodybag_nohq.paa";
+	texture="z\ace\addons\apl\data\bodybag_nohq.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -80,7 +80,7 @@ class Stage6
 };
 class Stage7
 {
-	texture="z\ace\addons\medical\data\env_co.paa";
+	texture="z\ace\addons\apl\data\env_co.paa";
 	uvSource="tex";
 	class uvTransform
 	{
