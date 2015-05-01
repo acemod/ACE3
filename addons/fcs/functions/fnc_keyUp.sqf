@@ -56,7 +56,7 @@ if (!(isNil QGVAR(backgroundCalculation)) and {!(scriptDone GVAR(backgroundCalcu
     terminate GVAR(backgroundCalculation);
 };
 
-private "_movingAzimuth";
+private ["_movingAzimuth", "_posTarget", "_velocityTarget"];
 
 // MOVING TARGETS
 _movingAzimuth = 0;
@@ -73,7 +73,7 @@ if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
         ((_posTarget select 2) - (GVAR(position) select 2)) / (time - GVAR(time))
     ];
 
-    private ["_magazineType", "_ammoType", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_initSpeedCoef"];
+    private ["_magazineType", "_ammoType", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_initSpeedCoef", "_velocityMagnitude"];
 
     // estimate time to target
     _magazineType = _vehicle currentMagazineTurret _turret;
