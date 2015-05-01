@@ -134,6 +134,7 @@
             <German>Cursor zentriert halten</German>
             <Hungarian>Kurzor középen tartása</Hungarian>
             <Polish>Utrzymaj kursor wyśrodkowany</Polish>
+            <Spanish>Mantener el cursor centrado</Spanish>
             <Czech>Kurzor vždy na středu</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCenteredDescription">
@@ -144,6 +145,7 @@
             <German>Hält den Cursor zentriert und verschiebt das Menü beim Bewegen. Nützlich bei kleinen Bildschirmen.</German>
             <Hungarian>Középen tartja a kurzort, és a menüelemeket mozgatja. Hasznos lehetőség korlátozott képméretnél.</Hungarian>
             <Polish>Utrzymuje kursor na środku ekranu, zamiast tego ruch myszą powoduje przesuwanie menu interakcji. Użyteczne w przypadku kiedy rozmiar ekranu jest ograniczony.</Polish>
+            <Spanish>Mantiene el cursor centrado y despliega los menús alrededor. Útil si el tamaño de la pantalla es limitado.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ActionOnKeyRelease">
             <English>Do action when releasing menu key</English>
@@ -152,6 +154,7 @@
             <Czech>Vyvolá akci po uvolnění tlačítka menu</Czech>
             <French>Action au relachement de touche</French>
             <Russian>Выполнять действие при отпускании кнопки взаимодействия</Russian>
+            <Spanish>Realizar la acción al soltar la tecla menu</Spanish>
         </Key>
         <Key ID="STR_ACE_Interact_textSize">
             <English>Interaction Text Size</English>
@@ -159,6 +162,7 @@
             <German>Menü-Schriftgröße</German>
             <French>Taille du texte d'interaction</French>
             <Russian>Размер текста (меню взаимодействия)</Russian>
+            <Spanish>Tamaño del texto de interacción</Spanish>
             <Polish>Rozmiar tekstu interakcji</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSetting">
@@ -167,6 +171,7 @@
             <German>Menü-Hintergrundschatten</German>
             <French>Ombre du texte d'interaction</French>
             <Russian>Тень от текста (меню взаимодействия)</Russian>
+            <Spanish>Sombra del texto de interacción</Spanish>
             <Polish>Cień tekstu interakcji</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSettingDescription">
@@ -175,6 +180,7 @@
             <German>Stellt den Hintergrundschatten ein. Die Einstellung 'Kontur' ignoriert die Farbe des Schattens.</German>
             <French>Permet de controler l'ombre du texte. Le contour ne prend pas en compte la couleur des ombres.</French>
             <Russian>Дает возможность изменять тень, отбрасываемую текстом. Контур не зависит от выбранного цвета тени.</Russian>
+            <Spanish>Permite contolar la sombra del texto. El contorno ignora los colores personalizados de la sombra.</Spanish>
             <Polish>Pozwala kontrolować cień tekstu. Kontury ignorują niestandardowe kolory cienia.</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_shadowOutline">
@@ -183,6 +189,7 @@
             <German>Kontur</German>
             <French>Contour</French>
             <Russian>Контур</Russian>
+            <Spanish>Contorno</Spanish>
             <Polish>Kontur</Polish>
         </Key>
     </Package>

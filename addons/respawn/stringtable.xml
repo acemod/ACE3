@@ -16,7 +16,7 @@
         <Key ID="STR_ACE_Respawn_Deployed">
             <English>Rallypoint deployed</English>
             <French>Point de ralliement déployé</French>
-            <German>Rallypoint errichtet</German>
+            <German>Sammelpunkt errichtet</German>
             <Spanish>Punto de reunión desplegado</Spanish>
             <Russian>Точка сбора установлена</Russian>
             <Polish>Punkt zbiórki rozmieszczony</Polish>
@@ -29,13 +29,15 @@
             <English>Teleport to Base</English>
             <Czech>Teleportovat na základnu</Czech>
             <German>Zur Basis teleportieren</German>
+            <Spanish>Treletransportar a Base</Spanish>
             <Polish>Teleport do bazy</Polish>
             <Russian>Телепортироваться на базу</Russian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
             <English>Teleport to Rallypoint</English>
             <Czech>Teleportovat na rallypoint</Czech>
-            <German>Zum Rallypoint teleportieren</German>
+            <Spanish>Teletransportar a Punto de reunión</Spanish>
+            <German>Zum Sammelpunkt teleportieren</German>
             <Polish>Teleport do punktu zbiórki</Polish>
             <Russian>Телепортироваться на точку сбора</Russian>
         </Key>
@@ -54,7 +56,7 @@
         <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
             <English>Teleported to Rallypoint</English>
             <French>Téléporté au point de déploiement</French>
-            <German>Zum Rallypoint teleportiert</German>
+            <German>Zum Sammelpunkt teleportiert</German>
             <Spanish>Teletransportado al punto de reunión</Spanish>
             <Russian>Телепорт на точку сбора</Russian>
             <Polish>Przeteleportowano do punktu zbiórki</Polish>
