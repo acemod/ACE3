@@ -250,6 +250,7 @@ class ACE_Medical_Actions {
             treatmentTime = 2.5;
             callbackSuccess = QUOTE(DFUNC(actionRemoveTourniquet));
             condition = QUOTE([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo));
+            displayNameProgress = "$STR_ACE_Medical_RemovingTourniquet";
         };
         class CPR: fieldDressing {
             displayName = "$STR_ACE_Medical_Actions_CPR";
