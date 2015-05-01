@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Injuries">
@@ -1678,7 +1678,7 @@
             <German>Er hat viel Blut verloren</German>
             <Hungarian>Sok vért vesztett</Hungarian>
             <Polish>Stracił sporo krwi</Polish>
-            <Russian>Большая кровопотеря</Russian>
+            <Spanish>Ha perdido mucha sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_noBloodloss">
             <English>He hasn't lost blood</English>
@@ -2071,28 +2071,28 @@
             <Polish>Styl menu medycznego</Polish>
             <French>Style de menu (Médical)</French>
             <German>Menü-Stil (Medical)</German>
-            <Russian>Вид меню (медицина)</Russian>
+            <Spanish>Tipo de menú (Medico)</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_menuTypeDescription">
             <English>Select the type of menu you prefer; default 3d selections or radial.</English>
             <Polish>Wybierz rodzaj menu, który preferujesz: domyślne pozycje 3D lub radialne</Polish>
             <French>Selctionne le type de menu préféré; par défaut la sélection 3D ou radiale</French>
             <German>Wähle den Menü-Stil: Standard 3D-Selektion oder kreisförmig.</German>
-            <Russian>Выберите тип меню: стандартный вариант (3D) или радиальный</Russian>
+            <Spanish>Selecciona el tipo de menú que prefieres: selecciones 3d por defecto o radial.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_useSelection">
             <English>Selections (3d)</English>
             <Polish>Pozycje (3D)</Polish>
             <French>sélections (3D)</French>
             <German>3D-Selektion</German>
-            <Russian>Стандартный (3D)</Russian>
+            <Spanish>Selecciones (3d)</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_useRadial">
             <English>Radial</English>
             <Polish>Radialne</Polish>
             <French>Radiale</French>
             <German>Kreisförmig</German>
-            <Russian>Радиальный</Russian>
+            <Spanish>Radial</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion">
             <English>Scrape</English>
@@ -2430,7 +2430,7 @@
             <Hungarian>Ellátás ...</Hungarian>
             <Polish>Leczenie ...</Polish>
             <French>Traitement ...</French>
-            <Russian>Лечение ...</Russian>
+            <Spanish>Tratando ...</Spanish>
         </Key>
     </Package>
 </Project>
