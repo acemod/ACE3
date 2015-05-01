@@ -28,7 +28,7 @@ DFUNC(pfhSwitchBack) = {
     if (local _originalPlayerUnit) exitWith {
         selectPlayer _originalPlayerUnit;
         deleteVehicle _currentUnit;
-        [(_this select 1)] call cba_fnc_removePerFrameHandler;
+        [_pfID] call cba_fnc_removePerFrameHandler;
     };
 };
 
