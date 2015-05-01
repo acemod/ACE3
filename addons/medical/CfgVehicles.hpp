@@ -304,7 +304,7 @@ class CfgVehicles {
                     };
                     class doctor {
                         name = "Doctor (Only Advanced Medics)";
-                        value = 1;
+                        value = 2;
                     };
                 };
             };
@@ -657,7 +657,7 @@ class CfgVehicles {
         XEH_ENABLED;
         scope = 1;
         side = -1;
-        model = QUOTE(PATHTOF(data\bodybag.p3d));
+        model = QUOTE(PATHTOEF(apl,bodybag.p3d));
         icon = "";
         displayName = $STR_ACE_Medical_Bodybag_Display;
         EGVAR(dragging,canDrag) = 1;
