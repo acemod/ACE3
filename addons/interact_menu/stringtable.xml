@@ -21,6 +21,7 @@
             <Polish>Zawsze wyświetlaj kursor dla interakcji</Polish>
             <Russian>Показывать курсор (взаимодействие)</Russian>
             <German>Immer den Cursor für Fremd-Interaktionen anzeigen</German>
+            <Hungarian>Mindig legyen a cselekvés kurzorja látható</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
@@ -30,6 +31,7 @@
             <Italian>Mostra il menù di interazione come lista</Italian>
             <Polish>Wyświetlaj menu interakcji jako listę</Polish>
             <German>Interaktionsmenü in Listen anzeigen</German>
+            <Hungarian>Cselekvő menük listaként való megjelenítése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_InteractKey">
             <English>Interact Key</English>
@@ -86,6 +88,8 @@
             <German>Interaktionstextfarbe Max</German>
             <Italian>Interazioni - Testo Massimo</Italian>
             <Russian>Взаимодействие - Текст Макс.</Russian>
+            <Spanish>Interacción - Texto al max.</Spanish>
+            <Hungarian>Cselekvés - Szöveg max.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
             <English>Interaction - Text Min</English>
@@ -94,6 +98,8 @@
             <German>Interaktionstextfarbe Min</German>
             <Italian>Interazioni - Testo Minimo</Italian>
             <Russian>Взаимодействие - Текст Мин.</Russian>
+            <Spanish>Interacción - Texto al min.</Spanish>
+            <Hungarian>Cselekvés - Szöveg min.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
             <English>Interaction - Shadow Max</English>
@@ -102,6 +108,8 @@
             <German>Interaktionstextschatten Max</German>
             <Italian>Interazioni - Ombra Massima</Italian>
             <Russian>Взаимодействие - Тень Макс.</Russian>
+            <Spanish>Interacción - Sombras al max.</Spanish>
+            <Hungarian>Cselekvés - Árnyék max.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
@@ -110,22 +118,29 @@
             <German>Interaktionstextschatten Min</German>
             <Italian>Interazioni - Ombra Minima</Italian>
             <Russian>Взаимодействие - Тень Мин.</Russian>
+            <Spanish>Interacción - Sombras al min.</Spanish>
+            <Hungarian>Cselekvés - Árnyék min.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCentered">
             <English>Keep cursor centered</English>
             <French>Garder le curseur au centre</French>
             <Russian>Центрировать курсор</Russian>
             <German>Cursor zentriert halten</German>
+            <Hungarian>Kurzor középen tartása</Hungarian>
+            <Polish>Utrzymaj kursor wyśrodkowany</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCenteredDescription">
             <English>Keeps cursor centered and pans the option menu around. Useful if screen size is limited.</English>
             <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
             <Russian>Центрирует курсор и двигает само меню опций. Полезно при ограниченном размере экрана.</Russian>
             <German>Hält den Cursor zentriert und verschiebt das Menü beim Bewegen. Nützlich bei kleinen Bildschirmen.</German>
+            <Hungarian>Középen tartja a kurzort, és a menüelemeket mozgatja. Hasznos lehetőség korlátozott képméretnél.</Hungarian>
+            <Polish>Utrzymuje kursor na środku ekranu, zamiast tego ruch myszą powoduje przesuwanie menu interakcji. Użyteczne w przypadku kiedy rozmiar ekranu jest ograniczony.</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ActionOnKeyRelease">
             <English>Do action when releasing menu key</English>
             <German>Aktion nach Loslassen der Taste ausführen</German>
+            <Polish>Wykonuj akcje po puszczeniu klawisza menu</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_textSize">
             <English>Interaction Text Size</English>

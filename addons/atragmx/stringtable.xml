@@ -21,6 +21,7 @@
             <French>Ouvrir ATragMX</French>
             <German>ATragMX öffnen</German>
             <Italian>Apri ATragMX</Italian>
+            <Hungarian>ATragMX elővétele</Hungarian>
         </Key>
         <Key ID="STR_ACE_ATragMX_Description">
             <English>Rugged PDA with ATragMX</English>
@@ -30,6 +31,7 @@
             <German>Robuster PDA mit ATragMX</German>
             <French>PDA robuste avec ATragMX</French>
             <Italian>PDA Robusto con ATragMX</Italian>
+            <Hungarian>Megerősített PDA, ATragMX-el</Hungarian>
         </Key>
         <Key ID="STR_ACE_ATragMX_ATragMXDialogKey">
             <English>Open ATragMX</English>
@@ -39,6 +41,7 @@
             <French>Ouvrir ATragMX</French>
             <German>ATragMX öffnen</German>
             <Italian>Apri ATragMX</Italian>
+            <Hungarian>ATragMX elővétele</Hungarian>
         </Key>
     </Package>
 </Project>

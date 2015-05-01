@@ -273,7 +273,7 @@
             <English>7.62mm Tracer</English>
             <Hungarian>7,62mm Nyomjelző</Hungarian>
             <German>7,62mm Leuchtspur</German>
-            <Spanish>7,62mm trazadora</Spanish>
+            <Spanish>7,62mm Trazadora</Spanish>
             <French>7,62mm Traçantes</French>
             <Polish>7,62mm Smugacz</Polish>
             <Czech>7.62mm Svítící</Czech>
@@ -381,7 +381,7 @@
             <Polish>.338 NM Tracer</Polish>
             <Czech>.338 NM Svítící</Czech>
             <French>.338 NM Traçante</French>
-            <Spanish>.338 NM trazadora</Spanish>
+            <Spanish>.338 NM Trazadora</Spanish>
             <Russian>.338 NM трассирующие</Russian>
             <Italian>.338 NM 130Rnd Tracciante</Italian>
         </Key>
@@ -466,7 +466,7 @@
             <Polish>9,3mm Smugacz</Polish>
             <Czech>9.3mm Svítící</Czech>
             <French>9.3mm Traçante</French>
-            <Spanish>9.3mm trazadora</Spanish>
+            <Spanish>9.3mm Trazadora</Spanish>
             <Russian>9,3 мм трассирующие</Russian>
             <Italian>9.3mm Tracer</Italian>
         </Key>
@@ -523,7 +523,7 @@
             <Polish>9,3mm Smugacz</Polish>
             <Czech>9.3mm Svítící</Czech>
             <French>9.3mm Traçante</French>
-            <Spanish>9.3mm trazadora</Spanish>
+            <Spanish>9.3mm Trazadora</Spanish>
             <Russian>9,3 мм трассирующие</Russian>
             <Italian>9.3mm Tracciante</Italian>
         </Key>
@@ -1019,10 +1019,10 @@
             <English>Caliber: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Cartouches: 20</French>
-            <Spanish>Calibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M993 бронебойные)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Patronen: 20</German>
             <Italian>Calibro: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Munizioni: 20</Italian>
+            <Spanish>Calibre: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Balas: 20</Spanish>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk248 Mod 0)</English>
@@ -1126,7 +1126,7 @@
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_Description">
             <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
             <French>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 30</French>
-            <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 30</Spanish>
+            <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MXM</Spanish>
             <Polish>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Pociski: 30</Polish>
             <Russian>Калибр: 6,5x47 мм (экспансивные Scenar)&lt;br /&gt;Патронов: 30</Russian>
             <German>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MXM</German>
@@ -1139,6 +1139,7 @@
             <Russian>Магазин из 30-ти 6,5 мм Creedmor</Russian>
             <German>6,5mm Creedmor 30-Patronen-Magazin</German>
             <French>Chargeur 6.5mm Creedmor 30Cps</French>
+            <Spanish>Cargador de 30 balas Creedmor de 6.5mm</Spanish>
         </Key>
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_NameShort">
             <English>6.5mm CM</English>
@@ -1155,6 +1156,7 @@
             <German>Kaliber: 6,5x47mm  Creedmor&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MXM</German>
             <French>Calibre: 6.5x47mm Creedmor &lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé avec: MXM</French>
             <Italian>Calibro: 6.5mm Creedmor&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MXM</Italian>
+            <Spanish>Calibre: 6.5mm Creedmor&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MXM</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Name">
             <English>.338 10Rnd Mag (300gr Sierra MatchKing HPBT)</English>
