@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -22,6 +22,7 @@
             <Russian>Показывать курсор (взаимодействие)</Russian>
             <German>Immer den Cursor für Fremd-Interaktionen anzeigen</German>
             <Hungarian>Mindig legyen a cselekvés kurzorja látható</Hungarian>
+            <Czech>Zobrazit kurzor v menu pro interakci</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
@@ -32,6 +33,7 @@
             <Polish>Wyświetlaj menu interakcji jako listę</Polish>
             <German>Interaktionsmenü in Listen anzeigen</German>
             <Hungarian>Cselekvő menük listaként való megjelenítése</Hungarian>
+            <Czech>Zobrazit menu interakce jako seznam</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_InteractKey">
             <English>Interact Key</English>
@@ -90,6 +92,7 @@
             <Russian>Взаимодействие - Текст Макс.</Russian>
             <Spanish>Interacción - Texto al max.</Spanish>
             <Hungarian>Cselekvés - Szöveg max.</Hungarian>
+            <Czech>Interakce - Text Max</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
             <English>Interaction - Text Min</English>
@@ -100,6 +103,7 @@
             <Russian>Взаимодействие - Текст Мин.</Russian>
             <Spanish>Interacción - Texto al min.</Spanish>
             <Hungarian>Cselekvés - Szöveg min.</Hungarian>
+            <Czech>Interakce - Text Min</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
             <English>Interaction - Shadow Max</English>
@@ -110,6 +114,7 @@
             <Russian>Взаимодействие - Тень Макс.</Russian>
             <Spanish>Interacción - Sombras al max.</Spanish>
             <Hungarian>Cselekvés - Árnyék max.</Hungarian>
+            <Czech>Interakce - Stín Max</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
@@ -120,6 +125,7 @@
             <Russian>Взаимодействие - Тень Мин.</Russian>
             <Spanish>Interacción - Sombras al min.</Spanish>
             <Hungarian>Cselekvés - Árnyék min.</Hungarian>
+            <Czech>Interakce - Stín Min</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCentered">
             <English>Keep cursor centered</English>
@@ -128,6 +134,7 @@
             <German>Cursor zentriert halten</German>
             <Hungarian>Kurzor középen tartása</Hungarian>
             <Polish>Utrzymaj kursor wyśrodkowany</Polish>
+            <Czech>Udržuj kurzor na středu</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCenteredDescription">
             <English>Keeps cursor centered and pans the option menu around. Useful if screen size is limited.</English>
@@ -143,18 +150,21 @@
             <Polish>Wykonuj akcje po puszczeniu klawisza menu</Polish>
             <French>Action au relachement de touche</French>
             <Russian>Выполнять действие при отпускании кнопки взаимодействия</Russian>
+            <Czech>Provést akci při pustění klávesy menu</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_textSize">
             <English>Interaction Text Size</English>
             <German>Menü-Schriftgröße</German>
             <French>Taille du texte d'interaction</French>
             <Russian>Размер текста (меню взаимодействия)</Russian>
+            <Czech>Velikost textu interakce</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSetting">
             <English>Interaction Text Shadow</English>
             <German>Menü-Hintergrundschatten</German>
             <French>Ombre du texte d'interaction</French>
             <Russian>Тень от текста (меню взаимодействия)</Russian>
+            <Czech>Stín textu interakce</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSettingDescription">
             <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
@@ -167,6 +177,7 @@
             <German>Kontur</German>
             <French>Contour</French>
             <Russian>Контур</Russian>
+            <Czech>Kontura</Czech>
         </Key>
     </Package>
 </Project>

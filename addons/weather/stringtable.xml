@@ -10,6 +10,7 @@
             <Italian>Mostra informazioni sul vento</Italian>
             <German>Zeige Windinformationen</German>
             <Hungarian>Széladatok mutatása</Hungarian>
+            <Czech>Zobrazit informace o větru</Czech>
         </Key>
     </Package>
 </Project>
