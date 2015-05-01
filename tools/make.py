@@ -60,7 +60,7 @@ module_root = ""
 release_dir = ""
 module_root_parent = ""
 optionals_root = ""
-key_name = "ace_preAlpha"
+key_name = "ace_3.0.0"
 key = ""
 dssignfile = ""
 
