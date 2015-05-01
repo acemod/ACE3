@@ -8,8 +8,8 @@ _launchParams = _this select 1;
 _seekerParams = _launchParams select 3;
 _angleFov = _seekerParams select 0;
 
-_laserParams = _launchParams select 5;
-
+_laserParams = (_launchParams select 1) select 5;
+TRACE_2("", _launchParams, _laserParams);
 if(!isNil "_target") then {
     // Handle AI or moving vanilla lasers
     _foundTargetPos = getPosASL _target;
