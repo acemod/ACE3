@@ -1592,5 +1592,9 @@
             <Portuguese>Calibre: 12.7x99mm (AMAX)&lt;br/&gt;Cartuchos: 5</Portuguese>
             <Hungarian>Kaliber: 12,7x99mm (AMAX)&lt;br /&gt;Lövedékek: 5</Hungarian>
         </Key>
+        <Key ID="STR_ACE_AmmoSupplyCrate_DisplayName">
+            <English>[ACE] Ammo Supply Crate</English>
+            <Polish>[ACE] Skrzynka z amunicją</Polish>
+        </Key>
     </Package>
 </Project>

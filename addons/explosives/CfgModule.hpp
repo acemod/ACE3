@@ -1,44 +1,50 @@
-class Module_F;
+class Logic;
+class Module_F: Logic {
+    class ModuleDescription {};
+};
 class ACE_ModuleExplosive: Module_F {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
-    displayName = "Explosive System";
+    displayName = "$STR_ACE_Explosive_Module_DisplayName";
     function = QUOTE(FUNC(module));
     scope = 2;
     isGlobal = 1;
     icon = PATHTOF(UI\Icon_Module_Explosives_ca.paa);
     class Arguments {
         class RequireSpecialist {
-            displayName = "Require specialists?";
-            description = "Require explosive specialists to disable explosives? Default: No";
+            displayName = "$STR_ACE_Explosive_RequireSpecialist_DisplayName";
+            description = "$STR_ACE_Explosive_RequireSpecialist_Description";
             typeName = "BOOL";
             class values {
                 class Yes {
-                    name = "Yes";
+                    name = "$STR_ACE_Explosive_Yes";
                     value = 1;
                 };
                 class No {
                     default = 1;
-                    name = "No";
+                    name = "$STR_ACE_Explosive_No";
                     value = 0;
                 };
             };
         };
         class PunishNonSpecialists {
-            displayName = "Punish non-specialists?";
-            description = "Increase the time it takes to complete actions for non-specialists? Default: Yes";
+            displayName = "$STR_ACE_Explosive_PunishNonSpecialists_DisplayName";
+            description = "$STR_ACE_Explosive_PunishNonSpecialists_Description";
             typeName = "BOOL";
             class values {
                 class Yes {
                     default = 1;
-                    name = "Yes";
+                    name = "$STR_ACE_Explosive_Yes";
                     value = 1;
                 };
                 class No {
-                    name = "No";
+                    name = "$STR_ACE_Explosive_No";
                     value = 0;
                 };
             };
         };
+    };
+	class ModuleDescription: ModuleDescription {
+            description = "$STR_ACE_Explosive_Module_Description";
     };
 };
