@@ -10,6 +10,7 @@ private["_constraintLeft", "_constraintRight", "_constraintTop", "_currentTarget
 private["_firedEH", "_fov", "_lastTick", "_lockTime", "_maxX", "_maxY", "_minX", "_minY", "_newTarget"]; 
 private["_offsetX", "_offsetY", "_pos", "_randomLockInterval", "_randomPosWithinBounds", "_range"];
 private["_runTime", "_soundTime", "_targetArray", "_zamerny", "_currentShooter"];
+private["_configs"];
 
 _currentShooter = (vehicle ACE_player);
 
@@ -42,7 +43,7 @@ if( ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), 
     &&
     { ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "missiles_titan_at"] call EFUNC(common,inheritsFrom)) }
 */
-if((count _config) < 1) exitWith {
+if((count _configs) < 1) exitWith {
     __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;

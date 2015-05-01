@@ -11,6 +11,8 @@
  */
 #include "script_component.hpp"
 
+private["_activated", "_checkAll", "_ctrlHint", "_error", "_logic", "_missingAddon", "_missingAddonServer", "_mode", "_oldVersionClient", "_oldVersionServer", "_rscLayer", "_text", "_units", "_whitelist"];
+
 _logic = _this select 0;
 _units = _this select 1;
 _activated = _this select 2;

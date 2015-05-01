@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_ammo", "_weapon", "_barrelLength", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocity", "_lowerIndex", "_upperIndex", "_barrelLengthRatio", "_muzzleVelocityNew"];
+private ["_ammo", "_weapon", "_barrelLength", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocity", "_lowerIndex", "_upperIndex", "_barrelLengthRatio", "_muzzleVelocityNew", "_i"];
 _ammo           = _this select 0;
 _weapon         = _this select 1;
 _muzzleVelocity = _this select 2;

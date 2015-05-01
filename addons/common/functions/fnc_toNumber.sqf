@@ -14,7 +14,7 @@
     NUMBER
 
   Example:
-    _number = ["102"] call FUNC(toNumber);
+    number = ["102"] call FUNC(toNumber);
 */
 #include "script_component.hpp"
 

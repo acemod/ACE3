@@ -13,6 +13,8 @@
 #include "script_component.hpp"
 
 _this spawn {
+    private["_ignoreDead", "_inVehicle", "_position", "_target", "_vehiclePlayer", "_vehicleTarget"];
+
   _target = _this select 0;
   _ignoreDead = _this select 1;
   if (isNil "_ignoreDead") then {_ignoreDead = false};
