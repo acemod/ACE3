@@ -23,6 +23,9 @@ _returnAnimation = "";
 
 _animationState = (animationState _unit);
 _unitAnimationCfg = (configFile >> "CfgMovesMaleSdr" >> "States" >> _animationState);
+//If we're already in a terminal animation just return current
+if ((getNumber (_unitAnimationCfg >> "terminal")) == 1) exitWith {_animationState};
+
 _unitActionsCfg = (configFile >> "CfgMovesBasic" >> "Actions" >> (getText (_unitAnimationCfg >> "actions")));
 
 TRACE_2("Animation/Action", configName _unitAnimationCfg, configName _unitActionsCfg);
@@ -41,5 +44,8 @@ if ((vehicle _unit) != _unit) then {
 } else {
     _returnAnimation = getText (_unitActionsCfg >> "die");
 };
+
+//Fallback if nothing valid found:
+if (_returnAnimation == "") then {_returnAnimation = "Unconscious"};
 
 _returnAnimation
