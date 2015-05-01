@@ -304,7 +304,7 @@ class CfgVehicles {
                     };
                     class doctor {
                         name = "Doctor (Only Advanced Medics)";
-                        value = 1;
+                        value = 2;
                     };
                 };
             };
