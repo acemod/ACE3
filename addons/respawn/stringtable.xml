@@ -27,7 +27,7 @@
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToBase">
             <English>Teleport to Base</English>
-            <Czech>Teleportovat na základnu</Czech>
+            <Czech>Teleportovat na Základnu</Czech>
             <German>Zur Basis teleportieren</German>
             <Spanish>Treletransportar a Base</Spanish>
             <Polish>Teleport do bazy</Polish>
@@ -36,7 +36,7 @@
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
             <English>Teleport to Rallypoint</English>
-            <Czech>Teleportovat na rallypoint</Czech>
+            <Czech>Teleport na Rallypoint</Czech>
             <Spanish>Teletransportar a Punto de reunión</Spanish>
             <German>Zum Sammelpunkt teleportieren</German>
             <Polish>Teleport do punktu zbiórki</Polish>
@@ -50,7 +50,7 @@
             <Spanish>Teletransportado a base</Spanish>
             <Russian>Телепорт на базу</Russian>
             <Polish>Przeteleportowano do bazy</Polish>
-            <Czech>Odteleportován na základnu</Czech>
+            <Czech>Teleportován na základnu</Czech>
             <Hungarian>Bázisra teleportálva</Hungarian>
             <Italian>Teleportato alla base</Italian>
             <Portuguese>Teletransportado para a Base</Portuguese>
@@ -62,7 +62,7 @@
             <Spanish>Teletransportado al punto de reunión</Spanish>
             <Russian>Телепорт на точку сбора</Russian>
             <Polish>Przeteleportowano do punktu zbiórki</Polish>
-            <Czech>Odteleportován na rallypoint</Czech>
+            <Czech>Teleportován na rallypoint</Czech>
             <Hungarian>Gyülekezőpontra teleportálva</Hungarian>
             <Italian>Teleportato al rallypoint</Italian>
             <Portuguese>Teletransportado para o Rallypoints</Portuguese>
@@ -76,7 +76,7 @@
             <French>Point de ralliement OUEST (Base)</French>
             <Italian>Rallypoint West (Base)</Italian>
             <Hungarian>Gyülekezőpont, Nyugat (Bázis)</Hungarian>
-            <Czech>Rallypoint BLUFOR (Base)</Czech>
+            <Czech>Rallypoint Západ (Základna)</Czech>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEastBase">
             <English>Rallypoint East (Base)</English>
@@ -87,7 +87,7 @@
             <French>Point de ralliement EST (Base)</French>
             <Italian>Rallypoint East (Base)</Italian>
             <Hungarian>Gyülekezőpont, Kelet (Bázis)</Hungarian>
-            <Czech>Rallypoint OPFOR (Base)</Czech>
+            <Czech>Ralllypoint Východ (Základna)</Czech>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependentBase">
             <English>Rallypoint Independent (Base)</English>
@@ -98,7 +98,7 @@
             <French>Point de ralliement Indépendant (Base)</French>
             <Italian>Rallypoint Independent (Base)</Italian>
             <Hungarian>Gyülekezőpont, Független (Bázis)</Hungarian>
-            <Czech>Rallypoint INDFOR (Base)</Czech>
+            <Czech>Rallypoint Nezávislý (Základna)</Czech>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWest">
             <English>Rallypoint West</English>
@@ -109,7 +109,7 @@
             <French>Point de ralliement OUEST</French>
             <Italian>Rallypoint West</Italian>
             <Hungarian>Gyülekezőpont, Nyugat</Hungarian>
-            <Czech>Rallypoint BLUFOR</Czech>
+            <Czech>Rallypoint Západ</Czech>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEast">
             <English>Rallypoint East</English>
@@ -120,7 +120,7 @@
             <French>Point de ralliement EST</French>
             <Italian>Rallypoint East</Italian>
             <Hungarian>Gyülekezőpont, Kelet</Hungarian>
-            <Czech>Rallypoint OPFOR</Czech>
+            <Czech>Rallypoint Východ</Czech>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependent">
             <English>Rallypoint Independent</English>
@@ -131,7 +131,7 @@
             <French>Point de ralliement Indépendant</French>
             <Italian>Rallypoint Independent</Italian>
             <Hungarian>Gyülekezőpont, Független</Hungarian>
-            <Czech>Rallypoint INDFOR</Czech>
+            <Czech>Rallypoint Nezávislý</Czech>
         </Key>
     </Package>
 </Project>

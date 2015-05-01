@@ -69,7 +69,7 @@
             <Spanish>Láser IR</Spanish>
             <Italian>Laser IR</Italian>
             <Hungarian>Infravörös Lézer</Hungarian>
-            <Czech>Infačervený laser</Czech>
+            <Czech>IR Laser</Czech>
         </Key>
         <Key ID="STR_ACE_Laserpointer_switchLaserLight">
             <English>Switch Laser / Infračervený Laser</English>
@@ -80,7 +80,7 @@
             <Italian>Alterna Laser / IR Laser</Italian>
             <Spanish>Cambiar láser / Láser IR</Spanish>
             <Hungarian>Lézer / Infravörös Lézer váltása</Hungarian>
-            <Czech>Přepnout Laser/ IR laser</Czech>
+            <Czech>Přepnout Laser / IR Laser</Czech>
         </Key>
     </Package>
 </Project>
