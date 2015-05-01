@@ -15,7 +15,7 @@
 
 #define BLOODLOSSRATE_BASIC 0.2
 
-private ["_totalBloodLoss","_tourniquets","_openWounds", "_cardiacOutput", "_internalWounds"];
+private ["_unit", "_totalBloodLoss","_tourniquets","_openWounds", "_cardiacOutput", "_internalWounds"];
 // TODO Only use this calculation if medium or higher, otherwise use vanilla calculations (for basic medical).
 
 _unit = _this select 0;
