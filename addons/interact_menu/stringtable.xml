@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -139,18 +139,23 @@
             <English>Do action when releasing menu key</English>
             <German>Aktion nach Loslassen der Taste ausführen</German>
             <Polish>Wykonuj akcje po puszczeniu klawisza menu</Polish>
+            <French>Action au relachement de touche</French>
         </Key>
         <Key ID="STR_ACE_Interact_textSize">
             <English>Interaction Text Size</English>
+            <French>Taille du texte d'interaction</French>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSetting">
             <English>Interaction Text Shadow</English>
+            <French>Ombre du texte d'interaction</French>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSettingDescription">
             <English>Allows controlling the text's shadow.  Outline ignores custom shadow colors.</English>
+            <French>Permet de controler l'ombre du texte. Le contour ne prend pas en compte la couleur des ombres.</French>
         </Key>
         <Key ID="STR_ACE_Interact_shadowOutline">
             <English>Outline</English>
+            <French>Contour</French>
         </Key>
     </Package>
 </Project>

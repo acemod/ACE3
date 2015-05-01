@@ -455,7 +455,7 @@
             <English>9.3mm 10Rnd Tracer Mag</English>
             <German>9,3mm 10-Patronen-Magazin Leuchtspur</German>
             <Polish>Magazynek 9.3mm 10rd Smugacz</Polish>
-            <French>Chargeur 9.3mm 10Cps Traçante</French>
+            <French>Ch. 9.3mm 10Cps Traçante</French>
             <Spanish>Cargador de 10 balas trazadoras de 9.3mm</Spanish>
             <Russian>Магазин из 10-ти 9,3 мм трассирующих</Russian>
             <Italian>9.3mm 10Rnd Tracer Mag</Italian>
@@ -483,7 +483,7 @@
             <English>9.3mm 10Rnd Tracer IR-DIM Mag</English>
             <German>9,3mm 10-Patronen-Magazin Leuchtspur IR-DIM</German>
             <Polish>Magazynek 9,3mm 10rd Smugacz IR-DIM</Polish>
-            <French>Chargeur 9.3mm 10Cps Traçante IR-DIM</French>
+            <French>Ch. 9.3mm 10Cps Traçante IR-DIM</French>
             <Spanish>Cargador de 10 balas trazadoras IR-DIM de 9.3mm</Spanish>
             <Russian>Магазин из 10-ти 9,3 мм ИК-трассирующих</Russian>
             <Italian>9.3mm 10Rnd Tracciante IR-DIM Mag</Italian>
@@ -595,7 +595,7 @@
         <Key ID="STR_ACE_16Rnd_9x19_mag_Name">
             <English>9x19mm 16Rnd Mag</English>
             <Polish>Magazynek 9x19mm 16rd</Polish>
-            <French>Chargeur 9x19mm 16Cps</French>
+            <French>Ch. 9x19mm 16Cps</French>
             <Spanish>Cargador de 16 balas de 9x19mm</Spanish>
             <Russian>Магазин из 16-ти 9х19 мм</Russian>
             <German>9x19mm 20-Patronen-Magazin</German>
@@ -613,7 +613,7 @@
         <Key ID="STR_ACE_16Rnd_9x19_mag_Description">
             <English>9x19mm 30Rnd Mag</English>
             <Polish>Magazynek 9x19mm 16rd</Polish>
-            <French>Chargeur 9x19mm 30Cps</French>
+            <French>Ch. 9x19mm 30Cps</French>
             <Spanish>Cargador de 16 balas de 9x19mm</Spanish>
             <Russian>Магазин из 16-ти 9х19 мм</Russian>
             <German>9x19mm 30-Patronen-Magazin</German>
@@ -622,7 +622,7 @@
         <Key ID="STR_ACE_30Rnd_9x19_mag_Name">
             <English>9x19mm 30Rnd Mag</English>
             <Polish>Magazynek 9x19mm 30rd</Polish>
-            <French>Chargeur 9x19mm 30Cps</French>
+            <French>Ch. 9x19mm 30Cps</French>
             <Spanish>Cargador de 30 balas de 9x19mm</Spanish>
             <Russian>Магазин из 30-ти 9х19 мм</Russian>
             <German>9x19mm 30-Patronen-Magazin</German>
@@ -640,7 +640,7 @@
         <Key ID="STR_ACE_30Rnd_9x19_mag_Description">
             <English>9x19mm 30Rnd Mag</English>
             <Polish>Magazynek 9x19mm 30rd</Polish>
-            <French>Chargeur 9x19mm 30Cps</French>
+            <French>Ch. 9x19mm 30Cps</French>
             <Spanish>Cargador de 30 balas de 9x19mm</Spanish>
             <Russian>Магазин из 30-ти 9х19 мм</Russian>
             <German>9x19mm 30-Patronen-Magazin</German>
@@ -649,7 +649,7 @@
         <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_Name">
             <English>7.62x54mm 10Rnd Tracer Mag</English>
             <Polish>Magazynek 7,62x54mm 10rd Smugacz</Polish>
-            <French>Chargeur 7.62x54mm 10Rnd Traçante</French>
+            <French>Ch. 7.62x54mm 10Rnd Traçante</French>
             <Spanish>Cargador de 10 balas trazadoras de 7.62x54mm</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм ИК-трассирующих</Russian>
             <German>7,62x54mm 10-Patronen-Magazin Leuchtspur</German>
@@ -667,7 +667,7 @@
         <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_Description">
             <English>7.62x54mm 10Rnd Tracer Mag</English>
             <Polish>Magazynek 7,62x54mm 10rd Smugacz</Polish>
-            <French>Chargeur 7.62x54mm 10Cps Traçante</French>
+            <French>Ch. 7.62x54mm 10Cps Traçante</French>
             <Spanish>Cargador de 10 balas trazadoras de 7.62x54mm</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм ИК-трассирующих</Russian>
             <German>7,62x54mm 10-Patronen-Magazin Leuchtspur</German>
@@ -676,7 +676,7 @@
         <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimName">
             <English>6.5mm 100Rnd Tracer IR-DIM Mag</English>
             <Polish>Magazynek 6,5mm 100rd Smugacz IR-DIM</Polish>
-            <French>Chargeur 6.5mm 100Rnd Traçante IR-DIM</French>
+            <French>Ch. 6.5mm 100Rnd Traçante IR-DIM</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 100 6,5 мм ИК-трассирующих</Russian>
             <German>6,5mm 100-Patronen-Magazin IR-DIM Leuchtspur</German>
@@ -694,7 +694,7 @@
         <Key ID="STR_ACE_100Rnd_65x39_caseless_mag_Tracer_DimDescription">
             <English>6.5mm 100Rnd Tracer IR-DIM Mag&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX LSW</English>
             <Polish>Magazynek 6,5mm 100rd Smugacz IR-DIM</Polish>
-            <French>Chargeur 6.5mm 100Rnd Traçante IR-DIM&lt;br /&gt;Cartouches: 100&lt;br /&gt;Utilisé avec: MX LSW</French>
+            <French>Ch. 6.5mm 100Rnd Traçante IR-DIM&lt;br /&gt;Cartouches: 100&lt;br /&gt;Utilisé avec: MX LSW</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 100 6,5 мм ИК-трассирующих</Russian>
             <German>6,5mm 100-Patronen-Magazin IR-DIM Leuchtspur&lt;br /&gt;Patronen: 100&lt;br /&gt;Eingesetzt von: MXLSW</German>
@@ -757,7 +757,7 @@
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_Mk318_mag_Name">
             <English>5.56mm 30Rnd Mag (Mk318)</English>
             <Polish>Magazynek 5,56mm 30rd (Mk318)</Polish>
-            <French>Chargeur 5.56mm 30Cps (Mk318)</French>
+            <French>Ch. 5.56mm 30Cps (Mk318)</French>
             <Spanish>Cargador de 30 balas de 5.56mm (Mk318)</Spanish>
             <Russian>Магазин из 30-ти 5.56 мм (Mk318)</Russian>
             <German>5,56mm 30-Patronen-Magazin (Mk318)</German>
@@ -784,7 +784,7 @@
         <Key ID="STR_ACE_30Rnd_556x45_Stanag_M995_AP_mag_Name">
             <English>5.56mm 30Rnd Mag (M995 AP)</English>
             <Polish>Magazynek 5,56mm 30rd (M995 AP)</Polish>
-            <French>Chargeur 5.56mm 30Cps (M995 AP)</French>
+            <French>Ch. 5.56mm 30Cps (M995 AP)</French>
             <Spanish>Cargador de 30 balas de 5.56mm (M995 AP)</Spanish>
             <Russian>Магазин из 30-ти 5.56 мм (M995 бронебойные)</Russian>
             <German>5,56mm 30-Patronen-Magazin (M995AP)</German>
@@ -811,7 +811,7 @@
         <Key ID="STR_ACE_10Rnd_762x51_M118LR_Mag_Name">
             <English>7.62mm 10Rnd Mag (M118LR)</English>
             <Polish>Magazynek 7,62mm 10rd (M118LR)</Polish>
-            <French>Chargeur 7.62mm 10Cps (M118LR)</French>
+            <French>Ch. 7.62mm 10Cps (M118LR)</French>
             <Spanish>Cargador de 10 balas de 7.62mm (M118LR)</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм (M118LR)</Russian>
             <German>7,62mm 10-Patronen-Magazin (M118LR)</German>
@@ -838,7 +838,7 @@
         <Key ID="STR_ACE_20Rnd_762x51_M118LR_Mag_Name">
             <English>7.62mm 20Rnd Mag (M118LR)</English>
             <Polish>Magazynek 7,62mm 20rd (M118LR)</Polish>
-            <French>Chargeur 7.62mm 20Cps (M118LR)</French>
+            <French>Ch. 7.62mm 20Cps (M118LR)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (M118LR)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (M118LR)</Russian>
             <German>7,62mm 20-Patronen-Magazin (M118LR)</German>
@@ -865,7 +865,7 @@
         <Key ID="STR_ACE_10Rnd_762x51_Mk316_Mod_0_Mag_Name">
             <English>7.62mm 10Rnd Mag (Mk316 Mod 0)</English>
             <Polish>Magazynek 7,62mm 10rd (Mk316 Mod 0)</Polish>
-            <French>Chargeur 7.62mm 10Cps (Mk316 Mod 0)</French>
+            <French>Ch. 7.62mm 10Cps (Mk316 Mod 0)</French>
             <Spanish>Cargador de 10 balas de 7.62mm (Mk316 Mod 0)</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм (Mk316 Mod 0)</Russian>
             <German>7,62mm 10-Patronen-Magazin (Mk316 Mod 0)</German>
@@ -892,7 +892,7 @@
         <Key ID="STR_ACE_20Rnd_762x51_Mk316_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk316 Mod 0)</English>
             <Polish>Magazynek 7,62mm 20rd (Mk316 Mod 0)</Polish>
-            <French>Chargeur 7.62mm 20Cps (Mk316 Mod 0)</French>
+            <French>Ch. 7.62mm 20Cps (Mk316 Mod 0)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Mk316 Mod 0)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (Mk316 Mod 0)</Russian>
             <German>7,62mm 20-Patronen-Magazin (Mk316 Mod 0)</German>
@@ -919,7 +919,7 @@
         <Key ID="STR_ACE_10Rnd_762x51_Mk319_Mod_0_Mag_Name">
             <English>7.62mm 10Rnd Mag (Mk319 Mod 0)</English>
             <Polish>Magazynek 7,62mm 10rd (Mk319 Mod 0)</Polish>
-            <French>Chargeur 7.62mm 10Cps (Mk319 Mod 0)</French>
+            <French>Ch. 7.62mm 10Cps (Mk319 Mod 0)</French>
             <Spanish>Cargador de 10 balas de 7.62mm (Mk319 Mod 0)</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм (Mk319 Mod 0)</Russian>
             <German>7,62mm 10-Patronen-Magazin (Mk319 Mod 0)</German>
@@ -946,7 +946,7 @@
         <Key ID="STR_ACE_20Rnd_762x51_Mk319_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk319 Mod 0)</English>
             <Polish>Magazynek 7,62mm 20rd (Mk319 Mod 0)</Polish>
-            <French>Chargeur 7.62mm 20Cps (Mk319 Mod 0)</French>
+            <French>Ch. 7.62mm 20Cps (Mk319 Mod 0)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Mk319 Mod 0)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (Mk319 Mod 0)</Russian>
             <German>7,62mm 20-Patronen-Magazin (Mk319 Mod 0)</German>
@@ -973,7 +973,7 @@
         <Key ID="STR_ACE_10Rnd_762x51_M993_AP_Mag_Name">
             <English>7.62mm 10Rnd Mag (M993 AP)</English>
             <Polish>Magazynek 7,62mm 10rd (M993 AP)</Polish>
-            <French>Chargeur 7.62mm 10Cps (M993 AP)</French>
+            <French>Ch. 7.62mm 10Cps (M993 AP)</French>
             <Spanish>Cargador de 10 balas de 7.62mm (M993 AP)</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм (M993 бронебойные)</Russian>
             <German>7,62mm 10-Patronen-Magazin (M993 AP)</German>
@@ -1000,7 +1000,7 @@
         <Key ID="STR_ACE_20Rnd_762x51_M993_AP_Mag_Name">
             <English>7.62mm 20Rnd Mag (M993 AP)</English>
             <Polish>Magazynek 7,62mm 20rd (M993 AP)</Polish>
-            <French>Chargeur 7.62mm 20Cps (M993 AP)</French>
+            <French>Ch. 7.62mm 20Cps (M993 AP)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (M993 AP)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (M993 бронебойные)</Russian>
             <German>7,62mm 20-Patronen-Magazin (M993 AP)</German>
@@ -1027,7 +1027,7 @@
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk248 Mod 0)</English>
             <Polish>Magazynek 7,62mm 20rd (Mk248 Mod 0)</Polish>
-            <French>Chargeur 7.62mm 20Cps (Mk248 Mod 0)</French>
+            <French>Ch. 7.62mm 20Cps (Mk248 Mod 0)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Mk248 Mod 0)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (Mk248 Mod 0)</Russian>
             <German>7,62mm 20-Patronen-Magazin (Mk248 Mod 0)</German>
@@ -1054,7 +1054,7 @@
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk248 Mod 1)</English>
             <Polish>Magazynek 7,62mm 20rd (Mk248 Mod 1)</Polish>
-            <French>Chargeur 7.62mm 20Cps (Mk248 Mod 1)</French>
+            <French>Ch. 7.62mm 20Cps (Mk248 Mod 1)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Mk248 Mod 1)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (Mk248 Mod 1)</Russian>
             <German>7,62mm 20-Patronen-Magazin (Mk248 Mod 1)</German>
@@ -1081,7 +1081,7 @@
         <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Name">
             <English>7.62mm 20Rnd Mag (Berger Hybrid OTM)</English>
             <Polish>Magazynek 7,62mm 20rd (Berger Hybrid OTM)</Polish>
-            <French>Chargeur 7.62 20Cps (Berger Hybrid OTM)</French>
+            <French>Ch. 7.62 20Cps (Berger Hybrid OTM)</French>
             <Spanish>Cargador de 20 balas de 7.62mm (Berger Hybrid OTM)</Spanish>
             <Russian>Магазин из 20-ти 7,62 мм (Berger Hybrid OTM)</Russian>
             <German>7,62mm 20-Patronen-Magazin (Berger Hybrid OTM)</German>
@@ -1107,7 +1107,7 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65x47_Scenar_mag_Name">
             <English>6.5x47mm 30Rnd Mag (HPBT Scenar)</English>
-            <French>Chargeur 6.5x47mm 30Cps (HPBT Scenar)</French>
+            <French>Ch. 6.5x47mm 30Cps (HPBT Scenar)</French>
             <Spanish>Cargador de 30 balas de 6.5x47mm (HPBT Scenar)</Spanish>
             <Polish>Magazynek 6,5x47mm 30rd (HPBT Scenar)</Polish>
             <Russian>Магазин из 30-ти 6,5x47 мм (экспансивные Scenar)</Russian>
@@ -1138,8 +1138,8 @@
             <Italian>6.5mm Creedmor 30Rnd Mag</Italian>
             <Russian>Магазин из 30-ти 6,5 мм Creedmor</Russian>
             <German>6,5mm Creedmor 30-Patronen-Magazin</German>
-            <French>Chargeur 6.5mm Creedmor 30Cps</French>
             <Spanish>Cargador de 30 balas Creedmor de 6.5mm</Spanish>
+            <French>Ch. 6.5mm Creedmor 30Cps</French>
         </Key>
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_NameShort">
             <English>6.5mm CM</English>
@@ -1160,7 +1160,7 @@
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Name">
             <English>.338 10Rnd Mag (300gr Sierra MatchKing HPBT)</English>
-            <French>Chargeur .338 10 Cps (300gr Sierra MatchKing HPBT)</French>
+            <French>Ch. .338 10 Cps (300gr Sierra MatchKing HPBT)</French>
             <Spanish>Cargador de 10 balas de 8.6x70mm (300gr Sierra MatchKing HPBT)</Spanish>
             <Polish>Magazynek .338 10rd (300gr Sierra MatchKing HPBT)</Polish>
             <Russian>Магазин из 10-ти .338 (300 гран Sierra MatchKing экспансивные)</Russian>
@@ -1187,7 +1187,7 @@
         </Key>
         <Key ID="STR_ACE_10Rnd_338_API526_Mag_Name">
             <English>.338 10Rnd Mag (API526)</English>
-            <French>Chargeur .338 10Cps (API526)</French>
+            <French>Ch. .338 10Cps (API526)</French>
             <Spanish>Cargador de 10 balas de .338 (API526)</Spanish>
             <Polish>Magazynek .338 10rd (API526)</Polish>
             <Russian>Магазин из 10-ти .338 (API526)</Russian>
@@ -1214,7 +1214,7 @@
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_Mag_Name">
             <English>12.7x99mm 5Rnd Mag</English>
-            <French>Chargeur 12.7x99mm 5Cps</French>
+            <French>Ch. 12.7x99mm 5Cps</French>
             <Spanish>Cargador de 5 balas de 12.7x99mm</Spanish>
             <Polish>Magazynek 12,7x99mm 5rd</Polish>
             <Russian>Магазин из 5-ти 12,7x99 мм</Russian>
@@ -1241,7 +1241,7 @@
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_API_Mag_Name">
             <English>12.7x99mm API 5Rnd Mag</English>
-            <French>Chargeur 12.7x99mm API 5Cps</French>
+            <French>Ch. 12.7x99mm API 5Cps</French>
             <Spanish>Cargador de 5 balas de 12.7x99mm API</Spanish>
             <Polish>Magazynek 12,7x99mm API 5rd</Polish>
             <Italian>12.7x99mm API 5Rnd Mag</Italian>
@@ -1268,7 +1268,7 @@
         </Key>
         <Key ID="STR_ACE_5Rnd_127x99_AMAX_Mag_Name">
             <English>12.7x99mm 5Rnd Mag (AMAX)</English>
-            <French>Chargeur 12.7x99mm 5Rnd Mag (AMAX)</French>
+            <French>Ch. 12.7x99mm 5Cps (AMAX)</French>
             <Spanish>Cargador de 5 balas de 12.7x99mm (AMAX)</Spanish>
             <Polish>Magazynek 12,7x99mm 5rd (AMAX)</Polish>
             <Russian>Магазин из 5-ти 12,7x99 мм (A-MAX)</Russian>

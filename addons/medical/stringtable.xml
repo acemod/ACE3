@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Injuries">
@@ -16,7 +16,7 @@
             <German>Körperteil nicht verletzt ...</German>
             <Italian>Non ci sono lesioni in questa parte del corpo ...</Italian>
             <Russian>Данная часть тела не повреждена ...</Russian>
-            <French>Aucune blessures sur cette partie du corps</French>
+            <French>Aucune blessures sur cette partie du corps ...</French>
             <Polish>Brak obrażeń na tej części ciała ...</Polish>
             <Spanish>Sin heridas en esta parte del cuerpo ...</Spanish>
             <Hungarian>Ezen a testrészen nincs sérülés ...</Hungarian>
@@ -36,8 +36,8 @@
             <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
             <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
             <Italian>Il livello di dettagli della simulazione dei rifiuti indica il numero di rifiuti che verranno creati localmente nel client. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio client.</Italian>
-            <French>Le nieau de simulation des détritus règle la quantité de déchets qui vont être créer localement dans le client. Des quantitées excessive dans certaines zones locales aurait pu causer des chutes D'IPS, donc c'est une option client uniquement.</French>
             <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
+            <French>Le niveau de simulation des détritus règle la quantité de déchets qui vont être créés localement chez le client. Des quantitées excessive chez certains clients peuvent causer des chutes de FPS, c'est donc une option client uniquement.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -2065,18 +2065,22 @@
         <Key ID="STR_ACE_Medical_menuTypeDisplay">
             <English>Style of menu (Medical)</English>
             <Polish>Styl menu medycznego</Polish>
+            <French>Style de menu (Médical)</French>
         </Key>
         <Key ID="STR_ACE_Medical_menuTypeDescription">
             <English>Select the type of menu you prefer; default 3d selections or radial.</English>
             <Polish>Wybierz rodzaj menu, który preferujesz: domyślne pozycje 3D lub radialne</Polish>
+            <French>Selctionne le type de menu préféré; par défaut la sélection 3D ou radiale</French>
         </Key>
         <Key ID="STR_ACE_Medical_useSelection">
             <English>Selections (3d)</English>
             <Polish>Pozycje (3D)</Polish>
+            <French>sélections (3D)</French>
         </Key>
         <Key ID="STR_ACE_Medical_useRadial">
             <English>Radial</English>
             <Polish>Radialne</Polish>
+            <French>Radiale</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion">
             <English>Scrape</English>
@@ -2093,7 +2097,7 @@
             <German>Kleiner Kratzer</German>
             <Italian>Minima Scorticatura</Italian>
             <Russian>Малая ссадина</Russian>
-            <French>Eraflure Mineure</French>
+            <French>Petite éraflure</French>
             <Polish>Pomniejsze draśnięcie</Polish>
             <Spanish>Arañazo menor</Spanish>
             <Hungarian>Kis horzsolás</Hungarian>
@@ -2103,7 +2107,7 @@
             <German>Mittlerer Kratzer</German>
             <Italian>Media Scorticatura</Italian>
             <Russian>Средняя ссадина</Russian>
-            <French>Moyenne Eraflure</French>
+            <French>Moyenne éraflure</French>
             <Polish>Średnie draśnięcie</Polish>
             <Spanish>Arañazo medio</Spanish>
             <Hungarian>Közepes horzsolás</Hungarian>
@@ -2113,7 +2117,7 @@
             <German>Großer Kratzer</German>
             <Italian>Alta Scorticatura</Italian>
             <Russian>Большая ссадина</Russian>
-            <French>Large Eraflure</French>
+            <French>Grande éraflure</French>
             <Polish>Duże draśnięcie</Polish>
             <Spanish>Arañazo severo</Spanish>
             <Hungarian>Nagy horzsolás</Hungarian>
@@ -2133,7 +2137,7 @@
             <German>Kleine Avulsion</German>
             <Italian>Minima Avulsione</Italian>
             <Russian>Малая рваная рана</Russian>
-            <French>Avulsion Mineure</French>
+            <French>Petite avulsion</French>
             <Polish>Pomniejsza rana płatowa</Polish>
             <Spanish>Avulsión menor</Spanish>
             <Hungarian>Kis leszakadás</Hungarian>
@@ -2143,7 +2147,7 @@
             <German>Mittlere Avulsion</German>
             <Italian>Media Avulsione</Italian>
             <Russian>Средняя рваная рана</Russian>
-            <French>Avulsion Moyenne</French>
+            <French>Moyenne avulsion</French>
             <Polish>Średnia rana płatowa</Polish>
             <Spanish>Avulsión media</Spanish>
             <Hungarian>Közepes leszakadás</Hungarian>
@@ -2153,7 +2157,7 @@
             <German>Große Avulsion</German>
             <Italian>Alta Avulsione</Italian>
             <Russian>Большая рваная рана</Russian>
-            <French>Large Avulsion</French>
+            <French>Grande avulsion</French>
             <Polish>Duża rana płatowa</Polish>
             <Spanish>Avulsión severa</Spanish>
             <Hungarian>Nagy leszakadás</Hungarian>
@@ -2173,7 +2177,7 @@
             <German>Kleine Prellung</German>
             <Italian>Minima Contusione</Italian>
             <Russian>Малый ушиб</Russian>
-            <French>Hématome Mineur</French>
+            <French>Petit hématome</French>
             <Polish>Pomniejsze stłuczenie</Polish>
             <Spanish>Contusión menor</Spanish>
             <Hungarian>Kis zúzódás</Hungarian>
@@ -2183,7 +2187,7 @@
             <German>Mittlere Prellung</German>
             <Italian>Media Contusione</Italian>
             <Russian>Средний ушиб</Russian>
-            <French>Hématome Moyen</French>
+            <French>Hématome moyen</French>
             <Polish>Średnie stłuczenie</Polish>
             <Spanish>Contusión media</Spanish>
             <Hungarian>Közepes zúzódás</Hungarian>
@@ -2193,7 +2197,7 @@
             <German>Große Prellung</German>
             <Italian>Alta Contusione</Italian>
             <Russian>Большой ушиб</Russian>
-            <French>Large Hématome</French>
+            <French>Hématome important</French>
             <Polish>Duże stłuczenie</Polish>
             <Spanish>Contusión severa</Spanish>
             <Hungarian>Nagy zúzódás</Hungarian>
@@ -2213,7 +2217,7 @@
             <German>Kleine Quetschverletzung</German>
             <Italian>Minimo Tessuto Schiacciato</Italian>
             <Russian>Малая компрессионная травма</Russian>
-            <French>Tissu écrasé Mineur</French>
+            <French>Tissu écrasé léger</French>
             <Polish>Pomniejsze zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado menor</Spanish>
             <Hungarian>Kis zúzott szövet</Hungarian>
@@ -2223,7 +2227,7 @@
             <German>Mittlere Quetschverletzung</German>
             <Italian>Medio Tessuto Schiacciato</Italian>
             <Russian>Средняя компрессионная травма</Russian>
-            <French>Tissu écrasé Moyen</French>
+            <French>Tissu écrasé moyen</French>
             <Polish>Średnie zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado medio</Spanish>
             <Hungarian>Közepes zúzott szövet</Hungarian>
@@ -2233,7 +2237,7 @@
             <German>Große Quetschverletzung</German>
             <Italian>Alto Tessuto Schiacciato</Italian>
             <Russian>Большая компрессионная травма</Russian>
-            <French>Tissu écrasé Large</French>
+            <French>Tissu écrasé large</French>
             <Polish>Duże zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado severo</Spanish>
             <Hungarian>Nagy zúzött szövet</Hungarian>
@@ -2254,9 +2258,9 @@
             <Italian>Piccolo Taglio</Italian>
             <Russian>Малая резаная рана</Russian>
             <Polish>Pomniejsza rana cięta</Polish>
-            <French>Petite Coupure</French>
             <Spanish>Corte menor</Spanish>
             <Hungarian>Kis vágás</Hungarian>
+            <French>Petite coupure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Medium">
             <English>Medium Cut</English>
@@ -2264,9 +2268,9 @@
             <Italian>Medio Taglio</Italian>
             <Russian>Средняя резаная рана</Russian>
             <Polish>Średnia rana cięta</Polish>
-            <French>Moyenne Coupure</French>
             <Spanish>Corte mediano</Spanish>
             <Hungarian>Közepes vágás</Hungarian>
+            <French>Moyenne coupure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Large">
             <English>Large Cut</English>
@@ -2274,9 +2278,9 @@
             <Italian>Grande Taglio</Italian>
             <Russian>Большая резаная рана</Russian>
             <Polish>Duża rana cięta</Polish>
-            <French>Large Coupure</French>
             <Spanish>Corte severo</Spanish>
             <Hungarian>Nagy vágás</Hungarian>
+            <French>Large coupure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration">
             <English>Tear</English>
@@ -2304,9 +2308,9 @@
             <Italian>Medio Strappo</Italian>
             <Russian>Средняя рваная рана</Russian>
             <Polish>Średnie rozerwanie skóry</Polish>
-            <French>Moyenne Déchirure</French>
             <Spanish>Desgarro medio</Spanish>
             <Hungarian>Közepes szakadás</Hungarian>
+            <French>Moyenne déchirure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Large">
             <English>Large Tear</English>
@@ -2314,9 +2318,9 @@
             <Italian>Grande Strappo</Italian>
             <Russian>Большая рваная рана</Russian>
             <Polish>Duże rozerwanie skóry</Polish>
-            <French>Large Déchirure</French>
             <Spanish>Desgarro severo</Spanish>
             <Hungarian>Nagy szakadás</Hungarian>
+            <French>Large déchirure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound">
             <English>Velocity Wound</English>
@@ -2334,9 +2338,9 @@
             <Italian>Lenta Velocità Ferita</Italian>
             <Russian>Малая огнестрельная рана</Russian>
             <Polish>Pomniejsza rana postrzałowa</Polish>
-            <French>Petite Bessure de vélocité</French>
             <Spanish>Herida de bala menor</Spanish>
             <Hungarian>Kis lőtt seb</Hungarian>
+            <French>Petite blessure de vélocité</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Medium">
             <English>Medium Velocity Wound</English>
@@ -2344,9 +2348,9 @@
             <Italian>Media Velocità Ferita</Italian>
             <Russian>Средняя огнестрельная рана</Russian>
             <Polish>Średnia rana postrzałowa</Polish>
-            <French>Moyenne Blessure de vélocité</French>
             <Spanish>Herida de bala media</Spanish>
             <Hungarian>Közepes lőtt seb</Hungarian>
+            <French>Moyenne blessure de vélocité</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Large">
             <English>Large Velocity Wound</English>
@@ -2354,9 +2358,9 @@
             <Italian>Alta Velocità Ferita</Italian>
             <Russian>Большая огнестрельная рана</Russian>
             <Polish>Duża rana postrzałowa</Polish>
-            <French>Large Blessure de vélocité</French>
             <Spanish>Herida de bala severa</Spanish>
             <Hungarian>Nagy lőtt seb</Hungarian>
+            <French>Large blessure de vélocité</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound">
             <English>Puncture Wound</English>
@@ -2374,9 +2378,9 @@
             <Italian>Piccola Puntura Ferita</Italian>
             <Russian>Малая колотая рана</Russian>
             <Polish>Pomniejsza rana kłuta</Polish>
-            <French>Blessure de perforation Mineure</French>
             <Spanish>Herida punzante menor</Spanish>
             <Hungarian>Kis szúrt seb</Hungarian>
+            <French>Légère blessure de perforation</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Medium">
             <English>Medium Puncture Wound</English>
@@ -2384,9 +2388,9 @@
             <Italian>Media Puntura Ferita</Italian>
             <Russian>Средняя колотая рана</Russian>
             <Polish>Średnia rana kłuta</Polish>
-            <French>Blessure de perforation Moyenne</French>
             <Spanish>Herida punzante media</Spanish>
             <Hungarian>Közepes szúrt seb</Hungarian>
+            <French>Moyenne blessure de perforation</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Large">
             <English>Large Puncture Wound</English>
@@ -2394,9 +2398,9 @@
             <Italian>Grande Puntura Ferita</Italian>
             <Russian>Большая колотая рана</Russian>
             <Polish>Duża rana kłuta</Polish>
-            <French>Large Blessure de perforation</French>
             <Spanish>Herida punzante severa</Spanish>
             <Hungarian>Nagy szúrt seb</Hungarian>
+            <French>Large blessure de perforation</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Femur">
             <English>Broken Femur</English>
@@ -2404,7 +2408,7 @@
             <Italian>Femore Rotto</Italian>
             <Russian>Перелом</Russian>
             <Polish>Zkłamana kość udowa</Polish>
-            <French>Femur Cassé</French>
+            <French>Fémur cassé</French>
             <Spanish>Femur roto</Spanish>
             <Hungarian>Törött combcsont</Hungarian>
         </Key>
@@ -2412,6 +2416,6 @@
             <English>Treating...</English>
             <Hungarian>Ellátás...</Hungarian>
             <Polish>Leczenie...</Polish>
+            <French>Traitement ...</French>
         </Key>
     </Package>
-</Project>
