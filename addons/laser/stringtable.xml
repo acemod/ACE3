@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="laser">
+        <Key ID="STR_ACE_laser_laserCode">
+            <English>Laser Code</English>
+        </Key>
+        <Key ID="STR_ACE_laser_laserCodeUp">
+            <English>Laser - Cycle Code Up</English>
+        </Key>
+        <Key ID="STR_ACE_laser_laserCodeDown">
+            <English>Laser - Cycle Code Down</English>
+        </Key>
+    </Package>
+</Project>

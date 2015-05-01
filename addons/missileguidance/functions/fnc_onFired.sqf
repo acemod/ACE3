@@ -7,7 +7,7 @@ if(GVAR(enabled) < 1 || {!local _projectile} ) exitWith { false };
 
 if( !isPlayer _shooter && { GVAR(enabled) < 2 } ) exitWith { false };
 
-private["_config", "_enabled", "_target", "_seekerType", "_attackProfile"];
+private["_config", "_enabled", "_target", "_seekerType", "_attackProfile", "_laserCode", "_laserInfo"];
 private["_args", "_canUseLock", "_guidingUnit", "_launchPos", "_lockMode", "_targetPos", "_vanillaTarget"];
 
 PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
@@ -26,6 +26,9 @@ _targetPos = (vehicle _shooter) getVariable [QGVAR(targetPosition), nil];
 _seekerType = (vehicle _shooter) getVariable [QGVAR(seekerType), nil];
 _attackProfile = (vehicle _shooter) getVariable [QGVAR(attackProfile), nil];
 _lockMode  = (vehicle _shooter) getVariable [QGVAR(lockMode), nil];
+
+_laserCode = (vehicle _shooter) getVariable [EGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
+_laserInfo = [_laserCode, ACE_DEFAULT_LASER_WAVELENGTH, ACE_DEFAULT_LASER_WAVELENGTH];
 
 _launchPos = getPosASL (vehicle _shooter);
 
@@ -67,7 +70,8 @@ _args = [_this,
                 [_target, _targetPos, _launchPos], 
                 _seekerType, 
                 _attackProfile,
-                _lockMode
+                _lockMode,
+                _laserInfo
             ], 
             [
                 getNumber ( _config >> "minDeflection" ),
