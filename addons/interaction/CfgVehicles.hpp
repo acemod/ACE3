@@ -166,7 +166,7 @@ class CfgVehicles {
       };
       class ACE_Weapon {
         displayName = "$STR_ACE_Interaction_Weapon";
-        selection = "weapon";
+        position = QUOTE(call FUNC(getWeaponPos));
         distance = 1.50;
         condition = "";
         statement = "";
