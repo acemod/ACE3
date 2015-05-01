@@ -125,13 +125,15 @@
             <English>Keep cursor centered</English>
             <French>Garder le curseur au centre</French>
             <Russian>Центрировать курсор</Russian>
+            <German>Cursor zentriert halten</German>
             <Hungarian>Kurzor középen tartása</Hungarian>
             <Polish>Utrzymaj kursor wyśrodkowany</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCenteredDescription">
-            <English>Keeps cursor centered and pans the option menu around.  Useful if screen size is limited.</English>
+            <English>Keeps cursor centered and pans the option menu around. Useful if screen size is limited.</English>
             <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
             <Russian>Центрирует курсор и двигает само меню опций. Полезно при ограниченном размере экрана.</Russian>
+            <German>Hält den Cursor zentriert und verschiebt das Menü beim Bewegen. Nützlich bei kleinen Bildschirmen.</German>
             <Hungarian>Középen tartja a kurzort, és a menüelemeket mozgatja. Hasznos lehetőség korlátozott képméretnél.</Hungarian>
             <Polish>Utrzymuje kursor na środku ekranu, zamiast tego ruch myszą powoduje przesuwanie menu interakcji. Użyteczne w przypadku kiedy rozmiar ekranu jest ograniczony.</Polish>
         </Key>
@@ -142,15 +144,19 @@
         </Key>
         <Key ID="STR_ACE_Interact_textSize">
             <English>Interaction Text Size</English>
+            <German>Menü-Schriftgröße</German>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSetting">
             <English>Interaction Text Shadow</English>
+            <German>Menü-Hintergrundschatten</German>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSettingDescription">
-            <English>Allows controlling the text's shadow.  Outline ignores custom shadow colors.</English>
+            <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
+            <German>Stellt den Hintergrundschatten ein. Die Einstellung 'Kontur' ignoriert die Farbe des Schattens.</German>
         </Key>
         <Key ID="STR_ACE_Interact_shadowOutline">
             <English>Outline</English>
+            <German>Kontur</German>
         </Key>
     </Package>
 </Project>
