@@ -57,7 +57,7 @@ class ACE_Settings {
     class GVAR(enableUnconsiousnessAI) {
         value = 1;
         typeName = "SCALAR";
-        values[] = {"Disabled", "Enabled", "50/50"};
+        values[] = {"Disabled", "50/50", "Enabled"};
     };
     class GVAR(preventInstaDeath) {
         typeName = "BOOL";
