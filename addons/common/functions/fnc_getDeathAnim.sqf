@@ -1,45 +1,38 @@
-/*
- * Author: Glowbal, PabstMirror
- * Get the death animation for the unit at current time
+/**
+ * fn_getDeathAnim.sqf
+ * @Descr: Get the death animation for the unit at current time
+ * @Author: Glowbal
  *
- * Arguments:
- * 0: unit <OBJECT>
- *
- * Return Value:
- * animation <STRING>
- *
- * Example:
- * [bob] call ace_common_fnc_getDeathAnim;
- *
- * Public: No
+ * @Arguments: [unit OBJECT]
+ * @Return: STRING animation
+ * @PublicAPI: true
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+private ["_unit", "_curAnim", "_animation", "_cfg","_unitAnimation", "_animationState"];
+_unit = _this select 0;
 
-private ["_returnAnimation", "_animationState", "_unitAnimationCfg", "_unitActionsCfg", "_interpolateArray", "_indexAnimation", "_index"];
-
-_returnAnimation = "";
-
-_animationState = (animationState _unit);
-_unitAnimationCfg = (configFile >> "CfgMovesMaleSdr" >> "States" >> _animationState);
-_unitActionsCfg = (configFile >> "CfgMovesBasic" >> "Actions" >> (getText (_unitAnimationCfg >> "actions")));
-
-TRACE_2("Animation/Action", configName _unitAnimationCfg, configName _unitActionsCfg);
-
-if ((vehicle _unit) != _unit) then {
-    _interpolateArray = getArray (_unitAnimationCfg >> "interpolateTo");
-    for "_index" from 0 to (count _interpolateArray - 1) step 2 do {
-        _indexAnimation = _interpolateArray select _index;
-        //No guarentee that first animation will be right so scan for the first scan for the first "terminal" animation
-        //E.G.: interpolateTo[] = {"passenger_apc_generic04still",1,"KIA_passenger_apc_generic04",1};
-
-        if ((getNumber ((configFile >> "CfgMovesMaleSdr" >> "States" >> _indexAnimation) >> "terminal")) == 1) exitWith {
-            _returnAnimation = _indexAnimation;
+if (vehicle _unit != _unit) exitwith {
+    _animation = "";
+    _animationState = (animationState _unit);
+    _unitAnimation = (configFile >> "CfgMovesMaleSdr" >> "States" >> _animationState);
+    if (isText (_unitAnimation >> "actions")) then {
+        if ((vehicle _unit) != _unit) then {
+            _cfg = (configFile >> "CfgMovesMaleSdr" >> "States" >> _animationState);
+            if (isArray (_cfg >> "interpolateTo")) then {
+                _animation = getArray (_cfg >> "interpolateTo") select 0;
+            };
+        } else {
+            _cfg = (configFile >> "CfgMovesBasic" >> "Actions" >> (getText (_unitAnimation >> "actions")) >> "die");
+            if (isText _cfg) then {
+                _animation = getText _cfg;
+            };
         };
     };
-} else {
-    _returnAnimation = getText (_unitActionsCfg >> "die");
+    if (isnil "_animation") then {
+        _animation = "";
+    };
+    _animation;
 };
 
-_returnAnimation
+"Unconscious";
