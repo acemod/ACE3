@@ -13,14 +13,15 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_minWaitingTime", "_slotInfo", "_hasMovedOut", "_parachuteCheck", "_args", "_originalPos", "_startingTime", "_awakeInVehicleAnimation", "_oldVehicleAnimation", "_vehicle"];
+private ["_unit", "_minWaitingTime", "_oldAnimation", "_hasMovedOut", "_parachuteCheck", "_args", "_originalPos", "_startingTime"];
 _args = _this select 0;
 _unit = _args select 0;
-_originalPos = _args select 1;
-_startingTime = _args select 2;
-_minWaitingTime = _args select 3;
-_hasMovedOut = _args select 4;
-_parachuteCheck = _args select 5;
+_oldAnimation = _args select 1;
+_originalPos = _args select 2;
+_startingTime = _args select 3;
+_minWaitingTime = _args select 4;
+_hasMovedOut = _args select 5;
+_parachuteCheck = _args select 6;
 
 if (!alive _unit) exitwith {
     if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
@@ -50,37 +51,10 @@ if !(_unit getvariable ["ACE_isUnconscious",false]) exitwith {
                 [_unit,"amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
             };
         } else {
-            _vehicle = vehicle _unit;
-            _oldVehicleAnimation = _unit getVariable [QGVAR(vehicleAwakeAnim), []];
-            _awakeInVehicleAnimation = "";
-            if (((count _oldVehicleAnimation) > 0) && {(_oldVehicleAnimation select 0) == _vehicle}) then {
-                _awakeInVehicleAnimation = _oldVehicleAnimation select 1;
-            };
-            //Make sure we have a valid, non-terminal animation:
-            if ((_awakeInVehicleAnimation != "") && {(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> _awakeInVehicleAnimation >> "terminal")) == 0}) then {
-                [_unit, _awakeInVehicleAnimation, 2] call EFUNC(common,doAnimation);
-            } else {
-                //Don't have a valid animation saved, reset the unit animation with a moveInXXX
-                TRACE_1("No Valid Animation, doing seat reset", _awakeInVehicleAnimation);
-                _slotInfo = [];
-                {if ((_x select 0) == _unit) exitWith {_slotInfo = _x;};} forEach (fullCrew _vehicle);
-                if (_slotInfo isEqualTo []) exitWith {ERROR("No _slotInfo?");};
-                //Move the unit out:
-                _unit setPosASL ((getPosASL _unit) vectorAdd [0,0,100]);
-                //Move the unit back into old seat:
-                if ((_slotInfo select 1) == "driver") then {
-                    _unit moveInDriver _vehicle;
-                } else {
-                    if ((_slotInfo select 1) == "cargo") then {
-                        _unit moveInCargo [_vehicle, (_slotInfo select 2)];
-                    } else {
-                        _unit moveInTurret [_vehicle, (_slotInfo select 3)];
-                    };
-                };
-            };
+            // Switch to the units original animation, assuming
+            // TODO: what if the unit switched vehicle?
+            [_unit, _oldAnimation, 2] call EFUNC(common,doAnimation);
         };
-        _unit setVariable [QGVAR(vehicleAwakeAnim), nil];
-
         ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
         // EXIT PFH
         [(_this select 1)] call cba_fnc_removePerFrameHandler;

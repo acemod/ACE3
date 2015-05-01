@@ -47,7 +47,7 @@ if (GVAR(onlyActiveForLocalPlayers) && !(local _unit)) then {
         _abort = true;
     };
 };
-//if (!GVAR(vehicleGunnerEnabled) && !(_unit isKindOf "Man")) then { _abort = true; }; // TODO: We currently do not have firedEHs on vehicles
+//if (!GVAR(vehicleGunnerEnabled) && !(_unit isKindOf "Man")) then { _abort = true; }; // We currently do not have firedEHs on vehicles
 if (GVAR(disabledInFullAutoMode) && getNumber(configFile >> "cfgWeapons" >> _weapon >> _mode >> "autoFire") == 1) then { _abort = true; };
 
 if (_abort || !(GVAR(extensionAvailable))) exitWith {

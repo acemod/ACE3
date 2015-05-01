@@ -4,11 +4,13 @@
         <Key ID="STR_ACE_Weather_WindInfoKey">
             <English>Show Wind Info</English>
             <Polish>Pokaż inf. o wietrze</Polish>
+            <Czech>Zobrazit větrné info</Czech>
             <Russian>Показать информацию о ветре</Russian>
             <French>Afficher information sur le vent</French>
             <Spanish>Mostrar información del viento</Spanish>
             <Italian>Mostra informazioni sul vento</Italian>
             <German>Zeige Windinformationen</German>
+            <Hungarian>Széladatok mutatása</Hungarian>
         </Key>
     </Package>
 </Project>

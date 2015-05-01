@@ -133,7 +133,7 @@ GVAR(effectTimeBlood) = time;
         };
     };
 
-    _bleeding = ACE_player call FUNC(getBloodLoss);
+    _bleeding = [ACE_player] call FUNC(getBloodLoss);
     // Bleeding Indicator
     if (_bleeding > 0 and GVAR(effectTimeBlood) + 3.5 < time) then {
         GVAR(effectTimeBlood) = time;
@@ -169,7 +169,7 @@ GVAR(lastHeartBeatSound) = time;
 
         // Pain effect
         _strength = ACE_player getVariable [QGVAR(pain), 0];
-        // _strength = _strength * (ACE_player getVariable [QGVAR(coefPain), GVAR(coefPain)]); @todo
+        _strength = _strength * (ACE_player getVariable [QGVAR(painCoefficient), GVAR(painCoefficient)]);
         if (GVAR(painEffectType) == 1) then {
             GVAR(effectPainCC) ppEffectEnable false;
             if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
@@ -253,7 +253,7 @@ if (USE_WOUND_EVENT_SYNC) then {
 [
     {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 65)},
     {(((_this select 0) getvariable [QGVAR(pain), 0]) > 0.9)},
-    {(((_this select 0) call FUNC(getBloodLoss)) > 0.25)},
+    {(([_this select 0] call FUNC(getBloodLoss)) > 0.25)},
     {((_this select 0) getvariable [QGVAR(inReviveState), false])},
     {((_this select 0) getvariable [QGVAR(inCardiacArrest), false])},
     {((_this select 0) getvariable ["ACE_isDead", false])},
