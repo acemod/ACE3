@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -149,24 +150,28 @@
             <German>Menü-Schriftgröße</German>
             <French>Taille du texte d'interaction</French>
             <Russian>Размер текста (меню взаимодействия)</Russian>
+            <Polish>Rozmiar tekstu interakcji</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSetting">
             <English>Interaction Text Shadow</English>
             <German>Menü-Hintergrundschatten</German>
             <French>Ombre du texte d'interaction</French>
             <Russian>Тень от текста (меню взаимодействия)</Russian>
+            <Polish>Cień tekstu interakcji</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSettingDescription">
             <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
             <German>Stellt den Hintergrundschatten ein. Die Einstellung 'Kontur' ignoriert die Farbe des Schattens.</German>
             <French>Permet de controler l'ombre du texte. Le contour ne prend pas en compte la couleur des ombres.</French>
             <Russian>Дает возможность изменять тень, отбрасываемую текстом. Контур не зависит от выбранного цвета тени.</Russian>
+            <Polish>Pozwala kontrolować cień tekstu. Kontury ignorują niestandardowe kolory cienia.</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_shadowOutline">
             <English>Outline</English>
             <German>Kontur</German>
             <French>Contour</French>
             <Russian>Контур</Russian>
+            <Polish>Kontur</Polish>
         </Key>
     </Package>
 </Project>
