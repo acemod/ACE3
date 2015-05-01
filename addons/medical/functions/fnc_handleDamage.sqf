@@ -30,9 +30,11 @@ if (typeName _projectile == "OBJECT") then {
     _projectile = typeOf _projectile;
     _this set [4, _projectile];
 };
-
 // If the damage is being weird, we just tell it to fuck off.
 if !(_selection in (GVAR(SELECTIONS) + [""])) exitWith {0};
+
+if (_projectile in GVAR(handleDamageAmmoBlacklist)) exitwith {_unit getHitPointDamage _selection};
+if (vehicle _unit != _unit && {_projectile in GVAR(handleDamageAmmoBlacklistInVehicle)}) exitwith {_unit getHitPointDamage _selection};
 
 _damageReturn = _damage;
 if (GVAR(level) < 2) then {
