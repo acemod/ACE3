@@ -5,11 +5,11 @@ if (!hasInterface) exitWith {};
 
 GVAR(ParsedTextCached) = [];
 
-//Setup text/shadow color matrix
+//Setup text/shadow/size/color settings matrix
 [] call FUNC(setupTextColors);
 ["SettingChanged", {
     PARAMS_1(_name);
-    if ((_name == QGVAR(colorTextMax)) || {_name == QGVAR(colorTextMin)} || {_name == QGVAR(colorShadowMax)} || {_name == QGVAR(colorShadowMin)}) then {
+    if (_name in [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) then {
         [] call FUNC(setupTextColors);
     };
 }] call EFUNC(common,addEventhandler);

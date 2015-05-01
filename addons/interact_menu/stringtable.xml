@@ -125,5 +125,17 @@
             <English>Do action when releasing menu key</English>
             <German>Aktion nach Loslassen der Taste ausführen</German>
         </Key>
+        <Key ID="STR_ACE_Interact_textSize">
+            <English>Interaction Text Size</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_shadowSetting">
+            <English>Interaction Text Shadow</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_shadowSettingDescription">
+            <English>Allows controlling the text's shadow.  Outline ignores custom shadow colors.</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_shadowOutline">
+            <English>Outline</English>
+        </Key>
     </Package>
 </Project>
