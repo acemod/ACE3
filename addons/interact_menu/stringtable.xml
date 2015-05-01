@@ -119,15 +119,18 @@
             <English>Keep cursor centered</English>
             <French>Garder le curseur au centre</French>
             <Russian>Центрировать курсор</Russian>
+            <Polish>Utrzymaj kursor wyśrodkowany</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCenteredDescription">
             <English>Keeps cursor centered and pans the option menu around.  Useful if screen size is limited.</English>
             <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
             <Russian>Центрирует курсор и двигает само меню опций. Полезно при ограниченном размере экрана.</Russian>
+            <Polish>Utrzymuje kursor na środku ekranu, zamiast tego ruch myszą powoduje przesuwanie menu interakcji. Użyteczne w przypadku kiedy rozmiar ekranu jest ograniczony.</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ActionOnKeyRelease">
             <English>Do action when releasing menu key</English>
             <German>Aktion nach Loslassen der Taste ausführen</German>
+            <Polish>Wykonuj akcje po puszczeniu klawisza menu</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_textSize">
             <English>Interaction Text Size</English>
