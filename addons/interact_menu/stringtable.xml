@@ -86,6 +86,7 @@
             <German>Interaktionstextfarbe Max</German>
             <Italian>Interazioni - Testo Massimo</Italian>
             <Russian>Взаимодействие - Текст Макс.</Russian>
+            <Spanish>Interacción - Texto al max.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
             <English>Interaction - Text Min</English>
@@ -94,6 +95,7 @@
             <German>Interaktionstextfarbe Min</German>
             <Italian>Interazioni - Testo Minimo</Italian>
             <Russian>Взаимодействие - Текст Мин.</Russian>
+            <Spanish>Interacción - Texto al min.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
             <English>Interaction - Shadow Max</English>
@@ -102,6 +104,7 @@
             <German>Interaktionstextschatten Max</German>
             <Italian>Interazioni - Ombra Massima</Italian>
             <Russian>Взаимодействие - Тень Макс.</Russian>
+            <Spanish>Interacción - Sombras al max.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
@@ -110,6 +113,7 @@
             <German>Interaktionstextschatten Min</German>
             <Italian>Interazioni - Ombra Minima</Italian>
             <Russian>Взаимодействие - Тень Мин.</Russian>
+            <Spanish>Interacción - Sombras al min.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCentered">
             <English>Keep cursor centered</English>

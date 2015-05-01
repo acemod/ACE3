@@ -1019,10 +1019,10 @@
             <English>Caliber: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Pociski: 20</Polish>
             <French>Calibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Cartouches: 20</French>
-            <Spanish>Calibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M993 бронебойные)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Patronen: 20</German>
             <Italian>Calibro: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Munizioni: 20</Italian>
+            <Spanish>Calibre: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Balas: 20</Spanish>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk248 Mod 0)</English>
@@ -1134,12 +1134,12 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_Name">
             <English>6.5mm Creedmor 30Rnd Mag</English>
-            <Spanish>Cargador de 30 balas de 6.5mm Creedmor</Spanish>
             <Polish>Magazynek 6,5mm Creedmor 30rd</Polish>
             <Italian>6.5mm Creedmor 30Rnd Mag</Italian>
             <Russian>Магазин из 30-ти 6,5 мм Creedmor</Russian>
             <German>6,5mm Creedmor 30-Patronen-Magazin</German>
             <French>Chargeur 6.5mm Creedmor 30Cps</French>
+            <Spanish>Cargador de 30 balas Creedmor de 6.5mm</Spanish>
         </Key>
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_NameShort">
             <English>6.5mm CM</English>
@@ -1152,11 +1152,11 @@
         </Key>
         <Key ID="STR_ACE_30Rnd_65_Creedmor_mag_Description">
             <English>Caliber: 6.5x47mm Creedmor&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
-			<Spanish>Calibre: 6.5x47mm Creedmor&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MXM</Spanish>
             <Polish>Kaliber: 6,5x47mm Creedmor&lt;br /&gt;Pociski: 30&lt;br /&gt;Używany w: MXM</Polish>
             <German>Kaliber: 6,5x47mm  Creedmor&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MXM</German>
             <French>Calibre: 6.5x47mm Creedmor &lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé avec: MXM</French>
             <Italian>Calibro: 6.5mm Creedmor&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MXM</Italian>
+            <Spanish>Calibre: 6.5mm Creedmor&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MXM</Spanish>
         </Key>
         <Key ID="STR_ACE_10Rnd_338_300gr_HPBT_Mag_Name">
             <English>.338 10Rnd Mag (300gr Sierra MatchKing HPBT)</English>
