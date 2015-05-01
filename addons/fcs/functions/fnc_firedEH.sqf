@@ -44,7 +44,7 @@ _offset = 0;
 } forEach _FCSMagazines;
 
 // Correct velocity for weapons that have initVelocity
-_velocityCorrection = if (getNumber(configFile >> "CfgMagazines" >> _weapon >> "initSpeed") > 0) then {
+_velocityCorrection = if (getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed") > 0) then {
     (vectorMagnitude velocity _projectile) - getNumber(configFile >> "CfgMagazines" >> _magazine >> "initSpeed")
 } else {
     0
