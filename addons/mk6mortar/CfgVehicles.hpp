@@ -58,7 +58,7 @@ class CfgVehicles {
         functionPriority = 0;
         class Arguments {
             class airResistanceEnabled {
-                displayName = "Air Resitance";
+                displayName = "Air Resistance";
                 description = "For Player Shots, Model Air Restiance and Wind Effects";
                 typeName = "BOOL";
                 defaultValue = 1;
