@@ -69,7 +69,11 @@ if (vehicle _unit == _unit) then {
 };
 
 // We are storing the current animation, so we can use it later on when waking the unit up inside a vehicle
-_animState = animationState _unit;
+if (vehicle _unit != _unit) then {
+    _unit setVariable [QGVAR(vehicleAwakeAnim), [(vehicle _unit), (animationState _unit)]];
+};
+
+//Save current stance:
 _originalPos = unitPos _unit;
 
 _unit setUnitPos "DOWN";
@@ -94,7 +98,7 @@ _anim = [_unit] call EFUNC(common,getDeathAnim);
 
 _startingTime = time;
 
-[DFUNC(unconsciousPFH), 0.1, [_unit,_animState, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
+[DFUNC(unconsciousPFH), 0.1, [_unit, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
 
 // unconscious can't talk
 [_unit, "isUnconscious"] call EFUNC(common,muteUnit);
