@@ -139,6 +139,7 @@
             <Spanish>Introducir cadena de texto.</Spanish>
             <Russian>Строчный ввод.</Russian>
             <Polish>Wpisywanie tekstu.</Polish>
+            <Czech>Vkládání textu.</Czech>
             <French>Entrée</French>
             <Hungarian>String bevitel.</Hungarian>
             <Italian>Stringa di unput.</Italian>
@@ -232,6 +233,7 @@
             <English>Option Menu UI Scaling</English>
             <French>Menu option: taille de l'UI</French>
             <Polish>Skalowanie UI menu ustawień</Polish>
+            <Czech>Měřítko UI v menu nastavení</Czech>
             <Russian>Размер интерфейса меню настройки</Russian>
             <Spanish>Opción de escalado del menú IU</Spanish>
             <German>UI Skalierung</German>

@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_AdvancedBallistics_WindInfoKey">
             <English>Show Wind Info</English>
             <Polish>Pokaż inf. o wietrze</Polish>
+            <Czech>Zobrazit větrné info</Czech>
             <Italian>Mostra indicazioni del vento</Italian>
             <Russian>Показать информацию о ветре</Russian>
             <French>Afficher les info sur le vent</French>
@@ -14,6 +15,7 @@
         <Key ID="STR_ACE_AdvancedBallistics_ProtractorKey">
             <English>Show Protractor</English>
             <Polish>Pokaż kątomierz</Polish>
+            <Czech>Zobrazit úhloměr</Czech>
             <Italian>Mostra il rapportatore</Italian>
             <Russian>Показать транспортир</Russian>
             <French>Afficher le rapporteur</French>
