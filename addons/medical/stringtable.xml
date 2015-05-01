@@ -1669,7 +1669,7 @@
             <Spanish>Ha perdido un poco de sangre</Spanish>
             <Russian>Есть кровопотеря</Russian>
             <German>Er hat etwas Blut verloren</German>
-            <French>Il à perdu du sang</French>
+            <French>Il a perdu du sang</French>
             <Polish>Stracił trochę krwi</Polish>
             <Hungarian>Valamennyi vért vesztett</Hungarian>
         </Key>
@@ -1680,13 +1680,14 @@
             <Polish>Stracił sporo krwi</Polish>
             <Russian>Большая кровопотеря</Russian>
             <Spanish>Ha perdido mucha sangre</Spanish>
+            <French>Il a perdu beaucoup de sang</French>
         </Key>
         <Key ID="STR_ACE_Medical_noBloodloss">
             <English>He hasn't lost blood</English>
             <Italian>Non ha perso sangue</Italian>
             <Russian>Нет кровопотери</Russian>
             <German>Er hat kein Blut verloren</German>
-            <French>il n'a pas perdu de sang</French>
+            <French>Il n'a pas perdu de sang</French>
             <Polish>Nie stracił krwi</Polish>
             <Spanish>No ha perdido sangre</Spanish>
             <Hungarian>Nem vesztett vért</Hungarian>
@@ -1696,7 +1697,7 @@
             <Italian>è affetto da dolore</Italian>
             <Russian>Испытывает боль</Russian>
             <German>Er hat Schmerzen</German>
-            <French>il souffre</French>
+            <French>Il souffre</French>
             <Polish>Odczuwa ból</Polish>
             <Spanish>Siente dolor</Spanish>
             <Hungarian>Fájdalmai vannak</Hungarian>
@@ -2443,6 +2444,7 @@
             <German>Tourniquet entfernen ...</German>
             <Polish>Zdejmowanie stazy ...</Polish>
             <Spanish>Quitando torniquete ...</Spanish>
+            <French>Retire le tourniquet ...</French>
         </Key>
     </Package>
 </Project>
