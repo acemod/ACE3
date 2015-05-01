@@ -37,7 +37,7 @@ _display = uiNamespace getVariable ["ACE_Mk6_RscWeaponRangeArtillery", displayNu
 if (isNull _display) exitWith {};
 
 _fnc_hideControl = {
-    private "_idc";
+    private ["_idc", "_pos"];
     PARAMS_2(_path,_hideCtrl);
     _idc = getNumber (_path >> "IDC");
     _pos = [];

@@ -19,7 +19,7 @@ Example:
 
 #define TIME_STEP (1/50)
 
-private ["_startTime", "_muzzleVelocity", "_rangeToHit", "_airFriction", "_vacElevation", "_radicand", "_maxElev", "_minElev", "_error", "_solutionElevation", "_lastTestResult", "_numberOfAttempts", "_lineElevation", "_lineTimeOfFlight", "_lineHeightElevation", "_lineHeightTimeDelta", "_lineCrosswindDeg", "_lineHeadwindMeters", "_lineTailWindMeters", "_result"];
+private ["_startTime", "_muzzleVelocity", "_rangeToHit", "_airFriction", "_vacElevation", "_radicand", "_maxElev", "_minElev", "_error", "_solutionElevation", "_lastTestResult", "_numberOfAttempts", "_lineElevation", "_lineTimeOfFlight", "_lineHeightElevation", "_lineHeightTimeDelta", "_lineCrosswindDeg", "_lineHeadwindMeters", "_lineTailWindMeters", "_result", "_lineAirDensDec", "_lineAirDensInc", "_lineTempDec", "_lineTempInc", "_solution"];
 
 _startTime = diag_tickTime;
 

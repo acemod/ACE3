@@ -1,6 +1,8 @@
 // by commy2
 #include "script_component.hpp"
 
+private["_brightness", "_cacheName", "_isIR", "_laser", "_laserID", "_weapon"];
+
 _brightness = 2 - call EFUNC(common,ambientBrightness);
 _isIR = currentVisionMode ACE_player;
 

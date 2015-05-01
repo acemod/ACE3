@@ -5,6 +5,7 @@
 PARAMS_1(_unit);
 
 private ["_group0", "_rallypoint"];
+//IGNORE_PRIVATE_WARNING(_group);
 
 _group0 = group _unit;  // _group-is a reserved veriable and shouldn't be used
 

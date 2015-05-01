@@ -20,8 +20,9 @@ private ["_actions"];
 _actions = [];
 
 {
+    private ["_unit"];
     _unit = _x;
-    if (_x != _player) then {
+    if (_unit != _player) then {
         _actions pushBack
             [
                 [

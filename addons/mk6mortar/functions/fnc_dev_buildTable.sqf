@@ -18,7 +18,7 @@
 #include "script_component.hpp"
 
 
-private ["_muzzleVelocity", "_airFriction", "_stillInRange", "_currentRange", "_increasePerRow", "_outputArray", "_rangeToHit", "_lineElevation", "_lineHeightElevation", "_lineTimeOfFlight", "_lineCrosswindDeg", "_lineHeadwindMeters", "_lineTailWindMeters", "_lineTempDec", "_lineTempInc", "_lineAirDensDec", "_lineAirDensInc", "_result", "_outputString"];
+private ["_muzzleVelocity", "_airFriction", "_stillInRange", "_currentRange", "_increasePerRow", "_outputArray", "_result", "_outputString"];
 
 _muzzleVelocity = _this select 0;
 _airFriction = _this select 1;
@@ -26,9 +26,6 @@ _stillInRange = true;
 _currentRange = 100;
 _increasePerRow = 50;
 _outputArray = [];
-
-
-//[_rangeToHit, _lineElevation, _lineHeightElevation, _lineHeightTimeDelta, _lineTimeOfFlight, _lineCrosswindDeg, _lineHeadwindMeters, _lineTailWindMeters, _lineTempDec, _lineTempInc, _lineAirDensDec, _lineAirDensInc]
 
 while {_stillInRange} do {
     _result = [_muzzleVelocity, _currentRange, _airFriction] call FUNC(dev_simulateCalcRangeTableLine);

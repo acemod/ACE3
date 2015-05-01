@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-private ["_unit"];
+private ["_unit", "_maxUnconHandle"]
 
 _unit = _this select 0;
 

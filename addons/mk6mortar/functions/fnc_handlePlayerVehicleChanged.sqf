@@ -37,6 +37,7 @@ _tubeWeaponName = (weapons _newVehicle) select 0;
 _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes");
 
 [{
+    private ["_useMils", "_currentFireMode", "_currentChargeMode", "_text", "_display", "_notGunnerView", "_elevDeg", "_rotationDegrees"];
     PARAMS_2(_args,_pfID);
     EXPLODE_3_PVT(_args,_mortarVeh,_chargeText,_fireModes);
 
