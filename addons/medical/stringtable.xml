@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Injuries">
@@ -10,6 +10,7 @@
             <Polish>OBRAŻENIA</Polish>
             <Spanish>HERIDAS</Spanish>
             <Hungarian>SÉRÜLÉSEK</Hungarian>
+            <Czech>ZRANĚNÍ</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_NoInjuriesBodypart">
             <English>No injuries on this bodypart ...</English>
@@ -20,6 +21,7 @@
             <Polish>Brak obrażeń na tej części ciała ...</Polish>
             <Spanish>Sin heridas en esta parte del cuerpo ...</Spanish>
             <Hungarian>Ezen a testrészen nincs sérülés ...</Hungarian>
+            <Czech>Žádná zranění na této části těla</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
@@ -30,6 +32,7 @@
             <French>Niveau de simulation des détritus</French>
             <German>Abfall-Detaillevel</German>
             <Hungarian>Hulladékszimuláció részletessége</Hungarian>
+            <Czech>Úroveň počtu zobrazených předmětů z použitých léků</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail_Desc">
             <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
@@ -40,6 +43,7 @@
             <French>Le niveau de simulation des détritus règle la quantité de déchets qui vont être créés localement chez le client. Des quantitées excessive chez certains clients peuvent causer des chutes de FPS, c'est donc une option client uniquement.</French>
             <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge der lokal erzeugten medizinischen Abfälle ein. Zuviel erzeugte Abfälle können FPS-Lags erzeugen, deswegen ist diese Einstellung nur clientseitig.</German>
             <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
+            <Czech>Úroveň počtu zobrazených předmětů z použitých léků ovlivňuje počet objektů, které budou zobrazeny klientovi . Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -409,6 +413,7 @@
             <Polish>Brak wpisów w tej karcie segregacyjnej.</Polish>
             <Spanish>Sin entradas en esta tarjeta de clasificación.</Spanish>
             <Hungarian>Ez az orvosi lap nem tartalmaz bejegyzést.</Hungarian>
+            <Czech>Na kartě raněných nejsou žádné záznamy</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Tourniquet">
             <English>Tourniquet</English>
@@ -443,6 +448,7 @@
             <Polish>Diagnoza</Polish>
             <Spanish>Diagnosticar</Spanish>
             <Hungarian>Diagnosztizálás</Hungarian>
+            <Czech>Diagnóza</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Diagnosing">
             <English>Diagnosing ...</English>
@@ -453,6 +459,7 @@
             <Polish>Diagnozowanie ...</Polish>
             <Spanish>Diagnosticando ...</Spanish>
             <Hungarian>Diagnózis folyamatban...</Hungarian>
+            <Czech>Zjišťuji diagnózu ...</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_CPR">
             <English>CPR</English>
@@ -463,6 +470,7 @@
             <Polish>RKO</Polish>
             <Spanish>RCP</Spanish>
             <Hungarian>Újraélesztés</Hungarian>
+            <Czech>KPR</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_PerformingCPR">
             <English>Performing CPR ...</English>
@@ -473,6 +481,7 @@
             <Polish>Przeprowadzanie RKO ...</Polish>
             <Spanish>Realizando RCP ...</Spanish>
             <Hungarian>Újraélesztés folyamatban...</Hungarian>
+            <Czech>Provádění KPR</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
@@ -772,6 +781,7 @@
             <Hungarian>Sebesülések befedésére alkalmas</Hungarian>
             <Italian>Usato per coprire una ferita</Italian>
             <Portuguese>Usado para cobrir um ferimento</Portuguese>
+            <Czech>Slouží k překrytí poranění</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Basic_Desc_Use">
             <English>A dressing, that is a particular material used to cover a wound, which is applied over the wound once bleeding has been stemmed.</English>

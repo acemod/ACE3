@@ -23,6 +23,7 @@
             <Czech>Vždy zobrazovat kurzor pro interakci</Czech>
             <German>Immer den Cursor für Fremd-Interaktionen anzeigen</German>
             <Hungarian>Mindig legyen a cselekvés kurzorja látható</Hungarian>
+            <Czech>Stále ukazovat kursor myši při interakci</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
@@ -34,6 +35,7 @@
             <Czech>Zobrazit menu interakce jako seznam</Czech>
             <German>Interaktionsmenü in Listen anzeigen</German>
             <Hungarian>Cselekvő menük listaként való megjelenítése</Hungarian>
+            <Czech>Ukázat interakční menu jako list</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_InteractKey">
             <English>Interact Key</English>
@@ -155,6 +157,7 @@
             <French>Action au relachement de touche</French>
             <Russian>Выполнять действие при отпускании кнопки взаимодействия</Russian>
             <Spanish>Realizar la acción al soltar la tecla menu</Spanish>
+            <Czech>Provést akci při pustění klávesy menu</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_textSize">
             <English>Interaction Text Size</English>
