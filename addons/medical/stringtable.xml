@@ -2433,7 +2433,8 @@
             <Russian>Лечение ...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_RemovingTourniquet">
-            <English>Removing Tourinquet ...</English>
+            <English>Removing Tourniquet ...</English>
+            <German>Tourniquet entfernen ...</German>
         </Key>
     </Package>
 </Project>
