@@ -21,6 +21,8 @@
             <Spanish>Estación meteorológica Kestrel 4500 </Spanish>
             <German>Kestrel 4500 Taschenwettermessgerät</German>
             <Italian>Kestrel 4500 Indicatore Meteorologico Tascabile</Italian>
+            <Portuguese>Kestrel 4500 Medidor Balístico Ativo</Portuguese>
+            <Hungarian>Kestrel 4500 kézi szél-és időjárásmérő</Hungarian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_OpenKestrel">
             <English>Open Kestrel 4500</English>
@@ -31,6 +33,7 @@
             <Italian>Accendi Kestrel 4500</Italian>
             <Spanish>Abrir Kestrel 4500</Spanish>
             <German>Kestrel 4500 öffnen</German>
+            <Portuguese>Abrir Kestrel 4500</Portuguese>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_ShowKestrel">
             <English>Show Kestrel 4500</English>
@@ -40,6 +43,7 @@
             <Italian>Mostra Kestrel 4500</Italian>
             <Spanish>Mostrar Kestrel 4500</Spanish>
             <German>Kestrel 4500 anzeigen</German>
+            <Hungarian>Kestrel 4500 mutatása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_HideKestrel">
             <English>Hide Kestrel 4500</English>
@@ -49,6 +53,7 @@
             <Italian>Nascondi Kestrel 4500</Italian>
             <Spanish>Ocultar Kestrel 4500</Spanish>
             <German>Kestrel 4500 wegstecken</German>
+            <Hungarian>Kestrel 4500 elrejtése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_KestrelDialogKey">
             <English>Open Kestrel 4500</English>
@@ -58,6 +63,7 @@
             <Italian>Accendi Kestrel 4500</Italian>
             <Spanish>Abrir Kestrel 4500</Spanish>
             <German>Kestrel 4500 öffnen</German>
+            <Hungarian>Kestrel 4500 elővétele</Hungarian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_DisplayKestrelKey">
             <English>Show Kestrel 4500</English>
@@ -67,6 +73,7 @@
             <Italian>Mostra Kestrel 4500</Italian>
             <Spanish>Mostrar Kestrel 4500</Spanish>
             <German>Kestrel 4500 anzeigen</German>
+            <Hungarian>Kestrel 4500 mutatása</Hungarian>
         </Key>
     </Package>
 </Project>

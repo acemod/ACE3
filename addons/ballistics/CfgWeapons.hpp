@@ -509,6 +509,7 @@ class CfgWeapons {
     class srifle_EBR_F: EBR_base_F {
         magazines[] = {
             "20Rnd_762x51_Mag",
+            "ACE_20Rnd_762x51_Mag_Tracer",
             "ACE_20Rnd_762x51_Mag_Tracer_Dim",
             "ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
             "ACE_20Rnd_762x51_M118LR_Mag",
@@ -560,6 +561,7 @@ class CfgWeapons {
     class srifle_DMR_03_F: DMR_03_base_F {
         magazines[] = {
             "20Rnd_762x51_Mag",
+            "ACE_20Rnd_762x51_Mag_Tracer",
             "ACE_20Rnd_762x51_Mag_Tracer_Dim",
             "ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
             "ACE_20Rnd_762x51_M118LR_Mag",
@@ -584,6 +586,7 @@ class CfgWeapons {
     class srifle_DMR_06_camo_F: DMR_06_base_F {
         magazines[] = {
             "20Rnd_762x51_Mag",
+            "ACE_20Rnd_762x51_Mag_Tracer",
             "ACE_20Rnd_762x51_Mag_Tracer_Dim",
             "ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
             "ACE_20Rnd_762x51_M118LR_Mag",

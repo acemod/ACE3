@@ -16,7 +16,7 @@
 
 #define MIN_ENTRIES_LITTER_CONFIG 3
 
-private ["_target", "_className", "_config", "_litter", "_createLitter", "_litterObject", "_position", "_createdLitter"];
+private ["_target", "_className", "_config", "_litter", "_createLitter", "_position", "_createdLitter", "_caller", "_selectionName", "_usersOfItems"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;

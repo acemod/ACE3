@@ -83,6 +83,7 @@
             <Polish>Przepakowywanie zakończone</Polish>
             <Hungarian>Újratárazás befejezve</Hungarian>
             <Italian>Riempi caricatore</Italian>
+            <Portuguese>Reorganização Terminada</Portuguese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
             <English>Repacking Interrupted</English>
@@ -94,6 +95,7 @@
             <Polish>Przepakowywanie przerwane</Polish>
             <Hungarian>Újratárazás megszakítva</Hungarian>
             <Italian>Riempimento interrotto</Italian>
+            <Portuguese>Reorganização Interrompida</Portuguese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
             <English>%1 Full and %2 Partial</English>
@@ -105,6 +107,7 @@
             <Polish>Pełnych: %1.&lt;br/&gt;Częściowo pełnych: %2.</Polish>
             <Hungarian>%1 teljes és %2 részleges</Hungarian>
             <Italian>%1 pieno e %2 parziale</Italian>
+            <Portuguese>%1 Total e %2 Parcial </Portuguese>
         </Key>
     </Package>
 </Project>

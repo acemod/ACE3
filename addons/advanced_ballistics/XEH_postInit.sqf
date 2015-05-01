@@ -24,7 +24,7 @@ GVAR(currentGrid) = 0;
 GVAR(INIT_MESSAGE_ENABLED) = false;
 
 GVAR(extensionAvailable) = true;
-/* @TODO: Remove this until verisoning is in sync with cmake/build versioning
+/* @TODO: Remove this until versioning is in sync with cmake/build versioning
 GVAR(extensionVersion) = ("ace_advanced_ballistics" callExtension "version");
 GVAR(extensionAvailable) = (GVAR(extensionVersion) == EXTENSION_REQUIRED_VERSION);
 if (!GVAR(extensionAvailable)) exitWith {

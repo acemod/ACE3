@@ -11,6 +11,7 @@
             <French>Afficher texte lors d'un lancé de grenade</French>
             <Hungarian>Szöveg mutatása gránát eldobásakor</Hungarian>
             <Italian>Mostra indicazioni nel lancio granate</Italian>
+            <Portuguese>Mostrat texto ao lançar granada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Weaponselect_SettingDisplayTextDesc">
             <English>Display a hint or text on grenade throw.</English>
@@ -22,6 +23,7 @@
             <French>Afficher texte/info au lancé de grenade</French>
             <Hungarian>Jelez egy súgót vagy szöveget a gránát eldobásakor.</Hungarian>
             <Italian>Mostra un suggerimento quando si lanciano granate</Italian>
+            <Portuguese>Mostra um hint ou texto ao lançar uma granada</Portuguese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectPistol">
             <English>Select Pistol</English>
@@ -53,7 +55,7 @@
             <Spanish>Seleccionar lanzador</Spanish>
             <Polish>Wybierz wyrzutnię</Polish>
             <Czech>Zvolit Raketomet</Czech>
-            <Russian>Выбрать гранатомет</Russian>
+            <Russian>Выбрать гранатомёт</Russian>
             <French>Sélectionner Lanceur</French>
             <Hungarian>Rakétavető Kiválasztása</Hungarian>
             <Portuguese>Selecionar Lançador</Portuguese>
@@ -65,7 +67,7 @@
             <Spanish>Seleccionar lanzagranadas</Spanish>
             <Polish>Wybierz granatnik</Polish>
             <Czech>Zvolit Granátomet</Czech>
-            <Russian>Выбрать подствольный гранатомет</Russian>
+            <Russian>Выбрать подствольный гранатомёт</Russian>
             <French>Sélectionner Lance-grenades</French>
             <Hungarian>Gránátvető Kiválasztása</Hungarian>
             <Portuguese>Selecionar Lança-Granadas</Portuguese>

@@ -1,4 +1,4 @@
-set(ACE_EXTENSION_NAME "ace_breakLine")
+set(ACE_EXTENSION_NAME "ace_break_line")
 
 file(GLOB SOURCES *.h *.hpp *.c *.cpp)
 add_library( ${ACE_EXTENSION_NAME} SHARED ${GLOBAL_SOURCES} ${SOURCES})
