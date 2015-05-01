@@ -43,7 +43,6 @@ if (ACE_player != _unit) then {
     if (isPlayer _unit) then {
         [[_unit, _target], QFUNC(startDefuse), _unit] call EFUNC(common,execRemoteFnc);
     } else {
-        //[_unit, _target, [[_unit] call EFUNC(Common,isEOD), _target] call _fnc_DefuseTime] spawn {
         _unit playActionNow _actionToPlay;
         _unit disableAI "MOVE";
         _unit disableAI "TARGET";
