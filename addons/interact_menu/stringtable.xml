@@ -121,7 +121,7 @@
             <English>Keeps cursor centered and pans the option menu around. Useful if screen size is limited.</English>
             <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
             <Russian>Центрирует курсор и двигает само меню опций. Полезно при ограниченном размере экрана.</Russian>
-            <German>Hält den Cursor zentriert und verschiebt das Menü beim Bewegen. Nützlich, wenn bei kleinen Bildschirmen.</German>
+            <German>Hält den Cursor zentriert und verschiebt das Menü beim Bewegen. Nützlich bei kleinen Bildschirmen.</German>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ActionOnKeyRelease">
             <English>Do action when releasing menu key</English>
