@@ -11,7 +11,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_mags", "_item", "_index", "_children"];
+private ["_mags", "_item", "_index", "_children", "_itemCount", "_list"];
 
 EXPLODE_1_PVT(_this,_unit);
 

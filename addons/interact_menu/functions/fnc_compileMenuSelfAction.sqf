@@ -64,7 +64,7 @@ _recurseFnc = {
                             _statement,
                             _condition,
                             _insertChildren,
-                            [],
+                            {},
                             [0,0,0],
                             10, //distace
                             [_showDisabled,_enableInside,_canCollapse,_runOnHover],
@@ -113,7 +113,7 @@ _actions = [
             },
             {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)},
             {},
-            [],
+            {},
             "Spine3",
             10,
             [false,true,false]

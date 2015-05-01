@@ -15,6 +15,9 @@
  */
 #include "script_component.hpp"
 if !(isServer) exitWith {};
+
+private["_activated", "_logic"];
+
 _logic = _this select 0;
 _activated = _this select 2;
 

@@ -60,7 +60,7 @@ GVAR(disarmTarget) = _target;
 
 //Setup PFEH
 [{
-    private ["_groundContainer", "_targetContainer", "_playerName", "_rankPicture", "_rankIndex", "_targetUniqueItems", "_holderUniqueItems"];
+    private ["_groundContainer", "_targetContainer", "_playerName", "_rankPicture", "_rankIndex", "_targetUniqueItems", "_holderUniqueItems", "_holder"];
     disableSerialization;
     EXPLODE_2_PVT(_this,_args,_pfID);
     EXPLODE_3_PVT(_args,_player,_target,_display);
