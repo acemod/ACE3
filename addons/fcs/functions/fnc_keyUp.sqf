@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-private ["_vehicle", "_turret", "_turretConfig", "_distance", "_magazines", "_showHint", "_playSound"];
+private ["_vehicle", "_turret", "_turretConfig", "_distance", "_weapons", "_magazines", "_showHint", "_playSound"];
 
 _vehicle = _this select 0;
 _turret = _this select 1;
@@ -21,6 +21,7 @@ _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call E
 
 _distance = call FUNC(getRange);
 
+_weapons = _vehicle weaponsTurret _turret;
 _magazines = _vehicle magazinesTurret _turret;
 
 if (_distance == 0) then {
@@ -72,7 +73,7 @@ if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
         ((_posTarget select 2) - (GVAR(position) select 2)) / (time - GVAR(time))
     ];
 
-    private ["_magazineType", "_ammoType", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep"];
+    private ["_magazineType", "_ammoType", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_initSpeedCoef"];
 
     // estimate time to target
     _magazineType = _vehicle currentMagazineTurret _turret;
@@ -143,26 +144,40 @@ _FCSMagazines = [];
 _FCSElevation = [];
 
 {
-    private "_ammoType";
-
-    _ammoType = getText (configFile >> "CfgMagazines" >> _x >> "ammo");
+    private ["_magazine", "_ammoType"];
+    _magazine = _x;
+    _ammoType = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
 
     if !(getText (configFile >> "CfgAmmo" >> _ammoType >> "simulation") == "shotMissile") then {
         private ["_maxElev", "_initSpeed", "_airFriction", "_offset"];
 
         _maxElev     = getNumber (_turretConfig >> "maxElev");
-        _initSpeed   = getNumber (configFile >> "CfgMagazines" >> _x >> "initSpeed");
+        _initSpeed   = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
         _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
         
-        _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
-        if (_initSpeedCoef < 0) then {
-            _initSpeed = _initSpeed * -_initSpeedCoef;
-        };
+        {
+            private ["_weapon", "_muzzles", "_weaponMagazines", "_muzzleMagazines"];
+            _weapon = _x;
+            _muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
+            _weaponMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines");
+            {
+                if (_x != "this") then {
+                    _muzzleMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> _x >> "magazines");
+                    _weaponMagazines append _muzzleMagazines;
+                };
+            } forEach _muzzles;
+            if (_magazine in _weaponMagazines) exitWith {
+                _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
+                if (_initSpeedCoef < 0) then {
+                    _initSpeed = _initSpeed * -_initSpeedCoef;
+                };
+            };
+        } forEach _weapons;
         
         _offset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, _angleTarget, _distance];
         _offset = parseNumber _offset;
 
-        _FCSMagazines = _FCSMagazines + [_x];
+        _FCSMagazines = _FCSMagazines + [_magazine];
         _FCSElevation = _FCSElevation + [_offset];
     };
 } forEach _magazines;
