@@ -33,7 +33,7 @@
         <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
             <English>Teleport to Rallypoint</English>
             <German>Zum Rallypoint teleportieren</German>
-            <Russian>Телепортироваться на раллипоинт</Russian>
+            <Russian>Телепортироваться на точку сбора</Russian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToBase">
             <English>Teleported to Base</English>
