@@ -87,7 +87,7 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
-            class enableUnconsiousnessAI {
+            class enableUnconsciousnessAI {
                 displayName = "AI Unconsciousness";
                 description = "Allow AI to go unconscious";
                 typeName = "NUMBER";
