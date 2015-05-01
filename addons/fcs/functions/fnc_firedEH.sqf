@@ -44,11 +44,9 @@ _offset = 0;
 } forEach _FCSMagazines;
 
 // Correct velocity for weapons that have initVelocity
-_velocityCorrection = if (getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed") > 0) then {
-    (vectorMagnitude velocity _projectile) - getNumber(configFile >> "CfgMagazines" >> _magazine >> "initSpeed")
-} else {
-    0
-};
+// @todo: Take into account negative initVelocities
+_velocityCorrection = (vectorMagnitude velocity _projectile) -
+                      getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
 
 [_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, -_velocityCorrection] call EFUNC(common,changeProjectileDirection);
 
