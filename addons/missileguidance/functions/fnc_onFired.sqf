@@ -29,7 +29,7 @@ _seekerType = (vehicle _shooter) getVariable [QGVAR(seekerType), nil];
 _attackProfile = (vehicle _shooter) getVariable [QGVAR(attackProfile), nil];
 _lockMode  = (vehicle _shooter) getVariable [QGVAR(lockMode), nil];
 
-_laserCode = (vehicle _shooter) getVariable [EGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
+_laserCode = (vehicle _shooter) getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
 _laserInfo = [_laserCode, ACE_DEFAULT_LASER_WAVELENGTH, ACE_DEFAULT_LASER_WAVELENGTH];
 
 _launchPos = getPosASL (vehicle _shooter);
