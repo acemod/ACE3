@@ -49,7 +49,7 @@ if (_bloodVolume < 100) then {
     };
 };
 
-if ((_unit call FUNC(getBloodLoss)) > 0) then {
+if (([_unit] call FUNC(getBloodLoss)) > 0) then {
     if !(_unit getvariable [QGVAR(isBleeding), false]) then {
         _unit setvariable [QGVAR(isBleeding), true, true];
     };

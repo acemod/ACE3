@@ -13,6 +13,7 @@
 #include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
+if (!GVAR(enabled)) exitWith {};
 if (!GVAR(extensionAvailable)) exitWith {};
 
 private ["_initStartTime", "_mapSize", "_mapGrids", "_gridCells", "_x", "_y", "_gridCenter", "_gridHeight", "_gridNumObjects", "_gridSurfaceIsWater"];

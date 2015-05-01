@@ -8,14 +8,20 @@
             <Russian>ТРАВМЫ</Russian>
             <French>BLESSURES</French>
             <Polish>OBRAŻENIA</Polish>
+            <Spanish>HERIDAS</Spanish>
+            <Hungarian>SÉRÜLÉSEK</Hungarian>
+            <Czech>ZRANĚNÍ</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_NoInjuriesBodypart">
             <English>No injuries on this bodypart ...</English>
             <German>Körperteil nicht verletzt ...</German>
             <Italian>Non ci sono lesioni in questa parte del corpo ...</Italian>
             <Russian>Данная часть тела не повреждена ...</Russian>
-            <French>Aucune blessures sur cette partie du corps</French>
+            <French>Aucune blessures sur cette partie du corps ...</French>
             <Polish>Brak obrażeń na tej części ciała ...</Polish>
+            <Spanish>Sin heridas en esta parte del cuerpo ...</Spanish>
+            <Hungarian>Ezen a testrészen nincs sérülés ...</Hungarian>
+            <Czech>Žádné zranění na této části těla ...</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
@@ -24,6 +30,9 @@
             <Russian>Количество мусора от медицины</Russian>
             <Italian>Dettagli Simulazione Rifiuti</Italian>
             <French>Niveau de simulation des détritus</French>
+            <German>Abfall-Detaillevel</German>
+            <Hungarian>Hulladékszimuláció részletessége</Hungarian>
+            <Czech>Úroveň počtu zobrazených předmětů z použitých léků</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail_Desc">
             <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
@@ -31,7 +40,10 @@
             <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
             <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
             <Italian>Il livello di dettagli della simulazione dei rifiuti indica il numero di rifiuti che verranno creati localmente nel client. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio client.</Italian>
-            <French>Le nieau de simulation des détritus règle la quantité de déchets qui vont être créer localement dans le client. Des quantitées excessive dans certaines zones locales aurait pu causer des chutes D'IPS, donc c'est une option client uniquement.</French>
+            <French>Le niveau de simulation des détritus règle la quantité de déchets qui vont être créés localement chez le client. Des quantitées excessive chez certains clients peuvent causer des chutes de FPS, c'est donc une option client uniquement.</French>
+            <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge der lokal erzeugten medizinischen Abfälle ein. Zuviel erzeugte Abfälle können FPS-Lags erzeugen, deswegen ist diese Einstellung nur clientseitig.</German>
+            <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
+            <Czech>Úroveň počtu zobrazených předmětů z použitých léků ovlivňuje počet objektů, které budou zobrazeny klientovi . Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -115,6 +127,7 @@
             <Russian>Наложить жгут</Russian>
             <Italian>Applica laccio emostatico</Italian>
             <Portuguese>Aplicar Torniquete</Portuguese>
+            <Hungarian>Érszorító alkalmazása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage">
             <English>Bandage</English>
@@ -382,10 +395,10 @@
         <Key ID="STR_ACE_Medical_Actions_TriageCard">
             <English>Triage Card</English>
             <German>Triagekarte</German>
-            <Spanish>Tarjeta de triaje</Spanish>
+            <Spanish>Tarjeta de clasificación</Spanish>
             <Russian>Медкарта</Russian>
             <Polish>Karta segregacyjna</Polish>
-            <Czech>Karta Triage</Czech>
+            <Czech>Štítek</Czech>
             <French>Carte de triage</French>
             <Hungarian>Orvosi lap</Hungarian>
             <Italian>Triage Card</Italian>
@@ -398,6 +411,9 @@
             <Russian>Нет записей.</Russian>
             <French>Aucune entrée sur cette carte de triage</French>
             <Polish>Brak wpisów w tej karcie segregacyjnej.</Polish>
+            <Spanish>Sin entradas en esta tarjeta de clasificación.</Spanish>
+            <Hungarian>Ez az orvosi lap nem tartalmaz bejegyzést.</Hungarian>
+            <Czech>Žádné záznamy na tomto štítku</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Tourniquet">
             <English>Tourniquet</English>
@@ -430,6 +446,9 @@
             <Russian>Диагностика</Russian>
             <French>Diagnostiquer</French>
             <Polish>Diagnoza</Polish>
+            <Spanish>Diagnosticar</Spanish>
+            <Hungarian>Diagnosztizálás</Hungarian>
+            <Czech>Diagnóza</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Diagnosing">
             <English>Diagnosing ...</English>
@@ -438,6 +457,9 @@
             <Russian>Диагностика ...</Russian>
             <French>Diagnostic en cours</French>
             <Polish>Diagnozowanie ...</Polish>
+            <Spanish>Diagnosticando ...</Spanish>
+            <Hungarian>Diagnózis folyamatban...</Hungarian>
+            <Czech>Diagnostika ...</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_CPR">
             <English>CPR</English>
@@ -446,6 +468,9 @@
             <Russian>Сердечно-лёгочная реанимация</Russian>
             <French>RPC</French>
             <Polish>RKO</Polish>
+            <Spanish>RCP</Spanish>
+            <Hungarian>Újraélesztés</Hungarian>
+            <Czech>KPR</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_PerformingCPR">
             <English>Performing CPR ...</English>
@@ -454,6 +479,9 @@
             <Russian>Сердечно-лёгочная реанимация ...</Russian>
             <French>RPC en cours</French>
             <Polish>Przeprowadzanie RKO ...</Polish>
+            <Spanish>Realizando RCP ...</Spanish>
+            <Hungarian>Újraélesztés folyamatban...</Hungarian>
+            <Czech>Provádím KPR ...</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
@@ -753,6 +781,7 @@
             <Hungarian>Sebesülések befedésére alkalmas</Hungarian>
             <Italian>Usato per coprire una ferita</Italian>
             <Portuguese>Usado para cobrir um ferimento</Portuguese>
+            <Czech>Slouží k překrytí poranění</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Basic_Desc_Use">
             <English>A dressing, that is a particular material used to cover a wound, which is applied over the wound once bleeding has been stemmed.</English>
@@ -956,6 +985,7 @@
             <Hungarian>Növeli a szívverést és ellenzi az allergiás reakciók hatásait</Hungarian>
             <Italian>Aumenta il battito cardiaco e combatte gli effetti di reazioni allergiche.</Italian>
             <Portuguese>Aumenta a frequência cardíaca e combate efeitos causados por reações alérgicas</Portuguese>
+            <Czech>Zvyšuje srdeční frekvenci a chrání před alergickými reakcemi</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Epinephrine_Desc_Use">
             <English>A drug that works on a sympathetic response to dilate the bronchi, increase heart rate and counter such effects given by allergic reactions (anaphylaxis). Used in sudden cardiac arrest scenarios with decreasing positive outcomes.</English>
@@ -966,6 +996,7 @@
             <Italian>Una sostanza che permette di dilatare i bronchi, aumentare il battito cardiaco e combattere effetti di reazioni allergiche. Usato anche in casi di arresto cardiaco.</Italian>
             <German>Ein Medikament, dass die Bronchien erweitert, die Herzfrequenz erhöht und Symptome von allergischen Reaktionen(Anaphylaxie) bekämpft. Wird bei plötzlichem Herzstillstand verabreicht.</German>
             <Portuguese>Uma droga trabalha dilatando os bronquios, aumentando a frequência cardíaca e combate efeitos de reações alérgicas(anáfilaticas). Usado em casos de parada cardiaca com poucas changes de recuperação.</Portuguese>
+            <Hungarian>Egy hormon, mely a szimpatikus idegrendszer által kitágítja a hörgőket, valamint megnöveli a szívverést, ezzel ellensúlyozva ilyen jellegű allergiás reakciókat (anafilaxiás sokk). Hirtelen szívmegállás esetén is használt, idő alatt csökkenő hatásfokkal.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Plasma_IV">
             <English>Plasma IV (1000ml)</English>
@@ -977,6 +1008,7 @@
             <Hungarian>Vérplazma-infúzió (1000ml)</Hungarian>
             <Italian>Plasma IV (1000ml)</Italian>
             <Portuguese>Plasma IV (1000ml)</Portuguese>
+            <Czech>Krevní plazma (1000ml)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Plasma_IV_Desc_Short">
             <English>A volume-expanding blood supplement.</English>
@@ -1010,6 +1042,7 @@
             <Hungarian>Vérplazma-infúzió (500ml)</Hungarian>
             <Italian>Plasma IV (500ml)</Italian>
             <Portuguese>Plasma IV (500ml)</Portuguese>
+            <Czech>Krevní plazma (500ml)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Plasma_IV_250">
             <English>Plasma IV (250ml)</English>
@@ -1021,6 +1054,7 @@
             <Hungarian>Vérplazma-infúzió (250ml)</Hungarian>
             <Italian>Plasma IV (250ml)</Italian>
             <Portuguese>Plasma IV (250ml)</Portuguese>
+            <Czech>Krevní plazma (250ml)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_IV">
             <English>Blood IV (1000ml)</English>
@@ -1032,6 +1066,7 @@
             <Hungarian>Vér-infúzió (1000ml)</Hungarian>
             <Italian>Sangue IV (1000ml)</Italian>
             <Portuguese>Sangue IV (1000ml)</Portuguese>
+            <Czech>Krevní transfúze (1000ml)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_IV_Desc_Short">
             <English>Blood IV, for restoring a patients blood (keep cold)</English>
@@ -1043,6 +1078,7 @@
             <Italian>Sangue usato per ripristinare pazienti in cui si è verificata una perdita di sangue (conservare al fresco)</Italian>
             <German>Blut IV, Bluthaushalt des Patienten wiederherstellen. (Kühl halten)</German>
             <Portuguese>Sangue intravenoso, para restaurar o volume sanguinio do paciente.(Manter frio)</Portuguese>
+            <Czech>Krev IV, pro doplňění krve pacienta (udržujte v chladu)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_IV_Desc_Use">
             <English>O Negative infusion blood used in strict and rare events to replenish blood supply usually conducted in the transport phase of medical care.</English>
@@ -1053,6 +1089,7 @@
             <French>Cullot sanguin O- utilisé dans de rares et stricts cas pour compléter une perte de sang importante. Administré normalement lors d'un MEDEVAC</French>
             <German>O Negative Blutinfusion wird nur in seltenen Fällen verwendet, um den Bluthaushalt des Patienten zu ergänzen. Wird in der Regel wärend der Transportphase durchgeführt.</German>
             <Portuguese>Sangue O- , utilizado em casos raros para rapidamente repor o sangue. Uso habitual ocorre durante o transporte ou em estações de tratamento. </Portuguese>
+            <Hungarian>Nullás vércsoportú, Rh-negatív vér-infúzió, melyet kritikus és ritka helyzetekben vérutánpótlásra használnak, jellemzően az orvosi ellátás szállítási fázisa közben.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_IV_500">
             <English>Blood IV (500ml)</English>
@@ -1064,6 +1101,7 @@
             <Hungarian>Vér-infúzió (500ml)</Hungarian>
             <Italian>Sangue IV (500ml)</Italian>
             <Portuguese>Sangue IV (500ml)</Portuguese>
+            <Czech>Krevní transfúze (500ml)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_IV_250">
             <English>Blood IV (250ml)</English>
@@ -1075,6 +1113,7 @@
             <Hungarian>Vér-infúzió (250ml)</Hungarian>
             <Italian>Samgue IV (250ml)</Italian>
             <Portuguese>Sangue IV (250ml)</Portuguese>
+            <Czech>Krevní transfúze (250ml)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Saline_IV">
             <English>Saline IV (1000ml)</English>
@@ -1086,6 +1125,7 @@
             <Hungarian>0,9%-os sósvíz-infúzió (1000ml)</Hungarian>
             <Italian>Soluzione salina IV (1000ml)</Italian>
             <Portuguese>Soro IV (1000ml)</Portuguese>
+            <Czech>Fyziologický roztok (1000ml)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Saline_IV_Desc_Short">
             <English>Saline IV, for restoring a patients blood</English>
@@ -1119,6 +1159,7 @@
             <Hungarian>0,9%-os sósvíz-infúzió (500ml)</Hungarian>
             <Italian>Soluzione salina IV (500ml)</Italian>
             <Portuguese>Soro IV (1000ml)</Portuguese>
+            <Czech>Fyziologický roztok (500ml)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Saline_IV_250">
             <English>Saline IV (250ml)</English>
@@ -1130,6 +1171,7 @@
             <Hungarian>0,9%-os sósvíz-infúzió (250ml)</Hungarian>
             <Italian>Soluzione salina IV (250ml)</Italian>
             <Portuguese>Soro IV (1000ml)</Portuguese>
+            <Czech>Fyziologický roztok (250ml)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_QuikClot_Display">
             <English>Basic Field Dressing (QuikClot)</English>
@@ -1167,13 +1209,14 @@
         <Key ID="STR_ACE_Medical_Aid_Kit_Display">
             <English>Personal Aid Kit</English>
             <Russian>Аптечка</Russian>
-            <Spanish>Botiquín de primeros auxilios</Spanish>
             <French>Trousse de premiers soins</French>
+            <Spanish>Equipo de primeros auxilios</Spanish>
             <Polish>Apteczka osobista</Polish>
             <German>Persönliches Verbandpäckchen</German>
             <Hungarian>Elsősegélycsomag</Hungarian>
             <Italian>Pronto soccorso personale</Italian>
             <Portuguese>Kit De Primeiros Socorros Pessoal</Portuguese>
+            <Czech>Balíček první pomoci</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Aid_Kit_Desc_Short">
             <English>Includes various treatment kit needed for stitching or advanced treatment</English>
@@ -1192,6 +1235,8 @@
             <Russian>Полевая аптчека для продвинутого лечения и зашивания ран</Russian>
             <German>Persönliches Verbandspäckchen zum ambulanten Nähen und fortgeschrittener Behandlung.</German>
             <French>Trousse de premiers soins pour coudre sur le terrain et traitements avancés.</French>
+            <Spanish>Equipo de primeros auxilios para sutura de campaña o tratamientos avanzados</Spanish>
+            <Hungarian>Elsősegélycsomag, terepen való sebvarráshoz és haladó ellátáshoz</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Use_Aid_Kit">
             <English>Use Personal Aid Kit</English>
@@ -1199,6 +1244,9 @@
             <Russian>Использовать аптечку</Russian>
             <French>Utiliser la Trousse de premier soins</French>
             <Polish>Użyj apteczki osobistej</Polish>
+            <Spanish>Usar equipo de primeros auxilios</Spanish>
+            <Hungarian>Elsősegélycsomag használata</Hungarian>
+            <Czech>Použít balíček první pomoci</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_SurgicalKit_Display">
             <English>Surgical Kit</English>
@@ -1210,6 +1258,7 @@
             <Hungarian>Sebészeti készlet</Hungarian>
             <Italian>Kit chirurgico</Italian>
             <Portuguese>Kit Cirurgico</Portuguese>
+            <Czech>Chirurgická sada</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_SurgicalKit_Desc_Short">
             <English>Surgical Kit for in field advanced medical treatment</English>
@@ -1221,6 +1270,7 @@
             <Hungarian>Sebészeti készlet komplex orvosi feladatok terepen való ellátására</Hungarian>
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
             <Portuguese>Kit Cirurgico para uso de tratamento médico avançado em campo</Portuguese>
+            <Czech>Chirurgická sada pro pokročilé vyléčení v poli</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_SurgicalKit_Desc_Use">
             <English>Surgical Kit for in field advanced medical treatment</English>
@@ -1232,6 +1282,7 @@
             <Hungarian>Sebészeti készlet komplex orvosi feladatok terepen való ellátására</Hungarian>
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
             <Portuguese>Kit Cirurgico para uso de tratamento médico avançado em campo.</Portuguese>
+            <Czech>Chirurgická sada pro pokročilé vyléčení v poli</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Use_SurgicalKit">
             <English>Use Surgical Kit</English>
@@ -1240,6 +1291,9 @@
             <Russian>Использовать хирургический набор</Russian>
             <French>Utiliser la trousse chirugicale</French>
             <Polish>Zszyj rany</Polish>
+            <Spanish>Usar equipo quirúrgico</Spanish>
+            <Hungarian>Sebészeti készlet használata</Hungarian>
+            <Czech>Použít chirurgickou sadu</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Bodybag_Display">
             <English>Bodybag</English>
@@ -1251,6 +1305,7 @@
             <Hungarian>Hullazsák</Hungarian>
             <Italian>Sacca per corpi</Italian>
             <Portuguese>Saco para cadáver</Portuguese>
+            <Czech>Pytel na tělo</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Bodybag_Desc_Short">
             <English>A bodybag for dead bodies</English>
@@ -1262,6 +1317,7 @@
             <Hungarian>Egy hullazsák a holttestek számára</Hungarian>
             <Italian>Una sacca nera per trasportare cadaveri.</Italian>
             <Portuguese>Um saco para corpos mortos</Portuguese>
+            <Czech>Pytel na mrtvá těla</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Bodybag_Desc_Use">
             <English>A bodybag for dead bodies</English>
@@ -1273,6 +1329,7 @@
             <Hungarian>Egy hullazsák a holttestek számára</Hungarian>
             <Italian>Una sacca nera per trasportare cadaveri.</Italian>
             <Portuguese>Um saco para corpos mortos.</Portuguese>
+            <Czech>Pytel na mrtvá těla</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure">
             <English>Blood Pressure</English>
@@ -1284,6 +1341,7 @@
             <Hungarian>Vérnyomás</Hungarian>
             <Italian>Pressione sanguigna</Italian>
             <Portuguese>Pressão Arterial</Portuguese>
+            <Czech>Krevní tlak</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Content">
             <English>Checking Blood Pressure..</English>
@@ -1295,6 +1353,7 @@
             <Hungarian>Vérnyomás megmérése...</Hungarian>
             <Italian>Controllando la pressione sanguigna..</Italian>
             <Portuguese>Aferindo Pressão Arterial...</Portuguese>
+            <Czech>Kontroluji krevní tlak ...</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Log">
             <English>%1 checked Blood Pressure: %2</English>
@@ -1303,6 +1362,9 @@
             <Russian>%1 проверил артериальное давление: %2</Russian>
             <French>%1 à vérifié la tension: %2</French>
             <Polish>%1 sprawdził ciśnienie krwi: %2</Polish>
+            <Spanish>%1 verificada la presión arterial: %2</Spanish>
+            <Hungarian>%1 ellenőrizte a vérnyomást: %2</Hungarian>
+            <Czech>%1 zkontrolován krevní tlak: %2</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Checked_Medic">
             <English>You checked %1</English>
@@ -1314,6 +1376,7 @@
             <Hungarian>A %1 ellenőrizve</Hungarian>
             <Italian>Hai diagnosticato %1</Italian>
             <Portuguese>Você aferiu o paciente %1</Portuguese>
+            <Czech>Zkontroloval jsi %1</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_1">
             <English>You find a blood pressure of %2/%3</English>
@@ -1325,6 +1388,7 @@
             <Polish>Wyczuwasz ciśnienie krwi o wartości %2/%3</Polish>
             <German>Der Blutdruck liegt bei %2/%3</German>
             <Portuguese>A Pressão Arterial é de %2/%3</Portuguese>
+            <Czech>Našel jsi krevní tlak u %2/%3</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_2">
             <English>You find a low blood pressure</English>
@@ -1336,6 +1400,7 @@
             <Hungarian>A vérnyomás alacsony</Hungarian>
             <Italian>La pressione sanguigna è bassa</Italian>
             <Portuguese>Pressão Arterial baixa</Portuguese>
+            <Czech>Naměřil jsi nízký krevní tlak</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_3">
             <English>You find a normal blood pressure</English>
@@ -1347,6 +1412,7 @@
             <Hungarian>A vérnyomás normális</Hungarian>
             <Italian>La pressione sanguigna è normale</Italian>
             <Portuguese>Pressão Arterial normal</Portuguese>
+            <Czech>Naměřil jsi normální krevní tlak</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_4">
             <English>You find a high blood pressure</English>
@@ -1358,6 +1424,7 @@
             <Hungarian>A vérnyomás magas</Hungarian>
             <Italian>La pressione sanguigna è alta</Italian>
             <Portuguese>Pressão Arterial Alta</Portuguese>
+            <Czech>Naměřil jsi vysoký krevní tlak</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_5">
             <English>You find no blood pressure</English>
@@ -1369,6 +1436,7 @@
             <Hungarian>Nem észlelhető vérnyomás</Hungarian>
             <Italian>La pressione sanguigna è assente</Italian>
             <Portuguese>Sem Pressão Arterial</Portuguese>
+            <Czech>Nenaměřil jsi žádný krevní tlak</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_6">
             <English>You fail to find a blood pressure</English>
@@ -1380,6 +1448,7 @@
             <Hungarian>Nem sikerült a vérnyomás megmérése</Hungarian>
             <Italian>Manca strumento per misurare pressione sanguigna</Italian>
             <Portuguese>Você falhou em aferir a Pressão Arterial</Portuguese>
+            <Czech>Nedokázal jsi změřit krevní tlak</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Low">
             <English>Low</English>
@@ -1388,6 +1457,9 @@
             <Russian>Низкое</Russian>
             <French>Faible</French>
             <Polish>Niskie</Polish>
+            <Spanish>Baja</Spanish>
+            <Hungarian>Alacsony</Hungarian>
+            <Czech>Nízký</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Normal">
             <English>Normal</English>
@@ -1396,6 +1468,9 @@
             <Russian>Нормальное</Russian>
             <French>Normale</French>
             <Polish>Normalne</Polish>
+            <Spanish>Normal</Spanish>
+            <Hungarian>Normális</Hungarian>
+            <Czech>Normální</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_High">
             <English>High</English>
@@ -1404,6 +1479,9 @@
             <Russian>Высокое</Russian>
             <French>Haute</French>
             <Polish>Wysokie</Polish>
+            <Spanish>Alta</Spanish>
+            <Hungarian>Magas</Hungarian>
+            <Czech>Vysoký</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_NoBloodpressure">
             <English>No Blood Pressure</English>
@@ -1412,6 +1490,9 @@
             <Russian>Артериальное давление отсутствует</Russian>
             <French>Aucune tension</French>
             <Polish>Brak ciśnienia krwi</Polish>
+            <Spanish>Sin presión arterial</Spanish>
+            <Hungarian>Nincs vérnyomás</Hungarian>
+            <Czech>Žádný krevní tlak</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse">
             <English>Pulse</English>
@@ -1423,6 +1504,7 @@
             <Hungarian>Pulzus</Hungarian>
             <Italian>Polso</Italian>
             <Portuguese>Pulso</Portuguese>
+            <Czech>Tep</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Content">
             <English>Checking Heart Rate ...</English>
@@ -1434,6 +1516,7 @@
             <Hungarian>Szívverés-szám mérése...</Hungarian>
             <Italian>Controllando il battito cardiaco ...</Italian>
             <Portuguese>Aferindo Pulso ...</Portuguese>
+            <Czech>Kontroluji srdeční tep ...</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Checked_Medic">
             <English>You checked %1</English>
@@ -1445,6 +1528,7 @@
             <Hungarian>A %1 ellenőrizve</Hungarian>
             <Italian>Hai diagnosticato %1</Italian>
             <Portuguese>Você aferiu o paciente %1</Portuguese>
+            <Czech>Zkontroloval jsi %1</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Log">
             <English>%1 checked Heart Rate: %2</English>
@@ -1453,6 +1537,9 @@
             <Russian>%1 проверил пульс: %2</Russian>
             <French>%1 à vérifié le rythme cardiaque: %2</French>
             <Polish>%1 sprawdził tętno: %2</Polish>
+            <Spanish>%1 verificado el ritmo cardíaco: %2</Spanish>
+            <Hungarian>%1 ellenőrizte a szívverés-számot: %2</Hungarian>
+            <Czech>%1 zkontroloval srdeční tep: %2</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Weak">
             <English>Weak</English>
@@ -1461,6 +1548,9 @@
             <Russian>Слабый</Russian>
             <French>Faible</French>
             <Polish>Słabe</Polish>
+            <Spanish>Débil</Spanish>
+            <Hungarian>Gyenge</Hungarian>
+            <Czech>Slabý</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Normal">
             <English>Normal</English>
@@ -1469,6 +1559,9 @@
             <Russian>Нормальный</Russian>
             <French>Normal</French>
             <Polish>Normalne</Polish>
+            <Spanish>Normal</Spanish>
+            <Hungarian>Normális</Hungarian>
+            <Czech>Normální</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Strong">
             <English>Strong</English>
@@ -1477,6 +1570,9 @@
             <Russian>Сильный</Russian>
             <French>Fort</French>
             <Polish>Silne</Polish>
+            <Spanish>Fuerte</Spanish>
+            <Hungarian>Erős</Hungarian>
+            <Czech>Silný</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_1">
             <English>You find a Heart Rate of %2</English>
@@ -1488,6 +1584,7 @@
             <Hungarian>A szívverés-szám %2</Hungarian>
             <Italian>Il battito cardiaco è %2</Italian>
             <Portuguese>A Freqüência Cardíaca é de %2</Portuguese>
+            <Czech>Nahmatal jsi srdeční tep u %2</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_2">
             <English>You find a weak Heart Rate</English>
@@ -1499,6 +1596,7 @@
             <Hungarian>A szívverés-szám alacsony</Hungarian>
             <Italian>Hai riscontrato un debole battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca baixa</Portuguese>
+            <Czech>Nahmatal jsi slabý srdeční tep</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_3">
             <English>You find a strong Heart Rate</English>
@@ -1510,6 +1608,7 @@
             <Hungarian>A szívverés-szám magas</Hungarian>
             <Italian>Hai riscontrato un forte battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca normal</Portuguese>
+            <Czech>Nahmatal jsi silný srdeční tep</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_4">
             <English>You find a normal Heart Rate</English>
@@ -1521,6 +1620,7 @@
             <Hungarian>A szívverés-szám normális</Hungarian>
             <Italian>Hai riscontrato un normale battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca alta</Portuguese>
+            <Czech>Nahmatal jsi normální srdeční tep</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_5">
             <English>You find no Heart Rate</English>
@@ -1532,6 +1632,7 @@
             <Hungarian>Nem észlelhető szívverés</Hungarian>
             <Italian>Hai riscontrato una assenza di battito cardiaco</Italian>
             <Portuguese>Sem Freqüência Cardíaca</Portuguese>
+            <Czech>Nenašel jsi </Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response">
             <English>Response</English>
@@ -1543,6 +1644,7 @@
             <Hungarian>Reagálóképesség</Hungarian>
             <Italian>Risposta</Italian>
             <Portuguese>Reação</Portuguese>
+            <Czech>Odezva</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response_Content">
             <English>You check response of patient</English>
@@ -1554,6 +1656,7 @@
             <Hungarian>Ellenőrzöd a páciens reagálóképességét</Hungarian>
             <Italian>Controlli la risposta del paziente</Italian>
             <Portuguese>Aferindo se o paciente tem reação...</Portuguese>
+            <Czech>Zkontroloval jsi reakci pacienta</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response_Responsive">
             <English>%1 is responsive</English>
@@ -1565,6 +1668,7 @@
             <Hungarian>%1 reakcióképes</Hungarian>
             <Italian>%1 e' cosciente</Italian>
             <Portuguese>%1 está respondendo</Portuguese>
+            <Czech>%1 odpovídá</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response_Unresponsive">
             <English>%1 is not responsive</English>
@@ -1576,6 +1680,7 @@
             <Hungarian>%1 nem reagál</Hungarian>
             <Italian>%1 e' incosciente</Italian>
             <Portuguese>%1 não está respondendo</Portuguese>
+            <Czech>%1 neodpovídá</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response_You_Checked">
             <English>You checked %1</English>
@@ -1587,6 +1692,7 @@
             <Hungarian>Megnézted %1-t</Hungarian>
             <Italian>Hai controllato %1</Italian>
             <Portuguese>Você aferiu o paciente %1</Portuguese>
+            <Czech>Zkontroloval jsi %1</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_diagnoseMessage">
             <English>Patient %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</English>
@@ -1595,6 +1701,9 @@
             <German>Patient %1&lt;br/&gt;ist %2.&lt;br/&gt;%3.&lt;br/&gt;%4</German>
             <French>Patient %1&lt;br/&gt;est %2.&lt;br/&gt;%3.&lt;br/&gt;</French>
             <Polish>Pacjent %1&lt;br/&gt;jest %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Polish>
+            <Spanish>Paciente %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Spanish>
+            <Hungarian>A páciens, %1,&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Hungarian>
+            <Czech>Pacient %1&lt;br/&gt;je %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_diagnoseAlive">
             <English>alive</English>
@@ -1603,41 +1712,63 @@
             <German>lebendig</German>
             <French>vivant</French>
             <Polish>żywy</Polish>
+            <Spanish>vivo</Spanish>
+            <Hungarian>élő</Hungarian>
+            <Czech>naživu</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_diagnoseDead">
             <English>dead</English>
             <Italian>Morto</Italian>
             <Russian>мёртв</Russian>
+            <Spanish>muerto</Spanish>
             <German>tot</German>
             <French>mort</French>
             <Polish>martwy</Polish>
+            <Hungarian>halott</Hungarian>
+            <Czech>mrtev</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_lostBlood">
             <English>He's lost some blood</English>
             <Italian>Ha perso molto sangue</Italian>
+            <Spanish>Ha perdido un poco de sangre</Spanish>
             <Russian>Есть кровопотеря</Russian>
             <German>Er hat etwas Blut verloren</German>
-            <French>Il à perdu du sang</French>
+            <French>Il a perdu du sang</French>
             <Polish>Stracił trochę krwi</Polish>
+            <Hungarian>Valamennyi vért vesztett</Hungarian>
+            <Czech>Ztratil trochu krve</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_lostBloodALot">
             <English>He's lost a lot of blood</English>
+            <German>Er hat viel Blut verloren</German>
+            <Hungarian>Sok vért vesztett</Hungarian>
+            <Polish>Stracił sporo krwi</Polish>
+            <Russian>Большая кровопотеря</Russian>
+            <Spanish>Ha perdido mucha sangre</Spanish>
+            <French>Il a perdu beaucoup de sang</French>
+            <Czech>Ztratil hodně krve</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_noBloodloss">
             <English>He hasn't lost blood</English>
             <Italian>Non ha perso sangue</Italian>
             <Russian>Нет кровопотери</Russian>
             <German>Er hat kein Blut verloren</German>
-            <French>il n'a pas perdu de sang</French>
+            <French>Il n'a pas perdu de sang</French>
             <Polish>Nie stracił krwi</Polish>
+            <Spanish>No ha perdido sangre</Spanish>
+            <Hungarian>Nem vesztett vért</Hungarian>
+            <Czech>Neztratil žádnou krev</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_inPain">
             <English>He is in pain</English>
             <Italian>è affetto da dolore</Italian>
             <Russian>Испытывает боль</Russian>
             <German>Er hat Schmerzen</German>
-            <French>il souffre</French>
+            <French>Il souffre</French>
             <Polish>Odczuwa ból</Polish>
+            <Spanish>Siente dolor</Spanish>
+            <Hungarian>Fájdalmai vannak</Hungarian>
+            <Czech>Je v bolestech</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_noPain">
             <English>He is not in pain</English>
@@ -1646,6 +1777,9 @@
             <German>Er hat keine Schmerzen</German>
             <French>Il ne souffre pas</French>
             <Polish>Nie odczuwa bólu</Polish>
+            <Spanish>No siente dolor</Spanish>
+            <Hungarian>Nincsenek fájdalmai</Hungarian>
+            <Czech>Nemá žádné bolesti</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Bandaged">
             <English>Bandaged</English>
@@ -1657,6 +1791,7 @@
             <Italian>Bendato</Italian>
             <German>verbunden</German>
             <Portuguese>Enfaixado</Portuguese>
+            <Czech>Obvázaný</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Apply_Bandage">
             <English>You bandage %1 (%2)</English>
@@ -1668,6 +1803,7 @@
             <Italian>Stai bendando %1 (%2)</Italian>
             <German>Du verbindest %1 (%2)</German>
             <Portuguese>Você aplica bandagem no paciente %1 (%2)</Portuguese>
+            <Czech>Obvazuješ %1 (%2)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Is_Bandaging_You">
             <English>%1 is bandaging you</English>
@@ -1679,6 +1815,7 @@
             <Italian>%1 ti sta bendando</Italian>
             <German>%1 verbindet dich</German>
             <Portuguese>%1 está aplicando  uma bandagem em você</Portuguese>
+            <Czech>%1 tě obvazuje</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Start_Stitching_Injuries">
             <English>You start stitching injuries from %1 (%2)</English>
@@ -1701,6 +1838,7 @@
             <Hungarian>Összevarrás</Hungarian>
             <Italian>Suturando</Italian>
             <Portuguese>Suturando...</Portuguese>
+            <Czech>Šití</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_You_Treat_Airway">
             <English>You treat the airway of %1</English>
@@ -1723,6 +1861,7 @@
             <Hungarian>Légút</Hungarian>
             <Italian>Vie respiratorie</Italian>
             <Portuguese>Vias Aéreas</Portuguese>
+            <Czech>Dýchací cesty</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Is_Treating_Your_Airway">
             <English>%1 is treating your airway</English>
@@ -1774,7 +1913,7 @@
         <Key ID="STR_ACE_Medical_Load">
             <English>Load Patient Into</English>
             <German>Patient Einladen</German>
-            <Spanish>Cargar el paciente en</Spanish>
+            <Spanish>Cargar al paciente en</Spanish>
             <Polish>Załaduj pacjenta</Polish>
             <Czech>Naložit pacianta do</Czech>
             <Russian>Погрузить пациента в</Russian>
@@ -1786,7 +1925,7 @@
         <Key ID="STR_ACE_Medical_Unload">
             <English>Unload Patient</English>
             <German>Patient Ausladen</German>
-            <Spanish>Descargar el paciente</Spanish>
+            <Spanish>Descargar al paciente</Spanish>
             <Polish>Wyładuj pacjenta</Polish>
             <Czech>Vyložit pacienta</Czech>
             <Russian>Выгрузить пациента</Russian>
@@ -1797,7 +1936,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_UnloadPatient">
             <English>Unload patient</English>
-            <Spanish>Descargar el paciente</Spanish>
+            <Spanish>Descargar al paciente</Spanish>
             <Russian>Выгрузить пациента</Russian>
             <German>Patient Ausladen</German>
             <Polish>Wyładuj pacjenta</Polish>
@@ -1805,10 +1944,11 @@
             <Hungarian>Sebesült kihúzása</Hungarian>
             <Italian>Scarica il paziente</Italian>
             <Portuguese>Descarregar Paciente</Portuguese>
+            <Czech>Vyložit pacienta</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_LoadPatient">
             <English>Load patient</English>
-            <Spanish>Cargar el paciente en</Spanish>
+            <Spanish>Cargar al paciente en</Spanish>
             <Russian>Погрузить пациента</Russian>
             <German>Patient Einladen</German>
             <Polish>Załaduj pacjenta</Polish>
@@ -1816,6 +1956,7 @@
             <Hungarian>Sebesült berakása</Hungarian>
             <Italian>Carica il paziente</Italian>
             <Portuguese>Carregar Paciente Em</Portuguese>
+            <Czech>Naložit pacienta</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_PlaceInBodyBag">
             <English>Place body in bodybag</English>
@@ -1827,6 +1968,7 @@
             <Hungarian>Test hullazsákba helyezése</Hungarian>
             <Italian>Metti il corpo nella sacca per cadaveri</Italian>
             <Portuguese>Colocar corpo dentro do saco para cadáver</Portuguese>
+            <Czech>Umístni tělo do pytle na mrtvoly</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_PlacingInBodyBag">
             <English>Placing body in bodybag</English>
@@ -1838,6 +1980,7 @@
             <Hungarian>Test hullazsákba helyezése ...</Hungarian>
             <Italian>Stai mettendo il corpo nella sacca</Italian>
             <Portuguese>Colocando corpo dentro do saco para cadáver...</Portuguese>
+            <Czech>Umístňuji tělo do pytle na mrtvoly</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
@@ -1849,6 +1992,7 @@
             <Hungarian>%1 bekötözte a pácienst</Hungarian>
             <Italian>%1 ha bendato il paziente</Italian>
             <Portuguese>%1 aplicou bandagem no paciente</Portuguese>
+            <Czech>%1 již obvázal pacienta</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_usedItem">
             <English>%1 used %2</English>
@@ -1860,17 +2004,19 @@
             <Hungarian>%1 használta a %2-t</Hungarian>
             <Italian>%1 ha usato %2</Italian>
             <Portuguese>%1 usou %2</Portuguese>
+            <Czech>%1 použil %2</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_gaveIV">
             <English>%1 has given an IV</English>
-            <Spanish>%1 has puesto una IV</Spanish>
             <Russian>%1 провёл переливание</Russian>
+            <Spanish>%1 ha puesto una IV</Spanish>
             <German>%1 hat eine Infusion verabreicht</German>
             <Polish>%1 podał IV</Polish>
             <French>%1 a administré une IV</French>
             <Hungarian>%1 infúziót adott</Hungarian>
             <Italian>%1 ha somministrato una IV</Italian>
             <Portuguese>%1 aplicou um intravenoso</Portuguese>
+            <Czech>%1 již aplikoval IV</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_appliedTourniquet">
             <English>%1 applied a tourniquet</English>
@@ -1882,6 +2028,7 @@
             <Hungarian>%1 felhelyezett egy érszorítót</Hungarian>
             <Italian>%1 ha applicato un laccio emostatico</Italian>
             <Portuguese>%1 aplicou um torniquete</Portuguese>
+            <Czech>%1 použil škrtidlo</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -1891,6 +2038,8 @@
             <Italian>Gravemente ferito</Italian>
             <Spanish>Gravemente herido</Spanish>
             <French>Lourdement blessé</French>
+            <Hungarian>Erősen sérült</Hungarian>
+            <Czech>Těžce zraněn</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_LightlyWounded">
             <English>Lightly wounded</English>
@@ -1900,6 +2049,8 @@
             <Italian>Leggermente ferito</Italian>
             <Spanish>Levemente herido</Spanish>
             <French>Légèrement blessé</French>
+            <Hungarian>Enyhén sérült</Hungarian>
+            <Czech>Lehce zraněn</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_VeryLightlyWounded">
             <English>Very lightly wounded</English>
@@ -1909,6 +2060,8 @@
             <Italian>Ferito lievemente</Italian>
             <Spanish>Muy levemente herido</Spanish>
             <French>Très légèrement blessé</French>
+            <Hungarian>Nagyon enyhén sérült</Hungarian>
+            <Czech>Velmi lehce zraněn</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Head">
             <English>Head</English>
@@ -1918,6 +2071,8 @@
             <Italian>Testa</Italian>
             <Spanish>Cabeza</Spanish>
             <French>Tête</French>
+            <Hungarian>Fej</Hungarian>
+            <Czech>Hlava</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Torso">
             <English>Torso</English>
@@ -1927,6 +2082,8 @@
             <Italian>Torso</Italian>
             <Spanish>Torso</Spanish>
             <French>Torse</French>
+            <Hungarian>Testtörzs</Hungarian>
+            <Czech>Trup</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_LeftArm">
             <English>Left Arm</English>
@@ -1936,6 +2093,8 @@
             <Italian>Braccio sinistro</Italian>
             <Spanish>Brazo izquierdo</Spanish>
             <French>Bras gouche</French>
+            <Hungarian>Bal kar</Hungarian>
+            <Czech>Levá ruka</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_RightArm">
             <English>Right Arm</English>
@@ -1945,6 +2104,8 @@
             <Italian>Braccio destro</Italian>
             <Spanish>Brazo derecho</Spanish>
             <French>Bras droit</French>
+            <Hungarian>Jobb kar</Hungarian>
+            <Czech>Pravá ruka</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_LeftLeg">
             <English>Left Leg</English>
@@ -1954,6 +2115,8 @@
             <Italian>Gamba sinistra</Italian>
             <Spanish>Pierna izquierda</Spanish>
             <French>Jambe gauche</French>
+            <Hungarian>Bal láb</Hungarian>
+            <Czech>Levá noha</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_RightLeg">
             <English>Right Leg</English>
@@ -1963,6 +2126,8 @@
             <Italian>Gamba destra</Italian>
             <Spanish>Pierna derecha</Spanish>
             <French>Jambe droite</French>
+            <Hungarian>Jobb láb</Hungarian>
+            <Czech>Pravá noha</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
@@ -1972,6 +2137,7 @@
             <Italian>Pain Effect Type</Italian>
             <Spanish>Tipo de efecto de dolor</Spanish>
             <French>Type d'effet de douleur</French>
+            <Hungarian>Fájdalom-effekt típusa</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Flash">
             <English>Colour Flashing</English>
@@ -1981,6 +2147,7 @@
             <Italian>Colore lampeggiante</Italian>
             <Spanish>Parpadeo de color</Spanish>
             <French>Flash de couleur</French>
+            <Hungarian>Színvillódzás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Chroma">
             <English>Chromatic Aberration</English>
@@ -1990,18 +2157,43 @@
             <Italian>Aberrazione cromatica</Italian>
             <Spanish>Aberración cromática</Spanish>
             <French>Aberration chromatique</French>
+            <Hungarian>Kromatikus aberráció</Hungarian>
+            <Czech>Chromatická aberace</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_menuTypeDisplay">
             <English>Style of menu (Medical)</English>
+            <Polish>Styl menu medycznego</Polish>
+            <French>Style de menu (Médical)</French>
+            <German>Menü-Stil (Medical)</German>
+            <Russian>Вид меню (медицина)</Russian>
+            <Spanish>Tipo de menú (Medico)</Spanish>
+            <Czech>Styl menu (Zdravotní)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_menuTypeDescription">
             <English>Select the type of menu you prefer; default 3d selections or radial.</English>
+            <Polish>Wybierz rodzaj menu, który preferujesz: domyślne pozycje 3D lub radialne</Polish>
+            <French>Selctionne le type de menu préféré; par défaut la sélection 3D ou radiale</French>
+            <German>Wähle den Menü-Stil: Standard 3D-Selektion oder kreisförmig.</German>
+            <Russian>Выберите тип меню: стандартный вариант (3D) или радиальный</Russian>
+            <Spanish>Selecciona el tipo de menú que prefieres: selecciones 3d por defecto o radial.</Spanish>
+            <Czech>Vyberte typ menu který preferujete: výchozí 3D nebo radiální.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_useSelection">
             <English>Selections (3d)</English>
+            <Polish>Pozycje (3D)</Polish>
+            <French>sélections (3D)</French>
+            <German>3D-Selektion</German>
+            <Russian>Стандартный (3D)</Russian>
+            <Spanish>Selecciones (3d)</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_useRadial">
             <English>Radial</English>
+            <Polish>Radialne</Polish>
+            <French>Radiale</French>
+            <German>Kreisförmig</German>
+            <Russian>Радиальный</Russian>
+            <Spanish>Radial</Spanish>
+            <Czech>Radiální</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion">
             <English>Scrape</English>
@@ -2010,30 +2202,38 @@
             <Russian>Ссадина</Russian>
             <French>Eraflure</French>
             <Polish>Draśnięcie</Polish>
+            <Spanish>Arañazo</Spanish>
+            <Hungarian>Horzsolás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Minor">
             <English>Minor Scrape</English>
             <German>Kleiner Kratzer</German>
             <Italian>Minima Scorticatura</Italian>
             <Russian>Малая ссадина</Russian>
-            <French>Eraflure Mineure</French>
+            <French>Petite éraflure</French>
             <Polish>Pomniejsze draśnięcie</Polish>
+            <Spanish>Arañazo menor</Spanish>
+            <Hungarian>Kis horzsolás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Medium">
             <English>Medium Scrape</English>
             <German>Mittlerer Kratzer</German>
             <Italian>Media Scorticatura</Italian>
             <Russian>Средняя ссадина</Russian>
-            <French>Moyenne Eraflure</French>
+            <French>Moyenne éraflure</French>
             <Polish>Średnie draśnięcie</Polish>
+            <Spanish>Arañazo medio</Spanish>
+            <Hungarian>Közepes horzsolás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Large">
             <English>Large Scrape</English>
             <German>Großer Kratzer</German>
             <Italian>Alta Scorticatura</Italian>
             <Russian>Большая ссадина</Russian>
-            <French>Large Eraflure</French>
+            <French>Grande éraflure</French>
             <Polish>Duże draśnięcie</Polish>
+            <Spanish>Arañazo severo</Spanish>
+            <Hungarian>Nagy horzsolás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion">
             <English>Avulsion</English>
@@ -2042,30 +2242,38 @@
             <Russian>Рваная рана</Russian>
             <French>Avulsion</French>
             <Polish>Rana płatowa</Polish>
+            <Spanish>Avulsión</Spanish>
+            <Hungarian>Leszakadás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Minor">
             <English>Minor Avulsion</English>
             <German>Kleine Avulsion</German>
             <Italian>Minima Avulsione</Italian>
             <Russian>Малая рваная рана</Russian>
-            <French>Avulsion Mineure</French>
+            <French>Petite avulsion</French>
             <Polish>Pomniejsza rana płatowa</Polish>
+            <Spanish>Avulsión menor</Spanish>
+            <Hungarian>Kis leszakadás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Medium">
             <English>Medium Avulsion</English>
             <German>Mittlere Avulsion</German>
             <Italian>Media Avulsione</Italian>
             <Russian>Средняя рваная рана</Russian>
-            <French>Avulsion Moyenne</French>
+            <French>Moyenne avulsion</French>
             <Polish>Średnia rana płatowa</Polish>
+            <Spanish>Avulsión media</Spanish>
+            <Hungarian>Közepes leszakadás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Large">
             <English>Large Avulsion</English>
             <German>Große Avulsion</German>
             <Italian>Alta Avulsione</Italian>
             <Russian>Большая рваная рана</Russian>
-            <French>Large Avulsion</French>
+            <French>Grande avulsion</French>
             <Polish>Duża rana płatowa</Polish>
+            <Spanish>Avulsión severa</Spanish>
+            <Hungarian>Nagy leszakadás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion">
             <English>Bruise</English>
@@ -2074,30 +2282,38 @@
             <Russian>Ушиб</Russian>
             <French>Hématome</French>
             <Polish>Stłuczenie</Polish>
+            <Spanish>Contusión</Spanish>
+            <Hungarian>Zúzódás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Minor">
             <English>Minor Bruise</English>
             <German>Kleine Prellung</German>
             <Italian>Minima Contusione</Italian>
             <Russian>Малый ушиб</Russian>
-            <French>Hématome Mineur</French>
+            <French>Petit hématome</French>
             <Polish>Pomniejsze stłuczenie</Polish>
+            <Spanish>Contusión menor</Spanish>
+            <Hungarian>Kis zúzódás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Medium">
             <English>Medium Bruise</English>
             <German>Mittlere Prellung</German>
             <Italian>Media Contusione</Italian>
             <Russian>Средний ушиб</Russian>
-            <French>Hématome Moyen</French>
+            <French>Hématome moyen</French>
             <Polish>Średnie stłuczenie</Polish>
+            <Spanish>Contusión media</Spanish>
+            <Hungarian>Közepes zúzódás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Large">
             <English>Large Bruise</English>
             <German>Große Prellung</German>
             <Italian>Alta Contusione</Italian>
             <Russian>Большой ушиб</Russian>
-            <French>Large Hématome</French>
+            <French>Hématome important</French>
             <Polish>Duże stłuczenie</Polish>
+            <Spanish>Contusión severa</Spanish>
+            <Hungarian>Nagy zúzódás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush">
             <English>Crushed tissue</English>
@@ -2106,30 +2322,38 @@
             <Russian>Компресионная травма</Russian>
             <French>Tissu écrasé</French>
             <Polish>Zgniecienie tkanek miękkich</Polish>
+            <Spanish>Tejido triturado</Spanish>
+            <Hungarian>Zúzott szövet</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Minor">
             <English>Minor crushed tissue</English>
             <German>Kleine Quetschverletzung</German>
             <Italian>Minimo Tessuto Schiacciato</Italian>
             <Russian>Малая компрессионная травма</Russian>
-            <French>Tissu écrasé Mineur</French>
+            <French>Tissu écrasé léger</French>
             <Polish>Pomniejsze zgniecienie tkanek miękkich</Polish>
+            <Spanish>Tejido triturado menor</Spanish>
+            <Hungarian>Kis zúzott szövet</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Medium">
             <English>Medium crushed tissue</English>
             <German>Mittlere Quetschverletzung</German>
             <Italian>Medio Tessuto Schiacciato</Italian>
             <Russian>Средняя компрессионная травма</Russian>
-            <French>Tissu écrasé Moyen</French>
+            <French>Tissu écrasé moyen</French>
             <Polish>Średnie zgniecienie tkanek miękkich</Polish>
+            <Spanish>Tejido triturado medio</Spanish>
+            <Hungarian>Közepes zúzott szövet</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Large">
             <English>Large crushed tissue</English>
             <German>Große Quetschverletzung</German>
             <Italian>Alto Tessuto Schiacciato</Italian>
             <Russian>Большая компрессионная травма</Russian>
-            <French>Tissu écrasé Large</French>
+            <French>Tissu écrasé large</French>
             <Polish>Duże zgniecienie tkanek miękkich</Polish>
+            <Spanish>Tejido triturado severo</Spanish>
+            <Hungarian>Nagy zúzött szövet</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut">
             <English>Cut</English>
@@ -2138,6 +2362,8 @@
             <Russian>Резаная рана</Russian>
             <French>Coupure</French>
             <Polish>Rana cięta</Polish>
+            <Spanish>Corte</Spanish>
+            <Hungarian>Vágás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Minor">
             <English>Small Cut</English>
@@ -2145,7 +2371,9 @@
             <Italian>Piccolo Taglio</Italian>
             <Russian>Малая резаная рана</Russian>
             <Polish>Pomniejsza rana cięta</Polish>
-            <French>Petite Coupure</French>
+            <Spanish>Corte menor</Spanish>
+            <Hungarian>Kis vágás</Hungarian>
+            <French>Petite coupure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Medium">
             <English>Medium Cut</English>
@@ -2153,7 +2381,9 @@
             <Italian>Medio Taglio</Italian>
             <Russian>Средняя резаная рана</Russian>
             <Polish>Średnia rana cięta</Polish>
-            <French>Moyenne Coupure</French>
+            <Spanish>Corte mediano</Spanish>
+            <Hungarian>Közepes vágás</Hungarian>
+            <French>Moyenne coupure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Large">
             <English>Large Cut</English>
@@ -2161,7 +2391,9 @@
             <Italian>Grande Taglio</Italian>
             <Russian>Большая резаная рана</Russian>
             <Polish>Duża rana cięta</Polish>
-            <French>Large Coupure</French>
+            <Spanish>Corte severo</Spanish>
+            <Hungarian>Nagy vágás</Hungarian>
+            <French>Large coupure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration">
             <English>Tear</English>
@@ -2170,6 +2402,8 @@
             <Russian>Рваная рана</Russian>
             <Polish>Rozerwanie skóry</Polish>
             <French>Déchirure</French>
+            <Spanish>Desgarro</Spanish>
+            <Hungarian>Szakadás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Minor">
             <English>Small Tear</English>
@@ -2178,6 +2412,8 @@
             <Russian>Малая рваная рана</Russian>
             <Polish>Pomniejsze rozerwanie skóry</Polish>
             <French>Petite Déchirure</French>
+            <Spanish>Desgarro menor</Spanish>
+            <Hungarian>Kis szakadás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Medium">
             <English>Medium Tear</English>
@@ -2185,7 +2421,9 @@
             <Italian>Medio Strappo</Italian>
             <Russian>Средняя рваная рана</Russian>
             <Polish>Średnie rozerwanie skóry</Polish>
-            <French>Moyenne Déchirure</French>
+            <Spanish>Desgarro medio</Spanish>
+            <Hungarian>Közepes szakadás</Hungarian>
+            <French>Moyenne déchirure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Large">
             <English>Large Tear</English>
@@ -2193,7 +2431,9 @@
             <Italian>Grande Strappo</Italian>
             <Russian>Большая рваная рана</Russian>
             <Polish>Duże rozerwanie skóry</Polish>
-            <French>Large Déchirure</French>
+            <Spanish>Desgarro severo</Spanish>
+            <Hungarian>Nagy szakadás</Hungarian>
+            <French>Large déchirure</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound">
             <English>Velocity Wound</English>
@@ -2202,6 +2442,8 @@
             <Russian>Огнестрельная рана</Russian>
             <Polish>Rana postrzałowa</Polish>
             <French>Blessure de vélocité</French>
+            <Spanish>Herida de bala</Spanish>
+            <Hungarian>Lőtt seb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Minor">
             <English>Smal Velocity Wound</English>
@@ -2209,7 +2451,9 @@
             <Italian>Lenta Velocità Ferita</Italian>
             <Russian>Малая огнестрельная рана</Russian>
             <Polish>Pomniejsza rana postrzałowa</Polish>
-            <French>Petite Bessure de vélocité</French>
+            <Spanish>Herida de bala menor</Spanish>
+            <Hungarian>Kis lőtt seb</Hungarian>
+            <French>Petite blessure de vélocité</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Medium">
             <English>Medium Velocity Wound</English>
@@ -2217,7 +2461,9 @@
             <Italian>Media Velocità Ferita</Italian>
             <Russian>Средняя огнестрельная рана</Russian>
             <Polish>Średnia rana postrzałowa</Polish>
-            <French>Moyenne Blessure de vélocité</French>
+            <Spanish>Herida de bala media</Spanish>
+            <Hungarian>Közepes lőtt seb</Hungarian>
+            <French>Moyenne blessure de vélocité</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Large">
             <English>Large Velocity Wound</English>
@@ -2225,7 +2471,9 @@
             <Italian>Alta Velocità Ferita</Italian>
             <Russian>Большая огнестрельная рана</Russian>
             <Polish>Duża rana postrzałowa</Polish>
-            <French>Large Blessure de vélocité</French>
+            <Spanish>Herida de bala severa</Spanish>
+            <Hungarian>Nagy lőtt seb</Hungarian>
+            <French>Large blessure de vélocité</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound">
             <English>Puncture Wound</English>
@@ -2234,6 +2482,8 @@
             <Russian>Колотая рана</Russian>
             <Polish>Rana kłuta</Polish>
             <French>Blessure de perforation</French>
+            <Spanish>Herida punzante</Spanish>
+            <Hungarian>Szúrt seb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Minor">
             <English>Minor Puncture Wound</English>
@@ -2241,7 +2491,9 @@
             <Italian>Piccola Puntura Ferita</Italian>
             <Russian>Малая колотая рана</Russian>
             <Polish>Pomniejsza rana kłuta</Polish>
-            <French>Blessure de perforation Mineure</French>
+            <Spanish>Herida punzante menor</Spanish>
+            <Hungarian>Kis szúrt seb</Hungarian>
+            <French>Légère blessure de perforation</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Medium">
             <English>Medium Puncture Wound</English>
@@ -2249,7 +2501,9 @@
             <Italian>Media Puntura Ferita</Italian>
             <Russian>Средняя колотая рана</Russian>
             <Polish>Średnia rana kłuta</Polish>
-            <French>Blessure de perforation Moyenne</French>
+            <Spanish>Herida punzante media</Spanish>
+            <Hungarian>Közepes szúrt seb</Hungarian>
+            <French>Moyenne blessure de perforation</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Large">
             <English>Large Puncture Wound</English>
@@ -2257,7 +2511,9 @@
             <Italian>Grande Puntura Ferita</Italian>
             <Russian>Большая колотая рана</Russian>
             <Polish>Duża rana kłuta</Polish>
-            <French>Large Blessure de perforation</French>
+            <Spanish>Herida punzante severa</Spanish>
+            <Hungarian>Nagy szúrt seb</Hungarian>
+            <French>Large blessure de perforation</French>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Femur">
             <English>Broken Femur</English>
@@ -2265,10 +2521,27 @@
             <Italian>Femore Rotto</Italian>
             <Russian>Перелом</Russian>
             <Polish>Zkłamana kość udowa</Polish>
-            <French>Femur Cassé</French>
+            <French>Fémur cassé</French>
+            <Spanish>Femur roto</Spanish>
+            <Hungarian>Törött combcsont</Hungarian>
+            <Czech>Zlomená kost stehenní</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_TreatmentAction">
-            <English>Treating...</English>
+            <English>Treating ...</English>
+            <German>Behandeln ...</German>
+            <Hungarian>Ellátás ...</Hungarian>
+            <Polish>Leczenie ...</Polish>
+            <French>Traitement ...</French>
+            <Russian>Лечение ...</Russian>
+            <Spanish>Tratando ...</Spanish>
+            <Czech>Léčím ...</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_RemovingTourniquet">
+            <English>Removing Tourniquet ...</English>
+            <German>Tourniquet entfernen ...</German>
+            <Polish>Zdejmowanie stazy ...</Polish>
+            <Spanish>Quitando torniquete ...</Spanish>
+            <French>Retire le tourniquet ...</French>
         </Key>
     </Package>
 </Project>
