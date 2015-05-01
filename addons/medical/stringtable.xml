@@ -1592,6 +1592,7 @@
             <English>Patient %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</English>
             <Italian>Paziente %1&lt;br/&gt;è %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Italian>
             <Russian>Пациент %1&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Russian>
+            <Spanish>El paciente %1&lt;br/&gt;está %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Spanish>
             <German>Patient %1&lt;br/&gt;ist %2.&lt;br/&gt;%3.&lt;br/&gt;%4</German>
             <French>Patient %1&lt;br/&gt;est %2.&lt;br/&gt;%3.&lt;br/&gt;</French>
             <Polish>Pacjent %1&lt;br/&gt;jest %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Polish>
@@ -1599,6 +1600,7 @@
         <Key ID="STR_ACE_Medical_diagnoseAlive">
             <English>alive</English>
             <Italian>Vivo</Italian>
+            <Spanish>vivo</Spanish>
             <Russian>жив</Russian>
             <German>lebendig</German>
             <French>vivant</French>
@@ -1608,6 +1610,7 @@
             <English>dead</English>
             <Italian>Morto</Italian>
             <Russian>мёртв</Russian>
+            <Spanish>muerto</Spanish>
             <German>tot</German>
             <French>mort</French>
             <Polish>martwy</Polish>
@@ -1615,6 +1618,7 @@
         <Key ID="STR_ACE_Medical_lostBlood">
             <English>He's lost some blood</English>
             <Italian>Ha perso molto sangue</Italian>
+            <Spanish>Ha perdido algo de sangre</Spanish>
             <Russian>Есть кровопотеря</Russian>
             <German>Er hat etwas Blut verloren</German>
             <French>Il à perdu du sang</French>
@@ -1626,6 +1630,7 @@
         <Key ID="STR_ACE_Medical_noBloodloss">
             <English>He hasn't lost blood</English>
             <Italian>Non ha perso sangue</Italian>
+            <Spanish>No ha perdido sangre</Spanish>
             <Russian>Нет кровопотери</Russian>
             <German>Er hat kein Blut verloren</German>
             <French>il n'a pas perdu de sang</French>
@@ -1634,6 +1639,7 @@
         <Key ID="STR_ACE_Medical_inPain">
             <English>He is in pain</English>
             <Italian>è affetto da dolore</Italian>
+            <Spanish>Tiene dolor</Spanish>
             <Russian>Испытывает боль</Russian>
             <German>Er hat Schmerzen</German>
             <French>il souffre</French>
@@ -1642,6 +1648,7 @@
         <Key ID="STR_ACE_Medical_noPain">
             <English>He is not in pain</English>
             <Italian>Non è affetto da dolore</Italian>
+            <Spanish>No tiene dolor</Spanish>
             <Russian>Не испытывает боли</Russian>
             <German>Er hat keine Schmerzen</German>
             <French>Il ne souffre pas</French>
@@ -1774,7 +1781,7 @@
         <Key ID="STR_ACE_Medical_Load">
             <English>Load Patient Into</English>
             <German>Patient Einladen</German>
-            <Spanish>Cargar el paciente en</Spanish>
+            <Spanish>Cargar al paciente en</Spanish>
             <Polish>Załaduj pacjenta</Polish>
             <Czech>Naložit pacianta do</Czech>
             <Russian>Погрузить пациента в</Russian>
@@ -1786,7 +1793,7 @@
         <Key ID="STR_ACE_Medical_Unload">
             <English>Unload Patient</English>
             <German>Patient Ausladen</German>
-            <Spanish>Descargar el paciente</Spanish>
+            <Spanish>Descargar al paciente</Spanish>
             <Polish>Wyładuj pacjenta</Polish>
             <Czech>Vyložit pacienta</Czech>
             <Russian>Выгрузить пациента</Russian>
@@ -1797,7 +1804,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_UnloadPatient">
             <English>Unload patient</English>
-            <Spanish>Descargar el paciente</Spanish>
+            <Spanish>Descargar al paciente</Spanish>
             <Russian>Выгрузить пациента</Russian>
             <German>Patient Ausladen</German>
             <Polish>Wyładuj pacjenta</Polish>
@@ -1808,7 +1815,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_LoadPatient">
             <English>Load patient</English>
-            <Spanish>Cargar el paciente en</Spanish>
+            <Spanish>Cargar al paciente en</Spanish>
             <Russian>Погрузить пациента</Russian>
             <German>Patient Einladen</German>
             <Polish>Załaduj pacjenta</Polish>
@@ -1863,8 +1870,8 @@
         </Key>
         <Key ID="STR_ACE_Medical_Activity_gaveIV">
             <English>%1 has given an IV</English>
-            <Spanish>%1 has puesto una IV</Spanish>
             <Russian>%1 провёл переливание</Russian>
+            <Spanish>%1 ha puesto una IV</Spanish>
             <German>%1 hat eine Infusion verabreicht</German>
             <Polish>%1 podał IV</Polish>
             <French>%1 a administré une IV</French>

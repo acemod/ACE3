@@ -18,7 +18,7 @@
             <Polish>Anemomentr skrzydełkowy Kestrel 4500</Polish>
             <Russian>Карманная метеостанция Kestrel 4500NV</Russian>
             <French>Station météo portable Kestrel 4500</French>
-            <Spanish>Kestrel 4500 Pocket Weather Tracker</Spanish>
+            <Spanish>Estación meteorológica Kestrel 4500 </Spanish>
             <German>Kestrel 4500 Taschenwettermessgerät</German>
             <Italian>Kestrel 4500 Indicatore Meteorologico Tascabile</Italian>
             <Portuguese>Kestrel 4500 Medidor Balístico Ativo</Portuguese>
@@ -49,7 +49,7 @@
             <Russian>Убрать Kestrel 4500NV</Russian>
             <French>Cacher Kestrel 4500</French>
             <Italian>Nascondi Kestrel 4500</Italian>
-            <Spanish>Esconder Kestrel 4500</Spanish>
+            <Spanish>Ocultar Kestrel 4500</Spanish>
             <German>Kestrel 4500 wegstecken</German>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_KestrelDialogKey">
