@@ -65,6 +65,7 @@
             <Polish>Punkt zbiórki Zachodu (Baza)</Polish>
             <French>Point de ralliement OUEST (Base)</French>
             <Italian>Rallypoint West (Base)</Italian>
+            <Hungarian>Gyülekezőpont, Nyugat (Bázis)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEastBase">
             <English>Rallypoint East (Base)</English>
@@ -74,6 +75,7 @@
             <Polish>Punkt zbiórki Wschodu (Baza)</Polish>
             <French>Point de ralliement EST (Base)</French>
             <Italian>Rallypoint East (Base)</Italian>
+            <Hungarian>Gyülekezőpont, Kelet (Bázis)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependentBase">
             <English>Rallypoint Independent (Base)</English>
@@ -83,6 +85,7 @@
             <Polish>Punkt zbiórki Ruchu oporu (Baza)</Polish>
             <French>Point de ralliement Indépendant (Base)</French>
             <Italian>Rallypoint Independent (Base)</Italian>
+            <Hungarian>Gyülekezőpont, Független (Bázis)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWest">
             <English>Rallypoint West</English>
@@ -92,6 +95,7 @@
             <Polish>Punkt zbiórki Zachodu</Polish>
             <French>Point de ralliement OUEST</French>
             <Italian>Rallypoint West</Italian>
+            <Hungarian>Gyülekezőpont, Nyugat</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEast">
             <English>Rallypoint East</English>
@@ -101,6 +105,7 @@
             <Polish>Punkt zbiórki Wschodu</Polish>
             <French>Point de ralliement EST</French>
             <Italian>Rallypoint East</Italian>
+            <Hungarian>Gyülekezőpont, Kelet</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependent">
             <English>Rallypoint Independent</English>
@@ -110,6 +115,7 @@
             <Polish>Punkt zbiórki Ruchu oporu</Polish>
             <French>Point de ralliement Indépendant</French>
             <Italian>Rallypoint Independent</Italian>
+            <Hungarian>Gyülekezőpont, Független</Hungarian>
         </Key>
     </Package>
 </Project>

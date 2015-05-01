@@ -73,20 +73,20 @@ class CfgAmmo {
         GVAR(gurney_k) = 1/2;
     };
     
-    class G_40mm_HEDP: GrenadeBase {
-        // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M433
-        GVAR(classes)[] = {"ACE_frag_tiny_HD"};
-        GVAR(metal) = 200;
-        GVAR(charge) = 45;
-        GVAR(gurney_c) = 2830;
-        GVAR(gurney_k) = 1/2;
-    };
     class G_40mm_HE: GrenadeBase {
         // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M441
         GVAR(classes)[] = {"ACE_frag_tiny_HD"};
         GVAR(metal) = 200;
         GVAR(charge) = 32;
         GVAR(gurney_c) = 2700;
+        GVAR(gurney_k) = 1/2;
+    };
+    class G_40mm_HEDP: G_40mm_HE {
+        // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M433
+        GVAR(classes)[] = {"ACE_frag_tiny_HD"};
+        GVAR(metal) = 200;
+        GVAR(charge) = 45;
+        GVAR(gurney_c) = 2830;
         GVAR(gurney_k) = 1/2;
     };
     
@@ -105,7 +105,15 @@ class CfgAmmo {
     // curator ammo entries
     class ShellBase;
     class Sh_125mm_HEAT;
-    class Sh_82mm_AMOS : ShellBase {
+    class Sh_155mm_AMOS: ShellBase {
+        // Source: http://www.globalsecurity.org/military/systems/munitions/m795.htm
+        GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
+        GVAR(metal) = 36000;
+        GVAR(charge) = 9979;
+        GVAR(gurney_c) = 2440;
+        GVAR(gurney_k) = 1/2;
+    };
+    class Sh_82mm_AMOS : Sh_155mm_AMOS {
         // Source: http://www.arsenal-bg.com/defense_police/mortar_bombs_82mm.htm
         GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
         GVAR(metal) = 3200;
@@ -138,14 +146,6 @@ class CfgAmmo {
         GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
         GVAR(metal) = 16000;
         GVAR(charge) = 3200;
-        GVAR(gurney_c) = 2440;
-        GVAR(gurney_k) = 1/2;
-    };
-    class Sh_155mm_AMOS: ShellBase {
-        // Source: http://www.globalsecurity.org/military/systems/munitions/m795.htm
-        GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
-        GVAR(metal) = 36000;
-        GVAR(charge) = 9979;
         GVAR(gurney_c) = 2440;
         GVAR(gurney_k) = 1/2;
     };
