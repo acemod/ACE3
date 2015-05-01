@@ -7,7 +7,7 @@ if(GVAR(enabled) < 1 || {!local _projectile} ) exitWith { false };
 
 if( !isPlayer _shooter && { GVAR(enabled) < 2 } ) exitWith { false };
 
-private["_config", "_enabled", "_target", "_seekerType", "_attackProfile"];
+private["_config", "_configs", "_enabled", "_target", "_seekerType", "_attackProfile"];
 private["_args", "_canUseLock", "_guidingUnit", "_launchPos", "_lockMode", "_targetPos", "_vanillaTarget"];
 
 PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
@@ -15,7 +15,9 @@ PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 // Bail on not missile
 if(! (_ammo isKindOf "MissileBase") ) exitWith { false }; 
 
-_config = configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON);
+_configs = configProperties [configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON), "true", false];
+if( (count _configs) < 1) exitWith {};
+_config = (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON));
 _enabled = getNumber ( _config >> "enabled");
 
 // Bail if guidance is not enabled
