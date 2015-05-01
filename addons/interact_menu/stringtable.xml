@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -22,6 +22,7 @@
             <Russian>Показывать курсор (взаимодействие)</Russian>
             <German>Immer den Cursor für Fremd-Interaktionen anzeigen</German>
             <Hungarian>Mindig legyen a cselekvés kurzorja látható</Hungarian>
+            <Czech>Stále ukazovat kursor myši při interakci</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
@@ -32,6 +33,7 @@
             <Polish>Wyświetlaj menu interakcji jako listę</Polish>
             <German>Interaktionsmenü in Listen anzeigen</German>
             <Hungarian>Cselekvő menük listaként való megjelenítése</Hungarian>
+            <Czech>Ukázat interakční menu jako list</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_InteractKey">
             <English>Interact Key</English>
@@ -143,6 +145,7 @@
             <Polish>Wykonuj akcje po puszczeniu klawisza menu</Polish>
             <French>Action au relachement de touche</French>
             <Russian>Выполнять действие при отпускании кнопки взаимодействия</Russian>
+            <Czech>Provést akci při pustění klávesy menu</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_textSize">
             <English>Interaction Text Size</English>

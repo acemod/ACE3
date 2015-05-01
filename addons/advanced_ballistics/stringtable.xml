@@ -10,6 +10,7 @@
             <Spanish>Mostrar información del viento</Spanish>
             <German>Windinformationen anzeigen</German>
             <Hungarian>Széladatok mutatása</Hungarian>
+            <Czech>Ukázat informace o větru</Czech>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_ProtractorKey">
             <English>Show Protractor</English>
@@ -20,6 +21,7 @@
             <Spanish>Mostrar transportador</Spanish>
             <German>Winkelmesser anzeigen</German>
             <Hungarian>Szögmérő mutatása</Hungarian>
+            <Czech>Ukázat úhloměr</Czech>
         </Key>
     </Package>
 </Project>
