@@ -1541,6 +1541,10 @@
             <Hungarian>%1 ellenőrizte a szívverés-számot: %2</Hungarian>
             <Czech>%1 zkontroloval srdeční tep: %2</Czech>
         </Key>
+        <Key ID="STR_ACE_Medical_Check_Pulse_None">
+            <English>None</English>
+            <Polish>Brak</Polish>
+        </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Weak">
             <English>Weak</English>
             <German>Schwach</German>
