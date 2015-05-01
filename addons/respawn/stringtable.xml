@@ -28,10 +28,12 @@
         <Key ID="STR_ACE_Respawn_TeleportToBase">
             <English>Teleport to Base</English>
             <German>Zur Basis teleportieren</German>
+            <Spanish>Treletransportar a Base</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
             <English>Teleport to Rallypoint</English>
             <German>Zum Rallypoint teleportieren</German>
+            <Spanish>Teletransportar a Punto de reunión</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToBase">
             <English>Teleported to Base</English>
