@@ -568,34 +568,42 @@
         <Key ID="STR_ACE_Interaction_AssignTeamRed">
             <English>Assign Red</English>
             <Spanish>Asignar a rojo</Spanish>
+            <Polish>Przydziel do czerwonych</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamGreen">
             <English>Assign Green</English>
             <Spanish>Asignar a verde</Spanish>
+            <Polish>Przydziel do zielonych</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamBlue">
             <English>Assign Blue</English>
             <Spanish>Asignar a azul</Spanish>
+            <Polish>Przydziel do niebieskich</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamYellow">
             <English>Assign Yellow</English>
             <Spanish>Asignar a amarillo</Spanish>
+            <Polish>Przydziel do żółtych</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamRed">
             <English>Join Red</English>
             <Spanish>Unirse a rojo</Spanish>
+            <Polish>Dołącz do czerwonych</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamGreen">
             <English>Join Green</English>
             <Spanish>Unirse a verde</Spanish>
+            <Polish>Dołącz do zielonych</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamBlue">
             <English>Join Blue</English>
             <Spanish>Unirse a azul</Spanish>
+            <Polish>Dołącz do niebieskich</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamYellow">
             <English>Join Yellow</English>
             <Spanish>Unirse a amarillo</Spanish>
+            <Polish>Dołącz do żółtych</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
