@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_main"};
-        author[] = {""};
+        author[] = {"Bohemia Interactive"};
         authorUrl = "http://ace3mod.com";
         VERSION_CONFIG;
     };
