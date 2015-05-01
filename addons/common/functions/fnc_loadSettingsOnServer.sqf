@@ -15,7 +15,7 @@
 
 GVAR(settings) = [];
 
-private " _parseConfigForSettings";
+private "_parseConfigForSettings";
 
 _parseConfigForSettings = {
     private ["_config", "_countOptions", "_optionEntry", "_index"];
