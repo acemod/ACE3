@@ -4,14 +4,17 @@
         <Key ID="STR_ACE_laser_laserCode">
             <English>Laser Code</English>
             <Polish>Kod lasera</Polish>
+            <French>Code laser</French>
         </Key>
         <Key ID="STR_ACE_laser_laserCodeUp">
             <English>Laser - Cycle Code Up</English>
             <Polish>Laser - Następny kod</Polish>
+            <French>Laser - Code +</French>
         </Key>
         <Key ID="STR_ACE_laser_laserCodeDown">
             <English>Laser - Cycle Code Down</English>
             <Polish>Laser - Poprzedni kod</Polish>
+            <French>Laser - Code -</French>
         </Key>
     </Package>
 </Project>
