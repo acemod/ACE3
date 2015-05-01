@@ -29,6 +29,10 @@ _seekerType = (vehicle _shooter) getVariable [QGVAR(seekerType), nil];
 _attackProfile = (vehicle _shooter) getVariable [QGVAR(attackProfile), nil];
 _lockMode  = (vehicle _shooter) getVariable [QGVAR(lockMode), nil];
 
+// @TODO: make this vehicle shooter, but we need to differentiate where its set in ace_laser
+_laserCode = _shooter getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
+_laserInfo = [_laserCode, ACE_DEFAULT_LASER_WAVELENGTH, ACE_DEFAULT_LASER_WAVELENGTH];
+
 _launchPos = getPosASL (vehicle _shooter);
 
 TRACE_3("Begin guidance", _target, _seekerType, _attackProfile);
@@ -69,7 +73,8 @@ _args = [_this,
                 [_target, _targetPos, _launchPos], 
                 _seekerType, 
                 _attackProfile,
-                _lockMode
+                _lockMode,
+                _laserInfo
             ], 
             [
                 getNumber ( _config >> "minDeflection" ),
