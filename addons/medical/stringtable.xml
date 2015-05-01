@@ -2434,6 +2434,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_RemovingTourniquet">
             <English>Removing Tourinquet ...</English>
+            <Polish>Zdejmowanie stazy ...</Polish>
         </Key>
     </Package>
 </Project>
