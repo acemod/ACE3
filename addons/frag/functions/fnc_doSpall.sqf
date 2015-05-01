@@ -17,9 +17,9 @@ _object = _hpData select 0;
 _object removeEventHandler ["hitPart", _initialData select 0];
 _foundObjects = _initialData select 7;
 _index = _foundObjects find _object;
-// if(_index != -1) then {
-    // _foundObjects set[_index, nil];
-// };
+if(_index != -1) then {
+    _foundObjects set[_index, nil];
+};
 
 _roundType = (_initialData select 2);
 _round = (_initialData select 3);
