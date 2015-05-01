@@ -82,6 +82,11 @@ if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
     _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "timeToLive");
     _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "simulationStep");
 
+    _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> (_vehicle currentWeaponTurret _turret) >> "initSpeed");
+    if (_initSpeedCoef < 0) then {
+        _initSpeed = _initSpeed * -_initSpeedCoef;
+    };
+    
     if (_simulationStep != 0) then {
         private ["_posX", "_velocityX", "_velocityY", "_timeToTarget"];
 
@@ -148,7 +153,12 @@ _FCSElevation = [];
         _maxElev     = getNumber (_turretConfig >> "maxElev");
         _initSpeed   = getNumber (configFile >> "CfgMagazines" >> _x >> "initSpeed");
         _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
-
+        
+        _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> (_vehicle currentWeaponTurret _turret) >> "initSpeed");
+        if (_initSpeedCoef < 0) then {
+            _initSpeed = _initSpeed * -_initSpeedCoef;
+        };
+        
         _offset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, _angleTarget, _distance];
         _offset = parseNumber _offset;
 
