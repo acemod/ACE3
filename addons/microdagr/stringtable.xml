@@ -251,6 +251,7 @@
             <Portuguese>Excluir</Portuguese>
             <Russian>Удалить</Russian>
             <Spanish>Borrar</Spanish>
+            <Hungarian>Törlés</Hungarian>
         </Key>
         <Key ID="STR_ACE_microdagr_toggleUnit">
             <English>Toggle MicroDAGR Display Mode</English>

@@ -235,6 +235,7 @@
             <Russian>Размер интерфейса меню настройки</Russian>
             <Spanish>Opción de escalado del menú IU</Spanish>
             <German>UI Skalierung</German>
+            <Hungarian>Beállításmenü kezelőfelületének skálázása</Hungarian>
         </Key>
     </Package>
 </Project>
