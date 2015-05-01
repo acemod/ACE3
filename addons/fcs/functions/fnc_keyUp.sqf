@@ -87,6 +87,9 @@ if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
     if (_initSpeedCoef < 0) then {
         _initSpeed = _initSpeed * -_initSpeedCoef;
     };
+    if (_initSpeedCoef > 0) then {
+        _initSpeed = _initSpeedCoef;
+    };
     
     if (_simulationStep != 0) then {
         private ["_posX", "_velocityX", "_velocityY", "_timeToTarget"];
@@ -170,6 +173,9 @@ _FCSElevation = [];
                 _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
                 if (_initSpeedCoef < 0) then {
                     _initSpeed = _initSpeed * -_initSpeedCoef;
+                };
+                if (_initSpeedCoef > 0) then {
+                    _initSpeed = _initSpeedCoef;
                 };
             };
         } forEach _weapons;
