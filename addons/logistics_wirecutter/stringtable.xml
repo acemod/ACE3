@@ -11,6 +11,7 @@
             <Polish>Nożyce do cięcia drutu</Polish>
             <Hungarian>Drótvágó</Hungarian>
             <Italian>Pinze da Taglio</Italian>
+            <Portuguese>Cortador de Arame</Portuguese>
         </Key>
         <Key ID="STR_ACE_logistics_wirecutter_wirecutterDescription">
             <English>Wirecutter</English>
@@ -22,6 +23,7 @@
             <French>Pince coupante</French>
             <Hungarian>Drótok, huzalok, és kábelek vágására alkalmas olló.</Hungarian>
             <Italian>Pinze da Taglio</Italian>
+            <Portuguese>Cortador de Arame</Portuguese>
         </Key>
         <Key ID="STR_ACE_logistics_wirecutter_CutFence">
             <English>Cut Fence</English>

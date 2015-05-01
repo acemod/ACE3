@@ -29,7 +29,7 @@ _tourniquets set[_part, _applyingTo];
 _target setvariable [QGVAR(tourniquets), _tourniquets, true];
 
 [{
-    private ["_args","_target","_applyingTo","_part", "_tourniquets"];
+    private ["_args","_target","_applyingTo","_part", "_tourniquets", "_time"];
     _args = _this select 0;
     _target = _args select 0;
     _applyingTo = _args select 1;

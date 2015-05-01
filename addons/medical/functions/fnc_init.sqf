@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_allUsedMedication", "_logs", "_forceNew"];
+private ["_unit", "_allUsedMedication", "_logs"];
 
 _unit = _this select 0;
 
@@ -60,7 +60,7 @@ _unit setvariable [QGVAR(airwayCollapsed), false];
 _unit setvariable [QGVAR(addedToUnitLoop), false, true];
 _unit setvariable [QGVAR(inCardiacArrest), false, true];
 _unit setVariable ["ACE_isUnconscious", false, true];
-_unit setvariable [QGVAR(hasLostBlood), false, true];
+_unit setvariable [QGVAR(hasLostBlood), 0, true];
 _unit setvariable [QGVAR(isBleeding), false, true];
 _unit setvariable [QGVAR(hasPain), false, true];
 _unit setvariable [QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives), true];

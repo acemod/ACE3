@@ -176,8 +176,10 @@
             <Russian>Не удалось присоединить</Russian>
             <Spanish>Error al acoplar</Spanish>
             <Czech>Připnutí selhalo</Czech>
+            <Portuguese>Erro ao anexar</Portuguese>
             <Polish>Przyczepianie nie powiodło się</Polish>
             <Hungarian>Hozzácsatolás sikertelen</Hungarian>
+            <Italian>Impossibile Attaccare</Italian>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Attached">
             <English>%1&lt;br/&gt;Attached</English>

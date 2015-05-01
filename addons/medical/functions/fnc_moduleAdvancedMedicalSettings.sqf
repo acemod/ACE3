@@ -22,12 +22,11 @@ _activated = _this select 2;
 
 if !(_activated) exitWith {};
 
-[_logic, QGVAR(medicSetting), "medicSetting"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(maxReviveTime), "maxReviveTime"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(amountOfReviveLives), "amountOfReviveLives"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(enableOverdosing), "enableOverdosing"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(allowLitterCreation), "allowLitterCreation"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(litterCleanUpDelay), "litterCleanUpDelay"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(enableFor), "enableFor"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(enableAdvancedWounds), "enableAdvancedWounds"] call EFUNC(common,readSettingFromModule);
+// TODO disabled until implemented
+// [_logic, QGVAR(enableAirway), "enableAirway"] call EFUNC(common,readSettingFromModule);
+// [_logic, QGVAR(enableFractures), "enableFractures"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(medicSetting_PAK), "medicSetting_PAK"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(medicSetting_SurgicalKit), "medicSetting_SurgicalKit"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(consumeItem_PAK), "consumeItem_PAK"] call EFUNC(common,readSettingFromModule);

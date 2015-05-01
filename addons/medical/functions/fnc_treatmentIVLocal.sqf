@@ -15,7 +15,7 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_ivItem", "_config", "_volumeAdded", "_typeOf", "_varName"];
+private ["_target", "_ivItem", "_config", "_volumeAdded", "_typeOf", "_varName", "_bloodVolume"];
 _target = _this select 0;
 _ivItem = _this select 1;
 
@@ -27,8 +27,8 @@ _config = (configFile >> "ACE_Medical_Advanced" >> "Treatment" >> "IV");
 _volumeAdded = getNumber (_config >> "volume");
 _typeOf = getText (_config >> "type");
 
-if (isClass (_config >> _className)) then {
-    _config = (_config >> _className);
+if (isClass (_config >> _ivItem)) then {
+    _config = (_config >> _ivItem);
     if (isNumber (_config >> "volume")) then { _volumeAdded = getNumber (_config >> "volume");};
     if (isText (_config >> "type")) then { _typeOf = getText (_config >> "type"); };
 };

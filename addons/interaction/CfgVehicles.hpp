@@ -166,7 +166,7 @@ class CfgVehicles {
       };
       class ACE_Weapon {
         displayName = "$STR_ACE_Interaction_Weapon";
-        selection = "weapon";
+        position = QUOTE(call FUNC(getWeaponPos));
         distance = 1.50;
         condition = "";
         statement = "";
@@ -398,6 +398,12 @@ class CfgVehicles {
         selection = "";
         distance = 10;
         condition = "true";
+        class ACE_Passengers {
+          displayName = "$STR_ACE_Interaction_Passengers";
+          condition = "true";
+          statement = "";
+          insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+        };
       };
     };
     class ACE_SelfActions {
@@ -416,6 +422,12 @@ class CfgVehicles {
         selection = "";
         distance = 10;
         condition = "true";
+        class ACE_Passengers {
+          displayName = "$STR_ACE_Interaction_Passengers";
+          condition = "true";
+          statement = "";
+          insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+        };
       };
     };
     class ACE_SelfActions {
@@ -436,6 +448,12 @@ class CfgVehicles {
         selection = "";
         distance = 10;
         condition = "true";
+        class ACE_Passengers {
+          displayName = "$STR_ACE_Interaction_Passengers";
+          condition = "true";
+          statement = "";
+          insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+        };
       };
     };
     class ACE_SelfActions {
@@ -454,6 +472,12 @@ class CfgVehicles {
         selection = "";
         distance = 10;
         condition = "true";
+        class ACE_Passengers {
+          displayName = "$STR_ACE_Interaction_Passengers";
+          condition = "true";
+          statement = "";
+          insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+        };
       };
     };
     class ACE_SelfActions {
@@ -483,6 +507,12 @@ class CfgVehicles {
           showDisabled = 0;
           priority = -1;
         };
+        class ACE_Passengers {
+          displayName = "$STR_ACE_Interaction_Passengers";
+          condition = "true";
+          statement = "";
+          insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+        };
       };
     };
     class ACE_SelfActions {
@@ -502,6 +532,12 @@ class CfgVehicles {
         selection = "gunnerview";
         distance = 2;
         condition = "true";
+        class ACE_Passengers {
+          displayName = "$STR_ACE_Interaction_Passengers";
+          condition = "true";
+          statement = "";
+          insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+        };
       };
     };
     class ACE_SelfActions {

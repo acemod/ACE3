@@ -1,5 +1,5 @@
 /*
- * ace_breakLine.cpp
+ * ace_break_line.cpp
  *
  * Takes a string and insert as many line breaks as needed so it fits a given width
  *

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Captives">
         <Key ID="STR_ACE_Captives_SetCaptive">
@@ -119,6 +119,7 @@
             <Polish>Ekwipunek rewidowanej osoby</Polish>
             <Russian>Инвентарь обысканного человека</Russian>
             <Portuguese>Inventário da pessoa revistada</Portuguese>
+            <Italian>Inventario delle persone perquisite</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_FriskPerson">
             <English>Frisk person</English>
@@ -137,6 +138,7 @@
             <French>Se rendre</French>
             <German>Kapitulieren</German>
             <Spanish>Rendirse</Spanish>
+            <Portuguese>Render-se</Portuguese>
             <Czech>Vzdát se</Czech>
             <Polish>Poddaj się</Polish>
             <Russian>Сдаться</Russian>
@@ -148,6 +150,7 @@
             <French>Annuler la capitulation</French>
             <German>Den Kampf erneut aufnehmen</German>
             <Spanish>Dejar de rendirse</Spanish>
+            <Portuguese>Parar de se render</Portuguese>
             <Czech>Přestat se vzdávat</Czech>
             <Polish>Podejmij walkę ponownie</Polish>
             <Russian>Прекратить сдачу в плен</Russian>
@@ -181,6 +184,7 @@
             <French>Rien sous le curseur</French>
             <German>Es wurde nichts ausgewählt</German>
             <Spanish>Nada bajo el ratón</Spanish>
+            <Portuguese>Nada debaixo do mouse</Portuguese>
             <Czech>Nic není vybráno</Czech>
             <Polish>Nie ma nic pod kursorem</Polish>
             <Russian>Ничего не выделено</Russian>
