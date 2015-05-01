@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Reload">
         <Key ID="STR_ACE_reload_SettingDisplayTextName">
@@ -63,7 +63,7 @@
         </Key>
         <Key ID="STR_ACE_Reload_LinkingBelt">
             <English>Linking belt...</English>
-            <French>Attache d'une bande</French>
+            <French>Attache d'une bande...</French>
             <Spanish>Enlazando cinta...</Spanish>
             <Russian>Сцепка лент ...</Russian>
             <Czech>Spojuji pás...</Czech>
