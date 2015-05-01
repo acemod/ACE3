@@ -31,7 +31,7 @@ if ((vehicle _unit) != _unit) then {
     _interpolateArray = getArray (_unitAnimationCfg >> "interpolateTo");
     for "_index" from 0 to (count _interpolateArray - 1) step 2 do {
         _indexAnimation = _interpolateArray select _index;
-        //No guarentee that first animation will be right so scan for the first scan for the first "terminal" animation
+        //No guarentee that first animation will be right so scan for the first "terminal" animation
         //E.G.: interpolateTo[] = {"passenger_apc_generic04still",1,"KIA_passenger_apc_generic04",1};
 
         if ((getNumber ((configFile >> "CfgMovesMaleSdr" >> "States" >> _indexAnimation) >> "terminal")) == 1) exitWith {

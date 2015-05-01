@@ -17,7 +17,7 @@
 
 #define DEFAULT_DELAY   (round(random(10)+5))
 
-private ["_unit", "_set", "_animState", "_originalPos", "_startingTime","_minWaitingTime"];
+private ["_unit", "_set", "_originalPos", "_startingTime","_minWaitingTime"];
 _unit = _this select 0;
 _set = if (count _this > 1) then {_this select 1} else {true};
 _minWaitingTime = if (count _this > 2) then {_this select 2} else {DEFAULT_DELAY};
@@ -67,7 +67,11 @@ if (vehicle _unit == _unit) then {
 };
 
 // We are storing the current animation, so we can use it later on when waking the unit up inside a vehicle
-_animState = animationState _unit;
+if (vehicle _unit != _unit) then {
+    _unit setVariable [QGVAR(vehicleAwakeAnim), [(vehicle _unit), (animationState _unit)]];
+};
+
+//Save current stance:
 _originalPos = unitPos _unit;
 
 _unit setUnitPos "DOWN";
@@ -84,7 +88,7 @@ if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
 
 _startingTime = time;
 
-[DFUNC(unconsciousPFH), 0.1, [_unit,_animState, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
+[DFUNC(unconsciousPFH), 0.1, [_unit, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
 
 // unconscious can't talk
 [_unit, "isUnconscious"] call EFUNC(common,muteUnit);
