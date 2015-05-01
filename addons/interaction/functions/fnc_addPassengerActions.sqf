@@ -16,7 +16,7 @@
 
 EXPLODE_3_PVT(_this,_vehicle,_player,_parameters);
 
-private ["_unit","_actions"];
+private ["_unit", "_actions", "_actionTrees", "_varName"];
 _unit = _parameters select 0;
 
 _varName = format [QEGVAR(interact_menu,Act_%1), typeOf _unit];
