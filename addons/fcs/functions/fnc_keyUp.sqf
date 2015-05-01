@@ -31,9 +31,9 @@ if (_distance == 0) then {
     ] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision
 };
 
-private ["_weaponDirection", "_angleTarget"];
-
-_weaponDirection = _vehicle weaponDirection (_vehicle currentWeaponTurret _turret); // @todo doesn't work for sub turrets
+private ["_weapon", "_weaponDirection", "_angleTarget"];
+_weapon = _vehicle currentWeaponTurret _turret;
+_weaponDirection = _vehicle weaponDirection _weapon; // @todo doesn't work for sub turrets
 
 if (_turret isEqualTo ([_vehicle] call EFUNC(common,getTurretCommander))) then {
     _weaponDirection = eyeDirection _vehicle;
@@ -82,7 +82,7 @@ if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
     _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "timeToLive");
     _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "simulationStep");
 
-    _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> (_vehicle currentWeaponTurret _turret) >> "initSpeed");
+    _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
     if (_initSpeedCoef < 0) then {
         _initSpeed = _initSpeed * -_initSpeedCoef;
     };
@@ -154,7 +154,7 @@ _FCSElevation = [];
         _initSpeed   = getNumber (configFile >> "CfgMagazines" >> _x >> "initSpeed");
         _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
         
-        _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> (_vehicle currentWeaponTurret _turret) >> "initSpeed");
+        _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
         if (_initSpeedCoef < 0) then {
             _initSpeed = _initSpeed * -_initSpeedCoef;
         };
