@@ -92,5 +92,5 @@ class ACE_Settings {
 };
 
 class ACE_Extensions {
-    extensions[] += {"ace_breakLine"};
+    extensions[] += {"ace_break_line"};
 };

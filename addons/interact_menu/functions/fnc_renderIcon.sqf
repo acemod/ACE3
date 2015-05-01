@@ -33,7 +33,7 @@ if(_icon == "") then {
 _text = if (GVAR(UseListMenu)) then {
     format ["<img image='%1' align='left'/><t %2>%3</t>", _icon, _textSettings, _text]
 } else {
-    format ["<img image='%1' align='center'/><br/><t %2 align='center'>%3</t>", _icon, _textSettings, "ace_breakLine" callExtension _text];
+    format ["<img image='%1' align='center'/><br/><t %2 align='center'>%3</t>", _icon, _textSettings, "ace_break_line" callExtension _text];
 };
 
 //_ctrl ctrlSetStructuredText parseText _text;

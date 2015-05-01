@@ -25,6 +25,14 @@
             <Italian>Rallypoint dispiegato</Italian>
             <Portuguese>Rallypoints posicionado</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Respawn_TeleportToBase">
+            <English>Teleport to Base</English>
+            <German>Zur Basis teleportieren</German>
+        </Key>
+        <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
+            <English>Teleport to Rallypoint</English>
+            <German>Zum Rallypoint teleportieren</German>
+        </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToBase">
             <English>Teleported to Base</English>
             <French>Téléporté à la base</French>
