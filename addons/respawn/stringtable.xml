@@ -32,6 +32,7 @@
             <Spanish>Treletransportar a Base</Spanish>
             <Polish>Teleport do bazy</Polish>
             <Russian>Телепортироваться на базу</Russian>
+            <French>Téléportation à la base</French>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
             <English>Teleport to Rallypoint</English>
@@ -40,6 +41,7 @@
             <German>Zum Sammelpunkt teleportieren</German>
             <Polish>Teleport do punktu zbiórki</Polish>
             <Russian>Телепортироваться на точку сбора</Russian>
+            <French>Téléporation au point de ralliement</French>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToBase">
             <English>Teleported to Base</English>
