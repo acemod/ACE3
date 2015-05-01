@@ -68,6 +68,21 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_ColorShadowMin";
     };
+    class GVAR(textSize) {
+        value = 2;
+        typeName = "SCALAR";
+        isClientSettable = 1;
+        displayName = "$STR_ACE_Interact_textSize";
+        values[] = {"$str_very_small", "$str_small", "$str_medium", "$str_large", "$str_very_large"};
+    };    
+    class GVAR(shadowSetting) {
+        value = 2;
+        typeName = "SCALAR";
+        isClientSettable = 1;
+        displayName = "$STR_ACE_Interact_shadowSetting";
+        description = "$STR_ACE_Interact_shadowSettingDescription";
+        values[] = {"$STR_A3_OPTIONS_DISABLED", "$STR_A3_OPTIONS_ENABLED", "$STR_ACE_Interact_shadowOutline"};
+    };
     class GVAR(actionOnKeyRelease) {
         value = 1;
         typeName = "BOOL";
@@ -77,5 +92,5 @@ class ACE_Settings {
 };
 
 class ACE_Extensions {
-    extensions[] += {"ace_breakLine"};
+    extensions[] += {"ace_break_line"};
 };

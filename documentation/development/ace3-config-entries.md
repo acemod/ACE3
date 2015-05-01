@@ -54,6 +54,9 @@ ace_detonator
 ace_barrelTwist
 ace_twistDirection
 ace_barrelLength
+ace_laserpointer
+ace_nextmodeclass
+ace_modedescription
 ```
 
 

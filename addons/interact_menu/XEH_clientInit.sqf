@@ -5,11 +5,11 @@ if (!hasInterface) exitWith {};
 
 GVAR(ParsedTextCached) = [];
 
-//Setup text/shadow color matrix
+//Setup text/shadow/size/color settings matrix
 [] call FUNC(setupTextColors);
 ["SettingChanged", {
     PARAMS_1(_name);
-    if ((_name == QGVAR(colorTextMax)) || {_name == QGVAR(colorTextMin)} || {_name == QGVAR(colorShadowMax)} || {_name == QGVAR(colorShadowMin)}) then {
+    if (_name in [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) then {
         [] call FUNC(setupTextColors);
     };
 }] call EFUNC(common,addEventhandler);
@@ -28,7 +28,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 };
 
 
-["ACE3", QGVAR(InteractKey), (localize "STR_ACE_Interact_Menu_InteractKey"),
+["ACE3 Common", QGVAR(InteractKey), (localize "STR_ACE_Interact_Menu_InteractKey"),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -37,7 +37,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 },{[0,false] call FUNC(keyUp)},
 [219, [false, false, false]], false] call cba_fnc_addKeybind;  //Left Windows Key
 
-["ACE3", QGVAR(SelfInteractKey), (localize "STR_ACE_Interact_Menu_SelfInteractKey"),
+["ACE3 Common", QGVAR(SelfInteractKey), (localize "STR_ACE_Interact_Menu_SelfInteractKey"),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};

@@ -4,7 +4,7 @@
 if !(hasInterface) exitWith {};
 
 // Add keybinds
-["ACE3", QGVAR(checkAmmo), localize "STR_ACE_Reload_checkAmmo",
+["ACE3 Weapons", QGVAR(checkAmmo), localize "STR_ACE_Reload_checkAmmo",
 {
     // Conditions: canInteract
     if !([ACE_player, (vehicle ACE_player), ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};

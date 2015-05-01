@@ -87,7 +87,7 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
-            class enableUnsconsiousnessAI {
+            class enableUnconsciousnessAI {
                 displayName = "AI Unconsciousness";
                 description = "Allow AI to go unconscious";
                 typeName = "NUMBER";
@@ -97,12 +97,12 @@ class CfgVehicles {
                         value = 0;
                     };
                     class normal {
-                        name = "Enabled";
+                        name = "50/50";
                         value = 1;
                         default = 1;
                     };
-                    class full  {
-                        name = "50/50";
+                    class full {
+                        name = "Enabled";
                         value = 2;
                     };
                 };
@@ -116,6 +116,12 @@ class CfgVehicles {
             class bleedingCoefficient {
                 displayName = "Bleeding coefficient";
                 description = "Coefficient to modify the bleeding speed";
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
+            class painCoefficient {
+                displayName = "Pain coefficient";
+                description = "Coefficient to modify the pain intensity";
                 typeName = "NUMBER";
                 defaultValue = 1;
             };

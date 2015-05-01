@@ -24,21 +24,15 @@ EXPLODE_1_PVT(_baseActionNode,_actionData);
 _distance = _actionData select 8;
 
 // Obtain a 3D position for the action
-if((count _this) > 2) then {
-    _pos = _this select 2;
+_pos = if((count _this) > 2) then {
+    _this select 2
 } else {
-    if(typeName (_actionData select 7) == "ARRAY") then {
-        _pos = _object modelToWorldVisual (_actionData select 7);
-    } else {
-        if ((_actionData select 7) == "weapon") then {
-            // Craft a suitable position for weapon interaction
-            _weaponDir = _object weaponDirection currentWeapon _object;
-            _ref = _weaponDir call EFUNC(common,createOrthonormalReference);
-            _pos = (_object modelToWorldVisual (_object selectionPosition "righthand")) vectorAdd ((_ref select 2) vectorMultiply 0.1);
-        } else {
-            _pos = _object modelToWorldVisual (_object selectionPosition (_actionData select 7));
-        };
-    };
+    // Setup scope variables for position code
+    private ["_target"];
+    _target = _object;
+
+    // Get action position
+    _object modelToWorldVisual (call (_actionData select 7))
 };
 
 // For non-self actions, exit if the action is too far away or ocluded
