@@ -24,6 +24,7 @@
             <Russian>Количество мусора от медицины</Russian>
             <Italian>Dettagli Simulazione Rifiuti</Italian>
             <French>Niveau de simulation des détritus</French>
+            <German>Abfall-Detaillevel</German>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail_Desc">
             <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
@@ -32,6 +33,7 @@
             <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
             <Italian>Il livello di dettagli della simulazione dei rifiuti indica il numero di rifiuti che verranno creati localmente nel client. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio client.</Italian>
             <French>Le nieau de simulation des détritus règle la quantité de déchets qui vont être créer localement dans le client. Des quantitées excessive dans certaines zones locales aurait pu causer des chutes D'IPS, donc c'est une option client uniquement.</French>
+            <German>Die Einstellung für das Abfalldetaillevel stellt die Menge der lokal erzeugten medizinischen Abfälle ein. Zuviel erzeugte Abfälle können FPS-Lags erzeugen, deswegen ist diese Einstellung nur clientseitig.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -1622,6 +1624,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_lostBloodALot">
             <English>He's lost a lot of blood</English>
+            <German>Er hat viel Blut verloren</German>
         </Key>
         <Key ID="STR_ACE_Medical_noBloodloss">
             <English>He hasn't lost blood</English>
@@ -1993,15 +1996,19 @@
         </Key>
         <Key ID="STR_ACE_Medical_menuTypeDisplay">
             <English>Style of menu (Medical)</English>
+            <German>Menü-Stil (Medical)</German>
         </Key>
         <Key ID="STR_ACE_Medical_menuTypeDescription">
             <English>Select the type of menu you prefer; default 3d selections or radial.</English>
+            <German>Wähle den Menü-Stil: Standard 3D-Selektion oder kreisförmig.</German>
         </Key>
         <Key ID="STR_ACE_Medical_useSelection">
             <English>Selections (3d)</English>
+            <German>3D-Selektion</German>
         </Key>
         <Key ID="STR_ACE_Medical_useRadial">
             <English>Radial</English>
+            <German>Kreisförmig</German>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion">
             <English>Scrape</English>
@@ -2268,7 +2275,8 @@
             <French>Femur Cassé</French>
         </Key>
         <Key ID="STR_ACE_Medical_TreatmentAction">
-            <English>Treating...</English>
+            <English>Treating ...</English>
+            <German>Behandlen ...</German>
         </Key>
     </Package>
 </Project>
