@@ -59,6 +59,22 @@ class %1 {
     };
 } forEach EGVAR(common,settings);
 
-"ace_clipboard" callExtension format["%1",_compiledConfig];
+FUNC(clipboardExport) = {
+    private["_chunks"];
+    _chunks = [];
+    
+    _chunks = [_this select 0, ";"] call CBA_fnc_split;
+    
+    {
+        private["_chunk"];
+        _chunk = _x + ";";
+        "ace_clipboard" callExtension format["%1", _chunk];
+    } forEach _chunks;
+    
+    "ace_clipboard" callExtension "--COMPLETE--";
+};
+[_compiledConfig] call FUNC(clipboardExport);
 
 ["STR_ACE_OptionsMenu_settingsExported"] call EFUNC(common,displayTextStructured);
+
+

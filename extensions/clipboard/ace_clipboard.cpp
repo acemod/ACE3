@@ -17,11 +17,13 @@ extern "C" {
     __declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
 };
 
+std::string gClipboardData;
+
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
-    std::string input(function);
+    std::string cur_input(function);
     std::string result;
 
-    if (input.length() < 1)
+    if (cur_input.length() < 1)
         return;
 
     if (!strcmp(function, "version")) {
@@ -29,32 +31,54 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
         return;
     }
 
-    #ifdef _WIN32
+#ifdef _WIN32
 
-    HGLOBAL glob = GlobalAlloc(GMEM_FIXED, input.length()+1);
-    
-    memcpy(glob, input.c_str(), input.length());
-    ((char *)glob)[input.length() + 1] = 0x00;
-         
-    if (!OpenClipboard(NULL)) {
-        result = "OpenClipboard() failed, GetLastError=" + GetLastError();
-    } else {
-        if (!EmptyClipboard()) {
+    if (!strcmp(function, "--COMPLETE--")) {
+        HGLOBAL hClipboardData = GlobalAlloc(GMEM_FIXED, gClipboardData.length() + 1);
+        if (!hClipboardData) {
+            result = "GlobalAlloc() failed, GetLastError=" + GetLastError();
+            gClipboardData = "";
+            return;
+        }
+
+        char *pClipboardData = (char *)GlobalLock(hClipboardData);
+        if (!pClipboardData) {
+            result = "GlobalLock() failed, GetLastError=" + GetLastError();
+            gClipboardData = "";
+            return;
+        }
+        memcpy(pClipboardData, gClipboardData.c_str(), gClipboardData.length());
+        pClipboardData[gClipboardData.length() + 1] = 0x00;
+
+        GlobalUnlock(hClipboardData);
+
+        if (!OpenClipboard(NULL)) {
             result = "OpenClipboard() failed, GetLastError=" + GetLastError();
-        } else {
-            if (!SetClipboardData(CF_TEXT, glob)) {
-                result = "SetClipboardData() failed, GetLastError=" + GetLastError();
-            } else {
-                if (!CloseClipboard()) {
-                    result = "CloseClipboard() failed, GetLastError=" + GetLastError();
+        }
+        else {
+            if (!EmptyClipboard()) {
+                result = "OpenClipboard() failed, GetLastError=" + GetLastError();
+            }
+            else {
+                if (!SetClipboardData(CF_TEXT, hClipboardData)) {
+                    result = "SetClipboardData() failed, GetLastError=" + GetLastError();
+                }
+                else {
+                    if (!CloseClipboard()) {
+                        result = "CloseClipboard() failed, GetLastError=" + GetLastError();
+                    }
                 }
             }
         }
+
+        gClipboardData = "";
+    } else {
+        gClipboardData = gClipboardData + cur_input;
     }
 
-end:
-    if(result.length() > 1)
-        memcpy(output, result.c_str(), result.length()+1);
+    end:
+        if(result.length() > 1)
+            memcpy(output, result.c_str(), result.length()+1);
 
     #endif
 
