@@ -38,10 +38,13 @@ _compiledConfig = "
     _localizedName = _x select 3;
     _localizedDescription = _x select 4;
     _possibleValues = _x select 5;
-    _defaultValue = _x select 6;
+    _defaultValue = _x select 7;
 
     if (GVAR(ClientSettingsExportIncluded) || !_isClientSetable) then {
         _value = missionNamespace getvariable [_name, _defaultValue];
+
+        if (_value isEqualTo _defaultValue) exitwith {};
+
         if (_typeName == "STRING") then { // I dont think we have string values, but just in case
             _value = format['"%1"', _value];
         };
@@ -57,7 +60,7 @@ class %1 {
 
         //clipboard seems to be getting cuttoff, so do a backup dump to rpt:
         diag_log text _compiledConfigEntry;
-        
+
         _compiledConfig = _compiledConfig + _compiledConfigEntry;
     };
 } forEach EGVAR(common,settings);
