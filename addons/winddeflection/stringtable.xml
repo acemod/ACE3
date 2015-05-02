@@ -98,10 +98,10 @@
                 <English>Defines the radius around the player (in meters) at which projectiles are wind deflected</English>
                 <Polish>Określa obszar naokoło gracza (w metrach), na którym pociski są znoszone przez wiatr</Polish>
             </Key>
-			<Key ID="STR_ACE_WEATHER_WINDDEFLECTION_DESCRIPTION">
-				<English>Wind influence on projectiles trajectory</English>
-				<Polish>Wpływ wiatru na trajectorię lotu pocisków</Polish>
-			</Key>
+            <Key ID="STR_ACE_WEATHER_WINDDEFLECTION_DESCRIPTION">
+                <English>Wind influence on projectiles trajectory</English>
+                <Polish>Wpływ wiatru na trajectorię lotu pocisków</Polish>
+            </Key>
         </Container>
     </Package>
 </Project>
