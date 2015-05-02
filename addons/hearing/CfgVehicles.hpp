@@ -98,21 +98,24 @@ class CfgVehicles {
     class ACE_ModuleHearing: Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "Hearing";
+        displayName = "$STR_ACE_Hearing_Module_DisplayName"; //Hearing
         function = QFUNC(moduleHearing);
         scope = 2;
         isGlobal = 1;
         icon = PATHTOF(UI\Icon_Module_Hearing_ca.paa);
         class Arguments {
             class EnableCombatDeafness {
-                displayName = "Enable combat deafness?";
-                description = "Enable combat deafness?";
+                displayName = "$STR_ACE_Hearing_CombatDeafness_DisplayName"; //Enable combat deafness?
+                description = "$STR_ACE_Hearing_CombatDeafness_Description"; //Enable combat deafness?
                 typeName = "BOOL";
                 class values {
-                    class Yes { name = "Yes"; value = 1; default = 1; };
-                    class No { name = "No"; value = 0; };
+                    class Yes { name = "$STR_ACE_Hearing_CombatDeafness_Yes"; value = 1; default = 1; }; //yes
+                    class No { name = "$STR_ACE_Hearing_CombatDeafness_No"; value = 0; }; //no
                 };
             };
+        };
+		class ModuleDescription {
+            description = "$STR_ACE_Hearing_Module_Description";
         };
     };
 };
