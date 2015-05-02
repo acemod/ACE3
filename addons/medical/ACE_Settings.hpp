@@ -22,6 +22,10 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 1;
     };
+    class GVAR(painCoefficient) {
+        typeName = "SCALAR";
+        value = 1;
+    };
     class GVAR(enableAirway) {
         typeName = "BOOL";
         value = false;
@@ -50,14 +54,19 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 1;
     };
-    class GVAR(enableUnsconsiousnessAI) {
+    class GVAR(enableUnconsciousnessAI) {
         value = 1;
         typeName = "SCALAR";
-        values[] = {"Disabled", "Enabled", "50/50"};
+        values[] = {"Disabled", "50/50", "Enabled"};
     };
     class GVAR(preventInstaDeath) {
         typeName = "BOOL";
         value = 0;
+    };
+    class GVAR(enableRevive) {
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"Disabled", "Players only", "Players and AI"};
     };
     class GVAR(maxReviveTime) {
         typeName = "SCALAR";
@@ -79,16 +88,16 @@ class ACE_Settings {
         displayName = "$STR_ACE_Medical_litterSimulationDetail";
         description = "$STR_ACE_Medical_litterSimulationDetail_Desc";
         typeName = "SCALAR";
-      
+
         value = 3;
         values[] = {"Off", "Low", "Medium", "High", "Ultra"};
         _values[] = { 0, 50, 100, 1000, 5000 };
-        
+
         isClientSettable = 1;
     };
     class GVAR(litterCleanUpDelay) {
         typeName = "SCALAR";
-        value = 0;  
+        value = 0;
     };
     class GVAR(medicSetting_PAK) {
         typeName = "SCALAR";
@@ -134,5 +143,22 @@ class ACE_Settings {
         value = 0;
         values[] = {"$STR_ACE_Medical_painEffect_Flash", "$STR_ACE_Medical_painEffect_Chroma"};
         isClientSettable = 1;
+    };
+    class GVAR(allowUnconsciousAnimationOnTreatment) {
+        typeName = "BOOL";
+        value = 0;
+    };
+    class GVAR(moveUnitsFromGroupOnUnconscious) {
+        typeName = "BOOL";
+        value = 0;
+    };
+
+    class GVAR(menuTypeStyle) {
+        displayName = "$STR_ACE_Medical_menuTypeDisplay";
+        description = "$STR_ACE_Medical_menuTypeDescription";
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"$STR_ACE_Medical_useSelection"/*, "$STR_ACE_Medical_useRadial"*/};
+        // isClientSettable = 1;
     };
 };

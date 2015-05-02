@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-private ["_oldBody","_newUnit","_class","_group","_position","_side","_allVariables"];
+private ["_oldBody","_newUnit","_class","_group","_position","_side", "_caller", "_name"];
 _oldBody = _this select 0;
 _caller = _this select 1;
 

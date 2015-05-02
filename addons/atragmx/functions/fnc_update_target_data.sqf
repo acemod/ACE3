@@ -32,6 +32,11 @@ if (GVAR(currentUnit) != 2) then {
 } else {
     ctrlSetText [140050, Str(Round((GVAR(targetSpeed) select GVAR(currentTarget)) * 100) / 100)];
 };
+if ((GVAR(targetSpeedDirection) select GVAR(currentTarget)) == 1) then {
+    ctrlSetText [140051, ">"];
+} else {
+    ctrlSetText [140051, "<"];
+};
 if (GVAR(currentUnit) == 1) then {
     ctrlSetText [140060, Str(Round((GVAR(targetRange) select GVAR(currentTarget)) * 1.0936133))];
 } else {

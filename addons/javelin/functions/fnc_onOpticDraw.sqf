@@ -9,7 +9,9 @@ private["_apos", "_aposX", "_aposY", "_args", "_boundsInput", "_bpos", "_canFire
 private["_constraintLeft", "_constraintRight", "_constraintTop", "_currentTarget", "_fireDisabledEH"];
 private["_firedEH", "_fov", "_lastTick", "_lockTime", "_maxX", "_maxY", "_minX", "_minY", "_newTarget"]; 
 private["_offsetX", "_offsetY", "_pos", "_randomLockInterval", "_randomPosWithinBounds", "_range"];
-private["_runTime", "_soundTime", "_targetArray", "_zamerny"];
+private["_runTime", "_soundTime", "_targetArray", "_zamerny", "_currentShooter"];
+
+_currentShooter = (vehicle ACE_player);
 
 #define __OffsetX ((ctrlPosition __JavelinIGUITargetingLineV) select 0) - 0.5
 #define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5
@@ -33,10 +35,14 @@ _soundTime = _args select 4;
 _randomLockInterval = _args select 5;
 _fireDisabledEH = _args select 6;
 
+_configs = configProperties [configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) >> QGVAR(enabled), "true", false];
+
+/*
 if( ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "launch_Titan_short_base"] call EFUNC(common,inheritsFrom)) 
     &&
     { ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "missiles_titan_at"] call EFUNC(common,inheritsFrom)) }
-    ) exitWith {
+*/
+if((count _config) < 1) exitWith {
     __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
@@ -128,7 +134,7 @@ FUNC(disableFire) = {
     
     if(_firedEH < 0 && difficulty > 0) then {
         _firedEH = [ACE_player, "DefaultAction", {true}, { 
-            _canFire = ACE_player getVariable["ace_missileguidance_target", nil];
+            _canFire = (_this select 1) getVariable["ace_missileguidance_target", nil];
             if(!isNil "_canFire") exitWith { false };
             true
         }] call EFUNC(common,addActionEventHandler);
@@ -155,7 +161,7 @@ if (isNull _newTarget) then {
     __JavelinIGUITargetingLines ctrlShow false;
     __JavelinIGUITargetingConstraints ctrlShow false;
     
-    ACE_player setVariable ["ace_missileguidance_target",nil, false];  
+    _currentShooter setVariable ["ace_missileguidance_target",nil, false];  
     
     // Disallow fire
     _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
@@ -212,7 +218,7 @@ if (isNull _newTarget) then {
                 
                 {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
                 
-                ACE_player setVariable["ace_missileguidance_target", _currentTarget, false];
+                _currentShooter setVariable["ace_missileguidance_target", _currentTarget, false];
                 
                 // Allow fire
                 _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
@@ -227,7 +233,7 @@ if (isNull _newTarget) then {
                  __JavelinIGUITargetingConstrains ctrlShow true;
                 __JavelinIGUITargetingLines ctrlShow false;
 
-                ACE_player setVariable["ace_missileguidance_target", nil, false];
+                _currentShooter setVariable["ace_missileguidance_target", nil, false];
                 
                 _boundsInput = if (_currentTarget isKindOf "CAManBase") then {
                     [_newTarget,[-1,-1,-2],_currentTarget selectionPosition "body"];
@@ -270,7 +276,7 @@ if (isNull _newTarget) then {
         __JavelinIGUITargetingLines ctrlShow false;
         __JavelinIGUITargetingConstraints ctrlShow false;
         
-        ACE_player setVariable ["ace_missileguidance_target",nil, false];
+        _currentShooter setVariable ["ace_missileguidance_target",nil, false];
         
         // Disallow fire
         _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);

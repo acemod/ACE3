@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_heartRate","_bloodPressure","_bloodVolume","_painStatus", "_lastTimeValuesSynced", "_syncValues"];
+private ["_unit", "_heartRate","_bloodPressure","_bloodVolume","_painStatus", "_lastTimeValuesSynced", "_syncValues", "_airwayStatus", "_blood", "_bloodPressureH", "_bloodPressureL", "_interval"];
 _unit = _this select 0;
 
 _interval = time - (_unit getVariable [QGVAR(lastMomentVitalsHandled), 0]);
@@ -33,17 +33,23 @@ _bloodVolume = _bloodVolume max 0;
 _unit setvariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
 
 // Set variables for synchronizing information across the net
-if (_bloodVolume < 90) then {
-    if !(_unit getvariable [QGVAR(hasLostBlood), false]) then {
-        _unit setvariable [QGVAR(hasLostBlood), true, true];
-    };
+if (_bloodVolume < 100) then {
+    if ((_bloodVolume < 90 && (GVAR(level) == 2)) || _bloodVolume <= 45) then {
+        if (_unit getvariable [QGVAR(hasLostBlood), 0] != 2) then {
+            _unit setvariable [QGVAR(hasLostBlood), 2, true];
+        };
+    } else {
+        if (_unit getvariable [QGVAR(hasLostBlood), 0] != 1) then {
+            _unit setvariable [QGVAR(hasLostBlood), 1, true];
+        };
+    }
 } else {
-    if (_unit getvariable [QGVAR(hasLostBlood),false]) then {
-        _unit setvariable [QGVAR(hasLostBlood), false, true];
+    if (_unit getvariable [QGVAR(hasLostBlood), 0] != 0) then {
+        _unit setvariable [QGVAR(hasLostBlood), 0, true];
     };
 };
 
-if ((_unit call FUNC(getBloodLoss)) > 0) then {
+if (([_unit] call FUNC(getBloodLoss)) > 0) then {
     if !(_unit getvariable [QGVAR(isBleeding), false]) then {
         _unit setvariable [QGVAR(isBleeding), true, true];
     };
@@ -66,13 +72,13 @@ if (_painStatus > 0) then {
 
 if (GVAR(level) == 1) then {
     // reduce pain
-    if (_unit getVariable [QGVAR(pain), 0] > 0) then {
-        _unit setVariable [QGVAR(pain), ((_unit getVariable QGVAR(pain)) - 0.001 * _interval) max 0, _syncValues];
+    if (_painStatus > 0) then {
+        _unit setVariable [QGVAR(pain), (_painStatus - 0.001 * _interval) max 0, _syncValues];
     };
 
     // reduce painkillers
     if (_unit getVariable [QGVAR(morphine), 0] > 0) then {
-        _unit setVariable [QGVAR(morphine), ((_unit getVariable QGVAR(morphine)) - 0.0015 * _interval) max 0, _syncValues];
+        _unit setVariable [QGVAR(morphine), ((_unit getVariable [QGVAR(morphine), 0]) - 0.0015 * _interval) max 0, _syncValues];
     };
 
     // bleeding
@@ -94,7 +100,7 @@ if (GVAR(level) >= 2) then {
     if ([_unit] call EFUNC(common,isAwake)) then {
         if (_bloodVolume < 60) then {
             if (random(1) > 0.9) then {
-                [_unit] call FUNC(setUnconscious);
+                [_unit, true, 15 + random(20)] call FUNC(setUnconscious);
             };
         };
     };
@@ -136,7 +142,7 @@ if (GVAR(level) >= 2) then {
 
     if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
         if (_heartRate < 10 || _bloodPressureH < 30 || _bloodVolume < 20) then {
-            [_unit] call FUNC(setUnconscious); // safety check to ensure unconsciousness for units if they are not dead already.
+            [_unit, true, 10+ random(20)] call FUNC(setUnconscious); // safety check to ensure unconsciousness for units if they are not dead already.
         };
 
         if (_bloodPressureH > 260) then {

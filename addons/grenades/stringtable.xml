@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Grenades">
         <Key ID="STR_ACE_Grenades_SwitchGrenadeMode">
@@ -53,7 +52,7 @@
         <Key ID="STR_ACE_Grenades_RollGrenade">
             <English>Roll Grenade</English>
             <German>Granate rollen</German>
-            <Spanish>Rodar granada</Spanish>
+            <Spanish>Lanzamiento raso</Spanish>
             <Polish>Po ziemi</Polish>
             <Czech>Po zemi</Czech>
             <French>Lancer roulé</French>
@@ -89,14 +88,14 @@
         <Key ID="STR_ACE_Grenades_M84_Description">
             <English>Also known as flashbang. Causes immediate flash blindness, deafness, tinnitus, and inner ear disturbance.</English>
             <German>Verursacht temporäre Blind- und Taubheit.</German>
-            <Spanish>Produce de manera inmediata ceguera, sordera, tinitus y afecta el oído interior.</Spanish>
+            <Spanish>Tambien conocida como granada cegadora. Produce de manera inmediata ceguera, sordera, tinitus y afecta el oído interior.</Spanish>
             <French>Les grenades incapacitantes servent à désorienter ou distraire une menace pendant quelques secondes.</French>
             <Polish>Znany też jako flashbang. Powoduje natychmiastową tymczasową ślepotę, głuchotę, dzwonienie w uszach i inne zaburzenia ucha wewnętrznego.</Polish>
             <Czech>Omračující granát je taktická nesmrtící zbraň používaná při záchraně rukojmí a zvládání davu.</Czech>
             <Russian>XM84 (M84) - граната нелетального действия, и предназначена для отвлечения и временного вывода из строя, либо дезориентации противника. Основное использование нашла при освобождении заложников, захвате преступников и террористов, а также проведении диверсионных миссий.</Russian>
             <Hungarian>Villanógránát néven is ismert. Azonnali villanási vakságot, süketséget, fülzúgást, és belső füli zavart okoz.</Hungarian>
             <Italian>Anche conosciuta come flashbang. Causa accecamento immediato, sensazioni di sposatezza, mancanza d'equilibrio e disturbi al timpano.</Italian>
-            <Portuguese>Um tipo de granada não-letal destinado a confundir, desorientar e distrair uma potencial ameaça.</Portuguese>
+            <Portuguese>Também conhecida como flashbang. Causa uma clarão imediato, cegueira, surdez, zumbido e distúrbio no tímpano.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_White_Name">
             <English>M127A1 Hand Held Signal (White)</English>
@@ -153,7 +152,7 @@
             <Hungarian>Kézi jelzőrakéta, Fehér színű</Hungarian>
             <Italian>Bengala (Bianco)</Italian>
             <Polish>Flara ręczna (biała)</Polish>
-            <Portuguese>Sinalizador (Branco)</Portuguese>
+            <Portuguese>Sinalizador de Mão (Branco)</Portuguese>
             <Russian>Фальшфейер (Белый)</Russian>
             <Spanish>Bengala (Blanca)</Spanish>
             <French>Feux à main (Blanc)</French>
@@ -165,7 +164,7 @@
             <Hungarian>Kézi jelzőrakéta, Piros színű</Hungarian>
             <Italian>Bengala (Rosso)</Italian>
             <Polish>Flara ręczna (czerwona)</Polish>
-            <Portuguese>Sinalizador (Vermelho)</Portuguese>
+            <Portuguese>Sinalizador de Mão (Vermelho)</Portuguese>
             <Russian>Фальшфейер (Красный)</Russian>
             <Spanish>Bengala (Roja)</Spanish>
             <French>Feux à main (Rouge)</French>
@@ -177,7 +176,7 @@
             <Hungarian>Kézi jelzőrakéta, Zöld színű</Hungarian>
             <Italian>Bengala (Verde)</Italian>
             <Polish>Flara ręczna (zielona)</Polish>
-            <Portuguese>Sinalizador (Verde)</Portuguese>
+            <Portuguese>Sinalizador de Mão (Verde)</Portuguese>
             <Russian>Фальшфейер (Зелёный)</Russian>
             <Spanish>Bengala (Verde)</Spanish>
             <French>Feux à main (Vert)</French>
@@ -189,7 +188,7 @@
             <Hungarian>Kézi jelzőrakéta, Sárga színű</Hungarian>
             <Italian>Bengala (Giallo)</Italian>
             <Polish>Flara ręczna (żółta)</Polish>
-            <Portuguese>Sinalizador (Amarelo)</Portuguese>
+            <Portuguese>Sinalizador de Mão (Amarelo)</Portuguese>
             <Russian>Фальшфейер (Жёлтые)</Russian>
             <Spanish>Bengala (Amarilla)</Spanish>
             <French>Feux à main (Jaune)</French>

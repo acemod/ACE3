@@ -8,10 +8,16 @@ PREP(calculateBarometricPressure);
 PREP(displayWindInfo);
 PREP(getMapData);
 PREP(getWind);
+PREP(initModuleSettings);
+PREP(initWind);
 PREP(serverController);
+PREP(updateAceWeather);
 PREP(updateHumidity);
 PREP(updateRain);
 PREP(updateTemperature);
 PREP(updateWind);
+
+// Make sure this data is read before client/server postInit
+call FUNC(getMapData);
 
 ADDON = true;
