@@ -135,7 +135,7 @@
         </Key>
         <Key ID="STR_ACE_VehicleLock_Module_DisplayName">
             <English>Vehicle Lock Setup</English>
-            <Polish>Zamknięcie pojazdu na klucz</Polish>
+            <Polish>Ustawienie blokady pojazdów</Polish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_LockVehicleInventory_DisplayName">
             <English>Lock Vehicle Inventory</English>
@@ -175,15 +175,15 @@
         </Key>
         <Key ID="STR_ACE_VehicleLock_Module_Description">
             <English>Settings for lockpick strength and initial vehicle lock state. Removes ambiguous lock states.&lt;br /&gt;Source: vehiclelock.pbo</English>
-            <Polish>Ustawienia czasu włamywania oraz domyślnego stanu blokady pojazdu. Wyłącza dwuznaczne ustawienia blokady.&lt;br /&gt;Źródło: vehiclelock.pbo</Polish>
+            <Polish>Ustawienia czasu włamywania oraz domyślnego stanu blokady pojazdów. Wyłącza dwuznaczne ustawienia blokady. Moduł ten umożliwia więc np. zamknięcie pojazdów przeciwnika na klucz tak, że gracze bez odpowiedniego sprzętu (wytrycha) nie będą mogli ich używać.&lt;br /&gt;Źródło: vehiclelock.pbo</Polish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_DisplayName">
             <English>Vehicle Key Assign</English>
-            <Polish>Przydział klucza do pojazdu</Polish>
+            <Polish>Przydział kluczyka do pojazdu</Polish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_Description">
             <English>Sync with vehicles and players.  Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.&lt;br /&gt;Source: vehiclelock.pbo</English>
-            <Polish>Zsynchronizuj z pojazdami i graczami. Rozda niestandardowe klucze dla graczy dla każdego zsynchronizowanego pojazdu. Działa tylko na pojazdy obecne na misji od samego początku.&lt;br /&gt;Źródło: vehiclelock.pbo</Polish>
+            <Polish>Zsynchronizuj z pojazdami i graczami. Rozda klucze dla graczy dla każdego zsynchronizowanego pojazdu. Działa tylko na pojazdy obecne na misji od samego początku (postawione w edytorze).&lt;br /&gt;Źródło: vehiclelock.pbo</Polish>
         </Key>
     </Package>
 </Project>
