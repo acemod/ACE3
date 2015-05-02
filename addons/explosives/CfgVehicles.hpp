@@ -235,6 +235,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_DefusalKit,12);
             MACRO_ADDITEM(ACE_Deadmanswitch,6);
             MACRO_ADDITEM(ACE_Cellphone,10);
+            MACRO_ADDITEM(ACE_APERSTripFlare_Wire_Mag,10);
         };
     };
 
