@@ -22,6 +22,10 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 1;
     };
+    class GVAR(painCoefficient) {
+        typeName = "SCALAR";
+        value = 1;
+    };
     class GVAR(enableAirway) {
         typeName = "BOOL";
         value = false;
@@ -50,10 +54,10 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 1;
     };
-    class GVAR(enableUnsconsiousnessAI) {
+    class GVAR(enableUnconsciousnessAI) {
         value = 1;
         typeName = "SCALAR";
-        values[] = {"Disabled", "Enabled", "50/50"};
+        values[] = {"Disabled", "50/50", "Enabled"};
     };
     class GVAR(preventInstaDeath) {
         typeName = "BOOL";
