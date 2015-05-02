@@ -23,6 +23,7 @@
             <Czech>Zobrazit kurzor v menu pro interakci</Czech>
             <German>Immer den Cursor für Fremd-Interaktionen anzeigen</German>
             <Hungarian>Mindig legyen a cselekvés kurzorja látható</Hungarian>
+            <Portuguese>Sempre mostrar cursor para interação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
@@ -34,6 +35,7 @@
             <Czech>Zobrazit menu interakce jako seznam</Czech>
             <German>Interaktionsmenü in Listen anzeigen</German>
             <Hungarian>Cselekvő menük listaként való megjelenítése</Hungarian>
+            <Portuguese>Mostrar menu de interação como listas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_InteractKey">
             <English>Interact Key</English>
@@ -93,6 +95,7 @@
             <Russian>Взаимодействие - Текст Макс.</Russian>
             <Spanish>Interacción - Texto al max.</Spanish>
             <Hungarian>Cselekvés - Szöveg max.</Hungarian>
+            <Portuguese>Interação - Max. de Texto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
             <English>Interaction - Text Min</English>
@@ -104,6 +107,7 @@
             <Russian>Взаимодействие - Текст Мин.</Russian>
             <Spanish>Interacción - Texto al min.</Spanish>
             <Hungarian>Cselekvés - Szöveg min.</Hungarian>
+            <Portuguese>Interação - Min. de Texto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
             <English>Interaction - Shadow Max</English>
@@ -115,6 +119,7 @@
             <Russian>Взаимодействие - Тень Макс.</Russian>
             <Spanish>Interacción - Sombras al max.</Spanish>
             <Hungarian>Cselekvés - Árnyék max.</Hungarian>
+            <Portuguese>Interação - Max. de Sombra</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
@@ -126,6 +131,7 @@
             <Russian>Взаимодействие - Тень Мин.</Russian>
             <Spanish>Interacción - Sombras al min.</Spanish>
             <Hungarian>Cselekvés - Árnyék min.</Hungarian>
+            <Portuguese>Interação - Min. de Sombra</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCentered">
             <English>Keep cursor centered</English>
@@ -136,6 +142,7 @@
             <Polish>Utrzymaj kursor wyśrodkowany</Polish>
             <Spanish>Mantener el cursor centrado</Spanish>
             <Czech>Udržuj kurzor na středu</Czech>
+            <Portuguese>Manter o cursor centralizado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCenteredDescription">
             <English>Keeps cursor centered and pans the option menu around. Useful if screen size is limited.</English>
@@ -146,6 +153,7 @@
             <Hungarian>Középen tartja a kurzort, és a menüelemeket mozgatja. Hasznos lehetőség korlátozott képméretnél.</Hungarian>
             <Polish>Utrzymuje kursor na środku ekranu, zamiast tego ruch myszą powoduje przesuwanie menu interakcji. Użyteczne w przypadku kiedy rozmiar ekranu jest ograniczony.</Polish>
             <Spanish>Mantiene el cursor centrado y despliega los menús alrededor. Útil si el tamaño de la pantalla es limitado.</Spanish>
+            <Portuguese>Manter o cursor centralizado e mover o menu de opções. Útil caso o tamanho da tela seja limitado.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ActionOnKeyRelease">
             <English>Do action when releasing menu key</English>
@@ -155,6 +163,7 @@
             <French>Action au relachement de touche</French>
             <Russian>Выполнять действие при отпускании кнопки взаимодействия</Russian>
             <Spanish>Realizar la acción al soltar la tecla menu</Spanish>
+            <Portuguese>Execute a ação quando soltar a tecla de menu</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_textSize">
             <English>Interaction Text Size</English>
@@ -164,6 +173,7 @@
             <Russian>Размер текста (меню взаимодействия)</Russian>
             <Spanish>Tamaño del texto de interacción</Spanish>
             <Polish>Rozmiar tekstu interakcji</Polish>
+            <Portuguese>Tamanho do texto de interação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSetting">
             <English>Interaction Text Shadow</English>
@@ -173,6 +183,7 @@
             <Russian>Тень от текста (меню взаимодействия)</Russian>
             <Spanish>Sombra del texto de interacción</Spanish>
             <Polish>Cień tekstu interakcji</Polish>
+            <Portuguese>Sombra do texto de interação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSettingDescription">
             <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
@@ -182,6 +193,7 @@
             <Russian>Дает возможность изменять тень, отбрасываемую текстом. Контур не зависит от выбранного цвета тени.</Russian>
             <Spanish>Permite contolar la sombra del texto. El contorno ignora los colores personalizados de la sombra.</Spanish>
             <Polish>Pozwala kontrolować cień tekstu. Kontury ignorują niestandardowe kolory cienia.</Polish>
+            <Portuguese>Permite controlar a sombra do texto. Contorno ignora sombras com cores customizadas.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_shadowOutline">
             <English>Outline</English>
@@ -191,6 +203,7 @@
             <Russian>Контур</Russian>
             <Spanish>Contorno</Spanish>
             <Polish>Kontur</Polish>
+            <Portuguese>Contorno</Portuguese>
         </Key>
     </Package>
 </Project>

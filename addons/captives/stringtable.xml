@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Captives">
         <Key ID="STR_ACE_Captives_SetCaptive">
@@ -167,6 +167,7 @@
             <Russian>Применимо только к живым юнитам</Russian>
             <Hungarian>Csak élő egységeken használni</Hungarian>
             <Italian>Si può fare solo su persone vive</Italian>
+            <Portuguese>Usar somente em unidades vivas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_OnlyInfantry">
             <English>Only use on dismounted inf</English>
@@ -178,6 +179,7 @@
             <Russian>Применимо только к пехоте вне техники</Russian>
             <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
             <Italian>Si può usare solo su fanteria a piedi</Italian>
+            <Portuguese>Usar somente em infantaria desmontada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
             <English>Nothing under mouse</English>

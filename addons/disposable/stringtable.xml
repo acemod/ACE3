@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Disposable">
         <Key ID="STR_ACE_Disposable_UsedTube">
@@ -35,7 +35,7 @@
             <Hungarian>Előtöltött műrakéta</Hungarian>
             <Russian>Предзаряженная ракетная болванка</Russian>
             <Italian>Missile stupido precaricato</Italian>
-            <Portuguese>Míssel dummy pré-carregado</Portuguese>
+            <Portuguese>Míssel inerte pré-carregado</Portuguese>
         </Key>
     </Package>
 </Project>
