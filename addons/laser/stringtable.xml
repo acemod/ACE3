@@ -6,18 +6,21 @@
             <Polish>Kod lasera</Polish>
             <French>Code laser</French>
             <Russian>Лазерный код</Russian>
+            <Spanish>Código láser</Spanish>
         </Key>
         <Key ID="STR_ACE_laser_laserCodeUp">
             <English>Laser - Cycle Code Up</English>
             <Polish>Laser - Następny kod</Polish>
             <French>Laser - Code +</French>
             <Russian>Лазер - увеличить частоту</Russian>
+            <Spanish>Láser - Aumentar código</Spanish>
         </Key>
         <Key ID="STR_ACE_laser_laserCodeDown">
             <English>Laser - Cycle Code Down</English>
             <Polish>Laser - Poprzedni kod</Polish>
             <French>Laser - Code -</French>
             <Russian>Лазер - уменьшить частоту</Russian>
+            <Spanish>Láser - Reducir código</Spanish>
         </Key>
     </Package>
 </Project>
