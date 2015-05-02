@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {"ACE_CableTie"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ACE_Interaction"};
-        author[] = {"commy2", "KoffeinFlummi"};
+        author[] = {"commy2", "KoffeinFlummi", "GieNkoV"};
         authorUrl = "https://github.com/commy2/";
         VERSION_CONFIG;
     };
