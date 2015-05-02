@@ -572,6 +572,7 @@
             <Polish>Przydziel do czerwonych</Polish>
             <Portuguese>Atribuir Vermelho</Portuguese>
             <Hungarian>Hozzávonás a Piroshoz</Hungarian>
+            <Czech>Přiřadit k červeným</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamGreen">
             <English>Assign Green</English>
@@ -580,6 +581,7 @@
             <Polish>Przydziel do zielonych</Polish>
             <Portuguese>Atribuir Verde</Portuguese>
             <Hungarian>Hozzávonás a Zöldhöz</Hungarian>
+            <Czech>Přiřadit k zeleným</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamBlue">
             <English>Assign Blue</English>
@@ -588,6 +590,7 @@
             <Polish>Przydziel do niebieskich</Polish>
             <Portuguese>Atribuir Azul</Portuguese>
             <Hungarian>Hozzávonás a Kékhez</Hungarian>
+            <Czech>Přiřadit k modrým</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamYellow">
             <English>Assign Yellow</English>
@@ -596,6 +599,7 @@
             <Polish>Przydziel do żółtych</Polish>
             <Portuguese>Atribuir Amarelo</Portuguese>
             <Hungarian>Hozzávonás a Sárgához</Hungarian>
+            <Czech>Přiřadit ke žlutým</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamRed">
             <English>Join Red</English>
@@ -604,6 +608,7 @@
             <Polish>Dołącz do czerwonych</Polish>
             <Portuguese>Entrar em Vermelho</Portuguese>
             <Hungarian>Belépés a Pirosba</Hungarian>
+            <Czech>Připojit k červeným</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamGreen">
             <English>Join Green</English>
@@ -612,6 +617,7 @@
             <Polish>Dołącz do zielonych</Polish>
             <Portuguese>Entrar em Verde</Portuguese>
             <Hungarian>Belépés a Zöldbe</Hungarian>
+            <Czech> Připojit k zeleným</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamBlue">
             <English>Join Blue</English>
@@ -620,6 +626,7 @@
             <Polish>Dołącz do niebieskich</Polish>
             <Portuguese>Entrar em Azul</Portuguese>
             <Hungarian>Belépés a Kékbe</Hungarian>
+            <Czech>Připojit k modrým</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamYellow">
             <English>Join Yellow</English>
@@ -628,6 +635,7 @@
             <Polish>Dołącz do żółtych</Polish>
             <Portuguese>Entrar em Amarelo</Portuguese>
             <Hungarian>Belépés a Sárgába</Hungarian>
+            <Czech>Připojit ke žlutým</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
