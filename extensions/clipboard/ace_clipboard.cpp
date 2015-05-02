@@ -24,6 +24,13 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     if (input.length() < 1)
         return;
 
+    if (!strcmp(function, "version")) {
+        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
+        return;
+    }
+
+    else {
+
     #ifdef _WIN32
 
     HGLOBAL glob = GlobalAlloc(GMEM_FIXED, input.length()+1);
@@ -47,8 +54,9 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
         }
     }
 
- end:
-    memcpy(output, result.c_str(), result.length()+1);
+end:
+    if(result.length() > 1)
+        memcpy(output, result.c_str(), result.length()+1);
 
     #endif
 
