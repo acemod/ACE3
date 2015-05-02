@@ -45,22 +45,31 @@ Defines the interval between every calculation step.<br>
 Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles.<br>
 `Default value: 3000`
 
-### 1.2 BlueForceTracking
+### 1.2 Allow Config Export
+*Part of: ace_optionsmenu*
+
+This modules allows to export all current ACE settings from the ACE options menu to the clipboard and RPT file.
+
+1. **Allow (Boolean)**<br>
+Enables the "export" button in the ACE options menu<br>
+`Default value: Yes`
+
+### 1.3 BlueForceTracking
 *Part of: ace_map*
 
-When adding the "BlueForceTracking" module to your mission it adds map markers to every group on the players side and refreshes them in certain configurable interval (in seconds). The module takes the group type into account and uses the proper NATO icon for each marker.
+When adding the "Blue Force Tracking" module to your mission it adds map markers to every group on the players side and refreshes them in certain configurable interval (in seconds). The module takes the group type into account and uses the proper NATO icon for each marker.
 
 **Settings:**
 
 1. **Interval (Number)<br>**
 How often the markers should be refreshed (in seconds).<br>
-`Default value: 5`
+`Default value: 1`
 2. **Hide AI Groups (Boolean)<br>**
 Hide markers for "AI only" groups.<br>
 `Default value: No`
 
 ### 1.3 Check PBOs
-*Part of: ace_core*
+*Part of: ace_common*
 
 If you are worried that players haven't updated ACE or other mods to the version you're using on the server, you can place the "Check PBOs" module on your map. You can choose one of three posible actions that are being executed when a player joins that has a wrong version of ACE or an other mod:
 
@@ -83,15 +92,17 @@ You can make a whitelist of addons that don't have to be on the server. If you w
 The list must be in the following format: `["ADDON1","ADDON2",...]` where the addons are CfgPatches references to all PBOs of the optional mod. To figure these out, you can use the scripting command `activatedAddons` in the editor while those mods are enabled.  
 
 Example 1: @Blastcore-A3:<br>
-```sqf
+```js
 ["warfxpe","blastcore_vep"]
 ```
+
 Example 2: @JSRS:<br>
-```sqf
+```js
 [TBD]
-```  
+```
+
 Example 3: @JSRS + @Blastcore-A3:<br>
-```sqf
+```js
 [TBD, "warfxpe","blastcore_vep"]
 ```
 
@@ -102,35 +113,42 @@ The "Explosive System" module lets you tweak the settings for the new explosive 
 
 **Settings:**
 
-1. **Require explosive specialists? (Boolean)<br>**
+1. **Require specialists? (Boolean)<br>**
 Require explosive specialists to disable explosives.<br>
 `Default value: No`
 2. **Punish non-specialists? (Boolean)<br>**
 Increase the time it takes to complete actions for non-specialists.<br>
 `Default value: Yes`
 
-### 1.5 Fatigue System (deprecated)
-**Warning:**
-*This module is deprecated and only in there not to break older missions that have used this module. It will be removed in a future update. It serves no purpose.*
-
-### 1.6 Friendly Fire Messages
+### 1.5 Friendly Fire Messages
 *Part of: ace_respawn*
 
 The "Friendly Fire Messages" module triggers a message when a player kills a friendly or civilian unit. This module isn't needed on servers with a low difficulty setting.
 
-### 1.7 Interaction
-*Part of: ace_interaction*
+### 1.6 Hearing
+*Part of: ace_hearing*
 
-This module allows you to tweak the settings for player names tags.
+Placing this modules allows you to disable combat deafness usually triggerd by loud explosions or heavy weapons in a players proximity.
 
 **Settings:**
 
-1. **Player Names View Distance (Number)<br>**
-Sets the distance (in meters) at which player name tags become visible.<br>
-`Default value: 5`
+1. **Enable combat deafness? (Boolean)***<br>
+Enable combat deafness?<br>
+`Default value: Yes`
 
-### 1.8 Medical System
-*Part of: ace_medical*
+### 1.7 Interaction System
+*Part of: ace_interaction*
+
+This module allows you to tweak if players should be able to use team management functions (e.g. "switch group", "become leader").
+
+**Settings:**
+
+1. **Enable Team Management (Boolean)<br>**
+Should players be allowed to use the Team Management Menu?.<br>
+`Default value: Yes`
+
+### 1.8 Make Unit Surrender
+*Part of: ace_captives*
 
 When using the medical system ACE offers you probably want to fine tune some aspects of the wounding, healing or gameplay mechanics and fit them to your needs. The "Medical System" module offers a lot of settings to do just that.
 
