@@ -1296,7 +1296,7 @@
         </Key>
         <Key ID="STR_ACE_AmmoSupplyCrate_DisplayName">
             <English>[ACE] Ammo Supply Crate</English>
-			<Polish>[ACE] Skrzynka z amunicją</Polish>
+            <Polish>[ACE] Skrzynka z amunicją</Polish>
         </Key>
     </Package>
 </Project>

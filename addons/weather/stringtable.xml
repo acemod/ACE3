@@ -16,7 +16,7 @@
             <English>Weather</English>
             <Polish>Pogoda</Polish>
         </Key>
-		<Key ID="STR_ACE_Weather_Module_Description">
+        <Key ID="STR_ACE_Weather_Module_Description">
             <English>Multiplayer synchronized ACE weather module</English>
             <Polish>Synchronizowana pogoda ACE</Polish>
         </Key>
