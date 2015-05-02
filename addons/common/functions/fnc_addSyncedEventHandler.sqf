@@ -15,6 +15,8 @@
 #include "script_component.hpp"
 PARAMS_2(_name,_handler);
 
+//IGNORE_PRIVATE_WARNING(_handleSyncedEvent);
+
 private["_ttl", "_eventId", "_data"];
 if( (count _this) > 2) then {
     _ttl = _this select 2;

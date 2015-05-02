@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-private ["_config", "_turretIndex", "_index", "_offset", "_config2", "_foundClasses"];
+private ["_config", "_turretIndex", "_index", "_offset", "_config2", "_foundClasses", "_a"];
 
 _config = _this select 0;
 _turretIndex = _this select 1;

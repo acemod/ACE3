@@ -1,5 +1,7 @@
 // by commy2
 
+private["_position", "_projectile", "_subMunition", "_vehicle", "_zeroing"];
+
 _vehicle = _this select 0 select 0;
 _projectile = _this select 0 select 1;
 _zeroing = _this select 0 select 2;

@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_config", "_cargo", "_codrivers"];
+private ["_vehicle", "_config", "_cargo", "_codrivers", "_index"];
 
 _vehicle = _this select 0;
 

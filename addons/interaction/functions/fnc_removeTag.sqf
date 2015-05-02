@@ -2,6 +2,7 @@
 #include "script_component.hpp"
 
 0 spawn {
+    private["_index", "_name"];
     waitUntil {player getVariable ["ACE_Name", ""] != ""};
 
     _name = player getVariable ["ACE_Name", ""];

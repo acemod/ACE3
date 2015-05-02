@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-private ["_vehicle", "_weapon", "_ammo", "_magazine", "_projectile","_velocityCorrection"];
+private ["_vehicle", "_weapon", "_ammo", "_magazine", "_projectile","_velocityCorrection", "_sumVelocity"];
 
 _vehicle = _this select 0;
 _weapon = _this select 1;

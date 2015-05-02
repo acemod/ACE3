@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_magazine"];
+private ["_unit", "_magazine", "_return"];
 _unit = _this select 0;
 _magazine = _this select 1;
 

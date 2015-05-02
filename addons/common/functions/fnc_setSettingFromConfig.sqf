@@ -14,6 +14,8 @@
 
 EXPLODE_1_PVT(_this,_optionEntry);
 
+private["_isClientSettable", "_isForced", "_localizedDescription", "_localizedName", "_name", "_possibleValues", "_settingData", "_text", "_value", "_valueConfig"];
+
 _fnc_getValueWithType = {
     EXPLODE_2_PVT(_this,_optionEntry,_typeName);
 

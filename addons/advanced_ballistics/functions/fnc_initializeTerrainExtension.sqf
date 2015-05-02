@@ -16,7 +16,7 @@ if (!hasInterface) exitWith {};
 if (!GVAR(enabled)) exitWith {};
 if (!GVAR(extensionAvailable)) exitWith {};
 
-private ["_initStartTime", "_mapSize", "_mapGrids", "_gridCells", "_x", "_y", "_gridCenter", "_gridHeight", "_gridNumObjects", "_gridSurfaceIsWater"];
+private ["_initStartTime", "_mapSize", "_mapGrids", "_gridCells", "_x", "_y"];
 
 _initStartTime = time;
 _mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize");
@@ -33,7 +33,7 @@ _gridCells = _mapGrids * _mapGrids;
 GVAR(currentGrid) = 0;
 
 [{
-    private ["_args", "_mapGrids", "_gridCells", "_initStartTime"];
+    private ["_args", "_mapGrids", "_gridCells", "_initStartTime", "_i", "_gridCenter", "_gridHeight", "_gridNumObjects", "_gridSurfaceIsWater"];
     _args = _this select 0;
     _mapGrids = _args select 0;
     _gridCells = _args select 1;

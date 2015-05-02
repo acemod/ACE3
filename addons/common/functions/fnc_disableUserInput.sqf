@@ -13,8 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_state", "_dlg"];
-
+private["_state", "_dlg", "_acc", "_config", "_ctrl", "_index", "_key"];
 _state = _this select 0;
 
 if (_state) then {

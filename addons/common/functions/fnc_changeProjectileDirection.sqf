@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-private ["_projectile", "_adjustDir", "_adjustUp", "_adjustSpeed", "_vdir", "_dir", "_up", "_l", "_r", "_vup", "_vel"];
+private ["_projectile", "_adjustDir", "_adjustUp", "_adjustSpeed", "_vdir", "_dir", "_up", "_l", "_r", "_vup", "_vel", "_vlat"];
 
 _projectile = _this select 0;
 _adjustDir = _this select 1;

@@ -14,6 +14,8 @@
 
 PARAMS_2(_eventName,_eventArgs);
 
+private["_eventIndex", "_eventNames", "_events"];
+
 _eventNames = GVAR(events) select 0;
 _eventIndex = _eventNames find _eventName;
 if(_eventIndex != -1) then {

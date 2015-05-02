@@ -12,6 +12,8 @@
  * Public: No
  */
 
+private["_altitude", "_ammo", "_attach", "_cfgAmmo", "_delay", "_dir", "_dirDiff", "_dirVar", "_entities", "_hint", "_pos", "_posAmmo", "_posNew", "_projectile", "_radio", "_repeat", "_shakeRadius", "_shakeStrength", "_side", "_sides", "_simulation", "_sound", "_soundSource", "_soundSourceClass", "_sounds", "_velocity"];
+ 
 _fnc_scriptNameParentTemp = if !(isnil '_fnc_scriptName') then {_fnc_scriptName} else {'BIS_fnc_moduleProjectile'};
 private ['_fnc_scriptNameParent'];
 _fnc_scriptNameParent = _fnc_scriptNameParentTemp;

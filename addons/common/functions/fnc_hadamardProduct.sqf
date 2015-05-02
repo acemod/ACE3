@@ -13,6 +13,8 @@
  */
 #include "script_component.hpp"
 
+private ["_vector1", "_vector2", "_newVector", "_i"];
+
 _vector1 = _this select 0;
 _vector2 = _this select 1;
 

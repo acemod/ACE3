@@ -17,6 +17,9 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
+private["_eventArgs"];
+//IGNORE_PRIVATE_WARNING(_handleSyncedEvent);
+
 //SEH_s
 if(isServer) then {
     // Find the event name, and shovel out the events to the client

@@ -19,7 +19,7 @@
 #include "script_component.hpp"
 #define PRECISION 0.1
 
-private ["_distance","_angleTarget","_maxElev","_initSpeed","_airFriction","_timeToLive","_timeToLive","_simulationStep","_angle","_posTargetX","_posTargetY","_posX","_posY","_velocityX","_velocityY","_velocityMagnitude"];
+private ["_distance","_angleTarget","_maxElev","_initSpeed","_airFriction","_timeToLive","_timeToLive","_simulationStep","_angle","_posTargetX","_posTargetY","_posX","_posY","_velocityX","_velocityY","_velocityMagnitude", "_i", "_temp"];
 
 _distance       = _this select 0;
 _angleTarget    = _this select 1;

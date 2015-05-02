@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-private ["_rangeToHit", "_heightToHit", "_muzzleVelocity", "_airFriction", "_maxElev", "_minElev", "_error", "_solutionElevation", "_lastTestResult", "_numberOfAttempts"];
+private ["_rangeToHit", "_heightToHit", "_muzzleVelocity", "_airFriction", "_maxElev", "_minElev", "_error", "_solutionElevation", "_lastTestResult", "_numberOfAttempts", "_timeStep"];
 
 #define MAX_ATTEMPTS 22
 

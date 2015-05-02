@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-private ["_object", "_enableDrag", "_position", "_direction"];
+private ["_object", "_enableDrag", "_position", "_direction", "_dragAction", "_dropAction", "_player", "_target"];
 
 _this resize 4;
 

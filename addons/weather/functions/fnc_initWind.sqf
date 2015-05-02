@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-private ["_sum", "_rand", "_csum", "_index", "_month", "_windDirectionProbabilities"];
+private ["_sum", "_rand", "_csum", "_index", "_month", "_windDirectionProbabilities", "_i", "_j"];
 _month = date select 1;
 _windDirectionProbabilities = GVAR(WindDirectionProbabilities) select (_month - 1);
 

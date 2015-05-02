@@ -17,7 +17,7 @@
 
 #define DEFAULT_DELAY   (round(random(10)+5))
 
-private ["_unit", "_set", "_animState", "_originalPos", "_startingTime","_minWaitingTime"];
+private ["_unit", "_set", "_animState", "_originalPos", "_startingTime","_minWaitingTime", "_enableUncon", "_anim"];
 _unit = _this select 0;
 _set = if (count _this > 1) then {_this select 1} else {true};
 _minWaitingTime = if (count _this > 2) then {_this select 2} else {DEFAULT_DELAY};

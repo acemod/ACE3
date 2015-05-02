@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_house", "_door", "_animations", "_lockedVariable"];
+private ["_house", "_door", "_animations", "_lockedVariable", "_index"];
 
 _house = _this select 0;
 _door = _this select 1;

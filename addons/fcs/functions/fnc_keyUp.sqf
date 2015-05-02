@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-private ["_vehicle", "_turret", "_turretConfig", "_distance", "_magazines", "_showHint", "_playSound"];
+private ["_vehicle", "_turret", "_turretConfig", "_distance", "_magazines", "_showHint", "_playSound", "_i", "_posTarget", "_velocityMagnitude", "_velocityTarget", "_movingAzimuth"];
 
 _vehicle = _this select 0;
 _turret = _this select 1;
@@ -54,8 +54,6 @@ if (count _this > 2) then {
 if (!(isNil QGVAR(backgroundCalculation)) and {!(scriptDone GVAR(backgroundCalculation))}) then {
     terminate GVAR(backgroundCalculation);
 };
-
-private "_movingAzimuth";
 
 // MOVING TARGETS
 _movingAzimuth = 0;

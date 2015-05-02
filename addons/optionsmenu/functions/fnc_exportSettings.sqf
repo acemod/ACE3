@@ -21,24 +21,15 @@ private ["_compiledConfig", "_name", "_typeName", "_isClientSetable", "_localize
 _compiledConfig = "
 ";
 {
-     /*_settingData = [
-        _name,
-        _typeName,
-        _isClientSetable,
-        _localizedName,
-        _localizedDescription,
-        _possibleValues,
-        _isForced,
-        _defaultValue
-    ];*/
-
     _name = _x select 0;
     _typeName = _x select 1;
     _isClientSetable = _x select 2;
     _localizedName = _x select 3;
     _localizedDescription = _x select 4;
     _possibleValues = _x select 5;
-    _defaultValue = _x select 6;
+    _defaultValue = _x select 7;
+    
+    diag_log text format ["%1 - %2", _name, _defaultValue];
 
     if (GVAR(ClientSettingsExportIncluded) || !_isClientSetable) then {
         _value = missionNamespace getvariable [_name, _defaultValue];

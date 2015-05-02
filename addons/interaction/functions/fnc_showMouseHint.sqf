@@ -20,7 +20,7 @@
 
 #define GUI_GRID_W  (0.025)
 #define GUI_GRID_H  (0.04)
-private ["_leftClick", "_rightClick", "_scroll"];
+private ["_leftClick", "_rightClick", "_scroll", "_display"];
 _leftClick = _this select 0;
 _rightClick = _this select 1;
 _scroll = "";

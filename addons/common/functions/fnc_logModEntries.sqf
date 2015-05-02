@@ -1,6 +1,6 @@
 // by commy2
 
-private ["_configs", "_entries"];
+private ["_configs", "_entries", "_name"];
 
 _configs = "true" configClasses (configFile >> _this);
 

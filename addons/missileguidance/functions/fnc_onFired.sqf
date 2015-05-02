@@ -1,6 +1,8 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
+private["_laserCode", "_laserInfo"];
+
 // Bail if guidance is disabled
 // Bail on locality of the projectile, it should be local to us
 if(GVAR(enabled) < 1 || {!local _projectile} ) exitWith { false };

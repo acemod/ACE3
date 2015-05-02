@@ -1,6 +1,8 @@
 // by commy2 and esteldunedain
 #include "script_component.hpp"
 
+private["_brightness", "_camPos", "_intermediatePos", "_iteration", "_light", "_line", "_pL", "_pX", "_size", "_units"];
+
 // init object
 /*if (isNil QGVAR(laserdot)) then {
     _light = "#lightpoint" createVehicleLocal [0,0,0];

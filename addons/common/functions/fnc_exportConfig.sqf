@@ -9,7 +9,7 @@
 private "_fnc_logEntries";
 
 _fnc_logEntries = {
-  private ["_c", "_d", "_p", "_t", "_e"];
+  private ["_c", "_d", "_p", "_t", "_e", "_a", "_i"];
 
   _c = _this select 0;
   _d = _this select 1;

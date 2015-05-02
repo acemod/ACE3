@@ -3,6 +3,8 @@
 
 PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
+private["_config", "_configs"];
+
 // Bail on not missile
 if( _shooter != ACE_player) exitWith { false }; 
 
