@@ -567,47 +567,55 @@
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamRed">
             <English>Assign Red</English>
+            <German>Rot zuweisen</German>
             <Spanish>Asignar a rojo</Spanish>
             <Polish>Przydziel do czerwonych</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamGreen">
             <English>Assign Green</English>
+            <German>Grün zuweisen</German>
             <Spanish>Asignar a verde</Spanish>
             <Polish>Przydziel do zielonych</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamBlue">
             <English>Assign Blue</English>
+            <German>Blau zuweisen</German>
             <Spanish>Asignar a azul</Spanish>
             <Polish>Przydziel do niebieskich</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamYellow">
             <English>Assign Yellow</English>
+            <German>Gelb zuweisen</German>
             <Spanish>Asignar a amarillo</Spanish>
             <Polish>Przydziel do żółtych</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamRed">
             <English>Join Red</English>
+            <German>Rot beitreten</German>
             <Spanish>Unirse a rojo</Spanish>
             <Polish>Dołącz do czerwonych</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamGreen">
             <English>Join Green</English>
+            <German>Grün beitreten</German>
             <Spanish>Unirse a verde</Spanish>
             <Polish>Dołącz do zielonych</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamBlue">
             <English>Join Blue</English>
+            <German>Blau beitreten</German>
             <Spanish>Unirse a azul</Spanish>
             <Polish>Dołącz do niebieskich</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamYellow">
             <English>Join Yellow</English>
+            <German>Gelb beitreten</German>
             <Spanish>Unirse a amarillo</Spanish>
             <Polish>Dołącz do żółtych</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
-            <German>Du bist Team %1 beigetreten</German>
+            <German>Du bist Gruppe %1 beigetreten</German>
             <Spanish>Te has unido al equipo %1</Spanish>
             <French>Tu as rejoint l'équipe %1</French>
             <Polish>Dołączyłeś do drużyny %1</Polish>
@@ -619,7 +627,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_LeaveTeam">
             <English>Leave Team</English>
-            <German>Team verlassen</German>
+            <German>Gruppe verlassen</German>
             <Spanish>Dejar equipo</Spanish>
             <French>Quitter l'équipe</French>
             <Polish>Opuść drużynę</Polish>
@@ -631,7 +639,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_LeftTeam">
             <English>You left the Team</English>
-            <German>Du hast das Team verlassen</German>
+            <German>Du hast die Gruppe verlassen</German>
             <Spanish>Has dejado el equipo</Spanish>
             <French>Tu as quitté l'équipe</French>
             <Polish>Opuściłeś drużynę</Polish>
@@ -727,7 +735,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
             <English>Passengers</English>
-            <German>Passagiere</German>
+            <German>Insassen</German>
             <Spanish>Pasajeros</Spanish>
             <Russian>Пассажиры</Russian>
             <Czech>Pasažéři</Czech>
