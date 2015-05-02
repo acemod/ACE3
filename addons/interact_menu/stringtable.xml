@@ -155,6 +155,7 @@
             <French>Action au relachement de touche</French>
             <Russian>Выполнять действие при отпускании кнопки взаимодействия</Russian>
             <Spanish>Realizar la acción al soltar la tecla menu</Spanish>
+            <Hungarian>Cselekvés végrehajtása a menügomb elengedésekor</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_textSize">
             <English>Interaction Text Size</English>
@@ -164,6 +165,7 @@
             <Russian>Размер текста (меню взаимодействия)</Russian>
             <Spanish>Tamaño del texto de interacción</Spanish>
             <Polish>Rozmiar tekstu interakcji</Polish>
+            <Hungarian>Cselekvő szöveg mérete</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSetting">
             <English>Interaction Text Shadow</English>
@@ -173,6 +175,7 @@
             <Russian>Тень от текста (меню взаимодействия)</Russian>
             <Spanish>Sombra del texto de interacción</Spanish>
             <Polish>Cień tekstu interakcji</Polish>
+            <Hungarian>Cselekvő szöveg árnyéka</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSettingDescription">
             <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
@@ -182,6 +185,7 @@
             <Russian>Дает возможность изменять тень, отбрасываемую текстом. Контур не зависит от выбранного цвета тени.</Russian>
             <Spanish>Permite contolar la sombra del texto. El contorno ignora los colores personalizados de la sombra.</Spanish>
             <Polish>Pozwala kontrolować cień tekstu. Kontury ignorują niestandardowe kolory cienia.</Polish>
+            <Hungarian>Hozzáférést biztosít a szöveg árnyékának kezeléséhez. A körvonal nem veszi figyelembe az egyedi árnyékszíneket.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_shadowOutline">
             <English>Outline</English>
@@ -191,6 +195,7 @@
             <Russian>Контур</Russian>
             <Spanish>Contorno</Spanish>
             <Polish>Kontur</Polish>
+            <Hungarian>Körvonal</Hungarian>
         </Key>
     </Package>
 </Project>

@@ -2168,6 +2168,7 @@
             <Russian>Вид меню (медицина)</Russian>
             <Spanish>Tipo de menú (Medico)</Spanish>
             <Czech>Styl menu (Zdravotní)</Czech>
+            <Hungarian>Menü stílusa (Orvosi)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_menuTypeDescription">
             <English>Select the type of menu you prefer; default 3d selections or radial.</English>
@@ -2177,6 +2178,7 @@
             <Russian>Выберите тип меню: стандартный вариант (3D) или радиальный</Russian>
             <Spanish>Selecciona el tipo de menú que prefieres: selecciones 3d por defecto o radial.</Spanish>
             <Czech>Vyberte typ menu který preferujete: výchozí 3D nebo radiální.</Czech>
+            <Hungarian>Válaszd ki a neked megfelelő menüt: Alapértelmezett 3D válogatás, vagy kerek.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_useSelection">
             <English>Selections (3d)</English>
@@ -2185,6 +2187,7 @@
             <German>3D-Selektion</German>
             <Russian>Стандартный (3D)</Russian>
             <Spanish>Selecciones (3d)</Spanish>
+            <Hungarian>Választékok (3D)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_useRadial">
             <English>Radial</English>
@@ -2194,6 +2197,7 @@
             <Russian>Радиальный</Russian>
             <Spanish>Radial</Spanish>
             <Czech>Radiální</Czech>
+            <Hungarian>Kerek</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion">
             <English>Scrape</English>
@@ -2542,6 +2546,7 @@
             <Polish>Zdejmowanie stazy ...</Polish>
             <Spanish>Quitando torniquete ...</Spanish>
             <French>Retire le tourniquet ...</French>
+            <Hungarian>Érszorító eltávolítása ...</Hungarian>
         </Key>
     </Package>
 </Project>

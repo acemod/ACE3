@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Respawn_Deploy">
@@ -33,6 +33,7 @@
             <Polish>Teleport do bazy</Polish>
             <Russian>Телепортироваться на базу</Russian>
             <French>Téléportation à la base</French>
+            <Hungarian>Bázisra teleportálás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
             <English>Teleport to Rallypoint</English>
@@ -42,6 +43,7 @@
             <Polish>Teleport do punktu zbiórki</Polish>
             <Russian>Телепортироваться на точку сбора</Russian>
             <French>Téléporation au point de ralliement</French>
+            <Hungarian>Gyülekezőpontra teleportálás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToBase">
             <English>Teleported to Base</English>

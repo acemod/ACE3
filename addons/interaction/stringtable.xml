@@ -570,48 +570,56 @@
             <German>Rot zuweisen</German>
             <Spanish>Asignar a rojo</Spanish>
             <Polish>Przydziel do czerwonych</Polish>
+            <Hungarian>Hozzávonás a Piroshoz</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamGreen">
             <English>Assign Green</English>
             <German>Grün zuweisen</German>
             <Spanish>Asignar a verde</Spanish>
             <Polish>Przydziel do zielonych</Polish>
+            <Hungarian>Hozzávonás a Zöldhöz</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamBlue">
             <English>Assign Blue</English>
             <German>Blau zuweisen</German>
             <Spanish>Asignar a azul</Spanish>
             <Polish>Przydziel do niebieskich</Polish>
+            <Hungarian>Hozzávonás a Kékhez</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamYellow">
             <English>Assign Yellow</English>
             <German>Gelb zuweisen</German>
             <Spanish>Asignar a amarillo</Spanish>
             <Polish>Przydziel do żółtych</Polish>
+            <Hungarian>Hozzávonás a Sárgához</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamRed">
             <English>Join Red</English>
             <German>Rot beitreten</German>
             <Spanish>Unirse a rojo</Spanish>
             <Polish>Dołącz do czerwonych</Polish>
+            <Hungarian>Belépés a Pirosba</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamGreen">
             <English>Join Green</English>
             <German>Grün beitreten</German>
             <Spanish>Unirse a verde</Spanish>
             <Polish>Dołącz do zielonych</Polish>
+            <Hungarian>Belépés a Zöldbe</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamBlue">
             <English>Join Blue</English>
             <German>Blau beitreten</German>
             <Spanish>Unirse a azul</Spanish>
             <Polish>Dołącz do niebieskich</Polish>
+            <Hungarian>Belépés a Kékbe</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamYellow">
             <English>Join Yellow</English>
             <German>Gelb beitreten</German>
             <Spanish>Unirse a amarillo</Spanish>
             <Polish>Dołącz do żółtych</Polish>
+            <Hungarian>Belépés a Sárgába</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>

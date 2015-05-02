@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="laser">
         <Key ID="STR_ACE_laser_laserCode">
@@ -7,6 +7,7 @@
             <Polish>Kod lasera</Polish>
             <French>Code laser</French>
             <Russian>Лазерный код</Russian>
+            <Hungarian>Lézerkód</Hungarian>
         </Key>
         <Key ID="STR_ACE_laser_laserCodeUp">
             <English>Laser - Cycle Code Up</English>
@@ -14,6 +15,7 @@
             <Polish>Laser - Następny kod</Polish>
             <French>Laser - Code +</French>
             <Russian>Лазер - увеличить частоту</Russian>
+            <Hungarian>Lézer - kódciklus növelése</Hungarian>
         </Key>
         <Key ID="STR_ACE_laser_laserCodeDown">
             <English>Laser - Cycle Code Down</English>
@@ -21,6 +23,7 @@
             <Polish>Laser - Poprzedni kod</Polish>
             <French>Laser - Code -</French>
             <Russian>Лазер - уменьшить частоту</Russian>
+            <Hungarian>Lézer - kódciklus csökkentése</Hungarian>
         </Key>
     </Package>
 </Project>
