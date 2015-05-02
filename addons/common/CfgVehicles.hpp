@@ -25,12 +25,14 @@ class CfgVehicles {
   // += needs a non inherited entry in that class, otherwise it simply overwrites
   //#include <DefaultItems.hpp>
 
-  class Module_F;
-  class ACE_ModuleCheckPBOs: Module_F {
+   class Logic;
+   class Module_F: Logic {
+     class ModuleDescription {};
+   };
+   class ACE_ModuleCheckPBOs: Module_F {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
     displayName = "$STR_ACE_Common_CheckPBO_DisplayName";
-    description = "$STR_ACE_Common_CheckPBO_Description";
     function = QFUNC(moduleCheckPBOs);
     scope = 2;
     isGlobal = 1;
@@ -80,19 +82,29 @@ class CfgVehicles {
         };
       };
     };
+    class ModuleDescription: ModuleDescription {
+        description = "$STR_ACE_Common_CheckPBO_Description";
+	};
   };
 
   class ACE_ModuleLSDVehicles: Module_F {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
     displayName = "$STR_ACE_Common_LSDVehicles_DisplayName";
+<<<<<<< HEAD
     description = "$STR_ACE_Common_LSDVehicles_Description";
+=======
+>>>>>>> fun continues
     function = "ACE_Common_fnc_moduleLSDVehicles";
     scope = 2;
     icon = QUOTE(PATHTOF(UI\Icon_Module_LSD_ca.paa));
     isGlobal = 1;
     class Arguments {
     };
+    class ModuleDescription: ModuleDescription {
+        description = "$STR_ACE_Common_LSDVehicles_Description";
+		sync[] = {"AnyVehicle"};
+	};
   };
 
   class Box_NATO_Support_F;
