@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ace_weather"};
         versionDesc = "ACE Wind Deflection";
         version = VERSION;
-        author[] = {$STR_ACE_Common_ACETeam, "Glowbal", "Ruthberg", "GieNkoV"};
+        author[] = {$STR_ACE_Common_ACETeam, "Glowbal", "Ruthberg"};
         authorUrl = "http://csemod.com";
     };
 };
