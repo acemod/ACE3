@@ -33,7 +33,6 @@ class CfgVehicles {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
     displayName = "$STR_ACE_Common_CheckPBO_DisplayName";
-	description = "";
     function = QFUNC(moduleCheckPBOs);
     scope = 2;
     isGlobal = 1;
@@ -92,6 +91,7 @@ class CfgVehicles {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
     displayName = "$STR_ACE_Common_LSDVehicles_DisplayName";
+    description = "$STR_ACE_Common_LSDVehicles_Description";
     function = "ACE_Common_fnc_moduleLSDVehicles";
     scope = 2;
     icon = QUOTE(PATHTOF(UI\Icon_Module_LSD_ca.paa));
