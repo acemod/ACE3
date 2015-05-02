@@ -598,28 +598,28 @@
             <German>Rot beitreten</German>
             <Spanish>Unirse a rojo</Spanish>
             <Polish>Dołącz do czerwonych</Polish>
-            <Russian>Присоединится к Красной группе</Russian>
+            <Russian>Присоединиться к Красной группе</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamGreen">
             <English>Join Green</English>
             <German>Grün beitreten</German>
             <Spanish>Unirse a verde</Spanish>
             <Polish>Dołącz do zielonych</Polish>
-            <Russian>Присоединится к Зеленой группе</Russian>
+            <Russian>Присоединиться к Зеленой группе</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamBlue">
             <English>Join Blue</English>
             <German>Blau beitreten</German>
             <Spanish>Unirse a azul</Spanish>
             <Polish>Dołącz do niebieskich</Polish>
-            <Russian>Присоединится к Синей группе</Russian>
+            <Russian>Присоединиться к Синей группе</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamYellow">
             <English>Join Yellow</English>
             <German>Gelb beitreten</German>
             <Spanish>Unirse a amarillo</Spanish>
             <Polish>Dołącz do żółtych</Polish>
-            <Russian>Присоединится к Желтой группе</Russian>
+            <Russian>Присоединиться к Жёлтой группе</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
