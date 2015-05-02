@@ -19,7 +19,7 @@ _calledByClicking = _this select 1;
 if (GVAR(openedMenuType) < 0) exitWith {true};
 
 if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
-    closeDialog 0;
+    (findDisplay 91919) closeDisplay 2;
 };
 
 if(GVAR(actionSelected)) then {
