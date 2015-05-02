@@ -14,7 +14,7 @@
 
 GVAR(currentOptions) = [];
 
-private ["_player","_numInteractObjects","_numInteractions","_actionsVarName","_classActions","_objectActions","_target","_player","_action","_actionData","_active","_cameraPos","_cameraDir"];
+private ["_player","_numInteractObjects","_numInteractions","_actionsVarName","_classActions","_target","_player","_action","_cameraPos","_cameraDir", "_lambda", "_nearestObjects", "_pos"];
 _player = ACE_player;
 
 _fnc_renderNearbyActions = {

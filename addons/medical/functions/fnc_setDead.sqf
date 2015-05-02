@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_force"];
+private ["_unit", "_force", "_reviveVal", "_lifesLeft"];
 _unit = _this select 0;
 _force = false;
 if (count _this >= 2) then {
@@ -26,7 +26,8 @@ if (!local _unit) exitwith {
     false;
 };
 
-if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) && !_force) exitwith {
+_reviveVal = _unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)];
+if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 2)) && !_force) exitwith {
     if (_unit getvariable [QGVAR(inReviveState), false]) exitwith {
         if (GVAR(amountOfReviveLives) > 0) then {
             _lifesLeft = _unit getvariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
