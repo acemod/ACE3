@@ -68,7 +68,7 @@ _distance = if (count _this > 8) then {
 _params = if (count _this > 9) then {
     _this select 9
 } else {
-    [false,false,false,false]
+    [false,false,false,false,false]
 };
 
 _modifierFunction =  if (count _this > 10) then {
