@@ -74,8 +74,8 @@ class CfgVehicles {
                 defaultValue = 3000;
             };
         };
-		class ModuleDescription {
-			description = "$STR_ACE_AdvancedBallistics_Description";
-		};
+        class ModuleDescription {
+            description = "$STR_ACE_AdvancedBallistics_Description";
+        };
     };
 };
