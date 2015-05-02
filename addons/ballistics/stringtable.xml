@@ -1294,5 +1294,9 @@
             <Italian>Calibro: 12.7x99mm (AMAX)&lt;br /&gt;Munizioni: 5</Italian>
             <German>Kaliber:12,7x99mm (AMAX)&lt;br /&gt;Patronen: 5</German>
         </Key>
+        <Key ID="STR_ACE_AmmoSupplyCrate_DisplayName">
+            <English>[ACE] Ammo Supply Crate</English>
+			<Polish>[ACE] Skrzynka z amunicją</Polish>
+        </Key>
     </Package>
 </Project>
