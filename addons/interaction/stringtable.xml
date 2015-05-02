@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Interaction_MainAction">
@@ -570,48 +570,56 @@
             <German>Rot zuweisen</German>
             <Spanish>Asignar a rojo</Spanish>
             <Polish>Przydziel do czerwonych</Polish>
+            <Russian>Назначить в Красную группу</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamGreen">
             <English>Assign Green</English>
             <German>Grün zuweisen</German>
             <Spanish>Asignar a verde</Spanish>
             <Polish>Przydziel do zielonych</Polish>
+            <Russian>Назначить в Зеленую группу</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamBlue">
             <English>Assign Blue</English>
             <German>Blau zuweisen</German>
             <Spanish>Asignar a azul</Spanish>
             <Polish>Przydziel do niebieskich</Polish>
+            <Russian>Назначить в Синюю группу</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamYellow">
             <English>Assign Yellow</English>
             <German>Gelb zuweisen</German>
             <Spanish>Asignar a amarillo</Spanish>
             <Polish>Przydziel do żółtych</Polish>
+            <Russian>Назначить в Желтую группу</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamRed">
             <English>Join Red</English>
             <German>Rot beitreten</German>
             <Spanish>Unirse a rojo</Spanish>
             <Polish>Dołącz do czerwonych</Polish>
+            <Russian>Присоединится к Красной группе</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamGreen">
             <English>Join Green</English>
             <German>Grün beitreten</German>
             <Spanish>Unirse a verde</Spanish>
             <Polish>Dołącz do zielonych</Polish>
+            <Russian>Присоединится к Зеленой группе</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamBlue">
             <English>Join Blue</English>
             <German>Blau beitreten</German>
             <Spanish>Unirse a azul</Spanish>
             <Polish>Dołącz do niebieskich</Polish>
+            <Russian>Присоединится к Синей группе</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamYellow">
             <English>Join Yellow</English>
             <German>Gelb beitreten</German>
             <Spanish>Unirse a amarillo</Spanish>
             <Polish>Dołącz do żółtych</Polish>
+            <Russian>Присоединится к Желтой группе</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
