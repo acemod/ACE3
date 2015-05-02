@@ -55,13 +55,10 @@ class %1 {
     force = 1;
 };", _name, _value, format['"%1"', _typeName]];
 
-        //clipboard seems to be getting cuttoff, so do a backup dump to rpt:
-        diag_log text _compiledConfigEntry;
-        
         _compiledConfig = _compiledConfig + _compiledConfigEntry;
     };
 } forEach EGVAR(common,settings);
 
-copyToClipboard format["%1",_compiledConfig];
+"ace_clipboard" callExtension format["%1",_compiledConfig];
 
 ["STR_ACE_OptionsMenu_settingsExported"] call EFUNC(common,displayTextStructured);
