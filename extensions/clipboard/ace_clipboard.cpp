@@ -29,8 +29,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
         return;
     }
 
-    else {
-
     #ifdef _WIN32
 
     HGLOBAL glob = GlobalAlloc(GMEM_FIXED, input.length()+1);
