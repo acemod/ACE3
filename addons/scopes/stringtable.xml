@@ -10,6 +10,7 @@
             <French>Hausse +</French>
             <German>Kleine Korrektur nach oben</German>
             <Hungarian>Enyhe állítás fel</Hungarian>
+            <Portuguese>Pequeno ajuste para cima</Portuguese>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMinor">
             <English>Minor adjustment down</English>
@@ -20,6 +21,7 @@
             <French>Hausse -</French>
             <German>Kleine Korrektur nach unten</German>
             <Hungarian>Enyhe állítás le</Hungarian>
+            <Portuguese>Pequeno ajuste para baixo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMinor">
             <English>Minor adjustment right</English>
@@ -30,6 +32,7 @@
             <French>Dérive +</French>
             <German>Kleine Korrektur nach rechts</German>
             <Hungarian>Enyhe állítás jobbra</Hungarian>
+            <Portuguese>Pequeno ajuste para direita</Portuguese>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMinor">
             <English>Minor adjustment left</English>
@@ -40,6 +43,7 @@
             <French>Dérive -</French>
             <German>Kleine Korrektur nach links</German>
             <Hungarian>Enyhe állítás balra</Hungarian>
+            <Portuguese>Pequeno ajuste para esquerda</Portuguese>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMajor">
             <English>Major adjustment up</English>
@@ -50,6 +54,7 @@
             <French>Hausse +++</French>
             <German>Große Korrektur nach oben</German>
             <Hungarian>Nagy állítás fel</Hungarian>
+            <Portuguese>Ajuste grande para cima</Portuguese>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMajor">
             <English>Major adjustment down</English>
@@ -60,6 +65,7 @@
             <French>Hausse ---</French>
             <German>Große Korrektur nach unten</German>
             <Hungarian>Nagy állítás le</Hungarian>
+            <Portuguese>Ajuste grande para baixo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMajor">
             <English>Major adjustment right</English>
@@ -70,6 +76,7 @@
             <French>Dérive +++</French>
             <German>Große Korrektur nach rechts</German>
             <Hungarian>Nagy állítás jobbra</Hungarian>
+            <Portuguese>Ajuste grande para direita</Portuguese>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMajor">
             <English>Major adjustment left</English>
@@ -80,6 +87,7 @@
             <French>Dérive ---</French>
             <German>Große Korrektur nach links</German>
             <Hungarian>Nagy állítás balra</Hungarian>
+            <Portuguese>Ajuste grande para esquerda</Portuguese>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustZero">
             <English>Set zero adjustment</English>
@@ -90,6 +98,7 @@
             <French>RAZ corrections</French>
             <German>Auf 0 justieren</German>
             <Hungarian>Állítások nullázása</Hungarian>
+            <Portuguese>Zerar ajuste</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -59,6 +59,7 @@
             <Italian>Laser</Italian>
             <Hungarian>Lézer</Hungarian>
             <Czech>Laser</Czech>
+            <Portuguese>Laser</Portuguese>
         </Key>
         <Key ID="STR_ACE_Laserpointer_IRLaser">
             <English>IR Laser</English>
@@ -70,6 +71,7 @@
             <Italian>Laser IR</Italian>
             <Hungarian>Infravörös Lézer</Hungarian>
             <Czech>IR Laser</Czech>
+            <Portuguese>Laser IV</Portuguese>
         </Key>
         <Key ID="STR_ACE_Laserpointer_switchLaserLight">
             <English>Switch Laser / Infračervený Laser</English>
@@ -81,6 +83,7 @@
             <Spanish>Cambiar láser / Láser IR</Spanish>
             <Hungarian>Lézer / Infravörös Lézer váltása</Hungarian>
             <Czech>Přepnout Laser / IR Laser</Czech>
+            <Portuguese>Alternar entre Laser / Laser IV</Portuguese>
         </Key>
     </Package>
 </Project>

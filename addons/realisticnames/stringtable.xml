@@ -119,6 +119,7 @@
             <French>YABHON-R3 (CAS)</French>
             <Hungarian>YABHON-R3 (Légitámogató)</Hungarian>
             <Italian>YABHON-R3 (CAS)</Italian>
+            <Portuguese>YABHON-R3 (CAS)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_01_Name">
             <English>M-ATV</English>
@@ -730,6 +731,7 @@
             <French>CH-47I Chinook (non-armé)</French>
             <Hungarian>CH-47I Chinook (fegyvertelen)</Hungarian>
             <Italian>CH-47I Chinook (disarmato)</Italian>
+            <Portuguese>CH-47I Chinook (desarmado)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_CAS_01_Name">
             <English>A-10D Thunderbolt II</English>
@@ -1581,6 +1583,7 @@
             <German>Noreen "Bad News" ULR</German>
             <Polish>Noreen "Bad News" ULR</Polish>
             <Hungarian>Noreen "Bad News"ULR</Hungarian>
+            <Portuguese>Noreen "Bad News" ULR</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02">
             <English>Noreen "Bad News" ULR (Black)</English>
@@ -1592,6 +1595,7 @@
             <Polish>Noreen "Bad News" ULR (czarny)</Polish>
             <Italian>Noreen "Bad News" ULR (Nero)</Italian>
             <Hungarian>Noreen "Bad News"ULR (Fekete)</Hungarian>
+            <Portuguese>Noreen "Bad News" ULR (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_camo">
             <English>Noreen "Bad News" ULR (Camo)</English>
@@ -1603,6 +1607,7 @@
             <Polish>Noreen "Bad News" ULR (kamuflaż)</Polish>
             <Italian>Noreen "Bad News" ULR (Camo)</Italian>
             <Hungarian>Noreen "Bad News"ULR (Terepmintás)</Hungarian>
+            <Portuguese>Noreen "Bad News" ULR (Camuflagem)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_sniper">
             <English>Noreen "Bad News" ULR (Sand)</English>
@@ -1614,6 +1619,7 @@
             <Polish>Noreen "Bad News" ULR (piaskowy)</Polish>
             <Italian>Noreen "Bad News" ULR (Sabbia)</Italian>
             <Hungarian>Noreen "Bad News"ULR (Homok)</Hungarian>
+            <Portuguese>Noreen "Bad News" ULR (Deserto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_03">
             <English>SIG 556</English>
@@ -1625,6 +1631,7 @@
             <German>SIG 556</German>
             <Italian>SIG 556</Italian>
             <Hungarian>SIG 556</Hungarian>
+            <Portuguese>SIG 556</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03">
             <English>SIG 556 (Black)</English>
@@ -1636,6 +1643,7 @@
             <German>SIG 556 (Schwarz)</German>
             <Italian>SIG 556 (Nero)</Italian>
             <Hungarian>SIG 556 (Fekete)</Hungarian>
+            <Portuguese>SIG 556 (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_khaki">
             <English>SIG 556 (Khaki)</English>
@@ -1647,6 +1655,7 @@
             <German>SIG 556 (Khaki)</German>
             <Italian>SIG 556 (Khaki)</Italian>
             <Hungarian>SIG 556 (Khaki)</Hungarian>
+            <Portuguese>SIG 556 (Caqui)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_tan">
             <English>SIG 556 (Sand)</English>
@@ -1658,6 +1667,7 @@
             <German>SIG 556 (Sand)</German>
             <Italian>SIG 556 (Sabbia)</Italian>
             <Hungarian>SIG 556 (Homok)</Hungarian>
+            <Portuguese>SIG 556 (Deserto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_multicam">
             <English>SIG 556 (Camo)</English>
@@ -1669,6 +1679,7 @@
             <German>SIG 556 (Camo)</German>
             <Italian>SIG 556 (Camo)</Italian>
             <Hungarian>SIG 556 (Terepmintás)</Hungarian>
+            <Portuguese>SIG 556 (Camuflagem)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_woodland">
             <English>SIG 556 (Woodland)</English>
@@ -1680,6 +1691,7 @@
             <German>SIG 556 (Woodland)</German>
             <Italian>SIG 556 (Woodland)</Italian>
             <Hungarian>SIG 556 (Erdőmintás)</Hungarian>
+            <Portuguese>SIG 556 (Floresta)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
             <English>SIG 556 (provisional) spotter</English>
@@ -1691,6 +1703,7 @@
             <German>SIG 556 (provisorisch) Beobachter</German>
             <Italian>SIG 556 (provisional) spotter</Italian>
             <Hungarian>SIG 556 (Ellátmányi) Megfigyelő</Hungarian>
+            <Portuguese>SIG 556 (provisional) observador</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_04">
             <English>ASP-1 Kir</English>
@@ -1702,6 +1715,7 @@
             <Italian>ASP-1 Kir</Italian>
             <Polish>ASP-1 Kir</Polish>
             <Hungarian>ASP-1 Kir</Hungarian>
+            <Portuguese>ASP-1 Kir</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04">
             <English>ASP-1 Kir (Black)</English>
@@ -1713,6 +1727,7 @@
             <Polish>ASP-1 Kir (czarny)</Polish>
             <Italian>ASP-1 Kir (Nero)</Italian>
             <Hungarian>ASP-1 Kir (Fekete)</Hungarian>
+            <Portuguese>ASP-1 Kir (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04_Tan">
             <English>ASP-1 Kir (Tan)</English>
@@ -1724,6 +1739,7 @@
             <Polish>ASP-1 Kir (Tan)</Polish>
             <Italian>ASP-1 Kir (Tan)</Italian>
             <Hungarian>ASP-1 Kir (Cserszín)</Hungarian>
+            <Portuguese>ASP-1 Kir (Deserto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_05">
             <English>Cyrus</English>
@@ -1735,6 +1751,7 @@
             <Italian>Cyrus</Italian>
             <Polish>Cyrus</Polish>
             <Hungarian>Cyrus</Hungarian>
+            <Portuguese>Cyrus</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_blk">
             <English>Cyrus (Black)</English>
@@ -1746,6 +1763,7 @@
             <Polish>Cyrus (czarny)</Polish>
             <Italian>Cyrus (Nero)</Italian>
             <Hungarian>Cyrus (Fekete)</Hungarian>
+            <Portuguese>Cyrus (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_hex">
             <English>Cyrus (Hex)</English>
@@ -1757,6 +1775,7 @@
             <Polish>Cyrus (hex)</Polish>
             <Italian>Cyrus (Hex)</Italian>
             <Hungarian>Cyrus (Hex)</Hungarian>
+            <Portuguese>Cyrus (Hex)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_tan">
             <English>Cyrus (Tan)</English>
@@ -1768,6 +1787,7 @@
             <Polish>Cyrus (podpalany)</Polish>
             <Italian>Cyrus (Tan)</Italian>
             <Hungarian>Cyrus (Cserszín)</Hungarian>
+            <Portuguese>Cyrus (Deserto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_06">
             <English>M14</English>
@@ -1779,6 +1799,7 @@
             <German>M14</German>
             <Italian>M14</Italian>
             <Hungarian>M14</Hungarian>
+            <Portuguese>M14</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_camo">
             <English>M14 (Camo)</English>
@@ -1790,6 +1811,7 @@
             <German>M14 (Camo)</German>
             <Italian>M14 (Camo)</Italian>
             <Hungarian>M14 (Terepmintás)</Hungarian>
+            <Portuguese>M14 (Camuflagem)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_olive">
             <English>M14 (Olive)</English>
@@ -1801,6 +1823,7 @@
             <German>M14 (Olive)</German>
             <Italian>M14 (Olive)</Italian>
             <Hungarian>M14 (Olíva)</Hungarian>
+            <Portuguese>M14 (Oliva)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01">
             <English>HK121</English>
@@ -1812,6 +1835,7 @@
             <Italian>HK121</Italian>
             <Polish>HK121</Polish>
             <Hungarian>HK121</Hungarian>
+            <Portuguese>HK121</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_hex">
             <English>HK121 (Hex)</English>
@@ -1823,6 +1847,7 @@
             <Polish>HK121 (hex)</Polish>
             <Italian>HK121 (Hex)</Italian>
             <Hungarian>HK121 (Hex)</Hungarian>
+            <Portuguese>HK121 (Hex)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_tan">
             <English>HK121 (Tan)</English>
@@ -1834,6 +1859,7 @@
             <Polish>HK121 (podpalany)</Polish>
             <Italian>HK121 (Tan)</Italian>
             <Hungarian>HK121 (Cserszín)</Hungarian>
+            <Portuguese>HK121 (Deserto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02">
             <English>LWMMG</English>
@@ -1845,6 +1871,7 @@
             <German>LWMMG</German>
             <Italian>LWMMG</Italian>
             <Hungarian>LWMMG</Hungarian>
+            <Portuguese>LWMMG</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_camo">
             <English>LWMMG (MTP)</English>
@@ -1856,6 +1883,7 @@
             <German>LWMMG (MTP)</German>
             <Italian>LWMMG (MTP)</Italian>
             <Hungarian>LWMMG (MTP)</Hungarian>
+            <Portuguese>LWMMG (MTP)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_black">
             <English>LWMMG (Black)</English>
@@ -1867,6 +1895,7 @@
             <German>LWMMG (Schwarz)</German>
             <Italian>LWMMG (Nero)</Italian>
             <Hungarian>LWMMG (Fekete)</Hungarian>
+            <Portuguese>LWMMG (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_sand">
             <English>LWMMG (Sand)</English>
@@ -1878,6 +1907,7 @@
             <German>LWMMG (Sand)</German>
             <Italian>LWMMG (Sabbia)</Italian>
             <Hungarian>LWMMG (Homok)</Hungarian>
+            <Portuguese>LWMMG (Deserto)</Portuguese>
         </Key>
     </Package>
 </Project>
