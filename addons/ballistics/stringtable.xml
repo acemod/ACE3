@@ -519,7 +519,7 @@
             <Spanish>9.3mm IR-DIM</Spanish>
             <Russian>9,3 мм ИК-трассирующие</Russian>
             <Italian>9.3mm IR-DIM</Italian>
-            <Portuguese>9.3mm Traçante IR-DIM</Portuguese>
+            <Portuguese>9.3mm IR-DIM</Portuguese>
         </Key>
         <Key ID="STR_ACE_10Rnd_93x64_DMR_05_Mag_Tracer_DimDescription">
             <English>Caliber: 9.3x64mm Tracer IR-DIM&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
@@ -715,10 +715,10 @@
             <French>7.62mm</French>
             <Spanish>7.62mm</Spanish>
             <Russian>7,62 мм</Russian>
-            <German>7,62x54mm </German>
-            <Italian>7.62mm IR-DIM</Italian>
+            <German>7,62mm </German>
+            <Italian>7.62mm</Italian>
             <Czech>7.62mm</Czech>
-            <Portuguese>7.62mm Traçante</Portuguese>
+            <Portuguese>7.62mm</Portuguese>
         </Key>
         <Key ID="STR_ACE_10Rnd_762x54_Tracer_mag_Description">
             <English>7.62x54mm 10Rnd Tracer Mag</English>
@@ -911,7 +911,7 @@
             <English>7.62mm M118LR</English>
             <Polish>7,62mm M118LR</Polish>
             <French>7.62mm M118LR</French>
-            <Spanish>7.62mm (M118LR)</Spanish>
+            <Spanish>7.62mm M118LR</Spanish>
             <Russian>7,62 мм M118LR</Russian>
             <German>7,62mm M118LR</German>
             <Italian>7.62mm M118LR</Italian>
@@ -944,7 +944,7 @@
             <English>7.62mm M118LR</English>
             <Polish>7,62mm M118LR</Polish>
             <French>7.62mm M118LR</French>
-            <Spanish>7.62mm (M118LR)</Spanish>
+            <Spanish>7.62mm M118LR</Spanish>
             <Russian>7,62 мм M118LR</Russian>
             <German>7,62mm M118LR</German>
             <Italian>7.62mm M118LR</Italian>
@@ -1172,15 +1172,15 @@
             <Portuguese>Carregador 7.62mm com 20 cartuchos (Mk248 Mod 0)</Portuguese>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_NameShort">
-            <English>7.62mm (Mk248 Mod 0)</English>
-            <Polish>7,62mm (Mk248 Mod 0)</Polish>
-            <French>7.62mm (Mk248 Mod 0)</French>
-            <Spanish>7.62mm (Mk248 Mod 0)</Spanish>
-            <Russian>7,62 мм (Mk248 Mod 0)</Russian>
-            <German>7,62mm (Mk248 Mod 0)</German>
-            <Italian>7.62mm (Mk248 Mod 0)</Italian>
-            <Czech>7.62mm (Mk248 Mod 0)</Czech>
-            <Portuguese>7.62mm (Mk248 Mod 0)</Portuguese>
+            <English>7.62mm Mk248</English>
+            <Polish>7,62mm Mk248</Polish>
+            <French>7.62mm Mk248</French>
+            <Spanish>7.62mm Mk248</Spanish>
+            <Russian>7,62 мм Mk248</Russian>
+            <German>7,62mm Mk248</German>
+            <Italian>7.62mm Mk248</Italian>
+            <Czech>7.62mm Mk248</Czech>
+            <Portuguese>7.62mm Mk248</Portuguese>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_0_Mag_Description">
             <English>Caliber: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Rounds: 20</English>
@@ -1205,15 +1205,15 @@
             <Portuguese>Carregador 7.62mm com 20 cartuchos (Mk248 Mod 1)</Portuguese>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_NameShort">
-            <English>7.62mm (Mk248 Mod 1)</English>
-            <Polish>7,62mm (Mk248 Mod 1)</Polish>
-            <French>7.62mm (Mk248 Mod 1)</French>
-            <Spanish>7.62mm (Mk248 Mod 1)</Spanish>
-            <Russian>7,62 мм (Mk248 Mod 1)</Russian>
-            <German>7,62mm (Mk248 Mod 1)</German>
-            <Italian>7.62mm (Mk248 Mod 1)</Italian>
-            <Czech>7.62mm (Mk248 Mod 1)</Czech>
-            <Portuguese>7.62mm (Mk248 Mod 1)</Portuguese>
+            <English>7.62mm Mk248</English>
+            <Polish>7,62mm Mk248</Polish>
+            <French>7.62mm Mk248</French>
+            <Spanish>7.62mm Mk248</Spanish>
+            <Russian>7,62 мм Mk248</Russian>
+            <German>7,62mm Mk248</German>
+            <Italian>7.62mm Mk248</Italian>
+            <Czech>7.62mm Mk248</Czech>
+            <Portuguese>7.62mm Mk248</Portuguese>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Mk248_Mod_1_Mag_Description">
             <English>Caliber: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Rounds: 20</English>
@@ -1238,15 +1238,15 @@
             <Portuguese>Carregador 7.62mm com 20 cartuchos (Berger Hybrid OTM)</Portuguese>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_NameShort">
-            <English>7.62mm (OTM)</English>
-            <Polish>7,62mm (OTM)</Polish>
-            <French>7.62mm (OTM)</French>
-            <Spanish>7.62mm (OTM)</Spanish>
-            <Russian>7,62 мм (OTM)</Russian>
-            <German>7,62mm (OTM)</German>
-            <Italian>7.62mm (OTM)</Italian>
-            <Czech>7.62mm (OTM)</Czech>
-            <Portuguese>7.62mm (OTM)</Portuguese>
+            <English>7.62mm OTM</English>
+            <Polish>7,62mm OTM</Polish>
+            <French>7.62mm OTM</French>
+            <Spanish>7.62mm OTM</Spanish>
+            <Russian>7,62 мм OTM</Russian>
+            <German>7,62mm OTM</German>
+            <Italian>7.62mm OTM</Italian>
+            <Czech>7.62mm OTM</Czech>
+            <Portuguese>7.62mm OTM</Portuguese>
         </Key>
         <Key ID="STR_ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Description">
             <English>Caliber: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Rounds: 20</English>
@@ -1343,7 +1343,7 @@
             <Polish>.338 HPBT</Polish>
             <Russian>.338 экспансивные</Russian>
             <German>.338 HPBT</German>
-            <Italian>.338 (HPBT)</Italian>
+            <Italian>.338 HPBT</Italian>
             <Czech>.338 HPBT</Czech>
             <Portuguese>.338 HPBT</Portuguese>
         </Key>
