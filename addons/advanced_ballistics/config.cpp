@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_ballistics", "ace_weather", "ace_modules"};
-        author[] = {"Ruthberg", "GieNkoV"};
+        author[] = {"Ruthberg"};
         authorUrl = "https://github.com/ulteq";
         VERSION_CONFIG;
     };
