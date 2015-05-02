@@ -2,7 +2,6 @@
 
 ADDON = false;
 
-PREP(calculateAirDensity);
 PREP(calculateAmmoTemperatureVelocityShift);
 PREP(calculateAtmosphericCorrection);
 PREP(calculateBarrelLengthVelocityShift);

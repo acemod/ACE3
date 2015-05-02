@@ -28,6 +28,7 @@
     ]
 
 PARAMS_2(_caller,_target);
+private "_display";
 
 //Sanity Checks
 if (_caller != ACE_player) exitwith {ERROR("Player isn't caller?");};
@@ -59,6 +60,7 @@ GVAR(disarmTarget) = _target;
 
 //Setup PFEH
 [{
+    private ["_groundContainer", "_targetContainer", "_playerName", "_rankPicture", "_rankIndex", "_targetUniqueItems", "_holderUniqueItems", "_holder"];
     disableSerialization;
     EXPLODE_2_PVT(_this,_args,_pfID);
     EXPLODE_3_PVT(_args,_player,_target,_display);
@@ -71,6 +73,7 @@ GVAR(disarmTarget) = _target;
         GVAR(disarmTarget) = objNull;
         if (!isNull _display) then {closeDialog 0;}; //close dialog if still open
     } else {
+
         _groundContainer = _display displayCtrl 632;
         _targetContainer = _display displayCtrl 633;
         _playerName = _display displayCtrl 111;

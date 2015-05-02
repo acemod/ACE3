@@ -9,16 +9,19 @@
             <Czech>Označit cíl / Změřit vzdálenost</Czech>
             <Spanish>Iluminar objetivo / Medir distancia</Spanish>
             <Russian>Подсветить цель / Замерить расстояние</Russian>
+            <Hungarian>Célpont lézerezése / Távolság Bemérése</Hungarian>
+            <Italian>Misura la distanza</Italian>
+            <Portuguese>Marcar com laser / Medir Distância</Portuguese>
         </Key>
         <Key ID="STR_ACE_FCS_ZeroedTo">
             <English>Zeroed To</English>
             <German>Haltepunkt</German>
-            <Spanish>Fijado a</Spanish>
+            <Spanish>Ajustado a</Spanish>
             <Polish>Wyzerowany na</Polish>
             <Czech>Nastaveno na</Czech>
             <French>Zéroté à</French>
             <Russian>Выставлено на</Russian>
-            <Hungarian>Nullázás</Hungarian>
+            <Hungarian>Nullázási táv</Hungarian>
             <Portuguese>Fixado em</Portuguese>
             <Italian>Azzeramento a</Italian>
         </Key>
@@ -65,7 +68,7 @@
             <French>SCT réinitialisé.</French>
             <Polish>SKO został zresetowany.</Polish>
             <Czech>FCS byl resetován.</Czech>
-            <Hungarian>Az FCS visszaállítva</Hungarian>
+            <Hungarian>FCS visszaállítva.</Hungarian>
             <Portuguese>FCS reiniciado.</Portuguese>
             <Italian>L'FCS è stato azzerato</Italian>
             <Russian>СУО обнулен.</Russian>

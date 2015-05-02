@@ -1,46 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-11 -->
 <Project name="ACE">
-  <Package name="Parachute">
-    <Key ID="STR_ACE_Parachute_showAltimeter">
-      <English>Altimeter</English>
-      <French>Altimètre</French>
-      <German>Höhenmesser</German>
-      <Czech>Výškoměr</Czech>
-      <Polish>Wysokościomierz</Polish>
-      <Spanish>Altímetro</Spanish>
-      <Hungarian>Magasságmérő</Hungarian>
-      <Russian>Высотомер</Russian>
-    </Key>
-    <Key ID="STR_ACE_Parachute_AltimeterDisplayName">
-      <English>Altimeter Watch</English>
-      <French>Montre altimètre</French>
-      <German>Höhenmesser</German>
-      <Czech>Hodinky s výškoměrem</Czech>
-      <Polish>Zegarek z wysokościomierzem</Polish>
-      <Spanish>Reloj altímetro</Spanish>
-      <Hungarian>Magasságmérő</Hungarian>
-      <Russian>Часы с высотомером</Russian>
-    </Key>
-    <Key ID="STR_ACE_Parachute_AltimeterDescription">
-      <English>Used to show height, descent rate and the time.</English>
-      <French>Affiche la hauteur, le taux de descente et l'heure.</French>
-      <German>Zeigt Höhe, Fallgeschwindigkeit und Uhrzeit.</German>
-      <Czech>Používané k zjištění výšky, rychlosti sestupu a času.</Czech>
-      <Polish>Używany przez spadochroniarzy, pokazuje wysokość, prędkość opadania oraz czas.</Polish>
-      <Spanish>Utilizado para mostrar altura, tasa de descenso y hora.</Spanish>
-      <Hungarian>Mutatja a magasságot, zuhanás sebességét és az időt.</Hungarian>
-      <Russian>Используется для определения высоты, скорости снижения и времени.</Russian>
-    </Key>
-    <Key ID="STR_ACE_Parachute_NonSteerableParachute">
-      <English>Non-Steerable Parachute</English>
-      <German>Ungelenkter Fallschirm</German>
-      <Spanish>Paracaídas no dirigible</Spanish>
-      <French>Parachute non manœuvrable</French>
-      <Polish>Niesterowalny spadochron</Polish>
-      <Czech>Neříditelný padák</Czech>
-      <Hungarian>Irányithatatlan ejtőernyő</Hungarian>
-      <Russian>Неуправляемый парашют</Russian>
-    </Key>
-  </Package>
+    <Package name="Parachute">
+        <Key ID="STR_ACE_Parachute_showAltimeter">
+            <English>Altimeter</English>
+            <French>Altimètre</French>
+            <German>Höhenmesser</German>
+            <Czech>Výškoměr</Czech>
+            <Polish>Wysokościomierz</Polish>
+            <Spanish>Altímetro</Spanish>
+            <Hungarian>Magasságmérő</Hungarian>
+            <Russian>Высотомер</Russian>
+            <Italian>Altimetro</Italian>
+            <Portuguese>Altímetro</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Parachute_AltimeterDisplayName">
+            <English>Altimeter Watch</English>
+            <French>Montre altimètre</French>
+            <German>Höhenmesser</German>
+            <Czech>Hodinky s výškoměrem</Czech>
+            <Polish>Zegarek z wysokościomierzem</Polish>
+            <Spanish>Reloj altímetro</Spanish>
+            <Hungarian>Magasságmérős karóra</Hungarian>
+            <Russian>Часы с высотомером</Russian>
+            <Italian>Controlla l'altimetro</Italian>
+            <Portuguese>Relógio Altímetro</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Parachute_AltimeterDescription">
+            <English>Used to show height, descent rate and the time.</English>
+            <French>Affiche la hauteur, le taux de descente et l'heure.</French>
+            <German>Zeigt Höhe, Fallgeschwindigkeit und Uhrzeit.</German>
+            <Czech>Používané k zjištění výšky, rychlosti sestupu a času.</Czech>
+            <Polish>Używany przez spadochroniarzy, pokazuje wysokość, prędkość opadania oraz czas.</Polish>
+            <Spanish>Utilizado para mostrar altura, tasa de descenso y hora.</Spanish>
+            <Hungarian>Mutatja a magasságot, a zuhanási sebességet, és az időt.</Hungarian>
+            <Russian>Используется для определения высоты, скорости снижения и времени.</Russian>
+            <Italian>Usato per mostrare l'altitudine, la velocità di discesa e l'ora.</Italian>
+            <Portuguese>Usado para mostrar altura, taxa de descida e o tempo.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Parachute_NonSteerableParachute">
+            <English>Non-Steerable Parachute</English>
+            <German>Ungelenkter Fallschirm</German>
+            <Spanish>Paracaídas no dirigible</Spanish>
+            <French>Parachute non manœuvrable</French>
+            <Polish>Niesterowalny spadochron</Polish>
+            <Czech>Neříditelný padák</Czech>
+            <Hungarian>Irányíthatatlan ejtőernyő</Hungarian>
+            <Russian>Неуправляемый парашют</Russian>
+            <Italian>Paracadute non manovrabile</Italian>
+            <Portuguese>Para-querdas não controlável</Portuguese>
+        </Key>
+    </Package>
 </Project>

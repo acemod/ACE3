@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Grenades">
         <Key ID="STR_ACE_Grenades_SwitchGrenadeMode">
@@ -10,7 +9,7 @@
             <Czech>Změnit styl hodu granátu</Czech>
             <French>Changer type de lancer de grenade</French>
             <Russian>Сменить режим броска гранаты</Russian>
-            <Hungarian>Gránátdobás mód váltás</Hungarian>
+            <Hungarian>Gránátkezelési mód váltása</Hungarian>
             <Italian>Cambia tipo di granata</Italian>
             <Portuguese>Alternar Modo de Granada</Portuguese>
         </Key>
@@ -20,7 +19,7 @@
             <Spanish>Lanzamiento normal</Spanish>
             <Polish>Normalny rzut</Polish>
             <Czech>Normální hod</Czech>
-            <French>Lancer Normal</French>
+            <French>Lancer normal</French>
             <Russian>Нормальный бросок</Russian>
             <Hungarian>Normál dobás</Hungarian>
             <Italian>Lancio normale</Italian>
@@ -32,7 +31,7 @@
             <Spanish>Lanzamiento alto</Spanish>
             <Polish>Wysoki rzut</Polish>
             <Czech>Vysoký hod</Czech>
-            <French>Lancer Haut</French>
+            <French>Lancer haut</French>
             <Russian>Высокий бросок</Russian>
             <Hungarian>Magas dobás</Hungarian>
             <Italian>Lancio verso l'alto</Italian>
@@ -44,7 +43,7 @@
             <Spanish>Lanzamiento preciso</Spanish>
             <Polish>Precyzyjny rzut</Polish>
             <Czech>Přesný hod</Czech>
-            <French>Lancer Précis</French>
+            <French>Lancer précis</French>
             <Russian>Точный бросок</Russian>
             <Hungarian>Pontos dobás</Hungarian>
             <Italian>Lancio preciso</Italian>
@@ -53,12 +52,12 @@
         <Key ID="STR_ACE_Grenades_RollGrenade">
             <English>Roll Grenade</English>
             <German>Granate rollen</German>
-            <Spanish>Rodar granada</Spanish>
+            <Spanish>Lanzamiento raso</Spanish>
             <Polish>Po ziemi</Polish>
             <Czech>Po zemi</Czech>
-            <French>Lancer Roulé</French>
+            <French>Lancer roulé</French>
             <Russian>Катить гранату</Russian>
-            <Hungarian>Gurítás</Hungarian>
+            <Hungarian>Gránát gurítása</Hungarian>
             <Italian>Fai rotolare la granata</Italian>
             <Portuguese>Rolar Granada</Portuguese>
         </Key>
@@ -70,7 +69,7 @@
             <Czech>Upustit granát</Czech>
             <French>Lâcher la grenade</French>
             <Russian>Бросить себе под ноги</Russian>
-            <Hungarian>Ejtés</Hungarian>
+            <Hungarian>Gránát ejtése</Hungarian>
             <Italian>Lascia la granata</Italian>
             <Portuguese>Largar Granada</Portuguese>
         </Key>
@@ -78,31 +77,31 @@
             <English>M84 Stun Grenade</English>
             <German>M84 Blendgranate</German>
             <Spanish>Granada aturdidora M84</Spanish>
-            <French>M84 Grenade Incapacitante</French>
+            <French>M84 Grenade incapacitante</French>
             <Polish>Granat hukowy M84</Polish>
             <Czech>Omračující granát M84</Czech>
             <Russian>M84 светозвуковая граната</Russian>
-            <Hungarian>M84 Villanógránát</Hungarian>
+            <Hungarian>M84 Kábítógránát</Hungarian>
             <Italian>Granata Stordente M84</Italian>
             <Portuguese>M84 granada de atordoamento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_Description">
             <English>Also known as flashbang. Causes immediate flash blindness, deafness, tinnitus, and inner ear disturbance.</English>
             <German>Verursacht temporäre Blind- und Taubheit.</German>
-            <Spanish>Produce de manera inmediata ceguera, sordera, tinitus y afecta el oído interior.</Spanish>
+            <Spanish>Tambien conocida como granada cegadora. Produce de manera inmediata ceguera, sordera, tinitus y afecta el oído interior.</Spanish>
             <French>Les grenades incapacitantes servent à désorienter ou distraire une menace pendant quelques secondes.</French>
             <Polish>Znany też jako flashbang. Powoduje natychmiastową tymczasową ślepotę, głuchotę, dzwonienie w uszach i inne zaburzenia ucha wewnętrznego.</Polish>
             <Czech>Omračující granát je taktická nesmrtící zbraň používaná při záchraně rukojmí a zvládání davu.</Czech>
             <Russian>XM84 (M84) - граната нелетального действия, и предназначена для отвлечения и временного вывода из строя, либо дезориентации противника. Основное использование нашла при освобождении заложников, захвате преступников и террористов, а также проведении диверсионных миссий.</Russian>
-            <Hungarian>Eldobás után felrobban és éles hang, valamint fényhatással zavarja össze a környezetében tartózkodókat.</Hungarian>
+            <Hungarian>Villanógránát néven is ismert. Azonnali villanási vakságot, süketséget, fülzúgást, és belső füli zavart okoz.</Hungarian>
             <Italian>Anche conosciuta come flashbang. Causa accecamento immediato, sensazioni di sposatezza, mancanza d'equilibrio e disturbi al timpano.</Italian>
-            <Portuguese>Um tipo de granada não-letal destinado a confundir, desorientar e distrair uma potencial ameaça.</Portuguese>
+            <Portuguese>Também conhecida como flashbang. Causa uma clarão imediato, cegueira, surdez, zumbido e distúrbio no tímpano.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_White_Name">
             <English>M127A1 Hand Held Signal (White)</English>
             <German>M127A1 Leuchtmittel (Weiß)</German>
             <Czech>Světlice M127A1 (Bílá)</Czech>
-            <Hungarian>M127A1 Jelzőrakéta (Fehér)</Hungarian>
+            <Hungarian>M127A1 Kézi Jelzőrakéta (Fehér)</Hungarian>
             <Italian>M127A1 Bengala (Bianco)</Italian>
             <Polish>Flara ręczna sygnałowa M127A1 (biała)</Polish>
             <Portuguese>M127A1 Sinalizador (Branco)</Portuguese>
@@ -114,7 +113,7 @@
             <English>M127A1 Hand Held Signal (Red)</English>
             <German>M127A1 Leuchtmittel (Rot)</German>
             <Czech>Světlice M127A1 (Červená)</Czech>
-            <Hungarian>M127A1 Jelzőrakéta (Piros)</Hungarian>
+            <Hungarian>M127A1 Kézi Jelzőrakéta (Piros)</Hungarian>
             <Italian>M127A1 Bengala (Rosso)</Italian>
             <Polish>Flara ręczna sygnałowa M127A1 (czerwona)</Polish>
             <Portuguese>M127A1 Sinalizador (Vermelho)</Portuguese>
@@ -126,7 +125,7 @@
             <English>M127A1 Hand Held Signal (Green)</English>
             <German>M127A1 Leuchtmittel (Grün)</German>
             <Czech>Světlice M127A1 (Zelená)</Czech>
-            <Hungarian>M127A1 Jelzőrakéta (Zöld)</Hungarian>
+            <Hungarian>M127A1 Kézi Jelzőrakéta (Zöld)</Hungarian>
             <Italian>M127A1 Bengala (Verde)</Italian>
             <Polish>Flara ręczna sygnałowa M127A1 (zielona)</Polish>
             <Portuguese>M127A1 Sinalizador (Verde)</Portuguese>
@@ -138,7 +137,7 @@
             <English>M127A1 Hand Held Signal (Yellow)</English>
             <German>M127A1 Leuchtmittel (Gelb)</German>
             <Czech>Světlice M127A1 (Žlutá)</Czech>
-            <Hungarian>M127A1 Jelzőrakéta (Sárga)</Hungarian>
+            <Hungarian>M127A1 Kézi Jelzőrakéta (Sárga)</Hungarian>
             <Italian>M127A1 Bengala (Giallo)</Italian>
             <Polish>Flara ręczna sygnałowa M127A1 (żółta)</Polish>
             <Portuguese>M127A1 Sinalizador (Amarelo)</Portuguese>
@@ -150,10 +149,10 @@
             <English>White Hand Flare</English>
             <German>Weiße Leuchtkugel, wird wie eine Granate geworfen.</German>
             <Czech>Světlice (Bílá)</Czech>
-            <Hungarian>Jelzőrakéta (Fehér)</Hungarian>
+            <Hungarian>Kézi jelzőrakéta, Fehér színű</Hungarian>
             <Italian>Bengala (Bianco)</Italian>
             <Polish>Flara ręczna (biała)</Polish>
-            <Portuguese>Sinalizador (Branco)</Portuguese>
+            <Portuguese>Sinalizador de Mão (Branco)</Portuguese>
             <Russian>Фальшфейер (Белый)</Russian>
             <Spanish>Bengala (Blanca)</Spanish>
             <French>Feux à main (Blanc)</French>
@@ -162,10 +161,10 @@
             <English>Red Hand Flare</English>
             <German>Rote Leuchtkugel, wird wie eine Granate geworfen.</German>
             <Czech>Světlice (Červená)</Czech>
-            <Hungarian>Jelzőrakéta (Piros)</Hungarian>
+            <Hungarian>Kézi jelzőrakéta, Piros színű</Hungarian>
             <Italian>Bengala (Rosso)</Italian>
             <Polish>Flara ręczna (czerwona)</Polish>
-            <Portuguese>Sinalizador (Vermelho)</Portuguese>
+            <Portuguese>Sinalizador de Mão (Vermelho)</Portuguese>
             <Russian>Фальшфейер (Красный)</Russian>
             <Spanish>Bengala (Roja)</Spanish>
             <French>Feux à main (Rouge)</French>
@@ -174,10 +173,10 @@
             <English>Green Hand Flare</English>
             <German>Grüne Leuchtkugel, wird wie eine Granate geworfen.</German>
             <Czech>Světlice (Zelená)</Czech>
-            <Hungarian>Jelzőrakéta (Zöld)</Hungarian>
+            <Hungarian>Kézi jelzőrakéta, Zöld színű</Hungarian>
             <Italian>Bengala (Verde)</Italian>
             <Polish>Flara ręczna (zielona)</Polish>
-            <Portuguese>Sinalizador (Verde)</Portuguese>
+            <Portuguese>Sinalizador de Mão (Verde)</Portuguese>
             <Russian>Фальшфейер (Зелёный)</Russian>
             <Spanish>Bengala (Verde)</Spanish>
             <French>Feux à main (Vert)</French>
@@ -186,10 +185,10 @@
             <English>Yellow Hand Flare</English>
             <German>Gelbe Leuchtkugel, wird wie eine Granate geworfen.</German>
             <Czech>Světlice (Žlutá)</Czech>
-            <Hungarian>Jelzőrakéta (Sárga)</Hungarian>
+            <Hungarian>Kézi jelzőrakéta, Sárga színű</Hungarian>
             <Italian>Bengala (Giallo)</Italian>
             <Polish>Flara ręczna (żółta)</Polish>
-            <Portuguese>Sinalizador (Amarelo)</Portuguese>
+            <Portuguese>Sinalizador de Mão (Amarelo)</Portuguese>
             <Russian>Фальшфейер (Жёлтые)</Russian>
             <Spanish>Bengala (Amarilla)</Spanish>
             <French>Feux à main (Jaune)</French>

@@ -1,4 +1,4 @@
-Copyright (C)  2014  Felix "KoffeinFlummi" Wiegand
+Copyright (C)  2015  Felix "KoffeinFlummi" Wiegand
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -21,6 +21,10 @@ source code of the individual modules.
 
 When publishing a derivative of this product you may not use a name that
 might create the impression that your version is an official release.
+
+Some folders of this project may contain a seperate LICENSE file. Should
+that be the case, everything in that folder and all subfolders is subject
+to that license instead.
 
 
 ============================================================================

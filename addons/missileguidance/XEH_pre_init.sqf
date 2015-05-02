@@ -7,11 +7,15 @@ PREP(changeMissileDirection);
 PREP(checkSeekerAngle);
 PREP(checkLos);
 
-PREP(fired);
+PREP(onFired);
+PREP(onIncomingMissile);
 
 PREP(guidancePFH);
 PREP(doAttackProfile); 
 PREP(doSeekerSearch);
+
+PREP(doHandoff);
+PREP(handleHandoff);
 
 // Attack Profiles
 PREP(attackProfile_LIN);

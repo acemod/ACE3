@@ -82,7 +82,7 @@ class CfgAmmo {
         SmokeShellSoundHit3[] = {"A3\Sounds_F\weapons\smokeshell\smoke_3",1.25893,1,100};
         SmokeShellSoundLoop1[] = {"A3\Sounds_F\weapons\smokeshell\smoke_loop1",0.125893,1,70};
         SmokeShellSoundLoop2[] = {"A3\Sounds_F\weapons\smokeshell\smoke_loop2",0.125893,1,70};
-        timeToLive = 60;
+        timeToLive = 6;
         fuseDistance = 2.3;
         model = PATHTOF(models\ACE_m84_thrown.p3d);
     };

@@ -14,7 +14,7 @@
 
 EXPLODE_1_PVT(_this,_target);
 
-private ["_objectType","_actionsVarName"];
+private ["_objectType","_actionsVarName", "_canCollapse", "_children", "_enableInside", "_entry", "_entryCfg", "_i", "_insertChildren", "_modifierFunction", "_runOnHover"];
 _objectType = _target;
 if (typeName _target == "OBJECT") then {
     _objectType = typeOf _target;
@@ -26,8 +26,8 @@ if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
 
 private "_recurseFnc";
 _recurseFnc = {
-    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_selection", "_condition", "_showDisabled",
-            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren"];
+    private ["_actions", "_displayName", "_icon", "_statement", "_condition", "_showDisabled",
+            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction"];
     EXPLODE_1_PVT(_this,_actionsCfg);
     _actions = [];
 
@@ -46,6 +46,7 @@ _recurseFnc = {
             _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
 
             _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
+            _modifierFunction = compile (getText (_entryCfg >> "modifierFunction"));
 
             _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
             _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
@@ -63,10 +64,11 @@ _recurseFnc = {
                             _statement,
                             _condition,
                             _insertChildren,
-                            [],
+                            {},
                             [0,0,0],
                             10, //distace
-                            [_showDisabled,_enableInside,_canCollapse,_runOnHover]
+                            [_showDisabled,_enableInside,_canCollapse,_runOnHover],
+                            _modifierFunction
                         ],
                         _children
                     ];
@@ -111,7 +113,7 @@ _actions = [
             },
             {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)},
             {},
-            [],
+            {},
             "Spine3",
             10,
             [false,true,false]

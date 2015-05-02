@@ -37,6 +37,7 @@ if (!isServer) exitWith {};
     };
 
     {
+        private "_unit";
         _unit = _x;
         if (_unit isKindOf "CAManBase") then {
             {

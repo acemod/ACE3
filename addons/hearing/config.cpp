@@ -38,7 +38,7 @@ class ACE_Settings {
     class GVAR(DisableEarRinging) {
         value = 0;
         typeName = "BOOL";
-        isClientSetable = 1;
+        isClientSettable = 1;
         displayName = "$STR_ACE_Hearing_DisableEarRinging";
     };
 };

@@ -21,18 +21,19 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_silencer", "_audibleFireCoef", "_loudness", "_strength"];
+private ["_silencer", "_audibleFireCoef", "_audibleFire", "_loudness", "_strength", "_vehAttenuation"];
 
-_unit = _this select 0;
-_firer = _this select 1;
-_distance = (_this select 2) max 1;
-_weapon = _this select 3;
-_muzzle = _this select 4;
-_mode = _this select 5;
-_ammo = _this select 6;
+PARAMS_7(_object,_firer,_distance,_weapon,_muzzle,_mode,_ammo);
 
+//Only run if combatDeafness enabled:
+if (!GVAR(enableCombatDeafness)) exitWith {};
+//Only run if firedNear object is player or player's vehicle:
+if ((ACE_player != _object) && {(vehicle ACE_player) != _object}) exitWith {};
 if (_weapon in ["Throw", "Put"]) exitWith {};
-if (_unit != vehicle _unit && {!([_unit] call EFUNC(common,isTurnedOut))}) exitWith {};
+
+_vehAttenuation = if ((ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}) then {1} else {GVAR(playerVehAttenuation)};
+
+if (_distance < 1) then {_distance = 1;};
 
 _silencer = switch (_weapon) do {
     case (primaryWeapon _firer) : {(primaryWeaponItems _firer) select 0};
@@ -42,18 +43,15 @@ _silencer = switch (_weapon) do {
 };
 
 _audibleFireCoef = 1;
-//_audibleFireTimeCoef = 1;
 if (_silencer != "") then {
     _audibleFireCoef = getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFire");
-    //_audibleFireTimeCoef = getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFireTime");
 };
 
 _audibleFire = getNumber (configFile >> "CfgAmmo" >> _ammo >> "audibleFire");
-//_audibleFireTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "audibleFireTime");
 
 _loudness = _audibleFireCoef * _audibleFire / 64;
-_strength = _loudness - (_loudness/50 * _distance); // linear drop off
+_strength = _vehAttenuation * (_loudness - (_loudness/50 * _distance)); // linear drop off
 
 if (_strength < 0.01) exitWith {};
 
-[{_this call FUNC(earRinging)}, [_unit, _strength], 0.2, 0] call EFUNC(common,waitAndExecute);
+[{_this call FUNC(earRinging)}, [ACE_player, _strength], 0.2, 0] call EFUNC(common,waitAndExecute);

@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 if (!hasInterface) exitWith {};
 
-["ACE3", QGVAR(wipeGlasses), localize "STR_ACE_Goggles_WipeGlasses",
+["ACE3 Common", QGVAR(wipeGlasses), localize "STR_ACE_Goggles_WipeGlasses",
 {
     if (!(GETVAR(ace_player,ACE_isUnconscious,false))) exitWith {
         call FUNC(clearGlasses);
@@ -56,6 +56,7 @@ FUNC(CheckGlasses) = {
 };
 
 player addEventHandler ["Explosion", {
+    private "_effects";
     if (alive ace_player) then {
         call FUNC(ApplyDirtEffect);
         if (GETBROKEN) exitWith {};

@@ -101,25 +101,20 @@ class CfgVehicles {
 #define MACRO_LOADUNLOADCAPTIVE \
         class ACE_Actions { \
             class ACE_MainActions { \
-                selection = ""; \
-                class ACE_LoadCaptive { \
+                class GVAR(LoadCaptive) { \
                     displayName = "$STR_ACE_Captives_LoadCaptive"; \
                     distance = 4; \
                     condition = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(canLoadCaptive)); \
                     statement = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(doLoadCaptive)); \
                     exceptions[] = {"isNotEscorting"}; \
-                    showDisabled = 0; \
                     priority = 1.2; \
-                    hotkey = "L"; \
                 }; \
-                class ACE_UnloadCaptive { \
+                class GVAR(UnloadCaptive) { \
                     displayName = "$STR_ACE_Captives_UnloadCaptive"; \
                     distance = 4; \
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canUnloadCaptive)); \
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(doUnloadCaptive)); \
-                    showDisabled = 0; \
                     priority = 1.2; \
-                    hotkey = "C"; \
                 }; \
             }; \
         };

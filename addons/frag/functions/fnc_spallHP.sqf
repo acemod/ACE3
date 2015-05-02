@@ -1,15 +1,15 @@
 #include "script_component.hpp"
 
-private ["_initialData", "_currentCount", "_hpData", "_round", "_hpRound"];
+private ["_initialData", "_hpData", "_round", "_hpRound", "_hpDirect"];
 //player sideChat format["f: %1 c: %2", (_this select 0), (count GVAR(spallHPData))];
-if((_this select 0) <= (count GVAR(spallHPData))) then {
+
+if ((_this select 0) <= (count GVAR(spallHPData))) then {
     _initialData = GVAR(spallHPData) select (_this select 0);
-    if(!isNil "_initialData") then {
+    if (!isNil "_initialData") then {
         _hpRound = ((_this select 1) select 0) select 2;
         _round = _initialData select 3;
         _hpDirect = ((_this select 1) select 0) select 10;
-        if(_hpDirect && {_round == _hpRound}) then {
-            
+        if (_hpDirect && {_round == _hpRound}) then {
             {
                 _hpData =  _x;
                 _round = _initialData select 3;

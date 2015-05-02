@@ -14,7 +14,7 @@ class RscInGameUI {
         idd = 300;
         controls[] = { "ACE_javelin_elements_group", "ACE_Targeting" }; //, "ACE_TargetingConstrains", "ACE_TargetingGate", "ACE_TargetingLines"};
         onLoad = QUOTE(_this call FUNC(onOpticLoad));
-        onUnload = "uiNameSpace setVariable ['ACE_RscOptics_javelin',nil];uiNameSpace setVariable ['ACE_RscOptics_javelin_PFH',nil];";
+        onUnload = QUOTE(_this call FUNC(onOpticUnload));
         
         class ACE_javelin_elements_group: RscControlsGroup
         {
@@ -255,9 +255,9 @@ class RscInGameUI {
             idc = 6999;
             
             x = "SafezoneX";
-			y = "SafezoneY";
-			w = "SafezoneW";
-			h = "SafezoneH";
+            y = "SafezoneY";
+            w = "SafezoneW";
+            h = "SafezoneH";
             
             enabled = 0;
             class Controls {

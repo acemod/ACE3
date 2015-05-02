@@ -9,7 +9,9 @@ PREP(compileMenu);
 PREP(compileMenuSelfAction);
 PREP(collectActiveActionTree);
 PREP(createAction);
+PREP(ctrlSetParsedTextCached);
 PREP(findActionNode);
+PREP(handlePlayerChanged);
 PREP(isSubPath);
 PREP(keyDown);
 PREP(keyUp);
@@ -21,6 +23,7 @@ PREP(renderBaseMenu);
 PREP(renderIcon);
 PREP(renderMenu);
 PREP(renderSelector);
+PREP(setupTextColors);
 PREP(splitPath);
 
 GVAR(keyDown) = false;
@@ -48,5 +51,8 @@ GVAR(startHoverTime) = diag_tickTime;
 GVAR(expandedTime) = diag_tickTime;
 GVAR(iconCtrls) = [];
 GVAR(iconCount) = 0;
+
+GVAR(foundActions) = [];
+GVAR(lastTimeSearchedActions) = -1000;
 
 ADDON = true;
