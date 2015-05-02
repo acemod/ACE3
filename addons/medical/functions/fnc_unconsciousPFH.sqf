@@ -3,7 +3,14 @@
  * PFH logic for unconscious state
  *
  * Arguments:
- * 0: The unit that will be put in an unconscious state <OBJECT>
+ * 0: PFEH - Args
+ *      0: The unit that will be put in an unconscious state <OBJECT>
+ *      1: unitPos (stance) <STRING>
+ *      2: Starting Time <NUMBER>
+ *      3: Minimum Waiting Time <NUMBER>
+ *      4: Has Moved Out <BOOL>
+ *      5: Parachute Check <BOOL>
+ * 1: PFEH ID <NUMBER>
  *
  * ReturnValue:
  * nil
@@ -102,19 +109,19 @@ if !(_unit getvariable ["ACE_isUnconscious",false]) exitwith {
         [_unit, "isUnconscious"] call EFUNC(common,unmuteUnit);
 
         // ensure this statement runs only once
-        _args set [5, true];
+        _args set [4, true];
     };
 };
 
 if (_parachuteCheck) then {
     if !(vehicle _unit isKindOf "ParachuteBase") then {
         [_unit, [_unit] call EFUNC(common,getDeathAnim), 1, true] call EFUNC(common,doAnimation);
-        _args set [6, false];
+        _args set [5, false];
     };
 };
 
 if (!local _unit) exitwith {
-    _args set [ 4, _minWaitingTime - (time - _startingTime)];
+    _args set [3, _minWaitingTime - (time - _startingTime)];
     _unit setvariable [QGVAR(unconsciousArguments), _args, true];
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
 };
