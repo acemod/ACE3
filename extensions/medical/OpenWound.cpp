@@ -13,7 +13,7 @@ injuries::OpenWound::~OpenWound()
 
 std::string injuries::OpenWound::AsString()
 {
-	std::stringstream stream;
-	stream << classID << "," << bodyPart << "," << 1 << "," << bloodlossRate;
-	return stream.str();
+    std::stringstream stream;
+    stream << classID << "," << bodyPart << "," << 1 << "," << bloodlossRate;
+    return stream.str();
 }
