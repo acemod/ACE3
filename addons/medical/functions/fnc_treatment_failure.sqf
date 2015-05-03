@@ -58,6 +58,6 @@ if (isNil _callback) then {
     _callback = missionNamespace getvariable _callback;
 };
 
-_args call FUNC(createLitter);
-
 _args call _callback;
+
+_args call FUNC(createLitter);
