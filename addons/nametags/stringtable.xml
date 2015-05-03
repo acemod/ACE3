@@ -35,7 +35,7 @@
             <Italian>Mostra i nomi solo se puntati (richiede mostra nomi abilitato)</Italian>
             <Portuguese>Mostrar nome de jogador somente no cursor (requer nome de jogadores)</Portuguese>
             <Hungarian>Játékosok nevének mutatása csak a kurzoron (a nevek mutatása szükséges)</Hungarian>
-            <Russian>Показать имена игроков только под курсором (при включенных именах)</Russian>
+            <Russian>Показать имена игроков только под курсором (при вкл. именах)</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnKeyPress">
             <English>Show player name only on keypress (requires player names)</English>
@@ -45,7 +45,7 @@
             <Czech>Zobrazit jména hráčů jen na klávesu (vyžaduje jména hráčů)</Czech>
             <Polish>Pokaż imiona graczy tylko po przytrzymaniu klawisza (wymagana opcja Pokaż imiona graczy)</Polish>
             <Hungarian>Játékosnevek mutatása csak gombnyomásra (a nevek mutatása szükséges)</Hungarian>
-            <Russian>Показать имена игроков только по нажатию клавиши (при включенных именах)</Russian>
+            <Russian>Показать имена игроков только по нажатию клавиши (при вкл. именах)</Russian>
             <Italian>Mostra i nomi solo se si preme il tasto (richiede mostra nomi abilitato)</Italian>
             <Portuguese>Mostrar nomes somente ao pressionar teclar (requer nome de jogadores)</Portuguese>
         </Key>
@@ -59,7 +59,7 @@
             <Italian>Mostra i gradi (richiede mostra nomi abilitato)</Italian>
             <Portuguese>Mostrar patente de jogadores (requer nome de jogadores)</Portuguese>
             <Hungarian>Játékosok rendfokozatának mutatása (a nevek mutatása szükséges)</Hungarian>
-            <Russian>Показывать звания игроков (при включенных именах)</Russian>
+            <Russian>Показывать звания игроков (при вкл. именах)</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo">
             <English>Show vehicle crew info</English>
@@ -89,7 +89,7 @@
             <English>Show SoundWaves (requires player names)</English>
             <German>Schallwellen anzeigen  (benötigt Spielernamen)</German>
             <Spanish>Mostrar onda sonora  (requiere Mostrar nombres de jugadores)</Spanish>
-            <Russian>Индикатор разговора (при включенных именах)</Russian>
+            <Russian>Индикатор разговора (при вкл. именах)</Russian>
             <Czech>Zobrazit SoundWaves (vyžaduje jména hráčů)</Czech>
             <Polish>Pokaż fale dźwiękowe (wymagana opcja Pokaż imiona graczy)</Polish>
             <French>Afficher "qui parle" (si noms affichés)</French>
