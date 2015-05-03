@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="BFT_Devices">
+        <Key ID="STR_ACE_BFT_Devices_DK10_itemName">
+            <English>DK10 Tablet</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_DK10_itemDescription">
+            <English>DK10 rugged tablet PC</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_GD300_itemName">
+            <English>GD300 Android</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_GD300_itemDescription">
+            <English>GD300 rugged wearable computer</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_MicroDAGR_itemName">
+            <English>MicroDAGR GPS</English>
+            <German>MicroDAGR GPS</German>
+            <Spanish>GPS MicroDAGR</Spanish>
+            <Russian>MicroDAGR GPS</Russian>
+            <Czech>MicroDAGR GPS</Czech>
+            <Polish>MicroDAGR GPS</Polish>
+            <French>MicroDAGR GPS</French>
+            <Hungarian>MicroDAGR GPS</Hungarian>
+            <Italian>MicroDAGR GPS</Italian>
+            <Portuguese>GPS MicroDAGR</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_MicroDAGR_itemDescription">
+            <English>MicroDAGR advanced GPS receiver</English>
+            <German>MicroDAGR - Fortgeschrittener GPS-Empfänger</German>
+            <Spanish>Receptor avanzado GPS MicroDAGR</Spanish>
+            <Russian>Многофункциональный GPS-приёмник.</Russian>
+            <Polish>Zaawansowany odbiornik GPS MicroDAGR</Polish>
+            <French>Récepteur GPS MicroDAGR</French>
+            <Czech>MicroDAGR pokročílá GPS příjímač</Czech>
+            <Hungarian>MicroDAGR fejlett GPS vevőegység</Hungarian>
+            <Italian>MicroDAGR ricevitore GPS avanzato</Italian>
+            <Portuguese>Recepitor GPS avançado MicroDAGR</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_HelmetCam_itemName">
+            <English>Helmet Camera</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_HelmetCam_itemDescription">
+            <English>HD helmet mounted camera</English>
+        </Key>
+    </Package>
+</Project>
