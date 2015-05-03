@@ -1,9 +1,9 @@
 #include "ace_common.h"
 
-#include <time.h>
 #include <string>
 #include <vector>
 #include <map>
+#include <random>
 
 #define M_PI 3.14159265358979323846f
 #define GRAVITY 9.80665f
@@ -44,6 +44,8 @@ struct Bullet {
     double lastFrame;
     double hDeflection;
     double spinDrift;
+    unsigned randSeed;
+    std::default_random_engine randGenerator;
 };
 
 struct Map {
@@ -372,6 +374,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         bulletDatabase[index].spinDrift = 0.0;
         bulletDatabase[index].speed = 0.0;
         bulletDatabase[index].frames = 0.0;
+        bulletDatabase[index].randSeed = 0;
 
         int n = sprintf_s(output, outputSize, "%s", "");
         return;
@@ -410,6 +413,22 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         heightAGL = strtod(strtok_s(NULL, ":", &next_token), NULL);
         tickTime = strtod(strtok_s(NULL, ":", &next_token), NULL);
         tickTime += strtod(strtok_s(NULL, ":", &next_token), NULL);
+
+        if (bulletDatabase[index].randSeed == 0) {
+            int angle = (int)round(atan2(velocity[0], velocity[1]) * 360 / M_PI);
+            bulletDatabase[index].randSeed = (unsigned)(720 + angle) % 720;
+            bulletDatabase[index].randSeed *= 3;
+            bulletDatabase[index].randSeed += (unsigned)round(abs(velocity[2]) / 2);
+            bulletDatabase[index].randSeed *= 3;
+            bulletDatabase[index].randSeed += (unsigned)round(abs(bulletDatabase[index].origin[0] / 2));
+            bulletDatabase[index].randSeed *= 3;
+            bulletDatabase[index].randSeed += (unsigned)round(abs(bulletDatabase[index].origin[1] / 2));
+            bulletDatabase[index].randSeed *= 3;
+            bulletDatabase[index].randSeed += (unsigned)abs(bulletDatabase[index].temperature) * 10;
+            bulletDatabase[index].randSeed *= 3;
+            bulletDatabase[index].randSeed += (unsigned)abs(bulletDatabase[index].humidity) * 10;
+            bulletDatabase[index].randGenerator.seed(bulletDatabase[index].randSeed);
+        }
 
         double ballisticCoefficient = 1.0;
         double dragRef = 0.0;
@@ -572,12 +591,13 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         positionOffset[0] += sin(bulletDir + M_PI / 2) * spinDriftPartial;
         positionOffset[1] += cos(bulletDir + M_PI / 2) * spinDriftPartial;
 
-        if (bulletSpeed < 345 && bulletSpeedAvg > 340 && bulletSpeed > 335)
-        {
-            srand((unsigned)time(NULL));
-            velocityOffset[0] += (((double)rand() / (RAND_MAX)) * 0.4 - 0.2) * (1 - bulletDatabase[index].transonicStabilityCoef);
-            velocityOffset[1] += (((double)rand() / (RAND_MAX)) * 0.4 - 0.2) * (1 - bulletDatabase[index].transonicStabilityCoef);
-            velocityOffset[2] += (((double)rand() / (RAND_MAX)) * 0.4 - 0.2) * (1 - bulletDatabase[index].transonicStabilityCoef);
+        if (bulletSpeed < 345 && bulletSpeedAvg > 340 && bulletSpeed > 335) {
+            std::uniform_real_distribution<double> distribution(0.0, 1.0);
+            double coef = 1.0f - bulletDatabase[index].transonicStabilityCoef;
+            
+            velocityOffset[0] += (distribution(bulletDatabase[index].randGenerator) * 0.8 - 0.4) * coef;
+            velocityOffset[1] += (distribution(bulletDatabase[index].randGenerator) * 0.8 - 0.4) * coef;
+            velocityOffset[2] += (distribution(bulletDatabase[index].randGenerator) * 0.8 - 0.4) * coef;
         };
 
         int n = sprintf_s(output, outputSize, "_bullet setVelocity (_bulletVelocity vectorAdd [%f, %f, %f]); _bullet setPosASL (_bulletPosition vectorAdd [%f, %f, %f]);", velocityOffset[0], velocityOffset[1], velocityOffset[2], positionOffset[0], positionOffset[1], positionOffset[2]);
