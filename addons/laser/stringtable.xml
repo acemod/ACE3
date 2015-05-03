@@ -8,6 +8,8 @@
             <French>Code laser</French>
             <Russian>Лазерный код</Russian>
             <Portuguese>Código do Laser</Portuguese>
+            <Hungarian>Lézerkód</Hungarian>
+            <Spanish>Código del láser</Spanish>
         </Key>
         <Key ID="STR_ACE_laser_laserCodeUp">
             <English>Laser - Cycle Code Up</English>
@@ -16,6 +18,8 @@
             <French>Laser - Code +</French>
             <Russian>Лазер - увеличить частоту</Russian>
             <Portuguese>Laser - Alternar Código para Cima</Portuguese>
+            <Hungarian>Lézer - kódciklus növelése</Hungarian>
+            <Spanish>Láser - Aumentar código</Spanish>
         </Key>
         <Key ID="STR_ACE_laser_laserCodeDown">
             <English>Laser - Cycle Code Down</English>
@@ -24,6 +28,8 @@
             <French>Laser - Code -</French>
             <Russian>Лазер - уменьшить частоту</Russian>
             <Portuguese>Laser - Alternar Código para Baixo</Portuguese>
+            <Hungarian>Lézer - kódciklus csökkentése</Hungarian>
+            <Spanish>Láser - Reducir código</Spanish>
         </Key>
     </Package>
 </Project>

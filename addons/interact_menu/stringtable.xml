@@ -164,6 +164,7 @@
             <Russian>Выполнять действие при отпускании кнопки взаимодействия</Russian>
             <Spanish>Realizar la acción al soltar la tecla menu</Spanish>
             <Portuguese>Execute a ação quando soltar a tecla de menu</Portuguese>
+            <Hungarian>Cselekvés végrehajtása a menügomb elengedésekor</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_textSize">
             <English>Interaction Text Size</English>
@@ -174,6 +175,7 @@
             <Spanish>Tamaño del texto de interacción</Spanish>
             <Polish>Rozmiar tekstu interakcji</Polish>
             <Portuguese>Tamanho do texto de interação</Portuguese>
+            <Hungarian>Cselekvő szöveg mérete</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSetting">
             <English>Interaction Text Shadow</English>
@@ -184,6 +186,7 @@
             <Spanish>Sombra del texto de interacción</Spanish>
             <Polish>Cień tekstu interakcji</Polish>
             <Portuguese>Sombra do texto de interação</Portuguese>
+            <Hungarian>Cselekvő szöveg árnyéka</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSettingDescription">
             <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
@@ -194,6 +197,7 @@
             <Spanish>Permite contolar la sombra del texto. El contorno ignora los colores personalizados de la sombra.</Spanish>
             <Polish>Pozwala kontrolować cień tekstu. Kontury ignorują niestandardowe kolory cienia.</Polish>
             <Portuguese>Permite controlar a sombra do texto. Contorno ignora sombras com cores customizadas.</Portuguese>
+            <Hungarian>Hozzáférést biztosít a szöveg árnyékának kezeléséhez. A körvonal nem veszi figyelembe az egyedi árnyékszíneket.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_shadowOutline">
             <English>Outline</English>
@@ -204,6 +208,7 @@
             <Spanish>Contorno</Spanish>
             <Polish>Kontur</Polish>
             <Portuguese>Contorno</Portuguese>
+            <Hungarian>Körvonal</Hungarian>
         </Key>
     </Package>
 </Project>
