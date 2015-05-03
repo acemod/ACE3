@@ -499,7 +499,7 @@ Whether or not the objects in the list will be a medical vehicle.<br>
 
 ### 3.1 Ambiance Sounds
 
-Used for smbiance sounds loop (synced across MP)
+Used for ambiance sounds loop (synced across MP)
 
 **Settings:**
 
