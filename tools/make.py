@@ -280,7 +280,7 @@ def color(color):
 
 def print_error(msg):
     color("red")
-    print ("ERROR: " + msg)
+    print ("ERROR: {}".format(msg))
     color("reset")
 
 def print_green(msg):
@@ -311,12 +311,12 @@ def copy_important_files(source_dir,destination_dir):
 
     #copy importantFiles
     try:
-        print_blue("\nSearching for important files in " + source_dir)
-        print("Source_dir: " + source_dir)
-        print("Destination_dir: " + destination_dir)
+        print_blue("\nSearching for important files in {}".format(source_dir))
+        print("Source_dir: {}".format(source_dir))
+        print("Destination_dir: {}".format(destination_dir))
 
         for file in importantFiles:
-            print_green("Copying file => " + os.path.join(source_dir,file))
+            print_green("Copying file => {}".format(os.path.join(source_dir,file)))
             shutil.copyfile(os.path.join(source_dir,file),os.path.join(destination_dir,file))
     except:
         print_error("COPYING IMPORTANT FILES.")
@@ -325,14 +325,14 @@ def copy_important_files(source_dir,destination_dir):
     #copy all extension dlls
     try:
         os.chdir(os.path.join(source_dir))
-        print_blue("\nSearching for DLLs in " + os.getcwd())
+        print_blue("\nSearching for DLLs in {}".format(os.getcwd()))
         filenames = glob.glob("*.dll")
 
         if not filenames:
             print ("Empty SET")
 
         for dll in filenames:
-            print_green("Copying dll => " + os.path.join(source_dir,dll))
+            print_green("Copying dll => {}".format(os.path.join(source_dir,dll)))
             if os.path.isfile(dll):
                 shutil.copyfile(os.path.join(source_dir,dll),os.path.join(destination_dir,dll))
     except:
@@ -353,17 +353,17 @@ def copy_optionals_for_building(mod,pbos):
         files = glob.glob(os.path.join(release_dir, "@ace","optionals","*.pbo"))
         for file in files:
             file_name = os.path.basename(file)
-            #print ("Adding the following file: " + file_name)
+            #print ("Adding the following file: {}".format(file_name))
             pbos.append(file_name)
             pbo_path = os.path.join(release_dir, "@ace","optionals",file_name)
             sigFile_name = file_name +"."+ key_name + ".bisign"
             sig_path = os.path.join(release_dir, "@ace","optionals",sigFile_name)
             if (os.path.isfile(pbo_path)):
-                print("Moving " + pbo_path + " for processing.")
+                print("Moving {} for processing.".format(pbo_path))
                 shutil.move(pbo_path, os.path.join(release_dir,"@ace","addons",file_name))
 
             if (os.path.isfile(sig_path)):
-                #print("Moving " + sig_path + " for processing.")
+                #print("Moving {} for processing.".format(sig_path))
                 shutil.move(sig_path, os.path.join(release_dir,"@ace","addons",sigFile_name))
     except:
         print_error("Error in moving")
@@ -385,7 +385,7 @@ def copy_optionals_for_building(mod,pbos):
             else:
                 destination = os.path.join(module_root,dir_name)
 
-            print("Temporarily copying " + os.path.join(optionals_root,dir_name) + " => " + destination + " for building.")
+            print("Temporarily copying {} => {} for building.".format(os.path.join(optionals_root,dir_name),destination))
             if (os.path.exists(destination)):
                 shutil.rmtree(destination, True)
             shutil.copytree(os.path.join(optionals_root,dir_name), destination)
@@ -406,7 +406,7 @@ def cleanup_optionals(mod):
             else:
                 destination = os.path.join(module_root,dir_name)
 
-            print("Cleaning " + destination)
+            print("Cleaning {}".format(destination))
 
             try:
                 file_name = "ace_{}.pbo".format(dir_name)
@@ -418,10 +418,10 @@ def cleanup_optionals(mod):
                 dst_sig_path = os.path.join(release_dir, "@ace","optionals",sigFile_name)
 
                 if (os.path.isfile(src_file_path)):
-                    #print("Preserving " + file_name)
+                    #print("Preserving {}".format(file_name))
                     os.renames(src_file_path,dst_file_path)
                 if (os.path.isfile(src_sig_path)):
-                    #print("Preserving " + sigFile_name)
+                    #print("Preserving {}".format(sigFile_name))
                     os.renames(src_sig_path,dst_sig_path)
             except FileExistsError:
                 print_error(file_name + " already exists")
@@ -434,7 +434,7 @@ def cleanup_optionals(mod):
 
 
 def purge(dir, pattern, friendlyPattern="files"):
-    print_green("Deleting " + friendlyPattern + " files from directory: " + dir)
+    print_green("Deleting {} files from directory: {}".format(friendlyPattern,dir))
     for f in os.listdir(dir):
         if re.search(pattern, f):
             os.remove(os.path.join(dir, f))
@@ -443,7 +443,7 @@ def purge(dir, pattern, friendlyPattern="files"):
 def build_signature_file(file_name):
     global key
     global dssignfile
-    print("Signing with " + key + ".")
+    print("Signing with {}.".format(key))
     ret = subprocess.call([dssignfile, key, file_name])
     if ret == 0:
         return True
@@ -461,7 +461,7 @@ def check_for_obsolete_pbos(addonspath, file):
 
 def main(argv):
     """Build an Arma addon suite in a directory from rules in a make.cfg file."""
-    print_blue(("\nmake.py for Arma, modified for Advanced Combat Environment v" + __version__))
+    print_blue("\nmake.py for Arma, modified for Advanced Combat Environment v{}".format(__version__))
 
     global work_drive
     global module_root
@@ -567,7 +567,7 @@ See the make.cfg file for additional build options.
     else:
         check_external = False
 
-    print_yellow("\nCheck external references is set to " + str(check_external))
+    print_yellow("\nCheck external references is set to {}".format(str(check_external)))
 
     # Get the directory the make script is in.
     make_root = os.path.dirname(os.path.realpath(__file__))
@@ -632,21 +632,21 @@ See the make.cfg file for additional build options.
         module_root_parent = os.path.abspath(os.path.join(os.path.join(work_drive, prefix), os.pardir))
         module_root = cfg.get(make_target, "module_root", fallback=os.path.join(make_root_parent, "addons"))
         optionals_root = os.path.join(module_root_parent, "optionals")
-        print_green ("module_root: " + module_root)
+        print_green ("module_root: {}".format(module_root))
 
         if (os.path.isdir(module_root)):
             os.chdir(module_root)
         else:
-            print_error ("Directory " + module_root + " does not exist.")
+            print_error ("Directory {} does not exist.".format(module_root))
             sys.exit()
 
         if (os.path.isdir(optionals_root)):
-            print_green ("optionals_root: " + optionals_root)
+            print_green ("optionals_root: {}".format(optionals_root))
         else:
-            print_error ("Directory " + optionals_root + " does not exist.")
+            print_error ("Directory {} does not exist.".format(optionals_root))
             sys.exit()
 
-        print_green ("release_dir: " + release_dir)
+        print_green ("release_dir: {}".format(release_dir))
 
     except:
         raise
@@ -739,7 +739,7 @@ See the make.cfg file for additional build options.
             ret = subprocess.call([dscreatekey, key_name]) # Created in make_root
             os.chdir(curDir)
             if ret == 0:
-                print_green("Created: " + os.path.join(private_key_path, key_name + ".biprivatekey"))
+                print_green("Created: {}".format(os.path.join(private_key_path, key_name + ".biprivatekey")))
                 print("Removing any old signature keys...")
                 purge(os.path.join(module_root, release_dir, project, "addons"), "^.*\.bisign$","*.bisign")
                 purge(os.path.join(module_root, release_dir, project, "optionals"), "^.*\.bisign$","*.bisign")
@@ -762,7 +762,7 @@ See the make.cfg file for additional build options.
                 raise
 
         else:
-            print_green("\nNOTE: Using key " + os.path.join(private_key_path, key_name + ".biprivatekey"))
+            print_green("\nNOTE: Using key {}".format(os.path.join(private_key_path, key_name + ".biprivatekey")))
 
         key = os.path.join(private_key_path, key_name + ".biprivatekey")
 
@@ -773,13 +773,13 @@ See the make.cfg file for additional build options.
         if (file.endswith(".pbo") and os.path.isfile(os.path.join(obsolete_check_path,file))):
             if check_for_obsolete_pbos(module_root, file):
                 fileName = os.path.splitext(file)[0]
-                print_yellow("Removing obsolete file => " + file)
+                print_yellow("Removing obsolete file => {}".format(file))
                 purge(obsolete_check_path,fileName+"\..",fileName+".*")
 
     # For each module, prep files and then build.
     print_blue("\nBuilding...")
     for module in modules:
-        print_green("\nMaking " + module + "-"*max(1, (60-len(module))))
+        print_green("\nMaking {}".format(module + "-"*max(1, (60-len(module)))))
         missing = False
         sigMissing = False
 
@@ -811,7 +811,7 @@ See the make.cfg file for additional build options.
                 print("Module has not changed.")
                 if sigMissing:
                     if key:
-                        print("Missing Signature key " + sigFile)
+                        print("Missing Signature key {}".format(sigFile))
                         build_signature_file(os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo"))
                 # Skip everything else
                 continue
@@ -833,7 +833,7 @@ See the make.cfg file for additional build options.
                 print("Resuming build...")
                 continue
         #else:
-            #print("WARNING: Module is stored on work drive (" + work_drive + ").")
+            #print("WARNING: Module is stored on work drive ({}).".format(work_drive))
 
         try:
             # Remove the old pbo, key, and log
@@ -855,8 +855,8 @@ See the make.cfg file for additional build options.
             continue
 
         # Build the module into a pbo
-        print_blue("Building: " + os.path.join(work_drive, prefix, module))
-        print_blue("Destination: " + os.path.join(module_root, release_dir, project, "addons"))
+        print_blue("Building: {}".format(os.path.join(work_drive, prefix, module)))
+        print_blue("Destination: {}".format(os.path.join(module_root, release_dir, project, "addons")))
 
         # Make destination folder (if needed)
         try:
@@ -876,14 +876,14 @@ See the make.cfg file for additional build options.
                 cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
                 ret = subprocess.call(cmd)
                 if ret != 0:
-                    print_error("CfgConvert -bin return code == " + str(ret) + ". Usually means there is a syntax error within the config.cpp file.")
+                    print_error("CfgConvert -bin return code == {}. Usually means there is a syntax error within the config.cpp file.".format(str(ret)))
                     os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
                     shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
 
                 cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
                 ret = subprocess.call(cmd)
                 if ret != 0:
-                    print_error("CfgConvert -txt return code == " + str(ret) + ". Usually means there is a syntax error within the config.cpp file.")
+                    print_error("CfgConvert -txt return code == {}. Usually means there is a syntax error within the config.cpp file.".format(str(ret)))
                     os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
                     shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
 
@@ -930,7 +930,7 @@ See the make.cfg file for additional build options.
                 color("reset")
 
                 if ret == 0:
-                    print_green("pboProject return code == " + str(ret))
+                    print_green("pboProject return code == {}".format(str(ret)))
                     # Prettyprefix rename the PBO if requested.
                     if pbo_name_prefix:
                         try:
@@ -940,7 +940,7 @@ See the make.cfg file for additional build options.
                             print_error("Could not rename built PBO with prefix.")
                     # Sign result
                     if key:
-                        print("Signing with " + key + ".")
+                        print("Signing with {}.".format(key))
                         if pbo_name_prefix:
                             ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo")])
                         else:
@@ -952,13 +952,13 @@ See the make.cfg file for additional build options.
                         build_successful = True
 
                 if not build_successful:
-                    print_error("pboProject return code == " + str(ret))
+                    print_error("pboProject return code == {}".format(str(ret)))
                     print_error("Module not successfully built/signed.")
                     print ("Resuming build...")
                     continue
 
                 #PABST: cleanup config BS (you could comment this out to see the "de-macroed" cpp
-                #print_green("\Pabst (restoring): " + os.path.join(work_drive, prefix, module, "config.cpp"))
+                #print_green("\Pabst (restoring): {}".format(os.path.join(work_drive, prefix, module, "config.cpp")))
                 os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
                 os.remove(os.path.join(work_drive, prefix, module, "config.bin"))
                 os.rename(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
@@ -998,10 +998,10 @@ See the make.cfg file for additional build options.
                 else:
                     previousDirectory = os.getcwd()
                     os.chdir(arma3tools_path)
-                    print_error("Current directory - " + os.getcwd())
+                    print_error("Current directory - {}".format(os.getcwd()))
                     ret = subprocess.call(cmd)
                     os.chdir(previousDirectory)
-                    print_error("Current directory - " + os.getcwd())
+                    print_error("Current directory - {}".format(os.getcwd()))
                 color("reset")
                 print_green("completed")
                 # Prettyprefix rename the PBO if requested.
@@ -1015,7 +1015,7 @@ See the make.cfg file for additional build options.
                 if ret == 0:
                     # Sign result
                     if key:
-                        print("Signing with " + key + ".")
+                        print("Signing with {}.".format(key))
                         if pbo_name_prefix:
                             ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo")])
                         else:
@@ -1040,7 +1040,7 @@ See the make.cfg file for additional build options.
                 continue
 
         else:
-            print_error("Unknown build_tool " + build_tool + "!")
+            print_error("Unknown build_tool {}!".format(build_tool))
 
         # Update the hash for a successfully built module
         if build_successful:
@@ -1065,7 +1065,7 @@ See the make.cfg file for additional build options.
 
     # Make release
     if make_release:
-        print_blue("\nMaking release: " + project + "-" + release_version + ".zip")
+        print_blue("\nMaking release: {}-{}.zip".format(project,release_version))
 
         try:
             # Delete all log files
@@ -1101,7 +1101,7 @@ See the make.cfg file for additional build options.
                 shutil.copytree(os.path.join(module_root, release_dir, project), os.path.join(a3_path, project))
             except:
                 print_error("Could not copy files. Is Arma 3 running?")
-                
+
     print_green("\nDone.")
 
 
