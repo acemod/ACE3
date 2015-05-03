@@ -68,7 +68,7 @@ for "_index" from 0 to ((count _configPath) - 1) do {
     _actionMaxDistance = _actionMaxDistance + 0.5; //increase range slightly
     _iconImage = "";
 
-    //todo: extension? (~75% of time doing this string shit!)
+/*     //todo: extension? (~75% of time doing this string shit!)
     if (_actionDisplayNameDefault != "") then {
         //something like: "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
         //find the end [.paa']
@@ -84,8 +84,10 @@ for "_index" from 0 to ((count _configPath) - 1) do {
             };
             _startIndex = _startIndex - 1;
         };
-    };
-
+    }; */
+    _iconImage =  "ace_parse_imagepath" callExtension _actionDisplayNameDefault;
+    
+    
     _actionOffset = [_actionPosition] call _fnc_getMemPointOffset;
     _memPointIndex = _memPoints find _actionPosition;
 

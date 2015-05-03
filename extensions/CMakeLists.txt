@@ -57,5 +57,6 @@ set(GLOBAL_SOURCES ${GLOBAL_RC})
 add_subdirectory(fcs)
 add_subdirectory(break_line)
 add_subdirectory(advanced_ballistics)
+add_subdirectory(parse_imagepath)
 
 message("Build Type: ${CMAKE_BUILD_TYPE}")
