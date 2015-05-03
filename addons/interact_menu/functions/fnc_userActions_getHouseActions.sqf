@@ -11,7 +11,7 @@
  *
  * Public: Yes
  */
- #include "script_component.hpp"
+#include "script_component.hpp"
 
 
 PARAMS_1(_typeOfBuilding);
@@ -19,21 +19,35 @@ PARAMS_1(_typeOfBuilding);
 _memPoints = [];
 _memPointsActions = [];
 
-_configPath = configFile >> "CfgVehicles" >> _typeOfBuilding >> "UserActions";
+//Get the offset for a memory point:
+_fnc_getMemPointOffset = {
+    PARAMS_1(_memoryPoint);
+    _memPointIndex = _memPoints find _memoryPoint;
+    _actionOffset = [0,0,0];
+    if (_memPointIndex == -1) then {
+        _memPoints pushBack _memoryPoint;
+        _memPointsActions pushBack [];
+    } else {
+        _actionOffset set [2, 0.05 * (count (_memPointsActions select _memPointIndex))];
+    };
+    _actionOffset
+};
 
-_fncStatement = {
+// Add UserActions for the building:
+_fnc_userAction_Statement = {
     PARAMS_3(_target,_player,_variable);
     EXPLODE_2_PVT(_variable,_actionStatement,_actionCondition);
     this = _target getVariable [QGVAR(building), objNull];
     call _actionStatement;
 };
-_fncCondition = {
+_fnc_userAction_Condition = {
     PARAMS_3(_target,_player,_variable);
     EXPLODE_2_PVT(_variable,_actionStatement,_actionCondition);
     this = _target getVariable [QGVAR(building), objNull];
     call _actionCondition;
 };
 
+_configPath = configFile >> "CfgVehicles" >> _typeOfBuilding >> "UserActions";
 for "_index" from 0 to ((count _configPath) - 1) do {
     _actionPath = _configPath select _index;
 
@@ -72,19 +86,54 @@ for "_index" from 0 to ((count _configPath) - 1) do {
         };
     };
 
+    _actionOffset = [_actionPosition] call _fnc_getMemPointOffset;
     _memPointIndex = _memPoints find _actionPosition;
-    _actionOffset = [0,0,0];
-    if (_memPointIndex == -1) then {
-        _memPointIndex = count _memPoints;
-        _memPoints pushBack _actionPosition;
-        _memPointsActions pushBack [];
-    } else {
-        _actionOffset set [2, 0.05 * (count (_memPointsActions select _memPointIndex))];
-    };
 
-    _action = [(configName _actionPath), _actionDisplayName, _iconImage, _fncStatement, _fncCondition, {}, [_actionStatement, _actionCondition], _actionOffset, _actionMaxDistance, [false,false,false,false,true]] call EFUNC(interact_menu,createAction);
+    _action = [(configName _actionPath), _actionDisplayName, _iconImage, _fnc_userAction_Statement, _fnc_userAction_Condition, {}, [_actionStatement, _actionCondition], _actionOffset, _actionMaxDistance, [false,false,false,false,true]] call EFUNC(interact_menu,createAction);
+    (_memPointsActions select _memPointIndex) pushBack _action;
+};
+
+// Add Ladder Actions for the building:
+_fnc_ladder_ladderUp = {
+    PARAMS_3(_target,_player,_variable);
+    EXPLODE_1_PVT(_variable,_ladderIndex);
+    _building = _target getVariable [QGVAR(building), objNull];
+    ACE_player action ["LadderUp", _building, _ladderIndex, 0];
+};
+_fnc_ladder_ladderDown = {
+    PARAMS_3(_target,_player,_variable);
+    EXPLODE_1_PVT(_variable,_ladderIndex);
+    _building = _target getVariable [QGVAR(building), objNull];
+    ACE_player action ["LadderUp", _building, (_variable select 0), 1];
+};
+
+_ladders = getArray (configFile >> "CfgVehicles" >> _typeOfBuilding >> "ladders");
+{
+
+
+    EXPLODE_2_PVT(_x,_ladderBottomMemPoint,_ladderTopMemPoint);
+
+    _actionMaxDistance = 2;
+
+    _actionDisplayName = "Climb Ladder Up";
+    _iconImage = "\A3\ui_f\data\igui\cfg\actions\ladderup_ca.paa";
+    //Ladder Up Action:
+    _actionOffset = [_ladderBottomMemPoint] call _fnc_getMemPointOffset;
+    _actionOffset = _actionOffset vectorAdd [0,0,1];
+    _memPointIndex = _memPoints find _ladderBottomMemPoint;
+    _action = [format ["LadderUp_%1", _forEachIndex], _actionDisplayName, _iconImage, _fnc_ladder_ladderUp, {true}, {}, [_forEachIndex], _actionOffset, _actionMaxDistance, [false,false,false,false,true]] call EFUNC(interact_menu,createAction);
     (_memPointsActions select _memPointIndex) pushBack _action;
 
-};
+    _actionDisplayName = "Climb Ladder Down";
+    _iconImage = "\A3\ui_f\data\igui\cfg\actions\ladderdown_ca.paa";
+    //Ladder Down Action:
+    _actionOffset = [_ladderTopMemPoint] call _fnc_getMemPointOffset;
+    _actionOffset = _actionOffset vectorAdd [0,0,1];
+    _memPointIndex = _memPoints find _ladderTopMemPoint;
+    _action = [format ["LadderDown_%1", _forEachIndex], _actionDisplayName, _iconImage, _fnc_ladder_ladderDown, {true}, {}, [_forEachIndex], _actionOffset, _actionMaxDistance, [false,false,false,false,true]] call EFUNC(interact_menu,createAction);
+    (_memPointsActions select _memPointIndex) pushBack _action;
+
+} forEach _ladders;
+
 
 [_memPoints, _memPointsActions]

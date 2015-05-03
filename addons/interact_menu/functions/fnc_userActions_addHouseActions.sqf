@@ -40,12 +40,14 @@ systemChat format ["starting %1", diag_tickTime];
         //If player moved >5 meters from last pos, then rescan
         if (((getPosASL ace_player) distance _setPosition) < 5) exitWith {};
 
-       //Make the common case fast (looking at a door): 
+        //Make the common case fast (looking at a door):
         if ((!isNull cursorTarget) && {cursorTarget isKindOf "Static"} && {!(cursorTarget in _housesScaned)}) then {
-            _houseBeingScaned = cursorTarget;
             _housesScaned pushBack _houseBeingScaned;
+            if ((isClass (_configPath >> "UserActions")) || {(count (getArray (configFile >> "CfgVehicles" >> (typeOf _theHouse) >> "ladders"))) > 0}) then {
+                _houseBeingScaned = cursorTarget;
+            };
         };
-        
+
         if (isNull _houseBeingScaned) then {
             _houseWasScaned = false;
             _nearBuidlings = nearestObjects [ace_player, ["Static"], 30];
@@ -56,7 +58,7 @@ systemChat format ["starting %1", diag_tickTime];
                     _housesScaned pushBack _x;
                     if ((typeOf _theHouse) != "") then {
                         _configPath = (configFile >> "CfgVehicles" >> (typeOf _theHouse));
-                        if (isClass (_configPath >> "UserActions")) then {
+                        if ((isClass (_configPath >> "UserActions")) || {(count (getArray (configFile >> "CfgVehicles" >> (typeOf _theHouse) >> "ladders"))) > 0}) then {
                             _args set [3, _theHouse];
                         };
                     };
@@ -85,9 +87,9 @@ systemChat format ["starting %1", diag_tickTime];
                 if (surfaceIsWater _helperPos) then {
                     _helperObject setPosAslw _helperPos;
                 } else {
-                    _helperObject setPos _helperPos;
+                    _helperObject setPosAtl _helperPos;
                 };
-                _helperObject hideObject true;
+                // _helperObject hideObject true;
                 TRACE_3("Making New Helper",_helperObject,_x,_houseBeingScaned);
                 {
                     [_helperObject, 0, [], _x] call EFUNC(interact_menu,addActionToObject);
