@@ -4,7 +4,6 @@ ADDON = false;
 
 PREP(addActionToClass);
 PREP(addActionToObject);
-PREP(addHouseActions);
 PREP(compileMenu);
 PREP(compileMenuSelfAction);
 PREP(collectActiveActionTree);
@@ -25,6 +24,12 @@ PREP(renderMenu);
 PREP(renderSelector);
 PREP(setupTextColors);
 PREP(splitPath);
+
+
+PREP(userActions_addHouseActions);
+PREP(userActions_getHouseActions);
+
+
 
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;
