@@ -26,7 +26,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
 systemChat format ["starting %1", diag_tickTime];
 
 [{
-    private ["_fncStatement", "_player", "_fncCondition", "_variable", "_theHouse", "_statement", "_condition", "_configPath", "_displayName", "_displayNameDefault", "_iconImage", "_position", "_maxDistance", "_helperObject", "_actionOffset", "_memPoint", "_object", "_count", "_helperPos", "_action"];
+    private["_helperObject", "_helperPos", "_houseWasScaned", "_nearBuidlings", "_theHouse"];
     PARAMS_2(_args,_pfID);
     EXPLODE_4_PVT(_args,_setPosition,_addedHelpers,_housesScaned,_houseBeingScaned);
 
@@ -40,10 +40,10 @@ systemChat format ["starting %1", diag_tickTime];
         //If player moved >5 meters from last pos, then rescan
         if (((getPosASL ace_player) distance _setPosition) < 5) exitWith {};
 
-        //Make the common case fast (looking at a door):
+        //Make the common case fast (cursorTarget is looking at a door):
         if ((!isNull cursorTarget) && {cursorTarget isKindOf "Static"} && {!(cursorTarget in _housesScaned)}) then {
-            _housesScaned pushBack _houseBeingScaned;
-            if ((isClass (_configPath >> "UserActions")) || {(count (getArray (configFile >> "CfgVehicles" >> (typeOf _theHouse) >> "ladders"))) > 0}) then {
+            _housesScaned pushBack cursorTarget;
+            if (((count (configFile >> "CfgVehicles" >> (typeOf cursorTarget) >> "UserActions")) > 0) || {(count (getArray (configFile >> "CfgVehicles" >> (typeOf cursorTarget) >> "ladders"))) > 0}) then {
                 _houseBeingScaned = cursorTarget;
             };
         };
@@ -57,8 +57,7 @@ systemChat format ["starting %1", diag_tickTime];
                     _houseWasScaned = true;
                     _housesScaned pushBack _x;
                     if ((typeOf _theHouse) != "") then {
-                        _configPath = (configFile >> "CfgVehicles" >> (typeOf _theHouse));
-                        if ((isClass (_configPath >> "UserActions")) || {(count (getArray (configFile >> "CfgVehicles" >> (typeOf _theHouse) >> "ladders"))) > 0}) then {
+                        if (((count (configFile >> "CfgVehicles" >> (typeOf _theHouse) >> "UserActions")) > 0) || {(count (getArray (configFile >> "CfgVehicles" >> (typeOf _theHouse) >> "ladders"))) > 0}) then {
                             _args set [3, _theHouse];
                         };
                     };
@@ -68,7 +67,7 @@ systemChat format ["starting %1", diag_tickTime];
 
             //If we finished scanning everything, update position
             if (!_houseWasScaned) then {
-                systemChat format ["Pos Updated (stable): %1", diag_tickTime];
+                systemChat format ["Pos Updated (stable): %1 [count %2]", diag_tickTime, (count _addedHelpers)];
                 _args set [0, (getPosASL ace_player)];
             };
         } else {
@@ -84,12 +83,9 @@ systemChat format ["starting %1", diag_tickTime];
 
                 //ASL/ATL bullshit (note: attachTo doesn't work on buildings)
                 _helperPos = _houseBeingScaned modelToWorld (_houseBeingScaned selectionPosition _x);
-                if (surfaceIsWater _helperPos) then {
-                    _helperObject setPosAslw _helperPos;
-                } else {
-                    _helperObject setPosAtl _helperPos;
-                };
-                // _helperObject hideObject true;
+                _helperObject setPosASL (_helperPos call EFUNC(common,positionToASL));
+
+                _helperObject hideObject true;
                 TRACE_3("Making New Helper",_helperObject,_x,_houseBeingScaned);
                 {
                     [_helperObject, 0, [], _x] call EFUNC(interact_menu,addActionToObject);

@@ -1,7 +1,6 @@
 /*
  * Author: PabstMirror
- * Scans for nearby "Static" objects (buildings) and adds the UserActions to them.
- * Called when interact_menu starts rendering (from "interact_keyDown" event)
+ * Scans the buidling type for UserActions and Ladder mount points.
  *
  * Arguments:
  * 0: Building Classname <STRING>
@@ -13,8 +12,9 @@
  */
 #include "script_component.hpp"
 
-
 PARAMS_1(_typeOfBuilding);
+
+private["_action", "_actionDisplayName", "_actionDisplayNameDefault", "_actionMaxDistance", "_actionOffset", "_actionPath", "_actionPosition", "_building", "_configPath", "_endIndex", "_iconImage", "_index", "_ladders", "_memPointIndex", "_memPoints", "_memPointsActions", "_startIndex"];
 
 _memPoints = [];
 _memPointsActions = [];
@@ -98,39 +98,41 @@ _fnc_ladder_ladderUp = {
     PARAMS_3(_target,_player,_variable);
     EXPLODE_1_PVT(_variable,_ladderIndex);
     _building = _target getVariable [QGVAR(building), objNull];
-    ACE_player action ["LadderUp", _building, _ladderIndex, 0];
+    _player action ["LadderUp", _building, _ladderIndex, 0];
 };
 _fnc_ladder_ladderDown = {
     PARAMS_3(_target,_player,_variable);
     EXPLODE_1_PVT(_variable,_ladderIndex);
     _building = _target getVariable [QGVAR(building), objNull];
-    ACE_player action ["LadderUp", _building, (_variable select 0), 1];
+    _player action ["LadderUp", _building, (_variable select 0), 1];
+};
+
+_fnc_ladder_conditional = { //Don't show actions if on a ladder
+    ((getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState _player) >> "onLadder")) == 0)
 };
 
 _ladders = getArray (configFile >> "CfgVehicles" >> _typeOfBuilding >> "ladders");
 {
-
-
     EXPLODE_2_PVT(_x,_ladderBottomMemPoint,_ladderTopMemPoint);
 
     _actionMaxDistance = 2;
 
-    _actionDisplayName = "Climb Ladder Up";
+    _actionDisplayName = localize "str_action_ladderup";
     _iconImage = "\A3\ui_f\data\igui\cfg\actions\ladderup_ca.paa";
     //Ladder Up Action:
     _actionOffset = [_ladderBottomMemPoint] call _fnc_getMemPointOffset;
     _actionOffset = _actionOffset vectorAdd [0,0,1];
     _memPointIndex = _memPoints find _ladderBottomMemPoint;
-    _action = [format ["LadderUp_%1", _forEachIndex], _actionDisplayName, _iconImage, _fnc_ladder_ladderUp, {true}, {}, [_forEachIndex], _actionOffset, _actionMaxDistance, [false,false,false,false,true]] call EFUNC(interact_menu,createAction);
+    _action = [format ["LadderUp_%1", _forEachIndex], _actionDisplayName, _iconImage, _fnc_ladder_ladderUp, _fnc_ladder_conditional, {}, [_forEachIndex], _actionOffset, _actionMaxDistance, [false,false,false,false,true]] call EFUNC(interact_menu,createAction);
     (_memPointsActions select _memPointIndex) pushBack _action;
 
-    _actionDisplayName = "Climb Ladder Down";
+    _actionDisplayName = localize "str_action_ladderdown";
     _iconImage = "\A3\ui_f\data\igui\cfg\actions\ladderdown_ca.paa";
     //Ladder Down Action:
     _actionOffset = [_ladderTopMemPoint] call _fnc_getMemPointOffset;
-    _actionOffset = _actionOffset vectorAdd [0,0,1];
+    _actionOffset = _actionOffset vectorAdd [0,0,0.25];
     _memPointIndex = _memPoints find _ladderTopMemPoint;
-    _action = [format ["LadderDown_%1", _forEachIndex], _actionDisplayName, _iconImage, _fnc_ladder_ladderDown, {true}, {}, [_forEachIndex], _actionOffset, _actionMaxDistance, [false,false,false,false,true]] call EFUNC(interact_menu,createAction);
+    _action = [format ["LadderDown_%1", _forEachIndex], _actionDisplayName, _iconImage, _fnc_ladder_ladderDown, _fnc_ladder_conditional, {}, [_forEachIndex], _actionOffset, _actionMaxDistance, [false,false,false,false,true]] call EFUNC(interact_menu,createAction);
     (_memPointsActions select _memPointIndex) pushBack _action;
 
 } forEach _ladders;
