@@ -96,9 +96,9 @@ double calculateAirDensity(double temperature, double pressure, double relativeH
         double vaporPressure = relativeHumidity * _pSat;
         double partialPressure = pressure - vaporPressure;
 
-        return (partialPressure * 0.028964 + vaporPressure * 0.018016) / (8.314 * (273.15 + temperature));
+        return (partialPressure * DRY_AIR_MOLAR_MASS + vaporPressure * WATER_VAPOR_MOLAR_MASS) / (UNIVERSAL_GAS_CONSTANT * KELVIN(temperature));
     } else {
-        return pressure / (287.058 * (273.15 + temperature));
+        return pressure / (SPECIFIC_GAS_CONSTANT_DRY_AIR * KELVIN(temperature));
     }
 }
 
@@ -106,9 +106,9 @@ double calculateAtmosphericCorrection(double ballisticCoefficient, double temper
     double airDensity = calculateAirDensity(temperature, pressure, relativeHumidity);
 
     if (!strcmp(atmosphereModel, "ICAO")) {
-        return (1.22498 / airDensity) * ballisticCoefficient;
+        return (STD_AIR_DENSITY_ICAO / airDensity) * ballisticCoefficient;
     } else {
-        return (1.20885 / airDensity) * ballisticCoefficient;
+        return (STD_AIR_DENSITY_ASM / airDensity) * ballisticCoefficient;
     }
 }
 
