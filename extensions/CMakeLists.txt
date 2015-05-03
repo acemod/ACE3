@@ -58,5 +58,6 @@ add_subdirectory(fcs)
 add_subdirectory(break_line)
 add_subdirectory(clipboard)
 add_subdirectory(advanced_ballistics)
+add_subdirectory(medical)
 
 message("Build Type: ${CMAKE_BUILD_TYPE}")
