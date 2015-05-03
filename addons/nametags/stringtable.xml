@@ -59,7 +59,7 @@
             <Italian>Mostra i gradi (richiede mostra nomi abilitato)</Italian>
             <Portuguese>Mostrar patente de jogadores (requer nome de jogadores)</Portuguese>
             <Hungarian>Játékosok rendfokozatának mutatása (a nevek mutatása szükséges)</Hungarian>
-            <Russian>Показывать звания игроков (при вкл. именах)</Russian>
+            <Russian>Показывать звания игроков (при включенных именах)</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo">
             <English>Show vehicle crew info</English>
@@ -89,7 +89,7 @@
             <English>Show SoundWaves (requires player names)</English>
             <German>Schallwellen anzeigen  (benötigt Spielernamen)</German>
             <Spanish>Mostrar onda sonora  (requiere Mostrar nombres de jugadores)</Spanish>
-            <Russian>Индикатор разговора (при вкл. именах)</Russian>
+            <Russian>Индикатор разговора (при включенных именах)</Russian>
             <Czech>Zobrazit SoundWaves (vyžaduje jména hráčů)</Czech>
             <Polish>Pokaż fale dźwiękowe (wymagana opcja Pokaż imiona graczy)</Polish>
             <French>Afficher "qui parle" (si noms affichés)</French>
