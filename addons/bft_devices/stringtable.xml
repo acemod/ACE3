@@ -43,5 +43,35 @@
         <Key ID="STR_ACE_BFT_Devices_HelmetCam_itemDescription">
             <English>HD helmet mounted camera</English>
         </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfPrimaryKey_Name">
+            <English>Toggle Primary Interface</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfPrimaryKey_ToolTip">
+            <English>Open BFT device in small overlay mode if available</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfSecondaryKey_Name">
+            <English>Toggle Secondary Interface</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfSecondaryKey_ToolTip">
+            <English>Open BFT device in interactable mode</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfTertiaryKey_Name">
+            <English>Toggle Tertiary Interface</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfTertiaryKey_ToolTip">
+            <English>Open private BFT device when in a vehicle with its own BFT device, or to open Tablet while also carrying a MicroDAGR</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfZoomInKey_Name">
+            <English>Zoom In</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfZoomInKey_ToolTip">
+            <English>Zoom In on map while BFT device is in small overlay mode</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfZoomOutKey_Name">
+            <English>Zoom Out</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfZoomOutKey_ToolTip">
+            <English>Zoom Out on map while BFT device is in small overlay mode</English>
+        </Key>
     </Package>
 </Project>
