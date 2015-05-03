@@ -359,42 +359,7 @@ And then there's the "LSD Vehicles" module &hellip; it does 'something' to all v
 ## 2. ACE Medical
 *Part of: ace_medical*
 
-### 2.1 Advanced Medical Settings
-
-This module allows you to change the default Advanced Medical Settings, when [2.2 Medical Settings](#2-2MedicalSettings) is set to "Advanced".
-
-**Settings:**
-
-1. **Enabled for (Option)**<br>
-Select what units the advanced medical system will be enabled for.<br>
-`Default value: "Players only"`
-2. **Enable Advanced wounds (Boolean)**<br>
-Allow reopening of bandaged wounds?<br>
-`Default value: No`
-3. **Vehicle Crashes (Boolean)**<br>
-Do units take damage from a vehicle crash?<br>
-`Default value: Yes`
-4. **Allow PAK (Option)**<br>
-Who can use the PAK for full heal?<br>
-`Default value: "Medics only"`
-5. **Remove PAK on use (Boolean)**<br>
-Should PAK be removed on usage?<br>
-`Default value: Yes`
-6. **Locations PAK (Option)**<br>
-Where can the personal aid kit be used?<br>
-`Default value: "Vehicles & facility"`
-7. **Allow Surgical kit (Option)**<br>
-Who can use the surgical kit?<br>
-`Default value: "Medics only"`
-8. **Remove Surgical kit (Boolean)**<br>
-Should Surgical kit be removed on usage?<br>
-`Default value: Yes`
-9. **Locations Surgical kit (Option)**<br>
-Where can the Surgical kit be used?<br>
-`Default value: "Vehicles & facility"`
-
-
-### 2.2 Medical Settings
+### 2.1 Medical Settings
 
 This module allows to tweak all the medical settings used in ACE3
 
@@ -436,6 +401,41 @@ Coefficient to modify the pain intensity.<br>
 12. **Pain coefficient (Boolean)**<br>
 Keep unit status synced. Recommended on.<br>
 `Default value: Yes`
+
+
+### 2.2 Advanced Medical Settings
+
+This module allows you to change the default Advanced Medical Settings, when [2.2 Medical Settings](#2-2MedicalSettings) is set to "Advanced".
+
+**Settings:**
+
+1. **Enabled for (Option)**<br>
+Select what units the advanced medical system will be enabled for.<br>
+`Default value: "Players only"`
+2. **Enable Advanced wounds (Boolean)**<br>
+Allow reopening of bandaged wounds?<br>
+`Default value: No`
+3. **Vehicle Crashes (Boolean)**<br>
+Do units take damage from a vehicle crash?<br>
+`Default value: Yes`
+4. **Allow PAK (Option)**<br>
+Who can use the PAK for full heal?<br>
+`Default value: "Medics only"`
+5. **Remove PAK on use (Boolean)**<br>
+Should PAK be removed on usage?<br>
+`Default value: Yes`
+6. **Locations PAK (Option)**<br>
+Where can the personal aid kit be used?<br>
+`Default value: "Vehicles & facility"`
+7. **Allow Surgical kit (Option)**<br>
+Who can use the surgical kit?<br>
+`Default value: "Medics only"`
+8. **Remove Surgical kit (Boolean)**<br>
+Should Surgical kit be removed on usage?<br>
+`Default value: Yes`
+9. **Locations Surgical kit (Option)**<br>
+Where can the Surgical kit be used?<br>
+`Default value: "Vehicles & facility"`
 
 
 ### 2.3 Revive Settings
