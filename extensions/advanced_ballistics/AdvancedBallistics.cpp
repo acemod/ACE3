@@ -433,6 +433,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         double trueVelocity[3] = { 0.0, 0.0, 0.0 };
         double trueSpeed = 0.0;
         double temperature = 0.0;
+        double pressure = 1013.25;
         double windSpeed = 0.0;
         double windAttenuation = 1.0;
         double velocityOffset[3] = { 0.0, 0.0, 0.0 };
@@ -498,10 +499,9 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         trueSpeed = sqrt(pow(trueVelocity[0], 2) + pow(trueVelocity[1], 2) + pow(trueVelocity[2], 2));
 
         temperature = bulletDatabase[index].temperature - 0.0065 * position[2];
+        pressure = 1013.25 * exp(-(bulletDatabase[index].altitude + position[2]) / 7990) - 10 * bulletDatabase[index].overcast;
 
         if (bulletDatabase[index].ballisticCoefficients.size() == bulletDatabase[index].velocityBoundaries.size() + 1) {
-            double pressure = 1013.25 * exp(-(bulletDatabase[index].altitude + position[2]) / 7990) - 10 * bulletDatabase[index].overcast;
-
             dragRef = deltaT * bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
 
             accelRef[0] = (velocity[0] / bulletSpeed) * dragRef;
@@ -530,8 +530,8 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
             velocityOffset[1] -= accel[1];
             velocityOffset[2] -= accel[2];
         } else {
-            double pressureDeviation = 1013.25 * exp(-(bulletDatabase[index].altitude + position[2]) / 7990) - 1013.25 - 10 * bulletDatabase[index].overcast;
-            double airFriction = bulletDatabase[index].airFriction + ((temperature - 15) * 0.0000015 + bulletDatabase[index].humidity * 0.0000040 + pressureDeviation * -0.0000009);
+            double airDensity = calculateAirDensity(temperature, pressure, bulletDatabase[index].humidity);
+            double airFriction = bulletDatabase[index].airFriction * airDensity / STD_AIR_DENSITY_ICAO;
 
             if (airFriction != bulletDatabase[index].airFriction || windSpeed > 0) {
                 dragRef = deltaT * bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
