@@ -57,6 +57,7 @@ set(GLOBAL_SOURCES ${GLOBAL_RC})
 add_subdirectory(fcs)
 add_subdirectory(break_line)
 add_subdirectory(clipboard)
+add_subdirectory(random)
 add_subdirectory(advanced_ballistics)
 
 message("Build Type: ${CMAKE_BUILD_TYPE}")
