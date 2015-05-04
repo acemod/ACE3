@@ -23,7 +23,7 @@ _deviceClass = _this select 6;
 _encryptionKeys = _sideInformation select 1;
 _access = true;
 {
-	if (_x in _encryptionKeys) exitwith {_access = true; };
+    if (_x in _encryptionKeys) exitwith {_access = true; };
 }foreach GVAR(localOwnedEncyptionKeys);
 
 if !(_access) exitwith {[]};
