@@ -240,19 +240,19 @@
             <Hungarian>Beállításmenü kezelőfelületének skálázása</Hungarian>
             <Portuguese>Escalar o menu de opções</Portuguese>
         </Key>
-		<Key ID="STR_AllowConfigExport_Module_DisplayName">
+        <Key ID="STR_AllowConfigExport_Module_DisplayName">
             <English>Allow Config Export [ACE]</English>
             <Polish>Pozwól na eksport ustawień [ACE]</Polish>
         </Key>
-		<Key ID="STR_AllowConfigExport_allowconfigurationExport_DisplayName">
+        <Key ID="STR_AllowConfigExport_allowconfigurationExport_DisplayName">
             <English>Allow</English>
             <Polish>Zezwól</Polish>
         </Key>
-		<Key ID="STR_AllowConfigExport_allowconfigurationExport_Description">
+        <Key ID="STR_AllowConfigExport_allowconfigurationExport_Description">
             <English>Allow export of all settings to a server config formatted.</English>
             <Polish>Zezwól na eksport wszystkich ustawień do formatu konfiguracji serwera.</Polish>
         </Key>
-		<Key ID="STR_AllowConfigExport_Module_Description">
+        <Key ID="STR_AllowConfigExport_Module_Description">
             <English>When allowed, you have access to the settings modification and export in SP. Clicking export will place the formated config on your clipboard.</English>
             <Polish>Jeżeli ustawione na zezwól, wtedy będziesz mieć dostęp do ekranu modyfikacji wszystich ustawień i zmiennych ACE, a także będziesz mieć możliwość eksportu tychże ustawień do formatu rozpoznawalnego przez userconfig serwera. Kliknięcie opcji Eksportuj skopiuje wszystkie ustawienia do schowka. Działa tylko w trybie SP.</Polish>
         </Key>
