@@ -102,8 +102,8 @@
             <Polish>Określa obszar naokoło gracza (w metrach), na którym zaawansowana balistyka jest aplikowana dla pocisków</Polish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_Description">
-            <English>TODO: LOCALIZE</English>
-            <Polish>TODO: LOCALIZE</Polish>
+            <English></English>
+            <Polish>Moduł ten pozwala aktywować zaawansowaną balistykę biorącą przy obliczeniach trajektorii lotu pocisku pod uwagę takie rzeczy jak temperatura powietrza, ciśnienie atmosferyczne, wilgotność powietrza, siły Coriolisa i Eotvosa, grawitację a także broń z jakiej wykonywany jest strzał oraz rodzaj amunicji. Wszystko to sprowadza się na bardzo dokładne odwzorowanie balistyki.</Polish>
         </Key>
     </Package>
 </Project>

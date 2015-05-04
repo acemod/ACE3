@@ -130,7 +130,7 @@
             <Polish>Nie</Polish>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
-            <English>TODO: Module Description</English>
+            <English></English>
             <Polish>Głuchota bojowa pojawia się w momentach, kiedy stoimy w pobliżu broni wielkokalibrowej bez ochrony słuchu, lub np. podczas ostrzału artyleryjskiego. Moduł ten pozwala na włączenie lub wyłączenie tego efektu.</Polish>
         </Key>
     </Package>
