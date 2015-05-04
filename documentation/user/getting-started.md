@@ -13,10 +13,8 @@ parent: wiki
 
 Downloaded ACE3 and have no idea where to start? This page serves as a document to help new players get started with things like the medical system, or how to adjust your scope.
 
-### Table of contents
-1. [Vector 21](#vector-21)
 
-### Vector 21
+### 1. Vector 21
 *Part of: ace_vector*
 
 ACE3 adds a realistic depiction of the Vector 21 rangefinder to the game. Unlike other rangefinders, it doesn't just magically show you the range to your target, but in exchange allows you to do alot of things with it that the other choices in Arma do not offer. The Vector's functions include, but are not limited to:
