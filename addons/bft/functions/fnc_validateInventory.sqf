@@ -44,5 +44,5 @@ _unMatchedDevices = _ownedDevices - _matchedIDs;
     ["bft_updateDeviceOwner", [_x, objNull]] call EFUNC(common,globalEvent);
 }foreach _unMatchedDevices;
 
-systemChat format["validate - devices: %1 %2", GVAR(devices)];
-diag_log format["validate - devices: %1 %2", GVAR(devices)];
+systemChat format["validate - devices: %1 %2", GVAR(deviceData)];
+diag_log format["validate - devices: %1 %2", GVAR(deviceData)];

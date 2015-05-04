@@ -18,8 +18,8 @@ _deviceID = _this select 0;
 _data = [];
 {
     if (_x select 0 == _deviceID) exitwith {
-        _data = _x; // GVAR(devices) select _foreachIndex;
+        _data = _x; // GVAR(deviceData) select _foreachIndex;
     };
-}foreach GVAR(devices);
+}foreach GVAR(deviceData);
 
 _data;

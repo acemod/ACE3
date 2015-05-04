@@ -13,17 +13,23 @@ PREP(handleUpdateDeviceOwner);
 PREP(isDeviceOwned);
 PREP(setDeviceOwner);
 PREP(validateInventory);
-
+PREP(deviceDataToMapData);
+PREP(getSizeIcon);
+PREP(getTypeIcon);
 
 // Synced data collections
 GVAR(saluteReports) = [];
-GVAR(devices) = [];
+GVAR(deviceData) = [];
 GVAR(routes) = [];
 GVAR(messages) = [];
 GVAR(requests) = [];
 GVAR(orbatElements) = [];
 
+GVAR(availableDevices) = [];
+
 // local data collections
 GVAR(colorFilters) = [];
+
+GVAR(localOwnedEncyptionKeys) = [];
 
 ADDON = true;

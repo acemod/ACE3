@@ -53,5 +53,5 @@ if (!isNull _previousOwner && {local _previousOwner}) then {
         diag_log format["handleUpdate - new ownedDevices: %1 %2", _previousOwner, _currentDevices];
     };
 };
-systemChat format["handleUpdate - devices: %1", GVAR(devices)];
-diag_log format["handleUpdate - devices: %1", GVAR(devices)];
+systemChat format["handleUpdate - devices: %1", GVAR(deviceData)];
+diag_log format["handleUpdate - devices: %1", GVAR(deviceData)];

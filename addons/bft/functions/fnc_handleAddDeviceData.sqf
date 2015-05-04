@@ -15,7 +15,7 @@
 
 private ["_currentDevices"];
 // [_magID, [_deviceSide, _deviceEncryptionKeys], _assignableInformation, _app, -1, _owner]
-GVAR(devices) pushback _this;
+GVAR(deviceData) pushback _this;
 
 systemChat format["handleAddDeviceData: %1", _this];
 diag_log format["handleAddDeviceData: %1", _this];

@@ -21,6 +21,6 @@ _ids = [];
     if ((_x select 5) == _owner) then {
         _ids pushback (_X select 0);
     };
-}foreach GVAR(devices);
+}foreach GVAR(deviceData);
 
 _ids;
