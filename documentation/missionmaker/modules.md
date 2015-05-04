@@ -405,7 +405,7 @@ Keep unit status synced. Recommended on.<br>
 
 ### 2.2 Advanced Medical Settings
 
-This module allows you to change the default Advanced Medical Settings, when [2.2 Medical Settings](#2-2MedicalSettings) is set to "Advanced".
+This module allows you to change the default Advanced Medical Settings, when [2.1 Medical Settings](#2-1MedicalSettings) is set to "Advanced".
 
 **Settings:**
 
@@ -471,18 +471,18 @@ Medics allow for more advanced treatment in case of Advanced Medic roles enabled
 
 ### 2.5 Set Medical Facility
 
-Defines an object as a medical facility for CMS. This allows for more advanced treatments. Can be synced with buildings and vehicles.
+Defines an object as a medical facility. This allows for more advanced treatments. Can be synced with buildings and vehicles.
 
 **Settings:**
 
 1. **Is Medical Facility (Boolean)**<br>
-Registers an object as a medical facility for CMS.<br>
+Registers an object as a medical facility.<br>
 `Default value: Yes`
 
 
 ### 2.6 Set Medical Vehicle
 
-Defines an object as a medical facility for CMS. This allows for more advanced treatments. Can be synced with buildings and vehicles.
+Defines an object as a medical facility. This allows for more advanced treatments. Can be synced with buildings and vehicles.
 
 **Settings:**
 
