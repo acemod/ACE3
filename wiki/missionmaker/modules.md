@@ -88,17 +88,17 @@ You can make a whitelist of addons that don't have to be on the server. If you w
 The list must be in the following format: `["ADDON1","ADDON2",...]` where the addons are CfgPatches references to all PBOs of the optional mod. To figure these out, you can use the scripting command `activatedAddons` in the editor while those mods are enabled.  
 
 Example 1: @Blastcore-A3:<br>
-```js
+```
 ["warfxpe","blastcore_vep"]
 ```
 
 Example 2: @JSRS:<br>
-```js
+```
 [TBD]
 ```
 
 Example 3: @JSRS + @Blastcore-A3:<br>
-```js
+```
 [TBD, "warfxpe","blastcore_vep"]
 ```
 
@@ -405,7 +405,7 @@ Keep unit status synced. Recommended on.<br>
 
 ### 2.2 Advanced Medical Settings
 
-This module allows you to change the default Advanced Medical Settings, when [2.1 Medical Settings](#2-1MedicalSettings) is set to "Advanced".
+This module allows you to change the default Advanced Medical Settings, when [2.1 Medical Settings](#2.1-medical-settings) is set to "Advanced".
 
 **Settings:**
 

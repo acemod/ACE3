@@ -20,4 +20,13 @@ jQuery(document).ready(function(){
             ]
         });
     }
+
+
+    var $toc = jQuery("#toc");
+    if ($toc.length > 0) {
+        $toc.toc({
+            headers: "#content h2, #content h3, #content h4, #content h5, #content h6"
+        });
+    }
+
 });
