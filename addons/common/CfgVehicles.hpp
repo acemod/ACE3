@@ -91,10 +91,6 @@ class CfgVehicles {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
     displayName = "$STR_ACE_Common_LSDVehicles_DisplayName";
-<<<<<<< HEAD
-    description = "$STR_ACE_Common_LSDVehicles_Description";
-=======
->>>>>>> fun continues
     function = "ACE_Common_fnc_moduleLSDVehicles";
     scope = 2;
     icon = QUOTE(PATHTOF(UI\Icon_Module_LSD_ca.paa));
