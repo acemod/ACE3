@@ -500,7 +500,7 @@
 		</Key>
 		<Key ID="STR_ACE_Common_CheckPBO_CheckAll_DisplayName">
 		    <English>Check all addons</English>
-            <Polish>Sprawdź wszystkie addony</Polish>
+            <Polish>Sprawdź wsz. addony</Polish>
 		</Key>
 		<Key ID="STR_ACE_Common_CheckPBO_CheckAll_Description">
 		    <English>Check all addons instead of only those of ACE?</English>

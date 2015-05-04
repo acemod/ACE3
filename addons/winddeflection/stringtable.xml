@@ -100,7 +100,7 @@
             </Key>
             <Key ID="STR_ACE_WEATHER_WINDDEFLECTION_DESCRIPTION">
                 <English>Wind influence on projectiles trajectory</English>
-                <Polish>Wpływ wiatru na trajectorię lotu pocisków</Polish>
+                <Polish>Wpływ wiatru na trajektorię lotu pocisków</Polish>
             </Key>
         </Container>
     </Package>

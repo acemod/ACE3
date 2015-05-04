@@ -44,7 +44,7 @@ class CfgVehicles {
     class GVAR(dagrModule): Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "MicroDAGR Map Fill";
+        displayName = "$STR_ACE_Dagr_Module_DisplayName";
         function = QFUNC(moduleMapFill);
         scope = 2;
         isGlobal = 1;
@@ -52,18 +52,18 @@ class CfgVehicles {
         functionPriority = 0;
         class Arguments {
             class MapDataAvailable {
-                displayName = "MicroDAGR Map Fill"; // Argument label
-                description = "How much map data is filled on MicroDAGR's "; // Tooltip description
-                typeName = "NUMBER"; // Value type, can be "NUMBER", "STRING" or "BOOL"
+                displayName = "$STR_ACE_Dagr_MapDataAvailable_DisplayName";
+                description = "$STR_ACE_Dagr_MapDataAvailable_Description";
+                typeName = "NUMBER";
                 class values {
-                    class None {name = "Full Satellite + Buildings"; value = MAP_DETAIL_SAT; default = 1;};
-                    class Side {name = "Topographical + Roads"; value = MAP_DETAIL_TOPOROADS;};
-                    class Unique {name = "None (Cannot use map view)"; value = MAP_DETAIL_NONE;};
+                    class None {name = "$STR_ACE_Dagr_None"; value = MAP_DETAIL_SAT; default = 1;};
+                    class Side {name = "$STR_ACE_Dagr_Side"; value = MAP_DETAIL_TOPOROADS;};
+                    class Unique {name = "$STR_ACE_Dagr_Unique"; value = MAP_DETAIL_NONE;};
                 };
             };
         };
         class ModuleDescription: ModuleDescription {
-            description = "Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.<br/>Source: microDAGR.pbo";
+            description = "$STR_ACE_Dagr_Module_Description";
         };
     };
     
