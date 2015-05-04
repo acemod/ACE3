@@ -13,15 +13,9 @@
     {
         if !(isNull(_x select 5)) then {
             _displayData = _x call FUNC(deviceDataToMapData);
-
-            systemChat format["Parsingdata: %1 - %2", (_x select 0), _displayData];
-            diag_log format["Parsingdata: %1 - %2", (_x select 0), _displayData];
             if (count _displayData > 0) then {
                 _newData pushback _displayData;
             };
-        } else {
-            systemChat format["Parsingdata: %1 - NO OWNER", (_x select 0)];
-            diag_log format["Parsingdata: %1 - NO OWNER", (_x select 0)];
         };
     }foreach GVAR(deviceData);
     GVAR(availableDevices) = _newData;
