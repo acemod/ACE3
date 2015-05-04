@@ -6,7 +6,7 @@ parent: wiki
 order: 2
 ---
 
-### CfgVehicles
+## 1. CfgVehicles
 
 ```c++
 ace_nightvision_grain
@@ -23,7 +23,7 @@ ace_offset
 ```
 
 
-### CfgWeapons
+## 2. CfgWeapons
 
 ```c++
 ace_recoil_shakemultiplier
@@ -60,7 +60,7 @@ ace_modedescription
 ```
 
 
-### CfgAmmo
+## 3. CfgAmmo
 
 ```c++
 ace_recoil_shakemultiplier
@@ -88,7 +88,7 @@ ace_barrellengths
 ```
 
 
-### CfgGlasses
+## 4. CfgGlasses
 
 ```c++
 ace_color
@@ -102,7 +102,7 @@ ace_dustpath
 ```
 
 
-### CfgMagazines
+## 5. CfgMagazines
 
 ```c++
 ace_isbelt

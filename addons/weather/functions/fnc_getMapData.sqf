@@ -34,6 +34,7 @@ if (worldName in ["reshmaan"]) then { GVAR(Latitude) = 35; GVAR(Altitude) = 2000
 if (worldName in ["Thirsk"]) then { GVAR(Latitude) = 65; GVAR(Altitude) = 0; };
 if (worldName in ["lingor"]) then { GVAR(Latitude) = -4; GVAR(Altitude) = 0; };
 if (worldName in ["Panthera3"]) then { GVAR(Latitude) = 46; GVAR(Altitude) = 0; };
+if (worldName in ["Kunduz"]) then { GVAR(Latitude) = 37; GVAR(Altitude) = 400; };
 
 // Assume default wind values
 // Source: https://weatherspark.com/averages/32194/Lemnos-Limnos-North-Aegean-Islands-Greece
@@ -130,6 +131,30 @@ if (worldName in ["Imrali"]) exitWith {
     GVAR(TempNight) = [1.4, 2.4, 3.7, 7.1, 10.9, 14.3, 16.5, 16.3, 13, 9.5, 6, 3.8];
     // Source: http://www.weather-and-climate.com/average-monthly-Humidity-perc,Bursa,Turkey
     GVAR(Humidity) = [78, 75, 70, 70, 71, 61, 58, 59, 63, 69, 77, 76];
+};
+if (worldName in ["Kunduz"]) exitWith {
+     // Source: http://www.iten-online.ch/klima/asien/afghanistan/kunduz.htm
+    GVAR(TempDay) = [6.3, 9.5, 15.8, 23, 29.8, 37.3, 39, 36.9, 31.8, 24.5, 16, 9.7];
+    GVAR(TempNight) = [-2.4, 0, 5.7, 11.6, 15.7, 20.9, 21.5, 21.5, 16.3, 10.6, 4.1, 0];
+    // Source: http://www.weather-and-climate.com/average-monthly-Humidity-perc,Kabul,Afghanistan
+    GVAR(Humidity) = [70, 72, 64, 61, 49, 34, 36, 38, 39, 52, 51, 63];
+    
+    // Source: https://weatherspark.com/averages/32753/Kunduz-Afghanistan
+    GVAR(WindSpeedMax)  = [[3.5, 0.8], [4.0, 0.6], [4.3, 2.0], [4.6, 1.1], [5.1, 1.2], [5.7, 1.0], [4.9, 0.8], [4.5, 0.3], [4.3, 0.3], [3.8, 0.5], [3.0, 1.3], [3.1, 0.8]];
+    GVAR(WindSpeedMean) = [1.5, 1.8, 2.1, 2.4, 2.5, 2.8, 2.7, 2.5, 2.3, 2.1, 1.7, 1.6];
+    GVAR(WindSpeedMin)  = [[0.2, 0.1], [0.3, 0.3], [0.4, 0.1], [0.8, 0.2], [0.8, 0.1], [1.0, 0.3], [0.9, 0.5], [0.8, 0.2], [0.8, 0.1], [0.7, 0.1], [0.5, 0.1], [0.2, 0.2]];
+    GVAR(WindDirectionProbabilities) = [[0.04, 0.02, 0.05, 0.11, 0.12, 0.06, 0.09, 0.06], // January
+                                        [0.04, 0.02, 0.05, 0.11, 0.12, 0.06, 0.08, 0.07], // February
+                                        [0.05, 0.04, 0.06, 0.14, 0.12, 0.06, 0.10, 0.08], // March
+                                        [0.09, 0.05, 0.08, 0.13, 0.07, 0.05, 0.07, 0.07], // April
+                                        [0.14, 0.07, 0.13, 0.13, 0.06, 0.05, 0.05, 0.08], // May
+                                        [0.16, 0.06, 0.12, 0.12, 0.05, 0.04, 0.05, 0.10], // June
+                                        [0.17, 0.06, 0.08, 0.12, 0.06, 0.04, 0.05, 0.12], // July
+                                        [0.15, 0.05, 0.06, 0.16, 0.08, 0.05, 0.07, 0.13], // August
+                                        [0.15, 0.04, 0.08, 0.20, 0.13, 0.05, 0.10, 0.14], // September
+                                        [0.08, 0.02, 0.08, 0.22, 0.15, 0.06, 0.13, 0.13], // October
+                                        [0.06, 0.02, 0.05, 0.20, 0.17, 0.06, 0.12, 0.10], // November
+                                        [0.04, 0.02, 0.05, 0.14, 0.19, 0.07, 0.10, 0.07]];// December
 };
 
 // Assume default values
