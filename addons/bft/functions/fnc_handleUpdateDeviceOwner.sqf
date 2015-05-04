@@ -33,25 +33,25 @@ systemChat format["handleUpdate - validate new owner - %1", (_newData select 5) 
 diag_log format["handleUpdate - validate new owner - %1", (_newData select 5) == _newOwner];
 
 if (!isNull _newOwner && {local _newOwner}) then {
-	_currentDevices = _newOwner getvariable [QGVAR(ownedDevices), []];
-	if !(_deviceID in _currentDevices) then {
-		_currentDevices pushback _deviceID;
-		_newOwner setvariable [QGVAR(ownedDevices), _currentDevices, true];
+    _currentDevices = _newOwner getvariable [QGVAR(ownedDevices), []];
+    if !(_deviceID in _currentDevices) then {
+        _currentDevices pushback _deviceID;
+        _newOwner setvariable [QGVAR(ownedDevices), _currentDevices, true];
 
-		systemChat format["handleUpdate - new ownedDevices: %1 %2", _newOwner, _currentDevices];
-		diag_log format["handleUpdate - new ownedDevices: %1 %2", _newOwner, _currentDevices];
+        systemChat format["handleUpdate - new ownedDevices: %1 %2", _newOwner, _currentDevices];
+        diag_log format["handleUpdate - new ownedDevices: %1 %2", _newOwner, _currentDevices];
 
-	};
+    };
 };
 if (!isNull _previousOwner && {local _previousOwner}) then {
-	_currentDevices = _previousOwner getvariable [QGVAR(ownedDevices), []];
-	if (_deviceID in _currentDevices) then {
-		_currentDevices = _currentDevices - [_deviceID];
-		_previousOwner setvariable [QGVAR(ownedDevices), _currentDevices, true];
+    _currentDevices = _previousOwner getvariable [QGVAR(ownedDevices), []];
+    if (_deviceID in _currentDevices) then {
+        _currentDevices = _currentDevices - [_deviceID];
+        _previousOwner setvariable [QGVAR(ownedDevices), _currentDevices, true];
 
-		systemChat format["handleUpdate - new ownedDevices: %1 %2", _previousOwner, _currentDevices];
-		diag_log format["handleUpdate - new ownedDevices: %1 %2", _previousOwner, _currentDevices];
-	};
+        systemChat format["handleUpdate - new ownedDevices: %1 %2", _previousOwner, _currentDevices];
+        diag_log format["handleUpdate - new ownedDevices: %1 %2", _previousOwner, _currentDevices];
+    };
 };
 systemChat format["handleUpdate - devices: %1", GVAR(devices)];
 diag_log format["handleUpdate - devices: %1", GVAR(devices)];

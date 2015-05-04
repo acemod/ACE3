@@ -19,5 +19,5 @@ _unit = _this select 0;
 if !(local _unit) exitwith {};
 
 {
-	[_unit, _x] call FUNC(checkItem);
+    [_unit, _x] call FUNC(checkItem);
 }foreach items _unit;

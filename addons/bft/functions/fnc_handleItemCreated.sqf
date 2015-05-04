@@ -20,16 +20,16 @@ _magazine = _this select 2;
 _magID = _this select 3;
 
 /*
-	Device ID
-	Side ID/encyrption ID
-	time logged in
-	opened app ID
-	app data [map position, map zoom level, ..]
-	element type
-	element size
-	element callsign
-	currentOwner
-	ORBAT element ID
+    Device ID
+    Side ID/encyrption ID
+    time logged in
+    opened app ID
+    app data [map position, map zoom level, ..]
+    element type
+    element size
+    element callsign
+    currentOwner
+    ORBAT element ID
 */
 systemChat format["handleItemCreated: %1", _this];
 diag_log format["handleItemCreated: %1", _this];

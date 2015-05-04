@@ -19,29 +19,29 @@ _unit = _this select 0;
 if !(local _unit) exitwith {};
 
 {
-	[_unit, _x] call FUNC(checkItem);
+    [_unit, _x] call FUNC(checkItem);
 }foreach items _unit;
 
 _ownedDevices = _unit getvariable [QGVAR(ownedDevices), []];
 _matchedIDs = [];
 {
-	_magID = [_x] call FUNC(getMagazineID);
-	_data = [_magID] call FUNC(getDeviceData);
-	if (count _data > 0) then {
-		if !(_magID in _ownedDevices) then {
-			systemChat format["validate - new picked up ID: %1 %2", _unit, _magID];
-			diag_log format["validate - new picked up  ID: %1 %2", _unit, _magID];
-		};
-		[_magID, _unit] call FUNC(setDeviceOwner);
-		_matchedIDs pushback _magID;
-	};
+    _magID = [_x] call FUNC(getMagazineID);
+    _data = [_magID] call FUNC(getDeviceData);
+    if (count _data > 0) then {
+        if !(_magID in _ownedDevices) then {
+            systemChat format["validate - new picked up ID: %1 %2", _unit, _magID];
+            diag_log format["validate - new picked up  ID: %1 %2", _unit, _magID];
+        };
+        [_magID, _unit] call FUNC(setDeviceOwner);
+        _matchedIDs pushback _magID;
+    };
 }foreach (magazinesDetail _unit);
 
 _unMatchedDevices = _ownedDevices - _matchedIDs;
 {
-	systemChat format["validate - no longer has ID: %1 %2", _unit, _x];
-	diag_log format["validate - no longer has ID: %1 %2", _unit, _x];
-	["bft_updateDeviceOwner", [_x, objNull]] call EFUNC(common,globalEvent);
+    systemChat format["validate - no longer has ID: %1 %2", _unit, _x];
+    diag_log format["validate - no longer has ID: %1 %2", _unit, _x];
+    ["bft_updateDeviceOwner", [_x, objNull]] call EFUNC(common,globalEvent);
 }foreach _unMatchedDevices;
 
 systemChat format["validate - devices: %1 %2", GVAR(devices)];

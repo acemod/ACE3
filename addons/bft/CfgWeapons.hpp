@@ -1,6 +1,6 @@
 
 class CfgWeapons {
-	class ACE_ItemCore;
+    class ACE_ItemCore;
     class InventoryItem_Base_F;
     class ACE_bftItemBase: ACE_ItemCore {
         author = "$STR_ACE_Common_ACETeam";
