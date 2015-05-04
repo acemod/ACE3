@@ -5,6 +5,6 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = "$STR_ACE_MissileGuidance";
         description = "$STR_ACE_MissileGuidance_Desc";
-        values[] = {"Off", "Player Only", "Player and AI"};
+        values[] = {"$STR_ACE_MissileGuidance_Off", "$STR_ACE_MissileGuidance_PlayerOnly", "$STR_ACE_MissileGuidance_PlayerAndAi"};
     };
 };
