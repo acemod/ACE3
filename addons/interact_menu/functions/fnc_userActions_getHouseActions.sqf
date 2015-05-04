@@ -16,6 +16,9 @@ PARAMS_1(_typeOfBuilding);
 
 private["_action", "_actionDisplayName", "_actionDisplayNameDefault", "_actionMaxDistance", "_actionOffset", "_actionPath", "_actionPosition", "_building", "_configPath", "_endIndex", "_iconImage", "_index", "_ladders", "_memPointIndex", "_memPoints", "_memPointsActions", "_startIndex"];
 
+_searchIndex = GVAR(cachedBuildingTypes) find _typeOfBuilding;
+if (_searchIndex != -1) exitWith {GVAR(cachedBuildingActionPairs) select _searchIndex};
+
 _memPoints = [];
 _memPointsActions = [];
 
@@ -65,10 +68,10 @@ for "_index" from 0 to ((count _configPath) - 1) do {
 
     _actionStatement = compile _actionStatement;
     _actionCondition = compile _actionCondition;
-    _actionMaxDistance = _actionMaxDistance + 0.5; //increase range slightly
+    _actionMaxDistance = _actionMaxDistance + 0.1; //increase range slightly
     _iconImage = "";
 
-/*     //todo: extension? (~75% of time doing this string shit!)
+    /*
     if (_actionDisplayNameDefault != "") then {
         //something like: "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
         //find the end [.paa']
@@ -85,8 +88,9 @@ for "_index" from 0 to ((count _configPath) - 1) do {
             _startIndex = _startIndex - 1;
         };
     }; */
+    //extension ~4x as fast:
     _iconImage =  "ace_parse_imagepath" callExtension _actionDisplayNameDefault;
-    
+
     
     _actionOffset = [_actionPosition] call _fnc_getMemPointOffset;
     _memPointIndex = _memPoints find _actionPosition;
@@ -138,6 +142,9 @@ _ladders = getArray (configFile >> "CfgVehicles" >> _typeOfBuilding >> "ladders"
     (_memPointsActions select _memPointIndex) pushBack _action;
 
 } forEach _ladders;
+
+GVAR(cachedBuildingTypes) pushBack _typeOfBuilding;
+GVAR(cachedBuildingActionPairs) pushBack [_memPoints, _memPointsActions];
 
 
 [_memPoints, _memPointsActions]

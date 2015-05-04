@@ -3,6 +3,9 @@
 
 if (!hasInterface) exitWith {};
 
+GVAR(cachedBuildingTypes) = [];
+GVAR(cachedBuildingActionPairs) = [];
+
 GVAR(ParsedTextCached) = [];
 
 //Setup text/shadow/size/color settings matrix

@@ -23,12 +23,10 @@ if (_interactionType != 0) exitWith {};
 //Ignore when mounted:
 if ((vehicle ACE_player) != ACE_player) exitWith {};
 
-systemChat format ["starting %1", diag_tickTime];
-
 [{
-    private["_helperObject", "_helperPos", "_houseWasScaned", "_nearBuidlings", "_theHouse"];
+    private ["_nearBuidlings", "_typeOfHouse", "_houseBeingScaned", "_actionSet", "_memPoints", "_memPointsActions", "_helperPos", "_helperObject"];
     PARAMS_2(_args,_pfID);
-    EXPLODE_4_PVT(_args,_setPosition,_addedHelpers,_housesScaned,_houseBeingScaned);
+    EXPLODE_4_PVT(_args,_setPosition,_addedHelpers,_housesScaned,_housesToScanForActions);
 
     if (!EGVAR(interact_menu,keyDown)) then {
         {deleteVehicle _x;} forEach _addedHelpers;
@@ -37,63 +35,61 @@ systemChat format ["starting %1", diag_tickTime];
         // Prevent Rare Error when ending mission with interact key down:
         if (isNull ace_player) exitWith {};
 
-        //If player moved >5 meters from last pos, then rescan
-        if (((getPosASL ace_player) distance _setPosition) < 5) exitWith {};
-
         //Make the common case fast (cursorTarget is looking at a door):
         if ((!isNull cursorTarget) && {cursorTarget isKindOf "Static"} && {!(cursorTarget in _housesScaned)}) then {
-            _housesScaned pushBack cursorTarget;
             if (((count (configFile >> "CfgVehicles" >> (typeOf cursorTarget) >> "UserActions")) > 0) || {(count (getArray (configFile >> "CfgVehicles" >> (typeOf cursorTarget) >> "ladders"))) > 0}) then {
-                _houseBeingScaned = cursorTarget;
+                _housesToScanForActions = [cursorTarget];
+            } else {
+                _housesScaned pushBack cursorTarget;
             };
         };
 
-        if (isNull _houseBeingScaned) then {
-            _houseWasScaned = false;
+        //For performance, we only do 1 thing per frame,
+        //-either do a wide scan and search for houses with actions
+        //-or scan one house at a time and add the actions for that house
+
+        if (_housesToScanForActions isEqualTo []) then {
+            //If player moved >2 meters from last pos, then rescan
+            if (((getPosASL ace_player) distance _setPosition) < 2) exitWith {};
+
             _nearBuidlings = nearestObjects [ace_player, ["Static"], 30];
             {
-                _theHouse = _x;
-                if (!(_theHouse in _housesScaned)) exitWith {
-                    _houseWasScaned = true;
+                _typeOfHouse = typeOf _x;
+                if (((count (configFile >> "CfgVehicles" >> _typeOfHouse >> "UserActions")) == 0) && {(count (getArray (configFile >> "CfgVehicles" >> _typeOfHouse >> "ladders"))) == 0}) then {
                     _housesScaned pushBack _x;
-                    if ((typeOf _theHouse) != "") then {
-                        if (((count (configFile >> "CfgVehicles" >> (typeOf _theHouse) >> "UserActions")) > 0) || {(count (getArray (configFile >> "CfgVehicles" >> (typeOf _theHouse) >> "ladders"))) > 0}) then {
-                            _args set [3, _theHouse];
-                        };
-                    };
+                } else {
+                    _housesToScanForActions pushBack _x;
                 };
-                // Need to scan fairly far, because houses are big. You can be 25m from center of building but right next to a door.
-            } forEach _nearBuidlings;
+            } forEach (_nearBuidlings - _housesScaned);
 
-            //If we finished scanning everything, update position
-            if (!_houseWasScaned) then {
-                systemChat format ["Pos Updated (stable): %1 [count %2]", diag_tickTime, (count _addedHelpers)];
-                _args set [0, (getPosASL ace_player)];
-            };
+            _args set [0, (getPosASL ace_player)];
         } else {
-            _actionSet = [(typeOf _houseBeingScaned)] call FUNC(userActions_getHouseActions);
+            _houseBeingScaned = _housesToScanForActions deleteAt 0;
+            _typeOfHouse = typeOf _houseBeingScaned;
+            //Skip this house for now if we are outside of it's radius
+            //(we have to scan far out for the big houses, but we don't want to waste time adding actions on every little shack)
+            if ((_houseBeingScaned != cursorTarget) && {((ACE_player distance _houseBeingScaned) - ((sizeOf _typeOfHouse) / 2)) > 4}) exitWith {};
+
+            _housesScaned pushBack _houseBeingScaned;
+
+            _actionSet = [_typeOfHouse] call FUNC(userActions_getHouseActions);
             EXPLODE_2_PVT(_actionSet,_memPoints,_memPointsActions);
 
-            // systemChat format ["Add Actions for [%1] (%2)", _houseBeingScaned, (count _memPoints)];
+            systemChat format ["Add Actions for [%1] (count %2) @ %3", _typeOfHouse, (count _memPoints), diag_tickTime];
             {
-                _helperObject = "Sign_Sphere25cm_F" createVehicleLocal (getpos _houseBeingScaned);
+                _helperPos = (_houseBeingScaned modelToWorld (_houseBeingScaned selectionPosition _x)) call EFUNC(common,positionToASL);
+                _helperObject = "Sign_Sphere25cm_F" createVehicleLocal _helperPos;
                 _addedHelpers pushBack _helperObject;
-
                 _helperObject setVariable [QGVAR(building), _houseBeingScaned];
-
-                //ASL/ATL bullshit (note: attachTo doesn't work on buildings)
-                _helperPos = _houseBeingScaned modelToWorld (_houseBeingScaned selectionPosition _x);
-                _helperObject setPosASL (_helperPos call EFUNC(common,positionToASL));
-
+                _helperObject setPosASL _helperPos;
                 _helperObject hideObject true;
                 TRACE_3("Making New Helper",_helperObject,_x,_houseBeingScaned);
+
                 {
                     [_helperObject, 0, [], _x] call EFUNC(interact_menu,addActionToObject);
                 } forEach (_memPointsActions select _forEachIndex);
 
             } forEach _memPoints;
-
-            _args set [3, objNull];
         };
     };
-}, 0, [((getPosASL ace_player) vectorAdd [-100,0,0]), [], [], objNull]] call CBA_fnc_addPerFrameHandler;
+}, 0, [((getPosASL ace_player) vectorAdd [-100,0,0]), [], [], []]] call CBA_fnc_addPerFrameHandler;
