@@ -354,7 +354,9 @@ Defines the radius around the player (in meters) at which projectiles are wind d
 *Part of: ace_core*
 
 And then there's the "LSD Vehicles" module &hellip; it does 'something' to all vehicles synced to that module.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/X3e0LTexEok" frameborder="0" allowfullscreen></iframe>
+<div class="videoWrapper">
+    <iframe src="https://www.youtube.com/embed/X3e0LTexEok" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## 2. ACE Medical
 *Part of: ace_medical*
