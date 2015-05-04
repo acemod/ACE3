@@ -625,6 +625,9 @@ See the make.cfg file for additional build options.
         # Release/build directory, relative to script dir
         release_dir = cfg.get(make_target, "release_dir", fallback="release")
 
+        #Directory to copy the final built PBO's for a test run.
+        test_dir = cfg.get(make_target, "test_dir", fallback=os.path.join(os.environ["USERPROFILE"],r"documents\Arma 3"))
+
         # Project PBO file prefix (files are renamed to prefix_name.pbo)
         pbo_name_prefix = cfg.get(make_target, "pbo_name_prefix", fallback=None)
 
@@ -1094,6 +1097,11 @@ See the make.cfg file for additional build options.
                 print_error("Could not find Arma 3's directory in the registry.")
         else:
             a3_path = cygwin_a3path
+
+        print_yellow("Path from the registry => {}".format(a3_path))
+        a3_path = test_dir
+
+        print_yellow("Copying build files to {}".format(a3_path))
 
         if os.path.exists(a3_path):
             try:
