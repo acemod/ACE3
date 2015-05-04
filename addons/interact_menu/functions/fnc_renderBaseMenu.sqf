@@ -44,8 +44,8 @@ if (GVAR(openedMenuType) == 0 && vehicle ACE_player == ACE_player &&
 
         if (_actualDistance > _distance) exitWith {true};
 
-        if ((_actualDistance > 1.0) && {!((_actionData select 9) select 4)}) exitWith {
-            // If distance to action is greater than 1.0 m, check LOS
+        if ((_actualDistance > 1.5) && {!((_actionData select 9) select 4)}) exitWith {
+            // If distance to action is greater than 1.5 m, check LOS
             _line = [_headPos call EFUNC(common,positionToASL), _pos call EFUNC(common,positionToASL), _object, ACE_player];
             lineIntersects _line
         };
