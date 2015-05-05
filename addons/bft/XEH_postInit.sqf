@@ -36,6 +36,13 @@ if(!isServer) then {
 };
 
 [{
+
+    {
+        if (local _x && {_x != ACE_player}) then {
+            [_x] call ace_bft_fnc_validateInventory;
+        };
+    } forEach allUnits;
+
     _newData = [];
     {
         if !(isNull(_x select 5)) then {
