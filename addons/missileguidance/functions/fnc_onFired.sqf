@@ -16,7 +16,7 @@ PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 if(! (_ammo isKindOf "MissileBase") ) exitWith { false }; 
 
 //Verify ammo has explicity added guidance config (ignore inheritances)
-_configs = configProperties [(configFile >> "CfgAmmo" >> _ammo), QUOTE(configName _x == QUOTE(QGVAR(enabled))), false];
+_configs = configProperties [(configFile >> "CfgAmmo" >> _ammo), QUOTE(configName _x == QUOTE(QUOTE(ADDON))), false];
 if( (count _configs) < 1) exitWith {};
 
 _config = (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON));
