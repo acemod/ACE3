@@ -12,8 +12,8 @@ body > main {
     background-color: $white;
 }
 
-#content {
+aside {
     @media #{$small-only} {
-        margin-top: rem-calc(24);
+        margin-bottom: rem-calc(24);
     }
 }
