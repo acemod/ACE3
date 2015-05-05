@@ -1,4 +1,3 @@
-
 /*
  * Author: Glowbal
  *
@@ -23,6 +22,7 @@ diag_log format["handleSyncedArrayPushback: %1", _this];
 
 _variable = missionNamespace getvariable [_varName, []];
 _variable pushback _data;
+missionNamespace setvariable [_varName, _variable];
 
 systemChat format["handleSyncedArrayPushback %1 - %2", _varName, _variable];
 diag_log format["handleSyncedArrayPushback %1 - %2", _varName, _variable];
