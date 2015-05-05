@@ -15,8 +15,10 @@ PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 // Bail on not missile
 if(! (_ammo isKindOf "MissileBase") ) exitWith { false }; 
 
-_configs = configProperties [configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON), "true", false];
+//Verify ammo has explicity added guidance config (ignore inheritances)
+_configs = configProperties [(configFile >> "CfgAmmo" >> _ammo), QUOTE(configName _x == QUOTE(QUOTE(ADDON))), false];
 if( (count _configs) < 1) exitWith {};
+
 _config = (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON));
 _enabled = getNumber ( _config >> "enabled");
 
