@@ -23,6 +23,10 @@ code {
         margin-bottom: 30px;
         white-space: pre;
         overflow-x: auto;
+        @media #{$small-only} {
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
         word-break: inherit;
         word-wrap: inherit;
     }
