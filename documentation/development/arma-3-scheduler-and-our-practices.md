@@ -14,11 +14,13 @@ A single rendered frame of Arma 3.
 ### 1.2 Scheduled Space
 
 This refers to execution would is ruled by the Arma 3 default script scheduling engine. This would include:
+
 * spawn
 * execVM 
 
 ### 1.3 Unscheduled Space
 This refers to execution which is linear; what this means is that the code will run to completion prior to executing the current frame. It must complete, but is guaranteed to run within a given frame.
+
 * perFrameHandler
 * Extended_EventHandlers
 * addEventHandler
@@ -43,7 +45,6 @@ Because we are attempting to always run to completion; execution occurs from 2 p
 Rules of thumb for component design:
 
 * If you need to wait for a value, don't wait, use a CBA event! This means everything should be designed and written with an event-driven model in mind.
-
 * If you have to wait, use a PFH delay/diag_tickTime check.
 
 
@@ -58,7 +59,7 @@ Line Notes:
 ### 3.2 ACE3 General Rules
 
 * Always use call whenever possible. We should be calling functions chains exclusive and not be relying on spawn/execVM ever. Consider spawn/execVM banned without good reason. All code should be a chain of execution which is traceable, and not triggered between seperate threads.
-* waitUntil and sleep are banned. If you need to use them, use scheduled delay execution instead.  **Reasoning** *Sleep/waituntil surrender about 5x the scheduler time than even normal execution does. *
+* waitUntil and sleep are banned. If you need to use them, use scheduled delay execution instead.  **Reasoning: Sleep/waitUntil surrender about 5x the scheduler time than even normal execution does.**
 * If we need a spawn or exec, we should utilize the perFrame scheduler. Spawn/execVM are subject to the Arma 3 scheduler and as such, cannot be relied upon. In order to give our players a consistent gameplay experience, we need to have total control over how and when all of our code runs.
 * PFH should be utilized at all possible times when the player can see the result of whatever the code is. This applies to missile guidance, bullets, wind, optics, interactive UI, HUD's, and rendering. We should only consider scheduled execution if the code is running out of the visual range of the player. 
 
