@@ -8,7 +8,7 @@ class CfgVehicles {
     // TODO make a curator variant for this
     class ACE_moduleAmbianceSound: Module_F {
         scope = 2;
-        displayName = "Ambiance Sounds [ACE]";
+        displayName = "$STR_ACE_MissionModules_AmbianceSounds_DisplayName";
         icon = QUOTE(PATHTOF(UI\Icon_Module_Ambient_Sounds_ca.paa));
         category = "ACE_missionModules";
         function = QUOTE(FUNC(moduleAmbianceSound));
@@ -18,50 +18,50 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         class Arguments    {
             class soundFiles {
-                displayName = "Sounds";
-                description = "Classnames of the ambiance sounds played. Seperated by ','. ";
+                displayName = "$STR_ACE_MissionModules_AmbianceSounds_soundFiles_DisplayName";
+                description = "$STR_ACE_MissionModules_AmbianceSounds_soundFiles_Description";
                 typeName = "STRING";
                 defaultValue = "";
             };
             class minimalDistance {
-                displayName = "Minimal Distance";
-                description = "Minimal Distance";
+                displayName = "$STR_ACE_MissionModules_AmbianceSounds_minimalDistance_DisplayName";
+                description = "$STR_ACE_MissionModules_AmbianceSounds_minimalDistance_Description";
                 typeName = "NUMBER";
                 defaultValue = 400;
             };
             class maximalDistance {
-                displayName = "Maximal Distance";
-                description = "Maximal Distance";
+                displayName = "$STR_ACE_MissionModules_AmbianceSounds_maximalDistance_DisplayName";
+                description = "$STR_ACE_MissionModules_AmbianceSounds_maximalDistance_Description";
                 typeName = "NUMBER";
                 defaultValue = 900;
             };
             class minimalDelay {
-                displayName = "Minimal Delay";
-                description = "Minimal Delay between sounds played";
+                displayName = "$STR_ACE_MissionModules_AmbianceSounds_minimalDelay_DisplayName";
+                description = "$STR_ACE_MissionModules_AmbianceSounds_minimalDelay_Description";
                 typeName = "NUMBER";
                 defaultValue = 10;
             };
             class maximalDelay {
-                displayName = "Maximal Delay";
-                description = "Maximal Delay between sounds played";
+                displayName = "$STR_ACE_MissionModules_AmbianceSounds_maximalDelay_DisplayName";
+                description = "$STR_ACE_MissionModules_AmbianceSounds_maximalDelay_Description";
                 typeName = "NUMBER";
                 defaultValue = 170;
             };
             class followPlayers {
-                displayName = "Follow Players";
-                description = "Follow players. If set to false, loop will play sounds only nearby logic position.";
+                displayName = "$STR_ACE_MissionModules_AmbianceSounds_followPlayers_DisplayName";
+                description = "$STR_ACE_MissionModules_AmbianceSounds_followPlayers_Description";
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class soundVolume {
-                displayName = "Volume";
-                description = "The volume of the sounds played";
+                displayName = "$STR_ACE_MissionModules_AmbianceSounds_soundVolume_DisplayName";
+                description = "$STR_ACE_MissionModules_AmbianceSounds_soundVolume_Description";
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
         };
         class ModuleDescription {
-            description = "Ambiance sounds loop (synced across MP)";
+            description = "$STR_ACE_MissionModules_AmbianceSounds_Description";
             sync[] = {};
         };
     };

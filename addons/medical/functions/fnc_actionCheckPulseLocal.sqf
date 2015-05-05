@@ -24,7 +24,7 @@ if (!alive _unit) then {
     _heartRate = 0;
 };
 _heartRateOutput = "STR_ACE_Medical_Check_Pulse_Output_5";
-_logOutPut = "No heart rate";
+_logOutPut = localize "STR_ACE_Medical_Check_Pulse_None";
 
 if (_heartRate > 1.0) then {
     if ([_caller] call FUNC(isMedic)) then {

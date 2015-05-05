@@ -301,5 +301,33 @@
             <Italian>Chiudi MicroDAGR</Italian>
             <Portuguese>Fechar MicroDAGR</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Dagr_Module_DisplayName">
+            <English>MicroDAGR Map Fill</English>
+            <Polish>Wypełnienie mapy MicroDAGR</Polish>
+        </Key>
+        <Key ID="STR_ACE_Dagr_MapDataAvailable_DisplayName">
+            <English>MicroDAGR Map Fill</English>
+            <Polish>Wypełnienie mapy MicroDAGR</Polish>
+        </Key>
+        <Key ID="STR_ACE_Dagr_MapDataAvailable_Description">
+            <English>How much map data is filled on MicroDAGR's</English>
+            <Polish>Jak duża część informacji mapy jest załadowana do MicroDAGR?</Polish>
+        </Key>
+        <Key ID="STR_ACE_Dagr_None">
+            <English>Full Satellite + Buildings</English>
+            <Polish>Pełna satelitarna + budynki</Polish>
+        </Key>
+        <Key ID="STR_ACE_Dagr_Side">
+            <English>Topographical + Roads</English>
+            <Polish>Topograficzna + drogi</Polish>
+        </Key>
+        <Key ID="STR_ACE_Dagr_Unique">
+            <English>None (Cannot use map view)</English>
+            <Polish>Żadna (wyłącza ekran mapy)</Polish>
+        </Key>
+        <Key ID="STR_ACE_Dagr_Module_Description">
+            <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.&lt;br /&gt;Source: microDAGR.pbo</English>
+            <Polish>Moduł ten pozwala kontrolować jak duża ilość informacji jest załadowana do przedmiotów MicroDAGR. Mniejsza ilość danych ogranicza widok mapy pokazując mniej rzeczy na minimapie.&lt;br /&gt;Źródło: microDAGR.pbo</Polish>
+        </Key>
     </Package>
 </Project>
