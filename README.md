@@ -13,7 +13,7 @@ http://ace3mod.com/
 **To run Jekyll:**
 
 ```powershell
-bundle exec jekyll serve --baseUrl="/ACE3" --force_polling
+bundle exec jekyll serve --baseUrl="/ACE3"
 ```
 
 ### How to update the compiled Javascript and CSS files

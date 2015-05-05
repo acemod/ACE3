@@ -25,8 +25,19 @@ jQuery(document).ready(function(){
     var $toc = jQuery("#toc");
     if ($toc.length > 0) {
         $toc.toc({
-            headers: "#content h2, #content h3, #content h4, #content h5, #content h6"
+            headers: "#content h2, #content h3, #content h4, #content h5, #content h6",
+            showEffect: "none"
         });
     }
 
+    var $expandToc = jQuery(".js-expandToc");
+    $expandToc.on("click", window.app.toggleToc);
+
 });
+
+window.app = window.app || {};
+window.app.toggleToc = function() {
+    var $toc = jQuery("#toc");
+    $toc.slideToggle();
+    return false;
+};

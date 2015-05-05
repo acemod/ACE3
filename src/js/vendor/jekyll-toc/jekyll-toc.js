@@ -59,7 +59,7 @@
 
         var level = get_level(headers[0]),
             this_level,
-            html = settings.title + "\n<" + settings.listType + ">";
+            html = "<" + settings.listType + ">";
         headers.on("click", function () {
             if (!settings.noBackToTopLinks) {
                 window.location.hash = this.id;
@@ -92,6 +92,7 @@
             $(document).on("click", ".back-to-top", function () {
                 $(window).scrollTop(0);
                 window.location.hash = "";
+                return false;
             });
         }
 

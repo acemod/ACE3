@@ -2,22 +2,25 @@
 
 <main>
     <div class="row">
-        <section class="large-8 medium-12 columns">
+        <section class="medium-8 columns">
             <h1>{{page.title}}</h1>
-
-            <div id="toc"></div>
 
             <div id="content">{{ content }}</div>
         </section>
-        <aside class="large-4 medium-12 columns">
-            <nav>
-                <ul class="side-nav">
-                    <li class="heading">Development</li>
-                    {% assign pages_list = site.pages | sort: "order" %}
-                    {% assign group = page.group %}
-                    {% include pages_list %}
-                </ul>
-            </nav>
+        <aside class="medium-4 columns">
+            <div class="row">
+                <div class="large-12 columns">
+                    <p><a href="./"><i class="fa fa-1 fa-chevron-left"></i>&nbsp;&nbsp;Back to overview</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-12 columns">
+                    <h2 class="toc-header">Table of contents</h2>
+                    <a href="#" class="js-expandToc">Show/Hide</a>
+                    <div id="toc"></div>
+                </div>
+            </div>
         </aside>
     </div>
 </main>
