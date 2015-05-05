@@ -23,7 +23,7 @@ The four main elements that basic medical introduces are:
 All interactions in the medical system are done with the interaction menu. Non-medics can - by default - not perform all actions, and their actions take more time as when performed by trained medics. These actions are using epinephrine and blood IVs.
 
 
-### How it works
+### 2.1 How it works
 
 When hit, units start to lose blood depending on the severity of their wounds. Once the level of blood falls below a certain threshold, the unit will fall unconscious and eventually die. Units will also fall unconscious when sustaining large amounts of damage at once.
 
@@ -45,17 +45,17 @@ Besides the 4 elements introduced by basic medical, advanced introduces the foll
 * Various treatment methods such as CPR, different kinds of IVs and tourniquets
 * A basic medication simulation
 
-### How it works
+### 3.1 How it works
 
 Same as with basic, when hit an injury is sustained. Different though is that the type of injury and the severity of it are based upon how the damage was done and what caused it. This affects both blood loss and immediate consequences, such as being knocked out or being killed right away. When a player has sustained an injury, this will be indicated by flashing red of the screen; this means the player is bleeding.
 
-##### Stopping bleeding
+#### 3.1.1 Stopping bleeding
 In order to stop the bleeding, all injuries on every bodypart requires treatment. This is done by either applying a tourniquet to legs or arms as a temporarly solution, or by using bandages to stop the bleeding as a more permament fix. 
 
-##### Vitals
+#### 3.1.2 Vitals
 While a unit is bleeding however, the blood volume decreases which will result in a change of vitals.  Depending on the factors such as current blood volume, the blood loss rate, medication used, the blood pressure will start to drop. To counter this drop, also based upon the previously mentioned factors and others, the heart rate will adjust accordingly to attempt to keep blood pressure at safe levels. This means that for any patient it is required to keep an eye on the vitals. This is done through the interaction system by selecting check pulse or blood pressure on either the arms or head.
 
-##### Medication
+#### 3.1.3 Medication
 To stabalize the vitals and to counter for example pain, a player/medic can use medication. Advanced medical has 3 different medications available:
 * Atropine
 * Morphine
