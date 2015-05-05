@@ -4184,6 +4184,12 @@ jQuery(document).ready(function(){
             headers: "#content h2, #content h3, #content h4, #content h5, #content h6",
             showEffect: "none"
         });
+
+        if ($toc.html() === "") {
+            jQuery(".js-expandToc").remove();
+            jQuery(".toc-header").remove();
+        }
+        
     }
 
     var $expandToc = jQuery(".js-expandToc");
