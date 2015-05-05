@@ -10,3 +10,54 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
+
+class Extended_InitPost_EventHandlers {
+    class Air {
+        class ADDON {
+            init = QUOTE(call FUNC(vehicleInit));
+        };
+    };
+    class LandVehicle {
+        class ADDON {
+            init = QUOTE(call FUNC(vehicleInit));
+        };
+    };
+    class Ship {
+        class ADDON {
+            init = QUOTE(call FUNC(vehicleInit));
+        };
+    };
+};
+
+/*
+class Extended_Init_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            init = QUOTE(call FUNC(validateInventory));
+        };
+    };
+};
+
+class Extended_Respawn_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            respawn = QUOTE(call FUNC(validateInventory));
+        };
+    };
+};
+
+class Extended_Take_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            Take = QUOTE(call FUNC(validateInventory));
+        };
+    };
+};
+class Extended_Put_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            Put = QUOTE(call FUNC(validateInventory));
+        };
+    };
+};
+*/
