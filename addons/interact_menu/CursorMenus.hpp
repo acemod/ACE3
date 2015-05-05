@@ -45,3 +45,41 @@ class GVAR(cursorMenu) {
         };
     };
 };
+class RscTitles{
+    class RscPicture;
+    class RscACE_interact_menu_cursorMenu_background {
+        idd = -1;
+        onLoad = "uiNamespace setVariable ['RscACE_interact_menu_cursorMenu_background_Display', _this select 0]";
+        onUnload = "uiNamespace setVariable ['RscACE_interact_menu_cursorMenu_background_Display', displayNull]";
+        fadeIn = 0.25;
+        fadeOut = 0.25;
+        movingEnable = false;
+        duration = 10e10;
+        name = "RscACE_testbackground";
+        class controls{
+            class RscACE_interact_menu_cursorMenu_backgroundPicture: RscPicture {
+                idc = -1;
+            };
+        };
+        class controlsBackground {
+            class background {
+                idc = -1;
+                moving = 0;
+                font = "TahomaB";
+                text = "";
+                sizeEx = 0;
+                lineSpacing = 0;
+                access = 0;
+                type = 0;
+                style = 0;
+                size = 1;
+                colorBackground[] = {0, 0, 0, 0.5};
+                colorText[] = {0, 0, 0, 0};
+                x = "safezoneX";
+                y = "safezoneY";
+                w = "safezoneW";
+                h = "safezoneH";
+            };
+        };
+    };
+};
