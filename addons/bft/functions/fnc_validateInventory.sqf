@@ -34,6 +34,11 @@ _matchedIDs = [];
         };
         [_magID, _unit] call FUNC(setDeviceOwner);
         _matchedIDs pushback _magID;
+    } else {
+        _magazine = magazines _unit select _foreachIndex;
+        if (getText (configFile >> "CfgMagazines" >> _mag >> GVAR(type)) != "") then {
+            ["bft_itemCreated", [_unit, getText (configFile >> "CfgMagazines" >> _mag >> GVAR(type)), _magazine, _magID]] call EFUNC(common,serverEvent);
+        };
     };
 }foreach (magazinesDetail _unit);
 

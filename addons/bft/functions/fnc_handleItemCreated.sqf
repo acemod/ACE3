@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_owner", "_item", "_magazine", "_magID", "_deviceSide", "_deviceEncryptionKeys", "_assignableInformation", "_app", "_deviceInformation"];
+private ["_owner", "_item", "_magazine", "_magID", "_deviceSide", "_deviceEncryptionKeys", "_assignableInformation", "_app", "_deviceInformation", "_exists"];
 _owner = _this select 0;
 _item = _this select 1;
 _magazine = _this select 2;
@@ -33,6 +33,12 @@ _magID = _this select 3;
 */
 systemChat format["handleItemCreated: %1", _this];
 diag_log format["handleItemCreated: %1", _this];
+
+_exists = false;
+{
+    if (_magID == (_x select 0)) exitwith {_exists = true};
+}foreach GVAR(deviceData);
+if (_exists) exitwith {};
 
 _deviceSide = getText (configFile >> "CfgWeapons" >> _item >> QGVAR(deviceSide));
 _deviceEncryptionKeys = []; // TODO encyption keys

@@ -8,6 +8,15 @@
 ["playerInventoryChanged", FUNC(validateInventory)] call EFUNC(common,addEventHandler);
 ["playerChanged", FUNC(validateInventory)] call EFUNC(common,addEventHandler);
 
+if(!isServer) then {
+    ["PlayerJip", {
+        diag_log text format["[ACE] * JIP BFT Data synchronization initialized"];
+        ["bft_requestAllDevices", [player]] call FUNC(serverEvent);
+    }] call FUNC(addEventHandler);
+} else {
+    ["bft_requestAllDevices", FUNC(handleRequestAllDevices)] call FUNC(addEventHandler);
+};
+
 [{
     _newData = [];
     {

@@ -11,5 +11,6 @@ class CfgMagazines {
         descriptionShort = "";
         descriptionUse = "";
         mass = 1;
+        GVAR(type) = "ACE_bftItemBase";
     };
 };

@@ -10,12 +10,14 @@ PREP(getOwnedDevices);
 PREP(handleAddDeviceData);
 PREP(handleItemCreated);
 PREP(handleUpdateDeviceOwner);
+PREP(handleRequestAllDevices);
 PREP(isDeviceOwned);
 PREP(setDeviceOwner);
 PREP(validateInventory);
 PREP(deviceDataToMapData);
 PREP(getSizeIcon);
 PREP(getTypeIcon);
+
 
 // Synced data collections
 GVAR(saluteReports) = [];
