@@ -14,22 +14,14 @@ class CfgVehicles {
                 displayName = "Save Gear?";
                 description = "Respawn with the gear a soldier had just before his death?";
                 typeName = "BOOL";
-
-                class values {
-                    class Yes { name = "Yes"; value = 1; };
-                    class No { default = 1; name = "No"; value = 0; };
-                };
+                defaultValue = 0;
             };
 
             class RemoveDeadBodiesDisconnected {
                 displayName = "Remove bodies?";
                 description = "Remove player bodies after disconnect?";
                 typeName = "BOOL";
-
-                class values {
-                    class Yes { default = 1; name = "Yes"; value = 1; };
-                    class No { name = "No"; value = 0; };
-                };
+                defaultValue = 1;
             };
         };
     };
