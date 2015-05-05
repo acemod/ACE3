@@ -48,6 +48,3 @@ _unMatchedDevices = _ownedDevices - _matchedIDs;
     diag_log format["validate - no longer has ID: %1 %2", _unit, _x];
     ["bft_updateDeviceOwner", [_x, objNull]] call EFUNC(common,globalEvent);
 }foreach _unMatchedDevices;
-
-systemChat format["validate - devices: %1 %2", GVAR(deviceData)];
-diag_log format["validate - devices: %1 %2", GVAR(deviceData)];
