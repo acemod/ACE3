@@ -39,7 +39,7 @@ if(!isServer) then {
 
     {
         if (local _x && {_x != ACE_player}) then {
-            [_x] call ace_bft_fnc_validateInventory;
+            [_x] call FUNC(validateInventory);
         };
     } forEach allUnits;
 
