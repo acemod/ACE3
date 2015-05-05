@@ -17,3 +17,9 @@ aside {
         margin-bottom: rem-calc(24);
     }
 }
+
+.row {
+    @media #{$small-only} {
+        overflow: hidden;
+    }
+}
