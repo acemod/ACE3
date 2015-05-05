@@ -26,4 +26,8 @@ class ACE_Settings {
         value = 1;
         typeName = "BOOL";
     };
+    class GVAR(BodyRemoveTimer) {
+        value = 0;
+        typeName = "SCALAR";
+    };
 };
