@@ -20,8 +20,8 @@ class ACE_Medical_Actions {
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
-            animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
-            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+            animationCaller = "AinvPknlMstpSlayWrflDnon_medicOther";
+            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
             litter[] = { {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}} };
