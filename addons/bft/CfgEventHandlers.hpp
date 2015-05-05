@@ -11,6 +11,24 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
+class Extended_InitPost_EventHandlers {
+    class Air {
+        class ADDON {
+            init = QUOTE(call FUNC(vehicleInit));
+        };
+    };
+    class LandVehicle {
+        class ADDON {
+            init = QUOTE(call FUNC(vehicleInit));
+        };
+    };
+    class Ship {
+        class ADDON {
+            init = QUOTE(call FUNC(vehicleInit));
+        };
+    };
+};
+
 /*
 class Extended_Init_EventHandlers {
     class CAManBase {

@@ -17,6 +17,7 @@ PREP(validateInventory);
 PREP(deviceDataToMapData);
 PREP(getSizeIcon);
 PREP(getTypeIcon);
+PREP(vehicleInit);
 
 PREP(handleSyncedArrayPushback);
 PREP(handleSyncedArrayDelete);

@@ -40,7 +40,8 @@ _exists = false;
 }foreach GVAR(deviceData);
 if (_exists) exitwith {};
 
-_deviceSide = getText (configFile >> "CfgWeapons" >> _item >> QGVAR(deviceSide));
+_deviceSide = getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceSide));
+// if (_deviceSide == "") exitwith {};
 _deviceEncryptionKeys = []; // TODO encyption keys
 
 // format: [elementType, elementSize, elementCallsign, orbatElementID]
