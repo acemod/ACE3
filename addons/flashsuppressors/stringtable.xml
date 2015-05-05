@@ -11,7 +11,7 @@
             <Czech>Tlumič plamene (6,5 mm)</Czech>
             <French>Cache-flamme (6,5 mm)</French>
             <Russian>Пламегаситель (6,5 мм)</Russian>
-            <Spanish>Supresor (6,5 mm)</Spanish>
+            <Spanish>Bocacha (6,5 mm)</Spanish>
         </Key>
         <Key ID="STR_ACE_muzzle_mzls_B">
             <English>Flash Suppressor (7.62 mm)</English>
@@ -23,7 +23,7 @@
             <Czech>Tlumič plamene (7,62 mm)</Czech>
             <French>Cache-flamme (7,62 mm)</French>
             <Russian>Пламегаситель (7,62 мм)</Russian>
-            <Spanish>Supresor (7,62 mm)</Spanish>
+            <Spanish>Bocacha (7,62 mm)</Spanish>
         </Key>
         <Key ID="STR_ACE_muzzle_mzls_L">
             <English>Flash Suppressor (5.56 mm)</English>
@@ -35,7 +35,7 @@
             <Czech>Tlumič plamene (5,56 mm)</Czech>
             <French>Cache-flamme (5,56 mm)</French>
             <Russian>Пламегаситель (5,56 мм)</Russian>
-            <Spanish>Supresor (5,56 mm)</Spanish>
+            <Spanish>Bocacha (5,56 mm)</Spanish>
         </Key>
         <Key ID="STR_ACE_muzzle_mzls_smg_01">
             <English>Flash Suppressor (.45 ACP)</English>
@@ -47,7 +47,7 @@
             <Czech>Tlumič plamene (.45 ACP)</Czech>
             <French>Cache-flamme (.45 ACP)</French>
             <Russian>Пламегаситель (.45 ACP)</Russian>
-            <Spanish>Supresor (.45 ACP)</Spanish>
+            <Spanish>Bocacha (.45 ACP)</Spanish>
         </Key>
         <Key ID="STR_ACE_muzzle_mzls_smg_02">
             <English>Flash Suppressor (9 mm)</English>
@@ -59,7 +59,7 @@
             <Czech>Tlumič plamene (9 mm)</Czech>
             <French>Cache-flamme (9 mm)</French>
             <Russian>Пламегаситель (9 мм)</Russian>
-            <Spanish>Supresor (9 mm)</Spanish>
+            <Spanish>Bocacha (9 mm)</Spanish>
         </Key>
         <Key ID="STR_ACE_muzzle_mzls_338">
             <English>Flash Suppressor (.338)</English>
@@ -68,10 +68,10 @@
             <Italian>Soppressore di fiamma (.338)</Italian>
             <Portuguese>Supressor de Clarão (.338)</Portuguese>
             <Polish>Tłumik płomienia (.338)</Polish>
-            <Czech>Tlumič záblesku (.338)</Czech>
+            <Czech>Tlumič plamene (.338)</Czech>
             <French>Cache-flamme (.338)</French>
             <Russian>Пламегаситель (.338)</Russian>
-            <Spanish>Supresor (.338)</Spanish>
+            <Spanish>Bocacha (.338)</Spanish>
         </Key>
         <Key ID="STR_ACE_muzzle_mzls_93mmg">
             <English>Flash Suppressor (9.3 mm)</English>
@@ -80,10 +80,10 @@
             <Italian>Soppressore di fiamma (9.3mm)</Italian>
             <Portuguese>Supressor de Clarão (9,3mm)</Portuguese>
             <Polish>Tłumik płomienia (9,3 mm)</Polish>
-            <Czech>Tlumič záblesku (9,3 mm)</Czech>
+            <Czech>Tlumič plamene (9,3 mm)</Czech>
             <French>Cache-flamme (9,3 mm)</French>
             <Russian>Пламегаситель (9,3 мм)</Russian>
-            <Spanish>Supresor (9,3 mm)</Spanish>
+            <Spanish>Bocacha (9,3 mm)</Spanish>
         </Key>
     </Package>
 </Project>

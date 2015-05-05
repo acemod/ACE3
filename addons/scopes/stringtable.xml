@@ -9,6 +9,9 @@
             <Italian>Regola leggermente alzata in alto</Italian>
             <French>Hausse +</French>
             <German>Kleine Korrektur nach oben</German>
+            <Hungarian>Enyhe állítás fel</Hungarian>
+            <Portuguese>Pequeno ajuste para cima</Portuguese>
+            <Czech>Korekce mírně nahoru</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMinor">
             <English>Minor adjustment down</English>
@@ -18,6 +21,9 @@
             <Italian>Regola leggermente alzata in basso</Italian>
             <French>Hausse -</French>
             <German>Kleine Korrektur nach unten</German>
+            <Hungarian>Enyhe állítás le</Hungarian>
+            <Portuguese>Pequeno ajuste para baixo</Portuguese>
+            <Czech>Korekce mírně dolů</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMinor">
             <English>Minor adjustment right</English>
@@ -27,6 +33,9 @@
             <Italian>Regola leggermente il tiro a destra</Italian>
             <French>Dérive +</French>
             <German>Kleine Korrektur nach rechts</German>
+            <Hungarian>Enyhe állítás jobbra</Hungarian>
+            <Portuguese>Pequeno ajuste para direita</Portuguese>
+            <Czech>Korekce mírně doprava</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMinor">
             <English>Minor adjustment left</English>
@@ -36,6 +45,9 @@
             <Italian>Regola leggermete il tiro a sinistra</Italian>
             <French>Dérive -</French>
             <German>Kleine Korrektur nach links</German>
+            <Hungarian>Enyhe állítás balra</Hungarian>
+            <Portuguese>Pequeno ajuste para esquerda</Portuguese>
+            <Czech>Korekce mírně doleva</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMajor">
             <English>Major adjustment up</English>
@@ -45,6 +57,9 @@
             <Italian>Regola l'alzata in alto</Italian>
             <French>Hausse +++</French>
             <German>Große Korrektur nach oben</German>
+            <Hungarian>Nagy állítás fel</Hungarian>
+            <Portuguese>Ajuste grande para cima</Portuguese>
+            <Czech>Korekce nahoru</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMajor">
             <English>Major adjustment down</English>
@@ -54,6 +69,9 @@
             <Italian>Regola l'alzata in basso</Italian>
             <French>Hausse ---</French>
             <German>Große Korrektur nach unten</German>
+            <Hungarian>Nagy állítás le</Hungarian>
+            <Portuguese>Ajuste grande para baixo</Portuguese>
+            <Czech>Korekce dolů</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMajor">
             <English>Major adjustment right</English>
@@ -63,6 +81,9 @@
             <Italian>Regola il tiro a destra</Italian>
             <French>Dérive +++</French>
             <German>Große Korrektur nach rechts</German>
+            <Hungarian>Nagy állítás jobbra</Hungarian>
+            <Portuguese>Ajuste grande para direita</Portuguese>
+            <Czech>Korekce doprava</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMajor">
             <English>Major adjustment left</English>
@@ -72,6 +93,9 @@
             <Italian>Regola il tiro a sinistra</Italian>
             <French>Dérive ---</French>
             <German>Große Korrektur nach links</German>
+            <Hungarian>Nagy állítás balra</Hungarian>
+            <Portuguese>Ajuste grande para esquerda</Portuguese>
+            <Czech>Korekce doleva</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustZero">
             <English>Set zero adjustment</English>
@@ -81,6 +105,9 @@
             <Italian>Resetta i valori del tiro</Italian>
             <French>RAZ corrections</French>
             <German>Auf 0 justieren</German>
+            <Hungarian>Állítások nullázása</Hungarian>
+            <Portuguese>Zerar ajuste</Portuguese>
+            <Czech>Vynulovat korekci</Czech>
         </Key>
     </Package>
 </Project>

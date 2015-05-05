@@ -13,7 +13,7 @@
  */
 
 #include "script_component.hpp"
-private ["_unit", "_openWounds"];
+private ["_unit", "_openWounds", "_originOfrequest"];
 _unit = _this select 0;
 _originOfrequest = _this select 1;
 

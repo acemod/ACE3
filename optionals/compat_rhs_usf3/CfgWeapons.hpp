@@ -71,4 +71,16 @@ class CfgWeapons
         ACE_barrelTwist=16;
         ACE_barrelLength=5;
     };
+    
+    class rhsusf_acc_sniper_base;
+    class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
+        ACE_ScopeAdjust_Vertical[] = { -4, 30 };
+        ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
+        ACE_ScopeAdjust_Increment = 0.1;
+    };
+    class rhsusf_acc_LEUPOLDMK4_2: rhsusf_acc_sniper_base {
+        ACE_ScopeAdjust_Vertical[] = { -4, 30 };
+        ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
+        ACE_ScopeAdjust_Increment = 0.1;
+    };
 };

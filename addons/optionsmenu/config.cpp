@@ -37,3 +37,7 @@ class ACE_Settings {
         values[] = {"$str_medium", "$str_large", "$str_very_large"};
     };
 };
+
+class ACE_Extensions {
+    extensions[] += {"ace_clipboard"};
+};

@@ -77,34 +77,37 @@
             <English>Repacking Finished</English>
             <French>Réorganisation terminée</French>
             <German>Wiederverpacken Fertig</German>
-            <Spanish>Reembalaje finalizado</Spanish>
+            <Spanish>Reorganización finalizada</Spanish>
             <Russian>Перепаковка завершена</Russian>
             <Czech>Páskování dokončeno</Czech>
             <Polish>Przepakowywanie zakończone</Polish>
             <Hungarian>Újratárazás befejezve</Hungarian>
             <Italian>Riempi caricatore</Italian>
+            <Portuguese>Reorganização Terminada</Portuguese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
             <English>Repacking Interrupted</English>
             <French>Réorganisation interrompue</French>
             <German>Umpacken Unterbrochen</German>
-            <Spanish>Reembalaje interrumpido</Spanish>
+            <Spanish>Reorganización interrumpida</Spanish>
             <Russian>Перепаковка прервана</Russian>
             <Czech>Páskování přerušeno</Czech>
             <Polish>Przepakowywanie przerwane</Polish>
             <Hungarian>Újratárazás megszakítva</Hungarian>
             <Italian>Riempimento interrotto</Italian>
+            <Portuguese>Reorganização Interrompida</Portuguese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
             <English>%1 Full and %2 Partial</English>
             <French>%1 plein(s) et %2 partiel(s)</French>
             <German>%1 Vollständigen und %2 Teilweisen</German>
-            <Spanish>%1 Total y %2 Parcial</Spanish>
+            <Spanish>%1 Llenos y %2 Incompletos</Spanish>
             <Russian>%1 полных и %2 неполных</Russian>
             <Czech>%1 plný a %2 částečně</Czech>
             <Polish>Pełnych: %1.&lt;br/&gt;Częściowo pełnych: %2.</Polish>
             <Hungarian>%1 teljes és %2 részleges</Hungarian>
             <Italian>%1 pieno e %2 parziale</Italian>
+            <Portuguese>%1 Total e %2 Parcial </Portuguese>
         </Key>
     </Package>
 </Project>

@@ -9,6 +9,9 @@
             <Spanish>Mostrar información del viento</Spanish>
             <Italian>Mostra informazioni sul vento</Italian>
             <German>Zeige Windinformationen</German>
+            <Hungarian>Széladatok mutatása</Hungarian>
+            <Czech>Zobrazit informace o větru</Czech>
+            <Portuguese>Mostrar informação do vento</Portuguese>
         </Key>
     </Package>
 </Project>

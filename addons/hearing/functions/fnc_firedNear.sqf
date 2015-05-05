@@ -21,7 +21,7 @@
  */
 #include "script_component.hpp"
 
-private ["_silencer", "_audibleFireCoef", "_loudness", "_strength", "_vehAttenuation"];
+private ["_silencer", "_audibleFireCoef", "_audibleFire", "_loudness", "_strength", "_vehAttenuation"];
 
 PARAMS_7(_object,_firer,_distance,_weapon,_muzzle,_mode,_ammo);
 
