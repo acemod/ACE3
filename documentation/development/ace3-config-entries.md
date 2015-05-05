@@ -6,7 +6,9 @@ parent: wiki
 order: 2
 ---
 
-### CfgVehicles
+## 1. CfgVehicles
+Entries from found in the `CfgVehicles.hpp` files
+
 
 ```c++
 ace_nightvision_grain
@@ -23,7 +25,9 @@ ace_offset
 ```
 
 
-### CfgWeapons
+## 2. CfgWeapons
+Entries from found in the `CfgWeapons.hpp` files
+
 
 ```c++
 ace_recoil_shakemultiplier
@@ -60,7 +64,8 @@ ace_modedescription
 ```
 
 
-### CfgAmmo
+## 3. CfgAmmo
+Entries from found in the `CfgAmmo.hpp` files
 
 ```c++
 ace_recoil_shakemultiplier
@@ -88,7 +93,8 @@ ace_barrellengths
 ```
 
 
-### CfgGlasses
+## 4. CfgGlasses
+Entries from found in the `CfgGlasses.hpp` file
 
 ```c++
 ace_color
@@ -102,7 +108,8 @@ ace_dustpath
 ```
 
 
-### CfgMagazines
+## 5. CfgMagazines
+Entries from found in the `CfgMagazines.hpp` files
 
 ```c++
 ace_isbelt

@@ -6,7 +6,7 @@ parent: wiki
 order: 3
 ---
 
-## Event Handlers
+## 1. Event Handlers
 
 Event handlers in ACE3 are implemented through our event system. They should be used to trigger or allow triggering of specific functionality.
 
@@ -23,12 +23,14 @@ Events can be removed or cleared with the following commands.
 * `[eventName, eventHandlerId] call ace_common_fnc_removeEventHandler` <br/> will remove a specific event handler of the event name, using the ID returned from `ace_common_fnc_addEventHandler`.
 * `[eventName] call ace_common_fnc_removeAllEventHandlers` <br/> will remove all event handlers for that type of event.
 
-### Synchronized Events
+### 1.1 Synchronized Events
+
 * `[eventName, eventCodeBlock, ttlNumberOrCodeBlock] call ace_common_fnc_addSyncedEventHandler` <br/> adds a globally synchronized event handler which will expire events after the provided TTL, or the code returns true.
 * `[eventName] call ace_common_fnc_removeSyncedEventHandler` <br/> will remove a specific event handler of the event name, using the ID returned from `ace_common_fnc_addSyncedEventHandler`.
 * * `[eventName, args, ttlNumberOrCodeBlock] call ace_common_fnc_syncedEvent` <br/> calls a global synchronized event, which will also be run on JIP players unless it has expired; event will expire after the provided TTL, or the code returns true.
 
-### Pattern:
+### 1.2 Pattern:
+
 ```c++
 // tapper machine
 ["tapShoulder", [_target], [otherArguments]] call EFUNC(common,targetEvent);
@@ -38,7 +40,8 @@ PREP(onTapShoulder);
 ["tapShoulder", FUNC(onTapShoulder) ] call EFUNC(common,addEventHandler);
 ```
 
-### Listenable Event List:
+### 1.3 Listenable Event List:
+
 <table>
     <thead>
         <tr>
@@ -191,7 +194,8 @@ PREP(onTapShoulder);
     </tbody>
 </table>
 
-### Callable Event List:
+### 1.4 Callable Event List:
+
 <table>
     <thead>
         <tr>
