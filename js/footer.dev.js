@@ -4189,7 +4189,7 @@ jQuery(document).ready(function(){
             jQuery(".js-expandToc").remove();
             jQuery(".toc-header").remove();
         }
-        
+
     }
 
     var $expandToc = jQuery(".js-expandToc");

@@ -4,5 +4,16 @@ background-color: $oil;
 
 body > main {
     padding: rem-calc(40) 0;
+
+    @media #{$small-only} {
+        padding: rem-calc(20) 0;
+    }
+
     background-color: $white;
+}
+
+#content {
+    @media #{$small-only} {
+        margin-top: rem-calc(24);
+    }
 }
