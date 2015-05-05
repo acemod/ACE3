@@ -23,7 +23,7 @@ _data = _this select 1;
 systemChat format["handleSyncedArrayUpdate - %1", _this];
 diag_log format["handleSyncedArrayUpdate - %1", _this];
 
-_elementID = if (typeName _x == "ARRAY") then {_data select 0} else {_data};
+_elementID = if (typeName _data == "ARRAY") then {_data select 0} else {_data};
 _variable = missionNamespace getvariable [_varName, []];
 {
     _compareID = if (typeName _x == "ARRAY") then {_x select 0} else {_x};
