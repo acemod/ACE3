@@ -217,8 +217,8 @@ class ACE_Medical_Actions {
             itemConsumed = QGVAR(consumeItem_PAK);
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
-            animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
-            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+            animationCaller = "AinvPknlMstpSlayWnonDnon_medicOther";
+            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
             animationCallerSelf = "";
             animationCallerSelfProne = "";
             litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"}},  {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}} }, {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}} };
