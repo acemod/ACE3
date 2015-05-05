@@ -26,10 +26,10 @@ diag_log format["handleSyncedArrayUpdate - %1", _this];
 _elementID = if (typeName _x == "ARRAY") then {_data select 0} else {_data};
 _variable = missionNamespace getvariable [_varName, []];
 {
-	_compareID = if (typeName _x == "ARRAY") then {_x select 0} else {_x};
-	if (_compareID isEqualTo _elementID) exitwith {
-		_variable set[_foreachIndex, _data];
-	};
+    _compareID = if (typeName _x == "ARRAY") then {_x select 0} else {_x};
+    if (_compareID isEqualTo _elementID) exitwith {
+        _variable set[_foreachIndex, _data];
+    };
 }foreach _variable;
 
 systemChat format["handleSyncedArrayUpdate var- %1", _variable];

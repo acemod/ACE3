@@ -20,6 +20,6 @@ _variable = missionNamespace getvariable [_varName, []];
 _nextID = 0;
 
 if (count _variable > 0) then {
-	_nextID = ((_variable select (count _variable - 1)) select 0) + 1;
+    _nextID = ((_variable select (count _variable - 1)) select 0) + 1;
 };
 _nextID;

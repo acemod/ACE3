@@ -20,11 +20,11 @@ _elementID = _this select 1;
 
 _variable = missionNamespace getvariable [_varName, []];
 {
-	if ((_x select 0) isEqualTo _elementID) exitwith {
-		systemChat format["handleSyncedArrayDelete deleting- %1", _x];
-		diag_log format["handleSyncedArrayDelete deleting- %1", _x];
-		_variable deleteAt _foreachIndex;
-	};
+    if ((_x select 0) isEqualTo _elementID) exitwith {
+        systemChat format["handleSyncedArrayDelete deleting- %1", _x];
+        diag_log format["handleSyncedArrayDelete deleting- %1", _x];
+        _variable deleteAt _foreachIndex;
+    };
 }foreach _variable;
 
 systemChat format["handleSyncedArrayDelete var- %1", _variable];

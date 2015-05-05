@@ -28,7 +28,7 @@ systemChat format["handleSyncedArrayPushback %1 - %2", _varName, _variable];
 diag_log format["handleSyncedArrayPushback %1 - %2", _varName, _variable];
 
 if (isServer) then {
-	if !(_varName in GVAR(syncedArrayVariables)) then {
-		GVAR(syncedArrayVariables) pushback _varName;
-	};
+    if !(_varName in GVAR(syncedArrayVariables)) then {
+        GVAR(syncedArrayVariables) pushback _varName;
+    };
 };
