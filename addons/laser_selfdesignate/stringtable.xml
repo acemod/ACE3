@@ -3,7 +3,7 @@
     <Package name="Laser_SelfDesignate">
         <Key ID="STR_ACE_Laser_SelfDesignate_DesignatorOn">
             <English>Laser Designator On</English>
-            <German>Lasermarker an</German>
+            <German>Lasermarkierer an</German>
             <Spanish>Designador láser encendido</Spanish>
             <Russian>ЛЦУ ВКЛ</Russian>
             <Czech>Laserový značkovač zapnut</Czech>
