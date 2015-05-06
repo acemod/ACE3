@@ -1,7 +1,9 @@
-set(ACE_EXTENSION_NAME "ace_advanced_ballistics")
+set(ACE_EXTENSION_NAME "ace_dynload")
 
 file(GLOB SOURCES *.h *.hpp *.c *.cpp)
 add_library( ${ACE_EXTENSION_NAME} SHARED ${SOURCES} ${GLOBAL_SOURCES})
+add_library( ${ACE_EXTENSION_NAME}_static STATIC ${SOURCES} ${GLOBAL_SOURCES})
+
 target_link_libraries(${ACE_EXTENSION_NAME} ace_common)
 set_target_properties(${ACE_EXTENSION_NAME} PROPERTIES PREFIX "")
 set_target_properties(${ACE_EXTENSION_NAME} PROPERTIES FOLDER Extensions)
