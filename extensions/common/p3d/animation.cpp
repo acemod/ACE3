@@ -37,7 +37,7 @@ namespace ace {
             LOG(DEBUG) << "Animation loaded: " << name << ", source=" << source;
         }
         
-				animation::~animation() {
+                animation::~animation() {
         }
     };
 };

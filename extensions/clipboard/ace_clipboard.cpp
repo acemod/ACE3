@@ -23,15 +23,15 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     std::string cur_input(function);
     std::string result;
 
-	ZERO_OUTPUT();
+    ZERO_OUTPUT();
 
-	if (cur_input.length() < 1) {
-		EXTENSION_RETURN();
-	}
+    if (cur_input.length() < 1) {
+        EXTENSION_RETURN();
+    }
 
     if (!strcmp(function, "version")) {
         strncpy(output, ACE_FULL_VERSION_STR, outputSize);
-		EXTENSION_RETURN();
+        EXTENSION_RETURN();
     }
 
 #ifdef _WIN32
@@ -41,14 +41,14 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
         if (!hClipboardData) {
             result = "GlobalAlloc() failed, GetLastError=" + GetLastError();
             gClipboardData = "";
-			EXTENSION_RETURN();
+            EXTENSION_RETURN();
         }
 
         char *pClipboardData = (char *)GlobalLock(hClipboardData);
         if (!pClipboardData) {
             result = "GlobalLock() failed, GetLastError=" + GetLastError();
             gClipboardData = "";
-			EXTENSION_RETURN();
+            EXTENSION_RETURN();
         }
         memcpy(pClipboardData, gClipboardData.c_str(), gClipboardData.length());
         pClipboardData[gClipboardData.length() + 1] = 0x00;
@@ -85,6 +85,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
 
     #endif
 
-	EXTENSION_RETURN();
+    EXTENSION_RETURN();
 }
 

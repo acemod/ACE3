@@ -39,7 +39,7 @@ namespace ace {
 
         vector3<T> & operator= (const vector3<T>& other) { _x = other.x(); _y = other.y(); _z = other.z(); return *this; }
 /*#ifdef _WIN32 && _DIRECTX
-        	vector3<T> & operator= (const XMFLOAT3& Float3) { _x = Float3.x; _y = Float3.y; _z = Float3.z; return *this; }
+            vector3<T> & operator= (const XMFLOAT3& Float3) { _x = Float3.x; _y = Float3.y; _z = Float3.z; return *this; }
 #endif
 
 #ifdef USE_BULLET

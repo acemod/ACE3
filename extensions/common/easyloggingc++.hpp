@@ -320,7 +320,7 @@
 #   if defined(WIN32_LEAN_AND_MEAN)
 #      if defined(ELPP_WINSOCK2)
 #         include <winsock2.h>
-#	   else
+#       else
 #         include <winsock.h>
 #      endif // defined(ELPP_WINSOCK2)
 #   endif // defined(WIN32_LEAN_AND_MEAN)

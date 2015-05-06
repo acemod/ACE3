@@ -45,21 +45,21 @@ namespace ace {
             std::string                 surface;
 
             uint32_t    render_flags;
-            uint32_t	type;
+            uint32_t    type;
 
-            float		emissive[4];
-            float		ambient[4];
-            float		diffuse[4];
-            float		forced_diffuse[4];
-            float		specular[4];
-            float		specular_2[4];
-            float		specular_power;
+            float        emissive[4];
+            float        ambient[4];
+            float        diffuse[4];
+            float        forced_diffuse[4];
+            float        specular[4];
+            float        specular_2[4];
+            float        specular_power;
 
-            uint32_t	pixel_shader;
-            uint32_t	vertex_shader;
+            uint32_t    pixel_shader;
+            uint32_t    vertex_shader;
 
-            uint32_t	u_long_1; 
-            uint32_t	an_index;
+            uint32_t    u_long_1; 
+            uint32_t    an_index;
             uint32_t    u_long_2;
             uint32_t    u_long_3;
             

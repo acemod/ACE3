@@ -235,7 +235,7 @@ extern "C"
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function)
 {
-	ZERO_OUTPUT();
+    ZERO_OUTPUT();
 
     if (!strcmp(function, "version")) {
         int n = sprintf_s(output, outputSize, "%s", ACE_FULL_VERSION_STR);
@@ -259,7 +259,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
 
         retard = calculateRetard(dragModel, ballisticCoefficient, velocity);
         int n = sprintf_s(output, outputSize, "%f", retard);
-		EXTENSION_RETURN();
+        EXTENSION_RETURN();
     } else if (!strcmp(mode, "atmosphericCorrection")) {
         double ballisticCoefficient = 1.0;
         double temperature = 15.0;
@@ -275,7 +275,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
 
         ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, humidity, atmosphereModel);
         int n = sprintf_s(output, outputSize, "%f", ballisticCoefficient);
-		EXTENSION_RETURN();
+        EXTENSION_RETURN();
     } else if (!strcmp(mode, "new")) {
         unsigned int index = 0;
         double airFriction = 0.0;
@@ -370,7 +370,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         bulletDatabase[index].randSeed = 0;
 
         int n = sprintf_s(output, outputSize, "%s", "");
-		EXTENSION_RETURN();
+        EXTENSION_RETURN();
     } else if (!strcmp(mode, "simulate")) {
         // simulate:0:[-0.109985,542.529,-3.98301]:[3751.57,5332.23,214.252]:[0.598153,2.38829,0]:28.6:0:0.481542:0:215.16
         unsigned int index = 0;
@@ -587,7 +587,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         };
 
         int n = sprintf_s(output, outputSize, "_bullet setVelocity (_bulletVelocity vectorAdd [%f, %f, %f]); _bullet setPosASL (_bulletPosition vectorAdd [%f, %f, %f]);", velocityOffset[0], velocityOffset[1], velocityOffset[2], positionOffset[0], positionOffset[1], positionOffset[2]);
-		EXTENSION_RETURN();
+        EXTENSION_RETURN();
     } else if (!strcmp(mode, "set")) {
         int height = 0;
         int numObjects = 0;
@@ -602,7 +602,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         map->gridSurfaceIsWater.push_back(surfaceIsWater);
 
         int n = sprintf_s(output, outputSize, "%s", "");
-		EXTENSION_RETURN();
+        EXTENSION_RETURN();
     } else if (!strcmp(mode, "init")) {
         int mapSize = 0;
         int mapGrids = 0;
@@ -617,7 +617,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         map = &mapDatabase[worldName];
         if (map->gridHeights.size() == gridCells) {
             int n = sprintf_s(output, outputSize, "%s", "Terrain already initialized");
-			EXTENSION_RETURN();
+            EXTENSION_RETURN();
         }
 
         map->mapSize = mapSize;
@@ -630,9 +630,9 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         map->gridSurfaceIsWater.reserve(gridCells);
 
         int n = sprintf_s(output, outputSize, "%s", "");
-		EXTENSION_RETURN();
+        EXTENSION_RETURN();
     }
 
     int n = sprintf_s(output, outputSize, "%s", "");
-	EXTENSION_RETURN();
+    EXTENSION_RETURN();
 }

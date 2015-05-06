@@ -11,16 +11,16 @@ namespace ace {
         d3d_display::d3d_display() {}
         d3d_display::~d3d_display() {}
 
-		bool d3d_display::render_thread(uint32_t w, uint32_t h, bool f) {
-			_render_thread = std::make_unique<d3d_display_worker>(this, d3d_display_worker_args(w, h, f) );
-			return true;
-		}
+        bool d3d_display::render_thread(uint32_t w, uint32_t h, bool f) {
+            _render_thread = std::make_unique<d3d_display_worker>(this, d3d_display_worker_args(w, h, f) );
+            return true;
+        }
 
         void d3d_display::render_worker(d3d_display_worker_args args) {
-			create(args.width, args.height, args.fullscreen);
-			init();
-			run();
-		}
+            create(args.width, args.height, args.fullscreen);
+            init();
+            run();
+        }
 
         bool d3d_display::run() {
             MSG msg = { 0 };

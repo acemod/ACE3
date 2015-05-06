@@ -18,7 +18,7 @@ namespace ace {
     namespace debug {
 
         struct d3d_display_worker;
-		struct d3d_display_worker_args;
+        struct d3d_display_worker_args;
         class d3d_display {
         public:
             d3d_display();
@@ -26,18 +26,18 @@ namespace ace {
 
             virtual bool run();
             virtual bool render();
-			virtual bool render_thread(uint32_t, uint32_t, bool);
+            virtual bool render_thread(uint32_t, uint32_t, bool);
             virtual bool step();
 
-			virtual bool create(uint32_t, uint32_t, bool);
+            virtual bool create(uint32_t, uint32_t, bool);
             virtual bool init();
 
             virtual bool destroy();
 
-			void render_worker(d3d_display_worker_args);
+            void render_worker(d3d_display_worker_args);
 
-			static LRESULT CALLBACK wndproc(HWND, UINT, WPARAM, LPARAM);
-			LRESULT CALLBACK _wndproc(HWND, UINT, WPARAM, LPARAM);
+            static LRESULT CALLBACK wndproc(HWND, UINT, WPARAM, LPARAM);
+            LRESULT CALLBACK _wndproc(HWND, UINT, WPARAM, LPARAM);
         protected:
             std::unique_ptr<d3d_display_worker> _render_thread;
 
@@ -56,16 +56,16 @@ namespace ace {
             ID3D11ShaderResourceView*           _pTextureRV2 = nullptr;
             ID3D11InputLayout*                  _pBatchInputLayout = nullptr;
 
-			DirectX::XMMATRIX                   _World;
-			DirectX::XMMATRIX                   _View;
-			DirectX::XMMATRIX                   _Projection;
+            DirectX::XMMATRIX                   _World;
+            DirectX::XMMATRIX                   _View;
+            DirectX::XMMATRIX                   _Projection;
         };
-		struct d3d_display_worker_args {
-			d3d_display_worker_args(uint32_t w, uint32_t h, bool f) : width(w), height(h), fullscreen(f) {}
-			uint32_t width;
-			uint32_t height;
-			bool	 fullscreen;
-		};
+        struct d3d_display_worker_args {
+            d3d_display_worker_args(uint32_t w, uint32_t h, bool f) : width(w), height(h), fullscreen(f) {}
+            uint32_t width;
+            uint32_t height;
+            bool     fullscreen;
+        };
         struct d3d_display_worker {
             d3d_display_worker(d3d_display * obj, d3d_display_worker_args args) : thread(&ace::debug::d3d_display::render_worker, obj, args) {}
             ~d3d_display_worker() { thread.join(); }
