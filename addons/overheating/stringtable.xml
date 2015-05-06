@@ -123,7 +123,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_CheckTemperature">
             <English>Check weapon temperature</English>
-            <German>Temperatur der Waffe prüfen</German>
+            <German>Waffentemperatur prüfen</German>
             <Spanish>Verificar temperatura del arma</Spanish>
             <Polish>Sprawdź temperaturę broni</Polish>
             <French>Vérifier la température de l'arme</French>

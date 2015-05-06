@@ -3,7 +3,7 @@
     <Package name="Disarming">
         <Key ID="STR_ACE_Disarming_OpenInventory">
             <English>Open Inventory</English>
-            <German>Öffne Inventar</German>
+            <German>Inventar öffnen</German>
             <Polish>Otwórz ekwipunek</Polish>
             <Czech>Otevřít inventář</Czech>
             <Spanish>Abrir inventario</Spanish>
