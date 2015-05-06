@@ -63,6 +63,7 @@ optionals_root = ""
 key_name = "ace_3.0.0"
 key = ""
 dssignfile = ""
+signature_blacklist = ["ace_server.pbo"]
 
 ###############################################################################
 # http://akiscode.com/articles/sha-1directoryhash.shtml
@@ -443,8 +444,13 @@ def purge(dir, pattern, friendlyPattern="files"):
 def build_signature_file(file_name):
     global key
     global dssignfile
-    print("Signing with {}.".format(key))
-    ret = subprocess.call([dssignfile, key, file_name])
+    global signature_blacklist
+    ret = 0
+    baseFile = os.path.basename(file_name)
+    #print_yellow("Sig_fileName: {}".format(baseFile))
+    if not (baseFile in signature_blacklist):
+        print("Signing with {}.".format(key))
+        ret = subprocess.call([dssignfile, key, file_name])
     if ret == 0:
         return True
     else:
@@ -1034,7 +1040,9 @@ See the make.cfg file for additional build options.
 
                     if ret == 0:
                         # Sign result
-                        if key:
+
+                        #print_yellow("Sig_fileName: ace_{}.pbo".format(module))
+                        if (key and not "ace_{}.pbo".format(module) in signature_blacklist) :
                             print("Signing with {}.".format(key))
                             if pbo_name_prefix:
                                 ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo")])
