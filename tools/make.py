@@ -456,6 +456,24 @@ def check_for_obsolete_pbos(addonspath, file):
     if not os.path.exists(os.path.join(addonspath, module)):
         return True
     return False
+
+
+def config_restore(modulePath):
+    #PABST: cleanup config BS (you could comment this out to see the "de-macroed" cpp
+    #print_green("\Pabst! (restoring): {}".format(os.path.join(modulePath, "config.cpp")))
+    try:
+        if os.path.isfile(os.path.join(modulePath, "config.cpp")):
+            os.remove(os.path.join(modulePath, "config.cpp"))
+        if os.path.isfile(os.path.join(modulePath, "config.backup")):
+            os.rename(os.path.join(modulePath, "config.backup"), os.path.join(modulePath, "config.cpp"))
+        if os.path.isfile(os.path.join(modulePath, "config.bin")):
+            os.remove(os.path.join(modulePath, "config.bin"))
+        if os.path.isfile(os.path.join(modulePath, "texHeaders.bin")):
+            os.remove(os.path.join(modulePath, "texHeaders.bin"))
+    except:
+        print_yellow("Some error occurred. Check your addon folder {} for integrity".format(modulePath))
+
+    return True
 ###############################################################################
 
 
@@ -867,6 +885,7 @@ See the make.cfg file for additional build options.
         except:
             pass
 
+
         # Run build tool
         build_successful = False
         if build_tool == "pboproject":
@@ -960,12 +979,6 @@ See the make.cfg file for additional build options.
                     print ("Resuming build...")
                     continue
 
-                #PABST: cleanup config BS (you could comment this out to see the "de-macroed" cpp
-                #print_green("\Pabst (restoring): {}".format(os.path.join(work_drive, prefix, module, "config.cpp")))
-                os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-                os.remove(os.path.join(work_drive, prefix, module, "config.bin"))
-                os.rename(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
-
                 # Back to the root
                 os.chdir(module_root)
 
@@ -975,6 +988,8 @@ See the make.cfg file for additional build options.
                 input("Press Enter to continue...")
                 print ("Resuming build...")
                 continue
+            finally:
+                config_restore(os.path.join(work_drive, prefix, module))
 
         elif build_tool== "addonbuilder":
             # Detect $NOBIN$ and do not binarize if found.
