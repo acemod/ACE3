@@ -35,7 +35,6 @@ _temperature = _overheat select 0;
 _time = _overheat select 1;
 
 // Get physical parameters
-// Bullet mass is read from config in grains and converted to grams
 _bulletMass = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_BulletMass");
 if (_bulletMass == 0) then {
   // If the bullet mass is not configured, estimate it directly in grams
