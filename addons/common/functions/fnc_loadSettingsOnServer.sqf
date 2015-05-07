@@ -13,6 +13,8 @@
  */
 #include "script_component.hpp"
 
+private ["_parseConfigForSettings"];
+
 GVAR(settings) = [];
 
 _parseConfigForSettings = {
