@@ -57,7 +57,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     if (_unit != ACE_player || !_isUnconscious) exitWith {};
 
     GVAR(actionSelected) = false;
-    [] call FUNC(keyUp);
+    [GVAR(openedMenuType), false] call FUNC(keyUp);
 }] call EFUNC(common,addEventhandler);
 
 // disable firing while the interact menu is is is opened

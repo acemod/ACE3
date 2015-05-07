@@ -54,7 +54,7 @@ if (GVAR(useCursorMenu)) then {
     }];
     // handles LMB in cursor mode when action on keyrelease is disabled
     ((finddisplay 91919) displayctrl 91921) ctrlAddEventHandler ["MouseButtonDown", {
-        if !(GVAR(actionOnKeyRelease)) then {
+        if (!GVAR(actionOnKeyRelease) && GVAR(actionSelected)) then {
             [GVAR(openedMenuType),true] call FUNC(keyUp);
         };
     }];
