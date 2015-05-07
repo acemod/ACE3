@@ -7,7 +7,7 @@ class CfgAmmo
         typicalSpeed=750;
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
         ACE_ballisticCoefficients[]={0.151};
         ACE_velocityBoundaries[]={};
@@ -24,7 +24,7 @@ class CfgAmmo
         typicalSpeed=836;
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=77;
+        ACE_bulletMass=4.9896;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.361};
         ACE_velocityBoundaries[]={};
@@ -41,7 +41,7 @@ class CfgAmmo
         typicalSpeed=886;
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.307};
         ACE_velocityBoundaries[]={};
@@ -62,7 +62,7 @@ class CfgAmmo
         typicalSpeed=880;
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=52.9;
+        ACE_bulletMass=3.42792;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -80,7 +80,7 @@ class CfgAmmo
         typicalSpeed=883;
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=49.8;
+        ACE_bulletMass=3.22704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -94,7 +94,7 @@ class CfgAmmo
         typicalSpeed=800;
         ACE_caliber=0.006706;
         ACE_bulletLength=0.032893;
-        ACE_bulletMass=123;
+        ACE_bulletMass=7.9704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.263};
         ACE_velocityBoundaries[]={};
@@ -117,7 +117,7 @@ class CfgAmmo
         typicalSpeed=820 ;
         ACE_caliber=0.006706;
         ACE_bulletLength=0.034646;
-        ACE_bulletMass=139;
+        ACE_bulletMass=9.0072;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.290};
         ACE_velocityBoundaries[]={};
@@ -132,7 +132,7 @@ class CfgAmmo
         hit=9;
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -152,7 +152,7 @@ class CfgAmmo
         typicalSpeed=790;
         ACE_caliber=0.007823;
         ACE_bulletLength=0.031496;
-        ACE_bulletMass=175;
+        ACE_bulletMass=11.34;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.243};
         ACE_velocityBoundaries[]={};
@@ -168,7 +168,7 @@ class CfgAmmo
         typicalSpeed=890;
         ACE_caliber=0.007823;
         ACE_bulletLength=0.031496;
-        ACE_bulletMass=130;
+        ACE_bulletMass=8.424;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.377};
         ACE_velocityBoundaries[]={};
@@ -184,7 +184,7 @@ class CfgAmmo
         typicalSpeed=790;
         ACE_caliber=0.007823;
         ACE_bulletLength=0.034036;
-        ACE_bulletMass=200;
+        ACE_bulletMass=12.96;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.235};
         ACE_velocityBoundaries[]={};
@@ -200,7 +200,7 @@ class CfgAmmo
         typicalSpeed=900;
         ACE_caliber=0.007823;
         ACE_bulletLength=0.034366;
-        ACE_bulletMass=190;
+        ACE_bulletMass=12.312;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.268};
         ACE_velocityBoundaries[]={};
@@ -216,7 +216,7 @@ class CfgAmmo
         typicalSpeed=867;
         ACE_caliber=0.007823;
         ACE_bulletLength=0.037821;
-        ACE_bulletMass=220;
+        ACE_bulletMass=14.256;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.310};
         ACE_velocityBoundaries[]={};
@@ -232,7 +232,7 @@ class CfgAmmo
         typicalSpeed=853;
         ACE_caliber=0.007823;
         ACE_bulletLength=0.040691;
-        ACE_bulletMass=230;
+        ACE_bulletMass=14.904;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.368};
         ACE_velocityBoundaries[]={};
@@ -246,7 +246,7 @@ class CfgAmmo
         typicalSpeed=820;
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=152;
+        ACE_bulletMass=9.8496;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.4};
         ACE_velocityBoundaries[]={};
@@ -262,7 +262,7 @@ class CfgAmmo
         typicalSpeed=820;
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=152;
+        ACE_bulletMass=9.8496;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.4};
         ACE_velocityBoundaries[]={};
@@ -279,7 +279,7 @@ class CfgAmmo
         typicalSpeed=800;
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=149;
+        ACE_bulletMass=9.6552;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.395};
         ACE_velocityBoundaries[]={};
@@ -295,7 +295,7 @@ class CfgAmmo
         typicalSpeed=790;
         ACE_caliber=0.007823;
         ACE_bulletLength=0.029286;
-        ACE_bulletMass=125;
+        ACE_bulletMass=8.1;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.349, 0.338, 0.330, 0.310};
         ACE_velocityBoundaries[]={792, 610, 488};
@@ -310,7 +310,7 @@ class CfgAmmo
         typicalSpeed=716;
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=123;
+        ACE_bulletMass=7.9704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -325,7 +325,7 @@ class CfgAmmo
         typicalSpeed=716;
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=117;
+        ACE_bulletMass=7.5816;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -340,7 +340,7 @@ class CfgAmmo
         hit=6;
         ACE_caliber=0.009042;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=115;
+        ACE_bulletMass=7.452;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.17};
         ACE_velocityBoundaries[]={};
@@ -355,7 +355,7 @@ class CfgAmmo
         typicalSpeed=298;
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -370,7 +370,7 @@ class CfgAmmo
         hit=6;
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -385,7 +385,7 @@ class CfgAmmo
         hit=7;
         ACE_caliber=0.0127;
         ACE_bulletLength=0.019406;
-        ACE_bulletMass=165;
+        ACE_bulletMass=10.692;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.189};
         ACE_velocityBoundaries[]={};
@@ -400,7 +400,7 @@ class CfgAmmo
         hit=7;
         ACE_caliber=0.007938;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=65;
+        ACE_bulletMass=4.212;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.118};
         ACE_velocityBoundaries[]={};
@@ -414,7 +414,7 @@ class CfgAmmo
         typicalSpeed=761;
         ACE_caliber=0.007899;
         ACE_bulletLength=0.031166;
-        ACE_bulletMass=174;
+        ACE_bulletMass=11.2752;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.499, 0.493, 0.48};
         ACE_velocityBoundaries[]={671, 549};
@@ -428,7 +428,7 @@ class CfgAmmo
         typicalSpeed=880;
         ACE_caliber=0.009296;
         ACE_bulletLength=0.03429;
-        ACE_bulletMass=230;
+        ACE_bulletMass=14.904;
         ACE_transonicStabilityCoef=1;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.368};
@@ -444,7 +444,7 @@ class CfgAmmo
         typicalSpeed=910;
         ACE_caliber=0.010363;
         ACE_bulletLength=0.054;
-        ACE_bulletMass=410;
+        ACE_bulletMass=26.568;
         ACE_transonicStabilityCoef=1;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.97};
@@ -458,7 +458,7 @@ class CfgAmmo
         timeToLive=10;
         ACE_caliber=0.010566;
         ACE_bulletLength=0.053061;
-        ACE_bulletMass=398;
+        ACE_bulletMass=25.7904;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.72};
         ACE_velocityBoundaries[]={};
@@ -473,7 +473,7 @@ class CfgAmmo
         typicalSpeed=915;
         ACE_caliber=0.008585;
         ACE_bulletLength=0.039573;
-        ACE_bulletMass=250;
+        ACE_bulletMass=16.2;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.322};
         ACE_velocityBoundaries[]={};
@@ -487,7 +487,7 @@ class CfgAmmo
         typicalSpeed=820;
         ACE_caliber=0.008585;
         ACE_bulletLength=0.04318;
-        ACE_bulletMass=300;
+        ACE_bulletMass=19.44;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.381};
         ACE_velocityBoundaries[]={};
@@ -503,7 +503,7 @@ class CfgAmmo
         typicalSpeed=826;
         ACE_caliber=0.008585;
         ACE_bulletLength=0.04318;
-        ACE_bulletMass=300;
+        ACE_bulletMass=19.44;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.381};
         ACE_velocityBoundaries[]={};
@@ -519,7 +519,7 @@ class CfgAmmo
         typicalSpeed=826;
         ACE_caliber=0.008585;
         ACE_bulletLength=0.038989;
-        ACE_bulletMass=253;
+        ACE_bulletMass=16.3944;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.290};
         ACE_velocityBoundaries[]={};
@@ -533,7 +533,7 @@ class CfgAmmo
         typicalSpeed=300;
         ACE_caliber=0.012954;
         ACE_bulletLength=0.064516;
-        ACE_bulletMass=750;
+        ACE_bulletMass=48.6;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={1.050};
         ACE_velocityBoundaries[]={};
@@ -548,7 +548,7 @@ class CfgAmmo
         typicalSpeed=853;
         ACE_caliber=0.012954;
         ACE_bulletLength=0.058674;
-        ACE_bulletMass=647;
+        ACE_bulletMass=41.9256;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.670};
         ACE_velocityBoundaries[]={};
@@ -563,7 +563,7 @@ class CfgAmmo
         typicalSpeed=860;
         ACE_caliber=0.012954;
         ACE_bulletLength=0.064516;
-        ACE_bulletMass=750;
+        ACE_bulletMass=48.6;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={1.050};
         ACE_velocityBoundaries[]={};
@@ -578,7 +578,7 @@ class CfgAmmo
         typicalSpeed=820;
         ACE_caliber=0.012979;
         ACE_bulletLength=0.064008;
-        ACE_bulletMass=745;
+        ACE_bulletMass=48.276;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.63};
         ACE_velocityBoundaries[]={};
@@ -592,7 +592,7 @@ class CfgAmmo
         typicalSpeed=250;
         ACE_caliber=0.011481;
         ACE_bulletLength=0.017272;
-        ACE_bulletMass=230;
+        ACE_bulletMass=14.904;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.195};
         ACE_velocityBoundaries[]={};
@@ -606,7 +606,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.031496;
-        ACE_bulletMass=175;
+        ACE_bulletMass=11.34;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.505, 0.496, 0.485, 0.485, 0.485};
         ACE_velocityBoundaries[]={853, 549, 549, 549};
@@ -620,7 +620,7 @@ class CfgAmmo
     {
         ACE_caliber=0.0127;
         ACE_bulletLength=0.028194;
-        ACE_bulletMass=325;
+        ACE_bulletMass=21.06;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.228};
         ACE_velocityBoundaries[]={};
@@ -633,7 +633,7 @@ class CfgAmmo
     {
         ACE_caliber=0.011481;
         ACE_bulletLength=0.022733;
-        ACE_bulletMass=325;
+        ACE_bulletMass=21.06;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.171};
         ACE_velocityBoundaries[]={};
@@ -646,7 +646,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007938;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=65;
+        ACE_bulletMass=4.212;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.118};
         ACE_velocityBoundaries[]={};
@@ -659,7 +659,7 @@ class CfgAmmo
     {
         ACE_caliber=0.011481;
         ACE_bulletLength=0.017272;
-        ACE_bulletMass=230;
+        ACE_bulletMass=14.904;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.195};
         ACE_velocityBoundaries[]={};
@@ -672,7 +672,7 @@ class CfgAmmo
     {
         ACE_caliber=0.01016;
         ACE_bulletLength=0.011354;
-        ACE_bulletMass=135;
+        ACE_bulletMass=8.748;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.105, 0.115, 0.120, 0.105};
         ACE_velocityBoundaries[]={365, 305, 259};
@@ -685,7 +685,7 @@ class CfgAmmo
     {
         ACE_caliber=0.010897;
         ACE_bulletLength=0.020422;
-        ACE_bulletMass=200;
+        ACE_bulletMass=12.96;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.172};
         ACE_velocityBoundaries[]={};
@@ -698,7 +698,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009068;
         ACE_bulletLength=0.013741;
-        ACE_bulletMass=125;
+        ACE_bulletMass=8.1;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.148};
         ACE_velocityBoundaries[]={};
@@ -711,7 +711,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007874;
         ACE_bulletLength=0.013856;
-        ACE_bulletMass=86;
+        ACE_bulletMass=5.5728;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.17};
         ACE_velocityBoundaries[]={};
@@ -724,7 +724,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -737,7 +737,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -750,7 +750,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005664;
         ACE_bulletLength=0.01143;
-        ACE_bulletMass=38;
+        ACE_bulletMass=2.4624;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.111};
         ACE_velocityBoundaries[]={};
@@ -763,7 +763,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.012573;
-        ACE_bulletMass=28;
+        ACE_bulletMass=1.8144;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.144};
         ACE_velocityBoundaries[]={};
@@ -777,7 +777,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -790,7 +790,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -803,7 +803,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015316;
-        ACE_bulletMass=147;
+        ACE_bulletMass=9.5256;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.212};
         ACE_velocityBoundaries[]={};
@@ -816,7 +816,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.011303;
-        ACE_bulletMass=65;
+        ACE_bulletMass=4.212;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.26};
         ACE_velocityBoundaries[]={};
@@ -829,7 +829,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
         ACE_ballisticCoefficients[]={0.152};
         ACE_velocityBoundaries[]={};
@@ -842,7 +842,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=77;
+        ACE_bulletMass=4.9896;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.361};
         ACE_velocityBoundaries[]={};
@@ -855,7 +855,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.307};
         ACE_velocityBoundaries[]={};
@@ -868,7 +868,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007036;
         ACE_bulletLength=0.024359;
-        ACE_bulletMass=115;
+        ACE_bulletMass=7.452;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.162};
         ACE_velocityBoundaries[]={};
@@ -881,7 +881,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007036;
         ACE_bulletLength=0.03175;
-        ACE_bulletMass=135;
+        ACE_bulletMass=8.748;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.253};
         ACE_velocityBoundaries[]={};
@@ -894,7 +894,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028397;
-        ACE_bulletMass=147;
+        ACE_bulletMass=9.5256;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.398};
         ACE_velocityBoundaries[]={};
@@ -907,7 +907,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.029286;
-        ACE_bulletMass=125;
+        ACE_bulletMass=8.1;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.349, 0.338, 0.330, 0.310};
         ACE_velocityBoundaries[]={792, 610, 488};
@@ -920,7 +920,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.037821;
-        ACE_bulletMass=220;
+        ACE_bulletMass=14.256;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.608};
         ACE_velocityBoundaries[]={};
@@ -933,7 +933,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -946,7 +946,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.031496;
-        ACE_bulletMass=175;
+        ACE_bulletMass=11.34;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.243};
         ACE_velocityBoundaries[]={};
@@ -959,7 +959,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.02728;
-        ACE_bulletMass=130;
+        ACE_bulletMass=8.424;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.277};
         ACE_velocityBoundaries[]={};
@@ -972,7 +972,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.034036;
-        ACE_bulletMass=200;
+        ACE_bulletMass=12.96;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.252};
         ACE_velocityBoundaries[]={};
@@ -986,7 +986,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.307};
         ACE_velocityBoundaries[]={};
@@ -999,7 +999,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=77;
+        ACE_bulletMass=4.9896;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.361};
         ACE_velocityBoundaries[]={};
@@ -1012,7 +1012,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
         ACE_ballisticCoefficients[]={0.152};
         ACE_velocityBoundaries[]={};
@@ -1025,7 +1025,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028397;
-        ACE_bulletMass=147;
+        ACE_bulletMass=9.5256;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.398};
         ACE_velocityBoundaries[]={};
@@ -1038,7 +1038,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.037821;
-        ACE_bulletMass=220;
+        ACE_bulletMass=14.256;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.608};
         ACE_velocityBoundaries[]={};
@@ -1051,7 +1051,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.034036;
-        ACE_bulletMass=200;
+        ACE_bulletMass=12.96;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.235};
         ACE_velocityBoundaries[]={};
@@ -1064,7 +1064,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=152;
+        ACE_bulletMass=9.8496;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.4};
         ACE_velocityBoundaries[]={};
@@ -1077,7 +1077,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=149;
+        ACE_bulletMass=9.6552;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.395};
         ACE_velocityBoundaries[]={};
@@ -1090,7 +1090,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007899;
         ACE_bulletLength=0.031166;
-        ACE_bulletMass=174;
+        ACE_bulletMass=11.2752;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.499, 0.493, 0.48};
         ACE_velocityBoundaries[]={671, 549};
@@ -1103,7 +1103,7 @@ class CfgAmmo
     {
         ACE_caliber=0.008077;
         ACE_bulletLength=0.028651;
-        ACE_bulletMass=196;
+        ACE_bulletMass=12.7008;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.315};
         ACE_velocityBoundaries[]={};
@@ -1116,7 +1116,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=52.9;
+        ACE_bulletMass=3.42792;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -1127,7 +1127,7 @@ class CfgAmmo
     };
     class FH_545x39_7u1: FH_545x39_Ball
     {
-        ACE_bulletMass=80;
+        ACE_bulletMass=5.184;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_muzzleVelocities[]={260, 303, 320};
         ACE_barrelLengths[]={10, 16.3, 20};
@@ -1136,7 +1136,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -1157,7 +1157,7 @@ class CfgAmmo
     {
         ACE_caliber=0.0127;
         ACE_bulletLength=0.019406;
-        ACE_bulletMass=165;
+        ACE_bulletMass=10.692;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.189};
         ACE_velocityBoundaries[]={};
@@ -1170,7 +1170,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -1184,7 +1184,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=52.9;
+        ACE_bulletMass=3.42792;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -1197,7 +1197,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=49.8;
+        ACE_bulletMass=3.22704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -1210,7 +1210,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=77;
+        ACE_bulletMass=4.9896;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.361};
         ACE_velocityBoundaries[]={};
@@ -1223,7 +1223,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -1236,7 +1236,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -1249,7 +1249,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -1262,7 +1262,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -1275,7 +1275,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007938;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=65;
+        ACE_bulletMass=4.212;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.118};
         ACE_velocityBoundaries[]={};
@@ -1288,7 +1288,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=123;
+        ACE_bulletMass=7.9704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -1301,7 +1301,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=117;
+        ACE_bulletMass=7.5816;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -1314,7 +1314,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.031496;
-        ACE_bulletMass=175;
+        ACE_bulletMass=11.34;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.505, 0.496, 0.485, 0.485, 0.485};
         ACE_velocityBoundaries[]={853, 549, 549, 549};
@@ -1327,7 +1327,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.034366;
-        ACE_bulletMass=190;
+        ACE_bulletMass=12.312;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.268};
         ACE_velocityBoundaries[]={};
@@ -1340,7 +1340,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.037821;
-        ACE_bulletMass=220;
+        ACE_bulletMass=14.256;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.310};
         ACE_velocityBoundaries[]={};
@@ -1353,7 +1353,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.040691;
-        ACE_bulletMass=230;
+        ACE_bulletMass=14.904;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.368};
         ACE_velocityBoundaries[]={};
@@ -1366,7 +1366,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=152;
+        ACE_bulletMass=9.8496;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.4};
         ACE_velocityBoundaries[]={};
@@ -1379,7 +1379,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=149;
+        ACE_bulletMass=9.6552;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.395};
         ACE_velocityBoundaries[]={};
@@ -1392,7 +1392,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.031496;
-        ACE_bulletMass=175;
+        ACE_bulletMass=11.34;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.505, 0.496, 0.485, 0.485, 0.485};
         ACE_velocityBoundaries[]={853, 549, 549, 549};
@@ -1405,7 +1405,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.031496;
-        ACE_bulletMass=175;
+        ACE_bulletMass=11.34;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -1419,7 +1419,7 @@ class CfgAmmo
     {
         ACE_caliber=0.004902;
         ACE_bulletLength=0.013005;
-        ACE_bulletMass=31;
+        ACE_bulletMass=2.0088;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.1455};
         ACE_velocityBoundaries[]={};
@@ -1433,7 +1433,7 @@ class CfgAmmo
     {
         ACE_caliber=0.008585;
         ACE_bulletLength=0.04318;
-        ACE_bulletMass=300;
+        ACE_bulletMass=19.44;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.381};
         ACE_velocityBoundaries[]={};
@@ -1446,7 +1446,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007899;
         ACE_bulletLength=0.031166;
-        ACE_bulletMass=174;
+        ACE_bulletMass=11.2752;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.499, 0.493, 0.48};
         ACE_velocityBoundaries[]={671, 549};
@@ -1460,7 +1460,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.307};
         ACE_velocityBoundaries[]={};
@@ -1473,7 +1473,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=77;
+        ACE_bulletMass=4.9896;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.361};
         ACE_velocityBoundaries[]={};
@@ -1486,7 +1486,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -1499,7 +1499,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=52.9;
+        ACE_bulletMass=3.42792;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -1512,7 +1512,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=49.8;
+        ACE_bulletMass=3.22704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -1525,7 +1525,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.031496;
-        ACE_bulletMass=175;
+        ACE_bulletMass=11.34;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.243};
         ACE_velocityBoundaries[]={};
@@ -1538,7 +1538,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=152;
+        ACE_bulletMass=9.8496;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.4};
         ACE_velocityBoundaries[]={};
@@ -1551,7 +1551,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=149;
+        ACE_bulletMass=9.6552;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.395};
         ACE_velocityBoundaries[]={};
@@ -1564,7 +1564,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=123;
+        ACE_bulletMass=7.9704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -1577,7 +1577,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=117;
+        ACE_bulletMass=7.5816;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -1590,7 +1590,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -1603,7 +1603,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.037821;
-        ACE_bulletMass=220;
+        ACE_bulletMass=14.256;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.310};
         ACE_velocityBoundaries[]={};
@@ -1617,7 +1617,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -1630,7 +1630,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
         ACE_ballisticCoefficients[]={0.151};
         ACE_velocityBoundaries[]={};
@@ -1643,7 +1643,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -1656,7 +1656,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.031496;
-        ACE_bulletMass=175;
+        ACE_bulletMass=11.34;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.505, 0.496, 0.485, 0.485, 0.485};
         ACE_velocityBoundaries[]={853, 549, 549, 549};
@@ -1669,7 +1669,7 @@ class CfgAmmo
     {
         ACE_caliber=0.012954;
         ACE_bulletLength=0.058674;
-        ACE_bulletMass=647;
+        ACE_bulletMass=41.9256;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.670};
         ACE_velocityBoundaries[]={};
@@ -1682,7 +1682,7 @@ class CfgAmmo
     {
         ACE_caliber=0.012954;
         ACE_bulletLength=0.058674;
-        ACE_bulletMass=647;
+        ACE_bulletMass=41.9256;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.670};
         ACE_velocityBoundaries[]={};
@@ -1696,7 +1696,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=52.9;
+        ACE_bulletMass=3.42792;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -1709,7 +1709,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=49.8;
+        ACE_bulletMass=3.22704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -1722,7 +1722,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=49.8;
+        ACE_bulletMass=3.22704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -1735,7 +1735,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=49.8;
+        ACE_bulletMass=3.22704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -1748,7 +1748,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=49.8;
+        ACE_bulletMass=3.22704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -1761,7 +1761,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=123;
+        ACE_bulletMass=7.9704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -1774,7 +1774,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=117;
+        ACE_bulletMass=7.5816;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -1787,7 +1787,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=123;
+        ACE_bulletMass=7.9704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -1800,7 +1800,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -1813,7 +1813,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -1826,7 +1826,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -1839,7 +1839,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -1852,7 +1852,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -1865,7 +1865,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -1878,7 +1878,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -1891,7 +1891,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -1904,7 +1904,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -1917,7 +1917,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007899;
         ACE_bulletLength=0.031166;
-        ACE_bulletMass=174;
+        ACE_bulletMass=11.2752;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.499, 0.493, 0.48};
         ACE_velocityBoundaries[]={671, 549};
@@ -1930,7 +1930,7 @@ class CfgAmmo
     {
         ACE_caliber=0.012979;
         ACE_bulletLength=0.064008;
-        ACE_bulletMass=745;
+        ACE_bulletMass=48.276;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.63};
         ACE_velocityBoundaries[]={};
@@ -1943,7 +1943,7 @@ class CfgAmmo
     {
         ACE_caliber=0.012979;
         ACE_bulletLength=0.064008;
-        ACE_bulletMass=745;
+        ACE_bulletMass=48.276;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.63};
         ACE_velocityBoundaries[]={};
@@ -1956,7 +1956,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=149;
+        ACE_bulletMass=9.6552;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.395};
         ACE_velocityBoundaries[]={};
@@ -1969,7 +1969,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=149;
+        ACE_bulletMass=9.6552;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.395};
         ACE_velocityBoundaries[]={};
@@ -1982,7 +1982,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=149;
+        ACE_bulletMass=9.6552;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.395};
         ACE_velocityBoundaries[]={};
@@ -1995,7 +1995,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=149;
+        ACE_bulletMass=9.6552;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.395};
         ACE_velocityBoundaries[]={};
@@ -2008,7 +2008,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009246;
         ACE_bulletLength=0.031496;
-        ACE_bulletMass=250;
+        ACE_bulletMass=16.2;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -2021,7 +2021,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -2034,7 +2034,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -2047,7 +2047,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -2060,7 +2060,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -2073,7 +2073,7 @@ class CfgAmmo
     {
         ACE_caliber=0.012979;
         ACE_bulletLength=0.064008;
-        ACE_bulletMass=745;
+        ACE_bulletMass=48.276;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.63};
         ACE_velocityBoundaries[]={};
@@ -2086,7 +2086,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -2099,7 +2099,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007938;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=65;
+        ACE_bulletMass=4.212;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.118};
         ACE_velocityBoundaries[]={};
@@ -2112,7 +2112,7 @@ class CfgAmmo
     {
         ACE_caliber=0.014884;
         ACE_bulletLength=0.0508;
-        ACE_bulletMass=1010;
+        ACE_bulletMass=65.448;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.620};
         ACE_velocityBoundaries[]={};
@@ -2125,7 +2125,7 @@ class CfgAmmo
     {
         ACE_caliber=0.012954;
         ACE_bulletLength=0.058674;
-        ACE_bulletMass=647;
+        ACE_bulletMass=41.9256;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.670};
         ACE_velocityBoundaries[]={};
@@ -2138,7 +2138,7 @@ class CfgAmmo
     {
         ACE_caliber=0.008585;
         ACE_bulletLength=0.04318;
-        ACE_bulletMass=300;
+        ACE_bulletMass=19.44;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.381};
         ACE_velocityBoundaries[]={};
@@ -2152,7 +2152,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -2165,7 +2165,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -2178,7 +2178,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -2191,7 +2191,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -2204,7 +2204,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -2217,7 +2217,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009271;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=92.6;
+        ACE_bulletMass=6.00048;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.125};
         ACE_velocityBoundaries[]={};
@@ -2230,7 +2230,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -2243,7 +2243,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -2256,7 +2256,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -2269,7 +2269,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -2282,7 +2282,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009246;
         ACE_bulletLength=0.031496;
-        ACE_bulletMass=250;
+        ACE_bulletMass=16.2;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -2295,7 +2295,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009246;
         ACE_bulletLength=0.031496;
-        ACE_bulletMass=250;
+        ACE_bulletMass=16.2;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -2308,7 +2308,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=52.9;
+        ACE_bulletMass=3.42792;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -2321,7 +2321,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=49.8;
+        ACE_bulletMass=3.22704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -2334,7 +2334,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=52.9;
+        ACE_bulletMass=3.42792;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -2347,7 +2347,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=52.9;
+        ACE_bulletMass=3.42792;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -2360,7 +2360,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.02159;
-        ACE_bulletMass=52.9;
+        ACE_bulletMass=3.42792;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
@@ -2373,7 +2373,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=123;
+        ACE_bulletMass=7.9704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -2386,7 +2386,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=117;
+        ACE_bulletMass=7.5816;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -2399,7 +2399,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=123;
+        ACE_bulletMass=7.9704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -2412,7 +2412,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=123;
+        ACE_bulletMass=7.9704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -2425,7 +2425,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=123;
+        ACE_bulletMass=7.9704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -2438,7 +2438,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=123;
+        ACE_bulletMass=7.9704;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -2451,7 +2451,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.013462;
-        ACE_bulletMass=143;
+        ACE_bulletMass=9.2664;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -2464,7 +2464,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=152;
+        ACE_bulletMass=9.8496;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.4};
         ACE_velocityBoundaries[]={};
@@ -2477,7 +2477,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=149;
+        ACE_bulletMass=9.6552;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.395};
         ACE_velocityBoundaries[]={};
@@ -2490,7 +2490,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=152;
+        ACE_bulletMass=9.8496;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.4};
         ACE_velocityBoundaries[]={};
@@ -2503,7 +2503,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=152;
+        ACE_bulletMass=9.8496;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.4};
         ACE_velocityBoundaries[]={};
@@ -2516,7 +2516,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007925;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=152;
+        ACE_bulletMass=9.8496;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.4};
         ACE_velocityBoundaries[]={};
@@ -2529,7 +2529,7 @@ class CfgAmmo
     {
         ACE_caliber=0.014884;
         ACE_bulletLength=0.0508;
-        ACE_bulletMass=1010;
+        ACE_bulletMass=65.448;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.620};
         ACE_velocityBoundaries[]={};
@@ -2542,7 +2542,7 @@ class CfgAmmo
     {
         ACE_caliber=0.006096;
         ACE_bulletLength=0.006096;
-        ACE_bulletMass=6;
+        ACE_bulletMass=0.3888;
         ACE_ammoTempMuzzleVelocityShifts[]={};
         ACE_ballisticCoefficients[]={};
         ACE_velocityBoundaries[]={};
@@ -2555,7 +2555,7 @@ class CfgAmmo
     {
         ACE_caliber=0.009017;
         ACE_bulletLength=0.015494;
-        ACE_bulletMass=124;
+        ACE_bulletMass=8.0352;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.165};
         ACE_velocityBoundaries[]={};
@@ -2568,7 +2568,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
         ACE_ballisticCoefficients[]={0.151};
         ACE_velocityBoundaries[]={};
@@ -2581,7 +2581,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
         ACE_ballisticCoefficients[]={0.151};
         ACE_velocityBoundaries[]={};
@@ -2594,7 +2594,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
         ACE_ballisticCoefficients[]={0.151};
         ACE_velocityBoundaries[]={};
@@ -2607,7 +2607,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
         ACE_ballisticCoefficients[]={0.151};
         ACE_velocityBoundaries[]={};
@@ -2620,7 +2620,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
         ACE_ballisticCoefficients[]={0.151};
         ACE_velocityBoundaries[]={};
@@ -2633,7 +2633,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
         ACE_ballisticCoefficients[]={0.151};
         ACE_velocityBoundaries[]={};
@@ -2646,7 +2646,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=77;
+        ACE_bulletMass=4.9896;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.361};
         ACE_velocityBoundaries[]={};
@@ -2659,7 +2659,7 @@ class CfgAmmo
     {
         ACE_caliber=0.00569;
         ACE_bulletLength=0.023012;
-        ACE_bulletMass=62;
+        ACE_bulletMass=4.0176;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.151};
         ACE_velocityBoundaries[]={};
@@ -2672,7 +2672,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -2685,7 +2685,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -2698,7 +2698,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -2711,7 +2711,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=146;
+        ACE_bulletMass=9.4608;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.2};
         ACE_velocityBoundaries[]={};
@@ -2724,7 +2724,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.031496;
-        ACE_bulletMass=175;
+        ACE_bulletMass=11.34;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.243};
         ACE_velocityBoundaries[]={};
@@ -2737,7 +2737,7 @@ class CfgAmmo
     {
         ACE_caliber=0.011481;
         ACE_bulletLength=0.017272;
-        ACE_bulletMass=230;
+        ACE_bulletMass=14.904;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.195};
         ACE_velocityBoundaries[]={};
@@ -2750,7 +2750,7 @@ class CfgAmmo
     {
         ACE_caliber=0.011481;
         ACE_bulletLength=0.017272;
-        ACE_bulletMass=230;
+        ACE_bulletMass=14.904;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.195};
         ACE_velocityBoundaries[]={};
@@ -2763,7 +2763,7 @@ class CfgAmmo
     {
         ACE_caliber=0.011481;
         ACE_bulletLength=0.017272;
-        ACE_bulletMass=230;
+        ACE_bulletMass=14.904;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_ballisticCoefficients[]={0.195};
         ACE_velocityBoundaries[]={};
@@ -2776,7 +2776,7 @@ class CfgAmmo
     {
         ACE_caliber=0.007823;
         ACE_bulletLength=0.028956;
-        ACE_bulletMass=123;
+        ACE_bulletMass=7.9704;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.275};
         ACE_velocityBoundaries[]={};
@@ -2789,7 +2789,7 @@ class CfgAmmo
     {
         ACE_caliber=0.005588;
         ACE_bulletLength=0.005842;
-        ACE_bulletMass=3;
+        ACE_bulletMass=0.1944;
         ACE_ammoTempMuzzleVelocityShifts[]={};
         ACE_ballisticCoefficients[]={};
         ACE_velocityBoundaries[]={};
