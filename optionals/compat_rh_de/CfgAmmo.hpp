@@ -4,7 +4,7 @@ class CfgAmmo
 	class BulletBase;
 	class RH_50_AE_Ball: BulletBase
 	{
-        ACE_caliber=0.5;
+        ACE_caliber=0.0127;
         ACE_bulletLength=1.110;
         ACE_bulletMass=325;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
@@ -17,7 +17,7 @@ class CfgAmmo
 	};
 	class RH_454_Casull: BulletBase
 	{
-        ACE_caliber=0.452;
+        ACE_caliber=0.011481;
         ACE_bulletLength=0.895;
         ACE_bulletMass=325;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
@@ -30,7 +30,7 @@ class CfgAmmo
 	};
 	class RH_32ACP: BulletBase
 	{
-        ACE_caliber=0.3125;
+        ACE_caliber=0.007938;
         ACE_bulletLength=0.610;
         ACE_bulletMass=65;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
@@ -43,7 +43,7 @@ class CfgAmmo
 	};
 	class RH_45ACP: BulletBase
 	{
-        ACE_caliber=0.452;
+        ACE_caliber=0.011481;
         ACE_bulletLength=0.68;
         ACE_bulletMass=230;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
@@ -56,7 +56,7 @@ class CfgAmmo
 	};
 	class RH_B_40SW: BulletBase
 	{
-        ACE_caliber=0.4;
+        ACE_caliber=0.01016;
         ACE_bulletLength=0.447;
         ACE_bulletMass=135;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
@@ -69,7 +69,7 @@ class CfgAmmo
 	};
 	class RH_44mag_ball: BulletBase
 	{
-        ACE_caliber=0.429;
+        ACE_caliber=0.010897;
         ACE_bulletLength=0.804;
         ACE_bulletMass=200;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
@@ -82,7 +82,7 @@ class CfgAmmo
 	};
 	class RH_357mag_ball: BulletBase
 	{
-        ACE_caliber=0.357;
+        ACE_caliber=0.009068;
         ACE_bulletLength=0.541;
         ACE_bulletMass=125;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
@@ -95,7 +95,7 @@ class CfgAmmo
 	};
 	class RH_762x25: BulletBase
 	{
-        ACE_caliber=0.310;
+        ACE_caliber=0.007874;
         ACE_bulletLength=0.5455;
         ACE_bulletMass=86;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
@@ -108,7 +108,7 @@ class CfgAmmo
 	};
 	class RH_9x18_Ball: BulletBase
 	{
-        ACE_caliber=0.365;
+        ACE_caliber=0.009271;
         ACE_bulletLength=0.610;
         ACE_bulletMass=92.6;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
@@ -121,7 +121,7 @@ class CfgAmmo
 	};
 	class RH_B_9x19_Ball: BulletBase
 	{
-        ACE_caliber=0.355;
+        ACE_caliber=0.009017;
         ACE_bulletLength=0.610;
         ACE_bulletMass=124;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
@@ -134,7 +134,7 @@ class CfgAmmo
 	};
 	class RH_B_22LR_SD: BulletBase
 	{
-        ACE_caliber=0.223;
+        ACE_caliber=0.005664;
         ACE_bulletLength=0.45;
         ACE_bulletMass=38;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
@@ -147,7 +147,7 @@ class CfgAmmo
 	};
 	class RH_57x28mm: BulletBase
 	{
-        ACE_caliber=0.224;
+        ACE_caliber=0.00569;
         ACE_bulletLength=0.495;
         ACE_bulletMass=28;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
