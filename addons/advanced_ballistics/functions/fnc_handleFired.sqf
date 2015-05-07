@@ -94,7 +94,7 @@ if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER") then {
 _caliber = 39.37 * getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_caliber");
 _bulletLength = 39.37 * getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_bulletLength");
 _bulletMass = 15.432 * getNumber(configFile >> "cfgAmmo" >> _ammo >> "ACE_bulletMass");
-_barrelTwist = getNumber(configFile >> "cfgWeapons" >> _weapon >> "ACE_barrelTwist");
+_barrelTwist = 39.37 * getNumber(configFile >> "cfgWeapons" >> _weapon >> "ACE_barrelTwist");
 _stabilityFactor = 1.5;
 
 if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
