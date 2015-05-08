@@ -2,6 +2,8 @@
 
 ADDON = false;
 
-PREP(empty);
+PREP(returnViewDistanceValue);
+PREP(changeViewDistance);
+PREP(initViewDistance);
 
 ADDON = true;
