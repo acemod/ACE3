@@ -62,7 +62,10 @@ def deploy_documentation(token):
     filenum = len(str(filenum, "utf-8").split("\n")) - 1
     if filenum > 0:
         sp.check_call(["git", "commit", "-m", "Automatic gh-pages deployment"])
+        print("Pushing changes ...")
         sp.check_call(["git", "push", "origin", "gh-pages"], stdout=devnull, stderr=devnull)
+    else:
+        print("No changes.")
 
     os.chdir("..")
 
