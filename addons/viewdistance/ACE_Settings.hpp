@@ -5,7 +5,7 @@ class ACE_Settings {
         displayName = "Allow View Distance Changing";
         description = "Allows clients to be able to change their view distance";
     };
-    class GVAR(topViewDistanceLimit) {
+    class GVAR(viewDistanceLimit) {
         typeName = "SCALAR";
         value = 11; // setting the highest number in the array below means no limit.
         values[] = {0,1,2,3,4,5,6,7,8,9,10,11}; // correspond to the index values

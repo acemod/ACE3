@@ -1,5 +1,4 @@
 #include "script_component.hpp"
 
-[] call FUNC(moduleViewDistance);
-if (!hasInterface || !GVAR(enabled)) exitWith {};
+if (!GVAR(changeAllowed)) exitWith {};  // if viewdistance is disabled from config, exit here.
 [] call FUNC(initViewDistance);

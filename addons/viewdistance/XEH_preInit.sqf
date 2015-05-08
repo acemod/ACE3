@@ -2,8 +2,9 @@
 
 ADDON = false;
 
-PREP(moduleViewDistance);
+PREP(module);
 PREP(returnViewDistanceValue);
+PREP(returnViewDistanceLimit);
 PREP(changeViewDistance);
 PREP(initViewDistance);
 

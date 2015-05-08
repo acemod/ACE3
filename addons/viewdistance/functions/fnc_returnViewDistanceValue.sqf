@@ -22,7 +22,6 @@ PARAMS_1(_index);
 private ["_return"];
 _return = 0;
 
-
 // change to if () exitWith {};?
 switch (_index) do
 {
@@ -38,7 +37,7 @@ switch (_index) do
   case 9:   {_return = 8000;};
   case 10:  {_return = 9000;};
   case 11:  {_return = 10000;};
-  default {hint "something broke!";};
+  default {hint "something broke!";}; // should replace with something a bit more graceful
 };
 
 _return;

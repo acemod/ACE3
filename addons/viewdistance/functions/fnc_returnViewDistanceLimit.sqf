@@ -17,10 +17,18 @@
 
 #include "script_component.hpp"
 
-if GVAR(modulePresent) then {
-    // module always takes priority
-    _view_distance_limit = 
+private ["_limit"];
+
+_limit = 20000; // unrealistic amount for debug
+
+if (!isNil QGVAR(moduleViewDistanceLimit)) then {
+    _limit = GVAR(moduleViewDistanceLimit); // module always takes priority
 } else {
-    
+    // if module is not present, take the value from the config instead
+    _limit = [GVAR(viewDistanceLimit)] call FUNC(returnViewDistanceValue); // this function converts the array index in the config to it's relevant scalar value.
 };
-// To do: add a check against a  module limit.
+
+hint format ["[VD] Limit returned from module: %2 Local Limit: %3",GVAR(modulePresent),GVAR(moduleViewDistanceLimit),_limit];
+diag_log format ["[VD] Limit returned from module: %2 Local Limit: %3",GVAR(modulePresent),GVAR(moduleViewDistanceLimit),_limit];
+
+_limit;

@@ -14,8 +14,10 @@
  *
  * Public: Yes
  */
-
+ 
 #include "script_component.hpp"
+
+if (!hasInterface) exitWith {};
 
 ["SettingChanged",{
     if (_this select 0  == QGVAR(newViewDistance)) then {
