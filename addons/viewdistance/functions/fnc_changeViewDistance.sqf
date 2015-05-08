@@ -17,19 +17,22 @@
 
 #include "script_component.hpp"
 
-private ["_new_view_distance","_new_view_distance_limit"];
+private ["_text","_new_view_distance","_view_distance_limit"];
 
 _new_view_distance = [GVAR(newViewDistance)] call FUNC(returnViewDistanceValue);
 _view_distance_limit = [GVAR(topViewDistanceLimit)] call FUNC(returnViewDistanceValue);
 
 if !GVAR(changeAllowed) then {
-    hint "You are not allowed to change the view distance!";
+    _text = "You are not allowed to change the view distance!";
+    [_text,2] call EFUNC(common,displayTextStructured);
 } else {
     if (_new_view_distance > _view_distance_limit) then {
-        hint format ["That option is not allowed! The limit is: %1m",_view_distance_limit];
+        _text = composeText ["That option is not allowed! The limit is: ",str(_view_distance_limit)];
+        [_text,1] call EFUNC(common,displayTextStructured);
     }
     else {
-        hint format ["View distance successfully changed to: %1m",_new_view_distance];
+        _text = composeText ["View distance successfully changed to: ",str(_new_view_distance)];
+        [_text,1] call EFUNC(common,displayTextStructured);
         setViewDistance _new_view_distance;
     };
 };
