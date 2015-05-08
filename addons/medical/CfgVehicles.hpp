@@ -388,7 +388,7 @@ class CfgVehicles {
                 typeName = "BOOL";
             };
         };
-        class ModuleDescription {
+        class ModuleDescription: ModuleDescription {
             description = "Defines an object as a medical facility for CMS. This allows for more advanced treatments. Can be used on buildings and vehicles. ";
             sync[] = {"AnyStaticObject","AnyVehicle"};
         };
