@@ -7,7 +7,7 @@ order: 2
 ---
 
 ## 1. CfgVehicles
-Entries from found in the `CfgVehicles.hpp` files
+Entries found in the `CfgVehicles.hpp` files
 
 
 ```c++
@@ -26,7 +26,7 @@ ace_offset
 
 
 ## 2. CfgWeapons
-Entries from found in the `CfgWeapons.hpp` files
+Entries found in the `CfgWeapons.hpp` files
 
 
 ```c++
@@ -65,7 +65,7 @@ ace_modedescription
 
 
 ## 3. CfgAmmo
-Entries from found in the `CfgAmmo.hpp` files
+Entries found in the `CfgAmmo.hpp` files
 
 ```c++
 ace_recoil_shakemultiplier
@@ -94,7 +94,7 @@ ace_barrellengths
 
 
 ## 4. CfgGlasses
-Entries from found in the `CfgGlasses.hpp` file
+Entries found in the `CfgGlasses.hpp` file
 
 ```c++
 ace_color
@@ -109,7 +109,7 @@ ace_dustpath
 
 
 ## 5. CfgMagazines
-Entries from found in the `CfgMagazines.hpp` files
+Entries found in the `CfgMagazines.hpp` files
 
 ```c++
 ace_isbelt

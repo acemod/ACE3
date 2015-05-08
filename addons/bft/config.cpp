@@ -15,3 +15,4 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgMagazines.hpp"
+#include "ACE_BFT.hpp"
