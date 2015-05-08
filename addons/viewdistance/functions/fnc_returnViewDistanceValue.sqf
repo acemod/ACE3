@@ -17,9 +17,9 @@
 
 #include "script_component.hpp"
 
-private ["_index","_return"];
+PARAMS_1(_index);
 
-_index = _this select 0;
+private ["_return"];
 _return = 0;
 
 

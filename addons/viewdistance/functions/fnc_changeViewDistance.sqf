@@ -19,8 +19,11 @@
 
 private ["_text","_new_view_distance","_view_distance_limit"];
 
+// Change the received index number into an actual view distance number as set in the config:
 _new_view_distance = [GVAR(newViewDistance)] call FUNC(returnViewDistanceValue);
+
 _view_distance_limit = [GVAR(topViewDistanceLimit)] call FUNC(returnViewDistanceValue);
+
 
 if !GVAR(changeAllowed) then {
     _text = "You are not allowed to change the view distance!";
