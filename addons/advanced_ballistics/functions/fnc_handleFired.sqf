@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_abort", "_AmmoCacheIndex", "_AmmoCacheEntry", "_WeaponCacheIndex", "_WeaponCacheEntry", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_barrelLength", "_bulletMass", "_bulletLength", "_airFriction", "_dragModel", "_muzzleVelocity", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef", "_ballisticCoefficients", "_velocityBoundaries"];
+private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_abort", "_AmmoCacheEntry", "_WeaponCacheEntry", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_barrelLength", "_bulletMass", "_bulletLength", "_airFriction", "_dragModel", "_muzzleVelocity", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_barrelTwist", "_twistDirection", "_stabilityFactor", "_transonicStabilityCoef", "_ballisticCoefficients", "_velocityBoundaries"];
 _unit     = _this select 0;
 _weapon   = _this select 1;
 _mode     = _this select 3;
@@ -54,69 +54,14 @@ if (_abort || !(GVAR(extensionAvailable))) exitWith {
     [_bullet, getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction")] call EFUNC(winddeflection,updateTrajectoryPFH);
 };
 
-_AmmoCacheIndex = GVAR(AmmoCacheIndex) find _ammo;
-if (_AmmoCacheIndex == -1) then {
-    _airFriction = getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction");
-    _caliber = getNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_caliber");
-    _bulletLength = getNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_bulletLength");
-    _bulletMass = getNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_bulletMass");
-    _transonicStabilityCoef = 0.5;
-    if (isNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_transonicStabilityCoef")) then {
-        _transonicStabilityCoef = getNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_transonicStabilityCoef");
-    };
-    _dragModel = 1;
-    _ballisticCoefficients = [];
-    _velocityBoundaries = [];
-    _atmosphereModel = "ICAO";
-    if (isNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_dragModel")) then {
-        _dragModel = getNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_dragModel");
-        if (!(_dragModel in [1, 2, 5, 6, 7, 8])) then {
-            _dragModel = 1;
-        };
-    };
-    if (isArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_ballisticCoefficients")) then {
-        _ballisticCoefficients = getArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_ballisticCoefficients");
-    };
-    if (isArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_velocityBoundaries")) then {
-        _velocityBoundaries = getArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_velocityBoundaries");
-    };
-    if (isText(configFile >> "CfgAmmo" >> _ammo >> "ACE_standardAtmosphere")) then {
-        _atmosphereModel = getText(configFile >> "CfgAmmo" >> _ammo >> "ACE_standardAtmosphere");
-    };
-    _ammoTempMuzzleVelocityShifts = [];
-    if (isArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_ammoTempMuzzleVelocityShifts")) then {
-        _ammoTempMuzzleVelocityShifts = getArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_ammoTempMuzzleVelocityShifts");
-    };
-    _muzzleVelocityTable = [];
-    _barrelLengthTable = [];
-    if (isArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_muzzleVelocityTable")) then {
-        _muzzleVelocityTable = getArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_muzzleVelocityTable");
-    };
-    if (isArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_barrelLengths")) then {
-        _barrelLengthTable = getArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_barrelLengthTable");
-    };
-    _AmmoCacheIndex = count GVAR(AmmoCacheIndex);
-    GVAR(AmmoCacheIndex) pushBack _ammo;
-    GVAR(AmmoCacheData) pushBack [_ammo, _airFriction, _caliber, _bulletLength, _bulletMass, _transonicStabilityCoef, _dragModel, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _ammoTempMuzzleVelocityShifts, _muzzleVelocityTable, _barrelLengthTable];
+_AmmoCacheEntry = uiNamespace getVariable format[QGVAR(%1), _ammo];
+if (isNil {_AmmoCacheEntry}) then {
+     _AmmoCacheEntry = _ammo call FUNC(readAmmoDataFromConfig);
 };
-_AmmoCacheEntry = GVAR(AmmoCacheData) select _AmmoCacheIndex;
-
-_WeaponCacheIndex = GVAR(WeaponCacheIndex) find _weapon;
-if (_WeaponCacheIndex == -1) then {
-    _barrelTwist = getNumber(configFile >> "CfgWeapons" >> _weapon >> "ACE_barrelTwist");
-    _twistDirection = 1;
-    if (isNumber(configFile >> "CfgWeapons" >> _weapon >> "ACE_twistDirection")) then {
-        _twistDirection = getNumber(configFile >> "CfgWeapons" >> _weapon >> "ACE_twistDirection");
-        if (_twistDirection != -1 && _twistDirection != 0 &&  _twistDirection != 1) then {
-            _twistDirection = 1;
-        };
-    };
-    _barrelLength = getNumber(configFile >> "CfgWeapons" >> _weapon >> "ACE_barrelLength");
-    _WeaponCacheIndex = count GVAR(WeaponCacheIndex);
-     GVAR(WeaponCacheIndex) pushBack _weapon;
-     GVAR(WeaponCacheData) pushBack [_weapon, _barrelTwist, _twistDirection, _barrelLength];
+_WeaponCacheEntry = uiNamespace getVariable format[QGVAR(%1), _weapon];
+if (isNil {_WeaponCacheEntry}) then {
+     _WeaponCacheEntry = _weapon call FUNC(readWeaponDataFromConfig);
 };
-_WeaponCacheEntry = GVAR(WeaponCacheData) select _WeaponCacheIndex;
 
 _airFriction = _AmmoCacheEntry select 1;
 
@@ -124,7 +69,7 @@ _bulletVelocity = velocity _bullet;
 _muzzleVelocity = vectorMagnitude _bulletVelocity;
 
 if (GVAR(barrelLengthInfluenceEnabled)) then {
-    _muzzleVelocityShift = [_WeaponCacheEntry select 3, _AmmoCacheEntry select 11, _AmmoCacheEntry select 12, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
+    _muzzleVelocityShift = [_WeaponCacheEntry select 2, _AmmoCacheEntry select 10, _AmmoCacheEntry select 11, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
     if (_muzzleVelocityShift != 0) then {
         _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
         _bullet setVelocity _bulletVelocity;
@@ -134,7 +79,7 @@ if (GVAR(barrelLengthInfluenceEnabled)) then {
 
 if (GVAR(ammoTemperatureEnabled)) then {
     _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL _unit) select 2);
-    _muzzleVelocityShift = [_AmmoCacheEntry select 10, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift);
+    _muzzleVelocityShift = [_AmmoCacheEntry select 9, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift);
     if (_muzzleVelocityShift != 0) then {
         _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
         _bullet setVelocity _bulletVelocity;
@@ -155,10 +100,10 @@ if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER") then {
     };
 };
 
-_caliber = _AmmoCacheEntry select 2;
-_bulletLength = _AmmoCacheEntry select 3;
-_bulletMass = _AmmoCacheEntry select 4;
-_barrelTwist = _WeaponCacheEntry select 1;
+_caliber = _AmmoCacheEntry select 1;
+_bulletLength = _AmmoCacheEntry select 2;
+_bulletMass = _AmmoCacheEntry select 3;
+_barrelTwist = _WeaponCacheEntry select 0;
 _stabilityFactor = 1.5;
 
 if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
@@ -169,7 +114,7 @@ if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) th
 
 GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
 
-"ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _AmmoCacheEntry select 1, _AmmoCacheEntry select 7, _AmmoCacheEntry select 8, _AmmoCacheEntry select 9, _AmmoCacheEntry select 6, _stabilityFactor, _WeaponCacheEntry select 2, _muzzleVelocity, _AmmoCacheEntry select 5, getPosASL _bullet, EGVAR(weather,Latitude), EGVAR(weather,currentTemperature), EGVAR(weather,Altitude), EGVAR(weather,currentHumidity), overcast, floor(time), time - floor(time)];
+"ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _AmmoCacheEntry select 0, _AmmoCacheEntry select 6, _AmmoCacheEntry select 7, _AmmoCacheEntry select 8, _AmmoCacheEntry select 5, _stabilityFactor, _WeaponCacheEntry select 1, _muzzleVelocity, _AmmoCacheEntry select 4, getPosASL _bullet, EGVAR(weather,Latitude), EGVAR(weather,currentTemperature), EGVAR(weather,Altitude), EGVAR(weather,currentHumidity), overcast, floor(time), time - floor(time)];
 
 [{
     private ["_args", "_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];

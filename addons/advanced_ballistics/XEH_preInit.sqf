@@ -13,5 +13,7 @@ PREP(displayProtractor);
 PREP(handleFired);
 PREP(initializeTerrainExtension);
 PREP(initModuleSettings);
+PREP(readAmmoDataFromConfig);
+PREP(readWeaponDataFromConfig);
 
 ADDON = true;
