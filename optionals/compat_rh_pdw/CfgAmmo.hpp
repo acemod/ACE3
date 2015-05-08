@@ -11,5 +11,5 @@ class RH_B_6x35: BulletBase
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={730, 750, 760};
-        ACE_barrelLengths[]={0.2032, 0.254, 0.3048};
+        ACE_barrelLengths[]={203.2, 254.0, 304.8};
 };

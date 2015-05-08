@@ -13,7 +13,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={360, 398, 420};
-        ACE_barrelLengths[]={0.1016, 0.1524, 0.2286};
+        ACE_barrelLengths[]={101.6, 152.4, 228.6};
 	};
 	class RH_454_Casull: BulletBase
 	{
@@ -26,7 +26,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={450, 490, 500};
-        ACE_barrelLengths[]={0.1016, 0.1905, 0.2286};
+        ACE_barrelLengths[]={101.6, 190.5, 228.6};
 	};
 	class RH_32ACP: BulletBase
 	{
@@ -39,7 +39,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={282, 300, 320};
-        ACE_barrelLengths[]={0.1016, 0.127, 0.2286};
+        ACE_barrelLengths[]={101.6, 127.0, 228.6};
 	};
 	class RH_45ACP: BulletBase
 	{
@@ -52,7 +52,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={230, 250, 285};
-        ACE_barrelLengths[]={0.1016, 0.127, 0.2286};
+        ACE_barrelLengths[]={101.6, 127.0, 228.6};
 	};
 	class RH_B_40SW: BulletBase
 	{
@@ -65,7 +65,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={360, 380, 400};
-        ACE_barrelLengths[]={0.1016, 0.1524, 0.2286};
+        ACE_barrelLengths[]={101.6, 152.4, 228.6};
 	};
 	class RH_44mag_ball: BulletBase
 	{
@@ -78,7 +78,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={360, 390, 420};
-        ACE_barrelLengths[]={0.1016, 0.1905, 0.2286};
+        ACE_barrelLengths[]={101.6, 190.5, 228.6};
 	};
 	class RH_357mag_ball: BulletBase
 	{
@@ -91,7 +91,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={490, 510, 535};
-        ACE_barrelLengths[]={0.1016, 0.1524, 0.2286};
+        ACE_barrelLengths[]={101.6, 152.4, 228.6};
 	};
 	class RH_762x25: BulletBase
 	{
@@ -104,7 +104,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={360, 380, 400};
-        ACE_barrelLengths[]={0.1016, 0.1524, 0.2286};
+        ACE_barrelLengths[]={101.6, 152.4, 228.6};
 	};
 	class RH_9x18_Ball: BulletBase
 	{
@@ -117,7 +117,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={298, 330, 350};
-        ACE_barrelLengths[]={0.09652, 0.127, 0.2286};
+        ACE_barrelLengths[]={96.52, 127.0, 228.6};
 	};
 	class RH_B_9x19_Ball: BulletBase
 	{
@@ -130,7 +130,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={340, 370, 400};
-        ACE_barrelLengths[]={0.1016, 0.127, 0.2286};
+        ACE_barrelLengths[]={101.6, 127.0, 228.6};
 	};
 	class RH_B_22LR_SD: BulletBase
 	{
@@ -143,7 +143,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={330, 340, 360};
-        ACE_barrelLengths[]={0.1016, 0.1524, 0.2286};
+        ACE_barrelLengths[]={101.6, 152.4, 228.6};
 	};
 	class RH_57x28mm: BulletBase
 	{
@@ -156,6 +156,6 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={550, 625, 720};
-        ACE_barrelLengths[]={0.1016, 0.1524, 0.26289};
+        ACE_barrelLengths[]={101.6, 152.4, 262.89};
     };
 };

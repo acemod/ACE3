@@ -5,6 +5,6 @@ class CfgWeapons
 	class RH_PDW: Rifle_Base_F
 	{
         ACE_barrelTwist=177.8;
-        ACE_barrelLength=0.254;
+        ACE_barrelLength=254.0;
 	};
 };

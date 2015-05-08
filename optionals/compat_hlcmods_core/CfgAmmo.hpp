@@ -17,7 +17,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=7;
         ACE_muzzleVelocities[]={723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
-        ACE_barrelLengths[]={0.21082, 0.23876, 0.26924, 0.29972, 0.3302, 0.36068, 0.39116, 0.4191, 0.44958, 0.48006, 0.508, 0.6096};
+        ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
     class HLC_556NATO_SOST: B_556x45_Ball
     {
@@ -30,7 +30,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={780, 886, 950};
-        ACE_barrelLengths[]={0.254, 0.3937, 0.508};
+        ACE_barrelLengths[]={254.0, 393.7, 508.0};
     };
     class HLC_556NATO_SPR: B_556x45_Ball
     {
@@ -43,7 +43,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={624, 816, 832, 838};
-        ACE_barrelLengths[]={0.1905, 0.3683, 0.4572, 0.508};
+        ACE_barrelLengths[]={190.5, 368.3, 457.2, 508.0};
     };
     class HLC_300Blackout_Ball: B_556x45_Ball
     {
@@ -56,7 +56,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ICAO";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={559, 609, 625};
-        ACE_barrelLengths[]={0.1524, 0.4064, 0.508};
+        ACE_barrelLengths[]={152.4, 406.4, 508.0};
     };
     class HLC_300Blackout_SMK: HLC_300Blackout_Ball
     {
@@ -69,7 +69,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ICAO";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={300, 320, 340};
-        ACE_barrelLengths[]={0.2286, 0.4064, 0.508};
+        ACE_barrelLengths[]={228.6, 406.4, 508.0};
     };
     class HLC_762x39_Ball: HLC_300Blackout_Ball
     {
@@ -82,7 +82,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ICAO";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={650, 716, 750};
-        ACE_barrelLengths[]={0.254, 0.41402, 0.508};
+        ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
     class HLC_762x39_Tracer: HLC_762x39_Ball
     {
@@ -95,7 +95,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ICAO";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={650, 716, 750};
-        ACE_barrelLengths[]={0.254, 0.41402, 0.508};
+        ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
     class HLC_762x51_MK316_20in: B_762x51_Ball
     {
@@ -108,7 +108,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ICAO";
         ACE_dragModel=7;
         ACE_muzzleVelocities[]={750, 780, 790, 794};
-        ACE_barrelLengths[]={0.4064, 0.508, 0.6096, 0.6604};
+        ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
     class HLC_762x51_BTSub: B_762x51_Ball
     {
@@ -121,7 +121,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ICAO";
         ACE_dragModel=7;
         ACE_muzzleVelocities[]={305, 325, 335, 340};
-        ACE_barrelLengths[]={0.4064, 0.508, 0.6096, 0.6604};
+        ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
     class HLC_762x54_ball: HLC_762x51_ball
     {
@@ -134,7 +134,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ICAO";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={700, 800, 820, 833};
-        ACE_barrelLengths[]={0.4064, 0.508, 0.6096, 0.6604};
+        ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
     class HLC_762x54_tracer: HLC_762x51_tracer
     {
@@ -147,7 +147,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ICAO";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={680, 750, 798, 800};
-        ACE_barrelLengths[]={0.4064, 0.508, 0.6096, 0.6604};
+        ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
     class HLC_303Brit_B: B_556x45_Ball
     {
@@ -160,7 +160,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={748, 761, 765};
-        ACE_barrelLengths[]={0.508, 0.6096, 0.6604};
+        ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
     class HLC_792x57_Ball: HLC_303Brit_B
     {
@@ -173,7 +173,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={785, 800, 815};
-        ACE_barrelLengths[]={0.508, 0.599948, 0.6604};
+        ACE_barrelLengths[]={508.0, 599.948, 660.4};
     };
     class HLC_542x42_ball: HLC_303Brit_B
     {
@@ -192,14 +192,14 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=7;
         ACE_muzzleVelocities[]={780, 880, 920};
-        ACE_barrelLengths[]={0.254, 0.41402, 0.508};
+        ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
     class FH_545x39_7u1: FH_545x39_Ball
     {
         ACE_bulletMass=5.184;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_muzzleVelocities[]={260, 303, 320};
-        ACE_barrelLengths[]={0.254, 0.41402, 0.508};
+        ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
     class HLC_57x28mm_JHP: FH_545x39_Ball
     {
@@ -212,7 +212,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={550, 625, 720};
-        ACE_barrelLengths[]={0.1016, 0.1524, 0.26289};
+        ACE_barrelLengths[]={101.6, 152.4, 262.89};
     };
     class HLC_9x19_Ball: B_556x45_Ball
     {
@@ -225,7 +225,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={340, 370, 400};
-        ACE_barrelLengths[]={0.1016, 0.127, 0.2286};
+        ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
     class HLC_9x19_M882_SMG: B_556x45_Ball
     {
@@ -238,7 +238,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={340, 370, 400};
-        ACE_barrelLengths[]={0.1016, 0.127, 0.2286};
+        ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
     class HLC_9x19_GoldDot: HLC_9x19_Ball
     {
@@ -259,7 +259,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={360, 400, 430};
-        ACE_barrelLengths[]={0.1016, 0.117094, 0.2286};
+        ACE_barrelLengths[]={101.6, 117.094, 228.6};
     };
     class HLC_45ACP_Ball: B_556x45_Ball
     {
@@ -272,7 +272,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={230, 250, 285};
-        ACE_barrelLengths[]={0.1016, 0.127, 0.2286};
+        ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
     class FH_44Mag: HLC_45ACP_Ball
     {
@@ -285,7 +285,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={360, 390, 420};
-        ACE_barrelLengths[]={0.1016, 0.1905, 0.2286};
+        ACE_barrelLengths[]={101.6, 190.5, 228.6};
     };
     class FH_50BMG_SLAP: B_127x99_Ball
     {
@@ -298,7 +298,7 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={1204};
-        ACE_barrelLengths[]={0.7366};
+        ACE_barrelLengths[]={736.6};
     };
     class FH_50BMG_Raufoss: B_127x99_Ball
     {
@@ -311,6 +311,6 @@ class CfgAmmo
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={817};
-        ACE_barrelLengths[]={0.7366};
+        ACE_barrelLengths[]={736.6};
     };
 };
