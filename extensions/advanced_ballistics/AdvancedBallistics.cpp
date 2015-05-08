@@ -340,7 +340,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         tickTime += strtod(strtok_s(NULL, ":", &next_token), NULL);
 
         if (index >= bulletDatabase.size())
-            bulletDatabase.resize(index);
+            bulletDatabase.resize(index+1);
 
         bulletDatabase[index].airFriction = airFriction;
         bulletDatabase[index].ballisticCoefficients = ballisticCoefficients;
