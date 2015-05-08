@@ -57,8 +57,12 @@ def deploy_documentation(token):
             shutil.copyfile(os.path.join(root, name), os.path.join(target, name))
 
     sp.check_call(["git", "add", "--all", "."])
-    sp.check_call(["git", "commit", "-m", "Automatic gh-pages deployment"])
-    sp.check_call(["git", "push", "origin", "gh-pages"], stdout=devnull, stderr=devnull)
+
+    filenum = sp.check_output(["git", "status", "--porcelain"])
+    filenum = len(str(filenum, "utf-8").split("\n")) - 1
+    if filenum > 0:
+        sp.check_call(["git", "commit", "-m", "Automatic gh-pages deployment"])
+        sp.check_call(["git", "push", "origin", "gh-pages"], stdout=devnull, stderr=devnull)
 
     os.chdir("..")
 
