@@ -4,9 +4,10 @@
  * Calculates the muzzle velocity shift caused by different barrel lengths
  *
  * Arguments:
- * 0: ammo - classname <string>
- * 0: weapon - classname <string>
- * 1: muzzle velocity - m/s <NUMBER>
+ * 0: barrel length - mm
+ * 1: muzzle velocity lookup table - m/s <ARRAY>
+ * 2: barrel length lookup table - mm <ARRAY>
+ * 3: muzzle velocity - m/s <NUMBER>
  *
  * Return Value:
  * 0: muzzle velocity shift - m/s <NUMBER>
@@ -16,25 +17,13 @@
  */
 #include "script_component.hpp"
 
-private ["_ammo", "_weapon", "_barrelLength", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocity", "_lowerIndex", "_upperIndex", "_barrelLengthRatio", "_muzzleVelocityNew"];
-_ammo           = _this select 0;
-_weapon         = _this select 1;
-_muzzleVelocity = _this select 2;
-
-_barrelLength = getNumber(configFile >> "cfgWeapons" >> _weapon >> "ACE_barrelLength");
+private ["_barrelLength", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocity", "_lowerIndex", "_upperIndex", "_barrelLengthRatio", "_muzzleVelocityNew"];
+_barrelLength        = _this select 0;
+_muzzleVelocityTable = _this select 1;
+_barrelLengthTable   = _this select 2;
+_muzzleVelocity      = _this select 3;
 
 if (_barrelLength == 0) exitWith { 0 };
-
-_muzzleVelocityTable = [];
-_barrelLengthTable = [];
-
-if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_muzzleVelocities")) then {
-    _muzzleVelocityTable = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_muzzleVelocities");
-};
-if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_barrelLengths")) then {
-    _barrelLengthTable = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_barrelLengths");
-};
-
 if (count _muzzleVelocityTable != count _barrelLengthTable) exitWith { 0 };
 if (count _muzzleVelocityTable == 0 || count _barrelLengthTable == 0) exitWith { 0 };
 if (count _muzzleVelocityTable == 1) exitWith { (_muzzleVelocityTable select 0) - _muzzleVelocity };

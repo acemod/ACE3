@@ -4,6 +4,11 @@
 
 GVAR(currentbulletID) = -1;
 
+GVAR(AmmoCacheIndex) = [];
+GVAR(AmmoCacheData) = [];
+GVAR(WeaponCacheIndex) = [];
+GVAR(WeaponCacheData) = [];
+
 GVAR(Protractor) = false;
 GVAR(ProtractorStart) = time;
 
