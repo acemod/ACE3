@@ -17,25 +17,21 @@
 
 #include "script_component.hpp"
 
-private ["_new_view_distance_index","_new_view_distance"];
+private ["_new_view_distance","_new_view_distance_limit"];
 
-_new_view_distance_index = GVAR(newViewDistance);
+_new_view_distance = [GVAR(newViewDistance)] call FUNC(returnViewDistanceValue);
+_view_distance_limit = [GVAR(topViewDistanceLimit)] call FUNC(returnViewDistanceValue);
 
-_new_view_distance = [_new_view_distance_index] call FUNC(returnViewDistanceValue);
-
-/*
-hint format ["DEBUG: Player: %1 new view distance index: %2 new view distance value: %3",(name player),_new_view_distance_index,_new_view_distance];
-diag_log format ["DEBUG: Player: %1 new view distance index: %2 new view distance value: %3",(name player),_new_view_distance_index,_new_view_distance];
-*/
-
-
-// To do: add a check against a sever or module top limit here.
-
-if !GVAR(changeAllowed) then
-{
-  hint "You cannot change the view distance!"
-}
-else
-{
-  setViewDistance _new_view_distance;
+if !GVAR(changeAllowed) then {
+    hint "You are not allowed to change the view distance!";
+} else {
+    if (_new_view_distance > _view_distance_limit) then {
+        hint format ["That option is not allowed! The limit is: %1m",_view_distance_limit];
+    }
+    else {
+        hint format ["View distance successfully changed to: %1m",_new_view_distance];
+        setViewDistance _new_view_distance;
+    };
 };
+
+// To do: add a check against a  module limit.
