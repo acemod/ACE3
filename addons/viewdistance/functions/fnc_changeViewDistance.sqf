@@ -12,7 +12,7 @@
  * Example:
  * [] call ace_viewdistance_fnc_changeViewDistance;
  *
- * Public: No
+ * Public: Yes
  */
 
 #include "script_component.hpp"

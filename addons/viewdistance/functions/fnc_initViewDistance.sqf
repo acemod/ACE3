@@ -1,18 +1,18 @@
 /*
  * Author: Winter
- * Sets the player's current view distance according to allowed values.
+ * Assigns the Event Handler which fires when a player adjusts their view distance in the menu
  * 
  *
  * Arguments:
- * 0: View Distance Setting (SCALAR)
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [1500] call ace_common_fnc_imanexample
+ * [] call ace_viewdistance_fnc_initViewDistance;
  *
- * Public: No
+ * Public: Yes
  */
 
 #include "script_component.hpp"
