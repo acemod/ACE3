@@ -19,6 +19,7 @@
 
 if (!hasInterface) exitWith {};
 
+// Set the EH which waits for the View Distance setting to be changed
 ["SettingChanged",{
     if (_this select 0  == QGVAR(newViewDistance)) then {
         [] call FUNC(changeViewDistance);

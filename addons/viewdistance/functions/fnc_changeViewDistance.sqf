@@ -22,6 +22,7 @@ private ["_text","_new_view_distance","_view_distance_limit"];
 // Change the received index number into an actual view distance number as set in the config:
 _new_view_distance = [GVAR(newViewDistance)] call FUNC(returnViewDistanceValue);
 
+// Grab the limit, either from the module OR if the module is not valid, the config.
 _view_distance_limit = [] call FUNC(returnViewDistanceLimit);
 
 if (_new_view_distance > _view_distance_limit) then {

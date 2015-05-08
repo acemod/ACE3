@@ -8,7 +8,7 @@ class ACE_Settings {
     class GVAR(viewDistanceLimit) {
         typeName = "SCALAR";
         value = 11; // setting the highest number in the array below means no limit.
-        values[] = {0,1,2,3,4,5,6,7,8,9,10,11}; // correspond to the index values
+        values[] = {0,1,2,3,4,5,6,7,8,9,10,11}; // correspond to the INDEX values
         displayName = "Change View Distance Limit";
         description = "Sets the top limit for all clients";
     };
@@ -16,7 +16,7 @@ class ACE_Settings {
         typeName = "SCALAR";
         isClientSettable = 1;
         value = 0; // not sure what to set this to.
-        values[] = {"1500","2000","2500","3000","3500","4000","5000","6000","7000","8000","9000","10000"};
+        values[] = {"1500","2000","2500","3000","3500","4000","5000","6000","7000","8000","9000","10000"}; // Values also need to be changed in functions/fnc_returnViewDistanceValue.sqf
         displayName = "Change View Distance";
         description = "Changes in game view distance";
     };
