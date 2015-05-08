@@ -4,57 +4,57 @@ class CfgWeapons
     class hgun_Rook40_F;
     class rhs_weap_pya: hgun_Rook40_F
     {
-        ACE_barrelTwist=0.254;
+        ACE_barrelTwist=254.0;
         ACE_barrelLength=0.11176;
     };
     class Pistol_Base_F;
     class rhs_weap_makarov_pmm: rhs_weap_pya
     {
-        ACE_barrelTwist=0.24003;
+        ACE_barrelTwist=240.03;
         ACE_barrelLength=0.093472;
     };
     class rhs_weap_ak74m_Base_F;
     class rhs_weap_ak74m: rhs_weap_ak74m_Base_F
     {
-        ACE_barrelTwist=0.199898;
+        ACE_barrelTwist=199.898;
         ACE_barrelLength=0.41402;
     };
     class rhs_weap_akm: rhs_weap_ak74m
     {
-        ACE_barrelTwist=0.199898;
+        ACE_barrelTwist=199.898;
         ACE_barrelLength=0.41402;
     };
     class rhs_weap_aks74;
     class rhs_weap_aks74u: rhs_weap_aks74
     {
-        ACE_barrelTwist=0.16002;
+        ACE_barrelTwist=160.02;
         ACE_barrelLength=0.21082;
     };
     class rhs_weap_svd: rhs_weap_ak74m
     {
-        ACE_barrelTwist=0.23876;
+        ACE_barrelTwist=238.76;
         ACE_barrelLength=0.61976;
     };
     class rhs_weap_svdp;
     class rhs_weap_svds: rhs_weap_svdp
     {
-        ACE_barrelTwist=0.23876;
+        ACE_barrelTwist=238.76;
         ACE_barrelLength=0.56388;
     };
     class rhs_pkp_base;
     class rhs_weap_pkp: rhs_pkp_base
     {
-        ACE_barrelTwist=0.24003;
+        ACE_barrelTwist=240.03;
         ACE_barrelLength=0.65786;
     };
     class rhs_weap_pkm: rhs_weap_pkp
     {
-        ACE_barrelTwist=0.24003;
+        ACE_barrelTwist=240.03;
         ACE_barrelLength=0.64516;
     };
     class rhs_weap_rpk74m: rhs_weap_pkp
     {
-        ACE_barrelTwist=0.195072;
+        ACE_barrelTwist=195.072;
         ACE_barrelLength=0.58928;
     };
     
