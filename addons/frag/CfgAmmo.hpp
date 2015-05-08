@@ -10,6 +10,8 @@ class CfgAmmo {
     //};
     class Bo_GBU12_LGB;
     class ACE_GBU12 : Bo_GBU12_LGB {
+        GVAR(enabled) = 1;
+        
         GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
         GVAR(metal) = 140000;
         GVAR(charge) = 87000;
@@ -23,6 +25,8 @@ class CfgAmmo {
     class GrenadeBase;
     class Grenade;
     class GrenadeHand: Grenade {
+        GVAR(enabled) = 1;
+        
         GVAR(skip) = 0;
         GVAR(force) = 1;
         // This is a good high-drag frag type for grenades.
@@ -46,6 +50,8 @@ class CfgAmmo {
     class RocketBase;
     class R_Hydra_HE: RocketBase {
         // Source: http://fas.org/man/dod-101/sys/missile/hydra-70.htm
+        GVAR(enabled) = 1;
+        
         GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
         GVAR(metal) = 3850;
         GVAR(charge) = 1040;
@@ -66,6 +72,8 @@ class CfgAmmo {
 
     class BombCore;
     class Bo_Mk82: BombCore {
+        GVAR(enabled) = 1;
+        
         GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
         GVAR(metal) = 140000;
         GVAR(charge) = 87000;
@@ -75,6 +83,8 @@ class CfgAmmo {
     
     class G_40mm_HE: GrenadeBase {
         // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M441
+        GVAR(enabled) = 1;
+        
         GVAR(classes)[] = {"ACE_frag_tiny_HD"};
         GVAR(metal) = 200;
         GVAR(charge) = 32;
@@ -83,6 +93,8 @@ class CfgAmmo {
     };
     class G_40mm_HEDP: G_40mm_HE {
         // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M433
+        GVAR(enabled) = 1;
+        
         GVAR(classes)[] = {"ACE_frag_tiny_HD"};
         GVAR(metal) = 200;
         GVAR(charge) = 45;
@@ -107,6 +119,8 @@ class CfgAmmo {
     class Sh_125mm_HEAT;
     class Sh_155mm_AMOS: ShellBase {
         // Source: http://www.globalsecurity.org/military/systems/munitions/m795.htm
+        GVAR(enabled) = 1;
+        
         GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
         GVAR(metal) = 36000;
         GVAR(charge) = 9979;
@@ -115,6 +129,8 @@ class CfgAmmo {
     };
     class Sh_82mm_AMOS : Sh_155mm_AMOS {
         // Source: http://www.arsenal-bg.com/defense_police/mortar_bombs_82mm.htm
+        GVAR(enabled) = 1;
+        
         GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
         GVAR(metal) = 3200;
         GVAR(charge) = 420;
@@ -122,6 +138,8 @@ class CfgAmmo {
         GVAR(gurney_k) = 1/2;
     };
     class ModuleOrdnanceMortar_F_Ammo: Sh_82mm_AMOS {
+        GVAR(enabled) = 1;
+    
         GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
         GVAR(metal) = 800;
         GVAR(charge) = 4200;
@@ -129,6 +147,8 @@ class CfgAmmo {
         GVAR(gurney_k) = 1/2;
     };
     class Sh_105mm_HEAT_MP : Sh_125mm_HEAT {
+        GVAR(enabled) = 1;
+        
         GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
         GVAR(metal) = 11400;
         GVAR(charge) = 7100;
@@ -136,6 +156,8 @@ class CfgAmmo {
         GVAR(gurney_k) = 1/2;
     };
     class Sh_120mm_HE : ShellBase {
+        GVAR(enabled) = 1;
+        
         GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
         GVAR(metal) = 23000;
         GVAR(charge) = 3148;
@@ -143,6 +165,8 @@ class CfgAmmo {
         GVAR(gurney_k) = 1/2;
     };
     class Sh_125mm_HE: Sh_120mm_HE {
+        GVAR(enabled) = 1;
+        
         GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
         GVAR(metal) = 16000;
         GVAR(charge) = 3200;
@@ -150,6 +174,8 @@ class CfgAmmo {
         GVAR(gurney_k) = 1/2;
     };
     class ModuleOrdnanceHowitzer_F_ammo: Sh_155mm_AMOS {
+        GVAR(enabled) = 1;
+        
         GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
         GVAR(metal) = 1950;
         GVAR(charge) = 15800;
@@ -175,6 +201,8 @@ class CfgAmmo {
     class MissileBase;
     class Missile_AGM_02_F : MissileBase {
         // Source: http://fas.org/man/dod-101/sys/smart/agm-65.htm
+        GVAR(enabled) = 1;
+        
         GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
         GVAR(metal) = 56250;
         GVAR(charge) = 39000;
@@ -183,6 +211,8 @@ class CfgAmmo {
     };
     class M_Hellfire_AT: MissileBase {
         // Source: http://www.designation-systems.net/dusrm/m-114.html
+        GVAR(enabled) = 1;
+        
         GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
         GVAR(metal) = 8000;
         GVAR(charge) = 2400;
