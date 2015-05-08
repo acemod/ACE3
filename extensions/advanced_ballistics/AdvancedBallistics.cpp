@@ -2,7 +2,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <unordered_map>
 #include <random>
 
 #define M_PI 3.14159265358979323846f
@@ -57,7 +57,7 @@ struct Map {
 };
 
 std::vector<Bullet> bulletDatabase;
-std::map<std::string, Map> mapDatabase;
+std::unordered_map<std::string, Map> mapDatabase;
 std::string worldName = "";
 Map* map = &mapDatabase[""];
 
@@ -339,10 +339,8 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         tickTime = strtod(strtok_s(NULL, ":", &next_token), NULL);
         tickTime += strtod(strtok_s(NULL, ":", &next_token), NULL);
 
-        while (index >= bulletDatabase.size()) {
-            Bullet bullet;
-            bulletDatabase.push_back(bullet);
-        }
+        if (index >= bulletDatabase.size())
+            bulletDatabase.resize(index+1);
 
         bulletDatabase[index].airFriction = airFriction;
         bulletDatabase[index].ballisticCoefficients = ballisticCoefficients;
@@ -611,8 +609,12 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
 
         mapGrids = (int)ceil((double)mapSize / 50.0) + 1;
         gridCells = mapGrids * mapGrids;
+        
+        auto map_iter = mapDatabase.find(worldName);
+        if (map_iter == mapDatabase.end())
+            return;
+        map = &map_iter->second;
 
-        map = &mapDatabase[worldName];
         if (map->gridHeights.size() == gridCells) {
             int n = sprintf_s(output, outputSize, "%s", "Terrain already initialized");
             return;
