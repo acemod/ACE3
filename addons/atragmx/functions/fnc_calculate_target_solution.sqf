@@ -52,11 +52,11 @@ if (!GVAR(atmosphereModeTBH)) then {
 };
 
 private ["_bulletLength", "_stabilityFactor"];
-_bulletLength = 1.8;
+_bulletLength = 45.72;
 _stabilityFactor = 1.5;
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     if (_bulletDiameter > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
-        _stabilityFactor = [_bulletDiameter / 10 / 2.54, _bulletLength, _bulletMass * 15.4323584, _barrelTwist / 2.54, _muzzleVelocity, _temperature, _barometricPressure] call EFUNC(advanced_ballistics,calculateStabilityFactor);
+        _stabilityFactor = [_bulletDiameter, _bulletLength, _bulletMass, _barrelTwist * 10, _muzzleVelocity, _temperature, _barometricPressure] call EFUNC(advanced_ballistics,calculateStabilityFactor);
     };
 };
 
