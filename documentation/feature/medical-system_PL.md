@@ -50,7 +50,7 @@ Podczas kiedy gracz krwawi, jego ilość krwi w organizmie zmniejsza się, skutk
 Zależnie od czynników takich jak aktualna ilość krwi w organizmie, aktualna szybkość krwawienia oraz użytych medykamentów, ciśnienie krwi zacznie maleć. Aby zapobiec temu spadkowi bazującemu na wspomnianych czynnikach oraz innych, tętno będzie odpowiednio się dostosowywać aby utrzymać ciśnienie na bezpiecznym poziomie. Oznacza to, że medyk musi obserwować pracę narządów każdego pacjenta, jakiego przyjdzie mu leczyć. Robimy to poprzez menu interakcji wybierając opcję "Sprawdź tętno" oraz "Sprawdź ciśnienie krwi" dostępną podczas interakcji z głową oraz ramionami pacjenta.
 
 #### 3.1.3 Leki
-Aby ustabilizować narządy a także zapobiegać np. bólowi, gracz oraz medyk może użyć leków. Wszystkie rodzaje leków ważą tyle samo czyli ok. 100 gramów.
+Aby ustabilizować narządy a także zapobiegać np. bólowi, gracz oraz medyk może użyć leków. Wszystkie rodzaje leków ważą tyle samo czyli ok. 50 gramów.
 Zaawansowany system medyczny dostarcza następujące 3 rodzaje leków:
 
 * Atropina
@@ -106,7 +106,7 @@ Wyróżniamy także złamania kości ciała (poniższe może się zmienić i nie
  
 #### 3.1.5 Rodzaje bandaży
 Zaawansowany system medyczny dostarcza 4 różne rodzaje bandaży oraz poprawnie działającą stazę. Poniżej lista tych bandaży wraz z ich efektywnością na dany rodzaj rany. W zależności od stopnia efektywności na dany rodzaj rany wymagane może być podanie od 1 (najlepsza efektywność) do nawet 4 (najgorsza efektywność) bandaży danego typu.
-Wszystkie rodzaje bandaży ważą tyle samo czyli ok. 100 gramów.
+Wszystkie rodzaje bandaży ważą tyle samo czyli ok. 50 gramów.
 * Bandaż (jałowy)
   * Draśnięcia - najwyższa skuteczność
   * Rany płatowe - ekstremalnie niska skuteczność
