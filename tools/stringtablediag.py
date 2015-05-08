@@ -57,14 +57,16 @@ def main():
     projectpath = os.path.dirname(os.path.dirname(scriptpath))
     projectpath = os.path.join(projectpath, "addons")
 
-    print("#########################")
-    print("# Stringtable Diag Tool #")
-    print("#########################")
+    if "--markdown" not in sys.argv:
+        print("#########################")
+        print("# Stringtable Diag Tool #")
+        print("#########################")
 
     languages = get_all_languages(projectpath)
 
-    print("\nLanguages present in the repo:")
-    print(", ".join(languages))
+    if "--markdown" not in sys.argv:
+        print("\nLanguages present in the repo:")
+        print(", ".join(languages))
 
     keysum = 0
     localizedsum = list(map(lambda x: 0, languages))
@@ -76,31 +78,33 @@ def main():
         if keynumber == 0:
             continue
 
-        print("\n# " + module)
+        if "--markdown" not in sys.argv:
+            print("\n# " + module)
 
         keysum += keynumber
         for i in range(len(localized)):
-            print("  %s %s / %i" % ((languages[i]+":").ljust(10), str(localized[i]).ljust(3), keynumber))
+            if "--markdown" not in sys.argv:
+                print("  %s %s / %i" % ((languages[i]+":").ljust(10), str(localized[i]).ljust(3), keynumber))
             localizedsum[i] += localized[i]
             if localized[i] < keynumber:
                 missing[i].append(module)
 
-    print("\n###########")
-    print("# RESULTS #")
-    print("###########")
+    if "--markdown" not in sys.argv:
+        print("\n###########")
+        print("# RESULTS #")
+        print("###########")
+        print("\nTotal number of keys: %i\n" % (keysum))
 
-    print("\nTotal number of keys: %i\n" % (keysum))
+        for i in range(len(languages)):
+            if localizedsum[i] == keysum:
+                print("%s No missing stringtable entries." % ((languages[i] + ":").ljust(12)))
+            else:
+                print("%s %s missing stringtable entry/entries." % ((languages[i] + ":").ljust(12), str(keysum - localizedsum[i]).rjust(4)), end="")
+                print(" ("+", ".join(missing[i])+")")
 
-    for i in range(len(languages)):
-        if localizedsum[i] == keysum:
-            print("%s No missing stringtable entries." % ((languages[i] + ":").ljust(12)))
-        else:
-            print("%s %s missing stringtable entry/entries." % ((languages[i] + ":").ljust(12), str(keysum - localizedsum[i]).rjust(4)), end="")
-            print(" ("+", ".join(missing[i])+")")
+        print("\n\n### MARKDOWN ###\n")
 
-    print("\n\n### MARKDOWN ###")
-
-    print("\nTotal number of keys: %i\n" % (keysum))
+    print("Total number of keys: %i\n" % (keysum))
 
     print("| Language | Missing Entries | Relevant Modules | % done |")
     print("|----------|----------------:|------------------|--------|")
