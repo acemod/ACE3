@@ -17,7 +17,7 @@
 private "_version";
 _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
 
-diag_log text format ["[ACE]: ACE is version %1", _version];
+diag_log text format ["[ACE]: ACE is version %1.", _version];
 
 private ["_addons", "_index"];
 
@@ -57,3 +57,35 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
         };
     };
 } forEach getArray (configFile >> "ACE_Extensions" >> "extensions");
+
+///////////////
+// check server version
+///////////////
+if (isMultiplayer) then {
+    if (isServer) then {
+        // send servers version of ACE to all clients
+        GVAR(ServerVersion) = _version;
+        publicVariable QGVAR(ServerVersion);
+    } else {
+        // clients have to wait for the variable
+        [{
+            if (isNil QGVAR(ServerVersion)) exitWith {};
+
+            private "_version";
+            _version = _this select 0;
+
+            if (_version != GVAR(ServerVersion)) then {
+                private "_errorMsg";
+                _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.", GVAR(ServerVersion), _version];
+
+                diag_log text format ["[ACE] ERROR: %1", _errorMsg];
+
+                if (hasInterface) then {diag_log str "1";
+                    ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+                };
+            };
+
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+        }, 1, _version] call CBA_fnc_addPerFrameHandler;
+    };
+};
