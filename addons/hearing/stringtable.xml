@@ -106,7 +106,7 @@
             <Czech>Vypnout pískání v uších</Czech>
             <Polish>Wyłącz dzwonienie w uszach</Polish>
             <Hungarian>Fülcsengés letiltása</Hungarian>
-            <Italian>Disabilita i fischi nelle orecchie</Italian>
+            <Italian>Disabilita il ronzio</Italian>
             <Portuguese>Desabilitar zumbido de ouvidos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_DisplayName">
@@ -120,14 +120,6 @@
         <Key ID="STR_ACE_Hearing_CombatDeafness_Description">
             <English>Enable combat deafness?</English>
             <Polish>Możliwość chwilowej utraty słuchu przy głośnych wystrzałach i jednoczesnym braku włożonych stoperów</Polish>
-        </Key>
-        <Key ID="STR_ACE_Hearing_CombatDeafness_Yes">
-            <English>Yes</English>
-            <Polish>Tak</Polish>
-        </Key>
-        <Key ID="STR_ACE_Hearing_CombatDeafness_No">
-            <English>No</English>
-            <Polish>Nie</Polish>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English></English>
