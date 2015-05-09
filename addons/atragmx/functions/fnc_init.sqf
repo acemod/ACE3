@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+GVAR(active) = false;
+
 GVAR(workingMemory) = +(GVAR(gunList) select 0);
 
 GVAR(scopeUnits) = ["MILs", "TMOA", "SMOA", "Clicks"];

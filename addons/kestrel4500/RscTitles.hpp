@@ -54,6 +54,7 @@ class Kestrel4500_Display
     name="Kestrel4500_Display";
     idd=-1;
     onLoad="uiNamespace setVariable ['Kestrel4500_Display', (_this select 0)]";
+    onUnload=QUOTE(_this call FUNC(onCloseDialog));
     movingEnable=1;
     controlsBackground[]={};
     objects[]={};
@@ -217,6 +218,7 @@ class RscTitles
     {
         idd=-1;
         onLoad="with uiNameSpace do { RscKestrel4500 = _this select 0 };";
+        onUnload=(_this call FUNC(onCloseDisplay));
         movingEnable=0;
         duration=60;
         fadeIn="false";
