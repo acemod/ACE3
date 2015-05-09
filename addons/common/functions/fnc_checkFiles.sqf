@@ -17,7 +17,7 @@
 private "_version";
 _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
 
-diag_log text format ["[ACE]: ACE is version %1", _version]; ///////////////////////////////////////////////////////////////////////////
+diag_log text format ["[ACE]: ACE is version %1", _version];
 
 private ["_addons", "_index"];
 
