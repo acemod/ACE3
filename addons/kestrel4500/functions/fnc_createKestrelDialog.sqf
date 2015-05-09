@@ -14,9 +14,8 @@
  */
 #include "script_component.hpp"
 
-//if (dialog) exitWith { false };
+if (GVAR(Kestrel4500)) exitWith { false };
 if (underwater ACE_player) exitWith { false };
-if(GVAR(Kestrel4500)) exitWith { false };
 if (!("ACE_Kestrel4500" in (uniformItems ACE_player)) && !("ACE_Kestrel4500" in (vestItems ACE_player))) exitWith { false };
 
 GVAR(Overlay) = false;
