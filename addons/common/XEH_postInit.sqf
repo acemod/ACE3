@@ -64,8 +64,6 @@ if (_currentVersion != _previousVersion) then {
     profileNamespace setVariable ["ACE_VersionNumberString", _currentVersion];
 };
 
-0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber);
-
 // ACE events
 "ACEg" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
 "ACEc" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
@@ -84,6 +82,7 @@ if(!isServer) then {
 ["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
 [FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
 
+call FUNC(checkFiles);
 
 /***************************************************************/
 /***************************************************************/
@@ -250,14 +249,3 @@ if(isMultiplayer && { time > 0 || isNull player } ) then {
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
-
-// check dlls
-{
-    if (_x callExtension "version" == "") then {
-        private "_errorMsg";
-        _errorMsg = format ["Extension %1.dll not installed.", _x];
-
-        diag_log text format ["[ACE] ERROR: %1", _errorMsg];
-        ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
-    };
-} forEach getArray (configFile >> "ACE_Extensions" >> "extensions");
