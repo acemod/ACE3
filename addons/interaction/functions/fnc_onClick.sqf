@@ -1,4 +1,18 @@
-// by commy2
+/*
+ * Author: commy2
+ * On click
+ *
+ * Arguments:
+ * Index <NUMBER>
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * 5 call ace_interaction_fnc_onClick
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 private ["_player", "_vehicle", "_target", "_count", "_index", "_action", "_subMenu", "_statement", "_condition", "_conditionShow", "_exceptions", "_distance"];
 

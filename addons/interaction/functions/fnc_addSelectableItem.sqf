@@ -1,21 +1,21 @@
 /*
-    Author: Garth de Wet (LH)
-
-    Description:
-        Adds an item to the select menu
-
-    Parameters:
-        0: ARRAY/NUMBER - List container
-        1: String - Display Name
-        2: String - Picture
-        3: String/code - data
-
-    Returns:
-        ARRAY/Number
-
-    Example:
-*/
-
+ * Author: Garth de Wet (LH)
+ * Adds an item to the select menu
+ *
+ * Arguments:
+ * 0: List container <ARRAY/NUMBER>
+ * 1: Display name <STRING>
+ * 2: Picture <STRING>
+ * 3: Data <STRING/CODE>
+ *
+ * Return value:
+ * Container <ARRAY/NUMBER>
+ *
+ * Example:
+ * _array = [_actions, "Banana", "UI\dot_ca.paa", data] call ace_interaction_fnc_addSelectableItem
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_container", "_displayName", "_picture", "_data", "_index"];

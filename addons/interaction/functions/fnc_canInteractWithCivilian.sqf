@@ -1,5 +1,18 @@
-// by commy2
-
+/*
+ * Author: commy2
+ * Checks if the player can interact with civilian
+ *
+ * Arguments:
+ * 0: Target <OBJECT>
+ *
+ * Return value:
+ * Able to interact with civilian <BOOL>
+ *
+ * Example:
+ * _bool = [target] call ace_interaction_fnc_canInteractWithCivilian
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 EXPLODE_2_PVT(_this,_unit,_isCivilian);

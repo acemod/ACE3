@@ -1,4 +1,19 @@
-// by commy2
+/*
+ * Author: commy2
+ * Checks if the player can join a team
+ *
+ * Arguments:
+ * 0: Player <OBJECT>
+ * 1: Target <OBJECT>
+ *
+ * Return value:
+ * Able to join a team <BOOL>
+ *
+ * Example:
+ * _bool = [player, target] call ace_interaction_fnc_canJoinTeam
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_unit", "_target"];

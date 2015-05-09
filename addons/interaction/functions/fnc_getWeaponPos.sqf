@@ -2,11 +2,14 @@
  * Author: esteldunedain
  * Return a suitable position for the action point for the current weapon
  *
- * Argument:
+ * Arguments:
  * None
  *
  * Return value:
  * Children actions <ARRAY>
+ *
+ * Example:
+ * _array = call ace_interaction_fnc_getWeaponPos
  *
  * Public: No
  */

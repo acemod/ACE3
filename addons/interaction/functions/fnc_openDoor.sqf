@@ -1,4 +1,19 @@
-// by commy2
+/*
+ * Author: commy2
+ * Opens door
+ *
+ * Arguments:
+ * 0: House <OBJECT>
+ * 1: Door <STRING>
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * [house, "door"] call ace_interaction_fnc_openDoor
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_info", "_house", "_door", "_animations", "_lockedVariable"];

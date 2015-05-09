@@ -7,10 +7,10 @@
  * 1: player <OBJECT>
  *
  * Return Value:
- * <BOOL>
+ * Able to become leader of group <BOOL>
  *
  * Example:
- * [player, player] call ace_interaction_fnc_canBecomeLeader
+ * _bool = [player, player] call ace_interaction_fnc_canBecomeLeader
  *
  * Public: No
  */

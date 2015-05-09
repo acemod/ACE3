@@ -1,4 +1,21 @@
-// by commy2
+/*
+ * Author: commy2
+ * Get door animations
+ *
+ * Arguments:
+ * 0: House <OBJECT>
+ * 1: Door <STRING>
+ *
+ * Return value:
+ * Animation and Locked variable <ARRAY>
+ * 0: Animation <STRING>
+ * 1: Locked variable <STRING>
+ *
+ * Example:
+ * _array = [target, "door"] call ace_interaction_fnc_getDoorAnimations
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_house", "_door", "_animations", "_lockedVariable"];

@@ -1,19 +1,19 @@
 /*
-    Author: Garth de Wet (LH)
-
-    Description:
-        Prepares the select menu for use.
-
-    Parameters:
-        0: TEXT - Header text
-        1: TEXT - Approve button text
-
-    Returns:
-        ARRAY/NUMBER - container object for use with addSelectableItem.
-
-    Example:
-        ["Select Explosive", "Place"] call FUNC(prepareSelectMenu);
-*/
+ * Author: Garth de Wet (LH)
+ * Prepares the select menu for use
+ *
+ * Arguments:
+ * 0: Header Text <STRING>
+ * 1: Approve Button Text <STRING>
+ *
+ * Return value:
+ * Container object <ARRAY/NUMBER>
+ *
+ * Example:
+ * _array = ["Select Explosive", "Place"] call ace_interaction_fnc_prepareSelectMenu
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_buttonAction", "_header", "_buttonText", "_cancelButton"];

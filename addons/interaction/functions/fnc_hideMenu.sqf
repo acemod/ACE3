@@ -1,18 +1,18 @@
 /*
-    Author: Garth de Wet (LH)
-
-    Description:
-        Closes the Interaction menu
-
-    Parameters:
-        Nothing
-
-    Returns:
-        Nothing
-
-    Example:
-        call FUNC(hideMenu);
-*/
+ * Author: Garth de Wet (LH)
+ * Closes the Interaction menu
+ *
+ * Arguments:
+ * None
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * call ace_interaction_fnc_hideMenu
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 closeDialog 0;

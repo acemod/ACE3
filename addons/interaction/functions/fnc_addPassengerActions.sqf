@@ -2,13 +2,16 @@
  * Author: esteldunedain
  * Mount unit actions inside passenger submenu
  *
- * Argument:
+ * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Player <OBJECT>
  * 3: Parameters <ARRAY>
  *
  * Return value:
  * Children actions <ARRAY>
+ *
+ * Example:
+ * _array = [vehicle, player, [params]] call ace_interaction_fnc_addPassengerAction
  *
  * Public: No
  */

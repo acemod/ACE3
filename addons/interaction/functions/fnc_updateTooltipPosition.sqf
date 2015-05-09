@@ -1,4 +1,20 @@
-// by commy2
+/*
+ * Author: commy2
+ * Updates tooltip's position
+ *
+ * Arguments:
+ * 0: Tooltip Display <NUMBER>
+ * 1: X Coordinate <NUMBER>
+ * 2: Y Coordinate <NUMBER>
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * [player, 0.5, 0.5] call ace_interaction_fnc_updateTooltipPosition
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 disableSerialization;

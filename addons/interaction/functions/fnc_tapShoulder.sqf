@@ -1,4 +1,19 @@
-// by commy2
+/*
+ * Author: commy2
+ * Taps a shoulder
+ *
+ * Arguments:
+ * 0: Player <OBJECT>
+ * 1: Target <OBJECT>
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * [player, target] call ace_interaction_fnc_tapShoulder
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 EXPLODE_3_PVT(_this,_tapper,_target,_shoulderNum);

@@ -1,4 +1,18 @@
-// by commy2
+/*
+ * Author: commy2
+ * On button up
+ *
+ * Arguments:
+ * None
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * call ace_interaction_fnc_onButtonUp
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_player", "_vehicle", "_target", "_count", "_index", "_action", "_statement", "_condition", "_conditionShow", "_exceptions", "_distance"];

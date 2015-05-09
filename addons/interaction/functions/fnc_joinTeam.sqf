@@ -1,4 +1,19 @@
-// by commy2
+/*
+ * Author: commy2
+ * Assigns a unit to the team
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Team <STRING>
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * [target, "YELLOW"] call ace_interaction_fnc_joinTeam
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_unit", "_team", "_message"];

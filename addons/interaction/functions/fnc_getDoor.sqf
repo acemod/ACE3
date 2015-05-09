@@ -1,4 +1,20 @@
-// by commy2
+/*
+ * Author: commy2
+ * Get door
+ *
+ * Arguments:
+ * 0: Distance <NUMBER>
+ *
+ * Return value:
+ * House objects and door <ARRAY>
+ * 0: House <OBJECT>
+ * 1: Door Name <STRING>
+ *
+ * Example:
+ * _array = [player, target] call ace_interaction_fnc_getDoor
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_distance", "_position0", "_position1", "_intersections", "_count", "_house", "_door", "_index", "_id"];

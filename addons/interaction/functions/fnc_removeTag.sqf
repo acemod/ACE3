@@ -1,4 +1,18 @@
-// by commy2
+/*
+ * Author: commy2
+ * Removes tag
+ *
+ * Arguments:
+ * None
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * call ace_interaction_fnc_removeTag
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 0 spawn {
