@@ -11,7 +11,7 @@ This page describes how you can setup your development environment for ACE3, all
 
 ## 1. Requirements
 
-- Arma 3 (duh)
+- Arma 3
 - A proper installation of the Arma 3 Tools (available on Steam)
 - A properly setup P-drive
 - Run ArmA 3 and Arma 3 Tools directly from steam once to install registry entries (and again after every update)
