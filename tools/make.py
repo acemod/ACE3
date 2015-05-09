@@ -102,6 +102,8 @@ def  get_directory_hash(directory):
         traceback.print_exc()
         return -2
 
+    retVal = directory_hash.hexdigest()
+    #print_yellow("Hash Value for {} is {}".format(directory,retVal))
     return directory_hash.hexdigest()
 
 # Copyright (c) André Burgaud
