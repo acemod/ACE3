@@ -661,6 +661,7 @@ See the make.cfg file for additional build options.
         module_root_parent = os.path.abspath(os.path.join(os.path.join(work_drive, prefix), os.pardir))
         module_root = cfg.get(make_target, "module_root", fallback=os.path.join(make_root_parent, "addons"))
         optionals_root = os.path.join(module_root_parent, "optionals")
+        extensions_root = os.path.join(module_root_parent, "extensions")
         print_green ("module_root: {}".format(module_root))
 
         if (os.path.isdir(module_root)):
@@ -806,6 +807,18 @@ See the make.cfg file for additional build options.
                     fileName = os.path.splitext(file)[0]
                     print_yellow("Removing obsolete file => {}".format(file))
                     purge(obsolete_check_path,fileName+"\..",fileName+".*")
+
+        obsolete_check_path = os.path.join(module_root, release_dir, project)
+        for file in os.listdir(obsolete_check_path):
+            if (file.endswith(".dll") and os.path.isfile(os.path.join(obsolete_check_path,file))):
+                if check_for_obsolete_pbos(extensions_root, file):
+                    fileName = os.path.splitext(file)[0]
+                    print_yellow("Removing obsolete file => {}".format(file))
+                    try:
+                        os.remove(os.path.join(obsolete_check_path,file))
+                    except:
+                        print_error("\nFailed to delete {}".format(os.path.join(obsolete_check_path,file)))
+                        pass
 
         # For each module, prep files and then build.
         print_blue("\nBuilding...")
