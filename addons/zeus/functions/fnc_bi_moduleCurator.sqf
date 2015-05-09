@@ -152,6 +152,15 @@ if (_activated) then {
                     _x radiochanneladd [_player];
                 } foreach (_logic getvariable ["channels",[]]);
 
+                /* Removed by ACE
+                //--- Sent notification to all assigned players
+                {
+                    if (isplayer _x) then {
+                        [["CuratorAssign",[_name,name _player]],"bis_fnc_showNotification",_x] call bis_fnc_mp;
+                    };
+                } foreach (curatoreditableobjects _logic);
+                */
+
                 [_logic,"curatorUnitAssigned",[_logic,_player]] call bis_fnc_callscriptedeventhandler;
 
                 //--- Forced interface
@@ -181,6 +190,15 @@ if (_activated) then {
                 waituntil {unassigncurator _logic; isnull (getassignedcuratorunit _logic)};
             };
         };
+
+        /* Removed by ACE
+        //--- Create bird
+        _birdType = _logic getvariable ["birdType","eagle_f"];
+        if (_birdType != "") then {
+            _bird = createvehicle [_birdType,[100,100,100],[],0,"none"];
+            _logic setvariable ["bird",_bird,true];
+        };
+        */
 
         //--- Activated all future addons
         _addons = [];
