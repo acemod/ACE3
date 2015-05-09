@@ -16,10 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target"];
-
-_unit = _this select 0;
-_target = _this select 1;
+PARAMS_2(_unit,_target);
 
 alive _target
 && {!(_target getVariable ["ACE_isUnconscious", false])}

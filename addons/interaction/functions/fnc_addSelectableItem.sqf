@@ -18,17 +18,13 @@
  */
 #include "script_component.hpp"
 
-private ["_container", "_displayName", "_picture", "_data", "_index"];
-
-_container = _this select 0;
-_displayName = _this select 1;
-_picture = _this select 2;
-_data = _this select 3;
+PARAMS_4(_container,_displayName,_picture,_data);
 
 if (_picture == "" || _picture == "PictureThing") then {
     _picture = QUOTE(PATHTOF(UI\dot_ca.paa));
 };
 
+private ["_index"];
 _index = lbAdd [_container, _displayName];
 lbSetData [_container, _index, str _data];
 lbSetPicture [_container, _index, _picture];

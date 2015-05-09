@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 // IGNORE_PRIVATE_WARNING(_target);
 
-private ["_weaponDir","_refSystem"];
+private ["_weaponDir", "_refSystem"];
 
 _weaponDir = _target weaponDirection currentWeapon _target;
 _refSystem = _weaponDir call EFUNC(common,createOrthonormalReference);

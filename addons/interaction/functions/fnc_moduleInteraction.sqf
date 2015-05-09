@@ -17,6 +17,8 @@
  */
 #include "script_component.hpp"
 
+private ["_logic", "_activated"];
+
 _logic = _this select 0;
 _activated = _this select 2;
 

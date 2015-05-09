@@ -17,8 +17,7 @@
  
 #include "script_component.hpp"
 
-_boat = _this select 0;
-_velocity = _this select 1;
+PARAMS_2(_boat,_velocity);
 
 if !(local _boat) exitWith {
     [_this, QUOTE(FUNC(push)), _boat] call EFUNC(common,execRemoteFnc);

@@ -16,13 +16,14 @@
  */
 #include "script_component.hpp"
 
-private ["_buttonAction", "_header", "_buttonText", "_cancelButton"];
+PARAMS_2(_header,_buttonText);
+
 closeDialog 0;
-_header = _this select 0;
-_buttonText = _this select 1;
+
 if (isNil "_buttonText" or {_buttonText == ""}) then {
     _buttonText = localize "STR_ACE_Interaction_MakeSelection";
 };
+
 createDialog "RscACE_SelectAnItem";
 ctrlSetText [8860, _buttonText];
 ctrlSetText [8870, _header];

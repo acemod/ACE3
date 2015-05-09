@@ -18,10 +18,9 @@
  */
 #include "script_component.hpp"
 
-private ["_house", "_door", "_animations", "_lockedVariable"];
+PARAMS_2(_house,_door);
 
-_house = _this select 0;
-_door = _this select 1;
+private ["_index", "_animations", "_lockedVariable"];
 
 _index = [
     "door_1",

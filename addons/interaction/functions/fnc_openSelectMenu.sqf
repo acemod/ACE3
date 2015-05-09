@@ -27,11 +27,14 @@
 if (!(profileNamespace getVariable [QGVAR(FlowMenu), false])) then {
     GVAR(SelectAccept) = _this select 1;
     GVAR(SelectCancel) = _this select 2;
-    buttonSetAction [8855, QUOTE( call GVAR(SelectCancel); )]; // cancel
-    buttonSetAction [8860, QUOTE( (call compile (lbData [ARR_2(8866, lbCurSel 8866)])) call GVAR(SelectAccept); )]; // accept
+    buttonSetAction [8855, QUOTE( call GVAR(SelectCancel); )]; // Cancel
+    buttonSetAction [8860, QUOTE( (call compile (lbData [ARR_2(8866, lbCurSel 8866)])) call GVAR(SelectAccept); )]; // Accept
     lbSetCurSel [8866, 0];
 }else{
-    _customActions = _this select 0;
+    PARAMS_1(_customActions);
+
+    private ["_count", "_action"];
+
     _count = count _customActions;
     if (_count == 0) exitWith {};
     _customActions call FUNC(sortOptionsByPriority);

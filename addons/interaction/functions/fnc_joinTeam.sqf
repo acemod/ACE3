@@ -16,10 +16,9 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_team", "_message"];
+PARAMS_2(_unit,_team);
 
-_unit = _this select 0;
-_team = _this select 1;
+private ["_message"];
 
 _unit setVariable [QGVAR(assignedFireTeam), _team, true];
 [_unit, format ["{_this assignTeam '%1'}", _team]] call EFUNC(common,execRemoteFnc);

@@ -17,9 +17,9 @@
 
 #define RADIUS 10
 
-private ["_unit", "_chance", "_x"];
+PARAMS_1(_unit);
 
-_unit = _this select 0;
+private ["_chance", "_x"];
 
 ACE_player playActionNow "GestureGo"; // put something else here.
 
@@ -35,4 +35,4 @@ if (count (weapons ACE_player) > 0) then {
       _this setUnitPos "DOWN";
     }, _x] call CBA_fnc_globalExecute;
   };
-} foreach (_unit nearEntities ["Civilian", RADIUS]);
+} forEach (_unit nearEntities ["Civilian", RADIUS]);

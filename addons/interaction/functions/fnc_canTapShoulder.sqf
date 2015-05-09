@@ -16,10 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target"];
-
-_unit = _this select 0;
-_target = _this select 1;
+PARAMS_2(_unit,_target);
 
 _target isKindOf "CAManBase" &&
 {alive _target} &&

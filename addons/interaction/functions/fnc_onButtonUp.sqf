@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_player", "_vehicle", "_target", "_count", "_index", "_action", "_statement", "_condition", "_conditionShow", "_exceptions", "_distance"];
+private ["_player", "_vehicle", "_target", "_count", "_index", "_action", "_statement", "_condition", "_conditionShow", "_distance"];
 
 _player = ACE_player;
 _vehicle = vehicle _player;
@@ -34,11 +34,9 @@ _action = if (_index != -1 && {_index < _count}) then {
 closeDialog 0;
 
 
-
 _statement = _action select 1;
 _condition = _action select 2;
 _conditionShow = _action select 7;
-_exceptions = _action select 8;//
 _distance = _action select 9;
 
 if ((_distance == 0 || {[GVAR(Target), _distance] call FUNC(isInRange)}) && {[_target, _player] call _condition} && {[_target, _player] call _conditionShow}) then {

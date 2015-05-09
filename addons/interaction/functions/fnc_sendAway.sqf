@@ -18,9 +18,9 @@
 #define DISTANCE 50
 #define RADIUS 10
 
-private ["_unit", "_chance", "_x"];
+PARAMS_1(_unit);
 
-_unit = _this select 0;
+private ["_chance", "_x"];
 
 ACE_player playActionNow "GestureGo";
 

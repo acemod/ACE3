@@ -16,10 +16,9 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_distance", "_player"];
+PARAMS_2(_vehicle,_distance);
 
-_vehicle = _this select 0;
-_distance = _this select 1;
+private ["_player", "_position0", "_position1"];
 
 _player = ACE_player;
 

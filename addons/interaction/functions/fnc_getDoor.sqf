@@ -17,9 +17,9 @@
  */
 #include "script_component.hpp"
 
-private ["_distance", "_position0", "_position1", "_intersections", "_count", "_house", "_door", "_index", "_id"];
+PARAMS_1(_distance);
 
-_distance = _this select 0;
+private ["_position0", "_position1", "_intersections", "_count", "_house", "_door"];
 
 _position0 = positionCameraToWorld [0, 0, 0];
 _position1 = positionCameraToWorld [0, 0, _distance];
@@ -38,4 +38,5 @@ _intersections = [_house, "GEOM"] intersect [_position0, _position1];
 
 _door = _intersections select 0 select 0;
 if (isNil "_door") exitWith {[_house, ""]};
+
 [_house, _door]
