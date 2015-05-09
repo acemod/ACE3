@@ -20,17 +20,17 @@
 private ["_text","_new_view_distance","_view_distance_limit"];
 
 // Change the received index number into an actual view distance number as set in the config:
-_new_view_distance = [GVAR(newViewDistance)] call FUNC(returnViewDistanceValue);
+_new_view_distance = [GVAR(viewDistance)] call FUNC(returnValue);
 
-// Grab the limit, either from the module OR if the module is not valid, the config.
-_view_distance_limit = [] call FUNC(returnViewDistanceLimit);
+_view_distance_limit = GVAR(limit); // Grab the limit
 
-if (_new_view_distance > _view_distance_limit) then {
-    _text = composeText ["That option is not allowed! The limit is: ",str(_view_distance_limit)];
-    [_text,1] call EFUNC(common,displayTextStructured);
-}
-else {
+if (_new_view_distance <= _view_distance_limit) then {
     _text = composeText ["View distance successfully changed to: ",str(_new_view_distance)];
     [_text,1] call EFUNC(common,displayTextStructured);
     setViewDistance _new_view_distance;
+    setObjectViewDistance (0.8 * _new_view_distance); // maybe make this 0.8 a constant?
+}
+else {
+    _text = composeText ["That option is not allowed! The limit is: ",str(_view_distance_limit)];
+    [_text,1] call EFUNC(common,displayTextStructured);
 };

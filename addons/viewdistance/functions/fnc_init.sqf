@@ -21,7 +21,7 @@ if (!hasInterface) exitWith {};
 
 // Set the EH which waits for the View Distance setting to be changed
 ["SettingChanged",{
-    if (_this select 0  == QGVAR(newViewDistance)) then {
+    if (_this select 0  == QGVAR(viewDistance)) then {
         [] call FUNC(changeViewDistance);
     };
 },true] call ace_common_fnc_addEventHandler;

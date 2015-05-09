@@ -13,7 +13,7 @@ class CfgVehicles {
                 displayName = "View Distance setting limit";
                 description = "Sets the limit for how high clients can raise their view distance (< 10000)";
                 typeName = "SCALAR";
-                defaultValue = 10000;
+                defaultValue = 5000;
             };
         };
     };

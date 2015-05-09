@@ -25,9 +25,6 @@ if (!_activated) exitWith {
     diag_log text "[ACE]: View Distance Limit Module is placed but NOT active.";
 };
 
-GVAR(modulePresent) = true;
+diag_log text "[ACE]: View Distance Limit Module Initialized.";
 
-[_logic, QGVAR(moduleViewDistanceLimit),"moduleViewDistanceLimit"] call EFUNC(common,readSettingFromModule);
-
-hint format["[ACE]: View Distance Limit Module Initialized with limit: %1",GVAR(moduleViewDistanceLimit)]; // only used for debug, GVAR(moduleViewDistanceLimit) keeps returning as ANY. Remember to remove before finalising the module.
-diag_log format["[ACE]: View Distance Limit Module Initialized with limit: %1",GVAR(moduleViewDistanceLimit)];
+[_logic, QGVAR(limit),"moduleViewDistanceLimit"] call EFUNC(common,readSettingFromModule);
