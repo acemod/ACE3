@@ -4,7 +4,7 @@
  * Compares version numbers of PBOs and DLLs.
  *
  * Argument:
- * 0: Mode (Number)
+ * None.
  *
  * Return value:
  * None.
@@ -19,14 +19,8 @@ _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
 
 diag_log text format ["[ACE]: ACE is version %1.", _version];
 
-private ["_addons", "_index"];
-
+private "_addons";
 _addons = activatedAddons;
-
-// speed up search. all ace pbos are loaded after ace_main.
-_index = _addons find "ace_main";
-reverse _addons; 
-_addons resize (count _addons - _index);
 _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
 
 {
