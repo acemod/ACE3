@@ -969,7 +969,7 @@ See the make.cfg file for additional build options.
                                 raise
                                 print_error("Could not rename built PBO with prefix.")
                         # Sign result
-                        if key:
+                        if (key and not "ace_{}.pbo".format(module) in signature_blacklist):
                             print("Signing with {}.".format(key))
                             if pbo_name_prefix:
                                 ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo")])
