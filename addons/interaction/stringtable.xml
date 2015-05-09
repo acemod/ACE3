@@ -797,14 +797,6 @@
             <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
             <Polish>Czy gracze mogą korzystać z menu zarządzania drużyną? Domyślnie: Tak</Polish>
         </Key>
-        <Key ID="STR_ACE_InteractionSystem_EnableTeamManagement_Yes">
-            <English>Yes</English>
-            <Polish>Tak</Polish>
-        </Key>
-        <Key ID="STR_ACE_InteractionSystem_EnableTeamManagement_No">
-            <English>No</English>
-            <Polish>Nie</Polish>
-        </Key>
         <Key ID="STR_ACE_InteractionSystem_Module_Description">
             <English></English>
             <Polish>Na zarządzanie drużyną składa się: przydział kolorów dla członków drużyny, przejmowanie dowodzenia, dołączanie/opuszczanie drużyn.</Polish>

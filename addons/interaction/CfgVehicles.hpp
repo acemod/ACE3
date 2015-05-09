@@ -14,10 +14,7 @@ class CfgVehicles {
         displayName = "$STR_ACE_InteractionSystem_EnableTeamManagement_DisplayName";
         description = "$STR_ACE_InteractionSystem_EnableTeamManagement_Description";
         typeName = "BOOL";
-        class values {
-          class Yes { default = 1; name = "$STR_ACE_InteractionSystem_EnableTeamManagement_Yes"; value = 1;};
-          class No { name = "$STR_ACE_InteractionSystem_EnableTeamManagement_No"; value = 0; };
-        };
+        defaultValue = 1;
       };
     };
 	class ModuleDescription {

@@ -108,10 +108,7 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Hearing_CombatDeafness_DisplayName";
                 description = "$STR_ACE_Hearing_CombatDeafness_Description";
                 typeName = "BOOL";
-                class values {
-                    class Yes { name = "$STR_ACE_Hearing_CombatDeafness_Yes"; value = 1; default = 1; };
-                    class No { name = "$STR_ACE_Hearing_CombatDeafness_No"; value = 0; };
-                };
+                defaultValue = 1;
             };
         };
 		class ModuleDescription {

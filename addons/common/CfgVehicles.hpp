@@ -61,17 +61,7 @@ class CfgVehicles {
         displayName = "$STR_ACE_Common_CheckPBO_CheckAll_DisplayName";
         description = "$STR_ACE_Common_CheckPBO_CheckAll_Description";
         typeName = "BOOL";
-        class values {
-          class WarnOnce {
-            default = 1;
-            name = "$STR_ACE_Common_CheckPBO_CheckAll_No";
-            value = 0;
-          };
-          class Warn {
-            name = "$STR_ACE_Common_CheckPBO_CheckAll_Yes";
-            value = 1;
-          };
-        };
+        defaultValue = 0;
       };
       class Whitelist {
         displayName = "$STR_ACE_Common_CheckPBO_Whitelist_DisplayName";

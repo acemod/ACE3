@@ -25,14 +25,6 @@
             <Italian>Questa unità è troppo vicina al nemico.</Italian>
             <Portuguese>Essa unidade  está muito perta do inimigo.</Portuguese>
         </Key>
-        <Key ID="STR_ACE_SwitchUnits_Yes">
-            <English>Yes</English>
-            <Polish>Tak</Polish>
-        </Key>
-        <Key ID="STR_ACE_SwitchUnits_No">
-            <English>No</English>
-            <Polish>Nie</Polish>
-        </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_DisplayName">
             <English>SwitchUnits System</English>
             <Polish>System zmiany stron</Polish>

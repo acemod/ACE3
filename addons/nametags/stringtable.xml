@@ -157,14 +157,6 @@
             <English>Show cursor NameTag for vehicle commander (only if client has name tags enabled)Default: No</English>
             <Polish>Pokazuj imię dowódcy pojazdu nad pojazdem (tylko jeżeli klient ma włączone imiona graczy). Domyślnie: Nie</Polish>
         </Key>
-        <Key ID="STR_ACE_NameTags_Yes">
-            <English>Yes</English>
-            <Polish>Tak</Polish>
-        </Key>
-        <Key ID="STR_ACE_NameTags_No">
-            <English>No</English>
-            <Polish>Nie</Polish>
-        </Key>
         <Key ID="STR_ACE_NameTags_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować ustawienia i zasięg wyświetlania imion.</Polish>

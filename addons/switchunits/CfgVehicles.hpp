@@ -13,46 +13,31 @@ class CfgVehicles {
         displayName = "$STR_ACE_SwitchUnits_SwitchToWest_DisplayName";
         description = "$STR_ACE_SwitchUnits_SwitchToWest_Description";
         typeName = "BOOL";
-        class values {
-          class Yes {name = "$STR_ACE_SwitchUnits_Yes"; value = 1;};
-          class No {default = 1; name = "$STR_ACE_SwitchUnits_Yes"; value = 0;};
-        };
+        defaultValue = 0;
       };
       class SwitchToEast {
         displayName = "$STR_ACE_SwitchUnits_SwitchToEast_DisplayName";
         description = "$STR_ACE_SwitchUnits_SwitchToEast_Description";
         typeName = "BOOL";
-        class values {
-          class Yes {name = "$STR_ACE_SwitchUnits_Yes"; value = 1;};
-          class No {default = 1; name = "$STR_ACE_SwitchUnits_No"; value = 0;};
-        };
+        defaultValue = 0;
       };
       class SwitchToIndependent {
         displayName = "$STR_ACE_SwitchUnits_SwitchToIndependent_DisplayName";
         description = "$STR_ACE_SwitchUnits_SwitchToIndependent_Description";
         typeName = "BOOL";
-        class values {
-          class Yes {name = "$STR_ACE_SwitchUnits_Yes"; value = 1;};
-          class No {default = 1; name = "$STR_ACE_SwitchUnits_No"; value = 0;};
-        };
+        defaultValue = 0;
       };
       class SwitchToCivilian {
         displayName = "$STR_ACE_SwitchUnits_SwitchToCivilian_DisplayName";
         description = "$STR_ACE_SwitchUnits_SwitchToCivilian_Description";
         typeName = "BOOL";
-        class values {
-          class Yes {name = "$STR_ACE_SwitchUnits_Yes"; value = 1;};
-          class No {default = 1; name = "$STR_ACE_SwitchUnits_No"; value = 0;};
-        };
+        defaultValue = 0;
       };
       class EnableSafeZone {
         displayName = "$STR_ACE_SwitchUnits_EnableSafeZone_DisplayName";
         description = "$STR_ACE_SwitchUnits_EnableSafeZone_Description";
         typeName = "BOOL";
-        class values {
-          class Yes {default = 1; name = "$STR_ACE_SwitchUnits_Yes"; value = 1;};
-          class No {name = "$STR_ACE_SwitchUnits_No"; value = 0;};
-        };
+        defaultValue = 1;
       };
       class SafeZoneRadius {
         displayName = "$STR_ACE_SwitchUnits_SafeZoneRadius_DisplayName";
