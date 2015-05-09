@@ -21,7 +21,7 @@ private ["_text","_new_view_distance","_view_distance_limit"];
 
 // Change the received index number into an actual view distance:
 _new_view_distance = [GVAR(viewDistance)] call FUNC(returnValue);
-_view_distance_limit = GVAR(limit); // Grab the limit
+_view_distance_limit = GVAR(limitViewDistance); // Grab the limit
 
 if (_new_view_distance <= _view_distance_limit) then {
     _text = composeText ["View distance successfully changed to: ",str(_new_view_distance)];

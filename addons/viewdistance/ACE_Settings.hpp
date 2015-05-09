@@ -7,7 +7,7 @@ class ACE_Settings {
         displayName = "Change View Distance";
         description = "Changes in game view distance";
     };
-    class GVAR(limit) {
+    class GVAR(limitViewDistance) {
         typeName = "SCALAR";
         value = 10000; // Value, NOT index. 10000 is the maximum in A3
         displayName = "View Distance Limit";
