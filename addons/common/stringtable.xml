@@ -529,6 +529,6 @@
         <Key ID="STR_ACE_Common_LSDVehicles_Description">
             <English>Adds LSD effect to synchronized vehicle</English>
             <Polish>Dodaje efekt LSD pod zsynchronizowany pojazd</Polish>
-		</Key>
+        </Key>
     </Package>
 </Project>
