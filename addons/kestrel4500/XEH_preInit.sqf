@@ -13,4 +13,7 @@ PREP(measureWindSpeed);
 PREP(updateDisplay);
 PREP(updateImpellerState);
 
+PREP(onCloseDialog);
+PREP(onCloseDisplay);
+
 ADDON = true;

@@ -68,5 +68,6 @@ PREP(update_target_data);
 PREP(update_target_selection);
 PREP(update_unit_selection);
 PREP(update_zero_range);
+PREP(on_close_dialog);
 
 ADDON = true;
