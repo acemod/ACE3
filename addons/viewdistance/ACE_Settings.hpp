@@ -9,7 +9,7 @@ class ACE_Settings {
     };
     class GVAR(limit) {
         typeName = "SCALAR";
-        value = 10000; // Value, NOT index.
+        value = 10000; // Value, NOT index. 10000 is the maximum in A3
         displayName = "View Distance Limit";
         description = "Limit for client's view distance set here and can overridden by module";
     };

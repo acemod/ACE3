@@ -10,10 +10,10 @@ class CfgVehicles {
         //icon = ""; // needs an icon
         class Arguments {
             class moduleViewDistanceLimit {
-                displayName = "View Distance setting limit";
+                displayName = "View Distance Limit";
                 description = "Sets the limit for how high clients can raise their view distance (< 10000)";
                 typeName = "SCALAR";
-                defaultValue = 5000;
+                defaultValue = 6000;
             };
         };
     };

@@ -24,6 +24,8 @@ _new_view_distance = [GVAR(viewDistance)] call FUNC(returnValue);
 
 _view_distance_limit = GVAR(limit); // Grab the limit
 
+diag_log format ["[ACE]: DEBUG View Distance change requested: %1 Limit is: %2 Under Limit: %3",_new_view_distance,_view_distance_limit,_new_view_distance<_view_distance_limit]; // ONLY FOR DEBUG, REMOVE LATER ON
+
 if (_new_view_distance <= _view_distance_limit) then {
     _text = composeText ["View distance successfully changed to: ",str(_new_view_distance)];
     [_text,1] call EFUNC(common,displayTextStructured);
