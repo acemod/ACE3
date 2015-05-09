@@ -1,16 +1,16 @@
 /*
-* Author: Bohemia Interactive
-* Module function for initalizing zeus
-* Edited to remove eagle and global ascension message
-*
-* Arguments:
-* 0: The logic object <OBJECT>
-*
-* Return Value:
-* nil
-*
-* Public: No
-*/
+ * Author: Bohemia Interactive
+ * Module function for initalizing zeus
+ * Edited to remove eagle and global ascension message
+ *
+ * Arguments:
+ * 0: The logic object <OBJECT>
+ *
+ * Return Value:
+ * nil
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 
