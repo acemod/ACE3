@@ -121,14 +121,6 @@
             <English>Enable combat deafness?</English>
             <Polish>Możliwość chwilowej utraty słuchu przy głośnych wystrzałach i jednoczesnym braku włożonych stoperów</Polish>
         </Key>
-        <Key ID="STR_ACE_Hearing_CombatDeafness_Yes">
-            <English>Yes</English>
-            <Polish>Tak</Polish>
-        </Key>
-        <Key ID="STR_ACE_Hearing_CombatDeafness_No">
-            <English>No</English>
-            <Polish>Nie</Polish>
-        </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English></English>
             <Polish>Głuchota bojowa pojawia się w momentach, kiedy stoimy w pobliżu broni wielkokalibrowej bez ochrony słuchu, lub np. podczas ostrzału artyleryjskiego. Moduł ten pozwala na włączenie lub wyłączenie tego efektu.</Polish>

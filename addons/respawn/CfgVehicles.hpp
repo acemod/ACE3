@@ -17,22 +17,14 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Respawn_SavePreDeathGear_DisplayName";
                 description = "$STR_ACE_Respawn_SavePreDeathGear_Description";
                 typeName = "BOOL";
-
-                class values {
-                    class Yes { name = "$STR_ACE_Respawn_Yes"; value = 1; };
-                    class No { default = 1; name = "$STR_ACE_Respawn_No"; value = 0; };
-                };
+                defaultValue = 0;
             };
 
             class RemoveDeadBodiesDisconnected {
                 displayName = "$STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName";
                 description = "$STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description";
                 typeName = "BOOL";
-
-                class values {
-                    class Yes { default = 1; name = "$STR_ACE_Respawn_Yes"; value = 1; };
-                    class No { name = "$STR_ACE_Respawn_No"; value = 0; };
-                };
+                defaultValue = 1;
             };
         };
         class ModuleDescription: ModuleDescription {

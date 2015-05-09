@@ -15,33 +15,13 @@ class ACE_ModuleExplosive: Module_F {
             displayName = "$STR_ACE_Explosive_RequireSpecialist_DisplayName";
             description = "$STR_ACE_Explosive_RequireSpecialist_Description";
             typeName = "BOOL";
-            class values {
-                class Yes {
-                    name = "$STR_ACE_Explosive_Yes";
-                    value = 1;
-                };
-                class No {
-                    default = 1;
-                    name = "$STR_ACE_Explosive_No";
-                    value = 0;
-                };
-            };
+            defaultValue = 0;
         };
         class PunishNonSpecialists {
             displayName = "$STR_ACE_Explosive_PunishNonSpecialists_DisplayName";
             description = "$STR_ACE_Explosive_PunishNonSpecialists_Description";
             typeName = "BOOL";
-            class values {
-                class Yes {
-                    default = 1;
-                    name = "$STR_ACE_Explosive_Yes";
-                    value = 1;
-                };
-                class No {
-                    name = "$STR_ACE_Explosive_No";
-                    value = 0;
-                };
-            };
+            defaultValue = 1;
         };
     };
     class ModuleDescription: ModuleDescription {

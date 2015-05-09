@@ -34,7 +34,7 @@ class CfgVehicles {
                 defaultValue = 0;
             };
         };
-        class ModuleDescription {
+		class ModuleDescription {
             description = "$STR_ACE_Map_Module_Description";
         };
     };
@@ -51,7 +51,7 @@ class CfgVehicles {
             class Interval {
                 displayName = "$STR_ACE_Map_BFT_Interval_DisplayName";
                 description = "$STR_ACE_Map_BFT_Interval_Description";
-                typeName = "NUMBER";
+				typeName = "NUMBER";
                 defaultValue = 1;
             };
             class HideAiGroups {
@@ -61,7 +61,7 @@ class CfgVehicles {
                 defaultValue = 0;
             };
         };
-        class ModuleDescription {
+		class ModuleDescription {
             description = "$STR_ACE_Map_BFT_Module_Description";
         };
     };

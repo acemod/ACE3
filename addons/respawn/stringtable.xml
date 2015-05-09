@@ -52,7 +52,7 @@
             <French>Téléporté à la base</French>
             <German>Zur Basis teleportiert</German>
             <Spanish>Teletransportado a base</Spanish>
-            <Russian>Телепорт на базу</Russian>
+            <Russian>Вы были телепортированы на базу</Russian>
             <Polish>Przeteleportowano do bazy</Polish>
             <Czech>Teleportován na základnu</Czech>
             <Hungarian>Bázisra teleportálva</Hungarian>
@@ -64,7 +64,7 @@
             <French>Téléporté au point de déploiement</French>
             <German>Zum Sammelpunkt teleportiert</German>
             <Spanish>Teletransportado al punto de reunión</Spanish>
-            <Russian>Телепорт на точку сбора</Russian>
+            <Russian>Вы были телепортированы на точку сбора</Russian>
             <Polish>Przeteleportowano do punktu zbiórki</Polish>
             <Czech>Teleportován na rallypoint</Czech>
             <Hungarian>Gyülekezőpontra teleportálva</Hungarian>
@@ -154,14 +154,6 @@
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_Description">
             <English>Respawn with the gear a soldier had just before his death?</English>
             <Polish>Odradzaj z ekwipunkiem jaki żołnierz miał tuż przed swoją śmiercią?</Polish>
-        </Key>
-        <Key ID="STR_ACE_Respawn_Yes">
-            <English>Yes</English>
-            <Polish>Tak</Polish>
-        </Key>
-        <Key ID="STR_ACE_Respawn_No">
-            <English>No</English>
-            <Polish>Nie</Polish>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName">
             <English>Remove bodies?</English>

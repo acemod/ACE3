@@ -46,8 +46,8 @@ class CfgVehicles {
         defaultValue = 100;
       };
     };
-    class ModuleDescription {
-      description = "$STR_ACE_SwitchUnits_Module_Description";
+	class ModuleDescription {
+            description = "$STR_ACE_SwitchUnits_Module_Description";
     };
   };
 };
