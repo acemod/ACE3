@@ -191,11 +191,8 @@ class CfgVehicles {
             class consumeItem_PAK {
                 displayName = "$STR_ACE_AdvancedMedicalSettings_consumeItem_PAK_DisplayName";
                 description = "$STR_ACE_AdvancedMedicalSettings_consumeItem_PAK_Description";
-                typeName = "NUMBER";
-                class values {
-                    class keep { name = "$STR_ACE_Medical_No"; value = 0; };
-                    class remove { name = "$STR_ACE_Medical_Yes"; value = 1; default = 1; };
-                };
+                typeName = "BOOL";
+                defaultValue = 1;
             };
             class useLocation_PAK {
                 displayName = "$STR_ACE_AdvancedMedicalSettings_useLocation_PAK_DisplayName";
@@ -336,18 +333,8 @@ class CfgVehicles {
             class enabled {
                 displayName = "$STR_ACE_AssignMedicVehicle_enabled_DisplayName";
                 description = "$STR_ACE_AssignMedicVehicle_enabled_Description";
-                typeName = "NUMBER";
-                class values {
-                    class none {
-                        name = "$STR_ACE_Medical_No";
-                        value = 0;
-                    };
-                    class medic {
-                        name = "$STR_ACE_Medical_Yes";
-                        value = 1;
-                        default = 1;
-                    };
-                };
+                typeName = "BOOL";
+                defaultValue = 1;
             };
         };
         class ModuleDescription {
@@ -1017,24 +1004,3 @@ class CfgVehicles {
         };
     };
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -2888,14 +2888,6 @@
             <English>Should PAK be removed on usage?</English>
             <Polish>Czy apteczka osobista powinna zniknąć z ekwipunku po jej użyciu?</Polish>
         </Key>
-        <Key ID="STR_ACE_Medical_No">
-            <English>No</English>
-            <Polish>Nie</Polish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Yes">
-            <English>Yes</English>
-            <Polish>Tak</Polish>
-        </Key>
         <Key ID="STR_ACE_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
             <Polish>Ogr. apteczek osobistych</Polish>
@@ -3070,3 +3062,4 @@
         </Key>
     </Package>
 </Project>
+    

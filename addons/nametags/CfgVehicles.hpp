@@ -62,10 +62,7 @@ class CfgVehicles {
                 displayName = "$STR_ACE_NameTags_showCursorTagForVehicles_DisplayName";
                 description = "$STR_ACE_NameTags_showCursorTagForVehicles_Description";
                 typeName = "BOOL";
-                class values {
-                    class Yes {name = "$STR_ACE_NameTags_Yes"; value = 1;};
-                    class No {default = 1; name = "$STR_ACE_NameTags_No"; value = 0;};
-                };
+                defaultValue = 0;
             };
         };
 		class ModuleDescription: ModuleDescription {
