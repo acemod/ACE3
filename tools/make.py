@@ -985,7 +985,7 @@ See the make.cfg file for additional build options.
 
                     if not build_successful:
                         print_error("pboProject return code == {}".format(str(ret)))
-                        print_error("Module not successfully built/signed.")
+                        print_error("Module not successfully built/signed. Check your {}temp\{}_packing.log for more info.".format(work_drive,module))
                         print ("Resuming build...")
                         continue
 
@@ -1057,7 +1057,7 @@ See the make.cfg file for additional build options.
                             build_successful = True
 
                     if not build_successful:
-                        print_error("Module not successfully built.")
+                        print_error("Module not successfully built. Check your {}temp\{}_packing.log for more info.".format(work_drive,module))
 
                     # Back to the root
                     os.chdir(make_root)
