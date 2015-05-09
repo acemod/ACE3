@@ -79,7 +79,7 @@ _holderMagazinesStart = magazinesAmmoCargo _holder;
 
 {
     EXPLODE_2_PVT(_x,_xClassname,_xAmmo);
-    if ((_xClassname in _listOfItemsToRemove) && {!(_xClassname in UNIQUE_MAGAZINES)}) then {
+    if ((_xClassname in _listOfItemsToRemove) && {(getNumber (configFile >> "CfgMagazines" >> _xClassname >> "ACE_isUnique")) == 0}) then {
         _holder addMagazineAmmoCargo [_xClassname, 1, _xAmmo];
         _target removeMagazine _xClassname;
     };
@@ -89,7 +89,7 @@ _targetMagazinesEnd = magazinesAmmo _target;
 _holderMagazinesEnd = magazinesAmmoCargo _holder;
 
 //Verify Mags dropped from unit:
-if ( ({((_x select 0) in _listOfItemsToRemove) && {!((_x select 0) in UNIQUE_MAGAZINES)}} count _targetMagazinesEnd) != 0) exitWith {
+if (({((_x select 0) in _listOfItemsToRemove) && {(getNumber (configFile >> "CfgMagazines" >> (_x select 0) >> "ACE_isUnique")) == 0}} count _targetMagazinesEnd) != 0) exitWith {
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Didn't Remove Magazines"] call FUNC(eventTargetFinish);
 };
