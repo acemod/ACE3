@@ -1,10 +1,10 @@
 class CfgVehicles {
-    class Module_F;
-    class ACE_ModuleViewDistance : Module_F {
+    class ACE_Module;
+    class GVAR(ModuleSettings) : ACE_Module {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
+        function = QUOTE(DFUNC(initModule));
         displayName = "View Distance Limiter";
-        function = QFUNC(module);
         scope = 2;
         isGlobal = 1;
         //icon = ""; // needs an icon
