@@ -19,11 +19,11 @@ private ["_temperature", "_scaledTemperature", "_color", "_count", "_string", "_
 
 // Calculate cool down of weapon since last shot
 _temperature = [_player, _weapon, 0] call FUNC(updateTemperature);
-_scaledTemperature = (_temperature / 600) min 1;
+_scaledTemperature = (_temperature / 1000) min 1;
 
 _color = [
-    2 * _scaledTemperature min 1,
-    2 * (1 - _scaledTemperature) min 1,
+    2 * (_scaledTemperature * 2) min 1,
+    2 * (1 - (_scaledTemperature * 2)) min 1,
     00
 ];
 
