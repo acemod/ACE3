@@ -1,0 +1,1 @@
+#include "\z\ace\addons\destruction\script_component.hpp"

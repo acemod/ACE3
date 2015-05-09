@@ -1,0 +1,29 @@
+init:
+load_model:\A3\Armor_F_EPB\MBT_03\MBT_03_cannon_F.p3d
+load_model:\A3\soft_f\MRAP_01\MRAP_01_gmg_F.p3d
+init:
+load_model:\a3\structures_f\mil\BagFence\BagFence_Long_F.p3d
+test_selection:component01
+
+_ret = "ace_vd" callExtension "init:"; diag_log text format["init=%1", _ret];
+"ace_vd" callExtension "load_model:\a3\structures_f\mil\BagFence\BagFence_Long_F.p3d";
+
+init:
+hit:-1,I_MBT_03_cannon_F,foobar,-1,big_projectile_wtf,123,456,789,1.0;2.0;3.0,4;5;6,7.0;8.0;9.0,-9.123,1.0;2.0;3.0,4;5;6
+
+//_unit=bags, _shooter=B Alpha 1-1:1 (jaynus), _bullet=16: tracer_red.p3d, _position=[3889.46,4111.73,5.49427], _velocity=[108.934,556.502,-493.932], _selection=[], _ammo=[10,0,0,0,"B_65x39_Caseless"], _direction=[0.0108392,-0.999933,0.00413701], _radius=1.60276"
+
+init:
+load_model:\a3\structures_f\mil\BagFence\BagFence_Long_F.p3d
+test_raycast:
+
+init:
+register_vehicle:\a3\structures_f\mil\BagFence\BagFence_Long_F.p3d,1
+hit:-1,A3\Structures_F\Mil\BagFence\BagFence_Long_F.p3d,[],-1,B_65x39_Caseless,32.8931,6.70561,11300,177.485;660.026;-313.118,0.532227;-0.23584;0.154573,0.236087;0.877956;-0.416481,0.00232643;-0.999479;0.0321913,0.532227;-0.234863;0.187383,177.485;660.026;-313.118
+fetch_result:1
+
+init:
+register_vehicle:\a3\structures_f\mil\BagFence\BagFence_Long_F.p3d,1
+register_vehicle:\a3\structures_f\mil\BagFence\BagFence_Long_F.p3d,2
+register_vehicle:\a3\structures_f\mil\BagFence\BagFence_Long_F.p3d,3
+register_vehicle:\a3\structures_f\mil\BagFence\BagFence_Long_F.p3d,5

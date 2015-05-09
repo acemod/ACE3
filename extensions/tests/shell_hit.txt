@@ -1,0 +1,5 @@
+#c:\arma\arma3\addons\armor_f_epb.pbo C:\dev\ace3\extensions\tests\shell_hit.txt
+init:
+debug_render:
+register_vehicle:\A3\Armor_F_EPB\MBT_03\MBT_03_cannon_F.p3d,0,4050.18;3802.55;5.075
+hit:0,\A3\Armor_F_EPB\MBT_03\MBT_03_cannon_F.p3d,[],2,Sh_120mm_APFSDS_Tracer_Yellow,650000,1023.62,19100,0,0,-59.941;1734.25;-6.31558,1.40601;-1.89697;-1.20229,-0.0345423;0.999399;-0.00295164,-2.23169e-007;-1;-0.000745904,2.19214;-1.87256;-1.17395,-59.941;1734.25;-6.31558

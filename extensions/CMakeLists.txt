@@ -1,11 +1,16 @@
 cmake_minimum_required (VERSION 3.0)
 project (ACE)
 
+set_property(GLOBAL PROPERTY USE_FOLDERS ON) 
+
 if (NOT CMAKE_BUILD_TYPE AND CMAKE_COMPILER_IS_GNUCXX)
 	message(STATUS "No build type selected, default to Debug")
 	set(CMAKE_BUILD_TYPE "Debug")
 endif()
 
+option(DEVEL "DEVEL" OFF)
+option(USE_BULLET "USE_BULLET" ON)
+option(USE_DIRECTX "USE_DIRECTX" OFF)
 option(USE_64BIT_BUILD "USE_64BIT_BUILD" OFF)
 option(USE_STATIC_LINKING "USE_STATIC_LINKING" ON)
 
@@ -21,9 +26,29 @@ else()
 	set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "/MT /Zi /O2 /Ob1 /D NDEBUG")
 endif()
 
-file(GLOB ACE_COMMON_SOURCES common/*.h common/*.hpp common/*.c common/*.cpp)
-add_library(ace_common STATIC ${ACE_COMMON_SOURCES})
-include_directories(AFTER "common")
+include_directories("common")
+
+if(USE_BULLET)
+    add_definitions(-DUSE_BULLET)
+    include_directories(BEFORE "lib/bullet3/include")
+    link_directories("lib/bullet3/lib")
+    set(BULLET_LIBS_DEBUG "BulletCollision_vs2010_debug.lib;LinearMath_vs2010_debug.lib;BulletDynamics_vs2010_debug.lib")
+    set(BULLET_LIBS "BulletCollision_vs2010.lib;LinearMath_vs2010.lib;BulletDynamics_vs2010.lib")
+else()
+    set(BULLET_LIBS_DEBUG "")
+    set(BULLET_LIBS "")
+endif()
+if(USE_DIRECTX)
+    add_definitions(-DUSE_DIRECTX)
+    set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
+    find_package (DirectX)
+    link_directories (BEFORE ${DirectX_D3DX11_LIBRARY})
+    include_directories (BEFORE ${DirectX_D3DX11_INCLUDE_DIR} )
+endif()
+if(DEVEL)
+    add_definitions(-DDEVEL)
+endif()
+
 
 string(TIMESTAMP ACE_BUILDSTAMP "%Y-%m-%dT%H:%M:%SZ")
 set(ACE_VERSION_MAJOR 3)
@@ -50,13 +75,29 @@ if(MSVC)
     set(GLOBAL_RC ${CMAKE_CURRENT_BINARY_DIR}/common/ace_version_win32.rc)
 endif()
 
-include_directories(AFTER ${CMAKE_CURRENT_BINARY_DIR}/common)
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/common)
 set(GLOBAL_SOURCES ${GLOBAL_RC})
 
 # Add extensions to build here
+add_subdirectory(common)
+
+# Extensions
+
+add_subdirectory(vd)
 add_subdirectory(fcs)
 add_subdirectory(break_line)
 add_subdirectory(clipboard)
 add_subdirectory(advanced_ballistics)
+
+# Test Extension for dynamically loading/unloading built extensions; does not build in release
+if (DEVEL)
+    add_subdirectory(dynload)
+    add_subdirectory(tests)
+    if(USE_DIRECTX)
+        add_subdirectory(lib/directxtk)
+    endif()
+endif()
+
+
 
 message("Build Type: ${CMAKE_BUILD_TYPE}")

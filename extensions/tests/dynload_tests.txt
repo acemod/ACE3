@@ -1,0 +1,19 @@
+P:\a3\structures_f\mil\BagFence\BagFence_Long_F.p3d
+
+
+P:\a3\soft_f\MRAP_01\MRAP_01_gmg_F.p3d
+
+
+
+"ace_dynload" callExtension "load:z\ace\extensions\build\vd\RelWithDebInfo\ace_vd.dll";
+"ace_dynload" callExtension "list:";
+"ace_dynload" callExtension "call:z\ace\extensions\build\vd\RelWithDebInfo\ace_vd.dll,echo:balls";
+"ace_dynload" callExtension "unload:z\ace\extensions\build\vd\RelWithDebInfo\ace_vd.dll";
+
+
+"ace_dynload" callExtension "load:z\ace\extensions\build\clipboard\RelWithDebInfo\ace_clipboard.dll";
+
+_ret = "ace_dynload" callExtension "call:z\ace\extensions\build\vd\RelWithDebInfo\ace_clipboard.dll,HAHAHAHAHAHA"; diag_log text format["RESULT: %1", _res];
+
+
+"ace_dynload" callExtension "unload:z\ace\extensions\build\clipboard\RelWithDebInfo\ace_clipboard.dll";
