@@ -9,7 +9,7 @@
         1: TEXT - Approve button text
 
     Returns:
-        ARRAY/NUMBER - container object for use with AddSelectableItem.
+        ARRAY/NUMBER - container object for use with addSelectableItem.
 
     Example:
         ["Select Explosive", "Place"] call FUNC(prepareSelectMenu);

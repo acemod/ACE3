@@ -11,8 +11,8 @@
         Nothing
 
     Example:
-        1 call FUNC(MoveDown);
-        -1 call FUNC(MoveDown);
+        1 call FUNC(moveDown);
+        -1 call FUNC(moveDown);
 */
 #include "script_component.hpp"
 

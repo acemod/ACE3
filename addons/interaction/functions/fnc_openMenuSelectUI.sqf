@@ -26,7 +26,7 @@ _actions = [localize "STR_ACE_Interaction_InteractionMenu", localize "STR_ACE_In
       [_x] call EFUNC(common,getName),
       QUOTE(PATHTOF(UI\dot_ca.paa)),
       _forEachIndex
-    ] call FUNC(AddSelectableItem);
+    ] call FUNC(addSelectableItem);
   };
 } forEach _cargo;
 
