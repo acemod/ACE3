@@ -12,7 +12,7 @@
  * Container <ARRAY/NUMBER>
  *
  * Example:
- * _array = [_actions, "Banana", "UI\dot_ca.paa", data] call ace_interaction_fnc_addSelectableItem
+ * _array = [_actions, "Banana", "UI\dot_ca.paa", "bananaContents"] call ace_interaction_fnc_addSelectableItem
  *
  * Public: No
  */

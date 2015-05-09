@@ -11,7 +11,7 @@
  * Children actions <ARRAY>
  *
  * Example:
- * _array = [vehicle, player, [params]] call ace_interaction_fnc_addPassengerAction
+ * _array = [target, player, [params]] call ace_interaction_fnc_addPassengerAction
  *
  * Public: No
  */

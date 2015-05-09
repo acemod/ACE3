@@ -3,8 +3,8 @@
  * Test if can Become Leader of group
  *
  * Arguments:
- * 0: target <OBJECT>
- * 1: player <OBJECT>
+ * 0: Target <OBJECT>
+ * 1: Player <OBJECT>
  *
  * Return Value:
  * Able to become leader of group <BOOL>
