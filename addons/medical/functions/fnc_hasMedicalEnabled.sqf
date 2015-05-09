@@ -15,7 +15,7 @@ _unit = _this select 0;
 
 _medicalEnabled = _unit getvariable QGVAR(enableMedical);
 if (isnil "_medicalEnabled") exitwith {
-    (((GVAR(enabledFor) == 0 && (isPlayer _unit || (_unit getvariable [QEGVAR(common,isDeadPlayer), false])))) || (GVAR(enabledFor) == 1));
+    (((GVAR(enableFor) == 0 && (isPlayer _unit || (_unit getvariable [QEGVAR(common,isDeadPlayer), false])))) || (GVAR(enableFor) == 1));
 };
 
 _medicalEnabled;
