@@ -83,9 +83,9 @@ class CfgVehicles {
                 defaultValue = 0;
             };
             class VehicleStartingLockState {
-                displayName = "$STR_ACE_VehicleLock_VehicleStartingLockState_DisplayName"; // Argument label
-                description = "$STR_ACE_VehicleLock_VehicleStartingLockState_Description"; // Tooltip description
-                typeName = "NUMBER"; // Value type, can be "NUMBER", "STRING" or "BOOL"
+                displayName = "$STR_ACE_VehicleLock_VehicleStartingLockState_DisplayName";
+                description = "$STR_ACE_VehicleLock_VehicleStartingLockState_Description";
+                typeName = "NUMBER";
                 class values {
                     class None {name = "$STR_ACE_VehicleLock_VehicleStartingLockState_AsIs"; value = 0; default = 1;};
                     class Side {name = "$STR_ACE_VehicleLock_VehicleStartingLockState_Locked"; value = 1;};
@@ -95,8 +95,8 @@ class CfgVehicles {
             class DefaultLockpickStrength {
                 displayName = "$STR_ACE_VehicleLock_DefaultLockpickStrength_DisplayName";
                 description = "$STR_ACE_VehicleLock_DefaultLockpickStrength_Description";
-                typeName = "NUMBER"; // Value type, can be "NUMBER", "STRING" or "BOOL"
-                defaultValue = "10"; // Default text filled in the input box
+                typeName = "NUMBER";
+                defaultValue = "10";
             };
         };
         class ModuleDescription: ModuleDescription {
