@@ -19,12 +19,9 @@
 
 private ["_text","_new_view_distance","_view_distance_limit"];
 
-// Change the received index number into an actual view distance number as set in the config:
+// Change the received index number into an actual view distance:
 _new_view_distance = [GVAR(viewDistance)] call FUNC(returnValue);
-
 _view_distance_limit = GVAR(limit); // Grab the limit
-
-diag_log format ["[ACE]: DEBUG View Distance change requested: %1 Limit is: %2 Under Limit: %3",_new_view_distance,_view_distance_limit,_new_view_distance<_view_distance_limit]; // ONLY FOR DEBUG, REMOVE LATER ON
 
 if (_new_view_distance <= _view_distance_limit) then {
     _text = composeText ["View distance successfully changed to: ",str(_new_view_distance)];

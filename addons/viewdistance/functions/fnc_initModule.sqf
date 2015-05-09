@@ -10,8 +10,6 @@
  *
  * Return Value:
  * None
- *
- * Example:
  * 
  */
 

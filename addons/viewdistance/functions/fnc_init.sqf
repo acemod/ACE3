@@ -1,6 +1,6 @@
 /*
  * Author: Winter
- * Assigns the Event Handler which fires when a player adjusts their view distance in the menu
+ * Assigns the Event Handler which triggers when a player adjusts their view distance in the menu
  * 
  *
  * Arguments:
