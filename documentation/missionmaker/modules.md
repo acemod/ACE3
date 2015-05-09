@@ -501,25 +501,32 @@ Whether or not the objects in the list will be a medical vehicle.<br>
 
 ### 3.1 Ambiance Sounds
 
-Used for ambiance sounds loop (synced across MP)
+Used for ambiance sounds loop (synced across MP). 
+
+This module randomizes the time when the sound file is played and the position where the sound file is played (If "Follow Players" is set to No).
+`Minimal Distance` and `Maximal Distance` influence the position from where the sound file is played. Setting both values to 0 forces the module to play the sound from where it was placed in the editor.
+`Minimal Delay` and `Maximal Delay` work in a similar fashion but are used to randomize when the sound file is played. Setting both values to 0 plays the sound from mission start.
 
 **Settings:**
 
 1. **Sounds (String)**<br>
-Class names of the ambiance sounds played. Separated by ','.<br>
+Class names of the ambiance sounds played. Separated by ','. (Example: `radio_track_01, electricity_loop`).<br>
 `Default value: ""`
 2. **Minimal Distance (Number)**<br>
-Minimal Distance (in meters)<br>
+Used for calculating a random position and sets the minimal distance between the players and the played sound file(s) (in meters)<br>
 `Default value: 400`
-3. **Minimal Delay (Number)**<br>
-Minimal Delay (in seconds) between sounds played<br>
+3. **Maximum Distance (Number)**<br>
+Used for calculating a random position and sets the maximum distance between the players and the played sound file(s) (in meters)<br>
+`Default value: 900`
+4. **Minimal Delay (Number)**<br>
+Minimal delay (in seconds) between sounds played<br>
 `Default value: 10`
-4. **Maximal Delay (Number)**<br>
-Maximal Delay (in seconds) between sounds played<br>
+5. **Maximum Delay (Number)**<br>
+Maximum delay (in seconds) between sounds played<br>
 `Default value: 10`
-5. **Follow Players (Boolean)**<br>
+6. **Follow Players (Boolean)**<br>
 Follow players. If set to false, loop will play sounds only nearby logic position.<br>
 `Default value: No`
-6. **Volume (Number)**<br>
+7. **Volume (Number)**<br>
 The volume of the sounds played<br>
 `Default value: 1`
