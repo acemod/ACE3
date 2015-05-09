@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-19 -->
 <Project name="ACE">
     <Package name="FCS">
         <Key ID="STR_ACE_FCS_LaseTarget">
@@ -9,30 +8,27 @@
             <Polish>Naświetl cel / Zmierz odległość</Polish>
             <Czech>Označit cíl / Změřit vzdálenost</Czech>
             <Spanish>Iluminar objetivo / Medir distancia</Spanish>
-            <!-- Outdated
-            <Russian>Установить зероинг</Russian>
-            <Hungarian>Lézeres célmegjelölés</Hungarian>
-            <Portuguese>Marcar Alvo</Portuguese>
-            <Italian>Designatore Laser</Italian>
-            -->
-            <Russian>Подсветить цель / Измерить расстояние</Russian>
+            <Russian>Подсветить цель / Замерить расстояние</Russian>
+            <Hungarian>Célpont lézerezése / Távolság Bemérése</Hungarian>
+            <Italian>Misura la distanza</Italian>
+            <Portuguese>Marcar com laser / Medir Distância</Portuguese>
         </Key>
         <Key ID="STR_ACE_FCS_ZeroedTo">
             <English>Zeroed To</English>
             <German>Haltepunkt</German>
-            <Spanish>Fijado a</Spanish>
+            <Spanish>Ajustado a</Spanish>
             <Polish>Wyzerowany na</Polish>
             <Czech>Nastaveno na</Czech>
             <French>Zéroté à</French>
-            <Russian>Зероинг</Russian>
-            <Hungarian>Nullázás</Hungarian>
+            <Russian>Выставлено на</Russian>
+            <Hungarian>Nullázási táv</Hungarian>
             <Portuguese>Fixado em</Portuguese>
             <Italian>Azzeramento a</Italian>
         </Key>
         <Key ID="STR_ACE_FCS_AdjustRangeUp">
             <English>Adjust FCS Range (Up)</English>
             <German>Entfernung des FLS erhöhen</German>
-            <Polish>Zwiększ zasięg FCS</Polish>
+            <Polish>Zwiększ zasięg SKO</Polish>
             <Spanish>Ajustar distancia del FCS (arriba)</Spanish>
             <Czech>Nastavit FCS Náměr (nahoru)</Czech>
             <French>Augmenter la distance du SCT</French>
@@ -44,7 +40,7 @@
         <Key ID="STR_ACE_FCS_AdjustRangeDown">
             <English>Adjust FCS Range (Down)</English>
             <German>Entfernung des FLS verringern</German>
-            <Polish>Zmniejsz zasięg FCS</Polish>
+            <Polish>Zmniejsz zasięg SKO</Polish>
             <Spanish>Ajustar distancia del FCS (abajo)</Spanish>
             <Czech>Nastavit FCS Náměr (dolů)</Czech>
             <French>Réduire la distance du SCT</French>
@@ -58,7 +54,7 @@
             <German>FLS zurücksetzen</German>
             <Spanish>Reiniciar FCS</Spanish>
             <French>Réinitialiser le SCT</French>
-            <Polish>Resetuj FCS</Polish>
+            <Polish>Resetuj SKO</Polish>
             <Czech>Resetovat FCS</Czech>
             <Hungarian>FCS visszaállítása</Hungarian>
             <Portuguese>Reiniciar FCS</Portuguese>
@@ -70,12 +66,12 @@
             <German>FLS wurde zurückgesetzt.</German>
             <Spanish>FCS reiniciado</Spanish>
             <French>SCT réinitialisé.</French>
-            <Polish>FCS został zresetowany.</Polish>
+            <Polish>SKO został zresetowany.</Polish>
             <Czech>FCS byl resetován.</Czech>
-            <Hungarian>Az FCS visszaállítva</Hungarian>
+            <Hungarian>FCS visszaállítva.</Hungarian>
             <Portuguese>FCS reiniciado.</Portuguese>
             <Italian>L'FCS è stato azzerato</Italian>
-            <Russian>СУО обнулен</Russian>
+            <Russian>СУО обнулен.</Russian>
         </Key>
     </Package>
 </Project>

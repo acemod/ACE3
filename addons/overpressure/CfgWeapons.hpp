@@ -17,14 +17,16 @@ class CfgWeapons {
     };
 
     class launch_Titan_short_base: launch_Titan_base {
-        GVAR(angle) = 40;
-        GVAR(range) = 8;
+        // Titan is a soft-launch launcher
+        GVAR(angle) = 30;
+        GVAR(range) = 2;
         GVAR(damage) = 0.5;
     };
 
     class launch_NLAW_F: Launcher_Base_F {
-        GVAR(angle) = 40;
-        GVAR(range) = 5;
+        // NLAW is a soft-launch launcher
+        GVAR(angle) = 30;
+        GVAR(range) = 2;
         GVAR(damage) = 0.6;
     };
 

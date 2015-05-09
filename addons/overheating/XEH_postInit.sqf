@@ -14,7 +14,7 @@ if (isServer) then {
 if !(hasInterface) exitWith {};
 
 // Add keybinds
-["ACE3", QGVAR(unjamWeapon), localize "STR_ACE_Overheating_UnjamWeapon",
+["ACE3 Weapons", QGVAR(unjamWeapon), localize "STR_ACE_Overheating_UnjamWeapon",
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};

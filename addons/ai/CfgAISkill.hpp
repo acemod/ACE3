@@ -21,7 +21,8 @@ class CfgAISkill {
     courage[]        = {0,0, 1,0.7};  // {0,0,1,1};
     endurance[]      = {0,0, 1,0.7};  // {0,0,1,1};
     general[]        = {0,0, 1,0.9};  // {0,0,1,1};
-    reloadSpeed[]    = {0,0, 1,0.8};  // {0,0,1,1};
+    // apparently breaks rapid firing in single fire mode for players
+    //reloadSpeed[]    = {0,0, 1,0.8};  // {0,0,1,1};
     spotDistance[]   = {0,0, 1,0.9};  // {0,0.2,1,0.4};
     spotTime[]       = {0,0, 1,0.7};  // {0,0,1,0.7};
 };

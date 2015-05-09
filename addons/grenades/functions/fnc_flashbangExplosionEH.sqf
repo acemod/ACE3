@@ -15,63 +15,74 @@
  */
 #include "script_component.hpp"
 
-private ["_affected", "_strength", "_posGrenade", "_posUnit", "_angleGrenade", "_angleView", "_angleDiff", "_light"];
+private ["_affected", "_strength", "_posGrenade", "_posUnit", "_angleGrenade", "_angleView", "_angleDiff", "_light", "_losCount", "_dirToUnitVector", "_eyeDir", "_eyePos"];
 
 PARAMS_1(_grenade);
 
-_affected = _grenade nearEntities ["CAManBase", 50];
+_affected = _grenade nearEntities ["CAManBase", 20];
 
 {
     if ((local _x) && {alive _x}) then {
 
         _strength = 1 - ((_x distance _grenade) min 15) / 15;
 
+        TRACE_3("FlashBangEffect Start",_x,(_x distance _grenade),_strength);
+
         if (_x != ACE_player) then {
             //must be AI
-            _x disableAI "MOVE";
-            _x disableAI "ANIM";
-            _x disableAI "AUTOTARGET";
-            _x disableAI "TARGET";
-            _x disableAI "FSM";
+            [_x, true] call EFUNC(common,disableAI);
             _x setSkill ((skill _x) / 50);
 
             [{
                 PARAMS_1(_unit);
-                _unit enableAI "MOVE";
-                _unit enableAI "ANIM";
-                _unit enableAI "AUTOTARGET";
-                _unit enableAI "TARGET";
-                _unit enableAI "FSM";
+                //Make sure we don't enable AI for unconscious units
+                if (!(_unit getVariable ["ace_isunconscious", false])) then {
+                    [_unit, false] call EFUNC(common,disableAI);
+                };
                 _unit setSkill (skill _unit * 50);
             }, [_x], (7 * _strength), 0.1] call EFUNC(common,waitAndExecute);  //0.1 precision is fine for AI
         } else {
             //Do effects for player
             // is there line of sight to the grenade?
             _posGrenade = getPosASL _grenade;
+            _eyePos = eyePos ACE_player; //PositionASL
             _posGrenade set [2, (_posGrenade select 2) + 0.2]; // compensate for grenade glitching into ground
-            if (lineIntersects [_posGrenade, getPosASL _x, _grenade, _x]) then {
+
+            _losCount = 0;
+            //Check for line of sight (check 4 points in case grenade is stuck in an object or underground)
+            {
+                if (!lineIntersects [(_posGrenade vectorAdd _x), _eyePos, _grenade, ACE_player]) then {
+                    _losCount = _losCount + 1;
+                };
+            } forEach [[0,0,0], [0,0,0.2], [0.1, 0.1, 0.1], [-0.1, -0.1, 0.1]];
+            TRACE_1("Line of sight count (out of 4)",_losCount);
+            if (_losCount <= 1) then {
                 _strength = _strength / 10;
             };
 
-            // beeeeeeeeeeeeeeeeeeeeeeeeeeeeep
-            if (isClass (configFile >> "CfgPatches" >> "ACE_Hearing") and _strength > 0) then {
+            //Add ace_hearing ear ringing sound effect
+            if ((isClass (configFile >> "CfgPatches" >> "ACE_Hearing")) && {_strength > 0}) then {
                 [_x, 0.5 + (_strength / 2)] call EFUNC(hearing,earRinging);
             };
 
             // account for people looking away by slightly
             // reducing the effect for visual effects.
-            _posUnit = getPos _x;
-            _posGrenade = getPos _grenade;
-            _angleGrenade = ((_posGrenade select 0) - (_posUnit select 0)) atan2 ((_posGrenade select 1) - (_posUnit select 1));
-            _angleGrenade = (_angleGrenade + 360) % 360;
+            _eyeDir = (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]);
+            _dirToUnitVector = _eyePos vectorFromTo _posGrenade;
+            _angleDiff = acos (_eyeDir vectorDotProduct _dirToUnitVector);
 
-            _angleView = (eyeDirection ACE_player select 0) atan2 (eyeDirection ACE_player select 1);
-            _angleView = (_angleView + 360) % 360;
+            //From 0-45deg, full effect
+            if (_angleDiff > 45) then {
+                _strength = _strength - _strength * ((_angleDiff - 45) / 120);
+            };
 
-            _angleDiff = 180 - abs (abs (_angleGrenade - _angleView) - 180);
-            _angleDiff = ((_angleDiff - 45) max 0);
+            TRACE_1("Final strength for player",_strength);
 
-            _strength = _strength - _strength * (_angleDiff  / 135);
+
+            //Add ace_medical pain effect:
+            if ((isClass (configFile >> "CfgPatches" >> "ACE_Medical")) && {_strength > 0.1}) then {
+                [ACE_player, (_strength / 2)] call EFUNC(medical,adjustPainLevel);
+            };
 
             // create flash to illuminate environment
             _light = "#lightpoint" createVehicleLocal (getPos _grenade);

@@ -1,246 +1,245 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-09-11 -->
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-  <Package name="Grenades">
-    <Key ID="STR_ACE_Grenades_SwitchGrenadeMode">
-      <English>Switch Grenade Mode</English>
-      <German>Granaten-Modus wechseln</German>
-      <Spanish>Cambiar modo de granada</Spanish>
-      <Polish>Tryb rzutu granatem</Polish>
-      <Czech>Změnit styl hodu granátu</Czech>
-      <French>Changer type de lancer de grenade</French>
-      <Russian>Сменить режим броска гранаты</Russian>
-      <Hungarian>Gránátdobás mód váltás</Hungarian>
-      <Italian>Cambia tipo di granata</Italian>
-      <Portuguese>Alternar Modo de Granada</Portuguese>
-    </Key>
-    <Key ID="STR_ACE_Grenades_NormalThrow">
-      <English>Normal Throw</English>
-      <German>Normaler Wurf</German>
-      <Spanish>Lanzamiento normal</Spanish>
-      <Polish>Normalny rzut</Polish>
-      <Czech>Normální</Czech>
-      <French>Lancer Normal</French>
-      <Russian>Нормальный бросок</Russian>
-      <Hungarian>Normál dobás</Hungarian>
-      <Italian>Lancio normale</Italian>
-      <Portuguese>Arremesso Normal</Portuguese>
-    </Key>
-    <Key ID="STR_ACE_Grenades_HighThrow">
-      <English>High Throw</English>
-      <German>Hoher Wurf</German>
-      <Spanish>Lanzamiento alto</Spanish>
-      <Polish>Rzut lobem</Polish>
-      <Czech>Vysoko</Czech>
-      <French>Lancer Haut</French>
-      <Russian>Высокий бросок</Russian>
-      <Hungarian>Magas dobás</Hungarian>
-      <Italian>Lancio verso l'alto</Italian>
-      <Portuguese>Arremesso Alto</Portuguese>
-    </Key>
-    <Key ID="STR_ACE_Grenades_PreciseThrow">
-      <English>Precise Throw</English>
-      <German>Präziser Wurf</German>
-      <Spanish>Lanzamiento preciso</Spanish>
-      <Polish>Precyzyjny rzut</Polish>
-      <Czech>Přesně</Czech>
-      <French>Lancer Précis</French>
-      <Russian>Точный бросок</Russian>
-      <Hungarian>Pontos dobás</Hungarian>
-      <Italian>Lancio preciso</Italian>
-      <Portuguese>Arremesso Preciso</Portuguese>
-    </Key>
-    <Key ID="STR_ACE_Grenades_RollGrenade">
-      <English>Roll Grenade</English>
-      <German>Granate rollen</German>
-      <Spanish>Rodar granada</Spanish>
-      <Polish>Po ziemi</Polish>
-      <Czech>Po zemi</Czech>
-      <French>Lancer Roulé</French>
-      <Russian>Катить гранату</Russian>
-      <Hungarian>Gurítás</Hungarian>
-      <Italian>Fai rotolare la granata</Italian>
-      <Portuguese>Rolar Granada</Portuguese>
-    </Key>
-    <Key ID="STR_ACE_Grenades_DropGrenade">
-      <English>Drop Grenade</English>
-      <German>Granate fallenlassen</German>
-      <Spanish>Soltar granada</Spanish>
-      <Polish>Upuść granat</Polish>
-      <Czech>Upustit granát</Czech>
-      <French>Lâcher la grenade</French>
-      <Russian>Бросить себе под ноги</Russian>
-      <Hungarian>Ejtés</Hungarian>
-      <Italian>Lascia la granata</Italian>
-      <Portuguese>Largar Granada</Portuguese>
-    </Key>
-    <Key ID="STR_ACE_Grenades_M84_Name">
-      <English>M84 Stun Grenade</English>
-      <German>M84 Blendgranate</German>
-      <Spanish>Granada aturdidora M84</Spanish>
-      <French>M84 Grenade Incapacitante</French>
-      <Polish>Granat hukowy M84</Polish>
-      <Czech>M84 Omračující granát</Czech>
-      <Russian>M84 светозвуковая граната</Russian>
-      <Hungarian>M84 Villanógránát</Hungarian>
-      <Italian>Granata Stordente M84</Italian>
-      <Portuguese>M84 granada de atordoamento</Portuguese>
-    </Key>
-    <Key ID="STR_ACE_Grenades_M84_Description">
-      <English>Also known as flashbang. Causes immediate flash blindness, deafness, tinnitus, and inner ear disturbance.</English>
-      <German>Verursacht temporäre Blind- und Taubheit.</German>
-      <Spanish>Produce de manera inmediata ceguera, sordera, tinitus y afecta el oído interior.</Spanish>
-      <French>Les grenades incapacitantes servent à désorienter ou distraire une menace pendant quelques secondes.</French>
-      <Polish>Granat ogłusza, nie zabijając przeciwnika. Detonacja daje efekt oślepiającego błysku i głośnego huku.</Polish>
-      <Czech>Omračující granát je taktická nesmrtící zbraň používaná při záchraně rukojmí a zvládání davu.</Czech>
-      <Russian>Граната XM84 (M84) - не летального действия, и предназначена для отвлечения и временного вывода из строя, либо дезориентации противника. Основное использование нашла при освобождении заложников,  захвате преступников и террористов, а также проведении диверсионных миссий.</Russian>
-      <Hungarian>Eldobás után felrobban és éles hang, valamint fényhatással zavarja össze a környezetében tartózkodókat.</Hungarian>
-      <Italian>Anche conosciuta come flashbang. Causa accecamento immediato, sensazioni di sposatezza, mancanza d'equilibrio e disturbi al timpano.</Italian>
-      <Portuguese>Um tipo de granada não-letal destinado a confundir, desorientar e distrair uma potencial ameaça.</Portuguese>
-    </Key>
-    <Key ID="STR_ACE_Grenades_M127A1_White_Name">
-      <English>M127A1 Hand Held Signal (White)</English>
-      <German>M127A1 Leuchtmittel (Weiß)</German>
-      <Czech> M127A1 Světlice (Bílá)</Czech>
-      <Hungarian>M127A1 Jelzőrakéta (Fehér)</Hungarian>
-      <Italian>M127A1 Bengala (Bianco)</Italian>
-      <Polish>Flara ręczna sygnałowa M127A1 (biała)</Polish>
-      <Portuguese>M127A1 Sinalizador (Branco)</Portuguese>
-      <Russian>M127A1 Фальшфейер (Белый)</Russian>
-      <Spanish>Bengala M127A1 (Blanca)</Spanish>
-      <French>M127A1 Feux à main (Blanc)</French>
-    </Key>
-    <Key ID="STR_ACE_Grenades_M127A1_Red_Name">
-      <English>M127A1 Hand Held Signal (Red)</English>
-      <German>M127A1 Leuchtmittel (Rot)</German>
-      <Czech>M127A1 Světlice (Červená)</Czech>
-      <Hungarian>M127A1 Jelzőrakéta (Piros)</Hungarian>
-      <Italian>M127A1 Bengala (Rosso)</Italian>
-      <Polish>Flara ręczna sygnałowa M127A1 (czerwona)</Polish>
-      <Portuguese>M127A1 Sinalizador (Vermelho)</Portuguese>
-      <Russian>M127A1 Фальшфейер (Красный)</Russian>
-      <Spanish>Bengala M127A1 (Roja)</Spanish>
-      <French>M127A1 Feux à main (Rouge)</French>
-    </Key>
-    <Key ID="STR_ACE_Grenades_M127A1_Green_Name">
-      <English>M127A1 Hand Held Signal (Green)</English>
-      <German>M127A1 Leuchtmittel (Grün)</German>
-      <Czech>M127A1 Světlice (Zelená)</Czech>
-      <Hungarian>M127A1 Jelzőrakéta (Zöld)</Hungarian>
-      <Italian>M127A1 Bengala (Verde)</Italian>
-      <Polish>Flara ręczna sygnałowa M127A1 (zielona)</Polish>
-      <Portuguese>M127A1 Sinalizador (Verde)</Portuguese>
-      <Russian>M127A1 Фальшфейер (Зелёный)</Russian>
-      <Spanish>Bengala M127A1 (Verde)</Spanish>
-      <French>M127A1 Feux à main (Vert)</French>
-    </Key>
-    <Key ID="STR_ACE_Grenades_M127A1_Yellow_Name">
-      <English>M127A1 Hand Held Signal (Yellow)</English>
-      <German>M127A1 Leuchtmittel (Gelb)</German>
-      <Czech>M127A1 Světlice (Žlutá)</Czech>
-      <Hungarian>M127A1 Jelzőrakéta (Sárga)</Hungarian>
-      <Italian>M127A1 Bengala (Giallo)</Italian>
-      <Polish>Flara ręczna sygnałowa M127A1 (żółta)</Polish>
-      <Portuguese>M127A1 Sinalizador (Amarelo)</Portuguese>
-      <Russian>M127A1 Фальшфейер (Жёлтые)</Russian>
-      <Spanish>Bengala M127A1 (Amarilla)</Spanish>
-      <French>M127A1 Feux à main (Jaune)</French>
-    </Key>
-    <Key ID="STR_ACE_Grenades_M127A1_White_Description">
-      <English>White Hand Flare</English>
-      <German>Weiße Leuchtkugel, wird wie eine Granate geworfen.</German>
-      <Czech>Světlice (Bílá)</Czech>
-      <Hungarian>Jelzőrakéta (Fehér)</Hungarian>
-      <Italian>Bengala (Bianco)</Italian>
-      <Polish>Flara ręczna (biała)</Polish>
-      <Portuguese>Sinalizador (Branco)</Portuguese>
-      <Russian>Фальшфейер (Белый)</Russian>
-      <Spanish>Bengala (Blanca)</Spanish>
-      <French>Feux à main (Blanc)</French>
-    </Key>
-    <Key ID="STR_ACE_Grenades_M127A1_Red_Description">
-      <English>Red Hand Flare</English>
-      <German>Rote Leuchtkugel, wird wie eine Granate geworfen.</German>
-      <Czech>Světlice (Červená)</Czech>
-      <Hungarian>Jelzőrakéta (Piros)</Hungarian>
-      <Italian>Bengala (Rosso)</Italian>
-      <Polish>Flara ręczna (czerwona)</Polish>
-      <Portuguese>Sinalizador (Vermelho)</Portuguese>
-      <Russian>Фальшфейер (Красный)</Russian>
-      <Spanish>Bengala (Roja)</Spanish>
-      <French>Feux à main (Rouge)</French>
-    </Key>
-    <Key ID="STR_ACE_Grenades_M127A1_Green_Description">
-      <English>Green Hand Flare</English>
-      <German>Grüne Leuchtkugel, wird wie eine Granate geworfen.</German>
-      <Czech>Světlice (Zelená)</Czech>
-      <Hungarian>Jelzőrakéta (Zöld)</Hungarian>
-      <Italian>Bengala (Verde)</Italian>
-      <Polish>Flara ręczna (zielona)</Polish>
-      <Portuguese>Sinalizador (Verde)</Portuguese>
-      <Russian>Фальшфейер (Зелёный)</Russian>
-      <Spanish>Bengala (Verde)</Spanish>
-      <French>Feux à main (Vert)</French>
-    </Key>
-    <Key ID="STR_ACE_Grenades_M127A1_Yellow_Description">
-      <English>Yellow Hand Flare</English>
-      <German>Gelbe Leuchtkugel, wird wie eine Granate geworfen.</German>
-      <Czech>Světlice Žlutá</Czech>
-      <Hungarian>Jelzőrakéta (Sárga)</Hungarian>
-      <Italian>Bengala (Giallo)</Italian>
-      <Polish>Flara ręczna (żółta)</Polish>
-      <Portuguese>Sinalizador (Amarelo)</Portuguese>
-      <Russian>Фальшфейер (Жёлтые)</Russian>
-      <Spanish>Bengala (Amarilla)</Spanish>
-      <French>Feux à main (Jaune)</French>
-    </Key>
-    <Key ID="STR_ACE_Grenades_M127A1_White_NameShort">
-      <English>M127A1 (White)</English>
-      <German>M127A1 (Weiß)</German>
-      <Czech>M127A1 (Bílá)</Czech>
-      <French>M127A1 (Blanc)</French>
-      <Hungarian>M127A1 (Fehér)</Hungarian>
-      <Italian>M127A1 (Bianco)</Italian>
-      <Polish>M127A1 (biała)</Polish>
-      <Portuguese>M127A1 (Branco)</Portuguese>
-      <Russian>M127A1 (Белый)</Russian>
-      <Spanish>M127A1 (Blanca)</Spanish>
-    </Key>
-    <Key ID="STR_ACE_Grenades_M127A1_Red_NameShort">
-      <English>M127A1 (Red)</English>
-      <German>M127A1 (Rot)</German>
-      <Czech>M127A1 (Červená)</Czech>
-      <French>M127A1 (Rouge)</French>
-      <Hungarian>M127A1 (Piros)</Hungarian>
-      <Italian>M127A1 (Rosso)</Italian>
-      <Polish>M127A1 (czerwona)</Polish>
-      <Portuguese>M127A1 (Vermelho)</Portuguese>
-      <Russian>M127A1 (Красный)</Russian>
-      <Spanish>M127A1 (Roja)</Spanish>
-    </Key>
-    <Key ID="STR_ACE_Grenades_M127A1_Green_NameShort">
-      <English>M127A1 (Green)</English>
-      <German>M127A1 (Grün)</German>
-      <Czech>M127A1 (Zelená)</Czech>
-      <French>M127A1 (Vert)</French>
-      <Hungarian>M127A1 (Zöld)</Hungarian>
-      <Italian>M127A1 (Verde)</Italian>
-      <Polish>M127A1 (zielona)</Polish>
-      <Portuguese>M127A1 (Verde)</Portuguese>
-      <Russian>M127A1 (Зелёный)</Russian>
-      <Spanish>M127A1 (Verde)</Spanish>
-    </Key>
-    <Key ID="STR_ACE_Grenades_M127A1_Yellow_NameShort">
-      <English>M127A1 (Yellow)</English>
-      <German>M127A1 (Gelb)</German>
-      <Czech>M127A1 (Žlutá)</Czech>
-      <French>M127A1 (Jaune)</French>
-      <Hungarian>M127A1 (Sárga)</Hungarian>
-      <Italian>M127A1 (Giallo)</Italian>
-      <Polish>M127A1 (żółta)</Polish>
-      <Portuguese>M127A1 (Amarelo)</Portuguese>
-      <Russian>M127A1 (Жёлтые)</Russian>
-      <Spanish>M127A1 (Amarilla)</Spanish>
-    </Key>
-  </Package>
+    <Package name="Grenades">
+        <Key ID="STR_ACE_Grenades_SwitchGrenadeMode">
+            <English>Switch Grenade Mode</English>
+            <German>Granaten-Modus wechseln</German>
+            <Spanish>Cambiar modo de granada</Spanish>
+            <Polish>Przełącz sposób rzutu granatem</Polish>
+            <Czech>Změnit styl hodu granátu</Czech>
+            <French>Changer type de lancer de grenade</French>
+            <Russian>Сменить режим броска гранаты</Russian>
+            <Hungarian>Gránátkezelési mód váltása</Hungarian>
+            <Italian>Cambia tipo di granata</Italian>
+            <Portuguese>Alternar Modo de Granada</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_NormalThrow">
+            <English>Normal Throw</English>
+            <German>Normaler Wurf</German>
+            <Spanish>Lanzamiento normal</Spanish>
+            <Polish>Normalny rzut</Polish>
+            <Czech>Normální hod</Czech>
+            <French>Lancer normal</French>
+            <Russian>Нормальный бросок</Russian>
+            <Hungarian>Normál dobás</Hungarian>
+            <Italian>Lancio normale</Italian>
+            <Portuguese>Arremesso Normal</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_HighThrow">
+            <English>High Throw</English>
+            <German>Hoher Wurf</German>
+            <Spanish>Lanzamiento alto</Spanish>
+            <Polish>Wysoki rzut</Polish>
+            <Czech>Vysoký hod</Czech>
+            <French>Lancer haut</French>
+            <Russian>Высокий бросок</Russian>
+            <Hungarian>Magas dobás</Hungarian>
+            <Italian>Lancio verso l'alto</Italian>
+            <Portuguese>Arremesso Alto</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_PreciseThrow">
+            <English>Precise Throw</English>
+            <German>Präziser Wurf</German>
+            <Spanish>Lanzamiento preciso</Spanish>
+            <Polish>Precyzyjny rzut</Polish>
+            <Czech>Přesný hod</Czech>
+            <French>Lancer précis</French>
+            <Russian>Точный бросок</Russian>
+            <Hungarian>Pontos dobás</Hungarian>
+            <Italian>Lancio preciso</Italian>
+            <Portuguese>Arremesso Preciso</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_RollGrenade">
+            <English>Roll Grenade</English>
+            <German>Granate rollen</German>
+            <Spanish>Lanzamiento raso</Spanish>
+            <Polish>Po ziemi</Polish>
+            <Czech>Po zemi</Czech>
+            <French>Lancer roulé</French>
+            <Russian>Катить гранату</Russian>
+            <Hungarian>Gránát gurítása</Hungarian>
+            <Italian>Fai rotolare la granata</Italian>
+            <Portuguese>Rolar Granada</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_DropGrenade">
+            <English>Drop Grenade</English>
+            <German>Granate fallenlassen</German>
+            <Spanish>Soltar granada</Spanish>
+            <Polish>Upuść granat</Polish>
+            <Czech>Upustit granát</Czech>
+            <French>Lâcher la grenade</French>
+            <Russian>Бросить себе под ноги</Russian>
+            <Hungarian>Gránát ejtése</Hungarian>
+            <Italian>Lascia la granata</Italian>
+            <Portuguese>Largar Granada</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_M84_Name">
+            <English>M84 Stun Grenade</English>
+            <German>M84 Blendgranate</German>
+            <Spanish>Granada aturdidora M84</Spanish>
+            <French>M84 Grenade incapacitante</French>
+            <Polish>Granat hukowy M84</Polish>
+            <Czech>Omračující granát M84</Czech>
+            <Russian>M84 светозвуковая граната</Russian>
+            <Hungarian>M84 Kábítógránát</Hungarian>
+            <Italian>Granata Stordente M84</Italian>
+            <Portuguese>M84 granada de atordoamento</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_M84_Description">
+            <English>Also known as flashbang. Causes immediate flash blindness, deafness, tinnitus, and inner ear disturbance.</English>
+            <German>Verursacht temporäre Blind- und Taubheit.</German>
+            <Spanish>Tambien conocida como granada cegadora. Produce de manera inmediata ceguera, sordera, tinitus y afecta el oído interior.</Spanish>
+            <French>Les grenades incapacitantes servent à désorienter ou distraire une menace pendant quelques secondes.</French>
+            <Polish>Znany też jako flashbang. Powoduje natychmiastową tymczasową ślepotę, głuchotę, dzwonienie w uszach i inne zaburzenia ucha wewnętrznego.</Polish>
+            <Czech>Omračující granát je taktická nesmrtící zbraň používaná při záchraně rukojmí a zvládání davu.</Czech>
+            <Russian>XM84 (M84) - граната нелетального действия, и предназначена для отвлечения и временного вывода из строя, либо дезориентации противника. Основное использование нашла при освобождении заложников, захвате преступников и террористов, а также проведении диверсионных миссий.</Russian>
+            <Hungarian>Villanógránát néven is ismert. Azonnali villanási vakságot, süketséget, fülzúgást, és belső füli zavart okoz.</Hungarian>
+            <Italian>Anche conosciuta come flashbang. Causa accecamento immediato, sensazioni di sposatezza, mancanza d'equilibrio e disturbi al timpano.</Italian>
+            <Portuguese>Também conhecida como flashbang. Causa uma clarão imediato, cegueira, surdez, zumbido e distúrbio no tímpano.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_M127A1_White_Name">
+            <English>M127A1 Hand Held Signal (White)</English>
+            <German>M127A1 Leuchtmittel (Weiß)</German>
+            <Czech>Světlice M127A1 (Bílá)</Czech>
+            <Hungarian>M127A1 Kézi Jelzőrakéta (Fehér)</Hungarian>
+            <Italian>M127A1 Bengala (Bianco)</Italian>
+            <Polish>Flara ręczna sygnałowa M127A1 (biała)</Polish>
+            <Portuguese>M127A1 Sinalizador (Branco)</Portuguese>
+            <Russian>M127A1 Фальшфейер (Белый)</Russian>
+            <Spanish>Bengala M127A1 (Blanca)</Spanish>
+            <French>M127A1 Feux à main (Blanc)</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_M127A1_Red_Name">
+            <English>M127A1 Hand Held Signal (Red)</English>
+            <German>M127A1 Leuchtmittel (Rot)</German>
+            <Czech>Světlice M127A1 (Červená)</Czech>
+            <Hungarian>M127A1 Kézi Jelzőrakéta (Piros)</Hungarian>
+            <Italian>M127A1 Bengala (Rosso)</Italian>
+            <Polish>Flara ręczna sygnałowa M127A1 (czerwona)</Polish>
+            <Portuguese>M127A1 Sinalizador (Vermelho)</Portuguese>
+            <Russian>M127A1 Фальшфейер (Красный)</Russian>
+            <Spanish>Bengala M127A1 (Roja)</Spanish>
+            <French>M127A1 Feux à main (Rouge)</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_M127A1_Green_Name">
+            <English>M127A1 Hand Held Signal (Green)</English>
+            <German>M127A1 Leuchtmittel (Grün)</German>
+            <Czech>Světlice M127A1 (Zelená)</Czech>
+            <Hungarian>M127A1 Kézi Jelzőrakéta (Zöld)</Hungarian>
+            <Italian>M127A1 Bengala (Verde)</Italian>
+            <Polish>Flara ręczna sygnałowa M127A1 (zielona)</Polish>
+            <Portuguese>M127A1 Sinalizador (Verde)</Portuguese>
+            <Russian>M127A1 Фальшфейер (Зелёный)</Russian>
+            <Spanish>Bengala M127A1 (Verde)</Spanish>
+            <French>M127A1 Feux à main (Vert)</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_M127A1_Yellow_Name">
+            <English>M127A1 Hand Held Signal (Yellow)</English>
+            <German>M127A1 Leuchtmittel (Gelb)</German>
+            <Czech>Světlice M127A1 (Žlutá)</Czech>
+            <Hungarian>M127A1 Kézi Jelzőrakéta (Sárga)</Hungarian>
+            <Italian>M127A1 Bengala (Giallo)</Italian>
+            <Polish>Flara ręczna sygnałowa M127A1 (żółta)</Polish>
+            <Portuguese>M127A1 Sinalizador (Amarelo)</Portuguese>
+            <Russian>M127A1 Фальшфейер (Жёлтые)</Russian>
+            <Spanish>Bengala M127A1 (Amarilla)</Spanish>
+            <French>M127A1 Feux à main (Jaune)</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_M127A1_White_Description">
+            <English>White Hand Flare</English>
+            <German>Weiße Leuchtkugel, wird wie eine Granate geworfen.</German>
+            <Czech>Světlice (Bílá)</Czech>
+            <Hungarian>Kézi jelzőrakéta, Fehér színű</Hungarian>
+            <Italian>Bengala (Bianco)</Italian>
+            <Polish>Flara ręczna (biała)</Polish>
+            <Portuguese>Sinalizador de Mão (Branco)</Portuguese>
+            <Russian>Фальшфейер (Белый)</Russian>
+            <Spanish>Bengala (Blanca)</Spanish>
+            <French>Feux à main (Blanc)</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_M127A1_Red_Description">
+            <English>Red Hand Flare</English>
+            <German>Rote Leuchtkugel, wird wie eine Granate geworfen.</German>
+            <Czech>Světlice (Červená)</Czech>
+            <Hungarian>Kézi jelzőrakéta, Piros színű</Hungarian>
+            <Italian>Bengala (Rosso)</Italian>
+            <Polish>Flara ręczna (czerwona)</Polish>
+            <Portuguese>Sinalizador de Mão (Vermelho)</Portuguese>
+            <Russian>Фальшфейер (Красный)</Russian>
+            <Spanish>Bengala (Roja)</Spanish>
+            <French>Feux à main (Rouge)</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_M127A1_Green_Description">
+            <English>Green Hand Flare</English>
+            <German>Grüne Leuchtkugel, wird wie eine Granate geworfen.</German>
+            <Czech>Světlice (Zelená)</Czech>
+            <Hungarian>Kézi jelzőrakéta, Zöld színű</Hungarian>
+            <Italian>Bengala (Verde)</Italian>
+            <Polish>Flara ręczna (zielona)</Polish>
+            <Portuguese>Sinalizador de Mão (Verde)</Portuguese>
+            <Russian>Фальшфейер (Зелёный)</Russian>
+            <Spanish>Bengala (Verde)</Spanish>
+            <French>Feux à main (Vert)</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_M127A1_Yellow_Description">
+            <English>Yellow Hand Flare</English>
+            <German>Gelbe Leuchtkugel, wird wie eine Granate geworfen.</German>
+            <Czech>Světlice (Žlutá)</Czech>
+            <Hungarian>Kézi jelzőrakéta, Sárga színű</Hungarian>
+            <Italian>Bengala (Giallo)</Italian>
+            <Polish>Flara ręczna (żółta)</Polish>
+            <Portuguese>Sinalizador de Mão (Amarelo)</Portuguese>
+            <Russian>Фальшфейер (Жёлтые)</Russian>
+            <Spanish>Bengala (Amarilla)</Spanish>
+            <French>Feux à main (Jaune)</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_M127A1_White_NameShort">
+            <English>M127A1 (White)</English>
+            <German>M127A1 (Weiß)</German>
+            <Czech>M127A1 (Bílá)</Czech>
+            <French>M127A1 (Blanc)</French>
+            <Hungarian>M127A1 (Fehér)</Hungarian>
+            <Italian>M127A1 (Bianco)</Italian>
+            <Polish>M127A1 (biała)</Polish>
+            <Portuguese>M127A1 (Branco)</Portuguese>
+            <Russian>M127A1 (Белый)</Russian>
+            <Spanish>M127A1 (Blanca)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Grenades_M127A1_Red_NameShort">
+            <English>M127A1 (Red)</English>
+            <German>M127A1 (Rot)</German>
+            <Czech>M127A1 (Červená)</Czech>
+            <French>M127A1 (Rouge)</French>
+            <Hungarian>M127A1 (Piros)</Hungarian>
+            <Italian>M127A1 (Rosso)</Italian>
+            <Polish>M127A1 (czerwona)</Polish>
+            <Portuguese>M127A1 (Vermelho)</Portuguese>
+            <Russian>M127A1 (Красный)</Russian>
+            <Spanish>M127A1 (Roja)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Grenades_M127A1_Green_NameShort">
+            <English>M127A1 (Green)</English>
+            <German>M127A1 (Grün)</German>
+            <Czech>M127A1 (Zelená)</Czech>
+            <French>M127A1 (Vert)</French>
+            <Hungarian>M127A1 (Zöld)</Hungarian>
+            <Italian>M127A1 (Verde)</Italian>
+            <Polish>M127A1 (zielona)</Polish>
+            <Portuguese>M127A1 (Verde)</Portuguese>
+            <Russian>M127A1 (Зелёный)</Russian>
+            <Spanish>M127A1 (Verde)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Grenades_M127A1_Yellow_NameShort">
+            <English>M127A1 (Yellow)</English>
+            <German>M127A1 (Gelb)</German>
+            <Czech>M127A1 (Žlutá)</Czech>
+            <French>M127A1 (Jaune)</French>
+            <Hungarian>M127A1 (Sárga)</Hungarian>
+            <Italian>M127A1 (Giallo)</Italian>
+            <Polish>M127A1 (żółta)</Polish>
+            <Portuguese>M127A1 (Amarelo)</Portuguese>
+            <Russian>M127A1 (Жёлтые)</Russian>
+            <Spanish>M127A1 (Amarilla)</Spanish>
+        </Key>
+    </Package>
 </Project>

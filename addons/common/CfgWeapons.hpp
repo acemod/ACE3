@@ -14,8 +14,10 @@ class CfgWeapons {
 
     class ACE_FakePrimaryWeapon: Rifle_Base_F {
         scope = 2;
+        scopeCurator = 1;
+        scopeArsenal = 1;
         displayName = "";
-        model = "";
+        model = "\A3\Weapons_f\empty";
         picture = "";
         magazines[] = {"ACE_FakeMagazine"};
         discreteDistance[] = {};

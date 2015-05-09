@@ -18,6 +18,8 @@
 
 PARAMS_2(_unit,_newSurrenderState);
 
+if (currentWeapon _unit != "") exitWith {false};
+
 private "_returnValue";
 
 _returnValue = if (_newSurrenderState) then {

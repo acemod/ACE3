@@ -10,21 +10,21 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_part","_damageThreshold", "_withDamage"];
+private ["_unit","_part","_damageThreshold", "_withDamage", "_damageBodyPart"];
 _unit = _this select 0;
 _part = _this select 1;
 _withDamage = if (count _this > 2) then { _this select 2} else {0};
 
 if (!alive _unit) exitwith {true};
-if (_part < 0 || _part > 5) exitwith {};
+if (_part < 0 || _part > 5) exitwith {false};
 if ((vehicle _unit != _unit) && {!alive (vehicle _unit)}) exitwith { true };
 
 // Find the correct Damage threshold for unit.
 _damageThreshold = [1,1,1];
-if (isPlayer _unit) then {
-    //_damageThreshold =_unit getvariable[QGVAR(unitDamageThreshold), [GVAR(damageThreshold_Players), GVAR(damageThreshold_Players), GVAR(damageThreshold_Players) * 1.7]];
+if ([_unit] call EFUNC(common,IsPlayer)) then {
+    _damageThreshold =_unit getvariable[QGVAR(unitDamageThreshold), [GVAR(playerDamageThreshold), GVAR(playerDamageThreshold), GVAR(playerDamageThreshold) * 1.7]];
 } else {
-    //_damageThreshold =_unit getvariable[QGVAR(unitDamageThreshold), [GVAR(damageThreshold_AI), GVAR(damageThreshold_AI), GVAR(damageThreshold_AI) * 1.7]];
+    _damageThreshold =_unit getvariable[QGVAR(unitDamageThreshold), [GVAR(AIDamageThreshold), GVAR(AIDamageThreshold), GVAR(AIDamageThreshold) * 1.7]];
 };
 
 _damageBodyPart = ((_unit getvariable [QGVAR(bodyPartStatus),[0, 0, 0, 0, 0, 0]]) select _part) + _withDamage;

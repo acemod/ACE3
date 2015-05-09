@@ -1,4 +1,4 @@
-/*
+ï»¿/*
  * Author: PabstMirror
  * Updates the display (several times a second) called from the pfeh
  *
@@ -44,7 +44,7 @@ case (APP_MODE_INFODISPLAY): {
         (_display displayCtrl IDC_MODEDISPLAY_NORTHING) ctrlSetText _northingText;
 
         //Elevation:
-        _numASL = (GVAR(gpsPositionASL) select 2) + GVAR(mapAltitude);
+        _numASL = ((getPosASL ace_player) select 2) + GVAR(mapAltitude);
         _aboveSeaLevelText = [_numASL, 5, 0] call CBA_fnc_formatNumber;
         _aboveSeaLevelText = if (_numASL > 0) then {"+" + _aboveSeaLevelText + " MSL"} else {_aboveSeaLevelText + " MSL"};
         (_display displayCtrl IDC_MODEDISPLAY_ELEVATIONNUM) ctrlSetText _aboveSeaLevelText;
@@ -53,7 +53,7 @@ case (APP_MODE_INFODISPLAY): {
         _compassAngleText = if (GVAR(settingUseMils)) then {
             [(floor ((6400 / 360) * (getDir ace_player))), 4, 0] call CBA_fnc_formatNumber;
         } else {
-            ([(floor (getDir ace_player)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+            ([(floor (getDir ace_player)), 3, 1] call CBA_fnc_formatNumber) + "Â°" //degree symbol is in UTF-8
         };
         (_display displayCtrl IDC_MODEDISPLAY_HEADINGNUM) ctrlSetText _compassAngleText;
 
@@ -88,13 +88,13 @@ case (APP_MODE_INFODISPLAY): {
             };
 
             if (!(_targetPosLocationASL isEqualTo [])) then {
-                _bearing = [GVAR(gpsPositionASL), _targetPosLocationASL] call BIS_fnc_dirTo;
+                _bearing = [(getPosASL ace_player), _targetPosLocationASL] call BIS_fnc_dirTo;
                 _bearingText = if (GVAR(settingUseMils)) then {
                     [(floor ((6400 / 360) * (_bearing))), 4, 0] call CBA_fnc_formatNumber;
                 } else {
-                    ([(floor (_bearing)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+                    ([(floor (_bearing)), 3, 1] call CBA_fnc_formatNumber) + "Â°" //degree symbol is in UTF-8
                 };
-                _2dDistanceKm = ((GVAR(gpsPositionASL) select [0,2]) distance (_targetPosLocationASL select [0,2])) / 1000;
+                _2dDistanceKm = (((getPosASL ace_player) select [0,2]) distance (_targetPosLocationASL select [0,2])) / 1000;
                 _rangeText = format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)];
                 _numASL = (_targetPosLocationASL select 2) + GVAR(mapAltitude);
                 _aboveSeaLevelText = [_numASL, 5, 0] call CBA_fnc_formatNumber;
@@ -112,7 +112,7 @@ case (APP_MODE_COMPASS): {
         _compassAngleText = if (GVAR(settingUseMils)) then {
             [(floor ((6400 / 360) * (getDir ace_player))), 4, 0] call CBA_fnc_formatNumber;
         } else {
-            ([(floor (getDir ace_player)), 3, 1] call CBA_fnc_formatNumber) + "°M" //degree symbol is in UTF-8
+            ([(floor (getDir ace_player)), 3, 1] call CBA_fnc_formatNumber) + "Â°" //degree symbol is in UTF-8
         };
         (_display displayCtrl IDC_MODECOMPASS_HEADING) ctrlSetText _compassAngleText;
 
@@ -125,7 +125,7 @@ case (APP_MODE_COMPASS): {
             (_display displayCtrl IDC_MODECOMPASS_RANGE) ctrlSetText "";
             (_display displayCtrl IDC_MODECOMPASS_TARGET) ctrlSetText "";
         } else {
-            _playerPos2d = GVAR(gpsPositionASL) select [0,2];
+            _playerPos2d = (getPosASL ace_player) select [0,2];
 
             _targetPosName = "";
             _targetPosLocationASL = [];
@@ -145,13 +145,13 @@ case (APP_MODE_COMPASS): {
             _rangeText = "---";
 
             if (!(_targetPosLocationASL isEqualTo [])) then {
-                _bearing = [GVAR(gpsPositionASL), _targetPosLocationASL] call BIS_fnc_dirTo;
+                _bearing = [(getPosASL ace_player), _targetPosLocationASL] call BIS_fnc_dirTo;
                 _bearingText = if (GVAR(settingUseMils)) then {
                     [(floor ((6400 / 360) * (_bearing))), 4, 0] call CBA_fnc_formatNumber;
                 } else {
-                    ([(floor (_bearing)), 3, 1] call CBA_fnc_formatNumber) + "°M" //degree symbol is in UTF-8
+                    ([(floor (_bearing)), 3, 1] call CBA_fnc_formatNumber) + "Â°" //degree symbol is in UTF-8
                 };
-                _2dDistanceKm = ((GVAR(gpsPositionASL) select [0,2]) distance (_targetPosLocationASL select [0,2])) / 1000;
+                _2dDistanceKm = (((getPosASL ace_player) select [0,2]) distance (_targetPosLocationASL select [0,2])) / 1000;
                 _rangeText = format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)];
             };
 
@@ -169,7 +169,7 @@ case (APP_MODE_WAYPOINTS): {
         {
             EXPLODE_2_PVT(_x,_wpName,_wpPos);
             _wpListBox lbAdd _wpName;
-            _2dDistanceKm = ((GVAR(gpsPositionASL) select [0,2]) distance (_wpPos select [0,2])) / 1000;
+            _2dDistanceKm = (((getPosASL ace_player) select [0,2]) distance (_wpPos select [0,2])) / 1000;
             _wpListBox lbSetTextRight [_forEachIndex, (format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)])];
         } forEach _waypoints;
 

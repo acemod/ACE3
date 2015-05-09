@@ -24,7 +24,10 @@ class Extended_InitPost_EventHandlers {
             init = QUOTE(if (local (_this select 0)) then {_this call FUNC(setName)};);
         };
         class GVAR(forceWalk) {
-            init = QUOTE(if (local (_this select 0)) then {_this call FUNC(applyForceWalkStatus);};);
+            init = QUOTE(_this call FUNC(applyForceWalkStatus));
+        };
+        class GVAR(muteUnit) {
+            init = QUOTE(_this call FUNC(muteUnitHandleInitPost));
         };
     };
 };
@@ -39,6 +42,11 @@ class Extended_Respawn_EventHandlers {
         };
         class GVAR(RESETDefaults) {
             respawn = QUOTE(_this call FUNC(resetAllDefaults));
+        };
+    };
+    class CAManBase {
+        class GVAR(muteUnit) {
+            respawn = QUOTE(_this call FUNC(muteUnitHandleRespawn));
         };
     };
 };

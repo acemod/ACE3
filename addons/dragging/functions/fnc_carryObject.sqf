@@ -36,7 +36,7 @@ if (_target isKindOf "CAManBase") then {
 
     // add height offset of model
     private "_offset";
-    _offset = (_target modelToWorld [0, 0, 0] select 2) - (_unit modelToWorld [0, 0, 0] select 2);
+    _offset = (_target modelToWorldVisual [0, 0, 0] select 2) - (_unit modelToWorldVisual [0, 0, 0] select 2);
 
     _position = _position vectorAdd [0, 0, _offset];
 

@@ -39,14 +39,14 @@ class RscDisplayInventory {
             x = X_PART(1);
             y = Y_PART(1);
             w = W_PART(12);
-            h = H_PART(22.5);
+            h = H_PART(22.5); //default 23
         };
         class CA_PlayerBackground: RscText {
             //center player's container: decrease height because of progressbar height decrease
             x = X_PART(14.6);
             y = Y_PART(2);
             w = W_PART(24.4);
-            h = H_PART(21.5);
+            h = H_PART(21.5); //default 22
         };
         class TitleBackground: RscText {
             x = X_PART(14.6);
@@ -87,25 +87,31 @@ class RscDisplayInventory {
         class BackgroundSlotPrimaryMuzzle: BackgroundSlotPrimary {
             x = X_PART(26.6);
             y = Y_PART(9.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
+            h = H_PART(2);
+        };
+        class BackgroundSlotPrimaryUnderBarrel: BackgroundSlotPrimary {
+            x = X_PART(29);
+            y = Y_PART(9.1);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class BackgroundSlotPrimaryFlashlight: BackgroundSlotPrimary {
-            x = X_PART(29.6);
-            y = Y_PART(9.1);
-            w = W_PART(2.9);
+            x = X_PART(31.4);
+            y = Y_PART(9.2); //not sure why different (double check release)
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class BackgroundSlotPrimaryOptics: BackgroundSlotPrimary {
-            x = X_PART(32.6);
+            x = X_PART(33.8);
             y = Y_PART(9.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class BackgroundSlotPrimaryMagazine: BackgroundSlotPrimary {
-            x = X_PART(35.6);
+            x = X_PART(36.2);
             y = Y_PART(9.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class BackgroundSlotSecondary: BackgroundSlotPrimary {
@@ -117,25 +123,31 @@ class RscDisplayInventory {
         class BackgroundSlotSecondaryMuzzle: BackgroundSlotPrimary {
             x = X_PART(26.6);
             y = Y_PART(14.6);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
+            h = H_PART(2);
+        };
+        class BackgroundSlotSecondaryUnderBarrel: BackgroundSlotPrimary {
+            x = X_PART(29);
+            y = Y_PART(14.6);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class BackgroundSlotSecondaryFlashlight: BackgroundSlotPrimary {
-            x = X_PART(29.6);
+            x = X_PART(31.4);
             y = Y_PART(14.6);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class BackgroundSlotSecondaryOptics: BackgroundSlotPrimary {
-            x = X_PART(32.6);
+            x = X_PART(33.8);
             y = Y_PART(14.6);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class BackgroundSlotSecondaryMagazine: BackgroundSlotPrimary {
-            x = X_PART(35.6);
+            x = X_PART(36.2);
             y = Y_PART(14.6);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class BackgroundSlotHandgun: BackgroundSlotPrimary {
@@ -147,25 +159,31 @@ class RscDisplayInventory {
         class BackgroundSlotHandgunMuzzle: BackgroundSlotPrimary {
             x = X_PART(26.6);
             y = Y_PART(20.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
+            h = H_PART(2);
+        };
+        class BackgroundSlotHandgunUnderBarrel: BackgroundSlotPrimary {
+            x = X_PART(29);
+            y = Y_PART(20.1);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class BackgroundSlotHandgunFlashlight: BackgroundSlotPrimary {
-            x = X_PART(29.6);
+            x = X_PART(31.4);
             y = Y_PART(20.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class BackgroundSlotHandgunOptics: BackgroundSlotPrimary {
-            x = X_PART(32.6);
+            x = X_PART(33.8);
             y = Y_PART(20.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class BackgroundSlotHandgunMagazine: BackgroundSlotPrimary {
-            x = X_PART(35.6);
+            x = X_PART(36.2);
             y = Y_PART(20.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class BackgroundSlotHeadgear: BackgroundSlotPrimary {
@@ -263,7 +281,7 @@ class RscDisplayInventory {
             x = X_PART(1.5);
             y = Y_PART(22.5);
             w = W_PART(11);
-            h = H_PART(0.5);
+            h = H_PART(0.5); //Default 1
         };
         class SlotPrimary: GroundTab {
             x = X_PART(26.6);
@@ -274,31 +292,31 @@ class RscDisplayInventory {
         class SlotPrimaryMuzzle: SlotPrimary {
             x = X_PART(26.6);
             y = Y_PART(9.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
-        class SlotPrimaryGrip: SlotPrimary {
-            w = 0;
-            h = 0;
-            x = X_PART(39);
-            y = Y_PART(9);
+        class SlotPrimaryUnderBarrel: SlotPrimary {
+            x = X_PART(29);
+            y = Y_PART(9.1);
+            w = W_PART(2.3);
+            h = H_PART(2);
         };
         class SlotPrimaryFlashlight: SlotPrimary {
-            x = X_PART(29.6);
+            x = X_PART(31.4);
             y = Y_PART(9.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class SlotPrimaryOptics: SlotPrimary {
-            x = X_PART(32.6);
+            x = X_PART(33.8);
             y = Y_PART(9.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class SlotPrimaryMagazine: SlotPrimary {
-            x = X_PART(35.6);
+            x = X_PART(36.2);
             y = Y_PART(9.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class SlotSecondary: SlotPrimary {
@@ -310,31 +328,31 @@ class RscDisplayInventory {
         class SlotSecondaryMuzzle: SlotPrimary {
             x = X_PART(26.6);
             y = Y_PART(14.6);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
-        class SlotSecondaryGrip: SlotPrimary {
-            w = 0;
-            h = 0;
-            x = X_PART(39);
-            y = Y_PART(14.5);
+        class SlotSecondaryUnderBarrel: SlotPrimary {
+            x = X_PART(29);
+            y = Y_PART(14.59); //Why is this different? (check release)
+            w = W_PART(2.3);
+            h = H_PART(2);
         };
         class SlotSecondaryFlashlight: SlotPrimary {
-            x = X_PART(29.6);
+            x = X_PART(31.4);
             y = Y_PART(14.6);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class SlotSecondaryOptics: SlotPrimary {
-            x = X_PART(32.6);
+            x = X_PART(33.8);
             y = Y_PART(14.6);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class SlotSecondaryMagazine: SlotPrimary {
-            x = X_PART(35.6);
+            x = X_PART(36.2);
             y = Y_PART(14.6);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class SlotHandgun: SlotPrimary {
@@ -346,31 +364,31 @@ class RscDisplayInventory {
         class SlotHandgunMuzzle: SlotPrimary {
             x = X_PART(26.6);
             y = Y_PART(20.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
-        class SlotHandgunGrip: SlotPrimary {
-            w = 0;
-            h = 0;
-            x = X_PART(39);
-            y = Y_PART(20);
+        class SlotHandgunUnderBarrel: SlotPrimary {
+            x = X_PART(29);
+            y = Y_PART(20.1);
+            W = W_PART(2.3);
+            H = H_PART(2);
         };
         class SlotHandgunFlashlight: SlotPrimary {
-            x = X_PART(29.6);
+            x = X_PART(31.4);
             y = Y_PART(20.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class SlotHandgunOptics: SlotPrimary {
-            x = X_PART(32.6);
+            x = X_PART(33.8);
             y = Y_PART(20.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class SlotHandgunMagazine: SlotPrimary {
-            x = X_PART(35.6);
+            x = X_PART(36.2);
             y = Y_PART(20.1);
-            w = W_PART(2.9);
+            w = W_PART(2.3);
             h = H_PART(2);
         };
         class SlotHeadgear: SlotPrimary {
@@ -492,7 +510,7 @@ class RscDisplayInventory {
             x = X_PART(15.1);
             y = Y_PART(22.5);
             w = W_PART(23.4);
-            h = H_PART(0.5);
+            h = H_PART(0.5); //Default 1
         };
         class ContainerMarker: GroundTab {
             x = X_PART(0);

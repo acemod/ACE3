@@ -65,7 +65,7 @@ switch (_this select 0) do {
                     ["distance"] call FUNC(clearDisplay);
                     [true] call FUNC(showP1);
                     GVAR(pData) = [call FUNC(getDistance), call FUNC(getDirection)];
-                    "fall_of_short" call _fnc_setPFH;
+                    "fall_of_shot" call _fnc_setPFH;
                 };
             };
 

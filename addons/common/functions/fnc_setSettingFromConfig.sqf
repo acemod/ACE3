@@ -14,6 +14,8 @@
 
 EXPLODE_1_PVT(_this,_optionEntry);
 
+private ["_fnc_getValueWithType", "_value","_name", "_typeName", "_settingData"];
+
 _fnc_getValueWithType = {
     EXPLODE_2_PVT(_this,_optionEntry,_typeName);
 
@@ -58,7 +60,7 @@ if (isNil _name) then {
     /*_settingData = [
         _name,
         _typeName,
-        _isClientSetable,
+        _isClientSettable,
         _localizedName,
         _localizedDescription,
         _possibleValues,
@@ -68,13 +70,25 @@ if (isNil _name) then {
     _settingData = [
         _name,
         _typeName,
-        (getNumber (_optionEntry >> "isClientSetable")) > 0,
+        (getNumber (_optionEntry >> "isClientSettable")) > 0,
         getText (_optionEntry >> "displayName"),
         getText (_optionEntry >> "description"),
         getArray (_optionEntry >> "values"),
         getNumber (_optionEntry >> "force") > 0,
         _value
     ];
+
+    //Strings in the values array won't be localized from the config, so just do that now:
+    /*private "_values";
+    _values = _settingData select 5;
+    {
+        _text = _x;
+        if (((typeName _text) == "STRING") && {(count _text) > 1} && {(_text select [0,1]) == "$"}) then {
+            _text = localize (_text select [1, ((count _text) - 1)]); //chop off the leading $
+            _values set [_forEachIndex, _text];
+        };
+    } forEach _values;*/
+
 
     GVAR(settings) pushBack _settingData;
 

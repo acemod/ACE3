@@ -1,6 +1,8 @@
 //by commy2
 #include "script_component.hpp"
 
+if (!hasInterface) exitWith {};
+
 ["inventoryDisplayLoaded", {
 
     [{
@@ -18,7 +20,7 @@
 
 }] call EFUNC(common,addEventHandler);
 
-["ACE3", QGVAR(climb), localize "STR_ACE_Movement_Climb",
+["ACE3 Movement", QGVAR(climb), localize "STR_ACE_Movement_Climb",
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};

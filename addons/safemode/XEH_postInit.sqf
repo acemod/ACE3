@@ -1,12 +1,15 @@
 // by esteldunedain
 #include "script_component.hpp"
 
+if (!hasInterface) exitWith {};
+
+// IGNORE_PRIVATE_WARNING(_player)
 //["Soldier", {_player = ACE_player; if (currentWeapon _player in (_player getVariable [QGVAR(safedWeapons), []])) then {[false] call FUNC(setSafeModeVisual)}] call EFUNC(common,addInfoDisplayEventHandler);
 //@todo addEventHandler infoDisplayChanged with select 1 == "Soldier"
 
 
 // Add keybinds
-["ACE3", QGVAR(safeMode), localize "STR_ACE_SafeMode_SafeMode",
+["ACE3 Weapons", QGVAR(safeMode), localize "STR_ACE_SafeMode_SafeMode",
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};

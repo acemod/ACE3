@@ -21,7 +21,7 @@
 #define ARMDAMAGETRESHOLD1 1
 #define ARMDAMAGETRESHOLD2 1.7
 
-private ["_unit", "_selection", "_damage", "_selections", "_damages", "_damageOld", "_damageSumOld", "_damageNew", "_damageSumNew", "_damageFinal"];
+private ["_unit", "_selection", "_damage", "_selections", "_damages", "_damageOld", "_damageSumOld", "_damageNew", "_damageSumNew", "_damageFinal", "_armdamage", "_legdamage"];
 
 _unit = _this select 0;
 _selection = _this select 1;
@@ -29,7 +29,7 @@ _damage = _this select 2;
 
 // Unit isn't local, give function to machine where it is.
 if !(local _unit) exitWith {
-    [_this, "ace_medical_fnc_setHitPointDamage", _unit] call EFUNC(common,execRemoteFnc);
+    [_this, QUOTE(DFUNC(setHitPointDamage)), _unit] call EFUNC(common,execRemoteFnc);
 };
 
 // Check if overall damage adjustment is disabled
@@ -72,9 +72,13 @@ if (_damageOld > 0) then {
     _damageNew = _damageOld * (_damageSumNew / _damageSumOld);
 };
 
-// @todo: prevent death
-
-_unit setDamage _damageNew;
+// prevent death
+if (_damageNew >= 0.9) then {
+    _unit setDamage 0.9;
+    [_unit] call FUNC(setDead);
+} else {
+    _unit setDamage _damageNew;
+};
 
 {
     _damageFinal = (_damages select _forEachIndex);
@@ -88,7 +92,7 @@ if (_legdamage >= LEGDAMAGETRESHOLD1) then {
 } else {
     if (_unit getHitPointDamage "HitLegs" != 0) then {_unit setHitPointDamage ["HitLegs", 0]};
 };
-// @ŧodo: force prone for completely fucked up legs.
+// @todo: force prone for completely fucked up legs.
 
 
 // Arm Damage

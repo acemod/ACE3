@@ -13,11 +13,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target"];
-
-_unit = _this select 0;
-_target = _this select 1;
-_backpack = _this select 2;
+PARAMS_3(_unit,_target,_backpack);
 
 // do cam shake if the target is the player
 if ([_target] call EFUNC(common,isPlayer)) then {
@@ -37,7 +33,7 @@ _sounds = [
     QUOTE(PATHTO_R(sounds\zip_out.wav))
 ];
 
-_position = _target modelToWorld (_target selectionPosition "Spine3");
+_position = _target modelToWorldVisual (_target selectionPosition "Spine3");
 _position = _position call EFUNC(common,positionToASL);
 
 playSound3D [

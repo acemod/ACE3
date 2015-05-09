@@ -1,30 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-19 -->
 <Project name="ACE">
-  <Package name="Goggles">
-    <Key ID="STR_ACE_Goggles_ShowInThirdPerson">
-      <English>Show Goggle Effects in Third Person</English>
-      <German>Brilleneffekt in dritter Person anzeigen</German>
-      <Spanish>Mostrar efectos de las gafas en tercera persona</Spanish>
-      <Czech>Zobrazit účinky brýlí v třetí osobě</Czech>
-      <French>Effets de lunettes à la 3ème personne</French>
-      <Russian>Отображать эффект очков в третьем лице</Russian>
-      <Hungarian>Szemüveg effekt mutatása külső nézetből</Hungarian>
-      <Polish>Włącz efekty gogli w trzeciej osobie</Polish>
-      <Portuguese>Mostrar efeitos de óculos em Terceira Pessoa</Portuguese>
-      <Italian>Attiva l'effetto degli occhiali in terza persona</Italian>
-    </Key>
-    <Key ID="STR_ACE_Goggles_WipeGlasses">
-      <English>Wipe Goggles</English>
-      <German>Brille abwischen</German>
-      <Spanish>Limpiar gafas</Spanish>
-      <Czech>Vyčistit brýle</Czech>
-      <French>Essuyer les lunettes</French>
-      <Russian>Протереть очки</Russian>
-      <Hungarian>Szemüveg törlése</Hungarian>
-      <Polish>Wytrzyj gogle</Polish>
-      <Portuguese>Limpar Óculos</Portuguese>
-      <Italian>Pulisci gli occhiali</Italian>
-    </Key>
-  </Package>
+    <Package name="Goggles">
+        <Key ID="STR_ACE_Goggles_ShowInThirdPerson">
+            <English>Show Goggle Effects in Third Person</English>
+            <German>Brilleneffekt in dritter Person anzeigen</German>
+            <Spanish>Mostrar efectos de las gafas en tercera persona</Spanish>
+            <Czech>Zobrazit efekt brýlí v třetí osobě</Czech>
+            <French>Effets de lunettes à la 3ème personne</French>
+            <Russian>Отображать эффект очков от третьего лица</Russian>
+            <Hungarian>Szemüveg-effekt mutatása külső nézetből</Hungarian>
+            <Polish>Włącz efekty gogli w trzeciej osobie</Polish>
+            <Portuguese>Mostrar efeitos de óculos em Terceira Pessoa</Portuguese>
+            <Italian>Attiva l'effetto degli occhiali in terza persona</Italian>
+        </Key>
+        <Key ID="STR_ACE_Goggles_WipeGlasses">
+            <English>Wipe Goggles</English>
+            <German>Brille abwischen</German>
+            <Spanish>Limpiar gafas</Spanish>
+            <Czech>Vyčistit brýle</Czech>
+            <French>Essuyer les lunettes</French>
+            <Russian>Протереть очки</Russian>
+            <Hungarian>Szemüveg letörlése</Hungarian>
+            <Polish>Wytrzyj gogle</Polish>
+            <Portuguese>Limpar Óculos</Portuguese>
+            <Italian>Pulisci gli occhiali</Italian>
+        </Key>
+    </Package>
 </Project>

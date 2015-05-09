@@ -8,12 +8,6 @@ class CfgVehicles {
         class Turrets {
             class MainTurret;
         };
-
-    // TODO: move these to a different HUD addon
-    //  commanderCanSee = 2+32;
-    //  gunnerCanSee = 2+32;
-    //  driverCanSee = 2+32;
-
     };
 
     class Helicopter_Base_F: Helicopter {};
@@ -23,8 +17,33 @@ class CfgVehicles {
     class B_Heli_Attack_01_F: Heli_Attack_01_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                stabilizedInAxes = 4;       // This stablizes the turret a bit more for laser designation
+                GVAR(Enabled) = 1;      // Enable laser self-designation
             };
         };
     };
+    
+    class Plane: Air {};
+    class Plane_Base_F: Plane {
+        class Turrets {
+            class CopilotTurret;
+        };
+    };
+    
+    /* @TODO: LGB GBU
+    class Plane_CAS_01_base_F: Plane_Base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                GVAR(Enabled) = 1;      // Enable laser self-designation
+            };
+        };
+    };
+
+    class Plane_CAS_02_base_F: Plane_Base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                GVAR(Enabled) = 1;      // Enable laser self-designation
+            };
+        };
+    };
+    */
 };

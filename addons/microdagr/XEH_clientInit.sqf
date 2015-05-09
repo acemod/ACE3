@@ -4,10 +4,10 @@
 if (!hasInterface) exitWith {};
 
 //Add Keybinds:
-["ACE3", QGVAR(openGPS), (localize "STR_ACE_microdagr_toggleUnit"),
+["ACE3 Equipment", QGVAR(openGPS), (localize "STR_ACE_microdagr_toggleUnit"),
 {
     // canInteractWith (can use on map)
-    if !([ACE_player, objNull, ["notOnMap"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if (!("ACE_microDAGR" in (items ace_player))) exitWith {false};
 
@@ -17,10 +17,10 @@ if (!hasInterface) exitWith {};
 {false},
 [0xC7, [false, false, false]], false] call cba_fnc_addKeybind;  //Home Key
 
-["ACE3", QGVAR(closeGPS), (localize "STR_ACE_microdagr_closeUnit"),
+["ACE3 Equipment", QGVAR(closeGPS), (localize "STR_ACE_microdagr_closeUnit"),
 {
     // canInteractWith (can use on map)
-    if !([ACE_player, objNull, ["notOnMap"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if (!("ACE_microDAGR" in (items ace_player))) exitWith {false};
     if (GVAR(currentShowMode) == DISPLAY_MODE_CLOSED) exitWith {false};
@@ -53,6 +53,8 @@ GVAR(rangeFinderPositionASL) = [];
 
 
 GVAR(mapAltitude) = getNumber (configFile >> "CfgWorlds" >> worldName >> "elevationOffset");
+
+private ["_worldMapLong", "_worldMapLat", "_zone", "_band", "_squareID"];
 
 //Calculate the map's MGRS:
 _worldMapLong = getNumber (configFile >> "CfgWorlds" >> worldName >> "longitude");

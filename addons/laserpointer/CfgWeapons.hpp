@@ -1,17 +1,30 @@
 
 class SlotInfo;
 class PointerSlot: SlotInfo {
-    compatibleItems[] += {"ACE_acc_pointer_red","ACE_acc_pointer_green"};
+    compatibleItems[] += {"ACE_acc_pointer_red","ACE_acc_pointer_green_IR","ACE_acc_pointer_green"};
 };
 
 class CfgWeapons {
     class ItemCore;
     class InventoryFlashLightItem_Base_F;
 
+    class acc_pointer_IR: ItemCore {
+        ACE_nextModeClass = "ACE_acc_pointer_red";
+        ACE_modeDescription = "$STR_ACE_Laserpointer_IRLaser";
+
+        displayName = "$STR_ACE_Laserpointer_red";
+        descriptionUse = "$STR_ACE_Laserpointer_useLaser";
+    };
+
     class ACE_acc_pointer_red: ItemCore {
+        ACE_nextModeClass = "acc_pointer_IR";
+        ACE_modeDescription = "$STR_ACE_Laserpointer_Laser";
+
+        ACE_laserpointer = 1;
+
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_acc_pointer_red";
-        scope = 2;
+        scope = 1;
         displayName = "$STR_ACE_Laserpointer_red";
         descriptionUse = "$STR_ACE_Laserpointer_useLaser";
         picture = "\A3\weapons_F\Data\UI\gear_accv_pointer_CA.paa";
@@ -54,9 +67,25 @@ class CfgWeapons {
         inertia = 0.1;
     };
 
-    class ACE_acc_pointer_green: ACE_acc_pointer_red {
+    class ACE_acc_pointer_green_IR: acc_pointer_IR {
+        ACE_nextModeClass = "ACE_acc_pointer_green";
+        ACE_modeDescription = "$STR_ACE_Laserpointer_IRLaser";
+
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_acc_pointer_green";
+        scope = 1;
+        displayName = "$STR_ACE_Laserpointer_green";
+    };
+
+    class ACE_acc_pointer_green: ACE_acc_pointer_red {
+        ACE_nextModeClass = "ACE_acc_pointer_green_IR";
+        ACE_modeDescription = "$STR_ACE_Laserpointer_Laser";
+
+        ACE_laserpointer = 2;
+
+        author = "$STR_ACE_Common_ACETeam";
+        _generalMacro = "ACE_acc_pointer_green";
+        scope = 2;
         displayName = "$STR_ACE_Laserpointer_green";
     };
 };
