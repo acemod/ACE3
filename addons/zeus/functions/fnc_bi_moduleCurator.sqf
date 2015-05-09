@@ -215,6 +215,7 @@ if (_activated) then {
         } foreach (synchronizedobjects _logic);
         _addons call bis_fnc_activateaddons;
 
+        /* Removed by ACE
         //--- Locality changed
         _logic addeventhandler [
             "local",
@@ -224,6 +225,7 @@ if (_activated) then {
                 _bird setowner owner _logic;
             }
         ];
+        */
     };
 
     //--- Player
