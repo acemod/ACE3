@@ -64,7 +64,7 @@ _fnc_cooling = {
 };
 
 // Calculate cooling
-_temperature = [_temperature, _barrelMass, time - _time] call _fnc_cooldown;
+_temperature = [_temperature, _barrelMass, time - _time] call _fnc_cooling;
 // Calculate heating
 // Steel Heat Capacity = 466 J/(Kg.K)
 _temperature = _temperature + _heatIncrement / (_barrelMass * 466);
