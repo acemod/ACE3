@@ -9,7 +9,7 @@ class CfgPatches {
         versionDesc = "ACE Wind Deflection";
         author[] = {$STR_ACE_Common_ACETeam, "Glowbal", "Ruthberg"};
         authorUrl = "http://csemod.com";
-        VERSION_CONFIG;`
+        VERSION_CONFIG;
     };
 };
 
