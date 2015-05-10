@@ -1,4 +1,4 @@
-    class ADDON {
+class ADDON {
     #include "penetration\armour.hpp"
     #include "penetration\armour_plate.hpp"
     #include "penetration\armour_plate_100mm.hpp"
