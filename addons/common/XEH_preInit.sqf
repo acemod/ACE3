@@ -285,6 +285,12 @@ PREP(_handleRequestAllSyncedEvents);
 
 GVAR(syncedEvents) = HASH_CREATE;
 
+// Locality based PFH
+PRE(objectLocalPFH);
+PREP(handleObjectLocalPerFrameHandler);
+PREP(addObjectLocalPerFrameHandler);
+PREP(removeObjectLocalPerFrameHandler);
+
 // @TODO: Generic local-managed global-synced objects (createVehicleLocal)
 
 //Debug
