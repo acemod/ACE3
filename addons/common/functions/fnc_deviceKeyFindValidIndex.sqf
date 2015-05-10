@@ -1,4 +1,18 @@
-
+/*
+ * Author: PabstMirror
+ * Finds next valid index for the device array.
+ *
+ * Arguments:
+ * 0: Offset from currentIndex (use 1 to find next valid) <NUMBER><OPTIONAL>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [] call ace_common_fnc_deviceKeyFindValidIndex
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 DEFAULT_PARAM(0,_offsetBy,0);

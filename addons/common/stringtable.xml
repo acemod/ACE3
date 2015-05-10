@@ -470,5 +470,14 @@
             <French>Une banane est un fruit qui, d'un point de vue botanique, fait partie du groupe des baies. Produite par plusieurs sortes de grandes plantes à fleurs herbacées du type Musa.</French>
             <Portuguese>A banana é uma fruta comestível, botanicamente uma baga, produzida por vários tipos de plantas herbáceas grandes do genero Musa.</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Common_toggleHandheldDevice">
+            <English>Toggle Device</English>
+        </Key>
+        <Key ID="STR_ACE_Common_closeHandheldDevice">
+            <English>Close Device</English>
+        </Key>
+        <Key ID="STR_ACE_Common_cycleHandheldDevices">
+            <English>Cycle Devices</English>
+        </Key>
     </Package>
 </Project>

@@ -254,7 +254,7 @@ if(isMultiplayer && { time > 0 || isNull player } ) then {
 GVAR(deviceKeyHandlingArray) = [];
 GVAR(deviceKeyCurrentIndex) = -1;
 
-["ACE3 Equipment", QGVAR(openDevice), "Open Device", //(localize "STR_ACE_microdagr_toggleUnit"),
+["ACE3 Equipment", QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"),
 {
     [] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
@@ -264,7 +264,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
 {false},
 [0xC7, [false, false, false]], false] call cba_fnc_addKeybind;  //Home Key
 
-["ACE3 Equipment", QGVAR(closeDevice), "Close Device", //(localize "STR_ACE_microdagr_toggleUnit"),
+["ACE3 Equipment", QGVAR(closeDevice), (localize "STR_ACE_Common_closeHandheldDevice"),
 {
     [] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
@@ -273,14 +273,12 @@ GVAR(deviceKeyCurrentIndex) = -1;
 {false},
 [0xC7, [false, true, false]], false] call cba_fnc_addKeybind;  //CTRL + Home Key
 
-["ACE3 Equipment", QGVAR(cycleDevice), "Cycle Devices", //(localize "STR_ACE_microdagr_toggleUnit"),
+["ACE3 Equipment", QGVAR(cycleDevice), (localize "STR_ACE_Common_cycleHandheldDevices"),
 {
-    systemChat "here";
     [1] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
     _displayName = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 0);
     _iconImage = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 1);
-    systemChat str [_displayName, _iconImage];
     [_displayName, _iconImage] call FUNC(displayTextPicture);
 },
 {false},
