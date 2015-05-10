@@ -22,7 +22,7 @@
             <Czech>Zamknout vozidlo</Czech>
             <Hungarian>Jármű zárása</Hungarian>
             <Russian>Закрыть машину</Russian>
-	    <Italian>Chiudi il veicolo a chiave</Italian>
+            <Italian>Chiudi il veicolo a chiave</Italian>
             <Portuguese>Travar Veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Action_Lockpick">

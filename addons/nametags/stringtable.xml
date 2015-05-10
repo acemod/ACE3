@@ -71,7 +71,7 @@
             <Russian>Показывать информацию об экипаже</Russian>
             <Hungarian>Jármű-legénység adatainak mutatása</Hungarian>
             <Portuguese>Mostrar tripulantes</Portuguese>
-	    <Italian>Mostra l'elenco del personale a bordo</Italian>
+            <Italian>Mostra l'elenco del personale a bordo</Italian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowNamesForAI">
             <English>Show name tags for AI units</English>
@@ -106,7 +106,7 @@
             <French>Couleur d'affichage par défaut (si dans aucun groupe)</French>
             <Czech>Standardní barva jmenovek (pro nečleny jednotky)</Czech>
             <Hungarian>Alap névcímke-szín (csoporton kívüli személyek)</Hungarian>
-	    <Italian>Colore dei nomi non appartenenti al gruppo</Italian>
+            <Italian>Colore dei nomi non appartenenti al gruppo</Italian>
             <Portuguese>Cor padrão do nome (unidades fora do grupo)</Portuguese>
         </Key>
     </Package>
