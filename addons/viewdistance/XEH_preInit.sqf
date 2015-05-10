@@ -6,5 +6,6 @@ PREP(initModule);
 PREP(init);
 PREP(returnValue);
 PREP(changeViewDistance);
+PREP(adaptViewDistance);
 
 ADDON = true;
