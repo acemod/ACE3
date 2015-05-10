@@ -5,8 +5,50 @@
         <Key ID="STR_ACE_VehicleDamage">
             <English>Advanced Vehicle Damage</English>
         </Key>
-        <Key ID="STR_ACE_VehicleDamage">
-            <English>TODO</English>
+        <Key ID="STR_ACE_VehicleDamage_Desc">
+            <English>Provides advanced model based and material physics based vehicle damage simulation.</English>
+        </Key>
+        <Key ID="STR_ACE_VehicleDamage_level">
+            <English>Difficulty Level</English>
+        </Key>
+        <Key ID="STR_ACE_VehicleDamage_level_Desc">
+            <English></English>
+        </Key>
+        <Key ID="STR_ACE_VehicleDamage_advancedMaterials">
+            <English>Advanced Materials Simulation</English>
+        </Key>
+        <Key ID="STR_ACE_VehicleDamage_advancedMaterials_Desc">
+            <English></English>
+        </Key>
+        <Key ID="STR_ACE_VehicleDamage_advancedHitpoints">
+            <English>Advanced Hitpoints Simulation</English>
+        </Key>
+        <Key ID="STR_ACE_VehicleDamage_advancedHitpoints_Desc">
+            <English></English>
+        </Key>
+        <Key ID="STR_ACE_VehicleDamage_enableCookoff">
+            <English>Enable Cookoff</English>
+        </Key>
+        <Key ID="STR_ACE_VehicleDamage_enableCookoff_Desc">
+            <English></English>
+        </Key>
+        <Key ID="STR_ACE_VehicleDamage_enableCrewKills">
+            <English>Enable Crew Kills</English>
+        </Key>
+        <Key ID="STR_ACE_VehicleDamage_enableCrewKills_Desc">
+            <English></English>
+        </Key>
+        <Key ID="STR_ACE_VehicleDamage_persistDamage">
+            <English>Persist Vehicle Damage</English>
+        </Key>
+        <Key ID="STR_ACE_VehicleDamage_persistDamage_Desc">
+            <English></English>
+        </Key>
+        <Key ID="STR_ACE_VehicleDamage_reactiveArmor">
+            <English>Enable Reactive Armor Simulation</English>
+        </Key>
+        <Key ID="STR_ACE_VehicleDamage_reactiveArmor_Desc">
+            <English></English>
         </Key>
     </Package>
 </Project>

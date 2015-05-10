@@ -77,7 +77,7 @@ namespace ace {
                 _message_id = _message_id + 1;
             } else {
 #ifdef _DEBUG
-                if (_messages.front().command != "fetch_result") {
+                if (name_ != "fetch_result") {
                     LOG(TRACE) << "dispatch[immediate]:\t[" << name_ << "] { " << args_.get() << " }";
                 }
 #endif
@@ -109,24 +109,26 @@ namespace ace {
                     while (!_messages.empty()) {
                         if (_ready) {
                             dispatch_result result;
-                            result.id = _messages.front().id;
-                            result.message.resize(4096);
+                            dispatch_message _message = std::move(_messages.front());
+                            _messages.pop();
 
+                            result.id = _message.id;
+                            result.message.resize(4096);
 #ifdef _DEBUG
-                            if (_messages.front().command != "fetch_result") {
-                                LOG(TRACE) << "dispatch[threaded]:\t[" << _messages.front().command << "]";
-                                if (_messages.front().args.size() > 0) {
+                            if (_message.command != "fetch_result") {
+                                LOG(TRACE) << "dispatch[threaded]:\t[" << _message.command << "]";
+                                if (_message.args.size() > 0) {
                                     //    LOG(TRACE) << "\t{ " << _messages.front().args.get() << " }";
                                 }
                             }
 #endif
-                            dispatcher::call(_messages.front().command, _messages.front().args, result.message);
+                            dispatcher::call(_message.command, _message.args, result.message);
                             {
                                 std::lock_guard<std::mutex> lock(_results_lock);
                                 _results.push(result);
                             }
 
-                            _messages.pop();
+                            
                         }
                     }
                 }
