@@ -72,7 +72,7 @@ _band = switch (true) do {
     case (_lat>8): {"P"};
     case (_lat>=0): {"N"};
 };
-if (worldName == "VR") then {_zone = 0; _band = "VR";};
+if (worldName == "VR") then {_zone = 0; _band = "RV";};
 
 _GZD = format ["%1%2",_zone,_band];
 TRACE_3("",_zone,_band,_GZD);
@@ -95,8 +95,10 @@ switch (true) do {
     case (_zone in _set5): {_metaE = 2; _metaN = 1;};
     case (_zone in _set6): {_metaE = 3; _metaN = 2;};
 };
+TRACE_2("",_metaE,_metaN);
 
 switch (true) do {
+    case (_zone == 0): {_letterE = "E"};
     case (_easting > 800000): {LOG("E8"); switch (_metaE) do {case 1: {_letterE="H"}; case 2: {_letterE="R"}; case 3: {_letterE="Z"}; }; };
     case (_easting > 700000): {LOG("E7"); switch (_metaE) do {case 1: {_letterE="G"}; case 2: {_letterE="Q"}; case 3: {_letterE="Y"}; }; };
     case (_easting > 600000): {LOG("E6"); switch (_metaE) do {case 1: {_letterE="F"}; case 2: {_letterE="P"}; case 3: {_letterE="X"}; }; };
@@ -113,26 +115,27 @@ _northing = _northing mod 2000000;
 TRACE_1("",_northing);
 
 switch (true) do {
-    case (_northing > 1900000): {switch (_metaN) do {case 1: {_letterN = "V"}; case 2: {_letterN = "E"}; }; };
-    case (_northing > 1800000): {switch (_metaN) do {case 1: {_letterN = "U"}; case 2: {_letterN = "D"}; }; };
-    case (_northing > 1700000): {switch (_metaN) do {case 1: {_letterN = "T"}; case 2: {_letterN = "C"}; }; };
-    case (_northing > 1600000): {switch (_metaN) do {case 1: {_letterN = "S"}; case 2: {_letterN = "B"}; }; };
-    case (_northing > 1500000): {switch (_metaN) do {case 1: {_letterN = "R"}; case 2: {_letterN = "A"}; }; };
-    case (_northing > 1400000): {switch (_metaN) do {case 1: {_letterN = "Q"}; case 2: {_letterN = "V"}; }; };
-    case (_northing > 1300000): {switch (_metaN) do {case 1: {_letterN = "P"}; case 2: {_letterN = "U"}; }; };
-    case (_northing > 1200000): {switch (_metaN) do {case 1: {_letterN = "N"}; case 2: {_letterN = "T"}; }; };
-    case (_northing > 1100000): {switch (_metaN) do {case 1: {_letterN = "M"}; case 2: {_letterN = "S"}; }; };
-    case (_northing > 1000000): {switch (_metaN) do {case 1: {_letterN = "L"}; case 2: {_letterN = "R"}; }; };
-    case (_northing > 900000): {switch (_metaN) do {case 1: {_letterN = "K"}; case 2: {_letterN = "Q"}; }; };
-    case (_northing > 800000): {switch (_metaN) do {case 1: {_letterN = "J"}; case 2: {_letterN = "P"}; }; };
-    case (_northing > 700000): {switch (_metaN) do {case 1: {_letterN = "H"}; case 2: {_letterN = "N"}; }; };
-    case (_northing > 600000): {switch (_metaN) do {case 1: {_letterN = "G"}; case 2: {_letterN = "M"}; }; };
-    case (_northing > 500000): {switch (_metaN) do {case 1: {_letterN = "F"}; case 2: {_letterN = "L"}; }; };
-    case (_northing > 400000): {switch (_metaN) do {case 1: {_letterN = "E"}; case 2: {_letterN = "K"}; }; };
-    case (_northing > 300000): {switch (_metaN) do {case 1: {_letterN = "D"}; case 2: {_letterN = "J"}; }; };
-    case (_northing > 200000): {switch (_metaN) do {case 1: {_letterN = "C"}; case 2: {_letterN = "H"}; }; };
-    case (_northing > 100000): {switch (_metaN) do {case 1: {_letterN = "B"}; case 2: {_letterN = "G"}; }; };
-    case (_northing > 0): {switch (_metaN) do {case 1: {_letterN = "A"}; case 2: {_letterN = "F"}; }; };
+    case (_zone == 0): {_letterN = "N"};
+    case (_northing > 1900000): {LOG("N19"); switch (_metaN) do {case 1: {_letterN = "V"}; case 2: {_letterN = "E"}; }; };
+    case (_northing > 1800000): {LOG("N18"); switch (_metaN) do {case 1: {_letterN = "U"}; case 2: {_letterN = "D"}; }; };
+    case (_northing > 1700000): {LOG("N17"); switch (_metaN) do {case 1: {_letterN = "T"}; case 2: {_letterN = "C"}; }; };
+    case (_northing > 1600000): {LOG("N16"); switch (_metaN) do {case 1: {_letterN = "S"}; case 2: {_letterN = "B"}; }; };
+    case (_northing > 1500000): {LOG("N15"); switch (_metaN) do {case 1: {_letterN = "R"}; case 2: {_letterN = "A"}; }; };
+    case (_northing > 1400000): {LOG("N14"); switch (_metaN) do {case 1: {_letterN = "Q"}; case 2: {_letterN = "V"}; }; };
+    case (_northing > 1300000): {LOG("N13"); switch (_metaN) do {case 1: {_letterN = "P"}; case 2: {_letterN = "U"}; }; };
+    case (_northing > 1200000): {LOG("N12"); switch (_metaN) do {case 1: {_letterN = "N"}; case 2: {_letterN = "T"}; }; };
+    case (_northing > 1100000): {LOG("N11"); switch (_metaN) do {case 1: {_letterN = "M"}; case 2: {_letterN = "S"}; }; };
+    case (_northing > 1000000): {LOG("N10"); switch (_metaN) do {case 1: {_letterN = "L"}; case 2: {_letterN = "R"}; }; };
+    case (_northing > 900000): {LOG("N09"); switch (_metaN) do {case 1: {_letterN = "K"}; case 2: {_letterN = "Q"}; }; };
+    case (_northing > 800000): {LOG("N08"); switch (_metaN) do {case 1: {_letterN = "J"}; case 2: {_letterN = "P"}; }; };
+    case (_northing > 700000): {LOG("N07"); switch (_metaN) do {case 1: {_letterN = "H"}; case 2: {_letterN = "N"}; }; };
+    case (_northing > 600000): {LOG("N06"); switch (_metaN) do {case 1: {_letterN = "G"}; case 2: {_letterN = "M"}; }; };
+    case (_northing > 500000): {LOG("N05"); switch (_metaN) do {case 1: {_letterN = "F"}; case 2: {_letterN = "L"}; }; };
+    case (_northing > 400000): {LOG("N04"); switch (_metaN) do {case 1: {_letterN = "E"}; case 2: {_letterN = "K"}; }; };
+    case (_northing > 300000): {LOG("N03"); switch (_metaN) do {case 1: {_letterN = "D"}; case 2: {_letterN = "J"}; }; };
+    case (_northing > 200000): {LOG("N02"); switch (_metaN) do {case 1: {_letterN = "C"}; case 2: {_letterN = "H"}; }; };
+    case (_northing > 100000): {LOG("N01"); switch (_metaN) do {case 1: {_letterN = "B"}; case 2: {_letterN = "G"}; }; };
+    case (_northing > 0): {LOG("N00"); switch (_metaN) do {case 1: {_letterN = "A"}; case 2: {_letterN = "F"}; }; };
 };
 TRACE_1("",_letterN);
 
