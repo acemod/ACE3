@@ -19,31 +19,31 @@ class CfgVehicles {
         class Arguments    {
             class soundFiles {
                 displayName = "Sounds";
-                description = "Classnames of the ambiance sounds played. Seperated by ','. ";
+                description = "Class names of the ambiance sounds to be played. Seperated by ','";
                 typeName = "STRING";
                 defaultValue = "";
             };
             class minimalDistance {
                 displayName = "Minimal Distance";
-                description = "Minimal Distance";
+                description = "Used for calculating a random position and sets the minimal distance between the players and the played sound file(s)";
                 typeName = "NUMBER";
                 defaultValue = 400;
             };
             class maximalDistance {
-                displayName = "Maximal Distance";
-                description = "Maximal Distance";
+                displayName = "Maximum Distance";
+                description = "Used for calculating a random position and sets the maximum distance between the players and the played sound file(s)";
                 typeName = "NUMBER";
                 defaultValue = 900;
             };
             class minimalDelay {
                 displayName = "Minimal Delay";
-                description = "Minimal Delay between sounds played";
+                description = "Minimal delay between sounds played";
                 typeName = "NUMBER";
                 defaultValue = 10;
             };
             class maximalDelay {
-                displayName = "Maximal Delay";
-                description = "Maximal Delay between sounds played";
+                displayName = "Maximum Delay";
+                description = "Maximum delay between sounds played";
                 typeName = "NUMBER";
                 defaultValue = 170;
             };

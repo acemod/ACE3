@@ -131,6 +131,7 @@ The family of `GVAR` macro's define global variable strings or constants for use
 
 
 There also exists the FUNC family of Macros
+
 * `FUNC(face)` is `ace_balls_fnc_face` or the call trace wrapper for that function.
 * `EFUNC(balls,face)` is `ace_balls_fnc_face` or the call trace wrapper for that function.
 * `EFUNC(leg,face)` is `ace_leg_fnc_face` or the call trace wrapper for that function.
