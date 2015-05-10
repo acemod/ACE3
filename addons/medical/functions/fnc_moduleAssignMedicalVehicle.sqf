@@ -44,7 +44,7 @@ if (!isNull _logic) then {
             if (!isnil "_x") then {
                    if (typeName _x == typeName objNull) then {
                     if (local _x) then {
-                        _x setvariable [QGVAR(medicClass), _setting, true];
+                        _x setvariable [QGVAR(isMedic), _setting, true];
                     };
                 };
             };
@@ -54,7 +54,7 @@ if (!isNull _logic) then {
         if (!isnil "_x") then {
                if (typeName _x == typeName objNull) then {
                 if (local _x) then {
-                    _x setvariable [QGVAR(medicClass), _setting, true];
+                    _x setvariable [QGVAR(isMedic), _setting, true];
                 };
             };
         };
