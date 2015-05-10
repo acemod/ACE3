@@ -206,6 +206,8 @@ typedef union {
 	} parts;
 } double_cast;
 
+#define RAD2DEG(rad)	(rad * 180.0f / 3.1415926f);
+
 typedef std::map<uint32_t, std::pair<glm::mat4, ace::vector3<float>>> animation_transform;
 animation_transform ace::simulation::animation::animate(const float phase, const std::vector<uint32_t> &lods, animation_transform base_transforms)
 {
@@ -218,11 +220,38 @@ animation_transform ace::simulation::animation::animate(const float phase, const
 
 		float scale = get_scale(phase);
 
-
 		switch (this->type) {
+		//rotation
+		case 0: {
+			scale = (scale / (max_value - min_value)) * (angle1 - angle0);
+			glm::vec3 rotation_axis = glm::vec3(this->lod_info[lod_id]->axis_direction.x(), this->lod_info[lod_id]->axis_direction.y(), this->lod_info[lod_id]->axis_direction.z());
+			animation_matrix = glm::rotate(animation_matrix, -scale, rotation_axis);
+			rotation_offset = this->lod_info[lod_id]->axis_position;
+			break;
+		}
+		//rotationX
+		case 1: {
+			scale = (scale / (max_value - min_value)) * (angle1 - angle0);
+			glm::vec3 rotation_axis = glm::vec3(1.0f, 0.0f, 0.0f);
+			animation_matrix = glm::rotate(animation_matrix, -scale, rotation_axis);
+			rotation_offset = this->lod_info[lod_id]->axis_position;
+			break;
+		}
+		//rotationY
 		case 2: {
-
-			//animation_matrix = glm::rotate(animation_matrix, )
+			scale = (scale / (max_value - min_value)) * (angle1 - angle0);
+			glm::vec3 rotation_axis = glm::vec3(0.0f, 1.0f, 0.0f);
+			animation_matrix = glm::rotate(animation_matrix, -scale, rotation_axis);
+			rotation_offset = this->lod_info[lod_id]->axis_position;
+			break;
+		}
+		//rotationZ
+		case 3: {
+			scale = (scale / (max_value - min_value)) * (angle1 - angle0);
+			glm::vec3 rotation_axis = glm::vec3(0.0f, 0.0f, 1.0f);
+			animation_matrix = glm::rotate(animation_matrix, -scale, rotation_axis);
+			rotation_offset = this->lod_info[lod_id]->axis_position;
+			break;
 		}
 		//translation
 		case 4: {
@@ -261,6 +290,9 @@ animation_transform ace::simulation::animation::animate(const float phase, const
 				scale
 				));
 			break;
+		}
+		case 8: {
+			// fuck direct for now
 		}
 		//hide
 		case 9: {

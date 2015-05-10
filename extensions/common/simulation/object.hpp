@@ -6,10 +6,13 @@
 #include <vector>
 #include <map>
 
-#include "p3d\model.hpp"
+#define GLM_PRECISION_HIGHP_FLOAT
 
-#include "glm\mat4x4.hpp"
+#include "p3d\model.hpp"
+#include "glm\glm.hpp"
 #include "glm\vec3.hpp"
+#include "glm\mat4x4.hpp"
+
 
 namespace ace {
 	namespace simulation {

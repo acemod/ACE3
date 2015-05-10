@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
 
 
 	std::map<std::string, float> test_phases;
-	test_phases["box3_translate"] = -10.0f;
+	test_phases["box1"] = 1.0f;
 	std::vector<std::string> test_lods;
 	test_lods.push_back("GEO");
 	_object.animate(test_phases, test_lods);
