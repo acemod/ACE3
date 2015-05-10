@@ -4,7 +4,7 @@
  * 
  *
  * Arguments:
- * None
+ * 0: Show Prompt <BOOL>
  *
  * Return Value:
  * None
@@ -17,19 +17,21 @@
 
 #include "script_component.hpp"
 
+PARAMS_1(_show_prompt);
+
 private["_land_vehicle","_air_vehicle"];
 
 _land_vehicle = (vehicle player) isKindOf "LandVehicle";
 _air_vehicle = (vehicle player) isKindOf "Air";
 
 if (!_land_vehicle && !_air_vehicle) exitWith {
-    [GVAR(viewDistanceOnFoot),true] call FUNC(changeViewDistance);
+    [GVAR(viewDistanceOnFoot),_show_prompt] call FUNC(changeViewDistance);
 };
 
 if (_land_vehicle) exitWith {
-    [GVAR(viewDistanceLandVehicle),true] call FUNC(changeViewDistance);
+    [GVAR(viewDistanceLandVehicle),_show_prompt] call FUNC(changeViewDistance);
 };
 
 if (_air_vehicle) exitWith {
-    [GVAR(viewDistanceAirVehicle),true] call FUNC(changeViewDistance);
+    [GVAR(viewDistanceAirVehicle),_show_prompt] call FUNC(changeViewDistance);
 };

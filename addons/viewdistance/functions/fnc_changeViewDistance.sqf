@@ -26,7 +26,7 @@ _view_distance_limit = GVAR(limitViewDistance); // Grab the limit
 
 if (_new_view_distance <= _view_distance_limit) then {
     if (_prompt) then {
-        _text = composeText ["View distance: ",str(_new_view_distance)];
+        _text = composeText ["View distance successfully changed to: ",str(_new_view_distance)];
         [_text,1] call EFUNC(common,displayTextStructured);
     };
     setViewDistance _new_view_distance;
