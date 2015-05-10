@@ -37,7 +37,7 @@ if (!isNull _logic) then {
 
     _list = "[" + _nilCheckPassedList + "]";
     _parsedList = [] call compile _list;
-    _setting = _logic getvariable ["enabled", false];
+    _setting = _logic getvariable ["enabled", 0];
     _objects = synchronizedObjects _logic;
     if (!(_objects isEqualTo []) && _parsedList isEqualTo []) then {
         {
