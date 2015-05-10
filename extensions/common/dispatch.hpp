@@ -76,7 +76,11 @@ namespace ace {
 
                 _message_id = _message_id + 1;
             } else {
-                LOG(TRACE) << "dispatch[immediate]:\t[" << name_ << "] { " << args_.get() << " }";
+#ifdef _DEBUG
+                if (_messages.front().command != "fetch_result") {
+                    LOG(TRACE) << "dispatch[immediate]:\t[" << name_ << "] { " << args_.get() << " }";
+                }
+#endif
                 return dispatcher::call(name_, args_, result_);
             }
 

@@ -58,7 +58,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
 
     /*************************/
     // Real functionality goes here
-    result = ace::dispatch::get().call(command, _args, result);
+    ace::dispatch::get().call(command, _args, result);
 
  
     sprintf_s(output, outputSize, "%s", result.c_str());

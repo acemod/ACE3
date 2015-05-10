@@ -4,16 +4,17 @@
 #include "dispatch.hpp"
 #include "arguments.hpp"
 
-typedef void (*__stdcall RVExtension)(char *output, int outputSize, const char *function);
+typedef void (__stdcall *RVExtension)(char *output, int outputSize, const char *function);
 
 namespace ace {
 
     class module {
     public:
         module() : handle(nullptr), function(nullptr), name("") {}
-        module(std::string name_, HANDLE handle_, RVExtension function_) : handle(nullptr), function(function_), name(name_) {}
+        module(const std::string & name_, HANDLE handle_, RVExtension function_, const std::string & file_) : handle(nullptr), function(function_), name(name_), temp_filename(file_) {}
 
         std::string name;
+        std::string temp_filename;
         HINSTANCE   handle;
         RVExtension function;
     };
@@ -41,7 +42,31 @@ namespace ace {
                 return true;
             }
 
-            dllHandle = LoadLibrary(args_.as_string(0).c_str());
+#ifdef _WINDOWS
+            // Make a copy of the file to temp, and load it from there, referencing the current path name
+            char tmpPath[MAX_PATH +1], buffer[MAX_PATH + 1];
+
+            if(!GetTempPathA(MAX_PATH, tmpPath)) {
+                LOG(ERROR) << "GetTempPath() failed, e=" << GetLastError();
+                return false;
+            }
+            if(!GetTempFileNameA(tmpPath, "ace_dynload", TRUE, buffer)) {
+                LOG(ERROR) << "GetTempFileName() failed, e=" << GetLastError();
+                return false;
+            }
+            std::string temp_filename = buffer;
+            if (!CopyFileA(args_.as_string(0).c_str(), temp_filename.c_str(), TRUE)) {
+                DeleteFile(temp_filename.c_str());
+                if (!CopyFileA(args_.as_string(0).c_str(), temp_filename.c_str(), TRUE)) {
+                    LOG(ERROR) << "CopyFile() , e=" << GetLastError();
+                    return false;
+                }
+            }
+#else
+            std::string temp_filename = args_.as_string(0);
+#endif
+
+            dllHandle = LoadLibrary(temp_filename.c_str());
             if (!dllHandle) {
                 LOG(ERROR) << "LoadLibrary() failed, e=" << GetLastError() << " [" << args_.as_string(0) << "]";
                 return false;
@@ -56,7 +81,7 @@ namespace ace {
 
             LOG(INFO) << "Load completed [" << args_.as_string(0) << "]";
 
-            _modules[args_.as_string(0)] = module(args_.as_string(0), dllHandle, function);
+            _modules[args_.as_string(0)] = module(args_.as_string(0), dllHandle, function, temp_filename);
 
             return false;
         }
@@ -79,7 +104,7 @@ namespace ace {
 #endif
 
         bool call(const arguments & args_, std::string & result) {
-            LOG(INFO) << "Calling [" << args_.as_string(0) << "]";
+            //LOG(INFO) << "Calling [" << args_.as_string(0) << "]";
 
             if (_modules.find(args_.as_string(0)) == _modules.end()) {
                 return false;
@@ -91,13 +116,16 @@ namespace ace {
             std::string function_str;
             std::vector<std::string> temp = ace::split(args_.get(), ',');
 
-            for (int x = 1; x < temp.size(); x++)
+            function_str = temp[1] + ":";
+            for (int x = 2; x < temp.size(); x++)
                 function_str = function_str + temp[x] + ",";
 
             _modules[args_.as_string(0)].function((char *)result.c_str(), 4096, (const char *)function_str.c_str());
-
-            LOG(INFO) << "Called [" << args_.as_string(0) << "], result={" << result << "}";
-
+#ifdef _DEBUG
+            //if (args_.as_string(0) != "fetch_result" && args_.as_string(0) != "ready") {
+            //    LOG(INFO) << "Called [" << args_.as_string(0) << "], with {" << function_str << "} result={" << result << "}";
+            //}
+#endif
             return true;
         }
 
