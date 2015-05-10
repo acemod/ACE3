@@ -50,7 +50,8 @@ The most prominent feature of ACE SwitchUnits is that you can add it to nearly e
 In its current form you're able to switch to infantry (vehicles, etc. are planned) from all four sides (West, East, Independent, Civilian).
 
 To enable a player to control AI add the following to its init line:
-```sqf
+
+```c++
 this setVariable ["ACE_CanSwitchUnits", true];
 ```
 Once this player spawns, all controllable AI will be marked on his map and he'll be able to click on the map to switch to this unit. The initial unit will be prone to damage, but has no equipment and can't run. So it would be wise to hide or move this unit far from other players.
