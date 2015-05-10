@@ -651,7 +651,7 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.9f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
                 recoilCoef = "1.0f";
@@ -684,7 +684,7 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.9f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
                 recoilCoef = "1.0f";
@@ -717,7 +717,7 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.9f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
                 recoilCoef = "1.0f";
@@ -750,7 +750,7 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.9f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
                 recoilCoef = "1.0f";
@@ -783,7 +783,7 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.9f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
                 recoilCoef = "1.0f";
@@ -816,7 +816,7 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.9f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
                 recoilCoef = "1.0f";
@@ -849,7 +849,7 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.9f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
                 recoilCoef = "1.0f";
@@ -882,7 +882,7 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.9f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
                 recoilCoef = "1.0f";
@@ -915,7 +915,7 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.9f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
                 recoilCoef = "1.0f";
