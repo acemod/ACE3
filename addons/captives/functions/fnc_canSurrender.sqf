@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Checks the conditions for being able to surrender
+ * Checks the conditions for being able switch surrender states
  *
  * Arguments:
  * 0: caller (player) <OBJECT>
@@ -18,14 +18,14 @@
 
 PARAMS_2(_unit,_newSurrenderState);
 
-if (currentWeapon _unit != "") exitWith {false};
-
 private "_returnValue";
 
 _returnValue = if (_newSurrenderState) then {
-    !(_unit getVariable [QGVAR(isSurrendering), false]); //Not currently surrendering
+    //no weapon equiped AND not currently surrendering and 
+    (currentWeapon _unit == "") && {!(_unit getVariable [QGVAR(isSurrendering), false])}
 } else {
-    (_unit getVariable [QGVAR(isSurrendering), false]); //is Surrendering
+    //is Surrendering
+    (_unit getVariable [QGVAR(isSurrendering), false])
 };
 
 _returnValue
