@@ -68,7 +68,7 @@ PREP(getGunner);
 PREP(getInPosition);
 PREP(getMapGridFromPos);
 PREP(getMarkerType);
-PREP(getMGRSzone);
+PREP(getMGRSdata);
 PREP(getName);
 PREP(getNumberFromMissionSQM);
 PREP(getNumberMagazinesIn);

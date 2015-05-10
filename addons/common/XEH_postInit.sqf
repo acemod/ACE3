@@ -238,6 +238,9 @@ GVAR(OldIsCamera) = false;
     {!((_this select 0) isEqualTo (_this select 1)) && {vehicle (_this select 0) == vehicle (_this select 1)}}
 }] call FUNC(addCanInteractWithCondition);
 
+// Find MGRS zone and 100km grid for current map
+[] call FUNC(getMGRSdata);
+
 // Lastly, do JIP events
 // JIP Detection and event trigger. Run this at the very end, just in case anything uses it
 if(isMultiplayer && { time > 0 || isNull player } ) then {
