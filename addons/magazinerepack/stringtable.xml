@@ -1,8 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<<<<<<< master
-=======
-<!-- Edited with tabler - 2015-04-11 -->
->>>>>>> HEAD~3
 <Project name="ACE">
     <Package name="MagazineRepack">
         <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
@@ -110,7 +106,7 @@
             <Czech>%1 plný a %2 částečně</Czech>
             <Polish>Pełnych: %1.&lt;br/&gt;Częściowo pełnych: %2.</Polish>
             <Hungarian>%1 teljes és %2 részleges</Hungarian>
-            <Italian>%1 pieno e %2 parziale</Italian>
+            <Italian>%1 pieno(i) e %2 parziale(i)</Italian>
             <Portuguese>%1 Total e %2 Parcial </Portuguese>
         </Key>
     </Package>

@@ -34,7 +34,7 @@
             <Hungarian>Biztonsági kapcsoló helyretolása</Hungarian>
             <Russian>Поставить на предохранитель</Russian>
             <French>Sécurité mise</French>
-            <Italian>Inserisci la sicura</Italian>
+            <Italian>Metti la sicura</Italian>
             <Portuguese>Colocar Segurança</Portuguese>
         </Key>
         <Key ID="STR_ACE_SafeMode_TookOffSafety">
@@ -46,7 +46,6 @@
             <Hungarian>Biztonságos mód megszüntetve</Hungarian>
             <Russian>Снят с предохранителя</Russian>
             <French>Sécurité enlevée</French>
-            <Italian>Togli la sicura</Italian>
             <Italian>Sicura tolta</Italian>
             <Portuguese>Tirou Segurança</Portuguese>
         </Key>

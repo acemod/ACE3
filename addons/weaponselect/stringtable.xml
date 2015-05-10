@@ -22,7 +22,7 @@
             <Polish>Wyświetla powiadomienie lub tekst przy rzucie granatem.</Polish>
             <French>Afficher texte/info au lancé de grenade</French>
             <Hungarian>Jelez egy súgót vagy szöveget a gránát eldobásakor.</Hungarian>
-            <Italian>Mostra un suggerimento quando si lanciano granate</Italian>
+            <Italian>Mostra una notifica quando si lanciano granate</Italian>
             <Portuguese>Mostra um hint ou texto ao lançar uma granada</Portuguese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectPistol">
