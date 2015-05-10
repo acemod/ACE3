@@ -235,7 +235,7 @@ This module enables Mission Makers to specificly enable units to move a rallypoi
     <p>It's important to mention that this doesn't work for player who join during a mission (JIP = Join in progress). That's something we can't change because that's the way Bohemia has implemented their module framework.</p>
 </div>
 
-To enable JIP players to move rally points have a look at [ACE Rallypoints](./mission-tools.html#1-ace-rallypoints).
+To enable JIP players to move rally points have a look at [ACE Rallypoints](./mission-tools.html#1.-ace-rallypoints).
 
 
 ### 1.15 Respawn System
@@ -252,7 +252,7 @@ Respawn with the gear a player had just before his death.<br>
 ### 1.16 SwitchUnits System
 *Part of: ace_switchunits*
 
-The [SwitchUnits System](mission-tools.html#1-ace-switchunits) enables players to control certain AI units on the map. 
+The [SwitchUnits System](./mission-tools.html#2.-ace-switchunits) enables players to control certain AI units on the map. 
 
 **Settings:**
 
