@@ -6,8 +6,9 @@
  * Argument:
  * 0: Position (2D Position)
  *
- * Return value:
- * Easting and Northing as strings (Array)
+ * Return values:
+ * 0: Easting (String)
+ * 1: Northing (String)
  */
 
 // #define DEBUG_MODE_FULL
