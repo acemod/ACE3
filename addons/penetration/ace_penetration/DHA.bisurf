@@ -1,0 +1,22 @@
+//MIL-DTL-12560
+Density = 7.84;                 // g/cm3
+rough = 0.1;                    // ??????????????????          
+dust = 0;                       // ??????????????????    
+bulletPenetrability = 15;       // This is the vanilla penetration coefficient
+soundEnviron = "Empty";         // ??????????????????
+isWater = "false";              // lol
+friction = 0.7;                 // Physx engine friction
+restitution = 0.3;              // The amount of energy each particle retains after a collision. Typically this produces a bouncing effect.
+impact = "hitMetal";            // duh
+soundHit = "Metal";             // duh
+deflection = 2;                 // physx bounce deflecting property used
+
+// Extended ACE settings
+layers = 2;
+brinell_hardness = 712;
+yield_strength = -1;
+tensile_strength = 2200;
+
+brinell_hardness_2 = 500;
+yield_strength_2 = -1;
+tensile_strength_2 = 1640;

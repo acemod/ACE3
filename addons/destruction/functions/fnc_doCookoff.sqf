@@ -162,7 +162,7 @@ if((count _totalMagazines) > 0) then {
                                     if(_burnOutCountCum > 2) then {
                                         _vehicle setDamage 1;
                                     } else {
-                                        _burnoutStartTime = _vehicle getVariable "ace_burnOutStart";
+                                        _burnoutStartTime = _vehicle getVariable ["ace_burnOutStart", diag_tickTime];
                                         _time = diag_tickTime - _burnoutStartTime;
                                         if(_time > 3.5) then {
                                             _vehicle setDamage 1;
@@ -204,7 +204,7 @@ if((count _totalMagazines) > 0) then {
                                     // [ace_sys_frag_fnc_frag_trace, 0.05, [_bullet]] call cba_fnc_addPerFrameHandler;
                                 };
                                 if(alive _vehicle) then {
-                                    _burnoutStartTime = _vehicle getVariable "ace_burnOutStart";
+                                    _burnoutStartTime = _vehicle getVariable ["ace_burnOutStart", diag_tickTime];
                                     _time = diag_tickTime - _burnoutStartTime;
                                     if(_time > 3.5) then {
                                         _vehicle setDamage 1;
@@ -232,7 +232,7 @@ if((count _totalMagazines) > 0) then {
                                         if(_burnOutCountCum > 2) then {
                                             _vehicle setDamage 1;
                                         } else {
-                                            _burnoutStartTime = _vehicle getVariable "ace_burnOutStart";
+                                            _burnoutStartTime = _vehicle getVariable ["ace_burnOutStart", diag_tickTime];
                                             _time = diag_tickTime - _burnoutStartTime;
                                             if(_time > 3.5) then {
                                                 _vehicle setDamage 1;
@@ -248,22 +248,23 @@ if((count _totalMagazines) > 0) then {
                         _handled = true;
                         _rippleCount = floor(random _count) min 3;
                         _mag set[1, 0];
-                        [_vehicle, _ammo, _rippleCount, (_mag select 2)] spawn {
-                            _vehicle = _this select 0;
-                            _ammo = _this select 1;
-                            _count = _this select 2;
-                            _speed = _this select 3;
-                            _spacing = (random 0.5) max 0.1;
-                            _caliber = getNumber(configFile >> "CfgAmmo" >> _ammo >> "caliber");
-                            _fuseDistance = getNumber(configFile >> "CfgAmmo" >> _ammo >> "fuseDistance");
-                            _reportType = "small";
-                            _maxTypes = 4;
-                            if(_caliber > 2) then {
-                                _reportType = "large";
-                                _maxTypes = 3;
-                            };
-                            _bb = boundingBox _vehicle;
-                            for "_i" from 1 to _count do {
+                        [{
+                            PARAMS_1(_params);
+                            
+                            if(diag_tickTime > (_params select 4)) then {
+                                EXPLODE_6_PVT(_params,_vehicle,_ammo,_count,_speed,_nextRunTime,_iter_save);
+                            
+                                _spacing = (random 0.5) max 0.1;
+                                _caliber = getNumber(configFile >> "CfgAmmo" >> _ammo >> "caliber");
+                                _fuseDistance = getNumber(configFile >> "CfgAmmo" >> _ammo >> "fuseDistance");
+                                _reportType = "small";
+                                _maxTypes = 4;
+                                if(_caliber > 2) then {
+                                    _reportType = "large";
+                                    _maxTypes = 3;
+                                };
+                                _bb = boundingBox _vehicle;
+          
                                 _randX = ((_bb select 0) select 0)+(random (((_bb select 1) select 0)*2));
                                 _randY = ((_bb select 0) select 1)+(random (((_bb select 1) select 1)*2));
                                 _randZ = ((_bb select 0) select 2)+(random (((_bb select 1) select 2)*2));
@@ -276,9 +277,19 @@ if((count _totalMagazines) > 0) then {
                                 _bullet setPos _spawnPos;
                                 _bullet setVectorDir [0,0,0];
                                 _bullet setVelocity [0,0,-300];
-                                sleep _spacing+(-0.02+(random 0.04));
+                                
+                                _nextRunTime = diag_tickTime + _spacing+(-0.02+(random 0.04));
+                                
+                                _iter_save = _iter_save + 1;
+                                if(_iter_save >= _count) exitWith {
+                                    [(_this select 1)] call CBA_fnc_removePerFrameHandler;
+                                };
+                                
+                                _params set[4, _nextRunTime];
+                                _params set[5, _iter_save];
+                                _this set[0, _params];
                             };
-                        };
+                        }, [_vehicle, _ammo, _rippleCount, (_mag select 2), diag_tickTime, 0], 0] call CBA_fnc_addPerFrameHandler;
                     };
                     if(toLower(_simType) == "shotrocket" || {toLower(_simType) == "shotmissile"}) then {
                         _handled = true;
