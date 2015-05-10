@@ -3,7 +3,24 @@
 
 if (!hasInterface) exitWith {};
 
-//Add Keybinds:
+_conditonCode = {
+("ACE_microDAGR" in (items ace_player))
+};
+_toggleCode = {
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    [] call FUNC(openDisplay); //toggle display mode
+    true
+};
+_closeCode = {
+    if (GVAR(currentShowMode) == DISPLAY_MODE_CLOSED) exitWith {false};
+    [DISPLAY_MODE_CLOSED] call FUNC(openDisplay);
+    true
+};
+
+["Mdagr", "", _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
+
+
+/* //Add Keybinds:
 ["ACE3 Equipment", QGVAR(openGPS), (localize "STR_ACE_microdagr_toggleUnit"),
 {
     // canInteractWith (can use on map)
@@ -29,7 +46,7 @@ if (!hasInterface) exitWith {};
     true;
 },
 {false},
-[0xC7, [false, true, false]], false] call cba_fnc_addKeybind;  //CTRL + Home Key
+[0xC7, [false, true, false]], false] call cba_fnc_addKeybind;  //CTRL + Home Key */
 
 //Add Eventhandler:
 ["RangerfinderData", {_this call FUNC(recieveRangefinderData)}] call EFUNC(common,addEventHandler);

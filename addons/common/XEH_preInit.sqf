@@ -33,6 +33,8 @@ PREP(currentChannel);
 PREP(debug);
 PREP(debugModule);
 PREP(defineVariable);
+PREP(deviceKeyFindValidIndex);
+PREP(deviceKeyRegisterNew);
 PREP(disableAI);
 PREP(disableUserInput);
 PREP(displayIcon);
