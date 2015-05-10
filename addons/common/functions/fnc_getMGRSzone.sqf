@@ -4,11 +4,12 @@
  * Gets the current map's MGRS grid zone designator and 100km square.
  *
  * Argument:
- * None
+ * 0: Optional: Map name, if undefined the current map is used (String)
  *
  * Return value:
  * 0: Grid zone designator (String)
  * 1: 100km square (String)
+ * Writes return values to GVAR(MGRS_data) if run on the current map
  */
 
 #define DEBUG_MODE_FULL
@@ -16,32 +17,34 @@
 
 private ["_zone","_band","_GZD","_long","_lat","_UTM","_easting","_northing"];
 
-_long = getNumber (ConfigFile >> "CfgWorlds" >> worldName >> "longitude");
-_lat =  getNumber (ConfigFile >> "CfgWorlds" >> worldName >> "latitude");
+DEFAULT_PARAM(0,_map,worldName);
+
+_long = getNumber (ConfigFile >> "CfgWorlds" >> _map >> "longitude");
+_lat =  getNumber (ConfigFile >> "CfgWorlds" >> _map >> "latitude");
 
 // if (!isNil QEGVAR(weather,Latitude)) then {_lat = EGVAR(weather,Latitude)};
 
-if (worldName in ["Chernarus", "Bootcamp_ACR", "Woodland_ACR", "utes"]) then { _lat = 50; };
-if (worldName in ["Altis", "Stratis"]) then { _lat = 40; };
-if (worldName in ["Takistan", "Zargabad", "Mountains_ACR"]) then { _lat = 35; };
-if (worldName in ["Shapur_BAF", "ProvingGrounds_PMC"]) then { _lat = 35; };
-if (worldName in ["fallujah"]) then { _lat = 33; };
-if (worldName in ["fata", "Abbottabad"]) then { _lat = 30; };
-if (worldName in ["sfp_wamako"]) then { _lat = 14; };
-if (worldName in ["sfp_sturko"]) then { _lat = 56; };
-if (worldName in ["Bornholm"]) then { _lat = 55; };
-if (worldName in ["Imrali"]) then { _lat = 40; };
-if (worldName in ["Caribou"]) then { _lat = 68; };
-if (worldName in ["Namalsk"]) then { _lat = 65; };
-if (worldName in ["MCN_Aliabad"]) then { _lat = 36; };
-if (worldName in ["Clafghan"]) then { _lat = 34; };
-if (worldName in ["Sangin", "hellskitchen"]) then { _lat = 32; };
-if (worldName in ["Sara"]) then { _lat = 40; };
-if (worldName in ["reshmaan"]) then { _lat = 35; };
-if (worldName in ["Thirsk"]) then { _lat = 65; };
-if (worldName in ["lingor"]) then { _lat = -4; };
-if (worldName in ["Panthera3"]) then { _lat = 46; };
-if (worldName in ["Kunduz"]) then { _lat = 37; };
+if (_map in ["Chernarus", "Bootcamp_ACR", "Woodland_ACR", "utes"]) then { _lat = 50; };
+if (_map in ["Altis", "Stratis"]) then { _lat = 40; };
+if (_map in ["Takistan", "Zargabad", "Mountains_ACR"]) then { _lat = 35; };
+if (_map in ["Shapur_BAF", "ProvingGrounds_PMC"]) then { _lat = 35; };
+if (_map in ["fallujah"]) then { _lat = 33; };
+if (_map in ["fata", "Abbottabad"]) then { _lat = 30; };
+if (_map in ["sfp_wamako"]) then { _lat = 14; };
+if (_map in ["sfp_sturko"]) then { _lat = 56; };
+if (_map in ["Bornholm"]) then { _lat = 55; };
+if (_map in ["Imrali"]) then { _lat = 40; };
+if (_map in ["Caribou"]) then { _lat = 68; };
+if (_map in ["Namalsk"]) then { _lat = 65; };
+if (_map in ["MCN_Aliabad"]) then { _lat = 36; };
+if (_map in ["Clafghan"]) then { _lat = 34; };
+if (_map in ["Sangin", "hellskitchen"]) then { _lat = 32; };
+if (_map in ["Sara"]) then { _lat = 40; };
+if (_map in ["reshmaan"]) then { _lat = 35; };
+if (_map in ["Thirsk"]) then { _lat = 65; };
+if (_map in ["lingor"]) then { _lat = -4; };
+if (_map in ["Panthera3"]) then { _lat = 46; };
+if (_map in ["Kunduz"]) then { _lat = 37; };
 
 
 _UTM = [_long,_lat] call BIS_fnc_posDegToUTM;
@@ -72,7 +75,7 @@ _band = switch (true) do {
     case (_lat>8): {"P"};
     case (_lat>=0): {"N"};
 };
-if (worldName == "VR") then {_zone = 0; _band = "RV";};
+if (_map == "VR") then {_zone = 0; _band = "RV";};
 
 _GZD = format ["%1%2",_zone,_band];
 TRACE_3("",_zone,_band,_GZD);
@@ -142,4 +145,7 @@ TRACE_1("",_letterN);
 _grid100km = _letterE+_letterN;
 TRACE_1("",_grid100km);
 
+if (_map == worldName) then {
+    GVAR(MGRS_data) = [_GZD,_grid100km];
+};
 [_GZD,_grid100km]
