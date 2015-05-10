@@ -5,6 +5,7 @@
  *
  * Argument:
  * 0: Position (2D Position)
+ * 1: Return type; false for array of easting and northing, true for single string (Bool)
  *
  * Return values:
  * 0: Easting (String)
@@ -18,6 +19,7 @@
 // _pos = getPos player;
 // TRACE_1("",_pos);
 PARAMS_1(_pos);
+DEFAULT_PARAM(1,_return,false);
 
 private ["_posX","_posY","_northingReversed","_mapsize","_originGrid","_originArray","_length","_offsetX","_offsetY","_offsetPadding","_gridX","_gridY"];
 
@@ -33,7 +35,7 @@ if(isNil "cba_common_mapReversed") then {
     _northingReversed = cba_common_mapReversed;
 };
 
-_mapsize = [] call bis_fnc_mapSize;
+_mapsize = getNumber (ConfigFile >> "CfgWorlds" >> worldName >> "mapSize");
 TRACE_2("",_northingReversed,_mapsize);
 
 if (_northingReversed) then {
@@ -46,7 +48,11 @@ TRACE_1("",_originGrid);
 
 if (count _originGrid == 10) exitWith {
     TRACE_1("",mapGridPosition _pos);
-    [mapGridPosition _pos select [0,5], mapGridPosition _pos select [5,5]]
+    if (_return) then {
+        format ["%1%2",mapGridPosition _pos select [0,5], mapGridPosition _pos select [5,5]]
+    } else {
+        [mapGridPosition _pos select [0,5], mapGridPosition _pos select [5,5]]
+    };
 };
 
 _originArray = toArray _originGrid;
@@ -95,4 +101,8 @@ _posY = switch (count _posY) do {
 };
 TRACE_3("",mapGridPosition _pos,_posX,_posY);
 
-[_posX,_posY]
+if (_return) then {
+    _posX+_posY
+} else {
+    [_posX,_posY]
+};
