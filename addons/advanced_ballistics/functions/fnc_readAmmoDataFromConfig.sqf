@@ -50,11 +50,11 @@ if (isArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_ammoTempMuzzleVelocityShift
 };
 _muzzleVelocityTable = [];
 _barrelLengthTable = [];
-if (isArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_muzzleVelocityTable")) then {
-    _muzzleVelocityTable = getArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_muzzleVelocityTable");
+if (isArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_muzzleVelocities")) then {
+    _muzzleVelocityTable = getArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_muzzleVelocities");
 };
 if (isArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_barrelLengths")) then {
-    _barrelLengthTable = getArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_barrelLengthTable");
+    _barrelLengthTable = getArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_barrelLengths");
 };
 
 _result = [_airFriction, _caliber, _bulletLength, _bulletMass, _transonicStabilityCoef, _dragModel, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _ammoTempMuzzleVelocityShifts, _muzzleVelocityTable, _barrelLengthTable];
