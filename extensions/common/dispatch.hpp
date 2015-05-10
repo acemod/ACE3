@@ -108,7 +108,14 @@ namespace ace {
                             result.id = _messages.front().id;
                             result.message.resize(4096);
 
-                            LOG(TRACE) << "dispatch[threaded]:\t[" << _messages.front().command << "] { " << _messages.front().args.get() << " }";
+#ifdef _DEBUG
+                            if (_messages.front().command != "fetch_result") {
+                                LOG(TRACE) << "dispatch[threaded]:\t[" << _messages.front().command << "]";
+                                if (_messages.front().args.size() > 0) {
+                                    //    LOG(TRACE) << "\t{ " << _messages.front().args.get() << " }";
+                                }
+                            }
+#endif
                             dispatcher::call(_messages.front().command, _messages.front().args, result.message);
                             {
                                 std::lock_guard<std::mutex> lock(_results_lock);
@@ -119,6 +126,7 @@ namespace ace {
                         }
                     }
                 }
+                sleep(5);
             }
         }
         std::queue<dispatch_result> _results;

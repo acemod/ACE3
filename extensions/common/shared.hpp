@@ -23,6 +23,10 @@
 #define EXTENSION_RETURN() return;
 #endif
 
+#ifdef _WINDOWS
+#define sleep(x) Sleep(x)
+#endif
+
 namespace ace {
     template< typename T >
     struct array_deleter

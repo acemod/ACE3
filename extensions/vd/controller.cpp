@@ -73,6 +73,10 @@ namespace ace {
         bool controller::reset(const arguments &_args, std::string & result) {
             vehicles.clear();
 
+            if (!ace::model_collection::get().ready()) {
+                ace::model_collection::get().init();
+            }
+
             return true;
         }
 

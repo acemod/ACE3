@@ -5,7 +5,7 @@ PARAMS_1(_resultString);
 private["_values", "_result", "_strings", "_command", "_arguments"];
 TRACE_1("", _resultString);
 
-if(!(_resultString find ":") ) exitWith { nil };
+if( (_resultString find ":") < 0 ) exitWith { nil };
 
 _strings = [_resultString, ":"] call CBA_fnc_split;
 TRACE_1("", _strings);

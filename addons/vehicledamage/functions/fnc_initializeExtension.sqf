@@ -8,6 +8,11 @@ GVAR(ready) = false;
 "ace_dynload" callExtension format["load:%1", GVAR(extensionLibrary)];
 #endif
 
+if(GVAR(async)) then {
+    "async:" call FUNC(callExtension);
+};
+
+diag_log text format["[ACE] - Vehicle damage extension caching..."];
 "init:" call FUNC(callExtension);
 
 #ifdef ACE_VEHICLEDAMAGE_RENDER_DEBUG
@@ -18,8 +23,10 @@ GVAR(ready) = false;
     private["_result"];
     // Wait until the extension is ready
     _result = "ready" call FUNC(callExtension);
-    if(_result == "0") then {
+    if(!isNil "_result" && {_result == "0" } ) then {
+        [(_this select 1)] call CBA_fnc_removePerFrameHandler;
+        
         diag_log text format["[ACE] - Vehicle damage extension initialized"];
         GVAR(ready) = true;
     };
-}, 0, [] ] CBA_fnc_addPerFrameHandler;
+}, 0, [] ] call CBA_fnc_addPerFrameHandler;

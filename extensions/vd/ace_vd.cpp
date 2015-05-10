@@ -9,6 +9,7 @@
 #include "controller.hpp"
 #include "arguments.hpp"
 #include "ace_vd.hpp"
+#include <atomic>
 
 static char version[] = "1.0";
 
@@ -24,6 +25,7 @@ std::string get_command(const std::string & input) {
     return input.substr(0, cmd_end);
 }
 
+std::atomic_bool _threaded = false;
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     ZERO_OUTPUT();
@@ -46,31 +48,31 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     }
     if (command == "version") {
         result = version;
-    }
-    if (command == "echo") {
+    } else if (command == "echo") {
         result = function;
-    }
-
-    if (command == "ready") {
+    } else if (command == "async") {
+        _threaded = true;
+        result = "0";
+    } else if (command == "ready") {
         if (ace::model_collection::get().ready() && ace::model_collection::get().ready()) {
             result = "0";
         } else {
             result = "-1";
         }
-    }
-
-    /*************************/
-    // Real functionality goes here
-    if (command == "init") {                                                            // init:
-        if (!ace::model_collection::get().ready()) {
-            ace::model_collection::get().init();
-        }
+    } else if (command == "init") {                                                            // init:
         ace::vehicledamage::controller::get();
+        ace::vehicledamage::controller::get().call("reset", _args, result, _threaded);
         result = "0";
         EXTENSION_RETURN();
     } else {
-        ace::vehicledamage::controller::get().call(command, _args, result);
+        if (command == "fetch_result") {
+            ace::vehicledamage::controller::get().call(command, _args, result, false);
+        }
+        else {
+            ace::vehicledamage::controller::get().call(command, _args, result, _threaded);
+        }
     }
+
     if (result.length() > 0) {
         sprintf_s(output, outputSize, "%s", result.c_str());
     } 

@@ -2,11 +2,17 @@
 
 ADDON = false;
 
-// Core engine functions
+// Extension engine functions
 PREP(initializeExtension);
 PREP(monitorResultsPFH);
 PREP(parseResult);
 
+PREP(callExtension);
+GVAR(extensionLibrary) = "z\ace\ace_vd.dll";
+GVAR(async) = true;
+GVAR(ready) = false;
+
+// Core functionality
 PREP(registerVehicleDamageHandler);
 PREP(registerVehicleWithExtension);
 PREP(unregisterWithExtension);
@@ -15,8 +21,6 @@ PREP(dispatchHitPart);
 PREP(dispatchDamage);
 PREP(doHit);
 
-// Unique local vehicle ID
-GVAR(extensionLibrary) = "z\ace\ace_vd.dll";
 GVAR(vehicle_id) = 0;
 
 FUNC(_textVector) = {

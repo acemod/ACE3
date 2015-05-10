@@ -61,6 +61,25 @@ namespace ace {
             return _original;
         }
 
+        std::string create(const std::string & command) const {
+            std::stringstream ss;
+            ss << command << ":";
+
+            for (auto & v : _args) {
+                ss << v << ",";
+            }
+
+            // Remove the trailing ,
+            std::string result = ss.str();
+            result.erase(result.length());
+
+            return result;
+        }
+        static std::string create(const std::string & command, const arguments & args) {
+            return args.create(command);
+        }
+        
+
     protected:
         std::vector<std::string> _args;
         const std::string        &_original;
