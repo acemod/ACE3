@@ -610,6 +610,7 @@ See the make.cfg file for additional build options.
         key_name = str(key_name+"-"+commit_id)
     except:
         print_error("FAILED TO DETERMINE COMMIT ID.")
+        print_yellow("Verify that \GIT\BIN or \GIT\CMD is in your system path or user path.")
         commit_id = "NOGIT"
 
     cfg = configparser.ConfigParser();
