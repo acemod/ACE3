@@ -316,7 +316,7 @@ if (hasInterface) then {
 ACE_time = diag_tickTime;
 ACE_realTime = diag_tickTime;
 ACE_virtualTime = diag_tickTime;
-ACE_tickTime = diag_tickTime;
+ACE_diagTime = diag_tickTime;
 ACE_gameTime = time;
 
 PREP(timePFH);

@@ -7,9 +7,9 @@ _lastRealTime = ACE_realTime;
 _lastGameTime = ACE_gameTime;
 
 ACE_gameTime = time;
-ACE_tickTime = diag_tickTime;
+ACE_diagTime = diag_tickTime;
 
-_delta = ACE_tickTime - _lastRealTime;
+_delta = ACE_diagTime - _lastRealTime;
 if(ACE_gameTime <= _lastGameTime) then {
     ACE_paused = true;
     // Game is paused or not running

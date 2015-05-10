@@ -83,7 +83,7 @@
 #define HASHLIST_PUSH(hashList, value)            ([hashList, value, __FILE__, __LINE__] call EFUNC(common,hashListPush))
 
 // Time functions for accuracy per frame
-#define ACE_tickTime (ACE_tickTime + (diag_tickTime - ACE_tickTime))
+#define ACE_tickTime (ACE_diagTime + (diag_tickTime - ACE_diagTime))
 
 
 #include "script_debug.hpp"
