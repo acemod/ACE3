@@ -23,13 +23,13 @@ private ["_posX","_posY","_northingReversed","_mapsize","_originGrid","_originAr
 // _northingReversed = [] call CBA_fnc_northingReversed;
 _northingReversed = false;
 if(isNil "cba_common_mapReversed") then {
-	_test = getNumber (configFile >> "CfgWorlds" >> worldName >> "Grid" >> "Zoom1" >> "stepY");
-	if(_test > 0) then {
-		_northingReversed = true;
-	};
-	cba_common_mapReversed = _northingReversed;
+    _test = getNumber (configFile >> "CfgWorlds" >> worldName >> "Grid" >> "Zoom1" >> "stepY");
+    if(_test > 0) then {
+        _northingReversed = true;
+    };
+    cba_common_mapReversed = _northingReversed;
 } else {
-	_northingReversed = cba_common_mapReversed;
+    _northingReversed = cba_common_mapReversed;
 };
 
 _mapsize = [] call bis_fnc_mapSize;
