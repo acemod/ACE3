@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="laser">
         <Key ID="STR_ACE_laser_laserCode">
@@ -11,6 +12,7 @@
             <Hungarian>Lézerkód</Hungarian>
             <Spanish>Código del láser</Spanish>
             <Czech>Laser kód</Czech>
+            <Italian>Codice laser</Italian>
         </Key>
         <Key ID="STR_ACE_laser_laserCodeUp">
             <English>Laser - Cycle Code Up</English>
@@ -22,6 +24,7 @@
             <Hungarian>Lézer - kódciklus növelése</Hungarian>
             <Spanish>Láser - Aumentar código</Spanish>
             <Czech>Laser - Kód +</Czech>
+            <Italian>Codice laser +</Italian>
         </Key>
         <Key ID="STR_ACE_laser_laserCodeDown">
             <English>Laser - Cycle Code Down</English>
@@ -33,6 +36,7 @@
             <Hungarian>Lézer - kódciklus csökkentése</Hungarian>
             <Spanish>Láser - Reducir código</Spanish>
             <Czech>Laser - Kód -</Czech>
+            <Italian>Codice laser -</Italian>
         </Key>
     </Package>
 </Project>

@@ -10,7 +10,7 @@
             <Polish>MicroDAGR GPS</Polish>
             <French>MicroDAGR GPS</French>
             <Hungarian>MicroDAGR GPS</Hungarian>
-            <Italian>MicroDAGR GPS</Italian>
+            <Italian>GPS MicroDAGR</Italian>
             <Portuguese>GPS MicroDAGR</Portuguese>
         </Key>
         <Key ID="STR_ACE_microdagr_itemDescription">
@@ -22,7 +22,7 @@
             <French>Récepteur GPS MicroDAGR</French>
             <Czech>MicroDAGR pokročílá GPS příjímač</Czech>
             <Hungarian>MicroDAGR fejlett GPS vevőegység</Hungarian>
-            <Italian>MicroDAGR ricevitore GPS avanzato</Italian>
+	    <Italian>Ricevitore GPS avanzato MicroDAGR</Italian>
             <Portuguese>Recepitor GPS avançado MicroDAGR</Portuguese>
         </Key>
         <Key ID="STR_ACE_microdagr_settingUseMils">
@@ -46,7 +46,7 @@
             <French>Mils</French>
             <Czech>Mils</Czech>
             <Hungarian>Mil</Hungarian>
-            <Italian>Miglia</Italian>
+	    <Italian>Mils</Italian>
             <Portuguese>Mils:</Portuguese>
         </Key>
         <Key ID="STR_ACE_microdagr_settingShowWP">
