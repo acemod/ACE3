@@ -3,10 +3,10 @@
 PARAMS_2(_args,_handle);
 private["_result"];
 
-_result = "ace_vd" callExtension "fetch_result:1";
+_result = "fetch_result:1" call FUNC(callExtension);;
 while { _result != "" && {_result != "-1"} } do {
     TRACE_1("", _result);
-    _result = "ace_vd" callExtension "fetch_result:1";
+    _result = "fetch_result:1" call FUNC(callExtension);;
     
     _resultArgs = [_result] call FUNC(parseResult);
     if(!isNil "_resultArgs") then {

@@ -49,5 +49,5 @@ _command = format["hit:%1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,%16",
                             VECTOR_TEXT(_projectileVelocity)
                 ];   
 TRACE_1("", _command);   
-_result = "ace_vd" callExtension _command;
+_result = _command call FUNC(callExtension);
 TRACE_1("", _result);             

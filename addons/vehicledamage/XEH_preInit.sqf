@@ -16,6 +16,7 @@ PREP(dispatchDamage);
 PREP(doHit);
 
 // Unique local vehicle ID
+GVAR(extensionLibrary) = "z\ace\ace_vd.dll";
 GVAR(vehicle_id) = 0;
 
 FUNC(_textVector) = {
