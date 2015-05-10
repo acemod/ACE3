@@ -21,8 +21,8 @@ PARAMS_1(_show_prompt);
 
 private["_land_vehicle","_air_vehicle"];
 
-_land_vehicle = (vehicle player) isKindOf "LandVehicle";
-_air_vehicle = (vehicle player) isKindOf "Air";
+_land_vehicle = (vehicle ACE_player) isKindOf "LandVehicle";
+_air_vehicle = (vehicle ACE_player) isKindOf "Air";
 
 if (!_land_vehicle && !_air_vehicle) exitWith {
     [GVAR(viewDistanceOnFoot),_show_prompt] call FUNC(changeViewDistance);
