@@ -66,6 +66,7 @@ PREP(getFirstTerrainIntersection);
 PREP(getForceWalkStatus);
 PREP(getGunner);
 PREP(getInPosition);
+PREP(getMapGridFromPos);
 PREP(getMarkerType);
 PREP(getName);
 PREP(getNumberFromMissionSQM);
