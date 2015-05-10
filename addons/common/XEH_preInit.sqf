@@ -21,6 +21,7 @@ PREP(canInteract);
 PREP(canInteractWith);
 PREP(canUseWeapon);
 PREP(changeProjectileDirection);
+PREP(checkFiles);
 PREP(checkPBOs);
 PREP(claim);
 PREP(closeDialogIfTargetMoves);
