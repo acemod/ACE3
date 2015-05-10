@@ -15,12 +15,6 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 10000;
             };
-            class moduleTerrainGridLimit {
-                displayName = "Terrain Grid Limit";
-                description = "Sets the limit for how high clients can raise their terrain grid (<= 50)";
-                typeName = "NUMBER";
-                defaultValue = 50; // range is 3.125 - 50 Reference: https://community.bistudio.com/wiki/setTerrainGrid
-            };
         };
     };
 };
