@@ -1,3 +1,17 @@
+/*
+ * Author: Bohemia Interactive
+ * Module function for remote controlling units as zeus
+ * Edited to remove global wind sound
+ *
+ * Arguments:
+ * 0: The logic object <OBJECT>
+ *
+ * Return Value:
+ * nil
+ *
+ * Public: No
+ */
+
 _logic = _this select 0;
 _units = _this select 1;
 _activated = _this select 2;

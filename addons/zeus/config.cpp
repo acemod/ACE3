@@ -16,7 +16,17 @@ class CfgPatches {
 
 class CfgVehicles {
     class Module_F;
+    class ModuleEmpty_F;
     class ModuleCurator_F: Module_F {
         function = QUOTE(FUNC(bi_moduleCurator));
+    };
+    class ModuleMine_F: ModuleEmpty_F {
+        function = QUOTE(FUNC(bi_moduleMine));
+    };
+    class ModuleOrdnance_F: Module_F {
+        function = QUOTE(FUNC(bi_moduleProjectile));
+    };
+    class ModuleRemoteControl_F: Module_F {
+        function = QUOTE(FUNC(bi_moduleRemoteControl));
     };
 };
