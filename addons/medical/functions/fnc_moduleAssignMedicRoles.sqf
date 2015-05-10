@@ -15,7 +15,7 @@
 
 #include "script_component.hpp"
 
-private ["_logic","_setting","_objects", "_list", "_splittedList", "_nilCheckPassedList", "_parsedList"];
+private ["_logic","_list","_splittedList","_nilCheckPassedList","_objects","_setting"];
 _logic = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 
 if (!isNull _logic) then {
@@ -35,20 +35,9 @@ if (!isNull _logic) then {
     }foreach _splittedList;
 
     _list = "[" + _nilCheckPassedList + "]";
-    _parsedList = [] call compile _list;
-    _setting = _logic getvariable ["role",0];
-    _objects = synchronizedObjects _logic;
-    if (!(_objects isEqualTo []) && _parsedList isEqualTo []) then {
-        {
-            if (!isnil "_x") then {
-                   if (typeName _x == typeName objNull) then {
-                    if (local _x) then {
-                        _x setvariable [QGVAR(medicClass), _setting, true];
-                    };
-                };
-            };
-        }foreach _objects;
-    };
+    _objects = [] call compile _list;
+    _setting = _logic getvariable ["enabled", false];
+    _objects append (synchronizedObjects _logic);
     {
         if (!isnil "_x") then {
                if (typeName _x == typeName objNull) then {
@@ -57,7 +46,7 @@ if (!isNull _logic) then {
                 };
             };
         };
-    }foreach _parsedList;
- };
+    }foreach _objects;
+};
 
 true

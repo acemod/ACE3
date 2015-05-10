@@ -7,6 +7,11 @@ class CfgVehicles {
     class Module_F: Logic {
         class ArgumentsBaseUnits {
         };
+        class ModuleDescription {
+            class AnyPerson;
+            class AnyStaticObject;
+            class AnyVehicle;
+        };
     };
     class ACE_Module;
     // TODO localization for all the modules
@@ -309,9 +314,14 @@ class CfgVehicles {
                 };
             };
         };
-        class ModuleDescription {
-            description = "Assigns the ACE medic class to a unit";
-            sync[] = {};
+        class ModuleDescription: ModuleDescription {
+            description = "Assigns the ACE medic class to all synchronized/listed units";
+            sync[] = {"AnyPerson"};
+
+            class AnyPerson: AnyPerson {
+                description = "Unit to be assigned as a medic";
+                optional = 1;
+            };
         };
     };
 
@@ -329,13 +339,13 @@ class CfgVehicles {
         class Arguments {
             class EnableList {
                 displayName = "List";
-                description = "List of vehicles that will be classified as medical vehicle, separated by commas.";
+                description = "List of vehicles to be classified as medical vehicles, separated by commas.";
                 defaultValue = "";
                 typeName = "STRING";
             };
             class enabled {
                 displayName = "Is Medical Vehicle";
-                description = "Whatever or not the objects in the list will be a medical vehicle.";
+                description = "Whether or not the objects in the list will be medical vehicles.";
                 typeName = "NUMBER";
                 class values {
                     class none {
@@ -350,9 +360,14 @@ class CfgVehicles {
                 };
             };
         };
-        class ModuleDescription {
-            description = "Assigns the ACE medic class to a unit";
-            sync[] = {};
+        class ModuleDescription: ModuleDescription {
+            description = "Assigns the ACE medic class to all synchronized/listed vehicles";
+            sync[] = {"AnyVehicle"};
+
+            class AnyVehicle: AnyVehicle {
+                description = "Vehicle to be assigned as a medical vehicle";
+                optional = 1;
+            };
         };
     };
     class ACE_moduleAssignMedicalFacility: Module_F {
@@ -373,9 +388,9 @@ class CfgVehicles {
                 typeName = "BOOL";
             };
         };
-        class ModuleDescription {
+        class ModuleDescription: ModuleDescription {
             description = "Defines an object as a medical facility for CMS. This allows for more advanced treatments. Can be used on buildings and vehicles. ";
-            sync[] = {};
+            sync[] = {"AnyStaticObject","AnyVehicle"};
         };
     };
 
