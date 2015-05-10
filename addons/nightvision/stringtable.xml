@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="NightVision">
         <Key ID="STR_ACE_NightVision_NVG_Gen1">
@@ -95,6 +96,7 @@
             <French>JVN (Large)</French>
             <Hungarian>Éjjellátó szemüveg (széles látószögű)</Hungarian>
             <Portuguese>Óculos de visão noturna (Panorâmico)</Portuguese>
+            <Italian>Occhiali notturni (Larghi)</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>

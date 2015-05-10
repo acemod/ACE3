@@ -1271,6 +1271,7 @@
             <Hungarian>Elsősegélycsomag, terepen való sebvarráshoz és haladó ellátáshoz</Hungarian>
             <Portuguese>Kit de primeiros socorros para sutura ou tratamentos avançados</Portuguese>
             <Czech>Osobní lékárnička obsahuje zdravotnický materiál umožňující šití a pokročilejší ošetřování raněných v poli  </Czech>
+            <Italian>Pronto soccorso personale da campo per mettersi i punti o per trattamenti avanzati.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Use_Aid_Kit">
             <English>Use Personal Aid Kit</English>
@@ -1282,6 +1283,7 @@
             <Hungarian>Elsősegélycsomag használata</Hungarian>
             <Portuguese>Usar o kit de primeiros socorros</Portuguese>
             <Czech>Použít osobní lékárničku</Czech>
+            <Italian>Usa il pronto soccorso personale</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_SurgicalKit_Display">
             <English>Surgical Kit</English>
@@ -1777,7 +1779,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_lostBlood">
             <English>He's lost some blood</English>
-            <Italian>Ha perso molto sangue</Italian>
+            <Italian>Ha perso sangue</Italian>
             <Spanish>Ha perdido un poco de sangre</Spanish>
             <Russian>Есть кровопотеря</Russian>
             <German>Er hat etwas Blut verloren</German>
@@ -1797,6 +1799,7 @@
             <French>Il a perdu beaucoup de sang</French>
             <Czech>Ztratil hodně krve</Czech>
             <Portuguese>Ele perdeu muito sangue</Portuguese>
+            <Italian>Ha perso molto sangue</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_noBloodloss">
             <English>He hasn't lost blood</English>
@@ -2240,6 +2243,7 @@
             <Czech>Styl menu (Zdravotní)</Czech>
             <Portuguese>Estilo do menu (Médico)</Portuguese>
             <Hungarian>Menü stílusa (Orvosi)</Hungarian>
+            <Italian>Stile del menù (medico)</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_menuTypeDescription">
             <English>Select the type of menu you prefer; default 3d selections or radial.</English>
@@ -2251,6 +2255,7 @@
             <Portuguese>Selecione o tipo de menu que você prefere; padrão seleções 3d ou radial.</Portuguese>
             <Hungarian>Válaszd ki a neked megfelelő menüt: Alapértelmezett 3D válogatás, vagy kerek.</Hungarian>
             <Czech>Zvolte typ menu: základní 3D výběr nebo kruhový</Czech>
+            <Italian>Seleziona il tipo di menù che preferisci: selezione 3d predefinita o radiale.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_useSelection">
             <English>Selections (3d)</English>
@@ -2262,6 +2267,7 @@
             <Portuguese>Seleção (3d)</Portuguese>
             <Hungarian>Választékok (3D)</Hungarian>
             <Czech>3D výběr</Czech>
+            <Italian>Selezione (3D)</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_useRadial">
             <English>Radial</English>
@@ -2273,6 +2279,7 @@
             <Portuguese>Radial</Portuguese>
             <Hungarian>Kerek</Hungarian>
             <Czech>Kruhový</Czech>
+            <Italian>Radiale</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion">
             <English>Scrape</English>
@@ -2680,6 +2687,7 @@
             <Spanish>Tratando ...</Spanish>
             <Portuguese>Tratando...</Portuguese>
             <Czech>Ošetřuji ...</Czech>
+            <Italian>Curando ...</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_RemovingTourniquet">
             <English>Removing Tourniquet ...</English>
@@ -2691,6 +2699,7 @@
             <Hungarian>Érszorító eltávolítása ...</Hungarian>
             <Czech>Sundavám škrtidlo ...</Czech>
             <Russian>Снятие жгута ...</Russian>
+            <Italian>Togliendo il laccio emostatico ...</Italian>
         </Key>
     </Package>
 </Project>

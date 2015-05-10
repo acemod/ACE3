@@ -324,7 +324,7 @@
             <French>Rejeter requête</French>
             <Hungarian>Kérések elutasítása</Hungarian>
             <Portuguese>Rejeitar pedido</Portuguese>
-      <Italian>Rifiuta la richiesta</Italian>
+            <Italian>Rifiuta la richiesta</Italian>
         </Key>
         <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
             <English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
@@ -457,7 +457,6 @@
             <French>Banane</French>
             <Hungarian>Banán</Hungarian>
             <Portuguese>Banana</Portuguese>
-	    <Italian>Banana</Italian>
         </Key>
         <Key ID="STR_ACE_Common_bananaDescr">
             <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
