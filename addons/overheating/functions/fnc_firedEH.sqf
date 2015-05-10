@@ -36,16 +36,19 @@ if (_unit == ACE_player) then {
 _variableName = format [QGVAR(%1), _weapon];
 _scaledTemperature = 0 max (((_unit getVariable [_variableName, [0,0]]) select 0) / 1000) min 1;
 
-// Smoke SFX, beginning at TEMP 0.15
-private "_intensity";
+systemChat str(_scaledTemperature);
 
-_intensity = (_scaledTemperature - 0.2) * 1.25;
-if (_intensity > 0) then {
-    private ["_position", "_direction"];
+if (time > (_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40 && _scaledTemperature > 0.1) then {
+    _unit setVariable [QGVAR(lastDrop), time];
 
-    _position = position _projectile;
+    private ["_position", "_direction","_intensity"];
+
     _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;
+    _position = (position _projectile) vectorAdd (_direction vectorMultiply (4*(random 0.30)));
 
+    /*
+    // Refract SFX, beginning at temp 100º
+    _intensity = (_scaledTemperature - 0.10) / 0.90;
     drop [
         "\A3\data_f\ParticleEffects\Universal\Refract",
         "",
@@ -67,24 +70,26 @@ if (_intensity > 0) then {
         "",
         ""
     ];
+    */
 
-    _intensity = (_scaledTemperature - 0.5) * 2;
+    // Smoke SFX, beginning at temp 150º
+    _intensity = (_scaledTemperature - 0.15) / 0.85;
     if (_intensity > 0) then {
         drop [
             ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 12, 1, 16],
             "",
             "Billboard",
-            1,
+            10,
             1.2,
             _position,
-            [0,0,0.25],
-            0,
+            [0,0,0.15],
+            100 + random 80,
             1.275,
             1,
             0.025,
-            [0.28,0.33,0.37],
-            [[0.6,0.6,0.6,0.3*_intensity]],
-            [0.2],
+            [0.15,0.43],
+            [[0.6,0.6,0.6,0.5*_intensity],[0.2,0.2,0.2,0.15*_intensity]],
+            [0,1],
             1,
             0.04,
             "",
