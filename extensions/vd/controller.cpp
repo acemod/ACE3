@@ -58,14 +58,14 @@ namespace ace {
         controller::~controller() { }
 
         bool controller::get_ready(const arguments &_args, std::string & result) {
-            result = "1";
+            result = "0";
 
             if (!ace::model_collection::get().ready()) {
-                result = "0";
+                result = "-1";
             }
 
             if (!_ready)
-                result = "0";
+                result = "-1";
 
             return true;
         }

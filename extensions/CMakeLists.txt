@@ -30,7 +30,7 @@ include_directories("common")
 
 if(USE_BULLET)
     add_definitions(-DUSE_BULLET)
-    include_directories(BEFORE "lib/bullet3/include")
+    include_directories(BEFORE "lib/bullet3/src")
     link_directories("lib/bullet3/lib")
     set(BULLET_LIBS_DEBUG "BulletCollision_vs2010_debug.lib;LinearMath_vs2010_debug.lib;BulletDynamics_vs2010_debug.lib")
     set(BULLET_LIBS "BulletCollision_vs2010.lib;LinearMath_vs2010.lib;BulletDynamics_vs2010.lib")

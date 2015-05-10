@@ -3,8 +3,9 @@
 ADDON = false;
 
 // Core engine functions
-
+PREP(initializeExtension);
 PREP(monitorResultsPFH);
+PREP(parseResult);
 
 PREP(registerVehicleDamageHandler);
 PREP(registerVehicleWithExtension);
@@ -13,12 +14,6 @@ PREP(unregisterWithExtension);
 PREP(dispatchHitPart);
 PREP(dispatchDamage);
 PREP(doHit);
-
-// Extension calling functionality
-PREP(initializeExtension);
-
-// VD specific effects  middlemen
-
 
 // Unique local vehicle ID
 GVAR(vehicle_id) = 0;

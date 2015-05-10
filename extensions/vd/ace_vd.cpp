@@ -51,6 +51,14 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
         result = function;
     }
 
+    if (command == "ready") {
+        if (ace::model_collection::get().ready() && ace::model_collection::get().ready()) {
+            result = "0";
+        } else {
+            result = "-1";
+        }
+    }
+
     /*************************/
     // Real functionality goes here
     if (command == "init") {                                                            // init:
@@ -58,7 +66,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
             ace::model_collection::get().init();
         }
         ace::vehicledamage::controller::get();
-        result = "1";
+        result = "0";
         EXTENSION_RETURN();
     } else {
         ace::vehicledamage::controller::get().call(command, _args, result);
