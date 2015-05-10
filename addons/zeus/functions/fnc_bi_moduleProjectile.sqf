@@ -2,7 +2,7 @@
  * Author: Bohemia Interactive
  * Module function for spawning projectiles
  * Used by Curator artillery modules etc
- * Edited to remove radio warning (also retiained ballistics support)
+ * Edited to remove radio warning (also retains ballistics support added by ACE_Modules)
  *
  * Arguments:
  * 0: The logic object <OBJECT>
