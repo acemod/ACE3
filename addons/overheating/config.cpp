@@ -28,5 +28,9 @@ class ACE_Settings {
         displayName = "$STR_ACE_overheating_SettingDisplayTextName";
         description = "$STR_ACE_overheating_SettingDisplayTextDesc";
     };
+    class GVAR(enableRefractEffect) {
+        typeName = "BOOL";
+        value = 0;
+    };
 };
 

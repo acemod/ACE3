@@ -46,31 +46,31 @@ if (time > (_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40 && _scaledTempera
     _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;
     _position = (position _projectile) vectorAdd (_direction vectorMultiply (4*(random 0.30)));
 
-    /*
-    // Refract SFX, beginning at temp 100º
-    _intensity = (_scaledTemperature - 0.10) / 0.90;
-    drop [
-        "\A3\data_f\ParticleEffects\Universal\Refract",
-        "",
-        "Billboard",
-        1.1,
-        2,
-        _position,
-        _direction,
-        1,
-        1.2,
-        1.0,
-        0.1,
-        [0.1,0.15],
-        [[0.06,0.06,0.06,0.32*_scaledTemperature], [0.3,0.3,0.3,0.28*_scaledTemperature], [0.3,0.3,0.3,0.25*_scaledTemperature], [0.3,0.3,0.3,0.22*_scaledTemperature], [0.3,0.3,0.3,0.1*_scaledTemperature]],
-        [1,0],
-        0.1,
-        0.05,
-        "",
-        "",
-        ""
-    ];
-    */
+    if (GVAR(enableRefractEffect)) then {
+        // Refract SFX, beginning at temp 100º and maxs out at 500º
+        _intensity = (_scaledTemperature - 0.10) / 0.40 min 1;
+        drop [
+            "\A3\data_f\ParticleEffects\Universal\Refract",
+            "",
+            "Billboard",
+            10,
+            2,
+            _position,
+            _direction,
+            0,
+            1.2,
+            1.0,
+            0.1,
+            [0.10,0.25],
+            [[0.6,0.6,0.6,0.3*_intensity],[0.2,0.2,0.2,0.05*_intensity]],
+            [0,1],
+            0.1,
+            0.05,
+            "",
+            "",
+            ""
+        ];
+    };
 
     // Smoke SFX, beginning at temp 150º
     _intensity = (_scaledTemperature - 0.15) / 0.85;
