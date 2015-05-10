@@ -9,10 +9,11 @@
  * Return value:
  * 0: Grid zone designator (String)
  * 1: 100km square (String)
+ * 2: GZD + 100km sq. as a single string (String)
  * Writes return values to GVAR(MGRS_data) if run on the current map
  */
 
-#define DEBUG_MODE_FULL
+// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 private ["_zone","_band","_GZD","_long","_lat","_UTM","_easting","_northing"];
@@ -25,7 +26,7 @@ _lat =  getNumber (ConfigFile >> "CfgWorlds" >> _map >> "latitude");
 // if (!isNil QEGVAR(weather,Latitude)) then {_lat = EGVAR(weather,Latitude)};
 
 if (_map in ["Chernarus", "Bootcamp_ACR", "Woodland_ACR", "utes"]) then { _lat = 50; };
-if (_map in ["Altis", "Stratis"]) then { _lat = 40; };
+if (_map in ["Altis", "Stratis"]) then { _lat = 35; };
 if (_map in ["Takistan", "Zargabad", "Mountains_ACR"]) then { _lat = 35; };
 if (_map in ["Shapur_BAF", "ProvingGrounds_PMC"]) then { _lat = 35; };
 if (_map in ["fallujah"]) then { _lat = 33; };
@@ -50,9 +51,10 @@ if (_map in ["Kunduz"]) then { _lat = 37; };
 _UTM = [_long,_lat] call BIS_fnc_posDegToUTM;
 _easting = _UTM select 0;
 _northing = _UTM select 1;
-_zone = _UTM select 2;
+// _zone = _UTM select 2;
 TRACE_4("",_UTM,_easting,_northing,_zone);
 
+/*
 _band = switch (true) do {
     case (_lat<-72): {"C"};
     case (_lat<-64): {"D"};
@@ -74,6 +76,16 @@ _band = switch (true) do {
     case (_lat>16): {"Q"};
     case (_lat>8): {"P"};
     case (_lat>=0): {"N"};
+};
+*/
+_zone = 1 + (floor ((_long + 180) / 6));
+_band = "Z";
+if (_lat <= -80) then {
+    _band = "A";
+} else {
+    if (_lat < 84) then {
+        _band = "CDEFGHJKLMNPQRSTUVWXX" select [(floor ((_lat / 8) + 10)), 1];
+    };
 };
 if (_map == "VR") then {_zone = 0; _band = "RV";};
 
@@ -146,6 +158,6 @@ _grid100km = _letterE+_letterN;
 TRACE_1("",_grid100km);
 
 if (_map == worldName) then {
-    GVAR(MGRS_data) = [_GZD,_grid100km];
+    GVAR(MGRS_data) = [_GZD,_grid100km,_GZD+_grid100km];
 };
-[_GZD,_grid100km]
+[_GZD,_grid100km,_GZD+_grid100km]
