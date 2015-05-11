@@ -60,6 +60,14 @@ namespace ace {
                 }
                 _BatchEffect->SetView(XMLoadFloat4x4(&_View));
                 _BatchEffect->SetProjection(XMLoadFloat4x4(&_Projection));
+
+                CommonStates states(_pd3dDevice);
+                _pImmediateContext->OMSetBlendState(states.Opaque(), nullptr, 0xFFFFFFFF);
+                _pImmediateContext->OMSetDepthStencilState(states.DepthNone(), 0);
+                _pImmediateContext->RSSetState(states.CullCounterClockwise());
+
+                _BatchEffect->Apply(_pImmediateContext);
+                _pImmediateContext->IASetInputLayout(_pBatchInputLayout);
             }
 
             bool penetration_display::step(void) {

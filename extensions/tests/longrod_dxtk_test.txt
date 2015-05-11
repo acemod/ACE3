@@ -1,6 +1,6 @@
 init:
-#debug_render:
-#register_vehicle:\A3\Armor_F_EPB\MBT_03\MBT_03_cannon_F.p3d,2,4050.18;3802.55;5.075
+debug_render:
+register_vehicle:\A3\Armor_F_EPB\MBT_03\MBT_03_cannon_F.p3d,2,4050.18;3802.55;5.075
 #hit:2,\A3\Armor_F_EPB\MBT_03\MBT_03_cannon_F.p3d,[],2,Sh_120mm_APFSDS,650,27,19100,50,10,708.602;235.609;-85.6468,-2.1748;0.139648;-1.35955,0.942743;0.31346;-0.113925,-1;6.1914e-007;0.000794772,-2.17383;0.139404;-1.32366,708.602;235.609;-85.6468
 #register_vehicle:\a3\structures_f\mil\BagFence\BagFence_Long_F.p3d,0,4050.18;3802.55;5.075
 #hit:0,A3\Structures_F\Mil\BagFence\BagFence_Long_F.p3d,[],0,B_65x39_Caseless,1295,264,11300,0,0,-16.5091;729.003;-177.406,0.2854;-0.239258;0.0619297,-0.0219989;0.971421;-0.236342,0.00232643;-0.999479;0.0321913

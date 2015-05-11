@@ -20,15 +20,16 @@ namespace ace {
 			stream_.read((char *)&min_phase, sizeof(float));
 			stream_.read((char *)&max_phase, sizeof(float));
 
-
-			
-
-            
-			stream_.read((char *)&junk, sizeof(uint32_t));
-			stream_.read((char *)&junk2, sizeof(uint32_t));
+			//stream_.read((char *)&junk, sizeof(uint32_t));
+			//stream_.read((char *)&junk2, sizeof(uint32_t));
 			stream_.read((char *)&source_address, sizeof(uint32_t));
 
+            float buffer[4];
+            stream_.read((char *)buffer, sizeof(float) * 4);
+            return;
 
+            // THIS IS ALL WRONG
+            // ARMA3 HAS FIXED 4-FLOAT TRANSFORMS
 
 			switch (type) {
 				// rotations
