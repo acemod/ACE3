@@ -3,63 +3,51 @@ class CfgVehicles {
   class ACE_ModuleSwitchUnits: Module_F {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
-    displayName = "SwitchUnits System";
+    displayName = "$STR_ACE_SwitchUnits_Module_DisplayName";
     function = FUNC(module);
     scope = 2;
     isGlobal = 1;
     icon = QUOTE(PATHTOF(UI\Icon_Module_SwitchUnits_ca.paa));
     class Arguments {
       class SwitchToWest {
-        displayName = "Switch to West?";
-        description = "Allow switching to west units?";
+        displayName = "$STR_ACE_SwitchUnits_SwitchToWest_DisplayName";
+        description = "$STR_ACE_SwitchUnits_SwitchToWest_Description";
         typeName = "BOOL";
-        class values {
-          class Yes {name = "Yes"; value = 1;};
-          class No {default = 1; name = "No"; value = 0;};
-        };
+        defaultValue = 0;
       };
       class SwitchToEast {
-        displayName = "Switch to East?";
-        description = "Allow switching to east units?";
+        displayName = "$STR_ACE_SwitchUnits_SwitchToEast_DisplayName";
+        description = "$STR_ACE_SwitchUnits_SwitchToEast_Description";
         typeName = "BOOL";
-        class values {
-          class Yes {name = "Yes"; value = 1;};
-          class No {default = 1; name = "No"; value = 0;};
-        };
+        defaultValue = 0;
       };
       class SwitchToIndependent {
-        displayName = "Switch to Independent?";
-        description = "Allow switching to independent units?";
+        displayName = "$STR_ACE_SwitchUnits_SwitchToIndependent_DisplayName";
+        description = "$STR_ACE_SwitchUnits_SwitchToIndependent_Description";
         typeName = "BOOL";
-        class values {
-          class Yes {name = "Yes"; value = 1;};
-          class No {default = 1; name = "No"; value = 0;};
-        };
+        defaultValue = 0;
       };
       class SwitchToCivilian {
-        displayName = "Switch to Civilian?";
-        description = "Allow switching to civilian units?";
+        displayName = "$STR_ACE_SwitchUnits_SwitchToCivilian_DisplayName";
+        description = "$STR_ACE_SwitchUnits_SwitchToCivilian_Description";
         typeName = "BOOL";
-        class values {
-          class Yes {name = "Yes"; value = 1;};
-          class No {default = 1; name = "No"; value = 0;};
-        };
+        defaultValue = 0;
       };
       class EnableSafeZone {
-        displayName = "Enable Safe Zone?";
-        description = "Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone.";
+        displayName = "$STR_ACE_SwitchUnits_EnableSafeZone_DisplayName";
+        description = "$STR_ACE_SwitchUnits_EnableSafeZone_Description";
         typeName = "BOOL";
-        class values {
-          class Yes {default = 1; name = "Yes"; value = 1;};
-          class No {name = "No"; value = 0;};
-        };
+        defaultValue = 1;
       };
       class SafeZoneRadius {
-        displayName = "Safe Zone Radius";
-        description = "The safe zone around players from a different team. Default: 200";
+        displayName = "$STR_ACE_SwitchUnits_SafeZoneRadius_DisplayName";
+        description = "$STR_ACE_SwitchUnits_SafeZoneRadius_Description";
         typeName = "NUMBER";
         defaultValue = 100;
       };
+    };
+	class ModuleDescription {
+            description = "$STR_ACE_SwitchUnits_Module_Description";
     };
   };
 };

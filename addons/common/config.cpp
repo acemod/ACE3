@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {"ACE_ItemCore","ACE_FakePrimaryWeapon", "ACE_Banana"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_main"};
-        author[] = {"KoffeinFlummi"};
+        author[] = {"KoffeinFlummi","GieNkoV"};
         authorUrl = "https://github.com/KoffeinFlummi/";
         VERSION_CONFIG;
     };
@@ -101,7 +101,7 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = "$STR_ACE_Common_SettingFeedbackIconsName";
         description = "$STR_ACE_Common_SettingFeedbackIconsDesc";
-        values[] = {"Hide", "Top right, downwards", "Top right, to the left", "Top left, downwards", "Top left, to the right"};
+        values[] = {"$STR_ACE_Common_Hide", "$STR_ACE_Common_TopRightDown", "$STR_ACE_Common_TopRightLeft", "$STR_ACE_Common_TopLeftDown", "$STR_ACE_Common_TopLeftRight"};
     };
     class GVAR(SettingProgressBarLocation) {
         value = 0;
@@ -110,7 +110,7 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = "$STR_ACE_Common_SettingProgressbarLocationName";
         description = "$STR_ACE_Common_SettingProgressbarLocationDesc";
-        values[] = {"Top", "Bottom"};
+        values[] = {"$STR_ACE_Common_Top", "$STR_ACE_Common_Bottom"};
     };
     class GVAR(displayTextColor) {
         value[] = {0,0,0,0.1};

@@ -161,7 +161,11 @@ class CfgVehicles {
     class GVAR(ModuleSurrender): Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "Make Unit Surrender";
+<<<<<<< HEAD
+        displayName = "$STR_ACE_Captives_ModuleSurrender_DisplayName"; //Make Unit Surrender
+=======
+        displayName = "$STR_ACE_Captives_ModuleSurrender_DisplayName";
+>>>>>>> I made mess so new pull request.
         function = QUOTE(DFUNC(moduleSurrender));
         scope = 2;  //show in editor
         scopeCurator = 2; //show in zeus
@@ -172,7 +176,11 @@ class CfgVehicles {
         functionPriority = 0;
         class Arguments {};
         class ModuleDescription: ModuleDescription {
-            description = "Sync a unit to make them surrender.<br/>Source: ace_captives";
+<<<<<<< HEAD
+            description = "$STR_ACE_Captives_ModuleSurrender_Description"; //Sync a unit to make them surrender.<br/>Source: ace_captives
+=======
+            description = "$STR_ACE_Captives_ModuleSurrender_Description";
+>>>>>>> I made mess so new pull request.
             sync[] = {"AnyAI"};
         };
     };

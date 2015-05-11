@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+<<<<<<< HEAD
+    <Package name="Mission Modules">
+<<<<<<< HEAD
+
+=======
+=======
+    <Package name="Mission_Modules">
+>>>>>>> TABS
+        <Key ID="STR_ACE_MissionModules_Category_DisplayName">
+            <English>ACE Mission Modules</English>
+            <Polish>ACE Moduły misji</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_DisplayName">
+            <English>Ambiance Sounds [ACE]</English>
+            <Polish>Dźwięki [ACE]</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_DisplayName">
+            <English>Sounds</English>
+            <Polish>Dźwięki</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_Description">
+            <English>Classnames of the ambiance sounds played. Seperated by ','. </English>
+            <Polish>Classname-y dźwięków do odtwarzania. Oddzielone przy użyciu ','.</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_DisplayName">
+            <English>Minimal Distance</English>
+            <Polish>Minimalny dystans</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_Description">
+            <English>Minimal Distance</English>
+            <Polish>Minimalny dystans</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_DisplayName">
+            <English>Maximal Distance</English>
+            <Polish>Maksymalny dystans</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_Description">
+            <English>Maximal Distance</English>
+            <Polish>Maksymalny dystans</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_DisplayName">
+            <English>Minimal Delay</English>
+            <Polish>Minimalne opóźnienie</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_Description">
+            <English>Minimal Delay between sounds played</English>
+            <Polish>Minimalne opóźnienie pomiędzy odtwarzanymi dźwiękami</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_DisplayName">
+            <English>Maximal Delay</English>
+            <Polish>Maksymalne opóźnienie</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_Description">
+            <English>Maximal Delay between sounds played</English>
+            <Polish>Maksymalne opóźnienie pomiędzy odtwarzanymi dźwiękami</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_DisplayName">
+            <English>Follow Players</English>
+            <Polish>Podążaj za graczami</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_Description">
+            <English>Follow players. If set to false, loop will play sounds only nearby logic position.</English>
+            <Polish>Podążaj za graczami. Jeżeli ustawione na 'Nie', pętla będzie odtwarzana tylko w pobliżu pozycji logiki.</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_DisplayName">
+            <English>Volume</English>
+            <Polish>Głośność</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_Description">
+            <English>The volume of the sounds played</English>
+            <Polish>Głośność odtwarzanych dźwięków</Polish>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_AmbianceSounds_Description">
+            <English>Ambiance sounds loop (synced across MP)</English>
+            <Polish>Pętla odtwarzania dzwięków (synchronizowana na MP)</Polish>
+        </Key>
+>>>>>>> I made mess so new pull request.
+    </Package>
+</Project>
