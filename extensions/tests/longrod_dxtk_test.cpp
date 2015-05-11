@@ -69,5 +69,11 @@ int main(int argc, char **argv) {
         }
     }
 
-    getchar();
+    while (true) {
+        scanf_s("%s", buffer, sizeof(buffer) - 1);
+        memset(output, 0x00, sizeof(output));
+        LOG(INFO) << "Executing: '" << buffer << "'";
+        RVExtension(output, sizeof(output), buffer);
+        LOG(INFO) << "Result: '" << output << "'";
+    }
 }

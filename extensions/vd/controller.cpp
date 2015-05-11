@@ -36,6 +36,7 @@ namespace ace {
             add("delete_vehicle", std::bind(&ace::vehicledamage::controller::delete_vehicle, this, std::placeholders::_1, std::placeholders::_2));
             
             add("set_vehicle_state", std::bind(&ace::vehicledamage::controller::set_vehicle_state, this, std::placeholders::_1, std::placeholders::_2));
+            add("set_animation_state", std::bind(&ace::vehicledamage::controller::set_animation_state, this, std::placeholders::_1, std::placeholders::_2));
 
             add("hit", std::bind(&ace::vehicledamage::controller::handle_hit, this, std::placeholders::_1, std::placeholders::_2));
             
@@ -111,8 +112,17 @@ namespace ace {
                 vehicle_p _vehicle = std::make_shared<vehicle>(static_cast<uint32_t>(_args[1]), _object, _args[2]);
                 vehicles[static_cast<uint32_t>(_args[1])] = _vehicle;
 
-                LOG(INFO) << "vehicle registered: [id=" << _args[1].as_uint32() << ", type=" << _args[0].as_string() << "]";
+                // For results on a valid vehicle registration, we return its animation names for that given vehicle
+                std::stringstream _animationNames;
+                _animationNames << _vehicle->id;
+                for (auto & anim : _vehicle->object->animations) {
+                    _animationNames << "," << anim->name;
+                    _vehicle->animation_state[anim->name] = 0.0f;
+                }
+                
+                this->push_result("setAnimationNames:"+_animationNames.str());
 
+                LOG(INFO) << "vehicle registered: [id=" << _args[1].as_uint32() << ", type=" << _args[0].as_string() << "]";
                 DEBUG_DISPATCH("register_vehicle", _args[1].as_string());
 
                 return true;
@@ -133,6 +143,42 @@ namespace ace {
             return true;
         }
 
+        bool controller::set_animation_state(const arguments &_args, std::string & results) {
+            if (_args.size() < 3)
+                return false;
+
+            uint32_t id = _args[0];
+
+            // First value is id, following values are name,value,name,value,name,value
+            if (vehicles.find(id) == vehicles.end())
+                return false;
+
+            for (int x = 1, y = 1; x < vehicles[id]->animation_state.size() && x < _args.size() / 2; x++, y +=2) {
+                std::string animation_name = _args[y];
+                float state = _args[y + 1];
+                vehicles[id]->animation_state[animation_name] = state;
+            }
+
+            return false;
+        }
+        bool controller::get_animations(const arguments &_args, std::string & results) {
+            uint32_t id = static_cast<uint32_t>(_args[1]);
+
+            if (vehicles.find(id) == vehicles.end())
+                return false;
+
+            // For results on a valid vehicle registration, we return its animation names for that given vehicle
+            std::stringstream _animationNames;
+            _animationNames << vehicles[id]->id;
+            for (auto & anim : vehicles[id]->object->animations) {
+                _animationNames << "," << anim->name;
+                vehicles[id]->animation_state[anim->name] = 0.0f;
+            }
+
+            this->push_result("get_animations:" + _animationNames.str());
+
+            return false;
+        }
         bool controller::set_vehicle_state(const arguments &_args, std::string & result) {
             if (_args.size() < 3) return false;
 
@@ -142,7 +188,7 @@ namespace ace {
             vehicles[_args[0]]->direction = _args[1];
             vehicles[_args[0]]->up = _args[2];
 
-            vehicles[_args[0]]->transform();
+            //vehicles[_args[0]]->transform();
 
             return true;
         }

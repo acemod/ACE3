@@ -135,6 +135,8 @@ namespace ace {
                 pbo_stream.close();
             }
 
+            LOG(INFO) << "PBO Index complete";
+
             return true;
         }
 
@@ -266,6 +268,8 @@ namespace ace {
 
                 /* Cast our buffer into an UNICODE_STRING. */
                 objectName = *(PUNICODE_STRING)objectNameInfo;
+               
+                
 
                 /* Print the information! */
                 if (objectName.Length)
@@ -276,20 +280,11 @@ namespace ace {
                     std::string object_type(tmp_type.begin(), tmp_type.end());
                     std::string object_name(tmp_name.begin(), tmp_name.end());
                     if (object_type == "File" && object_name.find(".pbo") != object_name.npos) {
-                        char volume_letter[MAX_PATH];
-                        BOOL res = GetVolumePathName(object_name.c_str(), volume_letter, sizeof(volume_letter));
-                        if (res) {
-                            volume_letter[2] = 0x00;
-                            std::vector<std::string> tokens = ace::split(object_name, '\\');
+                        char buffer[MAX_PATH];
+                        GetFinalPathNameByHandle(dupHandle, buffer, sizeof(buffer), VOLUME_NAME_DOS);
 
-                            std::stringstream s;
-                            s << volume_letter;
-                            for (int x = 3; x < tokens.size(); x++) {
-                                s << "\\" << tokens[x];
-                            }
-                            LOG(DEBUG) << "Pbo: " << s.str();
-                            _active_pbo_list.push_back(s.str());
-                        }
+                        LOG(DEBUG) << "Pbo: " << buffer;
+                        _active_pbo_list.push_back(std::string(buffer));
                     }
                 }              
 

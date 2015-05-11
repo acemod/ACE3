@@ -2,7 +2,7 @@
 
 #include "script_component.hpp"
 PARAMS_1(_vehicle);
-private["_id", "_model"];
+private["_id", "_model","_vehicleData"];
 
 if(GVAR(Enabled) < 1) exitWith {};
 
@@ -15,6 +15,8 @@ if(_model != "") then {
     TRACE_1("", _value);
     _result = _value call FUNC(callExtension);
     _vehicle setVariable[QGVAR(id), _id, false];
+    _vehicleData = [_vehicle];
+    HASH_SET(GVAR(vehicles),_id,_vehicleData);
 };
 
 diag_log text format["[ACE] - Vehicle queued for extension loading %1 - %2=[%2]", _id, _vehicle, _model];

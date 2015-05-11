@@ -65,7 +65,7 @@ namespace ace {
         T distance(const vector3 &v) const { vector3 dist = (*this - v); dist = dist * dist; return sqrt(dist.x() + dist.y() + dist.z()); }
         vector3 cross(const vector3 &v) const { return vector3(_y * v.z() - _z * v.y(), _z * v.x() - _x * v.z(), _x * v.y() - _y * v.x()); }
         vector3 normalize(void) const { return (*this / abs(magnitude())); };
-		bool zero_distance() { if (_x == 0.0f && _y == 0.0f && _z == 0.0f) return true; return false; }
+        bool zero_distance() { return ((_x == 0.0f && _y == 0.0f && _z == 0.0f) ? true : false ); }
 
         static float clamp(T x, T a, T b) { return x < a ? a : (x > b ? b : x); }
 

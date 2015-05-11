@@ -1,5 +1,10 @@
 #include "shared.hpp"
 
+#include <algorithm> 
+#include <functional> 
+#include <cctype>
+#include <locale>
+
 int test(int var) {
     return var;
 }

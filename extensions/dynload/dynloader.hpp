@@ -11,11 +11,11 @@ namespace ace {
     class module {
     public:
         module() : handle(nullptr), function(nullptr), name("") {}
-        module(const std::string & name_, HANDLE handle_, RVExtension function_, const std::string & file_) : handle(nullptr), function(function_), name(name_), temp_filename(file_) {}
+        module(const std::string & name_, HMODULE handle_, RVExtension function_, const std::string & file_) : handle(handle_), function(function_), name(name_), temp_filename(file_) {}
 
         std::string name;
         std::string temp_filename;
-        HINSTANCE   handle;
+        HMODULE     handle;
         RVExtension function;
     };
 
@@ -32,7 +32,7 @@ namespace ace {
 
 #ifdef _WINDOWS
         bool load(const arguments & args_, std::string & result) {
-            HINSTANCE dllHandle;
+            HMODULE dllHandle;
             RVExtension function;
 
             LOG(INFO) << "Load requested [" << args_.as_string(0) << "]";
@@ -55,9 +55,9 @@ namespace ace {
                 return false;
             }
             std::string temp_filename = buffer;
-            if (!CopyFileA(args_.as_string(0).c_str(), temp_filename.c_str(), TRUE)) {
+            if (!CopyFileA(args_.as_string(0).c_str(), temp_filename.c_str(), FALSE)) {
                 DeleteFile(temp_filename.c_str());
-                if (!CopyFileA(args_.as_string(0).c_str(), temp_filename.c_str(), TRUE)) {
+                if (!CopyFileA(args_.as_string(0).c_str(), temp_filename.c_str(), FALSE)) {
                     LOG(ERROR) << "CopyFile() , e=" << GetLastError();
                     return false;
                 }
@@ -89,17 +89,25 @@ namespace ace {
 
             LOG(INFO) << "Unload requested [" << args_.as_string(0) << "]";
 
-            if (_modules.find(args_.as_string(0)) != _modules.end()) {
+            if (_modules.find(args_.as_string(0)) == _modules.end()) {
                 LOG(INFO) << "Unload failed, module not loaded [" << args_.as_string(0) << "]";
                 return true;
             }
 
-            FreeLibrary(_modules[args_.as_string(0)].handle);
+            if (!FreeLibrary(_modules[args_.as_string(0)].handle)) {
+                LOG(INFO) << "FreeLibrary() failed during unload, e=" << GetLastError();
+                return false;
+            }
+            //if (!DeleteFileA(_modules[args_.as_string(0)].temp_filename.c_str())) {
+            //    LOG(INFO) << "DeleteFile() failed during unload, e=" << GetLastError();
+            //    return false;
+            //}
+
             _modules.erase(args_.as_string(0));
 
             LOG(INFO) << "Unload complete [" << args_.as_string(0) << "]";
 
-            return false;
+            return true;
         }
 #endif
 
@@ -116,10 +124,12 @@ namespace ace {
             std::string function_str;
             std::vector<std::string> temp = ace::split(args_.get(), ',');
 
-            function_str = temp[1] + ":";
-            for (int x = 2; x < temp.size(); x++)
-                function_str = function_str + temp[x] + ",";
-
+            if (temp.size() < 3) {
+                function_str = temp[1];
+            } else {
+                for (int x = 1; x < temp.size(); x++)
+                    function_str = function_str + temp[x] + ",";
+            }
             _modules[args_.as_string(0)].function((char *)result.c_str(), 4096, (const char *)function_str.c_str());
 #ifdef _DEBUG
             //if (args_.as_string(0) != "fetch_result" && args_.as_string(0) != "ready") {

@@ -1,6 +1,6 @@
 #include "shared.hpp"
 #include "logging.hpp"
-
+#include "controller.hpp"
 INITIALIZE_EASYLOGGINGPP
 
 BOOLEAN WINAPI DllMain(IN HINSTANCE hDllHandle,
@@ -25,6 +25,10 @@ BOOLEAN WINAPI DllMain(IN HINSTANCE hDllHandle,
 
         break;
     case DLL_PROCESS_DETACH:
+        if (Reserved == NULL) { 
+            ace::vehicledamage::controller::get().stop();
+            LOG(INFO) << "Vehicle Damage unloaded and halted";
+        }
         break;
     }
 

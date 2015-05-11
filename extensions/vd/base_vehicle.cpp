@@ -8,7 +8,7 @@ using namespace ace::simulation;
 
 namespace ace {
     namespace vehicledamage {
-        base_vehicle::base_vehicle(uint32_t id, ace::simulation::object_p object_, ace::vector3<float> position_) : object(object_) {
+        base_vehicle::base_vehicle(uint32_t id, ace::simulation::object_p object_, ace::vector3<float> position_) : id(id), object(object_) {
             bt_mesh = std::make_shared<btTriangleMesh>();
             
             fire_lod = -1;
@@ -21,16 +21,17 @@ namespace ace {
             }
             if (fire_lod == -1) // @TODO: fallback on geo LOD
                 fire_lod = 0;
+            fire_lod = 0;
             assert(fire_lod != -1);
-
+            
             // Build the mesh from object faces
             // TODO: LOD!?
             // P3d store in x,z,y format
             for (auto & face : object_->lods[fire_lod]->faces) {
                 bt_mesh->addTriangle(
-                    btVector3(face->vertices[0]->x(), face->vertices[0]->z(), face->vertices[0]->y()),
-                    btVector3(face->vertices[1]->x(), face->vertices[1]->z(), face->vertices[1]->y()),
-                    btVector3(face->vertices[2]->x(), face->vertices[2]->z(), face->vertices[2]->y())
+                    btVector3(face->vertices[0]->x(), face->vertices[0]->y(), face->vertices[0]->z()),
+                    btVector3(face->vertices[1]->x(), face->vertices[1]->y(), face->vertices[1]->z()),
+                    btVector3(face->vertices[2]->x(), face->vertices[2]->y(), face->vertices[2]->z())
                 );
             }
 
@@ -52,6 +53,15 @@ namespace ace {
         }
         base_vehicle::~base_vehicle() {
             controller::get().bt_world->removeCollisionObject(bt_object.get());
+        }
+
+        bool base_vehicle::simulate() {
+            std::vector<uint32_t> lods; 
+            lods.push_back(fire_lod);
+
+           object->animate(animation_state, lods);
+
+            return true;
         }
 
         void base_vehicle::transform() {

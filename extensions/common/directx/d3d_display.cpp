@@ -3,12 +3,36 @@
 #include "shared.hpp"
 #include "d3d_display.hpp"
 
+#include <TlHelp32.h>
+
 #include <thread>
 
 using namespace  DirectX;
 
 namespace ace {
     namespace debug {
+
+        DWORD GetMainThreadId() {
+            const std::shared_ptr<void> hThreadSnapshot(
+                CreateToolhelp32Snapshot(TH32CS_SNAPTHREAD, 0), CloseHandle);
+            if (hThreadSnapshot.get() == INVALID_HANDLE_VALUE) {
+                throw std::runtime_error("GetMainThreadId failed");
+            }
+            THREADENTRY32 tEntry;
+            tEntry.dwSize = sizeof(THREADENTRY32);
+            DWORD result = 0;
+            DWORD currentPID = GetCurrentProcessId();
+            for (BOOL success = Thread32First(hThreadSnapshot.get(), &tEntry);
+            !result && success && GetLastError() != ERROR_NO_MORE_FILES;
+                success = Thread32Next(hThreadSnapshot.get(), &tEntry))
+            {
+                if (tEntry.th32OwnerProcessID == currentPID) {
+                    result = tEntry.th32ThreadID;
+                }
+            }
+            return result;
+        }
+
         d3d_display::d3d_display() : _fullscreen(false) {}
         d3d_display::~d3d_display() {}
 
@@ -210,6 +234,9 @@ namespace ace {
              return false;
             }
 
+            // Attach our input to the master input
+            //AttachThreadInput(GetCurrentThreadId(), GetMainThraedId());
+
             SetWindowLongPtr(_hWnd, GWLP_USERDATA, (LONG)this);
 
             ShowWindow(_hWnd, 5);
@@ -307,11 +334,13 @@ namespace ace {
         LRESULT CALLBACK d3d_display::_wndproc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
             PAINTSTRUCT ps;
             HDC hdc;
-
+           
             switch (message) {
             case WM_INPUT: {
                 UINT dwSize;
-                
+                if (GetActiveWindow() != _hWnd) {
+                    return DefWindowProc(hWnd, message, wParam, lParam);
+                }
                 GetRawInputData((HRAWINPUT)lParam, RID_INPUT, NULL, &dwSize,
                     sizeof(RAWINPUTHEADER));
                 LPBYTE lpb = new BYTE[dwSize];

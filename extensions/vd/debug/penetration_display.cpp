@@ -44,13 +44,13 @@ namespace ace {
   
                 _BatchEffect.reset(new BasicEffect(_pd3dDevice));
                 _BatchEffect->SetVertexColorEnabled(true);
-
+                
                 {
                     void const* shaderByteCode;
                     size_t byteCodeLength;
 
                     _BatchEffect->GetVertexShaderBytecode(&shaderByteCode, &byteCodeLength);
-
+                    
                     hr = _pd3dDevice->CreateInputLayout(VertexPositionColor::InputElements,
                         VertexPositionColor::InputElementCount,
                         shaderByteCode, byteCodeLength,
@@ -129,23 +129,15 @@ namespace ace {
                     ace::vector3<float> hit_from, hit_to;
 
                     hit_from = hit->impactposition;
-                    hit_to = hit_from + (hit->impactvelocity * 0.005f);
+                    hit_to = hit_from + (hit->impactvelocity * 0.01f);
 
                     XMVECTORF32 from = { hit_from.x(), hit_from.y(), hit_from.z() };
                     XMVECTORF32 to = { hit_to.x(), hit_to.y(), hit_to.z() };
-                    XMVECTORF32 to_a1 = { hit_to.x() + 0.5, hit_to.y() + 0.5, hit_to.z() };
-                    XMVECTORF32 to_a2 = { hit_to.x() - 0.5, hit_to.y() - 0.5, hit_to.z() };
 
                     VertexPositionColor v1(from, color);
                     VertexPositionColor v2(to, color);
 
-                    VertexPositionColor a1(to_a2, color);
-                    VertexPositionColor a2(to_a1, color);
-
                     batch.DrawLine(v1, v2);
-
-                    batch.DrawLine(a1, v2);
-                    batch.DrawLine(a2, v2);
                 }
 
 
@@ -156,12 +148,38 @@ namespace ace {
 
                 batch.Begin();
 
+                // Debug animation the shit
+                _active_vehicle->simulate();
+
+                /*for (auto & selection : obj.lods[lod]->selections) {
+                    for (auto & face : selection.second->faces) {
+                        ace::vector3<float> vertices[3];
+                        vertices[0] = { face->vertices[0]->x(), face->vertices[0]->y(), face->vertices[0]->z() };
+                        vertices[1] = { face->vertices[1]->x(), face->vertices[1]->y(), face->vertices[1]->z() };
+                        vertices[2] = { face->vertices[2]->x(), face->vertices[2]->y(), face->vertices[2]->z() };
+
+                        XMVECTORF32 v[3] = {
+                            { vertices[0].x(), vertices[0].y(), vertices[0].z() },
+                            { vertices[1].x(), vertices[1].y(), vertices[1].z() },
+                            { vertices[2].x(), vertices[2].y(), vertices[2].z() }
+                        };
+
+                        VertexPositionColor v1(v[0], color);
+                        VertexPositionColor v2(v[1], color);
+                        VertexPositionColor v3(v[2], color);
+
+                        batch.DrawLine(v1, v2);
+                        batch.DrawLine(v2, v3);
+                        batch.DrawLine(v3, v1);
+                    }
+                }*/
+
+                
                 for (auto & face : obj.lods[lod]->faces) {
                     ace::vector3<float> vertices[3];
                     vertices[0] = { face->vertices[0]->x(), face->vertices[0]->y(), face->vertices[0]->z() };
                     vertices[1] = { face->vertices[1]->x(), face->vertices[1]->y(), face->vertices[1]->z() };
                     vertices[2] = { face->vertices[2]->x(), face->vertices[2]->y(), face->vertices[2]->z() };
-
 
                     XMVECTORF32 v[3] = {
                         { vertices[0].x(), vertices[0].y(), vertices[0].z() },

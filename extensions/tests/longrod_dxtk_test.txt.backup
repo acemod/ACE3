@@ -1,0 +1,6 @@
+#c:\arma\arma3\addons\structures_f_ind.pbo C:\dev\ace3\extensions\tests\longrod_dxtk_test.txt.backup
+init:
+debug_render:
+register_vehicle:\A3\Structures_F\Ind\Cargo\Cargo40_blue_F.p3d,0,4050.18;3802.55;5.075
+set_animation_state:0,Door_1_rot,1,Door_Locked_1_rot,0,Door_2_rot,0,Door_Locked_2_rot,0,
+fetch_result:1

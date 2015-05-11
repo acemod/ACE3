@@ -40,6 +40,9 @@ namespace ace {
     public:
         arguments(const std::string & str) : _original(str) {
             _args = ace::split(str, ',');
+            for (int i = 0; i < _args.size(); i++) {
+                _args[i] = trim(_args[i]);
+            }
         }
 
         size_t size() const { return _args.size(); }
@@ -82,6 +85,6 @@ namespace ace {
 
     protected:
         std::vector<std::string> _args;
-        const std::string        &_original;
+        const std::string        _original;
     };
 }

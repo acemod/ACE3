@@ -3,6 +3,10 @@ project (ACE)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON) 
 
+if(WIN32) 
+add_definitions(/DWINVER=0x0600 /D_WIN32_WINNT=0x0600)
+endif()
+
 if (NOT CMAKE_BUILD_TYPE AND CMAKE_COMPILER_IS_GNUCXX)
 	message(STATUS "No build type selected, default to Debug")
 	set(CMAKE_BUILD_TYPE "Debug")
@@ -29,14 +33,44 @@ endif()
 include_directories("common")
 
 if(USE_BULLET)
-    add_definitions(-DUSE_BULLET)
+    # Dependencies
+    #
+    set(BACKUP_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY})
+    set(BACKUP_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
+    set(BACKUP_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+    
+    add_definitions(-DUSE_DIRECTX)
+    add_subdirectory(lib/bullet3)
+
+    set_target_properties(App_BasicExample PROPERTIES FOLDER Bullet3)
+    set_target_properties(App_HelloWorld PROPERTIES FOLDER Bullet3)
+    set_target_properties(App_ExampleBrowser PROPERTIES FOLDER Bullet3)
+    set_target_properties(Bullet2FileLoader PROPERTIES FOLDER Bullet3)
+    set_target_properties(Bullet3Collision PROPERTIES FOLDER Bullet3)
+    set_target_properties(Bullet3Dynamics PROPERTIES FOLDER Bullet3)
+    set_target_properties(Bullet3Geometry PROPERTIES FOLDER Bullet3)
+    set_target_properties(Bullet3Common PROPERTIES FOLDER Bullet3)
+    set_target_properties(Bullet3OpenCL_clew PROPERTIES FOLDER Bullet3)
+    set_target_properties(BulletCollision PROPERTIES FOLDER Bullet3)
+    set_target_properties(BulletDynamics PROPERTIES FOLDER Bullet3)
+    set_target_properties(BulletFileLoader PROPERTIES FOLDER Bullet3)
+    set_target_properties(BulletSoftBody PROPERTIES FOLDER Bullet3)
+    
+    set_target_properties(BulletWorldImporter PROPERTIES FOLDER Bullet3)
+    set_target_properties(BulletXmlWorldImporter PROPERTIES FOLDER Bullet3)
+    set_target_properties(ConvexDecomposition PROPERTIES FOLDER Bullet3)
+    set_target_properties(GIMPACTUtils PROPERTIES FOLDER Bullet3)
+    set_target_properties(gtest PROPERTIES FOLDER Bullet3)
+    set_target_properties(gwen PROPERTIES FOLDER Bullet3)
+    set_target_properties(HACD PROPERTIES FOLDER Bullet3)
+    set_target_properties(OpenGLWindow PROPERTIES FOLDER Bullet3)
+    set_target_properties(LinearMath PROPERTIES FOLDER Bullet3)
+    
+    set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${BACKUP_ARCHIVE_OUTPUT_DIRECTORY})
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${BACKUP_LIBRARY_OUTPUT_DIRECTORY})
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BACKUP_RUNTIME_OUTPUT_DIRECTORY})
+    
     include_directories(BEFORE "lib/bullet3/src")
-    link_directories("lib/bullet3/lib")
-    set(BULLET_LIBS_DEBUG "BulletCollision_debug.lib;LinearMath_debug.lib;BulletDynamics_debug.lib")
-    set(BULLET_LIBS "BulletCollision.lib;LinearMath.lib;BulletDynamics.lib")
-else()
-    set(BULLET_LIBS_DEBUG "")
-    set(BULLET_LIBS "")
 endif()
 if(USE_DIRECTX)
     add_definitions(-DUSE_DIRECTX)
@@ -77,6 +111,7 @@ endif()
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/common)
 set(GLOBAL_SOURCES ${GLOBAL_RC})
+
 
 # Add extensions to build here
 add_subdirectory(common)
