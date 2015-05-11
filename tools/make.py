@@ -497,6 +497,7 @@ def get_ace_version():
     #do the magic based on https://github.com/acemod/ACE3/issues/806#issuecomment-95639048
     return ACE_VERSION
 
+
 def get_private_keyname(commitID,module="main"):
     global pbo_name_prefix
 
@@ -544,19 +545,38 @@ def version_stamp_pboprefix(module,commitID):
         f.close()
 
         if configtext:
-            #patchestext = re.search(r"class CfgPatches\n\{(.*?)\n\}", configtext, re.DOTALL).group(1)
-            #patchestext = re.sub(r'version(.*?)="(.*?)"', r'version\1="\2-{}"'.format(commit_id), patchestext)
-            #configtext = re.sub(r"class CfgPatches\n\{(.*?)\n\}", "class CfgPatches\n{"+patchestext+"\n}", configtext, flags=re.DOTALL)
-            f = open(configpath, "w")
-            f.write(configtext)
-            f.close()
-        else:
-            os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
-            os.rename(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"), os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+            patchestext = re.search(r"version.*?=.*?$", configtext, re.DOTALL)
+            print("{}".format(patchestext))
+            if patchestext:
+                if configtext:
+                    print("configtext before ==> {}".format(configtext))
+                    patchestext = re.search(r"(version.*?=)(.*?)$", configtext, re.DOTALL).group(1)
+                    print("patchestext before ==> {}".format(patchestext))
+                    #patchestext1 = re.sub(r'version(.*?)="(.*?)"$', r'version\1=" {}"'.format(commitID), patchestext)
+                    #print("patchestext after ==> {}".format(patchestext1))
+                    print("commitID ==> {}".format(commitID))
+                    configtext = re.sub(r"version(.*?)=(.*?)$", "version = {}\n".format(commitID), configtext, flags=re.DOTALL)
+                    print("configtext after ==> {}".format(configtext))
+                    f = open(configpath, "w")
+                    f.write(configtext)
+                    f.close()
+                    os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
+                else:
+                    os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+                    os.rename(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"), os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+            else:
+                if configtext:
+                    #append version info
+                    f = open(configpath, "a")
+                    f.write("\nversion = {}".format(commitID))
+                    f.close()
+                    os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
+
     except:
-        raise
         print_error("Failed to include build number")
+        raise
         return False
+
     finally:
         if os.path.isfile(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup")):
             if os.path.isfile(os.path.join(work_drive, prefix, module, "$PBOPREFIX$")):
