@@ -897,22 +897,26 @@ See the make.cfg file for additional build options.
                 else:
                     print_error("Failed to create key!")
 
-                try:
-                    print("Copying public key to release directory.")
 
-                    try:
-                        os.makedirs(os.path.join(module_root, release_dir, project, "keys"))
-                    except:
-                        pass
-
-                    shutil.copyfile(os.path.join(private_key_path, key_name + ".bikey"), os.path.join(module_root, release_dir, project, "keys", key_name + ".bikey"))
-
-                except:
-                    print_error("Could not copy key to release directory.")
-                    raise
 
             else:
                 print_green("\nNOTE: Using key {}".format(os.path.join(private_key_path, key_name + ".biprivatekey")))
+
+            try:
+                print("Copying public key to release directory.")
+
+                try:
+                    os.makedirs(os.path.join(module_root, release_dir, project, "keys"))
+                except:
+                    pass
+
+                # Use biKeyNameAbrev to attempt to minimize problems from this BI Bug REFERENCE: http://feedback.arma3.com/view.php?id=22133
+                biKeyNameAbrev = key_name.split("-")[0]
+                shutil.copyfile(os.path.join(private_key_path, key_name + ".bikey"), os.path.join(module_root, release_dir, project, "keys", biKeyNameAbrev + ".bikey"))
+
+            except:
+                print_error("Could not copy key to release directory.")
+                raise
 
             key = os.path.join(private_key_path, key_name + ".biprivatekey")
 
