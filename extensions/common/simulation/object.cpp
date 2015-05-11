@@ -238,7 +238,7 @@ animation_transform ace::simulation::animation::animate(const float phase, const
 		case 1: {
 			scale = (scale / (max_value - min_value)) * (angle1 - angle0);
 			glm::vec3 rotation_axis = glm::vec3(1.0f, 0.0f, 0.0f);
-			animation_matrix = glm::rotate(animation_matrix, -scale, rotation_axis);
+			animation_matrix = glm::rotate(animation_matrix, scale, rotation_axis);
 			rotation_offset = this->lod_info[lod_id]->axis_position;
 			break;
 		}
@@ -246,7 +246,7 @@ animation_transform ace::simulation::animation::animate(const float phase, const
 		case 2: {
 			scale = (scale / (max_value - min_value)) * (angle1 - angle0);
 			glm::vec3 rotation_axis = glm::vec3(0.0f, 1.0f, 0.0f);
-			animation_matrix = glm::rotate(animation_matrix, -scale, rotation_axis);
+			animation_matrix = glm::rotate(animation_matrix, scale, rotation_axis);
 			rotation_offset = this->lod_info[lod_id]->axis_position;
 			break;
 		}
@@ -254,7 +254,7 @@ animation_transform ace::simulation::animation::animate(const float phase, const
 		case 3: {
 			scale = (scale / (max_value - min_value)) * (angle1 - angle0);
 			glm::vec3 rotation_axis = glm::vec3(0.0f, 0.0f, 1.0f);
-			animation_matrix = glm::rotate(animation_matrix, -scale, rotation_axis);
+			animation_matrix = glm::rotate(animation_matrix, scale, rotation_axis);
 			rotation_offset = this->lod_info[lod_id]->axis_position;
 			break;
 		}
