@@ -503,7 +503,6 @@ def get_private_keyname(commitID,module="main"):
 
     aceVersion = get_ace_version()
     keyName = str("{prefix}{version}-{commit_id}".format(prefix=pbo_name_prefix,version=aceVersion,commit_id=commitID))
-    print_yellow(keyName)
     return keyName
 
 
@@ -546,17 +545,10 @@ def version_stamp_pboprefix(module,commitID):
 
         if configtext:
             patchestext = re.search(r"version.*?=.*?$", configtext, re.DOTALL)
-            print("{}".format(patchestext))
             if patchestext:
                 if configtext:
-                    print("configtext before ==> {}".format(configtext))
                     patchestext = re.search(r"(version.*?=)(.*?)$", configtext, re.DOTALL).group(1)
-                    print("patchestext before ==> {}".format(patchestext))
-                    #patchestext1 = re.sub(r'version(.*?)="(.*?)"$', r'version\1=" {}"'.format(commitID), patchestext)
-                    #print("patchestext after ==> {}".format(patchestext1))
-                    print("commitID ==> {}".format(commitID))
                     configtext = re.sub(r"version(.*?)=(.*?)$", "version = {}\n".format(commitID), configtext, flags=re.DOTALL)
-                    print("configtext after ==> {}".format(configtext))
                     f = open(configpath, "w")
                     f.write(configtext)
                     f.close()
