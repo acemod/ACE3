@@ -538,8 +538,16 @@ def version_stamp_pboprefix(module,commitID):
 
     try:
         configpath = os.path.join(work_drive, prefix, module, "$PBOPREFIX$")
-        shutil.copyfile(configpath, os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
-
+        if os.path.isfile(configpath):
+            shutil.copyfile(configpath, os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
+        else:
+            print_error("$PBOPREFIX$ Does not exist for module: {}.".format(module))
+            return False
+    except:
+        print_error("Error updating $PBOPREFIX$ for module {}.")
+        return False
+        
+    try:
         f = open(configpath, "r")
         configtext = f.read()
         f.close()
