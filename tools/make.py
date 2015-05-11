@@ -516,11 +516,16 @@ def get_ace_version():
 
         else:
             print_error("A Critical file seems to be missing or inaccessible: {}".format(scriptModPath))
-            return 0
+            raise FileNotFoundError("File Not Found: {}".format(scriptModPath))
 
     except Exception as e:
         print_error("Get_Ace_Version error: {}".format(e))
- 
+        print_error("Check the integrity of the file: {}".format(scriptModPath))
+        versionStamp = ACE_VERSION
+        print_error("Resetting to the default version stamp: {}".format(versionStamp))
+        input("Press Enter to continue...")
+        print("Resuming build...")
+
     print_yellow("ACE VERSION set to {}".format(versionStamp))
     ACE_VERSION = versionStamp
     return ACE_VERSION
