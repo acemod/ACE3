@@ -10,7 +10,7 @@
             <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
             <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
             <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
-            <Italian>Mostra sempre il cursore per le auto interazioni</Italian>
+            <Italian>Mostra sempre il cursore per le interazioni su se stessi</Italian>
             <Portuguese>Sempre mostrar cursor para interação pessoal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorInteraction">
@@ -58,7 +58,7 @@
             <Polish>Klawisz własnej interakcji</Polish>
             <French>Touche d'interaction personnelle</French>
             <Hungarian>Saját cselekvő gomb</Hungarian>
-            <Italian>Tasto per auto interazioni</Italian>
+            <Italian>Tasto interazione su se stessi</Italian>
             <Portuguese>Tecla de Interação Pessoal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
@@ -70,7 +70,7 @@
             <Polish>Własne akcje</Polish>
             <French>Interaction personnelle</French>
             <Hungarian>Saját cselekvések</Hungarian>
-            <Italian>Auto interazioni</Italian>
+            <Italian>Interazioni su se stessi</Italian>
             <Portuguese>Ações Pessoais</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
@@ -143,6 +143,7 @@
             <Spanish>Mantener el cursor centrado</Spanish>
             <Czech>Udržuj kurzor na středu</Czech>
             <Portuguese>Manter o cursor centralizado</Portuguese>
+            <Italian>Mantieni il cursore centrato</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_cursorKeepCenteredDescription">
             <English>Keeps cursor centered and pans the option menu around. Useful if screen size is limited.</English>
@@ -154,6 +155,7 @@
             <Polish>Utrzymuje kursor na środku ekranu, zamiast tego ruch myszą powoduje przesuwanie menu interakcji. Użyteczne w przypadku kiedy rozmiar ekranu jest ograniczony.</Polish>
             <Spanish>Mantiene el cursor centrado y despliega los menús alrededor. Útil si el tamaño de la pantalla es limitado.</Spanish>
             <Portuguese>Manter o cursor centralizado e mover o menu de opções. Útil caso o tamanho da tela seja limitado.</Portuguese>
+            <Italian>Mantieni il cursore centrato e sposta il menù intorno. Utile se lo schermo è piccolo.</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ActionOnKeyRelease">
             <English>Do action when releasing menu key</English>
@@ -165,6 +167,7 @@
             <Spanish>Realizar la acción al soltar la tecla menu</Spanish>
             <Portuguese>Execute a ação quando soltar a tecla de menu</Portuguese>
             <Hungarian>Cselekvés végrehajtása a menügomb elengedésekor</Hungarian>
+            <Italian>Esegui l'azione quando rilasci il tasto menu</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_textSize">
             <English>Interaction Text Size</English>
@@ -176,6 +179,7 @@
             <Polish>Rozmiar tekstu interakcji</Polish>
             <Portuguese>Tamanho do texto de interação</Portuguese>
             <Hungarian>Cselekvő szöveg mérete</Hungarian>
+            <Italian>Dimensione del testo d'interazione</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSetting">
             <English>Interaction Text Shadow</English>
@@ -187,6 +191,7 @@
             <Polish>Cień tekstu interakcji</Polish>
             <Portuguese>Sombra do texto de interação</Portuguese>
             <Hungarian>Cselekvő szöveg árnyéka</Hungarian>
+            <Italian>Ombra del testo d'interazione</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_shadowSettingDescription">
             <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
@@ -198,6 +203,7 @@
             <Polish>Pozwala kontrolować cień tekstu. Kontury ignorują niestandardowe kolory cienia.</Polish>
             <Portuguese>Permite controlar a sombra do texto. Contorno ignora sombras com cores customizadas.</Portuguese>
             <Hungarian>Hozzáférést biztosít a szöveg árnyékának kezeléséhez. A körvonal nem veszi figyelembe az egyedi árnyékszíneket.</Hungarian>
+            <Italian>Permette di controllare l'ombra del testo. L'impostazione "Contorno" ignora il colore dell'ombra.</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_shadowOutline">
             <English>Outline</English>
@@ -209,6 +215,7 @@
             <Polish>Kontur</Polish>
             <Portuguese>Contorno</Portuguese>
             <Hungarian>Körvonal</Hungarian>
+            <Italian>Contorno</Italian>
         </Key>
     </Package>
 </Project>
