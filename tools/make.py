@@ -55,7 +55,7 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
-ACE_VERSION = "3.0.0.3"
+ACE_VERSION = "3.0.0"
 work_drive = ""
 module_root = ""
 make_root = ""
@@ -494,7 +494,35 @@ def addon_restore(modulePath):
 
 def get_ace_version():
     global ACE_VERSION
+    versionStamp = ACE_VERSION
     #do the magic based on https://github.com/acemod/ACE3/issues/806#issuecomment-95639048
+
+    try:
+        scriptModPath = os.path.join(work_drive, prefix, "main\script_mod.hpp")
+
+        if os.path.isfile(scriptModPath):
+            f = open(scriptModPath, "r")
+            hpptext = f.read()
+            f.close()
+
+            if hpptext:
+                majorText = re.search(r"#define MAJOR (.*\b)", hpptext).group(1)
+                minorText = re.search(r"#define MINOR (.*\b)", hpptext).group(1)
+                patchlvlText = re.search(r"#define PATCHLVL (.*\b)", hpptext).group(1)
+                buildText = re.search(r"#define BUILD (.*\b)", hpptext).group(1)
+
+                if majorText:
+                    versionStamp = "{major}.{minor}.{patchlvl}.{build}".format(major=majorText,minor=minorText,patchlvl=patchlvlText,build=buildText)
+
+        else:
+            print_error("A Critical file seems to be missing or inaccessible: {}".format(scriptModPath))
+            return 0
+
+    except Exception as e:
+        print_error("Get_Ace_Version error: {}".format(e))
+ 
+    print_yellow("ACE VERSION set to {}".format(versionStamp))
+    ACE_VERSION = versionStamp
     return ACE_VERSION
 
 
@@ -569,6 +597,7 @@ def version_stamp_pboprefix(module,commitID):
         return False
 
     return True
+
 ###############################################################################
 
 
@@ -743,11 +772,10 @@ See the make.cfg file for additional build options.
         module_root = cfg.get(make_target, "module_root", fallback=os.path.join(make_root_parent, "addons"))
         optionals_root = os.path.join(module_root_parent, "optionals")
         extensions_root = os.path.join(module_root_parent, "extensions")
-        print_green ("module_root: {}".format(module_root))
-
 
         commit_id = get_commit_ID()
         key_name = versionStamp = get_private_keyname(commit_id)
+        print_green ("module_root: {}".format(module_root))
 
         if (os.path.isdir(module_root)):
             os.chdir(module_root)
