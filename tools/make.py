@@ -913,10 +913,6 @@ See the make.cfg file for additional build options.
             else:
                 old_sha = ""
 
-            #We always build ACE_common so we can properly show the correct version stamp in the RPT file.
-            if module == "common":
-                old_sha = ""
-
             # Hash the module
             new_sha = get_directory_hash(os.path.join(module_root, module))
 
