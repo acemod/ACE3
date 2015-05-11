@@ -891,8 +891,7 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
             
             class OpticsIn
             {
-                class WideUnstabalized
-                {
+                class Wide { // Wide Unstabilized
                     opticsDisplayName = "WU";
                     initAngleX = 0;
                     minAngleX = -35;
@@ -910,8 +909,7 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
                     horizontallyStabilized = 1;
                     gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
                 };
-                class Wide
-                {
+                class Medium: Wide { // Wide Stabilized
                     opticsDisplayName = "W";
                     initAngleX = 0;
                     minAngleX = -35;
@@ -929,8 +927,7 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
                     horizontallyStabilized = 1;
                     gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
                 };
-                class Medium: Wide
-                {
+                class Narrow: Wide { // Medium Stabilized
                     opticsDisplayName = "M";
                     initFov = 0.093;
                     minFov = 0.093;
@@ -940,8 +937,7 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
                     horizontallyStabilized = 1;
                     gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_medium_F";
                 };
-                class Narrow: Wide
-                {
+                class Narrower: Wide { // Narrow Stabilized
                     opticsDisplayName = "N";
                     initFov = 0.029;
                     minFov = 0.029;
@@ -952,8 +948,7 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
                     gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_narrow_F";
 
                 };
-                class Narrower: Wide
-                {
+                class Narrowest: Wide { // Narrower Stabilized
                     opticsDisplayName = "Z";
                     initFov = 0.01;
                     minFov = 0.01;
