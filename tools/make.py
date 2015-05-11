@@ -55,14 +55,18 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
+ACE_VERSION = "3.0.0.3"
 work_drive = ""
 module_root = ""
+make_root = ""
 release_dir = ""
 module_root_parent = ""
 optionals_root = ""
-key_name = "ace_3.0.0"
+key_name = "ace"
 key = ""
 dssignfile = ""
+prefix = "ace"
+pbo_name_prefix = "ace_"
 signature_blacklist = ["ace_server.pbo"]
 
 ###############################################################################
@@ -466,7 +470,7 @@ def check_for_obsolete_pbos(addonspath, file):
     return False
 
 
-def config_restore(modulePath):
+def addon_restore(modulePath):
     #PABST: cleanup config BS (you could comment this out to see the "de-macroed" cpp
     #print_green("\Pabst! (restoring): {}".format(os.path.join(modulePath, "config.cpp")))
     try:
@@ -478,8 +482,86 @@ def config_restore(modulePath):
             os.remove(os.path.join(modulePath, "config.bin"))
         if os.path.isfile(os.path.join(modulePath, "texHeaders.bin")):
             os.remove(os.path.join(modulePath, "texHeaders.bin"))
+        if os.path.isfile(os.path.join(modulePath, "$PBOPREFIX$.backup")):
+            if os.path.isfile(os.path.join(modulePath, "$PBOPREFIX$")):
+                os.remove(os.path.join(modulePath, "$PBOPREFIX$"))
+            os.rename(os.path.join(modulePath, "$PBOPREFIX$.backup"), os.path.join(modulePath, "$PBOPREFIX$"))
     except:
         print_yellow("Some error occurred. Check your addon folder {} for integrity".format(modulePath))
+
+    return True
+
+
+def get_ace_version():
+    global ACE_VERSION
+    #do the magic based on https://github.com/acemod/ACE3/issues/806#issuecomment-95639048
+    return ACE_VERSION
+
+def get_private_keyname(commitID,module="main"):
+    global pbo_name_prefix
+
+    aceVersion = get_ace_version()
+    keyName = str("{prefix}{version}-{commit_id}".format(prefix=pbo_name_prefix,version=aceVersion,commit_id=commitID))
+    print_yellow(keyName)
+    return keyName
+
+
+def get_commit_ID():
+    # Get latest commit ID
+    global make_root
+    curDir = os.getcwd()
+    try:
+        gitpath = os.path.join(os.path.dirname(make_root), ".git")
+        assert os.path.exists(gitpath)
+        os.chdir(make_root)
+
+        commit_id = subprocess.check_output(["git", "rev-parse", "HEAD"])
+        commit_id = str(commit_id, "utf-8")[:8]
+    except:
+        print_error("FAILED TO DETERMINE COMMIT ID.")
+        print_yellow("Verify that \GIT\BIN or \GIT\CMD is in your system path or user path.")
+        commit_id = "NOGIT"
+        raise
+    finally:
+        pass
+        os.chdir(curDir)
+
+    print_yellow("COMMIT ID set to {}".format(commit_id))
+    return commit_id
+
+
+def version_stamp_pboprefix(module,commitID):
+    ### Update pboPrefix with the correct version stamp. Use commit_id as the build number.
+    global work_drive
+    global prefix
+
+    try:
+        configpath = os.path.join(work_drive, prefix, module, "$PBOPREFIX$")
+        shutil.copyfile(configpath, os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
+
+        f = open(configpath, "r")
+        configtext = f.read()
+        f.close()
+
+        if configtext:
+            #patchestext = re.search(r"class CfgPatches\n\{(.*?)\n\}", configtext, re.DOTALL).group(1)
+            #patchestext = re.sub(r'version(.*?)="(.*?)"', r'version\1="\2-{}"'.format(commit_id), patchestext)
+            #configtext = re.sub(r"class CfgPatches\n\{(.*?)\n\}", "class CfgPatches\n{"+patchestext+"\n}", configtext, flags=re.DOTALL)
+            f = open(configpath, "w")
+            f.write(configtext)
+            f.close()
+        else:
+            os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+            os.rename(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"), os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+    except:
+        raise
+        print_error("Failed to include build number")
+        return False
+    finally:
+        if os.path.isfile(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup")):
+            if os.path.isfile(os.path.join(work_drive, prefix, module, "$PBOPREFIX$")):
+                os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+            os.rename(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"), os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
 
     return True
 ###############################################################################
@@ -489,14 +571,18 @@ def main(argv):
     """Build an Arma addon suite in a directory from rules in a make.cfg file."""
     print_blue("\nmake.py for Arma, modified for Advanced Combat Environment v{}".format(__version__))
 
+    global ACE_VERSION
     global work_drive
     global module_root
+    global make_root
     global release_dir
     global module_root_parent
     global optionals_root
     global key_name
     global key
     global dssignfile
+    global prefix
+    global pbo_name_prefix
 
     if sys.platform != "win32":
         print_error("Non-Windows platform (Cygwin?). Please re-run from cmd.")
@@ -600,18 +686,7 @@ See the make.cfg file for additional build options.
     make_root_parent = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
     os.chdir(make_root)
 
-    # Get latest commit ID
-    try:
-        gitpath = os.path.join(os.path.dirname(make_root), ".git")
-        assert os.path.exists(gitpath)
 
-        commit_id = subprocess.check_output(["git", "rev-parse", "HEAD"])
-        commit_id = str(commit_id, "utf-8")[:8]
-        key_name = str(key_name+"-"+commit_id)
-    except:
-        print_error("FAILED TO DETERMINE COMMIT ID.")
-        print_yellow("Verify that \GIT\BIN or \GIT\CMD is in your system path or user path.")
-        commit_id = "NOGIT"
 
     cfg = configparser.ConfigParser();
     try:
@@ -664,6 +739,10 @@ See the make.cfg file for additional build options.
         optionals_root = os.path.join(module_root_parent, "optionals")
         extensions_root = os.path.join(module_root_parent, "extensions")
         print_green ("module_root: {}".format(module_root))
+
+
+        commit_id = get_commit_ID()
+        key_name = versionStamp = get_private_keyname(commit_id)
 
         if (os.path.isdir(module_root)):
             os.chdir(module_root)
@@ -934,27 +1013,7 @@ See the make.cfg file for additional build options.
                         shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
 
 
-                    # Include build number
-                    try:
-                        configpath = os.path.join(work_drive, prefix, module, "config.cpp")
-                        f = open(configpath, "r")
-                        configtext = f.read()
-                        f.close()
-
-                        if configtext:
-                            patchestext = re.search(r"class CfgPatches\n\{(.*?)\n\}", configtext, re.DOTALL).group(1)
-                            patchestext = re.sub(r'version(.*?)="(.*?)"', r'version\1="\2-{}"'.format(commit_id), patchestext)
-                            configtext = re.sub(r"class CfgPatches\n\{(.*?)\n\}", "class CfgPatches\n{"+patchestext+"\n}", configtext, flags=re.DOTALL)
-                            f = open(configpath, "w")
-                            f.write(configtext)
-                            f.close()
-                        else:
-                            os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-                            os.rename(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
-                    except:
-                        raise
-                        print_error("Failed to include build number")
-                        continue
+                    version_stamp_pboprefix(module,commit_id)
 
                     if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
@@ -1013,7 +1072,7 @@ See the make.cfg file for additional build options.
                     print ("Resuming build...")
                     continue
                 finally:
-                    config_restore(os.path.join(work_drive, prefix, module))
+                    addon_restore(os.path.join(work_drive, prefix, module))
 
             elif build_tool== "addonbuilder":
                 # Detect $NOBIN$ and do not binarize if found.
@@ -1092,6 +1151,7 @@ See the make.cfg file for additional build options.
 
     except:
         print_yellow("Cancel or some error detected.")
+
     finally:
         copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
         cleanup_optionals(optionals_modules)
