@@ -1,4 +1,4 @@
-#define COMPONENT serverconfig
+#define COMPONENT server
 #include "\z\ace\Addons\main\script_mod.hpp"
 
 #ifdef DEBUG_ENABLED_SERVER
