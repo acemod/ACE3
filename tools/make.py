@@ -55,14 +55,18 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
+ACE_VERSION = "3.0.0"
 work_drive = ""
 module_root = ""
+make_root = ""
 release_dir = ""
 module_root_parent = ""
 optionals_root = ""
-key_name = "ace_3.0.0"
+key_name = "ace"
 key = ""
 dssignfile = ""
+prefix = "ace"
+pbo_name_prefix = "ace_"
 signature_blacklist = ["ace_server.pbo"]
 
 ###############################################################################
@@ -466,7 +470,7 @@ def check_for_obsolete_pbos(addonspath, file):
     return False
 
 
-def config_restore(modulePath):
+def addon_restore(modulePath):
     #PABST: cleanup config BS (you could comment this out to see the "de-macroed" cpp
     #print_green("\Pabst! (restoring): {}".format(os.path.join(modulePath, "config.cpp")))
     try:
@@ -478,10 +482,127 @@ def config_restore(modulePath):
             os.remove(os.path.join(modulePath, "config.bin"))
         if os.path.isfile(os.path.join(modulePath, "texHeaders.bin")):
             os.remove(os.path.join(modulePath, "texHeaders.bin"))
+        if os.path.isfile(os.path.join(modulePath, "$PBOPREFIX$.backup")):
+            if os.path.isfile(os.path.join(modulePath, "$PBOPREFIX$")):
+                os.remove(os.path.join(modulePath, "$PBOPREFIX$"))
+            os.rename(os.path.join(modulePath, "$PBOPREFIX$.backup"), os.path.join(modulePath, "$PBOPREFIX$"))
     except:
         print_yellow("Some error occurred. Check your addon folder {} for integrity".format(modulePath))
 
     return True
+
+
+def get_ace_version():
+    global ACE_VERSION
+    versionStamp = ACE_VERSION
+    #do the magic based on https://github.com/acemod/ACE3/issues/806#issuecomment-95639048
+
+    try:
+        scriptModPath = os.path.join(work_drive, prefix, "main\script_mod.hpp")
+
+        if os.path.isfile(scriptModPath):
+            f = open(scriptModPath, "r")
+            hpptext = f.read()
+            f.close()
+
+            if hpptext:
+                majorText = re.search(r"#define MAJOR (.*\b)", hpptext).group(1)
+                minorText = re.search(r"#define MINOR (.*\b)", hpptext).group(1)
+                patchlvlText = re.search(r"#define PATCHLVL (.*\b)", hpptext).group(1)
+                buildText = re.search(r"#define BUILD (.*\b)", hpptext).group(1)
+
+                if majorText:
+                    versionStamp = "{major}.{minor}.{patchlvl}.{build}".format(major=majorText,minor=minorText,patchlvl=patchlvlText,build=buildText)
+
+        else:
+            print_error("A Critical file seems to be missing or inaccessible: {}".format(scriptModPath))
+            raise FileNotFoundError("File Not Found: {}".format(scriptModPath))
+
+    except Exception as e:
+        print_error("Get_Ace_Version error: {}".format(e))
+        print_error("Check the integrity of the file: {}".format(scriptModPath))
+        versionStamp = ACE_VERSION
+        print_error("Resetting to the default version stamp: {}".format(versionStamp))
+        input("Press Enter to continue...")
+        print("Resuming build...")
+
+    print_yellow("ACE VERSION set to {}".format(versionStamp))
+    ACE_VERSION = versionStamp
+    return ACE_VERSION
+
+
+def get_private_keyname(commitID,module="main"):
+    global pbo_name_prefix
+
+    aceVersion = get_ace_version()
+    keyName = str("{prefix}{version}-{commit_id}".format(prefix=pbo_name_prefix,version=aceVersion,commit_id=commitID))
+    return keyName
+
+
+def get_commit_ID():
+    # Get latest commit ID
+    global make_root
+    curDir = os.getcwd()
+    try:
+        gitpath = os.path.join(os.path.dirname(make_root), ".git")
+        assert os.path.exists(gitpath)
+        os.chdir(make_root)
+
+        commit_id = subprocess.check_output(["git", "rev-parse", "HEAD"])
+        commit_id = str(commit_id, "utf-8")[:8]
+    except:
+        print_error("FAILED TO DETERMINE COMMIT ID.")
+        print_yellow("Verify that \GIT\BIN or \GIT\CMD is in your system path or user path.")
+        commit_id = "NOGIT"
+        raise
+    finally:
+        pass
+        os.chdir(curDir)
+
+    print_yellow("COMMIT ID set to {}".format(commit_id))
+    return commit_id
+
+
+def version_stamp_pboprefix(module,commitID):
+    ### Update pboPrefix with the correct version stamp. Use commit_id as the build number.
+    #This function will not handle any $PBOPREFIX$ backup or cleanup.
+    global work_drive
+    global prefix
+
+    configpath = os.path.join(work_drive, prefix, module, "$PBOPREFIX$")
+
+    try:
+        f = open(configpath, "r")
+        configtext = f.read()
+        f.close()
+
+        if configtext:
+            patchestext = re.search(r"version.*?=.*?$", configtext, re.DOTALL)
+            if patchestext:
+                if configtext:
+                    patchestext = re.search(r"(version.*?=)(.*?)$", configtext, re.DOTALL).group(1)
+                    configtext = re.sub(r"version(.*?)=(.*?)$", "version = {}\n".format(commitID), configtext, flags=re.DOTALL)
+                    f = open(configpath, "w")
+                    f.write(configtext)
+                    f.close()
+                else:
+                    os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+                    os.rename(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"), os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+            else:
+                if configtext:
+                    #append version info
+                    f = open(configpath, "a")
+                    f.write("\nversion = {}".format(commitID))
+                    f.close()
+                else:
+                    os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+                    os.rename(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"), os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+    except Exception as e:
+        print_error("Failed to include build number: {}".format(e))
+        return False
+
+    return True
+
 ###############################################################################
 
 
@@ -489,14 +610,18 @@ def main(argv):
     """Build an Arma addon suite in a directory from rules in a make.cfg file."""
     print_blue("\nmake.py for Arma, modified for Advanced Combat Environment v{}".format(__version__))
 
+    global ACE_VERSION
     global work_drive
     global module_root
+    global make_root
     global release_dir
     global module_root_parent
     global optionals_root
     global key_name
     global key
     global dssignfile
+    global prefix
+    global pbo_name_prefix
 
     if sys.platform != "win32":
         print_error("Non-Windows platform (Cygwin?). Please re-run from cmd.")
@@ -600,18 +725,7 @@ See the make.cfg file for additional build options.
     make_root_parent = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
     os.chdir(make_root)
 
-    # Get latest commit ID
-    try:
-        gitpath = os.path.join(os.path.dirname(make_root), ".git")
-        assert os.path.exists(gitpath)
 
-        commit_id = subprocess.check_output(["git", "rev-parse", "HEAD"])
-        commit_id = str(commit_id, "utf-8")[:8]
-        key_name = str(key_name+"-"+commit_id)
-    except:
-        print_error("FAILED TO DETERMINE COMMIT ID.")
-        print_yellow("Verify that \GIT\BIN or \GIT\CMD is in your system path or user path.")
-        commit_id = "NOGIT"
 
     cfg = configparser.ConfigParser();
     try:
@@ -663,6 +777,9 @@ See the make.cfg file for additional build options.
         module_root = cfg.get(make_target, "module_root", fallback=os.path.join(make_root_parent, "addons"))
         optionals_root = os.path.join(module_root_parent, "optionals")
         extensions_root = os.path.join(module_root_parent, "extensions")
+
+        commit_id = get_commit_ID()
+        key_name = versionStamp = get_private_keyname(commit_id)
         print_green ("module_root: {}".format(module_root))
 
         if (os.path.isdir(module_root)):
@@ -780,22 +897,26 @@ See the make.cfg file for additional build options.
                 else:
                     print_error("Failed to create key!")
 
-                try:
-                    print("Copying public key to release directory.")
 
-                    try:
-                        os.makedirs(os.path.join(module_root, release_dir, project, "keys"))
-                    except:
-                        pass
-
-                    shutil.copyfile(os.path.join(private_key_path, key_name + ".bikey"), os.path.join(module_root, release_dir, project, "keys", key_name + ".bikey"))
-
-                except:
-                    print_error("Could not copy key to release directory.")
-                    raise
 
             else:
                 print_green("\nNOTE: Using key {}".format(os.path.join(private_key_path, key_name + ".biprivatekey")))
+
+            try:
+                print("Copying public key to release directory.")
+
+                try:
+                    os.makedirs(os.path.join(module_root, release_dir, project, "keys"))
+                except:
+                    pass
+
+                # Use biKeyNameAbrev to attempt to minimize problems from this BI Bug REFERENCE: http://feedback.arma3.com/view.php?id=22133
+                biKeyNameAbrev = key_name.split("-")[0]
+                shutil.copyfile(os.path.join(private_key_path, key_name + ".bikey"), os.path.join(module_root, release_dir, project, "keys", biKeyNameAbrev + ".bikey"))
+
+            except:
+                print_error("Could not copy key to release directory.")
+                raise
 
             key = os.path.join(private_key_path, key_name + ".biprivatekey")
 
@@ -832,10 +953,6 @@ See the make.cfg file for additional build options.
             if module in cache:
                 old_sha = cache[module]
             else:
-                old_sha = ""
-
-            #We always build ACE_common so we can properly show the correct version stamp in the RPT file.
-            if module == "common":
                 old_sha = ""
 
             # Hash the module
@@ -915,6 +1032,16 @@ See the make.cfg file for additional build options.
             if build_tool == "pboproject":
                 try:
                     #PABST: Convert config (run the macro'd config.cpp through CfgConvert twice to produce a de-macro'd cpp that pboProject can read without fucking up:
+                    try:
+                        configpath = os.path.join(work_drive, prefix, module, "$PBOPREFIX$")
+                        if os.path.isfile(configpath):
+                            shutil.copyfile(configpath, os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
+                        else:
+                            print_error("$PBOPREFIX$ Does not exist for module: {}.".format(module))
+
+                    except:
+                        print_error("Error creating backup of $PBOPREFIX$ for module {}.")
+
                     shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
 
                     os.chdir("P:\\")
@@ -934,27 +1061,7 @@ See the make.cfg file for additional build options.
                         shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
 
 
-                    # Include build number
-                    try:
-                        configpath = os.path.join(work_drive, prefix, module, "config.cpp")
-                        f = open(configpath, "r")
-                        configtext = f.read()
-                        f.close()
-
-                        if configtext:
-                            patchestext = re.search(r"class CfgPatches\n\{(.*?)\n\}", configtext, re.DOTALL).group(1)
-                            patchestext = re.sub(r'version(.*?)="(.*?)"', r'version\1="\2-{}"'.format(commit_id), patchestext)
-                            configtext = re.sub(r"class CfgPatches\n\{(.*?)\n\}", "class CfgPatches\n{"+patchestext+"\n}", configtext, flags=re.DOTALL)
-                            f = open(configpath, "w")
-                            f.write(configtext)
-                            f.close()
-                        else:
-                            os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-                            os.rename(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
-                    except:
-                        raise
-                        print_error("Failed to include build number")
-                        continue
+                    version_stamp_pboprefix(module,commit_id)
 
                     if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
@@ -1013,7 +1120,7 @@ See the make.cfg file for additional build options.
                     print ("Resuming build...")
                     continue
                 finally:
-                    config_restore(os.path.join(work_drive, prefix, module))
+                    addon_restore(os.path.join(work_drive, prefix, module))
 
             elif build_tool== "addonbuilder":
                 # Detect $NOBIN$ and do not binarize if found.
@@ -1092,6 +1199,7 @@ See the make.cfg file for additional build options.
 
     except:
         print_yellow("Cancel or some error detected.")
+
     finally:
         copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
         cleanup_optionals(optionals_modules)
