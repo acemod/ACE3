@@ -20,17 +20,11 @@ namespace ace {
 			stream_.read((char *)&min_phase, sizeof(float));
 			stream_.read((char *)&max_phase, sizeof(float));
 
-			//stream_.read((char *)&junk, sizeof(uint32_t));
-			//stream_.read((char *)&junk2, sizeof(uint32_t));
+			stream_.read((char *)&junk, sizeof(uint32_t));
+			stream_.read((char *)&junk2, sizeof(uint32_t));
 			stream_.read((char *)&source_address, sizeof(uint32_t));
 
-            float buffer[4];
-            stream_.read((char *)buffer, sizeof(float) * 4);
-            return;
-
-            // THIS IS ALL WRONG
-            // ARMA3 HAS FIXED 4-FLOAT TRANSFORMS
-
+            // This always adds up to 2*4 more bytes unless its direct apparently
 			switch (type) {
 				// rotations
 			case 0:
@@ -61,9 +55,11 @@ namespace ace {
 			case 9: // fucking hides...
 				stream_.read((char *)&hide_value, sizeof(float));
 				stream_.read((char *)&offset1, sizeof(float)); // this is junk throw it in offset1 for hides
+                break;
 			default:
 				stream_.read((char *)&offset0, sizeof(float));
 				stream_.read((char *)&offset1, sizeof(float));
+                break;
 			}
            
 

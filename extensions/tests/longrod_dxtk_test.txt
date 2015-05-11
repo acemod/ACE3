@@ -1,5 +1,6 @@
 init:
 debug_render:
+#register_vehicle:\A3\soft_f\MRAP_01\MRAP_01_gmg_F.p3d,2,4050.18;3802.55;5.075
 register_vehicle:\A3\Armor_F_EPB\MBT_03\MBT_03_cannon_F.p3d,2,4050.18;3802.55;5.075
 #hit:2,\A3\Armor_F_EPB\MBT_03\MBT_03_cannon_F.p3d,[],2,Sh_120mm_APFSDS,650,27,19100,50,10,708.602;235.609;-85.6468,-2.1748;0.139648;-1.35955,0.942743;0.31346;-0.113925,-1;6.1914e-007;0.000794772,-2.17383;0.139404;-1.32366,708.602;235.609;-85.6468
 #register_vehicle:\a3\structures_f\mil\BagFence\BagFence_Long_F.p3d,0,4050.18;3802.55;5.075
