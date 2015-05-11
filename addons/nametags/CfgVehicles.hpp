@@ -65,7 +65,7 @@ class CfgVehicles {
                 defaultValue = 0;
             };
         };
-		class ModuleDescription: ModuleDescription {
+        class ModuleDescription: ModuleDescription {
             description = "$STR_ACE_NameTags_Module_Description";
         };
     };

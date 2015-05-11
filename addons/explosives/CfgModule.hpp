@@ -24,7 +24,7 @@ class ACE_ModuleExplosive: Module_F {
             defaultValue = 1;
         };
     };
-	class ModuleDescription: ModuleDescription {
-            description = "$STR_ACE_Explosive_Module_Description";
+    class ModuleDescription: ModuleDescription {
+        description = "$STR_ACE_Explosive_Module_Description";
     };
 };

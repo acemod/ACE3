@@ -27,7 +27,7 @@ class CfgVehicles {
                 defaultValue = 1;
             };
         };
-		class ModuleDescription: ModuleDescription {
+        class ModuleDescription: ModuleDescription {
             description = "$STR_ACE_Respawn_Module_Description";
         };
     };
@@ -42,7 +42,7 @@ class CfgVehicles {
         icon = QUOTE(PATHTOF(UI\Icon_Module_FriendlyFire_ca.paa));
 
         class Arguments {};
-		class ModuleDescription: ModuleDescription {
+        class ModuleDescription: ModuleDescription {
             description = "$STR_ACE_FriendlyFire_Module_Description";
         };
     };
@@ -57,7 +57,7 @@ class CfgVehicles {
         icon = QUOTE(PATHTOF(UI\Icon_Module_Rallypoint_ca.paa));
 
         class Arguments {};
-		class ModuleDescription: ModuleDescription {
+        class ModuleDescription: ModuleDescription {
             description = "$STR_ACE_Rallypoint_Module_Description";
         };
     };
