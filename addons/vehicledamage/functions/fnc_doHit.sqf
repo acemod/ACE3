@@ -33,7 +33,7 @@ if(_projectileLength == 0) then {
 
 _vehicleId = _vehicle getVariable[QGVAR(id), -1];
 
-_command = format["hit:%1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,%16", 
+_command = format["hit:%1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,%16,%17,%18", 
                         _vehicleId,  // vehicle id registered
                         _model, _selection, 
                         VECTOR_TEXT(vectorDir _vehicle),
