@@ -87,6 +87,22 @@ class RscMapControl {
     sizeExGrid = 0.032;
 };
 
+class RscMap;
+class RscDisplayArcadeMap_Layout_2: RscMap { //"Traditional" Editor:
+    class controlsBackground {
+        class CA_Map: RscMapControl {
+            #include "MapTweaks.hpp"
+        };
+    };
+};
+class RscDisplayArcadeMap_Layout_6: RscMap { //"Streamlined" Editor:
+    class controlsBackground {
+        class CA_Map: RscMapControl {
+            #include "MapTweaks.hpp"
+        };
+    };
+};
+
 // REGULAR MAP
 class RscDisplayMainMap {
     // Tweak map styling

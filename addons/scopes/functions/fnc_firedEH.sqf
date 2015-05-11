@@ -18,25 +18,20 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_adjustment", "_weapon", "_projectile", "_weaponIndex", "_zeroing", "_adjustment"];
-
+private ["_unit", "_adjustment", "_projectile", "_weaponIndex", "_zeroing", "_adjustment"];
 _unit = _this select 0;
-_weapon = _this select 1;
 _projectile = _this select 6;
 
-// Exit if the unit doesn't have any adjusment variable
+if !([_unit] call EFUNC(common,isPlayer)) exitWith {};
+
 _adjustment = _unit getVariable [QGVAR(Adjustment), []];
 if (_adjustment isEqualTo []) exitWith {};
-
-// Exit if the unit isn't a player
-if !([_unit] call EFUNC(common,isPlayer)) exitWith {};
 
 _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {};
 
 _zeroing = _adjustment select _weaponIndex;
 
-//Exit if adjusment is zero:
 if (_zeroing isEqualTo [0,0,0]) exitWith {};
 
 // Convert zeroing from mils to degrees

@@ -102,6 +102,8 @@ def  get_directory_hash(directory):
         traceback.print_exc()
         return -2
 
+    retVal = directory_hash.hexdigest()
+    #print_yellow("Hash Value for {} is {}".format(directory,retVal))
     return directory_hash.hexdigest()
 
 # Copyright (c) André Burgaud
@@ -608,6 +610,7 @@ See the make.cfg file for additional build options.
         key_name = str(key_name+"-"+commit_id)
     except:
         print_error("FAILED TO DETERMINE COMMIT ID.")
+        print_yellow("Verify that \GIT\BIN or \GIT\CMD is in your system path or user path.")
         commit_id = "NOGIT"
 
     cfg = configparser.ConfigParser();
@@ -659,6 +662,7 @@ See the make.cfg file for additional build options.
         module_root_parent = os.path.abspath(os.path.join(os.path.join(work_drive, prefix), os.pardir))
         module_root = cfg.get(make_target, "module_root", fallback=os.path.join(make_root_parent, "addons"))
         optionals_root = os.path.join(module_root_parent, "optionals")
+        extensions_root = os.path.join(module_root_parent, "extensions")
         print_green ("module_root: {}".format(module_root))
 
         if (os.path.isdir(module_root)):
@@ -804,6 +808,18 @@ See the make.cfg file for additional build options.
                     fileName = os.path.splitext(file)[0]
                     print_yellow("Removing obsolete file => {}".format(file))
                     purge(obsolete_check_path,fileName+"\..",fileName+".*")
+
+        obsolete_check_path = os.path.join(module_root, release_dir, project)
+        for file in os.listdir(obsolete_check_path):
+            if (file.endswith(".dll") and os.path.isfile(os.path.join(obsolete_check_path,file))):
+                if check_for_obsolete_pbos(extensions_root, file):
+                    fileName = os.path.splitext(file)[0]
+                    print_yellow("Removing obsolete file => {}".format(file))
+                    try:
+                        os.remove(os.path.join(obsolete_check_path,file))
+                    except:
+                        print_error("\nFailed to delete {}".format(os.path.join(obsolete_check_path,file)))
+                        pass
 
         # For each module, prep files and then build.
         print_blue("\nBuilding...")
@@ -969,7 +985,7 @@ See the make.cfg file for additional build options.
                                 raise
                                 print_error("Could not rename built PBO with prefix.")
                         # Sign result
-                        if key:
+                        if (key and not "ace_{}.pbo".format(module) in signature_blacklist):
                             print("Signing with {}.".format(key))
                             if pbo_name_prefix:
                                 ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo")])
@@ -983,7 +999,7 @@ See the make.cfg file for additional build options.
 
                     if not build_successful:
                         print_error("pboProject return code == {}".format(str(ret)))
-                        print_error("Module not successfully built/signed.")
+                        print_error("Module not successfully built/signed. Check your {}temp\{}_packing.log for more info.".format(work_drive,module))
                         print ("Resuming build...")
                         continue
 
@@ -1055,7 +1071,7 @@ See the make.cfg file for additional build options.
                             build_successful = True
 
                     if not build_successful:
-                        print_error("Module not successfully built.")
+                        print_error("Module not successfully built. Check your {}temp\{}_packing.log for more info.".format(work_drive,module))
 
                     # Back to the root
                     os.chdir(make_root)

@@ -23,7 +23,7 @@
                 <French>Direction %1</French>
                 <German>Windrichtung: %1</German>
                 <Hungarian>Irány: %1</Hungarian>
-                <Italian>Direzione: %1</Italian>
+                <Italian>Direzione: %1°</Italian>
                 <Portuguese>Direção: %1</Portuguese>
             </Key>
             <Key ID="STR_ACE_WEATHER_METER_WIND_SPEED">
