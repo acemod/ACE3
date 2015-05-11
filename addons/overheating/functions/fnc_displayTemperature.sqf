@@ -22,8 +22,8 @@ _temperature = [_player, _weapon, 0] call FUNC(updateTemperature);
 _scaledTemperature = (_temperature / 1000) min 1;
 
 _color = [
-    2 * (_scaledTemperature * 2) min 1,
-    2 * (1 - (_scaledTemperature * 2)) min 1,
+    2 * (_scaledTemperature * 2 min 1) min 1,
+    2 * (1 - (_scaledTemperature * 2 min 1)) min 1,
     00
 ];
 
