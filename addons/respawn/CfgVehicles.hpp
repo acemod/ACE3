@@ -1,9 +1,12 @@
 class CfgVehicles {
-    class Module_F;
+    class Logic;
+    class Module_F: Logic {
+        class ModuleDescription {};
+    };
     class ACE_ModuleRespawn: Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "Respawn System";
+        displayName = "$STR_ACE_Respawn_Module_DisplayName";
         function = QFUNC(module);
         scope = 2;
         isGlobal = 1;
@@ -11,43 +14,60 @@ class CfgVehicles {
 
         class Arguments {
             class SavePreDeathGear {
-                displayName = "Save Gear?";
-                description = "Respawn with the gear a soldier had just before his death?";
+                displayName = "$STR_ACE_Respawn_SavePreDeathGear_DisplayName";
+                description = "$STR_ACE_Respawn_SavePreDeathGear_Description";
                 typeName = "BOOL";
-                defaultValue = 0;
+
+                class values {
+                    class Yes { name = "$STR_ACE_Respawn_Yes"; value = 1; };
+                    class No { default = 1; name = "$STR_ACE_Respawn_No"; value = 0; };
+                };
             };
 
             class RemoveDeadBodiesDisconnected {
-                displayName = "Remove bodies?";
-                description = "Remove player bodies after disconnect?";
+                displayName = "$STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName";
+                description = "$STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description";
                 typeName = "BOOL";
-                defaultValue = 1;
+
+                class values {
+                    class Yes { default = 1; name = "$STR_ACE_Respawn_Yes"; value = 1; };
+                    class No { name = "$STR_ACE_Respawn_No"; value = 0; };
+                };
             };
+        };
+		class ModuleDescription: ModuleDescription {
+            description = "$STR_ACE_Respawn_Module_Description";
         };
     };
 
     class ACE_ModuleFriendlyFire: Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "Friendly Fire Messages";
+        displayName = "$STR_ACE_FriendlyFire_Module_DisplayName";
         function = QFUNC(moduleFriendlyFire);
         scope = 2;
         isGlobal = 1;
         icon = QUOTE(PATHTOF(UI\Icon_Module_FriendlyFire_ca.paa));
 
         class Arguments {};
+		class ModuleDescription: ModuleDescription {
+            description = "$STR_ACE_FriendlyFire_Module_Description";
+        };
     };
 
     class ACE_ModuleRallypoint: Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "Rallypoint System";
+        displayName = "$STR_ACE_Rallypoint_Module_DisplayName";
         function = QFUNC(moduleRallypoint);
         scope = 2;
         isGlobal = 1;
         icon = QUOTE(PATHTOF(UI\Icon_Module_Rallypoint_ca.paa));
 
         class Arguments {};
+		class ModuleDescription: ModuleDescription {
+            description = "$STR_ACE_Rallypoint_Module_Description";
+        };
     };
 
     // team leader
@@ -55,7 +75,7 @@ class CfgVehicles {
     class CAManBase : Man {
         class ACE_SelfActions {
             class ACE_MoveRallypoint {
-                displayName = "Move Rallypoint";
+                displayName = "$STR_ACE_Rallypoint_MoveRallypoint";
                 condition = QUOTE([ARR_2(_player, side group _player)] call FUNC(canMoveRallypoint));
                 statement = QUOTE([ARR_2(_player, side group _player)] call FUNC(moveRallypoint));
                 showDisabled = 0;

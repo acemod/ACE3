@@ -1,69 +1,75 @@
 class CfgVehicles {
-    class Module_F;
+    class Logic;
+    class Module_F: Logic {
+        class ModuleDescription {};
+    };
     class ACE_ModuleNameTags : Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "Name Tags";
+        displayName = "$STR_ACE_NameTags_Module_DisplayName";
         function = QFUNC(moduleNameTags);
         scope = 2;
         isGlobal = 1;
         icon = QUOTE(PATHTOF(UI\Icon_Module_NameTags_ca.paa));
         class Arguments {
             class PlayerNamesViewDistance {
-                displayName = "Player Names View Dist.";
-                description = "Distance in meters at which player names are shown. Default: 5";
+                displayName = "$STR_ACE_NameTags_PlayerNamesViewDistance_DisplayName";
+                description = "$STR_ACE_NameTags_PlayerNamesViewDistance_Description";
                 typeName = "NUMBER";
                 defaultValue = 5;
             };
             class showNamesForAI {
-                displayName = "Show name tags for AI?";
-                description = "Show the name and rank tags for friendly AI units? Default: Do not force";
+                displayName = "$STR_ACE_NameTags_showNamesForAI_DisplayName";
+                description = "$STR_ACE_NameTags_showNamesForAI_Description";
                 typeName = "NUMBER";
                 class values {
                     class DoNotForce {
                         default = 1;
-                        name = "Do Not Force";
+                        name = "$STR_ACE_NameTags_DoNotForce";
                         value = -1;
                     };
                     class ForceHide {
-                        name = "Force Hide";
+                        name = "$STR_ACE_NameTags_ForceHide";
                         value = 0;
                     };
                     class ForceShow {
-                        name = "Force show";
+                        name = "$STR_ACE_NameTags_ForceShow";
                         value = 1;
                     };
                 };
             };
             class showVehicleCrewInfo {
-                displayName = "Show crew info?";
-                description = "Show vehicle crew info, or by default allows players to choose it on their own. Default: Do Not Force";
+                displayName = "$STR_ACE_NameTags_showVehicleCrewInfo_DisplayName";
+                description = "$STR_ACE_NameTags_showVehicleCrewInfo_Description";
                 typeName = "NUMBER";
                 class values {
                     class DoNotForce {
                         default = 1;
-                        name = "Do Not Force";
+                        name = "$STR_ACE_NameTags_DoNotForce";
                         value = -1;
                     };
                     class ForceHide {
-                        name = "Force Hide";
+                        name = "$STR_ACE_NameTags_ForceHide";
                         value = 0;
                     };
                     class ForceShow {
-                        name = "Force Show";
+                        name = "$STR_ACE_NameTags_ForceShow";
                         value = 1;
                     };
                 };
             };
             class showCursorTagForVehicles {
-                displayName = "Show for Vehicles";
-                description = "Show cursor NameTag for vehicle commander (only if client has name tags enabled)Default: No";
+                displayName = "$STR_ACE_NameTags_showCursorTagForVehicles_DisplayName";
+                description = "$STR_ACE_NameTags_showCursorTagForVehicles_Description";
                 typeName = "BOOL";
                 class values {
-                    class Yes {name = "Yes"; value = 1;};
-                    class No {default = 1; name = "No"; value = 0;};
+                    class Yes {name = "$STR_ACE_NameTags_Yes"; value = 1;};
+                    class No {default = 1; name = "$STR_ACE_NameTags_No"; value = 0;};
                 };
             };
+        };
+		class ModuleDescription: ModuleDescription {
+            description = "$STR_ACE_NameTags_Module_Description";
         };
     };
 };

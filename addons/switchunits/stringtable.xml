@@ -25,5 +25,69 @@
             <Italian>Questa unità è troppo vicina al nemico.</Italian>
             <Portuguese>Essa unidade  está muito perta do inimigo.</Portuguese>
         </Key>
+        <Key ID="STR_ACE_SwitchUnits_Yes">
+            <English>Yes</English>
+            <Polish>Tak</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_No">
+            <English>No</English>
+            <Polish>Nie</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_Module_DisplayName">
+            <English>SwitchUnits System</English>
+            <Polish>System zmiany stron</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
+            <English>Switch to West?</English>
+            <Polish>Zmiana na Zachód?</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_SwitchToWest_Description">
+            <English>Allow switching to west units?</English>
+            <Polish>Pozwolić zmieniać graczom stronę na Zachód?</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_SwitchToEast_DisplayName">
+            <English>Switch to East?</English>
+            <Polish>Zmiana na Wschód?</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_SwitchToEast_Description">
+            <English>Allow switching to east units?</English>
+            <Polish>Pozwolić zmieniać graczom stronę na Wschód?</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_DisplayName">
+            <English>Switch to Independent?</English>
+            <Polish>Zmiana na Ruch Oporu?</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_Description">
+            <English>Allow switching to independent units?</English>
+            <Polish>Pozwolić zmieniać stronę na Ruch Oporu?</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_DisplayName">
+            <English>Switch to Civilian?</English>
+            <Polish>Zmiana na Cywili?</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_Description">
+            <English>Allow switching to civilian units?</English>
+            <Polish>Pozwolić zmieniać stronę na Cywili?</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_DisplayName">
+            <English>Enable Safe Zone?</English>
+            <Polish>Aktywuj bezp. strefę?</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_Description">
+            <English>Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone.</English>
+            <Polish>Aktywuje bezpieczną strefę wokół jednostek przeciwnika. Gracze nie mogą zmieniać strony wewnątrz tej strefy.</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_DisplayName">
+            <English>Safe Zone Radius</English>
+            <Polish>Promień bezp. strefy</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_Description">
+            <English>The safe zone around players from a different team. Default: 200</English>
+            <Polish>Promień bezpiecznej strefy wokół graczy z innych drużyn. Domyślnie: 200</Polish>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_Module_Description">
+            <English></English>
+            <Polish></Polish>
+        </Key>
     </Package>
 </Project>
