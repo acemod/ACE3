@@ -68,7 +68,7 @@ ace::simulation::named_selection::~named_selection()
 
 void ace::simulation::named_selection::animate(const glm::mat4 &matrix, ace::vector3<float> rotation_offset)
 {
-	bool offset = rotation_offset.zero_distance();
+	bool offset = !rotation_offset.zero_distance();
 	for (auto selection_vertex : this->vertices) {
 		selection_vertex->animate(matrix, rotation_offset, offset);
 	}

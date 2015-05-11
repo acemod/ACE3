@@ -159,7 +159,7 @@ namespace ace {
                 // Debug animation the shit
                 _active_vehicle->simulate();
 
-                for (auto & selection : obj.lods[lod]->selections) {
+                /*for (auto & selection : obj.lods[lod]->selections) {
                     for (auto & face : selection.second->faces) {
                         ace::vector3<float> vertices[3];
                         vertices[0] = { face->vertices[0]->x(), face->vertices[0]->y(), face->vertices[0]->z() };
@@ -180,9 +180,9 @@ namespace ace {
                         batch.DrawLine(v2, v3);
                         batch.DrawLine(v3, v1);
                     }
-                }
+                }*/
 
-                /*
+                
                 for (auto & face : obj.lods[lod]->faces) {
                     ace::vector3<float> vertices[3];
                     vertices[0] = { face->vertices[0]->x(), face->vertices[0]->y(), face->vertices[0]->z() };
@@ -204,7 +204,7 @@ namespace ace {
                     batch.DrawLine(v2, v3);
                     batch.DrawLine(v3, v1);
                     //batch.DrawTriangle(v1, v2, v3);
-                }*/
+                }
 
                 batch.End();
             }
