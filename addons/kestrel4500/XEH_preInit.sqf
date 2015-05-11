@@ -3,7 +3,6 @@
 ADDON = false;
 
 PREP(buttonPressed);
-PREP(calculateWindSpeed);
 PREP(canShow);
 PREP(collectData);
 PREP(createKestrelDialog);
