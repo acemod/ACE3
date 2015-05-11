@@ -22,8 +22,8 @@ _activated = _this select 2;
 
 if !(_activated) exitWith {};
 
-[_logic, QGVAR(settingAscension), "zeusAscension"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(settingBird), "zeusBird"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(settingOrdnance), "radioOrdnance"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(settingMines), "revealMines"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(settingWind), "remoteWind"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(zeusAscension), "zeusAscension"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(zeusBird), "zeusBird"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(radioOrdnance), "radioOrdnance"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(revealMines), "revealMines"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(remoteWind), "remoteWind"] call EFUNC(common,readSettingFromModule);

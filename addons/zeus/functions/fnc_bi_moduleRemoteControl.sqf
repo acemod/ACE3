@@ -45,10 +45,11 @@ if (_activated && local _logic && !isnull curatorcamera) then {
             bis_fnc_moduleRemoteControl_unit = _unit;
             _unit setvariable ["bis_fnc_moduleRemoteControl_owner",player,true];
 
-            /* Removed by ACE
-            //--- Play wind cue to all players
-            [format ["wind%1",ceil random 5],"bis_fnc_playsound"] call bis_fnc_mp;
-            */
+            // Added by ACE_zeus to toggle remote control wind sound
+            if (GETMVAR(QGVAR(remoteWind),true)) then {
+                //--- Play wind cue to all players
+                [format ["wind%1",ceil random 5],"bis_fnc_playsound"] call bis_fnc_mp;
+            };
 
             _blur = ppeffectcreate ["RadialBlur",144];
             _blur ppeffectenable true;

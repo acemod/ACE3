@@ -22,16 +22,20 @@ if (_activated) then {
         _explosive = createvehicle [_explosive,position _logic,[],0,"none"];
         _explosive attachto [_logic];
 
-        /* Removed by ACE
-        //--- Reveal the mine to curator's side
-        {
-            _side = (getassignedcuratorunit _x) call bis_fnc_objectSide;
-            _side revealmine _explosive;
-        } foreach (objectcurators _logic);
+        // Added by ACE_zeus to control if mines are revealed
+        _revealMines = GETMVAR(QGVAR(revealMines),2);
+        if (_revealMines > 0) then {
+            //--- Reveal the mine to curator's side
+            {
+                _side = (getassignedcuratorunit _x) call bis_fnc_objectSide;
+                _side revealmine _explosive;
+            } foreach (objectcurators _logic);
 
-        //--- Mark minefields in the map
-        [] spawn bis_fnc_drawMinefields;
-        */
+            if (_revealMines > 1) then {
+                //--- Mark minefields in the map
+                [] spawn bis_fnc_drawMinefields;
+            };
+        };
 
         //--- Show hint to curator who placed the object
         [[["Curator","PlaceMines"],nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",_logic] call bis_fnc_mp;

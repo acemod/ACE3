@@ -91,7 +91,6 @@ if (_activated) then {
             };
             default {["Ammo simulation '%1' is not supported",_simulation] call bis_fnc_error;};
         };
-        /* Removed by ACE
         _fnc_playRadio = {
             if (_radio != "") then {
                 _entities = (getposatl _logic) nearentities ["All",100];
@@ -110,7 +109,6 @@ if (_activated) then {
                 } foreach _entities;
             };
         };
-        */
         if (count _hint > 0) then {
             [[_hint,nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",objectcurators _logic] call bis_fnc_mp;
         };
@@ -136,10 +134,11 @@ if (_activated) then {
             //--- Create sound source
             _soundSource = if (_soundSourceClass != "") then {createSoundSource [_soundSourceClass,_pos,[],0]} else {objnull};
 
-            /* Removed by ACE
-            //--- Play radio warning
-            [] call _fnc_playRadio;
-            */
+            // Added by ACE_zeus to toggle ordnance radio message
+            if (GETMVAR(QGVAR(radioOrdnance),true)) then {
+                //--- Play radio warning
+                [] call _fnc_playRadio;
+            };
 
             //--- Update
             if (_attach) then {
