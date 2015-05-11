@@ -55,7 +55,7 @@ namespace ace {
 
     class threaded_dispatcher : public dispatcher {
     public:
-        threaded_dispatcher() : _worker(&ace::threaded_dispatcher::monitor, this) {
+        threaded_dispatcher() : _stop(false), _worker(&ace::threaded_dispatcher::monitor, this) {
  
         }
         ~threaded_dispatcher() {}
@@ -99,11 +99,14 @@ namespace ace {
         void push_result(const std::string & result) {
             push_result(dispatch_result(result, -1));
         }
-
+        void stop() {
+            std::lock_guard<std::mutex> lock(_messages_lock);
+            _stop = true;
+        }
     protected:
         void monitor() {
             _ready = false;
-            while (true) {
+            while (!_stop) {
                 {
                     std::lock_guard<std::mutex> lock(_messages_lock);
                     while (!_messages.empty()) {
@@ -135,15 +138,16 @@ namespace ace {
                 sleep(5);
             }
         }
-        std::queue<dispatch_result> _results;
-        std::mutex              _results_lock;
+        std::atomic_bool                _stop;
+        std::queue<dispatch_result>     _results;
+        std::mutex                      _results_lock;
 
-        std::queue<dispatch_message> _messages;
-        std::mutex              _messages_lock;
+        std::queue<dispatch_message>    _messages;
+        std::mutex                      _messages_lock;
 
-        std::thread             _worker;
+        std::thread                     _worker;
 
-        uint64_t                _message_id;
+        uint64_t                        _message_id;
     };
     class threaded_dispatch : public threaded_dispatcher, public singleton<dispatch> { };
 };

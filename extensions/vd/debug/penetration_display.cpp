@@ -44,13 +44,13 @@ namespace ace {
   
                 _BatchEffect.reset(new BasicEffect(_pd3dDevice));
                 _BatchEffect->SetVertexColorEnabled(true);
-
+                
                 {
                     void const* shaderByteCode;
                     size_t byteCodeLength;
 
                     _BatchEffect->GetVertexShaderBytecode(&shaderByteCode, &byteCodeLength);
-
+                    
                     hr = _pd3dDevice->CreateInputLayout(VertexPositionColor::InputElements,
                         VertexPositionColor::InputElementCount,
                         shaderByteCode, byteCodeLength,
@@ -161,7 +161,6 @@ namespace ace {
                     vertices[0] = { face->vertices[0]->x(), face->vertices[0]->y(), face->vertices[0]->z() };
                     vertices[1] = { face->vertices[1]->x(), face->vertices[1]->y(), face->vertices[1]->z() };
                     vertices[2] = { face->vertices[2]->x(), face->vertices[2]->y(), face->vertices[2]->z() };
-
 
                     XMVECTORF32 v[3] = {
                         { vertices[0].x(), vertices[0].y(), vertices[0].z() },

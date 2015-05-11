@@ -4,3 +4,5 @@
 [QGVAR(hp), FUNC(dispatchHitPart)] call EFUNC(common,addEventHandler);
 
 [FUNC(monitorResultsPFH), 0, []] call CBA_fnc_addPerFrameHandler;
+
+[QGVAR(setAnimationNames), FUNC(setAnimationNames)] call EFUNC(common,addEventHandler);

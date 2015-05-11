@@ -18,7 +18,7 @@ if(GVAR(async)) then {
 diag_log text format["[ACE] - Vehicle damage extension caching..."];
 "init:" call FUNC(callExtension);
 
-#ifdef ACE_VEHICLEDAMAGE_RENDER_DEBUG
+#ifdef DEBUG_VEHICLEDAMAGE_RENDER
 "debug_render:" call FUNC(callExtension);
 diag_log text format["[ACE] - DEBUG - DirectX11 Debug Rendering initialized"];
 #endif

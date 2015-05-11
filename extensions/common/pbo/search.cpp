@@ -135,6 +135,8 @@ namespace ace {
                 pbo_stream.close();
             }
 
+            LOG(INFO) << "PBO Index complete";
+
             return true;
         }
 

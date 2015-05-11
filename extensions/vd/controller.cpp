@@ -111,8 +111,14 @@ namespace ace {
                 vehicle_p _vehicle = std::make_shared<vehicle>(static_cast<uint32_t>(_args[1]), _object, _args[2]);
                 vehicles[static_cast<uint32_t>(_args[1])] = _vehicle;
 
-                LOG(INFO) << "vehicle registered: [id=" << _args[1].as_uint32() << ", type=" << _args[0].as_string() << "]";
+                // For results on a valid vehicle registration, we return its animation names for that given vehicle
+                std::stringstream _animationNames;
+                for (auto & anim : _vehicle->object->animations) {
+                    _animationNames << anim->name << ",";
+                }
+                this->push_result("setAnimationNames:"+_animationNames.str());
 
+                LOG(INFO) << "vehicle registered: [id=" << _args[1].as_uint32() << ", type=" << _args[0].as_string() << "]";
                 DEBUG_DISPATCH("register_vehicle", _args[1].as_string());
 
                 return true;

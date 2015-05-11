@@ -28,9 +28,9 @@ namespace ace {
             // P3d store in x,z,y format
             for (auto & face : object_->lods[fire_lod]->faces) {
                 bt_mesh->addTriangle(
-                    btVector3(face->vertices[0]->x(), face->vertices[0]->z(), face->vertices[0]->y()),
-                    btVector3(face->vertices[1]->x(), face->vertices[1]->z(), face->vertices[1]->y()),
-                    btVector3(face->vertices[2]->x(), face->vertices[2]->z(), face->vertices[2]->y())
+                    btVector3(face->vertices[0]->x(), face->vertices[0]->y(), face->vertices[0]->z()),
+                    btVector3(face->vertices[1]->x(), face->vertices[1]->y(), face->vertices[1]->z()),
+                    btVector3(face->vertices[2]->x(), face->vertices[2]->y(), face->vertices[2]->z())
                 );
             }
 

@@ -16,3 +16,4 @@
 #define RELATIVE_VECTOR_TEXT(o,x) ([(o worldToModelVisual ((x) call EFUNC(common,ASLToPosition)))] call FUNC(_textVector))
 
 #define DEBUG_EXTENSION_DYNLOAD
+#define DEBUG_VEHICLEDAMAGE_RENDER
