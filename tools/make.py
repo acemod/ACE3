@@ -533,20 +533,12 @@ def get_commit_ID():
 
 def version_stamp_pboprefix(module,commitID):
     ### Update pboPrefix with the correct version stamp. Use commit_id as the build number.
+    #This function will not handle any $PBOPREFIX$ backup or cleanup.
     global work_drive
     global prefix
 
-    try:
-        configpath = os.path.join(work_drive, prefix, module, "$PBOPREFIX$")
-        if os.path.isfile(configpath):
-            shutil.copyfile(configpath, os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
-        else:
-            print_error("$PBOPREFIX$ Does not exist for module: {}.".format(module))
-            return False
-    except:
-        print_error("Error updating $PBOPREFIX$ for module {}.")
-        return False
-        
+    configpath = os.path.join(work_drive, prefix, module, "$PBOPREFIX$")
+
     try:
         f = open(configpath, "r")
         configtext = f.read()
@@ -568,7 +560,6 @@ def version_stamp_pboprefix(module,commitID):
                     f = open(configpath, "w")
                     f.write(configtext)
                     f.close()
-                    os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
                 else:
                     os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
                     os.rename(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"), os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
@@ -578,18 +569,13 @@ def version_stamp_pboprefix(module,commitID):
                     f = open(configpath, "a")
                     f.write("\nversion = {}".format(commitID))
                     f.close()
-                    os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
-
+                else:
+                    os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+                    os.rename(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"), os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
     except:
         print_error("Failed to include build number")
         raise
         return False
-
-    finally:
-        if os.path.isfile(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup")):
-            if os.path.isfile(os.path.join(work_drive, prefix, module, "$PBOPREFIX$")):
-                os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
-            os.rename(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"), os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
 
     return True
 ###############################################################################
@@ -1018,6 +1004,16 @@ See the make.cfg file for additional build options.
             if build_tool == "pboproject":
                 try:
                     #PABST: Convert config (run the macro'd config.cpp through CfgConvert twice to produce a de-macro'd cpp that pboProject can read without fucking up:
+                    try:
+                        configpath = os.path.join(work_drive, prefix, module, "$PBOPREFIX$")
+                        if os.path.isfile(configpath):
+                            shutil.copyfile(configpath, os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
+                        else:
+                            print_error("$PBOPREFIX$ Does not exist for module: {}.".format(module))
+                            return False
+                    except:
+                        print_error("Error creating backup of $PBOPREFIX$ for module {}.")
+
                     shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
 
                     os.chdir("P:\\")
