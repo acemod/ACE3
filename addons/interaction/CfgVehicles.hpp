@@ -4,21 +4,21 @@ class CfgVehicles {
   class ACE_ModuleInteraction: Module_F {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
-    displayName = "Interaction System";
+    displayName = "$STR_ACE_InteractionSystem_Module_DisplayName";
     function = "ACE_Interaction_fnc_moduleInteraction";
     scope = 2;
     isGlobal = 1;
     icon = PATHTOF(UI\Icon_Module_Interaction_ca.paa);
     class Arguments {
       class EnableTeamManagement {
-        displayName = "Enable Team Management";
-        description = "Should players be allowed to use the Team Management Menu? Default: Yes";
+        displayName = "$STR_ACE_InteractionSystem_EnableTeamManagement_DisplayName";
+        description = "$STR_ACE_InteractionSystem_EnableTeamManagement_Description";
         typeName = "BOOL";
-        class values {
-          class Yes { default = 1; name = "Yes"; value = 1;};
-          class No { name = "No"; value = 0; };
-        };
+        defaultValue = 1;
       };
+    };
+	class ModuleDescription {
+      description = "$STR_ACE_InteractionSystem_Module_Description";
     };
   };
 

@@ -6,7 +6,7 @@ class CfgPatches {
     weapons[] = {};
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {"ace_interaction"};
-    author[] = {"PabstMirror"};
+    author[] = {"PabstMirror", "GieNkoV"};
     authorUrl = "https://github.com/acemod/ACE3";
     VERSION_CONFIG;
   };

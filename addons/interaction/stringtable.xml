@@ -522,7 +522,7 @@
             <German>Rot</German>
             <Spanish>Rojo</Spanish>
             <French>Rouge</French>
-            <Polish>Czerwony</Polish>
+            <Polish>Czerwonych</Polish>
             <Czech>Červený</Czech>
             <Russian>Красный</Russian>
             <Portuguese>Vermelha</Portuguese>
@@ -534,7 +534,7 @@
             <German>Grün</German>
             <Spanish>Verde</Spanish>
             <French>Vert</French>
-            <Polish>Zielony</Polish>
+            <Polish>Zielonych</Polish>
             <Czech>Zelený</Czech>
             <Russian>Зеленый</Russian>
             <Portuguese>Verde</Portuguese>
@@ -546,7 +546,7 @@
             <German>Blau</German>
             <Spanish>Azul</Spanish>
             <French>Bleu</French>
-            <Polish>Niebieski</Polish>
+            <Polish>Niebieskich</Polish>
             <Czech>Modrý</Czech>
             <Russian>Синий</Russian>
             <Portuguese>Azul</Portuguese>
@@ -558,7 +558,7 @@
             <German>Gelb</German>
             <Spanish>Amarillo</Spanish>
             <French>Jaune</French>
-            <Polish>Żółty</Polish>
+            <Polish>Żółtych</Polish>
             <Czech>Žlutý</Czech>
             <Russian>Жёлтый</Russian>
             <Portuguese>Amarela</Portuguese>
@@ -666,7 +666,7 @@
             <German>Du bist Gruppe %1 beigetreten</German>
             <Spanish>Te has unido al equipo %1</Spanish>
             <French>Tu as rejoint l'équipe %1</French>
-            <Polish>Dołączyłeś do drużyny %1</Polish>
+            <Polish>Dołączyłeś do %1</Polish>
             <Czech>Připojil ses do %1 týmu</Czech>
             <Russian>Вы присоединились к группе %1</Russian>
             <Portuguese>Você uniu-se à Equipe %1</Portuguese>
@@ -792,6 +792,22 @@
             <Hungarian>Utasok</Hungarian>
             <Italian>Passeggeri</Italian>
             <Portuguese>Passageiros</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_InteractionSystem_Module_DisplayName">
+            <English>Interaction System</English>
+            <Polish>System interakcji</Polish>
+        </Key>
+        <Key ID="STR_ACE_InteractionSystem_EnableTeamManagement_DisplayName">
+            <English>Enable Team Management</English>
+            <Polish>Wł. zarządzanie drużyną</Polish>
+        </Key>
+        <Key ID="STR_ACE_InteractionSystem_EnableTeamManagement_Description">
+            <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
+            <Polish>Czy gracze mogą korzystać z menu zarządzania drużyną? Domyślnie: Tak</Polish>
+        </Key>
+        <Key ID="STR_ACE_InteractionSystem_Module_Description">
+            <English></English>
+            <Polish>Na zarządzanie drużyną składa się: przydział kolorów dla członków drużyny, przejmowanie dowodzenia, dołączanie/opuszczanie drużyn.</Polish>
         </Key>
     </Package>
 </Project>

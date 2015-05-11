@@ -62,6 +62,53 @@
                 <Italian>Umidità: %1%</Italian>
                 <Portuguese>Humidade: %1%</Portuguese>
             </Key>
+            <Key ID="STR_ACE_WEATHER_WINDDEFLECTION_DISPLAYNAME">
+                <English>Wind Deflection</English>
+                <Polish>Wpływ wiatru</Polish>
+            </Key>
+            <Key ID="STR_ACE_WEATHER_DEFLECTIONMODULE_DISPLAYNAME">
+                <English>Wind Deflection</English>
+                <Polish>Wpływ wiatru</Polish>
+            </Key>
+            <Key ID="STR_ACE_WEATHER_DEFLECTIONMODULE_DESCRIPTION">
+                <English>Enables wind deflection</English>
+                <Polish>Aktywuje wpływ wiatru na trajektorię lotu pocisków</Polish>
+            </Key>
+            <Key ID="STR_ACE_WEATHER_VEHICLEENABLED_DISPLAYNAME">
+                <English>Vehicle Enabled</English>
+                <Polish>Włączone dla pojazdów</Polish>
+            </Key>
+            <Key ID="STR_ACE_WEATHER_VEHICLEENABLED_DESCRIPTION">
+                <English>Enables wind deflection for static/vehicle gunners</English>
+                <Polish>Aktywuje wpływ wiatru na trajektorię lotu pocisków dla broni statycznej i na pojazdach</Polish>
+            </Key>
+            <Key ID="STR_ACE_WEATHER_SIMULATIONINTERVAL_DISPLAYNAME">
+                <English>Simulation Interval</English>
+                <Polish>Interwał symulacji</Polish>
+            </Key>
+            <Key ID="STR_ACE_WEATHER_SIMULATIONINTERVAL_DESCRIPTION">
+                <English>Defines the interval between every calculation step</English>
+                <Polish>Określa interwał pomiędzy każdym krokiem kalkulacji</Polish>
+            </Key>
+            <Key ID="STR_ACE_WEATHER_SIMULATIONRADIUS_DISPLAYNAME">
+                <English>Simulation Radius</English>
+                <Polish>Zasięg symulacji</Polish>
+            </Key>
+            <Key ID="STR_ACE_WEATHER_SIMULATIONRADIUS_DESCRIPTION">
+                <English>Defines the radius around the player (in meters) at which projectiles are wind deflected</English>
+                <Polish>Określa obszar naokoło gracza (w metrach), na którym pociski są znoszone przez wiatr</Polish>
+            </Key>
+<<<<<<< HEAD
+			<Key ID="STR_ACE_WEATHER_WINDDEFLECTION_DESCRIPTION">
+				<English>Wind influence on projectiles trajectory</English>
+				<Polish>Wpływ wiatru na trajectorię lotu pocisków</Polish>
+			</Key>
+=======
+            <Key ID="STR_ACE_WEATHER_WINDDEFLECTION_DESCRIPTION">
+                <English>Wind influence on projectiles trajectory</English>
+                <Polish>Wpływ wiatru na trajektorię lotu pocisków</Polish>
+            </Key>
+>>>>>>> I made mess so new pull request.
         </Container>
     </Package>
 </Project>
