@@ -28,6 +28,7 @@ namespace ace {
 
         bool initialized(void) const { return _initialized; }
         bool ready(void) const { return _ready; }
+        
     protected:
         bool _load_model(const std::string &, const std::string &);
 

@@ -30,4 +30,6 @@ FUNC(_textVector) = {
     _str
 };
 
+[] call FUNC(initializeExtension);
+
 ADDON = true;

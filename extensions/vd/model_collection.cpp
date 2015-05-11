@@ -7,7 +7,7 @@ namespace ace {
     bool model_collection::init(void) {
         if (_initialized) return true;
        
-        _pbo_searcher = std::make_shared<ace::pbo::search>();
+        _pbo_searcher = std::make_shared<ace::pbo::search>(".*\.p3d");
 
         _initialized = true;
         _ready = true;

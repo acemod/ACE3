@@ -2,6 +2,7 @@
 #include <sstream>
 #include <iterator>
 #include <algorithm>
+#include <regex>
 
 #define NT_SUCCESS(x) ((x) >= 0)
 #define STATUS_INFO_LENGTH_MISMATCH 0xc0000004
@@ -103,7 +104,12 @@ namespace ace {
     namespace pbo {
 
         bool search::index_files() {
+            return index_files(".*");
+        }
+
+        bool search::index_files(const std::string &filter) {
             std::ifstream pbo_stream;
+            std::regex txt_regex(filter);
 
             if (_active_pbo_list.size() < 1)
                 return false;
@@ -118,16 +124,23 @@ namespace ace {
                 ace::pbo::archive _archive(pbo_stream);
                 for (ace::pbo::entry_p & entry : _archive.entries) {
                     if (entry->filename != "") {
-                        std::string full_virtual_path = _archive.info->data + "\\" + entry->filename;
-                        std::transform(full_virtual_path.begin(), full_virtual_path.end(), full_virtual_path.begin(), ::tolower);
-                        _file_pbo_index[full_virtual_path] = pbo_file_path;
-                        //LOG(DEBUG) << full_virtual_path << " = " << pbo_file_path;
+                        if (std::regex_match(entry->filename, txt_regex)) {
+                            std::string full_virtual_path = _archive.info->data + "\\" + entry->filename;
+                            std::transform(full_virtual_path.begin(), full_virtual_path.end(), full_virtual_path.begin(), ::tolower);
+                            _file_pbo_index[full_virtual_path] = pbo_file_path;
+                            //LOG(DEBUG) << full_virtual_path << " = " << pbo_file_path;
+                        }
                     }
                 }
                 pbo_stream.close();
             }
 
             return true;
+        }
+
+        search::search(const std::string & filter) {
+            generate_pbo_list();
+            index_files(filter);
         }
 
         search::search() {
