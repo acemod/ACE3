@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
 	test_phases["box1"] = 1.0f;
 	std::vector<std::string> test_lods;
 	test_lods.push_back("GEO");
-	_object.animate(test_phases, test_lods);
+	//_object.animate(test_phases, test_lods);
     /*printf("lod 0 face 0: %f %f %f\n\n", _object.lods[0]->faces[0]->vertices[0]->x(),
         _object.lods[0]->faces[0]->vertices[1]->y(),
         _object.lods[0]->selections[0]->faces[0]->vertices[0]->z());*/

@@ -414,14 +414,14 @@ ace::simulation::object::~object()
 
 }
 
-void ace::simulation::object::animate(const std::map<std::string, float> &animation_state, const std::vector<std::string> &selected_lods)
+void ace::simulation::object::animate(const std::map<std::string, float> &animation_state, const std::vector<uint32_t> &selected_lods)
 {
-	std::vector<uint32_t> lods;
-	lods.push_back(1);
 	animation_transform identity_transform;
-	identity_transform[1].first = glm::mat4();
-	identity_transform[1].second = ace::vector3<float>(0, 0, 0);
-	this->root_bone->animate(animation_state, lods, identity_transform);
+	for (uint32_t lod_id : selected_lods) {
+		identity_transform[lod_id].first = glm::mat4();
+		identity_transform[lod_id].second = ace::vector3<float>(0, 0, 0);
+	}
+	this->root_bone->animate(animation_state, selected_lods, identity_transform);
 }
 
 

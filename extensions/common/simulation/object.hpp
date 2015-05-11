@@ -209,7 +209,7 @@ namespace ace {
 
 			std::vector<animation_p> animations;
 
-			void animate(const std::map<std::string, float> &, const std::vector<std::string> &);
+			void animate(const std::map<std::string, float> &, const std::vector<std::uint32_t> &);
 
 			std::map<std::string, bone_p> all_bones;
 
