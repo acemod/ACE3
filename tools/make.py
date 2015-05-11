@@ -1002,7 +1002,7 @@ See the make.cfg file for additional build options.
                             shutil.copyfile(configpath, os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
                         else:
                             print_error("$PBOPREFIX$ Does not exist for module: {}.".format(module))
-                            return False
+
                     except:
                         print_error("Error creating backup of $PBOPREFIX$ for module {}.")
 
