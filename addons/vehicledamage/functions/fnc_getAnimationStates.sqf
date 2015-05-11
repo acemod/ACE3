@@ -1,4 +1,4 @@
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 private["_vehicleData", "_animationNames", "_animationResults", "_sendToExtension"];
 PARAMS_1(_vehicle);
@@ -38,10 +38,6 @@ if(_sendToExtension) then {
         _cmd = _cmd + format["%1,%2,", (_x select 0), (_x select 1)];
     } forEach _animationResults;
     
-    #ifdef DEBUG_MODE_FULL
-    TRACE_1("Updating Extension", _cmd);
-    copyToClipboard _cmd;     // This was for debug saving animation states
-    #endif
     _cmd call FUNC(callExtension);
 };
 
