@@ -6,7 +6,7 @@ class CfgVehicles {
     class GVAR(moduleZeusSettings): ACE_Module {
         scope = 2;
         displayName = "Zeus Settings [ACE]";
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
+        //icon = QUOTE(PATHTOF(iconGoesHere));
         category = "ACE_zeus";
         function = QUOTE(DFUNC(moduleZeusSettings));
         functionPriority = 1;

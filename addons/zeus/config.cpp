@@ -15,3 +15,4 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
+#include "ACE_Settings.hpp"
