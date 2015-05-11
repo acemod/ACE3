@@ -56,6 +56,7 @@ if sys.platform == "win32":
 
 ######## GLOBALS #########
 ACE_VERSION = "3.0.0"
+arma3tools_path = ""
 work_drive = ""
 module_root = ""
 make_root = ""
@@ -470,6 +471,55 @@ def check_for_obsolete_pbos(addonspath, file):
     return False
 
 
+def backup_config(module):
+    #PABST: Convert config (run the macro'd config.cpp through CfgConvert twice to produce a de-macro'd cpp that pboProject can read without fucking up:
+    global work_drive
+    global prefix
+
+    try:
+        configpath = os.path.join(work_drive, prefix, module, "$PBOPREFIX$")
+        if os.path.isfile(configpath):
+            shutil.copyfile(configpath, os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
+        else:
+            print_error("$PBOPREFIX$ Does not exist for module: {}.".format(module))
+
+    except:
+        print_error("Error creating backup of $PBOPREFIX$ for module {}.".format(module))
+
+    try:
+        shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
+        os.chdir(work_drive)
+    except:
+        print_error("Error creating backup of config.cpp for module {}.".format(module))
+
+    return True
+
+def convert_config(module):
+    try:
+        global work_drive
+        global prefix
+        global arma3tools_path
+
+        cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
+        ret = subprocess.call(cmd)
+        if ret != 0:
+            print_error("CfgConvert -bin return code == {}. Usually means there is a syntax error within the config.cpp file.".format(str(ret)))
+            os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
+            shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
+
+        cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
+        ret = subprocess.call(cmd)
+        if ret != 0:
+            print_error("CfgConvert -txt return code == {}. Usually means there is a syntax error within the config.cpp file.".format(str(ret)))
+            os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
+            shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
+    except Exception as e:
+        print_error("Exception from convert_config=>CfgConvert: {}".format(e))
+        return False
+
+    return True
+
+
 def addon_restore(modulePath):
     #PABST: cleanup config BS (you could comment this out to see the "de-macroed" cpp
     #print_green("\Pabst! (restoring): {}".format(os.path.join(modulePath, "config.cpp")))
@@ -611,6 +661,7 @@ def main(argv):
     print_blue("\nmake.py for Arma, modified for Advanced Combat Environment v{}".format(__version__))
 
     global ACE_VERSION
+    global arma3tools_path
     global work_drive
     global module_root
     global make_root
@@ -1031,39 +1082,15 @@ See the make.cfg file for additional build options.
             build_successful = False
             if build_tool == "pboproject":
                 try:
-                    #PABST: Convert config (run the macro'd config.cpp through CfgConvert twice to produce a de-macro'd cpp that pboProject can read without fucking up:
-                    try:
-                        configpath = os.path.join(work_drive, prefix, module, "$PBOPREFIX$")
-                        if os.path.isfile(configpath):
-                            shutil.copyfile(configpath, os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
-                        else:
-                            print_error("$PBOPREFIX$ Does not exist for module: {}.".format(module))
+                    nobinFilePath = os.path.join(work_drive, prefix, module, "$NOBIN$")
 
-                    except:
-                        print_error("Error creating backup of $PBOPREFIX$ for module {}.")
-
-                    shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
-
-                    os.chdir("P:\\")
-
-                    cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
-                    ret = subprocess.call(cmd)
-                    if ret != 0:
-                        print_error("CfgConvert -bin return code == {}. Usually means there is a syntax error within the config.cpp file.".format(str(ret)))
-                        os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-                        shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
-
-                    cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
-                    ret = subprocess.call(cmd)
-                    if ret != 0:
-                        print_error("CfgConvert -txt return code == {}. Usually means there is a syntax error within the config.cpp file.".format(str(ret)))
-                        os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-                        shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
-
+                    if (not os.path.isfile(nobinFilePath)):
+                        backup_config(module)
+                        convert_config(module)
 
                     version_stamp_pboprefix(module,commit_id)
 
-                    if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
+                    if os.path.isfile(nobinFilePath):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
                         cmd = [makepboTool, "-P","-A","-L","-N","-G", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
 
