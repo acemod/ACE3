@@ -137,7 +137,7 @@ if (_activated) then {
             _soundSource = if (_soundSourceClass != "") then {createSoundSource [_soundSourceClass,_pos,[],0]} else {objnull};
 
             // Added by ACE_zeus to toggle ordnance radio message
-            if GVAR(radioOrdnance) then {
+            if (GVAR(radioOrdnance)) then {
                 //--- Play radio warning
                 [] call _fnc_playRadio;
             };

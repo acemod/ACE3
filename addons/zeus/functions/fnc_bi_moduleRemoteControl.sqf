@@ -48,7 +48,7 @@ if (_activated && local _logic && !isnull curatorcamera) then {
             _unit setvariable ["bis_fnc_moduleRemoteControl_owner",player,true];
 
             // Added by ACE_zeus to toggle remote control wind sound
-            if GVAR(remoteWind) then {
+            if (GVAR(remoteWind)) then {
                 //--- Play wind cue to all players
                 [format ["wind%1",ceil random 5],"bis_fnc_playsound"] call bis_fnc_mp;
             };

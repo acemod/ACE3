@@ -153,7 +153,7 @@ if (_activated) then {
                 } foreach (_logic getvariable ["channels",[]]);
 
                 // Added by ACE_zeus to toggle ascension messages
-                if GVAR(zeusAscension) then {
+                if (GVAR(zeusAscension)) then {
                     //--- Sent notification to all assigned players
                     {
                         if (isplayer _x) then {
@@ -193,7 +193,7 @@ if (_activated) then {
         };
 
         // Added by ACE_zeus to toggle eagle
-        if GVAR(zeusBird) then {
+        if (GVAR(zeusBird)) then {
             //--- Create bird
             _birdType = _logic getvariable ["birdType","eagle_f"];
             if (_birdType != "") then {
@@ -218,7 +218,7 @@ if (_activated) then {
         _addons call bis_fnc_activateaddons;
 
         // Added by ACE_zeus to toggle eagle
-        if GVAR(zeusBird) then {
+        if (GVAR(zeusBird)) then {
             //--- Locality changed
             _logic addeventhandler [
                 "local",
