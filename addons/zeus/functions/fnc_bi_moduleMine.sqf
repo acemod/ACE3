@@ -25,15 +25,14 @@ if (_activated) then {
         _explosive attachto [_logic];
 
         // Added by ACE_zeus to control if mines are revealed
-        _revealMines = GETMVAR(GVAR(revealMines),2);
-        if (_revealMines > 0) then {
+        if (GVAR(revealMines) > 0) then {
             //--- Reveal the mine to curator's side
             {
                 _side = (getassignedcuratorunit _x) call bis_fnc_objectSide;
                 _side revealmine _explosive;
             } foreach (objectcurators _logic);
 
-            if (_revealMines > 1) then {
+            if (GVAR(revealMines) > 1) then {
                 //--- Mark minefields in the map
                 [] spawn bis_fnc_drawMinefields;
             };
