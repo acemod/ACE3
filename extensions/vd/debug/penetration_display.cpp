@@ -156,6 +156,9 @@ namespace ace {
 
                 batch.Begin();
 
+                // Debug animation the shit
+                _active_vehicle->simulate();
+
                 for (auto & face : obj.lods[lod]->faces) {
                     ace::vector3<float> vertices[3];
                     vertices[0] = { face->vertices[0]->x(), face->vertices[0]->y(), face->vertices[0]->z() };

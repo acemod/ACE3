@@ -8,7 +8,7 @@ using namespace ace::simulation;
 
 namespace ace {
     namespace vehicledamage {
-        base_vehicle::base_vehicle(uint32_t id, ace::simulation::object_p object_, ace::vector3<float> position_) : object(object_) {
+        base_vehicle::base_vehicle(uint32_t id, ace::simulation::object_p object_, ace::vector3<float> position_) : id(id), object(object_) {
             bt_mesh = std::make_shared<btTriangleMesh>();
             
             fire_lod = -1;
@@ -52,6 +52,15 @@ namespace ace {
         }
         base_vehicle::~base_vehicle() {
             controller::get().bt_world->removeCollisionObject(bt_object.get());
+        }
+
+        bool base_vehicle::simulate() {
+            std::vector<uint32_t> lods; 
+            lods.push_back(fire_lod);
+
+            object->animate(animation_state, lods);
+
+            return true;
         }
 
         void base_vehicle::transform() {

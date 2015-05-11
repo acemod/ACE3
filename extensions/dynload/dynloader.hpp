@@ -124,10 +124,12 @@ namespace ace {
             std::string function_str;
             std::vector<std::string> temp = ace::split(args_.get(), ',');
 
-            function_str = temp[1] + ":";
-            for (int x = 2; x < temp.size(); x++)
-                function_str = function_str + temp[x] + ",";
-
+            if (temp.size() < 3) {
+                function_str = temp[1];
+            } else {
+                for (int x = 1; x < temp.size(); x++)
+                    function_str = function_str + temp[x] + ",";
+            }
             _modules[args_.as_string(0)].function((char *)result.c_str(), 4096, (const char *)function_str.c_str());
 #ifdef _DEBUG
             //if (args_.as_string(0) != "fetch_result" && args_.as_string(0) != "ready") {

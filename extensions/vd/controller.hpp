@@ -29,9 +29,11 @@ namespace ace {
             bool register_vehicle(const arguments &, std::string &);
             bool delete_vehicle(const arguments &, std::string &);
 
+            bool set_animation_state(const arguments &, std::string &);
             bool set_vehicle_state(const arguments &, std::string &);
             bool handle_hit(const arguments & args, std::string &);
 
+            bool get_animations(const arguments &, std::string &);
             bool get_thickness(const arguments &, std::string &);
             bool selection_position(const arguments &, std::string &);
 #ifdef _DEBUG

@@ -6,7 +6,9 @@
 GVAR(ready) = false;
 
 #ifdef DEBUG_EXTENSION_DYNLOAD
+#ifdef DEBUG_EXTENSION_DYNLOAD_RELOAD
 "ace_dynload" callExtension format["unload:%1", GVAR(extensionLibrary)];
+#endif
 "ace_dynload" callExtension format["load:%1", GVAR(extensionLibrary)];
 diag_log text format["[ACE] - DEBUG - Dynamic extension loaded for Vehicle Damage"];
 #endif

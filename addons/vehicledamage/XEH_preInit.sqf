@@ -13,6 +13,12 @@ GVAR(extensionLibrary) = "z\ace\extensions\build\vd\Debug\ace_vd.dll";
 GVAR(async) = true;
 GVAR(ready) = false;
 
+// Extension dispatch events
+PREP(setAnimationNames);
+
+// To extension send events
+PREP(getAnimationStates);
+
 // Core functionality
 PREP(registerVehicleDamageHandler);
 PREP(registerVehicleWithExtension);
@@ -23,6 +29,7 @@ PREP(dispatchDamage);
 PREP(doHit);
 
 GVAR(vehicle_id) = 0;
+GVAR(vehicles) = HASH_CREATE;
 
 FUNC(_textVector) = {
     private["_str"];
