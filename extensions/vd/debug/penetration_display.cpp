@@ -159,6 +159,30 @@ namespace ace {
                 // Debug animation the shit
                 _active_vehicle->simulate();
 
+                for (auto & selection : obj.lods[lod]->selections) {
+                    for (auto & face : selection.second->faces) {
+                        ace::vector3<float> vertices[3];
+                        vertices[0] = { face->vertices[0]->x(), face->vertices[0]->y(), face->vertices[0]->z() };
+                        vertices[1] = { face->vertices[1]->x(), face->vertices[1]->y(), face->vertices[1]->z() };
+                        vertices[2] = { face->vertices[2]->x(), face->vertices[2]->y(), face->vertices[2]->z() };
+
+                        XMVECTORF32 v[3] = {
+                            { vertices[0].x(), vertices[0].y(), vertices[0].z() },
+                            { vertices[1].x(), vertices[1].y(), vertices[1].z() },
+                            { vertices[2].x(), vertices[2].y(), vertices[2].z() }
+                        };
+
+                        VertexPositionColor v1(v[0], color);
+                        VertexPositionColor v2(v[1], color);
+                        VertexPositionColor v3(v[2], color);
+
+                        batch.DrawLine(v1, v2);
+                        batch.DrawLine(v2, v3);
+                        batch.DrawLine(v3, v1);
+                    }
+                }
+
+                /*
                 for (auto & face : obj.lods[lod]->faces) {
                     ace::vector3<float> vertices[3];
                     vertices[0] = { face->vertices[0]->x(), face->vertices[0]->y(), face->vertices[0]->z() };
@@ -180,7 +204,7 @@ namespace ace {
                     batch.DrawLine(v2, v3);
                     batch.DrawLine(v3, v1);
                     //batch.DrawTriangle(v1, v2, v3);
-                }
+                }*/
 
                 batch.End();
             }
