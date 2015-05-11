@@ -69,7 +69,7 @@ class CfgVehicles {
     class ACE_VehicleLock_ModuleSetup: Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "Vehicle Lock Setup";
+        displayName = "$STR_ACE_VehicleLock_Module_DisplayName";
         function = QFUNC(moduleInit);
         scope = 2;
         isGlobal = 0;
@@ -77,37 +77,37 @@ class CfgVehicles {
         functionPriority = 0;
         class Arguments {
             class LockVehicleInventory {
-                displayName = "Lock Vehicle Inventory";
-                description = "Locks the inventory of locked vehicles";
+                displayName = "$STR_ACE_VehicleLock_LockVehicleInventory_DisplayName";
+                description = "$STR_ACE_VehicleLock_LockVehicleInventory_Description";
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class VehicleStartingLockState {
-                displayName = "Vehicle Starting Lock State"; // Argument label
-                description = "Set lock state for all vehicles (removes ambiguous lock states)"; // Tooltip description
+                displayName = "$STR_ACE_VehicleLock_VehicleStartingLockState_DisplayName"; // Argument label
+                description = "$STR_ACE_VehicleLock_VehicleStartingLockState_Description"; // Tooltip description
                 typeName = "NUMBER"; // Value type, can be "NUMBER", "STRING" or "BOOL"
                 class values {
-                    class None {name = "As Is"; value = 0; default = 1;};
-                    class Side {name = "Locked"; value = 1;};
-                    class Unique {name = "Unlocked"; value = 2;};
+                    class None {name = "$STR_ACE_VehicleLock_VehicleStartingLockState_AsIs"; value = 0; default = 1;};
+                    class Side {name = "$STR_ACE_VehicleLock_VehicleStartingLockState_Locked"; value = 1;};
+                    class Unique {name = "$STR_ACE_VehicleLock_VehicleStartingLockState_Unlocked"; value = 2;};
                 };
             };
             class DefaultLockpickStrength {
-                displayName = "Default Lockpick Strength";
-                description = "Default Time to lockpick (in seconds). Default: 10";
+                displayName = "$STR_ACE_VehicleLock_DefaultLockpickStrength_DisplayName";
+                description = "$STR_ACE_VehicleLock_DefaultLockpickStrength_Description";
                 typeName = "NUMBER"; // Value type, can be "NUMBER", "STRING" or "BOOL"
                 defaultValue = "10"; // Default text filled in the input box
             };
         };
         class ModuleDescription: ModuleDescription {
-            description = "Settings for lockpick strength and initial vehicle lock state. Removes ambiguous lock states.<br/>Source: vehiclelock.pbo";
+            description = "$STR_ACE_VehicleLock_Module_Description";
         };
     };
 
     class ACE_VehicleLock_ModuleSyncedAssign: Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "Vehicle Key Assign";
+        displayName = "$STR_ACE_VehicleLock_VehicleKeyAssign_Module_DisplayName";
         function = QFUNC(moduleSync);
         scope = 2;
         isGlobal = 0;
@@ -115,7 +115,7 @@ class CfgVehicles {
         functionPriority = 0;
         class Arguments {};
         class ModuleDescription: ModuleDescription {
-            description = "Sync with vehicles and players.  Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.<br/>Source: vehiclelock.pbo";
+            description = "$STR_ACE_VehicleLock_VehicleKeyAssign_Module_Description";
             sync[] = {"AnyPlayer", "AnyVehicle"};
         };
     };
