@@ -82,6 +82,6 @@ namespace ace {
 
     protected:
         std::vector<std::string> _args;
-        const std::string        &_original;
+        const std::string        _original;
     };
 }
