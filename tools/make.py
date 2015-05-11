@@ -564,9 +564,8 @@ def version_stamp_pboprefix(module,commitID):
                 else:
                     os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
                     os.rename(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"), os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
-    except:
-        print_error("Failed to include build number")
-        raise
+    except Exception as e:
+        print_error("Failed to include build number: {}".format(e))
         return False
 
     return True
