@@ -7,6 +7,10 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
+    class GVAR(remoteWind) {
+        typeName = "BOOL";
+        value = 1;
+    };
     class GVAR(radioOrdnance) {
         typeName = "BOOL";
         value = 1;
@@ -15,9 +19,5 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 2;
         values[] = {"Disabled", "Partially", "Fully"};
-    };
-    class GVAR(remoteWind) {
-        typeName = "BOOL";
-        value = 1;
     };
 };

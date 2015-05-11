@@ -13,6 +13,8 @@
  * Public: No
  */
 
+#include "script_component.hpp"
+
 _fnc_scriptNameParentTemp = if !(isnil '_fnc_scriptName') then {_fnc_scriptName} else {'BIS_fnc_moduleProjectile'};
 private ['_fnc_scriptNameParent'];
 _fnc_scriptNameParent = _fnc_scriptNameParentTemp;
@@ -135,7 +137,7 @@ if (_activated) then {
             _soundSource = if (_soundSourceClass != "") then {createSoundSource [_soundSourceClass,_pos,[],0]} else {objnull};
 
             // Added by ACE_zeus to toggle ordnance radio message
-            if (GETMVAR(QGVAR(radioOrdnance),true)) then {
+            if (GETMVAR(GVAR(radioOrdnance),true)) then {
                 //--- Play radio warning
                 [] call _fnc_playRadio;
             };

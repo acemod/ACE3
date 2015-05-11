@@ -12,6 +12,8 @@
  * Public: No
  */
 
+#include "script_component.hpp"
+
 _logic = _this select 0;
 _units = _this select 1;
 _activated = _this select 2;
@@ -151,7 +153,7 @@ if (_activated) then {
                 } foreach (_logic getvariable ["channels",[]]);
 
                 // Added by ACE_zeus to toggle ascension messages
-                if (GETMVAR(QGVAR(zeusAscension),true)) then {
+                if (GETMVAR(GVAR(zeusAscension),true)) then {
                     //--- Sent notification to all assigned players
                     {
                         if (isplayer _x) then {
@@ -191,7 +193,7 @@ if (_activated) then {
         };
 
         // Added by ACE_zeus to toggle eagle
-        if (GETMVAR(QGVAR(zeusBird),true)) then {
+        if (GETMVAR(GVAR(zeusBird),true)) then {
             //--- Create bird
             _birdType = _logic getvariable ["birdType","eagle_f"];
             if (_birdType != "") then {
@@ -216,7 +218,7 @@ if (_activated) then {
         _addons call bis_fnc_activateaddons;
 
         // Added by ACE_zeus to toggle eagle
-        if (GETMVAR(QGVAR(zeusBird),true)) then {
+        if (GETMVAR(GVAR(zeusBird),true)) then {
             //--- Locality changed
             _logic addeventhandler [
                 "local",

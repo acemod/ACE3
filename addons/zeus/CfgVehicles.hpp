@@ -15,14 +15,20 @@ class CfgVehicles {
         author = "SilentSpike";
         class Arguments {
             class zeusAscension {
-                displayName = "Enable Ascension Messages";
-                description = "Display a global popup message when a player is assigned as Zeus.";
+                displayName = "Ascension Messages";
+                description = "Display global popup messages when a player is assigned as Zeus.";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class zeusBird {
-                displayName = "Enable Eagle";
+                displayName = "Zeus Eagle";
                 description = "Spawn an eagle that follows the Zeus camera.";
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class remoteWind {
+                displayName = "Wind Sounds";
+                description = "Play wind sounds when Zeus remote controls a unit.";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
@@ -34,7 +40,7 @@ class CfgVehicles {
             };
             class revealMines {
                 displayName = "Reveal Mines";
-                description = "Do you want to reveal mines placed by Zeus?";
+                description = "Reveal mines to allies and/or place map markers.";
                 typeName = "NUMBER";
                 class values {
                     class disable {
@@ -42,21 +48,15 @@ class CfgVehicles {
                         value = 0;
                     };
                     class partial {
-                        name = "Reveal to sides friendly with Zeus unit";
+                        name = "Reveal to Allies";
                         value = 1;
                     };
                     class full  {
-                        name = "Add map markers and reveal to sides friendly with Zeus unit";
+                        name = "Allies + Map Markers";
                         value = 2;
                         default = 1;
                     };
                 };
-            };
-            class remoteWind {
-                displayName = "Reveal Remote Control";
-                description = "Play a wind sound when Zeus remote controls a unit.";
-                typeName = "BOOL";
-                defaultValue = 1;
             };
         };
         class ModuleDescription {

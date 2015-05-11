@@ -12,6 +12,8 @@
  * Public: No
  */
 
+#include "script_component.hpp"
+
 _logic = _this select 0;
 _units = _this select 1;
 _activated = _this select 2;
@@ -23,7 +25,7 @@ if (_activated) then {
         _explosive attachto [_logic];
 
         // Added by ACE_zeus to control if mines are revealed
-        _revealMines = GETMVAR(QGVAR(revealMines),2);
+        _revealMines = GETMVAR(GVAR(revealMines),2);
         if (_revealMines > 0) then {
             //--- Reveal the mine to curator's side
             {
