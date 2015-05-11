@@ -129,23 +129,15 @@ namespace ace {
                     ace::vector3<float> hit_from, hit_to;
 
                     hit_from = hit->impactposition;
-                    hit_to = hit_from + (hit->impactvelocity * 0.005f);
+                    hit_to = hit_from + (hit->impactvelocity * 0.01f);
 
                     XMVECTORF32 from = { hit_from.x(), hit_from.y(), hit_from.z() };
                     XMVECTORF32 to = { hit_to.x(), hit_to.y(), hit_to.z() };
-                    XMVECTORF32 to_a1 = { hit_to.x() + 0.5, hit_to.y() + 0.5, hit_to.z() };
-                    XMVECTORF32 to_a2 = { hit_to.x() - 0.5, hit_to.y() - 0.5, hit_to.z() };
 
                     VertexPositionColor v1(from, color);
                     VertexPositionColor v2(to, color);
 
-                    VertexPositionColor a1(to_a2, color);
-                    VertexPositionColor a2(to_a1, color);
-
                     batch.DrawLine(v1, v2);
-
-                    batch.DrawLine(a1, v2);
-                    batch.DrawLine(a2, v2);
                 }
 
 
