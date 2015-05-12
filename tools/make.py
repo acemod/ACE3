@@ -1224,8 +1224,9 @@ See the make.cfg file for additional build options.
             if build_successful:
                 cache[module] = new_sha
 
-    except:
-        print_yellow("Cancel or some error detected.")
+    except Exception as e:
+        print_yellow("Cancel or some error detected: {}".format(e))
+        
 
     finally:
         copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
