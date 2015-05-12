@@ -471,13 +471,13 @@
             <Portuguese>A banana é uma fruta comestível, botanicamente uma baga, produzida por vários tipos de plantas herbáceas grandes do genero Musa.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_toggleHandheldDevice">
-            <English>Toggle Device</English>
+            <English>Toggle Handheld Device</English>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
-            <English>Close Device</English>
+            <English>Close Handheld Device</English>
         </Key>
         <Key ID="STR_ACE_Common_cycleHandheldDevices">
-            <English>Cycle Devices</English>
+            <English>Cycle Handheld Devices</English>
         </Key>
     </Package>
 </Project>
