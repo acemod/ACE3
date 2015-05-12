@@ -239,6 +239,7 @@
             <German>UI Skalierung</German>
             <Hungarian>Beállításmenü kezelőfelületének skálázása</Hungarian>
             <Portuguese>Escalar o menu de opções</Portuguese>
+			<Italian>Proporzioni della interfaccia utente</Italian>
         </Key>
         <Key ID="STR_AllowConfigExport_Module_DisplayName">
             <English>Allow Config Export [ACE]</English>

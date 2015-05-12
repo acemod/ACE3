@@ -275,7 +275,7 @@
             <French>Désactiver menu commande</French>
             <Russian>Выключить командное меню</Russian>
             <Hungarian>Parancsnoki menü kikapcsolása</Hungarian>
-            <Italian>Disabilita Menù di comando</Italian>
+            <Italian>Disabilita menù di comando</Italian>
             <Portuguese>Desabilitar menu de comando</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_Unknown">
@@ -308,7 +308,7 @@
             <Spanish>Aceptar peticiones</Spanish>
             <Polish>Akceptuj prośby</Polish>
             <Czech>Přijmout žádost</Czech>
-            <Italian>Accetta Richieste</Italian>
+            <Italian>Accetta la richiesta</Italian>
             <French>Accepter requête</French>
             <Russian>Принять запросы</Russian>
             <Hungarian>Kérések elfogadása</Hungarian>
@@ -320,7 +320,7 @@
             <Spanish>Rechazar peticiones</Spanish>
             <Polish>Ignoruj prośby</Polish>
             <Czech>Zamítnout žádost</Czech>
-            <Italian>Rifiuta Richieste</Italian>
+            <Italian>Rifiuta la richiesta</Italian>
             <Russian>Отклонить запросы</Russian>
             <French>Rejeter requête</French>
             <Hungarian>Kérések elutasítása</Hungarian>
@@ -402,7 +402,7 @@
             <English>Hint Background color</English>
             <German>Hintergrundfarbe der Hinweise</German>
             <Spanish>Color de fondo de las notificaciones</Spanish>
-            <Italian>Colore di sfondo dei Suggerimenti</Italian>
+            <Italian>Colore di sfondo dei suggerimenti</Italian>
             <Russian>Цвет фона всплывающих подсказок</Russian>
             <Polish>Kolor tła powiadomień</Polish>
             <French>Notification: couleur de l'arrière plan</French>
@@ -414,7 +414,7 @@
             <English>The color of the background from the ACE hints.</English>
             <German>Die Hintergrundfarbe der ACE-Hinweise.</German>
             <Spanish>El color de fondo de las notificaciones del ACE</Spanish>
-            <Italian>Il colore di sfondo dei suggerimenti dell'ACE.</Italian>
+            <Italian>Il colore di sfondo dei suggerimenti di ACE.</Italian>
             <Russian>Цвет фона всплывающих подсказок АСЕ.</Russian>
             <Polish>Kolor tła dla powiadomień ACE</Polish>
             <French>Notification ACE: couleur de l'arrière plan</French>
@@ -426,7 +426,7 @@
             <English>Hint text font color</English>
             <German>Textfarbe der Hinweise</German>
             <Spanish>Color del texto de las notificaciones</Spanish>
-            <Italian>Il colore del Testo dei Suggerimenti</Italian>
+            <Italian>Il colore del testo dei suggerimenti</Italian>
             <Russian>Цвет шрифта всплывающих подсказок</Russian>
             <Polish>Kolor tekstu powiadomień</Polish>
             <French>Notification: couleur du texte</French>
