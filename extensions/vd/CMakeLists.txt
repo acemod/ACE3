@@ -22,9 +22,9 @@ if(NOT USE_BULLET)
 endif()
 
 if(DEVEL AND USE_DIRECTX)
-   set(LINK_LIBS directxtk BulletDynamics BulletCollision LinaerMath ${DirectX_D3DX11_LIBRARY} ${DirectX_D3D11_LIBRARY} ${DirectX_D3D11_1_LIBRARY} ${DirectX_D3D11_2_LIBRARY})
+   set(LINK_LIBS directxtk BulletDynamics BulletCollision LinearMath ${DirectX_D3DX11_LIBRARY} ${DirectX_D3D11_LIBRARY} ${DirectX_D3D11_1_LIBRARY} ${DirectX_D3D11_2_LIBRARY})
 else()
-   set(LINK_LIBS BulletDynamics BulletCollision LinaerMath)
+   set(LINK_LIBS BulletDynamics BulletCollision LinearMath)
 endif()
 
 target_link_libraries(${ACE_EXTENSION_NAME} ace_common ${LINK_LIBS})
