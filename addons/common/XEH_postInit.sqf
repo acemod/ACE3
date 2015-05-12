@@ -259,7 +259,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     [] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
     [] call ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 3);
-    true;
+    true
 },
 {false},
 [0xC7, [false, false, false]], false] call cba_fnc_addKeybind;  //Home Key
@@ -269,6 +269,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     [] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
     [] call ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 4);
+    true
 },
 {false},
 [0xC7, [false, true, false]], false] call cba_fnc_addKeybind;  //CTRL + Home Key
@@ -280,6 +281,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     _displayName = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 0);
     _iconImage = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 1);
     [_displayName, _iconImage] call FUNC(displayTextPicture);
+    true
 },
 {false},
 [0xC7, [true, false, false]], false] call cba_fnc_addKeybind;  //SHIFT + Home Key
