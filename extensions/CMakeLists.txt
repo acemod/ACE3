@@ -36,8 +36,7 @@ if(USE_BULLET)
     # Dependencies
     #
     add_definitions(-DUSE_DIRECTX)
-    add_definitions(-DBUILD_BULLET2_DEMOS=false -DBUILD_UNIT_TESTS=false -DBUILD_BULLET3_DEMOS=false -DBUILD_CPU_DEMOS=false -DBUILD_EXTRAS=false)
-    add_subdirectory(lib/bullet3 EXCLUDE_FROM_ALL)
+    add_subdirectory(lib/bullet3)
     #set(depname bullet3)
     #set(${depname}_PREFIX "lib/${depname}")
     #set(${depname}_INSTALL_DIR "${CMAKE_CURRENT_SOURCE_DIR}/binaries/${CMAKE_SYSTEM_NAME}${CMAKE_CXX_COMPILER_ID}${KINEVOX_ARCHITECTURE}/usr/local/")
