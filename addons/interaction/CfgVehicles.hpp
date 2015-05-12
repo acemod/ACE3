@@ -17,7 +17,7 @@ class CfgVehicles {
         defaultValue = 1;
       };
     };
-	class ModuleDescription {
+    class ModuleDescription {
       description = "$STR_ACE_InteractionSystem_Module_Description";
     };
   };

@@ -81,5 +81,37 @@
             <English></English>
             <Polish>Moduł ten pozwala dostosować ustawienia moździerza MK6.</Polish>
         </Key>
+        <Key ID="STR_ACE_mk6mortar_Module_DisplayName">
+            <English>MK6 Settings</English>
+            <Polish>Moździerz MK6 - Ustawienia</Polish>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_airResistanceEnabled_DisplayName">
+            <English>Air Resistance</English>
+            <Polish>Opór powietrza</Polish>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_airResistanceEnabled_Description">
+            <English>For Player Shots, Model Air Resistance and Wind Effects</English>
+            <Polish>Modeluj opór powietrza oraz wpływ wiatru na tor lotu pocisku dla strzałów z moździerza MK6 przez graczy</Polish>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_allowComputerRangefinder_DisplayName">
+            <English>Allow MK6 Computer</English>
+            <Polish>Komputer MK6</Polish>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_allowComputerRangefinder_Description">
+            <English>Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)</English>
+            <Polish>Zezwól na komputer i dalmierz (opcja ta MUSI zostać wyłączona jeżeli aktywowałeś opór powietrza)</Polish>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_allowCompass_DisplayName">
+            <English>Allow MK6 Compass</English>
+            <Polish>Kompas MK6</Polish>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_allowCompass_Description">
+            <English>Show the MK6 Digital Compass</English>
+            <Polish>Pokaż kompas MK6</Polish>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_Module_Description">
+            <English></English>
+            <Polish>Moduł ten pozwala dostosować ustawienia moździerza MK6.</Polish>
+        </Key>
     </Package>
 </Project>
