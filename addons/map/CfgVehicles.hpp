@@ -13,25 +13,37 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Map_MapIllumination_DisplayName";
                 description = "$STR_ACE_Map_MapIllumination_Description";
                 typeName = "BOOL";
-                defaultValue = 1;
+                class values {
+                    class Yes { name = "$STR_ACE_Map_Yes"; value = 1; default = 1; };
+                    class No { name = "$STR_ACE_Map_No"; value = 0; };
+                };
             };
             class MapShake {
                 displayName = "$STR_ACE_Map_MapShake_DisplayName";
                 description = "$STR_ACE_Map_MapShake_Description";
                 typeName = "BOOL";
-                defaultValue = 1;
+                class values {
+                    class Yes { name = "$STR_ACE_Map_Yes"; value = 1; default = 1;};
+                    class No { name = "$STR_ACE_Map_No"; value = 0; };
+                };
             };
             class MapLimitZoom {
                 displayName = "$STR_ACE_Map_MapLimitZoom_DisplayName";
                 description = "$STR_ACE_Map_MapLimitZoom_Description";
                 typeName = "BOOL";
-                defaultValue = 0;
+                class values {
+                    class Yes { name = "$STR_ACE_Map_Yes"; value = 1; };
+                    class No { name = "$STR_ACE_Map_No"; value = 0; default = 1;};
+                };
             };
             class MapShowCursorCoordinates {
                 displayName = "$STR_ACE_Map_MapShowCursorCoordinates_DisplayName";
                 description = "$STR_ACE_Map_MapShowCursorCoordinates_Description";
                 typeName = "BOOL";
-                defaultValue = 0;
+                class values {
+                    class Yes { name = "$STR_ACE_Map_Yes"; value = 1; };
+                    class No { name = "$STR_ACE_Map_No"; value = 0; default = 1;};
+                };
             };
         };
 		class ModuleDescription {
@@ -51,14 +63,16 @@ class CfgVehicles {
             class Interval {
                 displayName = "$STR_ACE_Map_BFT_Interval_DisplayName";
                 description = "$STR_ACE_Map_BFT_Interval_Description";
-				typeName = "NUMBER";
                 defaultValue = 1;
             };
             class HideAiGroups {
                 displayName = "$STR_ACE_Map_BFT_HideAiGroups_DisplayName";
                 description = "$STR_ACE_Map_BFT_HideAiGroups_Description";
                 typeName = "BOOL";
-                defaultValue = 0;
+                class values {
+                    class Yes { name = "$STR_ACE_Map_Yes"; value = 1; };
+                    class No { name = "$STR_ACE_Map_No"; value = 0; default = 1; };
+                };
             };
         };
 		class ModuleDescription {

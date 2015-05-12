@@ -13,6 +13,14 @@
             <English>Calculate dynamic map illumination based on light conditions?</English>
             <Polish>Oblicza dynamiczne oświetlenie mapy bazujące na warunkach oświetleniowych</Polish>
         </Key>
+        <Key ID="STR_ACE_Map_Yes">
+            <English>Yes</English>
+            <Polish>Tak</Polish>
+        </Key>
+        <Key ID="STR_ACE_Map_No">
+            <English>No</English>
+            <Polish>Nie</Polish>
+        </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>
             <Polish>Drżenie mapy</Polish>

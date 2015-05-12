@@ -17,17 +17,25 @@ class CfgVehicles {
                 displayName = "$STR_ACE_Respawn_SavePreDeathGear_DisplayName";
                 description = "$STR_ACE_Respawn_SavePreDeathGear_Description";
                 typeName = "BOOL";
-                defaultValue = 0;
+
+                class values {
+                    class Yes { name = "$STR_ACE_Respawn_Yes"; value = 1; };
+                    class No { default = 1; name = "$STR_ACE_Respawn_No"; value = 0; };
+                };
             };
 
             class RemoveDeadBodiesDisconnected {
                 displayName = "$STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName";
                 description = "$STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description";
                 typeName = "BOOL";
-                defaultValue = 1;
+
+                class values {
+                    class Yes { default = 1; name = "$STR_ACE_Respawn_Yes"; value = 1; };
+                    class No { name = "$STR_ACE_Respawn_No"; value = 0; };
+                };
             };
         };
-        class ModuleDescription: ModuleDescription {
+		class ModuleDescription: ModuleDescription {
             description = "$STR_ACE_Respawn_Module_Description";
         };
     };
@@ -42,7 +50,7 @@ class CfgVehicles {
         icon = QUOTE(PATHTOF(UI\Icon_Module_FriendlyFire_ca.paa));
 
         class Arguments {};
-        class ModuleDescription: ModuleDescription {
+		class ModuleDescription: ModuleDescription {
             description = "$STR_ACE_FriendlyFire_Module_Description";
         };
     };
@@ -57,7 +65,7 @@ class CfgVehicles {
         icon = QUOTE(PATHTOF(UI\Icon_Module_Rallypoint_ca.paa));
 
         class Arguments {};
-        class ModuleDescription: ModuleDescription {
+		class ModuleDescription: ModuleDescription {
             description = "$STR_ACE_Rallypoint_Module_Description";
         };
     };

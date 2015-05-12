@@ -517,6 +517,14 @@
             <English>Require explosive specialists to disable explosives? Default: No</English>
             <Polish>Wymagać saperów do rozbrajania ładunków wybuchowych? Domyślnie: Nie</Polish>
         </Key>
+        <Key ID="STR_ACE_Explosive_Yes">
+            <English>Yes</English>
+            <Polish>Tak</Polish>
+        </Key>
+        <Key ID="STR_ACE_Explosive_No">
+            <English>No</English>
+            <Polish>Nie</Polish>
+        </Key>
         <Key ID="STR_ACE_Explosive_PunishNonSpecialists_DisplayName">
             <English>Punish non-specialists?</English>
             <Polish>Karaj nie-specjalistów?</Polish>

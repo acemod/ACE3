@@ -97,17 +97,17 @@
             <Hungarian>Hellfire II AGM-114K lézer-irányított rakéta</Hungarian>
             <Russian>Управляемая ракета лазерного наведения Hellfire II AGM-114K</Russian>
         </Key>
-        <Key ID="STR_ACE_MissileGuidance_Off">
-            <English>Off</English>
-            <Polish>Wyłącz</Polish>
-        </Key>
-        <Key ID="STR_ACE_MissileGuidance_PlayerOnly">
-            <English>Player Only</English>
-            <Polish>Tylko gracz</Polish>
-        </Key>
-        <Key ID="STR_ACE_MissileGuidance_PlayerAndAi">
-            <English>Player and AI</English>
-            <Polish>Gracz oraz AI</Polish>
-        </Key>
+		<Key ID="STR_ACE_MissileGuidance_Off">
+			<English>Off</English>
+			<Polish>Wyłącz</Polish>
+		</Key>
+		<Key ID="STR_ACE_MissileGuidance_PlayerOnly">
+			<English>Player Only</English>
+			<Polish>Tylko gracz</Polish>
+		</Key>
+		<Key ID="STR_ACE_MissileGuidance_PlayerAndAi">
+			<English>Player and AI</English>
+			<Polish>Gracz oraz AI</Polish>
+		</Key>
     </Package>
 </Project>

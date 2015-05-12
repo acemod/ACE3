@@ -506,6 +506,14 @@
             <English>Check all addons instead of only those of ACE?</English>
             <Polish>Sprawdzaj wszystkie addony czy tylko te z ACE?</Polish>
         </Key>
+        <Key ID="STR_ACE_Common_CheckPBO_CheckAll_No">
+            <English>No</English>
+            <Polish>Tylko ACE</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBO_CheckAll_Yes">
+            <English>Yes</English>
+            <Polish>Wszystkie</Polish>
+        </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_DisplayName">
             <English>Whitelist</English>
             <Polish>Biała lista</Polish>
