@@ -1,3 +1,5 @@
+# C:\dev\ace3\extensions\tests\test.pbo C:\dev\ace3\extensions\tests\test.pbo.txt
 init:
 debug_render:
-register_vehicle:\test\test.p3d,2,4050.18;3802.55;5.075
+register_vehicle:\test\test.p3d,0,4050.18;3802.55;5.075
+set_animation_state:0,box3_rotate,0.5,box3_translate,0,

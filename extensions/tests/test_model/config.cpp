@@ -18,7 +18,7 @@ class CfgVehicles {
 		author = "Nou";
 		_generalMacro = "nou_snow_2x2";
 		scope = 2;
-		model = "\x\nou\addons\test_model\test.p3d";
+		model = "test_model\test.p3d";
 		vehicleClass = "Structures";
 		cost = 50000;
 		replaceDamagedLimit = 0.99999;
