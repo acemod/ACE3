@@ -12,6 +12,8 @@ if (!ctrlShown (_display displayCtrl 154)) exitWith {
     (_display displayCtrl 1713002) ctrlShow false;
     (_display displayCtrl 1713005) ctrlShow false;
     (_display displayCtrl 1713006) ctrlShow false;
+    (_display displayCtrl 1713010) ctrlShow false;
+    (_display displayCtrl 1713011) ctrlShow false;
 };
 
 GVAR(camera) setposATL positioncameratoworld [0,0,0.4];
@@ -54,3 +56,5 @@ _nightOpacity = [1,0] select (_dayOpacity == 1);
 (_display displayCtrl 1713002) ctrlShow true;
 (_display displayCtrl 1713005) ctrlShow true;
 (_display displayCtrl 1713006) ctrlShow true;
+(_display displayCtrl 1713010) ctrlShow true;
+(_display displayCtrl 1713011) ctrlShow true;

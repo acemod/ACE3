@@ -41,7 +41,7 @@ class RscInGameUI {
     };
 
     class ACE_RscWeapon_base: RscWeaponZeroing {
-        controls[] = {"CA_Zeroing","CA_FOVMode","ACE_DrawReticleHelper","ReticleDay","ReticleNight","BodyNight","BodyDay"}; // don't change this order
+        controls[] = {"CA_Zeroing","CA_FOVMode","ACE_DrawReticleHelper","ReticleDay","ReticleNight","BodyNight","BodyDay", "trippleHeadLeft", "trippleHeadRight"}; // don't change this order
 
         class CA_FOVMode: RscOpticsValue {  // idea by Taosenai. Apparently this can be used via isNil check to determine wheter the scope or the kolimator is used
             idc = 154;
@@ -97,17 +97,18 @@ class RscInGameUI {
         };
 
         class trippleHeadLeft: RscText {
-            idc = -1;
+            idc = 1713010;
             x = "safeZoneXAbs";
             Y = "safezoneY";
-            W = "safezoneX - safeZoneXAbs";
+            W = "(safezoneX - safeZoneXAbs) * (3/4)";
             H = "safeZoneH";
             colorBackground[] = {0,0,0,1};
         };
         class trippleHeadRight: trippleHeadLeft {
-            idc = -1;
-            x = "safeZoneXAbs + safeZoneWAbs - (safezoneX - safeZoneXABS)";
-        };
+            idc = 1713011;
+            x = "safeZoneXAbs + safeZoneWAbs - (safezoneX - safeZoneXABS) * (3/4)";
+             colorBackground[] = {0,0,0,1};
+        };     
     };
 
     class ACE_RscWeapon_Hamr: ACE_RscWeapon_base {
