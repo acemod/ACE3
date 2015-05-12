@@ -59,8 +59,8 @@ class CfgWeapons
     };
     class RH_sbr9: Rifle_Base_F
     {
-		ACE_barrelTwist=246.38;
-		ACE_barrelLength=228.6;
+        ACE_barrelTwist=246.38;
+        ACE_barrelLength=228.6;
     };
     class RH_M4A6: RH_M4A1_ris
     {

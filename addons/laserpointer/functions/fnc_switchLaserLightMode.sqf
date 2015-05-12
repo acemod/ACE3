@@ -12,19 +12,19 @@ _currentWeaponType = 0;
 
 private "_pointer";
 _pointer = switch (_weapon) do {
-	case (primaryWeapon _unit): {
-		_currentWeaponType = 1;
-		primaryWeaponItems _unit select 1
-	};
-	case (secondaryWeapon _unit): {
-		_currentWeaponType = 2;
-		secondaryWeaponItems _unit select 1
-	};
-	case (handgunWeapon _unit): {
-		_currentWeaponType = 3;
-		handgunItems _unit select 1
-	};
-	default {""};
+    case (primaryWeapon _unit): {
+        _currentWeaponType = 1;
+        primaryWeaponItems _unit select 1
+    };
+    case (secondaryWeapon _unit): {
+        _currentWeaponType = 2;
+        secondaryWeaponItems _unit select 1
+    };
+    case (handgunWeapon _unit): {
+        _currentWeaponType = 3;
+        handgunItems _unit select 1
+    };
+    default {""};
 };
 
 if (_pointer == "") exitWith {};
@@ -46,18 +46,18 @@ _description = getText (configFile >> "CfgWeapons" >> _nextPointer >> "ACE_modeD
 _picture = getText (configFile >> "CfgWeapons" >> _nextPointer >> "picture");
 
 switch (_currentWeaponType) do {
-	case 1: {
-		_unit removePrimaryWeaponItem _pointer;
-		_unit addPrimaryWeaponItem _nextPointer;
-	};
-	case 2: {
-		_unit removeSecondaryWeaponItem _pointer;
-		_unit addSecondaryWeaponItem _nextPointer;
-	};
-	case 3: {
-		_unit removeHandgunItem _pointer;
-		_unit addHandgunItem _nextPointer;
-	};
+    case 1: {
+        _unit removePrimaryWeaponItem _pointer;
+        _unit addPrimaryWeaponItem _nextPointer;
+    };
+    case 2: {
+        _unit removeSecondaryWeaponItem _pointer;
+        _unit addSecondaryWeaponItem _nextPointer;
+    };
+    case 3: {
+        _unit removeHandgunItem _pointer;
+        _unit addHandgunItem _nextPointer;
+    };
 };
 
 [_description, _picture] call EFUNC(common,displayTextPicture);

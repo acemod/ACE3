@@ -889,7 +889,7 @@ class CfgAmmo
         ACE_dragModel=7;
         ACE_muzzleVelocities[]={700, 732, 750, 780};
         ACE_barrelLengths[]={304.8, 406.4, 508.0, 609.6};
-    };	
+    };    
     class RH_762x35_B_FMJ: B_65x39_Caseless
     {
         ACE_caliber=7.823;
@@ -1361,7 +1361,7 @@ class CfgAmmo
         ACE_dragModel=7;
         ACE_muzzleVelocities[]={800, 853, 884};
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
-    };	
+    };    
     class B_mas_762x54_Ball : BulletBase
     {
         ACE_caliber=7.925;

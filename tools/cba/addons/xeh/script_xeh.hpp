@@ -56,10 +56,10 @@ weaponDisAssembled = "_this call SLX_XEH_EH_WeaponDisassembled";
 //           class EventHandlers;
 //      };
 //      class B_MRAP_01_F: MRAP_01_base_F {
-//	         class Eventhandlers: EventHandlers {
-//	   		      DELETE_EVENTHANDLERS
-//	         };
-//	    };
+//             class Eventhandlers: EventHandlers {
+//                     DELETE_EVENTHANDLERS
+//             };
+//        };
 /////////////////////////////////////////////////////////////////////////////////
 
 #define DELETE_EVENTHANDLERS delete init; \
