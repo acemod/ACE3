@@ -18,25 +18,25 @@ class CfgVehicles {
                 displayName = "Ascension Messages";
                 description = "Display global popup messages when a player is assigned as Zeus.";
                 typeName = "BOOL";
-                defaultValue = 1;
+                defaultValue = 0;
             };
             class zeusBird {
                 displayName = "Zeus Eagle";
                 description = "Spawn an eagle that follows the Zeus camera.";
                 typeName = "BOOL";
-                defaultValue = 1;
+                defaultValue = 0;
             };
             class remoteWind {
                 displayName = "Wind Sounds";
                 description = "Play wind sounds when Zeus remote controls a unit.";
                 typeName = "BOOL";
-                defaultValue = 1;
+                defaultValue = 0;
             };
             class radioOrdnance {
-                displayName = "Ordnance Radio Warning";
+                displayName = "Ordnance Warning";
                 description = "Play a radio warning when Zeus uses ordnance.";
                 typeName = "BOOL";
-                defaultValue = 1;
+                defaultValue = 0;
             };
             class revealMines {
                 displayName = "Reveal Mines";
@@ -46,6 +46,7 @@ class CfgVehicles {
                     class disable {
                         name = "Disabled";
                         value = 0;
+                        default = 1;
                     };
                     class partial {
                         name = "Reveal to Allies";
@@ -54,7 +55,6 @@ class CfgVehicles {
                     class full  {
                         name = "Allies + Map Markers";
                         value = 2;
-                        default = 1;
                     };
                 };
             };
