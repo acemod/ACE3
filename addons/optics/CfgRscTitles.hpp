@@ -70,9 +70,9 @@ class RscInGameUI {
             colorText[] = {1,1,1,0};
             colorBackground[] = {0,0,0,0};
             x = safezoneX+0.5*safezoneW-0.5*SIZEX;
-            y = safezoneY+0.5*safezoneH-0.5*SIZEX*safezoneW/safezoneH*(16/9)/(getResolution select 4);
+            y = safezoneY+0.5*safezoneH-0.5*SIZEX*(4/3);
             w = SIZEX;
-            h = SIZEX*safezoneW/safezoneH*(16/9)/(getResolution select 4);
+            h = SIZEX*(4/3);
         };
 
         class ReticleNight: ReticleDay {
@@ -86,14 +86,27 @@ class RscInGameUI {
             idc = 1713005;
             text = "";
             x = safezoneX+0.5*safezoneW-0.5*SIZEX;
-            y = safezoneY+0.5*safezoneH-0.5*SIZEX*safezoneW/safezoneH*(16/9)/(getResolution select 4);
+            y = safezoneY+0.5*safezoneH-0.5*SIZEX*(4/3);
             w = SIZEX;
-            h = SIZEX*safezoneW/safezoneH*(16/9)/(getResolution select 4);
+            h = SIZEX*(4/3);
         };
 
         class BodyNight: BodyDay {
             idc = 1713006;
             text = "";
+        };
+
+        class trippleHeadLeft: RscText {
+            idc = -1;
+            x = "safeZoneXAbs";
+            Y = "safezoneY";
+            W = "safezoneX - safeZoneXAbs";
+            H = "safeZoneH";
+            colorBackground[] = {0,0,0,1};
+        };
+        class trippleHeadRight: trippleHeadLeft {
+            idc = -1;
+            x = "safeZoneXAbs + safeZoneWAbs - (safezoneX - safeZoneXABS)";
         };
     };
 
@@ -177,12 +190,12 @@ _ctrl = (D displayCtrl 1713006);
 _sizeX = 1.54/(getResolution select 5);
 _sizeY = _sizeX*safezoneW/safezoneH;
 
-_ctrl ctrlSetPosition [      
+_ctrl ctrlSetPosition [
     safezoneX+0.5*safezoneW-0.5*_sizeX,
     safezoneY+0.5*safezoneH-0.5*_sizeY,
-    _sizeX,      
-    _sizeY  
+    _sizeX,
+    _sizeY
 ];
 _ctrl ctrlCommit 0
 
-*/
+ */
