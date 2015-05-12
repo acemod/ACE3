@@ -575,7 +575,7 @@
             <Czech>Přiřadit k červeným</Czech>
             <Russian>Назначить в Красную группу</Russian>
             <French>Assigner à rouge</French>
-			<Italian>Assegna al team rosso</Italian>
+            <Italian>Assegna al team rosso</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamGreen">
             <English>Assign Green</English>
@@ -587,7 +587,7 @@
             <Czech>Přiřadit k zeleným</Czech>
             <Russian>Назначить в Зеленую группу</Russian>
             <French>Assigner à vert</French>
-			<Italian>Assegna al team verde</Italian>
+            <Italian>Assegna al team verde</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamBlue">
             <English>Assign Blue</English>
@@ -599,7 +599,7 @@
             <Czech>Přiřadit k modrým</Czech>
             <Russian>Назначить в Синюю группу</Russian>
             <French>Assigner à bleu</French>
-			<Italian>Assegna al team blu</Italian>
+            <Italian>Assegna al team blu</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamYellow">
             <English>Assign Yellow</English>
@@ -611,7 +611,7 @@
             <Czech>Přiřadit ke žlutým</Czech>
             <Russian>Назначить в Желтую группу</Russian>
             <French>Assigner à jaune</French>
-			<Italian>Assegna al team giallo</Italian>
+            <Italian>Assegna al team giallo</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamRed">
             <English>Join Red</English>
@@ -623,7 +623,7 @@
             <Czech>Připojit k červeným</Czech>
             <Russian>Присоединиться к Красной группе</Russian>
             <French>Rejoindre rouge</French>
-			<Italian>Unirsi al team rosso</Italian>
+            <Italian>Unirsi al team rosso</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamGreen">
             <English>Join Green</English>
@@ -635,7 +635,7 @@
             <Czech> Připojit k zeleným</Czech>
             <Russian>Присоединиться к Зеленой группе</Russian>
             <French>Rejoindre vert</French>
-			<Italian>Unirsi al team verde</Italian>
+            <Italian>Unirsi al team verde</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamBlue">
             <English>Join Blue</English>
@@ -647,7 +647,7 @@
             <Czech>Připojit k modrým</Czech>
             <Russian>Присоединиться к Синей группе</Russian>
             <French>Rejoindre bleu</French>
-			<Italian>Unirsi al team blu</Italian>
+            <Italian>Unirsi al team blu</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamYellow">
             <English>Join Yellow</English>
@@ -659,7 +659,7 @@
             <Czech>Připojit ke žlutým</Czech>
             <Russian>Присоединиться к Жёлтой группе</Russian>
             <French>Rejoindre jaune</French>
-			<Italian>Unirsi al team giallo</Italian>
+            <Italian>Unirsi al team giallo</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
@@ -767,7 +767,7 @@
             <Hungarian>Tolás</Hungarian>
             <Russian>Толкать</Russian>
             <Portuguese>Empurrar</Portuguese>
-			<Italian>Spingere</Italian>
+            <Italian>Spingere</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
