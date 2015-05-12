@@ -9,7 +9,6 @@ class CfgVehicles {
         };
     };
     class ACE_Module;
-    // TODO localization for all the modules
     class ACE_moduleMedicalSettings: ACE_Module {
         scope = 2;
         displayName = "$STR_ACE_MedicalSettings_Module_DisplayName";
@@ -191,6 +190,7 @@ class CfgVehicles {
             class consumeItem_PAK {
                 displayName = "$STR_ACE_AdvancedMedicalSettings_consumeItem_PAK_DisplayName";
                 description = "$STR_ACE_AdvancedMedicalSettings_consumeItem_PAK_Description";
+
                 typeName = "NUMBER";
                 class values {
                     class keep { name = "$STR_ACE_Medical_No"; value = 0; };
@@ -336,6 +336,7 @@ class CfgVehicles {
             class enabled {
                 displayName = "$STR_ACE_AssignMedicVehicle_enabled_DisplayName";
                 description = "$STR_ACE_AssignMedicVehicle_enabled_Description";
+
                 typeName = "NUMBER";
                 class values {
                     class none {
@@ -1017,24 +1018,3 @@ class CfgVehicles {
         };
     };
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

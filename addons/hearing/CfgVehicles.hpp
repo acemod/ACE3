@@ -114,7 +114,7 @@ class CfgVehicles {
                 };
             };
         };
-		class ModuleDescription {
+        class ModuleDescription {
             description = "$STR_ACE_Hearing_Module_Description";
         };
     };

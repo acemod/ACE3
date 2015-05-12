@@ -44,7 +44,7 @@ class ACE_ModuleExplosive: Module_F {
             };
         };
     };
-	class ModuleDescription: ModuleDescription {
-            description = "$STR_ACE_Explosive_Module_Description";
+    class ModuleDescription: ModuleDescription {
+        description = "$STR_ACE_Explosive_Module_Description";
     };
 };

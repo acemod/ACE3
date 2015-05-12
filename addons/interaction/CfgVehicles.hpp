@@ -20,7 +20,7 @@ class CfgVehicles {
         };
       };
     };
-	class ModuleDescription {
+    class ModuleDescription {
       description = "$STR_ACE_InteractionSystem_Module_Description";
     };
   };

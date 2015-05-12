@@ -14,39 +14,39 @@
             <Polish>Dźwięki</Polish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_Description">
-            <English>Classnames of the ambiance sounds played. Seperated by ','. </English>
-            <Polish>Classname-y dźwięków do odtwarzania. Oddzielone przy użyciu ','.</Polish>
+            <English>Class names of the ambiance sounds to be played. Seperated by ','</English>
+            <Polish>Class name-y dźwięków do odtwarzania. Oddzielone przy użyciu ','</Polish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_DisplayName">
             <English>Minimal Distance</English>
             <Polish>Minimalny dystans</Polish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_Description">
-            <English>Minimal Distance</English>
-            <Polish>Minimalny dystans</Polish>
+            <English>Used for calculating a random position and sets the minimal distance between the players and the played sound file(s)</English>
+            <Polish>Używany do obliczania losowej pozycji a także ustawia minimalny dystans pomiędzy graczami a odtwarzanymi plikami dźwiękowymi</Polish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_DisplayName">
-            <English>Maximal Distance</English>
+            <English>Maximum Distance</English>
             <Polish>Maksymalny dystans</Polish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_Description">
-            <English>Maximal Distance</English>
-            <Polish>Maksymalny dystans</Polish>
+            <English>Used for calculating a random position and sets the maximum distance between the players and the played sound file(s)</English>
+            <Polish>Używany do obliczania losowej pozycji a także ustawia maksymalny dystans pomiędzy graczami a odtwarzanymi plikami dźwiękowymi</Polish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_DisplayName">
             <English>Minimal Delay</English>
             <Polish>Minimalne opóźnienie</Polish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_Description">
-            <English>Minimal Delay between sounds played</English>
+            <English>Minimal delay between sounds played</English>
             <Polish>Minimalne opóźnienie pomiędzy odtwarzanymi dźwiękami</Polish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_DisplayName">
-            <English>Maximal Delay</English>
+            <English>Maximum Delay</English>
             <Polish>Maksymalne opóźnienie</Polish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_Description">
-            <English>Maximal Delay between sounds played</English>
+            <English>Maximum delay between sounds played</English>
             <Polish>Maksymalne opóźnienie pomiędzy odtwarzanymi dźwiękami</Polish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_DisplayName">
