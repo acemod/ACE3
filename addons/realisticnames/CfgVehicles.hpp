@@ -407,7 +407,7 @@ class CfgVehicles {
         displayName = "$STR_ACE_RealisticNames_launch_RPG32_Name";
     };
 
-    class Weapon_launch_Titan_F: Launcher_Base_F {
+    /*class Weapon_launch_Titan_F: Launcher_Base_F {
         displayName = "$STR_ACE_RealisticNames_launch_Titan_Name";
     };
 
@@ -417,13 +417,13 @@ class CfgVehicles {
 
     class Weapon_launch_B_Titan_F: Launcher_Base_F {
         displayName = "$STR_ACE_RealisticNames_launch_Titan_Name";
-    };
+    };*/
     //class Weapon_launch_I_Titan_F: Weapon_launch_B_Titan_F {};
     //class Weapon_launch_O_Titan_F: Weapon_launch_B_Titan_F {};
 
-    class Weapon_launch_launch_B_Titan_short_F: Launcher_Base_F {
+    /*class Weapon_launch_launch_B_Titan_short_F: Launcher_Base_F {
         displayName = "$STR_ACE_RealisticNames_launch_Titan_short_Name";
-    };
+    };*/
     //class Weapon_launch_I_Titan_short_F: Weapon_launch_launch_B_Titan_short_F {};
     //class Weapon_launch_O_Titan_short_F: Weapon_launch_launch_B_Titan_short_F {};
 
