@@ -15,10 +15,10 @@ if(USE_DIRECTX)
     add_dependencies(ace_vd_ext_test ace_common ace_vd_static)
     target_link_libraries(ace_vd_ext_test ace_common directxtk 
     ace_vd_static
-    ${DirectX_D3DX11_LIBRARY} ${DirectX_D3D11_LIBRARY} ${DirectX_D3D11_1_LIBRARY} ${DirectX_D3D11_2_LIBRARY} BulletDynamics BulletCollision LinaerMath)
+    ${DirectX_D3DX11_LIBRARY} ${DirectX_D3D11_LIBRARY} ${DirectX_D3D11_1_LIBRARY} ${DirectX_D3D11_2_LIBRARY} BulletDynamics BulletCollision LinearMath)
 else()
     add_dependencies(ace_vd_ext_test ace_common ace_vd_static)
-    target_link_libraries(ace_vd_ext_test ace_common BulletDynamics BulletCollision LinaerMath ace_vd_static)
+    target_link_libraries(ace_vd_ext_test ace_common BulletDynamics BulletCollision LinearMath ace_vd_static)
 endif()
 set_target_properties(ace_vd_ext_test PROPERTIES PREFIX "")
 set_target_properties(ace_vd_ext_test PROPERTIES FOLDER Tests)
@@ -33,10 +33,10 @@ if(USE_DIRECTX)
     add_dependencies(ace_longrod_dxtk_test ace_common ace_vd_static)
     target_link_libraries(ace_longrod_dxtk_test ace_common directxtk 
     ace_vd_static
-    ${DirectX_D3DX11_LIBRARY} ${DirectX_D3D11_LIBRARY} ${DirectX_D3D11_1_LIBRARY} ${DirectX_D3D11_2_LIBRARY} BulletDynamics BulletCollision LinaerMath)
+    ${DirectX_D3DX11_LIBRARY} ${DirectX_D3D11_LIBRARY} ${DirectX_D3D11_1_LIBRARY} ${DirectX_D3D11_2_LIBRARY} BulletDynamics BulletCollision LinearMath)
 else()
     add_dependencies(ace_longrod_dxtk_test ace_common ace_vd_static)
-    target_link_libraries(ace_longrod_dxtk_test ace_common BulletDynamics BulletCollision LinaerMath ace_vd_static
+    target_link_libraries(ace_longrod_dxtk_test ace_common BulletDynamics BulletCollision LinearMath ace_vd_static
     )
 endif()
 set_target_properties(ace_longrod_dxtk_test PROPERTIES PREFIX "")
@@ -49,14 +49,14 @@ set_target_properties(ace_longrod_dxtk_test PROPERTIES FOLDER Tests)
 if(USE_DIRECTX)
     add_executable( ace_test_render test_render.cpp test_render.hpp)
     target_link_libraries(ace_test_render ace_common 
-    ${DirectX_D3DX11_LIBRARY} ${DirectX_D3D11_LIBRARY} ${DirectX_D3D11_1_LIBRARY} ${DirectX_D3D11_2_LIBRARY} BulletDynamics BulletCollision LinaerMath    )
+    ${DirectX_D3DX11_LIBRARY} ${DirectX_D3D11_LIBRARY} ${DirectX_D3D11_1_LIBRARY} ${DirectX_D3D11_2_LIBRARY} BulletDynamics BulletCollision LinearMath    )
     add_dependencies(ace_test_render ace_common)
     SET_TARGET_PROPERTIES(ace_test_render PROPERTIES PREFIX "")
     set_target_properties(ace_test_render PROPERTIES FOLDER Tests)
     
     add_executable( ace_dxtk_test dxtk_test.cpp)
     target_link_libraries(ace_dxtk_test ace_common directxtk 
-    ${DirectX_D3DX11_LIBRARY} ${DirectX_D3D11_LIBRARY} ${DirectX_D3D11_1_LIBRARY} ${DirectX_D3D11_2_LIBRARY} BulletDynamics BulletCollision LinaerMath)
+    ${DirectX_D3DX11_LIBRARY} ${DirectX_D3D11_LIBRARY} ${DirectX_D3D11_1_LIBRARY} ${DirectX_D3D11_2_LIBRARY} BulletDynamics BulletCollision LinearMath)
     add_dependencies(ace_dxtk_test ace_common directxtk)
   
     SET_TARGET_PROPERTIES(ace_dxtk_test PROPERTIES PREFIX "")
