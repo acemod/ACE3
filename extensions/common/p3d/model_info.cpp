@@ -8,7 +8,7 @@ namespace ace {
             raw_resolutions(nullptr), u_floats_1(nullptr), default_indicators(nullptr)
         { }
 
-        model_info::model_info(std::istream & stream_, const uint32_t lod_count)
+        model_info::model_info(std::istream & stream_, const uint32_t lod_count, uint32_t version)
             : raw_resolutions(nullptr), u_floats_1(nullptr), default_indicators(nullptr) {
             
             raw_resolutions = new float[lod_count];
@@ -57,7 +57,7 @@ namespace ace {
 
             stream_.read((char *)&u_byte_1, sizeof(uint8_t));
 
-            compressed<float> u_floats_1(stream_, true, false);
+            compressed<float> u_floats_1(stream_, true, false, version);
 
             stream_.read((char *)&mass, sizeof(float));
             stream_.read((char *)&mass_reciprocal, sizeof(float));

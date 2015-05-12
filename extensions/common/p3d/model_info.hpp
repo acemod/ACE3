@@ -11,7 +11,7 @@ namespace ace {
         class model_info {
         public:
             model_info();
-            model_info(std::istream &, const uint32_t lod_count);
+            model_info(std::istream &, const uint32_t lod_count, uint32_t version = 68);
             ~model_info();
 
 

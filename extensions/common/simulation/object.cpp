@@ -223,7 +223,7 @@ animation_transform ace::simulation::animation::animate(const float phase, const
         glm::vec3 axis_position = glm::vec3(this->lod_info[lod_id]->axis_position.x(), this->lod_info[lod_id]->axis_position.y(), this->lod_info[lod_id]->axis_position.z());
         glm::vec3 axis_direction = glm::vec3(this->lod_info[lod_id]->axis_direction.x(), this->lod_info[lod_id]->axis_direction.y(), this->lod_info[lod_id]->axis_direction.z());
 
-        if (true) {
+        if (this->type < 4) {
             switch (this->type) {
                 //rotation
             case 0: {
@@ -242,7 +242,7 @@ animation_transform ace::simulation::animation::animate(const float phase, const
                 scale = (scale / (max_value - min_value)) * (angle1 - angle0);
                 glm::vec3 rotation_axis = glm::vec3(1.0f, 0.0f, 0.0f);
 
-                animation_matrix = glm::rotate(glm::mat4(1.0f), scale, rotation_axis);
+                animation_matrix = glm::rotate(glm::mat4(1.0f), -scale, rotation_axis);
                 direction_matrix = glm::translate(glm::mat4(1.0f), axis_position);
 
                 animation_matrix = animation_matrix * direction_matrix;
@@ -268,8 +268,9 @@ animation_transform ace::simulation::animation::animate(const float phase, const
                 scale = (scale / (max_value - min_value)) * (angle1 - angle0);
                 glm::vec3 rotation_axis = glm::vec3(0.0f, 0.0f, 1.0f);
 
-                animation_matrix = glm::rotate(glm::mat4(1.0f), scale, rotation_axis);
                 direction_matrix = glm::translate(glm::mat4(1.0f), axis_position);
+                animation_matrix = glm::rotate(direction_matrix, -scale, rotation_axis);
+                
 
                 animation_matrix = animation_matrix * direction_matrix;
 
@@ -279,11 +280,16 @@ animation_transform ace::simulation::animation::animate(const float phase, const
                     //translation
             case 4: {
                 scale = (scale / (max_value - min_value)) * (offset1 - offset0);
-                animation_matrix = glm::translate(glm::mat4(1.0f), glm::vec3(
-                    this->lod_info[lod_id]->axis_direction.x()*scale,
-                    this->lod_info[lod_id]->axis_direction.y()*scale,
-                    this->lod_info[lod_id]->axis_direction.z()*scale
-                    ));
+                glm::vec3 direction(
+                    this->lod_info[lod_id]->axis_direction.x(),
+                    this->lod_info[lod_id]->axis_direction.y(),
+                    this->lod_info[lod_id]->axis_direction.z()
+                    );
+                direction = direction * scale;
+                direction_matrix = glm::translate(glm::mat4(1.0f), axis_position);
+                animation_matrix = glm::translate(glm::mat4(1.0f), direction);
+                animation_matrix = animation_matrix * direction_matrix;
+
                 break;
             }
                     //translationX
@@ -318,6 +324,7 @@ animation_transform ace::simulation::animation::animate(const float phase, const
             }
             case 8: {
                 // fuck direct for now
+                break;
             }
                     //hide
             case 9: {
@@ -342,11 +349,15 @@ float ace::simulation::animation::get_scale(float phase)
     switch (source_address)
     {
     case 1:
-        scale = fmod(phase - min_value, max_value - min_value) + min_value;
+        scale = fmod(phase - min_value, (max_value - min_value) * 2) + min_value;
+        // when over limit, mirror
+        if (phase > max_value) phase = max_value - (phase - max_value);
+
         scale = std::min(std::max(scale, min_phase), max_phase);
+        
         break;
     case 2:
-        scale = fmod(phase - min_value, (max_value - min_value) * 2) + min_value;
+        scale = fmod(phase - min_value, (max_value - min_value)) + min_value;
         if (scale > max_value) scale = max_value - (scale - max_value);
         scale = std::min(std::max(scale, min_phase), max_phase);
         break;

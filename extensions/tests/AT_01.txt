@@ -1,0 +1,5 @@
+#c:\arma\arma3\addons\static_f_gamma.pbo C:\dev\ace3\extensions\tests\AT_01.txt
+init:
+debug_render:
+register_vehicle:\A3\Static_F_gamma\AT_01\AT_01.p3d,0,4050.18;3802.55;5.075
+fetch_result:1

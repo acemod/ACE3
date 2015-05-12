@@ -43,7 +43,7 @@ namespace ace {
             stream_.read((char *)&u_float_1, sizeof(float));
 
             // Derp, this was only TOH apparently!?
-            //point_flags = compressed<uint32_t>(stream_, true, true);
+            //point_flags = compressed<uint32_t>(stream_, true, true, version);
 
             stream_.read((char *)&u_float_2, sizeof(float));
             stream_.read((char *)&u_float_3, sizeof(float));
@@ -70,8 +70,8 @@ namespace ace {
                  materials.push_back(std::make_shared<material>(stream_, version));
             }
 
-            edges.mlod = compressed<uint16_t>(stream_, true, false).data;
-            edges.vertex = compressed<uint16_t>(stream_, true, false).data;
+            edges.mlod = compressed<uint16_t>(stream_, true, false, version).data;
+            edges.vertex = compressed<uint16_t>(stream_, true, false, version).data;
 
             // @TODO: THIS IS OFF WTF?!
             // The first face is coming up null, so we missed something
@@ -128,14 +128,14 @@ namespace ace {
         uv::uv() {}
         uv::uv(std::istream &stream_, uint32_t version = 68) {
             stream_.read((char *)&uv_scale, sizeof(float) * 4);
-            data = compressed<float>(stream_, true, true);
+            data = compressed<float>(stream_, true, true, version);
         }
 
         c_vertex_table::c_vertex_table() {}
         c_vertex_table::c_vertex_table(std::istream &stream_, uint32_t size_, uint32_t version = 68) : size(size_) {
             uint32_t temp_count;
 
-            point_flags = compressed<uint32_t>(stream_, true, true);
+            point_flags = compressed<uint32_t>(stream_, true, true, version);
 
             uvsets.push_back(std::make_shared<uv>(stream_, version));
 
@@ -145,7 +145,7 @@ namespace ace {
                 uvsets.push_back(std::make_shared<uv>(stream_, version));
             }
             
-            points = compressed<ace::vector3<float>>(stream_, true, false, false);
+            points = compressed<ace::vector3<float>>(stream_, true, false, false, version);
 
             size = points.size;
         }
@@ -157,15 +157,15 @@ namespace ace {
 
             READ_STRING(name);
 
-            faces = compressed<uint16_t>(stream_, true, false);
+            faces = compressed<uint16_t>(stream_, true, false, version);
 
-            //face_weights = compressed<uint32_t>(stream_, true, false); // Face weights
-            face_weights = compressed<uint32_t>(stream_, true, false);
+            //face_weights = compressed<uint32_t>(stream_, true, false, version); // Face weights
+            face_weights = compressed<uint32_t>(stream_, true, false, version);
             READ_BOOL(is_sectional);
 
-            sections = compressed<uint32_t>(stream_, true, false);
-            vertex_table = compressed<uint16_t>(stream_, true, false);
-            texture_weights = compressed<uint8_t>(stream_, true, false);
+            sections = compressed<uint32_t>(stream_, true, false, version);
+            vertex_table = compressed<uint16_t>(stream_, true, false, version);
+            texture_weights = compressed<uint8_t>(stream_, true, false, version);
 
             //stream_.read((char *)&junk, 4);
         }
