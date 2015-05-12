@@ -74,7 +74,7 @@ class CfgVehicles {
     };
     class ModuleDescription: ModuleDescription {
         description = "$STR_ACE_Common_CheckPBO_Description";
-	};
+    };
   };
 
   class ACE_ModuleLSDVehicles: Module_F {
@@ -89,8 +89,8 @@ class CfgVehicles {
     };
     class ModuleDescription: ModuleDescription {
         description = "$STR_ACE_Common_LSDVehicles_Description";
-		sync[] = {"AnyVehicle"};
-	};
+        sync[] = {"AnyVehicle"};
+    };
   };
 
   class Box_NATO_Support_F;
