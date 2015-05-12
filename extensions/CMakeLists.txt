@@ -4,7 +4,7 @@ project (ACE)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON) 
 
 if(WIN32) 
-add_definitions(/DWINVER=0x0600)
+add_definitions(/DWINVER=0x0600 /D_WIN32_WINNT=0x0600)
 endif()
 
 if (NOT CMAKE_BUILD_TYPE AND CMAKE_COMPILER_IS_GNUCXX)
@@ -34,7 +34,23 @@ include_directories("common")
 
 if(USE_BULLET)
     # Dependencies
-    add_subdirectory(lib/bullet3)
+    #
+    add_definitions(-DUSE_DIRECTX)
+    add_definitions(-DBUILD_BULLET2_DEMOS=false -DBUILD_UNIT_TESTS=false -DBUILD_BULLET3_DEMOS=false -DBUILD_CPU_DEMOS=false -DBUILD_EXTRAS=false)
+    add_subdirectory(lib/bullet3 EXCLUDE_FROM_ALL)
+    #set(depname bullet3)
+    #set(${depname}_PREFIX "lib/${depname}")
+    #set(${depname}_INSTALL_DIR "${CMAKE_CURRENT_SOURCE_DIR}/binaries/${CMAKE_SYSTEM_NAME}${CMAKE_CXX_COMPILER_ID}${KINEVOX_ARCHITECTURE}/usr/local/")
+    #set(${depname}_CMAKE_ARGS -DBUILD_SHARED_LIBS=true -DCMAKE_INSTALL_PREFIX=${${depname}_INSTALL_DIR} -DBUILD_BULLET2_DEMOS=false -DBUILD_UNIT_TESTS=false -DBUILD_BULLET3_DEMOS=false -DBUILD_CPU_DEMOS=false -DBUILD_EXTRAS=false -DINSTALL_LIBS=true ${EXTRA_ARGS})
+    #ExternalProject_Add(
+    #   ${depname}
+    #   PREFIX ${${depname}_PREFIX}
+    #   GIT_REPOSITORY https://github.com/bulletphysics/bullet3.git lib/${depname} 
+    #   SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/${depname} 
+    #     INSTALL_DIR ${${depname}_INSTALL_DIR}
+    #  CMAKE_ARGS ${${depname}_CMAKE_ARGS}
+    #)
+    
     set_target_properties(App_BasicExample PROPERTIES FOLDER Bullet3)
     set_target_properties(App_HelloWorld PROPERTIES FOLDER Bullet3)
     set_target_properties(App_ExampleBrowser PROPERTIES FOLDER Bullet3)
@@ -67,6 +83,7 @@ else()
     set(BULLET_LIBS "")
 endif()
 if(USE_DIRECTX)
+    add_definitions(-DUSE_DIRECTX)
     set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
     find_package (DirectX)
     link_directories (BEFORE ${DirectX_D3DX11_LIBRARY})
