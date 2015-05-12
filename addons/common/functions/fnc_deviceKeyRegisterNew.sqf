@@ -13,7 +13,7 @@
  * Nothing
  *
  * Example:
- * [(localize "STR_ACE_microdagr_itemName"), QUOTE(PATHTOF(images\microDAGR_item.paa)), _conditonCode, _toggleCode, _closeCode] call ace_common_fnc_deviceKeyRegisterNew
+ * [(localize "STR_ACE_microdagr_itemName"), QUOTE(PATHTOF(images\microDAGR_item.paa)), _conditionCode, _toggleCode, _closeCode] call ace_common_fnc_deviceKeyRegisterNew
  *
  * Public: No
  */

@@ -3,34 +3,36 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
-                class GVAR(show) {
-                    //Opens the mini map
-                    displayName = "$STR_ACE_microdagr_show";
-                    condition = QUOTE(([DISPLAY_MODE_DISPLAY] call FUNC(canShow)) && {GVAR(currentShowMode) != DISPLAY_MODE_DISPLAY});
-                    statement = QUOTE([DISPLAY_MODE_DISPLAY] call FUNC(openDisplay));
-                    showDisabled = 0;
-                    priority = 0.2;
-                    icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
-                    exceptions[] = {"notOnMap", "isNotInside"};
-                };
                 class GVAR(configure) {
-                    //Opens the dialog
+                    //Opens the interactive dialog
                     displayName = "$STR_ACE_microdagr_configure";
-                    condition = QUOTE(([DISPLAY_MODE_DIALOG] call FUNC(canShow)) && {GVAR(currentShowMode) != DISPLAY_MODE_DIALOG});
+                    condition = QUOTE([DISPLAY_MODE_DIALOG] call FUNC(canShow));
                     statement = QUOTE([DISPLAY_MODE_DIALOG] call FUNC(openDisplay));
                     showDisabled = 0;
                     priority = 0.1;
                     icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
                     exceptions[] = {"notOnMap", "isNotInside"};
-                };
-                class GVAR(close) {
-                    displayName = "$STR_ACE_microdagr_closeUnit";
-                    condition = QUOTE(GVAR(currentShowMode) != DISPLAY_MODE_CLOSED);
-                    statement = QUOTE([DISPLAY_MODE_CLOSED] call FUNC(openDisplay));
-                    showDisabled = 0;
-                    priority = 0.3;
-                    icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
-                    exceptions[] = {"notOnMap", "isNotInside"};
+
+                    //Sub Actions:
+                    class GVAR(show) {
+                        //Opens the background display (minimap)
+                        displayName = "$STR_ACE_microdagr_show";
+                        condition = QUOTE(([DISPLAY_MODE_DISPLAY] call FUNC(canShow)) && {GVAR(currentShowMode) != DISPLAY_MODE_DISPLAY});
+                        statement = QUOTE([DISPLAY_MODE_DISPLAY] call FUNC(openDisplay));
+                        showDisabled = 0;
+                        priority = 0.2;
+                        icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
+                        exceptions[] = {"notOnMap", "isNotInside"};
+                    };
+                    class GVAR(close) {
+                        displayName = "$STR_ACE_microdagr_closeUnit";
+                        condition = QUOTE(GVAR(currentShowMode) != DISPLAY_MODE_CLOSED);
+                        statement = QUOTE([DISPLAY_MODE_CLOSED] call FUNC(openDisplay));
+                        showDisabled = 0;
+                        priority = 0.3;
+                        icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
+                        exceptions[] = {"notOnMap", "isNotInside"};
+                    };
                 };
             };
         };
@@ -66,7 +68,7 @@ class CfgVehicles {
             description = "Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.<br/>Source: microDAGR.pbo";
         };
     };
-    
+
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
