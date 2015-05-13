@@ -15,9 +15,9 @@ AIs will now use the automatic mode of their weapons on short distances, instead
 ## Longer engagement ranges
 The maximum engagement ranges are increased: AI will fire in bursts with variable length on high ranges of 500 - 700 meters, depending on their weapon and optic.
 ## No deadzones in CQB
-Some weapons had minimum engagement ranges. If you were as close as 2 meters to an AAF soldier, he wouldn't open fire, because the AI couldn't find any valid fire mode for their weapon. AGM removes this behaviour mostly notable in CQB by adding a valid firing mode.
+Some weapons had minimum engagement ranges. If you were as close as 2 meters to an AAF soldier, he wouldn't open fire, because the AI couldn't find any valid fire mode for their weapon. ACE removes this behaviour mostly notable in CQB by adding a valid firing mode.
 ## No scripting
-All changes of AGM AI are config based to ensure full compatibility with advanced AI modifications like ASR AI.
+All AI changes are config based to ensure full compatibility with advanced AI modifications like ASR AI.
 
 # Usage
 Short overview of how to use the feature, e.g. menu options, key bindings, 
