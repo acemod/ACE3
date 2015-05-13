@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-private ["_vehicle", "_turret", "_turretConfig", "_distance", "_weapons", "_magazines", "_showHint", "_playSound"];
+private ["_vehicle", "_turret", "_turretConfig", "_distance", "_weapons", "_magazines", "_showHint", "_playSound", "_i"];
 
 _vehicle = _this select 0;
 _turret = _this select 1;
