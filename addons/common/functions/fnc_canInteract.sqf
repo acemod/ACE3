@@ -8,6 +8,9 @@
  * @PublicAPI: true
  */
 #include "script_component.hpp"
-private ["_unit","_return"];
-_unit = _this select 0;
+
+private ["_return"];
+
+PARAMS_1(_unit);
+
 (((_unit getvariable [QGVAR(canInteract),0]) < 1) && ([_unit] call FUNC(isAwake)) && !([_unit] call FUNC(isArrested)))

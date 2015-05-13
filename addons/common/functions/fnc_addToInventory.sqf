@@ -19,7 +19,7 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_unit,_classname);
+PARAMS_2(_unit,_classname);
 DEFAULT_PARAM(2,_container,"");
 DEFAULT_PARAM(3,_ammoCount,-1);
 

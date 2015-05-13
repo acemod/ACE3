@@ -1,9 +1,9 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_vehicle", "_turret", "_weapons"];
+private ["_turret", "_weapons"];
 
-_vehicle = _this select 0;
+PARAMS_1(_vehicle);
 
 _turret = [_vehicle] call EFUNC(common,getTurretCommander);
 
@@ -30,7 +30,6 @@ if (
 
 } else {
     // fire away!
-
     private "_logic";
 
     _logic = createGroup sideLogic createUnit ["Logic", [0,0,0], [], 0, "NONE"];

@@ -10,9 +10,8 @@
 
 #include "script_component.hpp"
 
- private ["_configEntry","_configMatch", "_match"];
-_configEntry = _this select 0;
-_configMatch = _this select 1;
+ private ["_match"];
+PARAMS_2(_configEntry,_configMatch);
 
 if (configName _configEntry == _configMatch) exitWith { true };
 if (configName _configEntry == ",") exitWith { false };

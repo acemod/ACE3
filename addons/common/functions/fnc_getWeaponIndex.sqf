@@ -14,7 +14,7 @@
  */
  #include "script_component.hpp"
 
- EXPLODE_2_PVT(_this,_unit,_weapon);
+PARAMS_2(_unit,_weapon);
 
 if (_weapon == "") exitWith {-1};
 

@@ -1,10 +1,9 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_unit", "_weapon", "_sound"];
+private "_sound";
 
-_unit = _this select 0;
-_weapon = _this select 1;
+PARAMS_2(_unit,_weapon);
 
 _sound = getArray (configFile >> "CfgWeapons" >> _weapon >> "changeFiremodeSound");
 

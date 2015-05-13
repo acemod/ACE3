@@ -14,11 +14,9 @@
  */
 #include "script_component.hpp"
 
-private ["_projectile", "_adjustDir", "_adjustUp", "_adjustSpeed", "_vdir", "_dir", "_up", "_l", "_r", "_vup", "_vel"];
+private ["_adjustSpeed", "_vdir", "_dir", "_up", "_l", "_r", "_vup", "_vel"];
 
-_projectile = _this select 0;
-_adjustDir = _this select 1;
-_adjustUp = _this select 2;
+PARAMS_3(_projectile,_adjustDir,_adjustUp);
 
 _adjustSpeed = if (count _this > 3) then {
     _this select 3

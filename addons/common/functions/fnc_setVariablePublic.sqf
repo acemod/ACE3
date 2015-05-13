@@ -14,12 +14,7 @@
  */
 #include "script_component.hpp"
 
-private ["_object", "_varName", "_value", "_sync"];
-
-_object = _this select 0;
-_varName = _this select 1;
-_value = _this select 2;
-_sync = _this select 3;
+PARAMS_4(_object,_varName,_value,_sync);
 
 if (isNil "_sync") then {
     _sync = 1;

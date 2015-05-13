@@ -12,15 +12,11 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_lightSource"];
+private ["_unitPos","_lightLevel"];
 
-_unit = _this select 0;
-_lightSource = _this select 1;
+PARAMS_2(_unit,_lightSource);
 
-private "_unitPos";
 _unitPos = _unit modelToWorld (_unit selectionPosition "spine3");
-
-private "_lightLevel";
 _lightLevel = 0;
 
 if (_lightSource isKindOf "CAManBase") then {
