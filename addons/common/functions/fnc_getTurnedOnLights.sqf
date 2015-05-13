@@ -11,9 +11,7 @@
  */
 #include "script_component.hpp"
 
-private "_vehicle";
-
-_vehicle = _this select 0;
+PARAMS_1(_vehicle);
 
 if (!isLightOn _vehicle) exitWith {[]};
 

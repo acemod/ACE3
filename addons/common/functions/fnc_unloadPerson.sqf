@@ -15,8 +15,8 @@
 
 #define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
 
-private ["_unit","_vehicle", "_loaded", "_emptyPos"];
-_unit = _this select 0;
+private ["_vehicle", "_loaded", "_emptyPos"];
+PARAMS_1(_unit);
 _vehicle = vehicle _unit;
 
 if (_vehicle == _unit) exitwith {false;};

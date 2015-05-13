@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_statement", "_actionsVar", "_id", "_actionIDs", "_actions"];
+private ["_actionsVar", "_id", "_actionIDs", "_actions"];
 
-_statement = _this select 0;
+PARAMS_1(_statement);
 
 if (typeName _statement == "STRING") then {
   _statement = compile _statement;

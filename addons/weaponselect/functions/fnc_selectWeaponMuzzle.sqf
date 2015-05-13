@@ -3,18 +3,16 @@
  *
  * The player will select the specified weapon and change to the first additional muzzle. E.g. the grenade launcher of a assault rifle.
  *
- * Argument:
- * 0: A weapon (String)
+ * Arguments:
+ * 0: Unit (Object)
+ * 1: A weapon (String)
  *
  * Return value:
  * None.
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weapon"];
-
-_unit = _this select 0;
-_weapon = _this select 1;
+PARAMS_2(_unit,_weapon);
 
 if (_weapon == "") exitWith {};
 
@@ -39,7 +37,6 @@ _index = (_muzzles find currentMuzzle _unit) + 1;
 if (_index > count _muzzles - 1) then {_index = 1};
 
 _muzzle = _muzzles select _index;
-
 
 _index = 0;
 while {

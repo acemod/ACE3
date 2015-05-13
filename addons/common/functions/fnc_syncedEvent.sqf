@@ -13,7 +13,9 @@
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
+
 PARAMS_2(_name,_args);
+
 private["_ttl", "_eventData", "_internalData", "_eventLog"];
 
 if( (count _this) > 2) then {

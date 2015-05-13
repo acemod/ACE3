@@ -1,13 +1,10 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_unit", "_vehicle", "_index"];
-
-_unit = _this select 0;
-_vehicle = _this select 1;
-_index = _this select 2;
-
 private "_turret";
+
+PARAMS_3(_unit,_vehicle,_index);
+
 _turret = [_unit] call EFUNC(common,getTurretIndex);
 
 if (_turret isEqualTo [] && {_unit == driver _vehicle}) then {
@@ -41,5 +38,4 @@ if (_turret isEqualTo [] && {_unit == driver _vehicle}) then {
         _unit action ["SwitchWeapon", _vehicle, _unit, _index];
         _index = _index + 1;
     };
-
 };

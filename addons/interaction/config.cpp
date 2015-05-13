@@ -18,9 +18,4 @@ class CfgPatches {
 
 #include <Menu_Config.hpp>
 
-class ACE_Settings {
-  class GVAR(EnableTeamManagement) {
-    value = 1;
-    typeName = "BOOL";
-  };
-};
+#include "ACE_Settings.hpp"
