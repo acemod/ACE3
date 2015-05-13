@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_oldUnit","_sets"];
+private ["_unit"];
 _unit = _this select 0;
 
 _unit setvariable ["ACE_isDead",nil,true];

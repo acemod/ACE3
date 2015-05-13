@@ -172,7 +172,6 @@ PREP(sortAlphabeticallyBy);
 PREP(stringCompare);
 PREP(stringToColoredText);
 PREP(stringRemoveWhiteSpace);
-PREP(subString);
 PREP(switchToGroupSide);
 PREP(throttledPublicVariable);
 PREP(toBin);
