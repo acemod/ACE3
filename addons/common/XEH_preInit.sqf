@@ -183,6 +183,7 @@ PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
+PREP(waveHeightAt);
 
 PREP(translateToWeaponSpace);
 PREP(translateToModelSpace);

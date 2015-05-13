@@ -64,6 +64,13 @@ if (GVAR(useCursorMenu)) then {
 GVAR(selfMenuOffset) = ((positionCameraToWorld [0, 0, 2]) call EFUNC(common,positionToASL)) vectorDiff
                        ((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL));
 
+private ["_wavesAtOrigin", "_wavesAtVirtualPoint"];
+
+_wavesAtOrigin = [(positionCameraToWorld [0, 0, 0])] call EFUNC(common,waveHeightAt);
+_wavesAtVirtualPoint = [(positionCameraToWorld [0, 0, 2])] call EFUNC(common,waveHeightAt);
+GVAR(selfMenuOffset) set [2, ((GVAR(selfMenuOffset) select 2) + _wavesAtOrigin - _wavesAtVirtualPoint)];
+
+
 ["interactMenuOpened", [_menuType]] call EFUNC(common,localEvent);
 
 true
