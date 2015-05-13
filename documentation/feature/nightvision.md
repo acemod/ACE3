@@ -20,4 +20,4 @@ Enables the user to manually adjust NVG brightness.
 Use Alt+PageUp and Alt+PageDown to adjust NVG brightness.
 
 # Dependencies
-List of modules that must be present for this module to work.
+`ace_common`

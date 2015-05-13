@@ -22,4 +22,4 @@ Adds a laser marker to the copilot seat of the Wildcat.
 Adds a HUD to the AH-9 based on the comanches HUD.
 
 # Dependencies
-List of modules that must be present for this module to work.
+`ace_common`

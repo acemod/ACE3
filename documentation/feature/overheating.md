@@ -24,4 +24,4 @@ To clear a jammed weapon, press Shift+R.
 *needs documentation on swapping barrels*
 
 # Dependencies
-List of modules that must be present for this module to work.
+`ace_interaction`

@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Weather
+title: Overpressure
 group: feature
 parent: wiki
 ---
@@ -15,4 +15,4 @@ Short overview of how to use the feature, e.g. menu options, key bindings,
 instructions. May not apply to all modules.
 
 # Dependencies
-`ace_common`, `ace_modules`
+`ace_common`

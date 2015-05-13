@@ -18,4 +18,4 @@ To engage moving targets, place the crosshair on the enemy vehicle and press and
 To use manual lasing, place the crosshair on the object to range and press and hold tab.
 
 # Dependencies
-List of modules that must be present for this module to work.
+`ace_interaction`

@@ -68,3 +68,6 @@ Morphine is used to alleviate large amounts of pain. Has an effect similar to He
 Epinephrine is used to increase heart rate and blood pressure and alleviate unconsciousness. Epinephrine is a synthetic form of Adrenaline, which is naturally produced in the body. It can also be applied to counter-act the effects of Atropine. Be careful though, as it may only be given once.
 
 _Epinephrine must never be given to a casualty with a high heart rate or blood pressure._
+
+# Dependencies
+`ace_interaction`, `ace_modules`, `ace_apl`

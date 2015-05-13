@@ -25,4 +25,4 @@ Steps to lock titan/Javelin:
 CTRL+TAB is default key to change firemode (configurable as a key)
 
 # Dependencies
-List of modules that must be present for this module to work.
+`ace_main`, `ace_common`, `ace_missileguidance`
