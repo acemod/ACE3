@@ -1,0 +1,269 @@
+#pragma once
+
+#include "ace_common.h"
+#include "p3d/parser.hpp"
+#include "p3d/model.hpp"
+
+#include <fstream>
+
+#include <lzo/minilzo.h>
+
+namespace ace {
+    namespace p3d {
+        
+        parser::parser() {}
+        parser::~parser() {}
+
+        model * parser::load(const std::string filepath) {
+            std::ifstream ifstream;
+            model *_model = new model();
+            size_t index = 4;
+
+            _model->filepath = filepath;
+
+            ifstream.open(filepath, std::ios::binary);
+            if (!ifstream.good()) {
+                printf("! File not found\n");
+                return false;
+            }
+            // get length of file:
+            ifstream.seekg(0, std::ios::end);
+            _model->size = ifstream.tellg();
+            ifstream.seekg(0, std::ios::beg);
+
+            // Read the whole file into memory real fast
+            _model->raw = new unsigned char[_model->size];
+            ifstream.read((char *)_model->raw, _model->size);
+
+            // use the ifstream to read the data
+            ifstream.seekg(0, std::ios::beg);
+
+            ifstream.read((char *)&_model->header.filetype, 4);
+            ifstream.read((char *)&_model->header.version, sizeof(uint64_t));
+
+            // If version > 48, it may have a path or a empty null byte.
+            if (_model->header.version >= 48) {
+                for (int x = 0; x < sizeof(_model->header.prefix); x++) {
+                    char byte;
+                    ifstream.read(&byte, 1);
+                    _model->header.prefix[x] = byte;
+                    if (byte == 0x00) break;
+                }
+            }
+            
+            ifstream.read((char *)&_model->header.lod_count, sizeof(uint32_t));
+
+            printf("Version: %d\n", _model->header.version);
+            printf("%s\n", _model->header.prefix);
+            printf("\tLODs:\t%d\n", (long long)_model->header.lod_count);
+#ifdef _DEBUG
+#define READ_DATA(stream, output, size)  stream.read((char *)&output, size);
+#else
+#define READ_DATA(stream, output, size)  stream.read((char *)&output, size);
+#endif
+#define PRINT_INDEX { std::streamoff pos = ifstream.tellg(); printf("Current Index: %08x\n", pos); }
+
+            // Begin model info
+            READ_DATA(ifstream, _model->info.LodResolutions, sizeof(float)*_model->header.lod_count);
+            READ_DATA(ifstream, _model->info.Index, sizeof(uint32_t));
+            READ_DATA(ifstream, _model->info.MemLodSphere, sizeof(float));
+            READ_DATA(ifstream, _model->info.GeoLodSphere, sizeof(float));
+            READ_DATA(ifstream, _model->info.PointFlags, sizeof(uint32_t)*3);
+            READ_DATA(ifstream, _model->info.Offset1, sizeof(XYZTriplet));
+            
+            READ_DATA(ifstream, _model->info.mapIconColor, sizeof(uint32_t));
+            READ_DATA(ifstream, _model->info.mapSelectedColor, sizeof(uint32_t));
+            READ_DATA(ifstream, _model->info.ViewDensity, sizeof(float));
+
+            READ_DATA(ifstream, _model->info.bboxMinPosition, sizeof(XYZTriplet));
+            READ_DATA(ifstream, _model->info.bboxMaxPosition, sizeof(XYZTriplet));
+            READ_DATA(ifstream, _model->info.CentreOfGravity, sizeof(XYZTriplet));
+            READ_DATA(ifstream, _model->info.Offset2, sizeof(XYZTriplet));
+            READ_DATA(ifstream, _model->info.CogOffset, sizeof(XYZTriplet));
+            READ_DATA(ifstream, _model->info.ModelMassVectors, sizeof(XYZTriplet)*3);
+
+            READ_DATA(ifstream, _model->info.ThermalProfile2, sizeof(uint8_t)*24);
+            
+            READ_DATA(ifstream, _model->info.AutoCenter, sizeof(uint8_t));
+            READ_DATA(ifstream, _model->info.lockAutoCenter, sizeof(uint8_t));
+            READ_DATA(ifstream, _model->info.canOcclude, sizeof(uint8_t));
+            READ_DATA(ifstream, _model->info.canBeOccluded, sizeof(uint8_t));
+            READ_DATA(ifstream, _model->info.allowAnimation, sizeof(uint8_t));
+            
+            READ_DATA(ifstream, _model->info.UnknownARMAFlags, sizeof(uint8_t) * 6);
+            READ_DATA(ifstream, _model->info.ThermalProfile, sizeof(uint8_t) * 24);
+            READ_DATA(ifstream, _model->info.UnknownLong, sizeof(uint32_t));
+
+            // Skeleton!
+            for (int x = 0; x < sizeof(_model->info.Skeleton); x++) {
+                char byte;
+                ifstream.read(&byte, 1);
+                _model->info.Skeleton.name[x] = byte;
+                if (byte == 0x00) break;
+            }
+            if (_model->info.Skeleton.name[0] != 0x00) {
+                READ_DATA(ifstream, _model->info.Skeleton.isInherited, sizeof(uint8_t));
+                READ_DATA(ifstream, _model->info.Skeleton.bone_count, sizeof(uint32_t));
+                for (int x = 0; x < 256 && x < _model->info.Skeleton.bone_count; x++) {
+                    for (int y = 0; y < sizeof(_model->info.Skeleton.bone_names[x].BoneName); y++) {
+                        char byte;
+                        ifstream.read(&byte, 1);
+                        _model->info.Skeleton.bone_names[x].BoneName[y] = byte;
+                        if (byte == 0x00) break;
+                    }
+                    for (int y = 0; y < sizeof(_model->info.Skeleton.bone_names[x].ParentBoneName); y++) {
+                        char byte;
+                        ifstream.read(&byte, 1);
+                        _model->info.Skeleton.bone_names[x].ParentBoneName[y] = byte;
+                        if (byte == 0x00) break;
+                    }
+                    printf("Read bone entry: %s -> Parent:%s\n", _model->info.Skeleton.bone_names[x].BoneName, _model->info.Skeleton.bone_names[x].ParentBoneName);
+                }
+            }
+
+            READ_DATA(ifstream, _model->info.UnknownByte, sizeof(uint8_t));
+            READ_DATA(ifstream, _model->info.nFloats, sizeof(uint32_t));
+
+            printf("Floats: %d\n", _model->info.nFloats);
+            if (_model->info.nFloats * sizeof(float) > 1024) {
+                // TODO!: Read compressed segment
+            } else {
+                ifstream.seekg(_model->info.nFloats*sizeof(float), ifstream.cur);
+                //READ_DATA(ifstream, _model->info.UnknownFloats, );
+            }
+
+            READ_DATA(ifstream, _model->info.Mass, sizeof(float));
+            READ_DATA(ifstream, _model->info.MassReciprocal, sizeof(float));
+            READ_DATA(ifstream, _model->info.AltMass, sizeof(float));
+            READ_DATA(ifstream, _model->info.AltMassReciprocal, sizeof(float));
+
+            READ_DATA(ifstream, _model->info.UnknownByteIndices, sizeof(uint8_t) * 14);
+            READ_DATA(ifstream, _model->info.UnknownShort, sizeof(uint16_t));
+            READ_DATA(ifstream, _model->info.UnknownLodCount, sizeof(uint32_t));
+            READ_DATA(ifstream, _model->info.UnknownBool, sizeof(uint8_t));
+            /*
+            for (int x = 0; x < sizeof(_model->info.ClassType); x++) {
+                char byte;
+                ifstream.read(&byte, 1);
+                _model->info.ClassType[x] = byte;
+                if (byte == 0x00 || byte == 0xff) break;
+            }
+            for (int x = 0; x < sizeof(_model->info.DestructType); x++) {
+                char byte;
+                ifstream.read(&byte, 1);
+                _model->info.DestructType[x] = byte;
+                if (byte == 0x00 || byte == 0xff) break;
+            }*/
+ 
+            READ_DATA(ifstream, _model->info.UnknownBool2, sizeof(uint8_t));
+            READ_DATA(ifstream, _model->info.Always0, sizeof(uint8_t));
+            for (int x = 0; x < sizeof(_model->header.lod_count); x++) {
+                READ_DATA(ifstream, _model->info.DefaultIndicators[x], sizeof(uint8_t)*12);
+            }
+
+            // Read ahead because i dont understand whats going on
+           for (int x = 0; x < _model->size; x++) {
+                char byte;
+                ifstream.read(&byte, 1);
+                if (byte != -1) {
+                    ifstream.seekg(-1, ifstream.cur);
+                    break;
+                };
+            }
+            
+            READ_DATA(ifstream, _model->animations.AnimsExist, sizeof(uint8_t));
+            if (_model->animations.AnimsExist) {
+                READ_DATA(ifstream, _model->animations.nAnimationClasses, sizeof(uint32_t));
+                printf("Animations: %d", _model->animations.nAnimationClasses);
+                
+                for (int n = 0; n < _model->animations.nAnimationClasses; n++) {
+                    READ_DATA(ifstream, _model->animations.AnimationClasses[n].AnimTransformType, sizeof(uint32_t));
+
+                    for (int x = 0; x < sizeof(_model->animations.AnimationClasses[n].AnimClassName); x++) {
+                        char byte;
+                        ifstream.read(&byte, 1);
+                        _model->animations.AnimationClasses[n].AnimClassName[x] = byte;
+                        if (byte == 0x00) break;
+                    }
+                    for (int x = 0; x < sizeof(_model->animations.AnimationClasses[n].AnimSource); x++) {
+                        char byte;
+                        ifstream.read(&byte, 1);
+                        _model->animations.AnimationClasses[n].AnimSource[x] = byte;
+                        if (byte == 0x00) break;
+                    }
+
+                    printf("Reading animation: [%08x]-[%s]-%s\n", _model->animations.AnimationClasses[n].AnimTransformType, _model->animations.AnimationClasses[n].AnimClassName, _model->animations.AnimationClasses[n].AnimSource);
+
+                    READ_DATA(ifstream, _model->animations.AnimationClasses[n].MinMaxValue, sizeof(float) * 2);
+                    READ_DATA(ifstream, _model->animations.AnimationClasses[n].MinMaxPhase, sizeof(float) * 2);
+                    READ_DATA(ifstream, _model->animations.AnimationClasses[n].sourceAddress, sizeof(uint32_t));
+                    READ_DATA(ifstream, _model->animations.AnimationClasses[n].Always0, sizeof(uint32_t));
+
+                    READ_DATA(ifstream, _model->animations.AnimationClasses[n].nFloats, sizeof(uint32_t));
+                    for (int x = 0; x < _model->animations.AnimationClasses[n].nFloats; x++) {
+                        READ_DATA(ifstream, _model->animations.AnimationClasses[n].floats, sizeof(float));
+                    }
+
+                    READ_DATA(ifstream, _model->animations.AnimationClasses[n].value, sizeof(float));
+                    switch (_model->animations.AnimationClasses[n].AnimTransformType) {
+                        case 0:READ_DATA(ifstream, _model->animations.AnimationClasses[n].data, sizeof(float)); break;//rotaton
+                        case 1:READ_DATA(ifstream, _model->animations.AnimationClasses[n].data, sizeof(float)); break;//rotationX
+                        case 2:READ_DATA(ifstream, _model->animations.AnimationClasses[n].data, sizeof(float)); break;//rotationY
+                        case 3:READ_DATA(ifstream, _model->animations.AnimationClasses[n].data, sizeof(float)); break;//rotationZ
+                            READ_DATA(ifstream, _model->animations.AnimationClasses[n].data, sizeof(float) * 2);
+                            break;
+                        case 4:READ_DATA(ifstream, _model->animations.AnimationClasses[n].data, sizeof(float)); break;//translation
+                        case 5:READ_DATA(ifstream, _model->animations.AnimationClasses[n].data, sizeof(float)); break;//translationX
+                        case 6:READ_DATA(ifstream, _model->animations.AnimationClasses[n].data, sizeof(float)); break;//translationY
+                        case 7:READ_DATA(ifstream, _model->animations.AnimationClasses[n].data, sizeof(float)); break; //translationZ
+                            READ_DATA(ifstream, _model->animations.AnimationClasses[n].data, sizeof(float)*2);
+                            break;
+                        case 8: //"direct"
+                            READ_DATA(ifstream, _model->animations.AnimationClasses[n].data, sizeof(float) * 8);
+                            break;
+                        case 9: //"hide"
+                            READ_DATA(ifstream, _model->animations.AnimationClasses[n].data, sizeof(float));
+                            break;
+                        default:
+                             READ_DATA(ifstream, _model->animations.AnimationClasses[n].value, sizeof(float));
+                    }
+                    PRINT_INDEX;
+                }
+            }
+
+            // Animations done, WEEE!
+            READ_DATA(ifstream, _model->animations.NoOfResolutions, sizeof(uint32_t));
+            for (int x = 0; x < _model->animations.NoOfResolutions; x++) {
+                // Read a Bones2Anims entry
+                READ_DATA(ifstream, _model->animations.Bones2Anims[x].NoOfBones, sizeof(uint32_t));
+                for (int y = 0; y < _model->animations.Bones2Anims[x].NoOfBones; y++) {
+                    READ_DATA(ifstream, _model->animations.Bones2Anims[x].Bone2AnimClassLists[y].NoOfAnimClasses, sizeof(uint32_t));
+                    for (int z = 0; z < _model->animations.Bones2Anims[x].Bone2AnimClassLists[y].NoOfAnimClasses; z++) {
+                        READ_DATA(ifstream, _model->animations.Bones2Anims[x].Bone2AnimClassLists[y].AnimationClassIndex[z], sizeof(uint32_t));
+                    }
+                }
+            }
+            
+            for (int x = 0; x < _model->animations.NoOfResolutions; x++) {
+                // Read Anims2Bones
+                for (int y = 0; y < _model->animations.nAnimationClasses; y++) {
+                    READ_DATA(ifstream, _model->animations.Anims2Bones[x].AnimBones[y].SkeletonBoneNameIndex, sizeof(uint32_t));
+                 
+                    if (_model->animations.Anims2Bones[x].AnimBones[y].SkeletonBoneNameIndex != -1 && _model->animations.AnimationClasses[y].AnimTransformType != 8 && _model->animations.AnimationClasses[y].AnimTransformType != 9) {
+                        READ_DATA(ifstream, _model->animations.Anims2Bones[x].AnimBones[y].axisPos, sizeof(float) * 3);
+                        READ_DATA(ifstream, _model->animations.Anims2Bones[x].AnimBones[y].axisDir, sizeof(float) * 3);
+                    }
+                    PRINT_INDEX;
+                    printf("Read bone index: %d\n", _model->animations.Anims2Bones[x].AnimBones[y].SkeletonBoneNameIndex);
+                }
+            }
+
+            READ_DATA(ifstream, _model->StartAddressOfLods, sizeof(uint32_t)*_model->header.lod_count);
+            READ_DATA(ifstream, _model->EndAddressOfLods, sizeof(uint32_t)*_model->header.lod_count);
+
+            printf("Beginning LOD Read: Start[%d] End[%d]\n", _model->StartAddressOfLods, _model->EndAddressOfLods);
+
+            return _model;
+        }
+    };
+};
