@@ -10,7 +10,7 @@ VertexShaderID="Super";
 class Stage1 {
     texture="z\ace\addons\logistics_uavbattery\models\battery_nohq.paa";
     uvSource="tex";
-    class uvTransform    {
+    class uvTransform {
         aside[]={1,0,0};
         up[]={0,1,0};
         dir[]={0,0,0};
@@ -50,7 +50,7 @@ class Stage4 {
 class Stage5 {
     texture="z\ace\addons\logistics_uavbattery\models\battery_smdi.paa";
     uvSource="tex";
-    class uvTransform    {
+    class uvTransform {
         aside[]={1,0,0};
         up[]={0,1,0};
         dir[]={0,0,0};

@@ -4,19 +4,16 @@ forcedDiffuse[]={0,0,0,0};
 emmisive[]={0,0,0,0};
 specular[]={0.5,0.5,0.5,0};
 specularPower=11.6;
-renderFlags[]=
-{
+renderFlags[]= {
     "NoAlphaWrite"
 };
 PixelShaderID="Glass";
 VertexShaderID="Glass";
-class Stage1
-{
+class Stage1 {
     texture="#(argb,8,8,3)color(1,1,1,0.9)";
     uvSource="none";
 };
-class Stage2
-{
+class Stage2 {
     texture="a3\data_f\env_chrome_co.paa";
     uvSource="none";
 };

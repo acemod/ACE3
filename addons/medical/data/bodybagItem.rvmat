@@ -6,24 +6,20 @@ specular[]={1.000000,1.000000,1.000000,1.000000};
 specularPower=20.000000;
 PixelShaderID="NormalMapSpecularDIMap";
 VertexShaderID="NormalMap";
-class Stage1
-{
+class Stage1 {
     texture="z\ace\addons\medical\data\bodybagItem_nohq.paa";
     uvSource="tex";
-    class uvTransform
-    {
+    class uvTransform {
         aside[]={1.000000,0.000000,0.000000};
         up[]={0.000000,1.000000,0.000000};
         dir[]={0.000000,0.000000,0.000000};
         pos[]={0.000000,0.000000,0.000000};
     };
 };
-class Stage2
-{
+class Stage2 {
     texture="z\ace\addons\medical\data\bodybagItem_smdi.paa";
     uvSource="tex";
-    class uvTransform
-    {
+    class uvTransform {
         aside[]={1.000000,0.000000,0.000000};
         up[]={0.000000,1.000000,0.000000};
         dir[]={0.000000,0.000000,0.000000};
