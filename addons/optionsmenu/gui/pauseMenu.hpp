@@ -98,12 +98,75 @@ class RscDisplayInterruptEditor3D: RscStandardDisplay {
 class RscDisplayMain: RscStandardDisplay {
     //Hide the button if there is no world (-world=empty)
     //Seems odd to use onMouseMoving, but I don't want to overload onLoad
-    onMouseMoving = "((_this select 0) displayCtrl 80085) ctrlShow (missionName != '');";
+    onMouseMoving = QUOTE(((_this select 0) displayCtrl 80085) ctrlShow (missionName != '');  _this execVM QUOTE(QUOTE(PATHTOF(script_loadMainMenuBox.sqf))););
+
     class controls {
         class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {
             action = "if (missionName != '') then {createDialog 'ACE_settingsMenu';};";
             y = "4 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
             idc = 80085;
+        };
+
+        class ACE_news: RscControlsGroupNoScrollbars {
+            x = "safezoneX + safezoneW - (48 * 			(			((safezoneW / safezoneH) min 1.2) / 40))";
+            y = "safezoneY + (1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))";
+            idc = -1;
+            w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+            h = "20 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            class controls
+            {
+                class ACE_NewsTitle: RscText {
+                    text = "ACE News";
+                    colorBackground[] = {(162/255),(28/255),(28/255),0.8};
+                    idc = -1;
+                    x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+                    y = "0 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+                    h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                };
+                class ACE_NewsBackgroundDate: RscText
+                {
+                    idc = 68;
+                    x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+                    y = "1.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+                    h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    colorBackground[] = {0,0,0,0.4};
+                };
+                class ACE_NewsBackground: RscText {
+                    idc = -1;
+                    x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+                    y = "2.2 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+                    h = "17.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    colorBackground[] = {0,0,0,0.4};
+                };
+                class ACE_NewsText: RscHTML {
+                    idc = 69;
+                    x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+                    y = "2.2 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+                    h = "17.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+
+                    shadow = 0;
+                    class H1 {
+                        font = "PuristaMedium";
+                        fontBold = "PuristaLight";
+                        sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.4)";
+                    };
+                    class H2: H1 {
+                        sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
+                        font = "PuristaLight";
+                    };
+                    class P: H1 {
+                        sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+                        fontBold = "PuristaLight";
+                    };
+                    colorBold[] = {0.6,0.6,0.6,1};
+                    colorLink[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])",1};
+                    colorLinkActive[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])",1};
+                };
+            };
         };
     };
 };
