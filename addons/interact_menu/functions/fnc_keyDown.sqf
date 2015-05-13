@@ -54,7 +54,7 @@ if (GVAR(useCursorMenu)) then {
     }];
     // handles LMB in cursor mode when action on keyrelease is disabled
     ((finddisplay 91919) displayctrl 91921) ctrlAddEventHandler ["MouseButtonDown", {
-        if !(GVAR(actionOnKeyRelease)) then {
+        if (!GVAR(actionOnKeyRelease) && GVAR(actionSelected)) then {
             [GVAR(openedMenuType),true] call FUNC(keyUp);
         };
     }];
@@ -63,6 +63,13 @@ if (GVAR(useCursorMenu)) then {
 
 GVAR(selfMenuOffset) = ((positionCameraToWorld [0, 0, 2]) call EFUNC(common,positionToASL)) vectorDiff
                        ((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL));
+
+private ["_wavesAtOrigin", "_wavesAtVirtualPoint"];
+
+_wavesAtOrigin = [(positionCameraToWorld [0, 0, 0])] call EFUNC(common,waveHeightAt);
+_wavesAtVirtualPoint = [(positionCameraToWorld [0, 0, 2])] call EFUNC(common,waveHeightAt);
+GVAR(selfMenuOffset) set [2, ((GVAR(selfMenuOffset) select 2) + _wavesAtOrigin - _wavesAtVirtualPoint)];
+
 
 ["interactMenuOpened", [_menuType]] call EFUNC(common,localEvent);
 

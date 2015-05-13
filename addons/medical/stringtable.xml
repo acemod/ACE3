@@ -83,7 +83,7 @@
             <French>Injecter de la morphine</French>
             <Hungarian>Morfium beadása</Hungarian>
             <Portuguese>Injetar Morfina</Portuguese>
-            <Italian>Inietta Morfina</Italian>
+            <Italian>Inietta morfina</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Transfuse_Blood">
             <English>Transfuse Blood</English>
@@ -95,7 +95,7 @@
             <French>Transfusion</French>
             <Hungarian>Infúzió (vér)</Hungarian>
             <Portuguese>Transfundir Sangue</Portuguese>
-            <Italian>Effettua trasfusione di sangue</Italian>
+            <Italian>Trasfusione di sangue</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Transfuse_Plasma">
             <English>Transfuse Plasma</English>
@@ -106,7 +106,7 @@
             <French>Transfuser du Plasma</French>
             <Russian>Перелить плазму</Russian>
             <Hungarian>Infúzió (vérplazma)</Hungarian>
-            <Italian>Effettua trasfusione di plasma</Italian>
+            <Italian>Trasfusione di Plasma</Italian>
             <Portuguese>Transfundir Plasma</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Transfuse_Saline">
@@ -118,7 +118,7 @@
             <French>Transfuser de la solution saline</French>
             <Russian>Перелить физраствор</Russian>
             <Hungarian>Infúzió (sós víz)</Hungarian>
-            <Italian>Effettua trasfusione di soluzione salina</Italian>
+            <Italian>Trasfusione di soluzione salina</Italian>
             <Portuguese>Transfundir Soro</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Apply_Tourniquet">
@@ -274,7 +274,7 @@
             <French>Transfusion de saline ...</French>
             <Russian>Переливание физраствора ...</Russian>
             <Hungarian>Infúzió sós vizzel ...</Hungarian>
-            <Italian>Effettuo la rasfusione di salina</Italian>
+            <Italian>Effettuo la rasfusione di soluzione salina</Italian>
             <Portuguese>Transfundindo Soro...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Plasma">
@@ -370,7 +370,7 @@
             <Czech>QuikClot</Czech>
             <French>Hémostatique</French>
             <Hungarian>QuikClot</Hungarian>
-            <Italian>QuikClot(polvere emostatica)</Italian>
+            <Italian>QuikClot (polvere emostatica)</Italian>
             <Portuguese>QuikClot</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_CheckPulse">
@@ -632,7 +632,7 @@
             <Polish>Natychmiastowy</Polish>
             <French>Urgence Immédiate</French>
             <German>Sofort</German>
-            <Czech>Okamžiý</Czech>
+            <Czech>Okamžitý</Czech>
             <Hungarian>Azonnali</Hungarian>
             <Italian>Immediata</Italian>
             <Portuguese>Imediato</Portuguese>
@@ -801,7 +801,7 @@
             <French>Bandage fait d'un matériel spécial utilisé pour couvrir une blessure, qui peut etre appliqué dès que le saignement a été stoppé.</French>
             <Polish>Opatrunek materiałowy, używany do przykrywania ran, zakładany na ranę po zatamowaniu krwawienia.</Polish>
             <Hungarian>Egy különleges anyagú kötszer sebek betakarására, amelyet a vérzés elállítása után helyeznek fel.</Hungarian>
-            <Italian>Una benda apposita, utilizzata per coprire una ferita, la quale è applicata sopra di essa una volta fermata l'emorragia.</Italian>
+            <Italian>Una benda apposita, utilizzata per coprire una ferita, la quale viene applicata su di essa una volta fermata l'emorragia.</Italian>
             <Portuguese>Uma curativo, material específico para cobrir um ferimento que é aplicado assim que o sangramento é estancando.</Portuguese>
             <Czech>Obvaz je vhodným způsobem upravený sterilní materiál, určený k překrytí rány, případně k fixaci poranění.</Czech>
         </Key>
@@ -825,7 +825,7 @@
             <French>Utilisé pour couvrir des blessures de taille moyenne à grande. Arrête l'hémorragies</French>
             <Polish>Używany w celu opatrywania średnich i dużych ran oraz tamowania krwawienia.</Polish>
             <Hungarian>Közepestől nagyig terjedő sebek betakarására és vérzés elállítására használt kötszer</Hungarian>
-            <Italian>Usato su medie o larghe ferite per fermare emorragie.</Italian>
+            <Italian>Usato su ferite medie o larghe per fermare emorragie.</Italian>
             <Portuguese>Usado para o preenchimento de cavidades geradas por ferimentos médios e grandes e estancar o sangramento.</Portuguese>
             <Czech>Používá se k zastavení středních až silnějších krvácení</Czech>
         </Key>
@@ -850,7 +850,7 @@
             <Polish>Bandaż (elastyczny)</Polish>
             <Czech>Obvaz (elastický)</Czech>
             <Hungarian>Rögzító kötszer</Hungarian>
-            <Italian>Benda (Elastica)</Italian>
+            <Italian>Benda (elastica)</Italian>
             <Portuguese>Bandagem (Elástica)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Elastic_Desc_Short">
@@ -861,7 +861,7 @@
             <French>Bandage compressif élastique</French>
             <Polish>Zestaw bandaży elastycznych.</Polish>
             <Hungarian>Rugalmas kötszercsomag, "rögzítő"</Hungarian>
-            <Italian>Kit bendaggio, elastico</Italian>
+            <Italian>Kit di bendaggio, elastico</Italian>
             <Portuguese>Kit de Bandagem, Elástica</Portuguese>
             <Czech>Sada obvazů, Elastická</Czech>
         </Key>
@@ -873,7 +873,7 @@
             <Polish>Elastyczna opaska podtrzymująca opatrunek oraz usztywniająca okolice stawów.</Polish>
             <Spanish>Brinda una compresión uniforme y ofrece soporte extra a una zona lesionada</Spanish>
             <Hungarian>Egyenletes nyomást és támogatást biztosít a sebesült felületnek.</Hungarian>
-            <Italian>Permette di comprimevere e aiutare la zone ferita.</Italian>
+            <Italian>Permette di comprimere e aiutare la zone ferita.</Italian>
             <Portuguese>Esta bandagem pode ser utilizada para comprimir o ferimento e diminuir o sangramento e garantir que o ferimento não abra em movimento.</Portuguese>
             <Czech>Hodí se k fixačním účelům a to i v oblastech kloubů.</Czech>
         </Key>
@@ -958,7 +958,7 @@
             <German>Atropin Autoinjektor</German>
             <Czech>Autoinjektor atropin</Czech>
             <Hungarian>Atropin autoinjektor</Hungarian>
-            <Italian>Autoiniettore di Atropina</Italian>
+            <Italian>Autoiniettore di atropina</Italian>
             <Portuguese>Auto-injetor de Atropina</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Desc_Short">
@@ -994,7 +994,7 @@
             <German>Epiniphrin Autoinjektor</German>
             <Czech>Autoinjektor adrenalin</Czech>
             <Hungarian>Epinefrin autoinjektor</Hungarian>
-            <Italian>Autoiniettore di Epinefrina</Italian>
+            <Italian>Autoiniettore di epinefrina</Italian>
             <Portuguese>Auto-injetor de epinefrina</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Epinephrine_Desc_Short">
@@ -1271,6 +1271,7 @@
             <Hungarian>Elsősegélycsomag, terepen való sebvarráshoz és haladó ellátáshoz</Hungarian>
             <Portuguese>Kit de primeiros socorros para sutura ou tratamentos avançados</Portuguese>
             <Czech>Osobní lékárnička obsahuje zdravotnický materiál umožňující šití a pokročilejší ošetřování raněných v poli  </Czech>
+            <Italian>Pronto soccorso personale da campo per mettersi i punti o per trattamenti avanzati.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Use_Aid_Kit">
             <English>Use Personal Aid Kit</English>
@@ -1282,6 +1283,7 @@
             <Hungarian>Elsősegélycsomag használata</Hungarian>
             <Portuguese>Usar o kit de primeiros socorros</Portuguese>
             <Czech>Použít osobní lékárničku</Czech>
+            <Italian>Usa il pronto soccorso personale</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_SurgicalKit_Display">
             <English>Surgical Kit</English>
@@ -1777,7 +1779,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_lostBlood">
             <English>He's lost some blood</English>
-            <Italian>Ha perso molto sangue</Italian>
+            <Italian>Ha perso sangue</Italian>
             <Spanish>Ha perdido un poco de sangre</Spanish>
             <Russian>Есть кровопотеря</Russian>
             <German>Er hat etwas Blut verloren</German>
@@ -1797,6 +1799,7 @@
             <French>Il a perdu beaucoup de sang</French>
             <Czech>Ztratil hodně krve</Czech>
             <Portuguese>Ele perdeu muito sangue</Portuguese>
+            <Italian>Ha perso molto sangue</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_noBloodloss">
             <English>He hasn't lost blood</English>
@@ -2240,6 +2243,7 @@
             <Czech>Styl menu (Zdravotní)</Czech>
             <Portuguese>Estilo do menu (Médico)</Portuguese>
             <Hungarian>Menü stílusa (Orvosi)</Hungarian>
+            <Italian>Stile del menù (medico)</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_menuTypeDescription">
             <English>Select the type of menu you prefer; default 3d selections or radial.</English>
@@ -2251,6 +2255,7 @@
             <Portuguese>Selecione o tipo de menu que você prefere; padrão seleções 3d ou radial.</Portuguese>
             <Hungarian>Válaszd ki a neked megfelelő menüt: Alapértelmezett 3D válogatás, vagy kerek.</Hungarian>
             <Czech>Zvolte typ menu: základní 3D výběr nebo kruhový</Czech>
+            <Italian>Seleziona il tipo di menù che preferisci: selezione 3d predefinita o radiale.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_useSelection">
             <English>Selections (3d)</English>
@@ -2262,6 +2267,7 @@
             <Portuguese>Seleção (3d)</Portuguese>
             <Hungarian>Választékok (3D)</Hungarian>
             <Czech>3D výběr</Czech>
+            <Italian>Selezione (3D)</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_useRadial">
             <English>Radial</English>
@@ -2273,6 +2279,7 @@
             <Portuguese>Radial</Portuguese>
             <Hungarian>Kerek</Hungarian>
             <Czech>Kruhový</Czech>
+            <Italian>Radiale</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion">
             <English>Scrape</English>
@@ -2680,6 +2687,7 @@
             <Spanish>Tratando ...</Spanish>
             <Portuguese>Tratando...</Portuguese>
             <Czech>Ošetřuji ...</Czech>
+            <Italian>Curando ...</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_RemovingTourniquet">
             <English>Removing Tourniquet ...</English>
@@ -2691,6 +2699,7 @@
             <Hungarian>Érszorító eltávolítása ...</Hungarian>
             <Czech>Sundavám škrtidlo ...</Czech>
             <Russian>Снятие жгута ...</Russian>
+            <Italian>Togliendo il laccio emostatico ...</Italian>
         </Key>
     </Package>
 </Project>
