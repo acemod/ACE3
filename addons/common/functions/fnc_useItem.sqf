@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_item","_return"];
+private ["_unit","_item","_return", "_vehicleUsage"];
 _unit = _this select 0;
 _item = _this select 1;
 _vehicleUsage = [_this, 2, false, [false]] call BIS_fnc_Param;

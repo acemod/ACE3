@@ -23,9 +23,7 @@ EXPLODE_2_PVT(_this,_unit,_classname);
 DEFAULT_PARAM(2,_container,"");
 DEFAULT_PARAM(3,_ammoCount,-1);
 
-private "_addedToPlayer";
-private "_canAdd";
-private "_type";
+private ["_addedToPlayer", "_canAdd", "_type", "_pos"];
 
 _canAdd = false;
 _addedToPlayer = true;

@@ -17,9 +17,9 @@
 * Example:
 * ["myID", true, QUOTE(PATHTOF(data\icon_group.paa)), [1,1,1,1], 0] call ace_gui_fnc_displayIcon;
 */
-
-
 #include "script_component.hpp"
+
+//IGNORE_PRIVATE_WARNING("_args", "_elapsedTime", "_errorCode", "_totalTime");
 
 // positions for the icon UI
 #define RIGHT_SIDE    (safezoneW + safezoneX)
@@ -53,7 +53,7 @@ disableSerialization;
 _list = missionNamespace getvariable [QGVAR(displayIconList),[]];
 
 _refresh = {
-    private ["_allControls"];
+    private ["_position", "_allControls"];
     // Refreshing of all icons..
     _allControls = missionNamespace getvariable [QGVAR(displayIconListControls), []];
     {

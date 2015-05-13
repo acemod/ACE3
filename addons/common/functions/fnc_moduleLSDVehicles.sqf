@@ -11,6 +11,8 @@
  */
 #include "script_component.hpp"
 
+private["_activated", "_colors", "_hSCount", "_hiddenSelections", "_i", "_index", "_logic", "_units", "_vehicle"];
+
 _logic = _this select 0;
 _units = _this select 1;
 _activated = _this select 2;

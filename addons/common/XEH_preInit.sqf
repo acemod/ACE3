@@ -1,6 +1,8 @@
 // by commy2
 #include "script_component.hpp"
 
+//IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
+
 ADDON = false;
 
 // ACE Common Function
@@ -301,6 +303,7 @@ if (hasInterface) then {
     // PFH to update the ACE_player variable
     [{
         if !(ACE_player isEqualTo (call FUNC(player))) then {
+            private "_oldPlayer";
             _oldPlayer = ACE_player;
 
             ACE_player = call FUNC(player);

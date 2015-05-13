@@ -12,6 +12,8 @@
 #include "script_component.hpp"
 PARAMS_1(_name);
 
+private["_data", "_eventId"];
+
 if(!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
     diag_log text format["[ACE] Error, synced event key not found."];
     false

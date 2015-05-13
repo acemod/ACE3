@@ -16,6 +16,7 @@
  */
 #include "script_component.hpp"
 private ["_eventName", "_eventArgs", "_eventTargets"];
+//IGNORE_PRIVATE_WARNING(_handleNetEvent);
 
 _eventName = _this select 0;
 _eventTargets = _this select 1;
