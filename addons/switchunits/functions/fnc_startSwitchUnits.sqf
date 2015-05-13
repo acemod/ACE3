@@ -16,13 +16,10 @@
 
 #include "script_component.hpp"
 
-
-private "_player";
-_player = _this select 0;
-
+PARAMS_1(_player);
 
 if (GVAR(EnableSwitchUnits)) then {
-    private ["_sides"];
+    private "_sides";
     _sides = [];
 
     if(GVAR(SwitchToWest)) then {_sides pushBack west;};

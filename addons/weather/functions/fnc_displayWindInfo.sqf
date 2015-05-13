@@ -38,15 +38,14 @@ GVAR(WindInfo) = true;
 
     _windIndex = 12;
     _windColor = [1, 1, 1, 1];
-
-    // Toogle behaviour depending on ace_advanced_ballistics being used or not
-    // @todo, check ACE_AB is actually enabled
-    _windSpeed = if (isClass (configFile >> "CfgPatches" >> "ACE_Advanced_Ballistics")) then {
-        (eyePos ACE_player) call EFUNC(advanced_ballistics,calculateWindSpeed);
+    _windSpeed = if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+        // With wind gradient
+        [eyePos ACE_player, true, true, true] call FUNC(calculateWindSpeed);
     } else {
-        vectorMagnitude ACE_wind;
+        // Without wind gradient
+        [eyePos ACE_player, false, true, true] call FUNC(calculateWindSpeed);
     };
-
+    
     if (_windSpeed > 0.2) then {
         _playerDir = getDir ACE_player;
         _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);

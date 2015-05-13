@@ -9,13 +9,8 @@
 if(!isServer) exitWith { };
 
 // _startTime = diag_tickTime;
-private ["_round", "_lastPos", "_lastVel", "_shellType", "_gun", "_fragTypes", "_warn", "_atlPos", "_isArmed",
-    "_fuseDist", "_indirectHitRange", "_fragRange", "_c", "_m", "_k", "_gC", "_fragPower", "_fragPowerRandom",
-    "_manObjects", "_objects", "_crew", "_fragCount", "_fragArcs", "_doRandom", "_target", "_boundingBox",
-    "_targetPos", "_distance", "_add", "_bbX", "_bbY", "_bbZ", "_cubic", "_targetVel", "_baseVec", "_dir",
-    "_currentCount", "_count", "_vecVar", "_i", "_vec", "_fp", "_vel", "_fragType", "_fragObj", "_randomCount",
-    "_sectorSize", "_sectorOffset", "_randomDir", "_endTime"];
 
+private ["_startTime", "_round", "_lastPos", "_lastVel", "_shellType", "_gun", "_fragTypes", "_warn", "_atlPos", "_isArmed", "_fuseDist", "_indirectHitRange", "_fragRange", "_c", "_m", "_k", "_gC", "_fragPower", "_fragPowerRandom", "_manObjects", "_objects", "_crew", "_fragCount", "_fragArcs", "_doRandom", "_boundingBox", "_targetPos", "_distance", "_add", "_bbX", "_bbY", "_bbZ", "_cubic", "_targetVel", "_baseVec", "_dir", "_currentCount", "_count", "_vecVar", "_vec", "_fp", "_vel", "_fragType", "_fragObj", "_randomCount", "_sectorSize", "_sectorOffset", "_i", "_randomDir", "_endTime", "_target"];
 
 _round = _this select 0;
 _lastPos = _this select 1;

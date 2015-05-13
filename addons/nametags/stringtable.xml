@@ -70,8 +70,8 @@
             <Czech>Zobrazit info o posádce vozidla</Czech>
             <Russian>Показывать информацию об экипаже</Russian>
             <Hungarian>Jármű-legénység adatainak mutatása</Hungarian>
-            <Italian>Mostra le informazioni sull'equipaggio del veicolo</Italian>
             <Portuguese>Mostrar tripulantes</Portuguese>
+            <Italian>Mostra l'elenco del personale a bordo</Italian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowNamesForAI">
             <English>Show name tags for AI units</English>
@@ -82,7 +82,7 @@
             <Polish>Wyświetl imiona jednostek AI</Polish>
             <French>Afficher les noms des IA</French>
             <Hungarian>Névcímkék mutatása MI-egységeknél</Hungarian>
-            <Italian>Mostra le tag nomi per le unità AI</Italian>
+            <Italian>Mostra i nomi delle le unità AI</Italian>
             <Portuguese>Mostrar nomes para unidades de IA</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves">
@@ -94,7 +94,7 @@
             <Polish>Pokaż fale dźwiękowe (wymagana opcja Pokaż imiona graczy)</Polish>
             <French>Afficher "qui parle" (si noms affichés)</French>
             <Hungarian>"Hanghullámok" mutatása (a nevek mutatása szükséges)</Hungarian>
-            <Italian>Mostra barra movimento audio (richiede mostra nomi abilitato)</Italian>
+            <Italian>Mostra movimento audio (richiede mostra nomi abilitato)</Italian>
             <Portuguese>Mostrar onda sonora (requer nome de jogadores)</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_DefaultNametagColor">
@@ -106,7 +106,7 @@
             <French>Couleur d'affichage par défaut (si dans aucun groupe)</French>
             <Czech>Standardní barva jmenovek (pro nečleny jednotky)</Czech>
             <Hungarian>Alap névcímke-szín (csoporton kívüli személyek)</Hungarian>
-            <Italian>Colore nametag di default (membri non del gruppo)</Italian>
+            <Italian>Colore dei nomi non appartenenti al gruppo</Italian>
             <Portuguese>Cor padrão do nome (unidades fora do grupo)</Portuguese>
         </Key>
     </Package>

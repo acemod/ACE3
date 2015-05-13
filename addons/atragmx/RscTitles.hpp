@@ -142,6 +142,7 @@ class ATragMX_Display {
     name="ATragMX_Display";
     idd=-1;
     onLoad="uiNamespace setVariable ['ATragMX_Display', (_this select 0)]";
+    onUnload=QUOTE(_this call FUNC(on_close_dialog));
     movingEnable=1;
     controlsBackground[]={};
     objects[]={};
