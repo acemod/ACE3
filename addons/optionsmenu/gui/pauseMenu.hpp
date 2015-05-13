@@ -108,11 +108,11 @@ class RscDisplayMain: RscStandardDisplay {
         };
 
         class ACE_news: RscControlsGroupNoScrollbars {
-            x = "safezoneX + safezoneW - (48 * 			(			((safezoneW / safezoneH) min 1.2) / 40))";
-            y = "safezoneY + (1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))";
             idc = -1;
-            w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-            h = "20 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            x = "safezoneX + safezoneW - (31 * (((safezoneW / safezoneH) min 1.2) / 40))";
+            y = "safezoneY + (1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))";
+            w = "15 * (((safezoneW / safezoneH) min 1.2) / 40)";
+            h = "16.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             class controls
             {
                 class ACE_NewsTitle: RscText {
@@ -124,7 +124,7 @@ class RscDisplayMain: RscStandardDisplay {
                     w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
                     h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                 };
-                class ACE_NewsBackgroundDate: RscText
+                class ACE_VersionInfo: RscText
                 {
                     idc = 68;
                     x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
@@ -138,15 +138,15 @@ class RscDisplayMain: RscStandardDisplay {
                     x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
                     y = "2.2 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                     w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-                    h = "17.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    h = "14 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                     colorBackground[] = {0,0,0,0.4};
                 };
                 class ACE_NewsText: RscHTML {
                     idc = 69;
                     x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-                    y = "2.2 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    y = "2.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                     w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-                    h = "17.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    h = "14.2 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 
                     shadow = 0;
                     class H1 {
