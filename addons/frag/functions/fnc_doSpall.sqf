@@ -4,11 +4,8 @@
     GVAR(traceFrags) = true;
 #endif
 // ACE_player sideChat "WAAAAAAAAAAAAAAAAAAAAA";    
-private ["_params", "_initialData", "_hpData", "_roundType", "_round", "_object", "_caliber", "_explosive",
-    "_idh", "_alive", "_exit", "_vm", "_velocity", "_unitDir", "_oldVelocity", "_curVelocity", "_diff", "_polar",
-    "_pos", "_spallPos", "_i", "_pos1", "_pos2", "_blah", "_data", "_spallPolar", "_c", "_warn", "_m", "_k",
-    "_gC", "_shellType", "_fragPower", "_spread", "_spallCount", "_elev", "_dir", "_vel", "_spallFragVect",
-    "_fragment", "_index", "_hitData", "_fragTypes", "_fragType", "_foundObjects"];
+
+private ["_params", "_hitData", "_initialData", "_hpData", "_object", "_foundObjects", "_index", "_foundObjecsts", "_roundType", "_round", "_caliber", "_explosive", "_idh", "_alive", "_exit", "_vm", "_velocity", "_oldVelocity", "_curVelocity", "_diff", "_polar", "_unitDir", "_spallPos", "_pos1", "_i", "_pos2", "_blah", "_data", "_spallPolar", "_warn", "_c", "_m", "_k", "_gC", "_fragPower", "_fragTypes", "_spread", "_spallCount", "_elev", "_dir", "_vel", "_spallFragVect", "_fragType", "_fragment", "_pos"];
 
 _params = _this select 0;
 [(_this select 1)] call cba_fnc_removePerFrameHandler;
