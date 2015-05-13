@@ -32,7 +32,4 @@ Adds a HUD to the AH-9 based on the comanches HUD.
 # Usage
 
 - ## switching flare mode:
-the fefault keybind is ```ctrl + c```
-
-# Dependencies
-None
+the default keybind is ```ctrl + c```

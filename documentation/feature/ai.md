@@ -22,9 +22,3 @@ Some weapons had minimum engagement ranges. If you were as close as 2 meters to 
 
 - ## No scripting
 All changes of ACE 3 AI are config based to ensure full compatibility with advanced AI modifications like ASR AI.
-
-# Usage
-Nothing  
-
-# Dependencies
-None
