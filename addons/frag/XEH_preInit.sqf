@@ -6,11 +6,9 @@ PREP(doSpall);
 PREP(fired);
 PREP(frago);
 PREP(spallTrack);
-PREP(trackFragRound);
 
 GVAR(blackList) = [];
 GVAR(traceFrags) = false;
-GVAR(trackedObjects) = [];
 
 GVAR(TOTALFRAGS) = 0;
 
@@ -31,5 +29,15 @@ PREP(spallHP);
 PREP(startTracing);
 PREP(stopTracing);
 PREP(trackTrace);
+
+// New tracking mechanisms
+PREP(masterPFH);
+PREP(pfhRound);
+PREP(addPfhRound);
+PREP(removePfhRound); // THIS SHOULD ABE USED SPARINGLY
+
+GVAR(objects) = [];
+GVAR(objectTypes) = [];
+GVAR(arguments) = [];
 
 ADDON = true;

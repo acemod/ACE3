@@ -124,6 +124,7 @@ if(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) then {
                 _fragment = (_fragTypes select _fragType) createVehicleLocal [0,0,10000];
                 _fragment setPosASL _spallPos;
                 _fragment setVelocity _spallFragVect;
+
                 if(GVAR(traceFrags)) then {
                     [ACE_player, _fragment, [1,0.5,0,1]] call FUNC(addTrack);
                 };
@@ -145,6 +146,7 @@ if(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) then {
                 _fragment = (_fragTypes select _fragType) createVehicleLocal [0,0,10000];
                 _fragment setPosASL _spallPos;
                 _fragment setVelocity _spallFragVect;
+
                 if(GVAR(traceFrags)) then {
                     [ACE_player, _fragment, [1,0,0,1]] call FUNC(addTrack);
                 };

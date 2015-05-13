@@ -1,17 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
-        <Key ID="STR_DN_ACE_FRAG">
-            <English>Disable Fragmentation</English>
-            <German>Keine Schrapnelle</German>
-            <Czech>Zakázat fragmentaci granátů</Czech>
-            <Spanish>Desactivar fragmentación</Spanish>
-            <Polish>Wyłącz fragmentację odłamków</Polish>
-            <Russian>Выключить разлёт осколков</Russian>
-            <French>Désactive la fragmentation</French>
-            <Hungarian>Repeszek letiltása</Hungarian>
-            <Italian>Disattiva la frammentazione</Italian>
-            <Portuguese>Desabilitar Fragmentação</Portuguese>
+        <Key ID="STR_ACE_frag_EnableFrag">
+            <English>Fragmentation Simulation</English>
+ 
+        </Key>
+        <Key ID="STR_ACE_frag_EnableFrag_Desc">
+            <English>Enable the ACE Fragmentation Simulation</English>
+ 
+        </Key>
+        <Key ID="STR_ACE_frag_EnableSpall">
+            <English>Spalling Simulation</English>
+ 
+        </Key>
+        <Key ID="STR_ACE_frag_EnableSpall_Desc">
+            <English>Enable the ACE Spalling Simulation</English>
+ 
         </Key>
     </Package>
 </Project>
