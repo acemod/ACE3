@@ -6,5 +6,6 @@ class CfgMagazines {
         descriptionShort = "$STR_ACE_Vehicle_Item_Custom_Description";
         count = 1;
         mass = 0;
+        ACE_isUnique = 1;
     };
 };
