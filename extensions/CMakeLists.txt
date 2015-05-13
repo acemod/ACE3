@@ -35,21 +35,13 @@ include_directories("common")
 if(USE_BULLET)
     # Dependencies
     #
+    set(BACKUP_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY})
+    set(BACKUP_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
+    set(BACKUP_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+    
     add_definitions(-DUSE_DIRECTX)
     add_subdirectory(lib/bullet3)
-    #set(depname bullet3)
-    #set(${depname}_PREFIX "lib/${depname}")
-    #set(${depname}_INSTALL_DIR "${CMAKE_CURRENT_SOURCE_DIR}/binaries/${CMAKE_SYSTEM_NAME}${CMAKE_CXX_COMPILER_ID}${KINEVOX_ARCHITECTURE}/usr/local/")
-    #set(${depname}_CMAKE_ARGS -DBUILD_SHARED_LIBS=true -DCMAKE_INSTALL_PREFIX=${${depname}_INSTALL_DIR} -DBUILD_BULLET2_DEMOS=false -DBUILD_UNIT_TESTS=false -DBUILD_BULLET3_DEMOS=false -DBUILD_CPU_DEMOS=false -DBUILD_EXTRAS=false -DINSTALL_LIBS=true ${EXTRA_ARGS})
-    #ExternalProject_Add(
-    #   ${depname}
-    #   PREFIX ${${depname}_PREFIX}
-    #   GIT_REPOSITORY https://github.com/bulletphysics/bullet3.git lib/${depname} 
-    #   SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/${depname} 
-    #     INSTALL_DIR ${${depname}_INSTALL_DIR}
-    #  CMAKE_ARGS ${${depname}_CMAKE_ARGS}
-    #)
-    
+
     set_target_properties(App_BasicExample PROPERTIES FOLDER Bullet3)
     set_target_properties(App_HelloWorld PROPERTIES FOLDER Bullet3)
     set_target_properties(App_ExampleBrowser PROPERTIES FOLDER Bullet3)
@@ -73,6 +65,10 @@ if(USE_BULLET)
     set_target_properties(HACD PROPERTIES FOLDER Bullet3)
     set_target_properties(OpenGLWindow PROPERTIES FOLDER Bullet3)
     set_target_properties(LinearMath PROPERTIES FOLDER Bullet3)
+    
+    set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${BACKUP_ARCHIVE_OUTPUT_DIRECTORY})
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${BACKUP_LIBRARY_OUTPUT_DIRECTORY})
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BACKUP_RUNTIME_OUTPUT_DIRECTORY})
     
     include_directories(BEFORE "lib/bullet3/src")
 endif()
