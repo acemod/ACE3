@@ -161,31 +161,31 @@
             <English></English>
             <Polish>Moduł ten pozwala dostosować ustawienia i zasięg wyświetlania imion.</Polish>
         </Key>
-        <Key ID="STR_ACE_Common_Disabled">
+        <Key ID="STR_ACE_NameTags_Disabled">
             <English>Disabled</English>
             <Polish>Wyłączone</Polish>
         </Key>
-        <Key ID="STR_ACE_Common_Enabled">
+        <Key ID="STR_ACE_NameTags_Enabled">
             <English>Enabled</English>
             <Polish>Włączone</Polish>
         </Key>
-        <Key ID="STR_ACE_Common_OnlyCursor">
+        <Key ID="STR_ACE_NameTags_OnlyCursor">
             <English>Only Cursor</English>
             <Polish>Tylko pod kursorem</Polish>
         </Key>
-        <Key ID="STR_ACE_Common_OnlyOnKeypress">
+        <Key ID="STR_ACE_NameTags_OnlyOnKeypress">
             <English>Only On Keypress</English>
             <Polish>Tylko po wciśnięciu klawisza</Polish>
         </Key>
-        <Key ID="STR_ACE_Common_OnlyCursorAndKeyPress">
-            <English>Only Cursor and KeyPress</English>
+        <Key ID="STR_ACE_NameTags_OnlyCursorAndKeypress">
+            <English>Only Cursor and Keypress</English>
             <Polish>Tylko pod kursorem i po wciśnięciu klawisza</Polish>
         </Key>
-        <Key ID="STR_ACE_Common_NameTagSettings">
+        <Key ID="STR_ACE_NameTags_NameTagSettings">
             <English>Use Nametag settings</English>
             <Polish>Użyj ustawień imion</Polish>
         </Key>
-        <Key ID="STR_ACE_Common_AlwaysShowAll">
+        <Key ID="STR_ACE_NameTags_AlwaysShowAll">
             <English>Always Show All</English>
             <Polish>Zawsze pokazuj wszystkie</Polish>
         </Key>

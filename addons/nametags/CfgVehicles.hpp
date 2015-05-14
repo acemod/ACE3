@@ -12,6 +12,35 @@ class CfgVehicles {
         isGlobal = 1;
         icon = QUOTE(PATHTOF(UI\Icon_Module_NameTags_ca.paa));
         class Arguments {
+            class showPlayerNames {
+                displayName = "$STR_ACE_NameTags_ShowPlayerNames";
+                description = "$STR_ACE_NameTags_ShowPlayerNames_Desc";
+                typeName = "SCALAR";
+                defaultValue = 1;
+                class values {
+                    class Disabled {
+                        name = "$STR_ACE_NameTags_Disabled";
+                        value = 0;
+                    };
+                    class Enabled {
+                        default = 1;
+                        name = "$STR_ACE_NameTags_Enabled";
+                        value = 1;
+                    };
+                    class OnlyCursor {
+                        name = "$STR_ACE_NameTags_OnlyCursor";
+                        value = 2;
+                    };
+                    class OnlyOnKeypress {
+                        name = "$STR_ACE_NameTags_OnlyOnKeypress";
+                        value = 3;
+                    };
+                    class OnlyCursorAndKeypress {
+                        name = "$STR_ACE_NameTags_OnlyCursorAndKeypress";
+                        value = 4;
+                    };
+                };
+            };
             class PlayerNamesViewDistance {
                 displayName = "$STR_ACE_NameTags_PlayerNamesViewDistance_DisplayName";
                 description = "$STR_ACE_NameTags_PlayerNamesViewDistance_Description";
