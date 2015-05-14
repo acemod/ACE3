@@ -16,5 +16,12 @@ if (viewDistance > GVAR(limitViewDistance)) then {
     };
 },true] call ace_common_fnc_addEventHandler;
 
+// Set the EH which waits for the Object View Distance coefficient to be changed, so that the effect is show immediately
+["SettingChanged",{
+    if (_this select 0  == QGVAR(objectViewDistanceCoeff)) then {
+        [true] call FUNC(adaptViewDistance);
+    };
+},true] call ace_common_fnc_addEventHandler;
+
 // Set the EH which waits for a vehicle change to automatically swap to On Foot/In Land Vehicle/In Air Vehicle
 ["playerVehicleChanged",{[false] call FUNC(adaptViewDistance)},true] call ace_common_fnc_addEventHandler;

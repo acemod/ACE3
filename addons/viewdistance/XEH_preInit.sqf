@@ -4,6 +4,7 @@ ADDON = false;
 
 PREP(initModule);
 PREP(returnValue);
+PREP(returnObjectCoeff);
 PREP(changeViewDistance);
 PREP(adaptViewDistance);
 
