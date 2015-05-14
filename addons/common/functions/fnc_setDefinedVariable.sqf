@@ -10,10 +10,10 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_variable","_value","_update","_global","_definedVariable","_defaultGlobal","_currentValue"];
-_unit  = _this select 0;
-_variable = _this select 1;
-_value = _this select 2;
+private ["_update","_global","_definedVariable","_defaultGlobal","_currentValue"];
+
+PARAMS_3(_unit,_variable,_value);
+
 _global = false;
 
 if (count _this > 3) then {

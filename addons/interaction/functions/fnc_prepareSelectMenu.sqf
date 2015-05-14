@@ -7,10 +7,10 @@
  * 1: Approve Button Text <STRING>
  *
  * Return value:
- * Container object <ARRAY/NUMBER>
+ * Container object <NUMBER>
  *
  * Example:
- * _array = ["Select Explosive", "Place"] call ace_interaction_fnc_prepareSelectMenu
+ * array = ["Select Explosive", "Place"] call ace_interaction_fnc_prepareSelectMenu
  *
  * Public: No
  */

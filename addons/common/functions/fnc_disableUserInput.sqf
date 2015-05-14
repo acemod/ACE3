@@ -13,9 +13,9 @@
 
 #include "script_component.hpp"
 
-private ["_state", "_dlg"];
+private ["_dlg"];
 
-_state = _this select 0;
+PARAMS_1(_state);
 
 if (_state) then {
     disableSerialization;

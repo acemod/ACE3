@@ -10,7 +10,7 @@
  * Able to become leader of group <BOOL>
  *
  * Example:
- * _bool = [player, player] call ace_interaction_fnc_canBecomeLeader
+ * [player, player] call ace_interaction_fnc_canBecomeLeader
  *
  * Public: No
  */

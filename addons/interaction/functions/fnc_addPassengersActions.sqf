@@ -11,7 +11,7 @@
  * Children actions <ARRAY>
  *
  * Example:
- * _array = [target, player, [params]] call ace_interaction_fnc_addPassengersActions
+ * [target, player, [params]] call ace_interaction_fnc_addPassengersActions
  *
  * Public: No
  */
@@ -23,8 +23,9 @@ private ["_actions"];
 _actions = [];
 
 {
+    private ["_unit"];
     _unit = _x;
-    if (_x != _player) then {
+    if (_unit != _player) then {
         _actions pushBack
             [
                 [

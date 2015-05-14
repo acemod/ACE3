@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_vehicle,_position);
+PARAMS_2(_vehicle,_position);
 private ["_turrets", "_turret", "_config", "_turret", "_povPos", "_povDir", "_gunBeginPos", "_gunEndPos", "_pov"];
 
 _turret = [_vehicle, _position] call CBA_fnc_getTurret;
@@ -25,7 +25,7 @@ TRACE_3("", _pov, _gunBeg, _gunEnd);
 _povPos = ATLtoASL ( _vehicle modelToWorldVisual (_vehicle selectionPosition _pov ) );
 _povDir = [0,0,0];
 
-if(_pov == "pip0_pos") then {
+if (_pov == "pip0_pos") then {
     _pipDir = ATLtoASL ( _vehicle modelToWorldVisual (_vehicle selectionPosition "pip0_dir" ) ); 
     _povDir = _pipDir vectorDiff _povPos;
 } else {

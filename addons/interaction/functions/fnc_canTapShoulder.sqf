@@ -10,7 +10,7 @@
  * Able to tap a shoulder <BOOL>
  *
  * Example:
- * _bool = [player, target] call ace_interaction_fnc_canTapShoulder
+ * [player, target] call ace_interaction_fnc_canTapShoulder
  *
  * Public: No
  */

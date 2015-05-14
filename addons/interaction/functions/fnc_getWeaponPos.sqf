@@ -3,13 +3,13 @@
  * Return a suitable position for the action point for the current weapon
  *
  * Arguments:
- * None
+ * None (uses local variable _target)
  *
  * Return value:
  * Children actions <ARRAY>
  *
  * Example:
- * _array = call ace_interaction_fnc_getWeaponPos
+ * call ace_interaction_fnc_getWeaponPos
  *
  * Public: No
  */

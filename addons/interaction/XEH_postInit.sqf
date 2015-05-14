@@ -15,6 +15,7 @@ if (!hasInterface) exitWith {};
 GVAR(isOpeningDoor) = false;
 
 // restore global fire teams for JIP
+private ["_team"];
 {
     _team = _x getVariable [QGVAR(assignedFireTeam), ""];
     if (_team != "") then {_x assignTeam _team};

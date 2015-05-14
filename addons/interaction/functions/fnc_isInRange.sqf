@@ -10,7 +10,7 @@
  * Vehicle in range of player <BOOL>
  *
  * Example:
- * _bool = [target, 5] call ace_interaction_fnc_isInRange
+ * [target, 5] call ace_interaction_fnc_isInRange
  *
  * Public: No
  */

@@ -11,7 +11,7 @@
  * 1: Door Name <STRING>
  *
  * Example:
- * _array = [player, target] call ace_interaction_fnc_getDoor
+ * [player, target] call ace_interaction_fnc_getDoor
  *
  * Public: No
  */

@@ -17,9 +17,9 @@ Example:
 */
 #include "script_component.hpp"
 
-private ["_unit", "_forceWalkNumber"];
+private ["_forceWalkNumber"];
 
-_unit = _this select 0;
+PARAMS_1(_unit);
 _forceWalkNumber = _unit getVariable ["ACE_forceWalkStatusNumber", 0];
 
 _unit forceWalk (_forceWalkNumber > 0);

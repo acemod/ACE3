@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_1_PVT(_this,_optionEntry);
+PARAMS_1(_optionEntry);
 
 private ["_fnc_getValueWithType", "_value","_name", "_typeName", "_settingData"];
 

@@ -19,6 +19,8 @@
 
 PARAMS_3(_tooltip,_coordinateX,_coordinateY);
 
+private["_ctrl"];
+
 disableSerialization;
 _ctrl = ctrlParent _tooltip displayCtrl 40;
 
