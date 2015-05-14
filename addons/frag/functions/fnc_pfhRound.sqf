@@ -1,25 +1,28 @@
 #include "script_component.hpp"
-private ["_params", "_round", "_lastPos", "_lastVel", "_type", "_time", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
-_params = _this select 0;
-_round = _params select 0;
-_lastPos = _params select 1;
-_lastVel = _params select 2;
-_type = _params select 3;
-_time = _params select 4;
-_doSpall = _params select 6;
-_spallTrack = _params select 7;
-_foundObjectHPIds = _params select 8;
-_skip = _params select 9;
-_explosive = _params select 10;
-_indirectRange = _params select 11;
-_force = _params select 12;
-_fragPower = _params select 13;
+private ["_round", "_lastPos", "_lastVel", "_type", "_time", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
+_round = _this select 0;
+_lastPos = _this select 1;
+_lastVel = _this select 2;
+_type = _this select 3;
+_time = _this select 4;
+_doSpall = _this select 6;
+_spallTrack = _this select 7;
+_foundObjectHPIds = _this select 8;
+_skip = _this select 9;
+_explosive = _this select 10;
+_indirectRange = _this select 11;
+_force = _this select 12;
+_fragPower = _this select 13;
+
+if(_round in GVAR(blackList)) exitWith { 
+    false
+};
 
 if (!alive _round) then {
-    if(_time != time && {!(_round in GVAR(blackList))}) then {
+    if(_time != time) then {
         if(_skip == 0) then {
             if((_explosive > 0.5 && {_indirectRange >= 4.5} && {_fragPower >= 35}) || {_force == 1} ) then {
-                [QGVAR(frag_eh), _params] call ace_common_fnc_serverEvent;
+                [QGVAR(frag_eh), _this] call ace_common_fnc_serverEvent;
             };
         };
     };
@@ -33,13 +36,14 @@ if (!alive _round) then {
         } forEach _spallTrack;
     };
 } else {
-    if(_round in GVAR(blackList)) exitWith { 
-        [_round] call FUNC(removePfhRound);
-    };
-    
+
     _params set[1, (getPosASL _round)];
     _params set[2, (velocity _round)];
     if(_doSpall) then {
-        [_round, 1, _spallTrack, _foundObjectHPIds] call FUNC(spallTrack);
+        private["_scale"];
+        _scale = ( (count GVAR(objects)) / GVAR(MaxTrackPerFrame) ) max 0.1;
+        [_round, _scale, _spallTrack, _foundObjectHPIds] call FUNC(spallTrack);
     };
 };
+
+true

@@ -9,8 +9,6 @@ class CfgAmmo {
     //    GVAR(skip) = 1;
     //};
     
-    #include "CfgAmmoReflections.hpp"
-    
     class Bo_GBU12_LGB;
     class ACE_GBU12 : Bo_GBU12_LGB {
         GVAR(enabled) = 1;
@@ -473,4 +471,6 @@ class CfgAmmo {
     class ACE_frag_spall_huge: ACE_frag_huge {
         timeToLive = 0.3;
     };
+    
+    #include "CfgAmmoReflections.hpp"
 };

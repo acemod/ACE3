@@ -163,11 +163,8 @@ if(_isArmed && (count _objects) > 0) then {
                             _fragObj setPosASL _lastPos;
                             _fragObj setVectorDir _vec;
                             _fragObj setVelocity _vel;
-                            #ifdef DEBUG_MODE_FULL
-                                GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
-                                GVAR(traceFrags) = true;
-                            #endif
                             if(GVAR(traceFrags)) then {
+                                GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
                                 [ACE_player, _fragObj, [1,0,0,1]] call FUNC(addTrack);
                             };
                             _fragCount = _fragCount + 1;
@@ -200,11 +197,9 @@ if(_isArmed && (count _objects) > 0) then {
             _fragObj setPosASL _lastPos;
             _fragObj setVectorDir _vec;
             _fragObj setVelocity _vel;
-            #ifdef DEBUG_MODE_FULL
-                GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
-                GVAR(traceFrags) = true;
-            #endif
+            
             if(GVAR(traceFrags)) then {
+                GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
                 [ACE_player, _fragObj, [1,0.5,0,1]] call FUNC(addTrack);
             };
             _fragCount = _fragCount + 1;

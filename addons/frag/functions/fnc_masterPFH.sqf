@@ -9,36 +9,48 @@
  * Return Value:
  * None
  */
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-PARAMS_2(_pfhArgs,_handle);
+//PARAMS_2(_pfhArgs,_handle);
 
 if (!GVAR(enabled)) exitWith {};
 
 private["_gcIndex"];
 _gcIndex = [];
-{
+
+_iter = 0;
+while { (count GVAR(objects)) > 0 &&  { _iter < GVAR(MaxTrackPerFrame) } } do {
     private["_object", "_args"];
-    _object = _x;
+    if(GVAR(lastIterationIndex) >= (count GVAR(objects))) then {
+        GVAR(lastIterationIndex) = 0;
+    };
+    _object = GVAR(objects) select GVAR(lastIterationIndex);
+    
     if(!isNil "_object") then {
         if(isNull _object) then {
-            _gcIndex pushBack _forEachIndex;
+            _gcIndex pushBack GVAR(lastIterationIndex);
         } else {
-            _args = GVAR(arguments) select _forEachIndex;
+            _args = GVAR(arguments) select GVAR(lastIterationIndex);
             
-            _args call FUNC(pfhRound);
-        };
-        
-        if(!alive _object) then {
-            _gcIndex pushBack _forEachIndex;
+            if(!(_args call FUNC(pfhRound))) then {
+                _gcIndex pushBack GVAR(lastIterationIndex);    // Add it to the GC if it returns false
+            };
+            // If its not alive anymore, remove it from the queue, it already ran once on dead
+            if(!alive _object) then {
+                _gcIndex pushBack GVAR(lastIterationIndex);
+            };
         };
     };
-} forEach GVAR(objects);
+    _iter = _iter + 1;
+    GVAR(lastIterationIndex) = GVAR(lastIterationIndex) + 1;
+};
 
 // clean up dead object references
 private["_deletionCount", "_deleteIndex"];
 _deletionCount = 0;
 {
-    _deleteIndex = _gcIndex - _deletionCount;
+    TRACE_1("GC Projectile", _x);
+    _deleteIndex = _x - _deletionCount;
     GVAR(objects) deleteAt _deleteIndex;
     GVAR(arguments) deleteAt _deleteIndex;
     

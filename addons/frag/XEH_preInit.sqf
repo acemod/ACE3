@@ -15,7 +15,7 @@ GVAR(TOTALFRAGS) = 0;
 GVAR(spallHPData) = [];
 GVAR(spallIsTrackingCount) = 0;
 
-GVAR(autoTrace) = true;
+GVAR(autoTrace) = false;
 GVAR(traceID) = -1;
 GVAR(traces) = [];
 GVAR(tracesStarted) = false;
@@ -43,6 +43,7 @@ PREP(doExplosions);
 PREP(doReflections);
 
 
+GVAR(lastIterationIndex) = 0;
 GVAR(objects) = [];
 GVAR(objectTypes) = [];
 GVAR(arguments) = [];

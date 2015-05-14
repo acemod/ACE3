@@ -1,7 +1,6 @@
 //CfgAmmoReflections.hpp
 
 #define ACE_EXPLOSION_REFLECTION(range, hit) class ace_explosion_reflection_##range##_##hit : ace_explosion_reflection_base { indirectHitRange = range; indirectHit = hit; dangerRadiusHit = range*3; suppressionRadiusHit = range*2; };
-class Sh_120mm_HE;
 class ace_explosion_reflection_base : Sh_120mm_HE {
     CraterWaterEffects = "";
     CraterEffects = "";
