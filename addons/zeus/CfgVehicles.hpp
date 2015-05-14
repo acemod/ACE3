@@ -3,6 +3,18 @@ class CfgVehicles {
     class ModuleEmpty_F;
     class ACE_Module;
 
+    class ModuleCurator_F: Module_F {
+        function = QUOTE(DFUNC(bi_moduleCurator));
+    };
+    class ModuleMine_F: ModuleEmpty_F {
+        function = QUOTE(DFUNC(bi_moduleMine));
+    };
+    class ModuleOrdnance_F: Module_F {
+        function = QUOTE(DFUNC(bi_moduleProjectile));
+    };
+    class ModuleRemoteControl_F: Module_F {
+        function = QUOTE(DFUNC(bi_moduleRemoteControl));
+    };
     class GVAR(moduleZeusSettings): ACE_Module {
         scope = 2;
         displayName = "$STR_ACE_Zeus_Module_DisplayName";
@@ -64,17 +76,20 @@ class CfgVehicles {
             sync[] = {};
         };
     };
-
-    class ModuleCurator_F: Module_F {
-        function = QUOTE(DFUNC(bi_moduleCurator));
-    };
-    class ModuleMine_F: ModuleEmpty_F {
-        function = QUOTE(DFUNC(bi_moduleMine));
-    };
-    class ModuleOrdnance_F: Module_F {
-        function = QUOTE(DFUNC(bi_moduleProjectile));
-    };
-    class ModuleRemoteControl_F: Module_F {
-        function = QUOTE(DFUNC(bi_moduleRemoteControl));
+    class GVAR(moduleKnockout): Module_F {
+        scopeCurator = 2;
+        displayName = "Knockout/Wakeup Unit";
+        //icon = QUOTE(PATHTOF(iconGoesHere));
+        category = "ACE_zeus";
+        function = QUOTE(DFUNC(moduleKnockout));
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        curatorCanAttach = 1;
+        author = "SilentSpike";
+        class ModuleDescription {
+            description = "Knocks out or wakes up the specified unit.";
+            sync[] = {};
+        };
     };
 };

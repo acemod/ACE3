@@ -2,7 +2,9 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {};
+        units[] = {
+        	QGVAR(moduleKnockout)
+        };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
