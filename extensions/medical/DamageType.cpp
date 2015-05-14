@@ -2,7 +2,7 @@
 
 using namespace ace::medical;
 
-injuries::DamageType::DamageType(std::string aTypeName, unsigned int minimalLethalDamage, unsigned int minDamage, unsigned int maxDamage) 
+injuries::DamageType::DamageType(std::string aTypeName, double minimalLethalDamage, double minDamage, double maxDamage) 
     : typeName(aTypeName), minLethalDamage(minimalLethalDamage), minDamageThreshold(minDamage), maxDamageThreshold(maxDamage)
 {
 }

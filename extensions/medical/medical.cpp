@@ -35,7 +35,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     else 
     {
         std::vector<std::string> arguments = parseExtensionInput(function);
-        if (arguments.size > 0) 
+        if (arguments.size() > 0) 
         {
             std::string command = arguments.at(0);
             // can we not just use C++11?

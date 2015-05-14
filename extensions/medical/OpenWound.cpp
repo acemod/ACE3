@@ -3,7 +3,7 @@
 
 using namespace ace::medical;
 
-injuries::OpenWound::OpenWound(unsigned int anID, unsigned int aBodyPart, unsigned int bloodloss) : classID(anID), bodyPart(aBodyPart), bloodlossRate(bloodloss)
+injuries::OpenWound::OpenWound(double anID, double aBodyPart, double bloodloss) : classID(anID), bodyPart(aBodyPart), bloodlossRate(bloodloss)
 {
 }
 

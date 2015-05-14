@@ -9,16 +9,16 @@ namespace ace {
             class InjuryType
             {
             public:
-                InjuryType(signed int anId, const std::string& aClassname, std::vector<std::string>& allowedSelections, signed int theBloodLoss, signed int thePain, signed int minimumDamage, signed int maximumDamage, std::vector<std::string>& possibleCauses, std::string& aDisplayname);
+				InjuryType(signed int anId, const std::string& aClassname, std::vector<std::string>& allowedSelections, double theBloodLoss, double thePain, double minimumDamage, double maximumDamage, std::vector<std::string>& possibleCauses, std::string& aDisplayname);
                 ~InjuryType();
 
                 signed int ID;
                 std::string className;
                 std::vector<std::string> selections;
-                signed int bloodLoss;
-                signed int pain;
-                signed int minDamage;
-                signed int maxDamage;
+                double bloodLoss;
+                double pain;
+                double minDamage;
+                double maxDamage;
                 std::vector<std::string> causes;
                 std::string displayName;
             };

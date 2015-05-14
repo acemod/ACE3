@@ -15,7 +15,7 @@ handleDamage::~handleDamage()
 {
 }
 
-/* static */ std::vector<injuries::OpenWound> handleDamage::HandleDamageWounds(const std::string& selectionName, signed int amountOfDamage, const std::string& typeOfDamage)
+/* static */ std::vector<injuries::OpenWound> handleDamage::HandleDamageWounds(const std::string& selectionName, double amountOfDamage, const std::string& typeOfDamage)
 {
     std::vector<injuries::OpenWound> wounds;
     int selectionN = SelectionToNumber(selectionName);
@@ -32,9 +32,9 @@ handleDamage::~handleDamage()
     if (input.size() == 4)
     {
         std::string typeName = input[0];
-        unsigned int minimalLethalDamage = std::stod(input[1]);
-        unsigned int minDamageThreshold = std::stod(input[2]);
-        unsigned int maxDamageThreshold = std::stod(input[3]);
+		double minimalLethalDamage = std::stod(input[1]);
+        double minDamageThreshold = std::stod(input[2]);
+		double maxDamageThreshold = std::stod(input[3]);
 
         std::shared_ptr<injuries::DamageType> type(new injuries::DamageType(typeName, minimalLethalDamage, minDamageThreshold, maxDamageThreshold));
         damageTypes.push_back(type);
@@ -50,11 +50,11 @@ handleDamage::~handleDamage()
         int ID = std::stod(input[0]);
         std::string className = input[1];
         std::vector<std::string> allowedSelections; // input[2];
-        unsigned int bloodLoss = std::stod(input[3]);
-        unsigned int pain = std::stod(input[4]);
+		double bloodLoss = std::stod(input[3]);
+		double pain = std::stod(input[4]);
 
-        unsigned int minDamage = std::stod(input[5]);
-        unsigned int maxDamage = std::stod(input[6]);
+		double minDamage = std::stod(input[5]);
+		double maxDamage = std::stod(input[6]);
         std::vector<std::string> possibleCauses; // input[7];
         std::string displayName = input[8];
 

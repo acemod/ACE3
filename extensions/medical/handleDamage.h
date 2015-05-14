@@ -21,7 +21,7 @@ namespace ace {
             /**
             *
             */
-            static std::vector<injuries::OpenWound> HandleDamageWounds(const std::string& selectionName, signed int amountOfDamage, const std::string& typeOfDamage);
+            static std::vector<injuries::OpenWound> HandleDamageWounds(const std::string& selectionName, double amountOfDamage, const std::string& typeOfDamage);
 
             /**
             *

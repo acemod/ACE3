@@ -11,13 +11,13 @@ namespace ace {
             class DamageType
             {
             public:
-                DamageType(std::string aTypeName, unsigned int minimalLethalDamage, unsigned int minDamageThreshold, unsigned int maxDamageThreshold);
+                DamageType(std::string aTypeName, double minimalLethalDamage, double minDamageThreshold, double maxDamageThreshold);
                 ~DamageType();
 
                 std::string typeName;
-                unsigned int minLethalDamage;
-                unsigned int minDamageThreshold;
-                unsigned int maxDamageThreshold;
+                double minLethalDamage;
+                double minDamageThreshold;
+                double maxDamageThreshold;
 
                 std::vector<std::shared_ptr<InjuryType>> possibleInjuries;
             };
