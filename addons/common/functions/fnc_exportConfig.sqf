@@ -9,7 +9,7 @@
 private "_fnc_logEntries";
 
 _fnc_logEntries = {
-    private ["_p", "_t", "_e"];
+    private ["_p", "_t", "_e", "_a", "_i"];
 
     PARAMS_2(_c,_d);
 

@@ -17,6 +17,8 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
++//IGNORE_PRIVATE_WARNING("_handleSyncedEvent");
+
 //SEH_s
 if(isServer) then {
     // Find the event name, and shovel out the events to the client
@@ -33,6 +35,7 @@ if(isServer) then {
     ["SEH_s", _client, [_eventName, _eventLog] ] call FUNC(targetEvent);
 } else {
     PARAMS_2(_eventName,_eventLog);
+    private ["_eventArgs"];
     // This is the client handling the response from the server
     // Start running the events
     {

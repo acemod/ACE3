@@ -4,14 +4,14 @@
  * If has only local effects.
  *
  * Arguments:
- * 0: _name (String)
- * 1: _typeName (String)
- * 2: _isClientSetable (Bool)
- * 3: _localizedName (String)
- * 4: _localizedDescription (String)
- * 5: _possibleValues (Array)
- * 6: _isForced (Bool)
- * 7: _defaultValue (Any)
+ * 0: name <STRING>
+ * 1: typeName <STRING>
+ * 2: isClientSetable <BOOL>
+ * 3: localizedName <STRING>
+ * 4: localizedDescription <STRING>
+ * 5: possibleValues <ARRAY>
+ * 6: isForced <BOOL>
+ * 7: defaultValue (Any)
  *
  * Return Value:
  * None
@@ -21,6 +21,8 @@
 #include "script_component.hpp"
 
 PARAMS_8(_name,_typeName,_isClientSetable,_localizedName,_localizedDescription,_possibleValues,_isForced,_value);
+
+private ["_settingData"];
 
 _settingData = [_name] call FUNC(getSettingData);
 

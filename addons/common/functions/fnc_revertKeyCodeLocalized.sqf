@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-private ["_key", "_alt", "_ctrl", "_shft"];
+private ["_key", "_alt", "_ctrl", "_shift"];
 
 PARAMS_1(_keyCode);
 

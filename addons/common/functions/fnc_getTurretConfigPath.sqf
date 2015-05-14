@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-private ["_index", "_offset", "_config2", "_foundClasses"];
+private ["_index", "_offset", "_config2", "_foundClasses", "_a"];
 
 PARAMS_2(_config,_turretIndex);
 

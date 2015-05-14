@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-private ["_config", "_hitpoints", "_selections"];
+private ["_config", "_hitpoints", "_selections", "_i"];
 
 PARAMS_1(_vehicle);
 

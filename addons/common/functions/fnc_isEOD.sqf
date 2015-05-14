@@ -16,7 +16,7 @@
     BOOLEAN
 
   Example:
-    _isSpecialist = [player] call FUNC(isEOD);
+    isSpecialist = [player] call FUNC(isEOD);
 */
 #include "script_component.hpp"
 

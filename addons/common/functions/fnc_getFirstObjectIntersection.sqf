@@ -9,7 +9,7 @@
  */
  #include "script_component.hpp"
 
-private ["_distance", "_lower", "_upper", "_mid", "_intersections", "_result"];
+private ["_distance", "_lower", "_upper", "_mid", "_intersections", "_result", "_dir"];
 
 PARAMS_3(_source,_destination,_accuracy);
 
