@@ -26,4 +26,4 @@ To use manual lasing, place the crosshair on the object to range and press and h
 
 ## Dependencies
 
-List of modules that must be present for this module to work.
+`ace_interaction`

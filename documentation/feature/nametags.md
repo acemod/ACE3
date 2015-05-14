@@ -19,4 +19,4 @@ instructions. May not apply to all modules.
 
 ## Dependencies
 
-List of modules that must be present for this module to work.
+`ace_interaction`
