@@ -17,12 +17,12 @@ GVAR(currentOptions) = [];
 private ["_player","_numInteractObjects","_numInteractions","_actionsVarName","_classActions","_target","_player","_action","_cameraPos","_cameraDir", "_lambda", "_nearestObjects", "_pos", "_virtualPoint", "_wavesAtOrigin", "_wavesAtVirtualPoint"];
 _player = ACE_player;
 
+_cameraPos = (positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL);
+_cameraDir = ((positionCameraToWorld [0, 0, 1]) call EFUNC(common,positionToASL)) vectorDiff _cameraPos;
+
 _fnc_renderNearbyActions = {
     // Render all nearby interaction menus
     #define MAXINTERACTOBJECTS 3
-
-    _cameraPos = (positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL);
-    _cameraDir = ((positionCameraToWorld [0, 0, 1]) call EFUNC(common,positionToASL)) vectorDiff _cameraPos;
 
     GVAR(foundActions) = [];
     GVAR(lastTimeSearchedActions) = diag_tickTime;
@@ -119,6 +119,8 @@ _fnc_renderSelfActions = {
 };
 
 
+GVAR(collectedActionPoints) resize 0;
+
 // Render nearby actions, unit self actions or vehicle self actions as appropiate
 if (GVAR(openedMenuType) == 0) then {
 
@@ -137,3 +139,31 @@ if (GVAR(openedMenuType) == 0) then {
 } else {
     ACE_player call _fnc_renderSelfActions;
 };
+
+if (count GVAR(collectedActionPoints) > 1) then {
+    // Do the oclusion pass
+
+    // Order action points according to z
+    // @todo: after 1.43 is released switch BIS_fnc_sortBy with sort
+    GVAR(collectedActionPoints) = [GVAR(collectedActionPoints),[],{_x select 0},"ASCEND"] call BIS_fnc_sortBy;
+    //GVAR(collectedActionPoints) sort true;
+
+    private ["_i","_j","_delta"];
+    for [{_i = count GVAR(collectedActionPoints) - 1}, {_i > 0}, {_i = _i - 1}] do {
+        for [{_j = _i - 1}, {_j >= 0}, {_j = _j - 1}] do {
+            // Check if action point _i is ocluded by _j
+            _delta = vectorNormalized ((GVAR(collectedActionPoints) select _i select 1) vectorDiff (GVAR(collectedActionPoints) select _j select 1));
+
+            // If _i is inside a cone with 20º half angle with origin on _j
+            if (_delta select 2 > 0.94) exitWith {
+                GVAR(collectedActionPoints) deleteAt _i;
+            };
+        };
+    };
+};
+
+// Render the non-ocluded points
+{
+    EXPLODE_3_PVT(_x,_z,_sPos,_activeActionTree);
+    [[], _activeActionTree, _sPos, [180,360]] call FUNC(renderMenu);
+} forEach GVAR(collectedActionPoints);
