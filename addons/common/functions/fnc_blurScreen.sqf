@@ -10,11 +10,11 @@
 
 #include "script_component.hpp"
 
-private ["_id", "_show"];
-_id = _this select 0;
+private ["_show"];
+PARAMS_1(_id);
 _show = if (count _this > 1) then {_this select 1} else {false};
 
-if (isnil QGVAR(SHOW_BLUR_SCREEN_COLLECTION)) then {
+if (isNil QGVAR(SHOW_BLUR_SCREEN_COLLECTION)) then {
     GVAR(SHOW_BLUR_SCREEN_COLLECTION) = [];
 };
 if (typeName _show == typeName 0) then {
