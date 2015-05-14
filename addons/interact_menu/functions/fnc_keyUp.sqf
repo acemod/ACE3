@@ -22,6 +22,9 @@ if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
     closeDialog 0;
 };
 
+//Hide background
+(uiNamespace getVariable ['RscACE_interact_menu_cursorMenu_background_Display', displayNull]) closeDisplay 0;
+
 if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
 

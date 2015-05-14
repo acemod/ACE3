@@ -217,5 +217,16 @@
             <Hungarian>Körvonal</Hungarian>
             <Italian>Contorno</Italian>
         </Key>
+        <Key ID="STR_ACE_Interact_showBackgroundSetting">
+            <English>Display background on interaction menu</English>
+            <Czech></Czech>
+            <German></German>
+            <French></French>
+            <Russian></Russian>
+            <Spanish></Spanish>
+            <Polish>Przyciemnij ekran w menu interakcji</Polish>
+            <Portuguese></Portuguese>
+            <Hungarian></Hungarian>
+        </Key>
     </Package>
 </Project>

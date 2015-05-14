@@ -39,6 +39,12 @@ GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
 
 if (GVAR(useCursorMenu)) then {
     createDialog QGVAR(cursorMenu);
+
+    //Show background
+    if(GVAR(showBackground)) then {
+        0 cutRsc["RscACE_interact_menu_cursorMenu_background", "PLAIN", 1, false];
+    };
+
     // The dialog sets:
     // uiNamespace getVariable QGVAR(dlgCursorMenu);
     // uiNamespace getVariable QGVAR(cursorMenuOpened);
