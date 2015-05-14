@@ -5,8 +5,7 @@
  *
  * Arguments:
  * 0: The module logic <LOGIC>
- * 1: units <ARRAY>
- * 2: activated <BOOL>
+ * 1: Zeus player <OBJECT>
  *
  * Return Value:
  * None <NIL>
@@ -17,6 +16,11 @@
 #include "script_component.hpp"
 
 if (isServer) then {
+    private ["_logic","_player","_birdType","_bird"];
+
+    _logic = _this select 0;
+    _player = _this select 1;
+
     // Extracted from moduleCurator to toggle ascension messages
     if (GVAR(zeusAscension)) then {
         //--- Sent notification to all assigned players

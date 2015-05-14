@@ -198,7 +198,7 @@ if (_activated) then {
         _addons call bis_fnc_activateaddons;
 
         // Added by ACE_zeus to delay ascension messages and bird code (so that settings can be changed)
-        [{_this spawn DFUNC(moduleCuratorDelay);},_this] call EFUNC(common,execNextFrame);
+        [{_this spawn DFUNC(moduleCuratorDelay);},[_logic,_player]] call EFUNC(common,execNextFrame);
     };
 
     //--- Player
