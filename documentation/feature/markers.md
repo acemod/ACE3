@@ -7,7 +7,7 @@ parent: wiki
 
 # Overview
 
-## Improved marker placement
+### Improved marker placement
 Expands the "Insert Marker" menu and allows to rotate map markers. Shows the currently selected channel to prevent misplacement.
 
 

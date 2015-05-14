@@ -7,7 +7,7 @@ parent: wiki
 
 # Overview
 
-## Ammo count
+### Ammo count
 Hides the actual round count of magazines and removes the icon when the current magazine is emptied. The player can instead check the magazine weight, but that gives only estimated values for magazines with more than 10 rounds.
 
 

@@ -7,7 +7,7 @@ parent: wiki
 
 # Overview
 
-## Real names
+### Real names
 Changes the names of vehicles, magazines, weapons, grenades, explosive charges 
 and mines to their respective real-world counterparts whenever possible.
 

@@ -7,7 +7,7 @@ parent: wiki
 
 # Overview
 
-## Adjusted Ragdolls
+### Adjusted Ragdolls
 Changes the ragdolls to react more to the force of shots and explosions.
 
 

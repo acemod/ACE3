@@ -7,18 +7,18 @@ parent: wiki
 
 # Overview
 
-## Weapon Jamming
+### Weapon Jamming
 Adds a propability to jam a weapon when firing. Jams can be cleared by 
 reloading or by using the clear jam-key.
 
-## Temperature simulation
+### Temperature simulation
 Introduces weapon temperature simulation depending on weapon and bullet
 mass. Hot weapons are more prone to jamming. Depending on weapon type 
 the accuracy and in extreme cases the muzzle velocity might be reduced 
 on high temperatues. Adds smoke puff and heat refraction effects to 
 indicate this.
 
-## Spare barrels
+### Spare barrels
 Adds the ability to changes barrels on machine guns to compensate for those 
 effects.
 

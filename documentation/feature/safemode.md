@@ -7,7 +7,7 @@ parent: wiki
 
 # Overview
 
-## Safety
+### Safety
 You can now use the safety mode of any weapon. Switching weapon modes takes the safety off.
 
 

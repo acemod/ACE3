@@ -7,15 +7,15 @@ parent: wiki
 
 # Overview
 
-## Altimeter
+### Altimeter
 Removes the altitude and descend speed UI elements when free-falling and 
 parachuting on higher difficulties and instead adds an altimeter watch type
 item.
 
-## Non-steerable parachute
+### Non-steerable parachute
 Adds a non-steerable parachute variant for jet pilots.
 
-## Landing animation
+### Landing animation
 Smoothens parachute landing animation.
 
 

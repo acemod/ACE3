@@ -7,7 +7,7 @@ parent: wiki
 
 # Overview
 
-## Silent avatar
+### Silent avatar
 Mutes the player's automatic callouts ("Enemy man, 100 meters, front!").
 Does not mute AI callouts.
 

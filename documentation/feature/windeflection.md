@@ -7,7 +7,7 @@ parent: wiki
 
 # Overview
 
-## Wind Deflection
+### Wind Deflection
 Adds ballistic influences of wind, air density and temperature
 
 

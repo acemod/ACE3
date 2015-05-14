@@ -7,7 +7,7 @@ parent: wiki
 
 # Overview
 
-## Repacking magazines
+### Repacking magazines
 Adds ability to repack magazines of the same type. An optional module provides 
 options to adjust the repacking time of single rounds and whole magazines to 
 the mission maker.

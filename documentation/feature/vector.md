@@ -7,7 +7,7 @@ parent: wiki
 
 # Overview
 
-## Vector IV Rangefinder
+### Vector IV Rangefinder
 Adds the Vector IV rangefinder, including all real-life usage modes (distance between two points, angle between two points etc.)
 
 

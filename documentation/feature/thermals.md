@@ -7,7 +7,7 @@ parent: wiki
 
 # Overview
 
-## Body Warmth
+### Body Warmth
 Adjusts the thermal properties of humans making them less like torches.
 
 

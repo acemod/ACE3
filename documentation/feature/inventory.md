@@ -7,7 +7,7 @@ parent: wiki
 
 # Overview
 
-## Resized inventory UI
+### Resized inventory UI
 Makes the inventory dialog bigger and increases the number of items that can be seen in the list at once.
 
 

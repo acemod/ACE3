@@ -7,13 +7,13 @@ parent: wiki
 
 # Overview
 
-## Respawn with same gear
+### Respawn with same gear
 Requires the Respawn Gear module to be placed. Respawned soldiers now have their loadout when killed.
 
-## Friendly Fire messages
+### Friendly Fire messages
 Shows friendly fire warnings in system chat if the module is placed. Works even in higher difficulties where kill messages are normally disabled.
 
-## Rallypoints
+### Rallypoints
 Adds rallypoints to all 3 sides to enable teleportation from base spawn to FOBs. Requires some setup from the mission maker.
 
 
