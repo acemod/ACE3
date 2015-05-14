@@ -42,9 +42,9 @@ if (GVAR(MinAvgMaxMode) == 1) then {
 
     // Wind SPD
     _windSpeed = call FUNC(measureWindSpeed);
-    GVAR(MIN) set [1, (GVAR(MIN) select 1) min abs(_windSpeed)];
-    GVAR(MAX) set [1, abs(_windSpeed) max (GVAR(MAX) select 1)];
-    GVAR(TOTAL) set [1, (GVAR(TOTAL) select 1) + abs(_windSpeed)];
+    GVAR(MIN) set [1, (GVAR(MIN) select 1) min _windSpeed];
+    GVAR(MAX) set [1, _windSpeed max (GVAR(MAX) select 1)];
+    GVAR(TOTAL) set [1, (GVAR(TOTAL) select 1) + _windSpeed];
 
     // CROSSWIND
     _crosswind = 0;
