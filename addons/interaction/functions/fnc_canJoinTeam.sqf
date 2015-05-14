@@ -10,7 +10,7 @@
  * Able to join a team <BOOL>
  *
  * Example:
- * _bool = [player, target] call ace_interaction_fnc_canJoinTeam
+ * [player, target] call ace_interaction_fnc_canJoinTeam
  *
  * Public: No
  */

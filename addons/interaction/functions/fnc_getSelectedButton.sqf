@@ -9,7 +9,7 @@
  * Angle <NUMBER>
  *
  * Example:
- * _number = call ace_interaction_fnc_getSelectedButton
+ * call ace_interaction_fnc_getSelectedButton
  *
  * Public: No
  */

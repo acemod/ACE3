@@ -12,7 +12,7 @@
  * 1: Locked variable <STRING>
  *
  * Example:
- * _array = [target, "door"] call ace_interaction_fnc_getDoorAnimations
+ * array = [target, "door"] call ace_interaction_fnc_getDoorAnimations
  *
  * Public: No
  */

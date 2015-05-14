@@ -9,7 +9,7 @@
  * Able to interact with civilian <BOOL>
  *
  * Example:
- * _bool = [target] call ace_interaction_fnc_canInteractWithCivilian
+ * [target] call ace_interaction_fnc_canInteractWithCivilian
  *
  * Public: No
  */

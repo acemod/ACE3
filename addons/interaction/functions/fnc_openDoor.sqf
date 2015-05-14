@@ -39,6 +39,7 @@ GVAR(isOpeningDoor) = true;
 playSound "ACE_Sound_Click";
 
 [_house, _animations] spawn {
+    private ["_house", "_animations", "_phase", "_position", "_time", "_usedMouseWheel"];
     _house = _this select 0;
     _animations = _this select 1;
 

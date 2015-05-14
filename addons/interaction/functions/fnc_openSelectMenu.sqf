@@ -24,6 +24,8 @@
  */
 #include "script_component.hpp"
 
+private["_action", "_count", "_customActions", "_i"];
+
 if (!(profileNamespace getVariable [QGVAR(FlowMenu), false])) then {
     GVAR(SelectAccept) = _this select 1;
     GVAR(SelectCancel) = _this select 2;
