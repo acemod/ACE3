@@ -1,7 +1,8 @@
 #include "OpenWound.h"
 #include <sstream>
 
-ace::medical::injuries::OpenWound::OpenWound(double anID, double aBodyPart, double bloodloss) : classID(anID), bodyPart(aBodyPart), bloodlossRate(bloodloss)
+ace::medical::injuries::OpenWound::OpenWound(int aClassID, int aBodyPartId, double aPercentage, double aBl, double painAmount) :
+	classID(aClassID), bodyPart(aBodyPartId), percentage(aPercentage), bloodlossRate(aBl), pain(painAmount)
 {
 }
 

@@ -28,6 +28,8 @@ namespace ace {
             */
             std::vector<ace::medical::injuries::OpenWound> HandleDamageWounds(const std::string& selectionName, double amountOfDamage, const std::string& typeOfDamage);
 
+			std::vector<ace::medical::injuries::OpenWound> GetInjuryInfoFor(const std::string& typeOfDamage, double amountOfDamage, int selection);
+
             /**
             *
             */

@@ -28,22 +28,82 @@ namespace ace {
 			int selectionN = SelectionToNumber(selectionName);
 			if (selectionN >= 0)
 			{
-			//	std::vector<std::shared_ptr<ace::medical::injuries::InjuryType>> injuryTypeInfo = GetInjuryInfoFor(typeOfDamage);
+				wounds = GetInjuryInfoFor(typeOfDamage, amountOfDamage, selectionN);
 			}
-
 			return wounds;
+		}
+
+		std::vector<ace::medical::injuries::OpenWound> handleDamage::GetInjuryInfoFor(const std::string& typeOfDamage, double amountOfDamage, int selection)
+		{
+			std::vector<ace::medical::injuries::OpenWound> injuriesToAdd;
+			std::vector<std::shared_ptr<ace::medical::injuries::InjuryType>> information;
+			std::shared_ptr<ace::medical::injuries::InjuryType> highestSpot;
+
+			for each (std::shared_ptr<ace::medical::injuries::DamageType> damageType in damageTypes)
+			{
+				if (damageType->typeName == typeOfDamage)
+				{
+					for each (std::shared_ptr<ace::medical::injuries::InjuryType> possibleInjury in damageType->possibleInjuries)
+					{
+						if (amountOfDamage >= possibleInjury->minDamage && (amountOfDamage <= possibleInjury->maxDamage || possibleInjury->maxDamage == 0))
+						{
+							if (highestSpot == NULL)
+								highestSpot = possibleInjury;
+
+							if (possibleInjury->minDamage > highestSpot->minDamage)
+								highestSpot = possibleInjury;
+
+							information.push_back(possibleInjury);
+						}
+					}
+
+					int c = 0;
+					for each (double threshold in damageType->minDamageThreshold)
+					{
+						if (threshold >= amountOfDamage)
+						{
+							double amountOfInjuriesOnDamage = damageType->amountOfInjuresOnDamage.at(c);
+							for (double injuryAmount = 0; injuryAmount < amountOfInjuriesOnDamage; ++injuryAmount)
+							{
+								std::shared_ptr<ace::medical::injuries::InjuryType> injuryToAdd;
+								if (rand() % 1 >= 0.85)
+								{
+									injuryToAdd = highestSpot;
+								}
+								else 
+								{ 
+									injuryToAdd = information.at(0); 
+								}
+
+								int bodyPartID = selection;
+								if (!damageType->selectionSpecific)
+								{
+									bodyPartID = rand() % 6;
+								}
+								
+								injuries::OpenWound newWound(injuryToAdd->ID, bodyPartID, 1, injuryToAdd->bloodLoss, injuryToAdd->pain);
+								injuriesToAdd.push_back(newWound);
+							}
+						}
+						++c;
+					}
+					return injuriesToAdd;
+				}
+			}
+			return injuriesToAdd;
 		}
 
 		/* static */ void handleDamage::AddDamageType(const std::vector<std::string>& input)
 		{
-			if (input.size() == 4)
+			if (input.size() == 5)
 			{
 				std::string typeName = input[0];
 				double minimalLethalDamage = std::stod(input[1]);
-				double minDamageThreshold = std::stod(input[2]);
-				double maxDamageThreshold = std::stod(input[3]);
+				std::vector<double> minDamageThreshold;// = std::stod(input[2]);
+				std::vector<double> amountOfInjuresOnDamage; //= std::stod(input[3]);
+				bool selectionSpecific = std::stod(input[4]) > 0;
 
-				std::shared_ptr<ace::medical::injuries::DamageType> type(new ace::medical::injuries::DamageType(typeName, minimalLethalDamage, minDamageThreshold, maxDamageThreshold));
+				std::shared_ptr<ace::medical::injuries::DamageType> type(new ace::medical::injuries::DamageType(typeName, minimalLethalDamage, minDamageThreshold, amountOfInjuresOnDamage, selectionSpecific));
 				damageTypes.push_back(type);
 			}
 		}
