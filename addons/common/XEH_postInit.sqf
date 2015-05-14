@@ -253,6 +253,8 @@ GVAR(commonPostInited) = true;
     // If settings are not initialized then wait
     if !(GVAR(SettingsInitialized)) exitWith {};
 
+    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+
     diag_log text format["[ACE] Settings initialized"];
     ["SettingsInitialized", []] call FUNC(localEvent);
 
