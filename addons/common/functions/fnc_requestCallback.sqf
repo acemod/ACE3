@@ -10,9 +10,8 @@
 
 #include "script_component.hpp"
 
-private ["_info", "_accepted", "_caller", "_target", "_requestID", "_requestMessage", "_callBack"];
-_info = _this select 0;
-_accepted = _this select 1;
+private ["_caller", "_target", "_requestID", "_requestMessage", "_callBack"];
+PARAMS_2(_info,_accepted);
 
 _caller = _info select 0;
 _target = _info select 1;

@@ -10,8 +10,9 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_oldUnit","_sets"];
-_unit = _this select 0;
+private ["_oldUnit","_sets"];
+
+PARAMS_1(_unit);
 
 _unit setvariable ["ACE_isDead",nil,true];
 _unit setvariable ["ACE_isUnconscious", nil, true];
@@ -35,6 +36,6 @@ if (isPlayer _unit) then {
     if (!(_x select 4)) then {
         _unit setvariable [(_x select 0),nil,_x select 3];
     };
-}foreach ([_unit] call FUNC(getAllDefinedSetVariables));
+} forEach ([_unit] call FUNC(getAllDefinedSetVariables));
 
 _unit setVariable ["ACE_forceWalkStatusNumber", 0, true];
