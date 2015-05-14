@@ -36,7 +36,7 @@ You can surrender. While surrendering AI will cease fire.
 ### Loading and unloading a captive in a vehicle
 - Escort the captive.
 - Approach the vehicle you desire to load the captive in.
-- Interact with the vehicle and load him.
+- Interact with the vehicle and load the captive.
 - To unload, interact with the vehicle.
 
 
