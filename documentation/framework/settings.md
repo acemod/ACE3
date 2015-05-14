@@ -16,7 +16,7 @@ Part of this settings framework are global settings and client settings. Both us
 Settings are entries in the config that get translated to `missionnamespace` global variables. An example settings entry looks like this:
 
 ```
-    class GVAR(sampleSetting) {
+    class ACE_module_sampleSetting {
         // Value
        value = 1;
     
