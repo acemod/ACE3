@@ -32,3 +32,14 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 
 #include "CfgPreloadTextures.hpp"
+
+class ACE_Settings {
+    class GVAR(prefferedOpticType) {
+        value = 0;
+        typeName = "SCALAR";
+        isClientSettable = 1;
+        displayName = "Prefered Optic Type";
+        description = "For those optics that support switching";
+        values[] = {"Don't change", "3d (vanilla)", "2d", "PIP"};
+    };
+};
