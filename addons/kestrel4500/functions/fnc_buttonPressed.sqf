@@ -51,3 +51,4 @@ switch (_this) do {
 };
 
 [] call FUNC(updateDisplay);
+[] call FUNC(storeUserData);
