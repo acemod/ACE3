@@ -16,10 +16,10 @@ namespace ace {
         class handleDamage
         {
         public:
-			/**
-			*
-			*/
-			static handleDamage& GetInstance();
+            /**
+            *
+            */
+            static handleDamage& GetInstance();
 
             ~handleDamage();
 
@@ -28,7 +28,7 @@ namespace ace {
             */
             std::vector<ace::medical::injuries::OpenWound> HandleDamageWounds(const std::string& selectionName, double amountOfDamage, const std::string& typeOfDamage);
 
-			std::vector<ace::medical::injuries::OpenWound> GetInjuryInfoFor(const std::string& typeOfDamage, double amountOfDamage, int selection);
+            std::vector<ace::medical::injuries::OpenWound> GetInjuryInfoFor(const std::string& typeOfDamage, double amountOfDamage, int selection);
 
             /**
             *
@@ -63,9 +63,9 @@ namespace ace {
 
         private:
             handleDamage();
-			
-			handleDamage(handleDamage const&) = delete;
-			void operator=(handleDamage const&) = delete;
+            
+            handleDamage(handleDamage const&) = delete;
+            void operator=(handleDamage const&) = delete;
 
             std::vector<std::shared_ptr<ace::medical::injuries::DamageType>> damageTypes;
             std::vector<std::shared_ptr<ace::medical::injuries::InjuryType>> injuryTypes;

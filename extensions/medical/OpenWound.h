@@ -14,10 +14,10 @@ namespace ace {
                 std::string AsString();
 
                 int classID;
-				int percentage;
+                int percentage;
                 double bodyPart;
                 double bloodlossRate;
-				double pain;
+                double pain;
             };
 
         }

@@ -17,9 +17,9 @@ namespace ace {
                 std::string typeName;
                 double minLethalDamage;
                 std::vector<double> minDamageThreshold;
-				std::vector<double> amountOfInjuresOnDamage;
+                std::vector<double> amountOfInjuresOnDamage;
 
-				bool selectionSpecific;
+                bool selectionSpecific;
 
                 std::vector<std::shared_ptr<InjuryType>> possibleInjuries;
             };

@@ -2,7 +2,7 @@
 #include <sstream>
 
 ace::medical::injuries::OpenWound::OpenWound(int aClassID, int aBodyPartId, double aPercentage, double aBl, double painAmount) :
-	classID(aClassID), bodyPart(aBodyPartId), percentage(aPercentage), bloodlossRate(aBl), pain(painAmount)
+    classID(aClassID), bodyPart(aBodyPartId), percentage(aPercentage), bloodlossRate(aBl), pain(painAmount)
 {
 }
 
