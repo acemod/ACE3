@@ -15,7 +15,7 @@ parent: wiki
         <div class="large-8 medium-8 columns">
             <nav>
                 <ul>
-                    {% assign pages_list = site.pages | sort: "order" %}
+                    {% assign pages_list = site.pages | sort: "title" %}
                     {% assign group = 'feature' %}
                     {% include pages_list %}
                 </ul>
