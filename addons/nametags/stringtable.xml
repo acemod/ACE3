@@ -190,7 +190,7 @@
             <Polish>Zawsze pokazuj wszystkie</Polish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames_Desc">
-            <English></English>
+            <English>Show player names and its activation. Default: Enabled</English>
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania imion nad głowami graczy. Opcja "Tylko po wciśnięciu klawisza" wyświetla imiona tylko przytrzymania klawisza "Modyfikator" dostępnego w menu ustawień addonów -> ACE3.</Polish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves_Desc">

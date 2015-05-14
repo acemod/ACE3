@@ -44,12 +44,12 @@ class ACE_Settings {
         description = "$STR_ACE_NameTags_ShowSoundWaves_Desc";
         values[] = {"$STR_ACE_Common_Disabled", "$STR_ACE_Common_NameTagSettings", "$STR_ACE_Common_AlwaysShowAll"};
     };
-    class GVAR(PlayerNamesViewDistance) {
+    class GVAR(playerNamesViewDistance) {
         value = 5;
         typeName = "SCALAR";
         isClientSettable = 0;
     };
-    class GVAR(PlayerNamesMaxAlpha) {
+    class GVAR(playerNamesMaxAlpha) {
         value = 0.8;
         typeName = "SCALAR";
         isClientSettable = 0;

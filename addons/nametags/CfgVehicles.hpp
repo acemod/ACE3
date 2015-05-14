@@ -41,7 +41,7 @@ class CfgVehicles {
                     };
                 };
             };
-            class PlayerNamesViewDistance {
+            class playerNamesViewDistance {
                 displayName = "$STR_ACE_NameTags_PlayerNamesViewDistance_DisplayName";
                 description = "$STR_ACE_NameTags_PlayerNamesViewDistance_Description";
                 typeName = "NUMBER";
