@@ -5,14 +5,16 @@ group: feature
 parent: wiki
 ---
 # Overview
-## Sub-feature 1
-Short description of sub-feature 1.
-## Sub-feature 2
-Short description of sub-feature 2.
+## Advanced ballistics simulation
+Advanced ballistics changes above and beyond the ballistics module. Bullet characteristics, barrel length, air temperature, barometric pressure, ammo temperature and air drag are all used to dynamically calculate ballistics.
+
+## Protractor
+Adds a protractor for quick reference when sniping.
 
 # Usage
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+Press `Ctrl+Shift+K` to display the protractor.
+
+This module uses relatively complex scripting. Several options are provided in the ACE menu to reduce the performance impact of this module.
 
 # Dependencies
-List of modules that must be present for this module to work.
+`ace_ballistics`, `ace_weather`, `ace_modules`
