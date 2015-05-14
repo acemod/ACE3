@@ -14,7 +14,10 @@ if (isNil QGVAR(allCreatedLitter)) then {
 
 _litterObject = _litterClass createVehicleLocal _position;
 _litterObject setDir _direction;
-
+_litterObject setPosATL _position;
+// Move the litter next frame to get rid of HORRIBLE spacing, fixes #1112
+[{ (_this select 0) setPosATL (_this select 1); }, [_litterObject, _position], 0, 0] call EFUNC(common,waitAndExecute);
+    
 _maxLitterCount = getArray (configFile >> "ACE_Settings" >> QGVAR(litterSimulationDetail) >> "_values") select GVAR(litterSimulationDetail); 
 if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {
     // gank the first litter object, and spawn ours.
