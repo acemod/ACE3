@@ -79,6 +79,13 @@ namespace ace {
                 const XMVECTORF32 yaxis = { 0.f, 0.f, 20.f };
                 DrawGrid(*_Batch, xaxis, yaxis, g_XMZero, 20, 20, Colors::Gray);
 
+                // Draw the red line for nou
+                _Batch->Begin();
+                const XMVECTORF32 v1 = { 0.f, 100.f, 0.f };
+                const XMVECTORF32 v2 = { 0.f, -100.f, 0.f };
+                _Batch->DrawLine(VertexPositionColor(v1, Colors::Red), VertexPositionColor(v2, Colors::Red));
+                _Batch->End();
+
                 if (_active_vehicle) {
                     DrawObject(_active_vehicle->fire_lod, *_Batch, *_active_vehicle->object, Colors::Gray);
                 }

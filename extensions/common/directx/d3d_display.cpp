@@ -33,7 +33,7 @@ namespace ace {
             return result;
         }
 
-        d3d_display::d3d_display() : _fullscreen(false) {}
+        d3d_display::d3d_display() : _fullscreen(false), _leftMouseButton(false) {}
         d3d_display::~d3d_display() {}
 
         bool d3d_display::render_thread(uint32_t w, uint32_t h, bool f) {
@@ -390,12 +390,18 @@ namespace ace {
                             break;
                         }
                     }
-                }
-                else if (raw->header.dwType == RIM_TYPEMOUSE) {
+                } else if (raw->header.dwType == RIM_TYPEMOUSE) {
                     RAWMOUSE mouseCurrState = raw->data.mouse;
 
-                    if ((mouseCurrState.lLastX != _last_mouse_state.lLastY) || (mouseCurrState.lLastX != _last_mouse_state.lLastY))
-                    {
+
+                    if (raw->data.mouse.ulButtons & RI_MOUSE_LEFT_BUTTON_DOWN) {
+                        _leftMouseButton = true;
+                    }
+                    if(raw->data.mouse.ulButtons & RI_MOUSE_LEFT_BUTTON_UP) {
+                        _leftMouseButton = false;
+                    }
+                    
+                    if (((mouseCurrState.lLastX != _last_mouse_state.lLastY) || (mouseCurrState.lLastX != _last_mouse_state.lLastY)) && _leftMouseButton) {
                         _camera.camYaw += mouseCurrState.lLastX * 0.005f;
                         _camera.camPitch += mouseCurrState.lLastY * 0.005f;
                         _last_mouse_state = mouseCurrState;

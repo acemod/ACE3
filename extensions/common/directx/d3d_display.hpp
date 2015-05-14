@@ -109,6 +109,7 @@ namespace ace {
             DirectX::XMFLOAT4X4                 _View;
             DirectX::XMFLOAT4X4                 _Projection;
 
+            bool                                _leftMouseButton;
             RAWMOUSE                            _last_mouse_state;
             camera_movement                     _camera;
 
