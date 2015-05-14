@@ -41,7 +41,12 @@ namespace ace {
             if (in.eof()) {
                 in.clear();
             }
-            _data = std::unique_ptr<uint8_t[]>(new uint8_t[expected_size + (expected_size % 8)]);
+#if _MSC_VER == 1800
+            _data = std::make_shared<uint8_t[]>(expected_size + (expected_size % 8));
+#else
+            _data = std::make_unique<uint8_t[]>(expected_size + (expected_size % 8));
+#endif
+
             result = _mikero_lzo1x_decompress_safe(buffer, _data.get(), expected_size);
             if (result < 0) {
                 LOG(ERROR) << "Decompression failed";
