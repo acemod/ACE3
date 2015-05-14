@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-private ["_name","_value"];
+private ["_name","_value", "_force", "_settingData","_failed"];
 _name = _this select 0;
 _value = _this select 1;
 

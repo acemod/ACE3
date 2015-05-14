@@ -56,6 +56,7 @@ set(GLOBAL_SOURCES ${GLOBAL_RC})
 # Add extensions to build here
 add_subdirectory(fcs)
 add_subdirectory(break_line)
+add_subdirectory(clipboard)
 add_subdirectory(advanced_ballistics)
 
 message("Build Type: ${CMAKE_BUILD_TYPE}")

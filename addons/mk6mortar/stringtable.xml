@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="mk6mortar">
         <Key ID="STR_ACE_MK6MORTAR_rangetable_name">
@@ -9,6 +9,9 @@
             <Russian>82 мм Таблица дальностей и прицелов</Russian>
             <Spanish>Tabla de distancias de 82mm</Spanish>
             <Hungarian>82mm hatótáv-tábla</Hungarian>
+            <Portuguese>Tabela de distâncias de para 82mm</Portuguese>
+            <Czech>82mm Rangetable</Czech>
+            <Italian>Tavola di tiro 82mm</Italian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
             <English>Range Table for the MK6 82mm Mortar</English>
@@ -18,6 +21,9 @@
             <Russian>Таблица дальностей и прицелов для MK6 82 мм мортиры</Russian>
             <Spanish>Tabla de distancias para el mortero MK6 de 82mm</Spanish>
             <Hungarian>Hatótáv-tábla a MK6 82mm-es mozsárhoz</Hungarian>
+            <Portuguese>Tabela de distâncias para morteiro MK6 82mm</Portuguese>
+            <Czech>Rangetable pro MK6 82mm minomet</Czech>
+            <Italian>Tavola di tiro per il mortaio calibro 82mm MK6</Italian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
             <English>Open 82mm Rangetable</English>
@@ -27,6 +33,9 @@
             <Russian>Открыть 82 мм Таблицу дальностей и прицелов</Russian>
             <Spanish>Abrir tabla de distancias de 82mm</Spanish>
             <Hungarian>82mm hatótáv-tábla megnyitása</Hungarian>
+            <Portuguese>Abrir tabela de distâncias para 82mm</Portuguese>
+            <Czech>Otevřít 82mm Rangetable</Czech>
+            <Italian>Apri la tavola di tiro 82mm</Italian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
             <English>Charge</English>
@@ -36,6 +45,9 @@
             <Russian>Зарядить</Russian>
             <Spanish>Carga</Spanish>
             <Hungarian>Töltés</Hungarian>
+            <Portuguese>Carregar</Portuguese>
+            <Czech>Nabít</Czech>
+            <Italian>Carica</Italian>
         </Key>
     </Package>
 </Project>

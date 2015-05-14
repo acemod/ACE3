@@ -25,11 +25,11 @@ _checkAll = _this select 1;
 _whitelist = _this select 2;
 
 if (isNil "_checkAll") then {
-  _checkAll = false;
+    _checkAll = false;
 };
 
 if (isNil "_whitelist") then {
-  _whitelist = "[]";
+    _whitelist = "[]";
 };
 
 _logic = "Logic" createVehicleLocal [0,0,0];

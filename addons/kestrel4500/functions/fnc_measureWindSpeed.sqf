@@ -19,12 +19,13 @@ private ["_playerDir", "_windSpeed", "_windDir"];
 _playerDir = getDir ACE_player;
 _windSpeed = vectorMagnitude ACE_wind;
 _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
-
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-    _windSpeed = (eyePos ACE_player) call EFUNC(advanced_ballistics,calculateWindSpeed);
+    // With wind gradient
+    _windSpeed = [eyePos ACE_player, true, true, true] call EFUNC(weather,calculateWindSpeed);
     _windSpeed = abs(cos(_playerDir - _windDir)) * _windSpeed;
 } else {
-    _windSpeed = (eyePos ACE_player) call FUNC(calculateWindSpeed);
+    // Without wind gradient
+    _windSpeed = [eyePos ACE_player, false, true, true] call EFUNC(weather,calculateWindSpeed);
 };
 
 if (_windSpeed > 0.3 || {GVAR(MeasuredWindSpeed) > 0.1 && _windSpeed > 0.125}) then {

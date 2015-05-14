@@ -87,6 +87,22 @@ class RscMapControl {
     sizeExGrid = 0.032;
 };
 
+class RscMap;
+class RscDisplayArcadeMap_Layout_2: RscMap { //"Traditional" Editor:
+    class controlsBackground {
+        class CA_Map: RscMapControl {
+            #include "MapTweaks.hpp"
+        };
+    };
+};
+class RscDisplayArcadeMap_Layout_6: RscMap { //"Streamlined" Editor:
+    class controlsBackground {
+        class CA_Map: RscMapControl {
+            #include "MapTweaks.hpp"
+        };
+    };
+};
+
 // REGULAR MAP
 class RscDisplayMainMap {
     // Tweak map styling
@@ -154,7 +170,7 @@ class RscDisplayGetReady: RscDisplayMainMap {
     class controlsBackground {
         class CA_Map: RscMapControl {
             onDraw = QUOTE([ctrlParent (_this select 0)] call DFUNC(onDrawMap));
-            //#include "MapTweaks.hpp" @todo Shouldn't this apply to briefing too?
+            #include "MapTweaks.hpp"
         };
     };
     // get rid of the "center to player position" - button (as it works even on elite)

@@ -8,7 +8,7 @@
             <Polish>Przyczep przedmiot &gt;&gt;</Polish>
             <French>Attacher l'objet &gt;&gt;</French>
             <Czech>Připnout předmět &gt;&gt;</Czech>
-            <Portuguese>Acoplar item &gt;&gt;</Portuguese>
+            <Portuguese>Fixar item &gt;&gt;</Portuguese>
             <Italian>Attacca l'oggetto &gt;&gt;</Italian>
             <Hungarian>Tárgy hozzácsatolása &gt;&gt;</Hungarian>
             <Russian>Прикрепить предмет</Russian>
@@ -20,7 +20,7 @@
             <Polish>Przyczep</Polish>
             <French>Attacher</French>
             <Czech>Připnout</Czech>
-            <Portuguese>Acoplar</Portuguese>
+            <Portuguese>Fixar</Portuguese>
             <Italian>Attacca</Italian>
             <Hungarian>Hozzácsatolás</Hungarian>
             <Russian>Прикрепить</Russian>
@@ -44,7 +44,7 @@
             <Polish>Przyczepiono stroboskop IR</Polish>
             <French>Balise IR attachée</French>
             <Czech>IR Značkovač připnutý</Czech>
-            <Portuguese>Marcador IV Acoplado</Portuguese>
+            <Portuguese>Marcador IV Fixado</Portuguese>
             <Italian>Strobo IR attaccata</Italian>
             <Hungarian>Infravörös jeladó hozzácsatolva</Hungarian>
             <Russian>ИК-маяк прикреплён</Russian>
@@ -68,7 +68,7 @@
             <Polish>Przyczepiono granat IR</Polish>
             <French>Grenade IR attachée</French>
             <Czech>IR Granát připnutý</Czech>
-            <Portuguese>Granada IV Acoplada</Portuguese>
+            <Portuguese>Granada IV Fixada</Portuguese>
             <Italian>Granata IR attaccata</Italian>
             <Hungarian>Infravörös gránát hozzácsatolva</Hungarian>
             <Russian>ИК-граната прикреплена</Russian>
@@ -92,7 +92,7 @@
             <Polish>Przyczepiono światło chemiczne</Polish>
             <French>Chemlight attachée</French>
             <Czech>Chemické světlo připnuto</Czech>
-            <Portuguese>Chemlight Acoplada</Portuguese>
+            <Portuguese>Chemlight Fixada</Portuguese>
             <Italian>Chemlight attaccata</Italian>
             <Hungarian>Chemlight hozzácsatolva</Hungarian>
             <Russian>Химсвет прикреплён</Russian>
@@ -176,10 +176,10 @@
             <Russian>Не удалось присоединить</Russian>
             <Spanish>Error al acoplar</Spanish>
             <Czech>Připnutí selhalo</Czech>
-            <Portuguese>Erro ao anexar</Portuguese>
+            <Portuguese>Erro ao fixar</Portuguese>
             <Polish>Przyczepianie nie powiodło się</Polish>
             <Hungarian>Hozzácsatolás sikertelen</Hungarian>
-            <Italian>Impossibile Attaccare</Italian>
+            <Italian>Non si attacca</Italian>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Attached">
             <English>%1&lt;br/&gt;Attached</English>
@@ -188,7 +188,7 @@
             <Polish>%1&lt;br/&gt;przyczepiono</Polish>
             <French>%1&lt;br/&gt;attachée</French>
             <Czech>%1&lt;br/&gt;Připnutý</Czech>
-            <Portuguese>%1&lt;br/&gt;Acoplada</Portuguese>
+            <Portuguese>%1&lt;br/&gt;Fixada</Portuguese>
             <Italian>%1&lt;br/&gt;attaccata</Italian>
             <Hungarian>%1&lt;br/&gt;hozzácsatolva</Hungarian>
             <Russian>%1&lt;br/&gt;присоединен(-а)</Russian>
