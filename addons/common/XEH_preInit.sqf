@@ -21,6 +21,7 @@ PREP(canInteract);
 PREP(canInteractWith);
 PREP(canUseWeapon);
 PREP(changeProjectileDirection);
+PREP(checkFiles);
 PREP(checkPBOs);
 PREP(claim);
 PREP(closeDialogIfTargetMoves);
@@ -182,6 +183,7 @@ PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
+PREP(waveHeightAt);
 
 PREP(translateToWeaponSpace);
 PREP(translateToModelSpace);
@@ -310,6 +312,16 @@ if (hasInterface) then {
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
+
+// Time handling
+ACE_time = diag_tickTime;
+ACE_realTime = diag_tickTime;
+ACE_virtualTime = diag_tickTime;
+ACE_diagTime = diag_tickTime;
+ACE_gameTime = time;
+
+PREP(timePFH);
+[FUNC(timePFH), 0, []] call cba_fnc_addPerFrameHandler;
 
 // Init toHex
 [0] call FUNC(toHex);

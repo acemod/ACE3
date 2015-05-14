@@ -35,6 +35,7 @@
             <French>Téléportation à la base</French>
             <Portuguese>Teletransportar para a Base</Portuguese>
             <Hungarian>Bázisra teleportálás</Hungarian>
+            <Italian>Teleporta alla base</Italian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
             <English>Teleport to Rallypoint</English>
@@ -46,13 +47,14 @@
             <French>Téléporation au point de ralliement</French>
             <Portuguese>Teletransportar para o ponto de encontro</Portuguese>
             <Hungarian>Gyülekezőpontra teleportálás</Hungarian>
+            <Italian>Teleporta al rallypoint</Italian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToBase">
             <English>Teleported to Base</English>
             <French>Téléporté à la base</French>
             <German>Zur Basis teleportiert</German>
             <Spanish>Teletransportado a base</Spanish>
-            <Russian>Телепорт на базу</Russian>
+            <Russian>Вы были телепортированы на базу</Russian>
             <Polish>Przeteleportowano do bazy</Polish>
             <Czech>Teleportován na základnu</Czech>
             <Hungarian>Bázisra teleportálva</Hungarian>
@@ -64,7 +66,7 @@
             <French>Téléporté au point de déploiement</French>
             <German>Zum Sammelpunkt teleportiert</German>
             <Spanish>Teletransportado al punto de reunión</Spanish>
-            <Russian>Телепорт на точку сбора</Russian>
+            <Russian>Вы были телепортированы на точку сбора</Russian>
             <Polish>Przeteleportowano do punktu zbiórki</Polish>
             <Czech>Teleportován na rallypoint</Czech>
             <Hungarian>Gyülekezőpontra teleportálva</Hungarian>
@@ -142,6 +144,54 @@
             <Hungarian>Gyülekezőpont, Független</Hungarian>
             <Czech>Rallypoint Nezávislý</Czech>
             <Portuguese>Ponto de encontro Independente</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Respawn_Module_DisplayName">
+            <English>Respawn System</English>
+            <Polish>System odrodzenia</Polish>
+        </Key>
+        <Key ID="STR_ACE_Respawn_SavePreDeathGear_DisplayName">
+            <English>Save Gear?</English>
+            <Polish>Zapisać ekwipunek?</Polish>
+        </Key>
+        <Key ID="STR_ACE_Respawn_SavePreDeathGear_Description">
+            <English>Respawn with the gear a soldier had just before his death?</English>
+            <Polish>Odradzaj z ekwipunkiem jaki żołnierz miał tuż przed swoją śmiercią?</Polish>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName">
+            <English>Remove bodies?</English>
+            <Polish>Usuwać ciała?</Polish>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description">
+            <English>Remove player bodies after disconnect?</English>
+            <Polish>Usuwaj ciała graczy po rozłączeniu z serwera?</Polish>
+        </Key>
+        <Key ID="STR_ACE_Respawn_Module_Description">
+            <English></English>
+            <Polish>Moduł ten pozwala dostosować ustawienia odrodzenia (respawnu).</Polish>
+        </Key>
+        <Key ID="STR_ACE_FriendlyFire_Module_DisplayName">
+            <English>Friendly Fire Messages</English>
+            <Polish>Wiadomości Friendly Fire</Polish>
+        </Key>
+        <Key ID="STR_ACE_FriendlyFire_Module_Description">
+            <English></English>
+            <Polish>Użycie tego modułu na misji spowoduje wyświetlenie wiadomości na czacie w przypadku, kiedy zostanie popełniony friendly fire - wyświetlona zostanie wtedy wiadomość kto kogo zabił.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Rallypoint_Module_DisplayName">
+            <English>Rallypoint System</English>
+            <Polish>System punktu zbiórki</Polish>
+        </Key>
+        <Key ID="STR_ACE_Rallypoint_Module_Description">
+            <English></English>
+            <Polish>Moduł ten pozwala zastosować na misji "punkt zbiórki", do którego można szybko przeteleportować się z "bazy". Wymaga postawienia odpowiednich obiektów na mapie - bazy oraz flagi. Obydwa dostępne są w kategorii Puste -> ACE Odrodzenie.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Rallypoint_MoveRallypoint">
+            <English>Move Rallypoint</English>
+            <Polish>Przenieś punkt zbiórki</Polish>
+        </Key>
+        <Key ID="STR_ACE_Respawn_EditorCategory">
+            <English>ACE Respawn</English>
+            <Polish>ACE Odrodzenie</Polish>
         </Key>
     </Package>
 </Project>

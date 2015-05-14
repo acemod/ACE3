@@ -79,7 +79,7 @@ _holderMagazinesStart = magazinesAmmoCargo _holder;
 
 {
     EXPLODE_2_PVT(_x,_xClassname,_xAmmo);
-    if ((_xClassname in _listOfItemsToRemove) && {!(_xClassname in UNIQUE_MAGAZINES)}) then {
+    if ((_xClassname in _listOfItemsToRemove) && {(getNumber (configFile >> "CfgMagazines" >> _xClassname >> "ACE_isUnique")) == 0}) then {
         _holder addMagazineAmmoCargo [_xClassname, 1, _xAmmo];
         _target removeMagazine _xClassname;
     };
@@ -89,7 +89,7 @@ _targetMagazinesEnd = magazinesAmmo _target;
 _holderMagazinesEnd = magazinesAmmoCargo _holder;
 
 //Verify Mags dropped from unit:
-if ( ({((_x select 0) in _listOfItemsToRemove) && {!((_x select 0) in UNIQUE_MAGAZINES)}} count _targetMagazinesEnd) != 0) exitWith {
+if (({((_x select 0) in _listOfItemsToRemove) && {(getNumber (configFile >> "CfgMagazines" >> (_x select 0) >> "ACE_isUnique")) == 0}} count _targetMagazinesEnd) != 0) exitWith {
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Didn't Remove Magazines"] call FUNC(eventTargetFinish);
 };
@@ -102,7 +102,7 @@ if (!([_targetMagazinesStart, _targetMagazinesEnd, _holderMagazinesStart, _holde
 
 //Remove Items, Assigned Items and NVG
 _holderItemsStart = getitemCargo _holder;
-_targetItemsStart = (assignedItems _target) + (items _target);
+_targetItemsStart = (assignedItems _target) + (items _target) - (weapons _target);
 if ((headgear _target) != "") then {_targetItemsStart pushBack (headgear _target);};
 if ((goggles _target) != "") then {_targetItemsStart pushBack (goggles _target);};
 
@@ -132,7 +132,7 @@ _addToCrateCount = [];
 } forEach _addToCrateClassnames;
 
 _holderItemsEnd = getitemCargo _holder;
-_targetItemsEnd = (assignedItems _target) + (items _target);
+_targetItemsEnd = (assignedItems _target) + (items _target) - (weapons _target);
 if ((headgear _target) != "") then {_targetItemsEnd pushBack (headgear _target);};
 if ((goggles _target) != "") then {_targetItemsEnd pushBack (goggles _target);};
 
@@ -144,6 +144,16 @@ if (((count _targetItemsStart) - (count _targetItemsEnd)) != ([_addToCrateCount]
 if ((([_holderItemsEnd select 1] call _fncSumArray) - ([_holderItemsStart select 1] call _fncSumArray)) != ([_addToCrateCount] call _fncSumArray)) exitWith {
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Items Not Added to Holder"] call FUNC(eventTargetFinish);
+};
+
+//Script drop uniforms/vest if empty
+if (((uniform _target) != "") && {(uniform _target) in _listOfItemsToRemove} && {(uniformItems _target) isEqualTo []}) then {
+    _holder addItemCargoGlobal [(uniform _target), 1];
+    removeUniform _target;
+};
+if (((vest _target) != "") && {(vest _target) in _listOfItemsToRemove} && {(vestItems _target) isEqualTo []}) then {
+    _holder addItemCargoGlobal [(vest _target), 1];
+    removeVest _target;
 };
 
 

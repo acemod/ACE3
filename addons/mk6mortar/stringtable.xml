@@ -11,6 +11,7 @@
             <Hungarian>82mm hatótáv-tábla</Hungarian>
             <Portuguese>Tabela de distâncias de para 82mm</Portuguese>
             <Czech>82mm Rangetable</Czech>
+            <Italian>Tavola di tiro 82mm</Italian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
             <English>Range Table for the MK6 82mm Mortar</English>
@@ -22,6 +23,7 @@
             <Hungarian>Hatótáv-tábla a MK6 82mm-es mozsárhoz</Hungarian>
             <Portuguese>Tabela de distâncias para morteiro MK6 82mm</Portuguese>
             <Czech>Rangetable pro MK6 82mm minomet</Czech>
+            <Italian>Tavola di tiro per il mortaio calibro 82mm MK6</Italian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
             <English>Open 82mm Rangetable</English>
@@ -33,6 +35,7 @@
             <Hungarian>82mm hatótáv-tábla megnyitása</Hungarian>
             <Portuguese>Abrir tabela de distâncias para 82mm</Portuguese>
             <Czech>Otevřít 82mm Rangetable</Czech>
+            <Italian>Apri la tavola di tiro 82mm</Italian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
             <English>Charge</English>
@@ -44,6 +47,39 @@
             <Hungarian>Töltés</Hungarian>
             <Portuguese>Carregar</Portuguese>
             <Czech>Nabít</Czech>
+            <Italian>Carica</Italian>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_Module_DisplayName">
+            <English>MK6 Settings</English>
+            <Polish>Moździerz MK6 - Ustawienia</Polish>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_airResistanceEnabled_DisplayName">
+            <English>Air Resistance</English>
+            <Polish>Opór powietrza</Polish>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_airResistanceEnabled_Description">
+            <English>For Player Shots, Model Air Resistance and Wind Effects</English>
+            <Polish>Modeluj opór powietrza oraz wpływ wiatru na tor lotu pocisku dla strzałów z moździerza MK6 przez graczy</Polish>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_allowComputerRangefinder_DisplayName">
+            <English>Allow MK6 Computer</English>
+            <Polish>Komputer MK6</Polish>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_allowComputerRangefinder_Description">
+            <English>Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)</English>
+            <Polish>Zezwól na komputer i dalmierz (opcja ta MUSI zostać wyłączona jeżeli aktywowałeś opór powietrza)</Polish>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_allowCompass_DisplayName">
+            <English>Allow MK6 Compass</English>
+            <Polish>Kompas MK6</Polish>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_allowCompass_Description">
+            <English>Show the MK6 Digital Compass</English>
+            <Polish>Pokaż kompas MK6</Polish>
+        </Key>
+        <Key ID="STR_ACE_mk6mortar_Module_Description">
+            <English></English>
+            <Polish>Moduł ten pozwala dostosować ustawienia moździerza MK6.</Polish>
         </Key>
     </Package>
 </Project>
