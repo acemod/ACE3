@@ -29,18 +29,6 @@ class ACE_Settings {
         displayName = "View Distance Limit";
         description = "Limit for client's view distance set here and can overridden by module";
     };
-    class GVAR(terrainGrid) {
-        typeName = "SCALAR";
-        value = 10; // MP default as found in: https://community.bistudio.com/wiki/setTerrainGrid
-        displayName = "Client Terrain Grid";
-        description = "Changes in game terrain grid";
-    };
-    class GVAR(shadows) {
-        typeName = "SCALAR";
-        value = 200; // MP default as found in: https://community.bistudio.com/wiki/setObjectViewDistance
-        displayName = "Client Shadows distance";
-        description = "Changes in game shadows";
-    };
 };
 
 // To do: include string table style displayName & description.
