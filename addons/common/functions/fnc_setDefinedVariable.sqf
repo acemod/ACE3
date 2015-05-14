@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_update","_global","_definedVariable","_defaultGlobal","_currentValue"];
+private ["_global","_definedVariable"];
 
 PARAMS_3(_unit,_variable,_value);
 

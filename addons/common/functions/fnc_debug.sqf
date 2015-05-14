@@ -12,7 +12,7 @@
 #define DEFAULT_LOGGING_LEVEL -1
 #define DEFAULT_TEXT_DISPLAY -1
 
-private ["_level", "_prefix", "_defaultLoglevel","_defaultLogDisplayLevel", "_message", "_from"];
+private ["_level", "_prefix", "_defaultLoglevel","_defaultLogDisplayLevel", "_message"];
 PARAMS_1(_msg);
 _level = if (count _this > 1) then {_this select 1} else { 2 };
 

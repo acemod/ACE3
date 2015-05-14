@@ -10,8 +10,6 @@
 
 #include "script_component.hpp"
 
-private ["_oldUnit","_sets"];
-
 PARAMS_1(_unit);
 
 _unit setvariable ["ACE_isDead",nil,true];
