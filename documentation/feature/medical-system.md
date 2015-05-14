@@ -66,7 +66,7 @@ In order to stop the bleeding, all injuries on every bodypart requires treatment
 While a unit is bleeding however, the blood volume decreases which will result in a change of vitals.  Depending on the factors such as current blood volume, the blood loss rate, medication used, the blood pressure will start to drop. To counter this drop, also based upon the previously mentioned factors and others, the heart rate will adjust accordingly to attempt to keep blood pressure at safe levels. This means that for any patient it is required to keep an eye on the vitals. This is done through the interaction system by selecting check pulse or blood pressure on either the arms or head.
 
 #### 3.1.3 Medication
-To stabalize the vitals and to counter for example pain, a player/medic can use medication. All medications weights the same: 50 grams. Advanced medical has 3 different medications available:
+To stabalize the vitals and to counter for example pain, a player/medic can use medication. Advanced medical has 3 different medications available:
 * Atropine
 * Morphine
 * Epinephrine
@@ -166,7 +166,7 @@ All bandage types weights about 50 grams each.
   * If not taken off for a while it will cause pain to patient, can yield to death that way
 
 #### 3.1.6 Transfuzions
-In case of blood loss, blood should be replenished by three different types of IV: blood, plasma and saline. We distinguish 3 different sizes of IV bags: 250ml, 500ml and 1000ml.
+In case of blood loss, blood could be replenished by three different types of IV: blood, plasma and saline. We distinguish 3 different sizes of IV bags: 250ml, 500ml and 1000ml.
 Transfuzing 250ml of given IV takes about 1 minute to complete!
 
 +#### 3.1.7 PAK and Surgical kit
@@ -180,6 +180,7 @@ Surgical kit is used to stich bandaged wounds so they will never open again. Dep
   * 3 x Bandage (elastic)
   * 3 x Bandage (packing)
   * 3 x QuikClot
+  * 1 x Morphine Autoinjector
   * 1 x Tourniquet
 * Combat First Responder (CFR):
   * 10-15 x Bandage (basic)
