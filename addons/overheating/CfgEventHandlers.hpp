@@ -13,7 +13,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_FiredBIS_EventHandlers {
     class CAManBase {
         class GVAR(Overheat) {
-            clientFiredBIS = QUOTE( if (_this select 0 == ACE_player) then {_this call FUNC(overheat)}; );
+            firedBIS = QUOTE(_this call FUNC(firedEH));
         };
     };
 };

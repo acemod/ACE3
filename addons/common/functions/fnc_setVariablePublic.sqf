@@ -1,28 +1,24 @@
 /*
- * Author: commy2
- *
- * Sets a public variable, but wait a certain amount of time to transfer the value over the network. Changing the value by calling this function again resets the windup timer.
+ * Author: commy2 and CAA-Picard
+ * Publish a variable, but wait a certain amount of time before allowing it to be published it again.
  *
  * Argument:
- * 0: Object the variable should be assigned to (Object)
- * 1: Name of the variable (String)
- * 2: Value of the variable (Any)
- * 3: Windup time (Number, optional. Default: 1)
+ * 0: Object the variable should be assigned to <OBJECT>
+ * 1: Name of the variable <STRING>
+ * 2: Value of the variable <ANY>
+ * 3: Embargo delay <NUMBER> (Optional. Default: 1)
  *
  * Return value:
  * Nothing.
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_object", "_varName", "_value", "_sync"];
+EXPLODE_4_PVT(_this,_object,_varName,_value,_delay);
 
-_object = _this select 0;
-_varName = _this select 1;
-_value = _this select 2;
-_sync = _this select 3;
-
-if (isNil "_sync") then {
-    _sync = 1;
+if (isNil "_delay") then {
+    _delay = 1;
 };
 
 // set value locally
@@ -31,29 +27,33 @@ _object setVariable [_varName, _value];
 // "duh"
 if (!isMultiplayer) exitWith {};
 
-// generate stacked eventhandler id
-private "_idName";
-_idName = format ["ACE_setVariablePublic_%1", _varName];
+// Generate object variable to store embargo status
+private "_embargoTimeVarName";
+_embargoTimeVarName = format ["ACE_PE_%1", _varName];
 
-// exit now if an eh for that variable already exists
-private "_allIdNames";
-_allIdNames = [GETMVAR(BIS_stackedEventHandlers_onEachFrame,[]), {_this select 0}] call FUNC(map);
+// If we are on embargo, exit
+if !(isNil {_object getVariable _embargoTimeVarName}) exitWith {};
 
-if (_idName in _allIdNames) exitWith {};
+// Publish
+_object setVariable [_varName, _value, true];
 
-// when to push the value
-private "_syncTime";
-_syncTime = diag_tickTime + _sync;
+// Generate embargo PFH
+_object setVariable [_embargoTimeVarName, diag_tickTime + _delay];
 
-// add eventhandler
-[_idName, "onEachFrame", {
-    // wait to sync the variable
-    if (diag_tickTime > _this select 2) then {
-        // set value public
-        (_this select 0) setVariable [_this select 1, (_this select 0) getVariable (_this select 1), true];
+[{
+    EXPLODE_5_PVT(_this select 0,_object,_varName,_value,_delay,_embargoTimeVarName);
 
-        // remove eventhandler
-        [_this select 3, "onEachFrame"] call BIS_fnc_removeStackedEventHandler
+    if (diag_tickTime < (_object getVariable _embargoTimeVarName)) exitWith {};
+
+    // If the value has changed since last update
+    if !(_value isEqualTo (_object getVariable _varName)) then {
+        // Republish new value and reset embargo
+        _object setVariable [_varName, (_object getVariable _varName), true];
+        _object setVariable [_embargoTimeVarName, diag_tickTime + _delay];
+    } else {
+        // Remove embargo
+        [_this select 1] call CBA_fnc_removePerFrameHandler;
+        _object setVariable [_embargoTimeVarName, nil];
     };
-}, [_object, _varName, _syncTime, _idName]] call BIS_fnc_addStackedEventHandler;
-nil
+
+}, 0.1, [_object, _varName, _value, _delay, _embargoTimeVarName]] call CBA_fnc_addPerFrameHandler;

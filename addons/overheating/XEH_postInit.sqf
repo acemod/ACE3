@@ -1,6 +1,16 @@
 // by esteldunedain
 #include "script_component.hpp"
 
+GVAR(pseudoRandomList) = [];
+if (isServer) then {
+    // Construct a list of pseudo random 2D vectors
+    for "_i" from 0 to 30 do {
+        GVAR(pseudoRandomList) pushBack [-1 + random 2, -1 + random 2];
+    };
+    publicVariable QGVAR(pseudoRandomList);
+};
+
+
 if !(hasInterface) exitWith {};
 
 // Add keybinds
