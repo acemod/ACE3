@@ -10,10 +10,10 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
-class Extended_Fired_EventHandlers {
+class Extended_FiredBIS_EventHandlers {
     class CAManBase {
         class ADDON {
-            fired = QUOTE(_this call FUNC(firedEH););
+            firedBIS = QUOTE(_this call FUNC(firedEH););
         };
     };
 };
