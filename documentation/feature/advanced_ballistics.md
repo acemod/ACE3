@@ -6,7 +6,21 @@ parent: wiki
 ---
 # Overview
 ## Advanced ballistics simulation
-Advanced ballistics changes above and beyond the ballistics module. Bullet characteristics, barrel length, air temperature, barometric pressure, ammo temperature and air drag are all used to dynamically calculate ballistics.
+Advanced ballistics changes above and beyond the ballistics module. Bullet velocity and flight paths are dynamically simulated in response to the following factors:
+
+- Ambient air pressure, temperature and humidity
+- Wind drift
+- [Magnus effect](https://en.wikipedia.org/wiki/Magnus_effect) (spin drift)
+- [Coriolis effect](https://en.wikipedia.org/wiki/Coriolis_effect) and [Eötvös effect](https://en.wikipedia.org/wiki/Eotvos_effect) (Earth rotation)
+- Loss of stability during transonic flight 
+- Ammo temperature
+- Barrel length
+
+## Advanced drag model
+Realistic drag modeling based on the G Model and real-world ballistic coefficient data.
+
+## Wind simulation
+Wind speed varies with altitude. Terrain features, buildings and other objects disrupt the wind.
 
 ## Protractor
 Adds a protractor for quick reference when sniping.
