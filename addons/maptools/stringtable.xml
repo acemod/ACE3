@@ -8,7 +8,7 @@
             <Polish>Narzędzia nawigacyjne</Polish>
             <German>Kartenwerkzeug</German>
             <Czech>Pomůcky k mapě</Czech>
-            <Italian>Strumenti Cartografici</Italian>
+            <Italian>Strumenti cartografici</Italian>
             <Portuguese>Ferramentas de Mapa</Portuguese>
             <Hungarian>Térképészeti eszközök</Hungarian>
             <Russian>Инструменты карты</Russian>
@@ -20,7 +20,7 @@
             <Polish>Narzędzia nawigacyjne pozwalają na mierzenie odległości i kątów na mapie.</Polish>
             <German>Das Kartenwerkzeug ermöglicht es dir, Distanzen und Winkel zu messen.</German>
             <Czech>Pomůcky k mapě slouží k měření vzdáleností a úhlů na mapě.</Czech>
-            <Italian>Gli Strumenti Cartografici ti consentono di misurare distanze ed angoli sulla mappa.</Italian>
+            <Italian>Gli strumenti cartografici ti consentono di misurare distanze ed angoli sulla mappa.</Italian>
             <Portuguese>As Ferramentas de Mapa permitem que você meça distâncias e ângulos no mapa.</Portuguese>
             <Hungarian>A térképészeti eszközökkel távolságokat és szögeket tudsz mérni a térképen.</Hungarian>
             <Russian>Картографические инструменты позволяют измерять расстояния и углы на карте.</Russian>
@@ -32,7 +32,7 @@
             <Polish>Narzędzia nawigacyjne</Polish>
             <German>Kartenwerkzeug</German>
             <Czech>Pomůcky k mapě</Czech>
-            <Italian>Strumenti Cartografici</Italian>
+            <Italian>Strumenti cartografici</Italian>
             <Portuguese>Ferramentas de Mapa</Portuguese>
             <Hungarian>Térképészeti eszközök</Hungarian>
             <Russian>Инструменты карты</Russian>
@@ -142,7 +142,8 @@
             <Spanish>Dirección: %1°</Spanish>
             <Hungarian>Irány: %1</Hungarian>
             <Russian>Направление: %1°</Russian>
-            <Italian>Direzione : %1°</Italian>
+            <Italian>Direzione: %1°</Italian>
+            <Portuguese>Direção: %1</Portuguese>
         </Key>
     </Package>
 </Project>

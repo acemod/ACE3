@@ -64,8 +64,6 @@ if (_currentVersion != _previousVersion) then {
     profileNamespace setVariable ["ACE_VersionNumberString", _currentVersion];
 };
 
-0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber);
-
 // ACE events
 "ACEg" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
 "ACEc" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
@@ -73,7 +71,7 @@ if (_currentVersion != _previousVersion) then {
 // Synced ACE events
 // Handle JIP scenario
 if(!isServer) then {
-    ["PlayerJip", { 
+    ["PlayerJip", {
         diag_log text format["[ACE] * JIP event synchronization initialized"];
         ["SEH_all", [player]] call FUNC(serverEvent);
     }] call FUNC(addEventHandler);
@@ -84,6 +82,7 @@ if(!isServer) then {
 ["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
 [FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
 
+call FUNC(checkFiles);
 
 /***************************************************************/
 /***************************************************************/
@@ -112,7 +111,7 @@ enableCamShake true;
 // Set the name for the current player
 ["playerChanged", {
     EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
-    
+
     if (alive _newPlayer) then {
         [_newPlayer] call FUNC(setName)
     };
@@ -227,6 +226,7 @@ GVAR(OldIsCamera) = false;
 
 ["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
 ["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
+["medical_onUnconscious", {if (local (_this select 0) && {!(_this select 1)}) then {[ _this select 0, false, QUOTE(FUNC(loadPerson)), west /* dummy side */] call FUNC(switchToGroupSide);};}] call FUNC(addEventhandler);
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
 ["isNotInside", {
@@ -243,20 +243,9 @@ GVAR(OldIsCamera) = false;
 if(isMultiplayer && { time > 0 || isNull player } ) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
-        if(!(isNull player)) then {   
+        if(!(isNull player)) then {
             ["PlayerJip", [player] ] call FUNC(localEvent);
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
-        }; 
+        };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
-
-// check dlls
-{
-    if (_x callExtension "version" == "") then {
-        private "_errorMsg";
-        _errorMsg = format ["Extension %1.dll not installed.", _x];
-
-        diag_log text format ["[ACE] ERROR: %1", _errorMsg];
-        ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
-    };
-} forEach getArray (configFile >> "ACE_Extensions" >> "extensions");

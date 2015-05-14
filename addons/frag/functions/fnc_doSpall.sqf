@@ -3,13 +3,9 @@
 #ifdef DEBUG_MODE_FULL
     GVAR(traceFrags) = true;
 #endif
-// ACE_player sideChat "WAAAAAAAAAAAAAAAAAAAAA";
-private ["_params", "_initialData", "_hpData", "_roundType", "_round", "_object", "_caliber", "_explosive",
-    "_idh", "_alive", "_exit", "_vm", "_velocity", "_unitDir", "_oldVelocity", "_curVelocity", "_diff", "_polar",
-    "_pos", "_spallPos", "_i", "_pos1", "_pos2", "_blah", "_data", "_spallPolar", "_c", "_warn", "_m", "_k",
-    "_gC", "_shellType", "_fragPower", "_spread", "_spallCount", "_elev", "_dir", "_vel", "_spallFragVect",
-    "_fragment"];
+// ACE_player sideChat "WAAAAAAAAAAAAAAAAAAAAA";    
 
+private ["_params", "_hitData", "_initialData", "_hpData", "_object", "_foundObjects", "_index", "_foundObjecsts", "_roundType", "_round", "_caliber", "_explosive", "_idh", "_alive", "_exit", "_vm", "_velocity", "_oldVelocity", "_curVelocity", "_diff", "_polar", "_unitDir", "_spallPos", "_pos1", "_i", "_pos2", "_blah", "_data", "_spallPolar", "_warn", "_c", "_m", "_k", "_gC", "_fragPower", "_fragTypes", "_spread", "_spallCount", "_elev", "_dir", "_vel", "_spallFragVect", "_fragType", "_fragment", "_pos"];
 
 _params = _this select 0;
 [(_this select 1)] call cba_fnc_removePerFrameHandler;
@@ -45,8 +41,8 @@ if(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) then {
     _vm = 1;
     _velocity = _initialData select 5;
 
-    _oldVelocity = _velocity call BIS_fnc_magnitude;
-    _curVelocity = (velocity _round) call BIS_fnc_magnitude;
+    _oldVelocity = vectorMagnitude _velocity;
+    _curVelocity = vectorMagnitude (velocity _round);
 
     if(alive _round) then {
         _diff = _velocity vectorDiff (velocity _round);
@@ -66,16 +62,8 @@ if(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) then {
         _pos = _hpData select 3;
         _spallPos = nil;
         for "_i" from 0 to 100 do {
-            _pos1 = [
-                        (_pos select 0) + (((_unitDir select 0)*0.01)*_i),
-                        (_pos select 1) + (((_unitDir select 1)*0.01)*_i),
-                        (_pos select 2) + (((_unitDir select 2)*0.01)*_i)
-                    ];
-            _pos2 = [
-                        (_pos select 0) + (((_unitDir select 0)*0.01)*(_i+1)),
-                        (_pos select 1) + (((_unitDir select 1)*0.01)*(_i+1)),
-                        (_pos select 2) + (((_unitDir select 2)*0.01)*(_i+1))
-                    ];
+            _pos1 = _pos vectorAdd (_unitDir vectorMultiply (0.01 * _i));
+            _pos2 = _pos vectorAdd (_unitDir vectorMultiply (0.01 * (_i + 1)));
             // _blah = [_object, "FIRE"] intersect [_object worldToModel (ASLtoATL _pos1), _object worldToModel (ASLtoATL _pos2)];
             // diag_log text format["b: %1", _blah];
 

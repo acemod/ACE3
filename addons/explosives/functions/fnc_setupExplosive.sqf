@@ -28,7 +28,7 @@ GVAR(Setup) setVariable [QGVAR(class), _class, true];
 GVAR(TweakedAngle) = 180;
 
 [QGVAR(Placement),"OnEachFrame", {
-    private "_player";
+    private ["_player", "_pos"];
     _player = ACE_player;
     if (GVAR(placer) != _player) exitWith {
         call FUNC(place_Cancel);

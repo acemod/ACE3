@@ -14,7 +14,7 @@
 private ["_month", "_avgTemperature", "_pS1", "_pS2"];
 _month = date select 1;
 
-GVAR(currentHumidity) = (GVAR(Humidity) select _month) / 100;
+GVAR(currentHumidity) = (GVAR(Humidity) select (_month - 1)) / 100;
 
 if (rain > 0 && overcast > 0.7) then {
     GVAR(currentHumidity) = 1;

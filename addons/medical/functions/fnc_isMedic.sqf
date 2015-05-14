@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_class","_return"];
+private ["_unit", "_class", "_medicN"];
 _unit = _this select 0;
 _medicN = if (count _this > 1) then {_this select 1} else {1};
 

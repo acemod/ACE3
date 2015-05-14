@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private "_unit";
+private ["_unit", "_force"];
 _unit = _this select 0;
 _force = if (count _this > 1) then {_this select 1} else {false};
 

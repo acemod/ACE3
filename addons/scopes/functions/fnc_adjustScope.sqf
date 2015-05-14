@@ -17,6 +17,7 @@
 PARAMS_3(_unit,_turretAndDirection,_majorStep);
 
 if (!(_unit isKindOf "Man")) exitWith {false};
+if (currentMuzzle _unit != currentWeapon _unit) exitWith {false};
 
 private ["_weaponIndex", "_zeroing", "_optic", "_increment", "_maxVertical", "_maxHorizontal", "_elevation", "_windage", "_zero", "_adjustment"];
 
@@ -37,7 +38,7 @@ _increment = getNumber (configFile >> "CfgWeapons" >> _optic >> "ACE_ScopeAdjust
 _maxVertical = getArray (configFile >> "CfgWeapons" >> _optic >> "ACE_ScopeAdjust_Vertical");
 _maxHorizontal = getArray (configFile >> "CfgWeapons" >> _optic >> "ACE_ScopeAdjust_Horizontal");
 
-if ((count _maxHorizontal < 2) or (count _maxVertical < 2)) exitWith {false};
+if ((_increment == 0) or (count _maxHorizontal < 2) or (count _maxVertical < 2)) exitWith {false};
 
 _zeroing   = _adjustment select _weaponIndex;
 _elevation = _zeroing select 0;

@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-private ["_parentPath","_actionName"];
+private ["_parentPath","_actionName", "_i"];
 _parentPath = [];
 for [{_i = 0},{_i < (count _this) - 1},{_i = _i + 1}] do {
     _parentPath pushBack (_this select _i);

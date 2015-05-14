@@ -37,7 +37,7 @@ player addEventHandler ["Killed", {
     } count _deadman;
 }];
 player addEventHandler ["Take", {
-    private ["_item", "_getter", "_giver", "_config"];
+    private ["_item", "_getter", "_giver", "_config", "_detonators"];
     _item = _this select 2;
     _getter = _this select 0;
     _giver = _this select 1;

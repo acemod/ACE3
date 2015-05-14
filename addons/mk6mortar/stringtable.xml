@@ -3,19 +3,51 @@
     <Package name="mk6mortar">
         <Key ID="STR_ACE_MK6MORTAR_rangetable_name">
             <English>82mm Rangetable</English>
+            <German>82mm Distanztabelle</German>
+            <Polish>Tabela strzelnicza 82mm</Polish>
+            <French>Table de tir 82mm</French>
+            <Russian>82 мм Таблица дальностей и прицелов</Russian>
             <Spanish>Tabla de distancias de 82mm</Spanish>
+            <Hungarian>82mm hatótáv-tábla</Hungarian>
+            <Portuguese>Tabela de distâncias de para 82mm</Portuguese>
+            <Czech>82mm Rangetable</Czech>
+            <Italian>Tavola di tiro 82mm</Italian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
             <English>Range Table for the MK6 82mm Mortar</English>
+            <German>Distanztabelle für den Mk6 82mm Mortar</German>
+            <Polish>Tabela strzelnicza dla moździerza 82mm MK6</Polish>
+            <French>Table de tir pour le mortier MK6 82mm</French>
+            <Russian>Таблица дальностей и прицелов для MK6 82 мм мортиры</Russian>
             <Spanish>Tabla de distancias para el mortero MK6 de 82mm</Spanish>
+            <Hungarian>Hatótáv-tábla a MK6 82mm-es mozsárhoz</Hungarian>
+            <Portuguese>Tabela de distâncias para morteiro MK6 82mm</Portuguese>
+            <Czech>Rangetable pro MK6 82mm minomet</Czech>
+            <Italian>Tavola di tiro per il mortaio calibro 82mm MK6</Italian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
             <English>Open 82mm Rangetable</English>
+            <German>Öffne 82mm Distanztabelle</German>
+            <Polish>Otwórz tabelę strzelniczą 82mm</Polish>
+            <French>Ouvrir la table de tir 82mm</French>
+            <Russian>Открыть 82 мм Таблицу дальностей и прицелов</Russian>
             <Spanish>Abrir tabla de distancias de 82mm</Spanish>
+            <Hungarian>82mm hatótáv-tábla megnyitása</Hungarian>
+            <Portuguese>Abrir tabela de distâncias para 82mm</Portuguese>
+            <Czech>Otevřít 82mm Rangetable</Czech>
+            <Italian>Apri la tavola di tiro 82mm</Italian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
             <English>Charge</English>
+            <German>Ladung</German>
+            <French>Charge</French>
+            <Polish>Ładunek</Polish>
+            <Russian>Зарядить</Russian>
             <Spanish>Carga</Spanish>
+            <Hungarian>Töltés</Hungarian>
+            <Portuguese>Carregar</Portuguese>
+            <Czech>Nabít</Czech>
+            <Italian>Carica</Italian>
         </Key>
     </Package>
 </Project>

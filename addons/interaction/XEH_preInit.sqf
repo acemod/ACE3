@@ -16,6 +16,7 @@ PREP(getDoor);
 PREP(getDoorAnimations);
 PREP(getDown);
 PREP(getSelectedButton);
+PREP(getWeaponPos);
 PREP(hideMenu);
 PREP(hideMouseHint);
 PREP(isInRange);

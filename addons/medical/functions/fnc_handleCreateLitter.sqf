@@ -5,6 +5,7 @@ if(!hasInterface) exitWith { false };
 
 PARAMS_3(_litterClass,_position,_direction);
 private["_litterObject", "_maxLitterCount"];
+//IGNORE_PRIVATE_WARNING(_values);
 
 if (isNil QGVAR(allCreatedLitter)) then {
     GVAR(allCreatedLitter) = [];

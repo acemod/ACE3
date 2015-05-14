@@ -24,6 +24,10 @@ PREP(laserTargetPFH);
 
 GVAR(VanillaLasers) = [];
 
+PREP(unitTurretCanLockLaser);
+PREP(keyLaserCodeUp);
+PREP(keyLaserCodeDown);
+
 // Laser default variables
 ACE_DEFAULT_LASER_CODE = 1001;
 ACE_DEFAULT_LASER_WAVELENGTH = 1550;

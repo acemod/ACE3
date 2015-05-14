@@ -26,8 +26,7 @@ if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
 
 private "_recurseFnc";
 _recurseFnc = {
-    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_selection", "_condition", "_showDisabled",
-            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction"];
+    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_position", "_condition", "_showDisabled", "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction", "_i"];
     EXPLODE_1_PVT(_this,_actionsCfg);
     _actions = [];
 
@@ -39,13 +38,18 @@ _recurseFnc = {
             _icon = getText (_entryCfg >> "icon");
             _statement = compile (getText (_entryCfg >> "statement"));
 
-            _selection = "";
-            if (isArray ( _entryCfg >> "selection" )) then {
-                _selection = getArray ( _entryCfg >> "selection" )
+            // If the position entry is present, compile it
+            _position = getText (_entryCfg >> "position");
+            if (_position != "") then {
+                _position = compile _position;
             } else {
-                _selection = getText (_entryCfg >> "selection");
-                if (_selection == "") then {
-                    _selection = [0,0,0];
+                // If the not, but the selection entry is present use that
+                _position = getText (_entryCfg >> "selection");
+                if (_position != "") then {
+                    _position = compile format ["_target selectionPosition '%1'", _position];
+                } else {
+                    // Otherwise, just use the origin
+                    _position = {[0,0,0]};
                 };
             };
 
@@ -77,7 +81,7 @@ _recurseFnc = {
                             _condition,
                             _insertChildren,
                             [],
-                            _selection,
+                            _position,
                             _distance,
                             [_showDisabled,_enableInside,_canCollapse,_runOnHover],
                             _modifierFunction
@@ -106,7 +110,7 @@ missionNamespace setVariable [_actionsVarName, [_actionsCfg] call _recurseFnc];
             { true },
             {},
             [],
-            [0,0,0],
+            {[0,0,0]},
             1,
             [false,false,false]
         ],

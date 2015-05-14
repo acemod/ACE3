@@ -10,7 +10,7 @@
             <Polish>Gogle noktowizyjne (Gen1)</Polish>
             <Portuguese>Óculos de visão noturna (Gen1)</Portuguese>
             <Russian>ПНВ (Gen1)</Russian>
-            <Spanish>Sistema de visión nocturna (Gen1)</Spanish>
+            <Spanish>Gafas de visión nocturna (Gen1)</Spanish>
             <Hungarian>Éjjellátó szemüveg (1. Gen.)</Hungarian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2">
@@ -22,7 +22,7 @@
             <Polish>Gogle noktowizyjne (Gen2)</Polish>
             <Portuguese>Óculos de visão noturna (Gen2)</Portuguese>
             <Russian>ПНВ (Gen2)</Russian>
-            <Spanish>Sistema de visión nocturna (Gen2)</Spanish>
+            <Spanish>Gafas de visión nocturna (Gen2)</Spanish>
             <Hungarian>Éjjellátó szemüveg (2. Gen.)</Hungarian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3">
@@ -34,7 +34,7 @@
             <Polish>Gogle noktowizyjne (Gen3)</Polish>
             <Portuguese>Óculos de visão noturna (Gen3)</Portuguese>
             <Russian>ПНВ (Gen3)</Russian>
-            <Spanish>Sistema de visión nocturna (Gen3)</Spanish>
+            <Spanish>Gafas de visión nocturna (Gen3)</Spanish>
             <Hungarian>Éjjellátó szemüveg (3. Gen.)</Hungarian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_brown">
@@ -45,8 +45,8 @@
             <Italian>Occhiali notturni (Gen3, marroni)</Italian>
             <Polish>Gogle noktowizyjne (Gen3, brązowe)</Polish>
             <Portuguese>Óculos de visão noturna (Gen3, marrons)</Portuguese>
-            <Russian>ПНВ (Gen3, коричневый)</Russian>
-            <Spanish>Sistema de visión nocturna (Gen3, marrón)</Spanish>
+            <Russian>ПНВ (Gen3, Коричневый)</Russian>
+            <Spanish>Gafas de visión nocturna (Gen3, marrón)</Spanish>
             <Hungarian>Éjjellátó szemüveg (3. Gen., barna)</Hungarian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_green">
@@ -57,8 +57,8 @@
             <Italian>Occhiali notturni (Gen3, verdi)</Italian>
             <Polish>Gogle noktowizyjne (Gen3, zielone)</Polish>
             <Portuguese>Óculos de visão noturna (Gen3, verdes)</Portuguese>
-            <Russian>ПНВ (Gen3, зеленый)</Russian>
-            <Spanish>Sistema de visión nocturna (Gen3, verde)</Spanish>
+            <Russian>ПНВ (Gen3, Зелёный)</Russian>
+            <Spanish>Gafas de visión nocturna (Gen3, verde)</Spanish>
             <Hungarian>Éjjellátó szemüveg (3. Gen., zöld)</Hungarian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_black">
@@ -69,8 +69,8 @@
             <Italian>Occhiali notturni (Gen3, neri)</Italian>
             <Polish>Gogle noktowizyjne (Gen3, czarne)</Polish>
             <Portuguese>Óculos de visão noturna (Gen3, pretos)</Portuguese>
-            <Russian>ПНВ (Gen3, черный)</Russian>
-            <Spanish>Sistema de visión nocturna (Gen3, negro)</Spanish>
+            <Russian>ПНВ (Gen3, Чёрный)</Russian>
+            <Spanish>Gafas de visión nocturna (Gen3, negro)</Spanish>
             <Hungarian>Éjjellátó szemüveg (3. Gen., fekete)</Hungarian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4">
@@ -82,18 +82,20 @@
             <Polish>Gogle noktowizyjne (Gen4)</Polish>
             <Portuguese>Óculos de visão noturna (Gen4)</Portuguese>
             <Russian>ПНВ (Gen4)</Russian>
-            <Spanish>Sistema de visión nocturna (Gen4)</Spanish>
+            <Spanish>Gafas de visión nocturna (Gen4)</Spanish>
             <Hungarian>Éjjellátó szemüveg (4. Gen.)</Hungarian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_FullScreen">
             <English>NV Goggles (Wide)</English>
             <German>NS-Brille (Weitwinkel)</German>
-            <Spanish>Sistema de visión nocturna (Panorámicas)</Spanish>
+            <Spanish>Gafas de visión nocturna (Panorámicas)</Spanish>
             <Polish>Gogle noktowizyjne (panoramiczne)</Polish>
             <Czech>Noktovizor (Širokoúhlý)</Czech>
             <Russian>ПНВ (Широкоугольный)</Russian>
             <French>JVN (Large)</French>
             <Hungarian>Éjjellátó szemüveg (széles látószögű)</Hungarian>
+            <Portuguese>Óculos de visão noturna (Panorâmico)</Portuguese>
+            <Italian>Occhiali notturni (Larghi)</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>

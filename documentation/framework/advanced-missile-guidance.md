@@ -6,7 +6,7 @@ order: 5
 parent: wiki
 ---
 
-# 1. Overview
+## 1. Overview
 
 The ACE Advanced Missile Guidance Framework provides a setup of configuration settings, functions and a execution framework for addon makers to integrate with the missile guidance and targeting mechanisms of ACE. It also provides for mod makers to create their own custom guidance methods within the framework.
 
@@ -18,23 +18,23 @@ ACE3 provides a full suite of base concepts and guidance for the majority of mod
 
 Finally, flight profiles and mechanics for realistic missile simulations are also implemented; allowing for lock-steering bump guidance flight such as with the M47 Dragon or GBU steering fins, or finely tuned direct flight guidance which is currently avialable with other missile types.
 
-# 2. Details
+## 2. Details
 
 The framework is broken up into 3 major components: Locking Types, Seeker Types and Attack Profiles. In combination, these components build out the entire process of launching, locking and going terminal flight against targets.
 
-### Components
+### 2.1 Components
 
-##### 1. Locking Types
+#### 2.1.1 Locking Types
 Locking types provide the basic functionality of targeting which will be based to a seeker type, providing target aquisition for seekers. This provides the basic functionality for providing pre-determined targets for a seeker, or allowing the seeker to perform its own target aquisition and locking. Additionally, the seeker may reference back into the locking type in order to re-perform target aquisition. 
 
-##### 2. Seeker Types
+#### 2.1.2 Seeker Types
 Each seeker is generally assumed to be the logic for the seeker head unit within any given munition. Seekers within this framework provide the basic targeting functionality for the entire framework. The locking type will provide a generic target to the seeker, or the seeker may aquire a target on its own. The seeker then provides a target, either an object or a ASL position, which is then passed further into the framework. This target (or position) should be the actual current target position for the missiles flight. Seekers are required to perform all limitations and checks within their systems, although various limitations have been provided in this framework such as LOS FOV, laser guidance, etc.
 
-##### 3. Attack Profiles
+#### 2.1.3 Attack Profiles
 
 An attack profile adjusts the current target flight location to create the actual flight path of the missile. The attack profile is provided with all parameters of the system, including the returned target of the seeker. Using this information, the attack profile then will adjust the *direct flight target position* to specifically direct where and how the missile shall flight. 
 
-## How it all ties together
+## 3. How it all ties together
 
 The system is executed in a linear series of calls to each step of the process, and feeding back the return from that step to the next step. Execution is conducted using Locking->Seeker->Profile, iteratively every frame of execution. Flight times are adjusted to accTime values and FPS lag, giving consistent flight. 
 
@@ -42,9 +42,9 @@ On each step of execution, a target specification array [targetObj, targetPos] i
 
 In the simplest sense, the entire system provides the flight trajectory of the missile homing directly on the "adjusted attack position"; thus, an attack profile would ajust this position to direct the missile.  For example, Top down attacks return the adjusted attack position high above the target, until entering their terminal stages, which then changes the position to be directly ontop of the target - thus "walking the missile" along its flight path and to the kill.
 
-# 2. Adding AMG to a missile
+## 4. Adding AMG to a missile
 
-## Enabling guidance on Ammo Types
+### 4.1 Enabling guidance on Ammo Types
 ```
 class CfgAmmo {
     class MissileBase;
@@ -81,9 +81,9 @@ class CfgAmmo {
         };
 ```
 
-# 2. Creating your own custom seekers and attack profiles
+## 5. Creating your own custom seekers and attack profiles
 
-## Adding seeker types and attack profiles
+### 5.1 Adding seeker types and attack profiles
 
 ```
 class ace_missileguidance_attackProfiles{

@@ -14,15 +14,15 @@
 
 #include "script_component.hpp"
 
-private ["_caller","_target"];
+private ["_caller","_target", "_output"];
 _caller = _this select 0;
 _target = _this select 1;
 
 _output = "";
 if ([_target] call EFUNC(common,isAwake)) then {
-    _output = "STR_ACE_MEDICAL_CHECK_REPONSE_RESPONSIVE";
+    _output = "STR_ACE_Medical_Check_Response_Responsive";
 } else {
-    _output = "STR_ACE_MEDICAL_CHECK_REPONSE_UNRESPONSIVE";
+    _output = "STR_ACE_Medical_Check_Response_Unresponsive";
 };
 
 ["displayTextStructured", [_caller], [[_output, [_target] call EFUNC(common,getName)], 2, _caller]] call EFUNC(common,targetEvent);

@@ -21,7 +21,7 @@
             <Polish>Potrzebujesz baterii UAV</Polish>
             <Hungarian>Szükséged van egy UAV akkumulátorra</Hungarian>
             <Czech>Potřebuješ UAV baterii</Czech>
-            <Portuguese>Você precisa de uma Bateria para VANT</Portuguese>
+            <Portuguese>Você precisa de uma bateria para VANTs</Portuguese>
             <Italian>Hai bisogno di una Batteria UAV</Italian>
             <Russian>Требуется аккумулятор для БПЛА</Russian>
         </Key>
@@ -57,7 +57,7 @@
             <Polish>Używana do naładowania baterii przenośnego UAV</Polish>
             <Hungarian>Hordozható UAV-k feltöltéséhez való akkumulátor</Hungarian>
             <Czech>Používané k dobíjení UAV</Czech>
-            <Portuguese>Usada para reabastecer VANT</Portuguese>
+            <Portuguese>Usada para reabastecer o VANT</Portuguese>
             <Italian>Usata per ricaricare la Batteria dell'UAV</Italian>
             <Russian>Используется для зарядки переносных БПЛА</Russian>
         </Key>

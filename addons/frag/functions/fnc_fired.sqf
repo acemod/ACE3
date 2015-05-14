@@ -1,14 +1,20 @@
 #include "script_component.hpp"
-private ["_gun", "_type", "_round", "_doFragTrack", "_doSpall"];
-if !(!isNil QGVAR(enabled) && {GVAR(enabled)}) exitWith {};
+
+private ["_enabled", "_gun", "_type", "_round", "_doFragTrack", "_doSpall", "_spallTrack", "_spallTrackID"];
+
+if (!GVAR(enabled)) exitWith {};
 
 _gun = _this select 0;
 _type = _this select 4;
 _round = _this select 6;
 
+_enabled = getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(enabled));
+if(_enabled < 1) exitWith {};
+
 if(_round in GVAR(blackList)) exitWith {
     GVAR(blackList) = GVAR(blackList) - [_round];
 };
+
 
 _doFragTrack = false;
 if(_gun == ACE_player) then {

@@ -80,7 +80,7 @@ class Stage6
 };
 class Stage7
 {
-	texture="z\ace\addons\medical\data\env_co.tga";
+	texture="z\ace\addons\apl\data\env_co.tga";
 	uvSource="tex";
 	class uvTransform
 	{

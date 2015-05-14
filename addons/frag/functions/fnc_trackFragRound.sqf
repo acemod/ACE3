@@ -1,6 +1,6 @@
 //fnc_trackFragRound.sqf
 #include "script_component.hpp"
-private ["_params", "_round", "_lastPos", "_lastVel", "_type", "_time", "_doSpall", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
+private ["_params", "_round", "_lastPos", "_lastVel", "_type", "_time", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
 _params = _this select 0;
 _round = _params select 0;
 _lastPos = _params select 1;

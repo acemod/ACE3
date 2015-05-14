@@ -34,7 +34,7 @@ private ["_unit","_bloodVolume","_bloodVolumeChange", "_ivVolume"];
 _unit = _this select 0;
 
 _bloodVolume = _unit getvariable [QGVAR(bloodVolume), 100];
-_bloodVolumeChange = -(_unit call FUNC(getBloodLoss));
+_bloodVolumeChange = -([_unit] call FUNC(getBloodLoss));
 
 if (_bloodVolume < 100.0) then {
     {

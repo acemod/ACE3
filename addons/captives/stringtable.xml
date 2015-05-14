@@ -8,7 +8,7 @@
             <French>Capturer le prisonnier</French>
             <Polish>Aresztuj</Polish>
             <Czech>Zajmout Osobu</Czech>
-            <Italian>Arresta il Prigioniero</Italian>
+            <Italian>Arresta il prigioniero</Italian>
             <Portuguese>Tomar Prisioneiro</Portuguese>
             <Hungarian>Foglyul ejtés</Hungarian>
             <Russian>Взять в плен</Russian>
@@ -20,7 +20,7 @@
             <Polish>Wypuść więźnia</Polish>
             <French>Libérer le prisonnier</French>
             <Czech>Osvobodit Zajatce</Czech>
-            <Italian>Libera il Prigioniero</Italian>
+            <Italian>Libera il prigioniero</Italian>
             <Portuguese>Libertar Prisioneiro</Portuguese>
             <Hungarian>Fogoly szabadon engedése</Hungarian>
             <Russian>Освободить пленника</Russian>
@@ -71,7 +71,7 @@
             <Hungarian>Fogoly berakása</Hungarian>
             <Russian>Загрузить пленного</Russian>
             <Portuguese>Embarcar Prisioneiro</Portuguese>
-            <Italian>Carica il prigioniero</Italian>
+            <Italian>Fai salire il prigioniero</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_UnloadCaptive">
             <English>Unload Captive</English>
@@ -83,7 +83,7 @@
             <Hungarian>Fogoly kivevése</Hungarian>
             <Russian>Выгрузить пленного</Russian>
             <Portuguese>Desembarcar Prisioneiro</Portuguese>
-            <Italian>Scarica il prigioniero</Italian>
+            <Italian>Fai scendere il prigioniero</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
@@ -105,7 +105,7 @@
             <French>Les Serflex permettent de menotter les prisonniers.</French>
             <Czech>Stahovací pásky vám umožní zadržet vězně.</Czech>
             <Portuguese>A algema plástica permite que você contenha prisioneiros.</Portuguese>
-            <Italian>Fascietta che ti consente di arrestare i prigionieri.</Italian>
+            <Italian>Fascetta per arrestare i prigionieri</Italian>
             <Hungarian>Gyorskötöző, emberek foglyulejtéséhez használható.</Hungarian>
             <Russian>Кабельные стяжки позволяют связывать пленников.</Russian>
         </Key>
@@ -119,6 +119,7 @@
             <Polish>Ekwipunek rewidowanej osoby</Polish>
             <Russian>Инвентарь обысканного человека</Russian>
             <Portuguese>Inventário da pessoa revistada</Portuguese>
+            <Italian>Inventario della persona perquisita</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_FriskPerson">
             <English>Frisk person</English>
@@ -137,22 +138,24 @@
             <French>Se rendre</French>
             <German>Kapitulieren</German>
             <Spanish>Rendirse</Spanish>
+            <Portuguese>Render-se</Portuguese>
             <Czech>Vzdát se</Czech>
             <Polish>Poddaj się</Polish>
             <Russian>Сдаться</Russian>
             <Hungarian>Megadás</Hungarian>
-            <Italian>Arreso</Italian>
+            <Italian>Arrenditi</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_StopSurrendering">
             <English>Stop Surrendering</English>
             <French>Annuler la capitulation</French>
             <German>Den Kampf erneut aufnehmen</German>
             <Spanish>Dejar de rendirse</Spanish>
+            <Portuguese>Parar de se render</Portuguese>
             <Czech>Přestat se vzdávat</Czech>
             <Polish>Podejmij walkę ponownie</Polish>
             <Russian>Прекратить сдачу в плен</Russian>
             <Hungarian>Megadás abbahagyása</Hungarian>
-            <Italian>Annulla la resa</Italian>
+            <Italian>Smetti di arrenderti</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
             <English>Only use on alive units</English>
@@ -164,6 +167,7 @@
             <Russian>Применимо только к живым юнитам</Russian>
             <Hungarian>Csak élő egységeken használni</Hungarian>
             <Italian>Si può fare solo su persone vive</Italian>
+            <Portuguese>Usar somente em unidades vivas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_OnlyInfantry">
             <English>Only use on dismounted inf</English>
@@ -175,17 +179,19 @@
             <Russian>Применимо только к пехоте вне техники</Russian>
             <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
             <Italian>Si può usare solo su fanteria a piedi</Italian>
+            <Portuguese>Usar somente em infantaria desmontada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
             <English>Nothing under mouse</English>
             <French>Rien sous le curseur</French>
             <German>Es wurde nichts ausgewählt</German>
             <Spanish>Nada bajo el ratón</Spanish>
+            <Portuguese>Nada debaixo do mouse</Portuguese>
             <Czech>Nic není vybráno</Czech>
             <Polish>Nie ma nic pod kursorem</Polish>
             <Russian>Ничего не выделено</Russian>
             <Hungarian>Semmi sincs az egér alatt</Hungarian>
-            <Italian>Niente selezionato</Italian>
+            <Italian>Nessuna selezione</Italian>
         </Key>
     </Package>
 </Project>

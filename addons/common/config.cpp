@@ -22,6 +22,7 @@ class CfgPatches {
 #include "CfgActions.hpp"
 #include "CfgMoves.hpp"
 #include "CfgVoice.hpp"
+#include "CfgUnitInsignia.hpp"
 
 class ACE_Rsc_Display_Base {
     idd = -1;

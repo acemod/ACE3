@@ -18,7 +18,7 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_impact", "_part", "_injuryIndex", "_injury", "_bandage", "_classID", "_className", "_reopeningChance", "_reopeningMinDelay", "_reopeningMaxDelay", "_config", "_woundTreatmentConfig", "_bandagedWounds", "_exist", "_injuryId", "_existingInjury", "_delay", "_openWounds", "_selectedInjury"];
+private ["_target", "_impact", "_part", "_injuryIndex", "_injury", "_bandage", "_classID", "_className", "_reopeningChance", "_reopeningMinDelay", "_reopeningMaxDelay", "_config", "_woundTreatmentConfig", "_bandagedWounds", "_exist", "_injuryId", "_existingInjury", "_delay", "_openWounds", "_selectedInjury", "_bandagedInjury"];
 _target = _this select 0;
 _impact = _this select 1;
 _part = _this select 2;

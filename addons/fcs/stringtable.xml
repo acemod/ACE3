@@ -10,11 +10,13 @@
             <Spanish>Iluminar objetivo / Medir distancia</Spanish>
             <Russian>Подсветить цель / Замерить расстояние</Russian>
             <Hungarian>Célpont lézerezése / Távolság Bemérése</Hungarian>
+            <Italian>Misura la distanza</Italian>
+            <Portuguese>Marcar com laser / Medir Distância</Portuguese>
         </Key>
         <Key ID="STR_ACE_FCS_ZeroedTo">
             <English>Zeroed To</English>
             <German>Haltepunkt</German>
-            <Spanish>Fijado a</Spanish>
+            <Spanish>Ajustado a</Spanish>
             <Polish>Wyzerowany na</Polish>
             <Czech>Nastaveno na</Czech>
             <French>Zéroté à</French>

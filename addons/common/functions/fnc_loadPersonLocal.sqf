@@ -30,7 +30,12 @@ if (!([_unit] call FUNC(isAwake))) then {
         _vehicle = _this select 1;
         waituntil {vehicle _unit == _vehicle};
         sleep 0.5;
-        [_unit,([_unit] call FUNC(getDeathAnim)), 1] call FUNC(doAnimation);
+
+        //Save the "awake" animation before applying the death animation
+        if (vehicle _unit == _vehicle) then {
+            _unit setVariable [QEGVAR(medical,vehicleAwakeAnim), [_vehicle, (animationState _unit)]];
+        };
+        [_unit,([_unit] call FUNC(getDeathAnim)), 1, true] call FUNC(doAnimation);
     };
 } else {
     if ([_unit] call FUNC(isArrested)) then {

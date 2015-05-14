@@ -11,39 +11,67 @@
             <Czech>Respawn za 5 sekund...</Czech>
             <Hungarian>Kihelyezés 5 másodperc múlva ...</Hungarian>
             <Italian>Dispiegamento in 5 secondi ...</Italian>
+            <Portuguese>Será posicionado em 5 segundos ...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Respawn_Deployed">
             <English>Rallypoint deployed</English>
             <French>Point de ralliement déployé</French>
-            <German>Rallypoint errichtet</German>
+            <German>Sammelpunkt errichtet</German>
             <Spanish>Punto de reunión desplegado</Spanish>
             <Russian>Точка сбора установлена</Russian>
             <Polish>Punkt zbiórki rozmieszczony</Polish>
             <Czech>Rallypoint umístěn</Czech>
             <Hungarian>Gyülekezőpont elhelyezve</Hungarian>
             <Italian>Rallypoint dispiegato</Italian>
+            <Portuguese>Rallypoints posicionado</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Respawn_TeleportToBase">
+            <English>Teleport to Base</English>
+            <Czech>Teleportovat na Základnu</Czech>
+            <German>Zur Basis teleportieren</German>
+            <Spanish>Treletransportar a Base</Spanish>
+            <Polish>Teleport do bazy</Polish>
+            <Russian>Телепортироваться на базу</Russian>
+            <French>Téléportation à la base</French>
+            <Portuguese>Teletransportar para a Base</Portuguese>
+            <Hungarian>Bázisra teleportálás</Hungarian>
+            <Italian>Teleporta alla base</Italian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
+            <English>Teleport to Rallypoint</English>
+            <Czech>Teleport na Rallypoint</Czech>
+            <Spanish>Teletransportar a Punto de reunión</Spanish>
+            <German>Zum Sammelpunkt teleportieren</German>
+            <Polish>Teleport do punktu zbiórki</Polish>
+            <Russian>Телепортироваться на точку сбора</Russian>
+            <French>Téléporation au point de ralliement</French>
+            <Portuguese>Teletransportar para o ponto de encontro</Portuguese>
+            <Hungarian>Gyülekezőpontra teleportálás</Hungarian>
+            <Italian>Teleporta al rallypoint</Italian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToBase">
             <English>Teleported to Base</English>
             <French>Téléporté à la base</French>
             <German>Zur Basis teleportiert</German>
             <Spanish>Teletransportado a base</Spanish>
-            <Russian>Телепорт на базу</Russian>
+            <Russian>Вы были телепортированы на базу</Russian>
             <Polish>Przeteleportowano do bazy</Polish>
-            <Czech>Odteleportován na základnu</Czech>
+            <Czech>Teleportován na základnu</Czech>
             <Hungarian>Bázisra teleportálva</Hungarian>
             <Italian>Teleportato alla base</Italian>
+            <Portuguese>Teletransportado para a Base</Portuguese>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
             <English>Teleported to Rallypoint</English>
             <French>Téléporté au point de déploiement</French>
-            <German>Zum Rallypoint teleportiert</German>
+            <German>Zum Sammelpunkt teleportiert</German>
             <Spanish>Teletransportado al punto de reunión</Spanish>
-            <Russian>Телепорт на точку сбора</Russian>
+            <Russian>Вы были телепортированы на точку сбора</Russian>
             <Polish>Przeteleportowano do punktu zbiórki</Polish>
-            <Czech>Odteleportován na rallypoint</Czech>
+            <Czech>Teleportován na rallypoint</Czech>
             <Hungarian>Gyülekezőpontra teleportálva</Hungarian>
             <Italian>Teleportato al rallypoint</Italian>
+            <Portuguese>Teletransportado para o Rallypoints</Portuguese>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWestBase">
             <English>Rallypoint West (Base)</English>
@@ -52,6 +80,10 @@
             <Russian>Точка сбора Синих (База)</Russian>
             <Polish>Punkt zbiórki Zachodu (Baza)</Polish>
             <French>Point de ralliement OUEST (Base)</French>
+            <Italian>Rallypoint West (Base)</Italian>
+            <Hungarian>Gyülekezőpont, Nyugat (Bázis)</Hungarian>
+            <Czech>Rallypoint Západ (Základna)</Czech>
+            <Portuguese>Ponto de encontro Oeste (Base)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEastBase">
             <English>Rallypoint East (Base)</English>
@@ -60,6 +92,10 @@
             <Russian>Точка сбора Красных (База)</Russian>
             <Polish>Punkt zbiórki Wschodu (Baza)</Polish>
             <French>Point de ralliement EST (Base)</French>
+            <Italian>Rallypoint East (Base)</Italian>
+            <Hungarian>Gyülekezőpont, Kelet (Bázis)</Hungarian>
+            <Czech>Ralllypoint Východ (Základna)</Czech>
+            <Portuguese>Ponto de encontro Lest (Base)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependentBase">
             <English>Rallypoint Independent (Base)</English>
@@ -68,6 +104,10 @@
             <Russian>Точка сбора Независимых (База)</Russian>
             <Polish>Punkt zbiórki Ruchu oporu (Baza)</Polish>
             <French>Point de ralliement Indépendant (Base)</French>
+            <Italian>Rallypoint Independent (Base)</Italian>
+            <Hungarian>Gyülekezőpont, Független (Bázis)</Hungarian>
+            <Czech>Rallypoint Nezávislý (Základna)</Czech>
+            <Portuguese>Ponto de encontro Independente (Base)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWest">
             <English>Rallypoint West</English>
@@ -76,6 +116,10 @@
             <Russian>Точка сбора Синих</Russian>
             <Polish>Punkt zbiórki Zachodu</Polish>
             <French>Point de ralliement OUEST</French>
+            <Italian>Rallypoint West</Italian>
+            <Hungarian>Gyülekezőpont, Nyugat</Hungarian>
+            <Czech>Rallypoint Západ</Czech>
+            <Portuguese>Ponto de encontro Oeste</Portuguese>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEast">
             <English>Rallypoint East</English>
@@ -84,6 +128,10 @@
             <Russian>Точка сбора Красных</Russian>
             <Polish>Punkt zbiórki Wschodu</Polish>
             <French>Point de ralliement EST</French>
+            <Italian>Rallypoint East</Italian>
+            <Hungarian>Gyülekezőpont, Kelet</Hungarian>
+            <Czech>Rallypoint Východ</Czech>
+            <Portuguese>Ponto de encontro Leste</Portuguese>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependent">
             <English>Rallypoint Independent</English>
@@ -92,6 +140,10 @@
             <Russian>Точка сбора Независимых</Russian>
             <Polish>Punkt zbiórki Ruchu oporu</Polish>
             <French>Point de ralliement Indépendant</French>
+            <Italian>Rallypoint Independent</Italian>
+            <Hungarian>Gyülekezőpont, Független</Hungarian>
+            <Czech>Rallypoint Nezávislý</Czech>
+            <Portuguese>Ponto de encontro Independente</Portuguese>
         </Key>
     </Package>
 </Project>

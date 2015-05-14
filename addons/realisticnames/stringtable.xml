@@ -30,7 +30,7 @@
             <German>XM312 (Hoch)</German>
             <Spanish>XM312 (Alto)</Spanish>
             <French>XM312 (Haut)</French>
-            <Czech>XM312 (vysoká montáž)</Czech>
+            <Czech>XM312 (Vysoká montáž)</Czech>
             <Polish>XM312 (Wysoki)</Polish>
             <Russian>XM312 (Высокий)</Russian>
             <Portuguese>XM312 (Alta)</Portuguese>
@@ -66,7 +66,7 @@
             <German>XM307 (Hoch)</German>
             <Spanish>XM307 (Alto)</Spanish>
             <French>XM307 (Haut)</French>
-            <Czech>XM307 (vysoká montáž)</Czech>
+            <Czech>XM307 (Vysoká montáž)</Czech>
             <Polish>XM307 (Wysoki)</Polish>
             <Russian>XM307 (Высокий)</Russian>
             <Portuguese>XM307 (Alta)</Portuguese>
@@ -118,6 +118,8 @@
             <Russian>YABHON-R3 (штурмовик)</Russian>
             <French>YABHON-R3 (CAS)</French>
             <Hungarian>YABHON-R3 (Légitámogató)</Hungarian>
+            <Italian>YABHON-R3 (CAS)</Italian>
+            <Portuguese>YABHON-R3 (CAS)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_01_Name">
             <English>M-ATV</English>
@@ -138,7 +140,7 @@
             <Polish>M-ATV (CKM)</Polish>
             <Czech>M-ATV (TK)</Czech>
             <French>M-ATV (HMG)</French>
-            <Russian>M-ATV (Пулемет)</Russian>
+            <Russian>M-ATV (Пулемёт)</Russian>
             <Portuguese>M-ATV (HMG)</Portuguese>
             <Hungarian>M-ATV (nehézgéppuska)</Hungarian>
             <Italian>M-ATV (HMG)</Italian>
@@ -150,7 +152,7 @@
             <Polish>M-ATV (GMG)</Polish>
             <Czech>M-ATV (Granátomet)</Czech>
             <French>M-ATV (GMG)</French>
-            <Russian>M-ATV (Гранатомет)</Russian>
+            <Russian>M-ATV (Гранатомёт)</Russian>
             <Portuguese>M-ATV (GMG)</Portuguese>
             <Hungarian>M-ATV (gránátgéppuska)</Hungarian>
             <Italian>M-ATV (GMG)</Italian>
@@ -290,7 +292,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_01_box_Name">
             <English>HEMTT Container</English>
             <German>HEMTT Container</German>
-            <Spanish>HEMTT de contenedor</Spanish>
+            <Spanish>HEMTT con contenedor</Spanish>
             <Polish>HEMTT Kontener</Polish>
             <Czech>HEMTT Skříňový</Czech>
             <French>HEMTT Conteneur</French>
@@ -305,7 +307,7 @@
             <Spanish>HEMTT médico</Spanish>
             <Polish>HEMTT Medyczny</Polish>
             <Czech>HEMTT Zdravotnický</Czech>
-            <French>HEMTT Sanitaire</French>
+            <French>HEMTT Médical</French>
             <Russian>HEMTT Медицинский</Russian>
             <Portuguese>HEMTT Médico</Portuguese>
             <Hungarian>HEMTT (egészségügyi)</Hungarian>
@@ -366,7 +368,7 @@
             <Polish>Fennek (CKM)</Polish>
             <Czech>Fennek (TK)</Czech>
             <French>Fennek (HMG)</French>
-            <Russian>Феннек (Пулемет)</Russian>
+            <Russian>Феннек (Пулемёт)</Russian>
             <Portuguese>Fennek (HMG)</Portuguese>
             <Hungarian>Fennek (nehézgéppuska)</Hungarian>
             <Italian>Fennek (HMG)</Italian>
@@ -378,7 +380,7 @@
             <Polish>Fennek (GMG)</Polish>
             <Czech>Fennek (granátomet)</Czech>
             <French>Fennek (GMG)</French>
-            <Russian>Феннек (Гранатомет)</Russian>
+            <Russian>Феннек (Гранатомёт)</Russian>
             <Portuguese>Fennek (GMG)</Portuguese>
             <Hungarian>Fennek (gránátgéppuska)</Hungarian>
             <Italian>Fennek (GMG)</Italian>
@@ -438,7 +440,7 @@
             <Polish>KamAZ Transportowy (zakryty)</Polish>
             <Czech>KAMAZ Valník (krytý)</Czech>
             <French>KamAZ Transport (bâché)</French>
-            <Russian>КамАЗ Траспортный (Крытый)</Russian>
+            <Russian>КамАЗ Траспортный (крытый)</Russian>
             <Portuguese>KamAZ Transporte (coberto)</Portuguese>
             <Hungarian>KamAZ szállítójármű (ponyvás)</Hungarian>
             <Italian>KamAZ da trasporto (coperto)</Italian>
@@ -485,7 +487,7 @@
             <Spanish>KamAZ médico</Spanish>
             <Polish>KamAZ Medyczny</Polish>
             <Czech>KAMAZ Zdravotnický</Czech>
-            <French>KamAZ Sanitaire</French>
+            <French>KamAZ Médical</French>
             <Russian>КамАЗ Медицинский</Russian>
             <Portuguese>KamAZ Médico</Portuguese>
             <Hungarian>KamAZ (egészségügyi)</Hungarian>
@@ -510,7 +512,7 @@
             <Polish>Punisher (CKM)</Polish>
             <Czech>Punisher (TK)</Czech>
             <French>Punisher (HMG)</French>
-            <Russian>Kаратель (Пулемет)</Russian>
+            <Russian>Kаратель (Пулемёт)</Russian>
             <Portuguese>Punisher (HMG)</Portuguese>
             <Hungarian>Punisher (nehézgéppuska)</Hungarian>
             <Italian>Punisher (HMG)</Italian>
@@ -522,7 +524,7 @@
             <Polish>Punisher (GMG)</Polish>
             <Czech>Punisher (granátomet)</Czech>
             <French>Punisher (GMG)</French>
-            <Russian>Kаратель (Гранатомет)</Russian>
+            <Russian>Kаратель (Гранатомёт)</Russian>
             <Portuguese>Punisher (GMG)</Portuguese>
             <Hungarian>Punisher (gránátgéppuska)</Hungarian>
             <Italian>Punisher (GMG)</Italian>
@@ -534,7 +536,7 @@
             <Polish>T100 Black Eagle</Polish>
             <Czech>T100 Black Eagle</Czech>
             <French>T100 Black Eagle</French>
-            <Russian>T100 Черный Орел</Russian>
+            <Russian>T100 Чёрный Орел</Russian>
             <Portuguese>T100 Black Eagle</Portuguese>
             <Hungarian>T100 Fekete Sas</Hungarian>
             <Italian>T100 Black Eagle</Italian>
@@ -606,7 +608,7 @@
             <Polish>Typhoon Transportowy (przykryty)</Polish>
             <Czech>Typhoon valník (krytý)</Czech>
             <French>Typhoon Transport (bâché)</French>
-            <Russian>Тайфун Транспортный (kрытый)</Russian>
+            <Russian>Тайфун Транспортный (крытый)</Russian>
             <Portuguese>Typhoon Transporte (coberto)</Portuguese>
             <Hungarian>Typhoon szállítójármű (ponyvás)</Hungarian>
             <Italian>Typhoon da trasporto (coperto)</Italian>
@@ -614,7 +616,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_03_device_Name">
             <English>Typhoon Device</English>
             <German>Typhoon Gerät</German>
-            <Spanish>Typhoon de dispositivo</Spanish>
+            <Spanish>Typhoon con dispositivo</Spanish>
             <Polish>Typhoon Urządzenie</Polish>
             <Czech>Typhoon zařízení</Czech>
             <French>Typhoon Dispositif</French>
@@ -665,7 +667,7 @@
             <Spanish>Typhoon médico</Spanish>
             <Polish>Typhoon Medyczny</Polish>
             <Czech>Typhoon zdravotnický</Czech>
-            <French>Typhoon Sanitaire</French>
+            <French>Typhoon Médical</French>
             <Russian>Тайфун Медицинский</Russian>
             <Portuguese>Typhoon Médico</Portuguese>
             <Hungarian>Typhoon (egészségügyi)</Hungarian>
@@ -726,8 +728,10 @@
             <Polish>CH-47I Chinook (nieuzbrojony)</Polish>
             <Russian>CH-47I Chinook (невооруженный)</Russian>
             <Czech>CH-47I Chinook (neozbrojený)</Czech>
-            <French>CH-47I Chinook (Neozbrojený)</French>
+            <French>CH-47I Chinook (non-armé)</French>
             <Hungarian>CH-47I Chinook (fegyvertelen)</Hungarian>
+            <Italian>CH-47I Chinook (disarmato)</Italian>
+            <Portuguese>CH-47I Chinook (desarmado)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_CAS_01_Name">
             <English>A-10D Thunderbolt II</English>
@@ -818,7 +822,7 @@
             <German>Ka-60 Kasatka (unbewaffnet)</German>
             <Spanish>Ka-60 Kasatka (desarmado)</Spanish>
             <Polish>Ka-60 Kasatka (nieuzbrojony)</Polish>
-            <Czech>Ka-60 Kasatka (neozbrojená)</Czech>
+            <Czech>Ka-60 Kasatka (neozbrojený)</Czech>
             <French>Ka-60 Kasatka (non-armé)</French>
             <Russian>Ka-60 Касатка (невооруженный)</Russian>
             <Portuguese>Ka-60 Kasatka (desarmado)</Portuguese>
@@ -867,7 +871,7 @@
             <Spanish>M18A1 Claymore</Spanish>
             <Polish>Mina kierunkowa M18A1 Claymore</Polish>
             <Czech>Mina Claymore M18A1</Czech>
-            <French>M18A1 Claymore Mine antipersonnel à effet dirigé</French>
+            <French>M18A1 Claymore</French>
             <Russian>M18A1 Клеймор</Russian>
             <Portuguese>M18A1 Claymore</Portuguese>
             <Hungarian>M18A1 Claymore akna</Hungarian>
@@ -891,7 +895,7 @@
             <Spanish>Bloque de demolición M112</Spanish>
             <Polish>Ładunek burzący M112</Polish>
             <Czech>Výbušná nálož M112 </Czech>
-            <French>Pétard M112</French>
+            <French>M112 Block de Démolition</French>
             <Russian>M112 подрывной заряд</Russian>
             <Portuguese>M112 Carga de Demolição</Portuguese>
             <Hungarian>M112 romboló tömb</Hungarian>
@@ -914,7 +918,7 @@
             <German>M83 Rauchgranate (Weiss)</German>
             <Spanish>Granada de humo M83 (Blanco)</Spanish>
             <Polish>Granat dymny M83 (Biały)</Polish>
-            <Czech>M83 Kouřový Granát (bílý)</Czech>
+            <Czech>M83 Kouřový Granát (Bílý)</Czech>
             <French>M83 Grenade fumigène (Blanche)</French>
             <Russian>M83 дымовая граната (Белый)</Russian>
             <Portuguese>M83 Granada de fumaça (Branca)</Portuguese>
@@ -926,7 +930,7 @@
             <German>M18 Rauchgranate (Blau)</German>
             <Spanish>Granada de humo M18 (Azul)</Spanish>
             <Polish>Granat dymny M18 (Niebieski)</Polish>
-            <Czech>M18 Kouřový Granát (modrý)</Czech>
+            <Czech>M18 Kouřový Granát (Modrý)</Czech>
             <French>M18 Grenade fumigène (Bleue)</French>
             <Russian>M18 дымовая граната (Синий)</Russian>
             <Portuguese>M18 Granada de fumaça (Azul)</Portuguese>
@@ -938,7 +942,7 @@
             <German>M18 Rauchgranate (Grün)</German>
             <Spanish>Granada de humo M18 (Verde)</Spanish>
             <Polish>Granat dymny M18 (Zielony)</Polish>
-            <Czech>M18 Kouřový Granát (zelený)</Czech>
+            <Czech>M18 Kouřový Granát (Zelený)</Czech>
             <French>M18 Grenade fumigène (Verte)</French>
             <Russian>M18 дымовая граната (Зелёный)</Russian>
             <Portuguese>M18 Granada de fumaça (Verde)</Portuguese>
@@ -950,7 +954,7 @@
             <German>M18 Rauchgranate (Orange)</German>
             <Spanish>Granada de humo M18 (Naranja)</Spanish>
             <Polish>Granat dymny M18 (Pomarańczowy)</Polish>
-            <Czech>M18 Kouřový Granát (oranžový)</Czech>
+            <Czech>M18 Kouřový Granát (Oranžový)</Czech>
             <French>M18 Grenade fumigène (Orange)</French>
             <Russian>M18 дымовая граната (Оранжевый)</Russian>
             <Portuguese>M18 Granada de fumaça (Laranja)</Portuguese>
@@ -962,7 +966,7 @@
             <German>M18 Rauchgranate (Violett)</German>
             <Spanish>Granada de humo M18 (Púrpura)</Spanish>
             <Polish>Granat dymny M18 (Fioletowy)</Polish>
-            <Czech>M18 Kouřový Granát (fialový)</Czech>
+            <Czech>M18 Kouřový Granát (Fialový)</Czech>
             <French>M18 Grenade fumigène (Pourpre)</French>
             <Russian>M18 дымовая граната (Пурпурный)</Russian>
             <Portuguese>M18 Granada de fumaça (Roxa)</Portuguese>
@@ -974,7 +978,7 @@
             <German>M18 Rauchgranate (Rot)</German>
             <Spanish>Granada de humo M18 (Rojo)</Spanish>
             <Polish>Granat dymny M18 (Czerwony)</Polish>
-            <Czech>M18 Kouřový Granát (červený)</Czech>
+            <Czech>M18 Kouřový Granát (Červený)</Czech>
             <French>M18 Grenade fumigène (Rouge)</French>
             <Russian>M18 дымовая граната (Красный)</Russian>
             <Portuguese>M18 Granada de fumaça (Vermelha)</Portuguese>
@@ -986,9 +990,9 @@
             <German>M18 Rauchgranate (Gelb)</German>
             <Spanish>Granada de humo M18 (Amarillo)</Spanish>
             <Polish>Granat dymny M18 (Żółty)</Polish>
-            <Czech>M18 Kouřový Granát (žlutý)</Czech>
+            <Czech>M18 Kouřový Granát (Žlutý)</Czech>
             <French>M18 Grenade fumigène (Jaune)</French>
-            <Russian>M183 дымовая граната (Жёлтые)</Russian>
+            <Russian>M183 дымовая граната (Жёлтый)</Russian>
             <Portuguese>M18 Granada de fumaça (Amarela)</Portuguese>
             <Hungarian>M18 füstgránát (Sárga)</Hungarian>
             <Italian>M18 Granata fumogena (Giallo)</Italian>
@@ -1011,7 +1015,7 @@
             <Spanish>Mina antipersona VS-50</Spanish>
             <Polish>Mina przeciwpiechotna VS-50</Polish>
             <Czech>Protipěchotní mina VS-50 </Czech>
-            <French>VS-50 Mine antipersonnel à pression</French>
+            <French>VS-50 Mine AP</French>
             <Russian>VS-50 Противопехотная мина</Russian>
             <Portuguese>VS-50 Mina antipessoal</Portuguese>
             <Hungarian>VS-50 gyalogsági taposóakna</Hungarian>
@@ -1023,7 +1027,7 @@
             <Spanish>Mina antipersona M26</Spanish>
             <Polish>Mina przeciwpiechotna M26</Polish>
             <Czech>Šrapnelová mina M26</Czech>
-            <French>M26  Mine antipersonnel bondissante</French>
+            <French>M26  Mine AP bondissante</French>
             <Russian>M26 Противопехотная мина</Russian>
             <Portuguese>M26 Mina saltadora antipessoal</Portuguese>
             <Hungarian>M26 gyalogsági ugróakna</Hungarian>
@@ -1035,7 +1039,7 @@
             <Spanish>Mina antipersona de alambre PMR-3</Spanish>
             <Polish>Mina przeciwpiechotna PMR-3</Polish>
             <Czech>Nástražná mina PMR-3</Czech>
-            <French>PMR-3 Mine antipersonnel à traction</French>
+            <French>PMR-3 Mine AP à traction</French>
             <Russian>PMR-3 Противопехотная мина</Russian>
             <Portuguese>PMR-3 Mina antipessoal (armadilha)</Portuguese>
             <Hungarian>PMR-3 botlódrótos gyalogsági akna</Hungarian>
@@ -1050,6 +1054,8 @@
             <Hungarian>P99</Hungarian>
             <Spanish>P99</Spanish>
             <Russian>P99</Russian>
+            <Portuguese>P99</Portuguese>
+            <Italian>P99</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Rook40_Name">
             <English>MP-443 Grach</English>
@@ -1060,6 +1066,8 @@
             <Hungarian>MP-443 Grach</Hungarian>
             <Spanish>MP-443 Grach</Spanish>
             <Russian>МР-443 "Грач"</Russian>
+            <Portuguese>MP-443 Grach</Portuguese>
+            <Italian>MP-443 Grach</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_ACPC2_Name">
             <English>Custom Covert II</English>
@@ -1070,6 +1078,8 @@
             <Hungarian>Custom Covert II</Hungarian>
             <Spanish>Custom Covert II</Spanish>
             <Russian>Custom Covert II</Russian>
+            <Portuguese>Custom Covert II</Portuguese>
+            <Italian>ACP-C2</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_Name">
             <English>FNX-45 Tactical</English>
@@ -1080,6 +1090,8 @@
             <Hungarian>FNX-45 Tactical</Hungarian>
             <Spanish>FNX-45 Tactical</Spanish>
             <Russian>FNX-45 Tactical</Russian>
+            <Portuguese>FNX-45 Tactical</Portuguese>
+            <Italian>FNX-45 Tactical</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_02_Name">
             <English>Chiappa Rhino 60DS</English>
@@ -1090,6 +1102,8 @@
             <Hungarian>Chiappa Rhino 6DS</Hungarian>
             <Spanish>Chiappa Rhino 60DS</Spanish>
             <Russian>Chiappa Rhino 60DS</Russian>
+            <Portuguese>Chiappa Rhino 60DS</Portuguese>
+            <Italian>Chiappa Rhino 6DS</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_Signal_Name">
             <English>Taurus Judge</English>
@@ -1100,6 +1114,8 @@
             <Hungarian>Taurus Judge</Hungarian>
             <Spanish>Taurus Judge</Spanish>
             <Russian>Taurus Judge</Russian>
+            <Portuguese>Taurus Judge</Portuguese>
+            <Italian>Taurus Judge</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_NLAW_Name">
             <English>NLAW</English>
@@ -1110,6 +1126,8 @@
             <Hungarian>NLAW</Hungarian>
             <Spanish>NLAW</Spanish>
             <Russian>NLAW</Russian>
+            <Portuguese>NLAW</Portuguese>
+            <Italian>NLAW</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_RPG32_Name">
             <English>RPG-32</English>
@@ -1120,26 +1138,32 @@
             <Hungarian>RPG-32</Hungarian>
             <Spanish>RPG-32</Spanish>
             <Russian>РПГ-32</Russian>
+            <Portuguese>RPG-32</Portuguese>
+            <Italian>RPG-32</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_Name">
             <English>Mini-Spike (AA)</English>
             <German>Mini-Spike (FlaRak)</German>
-            <Czech>Mini-Spike (PL)</Czech>
+            <Czech>Mini-Spike (AA)</Czech>
             <Polish>Mini-Spike (AA)</Polish>
             <French>Mini-Spike (AA)</French>
             <Hungarian>Mini-Spike (Repülő-elhárító)</Hungarian>
             <Spanish>Mini-Spike (AA)</Spanish>
             <Russian>Mini-Spike (AA)</Russian>
+            <Portuguese>Mini-Spike (AA)</Portuguese>
+            <Italian>Mini-Spike (AA)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_short_Name">
             <English>Mini-Spike (AT)</English>
             <German>Mini-Spike (PALR)</German>
-            <Czech>Mini-Spike (PT)</Czech>
+            <Czech>Mini-Spike (AT)</Czech>
             <Polish>Mini-Spike (AT)</Polish>
-            <French>Mini-Spike (AT)</French>
+            <French>Mini-Spike (AC)</French>
             <Hungarian>Mini-Spike (Tankelhárító)</Hungarian>
             <Spanish>Mini-Spike (AT)</Spanish>
             <Russian>Mini-Spike (AT)</Russian>
+            <Portuguese>Mini-Spike (AT)</Portuguese>
+            <Italian>Mini-Spike (AT)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Name">
             <English>MX</English>
@@ -1150,16 +1174,20 @@
             <Hungarian>MX</Hungarian>
             <Spanish>MX</Spanish>
             <Russian>MX</Russian>
+            <Portuguese>MX</Portuguese>
+            <Italian>MX</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Black_Name">
             <English>MX (Black)</English>
             <German>MX (Schwarz)</German>
             <Polish>MX (Czarny)</Polish>
-            <Czech>MX (černý)</Czech>
-            <French>MX ( Noir)</French>
+            <Czech>MX (Černý)</Czech>
+            <French>MX (Noir)</French>
             <Hungarian>MX (Fekete)</Hungarian>
             <Spanish>MX (Negro)</Spanish>
-            <Russian>MX (черный)</Russian>
+            <Russian>MX (Чёрный)</Russian>
+            <Portuguese>MX (Preto)</Portuguese>
+            <Italian>MX (Nero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Name">
             <English>MXC</English>
@@ -1170,16 +1198,20 @@
             <Hungarian>MXC</Hungarian>
             <Spanish>MXC</Spanish>
             <Russian>MXC</Russian>
+            <Portuguese>MXC</Portuguese>
+            <Italian>MXC</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Black_Name">
             <English>MXC (Black)</English>
             <German>MXC (Schwarz)</German>
             <Polish>MXC (Czarny)</Polish>
-            <Czech>MXC (černý)</Czech>
+            <Czech>MXC (Černý)</Czech>
             <French>MXC (Noir)</French>
             <Hungarian>MXC (Fekete)</Hungarian>
             <Spanish>MXC (Negro)</Spanish>
-            <Russian>MXC (черный)</Russian>
+            <Russian>MXC (Чёрный)</Russian>
+            <Portuguese>MXC (Preto)</Portuguese>
+            <Italian>MXC (Nero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Name">
             <English>MX 3GL</English>
@@ -1190,16 +1222,20 @@
             <Hungarian>MX 3GL</Hungarian>
             <Spanish>MX 3GL</Spanish>
             <Russian>MX 3GL</Russian>
+            <Portuguese>MX 3GL</Portuguese>
+            <Italian>MX 3GL</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Black_Name">
             <English>MX 3GL (Black)</English>
             <German>MX 3GL (Schwarz)</German>
             <Polish>MX 3GL (Czarny)</Polish>
-            <Czech>MX 3GL (černý)</Czech>
-            <French>MX 3 GL (Noir)</French>
+            <Czech>MX 3GL (Černý)</Czech>
+            <French>MX 3GL (Noir)</French>
             <Hungarian>MX 3GL (Fekete)</Hungarian>
             <Spanish>MX 3GL (Negro)</Spanish>
-            <Russian>MX 3GL (черный)</Russian>
+            <Russian>MX 3GL (Чёрный)</Russian>
+            <Portuguese>MX 3GL (Preto)</Portuguese>
+            <Italian>MX 3GL (Nero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Name">
             <English>MX LSW</English>
@@ -1210,16 +1246,20 @@
             <Hungarian>MX LSW</Hungarian>
             <Spanish>MX LSW</Spanish>
             <Russian>MX LSW</Russian>
+            <Portuguese>MX LSW</Portuguese>
+            <Italian>MX LSW</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Black_Name">
             <English>MX LSW (Black)</English>
             <German>MX LSW (Schwarz)</German>
             <Polish>MX LSW (Czarny)</Polish>
-            <Czech>MX LSW (černý)</Czech>
+            <Czech>MX LSW (Černý)</Czech>
             <French>MX LSW (Noir)</French>
             <Hungarian>MX LSW (Fekete)</Hungarian>
             <Spanish>MX LSW (Negro)</Spanish>
-            <Russian>MX LSW (черный)</Russian>
+            <Russian>MX LSW (Чёрный)</Russian>
+            <Portuguese>MX LSW (Preto)</Portuguese>
+            <Italian>MX LSW (Nero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Name">
             <English>MXM</English>
@@ -1230,16 +1270,20 @@
             <Hungarian>MXM</Hungarian>
             <Spanish>MXM</Spanish>
             <Russian>MXM</Russian>
+            <Portuguese>MXM</Portuguese>
+            <Italian>MXM</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Black_Name">
             <English>MXM (Black)</English>
             <German>MXM (Schwarz)</German>
             <Polish>MXM (Czarny)</Polish>
-            <Czech>MXM (černý)</Czech>
+            <Czech>MXM (Černý)</Czech>
             <French>MXM (Noir)</French>
             <Hungarian>MXM (Fekete)</Hungarian>
             <Spanish>MXM (Negro)</Spanish>
-            <Russian>MXM (черный)</Russian>
+            <Russian>MXM (Чёрный)</Russian>
+            <Portuguese>MXM (Preto)</Portuguese>
+            <Italian>MXM (Nero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_Name">
             <English>KH2002 Sama</English>
@@ -1250,6 +1294,8 @@
             <Hungarian>KH2002 Sama</Hungarian>
             <Spanish>KH2002 Sama</Spanish>
             <Russian>KH2002 Сама</Russian>
+            <Portuguese>KT2002 Sama</Portuguese>
+            <Italian>KT2002 Katiba</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_C_Name">
             <English>KH2002C Sama</English>
@@ -1260,6 +1306,8 @@
             <Hungarian>KH2002C Sama</Hungarian>
             <Spanish>KH2002C Sama</Spanish>
             <Russian>KH2002C Сама</Russian>
+            <Portuguese>KT2002C Sama</Portuguese>
+            <Italian>KT2002C Katiba</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_GL_Name">
             <English>KH2002 Sama KGL</English>
@@ -1270,16 +1318,20 @@
             <Hungarian>KH2002 Sama KGL</Hungarian>
             <Spanish>KH2002 Sama KGL</Spanish>
             <Russian>KH2002 Сама KGL</Russian>
+            <Portuguese>KT2002 Sama KGL</Portuguese>
+            <Italian>KT2002 Katiba KGL</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_Name">
             <English>F2000 (Camo)</English>
             <German>F2000 (Tarnmuster)</German>
             <Polish>F2000 (kamuflaż)</Polish>
-            <Czech>F2000 (kamufláž</Czech>
+            <Czech>F2000 (Kamufláž)</Czech>
             <French>F2000 (Camo)</French>
             <Hungarian>F2000 (Terepmintás)</Hungarian>
             <Spanish>F2000 (Camuflaje)</Spanish>
-            <Russian>F2000 (камо)</Russian>
+            <Russian>F2000 (Камо)</Russian>
+            <Portuguese>F2000 (Camo)</Portuguese>
+            <Italian>F2000 (Camo)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_plain_Name">
             <English>F2000</English>
@@ -1290,16 +1342,20 @@
             <Hungarian>F2000</Hungarian>
             <Spanish>F2000</Spanish>
             <Russian>F2000</Russian>
+            <Portuguese>F2000</Portuguese>
+            <Italian>F2000</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20C_Name">
             <English>F2000 Tactical (Camo)</English>
             <German>F2000 Tactical (Tarnmuster)</German>
             <Polish>F2000 Tactical (kamuflaż)</Polish>
-            <Czech>F2000 Tactical (černý)</Czech>
+            <Czech>F2000 Tactical (Černý)</Czech>
             <French>F2000 Tactical (Camo)</French>
             <Hungarian>F2000 Tactical (Terepmintás)</Hungarian>
             <Spanish>F2000 Tactical (Camuflaje)</Spanish>
-            <Russian>F2000 Tactical (камо)</Russian>
+            <Russian>F2000 Tactical (Камо)</Russian>
+            <Portuguese>F2000 Tactical (Camo)</Portuguese>
+            <Italian>F2000 Tactical (Camo)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20C_plain_Name">
             <English>F2000 Tactical</English>
@@ -1310,16 +1366,20 @@
             <Hungarian>F2000 Tactical</Hungarian>
             <Spanish>F2000 Tactical</Spanish>
             <Russian>F2000 Tactical</Russian>
+            <Portuguese>F2000 Tactical</Portuguese>
+            <Italian>F2000 Tactical</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_GL_Name">
             <English>F2000 EGLM (Camo)</English>
             <German>F2000 EGLM (Tarnmuster)</German>
             <Polish>F2000 EGLM (kamuflaż)</Polish>
-            <Czech>F2000 EGLM (kamufláž)</Czech>
+            <Czech>F2000 EGLM (Kamufláž)</Czech>
             <French>F2000 EGLM (Camo)</French>
             <Hungarian>F2000 EGLM (Terepmintás)</Hungarian>
             <Spanish>F2000 EGLM (Camuflaje)</Spanish>
-            <Russian>F2000 EGLM (камо)</Russian>
+            <Russian>F2000 EGLM (Камо)</Russian>
+            <Portuguese>F2000 EGLM (Camo)</Portuguese>
+            <Italian>F2000 EGLM (Camo)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_GL_plain_Name">
             <English>F2000 EGLM</English>
@@ -1330,6 +1390,8 @@
             <Hungarian>F2000 EGLM</Hungarian>
             <Spanish>F2000 EGLM</Spanish>
             <Russian>F2000 EGLM</Russian>
+            <Portuguese>F2000 EGLM</Portuguese>
+            <Italian>F2000 EGLM</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG21_Name">
             <English>TAR-21</English>
@@ -1340,6 +1402,8 @@
             <Hungarian>TAR-21</Hungarian>
             <Spanish>TAR-21</Spanish>
             <Russian>TAR-21</Russian>
+            <Portuguese>TAR-21</Portuguese>
+            <Italian>TAR-21</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG20_Name">
             <English>CTAR-21</English>
@@ -1350,6 +1414,8 @@
             <Hungarian>CTAR-21</Hungarian>
             <Spanish>CTAR-21</Spanish>
             <Russian>CTAR-21</Russian>
+            <Portuguese>CTAR-21</Portuguese>
+            <Italian>CTAR-21</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG21_GL_Name">
             <English>TAR-21 EGLM</English>
@@ -1360,6 +1426,8 @@
             <Hungarian>TAR-21 EGLM</Hungarian>
             <Spanish>TAR-21 EGLM</Spanish>
             <Russian>TAR-21 EGLM</Russian>
+            <Portuguese>TAR-21 EGLM</Portuguese>
+            <Italian>TAR-21 EGLM</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_01_Name">
             <English>Vector SMG</English>
@@ -1370,6 +1438,8 @@
             <Hungarian>Vector SMG</Hungarian>
             <Spanish>Vector SMG</Spanish>
             <Russian>Vector SMG</Russian>
+            <Portuguese>Vector SMG</Portuguese>
+            <Italian>Vector SMG</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_02_Name">
             <English>Scorpion Evo 3 A1</English>
@@ -1380,6 +1450,8 @@
             <Hungarian>Scorpion Evo 3 A1</Hungarian>
             <Spanish>Scorpion Evo 3 A1</Spanish>
             <Russian>Scorpion Evo 3 A1</Russian>
+            <Portuguese>Scorpion Evo 3 A1</Portuguese>
+            <Italian>Scorpion Evo 3 A1</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_PDW2000_Name">
             <English>CPW</English>
@@ -1390,6 +1462,8 @@
             <Hungarian>CPW</Hungarian>
             <Spanish>CPW</Spanish>
             <Russian>CPW</Russian>
+            <Portuguese>CPW</Portuguese>
+            <Italian>CPW</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SDAR_Name">
             <English>RFB SDAR</English>
@@ -1400,6 +1474,8 @@
             <Hungarian>RFB SDAR</Hungarian>
             <Spanish>RFB SDAR</Spanish>
             <Russian>RFB SDAR</Russian>
+            <Portuguese>RFB SDAR</Portuguese>
+            <Italian>RFB SDAR</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Mk200_Name">
             <English>Stoner 99 LMG</English>
@@ -1410,6 +1486,8 @@
             <Hungarian>Stoner 99 Könnyűgéppuska</Hungarian>
             <Spanish>Stoner 99 LMG</Spanish>
             <Russian>Stoner 99 LMG</Russian>
+            <Portuguese>Stoner 99 LMG</Portuguese>
+            <Italian>Stoner 99 LMG</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Zafir_Name">
             <English>Negev NG7</English>
@@ -1420,6 +1498,8 @@
             <Hungarian>Negev NG7</Hungarian>
             <Spanish>Negev NG7</Spanish>
             <Russian>Negev NG7</Russian>
+            <Portuguese>Negev NG7</Portuguese>
+            <Italian>Negev NG7</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_EBR_Name">
             <English>Mk14 Mod 1 EBR</English>
@@ -1430,6 +1510,8 @@
             <Hungarian>Mk14 Mod 1 EBR</Hungarian>
             <Spanish>Mk14 Mod 1 EBR</Spanish>
             <Russian>Mk14 Mod 1 EBR</Russian>
+            <Portuguese>Mk14 Mod 1 EBR</Portuguese>
+            <Italian>Mk14 Mod 1 EBR</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_Name">
             <English>GM6 Lynx</English>
@@ -1440,16 +1522,20 @@
             <Hungarian>GM6 Gepárd</Hungarian>
             <Spanish>GM6 Lynx</Spanish>
             <Russian>GM6 Lynx</Russian>
+            <Portuguese>GM6 Lynx</Portuguese>
+            <Italian>GM6 Lynx</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_camo_Name">
             <English>GM6 Lynx (Camo)</English>
             <German>GM6 Lynx (Tarnmuster)</German>
             <Polish>GM6 Lynx (kamuflaż)</Polish>
-            <Czech>GM6 Lynx (kamufláž)</Czech>
+            <Czech>GM6 Lynx (Kamufláž)</Czech>
             <French>GM6 Lynx (Camo)</French>
             <Hungarian>GM6 Gepárd (Terepmintás)</Hungarian>
             <Spanish>GM6 Lynx (Camuflaje)</Spanish>
-            <Russian>GM6 Lynx (камо)</Russian>
+            <Russian>GM6 Lynx (Камо)</Russian>
+            <Portuguese>GM6 Lynx (Camo)</Portuguese>
+            <Italian>GM6 Lynx (Camo)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_Name">
             <English>M200 Intervention</English>
@@ -1460,16 +1546,20 @@
             <Hungarian>M200 Intervention</Hungarian>
             <Spanish>M200 Intervention</Spanish>
             <Russian>M200 Intervention</Russian>
+            <Portuguese>M200 Intervention</Portuguese>
+            <Italian>M200 Intervention</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_camo_Name">
             <English>M200 Intervention (Camo)</English>
             <German>M200 Intervention (Tarnmuster)</German>
             <Polish>M200 Intervention (kamuflaż)</Polish>
-            <Czech>M200 Intervention (kamufláž)</Czech>
+            <Czech>M200 Intervention (Kamufláž)</Czech>
             <French>M200 Intervention (Camo)</French>
             <Hungarian>M200 Intervention (Terepmintás)</Hungarian>
             <Spanish>M200 Intervention (Camuflaje)</Spanish>
-            <Russian>M200 Intervention (камо)</Russian>
+            <Russian>M200 Intervention (Камо)</Russian>
+            <Portuguese>M200 Intervention (Camo)</Portuguese>
+            <Italian>M200 Intervention (Camo)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_01_Name">
             <English>VS-121</English>
@@ -1480,6 +1570,8 @@
             <Hungarian>VS-121</Hungarian>
             <Spanish>VS-121</Spanish>
             <Russian>VS-121</Russian>
+            <Portuguese>VS-121</Portuguese>
+            <Italian>VS-121</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_02">
             <English>Noreen "Bad News" ULR</English>
@@ -1487,27 +1579,47 @@
             <French>Noreen "Bad News" ULR</French>
             <Spanish>Noreen "Bad News" ULR</Spanish>
             <Russian>Noreen "Bad News" ULR</Russian>
+            <Italian>Noreen "Bad News" ULR</Italian>
+            <German>Noreen "Bad News" ULR</German>
+            <Polish>Noreen "Bad News" ULR</Polish>
+            <Hungarian>Noreen "Bad News"ULR</Hungarian>
+            <Portuguese>Noreen "Bad News" ULR</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02">
             <English>Noreen "Bad News" ULR (Black)</English>
-            <Czech>Noreen "Bad News" ULR (Black)</Czech>
+            <Czech>Noreen "Bad News" ULR (Černý)</Czech>
             <French>Noreen "Bad News" ULR (Noir)</French>
             <Spanish>Noreen "Bad News" ULR (Negro)</Spanish>
-            <Russian>Noreen "Bad News" ULR (черный)</Russian>
+            <Russian>Noreen "Bad News" ULR (Чёрный)</Russian>
+            <German>Noreen "Bad News" ULR (Schwarz)</German>
+            <Polish>Noreen "Bad News" ULR (czarny)</Polish>
+            <Italian>Noreen "Bad News" ULR (Nero)</Italian>
+            <Hungarian>Noreen "Bad News"ULR (Fekete)</Hungarian>
+            <Portuguese>Noreen "Bad News" ULR (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_camo">
             <English>Noreen "Bad News" ULR (Camo)</English>
-            <Czech>Noreen "Bad News" ULR (Camo)</Czech>
+            <Czech>Noreen "Bad News" ULR (Kamufláž)</Czech>
             <French>Noreen "Bad News" ULR (Camo)</French>
             <Spanish>Noreen "Bad News" ULR (Camuflaje)</Spanish>
-            <Russian>Noreen "Bad News" ULR (камо)</Russian>
+            <Russian>Noreen "Bad News" ULR (Камо)</Russian>
+            <German>Noreen "Bad News" ULR (Camo)</German>
+            <Polish>Noreen "Bad News" ULR (kamuflaż)</Polish>
+            <Italian>Noreen "Bad News" ULR (Camo)</Italian>
+            <Hungarian>Noreen "Bad News"ULR (Terepmintás)</Hungarian>
+            <Portuguese>Noreen "Bad News" ULR (Camuflagem)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_sniper">
             <English>Noreen "Bad News" ULR (Sand)</English>
-            <Czech>Noreen "Bad News" ULR (Sand)</Czech>
+            <Czech>Noreen "Bad News" ULR (Pouštní)</Czech>
             <French>Noreen "Bad News" ULR (Beige)</French>
             <Spanish>Noreen "Bad News" ULR (Arena)</Spanish>
-            <Russian>Noreen "Bad News" ULR (песочный)</Russian>
+            <Russian>Noreen "Bad News" ULR (Песочный)</Russian>
+            <German>Noreen "Bad News" ULR (Sand)</German>
+            <Polish>Noreen "Bad News" ULR (piaskowy)</Polish>
+            <Italian>Noreen "Bad News" ULR (Sabbia)</Italian>
+            <Hungarian>Noreen "Bad News"ULR (Homok)</Hungarian>
+            <Portuguese>Noreen "Bad News" ULR (Deserto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_03">
             <English>SIG 556</English>
@@ -1516,54 +1628,82 @@
             <Spanish>SIG 556</Spanish>
             <Russian>SIG 556</Russian>
             <Polish>SIG 556</Polish>
+            <German>SIG 556</German>
+            <Italian>SIG 556</Italian>
+            <Hungarian>SIG 556</Hungarian>
+            <Portuguese>SIG 556</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03">
             <English>SIG 556 (Black)</English>
-            <Czech>SIG 556 (Black)</Czech>
+            <Czech>SIG 556 (Černý)</Czech>
             <French>SIG 556 (Noir)</French>
             <Spanish>SIG 556 (Negro)</Spanish>
-            <Russian>SIG 556 (черный)</Russian>
+            <Russian>SIG 556 (Чёрный)</Russian>
             <Polish>SIG 556 (czarny)</Polish>
+            <German>SIG 556 (Schwarz)</German>
+            <Italian>SIG 556 (Nero)</Italian>
+            <Hungarian>SIG 556 (Fekete)</Hungarian>
+            <Portuguese>SIG 556 (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_khaki">
             <English>SIG 556 (Khaki)</English>
             <Czech>SIG 556 (Khaki)</Czech>
             <French>SIG 556 (Kaki)</French>
             <Spanish>SIG 556 (Caqui)</Spanish>
-            <Russian>SIG 556 (хаки)</Russian>
+            <Russian>SIG 556 (Хаки)</Russian>
             <Polish>SIG 556 (khaki)</Polish>
+            <German>SIG 556 (Khaki)</German>
+            <Italian>SIG 556 (Khaki)</Italian>
+            <Hungarian>SIG 556 (Khaki)</Hungarian>
+            <Portuguese>SIG 556 (Caqui)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_tan">
             <English>SIG 556 (Sand)</English>
-            <Czech>SIG 556 (Sand)</Czech>
+            <Czech>SIG 556 (Pouštní)</Czech>
             <French>SIG 556 (Beige)</French>
             <Spanish>SIG 556 (Arena)</Spanish>
-            <Russian>SIG 556 (песочный)</Russian>
+            <Russian>SIG 556 (Песочный)</Russian>
             <Polish>SIG 556 (piaskowy)</Polish>
+            <German>SIG 556 (Sand)</German>
+            <Italian>SIG 556 (Sabbia)</Italian>
+            <Hungarian>SIG 556 (Homok)</Hungarian>
+            <Portuguese>SIG 556 (Deserto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_multicam">
             <English>SIG 556 (Camo)</English>
-            <Czech>SIG 556 (Camo)</Czech>
+            <Czech>SIG 556 (Kamufláž)</Czech>
             <French>SIG 556 (Camo)</French>
             <Spanish>SIG 556 (Camuflaje)</Spanish>
-            <Russian>SIG 556 (камо)</Russian>
+            <Russian>SIG 556 (Камо)</Russian>
             <Polish>SIG 556 (kamuflaż)</Polish>
+            <German>SIG 556 (Camo)</German>
+            <Italian>SIG 556 (Camo)</Italian>
+            <Hungarian>SIG 556 (Terepmintás)</Hungarian>
+            <Portuguese>SIG 556 (Camuflagem)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_woodland">
             <English>SIG 556 (Woodland)</English>
             <Czech>SIG 556 (Woodland)</Czech>
             <French>SIG 556 (Woodland)</French>
             <Spanish>SIG 556 (Bosque)</Spanish>
-            <Russian>SIG 556 (лесной)</Russian>
+            <Russian>SIG 556 (Лесной)</Russian>
             <Polish>SIG 556 (leśny)</Polish>
+            <German>SIG 556 (Woodland)</German>
+            <Italian>SIG 556 (Woodland)</Italian>
+            <Hungarian>SIG 556 (Erdőmintás)</Hungarian>
+            <Portuguese>SIG 556 (Floresta)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
             <English>SIG 556 (provisional) spotter</English>
-            <Czech>SIG 556 (provisional) spotter</Czech>
+            <Czech>SIG 556 (Provizorní) spotter</Czech>
             <French>SIG 556 (provisoire) Observateur</French>
             <Spanish>SIG 556 (provisional) observador</Spanish>
             <Russian>SIG 556 (provisional) корректировщик</Russian>
             <Polish>SIG 556 (prowizoryczny) obserwator</Polish>
+            <German>SIG 556 (provisorisch) Beobachter</German>
+            <Italian>SIG 556 (provisional) spotter</Italian>
+            <Hungarian>SIG 556 (Ellátmányi) Megfigyelő</Hungarian>
+            <Portuguese>SIG 556 (provisional) observador</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_04">
             <English>ASP-1 Kir</English>
@@ -1571,20 +1711,35 @@
             <French>ASP-1 Kir</French>
             <Spanish>ASP-1 Kir</Spanish>
             <Russian>ASP-1 Kir</Russian>
+            <German>ASP-1 Kir</German>
+            <Italian>ASP-1 Kir</Italian>
+            <Polish>ASP-1 Kir</Polish>
+            <Hungarian>ASP-1 Kir</Hungarian>
+            <Portuguese>ASP-1 Kir</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04">
             <English>ASP-1 Kir (Black)</English>
-            <Czech>ASP-1 Kir (Black)</Czech>
+            <Czech>ASP-1 Kir (Čený)</Czech>
             <French>ASP-1 Kir (Noir)</French>
             <Spanish>ASP-1 Kir (Negro)</Spanish>
-            <Russian>ASP-1 Kir (черный)</Russian>
+            <Russian>ASP-1 Kir (Чёрный)</Russian>
+            <German>ASP-1 Kir (Schwarz)</German>
+            <Polish>ASP-1 Kir (czarny)</Polish>
+            <Italian>ASP-1 Kir (Nero)</Italian>
+            <Hungarian>ASP-1 Kir (Fekete)</Hungarian>
+            <Portuguese>ASP-1 Kir (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04_Tan">
             <English>ASP-1 Kir (Tan)</English>
-            <Czech>ASP-1 Kir (Tan)</Czech>
+            <Czech>ASP-1 Kir (Pouštní)</Czech>
             <French>ASP-1 Kir (Tan)</French>
             <Spanish>ASP-1 Kir (Tan)</Spanish>
-            <Russian>ASP-1 Kir (бронзовый)</Russian>
+            <Russian>ASP-1 Kir (Бронзовый)</Russian>
+            <German>ASP-1 Kir (Hellbraun)</German>
+            <Polish>ASP-1 Kir (Tan)</Polish>
+            <Italian>ASP-1 Kir (Tan)</Italian>
+            <Hungarian>ASP-1 Kir (Cserszín)</Hungarian>
+            <Portuguese>ASP-1 Kir (Deserto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_05">
             <English>Cyrus</English>
@@ -1592,27 +1747,47 @@
             <French>Cyrus</French>
             <Spanish>Cyrus</Spanish>
             <Russian>Cyrus</Russian>
+            <German>Cyrus</German>
+            <Italian>Cyrus</Italian>
+            <Polish>Cyrus</Polish>
+            <Hungarian>Cyrus</Hungarian>
+            <Portuguese>Cyrus</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_blk">
             <English>Cyrus (Black)</English>
-            <Czech>Cyrus (Black)</Czech>
+            <Czech>Cyrus (Černý)</Czech>
             <French>Cyrus (Noir)</French>
             <Spanish>Cyrus (Negro)</Spanish>
-            <Russian>Cyrus (черный)</Russian>
+            <Russian>Cyrus (Чёрный)</Russian>
+            <German>Cyrus (Schwarz)</German>
+            <Polish>Cyrus (czarny)</Polish>
+            <Italian>Cyrus (Nero)</Italian>
+            <Hungarian>Cyrus (Fekete)</Hungarian>
+            <Portuguese>Cyrus (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_hex">
             <English>Cyrus (Hex)</English>
             <Czech>Cyrus (Hex)</Czech>
             <French>Cyrus (Hex)</French>
             <Spanish>Cyrus (Hex)</Spanish>
-            <Russian>Cyrus (гекс)</Russian>
+            <Russian>Cyrus (Гекс)</Russian>
+            <German>Cyrus (Hex)</German>
+            <Polish>Cyrus (hex)</Polish>
+            <Italian>Cyrus (Hex)</Italian>
+            <Hungarian>Cyrus (Hex)</Hungarian>
+            <Portuguese>Cyrus (Hex)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_tan">
             <English>Cyrus (Tan)</English>
-            <Czech>Cyrus (Tan)</Czech>
+            <Czech>Cyrus (Pouštní)</Czech>
             <French>Cyrus (Tan)</French>
             <Spanish>Cyrus (Tan)</Spanish>
-            <Russian>Cyrus (бронза)</Russian>
+            <Russian>Cyrus (Бронза)</Russian>
+            <German>Cyrus (Hellbraun)</German>
+            <Polish>Cyrus (podpalany)</Polish>
+            <Italian>Cyrus (Tan)</Italian>
+            <Hungarian>Cyrus (Cserszín)</Hungarian>
+            <Portuguese>Cyrus (Deserto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_06">
             <English>M14</English>
@@ -1621,22 +1796,34 @@
             <Spanish>M14</Spanish>
             <Russian>M14</Russian>
             <Polish>M14</Polish>
+            <German>M14</German>
+            <Italian>M14</Italian>
+            <Hungarian>M14</Hungarian>
+            <Portuguese>M14</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_camo">
             <English>M14 (Camo)</English>
-            <Czech>M14 (Camo)</Czech>
+            <Czech>M14 (Kamufláž)</Czech>
             <French>M14 (Camo)</French>
             <Spanish>M14 (Camuflaje)</Spanish>
             <Russian>M14 (Камо)</Russian>
             <Polish>M14 (kamuflaż)</Polish>
+            <German>M14 (Camo)</German>
+            <Italian>M14 (Camo)</Italian>
+            <Hungarian>M14 (Terepmintás)</Hungarian>
+            <Portuguese>M14 (Camuflagem)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_olive">
             <English>M14 (Olive)</English>
-            <Czech>M14 (Olive)</Czech>
+            <Czech>M14 (Olivový)</Czech>
             <French>M14 (Olive)</French>
             <Spanish>M14 (Oliva)</Spanish>
             <Russian>M14 (Олива)</Russian>
             <Polish>M14 (oliwkowy)</Polish>
+            <German>M14 (Olive)</German>
+            <Italian>M14 (Olive)</Italian>
+            <Hungarian>M14 (Olíva)</Hungarian>
+            <Portuguese>M14 (Oliva)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01">
             <English>HK121</English>
@@ -1644,20 +1831,35 @@
             <French>HK121</French>
             <Spanish>HK121</Spanish>
             <Russian>HK121</Russian>
+            <German>HK121</German>
+            <Italian>HK121</Italian>
+            <Polish>HK121</Polish>
+            <Hungarian>HK121</Hungarian>
+            <Portuguese>HK121</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_hex">
             <English>HK121 (Hex)</English>
             <Czech>HK121 (Hex)</Czech>
             <French>HK121 (Hex)</French>
             <Spanish>HK121 (Hex)</Spanish>
-            <Russian>HK121 (гекс)</Russian>
+            <Russian>HK121 (Гекс)</Russian>
+            <German>HK121 (Hex)</German>
+            <Polish>HK121 (hex)</Polish>
+            <Italian>HK121 (Hex)</Italian>
+            <Hungarian>HK121 (Hex)</Hungarian>
+            <Portuguese>HK121 (Hex)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_tan">
             <English>HK121 (Tan)</English>
-            <Czech>HK121 (Tan)</Czech>
+            <Czech>HK121 (Pouštní)</Czech>
             <French>HK121 (Tan)</French>
             <Spanish>HK121 (Tan)</Spanish>
-            <Russian>HK121 (бронза)</Russian>
+            <Russian>HK121 (Бронза)</Russian>
+            <German>HK121 (Hellbraun)</German>
+            <Polish>HK121 (podpalany)</Polish>
+            <Italian>HK121 (Tan)</Italian>
+            <Hungarian>HK121 (Cserszín)</Hungarian>
+            <Portuguese>HK121 (Deserto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02">
             <English>LWMMG</English>
@@ -1666,6 +1868,10 @@
             <Spanish>LWMMG</Spanish>
             <Russian>LWMMG</Russian>
             <Polish>LWMMG</Polish>
+            <German>LWMMG</German>
+            <Italian>LWMMG</Italian>
+            <Hungarian>LWMMG</Hungarian>
+            <Portuguese>LWMMG</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_camo">
             <English>LWMMG (MTP)</English>
@@ -1674,22 +1880,34 @@
             <Spanish>LWMMG (MTP)</Spanish>
             <Russian>LWMMG (MTP)</Russian>
             <Polish>LWMMG (MTP)</Polish>
+            <German>LWMMG (MTP)</German>
+            <Italian>LWMMG (MTP)</Italian>
+            <Hungarian>LWMMG (MTP)</Hungarian>
+            <Portuguese>LWMMG (MTP)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_black">
             <English>LWMMG (Black)</English>
-            <Czech>LWMMG (Black)</Czech>
+            <Czech>LWMMG (Černý)</Czech>
             <French>LWMMG (Noir)</French>
             <Spanish>LWMMG (Negro)</Spanish>
-            <Russian>LWMMG (Черный)</Russian>
+            <Russian>LWMMG (Чёрный)</Russian>
             <Polish>LWMMG (czarny)</Polish>
+            <German>LWMMG (Schwarz)</German>
+            <Italian>LWMMG (Nero)</Italian>
+            <Hungarian>LWMMG (Fekete)</Hungarian>
+            <Portuguese>LWMMG (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_sand">
             <English>LWMMG (Sand)</English>
-            <Czech>LWMMG (Sand)</Czech>
+            <Czech>LWMMG (Pouštní)</Czech>
             <French>SPMG (Beige)</French>
             <Spanish>LWMMG (Arena)</Spanish>
             <Russian>LWMMG (Песочный)</Russian>
             <Polish>LWMMG (piaskowy)</Polish>
+            <German>LWMMG (Sand)</German>
+            <Italian>LWMMG (Sabbia)</Italian>
+            <Hungarian>LWMMG (Homok)</Hungarian>
+            <Portuguese>LWMMG (Deserto)</Portuguese>
         </Key>
     </Package>
 </Project>

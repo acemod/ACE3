@@ -12,6 +12,7 @@
                 <German>Windinformationen</German>
                 <Hungarian>Szélinformáció</Hungarian>
                 <Italian>Informazioni sul vento</Italian>
+                <Portuguese>Informação do vento</Portuguese>
             </Key>
             <Key ID="STR_ACE_WEATHER_METER_WIND_DIRECTION">
                 <English>Direction: %1</English>
@@ -22,7 +23,8 @@
                 <French>Direction %1</French>
                 <German>Windrichtung: %1</German>
                 <Hungarian>Irány: %1</Hungarian>
-                <Italian>Direzione: %1</Italian>
+                <Italian>Direzione: %1°</Italian>
+                <Portuguese>Direção: %1</Portuguese>
             </Key>
             <Key ID="STR_ACE_WEATHER_METER_WIND_SPEED">
                 <English>Speed: %1 m/s</English>
@@ -34,6 +36,7 @@
                 <German>Geschwindigkeit: %1 m/s</German>
                 <Hungarian>Sebesség: %1 m/s</Hungarian>
                 <Italian>Velocità: %1 m/s</Italian>
+                <Portuguese>Velocidade: %1 m/s</Portuguese>
             </Key>
             <Key ID="STR_ACE_WEATHER_METER_WEATHER_CATEGORY">
                 <English>Weather Information</English>
@@ -45,6 +48,7 @@
                 <German>Wetterinformationen</German>
                 <Hungarian>Időjárás-Információ</Hungarian>
                 <Italian>Meteo</Italian>
+                <Portuguese>Informação Meteorológica</Portuguese>
             </Key>
             <Key ID="STR_ACE_WEATHER_METER_WEATHER_HUMIDITY">
                 <English>Humidity: %1%</English>
@@ -56,6 +60,7 @@
                 <German>Luftfeuchtigkeit: %1</German>
                 <Hungarian>Páratartalom: %1%</Hungarian>
                 <Italian>Umidità: %1%</Italian>
+                <Portuguese>Humidade: %1%</Portuguese>
             </Key>
         </Container>
     </Package>

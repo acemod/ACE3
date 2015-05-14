@@ -234,7 +234,7 @@ class V_PlateCarrierIA2_dgtl: V_PlateCarrierIA1_dgtl {  // heavy
     };
 };
 class V_PlateCarrierIAGL_dgtl: V_PlateCarrierIA2_dgtl { // heavy (gl)
-    class ItemInfo: ItemInfo {
+    class ItemInfo: VestItem {
         containerClass = "Supply140"; //"Supply120";
         mass = 100; //80;
         armor = 12; //100;

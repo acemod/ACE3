@@ -21,10 +21,14 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_ammo", "_explosive"];
+private ["_ammo", "_explosive", "_attachedTo", "_expPos", "_magazineTrigger"];
 EXPLODE_6_PVT(_this,_unit,_pos,_dir,_magazineClass,_triggerConfig,_triggerSpecificVars);
-if (count _this > 6) then {
-    deleteVehicle (_this select 6);
+DEFAULT_PARAM(6,_setupPlaceholderObject,objNull);
+
+_attachedTo = objNull;
+if (!isNull _setupPlaceholderObject) then {
+    _attachedTo = attachedTo _setupPlaceholderObject;
+    deleteVehicle _setupPlaceholderObject;
 };
 
 if (isNil "_triggerConfig") exitWith {
@@ -56,6 +60,11 @@ _defuseHelper setVariable [QGVAR(Explosive),_explosive,true];
 _expPos = getPosATL _explosive;
 _defuseHelper setPosATL (((getPosATL _defuseHelper) vectorAdd (_pos vectorDiff _expPos)));
 _explosive setPosATL _pos;
+
+if (!isNull _attachedTo) then {
+    TRACE_1("Attaching Live Explosive",_attachedTo);
+    _explosive attachTo [_attachedTo];
+};
 
 if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_triggerSpecificVars]
     call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {_explosive};

@@ -17,7 +17,11 @@
  * Public: No
  */
 #include "script_component.hpp"
+
 EXPLODE_4_PVT(_this,_unit,_explosive,_magazineClass,_extra);
+
+private["_config", "_detonators", "_hasRequired", "_requiredItems", "_code", "_count", "_codeSet"];
+
 // Config is the last item in the list of passed in items.
 _config = (_this select 3) select (count (_this select 3) - 1);
 
@@ -29,7 +33,7 @@ _detonators = [_unit] call FUNC(getDetonators);
         _hasRequired = false;
     };
 } count _requiredItems;
-private ["_code", "_count", "_codeSet"];
+
 _codeSet = false;
 while {!_codeSet} do {
     _code = str(round (random 9999));

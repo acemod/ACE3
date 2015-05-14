@@ -1,4 +1,4 @@
-["ACE3", QGVAR(ProtractorKey), localize "STR_ACE_AdvancedBallistics_ProtractorKey",
+["ACE3 Equipment", QGVAR(ProtractorKey), localize "STR_ACE_AdvancedBallistics_ProtractorKey",
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};

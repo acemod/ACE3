@@ -43,14 +43,33 @@ if (GVAR(useCursorMenu)) then {
     // uiNamespace getVariable QGVAR(dlgCursorMenu);
     // uiNamespace getVariable QGVAR(cursorMenuOpened);
     ctrlEnable [91921, true];
+    GVAR(cursorPos) = [0.5,0.5,0];
     ((finddisplay 91919) displayctrl 91921) ctrlAddEventHandler ["MouseMoving", {
-        GVAR(cursorPos) = [_this select 1, _this select 2, 0];
+        if (GVAR(cursorKeepCentered)) then {
+            GVAR(cursorPos) = GVAR(cursorPos) vectorAdd [_this select 1, _this select 2, 0] vectorDiff [0.5, 0.5, 0];
+            setMousePosition [0.5, 0.5];
+        } else {
+            GVAR(cursorPos) = [_this select 1, _this select 2, 0];
+        };
+    }];
+    // handles LMB in cursor mode when action on keyrelease is disabled
+    ((finddisplay 91919) displayctrl 91921) ctrlAddEventHandler ["MouseButtonDown", {
+        if (!GVAR(actionOnKeyRelease) && GVAR(actionSelected)) then {
+            [GVAR(openedMenuType),true] call FUNC(keyUp);
+        };
     }];
     setMousePosition [0.5, 0.5];
 };
 
 GVAR(selfMenuOffset) = ((positionCameraToWorld [0, 0, 2]) call EFUNC(common,positionToASL)) vectorDiff
                        ((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL));
+
+private ["_wavesAtOrigin", "_wavesAtVirtualPoint"];
+
+_wavesAtOrigin = [(positionCameraToWorld [0, 0, 0])] call EFUNC(common,waveHeightAt);
+_wavesAtVirtualPoint = [(positionCameraToWorld [0, 0, 2])] call EFUNC(common,waveHeightAt);
+GVAR(selfMenuOffset) set [2, ((GVAR(selfMenuOffset) select 2) + _wavesAtOrigin - _wavesAtVirtualPoint)];
+
 
 ["interactMenuOpened", [_menuType]] call EFUNC(common,localEvent);
 
