@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * _customActions call ace_interaction_fnc_sortOptionsByPriority
+ * customActions call ace_interaction_fnc_sortOptionsByPriority
  *
  * Public: No
  */

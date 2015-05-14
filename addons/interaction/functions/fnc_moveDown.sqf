@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_count", "_player", "_vehicle", "_dlgInteractionDialog", "_top", "_i", "", "_ctrl", "_index", "_action", "_color", "_current", "_infoText", "target"];
+private ["_count", "_player", "_vehicle", "_dlgInteractionDialog", "_top", "_i", "", "_ctrl", "_index", "_action", "_color", "_current", "_infoText", "_target"];
 
 #define CLAMP(x,low,high) (if(x > high)then{high}else{if(x < low)then{low}else{x}})
 if (isNil QGVAR(MainButton)) exitWith{};
