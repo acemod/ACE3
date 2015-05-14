@@ -152,16 +152,6 @@ if (_activated) then {
                     _x radiochanneladd [_player];
                 } foreach (_logic getvariable ["channels",[]]);
 
-                // Added by ACE_zeus to toggle ascension messages
-                if (GVAR(zeusAscension)) then {
-                    //--- Sent notification to all assigned players
-                    {
-                        if (isplayer _x) then {
-                            [["CuratorAssign",[_name,name _player]],"bis_fnc_showNotification",_x] call bis_fnc_mp;
-                        };
-                    } foreach (curatoreditableobjects _logic);
-                };
-
                 [_logic,"curatorUnitAssigned",[_logic,_player]] call bis_fnc_callscriptedeventhandler;
 
                 //--- Forced interface
@@ -192,16 +182,6 @@ if (_activated) then {
             };
         };
 
-        // Added by ACE_zeus to toggle eagle
-        if (GVAR(zeusBird)) then {
-            //--- Create bird
-            _birdType = _logic getvariable ["birdType","eagle_f"];
-            if (_birdType != "") then {
-                _bird = createvehicle [_birdType,[100,100,100],[],0,"none"];
-                _logic setvariable ["bird",_bird,true];
-            };
-        };
-
         //--- Activated all future addons
         _addons = [];
         {
@@ -217,18 +197,8 @@ if (_activated) then {
         } foreach (synchronizedobjects _logic);
         _addons call bis_fnc_activateaddons;
 
-        // Added by ACE_zeus to toggle eagle
-        if (GVAR(zeusBird)) then {
-            //--- Locality changed
-            _logic addeventhandler [
-                "local",
-                {
-                    _logic = _this select 0;
-                    _bird = _logic getvariable ["bird",objnull];
-                    _bird setowner owner _logic;
-                }
-            ];
-        };
+        // Added by ACE_zeus to delay ascension messages and bird code (so that settings can be changed)
+        [{_this spawn DFUNC(moduleCuratorDelay);},_this] call EFUNC(common,execNextFrame);
     };
 
     //--- Player
