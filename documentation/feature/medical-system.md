@@ -149,7 +149,7 @@ All bandage types weights about 50 grams each.
   * Cut wounds - highest effectiveness
   * Lacerations - highest effectiveness
   * Velocity wounds - low effectiveness
-  * Puncture wounds - wysoka effectiveness
+  * Puncture wounds - high effectiveness
 * QuikClot
   * Abrasions - medium effectiveness
   * Avulsions - high effectiveness
