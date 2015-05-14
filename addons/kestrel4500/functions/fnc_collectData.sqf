@@ -14,13 +14,14 @@
  */
 #include "script_component.hpp"
 
-private ["_playerDir", "_windSpeed", "_crosswind", "_headwind", "_humidity", "_temperature", "_humidity", "_barometricPressure", "_altitude"];
+private ["_playerAltitude", "_playerDir", "_windSpeed", "_crosswind", "_headwind", "_humidity", "_temperature", "_humidity", "_barometricPressure", "_altitude"];
+_playerAltitude = (getPosASL ACE_player) select 2;
 
 if (isNil QGVAR(MIN) || isNil QGVAR(MAX)) then {
-    _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL ACE_player) select 2);
+    _temperature = _playerAltitude call EFUNC(weather,calculateTemperatureAtHeight);
     _humidity = EGVAR(weather,currentHumidity);
-    _barometricPressure = ((getPosASL ACE_player) select 2) call EFUNC(weather,calculateBarometricPressure);
-    _altitude = EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2);
+    _barometricPressure = _playerAltitude call EFUNC(weather,calculateBarometricPressure);
+    _altitude = EGVAR(weather,Altitude) + _playerAltitude;
     GVAR(MIN) = [0, 0, 0, 0, _temperature, _humidity, _barometricPressure, _altitude];
     GVAR(MAX) = [0, 0, 0, 0, _temperature, _humidity, _barometricPressure, _altitude];
 };
@@ -70,7 +71,7 @@ if (GVAR(MinAvgMaxMode) == 1) then {
 };
 
 // TEMP
-_temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL ACE_player) select 2);
+_temperature = _playerAltitude call EFUNC(weather,calculateTemperatureAtHeight);
 GVAR(MIN) set [4, (GVAR(MIN) select 4) min _temperature];
 GVAR(MAX) set [4, _temperature max (GVAR(MAX) select 4)];
 GVAR(TOTAL) set [4, (GVAR(TOTAL) select 4) + _temperature];
@@ -82,13 +83,13 @@ GVAR(MAX) set [5, _humidity max (GVAR(MAX) select 5)];
 GVAR(TOTAL) set [5, (GVAR(TOTAL) select 5) + _humidity];
 
 // BARO
-_barometricPressure = ((getPosASL ACE_player) select 2) call EFUNC(weather,calculateBarometricPressure);
+_barometricPressure = _playerAltitude call EFUNC(weather,calculateBarometricPressure);
 GVAR(MIN) set [6, (GVAR(MIN) select 6) min _barometricPressure];
 GVAR(MAX) set [6, _barometricPressure max (GVAR(MAX) select 6)];
 GVAR(TOTAL) set [6, (GVAR(TOTAL) select 6) + _barometricPressure];
 
 // ALTITUDE
-_altitude = EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2);
+_altitude = EGVAR(weather,Altitude) + _playerAltitude;
 GVAR(MIN) set [7, (GVAR(MIN) select 7) min _altitude];
 GVAR(MAX) set [7, _altitude max (GVAR(MAX) select 7)];
 GVAR(TOTAL) set [7, (GVAR(TOTAL) select 7) + _altitude];
