@@ -84,6 +84,15 @@ namespace ace {
                 const XMVECTORF32 v1 = { 0.f, 100.f, 0.f };
                 const XMVECTORF32 v2 = { 0.f, -100.f, 0.f };
                 _Batch->DrawLine(VertexPositionColor(v1, Colors::Red), VertexPositionColor(v2, Colors::Red));
+
+                const XMVECTORF32 v3 = { 100.f, 0.f, 0.f };
+                const XMVECTORF32 v4 = { -100.f, 0.f, 0.f };
+                _Batch->DrawLine(VertexPositionColor(v3, Colors::Red), VertexPositionColor(v4, Colors::Red));
+
+                const XMVECTORF32 v5 = { 0.f, 0.f, 100.f };
+                const XMVECTORF32 v6 = { 0.f, -0.f, -100.f };
+                _Batch->DrawLine(VertexPositionColor(v5, Colors::Red), VertexPositionColor(v6, Colors::Red));
+
                 _Batch->End();
 
                 if (_active_vehicle) {
