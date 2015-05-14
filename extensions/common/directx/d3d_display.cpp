@@ -284,8 +284,7 @@ namespace ace {
                 
                 _pImmediateContext->ClearRenderTargetView(_pRenderTargetView, Colors::MidnightBlue);
                 _pImmediateContext->ClearDepthStencilView(_pDepthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0);
-
-                update_camera();
+                
                 step();
 
                 _pSwapChain->Present(0, 0);
@@ -390,6 +389,9 @@ namespace ace {
                             break;
                         }
                     }
+               
+                    update_camera();
+
                 } else if (raw->header.dwType == RIM_TYPEMOUSE) {
                     RAWMOUSE mouseCurrState = raw->data.mouse;
 
@@ -405,8 +407,9 @@ namespace ace {
                         _camera.camYaw += mouseCurrState.lLastX * 0.005f;
                         _camera.camPitch += mouseCurrState.lLastY * 0.005f;
                         _last_mouse_state = mouseCurrState;
-                    }
 
+                        update_camera();
+                    }
                 }
 
                 delete[] lpb;

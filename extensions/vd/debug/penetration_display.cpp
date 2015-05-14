@@ -26,7 +26,7 @@ namespace ace {
 
                 btVector3 vectorFrom(5, 20, 0);
                 btVector3 vectorTo = _vehicle->second->bt_object->getWorldTransform().getOrigin();
-                btVector3 direction = vectorTo - vectorFrom;
+                btVector3 direction = vectorFrom - vectorTo;
 
                 XMVECTORF32 eyePos = { vectorFrom.x(), vectorFrom.y(), vectorFrom.z() };
                 XMVECTORF32 eyeDir = { direction.x(), direction.y(), direction.z() };
@@ -123,12 +123,12 @@ namespace ace {
                     DrawObject(_active_vehicle->fire_lod, *_Batch, *_active_vehicle->object, Colors::Gray);
                 }
                 if (_active_hits.size() > 0) {
-                    DrawHits(0, *_Batch, Colors::Red);
+                    DrawHits(0, *_Batch, Colors::Yellow);
 
                     for (auto & hit : _active_hits) {
                         std::vector<ace::vector3<float>> collisions;
-                        _active_vehicle->surface_raycast(hit->impactposition, hit->impactvelocity, collisions);
-                        DrawCollisions(collisions, *_Batch, Colors::Purple);
+                        //_active_vehicle->surface_raycast(hit->impactposition, hit->impactvelocity, collisions);
+                        //DrawCollisions(collisions, *_Batch, Colors::Purple);
                     }
                 }
 
