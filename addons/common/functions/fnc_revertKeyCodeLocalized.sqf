@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-private ["_keyCode", "_key", "_alt", "_ctrl", "_shft"];
+private ["_keyCode", "_key", "_alt", "_ctrl", "_shift"];
 
 _keyCode = _this select 0;
 

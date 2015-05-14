@@ -17,11 +17,11 @@
  */
 #include "script_component.hpp"
 
-private ["_name","_value", "_force", "_settingData","_failed"];
+private ["_name","_value", "_failed", "_settingData", "_force"];
+
 _name = _this select 0;
 _value = _this select 1;
 
-private ["_force"];
 _force = false;
 if (count _this > 2) then {
     _force = _this select 2;

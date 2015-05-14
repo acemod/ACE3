@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * [_player] call ace_common_fnc_fixLoweredRifleAnimation
+ * [player] call ace_common_fnc_fixLoweredRifleAnimation
  *
  * Public: No
  */

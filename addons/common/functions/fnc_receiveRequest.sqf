@@ -47,6 +47,7 @@ GVAR(RECIEVE_REQUEST_ADD_ACTION_DECLINE) = _target addAction ["Decline", compile
 GVAR(RECIEVE_REQUEST_ID_KEY_BINDING) = _requestID;
 
 GVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT) = [time, _target, _requestID] spawn {
+    private ["_t", "_requestID", "_target", "_id"];
     _t = (_this select 0) + 40;
     _target = _this select 1;
     _requestID = _this select 2;

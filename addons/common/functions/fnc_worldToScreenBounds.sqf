@@ -5,9 +5,9 @@
 
 #include "script_component.hpp"
 
-private ["_minX","_minY","_maxX","_maxY"];
-
 PARAMS_3(_object,_margins,_offsets);
+
+private ["_margins3D", "_offset3D", "_minX", "_minY", "_maxY", "_maxX", "_bounds", "_boundsMin", "_boundsMinX", "_boundsMinY", "_boundsMinZ", "_boundsMax", "_boundsMaxX", "_boundsMaxY", "_boundsMaxZ", "_boundsCorners", "_ppos", "_pposX", "_pposY"];
 
 _minX = 10;
 _minY = 10;

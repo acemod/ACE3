@@ -2,7 +2,8 @@
 // internal handler for net events
 #include "script_component.hpp"
 
-private ["_eventType", "_event", "_eventName", "_eventArgs", "_eventNames", "_eventIndex", "_eventTargets", "_sentEvents", "_owner", "_serverFlagged"];
+private ["_eventType", "_event", "_events", "_eventName", "_eventArgs", "_eventNames", "_eventIndex", "_eventTargets", "_sentEvents", "_owner", "_serverFlagged"];
+//IGNORE_PRIVATE_WARNING(_handleNetEvent);
 
 _eventType = _this select 0;
 _event = _this select 1;

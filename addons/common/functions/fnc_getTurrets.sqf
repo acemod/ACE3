@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-private ["_type", "_config", "_turrets", "_fnc_addTurret"];
+private ["_type", "_config", "_turrets", "_fnc_addTurret", "_varName"];
 
 _type = _this select 0;
 

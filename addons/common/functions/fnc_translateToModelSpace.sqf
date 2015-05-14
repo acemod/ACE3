@@ -1,3 +1,8 @@
+//
+#include "script_component.hpp"
+
+private["_matrix", "_object", "_offset", "_origin", "_out", "_xVec", "_y", "_yVec", "_z", "_zVec"];
+
 _object = _this select 0;
 _origin = getPosASL _object;
 _matrix = _this select 1;

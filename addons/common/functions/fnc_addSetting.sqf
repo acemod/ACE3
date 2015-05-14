@@ -11,7 +11,7 @@
  * 4: _localizedDescription (String)
  * 5: _possibleValues (Array)
  * 6: _isForced (Bool)
- * 7: _defaultValue (Any)
+ * 7: defaultValue (Any)
  *
  * Return Value:
  * None
@@ -21,6 +21,8 @@
 #include "script_component.hpp"
 
 EXPLODE_8_PVT(_this,_name,_typeName,_isClientSetable,_localizedName,_localizedDescription,_possibleValues,_isForced,_value);
+
+private["_settingData"];
 
 _settingData = [_name] call FUNC(getSettingData);
 

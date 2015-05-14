@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-private "_item";
+private["_cfgType", "_item"];
 
 _item = _this select 0;
 

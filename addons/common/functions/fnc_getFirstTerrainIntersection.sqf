@@ -9,7 +9,7 @@
  */
  #include "script_component.hpp"
 
-private ["_source", "_destination", "_accuracy", "_distance", "_lower", "_upper", "_mid", "_intersection", "_result"];
+private ["_source", "_destination", "_accuracy", "_distance", "_lower", "_upper", "_mid", "_intersection", "_result", "_dir"];
 _source      = _this select 0;
 _destination = _this select 1;
 _accuracy    = _this select 2;

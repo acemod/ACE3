@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_action", "_id", "_name", "_actionsVar", "_actionID", "_actions", "_currentID", "_actionIDs", "_count"];
+private ["_unit", "_action", "_id", "_name", "_actionsVar", "_actionID", "_actions", "_currentID", "_actionIDs"];
 
 _unit = _this select 0;
 _action = _this select 1;

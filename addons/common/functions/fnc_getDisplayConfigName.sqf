@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_configName", "_index"];
+private ["_configName", "_index", "_config"];
 
 _configName = "";
 

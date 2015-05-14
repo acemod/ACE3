@@ -11,6 +11,8 @@
  */
 #include "script_component.hpp"
 
+private["_group", "_leader", "_side", "_vehicle"];
+
 _group = _this select 0;
 _leader = leader _group;
 _vehicle = vehicle _leader;

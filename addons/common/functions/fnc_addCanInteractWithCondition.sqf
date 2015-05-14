@@ -14,6 +14,7 @@
 #include "script_component.hpp"
 
 private ["_conditionName", "_conditionFunc"];
+//IGNORE_PRIVATE_WARNING(_player,_target);
 
 _conditionName = toLower (_this select 0);
 _conditionFunc = _this select 1;
