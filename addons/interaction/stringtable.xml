@@ -207,7 +207,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_BecomeLeader">
             <English>Become Leader</English>
-            <German>Grp.-führung übern.</German>
+            <German>Gruppenführung übernehmen</German>
             <Spanish>Asumir el liderazgo</Spanish>
             <Polish>Przejmij dowodzenie</Polish>
             <Czech>Stát se velitelem</Czech>
@@ -436,7 +436,7 @@
         <Key ID="STR_ACE_Interaction_YouWereTappedRight">
             <English>You were tapped on the RIGHT shoulder</English>
             <Spanish>Te tocaron el hombro DERECHO</Spanish>
-            <German>Dir wurde auf die rechte Schulter geklopft</German>
+            <German>Dir wurde auf die rechte Schulter geklopft.</German>
             <French>On te tape sur l'épaule droite</French>
             <Polish>Zostałeś klepnięty w prawe ramię</Polish>
             <Hungarian>Megveregették a JOBB válladat.</Hungarian>
@@ -448,7 +448,7 @@
         <Key ID="STR_ACE_Interaction_YouWereTappedLeft">
             <English>You were tapped on the LEFT shoulder.</English>
             <Spanish>Te tocaron el hombro IZQUIERDO.</Spanish>
-            <German>Dir wurde auf die linke Schulter geklopft</German>
+            <German>Dir wurde auf die linke Schulter geklopft.</German>
             <French>On te tape sur l'épaule gauche</French>
             <Polish>Zostałeś klepnięty w lewe ramię</Polish>
             <Hungarian>Megveregették a BAL válladat.</Hungarian>

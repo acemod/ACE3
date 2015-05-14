@@ -15,7 +15,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Description">
             <English>Protective Ear Plugs allow the wearer to be near loud weaponry without damage to his hearing.</English>
-            <German>Schützende Ohrenstöpsel, die es dem Träger ermöglichen, sich in der Nähe lauter Waffen aufzuhalten ohne Gehörschäden davonzutragen..</German>
+            <German>Schützende Ohrenstöpsel, die es dem Träger ermöglichen, sich in der Nähe lauter Waffen aufzuhalten ohne Gehörschäden davonzutragen.</German>
             <Spanish>Los tapones para los oídos permiten al usuario operar armamento ruidoso sin sufrir pérdida de audición.</Spanish>
             <Polish>Stopery do uszu umożliwiają użytkownikowi przebywać w pobliżu głośnej broni bez poniesienia konsekwencji jaką jest utrata słuchu.</Polish>
             <Czech>Ochranné špunty umožňují uživateli, aby neutrpěl zranění jeho sluchu v blízkosti hlasitých zbraní.</Czech>
@@ -63,7 +63,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Are_Off">
             <English>Earplugs out</English>
-            <German>Ohrenstöpsel raus</German>
+            <German>Ohrenstöpsel draußen</German>
             <Spanish>Tapones quitados</Spanish>
             <Polish>Stopery wyjęte</Polish>
             <Czech>Špunty venku z uší</Czech>

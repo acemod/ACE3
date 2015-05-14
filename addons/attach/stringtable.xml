@@ -135,7 +135,7 @@
         </Key>
         <Key ID="STR_ACE_IrStrobe_Description">
             <English>IR Strobe allows you to signal your position through a pulsating beacon only visible with NVGs.</English>
-            <German>Das IR-Stroboskop erlaubt es dir deine Position mit einem blinkenden Leuchtfeuer zu signalisieren, welches nur mit Nachtsichtgerät zu erkennen ist.</German>
+            <German>Das IR-Stroboskop erlaubt es dir deine Position mit einem blinkenden Leuchtsignal zu signalisieren, welches nur mit Nachtsichtgerät zu erkennen ist.</German>
             <Polish>Stroboskop światła podczerwieni umożliwia oznaczenie swojej pozycji pulsacyjnym światłem widocznym tylko przez optykę noktowizyjną i gogle noktowizyjne.</Polish>
             <Spanish>El Marcador IR permite señalizar su posisición a través de una baliza visible solo a través de dispositivos de visión nocturna. </Spanish>
             <French>La balise IR permet de signaler votre position grace à un clignotement visible par des JVN.</French>

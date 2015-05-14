@@ -44,7 +44,7 @@
             <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
             <Italian>Il livello di dettagli della simulazione dei rifiuti indica il numero di rifiuti che verranno creati localmente nel client. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio client.</Italian>
             <French>Le niveau de simulation des détritus règle la quantité de déchets qui vont être créés localement chez le client. Des quantitées excessive chez certains clients peuvent causer des chutes de FPS, c'est donc une option client uniquement.</French>
-            <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge der lokal erzeugten medizinischen Abfälle ein. Zuviel erzeugte Abfälle können FPS-Lags erzeugen, deswegen ist diese Einstellung nur clientseitig.</German>
+            <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge der lokal erzeugten medizinischen Abfälle ein. Zuviel erzeugte Abfälle können FPS-Einbrüche verursachen, deswegen ist diese Einstellung nur clientseitig.</German>
             <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
             <Portuguese>O nível de detalhe de sujeira determina o número de itens que irão aparecer no cliente. Quantidades excessivas em áreas locais podem aumentar o lag do FPS, então esta é uma opção somente para o cliente.</Portuguese>
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
@@ -111,7 +111,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Transfuse_Saline">
             <English>Transfuse Saline</English>
-            <German>Salzlösungtransfusion</German>
+            <German>Salzlösungstransfusion</German>
             <Spanish>Transfundir salino</Spanish>
             <Czech>Transfúze fyziologický roztoku</Czech>
             <Polish>Przetocz sól fizjologiczną</Polish>
@@ -267,7 +267,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Saline">
             <English>Transfusing Saline ...</English>
-            <German>Sallösungtransfusion ...</German>
+            <German>Salzlösungstransfusion ...</German>
             <Spanish>Transfusión de salino ...</Spanish>
             <Czech>Probíha transfúze fyziologický roztoku ...</Czech>
             <Polish>Przetaczanie soli fizjologicznej ...</Polish>
@@ -787,7 +787,7 @@
             <Spanish>Utilizado para cubrir una herida</Spanish>
             <French>Utilisé pour couvrir une blessure</French>
             <Polish>Używany w celu przykrycia i ochrony miejsca zranienia</Polish>
-            <German>Verwendet, um Wunden abzudecken</German>
+            <German>Wird verwendet, um Wunden abzudecken.</German>
             <Hungarian>Sebesülések befedésére alkalmas</Hungarian>
             <Italian>Usato per coprire una ferita</Italian>
             <Portuguese>Usado para cobrir um ferimento</Portuguese>
@@ -837,7 +837,7 @@
             <Polish>Opatrunek stosowany w celu zatrzymania krwawienia i osłony większych ran.</Polish>
             <Hungarian>Egy kötszerfajta, melyet a sebek nyomására használnak a vérzés elállítása és sebgyógyulás érdekében. A nyomókötés egy lehetőség nagyobb polytraumatikus sérülések esetén.</Hungarian>
             <Italian>Un bendaggio usato per coprire la ferita, fermare il sanguinamento e facilitarne la guarigione. Questa tecnica è opzionale su ferite multiple.</Italian>
-            <German>Ein Verband, um die Wunde abzudecken und die Wundheilung zu fördern. Wunden abdecken ist eine Option bei größeren Polytraumen</German>
+            <German>Ein Verband, um die Wunde abzudecken und die Wundheilung zu fördern. Wunden abdecken ist eine Option bei großen Polytraumen.</German>
             <Portuguese>Uma bandagem usada para preencher o ferimento para estancar o sangramento e facilitar a cicatrização. Preenchimento de feridas é uma opção em ferimentos de politrauma grandes.</Portuguese>
             <Czech>Tlakový obvaz se skládá se ze sterilní krycí vrstvy, na kterou je přiložena silná vrstva savého materiálu stlačující cévu v ráně a která je přitlačována k ráně a připevněna obinadlem. Slouží k zastavení silnějších krvácení.</Czech>
         </Key>
@@ -943,7 +943,7 @@
             <Spanish>Analgésico usado para combatir los estados dolorosos de moderados a severos.</Spanish>
             <French>Un analgésique puissant servant à réduire les douleurs modérées à sévères.</French>
             <Polish>Organiczny związek chemiczny z grupy alkaloidów. Ma silne działanie przeciwbólowe.</Polish>
-            <German>Ein Schmerzmittel um mäßige bis starke Schmerzen zu behandeln</German>
+            <German>Ein Schmerzmittel um mäßige bis starke Schmerzen zu behandeln.</German>
             <Hungarian>Egy fájdalomcsillapító anyag, jellemzően mérsékelt vagy erős fájdalom esetén alkalmazandó.</Hungarian>
             <Italian>Un analgesico usato per combattere il dolore.</Italian>
             <Portuguese>Um analgésico usado para combater dores moderadas e fortes.</Portuguese>
@@ -991,7 +991,7 @@
             <Spanish>Epinefrina auto-inyectable</Spanish>
             <French>Auto-injecteur d'épinéphrine</French>
             <Polish>Autostrzykawka EpiPen</Polish>
-            <German>Epiniphrin Autoinjektor</German>
+            <German>Epinephrin Autoinjektor</German>
             <Czech>Autoinjektor adrenalin</Czech>
             <Hungarian>Epinefrin autoinjektor</Hungarian>
             <Italian>Autoiniettore di epinefrina</Italian>
@@ -1016,7 +1016,7 @@
             <French>Medicament qui fonctionne sur le système nerveux sympathique créant une dilatation des bronches, augmente la fréquence cardiaque et annule les effets d'une réaction allergique (anaphylaxie). Utilisé lors d'arrêt cardio-respiratoire pour augmenter les chances de retrouver un pouls.</French>
             <Polish>EpiPen z adrenaliną ma działanie sympatykomimetyczne, tj. pobudza receptory alfa- i beta-adrenergiczne. Pobudzenie układu współczulnego prowadzi do zwiększenia częstotliwości pracy serca, zwiększenia pojemności wyrzutowej serca i przyśpieszenia krążenia wieńcowego. Pobudzenie oskrzelowych receptorów beta-adrenergicznych wywołuje rozkurcz mięśni gładkich oskrzeli, co w efekcie zmniejsza towarzyszące oddychaniu świsty i duszności.</Polish>
             <Italian>Una sostanza che permette di dilatare i bronchi, aumentare il battito cardiaco e combattere effetti di reazioni allergiche. Usato anche in casi di arresto cardiaco.</Italian>
-            <German>Ein Medikament, dass die Bronchien erweitert, die Herzfrequenz erhöht und Symptome von allergischen Reaktionen(Anaphylaxie) bekämpft. Wird bei plötzlichem Herzstillstand verabreicht.</German>
+            <German>Ein Medikament, dass die Bronchien erweitert, die Herzfrequenz erhöht und Symptome von allergischen Reaktionen (Anaphylaxie) bekämpft. Wird bei plötzlichem Herzstillstand verabreicht.</German>
             <Portuguese>Uma droga trabalha dilatando os bronquios, aumentando a frequência cardíaca e combate efeitos de reações alérgicas(anáfilaticas). Usado em casos de parada cardiaca com poucas changes de recuperação.</Portuguese>
             <Hungarian>Egy hormon, mely a szimpatikus idegrendszer által kitágítja a hörgőket, valamint megnöveli a szívverést, ezzel ellensúlyozva ilyen jellegű allergiás reakciókat (anafilaxiás sokk). Hirtelen szívmegállás esetén is használt, idő alatt csökkenő hatásfokkal.</Hungarian>
             <Czech>Zúžení periferních cév díky působení na alfa receptory a následné kontrakci hladkých svalů, tím dochází k tzv. centralizaci oběhu, krev se soustřeďuje v životně důležitých centrálních orgánech (srdce, mozek, plíce), působí také pozitivně na srdeční činnost a dochází ke zvýšení krevního tlaku a tepu. Dále se používá při náhlé srdeční zástavě.</Czech>
@@ -1207,7 +1207,7 @@
             <Spanish>Vendaje básico (QuickClot)</Spanish>
             <French>Bandage basique (Hémostatique)</French>
             <Polish>Podstawowy pakiet opatrunkowy (QuikClot)</Polish>
-            <German>Verbandpäckchen(Gerinnungsmittel)</German>
+            <German>Verbandpäckchen (Gerinnungsmittel)</German>
             <Hungarian>Általános zárókötszer (QuikClot)</Hungarian>
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
             <Portuguese>Bandagem básica (Coagulante)</Portuguese>

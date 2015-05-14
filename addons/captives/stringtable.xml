@@ -3,7 +3,7 @@
     <Package name="Captives">
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>
-            <German>Gefangen nehmen</German>
+            <German>Festnehmen</German>
             <Spanish>Tomar prisionero</Spanish>
             <French>Capturer le prisonnier</French>
             <Polish>Aresztuj</Polish>
@@ -51,7 +51,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_NoCaptive">
             <English>You need to take him as prisoner first!</English>
-            <German>Du musst ihn zuerst gefangen nehmen.</German>
+            <German>Du musst ihn zuerst festnehmen!</German>
             <Spanish>Necesitas hacerle prisionero primero!</Spanish>
             <Polish>Najpierw musisz go aresztować!</Polish>
             <French>Vous devez d'abord le capturer!</French>

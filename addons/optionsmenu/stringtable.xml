@@ -15,7 +15,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_FixAnimation">
             <English>Fix Animation</English>
-            <German>Behebe Animation</German>
+            <German>Animation beheben</German>
             <Spanish>Arreglar animación</Spanish>
             <Russian>Фикс анимации</Russian>
             <Czech>Opravit animace</Czech>
@@ -236,7 +236,7 @@
             <Czech>Měřítko UI v menu nastavení</Czech>
             <Russian>Размер интерфейса меню настройки</Russian>
             <Spanish>Opción de escalado del menú IU</Spanish>
-            <German>UI Skalierung</German>
+            <German>Options-Menü: UI Skalierung</German>
             <Hungarian>Beállításmenü kezelőfelületének skálázása</Hungarian>
             <Portuguese>Escalar o menu de opções</Portuguese>
             <Italian>Proporzioni della interfaccia utente</Italian>
