@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_object", "_actions", "_dlgInteractionDialog", "_ctrlInteractionDialog", "_index", "_ctrlInteractionDialogIcon"];
+private ["_object", "_actions", "_dlgInteractionDialog", "_ctrlInteractionDialog", "_index", "_ctrlInteractionDialogIcon", "_a", "_action", "_count"];
 
 _object = GVAR(Target);
 _actions = GVAR(Buttons);

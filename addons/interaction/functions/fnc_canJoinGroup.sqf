@@ -10,7 +10,7 @@
  * Able to join a group <BOOL>
  *
  * Example:
- * _bool = [player, target] call ace_interaction_fnc_canJoinGroup
+ * [player, target] call ace_interaction_fnc_canJoinGroup
  *
  * Public: No
  */
