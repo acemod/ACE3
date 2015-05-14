@@ -33,7 +33,7 @@ class ACE_Settings {
         typeName = "SCALAR";
         isClientSettable = 1;
         value = 0; // index. Actual coefficient is given by functions/fnc_returnObjectCoeff.sqf
-        values[] = {"Off","Low","Medium","High"};
+        values[] = {"Off","Very Low","Low","Medium","High","Very High"};
         displayName = "Dynamic Object View Distance";
         description = "Sets the object view distance as a coefficient of the view distance.";
     };
