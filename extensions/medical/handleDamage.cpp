@@ -12,6 +12,12 @@ namespace ace {
 		}
 
 
+		handleDamage& handleDamage::GetInstance()
+		{
+			static handleDamage instance;
+			return instance;
+		}
+
 		handleDamage::~handleDamage()
 		{
 		}
