@@ -2,6 +2,7 @@
  * Author: Bohemia Interactive
  * Module function for spawning projectiles
  * Used by Curator artillery modules etc
+ * Edited to remove radio warning and add ballistics support
  *
  * Arguments:
  * 0: The logic object <OBJECT>
@@ -11,6 +12,8 @@
  *
  * Public: No
  */
+
+#include "script_component.hpp"
 
 _fnc_scriptNameParentTemp = if !(isnil '_fnc_scriptName') then {_fnc_scriptName} else {'BIS_fnc_moduleProjectile'};
 private ['_fnc_scriptNameParent'];
@@ -133,8 +136,11 @@ if (_activated) then {
             //--- Create sound source
             _soundSource = if (_soundSourceClass != "") then {createSoundSource [_soundSourceClass,_pos,[],0]} else {objnull};
 
-            //--- Play radio warning
-            [] call _fnc_playRadio;
+            // Added by ACE_zeus to toggle ordnance radio message
+            if (GVAR(radioOrdnance)) then {
+                //--- Play radio warning
+                [] call _fnc_playRadio;
+            };
 
             //--- Update
             if (_attach) then {
