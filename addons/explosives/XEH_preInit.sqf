@@ -40,6 +40,8 @@ PREP(getDetonators);
 PREP(getPlacedExplosives);
 PREP(getSpeedDialExplosive);
 
+PREP(module);
+
 PREP(onLanded);
 
 PREP(openTimerSetUI);
