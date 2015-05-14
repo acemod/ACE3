@@ -1,9 +1,7 @@
 // by commy2 and esteldunedain
 #include "script_component.hpp"
 
-if (GVAR(showPlayerNames) > 0) then {
-    [] call FUNC(initIsSpeaking);
-};
+[] call FUNC(initIsSpeaking);
 
 if (!hasInterface) exitWith {};
 
@@ -26,6 +24,6 @@ GVAR(ShowNamesTime) = -10;
 
 
 // Draw handle
-if (GVAR(showPlayerNames) > 0 || GVAR(showVehicleCrewInfo)) then {
+if (GVAR(showPlayerNames) > 0) then {
     addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
 };
