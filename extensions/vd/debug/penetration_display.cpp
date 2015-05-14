@@ -20,6 +20,20 @@ namespace ace {
 
                 _active_hits.push_back(gamehit::create(args));
 
+                auto _vehicle = controller::get().vehicles.find(args[0]);
+                if (_vehicle == controller::get().vehicles.end())
+                    return false;
+
+                btVector3 vectorFrom(5, 20, 0);
+                btVector3 vectorTo = _vehicle->second->bt_object->getWorldTransform().getOrigin();
+                btVector3 direction = vectorTo - vectorFrom;
+
+                XMVECTORF32 eyePos = { vectorFrom.x(), vectorFrom.y(), vectorFrom.z() };
+                XMVECTORF32 eyeDir = { direction.x(), direction.y(), direction.z() };
+                XMVECTORF32 up = { 0.f, 1.f, 0.f };
+
+                XMStoreFloat4x4(&_View, XMMatrixLookAtLH(eyePos, eyeDir, up));
+
                 return true;
             }
             bool penetration_display::register_vehicle(const arguments &args, std::string &result) {
@@ -58,6 +72,7 @@ namespace ace {
                     if (FAILED(hr))
                         return hr;
                 }
+
                 _BatchEffect->SetView(XMLoadFloat4x4(&_View));
                 _BatchEffect->SetProjection(XMLoadFloat4x4(&_Projection));
 
@@ -73,6 +88,7 @@ namespace ace {
             bool penetration_display::step(void) {
 
                 _BatchEffect->Apply(_pImmediateContext);
+
                 _pImmediateContext->IASetInputLayout(_pBatchInputLayout);
 
                 const XMVECTORF32 xaxis = { 20.f, 0.f, 0.f };
@@ -95,6 +111,14 @@ namespace ace {
 
                 _Batch->End();
 
+
+                // Draw the bullet world
+                // The BT debug drawing is a single batch
+                _Batch->Begin();
+                ace::vehicledamage::controller::get().bt_world->debugDrawWorld();
+                _Batch->End();
+
+                
                 if (_active_vehicle) {
                     DrawObject(_active_vehicle->fire_lod, *_Batch, *_active_vehicle->object, Colors::Gray);
                 }
@@ -245,6 +269,35 @@ namespace ace {
                 }
 
                 batch.End();
+            }
+
+            // Bullet debug functions
+            void penetration_display::drawLine(const btVector3& from, const btVector3& to, const btVector3& color) {
+
+                XMVECTORF32 v1 = { from.x(), from.y(), from.z() };
+                XMVECTORF32 v2 = { to.x(), to.y(), to.z() };
+                _Batch->DrawLine(VertexPositionColor(v1, Colors::LightCoral), VertexPositionColor(v2, Colors::LightCoral));
+            }
+
+            void penetration_display::drawContactPoint(const btVector3 &PointOnB, const btVector3 &normalOnB, btScalar distance, int lifeTime, const btVector3 &color) {
+
+            }
+
+            void penetration_display::reportErrorWarning(const char *warningString) {
+                LOG(WARNING) << "btWarning - {" << warningString << "}";
+            }
+
+            void penetration_display::draw3dText(const btVector3 &location, const char *textString) {
+
+            }
+
+            void penetration_display::setDebugMode(int debugMode) {
+                _bt_debug_mode = debugMode;
+            }
+
+            int penetration_display::getDebugMode() const {
+
+                return _bt_debug_mode;
             }
         }
     }

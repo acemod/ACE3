@@ -20,6 +20,8 @@
 #include "simulation/object.hpp"
 #include "vehicle.hpp"
 
+#include "LinearMath/btIDebugDraw.h"
+
 #include "game.hpp"
 
 using namespace ace::debug;
@@ -29,7 +31,7 @@ namespace ace {
     namespace vehicledamage {
         namespace debug {
             __declspec(align(16))
-            class penetration_display : public d3d_display, public dispatcher {
+            class penetration_display : public d3d_display, public dispatcher, public btIDebugDraw {
             public:
                 penetration_display();
 
@@ -37,6 +39,14 @@ namespace ace {
                 bool register_vehicle(const arguments &, std::string &);
                 bool show_hit(const arguments &, std::string &);
 
+                // bullet debug
+                virtual void   drawLine(const btVector3& from, const btVector3& to, const btVector3& color);
+                virtual void   drawContactPoint(const btVector3& PointOnB, const btVector3& normalOnB, btScalar distance, int lifeTime, const btVector3& color);
+                virtual void   reportErrorWarning(const char* warningString);
+                virtual void   draw3dText(const btVector3& location, const char* textString);
+                virtual void   setDebugMode(int debugMode);
+                virtual int    getDebugMode() const;
+                int _bt_debug_mode;
                 // End
 
                 bool init() override;
@@ -54,7 +64,7 @@ namespace ace {
 
                 vehicle_p                                               _active_vehicle;
                 std::vector<gamehit_p>                                  _active_hits;
-                
+
                 void DrawHits(uint32_t lod, PrimitiveBatch<VertexPositionColor>& batch, GXMVECTOR color);
                 void DrawCollisions(const std::vector<ace::vector3<float>> & collisions, PrimitiveBatch<VertexPositionColor>& batch, GXMVECTOR color);
                 void DrawObject(uint32_t lod, PrimitiveBatch<VertexPositionColor>& batch, ace::simulation::object & obj, GXMVECTOR color);

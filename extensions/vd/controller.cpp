@@ -52,6 +52,7 @@ namespace ace {
 
 #if defined(DEVEL) && defined(USE_DIRECTX)
             _debug_display = std::make_unique<ace::vehicledamage::debug::penetration_display>();
+            bt_world->setDebugDrawer(dynamic_cast<btIDebugDraw *>(_debug_display.get()));
 #endif
 
             _ready = true;
@@ -188,7 +189,7 @@ namespace ace {
             vehicles[_args[0]]->direction = _args[1];
             vehicles[_args[0]]->up = _args[2];
 
-            //vehicles[_args[0]]->transform();
+            vehicles[_args[0]]->transform();
 
             return true;
         }

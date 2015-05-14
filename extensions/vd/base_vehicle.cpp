@@ -21,7 +21,7 @@ namespace ace {
             }
             if (fire_lod == -1) // @TODO: fallback on geo LOD
                 fire_lod = 0;
-            fire_lod = 0;
+            //fire_lod = 0;
             assert(fire_lod != -1);
             
             // Build the mesh from object faces
@@ -45,9 +45,11 @@ namespace ace {
 
             // @TODO: This is moving it in the bullet world for handling multiple collisions, instead our raytests need to ignore ALL but this type. How do we do that?
             // For now this only works for single-object collisions then
-            //btTransform transform = bt_object->getWorldTransform();
-            //transform.setOrigin(btVector3(position_.x(), position_.y(), position_.z()));
-            //bt_object->setWorldTransform(transform);
+            // Set 3d world bullet position based on game position
+            
+            btTransform transform = bt_object->getWorldTransform();
+            transform.setOrigin(btVector3(position_.x(), position_.y(), position_.z()));
+            bt_object->setWorldTransform(transform);
             
             controller::get().bt_world->addCollisionObject(bt_object.get());
         }
