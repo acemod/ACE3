@@ -23,5 +23,8 @@ GVAR(ShowNamesTime) = -10;
 [29, [false, false, false]], false] call cba_fnc_addKeybind; //LeftControl Key
 
 
-// Draw handle
-addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
+// Wait until the colors are defined before starting to draw the nametags
+["SettingsInitialized", {
+    // Draw handle
+    addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
+}] call EFUNC(common,addEventHandler);
