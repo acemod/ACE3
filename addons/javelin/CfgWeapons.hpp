@@ -38,7 +38,7 @@ class CfgWeapons {
         lockingTargetSound[] = {"",0,1};
         lockedTargetSound[] = {"",0,1};
     };
-	class launch_I_Titan_short_F: launch_Titan_short_base {
+    class launch_I_Titan_short_F: launch_Titan_short_base {
         GVAR(enabled) = 1;
         weaponInfoType = "ACE_RscOptics_javelin";
         modelOptics = PATHTOF(data\reticle_titan.p3d);
@@ -48,7 +48,7 @@ class CfgWeapons {
         lockingTargetSound[] = {"",0,1};
         lockedTargetSound[] = {"",0,1};
     };
-	class launch_O_Titan_short_F: launch_Titan_short_base {
+    class launch_O_Titan_short_F: launch_Titan_short_base {
         GVAR(enabled) = 1;
         weaponInfoType = "ACE_RscOptics_javelin";
         modelOptics = PATHTOF(data\reticle_titan.p3d);
@@ -59,7 +59,7 @@ class CfgWeapons {
         lockingTargetSound[] = {"",0,1};
         lockedTargetSound[] = {"",0,1};
     };
-	class launch_Titan_short_F: launch_Titan_short_base {
+    class launch_Titan_short_F: launch_Titan_short_base {
         GVAR(enabled) = 1;
         weaponInfoType = "ACE_RscOptics_javelin";
         modelOptics = PATHTOF(data\reticle_titan.p3d);
