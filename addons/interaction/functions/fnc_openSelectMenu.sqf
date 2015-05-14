@@ -1,36 +1,40 @@
 /*
-    Author: Garth de Wet (LH)
-
-    Description:
-        Opens the select menu UI and sets up the UI
-
-    Parameters:
-        0: ARRAY - items
-            ARRAY
-                0 = Text
-                1 = statement to execute
-                2 = condition before execute
-                3 = showDisabled
-                4 = priority
-                5 = icon
-                6 = extra variables. Passed to the code.
-        1: Code - select action
-        2: Code - Cancel Action
-    Returns:
-        Nothing
-
-    Example:
-*/
+ * Author: Garth de Wet (LH)
+ * Opens the select menu UI and sets up the UI
+ *
+ * Arguments:
+ * 0: Items <ARRAY>
+ *   0: Text <STRING>
+ *   1: Statement to execute <CODE>
+ *   2: Condition before execute <CODE>
+ *   3: showDisabled <BOOL>
+ *   4: Priority <NUMBER>
+ *   5: Icon <STRING>
+ *   6: Extra variables passed to the code <ARRAY>
+ * 1: Select Action <CODE>
+ * 2: Cancel Action <CODE>
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * [["text", {statement}, {condition}, showDisabled, priority, "icon", [variables]], {selectAction}, {cancelAction}] call ace_interaction_fnc_openSelectMenu
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 if (!(profileNamespace getVariable [QGVAR(FlowMenu), false])) then {
     GVAR(SelectAccept) = _this select 1;
     GVAR(SelectCancel) = _this select 2;
-    buttonSetAction [8855, QUOTE( call GVAR(SelectCancel); )]; // cancel
-    buttonSetAction [8860, QUOTE( (call compile (lbData [ARR_2(8866, lbCurSel 8866)])) call GVAR(SelectAccept); )]; // accept
+    buttonSetAction [8855, QUOTE( call GVAR(SelectCancel); )]; // Cancel
+    buttonSetAction [8860, QUOTE( (call compile (lbData [ARR_2(8866, lbCurSel 8866)])) call GVAR(SelectAccept); )]; // Accept
     lbSetCurSel [8866, 0];
 }else{
-    _customActions = _this select 0;
+    PARAMS_1(_customActions);
+
+    private ["_count", "_action"];
+
     _count = count _customActions;
     if (_count == 0) exitWith {};
     _customActions call FUNC(sortOptionsByPriority);

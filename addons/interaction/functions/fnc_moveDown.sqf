@@ -1,20 +1,21 @@
 /*
-    Author: Garth de Wet (LH)
-
-    Description:
-        Depending on the passed value, either scrolls down through the list or up.
-
-    Parameters:
-        NUMBER - Amount to increase current interaction target
-
-    Returns:
-        Nothing
-
-    Example:
-        1 call FUNC(MoveDown);
-        -1 call FUNC(MoveDown);
-*/
+ * Author: Garth de Wet (LH)
+ * Scrolls through the list down or up
+ *
+ * Arguments:
+ * 0: Amount <NUMBER>
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * [2] call ace_interaction_fnc_moveDown
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
+
+private ["_count", "_player", "_vehicle", "_dlgInteractionDialog", "_top", "_i", "", "_ctrl", "_index", "_action", "_color", "_current", "_infoText"];
 
 #define CLAMP(x,low,high) (if(x > high)then{high}else{if(x < low)then{low}else{x}})
 if (isNil QGVAR(MainButton)) exitWith{};
