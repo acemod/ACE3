@@ -22,4 +22,4 @@ instructions. May not apply to all modules.
 
 ## Dependencies
 
-`ace_common`
+List of modules that must be present for this module to work.
