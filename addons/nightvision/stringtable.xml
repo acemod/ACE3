@@ -45,7 +45,7 @@
             <Italian>Occhiali notturni (Gen3, marroni)</Italian>
             <Polish>Gogle noktowizyjne (Gen3, brązowe)</Polish>
             <Portuguese>Óculos de visão noturna (Gen3, marrons)</Portuguese>
-            <Russian>ПНВ (Gen3, коричневый)</Russian>
+            <Russian>ПНВ (Gen3, Коричневый)</Russian>
             <Spanish>Gafas de visión nocturna (Gen3, marrón)</Spanish>
             <Hungarian>Éjjellátó szemüveg (3. Gen., barna)</Hungarian>
         </Key>
@@ -57,7 +57,7 @@
             <Italian>Occhiali notturni (Gen3, verdi)</Italian>
             <Polish>Gogle noktowizyjne (Gen3, zielone)</Polish>
             <Portuguese>Óculos de visão noturna (Gen3, verdes)</Portuguese>
-            <Russian>ПНВ (Gen3, зеленый)</Russian>
+            <Russian>ПНВ (Gen3, Зелёный)</Russian>
             <Spanish>Gafas de visión nocturna (Gen3, verde)</Spanish>
             <Hungarian>Éjjellátó szemüveg (3. Gen., zöld)</Hungarian>
         </Key>
@@ -69,7 +69,7 @@
             <Italian>Occhiali notturni (Gen3, neri)</Italian>
             <Polish>Gogle noktowizyjne (Gen3, czarne)</Polish>
             <Portuguese>Óculos de visão noturna (Gen3, pretos)</Portuguese>
-            <Russian>ПНВ (Gen3, черный)</Russian>
+            <Russian>ПНВ (Gen3, Чёрный)</Russian>
             <Spanish>Gafas de visión nocturna (Gen3, negro)</Spanish>
             <Hungarian>Éjjellátó szemüveg (3. Gen., fekete)</Hungarian>
         </Key>
@@ -95,6 +95,7 @@
             <French>JVN (Large)</French>
             <Hungarian>Éjjellátó szemüveg (széles látószögű)</Hungarian>
             <Portuguese>Óculos de visão noturna (Panorâmico)</Portuguese>
+            <Italian>Occhiali notturni (Larghi)</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>

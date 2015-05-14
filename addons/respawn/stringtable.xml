@@ -35,6 +35,7 @@
             <French>Téléportation à la base</French>
             <Portuguese>Teletransportar para a Base</Portuguese>
             <Hungarian>Bázisra teleportálás</Hungarian>
+            <Italian>Teleporta alla base</Italian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
             <English>Teleport to Rallypoint</English>
@@ -46,13 +47,14 @@
             <French>Téléporation au point de ralliement</French>
             <Portuguese>Teletransportar para o ponto de encontro</Portuguese>
             <Hungarian>Gyülekezőpontra teleportálás</Hungarian>
+            <Italian>Teleporta al rallypoint</Italian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToBase">
             <English>Teleported to Base</English>
             <French>Téléporté à la base</French>
             <German>Zur Basis teleportiert</German>
             <Spanish>Teletransportado a base</Spanish>
-            <Russian>Телепорт на базу</Russian>
+            <Russian>Вы были телепортированы на базу</Russian>
             <Polish>Przeteleportowano do bazy</Polish>
             <Czech>Teleportován na základnu</Czech>
             <Hungarian>Bázisra teleportálva</Hungarian>
@@ -64,7 +66,7 @@
             <French>Téléporté au point de déploiement</French>
             <German>Zum Sammelpunkt teleportiert</German>
             <Spanish>Teletransportado al punto de reunión</Spanish>
-            <Russian>Телепорт на точку сбора</Russian>
+            <Russian>Вы были телепортированы на точку сбора</Russian>
             <Polish>Przeteleportowano do punktu zbiórki</Polish>
             <Czech>Teleportován na rallypoint</Czech>
             <Hungarian>Gyülekezőpontra teleportálva</Hungarian>

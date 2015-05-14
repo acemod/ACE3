@@ -14,6 +14,8 @@
 
 EXPLODE_1_PVT(_this,_optionEntry);
 
+private ["_fnc_getValueWithType", "_value","_name", "_typeName", "_settingData"];
+
 _fnc_getValueWithType = {
     EXPLODE_2_PVT(_this,_optionEntry,_typeName);
 

@@ -64,8 +64,6 @@ if (_currentVersion != _previousVersion) then {
     profileNamespace setVariable ["ACE_VersionNumberString", _currentVersion];
 };
 
-0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber);
-
 // ACE events
 "ACEg" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
 "ACEc" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
@@ -84,6 +82,7 @@ if(!isServer) then {
 ["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
 [FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
 
+call FUNC(checkFiles);
 
 /***************************************************************/
 /***************************************************************/
@@ -251,13 +250,38 @@ if(isMultiplayer && { time > 0 || isNull player } ) then {
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
 
-// check dlls
-{
-    if (_x callExtension "version" == "") then {
-        private "_errorMsg";
-        _errorMsg = format ["Extension %1.dll not installed.", _x];
+//Device Handler:
+GVAR(deviceKeyHandlingArray) = [];
+GVAR(deviceKeyCurrentIndex) = -1;
 
-        diag_log text format ["[ACE] ERROR: %1", _errorMsg];
-        ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
-    };
-} forEach getArray (configFile >> "ACE_Extensions" >> "extensions");
+["ACE3 Equipment", QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"),
+{
+    [] call FUNC(deviceKeyFindValidIndex);
+    if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
+    [] call ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 3);
+    true
+},
+{false},
+[0xC7, [false, false, false]], false] call cba_fnc_addKeybind;  //Home Key
+
+["ACE3 Equipment", QGVAR(closeDevice), (localize "STR_ACE_Common_closeHandheldDevice"),
+{
+    [] call FUNC(deviceKeyFindValidIndex);
+    if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
+    [] call ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 4);
+    true
+},
+{false},
+[0xC7, [false, true, false]], false] call cba_fnc_addKeybind;  //CTRL + Home Key
+
+["ACE3 Equipment", QGVAR(cycleDevice), (localize "STR_ACE_Common_cycleHandheldDevices"),
+{
+    [1] call FUNC(deviceKeyFindValidIndex);
+    if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
+    _displayName = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 0);
+    _iconImage = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 1);
+    [_displayName, _iconImage] call FUNC(displayTextPicture);
+    true
+},
+{false},
+[0xC7, [true, false, false]], false] call cba_fnc_addKeybind;  //SHIFT + Home Key

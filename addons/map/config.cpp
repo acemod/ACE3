@@ -154,7 +154,7 @@ class RscDisplayGetReady: RscDisplayMainMap {
     class controlsBackground {
         class CA_Map: RscMapControl {
             onDraw = QUOTE([ctrlParent (_this select 0)] call DFUNC(onDrawMap));
-            //#include "MapTweaks.hpp" @todo Shouldn't this apply to briefing too?
+            #include "MapTweaks.hpp"
         };
     };
     // get rid of the "center to player position" - button (as it works even on elite)
