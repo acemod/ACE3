@@ -49,6 +49,9 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
         if (hasInterface) then {
             ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
         };
+    } else {
+        // Print the current extension version
+        diag_log text format ["[ACE] Extension version: %1: %2", _x, (_x callExtension "version")];
     };
 } forEach getArray (configFile >> "ACE_Extensions" >> "extensions");
 

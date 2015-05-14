@@ -14,7 +14,4 @@
  */
 #include "script_component.hpp"
 
-private ["_altitude"];
-_altitude = _this;
-
-(1013.25 * exp(-(GVAR(Altitude) + _altitude) / 7990) - 10 * overcast)
+(1013.25 * exp(-(GVAR(Altitude) + _this) / 7990) - 10 * overcast)

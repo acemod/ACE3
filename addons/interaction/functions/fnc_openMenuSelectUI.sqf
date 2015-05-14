@@ -1,44 +1,57 @@
-// by commy2
+/*
+ * Author: commy2
+ * Opens menu select UI
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Vehicle <OBJECT>
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * [unit, vehicle] call ace_interaction_fnc_openMenuSelectUI
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_unit", "_vehicle", "_cargo"];
+PARAMS_2(_unit,_vehicle);
 
-_unit = _this select 0;
-_vehicle = _this select 1;
+private ["_cargo", "_actions"];
 
-// allow interaction with all cargo slots and all ffv slots
+// Allow interaction with all cargo slots and all FFV slots
 _cargo = [_vehicle, ["cargo", "ffv"], true] call EFUNC(common,getVehicleCrew);
 
-// you can only interact if you are in cargo or ffv yourself. exit otherwise
+// You can only interact if you are in cargo or FFV yourself. exit otherwise
 if !(_unit in _cargo) exitWith {};
 
 GVAR(InteractionMenu_Crew) = _cargo;
 
-// prepare: add header and "OK" button to select menu
-private "_actions";
+// Prepare: add header and "OK" button to select menu
 _actions = [localize "STR_ACE_Interaction_InteractionMenu", localize "STR_ACE_Interaction_Interact"] call FUNC(prepareSelectMenu);
 
-// prepare: add all cargo units as options to select menu
+// Prepare: add all cargo units as options to select menu
 {
-  if (_x != _unit) then {
-    _actions = [
-      _actions,
-      [_x] call EFUNC(common,getName),
-      QUOTE(PATHTOF(UI\dot_ca.paa)),
-      _forEachIndex
-    ] call FUNC(AddSelectableItem);
-  };
+    if (_x != _unit) then {
+        _actions = [
+            _actions,
+            [_x] call EFUNC(common,getName),
+            QUOTE(PATHTOF(UI\dot_ca.paa)),
+            _forEachIndex
+        ] call FUNC(addSelectableItem);
+    };
 } forEach _cargo;
 
-// open select menu
+// Open select menu
 [
-  _actions,
-  {
-    call FUNC(hideMenu);
-    [0, GVAR(InteractionMenu_Crew) select _this, ""] spawn FUNC(showMenu);
-    GVAR(InteractionMenu_Crew) = nil;
-  },
-  {
-    call FUNC(hideMenu);
-  }
+    _actions,
+    {
+        call FUNC(hideMenu);
+        [0, GVAR(InteractionMenu_Crew) select _this, ""] spawn FUNC(showMenu);
+        GVAR(InteractionMenu_Crew) = nil;
+    },
+    {
+        call FUNC(hideMenu);
+    }
 ] call FUNC(openSelectMenu);
