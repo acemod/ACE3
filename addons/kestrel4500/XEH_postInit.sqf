@@ -23,3 +23,5 @@ GVAR(ImpellerState) = 0;
 
 GVAR(Kestrel4500) = false;
 GVAR(Overlay) = false;
+
+[] call FUNC(restoreUserData);

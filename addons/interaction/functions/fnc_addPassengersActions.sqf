@@ -2,13 +2,16 @@
  * Author: esteldunedain
  * Create one action per passenger
  *
- * Argument:
+ * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Player <OBJECT>
  * 3: Parameters <ARRAY>
  *
  * Return value:
  * Children actions <ARRAY>
+ *
+ * Example:
+ * _array = [target, player, [params]] call ace_interaction_fnc_addPassengersActions
  *
  * Public: No
  */

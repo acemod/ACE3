@@ -27,7 +27,8 @@ class ACE_Settings {
         typeName = "SCALAR";
         isClientSettable = 1;
         displayName = "$STR_ACE_NameTags_ShowPlayerNames";
-        values[] = {"Disabled", "Enabled", "Only Cursor", "Only On Keypress", "Only Cursor and KeyPress"};
+        description = "$STR_ACE_NameTags_ShowPlayerNames_Desc";
+        values[] = {"$STR_ACE_Common_Disabled", "$STR_ACE_Common_Enabled", "$STR_ACE_Common_OnlyCursor", "$STR_ACE_Common_OnlyOnKeypress", "$STR_ACE_Common_OnlyCursorAndKeyPress"};
     };
     class GVAR(showPlayerRanks) {
         value = 1;
@@ -57,7 +58,8 @@ class ACE_Settings {
         typeName = "SCALAR";
         isClientSettable = 1;
         displayName = "$STR_ACE_NameTags_ShowSoundWaves";
-        values[] = {"Disabled", "Use Nametag settings", "Always Show All"};
+        description = "$STR_ACE_NameTags_ShowSoundWaves_Desc";
+        values[] = {"$STR_ACE_Common_Disabled", "$STR_ACE_Common_NameTagSettings", "$STR_ACE_Common_AlwaysShowAll"};
     };
     class GVAR(PlayerNamesViewDistance) {
         value = 5;

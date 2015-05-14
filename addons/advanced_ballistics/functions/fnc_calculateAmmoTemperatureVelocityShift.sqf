@@ -4,7 +4,7 @@
  * Calculates the ammo temperature induced muzzle velocity shift
  *
  * Arguments:
- * 0: ammo - classname <string>
+ * 0: muzzle velocity shift lookup table - m/s <ARRAY>
  * 1: temperature - degrees celcius <NUMBER>
  *
  * Return Value:
@@ -15,17 +15,11 @@
  */
 #include "script_component.hpp"
 
-private ["_ammo", "_temperature", "_muzzleVelocityTable", "_muzzleVelocityShift", "_temperatureIndexA", "_temperatureIndexB", "_temperatureRatio"];
-_ammo           = _this select 0;
-_temperature    = _this select 1;
+private ["_muzzleVelocityShiftTable", "_temperature", "_muzzleVelocityShift", "_temperatureIndexA", "_temperatureIndexB", "_temperatureRatio"];
+_muzzleVelocityShiftTable = _this select 0;
+_temperature              = _this select 1;
 
-_muzzleVelocityTable = [];
-
-if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ammoTempMuzzleVelocityShifts")) then {
-    _muzzleVelocityTable = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_ammoTempMuzzleVelocityShifts");
-};
-
-if (count _muzzleVelocityTable != 11) exitWith { 0 };
+if (count _muzzleVelocityShiftTable != 11) exitWith { 0 };
 
 _temperatureIndexA = floor((_temperature + 15) / 5);
 _temperatureIndexA = 0 max _temperatureIndexA;
@@ -37,6 +31,6 @@ _temperatureIndexB = _temperatureIndexB min 10;
 
 _temperatureRatio = ((_temperature + 15) / 5) - floor((_temperature + 15) / 5);
 
-_muzzleVelocityShift = (_muzzleVelocityTable select _temperatureIndexA) * (1 - _temperatureRatio) + (_muzzleVelocityTable select _temperatureIndexB) * _temperatureRatio;
+_muzzleVelocityShift = (_muzzleVelocityShiftTable select _temperatureIndexA) * (1 - _temperatureRatio) + (_muzzleVelocityShiftTable select _temperatureIndexB) * _temperatureRatio;
 
 _muzzleVelocityShift

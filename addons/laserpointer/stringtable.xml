@@ -34,7 +34,7 @@
             <Polish>Wydziela widzialne światło.</Polish>
             <Hungarian>Látható fényt bocsát ki.</Hungarian>
             <Spanish>Emite luz visible.</Spanish>
-            <Italian>Emette luce visibile</Italian>
+            <Italian>Emette luce visibile.</Italian>
             <Portuguese>Emite luz visível. </Portuguese>
         </Key>
         <Key ID="STR_ACE_Laserpointer_useLaser">
@@ -59,6 +59,7 @@
             <Italian>Laser</Italian>
             <Hungarian>Lézer</Hungarian>
             <Czech>Laser</Czech>
+            <Portuguese>Laser</Portuguese>
         </Key>
         <Key ID="STR_ACE_Laserpointer_IRLaser">
             <English>IR Laser</English>
@@ -70,9 +71,10 @@
             <Italian>Laser IR</Italian>
             <Hungarian>Infravörös Lézer</Hungarian>
             <Czech>IR Laser</Czech>
+            <Portuguese>Laser IV</Portuguese>
         </Key>
         <Key ID="STR_ACE_Laserpointer_switchLaserLight">
-            <English>Switch Laser / Infračervený Laser</English>
+            <English>Switch Laser / IR Laser</English>
             <German>Umschalten Laser / IR-Laser</German>
             <Polish>Przełącz Laser / Laser IR</Polish>
             <Russian>Изменить режим Лазер / ИК-лазер</Russian>
@@ -80,7 +82,8 @@
             <Italian>Alterna Laser / IR Laser</Italian>
             <Spanish>Cambiar láser / Láser IR</Spanish>
             <Hungarian>Lézer / Infravörös Lézer váltása</Hungarian>
-            <Czech>Přepnout Laser / IR Laser</Czech>
+            <Czech>Přepnout Laser / Infračervený Laser</Czech>
+            <Portuguese>Alternar entre Laser / Laser IV</Portuguese>
         </Key>
     </Package>
 </Project>

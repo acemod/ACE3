@@ -6,15 +6,8 @@ PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 // Bail on not missile
 if( _shooter != ACE_player) exitWith { false }; 
 
-/*
-if( ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "launch_Titan_short_base"] call EFUNC(common,inheritsFrom)) 
-    &&  
-    { ! ([ (configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) ), "missiles_titan_at"] call EFUNC(common,inheritsFrom)) }
-) exitWith { };
-*/
-_configs = configProperties [configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)) >> QGVAR(enabled), "true", false];
-if( (count _configs) < 1) exitWith {};
-_config = _configs select 1;
+_configs = configProperties [configFile >> "CfgWeapons" >> _weapon, QUOTE(configName _x == QUOTE(QGVAR(enabled))), false];
+if (((count _configs) < 1) || {(getNumber (_configs select 0)) != 1}) exitWith {};
 
 _pfh_handle = uiNamespace getVariable ["ACE_RscOptics_javelin_PFH", nil];
 if(!isNil "_pfh_handle") then {

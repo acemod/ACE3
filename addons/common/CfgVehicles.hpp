@@ -25,71 +25,71 @@ class CfgVehicles {
   // += needs a non inherited entry in that class, otherwise it simply overwrites
   //#include <DefaultItems.hpp>
 
-  class Module_F;
-  class ACE_ModuleCheckPBOs: Module_F {
+   class Logic;
+   class Module_F: Logic {
+     class ModuleDescription {};
+   };
+   class ACE_ModuleCheckPBOs: Module_F {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
-    displayName = "Check PBOs";
+    displayName = "$STR_ACE_Common_CheckPBO_DisplayName";
     function = QFUNC(moduleCheckPBOs);
     scope = 2;
     isGlobal = 1;
     icon = QUOTE(PATHTOF(UI\Icon_Module_CheckPBO_ca.paa));
     class Arguments {
       class Action {
-        displayName = "Action";
-        description = "What to do with people who do not have the right PBOs?";
+        displayName = "$STR_ACE_Common_CheckPBO_Action_DisplayName";
+        description = "$STR_ACE_Common_CheckPBO_Action_Description";
         class values {
           class WarnOnce {
             default = 1;
-            name = "Warn once";
+            name = "$STR_ACE_Common_CheckPBO_Action_WarnOnce";
             value = 0;
           };
           class Warn {
-            name = "Warn (permanent)";
+            name = "$STR_ACE_Common_CheckPBO_Action_WarnPerm";
             value = 1;
           };
           class Kick {
-            name = "Kick";
+            name = "$STR_ACE_Common_CheckPBO_Action_Kick";
             value = 2;
           };
         };
       };
       class CheckAll {
-        displayName = "Check all addons";
-        description = "Check all addons instead of only those of ACE?";
+        displayName = "$STR_ACE_Common_CheckPBO_CheckAll_DisplayName";
+        description = "$STR_ACE_Common_CheckPBO_CheckAll_Description";
         typeName = "BOOL";
-        class values {
-          class WarnOnce {
-            default = 1;
-            name = "No";
-            value = 0;
-          };
-          class Warn {
-            name = "Yes";
-            value = 1;
-          };
-        };
+        defaultValue = 0;
       };
       class Whitelist {
-        displayName = "Whitelist";
-        description = "What addons are allowed regardless?";
+        displayName = "$STR_ACE_Common_CheckPBO_Whitelist_DisplayName";
+        description = "$STR_ACE_Common_CheckPBO_Whitelist_Description";
         typeName = "STRING";
         class values {
             default = "[]";
         };
       };
     };
+    class ModuleDescription: ModuleDescription {
+        description = "$STR_ACE_Common_CheckPBO_Description";
+    };
   };
 
   class ACE_ModuleLSDVehicles: Module_F {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
-    displayName = "LSD Vehicles";
+    displayName = "$STR_ACE_Common_LSDVehicles_DisplayName";
     function = "ACE_Common_fnc_moduleLSDVehicles";
     scope = 2;
     icon = QUOTE(PATHTOF(UI\Icon_Module_LSD_ca.paa));
     isGlobal = 1;
     class Arguments {
+    };
+    class ModuleDescription: ModuleDescription {
+        description = "$STR_ACE_Common_LSDVehicles_Description";
+        sync[] = {"AnyVehicle"};
     };
   };
 

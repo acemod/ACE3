@@ -18,6 +18,11 @@ if !(hasInterface) exitWith {};
 {false},
 [19, [false, true, false]], false] call cba_fnc_addKeybind;
 
+["setAmmoSync", {
+    //To propagate the setAmmo change, do it on all clients
+    PARAMS_3(_unit,_weapon,_ammo);
+    _unit setAmmo [_weapon, _ammo];
+}] call EFUNC(common,addEventhandler);
 
 // Listen for attempts to link ammo
 ["linkedAmmo", {
@@ -45,7 +50,7 @@ if !(hasInterface) exitWith {};
 
     // Add the ammo
     _ammoAdded = _ammoMissing min (_magazine select 1);
-    _receiver setAmmo [currentWeapon _receiver, _ammoCount + _ammoAdded];
+    ["setAmmoSync", [_receiver, (currentWeapon _receiver), (_ammoCount + _ammoAdded)]] call EFUNC(common,globalEvent);
 
     if ((_magazine select 1) - _ammoAdded > 0) then {
         ["returnedAmmo", [_giver], [_giver,_receiver,[_magazineType,(_magazine select 1) - _ammoAdded]]] call EFUNC(common,targetEvent);
