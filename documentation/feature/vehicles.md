@@ -5,7 +5,7 @@ group: feature
 parent: wiki
 ---
 
-# Overview
+## Overview
 
 ### Speedlimiter
 Adds ability to limit the max. speed of any vehicle.
@@ -35,12 +35,12 @@ The rate of fire of vehicle mounted miniguns and machine guns is adjusted to mat
 MBT main guns and mortars can no longer lock on enemies. The AT rounds of both now have raised cost values to encourage the AI to not use those rounds against foot soldiers over their machine guns or HE rounds.
 
 
-# Usage
+## Usage
 
 Short overview of how to use the feature, e.g. menu options, key bindings, 
 instructions. May not apply to all modules.
 
 
-# Dependencies
+## Dependencies
 
 List of modules that must be present for this module to work.

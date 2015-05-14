@@ -6,7 +6,7 @@ order: 5
 parent: wiki
 ---
 
-# Overview
+## Overview
 
 ### Adjusted flight behaviour
 Changes the flight behaviour of various aircraft.
@@ -32,7 +32,7 @@ Adds a laser marker to the copilot seat of the Wildcat.
 Adds a HUD to the AH-9 based on the comanches HUD.
 
 
-# Usage
+## Usage
 
 ### Adjusted flight behaviour
 Changes the flight behaviour of various aircraft.

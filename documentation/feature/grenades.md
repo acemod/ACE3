@@ -5,7 +5,7 @@ group: feature
 parent: wiki
 ---
 
-# Overview
+## Overview
 
 ### Throw modes
 Provides different modes for throwing grenades (high throw, precision throw and drop mode).
@@ -17,12 +17,12 @@ Adds throwable hand flares in the colors white, red, green and yellow. Additiona
 Adds stun grenade. This will also affect AI.
 
 
-# Usage
+## Usage
 
 Short overview of how to use the feature, e.g. menu options, key bindings, 
 instructions. May not apply to all modules.
 
 
-# Dependencies
+## Dependencies
 
 List of modules that must be present for this module to work.

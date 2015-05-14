@@ -5,7 +5,7 @@ group: feature
 parent: wiki
 ---
 
-# Overview
+## Overview
 
 ### Multiple Generation NVGs
 Adds different night vision devices with varying image quality and field of 
@@ -22,10 +22,10 @@ Enables the user to manually adjust NVG brightness.
 
 
 
-# Usage
+## Usage
 Use Alt+PageUp and Alt+PageDown to adjust NVG brightness.
 
 
-# Dependencies
+## Dependencies
 
 List of modules that must be present for this module to work.

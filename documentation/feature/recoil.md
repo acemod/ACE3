@@ -5,7 +5,7 @@ group: feature
 parent: wiki
 ---
 
-# Overview
+## Overview
 
 ### Recoil adjustment
 Overhauls the recoil system reducing upwards recoil.
@@ -17,12 +17,12 @@ Introducing camshake when firing on foot or as vehicle gunner depending on stanc
 Firing in longer burst (> 3 rounds per burst) slightly reduces the accuracy. Firing machine guns in bursts is now useful.
 
 
-# Usage
+## Usage
 
 Short overview of how to use the feature, e.g. menu options, key bindings, 
 instructions. May not apply to all modules.
 
 
-# Dependencies
+## Dependencies
 
 List of modules that must be present for this module to work.

@@ -5,7 +5,7 @@ group: feature
 parent: wiki
 ---
 
-# Overview
+## Overview
 
 ### Take captives
 Introduces a captivity system for taking and moving prisoners.
@@ -20,7 +20,7 @@ You can frisk a restrained captive.
 You can surrender, while surrendering AI will cease fire.
 
 
-# Usage
+## Usage
 
 ### Capturing someone
 - You need cable ties.

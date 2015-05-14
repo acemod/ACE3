@@ -5,7 +5,7 @@ group: feature
 parent: wiki
 ---
 
-# Overview
+## Overview
 
 ### Weapon Jamming
 Adds a propability to jam a weapon when firing. Jams can be cleared by 
@@ -23,13 +23,13 @@ Adds the ability to changes barrels on machine guns to compensate for those
 effects.
 
 
-# Usage
+## Usage
 To clear a jammed weapon, press Shift+R.
 
 
 *needs documentation on swapping barrels*
 
 
-# Dependencies
+## Dependencies
 
 List of modules that must be present for this module to work.
