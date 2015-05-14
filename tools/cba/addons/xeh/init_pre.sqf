@@ -23,10 +23,10 @@ uiNamespace setVariable ["CBA_isCached", CBA_isCached];
 if (isNil "SLX_XEH_RECOMPILE") then { SLX_XEH_RECOMPILE = CACHE_DIS(xeh) };
 
 if (!isMultiplayer || {isDedicated} || {CBA_isCached == -1}) then {
-	uiNamespace setVariable ["SLX_XEH_CACHE_KEYS", []];
-	uiNamespace setVariable ["SLX_XEH_CACHE_KEYS2", []];
-	uiNamespace setVariable ["SLX_XEH_CACHE_KEYS3", []];
-	uiNamespace setVariable ["CBA_CACHE_KEYS", []];
+    uiNamespace setVariable ["SLX_XEH_CACHE_KEYS", []];
+    uiNamespace setVariable ["SLX_XEH_CACHE_KEYS2", []];
+    uiNamespace setVariable ["SLX_XEH_CACHE_KEYS3", []];
+    uiNamespace setVariable ["CBA_CACHE_KEYS", []];
 };
 
 SLX_XEH_CACHE_KEYS = uiNamespace getVariable "SLX_XEH_CACHE_KEYS";
@@ -46,24 +46,24 @@ SLX_XEH_DisableLogging = isClass(configFile/"CfgPatches"/"Disable_XEH_Logging");
 
 
 /* CBA_fnc_defaultParam = {
-	PARAMS_3(_params,_index,_defaultValue);
-	
-	private "_value";
-	
-	if (!isNil "_defaultValue") then {
-		_value = _defaultValue;
-	};
-	
-	if (!isNil "_params" && {(typeName _params) == "ARRAY"} && {count _params > _index} && {!isNil { _params select _index }}) then {
-		_value = _params select _index;
-	};
-	
-	// Return.
-	if (isNil "_value") then {
-		nil;
-	} else {
-		_value;
-	};
+    PARAMS_3(_params,_index,_defaultValue);
+    
+    private "_value";
+    
+    if (!isNil "_defaultValue") then {
+        _value = _defaultValue;
+    };
+    
+    if (!isNil "_params" && {(typeName _params) == "ARRAY"} && {count _params > _index} && {!isNil { _params select _index }}) then {
+        _value = _params select _index;
+    };
+    
+    // Return.
+    if (isNil "_value") then {
+        nil;
+    } else {
+        _value;
+    };
 };
 */
 
@@ -74,10 +74,10 @@ if (time > 0) then { XEH_LOG("XEH WARNING: Time > 0; This probably means there a
 _cfgRespawn = (missionConfigFile/"respawn");
 _respawn = false;
 if ( isNumber(_cfgRespawn) ) then {
-	_respawn = !(getNumber(_cfgRespawn) in [0, 1, 4, 5]);
+    _respawn = !(getNumber(_cfgRespawn) in [0, 1, 4, 5]);
 };
 if ( isText(_cfgRespawn) ) then {
-	_respawn = !(getText(_cfgRespawn) in ["none", "bird", "group", "side"]);
+    _respawn = !(getText(_cfgRespawn) in ["none", "bird", "group", "side"]);
 };
 
 SLX_XEH_objects = []; // Temporary array, to track InitPosts at mission initialization
@@ -90,81 +90,81 @@ _level = 0; // pre v1.60
 // TODO: Improve v1.60 detection
 // TODO: Temporary disabled due to #28652
 //if ((isNumber (configFile >> "CfgDifficulties" >> "recruit" >> "recoilCoef")) && (isNumber (configFile >> "CfgVehicles" >> "Car" >> "turnCoef"))) then {
-	//_level = 1; // v1.60
+    //_level = 1; // v1.60
 //};
 
 FUNC(determineProductVersion) = {
-	private "_pv";
-	_pv = call {productVersion};
+    private "_pv";
+    _pv = call {productVersion};
 
-	// A2 (and OA pre 1.61beta, and TOH pre 1.05?) does not support productVersion so we deal with it manually
-	if (isNil "_pv") then { 
-		_pv = if (isClass(configFile >> "CfgPatches" >> "A3_Map_Stratis")) then {
-				// A3 Backup
-				["Arma 3 Alpha","Arma3Alpha", -1, -1]; //,5,102571]
+    // A2 (and OA pre 1.61beta, and TOH pre 1.05?) does not support productVersion so we deal with it manually
+    if (isNil "_pv") then { 
+        _pv = if (isClass(configFile >> "CfgPatches" >> "A3_Map_Stratis")) then {
+                // A3 Backup
+                ["Arma 3 Alpha","Arma3Alpha", -1, -1]; //,5,102571]
 
-		} else {
-			if (isClass(configFile >> "CfgPatches" >> "United_States_H")) then {
-				// TOH Backup
-				["TakeOn H", "TakeOnH", -1, -1];
-			} else {
-				if (isClass(configFile >> "CfgPatches" >> "Takistan")) then {
-					// OA Backup
-					["ArmA 2OA", "ArmA2OA", -1, -1];
-				} else {
-					// A2 Backup
-					["ArmA 2", "ArmA2", -1, -1];
-				};
-			};
-		};
-	};
+        } else {
+            if (isClass(configFile >> "CfgPatches" >> "United_States_H")) then {
+                // TOH Backup
+                ["TakeOn H", "TakeOnH", -1, -1];
+            } else {
+                if (isClass(configFile >> "CfgPatches" >> "Takistan")) then {
+                    // OA Backup
+                    ["ArmA 2OA", "ArmA2OA", -1, -1];
+                } else {
+                    // A2 Backup
+                    ["ArmA 2", "ArmA2", -1, -1];
+                };
+            };
+        };
+    };
 
-	_pv;
+    _pv;
 };
 
 FUNC(determineGame) = {
-	// 0 = A2
-	// 1 = OA
-	// 2 = TOH
-	// 3 = A3 :P
-	private "_pv";
-	_pv = call FUNC(determineProductVersion);
+    // 0 = A2
+    // 1 = OA
+    // 2 = TOH
+    // 3 = A3 :P
+    private "_pv";
+    _pv = call FUNC(determineProductVersion);
 
-	switch (_pv select 1) do {
-		case "ArmA2": {0};
-		case "ArmA2OA": {1};
-		case "TakeOnH": {2};
-		case "Arma3Alpha": {3};
-		case "Arma3": {3};
-		default {0};
-	};
+    switch (_pv select 1) do {
+        case "ArmA2": {0};
+        case "ArmA2OA": {1};
+        case "TakeOnH": {2};
+        case "Arma3Alpha": {3};
+        case "Arma3": {3};
+        default {0};
+    };
 };
 
 // System array with machine / mission / session information
 SLX_XEH_MACHINE =
 [
-	!isDedicated, // 0 - isClient (and thus has player)
-	false, // 1 - isJip
-	!isServer, // 2 - isDedicatedClient (and thus not a Client-Server)
-	isServer, // 3 - isServer
-	isDedicated, // 4 - isDedicatedServer (and thus not a Client-Server)
-	false, // 5 - Player Check Finished
-	!isMultiplayer, // 6 - SP?
-	false, // 7 - StartInit Passed
-	false, // 8 - Postinit Passed
-	isMultiplayer && {_respawn}, // 9 - Multiplayer && respawn?
-	if (isDedicated) then { 0 } else { if (isServer) then { 1 } else { 2 } }, // 10 - Machine type (only 3 possible configurations)
-	_id, // 11 - SESSION_ID
-	_level, // 12 - LEVEL - Used for version determination
-	false, // 13 - TIMEOUT - PostInit timedOut
-	call FUNC(determineGame), // 14 - Game
-	call FUNC(determineProductVersion) // 15 - Product+Version
+    !isDedicated, // 0 - isClient (and thus has player)
+    false, // 1 - isJip
+    !isServer, // 2 - isDedicatedClient (and thus not a Client-Server)
+    isServer, // 3 - isServer
+    isDedicated, // 4 - isDedicatedServer (and thus not a Client-Server)
+    false, // 5 - Player Check Finished
+    !isMultiplayer, // 6 - SP?
+    false, // 7 - StartInit Passed
+    false, // 8 - Postinit Passed
+    isMultiplayer && {_respawn}, // 9 - Multiplayer && respawn?
+    if (isDedicated) then { 0 } else { if (isServer) then { 1 } else { 2 } }, // 10 - Machine type (only 3 possible configurations)
+    _id, // 11 - SESSION_ID
+    _level, // 12 - LEVEL - Used for version determination
+    false, // 13 - TIMEOUT - PostInit timedOut
+    call FUNC(determineGame), // 14 - Game
+    call FUNC(determineProductVersion) // 15 - Product+Version
 ];
 
 SLX_XEH_DUMMY = switch (SLX_XEH_MACHINE select 14) do {
-	case 2: {"Helipad_Invisible_H" };
-	case 3: {"Land_HelipadEmpty_F" };
-	default { "HeliHEmpty" };
+    case 2: {"Helipad_Invisible_H" };
+    case 3: {"Land_HelipadEmpty_F" };
+    default { "HeliHEmpty" };
 };
 
 SLX_XEH_STR = ""; // Empty string
@@ -259,24 +259,24 @@ call COMPILE_FILE(init_eh); // All XEH Event functions
 
 GVAR(init_obj) = SLX_XEH_DUMMY createVehicleLocal [0, 0, 0];
 GVAR(init_obj) addEventHandler ["killed", {
-	#ifdef DEBUG_MODE_FULL
-		XEH_LOG("XEH: VehicleCrewInit: "+str(count vehicles));
-	#endif
+    #ifdef DEBUG_MODE_FULL
+        XEH_LOG("XEH: VehicleCrewInit: "+str(count vehicles));
+    #endif
 
-	{
-		_sim = getText(configFile/"CfgVehicles"/(typeOf _x)/"simulation");
-		_crew = crew _x;
-		/*
-		* If it's a vehicle then start event handlers for the crew.
-		* (Vehicles have crew and are neither humanoids nor game logics)
-		*/
-		if (count _crew > 0 && {{ _sim == _x }count["soldier", "invisible"] == 0}) then {
-			{ if !(_x in SLX_XEH_INIT_MEN) then { [_x] call SLX_XEH_EH_Init } } forEach _crew;
-		};
-	} forEach vehicles;
-	SLX_XEH_INIT_MEN = nil;
-	
-	deleteVehicle GVAR(init_obj);GVAR(init_obj) = nil
+    {
+        _sim = getText(configFile/"CfgVehicles"/(typeOf _x)/"simulation");
+        _crew = crew _x;
+        /*
+        * If it's a vehicle then start event handlers for the crew.
+        * (Vehicles have crew and are neither humanoids nor game logics)
+        */
+        if (count _crew > 0 && {{ _sim == _x }count["soldier", "invisible"] == 0}) then {
+            { if !(_x in SLX_XEH_INIT_MEN) then { [_x] call SLX_XEH_EH_Init } } forEach _crew;
+        };
+    } forEach vehicles;
+    SLX_XEH_INIT_MEN = nil;
+    
+    deleteVehicle GVAR(init_obj);GVAR(init_obj) = nil
 }];
 
 GVAR(init_obj) setDamage 1; // Schedule to run itsy bitsy later
@@ -284,73 +284,73 @@ GVAR(init_obj) setDamage 1; // Schedule to run itsy bitsy later
 // Prepare postInit
 GVAR(init_obj2) = SLX_XEH_DUMMY createVehicleLocal [0, 0, 0];
 GVAR(init_obj2) addEventHandler ["killed", {
-	call COMPILE_FILE(init_post);
-	deleteVehicle GVAR(init_obj2);GVAR(init_obj2) = nil;
+    call COMPILE_FILE(init_post);
+    deleteVehicle GVAR(init_obj2);GVAR(init_obj2) = nil;
 }];
 
 // Schedule PostInit
 SLX_XEH_STR spawn {
-	// Warn if PostInit takes longer than 10 tickTime seconds
-	SLX_XEH_STR spawn {
-		private["_time2Wait"];
-		_time2Wait = diag_ticktime + 10;
-		waituntil {diag_ticktime > _time2Wait};
-		if !(SLX_XEH_MACHINE select 8) then { 
-			XEH_LOG("WARNING: PostInit did not finish in a timely fashion");
-			waitUntil {time > 0};
-			// Consider there will be no player if neither PostInit-Ready, nor PlayerCheck-Ready
-			if !(SLX_XEH_MACHINE select 8 || {SLX_XEH_MACHINE select 5}) then { SLX_XEH_MACHINE set [13, true]; };
-		};
-	};
+    // Warn if PostInit takes longer than 10 tickTime seconds
+    SLX_XEH_STR spawn {
+        private["_time2Wait"];
+        _time2Wait = diag_ticktime + 10;
+        waituntil {diag_ticktime > _time2Wait};
+        if !(SLX_XEH_MACHINE select 8) then { 
+            XEH_LOG("WARNING: PostInit did not finish in a timely fashion");
+            waitUntil {time > 0};
+            // Consider there will be no player if neither PostInit-Ready, nor PlayerCheck-Ready
+            if !(SLX_XEH_MACHINE select 8 || {SLX_XEH_MACHINE select 5}) then { SLX_XEH_MACHINE set [13, true]; };
+        };
+    };
 
-	// On Server + Non JIP Client, we are now after all objects have inited
-	// and at the briefing, still time == 0
-	if (isNull player) then {
-		#ifdef DEBUG_MODE_FULL
-		"NULL PLAYER" call SLX_XEH_LOG;
-		#endif
-		if !((SLX_XEH_MACHINE select 4) || {(SLX_XEH_MACHINE select 6)}) then { // only if MultiPlayer and not dedicated
-			#ifdef DEBUG_MODE_FULL
-			"JIP" call SLX_XEH_LOG;
-			#endif
-	
-			SLX_XEH_MACHINE set [1, true]; // set JIP
-			// TEST for weird jip-is-server-issue :S
-			if (!(SLX_XEH_MACHINE select 2) || {SLX_XEH_MACHINE select 3} || {SLX_XEH_MACHINE select 4}) then {
-				str(["WARNING: JIP Client, yet wrong detection", SLX_XEH_MACHINE]) call SLX_XEH_LOG;
-				SLX_XEH_MACHINE set [2, true]; // set Dedicated client
-				SLX_XEH_MACHINE set [3, false]; // set server
-				SLX_XEH_MACHINE set [4, false]; // set dedicatedserver
-			};
-			waitUntil { !(isNull player) || {SLX_XEH_MACHINE select 13} };
-			if (SLX_XEH_MACHINE select 13) then { XEH_LOG("WARNING: TimedOut waiting for player object to be ready. Continueing PostInit without Player ready") };
-		};
-	};
-	
-	if !(isNull player) then {
-		if (isNull (group player) && {player isKindOf "CAManBase"}) then {
-			// DEBUG TEST: Crashing due to JIP, or when going from briefing
-			//			 into game
-			#ifdef DEBUG_MODE_FULL
-			"NULLGROUP" call SLX_XEH_LOG;
-			#endif
-			waitUntil { !(isNull (group player)) };
-		};
-		waitUntil { local player };
-	};
+    // On Server + Non JIP Client, we are now after all objects have inited
+    // and at the briefing, still time == 0
+    if (isNull player) then {
+        #ifdef DEBUG_MODE_FULL
+        "NULL PLAYER" call SLX_XEH_LOG;
+        #endif
+        if !((SLX_XEH_MACHINE select 4) || {(SLX_XEH_MACHINE select 6)}) then { // only if MultiPlayer and not dedicated
+            #ifdef DEBUG_MODE_FULL
+            "JIP" call SLX_XEH_LOG;
+            #endif
+    
+            SLX_XEH_MACHINE set [1, true]; // set JIP
+            // TEST for weird jip-is-server-issue :S
+            if (!(SLX_XEH_MACHINE select 2) || {SLX_XEH_MACHINE select 3} || {SLX_XEH_MACHINE select 4}) then {
+                str(["WARNING: JIP Client, yet wrong detection", SLX_XEH_MACHINE]) call SLX_XEH_LOG;
+                SLX_XEH_MACHINE set [2, true]; // set Dedicated client
+                SLX_XEH_MACHINE set [3, false]; // set server
+                SLX_XEH_MACHINE set [4, false]; // set dedicatedserver
+            };
+            waitUntil { !(isNull player) || {SLX_XEH_MACHINE select 13} };
+            if (SLX_XEH_MACHINE select 13) then { XEH_LOG("WARNING: TimedOut waiting for player object to be ready. Continueing PostInit without Player ready") };
+        };
+    };
+    
+    if !(isNull player) then {
+        if (isNull (group player) && {player isKindOf "CAManBase"}) then {
+            // DEBUG TEST: Crashing due to JIP, or when going from briefing
+            //             into game
+            #ifdef DEBUG_MODE_FULL
+            "NULLGROUP" call SLX_XEH_LOG;
+            #endif
+            waitUntil { !(isNull (group player)) };
+        };
+        waitUntil { local player };
+    };
 
-	GVAR(init_obj2) setDamage 1; // Schedule to run itsy bitsy later
+    GVAR(init_obj2) setDamage 1; // Schedule to run itsy bitsy later
 
-	SLX_XEH_MACHINE set [5, true]; // set player check = complete
+    SLX_XEH_MACHINE set [5, true]; // set player check = complete
 };
 
 // Load and call any "pre-init", run-once event handlers
 /*
-	Compile code strings in the Extended_PreInit_EventHandlers class and call
-	them. This is done once per mission and before any extended init event
-	handler code is run. An addon maker can put run-once initialisation code
-	in such a pre-init "EH" rather than in a normal XEH init EH which might be
-	called several times.
+    Compile code strings in the Extended_PreInit_EventHandlers class and call
+    them. This is done once per mission and before any extended init event
+    handler code is run. An addon maker can put run-once initialisation code
+    in such a pre-init "EH" rather than in a normal XEH init EH which might be
+    called several times.
 */
 { (_x/SLX_XEH_STR_PreInit) call FUNC(init_once) } forEach SLX_XEH_CONFIG_FILES;
 

@@ -29,8 +29,8 @@ _actions = [];
 // Mount unit MainActions menu
 
 {
-	EXPLODE_2_PVT(_x,_actionData,_children);
-	_actions pushBack [_actionData, _children, _unit];
+    EXPLODE_2_PVT(_x,_actionData,_children);
+    _actions pushBack [_actionData, _children, _unit];
 } forEach ((_actionTrees select 0) select 1);
 
 _actions

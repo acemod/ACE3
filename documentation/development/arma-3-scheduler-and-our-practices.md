@@ -78,14 +78,14 @@ See: https://dev.withsix.com/docs/cba/files/common/fnc_addPerFrameHandler-sqf.ht
 
 ```c++
 DFUNC(myDelayedFunction) = {
-	// Our argument array is passed in a PFH as select 0
-	_args = _this select 0;
-	
-	// Print our arguments
-	diag_log text format["I received: %1", (_args select 0)];
-	
-	// Delete this PFH, so it is only executed once
-	[_this select 1] call CBA_fnc_removePerFrameHandler;
+    // Our argument array is passed in a PFH as select 0
+    _args = _this select 0;
+    
+    // Print our arguments
+    diag_log text format["I received: %1", (_args select 0)];
+    
+    // Delete this PFH, so it is only executed once
+    [_this select 1] call CBA_fnc_removePerFrameHandler;
 };
 
 // This runs the PFH once every 5 seconds, with the variable array ["balls"] being passed in

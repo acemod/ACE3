@@ -24,8 +24,8 @@ _selections = [];
 
 // iterate through all parents
 while {isClass _config} do {
-	private "_class";
-	_class = _config >> "Reflectors";
+    private "_class";
+    _class = _config >> "Reflectors";
 
     for "_i" from 0 to (count _class - 1) do {
         private ["_entry", "_selection"];

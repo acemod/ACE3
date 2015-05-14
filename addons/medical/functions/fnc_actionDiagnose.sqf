@@ -27,11 +27,11 @@ if (alive _target) then {
     _genericMessages pushback "STR_ACE_Medical_diagnoseDead";
 };
 if (_target getvariable[QGVAR(hasLostBlood), 0] > 0) then {
-	if (_target getvariable[QGVAR(hasLostBlood), 0] > 1) then {
-		_genericMessages pushback "STR_ACE_Medical_lostBloodALot";
-	} else {
-		_genericMessages pushback "STR_ACE_Medical_lostBlood";
-	};
+    if (_target getvariable[QGVAR(hasLostBlood), 0] > 1) then {
+        _genericMessages pushback "STR_ACE_Medical_lostBloodALot";
+    } else {
+        _genericMessages pushback "STR_ACE_Medical_lostBlood";
+    };
 } else {
     _genericMessages pushback "STR_ACE_Medical_noBloodloss";
 };

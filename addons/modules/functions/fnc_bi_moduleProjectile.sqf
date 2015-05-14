@@ -122,7 +122,7 @@ if (_activated) then {
             _projectile setvelocity _velocity;
             if (_attach) then {_projectile attachto [_logic,[0,0,_altitude]];};
 
-           	// This is our addition to this function
+               // This is our addition to this function
             if (!isnil "ace_frag_fnc_addManualTrack") then {
                 [_projectile] call ace_frag_fnc_addManualTrack
             };

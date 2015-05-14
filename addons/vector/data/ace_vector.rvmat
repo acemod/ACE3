@@ -1,5 +1,5 @@
 class StageTI {
-	texture="#(argb,8,8,3)color(1,0.25,0,0,ti)";
+    texture="#(argb,8,8,3)color(1,0.25,0,0,ti)";
 };
 ambient[]={1,1,1,1};
 diffuse[]={1,1,1,1};
@@ -11,72 +11,72 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 
 class Stage1 {
-	texture="z\ace\addons\vector\data\ace_vector_nohq.paa";
-	uvSource="tex";
-	class uvTransform	{
-		aside[]={1,0,0};
-		up[]={0,1,0};
-		dir[]={0,0,0};
-		pos[]={0,0,0};
-	};
+    texture="z\ace\addons\vector\data\ace_vector_nohq.paa";
+    uvSource="tex";
+    class uvTransform {
+        aside[]={1,0,0};
+        up[]={0,1,0};
+        dir[]={0,0,0};
+        pos[]={0,0,0};
+    };
 };
 class Stage2 {
-	texture="#(argb,8,8,3)color(0.5,0.5,0.5,1,dt)";
-	uvSource="tex";
-	class uvTransform {
-		aside[]={1,0,0};
-		up[]={0,1,0};
-		dir[]={0,0,0};
-		pos[]={0,0,0};
-	};
+    texture="#(argb,8,8,3)color(0.5,0.5,0.5,1,dt)";
+    uvSource="tex";
+    class uvTransform {
+        aside[]={1,0,0};
+        up[]={0,1,0};
+        dir[]={0,0,0};
+        pos[]={0,0,0};
+    };
 };
 class Stage3 {
-	texture="#(argb,8,8,3)color(0,0,0,0,mc)";
-	uvSource="tex";
-	class uvTransform {
-		aside[]={1,0,0};
-		up[]={0,1,0};
-		dir[]={0,0,0};
-		pos[]={0,0,0};
-	};
+    texture="#(argb,8,8,3)color(0,0,0,0,mc)";
+    uvSource="tex";
+    class uvTransform {
+        aside[]={1,0,0};
+        up[]={0,1,0};
+        dir[]={0,0,0};
+        pos[]={0,0,0};
+    };
 };
 class Stage4 {
-	texture="z\ace\addons\vector\data\ace_default_as.paa";
-	uvSource="tex";
-	class uvTransform {
-		aside[]={1,0,0};
-		up[]={0,1,0};
-		dir[]={0,0,1};
-		pos[]={0,0,1};
-	};
+    texture="z\ace\addons\vector\data\ace_default_as.paa";
+    uvSource="tex";
+    class uvTransform {
+        aside[]={1,0,0};
+        up[]={0,1,0};
+        dir[]={0,0,1};
+        pos[]={0,0,1};
+    };
 };
 class Stage5 {
-	texture="z\ace\addons\vector\data\ace_vector_smdi.paa";
-	uvSource="tex";
-	class uvTransform	{
-		aside[]={1,0,0};
-		up[]={0,1,0};
-		dir[]={0,0,0};
-		pos[]={0,0,0};
-	};
+    texture="z\ace\addons\vector\data\ace_vector_smdi.paa";
+    uvSource="tex";
+    class uvTransform {
+        aside[]={1,0,0};
+        up[]={0,1,0};
+        dir[]={0,0,0};
+        pos[]={0,0,0};
+    };
 };
 class Stage6 {
-	texture="#(ai,64,64,1)fresnel(4.7,1.2)";
-	uvSource="tex";
-	class uvTransform {
-		aside[]={1,0,0};
-		up[]={0,1,0};
-		dir[]={0,0,1};
-		pos[]={0,0,0};
-	};
+    texture="#(ai,64,64,1)fresnel(4.7,1.2)";
+    uvSource="tex";
+    class uvTransform {
+        aside[]={1,0,0};
+        up[]={0,1,0};
+        dir[]={0,0,1};
+        pos[]={0,0,0};
+    };
 };
 class Stage7 {
-	texture="a3\data_f\env_land_ca.paa";
-	uvSource="tex";
-	class uvTransform {
-		aside[]={1,0,0};
-		up[]={0,1,0};
-		dir[]={0,0,1};
-		pos[]={0,0,0};
-	};
+    texture="a3\data_f\env_land_ca.paa";
+    uvSource="tex";
+    class uvTransform {
+        aside[]={1,0,0};
+        up[]={0,1,0};
+        dir[]={0,0,1};
+        pos[]={0,0,0};
+    };
 };

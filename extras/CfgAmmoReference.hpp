@@ -1,5 +1,4 @@
-class CfgAmmo
-{
+class CfgAmmo {
     class BulletBase;
     class B_556x45_Ball : BulletBase {
         airFriction=-0.001265;
@@ -111,8 +110,7 @@ class CfgAmmo
     class ACE_65x39_Caseless_green_Tracer_Dim : B_65x39_Caseless_green {
         nvgOnly = 1;
     };
-    class ACE_65x47_Ball_Scenar: B_65x39_Caseless
-    {
+    class ACE_65x47_Ball_Scenar: B_65x39_Caseless {
         airFriction=-0.00078;
         typicalSpeed=820 ;
         ACE_caliber=6.706;
@@ -602,8 +600,7 @@ class CfgAmmo
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
     
-    class TMR_B_762x51_M118LR : B_762x51_Ball
-    {
+    class TMR_B_762x51_M118LR : B_762x51_Ball {
         ACE_caliber=7.823;
         ACE_bulletLength=31.496;
         ACE_bulletMass=11.34;
@@ -616,8 +613,7 @@ class CfgAmmo
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
     
-    class RH_50_AE_Ball: BulletBase
-    {
+    class RH_50_AE_Ball: BulletBase {
         ACE_caliber=12.7;
         ACE_bulletLength=28.194;
         ACE_bulletMass=21.06;
@@ -629,8 +625,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={360, 398, 420};
         ACE_barrelLengths[]={101.6, 152.4, 228.6};
     };
-    class RH_454_Casull: BulletBase
-    {
+    class RH_454_Casull: BulletBase {
         ACE_caliber=11.481;
         ACE_bulletLength=22.733;
         ACE_bulletMass=21.06;
@@ -642,8 +637,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={450, 490, 500};
         ACE_barrelLengths[]={101.6, 190.5, 228.6};
     };
-    class RH_32ACP: BulletBase
-    {
+    class RH_32ACP: BulletBase {
         ACE_caliber=7.938;
         ACE_bulletLength=15.494;
         ACE_bulletMass=4.212;
@@ -655,8 +649,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={282, 300, 320};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class RH_45ACP: BulletBase
-    {
+    class RH_45ACP: BulletBase {
         ACE_caliber=11.481;
         ACE_bulletLength=17.272;
         ACE_bulletMass=14.904;
@@ -668,8 +661,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={230, 250, 285};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class RH_B_40SW: BulletBase
-    {
+    class RH_B_40SW: BulletBase {
         ACE_caliber=10.16;
         ACE_bulletLength=11.354;
         ACE_bulletMass=8.748;
@@ -681,8 +673,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={360, 380, 400};
         ACE_barrelLengths[]={101.6, 152.4, 228.6};
     };
-    class RH_44mag_ball: BulletBase
-    {
+    class RH_44mag_ball: BulletBase {
         ACE_caliber=10.897;
         ACE_bulletLength=20.422;
         ACE_bulletMass=12.96;
@@ -694,8 +685,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={360, 390, 420};
         ACE_barrelLengths[]={101.6, 190.5, 228.6};
     };
-    class RH_357mag_ball: BulletBase
-    {
+    class RH_357mag_ball: BulletBase {
         ACE_caliber=9.068;
         ACE_bulletLength=13.741;
         ACE_bulletMass=8.1;
@@ -707,8 +697,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={490, 510, 535};
         ACE_barrelLengths[]={101.6, 152.4, 228.6};
     };
-    class RH_762x25: BulletBase
-    {
+    class RH_762x25: BulletBase {
         ACE_caliber=7.874;
         ACE_bulletLength=13.856;
         ACE_bulletMass=5.5728;
@@ -720,8 +709,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={360, 380, 400};
         ACE_barrelLengths[]={101.6, 152.4, 228.6};
     };
-    class RH_9x18_Ball: BulletBase
-    {
+    class RH_9x18_Ball: BulletBase {
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
         ACE_bulletMass=6.00048;
@@ -733,8 +721,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
-    class RH_B_9x19_Ball: BulletBase
-    {
+    class RH_B_9x19_Ball: BulletBase {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -746,8 +733,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={340, 370, 400};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class RH_B_22LR_SD: BulletBase
-    {
+    class RH_B_22LR_SD: BulletBase {
         ACE_caliber=5.664;
         ACE_bulletLength=11.43;
         ACE_bulletMass=2.4624;
@@ -759,8 +745,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={330, 340, 360};
         ACE_barrelLengths[]={101.6, 152.4, 228.6};
     };
-    class RH_57x28mm: BulletBase
-    {
+    class RH_57x28mm: BulletBase {
         ACE_caliber=5.69;
         ACE_bulletLength=12.573;
         ACE_bulletMass=1.8144;
@@ -773,8 +758,7 @@ class CfgAmmo
         ACE_barrelLengths[]={101.6, 152.4, 262.89};
     };
     
-    class RH_9x19_B_M822: BulletBase
-    {
+    class RH_9x19_B_M822: BulletBase {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -786,8 +770,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={340, 370, 400};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class RH_9x19_B_HP: BulletBase
-    {
+    class RH_9x19_B_HP: BulletBase {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -799,8 +782,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={340, 370, 400};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class RH_9x19_B_HPSB: BulletBase
-    {
+    class RH_9x19_B_HPSB: BulletBase {
         ACE_caliber=9.017;
         ACE_bulletLength=15.316;
         ACE_bulletMass=9.5256;
@@ -812,8 +794,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={295, 310, 330};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class RH_B_6x35: BulletBase
-    {
+    class RH_B_6x35: BulletBase {
         ACE_caliber=5.69;
         ACE_bulletLength=11.303;
         ACE_bulletMass=4.212;
@@ -825,8 +806,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={730, 750, 760};
         ACE_barrelLengths[]={203.2, 254.0, 304.8};
     };
-    class RH_556x45_B_M855A1 : B_556x45_Ball
-    {
+    class RH_556x45_B_M855A1 : B_556x45_Ball {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.0176;
@@ -838,8 +818,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
-    class RH_556x45_B_Mk262 : B_556x45_Ball
-    {
+    class RH_556x45_B_Mk262 : B_556x45_Ball {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.9896;
@@ -851,8 +830,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={624, 816, 832, 838};
         ACE_barrelLengths[]={190.5, 368.3, 457.2, 508.0};
     };
-    class RH_556x45_B_Mk318 : B_556x45_Ball
-    {
+    class RH_556x45_B_Mk318 : B_556x45_Ball {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.0176;
@@ -864,8 +842,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={780, 886, 950};
         ACE_barrelLengths[]={254.0, 393.7, 508.0};
     };
-    class RH_68x43_B_FMJ: B_65x39_Caseless
-    {
+    class RH_68x43_B_FMJ: B_65x39_Caseless {
         ACE_caliber=7.036;
         ACE_bulletLength=24.359;
         ACE_bulletMass=7.452;
@@ -877,8 +854,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={713, 785, 810, 850};
         ACE_barrelLengths[]={304.8, 406.4, 508.0, 609.6};
     };
-    class RH_68x43_B_Match: B_65x39_Caseless
-    {
+    class RH_68x43_B_Match: B_65x39_Caseless {
         ACE_caliber=7.036;
         ACE_bulletLength=31.75;
         ACE_bulletMass=8.748;
@@ -889,9 +865,8 @@ class CfgAmmo
         ACE_dragModel=7;
         ACE_muzzleVelocities[]={700, 732, 750, 780};
         ACE_barrelLengths[]={304.8, 406.4, 508.0, 609.6};
-    };	
-    class RH_762x35_B_FMJ: B_65x39_Caseless
-    {
+    };    
+    class RH_762x35_B_FMJ: B_65x39_Caseless {
         ACE_caliber=7.823;
         ACE_bulletLength=28.397;
         ACE_bulletMass=9.5256;
@@ -903,8 +878,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={559, 609, 625};
         ACE_barrelLengths[]={152.4, 406.4, 508.0};
     };
-    class RH_762x35_B_Match: B_65x39_Caseless
-    {
+    class RH_762x35_B_Match: B_65x39_Caseless {
         ACE_caliber=7.823;
         ACE_bulletLength=29.286;
         ACE_bulletMass=8.1;
@@ -916,8 +890,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={590, 650, 665};
         ACE_barrelLengths[]={152.4, 406.4, 508.0};
     };
-    class RH_762x35_B_MSB: B_65x39_Caseless
-    {
+    class RH_762x35_B_MSB: B_65x39_Caseless {
         ACE_caliber=7.823;
         ACE_bulletLength=37.821;
         ACE_bulletMass=14.256;
@@ -929,8 +902,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={300, 320, 340};
         ACE_barrelLengths[]={228.6, 406.4, 508.0};
     };
-    class RH_762x51_B_M80A1 : B_762x51_Ball
-    {
+    class RH_762x51_B_M80A1 : B_762x51_Ball {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -942,8 +914,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class RH_762x51_B_Mk316LR : B_762x51_Ball
-    {
+    class RH_762x51_B_Mk316LR : B_762x51_Ball {
         ACE_caliber=7.823;
         ACE_bulletLength=31.496;
         ACE_bulletMass=11.34;
@@ -955,8 +926,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={750, 780, 790, 794};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class RH_762x51_B_Mk319 : B_762x51_Ball
-    {
+    class RH_762x51_B_Mk319 : B_762x51_Ball {
         ACE_caliber=7.823;
         ACE_bulletLength=27.28;
         ACE_bulletMass=8.424;
@@ -968,8 +938,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={838, 892, 920};
         ACE_barrelLengths[]={330.2, 406.4, 508.0};
     };
-    class RH_762x51_B_LFMJSB: B_762x51_Ball
-    {
+    class RH_762x51_B_LFMJSB: B_762x51_Ball {
         ACE_caliber=7.823;
         ACE_bulletLength=34.036;
         ACE_bulletMass=12.96;
@@ -982,8 +951,7 @@ class CfgAmmo
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
     
-    class HLC_556NATO_SOST: BulletBase
-    {
+    class HLC_556NATO_SOST: BulletBase {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.0176;
@@ -995,8 +963,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={780, 886, 950};
         ACE_barrelLengths[]={254.0, 393.7, 508.0};
     };
-    class HLC_556NATO_SPR: BulletBase
-    {
+    class HLC_556NATO_SPR: BulletBase {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.9896;
@@ -1008,8 +975,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={624, 816, 832, 838};
         ACE_barrelLengths[]={190.5, 368.3, 457.2, 508.0};
     };
-    class HLC_556NATO_EPR: BulletBase
-    {
+    class HLC_556NATO_EPR: BulletBase {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.0176;
@@ -1021,8 +987,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
-    class HLC_300Blackout_Ball: BulletBase
-    {
+    class HLC_300Blackout_Ball: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.397;
         ACE_bulletMass=9.5256;
@@ -1034,8 +999,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={559, 609, 625};
         ACE_barrelLengths[]={152.4, 406.4, 508.0};
     };
-    class HLC_300Blackout_SMK: BulletBase
-    {
+    class HLC_300Blackout_SMK: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=37.821;
         ACE_bulletMass=14.256;
@@ -1047,8 +1011,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={300, 320, 340};
         ACE_barrelLengths[]={228.6, 406.4, 508.0};
     };
-    class HLC_762x51_BTSub: BulletBase
-    {
+    class HLC_762x51_BTSub: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=34.036;
         ACE_bulletMass=12.96;
@@ -1060,8 +1023,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={305, 325, 335, 340};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class HLC_762x54_ball: BulletBase
-    {
+    class HLC_762x54_ball: BulletBase {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.8496;
@@ -1073,8 +1035,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class HLC_762x54_tracer: BulletBase
-    {
+    class HLC_762x54_tracer: BulletBase {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.6552;
@@ -1086,8 +1047,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={680, 750, 798, 800};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class HLC_303Brit_B: BulletBase
-    {
+    class HLC_303Brit_B: BulletBase {
         ACE_caliber=7.899;
         ACE_bulletLength=31.166;
         ACE_bulletMass=11.2752;
@@ -1099,8 +1059,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={748, 761, 765};
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
-    class HLC_792x57_Ball: BulletBase
-    {
+    class HLC_792x57_Ball: BulletBase {
         ACE_caliber=8.077;
         ACE_bulletLength=28.651;
         ACE_bulletMass=12.7008;
@@ -1112,8 +1071,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={785, 800, 815};
         ACE_barrelLengths[]={508.0, 599.948, 660.4};
     };
-    class FH_545x39_Ball: BulletBase
-    {
+    class FH_545x39_Ball: BulletBase {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.42792;
@@ -1125,15 +1083,13 @@ class CfgAmmo
         ACE_muzzleVelocities[]={780, 880, 920};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class FH_545x39_7u1: FH_545x39_Ball
-    {
+    class FH_545x39_7u1: FH_545x39_Ball {
         ACE_bulletMass=5.184;
         ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
         ACE_muzzleVelocities[]={260, 303, 320};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class HLC_9x19_Ball: BulletBase
-    {
+    class HLC_9x19_Ball: BulletBase {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -1145,16 +1101,13 @@ class CfgAmmo
         ACE_muzzleVelocities[]={340, 370, 400};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class HLC_9x19_GoldDot: HLC_9x19_Ball
-    {
+    class HLC_9x19_GoldDot: HLC_9x19_Ball {
         ACE_muzzleVelocities[]={350, 380, 420};
     };
-    class HLC_9x19_Subsonic: HLC_9x19_Ball
-    {
+    class HLC_9x19_Subsonic: HLC_9x19_Ball {
         ACE_muzzleVelocities[]={300, 320, 340};
     };
-    class HLC_10mm_FMJ: HLC_9x19_Ball
-    {
+    class HLC_10mm_FMJ: HLC_9x19_Ball {
         ACE_caliber=12.7;
         ACE_bulletLength=19.406;
         ACE_bulletMass=10.692;
@@ -1166,8 +1119,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={360, 400, 430};
         ACE_barrelLengths[]={101.6, 117.094, 228.6};
     };
-    class HLC_9x19_M882_SMG: HLC_9x19_Ball
-    {
+    class HLC_9x19_M882_SMG: HLC_9x19_Ball {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -1180,8 +1132,7 @@ class CfgAmmo
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
     
-    class M_mas_545x39_Ball_7N6M : BulletBase
-    {
+    class M_mas_545x39_Ball_7N6M : BulletBase {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.42792;
@@ -1193,8 +1144,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={780, 880, 920};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class M_mas_545x39_Ball_7T3M : BulletBase
-    {
+    class M_mas_545x39_Ball_7T3M : BulletBase {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.22704;
@@ -1206,8 +1156,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={785, 883, 925};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class B_mas_556x45_Ball_Mk262 : B_556x45_Ball
-    {
+    class B_mas_556x45_Ball_Mk262 : B_556x45_Ball {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.9896;
@@ -1219,8 +1168,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={624, 816, 832, 838};
         ACE_barrelLengths[]={190.5, 368.3, 457.2, 508.0};
     };
-    class B_mas_9x18_Ball_57N181S : BulletBase
-    {
+    class B_mas_9x18_Ball_57N181S : BulletBase {
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
         ACE_bulletMass=6.00048;
@@ -1232,8 +1180,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
-    class B_mas_9x21p_Ball: BulletBase
-    {
+    class B_mas_9x21p_Ball: BulletBase {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -1245,8 +1192,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={340, 370, 400};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class B_mas_9x21_Ball: BulletBase
-    {
+    class B_mas_9x21_Ball: BulletBase {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -1258,8 +1204,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={340, 370, 400};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class B_mas_9x21d_Ball: BulletBase
-    {
+    class B_mas_9x21d_Ball: BulletBase {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -1271,8 +1216,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={210, 250, 285};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class B_mas_765x17_Ball: BulletBase
-    {
+    class B_mas_765x17_Ball: BulletBase {
         ACE_caliber=7.938;
         ACE_bulletLength=15.494;
         ACE_bulletMass=4.212;
@@ -1284,8 +1228,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={282, 300, 320};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class B_mas_762x39_Ball: BulletBase
-    {
+    class B_mas_762x39_Ball: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=7.9704;
@@ -1297,8 +1240,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class B_mas_762x39_Ball_T: BulletBase
-    {
+    class B_mas_762x39_Ball_T: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=7.5816;
@@ -1310,8 +1252,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class B_mas_762x51_Ball_M118LR : B_762x51_Ball
-    {
+    class B_mas_762x51_Ball_M118LR : B_762x51_Ball {
         ACE_caliber=7.823;
         ACE_bulletLength=31.496;
         ACE_bulletMass=11.34;
@@ -1323,8 +1264,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={750, 780, 790, 794};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class B_mas_762x67_Ball_Mk248_Mod_0 : B_762x51_Ball
-    {
+    class B_mas_762x67_Ball_Mk248_Mod_0 : B_762x51_Ball {
         ACE_caliber=7.823;
         ACE_bulletLength=34.366;
         ACE_bulletMass=12.312;
@@ -1336,8 +1276,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={865, 900, 924};
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
-    class B_mas_762x67_Ball_Mk248_Mod_1 : B_762x51_Ball
-    {
+    class B_mas_762x67_Ball_Mk248_Mod_1 : B_762x51_Ball {
         ACE_caliber=7.823;
         ACE_bulletLength=37.821;
         ACE_bulletMass=14.256;
@@ -1349,8 +1288,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={820, 867, 900};
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
-    class B_mas_762x67_Ball_Berger_Hybrid_OTM : B_762x51_Ball
-    {
+    class B_mas_762x67_Ball_Berger_Hybrid_OTM : B_762x51_Ball {
         ACE_caliber=7.823;
         ACE_bulletLength=40.691;
         ACE_bulletMass=14.904;
@@ -1361,9 +1299,8 @@ class CfgAmmo
         ACE_dragModel=7;
         ACE_muzzleVelocities[]={800, 853, 884};
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
-    };	
-    class B_mas_762x54_Ball : BulletBase
-    {
+    };    
+    class B_mas_762x54_Ball : BulletBase {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.8496;
@@ -1375,8 +1312,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class B_mas_762x54_Ball_T : BulletBase
-    {
+    class B_mas_762x54_Ball_T : BulletBase {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.6552;
@@ -1388,8 +1324,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={680, 750, 798, 800};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class BWA3_B_762x51_Ball_LR : BulletBase
-    {
+    class BWA3_B_762x51_Ball_LR : BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=31.496;
         ACE_bulletMass=11.34;
@@ -1401,8 +1336,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={750, 780, 790, 794};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class BWA3_B_762x51_Ball_SD : BulletBase
-    {
+    class BWA3_B_762x51_Ball_SD : BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=31.496;
         ACE_bulletMass=11.34;
@@ -1415,8 +1349,7 @@ class CfgAmmo
         ACE_barrelLengths[]={406.4, 609.6};
     };
     
-    class BWA3_B_46x30_Ball : BulletBase
-    {
+    class BWA3_B_46x30_Ball : BulletBase {
         ACE_caliber=4.902;
         ACE_bulletLength=13.005;
         ACE_bulletMass=2.0088;
@@ -1429,8 +1362,7 @@ class CfgAmmo
         ACE_barrelLengths[]={101.6, 177.8, 228.6, 304.8};
     };
     
-    class Trixie_338_Ball : BulletBase
-    {
+    class Trixie_338_Ball : BulletBase {
         ACE_caliber=8.585;
         ACE_bulletLength=43.18;
         ACE_bulletMass=19.44;
@@ -1442,8 +1374,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={820, 826, 830};
         ACE_barrelLengths[]={609.6, 673.1, 711.2};
     };
-    class Trixie_303_Ball : BulletBase
-    {
+    class Trixie_303_Ball : BulletBase {
         ACE_caliber=7.899;
         ACE_bulletLength=31.166;
         ACE_bulletMass=11.2752;
@@ -1456,8 +1387,7 @@ class CfgAmmo
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
     
-    class rhs_ammo_556x45_Mk318_Ball : BulletBase
-    {
+    class rhs_ammo_556x45_Mk318_Ball : BulletBase {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.0176;
@@ -1469,8 +1399,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={780, 886, 950};
         ACE_barrelLengths[]={254.0, 393.7, 508.0};
     };
-    class rhs_ammo_556x45_Mk262_Ball : BulletBase
-    {
+    class rhs_ammo_556x45_Mk262_Ball : BulletBase {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.9896;
@@ -1482,8 +1411,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={624, 816, 832, 838};
         ACE_barrelLengths[]={190.5, 368.3, 457.2, 508.0};
     };
-    class rhsammo_762x51_Ball : BulletBase
-    {
+    class rhsammo_762x51_Ball : BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -1495,8 +1423,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class rhs_B_545x39_Ball : BulletBase
-    {
+    class rhs_B_545x39_Ball : BulletBase {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.42792;
@@ -1508,8 +1435,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={780, 880, 920};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class rhs_B_545x39_Ball_Tracer_Green : BulletBase
-    {
+    class rhs_B_545x39_Ball_Tracer_Green : BulletBase {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.22704;
@@ -1521,8 +1447,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={785, 883, 925};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class rhs_ammo_762x51_M118_Special_Ball : BulletBase
-    {
+    class rhs_ammo_762x51_M118_Special_Ball : BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=31.496;
         ACE_bulletMass=11.34;
@@ -1534,8 +1459,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={750, 780, 790, 794};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class rhs_B_762x54_Ball : BulletBase
-    {
+    class rhs_B_762x54_Ball : BulletBase {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.8496;
@@ -1547,8 +1471,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class rhs_B_762x54_Ball_Tracer_Green : BulletBase
-    {
+    class rhs_B_762x54_Ball_Tracer_Green : BulletBase {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.6552;
@@ -1560,8 +1483,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={680, 750, 798, 800};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class rhs_B_762x39_Ball : BulletBase
-    {
+    class rhs_B_762x39_Ball : BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=7.9704;
@@ -1573,8 +1495,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class rhs_B_762x39_Tracer : BulletBase
-    {
+    class rhs_B_762x39_Tracer : BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=7.5816;
@@ -1586,8 +1507,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class rhs_ammo_762x51_M80_Ball : BulletBase
-    {
+    class rhs_ammo_762x51_M80_Ball : BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -1599,8 +1519,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class rhsusf_B_300winmag : BulletBase
-    {
+    class rhsusf_B_300winmag : BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=37.821;
         ACE_bulletMass=14.256;
@@ -1613,8 +1532,7 @@ class CfgAmmo
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
     
-    class R3F_9x19_Ball: BulletBase
-    {
+    class R3F_9x19_Ball: BulletBase {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -1626,8 +1544,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={340, 370, 400};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class R3F_556x45_Ball: BulletBase
-    {
+    class R3F_556x45_Ball: BulletBase {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.0176;
@@ -1639,8 +1556,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
-    class R3F_762x51_Ball: BulletBase
-    {
+    class R3F_762x51_Ball: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -1652,8 +1568,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class R3F_762x51_Ball2: BulletBase
-    {
+    class R3F_762x51_Ball2: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=31.496;
         ACE_bulletMass=11.34;
@@ -1665,8 +1580,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={750, 780, 790, 794};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class R3F_127x99_Ball: BulletBase
-    {
+    class R3F_127x99_Ball: BulletBase {
         ACE_caliber=12.954;
         ACE_bulletLength=58.674;
         ACE_bulletMass=41.9256;
@@ -1678,8 +1592,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={853};
         ACE_barrelLengths[]={736.6};
     };
-    class R3F_127x99_Ball2: BulletBase
-    {
+    class R3F_127x99_Ball2: BulletBase {
         ACE_caliber=12.954;
         ACE_bulletLength=58.674;
         ACE_bulletMass=41.9256;
@@ -1692,8 +1605,7 @@ class CfgAmmo
         ACE_barrelLengths[]={736.6};
     };
     
-    class CUP_B_545x39_Ball: BulletBase
-    {
+    class CUP_B_545x39_Ball: BulletBase {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.42792;
@@ -1705,8 +1617,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={780, 880, 920};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class CUP_B_545x39_Ball_Tracer_Green: BulletBase
-    {
+    class CUP_B_545x39_Ball_Tracer_Green: BulletBase {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.22704;
@@ -1718,8 +1629,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={785, 883, 925};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class CUP_B_545x39_Ball_Tracer_Red: BulletBase
-    {
+    class CUP_B_545x39_Ball_Tracer_Red: BulletBase {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.22704;
@@ -1731,8 +1641,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={785, 883, 925};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class CUP_B_545x39_Ball_Tracer_White: BulletBase
-    {
+    class CUP_B_545x39_Ball_Tracer_White: BulletBase {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.22704;
@@ -1744,8 +1653,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={785, 883, 925};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class CUP_B_545x39_Ball_Tracer_Yellow: BulletBase
-    {
+    class CUP_B_545x39_Ball_Tracer_Yellow: BulletBase {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.22704;
@@ -1757,8 +1665,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={785, 883, 925};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class CUP_B_762x39_Ball: BulletBase
-    {
+    class CUP_B_762x39_Ball: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=7.9704;
@@ -1770,8 +1677,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class CUP_B_762x39_Ball_Tracer_Green: BulletBase
-    {
+    class CUP_B_762x39_Ball_Tracer_Green: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=7.5816;
@@ -1783,8 +1689,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class B_762x39mm_KLT: BulletBase
-    {
+    class B_762x39mm_KLT: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=7.9704;
@@ -1796,8 +1701,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class CUP_B_9x18_Ball: BulletBase
-    {
+    class CUP_B_9x18_Ball: BulletBase {
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
         ACE_bulletMass=6.00048;
@@ -1809,8 +1713,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
-    class CUP_B_9x18_Ball_Tracer_Green: BulletBase
-    {
+    class CUP_B_9x18_Ball_Tracer_Green: BulletBase {
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
         ACE_bulletMass=6.00048;
@@ -1822,8 +1725,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
-    class CUP_B_9x18_Ball_Tracer_Red: BulletBase
-    {
+    class CUP_B_9x18_Ball_Tracer_Red: BulletBase {
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
         ACE_bulletMass=6.00048;
@@ -1835,8 +1737,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
-    class CUP_B_9x18_Ball_Tracer_Yellow: BulletBase
-    {
+    class CUP_B_9x18_Ball_Tracer_Yellow: BulletBase {
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
         ACE_bulletMass=6.00048;
@@ -1848,8 +1749,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
-    class CUP_B_9x18_Ball_White_Tracer: BulletBase
-    {
+    class CUP_B_9x18_Ball_White_Tracer: BulletBase {
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
         ACE_bulletMass=6.00048;
@@ -1861,8 +1761,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
-    class CUP_B_9x19_Ball: BulletBase
-    {
+    class CUP_B_9x19_Ball: BulletBase {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -1874,8 +1773,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={340, 370, 400};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class CUP_B_762x51_noTracer: BulletBase
-    {
+    class CUP_B_762x51_noTracer: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -1887,8 +1785,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class CUP_B_762x51_Red_Tracer_3RndBurst: BulletBase
-    {
+    class CUP_B_762x51_Red_Tracer_3RndBurst: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -1900,8 +1797,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class CUP_B_762x51_White_Tracer_3RndBurst: BulletBase
-    {
+    class CUP_B_762x51_White_Tracer_3RndBurst: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -1913,8 +1809,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class CUP_B_303_Ball: BulletBase
-    {
+    class CUP_B_303_Ball: BulletBase {
         ACE_caliber=7.899;
         ACE_bulletLength=31.166;
         ACE_bulletMass=11.2752;
@@ -1926,8 +1821,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={748, 761, 765};
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
-    class CUP_B_127x107_Ball_Green_Tracer: BulletBase
-    {
+    class CUP_B_127x107_Ball_Green_Tracer: BulletBase {
         ACE_caliber=12.979;
         ACE_bulletLength=64.008;
         ACE_bulletMass=48.276;
@@ -1939,8 +1833,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={820};
         ACE_barrelLengths[]={728.98};
     };
-    class CUP_B_127x108_Ball_Green_Tracer: BulletBase
-    {
+    class CUP_B_127x108_Ball_Green_Tracer: BulletBase {
         ACE_caliber=12.979;
         ACE_bulletLength=64.008;
         ACE_bulletMass=48.276;
@@ -1952,8 +1845,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={820};
         ACE_barrelLengths[]={728.98};
     };
-    class CUP_B_762x54_Ball_White_Tracer: BulletBase
-    {
+    class CUP_B_762x54_Ball_White_Tracer: BulletBase {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.6552;
@@ -1965,8 +1857,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={680, 750, 798, 800};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class CUP_B_762x54_Ball_Red_Tracer: BulletBase
-    {
+    class CUP_B_762x54_Ball_Red_Tracer: BulletBase {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.6552;
@@ -1978,8 +1869,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={680, 750, 798, 800};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class CUP_B_762x54_Ball_Green_Tracer: BulletBase
-    {
+    class CUP_B_762x54_Ball_Green_Tracer: BulletBase {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.6552;
@@ -1991,8 +1881,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={680, 750, 798, 800};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class CUP_B_762x54_Ball_Yellow_Tracer: BulletBase
-    {
+    class CUP_B_762x54_Ball_Yellow_Tracer: BulletBase {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.6552;
@@ -2004,8 +1893,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={680, 750, 798, 800};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class CUP_B_9x39_SP5: BulletBase
-    {
+    class CUP_B_9x39_SP5: BulletBase {
         ACE_caliber=9.246;
         ACE_bulletLength=31.496;
         ACE_bulletMass=16.2;
@@ -2017,8 +1905,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={280, 300, 320};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class CUP_B_762x51_Tracer_Green: BulletBase
-    {
+    class CUP_B_762x51_Tracer_Green: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -2030,8 +1917,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class CUP_B_762x51_Tracer_Red: BulletBase
-    {
+    class CUP_B_762x51_Tracer_Red: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -2043,8 +1929,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class CUP_B_762x51_Tracer_Yellow: BulletBase
-    {
+    class CUP_B_762x51_Tracer_Yellow: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -2056,8 +1941,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class CUP_B_762x51_Tracer_White: BulletBase
-    {
+    class CUP_B_762x51_Tracer_White: BulletBase {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -2069,8 +1953,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class B_127x107_Ball: BulletBase
-    {
+    class B_127x107_Ball: BulletBase {
         ACE_caliber=12.979;
         ACE_bulletLength=64.008;
         ACE_bulletMass=48.276;
@@ -2082,8 +1965,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={820};
         ACE_barrelLengths[]={728.98};
     };
-    class CUP_B_9x18_SD: BulletBase
-    {
+    class CUP_B_9x18_SD: BulletBase {
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
         ACE_bulletMass=6.00048;
@@ -2095,8 +1977,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 340};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
-    class CUP_B_765x17_Ball: BulletBase
-    {
+    class CUP_B_765x17_Ball: BulletBase {
         ACE_caliber=7.938;
         ACE_bulletLength=15.494;
         ACE_bulletMass=4.212;
@@ -2108,8 +1989,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={282, 300, 320};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class CUP_B_145x115_AP_Green_Tracer: BulletBase
-    {
+    class CUP_B_145x115_AP_Green_Tracer: BulletBase {
         ACE_caliber=14.884;
         ACE_bulletLength=50.8;
         ACE_bulletMass=65.448;
@@ -2121,8 +2001,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={1000};
         ACE_barrelLengths[]={1346.2};
     };
-    class CUP_B_127x99_Ball_White_Tracer: BulletBase
-    {
+    class CUP_B_127x99_Ball_White_Tracer: BulletBase {
         ACE_caliber=12.954;
         ACE_bulletLength=58.674;
         ACE_bulletMass=41.9256;
@@ -2134,8 +2013,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={853};
         ACE_barrelLengths[]={736.6};
     };
-    class CUP_B_86x70_Ball_noTracer: BulletBase
-    {
+    class CUP_B_86x70_Ball_noTracer: BulletBase {
         ACE_caliber=8.585;
         ACE_bulletLength=43.18;
         ACE_bulletMass=19.44;
@@ -2148,8 +2026,7 @@ class CfgAmmo
         ACE_barrelLengths[]={609.6, 673.1, 711.2};
     };
     
-    class VTN_9x18_Ball_FMJ: B_9x21_Ball
-    {
+    class VTN_9x18_Ball_FMJ: B_9x21_Ball {
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
         ACE_bulletMass=6.00048;
@@ -2161,8 +2038,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
-    class VTN_9x18_Ball_SC: VTN_9x18_Ball_FMJ
-    {
+    class VTN_9x18_Ball_SC: VTN_9x18_Ball_FMJ {
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
         ACE_bulletMass=6.00048;
@@ -2174,8 +2050,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
-    class VTN_9x18_Ball_TRC: VTN_9x18_Ball_FMJ
-    {
+    class VTN_9x18_Ball_TRC: VTN_9x18_Ball_FMJ {
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
         ACE_bulletMass=6.00048;
@@ -2187,8 +2062,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
-    class VTN_9x18_Ball_AP1: VTN_9x18_Ball_FMJ
-    {
+    class VTN_9x18_Ball_AP1: VTN_9x18_Ball_FMJ {
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
         ACE_bulletMass=6.00048;
@@ -2200,8 +2074,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
-    class VTN_9x18_Ball_AP2: VTN_9x18_Ball_FMJ
-    {
+    class VTN_9x18_Ball_AP2: VTN_9x18_Ball_FMJ {
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
         ACE_bulletMass=6.00048;
@@ -2213,8 +2086,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
-    class VTN_9x18_Ball_PRS: VTN_9x18_Ball_FMJ
-    {
+    class VTN_9x18_Ball_PRS: VTN_9x18_Ball_FMJ {
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
         ACE_bulletMass=6.00048;
@@ -2226,8 +2098,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
-    class VTN_9x19_Ball_SC: VTN_9x18_Ball_FMJ
-    {
+    class VTN_9x19_Ball_SC: VTN_9x18_Ball_FMJ {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -2239,8 +2110,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={340, 370, 400};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class VTN_9x19_Ball_TRC: VTN_9x19_Ball_SC
-    {
+    class VTN_9x19_Ball_TRC: VTN_9x19_Ball_SC {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -2252,8 +2122,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={340, 370, 400};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class VTN_9x19_Ball_AP: VTN_9x19_Ball_SC
-    {
+    class VTN_9x19_Ball_AP: VTN_9x19_Ball_SC {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -2265,8 +2134,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={340, 370, 400};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class VTN_9x19_Ball_PRS: VTN_9x19_Ball_SC
-    {
+    class VTN_9x19_Ball_PRS: VTN_9x19_Ball_SC {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -2278,8 +2146,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={340, 370, 400};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class VTN_9x39_Ball_SC: B_9x21_Ball
-    {
+    class VTN_9x39_Ball_SC: B_9x21_Ball {
         ACE_caliber=9.246;
         ACE_bulletLength=31.496;
         ACE_bulletMass=16.2;
@@ -2291,8 +2158,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={280, 300, 320};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class VTN_9x39_Ball_AP: VTN_9x39_Ball_SC
-    {
+    class VTN_9x39_Ball_AP: VTN_9x39_Ball_SC {
         ACE_caliber=9.246;
         ACE_bulletLength=31.496;
         ACE_bulletMass=16.2;
@@ -2304,8 +2170,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={280, 300, 320};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class VTN_545x39_Ball_SC: B_556x45_Ball
-    {
+    class VTN_545x39_Ball_SC: B_556x45_Ball {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.42792;
@@ -2317,8 +2182,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={780, 880, 920};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class VTN_545x39_Ball_TRC: VTN_545x39_Ball_SC
-    {
+    class VTN_545x39_Ball_TRC: VTN_545x39_Ball_SC {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.22704;
@@ -2330,8 +2194,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={785, 883, 925};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class VTN_545x39_Ball_AP: VTN_545x39_Ball_TRC
-    {
+    class VTN_545x39_Ball_AP: VTN_545x39_Ball_TRC {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.42792;
@@ -2343,8 +2206,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={780, 880, 920};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class VTN_545x39_Ball_AP2: VTN_545x39_Ball_AP
-    {
+    class VTN_545x39_Ball_AP2: VTN_545x39_Ball_AP {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.42792;
@@ -2356,8 +2218,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={780, 880, 920};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class VTN_545x39_Ball_SS: VTN_545x39_Ball_SC
-    {
+    class VTN_545x39_Ball_SS: VTN_545x39_Ball_SC {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.42792;
@@ -2369,8 +2230,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={300, 320, 340};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class VTN_762x39_Ball_SC: B_762x51_Ball
-    {
+    class VTN_762x39_Ball_SC: B_762x51_Ball {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=7.9704;
@@ -2382,8 +2242,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class VTN_762x39_Ball_TRC: VTN_762x39_Ball_SC
-    {
+    class VTN_762x39_Ball_TRC: VTN_762x39_Ball_SC {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=7.5816;
@@ -2395,8 +2254,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class VTN_762x39_Ball_AP: VTN_762x39_Ball_TRC
-    {
+    class VTN_762x39_Ball_AP: VTN_762x39_Ball_TRC {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=7.9704;
@@ -2408,8 +2266,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class VTN_762x39_Ball_INC: VTN_762x39_Ball_AP
-    {
+    class VTN_762x39_Ball_INC: VTN_762x39_Ball_AP {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=7.9704;
@@ -2421,8 +2278,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class VTN_762x39_Ball_API: VTN_762x39_Ball_INC
-    {
+    class VTN_762x39_Ball_API: VTN_762x39_Ball_INC {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=7.9704;
@@ -2434,8 +2290,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class VTN_762x39_Ball_SS: VTN_762x39_Ball_SC
-    {
+    class VTN_762x39_Ball_SS: VTN_762x39_Ball_SC {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=7.9704;
@@ -2447,8 +2302,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={300, 320, 340};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class VTN_762x41_Ball_SS: B_762x51_Ball
-    {
+    class VTN_762x41_Ball_SS: B_762x51_Ball {
         ACE_caliber=7.823;
         ACE_bulletLength=13.462;
         ACE_bulletMass=9.2664;
@@ -2460,8 +2314,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={200, 210, 220};
         ACE_barrelLengths[]={101.6, 152.4, 203.2};
     };
-    class VTN_762x54_Ball_SC: VTN_762x39_Ball_SC
-    {
+    class VTN_762x54_Ball_SC: VTN_762x39_Ball_SC {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.8496;
@@ -2473,8 +2326,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class VTN_762x54_Ball_TRC: VTN_762x54_Ball_SC
-    {
+    class VTN_762x54_Ball_TRC: VTN_762x54_Ball_SC {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.6552;
@@ -2486,8 +2338,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={680, 750, 798, 800};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class VTN_762x54_Ball_AP: VTN_762x54_Ball_TRC
-    {
+    class VTN_762x54_Ball_AP: VTN_762x54_Ball_TRC {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.8496;
@@ -2499,8 +2350,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class VTN_762x54_Ball_INC: VTN_762x54_Ball_AP
-    {
+    class VTN_762x54_Ball_INC: VTN_762x54_Ball_AP {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.8496;
@@ -2512,8 +2362,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class VTN_762x54_Ball_API: VTN_762x54_Ball_INC
-    {
+    class VTN_762x54_Ball_API: VTN_762x54_Ball_INC {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.8496;
@@ -2525,8 +2374,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class VTN_145x114_Ball_APT: B_127x108_Ball
-    {
+    class VTN_145x114_Ball_APT: B_127x108_Ball {
         ACE_caliber=14.884;
         ACE_bulletLength=50.8;
         ACE_bulletMass=65.448;
@@ -2538,8 +2386,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={1000};
         ACE_barrelLengths[]={1346.2};
     };
-    class VTN_6mm_BB: B_65x39_Caseless
-    {
+    class VTN_6mm_BB: B_65x39_Caseless {
         ACE_caliber=6.096;
         ACE_bulletLength=6.096;
         ACE_bulletMass=0.3888;
@@ -2551,8 +2398,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={100};
         ACE_barrelLengths[]={381.0};
     };
-    class VTN_9x19_Ball_FMJ: B_9x21_Ball
-    {
+    class VTN_9x19_Ball_FMJ: B_9x21_Ball {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -2564,8 +2410,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={340, 370, 400};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class VTN_556x45_Ball_FMJ: B_556x45_Ball
-    {
+    class VTN_556x45_Ball_FMJ: B_556x45_Ball {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.0176;
@@ -2577,8 +2422,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
-    class VTN_556x45_Ball_TRC: VTN_556x45_Ball_FMJ
-    {
+    class VTN_556x45_Ball_TRC: VTN_556x45_Ball_FMJ {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.0176;
@@ -2590,8 +2434,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
-    class VTN_556x45_Ball_TRCN: VTN_556x45_Ball_TRC
-    {
+    class VTN_556x45_Ball_TRCN: VTN_556x45_Ball_TRC {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.0176;
@@ -2603,8 +2446,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
-    class VTN_556x45_Ball_SC: VTN_556x45_Ball_FMJ
-    {
+    class VTN_556x45_Ball_SC: VTN_556x45_Ball_FMJ {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.0176;
@@ -2616,8 +2458,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
-    class VTN_556x45_Ball_AP: VTN_556x45_Ball_TRC
-    {
+    class VTN_556x45_Ball_AP: VTN_556x45_Ball_TRC {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.0176;
@@ -2629,8 +2470,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
-    class VTN_556x45_Ball_INC: VTN_556x45_Ball_AP
-    {
+    class VTN_556x45_Ball_INC: VTN_556x45_Ball_AP {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.0176;
@@ -2642,8 +2482,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
-    class VTN_556x45_Ball_LR: VTN_556x45_Ball_FMJ
-    {
+    class VTN_556x45_Ball_LR: VTN_556x45_Ball_FMJ {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.9896;
@@ -2655,8 +2494,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={624, 816, 832, 838};
         ACE_barrelLengths[]={190.5, 368.3, 457.2, 508.0};
     };
-    class VTN_556x45_Ball_SS: B_556x45_Ball
-    {
+    class VTN_556x45_Ball_SS: B_556x45_Ball {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.0176;
@@ -2668,8 +2506,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={300, 320, 340};
         ACE_barrelLengths[]={254.0, 508.0, 609.6};
     };
-    class VTN_762x51_Ball_SC: B_762x51_Ball
-    {
+    class VTN_762x51_Ball_SC: B_762x51_Ball {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -2681,8 +2518,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class VTN_762x51_Ball_TRC: VTN_762x51_Ball_SC
-    {
+    class VTN_762x51_Ball_TRC: VTN_762x51_Ball_SC {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -2694,8 +2530,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class VTN_762x51_Ball_TRCN: VTN_762x51_Ball_TRC
-    {
+    class VTN_762x51_Ball_TRCN: VTN_762x51_Ball_TRC {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -2707,8 +2542,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class VTN_762x51_Ball_AP: VTN_762x51_Ball_TRC
-    {
+    class VTN_762x51_Ball_AP: VTN_762x51_Ball_TRC {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -2720,8 +2554,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={700, 800, 820, 833, 845};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class VTN_762x51_Ball_LR: VTN_762x51_Ball_SC
-    {
+    class VTN_762x51_Ball_LR: VTN_762x51_Ball_SC {
         ACE_caliber=7.823;
         ACE_bulletLength=31.496;
         ACE_bulletMass=11.34;
@@ -2733,8 +2566,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={750, 780, 790, 794};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class VTN_1143x23_Ball_FMJ: B_408_Ball
-    {
+    class VTN_1143x23_Ball_FMJ: B_408_Ball {
         ACE_caliber=11.481;
         ACE_bulletLength=17.272;
         ACE_bulletMass=14.904;
@@ -2746,8 +2578,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={230, 250, 285};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class VTN_1143x23_Ball_HP: VTN_1143x23_Ball_FMJ
-    {
+    class VTN_1143x23_Ball_HP: VTN_1143x23_Ball_FMJ {
         ACE_caliber=11.481;
         ACE_bulletLength=17.272;
         ACE_bulletMass=14.904;
@@ -2759,8 +2590,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={230, 250, 285};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class VTN_1143x23_Ball_JHP: VTN_1143x23_Ball_FMJ
-    {
+    class VTN_1143x23_Ball_JHP: VTN_1143x23_Ball_FMJ {
         ACE_caliber=11.481;
         ACE_bulletLength=17.272;
         ACE_bulletMass=14.904;
@@ -2772,8 +2602,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={230, 250, 285};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class VTN_762x39_Ball_FMJ: B_762x51_Ball
-    {
+    class VTN_762x39_Ball_FMJ: B_762x51_Ball {
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=7.9704;
@@ -2785,8 +2614,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class VTN_45_Pellet: B_762x51_Ball
-    {
+    class VTN_45_Pellet: B_762x51_Ball {
         ACE_caliber=5.588;
         ACE_bulletLength=5.842;
         ACE_bulletMass=0.1944;

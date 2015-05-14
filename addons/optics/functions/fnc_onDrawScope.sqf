@@ -10,7 +10,7 @@ _display = _this select 0;
 _control = _display displayCtrl 1713154;
 
 if (!ctrlShown (_display displayCtrl 154)) exitWith {
-	_control ctrlShow false;
+    _control ctrlShow false;
 };
 
 private ["_sizeX", "_sizeY"];
