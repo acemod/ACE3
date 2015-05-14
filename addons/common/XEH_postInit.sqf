@@ -1,12 +1,6 @@
 // ACE - Common
 #include "script_component.hpp"
 
-// Load settings from profile
-if (hasInterface) then {
-    call FUNC(loadSettingsFromProfile);
-    call FUNC(loadSettingsLocalizedText);
-};
-
 // Listens for global "SettingChanged" events, to update the force status locally
 ["SettingChanged", {
 
@@ -249,3 +243,17 @@ if(isMultiplayer && { time > 0 || isNull player } ) then {
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
+
+GVAR(commonPostInited) = true;
+
+// Create a pfh to wait until all postinits are ready and settings are initialized
+[{
+    // If post inits are not ready then wait
+    if !(SLX_XEH_MACHINE select 8) exitWith {};
+    // If settings are not initialized then wait
+    if !(GVAR(SettingsInitialized)) exitWith {};
+
+    diag_log text format["[ACE] Settings initialized"];
+    ["SettingsInitialized", []] call FUNC(localEvent);
+
+}, 0, []] call cba_fnc_addPerFrameHandler;
