@@ -1,13 +1,23 @@
 ---
 layout: wiki
-title: Javelin/Titan Locking and Firing
+title: Javelin
 group: feature
-order: 5
 parent: wiki
 ---
 
-## 1. Overview
-Blah blah blah
+## Overview
+
+### Sub-feature 1
+Short description of sub-feature 1.
+
+### Sub-feature 2
+Short description of sub-feature 2.
+
+
+## Usage
+
+Short overview of how to use the feature, e.g. menu options, key bindings, 
+instructions. May not apply to all modules.
 
 Steps to lock titan/Javelin:
 
@@ -17,5 +27,9 @@ Steps to lock titan/Javelin:
 4. Hold TAB over a target, it will start beeping and the constraint boxes will appear
 5. Once the beeping changes to LOCK tone, and the lock crosshairs appear, click fire without releasing tab
 
-
 CTRL+TAB is default key to change firemode (configurable as a key)
+
+
+## Dependencies
+
+`ace_main`, `ace_common`, `ace_missileguidance`

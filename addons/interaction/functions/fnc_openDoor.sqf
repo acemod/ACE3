@@ -1,19 +1,32 @@
-// by commy2
+/*
+ * Author: commy2
+ * Opens door
+ *
+ * Arguments:
+ * 0: House <OBJECT>
+ * 1: Door <STRING>
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * [house, "door"] call ace_interaction_fnc_openDoor
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_info", "_house", "_door", "_animations", "_lockedVariable"];
+private ["_info", "_animations", "_phase", "_position", "_time", "_usedMouseWheel"];
 
 _info = [2] call FUNC(getDoor);
 
-_house = _info select 0;
-_door = _info select 1;
+EXPLODE_2_PVT(_info,_house,_door);
 
 if (isNull _house) exitWith {};
 
 _animations = [_house, _door] call FUNC(getDoorAnimations);
 
-_lockedVariable = _animations select 1;
-_animations = _animations select 0;
+EXPLODE_2_PVT(_animations,_animations,_lockedVariable);
 
 if (count _animations == 0) exitWith {};
 
@@ -26,6 +39,7 @@ GVAR(isOpeningDoor) = true;
 playSound "ACE_Sound_Click";
 
 [_house, _animations] spawn {
+    private ["_house", "_animations", "_phase", "_position", "_time", "_usedMouseWheel"];
     _house = _this select 0;
     _animations = _this select 1;
 

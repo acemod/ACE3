@@ -47,7 +47,7 @@ if (!isServer) then {
 
         _index = _files find _x;
         if (_index == -1) then {
-                if (_x != "ace_serverconfig") then {_missingAddons pushBack _x;};
+                if (_x != "ace_server") then {_missingAddons pushBack _x;};
         } else {
 
             _clientVersion = _versions select _index;

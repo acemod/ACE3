@@ -4,6 +4,8 @@ class CfgWeapons
     class Pistol_Base_F;
     class Rifle_Base_F;
     class srifle_EBR_F;
+    class launch_O_Titan_F;
+    
     class rhs_weap_XM2010_Base_F: Rifle_Base_F
     {
         ACE_barrelTwist=254.0;
@@ -82,5 +84,15 @@ class CfgWeapons
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
         ACE_ScopeAdjust_Increment = 0.1;
+    };
+    
+    class rhs_weap_fgm148 : launch_O_Titan_F {
+        ace_javelin_enabled = 1;
+        weaponInfoType = "ACE_RscOptics_javelin";
+        modelOptics = "\z\ace\addons\javelin\data\reticle_titan.p3d";
+         
+        canLock = 0;
+        lockingTargetSound[] = {"",0,1};
+        lockedTargetSound[] = {"",0,1};
     };
 };

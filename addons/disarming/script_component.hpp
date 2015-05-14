@@ -13,4 +13,3 @@
 
 #define DISARM_CONTAINER "GroundWeaponHolder"
 #define DUMMY_ITEM "ACE_DebugPotato"
-#define UNIQUE_MAGAZINES ["ACE_key_customKeyMagazine"]
