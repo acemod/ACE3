@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-private ["_config", "_turrets", "_fnc_addTurret"];
+private ["_config", "_turrets", "_fnc_addTurret", "_varName"];
 
 PARAMS_1(_type);
 

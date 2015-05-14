@@ -12,6 +12,8 @@
 
 PARAMS_2(_unit,_magazine);
 
+private ["_return"];
+
 _return = 0;
 if (_unit isKindOf "CAManBase") then {
     _return = {_x == _magazine} count magazines _unit;

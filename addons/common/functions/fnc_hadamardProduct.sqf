@@ -15,6 +15,8 @@
 
 PARAMS_2(_vector1,_vector2);
 
+private ["_newVector", "_i"];
+
 _newVector = [];
 
 for "_i" from 0 to (((count _vector1) min (count _vector2)) - 1) do {

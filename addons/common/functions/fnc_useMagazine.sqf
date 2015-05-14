@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_return"];
+private ["_return", "_vehicleUsage"];
 PARAMS_2(_unit,_magazine);
 _vehicleUsage = [_this, 2, false, [false]] call BIS_fnc_Param;
 

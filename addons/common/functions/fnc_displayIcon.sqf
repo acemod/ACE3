@@ -2,7 +2,7 @@
 * Author: Glowbal
 *
 * Draw progress bar and execute given function if succesful.
-* Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
+* Finish/Failure/Conditional are all passed [args, elapsedTime, totalTime, errorCode]
 *
 * Argument:
 * 0: icon ID <STRING>
@@ -61,7 +61,7 @@ _refresh = {
 
     _allControls = [];
 
-    private ["_ctrl", "_setting"];
+    private ["_ctrl", "_setting", "_position"];
     _setting = missionNamespace getvariable[QGVAR(settingFeedbackIcons), 0];
     if (_setting > 0) then {
         {
