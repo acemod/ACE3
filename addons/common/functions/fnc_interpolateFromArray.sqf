@@ -1,10 +1,9 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_array", "_value", "_min", "_max"];
+private ["_min", "_max"];
 
-_array = _this select 0;
-_value = _this select 1;
+PARAMS_2(_array,_value);
 
 _min = _array select floor _value;
 _max = _array select ceil _value;

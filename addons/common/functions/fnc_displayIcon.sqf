@@ -42,11 +42,10 @@
 // other constants
 #define DEFAULT_TIME    6
 
-private ["_iconId", "_show", "_icon", "_allControls", "_refresh", "_timeAlive", "_list", "_color"];
-_iconId = _this select 0;
-_show = _this select 1;
-_icon = _this select 2;
-_color = _this select 3;
+private ["_allControls", "_refresh", "_timeAlive", "_list"];
+
+PARAMS_4(_iconId,_show,_icon,_color);
+
 _timeAlive = if (count _this > 4) then {_this select 4} else {DEFAULT_TIME};
 
 disableSerialization;
@@ -93,7 +92,7 @@ if (_show) then {
             if (_x select 0 == _iconId) exitwith {
                 _list set [_foreachIndex, [_iconId, _icon, _color, time]];
             };
-        }foreach _list;
+        } forEach _list;
     };
     missionNamespace setvariable [QGVAR(displayIconList), _list];
     call _refresh;
@@ -112,7 +111,7 @@ if (_show) then {
             if (_x select 0 != _iconId) then {
                 _newList pushback _x;
             };
-        }foreach _list;
+        } forEach _list;
 
         missionNamespace setvariable [QGVAR(displayIconList), _newList];
         call _refresh;

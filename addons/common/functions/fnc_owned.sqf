@@ -12,8 +12,6 @@
  */
 #include "script_component.hpp"
 
-private "_target";
-
-_target = _this select 0;
+PARAMS_1(_target);
 
 !isNull (_target getVariable [QGVAR(owner), objNull])
