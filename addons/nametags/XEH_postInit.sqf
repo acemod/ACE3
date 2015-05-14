@@ -1,7 +1,7 @@
 // by commy2 and esteldunedain
 #include "script_component.hpp"
 
-if (QGVAR(showPlayerNames) > 0) then {
+if (GVAR(showPlayerNames) > 0) then {
     [] call FUNC(initIsSpeaking);
 };
 
@@ -26,6 +26,6 @@ GVAR(ShowNamesTime) = -10;
 
 
 // Draw handle
-if (QGVAR(showPlayerNames) > 0 || QGVAR(showVehicleCrewInfo)) then {
+if (GVAR(showPlayerNames) > 0 || GVAR(showVehicleCrewInfo)) then {
     addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
 };

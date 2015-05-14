@@ -42,7 +42,7 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = "$STR_ACE_NameTags_ShowSoundWaves";
         description = "$STR_ACE_NameTags_ShowSoundWaves_Desc";
-        values[] = {"$STR_ACE_Common_Disabled", "$STR_ACE_Common_NameTagSettings", "$STR_ACE_Common_AlwaysShowAll"};
+        values[] = {"$STR_ACE_NameTags_Disabled", "$STR_ACE_NameTags_NameTagSettings", "$STR_ACE_NameTags_AlwaysShowAll"};
     };
     class GVAR(playerNamesViewDistance) {
         value = 5;
