@@ -29,17 +29,13 @@ class ACE_Settings {
         displayName = "View Distance Limit";
         description = "Limit for client's view distance set here and can overridden by module";
     };
-    class GVAR(terrainGrid) {
+    class GVAR(objectViewDistanceCoeff) {
         typeName = "SCALAR";
-        value = 10; // MP default as found in: https://community.bistudio.com/wiki/setTerrainGrid
-        displayName = "Client Terrain Grid";
-        description = "Changes in game terrain grid";
-    };
-    class GVAR(shadows) {
-        typeName = "SCALAR";
-        value = 200; // MP default as found in: https://community.bistudio.com/wiki/setObjectViewDistance
-        displayName = "Client Shadows distance";
-        description = "Changes in game shadows";
+        isClientSettable = 1;
+        value = 0; // index. Actual coefficient is given by functions/fnc_returnObjectCoeff.sqf
+        values[] = {"Off","Very Low","Low","Medium","High","Very High"};
+        displayName = "Dynamic Object View Distance";
+        description = "Sets the object view distance as a coefficient of the view distance.";
     };
 };
 
