@@ -21,7 +21,7 @@ PARAMS_1(_show_prompt);
 
 private["_land_vehicle","_air_vehicle"];
 
-if (isNull ACE_player) exitWith {};
+if (!GVAR(enabled) || isNull ACE_player) exitWith {};
 
 _land_vehicle = (vehicle ACE_player) isKindOf "LandVehicle";
 _air_vehicle = (vehicle ACE_player) isKindOf "Air";

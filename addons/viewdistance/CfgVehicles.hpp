@@ -9,6 +9,12 @@ class CfgVehicles {
         isGlobal = 1;
         //icon = ""; // needs an icon
         class Arguments {
+            class moduleViewDistanceEnabled {
+                displayName = "Enable ACE viewdistance";
+                description = "Enables ACE viewdistance";
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
             class moduleViewDistanceLimit {
                 displayName = "View Distance Limit";
                 description = "Sets the limit for how high clients can raise their view distance (<= 10000)";

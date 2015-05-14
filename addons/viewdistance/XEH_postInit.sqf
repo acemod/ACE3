@@ -3,7 +3,7 @@
 if (!hasInterface) exitWith {};
 
 // Force the view distance down to the limit.
-if (viewDistance > GVAR(limitViewDistance)) then {
+if (GVAR(enabled) && {viewDistance > GVAR(limitViewDistance)}) then {
     setViewDistance GVAR(limitViewDistance);
 };
 
