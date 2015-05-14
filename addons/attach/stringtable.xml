@@ -179,7 +179,7 @@
             <Portuguese>Erro ao fixar</Portuguese>
             <Polish>Przyczepianie nie powiodło się</Polish>
             <Hungarian>Hozzácsatolás sikertelen</Hungarian>
-            <Italian>Impossibile Attaccare</Italian>
+            <Italian>Non si attacca</Italian>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Attached">
             <English>%1&lt;br/&gt;Attached</English>

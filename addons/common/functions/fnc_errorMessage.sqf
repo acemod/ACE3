@@ -15,6 +15,21 @@
 disableSerialization;
 endLoadingScreen;
 
+
+// no message without player possible
+if (!hasInterface) exitWith {};
+
+// wait for display
+if (isNull (call BIS_fnc_displayMission)) exitWith {
+    [{
+        if (isNull (call BIS_fnc_displayMission)) exitWith {};
+
+        (_this select 0) call FUNC(errorMessage);
+        [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+    }, 1, _this] call CBA_fnc_addPerFrameHandler;
+};
+
 private ["_textHeader", "_textMessage", "_onOK", "_onCancel"];
 
 _textHeader = _this select 0;

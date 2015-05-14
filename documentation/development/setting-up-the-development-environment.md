@@ -14,6 +14,7 @@ This page describes how you can setup your development environment for ACE3, all
 - Arma 3 (duh)
 - A proper installation of the Arma 3 Tools (available on Steam)
 - A properly setup P-drive
+- Run ArmA 3 and Arma 3 Tools directly from steam once to install registry entries (and again after every update)
 - Python 3.x, available [here](http://www.python.org)
 - The following Mikero Tools (available [here](https://dev.withsix.com/projects/mikero-pbodll/files)): DePBO, Rapify, MakePBO, PBOProject
 - A properly setup PATH variable (containing Python and the Mikero tools)
@@ -106,4 +107,4 @@ Files must exist in the built PBOs for filepatching to work. If you create a new
 
 Configs are not patched during run time, only at load time. You do not have have to rebuild a PBO to make config changes, just restart Arma. You can get around this though if you are on the dev branch of Arma 3 and running the diagnostic exe. That includes `diag_mergeConfig` which takes a full system path (as in `p:\z\ace\addons\my_module\config.cpp`) and allows you selectivly reload config files.
 
-If you need to add/remove files* Then you'll need to run build.bat again without the game running, and restart. That is all that is required to add new files to then further use in testing.
+If you need to add/remove files, then you'll need to run build.py again without the game running, and restart. That is all that is required to add new files to then further use in testing.

@@ -11,6 +11,7 @@
             <Hungarian>82mm hatótáv-tábla</Hungarian>
             <Portuguese>Tabela de distâncias de para 82mm</Portuguese>
             <Czech>82mm Rangetable</Czech>
+            <Italian>Tavola di tiro 82mm</Italian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
             <English>Range Table for the MK6 82mm Mortar</English>
@@ -22,6 +23,7 @@
             <Hungarian>Hatótáv-tábla a MK6 82mm-es mozsárhoz</Hungarian>
             <Portuguese>Tabela de distâncias para morteiro MK6 82mm</Portuguese>
             <Czech>Rangetable pro MK6 82mm minomet</Czech>
+            <Italian>Tavola di tiro per il mortaio calibro 82mm MK6</Italian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
             <English>Open 82mm Rangetable</English>
@@ -33,6 +35,7 @@
             <Hungarian>82mm hatótáv-tábla megnyitása</Hungarian>
             <Portuguese>Abrir tabela de distâncias para 82mm</Portuguese>
             <Czech>Otevřít 82mm Rangetable</Czech>
+            <Italian>Apri la tavola di tiro 82mm</Italian>
         </Key>
         <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
             <English>Charge</English>
@@ -44,6 +47,7 @@
             <Hungarian>Töltés</Hungarian>
             <Portuguese>Carregar</Portuguese>
             <Czech>Nabít</Czech>
+            <Italian>Carica</Italian>
         </Key>
     </Package>
 </Project>
