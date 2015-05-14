@@ -17,7 +17,7 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-+//IGNORE_PRIVATE_WARNING("_handleSyncedEvent");
+//IGNORE_PRIVATE_WARNING("_handleSyncedEvent");
 
 //SEH_s
 if(isServer) then {
