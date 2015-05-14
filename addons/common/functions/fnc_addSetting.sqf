@@ -20,7 +20,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_8_PVT(_this,_name,_typeName,_isClientSetable,_localizedName,_localizedDescription,_possibleValues,_isForced,_value);
+PARAMS_8(_name,_typeName,_isClientSetable,_localizedName,_localizedDescription,_possibleValues,_isForced,_value);
 
 _settingData = [_name] call FUNC(getSettingData);
 
