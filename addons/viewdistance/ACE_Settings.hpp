@@ -29,6 +29,14 @@ class ACE_Settings {
         displayName = "View Distance Limit";
         description = "Limit for client's view distance set here and can overridden by module";
     };
+    class GVAR(objectViewDistanceCoeff) {
+        typeName = "SCALAR";
+        isClientSettable = 1;
+        value = 0; // index. Actual coefficient is given by functions/fnc_returnObjectCoeff.sqf
+        values[] = {"Off","Low","Medium","High"};
+        displayName = "Dynamic Object View Distance";
+        description = "Sets the object view distance as a coefficient of the view distance.";
+    };
 };
 
 // To do: include string table style displayName & description.
