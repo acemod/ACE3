@@ -1,5 +1,5 @@
 #c:\arma\arma3\addons\static_f_gamma.pbo C:\dev\ace3\extensions\tests\AT_01.txt
 init:
 debug_render:
-register_vehicle:\z\ace\test\anim_test.p3d,0,4050.18;3802.55;5.075
-set_animation_state:0, turret, 2.00, rotation_drum, 2, barrel_recoil, 2
+register_vehicle:\x\nou\addons\anim_test\anim_test.p3d,0,4050.18;3802.55;5.075
+set_animation_state:0, turret, 0.500, rotation_drum, 0.50, barrel_recoil, 1.00

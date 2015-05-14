@@ -21,7 +21,7 @@ namespace ace {
             }
             if (fire_lod == -1) // @TODO: fallback on geo LOD
                 fire_lod = 0;
-            fire_lod = 0;
+			//fire_lod = 0;
             assert(fire_lod != -1);
             
             // Build the mesh from object faces
@@ -59,7 +59,7 @@ namespace ace {
             std::vector<uint32_t> lods; 
             lods.push_back(fire_lod);
 
-           object->animate(animation_state, lods);
+            object->animate(animation_state, lods);
 
             return true;
         }
