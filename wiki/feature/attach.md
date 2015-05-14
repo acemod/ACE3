@@ -5,7 +5,7 @@ group: feature
 parent: wiki
 ---
 
-# Overview
+## Overview
 
 ### Attach items to uniform
 Enables player to attach IR grenades and chemlights to themselves.
@@ -14,7 +14,7 @@ Enables player to attach IR grenades and chemlights to themselves.
 Adds an attachable IR strobe, which is only visible using night vision devices and offers better visibility than IR grenades.
 
 
-# Usage
+## Usage
 
 ### attaching to yourself
 - Press the self interaction key

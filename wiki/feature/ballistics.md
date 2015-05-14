@@ -5,7 +5,7 @@ group: feature
 parent: wiki
 ---
 
-# Overview
+## Overview
 
 ### Realistic rifle ammunition
 Changes include adjusted muzzle velocity, air friction and dispersion based on real life values.
@@ -29,11 +29,11 @@ The M14 EBR now uses ammunition with decreased muzzle velocity and air friction 
 Flash suppressors are similar to sound suppressors and prevent the muzzle flash reducing visibilty without decreasing combat effectiveness. Flash suppressors are available for the calibers 5.56mm, 6.5mm, 7.62mm, .45 ACP and 9mm.
 
 
-# Usage
+## Usage
 
 Short overview of how to use the feature, e.g. menu options, key bindings, 
 instructions. May not apply to all modules.
 
-# Dependencies
+## Dependencies
 
 List of modules that must be present for this module to work.
