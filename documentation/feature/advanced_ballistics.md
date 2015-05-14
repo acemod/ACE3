@@ -12,7 +12,7 @@ Advanced ballistics changes above and beyond the ballistics module. Bullet chara
 Adds a protractor for quick reference when sniping.
 
 # Usage
-Press <kbd><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd></kbd>` to display the protractor.
+Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> to display the protractor.
 
 This module uses relatively complex scripting. Several options are provided in the ACE menu to reduce the performance impact of this module.
 
