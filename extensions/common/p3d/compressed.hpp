@@ -12,7 +12,11 @@ namespace ace {
         protected:
             int _mikero_lzo1x_decompress_safe(const uint8_t*, uint8_t*, uint32_t);
             int _decompress_safe(std::istream &, uint32_t);
+#if _MSC_VER == 1800
+            std::shared_ptr<uint8_t[]> _data;
+#else
             std::unique_ptr<uint8_t[]> _data;
+#endif
         };
         template<typename T>
         class compressed_base : public _compressed_base {
