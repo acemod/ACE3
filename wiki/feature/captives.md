@@ -39,3 +39,8 @@ You can surrender, while surrendering AI will cease fire.
 - Approach the vehicle you desire to load the captive in.
 - Interact with the vehicle and load him.
 - Same for unloading, interact with the vehicle then unload.
+
+
+## Dependencies
+
+`ace_interaction`

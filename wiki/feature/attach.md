@@ -29,3 +29,8 @@ same thing to detach
 - Choose your item and where you want to place it
 
 to detach the item use the interaction key from outside the vehicle
+
+
+## Dependencies
+
+`ace_interaction`

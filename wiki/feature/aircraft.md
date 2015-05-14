@@ -36,3 +36,8 @@ Adds a HUD to the AH-9 based on the comanches HUD.
 
 ### Adjusted flight behaviour
 Changes the flight behaviour of various aircraft.
+
+
+## Dependencies
+
+`ace_common`
