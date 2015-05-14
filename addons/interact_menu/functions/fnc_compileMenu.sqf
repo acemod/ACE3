@@ -30,8 +30,8 @@ _recurseFnc = {
     EXPLODE_1_PVT(_this,_actionsCfg);
     _actions = [];
 
-    for "_i" from 0 to (count _actionsCfg) - 1 do {
-        _entryCfg = _actionsCfg select _i;
+    {
+        _entryCfg = _x;
         if(isClass _entryCfg) then {
             _displayName = getText (_entryCfg >> "displayName");
             _distance = getNumber (_entryCfg >> "distance");
@@ -90,7 +90,7 @@ _recurseFnc = {
                     ];
             _actions pushBack _entry;
         };
-    };
+    } forEach ([_actionsCfg, 0, true, true] call BIS_fnc_returnChildren);
     _actions
 };
 
