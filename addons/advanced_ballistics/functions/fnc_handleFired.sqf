@@ -76,7 +76,7 @@ if (GVAR(barrelLengthInfluenceEnabled)) then {
 };
 
 if (GVAR(ammoTemperatureEnabled)) then {
-    _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL _unit) select 2);
+    _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight);
     _muzzleVelocityShift = [_AmmoCacheEntry select 9, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift);
     if (_muzzleVelocityShift != 0) then {
         _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
@@ -105,7 +105,7 @@ _barrelTwist = _WeaponCacheEntry select 0;
 _stabilityFactor = 1.5;
 
 if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
-    _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL _unit) select 2);
+    _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight);
     _barometricPressure = ((getPosASL _bullet) select 2) call EFUNC(weather,calculateBarometricPressure);
     _stabilityFactor = [_caliber, _bulletLength, _bulletMass, _barrelTwist, _muzzleVelocity, _temperature, _barometricPressure] call FUNC(calculateStabilityFactor);
 };

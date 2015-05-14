@@ -1,4 +1,18 @@
-// by commy2
+/*
+ * Author: commy2
+ * Sort options by priority
+ *
+ * Arguments:
+ * Actions <ARRAY>
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * customActions call ace_interaction_fnc_sortOptionsByPriority
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_actions", "_count", "_index", "_actionN", "_actionM"];

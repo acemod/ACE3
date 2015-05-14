@@ -9,7 +9,7 @@
  * Returns:
  * None
  */
-#include "ace_common.h"
+#include "shared.hpp"
 #include <vector>
 #include <string>
 
@@ -23,12 +23,15 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     std::string cur_input(function);
     std::string result;
 
-    if (cur_input.length() < 1)
-        return;
+    ZERO_OUTPUT();
+
+    if (cur_input.length() < 1) {
+        EXTENSION_RETURN();
+    }
 
     if (!strcmp(function, "version")) {
         strncpy(output, ACE_FULL_VERSION_STR, outputSize);
-        return;
+        EXTENSION_RETURN();
     }
 
 #ifdef _WIN32
@@ -38,14 +41,14 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
         if (!hClipboardData) {
             result = "GlobalAlloc() failed, GetLastError=" + GetLastError();
             gClipboardData = "";
-            return;
+            EXTENSION_RETURN();
         }
 
         char *pClipboardData = (char *)GlobalLock(hClipboardData);
         if (!pClipboardData) {
             result = "GlobalLock() failed, GetLastError=" + GetLastError();
             gClipboardData = "";
-            return;
+            EXTENSION_RETURN();
         }
         memcpy(pClipboardData, gClipboardData.c_str(), gClipboardData.length());
         pClipboardData[gClipboardData.length() + 1] = 0x00;
@@ -82,6 +85,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
 
     #endif
 
-    
+    EXTENSION_RETURN();
 }
 
