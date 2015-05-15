@@ -1,10 +1,10 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_unit", "_weapon", "_magazine"];
+private ["_magazine"];
 
-_unit = _this select 0;
-_weapon = _this select 1;
+PARAMS_2(_unit,_weapon);
+
 _magazine = _this select 5;
 
 if (_weapon != "Throw") exitWith {};
