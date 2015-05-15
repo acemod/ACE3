@@ -152,6 +152,9 @@ if (_activated) then {
                     _x radiochanneladd [_player];
                 } foreach (_logic getvariable ["channels",[]]);
 
+                // Added by ACE_zeus to delay ascension message at mission start
+                [{_this spawn DFUNC(moduleCuratorDelay);},[_logic,1]] call EFUNC(common,execNextFrame);
+
                 [_logic,"curatorUnitAssigned",[_logic,_player]] call bis_fnc_callscriptedeventhandler;
 
                 //--- Forced interface
@@ -197,8 +200,8 @@ if (_activated) then {
         } foreach (synchronizedobjects _logic);
         _addons call bis_fnc_activateaddons;
 
-        // Added by ACE_zeus to delay ascension messages and bird code (so that settings can be changed)
-        [{_this spawn DFUNC(moduleCuratorDelay);},[_logic,_player]] call EFUNC(common,execNextFrame);
+        // Added by ACE_zeus to delay bird code
+        [{_this spawn DFUNC(moduleCuratorDelay);},[_logic,0]] call EFUNC(common,execNextFrame);
     };
 
     //--- Player
