@@ -306,8 +306,8 @@ This module allows you to customize the weather settings.
 
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>ACE Weather overrides weather settings (editor, mission settings) and automatically calculates wind, temperature and pressure according to map location, date, time of day, cloud coverage and forecasted cloud coverage and allows the weather to evolve realisticly as the simulation progresses. Weather synchronization occurs between all clients.
-Manual adjustment of the weather is possible by modifying cloud coverage or disabling the feature</p>
+    <p>ACE Weather overrides weather settings (editor, mission settings) and automatically calculates wind, temperature and pressure according to map location, date, time of day and cloud coverage and allows the weather to evolve realistically as the simulation progresses. Weather synchronization occurs between all clients.
+- Adjustment of the weather is possible by modifying the `overcast` value (for example: 0.7 may result in intermittent rain) or disabling the feature</p>
 </div>
 
 
