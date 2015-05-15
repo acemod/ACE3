@@ -8,7 +8,7 @@ parent: wiki
 ## Overview
 
 ### Wind Deflection
-The Wind Deflection feature is enabled by default and adds ballistic influences of wind
+The Wind Deflection feature is enabled by default and adds ballistic influences of wind. It's designed to work independently or in conjunction with the Advanced Ballistic feature.
 
 
 ## Usage
