@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Wind Deflection
-description: 
+description: The Windeflection module simulates wind deflection of projectiles
 group: feature
 parent: wiki
 ---
