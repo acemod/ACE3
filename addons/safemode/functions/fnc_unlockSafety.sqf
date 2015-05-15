@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_unit,_weapon,_muzzle);
+PARAMS_3(_unit,_weapon,_muzzle);
 
 private ["_safedWeapons"];
 _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
