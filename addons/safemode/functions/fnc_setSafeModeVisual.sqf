@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-EXPLODE_1_PVT(_this,_show);
+PARAMS_1(_show);
 
 disableSerialization;
 

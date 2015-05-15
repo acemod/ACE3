@@ -1,11 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_unit", "_vehicle", "_index"];
-
-_unit = _this select 0;
-_vehicle = _this select 1;
-_index = _this select 2;
+PARAMS_3(_unit,_vehicle,_index);
 
 private "_turret";
 _turret = [_unit] call EFUNC(common,getTurretIndex);

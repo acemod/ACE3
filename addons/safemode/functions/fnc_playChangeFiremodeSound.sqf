@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_unit,_weapon);
+PARAMS_2(_unit,_weapon);
 
 private ["_sound"];
 _sound = getArray (configFile >> "CfgWeapons" >> _weapon >> "changeFiremodeSound");
