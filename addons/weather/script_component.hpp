@@ -18,3 +18,14 @@
 #define WATER_VAPOR_MOLAR_MASS 0.018016
 #define DRY_AIR_MOLAR_MASS 0.028964
 #define SPECIFIC_GAS_CONSTANT_DRY_AIR 287.058
+
+// Heat index coefficients
+#define __C1 −8.784695
+#define __C2 1.61139411
+#define __C3 2.338549
+#define __C4 −0.14611605
+#define __C5 −1.2308094 · 10^(−2)
+#define __C6 −1.6424828 · 10^(−2)
+#define __C7 2.211732 · 10^(−3)
+#define __C8 7.2546 · 10^(−4)
+#define __C9 −3.582 · 10^(−6)
