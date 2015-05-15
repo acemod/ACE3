@@ -3067,11 +3067,27 @@
         </Key>
         <Key ID="STR_ACE_Medical_Yes">
             <English>Yes</English>
+            <German>Ja</German>
+            <Spanish>Si</Spanish>
             <Polish>Tak</Polish>
+            <Czech>Ano</Czech>
+            <French>Oui</French>
+            <Russian>Да</Russian>
+            <Hungarian>Igen</Hungarian>
+            <Portuguese>Sim</Portuguese>
+            <Italian>Si</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_No">
             <English>No</English>
+            <German>Nein</German>
+            <Spanish>No</Spanish>
             <Polish>Nie</Polish>
+            <Czech>Ne</Czech>
+            <French>Non</French>
+            <Russian>Нет</Russian>
+            <Hungarian>Nem</Hungarian>
+            <Portuguese>Não</Portuguese>
+            <Italian>No</Italian>
         </Key>
     </Package>
 </Project>
