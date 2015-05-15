@@ -18,21 +18,21 @@ namespace ace {
             bool penetration_display::show_hit(const arguments &args, std::string &result) {
                 std::lock_guard<std::mutex> _lock(_render_lock);
 
-                _active_hits.push_back(gamehit::create(args));
+                gamehit_p _hit = gamehit::create(args);
+
+                _active_hits.push_back(_hit);
 
                 auto _vehicle = controller::get().vehicles.find(args[0]);
                 if (_vehicle == controller::get().vehicles.end())
                     return false;
 
-                btVector3 vectorFrom(5, 20, 0);
-                btVector3 vectorTo = _vehicle->second->bt_object->getWorldTransform().getOrigin();
-                btVector3 direction = vectorFrom - vectorTo;
+                btVector3 vectorFrom(5, 5, -10);
 
                 XMVECTORF32 eyePos = { vectorFrom.x(), vectorFrom.y(), vectorFrom.z() };
-                XMVECTORF32 eyeDir = { direction.x(), direction.y(), direction.z() };
+                XMVECTORF32 eyeDir = { _hit->impactposition.x(), _hit->impactposition.y(), _hit->impactposition.z() };
                 XMVECTORF32 up = { 0.f, 1.f, 0.f };
 
-                XMStoreFloat4x4(&_View, XMMatrixLookAtLH(eyePos, XMVectorZero(), up));
+                XMStoreFloat4x4(&_View, XMMatrixLookAtLH(eyePos, eyeDir, up));
 
                 return true;
             }
