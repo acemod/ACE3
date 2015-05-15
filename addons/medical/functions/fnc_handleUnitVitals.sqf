@@ -13,11 +13,14 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_heartRate","_bloodPressure","_bloodVolume","_painStatus", "_lastTimeValuesSynced", "_syncValues", "_airwayStatus", "_blood", "_bloodPressureH", "_bloodPressureL", "_interval"];
+private ["_unit", "_heartRate","_bloodPressure","_bloodVolume","_painStatus", "_lastTimeValuesSynced", "_syncValues", "_airwayStatus", "_blood", "_bloodPressureH", "_bloodPressureL", "_interval", "_lastMomentVitalsHandled"];
 _unit = _this select 0;
 
-_interval = time - (_unit getVariable [QGVAR(lastMomentVitalsHandled), 0]);
+_lastMomentVitalsHandled = _unit getVariable [QGVAR(lastMomentVitalsHandled), -1];
 _unit setVariable [QGVAR(lastMomentVitalsHandled), time];
+
+//If QGVAR(lastMomentVitalsHandled) is undefined then assume 1 second interval:
+_interval = if (_lastMomentVitalsHandled == -1) then {1} else {time - _lastMomentVitalsHandled};
 
 if (_interval == 0) exitWith {};
 
