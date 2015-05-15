@@ -60,4 +60,13 @@ PREP(startDefuse);
 PREP(startTimer);
 PREP(triggerType);
 
+PREP(canDaisyChainTo);
+PREP(checkDaisyChain);
+PREP(daisyChainTo);
+PREP(detonateDaisyChain);
+PREP(endDaisyChain);
+PREP(isDaisyChaining);
+PREP(startDaisyChain);
+PREP(stopDaisyChain);
+
 ADDON = true;

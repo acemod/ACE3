@@ -57,7 +57,7 @@ class CfgMagazines {
         ACE_SetupObject = "ACE_Explosives_Place_SatchelCharge";
         ACE_DelayTime = 1;
         class ACE_Triggers {
-            SupportedTriggers[] = {"Timer","Command", "MK16_Transmitter", "DeadmanSwitch"};
+            SupportedTriggers[] = {"Timer","Command", "MK16_Transmitter", "DeadManSwitch", "DaisyChain"};
             class Timer {
                 FuseTime = 0.5;
             };
@@ -99,7 +99,7 @@ class CfgMagazines {
     class IEDUrbanBig_Remote_Mag: DemoCharge_Remote_Mag {
         ACE_SetupObject = "ACE_Explosives_Place_IEDUrbanBig";
         class ACE_Triggers {
-            SupportedTriggers[] = {"Command","DeadmanSwitch", "Cellphone"};
+            SupportedTriggers[] = {"Command","DeadManSwitch", "Cellphone", "DaisyChain"};
             class Command {
                 FuseTime = 0.5;
             };
@@ -113,7 +113,7 @@ class CfgMagazines {
     class IEDUrbanSmall_Remote_Mag: DemoCharge_Remote_Mag {
         ACE_SetupObject = "ACE_Explosives_Place_IEDUrbanSmall";
         class ACE_Triggers {
-            SupportedTriggers[] = {"Command","DeadmanSwitch", "Cellphone"};
+            SupportedTriggers[] = {"Command","DeadManSwitch", "Cellphone", "DaisyChain"};
             class Command {
                 FuseTime = 0.5;
             };
