@@ -11,13 +11,7 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = "$STR_ACE_NameTags_ShowPlayerNames";
         description = "$STR_ACE_NameTags_ShowPlayerNames_Desc";
-        values[] = {"$STR_ACE_NameTags_Disabled", "$STR_ACE_NameTags_Enabled", "$STR_ACE_NameTags_OnlyCursor", "$STR_ACE_NameTags_OnlyOnKeypress", "$STR_ACE_NameTags_OnlyCursorAndKeypress"};
-    };
-    class GVAR(showPlayerNamesForce) {
-        value = 0;
-        typeName = "BOOL";
-        displayName = "$STR_ACE_NameTags_ShowPlayerNamesForce";
-        description = "$STR_ACE_NameTags_ShowPlayerNamesForce_Desc";
+        values[] = {"$STR_ACE_NameTags_Disabled", "$STR_ACE_NameTags_Enabled", "$STR_ACE_NameTags_OnlyCursor", "$STR_ACE_NameTags_OnlyKeypress", "$STR_ACE_NameTags_OnlyCursorAndKeypress"};
     };
     class GVAR(showPlayerRanks) {
         value = 1;

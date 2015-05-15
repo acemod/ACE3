@@ -21,13 +21,13 @@ if !(_activated) exitWith {};
 GVAR(Module) = true;
 
 [_logic, QGVAR(playerNamesViewDistance),  "playerNamesViewDistance"     ] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(ShowNamesForAI),           "ShowNamesForAI"              ] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(showNamesForAI),           "showNamesForAI"              ] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(showVehicleCrewInfo),      "showVehicleCrewInfo"         ] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(showCursorTagForVehicles), "showCursorTagForVehicles"    ] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(showPlayerNamesForce),     "showPlayerNamesForce"        ] call EFUNC(common,readSettingFromModule);
 
-if (GVAR(showPlayerNamesForce)) then {
+// Do Not Force - read module setting only non-default is set due to using SCALAR
+if ((_logic getVariable "showPlayerNames") != -1) then {
     [_logic, QGVAR(showPlayerNames),      "showPlayerNames"             ] call EFUNC(common,readSettingFromModule);
 };
 
-diag_log format ["[ACE]: NameTags Module Initialized. Forced Name Tags Setting: %1",GVAR(showPlayerNamesForce)];
+diag_log text "[ACE]: NameTags Module Initialized.";

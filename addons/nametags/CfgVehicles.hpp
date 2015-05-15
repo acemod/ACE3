@@ -17,34 +17,32 @@ class CfgVehicles {
                 description = "$STR_ACE_NameTags_ShowPlayerNames_Desc";
                 typeName = "NUMBER";
                 class values {
-                    class Disabled {
-                        name = "$STR_ACE_NameTags_Disabled";
+                    class DoNotForce {
+                        default = 1;
+                        name = "$STR_ACE_NameTags_DoNotForce";
+                        value = -1;
+                    };
+                    class ForceHide {
+                        name = "$STR_ACE_NameTags_ForceHide";
                         value = 0;
                     };
-                    class Enabled {
-                        default = 1;
-                        name = "$STR_ACE_NameTags_Enabled";
+                    class ForceShow {
+                        name = "$STR_ACE_NameTags_ForceShow";
                         value = 1;
                     };
-                    class OnlyCursor {
-                        name = "$STR_ACE_NameTags_OnlyCursor";
+                    class ForceShowOnlyCursor {
+                        name = "$STR_ACE_NameTags_ForceShowOnlyCursor";
                         value = 2;
                     };
-                    class OnlyOnKeypress {
-                        name = "$STR_ACE_NameTags_OnlyOnKeypress";
+                    class ForceShowOnlyKeypress {
+                        name = "$STR_ACE_NameTags_ForceShowOnlyKeypress";
                         value = 3;
                     };
-                    class OnlyCursorAndKeypress {
-                        name = "$STR_ACE_NameTags_OnlyCursorAndKeypress";
+                    class ForceShowOnlyCursorAndKeypress {
+                        name = "$STR_ACE_NameTags_ForceShowOnlyCursorAndKeypress";
                         value = 4;
                     };
                 };
-            };
-            class showPlayerNamesForce {
-                displayName = "$STR_ACE_NameTags_ShowPlayerNamesForce";
-                description = "$STR_ACE_NameTags_ShowPlayerNamesForce_Desc";
-                typeName = "BOOL";
-                defaultValue = 0;
             };
             class playerNamesViewDistance {
                 displayName = "$STR_ACE_NameTags_PlayerNamesViewDistance_DisplayName";

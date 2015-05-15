@@ -5,7 +5,7 @@
 
 if (!hasInterface) exitWith {};
 
-GVAR(ShowNamesTime) = -10;
+GVAR(showNamesTime) = -10;
 
 // Add keybinds
 ["ACE3 Common", QGVAR(showNameTags), localize "STR_ACE_NameTags_ShowNames",
@@ -14,7 +14,7 @@ GVAR(ShowNamesTime) = -10;
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
-    GVAR(ShowNamesTime) = time;
+    GVAR(showNamesTime) = time;
     if (call FUNC(canShow)) then{ call FUNC(doShow); };
     // Return false so it doesn't block other actions
     false
@@ -23,24 +23,13 @@ GVAR(ShowNamesTime) = -10;
 [29, [false, false, false]], false] call cba_fnc_addKeybind; //LeftControl Key
 
 
-// Draw handle on start if set
-if (GVAR(showPlayerNames) > 0) then {
-    GVAR(drawHandler) = addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
-};
+// Draw handle
+call FUNC(updateSettings);
 
-// Set the EH which waits for a setting to be changed, so that the effect is shown immediately
-if (!GVAR(showPlayerNamesForce)) then {
-    ["SettingChanged", {
-        PARAMS_2(_name,_value)
-        if (_name  == QGVAR(showPlayerNames)) then {
-            if (isNil(QGVAR(drawHandler)) && {_value > 0}) then {
-                GVAR(drawHandler) = addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
-            } else {
-                if (_value == 0) then {
-                    removeMissionEventHandler ["Draw3D", GVAR(drawHandler)];
-                    GVAR(drawHandler) = nil;
-                };
-            };
-        };
-    }] call EFUNC(common,addEventHandler);
-};
+// Change settings accordingly when they are changed
+["SettingChanged", {
+    PARAMS_1(_name);
+    if (_name  == QGVAR(showPlayerNames)) then {
+        call FUNC(updateSettings);
+    };
+}] call EFUNC(common,addEventHandler);

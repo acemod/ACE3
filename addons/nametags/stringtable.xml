@@ -25,12 +25,6 @@
             <Italian>Mostra i nomi dei giocatori</Italian>
             <Russian>Показывать имена игроков (включить имена)</Russian>
         </Key>
-        <Key ID="STR_ACE_NameTags_ShowPlayerNamesForce">
-            <English>Force names setting</English>
-        </Key>
-        <Key ID="STR_ACE_NameTags_ShowPlayerNamesForce_Desc">
-            <English>Force name tags option, or by default allows players to choose it on their own. Default: Do Not Force</English>
-        </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnCursor">
             <English>Show player name only on cursor (requires player names)</English>
             <Polish>Pokaż imiona graczy tylko pod kursorem (wymagana opcja Pokaż imiona graczy)</Polish>
@@ -144,7 +138,7 @@
             <Polish>Wymuś ukrycie</Polish>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShow">
-            <English>Force show</English>
+            <English>Force Show</English>
             <Polish>Wymuś wyświetlanie</Polish>
         </Key>
         <Key ID="STR_ACE_NameTags_showVehicleCrewInfo_DisplayName">
@@ -164,7 +158,7 @@
             <Polish>Pokazuj imię dowódcy pojazdu nad pojazdem (tylko jeżeli klient ma włączone imiona graczy). Domyślnie: Nie</Polish>
         </Key>
         <Key ID="STR_ACE_NameTags_Module_Description">
-            <English></English>
+            <English>This module allows you to customize settings and range of Name Tags.</English>
             <Polish>Moduł ten pozwala dostosować ustawienia i zasięg wyświetlania imion.</Polish>
         </Key>
         <Key ID="STR_ACE_NameTags_Disabled">
@@ -176,16 +170,25 @@
             <Polish>Włączone</Polish>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursor">
-            <English>Only Cursor</English>
+            <English>Only on Cursor</English>
             <Polish>Tylko pod kursorem</Polish>
         </Key>
-        <Key ID="STR_ACE_NameTags_OnlyOnKeypress">
-            <English>Only On Keypress</English>
+        <Key ID="STR_ACE_NameTags_OnlyKeypress">
+            <English>Only on Keypress</English>
             <Polish>Tylko po wciśnięciu klawisza</Polish>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursorAndKeypress">
-            <English>Only Cursor and Keypress</English>
+            <English>Only on Cursor and Keypress</English>
             <Polish>Tylko pod kursorem i po wciśnięciu klawisza</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ForceShowOnlyCursor">
+            <English>Force Show Only on Cursor</English>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ForceShowOnlyKeypress">
+            <English>Force Show Only on Keypress</English>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ForceShowOnlyCursorAndKeypress">
+            <English>Force Show Only on Cursor and Keypress</English>
         </Key>
         <Key ID="STR_ACE_NameTags_NameTagSettings">
             <English>Use Nametag settings</English>
@@ -200,7 +203,7 @@
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania imion nad głowami graczy. Opcja "Tylko po wciśnięciu klawisza" wyświetla imiona tylko przytrzymania klawisza "Modyfikator" dostępnego w menu ustawień addonów -> ACE3.</Polish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves_Desc">
-            <English></English>
+            <English>Effect of sound waves above the heads of speaking players after holding the PTT key. This option works with TFAR and ACRE2.</English>
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania efektu fal dźwiękowych nad głowami mówiących graczy, wyświetlanych po przytrzymaniu klawisza PTT. Opcja ta współpracuje z TFAR oraz ACRE2.</Polish>
         </Key>
     </Package>
