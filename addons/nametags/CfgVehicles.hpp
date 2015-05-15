@@ -15,7 +15,7 @@ class CfgVehicles {
             class showPlayerNames {
                 displayName = "$STR_ACE_NameTags_ShowPlayerNames";
                 description = "$STR_ACE_NameTags_ShowPlayerNames_Desc";
-                typeName = "SCALAR";
+                typeName = "NUMBER";
                 class values {
                     class Disabled {
                         name = "$STR_ACE_NameTags_Disabled";
