@@ -304,13 +304,20 @@ Default Time to lockpick (in seconds)<br>
 
 This module allows you to customize the weather settings.
 
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>ACE Weather overrides weather settings (editor, mission settings) and automatically calculates wind, temperature and pressure according to map location, date, time of day, cloud coverage and forecasted cloud coverage and allows the weather to evolve realisticly as the simulation progresses. Weather synchronization occurs between all clients.
+Manual adjustment of the weather is possible by modifying cloud coverage or disabling the feature</p>
+</div>
+
+
 **Settings:**
 
 1. **Weather propagation (Boolean)**<br>
 Enables sever side weather propagation.<br>
 `Default value: Yes`
 2. **ACE Weather (Boolean)**<br>
-Overrides the default weather (editor, mission settings) with ACE weather (map based).<br>
+Overrides the default weather with ACE weather (map based).<br>
 `Default value: Yes`
 3. **Sync Rain (Boolean)**<br>
 Synchronizes rain.<br>
