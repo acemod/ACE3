@@ -24,5 +24,5 @@ try {
     HANDLECATCH;
 };
 
-if (isNil "_hash") exithWith { nil };
+if (isNil "_hash") exitWith { nil };
 _hash;
