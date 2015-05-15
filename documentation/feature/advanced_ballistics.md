@@ -6,10 +6,10 @@ group: feature
 parent: wiki
 ---
 
-# Overview
+## 1. Overview
 The advanced ballistics module improves internal- and external ballistics. 
 
-# Features
+## 2. Features
 - Drag modeling based on real-world ballistic coefficients.
 - Ambient air density (air pressure, temperature, humidity) affects drag.
 - Wind affects drag and deflects the trajectory.
@@ -22,10 +22,10 @@ The advanced ballistics module improves internal- and external ballistics.
 - Bullet trace effect for supersonic bullets (light refraction due to air pressure waves).
 - A protractor for quickly measuring the inclination angle.
 
-# Usage
+## 3. Usage
 Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> while using a compatible weapon to toggle the protractor. The red line indicates the current inclination angle in degrees. The protractor will disappear if you lower or holster your weapon.
 
 This module uses relatively complex scripting. Several options are provided in the ACE menu to reduce the performance impact of this module.
 
-# Dependencies
+## Dependencies
 `ace_ballistics`, `ace_weather`, `ace_modules`
