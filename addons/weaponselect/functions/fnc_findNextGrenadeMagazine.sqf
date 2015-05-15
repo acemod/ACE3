@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_type", "_allMags", "_allMuzzles", "_magazines"];
+private ["_allMags", "_allMuzzles", "_magazines"];
 
 PARAMS_1(_type); //"All", "Frag" or "NonFrag"
 
