@@ -2,7 +2,7 @@
 
 #include "initKeybinds.sqf"
 
-GVAR(Menus) = ["Direction", "Wind SPD  m/s", "CROSSWIND m/s", "HEADWIND  m/s", "TEMP       °C", "HUMIDITY    %", "BARO      hPA", "ALTITUDE    m", "User Screen   1", "User Screen   2"];
+GVAR(Menus) = ["Direction", "Wind SPD  m/s", "CROSSWIND m/s", "HEADWIND  m/s", "TEMP       °C", "CHILL      °C", "HUMIDITY    %", "HEAT INDEX °C", "DEW POINT  °C", "WET BULB   °C", "BARO      hPA", "ALTITUDE    m", "User Screen   1", "User Screen   2"];
 
 GVAR(TOTAL) = [0, 0, 0, 0, 0, 0, 0, 0];
 GVAR(ENTRIES) = [0, 0, 0, 0, 0, 0, 0, 0];

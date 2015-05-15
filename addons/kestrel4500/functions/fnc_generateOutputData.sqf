@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-private ["_playerDir", "_textTop", "_textCenterBig", "_textCenterLine1Left", "_textCenterLine2Left", "_textCenterLine3Left", "_textCenterLine1Right", "_textCenterLine2Right", "_textCenterLine3Right", "_textInfoLine1", "_textInfoLine2", "_temperature", "_humidity", "_windSpeed", "_windDir"];
+private ["_playerDir", "_textTop", "_textCenterBig", "_textCenterLine1Left", "_textCenterLine2Left", "_textCenterLine3Left", "_textCenterLine1Right", "_textCenterLine2Right", "_textCenterLine3Right", "_textInfoLine1", "_textInfoLine2", "_temperature", "_chill", "_humidity", "_heatIndex", "_dewPoint", "_wetBulb", "_windSpeed", "_windDir"];
 
 [] call FUNC(collectData);
 
@@ -39,6 +39,10 @@ _playerAltitude = (getPosASL ACE_player) select 2;
 
 _temperature = _playerAltitude call EFUNC(weather,calculateTemperatureAtHeight);
 _humidity = EGVAR(weather,currentHumidity);
+_chill = [_temperature, _humidity] call EFUNC(weather,calculateWindChill);
+_heatIndex = [_temperature, _humidity] call EFUNC(weather,calculateHeatIndex);
+_dewPoint = [_temperature, _humidity] call EFUNC(weather,calculateDewPoint);
+_wetBulb = [_temperature, _humidity] call EFUNC(weather,calculateWetBulb);
 
 GVAR(Direction) = 4 * floor(_playerDir / 90);
 if (_playerDir % 90 > 10) then { GVAR(Direction) = GVAR(Direction) + 1};
@@ -161,9 +165,9 @@ switch (GVAR(Menu)) do {
             _textCenterLine3Right = Str(round((GVAR(Max) select 4) * 10) / 10);
         };
     };
-    case 5: { // HUMIDITY
+    case 5: { // CHILL
         if (!GVAR(MinAvgMax)) then {
-            _textCenterBig = Str(round(_humidity * 100 * 10) / 10);
+            _textCenterBig = Str(round(_chill * 10) / 10);
         } else {
             _textCenterLine1Left = "Min";
             _textCenterLine2Left = "Avg";
@@ -173,9 +177,9 @@ switch (GVAR(Menu)) do {
             _textCenterLine3Right = Str(round((GVAR(Max) select 5) * 10) / 10);
         };
     };
-    case 6: { // BARO
+    case 6: { // HUMIDITY
         if (!GVAR(MinAvgMax)) then {
-            _textCenterBig = Str(round((_playerAltitude call EFUNC(weather,calculateBarometricPressure)) * 10) / 10);
+            _textCenterBig = Str(round(_humidity * 100 * 10) / 10);
         } else {
             _textCenterLine1Left = "Min";
             _textCenterLine2Left = "Avg";
@@ -185,19 +189,67 @@ switch (GVAR(Menu)) do {
             _textCenterLine3Right = Str(round((GVAR(Max) select 6) * 10) / 10);
         };
     };
-    case 7: { // ALTITUDE
+    case 7: { // HEAT INDEX
+        if (!GVAR(MinAvgMax)) then {
+            _textCenterBig = Str(round(_heatIndex * 10) / 10);
+        } else {
+            _textCenterLine1Left = "Min";
+            _textCenterLine2Left = "Avg";
+            _textCenterLine3Left = "Max";
+            _textCenterLine1Right = Str(round((GVAR(Min) select 7) * 10) / 10);
+            _textCenterLine2Right = Str(round((GVAR(Total) select 7) / (GVAR(Entries) select 7) * 10) / 10);
+            _textCenterLine3Right = Str(round((GVAR(Max) select 7) * 10) / 10);
+        };
+    };
+    case 8: { // DEW POINT
+        if (!GVAR(MinAvgMax)) then {
+            _textCenterBig = Str(round(_dewPoint * 10) / 10);
+        } else {
+            _textCenterLine1Left = "Min";
+            _textCenterLine2Left = "Avg";
+            _textCenterLine3Left = "Max";
+            _textCenterLine1Right = Str(round((GVAR(Min) select 8) * 10) / 10);
+            _textCenterLine2Right = Str(round((GVAR(Total) select 8) / (GVAR(Entries) select 8) * 10) / 10);
+            _textCenterLine3Right = Str(round((GVAR(Max) select 8) * 10) / 10);
+        };
+    };
+    case 9: { // WET BULB
+        if (!GVAR(MinAvgMax)) then {
+            _textCenterBig = Str(round(_wetBulb * 10) / 10);
+        } else {
+            _textCenterLine1Left = "Min";
+            _textCenterLine2Left = "Avg";
+            _textCenterLine3Left = "Max";
+            _textCenterLine1Right = Str(round((GVAR(Min) select 9) * 10) / 10);
+            _textCenterLine2Right = Str(round((GVAR(Total) select 9) / (GVAR(Entries) select 9) * 10) / 10);
+            _textCenterLine3Right = Str(round((GVAR(Max) select 9) * 10) / 10);
+        };
+    };
+    case 10: { // BARO
+        if (!GVAR(MinAvgMax)) then {
+            _textCenterBig = Str(round((_playerAltitude call EFUNC(weather,calculateBarometricPressure)) * 10) / 10);
+        } else {
+            _textCenterLine1Left = "Min";
+            _textCenterLine2Left = "Avg";
+            _textCenterLine3Left = "Max";
+            _textCenterLine1Right = Str(round((GVAR(Min) select 10) * 10) / 10);
+            _textCenterLine2Right = Str(round((GVAR(Total) select 10) / (GVAR(Entries) select 10) * 10) / 10);
+            _textCenterLine3Right = Str(round((GVAR(Max) select 10) * 10) / 10);
+        };
+    };
+    case 11: { // ALTITUDE
         if (!GVAR(MinAvgMax)) then {
             _textCenterBig = Str(round(EGVAR(weather,Altitude) + _playerAltitude));
         } else {
             _textCenterLine1Left = "Min";
             _textCenterLine2Left = "Avg";
             _textCenterLine3Left = "Max";
-            _textCenterLine1Right = Str(round(GVAR(Min) select 7));
-            _textCenterLine2Right = Str(round((GVAR(Total) select 7) / (GVAR(Entries) select 7)));
-            _textCenterLine3Right = Str(round(GVAR(Max) select 7));
+            _textCenterLine1Right = Str(round(GVAR(Min) select 11));
+            _textCenterLine2Right = Str(round((GVAR(Total) select 11) / (GVAR(Entries) select 11)));
+            _textCenterLine3Right = Str(round(GVAR(Max) select 11));
         };
     };
-    case 8: { // User Screen 1
+    case 12: { // User Screen 1
         _textCenterLine1Left = Str(round(_playerDir));
         _textCenterLine2Left = Str(round(EGVAR(weather,Altitude) + _playerAltitude));
         _textCenterLine3Left = Str(round(abs(_windSpeed) * 10) / 10);
@@ -205,7 +257,7 @@ switch (GVAR(Menu)) do {
         _textCenterLine2Right = "m";
         _textCenterLine3Right = "m/s";
     };
-    case 9: { // User Screen 2
+    case 13: { // User Screen 2
         _textCenterLine1Left = Str(round(_temperature * 10) / 10);
         _textCenterLine2Left = Str(round(_humidity * 100 * 10) / 10);
         _textCenterLine3Left = Str(round((_playerAltitude call EFUNC(weather,calculateBarometricPressure)) * 10) / 10);
