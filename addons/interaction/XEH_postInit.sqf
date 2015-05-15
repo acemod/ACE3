@@ -51,7 +51,7 @@ private ["_team"];
     if !([ACE_player, cursorTarget] call FUNC(canTapShoulder)) exitWith {false};
 
     // Statement
-    [ACE_player, cursorTarget] call FUNC(tapShoulder);
+    [ACE_player, cursorTarget, 0] call FUNC(tapShoulder);
     true
 },
 {false},

@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-private ["_adjustSpeed", "_vdir", "_dir", "_up", "_l", "_r", "_vup", "_vel"];
+private ["_adjustSpeed", "_vdir", "_dir", "_up", "_vup", "_vel", "_vlat"];
 
 PARAMS_3(_projectile,_adjustDir,_adjustUp);
 

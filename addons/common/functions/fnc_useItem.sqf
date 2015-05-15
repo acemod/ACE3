@@ -10,8 +10,10 @@
 
 #include "script_component.hpp"
 
-private ["_return"];
 PARAMS_2(_unit,_item);
+
+private ["_return", "_vehicleUsage"];
+
 _vehicleUsage = [_this, 2, false, [false]] call BIS_fnc_Param;
 
 _return = false;

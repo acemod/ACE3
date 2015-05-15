@@ -23,4 +23,6 @@ try {
 } catch {
     HANDLECATCH;
 };
+
+if (isNil "_hash") exitWith { nil };
 _hash;

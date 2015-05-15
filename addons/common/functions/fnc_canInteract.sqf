@@ -9,8 +9,6 @@
  */
 #include "script_component.hpp"
 
-private ["_return"];
-
 PARAMS_1(_unit);
 
 (((_unit getvariable [QGVAR(canInteract),0]) < 1) && ([_unit] call FUNC(isAwake)) && !([_unit] call FUNC(isArrested)))

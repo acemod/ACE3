@@ -1,12 +1,13 @@
 ---
 layout: wiki
 title: Settings Framework
+description: ACE3 contains an extensive settings framework that allows you to tweak the modification without having to mess around with deleting pbos.
 group: framework
 order: 5
 parent: wiki
 ---
 
-ACE contains an extensive settings framework that allows you to tweak the modification without having to mess around with deleting pbos. These settings are all handled server side and broadcasted to the clients connecting to that server. This ensures that everyone playing on the server will have a uniform experience.
+ACE3 contains an extensive settings framework that allows you to tweak the modification without having to mess around with deleting pbos. These settings are all handled server side and broadcasted to the clients connecting to that server. This ensures that everyone playing on the server will have a uniform experience.
 
 Part of this settings framework are global settings and client settings. Both use the same underlaying framework, with the difference that client settings can be adjusted by clients, where global settings can not.
 
@@ -66,7 +67,7 @@ The server config setting entries are done through our optional ACE_server.pbo, 
 
 ACE contains a lot of settings; to tweak everything to your liking manually therefor can be quite a task. We have provided the option to export all settings in single player. For this, follow these simple steps:
 
-* Open the editor.
+* Open the editor (Singleplayer).
 * Under modules (f7), find ACE, `Config Export [ACE]`.
 * Place down the module, ensure that the allow parameter is set to yes.
 * Press preview, once in game, press Esc and open the ACE Options dialog (top left)

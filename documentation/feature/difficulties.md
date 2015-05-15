@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Difficulties
+description: 
 group: feature
 parent: wiki
 ---

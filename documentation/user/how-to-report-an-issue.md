@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: How to report an issue
+description: If you've found an issue with ACE3 please read this entry before reporting it. 
 group: user
 order: 10
 parent: wiki

@@ -13,6 +13,8 @@
 
 PARAMS_3(_logic,_units,_activated);
 
+private["_colors", "_hSCount", "_hiddenSelections", "_i", "_index", "_vehicle"];
+
 if !(_activated) exitWith {};
 
 {

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Weapon Select
+description: 
 group: feature
 parent: wiki
 ---

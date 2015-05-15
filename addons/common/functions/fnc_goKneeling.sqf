@@ -13,6 +13,8 @@
 
 PARAMS_1(_unit);
 
+//IGNORE_PRIVATE_WARNING("_exception");
+
 try {
     if (_unit == vehicle _unit) then {
         switch (currentWeapon _unit) do {

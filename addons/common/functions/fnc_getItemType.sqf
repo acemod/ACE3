@@ -16,6 +16,8 @@
 
 PARAMS_1(_item);
 
+private ["_cfgType"];
+
 _cfgType = [_item] call FUNC(getConfigType);
 
 if (_cfgType == "") exitWith {["",""]};

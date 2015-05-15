@@ -16,7 +16,7 @@
 
 PARAMS_2(_name,_args);
 
-private["_ttl", "_eventData", "_internalData", "_eventLog"];
+private["_ttl", "_eventData"];
 
 if( (count _this) > 2) then {
     _ttl = _this select 2;

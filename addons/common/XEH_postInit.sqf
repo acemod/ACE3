@@ -1,12 +1,13 @@
 // ACE - Common
 #include "script_component.hpp"
 
+//IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
+
 // Listens for global "SettingChanged" events, to update the force status locally
 ["SettingChanged", {
-
     PARAMS_2(_name,_value);
     if !(count _this > 2) exitWith {};
-
+    private ["_force", "_settingData"];
     _force = _this select 2;
     if (_force) then {
         _settingData = [_name] call FUNC(getSettingData);
@@ -48,6 +49,7 @@ QGVAR(remoteFnc) addPublicVariableEventHandler {
 
 [missionNamespace] call FUNC(executePersistent);
 
+private ["_currentVersion", "_previousVersion"];
 // check previous version number from profile
 _currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
 _previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
@@ -125,6 +127,7 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 
 // PFH to raise varios events
 [{
+    private ["_newCameraView", "_newInventoryDisplayIsOpen", "_newPlayerInventory", "_newPlayerTurret", "_newPlayerVehicle", "_newPlayerVisionMode", "_newPlayerWeapon", "_newZeusDisplayIsOpen"];
     // "playerInventoryChanged" event
     _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
     if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
@@ -206,6 +209,7 @@ GVAR(OldIsCamera) = false;
 [{
 
     // "activeCameraChanged" event
+    private ["_isCamera"];
     _isCamera = {!isNull _x} count ALL_CAMERAS > 0;
     if !(_isCamera isEqualTo GVAR(OldIsCamera)) then {
         // Raise ACE event locally

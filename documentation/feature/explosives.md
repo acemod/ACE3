@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Explosives
+description: 
 group: feature
 parent: wiki
 ---

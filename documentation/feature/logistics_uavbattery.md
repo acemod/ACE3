@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Logistics - UAV Battery
+description: 
 group: feature
 parent: wiki
 ---
