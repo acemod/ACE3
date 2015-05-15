@@ -1,12 +1,13 @@
 ---
 layout: wiki
 title: Settings Framework
+description: ACE3 contains an extensive settings framework that allows you to tweak the modification without having to mess around with deleting pbos.
 group: framework
 order: 5
 parent: wiki
 ---
 
-ACE contains an extensive settings framework that allows you to tweak the modification without having to mess around with deleting pbos. These settings are all handled server side and broadcasted to the clients connecting to that server. This ensures that everyone playing on the server will have a uniform experience.
+ACE3 contains an extensive settings framework that allows you to tweak the modification without having to mess around with deleting pbos. These settings are all handled server side and broadcasted to the clients connecting to that server. This ensures that everyone playing on the server will have a uniform experience.
 
 Part of this settings framework are global settings and client settings. Both use the same underlaying framework, with the difference that client settings can be adjusted by clients, where global settings can not.
 

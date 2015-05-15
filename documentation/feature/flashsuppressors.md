@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Flash Suppressors
+description: 
 group: feature
 parent: wiki
 ---

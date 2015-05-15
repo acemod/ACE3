@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Getting started
+description: Downloaded ACE3 and have no idea where to start? This page serves as a document to help new players get started with things like the medical system, or how to adjust your scope.
 group: user
 order: 0
 parent: wiki
