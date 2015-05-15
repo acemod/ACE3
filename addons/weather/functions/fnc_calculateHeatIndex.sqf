@@ -1,7 +1,7 @@
 /*
  * Author: Ruthberg
  *
- * Calculates heat index based on temperature and humidity
+ * Calculates heat index based on temperature and relative humidity
  *
  * Arguments:
  * 0: temperature - degrees celcius <NUMBER>
