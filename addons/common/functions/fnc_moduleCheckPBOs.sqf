@@ -17,9 +17,13 @@ private ["_mode", "_checkAll", "_whitelist"];
 
 if !(_activated) exitWith {};
 
-_mode = parseNumber (_logic getVariable "Action");
-_checkAll = _logic getVariable ["CheckAll", false];
-_whitelist = call compile (_logic getVariable ["Whitelist", "[]"]);
+[_logic, QGVAR(checkPBOsAction),     "Action"    ] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(checkPBOsCheckAll),   "CheckAll"  ] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(checkPBOsWhitelist),  "Whitelist" ] call EFUNC(common,readSettingFromModule);
+
+_mode = GVAR(checkPBOsAction);
+_checkAll = GVAR(checkPBOsCheckAll);
+_whitelist = call compile GVAR(checkPBOsWhitelist);
 
 if (isNil "_whitelist") then {
     _whitelist = [];

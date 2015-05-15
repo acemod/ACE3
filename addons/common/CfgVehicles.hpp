@@ -41,6 +41,7 @@ class CfgVehicles {
       class Action {
         displayName = "$STR_ACE_Common_CheckPBO_Action_DisplayName";
         description = "$STR_ACE_Common_CheckPBO_Action_Description";
+        typeName = "NUMBER";
         class values {
           class WarnOnce {
             default = 1;

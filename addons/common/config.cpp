@@ -88,6 +88,22 @@ class ACE_Settings {
         value = 0;
         typeName = "BOOL";
     };
+    class GVAR(checkPBOsAction) {
+        value = 0;
+        typeName = "SCALAR";
+        isClientSettable = 0;
+        values[] = {"$STR_ACE_Common_CheckPBO_Action_WarnOnce", "$STR_ACE_Common_CheckPBO_Action_WarnPerm", "$STR_ACE_Common_CheckPBO_Action_Kick"};
+    };
+    class GVAR(checkPBOsCheckAll) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSettable = 0;
+    };
+    class GVAR(checkPBOsWhitelist) {
+        value = "[]";
+        typeName = "STRING";
+        isClientSettable = 0;
+    };
     /*class GVAR(enableNumberHotkeys) {
         value = 1;
         typeName = "BOOL";
