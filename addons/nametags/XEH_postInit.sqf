@@ -41,5 +41,5 @@ if (!GVAR(showPlayerNamesForce)) then {
                 GVAR(drawHandler) = addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
             };
         };
-    }] call ace_common_fnc_addEventHandler;
+    }] call EFUNC(common,addEventHandler);
 };
