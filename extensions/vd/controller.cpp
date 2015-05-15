@@ -155,7 +155,7 @@ namespace ace {
             if (vehicles.find(id) == vehicles.end())
                 return false;
 
-            for (int x = 1, y = 1; x <= vehicles[id]->animation_state.size(); x++, y +=2) {
+            for (int x = 1, y = 1; x <= vehicles[id]->animation_state.size() && y < _args.size()-1; x++, y +=2) {
                 std::string animation_name = _args[y];
                 float state = _args[y + 1];
                 vehicles[id]->animation_state[animation_name] = state;
