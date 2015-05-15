@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_t, _v);
+PARAMS_2(_t,_v);
 
 _v = _v * 3,6; // wind speed in km/h
 

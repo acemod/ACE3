@@ -9,6 +9,7 @@ PREP(calculateDewPoint);
 PREP(calculateHeatIndex);
 PREP(calculateRoughnessLength);
 PREP(calculateTemperatureAtHeight);
+PREP(calculateWetBulb);
 PREP(calculateWindChill);
 PREP(calculateWindSpeed);
 PREP(displayWindInfo);

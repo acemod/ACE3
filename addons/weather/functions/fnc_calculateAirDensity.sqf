@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_temperature, _pressure, _relativeHumidity);
+PARAMS_3(_temperature,_pressure,_relativeHumidity);
 
 _pressure = _pressure * 100; // hPa to Pa
 

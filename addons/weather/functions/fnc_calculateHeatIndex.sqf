@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_t, _rh);
+PARAMS_2(_t,_rh);
 
 _rh = _rh * 100; // relative humidity in %
 
