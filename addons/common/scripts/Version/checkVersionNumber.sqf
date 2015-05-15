@@ -1,6 +1,8 @@
 // by commy2
 #include "script_component.hpp"
 
+private["_client", "_clientVersion", "_count", "_error", "_files", "_index", "_missingAddon", "_missingAddonServer", "_missingAddons", "_missingAddonsServer", "_oldVersionClient", "_oldVersionServer", "_oldVersionsClient", "_oldVersionsServer", "_serverFiles", "_serverVersion", "_serverVersions", "_string", "_version", "_versions"];
+
 _files = [];
 
 {

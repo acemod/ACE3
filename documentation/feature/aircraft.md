@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Aircraft
+description: 
 group: feature
 order: 5
 parent: wiki
@@ -12,7 +13,7 @@ parent: wiki
 Changes the flight behaviour of various aircraft.
 
 ### Various adjustments to aircraft and gunships munitions
-- Higher capacity magazines for the comanche.
+- Higher capacity magazines for the Comanche.
 - Gatling rate of fire (ROF) increased.
 - AP rockets have less splash damage.
 
@@ -25,11 +26,11 @@ Adds the semi-automatic flare mode known from Arma 2. The key to switch the mode
 ### Ejecting from pilot and copilot seats
 Pilots and copilots of all helicopters can now eject.
 
-### Laser marker for wildcat
+### Laser marker for Wildcat
 Adds a laser marker to the copilot seat of the Wildcat.
 
 ### HUD for AH-9
-Adds a HUD to the AH-9 based on the comanches HUD.
+Adds a HUD to the AH-9 based on the Comanche's HUD.
 
 
 ## Usage

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Kestrel 4500
+description: 
 group: feature
 parent: wiki
 ---

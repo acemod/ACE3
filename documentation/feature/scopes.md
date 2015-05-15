@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Scopes
+description: 
 group: feature
 parent: wiki
 ---

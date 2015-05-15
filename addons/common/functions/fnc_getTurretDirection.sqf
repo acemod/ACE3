@@ -13,7 +13,7 @@
 #include "script_component.hpp"
 
 PARAMS_2(_vehicle,_position);
-private ["_turrets", "_turret", "_config", "_turret", "_povPos", "_povDir", "_gunBeginPos", "_gunEndPos", "_pov"];
+private ["_turret", "_povPos", "_povDir", "_gunBeginPos", "_gunEndPos", "_pov", "_gunBeg", "_gunEnd", "_pipDir"];
 
 _turret = [_vehicle, _position] call CBA_fnc_getTurret;
 _pov = getText (_turret >> "memoryPointGunnerOptics");

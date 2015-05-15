@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Arma 3 Scheduler And Our Practices
+description: 
 group: development
 parent: wiki
 order: 8

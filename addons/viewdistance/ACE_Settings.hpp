@@ -1,4 +1,10 @@
 class ACE_Settings {
+    class GVAR(enabled) {
+        typeName = "BOOL";
+        value = 1;
+        displayName = "Enable ACE viewdistance";
+        description = "Enables ACE viewdistance module.";
+    };
     class GVAR(viewDistanceOnFoot) {
         typeName = "SCALAR";
         isClientSettable = 1;

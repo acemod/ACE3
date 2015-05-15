@@ -1,20 +1,19 @@
 ---
 layout: wiki
 title: Wind Deflection
+description: 
 group: feature
 parent: wiki
 ---
 
 ## Overview
 
-### Wind Deflection
-Adds ballistic influences of wind, air density and temperature
+Wind Deflection is enabled by default. This feature simulates the wind deflection of projectiles and is designed to work independently or in conjunction with the Advanced Ballistic feature.
 
 
 ## Usage
 
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+Wind Deflection can be disabled or modified via a Module in the 2D editor.
 
 
 ## Dependencies

@@ -2,7 +2,9 @@
 // internal handler for net events
 #include "script_component.hpp"
 
-private ["_eventName", "_eventArgs", "_eventNames", "_eventIndex", "_eventTargets", "_sentEvents", "_owner", "_serverFlagged"];
+private ["_eventName", "_eventArgs", "_eventNames", "_eventIndex", "_eventTargets", "_sentEvents", "_owner", "_serverFlagged", "_events"];
+//IGNORE_PRIVATE_WARNING("_handleNetEvent");
+
 
 PARAMS_2(_eventType,_event);
 

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Magazine Repack
+description: 
 group: feature
 parent: wiki
 ---

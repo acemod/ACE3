@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-private ["_config", "_cargo", "_codrivers"];
+private ["_config", "_cargo", "_codrivers", "_index"];
 
 PARAMS_1(_vehicle);
 

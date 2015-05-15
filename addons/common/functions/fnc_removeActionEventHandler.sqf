@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-private ["_name", "_actionsVar", "_actionID", "_actions", "_currentID", "_actionIDs", "_count"];
+private ["_name", "_actionsVar", "_actionID", "_actions", "_currentID", "_actionIDs"];
 
 PARAMS_3(_unit,_action,_id);
 
