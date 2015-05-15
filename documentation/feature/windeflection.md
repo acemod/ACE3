@@ -8,14 +8,23 @@ parent: wiki
 ## Overview
 
 ### Wind Deflection
-Adds ballistic influences of wind, air density and temperature
+The Wind Deflection feature is enabled by default and adds ballistic influences of wind
 
 
 ## Usage
+Wind Deflection can be disabled or modified via a Module in the 2D editor.
 
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+### Wind Deflection
+- Toggles the Module on or off
 
+### Vehicle Enabled
+- Toggles the module on or off for static and vehicle-mounted weapons
+
+### Simulation Interval
+- Defines the interval between every calculation step
+
+### Simulation Radius
+- Defines the radius around the player (in meters) at which projectiles are wind deflected
 
 ## Dependencies
 
