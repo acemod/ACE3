@@ -5,6 +5,7 @@
  * Arguments:
  * 0: Player <OBJECT>
  * 1: Target <OBJECT>
+ * 2: Shoulder which was tapped <NUMBER>
  *
  * Return value:
  * None
@@ -16,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_tapper,_target,_shoulderNum);
+PARAMS_3(_tapper,_target,_shoulderNum);
 
 if (_target != ACE_player) exitWith {
     addCamShake [4, 0.5, 5];
