@@ -27,7 +27,7 @@ if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
     _unit setvariable [QGVAR(addedToUnitLoop), true, true];
 
     [{
-        private ["_unit", "_lastTime"];
+        private ["_unit", "_interval"];
         _unit = (_this select 0) select 0;
         _interval = time - (_this select 0) select 1;
         (_this select 0) set [1, time];
