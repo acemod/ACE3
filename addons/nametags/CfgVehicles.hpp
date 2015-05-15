@@ -40,6 +40,12 @@ class CfgVehicles {
                     };
                 };
             };
+            class showPlayerNamesForce {
+                displayName = "$STR_ACE_NameTags_ShowPlayerNamesForce";
+                description = "$STR_ACE_NameTags_ShowPlayerNamesForce_Desc";
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
             class playerNamesViewDistance {
                 displayName = "$STR_ACE_NameTags_PlayerNamesViewDistance_DisplayName";
                 description = "$STR_ACE_NameTags_PlayerNamesViewDistance_Description";

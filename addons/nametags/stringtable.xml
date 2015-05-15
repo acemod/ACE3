@@ -25,6 +25,12 @@
             <Italian>Mostra i nomi dei giocatori</Italian>
             <Russian>Показывать имена игроков (включить имена)</Russian>
         </Key>
+        <Key ID="STR_ACE_NameTags_ShowPlayerNamesForce">
+            <English>Force show player names setting</English>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ShowPlayerNamesForce_Desc">
+            <English>Force name tags option, or by default allows players to choose it on their own. Default: Do Not Force</English>
+        </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnCursor">
             <English>Show player name only on cursor (requires player names)</English>
             <Polish>Pokaż imiona graczy tylko pod kursorem (wymagana opcja Pokaż imiona graczy)</Polish>
