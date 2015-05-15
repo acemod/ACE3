@@ -33,12 +33,13 @@ if (!GVAR(showPlayerNamesForce)) then {
     ["SettingChanged", {
         PARAMS_2(_name,_value)
         if (_name  == QGVAR(showPlayerNames)) then {
-            if ((GVAR(showPlayerNames) > 0) && (_value == 0)) then {
-                removeMissionEventHandler ["Draw3D", GVAR(drawHandler)];
-                GVAR(drawHandler) = nil;
-            };
-            if ((GVAR(showPlayerNames) == 0) && (_value > 0)) then {
+            if (isNil(QGVAR(drawHandler)) && {_value > 0}) then {
                 GVAR(drawHandler) = addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
+            } else {
+                if (_value == 0) then {
+                    removeMissionEventHandler ["Draw3D", GVAR(drawHandler)];
+                    GVAR(drawHandler) = nil;
+                };
             };
         };
     }] call EFUNC(common,addEventHandler);
