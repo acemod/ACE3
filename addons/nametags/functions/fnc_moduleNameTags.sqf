@@ -30,4 +30,4 @@ if (GVAR(showPlayerNamesForce)) then {
     [_logic, QGVAR(showPlayerNames),      "showPlayerNames"             ] call EFUNC(common,readSettingFromModule);
 };
 
-diag_log text "[ACE]: NameTags Module Initialized.";
+diag_log format ["[ACE]: NameTags Module Initialized. Forced Name Tags Setting: %1",GVAR(showPlayerNamesForce)];

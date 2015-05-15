@@ -23,7 +23,23 @@ GVAR(ShowNamesTime) = -10;
 [29, [false, false, false]], false] call cba_fnc_addKeybind; //LeftControl Key
 
 
-// Draw handle
+// Draw handle on start if set
 if (GVAR(showPlayerNames) > 0) then {
-    addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
+    GVAR(drawHandler) = addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
+};
+
+// Set the EH which waits for a setting to be changed, so that the effect is shown immediately
+if (!GVAR(showPlayerNamesForce)) then {
+    ["SettingChanged", {
+        PARAMS_2(_name,_value)
+        if (_name  == QGVAR(showPlayerNames)) then {
+            if ((GVAR(showPlayerNames) > 0) && (_value == 0)) then {
+                removeMissionEventHandler ["Draw3D", GVAR(drawHandler)];
+                GVAR(drawHandler) = nil;
+            };
+            if ((GVAR(showPlayerNames) == 0) && (_value > 0)) then {
+                GVAR(drawHandler) = addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
+            };
+        };
+    }] call ace_common_fnc_addEventHandler;
 };
