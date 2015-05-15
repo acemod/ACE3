@@ -294,6 +294,7 @@ ACE_COUNTERS = [];
 // Wait for server settings to arrive
 GVAR(SettingsInitialized) = false;
 ["ServerSettingsReceived", {
+    diag_log text format["[ACE] Settings received from server"];
     // Load user settings from profile
     if (hasInterface) then {
         call FUNC(loadSettingsFromProfile);
@@ -306,7 +307,7 @@ GVAR(SettingsInitialized) = false;
 if (isServer) then {
     call FUNC(loadSettingsOnServer);
     // Raise a local event for other modules to listen too
-    ["SettingsInitialized", []] call FUNC(localEvent);
+    ["ServerSettingsReceived", []] call FUNC(localEvent);
 };
 
 ACE_player = player;
