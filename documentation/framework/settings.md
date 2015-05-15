@@ -67,7 +67,7 @@ The server config setting entries are done through our optional ACE_server.pbo, 
 
 ACE contains a lot of settings; to tweak everything to your liking manually therefor can be quite a task. We have provided the option to export all settings in single player. For this, follow these simple steps:
 
-* Open the editor.
+* Open the editor (Singleplayer).
 * Under modules (f7), find ACE, `Config Export [ACE]`.
 * Place down the module, ensure that the allow parameter is set to yes.
 * Press preview, once in game, press Esc and open the ACE Options dialog (top left)
