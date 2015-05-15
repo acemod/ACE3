@@ -3065,5 +3065,13 @@
             <English>[ACE] Medical Supply Crate (Advanced)</English>
             <Polish>[ACE] Skrzynka z zapasami medycznymi (zaawansowana)</Polish>
         </Key>
+        <Key ID="STR_ACE_Medical_Yes">
+            <English>Yes</English>
+            <Polish>Tak</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_No">
+            <English>No</English>
+            <Polish>Nie</Polish>
+        </Key>
     </Package>
 </Project>
