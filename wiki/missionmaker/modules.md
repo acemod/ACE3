@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Modules
+description: A list of all modules in ACE3 and all the settings that can be tweaked by them
 group: missionmaker
 order: 5
 parent: wiki

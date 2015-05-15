@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Advanced Ballistics
+description: The advanced ballistics module improves internal- and external ballistics. 
 group: feature
 parent: wiki
 ---

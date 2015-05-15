@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Grenades
+description: 
 group: feature
 parent: wiki
 ---

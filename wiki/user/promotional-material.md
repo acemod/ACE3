@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Promotional Material
+description: Promotional materials like logos and color values.
 group: user
 order: 20
 parent: wiki
