@@ -1,17 +1,21 @@
 /*
  * Author: commy2, esteldunedain
- *
  * Draw the nametag and rank icon.
  *
- * Argument:
+ * Arguments:
  * 0: Unit (Player) <OBJECT>
  * 1: Target <OBJECT>
- * 2: alpha (Number)
- * 4: Height offset (Number)
+ * 2: Alpha <NUMBER>
+ * 4: Height offset <NUMBER>
  * 5: Draw Type <NUMBER>
  *
  * Return value:
- * None.
+ * None
+ *
+ * Example:
+ * [ACE_player, _target, _alpha, _distance * 0.026, _icon] call ace_nametags_fnc_drawNameTagIcon
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

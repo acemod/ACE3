@@ -13,7 +13,6 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 if (isNil QGVAR(drawHandler) && {GVAR(showPlayerNames) != 0}) then {

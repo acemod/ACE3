@@ -1,3 +1,18 @@
+/*
+ * Author: <N/A>
+ * Draws names and icons.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_nametags_fnc_onDraw3d
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_onKeyPressAlphaMax", "_defaultIcon", "_distance", "_alpha", "_icon", "_targets", "_pos2", "_vecy", "_relPos", "_projDist", "_pos", "_target"];
