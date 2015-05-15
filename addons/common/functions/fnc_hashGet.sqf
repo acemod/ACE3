@@ -23,4 +23,6 @@ try {
 } catch {
     HANDLECATCH;
 };
-_val
+
+if (isNil "_val") exitWith { nil };
+_val;

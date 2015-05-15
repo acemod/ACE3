@@ -66,7 +66,7 @@ class CfgVehicles {
     };
 
     class ModuleCurator_F: Module_F {
-        function = QUOTE(DFUNC(moduleCuratorDelay));
+        function = QUOTE(DFUNC(bi_moduleCurator));
     };
     class ModuleMine_F: ModuleEmpty_F {
         function = QUOTE(DFUNC(bi_moduleMine));
