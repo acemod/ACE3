@@ -45,6 +45,7 @@ namespace ace {
 
             add("selection_position", std::bind(&ace::vehicledamage::controller::selection_position, this, std::placeholders::_1, std::placeholders::_2));
 #ifdef _DEBUG
+            add("bullet_debug", std::bind(&ace::vehicledamage::controller::_debug_render_bullet, this, std::placeholders::_1, std::placeholders::_2));
             add("debug_render", std::bind(&ace::vehicledamage::controller::_debug_render, this, std::placeholders::_1, std::placeholders::_2));
             add("test_raycast", std::bind(&ace::vehicledamage::controller::_test_raycast, this, std::placeholders::_1, std::placeholders::_2));
             add("test_selection", std::bind(&ace::vehicledamage::controller::_test_selection, this, std::placeholders::_1, std::placeholders::_2));
@@ -251,6 +252,11 @@ namespace ace {
 #if defined(DEVEL) && defined(USE_DIRECTX)
         bool controller::_debug_render(const arguments &_args, std::string & result) {
             _debug_display->render_thread(1024, 768, false);
+
+            return true;
+        }
+        bool controller::_debug_render_bullet(const arguments &_args, std::string & result) {
+            _debug_display->_enable_bullet_debug = true;
 
             return true;
         }

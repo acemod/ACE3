@@ -7,7 +7,7 @@
 namespace ace {
     namespace vehicledamage {
         namespace debug {
-            penetration_display::penetration_display() :
+            penetration_display::penetration_display() : _enable_bullet_debug(false),
                 dispatcher() {
                 _active_vehicle = nullptr;
 
@@ -32,7 +32,7 @@ namespace ace {
                 XMVECTORF32 eyeDir = { direction.x(), direction.y(), direction.z() };
                 XMVECTORF32 up = { 0.f, 1.f, 0.f };
 
-                XMStoreFloat4x4(&_View, XMMatrixLookAtLH(eyePos, eyeDir, up));
+                XMStoreFloat4x4(&_View, XMMatrixLookAtLH(eyePos, XMVectorZero(), up));
 
                 return true;
             }
@@ -111,12 +111,13 @@ namespace ace {
 
                 _Batch->End();
 
-
                 // Draw the bullet world
                 // The BT debug drawing is a single batch
-                _Batch->Begin();
-                ace::vehicledamage::controller::get().bt_world->debugDrawWorld();
-                _Batch->End();
+                if (_enable_bullet_debug) {
+                    _Batch->Begin();
+                    ace::vehicledamage::controller::get().bt_world->debugDrawWorld();
+                    _Batch->End();
+                }
 
                 
                 if (_active_vehicle) {
@@ -166,10 +167,11 @@ namespace ace {
                 batch.Begin();
 
                 for (gamehit_p & hit : _active_hits) {
-                    ace::vector3<float> hit_from, hit_to;
+                    ace::vector3<float> hit_from, hit_to, hit_surface;
 
                     hit_from = hit->impactposition;
-                    hit_to = hit_from + (hit->impactvelocity * 0.01f);
+                    hit_to = hit_from + hit->impactvelocity;
+                    hit_surface = hit_from + hit->surface;
 
                     XMVECTORF32 from = { hit_from.x(), hit_from.y(), hit_from.z() };
                     XMVECTORF32 to = { hit_to.x(), hit_to.y(), hit_to.z() };
@@ -178,6 +180,13 @@ namespace ace {
                     VertexPositionColor v2(to, color);
 
                     batch.DrawLine(v1, v2);
+
+                    XMVECTORF32 surface_direction = { hit_surface.x(), hit_surface.y(), hit_surface.z() };
+
+                    VertexPositionColor v1_surf(from, Colors::LightGreen);
+                    VertexPositionColor v2_surf(surface_direction, Colors::LightGreen);
+
+                    batch.DrawLine(v1_surf, v2_surf);
                 }
 
 
