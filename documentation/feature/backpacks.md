@@ -6,18 +6,11 @@ group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Lock backpack
-Adds the ability to lock backpacks. Locked backpacks can't be accessed by others.
+### 1.1 Zipping sounds
+When someone open your backpack you hear a zipping sound, this help figuring who steals your bananas.
 
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 2. Dependencies
 
 `ace_common`
