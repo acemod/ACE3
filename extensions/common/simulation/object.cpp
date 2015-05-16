@@ -28,10 +28,38 @@ ace::simulation::face::face(
     ace::simulation::lod *object_lod)
 {
     this->type = p3d_face->type;
-    for (uint16_t vertex_id : p3d_face->vertex_table) {
-        this->vertices.push_back(object_lod->vertices[vertex_id]);
-        object_lod->vertices[vertex_id]->faces.push_back(this);
-    }
+	if (type == 3) {
+		for (uint16_t vertex_id : p3d_face->vertex_table) {
+			this->vertices.push_back(object_lod->vertices[vertex_id]);
+			object_lod->vertices[vertex_id]->faces.push_back(this);
+		}
+	}
+	else if(type == 4) {
+		this->vertices.push_back(object_lod->vertices[p3d_face->vertex_table[0]]);
+		object_lod->vertices[p3d_face->vertex_table[0]]->faces.push_back(this);
+
+		this->vertices.push_back(object_lod->vertices[p3d_face->vertex_table[1]]);
+		object_lod->vertices[p3d_face->vertex_table[1]]->faces.push_back(this);
+
+		this->vertices.push_back(object_lod->vertices[p3d_face->vertex_table[2]]);
+		object_lod->vertices[p3d_face->vertex_table[2]]->faces.push_back(this);
+
+		this->sub_face = std::make_shared<face>(p3d_face->vertex_table[2], p3d_face->vertex_table[3], p3d_face->vertex_table[0], object_lod);
+	}
+}
+
+ace::simulation::face::face(uint32_t v1, uint32_t v2, uint32_t v3, ace::simulation::lod *object_lod) {
+	this->type = 3;
+
+	this->vertices.push_back(object_lod->vertices[v1]);
+	object_lod->vertices[v1]->faces.push_back(this);
+
+	this->vertices.push_back(object_lod->vertices[v2]);
+	object_lod->vertices[v2]->faces.push_back(this);
+
+	this->vertices.push_back(object_lod->vertices[v3]);
+	object_lod->vertices[v3]->faces.push_back(this);
+
 }
 
 ace::simulation::face::~face()
@@ -59,6 +87,9 @@ ace::simulation::named_selection::named_selection(
     }
     for (uint16_t face_id : p3d_selection->faces.data) {
         this->faces.push_back(object_lod->faces[face_id]);
+		if (object_lod->faces[face_id]->type == 4) {
+			this->faces.push_back(object_lod->faces[face_id]->sub_face);
+		}
     }
 }
 
@@ -109,6 +140,15 @@ ace::simulation::lod::lod(const ace::p3d::lod_p p3d_lod, const ace::p3d::model_p
     for (ace::p3d::named_selection_p p3d_selection : p3d_lod->selections) {
         this->selections[p3d_selection->name] = std::make_shared<named_selection>(p3d_selection, p3d_lod, p3d, this);
     }
+	std::vector<face_p> new_faces;
+	for (auto test_face : this->faces) {
+		if (test_face->type == 4) {
+			new_faces.push_back(test_face->sub_face);
+		}
+	}
+	for (auto new_face : new_faces) {
+		this->faces.push_back(new_face);
+	}
 }
 
 

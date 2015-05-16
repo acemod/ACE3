@@ -26,6 +26,9 @@ namespace ace {
 		class object;
 		typedef std::shared_ptr<object> object_p;
 
+		class face;
+		typedef std::shared_ptr<face> face_p;
+
 		typedef std::map<uint32_t, glm::mat4> animation_transform;
 
 		class vertex_table {
@@ -43,11 +46,13 @@ namespace ace {
 		public:
 			face() {};
 			face(const ace::p3d::face_p, const ace::p3d::lod_p, const ace::p3d::model_p, ace::simulation::lod *);
+			face(uint32_t, uint32_t, uint32_t, ace::simulation::lod *);
 			~face();
 			uint8_t type;
 			std::vector<vertex_p> vertices;
+			face_p sub_face;
 		};
-		typedef std::shared_ptr<face> face_p;
+		
 
 		class named_selection {
 		public:
