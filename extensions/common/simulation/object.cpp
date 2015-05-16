@@ -135,8 +135,10 @@ ace::simulation::lod_animation_info::lod_animation_info(
         this->axis_direction = p3d_animate_bone->axis_direction.normalize();
     }
 	if (reversed) {
-		this->axis_position = this->axis_position*-1;
-		this->axis_direction = this->axis_direction*-1;
+		this->axis_position.x(this->axis_position.x()*-1);
+		this->axis_position.z(this->axis_position.z()*-1);
+		this->axis_direction.x(this->axis_direction.x()*-1);
+		this->axis_direction.z(this->axis_direction.z()*-1);
 	}
 }
 
@@ -181,8 +183,11 @@ ace::simulation::animation::animation(object *parent_object, const ace::p3d::ani
         direct_angle = p3d_animation->direct_angle;
         direct_axis_offset = p3d_animation->direct_axis_offset;
 		if (reversed) {
-			direct_axis_pos = direct_axis_pos*-1;
-			direct_axis_dir = direct_axis_dir*-1;
+			this->direct_axis_pos.x(this->direct_axis_pos.x()*-1);
+			this->direct_axis_pos.z(this->direct_axis_pos.z()*-1);
+
+			this->direct_axis_dir.x(this->direct_axis_dir.x()*-1);
+			this->direct_axis_dir.z(this->direct_axis_dir.z()*-1);
 		}
         break;
     case 9:
