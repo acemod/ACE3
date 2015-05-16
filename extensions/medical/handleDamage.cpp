@@ -90,7 +90,7 @@ namespace ace {
                             for (double injuryAmount = 0; injuryAmount < amountOfInjuriesOnDamage; ++injuryAmount)
                             {
                                 std::shared_ptr<ace::medical::injuries::InjuryType> injuryToAdd;
-                                if (rand() % 1 >= 0.85)
+                                if (rand() % 100 >= 85)
                                 {
                                     injuryToAdd = highestSpot;
                                 }
