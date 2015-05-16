@@ -20,7 +20,7 @@ Because this modification is for Arma and backwards compatability is not always 
 
 ## 2 Branching and releases
 
-We have a release scheduled every 2 weeks on a Tuesday. On the friday before release, the project management will decide whatever or not this scheduled release will continue. When continueing with the release, the current `master branch` will be merged into a `release branch`. This release branch will not contain any direct commits and no other branches will be merged into this branch. The exception being `hotfixes`, which are branched off `Release` and merged back into `Release` and `Master`. 
+We have a release scheduled every 2 weeks on a Tuesday. On the friday before release, the project management will decide whatever or not this scheduled release will continue. When continueing with the release, the current `master branch` will be merged into the `release branch`. The release branch will not contain any direct commits and no other branches will be merged into this branch. The exception being `hotfixes`, which are branched off `Release` and merged back into `Release` and `Master`. 
 
 `Hotfixes` are fixes for critical bugs that prevent stable gameplay with the currently available version of ACE3.
 
