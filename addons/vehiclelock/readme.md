@@ -31,7 +31,7 @@ Two key modes (can be used together):
 * `ACE_vehicleLock_lockpickStrength` - NUMBER: secons, determines how long lockpicking with take, overrides ACE_VehicleLock_DefaultLockpickStrength
 
 #### Public Functions:
-`[bob, car1, true] call ACE_VehicleLock_fnc_addKeyForVehicle;` - will add a `ACE_magazine_customKey` to bob and program it to work on car1
+`[bob, car1, true] call ACE_VehicleLock_fnc_addKeyForVehicle;` - will add a `ACE_key_customKeyMagazine` to bob and program it to work on car1
 
 ## Maintainers
 

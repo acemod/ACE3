@@ -280,8 +280,10 @@ The safe zone around players from a different team (in meters)<br>
 ### 1.17 Vehicle Lock
 *Part of: ace_vehiclelock*
 
+These modules allow you to lock and unlock vehicles and their inventory using a key. Players don't receive a key automatically; for key names, see [Classnames Wiki](http://ace3mod.com/wiki/missionmaker/classnames.html#vehicle-lock).
+
 #### 1.17.1 Vehicle Key Assign
-Sync with vehicles and players.  Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.
+Sync with vehicles and players. Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.
 
 #### 1.17.2 Vehicle Lock Setup
 Settings for lockpick strength and initial vehicle lock state. Removes ambiguous lock states.
@@ -297,6 +299,13 @@ Set lock state for all vehicles (removes ambiguous lock states)<br>
 3. **Default Lockpick Strength (Number)**<br>
 Default Time to lockpick (in seconds)<br>
 `Default value: 10`
+
+#### 1.17.3 Vehicle setVariables:
+* `ACE_VehicleLock_lockSide` - SIDE: overrides a vehicle's side, allowing locking and unlocking using a different side's key. For example: Unlocking INDEP vehicles with a BLUFOR key.
+* `ACE_vehicleLock_lockpickStrength` - NUMBER: seconds, determines how long lockpicking with take, overrides the value set in the module for a specific vehicle of the mission maker's choice.
+
+#### 1.17.4 Public functions:
+Example: `[bob, car1, true] call ACE_VehicleLock_fnc_addKeyForVehicle;` - will add a key to bob and program it to work only on car1
 
 
 ### 1.18 Weather

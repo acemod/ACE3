@@ -1,26 +1,29 @@
 ---
 layout: wiki
 title: Vehicle Lock
-description: 
+description: The Vehiclelock module enables locking vehicles and their inventory
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
+ACE Vehicle Lock is disabled by default. This feature adds the ability to lock and unlock vehicles and their inventory using a key.
 
-### Sub-feature 2
-Short description of sub-feature 2.
+### 1.1 Key modes
+The mission maker can choose one or both methods:
+- Side based keys - A key is responsible for locking and unlocking every vehicle specific to a side (BLUFOR, OPFOR, INDEP or Civilian).
+- Custom keys - A key is responsible for locking and unclocking only one specific vehicle, determined by the mission maker.
 
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+### 1.2 Lock picking
+It is possible to pick a lock of a locked vehicle.
 
 
-## Dependencies
+## 2. Usage
+
+Locking, unlocking and picking vehicle locks is possible via the ACE Interact menu.
+
+
+## 3. Dependencies
 
 `ace_interaction`
