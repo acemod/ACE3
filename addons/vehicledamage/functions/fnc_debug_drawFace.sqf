@@ -15,7 +15,7 @@ for [{_i=0}, {_i<(count _this)-1}, {_i=_i+3}] do {
     _points pushBack (_vehicle modelToWorldVisual 
                     [  parseNumber (_this select _i), 
                        parseNumber (_this select (_i+2)),
-                       parseNumber (_this select (_i+1))+2.5
+                       parseNumber (_this select (_i+1))
                     ]);
 };
 //TRACE_1("", _points);
