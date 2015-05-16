@@ -31,7 +31,7 @@ switch (_this) do {
                     };
                 };
                 case 2: { // Auto set
-                    GVAR(RefHeading) = getDir ACE_player;
+                    GVAR(RefHeading) = (getDir ACE_player) % 360;
                     GVAR(referenceHeadingMenu) = 0;
                     GVAR(headingSetDisplayTimer) = diag_tickTime;
                 };
@@ -78,6 +78,7 @@ switch (_this) do {
                 } else {
                     GVAR(TmpHeading) = GVAR(TmpHeading) - 1;
                 };
+                GVAR(TmpHeading) = (GVAR(TmpHeading) + 360) % 360;
                 GVAR(manualSetCooldown) = diag_tickTime;
             };
         };
@@ -92,6 +93,7 @@ switch (_this) do {
                 } else {
                     GVAR(TmpHeading) = GVAR(TmpHeading) + 1;
                 };
+                GVAR(TmpHeading) = (GVAR(TmpHeading) + 360) % 360;
                 GVAR(manualSetCooldown) = diag_tickTime;
             };
         };
