@@ -8,7 +8,7 @@ using namespace ace::simulation;
 
 namespace ace {
     namespace vehicledamage {
-        base_vehicle::base_vehicle(uint32_t id, ace::simulation::object_p object_, ace::vector3<float> position_) : id(id), object(object_) {
+        base_vehicle::base_vehicle(uint32_t id, ace::simulation::object_p object_, bool reversed, ace::vector3<float> position_) : id(id), object(object_) {
             bt_mesh = std::make_shared<btTriangleMesh>();
             
             fire_lod = -1;

@@ -387,7 +387,7 @@ ace::simulation::object::object()
 {
 }
 
-ace::simulation::object::object(const ace::p3d::model_p model)
+ace::simulation::object::object(const ace::p3d::model_p model) : reversed(false)
 {
     for (ace::p3d::lod_p p3d_lod : model->lods) {
         lod_p new_lod = std::make_shared<lod>(p3d_lod, model);

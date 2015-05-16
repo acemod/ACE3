@@ -205,6 +205,8 @@ namespace ace {
 			object(const ace::p3d::model_p);
 			~object();
 
+            bool                reversed;
+
 			std::vector<lod_p> lods;
 
 			std::vector<animation_p> animations;

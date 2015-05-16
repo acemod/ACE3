@@ -114,6 +114,8 @@ namespace ace {
                 vehicle_p _vehicle = std::make_shared<vehicle>(static_cast<uint32_t>(_args[1]), _object, _args[2]);
                 vehicles[static_cast<uint32_t>(_args[1])] = _vehicle;
 
+                _vehicle->object->reversed = (static_cast<int>(_args[2]) != 0 ? true : false);
+
                 // For results on a valid vehicle registration, we return its animation names for that given vehicle
                 std::stringstream _animationNames;
                 _animationNames << _vehicle->id;

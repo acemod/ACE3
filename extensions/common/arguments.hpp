@@ -14,7 +14,8 @@ namespace ace {
         const std::string & as_string() const { return _args[_index]; }
         operator const std::string &() const { return as_string(); }
 
-        float as_float() const { float res = 0.0f; std::istringstream iss(_args[_index]); iss >> res; return res; }
+        float to_float(const std::string & val) const { float res = 0.0f; std::istringstream iss(val); iss >> res; return res; }
+        float as_float() const { return to_float(_args[_index]); }
         operator float() const { return as_float(); }
 
         int as_int() const { return atoi(_args[_index].c_str()); }
@@ -25,9 +26,9 @@ namespace ace {
 
         ace::vector3<float> as_vector() const {
             std::vector<std::string> t = ace::split(_args[_index], ';');
-            return ace::vector3<float>(atof(t[0].c_str()),
-                atof(t[1].c_str()),
-                atof(t[2].c_str()));
+            return ace::vector3<float>(to_float(t[0]),
+                to_float(t[1]),
+                to_float(t[2]));
         }
         operator ace::vector3<float>() const { return as_vector(); }
 
@@ -49,15 +50,14 @@ namespace ace {
 
         const argument_accessor operator[] (int index) const { return argument_accessor(index, _args); }
 
+        float to_float(const std::string & val) const { float res = 0.0f; std::istringstream iss(val); iss >> res; return res; }
         const std::string & as_string(uint32_t _index) const { return _args[_index]; }
-        float as_float(uint32_t _index) const { return atof(_args[_index].c_str()); }
+        float as_float(uint32_t _index) const { return to_float(_args[_index]); }
         int as_int(uint32_t _index) const { return atoi(_args[_index].c_str()); }
         int as_uint32(uint32_t _index) const { return (uint32_t)atoi(_args[_index].c_str()); }
         ace::vector3<float> as_vector(uint32_t _index) const {
             std::vector<std::string> t = ace::split(_args[_index], ';');
-            return ace::vector3<float>(atof(t[0].c_str()),
-                atof(t[1].c_str()),
-                atof(t[2].c_str()));
+            return ace::vector3<float>(to_float(t[0]), to_float(t[1]), to_float(t[3]));
         }
 
         const std::string & get() const {
