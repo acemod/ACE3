@@ -132,9 +132,7 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
         };
     }foreach _typeThresholds;
 
-    _extensionInput = format ["addDamageType,%1,%2,%3,%4,%5", _type, GVAR(minLethalDamages) select _foreachIndex, _minDamageThresholds, _amountThresholds, _selectionSpecificType];
-    diag_log format["Calling extension with input: %1", _extensionInput];
-    diag_log format ["Extension return: %1", "ace_medical" callExtension _extensionInput];
+    "ace_medical" callExtension format ["addDamageType,%1,%2,%3,%4,%5", _type, GVAR(minLethalDamages) select _foreachIndex, _minDamageThresholds, _amountThresholds, _selectionSpecificType];
 
 }foreach _allFoundDamageTypes;
 
@@ -169,11 +167,9 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
         };
     }foreach _causesArray;
     _classDisplayName = _x select 6;
-    _extensionInput = format["addInjuryType,%1,%2,%3,%4,%5,%6,%7,%8,%9", _classID, _className, _allowedSelections, _bloodLoss, _pain, _minDamage, _maxDamage, _causes, _classDisplayName];
 
-    diag_log format["Calling extension with input: %1", _extensionInput];
-    diag_log format ["Extension return: %1", "ace_medical" callExtension _extensionInput];
+    "ace_medical" callExtension format["addInjuryType,%1,%2,%3,%4,%5,%6,%7,%8,%9", _classID, _className, _allowedSelections, _bloodLoss, _pain, _minDamage, _maxDamage, _causes, _classDisplayName];
 
 }foreach _allWoundClasses;
 
-diag_log format["Extension configComplete: %1", "ace_medical" callExtension "ConfigComplete"];
+"ace_medical" callExtension "ConfigComplete";
