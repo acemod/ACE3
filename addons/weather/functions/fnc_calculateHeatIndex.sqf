@@ -28,7 +28,7 @@ PARAMS_2(_t,_rh);
 
 // Source: https://en.wikipedia.org/wiki/Heat_index
 
-_t = FAHRENHEIT(_t);
+_t = TO_FAHRENHEIT(_t);
 _rh = _rh * 100; // relative humidity in %
 
-CELSIUS(__C1 + __C2 * _t + __C3 * _rh + __C4 * _t * _rh + __C5 * _t^2 + __C6 * _rh^2 + __C7 * _t^2 * _rh + __C8 * _t * _rh^2)
+TO_CELSIUS(__C1 + __C2 * _t + __C3 * _rh + __C4 * _t * _rh + __C5 * _t^2 + __C6 * _rh^2 + __C7 * _t^2 * _rh + __C8 * _t * _rh^2)

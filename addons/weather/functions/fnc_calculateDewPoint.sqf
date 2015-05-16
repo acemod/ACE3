@@ -20,6 +20,8 @@
 
 PARAMS_2(_t,_rh);
 
+if (_rh == 0) exitWith { CELSIUS(0) };
+
 // Source: https://en.wikipedia.org/wiki/Dew_point
 
 private ["_gamma"];
