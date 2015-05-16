@@ -8,7 +8,7 @@ parent: wiki
 
 ## 1. Overview
 
-ACE Vehicle Lock is disabled by default. This feature adds the ability to lock and unlock vehicles and their inventory using a key.
+ACE Vehicle Lock is disabled by default. This feature adds the ability to lock and unlock vehicles and their inventory using a key, as well as lock picking locked vehicles.
 
 ### 1.1 Key modes
 The mission maker can choose one or both methods:
