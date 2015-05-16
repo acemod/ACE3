@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Merging Pull Requests
+title: Branching and Release
 description: 
 group: development
 parent: wiki
