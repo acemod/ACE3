@@ -34,7 +34,7 @@
         <Key ID="STR_ACE_Map_MapLimitZoom_Description">
             <English>Limit the amount of zoom available for the map?</English>
             <Polish>Ogranicza maksymalny stopień przybliżenia mapy</Polish>
-            <Spanish>Limitar la cantidad de zoom disponible para el mapa</Spanish>
+            <Spanish>Limita la cantidad de zoom disponible para el mapa</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_DisplayName">
             <English>Show cursor coordinates?</English>
@@ -63,7 +63,7 @@
         <Key ID="STR_ACE_Map_BFT_Interval_Description">
             <English>How often the markers should be refreshed (in seconds)</English>
             <Polish>Jak często markery powinny być odświeżane (w sekundach)</Polish>
-            <Spanish>Frecuencia de actualización de las marcas (en segundos)</Spanish>
+            <Spanish>Frecuencia de actualización de los marcadores (en segundos)</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_DisplayName">
             <English>Hide AI groups?</English>

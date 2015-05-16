@@ -518,7 +518,7 @@
         <Key ID="STR_ACE_Explosive_RequireSpecialist_Description">
             <English>Require explosive specialists to disable explosives? Default: No</English>
             <Polish>Wymagać saperów do rozbrajania ładunków wybuchowych? Domyślnie: Nie</Polish>
-            <Spanish>Solo los especialistas en explosivos pueden desactivarlos? Por defecto: No</Spanish>
+            <Spanish>¿Solo los especialistas en explosivos pueden desactivarlos? Por defecto: No</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosive_PunishNonSpecialists_DisplayName">
             <English>Punish non-specialists?</English>

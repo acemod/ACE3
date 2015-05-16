@@ -117,12 +117,12 @@
         <Key ID="STR_ACE_Hearing_CombatDeafness_DisplayName">
             <English>Enable combat deafness?</English>
             <Polish>Wł. głuchotę bojową</Polish>
-            <Spanish>¿Activar sordera de combate?</Spanish>
+            <Spanish>Habilitar sordera de combate</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_CombatDeafness_Description">
             <English>Enable combat deafness?</English>
             <Polish>Możliwość chwilowej utraty słuchu przy głośnych wystrzałach i jednoczesnym braku włożonych stoperów</Polish>
-            <Spanish>¿Activar sordera de combate?</Spanish>
+            <Spanish>Habilitar sordera de combate</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English></English>

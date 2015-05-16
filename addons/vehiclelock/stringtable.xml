@@ -196,7 +196,7 @@
         <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_Description">
             <English>Sync with vehicles and players.  Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.&lt;br /&gt;Source: vehiclelock.pbo</English>
             <Polish>Zsynchronizuj z pojazdami i graczami. Rozda klucze dla graczy dla każdego zsynchronizowanego pojazdu. Działa tylko na pojazdy obecne na misji od samego początku (postawione w edytorze).&lt;br /&gt;Źródło: vehiclelock.pbo</Polish>
-            <Spanish>Sincronizar con vehiculos y jugadores. Distribuira llaves personales a los jugadores para todos los vehículos sincronizados. Solo valido para objetos presentes al inicio de la mision.&lt;br /&gt;Fuente: vehiclelock.pbo</Spanish>
+            <Spanish>Sincronizar con vehiculos y jugadores. Distribuira llaves personalizadas a los jugadores para todos los vehículos sincronizados. Solo valido para objetos presentes al inicio de la mision.&lt;br /&gt;Fuente: vehiclelock.pbo</Spanish>
         </Key>
     </Package>
 </Project>

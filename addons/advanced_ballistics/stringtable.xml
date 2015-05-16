@@ -68,17 +68,17 @@
         <Key ID="STR_ACE_AdvancedBallistics_onlyActiveForLocalPlayers_Description">
             <English>Disables the advanced ballistics for bullets coming from other players (enable this if you encounter frame drops during heavy firefights in multiplayer)</English>
             <Polish>Dezaktywuje zaawansowaną balistykę dla pocisków pochodzących od innych graczy(aktywuj tą opcję jeżeli odczuwasz spadki FPS podczas sporych strzelanin w MP)</Polish>
-            <Spanish>Desactiva la balística avanzada para las balas procedentes de otros jugadores (activa esto si tienes problemas de fps en multiplayer durante intensos tiroteos)</Spanish>
+            <Spanish>Desactiva la balística avanzada para las balas procedentes de otros jugadores (activa esto si tienes problemas de fps durante intensos tiroteos en multiplayer)</Spanish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>
             <Polish>Symulacja temp. amunicji</Polish>
-            <Spanish>Activa la simulación de temperatura de la munición</Spanish>
+            <Spanish>Activa la simulación de temperatura en la munición</Spanish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_ammoTemperatureEnabled_Description">
             <English>Muzzle velocity varies with ammo temperature</English>
             <Polish>Prędkość wylotowa pocisku jest zależna od temperatury amunicji</Polish>
-            <Spanish>La velocidad inicial cambia con la temperatura de la munición</Spanish>
+            <Spanish>La velocidad inicial del proyectil varía con la temperatura de la munición</Spanish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_barrelLengthInfluenceEnabled_DisplayName">
             <English>Enable Barrel Length Simulation</English>
@@ -88,7 +88,7 @@
         <Key ID="STR_ACE_AdvancedBallistics_barrelLengthInfluenceEnabled_Description">
             <English>Muzzle velocity varies with barrel length</English>
             <Polish>Prędkość wylotowa pocisku jest zależna od długości lufy</Polish>
-            <Spanish>La velocidad inicial varia con la longitud del cañón</Spanish>
+            <Spanish>La velocidad inicial del proyectil varía con la longitud del cañón</Spanish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_bulletTraceEnabled_DisplayName">
             <English>Enable Bullet Trace Effect</English>
@@ -98,7 +98,7 @@
         <Key ID="STR_ACE_AdvancedBallistics_bulletTraceEnabled_Description">
             <English>Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics)</English>
             <Polish>Aktywuje efekt smugi pocisku dla pocisków wysokokalibrowych (widoczne tylko podczas patrzenia przez optykę)</Polish>
-            <Spanish>Activa el trazado de la balas de gran calibre (solo visible cuando se mira a traves de una mira telescópica)</Spanish>
+            <Spanish>Activa el trazado de la balas de gran calibre (solo visible cuando se mira a través de una mira telescópica)</Spanish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_simulationInterval_DisplayName">
             <English>Simulation Interval</English>
@@ -108,7 +108,7 @@
         <Key ID="STR_ACE_AdvancedBallistics_simulationInterval_Description">
             <English>Defines the interval between every calculation step</English>
             <Polish>Określa interwał pomiędzy każdym krokiem kalkulacji</Polish>
-            <Spanish>Define el intervalo entre cada calculo</Spanish>
+            <Spanish>Define el intervalo entre cada cálculo</Spanish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_simulationRadius_DisplayName">
             <English>Simulation Radius</English>
@@ -118,7 +118,7 @@
         <Key ID="STR_ACE_AdvancedBallistics_simulationRadius_Description">
             <English>Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles</English>
             <Polish>Określa obszar naokoło gracza (w metrach), na którym zaawansowana balistyka jest aplikowana dla pocisków</Polish>
-            <Spanish>Define el radio alrededor del jugardor (en metros) en el cual se aplica la balística avanzada a los proyectiles</Spanish>
+            <Spanish>Define el radio alrededor del jugador (en metros) en el cual se aplica la balística avanzada a los proyectiles</Spanish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_Description">
             <English></English>

@@ -512,7 +512,7 @@
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_Description">
             <English>Check all addons instead of only those of ACE?</English>
             <Polish>Sprawdzaj wszystkie addony czy tylko te z ACE?</Polish>
-            <Spanish>¿Comprobar todos los addons en vez de solamente los del ACE?</Spanish>
+            <Spanish>¿Comprobar todos los addons en vez de solo los del ACE?</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_DisplayName">
             <English>Whitelist</English>
@@ -522,7 +522,7 @@
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_Description">
             <English>What addons are allowed regardless?</English>
             <Polish>Jakie addony są dozwolone?</Polish>
-            <Spanish>¿Que addons se permiten a pesar de todo?</Spanish>
+            <Spanish>¿Que otros addons se permiten?</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_DisplayName">
             <English>LSD Vehicles</English>
@@ -532,7 +532,7 @@
         <Key ID="STR_ACE_Common_LSDVehicles_Description">
             <English>Adds LSD effect to synchronized vehicle</English>
             <Polish>Dodaje efekt LSD pod zsynchronizowany pojazd</Polish>
-            <Spanish>Añade efecto LSD al vehículo sincronizado</Spanish>
+            <Spanish>Añade el efecto LSD al vehículo sincronizado</Spanish>
         </Key>
     </Package>
 </Project>

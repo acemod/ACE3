@@ -304,12 +304,12 @@
         <Key ID="STR_ACE_Dagr_Module_DisplayName">
             <English>MicroDAGR Map Fill</English>
             <Polish>Wypełnienie mapy MicroDAGR</Polish>
-            <Spanish>Relleno del mapa en MicroDAGR </Spanish>
+            <Spanish>Relleno del mapa MicroDAGR </Spanish>
         </Key>
         <Key ID="STR_ACE_Dagr_MapDataAvailable_DisplayName">
             <English>MicroDAGR Map Fill</English>
             <Polish>Wypełnienie mapy MicroDAGR</Polish>
-            <Spanish>Relleno del mapa en MicroDAGR </Spanish>
+            <Spanish>Relleno del mapa MicroDAGR </Spanish>
         </Key>
         <Key ID="STR_ACE_Dagr_MapDataAvailable_Description">
             <English>How much map data is filled on MicroDAGR's</English>

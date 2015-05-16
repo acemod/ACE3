@@ -148,7 +148,7 @@
         <Key ID="STR_ACE_Respawn_Module_DisplayName">
             <English>Respawn System</English>
             <Polish>System odrodzenia</Polish>
-            <Spanish>Sistema de reaparecer</Spanish>
+            <Spanish>Sistema de respawn</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_DisplayName">
             <English>Save Gear?</English>

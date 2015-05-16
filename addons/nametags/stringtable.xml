@@ -191,12 +191,12 @@
         <Key ID="STR_ACE_Common_OnlyOnKeypress">
             <English>Only On Keypress</English>
             <Polish>Tylko po wciśnięciu klawisza</Polish>
-            <Spanish>Solo al pulsar</Spanish>
+            <Spanish>Solo al pulsar la tecla</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_OnlyCursorAndKeyPress">
             <English>Only Cursor and KeyPress</English>
             <Polish>Tylko pod kursorem i po wciśnięciu klawisza</Polish>
-            <Spanish>Solo cursos y pulsaciones</Spanish>
+            <Spanish>Solo cursor y pulsaciones de tecla</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_NameTagSettings">
             <English>Use Nametag settings</English>
