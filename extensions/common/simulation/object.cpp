@@ -110,8 +110,10 @@ void ace::simulation::named_selection::animate(const glm::mat4 &matrix)
 ace::simulation::vertex_table::vertex_table(const ace::p3d::vertex_table_p p3d_vertex_table, const ace::p3d::lod_p p3d_lod, const ace::p3d::model_p p3d, bool reversed) : animated(false)
 {
     this->vertices.resize(p3d_vertex_table->points.size);
-	ace::vector3<float> center_off2 = p3d_lod->min_pos+p3d_lod->max_pos-p3d_lod->autocenter_pos;
 	ace::vector3<float> center_off = p3d->info->cog_offset;//p3d->info->center_of_gravity + p3d->info->offset_2 + p3d->info->cog_offset;
+	center_off.y(center_off.y() * 2);
+	center_off.x(0);
+	center_off.z(0);
 	if (reversed) {
 		center_off.x(center_off.x()*-1);
 		center_off.z(center_off.z()*-1);
@@ -136,6 +138,9 @@ ace::simulation::lod::lod(const ace::p3d::lod_p p3d_lod, const ace::p3d::model_p
     this->id = p3d_lod->id;
     this->vertices = vertex_table(p3d_lod->vertices, p3d_lod, p3d, reversed);
 	this->autocenter_pos = p3d->info->cog_offset;//p3d->info->center_of_gravity + p3d->info->offset_2 + p3d->info->cog_offset;
+	autocenter_pos.y(autocenter_pos.y() * 2);
+	autocenter_pos.x(0);
+	autocenter_pos.z(0);
 	if (reversed) {
 		this->autocenter_pos.x(this->autocenter_pos.x()*-1);
 		this->autocenter_pos.z(this->autocenter_pos.z()*-1);
@@ -174,6 +179,9 @@ ace::simulation::lod_animation_info::lod_animation_info(
     this->index = p3d_animate_bone->index;
     if (p3d->info->autocenter) {
 		ace::vector3<float> center_off = p3d->info->cog_offset;//p3d->info->center_of_gravity + p3d->info->offset_2 + p3d->info->cog_offset;
+		center_off.y(center_off.y() * 2);
+		center_off.x(0);
+		center_off.z(0);
 		if (reversed) {
 			center_off.x(center_off.x()*-1);
 			center_off.z(center_off.z()*-1);
