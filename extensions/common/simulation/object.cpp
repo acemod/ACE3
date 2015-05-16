@@ -121,7 +121,8 @@ ace::simulation::lod_animation_info::lod_animation_info(
     lod_p _lod,
     const ace::p3d::animate_bone_p p3d_animate_bone,
     const ace::p3d::animation_p p3d_animation,
-    const ace::p3d::model_p p3d) : animation_definition(_animation), lod(_lod)
+    const ace::p3d::model_p p3d,
+	bool reversed) : animation_definition(_animation), lod(_lod)
 {
     this->index = p3d_animate_bone->index;
     if (p3d->info->autocenter) {
@@ -133,13 +134,17 @@ ace::simulation::lod_animation_info::lod_animation_info(
         this->axis_position = p3d_animate_bone->axis_position;
         this->axis_direction = p3d_animate_bone->axis_direction.normalize();
     }
+	if (reversed) {
+		this->axis_position = this->axis_position*-1;
+		this->axis_direction = this->axis_direction*-1;
+	}
 }
 
 ace::simulation::lod_animation_info::~lod_animation_info()
 {
 }
 
-ace::simulation::animation::animation(object *parent_object, const ace::p3d::animation_p p3d_animation, const ace::p3d::model_p p3d)
+ace::simulation::animation::animation(object *parent_object, const ace::p3d::animation_p p3d_animation, const ace::p3d::model_p p3d, bool reversed)
 {
     this->type = p3d_animation->type;
     this->name = p3d_animation->name;
@@ -175,6 +180,10 @@ ace::simulation::animation::animation(object *parent_object, const ace::p3d::ani
         direct_axis_dir = p3d_animation->direct_axis_dir;
         direct_angle = p3d_animation->direct_angle;
         direct_axis_offset = p3d_animation->direct_axis_offset;
+		if (reversed) {
+			direct_axis_pos = direct_axis_pos*-1;
+			direct_axis_dir = direct_axis_dir*-1;
+		}
         break;
     case 9:
         hide_value = p3d_animation->hide_value;
@@ -187,7 +196,7 @@ ace::simulation::animation::animation(object *parent_object, const ace::p3d::ani
 
 
     for (ace::p3d::animate_bone_p animation_bone : p3d_animation->bones) {
-        this->lod_info[animation_bone->lod] = std::make_shared<lod_animation_info>(this, parent_object->lods[animation_bone->lod], animation_bone, p3d_animation, p3d);
+        this->lod_info[animation_bone->lod] = std::make_shared<lod_animation_info>(this, parent_object->lods[animation_bone->lod], animation_bone, p3d_animation, p3d, reversed);
     }
 
 }
@@ -397,7 +406,7 @@ ace::simulation::object::object(const ace::p3d::model_p model, bool reverse_ = f
     }
 
     for (ace::p3d::animation_p p3d_animation : model->animations) {
-        this->animations.push_back(std::make_shared<animation>(this, p3d_animation, model));
+        this->animations.push_back(std::make_shared<animation>(this, p3d_animation, model, reversed));
     }
 
     std::map<std::string, ace::p3d::bone_p> p3d_bones;

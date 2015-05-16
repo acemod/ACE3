@@ -124,7 +124,7 @@ namespace ace {
 		class lod_animation_info {
 		public:
 			lod_animation_info() {};
-			lod_animation_info(animation *, lod_p, const ace::p3d::animate_bone_p, const ace::p3d::animation_p, const ace::p3d::model_p);
+			lod_animation_info(animation *, lod_p, const ace::p3d::animate_bone_p, const ace::p3d::animation_p, const ace::p3d::model_p, bool);
 			~lod_animation_info();
 			animation *animation_definition;
 			int32_t index;
@@ -139,7 +139,7 @@ namespace ace {
 		class animation {
 		public:
 			animation() {};
-			animation(object *, const ace::p3d::animation_p, const ace::p3d::model_p);
+			animation(object *, const ace::p3d::animation_p, const ace::p3d::model_p, bool);
 			~animation();
 
 			uint32_t        type;
