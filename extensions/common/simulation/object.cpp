@@ -126,7 +126,7 @@ ace::simulation::lod_animation_info::lod_animation_info(
     if (p3d->info->autocenter) {
 		ace::vector3<float> center_off = p3d->info->cog_offset;//p3d->info->center_of_gravity + p3d->info->offset_2 + p3d->info->cog_offset;
         this->axis_position = p3d_animate_bone->axis_position + center_off;
-        this->axis_direction = p3d_animate_bone->axis_direction.normalize();
+        this->axis_direction = p3d_animate_bone->axis_direction;
     }
     else {
         this->axis_position = p3d_animate_bone->axis_position;
@@ -224,7 +224,7 @@ animation_transform ace::simulation::animation::animate(const float phase, const
         case 0: {
             scale = (scale / (max_value - min_value)) * (angle1 - angle0);
 			animation_matrix = glm::translate(glm::mat4(1.0f), axis_position);
-			animation_matrix *= glm::rotate(glm::mat4(1.0f), -scale, axis_direction);
+			animation_matrix *= glm::rotate(glm::mat4(1.0f), scale, axis_direction);
 			animation_matrix *= glm::translate(glm::mat4(1.0f), -axis_position);
             break;
         }
@@ -236,15 +236,16 @@ animation_transform ace::simulation::animation::animate(const float phase, const
 
 			animation_matrix = glm::translate(glm::mat4(1.0f), axis_position);
             animation_matrix *= glm::rotate(glm::mat4(1.0f), -scale, rotation_axis);
-			animation_matrix *= glm::translate(glm::mat4(1.0f),-axis_position);
+			animation_matrix *= glm::translate(glm::mat4(1.0f), -axis_position);
             break;
         }
                 //rotationY
         case 2: {
             scale = (scale / (max_value - min_value)) * (angle1 - angle0);
             glm::vec3 rotation_axis = glm::vec3(0.0f, 1.0f, 0.0f);
+			
 			animation_matrix = glm::translate(glm::mat4(1.0f), axis_position);
-			animation_matrix *= glm::rotate(glm::mat4(1.0f), scale, rotation_axis);    // should this be positive?
+			animation_matrix *= glm::rotate(glm::mat4(1.0f), -scale, rotation_axis);
 			animation_matrix *= glm::translate(glm::mat4(1.0f), -axis_position);
             break;
         }
@@ -268,7 +269,6 @@ animation_transform ace::simulation::animation::animate(const float phase, const
         }
                 //translationX
         case 5: {
-            scale = (scale / (max_value - min_value)) * (offset1 - offset0);
             animation_matrix = glm::translate(animation_matrix, glm::vec3(
                 scale,
                 0.0f,
@@ -278,7 +278,6 @@ animation_transform ace::simulation::animation::animate(const float phase, const
         }
                 //translationY
         case 6: {
-            scale = (scale / (max_value - min_value)) * (offset1 - offset0);
             animation_matrix = glm::translate(animation_matrix, glm::vec3(
                 0.0f,
                 scale,
@@ -288,7 +287,6 @@ animation_transform ace::simulation::animation::animate(const float phase, const
         }
                 //translationZ
         case 7: {
-            scale = (scale / (max_value - min_value)) * (offset1 - offset0);
             animation_matrix = glm::translate(animation_matrix, glm::vec3(
                 0.0f,
                 0.0f,
@@ -320,17 +318,19 @@ float ace::simulation::animation::get_scale(float phase)
 
     switch (source_address)
     {
-    case 1: // LOOP
-        scale = fmod(phase - min_value, (max_value - min_value)) + min_value;
-        // when over limit, mirror
-        if (phase > max_value) phase = max_value - (phase - max_value);
-
+    case 1:
+		scale = fmod(phase - min_value, max_value - min_value) + min_value;
         scale = std::min(std::max(scale, min_phase), max_phase);
-        
         break;
-    case 2: // MIRROR
-        scale = fmod(phase - min_value, (max_value - min_value) * 2) + min_value;
-        if (scale > max_value) scale = max_value - (scale - max_value);
+    case 2:
+		//@TODO: possibly a better way to do this?!
+		if (min_phase < 0.0f && phase < 0) {
+			scale = std::fmod((std::fabs(phase) - std::fabs(min_value)), ((max_value - min_value) * 2)) + min_value;
+		}
+		else {
+			scale = std::fmod((phase - min_value), ((max_value - min_value) * 2)) + min_value;
+		};
+		if (scale>max_value) scale = max_value - (scale - max_value);
         scale = std::min(std::max(scale, min_phase), max_phase);
         break;
     default:
