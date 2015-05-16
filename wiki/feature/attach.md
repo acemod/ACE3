@@ -6,30 +6,32 @@ group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Attach items to uniform
+### 1.1 Attach items to uniform
 Allows players to attach IR grenades and chemlights to themselves.
 
-### IR Strobe
+
+### 1.2 IR Strobe
 Adds an attachable IR strobe, which is only visible using night vision devices and offers better visibility than IR grenades.
 
 
-## Usage
+## 2. Usage
 
-### Attaching to yourself
-- Press the self interaction key
-- Go to the equipment section
-- Choose the item to attach/detach
+### 2.1 Attaching to yourself
+- Self interact <kbd> left windows </kbd> (by default).
+- Choose `equipment`.
+- Choose `attach item`.
+- Select which item you want to attach.
+- Same thing to detach.
 
-### Attaching to a vehicle
-- Approach the vehicle and use the interaction key
-- Go to the attach item section
-- Choose the item and where you want to place it
+### 2.2 attaching to a vehicle
+- Interact with the vehicle <kbd> ctrl+left windows </kbd>.
+- Choose `attach item`.
+- Select your item and follow the instructions on the screen.
+- To detach the item it's the same as placing it, use the interaction key from outside the vehicle.
 
-To detach the item use the interaction key from outside the vehicle
 
-
-## Dependencies
+## 3. Dependencies
 
 `ace_interaction`
