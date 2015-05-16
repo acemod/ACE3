@@ -120,7 +120,7 @@ namespace ace {
 
                 
                 if (_active_vehicle) {
-                    DrawObject(_active_vehicle->fire_lod, *_Batch, *_active_vehicle->object, Colors::Gray);
+                    DrawObject(_active_vehicle->fire_lod, *_Batch, *_active_vehicle->object, Colors::GhostWhite);
                 }
                 if (_active_hits.size() > 0) {
                     DrawHits(0, *_Batch, Colors::Red);
@@ -246,9 +246,9 @@ namespace ace {
                 xdivs = std::max<size_t>(1, xdivs);
                 ydivs = std::max<size_t>(1, ydivs);
 
-                for (size_t i = 0; i <= xdivs; ++i) {
+                for (size_t i = 0; i <= xdivs*2; ++i) {
                     float fPercent = float(i) / float(xdivs);
-                    fPercent = (fPercent * 2.0f) - 1.0f;
+                    fPercent = (fPercent * 1.0f) - 1.0f;
                     XMVECTOR vScale = XMVectorScale(xAxis, fPercent);
                     vScale = XMVectorAdd(vScale, origin);
 
@@ -257,9 +257,9 @@ namespace ace {
                     batch.DrawLine(v1, v2);
                 }
 
-                for (size_t i = 0; i <= ydivs; i++) {
+                for (size_t i = 0; i <= ydivs*2; i++) {
                     FLOAT fPercent = float(i) / float(ydivs);
-                    fPercent = (fPercent * 2.0f) - 1.0f;
+                    fPercent = (fPercent * 1.0f) - 1.0f;
                     XMVECTOR vScale = XMVectorScale(yAxis, fPercent);
                     vScale = XMVectorAdd(vScale, origin);
 
