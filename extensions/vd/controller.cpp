@@ -84,7 +84,7 @@ namespace ace {
 
             { 
                 std::lock_guard<std::mutex> lock_results(_results_lock);
-                std::lock_guard<std::mutex> lock_messages(_messages_lock);
+                //std::lock_guard<std::mutex> lock_messages(_messages_lock);
 
                 while (!_results.empty()) {
                     _results.pop();
