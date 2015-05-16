@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_turrets", "_turret", "_config"];
+private ["_turrets", "_turret", "_config"];
 
-_vehicle = _this select 0;
+PARAMS_1(_vehicle);
 
 _turrets = allTurrets [_vehicle, true];
 

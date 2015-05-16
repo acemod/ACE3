@@ -29,10 +29,16 @@ _pointer = switch (_weapon) do {
 
 if (_pointer == "") exitWith {};
 
+private "_config";
+_config = configFile >> "CfgWeapons" >> _pointer;
+
 private "_nextPointer";
-_nextPointer = getText (configFile >> "CfgWeapons" >> _pointer >> "ACE_nextModeClass");
+_nextPointer = getText (_config >> "ACE_nextModeClass");
 
 if (_nextPointer == "") exitWith {};
+
+// disable inheritance for this entry, because addons claim this as a base class for convenience
+if !((_config >> "ACE_nextModeClass") in configProperties [_config, "true", false]) exitWith {};
 
 private ["_description", "_picture"];
 

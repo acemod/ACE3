@@ -52,6 +52,11 @@ if (isNil _callback) then {
     _callback = missionNamespace getvariable _callback;
 };
 
+_args call _callback;
+
 _args call FUNC(createLitter);
 
-_args call _callback;
+//If we're not already tracking vitals, start:
+if (!(_target getvariable [QGVAR(addedToUnitLoop),false])) then {
+    [_target] call FUNC(addToInjuredCollection);
+};

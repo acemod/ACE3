@@ -1,22 +1,14 @@
 ---
 layout: wiki
 title: Coding Guidelines
+description: 
 group: development
 parent: wiki
 order: 1
 ---
 
-## Table Of Contents
 
-- [Indentation](#indentation)
-- [Braces](#braces)
-- [Modules](#how-to-create-a-new-module)
-- [Macros](#macro-usage)
-- [Events](#event-handlers)
-- [Hashes](#hashes)
-
-
-## Indentation
+## 1. Indentation
 
 4 spaces for indentation.
 
@@ -28,12 +20,12 @@ class Something: Or {
 };
 ```
 
-#### Reasoning
+### 1.1 Reasoning
 
 Tabs can be tricky sometimes, especially when it comes to sharing code with others. Additionally, a lot of people tend to forget they're using tabs when they're aligning things after the first character, which causes things to fall apart when viewing the code at different tab lengths.
 
 
-## Braces
+## 2. Braces
 
 - opening brace on the same line as keyword
 - closing brace in own line, same level of indentation as keyword
@@ -88,12 +80,12 @@ class Two {foo = 2;};
 class Three {foo = 3;};
 ```
 
-#### Reasoning
+### 2.1 Reasoning
 
 Putting the opening brace in it's own line wastes a lot of space, and keeping the closing brace on the same level as the keyword makes it easier to recognize what exactly the brace closes.
 
 
-## How to create a new module
+## 3. How to create a new module
 
 1. Copy the structure from `extras\blank` to the `addons\` folder and name it what you wish the new module to be named.
 1. Edit `script_component.hpp`, change the `COMPONENT` definition to the name of the module. Also edit each of the `DEBUG` definitions to be the name of the module (for example, `DEBUG_SETTINGS_BLANK` should be `DEBUG_SETTINGS_BALLS` for module balls)
@@ -101,7 +93,7 @@ Putting the opening brace in it's own line wastes a lot of space, and keeping th
 1. The module is now prepared for development
 
 
-### Function Definitions
+### 3.1 Function Definitions
 
 Functions should be created in the functions\ subdirectory, named `fnc_FunctionName.sqf` They should then be indexed via the `PREP(FunctionName)` macro in the XEH_preInit.sqf file. The `PREP` macro allows for CBA function caching, which drastically speeds up load times. **Beware though that function caching is enabled by default and as such to disable it you need to `#define DISABLE_COMPILE_CACHE` above your `#include "script_components.hpp"` include!**
 
@@ -127,10 +119,10 @@ Every function should have a header of the following format:
 ```
 
 
-## Macro Usage
+## 4. Macro Usage
 
-### Module/PBO specific Macro Usage
-The family of `GVAR` macro's define global variable strings or constants for use within a module. Please use these to make sure we follow naming conventions across all modules and also prevent duplicate/overwriting between variables in different modules. The macro family expands as follows, for the example of the module 'balls'
+### 4.1 Module/PBO specific Macro Usage
+The family of `GVAR` macro's define global variable strings or constants for use within a module. Please use these to make sure we follow naming conventions across all modules and also prevent duplicate/overwriting between variables in different modules. The macro family expands as follows, for the example of the module 'balls':
 
 * `GVAR(face)` is `ace_balls_face`
 * `QGVAR(face)` is `"ace_balls_face"`
@@ -139,7 +131,8 @@ The family of `GVAR` macro's define global variable strings or constants for use
 * `QEGVAR(leg,face)` is `"ace_leg_face"`
 
 
-There also exists the FUNC family of Macros
+There also exists the FUNC family of Macros:
+
 * `FUNC(face)` is `ace_balls_fnc_face` or the call trace wrapper for that function.
 * `EFUNC(balls,face)` is `ace_balls_fnc_face` or the call trace wrapper for that function.
 * `EFUNC(leg,face)` is `ace_leg_fnc_face` or the call trace wrapper for that function.
@@ -152,7 +145,7 @@ The `FUNC` and `EFUNC` macros should NOT be used inside `QUOTE` macros if the in
 
 Using `FUNC` or `EFUNC` inside a `QUOTE` macro is fine if the intention is for it to be executed as a function.
 
-#### FUNC Macros, Call Tracing, and Non-ACE/Anonymous Functions
+#### 4.1.1 FUNC Macros, Call Tracing, and Non-ACE/Anonymous Functions
 
 ACE implements a basic call tracing system that can dump the call stack on errors or wherever you want. To do this the `FUNC` macros in debug mode will expand out to include metadata about the call including line numbers and files. This functionality is automatic with the use of calls via `FUNC` and `EFUNC`, but any calls to other functions need to use the following macros:
 
@@ -161,13 +154,13 @@ ACE implements a basic call tracing system that can dump the call stack on error
 
 These macros will call these functions with the appropriate wrappers and enable call logging into them (but to no further calls inside obviously).
 
-### General Purpose Macros
+### 4.2 General Purpose Macros
 
 [CBA script_macros_common.hpp](https://gist.github.com/commy2/9ed6cc73fbe6a2b3f4e1)
 
 * `QUOTE()` is utilized within configuration files for bypassing the quote issues in configuration macros. So, all code segments inside a given config should utilize wrapping in the QUOTE() macro instead of direct strings. This allows us to use our macros inside the string segments, such as `QUOTE(_this call FUNC(balls))`
 
-#### setVariable, getVariable family macros
+#### 4.2.1 setVariable, getVariable family macros
 
 * `GETVAR(player,MyVarName,false)`  
   `player getVariable ["MyVarName", false]`
@@ -185,7 +178,7 @@ These macros will call these functions with the appropriate wrappers and enable 
   `uiNamespace setVariable ["MyVarName", _control]`
 
 
-## Event Handlers
+## 5. Event Handlers
 
 Event handlers in ACE are implemented through our event system. They should be used to trigger or allow triggering of specific functionality.
 
@@ -204,7 +197,7 @@ Events can be removed or cleared with the following commands.
 
 More information on the [ACE Events System](https://github.com/KoffeinFlummi/ACE3/wiki/ACE-Events-System) page.
 
-## Hashes
+## 6. Hashes
 
 Hashes are a variable type that store key value pairs. They are not implemented natively in SQF, so there are a number of macros and functions for their usage in ACE. If you are unfamiliar with the idea, they are similar in function to `setVariable`/`getVariable` but do not require an object to use.
 
@@ -230,7 +223,7 @@ A description of the above macros is below.
 * `HASH_HASKEY(hash, key)` will return true/false if that key exists in the hash.
 * `HASH_REM(hash, key)` will remove that hash key.
 
-### Hashlists
+### 6.1 Hashlists
 
 A hashlist is an extension of a hash. It is a list of hashes! The reason for having this special type of storage container rather than using a normal array is that an array of normal hashes that are are similar will duplicate a large amount of data in their storage of keys. A hashlist on the other hand uses a common list of keys and an array of unique value containers. The following will demonstrate it's usage.
 
@@ -269,6 +262,6 @@ As you can see above working with hashlists are fairly simple, a more in depth e
 * `HASHLIST_SELECT(hashlist, index)` returns the hash at that index in the list.
 * `HASHLIST_SET(hashlist, index, hash)` sets a specific index to that hash.
 
-#### A note on pass by reference and hashes
+#### 6.1.1 A note on pass by reference and hashes
 
 Hashes and hashlists are implemented with SQF arrays, and as such they are passed by reference to other functions. Remember to make copies (using the + operator) if you intend for the hash or hashlist to be modified with out the need for changing the original value.

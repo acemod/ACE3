@@ -44,8 +44,8 @@ if (GVAR(openedMenuType) == 0 && vehicle ACE_player == ACE_player &&
 
         if (_actualDistance > _distance) exitWith {true};
 
-        if (_actualDistance > 1.0) exitWith {
-            // If distance to action is greater than 1.0 m, check LOS
+        if (_actualDistance > 1.5) exitWith {
+            // If distance to action is greater than 1.5 m, check LOS
             _line = [_headPos call EFUNC(common,positionToASL), _pos call EFUNC(common,positionToASL), _object, ACE_player];
             lineIntersects _line
         };
@@ -93,11 +93,17 @@ _fnc_print = {
 // Check if there's something left for rendering
 if (count _activeActionTree == 0) exitWith {false};
 
-//EXPLODE_2_PVT(_activeActionTree,_actionData,_actionChildren);
-
 BEGIN_COUNTER(fnc_renderMenus);
 
-[[], _activeActionTree, _sPos, [180,360]] call FUNC(renderMenu);
+// IGNORE_PRIVATE_WARNING(_cameraPos,_cameraDir);
+if (count _pos > 2) then {
+    _sPos pushBack (((_pos call EFUNC(common,positionToASL)) vectorDiff _cameraPos) vectorDotProduct _cameraDir);
+} else {
+    _sPos pushBack 0;
+};
+
+// Add action point for oclusion and rendering
+GVAR(collectedActionPoints) pushBack [_sPos select 2, _sPos, _activeActionTree];
 
 END_COUNTER(fnc_renderMenus);
 

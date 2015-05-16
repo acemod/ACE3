@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-private ["_vehicle", "_weapon", "_ammo", "_magazine", "_projectile","_velocityCorrection"];
+private ["_vehicle", "_weapon", "_ammo", "_magazine", "_projectile", "_sumVelocity"];
 
 _vehicle = _this select 0;
 _weapon = _this select 1;
@@ -43,12 +43,8 @@ _offset = 0;
     };
 } forEach _FCSMagazines;
 
-// Correct velocity for weapons that have initVelocity
-// @todo: Take into account negative initVelocities
-_velocityCorrection = (vectorMagnitude velocity _projectile) -
-                      getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
 
-[_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, -_velocityCorrection] call EFUNC(common,changeProjectileDirection);
+[_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, 0] call EFUNC(common,changeProjectileDirection);
 
 // Remove the platform velocity 
 if( (vectorMagnitude velocity _vehicle) > 2) then {

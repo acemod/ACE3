@@ -23,9 +23,6 @@ class CfgVehicles {
             init = QUOTE(_this call DFUNC(moduleInit));
         };
     };
-    class ModuleOrdnance_F: Module_F {
-        function = "ace_modules_fnc_bi_moduleProjectile";
-    };
 };
 
 #include "CfgEventHandlers.hpp"

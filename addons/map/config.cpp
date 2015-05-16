@@ -23,37 +23,7 @@ class RscButtonMenuCancel;
 class RscButtonMenu;
 class RscEdit;
 
-class ACE_Settings {
-    class GVAR(BFT_Interval) {
-        value = 1.0;
-        typeName = "SCALAR";
-    };
-    class GVAR(BFT_Enabled) {
-        value = 0;
-        typeName = "BOOL";
-    };
-    class GVAR(BFT_HideAiGroups) {
-        value = 0;
-        typeName = "BOOL";
-    };
-    class GVAR(mapIllumination) {
-        value = 1;
-        typeName = "BOOL";
-    };
-    class GVAR(mapShake) {
-        value = 1;
-        typeName = "BOOL";
-    };
-    class GVAR(mapLimitZoom) {
-        value = 0;
-        typeName = "BOOL";
-    };
-    class GVAR(mapShowCursorCoordinates) {
-        value = 0;
-        typeName = "BOOL";
-    };
-};
-
+#include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgMarkers.hpp"
 #include "CfgVehicles.hpp"
@@ -85,6 +55,22 @@ class RscMapControl {
     showCountourInterval = 1; // refs #13673
 
     sizeExGrid = 0.032;
+};
+
+class RscMap;
+class RscDisplayArcadeMap_Layout_2: RscMap { //"Traditional" Editor:
+    class controlsBackground {
+        class CA_Map: RscMapControl {
+            #include "MapTweaks.hpp"
+        };
+    };
+};
+class RscDisplayArcadeMap_Layout_6: RscMap { //"Streamlined" Editor:
+    class controlsBackground {
+        class CA_Map: RscMapControl {
+            #include "MapTweaks.hpp"
+        };
+    };
 };
 
 // REGULAR MAP
@@ -154,7 +140,7 @@ class RscDisplayGetReady: RscDisplayMainMap {
     class controlsBackground {
         class CA_Map: RscMapControl {
             onDraw = QUOTE([ctrlParent (_this select 0)] call DFUNC(onDrawMap));
-            //#include "MapTweaks.hpp" @todo Shouldn't this apply to briefing too?
+            #include "MapTweaks.hpp"
         };
     };
     // get rid of the "center to player position" - button (as it works even on elite)

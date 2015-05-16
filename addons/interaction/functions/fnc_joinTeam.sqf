@@ -1,10 +1,24 @@
-// by commy2
+/*
+ * Author: commy2
+ * Assigns a unit to the team
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Team <STRING>
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * [target, "YELLOW"] call ace_interaction_fnc_joinTeam
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_unit", "_team", "_message"];
+PARAMS_2(_unit,_team);
 
-_unit = _this select 0;
-_team = _this select 1;
+private ["_message"];
 
 _unit setVariable [QGVAR(assignedFireTeam), _team, true];
 [_unit, format ["{_this assignTeam '%1'}", _team]] call EFUNC(common,execRemoteFnc);

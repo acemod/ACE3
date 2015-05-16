@@ -13,9 +13,9 @@
 
 #include "script_component.hpp"
 
-private ["_state", "_dlg"];
+private ["_dlg"];
 
-_state = _this select 0;
+PARAMS_1(_state);
 
 if (_state) then {
     disableSerialization;
@@ -37,6 +37,7 @@ if (_state) then {
     _dlg = uiNamespace getVariable QGVAR(dlgDisableMouse);
 
     _dlg displayAddEventHandler ["KeyDown", {
+        private ["_key", "_dlg", "_ctrl", "_config", "_acc", "_index"];
         _key = _this select 1;
 
         if (_key == 1 && {alive player}) then {
