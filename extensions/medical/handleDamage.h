@@ -26,19 +26,19 @@ namespace ace {
             /**
             *
             */
-            std::vector<ace::medical::injuries::OpenWound> HandleDamageWounds(const std::string& selectionName, double amountOfDamage, const std::string& typeOfDamage);
+            std::string HandleDamageWounds(const std::string& selectionName, double amountOfDamage, const std::string& typeOfDamage, int woundID);
 
-            std::vector<ace::medical::injuries::OpenWound> GetInjuryInfoFor(const std::string& typeOfDamage, double amountOfDamage, int selection);
-
-            /**
-            *
-            */
-            void AddDamageType(const std::vector<std::string>& sqfDamageTypeDefinition);
+            std::vector<ace::medical::injuries::OpenWound> GetInjuryInfoFor(const std::string& typeOfDamage, double amountOfDamage, int selection, int woundID);
 
             /**
             *
             */
-            void AddInjuryType(const std::vector<std::string>& sqfInjuryDefinition);
+            std::string AddDamageType(const std::vector<std::string>& sqfDamageTypeDefinition);
+
+            /**
+            *
+            */
+            std::string AddInjuryType(const std::vector<std::string>& sqfInjuryDefinition);
 
             /**
             *
@@ -59,13 +59,16 @@ namespace ace {
             /**
             *
             */
-            void FinalizeDefinitions();
+            std::string FinalizeDefinitions();
 
         private:
             handleDamage();
             
             handleDamage(handleDamage const&) = delete;
             void operator=(handleDamage const&) = delete;
+
+            std::vector<std::string> inputToVector(const std::string& input);
+            std::vector<double> inputToVectorDouble(const std::string& input);
 
             std::vector<std::shared_ptr<ace::medical::injuries::DamageType>> damageTypes;
             std::vector<std::shared_ptr<ace::medical::injuries::InjuryType>> injuryTypes;

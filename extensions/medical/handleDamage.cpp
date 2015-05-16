@@ -22,22 +22,43 @@ namespace ace {
         {
         }
 
-        /* static */ std::vector<ace::medical::injuries::OpenWound> handleDamage::HandleDamageWounds(const std::string& selectionName, double amountOfDamage, const std::string& typeOfDamage)
+        std::string handleDamage::HandleDamageWounds(const std::string& selectionName, double amountOfDamage, const std::string& typeOfDamage, int woundID)
         {
             std::vector<ace::medical::injuries::OpenWound> wounds;
             int selectionN = SelectionToNumber(selectionName);
+            std::stringstream stream;
+
             if (selectionN >= 0)
             {
-                wounds = GetInjuryInfoFor(typeOfDamage, amountOfDamage, selectionN);
+                double painToAdd = 0;
+                wounds = GetInjuryInfoFor(typeOfDamage, amountOfDamage, selectionN, woundID);
+
+                stream << "_woundsCreated = [";
+                for (int i = 0; i < wounds.size(); ++i)
+                {
+                    stream << wounds.at(i).AsString();
+                    if (i != wounds.size() - 1)
+                    {
+                        stream << ",";
+                    }
+
+                    painToAdd += wounds.at(i).pain;
+                }
+                stream << "];";
+
+                stream << "_painToAdd = " << painToAdd << ";";
+
+                return stream.str();
             }
-            return wounds;
+            stream << "";
+            return stream.str();
         }
 
-        std::vector<ace::medical::injuries::OpenWound> handleDamage::GetInjuryInfoFor(const std::string& typeOfDamage, double amountOfDamage, int selection)
+        std::vector<ace::medical::injuries::OpenWound> handleDamage::GetInjuryInfoFor(const std::string& typeOfDamage, double amountOfDamage, int selection, int woundID)
         {
             std::vector<ace::medical::injuries::OpenWound> injuriesToAdd;
             std::vector<std::shared_ptr<ace::medical::injuries::InjuryType>> information;
-            std::shared_ptr<ace::medical::injuries::InjuryType> highestSpot;
+            std::shared_ptr<ace::medical::injuries::InjuryType> highestSpot = nullptr;
 
             for each (std::shared_ptr<ace::medical::injuries::DamageType> damageType in damageTypes)
             {
@@ -45,7 +66,7 @@ namespace ace {
                 {
                     for each (std::shared_ptr<ace::medical::injuries::InjuryType> possibleInjury in damageType->possibleInjuries)
                     {
-                        if (amountOfDamage >= possibleInjury->minDamage && (amountOfDamage <= possibleInjury->maxDamage || possibleInjury->maxDamage == 0))
+                        if (amountOfDamage >= possibleInjury->minDamage && (amountOfDamage <= possibleInjury->maxDamage || possibleInjury->maxDamage <= 0))
                         {
                             if (highestSpot == NULL)
                                 highestSpot = possibleInjury;
@@ -56,11 +77,14 @@ namespace ace {
                             information.push_back(possibleInjury);
                         }
                     }
+                    if (highestSpot == NULL) {
+                        break; 
+                    }
 
                     int c = 0;
                     for each (double threshold in damageType->minDamageThreshold)
                     {
-                        if (threshold >= amountOfDamage)
+                        if (amountOfDamage >= threshold)
                         {
                             double amountOfInjuriesOnDamage = damageType->amountOfInjuresOnDamage.at(c);
                             for (double injuryAmount = 0; injuryAmount < amountOfInjuriesOnDamage; ++injuryAmount)
@@ -81,7 +105,7 @@ namespace ace {
                                     bodyPartID = rand() % 6;
                                 }
                                 
-                                injuries::OpenWound newWound(injuryToAdd->ID, bodyPartID, 1, injuryToAdd->bloodLoss, injuryToAdd->pain);
+                                injuries::OpenWound newWound(woundID++, injuryToAdd->ID, bodyPartID, 1, injuryToAdd->bloodLoss, injuryToAdd->pain);
                                 injuriesToAdd.push_back(newWound);
                             }
                         }
@@ -93,22 +117,38 @@ namespace ace {
             return injuriesToAdd;
         }
 
-        /* static */ void handleDamage::AddDamageType(const std::vector<std::string>& input)
+        std::string handleDamage::AddDamageType(const std::vector<std::string>& input)
         {
             if (input.size() == 5)
             {
                 std::string typeName = input[0];
                 double minimalLethalDamage = std::stod(input[1]);
-                std::vector<double> minDamageThreshold;// = std::stod(input[2]);
-                std::vector<double> amountOfInjuresOnDamage; //= std::stod(input[3]);
+                std::vector<double> minDamageThreshold = inputToVectorDouble(input[2]);
+                std::vector<double> amountOfInjuresOnDamage = inputToVectorDouble(input[3]);
                 bool selectionSpecific = std::stod(input[4]) > 0;
 
                 std::shared_ptr<ace::medical::injuries::DamageType> type(new ace::medical::injuries::DamageType(typeName, minimalLethalDamage, minDamageThreshold, amountOfInjuresOnDamage, selectionSpecific));
                 damageTypes.push_back(type);
+
+                std::stringstream stream;
+
+                stream << "ADDED: " << typeName << " - " << minimalLethalDamage << " - [";
+                for each (double sel in minDamageThreshold)
+                {
+                    stream << sel << " -";
+                }
+                stream << "] - [";
+                for each (double sel in amountOfInjuresOnDamage)
+                {
+                    stream << sel << " -";
+                }
+                stream << "] - " << selectionSpecific;
+                return stream.str();
             }
+            return "failed";
         }
 
-        void handleDamage::AddInjuryType(const std::vector<std::string>& input)
+        std::string handleDamage::AddInjuryType(const std::vector<std::string>& input)
         {
             if (input.size() == 9)
             {
@@ -116,33 +156,55 @@ namespace ace {
 
                 int ID = std::stod(input[0]);
                 std::string className = input[1];
-                std::vector<std::string> allowedSelections; // input[2];
+                std::vector<std::string> allowedSelections = inputToVector(input[2]);
                 double bloodLoss = std::stod(input[3]);
                 double pain = std::stod(input[4]);
 
                 double minDamage = std::stod(input[5]);
                 double maxDamage = std::stod(input[6]);
-                std::vector<std::string> possibleCauses; // input[7];
+                std::vector<std::string> possibleCauses = inputToVector(input[7]);
                 std::string displayName = input[8];
 
                 std::shared_ptr<ace::medical::injuries::InjuryType> type(new ace::medical::injuries::InjuryType(ID, className, allowedSelections, bloodLoss, pain, minDamage, maxDamage, possibleCauses, displayName));
                 injuryTypes.push_back(type);
+                std::stringstream stream;
+
+                stream << "ADDED: " <<  ID << " - " << className << " - [";
+                for each (std::string sel in allowedSelections)
+                {
+                    stream << sel << " -";
+                }
+                stream << "] - ";
+                stream << bloodLoss << " - " << pain << " - " << minDamage << " - " << maxDamage;
+                for each (std::string sel in possibleCauses)
+                {
+                    stream << sel << " -";
+                }
+                stream << displayName;
+                return stream.str();
             }
+            return "failed";
         }
 
-        void handleDamage::FinalizeDefinitions()
+        std::string handleDamage::FinalizeDefinitions()
         {
+            std::stringstream outputstream;
+
             // We are finding all possible injuries for a specific damage type here, so we don't have to figure that out at a later stage.
             for each (std::shared_ptr<ace::medical::injuries::DamageType> damageType in damageTypes)
             {
                 for each (std::shared_ptr<ace::medical::injuries::InjuryType> injuryType in injuryTypes)
                 {
-                    if (find(injuryType->causes.begin(), injuryType->causes.end(), damageType->typeName) != injuryType->causes.end())
+                    std::vector<std::string>::iterator it = find(injuryType->causes.begin(), injuryType->causes.end(), damageType->typeName);
+                    // outputstream << " Evaluating causes: " << (it != injuryType->causes.end()) << " ";
+                    if (it != injuryType->causes.end())
                     {
                         damageType->possibleInjuries.push_back(injuryType);
                     }
                 }
+                outputstream << " ---- For: " << damageType->typeName << " Added: " << damageType->possibleInjuries.size() << " --- ";
             }
+            return outputstream.str();
         }
 
         int handleDamage::SelectionToNumber(const std::string& selectionName)
@@ -158,6 +220,29 @@ namespace ace {
             {
                 return -1; // TODO throw exception
             }
+        }
+
+        std::vector<std::string> handleDamage::inputToVector(const std::string& input)
+        {
+            std::istringstream ss(input);
+            std::string token;
+
+            std::vector<std::string> output;
+            while (std::getline(ss, token, ':')) {
+                output.push_back(token);
+            }
+            return output;
+        }
+        std::vector<double> handleDamage::inputToVectorDouble(const std::string& input)
+        {
+            std::istringstream ss(input);
+            std::string token;
+
+            std::vector<double> output;
+            while (std::getline(ss, token, ':')) {
+                output.push_back(std::stod(token));
+            }
+            return output;
         }
     }
 }
