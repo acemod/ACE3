@@ -41,22 +41,6 @@ if (_selection in GVAR(SELECTIONS)) then {
 };
 if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {_damageOld};
 
-// Figure out whether to prevent death before handling damage
-if (diag_frameno > (_unit getVariable [QGVAR(frameNo), -3]) + 2) then {
-    _unit setVariable [QGVAR(frameNo), diag_frameno];
-    _unit setVariable [QGVAR(wasUnconscious), _unit getVariable ["ACE_isUnconscious", false]];
-
-    _preventDeath = _unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)];
-    if (_unit getVariable ["ACE_isUnconscious", false]) then {
-        _preventDeath = _unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)];
-        if !([_unit] call EFUNC(common,isPlayer)) then {
-            _preventDeath = _preventDeath - 1;
-        };
-        _preventDeath = _preventDeath > 0;
-    };
-    _unit setVariable [QGVAR(preventDeath), _preventDeath];
-};
-
 // Get return damage
 _damageReturn = _damage;
 if (GVAR(level) < 2) then {
@@ -97,30 +81,33 @@ if (GVAR(level) < 2) then {
 };
 [_unit] call FUNC(addToInjuredCollection);
 
-// Prevent death if necessary
-if (_unit getVariable QGVAR(preventDeath)) then {
-    if (_selection in ["", "head", "body"]) then {
-        _damageReturn = _damageReturn min 0.89;
-    };
 
-    // Move the unit out of the vehicle if necessary
-    if (vehicle _unit != _unit and damage (vehicle _unit) == 1) then {
+if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitWith {
+    if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
         [_unit] call EFUNC(common,unloadPerson);
-        if (_unit getVariable QGVAR(wasUnconscious)) then {
-            [_unit] call FUNC(setDead);
-        } else {
-            [_unit, true] call FUNC(setUnconscious);
-        };
     };
 
-    // Temporarily disable all damage to prevent stuff like
-    // being killed during the animation etc.
-    if (!_wasUnconscious and (_unit getVariable ["ACE_isUnconscious", false])) then {
-        _unit setVariable [QGVAR(allowDamage), false];
+    if (_damageReturn >= 0.9 && {_selection in ["", "head", "body"]}) exitWith {
+        systemChat format["Lethal damage %1 ", _unit];
+        if (_unit getvariable ["ACE_isUnconscious", false]) exitwith {
+            [_unit] call FUNC(setDead);
+            0.89
+        };
         [{
-            _this setVariable [QGVAR(allowDamage), true];
-        }, _unit, 0.7, 0] call EFUNC(common,waitAndExecute);
+            [_this select 0, true] call FUNC(setUnconscious);
+        }, [_unit]] call EFUNC(common,execNextFrame);
+        0.89
     };
+    _damageReturn min 0.89;
+};
+
+if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
+    if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
+        [_unit] call EFUNC(common,unloadPerson);
+    };
+    [_unit] call FUNC(setDead);
+
+    0.89
 };
 
 _damageReturn
