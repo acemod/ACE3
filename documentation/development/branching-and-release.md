@@ -24,7 +24,7 @@ We have a release scheduled every 2 weeks on a Tuesday. On the friday before rel
 
 `Hotfixes` are fixes for critical bugs that prevent stable gameplay with the currently available version of ACE3.
 
-During this release process between the friday and tuesday, the day of release, work can continue on as normal on the `Master branch`. This includes new features, bug fixes that won't make it for release or other work`. These will not be merged into the `Release branch` until the next release cycle, normally 2 weeks later.
+During this release process between the friday and tuesday, the day of release, work can continue on as normal on the `Master branch`. This includes new features, bug fixes that won't make it for release or other work. These will not be merged into the `Release branch` until the next release cycle, normally 2 weeks later.
 
 ### 2.1 Branching
 
