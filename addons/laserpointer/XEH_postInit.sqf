@@ -4,6 +4,12 @@
 // fixes laser when being captured. Needed, because the selectionpsoition of the right hand is used
 ["SetHandcuffed", {if (_this select 1) then {(_this select 0) action ["GunLightOff", _this select 0]};}] call EFUNC(common,addEventHandler);
 
+//If user has ASDG JR without the compat patch, then ace's' laser pointers won't be compatible with anything
+if ((isClass (configFile >> "CfgPatches" >> "asdg_jointrails")) && {!(isClass (configFile >> "CfgPatches" >> "ace_asdg_comp"))}) then {
+    diag_log text format ["[ACE_laserpointer] - ASDG Joint Rails but no ace_asdg_comp"];
+};
+
+
 if !(hasInterface) exitWith {};
 
 GVAR(nearUnits) = [];
