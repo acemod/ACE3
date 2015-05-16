@@ -10,6 +10,7 @@
 #include <string>
 #include <sstream>
 #include "handleDamage.h"
+#include "OpenWound.h"
 
 extern "C" {
     __declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
@@ -34,22 +35,33 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     }
     else 
     {
+
+        std::string returnValue = "";
         std::vector<std::string> arguments = parseExtensionInput(function);
         if (arguments.size() > 0) 
         {
             std::string command = arguments.at(0);
-            // can we not just use C++11?
+            arguments.erase(arguments.begin());
+  
             if (command == "addInjuryType") {
-
+                returnValue = ace::medical::handleDamage::GetInstance().AddInjuryType(arguments);
             }
             else if (command == "addDamageType") {
-
+                returnValue = ace::medical::handleDamage::GetInstance().AddDamageType(arguments);
             }
-            else if (command == "getInjury") {
-                // ace::medical::handleDamage();
+            else if (command == "HandleDamageWounds") {
+                if (arguments.size() >= 4) {
+                    std::string selectionName = arguments.at(0);
+                    double amountOfDamage = std::stod(arguments.at(1));
+                    std::string typeOfDamage = arguments.at(2);
+                    int woundID = std::stoi(arguments.at(3));
+                    returnValue = ace::medical::handleDamage::GetInstance().HandleDamageWounds(selectionName, amountOfDamage, typeOfDamage, woundID);
+                }
+            }
+            else if (command == "ConfigComplete") {
+                returnValue = ace::medical::handleDamage::GetInstance().FinalizeDefinitions();
             }
         }
-        std::string returnValue = "";
         strncpy(output, returnValue.c_str(), outputSize);
         output[outputSize - 1] = '\0';
     }
