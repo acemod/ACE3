@@ -167,14 +167,16 @@ namespace ace {
                 batch.Begin();
 
                 for (gamehit_p & hit : _active_hits) {
+                    ace::vehicledamage::vehicle_p vehicle = ace::vehicledamage::controller::get().vehicles[hit->objectid];
+
                     ace::vector3<float> hit_from, hit_to, hit_surface;
 
-                    hit_from = hit->impactposition;
-                    hit_to = hit_from + hit->impactvelocity;
+                    hit_from = hit->impactposition - hit->impactvelocity;
+                    hit_to = hit->impactposition;
                     hit_surface = hit_from + hit->surface;
-
-                    XMVECTORF32 from = { hit_from.x(), hit_from.y(), hit_from.z() };
-                    XMVECTORF32 to = { hit_to.x(), hit_to.y(), hit_to.z() };
+                    
+                    XMVECTORF32 from = { hit_from.x(), hit_from.z(), hit_from.y()  };
+                    XMVECTORF32 to = { hit_to.x(), hit_to.z(), hit_to.y() };
 
                     VertexPositionColor v1(from, color);
                     VertexPositionColor v2(to, color);
@@ -186,7 +188,7 @@ namespace ace {
                     VertexPositionColor v1_surf(from, Colors::LightGreen);
                     VertexPositionColor v2_surf(surface_direction, Colors::LightGreen);
 
-                    batch.DrawLine(v1_surf, v2_surf);
+                   // batch.DrawLine(v1_surf, v2_surf);
                 }
 
 
