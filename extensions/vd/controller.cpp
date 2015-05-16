@@ -49,6 +49,7 @@ namespace ace {
             add("debug_render", std::bind(&ace::vehicledamage::controller::_debug_render, this, std::placeholders::_1, std::placeholders::_2));
             add("test_raycast", std::bind(&ace::vehicledamage::controller::_test_raycast, this, std::placeholders::_1, std::placeholders::_2));
             add("test_selection", std::bind(&ace::vehicledamage::controller::_test_selection, this, std::placeholders::_1, std::placeholders::_2));
+            add("test_get_draw", std::bind(&ace::vehicledamage::controller::_test_get_draw, this, std::placeholders::_1, std::placeholders::_2));
 #endif
 
 #if defined(DEVEL) && defined(USE_DIRECTX)
@@ -74,11 +75,26 @@ namespace ace {
         }
 
         bool controller::reset(const arguments &_args, std::string & result) {
+            _ready = false;
             vehicles.clear();
 
             if (!ace::model_collection::get().ready()) {
                 ace::model_collection::get().init();
             }
+
+            { 
+                std::lock_guard<std::mutex> lock(_results_lock);
+                std::lock_guard<std::mutex> lock(_messages_lock);
+
+                while (!_results.empty()) {
+                    _results.pop();
+                }
+
+                while (!_messages.empty()) {
+                    _messages.pop();
+                }  
+            }
+            _ready = true;
 
             return true;
         }
@@ -262,6 +278,30 @@ namespace ace {
         }
 #endif
 #ifdef _DEBUG
+        bool controller::_test_get_draw(const arguments &_args, std::string & results) {
+            if (_args.size() < 1) return false;
+            uint32_t id = static_cast<uint32_t>(_args[0]);
+
+            if (vehicles.find(id) == vehicles.end())
+                return false;
+            
+            vehicle_p _vehicle = vehicles[id];
+
+            _vehicle->simulate();
+
+            
+            for (auto & face : _vehicle->object->lods[_vehicle->fire_lod]->faces ) {
+                std::stringstream ss;
+                ss << "draw_face:" << id;
+                ss << "," << face->vertices[0]->x() << "," << face->vertices[0]->y() << "," << face->vertices[0]->z();
+                ss << "," << face->vertices[1]->x() << "," << face->vertices[1]->y() << "," << face->vertices[1]->z();
+                ss << "," << face->vertices[2]->x() << "," << face->vertices[2]->y() << "," << face->vertices[2]->z();
+
+                this->push_result(ss.str());
+            }
+
+            return false;
+        }
         bool controller::_test_raycast(const arguments &_args, std::string & result) {
             ace::simulation::object * _object = new ace::simulation::object(model_collection::get().models[0].model, false);
             std::shared_ptr<ace::simulation::object> _object_ptr(_object);

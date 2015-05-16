@@ -37,6 +37,7 @@ namespace ace {
             bool get_thickness(const arguments &, std::string &);
             bool selection_position(const arguments &, std::string &);
 #ifdef _DEBUG
+            bool _test_get_draw(const arguments &, std::string &);
             bool _test_raycast(const arguments &, std::string &);
             bool _test_selection(const arguments &, std::string &);
 #endif
