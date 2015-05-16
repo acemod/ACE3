@@ -17,7 +17,7 @@ namespace ace {
 
         public:
             std::vector<int>    resolutions;
-            float              *raw_resolutions;//LodTypes[Header.NoOfLods];// alias resolutions
+            uint32_t           *raw_resolutions;//LodTypes[Header.NoOfLods];// alias resolutions
             uint32_t            index;                    // appears to be a bit flag, 512, 256 eg
             float               lod_sphere_mem;
             float               lod_sphere_geo;             // mostly same as MemLodSphere

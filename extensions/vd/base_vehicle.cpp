@@ -20,7 +20,7 @@ namespace ace {
                 }
             }
             if (fire_lod == -1) // @TODO: fallback on geo LOD
-                fire_lod = 11;
+                fire_lod = 0;
 			//fire_lod = 0;
             assert(fire_lod != -1);
             

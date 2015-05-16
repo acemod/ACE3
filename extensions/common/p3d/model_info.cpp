@@ -11,8 +11,8 @@ namespace ace {
         model_info::model_info(std::istream & stream_, const uint32_t lod_count, uint32_t version)
             : raw_resolutions(nullptr), u_floats_1(nullptr), default_indicators(nullptr) {
             
-            raw_resolutions = new float[lod_count];
-            stream_.read((char *)raw_resolutions, sizeof(float) * lod_count);
+            raw_resolutions = new uint32_t[lod_count];
+            stream_.read((char *)raw_resolutions, sizeof(uint32_t) * lod_count);
             // Get them to parsable int values
             for (int x = 0; x < lod_count; x++) {
                 resolutions.push_back(*(int *)&raw_resolutions[x]);
