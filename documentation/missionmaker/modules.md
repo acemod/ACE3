@@ -338,7 +338,12 @@ This module allows you to define when wind deflection is active.
 
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>Wind Deflection doesn't work in combination with Advanced Ballistics. If the Advanced Ballistics module is placed Wind deflection will exit and won't trigger.</p>
+    <p>Wind Deflection is compatible with Advanced Ballistics and allows the following combinations:
+    <ul>
+  <li>Only wind deflection</li>
+  <li>Only advanced ballistics</li>
+  <li>Combined wind deflection + advanced ballistics</li>
+</ul></p>
 </div>
 
 **Settings:**

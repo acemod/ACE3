@@ -8,7 +8,12 @@ parent: wiki
 
 ## Overview
 
-Wind Deflection is enabled by default. This feature simulates the wind deflection of projectiles and is designed to work independently or in conjunction with the Advanced Ballistic feature.
+Wind Deflection is enabled by default. This feature simulates the wind deflection of projectiles fired by players or vehicles and is designed to work independently or in conjunction with the Advanced Ballistic feature.
+
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>The only affected projectiles are bullets and grenades. Mortar shells, tank shells, missiles and rockets are <b>not</b> affected.</p>
+</div>
 
 
 ## Usage
