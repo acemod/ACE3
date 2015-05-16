@@ -40,6 +40,7 @@ PREP(handleDamage_caching);
 PREP(handleDamage_fractures);
 PREP(handleDamage_internalInjuries);
 PREP(handleDamage_wounds);
+PREP(handleDamage_woundsOld);
 PREP(handleUnitVitals);
 PREP(handleKilled);
 PREP(handleLocal);
