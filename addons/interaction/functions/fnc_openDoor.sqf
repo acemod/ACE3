@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_info", "_animations", "_phase", "_position", "_time", "_usedMouseWheel"];
+private ["_info", "_phase", "_position", "_time", "_usedMouseWheel", "_getDoorAnimations"];
 
 _info = [2] call FUNC(getDoor);
 
@@ -24,9 +24,9 @@ EXPLODE_2_PVT(_info,_house,_door);
 
 if (isNull _house) exitWith {};
 
-_animations = [_house, _door] call FUNC(getDoorAnimations);
+_getDoorAnimations = [_house, _door] call FUNC(getDoorAnimations);
 
-EXPLODE_2_PVT(_animations,_animations,_lockedVariable);
+EXPLODE_2_PVT(_getDoorAnimations,_animations,_lockedVariable);
 
 if (count _animations == 0) exitWith {};
 
