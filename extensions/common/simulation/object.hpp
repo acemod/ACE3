@@ -31,7 +31,7 @@ namespace ace {
 		class vertex_table {
 		public:
 			vertex_table() {};
-			vertex_table(const ace::p3d::vertex_table_p, const ace::p3d::lod_p, const ace::p3d::model_p);
+			vertex_table(const ace::p3d::vertex_table_p, const ace::p3d::lod_p, const ace::p3d::model_p, bool);
 			~vertex_table();
 			vertex_p operator[] (const int index) { return vertices[index]; }
 			std::vector<vertex_p> vertices;
@@ -65,7 +65,7 @@ namespace ace {
 
 		class vertex {
 		public:
-			vertex(vertex_table &, ace::vector3<float>, uint32_t);
+			vertex(vertex_table &, ace::vector3<float>, uint32_t, bool);
 			~vertex();
 
 			ace::vector3<float> operator * (const float &v) { return animated_vertex * v; }
@@ -108,7 +108,7 @@ namespace ace {
 		class lod {
 		public:
 			lod() {};
-			lod(const ace::p3d::lod_p, const ace::p3d::model_p);
+			lod(const ace::p3d::lod_p, const ace::p3d::model_p, bool);
 			~lod();
 			uint32_t id;
             uint32_t   type;
@@ -202,7 +202,7 @@ namespace ace {
 		class object {
 		public:
 			object();
-			object(const ace::p3d::model_p, bool reversed);
+			object(const ace::p3d::model_p, bool);
 			~object();
 
             bool                reversed;

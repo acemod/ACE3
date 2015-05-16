@@ -20,7 +20,7 @@ namespace ace {
 
         class base_vehicle {
         public:
-            base_vehicle(uint32_t, ace::simulation::object_p, ace::vector3<float>);
+            base_vehicle(uint32_t, ace::simulation::object_p, bool, ace::vector3<float>);
             ~base_vehicle();
 
             bool simulate();

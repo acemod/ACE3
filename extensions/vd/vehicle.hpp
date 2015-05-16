@@ -9,7 +9,7 @@ namespace ace {
     namespace vehicledamage {
         class vehicle : public base_vehicle {
         public:
-            vehicle(uint32_t id, ace::simulation::object_p object_, ace::vector3<float> position_) : base_vehicle(id, object_, position_) {}
+            vehicle(uint32_t id, ace::simulation::object_p object_, bool reversed_, ace::vector3<float> position_) : base_vehicle(id, object_, reversed_, position_) {}
         
             bool hit(gamehit *);    
 

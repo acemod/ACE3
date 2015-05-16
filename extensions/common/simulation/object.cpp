@@ -4,15 +4,16 @@
 
 #include "glm\gtc\matrix_transform.hpp"
 
-ace::simulation::vertex::vertex(vertex_table & _table, ace::vector3<float> _vertex, uint32_t _id) : table(_table), vertex_id(_id)
+ace::simulation::vertex::vertex(vertex_table & _table, ace::vector3<float> _vertex, uint32_t _id, bool reversed) : table(_table), vertex_id(_id)
 {
     this->original_vertex = _vertex;
     this->animated_vertex = _vertex;
-	//this->original_vertex.z(this->original_vertex.z()*-1);
-	//this->animated_vertex.z(this->animated_vertex.z()*-1);
-	//this->original_vertex.x(this->original_vertex.x()*-1);
-	//this->animated_vertex.x(this->animated_vertex.x()*-1);
-
+	if(reversed) {
+		this->original_vertex.z(this->original_vertex.z()*-1);
+		this->animated_vertex.z(this->animated_vertex.z()*-1);
+		this->original_vertex.x(this->original_vertex.x()*-1);
+		this->animated_vertex.x(this->animated_vertex.x()*-1);
+	}
 }
 
 ace::simulation::vertex::~vertex()
@@ -75,7 +76,7 @@ void ace::simulation::named_selection::animate(const glm::mat4 &matrix)
 
 
 
-ace::simulation::vertex_table::vertex_table(const ace::p3d::vertex_table_p p3d_vertex_table, const ace::p3d::lod_p p3d_lod, const ace::p3d::model_p p3d) : animated(false)
+ace::simulation::vertex_table::vertex_table(const ace::p3d::vertex_table_p p3d_vertex_table, const ace::p3d::lod_p p3d_lod, const ace::p3d::model_p p3d, bool reversed) : animated(false)
 {
     this->vertices.resize(p3d_vertex_table->points.size);
 	ace::vector3<float> center_off2 = p3d_lod->min_pos+p3d_lod->max_pos-p3d_lod->autocenter_pos;
@@ -83,10 +84,10 @@ ace::simulation::vertex_table::vertex_table(const ace::p3d::vertex_table_p p3d_v
     for (uint32_t i = 0; i <= p3d_vertex_table->points.size - 1; ++i) {
         if (p3d->info->autocenter) {
 			ace::vector3<float> new_vertex = p3d_vertex_table->points[i] + center_off; 
-            this->vertices[i] = std::make_shared<vertex>(*this, new_vertex, i);
+            this->vertices[i] = std::make_shared<vertex>(*this, new_vertex, i, reversed);
         }
         else {
-            this->vertices[i] = std::make_shared<vertex>(*this, p3d_vertex_table->points[i], i);
+            this->vertices[i] = std::make_shared<vertex>(*this, p3d_vertex_table->points[i], i, reversed);
         }
     }
 }
@@ -95,10 +96,10 @@ ace::simulation::vertex_table::~vertex_table()
 {
 }
 
-ace::simulation::lod::lod(const ace::p3d::lod_p p3d_lod, const ace::p3d::model_p p3d)
+ace::simulation::lod::lod(const ace::p3d::lod_p p3d_lod, const ace::p3d::model_p p3d, bool reversed)
 {
     this->id = p3d_lod->id;
-    this->vertices = vertex_table(p3d_lod->vertices, p3d_lod, p3d);
+    this->vertices = vertex_table(p3d_lod->vertices, p3d_lod, p3d, reversed);
 	this->autocenter_pos = p3d->info->cog_offset;//p3d->info->center_of_gravity + p3d->info->offset_2 + p3d->info->cog_offset;
 
     for (ace::p3d::face_p p3d_face : p3d_lod->faces) {
@@ -390,7 +391,7 @@ ace::simulation::object::object()
 ace::simulation::object::object(const ace::p3d::model_p model, bool reverse_ = false) : reversed(reverse_)
 {
     for (ace::p3d::lod_p p3d_lod : model->lods) {
-        lod_p new_lod = std::make_shared<lod>(p3d_lod, model);
+        lod_p new_lod = std::make_shared<lod>(p3d_lod, model, reversed);
         this->lods.push_back(new_lod);
         this->lods[p3d_lod->id]->type = model->info->resolutions[p3d_lod->id];
     }

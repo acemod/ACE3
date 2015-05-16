@@ -2,5 +2,5 @@
 init:
 debug_render:
 register_vehicle:\x\nou\addons\anim_test\anim_test.p3d,0,4050.18;3802.55;5.075
-set_animation_state:0, turret, 0.0, rotation_drum, 0.0, barrel_recoil, -6, barrel_hide, 0
+set_animation_state:0, turret, 1.0, rotation_drum, 0.5, barrel_recoil, -4, barrel_hide, 0
 #set_animation_state:0, turret, 0.500
