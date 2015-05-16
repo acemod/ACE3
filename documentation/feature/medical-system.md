@@ -68,6 +68,7 @@ While a unit is bleeding however, the blood volume decreases which will result i
 
 #### 3.1.3 Medication
 To stabalize the vitals and to counter for example pain, a player/medic can use medication. Advanced medical has 3 different medications available:
+
 * Atropine
 * Morphine
 * Epinephrine
@@ -82,34 +83,42 @@ _Epinephrine must never be given to a casualty with a high heart rate or blood p
 
 #### 3.1.4 Types of wounds
 Advanced medical system brings more different types of wounds, each with its own effects on patient. We distinguish minor, medium and large wound sizes. Below there is a list of those wounds:
+
 * Abrasions (or scrapes)
   * Also called scrapes, they occur when the skin is rubbed away by friction against another rough surface (e.g. rope burns and skinned knees).
   * Sources: falling, ropeburn, vehicle crashes.
   * Effects: pain - extremely light, bleeding - extremely slowly
+
 * Avulsions
   * Occur when an entire structure or part of it is forcibly pulled away, such as the loss of a permanent tooth or an ear lobe. Explosions, gunshots, and animal bites may cause avulsions.
   * Sources: explosions, vehicle crashes, grenades, artillery shells, bullets, backblast, bites.
   * Effects: pain - extremely high, bleeding - extremely fast (depends on wound size).
+
 * Contusions
   * Also called bruises, these are the result of a forceful trauma that injures an internal structure without breaking the skin. Blows to the chest, abdomen, or head with a blunt instrument (e.g. a football or a fist) can cause contusions.
   * Sources: bullets, backblast, punches, vehicle crashes, falling.
   * Effects: pain - light, no bleeding.
+
 * Crush wounds
   * Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
   * Sources: falling, vehicle crashes, punches.
   * Effects: pain - light, bleeding - extremely slowly.
+
 * Cut wounds
   * Slicing wounds made with a sharp instrument, leaving even edges. They may be as minimal as a paper cut or as significant as a surgical incision.
   * Sources: vehicle crashes, grenades, explosions, artillery shells, backblast, stabs
   * Effects: pain - light, w zależności od głębokości i szerokości rany dosyć szybkie wykrwawianie się.
+
 * Lacerations
   * Also called tears, these are separating wounds that produce ragged edges. They are produced by a tremendous force against the body, either from an internal source as in childbirth, or from an external source like a punch.
   * Sources: vehicle crashes, punches
   * Effects: pain - light, bleeding - slow to medium speed (depends on wound size).
+
 * Velocity wounds
   * They are caused by an object entering the body at a high speed, typically a bullet or small peices of shrapnel.
   * Sources: bullets, grenades, explosions, artillery shells.
   * Effects: pain - extremely high, bleeding - medium speed (depends on wound size).
+
 * Puncture wounds
   * Deep, narrow wounds produced by sharp objects such as nails, knives, and broken glass.
   * Sources: stabs, grenades.
@@ -124,6 +133,7 @@ We also distinguish different types of fractures (WIP/not implemented yet):
 #### 3.1.5 Bandage types
 Advanced medical system brings 4 different types of bandages and also properly working tourniquet. Below there is a list of all bandage types with effectiveness vs different wound types. Higher effectiveness bandages needs to be applied fewer times than ones with lower effectiveness. That depends on wound size. Applying bad type of bandage on given wound can yield wound opening after a while if not stiched fast enough.
 All bandage types weights about 50 grams each.
+
 * Bandage (basic)
   * Abrasions - highest effectiveness
   * Avulsions - lowest effectiveness
@@ -133,6 +143,7 @@ All bandage types weights about 50 grams each.
   * Lacerations - medium effectiveness
   * Velocity wounds - lowest effectiveness
   * Puncture wounds - low effectiveness
+
 * Bandage (packing)
   * Abrasions - highest effectiveness
   * Avulsions - highest effectiveness
@@ -142,6 +153,7 @@ All bandage types weights about 50 grams each.
   * Lacerations - lowest effectiveness
   * Velocity wounds - highest effectiveness
   * Puncture wounds - lowest effectiveness
+
 * Bandage (elastic)
   * Abrasions - highest effectiveness
   * Avulsions - lowest effectiveness
@@ -151,6 +163,7 @@ All bandage types weights about 50 grams each.
   * Lacerations - highest effectiveness
   * Velocity wounds - low effectiveness
   * Puncture wounds - high effectiveness
+
 * QuikClot
   * Abrasions - medium effectiveness
   * Avulsions - high effectiveness
@@ -160,6 +173,7 @@ All bandage types weights about 50 grams each.
   * Lacerations - medium effectiveness
   * Velocity wounds - high effectiveness
   * Puncture wounds - high effectiveness
+
 * Tourniquet
   * Can only be applied on limbs
   * Stops bleeding from wounds
@@ -183,6 +197,7 @@ Surgical kit is used to stich bandaged wounds so they will never open again. Dep
   * 3 x QuikClot
   * 1 x Morphine Autoinjector
   * 1 x Tourniquet
+
 * Combat First Responder (CFR):
   * 10-15 x Bandage (basic)
   * 15-20 x Bandage (elastic)
@@ -193,6 +208,7 @@ Surgical kit is used to stich bandaged wounds so they will never open again. Dep
   * 5 x Morphine Autoinjector
   * 5 x Epinephrine Autoinjector
   * 8 x Atropine Autoinjector
+
 * Medic:
   * 10-15 x Bandage (basic)
   * 15-20 x Bandage (elastic)
@@ -205,6 +221,7 @@ Surgical kit is used to stich bandaged wounds so they will never open again. Dep
   * 12 x Atropine Autoinjector
   * 1-3 x *Surgical kit*
   * 1-3 x *Personal Aid Kit*
+
 * Paramedic:
   * 10-15 x Bandage (basic)
   * 15-20 x Bandage (elastic)
