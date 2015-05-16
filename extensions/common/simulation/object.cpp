@@ -8,6 +8,11 @@ ace::simulation::vertex::vertex(vertex_table & _table, ace::vector3<float> _vert
 {
     this->original_vertex = _vertex;
     this->animated_vertex = _vertex;
+	//this->original_vertex.z(this->original_vertex.z()*-1);
+	//this->animated_vertex.z(this->animated_vertex.z()*-1);
+	//this->original_vertex.x(this->original_vertex.x()*-1);
+	//this->animated_vertex.x(this->animated_vertex.x()*-1);
+
 }
 
 ace::simulation::vertex::~vertex()
@@ -32,20 +37,12 @@ ace::simulation::face::~face()
 {
 }
 
-void ace::simulation::vertex::animate(const glm::mat4 &matrix, ace::vector3<float> rotation_offset, bool offset)
+void ace::simulation::vertex::animate(const glm::mat4 &matrix)
 {
     ace::vector3<float> temp_vector = this->original_vertex;
-    if (offset) {
-		temp_vector = temp_vector - rotation_offset;
-    }
     glm::vec4 temp_gl_vector = glm::vec4(temp_vector.x(), temp_vector.y(), temp_vector.z(), 1.0f);
     temp_gl_vector = matrix*temp_gl_vector;
     this->animated_vertex = ace::vector3<float>(temp_gl_vector.x, temp_gl_vector.y, temp_gl_vector.z);
-    if (offset) {
-		glm::vec4 temp_gl_rotate_vector = glm::vec4(rotation_offset.x(), rotation_offset.y(), rotation_offset.z(), 1.0f);
-		temp_gl_vector = matrix*temp_gl_rotate_vector;
-		this->animated_vertex = this->animated_vertex + ace::vector3<float>(temp_gl_vector.x, temp_gl_vector.y, temp_gl_vector.z);
-    }
 }
 
 ace::simulation::named_selection::named_selection(
@@ -68,11 +65,10 @@ ace::simulation::named_selection::~named_selection()
 {
 }
 
-void ace::simulation::named_selection::animate(const glm::mat4 &matrix, ace::vector3<float> rotation_offset)
+void ace::simulation::named_selection::animate(const glm::mat4 &matrix)
 {
-	bool offset = !rotation_offset.zero_distance();
     for (auto selection_vertex : this->vertices) {
-        selection_vertex->animate(matrix, rotation_offset, offset);
+        selection_vertex->animate(matrix);
     }
 }
 
@@ -83,10 +79,10 @@ ace::simulation::vertex_table::vertex_table(const ace::p3d::vertex_table_p p3d_v
 {
     this->vertices.resize(p3d_vertex_table->points.size);
 	ace::vector3<float> center_off2 = p3d_lod->min_pos+p3d_lod->max_pos-p3d_lod->autocenter_pos;
-	ace::vector3<float> center_off = p3d->info->center_of_gravity + p3d->info->offset_2 + p3d->info->cog_offset;
+	ace::vector3<float> center_off = p3d->info->cog_offset;//p3d->info->center_of_gravity + p3d->info->offset_2 + p3d->info->cog_offset;
     for (uint32_t i = 0; i <= p3d_vertex_table->points.size - 1; ++i) {
         if (p3d->info->autocenter) {
-			ace::vector3<float> new_vertex = p3d_vertex_table->points[i] - center_off; 
+			ace::vector3<float> new_vertex = p3d_vertex_table->points[i] + center_off; 
             this->vertices[i] = std::make_shared<vertex>(*this, new_vertex, i);
         }
         else {
@@ -103,7 +99,7 @@ ace::simulation::lod::lod(const ace::p3d::lod_p p3d_lod, const ace::p3d::model_p
 {
     this->id = p3d_lod->id;
     this->vertices = vertex_table(p3d_lod->vertices, p3d_lod, p3d);
-    this->autocenter_pos = p3d->info->center_of_gravity + p3d->info->offset_2 + p3d->info->cog_offset;
+	this->autocenter_pos = p3d->info->cog_offset;//p3d->info->center_of_gravity + p3d->info->offset_2 + p3d->info->cog_offset;
 
     for (ace::p3d::face_p p3d_face : p3d_lod->faces) {
         this->faces.push_back(std::make_shared<face>(p3d_face, p3d_lod, p3d, this));
@@ -128,8 +124,8 @@ ace::simulation::lod_animation_info::lod_animation_info(
 {
     this->index = p3d_animate_bone->index;
     if (p3d->info->autocenter) {
-		ace::vector3<float> center_off = p3d->info->center_of_gravity + p3d->info->offset_2 + p3d->info->cog_offset;
-        this->axis_position = p3d_animate_bone->axis_position - center_off;
+		ace::vector3<float> center_off = p3d->info->cog_offset;//p3d->info->center_of_gravity + p3d->info->offset_2 + p3d->info->cog_offset;
+        this->axis_position = p3d_animate_bone->axis_position + center_off;
         this->axis_direction = p3d_animate_bone->axis_direction.normalize();
     }
     else {
@@ -208,13 +204,13 @@ typedef union {
 
 #define RAD2DEG(rad)	(rad * 180.0f / 3.1415926f);
 
-typedef std::map<uint32_t, std::pair<glm::mat4, ace::vector3<float>>> animation_transform;
+typedef std::map<uint32_t, glm::mat4> animation_transform;
+
 animation_transform ace::simulation::animation::animate(const float phase, const std::vector<uint32_t> &lods, animation_transform base_transforms)
 {
     animation_transform return_matrices;
     for (auto lod_id : lods) {
-        glm::mat4 base_matrix = base_transforms[lod_id].first;
-        ace::vector3<float> base_rotation_offset = base_transforms[lod_id].second;
+        glm::mat4 base_matrix = base_transforms[lod_id];
         glm::mat4 animation_matrix, direction_matrix;
         ace::vector3<float> rotation_offset = ace::vector3<float>(0, 0, 0);
 
@@ -227,48 +223,44 @@ animation_transform ace::simulation::animation::animate(const float phase, const
             //rotation
         case 0: {
             scale = (scale / (max_value - min_value)) * (angle1 - angle0);
-
-            animation_matrix = glm::rotate(glm::mat4(1.0f), -scale, axis_direction);
-
-            rotation_offset = this->lod_info[lod_id]->axis_position;
+			animation_matrix = glm::translate(glm::mat4(1.0f), -axis_position);
+			animation_matrix *= glm::rotate(glm::mat4(1.0f), -scale, axis_direction);
+			animation_matrix *= glm::translate(glm::mat4(1.0f), axis_position);
             break;
         }
                 //rotationX
         case 1: {
             scale = (scale / (max_value - min_value)) * (angle1 - angle0);
+
             glm::vec3 rotation_axis = glm::vec3(1.0f, 0.0f, 0.0f);
 
-            animation_matrix = glm::rotate(glm::mat4(1.0f), -scale, rotation_axis);
-            rotation_offset = this->lod_info[lod_id]->axis_position;
+			animation_matrix = glm::translate(glm::mat4(1.0f), -axis_position);
+            animation_matrix *= glm::rotate(glm::mat4(1.0f), -scale, rotation_axis);
+			animation_matrix *= glm::translate(glm::mat4(1.0f),axis_position);
             break;
         }
                 //rotationY
         case 2: {
             scale = (scale / (max_value - min_value)) * (angle1 - angle0);
             glm::vec3 rotation_axis = glm::vec3(0.0f, 1.0f, 0.0f);
-
-            animation_matrix = glm::rotate(glm::mat4(1.0f), -scale, rotation_axis);
-
-            rotation_offset = this->lod_info[lod_id]->axis_position;
+			animation_matrix = glm::translate(glm::mat4(1.0f), -axis_position);
+			animation_matrix *= glm::rotate(glm::mat4(1.0f), -scale, rotation_axis);
+			animation_matrix *= glm::translate(glm::mat4(1.0f), axis_position);
             break;
         }
                 //rotationZ
         case 3: {
             scale = (scale / (max_value - min_value)) * (angle1 - angle0);
             glm::vec3 rotation_axis = glm::vec3(0.0f, 0.0f, 1.0f);
-
-            animation_matrix = glm::rotate(direction_matrix, -scale, rotation_axis);
-            rotation_offset = this->lod_info[lod_id]->axis_position;
+			animation_matrix = glm::translate(glm::mat4(1.0f), -axis_position);
+			animation_matrix *= glm::rotate(glm::mat4(1.0f), -scale, rotation_axis);
+			animation_matrix *= glm::translate(glm::mat4(1.0f), axis_position);
             break;
         }
                 //translation
         case 4: {
             scale = (scale / (max_value - min_value)) * (offset1 - offset0);
-            glm::vec3 direction(
-                this->lod_info[lod_id]->axis_direction.x(),
-                this->lod_info[lod_id]->axis_direction.y(),
-                this->lod_info[lod_id]->axis_direction.z()
-                );
+            glm::vec3 direction(axis_direction);
             direction = direction * scale;
             animation_matrix = glm::translate(glm::mat4(1.0f), direction);
 
@@ -310,14 +302,13 @@ animation_transform ace::simulation::animation::animate(const float phase, const
         }
                 //hide
         case 9: {
-            if (phase >= hide_value)
+            if (scale >= hide_value)
                 animation_matrix = glm::mat4x4(0.0f);
             break;
         }
         default: {}
         }
-        return_matrices[lod_id].first = base_matrix * animation_matrix;
-        return_matrices[lod_id].second = base_rotation_offset + rotation_offset;
+        return_matrices[lod_id] = base_matrix * animation_matrix;
     }
     return return_matrices;
 }
@@ -384,14 +375,10 @@ void ace::simulation::bone::animate(const std::map<std::string, float> &animatio
     for (auto child_bone : children) {
         child_bone->animate(animation_state, lods, base_transforms);
     }
-    if (animations.size() > 0) {
-        for (auto bone_animation : animations) {
-            for (auto lod_id : lods) {
-                auto selection = this->base_object->lods[lod_id]->selections.find(this->name);
-                if (selection != this->base_object->lods[lod_id]->selections.end()) {
-                    selection->second->animate(base_transforms[lod_id].first, base_transforms[lod_id].second);
-                }
-            }
+    for (auto lod_id : lods) {
+        auto selection = this->base_object->lods[lod_id]->selections.find(this->name);
+        if (selection != this->base_object->lods[lod_id]->selections.end()) {
+            selection->second->animate(base_transforms[lod_id]);
         }
     }
 }
@@ -436,8 +423,7 @@ void ace::simulation::object::animate(const std::map<std::string, float> &animat
 {
     animation_transform identity_transform;
     for (uint32_t lod_id : selected_lods) {
-        identity_transform[lod_id].first = glm::mat4();
-        identity_transform[lod_id].second = ace::vector3<float>(0, 0, 0);
+        identity_transform[lod_id] = glm::mat4(1.0);
     }
     this->root_bone->animate(animation_state, selected_lods, identity_transform);
 }

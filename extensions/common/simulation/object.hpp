@@ -26,7 +26,7 @@ namespace ace {
 		class object;
 		typedef std::shared_ptr<object> object_p;
 
-		typedef std::map<uint32_t, std::pair<glm::mat4, ace::vector3<float>>> animation_transform;
+		typedef std::map<uint32_t, glm::mat4> animation_transform;
 
 		class vertex_table {
 		public:
@@ -59,7 +59,7 @@ namespace ace {
 			std::vector<face_p> faces;
 			std::vector<vertex_p> vertices;
 
-			void animate(const glm::mat4 &, ace::vector3<float>);
+			void animate(const glm::mat4 &);
 		};
 		typedef std::shared_ptr<named_selection> named_selection_p;
 
@@ -93,7 +93,7 @@ namespace ace {
 			std::vector<face *> faces;
 			std::vector<named_selection *> selections;
 
-			void animate(const glm::mat4 &, ace::vector3<float>, bool);
+			void animate(const glm::mat4 &);
 
 		private:
 			ace::vector3<float> original_vertex;
