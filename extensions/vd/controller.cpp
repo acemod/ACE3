@@ -110,11 +110,9 @@ namespace ace {
             }
 
             if (ace::model_collection::get().load_model(model_str)) {
-                std::shared_ptr<ace::simulation::object> _object = std::make_shared<ace::simulation::object>(model_collection::get().models[model_str].model);
+                std::shared_ptr<ace::simulation::object> _object = std::make_shared<ace::simulation::object>(model_collection::get().models[model_str].model, (static_cast<int>(_args[2]) != 0 ? true : false));
                 vehicle_p _vehicle = std::make_shared<vehicle>(static_cast<uint32_t>(_args[1]), _object, _args[2]);
                 vehicles[static_cast<uint32_t>(_args[1])] = _vehicle;
-
-                _vehicle->object->reversed = (static_cast<int>(_args[2]) != 0 ? true : false);
 
                 // For results on a valid vehicle registration, we return its animation names for that given vehicle
                 std::stringstream _animationNames;

@@ -202,7 +202,7 @@ namespace ace {
 		class object {
 		public:
 			object();
-			object(const ace::p3d::model_p);
+			object(const ace::p3d::model_p, bool reversed);
 			~object();
 
             bool                reversed;
