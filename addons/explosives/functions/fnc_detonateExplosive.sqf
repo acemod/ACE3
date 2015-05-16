@@ -24,6 +24,8 @@ EXPLODE_3_PVT(_this,_unit,_range,_item);
 _ignoreRange = (_range == -1);
 _result = true;
 
+[_item select 0, _item select 1] call FUNC(detonateDaisyChain);
+
 if (!_ignoreRange && {(_unit distance (_item select 0)) > _range}) exitWith {false};
 
 _helpers = attachedObjects (_item select 0);

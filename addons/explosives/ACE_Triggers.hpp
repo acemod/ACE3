@@ -46,6 +46,11 @@ onSetup parameters:
         onPlace = QUOTE([ARR_2(_this select 1,(_this select 3) select 0)] call FUNC(startTimer);false);
         onSetup = QUOTE(_this call FUNC(openTimerSetUI);true);
     };
+    class DaisyChain {
+        displayName = $STR_ACE_Explosives_DaisyChainName;
+        picture = PATHTOF(UI\Explosives_Menu_ca.paa);
+        onPlace = "false";
+    };
     class Tripwire {
         displayName = $STR_ACE_Explosives_TripWire;
         picture = PATHTOF(Data\UI\Tripwire.paa);

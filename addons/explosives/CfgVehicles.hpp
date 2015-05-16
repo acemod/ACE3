@@ -42,6 +42,16 @@ class CfgVehicles {
                     showDisabled = 0;
                     icon = PATHTOF(Data\UI\Cellphone_UI.paa);
                     priority = 0.8;
+
+                };
+                class ACE_StopDaisyChain {
+                    displayName = $STR_ACE_Explosives_DaisyChainStop;
+                    condition = QUOTE([_player] call FUNC(isDaisyChaining));
+                    statement = QUOTE([_player] call FUNC(stopDaisyChain));
+                    exceptions[] = {};
+                    showDisabled = 1;
+                    icon = PATHTOF(UI\Place_Explosive_ca.paa);
+                    priority = 0.6;
                 };
             };
         };
@@ -73,6 +83,26 @@ class CfgVehicles {
                     icon = PATHTOF(UI\Defuse_ca.paa);
                     priority = 0.8;
                     hotkey = "F";
+                    distance = 5;
+                };
+                class ACE_StartDaisyChain {
+                    displayName = $STR_ACE_Explosives_DaisyChainStart;
+                    condition = QUOTE(!([_player] call FUNC(isDaisyChaining)));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDaisyChain););
+                    exceptions[] = {};
+                    showDisabled = 0;
+                    icon = PATHTOF(UI\Explosives_Menu_ca.paa);
+                    priority = 0.8;
+                    distance = 5;
+                };
+                class ACE_EndDaisyChain {
+                    displayName = $STR_ACE_Explosives_DaisyChainEnd;
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDaisyChainTo));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(endDaisyChain););
+                    exceptions[] = {};
+                    showDisabled = 0;
+                    icon = PATHTOF(UI\Explosives_Menu_ca.paa);
+                    priority = 0.8;
                     distance = 5;
                 };
             };

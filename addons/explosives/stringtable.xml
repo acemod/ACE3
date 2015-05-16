@@ -368,7 +368,7 @@
             <Polish>Wybierz zapalnik</Polish>
             <French>Sélectionner une mise à feu</French>
             <Czech>Zvolit Detonátor</Czech>
-            <Italian>Seleziona un attivatore</Italian>
+            <Italian>Seleziona un Attivatore</Italian>
             <Hungarian>Gyújtóeszköz kiválasztása</Hungarian>
             <Portuguese>Selecionar um Gatilho</Portuguese>
             <Russian>Выберите детонатор</Russian>
@@ -392,7 +392,7 @@
             <German>Druckplatte</German>
             <French>Plaque de pression</French>
             <Czech>Nášlapná nástraha</Czech>
-            <Italian>Piastra a pressione</Italian>
+            <Italian>Piastra a Pressione</Italian>
             <Hungarian>Nyomólap</Hungarian>
             <Portuguese>Placa de pressão</Portuguese>
             <Russian>Нажимная плита</Russian>
@@ -404,7 +404,7 @@
             <German>Stolperdraht</German>
             <French>Fil de détente</French>
             <Czech>Nástražný drát</Czech>
-            <Italian>Filo a inciampo</Italian>
+            <Italian>Filo a Inciampo</Italian>
             <Hungarian>Botlódrót</Hungarian>
             <Portuguese>Linha de tração</Portuguese>
             <Russian>Растяжка</Russian>
@@ -440,7 +440,7 @@
             <German>Infrarotsensor (Seitenangriff)</German>
             <French>Capteur IR (de flanc)</French>
             <Czech>IR Značkovač (Výbuch stranou)</Czech>
-            <Italian>Sensore IR (attacco laterale)</Italian>
+            <Italian>Sensore IR (Attacco laterale)</Italian>
             <Hungarian>Infravörös szenzor (Side Attack)</Hungarian>
             <Portuguese>Sensor infravermelho (ataque lateral)</Portuguese>
             <Russian>ИК сенсор (детонация вбок)</Russian>
@@ -452,7 +452,7 @@
             <German>Magnetfeldsensor (Bodenangriff)</German>
             <French>Capteur magnétique (par le bas)</French>
             <Czech>Magnetický Senzor (Výbuch ze spoda)</Czech>
-            <Italian>Sensore Magnetico di Prossimità (attacco inferiore)</Italian>
+            <Italian>Sensore Magnetico di Prossimità (Attacco inferiore)</Italian>
             <Hungarian>Mágneses mező érzékelő (Bottom Attack)</Hungarian>
             <Portuguese>Influência magnética (ataque inferior)</Portuguese>
             <Russian>Магнитный сенсор (детонация вверх)</Russian>
@@ -462,7 +462,7 @@
             <German>Keine Sprengladungen auf diesem Auslöser.</German>
             <Spanish>Ningún explosivo en el detonador.</Spanish>
             <French>Pas d'explosif à mettre à feu.</French>
-            <Italian>Nessun esplosivo</Italian>
+            <Italian>Nessun esplosivo sul sensore.</Italian>
             <Czech>Žádná výbušnina k odpálení.</Czech>
             <Hungarian>Nincs robbanóanyag a gyújtóeszközhöz kötve.</Hungarian>
             <Polish>Brak ładunków na zapalnik.</Polish>
@@ -491,7 +491,7 @@
             <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
             <Portuguese>Usado para detonar remotamente o explosivo quando solto.</Portuguese>
             <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
-            <Italian>Usato per attivare a distanza esplosivi al momento del rilascio</Italian>
+            <Italian>Usato per attivare esplosivi al momento del rilascio</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_Pickup">
             <English>Pick up</English>
@@ -505,6 +505,7 @@
             <Italian>Raccogli</Italian>
             <Portuguese>Pegar</Portuguese>
         </Key>
+<<<<<<< HEAD
         <Key ID="STR_ACE_Explosive_Module_DisplayName">
             <English>Explosive System</English>
             <Polish>System ładunków wybuchowych</Polish>
@@ -529,5 +530,103 @@
             <English></English>
             <Polish>Moduł ten pozwala dostosować opcje związane z ładunkami wybuchowymi, ich podkładaniem oraz rozbrajaniem.</Polish>
         </Key>
+=======
+        <Key ID="STR_ACE_Explosives_DaisyChainName">
+            <English>Daisy Chain</English>
+            <German>Daisy Chain</German>
+            <Spanish>Daisy Chain</Spanish>
+            <Polish>Daisy Chain</Polish>
+            <French>Daisy Chain</French>
+            <Czech>Daisy Chain</Czech>
+            <Italian>Daisy Chain</Italian>
+            <Hungarian>Daisy Chain</Hungarian>
+            <Portuguese>Daisy Chain</Portuguese>
+            <Russian>Daisy Chain</Russian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_DaisyChainStart">
+            <English>Start Daisy Chain</English>
+            <German>Start Daisy Chain</German>
+            <Spanish>Start Daisy Chain</Spanish>
+            <Polish>Start Daisy Chain</Polish>
+            <French>Start Daisy Chain</French>
+            <Czech>Start Daisy Chain</Czech>
+            <Italian>Start Daisy Chain</Italian>
+            <Hungarian>Start Daisy Chain</Hungarian>
+            <Portuguese>Start Daisy Chain</Portuguese>
+            <Russian>Start Daisy Chain</Russian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_DaisyChainStop">
+            <English>Stop Daisy Chain</English>
+            <German>Stop Daisy Chain</German>
+            <Spanish>Stop Daisy Chain</Spanish>
+            <Polish>Stop Daisy Chain</Polish>
+            <French>Stop Daisy Chain</French>
+            <Czech>Stop Daisy Chain</Czech>
+            <Italian>Stop Daisy Chain</Italian>
+            <Hungarian>Stop Daisy Chain</Hungarian>
+            <Portuguese>Stop Daisy Chain</Portuguese>
+            <Russian>Stop Daisy Chain</Russian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_DaisyChainEnd">
+            <English>Attach Daisy Chain</English>
+            <German>Attach Daisy Chain</German>
+            <Spanish>Attach Daisy Chain</Spanish>
+            <Polish>Attach Daisy Chain</Polish>
+            <French>Attach Daisy Chain</French>
+            <Czech>Attach Daisy Chain</Czech>
+            <Italian>Attach Daisy Chain</Italian>
+            <Hungarian>Attach Daisy Chain</Hungarian>
+            <Portuguese>Attach Daisy Chain</Portuguese>
+            <Russian>Attach Daisy Chain</Russian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_DaisyChainName">
+            <English>Daisy Chain</English>
+            <German>Daisy Chain</German>
+            <Spanish>Daisy Chain</Spanish>
+            <Polish>Daisy Chain</Polish>
+            <French>Daisy Chain</French>
+            <Czech>Daisy Chain</Czech>
+            <Italian>Daisy Chain</Italian>
+            <Hungarian>Daisy Chain</Hungarian>
+            <Portuguese>Daisy Chain</Portuguese>
+            <Russian>Daisy Chain</Russian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_DaisyChainStart">
+            <English>Start Daisy Chain</English>
+            <German>Start Daisy Chain</German>
+            <Spanish>Start Daisy Chain</Spanish>
+            <Polish>Start Daisy Chain</Polish>
+            <French>Start Daisy Chain</French>
+            <Czech>Start Daisy Chain</Czech>
+            <Italian>Start Daisy Chain</Italian>
+            <Hungarian>Start Daisy Chain</Hungarian>
+            <Portuguese>Start Daisy Chain</Portuguese>
+            <Russian>Start Daisy Chain</Russian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_DaisyChainStop">
+            <English>Stop Daisy Chain</English>
+            <German>Stop Daisy Chain</German>
+            <Spanish>Stop Daisy Chain</Spanish>
+            <Polish>Stop Daisy Chain</Polish>
+            <French>Stop Daisy Chain</French>
+            <Czech>Stop Daisy Chain</Czech>
+            <Italian>Stop Daisy Chain</Italian>
+            <Hungarian>Stop Daisy Chain</Hungarian>
+            <Portuguese>Stop Daisy Chain</Portuguese>
+            <Russian>Stop Daisy Chain</Russian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_DaisyChainEnd">
+            <English>Attach Daisy Chain</English>
+            <German>Attach Daisy Chain</German>
+            <Spanish>Attach Daisy Chain</Spanish>
+            <Polish>Attach Daisy Chain</Polish>
+            <French>Attach Daisy Chain</French>
+            <Czech>Attach Daisy Chain</Czech>
+            <Italian>Attach Daisy Chain</Italian>
+            <Hungarian>Attach Daisy Chain</Hungarian>
+            <Portuguese>Attach Daisy Chain</Portuguese>
+            <Russian>Attach Daisy Chain</Russian>
+        </Key>
+
     </Package>
 </Project>
