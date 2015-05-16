@@ -76,6 +76,7 @@ namespace ace {
 
         bool controller::reset(const arguments &_args, std::string & result) {
             _ready = false;
+
             vehicles.clear();
 
             if (!ace::model_collection::get().ready()) {
@@ -84,7 +85,6 @@ namespace ace {
 
             { 
                 std::lock_guard<std::mutex> lock_results(_results_lock);
-                //std::lock_guard<std::mutex> lock_messages(_messages_lock);
 
                 while (!_results.empty()) {
                     _results.pop();
@@ -92,8 +92,9 @@ namespace ace {
 
                 while (!_messages.empty()) {
                     _messages.pop();
-                }  
+                }
             }
+
             _ready = true;
 
             return true;
