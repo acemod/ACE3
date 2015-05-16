@@ -8,11 +8,12 @@ namespace ace {
             class OpenWound
             {
             public:
-                OpenWound(int aClassID, int aBodyPartId, double aPercentage, double aBl, double painAmount);
+                OpenWound(int anID, int aClassID, int aBodyPartId, double aPercentage, double aBl, double painAmount);
                 ~OpenWound();
 
                 std::string AsString();
 
+                int woundID;
                 int classID;
                 int percentage;
                 double bodyPart;
