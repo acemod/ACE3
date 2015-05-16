@@ -57,7 +57,7 @@ namespace ace {
         int as_uint32(uint32_t _index) const { return (uint32_t)atoi(_args[_index].c_str()); }
         ace::vector3<float> as_vector(uint32_t _index) const {
             std::vector<std::string> t = ace::split(_args[_index], ';');
-            return ace::vector3<float>(to_float(t[0]), to_float(t[1]), to_float(t[3]));
+            return ace::vector3<float>(to_float(t[0]), to_float(t[1]), to_float(t[2]));
         }
 
         const std::string & get() const {
