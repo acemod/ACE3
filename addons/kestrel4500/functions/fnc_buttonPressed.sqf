@@ -17,7 +17,7 @@
 
 switch (_this) do {
     case 0: { // Enter
-        if (!GVAR(MinAvgMax) && (GVAR(Menu) == 2 || GVAR(Menu) == 3)) then {
+        if (!GVAR(MinAvgMax) && (GVAR(Menu) == 3 || GVAR(Menu) == 4)) then {
             switch (GVAR(referenceHeadingMenu)) do {
                 case 0: { // Head- and Crosswind main page
                     GVAR(TmpHeading) = GVAR(RefHeading);
@@ -42,14 +42,14 @@ switch (_this) do {
                 };
             };
         };
-        if (GVAR(MinAvgMax) && GVAR(Menu) > 0 && GVAR(Menu) < 4) then {
+        if (GVAR(MinAvgMax) && GVAR(Menu) > 1 && GVAR(Menu) < 5) then {
             if (GVAR(MinAvgMaxMode) != 1) then {
                 {
                     GVAR(MIN) set [_x, 0];
                     GVAR(MAX) set [_x, 0];
                     GVAR(TOTAL) set [_x, 0];
                     GVAR(ENTRIES) set [_x, 0];
-                } forEach [1, 2, 3];
+                } forEach [2, 3, 4];
             };
             GVAR(MinAvgMaxMode) = (GVAR(MinAvgMaxMode) + 1) % 3;
         };
