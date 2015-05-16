@@ -6,21 +6,18 @@ group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
-
-### Sub-feature 2
-Short description of sub-feature 2.
+### 1.1 Searching someone
+You can search the inventory and disarm someone that is unconscious or captive.
 
 
-## Usage
+## 2. Usage
 
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+### 2.1 Disarming someone
+- Interact with the person that is unconscious or captive <kbd> ctrl+left windows </kbd>.
+- Select `open inventory`.
 
-
-## Dependencies
+## 3. Dependencies
 
 `ace_interaction`
