@@ -14,8 +14,9 @@ GVAR(ready) = false;
 
 #ifdef DEBUG_LOG_EXTENSION
 GVAR(debug_log) = [];
-PREP(exportLogClipboard);
-PREP(exportLogFile);
+PREP(debug_exportLogClipboard);
+PREP(debug_exportLogFile);
+PREP(debug_animateCurrentVehicle);
 #endif
 #ifdef DEBUG_EXTENSION_DYNLOAD
 // This value is used for debug loading of the extension with dynload
