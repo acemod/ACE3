@@ -196,7 +196,7 @@ namespace ace {
         }
 
         bool controller::handle_hit(const arguments &_args, std::string & result) {
-            if (_args.size() < 18) return false;
+            if (_args.size() < 22) return false;
 
             auto _vehicle = vehicles.find(_args[0]);
             if (_vehicle == vehicles.end())

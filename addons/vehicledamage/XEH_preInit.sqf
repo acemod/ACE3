@@ -14,6 +14,8 @@ GVAR(ready) = false;
 
 #ifdef DEBUG_LOG_EXTENSION
 GVAR(debug_log) = [];
+PREP(exportLogClipboard);
+PREP(exportLogFile);
 #endif
 #ifdef DEBUG_EXTENSION_DYNLOAD
 // This value is used for debug loading of the extension with dynload
@@ -45,32 +47,7 @@ FUNC(_textVector) = {
 };
 
 #ifdef DEBUG_LOG_EXTENSION
-FUNC(clipboardExport) = {
-    private["_chunks"];
-    _chunks = [];
-    
-    _chunks = [_this select 0, ";"] call CBA_fnc_split;
-    
-    {
-        private["_chunk"];
-        _chunk = _x + ";";
-        "ace_clipboard" callExtension format["%1", _chunk];
-    } forEach _chunks;
-    
-    "ace_clipboard" callExtension "--COMPLETE--";
-};
-FUNC(exportLog) = {
-    private["_chunks"];
-    _chunks = [str(_this select 0), ","] call CBA_fnc_split;
-    
-    {
-        private["_chunk"];
-        _chunk = _x + ";";
-        "ace_clipboard" callExtension format["%1", _chunk];
-    } forEach _chunks;
-    
-    "ace_clipboard" callExtension "--COMPLETE--";
-};
+
 #endif
 
 

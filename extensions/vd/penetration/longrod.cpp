@@ -63,36 +63,34 @@ namespace ace {
                 float m = -0.224;
                 
                 float Lw = _working_length();
-                float impact_velocity = _hit->projectile.velocity.magnitude() / 1000;
-                ace::vector3<float> vel_norm = _hit->projectile.velocity.normalize();
+                float impact_velocity = _hit->impactvelocity.magnitude();
+                ace::vector3<float> vel_norm = _hit->impactvelocity.normalize();
                 ace::vector3<float> surface_norm = _hit->surface.normalize();
                 float impact_angle = surface_norm.dot(vel_norm);
                 
-                uint32_t material_index = 2;
-                
-                float targetHardness = material_properties[material_index][0];
-                float projectileHardness = material_properties[material_index][0];
-                float target_density = material_properties[material_index][1];
+                float targetHardness = material_properties[_hit->material_type][0];
+                float projectileHardness = material_properties[_hit->projectile.material_type][0];
+                float target_density = material_properties[_hit->material_type][1];
 
-                float a = material_coefficients[material_index][0];
-                float c0 = material_coefficients[material_index][1];
-                float c1 = material_coefficients[material_index][2];
-                float k = material_coefficients[material_index][3];
-                float n = material_coefficients[material_index][4];
+                float a = material_coefficients[_hit->projectile.material_type][0];
+                float c0 = material_coefficients[_hit->projectile.material_type][1];
+                float c1 = material_coefficients[_hit->projectile.material_type][2];
+                float k = material_coefficients[_hit->projectile.material_type][3];
+                float n = material_coefficients[_hit->projectile.material_type][4];
 
                 float s2 = 0;
 
-                if (material_index < 2) {
-                    s2 = (c0 + c1 * targetHardness) * targetHardness / _hit->projectile.density;
+                if (_hit->projectile.material_type < 2) {
+                    s2 = (c0 + c1 * targetHardness) * targetHardness / _hit->projectile.material_density;
                 } else {
-                    s2 = c0 * (std::pow(projectileHardness, k)) * (std::pow(targetHardness, n)) / _hit->projectile.density;
+                    s2 = c0 * (std::pow(projectileHardness, k)) * (std::pow(targetHardness, n)) / _hit->projectile.material_density;
                 };
 
                 float tanX = b0 + b1 * (Lw / _hit->projectile.diameter);
 
                 float w = 1 / std::tanh(tanX);
                 float x = std::pow(std::cos(impact_angle), m);
-                float y = sqrt(_hit->projectile.density / target_density);
+                float y = sqrt(_hit->projectile.material_density / target_density);
                 float z = std::pow(std::exp(1), (-(s2) / std::pow(impact_velocity, 2)));
 
                 float P = a * w * x * y * z;

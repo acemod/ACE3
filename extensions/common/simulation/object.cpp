@@ -223,9 +223,9 @@ animation_transform ace::simulation::animation::animate(const float phase, const
             //rotation
         case 0: {
             scale = (scale / (max_value - min_value)) * (angle1 - angle0);
-			animation_matrix = glm::translate(glm::mat4(1.0f), -axis_position);
+			animation_matrix = glm::translate(glm::mat4(1.0f), axis_position);
 			animation_matrix *= glm::rotate(glm::mat4(1.0f), -scale, axis_direction);
-			animation_matrix *= glm::translate(glm::mat4(1.0f), axis_position);
+			animation_matrix *= glm::translate(glm::mat4(1.0f), -axis_position);
             break;
         }
                 //rotationX
@@ -234,27 +234,27 @@ animation_transform ace::simulation::animation::animate(const float phase, const
 
             glm::vec3 rotation_axis = glm::vec3(1.0f, 0.0f, 0.0f);
 
-			animation_matrix = glm::translate(glm::mat4(1.0f), -axis_position);
+			animation_matrix = glm::translate(glm::mat4(1.0f), axis_position);
             animation_matrix *= glm::rotate(glm::mat4(1.0f), -scale, rotation_axis);
-			animation_matrix *= glm::translate(glm::mat4(1.0f),axis_position);
+			animation_matrix *= glm::translate(glm::mat4(1.0f),-axis_position);
             break;
         }
                 //rotationY
         case 2: {
             scale = (scale / (max_value - min_value)) * (angle1 - angle0);
             glm::vec3 rotation_axis = glm::vec3(0.0f, 1.0f, 0.0f);
-			animation_matrix = glm::translate(glm::mat4(1.0f), -axis_position);
-			animation_matrix *= glm::rotate(glm::mat4(1.0f), -scale, rotation_axis);
-			animation_matrix *= glm::translate(glm::mat4(1.0f), axis_position);
+			animation_matrix = glm::translate(glm::mat4(1.0f), axis_position);
+			animation_matrix *= glm::rotate(glm::mat4(1.0f), scale, rotation_axis);    // should this be positive?
+			animation_matrix *= glm::translate(glm::mat4(1.0f), -axis_position);
             break;
         }
                 //rotationZ
         case 3: {
             scale = (scale / (max_value - min_value)) * (angle1 - angle0);
             glm::vec3 rotation_axis = glm::vec3(0.0f, 0.0f, 1.0f);
-			animation_matrix = glm::translate(glm::mat4(1.0f), -axis_position);
+			animation_matrix = glm::translate(glm::mat4(1.0f), axis_position);
 			animation_matrix *= glm::rotate(glm::mat4(1.0f), -scale, rotation_axis);
-			animation_matrix *= glm::translate(glm::mat4(1.0f), axis_position);
+			animation_matrix *= glm::translate(glm::mat4(1.0f), -axis_position);
             break;
         }
                 //translation
@@ -320,16 +320,16 @@ float ace::simulation::animation::get_scale(float phase)
 
     switch (source_address)
     {
-    case 1:
-        scale = fmod(phase - min_value, (max_value - min_value) * 2) + min_value;
+    case 1: // LOOP
+        scale = fmod(phase - min_value, (max_value - min_value)) + min_value;
         // when over limit, mirror
         if (phase > max_value) phase = max_value - (phase - max_value);
 
         scale = std::min(std::max(scale, min_phase), max_phase);
         
         break;
-    case 2:
-        scale = fmod(phase - min_value, (max_value - min_value)) + min_value;
+    case 2: // MIRROR
+        scale = fmod(phase - min_value, (max_value - min_value) * 2) + min_value;
         if (scale > max_value) scale = max_value - (scale - max_value);
         scale = std::min(std::max(scale, min_phase), max_phase);
         break;

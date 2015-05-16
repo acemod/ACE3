@@ -6,7 +6,7 @@ class CfgAmmo {
     class ShellBase: ShellCore {
     };
     
-    class Sh_120mm_APFSDS: ShellBase {
+    class Sh_120mm_APFSDS : ShellBase {
         /*
         enum class PROJECTILE_TYPE {
             CYLINDER = 1,   // This also uses long rod calcs, but for a cylinder default. ignores frustrum lengths
@@ -28,11 +28,14 @@ class CfgAmmo {
         GVAR(mass) = 4600;          // grams, used if defined for penetrator, otherwise falls back on bulletMass
 
         ACE_materialType = 2;            // 0=tungsten,1=DU,2=hard steel alloy
+        GVAR(materialType) = 2;
+        ACE_materialDensity = 19100;    
+        GVAR(materialDensity) = 19100;
+        
         // Below densities are only used to override materialType, 
         // OPTIONALS
-        ACE_materialDensity = 19100;    
-        GVAR(density) = 19100;      // kg/m3  used if defined for penetrator, otherwise falls back on ACE_materialDensity
         
+       
         // This is ony used if defined, otherwise it is assumed the round is a cylinder
         GVAR(frustumLength) = 0.05;     // meter
         GVAR(frustumDiameter) = 0.01;   // meter

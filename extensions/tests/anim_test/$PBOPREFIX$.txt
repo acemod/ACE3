@@ -1,6 +1,0 @@
-///////<HEADER>///////
-prefix=z\ace\test
-Mikero=DePbo.dll
-Pbo Type is: Arma Addon
-Sha: 'B57F52A263D29E93AC869A50E7058065B93F97D5'
-//////</HEADER>//////
