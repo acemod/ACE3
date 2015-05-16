@@ -99,29 +99,51 @@ class CfgMagazines {
     class IEDUrbanBig_Remote_Mag: DemoCharge_Remote_Mag {
         ACE_SetupObject = "ACE_Explosives_Place_IEDUrbanBig";
         class ACE_Triggers {
-            SupportedTriggers[] = {"Command","DeadmanSwitch", "Cellphone"};
+            SupportedTriggers[] = {"Command","DeadmanSwitch", "Cellphone", "PressurePlate"};
             class Command {
                 FuseTime = 0.5;
             };
             class DeadmanSwitch:Command{};
             class Cellphone:Command{};
+            class PressurePlate {
+                displayName = $STR_ACE_Explosives_SLAME_Magnetic;
+                digDistance = 0;
+                ammo = "IEDUrbanBig_Remote_Ammo";
+                pitch = 0;
+            };
         };
     };
     class IEDLandBig_Remote_Mag: IEDUrbanBig_Remote_Mag{
         ACE_SetupObject = "ACE_Explosives_Place_IEDLandBig";
+        class ACE_Triggers: ACE_Triggers {
+            class PressurePlate: PressurePlate {
+                ammo = "IEDLandBig_Remote_Ammo";
+            };
+        };
     };
     class IEDUrbanSmall_Remote_Mag: DemoCharge_Remote_Mag {
         ACE_SetupObject = "ACE_Explosives_Place_IEDUrbanSmall";
         class ACE_Triggers {
-            SupportedTriggers[] = {"Command","DeadmanSwitch", "Cellphone"};
+            SupportedTriggers[] = {"Command","DeadmanSwitch", "Cellphone", "PressurePlate"};
             class Command {
                 FuseTime = 0.5;
             };
             class DeadmanSwitch:Command{};
             class Cellphone:Command{};
+            class PressurePlate {
+                displayName = $STR_ACE_Explosives_SLAME_Magnetic;
+                digDistance = 0;
+                ammo = "IEDUrbanSmall_Remote_Ammo";
+                pitch = 0;
+            };
         };
     };
     class IEDLandSmall_Remote_Mag: IEDUrbanSmall_Remote_Mag {
         ACE_SetupObject = "ACE_Explosives_Place_IEDLandSmall";
+        class ACE_Triggers: ACE_Triggers {
+            class PressurePlate: PressurePlate {
+                ammo = "IEDLandSmall_Remote_Ammo";
+            };
+        };
     };
 };
