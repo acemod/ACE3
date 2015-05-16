@@ -6,18 +6,11 @@ group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### NLAW disposable anti tank weapon
+### 1.1 NLAW disposable anti tank weapon
 Makes the NLAW disposable and provides the tools for other addons to do the same.
 
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 2. Dependencies
 
 `ace_common`
