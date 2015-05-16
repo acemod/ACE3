@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-private ["_playerDir", "_textTop", "_textCenterBig", "_textCenterLine1Left", "_textCenterLine2Left", "_textCenterLine3Left", "_textCenterLine1Right", "_textCenterLine2Right", "_textCenterLine3Right", "_textInfoLine1", "_textInfoLine2", "_temperature", "_chill", "_humidity", "_heatIndex", "_dewPoint", "_wetBulb", "_windSpeed", "_windDir"];
+private ["_playerDir", "_playerAltitude", "_temperature", "_humidity", "_barometricPressure", "_chill", "_heatIndex", "_dewPoint", "_wetBulb", "_windSpeed", "_windDir", "_textTop", "_textCenterBig", "_textCenterLine1Left", "_textCenterLine2Left", "_textCenterLine3Left", "_textCenterLine1Right", "_textCenterLine2Right", "_textCenterLine3Right", "_textInfoLine1", "_textInfoLine2"];
 
 [] call FUNC(collectData);
 
@@ -39,10 +39,11 @@ _playerAltitude = (getPosASL ACE_player) select 2;
 
 _temperature = _playerAltitude call EFUNC(weather,calculateTemperatureAtHeight);
 _humidity = EGVAR(weather,currentHumidity);
+_barometricPressure = _playerAltitude call EFUNC(weather,calculateBarometricPressure);
 _chill = [_temperature, _humidity] call EFUNC(weather,calculateWindChill);
 _heatIndex = [_temperature, _humidity] call EFUNC(weather,calculateHeatIndex);
 _dewPoint = [_temperature, _humidity] call EFUNC(weather,calculateDewPoint);
-_wetBulb = [_temperature, _humidity] call EFUNC(weather,calculateWetBulb);
+_wetBulb = [_temperature, _barometricPressure, _humidity] call EFUNC(weather,calculateWetBulb);
 
 GVAR(Direction) = 4 * floor(_playerDir / 90);
 if (_playerDir % 90 > 10) then { GVAR(Direction) = GVAR(Direction) + 1};
@@ -184,9 +185,9 @@ switch (GVAR(Menu)) do {
             _textCenterLine1Left = "Min";
             _textCenterLine2Left = "Avg";
             _textCenterLine3Left = "Max";
-            _textCenterLine1Right = Str(round((GVAR(Min) select 6) * 10) / 10);
-            _textCenterLine2Right = Str(round((GVAR(Total) select 6) / (GVAR(Entries) select 6) * 10) / 10);
-            _textCenterLine3Right = Str(round((GVAR(Max) select 6) * 10) / 10);
+            _textCenterLine1Right = Str(round((GVAR(Min) select 6) * 100 * 10) / 10);
+            _textCenterLine2Right = Str(round((GVAR(Total) select 6) / (GVAR(Entries) select 6) * 100 * 10) / 10);
+            _textCenterLine3Right = Str(round((GVAR(Max) select 6) * 100 * 10) / 10);
         };
     };
     case 7: { // HEAT INDEX
@@ -227,7 +228,7 @@ switch (GVAR(Menu)) do {
     };
     case 10: { // BARO
         if (!GVAR(MinAvgMax)) then {
-            _textCenterBig = Str(round((_playerAltitude call EFUNC(weather,calculateBarometricPressure)) * 10) / 10);
+            _textCenterBig = Str(round(_barometricPressure * 10) / 10);
         } else {
             _textCenterLine1Left = "Min";
             _textCenterLine2Left = "Avg";
