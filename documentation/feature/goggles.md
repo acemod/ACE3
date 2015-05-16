@@ -11,7 +11,7 @@ parent: wiki
 ### 1.1 Visual Effects for eyewear
 Adds color tint to sunglasses and other eyewear. Causes raindrops to appear on 
 the screen in rain. Causes dirt to appear on the screen when dirt is kicked up
-nearby (e.g. explosions, rotor wash, bullet impacts).
+nearby (e.g. explosions, rotor wash, bullet impacts, muzzle blast).
 
 
 ## 2. Usage

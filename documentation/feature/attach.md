@@ -26,10 +26,10 @@ Adds an attachable IR strobe, which is only visible using night vision devices a
 - Same thing to detach.
 
 ### 2.2 attaching to a vehicle
-- interact with the vehicle <kbd> ctrl+left windows </kbd>.
+- Interact with the vehicle <kbd> ctrl+left windows </kbd>.
 - Choose `attach item`.
 - Select your item and follow the instructions on the screen.
-- to detach the item it's the same as placing it, use the interaction key from outside the vehicle.
+- To detach the item it's the same as placing it, use the interaction key from outside the vehicle.
 
 
 ## 3. Dependencies

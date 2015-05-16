@@ -8,7 +8,7 @@ parent: wiki
 
 ## 1. Overview
 
-Add a shrapnel system for explosives.
+Adds a shrapnel system for explosives.
 
 ## 2. Dependencies
 

@@ -9,7 +9,7 @@ parent: wiki
 ## 1. Overview
 
 ### 1.1 Zipping sounds
-When someone open your backpack you hear a zipping sound, this help figuring who steals your bananas.
+A zipper sound rings out, if someone tries to open your backpack. This helps to prevent banana theft.
 
 ## 2. Dependencies
 

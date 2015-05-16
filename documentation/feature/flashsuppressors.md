@@ -8,7 +8,7 @@ parent: wiki
 
 ## 1. Overview
 
-Add flash suppressors, they reduce the muzzle flash of your weapon.
+Adds flash suppressors, they reduce the muzzle flash of your weapon.
 
 ## 2. Dependencies
 
