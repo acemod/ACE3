@@ -35,7 +35,7 @@ if(_sendToExtension) then {
     
     _cmd = format["set_animation_state:%1,", (_vehicle getVariable[QGVAR(id), -1])];
     {
-        _cmd = _cmd + format["%1,%2,", (_x select 0), ([(_x select 1)] call CBA_fnc_formatNumber)];
+        _cmd = _cmd + format["%1,%2,", (_x select 0), (_x select 1)];
     } forEach _animationResults;
     
     _cmd call FUNC(callExtension);

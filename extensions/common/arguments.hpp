@@ -14,7 +14,7 @@ namespace ace {
         const std::string & as_string() const { return _args[_index]; }
         operator const std::string &() const { return as_string(); }
 
-        float as_float() const { return atof(_args[_index].c_str()); }
+        float as_float() const { float res = 0.0f; std::istringstream iss(_args[_index]); iss >> res; return res; }
         operator float() const { return as_float(); }
 
         int as_int() const { return atoi(_args[_index].c_str()); }

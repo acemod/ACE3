@@ -111,7 +111,7 @@ namespace ace {
 			lod(const ace::p3d::lod_p, const ace::p3d::model_p);
 			~lod();
 			uint32_t id;
-            float   type;
+            uint32_t   type;
 			vertex_table vertices;
 			ace::vector3<float> autocenter_pos;
 			std::map<std::string, named_selection_p> selections;
