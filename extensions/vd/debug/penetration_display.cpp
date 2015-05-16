@@ -7,7 +7,7 @@
 namespace ace {
     namespace vehicledamage {
         namespace debug {
-            penetration_display::penetration_display() :
+            penetration_display::penetration_display() : _enable_bullet_debug(false),
                 dispatcher() {
                 _active_vehicle = nullptr;
 
@@ -26,13 +26,13 @@ namespace ace {
 
                 btVector3 vectorFrom(5, 20, 0);
                 btVector3 vectorTo = _vehicle->second->bt_object->getWorldTransform().getOrigin();
-                btVector3 direction = vectorTo - vectorFrom;
+                btVector3 direction = vectorFrom - vectorTo;
 
                 XMVECTORF32 eyePos = { vectorFrom.x(), vectorFrom.y(), vectorFrom.z() };
                 XMVECTORF32 eyeDir = { direction.x(), direction.y(), direction.z() };
                 XMVECTORF32 up = { 0.f, 1.f, 0.f };
 
-                XMStoreFloat4x4(&_View, XMMatrixLookAtLH(eyePos, eyeDir, up));
+                XMStoreFloat4x4(&_View, XMMatrixLookAtLH(eyePos, XMVectorZero(), up));
 
                 return true;
             }
@@ -111,24 +111,25 @@ namespace ace {
 
                 _Batch->End();
 
-
                 // Draw the bullet world
                 // The BT debug drawing is a single batch
-                _Batch->Begin();
-                ace::vehicledamage::controller::get().bt_world->debugDrawWorld();
-                _Batch->End();
+                if (_enable_bullet_debug) {
+                    _Batch->Begin();
+                    ace::vehicledamage::controller::get().bt_world->debugDrawWorld();
+                    _Batch->End();
+                }
 
                 
                 if (_active_vehicle) {
                     DrawObject(_active_vehicle->fire_lod, *_Batch, *_active_vehicle->object, Colors::GhostWhite);
                 }
                 if (_active_hits.size() > 0) {
-                    DrawHits(0, *_Batch, Colors::Red);
+                    DrawHits(0, *_Batch, Colors::Yellow);
 
                     for (auto & hit : _active_hits) {
                         std::vector<ace::vector3<float>> collisions;
-                        _active_vehicle->surface_raycast(hit->impactposition, hit->impactvelocity, collisions);
-                        DrawCollisions(collisions, *_Batch, Colors::Purple);
+                        //_active_vehicle->surface_raycast(hit->impactposition, hit->impactvelocity, collisions);
+                        //DrawCollisions(collisions, *_Batch, Colors::Purple);
                     }
                 }
 
@@ -166,10 +167,11 @@ namespace ace {
                 batch.Begin();
 
                 for (gamehit_p & hit : _active_hits) {
-                    ace::vector3<float> hit_from, hit_to;
+                    ace::vector3<float> hit_from, hit_to, hit_surface;
 
                     hit_from = hit->impactposition;
-                    hit_to = hit_from + (hit->impactvelocity * 0.01f);
+                    hit_to = hit_from + hit->impactvelocity;
+                    hit_surface = hit_from + hit->surface;
 
                     XMVECTORF32 from = { hit_from.x(), hit_from.y(), hit_from.z() };
                     XMVECTORF32 to = { hit_to.x(), hit_to.y(), hit_to.z() };
@@ -178,6 +180,13 @@ namespace ace {
                     VertexPositionColor v2(to, color);
 
                     batch.DrawLine(v1, v2);
+
+                    XMVECTORF32 surface_direction = { hit_surface.x(), hit_surface.y(), hit_surface.z() };
+
+                    VertexPositionColor v1_surf(from, Colors::LightGreen);
+                    VertexPositionColor v2_surf(surface_direction, Colors::LightGreen);
+
+                    batch.DrawLine(v1_surf, v2_surf);
                 }
 
 

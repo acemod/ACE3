@@ -65,6 +65,8 @@ namespace ace {
                 vehicle_p                                               _active_vehicle;
                 std::vector<gamehit_p>                                  _active_hits;
 
+                bool                                                    _enable_bullet_debug;
+
                 void DrawHits(uint32_t lod, PrimitiveBatch<VertexPositionColor>& batch, GXMVECTOR color);
                 void DrawCollisions(const std::vector<ace::vector3<float>> & collisions, PrimitiveBatch<VertexPositionColor>& batch, GXMVECTOR color);
                 void DrawObject(uint32_t lod, PrimitiveBatch<VertexPositionColor>& batch, ace::simulation::object & obj, GXMVECTOR color);

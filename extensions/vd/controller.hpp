@@ -43,6 +43,7 @@ namespace ace {
 
 #if defined(DEVEL) && defined(USE_DIRECTX)
             bool                                                _debug_render(const arguments &, std::string &);
+            bool                                                _debug_render_bullet(const arguments &, std::string &);
             std::unique_ptr<debug::penetration_display>         _debug_display;
 #endif
 

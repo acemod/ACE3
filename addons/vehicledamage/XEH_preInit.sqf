@@ -17,7 +17,7 @@ GVAR(debug_log) = [];
 #endif
 #ifdef DEBUG_EXTENSION_DYNLOAD
 // This value is used for debug loading of the extension with dynload
-GVAR(extensionLibrary) = "z\ace\extensions\build\vd\Debug\ace_vd.dll";
+GVAR(extensionLibrary) = "z\ace\extensions\build\vd\Debug\ace_vd_Debug.dll";
 #endif
 
 // Extension dispatch events

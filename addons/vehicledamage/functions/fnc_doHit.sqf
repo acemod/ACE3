@@ -6,8 +6,9 @@
 #define __PROJECTILE_CLASS configFile >> "CfgAmmo" >> (_ammo select 4)
 
 private["_impactSurfaceType", "_isDirectHit", "_command", "_model", "_projectileType"];
+private["_relProjectilePos", "_relProjectileVelocity", "_projectilePosition", "_relImpactVelPos", "_relImpactVelocity", "_relSurfDirectionPos", "_relSurfaceDirection"];
 private["_penetrationOrthogonalDepth", "_penetrationAngleDepth", "_penetrationCosAngle", "_projectileCaliber", "_projectileDensity", "_projectileLength", "_armorDensity"];
-EXPLODE_9_PVT((_this select 0),_vehicle,_shooter,_projectile,_impactPosition,_projectileVelocity,_selection,_ammo,_surfaceDirection,_radius);
+EXPLODE_9_PVT((_this select 0),_vehicle,_shooter,_projectile,_impactPosition,_impactVelocity,_selection,_ammo,_surfaceDirection,_radius);
 _impactSurfaceType = (_this select 0) select 9;
 _isDirectHit = (_this select 0) select 10;
 TRACE_2("",_impactSurfaceType,_isDirectHit);
@@ -33,6 +34,23 @@ if(_projectileLength == 0) then {
 
 _vehicleId = _vehicle getVariable[QGVAR(id), -1];
 
+
+// The below didn't work
+//#define RELATIVE_VECTOR_TEXT(o,x) ([(o worldToModelVisual ((x) call EFUNC(common,ASLToPosition)))] call FUNC(_textVector))
+
+// Get a relative velocity!?!?
+_relImpactPosition = _vehicle worldToModelVisual _impactPosition;
+_projectilePosition = _vehicle worldToModelVisual (position _projectile);
+
+_relProjectilePos = (position _projectile) vectorAdd (velocity _projectile);
+_relProjectileVelocity = _projectilePosition vectorFromTo (_vehicle modelToWorldVisual _relProjectilePos);
+
+_relImpactVelPos = _impactPosition vectorAdd _impactVelocity;
+_relImpactVelocity = _relImpactPosition vectorFromTo (_vehicle modelToWorldVisual _relImpactVelPos);
+
+_relSurfDirectionPos = _impactPosition vectorAdd _surfaceDirection;
+_relSurfaceDirection = _relImpactPosition vectorFromTo (_vehicle modelToWorldVisual _relSurfDirectionPos);
+
 _command = format["hit:%1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,%16,%17,%18", 
                         _vehicleId,  // vehicle id registered
 //                        _model, _selection, 
@@ -42,12 +60,12 @@ _command = format["hit:%1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,%16,%1
                         _projectileType, //projectile type id
                         (_ammo select 4), _projectileLength, _projectileDiameter, _projectileDensity,
                             _frastumLength, _frastumDiameter,
-                            VECTOR_TEXT(_projectileVelocity), 
-                            RELATIVE_VECTOR_TEXT(_vehicle,getPosASL _projectile), 
+                            VECTOR_TEXT(_relProjectileVelocity), 
+                            VECTOR_TEXT(_projectilePosition), 
                             VECTOR_TEXT(vectorDir _projectile), 
-                            VECTOR_TEXT(_surfaceDirection), 
-                            RELATIVE_VECTOR_TEXT(_vehicle,_impactPosition),  
-                            VECTOR_TEXT(_projectileVelocity)
+                            VECTOR_TEXT(_relSurfaceDirection), 
+                            VECTOR_TEXT(_relImpactPosition),  
+                            VECTOR_TEXT(_relImpactVelocity)
                 ];   
 TRACE_1("", _command);   
 _result = _command call FUNC(callExtension);
