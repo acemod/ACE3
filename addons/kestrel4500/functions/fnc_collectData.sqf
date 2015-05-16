@@ -27,13 +27,13 @@ _dewPoint = [_temperature, _humidity] call EFUNC(weather,calculateDewPoint);
 _wetBulb = [_temperature, _barometricPressure, _humidity] call EFUNC(weather,calculateWetBulb);
 
 if (isNil QGVAR(MIN) || isNil QGVAR(MAX)) then {
-    GVAR(MIN) = [_playerDir, 0, 0, 0, _temperature, _chill, _humidity, _heatIndex, _dewPoint, _wetBulb, _barometricPressure, _altitude];
-    GVAR(MAX) = [_playerDir, 0, 0, 0, _temperature, _chill, _humidity, _heatIndex, _dewPoint, _wetBulb, _barometricPressure, _altitude];
+    GVAR(MIN) = [0, _playerDir, 0, 0, 0, _temperature, _chill, _humidity, _heatIndex, _dewPoint, _wetBulb, _barometricPressure, _altitude];
+    GVAR(MAX) = [0, _playerDir, 0, 0, 0, _temperature, _chill, _humidity, _heatIndex, _dewPoint, _wetBulb, _barometricPressure, _altitude];
 };
 
 {
     GVAR(ENTRIES) set [_x, (GVAR(ENTRIES) select _x) + 1];
-} forEach [0, 4, 5, 6, 7, 8, 9, 10, 11];
+} forEach [1, 5, 6, 7, 8, 9, 10, 11, 12];
 
 _fnc_updateMemory = {
     PARAMS_2(_slot,_value);
@@ -47,11 +47,11 @@ _fnc_updateMemory = {
 if (GVAR(MinAvgMaxMode) == 1) then {
     {
         GVAR(ENTRIES) set [_x, (GVAR(ENTRIES) select _x) + 1];
-    } forEach [1, 2, 3];
+    } forEach [2, 3, 4];
 
     // Wind SPD
     _windSpeed = call FUNC(measureWindSpeed);
-    [1, _windSpeed] call _fnc_updateMemory;
+    [2, _windSpeed] call _fnc_updateMemory;
 
     // CROSSWIND
     _crosswind = 0;
@@ -60,7 +60,7 @@ if (GVAR(MinAvgMaxMode) == 1) then {
     } else {
         _crosswind = abs(sin(GVAR(RefHeading)) * _windSpeed);
     };
-    [2, _crosswind] call _fnc_updateMemory;
+    [3, _crosswind] call _fnc_updateMemory;
 
     // HEADWIND
     _headwind = 0;
@@ -69,14 +69,14 @@ if (GVAR(MinAvgMaxMode) == 1) then {
     } else {
         _headwind = abs(cos(GVAR(RefHeading)) * _windSpeed);
     };
-    [3, _headwind] call _fnc_updateMemory;
+    [4, _headwind] call _fnc_updateMemory;
 };
 
-[4, _temperature] call _fnc_updateMemory;
-[5, _chill] call _fnc_updateMemory;
-[6, _humidity] call _fnc_updateMemory;
-[7, _heatIndex] call _fnc_updateMemory;
-[8, _dewPoint] call _fnc_updateMemory;
-[9, _wetBulb] call _fnc_updateMemory;
-[10, _barometricPressure] call _fnc_updateMemory;
-[11, _altitude] call _fnc_updateMemory;
+[5, _temperature] call _fnc_updateMemory;
+[6, _chill] call _fnc_updateMemory;
+[7, _humidity] call _fnc_updateMemory;
+[8, _heatIndex] call _fnc_updateMemory;
+[9, _dewPoint] call _fnc_updateMemory;
+[10, _wetBulb] call _fnc_updateMemory;
+[11, _barometricPressure] call _fnc_updateMemory;
+[12, _altitude] call _fnc_updateMemory;
