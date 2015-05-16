@@ -28,13 +28,13 @@ _view_distance_limit = GVAR(limitViewDistance); // Grab the limit
 
 if (_show_prompt) then {
     _text = if (_new_view_distance <= _view_distance_limit) then {
-            format ["<t align='center'>View Distance: %1m",str(_new_view_distance)];
+            format ["<t align='center'>%1 %2m", (localize "STR_ACE_ViewDistance_infotext"), str(_new_view_distance)];
         } else {
-            format ["<t align='center'>That option is invalid! The limit is %1m",str(_view_distance_limit)];
+            format ["<t align='center'>%1 %2m", (localize "STR_ACE_ViewDistance_invalid"), str(_view_distance_limit)];
         };
 
     if (GVAR(objectViewDistanceCoeff) > 0) then {
-        _text = _text + format ["<br/><t align='center'>Object View Distance is %1%2</t>",str(_object_view_distance_coeff * 100),"%"];
+        _text = _text + format ["<br/><t align='center'>%1 %2%3</t>", (localize "STR_ACE_ViewDistance_objectinfotext"), str(_object_view_distance_coeff * 100),"%"];
     };
     [parseText _text,2] call EFUNC(common,displayTextStructured);
 };
