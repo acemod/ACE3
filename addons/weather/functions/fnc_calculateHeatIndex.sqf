@@ -15,19 +15,20 @@
  */
 #include "script_component.hpp"
 
-#define __C1 -8.784695
-#define __C2 1.61139411
-#define __C3 2.338549
-#define __C4 -0.14611605
-#define __C5 -0.012308094
-#define __C6 -0.016424828
-#define __C7 0.002211732
-#define __C8 0.00072546
-#define __C9 -0.000003582
+#define __C1 0.363445176
+#define __C2 0.988622465
+#define __C3 4.777114035
+#define __C4 -0.114037667
+#define __C5 -0.000850208
+#define __C6 -0.020716198
+#define __C7 0.000687678
+#define __C8  0.000274954
 
 PARAMS_2(_t,_rh);
 
+// Source: https://en.wikipedia.org/wiki/Heat_index
+
+_t = FAHRENHEIT(_t);
 _rh = _rh * 100; // relative humidity in %
 
-// Source: https://en.wikipedia.org/wiki/Heat_index
-(__C1 + __C2 * _t + __C3 * _rh + __C4 * _t * _rh + __C5 * _t^2 + __C6 * _rh^2 + __C7 * _t^2 * _rh + __C8 * _t * _rh^2 + __C9 * _t^2 * _rh^2)
+CELSIUS(__C1 + __C2 * _t + __C3 * _rh + __C4 * _t * _rh + __C5 * _t^2 + __C6 * _rh^2 + __C7 * _t^2 * _rh + __C8 * _t * _rh^2)

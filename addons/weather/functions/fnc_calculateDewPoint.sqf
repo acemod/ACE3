@@ -21,6 +21,7 @@
 PARAMS_2(_t,_rh);
 
 // Source: https://en.wikipedia.org/wiki/Dew_point
+
 private ["_gamma"];
 _gamma = ln(_rh) + (__b * _t) / (__c + _t);
 

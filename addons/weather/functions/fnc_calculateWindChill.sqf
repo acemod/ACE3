@@ -16,7 +16,10 @@
 
 PARAMS_2(_t,_v);
 
-_v = _v * 3,6; // wind speed in km/h
-
 // Source: https://en.wikipedia.org/wiki/Wind_chill
-(13.12 + 0.06215 * _t - 11.37 * _v ^ 0.16 + 0.3965 * _t * _v^0.16)
+
+if (_t > 10) exitWith { _t };
+if (_v < 1.39) exitWith { _t };
+
+_v = _v * 3,6; // wind speed in km/h
+(13.12 + 0.6215 * _t - 11.37 * _v ^ 0.16 + 0.3965 * _t * _v ^ 0.16)
