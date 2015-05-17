@@ -8,7 +8,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1
 {
-	texture="ctab\data\itemAndroid_nohq.paa";
+	texture="z\ace\addons\bft_devices\data\itemAndroid_nohq.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -56,7 +56,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="ctab\data\itemAndroid_smdi.paa";
+	texture="z\ace\addons\bft_devices\data\itemAndroid_smdi.paa";
 	uvSource="tex";
 	class uvTransform
 	{
