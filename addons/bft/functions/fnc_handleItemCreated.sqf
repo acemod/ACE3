@@ -47,11 +47,30 @@ _defaultValues = getArray(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >>
 
 _refreshRate = getNumber(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "refreshRate");
 
-// if (_deviceSide == "") exitwith {};
 _deviceEncryptionKeys = ["DEFAULT_SIDE_ENCYPTION"]; // TODO encyption keys
+
+_elementType = _owner getvariable format[QGVAR(elementType_%1),_item];
+_elementSize = _owner getvariable format[QGVAR(elementSize_%1),_item];
+_elementCallsign = _owner getvariable format[QGVAR(elementCallsign_%1),_item];
+_groupID = _owner getvariable format[QGVAR(groupID_%1),_item];
+
 
 // format: [elementType, elementSize, elementCallsign, orbatElementID]
 _assignableInformation = _owner getvariable [format[QGVAR(assignableInformation_%1),_item], _defaultValues];
+
+if (!isnil "_elementType") then {
+    _assignableInformation set [0, _elementType];
+};
+if (!isnil "_elementSize") then {
+    _assignableInformation set [1, _elementSize];
+};
+if (!isnil "_elementCallsign") then {
+    _assignableInformation set [2, _elementCallsign];
+};
+
+if (!isnil "_groupID") then {
+    _assignableInformation set [3, _groupID];
+};
 
 // format: app ID, app data
 _app = [-1, []];

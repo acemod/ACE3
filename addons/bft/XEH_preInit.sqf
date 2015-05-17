@@ -62,4 +62,10 @@ GVAR(localOwnedEncyptionKeys) = [];
 
 GVAR(updateAvailableDevicesPositions) = true;
 
+_r = profilenamespace getvariable ['Map_BLUFOR_R',0];
+_g = profilenamespace getvariable ['Map_BLUFOR_G',0.8];
+_b = profilenamespace getvariable ['Map_BLUFOR_B',1];
+_a = profilenamespace getvariable ['Map_BLUFOR_A',0.8];
+GVAR(colorWest) = [_r,_g,_b,_a];
+
 ADDON = true;

@@ -19,7 +19,7 @@ _groupID = _this select 0;
 _data = [_groupID] call FUNC(getGroupData);
 
 _found = false;
-_color = [1,1,1,1]; // device color for blufor units
+_color = GVAR(colorWest); // device color for blufor units
 
 while {!_found} do {
     if (_groupID < 0) exitwith {};
