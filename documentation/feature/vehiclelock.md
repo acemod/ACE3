@@ -8,7 +8,7 @@ parent: wiki
 
 ## 1. Overview
 
-ACE Vehicle Lock is disabled by default. This feature adds the ability to lock and unlock vehicles and their inventory using a key, as well as picking locks of locked vehicles.
+ACE3 Vehicle Lock is disabled by default. This feature adds the ability to lock and unlock vehicles and their inventory using a key, as well as picking locks of locked vehicles.
 
 
 ## 2. Usage
