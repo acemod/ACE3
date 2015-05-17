@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Attach
-description: 
+description: Allows players to attach items to objects
 group: feature
 parent: wiki
 ---
@@ -19,17 +19,17 @@ Adds an attachable IR strobe, which is only visible using night vision devices a
 ## 2. Usage
 
 ### 2.1 Attaching to yourself
-- Self interact <kbd> left windows </kbd> (by default).
+- Self interact <kbd> left windows </kbd>.
 - Choose `equipment`.
 - Choose `attach item`.
 - Select which item you want to attach.
-- Same thing to detach.
+- Repeat to detach.
 
 ### 2.2 attaching to a vehicle
 - Interact with the vehicle <kbd> ctrl+left windows </kbd>.
 - Choose `attach item`.
 - Select your item and follow the instructions on the screen.
-- To detach the item it's the same as placing it, use the interaction key from outside the vehicle.
+- Repeat to detach.
 
 
 ## 3. Dependencies

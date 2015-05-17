@@ -1,13 +1,13 @@
 ---
 layout: wiki
 title: Advanced Ballistics
-description: The advanced ballistics module improves internal- and external ballistics. 
+description: The advanced ballistics module improves internal and external ballistics. 
 group: feature
 parent: wiki
 ---
 
 ## 1. Overview
-The advanced ballistics module improves internal- and external ballistics. 
+The Advanced Ballistics module improves internal and external ballistics. 
 
 ## 2. Features
 - Drag modeling based on real-world ballistic coefficients.
@@ -17,8 +17,8 @@ The advanced ballistics module improves internal- and external ballistics.
 - Terrain features, buildings and other objects disrupt the wind.
 - [Magnus effect](https://en.wikipedia.org/wiki/Magnus_effect) (spin drift)
 - [Coriolis effect](https://en.wikipedia.org/wiki/Coriolis_effect) and [Eötvös effect](https://en.wikipedia.org/wiki/Eotvos_effect) (Earth rotation)
-- Loss of stability during transonic flight 
-- Variable muzzle velocity based on on powder burn rate and barrel length
+- Loss of stability during transonic flight.
+- Variable muzzle velocity based on powder burn rate and barrel length.
 - Bullet trace effect for supersonic bullets (light refraction due to air pressure waves).
 - A protractor for quickly measuring the inclination angle.
 

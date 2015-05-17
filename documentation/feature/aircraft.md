@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Aircraft
-description: 
+description: Changes the flight behaviour of various aircraft
 group: feature
 order: 5
 parent: wiki
@@ -18,10 +18,10 @@ Changes the flight behaviour of various aircraft.
 - AP rockets have less splash damage.
 
 ### 1.3 Missile lock warnings
-Adds missile-lock warning systems to helicopters and planes based on the various real life capabilities.
+Adds missile-lock warning systems to helicopters and planes based on the equivalent real life capabilities.
 
 ### 1.4 Semi-automatic flare mode
-Adds the semi-automatic flare mode known from Arma 2. The key to switch the mode still exists in Arma 3's key settings, but is unused.
+Adds the semi-automatic flare mode known from Arma 2. The key to switch modes existed in Arma 3's key settings, but wasn't operational until now.
 
 ### 1.5 Ejecting from pilot and copilot seats
 Pilots and copilots of all helicopters can now eject.
@@ -32,8 +32,6 @@ Adds a laser marker to the copilot seat of the Wildcat.
 ### 1.7 HUD for AH-9
 Adds a HUD to the AH-9 based on the Comanche's HUD.
 
-## 1.8 Adjusted flight behaviour
-Changes the flight behaviour of various aircraft.
 
 ## 2. Usage
 
