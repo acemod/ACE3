@@ -23,6 +23,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class alwaysSimulateForGroupMembers {
+                displayName = "$STR_ACE_AdvancedBallistics_alwaysSimulateForGroupMembers_DisplayName";
+                description = "$STR_ACE_AdvancedBallistics_alwaysSimulateForGroupMembers_Description";
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
             class disabledInFullAutoMode {
                 displayName = "$STR_ACE_AdvancedBallistics_disabledInFullAutoMod_DisplayName";
                 description = "$STR_ACE_AdvancedBallistics_disabledInFullAutoMod_Description";

@@ -36,15 +36,17 @@ if (underwater _unit) exitWith {};
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
 if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith {};
 if (GVAR(onlyActiveForLocalPlayers) && !(local _unit)) then {
+    // The shooter is non local
+    _abort = true;
     if (GVAR(alwaysSimulateForSnipers)) then {
-        // The shooter is non local
         if (currentWeapon _unit == primaryWeapon _unit && count primaryWeaponItems _unit > 2) then {
             _opticsName = (primaryWeaponItems _unit) select 2;
             _opticType = getNumber(configFile >> "CfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
             _abort = _opticType != 2; // We only abort if the non local shooter is not a sniper
         };
-    } else {
-        _abort = true;
+    };
+    if (GVAR(alwaysSimulateForGroupMembers) && _abort) then {
+        _abort = (group ACE_player) != (group _unit);
     };
 };
 //if (!GVAR(vehicleGunnerEnabled) && !(_unit isKindOf "Man")) then { _abort = true; }; // We currently do not have firedEHs on vehicles
