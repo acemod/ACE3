@@ -20,10 +20,10 @@ AIs will now use the automatic mode of their weapons on short distances, instead
 The maximum engagement ranges are increased: AI will fire in bursts with variable length on high ranges of 500 - 700 meters, depending on their weapon and optic.
 
 ### 1.4 No deadzones in CQB
-Some weapons had minimum engagement ranges. If you were as close as 2 meters to an AAF soldier, he wouldn't open fire, because the AI couldn't find any valid fire mode for their weapon. ACE 3 removes this behaviour mostly notable in CQB by adding a valid firing mode.
+Some weapons had minimum engagement ranges. If you were as close as 2 meters to an AAF soldier, he wouldn't open fire, because the AI couldn't find any valid fire mode for their weapon. ACE3 removes this behaviour mostly notable in CQB by adding a valid firing mode.
 
 ### 1.5 No scripting
-All changes of ACE 3 AI are config based to ensure full compatibility with advanced AI modifications like ASR AI.
+All changes of ACE3 AI are config based to ensure full compatibility with advanced AI modifications like ASR AI.
 
 
 ## 2. Dependencies
