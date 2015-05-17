@@ -1,0 +1,43 @@
+hit event -
+    projectileType determines penetration processor
+    vehicle calls penetration.process()
+    projectile types damage type(s) determine damage processors
+    vehicle calls damage.process(penetration.result[0], damage.results)
+    vehicle calls damage.process(penetration.result[1], damage.results)
+    vehicle calls damage.process(penetration.result[2], damage.results)
+    vehicle sends arma3 damage.results
+   
+   
+   
+   
+Longrod penetrator hit:
+    runs penetration::longrod.process()
+        longrod.process() returns damage.heat, damage.pressure, damage.fragments
+        damage.heat = thermal result
+            selection->heat
+            selection->heat
+        damage.pressure = pressure result
+            selection->pressure
+            selection->pressure
+        damage.fragments
+            spawns damage.fragment
+                selection->hit
+                    spawns penetration.fragment
+                        selection->kinetic
+                        selection->heat
+            spawns damage.fragment
+                selection->hit
+                    spawns penetration.fragment
+                        selection->kinetic
+                        selection->heat
+                       
+    ->
+    result set:
+    selection->pressure
+    selection->pressure
+    selection->heat
+    selection->heat
+    selection->kinetic
+    selection->kenetic
+   
+results roll up into an abstract array to arma with selections

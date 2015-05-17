@@ -104,7 +104,7 @@ TRACE_1("", _result);
     
     // Reverse the relatives
     _derp = _vehicle modelToWorldVisual _relImpactPosition;
-   drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,0,0,1], (ASLToATL _derp), 0.75, 0.75, 0, "", 0.5, 0.025, "TahomaB"];
+   drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,0,0,1], _derp, 0.75, 0.75, 0, "", 0.5, 0.025, "TahomaB"];
 }, 0, 
 [_vehicle, _impactPosition, _impactVelocity, _relImpactPosition, _relImpactVelocity]
 ] call CBA_fnc_addPerFrameHandler;

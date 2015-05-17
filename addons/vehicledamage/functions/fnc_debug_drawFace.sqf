@@ -12,13 +12,12 @@ _vehicle = _vehicleData select 0;
 
 _points = [];
 for [{_i=0}, {_i<(count _this)-1}, {_i=_i+3}] do {
-    _points pushBack (_vehicle modelToWorldVisual 
-                    [  parseNumber (_this select _i), 
+    _points pushBack [  parseNumber (_this select _i), 
                        parseNumber (_this select (_i+2)),
                        parseNumber (_this select (_i+1))
-                    ]);
+                    ];
 };
 //TRACE_1("", _points);
-GVAR(debug_lines) pushBack [((_points select 0)), ((_points select 1))];
-GVAR(debug_lines) pushBack [((_points select 1)), ((_points select 2))];
-GVAR(debug_lines) pushBack [((_points select 2)), ((_points select 0))];
+GVAR(debug_lines) pushBack [_vehicle, ((_points select 0)), ((_points select 1))];
+GVAR(debug_lines) pushBack [_vehicle, ((_points select 1)), ((_points select 2))];
+GVAR(debug_lines) pushBack [_vehicle, ((_points select 2)), ((_points select 0))];
