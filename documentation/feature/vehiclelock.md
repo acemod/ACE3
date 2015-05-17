@@ -8,20 +8,17 @@ parent: wiki
 
 ## 1. Overview
 
-ACE Vehicle Lock is disabled by default. This feature adds the ability to lock and unlock vehicles and their inventory using a key, as well as lock picking locked vehicles.
-
-### 1.1 Key modes
-The mission maker can choose one or both methods:
-- Side based keys - A key is responsible for locking and unlocking every vehicle specific to a side (BLUFOR, OPFOR, INDEP or Civilian).
-- Custom keys - A key is responsible for locking and unclocking only one specific vehicle, determined by the mission maker.
-
-### 1.2 Lock picking
-It is possible to pick a lock of a locked vehicle.
+ACE Vehicle Lock is disabled by default. This feature adds the ability to lock and unlock vehicles and their inventory using a key, as well as picking locks of locked vehicles.
 
 
 ## 2. Usage
 
 Locking, unlocking and picking vehicle locks is possible via the ACE Interact menu.
+
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>Different locking modes can be set, consult with your mission maker for more information.</p>
+</div>
 
 
 ## 3. Dependencies
