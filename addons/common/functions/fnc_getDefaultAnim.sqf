@@ -1,9 +1,9 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_unit", "_anim", "_stance"];
+private ["_anim", "_stance"];
 
-_unit = _this select 0;
+PARAMS_1(_unit);
 _anim = toLower (animationState _unit);
 
 // stance is broken for some animations.

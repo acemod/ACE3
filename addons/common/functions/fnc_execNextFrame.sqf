@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_func,_params);
+PARAMS_2(_func,_params);
 
 [
     {

@@ -7,5 +7,6 @@
  * @Return:
  * @PublicAPI: false
  */
+
 #include "script_component.hpp"
 +(missionNamespace getvariable [QGVAR(OBJECT_VARIABLES_STORAGE_) + (_this select 0),[]])

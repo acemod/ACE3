@@ -101,7 +101,7 @@ _fnc_renderSelfActions = {
     // Iterate through base level class actions and render them if appropiate
     _actionsVarName = format [QGVAR(SelfAct_%1), typeOf _target];
     _classActions = missionNamespace getVariable [_actionsVarName, []];
-    
+
     _pos = if !(GVAR(useCursorMenu)) then {
         _virtualPoint = (((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL)) vectorAdd GVAR(selfMenuOffset)) call EFUNC(common,ASLToPosition);
         _wavesAtOrigin = [(positionCameraToWorld [0, 0, 0])] call EFUNC(common,waveHeightAt);
@@ -111,7 +111,7 @@ _fnc_renderSelfActions = {
     } else {
         [0.5, 0.5]
     };
-    
+
     {
         _action = _x;
         [_target, _action, _pos] call FUNC(renderBaseMenu);
@@ -144,9 +144,7 @@ if (count GVAR(collectedActionPoints) > 1) then {
     // Do the oclusion pass
 
     // Order action points according to z
-    // @todo: after 1.43 is released switch BIS_fnc_sortBy with sort
-    GVAR(collectedActionPoints) = [GVAR(collectedActionPoints),[],{_x select 0},"ASCEND"] call BIS_fnc_sortBy;
-    //GVAR(collectedActionPoints) sort true;
+    GVAR(collectedActionPoints) sort true;
 
     private ["_i","_j","_delta"];
     for [{_i = count GVAR(collectedActionPoints) - 1}, {_i > 0}, {_i = _i - 1}] do {

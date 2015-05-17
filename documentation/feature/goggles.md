@@ -1,24 +1,24 @@
 ---
 layout: wiki
 title: Goggles
+description: 
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Visual Effects for eyewear
+### 1.1 Visual Effects for eyewear
 Adds color tint to sunglasses and other eyewear. Causes raindrops to appear on 
 the screen in rain. Causes dirt to appear on the screen when dirt is kicked up
-nearby (e.g. explsions, rotor wash, bullet impacts).
+nearby (e.g. explosions, rotor wash, bullet impacts, muzzle blast).
 
 
-## Usage
+## 2. Usage
 
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+### 2.1 Cleaning your goggles
+-To clean your goggles press <kbd>shift+alt+T</kbd>(default keybind)
 
+## 3. Dependencies
 
-## Dependencies
-
-List of modules that must be present for this module to work.
+`ace_common`

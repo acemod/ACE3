@@ -1,22 +1,26 @@
 ---
 layout: wiki
 title: Wind Deflection
+description: The Windeflection module simulates wind deflection of projectiles
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Wind Deflection
-Adds ballistic influences of wind, air density and temperature
+Wind Deflection is enabled by default. This feature simulates the wind deflection of projectiles fired by players and is designed to work independently or in conjunction with the Advanced Ballistic feature.
 
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>The only affected projectiles are bullets and grenades. Mortar shells, tank shells, missiles and rockets are <b>not</b> affected.</p>
+</div>
 
 
-## Dependencies
+## 2. Usage
 
-List of modules that must be present for this module to work.
+Wind Deflection can be disabled or modified via a Module in the 2D editor.
+
+
+## 3. Dependencies
+
+`ace_weather`

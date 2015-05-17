@@ -26,46 +26,46 @@ _function = call compile (_this select 1);
 _unit = _this select 2;
 
 if (isNil "_unit") then {
-  _unit = 2;
+    _unit = 2;
 };
 
 ["Remote", [_arguments, _this select 1, _unit], {format ["%1 call %2 to: %3", _this select 0, _this select 1, _this select 2]}, false] call FUNC(log);
 
 if (typeName _unit == "SCALAR") exitWith {
-  switch (_unit) do {
-    case 0 : {
-      _arguments call _function;
-    };
-    case 1 : {
-      if (isServer) then {
-        _arguments call _function;
-      } else {
-        publicVariableServer QGVAR(remoteFnc);
-      };
-    };
-    case 2 : {
-      _arguments call _function;
+    switch (_unit) do {
+        case 0 : {
+            _arguments call _function;
+        };
+        case 1 : {
+            if (isServer) then {
+                _arguments call _function;
+            } else {
+                publicVariableServer QGVAR(remoteFnc);
+            };
+        };
+        case 2 : {
+            _arguments call _function;
 
-      GVAR(remoteFnc) set [2, 0];
-      publicVariable QGVAR(remoteFnc);
+            GVAR(remoteFnc) set [2, 0];
+            publicVariable QGVAR(remoteFnc);
+        };
+        case 3 : {
+            if (isDedicated) then {
+                _arguments call _function;
+            } else {
+                if (!isServer) then {publicVariableServer QGVAR(remoteFnc)};
+            };
+        };
     };
-    case 3 : {
-      if (isDedicated) then {
-        _arguments call _function;
-      } else {
-        if (!isServer) then {publicVariableServer QGVAR(remoteFnc)};
-      };
-    };
-  };
 };
 
 if (local _unit) then {
-  _arguments call _function;
+    _arguments call _function;
 } else {
-  if (isServer) then {
-    _id = owner _unit;
-    _id publicVariableClient QGVAR(remoteFnc);
-  } else {
-    publicVariableServer QGVAR(remoteFnc);
-  };
+    if (isServer) then {
+        _id = owner _unit;
+        _id publicVariableClient QGVAR(remoteFnc);
+    } else {
+        publicVariableServer QGVAR(remoteFnc);
+    };
 };

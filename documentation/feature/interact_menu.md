@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Interact Menu
+description: 
 group: feature
 parent: wiki
 ---
@@ -22,4 +23,6 @@ instructions. May not apply to all modules.
 
 ## Dependencies
 
-List of modules that must be present for this module to work.
+`ace_common`
+
+Note: The Interact Menu module is required by many other modules. Disabling it is not recommended.

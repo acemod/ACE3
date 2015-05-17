@@ -1,10 +1,9 @@
 //fnc_hashRem.sqf
 #include "script_component.hpp"
 
-private ["_hash", "_key", "_val", "_index"];
+private ["_val", "_index"];
 
-_hash = _this select 0;
-_key = _this select 1;
+PARAMS_2(_hash,_key);
 ERRORDATA(2);
 _val = nil;
 try {

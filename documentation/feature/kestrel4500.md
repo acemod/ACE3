@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Kestrel 4500
+description: 
 group: feature
 parent: wiki
 ---
@@ -22,4 +23,4 @@ instructions. May not apply to all modules.
 
 ## Dependencies
 
-List of modules that must be present for this module to work.
+`ace_common`, `ace_weather`

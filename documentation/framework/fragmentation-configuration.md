@@ -1,12 +1,13 @@
 ---
 layout: wiki
 title: Fragmentation Configuration
+description: The fragmentation system (ace_frag) in ACE3 is a significant improvement over the fragmentation system in ACE2.
 group: framework
 parent: wiki
 order: 7
 ---
 
-The fragmentation system (sys_frag) in ACE3 is a significant improvement over the fragmentation system in ACE2. Previously the system relied on fuzzy math from the values of `indirectHit` and `indirectHitRange` in CfgAmmo to calculate roughly the velocity and range of fragmentation. This had some serious drawbacks, especially in the case of smaller explosives such as hand grenades and 40mm grenades where casualty production was lower than desired.
+The fragmentation system (ace_frag) in ACE3 is a significant improvement over the fragmentation system in ACE2. Previously the system relied on fuzzy math from the values of `indirectHit` and `indirectHitRange` in CfgAmmo to calculate roughly the velocity and range of fragmentation. This had some serious drawbacks, especially in the case of smaller explosives such as hand grenades and 40mm grenades where casualty production was lower than desired.
 
 In ACE3 the system has moved away from what "feels" right to actual explosive engineering equations, primarily the [Gurney equations](http://en.wikipedia.org/wiki/Gurney_equations). This allows us to get close to the actual fragmentation velocities that would be produced by an explosive configuration similar to type of ammo we are simulating.
 

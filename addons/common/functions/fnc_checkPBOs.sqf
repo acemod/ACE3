@@ -16,13 +16,11 @@
  */
 #include "script_component.hpp"
 
-private ["_mode", "_checkAll", "_whitelist", "_logic"];
+private ["_logic"];
 
 _this resize 3;
 
-_mode = _this select 0;
-_checkAll = _this select 1;
-_whitelist = _this select 2;
+PARAMS_3(_mode,_checkAll,_whitelist);
 
 if (isNil "_checkAll") then {
     _checkAll = false;

@@ -1,6 +1,8 @@
 ---
 layout: wiki
 title: Overheating
+description: 
+description: 
 group: feature
 parent: wiki
 ---
@@ -32,4 +34,4 @@ To clear a jammed weapon, press Shift+R.
 
 ## Dependencies
 
-List of modules that must be present for this module to work.
+`ace_interaction`
