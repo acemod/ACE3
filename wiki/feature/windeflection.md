@@ -8,7 +8,7 @@ parent: wiki
 
 ## 1. Overview
 
-Wind Deflection is enabled by default. This feature simulates the wind deflection of projectiles fired by players and is designed to work independently or in conjunction with the Advanced Ballistic feature.
+ACE3 Wind Deflection is enabled by default. This feature simulates the wind deflection of projectiles fired by players and is designed to work independently or in conjunction with the Advanced Ballistic feature.
 
 <div class="panel callout">
     <h5>Note:</h5>
