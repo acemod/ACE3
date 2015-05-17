@@ -40,7 +40,7 @@ if !(isNil QGVAR(ifOpen)) then {
 _displayName = switch (_this) do {
     case 0: {QGVAR(GD300_dsp)};
     case 1: {QGVAR(GD300_dlg)};
-    default {QGVAR(JV5_dlg)};
+    default {QGVAR(DK10_dlg)}; // JV5_dlg
 };
 
 if (_displayName != "") then {

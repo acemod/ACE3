@@ -21,13 +21,13 @@ class ACE_BFT {
 
     class Side {
         class NATO {
-            encryptionKeys[] = {"NATO_encryption"};
+            encryptionKeys[] = {""};
         };
         class EAST {
-            encryptionKeys[] = {"EAST_encryption"};
+            encryptionKeys[] = {""};
         };
         class IND {
-            encryptionKeys[] = {"IND_encryption"};
+            encryptionKeys[] = {""};
         };
     };
 

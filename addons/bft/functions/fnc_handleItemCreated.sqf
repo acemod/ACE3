@@ -47,7 +47,7 @@ _defaultValues = getArray(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >>
 
 _refreshRate = getNumber(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "refreshRate");
 
-_deviceEncryptionKeys = ["DEFAULT_SIDE_ENCYPTION"]; // TODO encyption keys
+_deviceEncryptionKeys = [_deviceSide] call FUNC(getEncryptionKey); // getting the default encryption keys for this side
 
 _elementType = _owner getvariable format[QGVAR(elementType_%1),_item];
 _elementSize = _owner getvariable format[QGVAR(elementSize_%1),_item];
