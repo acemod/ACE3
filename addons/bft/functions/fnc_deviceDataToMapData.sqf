@@ -36,5 +36,6 @@ _callsign = _assignableInformation select 2;
 _groupID = _assignableInformation select 3;
 
 _position = getPosASL _owner;
+_color = [_groupID] call FUNC(getGroupColor);
 
-[_deviceID, _deviceID, _typeIconPath, _sizeIconPath, _position, _encryptionKeys, _groupID, _deviceClass, time, _refreshRate, _owner, _viewModes];
+[_deviceID, _callsign, _typeIconPath, _sizeIconPath, _position, _encryptionKeys, [_groupID, _color], _deviceClass, time, _refreshRate, _owner, _viewModes];
