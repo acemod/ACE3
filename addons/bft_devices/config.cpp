@@ -14,6 +14,7 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 
 // General UI defines and controls
