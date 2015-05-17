@@ -15,4 +15,5 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgMagazines.hpp"
+#include "CfgVehicles.hpp"
 #include "ACE_BFT.hpp"

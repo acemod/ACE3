@@ -12,7 +12,7 @@ class CfgWeapons {
         mapSize = 0.034;
 
         // Specify if this item has BFT enabled.
-        GVAR(deviceType) = "FBCB2";
+        GVAR(deviceType) = "FBCB2Device";
         // Magazine type for unique IDs. This is the magazine classname by which this item will be replaced. Will be replaced once BI implements unique Ids for items.
         GVAR(magazineItem) = "ACE_bftMagazineBase";
 
