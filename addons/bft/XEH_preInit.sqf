@@ -19,6 +19,8 @@ PREP(getSizeIcon);
 PREP(getTypeIcon);
 PREP(vehicleInit);
 PREP(encryptionKeyMatch);
+PREP(updateRegisteredEncryptionKeys);
+PREP(updateRegisteredModes);
 
 PREP(handleSyncedArrayPushback);
 PREP(handleSyncedArrayDelete);
@@ -38,6 +40,7 @@ GVAR(orbatElements) = [];
 
 
 GVAR(registeredEncyptionKeys) = ["DEFAULT_SIDE_ENCYPTION"];
+GVAR(registeredViewModes) = ["FBCB2"];
 GVAR(availableDevices) = [];
 
 // local data collections
