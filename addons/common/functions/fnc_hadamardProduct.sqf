@@ -13,8 +13,9 @@
  */
 #include "script_component.hpp"
 
-_vector1 = _this select 0;
-_vector2 = _this select 1;
+PARAMS_2(_vector1,_vector2);
+
+private ["_newVector", "_i"];
 
 _newVector = [];
 

@@ -14,12 +14,12 @@
     NUMBER
 
   Example:
-    _number = ["102"] call FUNC(toNumber);
+    number = ["102"] call FUNC(toNumber);
 */
 #include "script_component.hpp"
 
 if (typeName (_this select 0) == "SCALAR") exitWith {
-  (_this select 0)
+    (_this select 0)
 };
 
 (parseNumber (_this select 0))

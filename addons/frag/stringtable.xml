@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
         <Key ID="STR_DN_ACE_FRAG">
@@ -11,7 +11,7 @@
             <French>Désactive la fragmentation</French>
             <Hungarian>Repeszek letiltása</Hungarian>
             <Italian>Disattiva la frammentazione</Italian>
-            <Portuguese>Disabilitar Fragmentação</Portuguese>
+            <Portuguese>Desabilitar Fragmentação</Portuguese>
         </Key>
     </Package>
 </Project>

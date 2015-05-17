@@ -16,23 +16,8 @@
 private ["_side", "_type"];
 _side = _this select 0;
 _type = _this select 1;
-/*
-switch (_side) do {
-    case west: {
 
-    };
-    case east: {
-
-    };
-    case independent: {
-
-    };
-    case civilian: {
-
-    };
-    default {
-
-    };
-};*/
-
+if (isClass (configFile >> "ACE_BFT" >> "Types" >> _type)) exitwith {
+    getText (configFile >> "ACE_BFT" >> "Types" >> _type >> "iconPath");
+};
 "\A3\ui_f\data\map\markers\nato\b_inf.paa";

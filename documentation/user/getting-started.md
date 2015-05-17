@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Getting started
+description: Downloaded ACE3 and have no idea where to start? This page serves as a document to help new players get started with things like the medical system, or how to adjust your scope.
 group: user
 order: 0
 parent: wiki
@@ -13,10 +14,8 @@ parent: wiki
 
 Downloaded ACE3 and have no idea where to start? This page serves as a document to help new players get started with things like the medical system, or how to adjust your scope.
 
-### Table of contents
-1. [Vector 21](#vector-21)
 
-### Vector 21
+### 1. Vector 21
 *Part of: ace_vector*
 
 ACE3 adds a realistic depiction of the Vector 21 rangefinder to the game. Unlike other rangefinders, it doesn't just magically show you the range to your target, but in exchange allows you to do alot of things with it that the other choices in Arma do not offer. The Vector's functions include, but are not limited to:
@@ -45,46 +44,46 @@ The Vector 21 rangefinder has the following usage modes:
 9. Fall of shot
 
 #### 1. Slope distance
-<img src="{{ site.baseurl }}/img/wiki/user/vector1.png" alt="Measuring Slope distance" />
+<img src="{{ site.baseurl }}/img/wiki/user/vector1.jpg" width="500" height="160" alt="Measuring Slope distance" />
 
 Press and hold the "Distance" key until the red pointing circle appears. Sight the circle on the object and release the key.
 
 #### 2. Azimuth
-<img src="{{ site.baseurl }}/img/wiki/user/vector2.png" alt="Measuring Azimuth" />
+<img src="{{ site.baseurl }}/img/wiki/user/vector2.jpg" width="500" height="160" alt="Measuring Azimuth" />
 
-Press and hold the "Azimuth" key until the red pointing circle appears. Sight the circle on the object and release the key.
+Press and hold the "Azimuth" key until the azimuth is displayed.
 
 #### 3. Slope distance and Azimuth
-<img src="{{ site.baseurl }}/img/wiki/user/vector3.png" alt="Measuring Slope distance and Azimuth" />
+<img src="{{ site.baseurl }}/img/wiki/user/vector3.jpg" width="500" height="160" alt="Measuring Slope distance and Azimuth" />
 
 Press and hold both the "Distance" and "Azimuth" key until the red pointing circle appears. Sight the circle on the object and release both keys.
 
 #### 4. Horizontal distance and height difference
-<img src="{{ site.baseurl }}/img/wiki/user/vector4.png" alt="Measuring Horizontal distance and height difference"/>
+<img src="{{ site.baseurl }}/img/wiki/user/vector4.jpg" width="500" height="160" alt="Measuring Horizontal distance and height difference"/>
 
 Tap the "Distance" key once then press and hold it until the red pointing circle appears. Sight the circle on the object and release the key.
 
 #### 5. Azimuth and Inclination
-<img src="{{ site.baseurl }}/img/wiki/user/vector5.png" alt="Measuring Azimuth and Inclination"/>
+<img src="{{ site.baseurl }}/img/wiki/user/vector5.jpg" width="500" height="160" alt="Measuring Azimuth and Inclination"/>
 
-Tap the "Azimuth" key once then press and hold it until the red pointing circle appears. Sight the circle on the object and release the key.
+Tap the "Azimuth" key once then press and hold it until the azimuth and inclination is displayed.
 
 #### 6. Distance between two points
-<img src="{{ site.baseurl }}/img/wiki/user/vector6.png" alt="Measuring Distance between two points"/>
+<img src="{{ site.baseurl }}/img/wiki/user/vector6.jpg" width="500" height="160" alt="Measuring Distance between two points"/>
 
 Press and hold the "Distance" key until the red pointing circle appears. Sight the circle on the first object and tap the "Azimuth" key while further holding the "Distance" key. The first measurement is confirmed ("1-P" = first point). Sight the second object and release the "Distance" key.
 
 #### 7. Horizontal and vertical distance between two points
-<img src="{{ site.baseurl }}/img/wiki/user/vector7.png" alt="Measuring Horizontal and vertical distance between two points"/>
+<img src="{{ site.baseurl }}/img/wiki/user/vector7.jpg" width="500" height="160" alt="Measuring Horizontal and vertical distance between two points"/>
 
 Tap the "Distance" key once then press and hold it until the red pointing circle appears. Sight the circle on the object and tap the "Azimuth" key once. The first measurement is confirmed ("1-P" = first point). Sight the second object and release the "Distance" key.
 
 #### 8. Horizontal distance and azimuth between two points
-<img src="{{ site.baseurl }}/img/wiki/user/vector8.png" alt="Measuring Horizontal distance and azimuth between two points"/>
+<img src="{{ site.baseurl }}/img/wiki/user/vector8.jpg" width="500" height="160" alt="Measuring Horizontal distance and azimuth between two points"/>
 
-Press and hold the "Azimuth" key until the red pointing circle appears. Sight the circle on the first object and tap the "Distance" key while further holding the "Azimuth" key. The first measurement is confirmed ("1-P" = first point). Sight the second object and release the "Azimuth" key.
+Press and hold the "Azimuth" key until the azimuth appears. Sight the circle on the first object and tap the "Distance" key while further holding the "Azimuth" key. The first measurement is confirmed ("1-P" = first point). Sight the second object and release the "Azimuth" key.
 
 #### 9. Fall of shot
-<img src="{{ site.baseurl }}/img/wiki/user/vector9.png" alt="Measuring Fall of shot"/>
+<img src="{{ site.baseurl }}/img/wiki/user/vector9.jpg" width="500" height="160" alt="Measuring Fall of shot"/>
 
-Tap the "Azimuth" key once then press and hold it until the red pointing circle appears. Sight the circle on the object and tap the "Distance" key while further holding the "Azimuth" key. The first measurement is confirmed ("1-P" = first point). Sight the Fall of shot and release the "Azimuth" key. The left digits display the left (`L`)/right (`r`) correction value in meter and the right digits display the longer (`A` = add)/shorter (`d` = drop) correction value in meter. If the "Distance" key is tapped the height correction values will be displayed (`UP` and `dn`).
+Tap the "Azimuth" key once then press and hold it until the azimuth appears. Sight the circle on the object and tap the "Distance" key while further holding the "Azimuth" key. The first measurement is confirmed ("1-P" = first point). Sight the Fall of shot and release the "Azimuth" key. The left digits display the left (`L`)/right (`r`) correction value in meter and the right digits display the longer (`A` = add)/shorter (`d` = drop) correction value in meter. If the "Distance" key is tapped the height correction values will be displayed (`UP` and `dn`).

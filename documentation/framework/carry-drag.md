@@ -1,12 +1,13 @@
 ---
 layout: wiki
 title: Carry and Drag System
+description:
 group: framework
 order: 5
 parent: wiki
 ---
 
-# 1. Config Values
+## 1. Config Values
 
 ```
 class CfgVehicles {

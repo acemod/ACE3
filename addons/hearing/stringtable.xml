@@ -106,7 +106,24 @@
             <Czech>Vypnout pískání v uších</Czech>
             <Polish>Wyłącz dzwonienie w uszach</Polish>
             <Hungarian>Fülcsengés letiltása</Hungarian>
-            <Italian>Disabilita il ronzio</Italian>
+            <Italian>Disabilita i fischi nelle orecchie</Italian>
+            <Portuguese>Desabilitar zumbido de ouvidos</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Hearing_Module_DisplayName">
+            <English>Hearing</English>
+            <Polish>Słuch</Polish>
+        </Key>
+        <Key ID="STR_ACE_Hearing_CombatDeafness_DisplayName">
+            <English>Enable combat deafness?</English>
+            <Polish>Wł. głuchotę bojową</Polish>
+        </Key>
+        <Key ID="STR_ACE_Hearing_CombatDeafness_Description">
+            <English>Enable combat deafness?</English>
+            <Polish>Możliwość chwilowej utraty słuchu przy głośnych wystrzałach i jednoczesnym braku włożonych stoperów</Polish>
+        </Key>
+        <Key ID="STR_ACE_Hearing_Module_Description">
+            <English></English>
+            <Polish>Głuchota bojowa pojawia się w momentach, kiedy stoimy w pobliżu broni wielkokalibrowej bez ochrony słuchu, lub np. podczas ostrzału artyleryjskiego. Moduł ten pozwala na włączenie lub wyłączenie tego efektu.</Polish>
         </Key>
     </Package>
 </Project>

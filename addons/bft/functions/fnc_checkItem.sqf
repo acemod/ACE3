@@ -21,7 +21,9 @@ _item = _this select 1;
 if !(local _unit) exitwith {};
 
 
-if (isNumber (configFile >> "CfgWeapons" >> _item >> QGVAR(enabled)) && {getNumber(configFile >> "CfgWeapons" >> _item >> QGVAR(enabled)) >= 0}) then {
+if (isText (configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) && {getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) != ""}) then {
+
+    if !(isClass (configFile >> "ACE_BFT" >> "Devices" >> (getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType))))) exitwith {};
 
     systemChat format["%1 BFT enabled item %2", _unit, _item];
     diag_log format["%1 BFT enabled item %2", _unit, _item];

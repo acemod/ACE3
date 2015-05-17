@@ -20,9 +20,9 @@ Example:
 */
 #include "script_component.hpp"
 
-private ["_unit", "_uav", "_positionArray", "_playerIndex"];
+private ["_uav", "_positionArray", "_playerIndex"];
 
-_unit = _this select 0;
+PARAMS_1(_unit);
 _uav = getConnectedUAV _unit;
 if (isNull _uav) exitWith {""};
 _positionArray = UAVControl _uav;

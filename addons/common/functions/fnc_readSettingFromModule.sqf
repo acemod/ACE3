@@ -16,11 +16,11 @@
 
 if !(isServer) exitWith {};
 
-EXPLODE_3_PVT(_this,_logic,_settingName,_moduleVariable);
+PARAMS_3(_logic,_settingName,_moduleVariable);
 
 // Check if the parameter is defined in the module
 if (isNil {_logic getVariable _moduleVariable}) exitWith {
-  diag_log text format["[ACE]: Warning in %1 module: %2 setting is missing. Probably an obsolete version of the module is used in the mission.", typeOf _logic, _moduleVariable];
+    diag_log text format["[ACE]: Warning in %1 module: %2 setting is missing. Probably an obsolete version of the module is used in the mission.", typeOf _logic, _moduleVariable];
 };
 
 // Set the setting globally and force it

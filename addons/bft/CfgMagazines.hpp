@@ -11,6 +11,8 @@ class CfgMagazines {
         descriptionShort = "";
         descriptionUse = "";
         mass = 1;
+
+        // classname of the item entry, for easily identifying the device type
         GVAR(type) = "ACE_bftItemBase";
     };
 };

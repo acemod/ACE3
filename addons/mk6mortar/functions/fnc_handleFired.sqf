@@ -42,8 +42,7 @@ if (_bisAirFriction != 0) exitWith {ERROR("Non zero base airFriction");};
 
 //Calculate air density:
 _altitude = (getPosASL _vehicle) select 2;
-#define GET_TEMPERATURE_AT_HEIGHT(h) (EGVAR(weather,currentTemperature) - 0.0065 * (h))
-_temperature = GET_TEMPERATURE_AT_HEIGHT(_altitude);
+_temperature = _altitude call EFUNC(weather,calculateTemperatureAtHeight);
 _pressure = _altitude call EFUNC(weather,calculateBarometricPressure);
 _relativeHumidity = EGVAR(weather,currentHumidity);
 _airDensity = [_temperature, _pressure, _relativeHumidity] call EFUNC(weather,calculateAirDensity);

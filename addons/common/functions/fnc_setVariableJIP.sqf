@@ -13,11 +13,9 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_varName", "_value", "_respawnVariables"];
+private ["_respawnVariables"];
 
-_unit = _this select 0;
-_varName = _this select 1;
-_value = _this select 2;
+PARAMS_3(_unit,_varName,_value);
 
 _respawnVariables = _unit getVariable ["ACE_respawnVariables", []];
 

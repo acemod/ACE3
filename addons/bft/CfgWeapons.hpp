@@ -11,12 +11,13 @@ class CfgWeapons {
         icon = "iconObject_circle";
         mapSize = 0.034;
 
-        GVAR(enabled) = 1;
+        // Specify if this item has BFT enabled.
+        GVAR(deviceType) = "FBCB2Device";
+        // Magazine type for unique IDs. This is the magazine classname by which this item will be replaced. Will be replaced once BI implements unique Ids for items.
         GVAR(magazineItem) = "ACE_bftMagazineBase";
 
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
         };
     };
-
 };

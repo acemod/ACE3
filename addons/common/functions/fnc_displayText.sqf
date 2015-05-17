@@ -20,11 +20,9 @@
 
 _this resize 4;
 
-private ["_text", "_sound", "_delay", "_priority", "_lastHintTime", "_lastHintPriority", "_time"];
-_text = _this select 0;
-_sound = _this select 1;
-_delay = _this select 2;
-_priority = _this select 3;
+private ["_lastHintTime", "_lastHintPriority", "_time"];
+
+PARAMS_4(_text,_sound,_delay,_priority);
 
 if (isNil QGVAR(lastHint)) then {
     GVAR(lastHint) = [0, 0];

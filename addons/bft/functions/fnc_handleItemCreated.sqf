@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_owner", "_item", "_magazine", "_magID", "_deviceSide", "_deviceEncryptionKeys", "_assignableInformation", "_app", "_deviceInformation", "_exists"];
+private ["_owner", "_item", "_magazine", "_magID", "_deviceType", "_deviceSide", "_refreshRate", "_deviceEncryptionKeys", "_assignableInformation", "_app", "_deviceInformation", "_exists", "_deviceModes"];
 _owner = _this select 0;
 _item = _this select 1;
 _magazine = _this select 2;
@@ -40,17 +40,23 @@ _exists = false;
 }foreach GVAR(deviceData);
 if (_exists) exitwith {};
 
-_deviceSide = getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceSide));
+_deviceType = if (_magazine != "") then { getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) } else { _item };
+_deviceSide = getText(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "deviceSide");
+_deviceModes = getArray(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "reportingModes");
+_defaultValues = getArray(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "defaultInformation");
+
+_refreshRate = getNumber(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "refreshRate");
+
 // if (_deviceSide == "") exitwith {};
-_deviceEncryptionKeys = []; // TODO encyption keys
+_deviceEncryptionKeys = ["DEFAULT_SIDE_ENCYPTION"]; // TODO encyption keys
 
 // format: [elementType, elementSize, elementCallsign, orbatElementID]
-_assignableInformation = _owner getvariable [format[QGVAR(assignableInformation_%1),_item], ["elementType", 0, "elementCallsign", 0]];
+_assignableInformation = _owner getvariable [format[QGVAR(assignableInformation_%1),_item], _defaultValues];
 
 // format: app ID, app data
 _app = [-1, []];
 
-// format: device ID, deviceSide [side, encryptionKeys], deviceInformation [elementType, elementSize, callsign, orbatID], appInformation [appID, appData], timeLoggedIn, owner]
-_deviceInformation = [_magID, [_deviceSide, _deviceEncryptionKeys], _assignableInformation, _app, -1, _owner, _item];
+// format: device ID, deviceSide [side, encryptionKeys], deviceInformation [elementType, elementSize, callsign, orbatID], appInformation [appID, appData], timeLoggedIn, owner, item, deviceType]
+_deviceInformation = [_magID, [_deviceSide, _deviceEncryptionKeys], _assignableInformation, _app, -1, _owner, _item, _deviceType, _refreshRate, _deviceModes];
 
 ["bft_addDeviceData", _deviceInformation] call EFUNC(common,globalEvent);

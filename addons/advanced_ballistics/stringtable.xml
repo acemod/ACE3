@@ -11,6 +11,7 @@
             <German>Windinformationen anzeigen</German>
             <Hungarian>Széladatok mutatása</Hungarian>
             <Czech>Zobrazit informace o větru</Czech>
+            <Portuguese>Mostrar Informação do Vento</Portuguese>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_ProtractorKey">
             <English>Show Protractor</English>
@@ -22,6 +23,87 @@
             <German>Winkelmesser anzeigen</German>
             <Hungarian>Szögmérő mutatása</Hungarian>
             <Czech>Zobrazit úhloměr</Czech>
+            <Portuguese>Mostrar Transferidor</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_DisplayName">
+            <English>Advanced Ballistics</English>
+            <Polish>Zaawansowana balistyka</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_enabled_DisplayName">
+            <English>Advanced Ballistics</English>
+            <Polish>Zaawansowana balistyka</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_enabled_Description">
+            <English>Enables advanced ballistics</English>
+            <Polish>Aktywuje zaawansowaną balistykę</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_alwaysSimulateForSnipers_DisplayName">
+            <English>Always Enabled For Snipers</English>
+            <Polish>Zawsze akt. dla snajp.</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_alwaysSimulateForSnipers_Description">
+            <English>Always enables advanced ballistics when high power optics are used</English>
+            <Polish>Aktywuje zaawansowaną balistykę zawsze, kiedy używana jest optyka</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_disabledInFullAutoMod_DisplayName">
+            <English>Disabled In FullAuto Mode</English>
+            <Polish>Wył. podczas ognia auto.</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_disabledInFullAutoMod_Description">
+            <English>Disables the advanced ballistics during full auto fire</English>
+            <Polish>Dezaktywuje zaawansowaną balistykę podczas ognia automatycznego</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_onlyActiveForLocalPlayers_DisplayName">
+            <English>Disabled For Non Local Players</English>
+            <Polish>Wyłącz dla nielok. graczy</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_onlyActiveForLocalPlayers_Description">
+            <English>Disables the advanced ballistics for bullets coming from other players (enable this if you encounter frame drops during heavy firefights in multiplayer)</English>
+            <Polish>Dezaktywuje zaawansowaną balistykę dla pocisków pochodzących od innych graczy(aktywuj tą opcję jeżeli odczuwasz spadki FPS podczas sporych strzelanin w MP)</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_ammoTemperatureEnabled_DisplayName">
+            <English>Enable Ammo Temperature Simulation</English>
+            <Polish>Symulacja temp. amunicji</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_ammoTemperatureEnabled_Description">
+            <English>Muzzle velocity varies with ammo temperature</English>
+            <Polish>Prędkość wylotowa pocisku jest zależna od temperatury amunicji</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_barrelLengthInfluenceEnabled_DisplayName">
+            <English>Enable Barrel Length Simulation</English>
+            <Polish>Symulacja długości lufy</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_barrelLengthInfluenceEnabled_Description">
+            <English>Muzzle velocity varies with barrel length</English>
+            <Polish>Prędkość wylotowa pocisku jest zależna od długości lufy</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_bulletTraceEnabled_DisplayName">
+            <English>Enable Bullet Trace Effect</English>
+            <Polish>Efekt smugi pocisku</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_bulletTraceEnabled_Description">
+            <English>Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics)</English>
+            <Polish>Aktywuje efekt smugi pocisku dla pocisków wysokokalibrowych (widoczne tylko podczas patrzenia przez optykę)</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulationInterval_DisplayName">
+            <English>Simulation Interval</English>
+            <Polish>Interwał symulacji</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulationInterval_Description">
+            <English>Defines the interval between every calculation step</English>
+            <Polish>Określa interwał pomiędzy każdym krokiem kalkulacji</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulationRadius_DisplayName">
+            <English>Simulation Radius</English>
+            <Polish>Zasięg symulacji</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulationRadius_Description">
+            <English>Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles</English>
+            <Polish>Określa obszar naokoło gracza (w metrach), na którym zaawansowana balistyka jest aplikowana dla pocisków</Polish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_Description">
+            <English></English>
+            <Polish>Moduł ten pozwala aktywować zaawansowaną balistykę biorącą przy obliczeniach trajektorii lotu pocisku pod uwagę takie rzeczy jak temperatura powietrza, ciśnienie atmosferyczne, wilgotność powietrza, siły Coriolisa i Eotvosa, grawitację a także broń z jakiej wykonywany jest strzał oraz rodzaj amunicji. Wszystko to sprowadza się na bardzo dokładne odwzorowanie balistyki.</Polish>
         </Key>
     </Package>
 </Project>
