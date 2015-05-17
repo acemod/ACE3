@@ -11,7 +11,7 @@
  * Just the image path or "" if none
  */
 
-#include "ace_common.h"
+#include "shared.hpp"
 
 #include <sstream>
 #include <string>
@@ -41,12 +41,14 @@ std::string getImagePathFromStructuredText(const std::string & input) {
 #pragma warning( disable : 4996 )
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
+	ZERO_OUTPUT();
     if (!strcmp(function, "version")) {
         strncpy(output, ACE_FULL_VERSION_STR, outputSize);
     } else {
         strncpy(output, getImagePathFromStructuredText(function).c_str(), outputSize);
         output[outputSize - 1] = '\0';
     }
+	EXTENSION_RETURN();
 }
 
 #pragma warning( pop )
