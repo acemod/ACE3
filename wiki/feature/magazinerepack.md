@@ -6,20 +6,20 @@ group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Repacking magazines
-Adds ability to repack magazines of the same type. An optional module provides 
-options to adjust the repacking time of single rounds and whole magazines to 
-the mission maker.
+### 1.1 Repacking magazines
+Adds the ability to repack magazines of the same type.
 
 
-## Usage
+## 2. Usage
 
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+### 2.1 Repacking
+- For this you need multiple half empty mags of the same type.
+- Press the self interaction button <kbd> ctrl+left windows </kbd> (by default).
+- Select `Repack magazines`.
+- Select the type of magazines you want to repack.
 
-
-## Dependencies
+## 3. Dependencies
 
 `ace_interaction`
