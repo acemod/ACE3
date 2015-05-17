@@ -45,7 +45,7 @@ _vehicleId = _vehicle getVariable[QGVAR(id), -1];
 //#define RELATIVE_VECTOR_TEXT(o,x) ([(o worldToModelVisual ((x) call EFUNC(common,ASLToPosition)))] call FUNC(_textVector))
 
 // Get a relative velocity!?!?
-_relImpactPosition = _vehicle worldToModelVisual _impactPosition;
+_relImpactPosition = _vehicle worldToModelVisual (ASLtoATL _impactPosition);
 _projectilePosition = _vehicle worldToModelVisual (position _projectile);
 
 _relProjectilePos = (position _projectile) vectorAdd (velocity _projectile);
