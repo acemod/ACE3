@@ -40,12 +40,12 @@ _exists = false;
 }foreach GVAR(deviceData);
 if (_exists) exitwith {};
 
-_deviceType = getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType));
+_deviceType = if (_magazine != "") then { getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) } else { _item };
 _deviceSide = getText(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "deviceSide");
 _refreshRate = getNumber(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "refreshRate");
 
 // if (_deviceSide == "") exitwith {};
-_deviceEncryptionKeys = []; // TODO encyption keys
+_deviceEncryptionKeys = ["DEFAULT_SIDE_ENCYPTION"]; // TODO encyption keys
 
 // format: [elementType, elementSize, elementCallsign, orbatElementID]
 _assignableInformation = _owner getvariable [format[QGVAR(assignableInformation_%1),_item], ["elementType", 0, "elementCallsign", 0]];

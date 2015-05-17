@@ -23,6 +23,8 @@ if !(local _unit) exitwith {};
 
 if (isText (configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) && {getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) != ""}) then {
 
+    if !(isClass (configFile >> "ACE_BFT" >> "Devices" >> (getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType))))) exitwith {};
+
     systemChat format["%1 BFT enabled item %2", _unit, _item];
     diag_log format["%1 BFT enabled item %2", _unit, _item];
 

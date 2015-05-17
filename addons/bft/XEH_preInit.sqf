@@ -18,6 +18,7 @@ PREP(deviceDataToMapData);
 PREP(getSizeIcon);
 PREP(getTypeIcon);
 PREP(vehicleInit);
+PREP(encryptionKeyMatch);
 
 PREP(handleSyncedArrayPushback);
 PREP(handleSyncedArrayDelete);
@@ -35,10 +36,15 @@ GVAR(messages) = [];
 GVAR(requests) = [];
 GVAR(orbatElements) = [];
 
+
+GVAR(registeredEncyptionKeys) = ["DEFAULT_SIDE_ENCYPTION"];
 GVAR(availableDevices) = [];
 
 // local data collections
 GVAR(colorFilters) = [];
 
 GVAR(localOwnedEncyptionKeys) = [];
+
+GVAR(updateAvailableDevicesPositions) = true;
+
 ADDON = true;
