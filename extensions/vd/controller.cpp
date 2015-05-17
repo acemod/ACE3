@@ -125,9 +125,9 @@ namespace ace {
             if (model_str[0] == '\\') {
                 model_str.erase(model_str.begin());
             }
-
-            if (ace::model_collection::get().load_model(model_str)) {
-                std::shared_ptr<ace::simulation::object> _object = std::make_shared<ace::simulation::object>(model_collection::get().models[model_str].model, (static_cast<int>(_args[2]) != 0 ? true : false));
+			std::string model_key = "";
+            if (ace::model_collection::get().load_model(model_str, model_key)) {
+                std::shared_ptr<ace::simulation::object> _object = std::make_shared<ace::simulation::object>(model_collection::get().models[model_key].model, (static_cast<int>(_args[2]) != 0 ? true : false));
                 vehicle_p _vehicle = std::make_shared<vehicle>(static_cast<uint32_t>(_args[1]), _object, false, _args[3]);
                 vehicles[static_cast<uint32_t>(_args[1])] = _vehicle;
 

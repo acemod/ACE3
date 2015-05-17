@@ -19,8 +19,24 @@ namespace ace {
                     break;
                 }
             }
-            if (fire_lod == -1) // @TODO: fallback on geo LOD
-                fire_lod = 0;
+			if (fire_lod == -1) {
+				for (int x = 0; x < object_->lods.size(); x++) {
+					if (object_->lods[x]->type == LOD_TYPE_GEOMETRY) {
+						fire_lod = x;
+						break;
+					}
+				}
+			}
+			if (fire_lod == -1) {
+				for (int x = 0; x < object_->lods.size(); x++) {
+					if (object_->lods[x]->type == LOD_TYPE_GEOMETRY_VIEW) {
+						fire_lod = x;
+						break;
+					}
+				}
+			}
+           // if (fire_lod == -1) // @TODO: fallback on geo LOD
+           //     fire_lod = 0;
 			//fire_lod = 0;
             assert(fire_lod != -1);
             

@@ -19,7 +19,7 @@ namespace ace {
     class model_collection : public singleton<model_collection> {
     public:
         model_collection();
-        bool load_model(const std::string & p3d_path);
+        bool load_model(const std::string & p3d_path, std::string & key_name);
    
         bool init();
         bool reset();

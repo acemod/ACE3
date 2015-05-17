@@ -19,6 +19,6 @@ for [{_i=0}, {_i<(count _this)-1}, {_i=_i+3}] do {
                     ]);
 };
 //TRACE_1("", _points);
-GVAR(debug_lines) pushBack [(ASLToATL (_points select 0)), (ASLToATL (_points select 1))];
-GVAR(debug_lines) pushBack [(ASLToATL (_points select 1)), (ASLToATL (_points select 2))];
-GVAR(debug_lines) pushBack [(ASLToATL (_points select 2)), (ASLToATL (_points select 0))];
+GVAR(debug_lines) pushBack [((_points select 0)), ((_points select 1))];
+GVAR(debug_lines) pushBack [((_points select 1)), ((_points select 2))];
+GVAR(debug_lines) pushBack [((_points select 2)), ((_points select 0))];

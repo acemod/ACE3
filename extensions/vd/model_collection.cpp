@@ -71,7 +71,7 @@ namespace ace {
         return true;
     }
 
-    bool model_collection::load_model(const std::string & p3d_path) {
+    bool model_collection::load_model(const std::string & p3d_path, std::string &key_name) {
         std::string working_path = p3d_path;
 
         // Flag ourselves as unready, because we are loading a model
@@ -91,6 +91,7 @@ namespace ace {
 
         auto iter = _pbo_searcher->file_index().find(working_path);
         if (iter != _pbo_searcher->file_index().end()) {
+			key_name = working_path;
             return _load_model(iter->first, iter->second);
         }
 
