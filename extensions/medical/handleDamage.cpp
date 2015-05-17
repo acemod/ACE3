@@ -50,7 +50,6 @@ namespace ace {
 
                 return stream.str();
             }
-            stream << "";
             return stream.str();
         }
 
@@ -152,8 +151,6 @@ namespace ace {
         {
             if (input.size() == 9)
             {
-                // TODO parse arrays from string input
-
                 int ID = std::stod(input[0]);
                 std::string className = input[1];
                 std::vector<std::string> allowedSelections = inputToVector(input[2]);
@@ -186,10 +183,8 @@ namespace ace {
             return "failed";
         }
 
-        std::string handleDamage::FinalizeDefinitions()
+        void handleDamage::FinalizeDefinitions()
         {
-            std::stringstream outputstream;
-
             // We are finding all possible injuries for a specific damage type here, so we don't have to figure that out at a later stage.
             for each (std::shared_ptr<ace::medical::injuries::DamageType> damageType in damageTypes)
             {
@@ -202,9 +197,7 @@ namespace ace {
                         damageType->possibleInjuries.push_back(injuryType);
                     }
                 }
-                outputstream << " ---- For: " << damageType->typeName << " Added: " << damageType->possibleInjuries.size() << " --- ";
             }
-            return outputstream.str();
         }
 
         int handleDamage::SelectionToNumber(const std::string& selectionName)

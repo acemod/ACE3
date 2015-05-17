@@ -35,7 +35,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     }
     else 
     {
-
         std::string returnValue = "";
         std::vector<std::string> arguments = parseExtensionInput(function);
         if (arguments.size() > 0) 
@@ -59,7 +58,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
                 }
             }
             else if (command == "ConfigComplete") {
-                returnValue = ace::medical::handleDamage::GetInstance().FinalizeDefinitions();
+                ace::medical::handleDamage::GetInstance().FinalizeDefinitions();
             }
         }
         strncpy(output, returnValue.c_str(), outputSize);
