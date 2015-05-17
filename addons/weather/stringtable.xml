@@ -71,7 +71,7 @@
         <Key ID="STR_ACE_Weather_syncMisc_Description">
             <English>Synchronizes lightnings, rainbow, fog, ...</English>
             <Polish>Synchronizuje pioruny, tęcze, mgłę, ...</Polish>
-            <Spanish>Sincroniza relampagos, arcoiris, niebla...</Spanish>
+            <Spanish>Sincroniza relampagos, arcoiris, niebla ...</Spanish>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_DisplayName">
             <English>Update Interval</English>

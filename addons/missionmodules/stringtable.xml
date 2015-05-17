@@ -69,7 +69,7 @@
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_Description">
             <English>Follow players. If set to false, loop will play sounds only nearby logic position.</English>
             <Polish>Podążaj za graczami. Jeżeli ustawione na 'Nie', pętla będzie odtwarzana tylko w pobliżu pozycji logiki.</Polish>
-            <Spanish>Seguir jugadores. Si esta desabilitado (false), se reproduciran sonidos en bucle solo cerca de la posición lógica.</Spanish>
+            <Spanish>Seguir jugadores. Si esta desabilitado (false), se reproducirán sonidos en bucle solo cerca de la posición lógica.</Spanish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_DisplayName">
             <English>Volume</English>
@@ -84,7 +84,7 @@
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_Description">
             <English>Ambiance sounds loop (synced across MP)</English>
             <Polish>Pętla odtwarzania dzwięków (synchronizowana na MP)</Polish>
-            <Spanish>Bucle de sonidos ambiente (sincronizados en multiplayer)</Spanish>
+            <Spanish>Bucle de sonidos ambiente (sincronizados en MP)</Spanish>
         </Key>
     </Package>
 </Project>

@@ -48,7 +48,7 @@
         <Key ID="STR_ACE_AdvancedBallistics_alwaysSimulateForSnipers_Description">
             <English>Always enables advanced ballistics when high power optics are used</English>
             <Polish>Aktywuje zaawansowaną balistykę zawsze, kiedy używana jest optyka</Polish>
-            <Spanish>Activar siempre la balística avanzada cuando se usa una mira telescópica</Spanish>
+            <Spanish>Activa siempre la balística avanzada cuando se usa una mira telescópica</Spanish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_disabledInFullAutoMod_DisplayName">
             <English>Disabled In FullAuto Mode</English>
@@ -68,12 +68,12 @@
         <Key ID="STR_ACE_AdvancedBallistics_onlyActiveForLocalPlayers_Description">
             <English>Disables the advanced ballistics for bullets coming from other players (enable this if you encounter frame drops during heavy firefights in multiplayer)</English>
             <Polish>Dezaktywuje zaawansowaną balistykę dla pocisków pochodzących od innych graczy(aktywuj tą opcję jeżeli odczuwasz spadki FPS podczas sporych strzelanin w MP)</Polish>
-            <Spanish>Desactiva la balística avanzada para las balas procedentes de otros jugadores (activa esto si tienes problemas de fps durante intensos tiroteos en multiplayer)</Spanish>
+            <Spanish>Desactiva la balística avanzada para las balas procedentes de otros jugadores (activa esto si tienes problemas de fps durante intensos tiroteos en multijugador)</Spanish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>
             <Polish>Symulacja temp. amunicji</Polish>
-            <Spanish>Activa la simulación de temperatura en la munición</Spanish>
+            <Spanish>Habilitar la simulación de temperatura en la munición</Spanish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_ammoTemperatureEnabled_Description">
             <English>Muzzle velocity varies with ammo temperature</English>
@@ -83,7 +83,7 @@
         <Key ID="STR_ACE_AdvancedBallistics_barrelLengthInfluenceEnabled_DisplayName">
             <English>Enable Barrel Length Simulation</English>
             <Polish>Symulacja długości lufy</Polish>
-            <Spanish>Activa la simulación de longitud del cañón</Spanish>
+            <Spanish>Habilitar la simulación de longitud del cañón</Spanish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_barrelLengthInfluenceEnabled_Description">
             <English>Muzzle velocity varies with barrel length</English>
@@ -93,7 +93,7 @@
         <Key ID="STR_ACE_AdvancedBallistics_bulletTraceEnabled_DisplayName">
             <English>Enable Bullet Trace Effect</English>
             <Polish>Efekt smugi pocisku</Polish>
-            <Spanish>Activa el trazado de la bala</Spanish>
+            <Spanish>Activar el trazado de la bala</Spanish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_bulletTraceEnabled_Description">
             <English>Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics)</English>
@@ -123,6 +123,7 @@
         <Key ID="STR_ACE_AdvancedBallistics_Description">
             <English></English>
             <Polish>Moduł ten pozwala aktywować zaawansowaną balistykę biorącą przy obliczeniach trajektorii lotu pocisku pod uwagę takie rzeczy jak temperatura powietrza, ciśnienie atmosferyczne, wilgotność powietrza, siły Coriolisa i Eotvosa, grawitację a także broń z jakiej wykonywany jest strzał oraz rodzaj amunicji. Wszystko to sprowadza się na bardzo dokładne odwzorowanie balistyki.</Polish>
+            <Spanish>Este módulo permite activar una serie de parámetros a la hora de calcular la trayectoria de los proyectiles, como la longitud del cañón, la gravedad, el angulo de disparo, el viento, la temperatura, el tipo de munición y la temperatura de esta. Todo esto hace que la balistica de las armas sea lo mas realista y precisa posible.</Spanish>
         </Key>
     </Package>
 </Project>

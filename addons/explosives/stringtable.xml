@@ -518,7 +518,7 @@
         <Key ID="STR_ACE_Explosive_RequireSpecialist_Description">
             <English>Require explosive specialists to disable explosives? Default: No</English>
             <Polish>Wymagać saperów do rozbrajania ładunków wybuchowych? Domyślnie: Nie</Polish>
-            <Spanish>¿Solo los especialistas en explosivos pueden desactivarlos? Por defecto: No</Spanish>
+            <Spanish>Solo los especialistas en explosivos pueden desactivarlos. Por defecto: No</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosive_PunishNonSpecialists_DisplayName">
             <English>Punish non-specialists?</English>
@@ -528,11 +528,12 @@
         <Key ID="STR_ACE_Explosive_PunishNonSpecialists_Description">
             <English>Increase the time it takes to complete actions for non-specialists? Default: Yes</English>
             <Polish>Zwiększyć ilość wymaganego czasu do ukończenia akcji dla nie-specjalistów? Domyślnie: Tak</Polish>
-            <Spanish>¿Aumentar el tiempo que lleva completar acciones para los no especialstas? Por defecto: Si</Spanish>
+            <Spanish>Aumenta el tiempo que lleva completar acciones para los no especialstas. Por defecto: Si</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosive_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować opcje związane z ładunkami wybuchowymi, ich podkładaniem oraz rozbrajaniem.</Polish>
+            <Spanish>Este módulo habilita la colocación mas precisa de explosivos, el uso de diferentes tipos de detonadores y la posibilidad de que solo jugadores en el rol de especialistas en explosivos puedan desactivarlos.</Spanish>
         </Key>
     </Package>
 </Project>

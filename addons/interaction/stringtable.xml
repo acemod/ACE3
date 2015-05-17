@@ -811,6 +811,7 @@
         <Key ID="STR_ACE_InteractionSystem_Module_Description">
             <English></English>
             <Polish>Na zarządzanie drużyną składa się: przydział kolorów dla członków drużyny, przejmowanie dowodzenia, dołączanie/opuszczanie drużyn.</Polish>
+            <Spanish>Este módulo permite unirse o dejar un equipo, tomar el mando de este y la asignación de colores para los miembros del equipo.</Spanish>
         </Key>
     </Package>
 </Project>

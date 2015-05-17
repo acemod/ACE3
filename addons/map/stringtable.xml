@@ -9,17 +9,17 @@
         <Key ID="STR_ACE_Map_MapIllumination_DisplayName">
             <English>Map illumination?</English>
             <Polish>Oświetlenie mapy</Polish>
-            <Spanish>Iluminación del mapa</Spanish>
+            <Spanish>¿Iluminación del mapa?</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Calculate dynamic map illumination based on light conditions?</English>
             <Polish>Oblicza dynamiczne oświetlenie mapy bazujące na warunkach oświetleniowych</Polish>
-            <Spanish>Calcular la iluminación dinámica del mapa basandose en las condiciones de luz</Spanish>
+            <Spanish>Calcula la iluminación dinámica del mapa basandose en las condiciones de luz</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>
             <Polish>Drżenie mapy</Polish>
-            <Spanish>Temblor del mapa</Spanish>
+            <Spanish>¿Temblor del mapa?</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_Description">
             <English>Make map shake when walking?</English>
@@ -29,7 +29,7 @@
         <Key ID="STR_ACE_Map_MapLimitZoom_DisplayName">
             <English>Limit map zoom?</English>
             <Polish>Ograniczony zoom</Polish>
-            <Spanish>Limitar el zoom en el mapa</Spanish>
+            <Spanish>¿Limitar el zoom en el mapa?</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_Description">
             <English>Limit the amount of zoom available for the map?</English>
@@ -39,16 +39,17 @@
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_DisplayName">
             <English>Show cursor coordinates?</English>
             <Polish>Koordynaty pod kursorem</Polish>
-            <Spanish>Mostrar las coordenadas en el cursor</Spanish>
+            <Spanish>¿Mostrar las coordenadas en el cursor?</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_Description">
             <English>Show the grid coordinates on the mouse pointer?</English>
             <Polish>Pokazuje pod kursorem koordynaty wskazanego kwadratu mapy</Polish>
-            <Spanish>Mostrar las coordenadas de la cuadricula en el puntero del ratón</Spanish>
+            <Spanish>Muestra las coordenadas de la cuadricula en el puntero del ratón</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować opcje widoku ekranu mapy.</Polish>
+            <Spanish>Este módulo permite configurar la manera en la que se interactua con el mapa.</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_DisplayName">
             <English>Blue Force Tracking</English>
@@ -68,16 +69,17 @@
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_DisplayName">
             <English>Hide AI groups?</English>
             <Polish>Ukryj grupy AI</Polish>
-            <Spanish>Ocultar grupos de IA</Spanish>
+            <Spanish>¿Ocultar grupos de IA?</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_Description">
             <English>Hide markers for 'AI only' groups?</English>
             <Polish>Ukrywa markery dla grup złożonych tylko z AI</Polish>
-            <Spanish>Ocultar marcas de grupos 'solo IA'</Spanish>
+            <Spanish>Oculta las marcas de grupos 'solo IA'</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_Description">
             <English></English>
             <Polish>Pozwala śledzić na mapie pozycje sojuszniczych jednostek za pomocą markerów BFT.</Polish>
+            <Spanish>Este módulo permite habilitar el seguimiento de fuerzas amigas en el mapa.</Spanish>
         </Key>
     </Package>
 </Project>

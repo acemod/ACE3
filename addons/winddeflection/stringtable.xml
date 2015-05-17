@@ -65,17 +65,17 @@
             <Key ID="STR_ACE_Weather_windDeflection_DisplayName">
                 <English>Wind Deflection</English>
                 <Polish>Wpływ wiatru</Polish>
-                <Spanish>Desviación del viento</Spanish>
+                <Spanish>Desviación por viento</Spanish>
             </Key>
             <Key ID="STR_ACE_Weather_deflectionModule_DisplayName">
                 <English>Wind Deflection</English>
                 <Polish>Wpływ wiatru</Polish>
-                <Spanish>Desviación del viento</Spanish>
+                <Spanish>Desviación por viento</Spanish>
             </Key>
             <Key ID="STR_ACE_Weather_deflectionModule_Description">
                 <English>Enables wind deflection</English>
                 <Polish>Aktywuje wpływ wiatru na trajektorię lotu pocisków</Polish>
-                <Spanish>Activa la desviación del viento</Spanish>
+                <Spanish>Activa la desviación por viento</Spanish>
             </Key>
             <Key ID="STR_ACE_Weather_vehicleEnabled_DisplayName">
                 <English>Vehicle Enabled</English>
@@ -85,7 +85,7 @@
             <Key ID="STR_ACE_Weather_vehicleEnabled_Description">
                 <English>Enables wind deflection for static/vehicle gunners</English>
                 <Polish>Aktywuje wpływ wiatru na trajektorię lotu pocisków dla broni statycznej i na pojazdach</Polish>
-                <Spanish>Habilita la desviación del viento para artilleros estaticos/de vehículos</Spanish>
+                <Spanish>Habilita la desviación por viento para artilleros estaticos/de vehículos</Spanish>
             </Key>
             <Key ID="STR_ACE_Weather_simulationInterval_DisplayName">
                 <English>Simulation Interval</English>

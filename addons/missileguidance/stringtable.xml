@@ -110,7 +110,7 @@
         <Key ID="STR_ACE_MissileGuidance_PlayerAndAi">
             <English>Player and AI</English>
             <Polish>Gracz oraz AI</Polish>
-            <Spanish>Jugador y IA</Spanish>
+            <Spanish>Jugadores e IA</Spanish>
         </Key>
     </Package>
 </Project>

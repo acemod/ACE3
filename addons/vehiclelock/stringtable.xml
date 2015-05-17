@@ -136,7 +136,7 @@
         <Key ID="STR_ACE_VehicleLock_Module_DisplayName">
             <English>Vehicle Lock Setup</English>
             <Polish>Ustawienie blokady pojazdów</Polish>
-            <Spanish>Configuracion de bloqueo del vehiculo</Spanish>
+            <Spanish>Configuración de bloqueo del vehiculo</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_LockVehicleInventory_DisplayName">
             <English>Lock Vehicle Inventory</English>

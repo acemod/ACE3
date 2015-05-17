@@ -28,52 +28,52 @@
         <Key ID="STR_ACE_SwitchUnits_Module_DisplayName">
             <English>SwitchUnits System</English>
             <Polish>System zmiany stron</Polish>
-            <Spanish>Sistema de cambio de bando</Spanish>
+            <Spanish>Sistema de cambio de unidad</Spanish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>
             <Polish>Zmiana na Zachód?</Polish>
-            <Spanish>Cambiar a BLUFOR</Spanish>
+            <Spanish>¿Cambiar a Oeste?</Spanish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_Description">
             <English>Allow switching to west units?</English>
             <Polish>Pozwolić zmieniać graczom stronę na Zachód?</Polish>
-            <Spanish>Permitir cambios a BLUFOR</Spanish>
+            <Spanish>¿Permitir cambios a Oeste?</Spanish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_DisplayName">
             <English>Switch to East?</English>
             <Polish>Zmiana na Wschód?</Polish>
-            <Spanish>Cambiar a OPFOR</Spanish>
+            <Spanish>¿Cambiar a Este?</Spanish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_Description">
             <English>Allow switching to east units?</English>
             <Polish>Pozwolić zmieniać graczom stronę na Wschód?</Polish>
-            <Spanish>Permitir cambios a OPFOR</Spanish>
+            <Spanish>¿Permitir cambios a Este?</Spanish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_DisplayName">
             <English>Switch to Independent?</English>
             <Polish>Zmiana na Ruch Oporu?</Polish>
-            <Spanish>Cambiar a independiente</Spanish>
+            <Spanish>¿Cambiar a Independiente?</Spanish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_Description">
             <English>Allow switching to independent units?</English>
             <Polish>Pozwolić zmieniać stronę na Ruch Oporu?</Polish>
-            <Spanish>Permitir cambios a independiente</Spanish>
+            <Spanish>¿Permitir cambios a Independiente?</Spanish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_DisplayName">
             <English>Switch to Civilian?</English>
             <Polish>Zmiana na Cywili?</Polish>
-            <Spanish>Cambiar a civil</Spanish>
+            <Spanish>¿Cambiar a Civil?</Spanish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_Description">
             <English>Allow switching to civilian units?</English>
             <Polish>Pozwolić zmieniać stronę na Cywili?</Polish>
-            <Spanish>Permitir cambios a civil</Spanish>
+            <Spanish>¿Permitir cambios a Civil?</Spanish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_DisplayName">
             <English>Enable Safe Zone?</English>
             <Polish>Aktywuj bezp. strefę?</Polish>
-            <Spanish>Habilitar zona segura</Spanish>
+            <Spanish>¿Habilitar zona segura?</Spanish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_Description">
             <English>Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone.</English>
@@ -93,6 +93,7 @@
         <Key ID="STR_ACE_SwitchUnits_Module_Description">
             <English></English>
             <Polish></Polish>
+            <Spanish>Este módulo permite configurar y bloquear los cambios de unidad. Tambien permite la creación y configuracion de una zona segura.</Spanish>
         </Key>
     </Package>
 </Project>

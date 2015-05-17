@@ -127,12 +127,12 @@
         <Key ID="STR_ACE_NameTags_showNamesForAI_DisplayName">
             <English>Show name tags for AI?</English>
             <Polish>Imiona AI</Polish>
-            <Spanish>¿Mostrar nombres para la IA?</Spanish>
+            <Spanish>Mostrar nombres para la IA</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_showNamesForAI_Description">
             <English>Show the name and rank tags for friendly AI units? Default: Do not force</English>
             <Polish>Pokaż imiona i rangi przyjaznych jednostek AI? Domyślnie: Nie wymuszaj</Polish>
-            <Spanish>¿Mostrar etiqueta de nombre y rango para unidades IA amigas? Por defecto: No forzar</Spanish>
+            <Spanish>Muestrar etiquetas de nombre y rango para las unidades IA amigas? Por defecto: No forzar</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_DoNotForce">
             <English>Do Not Force</English>
@@ -152,12 +152,12 @@
         <Key ID="STR_ACE_NameTags_showVehicleCrewInfo_DisplayName">
             <English>Show crew info?</English>
             <Polish>Pokaż załogę</Polish>
-            <Spanish>¿Monstrar información de la tripulación?</Spanish>
+            <Spanish>Mostrar información de la tripulación</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_showVehicleCrewInfo_Description">
             <English>Show vehicle crew info, or by default allows players to choose it on their own. Default: Do Not Force</English>
             <Polish>Pokaż informacje o obsadzie pojazdu, lub pozwól graczom ustawić tą opcje według własnego uznania. Domyślnie: Nie wymuszaj</Polish>
-            <Spanish>Muestra información de la tripulación, o por defecto permite a los jugadores elegirlo. Por fecto: No forzar</Spanish>
+            <Spanish>Muestra información de la tripulación, o por defecto permite a los jugadores elegirlo. Por defecto: No forzar</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_showCursorTagForVehicles_DisplayName">
             <English>Show for Vehicles</English>
@@ -172,6 +172,7 @@
         <Key ID="STR_ACE_NameTags_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować ustawienia i zasięg wyświetlania imion.</Polish>
+            <Spanish>Este módulo permite configurar la forma en la que se muestran las etiquetas de nombres de los jugadores e IA.</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_Disabled">
             <English>Disabled</English>
@@ -211,10 +212,12 @@
         <Key ID="STR_ACE_NameTags_ShowPlayerNames_Desc">
             <English></English>
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania imion nad głowami graczy. Opcja "Tylko po wciśnięciu klawisza" wyświetla imiona tylko przytrzymania klawisza "Modyfikator" dostępnego w menu ustawień addonów -&gt; ACE3.</Polish>
+            <Spanish>Este módulo permite configurar la visualización de los nombres sobre la cabeza de los jugadores.</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves_Desc">
             <English></English>
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania efektu fal dźwiękowych nad głowami mówiących graczy, wyświetlanych po przytrzymaniu klawisza PTT. Opcja ta współpracuje z TFAR oraz ACRE2.</Polish>
+            <Spanish>Este módulo permite configurar que se muestre un icono sobre la cabeza de los jugadores al  hablar en el juego. Funciona con TFAR y ACRE2</Spanish>
         </Key>
     </Package>
 </Project>

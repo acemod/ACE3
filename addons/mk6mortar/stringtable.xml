@@ -67,7 +67,7 @@
         <Key ID="STR_ACE_mk6mortar_allowComputerRangefinder_DisplayName">
             <English>Allow MK6 Computer</English>
             <Polish>Komputer MK6</Polish>
-            <Spanish>Permitir ordenador MK6</Spanish>
+            <Spanish>Habilitar ordenador MK6</Spanish>
         </Key>
         <Key ID="STR_ACE_mk6mortar_allowComputerRangefinder_Description">
             <English>Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)</English>
@@ -77,7 +77,7 @@
         <Key ID="STR_ACE_mk6mortar_allowCompass_DisplayName">
             <English>Allow MK6 Compass</English>
             <Polish>Kompas MK6</Polish>
-            <Spanish>Habilita la brujula del MK6</Spanish>
+            <Spanish>Habilitar la brujula del MK6</Spanish>
         </Key>
         <Key ID="STR_ACE_mk6mortar_allowCompass_Description">
             <English>Show the MK6 Digital Compass</English>
@@ -87,6 +87,7 @@
         <Key ID="STR_ACE_mk6mortar_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować ustawienia moździerza MK6.</Polish>
+            <Spanish>Este módulo permite configurar y disparar con mayor precisión el mortero MK6.</Spanish>
         </Key>
     </Package>
 </Project>
