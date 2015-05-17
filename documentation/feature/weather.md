@@ -11,6 +11,13 @@ parent: wiki
 ACE Weather is enabled by default. This feature simulates realistic weather according to map location, time of day, date, etc.
 
 
-## 2. Dependencies
+## 2. Usage
+
+### 2.1 Wind info
+- Wind info is toggled on/off using <kbd>Shift+K</kbd>
+- The arrow representing wind info is based on [Beaufort scale](http://en.wikipedia.org/wiki/Beaufort_scale#Modern_scale)
+
+
+## 3. Dependencies
 
 `ace_common`, `ace_modules`
