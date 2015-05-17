@@ -14,7 +14,7 @@
 
 EXPLODE_1_PVT(_this,_target);
 
-private ["_objectType","_actionsVarName", "_canCollapse", "_children", "_enableInside", "_entry", "_entryCfg", "_i", "_insertChildren", "_modifierFunction", "_runOnHover"];
+private ["_objectType","_actionsVarName", "_canCollapse", "_children", "_enableInside", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction", "_runOnHover"];
 _objectType = _target;
 if (typeName _target == "OBJECT") then {
     _objectType = typeOf _target;
@@ -31,8 +31,8 @@ _recurseFnc = {
     EXPLODE_1_PVT(_this,_actionsCfg);
     _actions = [];
 
-    for "_i" from 0 to (count _actionsCfg) - 1 do {
-        _entryCfg = _actionsCfg select _i;
+    {
+        _entryCfg = _x;
         if(isClass _entryCfg) then {
             _displayName = getText (_entryCfg >> "displayName");
 
@@ -74,7 +74,7 @@ _recurseFnc = {
                     ];
             _actions pushBack _entry;
         };
-    };
+    } forEach (configProperties [_actionsCfg, "isClass _x", true]);
     _actions
 };
 
