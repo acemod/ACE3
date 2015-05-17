@@ -4,6 +4,8 @@ class CfgWeapons {
     class InventoryItem_Base_F;
 
     class GVAR(ItemCore): ItemCore {
+        ace_bft_enabled = 1;
+        ace_bft_magazineItem = "ACE_bftMagazineBase";
         author = "$STR_ACE_Common_ACETeam";
         scope = 2;
         simulation = "ItemGPS";
