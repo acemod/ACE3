@@ -322,8 +322,16 @@ This module allows you to customize the weather settings.
 1. **Weather propagation (Boolean)**<br>
 Enables sever side weather propagation.<br>
 `Default value: Yes`
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>This feature is responsible for synchronizing weather between all clients. Disabling it is <b>not</b> recommended.</p>
+</div>
 2. **ACE3 Weather (Boolean)**<br>
 Overrides the default weather with ACE3 weather (map based).<br>
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>This feature can be disabled without affecting the weather propagation above. Useful if you prefer changing weather settings manually.</p>
+</div>
 `Default value: Yes`
 3. **Sync Rain (Boolean)**<br>
 Synchronizes rain.<br>
