@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Modules
+description: A list of all modules in ACE3 and all the settings that can be tweaked by them
 group: missionmaker
 order: 5
 parent: wiki
@@ -303,13 +304,19 @@ Default Time to lockpick (in seconds)<br>
 
 This module allows you to customize the weather settings.
 
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>ACE Weather overrides weather settings (editor, mission settings) and automatically calculates wind, temperature and pressure according to map location, date, time of day and cloud coverage and allows the weather to evolve realistically as the simulation progresses. Weather synchronization occurs between all clients. <br>Adjustment of the weather is possible by modifying the <code>overcast</code> value (for example: <code>0.7</code> may result in intermittent rain).</p>
+</div>
+
+
 **Settings:**
 
 1. **Weather propagation (Boolean)**<br>
 Enables sever side weather propagation.<br>
 `Default value: Yes`
 2. **ACE Weather (Boolean)**<br>
-Overrides the default weather (editor, mission settings) with ACE weather (map based).<br>
+Overrides the default weather with ACE weather (map based).<br>
 `Default value: Yes`
 3. **Sync Rain (Boolean)**<br>
 Synchronizes rain.<br>
@@ -331,7 +338,12 @@ This module allows you to define when wind deflection is active.
 
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>Wind Deflection doesn't work in combination with Advanced Ballistics. If the Advanced Ballistics module is placed Wind deflection will exit and won't trigger.</p>
+    <p>Wind Deflection is compatible with Advanced Ballistics and allows the following combinations:
+    <ul>
+  <li>Only wind deflection</li>
+  <li>Only advanced ballistics</li>
+  <li>Combined wind deflection + advanced ballistics</li>
+</ul></p>
 </div>
 
 **Settings:**

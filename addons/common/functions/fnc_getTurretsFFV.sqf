@@ -11,20 +11,20 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_turrets", "_turret", "_config"];
+private ["_turrets", "_turret", "_config"];
 
-_vehicle = _this select 0;
+PARAMS_1(_vehicle);
 
 _turrets = allTurrets [_vehicle, true];
 
 _turret = [];
 {
-  _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+    _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
-  _config = [_config, _x] call FUNC(getTurretConfigPath);
+    _config = [_config, _x] call FUNC(getTurretConfigPath);
 
-  if (getNumber (_config >> "isPersonTurret") == 1) then {
-    _turret pushBack _x;
-  };
+    if (getNumber (_config >> "isPersonTurret") == 1) then {
+        _turret pushBack _x;
+    };
 } forEach _turrets;
 _turret

@@ -5,7 +5,7 @@
 
 diag_log text format["REGISTERED ACE PFH HANDLERS"];
 diag_log text format["-------------------------------------------"];
-if(!isNil "ACE_PFH_COUNTER") then {
+if (!isNil "ACE_PFH_COUNTER") then {
     {
         private["_pfh"];
         _pfh = _x select 0;
@@ -16,7 +16,7 @@ if(!isNil "ACE_PFH_COUNTER") then {
 diag_log text format["ACE COUNTER RESULTS"];
 diag_log text format["-------------------------------------------"];
 {
-    private["_counterEntry", "_iter", "_total", "_count", "_delta", "_averageResult"];
+    private ["_counterEntry", "_iter", "_total", "_count", "_delta", "_averageResult"];
     _counterEntry = _x;
     _iter = 0;
     _total = 0;

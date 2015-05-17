@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_config", "_turret"];
+private ["_config", "_turret"];
 
-_vehicle = _this select 0;
+PARAMS_1(_vehicle);
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 _turret = [_vehicle] call FUNC(getTurretGunner);

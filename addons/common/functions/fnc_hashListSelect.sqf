@@ -1,10 +1,9 @@
 //fnc_hashListSelect.sqf
 #include "script_component.hpp"
 
-private ["_hashList", "_index", "_hash", "_keys", "_hashes", "_values"];
+private ["_hash", "_keys", "_hashes", "_values"];
 
-_hashList = _this select 0;
-_index = _this select 1;
+PARAMS_2(_hashList,_index);
 ERRORDATA(2);
 _hash = nil;
 try {
@@ -24,4 +23,6 @@ try {
 } catch {
     HANDLECATCH;
 };
+
+if (isNil "_hash") exitWith { nil };
 _hash;

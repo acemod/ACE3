@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Extension Guidelines
+description: 
 group: development
 parent: wiki
 order: 9

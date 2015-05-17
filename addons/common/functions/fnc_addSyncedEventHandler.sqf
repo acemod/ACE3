@@ -13,6 +13,8 @@
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
+//IGNORE_PRIVATE_WARNING("_handleSyncedEvent");
+
 PARAMS_2(_name,_handler);
 
 private["_ttl", "_eventId", "_data"];

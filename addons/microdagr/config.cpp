@@ -16,11 +16,4 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
 #include "gui.hpp"
-
-class ACE_Settings {
-    class GVAR(MapDataAvailable) {
-        value = 2;
-        typeName = "SCALAR";
-        isClientSettable = 0;
-    };
-};
+#include "ACE_Settings.hpp"

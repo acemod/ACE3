@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Mission tools
+description: A short description of ACE3's mission tools that help mission makers to provide awesome missions
 group: missionmaker
 order: 10
 parent: wiki

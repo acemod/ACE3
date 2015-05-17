@@ -1,9 +1,9 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_crate", "_weapons", "_items"];
+private ["_weapons", "_items"];
 
-_crate = _this select 0;
+PARAMS_1(_crate);
 
 // get all weapons inside the crate
 _weapons = weaponCargo _crate;
