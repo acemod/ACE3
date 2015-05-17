@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_func,_params,_delay,_interval);
+PARAMS_4(_func,_params,_delay,_interval);
 
 [
     {

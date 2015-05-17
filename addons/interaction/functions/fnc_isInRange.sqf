@@ -1,21 +1,24 @@
 /*
  * Author: commy2
- *
  * Check if the vehicle is in range of the player.
  *
- * Argument:
- * 0: Vehicke (Object)
- * 1: Distance in meters (Number)
+ * Arguments:
+ * 0: Vehicle <OBJECT>
+ * 1: Distance in meters <NUMBER>
  *
  * Return value:
- * (Bool)
+ * Vehicle in range of player <BOOL>
+ *
+ * Example:
+ * [target, 5] call ace_interaction_fnc_isInRange
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_distance", "_player"];
+PARAMS_2(_vehicle,_distance);
 
-_vehicle = _this select 0;
-_distance = _this select 1;
+private ["_player", "_position0", "_position1"];
 
 _player = ACE_player;
 

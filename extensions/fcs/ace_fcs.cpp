@@ -11,7 +11,7 @@
  * Correction to angle
  */
 
-#include "ace_common.h"
+#include "shared.hpp"
 
 #define _USE_MATH_DEFINES
 
@@ -101,6 +101,8 @@ double getSolution(double initSpeed, double airFriction, double angleTarget, dou
 #pragma warning( disable : 4996 )
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
+    ZERO_OUTPUT();
+
     if (!strcmp(function, "version")) {
         strncpy(output, ACE_FULL_VERSION_STR, outputSize);
     } else {
@@ -118,6 +120,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
         strcpy(output, sstream.str().c_str());
         output[outputSize - 1] = '\0';
     }
+    EXTENSION_RETURN();
 }
 
 #pragma warning( pop )

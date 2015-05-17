@@ -12,16 +12,13 @@
  */
 #include "script_component.hpp"
 
- private ["_name", "_value"];
-
-_name = _this select 0;
-_value = _this select 1;
+PARAMS_2(_name,_value);
 
 // Hack to keep backward compatibility for the moment
 if ((typeName (missionNamespace getVariable _name)) == "BOOL") then {
-  if ((typeName _value) == "SCALAR") then {
-    _value = _value > 0;
-  };
+    if ((typeName _value) == "SCALAR") then {
+        _value = _value > 0;
+    };
 };
 
 missionNamespace setVariable [_name, _value];

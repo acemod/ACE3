@@ -15,9 +15,8 @@
 
 #include "script_component.hpp"
 
-private ["_text", "_image", "_imageColor", "_target"];
-_text = _this select 0;
-_image = _this select 1;
+private ["_imageColor", "_target"];
+PARAMS_2(_text,_image);
 _imageColor = if (count _this > 2) then {_this select 2} else {[1,1,1]};
 _imageColor resize 3;
 _target = if (count _this > 3) then {_this select 3} else {ACE_player};

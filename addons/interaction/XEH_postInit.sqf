@@ -15,6 +15,7 @@ if (!hasInterface) exitWith {};
 GVAR(isOpeningDoor) = false;
 
 // restore global fire teams for JIP
+private ["_team"];
 {
     _team = _x getVariable [QGVAR(assignedFireTeam), ""];
     if (_team != "") then {_x assignTeam _team};
@@ -50,7 +51,7 @@ GVAR(isOpeningDoor) = false;
     if !([ACE_player, cursorTarget] call FUNC(canTapShoulder)) exitWith {false};
 
     // Statement
-    [ACE_player, cursorTarget] call FUNC(tapShoulder);
+    [ACE_player, cursorTarget, 0] call FUNC(tapShoulder);
     true
 },
 {false},

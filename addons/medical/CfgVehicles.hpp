@@ -9,10 +9,9 @@ class CfgVehicles {
         };
     };
     class ACE_Module;
-    // TODO localization for all the modules
     class ACE_moduleMedicalSettings: ACE_Module {
         scope = 2;
-        displayName = "Medical Settings [ACE]";
+        displayName = "$STR_ACE_MedicalSettings_Module_DisplayName";
         icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(DFUNC(moduleMedicalSettings));
@@ -22,78 +21,78 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class level {
-                displayName = "Medical Level";
-                description = "What is the medical simulation level?";
+                displayName = "$STR_ACE_MedicalSettings_level_DisplayName";
+                description = "$STR_ACE_MedicalSettings_level_Description";
                 typeName = "NUMBER";
                 class values {
                     class normal {
-                        name = "Basic";
+                        name = "$STR_ACE_MedicalSettings_basic";
                         value = 1;
                         default = 1;
                     };
                     class full  {
-                        name = "Advanced";
+                        name = "$STR_ACE_MedicalSettings_advanced";
                         value = 2;
                     };
                 };
             };
             class medicSetting {
-                displayName = "Medics setting";
-                description = "What is the level of detail prefered for medics?";
+                displayName = "$STR_ACE_MedicalSettings_medicSetting_DisplayName";
+                description = "$STR_ACE_MedicalSettings_medicSetting_Description";
                 typeName = "NUMBER";
                 class values {
                     class disable {
-                        name = "Disable medics";
+                        name = "$STR_ACE_MedicalSettings_medicSetting_disable";
                         value = 0;
                     };
                     class normal {
-                        name = "Normal";
+                        name = "$STR_ACE_MedicalSettings_basic";
                         value = 1;
                         default = 1;
                     };
                     class full  {
-                        name = "Advanced";
+                        name = "$STR_ACE_MedicalSettings_advanced";
                         value = 2;
                     };
                 };
             };
             class allowLitterCreation {
-                displayName = "Enable Litter";
-                description = "Enable litter being created upon treatment";
+                displayName = "$STR_ACE_MedicalSettings_allowLitterCreation_DisplayName";
+                description = "$STR_ACE_MedicalSettings_allowLitterCreation_Description";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class litterCleanUpDelay {
-                displayName = "Life time of litter objects";
-                description = "How long should litter objects stay? In seconds. -1 is forever.";
+                displayName = "$STR_ACE_MedicalSettings_litterCleanUpDelay_DisplayName";
+                description = "$STR_ACE_MedicalSettings_litterCleanUpDelay_Description";
                 typeName = "NUMBER";
                 defaultValue = 1800;
             };
             class enableScreams {
-                displayName = "Enable Screams";
-                description = "Enable screaming by injuried units";
+                displayName = "$STR_ACE_MedicalSettings_enableScreams_DisplayName";
+                description = "$STR_ACE_MedicalSettings_enableScreams_Description";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class playerDamageThreshold {
-                displayName = "Player Damage";
-                description = "What is the damage a player can take before being killed?";
+                displayName = "$STR_ACE_MedicalSettings_playerDamageThreshold_DisplayName";
+                description = "$STR_ACE_MedicalSettings_playerDamageThreshold_Description";
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
             class AIDamageThreshold {
-                displayName = "AI Damage";
-                description = "What is the damage an AI can take before being killed?";
+                displayName = "$STR_ACE_MedicalSettings_AIDamageThreshold_DisplayName";
+                description = "$STR_ACE_MedicalSettings_AIDamageThreshold_Description";
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
             class enableUnconsciousnessAI {
-                displayName = "AI Unconsciousness";
-                description = "Allow AI to go unconscious";
+                displayName = "$STR_ACE_MedicalSettings_enableUnconsciousnessAI_DisplayName";
+                description = "$STR_ACE_MedicalSettings_enableUnconsciousnessAI_Description";
                 typeName = "NUMBER";
                 class values {
                     class disable {
-                        name = "Disabled";
+                        name = "$STR_ACE_Medical_disabled";
                         value = 0;
                     };
                     class normal {
@@ -102,45 +101,45 @@ class CfgVehicles {
                         default = 1;
                     };
                     class full {
-                        name = "Enabled";
+                        name = "$STR_ACE_Medical_enabled";
                         value = 2;
                     };
                 };
             };
             class preventInstaDeath {
-                displayName = "Prevent instant death";
-                description = "Have a unit move to unconscious instead of death";
+                displayName = "$STR_ACE_MedicalSettings_preventInstaDeath_DisplayName";
+                description = "$STR_ACE_MedicalSettings_preventInstaDeath_Description";
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class bleedingCoefficient {
-                displayName = "Bleeding coefficient";
-                description = "Coefficient to modify the bleeding speed";
+                displayName = "$STR_ACE_MedicalSettings_bleedingCoefficient_DisplayName";
+                description = "$STR_ACE_MedicalSettings_bleedingCoefficient_Description";
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
             class painCoefficient {
-                displayName = "Pain coefficient";
-                description = "Coefficient to modify the pain intensity";
+                displayName = "$STR_ACE_MedicalSettings_painCoefficient_DisplayName";
+                description = "$STR_ACE_MedicalSettings_painCoefficient_Description";
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
             class keepLocalSettingsSynced {
-                displayName = "Sync status";
-                description = "Keep unit status synced. Recommended on.";
+                displayName = "$STR_ACE_MedicalSettings_keepLocalSettingsSynced_DisplayName";
+                description = "$STR_ACE_MedicalSettings_keepLocalSettingsSynced_Description";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
         };
         class ModuleDescription {
-            description = "Provides a medical system for both players and AI.";
+            description = "$STR_ACE_MedicalSettings_Module_Description";
             sync[] = {};
         };
     };
 
     class ACE_moduleAdvancedMedicalSettings: ACE_Module {
         scope = 2;
-        displayName = "Advanced Medical Settings [ACE]";
+        displayName = "$STR_ACE_AdvancedMedicalSettings_Module_DisplayName";
         icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(FUNC(moduleAdvancedMedicalSettings));
@@ -151,80 +150,81 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class enableFor {
-                displayName = "Enabled for";
-                description = "Select what units the advanced medical system will be enabled for";
+                displayName = "$STR_ACE_AdvancedMedicalSettings_enableFor_DisplayName";
+                description = "$STR_ACE_AdvancedMedicalSettings_enableFor_Description";
                 typeName = "NUMBER";
                 class values {
                     class playableUnits {
-                        name = "Players only.";
+                        name = "$STR_ACE_Medical_playeronly";
                         value = 0;
                         default = 1;
                     };
                     class playableUnitsAndAI {
-                        name = "Players and AI";
+                        name = "$STR_ACE_Medical_playersandai";
                         value = 1;
                     };
                 };
             };
             class enableAdvancedWounds {
-                displayName = "Enable Advanced wounds";
-                description = "Allow reopening of bandaged wounds?";
+                displayName = "$STR_ACE_AdvancedMedicalSettings_enableAdvancedWounds_DisplayName";
+                description = "$STR_ACE_AdvancedMedicalSettings_enableAdvancedWounds_Description";
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class enableVehicleCrashes {
-                displayName = "Vehicle Crashes";
-                description = "Do units take damage from a vehicle crash?";
+                displayName = "$STR_ACE_AdvancedMedicalSettings_enableVehicleCrashes_DisplayName";
+                description = "$STR_ACE_AdvancedMedicalSettings_enableVehicleCrashes_Description";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class medicSetting_PAK {
-                displayName = "Allow PAK";
-                description = "Who can use the PAK for full heal?";
+                displayName = "$STR_ACE_AdvancedMedicalSettings_medicSetting_PAK_DisplayName";
+                description = "$STR_ACE_AdvancedMedicalSettings_medicSetting_PAK_Description";
                 typeName = "NUMBER";
                 class values {
-                    class anyone { name = "Anyone"; value = 0; };
-                    class Medic { name = "Medics only"; value = 1; default = 1; };
-                    class Special { name = "Doctors only"; value = 2; };
+                    class anyone { name = "$STR_ACE_AdvancedMedicalSettings_anyone"; value = 0; };
+                    class Medic { name = "$STR_ACE_AdvancedMedicalSettings_Medic"; value = 1; default = 1; };
+                    class Special { name = "$STR_ACE_AdvancedMedicalSettings_Special"; value = 2; };
                 };
             };
             class consumeItem_PAK {
-                displayName = "Remove PAK on use";
-                description = "Should PAK be removed on usage?";
+                displayName = "$STR_ACE_AdvancedMedicalSettings_consumeItem_PAK_DisplayName";
+                description = "$STR_ACE_AdvancedMedicalSettings_consumeItem_PAK_Description";
+
                 typeName = "NUMBER";
                 class values {
-                    class keep { name = "No"; value = 0; };
-                    class remove { name = "Yes"; value = 1; default = 1; };
+                    class keep { name = "$STR_ACE_Medical_No"; value = 0; };
+                    class remove { name = "$STR_ACE_Medical_Yes"; value = 1; default = 1; };
                 };
             };
             class useLocation_PAK {
-                displayName = "Locations PAK";
-                description = "Where can the personal aid kit be used?";
+                displayName = "$STR_ACE_AdvancedMedicalSettings_useLocation_PAK_DisplayName";
+                description = "$STR_ACE_AdvancedMedicalSettings_useLocation_PAK_Description";
                 typeName = "NUMBER";
                 class values {
-                    class anywhere { name = "Anywhere"; value = 0; };
-                    class vehicle { name = "Medical Vehicles"; value = 1; };
-                    class facility { name = "Medical facility"; value = 2; };
-                    class vehicleAndFacility { name = "Vehicles & facility"; value = 3; default = 1; };
-                    class disabled { name = "Disabled"; value = 4;};
+                    class anywhere { name = "$STR_ACE_AdvancedMedicalSettings_anywhere"; value = 0; };
+                    class vehicle { name = "$STR_ACE_AdvancedMedicalSettings_vehicle"; value = 1; };
+                    class facility { name = "$STR_ACE_AdvancedMedicalSettings_facility"; value = 2; };
+                    class vehicleAndFacility { name = "$STR_ACE_AdvancedMedicalSettings_vehicleAndFacility"; value = 3; default = 1; };
+                    class disabled { name = "$STR_ACE_AdvancedMedicalSettings_disabled"; value = 4;};
                 };
             };
             class medicSetting_SurgicalKit: medicSetting_PAK {
-                displayName = "Allow Surgical kit (Adv)";
-                description = "Who can use the surgical kit?";
+                displayName = "$STR_ACE_AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName";
+                description = "$STR_ACE_AdvancedMedicalSettings_medicSetting_SurgicalKit_Description";
             };
             class consumeItem_SurgicalKit: consumeItem_PAK {
-                displayName = "Remove Surgical kit (Adv)";
-                description = "Should Surgical kit be removed on usage?";
+                displayName = "$STR_ACE_AdvancedMedicalSettings_consumeItem_SurgicalKit_DisplayName";
+                description = "$STR_ACE_AdvancedMedicalSettings_consumeItem_SurgicalKit_Description";
             };
             class useLocation_SurgicalKit: useLocation_PAK {
-                displayName = "Locations Surgical kit (Adv)";
-                description = "Where can the Surgical kit be used?";
+                displayName = "$STR_ACE_AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName";
+                description = "$STR_ACE_AdvancedMedicalSettings_useLocation_SurgicalKit_Description";
             };
 
         };
         class ModuleDescription {
-            description = "Configure the treatment settings from ACE Medical";
+            description = "$STR_ACE_AdvancedMedicalSettings_Module_Description";
             sync[] = {};
         };
     };
@@ -232,7 +232,7 @@ class CfgVehicles {
 
     class ACE_moduleReviveSettings: ACE_Module {
         scope = 2;
-        displayName = "Revive Settings [ACE]";
+        displayName = "$STR_ACE_ReviveSettings_Module_DisplayName";
         icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(DFUNC(moduleReviveSettings));
@@ -242,37 +242,37 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class enableRevive {
-                displayName = "Enable Revive";
-                description = "Enable a basic revive system";
+                displayName = "$STR_ACE_ReviveSettings_enableRevive_DisplayName";
+                description = "$STR_ACE_ReviveSettings_enableRevive_Description";
                 typeName = "NUMBER";
                 defaultValue = 0;
                 class values {
-                    class disable { name = "Disabled"; value = 0; default = 1;};
-                    class playerOnly { name = "Player only"; value = 1; };
-                    class playerAndAI { name = "Player & AI"; value = 2; };
+                    class disable { name = "$STR_ACE_Medical_disabled"; value = 0; default = 1;};
+                    class playerOnly { name = "$STR_ACE_Medical_playeronly"; value = 1; };
+                    class playerAndAI { name = "$STR_ACE_Medical_playersandai"; value = 2; };
                 };
             };
             class maxReviveTime {
-                displayName = "Max Revive time";
-                description = "Max amount of seconds a unit can spend in revive state";
+                displayName = "$STR_ACE_ReviveSettings_maxReviveTime_DisplayName";
+                description = "$STR_ACE_ReviveSettings_maxReviveTime_Description";
                 typeName = "NUMBER";
                 defaultValue = 120;
             };
             class amountOfReviveLives {
-                displayName = "Max Revive lives";
-                description = "Max amount of lives a unit. 0 or -1 is disabled.";
+                displayName = "$STR_ACE_ReviveSettings_amountOfReviveLives_DisplayName";
+                description = "$STR_ACE_ReviveSettings_amountOfReviveLives_Description";
                 typeName = "NUMBER";
                 defaultValue = -1;
             };
         };
         class ModuleDescription {
-            description = "Provides a medical system for both players and AI.";
+            description = "$STR_ACE_ReviveSettings_Module_Description";
             sync[] = {};
         };
     };
     class ACE_moduleAssignMedicRoles: Module_F {
         scope = 2;
-        displayName = "Set Medic Class [ACE]";
+        displayName = "$STR_ACE_AssignMedicRoles_Module_DisplayName";
         icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(FUNC(moduleAssignMedicRoles));
@@ -283,41 +283,41 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class EnableList {
-                displayName = "List";
-                description = "List of unit names that will be classified as medic, separated by commas.";
+                displayName = "$STR_ACE_AssignMedicRoles_EnableList_DisplayName";
+                description = "$STR_ACE_AssignMedicRoles_EnableList_Description";
                 defaultValue = "";
                 typeName = "STRING";
             };
             class role {
-                displayName = "Is Medic";
-                description = "Medics allow for more advanced treatment in case of Advanced Medic roles enabled";
+                displayName = "$STR_ACE_AssignMedicRoles_role_DisplayName";
+                description = "$STR_ACE_AssignMedicRoles_role_Description";
                 typeName = "NUMBER";
                 class values {
                     class none {
-                        name = "None";
+                        name = "$STR_ACE_AssignMedicRoles_role_none";
                         value = 0;
                     };
                     class medic {
-                        name = "Regular medic";
+                        name = "$STR_ACE_AssignMedicRoles_role_medic";
                         value = 1;
                         default = 1;
                     };
                     class doctor {
-                        name = "Doctor (Only Advanced Medics)";
+                        name = "$STR_ACE_AssignMedicRoles_role_doctor";
                         value = 2;
                     };
                 };
             };
         };
         class ModuleDescription {
-            description = "Assigns the ACE medic class to a unit";
+            description = "$STR_ACE_AssignMedicRoles_Module_Description";
             sync[] = {};
         };
     };
 
     class ACE_moduleAssignMedicVehicle: Module_F {
         scope = 2;
-        displayName = "Set Medical Vehicle [ACE]";
+        displayName = "$STR_ACE_AssignMedicVehicle_Module_DisplayName";
         icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(FUNC(moduleAssignMedicalVehicle));
@@ -328,22 +328,23 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class EnableList {
-                displayName = "List";
-                description = "List of vehicles that will be classified as medical vehicle, separated by commas.";
+                displayName = "$STR_ACE_AssignMedicVehicle_EnableList_DisplayName";
+                description = "$STR_ACE_AssignMedicVehicle_EnableList_Description";
                 defaultValue = "";
                 typeName = "STRING";
             };
             class enabled {
-                displayName = "Is Medical Vehicle";
-                description = "Whatever or not the objects in the list will be a medical vehicle.";
+                displayName = "$STR_ACE_AssignMedicVehicle_enabled_DisplayName";
+                description = "$STR_ACE_AssignMedicVehicle_enabled_Description";
+
                 typeName = "NUMBER";
                 class values {
                     class none {
-                        name = "No";
+                        name = "$STR_ACE_Medical_No";
                         value = 0;
                     };
                     class medic {
-                        name = "Yes";
+                        name = "$STR_ACE_Medical_Yes";
                         value = 1;
                         default = 1;
                     };
@@ -351,13 +352,13 @@ class CfgVehicles {
             };
         };
         class ModuleDescription {
-            description = "Assigns the ACE medic class to a unit";
+            description = "$STR_ACE_AssignMedicVehicle_Module_Description";
             sync[] = {};
         };
     };
     class ACE_moduleAssignMedicalFacility: Module_F {
         scope = 2;
-        displayName = "Set Medical Facility [ACE]";
+        displayName = "$STR_ACE_AssignMedicalFacility_Module_DisplayName";
         icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(FUNC(moduleAssignMedicalFacility));
@@ -368,13 +369,13 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         class Arguments {
             class enabled {
-                displayName = "Is Medical Facility";
-                description = "Registers an object as a medical facility for CMS";
+                displayName = "$STR_ACE_AssignMedicalFacility_enabled_DisplayName";
+                description = "$STR_ACE_AssignMedicalFacility_enabled_Description";
                 typeName = "BOOL";
             };
         };
         class ModuleDescription {
-            description = "Defines an object as a medical facility for CMS. This allows for more advanced treatments. Can be used on buildings and vehicles. ";
+            description = "$STR_ACE_AssignMedicalFacility_Module_Description";
             sync[] = {};
         };
     };
@@ -897,7 +898,7 @@ class CfgVehicles {
     class ACE_medicalSupplyCrate: NATO_Box_Base {
         scope = 2;
         accuracy = 1000;
-        displayName = "[ACE] Medical Supply Crate (Basic)";
+        displayName = "$STR_ACE_medicalSupplyCrate";
         model = PATHTOF(data\ace_medcrate.p3d);
         author = "$STR_ACE_Common_ACETeam";
         class TransportItems {
@@ -932,7 +933,7 @@ class CfgVehicles {
         };
     };
     class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate {
-        displayName = "[ACE] Medical Supply Crate (Advanced)";
+        displayName = "$STR_ACE_medicalSupplyCrate_advanced";
         class TransportItems {
             class ACE_fieldDressing {
                 name = "ACE_fieldDressing";
