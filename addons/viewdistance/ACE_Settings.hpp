@@ -8,7 +8,7 @@ class ACE_Settings {
     class GVAR(viewDistanceOnFoot) {
         typeName = "SCALAR";
         isClientSettable = 1;
-        value = 0; // index, NOT value // Can set it to client's actual viewdistance in the init function once ACE_Settings supports numbers (if ever).
+        value = 11; // index, NOT value // Can set it to client's actual viewdistance in the init function once ACE_Settings supports numbers (if ever).
         values[] = {"1500","2000","2500","3000","3500","4000","5000","6000","7000","8000","9000","10000"}; // Values also need to be changed in functions/fnc_returnValue.sqf
         displayName = "$STR_ACE_ViewDistance_onFoot_DisplayName";
         description = "$STR_ACE_ViewDistance_onFoot_Description";
@@ -16,7 +16,7 @@ class ACE_Settings {
     class GVAR(viewDistanceLandVehicle) {
         typeName = "SCALAR";
         isClientSettable = 1;
-        value = 0; // index, NOT value
+        value = 11; // index, NOT value
         values[] = {"1500","2000","2500","3000","3500","4000","5000","6000","7000","8000","9000","10000"}; // Values also need to be changed in functions/fnc_returnValue.sqf
         displayName = "$STR_ACE_ViewDistance_landVehicle_DisplayName";
         description = "$STR_ACE_ViewDistance_landVehicle_Description";
@@ -24,7 +24,7 @@ class ACE_Settings {
     class GVAR(viewDistanceAirVehicle) {
         typeName = "SCALAR";
         isClientSettable = 1;
-        value = 0; // index, NOT value
+        value = 11; // index, NOT value
         values[] = {"1500","2000","2500","3000","3500","4000","5000","6000","7000","8000","9000","10000"}; // Values also need to be changed in functions/fnc_returnValue.sqf
         displayName = "$STR_ACE_ViewDistance_airVehicle_DisplayName";
         description = "$STR_ACE_ViewDistance_airVehicle_Description";
