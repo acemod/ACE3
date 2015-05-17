@@ -1,12 +1,11 @@
 //fnc_hashSet.sqf
 #include "script_component.hpp"
 
-private ["_hash", "_key", "_val", "_index"];
+private ["_index"];
 // diag_log text format["%1 HASH SET: %2", diag_tickTime, _this];
 
-_hash = _this select 0;
-_key = _this select 1;
-_val = _this select 2;
+PARAMS_3(_hash,_key,_val);
+
 ERRORDATA(3);
 try {
     if(VALIDHASH(_hash)) then {

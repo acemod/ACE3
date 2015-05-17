@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Coding Guidelines
+description: 
 group: development
 parent: wiki
 order: 1

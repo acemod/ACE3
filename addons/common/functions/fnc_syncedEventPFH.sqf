@@ -7,7 +7,7 @@ if(!isServer) exitWith { false };
 // @TODO: This should be iteration limited to prevent FPS lag
 private["_data"];
 {
-    private["_data", "_ttl", "_eventLog", "_newEventLog", "_name"];
+    private["_data", "_eventLog", "_newEventLog", "_name", "_globalEventTTL"];
     _name = _x;
 
     _data = HASH_GET(GVAR(syncedEvents),_name);

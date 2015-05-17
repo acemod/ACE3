@@ -36,9 +36,9 @@ _persistentFunctions = _unit getVariable ["ACE_PersistentFunctions", []];
 // find index to overwrite function with the same name, add to end otherwise
 _index = count _persistentFunctions;
 {
-  if (_x select 2 == _name) exitWith {
-    _index = _forEachIndex;
-  };
+    if (_x select 2 == _name) exitWith {
+        _index = _forEachIndex;
+    };
 } forEach _persistentFunctions;
 
 // set new value
@@ -46,8 +46,8 @@ _persistentFunctions set [_index, [_arguments, _function, _name]];
 
 // broadcast variable
 if (typeName _unit == "NAMESPACE") then {
-  ACE_PersistentFunctions = _persistentFunctions;
-  publicVariable "ACE_PersistentFunctions";
+    ACE_PersistentFunctions = _persistentFunctions;
+    publicVariable "ACE_PersistentFunctions";
 } else {
-  _unit setVariable ["ACE_PersistentFunctions", _persistentFunctions, true];
+    _unit setVariable ["ACE_PersistentFunctions", _persistentFunctions, true];
 };

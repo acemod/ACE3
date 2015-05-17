@@ -1,4 +1,18 @@
-// by commy2
+/*
+ * Author: commy2
+ * Get selected button
+ *
+ * Arguments:
+ * None
+ *
+ * Return value:
+ * Angle <NUMBER>
+ *
+ * Example:
+ * call ace_interaction_fnc_getSelectedButton
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 #define MIN_DISTANCE 0.0065

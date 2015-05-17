@@ -93,11 +93,17 @@ _fnc_print = {
 // Check if there's something left for rendering
 if (count _activeActionTree == 0) exitWith {false};
 
-//EXPLODE_2_PVT(_activeActionTree,_actionData,_actionChildren);
-
 BEGIN_COUNTER(fnc_renderMenus);
 
-[[], _activeActionTree, _sPos, [180,360]] call FUNC(renderMenu);
+// IGNORE_PRIVATE_WARNING(_cameraPos,_cameraDir);
+if (count _pos > 2) then {
+    _sPos pushBack (((_pos call EFUNC(common,positionToASL)) vectorDiff _cameraPos) vectorDotProduct _cameraDir);
+} else {
+    _sPos pushBack 0;
+};
+
+// Add action point for oclusion and rendering
+GVAR(collectedActionPoints) pushBack [_sPos select 2, _sPos, _activeActionTree];
 
 END_COUNTER(fnc_renderMenus);
 

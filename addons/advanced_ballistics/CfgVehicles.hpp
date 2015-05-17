@@ -2,7 +2,7 @@ class CfgVehicles {
     class ACE_Module;
     class GVAR(ModuleSettings): ACE_Module {
         scope = 2;
-        displayName = "Advanced Ballistics";
+        displayName = "$STR_ACE_AdvancedBallistics_DisplayName";
         icon = QUOTE(PATHTOF(UI\Icon_Module_Wind_ca.paa));
         category = "ACE";
         function = QUOTE(DFUNC(initModuleSettings));
@@ -12,26 +12,26 @@ class CfgVehicles {
         author = "Ruthberg";
         class Arguments {
             class enabled {
-                displayName = "Advanced Ballistics";
-                description = "Enables advanced ballistics";
+                displayName = "$STR_ACE_AdvancedBallistics_enabled_DisplayName";
+                description = "$STR_ACE_AdvancedBallistics_enabled_Description";
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class alwaysSimulateForSnipers {
-                displayName = "Always Enabled For Snipers";
-                description = "Always enables advanced ballistics when high power optics are used";
+                displayName = "$STR_ACE_AdvancedBallistics_alwaysSimulateForSnipers_DisplayName";
+                description = "$STR_ACE_AdvancedBallistics_alwaysSimulateForSnipers_Description";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class disabledInFullAutoMode {
-                displayName = "Disabled In FullAuto Mode";
-                description = "Disables the advanced ballistics during full auto fire";
+                displayName = "$STR_ACE_AdvancedBallistics_disabledInFullAutoMod_DisplayName";
+                description = "$STR_ACE_AdvancedBallistics_disabledInFullAutoMod_Description";
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class onlyActiveForLocalPlayers {
-                displayName = "Disabled For Non Local Players";
-                description = "Disables the advanced ballistics for bullets coming from other players (enable this if you encounter frame drops during heavy firefights in multiplayer)";
+                displayName = "$STR_ACE_AdvancedBallistics_onlyActiveForLocalPlayers_DisplayName";
+                description = "$STR_ACE_AdvancedBallistics_onlyActiveForLocalPlayers_Description";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
@@ -44,35 +44,38 @@ class CfgVehicles {
             };
             */
             class ammoTemperatureEnabled {
-                displayName = "Enable Ammo Temperature Simulation";
-                description = "Muzzle velocity varies with ammo temperature";
+                displayName = "$STR_ACE_AdvancedBallistics_ammoTemperatureEnabled_DisplayName";
+                description = "$STR_ACE_AdvancedBallistics_ammoTemperatureEnabled_Description";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class barrelLengthInfluenceEnabled {
-                displayName = "Enable Barrel Length Simulation";
-                description = "Muzzle velocity varies with barrel length";
+                displayName = "$STR_ACE_AdvancedBallistics_barrelLengthInfluenceEnabled_DisplayName";
+                description = "$STR_ACE_AdvancedBallistics_barrelLengthInfluenceEnabled_Description";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class bulletTraceEnabled {
-                displayName = "Enable Bullet Trace Effect";
-                description = "Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics)";
+                displayName = "$STR_ACE_AdvancedBallistics_bulletTraceEnabled_DisplayName";
+                description = "$STR_ACE_AdvancedBallistics_bulletTraceEnabled_Description";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class simulationInterval {
-                displayName = "Simulation Interval";
-                description = "Defines the interval between every calculation step";
+                displayName = "$STR_ACE_AdvancedBallistics_simulationInterval_DisplayName";
+                description = "$STR_ACE_AdvancedBallistics_simulationInterval_Description";
                 typeName = "NUMBER";
                 defaultValue = 0.0;
             };
             class simulationRadius {
-                displayName = "Simulation Radius";
-                description = "Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles";
+                displayName = "$STR_ACE_AdvancedBallistics_simulationRadius_DisplayName";
+                description = "$STR_ACE_AdvancedBallistics_simulationRadius_Description";
                 typeName = "NUMBER";
                 defaultValue = 3000;
             };
+        };
+        class ModuleDescription {
+            description = "$STR_ACE_AdvancedBallistics_Description";
         };
     };
 };

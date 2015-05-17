@@ -12,25 +12,24 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_showEffective", "_name"];
+private ["_name"];
 
-_unit = _this select 0;
-_showEffective = _this select 1;
+PARAMS_2(_unit,_showEffective);
 
 if (isNil "_showEffective") then {
-  _showEffective = false;
+    _showEffective = false;
 };
 
 _name = "";
 
 if (_unit isKindOf "CAManBase") then {
-  _name = _unit getVariable ["ACE_Name", localize QUOTE(DOUBLES(STR,GVAR(Unknown)))];
+    _name = _unit getVariable ["ACE_Name", localize QUOTE(DOUBLES(STR,GVAR(Unknown)))];
 } else {
-  if (_showEffective) then {
-    _name = [effectiveCommander _unit] call FUNC(getName);
-  } else {
-    _name = getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
-  };
+    if (_showEffective) then {
+        _name = [effectiveCommander _unit] call FUNC(getName);
+    } else {
+        _name = getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
+    };
 };
 
 _name

@@ -31,7 +31,7 @@ _gunner = objNull;
 
 // ensure that at least the pilot is returned if there is no gunner
 if (isManualFire _vehicle && {isNull _gunner}) then {
-	_gunner = driver _vehicle;
+  _gunner = driver _vehicle;
 };
 
 _gunner

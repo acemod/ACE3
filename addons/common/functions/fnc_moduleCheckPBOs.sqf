@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+PARAMS_3(_logic,_units,_activated);
+
+private ["_mode", "_checkAll", "_whitelist"];
 
 if !(_activated) exitWith {};
 
@@ -32,6 +32,7 @@ ACE_Version_Whitelist = _whitelist;
 
 if (!isServer) then {
     [_mode, _checkAll, _whitelist] spawn {
+        private ["_mode", "_checkAll", "_whitelist", "_missingAddon", "_missingAddonServer", "_oldVersionClient", "_oldVersionServer", "_text", "_error", "_rscLayer", "_ctrlHint"];
         _mode = _this select 0;
         _checkAll = _this select 1;
         _whitelist = _this select 2;

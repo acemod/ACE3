@@ -1,18 +1,15 @@
 ---
 layout: wiki
 title: Frag
+description: 
 group: feature
 parent: wiki
 ---
-# Overview
-## Sub-feature 1
-Short description of sub-feature 1.
-## Sub-feature 2
-Short description of sub-feature 2.
 
-# Usage
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+## 1. Overview
 
-# Dependencies
-List of modules that must be present for this module to work.
+Adds a shrapnel system for explosives.
+
+## 2. Dependencies
+
+`ace_common`

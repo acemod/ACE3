@@ -15,7 +15,6 @@
 disableSerialization;
 endLoadingScreen;
 
-
 // no message without player possible
 if (!hasInterface) exitWith {};
 
@@ -30,10 +29,9 @@ if (isNull (call BIS_fnc_displayMission)) exitWith {
     }, 1, _this] call CBA_fnc_addPerFrameHandler;
 };
 
-private ["_textHeader", "_textMessage", "_onOK", "_onCancel"];
+private ["_onOK", "_onCancel"];
 
-_textHeader = _this select 0;
-_textMessage = _this select 1;
+PARAMS_2(_textHeader,_textMessage);
 _onOK = ARR_SELECT(_this,2,{});
 _onCancel = ARR_SELECT(_this,3,{});
 

@@ -10,12 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_requestID", "_requestMessage", "_callBack"];
-_caller = _this select 0;
-_target = _this select 1;
-_requestID = _this select 2;
-_requestMessage = _this select 3;
-_callBack = _this select 4;
+PARAMS_5(_caller,_target,_requestID,_requestMessage,_callBack);
 
 _requestID = ("ace_recieveRequest_f_id_"+_requestID);
 
@@ -47,6 +42,7 @@ GVAR(RECIEVE_REQUEST_ADD_ACTION_DECLINE) = _target addAction ["Decline", compile
 GVAR(RECIEVE_REQUEST_ID_KEY_BINDING) = _requestID;
 
 GVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT) = [time, _target, _requestID] spawn {
+    private["_id", "_t", "_requestID", "_target"];
     _t = (_this select 0) + 40;
     _target = _this select 1;
     _requestID = _this select 2;
@@ -65,5 +61,4 @@ GVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT) = [time, _target, _requestID] spawn {
         _target removeAction GVAR(RECIEVE_REQUEST_ADD_ACTION_DECLINE);
         GVAR(RECIEVE_REQUEST_ADD_ACTION_DECLINE) = nil;
     };
-
 };

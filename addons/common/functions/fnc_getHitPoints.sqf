@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_config", "_hitpoints"];
+private ["_config", "_hitpoints", "_i"];
 
-_vehicle = _this select 0;
+PARAMS_1(_vehicle);
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 

@@ -1,7 +1,7 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-private["_lastTime", "_lastRealTime", "_lastVirtualTime", "_lastGameTime", "_delta"];
+private["_lastRealTime", "_lastGameTime", "_delta"];
 
 _lastRealTime = ACE_realTime;
 _lastGameTime = ACE_gameTime;

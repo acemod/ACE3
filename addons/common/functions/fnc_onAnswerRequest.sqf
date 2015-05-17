@@ -9,10 +9,9 @@
  */
 #include "script_component.hpp"
 
-private ["_unit","_requestID", "_id", "_accepted", "_info", "_callBack", "_caller", "_replyParams", "_requestMessage", "_target"];
-_unit = _this select 0;
-_id = _this select 1;
-_accepted = _this select 2;
+private ["_requestID", "_info", "_callBack", "_caller", "_replyParams", "_requestMessage", "_target"];
+
+PARAMS_3(_unit,_id,_accepted);
 
 _info = _unit getvariable _id;
 if (!isnil "_info") then {

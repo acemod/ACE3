@@ -15,9 +15,7 @@
 
 private ["_unit", "_heartRate","_bloodPressure","_bloodVolume","_painStatus", "_lastTimeValuesSynced", "_syncValues", "_airwayStatus", "_blood", "_bloodPressureH", "_bloodPressureL", "_interval"];
 _unit = _this select 0;
-
-_interval = time - (_unit getVariable [QGVAR(lastMomentVitalsHandled), 0]);
-_unit setVariable [QGVAR(lastMomentVitalsHandled), time];
+_interval = _this select 1;
 
 if (_interval == 0) exitWith {};
 

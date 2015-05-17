@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Advanced Missile Guidance 
+description: The ACE3 Advanced Missile Guidance Framework provides a setup of configuration settings, functions and a execution framework for addon makers to integrate with the missile guidance and targeting mechanisms of ACE3.
 group: framework
 order: 5
 parent: wiki
@@ -8,7 +9,7 @@ parent: wiki
 
 ## 1. Overview
 
-The ACE Advanced Missile Guidance Framework provides a setup of configuration settings, functions and a execution framework for addon makers to integrate with the missile guidance and targeting mechanisms of ACE. It also provides for mod makers to create their own custom guidance methods within the framework.
+The ACE3 Advanced Missile Guidance Framework provides a setup of configuration settings, functions and a execution framework for addon makers to integrate with the missile guidance and targeting mechanisms of ACE3. It also provides for mod makers to create their own custom guidance methods within the framework.
 
 The framework provides all the functionality needed for guidance; from laser locking, target specification and selection, to handling the fired events and tracking and steering the vehicle based on provided parameters. This way, all that needs to be defined in addons is the appropriate CfgAmmo entries for the missile. 
 
