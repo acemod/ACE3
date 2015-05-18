@@ -34,7 +34,7 @@ if (isNil QEFUNC(captives,setSurrendered)) then {
 			if (!alive _unit) then {
 				["Unit must be alive"] call DEFUNC(common,displayTextStructured);
 			} else {
-				_surrendering = GETVAR(_unit,QEGVAR(captives,isSurrendering),false);
+				_surrendering = GETVAR(_unit,EGVAR(captives,isSurrendering),false);
 				// Event initalized by ACE_Captives
 				["SetSurrendered", _unit, [_unit, !_surrendering]] call DEFUNC(common,targetEvent);
 			};
