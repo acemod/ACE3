@@ -285,5 +285,8 @@
             <English>Bottom</English>
             <Polish>Dół</Polish>
         </Key>
+        <Key ID="STR_ACE_OptionsMenu_DumpDebug">
+            <English>Debug To Clipboard</English>
+        </Key>
     </Package>
 </Project>
