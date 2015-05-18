@@ -57,7 +57,7 @@ The load order for the settings are:
 * 3. Mission config
 * 4. Placed down mission modules
 
-What this means is that at any the 3 points after the mod config it is possible to insert your adjusted settings and force those (optionally). This is a powerful tool for server admins, whom can ensure that everyone is using uniform settings across the board on their server. And it provides mission makers the ability to easily set settings for their mission, without creating a large dependency on ACE; you do not have to place down mission modules.
+What this means is that at any the 3 points after the mod config it is possible to insert your adjusted settings and force those (optionally). This is a powerful tool for server admins, whom can ensure that everyone is using uniform settings across the board on their server. And it provides mission makers the ability to easily set settings for their mission, without creating a large dependency on ACE3; you do not have to place down mission modules.
 
 ## 3. How do I use them?
 
@@ -67,9 +67,9 @@ The server config setting entries are done through our optional ACE_server.pbo, 
 
 ### 3.1 Getting all the settings!
 
-ACE3 contains a lot of settings; for that reason tweaking everything to your liking manually can be quite a task. We have provided the option to export all settings in the editor. For this, follow these simple steps:
+ACE3 contains a lot of settings; for that reason tweaking everything to your liking manually can be quite a task. We have provided the option to export all settings in the editor (single-player). For this, follow these simple steps:
 
-* Open the editor (Singleplayer).
+* Open the editor (single-player).
 * Under modules (<kbd>F7</kbd>), find ACE, `Config Export [ACE]`.
 * Place down the module, ensure that the allow parameter is set to yes.
 * Press preview, once in game, press <kbd>Esc</kbd> and open the ACE3 Options dialog (top left)
