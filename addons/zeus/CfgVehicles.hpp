@@ -15,11 +15,11 @@ class CfgVehicles {
     class ModuleRemoteControl_F: Module_F {
         function = QFUNC(bi_moduleRemoteControl);
     };
-    class GVAR(moduleZeusSettings): ACE_Module {
+    class GVAR(moduleSettings): ACE_Module {
         scope = 2;
         displayName = "$STR_ACE_Zeus_Module_DisplayName";
         //icon = QUOTE(PATHTOF(iconGoesHere));
-        category = "ACE_zeus";
+        category = "ACE";
         function = QFUNC(moduleZeusSettings);
         functionPriority = 1;
         isGlobal = 1;
@@ -78,12 +78,12 @@ class CfgVehicles {
     };
     class GVAR(moduleBase): Module_F {
         author = "SilentSpike";
-        category = "ACE_zeus";
+        category = "ACE";
         scopeCurator = 2;
     };
     class GVAR(moduleCapture): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = "Capture/Release";
+        displayName = "Capture Unit";
         function = QFUNC(moduleCapture);
         class ModuleDescription {
             description = "Flips the capture state of the specified unit.";
@@ -92,7 +92,7 @@ class CfgVehicles {
     };
     class GVAR(moduleKnockout): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = "Knockout/Wakeup";
+        displayName = "Knockout Unit";
         function = QFUNC(moduleKnockout);
         class ModuleDescription {
             description = "Flips the unconscious state of the specified unit.";
@@ -101,7 +101,7 @@ class CfgVehicles {
     };
     class GVAR(moduleSurrender): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = "Surrender/Fight";
+        displayName = "Surrender Unit";
         function = QFUNC(moduleSurrender);
         class ModuleDescription {
             description = "Flips the surrender state of the specified unit.";
