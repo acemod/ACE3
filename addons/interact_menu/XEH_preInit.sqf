@@ -70,4 +70,9 @@ GVAR(collectedActionPoints) = [];
 GVAR(foundActions) = [];
 GVAR(lastTimeSearchedActions) = -1000;
 
+
+// Init CAManBase menus
+["CAManBase"] call FUNC(compileMenu);
+["CAManBase"] call FUNC(compileMenuSelfAction);
+
 ADDON = true;
