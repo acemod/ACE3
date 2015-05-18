@@ -132,7 +132,7 @@ GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
     };
     
     if (_bulletTraceVisible && _bulletSpeed > 600) then {
-        drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[sqrt(0.006*_caliber),sqrt(0.003*_caliber)],[[0,0,0,0.6],[0,0,0,0.4]],[1,0],0,0,"","",""];
+        drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[sqrt(0.006*_caliber),sqrt(0.003*_caliber)],[[0,0,0,0.75],[0,0,0,0.4]],[1,0],0,0,"","",""];
     };
 
     call compile ("ace_advanced_ballistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, floor(time), time - floor(time)]);
