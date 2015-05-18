@@ -47,3 +47,5 @@ window.app.toggleToc = function() {
     $toc.slideToggle();
     return false;
 };
+
+window.app.contentSearch.init();

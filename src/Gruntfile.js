@@ -12,6 +12,9 @@ module.exports = function (grunt) {
         "js/vendor/foundation/foundation.topbar.js",
         "js/vendor/slick/slick.js",
         "js/vendor/jekyll-toc/jekyll-toc.js",
+        "js/core/utils.js",
+        "js/components/storage.js",
+        "js/components/search.js",
         "js/app.js"
     ];
 
