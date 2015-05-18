@@ -28,10 +28,10 @@ if (isNil QEFUNC(captives,setSurrendered)) then {
 	if (isNull _unit) then {
 		["Place on a unit"] call DEFUNC(common,displayTextStructured);
 	} else {
-		if (!_unit isKindOf "CAManBase") then {
+		if !(_unit isKindOf "CAManBase") then {
 			["Unit must be infantry"] call DEFUNC(common,displayTextStructured);
 		} else {
-			if (!alive _unit) then {
+			if !(alive _unit) then {
 				["Unit must be alive"] call DEFUNC(common,displayTextStructured);
 			} else {
 				_surrendering = GETVAR(_unit,EGVAR(captives,isSurrendering),false);
