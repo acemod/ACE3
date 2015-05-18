@@ -1,0 +1,13 @@
+---
+layout: null
+---
+[
+{% for curPage in site.pages | sort: "curPage.title" %}
+    {
+        "title"         : "{{curPage.title | escape}}",
+        "description"   : "{{curPage.description | escape}}",
+        "url"           : "{{site.baseurl}}{{curPage.url}}",
+        "content"       : "{{ curPage.content | strip_html | strip_newlines | escape }}"
+    }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
