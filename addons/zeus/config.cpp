@@ -24,6 +24,11 @@ class CfgPatches {
     };
 };
 
+class ACE_Curator {
+    GVAR(captives) = "ace_captives";
+    GVAR(medical) = "ace_medical";
+};
+
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"

@@ -1,6 +1,11 @@
 /*
  * Author: SilentSpike
- * Removes ace_zeus modules from zeus based on the prescence of other ACE addons
+ * Contextually removes addons (given in ACE_Curator) from zeus based on their required addon(s)
+ *
+ * ACE_Curator format:
+ * ModuleAddon = "RequiredAddon";
+ * OR
+ * ModuleAddon[] = {"RequiredAddon1","RequiredAddon2",...}
  *
  * Arguments:
  * 0: The zeus logic <LOGIC>
@@ -12,17 +17,34 @@
  * Public: No
  */
 
-private ["_logic","_addons","_removeAddons","_classname"];
+#include "script_component.hpp"
+
+private ["_logic","_removeAddons","_numCfgs","_cfg","_requiredAddon"];
+
+if !(isClass (configFile >> "ACE_Curator")) exitWith { ERROR("The ACE_Curator class does not exist") };
 
 _logic = _this select 0;
-_addons = ["captives","medical"];
-
 _removeAddons = [];
-{
-	_classname = format ["ace_%1",_x];
-	if !(isClass (configFile >> "CfgPatches" >> _classname)) then {
-		_removeAddons pushBack (format ["ace_zeus_%1",_x]);
-	};
-} forEach _addons;
+
+_numCfgs = count (configFile >> "ACE_Curator");
+for "_n" from 0 to (_numCfgs - 1) do {
+    _cfg = (configFile >> "ACE_Curator") select _n;
+
+    if (isArray _cfg) then {
+        _requiredAddon = getArray _cfg;
+        {
+            if !(isClass (configFile >> "CfgPatches" >> _x)) exitWith {
+                _removeAddons pushBack (configName _cfg);
+            };
+        } forEach _requiredAddon;
+    };
+
+    if (isText _cfg) then {
+        _requiredAddon = getText _cfg;
+        if !(isClass (configFile >> "CfgPatches" >> _requiredAddon)) then {
+            _removeAddons pushBack (configName _cfg);
+        };
+    };
+};
 
 _logic removeCuratorAddons _removeAddons;
