@@ -1,6 +1,6 @@
 /*
  * Author: SilentSpike
- * Flips the surrender state of the unit the module is attached to.
+ * Flips the capture state of the unit the module is attached to.
  *
  * Arguments:
  * 0: The module logic <LOGIC>
@@ -16,11 +16,11 @@
 #include "script_component.hpp"
 
 PARAMS_3(_logic,_units,_activated);
-private ["_unit","_surrendering"];
+private ["_unit","_captive"];
 
 if (!_activated) exitWith {};
 
-if (isNil QEFUNC(captives,setSurrendered)) then {
+if (isNil QEFUNC(captives,setHandcuffed)) then {
 	["Requires ACE_Captives"] call DEFUNC(common,displayTextStructured);
 } else {
 	_unit = attachedTo _logic;
@@ -34,13 +34,9 @@ if (isNil QEFUNC(captives,setSurrendered)) then {
 			if !(alive _unit) then {
 				["Unit must be alive"] call DEFUNC(common,displayTextStructured);
 			} else {
-				if (GETVAR(_unit,EGVAR(captives,isHandcuffed),false)) then {
-					["Unit is a captive"] call DEFUNC(common,displayTextStructured);
-				} else {
-					_surrendering = GETVAR(_unit,EGVAR(captives,isSurrendering),false);
-					// Event initalized by ACE_Captives
-					["SetSurrendered", _unit, [_unit, !_surrendering]] call DEFUNC(common,targetEvent);
-				};
+				_captive = GETVAR(_unit,EGVAR(captives,isHandcuffed),false);
+				// Event initalized by ACE_Captives
+				["SetHandcuffed", _unit, [_unit, !_captive]] call DEFUNC(common,targetEvent);
 			};
 		};
 	};

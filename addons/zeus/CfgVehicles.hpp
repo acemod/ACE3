@@ -81,9 +81,18 @@ class CfgVehicles {
         category = "ACE_zeus";
         scopeCurator = 2;
     };
+    class GVAR(moduleCapture): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = "Capture/Release";
+        function = QFUNC(moduleCapture);
+        class ModuleDescription {
+            description = "Flips the capture state of the specified unit.";
+            sync[] = {};
+        };
+    };
     class GVAR(moduleKnockout): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = "Knockout/Wakeup Unit";
+        displayName = "Knockout/Wakeup";
         function = QFUNC(moduleKnockout);
         class ModuleDescription {
             description = "Flips the unconscious state of the specified unit.";
@@ -92,7 +101,7 @@ class CfgVehicles {
     };
     class GVAR(moduleSurrender): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = "Force Surrender";
+        displayName = "Surrender/Fight";
         function = QFUNC(moduleSurrender);
         class ModuleDescription {
             description = "Flips the surrender state of the specified unit.";

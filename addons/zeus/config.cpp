@@ -3,6 +3,7 @@
 class CfgPatches {
     class ADDON {
         units[] = {
+            QGVAR(moduleCapture),
         	QGVAR(moduleKnockout),
             QGVAR(moduleSurrender)
         };
