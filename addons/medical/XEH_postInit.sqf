@@ -274,5 +274,5 @@ if (hasInterface) then {
     ["PlayerJip", {
         diag_log format["[ACE] JIP Medical init for player"];
         [player] call FUNC(init);
-    }] call FUNC(addEventHandler);
+    }] call EFUNC(common,addEventHandler);
 };
