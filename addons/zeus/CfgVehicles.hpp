@@ -4,23 +4,23 @@ class CfgVehicles {
     class ACE_Module;
 
     class ModuleCurator_F: Module_F {
-        function = QUOTE(DFUNC(bi_moduleCurator));
+        function = QFUNC(bi_moduleCurator);
     };
     class ModuleMine_F: ModuleEmpty_F {
-        function = QUOTE(DFUNC(bi_moduleMine));
+        function = QFUNC(bi_moduleMine);
     };
     class ModuleOrdnance_F: Module_F {
-        function = QUOTE(DFUNC(bi_moduleProjectile));
+        function = QFUNC(bi_moduleProjectile);
     };
     class ModuleRemoteControl_F: Module_F {
-        function = QUOTE(DFUNC(bi_moduleRemoteControl));
+        function = QFUNC(bi_moduleRemoteControl);
     };
     class GVAR(moduleZeusSettings): ACE_Module {
         scope = 2;
         displayName = "$STR_ACE_Zeus_Module_DisplayName";
         //icon = QUOTE(PATHTOF(iconGoesHere));
         category = "ACE_zeus";
-        function = QUOTE(DFUNC(moduleZeusSettings));
+        function = QFUNC(moduleZeusSettings);
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
@@ -76,19 +76,26 @@ class CfgVehicles {
             sync[] = {};
         };
     };
-    class GVAR(moduleKnockout): Module_F {
-        scopeCurator = 2;
-        displayName = "Knockout/Wakeup Unit";
-        //icon = QUOTE(PATHTOF(iconGoesHere));
-        category = "ACE_zeus";
-        function = QUOTE(DFUNC(moduleKnockout));
-        functionPriority = 1;
-        isGlobal = 1;
-        isTriggerActivated = 0;
-        curatorCanAttach = 1;
+    class GVAR(moduleBase): Module_F {
         author = "SilentSpike";
+        category = "ACE";
+        scopeCurator = 2;
+    };
+    class GVAR(moduleKnockout): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = "Knockout/Wakeup Unit";
+        function = QFUNC(moduleKnockout);
         class ModuleDescription {
-            description = "Knocks out or wakes up the specified unit.";
+            description = "Flips the unconscious state of the specified unit.";
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleSurrender): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = "Force Surrender";
+        function = QFUNC(moduleSurrender);
+        class ModuleDescription {
+            description = "Flips the surrender state of the specified unit.";
             sync[] = {};
         };
     };

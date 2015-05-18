@@ -7,6 +7,7 @@ PREP(bi_moduleMine);
 PREP(bi_moduleProjectile);
 PREP(bi_moduleRemoteControl);
 PREP(moduleKnockout);
+PREP(moduleSurrender);
 PREP(moduleZeusSettings);
 
 ADDON = true;

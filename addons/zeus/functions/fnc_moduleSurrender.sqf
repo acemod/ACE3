@@ -1,6 +1,6 @@
 /*
  * Author: SilentSpike
- * Flips the unconscious state of the unit the module is attached to.
+ * Flips the surrender state of the unit the module is attached to.
  *
  * Arguments:
  * 0: The module logic <LOGIC>
@@ -15,13 +15,15 @@
 
 #include "script_component.hpp"
 
+[_unit,!_surrendering] call DEFUNC(captives,setSurrendered);
+
 PARAMS_3(_logic,_units,_activated);
-private ["_activated","_unit","_logic","_conscious"];
+private ["_logic","_activated","_unit","_conscious","_previous"];
 
 if (!_activated) exitWith {};
 
-if (isNil QEFUNC(medical,setUnconscious)) then {
-	["Requires ACE_Medical"] call DEFUNC(common,displayTextStructured);
+if (isNil QEFUNC(captives,setSurrendered)) then {
+	["Requires ACE_Captives"] call DEFUNC(common,displayTextStructured);
 } else {
 	_unit = attachedTo _logic;
 
@@ -34,9 +36,9 @@ if (isNil QEFUNC(medical,setUnconscious)) then {
 			if (!alive _unit) then {
 				["Unit must be alive"] call DEFUNC(common,displayTextStructured);
 			} else {
-				_conscious = GETVAR(_unit,ACE_isUnconscious,false);
-				// Function handles locality for me
-				[_unit, !_conscious, true] call DEFUNC(medical,setUnconscious);
+				_surrendering = GETVAR(_unit,QEGVAR(captives,isSurrendering),false);
+				// Event initalized by ACE_Captives
+				["SetSurrendered", _unit, [_unit, !_surrendering]] call DEFUNC(common,targetEvent);
 			};
 		};
 	};

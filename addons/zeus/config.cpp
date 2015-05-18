@@ -3,7 +3,8 @@
 class CfgPatches {
     class ADDON {
         units[] = {
-        	QGVAR(moduleKnockout)
+        	QGVAR(moduleKnockout),
+            QGVAR(moduleSurrender)
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
