@@ -21,25 +21,25 @@ private ["_unit","_captive"];
 if (!_activated) exitWith {};
 
 if (isNil QEFUNC(captives,setHandcuffed)) then {
-	["Requires ACE_Captives"] call DEFUNC(common,displayTextStructured);
+    ["Requires ACE_Captives"] call EFUNC(common,displayTextStructured);
 } else {
-	_unit = attachedTo _logic;
+    _unit = attachedTo _logic;
 
-	if (isNull _unit) then {
-		["Place on a unit"] call DEFUNC(common,displayTextStructured);
-	} else {
-		if !(_unit isKindOf "CAManBase") then {
-			["Unit must be infantry"] call DEFUNC(common,displayTextStructured);
-		} else {
-			if !(alive _unit) then {
-				["Unit must be alive"] call DEFUNC(common,displayTextStructured);
-			} else {
-				_captive = GETVAR(_unit,EGVAR(captives,isHandcuffed),false);
-				// Event initalized by ACE_Captives
-				["SetHandcuffed", _unit, [_unit, !_captive]] call DEFUNC(common,targetEvent);
-			};
-		};
-	};
+    if (isNull _unit) then {
+        ["Place on a unit"] call EFUNC(common,displayTextStructured);
+    } else {
+        if !(_unit isKindOf "CAManBase") then {
+            ["Unit must be infantry"] call EFUNC(common,displayTextStructured);
+        } else {
+            if !(alive _unit) then {
+                ["Unit must be alive"] call EFUNC(common,displayTextStructured);
+            } else {
+                _captive = GETVAR(_unit,EGVAR(captives,isHandcuffed),false);
+                // Event initalized by ACE_Captives
+                ["SetHandcuffed", _unit, [_unit, !_captive]] call EFUNC(common,targetEvent);
+            };
+        };
+    };
 };
 
 deleteVehicle _logic;
