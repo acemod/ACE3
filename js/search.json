@@ -7,7 +7,7 @@ layout: null
         "title"         : "{{curPage.title | escape}}",
         "description"   : "{{curPage.description | escape}}",
         "url"           : "{{site.baseurl}}{{curPage.url}}",
-        "content"       : "{{ curPage.content | strip_html | strip_newlines | escape }}"
+        "content"       : "{{ curPage.content | strip_html | strip_newlines | replace:'\',' ' | escape | downcase }}"
     }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]
