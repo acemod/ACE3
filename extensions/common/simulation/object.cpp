@@ -1,8 +1,8 @@
 #include "object.hpp"
-#include "p3d\parser.hpp"
+#include "p3d/parser.hpp"
 
 
-#include "glm\gtc\matrix_transform.hpp"
+#include "glm/gtc/matrix_transform.hpp"
 
 ace::simulation::vertex::vertex(vertex_table & _table, ace::vector3<float> _vertex, uint32_t _id) : table(_table), vertex_id(_id)
 {

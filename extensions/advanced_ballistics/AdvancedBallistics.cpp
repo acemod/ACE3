@@ -82,7 +82,7 @@ double calculateRoughnessLength(double posX, double posY) {
             return 1.6;
         }
 
-        return roughness_lengths[2 + min(nearBuildings, 6)];
+        return roughness_lengths[2 + std::min(nearBuildings, 6)];
     }
 
     return 0.0024;
@@ -230,7 +230,7 @@ double calculateRetard(int DragFunction, double DragCoefficient, double Velocity
 
 extern "C"
 {
-    __declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
+   EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
 }
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function)
