@@ -18,7 +18,7 @@ class CfgVehicles {
     class GVAR(moduleSettings): ACE_Module {
         scope = 2;
         displayName = "$STR_ACE_Zeus_Module_DisplayName";
-        //icon = QUOTE(PATHTOF(iconGoesHere));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Settings_ca.paa));
         category = "ACE";
         function = QFUNC(moduleZeusSettings);
         functionPriority = 1;
@@ -85,6 +85,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         displayName = "Capture Unit";
         function = QFUNC(moduleCapture);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Capture_ca.paa));
         class ModuleDescription {
             description = "Flips the capture state of the specified unit.";
             sync[] = {};
@@ -94,6 +95,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         displayName = "Knockout Unit";
         function = QFUNC(moduleKnockout);
+        //icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Knockout_ca.paa));
         class ModuleDescription {
             description = "Flips the unconscious state of the specified unit.";
             sync[] = {};
@@ -103,6 +105,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         displayName = "Surrender Unit";
         function = QFUNC(moduleSurrender);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Surrender_ca.paa));
         class ModuleDescription {
             description = "Flips the surrender state of the specified unit.";
             sync[] = {};
