@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Captives
-description: 
+description: System for taking and handling captives
 group: feature
 parent: wiki
 ---
@@ -12,13 +12,14 @@ parent: wiki
 Introduces a captivity system for taking and moving prisoners.
 
 ### 1.2 Load and unload captives into / from vehicles
-You can load and unload captives from vehicles using ACE 3 interactions.
+You can load and unload captives from vehicles using ACE3 interactions.
 
 ### 1.3 Frisk captives
 You can frisk a restrained captive.
 
 ### 1.4 Surrendering
 You can surrender. While surrendering AI will cease fire.
+
 
 ## 2. Usage
 
@@ -33,7 +34,7 @@ You can surrender. While surrendering AI will cease fire.
 - Select the escort prisoner option.
 - To stop escorting just scroll down and select `release` or use self interaction <kbd> ctrl+left windows </kbd> (by default) and select `release`.
 
-### 2.3 Loading and unloading a captive in  vehicle
+### 2.3 Loading and unloading a captive into/from a vehicle
 - Escort the person.
 - Approach the vehicle you desire to load the captive in.
 - Interact with the vehicle <kbd> left windows </kbd> (by default) and load him.
