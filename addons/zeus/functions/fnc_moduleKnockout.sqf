@@ -21,18 +21,18 @@ private ["_unit","_conscious"];
 if (!_activated) exitWith {};
 
 if (isNil QEFUNC(medical,setUnconscious)) then {
-    ["Requires ACE_Medical"] call EFUNC(common,displayTextStructured);
+    ["STR_ACE_Zeus_RequiresAddon"] call EFUNC(common,displayTextStructured);
 } else {
     _unit = attachedTo _logic;
 
     if (isNull _unit) then {
-        ["Place on a unit"] call EFUNC(common,displayTextStructured);
+        ["STR_ACE_Zeus_NothingSelected"] call EFUNC(common,displayTextStructured);
     } else {
         if !(_unit isKindOf "CAManBase") then {
-            ["Unit must be infantry"] call EFUNC(common,displayTextStructured);
+            ["STR_ACE_Zeus_OnlyInfantry"] call EFUNC(common,displayTextStructured);
         } else {
             if !(alive _unit) then {
-                ["Unit must be alive"] call EFUNC(common,displayTextStructured);
+                ["STR_ACE_Zeus_OnlyAlive"] call EFUNC(common,displayTextStructured);
             } else {
                 _conscious = GETVAR(_unit,ACE_isUnconscious,false);
                 // Function handles locality for me

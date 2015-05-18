@@ -2,8 +2,8 @@
 <Project name="ACE">
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_Module_DisplayName">
-            <English>Zeus Settings [ACE]</English>
-            <Polish>Ustawienia Zeusa [ACE]</Polish>
+            <English>Zeus Settings</English>
+            <Polish>Ustawienia Zeusa</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_Module_Description">
             <English>Provides control over various aspects of Zeus.</English>
@@ -46,8 +46,8 @@
             <Polish>Pokazuj miny</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_Description">
-            <English>Reveal mines to allies and/or place map markers.</English>
-            <Polish>Pokazuj znaczniki min dla sojuszników i/lub twórz markery na mapie w miejscu min.</Polish>
+            <English>Reveal mines to allies and place map markers.</English>
+            <Polish>Pokazuj znaczniki min dla sojuszników i twórz markery na mapie w miejscu min.</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_disable">
             <English>Disabled</English>
@@ -61,9 +61,47 @@
             <English>Allies + Map Markers</English>
             <Polish>Sojusznicy + markery na mapie</Polish>
         </Key>
-        <Key ID="STR_ACE_Zeus_category">
-            <English>ACE Zeus</English>
-            <Polish>ACE Zeus</Polish>
+        <Key ID="STR_ACE_Zeus_OnlyAlive">
+            <English>Unit must be alive</English>
+            <French>Utiliser uniquement sur une unité vivante</French>
+            <German>Nur bei lebenden Einheiten verwendbar</German>
+            <Spanish>Utilizar solo en unidades vivas</Spanish>
+            <Czech>Použitelné jen na živé jednotky</Czech>
+            <Polish>Używaj tylko na żywych jednostkach</Polish>
+            <Russian>Применимо только к живым юнитам</Russian>
+            <Hungarian>Csak élő egységeken használni</Hungarian>
+            <Italian>Si può fare solo su persone vive</Italian>
+            <Portuguese>Usar somente em unidades vivas</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_OnlyInfantry">
+            <English>Unit must be infantry</English>
+            <French>Utiliser uniquement sur du personnel à pied</French>
+            <German>Nur bei abgesessener Infanterie verwendbar</German>
+            <Spanish>Utilizar solo en infanteria desmontada</Spanish>
+            <Czech>Použitelné jen na pěsích jednotkách</Czech>
+            <Polish>Używaj tylko na piechocie poza wszelkimi pojazdami</Polish>
+            <Russian>Применимо только к пехоте вне техники</Russian>
+            <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
+            <Italian>Si può usare solo su fanteria a piedi</Italian>
+            <Portuguese>Usar somente em infantaria desmontada</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
+            <English>Unit must not be captive</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_NothingSelected">
+            <English>Place on a unit</English>
+            <French>Rien sous le curseur</French>
+            <German>Es wurde nichts ausgewählt</German>
+            <Spanish>Nada bajo el ratón</Spanish>
+            <Portuguese>Nada debaixo do mouse</Portuguese>
+            <Czech>Nic není vybráno</Czech>
+            <Polish>Nie ma nic pod kursorem</Polish>
+            <Russian>Ничего не выделено</Russian>
+            <Hungarian>Semmi sincs az egér alatt</Hungarian>
+            <Italian>Nessuna selezione</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_RequiresAddon">
+            <English>Requires an addon that is not present</English>
         </Key>
     </Package>
 </Project>
