@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 PARAMS_3(_logic,_units,_activated);
-private ["_activated","_unit","_logic","_conscious"];
+private ["_unit","_conscious"];
 
 if (!_activated) exitWith {};
 

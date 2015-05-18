@@ -15,10 +15,8 @@
 
 #include "script_component.hpp"
 
-[_unit,!_surrendering] call DEFUNC(captives,setSurrendered);
-
 PARAMS_3(_logic,_units,_activated);
-private ["_logic","_activated","_unit","_conscious","_previous"];
+private ["_unit","_surrendering"];
 
 if (!_activated) exitWith {};
 
