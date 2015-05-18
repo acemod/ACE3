@@ -78,7 +78,7 @@ class CfgVehicles {
     };
     class GVAR(moduleBase): Module_F {
         author = "SilentSpike";
-        category = "ACE";
+        category = "ACE_zeus";
         scopeCurator = 2;
     };
     class GVAR(moduleKnockout): GVAR(moduleBase) {
