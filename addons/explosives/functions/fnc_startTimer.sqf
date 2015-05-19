@@ -20,6 +20,7 @@ EXPLODE_2_PVT(_this,_explosive,_delay);
 
 [{
     EXPLODE_2_PVT(_this,_explosive,_delay);
+    playSound "ACE_Sound_Click";
     [{
         if (!isNull _this) then {
             [_this, -1, [_this, 0]] call FUNC(detonateExplosive);
