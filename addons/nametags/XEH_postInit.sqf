@@ -26,7 +26,7 @@ GVAR(ShowNamesTime) = -10;
 // This allows for assigned team colors to match across the entire group
 [{
     private["_leader", "_playerIsLeader", "_unitTeam"];
-    if (alive ACE_player) then {
+    if (!(isNull ACE_player) && { alive ACE_player } ) then {
         _leader = leader (group ACE_player);
         _playerIsLeader = false;
         
