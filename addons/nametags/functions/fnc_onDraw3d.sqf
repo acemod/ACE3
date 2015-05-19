@@ -97,13 +97,7 @@ if (((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) || {GVAR(sho
             _distance = vectorMagnitude _relPos;
             _projDist = _relPos vectorDistance (_vecy vectorMultiply (_relPos vectorDotProduct _vecy));
 
-            _alpha = ((1 - 0.2 * (_distance - _maxDistance)) min (1 - 0.15 * (_projDist * 5 - _distance - 3)) min 1) * GVAR(PlayerNamesMaxAlpha);
-
-            if ((GVAR(showSoundWaves) == 2) && {([_target] call FUNC(isSpeaking)) && {(vehicle _target) == _target}}) then {
-                _alpha = 1;
-            } else {
-                _alpha = (_alpha min _onKeyPressAlphaMax);
-            };
+            _alpha = (((1 - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(PlayerNamesMaxAlpha)) min _onKeyPressAlphaMax;
 
             [ACE_player, _target, _alpha, _distance * 0.026, _icon] call FUNC(drawNameTagIcon);
         };
