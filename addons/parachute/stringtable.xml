@@ -49,9 +49,9 @@
             <Italian>Paracadute non manovrabile</Italian>
             <Portuguese>Para-querdas não controlável</Portuguese>
         </Key>
-		<Key ID="STR_ACE_Parachute_CutParachute">
-			<English>Cut Parachute</English>
-			<German>Fallschirm abschneiden</German>
+        <Key ID="STR_ACE_Parachute_CutParachute">
+            <English>Cut Parachute</English>
+            <German>Fallschirm abschneiden</German>
 		</Key>
     </Package>
 </Project>
