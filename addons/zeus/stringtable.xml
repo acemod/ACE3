@@ -61,6 +61,15 @@
             <English>Allies + Map Markers</English>
             <Polish>Sojusznicy + markery na mapie</Polish>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleCaptive_DisplayName">
+            <English>Toggle Captive</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
+            <English>Toggle Surrender</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
+            <English>Toggle Unconscious</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
             <French>Utiliser uniquement sur une unité vivante</French>

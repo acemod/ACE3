@@ -83,7 +83,7 @@ class CfgVehicles {
     };
     class GVAR(moduleCaptive): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = "Toggle Captive";
+        displayName = "$STR_ACE_Zeus_ModuleCaptive_DisplayName";
         function = QFUNC(moduleCaptive);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Captive_ca.paa));
         class ModuleDescription {
@@ -93,7 +93,7 @@ class CfgVehicles {
     };
     class GVAR(moduleSurrender): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = "Toggle Surrender";
+        displayName = "$STR_ACE_Zeus_ModuleSurrender_DisplayName";
         function = QFUNC(moduleSurrender);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Surrender_ca.paa));
         class ModuleDescription {
@@ -103,7 +103,7 @@ class CfgVehicles {
     };
     class GVAR(moduleUnconscious): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = "Toggle Unconscious";
+        displayName = "$STR_ACE_Zeus_ModuleUnconscious_DisplayName";
         function = QFUNC(moduleUnconscious);
         //icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa));
         class ModuleDescription {
