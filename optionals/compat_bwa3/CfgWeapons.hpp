@@ -64,7 +64,7 @@ class CfgWeapons
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Scope {
-                    discreteDistance[] = { 100 };
+                    discreteDistance[] = { 200 };
                     discreteDistanceInitIndex = 0;
                 };
             };
@@ -77,7 +77,7 @@ class CfgWeapons
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Scope {
-                    discreteDistance[] = { 100 };
+                    discreteDistance[] = { 200 };
                     discreteDistanceInitIndex = 0;
                 };
             };
@@ -90,7 +90,7 @@ class CfgWeapons
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Scope {
-                    discreteDistance[] = { 100 };
+                    discreteDistance[] = { 200 };
                     discreteDistanceInitIndex = 0;
                 };
             };
