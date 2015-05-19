@@ -35,7 +35,7 @@ if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
 if (underwater _unit) exitWith {};
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
 if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith {};
-if (GVAR(simulateForEveryone) && !(local _unit)) then {
+if (!GVAR(simulateForEveryone) && !(local _unit)) then {
     // The shooter is non local
     _abort = true;
     if (GVAR(simulateForSnipers)) then {
