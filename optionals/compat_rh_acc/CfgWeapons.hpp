@@ -3,6 +3,16 @@ class CfgWeapons {
     class ItemCore;
     class InventoryOpticsItem_Base_F;
     
+    /*
+    // This would require MOA turrets
+    class RH_shortdot : ItemCore {
+        ACE_ScopeAdjust_Vertical[] = { -1, 25 };
+        ACE_ScopeAdjust_Horizontal[] = { -13, 13 };
+        ACE_ScopeAdjust_Increment = 0.5;
+        ACE_ScopeAdjust_Unit = "MOA";
+    };
+    */
+    
     class RH_accupoint : ItemCore {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
