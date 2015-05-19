@@ -181,12 +181,12 @@ class CfgWeapons {
         displayName = "$STR_ACE_RealisticNames_launch_RPG32_Name";
     };
 
-    class launch_Titan_base: Launcher_Base_F {
+    /*class launch_Titan_base: Launcher_Base_F {
         displayName = "$STR_ACE_RealisticNames_launch_Titan_Name";
     };
     class launch_Titan_short_base: launch_Titan_base {
         displayName = "$STR_ACE_RealisticNames_launch_Titan_short_Name";
-    };
+    };*/
 
     class launch_NLAW_F: Launcher_Base_F {
         displayName = "$STR_ACE_RealisticNames_launch_NLAW_Name";

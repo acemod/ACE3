@@ -38,12 +38,18 @@ _litter = getArray (_config >> "litter");
 
 _createLitter = {
     private["_position", "_litterClass", "_direction"];
-    _position = getPos (_this select 0);
+    
+    // @TODO: handle carriers over water
+    // For now, don't spawn litter if we are over water to avoid floating litter
+    if(surfaceIsWater (getPos (_this select 0))) exitWith { false };
+    
+    _position = getPosATL (_this select 0);
+    _position = [_position select 0, _position select 1, 0];
     _litterClass = _this select 1;
     if (random(1) >= 0.5) then {
-        _position = [(_position select 0) + random 2, (_position select 1) + random 2, _position select 2];
+        _position = [(_position select 0) + random 1, (_position select 1) + random 1, _position select 2];
     } else {
-       _position =  [(_position select 0) - random 2, (_position select 1) - random 2, _position select 2];
+       _position =  [(_position select 0) - random 1, (_position select 1) - random 1, _position select 2];
     };
     _direction = (random 360);
 

@@ -17,9 +17,9 @@
  */
 #include "script_component.hpp"
 
-private ["_name","_value"];
-_name = _this select 0;
-_value = _this select 1;
+private ["_force", "_settingData","_failed"];
+
+PARAMS_2(_name,_value);
 
 private ["_force"];
 _force = false;

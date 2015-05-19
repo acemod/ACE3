@@ -2,18 +2,21 @@
  * Author: esteldunedain
  * Return a suitable position for the action point for the current weapon
  *
- * Argument:
- * None
+ * Arguments:
+ * None (uses local variable _target)
  *
  * Return value:
  * Children actions <ARRAY>
+ *
+ * Example:
+ * call ace_interaction_fnc_getWeaponPos
  *
  * Public: No
  */
 #include "script_component.hpp"
 // IGNORE_PRIVATE_WARNING(_target);
 
-private ["_weaponDir","_refSystem"];
+private ["_weaponDir", "_refSystem"];
 
 _weaponDir = _target weaponDirection currentWeapon _target;
 _refSystem = _weaponDir call EFUNC(common,createOrthonormalReference);

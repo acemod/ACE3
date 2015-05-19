@@ -3,7 +3,6 @@ ace_interaction
 
 Provides interaction options between units.
 
-
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.

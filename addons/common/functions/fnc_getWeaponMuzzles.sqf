@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_weapon", "_muzzles"];
+private ["_muzzles"];
 
-_weapon = _this select 0;
+PARAMS_1(_weapon);
 
 _muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
 

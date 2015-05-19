@@ -3,7 +3,6 @@
 ADDON = false;
 
 PREP(moduleInit);
-PREP(bi_moduleProjectile);
 
 GVAR(moduleInitCollection) = [];
 

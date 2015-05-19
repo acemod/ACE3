@@ -12,10 +12,7 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_light"];
-
-_vehicle = _this select 0;
-_light = _this select 1;
+PARAMS_2(_vehicle,_light);
 
 private "_config";
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle >> "Reflectors" >> _light;

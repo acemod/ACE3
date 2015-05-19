@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_unit,_varName,_maxDelay);
+PARAMS_3(_unit,_varName,_maxDelay);
 
 // Create the publish scheduler PFH the first time
 if (isNil QGVAR(publishSchedId)) then {

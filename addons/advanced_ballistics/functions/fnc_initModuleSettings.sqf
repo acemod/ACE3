@@ -29,6 +29,7 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(onlyActiveForLocalPlayers), "onlyActiveForLocalPlayers"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(disabledInFullAutoMode), "disabledInFullAutoMode"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(alwaysSimulateForSnipers), "alwaysSimulateForSnipers"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(alwaysSimulateForGroupMembers), "alwaysSimulateForGroupMembers"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(simulationInterval), "simulationInterval"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(simulationRadius), "simulationRadius"] call EFUNC(common,readSettingFromModule);
 

@@ -12,9 +12,9 @@
  */
 #include "script_component.hpp"
 
-private ["_weapon", "_direction", "_azimuth", "_inclination"];
+private ["_direction", "_azimuth", "_inclination"];
 
-_weapon = _this select 0;
+PARAMS_1(_weapon);
 
 _direction = ACE_player weaponDirection _weapon;
 

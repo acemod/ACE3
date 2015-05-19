@@ -2,7 +2,10 @@
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
-
+    if (GVAR(Kestrel4500)) exitWith {
+        closeDialog 0;
+        false
+    };    
     // Statement
     [] call FUNC(createKestrelDialog);
     false
@@ -14,7 +17,7 @@
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
-
+    
     // Statement
     [] call FUNC(displayKestrel);
     false

@@ -50,7 +50,7 @@ class CfgVehicles {
     class GVAR(module): Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "MK6 Settings";
+        displayName = "$STR_ACE_mk6mortar_Module_DisplayName";
         function = QFUNC(moduleInit);
         scope = 2;
         isGlobal = 0;
@@ -58,26 +58,26 @@ class CfgVehicles {
         functionPriority = 0;
         class Arguments {
             class airResistanceEnabled {
-                displayName = "Air Resistance";
-                description = "For Player Shots, Model Air Resistance and Wind Effects";
+                displayName = "$STR_ACE_mk6mortar_airResistanceEnabled_DisplayName";
+                description = "$STR_ACE_mk6mortar_airResistanceEnabled_Description";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class allowComputerRangefinder {
-                displayName = "Allow MK6 Computer";
-                description = "Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)";
+                displayName = "$STR_ACE_mk6mortar_allowComputerRangefinder_DisplayName";
+                description = "$STR_ACE_mk6mortar_allowComputerRangefinder_Description";
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class allowCompass {
-                displayName = "Allow MK6 Compass";
-                description = "Show the MK6 Digital Compass";
+                displayName = "$STR_ACE_mk6mortar_allowCompass_DisplayName";
+                description = "$STR_ACE_mk6mortar_allowCompass_Description";
                 typeName = "BOOL";
                 defaultValue = 1;
             };
         };
         class ModuleDescription: ModuleDescription {
-            description = "";
+            description = "$STR_ACE_mk6mortar_Module_Description";
         };
     };
 };

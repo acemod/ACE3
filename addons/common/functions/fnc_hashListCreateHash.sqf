@@ -1,9 +1,10 @@
 //fnc_hashListCreateHash.sqf
 #include "script_component.hpp"
 
-private ["_hashList", "_hashKeys"];
+private ["_hashKeys"];
 
-_hashList = _this select 0;
+PARAMS_1(_hashList);
+
 ERRORDATA(1);
 _hashKeys = [];
 try {
