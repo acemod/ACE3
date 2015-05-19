@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 private ["_unit"];
-_unit = _this select 0;
+PARAMS_1(_unit);
 GVAR(PFH) = false;
 [_unit, "AmovPercMevaSrasWrflDf_AmovPknlMstpSrasWrflDnon", 2] call EFUNC(common,doAnimation);
 SETVAR(_unit,chuteIsCut,false);

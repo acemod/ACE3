@@ -1,18 +1,19 @@
 #include "script_component.hpp"
 /*
-	Name: check Cut Parachute
+ * Author: joko // Jonas
+ * Reset the parachute system.
+ *
+ * Arguments:
+ * 0: Object
+ *
+ * Return Value:
+ * Boolean
+ *
+ * Example:
+ * [player] call FUNC(checkCutParachute);
+ *
+ * Public: No
+ */
 
-	Author: joko // Jonas
-
-	Description:
-	Check if Parachute can be Cuted
-
-	Parameters:
-	0: Object
-
-	Returns:
-	Boolean
-*/
 _unit = _this select 0;
-
-if (animationState _unit == "para_pilot" && !(GETVAR(_unit,chuteIsCut,false))) then {true} else {false};
+(animationState _unit == 'para_pilot' && !(_unit getvariable [QGVAR(chuteIsCut),false]))
