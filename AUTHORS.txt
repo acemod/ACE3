@@ -1,4 +1,4 @@
-﻿j# ACE 3 CONTRIBUTOR LIST
+﻿# ACE 3 CONTRIBUTOR LIST
 # If you contributed, but are not listed here, contact me:
 # koffeinflummi@gmail.com
 #
