@@ -36,7 +36,7 @@ Adds a HUD to the AH-9 based on the Comanche's HUD.
 ## 2. Usage
 
 ### 2.1 Switching flare modes
-- <kbd> ctrl+c </kbd> (by default)
+Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to switch between flare firing modes
 
 
 ## 3. Dependencies
