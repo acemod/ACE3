@@ -5,9 +5,11 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {"ace_ballistics"};
         author[] = {"ACE2 Team"};
         authorUrl = "https://www.ace3mod.com";
         VERSION_CONFIG;
     };
 };
+
+#include "CfgAmmo.hpp"
