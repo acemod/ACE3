@@ -48,20 +48,28 @@ if (diag_frameno > (_unit getVariable [QGVAR(basic_frameNo), -3]) + 2) then {
     _unit setVariable [QGVAR(hitPoints), []];
     _unit setVariable [QGVAR(damages), []];
     _unit setVariable [QGVAR(structDamage), 0];
+
+    if (isnil {_unit getvariable QGVAR(structDamagePFH)}) then {
     // Assign orphan structural damage to torso
-    [{
-        private ["_unit", "_damagesum"];
-        _unit = _this select 0;
-        _damagesum = (_unit getHitPointDamage "HitHead") +
-            (_unit getHitPointDamage "HitBody") +
-            (_unit getHitPointDamage "HitLeftArm") +
-            (_unit getHitPointDamage "HitRightArm") +
-            (_unit getHitPointDamage "HitLeftLeg") +
-            (_unit getHitPointDamage "HitRightLeg");
-        if (_damagesum < 0.06 and damage _unit > 0.06 and alive _unit) then {
-            _unit setHitPointDamage ["HitBody", damage _unit];
-        };
-    }, [_unit], 2, 0.1] call EFUNC(common,waitAndExecute);
+        [{
+            private ["_unit", "_damagesum"];
+            _unit = (_this select 0) select 0;
+            if (diag_tickTime - _unit getvariable [QGVAR(structDamagePFH),-2] >= 2) then {
+                 _unit setVariable [QGVAR(structDamagePFH), nil];
+                _damagesum = (_unit getHitPointDamage "HitHead") +
+                    (_unit getHitPointDamage "HitBody") +
+                    (_unit getHitPointDamage "HitLeftArm") +
+                    (_unit getHitPointDamage "HitRightArm") +
+                    (_unit getHitPointDamage "HitLeftLeg") +
+                    (_unit getHitPointDamage "HitRightLeg");
+                if (_damagesum < 0.06 and damage _unit > 0.06 and alive _unit) then {
+                    _unit setHitPointDamage ["HitBody", damage _unit];
+                };
+                [(_this select 1)] call cba_fnc_removePerFrameHandler;
+            };
+        }, 0, [_unit]] call CBA_fnc_addPerFrameHandler;
+    };
+    _unit setVariable [QGVAR(structDamagePFH), diag_tickTime]; // Assign starting time or reset it
 };
 
 _newDamage = _damage - (damage _unit);
