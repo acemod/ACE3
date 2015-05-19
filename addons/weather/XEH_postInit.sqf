@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 // Randomization
+GVAR(coloredWindArrow) = true;
 GVAR(temperatureShift) = 3 - random 6;
 GVAR(badWeatherShift) = (random 1) ^ 2 * 10;
 GVAR(humidityShift) = (5 - random 10) / 100;
