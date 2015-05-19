@@ -20,8 +20,10 @@ class CfgAmmo
 	class BWA3_B_556x45_Ball_SD: BWA3_B_556x45_Ball
 	{
         // Reference?
-        ACE_muzzleVelocities[]={340};
-        ACE_barrelLengths[]={368.3};
+        ACE_ballisticCoefficients[]={};
+        ACE_velocityBoundaries[]={};
+        ACE_muzzleVelocities[]={};
+        ACE_barrelLengths[]={};
 	};
 	class BWA3_B_556x45_Ball_AP: BWA3_B_556x45_Ball
 	{
@@ -104,8 +106,10 @@ class CfgAmmo
 	class BWA3_B_127x99_Ball_SD: BWA3_B_127x99_Ball
 	{
         // Reference?
-        ACE_muzzleVelocities[]={340};
-        ACE_barrelLengths[]={736.6};
+        ACE_ballisticCoefficients[]={};
+        ACE_velocityBoundaries[]={};
+        ACE_muzzleVelocities[]={};
+        ACE_barrelLengths[]={};
 	};
 	class BWA3_B_127x99_Ball_AP: BWA3_B_127x99_Ball
 	{
@@ -136,7 +140,9 @@ class CfgAmmo
 	class BWA3_B_46x30_Ball_SD: BWA3_B_46x30_Ball
 	{
         // Reference?
-        ACE_muzzleVelocities[]={340};
-        ACE_barrelLengths[]={304.8};
+        ACE_ballisticCoefficients[]={};
+        ACE_velocityBoundaries[]={};
+        ACE_muzzleVelocities[]={};
+        ACE_barrelLengths[]={};
 	};
 };
