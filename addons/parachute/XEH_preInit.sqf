@@ -22,5 +22,6 @@ PREP(handleInfoDisplayChanged);
 PREP(hideAltimeter);
 PREP(onEachFrame);
 PREP(showAltimeter);
-
+PREP(checkCutParachute);
+PREP(cutParachute);
 ADDON = true;

@@ -1,4 +1,5 @@
 class CfgVehicles {
+    class Man;
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
@@ -15,6 +16,20 @@ class CfgVehicles {
         };
     };
 
+    class CAManBase: Man {
+        class ACE_SelfActions {
+            class ACE_CutParachute {
+                displayName = "STR_ACE_Parachute_CutParachute";
+                exceptions[] = {"isNotInside"};
+                condition = QUOTE([_player] call FUNC(checkCutParachute));
+                statement = QUOTE([_player] call FUNC(cutParachute));
+                showDisabled = 0;
+                priority = 2.9;
+                icon = QUOTE(PATHTOF(UI\cut_ca.paa));
+                hotkey = "C";
+            };
+        };
+    };
     class B_Parachute;
     class ACE_NonSteerableParachute: B_Parachute {
         author = "$STR_ACE_Common_ACETeam";
