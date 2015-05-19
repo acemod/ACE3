@@ -27,13 +27,19 @@ class CfgVehicles {
                 showDisabled = 0;
                 priority = 2.9;
                 icon = QUOTE(PATHTOF(UI\cut_ca.paa));
-                hotkey = "C"; // Did this allready Work?
+                hotkey = "C"; // Did this realy Work?
             };
         };
     };
-
-    class B_Parachute;
+    class Helicopter;
+    class ParachuteBase: Helicopter {
+        ace_reserveParachute = "ACE_NonSteerableParachute";
+    };
+    class B_Parachute: ParachuteBase {
+        ace_reserveParachute = "ACE_NonSteerableParachute";
+    };
     class ACE_NonSteerableParachute: B_Parachute {
+        ace_reserveParachute = "ACE_NonSteerableParachute";
         author = "$STR_ACE_Common_ACETeam";
         scope = 2;
         displayName = "$STR_ACE_Parachute_NonSteerableParachute";
