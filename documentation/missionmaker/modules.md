@@ -25,7 +25,7 @@ Enables advanced ballistics for non local snipers (when using high power optics)
 Enables advanced ballistics for non local group members.<br>
 `Default value: No`
 4. **Enabled For Everyone (Boolean)**<br>
-Enables advanced ballistics for all non local players (Enabling this feature may degrade performance during heavy firefights in multiplayer).<br>
+Enables advanced ballistics for all non local players (enabling this feature may degrade performance during heavy firefights in multiplayer).<br>
 `Default value: No`
 5. **Disabled In FullAuto Mode (Boolean)**<br>
 Disables the advanced ballistics during full auto fire.<br>
