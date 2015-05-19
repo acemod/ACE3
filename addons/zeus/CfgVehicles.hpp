@@ -81,33 +81,33 @@ class CfgVehicles {
         category = "ACE";
         scopeCurator = 2;
     };
-    class GVAR(moduleCapture): GVAR(moduleBase) {
+    class GVAR(moduleCaptive): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = "Capture Unit";
-        function = QFUNC(moduleCapture);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Capture_ca.paa));
+        displayName = "Toggle Captive";
+        function = QFUNC(moduleCaptive);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Captive_ca.paa));
         class ModuleDescription {
             description = "Flips the capture state of the specified unit.";
             sync[] = {};
         };
     };
-    class GVAR(moduleKnockout): GVAR(moduleBase) {
-        curatorCanAttach = 1;
-        displayName = "Knockout Unit";
-        function = QFUNC(moduleKnockout);
-        //icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Knockout_ca.paa));
-        class ModuleDescription {
-            description = "Flips the unconscious state of the specified unit.";
-            sync[] = {};
-        };
-    };
     class GVAR(moduleSurrender): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = "Surrender Unit";
+        displayName = "Toggle Surrender";
         function = QFUNC(moduleSurrender);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Surrender_ca.paa));
         class ModuleDescription {
             description = "Flips the surrender state of the specified unit.";
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleUnconscious): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = "Toggle Unconscious";
+        function = QFUNC(moduleUnconscious);
+        //icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa));
+        class ModuleDescription {
+            description = "Flips the unconscious state of the specified unit.";
             sync[] = {};
         };
     };

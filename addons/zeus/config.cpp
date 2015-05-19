@@ -13,13 +13,13 @@ class CfgPatches {
     // Use additional cfgPatches to contextually remove modules from zeus
     class GVAR(captives): ADDON {
         units[] = {
-            QGVAR(moduleCapture),
+            QGVAR(moduleCaptive),
             QGVAR(moduleSurrender)
         };
     };
     class GVAR(medical): ADDON {
         units[] = {
-            QGVAR(moduleKnockout)
+            QGVAR(moduleUnconscious)
         };
     };
 };

@@ -7,9 +7,9 @@ PREP(bi_moduleMine);
 PREP(bi_moduleProjectile);
 PREP(bi_moduleRemoteControl);
 PREP(handleZeusUnitAssigned);
-PREP(moduleCapture);
-PREP(moduleKnockout);
+PREP(moduleCaptive);
 PREP(moduleSurrender);
+PREP(moduleUnconscious);
 PREP(moduleZeusSettings);
 
 if (isServer) then {
