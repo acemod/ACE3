@@ -54,7 +54,7 @@ if (diag_frameno > (_unit getVariable [QGVAR(basic_frameNo), -3]) + 2) then {
         [{
             private ["_unit", "_damagesum"];
             _unit = (_this select 0) select 0;
-            if (diag_tickTime - _unit getvariable [QGVAR(structDamagePFH),-2] >= 2) then {
+            if (diag_tickTime - (_unit getvariable [QGVAR(structDamagePFH),-2]) >= 2) then {
                  _unit setVariable [QGVAR(structDamagePFH), nil];
                 _damagesum = (_unit getHitPointDamage "HitHead") +
                     (_unit getHitPointDamage "HitBody") +
