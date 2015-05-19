@@ -9,7 +9,7 @@ parent: wiki
 ## 1. Overview
 
 ### 1.1 Zipping sounds
-A zipper sound is played when someone opens your backpack. This helps to prevent banana theft.
+A zipper sound is played when someone opens your backpack. This helps prevent banana theft.
 
 ## 2. Dependencies
 

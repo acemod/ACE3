@@ -31,7 +31,7 @@ You can surrender. While surrendering AI will cease fire.
 ### 2.2 Escorting a captive
 - Interact with the captive <kbd>Left Windows</kbd>.
 - Select the `Escort prisoner` option.
-- To stop escorting, use the mousewheel and select `Release` or use Self Interaction <kbd>Ctrl+Left windows</kbd> and select `Release`.
+- To stop escorting, use the mousewheel and select `Release` or use Self Interaction <kbd>Ctrl</kbd>+<kbd>Left windows</kbd> and select `Release`.
 
 ### 2.3 Loading and unloading a captive into/from a vehicle
 - Escort the captive.
