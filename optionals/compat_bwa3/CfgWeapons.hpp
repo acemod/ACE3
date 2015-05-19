@@ -1,58 +1,47 @@
-class CfgWeapons
-{
-	class Pistol_Base_F;
-	class Rifle_Base_F;
-	class Rifle_Long_Base_F;
-	class BWA3_P8: Pistol_Base_F
-	{
+class CfgWeapons {
+    class Pistol_Base_F;
+    class Rifle_Base_F;
+    class Rifle_Long_Base_F;
+    class BWA3_P8: Pistol_Base_F {
         ACE_barrelTwist=248.92;
         ACE_barrelLength=108;
-	};
-	class BWA3_MP7: Pistol_Base_F
-	{
+    };
+    class BWA3_MP7: Pistol_Base_F {
         ACE_barrelTwist=160.02;
         ACE_barrelLength=180;
-	};
-	class BWA3_G36: Rifle_Base_F
-	{
+    };
+    class BWA3_G36: Rifle_Base_F {
         ACE_barrelTwist=177.8;
         ACE_barrelLength=480;
-	};
-	class BWA3_G36K: BWA3_G36
-	{
+    };
+    class BWA3_G36K: BWA3_G36 {
         ACE_barrelTwist=177.8;
         ACE_barrelLength=318;
-	};
-	class BWA3_G28_Standard: Rifle_Long_Base_F
-	{
+    };
+    class BWA3_G28_Standard: Rifle_Long_Base_F {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=419;
-	};
-	class BWA3_G28_Assault: BWA3_G28_Standard
-	{
+    };
+    class BWA3_G28_Assault: BWA3_G28_Standard {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=305;
-	};
-	class BWA3_G27: BWA3_G28_Standard
-	{
+    };
+    class BWA3_G27: BWA3_G28_Standard {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=406;
-	};
-	class BWA3_MG4: Rifle_Long_Base_F
-	{
+    };
+    class BWA3_MG4: Rifle_Long_Base_F {
         ACE_barrelTwist=177.8;
         ACE_barrelLength=480;
-	};
-	class BWA3_MG5: Rifle_Long_Base_F
-	{
+    };
+    class BWA3_MG5: Rifle_Long_Base_F {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=550;
-	};
-	class BWA3_G82: Rifle_Long_Base_F
-	{
+    };
+    class BWA3_G82: Rifle_Long_Base_F {
         ACE_barrelTwist=381.0;
         ACE_barrelLength=736.7;
-	};
+    };
     
     class optic_Hamr;
     class InventoryOpticsItem_Base_F;
