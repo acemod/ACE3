@@ -18,18 +18,18 @@ This module allows enabling and configuring advanced ballistic simulations.
 1. **Advanced Ballistics (Boolean)**<br>
 Enables advanced ballistics.<br>
 `Default value: No`
-2. **Always Enabled For Snipers (Boolean)**<br>
-Always enables advanced ballistics when high power optics are used.<br>
+2. **Enabled For Snipers (Boolean)**<br>
+Enables advanced ballistics for non local snipers (when using high power optics).<br>
 `Default value: Yes`
-3. **Always Enabled For Group Members (Boolean)**<br>
-Always enables advanced ballistics when a group member fires<br>
+3. **Enabled For Group Members (Boolean)**<br>
+Enables advanced ballistics for non local group members.<br>
 `Default value: No`
-4. **Disabled In FullAuto Mode (Boolean)**<br>
+4. **Enabled For Everyone (Boolean)**<br>
+Enables advanced ballistics for all non local players (Enabling this feature may degrade performance during heavy firefights in multiplayer).<br>
+`Default value: No`
+5. **Disabled In FullAuto Mode (Boolean)**<br>
 Disables the advanced ballistics during full auto fire.<br>
 `Default value: No`
-5. **Disabled For Non Local Players (Boolean)**<br>
-Disables the advanced ballistics for bullets coming from other players (enable this if you encounter frame drops during heavy firefights in multiplayer).<br>
-`Default value: Yes`
 6. **Enable Ammo Temperature Simulation (Boolean)**<br>
 Muzzle velocity varies with ammo temperature.<br>
 `Default value: Yes`
