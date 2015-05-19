@@ -42,5 +42,5 @@ _player setVariable [QGVAR(PlantingExplosive), true];
 [{_this setVariable [QGVAR(PlantingExplosive), false]}, _player, 1.5, 0.5] call EFUNC(common,waitAndExecute);
 _setup addEventHandler ["EpeContactStart", FUNC(onLanded)];
 _setup enableSimulationGlobal true;
-_player playActionNow "MedicOther";
+_player playActionNow "PutDown";
 _player removeMagazine (_setup getVariable [QGVAR(Class), ""]);
