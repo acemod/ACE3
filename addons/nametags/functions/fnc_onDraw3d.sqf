@@ -1,9 +1,9 @@
 #include "script_component.hpp"
 
-private ["_onKeyPressAlphaMax", "_defaultIcon", "_distance", "_alpha", "_icon", "_targets", "_pos2", "_vecy", "_relPos", "_projDist", "_pos", "_target"];
+private ["_onKeyPressAlphaMax", "_defaultIcon", "_distance", "_alpha", "_icon", "_targets", "_pos2", "_vecy", "_relPos", "_projDist", "_pos", "_target", "_targetEyePosASL"];
 
 //don't show nametags in spectator
-if (!alive ACE_player) exitWith {};
+if ((isNull ACE_player) || {!alive ACE_player}) exitWith {};
 
 _onKeyPressAlphaMax = if ((GVAR(showPlayerNames) in [3,4])) then {
     2 + (GVAR(ShowNamesTime) - time); //after release 1 second of full opacity, 1 second of fading to 0
@@ -89,7 +89,9 @@ if (((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) || {GVAR(sho
                 {GVAR(ShowNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
                 {!(_target getVariable ["ACE_hideName", false])}) then {
 
-            if (lineIntersects [_pos, (visiblePositionASL _target) vectorAdd [0,0,1], vehicle ACE_player, _target]) exitWith {}; // Check if there is line of sight
+            _targetEyePosASL = eyePos _target;
+            if (lineIntersects [_pos, _targetEyePosASL, ACE_player, _target]) exitWith {}; // Check if there is line of sight
+
             _relPos = (visiblePositionASL _target) vectorDiff _pos;
             _distance = vectorMagnitude _relPos;
             _projDist = _relPos vectorDistance (_vecy vectorMultiply (_relPos vectorDotProduct _vecy));
