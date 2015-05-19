@@ -18,7 +18,7 @@ private ["_unit"];
 _unit = _this select 0;
 GVAR(PFH) = false;
 [_unit, "AmovPercMevaSrasWrflDf_AmovPknlMstpSrasWrflDnon", 2] call EFUNC(common,doAnimation);
-SETVAR(_unit,chuteIsCuted,false);
+SETVAR(_unit,chuteIsCut,false);
 [{
     if (time >= ((_this select 0) select 0) + 1) then {
         ((_this select 0) select 1) playActionNow "Crouch";

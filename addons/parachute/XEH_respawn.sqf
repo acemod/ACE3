@@ -14,4 +14,4 @@
  * Public: No
  */
 #include "script_component.hpp"
-SETVAR(_unit,chuteIsCuted,false);
+SETVAR(_unit,chuteIsCut,false);

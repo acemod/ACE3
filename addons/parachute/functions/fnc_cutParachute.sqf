@@ -19,4 +19,4 @@ _vehicle = vehicle _unit;
 _unit action ["GetOut", vehicle _unit];
 deleteVehicle _vehicle;
 _unit addBackpack "B_Parachute";
-SETVAR(_unit,chuteIsCuted,true);
+SETVAR(_unit,chuteIsCut,true);

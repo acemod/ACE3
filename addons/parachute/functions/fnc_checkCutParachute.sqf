@@ -15,4 +15,4 @@
 */
 _unit = _this select 0;
 
-if (animationState _unit == "para_pilot" && !(GETVAR(_unit,chuteIsCuted,false))) then {true} else {false};
+if (animationState _unit == "para_pilot" && !(GETVAR(_unit,chuteIsCut,false))) then {true} else {false};
