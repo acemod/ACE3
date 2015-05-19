@@ -148,50 +148,62 @@
         <Key ID="STR_ACE_Respawn_Module_DisplayName">
             <English>Respawn System</English>
             <Polish>System odrodzenia</Polish>
+            <Spanish>Sistema de reaparición</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_DisplayName">
             <English>Save Gear?</English>
             <Polish>Zapisać ekwipunek?</Polish>
+            <Spanish>¿Guardar equipo?</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_Description">
             <English>Respawn with the gear a soldier had just before his death?</English>
             <Polish>Odradzaj z ekwipunkiem jaki żołnierz miał tuż przed swoją śmiercią?</Polish>
+            <Spanish>Reaparece con el equipo que el soldado tenía justo antes de morir</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName">
             <English>Remove bodies?</English>
             <Polish>Usuwać ciała?</Polish>
+            <Spanish>¿Eliminar cuerpos?</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description">
             <English>Remove player bodies after disconnect?</English>
             <Polish>Usuwaj ciała graczy po rozłączeniu z serwera?</Polish>
+            <Spanish>Elimina los cuerpos de los jugadores cuando se desconecten</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować ustawienia odrodzenia (respawnu).</Polish>
+            <Spanish>Este módulo permite configurar el sistema de reaparición.</Spanish>
         </Key>
         <Key ID="STR_ACE_FriendlyFire_Module_DisplayName">
             <English>Friendly Fire Messages</English>
             <Polish>Wiadomości Friendly Fire</Polish>
+            <Spanish>Mensajes de fuego amigo</Spanish>
         </Key>
         <Key ID="STR_ACE_FriendlyFire_Module_Description">
             <English></English>
             <Polish>Użycie tego modułu na misji spowoduje wyświetlenie wiadomości na czacie w przypadku, kiedy zostanie popełniony friendly fire - wyświetlona zostanie wtedy wiadomość kto kogo zabił.</Polish>
+            <Spanish>Este módulo habilita que se muestren mensajes cuando alguien hace fuego amigo.</Spanish>
         </Key>
         <Key ID="STR_ACE_Rallypoint_Module_DisplayName">
             <English>Rallypoint System</English>
             <Polish>System punktu zbiórki</Polish>
+            <Spanish>Sistema de punto de reunión</Spanish>
         </Key>
         <Key ID="STR_ACE_Rallypoint_Module_Description">
             <English></English>
-            <Polish>Moduł ten pozwala zastosować na misji "punkt zbiórki", do którego można szybko przeteleportować się z "bazy". Wymaga postawienia odpowiednich obiektów na mapie - bazy oraz flagi. Obydwa dostępne są w kategorii Puste -> ACE Odrodzenie.</Polish>
+            <Polish>Moduł ten pozwala zastosować na misji "punkt zbiórki", do którego można szybko przeteleportować się z "bazy". Wymaga postawienia odpowiednich obiektów na mapie - bazy oraz flagi. Obydwa dostępne są w kategorii Puste -&gt; ACE Odrodzenie.</Polish>
+            <Spanish>Este módulo permite la creacion de un punto de reunion desde el cual teletransportarse a diferentes puntos del mapa.</Spanish>
         </Key>
         <Key ID="STR_ACE_Rallypoint_MoveRallypoint">
             <English>Move Rallypoint</English>
             <Polish>Przenieś punkt zbiórki</Polish>
+            <Spanish>Mover punto de reunión</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_EditorCategory">
             <English>ACE Respawn</English>
             <Polish>ACE Odrodzenie</Polish>
+            <Spanish>Reaparición ACE</Spanish>
         </Key>
     </Package>
 </Project>

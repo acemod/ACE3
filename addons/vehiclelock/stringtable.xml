@@ -136,54 +136,67 @@
         <Key ID="STR_ACE_VehicleLock_Module_DisplayName">
             <English>Vehicle Lock Setup</English>
             <Polish>Ustawienie blokady pojazdów</Polish>
+            <Spanish>Configuración de bloqueo del vehiculo</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_LockVehicleInventory_DisplayName">
             <English>Lock Vehicle Inventory</English>
             <Polish>Zablokuj ekwipunek pojazdu</Polish>
+            <Spanish>Bloquear inventario del vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_LockVehicleInventory_Description">
             <English>Locks the inventory of locked vehicles</English>
             <Polish>Blokuje dostęp do ekwipunku pojazdu</Polish>
+            <Spanish>Bloquea el inventario de los vehículos cerrados</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_DisplayName">
             <English>Vehicle Starting Lock State</English>
             <Polish>Początkowy stan blok. poj.</Polish>
+            <Spanish>Estado inicial del bloqueo en vehículos</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Description">
             <English>Set lock state for all vehicles (removes ambiguous lock states)</English>
             <Polish>Ustawia początkowy stan blokady dla wszystkich pojazdów (usuwa dwuznaczne stany blokady)</Polish>
+            <Spanish>Establece el estado de bloqueo para todos los vehículos (elimina estados de bloqueo ambiguos)</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>
             <Polish>Jak jest</Polish>
+            <Spanish>Está</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Locked">
             <English>Locked</English>
             <Polish>Zablokowany</Polish>
+            <Spanish>Cerrado</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Unlocked">
             <English>Unlocked</English>
             <Polish>Odblokowany</Polish>
+            <Spanish>Abierto</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_DefaultLockpickStrength_DisplayName">
             <English>Default Lockpick Strength</English>
             <Polish>Czas włamywania</Polish>
+            <Spanish>Durabilidad de la ganzua por defecto</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_DefaultLockpickStrength_Description">
             <English>Default Time to lockpick (in seconds). Default: 10</English>
             <Polish>Domyślny czas potrzebny na otwarcie pojazdu (w sekundach). Domyślnie: 10</Polish>
+            <Spanish>Tiempo por defecto para forzar cerradura (en segundos). Por defecto: 10</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Module_Description">
             <English>Settings for lockpick strength and initial vehicle lock state. Removes ambiguous lock states.&lt;br /&gt;Source: vehiclelock.pbo</English>
             <Polish>Ustawienia czasu włamywania oraz domyślnego stanu blokady pojazdów. Wyłącza dwuznaczne ustawienia blokady. Moduł ten umożliwia więc np. zamknięcie pojazdów przeciwnika na klucz tak, że gracze bez odpowiedniego sprzętu (wytrycha) nie będą mogli ich używać.&lt;br /&gt;Źródło: vehiclelock.pbo</Polish>
+            <Spanish>Ajustes de la durabilidad de la ganzua y el estado inicial de bloqueo de los vehículos. Elimina estados de bloqueo ambiguos.&lt;br /&gt;Fuente: vehiclelock.pbo</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_DisplayName">
             <English>Vehicle Key Assign</English>
             <Polish>Przydział kluczyka do pojazdu</Polish>
+            <Spanish>Asignacion de la llave del vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_Description">
             <English>Sync with vehicles and players.  Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.&lt;br /&gt;Source: vehiclelock.pbo</English>
             <Polish>Zsynchronizuj z pojazdami i graczami. Rozda klucze dla graczy dla każdego zsynchronizowanego pojazdu. Działa tylko na pojazdy obecne na misji od samego początku (postawione w edytorze).&lt;br /&gt;Źródło: vehiclelock.pbo</Polish>
+            <Spanish>Sincronizar con vehiculos y jugadores. Distribuira llaves personalizadas a los jugadores para todos los vehículos sincronizados. Solo valido para objetos presentes al inicio de la mision.&lt;br /&gt;Fuente: vehiclelock.pbo</Spanish>
         </Key>
     </Package>
 </Project>

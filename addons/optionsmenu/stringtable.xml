@@ -244,46 +244,57 @@
         <Key ID="STR_AllowConfigExport_Module_DisplayName">
             <English>Allow Config Export [ACE]</English>
             <Polish>Pozwól na eksport ustawień [ACE]</Polish>
+            <Spanish>Permitir exportar configuración [ACE]</Spanish>
         </Key>
         <Key ID="STR_AllowConfigExport_allowconfigurationExport_DisplayName">
             <English>Allow</English>
             <Polish>Zezwól</Polish>
+            <Spanish>Permitir</Spanish>
         </Key>
         <Key ID="STR_AllowConfigExport_allowconfigurationExport_Description">
             <English>Allow export of all settings to a server config formatted.</English>
             <Polish>Zezwól na eksport wszystkich ustawień do formatu konfiguracji serwera.</Polish>
+            <Spanish>Permitir exportar toda la configuración a un archivo con formato de config de servidor</Spanish>
         </Key>
         <Key ID="STR_AllowConfigExport_Module_Description">
             <English>When allowed, you have access to the settings modification and export in SP. Clicking export will place the formated config on your clipboard.</English>
             <Polish>Jeżeli ustawione na zezwól, wtedy będziesz mieć dostęp do ekranu modyfikacji wszystich ustawień i zmiennych ACE, a także będziesz mieć możliwość eksportu tychże ustawień do formatu rozpoznawalnego przez userconfig serwera. Kliknięcie opcji Eksportuj skopiuje wszystkie ustawienia do schowka. Działa tylko w trybie SP.</Polish>
+            <Spanish>Cuando esta permitido, se tiene acceso a los ajustes de modificación y exportación en SP. Pulsar en exportar copiara la configuración en el portapapeles.</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_Hide">
             <English>Hide</English>
             <Polish>Ukryj</Polish>
+            <Spanish>Ocultar</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_TopRightDown">
             <English>Top right, downwards</English>
             <Polish>Po prawej u góry, w dół</Polish>
+            <Spanish>Arriba a la derecha, hacia abajo</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_TopRightLeft">
             <English>Top right, to the left</English>
             <Polish>Po prawej u góry, do lewej</Polish>
+            <Spanish>Arriba a la derecha, hacia la izquierda</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_TopLeftDown">
             <English>Top left, downwards</English>
             <Polish>Po lewej u góry, w dół</Polish>
+            <Spanish>Arriba a la izquierda, hacia abajo</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_TopLeftRight">
             <English>Top left, to the right</English>
             <Polish>Po lewej u góry, do prawej</Polish>
+            <Spanish>Arriba a la izquierda, hacia la derecha</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_Top">
             <English>Top</English>
             <Polish>Góra</Polish>
+            <Spanish>Arriba</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_Bottom">
             <English>Bottom</English>
             <Polish>Dół</Polish>
+            <Spanish>Abajo</Spanish>
         </Key>
     </Package>
 </Project>

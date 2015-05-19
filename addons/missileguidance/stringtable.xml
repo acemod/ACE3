@@ -100,14 +100,17 @@
         <Key ID="STR_ACE_MissileGuidance_Off">
             <English>Off</English>
             <Polish>Wyłącz</Polish>
+            <Spanish>Desactivado</Spanish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerOnly">
             <English>Player Only</English>
             <Polish>Tylko gracz</Polish>
+            <Spanish>Solo jugadores</Spanish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerAndAi">
             <English>Player and AI</English>
             <Polish>Gracz oraz AI</Polish>
+            <Spanish>Jugadores e IA</Spanish>
         </Key>
     </Package>
 </Project>
