@@ -54,23 +54,21 @@ GVAR(WindInfo) = true;
         _windIndex = _windIndex % 12;
     };
 
-    if (GVAR(coloredWindArrow)) then {
     // Color Codes from https://en.wikipedia.org/wiki/Beaufort_scale#Modern_scale
-        _windScale = 0.75;
-        if (_windSpeed > 0.3) then { _windColor = [0.796, 1, 1, 1]; };
-        if (_windSpeed > 1.5) then { _windColor = [0.596, 0.996, 0.796, 1]; };
-        if (_windSpeed > 3.3) then { _windColor = [0.596, 0.996, 0.596, 1]; };
-        if (_windSpeed > 5.4) then { _windColor = [0.6, 0.996, 0.4, 1]; };
-        if (_windSpeed > 7.9) then { _windColor = [0.6, 0.996, 0.047, 1]; };
-        if (_windSpeed > 10.7) then { _windColor = [0.8, 0.996, 0.059, 1]; };
-        if (_windSpeed > 13.8) then { _windColor = [1, 0.996, 0.067, 1]; };
-        if (_windSpeed > 17.1) then { _windColor = [1, 0.796, 0.051, 1]; };
-        if (_windSpeed > 20.7) then { _windColor = [1, 0.596, 0.039, 1]; };
-        if (_windSpeed > 24.4) then { _windColor = [1, 0.404, 0.031, 1]; };
-        if (_windSpeed > 28.4) then { _windColor = [1, 0.22, 0.027, 1]; };
-        if (_windSpeed > 32.6) then { _windColor = [1, 0.078, 0.027, 1]; };
-    } else {
-        _windColor = [1, 1, 1, 1];
+    if (_windSpeed > 0.3) then { _windColor = [0.796, 1, 1, 1]; };
+    if (_windSpeed > 1.5) then { _windColor = [0.596, 0.996, 0.796, 1]; };
+    if (_windSpeed > 3.3) then { _windColor = [0.596, 0.996, 0.596, 1]; };
+    if (_windSpeed > 5.4) then { _windColor = [0.6, 0.996, 0.4, 1]; };
+    if (_windSpeed > 7.9) then { _windColor = [0.6, 0.996, 0.047, 1]; };
+    if (_windSpeed > 10.7) then { _windColor = [0.8, 0.996, 0.059, 1]; };
+    if (_windSpeed > 13.8) then { _windColor = [1, 0.996, 0.067, 1]; };
+    if (_windSpeed > 17.1) then { _windColor = [1, 0.796, 0.051, 1]; };
+    if (_windSpeed > 20.7) then { _windColor = [1, 0.596, 0.039, 1]; };
+    if (_windSpeed > 24.4) then { _windColor = [1, 0.404, 0.031, 1]; };
+    if (_windSpeed > 28.4) then { _windColor = [1, 0.22, 0.027, 1]; };
+    if (_windSpeed > 32.6) then { _windColor = [1, 0.078, 0.027, 1]; };
+    
+    if (GVAR(scaleWindArrow)) then {
         if (_windSpeed > 0.3) then { _windScale = 0.75; };
         if (_windSpeed > 1.5) then { _windScale = 0.80; };
         if (_windSpeed > 3.3) then { _windScale = 0.85; };
@@ -84,6 +82,7 @@ GVAR(WindInfo) = true;
         if (_windSpeed > 28.4) then { _windScale = 1.25; };
         if (_windSpeed > 32.6) then { _windScale = 1.30; };
     };
+    
     0 cutRsc ["RscWindIntuitive", "PLAIN", 1, false];
 
     __ctrl ctrlSetScale _windScale;
