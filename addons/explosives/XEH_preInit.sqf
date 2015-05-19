@@ -42,6 +42,8 @@ PREP(getSpeedDialExplosive);
 
 PREP(module);
 
+PREP(onInventoryChanged);
+PREP(onKilled);
 PREP(onLanded);
 
 PREP(openTimerSetUI);
