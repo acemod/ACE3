@@ -86,42 +86,57 @@ class CfgAmmo {
     };
     class B_30mm_HE;
     class B_30mm_HE_Tracer_Red: B_30mm_HE {
+        model = PATHTOF(tracer_red_2.p3d);
     };
     class B_30mm_HE_Tracer_Green: B_30mm_HE {
+        model = PATHTOF(tracer_green_2.p3d);
     };
     class B_30mm_HE_Tracer_Yellow: B_30mm_HE {
+        model = PATHTOF(tracer_yellow_2.p3d);
     };
     class B_40mm_GPR;
     class B_40mm_GPR_Tracer_Red: B_40mm_GPR {
-        model = PATHTOF(ace_40mm_tracer_red.p3d);
+        model = PATHTOF(tracer_red_2.p3d);
     };
     class B_40mm_GPR_Tracer_Green: B_40mm_GPR {
+        model = PATHTOF(tracer_green_2.p3d);
     };
     class B_40mm_GPR_Tracer_Yellow: B_40mm_GPR {
+        model = PATHTOF(tracer_yellow_2.p3d);
     };
     class B_20mm;
     class B_20mm_Tracer_Red: B_20mm {
+        model = PATHTOF(tracer_red_2.p3d);
     };
     class B_30mm_AP;
     class B_30mm_AP_Tracer_Red: B_30mm_AP {
+        model = PATHTOF(tracer_red_2.p3d);
     };
     class B_30mm_AP_Tracer_Green: B_30mm_AP {
+        model = PATHTOF(tracer_green_2.p3d);
     };
     class B_30mm_AP_Tracer_Yellow: B_30mm_AP {
+        model = PATHTOF(tracer_yellow_2.p3d);
     };
     class B_30mm_APFSDS;
     class B_30mm_APFSDS_Tracer_Red: B_30mm_APFSDS {
+        model = PATHTOF(tracer_red_2.p3d);
     };
     class B_30mm_APFSDS_Tracer_Green: B_30mm_APFSDS {
+        model = PATHTOF(tracer_green_2.p3d);
     };
     class B_30mm_APFSDS_Tracer_Yellow: B_30mm_APFSDS {
+        model = PATHTOF(tracer_yellow_2.p3d);
     };
     class B_35mm_AA;
     class B_35mm_AA_Tracer_Red: B_35mm_AA {
+        model = PATHTOF(tracer_red_2.p3d);
     };
     class B_35mm_AA_Tracer_Green: B_35mm_AA {
+        model = PATHTOF(tracer_green_2.p3d);
     };
     class B_35mm_AA_Tracer_Yellow: B_35mm_AA {
+        model = PATHTOF(tracer_yellow_2.p3d);
     };
     class Sh_120mm_HE;
     class Sh_120mm_HE_Tracer_Red: Sh_120mm_HE {
