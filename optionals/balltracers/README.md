@@ -1,7 +1,7 @@
 ace_tracers
 ===========
 
-Ball tracers for ArmA3 ported from ACE2.
+Ball tracers for Arma 3 ported from ACE2.
 
 ## Maintainers
 
