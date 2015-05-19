@@ -1,6 +1,8 @@
 // by commy2
 #include "script_component.hpp"
 
+//IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
+
 ADDON = false;
 
 // ACE Common Function
@@ -21,6 +23,7 @@ PREP(canInteract);
 PREP(canInteractWith);
 PREP(canUseWeapon);
 PREP(changeProjectileDirection);
+PREP(checkFiles);
 PREP(checkPBOs);
 PREP(claim);
 PREP(closeDialogIfTargetMoves);
@@ -39,8 +42,10 @@ PREP(displayText);
 PREP(displayTextPicture);
 PREP(displayTextStructured);
 PREP(doAnimation);
+PREP(dropBackpack);
 PREP(endRadioTransmission);
 PREP(eraseCache);
+PREP(errorMessage);
 PREP(execNextFrame);
 PREP(execPersistentFnc);
 PREP(execRemoteFnc);
@@ -107,6 +112,7 @@ PREP(isAutoWind);
 PREP(isAwake);
 PREP(isEngineer);
 PREP(isEOD);
+PREP(isFeatureCameraActive);
 PREP(isInBuilding);
 PREP(isModLoaded);
 PREP(isPlayer);
@@ -117,16 +123,18 @@ PREP(loadPerson);
 PREP(loadPersonLocal);
 PREP(loadSettingsFromProfile);
 PREP(loadSettingsOnServer);
+PREP(loadSettingsLocalizedText);
 PREP(map);
 PREP(moduleCheckPBOs);
 PREP(moduleLSDVehicles);
 PREP(moveToTempGroup);
 PREP(muteUnit);
+PREP(muteUnitHandleInitPost);
+PREP(muteUnitHandleRespawn);
 PREP(numberToDigits);
 PREP(numberToDigitsString);
 PREP(numberToString);
 PREP(onAnswerRequest);
-PREP(onLoadRscDisplayChannel);
 PREP(owned);
 PREP(player);
 PREP(playerSide);
@@ -164,7 +172,6 @@ PREP(sortAlphabeticallyBy);
 PREP(stringCompare);
 PREP(stringToColoredText);
 PREP(stringRemoveWhiteSpace);
-PREP(subString);
 PREP(switchToGroupSide);
 PREP(throttledPublicVariable);
 PREP(toBin);
@@ -177,6 +184,13 @@ PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
+PREP(waveHeightAt);
+
+PREP(translateToWeaponSpace);
+PREP(translateToModelSpace);
+
+// Model and drawing helpers
+PREP(worldToScreenBounds);
 
 // config items
 PREP(getConfigType);
@@ -260,6 +274,21 @@ PREP(hashListSelect);
 PREP(hashListSet);
 PREP(hashListPush);
 
+// Synchronized Events
+PREP(syncedEventPFH);
+PREP(addSyncedEventHandler);
+PREP(removeSyncedEventHandler);
+PREP(requestSyncedEvent);
+PREP(syncedEvent);
+
+PREP(_handleSyncedEvent);
+PREP(_handleRequestSyncedEvent);
+PREP(_handleRequestAllSyncedEvents);
+
+GVAR(syncedEvents) = HASH_CREATE;
+
+// @TODO: Generic local-managed global-synced objects (createVehicleLocal)
+
 //Debug
 ACE_COUNTERS = [];
 
@@ -273,10 +302,11 @@ ACE_player = player;
 if (hasInterface) then {
     // PFH to update the ACE_player variable
     [{
-        if !(ACE_player isEqualTo (missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player])) then {
+        if !(ACE_player isEqualTo (call FUNC(player))) then {
+            private ["_oldPlayer"];
             _oldPlayer = ACE_player;
 
-            ACE_player = missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", player];
+            ACE_player = call FUNC(player);
             uiNamespace setVariable ["ACE_player", ACE_player];
 
             // Raise ACE event
@@ -284,6 +314,16 @@ if (hasInterface) then {
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
+
+// Time handling
+ACE_time = diag_tickTime;
+ACE_realTime = diag_tickTime;
+ACE_virtualTime = diag_tickTime;
+ACE_diagTime = diag_tickTime;
+ACE_gameTime = time;
+
+PREP(timePFH);
+[FUNC(timePFH), 0, []] call cba_fnc_addPerFrameHandler;
 
 // Init toHex
 [0] call FUNC(toHex);

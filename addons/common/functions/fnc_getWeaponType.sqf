@@ -11,20 +11,21 @@
  */
 #include "script_component.hpp"
 
-private ["_weapon", "_type", "_index"];
+private ["_type", "_index"];
 
-_weapon = _this select 0;
+PARAMS_1(_weapon);
 
 _type = [getNumber (configFile >> "CfgWeapons" >> _weapon >> "type")] call FUNC(binarizeNumber);
 
 _index = 0;
+
 while {!(_type select _index) && {_index < 16}} do {
-  _index = _index + 1;
+    _index = _index + 1;
 };
 
 switch (_index) do {
-  case 0 : {1};
-  case 1 : {3};
-  case 2 : {2};
-  default {-1};
+    case 0 : {1};
+    case 1 : {3};
+    case 2 : {2};
+    default {-1};
 }

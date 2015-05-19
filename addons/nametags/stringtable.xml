@@ -1,81 +1,201 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-02-13 -->
 <Project name="ACE">
-  <Package name="NameTags">
-    <Key ID="STR_ACE_NameTags_ShowNames">
-      <English>Show Names</English>
-      <German>Namen anzeigen</German>
-      <Spanish>Mostrar nombres</Spanish>
-      <French>Afficher noms</French>
-      <Czech>Zobrazit jména</Czech>
-      <Polish>Pokaż nazwy</Polish>
-      <Hungarian>Nevek mutatása</Hungarian>
-      <Russian>Показать имена</Russian>
-    </Key>
-    <Key ID="STR_ACE_NameTags_ShowPlayerNames">
-      <English>Show player names</English>
-      <German>Spielernamen anzeigen</German>
-      <Spanish>Mostrar nombres de jugadores</Spanish>
-      <Polish>Pokaż nazwy graczy</Polish>
-      <French>Afficher nom des joueurs</French>
-      <Hungarian>Játékosnevek mutatása</Hungarian>
-      <Czech>Zobrazit jména hráčů</Czech>
-      <Portuguese>Mostrar nomes de jogadores</Portuguese>
-      <Italian>Mostra i nomi dei giocatori</Italian>
-      <Russian>Показать имена игроков</Russian>
-    </Key>
-    <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnCursor">
-      <English>Show player name only on cursor (requires player names)</English>
-      <Polish>Pokaż nazwę gracza tylko pod kursorem</Polish>
-      <Spanish>Mostrar nombres solo en el cursor (requiere Mostrar nombres de jugadores)</Spanish>
-      <German>Zeige Spielernamen nur an, wenn die Maus auf sie gerrichtet ist (benötigt Spielernamen)</German>
-      <French>Noms uniquement sous le curseur (si noms affichés)</French>
-      <Czech>Zobrazit jméno hráče jenom na kurzor (vyžaduje jména hráčů)</Czech>
-      <Italian>Mostra i nomi solo se puntati (richiede i nomi dei giocatori abilitati)</Italian>
-      <Portuguese>Mostrar nome de jogador somente no cursor (requer nome de jogadores)</Portuguese>
-      <Hungarian>Játékosok nevének mutatása (névcímke szükséges)</Hungarian>
-      <Russian>Показать имена игроков только под курсором (требует имен игроков)</Russian>
-    </Key>
-    <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnKeyPress">
-      <English>Show player name only on keypress (requires player names)</English>
-      <German>Spielernamen nur auf Tastendruck anzeigen (benötigt Spielernamen)</German>
-      <Spanish>Mostrar nombres solo al pulsar (requiere Mostrar nombres de jugadores)</Spanish>
-      <French>Noms uniquement sur pression de la touche (si noms affichés)</French>
-      <Czech>Zobrazit jména hráčů jen na klávesu (vyžaduje jména hráčů)</Czech>
-      <Polish>Pokaż nazwę gracza tylko po przytrzymaniu klawisza</Polish>
-      <Hungarian>Játékosnevek mutatása gombnyomásra(névcíme szükséges)</Hungarian>
-      <Russian>Показать имена игроков только по нажатию клавиши (требует имен игроков)</Russian>
-    </Key>
-    <Key ID="STR_ACE_NameTags_ShowPlayerRanks">
-      <English>Show player ranks (requires player names)</English>
-      <German>Spielerränge anzeigen (benötig Spielernamen)</German>
-      <Polish>Pokaż rangi graczy (wymaga nazw graczy)</Polish>
-      <Spanish>Mostrar rango de los jugadores (requiere Mostrar nombres de jugadores)</Spanish>
-      <French>Grade des joueurs  (si noms affichés)</French>
-      <Czech>Zobrazit hodnosti hráčů (vyžaduje jména hráčů)</Czech>
-      <Italian>Mostra i gradi (richiede i nomi dei giocatori abilitati)</Italian>
-      <Portuguese>Mostrar patente de jogadores (requer nome de jogadores)</Portuguese>
-      <Hungarian>Játékosok rendfokozatának mutatása (névcímke szükséges)</Hungarian>
-      <Russian>Показать звания игроков (требует имен игроков)</Russian>
-    </Key>
-    <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo">
-      <English>Show vehicle crew info</English>
-      <German>Zeige Fahrzeugbesatzung</German>
-      <Spanish>Mostrar tripulantes</Spanish>
-      <Polish>Pokaż informacje o załodze pojazdu</Polish>
-      <Czech>Zobrazit info o posádce vozidla</Czech>
-      <Russian>Показать экипаж</Russian>
-    </Key>
-    <Key ID="STR_ACE_NameTags_ShowNamesForAI">
-      <English>Show name tags for AI units</English>
-    </Key>
-    <Key ID="STR_ACE_NameTags_ShowSoundWaves">
-      <English>Show SoundWaves (requires player names)</English>
-      <German>Zeigen Schallwelle  (benötigt spielernamen)</German>
-      <Spanish>Mostrar onda sonora  (requiere Mostrar nombres de jugadores)</Spanish>
-    </Key>
-    <Key ID="STR_ACE_NameTags_DefaultNametagColor">
-      <English>Default Nametag Color (Non Group Members)</English>
-    </Key>
-  </Package>
+    <Package name="NameTags">
+        <Key ID="STR_ACE_NameTags_ShowNames">
+            <English>Show Names</English>
+            <German>Namen anzeigen</German>
+            <Spanish>Mostrar nombres</Spanish>
+            <French>Afficher noms</French>
+            <Czech>Zobrazit jména</Czech>
+            <Polish>Pokaż imiona</Polish>
+            <Hungarian>Nevek mutatása</Hungarian>
+            <Russian>Показать имена</Russian>
+            <Italian>Mostra i nomi</Italian>
+            <Portuguese>Mostrar nomes</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ShowPlayerNames">
+            <English>Show player names</English>
+            <German>Spielernamen anzeigen</German>
+            <Spanish>Mostrar nombres de jugadores</Spanish>
+            <Polish>Pokaż imiona graczy</Polish>
+            <French>Afficher les nom des joueurs</French>
+            <Hungarian>Játékosnevek mutatása</Hungarian>
+            <Czech>Zobrazit jména hráčů</Czech>
+            <Portuguese>Mostrar nomes de jogadores</Portuguese>
+            <Italian>Mostra i nomi dei giocatori</Italian>
+            <Russian>Показывать имена игроков (включить имена)</Russian>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnCursor">
+            <English>Show player name only on cursor (requires player names)</English>
+            <Polish>Pokaż imiona graczy tylko pod kursorem (wymagana opcja Pokaż imiona graczy)</Polish>
+            <Spanish>Mostrar nombres de jugadores solo al apuntarles (requiere Mostrar nombres de jugadores)</Spanish>
+            <German>Zeige Spielernamen nur an, wenn die Maus auf sie gerrichtet ist (benötigt Spielernamen)</German>
+            <French>Noms uniquement sous le curseur (si noms affichés)</French>
+            <Czech>Zobrazit jméno hráče jenom na kurzor (vyžaduje jména hráčů)</Czech>
+            <Italian>Mostra i nomi solo se puntati (richiede mostra nomi abilitato)</Italian>
+            <Portuguese>Mostrar nome de jogador somente no cursor (requer nome de jogadores)</Portuguese>
+            <Hungarian>Játékosok nevének mutatása csak a kurzoron (a nevek mutatása szükséges)</Hungarian>
+            <Russian>Показать имена игроков только под курсором (при включенных именах)</Russian>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnKeyPress">
+            <English>Show player name only on keypress (requires player names)</English>
+            <German>Spielernamen nur auf Tastendruck anzeigen (benötigt Spielernamen)</German>
+            <Spanish>Mostrar nombres solo al pulsar la tecla(requiere Mostrar nombres de jugadores)</Spanish>
+            <French>Noms uniquement sur pression de la touche (si noms affichés)</French>
+            <Czech>Zobrazit jména hráčů jen na klávesu (vyžaduje jména hráčů)</Czech>
+            <Polish>Pokaż imiona graczy tylko po przytrzymaniu klawisza (wymagana opcja Pokaż imiona graczy)</Polish>
+            <Hungarian>Játékosnevek mutatása csak gombnyomásra (a nevek mutatása szükséges)</Hungarian>
+            <Russian>Показать имена игроков только по нажатию клавиши (при включенных именах)</Russian>
+            <Italian>Mostra i nomi solo se si preme il tasto (richiede mostra nomi abilitato)</Italian>
+            <Portuguese>Mostrar nomes somente ao pressionar teclar (requer nome de jogadores)</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ShowPlayerRanks">
+            <English>Show player ranks (requires player names)</English>
+            <German>Spielerränge anzeigen (benötig Spielernamen)</German>
+            <Polish>Pokaż rangi graczy (wymagana opcja Pokaż imiona graczy)</Polish>
+            <Spanish>Mostrar rango de los jugadores (requiere Mostrar nombres de jugadores)</Spanish>
+            <French>Grade des joueurs  (si noms affichés)</French>
+            <Czech>Zobrazit hodnosti hráčů (vyžaduje jména hráčů)</Czech>
+            <Italian>Mostra i gradi (richiede mostra nomi abilitato)</Italian>
+            <Portuguese>Mostrar patente de jogadores (requer nome de jogadores)</Portuguese>
+            <Hungarian>Játékosok rendfokozatának mutatása (a nevek mutatása szükséges)</Hungarian>
+            <Russian>Показывать звания игроков (при вкл. именах)</Russian>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo">
+            <English>Show vehicle crew info</English>
+            <French>Afficher les informations de l'équipage</French>
+            <German>Fahrzeugbesatzung anzeigen</German>
+            <Spanish>Mostrar tripulantes</Spanish>
+            <Polish>Pokaż załogę pojazdu</Polish>
+            <Czech>Zobrazit info o posádce vozidla</Czech>
+            <Russian>Показывать информацию об экипаже</Russian>
+            <Hungarian>Jármű-legénység adatainak mutatása</Hungarian>
+            <Portuguese>Mostrar tripulantes</Portuguese>
+            <Italian>Mostra l'elenco del personale a bordo</Italian>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ShowNamesForAI">
+            <English>Show name tags for AI units</English>
+            <German>Namen für KI Einheiten anzeigen</German>
+            <Spanish>Mostrar etiquetas de nombre para unidades IA </Spanish>
+            <Russian>Показывать имена ботов</Russian>
+            <Czech>Zobrazit jména AI</Czech>
+            <Polish>Wyświetl imiona jednostek AI</Polish>
+            <French>Afficher les noms des IA</French>
+            <Hungarian>Névcímkék mutatása MI-egységeknél</Hungarian>
+            <Italian>Mostra i nomi delle le unità AI</Italian>
+            <Portuguese>Mostrar nomes para unidades de IA</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ShowSoundWaves">
+            <English>Show SoundWaves (requires player names)</English>
+            <German>Schallwellen anzeigen  (benötigt Spielernamen)</German>
+            <Spanish>Mostrar onda sonora (requiere Mostrar nombres de jugadores)</Spanish>
+            <Russian>Индикатор разговора (при вкл. именах)</Russian>
+            <Czech>Zobrazit SoundWaves (vyžaduje jména hráčů)</Czech>
+            <Polish>Pokaż fale dźwiękowe (wymagana opcja Pokaż imiona graczy)</Polish>
+            <French>Afficher "qui parle" (si noms affichés)</French>
+            <Hungarian>"Hanghullámok" mutatása (a nevek mutatása szükséges)</Hungarian>
+            <Italian>Mostra movimento audio (richiede mostra nomi abilitato)</Italian>
+            <Portuguese>Mostrar onda sonora (requer nome de jogadores)</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_NameTags_DefaultNametagColor">
+            <English>Default Nametag Color (Non Group Members)</English>
+            <German>Voreingestellte Namenfarbe (Spieler außerhalb der Gruppe)</German>
+            <Russian>Цвет меток игроков (не членов групп)</Russian>
+            <Spanish>Color de etiquetas de nombre por defecto (No miembros de grupo)</Spanish>
+            <Polish>Domyślny kolor imion (członkowie spoza grupy)</Polish>
+            <French>Couleur d'affichage par défaut (si dans aucun groupe)</French>
+            <Czech>Standardní barva jmenovek (pro nečleny jednotky)</Czech>
+            <Hungarian>Alap névcímke-szín (csoporton kívüli személyek)</Hungarian>
+            <Italian>Colore dei nomi non appartenenti al gruppo</Italian>
+            <Portuguese>Cor padrão do nome (unidades fora do grupo)</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_NameTags_Module_DisplayName">
+            <English>Name Tags</English>
+            <Polish>Ustawienia imion</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_DisplayName">
+            <English>Player Names View Dist.</English>
+            <Polish>Zasięg imion graczy</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_Description">
+            <English>Distance in meters at which player names are shown. Default: 5</English>
+            <Polish>Dystans w metrach, na którym wyświetlane są imiona graczy. Domyślnie: 5</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_showNamesForAI_DisplayName">
+            <English>Show name tags for AI?</English>
+            <Polish>Imiona AI</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_showNamesForAI_Description">
+            <English>Show the name and rank tags for friendly AI units? Default: Do not force</English>
+            <Polish>Pokaż imiona i rangi przyjaznych jednostek AI? Domyślnie: Nie wymuszaj</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_DoNotForce">
+            <English>Do Not Force</English>
+            <Polish>Nie wymuszaj</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ForceHide">
+            <English>Force Hide</English>
+            <Polish>Wymuś ukrycie</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ForceShow">
+            <English>Force show</English>
+            <Polish>Wymuś wyświetlanie</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_showVehicleCrewInfo_DisplayName">
+            <English>Show crew info?</English>
+            <Polish>Pokaż załogę</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_showVehicleCrewInfo_Description">
+            <English>Show vehicle crew info, or by default allows players to choose it on their own. Default: Do Not Force</English>
+            <Polish>Pokaż informacje o obsadzie pojazdu, lub pozwól graczom ustawić tą opcje według własnego uznania. Domyślnie: Nie wymuszaj</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_showCursorTagForVehicles_DisplayName">
+            <English>Show for Vehicles</English>
+            <Polish>Pokaż dla pojazdów</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_showCursorTagForVehicles_Description">
+            <English>Show cursor NameTag for vehicle commander (only if client has name tags enabled)Default: No</English>
+            <Polish>Pokazuj imię dowódcy pojazdu nad pojazdem (tylko jeżeli klient ma włączone imiona graczy). Domyślnie: Nie</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_Module_Description">
+            <English></English>
+            <Polish>Moduł ten pozwala dostosować ustawienia i zasięg wyświetlania imion.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_Disabled">
+            <English>Disabled</English>
+            <Polish>Wyłączone</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_Enabled">
+            <English>Enabled</English>
+            <Polish>Włączone</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_OnlyCursor">
+            <English>Only Cursor</English>
+            <Polish>Tylko pod kursorem</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_OnlyOnKeypress">
+            <English>Only On Keypress</English>
+            <Polish>Tylko po wciśnięciu klawisza</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_OnlyCursorAndKeyPress">
+            <English>Only Cursor and KeyPress</English>
+            <Polish>Tylko pod kursorem i po wciśnięciu klawisza</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_NameTagSettings">
+            <English>Use Nametag settings</English>
+            <Polish>Użyj ustawień imion</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_AlwaysShowAll">
+            <English>Always Show All</English>
+            <Polish>Zawsze pokazuj wszystkie</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ShowPlayerNames_Desc">
+            <English></English>
+            <Polish>Opcja ta pozwala dostosować sposób wyświetlania imion nad głowami graczy. Opcja "Tylko po wciśnięciu klawisza" wyświetla imiona tylko przytrzymania klawisza "Modyfikator" dostępnego w menu ustawień addonów -> ACE3.</Polish>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ShowSoundWaves_Desc">
+            <English></English>
+            <Polish>Opcja ta pozwala dostosować sposób wyświetlania efektu fal dźwiękowych nad głowami mówiących graczy, wyświetlanych po przytrzymaniu klawisza PTT. Opcja ta współpracuje z TFAR oraz ACRE2.</Polish>
+        </Key>
+    </Package>
 </Project>

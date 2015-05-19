@@ -5,19 +5,14 @@ class CfgPatches {
         units[] = {};
         weapons[] = {"ACE_MapTools"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common", "ace_interaction"};
+        requiredAddons[] = {"ace_interaction"};
         author[] = {"esteldunedain"};
         authorUrl = "https://github.com/esteldunedain/";
         VERSION_CONFIG;
     };
 };
 
-class ACE_Settings {
-    class GVAR(EveryoneCanDrawOnBriefing) {
-        value = 1;
-        typeName = "BOOL";
-    };
-};
+#include "ACE_Settings.hpp"
 
 class RscControlsGroup;
 class RscActiveText;
@@ -32,7 +27,6 @@ class RscEdit;
 
 #include "MapGpsUI.hpp"
 #include "CfgEventHandlers.hpp"
-#include "CfgMarkers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 

@@ -13,16 +13,16 @@ class CfgVehicles {
                     icon = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
                     hotkey = "B";
                 };
-            };
-            class ACE_CheckTemperature {
-                displayName = "$STR_ACE_Overheating_CheckTemperatureShort";
-                condition = QUOTE( currentWeapon _player in [ARR_3(primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player)] );
-                exceptions[] = {"isNotInside"};
-                statement = QUOTE( [ARR_2(_player, currentWeapon _player)] call FUNC(CheckTemperature); );
-                showDisabled = 0;
-                priority = 3.1;
-                icon = QUOTE(PATHTOF(UI\temp_ca.paa));
-                hotkey = "P";
+                class ACE_CheckTemperature {
+                    displayName = "$STR_ACE_Overheating_CheckTemperatureShort";
+                    condition = "switch (currentWeapon _player) do {case (''): {false}; case (primaryWeapon _player); case (secondaryWeapon _player); case (handgunWeapon _player): {true}; default {false}}";
+                    exceptions[] = {"isNotInside"};
+                    statement = QUOTE( [ARR_2(_player, currentWeapon _player)] call FUNC(CheckTemperature); );
+                    showDisabled = 0;
+                    priority = 2.9;
+                    icon = QUOTE(PATHTOF(UI\temp_ca.paa));
+                    hotkey = "P";
+                };
             };
         };
     };

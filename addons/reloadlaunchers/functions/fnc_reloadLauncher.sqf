@@ -14,12 +14,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weapon", "_magazine"];
-
-_unit = _this select 0;
-_target = _this select 1;
-_weapon = _this select 2;
-_magazine = _this select 3;
+PARAMS_4(_unit,_target,_weapon,_magazine);
 
 _target selectWeapon _weapon;
 

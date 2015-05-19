@@ -16,11 +16,13 @@
  * Public: Yes
  */
 #include "script_component.hpp"
+// IGNORE_PRIVATE_WARNING(_allExplosives,_deadmanExplosives);
+
 private ["_unit", "_clackerList", "_adjustedList", "_list", "_filter"];
 _unit = _this select 0;
 _filter = nil;
 if (count _this > 1) then {
-    _filter = ConfigFile >> "CfgACE_Triggers" >> (_this select 1);
+    _filter = ConfigFile >> "ACE_Triggers" >> (_this select 1);
 };
 _clackerList = [];
 _adjustedList = false;
@@ -31,7 +33,7 @@ _list = [];
         _clackerList set [_foreachIndex, "X"];
         _adjustedList = true;
     } else {
-        if (isNil "_filter" || {(ConfigFile >> "CfgACE_Triggers" >> (_x select 4)) == _filter}) then {
+        if (isNil "_filter" || {(ConfigFile >> "ACE_Triggers" >> (_x select 4)) == _filter}) then {
             _list pushBack _x;
         };
     };

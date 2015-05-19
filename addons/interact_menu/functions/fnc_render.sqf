@@ -14,7 +14,7 @@
 
 BEGIN_COUNTER(fnc_render);
 
-private ["_cursorPos1", "_cursorPos2", "_cursorVec", "_p1", "_p2", "_p", "_v", "_cp", "_forEachIndex", "_renderTargets", "_x", "_cursorScreenPos", "_closestDistance", "_closestSelection", "_pos", "_sPos", "_disSq", "_closest", "_cTime", "_delta", "_foundTarget", "_misMatch", "_hoverPath", "_i"];
+private ["_cursorPos1", "_cursorPos2", "_p1", "_p2", "_forEachIndex", "_x", "_cursorScreenPos", "_closestDistance", "_closestSelection", "_sPos", "_disSq", "_closest", "_cTime", "_delta", "_foundTarget", "_misMatch", "_hoverPath", "_i", "_actionData", "_player", "_target"];
 _foundTarget = false;
 _cursorPos1 = positionCameraToWorld [0, 0, 0];
 _cursorPos2 = positionCameraToWorld [0, 0, 2];
@@ -119,6 +119,7 @@ if(!_foundTarget && GVAR(actionSelected)) then {
 };
 for "_i" from GVAR(iconCount) to (count GVAR(iconCtrls))-1 do {
     ctrlDelete (GVAR(iconCtrls) select _i);
+    GVAR(ParsedTextCached) set [_i, ""];
 };
 GVAR(iconCtrls) resize GVAR(iconCount);
 GVAR(iconCount) = 0;

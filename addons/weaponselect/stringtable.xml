@@ -1,254 +1,281 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-20 -->
 <Project name="ACE">
-  <Package name="WeaponSelect">
-    <Key ID="STR_ACE_Weaponselect_SettingDisplayTextName">
-      <English>Display text on grenade throw</English>
-    </Key>
-    <Key ID="STR_ACE_Weaponselect_SettingDisplayTextDesc">
-      <English>Display a hint or text on grenade throw.</English>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_SelectPistol">
-      <English>Select Pistol</English>
-      <German>Pistole auswählen</German>
-      <Spanish>Seleccionar pistola</Spanish>
-      <Polish>Wybierz pistolet</Polish>
-      <Czech>Zvolit příruční zbraň</Czech>
-      <Russian>Выбрать пистолет</Russian>
-      <French>Sélectionner Pistolet</French>
-      <Hungarian>Pisztoly Kiválasztása</Hungarian>
-      <Portuguese>Selecionar Pistola</Portuguese>
-      <Italian>Seleziona la Pistola</Italian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_SelectRifle">
-      <English>Select Rifle</English>
-      <German>Gewehr auswählen</German>
-      <Spanish>Seleccionar fusil</Spanish>
-      <Polish>Wybierz karabin</Polish>
-      <Czech>Zvolit hlavní zbraň</Czech>
-      <Russian>Выбрать автомат</Russian>
-      <French>Sélectionner Fusil</French>
-      <Hungarian>Puska Kiválasztása</Hungarian>
-      <Portuguese>Selecionar Rifle</Portuguese>
-      <Italian>Seleziona il Fucile</Italian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_SelectLauncher">
-      <English>Select Launcher</English>
-      <German>Raketenwerfer auswählen</German>
-      <Spanish>Seleccionar lanzador</Spanish>
-      <Polish>Wybierz wyrzutnię</Polish>
-      <Czech>Zvolit Raketomet</Czech>
-      <Russian>Выбрать гранатомет</Russian>
-      <French>Sélectionner Lanceur</French>
-      <Hungarian>Rakétavető Kiválasztása</Hungarian>
-      <Portuguese>Selecionar Lançador</Portuguese>
-      <Italian>Seleziona il Lanciatore</Italian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_SelectRifleMuzzle">
-      <English>Select Grenade Launcher</English>
-      <German>Granatwerfer auswählen</German>
-      <Spanish>Seleccionar lanzador de granadas</Spanish>
-      <Polish>Wybierz granatnik</Polish>
-      <Czech>Zvolit Granátomet</Czech>
-      <Russian>Выбрать подствольный гранатомет</Russian>
-      <French>Sélectionner Lance-grenades</French>
-      <Hungarian>Gránátvető Kiválasztása</Hungarian>
-      <Portuguese>Selecionar Lança-Granadas</Portuguese>
-      <Italian>Seleziona il Lanciagranate</Italian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_SelectBinocular">
-      <English>Select Binoculars</English>
-      <German>Fernglas auswählen</German>
-      <Spanish>Seleccionar prismáticos</Spanish>
-      <Polish>Wybierz lornetkę</Polish>
-      <Czech>Zvolit Dalekohled</Czech>
-      <Russian>Выбрать бинокль</Russian>
-      <French>Sélectionner Jumelles</French>
-      <Hungarian>Távcső Kiválasztása</Hungarian>
-      <Portuguese>Selecionar Binóculos</Portuguese>
-      <Italian>Seleziona il Binocolo</Italian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_HolsterWeapon">
-      <English>Holster Weapon</English>
-      <German>Waffe holstern</German>
-      <Spanish>Enfundar el arma</Spanish>
-      <Polish>Schowaj broń</Polish>
-      <Czech>Schovat zbraň</Czech>
-      <Russian>Убрать оружие</Russian>
-      <French>Arme à la bretelle</French>
-      <Hungarian>Fegyvert tokba</Hungarian>
-      <Portuguese>Guardar Arma</Portuguese>
-      <Italian>Nascondi l'arma</Italian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_EngineOn">
-      <English>Engine on</English>
-      <German>Motor an</German>
-      <Spanish>Encender motor</Spanish>
-      <Polish>Włącz silnik</Polish>
-      <French>Moteur allumé</French>
-      <Hungarian>Motor indítása</Hungarian>
-      <Czech>Zapnout motor</Czech>
-      <Portuguese>Ligar Motor</Portuguese>
-      <Italian>Motore acceso</Italian>
-      <Russian>Включить двигатель</Russian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_EngineOff">
-      <English>Engine off</English>
-      <German>Motor aus</German>
-      <Spanish>Apagar motor</Spanish>
-      <Polish>Wyłącz silnik</Polish>
-      <French>Moteur éteint</French>
-      <Hungarian>Motor leállítása</Hungarian>
-      <Czech>Vypnout motor</Czech>
-      <Portuguese>Desligar Motor</Portuguese>
-      <Italian>Motore spento</Italian>
-      <Russian>Выключить двигатель</Russian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_SelectMainGun">
-      <English>Select Main Gun</English>
-      <German>Hauptgeschütz auswählen</German>
-      <Spanish>Seleccionar arma principal</Spanish>
-      <Polish>Wybierz główną broń</Polish>
-      <French>Sélectionner l'Arme Principale</French>
-      <Hungarian>Elsődleges Fegyver Kiválasztása</Hungarian>
-      <Czech>Zvolit Hlavní Zbraň</Czech>
-      <Portuguese>Selecionar Arma Principal</Portuguese>
-      <Italian>Seleziona Arma Primaria</Italian>
-      <Russian>Выбрать основное оружие</Russian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_SelectMachineGun">
-      <English>Select Machine Gun</English>
-      <German>Maschinengewehr auswählen</German>
-      <Spanish>Seleccionar ametralladora</Spanish>
-      <Polish>Wybierz karabin maszynowy</Polish>
-      <French>Sélectionner Mitrailleuse</French>
-      <Hungarian>Géppuska Kiválasztása</Hungarian>
-      <Czech>Zvolit Kulomet</Czech>
-      <Portuguese>Selecionar Metralhadora</Portuguese>
-      <Italian>Seleziona Mitragliatrice</Italian>
-      <Russian>Выбрать пулемёт</Russian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_SelectMissiles">
-      <English>Select Missiles</English>
-      <German>Raketen auswählen</German>
-      <Spanish>Seleccionar misiles</Spanish>
-      <Polish>Wybierz rakiety</Polish>
-      <French>Sélectionner Missiles</French>
-      <Hungarian>Rakéták Kiválasztása</Hungarian>
-      <Czech>Zvolit Rakety</Czech>
-      <Portuguese>Selecionar Mísseis</Portuguese>
-      <Italian>Seleziona Missili</Italian>
-      <Russian>Выбрать ракеты</Russian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_LoadGrenade">
-      <English>Grenade %1</English>
-      <German>Granate %1</German>
-      <Spanish>Granada %1</Spanish>
-      <Polish>Granat %1</Polish>
-      <Czech>Granát %1</Czech>
-      <Hungarian>Gránát Kiválasztása</Hungarian>
-      <Russian>Граната %1</Russian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_ReadyGrenade">
-      <English>Ready Grenade</English>
-      <German>Granate nehmen</German>
-      <Spanish>Granada lista</Spanish>
-      <Polish>Przygotuj granat</Polish>
-      <Czech>Odjistit granát</Czech>
-      <Hungarian>Kész Gránát</Hungarian>
-      <Russian>Подготовить гранату</Russian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_SelectGrenadeFrag">
-      <English>Select Frag Grenade</English>
-      <German>Explosive Granate auswählen</German>
-      <Spanish>Seleccionar granada de fragmenación</Spanish>
-      <Polish>Wybierz granat odłamkowy</Polish>
-      <French>Sélectionner grenade à fragmentation</French>
-      <Hungarian>Repeszgránát Kiválasztása</Hungarian>
-      <Czech>Zvolit Výbušný Granát</Czech>
-      <Portuguese>Selecionar Granada de Fragmentação</Portuguese>
-      <Italian>Seleziona Granata a Frammentazione</Italian>
-      <Russian>Выбрать осколочную гранату</Russian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_SelectGrenadeOther">
-      <English>Select Non-Frag Grenade</English>
-      <German>Nichtexplosive Granate auswählen</German>
-      <Spanish>Seleccionar granada de no fragmentación</Spanish>
-      <Polish>Wybierz granat nieodłamkowy</Polish>
-      <French>Sélectionner grenade non-léthale</French>
-      <Hungarian>Nem Robbanó Gránát Kiválasztása</Hungarian>
-      <Czech>Zvolit Ne-Výbušný Granát</Czech>
-      <Portuguese>Selecionar Granada</Portuguese>
-      <Italian>Seleziona Altre Granate</Italian>
-      <Russian>Выбрать гранату</Russian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_ThrowGrenade">
-      <English>Throw Selected Grenade</English>
-      <German>Gewählte Granate werfen</German>
-      <Spanish>Arrojar granada seleccionada</Spanish>
-      <Polish>Rzuć wybrany granat</Polish>
-      <French>Lancer la grenade sélectionnée</French>
-      <Hungarian>Kiválasztott Gránát Eldobása</Hungarian>
-      <Czech>Hodit Zvolený Granát</Czech>
-      <Portuguese>Lançar Granada Selecionada</Portuguese>
-      <Italian>Lancia la Granata Selezionata</Italian>
-      <Russian>Бросить выбранную гранату</Russian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_NoGrenadesLeft">
-      <English>No grenades left</English>
-      <German>Keine Granaten übrig</German>
-      <Spanish>No quedan granadas</Spanish>
-      <French>Plus de grenades</French>
-      <Polish>Brak granatów</Polish>
-      <Czech>Žádné granáty</Czech>
-      <Hungarian>Nincs több gránát</Hungarian>
-      <Russian>Гранат не осталось</Russian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_NoFragsLeft">
-      <English>No frags left</English>
-      <German>Keine explosiven Granaten übrig</German>
-      <Spanish>Sin granadas de fragmentación</Spanish>
-      <Polish>Brak granatów odłamkowych</Polish>
-      <French>Plus de grenades à fragmentation</French>
-      <Hungarian>Nincs több repeszgránát</Hungarian>
-      <Czech>Už nejsou granáty</Czech>
-      <Portuguese>Não há granadas de fragmentação restantes</Portuguese>
-      <Italian>Nessuna granata a frammentazione rimanente</Italian>
-      <Russian>Осколочныких гранат нет</Russian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_NoMiscGrenadeLeft">
-      <English>No misc. grenades left</English>
-      <German>Keine nichtexplosiven Granaten übrig</German>
-      <Spanish>Sin granadas de varias</Spanish>
-      <Polish>Brak granatów nieodłamkowych</Polish>
-      <French>Plus de grenades non-léthales</French>
-      <Hungarian>Nincs több egyéb gránát</Hungarian>
-      <Czech>Už nejsou žádné ostatní granáty</Czech>
-      <Portuguese>Não há outras granadas restantes</Portuguese>
-      <Italian>Nessun'altra granata rimanente.</Italian>
-      <Russian>Невзрывоопасные гранаты закончились</Russian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_NoGrenadeSelected">
-      <English>No grenade selected</English>
-      <German>Keine Granate ausgewählt</German>
-      <Spanish>Granada no seleccionada</Spanish>
-      <Polish>Nie wybrano żadnego granatu</Polish>
-      <French>Aucune grenade sélectionnée</French>
-      <Hungarian>Nincs kiválasztva gránát</Hungarian>
-      <Czech>Není zvolen žádný granát</Czech>
-      <Portuguese>Nenhuma granada selecionada</Portuguese>
-      <Italian>Nessuna granata selezionata</Italian>
-      <Russian>Нет выбранной гранаты</Russian>
-    </Key>
-    <Key ID="STR_ACE_WeaponSelect_FireSmokeLauncher">
-      <English>Fire Smoke Launcher</English>
-      <German>Rauchwand abfeuern</German>
-      <Spanish>Disparar lanzador de humo</Spanish>
-      <Czech>Kouřový odpalovač</Czech>
-      <French>Tirer le lance-pots fumigènes</French>
-      <Polish>Wystrzel granat dymny</Polish>
-      <Hungarian>Füst kilövése</Hungarian>
-      <Russian>Запустить дымовую завесу</Russian>
-    </Key>
-  </Package>
+    <Package name="WeaponSelect">
+        <Key ID="STR_ACE_Weaponselect_SettingDisplayTextName">
+            <English>Display text on grenade throw</English>
+            <German>Zeige Text beim Granatwurf</German>
+            <Spanish>Mostrar texto al lanzar una granada</Spanish>
+            <Russian>Показывать текст при броске</Russian>
+            <Czech>Zobrazí text při hodu granátem</Czech>
+            <Polish>Wyświetl tekst przy rzucie granatem</Polish>
+            <French>Afficher texte lors d'un lancé de grenade</French>
+            <Hungarian>Szöveg mutatása gránát eldobásakor</Hungarian>
+            <Italian>Mostra indicazioni nel lancio granate</Italian>
+            <Portuguese>Mostrat texto ao lançar granada</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Weaponselect_SettingDisplayTextDesc">
+            <English>Display a hint or text on grenade throw.</English>
+            <German>Zeige Hinweis oder Text beim Granatwurf</German>
+            <Spanish>Muestra una notificación o texto al lanzar una granada</Spanish>
+            <Russian>Показывать текст или подсказку при броске гранаты.</Russian>
+            <Czech>Zobrazí upozornění nebo text při hodu granátem.</Czech>
+            <Polish>Wyświetla powiadomienie lub tekst przy rzucie granatem.</Polish>
+            <French>Afficher texte/info au lancé de grenade</French>
+            <Hungarian>Jelez egy súgót vagy szöveget a gránát eldobásakor.</Hungarian>
+            <Italian>Mostra una notifica quando si lanciano granate</Italian>
+            <Portuguese>Mostra um hint ou texto ao lançar uma granada</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectPistol">
+            <English>Select Pistol</English>
+            <German>Pistole auswählen</German>
+            <Spanish>Seleccionar pistola</Spanish>
+            <Polish>Wybierz pistolet</Polish>
+            <Czech>Zvolit příruční zbraň</Czech>
+            <Russian>Выбрать пистолет</Russian>
+            <French>Sélectionner Pistolet</French>
+            <Hungarian>Pisztoly Kiválasztása</Hungarian>
+            <Portuguese>Selecionar Pistola</Portuguese>
+            <Italian>Seleziona la Pistola</Italian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectRifle">
+            <English>Select Rifle</English>
+            <German>Gewehr auswählen</German>
+            <Spanish>Seleccionar fusil</Spanish>
+            <Polish>Wybierz karabin</Polish>
+            <Czech>Zvolit hlavní zbraň</Czech>
+            <Russian>Выбрать винтовку</Russian>
+            <French>Sélectionner Fusil</French>
+            <Hungarian>Puska Kiválasztása</Hungarian>
+            <Portuguese>Selecionar Rifle</Portuguese>
+            <Italian>Seleziona il fucile</Italian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectLauncher">
+            <English>Select Launcher</English>
+            <German>Raketenwerfer auswählen</German>
+            <Spanish>Seleccionar lanzador</Spanish>
+            <Polish>Wybierz wyrzutnię</Polish>
+            <Czech>Zvolit Raketomet</Czech>
+            <Russian>Выбрать гранатомёт</Russian>
+            <French>Sélectionner Lanceur</French>
+            <Hungarian>Rakétavető Kiválasztása</Hungarian>
+            <Portuguese>Selecionar Lançador</Portuguese>
+            <Italian>Seleziona il lanciamissili</Italian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectRifleMuzzle">
+            <English>Select Grenade Launcher</English>
+            <German>Granatwerfer auswählen</German>
+            <Spanish>Seleccionar lanzagranadas</Spanish>
+            <Polish>Wybierz granatnik</Polish>
+            <Czech>Zvolit Granátomet</Czech>
+            <Russian>Выбрать подствольный гранатомёт</Russian>
+            <French>Sélectionner Lance-grenades</French>
+            <Hungarian>Gránátvető Kiválasztása</Hungarian>
+            <Portuguese>Selecionar Lança-Granadas</Portuguese>
+            <Italian>Seleziona il lanciagranate</Italian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectBinocular">
+            <English>Select Binoculars</English>
+            <German>Fernglas auswählen</German>
+            <Spanish>Seleccionar prismáticos</Spanish>
+            <Polish>Wybierz lornetkę</Polish>
+            <Czech>Zvolit Dalekohled</Czech>
+            <Russian>Выбрать бинокль</Russian>
+            <French>Sélectionner Jumelles</French>
+            <Hungarian>Távcső Kiválasztása</Hungarian>
+            <Portuguese>Selecionar Binóculos</Portuguese>
+            <Italian>Seleziona il Binocolo</Italian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_HolsterWeapon">
+            <English>Holster Weapon</English>
+            <German>Waffe holstern</German>
+            <Spanish>Enfundar el arma</Spanish>
+            <Polish>Schowaj broń</Polish>
+            <Czech>Schovat zbraň</Czech>
+            <Russian>Убрать оружие</Russian>
+            <French>Arme à la bretelle</French>
+            <Hungarian>Fegyvert tokba</Hungarian>
+            <Portuguese>Guardar Arma</Portuguese>
+            <Italian>Nascondi l'arma</Italian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_EngineOn">
+            <English>Engine on</English>
+            <German>Motor an</German>
+            <Spanish>Encender motor</Spanish>
+            <Polish>Włącz silnik</Polish>
+            <French>Moteur allumé</French>
+            <Hungarian>Motor indítása</Hungarian>
+            <Czech>Zapnout motor</Czech>
+            <Portuguese>Ligar Motor</Portuguese>
+            <Italian>Motore acceso</Italian>
+            <Russian>Включить двигатель</Russian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_EngineOff">
+            <English>Engine off</English>
+            <German>Motor aus</German>
+            <Spanish>Apagar motor</Spanish>
+            <Polish>Wyłącz silnik</Polish>
+            <French>Moteur éteint</French>
+            <Hungarian>Motor leállítása</Hungarian>
+            <Czech>Vypnout motor</Czech>
+            <Portuguese>Desligar Motor</Portuguese>
+            <Italian>Motore spento</Italian>
+            <Russian>Выключить двигатель</Russian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectMainGun">
+            <English>Select Main Gun</English>
+            <German>Hauptgeschütz auswählen</German>
+            <Spanish>Seleccionar arma principal</Spanish>
+            <Polish>Wybierz główną broń</Polish>
+            <French>Sélectionner l'Arme Principale</French>
+            <Hungarian>Elsődleges Fegyver Kiválasztása</Hungarian>
+            <Czech>Zvolit Hlavní Zbraň</Czech>
+            <Portuguese>Selecionar Arma Principal</Portuguese>
+            <Italian>Seleziona Arma Primaria</Italian>
+            <Russian>Выбрать основное оружие</Russian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectMachineGun">
+            <English>Select Machine Gun</English>
+            <German>Maschinengewehr auswählen</German>
+            <Spanish>Seleccionar ametralladora</Spanish>
+            <Polish>Wybierz karabin maszynowy</Polish>
+            <French>Sélectionner Mitrailleuse</French>
+            <Hungarian>Géppuska Kiválasztása</Hungarian>
+            <Czech>Zvolit Kulomet</Czech>
+            <Portuguese>Selecionar Metralhadora</Portuguese>
+            <Italian>Seleziona Mitragliatrice</Italian>
+            <Russian>Выбрать пулемёт</Russian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectMissiles">
+            <English>Select Missiles</English>
+            <German>Raketen auswählen</German>
+            <Spanish>Seleccionar misiles</Spanish>
+            <Polish>Wybierz rakiety</Polish>
+            <French>Sélectionner Missiles</French>
+            <Hungarian>Rakéták Kiválasztása</Hungarian>
+            <Czech>Zvolit Rakety</Czech>
+            <Portuguese>Selecionar Mísseis</Portuguese>
+            <Italian>Seleziona Missili</Italian>
+            <Russian>Выбрать ракеты</Russian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_LoadGrenade">
+            <English>Grenade %1</English>
+            <German>Granate %1</German>
+            <Spanish>Granada %1</Spanish>
+            <Polish>Granat %1</Polish>
+            <Czech>Granát %1</Czech>
+            <Hungarian>Gránát: %1</Hungarian>
+            <Russian>Граната %1</Russian>
+            <French>Grenade %1</French>
+            <Italian>Granata %1</Italian>
+            <Portuguese>Granada %1</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_ReadyGrenade">
+            <English>Ready Grenade</English>
+            <German>Granate nehmen</German>
+            <Spanish>Granada lista</Spanish>
+            <Polish>Przygotuj granat</Polish>
+            <Czech>Odjistit granát</Czech>
+            <Hungarian>Gránát előkészítése</Hungarian>
+            <Russian>Подготовить гранату</Russian>
+            <French>Grenade prête</French>
+            <Italian>Granata pronta</Italian>
+            <Portuguese>Granada pronta</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectGrenadeFrag">
+            <English>Select Frag Grenade</English>
+            <German>Explosive Granate auswählen</German>
+            <Spanish>Seleccionar granada de fragmenación</Spanish>
+            <Polish>Wybierz granat odłamkowy</Polish>
+            <French>Sélectionner grenade à fragmentation</French>
+            <Hungarian>Repeszgránát Kiválasztása</Hungarian>
+            <Czech>Zvolit Výbušný Granát</Czech>
+            <Portuguese>Selecionar Granada de Fragmentação</Portuguese>
+            <Italian>Seleziona Granata a Frammentazione</Italian>
+            <Russian>Выбрать осколочную гранату</Russian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectGrenadeOther">
+            <English>Select Non-Frag Grenade</English>
+            <German>Nichtexplosive Granate auswählen</German>
+            <Spanish>Seleccionar granada de no fragmentación</Spanish>
+            <Polish>Wybierz granat nieodłamkowy</Polish>
+            <French>Sélectionner grenade non-léthale</French>
+            <Hungarian>Nem-robbanó Gránát Kiválasztása</Hungarian>
+            <Czech>Zvolit Ne-Výbušný Granát</Czech>
+            <Portuguese>Selecionar Granada</Portuguese>
+            <Italian>Seleziona granate non a frammentazione</Italian>
+            <Russian>Выбрать гранату</Russian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_ThrowGrenade">
+            <English>Throw Selected Grenade</English>
+            <German>Gewählte Granate werfen</German>
+            <Spanish>Lanzar granada seleccionada</Spanish>
+            <Polish>Rzuć wybrany granat</Polish>
+            <French>Lancer la grenade sélectionnée</French>
+            <Hungarian>Kiválasztott Gránát Eldobása</Hungarian>
+            <Czech>Hodit Zvolený Granát</Czech>
+            <Portuguese>Lançar Granada Selecionada</Portuguese>
+            <Italian>Lancia la Granata Selezionata</Italian>
+            <Russian>Бросить выбранную гранату</Russian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_NoGrenadesLeft">
+            <English>No grenades left</English>
+            <German>Keine Granaten übrig</German>
+            <Spanish>No quedan granadas</Spanish>
+            <French>Plus de grenades</French>
+            <Polish>Brak granatów</Polish>
+            <Czech>Žádné granáty</Czech>
+            <Hungarian>Nincs több gránát</Hungarian>
+            <Russian>Гранат не осталось</Russian>
+            <Italian>Granate esaurite</Italian>
+            <Portuguese>Sem mais granadas</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_NoFragsLeft">
+            <English>No frags left</English>
+            <German>Keine explosiven Granaten übrig</German>
+            <Spanish>No quedan granadas de fragmentación</Spanish>
+            <Polish>Brak granatów odłamkowych</Polish>
+            <French>Plus de grenades à fragmentation</French>
+            <Hungarian>Nincs több repeszgránát</Hungarian>
+            <Czech>Už nejsou granáty</Czech>
+            <Portuguese>Não há granadas de fragmentação restantes</Portuguese>
+            <Italian>Nessuna granata a frammentazione rimanente</Italian>
+            <Russian>Осколочных гранат нет</Russian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_NoMiscGrenadeLeft">
+            <English>No misc. grenades left</English>
+            <German>Keine nichtexplosiven Granaten übrig</German>
+            <Spanish>Sin granadas misc.</Spanish>
+            <Polish>Brak granatów nieodłamkowych</Polish>
+            <French>Plus de grenades non-léthales</French>
+            <Hungarian>Nincs több egyéb gránát</Hungarian>
+            <Czech>Už nejsou žádné ostatní granáty</Czech>
+            <Portuguese>Não há outras granadas restantes</Portuguese>
+            <Italian>Nessun'altra granata rimanente.</Italian>
+            <Russian>Нелетальные гранаты закончились</Russian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_NoGrenadeSelected">
+            <English>No grenade selected</English>
+            <German>Keine Granate ausgewählt</German>
+            <Spanish>Granada no seleccionada</Spanish>
+            <Polish>Nie wybrano żadnego granatu</Polish>
+            <French>Aucune grenade sélectionnée</French>
+            <Hungarian>Nincs semmilyen gránát kiválasztva</Hungarian>
+            <Czech>Není zvolen žádný granát</Czech>
+            <Portuguese>Nenhuma granada selecionada</Portuguese>
+            <Italian>Nessuna granata selezionata</Italian>
+            <Russian>Нет выбранной гранаты</Russian>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_FireSmokeLauncher">
+            <English>Fire Smoke Launcher</English>
+            <German>Rauchwand abfeuern</German>
+            <Spanish>Disparar lanzador de humo</Spanish>
+            <Czech>Kouřový odpalovač</Czech>
+            <French>Tirer le lance-pots fumigènes</French>
+            <Polish>Wystrzel granat dymny</Polish>
+            <Hungarian>Füstvető eltüzelése</Hungarian>
+            <Russian>Пустить дымовую завесу</Russian>
+            <Italian>Lancia fumogeno</Italian>
+            <Portuguese>Lançador de fumaça</Portuguese>
+        </Key>
+    </Package>
 </Project>

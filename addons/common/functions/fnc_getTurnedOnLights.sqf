@@ -11,15 +11,14 @@
  */
 #include "script_component.hpp"
 
-private "_vehicle";
-
-_vehicle = _this select 0;
+PARAMS_1(_vehicle);
 
 if (!isLightOn _vehicle) exitWith {[]};
 
 private ["_reflectorsWithSelections", "_lights", "_hitpoints"];
 
-_reflectorsWithSelections = [_vehicle] call FUNC(getReflectorsWithSelections);
+_reflectorsWithSelections = [[_vehicle], FUNC(getReflectorsWithSelections), uiNamespace, format [QEGVAR(cache,%1_%2), QUOTE(DFUNC(getReflectorsWithSelections)), typeOf _vehicle], 1E11] call FUNC(cachedCall);
+//_reflectorsWithSelections = [_vehicle] call FUNC(getReflectorsWithSelections);
 
 _lights = _reflectorsWithSelections select 0;
 _hitpoints = _reflectorsWithSelections select 1;

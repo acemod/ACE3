@@ -1,4 +1,3 @@
-
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit) );
@@ -20,9 +19,9 @@ class Extended_Init_EventHandlers {
 };
 
 class Extended_FiredNear_EventHandlers {
-    class CAManBase {
+    class AllVehicles {
         class GVAR(FiredNear) {
-            clientFiredNear = QUOTE( if (GVAR(enableCombatDeafness) && {_this select 0 == ACE_player}) then {_this call FUNC(firedNear)}; );
+            clientFiredNear = QUOTE(_this call FUNC(firedNear););
         };
     };
 };

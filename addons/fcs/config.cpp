@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {ace_common, ace_interaction};
+        requiredAddons[] = {"ace_interaction"};
         author[] = {"KoffeinFlummi","BadGuy (simon84)","commy2"};
         authorUrl = "https://github.com/KoffeinFlummi/";
         VERSION_CONFIG;
@@ -20,3 +20,7 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 
 #include "CfgOptics.hpp"
+
+class ACE_Extensions {
+    extensions[] += {"ace_fcs"};
+};

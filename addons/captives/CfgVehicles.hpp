@@ -101,25 +101,20 @@ class CfgVehicles {
 #define MACRO_LOADUNLOADCAPTIVE \
         class ACE_Actions { \
             class ACE_MainActions { \
-                selection = ""; \
-                class ACE_LoadCaptive { \
+                class GVAR(LoadCaptive) { \
                     displayName = "$STR_ACE_Captives_LoadCaptive"; \
                     distance = 4; \
                     condition = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(canLoadCaptive)); \
                     statement = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(doLoadCaptive)); \
                     exceptions[] = {"isNotEscorting"}; \
-                    showDisabled = 0; \
                     priority = 1.2; \
-                    hotkey = "L"; \
                 }; \
-                class ACE_UnloadCaptive { \
+                class GVAR(UnloadCaptive) { \
                     displayName = "$STR_ACE_Captives_UnloadCaptive"; \
                     distance = 4; \
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canUnloadCaptive)); \
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(doUnloadCaptive)); \
-                    showDisabled = 0; \
                     priority = 1.2; \
-                    hotkey = "C"; \
                 }; \
             }; \
         };
@@ -166,7 +161,7 @@ class CfgVehicles {
     class GVAR(ModuleSurrender): Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "Make Unit Surrender";
+        displayName = "$STR_ACE_Captives_ModuleSurrender_DisplayName"; //Make Unit Surrender
         function = QUOTE(DFUNC(moduleSurrender));
         scope = 2;  //show in editor
         scopeCurator = 2; //show in zeus
@@ -177,7 +172,7 @@ class CfgVehicles {
         functionPriority = 0;
         class Arguments {};
         class ModuleDescription: ModuleDescription {
-            description = "Sync a unit to make them surrender.<br/>Source: ace_captives";
+            description = "$STR_ACE_Captives_ModuleSurrender_Description"; //Sync a unit to make them surrender.<br/>Source: ace_captives
             sync[] = {"AnyAI"};
         };
     };

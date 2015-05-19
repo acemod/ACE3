@@ -3,6 +3,7 @@
 ADDON = false;
 
 PREP(moduleInit);
+
 GVAR(moduleInitCollection) = [];
 
 ADDON = true;

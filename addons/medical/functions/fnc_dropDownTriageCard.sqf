@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_show"];
+private ["_show", "_ctrl", "_display", "_idc", "_pos"];
 _show = _this select 0;
 disableSerialization;
 

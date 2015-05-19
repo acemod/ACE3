@@ -1,21 +1,25 @@
 /*
  * Author: KoffeinFlummi
- *
- * Forces a civilian to the ground. (chance of failure).
+ * Forces a civilian to the ground (with a chance of failure)
  *
  * Arguments:
- * 0: Unit to be sent away (Object)
+ * 0: Unit <OBJECT>
  *
  * Return value:
- * none
+ * None
+ *
+ * Example:
+ * [target] call ace_interaction_fnc_getDown
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 #define RADIUS 10
 
-private ["_unit", "_chance", "_x"];
+PARAMS_1(_unit);
 
-_unit = _this select 0;
+private ["_chance", "_x"];
 
 ACE_player playActionNow "GestureGo"; // put something else here.
 
@@ -31,4 +35,4 @@ if (count (weapons ACE_player) > 0) then {
       _this setUnitPos "DOWN";
     }, _x] call CBA_fnc_globalExecute;
   };
-} foreach (_unit nearEntities ["Civilian", RADIUS]);
+} forEach (_unit nearEntities ["Civilian", RADIUS]);

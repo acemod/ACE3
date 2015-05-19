@@ -3,6 +3,17 @@
 
 if (!hasInterface) exitWith {};
 
+GVAR(ParsedTextCached) = [];
+
+//Setup text/shadow/size/color settings matrix
+[] call FUNC(setupTextColors);
+["SettingChanged", {
+    PARAMS_1(_name);
+    if (_name in [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) then {
+        [] call FUNC(setupTextColors);
+    };
+}] call EFUNC(common,addEventhandler);
+
 // Install the render EH on the main display
 addMissionEventHandler ["Draw3D", DFUNC(render)];
 
@@ -17,24 +28,22 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 };
 
 
-["ACE3", QGVAR(InteractKey), (localize "STR_ACE_Interact_Menu_InteractKey"),
+["ACE3 Common", QGVAR(InteractKey), (localize "STR_ACE_Interact_Menu_InteractKey"),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Statement
     [0] call FUNC(keyDown)
-},
-{[0] call FUNC(keyUp)},
+},{[0,false] call FUNC(keyUp)},
 [219, [false, false, false]], false] call cba_fnc_addKeybind;  //Left Windows Key
 
-["ACE3", QGVAR(SelfInteractKey), (localize "STR_ACE_Interact_Menu_SelfInteractKey"),
+["ACE3 Common", QGVAR(SelfInteractKey), (localize "STR_ACE_Interact_Menu_SelfInteractKey"),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Statement
     [1] call FUNC(keyDown)
-},
-{[1] call FUNC(keyUp)},
+},{[1,false] call FUNC(keyUp)},
 [219, [false, true, false]], false] call cba_fnc_addKeybind; //Left Windows Key + Ctrl/Strg
 
 
@@ -48,5 +57,8 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     if (_unit != ACE_player || !_isUnconscious) exitWith {};
 
     GVAR(actionSelected) = false;
-    [] call FUNC(keyUp);
+    [GVAR(openedMenuType), false] call FUNC(keyUp);
 }] call EFUNC(common,addEventhandler);
+
+// disable firing while the interact menu is is is opened
+["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventHandler);

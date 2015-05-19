@@ -1,50 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-12 -->
 <Project name="ACE">
-  <Package name="Aircraft">
-    <Key ID="STR_ACE_Aircraft_CMFlareLauncher_Burst_Name">
-      <English>Burst</English>
-      <German>Feuerstoß</German>
-      <Spanish>Ráfaga</Spanish>
-      <Polish>Seria</Polish>
-      <Czech>Dávka</Czech>
-      <French>Rafale</French>
-      <Russian>Очередь</Russian>
-      <Hungarian>Sorozat</Hungarian>
-      <Portuguese>Rajada</Portuguese>
-      <Italian>Raffica</Italian>
-    </Key>
-    <Key ID="STR_ACE_Aircraft_gatling_20mm_Name">
-      <English>XM301</English>
-      <German>XM301</German>
-      <Spanish>XM301</Spanish>
-      <Polish>XM301</Polish>
-      <Czech>XM301</Czech>
-      <French>XM301</French>
-      <Russian>XM301</Russian>
-      <Hungarian>XM301</Hungarian>
-      <Portuguese>XM301</Portuguese>
-      <Italian>XM301</Italian>
-    </Key>
-    <Key ID="STR_ACE_Aircraft_OpenCargoRamp">
-      <English>Open Cargo Door</English>
-      <German>Laderampe öffnen</German>
-      <Spanish>Abrir compuerta de carga</Spanish>
-      <French>Ourvir Rampe Cargo</French>
-      <Polish>Otwórz drzwi ładowni</Polish>
-      <Czech>Otevřít nákladní prostor</Czech>
-      <Hungarian>Rámpát kinyitni</Hungarian>
-      <Russian>Открыть грузовой отсек</Russian>
-    </Key>
-    <Key ID="STR_ACE_Aircraft_CloseCargoRamp">
-      <English>Close Cargo Door</English>
-      <German>Laderampe schließen</German>
-      <Spanish>Cerrar compuerta de carga</Spanish>
-      <French>Fermer Rampe Cargo</French>
-      <Polish>Zamknij drzwi ładowni</Polish>
-      <Czech>Zavřít nákladní prostor</Czech>
-      <Hungarian>Rámpát zárni</Hungarian>
-      <Russian>Закрыть грузовой отсек</Russian>
-    </Key>
-  </Package>
+    <Package name="Aircraft">
+        <Key ID="STR_ACE_Aircraft_CMFlareLauncher_Burst_Name">
+            <English>Burst</English>
+            <German>Feuerstoß</German>
+            <Spanish>Ráfaga</Spanish>
+            <Polish>Seria</Polish>
+            <Czech>Dávka</Czech>
+            <French>Contre mesure</French>
+            <Russian>Очередь</Russian>
+            <Hungarian>Sorozat</Hungarian>
+            <Portuguese>Rajada</Portuguese>
+            <Italian>Raffica</Italian>
+        </Key>
+        <Key ID="STR_ACE_Aircraft_gatling_20mm_Name">
+            <English>XM301</English>
+            <German>XM301</German>
+            <Spanish>XM301</Spanish>
+            <Polish>XM301</Polish>
+            <Czech>XM301</Czech>
+            <French>XM301</French>
+            <Russian>XM301</Russian>
+            <Hungarian>XM301</Hungarian>
+            <Portuguese>XM301</Portuguese>
+            <Italian>XM301</Italian>
+        </Key>
+        <Key ID="STR_ACE_Aircraft_OpenCargoRamp">
+            <English>Open Cargo Door</English>
+            <German>Laderampe öffnen</German>
+            <Spanish>Abrir compuerta de carga</Spanish>
+            <French>Ourvir la rampe</French>
+            <Polish>Otwórz drzwi ładowni</Polish>
+            <Czech>Otevřít nákladní prostor</Czech>
+            <Hungarian>Rakodórámpa nyitása</Hungarian>
+            <Russian>Открыть грузовой отсек</Russian>
+            <Italian>Apri la rampa di carico</Italian>
+            <Portuguese>Abrir porta de carga</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Aircraft_CloseCargoRamp">
+            <English>Close Cargo Door</English>
+            <German>Laderampe schließen</German>
+            <Spanish>Cerrar compuerta de carga</Spanish>
+            <French>Fermer la rampe</French>
+            <Polish>Zamknij drzwi ładowni</Polish>
+            <Czech>Zavřít nákladní prostor</Czech>
+            <Hungarian>Rakodórámpa zárása</Hungarian>
+            <Russian>Закрыть грузовой отсек</Russian>
+            <Italian>Chiudi la rampa di carico</Italian>
+            <Portuguese>Fechar porta de carga</Portuguese>
+        </Key>
+    </Package>
 </Project>

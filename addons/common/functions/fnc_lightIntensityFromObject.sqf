@@ -12,15 +12,11 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_lightSource"];
+private ["_unitPos","_lightLevel"];
 
-_unit = _this select 0;
-_lightSource = _this select 1;
+PARAMS_2(_unit,_lightSource);
 
-private "_unitPos";
 _unitPos = _unit modelToWorld (_unit selectionPosition "spine3");
-
-private "_lightLevel";
 _lightLevel = 0;
 
 if (_lightSource isKindOf "CAManBase") then {
@@ -46,7 +42,8 @@ if (_lightSource isKindOf "CAManBase") then {
         default {""};
     };
 
-    _properties = [_flashlight] call FUNC(getLightPropertiesWeapon);
+    _properties = [[_flashlight], FUNC(getLightPropertiesWeapon), uiNamespace, format [QEGVAR(cache,%1_%2), QUOTE(DFUNC(getLightPropertiesWeapon)), _flashlight], 1E11] call FUNC(cachedCall);
+    //_properties = [_flashlight] call FUNC(getLightPropertiesWeapon);
 
     _innerAngle = (_properties select 3) / 2;
     _outerAngle = (_properties select 4) / 2;
@@ -62,7 +59,7 @@ if (_lightSource isKindOf "CAManBase") then {
     _lightLevel = (linearConversion [0, 30, _distance, 1, 0, true]) * (linearConversion [_innerAngle, _outerAngle, _angle, 1, 0, true]);
 
 } else {
-    // handle any object, strcutures, cars, tanks, etc.
+    // handle any object, strcutures, cars, tanks, etc. @todo campfires, burning vehicles
 
     private "_lights";
     _lights = [_lightSource] call FUNC(getTurnedOnLights);
@@ -70,7 +67,8 @@ if (_lightSource isKindOf "CAManBase") then {
     {
         private ["_properties", "_intensity", "_innerAngle", "_outerAngle", "_position", "_direction", "_directionToUnit", "_distance", "_angle"];
 
-        _properties = [_lightSource, _x] call FUNC(getLightProperties);
+        _properties = [[_lightSource, _x], FUNC(getLightProperties), uiNamespace, format [QEGVAR(cache,%1_%2_%3), QUOTE(DFUNC(getLightProperties)), typeOf _lightSource, _x], 1E11] call FUNC(cachedCall);
+        //_properties = [_lightSource, _x] call FUNC(getLightProperties);
 
         // @todo intensity affects range?
         //_intensity = _properties select 0;
@@ -93,6 +91,14 @@ if (_lightSource isKindOf "CAManBase") then {
     //systemChat  format ["%1 %2", (linearConversion [0, 30, _distance, 1, 0, true]), (linearConversion [_innerAngle, _outerAngle, _angle, 1, 0, true])];
 
     } forEach _lights;
+
+    // handle campfires
+    if (inflamed _lightSource) then {
+        private "_distance";
+        _distance = _unitPos distance position _lightSource;
+
+        _lightLevel = _lightLevel max linearConversion [0, 30, _distance, 0.5, 0, true];
+    };
 
 };
 

@@ -17,15 +17,14 @@
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-private ["_unit", "_weapon", "_ammo", "_projectile"];
+private ["_unit", "_weapon", "_ammo", "_projectile", "_velocity", "_variableName", "_overheat", "_temperature", "_time", "_bulletMass", "_energyIncrement", "_barrelMass", "_scaledTemperature", "_intensity", "_position", "_direction", "_dispersion", "_count", "_slowdownFactor", "_jamChance", "_surface"];
+
 _unit = _this select 0;
 _weapon = _this select 1;
 _ammo = _this select 4;
 _projectile = _this select 6;
 
 _velocity = velocity _projectile;
-
-private ["_variableName", "_overheat", "_temperature", "_time", "_energyIncrement", "_barrelMass", "_scaledTemperature"];
 
 // each weapon has it's own variable. Can't store the temperature in the weapon since they are not objects unfortunately.
 _variableName = format [QGVAR(%1), _weapon];
@@ -38,7 +37,7 @@ _time = _overheat select 1;
 // Get physical parameters
 _bulletMass = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_BulletMass");
 if (_bulletMass == 0) then {
-  // If the bullet mass is not configured, estimate it
+  // If the bullet mass is not configured, estimate it directly in grams
   _bulletMass = 3.4334 + 0.5171 * (getNumber (configFile >> "CfgAmmo" >> _ammo >> "hit") + getNumber (configFile >> "CfgAmmo" >> _ammo >> "caliber"));
 };
 _energyIncrement = 0.75 * 0.0005 * _bulletMass * (vectorMagnitudeSqr _velocity);

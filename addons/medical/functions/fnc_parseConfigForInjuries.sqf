@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-private ["_injuriesRootConfig", "_woundsConfig", "_allWoundClasses", "_amountOf", "_entry","_classType", "_selections", "_bloodLoss", "_pain","_minDamage","_causes", "_damageTypesConfig", "_thresholds", "_typeThresholds", "_selectionSpecific", "_selectionSpecificType", "_classDisplayName", "_subClassDisplayName", "_maxDamage", "_subClassmaxDamage", "_defaultMinLethalDamage", "_minLethalDamage"];
+private ["_injuriesRootConfig", "_woundsConfig", "_allWoundClasses", "_amountOf", "_entry","_classType", "_selections", "_bloodLoss", "_pain","_minDamage","_causes", "_damageTypesConfig", "_thresholds", "_typeThresholds", "_selectionSpecific", "_selectionSpecificType", "_classDisplayName", "_subClassDisplayName", "_maxDamage", "_subClassmaxDamage", "_defaultMinLethalDamage", "_minLethalDamage", "_allFoundDamageTypes", "_classID", "_configDamageTypes", "_i", "_parseForSubClassWounds", "_subClass", "_subClassConfig", "_subClassbloodLoss", "_subClasscauses", "_subClassminDamage", "_subClasspain", "_subClassselections", "_subClasstype", "_type", "_varName", "_woundTypes"];
 
 _injuriesRootConfig = (configFile >> "ACE_Medical_Advanced" >> "Injuries");
 _allFoundDamageTypes = [];

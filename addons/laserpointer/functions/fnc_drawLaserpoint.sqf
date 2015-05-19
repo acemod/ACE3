@@ -1,6 +1,19 @@
 // by commy2 and esteldunedain
 #include "script_component.hpp"
 
+// init object
+/*if (isNil QGVAR(laserdot)) then {
+    _light = "#lightpoint" createVehicleLocal [0,0,0];
+    _light setLightBrightness 10;
+    _light setLightColor [1,0,0];
+    _light setLightAmbient [1,0,0];
+    _light setLightDayLight true;
+    //_light lightAttachObject [GVAR(laserdot), [0,0,0]];
+    _light setLightAttenuation [0.04,4,4,0,0.04,0.08];
+
+    GVAR(laserdot) = _light;
+};*/
+
 EXPLODE_3_PVT(_this,_unit,_range,_isGreen);
 
 _p0Pos = _unit modelToWorldVisual (_unit selectionPosition "righthand");
@@ -97,13 +110,15 @@ if (!surfaceIsWater _pL) then {
   _pL = ASLtoATL _pL;
 };
 
+/*
 drawLine3D [
     _p0Pos,
     _pL,
     [[1,0,0,1], [0,1,0,1]] select _isGreen
 ];
+*/
 
-_size = 2 * (_range - (positionCameraToWorld [0,0,0] distance _pL)) / _range;
+_size = 2 * (_range - (positionCameraToWorld [0,0,0] vectorDistance _pL)) / _range;
 
 _camPos = positionCameraToWorld [0,0,0.2];
 if (count ([_unit,      "FIRE"] intersect [_camPos, _pL]) > 0) exitWith {};
@@ -113,6 +128,8 @@ if (count ([ACE_player, "FIRE"] intersect [_camPos, _pL]) > 0) exitWith {};
 if (!surfaceIsWater _camPos) then { _camPos = ATLtoASL _camPos; };
 if (                  terrainIntersectASL [_camPos, _pL2])     exitWith {};
 if (                       lineIntersects [_camPos, _pL2])     exitWith {};
+
+//GVAR(laserdot) setPos _pL;
 
 drawIcon3D [
     format ["\a3\weapons_f\acc\data\collimdot_%1_ca.paa", ["red", "green"] select _isGreen],

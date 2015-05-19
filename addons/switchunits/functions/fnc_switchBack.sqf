@@ -10,26 +10,20 @@
  * None
  *
  * Example:
- * [_origPlayer, _respPlayer] call FUNC(switchBack)
+ * [_originalPlayerUnit, _currentUnit] call FUNC(switchBack)
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_origPlayerUnit"];
+PARAMS_1(_originalPlayerUnit);
 
-_origPlayerUnit = _this select 0;
-[_origPlayerUnit] joinSilent GVAR(OriginalGroup);
+[_originalPlayerUnit] joinSilent GVAR(OriginalGroup);
 
 DFUNC(pfhSwitchBack) = {
-    
-    private ["_args", "_originalPlayerUnit", "_currentUnit"];
-    
-    _args = _this select 0;
-    
-    _originalPlayerUnit = _args select 0;
-    _currentUnit = _args select 1;
+    PARAMS_2(_args,_pfID);
+    EXPLODE_2_PVT(_args,_originalPlayerUnit,_currentUnit);
 
     if (local _originalPlayerUnit) exitWith {
         selectPlayer _originalPlayerUnit;

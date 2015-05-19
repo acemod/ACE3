@@ -21,7 +21,7 @@
 #define ARMDAMAGETRESHOLD1 1
 #define ARMDAMAGETRESHOLD2 1.7
 
-private ["_unit", "_selection", "_damage", "_selections", "_damages", "_damageOld", "_damageSumOld", "_damageNew", "_damageSumNew", "_damageFinal"];
+private ["_unit", "_selection", "_damage", "_selections", "_damages", "_damageOld", "_damageSumOld", "_damageNew", "_damageSumNew", "_damageFinal", "_armdamage", "_legdamage"];
 
 _unit = _this select 0;
 _selection = _this select 1;

@@ -1,42 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-20 -->
 <Project name="ACE">
-  <Package name="SafeMode">
-    <Key ID="STR_ACE_SafeMode_SafeMode">
-      <English>Safe Mode</English>
-      <German>Waffe sichern</German>
-      <Spanish>Seguro puesto</Spanish>
-      <Polish>Bezpiecznik</Polish>
-      <Czech>Pojistka</Czech>
-      <Hungarian>Veszélytelenités</Hungarian>
-      <Russian>Предохранитель</Russian>
-    </Key>
-    <Key ID="STR_ACE_SafeMode_TakeOffSafety">
-      <English>Take off Safety</English>
-      <German>Waffe entsichern</German>
-      <Spanish>Quitar seguro</Spanish>
-      <Polish>Zwolnij bezpiecznik</Polish>
-      <Czech>Uvolnit pojistku</Czech>
-      <Hungarian>Veszélyesités</Hungarian>
-      <Russian>Снять с предохранителя</Russian>
-    </Key>
-    <Key ID="STR_ACE_SafeMode_PutOnSafety">
-      <English>Put on Safety</English>
-      <German>Waffe gesichert</German>
-      <Spanish>Poner seguro</Spanish>
-      <Polish>Zabezpiecz broń</Polish>
-      <Czech>Přepnout pojistku</Czech>
-      <Hungarian>Veszélytelenitve</Hungarian>
-      <Russian>Поставить на предохранитель</Russian>
-    </Key>
-    <Key ID="STR_ACE_SafeMode_TookOffSafety">
-      <English>Took off Safety</English>
-      <German>Waffe entsichert</German>
-      <Spanish>Seguro quitado</Spanish>
-      <Polish>Odbezpieczono broń</Polish>
-      <Czech>Odstranit pojistku</Czech>
-      <Hungarian>veszélyes</Hungarian>
-      <Russian>Снят с предохранителя</Russian>
-    </Key>
-  </Package>
+    <Package name="SafeMode">
+        <Key ID="STR_ACE_SafeMode_SafeMode">
+            <English>Safe Mode</English>
+            <German>Waffe sichern</German>
+            <Spanish>Poner seguro</Spanish>
+            <Polish>Bezpiecznik</Polish>
+            <Czech>Pojistka</Czech>
+            <Hungarian>Biztonságos mód</Hungarian>
+            <Russian>Предохранитель</Russian>
+            <French>Sécurité</French>
+            <Italian>Sicura inserita</Italian>
+            <Portuguese>Modo de segurança</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_SafeMode_TakeOffSafety">
+            <English>Take off Safety</English>
+            <German>Waffe entsichern</German>
+            <Spanish>Quitar seguro</Spanish>
+            <Polish>Zwolnij bezpiecznik</Polish>
+            <Czech>Uvolnit pojistku</Czech>
+            <Hungarian>Biztonsági kapcsoló eltolása</Hungarian>
+            <Russian>Снять с предохранителя</Russian>
+            <French>Enlever sécurité</French>
+            <Italian>Togli la sicura</Italian>
+            <Portuguese>Tirar segurança</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_SafeMode_PutOnSafety">
+            <English>Put on Safety</English>
+            <German>Waffe gesichert</German>
+            <Spanish>Seguro puesto</Spanish>
+            <Polish>Zabezpieczono broń</Polish>
+            <Czech>Přepnout pojistku</Czech>
+            <Hungarian>Biztonsági kapcsoló helyretolása</Hungarian>
+            <Russian>Поставить на предохранитель</Russian>
+            <French>Sécurité mise</French>
+            <Italian>Sicura inserita</Italian>
+            <Portuguese>Colocar Segurança</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_SafeMode_TookOffSafety">
+            <English>Took off Safety</English>
+            <German>Waffe entsichert</German>
+            <Spanish>Seguro quitado</Spanish>
+            <Polish>Odbezpieczono broń</Polish>
+            <Czech>Odstranit pojistku</Czech>
+            <Hungarian>Biztonságos mód megszüntetve</Hungarian>
+            <Russian>Снят с предохранителя</Russian>
+            <French>Sécurité enlevée</French>
+            <Italian>Sicura tolta</Italian>
+            <Portuguese>Tirou Segurança</Portuguese>
+        </Key>
+    </Package>
 </Project>

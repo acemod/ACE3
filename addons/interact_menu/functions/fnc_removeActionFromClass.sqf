@@ -19,7 +19,7 @@
 
 EXPLODE_3_PVT(_this,_objectType,_typeNum,_fullPath);
 
-private ["_res","_varName","_actionTrees"];
+private ["_res","_varName","_actionTrees", "_actionIndex", "_parentLevel", "_parentNode"];
 _res = _fullPath call FUNC(splitPath);
 EXPLODE_2_PVT(_res,_parentPath,_actionName);
 

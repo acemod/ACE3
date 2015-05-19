@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target","_selectionName","_className","_config","_callback", "_usersOfItems"];
+private ["_args", "_caller", "_target","_selectionName","_className","_config","_callback", "_usersOfItems", "_weaponSelect"];
 
 _args = _this select 0;
 _caller = _args select 0;
@@ -33,6 +33,13 @@ if (vehicle _caller == _caller) then {
     [_caller, _caller getvariable [QGVAR(treatmentPrevAnimCaller), ""], 1] call EFUNC(common,doAnimation);
 };
 _caller setvariable [QGVAR(treatmentPrevAnimCaller), nil];
+
+_weaponSelect = (_caller getvariable [QGVAR(selectedWeaponOnTreatment), ""]);
+if (_weaponSelect != "") then {
+    _caller selectWeapon _weaponSelect;
+} else {
+    _caller action ["SwitchWeapon", _caller, _caller, 99];
+};
 
 {
     (_x select 0) addItem (_x select 1);
@@ -51,6 +58,6 @@ if (isNil _callback) then {
     _callback = missionNamespace getvariable _callback;
 };
 
-_args call FUNC(createLitter);
-
 _args call _callback;
+
+_args call FUNC(createLitter);

@@ -25,3 +25,8 @@ _respawnedUnit = _this select 0;
 if (GVAR(SavePreDeathGear)) then {
     [_respawnedUnit, GVAR(unitGear)] call FUNC(restoreGear);
 };
+
+// fix for setVariable public being lost on respawn for machines that JIP after the command was broadcasted
+if (_respawnedUnit getVariable ["ACE_canMoveRallypoint", false]) then {
+    _respawnedUnit setVariable ["ACE_canMoveRallypoint", true, true];
+};

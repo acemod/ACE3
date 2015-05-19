@@ -18,7 +18,7 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_impact", "_part", "_injuryIndex", "_injury", "_bandage", "_classID", "_className", "_reopeningChance", "_reopeningMinDelay", "_reopeningMaxDelay", "_config", "_woundTreatmentConfig", "_bandagedWounds", "_exist", "_injuryId", "_existingInjury", "_delay", "_openWounds", "_selectedInjury"];
+private ["_target", "_impact", "_part", "_injuryIndex", "_injury", "_bandage", "_classID", "_className", "_reopeningChance", "_reopeningMinDelay", "_reopeningMaxDelay", "_config", "_woundTreatmentConfig", "_bandagedWounds", "_exist", "_injuryId", "_existingInjury", "_delay", "_openWounds", "_selectedInjury", "_bandagedInjury"];
 _target = _this select 0;
 _impact = _this select 1;
 _part = _this select 2;
@@ -59,20 +59,30 @@ if (isClass (_config >> _className)) then {
 _bandagedWounds = _target getvariable [QGVAR(bandagedWounds), []];
 _exist = false;
 _injuryId = _injury select 0;
+_bandagedInjury = [];
 {
     if ((_x select 0) == _injuryId) exitwith {
         _exist = true;
         _existingInjury = _x;
         _existingInjury set [3, (_existingInjury select 3) + _impact];
         _bandagedWounds set [_foreachIndex, _existingInjury];
+
+        _bandagedInjury = _existingInjury;
     };
 }foreach _bandagedWounds;
 
 if !(_exist) then {
     // [ID, classID, bodypart, percentage treated, bloodloss rate]
-    _bandagedWounds pushback [_injuryId, _injury select 1, _injury select 2, _impact, _injury select 4];
+    _bandagedInjury = [_injuryId, _injury select 1, _injury select 2, _impact, _injury select 4];
+    _bandagedWounds pushback _bandagedInjury;
 };
-_target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];
+
+_target setvariable [QGVAR(bandagedWounds), _bandagedWounds, !USE_WOUND_EVENT_SYNC];
+
+if (USE_WOUND_EVENT_SYNC) then {
+    // sync _bandagedInjury
+
+};
 
 // Check if we are ever going to reopen this
 if (random(1) <= _reopeningChance) then {
@@ -109,7 +119,7 @@ if (random(1) <= _reopeningChance) then {
                 }foreach _bandagedWounds;
 
                 if (_exist) then {
-                    _target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];
+                    _target setvariable [QGVAR(bandagedWounds), _bandagedWounds, !USE_WOUND_EVENT_SYNC];
                 };
             };
             // Otherwise something went wrong, we we don't reopen them..

@@ -16,8 +16,10 @@ private ["_vehicle", "_weapon"];
 _vehicle = _this select 0;
 _weapon = _this select 1;
 
-if (gunner _vehicle == _vehicle && {_weapon in weapons _vehicle}) exitWith {gunner _vehicle};
+// on foot
+if (gunner _vehicle == _vehicle && {_weapon in weapons _vehicle || {toLower _weapon in ["throw", "put"]}}) exitWith {gunner _vehicle};
 
+// inside vehicle
 private "_gunner";
 _gunner = objNull;
 
@@ -26,5 +28,10 @@ _gunner = objNull;
         _gunner = _vehicle turretUnit _x;
     };
 } forEach allTurrets [_vehicle, true];
+
+// ensure that at least the pilot is returned if there is no gunner
+if (isManualFire _vehicle && {isNull _gunner}) then {
+  _gunner = driver _vehicle;
+};
 
 _gunner

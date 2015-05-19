@@ -21,7 +21,8 @@ if (_weaponIndex < 0) exitWith {};
 
 _adjustment = ACE_player getVariable QGVAR(Adjustment);
 if (isNil "_adjustment") then {
-    _adjustment = [[0,0], [0,0], [0,0]];
+    // [Windage, Elevation, Zero]
+    _adjustment = [[0,0,0], [0,0,0], [0,0,0]];
 };
 
 // Display the adjustment knobs
@@ -36,8 +37,8 @@ if (isNull _display) exitWith {};
 _zeroing = _adjustment select _weaponIndex;
 _vertical = _display displayCtrl 12;
 _horizontal = _display displayCtrl 13;
-_vertical ctrlSetText (str (_zeroing select 1));
-_horizontal ctrlSetText (str (_zeroing select 0));
+_vertical ctrlSetText (str (_zeroing select 0));
+_horizontal ctrlSetText (str (_zeroing select 1));
 
 // Set the time when to hide the knobs
 GVAR(timeToHide) = diag_tickTime + 3.0;

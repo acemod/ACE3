@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         units[] = {};
-        weapons[] = {"ACE_acc_pointer_red","ACE_acc_pointer_green"};
+        weapons[] = {"ACE_acc_pointer_red","ACE_acc_pointer_green","ACE_acc_pointer_green_IR"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author[] = {"commy2"};

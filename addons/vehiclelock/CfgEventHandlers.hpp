@@ -15,3 +15,20 @@ class Extended_InventoryOpened_EventHandlers {
         };
     };
 };
+class Extended_InitPost_EventHandlers {
+    class Car {
+        class ADDON {
+            serverInit = QUOTE(_this call FUNC(handleVehicleInitPost));
+        };
+    };
+    class Tank {
+        class ADDON {
+            serverInit = QUOTE(_this call FUNC(handleVehicleInitPost));
+        };
+    };
+    class Helicopter {
+        class ADDON {
+            serverInit = QUOTE(_this call FUNC(handleVehicleInitPost));
+        };
+    };
+};

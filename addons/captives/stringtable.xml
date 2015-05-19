@@ -1,149 +1,205 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-02-24 -->
 <Project name="ACE">
-  <Package name="Captives">
-    <Key ID="STR_ACE_Captives_SetCaptive">
-      <English>Take Prisoner</English>
-      <German>Gefangen nehmen</German>
-      <Spanish>Tomar prisionero</Spanish>
-      <French>Capturer le prisonnier</French>
-      <Polish>Weź więźnia</Polish>
-      <Czech>Zajmout Osobu</Czech>
-      <Italian>Arresta il Prigioniero</Italian>
-      <Portuguese>Tomar Prisioneiro</Portuguese>
-      <Hungarian>Foglyul ejtés</Hungarian>
-      <Russian>Взять в плен</Russian>
-    </Key>
-    <Key ID="STR_ACE_Captives_ReleaseCaptive">
-      <English>Free Prisoner</English>
-      <German>Gefangenen freilassen</German>
-      <Spanish>Liberar prisionero</Spanish>
-      <Polish>Wypuść więźnia</Polish>
-      <French>Libérer le prisonnier</French>
-      <Czech>Osvobodit Zajatce</Czech>
-      <Italian>Libera il Prigioniero</Italian>
-      <Portuguese>Libertar Prisioneiro</Portuguese>
-      <Hungarian>Fogoly szabadon elengedése</Hungarian>
-      <Russian>Освободить пленника</Russian>
-    </Key>
-    <Key ID="STR_ACE_Captives_EscortCaptive">
-      <English>Escort Prisoner</English>
-      <German>Gefangenen eskortieren</German>
-      <Spanish>Escoltar prisionero</Spanish>
-      <Polish>Eskortuj więźnia</Polish>
-      <French>Escorter le prisonnier</French>
-      <Czech>Eskortovat Zajatce</Czech>
-      <Italian>Scorta il Prigioniero</Italian>
-      <Portuguese>Escoltar Prisioneiro</Portuguese>
-      <Hungarian>Fogoly kísérése</Hungarian>
-      <Russian>Конвоировать пленника</Russian>
-    </Key>
-    <Key ID="STR_ACE_Captives_StopEscorting">
-      <English>Release Prisoner</English>
-      <German>Gefangenen loslassen</German>
-      <Spanish>Soltar prisionero</Spanish>
-      <Polish>Anuluj eskortowanie</Polish>
-      <French>Relâcher le prisonnier</French>
-      <Czech>Uvolnit Zajatce</Czech>
-      <Italian>Rilascia il Prigioniero</Italian>
-      <Portuguese>Largar Prisioneiro</Portuguese>
-      <Hungarian>Fogoly elengedése</Hungarian>
-      <Russian>Прекратить конвоирование</Russian>
-    </Key>
-    <Key ID="STR_ACE_Captives_NoCaptive">
-      <English>You need to take him as prisoner first!</English>
-      <German>Du must ihn zuerst gefangen nehmen.</German>
-      <Spanish>Necesitas hacerle prisionero primero!</Spanish>
-      <Polish>Najpierw musisz wziąć go jako więźnia!</Polish>
-      <French>Vous devez d'abord le capturer!</French>
-      <Czech>Musíš ho nejdříve zajmout!</Czech>
-      <Italian>Prima devi arrestarlo!</Italian>
-      <Portuguese>Você deve tomá-lo como prisioneiro primeiro!</Portuguese>
-      <Hungarian>Először foglyul kell ejtened!</Hungarian>
-      <Russian>Вы должны сначала взять его в плен!</Russian>
-    </Key>
-    <Key ID="STR_ACE_Captives_LoadCaptive">
-      <English>Load Captive</English>
-      <German>Gefangenen einladen</German>
-      <Spanish>Cargar prisionero</Spanish>
-      <French>Embarquer le prisonnier</French>
-      <Polish>Załaduj więźnia</Polish>
-      <Czech>Naložit zajatce</Czech>
-      <Hungarian>Fogoly berakása</Hungarian>
-      <Russian>Загрузить пленного</Russian>
-      <Portuguese>Embarcar Prisioneiro</Portuguese>
-    </Key>
-    <Key ID="STR_ACE_Captives_UnloadCaptive">
-      <English>Unload Captive</English>
-      <German>Gefangenen ausladen</German>
-      <Spanish>Descargar prisionero</Spanish>
-      <French>Débarquer le prisonnier</French>
-      <Polish>Wyładuj więźnia</Polish>
-      <Czech>Vyložit zajatce</Czech>
-      <Hungarian>Fogoly kivevése</Hungarian>
-      <Russian>Выгрузить пленного</Russian>
-      <Portuguese>Desembarcar Prisioneiro</Portuguese>
-    </Key>
-    <Key ID="STR_ACE_Captives_CableTie">
-      <English>Cable Tie</English>
-      <German>Kabelbinder</German>
-      <Polish>Opaska zaciskowa</Polish>
-      <Spanish>Precinto</Spanish>
-      <French>Serflex</French>
-      <Czech>Stahovací Pásek</Czech>
-      <Portuguese>Algema Plástica</Portuguese>
-      <Italian>Fascietta</Italian>
-      <Hungarian>Gyorskötöző</Hungarian>
-      <Russian>Кабельная стяжка</Russian>
-    </Key>
-    <Key ID="STR_ACE_Captives_CableTieDescription">
-      <English>Cable ties that allow you to restrain prisoners.</English>
-      <German>Kabelbinder ermöglichen es, Gefangene zu fesseln.</German>
-      <Polish>Opaska zaciskowa pozwala na skrępowanie dłoni u więźnia.</Polish>
-      <Spanish>Los precintos permiten maniatar prisioneros</Spanish>
-      <French>Les Serflex permettent de menotter les prisonniers.</French>
-      <Czech>Stahovací pásky vám umožní zadržet vězně.</Czech>
-      <Portuguese>A algema plástica permite que você contenha prisioneiros.</Portuguese>
-      <Italian>Fascietta che ti consente di arrestare i prigionieri.</Italian>
-      <Hungarian>Gyorskötöző emberek fogjulejtéséhez.</Hungarian>
-      <Russian>Кабельные стяжки позволяют связывать пленников.</Russian>
-    </Key>
-    <Key ID="STR_ACE_Captives_FriskMenuHeader">
-      <English>Inventory of frisked person</English>
-      <German>Inventar der durchsuchten Person</German>
-      <French>Inventaire de la fouille</French>
-      <Spanish>Inventario de la persona cacheada</Spanish>
-      <Hungarian>Motozott személy felszerelése</Hungarian>
-      <Czech>Inventář prohledávané osoby</Czech>
-      <Polish>Ekwipunek rewidowanej osoby</Polish>
-      <Russian>Инвентарь обысканных лиц</Russian>
-      <Portuguese>Inventário da pessoa revistada</Portuguese>
-    </Key>
-    <Key ID="STR_ACE_Captives_FriskPerson">
-      <English>Frisk person</English>
-      <German>Person durchsuchen</German>
-      <French>Fouiller</French>
-      <Spanish>Cachear</Spanish>
-      <Czech>Prohledávaná osoba</Czech>
-      <Polish>Rewiduj osobę</Polish>
-      <Hungarian>Motozás</Hungarian>
-      <Russian>Обыскать человека</Russian>
-      <Portuguese>Revistar</Portuguese>
-    </Key>
-    <Key ID="STR_ACE_Captives_StartSurrendering">
-      <English>Surrender</English>
-    </Key>
-    <Key ID="STR_ACE_Captives_StopSurrendering">
-      <English>Stop Surrendering</English>
-    </Key>
-    <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
-      <English>Only use on alive units</English>
-    </Key>
-    <Key ID="STR_ACE_Captives_Zeus_OnlyInfentry">
-      <English>Only use on dismounted inf</English>
-    </Key>
-    <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
-      <English>Nothing under mouse</English>
-    </Key>
-  </Package>
+    <Package name="Captives">
+        <Key ID="STR_ACE_Captives_SetCaptive">
+            <English>Take Prisoner</English>
+            <German>Gefangen nehmen</German>
+            <Spanish>Tomar prisionero</Spanish>
+            <French>Capturer le prisonnier</French>
+            <Polish>Aresztuj</Polish>
+            <Czech>Zajmout Osobu</Czech>
+            <Italian>Arresta il prigioniero</Italian>
+            <Portuguese>Tomar Prisioneiro</Portuguese>
+            <Hungarian>Foglyul ejtés</Hungarian>
+            <Russian>Взять в плен</Russian>
+        </Key>
+        <Key ID="STR_ACE_Captives_ReleaseCaptive">
+            <English>Free Prisoner</English>
+            <German>Gefangenen freilassen</German>
+            <Spanish>Liberar prisionero</Spanish>
+            <Polish>Wypuść więźnia</Polish>
+            <French>Libérer le prisonnier</French>
+            <Czech>Osvobodit Zajatce</Czech>
+            <Italian>Libera il prigioniero</Italian>
+            <Portuguese>Libertar Prisioneiro</Portuguese>
+            <Hungarian>Fogoly szabadon engedése</Hungarian>
+            <Russian>Освободить пленника</Russian>
+        </Key>
+        <Key ID="STR_ACE_Captives_EscortCaptive">
+            <English>Escort Prisoner</English>
+            <German>Gefangenen eskortieren</German>
+            <Spanish>Escoltar prisionero</Spanish>
+            <Polish>Eskortuj więźnia</Polish>
+            <French>Escorter le prisonnier</French>
+            <Czech>Eskortovat Zajatce</Czech>
+            <Italian>Scorta il Prigioniero</Italian>
+            <Portuguese>Escoltar Prisioneiro</Portuguese>
+            <Hungarian>Fogoly kísérése</Hungarian>
+            <Russian>Конвоировать пленника</Russian>
+        </Key>
+        <Key ID="STR_ACE_Captives_StopEscorting">
+            <English>Release Prisoner</English>
+            <German>Gefangenen loslassen</German>
+            <Spanish>Soltar prisionero</Spanish>
+            <Polish>Anuluj eskortowanie</Polish>
+            <French>Relâcher le prisonnier</French>
+            <Czech>Uvolnit Zajatce</Czech>
+            <Italian>Rilascia il Prigioniero</Italian>
+            <Portuguese>Largar Prisioneiro</Portuguese>
+            <Hungarian>Fogoly elengedése</Hungarian>
+            <Russian>Прекратить конвоирование</Russian>
+        </Key>
+        <Key ID="STR_ACE_Captives_NoCaptive">
+            <English>You need to take him as prisoner first!</English>
+            <German>Du musst ihn zuerst gefangen nehmen.</German>
+            <Spanish>Necesitas hacerle prisionero primero!</Spanish>
+            <Polish>Najpierw musisz go aresztować!</Polish>
+            <French>Vous devez d'abord le capturer!</French>
+            <Czech>Musíš ho nejdříve zajmout!</Czech>
+            <Italian>Prima devi arrestarlo!</Italian>
+            <Portuguese>Você deve tomá-lo como prisioneiro primeiro!</Portuguese>
+            <Hungarian>Először foglyul kell ejtened őt!</Hungarian>
+            <Russian>Вы должны сначала взять его в плен!</Russian>
+        </Key>
+        <Key ID="STR_ACE_Captives_LoadCaptive">
+            <English>Load Captive</English>
+            <German>Gefangenen einladen</German>
+            <Spanish>Cargar prisionero</Spanish>
+            <French>Embarquer le prisonnier</French>
+            <Polish>Załaduj więźnia</Polish>
+            <Czech>Naložit zajatce</Czech>
+            <Hungarian>Fogoly berakása</Hungarian>
+            <Russian>Загрузить пленного</Russian>
+            <Portuguese>Embarcar Prisioneiro</Portuguese>
+            <Italian>Fai salire il prigioniero</Italian>
+        </Key>
+        <Key ID="STR_ACE_Captives_UnloadCaptive">
+            <English>Unload Captive</English>
+            <German>Gefangenen ausladen</German>
+            <Spanish>Descargar prisionero</Spanish>
+            <French>Débarquer le prisonnier</French>
+            <Polish>Wyładuj więźnia</Polish>
+            <Czech>Vyložit zajatce</Czech>
+            <Hungarian>Fogoly kivevése</Hungarian>
+            <Russian>Выгрузить пленного</Russian>
+            <Portuguese>Desembarcar Prisioneiro</Portuguese>
+            <Italian>Fai scendere il prigioniero</Italian>
+        </Key>
+        <Key ID="STR_ACE_Captives_CableTie">
+            <English>Cable Tie</English>
+            <German>Kabelbinder</German>
+            <Polish>Opaska zaciskowa</Polish>
+            <Spanish>Precinto</Spanish>
+            <French>Serflex</French>
+            <Czech>Stahovací Pásek</Czech>
+            <Portuguese>Algema Plástica</Portuguese>
+            <Italian>Fascietta</Italian>
+            <Hungarian>Gyorskötöző</Hungarian>
+            <Russian>Кабельная стяжка</Russian>
+        </Key>
+        <Key ID="STR_ACE_Captives_CableTieDescription">
+            <English>Cable ties that allow you to restrain prisoners.</English>
+            <German>Kabelbinder ermöglichen es, Gefangene zu fesseln.</German>
+            <Polish>Opaska zaciskowa pozwala na skrępowanie dłoni u więźnia.</Polish>
+            <Spanish>Los precintos permiten maniatar prisioneros</Spanish>
+            <French>Les Serflex permettent de menotter les prisonniers.</French>
+            <Czech>Stahovací pásky vám umožní zadržet vězně.</Czech>
+            <Portuguese>A algema plástica permite que você contenha prisioneiros.</Portuguese>
+            <Italian>Fascetta per arrestare i prigionieri</Italian>
+            <Hungarian>Gyorskötöző, emberek foglyulejtéséhez használható.</Hungarian>
+            <Russian>Кабельные стяжки позволяют связывать пленников.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Captives_FriskMenuHeader">
+            <English>Inventory of frisked person</English>
+            <German>Inventar der durchsuchten Person</German>
+            <French>Inventaire de la fouille</French>
+            <Spanish>Inventario de la persona cacheada</Spanish>
+            <Hungarian>Motozott személy felszerelése</Hungarian>
+            <Czech>Inventář prohledávané osoby</Czech>
+            <Polish>Ekwipunek rewidowanej osoby</Polish>
+            <Russian>Инвентарь обысканного человека</Russian>
+            <Portuguese>Inventário da pessoa revistada</Portuguese>
+            <Italian>Inventario della persona perquisita</Italian>
+        </Key>
+        <Key ID="STR_ACE_Captives_FriskPerson">
+            <English>Frisk person</English>
+            <German>Person durchsuchen</German>
+            <French>Fouiller</French>
+            <Spanish>Cachear</Spanish>
+            <Czech>Prohledávaná osoba</Czech>
+            <Polish>Rewiduj osobę</Polish>
+            <Hungarian>Motozás</Hungarian>
+            <Russian>Обыскать человека</Russian>
+            <Portuguese>Revistar</Portuguese>
+            <Italian>Perquisisci la persona</Italian>
+        </Key>
+        <Key ID="STR_ACE_Captives_StartSurrendering">
+            <English>Surrender</English>
+            <French>Se rendre</French>
+            <German>Kapitulieren</German>
+            <Spanish>Rendirse</Spanish>
+            <Portuguese>Render-se</Portuguese>
+            <Czech>Vzdát se</Czech>
+            <Polish>Poddaj się</Polish>
+            <Russian>Сдаться</Russian>
+            <Hungarian>Megadás</Hungarian>
+            <Italian>Arrenditi</Italian>
+        </Key>
+        <Key ID="STR_ACE_Captives_StopSurrendering">
+            <English>Stop Surrendering</English>
+            <French>Annuler la capitulation</French>
+            <German>Den Kampf erneut aufnehmen</German>
+            <Spanish>Dejar de rendirse</Spanish>
+            <Portuguese>Parar de se render</Portuguese>
+            <Czech>Přestat se vzdávat</Czech>
+            <Polish>Podejmij walkę ponownie</Polish>
+            <Russian>Прекратить сдачу в плен</Russian>
+            <Hungarian>Megadás abbahagyása</Hungarian>
+            <Italian>Smetti di arrenderti</Italian>
+        </Key>
+        <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
+            <English>Only use on alive units</English>
+            <French>Utiliser uniquement sur une unité vivante</French>
+            <German>Nur bei lebenden Einheiten verwendbar</German>
+            <Spanish>Utilizar solo en unidades vivas</Spanish>
+            <Czech>Použitelné jen na živé jednotky</Czech>
+            <Polish>Używaj tylko na żywych jednostkach</Polish>
+            <Russian>Применимо только к живым юнитам</Russian>
+            <Hungarian>Csak élő egységeken használni</Hungarian>
+            <Italian>Si può fare solo su persone vive</Italian>
+            <Portuguese>Usar somente em unidades vivas</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Captives_Zeus_OnlyInfantry">
+            <English>Only use on dismounted inf</English>
+            <French>Utiliser uniquement sur du personnel à pied</French>
+            <German>Nur bei abgesessener Infanterie verwendbar</German>
+            <Spanish>Utilizar solo en infanteria desmontada</Spanish>
+            <Czech>Použitelné jen na pěsích jednotkách</Czech>
+            <Polish>Używaj tylko na piechocie poza wszelkimi pojazdami</Polish>
+            <Russian>Применимо только к пехоте вне техники</Russian>
+            <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
+            <Italian>Si può usare solo su fanteria a piedi</Italian>
+            <Portuguese>Usar somente em infantaria desmontada</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
+            <English>Nothing under mouse</English>
+            <French>Rien sous le curseur</French>
+            <German>Es wurde nichts ausgewählt</German>
+            <Spanish>Nada bajo el ratón</Spanish>
+            <Portuguese>Nada debaixo do mouse</Portuguese>
+            <Czech>Nic není vybráno</Czech>
+            <Polish>Nie ma nic pod kursorem</Polish>
+            <Russian>Ничего не выделено</Russian>
+            <Hungarian>Semmi sincs az egér alatt</Hungarian>
+            <Italian>Nessuna selezione</Italian>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSurrender_DisplayName">
+            <English>Make Unit Surrender</English>
+            <Polish>Poddaj się!</Polish>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
+            <English>Sync a unit to make them surrender.&lt;br /&gt;Source: ace_captives</English>
+            <Polish>Zsynchronizuj z jednostką aby sprawić by się poddała&lt;br /&gt;Źródło: ace_captives</Polish>
+        </Key>
+    </Package>
 </Project>

@@ -11,9 +11,7 @@
  */
 #include "script_component.hpp"
 
-private "_item";
-
-_item = _this select 0;
+PARAMS_1(_item);
 
 if (isClass (configFile >> "CfgWeapons" >> _item)) exitWith {"CfgWeapons"};
 

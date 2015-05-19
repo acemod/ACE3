@@ -13,15 +13,4 @@ class CfgPatches {
 };
 
 #include "RscDisplayInventory.hpp"
-
-class ACE_Settings {
-    class GVAR(inventoryDisplaySize) {
-        value = 0;
-        typeName = "SCALAR";
-        isClientSetable = 1;
-        displayName = "$STR_ACE_Inventory_SettingName";
-        description = "$STR_ACE_Inventory_SettingDescription";
-        values[] = {"Normal (Default Size)", "Medium", "Bigger"};
-    };
-};
-
+#include "ACE_Settings.hpp"

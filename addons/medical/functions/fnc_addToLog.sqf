@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_type", "_message", "_arguments", "_lastNumber", "_moment", "_logVarName", "_log","_newLog"];
+private ["_unit", "_type", "_message", "_arguments", "_lastNumber", "_moment", "_logVarName", "_log","_newLog", "_logs"];
 _unit = _this select 0;
 _type = _this select 1;
 _message = _this select 2;

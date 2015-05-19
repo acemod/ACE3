@@ -18,7 +18,8 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
-#include "CfgACE_Triggers.hpp"
+
+#include "ACE_Triggers.hpp"
 #include "ExplosivesUI.hpp"
 
 class CfgActions {
@@ -39,13 +40,4 @@ class CfgMineTriggers {
     };
 };
 
-class ACE_Settings {
-    class GVAR(RequireSpecialist) {
-        value = 0;
-        typeName = "BOOL";
-    };
-    class GVAR(PunishNonSpecialists) {
-        value = 1;
-        typeName = "BOOL";
-    };
-};
+#include "ACE_Settings.hpp"

@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_caller","_newItem","_log", "_inList","_amount"];
+private ["_unit", "_newItem", "_log", "_inList", "_amount"];
 _unit = _this select 0;
 _newItem = _this select 1;
 

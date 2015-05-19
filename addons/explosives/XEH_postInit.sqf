@@ -20,6 +20,13 @@ GVAR(Setup) = objNull;
 GVAR(pfeh_running) = false;
 GVAR(CurrentSpeedDial) = 0;
 
+//Cancel placement if interact menu opened
+["interactMenuOpened", {
+    if (GVAR(pfeh_running) && {!isNull (GVAR(Setup))}) then {
+        call FUNC(place_Cancel)
+    };
+}] call EFUNC(common,addEventHandler);
+
 [{(_this select 0) call FUNC(handleScrollWheel);}] call EFUNC(Common,addScrollWheelEventHandler);
 player addEventHandler ["Killed", {
     private "_deadman";
@@ -30,7 +37,7 @@ player addEventHandler ["Killed", {
     } count _deadman;
 }];
 player addEventHandler ["Take", {
-    private ["_item", "_getter", "_giver", "_config"];
+    private ["_item", "_getter", "_giver", "_config", "_detonators"];
     _item = _this select 2;
     _getter = _this select 0;
     _giver = _this select 1;

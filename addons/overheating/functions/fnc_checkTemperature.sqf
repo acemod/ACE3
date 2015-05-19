@@ -18,6 +18,8 @@
 
 EXPLODE_2_PVT(_this,_player,_weapon);
 
+private ["_action"];
+
 // Play animation and report temperature
 _action = getText (configFile >> "CfgWeapons" >> _weapon >> "ACE_checkTemperatureAction");
 

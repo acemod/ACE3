@@ -139,14 +139,6 @@ class CfgVehicles {
         };*/
     };
 
-    class Offroad_01_base_F: Car_F {};
-
-    class Offroad_01_armed_base_F: Offroad_01_base_F {
-        /*class Turrets: Turrets {
-            class M2_Turret: MainTurret {};
-        };*/
-    };
-
     class APC_Wheeled_01_base_F: Wheeled_APC_F {
         /*class Turrets: Turrets {
             class MainTurret: MainTurret {

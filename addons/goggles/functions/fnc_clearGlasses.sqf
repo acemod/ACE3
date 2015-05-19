@@ -16,7 +16,8 @@
  */
 #include "script_component.hpp"
 
-private "_broken";
+private ["_broken", "_effects"];
+
 _broken = GETBROKEN;
 _effects = GLASSESDEFAULT;
 _effects set [BROKEN, _broken];

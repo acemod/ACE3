@@ -22,6 +22,13 @@ private ["_target","_player","_fullPath","_activeChildren","_dynamicChildren","_
 _target = _object;
 _player = ACE_player;
 
+// Check if the function should be modified first
+if !((_origActionData select 10) isEqualTo {}) then {
+    // It should, so make a copy and pass it to the modifierFunction
+    _origActionData = +_origActionData;
+    [_target, ACE_player, _origActionData select 6, _origActionData] call (_origActionData select 10);
+};
+
 // Return nothing if the action itself is not active
 if !([_target, ACE_player, _origActionData select 6] call (_origActionData select 4)) exitWith {
     []
@@ -60,12 +67,12 @@ if !({} isEqualTo (_origActionData select 5)) then {
     if (count _pPath == count _fullPath &&
         {_pPath isEqualTo _fullPath}) then {
 
-        _action = [_object, _action, _fullPath] call FUNC(collectActiveActionTree);
+        _action = [_object, [_actionData,[]], _fullPath] call FUNC(collectActiveActionTree);
         if ((count _action) > 0) then {
             _activeChildren pushBack _action;
         };
     };
-} forEach GVAR(objectActions);
+} forEach GVAR(objectActionList);
 
 
 // If the original action has no statement, and no children, don't display it

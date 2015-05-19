@@ -60,7 +60,7 @@ class Rsctitles {
             font = "PuristaMedium";
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.9])"};
-            text = "INJURIES";
+            text = "$STR_ACE_Medical_Injuries";
         };
         class InjuryList: ACE_gui_listBoxBase {
             idc = 200;

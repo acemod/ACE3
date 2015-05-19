@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage", "_bodyPartn", "_woundType", "_injuryTypeInfo", "_allInjuriesForDamageType", "_allPossibleInjuries", "_highestPossibleDamage", "_highestPossibleSpot", "_minDamage", "_openWounds", "_woundID", "_toAddInjury", "_painToAdd"];
+private ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage", "_bodyPartn", "_injuryTypeInfo", "_allInjuriesForDamageType", "_allPossibleInjuries", "_highestPossibleDamage", "_highestPossibleSpot", "_minDamage", "_openWounds", "_woundID", "_toAddInjury", "_painToAdd", "_bloodLoss", "_bodyPartNToAdd", "_classType", "_damageLevels", "_foundIndex", "_i", "_injury", "_maxDamage", "_pain", "_painLevel", "_selections", "_toAddClassID", "_woundsCreated"];
 _unit = _this select 0;
 _selectionName = _this select 1;
 _damage = _this select 2;
@@ -52,10 +52,10 @@ _allPossibleInjuries = [];
 
     // Check if the damage is higher as the min damage for the specific injury
     if (_damage >= _minDamage && {_damage <= _maxDamage || _maxDamage < 0}) then {
-        _classType = _x select 0;
+        //_classType = _x select 0;
         _selections = _x select 1;
-        _bloodLoss = _x select 2;
-        _pain = _x select 3;
+        //_bloodLoss = _x select 2;
+        //_pain = _x select 3;
 
         // Check if the injury can be applied to the given selection name
         if ("All" in _selections || _selectionName in _selections) then {
@@ -73,9 +73,7 @@ _allPossibleInjuries = [];
 }foreach _allInjuriesForDamageType;
 
 // No possible wounds available for this damage type or damage amount.
-if (_highestPossibleSpot < 0) exitwith {
-
-};
+if (_highestPossibleSpot < 0) exitwith {};
 
 // Administration for open wounds and ids
 _openWounds = _unit getvariable[QGVAR(openWounds), []];
@@ -125,7 +123,7 @@ _woundsCreated = [];
             _painToAdd = _painToAdd + (_toAddInjury select 3);
         };
     };
-}foreach (_injuryTypeInfo select 0);
+}foreach (_injuryTypeInfo select 0); // foreach damage thresholds
 
 _unit setvariable [QGVAR(openWounds), _openWounds, !USE_WOUND_EVENT_SYNC];
 
@@ -135,7 +133,6 @@ if (count _woundsCreated > 0) then {
 };
 
 if (USE_WOUND_EVENT_SYNC) then {
-    // TODO Should this be done in a single broadcast?
     // Broadcast the new injuries across the net in parts. One broadcast per injury. Prevents having to broadcast one massive array of injuries.
     {
         ["medical_propagateWound", [_unit, _x]] call EFUNC(common,globalEvent);

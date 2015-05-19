@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_settingsMenu", "_ctrlList", "_collection", "_settingIndex", "_setting", "_entryName", "_localizedName", "_localizedDescription", "_possibleValues", "_settingsValue", "_currentColor"];
+private ["_settingsMenu", "_ctrlList", "_collection", "_settingIndex", "_setting", "_entryName", "_localizedName", "_localizedDescription", "_possibleValues", "_settingsValue", "_currentColor", "_expectedType"];
 disableSerialization;
 
 _settingsMenu = uiNamespace getVariable 'ACE_serverSettingsMenu';

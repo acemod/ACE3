@@ -13,6 +13,8 @@
  */
 #include "script_component.hpp"
 
+private ["_name", "_isClientSetable", "_isForced", "_profileValue"];
+
 // Iterate through settings
 {
     _name = _x select 0;
@@ -34,4 +36,5 @@
             };
         };
     };
+
 } forEach GVAR(settings);

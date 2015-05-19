@@ -53,4 +53,4 @@ _structuredOutputText = _structuredOutputText + format ["<img align='center' siz
 // } forEach (magazinesAmmoFull ACE_player);
 // _structuredOutputText = _structuredOutputText + format [("<t align='center'>" + (localize "STR_ACE_MagazineRepack_RepackedMagazinesCount") + "</t>"), _fullMags, _partialMags];
 
-[parseText _structuredOutputText] call EFUNC(common,displayTextStructured);
+[parseText _structuredOutputText, 2] call EFUNC(common,displayTextStructured);

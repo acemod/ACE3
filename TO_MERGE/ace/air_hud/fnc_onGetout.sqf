@@ -1,1 +1,0 @@
-player addAction ["Laser Designator Off", { _this call uo_sys_air_hud_fnc_laserHudDesignateOff }, name player];

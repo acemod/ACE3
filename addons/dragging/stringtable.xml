@@ -1,56 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-21 -->
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-  <Package name="Dragging">
-    <Key ID="STR_ACE_Dragging_Drag">
-      <English>Drag</English>
-      <Russian>Тащить</Russian>
-      <Spanish>Arrastrar</Spanish>
-      <Polish>Ciągnij</Polish>
-      <Czech>Táhnout</Czech>
-      <French>Tracter</French>
-      <German>Ziehen</German>
-      <Portuguese>Arrastar</Portuguese>
-      <Italian>Trascina</Italian>
-      <Hungarian>Húzás</Hungarian>
-    </Key>
-    <Key ID="STR_ACE_Dragging_Drop">
-      <English>Release</English>
-      <Russian>Отпустить</Russian>
-      <Spanish>Soltar</Spanish>
-      <Polish>Puść</Polish>
-      <Czech>Položit</Czech>
-      <French>Lâcher</French>
-      <German>Loslassen</German>
-      <Portuguese>Largar</Portuguese>
-      <Italian>Lascia</Italian>
-      <Hungarian>Elengedés</Hungarian>
-    </Key>
-    <Key ID="STR_ACE_Dragging_UnableToDrag">
-      <English>Item to heavy</English>
-      <German>Gegenstand zu schwer</German>
-      <!-- <English>Unable to drag item due to weight</English>
-      <Russian>Слишком тяжелый предмет</Russian>
-      <Spanish>No se puede arrastrar el objeto debido a su peso</Spanish>
-      <Polish>Nie można ciągnąć tego przedmiotu z powodu jego wagi</Polish>
-      <Czech>Předmět je příliž těžký!</Czech>
-      <French>Trop lourd pour être tracté</French>
-      <German>Dieser Gegenstand kann nicht gezogen werden, da er zu schwer ist.</German>
-      <Portuguese>Não é possível carregar o item devido a seu peso</Portuguese>
-      <Italian>Non è possibile trascinare l'oggetto a causa del suo peso</Italian>
-      <Hungarian>Túl nehéz ahhoz, hogy elhúzd</Hungarian> -->
-    </Key>
-    <Key ID="STR_ACE_Dragging_Carry">
-      <English>Carry</English>
-      <German>Tragen</German>
-      <Spanish>Portar</Spanish>
-      <Polish>Nieś</Polish>
-      <French>Porter</French>
-      <Czech>Nést</Czech>
-      <Portuguese>Carregar</Portuguese>
-      <Italian>Trascina</Italian>
-      <Hungarian>Felvesz</Hungarian>
-      <Russian>Нести</Russian>
-    </Key>
-  </Package>
+    <Package name="Dragging">
+        <Key ID="STR_ACE_Dragging_Drag">
+            <English>Drag</English>
+            <Russian>Тащить</Russian>
+            <Spanish>Arrastrar</Spanish>
+            <Polish>Ciągnij</Polish>
+            <Czech>Táhnout</Czech>
+            <French>Trainer</French>
+            <German>Ziehen</German>
+            <Portuguese>Arrastar</Portuguese>
+            <Italian>Trascina</Italian>
+            <Hungarian>Húzás</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Dragging_Drop">
+            <English>Release</English>
+            <Russian>Отпустить</Russian>
+            <Spanish>Soltar</Spanish>
+            <Polish>Puść</Polish>
+            <Czech>Položit</Czech>
+            <French>Lâcher</French>
+            <German>Loslassen</German>
+            <Portuguese>Soltar</Portuguese>
+            <Italian>Lascia</Italian>
+            <Hungarian>Elengedés</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Dragging_UnableToDrag">
+            <English>Item too heavy</English>
+            <German>Gegenstand ist zu schwer</German>
+            <Spanish>Objeto demasiado pesado</Spanish>
+            <Polish>Przedmiot jest zbyt ciężki</Polish>
+            <French>Objet trop lourd</French>
+            <Portuguese>Objeto muito pesado</Portuguese>
+            <Italian>L'oggetto pesa troppo</Italian>
+            <Russian>Предмет слишком тяжёлый</Russian>
+            <Czech>Moc težké</Czech>
+            <Hungarian>Az objektum túl nehéz</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Dragging_Carry">
+            <English>Carry</English>
+            <German>Tragen</German>
+            <Spanish>Portar</Spanish>
+            <Polish>Nieś</Polish>
+            <French>Porter</French>
+            <Czech>Nést</Czech>
+            <Portuguese>Carregar</Portuguese>
+            <Hungarian>Felvevés</Hungarian>
+            <Italian>Trasporta</Italian>
+            <Russian>Нести</Russian>
+        </Key>
+    </Package>
 </Project>

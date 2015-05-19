@@ -12,18 +12,13 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_muzzle"];
+PARAMS_2(_unit,_muzzle);
 
-_unit = _this select 0;
-_muzzle = _this select 1;
-
-private ["_uniformMags", "_vestMags", "_backPackMags"];
+private ["_uniformMags", "_vestMags", "_backpackMags", "_numberOfMagazines", "_magazineClasses", "_firstMagazine"];
 
 _uniformMags = getMagazineCargo uniformContainer _unit;
 _vestMags = getMagazineCargo vestContainer _unit;
-_backPackMags = getMagazineCargo backpackContainer _unit;
-
-private ["_numberOfMagazines", "_magazineClasses", "_firstMagazine"];
+_backpackMags = getMagazineCargo backpackContainer _unit;
 
 _numberOfMagazines = 0;
 _magazineClasses = getArray (configFile >> "CfgWeapons" >> "Throw" >> _muzzle >> "magazines");

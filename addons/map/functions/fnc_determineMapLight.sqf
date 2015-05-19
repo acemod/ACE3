@@ -15,7 +15,7 @@
 
 EXPLODE_1_PVT(_this,_unit);
 
-private ["_isEnclosed","_nearObjects","_light","_ll","_flashlight"];
+private ["_isEnclosed","_nearObjects","_light","_ll","_flashlight", "_flareTint", "_lightTint", "_l"];
 
 // Blend two colors
 _fnc_blendColor = {
@@ -66,10 +66,13 @@ if (_lightLevel > 0.95) exitWith {
     [false, [0.5,0.5,0.5,0]]
 };
 
+private "_vehicle";
+_vehicle = vehicle _unit;
+
 // Do not obscure the map if the player is on a enclosed vehicle (assume internal illumination)
-if (vehicle _unit != _unit) then {
+if (_vehicle != _unit) then {
     // Player is in a vehicle
-    if ((vehicle _unit) isKindOf "Tank") then {
+    if (isTurnedOut _unit && { _vehicle isKindOf "Tank" || { ( _vehicle isKindOf "Helicopter" || _vehicle isKindOf "Plane" ) && { (driver _vehicle) == _unit || { (gunner _vehicle) == _unit } } } || {_vehicle isKindOf "Wheeled_APC"}}) then {
         _isEnclosed = true;
     };
 };
@@ -81,32 +84,10 @@ if (_isEnclosed) exitWith {
 // Player is not in a vehicle
 TRACE_1("Player is on foot or in an open vehicle","");
 
-// Check if player is near a campfires, lights or vehicles with lights on - 15m
-_nearObjects = [nearestObjects [_unit, ["All"], 15], {(inflamed _this) || (isLightOn _this)}] call EFUNC(common,filter);
-if (count (_nearObjects) > 0) then {
-    _light = _nearObjects select 0;
-
-    _ll = (1 - (((((_unit distance _light) - 5)/10) max 0) min 1));
-    if (_ll > _lightLevel) then {
-        _lightLevel = _ll;
-        TRACE_1("player near campfire","");
-    };
-};
-
-
-// Gun with light
-_nearObjects = [nearestObjects [_unit, ["CAManBase"], 10], { _this isFlashlightOn (currentWeapon _this)}] call EFUNC(common,filter);
-if (count (_nearObjects) > 0) then {
-    _light = (_nearObjects select 0);
-    _flashlight = (_light weaponAccessories currentMuzzle _light) select 1;
-
-    // Check if it's a day laser
-    if (_flashlight == "ACE_acc_pointer_red") exitWith {};
-    if (_flashlight == "ACE_acc_pointer_green") exitWith {};
-
-    _lightLevel = _lightLevel max (1 - (((((_unit distance _light) - 2)/8) max 0) min 1));
-    TRACE_1("Using gun light","");
-};
+// Check if player is near a campfires, streetlamps, units with flashlights, vehicles with lights on, etc. - 40m
+{
+    _lightLevel = _lightLevel max ([_unit, _x] call EFUNC(common,lightIntensityFromObject));
+} forEach nearestObjects [_unit, ["All"], 40];
 
 
 // @todo: Illumination flares (timed)

@@ -47,11 +47,3 @@ class Extended_Local_EventHandlers {
         };
     };
 };
-
-class Extended_Take_EventHandlers {
-    class CAManBase {
-        class ADDON {
-            take = QUOTE(call FUNC(itemCheck));
-        };
-    };
-};

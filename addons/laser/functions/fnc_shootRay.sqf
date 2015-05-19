@@ -11,13 +11,8 @@ _lastPos = +_pos;
 {
     scopeName "mainSearch";
     for "_i" from 1 to 10 do {
-        _nextPos = [
-            (_lastPos select 0)+((_vec select 0)*_x),
-            (_lastPos select 1)+((_vec select 1)*_x),
-            (_lastPos select 2)+((_vec select 2)*_x)
-        ];
-        
-        if(lineIntersects [_lastPos, _nextPos] || terrainIntersectASL [_lastPos, _nextPos]) then {
+        _nextPos = _lastPos vectorAdd (_vec vectorMultiply _x);
+        if(terrainIntersectASL [_lastPos, _nextPos] || {lineIntersects [_lastPos, _nextPos]}) then {
             _resultPos = _lastPos;
             breakTo "mainSearch";
         } else {
@@ -25,6 +20,5 @@ _lastPos = +_pos;
             _lastPos = _nextPos;
         };
     };
-
 } forEach _fidelity;
 [_resultPos, _distance];

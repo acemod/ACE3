@@ -16,6 +16,8 @@
 
 #include "script_component.hpp"
 
+private ["_compiledConfig", "_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_defaultValue", "_value", "_compiledConfigEntry"];
+
 _compiledConfig = "
 ";
 {
@@ -52,10 +54,27 @@ class %1 {
     typeName = %3;
     force = 1;
 };", _name, _value, format['"%1"', _typeName]];
+
         _compiledConfig = _compiledConfig + _compiledConfigEntry;
     };
 } forEach EGVAR(common,settings);
 
-copyToClipboard format["%1",_compiledConfig];
+FUNC(clipboardExport) = {
+    private["_chunks"];
+    _chunks = [];
+    
+    _chunks = [_this select 0, ";"] call CBA_fnc_split;
+    
+    {
+        private["_chunk"];
+        _chunk = _x + ";";
+        "ace_clipboard" callExtension format["%1", _chunk];
+    } forEach _chunks;
+    
+    "ace_clipboard" callExtension "--COMPLETE--";
+};
+[_compiledConfig] call FUNC(clipboardExport);
 
 ["STR_ACE_OptionsMenu_settingsExported"] call EFUNC(common,displayTextStructured);
+
+

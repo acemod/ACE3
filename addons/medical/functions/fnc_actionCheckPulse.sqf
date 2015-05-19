@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller","_target","_title","_content"];
+private ["_caller","_target"];
 _caller = _this select 0;
 _target = _this select 1;
 [[_caller, _target], QUOTE(DFUNC(actionCheckPulseLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */

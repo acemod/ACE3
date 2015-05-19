@@ -4,10 +4,10 @@
 if !(hasInterface) exitWith {};
 
 // Add keybinds
-["ACE3", QGVAR(speedLimiter), localize "STR_ACE_SpeedLimiter",
+["ACE3 Vehicles", QGVAR(speedLimiter), localize "STR_ACE_SpeedLimiter",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isnotinside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(ACE_player == driver vehicle ACE_player &&
     {vehicle ACE_player isKindOf 'Car' ||

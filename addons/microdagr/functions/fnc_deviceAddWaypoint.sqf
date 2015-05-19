@@ -19,6 +19,8 @@
 
 PARAMS_2(_waypointName,_waypointPosASL);
 
+private "_waypoints";
+
 _waypoints = ace_player getVariable [QGVAR(waypoints), []];
 _waypoints pushBack [_waypointName, _waypointPosASL];
 ace_player setVariable [QGVAR(waypoints), _waypoints];

@@ -1,18 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Project name="Arma2">
-<Package name="ACE2">
-<Container name="frag">
-<Key ID="STR_DN_ACE_FRAG">
-<English>(Æ) Disable Fragmentation</English>
-<Czech>(Æ) Zakázat fragmentaci granátů</Czech>
-<German>(Æ) Weapons: Keine Schrapnelle</German>
-<Polish>(Æ) Wyłącz głowice fragmentacyjne</Polish>
-<Russian>(Æ) Выключить разлёт осколков</Russian>
-<French>(Æ) Disable Fragmentation</French>
-<Spanish>(Æ) Disable Fragmentation</Spanish>
-<Italian>(Æ) Disable Fragmentation</Italian>
-<Hungarian>(Æ) Disable Fragmentation</Hungarian>
-</Key>
-</Container>
-</Package>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Frag">
+        <Key ID="STR_DN_ACE_FRAG">
+            <English>Disable Fragmentation</English>
+            <German>Keine Schrapnelle</German>
+            <Czech>Zakázat fragmentaci granátů</Czech>
+            <Spanish>Desactivar fragmentación</Spanish>
+            <Polish>Wyłącz fragmentację odłamków</Polish>
+            <Russian>Выключить разлёт осколков</Russian>
+            <French>Désactive la fragmentation</French>
+            <Hungarian>Repeszek letiltása</Hungarian>
+            <Italian>Disattiva la frammentazione</Italian>
+            <Portuguese>Desabilitar Fragmentação</Portuguese>
+        </Key>
+    </Package>
 </Project>

@@ -10,8 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_oldUnit","_sets"];
-_unit = _this select 0;
+PARAMS_1(_unit);
 
 _unit setvariable ["ACE_isDead",nil,true];
 _unit setvariable ["ACE_isUnconscious", nil, true];
@@ -26,7 +25,7 @@ if (isPlayer _unit) then {
     if !(isnil QGVAR(DISABLE_USER_INPUT_COLLECTION)) then {
         // clear all disable user input
         {
-            [_X, false] call FUNC(setDisableUserInputStatus);
+            [_x, false] call FUNC(setDisableUserInputStatus);
         }foreach GVAR(DISABLE_USER_INPUT_COLLECTION);
     };
 };
@@ -35,5 +34,6 @@ if (isPlayer _unit) then {
     if (!(_x select 4)) then {
         _unit setvariable [(_x select 0),nil,_x select 3];
     };
-}foreach ([_unit] call FUNC(getAllDefinedSetVariables));
+} forEach ([_unit] call FUNC(getAllDefinedSetVariables));
 
+_unit setVariable ["ACE_forceWalkStatusNumber", 0, true];
