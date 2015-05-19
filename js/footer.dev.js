@@ -4226,7 +4226,7 @@ window.app.contentSearch = (function ($) {
 
     var searchStartLength = 3;
     var maxEntries = 10;
-    var maxDescriptionLength = 100;
+    var maxDescriptionLength = 80;
 
     var _searchTerm = "";
     var _searchTermCombined = "";
@@ -4280,7 +4280,13 @@ window.app.contentSearch = (function ($) {
 
         for (i; i < length; i++) {
             var currentPage = results[i];
-            html += String.format("<li><a href=\"{1}\">{0}<br><small>{2}</small></a></li>", currentPage.title, currentPage.url, currentPage.description.substr(0, maxDescriptionLength) + "&hellip;");
+
+            var description = currentPage.description;
+            if (description.length > maxDescriptionLength) {
+                description = description.substr(0, maxDescriptionLength) + "&hellip;"
+            }
+
+            html += String.format("<li><a href=\"{1}\">{0}<br><small>{2}</small></a></li>", currentPage.title, currentPage.url, description);
         }
 
         $contentSearchResultList.empty().append(html).removeClass("hidden");

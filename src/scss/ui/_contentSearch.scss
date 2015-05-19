@@ -4,6 +4,11 @@
     &-wrapper {
         max-width: 50%;
         position: relative;
+
+        @media #{$small-only} {
+            max-width: 100%;
+            width: 100%;
+        }
     }
 
     &-field {
@@ -23,28 +28,32 @@
             margin: 0;
             list-style-type: none;
 
-            li {
-                padding: 8px 20px;
+            @media #{$small-only} {
+                position: relative;
+            }
 
+            li {
                 a {
-                    -webkit-transition: all 0.1s ease;
-                    transition: all 0.1s ease;
+                    -webkit-transition: all 0.15s ease;
+                    transition: all 0.15s ease;
+                    padding: 8px 20px;
                     display: block;
                     width: 100%;
                     height: 100%;
                     line-height: 1.2;
-                }
 
-                &:hover {
-                    background-color: $smoke;
-                }
 
-                &:first-child {
-                    padding-top: 16px;
-                }
+                    &:hover {
+                        background-color: $smoke;
+                    }
 
-                &:last-child {
-                    padding-bottom: 16px;
+                    &:first-child {
+                        padding-top: 16px;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 16px;
+                    }
                 }
 
             }
