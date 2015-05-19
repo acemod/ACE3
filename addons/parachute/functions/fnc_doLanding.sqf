@@ -14,8 +14,8 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_unit"];
-PARAMS_1(_unit);
+private["_unit"];
+_unit = _this select 0;
 GVAR(PFH) = false;
 [_unit, "AmovPercMevaSrasWrflDf_AmovPknlMstpSrasWrflDnon", 2] call EFUNC(common,doAnimation);
 SETVAR(_unit,chuteIsCut,false);

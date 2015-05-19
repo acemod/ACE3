@@ -15,13 +15,13 @@
  *
  * Public: No
  */
-
+private ["_unit","_backpack"];
 _unit = _this select 0;
 _backpack = (_this select 1) select 6 ;
 if ((vehicle _unit) isKindOf "ParachuteBase" || (backpack _unit == "")) then {
-    _unit addbackpack (_unit getVariable[QGVAR(backpackClass),""]);
+    _unit addBackpack (_unit getVariable[QGVAR(backpackClass),"ACE_NonSteerableParachute"]);
 } else {
-    if (getText(configfile >> "CfgVehicles" >> _backpack >> "ace_reserveParachute") != "") then {
-        _unit setvariable[QGVAR(backpackClass),getText(configfile >> "CfgVehicles" >> _backpack >> "ace_reserveParachute"),"ACE_NonSteerableParachute"];
+    if (getText(configFile >> "CfgVehicles" >> _backpack >> "ace_reserveParachute") != "") then {
+        _unit setVariable[QGVAR(backpackClass),getText(configFile >> "CfgVehicles" >> _backpack >> "ace_reserveParachute")];
     };
 };

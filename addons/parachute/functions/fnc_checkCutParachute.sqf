@@ -14,6 +14,6 @@
  *
  * Public: No
  */
-
+privat["_unit"];
 _unit = _this select 0;
 (animationState _unit == 'para_pilot' && !(_unit getvariable [QGVAR(chuteIsCut),false]))

@@ -15,7 +15,7 @@
  * Public: No
  */
 private["_unit","_vehicle"];
-PARAMS_1(_unit);
+_unit = _this select 0;
 _vehicle = vehicle _unit;
 _unit action ["GetOut", vehicle _unit];
 deleteVehicle _vehicle;

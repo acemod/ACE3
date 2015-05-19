@@ -14,4 +14,4 @@
  * Public: No
  */
 #include "script_component.hpp"
-_unit setVariable [QGVAR(chuteIsCut), false];
+ACE_player setVariable [QGVAR(chuteIsCut), false];
