@@ -19,9 +19,10 @@
 EXPLODE_2_PVT(_this,_explosive,_delay);
 
 [{
-    private ["_explosive"];
-    _explosive = _this;
-    if (!isNull _explosive) then {
-        [_explosive, -1, [_explosive, 0]] call FUNC(detonateExplosive);
-    };
-}, _explosive, _delay, 0] call EFUNC(common,waitAndExecute);
+    EXPLODE_2_PVT(_this,_explosive,_delay);
+    [{
+        if (!isNull _this) then {
+            [_this, -1, [_this, 0]] call FUNC(detonateExplosive);
+        };
+    }, _explosive, _delay, 0] call EFUNC(common,waitAndExecute);
+}, [_explosive, _delay], 5, 0.5] call EFUNC(common,waitAndExecute);
