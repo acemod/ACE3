@@ -105,7 +105,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         displayName = "$STR_ACE_Zeus_ModuleUnconscious_DisplayName";
         function = QFUNC(moduleUnconscious);
-        //icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa));
         class ModuleDescription {
             description = "Flips the unconscious state of the specified unit.";
             sync[] = {};
