@@ -16,6 +16,29 @@ parent: wiki
 
 ## 3. Data and Types
 
+### ACE Hit Events
+
+All hit events are structured as an array of [selectionName, damageData]. For example:
+
+hit_thermal event - [ ["magazine001", [0.5, 2000, 3.0]], ["crew02", [0.3, 577, 1]] ]
+
+#### ace_vehicledamage_hit_kenetic
+[keneticEnergy, surfaceArea] 
+surfaceArea - 0.0 - 1.0 of selection
+
+#### ace_vehicledamage_hit_thermal
+[initialTempterature, finalTemperature, varianceSpeed, surfaceArea] 
+surfaceArea - 0.0 - 1.0 of selection
+
+#### ace_vehicledamage_hit_pressure
+[initialPressure, finalPressure, varianceSpeed, waveSpeed, surfaceArea] 
+surfaceArea - 0.0 - 1.0 of selection
+
+#### ace_vehicledamage_hit_material
+[deconstruction, surfaceArea] 
+deconstruction - 0.0 - 1.0 amount of physical deconstruction of selection
+surfaceArea - 0.0 - 1.0 of selection
+
 
 ## 4. Mod Maker Usage
 
