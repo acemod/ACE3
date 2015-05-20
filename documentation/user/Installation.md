@@ -12,7 +12,7 @@ This guide will explain how to get ACE3 up and running faster than you can say b
 
 ## 2. Prerequisites
 - Download [CBA](http://www.armaholic.com/page.php?id=18767).
-- Download [ACE3](https://github.com/acemod/ACE3/releases/tag/v3.0.1).
+- Download [ACE3](https://github.com/acemod/ACE3/releases/latest).
 - Know how to extract .zip files. Use [Google](https://www.google.com) if not sure.
 
 ## 3. Installation
