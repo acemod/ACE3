@@ -66,7 +66,7 @@ if (GVAR(level) < 2) then {
         };
     };
 
-    if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)} || !alive vehicle _unit) then {
+    if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
         if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)])) exitwith {
             _damageReturn = 0.9;
         };
@@ -96,6 +96,27 @@ if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitW
         [{
             [_this select 0, true] call FUNC(setUnconscious);
         }, [_unit]] call EFUNC(common,execNextFrame);
+    private "_delayedUnconsicous";
+    _delayedUnconsicous = false;
+    if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
+        [_unit] call EFUNC(common,unloadPerson);
+        _delayedUnconsicous = true;
+    };
+
+    if (_damageReturn >= 0.9 && {_selection in ["", "head", "body"]}) exitWith {
+        if (_unit getvariable ["ACE_isUnconscious", false]) exitwith {
+            [_unit] call FUNC(setDead);
+            0.89
+        };
+        if (_delayedUnconsicous) then {
+            [{
+                [_this select 0, true] call FUNC(setUnconscious);
+            }, [_unit], 0.7, 0] call EFUNC(common,waitAndExec);
+        } else {
+            [{
+                [_this select 0, true] call FUNC(setUnconscious);
+            }, [_unit]] call EFUNC(common,execNextFrame);
+        };
         0.89
     };
     _damageReturn min 0.89;
