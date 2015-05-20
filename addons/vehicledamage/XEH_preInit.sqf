@@ -14,6 +14,7 @@ GVAR(ready) = false;
 
 // Extension dispatch events
 PREP(setAnimationNames);
+PREP(doDamageResults);
 
 // To extension send events
 PREP(getAnimationStates);
@@ -26,6 +27,7 @@ PREP(unregisterWithExtension);
 PREP(dispatchHitPart);
 PREP(dispatchDamage);
 PREP(doHit);
+
 
 GVAR(vehicle_id) = 0;
 GVAR(vehicles) = HASH_CREATE;

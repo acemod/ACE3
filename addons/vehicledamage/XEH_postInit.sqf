@@ -5,6 +5,7 @@
 
 // Extension dispatch commands
 [QGVAR(setAnimationNames), FUNC(setAnimationNames)] call EFUNC(common,addEventHandler);
+[QGVAR(doDamageResults), FUNC(doDamageResults)] call EFUNC(common,addEventHandler);
 
 // Trigger and start fetching results
 [FUNC(monitorResultsPFH), 0, []] call CBA_fnc_addPerFrameHandler;
