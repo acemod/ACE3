@@ -11,6 +11,12 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
+    class GVAR(alwaysSimulateForGroupMembers) {
+        displayName = "Always Enabled For Group Members";
+        description = "Always enables advanced ballistics when a group member fires";
+        typeName = "BOOL";
+        value = 0;
+    };
     class GVAR(disabledInFullAutoMode) {
         displayName = "Disabled In FullAuto Mode";
         description = "Disables the advanced ballistics during full auto fire";

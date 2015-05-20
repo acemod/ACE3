@@ -17,9 +17,9 @@ Example:
 */
 #include "script_component.hpp"
 
-private ["_unit", "_forceWalkReasons", "_unitForceWalkNumber", "_unitForceWalkStatus", "_unitForceWalkReasons"];
+private ["_forceWalkReasons", "_unitForceWalkNumber", "_unitForceWalkStatus", "_unitForceWalkReasons"];
 
-_unit = _this select 0;
+PARAMS_1(_unit);
 
 _forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
 
@@ -29,9 +29,9 @@ _unitForceWalkStatus = [_unitForceWalkNumber, count _forceWalkReasons] call FUNC
 
 _unitForceWalkReasons = [];
 {
-  if (_unitForceWalkStatus select _forEachIndex) then {
-    _unitForceWalkReasons pushBack _x;
-  };
+    if (_unitForceWalkStatus select _forEachIndex) then {
+        _unitForceWalkReasons pushBack _x;
+    };
 } forEach _forceWalkReasons;
 
 _unitForceWalkReasons

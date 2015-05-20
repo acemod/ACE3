@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_id", "_actionsVar", "_currentId", "_actionIDs", "_actions"];
+private ["_actionsVar", "_currentId", "_actionIDs", "_actions"];
 
-_id = _this select 0;
+PARAMS_1(_id);
 
 _actionsVar = missionNamespace getVariable ["ACE_EventHandler_MapMarker", [-1, [], []]];
 

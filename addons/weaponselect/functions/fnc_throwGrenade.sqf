@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_unit", "_weapon", "_magazine"];
+private ["_unit","_weapon","_magazine"];
 
 _unit = _this select 0;
 _weapon = _this select 1;

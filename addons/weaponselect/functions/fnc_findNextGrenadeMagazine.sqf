@@ -1,9 +1,9 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_type", "_allMags", "_allMuzzles", "_magazines"];
+private ["_allMags", "_allMuzzles", "_magazines"];
 
-_type = _this select 0; //"All", "Frag" or "NonFrag"
+PARAMS_1(_type); //"All", "Frag" or "NonFrag"
 
 _allMags = missionNamespace getVariable [format [QGVAR(%1Magazines), _type], []];
 _allMuzzles = missionNamespace getVariable [format [QGVAR(%1Muzzles), _type], []];
