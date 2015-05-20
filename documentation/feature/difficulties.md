@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Difficulties
-description: 
+description: Tweak to Vanilla hardest difficulty
 group: feature
 parent: wiki
 ---
@@ -9,7 +9,7 @@ parent: wiki
 ## 1. Overview
 
 ### 1.1 Elite mode adjustments
-Adjusts the default settings for the hardest difficulty to more closely resemble A2 settings. (No crosshair, stat screen, death messages...)
+Adjusts the default settings of the hardest difficulty to better resemble A2 settings (no crosshair, stat screen, death messages).
 
 ## 2. Dependencies
 

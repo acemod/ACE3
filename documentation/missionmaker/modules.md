@@ -11,34 +11,37 @@ parent: wiki
 ### 1.1 Advanced Ballistics
 *Part of: ace_advanced_ballistics*
 
-This module allows to enable advanced external- and internal ballistics.
+This module allows enabling and configuring advanced ballistic simulations.
 
 **Settings:**
 
 1. **Advanced Ballistics (Boolean)**<br>
 Enables advanced ballistics.<br>
 `Default value: No`
-2. **Always Enabled For Snipers (Boolean)**<br>
-Always enables advanced ballistics when high power optics are used.<br>
+2. **Enabled For Snipers (Boolean)**<br>
+Enables advanced ballistics for non local snipers (when using high power optics).<br>
 `Default value: Yes`
-3. **Disabled In FullAuto Mode (Boolean)**<br>
+3. **Enabled For Group Members (Boolean)**<br>
+Enables advanced ballistics for non local group members.<br>
+`Default value: No`
+4. **Enabled For Everyone (Boolean)**<br>
+Enables advanced ballistics for all non local players (enabling this feature may degrade performance during heavy firefights in multiplayer).<br>
+`Default value: No`
+5. **Disabled In FullAuto Mode (Boolean)**<br>
 Disables the advanced ballistics during full auto fire.<br>
 `Default value: No`
-4. **Disabled For Non Local Players (Boolean)**<br>
-Disables the advanced ballistics for bullets coming from other players (enable this if you encounter frame drops during heavy firefights in multiplayer).<br>
-`Default value: Yes`
-5. **Enable Ammo Temperature Simulation (Boolean)**<br>
+6. **Enable Ammo Temperature Simulation (Boolean)**<br>
 Muzzle velocity varies with ammo temperature.<br>
 `Default value: Yes`
-6. **Enable Barrel Length Simulation (Boolean)**<br>
+7. **Enable Barrel Length Simulation (Boolean)**<br>
 Muzzle velocity varies with barrel length.<br>
 `Default value: Yes`
-7. **Enable Bullet Trace Effect (Boolean)**<br>
+8. **Enable Bullet Trace Effect (Boolean)**<br>
 Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics).<br>
-8. **Simulation Interval (Number)**<br>
+9. **Simulation Interval (Number)**<br>
 Defines the interval between every calculation step.<br>
 `Default value: 0.05`
-9. **Simulation Radius (Number)**<br>
+10. **Simulation Radius (Number)**<br>
 Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles.<br>
 `Default value: 3000`
 

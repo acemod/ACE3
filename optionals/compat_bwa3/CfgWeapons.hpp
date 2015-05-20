@@ -49,7 +49,7 @@ class CfgWeapons {
     class BWA3_optic_ZO4x30 : optic_Hamr {
         ACE_ScopeAdjust_Vertical[] = { -10, 10 };
         ACE_ScopeAdjust_Horizontal[] = { -10, 10 };
-        ACE_ScopeAdjust_Increment = 0.2;
+        ACE_ScopeAdjust_VerticalIncrement = 0.2;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Scope {
@@ -62,7 +62,7 @@ class CfgWeapons {
     class BWA3_optic_ZO4x30_NSV : optic_Hamr {
         ACE_ScopeAdjust_Vertical[] = { -10, 10 };
         ACE_ScopeAdjust_Horizontal[] = { -10, 10 };
-        ACE_ScopeAdjust_Increment = 0.2;
+        ACE_ScopeAdjust_VerticalIncrement = 0.2;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Scope {
@@ -75,7 +75,7 @@ class CfgWeapons {
     class BWA3_optic_ZO4x30_IRV : optic_Hamr {
         ACE_ScopeAdjust_Vertical[] = { -10, 10 };
         ACE_ScopeAdjust_Horizontal[] = { -10, 10 };
-        ACE_ScopeAdjust_Increment = 0.2;
+        ACE_ScopeAdjust_VerticalIncrement = 0.2;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Scope {
@@ -88,7 +88,7 @@ class CfgWeapons {
     class BWA3_optic_Shortdot : optic_Hamr {
         ACE_ScopeAdjust_Vertical[] = { -0.1, 10.1 };
         ACE_ScopeAdjust_Horizontal[] = { -5.1, 5.1 };
-        ACE_ScopeAdjust_Increment = 0.1;
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Scope {
@@ -101,7 +101,7 @@ class CfgWeapons {
     class BWA3_optic_20x50 : optic_Hamr {
         ACE_ScopeAdjust_Vertical[] = { 0, 26 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
-        ACE_ScopeAdjust_Increment = 0.1;
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Scope {
@@ -114,7 +114,7 @@ class CfgWeapons {
     class BWA3_optic_20x50_NSV : BWA3_optic_20x50 {
         ACE_ScopeAdjust_Vertical[] = { 0, 26 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
-        ACE_ScopeAdjust_Increment = 0.1;
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Scope {
@@ -127,7 +127,7 @@ class CfgWeapons {
     class BWA3_optic_24x72 : optic_Hamr {
         ACE_ScopeAdjust_Vertical[] = { 0, 16 };
         ACE_ScopeAdjust_Horizontal[] = { -7, 7 };
-        ACE_ScopeAdjust_Increment = 0.1;
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Scope {
@@ -140,7 +140,7 @@ class CfgWeapons {
     class BWA3_optic_24x72_NSV : BWA3_optic_20x50 {
         ACE_ScopeAdjust_Vertical[] = { 0, 16 };
         ACE_ScopeAdjust_Horizontal[] = { -7, 7 };
-        ACE_ScopeAdjust_Increment = 0.1;
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Scope {
