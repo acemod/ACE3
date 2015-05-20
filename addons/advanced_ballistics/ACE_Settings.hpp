@@ -19,7 +19,7 @@ class ACE_Settings {
     };
     class GVAR(simulateForEveryone) {
         displayName = "Enabled For Everyone";
-        description = "Enables advanced ballistics for all non local players (keep this disabled if you encounter frame drops during heavy firefights in multiplayer)";
+        description = "Enables advanced ballistics for all non local players (enabling this may degrade performance during heavy firefights in multiplayer)";
         typeName = "BOOL";
         value = 0;
     };
