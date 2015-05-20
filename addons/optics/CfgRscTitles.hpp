@@ -100,13 +100,13 @@ class RscInGameUI {
             idc = 1713010;
             x = "safeZoneXAbs";
             Y = "safezoneY";
-            W = "(safezoneX - safeZoneXAbs) * (3/4)";
+            W = "(safezoneX - safeZoneXAbs) * ((getResolution select 4)/(16/3))";
             H = "safeZoneH";
             colorBackground[] = {0,0,0,1};
         };
         class trippleHeadRight: trippleHeadLeft {
             idc = 1713011;
-            x = "safeZoneXAbs + safeZoneWAbs - (safezoneX - safeZoneXABS) * (3/4)";
+            x = "safeZoneXAbs + safeZoneWAbs - (safezoneX - safeZoneXABS) * ((getResolution select 4)/(16/3))";
              colorBackground[] = {0,0,0,1};
         };     
     };

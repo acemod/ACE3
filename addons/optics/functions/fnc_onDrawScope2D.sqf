@@ -16,22 +16,25 @@ if (!ctrlShown (_display displayCtrl 154)) exitWith {
     (_display displayCtrl 1713011) ctrlShow false;
 };
 
-GVAR(camera) setposATL positioncameratoworld [0,0,0.4];
-GVAR(camera) camPrepareTarget positioncameratoworld [0,0,50];
-GVAR(camera) camCommitPrepared 0;
-
-// @todo, check if that needs to be done at all
-if (cameraView == "GUNNER") then {
-    GVAR(camera) camsetFOV 0.7;
-    GVAR(camera) camcommit 0;
-} else {
-    GVAR(camera) camsetFOV 0.01;
-    GVAR(camera) camcommit 0;
-};
-
 // @todo, all weapon types
-private "_optic";
+private ["_optic", "_isPIP"];
 _optic = (primaryWeaponItems ACE_player) select 2;
+_isPIP = (getText (configFile >> "CfgWeapons" >> _optic >> "ItemInfo" >> "modelOptics")) == QUOTE(PATHTOF(models\ace_optics_pip.p3d));
+
+if (_isPIP) then {
+    GVAR(camera) setposATL positioncameratoworld [0,0,0.4];
+    GVAR(camera) camPrepareTarget positioncameratoworld [0,0,50];
+    GVAR(camera) camCommitPrepared 0;
+
+    // @todo, check if that needs to be done at all
+    if (cameraView == "GUNNER") then {
+        GVAR(camera) camsetFOV 0.7;
+        GVAR(camera) camcommit 0;
+    } else {
+        GVAR(camera) camsetFOV 0.01;
+        GVAR(camera) camcommit 0;
+    };
+};
 
 // calculate lighting
 private ["_dayOpacity", "_nightOpacity"];
@@ -50,11 +53,11 @@ _nightOpacity = [1,0] select (_dayOpacity == 1);
 (_display displayCtrl 1713002) ctrlCommit 0;
 (_display displayCtrl 1713005) ctrlCommit 0;
 (_display displayCtrl 1713006) ctrlCommit 0;
-*/
+ */
 
 (_display displayCtrl 1713001) ctrlShow true;
 (_display displayCtrl 1713002) ctrlShow true;
 (_display displayCtrl 1713005) ctrlShow true;
 (_display displayCtrl 1713006) ctrlShow true;
-(_display displayCtrl 1713010) ctrlShow true;
-(_display displayCtrl 1713011) ctrlShow true;
+(_display displayCtrl 1713010) ctrlShow _isPIP;
+(_display displayCtrl 1713011) ctrlShow _isPIP;
