@@ -20,7 +20,6 @@ if (_unit == ACE_player) then {
     call FUNC(place_Cancel);
 };
 if (!isServer) exitWith{};
-diag_log "Here";
 _deadman = [_unit, "DeadManSwitch"] call FUNC(getPlacedExplosives);
 {
     [_unit, -1, _x, true] call FUNC(detonateExplosive);
