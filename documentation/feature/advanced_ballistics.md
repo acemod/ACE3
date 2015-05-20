@@ -23,9 +23,9 @@ The Advanced Ballistics module improves internal and external ballistics.
 - A protractor for quickly measuring the inclination angle.
 
 ## 3. Usage
+
+### 3.1 Protractor
 Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> while using a compatible weapon to toggle the protractor. The red line indicates the current inclination angle in degrees. The protractor will disappear if you lower or holster your weapon.
 
-This module uses relatively complex scripting. Several options are provided in the ACE menu to reduce the performance impact of this module.
-
-## Dependencies
+## 4. Dependencies
 `ace_ballistics`, `ace_weather`, `ace_modules`
