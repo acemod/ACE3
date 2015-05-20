@@ -73,8 +73,8 @@ if (alive _target) then {
 
 if (_painReduce > 0) then {
     // Reduce the pain level
-    _pain = _target getvariable [QGVAR(pain), 0];
-    _target setvariable [QGVAR(pain), (_pain - (_pain * _painReduce)) max 0];
+    _painSuppress = _target getvariable [QGVAR(painSuppress), 0];
+    _target setvariable [QGVAR(painSuppress), (_painSuppress + _painReduce) max 0];
 };
 
 _resistance = _target getvariable [QGVAR(peripheralResistance), 100];
@@ -82,6 +82,6 @@ _resistance = _resistance + _viscosityChange;
 _target setvariable [QGVAR(peripheralResistance), _resistance max 0];
 
 // Call back to ensure that the medication is decreased over time
-[_target, _classname, _varName, _maxDose, _timeInSystem, _inCompatableMedication, _viscosityChange] call FUNC(onMedicationUsage);
+[_target, _classname, _varName, _maxDose, _timeInSystem, _inCompatableMedication, _viscosityChange, _painReduce] call FUNC(onMedicationUsage);
 
 true

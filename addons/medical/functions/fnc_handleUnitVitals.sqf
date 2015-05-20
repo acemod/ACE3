@@ -58,7 +58,7 @@ if (([_unit] call FUNC(getBloodLoss)) > 0) then {
 };
 
 _painStatus = _unit getvariable [QGVAR(pain), 0];
-if (_painStatus > 0) then {
+if (_painStatus > (_unit getvariable [QGVAR(painSuppress), 0])) then {
     if !(_unit getvariable [QGVAR(hasPain), false]) then {
         _unit setvariable [QGVAR(hasPain), true, true];
     };
