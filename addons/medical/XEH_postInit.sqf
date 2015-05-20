@@ -267,7 +267,7 @@ if (USE_WOUND_EVENT_SYNC) then {
 // Item Event Handler
 ["playerInventoryChanged", {
     [ACE_player] call FUNC(itemCheck);
-}] call EFUNC(common,addEventHandler);§
+}] call EFUNC(common,addEventHandler);
 
 // Networked litter
 [QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
