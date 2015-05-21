@@ -17,7 +17,7 @@
             <English>Maximum Projectiles Tracked</English>
         </Key>
         <Key ID="STR_ACE_frag_MaxTrack_Desc">
-            <English>This setting controls the maximum amount of projectiles the fragmentation & spalling system will track at any given time. If more projectiles are fired, they will not be tracked. Lower this setting if you do not want FPS drops at high-count projectile scenarios ( >200 rounds in the air at once)</English>
+            <English>This setting controls the maximum amount of projectiles the fragmentation and spalling system will track at any given time. If more projectiles are fired, they will not be tracked. Lower this setting if you do not want FPS drops at high-count projectile scenarios ( >200 rounds in the air at once)</English>
         </Key>
         <Key ID="STR_ACE_frag_MaxTrackPerFrame">
             <English>Maximum Projectiles Per Frame</English>
