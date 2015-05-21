@@ -14,6 +14,28 @@
  * Public: No
  */
 #include "script_component.hpp"
+
+//Start up a PFEH that scans all mines/explosives without defuseObjects attached and adds them
+//Handles Editor Placed / Zeus / Scripted
+if (isServer) then {
+    [{
+        {
+            _explosive = _x;
+            _helpers = {
+                ((typeOf _x) == "ACE_DefuseObject") && {(_x getVariable [QGVAR(Explosive), objNull]) == _explosive}
+            } count (attachedObjects _explosive);
+
+            if (_helpers == 0) then {
+                systemChat "Missing Helper";
+                TRACE_3("Explosive without helper",_explosive,(getPosAsl _explosive),(typeOf _explosive));
+                _defuseHelper = createVehicle ["ACE_DefuseObject", (getPos _explosive), [], 0, "NONE"];
+                _defuseHelper attachTo [_explosive, [0,0,0], ""];
+                _defuseHelper setVariable [QGVAR(Explosive),_explosive,true];
+            };
+        } forEach allMines;
+    }, 5, []] call CBA_fnc_addPerFrameHandler;
+};
+
 if !(hasInterface) exitWith {};
 GVAR(PlacedCount) = 0;
 GVAR(Setup) = objNull;
