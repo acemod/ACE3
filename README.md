@@ -4,18 +4,18 @@
 </p>
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
-        <img src="http://img.shields.io/badge/Version-3.0.0-blue.svg?style=flat"
+        <img src="http://img.shields.io/badge/Version-3.0.1-blue.svg?style=flat"
              alt="ACE version">
     </a>
     <a href="https://github.com/acemod/ACE3/archive/master.zip">
-        <img src="http://img.shields.io/badge/Download-48.3_MB-green.svg?style=flat"
+        <img src="http://img.shields.io/badge/Download-40.9_MB-green.svg?style=flat"
              alt="ACE download">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="http://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat&label=Issues"
              alt="ACE issues">
     </a>
-    <a href="http://forums.bistudio.com/showthread.php?190433-ACE3-A-collaborative-merger-between-AGM-CSE-and-ACE&p=2910796&viewfull=1#post2910796">
+    <a href="http://forums.bistudio.com/showthread.php?191716-ACE3-A-collaborative-merger-between-AGM-CSE-and-ACE&p=2935435&viewfull=1#post2935435">
         <img src="https://img.shields.io/badge/BIF-Thread-lightgrey.svg?style=flat"
              alt="BIF thread">
     </a>
