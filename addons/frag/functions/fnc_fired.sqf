@@ -50,7 +50,7 @@ if(_doFragTrack && alive _round) then {
     GVAR(trackedObjects) pushBack _round;
     _spallTrack = [];
     _spallTrackID = [];
-    [DFUNC(trackFragRound), 0, [_round, (getPosASL _round), (velocity _round), _type, time, _gun, _doSpall, _spallTrack, _spallTrackID]] call cba_fnc_addPerFrameHandler;
+    [DFUNC(trackFragRound), 0, [_round, (getPosASL _round), (velocity _round), _type, diag_frameno, _gun, _doSpall, _spallTrack, _spallTrackID]] call cba_fnc_addPerFrameHandler;
     if(_doSpall) then {
         [_round, 2, _spallTrack, _spallTrackID] call FUNC(spallTrack);
     };
