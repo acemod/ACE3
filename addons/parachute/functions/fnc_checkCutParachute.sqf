@@ -1,4 +1,3 @@
-#include "script_component.hpp"
 /*
  * Author: joko // Jonas
  * Reset the parachute system.
@@ -14,6 +13,7 @@
  *
  * Public: No
  */
-privat["_unit"];
+#include "script_component.hpp"
+private["_unit"];
 _unit = _this select 0;
 (animationState _unit == 'para_pilot' && !(_unit getvariable [QGVAR(chuteIsCut),false]))

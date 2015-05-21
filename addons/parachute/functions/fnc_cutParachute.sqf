@@ -1,4 +1,3 @@
-#include "script_component.hpp"
 /*
  * Author: joko // Jonas
  * Cut Parachute and delete Old
@@ -14,6 +13,7 @@
  *
  * Public: No
  */
+#include "script_component.hpp"
 private["_unit","_vehicle"];
 _unit = _this select 0;
 _vehicle = vehicle _unit;

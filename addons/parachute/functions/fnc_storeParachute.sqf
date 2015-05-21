@@ -1,4 +1,3 @@
-#include "script_component.hpp"
 /*
  * Author: joko // Jonas
  * Add the Reserve Parachute to Units or Save Backpack if is a Parachute in Unit
@@ -15,10 +14,11 @@
  *
  * Public: No
  */
+#include "script_component.hpp"
 private ["_unit","_backpack"];
 _unit = _this select 0;
 _backpack = (_this select 1) select 6 ;
-if ((vehicle _unit) isKindOf "ParachuteBase" || (backpack _unit == "")) then {
+if ((vehicle _unit) isKindOf "ParachuteBase") then {
     _unit addBackpack (_unit getVariable[QGVAR(backpackClass),"ACE_NonSteerableParachute"]);
 } else {
     if (getText(configFile >> "CfgVehicles" >> _backpack >> "ace_reserveParachute") != "") then {
