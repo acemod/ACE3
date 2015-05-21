@@ -9,7 +9,7 @@ class ACE_Settings {
         displayName = "$STR_ACE_frag_EnableSpall";
         description = "$STR_ACE_frag_EnableSpall_Desc";
         typeName = "BOOL";
-        value = 1;
+        value = 0;
     };
     class GVAR(maxTrack) {
         displayName = "$STR_ACE_frag_MaxTrack";

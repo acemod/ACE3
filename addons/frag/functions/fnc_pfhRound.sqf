@@ -1,10 +1,10 @@
 #include "script_component.hpp"
-private ["_round", "_lastPos", "_lastVel", "_type", "_time", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
+private ["_round", "_lastPos", "_lastVel", "_type", "_firedFrame", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
 _round = _this select 0;
 _lastPos = _this select 1;
 _lastVel = _this select 2;
 _type = _this select 3;
-_time = _this select 4;
+_firedFrame = _this select 4;
 _doSpall = _this select 6;
 _spallTrack = _this select 7;
 _foundObjectHPIds = _this select 8;
@@ -19,7 +19,7 @@ if(_round in GVAR(blackList)) exitWith {
 };
 
 if (!alive _round) then {
-    if(_time != time) then {
+    if((diag_frameno - _firedFrame) > 1) then {
         if(_skip == 0) then {
             if((_explosive > 0.5 && {_indirectRange >= 4.5} && {_fragPower >= 35}) || {_force == 1} ) then {
                 [QGVAR(frag_eh), _this] call ace_common_fnc_serverEvent;
