@@ -35,4 +35,4 @@ This guide will explain how to get ACE3 up and running faster than you can say b
 - Drag and drop `@ace` and `@CBA_A3` from `Available Addons` into the `Addon Groups` list and make sure the checkboxes are ticked.
 - Click `Start Game`
 
-### 4.3 Play withSix
+### 4.3 Play withSIX
