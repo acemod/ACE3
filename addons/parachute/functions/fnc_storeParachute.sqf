@@ -18,10 +18,11 @@
 private ["_unit","_backpack"];
 _unit = _this select 0;
 _backpack = (_this select 1) select 6 ;
-if ((vehicle _unit) isKindOf "ParachuteBase") then {
+if ((vehicle _unit) isKindOf "ParachuteBase" && !([false,true] select (getNumber(configFile >> "CfgVehicles" >> _backpack >> "ace_hasReserveParachute"))) && !(_unit getVariable [QGVAR(chuteIsCut),false])) then {
     _unit addBackpack (_unit getVariable[QGVAR(backpackClass),"ACE_NonSteerableParachute"]);
 } else {
-    if (getText(configFile >> "CfgVehicles" >> _backpack >> "ace_reserveParachute") != "") then {
+    if ([false,true] select (getNumber(configFile >> "CfgVehicles" >> _backpack >> "ace_hasReserveParachute"))) then {
         _unit setVariable[QGVAR(backpackClass),getText(configFile >> "CfgVehicles" >> _backpack >> "ace_reserveParachute")];
     };
+    _unit setVariable [QGVAR(hasReserve),[false,true] select (getNumber(configFile >> "CfgVehicles" >> _backpack >> "ace_hasReserveParachute"))];
 };

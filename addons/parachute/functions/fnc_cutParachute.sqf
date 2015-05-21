@@ -17,6 +17,6 @@
 private["_unit","_vehicle"];
 _unit = _this select 0;
 _vehicle = vehicle _unit;
-_unit action ["GetOut", vehicle _unit];
+_unit action ["GetOut", _vehicle];
 deleteVehicle _vehicle;
 _unit setVariable [QGVAR(chuteIsCut), true];
