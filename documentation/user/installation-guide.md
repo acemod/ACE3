@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Installation
+title: Installation Guide
 description: Step-by-step guide for installing ACE3
 group: user
 order: 0
@@ -15,7 +15,7 @@ This guide will explain how to get ACE3 up and running faster than you can say b
 - Download [ACE3](https://github.com/acemod/ACE3/releases/latest).
 - Know how to extract .zip files. Use [Google](https://www.google.com) if not sure.
 
-## 3. Installation
+## 3. Installation Guide
 - Extract both CBA and ACE3 into your Arma 3 folder. By default this is located in:<br>
 32-Bit - `C:/Program Files/Steam/Steamapps/Common/Arma 3/`<br>
 64-Bit - `C:/Program Files (x86)/Steam/Steamapps/Common/Arma 3/`
