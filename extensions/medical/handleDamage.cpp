@@ -3,6 +3,7 @@
 #include "DamageType.h"
 #include "InjuryType.h"
 #include <sstream>
+#include <algorithm>
 
 namespace ace {
     namespace medical {
@@ -59,11 +60,11 @@ namespace ace {
             std::vector<std::shared_ptr<ace::medical::injuries::InjuryType>> information;
             std::shared_ptr<ace::medical::injuries::InjuryType> highestSpot = nullptr;
 
-            for each (std::shared_ptr<ace::medical::injuries::DamageType> damageType in damageTypes)
+            for (auto & damageType : damageTypes)
             {
                 if (damageType->typeName == typeOfDamage)
                 {
-                    for each (std::shared_ptr<ace::medical::injuries::InjuryType> possibleInjury in damageType->possibleInjuries)
+                    for (auto & possibleInjury : damageType->possibleInjuries)
                     {
                         if (amountOfDamage >= possibleInjury->minDamage && (amountOfDamage <= possibleInjury->maxDamage || possibleInjury->maxDamage <= 0))
                         {
@@ -81,7 +82,7 @@ namespace ace {
                     }
 
                     int c = 0;
-                    for each (double threshold in damageType->minDamageThreshold)
+                    for (double & threshold : damageType->minDamageThreshold)
                     {
                         if (amountOfDamage >= threshold)
                         {
@@ -132,12 +133,12 @@ namespace ace {
                 std::stringstream stream;
 
                 stream << "ADDED: " << typeName << " - " << minimalLethalDamage << " - [";
-                for each (double sel in minDamageThreshold)
+                for (double & sel : minDamageThreshold)
                 {
                     stream << sel << " -";
                 }
                 stream << "] - [";
-                for each (double sel in amountOfInjuresOnDamage)
+                for (double & sel : amountOfInjuresOnDamage)
                 {
                     stream << sel << " -";
                 }
@@ -167,13 +168,13 @@ namespace ace {
                 std::stringstream stream;
 
                 stream << "ADDED: " <<  ID << " - " << className << " - [";
-                for each (std::string sel in allowedSelections)
+                for (std::string & sel : allowedSelections)
                 {
                     stream << sel << " -";
                 }
                 stream << "] - ";
                 stream << bloodLoss << " - " << pain << " - " << minDamage << " - " << maxDamage;
-                for each (std::string sel in possibleCauses)
+                for (std::string & sel : possibleCauses)
                 {
                     stream << sel << " -";
                 }
@@ -186,11 +187,11 @@ namespace ace {
         void handleDamage::FinalizeDefinitions()
         {
             // We are finding all possible injuries for a specific damage type here, so we don't have to figure that out at a later stage.
-            for each (std::shared_ptr<ace::medical::injuries::DamageType> damageType in damageTypes)
+            for (auto & damageType : damageTypes)
             {
-                for each (std::shared_ptr<ace::medical::injuries::InjuryType> injuryType in injuryTypes)
+                for (auto & injuryType : injuryTypes)
                 {
-                    std::vector<std::string>::iterator it = find(injuryType->causes.begin(), injuryType->causes.end(), damageType->typeName);
+                    std::vector<std::string>::iterator it = std::find(injuryType->causes.begin(), injuryType->causes.end(), damageType->typeName);
                     // outputstream << " Evaluating causes: " << (it != injuryType->causes.end()) << " ";
                     if (it != injuryType->causes.end())
                     {

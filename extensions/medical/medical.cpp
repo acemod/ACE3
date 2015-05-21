@@ -5,7 +5,7 @@
 * Glowbal
 */
 
-#include "ace_common.h"
+#include "shared.hpp"
 #include <vector>
 #include <string>
 #include <sstream>
@@ -13,7 +13,7 @@
 #include "OpenWound.h"
 
 extern "C" {
-    __declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
+    EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
 };
 
 std::vector<std::string> parseExtensionInput(const std::string& input)
