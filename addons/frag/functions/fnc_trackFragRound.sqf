@@ -1,19 +1,19 @@
 //fnc_trackFragRound.sqf
 #include "script_component.hpp"
-private ["_params", "_round", "_lastPos", "_lastVel", "_type", "_time", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
+private ["_params", "_round", "_lastPos", "_lastVel", "_type", "_firedFrame", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
 _params = _this select 0;
 _round = _params select 0;
 _lastPos = _params select 1;
 _lastVel = _params select 2;
 _type = _params select 3;
-_time = _params select 4;
+_firedFrame = _params select 4;
 _doSpall = _params select 6;
 _spallTrack = _params select 7;
 _foundObjectHPIds = _params select 8;
 
 if (!alive _round) then {
     [_this select 1] call cba_fnc_removePerFrameHandler;
-    if(_time != time && {_round in GVAR(trackedObjects)} && {!(_round in GVAR(blackList))}) then {
+    if(((diag_frameno - _firedFrame) > 1) && {_round in GVAR(trackedObjects)} && {!(_round in GVAR(blackList))}) then {
         GVAR(trackedObjects) = GVAR(trackedObjects) - [_round];
         _skip = getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(skip));
         if(_skip == 0) then {
@@ -43,7 +43,7 @@ if (!alive _round) then {
             GVAR(blackList) = GVAR(blackList) - [_round];
         };
     };
-    
+
     _params set[1, (getPosASL _round)];
     _params set[2, (velocity _round)];
     if(_doSpall) then {
