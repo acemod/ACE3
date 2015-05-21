@@ -10,9 +10,9 @@
 
 #include "script_component.hpp"
 
-private ["_array", "_elements", "_elementN", "_indexes", "_theElement", "_tmp", "_tempIndex", "_j", "_i", "_returnArray"];
-_array = _this select 0;
-_elementN = _this select 1;
+private ["_elements","_indexes", "_theElement", "_tmp", "_tempIndex", "_j", "_i", "_returnArray"];
+
+PARAMS_2(_array,_elementN);
 
 _indexes = [];
 _elements = [];
@@ -21,7 +21,7 @@ _elements = [];
     _theElement = toArray (_x select _elementN);
     _indexes pushback _foreachIndex;
     _elements pushback _theElement;
-}foreach _array;
+} forEach _array;
 
 for "_i" from 1 to (count _elements) - 1 do {
     _tmp = _elements select _i;
@@ -39,6 +39,6 @@ for "_i" from 1 to (count _elements) - 1 do {
 _returnArray = [];
 {
     _returnArray pushback (_array select _x);
-}foreach _indexes;
+} forEach _indexes;
 
 _returnArray;

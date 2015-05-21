@@ -10,12 +10,12 @@
  * Nothing
  */
 #include "script_component.hpp"
-private ["_eventName", "_eventNames", "_eventFunctions", "_eventIndex"];
-_eventName = _this select 0;
+private ["_eventNames", "_eventFunctions", "_eventIndex"];
+PARAMS_1(_eventName);
 
 _eventNames = GVAR(events) select 0;
 _eventFunctions = [];
 _eventIndex = _eventNames find _eventName;
-if(_eventIndex != -1) then {
-    (GVAR(events) select 1) set[_eventIndex, []];
+if (_eventIndex != -1) then {
+    (GVAR(events) select 1) set [_eventIndex, []];
 };

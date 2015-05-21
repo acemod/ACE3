@@ -12,10 +12,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_reason"];
-
-_unit = _this select 0;
-_reason = _this select 1;
+PARAMS_2(_unit,_reason);
 
 if (isNull _unit) exitWith {};
 

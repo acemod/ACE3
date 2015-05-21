@@ -1,6 +1,8 @@
 // by commy2
 #include "script_component.hpp"
 
+//IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
+
 ADDON = false;
 
 // ACE Common Function
@@ -170,7 +172,6 @@ PREP(sortAlphabeticallyBy);
 PREP(stringCompare);
 PREP(stringToColoredText);
 PREP(stringRemoveWhiteSpace);
-PREP(subString);
 PREP(switchToGroupSide);
 PREP(throttledPublicVariable);
 PREP(toBin);
@@ -183,6 +184,7 @@ PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
+PREP(waveHeightAt);
 
 PREP(translateToWeaponSpace);
 PREP(translateToModelSpace);
@@ -301,6 +303,7 @@ if (hasInterface) then {
     // PFH to update the ACE_player variable
     [{
         if !(ACE_player isEqualTo (call FUNC(player))) then {
+            private ["_oldPlayer"];
             _oldPlayer = ACE_player;
 
             ACE_player = call FUNC(player);

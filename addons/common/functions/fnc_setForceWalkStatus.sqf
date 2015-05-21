@@ -20,11 +20,9 @@ Example:
 */
 #include "script_component.hpp"
 
-private ["_unit", "_reason", "_status", "_forceWalkReasons", "_unitForceWalkReasons", "_forceWalkReasonsBooleans", "_bitmaskNumber"];
+private ["_forceWalkReasons", "_unitForceWalkReasons", "_forceWalkReasonsBooleans", "_bitmaskNumber"];
 
-_unit = _this select 0;
-_reason = _this select 1;
-_status = _this select 2;
+PARAMS_3(_unit,_reason,_status);
 
 _forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
 

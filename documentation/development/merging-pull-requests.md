@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Merging Pull Requests
+description: 
 group: development
 parent: wiki
 order: 5

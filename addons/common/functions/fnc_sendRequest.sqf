@@ -10,12 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_requestMessage", "_requestID", "_callBack"];
-_caller = _this select 0;
-_target = _this select 1;
-_requestID = _this select 2;
-_requestMessage = _this select 3;
-_callBack = _this select 4;
+PARAMS_5(_caller,_target,_requestID,_requestMessage,_callBack);
 
 if (isPlayer _target) then {
     // Pass request on to target locality for player accept/decline.

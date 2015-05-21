@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_tourniquet", "ACE_morphine", "ACE_atropine", "ACE_epinephrine", "ACE_plasmaIV", "ACE_plasmaIV_500", "ACE_plasmaIV_250", "ACE_bloodIV", "ACE_bloodIV_500", "ACE_bloodIV_250", "ACE_salineIV", "ACE_salineIV_500", "ACE_salineIV_250", "ACE_quikclot", "ACE_personalAidKit", "ACE_surgicalKit", "ACE_bodyBag"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction","ace_modules", "ace_apl"};
-        author[] = {"Glowbal", "KoffienFlummi"};
+        author[] = {"Glowbal", "KoffeinFlummi"};
         authorUrl = "";
         VERSION_CONFIG;
     };

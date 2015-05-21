@@ -17,7 +17,9 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_5_PVT(_this,_params,_function,_namespace,_uid,_duration);
+PARAMS_5(_params,_function,_namespace,_uid,_duration);
+
+//IGNORE_PRIVATE_WARNING("_eventName");
 
 if (((_namespace getVariable [_uid, [-99999]]) select 0) < diag_tickTime) then {
     _namespace setVariable [_uid, [diag_tickTime + _duration, _params call _function]];

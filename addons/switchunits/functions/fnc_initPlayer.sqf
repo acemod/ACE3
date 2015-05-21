@@ -17,8 +17,6 @@
 
 #include "script_component.hpp"
 
-private ["_playerUnit", "_sides"];
-
 PARAMS_2(_playerUnit,_sides);
 
 if (vehicle _playerUnit == _playerUnit) then {

@@ -1,53 +1,57 @@
 ---
 layout: wiki
 title: Modules
+description: A list of all modules in ACE3 and all the settings that can be tweaked by them
 group: missionmaker
 order: 5
 parent: wiki
 ---
 
-## 1. ACE
+## 1. ACE3
 ### 1.1 Advanced Ballistics
 *Part of: ace_advanced_ballistics*
 
-This module allows to enable advanced external- and internal ballistics.
+This module allows enabling and configuring advanced ballistic simulations.
 
 **Settings:**
 
 1. **Advanced Ballistics (Boolean)**<br>
 Enables advanced ballistics.<br>
 `Default value: No`
-2. **Always Enabled For Snipers (Boolean)**<br>
-Always enables advanced ballistics when high power optics are used.<br>
+2. **Enabled For Snipers (Boolean)**<br>
+Enables advanced ballistics for non local snipers (when using high power optics).<br>
 `Default value: Yes`
-3. **Disabled In FullAuto Mode (Boolean)**<br>
+3. **Enabled For Group Members (Boolean)**<br>
+Enables advanced ballistics for non local group members.<br>
+`Default value: No`
+4. **Enabled For Everyone (Boolean)**<br>
+Enables advanced ballistics for all non local players (enabling this feature may degrade performance during heavy firefights in multiplayer).<br>
+`Default value: No`
+5. **Disabled In FullAuto Mode (Boolean)**<br>
 Disables the advanced ballistics during full auto fire.<br>
 `Default value: No`
-4. **Disabled For Non Local Players (Boolean)**<br>
-Disables the advanced ballistics for bullets coming from other players (enable this if you encounter frame drops during heavy firefights in multiplayer).<br>
-`Default value: Yes`
-5. **Enable Ammo Temperature Simulation (Boolean)**<br>
+6. **Enable Ammo Temperature Simulation (Boolean)**<br>
 Muzzle velocity varies with ammo temperature.<br>
 `Default value: Yes`
-6. **Enable Barrel Length Simulation (Boolean)**<br>
+7. **Enable Barrel Length Simulation (Boolean)**<br>
 Muzzle velocity varies with barrel length.<br>
 `Default value: Yes`
-7. **Enable Bullet Trace Effect (Boolean)**<br>
+8. **Enable Bullet Trace Effect (Boolean)**<br>
 Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics).<br>
-8. **Simulation Interval (Number)**<br>
+9. **Simulation Interval (Number)**<br>
 Defines the interval between every calculation step.<br>
 `Default value: 0.05`
-9. **Simulation Radius (Number)**<br>
+10. **Simulation Radius (Number)**<br>
 Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles.<br>
 `Default value: 3000`
 
 ### 1.2 Allow Config Export
 *Part of: ace_Optionmenu*
 
-This modules allows to export all current ACE settings from the ACE Option menu to the clipboard and RPT file.
+This modules allows to export all current ACE3 settings from the ACE3 Option menu to the clipboard and RPT file.
 
 1. **Allow (Boolean)**<br>
-Enables the "export" button in the ACE Option menu<br>
+Enables the "export" button in the ACE3 Option menu<br>
 `Default value: Yes`
 
 ### 1.3 BlueForceTracking
@@ -67,7 +71,7 @@ Hide markers for "AI only" groups.<br>
 ### 1.4 Check PBOs
 *Part of: ace_common*
 
-If you are worried that players haven't updated ACE or other mods to the version you're using on the server, you can place the "Check PBOs" module on your map. You can choose one of three posible actions that are being executed when a player joins that has a wrong version of ACE or an other mod:
+If you are worried that players haven't updated ACE3 or other mods to the version you're using on the server, you can place the "Check PBOs" module on your map. You can choose one of three posible actions that are being executed when a player joins that has a wrong version of ACE3 or an other mod:
 
 * Warn once
 * Warn permanent
@@ -80,7 +84,7 @@ What to do with people who do not have the right PBOs.<br>
 `Default value: "Warn once"`
 
 2. **Check all addons (Boolean)**<br>
-Check all addons instead of only those of ACE?<br>
+Check all addons instead of only those of ACE3?<br>
 `Default value: "No"`
 
 3. **Whitelist**<br>
@@ -106,7 +110,7 @@ Example 3: @JSRS + @Blastcore-A3:<br>
 ### 1.5 Explosive System
 *Part of: ace_explosive*
 
-The "Explosive System" module lets you tweak the settings for the new explosive system that ACE introduces.
+The "Explosive System" module lets you tweak the settings for the new explosive system that ACE3 introduces.
 
 **Settings:**
 
@@ -235,7 +239,7 @@ This module enables Mission Makers to specificly enable units to move a rallypoi
     <p>It's important to mention that this doesn't work for player who join during a mission (JIP = Join in progress). That's something we can't change because that's the way Bohemia has implemented their module framework.</p>
 </div>
 
-To enable JIP players to move rally points have a look at [ACE Rallypoints (to be done)](#).
+To enable JIP players to move rally points have a look at [ACE3 Rallypoints](./mission-tools.html#1.-ace-rallypoints).
 
 
 ### 1.15 Respawn System
@@ -252,7 +256,7 @@ Respawn with the gear a player had just before his death.<br>
 ### 1.16 SwitchUnits System
 *Part of: ace_switchunits*
 
-The [SwitchUnits System (to be done)](#) enables players to control certain AI units on the map. 
+The [SwitchUnits System](./mission-tools.html#2.-ace-switchunits) enables players to control certain AI units on the map. 
 
 **Settings:**
 
@@ -279,10 +283,13 @@ The safe zone around players from a different team (in meters)<br>
 ### 1.17 Vehicle Lock
 *Part of: ace_vehiclelock*
 
-#### 1.17.1 Vehicle Key Assign
-Sync with vehicles and players.  Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.
+These modules allow you to lock and unlock vehicles and their inventory using a key. Players don't receive a key automatically; for key names, see [Classnames Wiki](http://ace3mod.com/wiki/missionmaker/classnames.html#vehicle-lock).
 
-#### 1.17.2 Vehicle Lock Setup
+#### 1.17.1 Vehicle Key Assign
+Sync with vehicles and players. Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.  
+Example: `[bob, car1, true] call ACE_VehicleLock_fnc_addKeyForVehicle;` - will add a key to bob and program it to work only on car1
+
+#### 1.17.2.1 Vehicle Lock Setup
 Settings for lockpick strength and initial vehicle lock state. Removes ambiguous lock states.
 
 **Settings:**
@@ -297,20 +304,38 @@ Set lock state for all vehicles (removes ambiguous lock states)<br>
 Default Time to lockpick (in seconds)<br>
 `Default value: 10`
 
+#### 1.17.2.2 Vehicle setVariables
+* `ACE_VehicleLock_lockSide` - SIDE: overrides a vehicle's side, allowing locking and unlocking using a different side's key. For example: Unlocking INDEP vehicles with a BLUFOR key.
+* `ACE_vehicleLock_lockpickStrength` - NUMBER: seconds, determines how long lockpicking with take, overrides the value set in the module for a specific vehicle of the mission maker's choice.
+
 
 ### 1.18 Weather
 *Part of: ace_weather*
 
 This module allows you to customize the weather settings.
 
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>ACE3 Weather overrides weather settings (editor, mission settings) and automatically calculates wind, temperature and pressure according to map location, date, time of day and cloud coverage and allows the weather to evolve realistically as the simulation progresses. Weather synchronization occurs between all clients. <br>Adjustment of the weather is possible by modifying the <code>overcast</code> value (for example: <code>0.7</code> may result in intermittent rain).</p>
+</div>
+
+
 **Settings:**
 
 1. **Weather propagation (Boolean)**<br>
 Enables sever side weather propagation.<br>
 `Default value: Yes`
-2. **ACE Weather (Boolean)**<br>
-Overrides the default weather (editor, mission settings) with ACE weather (map based).<br>
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>This is responsible for synchronizing weather between all clients. Disabling it is <b>not</b> recommended.</p>
+</div>
+2. **ACE3 Weather (Boolean)**<br>
+Overrides the default weather with ACE3 weather (map based).<br>
 `Default value: Yes`
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>This can be disabled without affecting the weather propagation above. Useful if you prefer changing weather settings manually.</p>
+</div>
 3. **Sync Rain (Boolean)**<br>
 Synchronizes rain.<br>
 `Default value: Yes`
@@ -331,7 +356,12 @@ This module allows you to define when wind deflection is active.
 
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>Wind Deflection doesn't work in combination with Advanced Ballistics. If the Advanced Ballistics module is placed Wind deflection will exit and won't trigger.</p>
+    <p>Wind Deflection is compatible with Advanced Ballistics and allows the following combinations:
+    <ul>
+  <li>Only wind deflection</li>
+  <li>Only advanced ballistics</li>
+  <li>Combined wind deflection + advanced ballistics</li>
+</ul></p>
 </div>
 
 **Settings:**
@@ -358,7 +388,7 @@ And then there's the "LSD Vehicles" module &hellip; it does 'something' to all v
     <iframe src="https://www.youtube.com/embed/X3e0LTexEok" frameborder="0" allowfullscreen></iframe>
 </div>
 
-## 2. ACE Medical
+## 2. ACE3 Medical
 *Part of: ace_medical*
 
 ### 2.1 Medical Settings
@@ -496,30 +526,37 @@ Whether or not the objects in the list will be a medical vehicle.<br>
 `Default value: Yes`
 
 
-## 3. ACE Mission Modules
+## 3. ACE3 Mission Modules
 *Part of: ace_missionmodules*
 
 ### 3.1 Ambiance Sounds
 
-Used for ambiance sounds loop (synced across MP)
+Used for ambiance sounds loop (synced across MP). 
+
+This module randomizes the time when the sound file is played and the position where the sound file is played (If "Follow Players" is set to No).
+`Minimal Distance` and `Maximal Distance` influence the position from where the sound file is played. Setting both values to 0 forces the module to play the sound from where it was placed in the editor.
+`Minimal Delay` and `Maximal Delay` work in a similar fashion but are used to randomize when the sound file is played. Setting both values to 0 plays the sound from mission start.
 
 **Settings:**
 
 1. **Sounds (String)**<br>
-Class names of the ambiance sounds played. Separated by ','.<br>
+Class names of the ambiance sounds played. Separated by ','. (Example: `radio_track_01, electricity_loop`).<br>
 `Default value: ""`
 2. **Minimal Distance (Number)**<br>
-Minimal Distance (in meters)<br>
+Used for calculating a random position and sets the minimal distance between the players and the played sound file(s) (in meters)<br>
 `Default value: 400`
-3. **Minimal Delay (Number)**<br>
-Minimal Delay (in seconds) between sounds played<br>
+3. **Maximum Distance (Number)**<br>
+Used for calculating a random position and sets the maximum distance between the players and the played sound file(s) (in meters)<br>
+`Default value: 900`
+4. **Minimal Delay (Number)**<br>
+Minimal delay (in seconds) between sounds played<br>
 `Default value: 10`
-4. **Maximal Delay (Number)**<br>
-Maximal Delay (in seconds) between sounds played<br>
+5. **Maximum Delay (Number)**<br>
+Maximum delay (in seconds) between sounds played<br>
 `Default value: 10`
-5. **Follow Players (Boolean)**<br>
+6. **Follow Players (Boolean)**<br>
 Follow players. If set to false, loop will play sounds only nearby logic position.<br>
 `Default value: No`
-6. **Volume (Number)**<br>
+7. **Volume (Number)**<br>
 The volume of the sounds played<br>
 `Default value: 1`

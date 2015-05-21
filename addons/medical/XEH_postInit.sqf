@@ -155,22 +155,24 @@ GVAR(lastHeartBeatSound) = time;
 
 // HEARTRATE BASED EFFECTS
 [{
-    private["_heartRate", "_interval", "_minTime", "_sound", "_strength"];
+    private["_heartRate", "_interval", "_minTime", "_sound", "_strength", "_pain"];
     _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
+    _pain = ACE_player getVariable [QGVAR(pain), 0];
     if (GVAR(level) == 1) then {
-        _heartRate = 60 + 40 * (ACE_player getVariable [QGVAR(pain), 0]);
+        _heartRate = 60 + 40 * _pain;
     };
     if (_heartRate <= 0) exitwith {};
     _interval = 60 / (_heartRate min 50);
+
     if (time > GVAR(lastHeartBeat) + _interval) then {
         GVAR(lastHeartBeat) = time;
 
         // Pain effect
-        _strength = ACE_player getVariable [QGVAR(pain), 0];
+        _strength = (_pain - (ACE_player getvariable [QGVAR(painSuppress), 0])) max 0;
         _strength = _strength * (ACE_player getVariable [QGVAR(painCoefficient), GVAR(painCoefficient)]);
         if (GVAR(painEffectType) == 1) then {
             GVAR(effectPainCC) ppEffectEnable false;
-            if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
+            if (_pain > (ACE_player getvariable [QGVAR(painSuppress), 0]) && {alive ACE_player}) then {
                 _strength = _strength * 0.15;
                 GVAR(effectPainCA) ppEffectEnable true;
                 GVAR(effectPainCA) ppEffectAdjust [_strength, _strength, false];
@@ -192,7 +194,7 @@ GVAR(lastHeartBeatSound) = time;
             };
         } else {
             GVAR(effectPainCA) ppEffectEnable false;
-            if ((ACE_player getVariable [QGVAR(pain), 0]) > 0 && {alive ACE_player}) then {
+            if (_pain > (ACE_player getvariable [QGVAR(painSuppress), 0]) && {alive ACE_player}) then {
                 _strength = _strength * 0.9;
                 GVAR(effectPainCC) ppEffectEnable true;
                 GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - _strength,1 - _strength,0,0,0,0.2,2]];
@@ -250,7 +252,7 @@ if (USE_WOUND_EVENT_SYNC) then {
 
 [
     {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 65)},
-    {(((_this select 0) getvariable [QGVAR(pain), 0]) > 0.9)},
+    {(((_this select 0) getvariable [QGVAR(pain), 0] - ((_this select 0) getvariable [QGVAR(painSuppress), 0])) > 0.9)},
     {(([_this select 0] call FUNC(getBloodLoss)) > 0.25)},
     {((_this select 0) getvariable [QGVAR(inReviveState), false])},
     {((_this select 0) getvariable [QGVAR(inCardiacArrest), false])},
@@ -274,5 +276,5 @@ if (hasInterface) then {
     ["PlayerJip", {
         diag_log format["[ACE] JIP Medical init for player"];
         [player] call FUNC(init);
-    }] call FUNC(addEventHandler);
+    }] call EFUNC(common,addEventHandler);
 };
