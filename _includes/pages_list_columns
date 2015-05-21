@@ -1,0 +1,24 @@
+{% assign x = 0 %}
+{% for node in pages_list_columns %}
+    {% if group == null or group == node.group  %}
+
+        {% assign x = x | plus: 1 %}
+        {{x}}
+
+        {% if x | modulo:3 == "0" %}
+            {{x | modulo:3}}
+        {% endif %}
+
+        {% if page.url == node.url or (page.parent != null and node.short == page.parent) %}
+            <li class="active"><a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.title}}</a></li>
+        {% else %}
+            <li><a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a></li>
+        {% endif %}
+
+
+
+    {% endif %}
+{% endfor %}
+{% assign pages_list_columns = nil %}
+{% assign group = nil %}
+{% assign x = nil %}
