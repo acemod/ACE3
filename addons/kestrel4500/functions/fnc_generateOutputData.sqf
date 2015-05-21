@@ -159,10 +159,10 @@ if (GVAR(referenceHeadingMenu) == 0) then {
         case 4: { // HEADWIND
             if (!GVAR(MinAvgMax)) then {
                 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-                    _textCenterBig = Str(round(abs(cos(GVAR(RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
+                    _textCenterBig = Str(round(cos(GVAR(RefHeading) - _playerDir) * _windSpeed * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round((abs(cos(_playerDir - _windDir)) * _windSpeed) * 10) / 10, round(_playerDir)];
                 } else {
-                    _textCenterBig = Str(round(abs(cos(GVAR(RefHeading)) * _windSpeed) * 10) / 10);
+                    _textCenterBig = Str(round(cos(GVAR(RefHeading)) * _windSpeed * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_windDir)];
                 };
                 _textInfoLine2 = "- set heading";
