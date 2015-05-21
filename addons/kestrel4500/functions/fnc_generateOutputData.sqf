@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-if (diag_tickTime - GVAR(headingSetDisplayTimer) < 0.8) exitWith {["", "", "  Heading Set", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]};
+if (ACE_diagTime - GVAR(headingSetDisplayTimer) < 0.8) exitWith {["", "", "  Heading Set", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]};
 
 private ["_playerDir", "_playerAltitude", "_temperature", "_humidity", "_barometricPressure", "_chill", "_heatIndex", "_dewPoint", "_wetBulb", "_fnc_dayOfWeek", "_dayString", "_monthString", "_windSpeed", "_windDir", "_textTop", "_textCenterBig", "_textCenter", "_textCenterLine1Left", "_textCenterLine2Left", "_textCenterLine3Left", "_textCenterLine1Right", "_textCenterLine2Right", "_textCenterLine3Right", "_textInfoLine1", "_textInfoLine2", "_textBottomBig", "_textCenterLine1", "_textCenterLine2", "_textCenterLine3", "_textCenterLine4", "_textCenterLine5", "_textCenterLine6"];
 

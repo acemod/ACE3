@@ -60,7 +60,7 @@ private ["_movingAzimuth", "_posTarget", "_velocityTarget"];
 
 // MOVING TARGETS
 _movingAzimuth = 0;
-if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
+if (ACE_time - GVAR(ACE_time) > 1 and GVAR(ACE_time) != -1 and count _this < 3) then {
     // calculate speed of target
     _posTarget = [
         (getPos _vehicle select 0) + _distance * (_weaponDirection select 0),
@@ -68,14 +68,14 @@ if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
         (getPos _vehicle select 2) + _distance * (_weaponDirection select 2)
     ];
     _velocityTarget = [
-        ((_posTarget select 0) - (GVAR(position) select 0)) / (time - GVAR(time)),
-        ((_posTarget select 1) - (GVAR(position) select 1)) / (time - GVAR(time)),
-        ((_posTarget select 2) - (GVAR(position) select 2)) / (time - GVAR(time))
+        ((_posTarget select 0) - (GVAR(position) select 0)) / (ACE_time - GVAR(ACE_time)),
+        ((_posTarget select 1) - (GVAR(position) select 1)) / (ACE_time - GVAR(ACE_time)),
+        ((_posTarget select 2) - (GVAR(position) select 2)) / (ACE_time - GVAR(ACE_time))
     ];
 
     private ["_magazineType", "_ammoType", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_initSpeedCoef", "_velocityMagnitude"];
 
-    // estimate time to target
+    // estimate ACE_time to target
     _magazineType = _vehicle currentMagazineTurret _turret;
     _ammoType       = getText   (configFile >> "CfgMagazines" >> _magazineType >> "ammo");
     _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _magazineType >> "initSpeed");
@@ -130,7 +130,7 @@ if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
     };
 };
 GVAR(enabled) = false;
-GVAR(time) = -1;
+GVAR(ACE_time) = -1;
 
 private ["_viewDiff", "_FCSAzimuth", "_FCSMagazines", "_FCSElevation"];
 

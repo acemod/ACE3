@@ -20,7 +20,7 @@ _currentShooter = (vehicle ACE_player);
 _args = uiNamespace getVariable[QGVAR(arguments), [] ];
 if( (count _args) > 0) then {
     _lastTick = _args select 0;
-    if(diag_tickTime - _lastTick > 1) then {
+    if(ACE_diagTime - _lastTick > 1) then {
         [] call FUNC(onOpticLoad);
     };
 };
@@ -170,12 +170,12 @@ if (isNull _newTarget) then {
         // Lock on after 3 seconds
          if(_currentTarget != _newTarget) then {
             TRACE_1("New Target, reseting locking", _newTarget);
-            _lockTime = diag_tickTime;
+            _lockTime = ACE_diagTime;
             _currentTarget = _newTarget;
             
             playSound "ACE_Javelin_Locking";
         } else {
-            if(diag_tickTime - _lockTime > __LOCKONTIME + _randomLockInterval) then {
+            if(ACE_diagTime - _lockTime > __LOCKONTIME + _randomLockInterval) then {
                 TRACE_2("LOCKED!", _currentTarget, _lockTime);
                 
                 __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
@@ -217,9 +217,9 @@ if (isNull _newTarget) then {
                 // Allow fire
                 _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
                 
-                if(diag_tickTime > _soundTime) then {
+                if(ACE_diagTime > _soundTime) then {
                     playSound "ACE_Javelin_Locked";
-                    _soundTime = diag_tickTime + 0.25;
+                    _soundTime = ACE_diagTime + 0.25;
                 };
             } else {
                 __JavelinIGUITargeting ctrlShow true;
@@ -251,9 +251,9 @@ if (isNull _newTarget) then {
                 
                 {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
 
-                if(diag_tickTime > _soundTime) then {
+                if(ACE_diagTime > _soundTime) then {
                     playSound "ACE_Javelin_Locking";
-                    _soundTime = diag_tickTime + 0.25;
+                    _soundTime = ACE_diagTime + 0.25;
                 };
                 // Disallow fire
                _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
@@ -280,7 +280,7 @@ if (isNull _newTarget) then {
 //TRACE_2("", _newTarget, _currentTarget);
 
 // Save arguments for next run
-_args set[0, diag_tickTime];
+_args set[0, ACE_diagTime];
 _args set[1, _currentTarget];
 _args set[2, _runTime];
 _args set[3, _lockTime];

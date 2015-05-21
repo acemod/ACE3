@@ -48,7 +48,7 @@ if (GVAR(level) < 2) then {
 } else {
     if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {
         // Because of the config changes, we cannot properly disable the medical system for a unit.
-        // lets use basic for the time being..
+        // lets use basic for the ACE_time being..
         _damageReturn = _this call FUNC(handleDamage_basic);
     };
     _newDamage = _this call FUNC(handleDamage_caching);

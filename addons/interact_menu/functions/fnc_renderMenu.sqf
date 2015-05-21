@@ -102,8 +102,8 @@ if (GVAR(UseListMenu)) then {
 
 // Animate menu scale
 if (_menuInSelectedPath && (_menuDepth == count _path)) then {
-    _scaleX = _scaleX * (0.3 + 0.7 * (((diag_tickTime - GVAR(expandedTime)) * 8) min 1));
-    _scaleY = _scaleY * (0.3 + 0.7 * (((diag_tickTime - GVAR(expandedTime)) * 8) min 1));
+    _scaleX = _scaleX * (0.3 + 0.7 * (((ACE_diagTime - GVAR(expandedTime)) * 8) min 1));
+    _scaleY = _scaleY * (0.3 + 0.7 * (((ACE_diagTime - GVAR(expandedTime)) * 8) min 1));
 };
 
 _target = _actionObject;
