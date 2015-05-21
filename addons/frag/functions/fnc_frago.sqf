@@ -106,8 +106,9 @@ _fragArcs set[360, 0];
     ACE_player sideChat format["_fragRange: %1", _fragRange];
     ACE_player sideChat format["_objects: %1", _objects];
 #endif
-_doRandom = false;
+_doRandom = true;
 if(_isArmed && (count _objects) > 0) then {
+    [_lastPos, _shellType] call FUNC(doReflections);
     {
         //if(random(1) > 0.5) then {
             _target = _x;
@@ -162,11 +163,8 @@ if(_isArmed && (count _objects) > 0) then {
                             _fragObj setPosASL _lastPos;
                             _fragObj setVectorDir _vec;
                             _fragObj setVelocity _vel;
-                            #ifdef DEBUG_MODE_FULL
-                                GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
-                                GVAR(traceFrags) = true;
-                            #endif
                             if(GVAR(traceFrags)) then {
+                                GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
                                 [ACE_player, _fragObj, [1,0,0,1]] call FUNC(addTrack);
                             };
                             _fragCount = _fragCount + 1;
@@ -180,7 +178,7 @@ if(_isArmed && (count _objects) > 0) then {
         if(_fragCount > MAX_FRAG_COUNT) exitWith {};
     } forEach _objects;
     if(_fragCount > MAX_FRAG_COUNT) exitWith {};
-    _randomCount = (ceil((MAX_FRAG_COUNT-_fragCount)*0.1)) max 0;
+    _randomCount = ((ceil((MAX_FRAG_COUNT-_fragCount)*0.1)) max 0)+20;
     _sectorSize = 360 / (_randomCount max 1);
     // _doRandom = false;
     if(_doRandom) then {
@@ -199,16 +197,15 @@ if(_isArmed && (count _objects) > 0) then {
             _fragObj setPosASL _lastPos;
             _fragObj setVectorDir _vec;
             _fragObj setVelocity _vel;
-            #ifdef DEBUG_MODE_FULL
-                GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
-                GVAR(traceFrags) = true;
-            #endif
+            
             if(GVAR(traceFrags)) then {
+                GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
                 [ACE_player, _fragObj, [1,0.5,0,1]] call FUNC(addTrack);
             };
             _fragCount = _fragCount + 1;
         };
     };
+    
 };
 // #ifdef DEBUG_MODE_FULL
     // ACE_player sideChat format["total frags: %1", GVAR(TOTALFRAGS)];
