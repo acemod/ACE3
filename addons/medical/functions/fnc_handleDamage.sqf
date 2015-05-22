@@ -87,15 +87,6 @@ if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitW
         [_unit] call EFUNC(common,unloadPerson);
     };
 
-    if (_damageReturn >= 0.9 && {_selection in ["", "head", "body"]}) exitWith {
-        systemChat format["Lethal damage %1 ", _unit];
-        if (_unit getvariable ["ACE_isUnconscious", false]) exitwith {
-            [_unit] call FUNC(setDead);
-            0.89
-        };
-        [{
-            [_this select 0, true] call FUNC(setUnconscious);
-        }, [_unit]] call EFUNC(common,execNextFrame);
     private "_delayedUnconsicous";
     _delayedUnconsicous = false;
     if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
