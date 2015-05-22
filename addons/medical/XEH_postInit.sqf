@@ -252,7 +252,7 @@ if (USE_WOUND_EVENT_SYNC) then {
 
 [
     {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 65)},
-    {(((_this select 0) getvariable [QGVAR(pain), 0] - ((_this select 0) getvariable [QGVAR(painSuppress), 0])) > 0.9)},
+    {(((_this select 0) getvariable [QGVAR(pain), 0]) - ((_this select 0) getvariable [QGVAR(painSuppress), 0])) > 0.9},
     {(([_this select 0] call FUNC(getBloodLoss)) > 0.25)},
     {((_this select 0) getvariable [QGVAR(inReviveState), false])},
     {((_this select 0) getvariable [QGVAR(inCardiacArrest), false])},
