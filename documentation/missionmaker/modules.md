@@ -583,5 +583,5 @@ Play wind sounds when Zeus remote controls a unit<br>
 Play a radio warning when Zeus uses ordnance<br>
 `Default value: No`
 5. **Reveal Mines (Scalar)**<br>
-Should PAK be removed on usage?<br>
+Reveal mines to allies and/or place map markers<br>
 `Default value: Disabled`
