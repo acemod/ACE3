@@ -55,6 +55,7 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
+project = "@ace"
 ACE_VERSION = "3.0.0"
 arma3tools_path = ""
 work_drive = ""
@@ -69,6 +70,7 @@ dssignfile = ""
 prefix = "ace"
 pbo_name_prefix = "ace_"
 signature_blacklist = ["ace_server.pbo"]
+importantFiles = ["mod.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa"]
 
 ###############################################################################
 # http://akiscode.com/articles/sha-1directoryhash.shtml
@@ -310,12 +312,6 @@ def print_yellow(msg):
 def copy_important_files(source_dir,destination_dir):
 
     originalDir = os.getcwd()
-    importantFiles = ["mod.cpp",
-    "README.md",
-    "AUTHORS.txt",
-    "LICENSE",
-    "logo_ace3_ca.paa"
-    ]
 
     #copy importantFiles
     try:
@@ -358,21 +354,21 @@ def copy_optionals_for_building(mod,pbos):
     try:
 
         #special server.pbo processing
-        files = glob.glob(os.path.join(release_dir, "@ace","optionals","*.pbo"))
+        files = glob.glob(os.path.join(release_dir, project, "optionals", "*.pbo"))
         for file in files:
             file_name = os.path.basename(file)
             #print ("Adding the following file: {}".format(file_name))
             pbos.append(file_name)
-            pbo_path = os.path.join(release_dir, "@ace","optionals",file_name)
+            pbo_path = os.path.join(release_dir, project, "optionals", file_name)
             sigFile_name = file_name +"."+ key_name + ".bisign"
-            sig_path = os.path.join(release_dir, "@ace","optionals",sigFile_name)
+            sig_path = os.path.join(release_dir, project, "optionals", sigFile_name)
             if (os.path.isfile(pbo_path)):
                 print("Moving {} for processing.".format(pbo_path))
-                shutil.move(pbo_path, os.path.join(release_dir,"@ace","addons",file_name))
+                shutil.move(pbo_path, os.path.join(release_dir, project, "addons", file_name))
 
             if (os.path.isfile(sig_path)):
                 #print("Moving {} for processing.".format(sig_path))
-                shutil.move(sig_path, os.path.join(release_dir,"@ace","addons",sigFile_name))
+                shutil.move(sig_path, os.path.join(release_dir, project, "addons", sigFile_name))
     except:
         print_error("Error in moving")
         raise
@@ -386,9 +382,9 @@ def copy_optionals_for_building(mod,pbos):
             #userconfig requires special handling since it is not a PBO source folder.
             #CfgConvert fails to build server.pbo if userconfig is not found in P:\
             if (dir_name == "userconfig"):
-                if (os.path.exists(os.path.join(release_dir, "@ace","optionals",dir_name))):
-                    shutil.rmtree(os.path.join(release_dir, "@ace","optionals",dir_name), True)
-                shutil.copytree(os.path.join(optionals_root,dir_name), os.path.join(release_dir, "@ace","optionals",dir_name))
+                if (os.path.exists(os.path.join(release_dir, project, "optionals", dir_name))):
+                    shutil.rmtree(os.path.join(release_dir, project, "optionals", dir_name), True)
+                shutil.copytree(os.path.join(optionals_root,dir_name), os.path.join(release_dir, project, "optionals", dir_name))
                 destination = os.path.join(work_drive,dir_name)
             else:
                 destination = os.path.join(module_root,dir_name)
@@ -417,13 +413,13 @@ def cleanup_optionals(mod):
             print("Cleaning {}".format(destination))
 
             try:
-                file_name = "ace_{}.pbo".format(dir_name)
-                src_file_path = os.path.join(release_dir, "@ace","addons",file_name)
-                dst_file_path = os.path.join(release_dir, "@ace","optionals",file_name)
+                file_name = pbo_name_prefix + dir_name + ".pbo"
+                src_file_path = os.path.join(release_dir, project, "addons", file_name)
+                dst_file_path = os.path.join(release_dir, project, "optionals", file_name)
 
                 sigFile_name = file_name +"."+ key_name + ".bisign"
-                src_sig_path = os.path.join(release_dir, "@ace","addons",sigFile_name)
-                dst_sig_path = os.path.join(release_dir, "@ace","optionals",sigFile_name)
+                src_sig_path = os.path.join(release_dir, project, "addons", sigFile_name)
+                dst_sig_path = os.path.join(release_dir, project, "optionals", sigFile_name)
 
                 if (os.path.isfile(src_file_path)):
                     #print("Preserving {}".format(file_name))
@@ -465,7 +461,7 @@ def build_signature_file(file_name):
 
 
 def check_for_obsolete_pbos(addonspath, file):
-    module = file[4:-4]
+    module = file[len(pbo_name_prefix):-4]
     if not os.path.exists(os.path.join(addonspath, module)):
         return True
     return False
@@ -576,7 +572,7 @@ def get_ace_version():
         input("Press Enter to continue...")
         print("Resuming build...")
 
-    print_yellow("ACE VERSION set to {}".format(versionStamp))
+    print_yellow(pbo_name_prefix.rstrip("_").upper() + " VERSION set to " + versionStamp)
     ACE_VERSION = versionStamp
     return ACE_VERSION
 
@@ -1010,12 +1006,12 @@ See the make.cfg file for additional build options.
             new_sha = get_directory_hash(os.path.join(module_root, module))
 
             # Is the pbo or sig file missing?
-            missing = not os.path.isfile(os.path.join(release_dir, project, "addons", "ace_{}.pbo".format(module)))
-            sigFile = pbo_name_prefix+module + ".pbo." + key_name + ".bisign"
-            sigMissing = not os.path.isfile(os.path.join(release_dir, project, "addons", sigFile ))
+            missing = not os.path.isfile(os.path.join(release_dir, project, "addons", pbo_name_prefix + module + ".pbo"))
+            sigFile = pbo_name_prefix + module + ".pbo." + key_name + ".bisign"
+            sigMissing = not os.path.isfile(os.path.join(release_dir, project, "addons", sigFile))
 
             if missing:
-                print_yellow("Missing PBO file ace_{}.pbo".format(module) + ". Building...")
+                print_yellow("Missing PBO file " + pbo_name_prefix + module + ".pbo. Building...")
 
             # Check if it needs rebuilt
             # print ("Hash:", new_sha)
@@ -1192,7 +1188,7 @@ See the make.cfg file for additional build options.
                         # Sign result
 
                         #print_yellow("Sig_fileName: ace_{}.pbo".format(module))
-                        if (key and not "ace_{}.pbo".format(module) in signature_blacklist) :
+                        if (key and not (pbo_name_prefix + module + ".pbo") in signature_blacklist) :
                             print("Signing with {}.".format(key))
                             if pbo_name_prefix:
                                 ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo")])
@@ -1229,7 +1225,7 @@ See the make.cfg file for additional build options.
         
 
     finally:
-        copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
+        copy_important_files(module_root_parent,os.path.join(release_dir, project))
         cleanup_optionals(optionals_modules)
 
     # Done building all modules!
