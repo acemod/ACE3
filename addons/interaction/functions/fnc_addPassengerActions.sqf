@@ -22,7 +22,7 @@ EXPLODE_1_PVT(_parameters,_unit);
 
 private ["_varName", "_actionTrees", "_actions"];
 
-_varName = format [QEGVAR(interact_menu,Act_%1), typeOf _unit];
+_varName = format [QEGVAR(interact_menu,ACE_Actions_%1), typeOf _unit];
 _actionTrees = missionNamespace getVariable [_varName, []];
 
 _actions = [];
