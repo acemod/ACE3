@@ -19,6 +19,7 @@ cba = "P:\\x\\cba"
 ##########################
 
 def main():
+    fulldir = maindir + "\\" + projectdir
     print("""
   ######################################
   # ACE3 Development Environment Setup #
@@ -33,10 +34,10 @@ def main():
   If you have not done those things yet, please abort this script in the next step and do so first.
   
   This script will create two hard links on your system, both pointing to your ACE3 project folder:
-    [Arma 3 installation directory]\\z\\ace => ACE3 project folder
-    P:\\z\\ace                              => ACE3 project folder
+    [Arma 3 installation directory]\\{} => ACE3 project folder
+    P:\\{}                              => ACE3 project folder
   
-  It will also copy the required CBA includes to P:\\x\\cba, if you do not have the CBA source code already.""")
+  It will also copy the required CBA includes to {}, if you do not have the CBA source code already.""".format(fulldir,fulldir,cba))
     print("\n") 
 
     try:
