@@ -46,7 +46,7 @@ playSound "ACE_Sound_Click";
     _phase = _house animationPhase (_animations select 0);
     _position = getPosASL ACE_player;
 
-    _time = time + 0.2;
+    _time = ACE_time + 0.2;
     _usedMouseWheel = false;
     waitUntil {
         if (inputAction "PrevAction" > 0 || {inputAction "NextAction" > 0}) then {
@@ -61,7 +61,7 @@ playSound "ACE_Sound_Click";
         !GVAR(isOpeningDoor) || {getPosASL ACE_player distance _position > 1}
     };
 
-    if (!_usedMouseWheel && {time < _time} && {[ACE_player, objNull, []] call EFUNC(common,canInteractWith)}) then {
+    if (!_usedMouseWheel && {ACE_time < _time} && {[ACE_player, objNull, []] call EFUNC(common,canInteractWith)}) then {
         _phase = [0, 1] select (_house animationPhase (_animations select 0) < 0.5);
 
         {_house animate [_x, _phase]} forEach _animations;

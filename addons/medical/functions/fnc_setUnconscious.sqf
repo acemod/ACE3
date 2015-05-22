@@ -5,7 +5,7 @@
  * Arguments:
  * 0: The unit that will be put in an unconscious state <OBJECT>
  * 1: Set unconsciouns <BOOL> <OPTIONAL>
- * 2: Minimum unconscious time <NUMBER> <OPTIONAL>
+ * 2: Minimum unconscious ACE_time <NUMBER> <OPTIONAL>
  *
  * ReturnValue:
  * nil
@@ -97,7 +97,7 @@ _anim = [_unit] call EFUNC(common,getDeathAnim);
     };
 }, [_unit, _anim], 0.5, 0] call EFUNC(common,waitAndExecute);
 
-_startingTime = time;
+_startingTime = ACE_time;
 
 [DFUNC(unconsciousPFH), 0.1, [_unit, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
 

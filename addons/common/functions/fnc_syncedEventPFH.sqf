@@ -24,7 +24,7 @@ private["_data"];
         if(typeName _globalEventTTL == "CODE") then {
             _ttlReturn = [(_data select 0),_eventEntry] call _globalEventTTL;
         } else {
-            _ttlReturn = call { _globalEventTTL < 1 || {diag_tickTime < (_eventEntry select 0) + _globalEventTTL} };
+            _ttlReturn = call { _globalEventTTL < 1 || {ACE_diagTime < (_eventEntry select 0) + _globalEventTTL} };
         };
 
         if(_ttlReturn) then {
@@ -35,7 +35,7 @@ private["_data"];
             if(typeName _eventTTL == "CODE") then {
                 _ttlReturn = [(_data select 0),_eventEntry] call _eventTTL;
             } else {
-                _ttlReturn = call { _eventTTL < 1 || {diag_tickTime < (_eventEntry select 0) + _eventTTL} };
+                _ttlReturn = call { _eventTTL < 1 || {ACE_diagTime < (_eventEntry select 0) + _eventTTL} };
             };
         };
 
