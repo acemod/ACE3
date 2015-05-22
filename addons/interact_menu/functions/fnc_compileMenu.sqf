@@ -105,52 +105,52 @@ _recurseFnc = {
 private ["_actionsCfg","_actions"];
 _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> _actionsClassName;
 
-if (_selfActions) then {
-    private ["_baseDisplayName", "_baseIcon"];
-    _baseDisplayName = "";
-    _baseIcon = "";
-    if (_objectType isKindOf "CAManBase") then {
-        _baseDisplayName = localize "STR_ACE_Interact_Menu_SelfActionsRoot";
-        _baseIcon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
-    } else {
-        _baseDisplayName = getText (configFile >> "CfgVehicles" >> _objectType >> "displayName");
-        //Alt would be to just use a static text, if veh names end up being too long:
-        // _baseDisplayName = localize "STR_ACE_Interact_Menu_VehicleActionsRoot";
-
-        //Pull the icon from the vehicle's config:
-        _baseIcon = getText (configFile >> "CfgVehicles" >> _objectType >> "Icon");
-        //icon could be a CfgVehicleIcons
-        if isText (configFile >> "CfgVehicleIcons" >> _baseIcon) then {
-            _baseIcon = getText (configFile >> "CfgVehicleIcons" >> _baseIcon);
-        };
-    };
-
-    _actions = [
-        [
-            [
-                "ACE_SelfActions",
-                _baseDisplayName,
-                _baseIcon,
-                {
-                    // Dummy statement so it's not collapsed when there's no available actions
-                    true
-                },
-                {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)},
-                {},
-                {},
-                "Spine3",
-                10,
-                [false,true,false]
-            ],
-            [_actionsCfg] call _recurseFnc
-        ]
-    ];
+// If the classname inherits from CAManBase, just copy it's menu without recompiling a new one
+if (_isMan) then {
+    _actions = (missionNamespace getVariable (format [QGVAR(%1_CAManBase), _actionsClassName]);
 } else {
-    // If the classname inherits from CAManBase, just copy it's menu without recompiling a new one
-    _actions = if (_isMan) then {
-        + (missionNamespace getVariable QGVAR(Act_CAManBase))
+    if (_selfActions) then {
+        private ["_baseDisplayName", "_baseIcon"];
+        _baseDisplayName = "";
+        _baseIcon = "";
+        if (_objectType isKindOf "CAManBase") then {
+            _baseDisplayName = localize "STR_ACE_Interact_Menu_SelfActionsRoot";
+            _baseIcon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
+        } else {
+            _baseDisplayName = getText (configFile >> "CfgVehicles" >> _objectType >> "displayName");
+            //Alt would be to just use a static text, if veh names end up being too long:
+            // _baseDisplayName = localize "STR_ACE_Interact_Menu_VehicleActionsRoot";
+
+            //Pull the icon from the vehicle's config:
+            _baseIcon = getText (configFile >> "CfgVehicles" >> _objectType >> "Icon");
+            //icon could be a CfgVehicleIcons
+            if isText (configFile >> "CfgVehicleIcons" >> _baseIcon) then {
+                _baseIcon = getText (configFile >> "CfgVehicleIcons" >> _baseIcon);
+            };
+        };
+
+        _actions = [
+            [
+                [
+                    "ACE_SelfActions",
+                    _baseDisplayName,
+                    _baseIcon,
+                    {
+                        // Dummy statement so it's not collapsed when there's no available actions
+                        true
+                    },
+                    {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)},
+                    {},
+                    {},
+                    "Spine3",
+                    10,
+                    [false,true,false]
+                ],
+                [_actionsCfg] call _recurseFnc
+            ]
+        ];
     } else {
-        [_actionsCfg] call _recurseFnc
+        _actions = [_actionsCfg] call _recurseFnc;
     };
 };
 
