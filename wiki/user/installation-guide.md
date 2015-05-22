@@ -32,7 +32,7 @@ This guide will explain how to get ACE3 up and running faster than you can say b
 ### 5.1 Steam Launch Parameters
 - Not supported with the new Arma 3 Launcher
 
-### 5.2 Arma3Sync
+### 5.2 ArmA3Sync
 - Inspect `Addon Options` and verify the `Addon Search Directories` are leading to your Arma 3 folder.
 - Return to the `Addons` tab and click `Refresh`.
 - Right-click inside `Addon Groups`, click `Create Group` and give it a name.
