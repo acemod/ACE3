@@ -23,7 +23,7 @@ private ["_res","_varName","_actionTrees", "_actionIndex", "_parentLevel", "_par
 _res = _fullPath call FUNC(splitPath);
 EXPLODE_2_PVT(_res,_parentPath,_actionName);
 
-_varName = format [[QGVAR(Act_%1), QGVAR(SelfAct_%1)] select _typeNum, _objectType];
+_varName = format [[QGVAR(ACE_Actions_%1), QGVAR(ACE_SelfActions_%1)] select _typeNum, _objectType];
 _actionTrees = missionNamespace getVariable [_varName, []];
 
 _parentNode = [_actionTrees, _parentPath] call FUNC(findActionNode);

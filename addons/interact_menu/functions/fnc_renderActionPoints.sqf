@@ -40,7 +40,7 @@ _fnc_renderNearbyActions = {
             if (_target != ACE_player && {_target != vehicle ACE_player}) then {
 
                 // Iterate through object actions, find base level actions and render them if appropiate
-                _actionsVarName = format [QGVAR(Act_%1), typeOf _target];
+                _actionsVarName = format [QGVAR(ACE_Actions_%1), typeOf _target];
                 GVAR(objectActionList) = _target getVariable [QGVAR(actions), []];
                 {
                     // Only render them directly if they are base level actions
@@ -86,7 +86,7 @@ _fnc_renderSelfActions = {
     _target = _this;
 
     // Iterate through object actions, find base level actions and render them if appropiate
-    _actionsVarName = format [QGVAR(SelfAct_%1), typeOf _target];
+    _actionsVarName = format [QGVAR(ACE_SelfActions_%1), typeOf _target];
     GVAR(objectActionList) = _target getVariable [QGVAR(selfActions), []];
     /*
     {
@@ -99,7 +99,7 @@ _fnc_renderSelfActions = {
     */
 
     // Iterate through base level class actions and render them if appropiate
-    _actionsVarName = format [QGVAR(SelfAct_%1), typeOf _target];
+    _actionsVarName = format [QGVAR(ACE_SelfActions_%1), typeOf _target];
     _classActions = missionNamespace getVariable [_actionsVarName, []];
 
     _pos = if !(GVAR(useCursorMenu)) then {
