@@ -24,6 +24,7 @@ This guide will explain how to get ACE3 up and running faster than you can say b
 ## 4. Launch Arma 3 with ACE3
 - Launch Arma 3 to start the official game Launcher.
 - Click `Mods` and make sure the checkboxes next to `ace` and `CBA_A3` are ticked.
+<img src="{{ site.baseurl }}/img/wiki/user/installation1-launcher.png" width="869" height="665" alt="Arma 3 Vanilla Launcher" />
 - Click `Play`
 
 ## 5. Alternative launch methods
@@ -36,6 +37,7 @@ This guide will explain how to get ACE3 up and running faster than you can say b
 - Return to the `Addons` tab and click `Refresh`.
 - Right-click inside `Addon Groups`, click `Create Group` and give it a name.
 - Drag and drop `@ace` and `@CBA_A3` from `Available Addons` into the new Group you created inside `Addon Groups` and make sure the checkboxes are ticked.
+<img src="{{ site.baseurl }}/img/wiki/user/installation2-a3s.png" width="529" height="222" alt="Arma3Sync Launcher" />
 - Click `Start Game`
 
 ### 5.3 Play withSIX
