@@ -48,4 +48,4 @@ window.app.toggleToc = function() {
     return false;
 };
 
-window.app.liveSearch.init();
+window.app.contentSearch.init();

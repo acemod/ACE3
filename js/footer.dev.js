@@ -4175,6 +4175,15 @@ Date.prototype.addHours = function (hours) {
     );
 };
 
+window.utils = window.utils || {};
+utils.getQueryParam = function (name) {
+    "use strict";
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+};
+
 window.app = window.app || {};
 window.app.storage = (function () {
 
@@ -4219,14 +4228,18 @@ window.app.storage = (function () {
 })();
 
 window.app = window.app || {};
-window.app.liveSearch = (function ($) {
+window.app.contentSearch = (function ($) {
 
     var searchJsonUrl = "/js/search.json";
     var storageKeyName = "searchResult";
 
-    var searchStartLength = 3;
-    var maxEntries = 10;
-    var maxDescriptionLength = 80;
+    var searchTermParamName = "searchTerm";
+
+    var _searchStartLength = 3;
+    var _maxEntriesLive = 10;
+    var _maxEntriesContent = 25;
+    var _maxDescriptionLengthLive = 80;
+    var _maxDescriptionLengthContent = 140;
 
     var _searchTerm = "";
     var _searchTermCombined = "";
@@ -4234,21 +4247,93 @@ window.app.liveSearch = (function ($) {
 
     var $liveSearch = $("#liveSearch");
 
-    var $contentSearchField = $liveSearch.find(".contentSearch-field");
-    var $contentSearchResultList = $liveSearch.find(".contentSearch-result-list");
-    var $contentSearchButton = $liveSearch.find(".contentSearch-button");
+    var $liveSearchField = $liveSearch.find(".liveSearch-field");
+    var $liveSearchResultList = $liveSearch.find(".liveSearch-result-list");
+    var $liveSearchButton = $liveSearch.find(".liveSearch-button");
 
+
+    //var $contentSearchButton = $liveSearch.find(".contentSearch-button");
+    var $contentSearchField = $liveSearch.find(".contentSearch-field");
+    var $contentSearchResultList = $(".searchPage-result-list");
 
     function init() {
-        $contentSearchField.on("keyup", handleKeyDown);
-        $contentSearchField.on("blur", function() {
-            setTimeout(hideResultList, 300);
+
+        updateSearchFieldFromQueryParams();
+
+        $liveSearchField.on("keyup", handleLiveKeyDown);
+        $liveSearchField.on("blur", function () {
+            setTimeout(hideLiveResultList, 300);
         });
-        $contentSearchButton.on("click", openSearchPage);
+        $liveSearchButton.on("click", openSearchPage);
+
+        $contentSearchField.on("keyup", handleContentKeyDown);
+        //$contentSearchButton.on("click", openSearchPage);
+
     }
 
 
-    function handleKeyDown(e) {
+
+    /*
+     ===
+     UTIL
+     ===
+     */
+
+    function findSearchTermInArray(response, maxEntries) {
+        var results = [],
+            i = 0,
+            length = response.length;
+
+        for (i; i < length; i++) {
+
+            if (results.length >= maxEntries) {
+                break;
+            }
+
+            var currentPage = response[i];
+            if (currentPage.description.toLowerCase().indexOf(_searchTerm) >= 0 || currentPage.description.toLowerCase().indexOf(_searchTermCombined) >= 0) {
+                results.push(currentPage);
+                continue;
+            }
+            if (currentPage.title.toLowerCase().indexOf(_searchTerm) >= 0 || currentPage.title.toLowerCase().indexOf(_searchTermCombined) >= 0) {
+                results.push(currentPage);
+                continue;
+            }
+            if (currentPage.group.toLowerCase().indexOf(_searchTerm) >= 0 || currentPage.group.toLowerCase().indexOf(_searchTermCombined) >= 0) {
+                results.push(currentPage);
+                continue;
+            }
+            if (currentPage.content.toLowerCase().indexOf(_searchTerm) >= 0 || currentPage.content.toLowerCase().indexOf(_searchTermCombined) >= 0) {
+                results.push(currentPage);
+            }
+        }
+        return results;
+    }
+
+    function getSearchResults() {
+        return $.getJSON(searchJsonUrl)
+    }
+
+    function searchTermValid(searchTerm) {
+        if (searchTerm === "" || searchTerm.length < _searchStartLength) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+
+
+
+
+
+    /*
+    ===
+    LIVE SEARCH
+    ===
+     */
+
+    function handleLiveKeyDown(e) {
 
         // arrow down, arrow up
         if (e.keyCode === 38 || e.keyCode === 40) {
@@ -4269,12 +4354,9 @@ window.app.liveSearch = (function ($) {
         _timeOutID = setTimeout(search, 300);
     }
 
-
-
-    function showResultList(results) {
-
+    function showLiveResultList(results) {
         if (!results) {
-            $contentSearchResultList.removeClass("hidden");
+            $liveSearchResultList.removeClass("hidden");
             return;
         }
 
@@ -4287,131 +4369,66 @@ window.app.liveSearch = (function ($) {
             var currentPage = results[i];
 
             var description = currentPage.description;
-            if (description.length > maxDescriptionLength) {
-                description = description.substr(0, maxDescriptionLength) + "&hellip;"
+            if (description.length > _maxDescriptionLengthLive) {
+                description = description.substr(0, _maxDescriptionLengthLive) + "&hellip;"
             }
 
             html += String.format("<li><a href=\"{1}\">{0}<br><small>{2}</small></a></li>", currentPage.title, currentPage.url, description);
         }
 
-        $contentSearchResultList.empty().append(html).removeClass("hidden");
+        $liveSearchResultList.empty().append(html).removeClass("hidden");
     }
 
-    function hideResultList() {
-        $contentSearchResultList.addClass("hidden");
+    function hideLiveResultList() {
+        $liveSearchResultList.addClass("hidden");
     }
-
 
     function search() {
-        var term = $contentSearchField.val();
+        var term = $liveSearchField.val();
 
         _searchTerm = term.trim().toLowerCase();
         _searchTermCombined = _searchTerm.replace(" ", "");
 
-        if (_searchTerm === "" || _searchTerm.length < searchStartLength) {
-            $contentSearchResultList.empty();
+        if (!searchTermValid(_searchTerm)) {
+            $liveSearchResultList.empty();
             return false;
         }
 
-        startSearch();
+        startLiveSearch();
     }
 
-
-    function startSearch() {
+    function startLiveSearch() {
         var cachedSearchResults = app.storage.getItem(storageKeyName);
         if (!cachedSearchResults) {
             getSearchResults().then(function (response) {
                 app.storage.setItem(storageKeyName, response);
-                handleSearchResult(response);
+                handleLiveSearchResult(response);
             });
         } else {
-            handleSearchResult(cachedSearchResults);
+            handleLiveSearchResult(cachedSearchResults);
         }
     }
 
-    function handleSearchResult(response) {
-
-        var results = [],
-            i = 0,
-            length = response.length;
-
-        for (i; i < length; i++) {
-
-            if (results.length >= maxEntries) {
-                break;
-            }
-
-            var currentPage = response[i];
-            if (currentPage.description.indexOf(_searchTerm) >= 0 || currentPage.description.indexOf(_searchTermCombined) >= 0) {
-                results.push(currentPage);
-                continue;
-            }
-            if (currentPage.title.indexOf(_searchTerm) >= 0 || currentPage.title.indexOf(_searchTermCombined) >= 0) {
-                results.push(currentPage);
-                continue;
-            }
-            if (currentPage.group.indexOf(_searchTerm) >= 0 || currentPage.group.indexOf(_searchTermCombined) >= 0) {
-                results.push(currentPage);
-                continue;
-            }
-            if (currentPage.content.indexOf(_searchTerm) >= 0 || currentPage.content.indexOf(_searchTermCombined) >= 0) {
-                results.push(currentPage);
-            }
-        }
-
-        showResultList(results);
+    function handleLiveSearchResult(response) {
+        var results = findSearchTermInArray(response, _maxEntriesLive);
+        showLiveResultList(results);
     }
-
-    function getSearchResults() {
-        return $.getJSON(searchJsonUrl)
-    }
-
 
     function openSearchPage(e) {
         e.preventDefault();
-        var searchTerm = $contentSearchField.val().trim();
-        document.location.href = "search.html?searchTerm=" + encodeURIComponent(searchTerm);
+        var searchTerm = $liveSearchField.val().trim();
+        document.location.href = String.format("search.html?{0}={1}", searchTermParamName, encodeURIComponent(searchTerm));
         return false;
     }
 
-    return {
-        init: init
-    };
 
+    /*
+     ===
+     CONTENT SEARCH
+     ===
+     */
 
-})(jQuery);
-
-window.app = window.app || {};
-window.app.liveSearch = (function ($) {
-
-    var searchJsonUrl = "/js/search.json";
-    var storageKeyName = "searchResult";
-
-    var searchStartLength = 3;
-    var maxEntries = 10;
-    var maxDescriptionLength = 80;
-
-    var _searchTerm = "";
-    var _searchTermCombined = "";
-    var _timeOutID;
-
-    var $liveSearch = $("#liveSearch");
-
-    var $contentSearchField = $liveSearch.find(".contentSearch-field");
-    var $contentSearchResultList = $liveSearch.find(".contentSearch-result-list");
-    var $contentSearchButton = $liveSearch.find(".contentSearch-button");
-
-
-    function init() {
-        $contentSearchField.on("keyup", handleKeyDown);
-        $contentSearchField.on("blur", function() {
-            setTimeout(hideResultList, 300);
-        });
-        $contentSearchButton.on("click", openSearchPage);
-    }
-
-
-    function handleKeyDown(e) {
+    function handleContentKeyDown(e) {
 
         // arrow down, arrow up
         if (e.keyCode === 38 || e.keyCode === 40) {
@@ -4423,24 +4440,54 @@ window.app.liveSearch = (function ($) {
         // enter
         if (e.keyCode === 13) {
             e.preventDefault();
-            openSearchPage(e);
+            contentSearch();
             return false;
         }
 
         // delays input and makes sure that only a complete search is sent
         clearTimeout(_timeOutID);
-        _timeOutID = setTimeout(search, 300);
+        _timeOutID = setTimeout(contentSearch, 300);
+    }
+
+    function contentSearch() {
+        var term = $contentSearchField.val();
+
+        _searchTerm = term.trim().toLowerCase();
+        _searchTermCombined = _searchTerm.replace(" ", "");
+
+        if (!searchTermValid(_searchTerm)) {
+            return false;
+        }
+        startContentSearch();
+    }
+
+    function updateSearchFieldFromQueryParams() {
+        _searchTerm = utils.getQueryParam(searchTermParamName);
+        $contentSearchField.val(_searchTerm);
+        if (searchTermValid(_searchTerm)) {
+            startContentSearch();
+        }
+    }
+
+    function startContentSearch() {
+        var cachedSearchResults = app.storage.getItem(storageKeyName);
+        if (!cachedSearchResults) {
+            getSearchResults().then(function (response) {
+                app.storage.setItem(storageKeyName, response);
+                handleContentSearchResult(response);
+            });
+        } else {
+            handleContentSearchResult(cachedSearchResults);
+        }
     }
 
 
+    function handleContentSearchResult(response) {
+        var results = findSearchTermInArray(response, _maxEntriesContent);
+        showContentResultList(results);
+    }
 
-    function showResultList(results) {
-
-        if (!results) {
-            $contentSearchResultList.removeClass("hidden");
-            return;
-        }
-
+    function showContentResultList (results) {
         var i = 0,
             length = results.length;
 
@@ -4450,91 +4497,14 @@ window.app.liveSearch = (function ($) {
             var currentPage = results[i];
 
             var description = currentPage.description;
-            if (description.length > maxDescriptionLength) {
-                description = description.substr(0, maxDescriptionLength) + "&hellip;"
+            if (description.length > _maxDescriptionLengthContent) {
+                description = description.substr(0, _maxDescriptionLengthContent) + "&hellip;"
             }
 
-            html += String.format("<li><a href=\"{1}\">{0}<br><small>{2}</small></a></li>", currentPage.title, currentPage.url, description);
+            html += String.format("<li><a href=\"{1}\">{0}</a><br><small><span class=\"url\">{3}</span><br><span class\"description\">{2}</small></small></li>", currentPage.title, currentPage.url, description, document.location.origin + currentPage.url);
         }
 
-        $contentSearchResultList.empty().append(html).removeClass("hidden");
-    }
-
-    function hideResultList() {
-        $contentSearchResultList.addClass("hidden");
-    }
-
-
-    function search() {
-        var term = $contentSearchField.val();
-
-        _searchTerm = term.trim().toLowerCase();
-        _searchTermCombined = _searchTerm.replace(" ", "");
-
-        if (_searchTerm === "" || _searchTerm.length < searchStartLength) {
-            $contentSearchResultList.empty();
-            return false;
-        }
-
-        startSearch();
-    }
-
-
-    function startSearch() {
-        var cachedSearchResults = app.storage.getItem(storageKeyName);
-        if (!cachedSearchResults) {
-            getSearchResults().then(function (response) {
-                app.storage.setItem(storageKeyName, response);
-                handleSearchResult(response);
-            });
-        } else {
-            handleSearchResult(cachedSearchResults);
-        }
-    }
-
-    function handleSearchResult(response) {
-
-        var results = [],
-            i = 0,
-            length = response.length;
-
-        for (i; i < length; i++) {
-
-            if (results.length >= maxEntries) {
-                break;
-            }
-
-            var currentPage = response[i];
-            if (currentPage.description.indexOf(_searchTerm) >= 0 || currentPage.description.indexOf(_searchTermCombined) >= 0) {
-                results.push(currentPage);
-                continue;
-            }
-            if (currentPage.title.indexOf(_searchTerm) >= 0 || currentPage.title.indexOf(_searchTermCombined) >= 0) {
-                results.push(currentPage);
-                continue;
-            }
-            if (currentPage.group.indexOf(_searchTerm) >= 0 || currentPage.group.indexOf(_searchTermCombined) >= 0) {
-                results.push(currentPage);
-                continue;
-            }
-            if (currentPage.content.indexOf(_searchTerm) >= 0 || currentPage.content.indexOf(_searchTermCombined) >= 0) {
-                results.push(currentPage);
-            }
-        }
-
-        showResultList(results);
-    }
-
-    function getSearchResults() {
-        return $.getJSON(searchJsonUrl)
-    }
-
-
-    function openSearchPage(e) {
-        e.preventDefault();
-        var searchTerm = $contentSearchField.val().trim();
-        document.location.href = "search.html?searchTerm=" + encodeURIComponent(searchTerm);
-        return false;
+        $contentSearchResultList.empty().append(html);
     }
 
     return {
@@ -4594,4 +4564,4 @@ window.app.toggleToc = function() {
     return false;
 };
 
-window.app.liveSearch.init();
+window.app.contentSearch.init();

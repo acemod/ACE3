@@ -14,8 +14,7 @@ module.exports = function (grunt) {
         "js/vendor/jekyll-toc/jekyll-toc.js",
         "js/core/utils.js",
         "js/components/storage.js",
-        "js/components/liveSearch.js",
-        "js/components/search.js",
+        "js/components/contentSearch.js",
         "js/app.js"
     ];
 
