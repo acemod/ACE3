@@ -1,5 +1,9 @@
+* {
+    transition: all 0.15s ease;
+}
+
 body {
-background-color: $oil;
+    background-color: $oil;
 }
 
 body > main {

@@ -2,7 +2,7 @@ window.app = window.app || {};
 window.app.storage = (function () {
 
     var prefix = "ace3_";
-    var timeToInvalidateItem = 3; // 3h
+    var timeToInvalidateItem = 1; // 1h
 
     // gets an item from sessionStorage and checks if the time to invalidate the item is over
     function getItem (key) {

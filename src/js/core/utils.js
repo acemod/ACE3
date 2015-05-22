@@ -18,3 +18,12 @@ Date.prototype.addHours = function (hours) {
         this.getMilliseconds()
     );
 };
+
+window.utils = window.utils || {};
+utils.getQueryParam = function (name) {
+    "use strict";
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+};

@@ -14,12 +14,17 @@ parent:
 </div>
 
 <div class="row">
-    <div class="large-12 columns">
-        <div class="contentSearch">
-            <div class="contentSearch-wrapper">
-                <input type="text" class="contentSearch-field" name="searchTerm" placeholder="Search &hellip;" />
-                <div class="contentSearch-result">
-                    <ul class="contentSearch-result-list hidden"></ul>
+    <div class="large-8 medium-12 columns">
+        <div id="liveSearch" class="contentSearch">
+            <div class="contentSearch-wrapper row small-collapse">
+                <div class="small-12 medium-8 columns">
+                    <input type="search" class="liveSearch-field" name="searchTerm" placeholder="Search &hellip;"/>
+                    <div class="liveSearch-result">
+                        <ul class="liveSearch-result-list hidden"></ul>
+                    </div>
+                </div>
+                <div class="hide-for-small-only medium-4 columns">
+                    <a href="#" class="liveSearch-button button tiny"><i class="fa fa-search"></i>&nbsp;Search</a>
                 </div>
             </div>
         </div>
