@@ -4,6 +4,10 @@ import os
 import sys
 import subprocess
 
+######## GLOBALS #########
+mainprefix = "z"
+prefix = "ace_"
+##########################
 
 def mod_time(path):
     if not os.path.isdir(path):
@@ -15,12 +19,12 @@ def mod_time(path):
 
 
 def check_for_changes(addonspath, module):
-    if not os.path.exists(os.path.join(addonspath, "ace_{}.pbo".format(module))):
+    if not os.path.exists(os.path.join(addonspath, prefix + module + ".pbo")):
         return True
-    return mod_time(os.path.join(addonspath, module)) > mod_time(os.path.join(addonspath, "ace_{}.pbo".format(module)))
+    return mod_time(os.path.join(addonspath, module)) > mod_time(os.path.join(addonspath, prefix + module + ".pbo"))
 
 def check_for_obsolete_pbos(addonspath, file):
-    module = file[4:-4]
+    module = file[len(prefix):-4]
     if not os.path.exists(os.path.join(addonspath, module)):
         return True
     return False
@@ -68,9 +72,9 @@ def main():
             subprocess.check_output([
                 "makepbo",
                 "-NUP",
-                "-@=z\\addons\\ace\\{}".format(p),
+                "-@={}\\addons\\{}\\".format(mainprefix, prefix.rstrip("_")) + p,
                 p,
-                "ace_{}.pbo".format(p)
+                prefix + p + ".pbo"
             ], stderr=subprocess.STDOUT)
         except:
             failed += 1
