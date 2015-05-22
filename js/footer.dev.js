@@ -4184,6 +4184,24 @@ utils.getQueryParam = function (name) {
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 };
 
+utils.countOccurrences = function (text, searchTerm) {
+    text += "";
+    searchTerm += "";
+    if (searchTerm.length <= 0) return text.length + 1;
+
+    var n = 0, pos = 0;
+    var step = searchTerm.length;
+
+    while (true) {
+        pos = text.indexOf(searchTerm, pos);
+        if (pos >= 0) {
+            n++;
+            pos += step;
+        } else break;
+    }
+    return (n);
+};
+
 window.app = window.app || {};
 window.app.storage = (function () {
 
@@ -4272,7 +4290,6 @@ window.app.contentSearch = (function ($) {
     }
 
 
-
     /*
      ===
      UTIL
@@ -4282,31 +4299,76 @@ window.app.contentSearch = (function ($) {
     function findSearchTermInArray(response, maxEntries) {
         var results = [],
             i = 0,
-            length = response.length;
+            j = 0,
+            length = response.length,
+            text = "",
+            multiplier = 0;
 
         for (i; i < length; i++) {
+
+            var found = false;
 
             if (results.length >= maxEntries) {
                 break;
             }
 
             var currentPage = response[i];
-            if (currentPage.description.toLowerCase().indexOf(_searchTerm) >= 0 || currentPage.description.toLowerCase().indexOf(_searchTermCombined) >= 0) {
-                results.push(currentPage);
-                continue;
+            currentPage.value = 0;
+
+            var occurrences = 0;
+
+            for (j = 0; j < 4; j++) {
+
+                occurrences = 0;
+
+                switch (j) {
+                    case 0:
+                        text = currentPage.description.toLowerCase();
+                        multiplier = 100;
+                        break;
+                    case 1:
+                        text = currentPage.title.toLowerCase();
+                        multiplier = 1000;
+                        break;
+                    case 2:
+                        text = currentPage.group.toLowerCase();
+                        multiplier = 10;
+                        break;
+                    case 3:
+                        text = currentPage.content.toLowerCase();
+                        multiplier = 1;
+                }
+
+                if (text.indexOf(_searchTerm) >= 0 || text.indexOf(_searchTermCombined) >= 0) {
+                    found = true;
+                    occurrences = utils.countOccurrences(text, _searchTerm);
+
+                    if (_searchTermCombined !== _searchTerm) {
+                        occurrences += utils.countOccurrences(text, _searchTermCombined);
+                    }
+
+                    if (occurrences > 0) {
+                        currentPage.value += (occurrences * multiplier);
+                    }
+                }
             }
-            if (currentPage.title.toLowerCase().indexOf(_searchTerm) >= 0 || currentPage.title.toLowerCase().indexOf(_searchTermCombined) >= 0) {
-                results.push(currentPage);
-                continue;
-            }
-            if (currentPage.group.toLowerCase().indexOf(_searchTerm) >= 0 || currentPage.group.toLowerCase().indexOf(_searchTermCombined) >= 0) {
-                results.push(currentPage);
-                continue;
-            }
-            if (currentPage.content.toLowerCase().indexOf(_searchTerm) >= 0 || currentPage.content.toLowerCase().indexOf(_searchTermCombined) >= 0) {
+
+            if (found) {
                 results.push(currentPage);
             }
+
         }
+
+        results = results.sort(function(x,y) {
+            if (x.value > y.value) {
+                return -1;
+            } else if(y.value > x.value) {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+
         return results;
     }
 
@@ -4323,14 +4385,10 @@ window.app.contentSearch = (function ($) {
     }
 
 
-
-
-
-
     /*
-    ===
-    LIVE SEARCH
-    ===
+     ===
+     LIVE SEARCH
+     ===
      */
 
     function handleLiveKeyDown(e) {
@@ -4463,6 +4521,7 @@ window.app.contentSearch = (function ($) {
 
     function updateSearchFieldFromQueryParams() {
         _searchTerm = utils.getQueryParam(searchTermParamName);
+        _searchTermCombined = _searchTerm.replace(" ", "");
         $contentSearchField.val(_searchTerm);
         if (searchTermValid(_searchTerm)) {
             startContentSearch();
@@ -4487,7 +4546,7 @@ window.app.contentSearch = (function ($) {
         showContentResultList(results);
     }
 
-    function showContentResultList (results) {
+    function showContentResultList(results) {
         var i = 0,
             length = results.length;
 
@@ -4501,7 +4560,7 @@ window.app.contentSearch = (function ($) {
                 description = description.substr(0, _maxDescriptionLengthContent) + "&hellip;"
             }
 
-            html += String.format("<li><a href=\"{1}\">{0}</a><br><small><span class=\"url\">{3}</span><br><span class\"description\">{2}</small></small></li>", currentPage.title, currentPage.url, description, document.location.origin + currentPage.url);
+            html += String.format("<li><a href=\"{1}\">{0}</a><span class=\"additionalInfo\"><br><small><span class=\"url\">{3}</span><br><span class\"description\">{2}</small></small></span></li>", currentPage.title, currentPage.url, description, document.location.origin + currentPage.url);
         }
 
         $contentSearchResultList.empty().append(html);

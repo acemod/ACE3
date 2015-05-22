@@ -2,6 +2,10 @@
 .contentSearch {
     margin-bottom: 30px;
 
+    @media #{$small-only} {
+        margin-bottom: 5px;
+    }
+
     &-wrapper {
         position: relative;
         &.small-collapse {
@@ -72,6 +76,9 @@
 
     li {
         margin-bottom: 20px;
+        @media #{$small-only} {
+            margin-bottom: 15px;
+        }
 
         a {
             font-weight: bold;
@@ -86,6 +93,12 @@
 
         .url {
             color: #006621;
+        }
+
+        .additionalInfo {
+            @media #{$small-only} {
+                display: none;
+            }
         }
 
     }
