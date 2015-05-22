@@ -560,3 +560,28 @@ Follow players. If set to false, loop will play sounds only nearby logic positio
 7. **Volume (Number)**<br>
 The volume of the sounds played<br>
 `Default value: 1`
+
+
+## 4. ACE3 Zeus
+*Part of: ace_zeus*
+
+### 4.1 Zeus Settings
+This module provides control over vanilla aspects of Zeus.
+
+**Settings:**
+
+1. **Ascension Messages (Option)**<br>
+Display global popup messages when a player is assigned as Zeus<br>
+`Default value: No`
+2. **Zeus Eagle (Boolean)**<br>
+Spawn an eagle that follows the Zeus camera<br>
+`Default value: No`
+3. **Wind Sounds (Boolean)**<br>
+Play wind sounds when Zeus remote controls a unit<br>
+`Default value: No`
+4. **Ordnance Warning (Boolean)**<br>
+Play a radio warning when Zeus uses ordnance<br>
+`Default value: No`
+5. **Reveal Mines (Scalar)**<br>
+Reveal mines to allies and/or place map markers<br>
+`Default value: Disabled`
