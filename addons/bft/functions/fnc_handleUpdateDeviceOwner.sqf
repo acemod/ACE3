@@ -24,6 +24,7 @@ _data = [_deviceID] call FUNC(getDeviceData);
 _previousOwner = _data select 5;
 _data set [5, _newOwner];
 
+["bft_deviceDataChanged", [_data, isNull _previousOwner]] call EFUNC(common,localEvent);
 
 systemChat format["handleUpdate - setting new owner from %1 to %2", _previousOwner, _newOwner];
 diag_log format["handleUpdate - setting new owner from %1 to %2", _previousOwner, _newOwner];

@@ -9,11 +9,10 @@
  */
 #include "script_component.hpp"
 
-private ["_name","_value","_defaultGlobal","_catagory","_code","_persistent"];
-_name = _this select 0;
-_value = _this select 1;
-_defaultGlobal = _this select 2;
-_catagory = _this select 3;
+private ["_code","_persistent"];
+
+PARAMS_4(_name,_value,_defaultGlobal,_catagory);
+
 _code = 0;
 _persistent = false;
 

@@ -1,6 +1,8 @@
 // ACE - Common
 #include "script_component.hpp"
 
+//IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
+
 // Load settings from profile
 if (hasInterface) then {
     call FUNC(loadSettingsFromProfile);
@@ -9,10 +11,9 @@ if (hasInterface) then {
 
 // Listens for global "SettingChanged" events, to update the force status locally
 ["SettingChanged", {
-
     PARAMS_2(_name,_value);
     if !(count _this > 2) exitWith {};
-
+    private ["_force", "_settingData"];
     _force = _this select 2;
     if (_force) then {
         _settingData = [_name] call FUNC(getSettingData);
@@ -54,6 +55,7 @@ QGVAR(remoteFnc) addPublicVariableEventHandler {
 
 [missionNamespace] call FUNC(executePersistent);
 
+private ["_currentVersion", "_previousVersion"];
 // check previous version number from profile
 _currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
 _previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
@@ -63,8 +65,6 @@ if (_currentVersion != _previousVersion) then {
 
     profileNamespace setVariable ["ACE_VersionNumberString", _currentVersion];
 };
-
-0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber);
 
 // ACE events
 "ACEg" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
@@ -84,6 +84,7 @@ if(!isServer) then {
 ["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
 [FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
 
+call FUNC(checkFiles);
 
 /***************************************************************/
 /***************************************************************/
@@ -132,6 +133,7 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 
 // PFH to raise varios events
 [{
+    private ["_newCameraView", "_newInventoryDisplayIsOpen", "_newPlayerInventory", "_newPlayerTurret", "_newPlayerVehicle", "_newPlayerVisionMode", "_newPlayerWeapon", "_newZeusDisplayIsOpen"];
     // "playerInventoryChanged" event
     _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
     if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
@@ -213,6 +215,7 @@ GVAR(OldIsCamera) = false;
 [{
 
     // "activeCameraChanged" event
+    private ["_isCamera"];
     _isCamera = {!isNull _x} count ALL_CAMERAS > 0;
     if !(_isCamera isEqualTo GVAR(OldIsCamera)) then {
         // Raise ACE event locally
@@ -250,14 +253,3 @@ if(isMultiplayer && { time > 0 || isNull player } ) then {
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
-
-// check dlls
-{
-    if (_x callExtension "version" == "") then {
-        private "_errorMsg";
-        _errorMsg = format ["Extension %1.dll not installed.", _x];
-
-        diag_log text format ["[ACE] ERROR: %1", _errorMsg];
-        ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
-    };
-} forEach getArray (configFile >> "ACE_Extensions" >> "extensions");

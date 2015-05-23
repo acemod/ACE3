@@ -3,13 +3,16 @@
 ADDON = false;
 
 PREP(buttonPressed);
-PREP(calculateWindSpeed);
 PREP(canShow);
 PREP(collectData);
 PREP(createKestrelDialog);
 PREP(displayKestrel);
 PREP(generateOutputData);
 PREP(measureWindSpeed);
+PREP(onCloseDialog);
+PREP(onCloseDisplay);
+PREP(restoreUserData);
+PREP(storeUserData);
 PREP(updateDisplay);
 PREP(updateImpellerState);
 

@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_number", "_decimals"];
+private ["_decimals"];
 
-_number = _this select 0;
+PARAMS_1(_number);
 
 _decimals = str (abs(_number) mod 1);
 _decimals = toArray _decimals;

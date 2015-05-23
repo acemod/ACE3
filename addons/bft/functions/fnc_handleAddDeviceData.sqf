@@ -30,3 +30,5 @@ if (local (_this select 5)) then {
         diag_log format["handleAdd - ownedDevices: %1 %2", (_this select 5), _currentDevices];
     };
 };
+
+["bft_deviceDataChanged", [_this, true]] call EFUNC(common,localEvent);

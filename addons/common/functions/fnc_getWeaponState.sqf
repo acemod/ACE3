@@ -12,10 +12,7 @@
  */
  #include "script_component.hpp"
 
-private ["_unit", "_weapon"];
-
-_unit = _this select 0;
-_weapon = _this select 1;
+PARAMS_2(_unit,_weapon);
 
 private "_muzzles";
 _muzzles = [_weapon] call FUNC(getWeaponMuzzles);

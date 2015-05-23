@@ -22,7 +22,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_1_PVT(_this,_unit);
+PARAMS_1(_unit);
 
 if (isNull _unit) exitWith {[
     "",

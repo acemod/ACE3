@@ -10,8 +10,8 @@
 
 #include "script_component.hpp"
 
-private ["_array", "_result", "_value"];
-_array = _this select 0;
+private ["_result", "_value"];
+PARAMS_1(_array);
 
 _result = [];
 {
@@ -19,6 +19,6 @@ _result = [];
     if ({_x isEqualTo _value} count _result == 0) then {
         _result pushback _x;
     };
-}foreach _array;
+} forEach _array;
 
 _result;

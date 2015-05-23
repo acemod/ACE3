@@ -26,5 +26,7 @@ systemChat format["VehicleInit devices: %1",_devices];
 diag_log format["VehicleInit devices: %1",_devices];
 
 {
-    ["bft_itemCreated", [_vehicle, _x, "", format["%1/%2",_vehicle, _x]]] call EFUNC(common,serverEvent);
+    if (isClass (configFile >> "ACE_BFT" >> "Devices" >> _x)) then {
+        ["bft_itemCreated", [_vehicle, _x, "", format["%1/%2",_vehicle, _x]]] call EFUNC(common,serverEvent);
+    };
 }foreach _devices;

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Coding Guidelines
+description: 
 group: development
 parent: wiki
 order: 1
@@ -121,7 +122,7 @@ Every function should have a header of the following format:
 ## 4. Macro Usage
 
 ### 4.1 Module/PBO specific Macro Usage
-The family of `GVAR` macro's define global variable strings or constants for use within a module. Please use these to make sure we follow naming conventions across all modules and also prevent duplicate/overwriting between variables in different modules. The macro family expands as follows, for the example of the module 'balls'
+The family of `GVAR` macro's define global variable strings or constants for use within a module. Please use these to make sure we follow naming conventions across all modules and also prevent duplicate/overwriting between variables in different modules. The macro family expands as follows, for the example of the module 'balls':
 
 * `GVAR(face)` is `ace_balls_face`
 * `QGVAR(face)` is `"ace_balls_face"`
@@ -130,7 +131,8 @@ The family of `GVAR` macro's define global variable strings or constants for use
 * `QEGVAR(leg,face)` is `"ace_leg_face"`
 
 
-There also exists the FUNC family of Macros
+There also exists the FUNC family of Macros:
+
 * `FUNC(face)` is `ace_balls_fnc_face` or the call trace wrapper for that function.
 * `EFUNC(balls,face)` is `ace_balls_fnc_face` or the call trace wrapper for that function.
 * `EFUNC(leg,face)` is `ace_leg_fnc_face` or the call trace wrapper for that function.

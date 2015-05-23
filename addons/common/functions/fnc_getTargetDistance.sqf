@@ -13,11 +13,9 @@
  */
 #include "script_component.hpp"
 
-private ["_interval", "_maxDistance", "_minDistance", "_position", "_laser", "_line", "_distance", "_iteration"];
+private ["_position", "_laser", "_line", "_distance", "_iteration"];
 
-_interval = _this select 0;
-_maxDistance = _this select 1;
-_minDistance = _this select 2;
+PARAMS_3(_interval,_maxDistance,_minDistance);
 
 _position = ATLToASL positionCameraToWorld [0, 0, 0];
 _position set [2, (_position select 2) - (getTerrainHeightASL _position min 0)];
@@ -29,15 +27,15 @@ _distance = _maxDistance;
 _iteration = _distance;
 
 while {
-  _iteration > _interval / 2
+    _iteration > _interval / 2
 } do {
-  _iteration = _iteration / 2;
+    _iteration = _iteration / 2;
 
-  _laser = ATLToASL positionCameraToWorld [0, 0, _distance];
-  _laser set [2, (_laser select 2) - (getTerrainHeightASL _laser min 0)];
-  _line set [1, _laser];
+    _laser = ATLToASL positionCameraToWorld [0, 0, _distance];
+    _laser set [2, (_laser select 2) - (getTerrainHeightASL _laser min 0)];
+    _line set [1, _laser];
 
-  _distance = _distance + (([1, -1] select (lineIntersects (_line + [vehicle ACE_player]) || {terrainIntersectASL _line})) * _iteration);
+    _distance = _distance + (([1, -1] select (lineIntersects (_line + [vehicle ACE_player]) || {terrainIntersectASL _line})) * _iteration);
 };
 
 _distance = _interval * round (_distance / _interval);

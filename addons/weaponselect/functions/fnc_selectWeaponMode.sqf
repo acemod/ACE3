@@ -11,10 +11,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weapon"];
-
-_unit = _this select 0;
-_weapon = _this select 1;
+PARAMS_2(_unit,_weapon);
 
 if (_weapon == "") exitWith {};
 
@@ -31,7 +28,6 @@ private ["_muzzles", "_modes"];
 
 _muzzles = [_weapon] call EFUNC(common,getWeaponMuzzles);
 _modes = [_weapon] call EFUNC(common,getWeaponModes);
-
 
 private ["_index", "_muzzle", "_mode"];
 

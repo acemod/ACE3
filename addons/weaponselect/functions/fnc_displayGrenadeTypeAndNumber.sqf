@@ -12,12 +12,9 @@
  */
 #include "script_component.hpp"
 
-private ["_magazine", "_numberofMagazines"];
-
 if !(GVAR(DisplayText)) exitwith {};
 
-_magazine = _this select 0;
-_numberofMagazines = _this select 1;
+PARAMS_2(_magazine,_numberofMagazines);
 
 private ["_color", "_name", "_text", "_picture"];
 

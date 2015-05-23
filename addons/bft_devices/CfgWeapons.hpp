@@ -4,6 +4,8 @@ class CfgWeapons {
     class InventoryItem_Base_F;
 
     class GVAR(ItemCore): ItemCore {
+        ace_bft_deviceType = "FBCB2Device";
+        ace_bft_magazineItem = "";
         author = "$STR_ACE_Common_ACETeam";
         scope = 2;
         simulation = "ItemGPS";
@@ -14,8 +16,10 @@ class CfgWeapons {
         displayName = "$STR_ACE_BFT_Devices_DK10_itemName";
         picture = QUOTE(PATHTOF(UI\inventory\DK10_icon.paa));
         class ItemInfo: InventoryItem_Base_F {
-            mass = 56;
+            mass = 40;
         };
+
+        ace_bft_magazineItem = "ACE_DK10Magazine";
     };
 
     class ACE_GD300: GVAR(ItemCore) {
@@ -26,6 +30,8 @@ class CfgWeapons {
         class ItemInfo: InventoryItem_Base_F {
             mass = 5;
         };
+
+        ace_bft_magazineItem = "ACE_GD300Magazine";
     };
 
     class ACE_MicroDAGR_x: GVAR(ItemCore) { // temporary name change to not interfere with MicroDAGR module during integration
@@ -36,6 +42,8 @@ class CfgWeapons {
         class ItemInfo: InventoryItem_Base_F {
             mass = 6;
         };
+
+        ace_bft_magazineItem = "ACE_MicroDAGR_xMagazine";
     };
 
     class ACE_HelmetCam: ACE_ItemCore {
