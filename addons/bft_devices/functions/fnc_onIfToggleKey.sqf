@@ -73,8 +73,8 @@ if (_interfaceName != "" && _interfaceName != _previousInterface) then {
     // queue the start up of the interface as we might still have one closing down
     [{
         if (isNil QGVAR(ifOpen)) then {
-            ((_this select 0) + [ACE_player,vehicle ACE_player]) call FUNC(ifOpen);
             [_this select 1] call CBA_fnc_removePerFrameHandler;
+            ((_this select 0) + [ACE_player,vehicle ACE_player]) call FUNC(ifOpen);
         };
     }, 0, [_this,_interfaceName] ] call CBA_fnc_addPerFrameHandler;
 };
