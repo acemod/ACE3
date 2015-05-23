@@ -37,19 +37,30 @@
             <English>Enables advanced ballistics</English>
             <Polish>Aktywuje zaawansowaną balistykę</Polish>
         </Key>
-        <Key ID="STR_ACE_AdvancedBallistics_alwaysSimulateForSnipers_DisplayName">
-            <English>Always Enabled For Snipers</English>
-            <Polish>Zawsze akt. dla snajp.</Polish>
+        <Key ID="STR_ACE_AdvancedBallistics_simulateForSnipers_DisplayName">
+            <English>Enabled For Snipers</English>
         </Key>
-        <Key ID="STR_ACE_AdvancedBallistics_alwaysSimulateForSnipers_Description">
-            <English>Always enables advanced ballistics when high power optics are used</English>
-            <Polish>Aktywuje zaawansowaną balistykę zawsze, kiedy używana jest optyka</Polish>
+        <Key ID="STR_ACE_AdvancedBallistics_simulateForSnipers_Description">
+            <English>Enables advanced ballistics for non local snipers (when using high power optics)</English>
         </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulateForGroupMembers_DisplayName">
+            <English>Enabled For Group Members</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulateForGroupMembers_Description">
+            <English>Enables advanced ballistics for non local group members</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulateForEveryone_DisplayName">
+            <English>Enabled For Everyone</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulateForEveryone_Description">
+            <English>Enables advanced ballistics for all non local players (enabling this may degrade performance during heavy firefights in multiplayer)</English>
         <Key ID="STR_ACE_AdvancedBallistics_alwaysSimulateForGroupMembers_DisplayName">
             <English>Always Enabled For Group Members</English>
+            <Polish>Zawsze akt. dla czł. grupy</Polish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_alwaysSimulateForGroupMembers_Description">
             <English>Always enables advanced ballistics when a group member fires</English>
+            <Polish>Aktywuje zaawansowaną balistykę dla wszystkich członków grupy</Polish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_disabledInFullAutoMod_DisplayName">
             <English>Disabled In FullAuto Mode</English>
@@ -58,14 +69,6 @@
         <Key ID="STR_ACE_AdvancedBallistics_disabledInFullAutoMod_Description">
             <English>Disables the advanced ballistics during full auto fire</English>
             <Polish>Dezaktywuje zaawansowaną balistykę podczas ognia automatycznego</Polish>
-        </Key>
-        <Key ID="STR_ACE_AdvancedBallistics_onlyActiveForLocalPlayers_DisplayName">
-            <English>Disabled For Non Local Players</English>
-            <Polish>Wyłącz dla nielok. graczy</Polish>
-        </Key>
-        <Key ID="STR_ACE_AdvancedBallistics_onlyActiveForLocalPlayers_Description">
-            <English>Disables the advanced ballistics for bullets coming from other players (enable this if you encounter frame drops during heavy firefights in multiplayer)</English>
-            <Polish>Dezaktywuje zaawansowaną balistykę dla pocisków pochodzących od innych graczy(aktywuj tą opcję jeżeli odczuwasz spadki FPS podczas sporych strzelanin w MP)</Polish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>

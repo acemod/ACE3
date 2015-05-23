@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Classnames
+description: A list of all the classnames in ACE3, your wet dream came true.
 group: missionmaker
 order: 11
 parent: wiki
@@ -173,6 +174,9 @@ ACE_tourniquet | Tourniquet (CAT) | ACE_ItemCore |
 classname | in game name | type   |
 --------- | --------- | ---------
 ACE_microDAGR | MicroDAGR GPS | ACE_ItemCore |
+
+### mk6 mortar
+`added in 3.0.0.3`
 
 classname | in game name | type   |
 --------- | --------- | ---------

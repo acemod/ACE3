@@ -1,5 +1,5 @@
 #define COMPONENT map
-#include "\z\ace\Addons\main\script_mod.hpp"
+#include "\z\ace\addons\main\script_mod.hpp"
 
 #ifdef DEBUG_ENABLED_MAP
     #define DEBUG_MODE_FULL
@@ -9,7 +9,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MAP
 #endif
 
-#include "\z\ace\Addons\main\script_macros.hpp"
+#include "\z\ace\addons\main\script_macros.hpp"
 
 
 #define MARKERNAME_MAPTOOL_FIXED "ACE_MapToolFixed"

@@ -9,7 +9,7 @@ _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] sel
 _maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
 
 _onKeyPressAlphaMax = if ((GVAR(showPlayerNames) in [3,4])) then {
-    2 + (GVAR(ShowNamesTime) - time); //after release 1 second of full opacity, 1 second of fading to 0
+    2 + (GVAR(ShowNamesTime) - ACE_time); //after release 1 second of full opacity, 1 second of fading to 0
 } else {
     1
 };

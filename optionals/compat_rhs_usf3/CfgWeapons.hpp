@@ -78,12 +78,22 @@ class CfgWeapons
     class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
-        ACE_ScopeAdjust_Increment = 0.1;
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
     };
     class rhsusf_acc_LEUPOLDMK4_2: rhsusf_acc_sniper_base {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
-        ACE_ScopeAdjust_Increment = 0.1;
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+    };
+    
+    class rhs_weap_fgm148 : launch_O_Titan_F {
+        ace_javelin_enabled = 1;
+        weaponInfoType = "ACE_RscOptics_javelin";
+        modelOptics = "\z\ace\addons\javelin\data\reticle_titan.p3d";
+         
+        canLock = 0;
+        lockingTargetSound[] = {"",0,1};
+        lockedTargetSound[] = {"",0,1};
     };
     
     class rhs_weap_fgm148 : launch_O_Titan_F {
