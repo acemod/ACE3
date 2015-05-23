@@ -50,10 +50,16 @@ class ACE_Medical_Actions {
             displayNameProgress = "$STR_ACE_Medical_Transfusing_Blood";
             requiredMedic = 1;
             treatmentTime = 20;
-            items[] = {{"ACE_bloodIV", "ACE_bloodIV_500", "ACE_bloodIV_250"}};
+            items[] = {"ACE_bloodIV"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = {};
+        };
+        class BloodIV_500: BloodIV {
+            items[] = {"ACE_bloodIV_500"};
+        };
+        class BloodIV_250: BloodIV {
+            items[] = {"ACE_bloodIV_250"};
         };
         class BodyBag: Bandage {
             displayName = "$STR_ACE_Medical_PlaceInBodyBag";
