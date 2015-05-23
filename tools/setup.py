@@ -4,7 +4,6 @@
 #  ACE3 Setup Script  #
 #######################
 
-
 import os
 import sys
 import shutil
@@ -19,7 +18,7 @@ cba = "P:\\x\\cba"
 ##########################
 
 def main():
-    fulldir = maindir + "\\" + projectdir
+    fulldir = "{}\\{}".format(maindir,projectdir)
     print("""
   ######################################
   # ACE3 Development Environment Setup #
@@ -75,8 +74,8 @@ def main():
         return 5
 
     try:
-        if not os.path.exists("P:\\" + maindir):
-            os.mkdir("P:\\" + maindir)
+        if not os.path.exists("P:\\{}".format(maindir)):
+            os.mkdir("P:\\{}".format(maindir))
         if not os.path.exists(os.path.join(armapath, maindir)):
             os.mkdir(os.path.join(armapath, maindir))
 
@@ -97,7 +96,7 @@ def main():
     print("\n# Copying required CBA includes ...")
 
     if os.path.exists(cba):
-        print(cba + " already exists, skipping.")
+        print("{} already exists, skipping.".format(cba))
         return -1
 
     try:
