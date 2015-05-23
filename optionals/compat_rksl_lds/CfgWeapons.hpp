@@ -4,10 +4,10 @@ class cfgWeapons {
     class InventoryOpticsItem_Base_F;    // External class reference
     
     class RKSL_optic_LDS : ItemCore {
-        scope = public;
+        scope = 2;
         displayName = "LDS";
         descriptionShort = "Lightweight Day Sight (LDS)";
-        weaponInfoType = "RKSL_ACE_RscWeapon_LDS";
+        weaponInfoType = "ACE_RscWeapon_RKSL_LDS";
 
         ACE_optics_reticleDay = QUOTE(PATHTOF(reticles\lds-reticle556_ca.paa));
         ACE_optics_reticleNight = QUOTE(PATHTOF(reticles\lds-reticle556Illum_ca.paa));
@@ -19,7 +19,7 @@ class cfgWeapons {
             mass = 4;
             RMBhint = "Lightweight Day Sight";
             optics = true;
-            modelOptics = QUOTE(PATHTOF(models\ace_optics_reticle90.p3d));
+            modelOptics = "\z\ace\addons\optics\models\ace_optics_reticle90.p3d";
             
             class OpticsModes{
 
@@ -52,7 +52,7 @@ class cfgWeapons {
                     visionMode[] = {"Normal"};
                     distanceZoomMin = 300;
                     distanceZoomMax = 300;
-                    modeloptics = QUOTE(PATHTOF(models\ace_optics_reticle90.p3d));
+                    modeloptics = "\z\ace\addons\optics\models\ace_optics_reticle90.p3d";
                     opticsFlare = true;
                     opticsDisablePeripherialVision = true;
                 };
@@ -65,7 +65,7 @@ class cfgWeapons {
         displayName = "LDS (PiP)";
 
         class ItemInfo: ItemInfo {
-            modelOptics = QUOTE(PATHTOF(models\ace_optics_reticle90.p3d));
+            modelOptics = "\z\ace\addons\optics\models\ace_optics_reticle90.p3d";
 
             class OpticsModes: OpticsModes {
 
@@ -73,7 +73,7 @@ class cfgWeapons {
                 };
 
                 class LDS : LDS {
-                    modelOptics = QUOTE(PATHTOF(models\ace_optics_pip.p3d));
+                    modelOptics = "\z\ace\addons\optics\models\ace_optics_pip.p3d";
                 };
             };
         };

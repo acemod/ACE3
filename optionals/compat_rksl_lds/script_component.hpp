@@ -1,4 +1,4 @@
-#define COMPONENT RKSL_LDS_comp
+#define COMPONENT compat_rksl_lds
 
 #include "\z\ace\addons\main\script_mod.hpp"
 

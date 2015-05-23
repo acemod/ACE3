@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+#include "asdgJR_comp.hpp"
+
 class CfgPatches {
     class ADDON {
         units[] = {};
@@ -13,6 +15,5 @@ class CfgPatches {
     };
 };
 
-#include "CfgEventHandlers.hpp"
 #include "CfgRscTitles.hpp"
 #include "CfgWeapons.hpp"
