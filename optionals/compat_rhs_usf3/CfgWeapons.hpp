@@ -78,12 +78,12 @@ class CfgWeapons
     class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
-        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
     };
     class rhsusf_acc_LEUPOLDMK4_2: rhsusf_acc_sniper_base {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
-        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
     };
     
     class rhs_weap_fgm148 : launch_O_Titan_F {
