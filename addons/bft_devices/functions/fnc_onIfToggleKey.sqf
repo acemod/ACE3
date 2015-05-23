@@ -55,7 +55,6 @@ _className =
     } else {
         ""
     };
-systemChat str [_className];
 
 _displayName = getText (configFile >> "CfgWeapons" >> _className >> QGVAR(displayName));
 _dialogName = getText (configFile >> "CfgWeapons" >> _className >> QGVAR(dialogName));
