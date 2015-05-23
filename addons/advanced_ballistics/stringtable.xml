@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="AdvancedBallistics">
         <Key ID="STR_ACE_AdvancedBallistics_WindInfoKey">
@@ -39,21 +40,27 @@
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_simulateForSnipers_DisplayName">
             <English>Enabled For Snipers</English>
+            <Polish>Akt. dla snajperów</Polish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_simulateForSnipers_Description">
             <English>Enables advanced ballistics for non local snipers (when using high power optics)</English>
+            <Polish>Aktywuje zaawansowaną balistykę dla nielokalnych snajperów (kiedy używają optyki)</Polish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_simulateForGroupMembers_DisplayName">
             <English>Enabled For Group Members</English>
+            <Polish>Akt. dla czł. grupy</Polish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_simulateForGroupMembers_Description">
             <English>Enables advanced ballistics for non local group members</English>
+            <Polish>Aktywuje zaawansowaną balistykę dla nielokalnych członków grupy</Polish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_simulateForEveryone_DisplayName">
             <English>Enabled For Everyone</English>
+            <Polish>Akt. dla wszystkich</Polish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_simulateForEveryone_Description">
             <English>Enables advanced ballistics for all non local players (enabling this may degrade performance during heavy firefights in multiplayer)</English>
+            <Polish>Aktywuje zaawansowaną balistykę dla wszystkich nielokalnych graczy (aktywacja tej opcji może spodowować spory spadek wydajności podczas ciężkiej wymiany ognia)</Polish>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_alwaysSimulateForGroupMembers_DisplayName">
             <English>Always Enabled For Group Members</English>
