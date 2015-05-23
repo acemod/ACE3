@@ -1,87 +1,35 @@
 #include "script_component.hpp"
 
 disableSerialization;
-private "_display";
+private ["_display","_title","_subtitle","_information"];
 _display = _this select 0;
+_title = _this select 1;
+if (typename _title == typename "") then {_title = parseText _title};
+_subtitle = _this select 2;
+if (typename _subtitle == typename "") then {_subtitle = parseText _subtitle};
+_information = _this select 3;
+if (typename _information == typename "") then {_information = parseText _information};
 
-// convert arguments
-private ["_idcs","_args"];
-_args = [];
-_idcs = [
-    // format: [TEXT_IDC,BACKGROUND_TO_CENTER_AT_IDC]
-    [IDC_TOOLTIP_TITLE_TEXT,-1],
-    [IDC_TOOLTIP_SUBTITLE_TEXT,-1],
-    [IDC_TOOLTIP_LEFT_TEXT,IDC_TOOLTIP_LEFT_GRP],
-    [IDC_TOOLTIP_RIGHT_TEXT,IDC_TOOLTIP_RIGHT_GRP]
-];
-{
-    if (typeName _x == typeName "" || typeName _x == typeName (parseText "")) then {
-        private "_array";
-        _array = [_x];
-        _array append (_idcs select _forEachIndex);
-        _args pushBack _array;
-    };
-} forEach (_this select 1);
+_idc = IDC_TOOLTIP_TITLE;
+CTRL ctrlSetStructuredText _title;
+CTRL ctrlCommit 0;
 
-{
-    private ["_idc","_text"];
-    _idc = _x select 1;
-    _text = "";
-    if (_idc >= 0) then {
-        _text = _x select 0;
-    };
+_idc = IDC_TOOLTIP_SUBTITLE;
+CTRL ctrlSetStructuredText _subtitle;
+CTRL ctrlCommit 0;
 
-    if (typeName _text == typename "") then {_text = parseText _text};
-    CONTROL ctrlSetStructuredText _text;
-    // center the text in mid of background if necessary
-    private "_pos";
-    _pos = ctrlPosition CONTROL;
-    if (_x select 2 >= 0) then {
-        private "_height";
-        _height = ctrlTextHeight CONTROL;
-        _pos set [3,_height];
+_idc = IDC_TOOLTIP_INFORMATION;
+CTRL ctrlSetStructuredText _information;
 
-        private "_idc";
-        _idc = _x select 2;
-        _height = (((ctrlPosition CONTROL) select 3) - _height) / 2;
-        _pos set [1,_height];
-    };
-    CONTROL ctrlSetPosition _pos;
-    CONTROL ctrlCommit 0;
-} forEach _array;
+private ["_pos","_height"];
+_pos = ctrlPosition CTRL;
+_height = if (_information == parseText "") then {0} else {ctrlTextHeight CTRL};
+_pos set [3,_height];
+CTRL ctrlSetPosition _pos;
+CTRL ctrlCommit 0;
 
-{
-    if (typeName _x == typeName "" || typeName _x == typeName (parseText "")) then {
-        private "_array";
-        _array = [_x];
-        _array append (_idcs select _forEachIndex);
-        _args pushBack _array;
-    };
-} forEach (_this select 1);
-
-{
-    private ["_idc","_text"];
-    _idc = _x select 1;
-    _text = "";
-    if (_idc >= 0) then {
-        _text = _x select 0;
-    };
-
-    if (typeName _text == typename "") then {_text = parseText _text};
-    CONTROL ctrlSetStructuredText _text;
-    // center the text in mid of background if necessary
-    private "_pos";
-    _pos = ctrlPosition CONTROL;
-    if (_x select 2 >= 0) then {
-        private "_height";
-        _height = ctrlTextHeight CONTROL;
-        _pos set [3,_height];
-
-        private "_idc";
-        _idc = _x select 2;
-        _height = (((ctrlPosition CONTROL) select 3) - _height) / 2;
-        _pos set [1,_height];
-    };
-    CONTROL ctrlSetPosition _pos;
-    CONTROL ctrlCommit 0;
-} forEach _args;
+_idc = IDC_TOOLTIP;
+_pos = ctrlPosition CTRL;
+_pos set [3,2 * TT_H + _height];
+CTRL ctrlSetPosition _pos;
+CTRL ctrlCommit 0;

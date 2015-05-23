@@ -3,57 +3,29 @@
 ADDON = false;
 
 // prepare functions
-// map animations
+// event handler functions
+PREP(editingDraw);
+PREP(editingDraw_editBFT);
+PREP(KeyDown);
+PREP(KeyUp);
 PREP(mapDraw);
+PREP(MouseButtonDown);
+PREP(MouseButtonUp);
 
-// map gui
+// tooltip functions
 PREP(tt_setText);
 PREP(tt_setPos);
+PREP(tt_getText);
 
-// initialize global varaibles
-GVAR(trackers) = [[[100,100,0],0,0,player,"Alpha",""]]; // --- ToDo: make JIP compatible
-GVAR(spotreps) = []; // --- ToDo: make JIP compatible
+// gui functions
+PREP(initBFTEdit);
+
+GVAR(editingDraw) = -1;
+GVAR(editingDraw_editBFT) = -1;
+GVAR(editkeydown) = false;
+GVAR(mousebuttondown) = false;
 GVAR(mousepos) = [0,0];
-
-// initialize event handlers
-private "_fnc";
-_fnc = {
-     private ["_args","_idd","_idc"];
-     _args = _this select 0;
-     _idd = _args select 0;
-     _idc = _args select 1;
-
-     if (!isNull (findDisplay _idd) && GVAR(serverinit)) then {
-          (findDisplay _idd displayCtrl _idc) ctrlAddEventhandler (_args select 2);
-
-          [_this select 1] call CBA_fnc_removePerFrameHandler;
-     };
-};
-
-{
-     [_fnc,0,_x] call CBA_fnc_addPerFrameHandler;
-} forEach [
-     [12,51,["MouseMoving",{GVAR(mousepos)=[_this select 1,_this select 2];}]],
-     [12,51,["MouseHolding",{GVAR(mousepos)=[_this select 1,_this select 2];}]],
-     [12,51,["Draw",{_this call FUNC(mapDraw);}]]
-    private ["_args","_idd","_idc"];
-    _args = _this select 0;
-    _idd = _args select 0;
-    _idc = _args select 1;
-
-    if (!isNull (findDisplay _idd) && GVAR(serverinit)) then {
-        (findDisplay _idd displayCtrl _idc) ctrlAddEventhandler (_args select 2);
-
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
-    };
-};
-
-{
-    [_fnc,0,_x] call CBA_fnc_addPerFrameHandler;
-} forEach [
-    [12,51,["MouseMoving",{GVAR(mousepos)=[_this select 1,_this select 2];}]],
-    [12,51,["MouseHolding",{GVAR(mousepos)=[_this select 1,_this select 2];}]],
-    [12,51,["Draw",{_this call FUNC(mapDraw);}]]
-];
+GVAR(mouseover) = ["",[]];
+GVAR(selection) = ["",[]];
 
 ADDON = true;
