@@ -37,13 +37,6 @@ class CfgAmmo {
     class B_762x51_Tracer_Yellow: B_762x51_Ball {
         model = PATHTOF(ace_TracerYellow2.p3d);
     };
-    class SubmunitionBullet;
-    class B_762x51_Minigun_Tracer_Red: SubmunitionBullet {
-        model = PATHTOF(ace_TracerRed2.p3d);
-    };
-    class B_762x51_Minigun_Tracer_Red_splash: B_762x51_Ball {
-        model = PATHTOF(ace_TracerRed2.p3d);
-    };
     class B_762x54_Ball;
     class B_762x54_Tracer_Red: B_762x54_Ball {
         model = PATHTOF(ace_TracerRed2.p3d);
@@ -158,13 +151,13 @@ class CfgAmmo {
     class Sh_120mm_APFSDS_Tracer_Yellow: Sh_120mm_APFSDS {
         model = PATHTOF(ace_shell_tracer_yellow.p3d);
     };
+    class SubmunitionBullet;
     class B_762x51_Minigun_Tracer_Red: SubmunitionBullet {
         model = PATHTOF(ace_TracerRed2.p3d);
     };
     class B_762x51_Minigun_Tracer_Yellow: B_762x51_Minigun_Tracer_Red {
         model = PATHTOF(ace_TracerYellow2.p3d);
     };
-    class B_762x51_Ball;
     class B_762x51_Minigun_Tracer_Red_splash: B_762x51_Ball {
         model = PATHTOF(ace_TracerRed2.p3d);
     };
