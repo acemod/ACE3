@@ -5,7 +5,17 @@
 #include "LinearMath\btVector3.h"
 #endif
 */
+
 #include "shared.hpp"
+
+#ifndef _WIN32
+
+#define sinf(x) sin(x)
+#define cosf(x) cos(x)
+#define acosf(x) acos(x)
+
+#endif
+
 namespace ace {
 
     template <typename T> T acos(T n) { return -1; }

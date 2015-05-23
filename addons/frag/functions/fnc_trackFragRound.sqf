@@ -13,7 +13,7 @@ _foundObjectHPIds = _params select 8;
 
 if (!alive _round) then {
     [_this select 1] call cba_fnc_removePerFrameHandler;
-    if(_time != time && {_round in GVAR(trackedObjects)} && {!(_round in GVAR(blackList))}) then {
+    if(_time != ACE_time && {_round in GVAR(trackedObjects)} && {!(_round in GVAR(blackList))}) then {
         GVAR(trackedObjects) = GVAR(trackedObjects) - [_round];
         _skip = getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(skip));
         if(_skip == 0) then {

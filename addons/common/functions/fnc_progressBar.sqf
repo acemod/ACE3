@@ -5,7 +5,7 @@
  * Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
  *
  * Argument:
- * 0: NUMBER - Total Time (in game "time" seconds)
+ * 0: NUMBER - Total Time (in game "ACE_time" seconds)
  * 1: ARRAY - Arguments, passed to condition, fail and finish
  * 2: CODE or STRING - On Finish: Code called or STRING raised as event.
  * 3: CODE or STRING - On Failure: Code called or STRING raised as event.
@@ -53,7 +53,7 @@ _perFrameFunction = {
     EXPLODE_8_PVT(_parameters,_args,_onFinish,_onFail,_condition,_player,_startTime,_totalTime,_exceptions);
     private ["_elapsedTime", "_errorCode"];
 
-    _elapsedTime = time - _startTime;
+    _elapsedTime = ACE_time - _startTime;
     _errorCode = -1;
 
     // this does not check: target fell unconscious, target died, target moved inside vehicle / left vehicle, target moved outside of players range, target moves at all.
@@ -105,4 +105,4 @@ _perFrameFunction = {
     };
 };
 
-[_perFrameFunction, 0, [_args, _onFinish, _onFail, _condition, _player, time, _totalTime, _exceptions]] call CBA_fnc_addPerFrameHandler;
+[_perFrameFunction, 0, [_args, _onFinish, _onFail, _condition, _player, ACE_time, _totalTime, _exceptions]] call CBA_fnc_addPerFrameHandler;

@@ -97,5 +97,9 @@
             <English>That option is invalid! The limit is</English>
             <Polish>Ta opcja jest nieprawidłowa! Limit wynosi</Polish>
         </Key>
+		<Key ID="STR_ACE_ViewDistance_videosettings">
+            <English>Video Settings</English>
+            <Polish>Ustawienia wideo</Polish>
+        </Key>
     </Package>
 </Project>

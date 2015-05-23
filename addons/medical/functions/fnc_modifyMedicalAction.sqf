@@ -34,7 +34,7 @@ private ["_openWounds", "_amountOf"];
 _openWounds = _target getvariable [QGVAR(openWounds), []];
 {
     _amountOf = _x select 3;
-    if (_amountOf > 0 && {(_selectionN == (_x select 2))}) exitwith {
+    if (_amountOf > 0 && {(_selectionN == (_x select 2))} && {(_x select 4) > 0}) exitwith {
         _actionData set [2, QUOTE(PATHTOF(UI\icons\medical_crossRed.paa))];
     };
 } foreach _openWounds;
