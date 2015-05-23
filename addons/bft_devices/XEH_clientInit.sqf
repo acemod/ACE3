@@ -27,6 +27,12 @@ call {
 GVAR(ifOpenStart) = false;
 
 // Initialize all uiNamespace variables
+SETUVAR(GVAR(DK10_dlg), displayNull);
+SETUVAR(GVAR(GD300_dsp), displayNull);
+SETUVAR(GVAR(GD300_dlg), displayNull);
+SETUVAR(GVAR(JV5_dlg), displayNull);
+SETUVAR(GVAR(MicroDAGR_dsp), displayNull);
+SETUVAR(GVAR(MicroDAGR_dlg), displayNull);
 SETUVAR(GVAR(TAD_dsp), displayNull);
 SETUVAR(GVAR(TAD_dlg), displayNull);
 

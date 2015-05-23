@@ -37,20 +37,47 @@ if !(isNil QGVAR(ifOpen)) then {
     [] call FUNC(ifClose);
 };
 
-_displayName = switch (_this) do {
-    case 0: {QGVAR(GD300_dsp)};
-    case 1: {QGVAR(GD300_dlg)};
-    default {QGVAR(DK10_dlg)}; // JV5_dlg
+// see if player is carrying any devices
+_playerDevices = [ACE_player] call EFUNC(bft,getOwnedDevices);
+
+// get devices for the vehicle the player might be in
+_vehicleDevices =
+    if (ACE_player != vehicle ACE_player) then {
+        [vehicle ACE_player] call EFUNC(bft,getOwnedDevices);
+    } else {
+        [];
+    };
+
+// get class name for device
+_className =
+    if !(_playerDevices isEqualTo []) then {
+        ([_playerDevices select 0] call EFUNC(bft,getDeviceData)) select 6
+    } else {
+        ""
+    };
+systemChat str [_className];
+
+_displayName = getText (configFile >> "CfgWeapons" >> _className >> QGVAR(displayName));
+_dialogName = getText (configFile >> "CfgWeapons" >> _className >> QGVAR(dialogName));
+
+_interfaceName = switch (_this) do {
+    case 0: {
+        if (_displayName != "") then {_displayName} else {_dialogName};
+    };
+    case 1: {
+        if (_dialogName != "") then {_dialogName} else {_displayName};
+    };
+    default {QGVAR(JV5_dlg)};
 };
 
-if (_displayName != "") then {
+if (_interfaceName != "" && _interfaceName != _previousInterface) then {
     // queue the start up of the interface as we might still have one closing down
     [{
         if (isNil QGVAR(ifOpen)) then {
             ((_this select 0) + [ACE_player,vehicle ACE_player]) call FUNC(ifOpen);
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
-    }, 0, [_this,_displayName] ] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_this,_interfaceName] ] call CBA_fnc_addPerFrameHandler;
 };
 
 true
