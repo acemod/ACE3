@@ -253,6 +253,7 @@ The "Respawn System" module enables players to respawn with the gear they had be
 Respawn with the gear a player had just before his death.<br>
 `Default value: No`
 
+
 ### 1.16 SwitchUnits System
 *Part of: ace_switchunits*
 
@@ -309,7 +310,22 @@ Default Time to lockpick (in seconds)<br>
 * `ACE_vehicleLock_lockpickStrength` - NUMBER: seconds, determines how long lockpicking with take, overrides the value set in the module for a specific vehicle of the mission maker's choice.
 
 
-### 1.18 Weather
+### 1.18 View Distance Limiter
+*Part of: ace_viewdistance*
+
+This module allows disabling the ACE3 View Distance feature as well as setting a view distance limit.
+
+**Settings:**
+
+1. **Enable ACE viewdistance (Boolean)**<br>
+Enables ACE viewdistance<br>
+`Default value: Yes`
+2. **View Distance Limit (Number)**<br>
+Sets the limit for how high clients can raise their view distance (<= 10000)
+`Default value: 10000`
+
+
+### 1.19 Weather
 *Part of: ace_weather*
 
 This module allows you to customize the weather settings.
@@ -318,7 +334,6 @@ This module allows you to customize the weather settings.
     <h5>Note:</h5>
     <p>ACE3 Weather overrides weather settings (editor, mission settings) and automatically calculates wind, temperature and pressure according to map location, date, time of day and cloud coverage and allows the weather to evolve realistically as the simulation progresses. Weather synchronization occurs between all clients. <br>Adjustment of the weather is possible by modifying the <code>overcast</code> value (for example: <code>0.7</code> may result in intermittent rain).</p>
 </div>
-
 
 **Settings:**
 
@@ -349,7 +364,8 @@ Synchronizes lightnings, rainbow, fog, ...<br>
 Defines the interval (seconds) between weather updates.<br>
 `Default value: 60`
     
-### 1.19 Wind Deflection
+
+### 1.20 Wind Deflection
 *Part of: ace_winddeflection*
 
 This module allows you to define when wind deflection is active.
@@ -380,13 +396,14 @@ Defines the radius around the player (in meters) at which projectiles are wind d
 `Default value: 3000`
 
 
-### 1.20 LSD Vehicles
+### 1.21 LSD Vehicles
 *Part of: ace_core*
 
 And then there's the "LSD Vehicles" module &hellip; it does 'something' to all vehicles synced to that module.
 <div class="videoWrapper">
     <iframe src="https://www.youtube.com/embed/X3e0LTexEok" frameborder="0" allowfullscreen></iframe>
 </div>
+
 
 ## 2. ACE3 Medical
 *Part of: ace_medical*
