@@ -35,17 +35,17 @@ if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
 if (underwater _unit) exitWith {};
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
 if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith {};
-if (GVAR(onlyActiveForLocalPlayers) && !(local _unit)) then {
+if (!GVAR(simulateForEveryone) && !(local _unit)) then {
     // The shooter is non local
     _abort = true;
-    if (GVAR(alwaysSimulateForSnipers)) then {
+    if (GVAR(simulateForSnipers)) then {
         if (currentWeapon _unit == primaryWeapon _unit && count primaryWeaponItems _unit > 2) then {
             _opticsName = (primaryWeaponItems _unit) select 2;
             _opticType = getNumber(configFile >> "CfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
             _abort = _opticType != 2; // We only abort if the non local shooter is not a sniper
         };
     };
-    if (GVAR(alwaysSimulateForGroupMembers) && _abort) then {
+    if (GVAR(simulateForGroupMembers) && _abort) then {
         _abort = (group ACE_player) != (group _unit);
     };
 };
@@ -114,7 +114,7 @@ if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) th
 
 GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
 
-"ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _AmmoCacheEntry select 0, _AmmoCacheEntry select 6, _AmmoCacheEntry select 7, _AmmoCacheEntry select 8, _AmmoCacheEntry select 5, _stabilityFactor, _WeaponCacheEntry select 1, _muzzleVelocity, _AmmoCacheEntry select 4, getPosASL _bullet, EGVAR(weather,Latitude), EGVAR(weather,currentTemperature), EGVAR(weather,Altitude), EGVAR(weather,currentHumidity), overcast, floor(time), time - floor(time)];
+"ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _AmmoCacheEntry select 0, _AmmoCacheEntry select 6, _AmmoCacheEntry select 7, _AmmoCacheEntry select 8, _AmmoCacheEntry select 5, _stabilityFactor, _WeaponCacheEntry select 1, _muzzleVelocity, _AmmoCacheEntry select 4, getPosASL _bullet, EGVAR(weather,Latitude), EGVAR(weather,currentTemperature), EGVAR(weather,Altitude), EGVAR(weather,currentHumidity), overcast, floor(ACE_time), ACE_time - floor(ACE_time)];
 
 [{
     private ["_args", "_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];
@@ -134,9 +134,9 @@ GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
     };
     
     if (_bulletTraceVisible && _bulletSpeed > 600) then {
-        drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.0157480315*_caliber,0.00787401574*_caliber],[[0,0,0,0.6],[0,0,0,0.4]],[1,0],0,0,"","",""];
+        drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.02*_caliber,0.01*_caliber],[[0,0,0,0.6],[0,0,0,0.4]],[1,0],0,0,"","",""];
     };
 
-    call compile ("ace_advanced_ballistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, floor(time), time - floor(time)]);
+    call compile ("ace_advanced_ballistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, floor(ACE_time), ACE_time - floor(ACE_time)]);
 
 }, GVAR(simulationInterval), [_bullet, _caliber, _bulletTraceVisible, GVAR(currentbulletID)]] call CBA_fnc_addPerFrameHandler;

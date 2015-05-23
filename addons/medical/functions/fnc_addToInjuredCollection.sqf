@@ -29,8 +29,8 @@ if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
     [{
         private ["_unit", "_interval"];
         _unit = (_this select 0) select 0;
-        _interval = time - ((_this select 0) select 1);
-        (_this select 0) set [1, time];
+        _interval = ACE_time - ((_this select 0) select 1);
+        (_this select 0) set [1, ACE_time];
         
         if (!alive _unit || !local _unit) then {
            [_this select 1] call CBA_fnc_removePerFrameHandler;
@@ -46,7 +46,7 @@ if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
 
             private "_pain";
             _pain = _unit getvariable [QGVAR(pain), 0];
-            if (_pain > 0) then {
+            if (_pain > (_unit getvariable [QGVAR(painSuppress), 0])) then {
                 if (_pain > 0.7 && {random(1) > 0.6}) then {
                     [_unit] call FUNC(setUnconscious);
                 };
@@ -54,5 +54,5 @@ if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
                 [_unit, _pain] call FUNC(playInjuredSound);
             };
         };
-    }, 1, [_unit, time]] call CBA_fnc_addPerFrameHandler;
+    }, 1, [_unit, ACE_time]] call CBA_fnc_addPerFrameHandler;
 };

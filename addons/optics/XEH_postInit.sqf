@@ -23,7 +23,7 @@ if (!hasInterface) exitWith {};
     };
 }] call EFUNC(common,addEventHandler);
 
-// camera has to be re-created every time another camera is created. Otherwise r2t is either black or transparent. @todo Add popular custom cameras to the event in ACE_common.
+// camera has to be re-created every ACE_time another camera is created. Otherwise r2t is either black or transparent. @todo Add popular custom cameras to the event in ACE_common.
 ["activeCameraChanged", {
     if !(_this select 1) then {
         deleteVehicle GVAR(camera);

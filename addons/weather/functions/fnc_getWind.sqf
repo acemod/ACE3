@@ -16,7 +16,7 @@ if (isNil "ACE_WIND_PARAMS") exitWith { [0, 0, 0] };
 EXPLODE_5_PVT(ACE_WIND_PARAMS,_dir,_dirChange,_spd,_spdChange,_period);
 
 private ["_periodPercent", "_periodPosition"];
-_periodPosition = (time - GVAR(wind_period_start_time)) min _period;
+_periodPosition = (ACE_time - GVAR(wind_period_start_time)) min _period;
 _periodPercent = _periodPosition / _period;
 
 _spd = _spd + _spdChange * _periodPercent;
