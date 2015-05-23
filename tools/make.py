@@ -413,11 +413,11 @@ def cleanup_optionals(mod):
             print("Cleaning {}".format(destination))
 
             try:
-                file_name = pbo_name_prefix + dir_name + ".pbo"
+                file_name = "{}{}.pbo".format(pbo_name_prefix,dir_name)
                 src_file_path = os.path.join(release_dir, project, "addons", file_name)
                 dst_file_path = os.path.join(release_dir, project, "optionals", file_name)
 
-                sigFile_name = file_name +"."+ key_name + ".bisign"
+                sigFile_name = "{}.{}.bisign".format(file_name,key_name)
                 src_sig_path = os.path.join(release_dir, project, "addons", sigFile_name)
                 dst_sig_path = os.path.join(release_dir, project, "optionals", sigFile_name)
 
@@ -428,7 +428,7 @@ def cleanup_optionals(mod):
                     #print("Preserving {}".format(sigFile_name))
                     os.renames(src_sig_path,dst_sig_path)
             except FileExistsError:
-                print_error(file_name + " already exists")
+                print_error("{} already exists".format(file_name))
                 continue
             shutil.rmtree(destination)
 
@@ -572,7 +572,7 @@ def get_ace_version():
         input("Press Enter to continue...")
         print("Resuming build...")
 
-    print_yellow(pbo_name_prefix.rstrip("_").upper() + " VERSION set to " + versionStamp)
+    print_yellow("{} VERSION set to {}".format(project.lstrip("@").upper(),versionStamp))
     ACE_VERSION = versionStamp
     return ACE_VERSION
 
@@ -959,13 +959,13 @@ See the make.cfg file for additional build options.
 
                 # Use biKeyNameAbrev to attempt to minimize problems from this BI Bug REFERENCE: http://feedback.arma3.com/view.php?id=22133
                 biKeyNameAbrev = key_name.split("-")[0]
-                shutil.copyfile(os.path.join(private_key_path, key_name + ".bikey"), os.path.join(module_root, release_dir, project, "keys", biKeyNameAbrev + ".bikey"))
+                shutil.copyfile(os.path.join(private_key_path, key_name + ".bikey"), os.path.join(module_root, release_dir, project, "keys", "{}.bikey".format(biKeyNameAbrev)))
 
             except:
                 print_error("Could not copy key to release directory.")
                 raise
 
-            key = os.path.join(private_key_path, key_name + ".biprivatekey")
+            key = os.path.join(private_key_path, "{}.biprivatekey".format(key_name))
 
         # Remove any obsolete files.
         print_blue("\nChecking for obsolete files...")
@@ -975,7 +975,7 @@ See the make.cfg file for additional build options.
                 if check_for_obsolete_pbos(module_root, file):
                     fileName = os.path.splitext(file)[0]
                     print_yellow("Removing obsolete file => {}".format(file))
-                    purge(obsolete_check_path,fileName+"\..",fileName+".*")
+                    purge(obsolete_check_path, "{}\..".format(fileName), "{}.*".format(fileName))
 
         obsolete_check_path = os.path.join(module_root, release_dir, project)
         for file in os.listdir(obsolete_check_path):
@@ -1006,12 +1006,12 @@ See the make.cfg file for additional build options.
             new_sha = get_directory_hash(os.path.join(module_root, module))
 
             # Is the pbo or sig file missing?
-            missing = not os.path.isfile(os.path.join(release_dir, project, "addons", pbo_name_prefix + module + ".pbo"))
-            sigFile = pbo_name_prefix + module + ".pbo." + key_name + ".bisign"
+            missing = not os.path.isfile(os.path.join(release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module)))
+            sigFile = "{}{}.pbo.{}.bisign".format(pbo_name_prefix,module,key_name)
             sigMissing = not os.path.isfile(os.path.join(release_dir, project, "addons", sigFile))
 
             if missing:
-                print_yellow("Missing PBO file " + pbo_name_prefix + module + ".pbo. Building...")
+                print_yellow("Missing PBO file {}{}.pbo. Building...".format(pbo_name_prefix,module))
 
             # Check if it needs rebuilt
             # print ("Hash:", new_sha)
@@ -1021,7 +1021,7 @@ See the make.cfg file for additional build options.
                     if sigMissing:
                         if key:
                             print("Missing Signature key {}".format(sigFile))
-                            build_signature_file(os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo"))
+                            build_signature_file(os.path.join(module_root, release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module)))
                     # Skip everything else
                     continue
 
@@ -1046,13 +1046,13 @@ See the make.cfg file for additional build options.
 
             try:
                 # Remove the old pbo, key, and log
-                old = os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix+module) + "*"
+                old = os.path.join(module_root, release_dir, project, "addons", "{}{}".format(pbo_name_prefix,module)) + "*"
                 files = glob.glob(old)
                 for f in files:
                     os.remove(f)
 
                 if pbo_name_prefix:
-                    old = os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix+module) + "*"
+                    old = os.path.join(module_root, release_dir, project, "addons", "{}{}".format(pbo_name_prefix,module)) + "*"
                     files = glob.glob(old)
                     for f in files:
                         os.remove(f)
@@ -1110,17 +1110,17 @@ See the make.cfg file for additional build options.
                         # Prettyprefix rename the PBO if requested.
                         if pbo_name_prefix:
                             try:
-                                os.rename(os.path.join(module_root, release_dir, project, "addons", module+".pbo"), os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix+module+".pbo"))
+                                os.rename(os.path.join(module_root, release_dir, project, "addons", "{}.pbo".format(module)), os.path.join(module_root, release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module)))
                             except:
                                 raise
                                 print_error("Could not rename built PBO with prefix.")
                         # Sign result
-                        if (key and not "ace_{}.pbo".format(module) in signature_blacklist):
+                        if (key and not "{}{}.pbo".format(pbo_name_prefix,module) in signature_blacklist):
                             print("Signing with {}.".format(key))
                             if pbo_name_prefix:
-                                ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo")])
+                                ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module))])
                             else:
-                                ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", module + ".pbo")])
+                                ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", "{}.pbo".format(module))])
 
                             if ret == 0:
                                 build_successful = True
@@ -1179,7 +1179,7 @@ See the make.cfg file for additional build options.
                     # Prettyprefix rename the PBO if requested.
                     if pbo_name_prefix:
                         try:
-                            os.rename(os.path.join(make_root, release_dir, project, "addons", module+".pbo"), os.path.join(make_root, release_dir, project, "addons", pbo_name_prefix+module+".pbo"))
+                            os.rename(os.path.join(make_root, release_dir, project, "addons", "{}.pbo".format(module)), os.path.join(make_root, release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module)))
                         except:
                             raise
                             print_error("Could not rename built PBO with prefix.")
@@ -1188,12 +1188,12 @@ See the make.cfg file for additional build options.
                         # Sign result
 
                         #print_yellow("Sig_fileName: ace_{}.pbo".format(module))
-                        if (key and not (pbo_name_prefix + module + ".pbo") in signature_blacklist) :
+                        if (key and not "{}{}.pbo".format(pbo_name_prefix,module) in signature_blacklist) :
                             print("Signing with {}.".format(key))
                             if pbo_name_prefix:
-                                ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo")])
+                                ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons","{}{}.pbo".format(pbo_name_prefix,module))])
                             else:
-                                ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons", module + ".pbo")])
+                                ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons", "{}.pbo".format(module))])
 
                             if ret == 0:
                                 build_successful = True
