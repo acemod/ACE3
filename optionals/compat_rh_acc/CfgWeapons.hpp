@@ -17,6 +17,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Accupoint {
@@ -31,6 +32,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class m3lr {
@@ -45,6 +47,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class mk4 {
@@ -59,6 +62,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class c79scope {
@@ -73,6 +77,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class c79scope {
@@ -87,6 +92,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class pvs10 {
@@ -101,6 +107,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class MTWS {
@@ -115,6 +122,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class MTWSmg {
@@ -129,6 +137,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class HTWS {
