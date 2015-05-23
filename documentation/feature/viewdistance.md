@@ -7,7 +7,7 @@ parent: wiki
 ---
 
 ## 1. Overview
-The View Distance feature is enabled by default. It adds the ability to have different view distance settings when on foot, in a vehicle or in the air.
+ACE3 View Distance is enabled by default. It adds the ability to have different view distance settings when on foot, in a vehicle or in the air.
 
 ## 2. Usage
 - When ingame, push <kbd>ESC</kbd>.
