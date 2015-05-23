@@ -318,7 +318,7 @@ This module allows disabling the ACE3 View Distance feature as well as setting a
 **Settings:**
 
 1. **Enable ACE viewdistance (Boolean)**<br>
-Enabled ACE viewdistance<br>
+Enables ACE viewdistance<br>
 `Default value: Yes`
 2. **View Distance Limit (Number)**<br>
 Sets the limit for how high clients can raise their view distance (<= 10000)
