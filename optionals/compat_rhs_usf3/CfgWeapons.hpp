@@ -97,14 +97,4 @@ class CfgWeapons
         lockingTargetSound[] = {"",0,1};
         lockedTargetSound[] = {"",0,1};
     };
-    
-    class rhs_weap_fgm148 : launch_O_Titan_F {
-        ace_javelin_enabled = 1;
-        weaponInfoType = "ACE_RscOptics_javelin";
-        modelOptics = "\z\ace\addons\javelin\data\reticle_titan.p3d";
-         
-        canLock = 0;
-        lockingTargetSound[] = {"",0,1};
-        lockedTargetSound[] = {"",0,1};
-    };
 };
