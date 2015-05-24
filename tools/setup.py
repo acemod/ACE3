@@ -12,13 +12,13 @@ import subprocess
 import winreg
 
 ######## GLOBALS #########
-maindir = "z"
-projectdir = "ace"
-cba = "P:\\x\\cba"
+MAINDIR = "z"
+PROJECTDIR = "ace"
+CBA = "P:\\x\\cba"
 ##########################
 
 def main():
-    fulldir = "{}\\{}".format(maindir,projectdir)
+    fulldir = "{}\\{}".format(MAINDIR,PROJECTDIR)
     print("""
   ######################################
   # ACE3 Development Environment Setup #
@@ -36,7 +36,7 @@ def main():
     [Arma 3 installation directory]\\{} => ACE3 project folder
     P:\\{}                              => ACE3 project folder
   
-  It will also copy the required CBA includes to {}, if you do not have the CBA source code already.""".format(fulldir,fulldir,cba))
+  It will also copy the required CBA includes to {}, if you do not have the CBA source code already.""".format(fulldir,fulldir,CBA))
     print("\n") 
 
     try:
@@ -65,26 +65,26 @@ def main():
 
     print("\n# Creating links ...")
 
-    if os.path.exists("P:\\{}\\{}".format(maindir,projectdir)):
+    if os.path.exists("P:\\{}\\{}".format(MAINDIR,PROJECTDIR)):
         print("Link on P: already exists. Please finish the setup manually.")
         return 4
 
-    if os.path.exists(os.path.join(armapath, maindir, projectdir)):
+    if os.path.exists(os.path.join(armapath, MAINDIR, PROJECTDIR)):
         print("Link in Arma directory already exists. Please finish the setup manually.")
         return 5
 
     try:
-        if not os.path.exists("P:\\{}".format(maindir)):
-            os.mkdir("P:\\{}".format(maindir))
-        if not os.path.exists(os.path.join(armapath, maindir)):
-            os.mkdir(os.path.join(armapath, maindir))
+        if not os.path.exists("P:\\{}".format(MAINDIR)):
+            os.mkdir("P:\\{}".format(MAINDIR))
+        if not os.path.exists(os.path.join(armapath, MAINDIR)):
+            os.mkdir(os.path.join(armapath, MAINDIR))
 
         if platform.win32_ver()[0] == "7":
-            subprocess.call(["cmd", "/c", "mklink", "/D", "P:\\{}\\{}".format(maindir,projectdir), projectpath])
-            subprocess.call(["cmd", "/c", "mklink", "/D", os.path.join(armapath, maindir, projectdir), projectpath])
+            subprocess.call(["cmd", "/c", "mklink", "/D", "P:\\{}\\{}".format(MAINDIR,PROJECTDIR), projectpath])
+            subprocess.call(["cmd", "/c", "mklink", "/D", os.path.join(armapath, MAINDIR, PROJECTDIR), projectpath])
         else:
-            subprocess.call(["cmd", "/c", "mklink", "/D", "/J", "P:\\{}\\{}".format(maindir,projectdir), projectpath])
-            subprocess.call(["cmd", "/c", "mklink", "/D", "/J", os.path.join(armapath, maindir, projectdir), projectpath])
+            subprocess.call(["cmd", "/c", "mklink", "/D", "/J", "P:\\{}\\{}".format(MAINDIR,PROJECTDIR), projectpath])
+            subprocess.call(["cmd", "/c", "mklink", "/D", "/J", os.path.join(armapath, MAINDIR, PROJECTDIR), projectpath])
     except:
         raise
         print("Something went wrong during the link creation. Please finish the setup manually.")
@@ -95,18 +95,18 @@ def main():
 
     print("\n# Copying required CBA includes ...")
 
-    if os.path.exists(cba):
-        print("{} already exists, skipping.".format(cba))
+    if os.path.exists(CBA):
+        print("{} already exists, skipping.".format(CBA))
         return -1
 
     try:
-        shutil.copytree(os.path.join(projectpath, "tools", "cba"), cba)
+        shutil.copytree(os.path.join(projectpath, "tools", "cba"), CBA)
     except:
         raise
-        print("Something went wrong while copying CBA includes. Please copy tools\\cba to {} manually.".format(cba))
+        print("Something went wrong while copying CBA includes. Please copy tools\\cba to {} manually.".format(CBA))
         return 7
 
-    print("# CBA includes copied successfully to {}.".format(cba))
+    print("# CBA includes copied successfully to {}.".format(CBA))
 
     return 0
 
