@@ -18,7 +18,7 @@ CBA = "P:\\x\\cba"
 ##########################
 
 def main():
-    fulldir = "{}\\{}".format(MAINDIR,PROJECTDIR)
+    FULLDIR = "{}\\{}".format(MAINDIR,PROJECTDIR)
     print("""
   ######################################
   # ACE3 Development Environment Setup #
@@ -36,7 +36,7 @@ def main():
     [Arma 3 installation directory]\\{} => ACE3 project folder
     P:\\{}                              => ACE3 project folder
   
-  It will also copy the required CBA includes to {}, if you do not have the CBA source code already.""".format(fulldir,fulldir,CBA))
+  It will also copy the required CBA includes to {}, if you do not have the CBA source code already.""".format(FULLDIR,FULLDIR,CBA))
     print("\n") 
 
     try:
