@@ -16,4 +16,4 @@
 #include "script_component.hpp"
 private["_unit"];
 _unit = _this select 0;
-(animationState _unit == 'para_pilot' && !(_unit getvariable [QGVAR(chuteIsCut),false]) && (_unit getvariable [QGVAR(hasReserve),false]))
+(vehicle _unit isKindOf 'ParachuteBase' && !(_unit getvariable [QGVAR(chuteIsCut),false]) && (_unit getvariable [QGVAR(hasReserve),false]))
