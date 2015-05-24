@@ -20,11 +20,11 @@ class CfgAmmo {
     };
     
     class B_556x45_Ball : BulletBase {
-        airFriction=-0.001265;
+        airFriction=-0.001306;
         hit=8;
         typicalSpeed=750;
-        tracerStartTime = 0.073;        //M856 tracer burns out to 800m
-        tracerEndTime = 1.579;          //Time in seconds calculated with ballistics calculator
+        tracerStartTime=0.073;  // M856 tracer burns out to 800m
+        tracerEndTime=1.57123;  // Time in seconds calculated with ballistics calculator
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
         ACE_bulletMass=4.0176;
@@ -54,7 +54,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={190.5, 368.3, 457.2, 508.0};
     };
     class ACE_556x45_Ball_Mk318 : B_556x45_Ball {
-        airFriction=-0.001120;
+        airFriction=-0.001292;
         caliber=0.8;
         deflecting=18;
         hit=9;
@@ -71,7 +71,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={254.0, 393.7, 508.0};
     };
     class ACE_556x45_Ball_M995_AP : B_556x45_Ball {
-        airFriction=-0.001120;
+        airFriction=-0.001299;
         caliber=1.6;
         deflecting=18;
         hit=6;
@@ -85,14 +85,14 @@ class CfgAmmo {
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={820, 865, 880};
-        ACE_barrelLengths[]={254.0, 393.7, 508.0};
+        ACE_barrelLengths[]={254.0, 368.3, 508.0};
     };
     class B_556x45_Ball_Tracer_Red;
     class ACE_B_556x45_Ball_Tracer_Dim: B_556x45_Ball_Tracer_Red {
         nvgOnly = 1;
     };
     class ACE_545x39_Ball_7N6M : B_556x45_Ball {
-        airFriction=-0.001162;
+        airFriction=-0.001222;
         caliber=0.6;
         deflecting=18;
         hit=7;
@@ -110,13 +110,13 @@ class CfgAmmo {
     };
     class B_556x45_Ball_Tracer_Green;
     class ACE_545x39_Ball_7T3M : B_556x45_Ball_Tracer_Green {
-        airFriction=-0.001162;
+        airFriction=-0.001222;
         caliber=0.6;
         deflecting=18;
         hit=7;
         typicalSpeed=883;
-        tracerStartTime = 0.073;            //7T3M tracer burns out to 850m
-        tracerEndTime = 1.736;              //Time in seconds calculated with ballistics calculator
+        tracerStartTime=0.073;  // 7T3M tracer burns out to 850m
+        tracerEndTime=1.70236;  // Time in seconds calculated with ballistics calculator
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
         ACE_bulletMass=3.22704;
@@ -129,7 +129,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
     class B_65x39_Caseless : BulletBase {
-        airFriction=-0.000785;
+        airFriction=-0.000779;
         typicalSpeed=800;
         ACE_caliber=6.706;
         ACE_bulletLength=32.893;
@@ -151,7 +151,7 @@ class CfgAmmo {
         nvgOnly = 1;
     };
     class ACE_65x47_Ball_Scenar: B_65x39_Caseless {
-        airFriction=-0.00078;
+        airFriction=-0.0006977;
         typicalSpeed=820 ;
         caliber=0.9;
         ACE_caliber=6.706;
@@ -166,7 +166,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
     class ACE_65_Creedmor_Ball: B_65x39_Caseless {
-        airFriction=-0.000651;
+        airFriction=-0.0006136;
         typicalSpeed=860 ;
         caliber=1.1;
         ACE_caliber=6.706;
@@ -181,11 +181,11 @@ class CfgAmmo {
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
     class B_762x51_Ball : BulletBase {
-        airFriction=-0.001035;
+        airFriction=-0.0010319;
         typicalSpeed=833;
         hit=9;
-        tracerStartTime = 0.073;            //Based on the British L5A1 which burns out to 1000m 
-        tracerEndTime = 2.058;              //Time in seconds calculated with ballistics calculator
+        tracerStartTime=0.073;  // Based on the British L5A1 which burns out to 1000m 
+        tracerEndTime=2.15957;  // Time in seconds calculated with ballistics calculator
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.4608;
@@ -202,7 +202,7 @@ class CfgAmmo {
         nvgOnly = 1;
     };
     class ACE_762x51_Ball_M118LR : B_762x51_Ball {
-        airFriction=-0.0008525;
+        airFriction=-0.0008497;
         caliber=1.8;
         hit=16;
         typicalSpeed=790;
@@ -218,7 +218,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
     class ACE_762x51_Ball_Mk316_Mod_0 : B_762x51_Ball {
-        airFriction=-0.0008525;
+        airFriction=-0.0008421;
         caliber=1.8;
         hit=16;
         typicalSpeed=790;
@@ -234,7 +234,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
     class ACE_762x51_Ball_Mk319_Mod_0 : B_762x51_Ball {
-        airFriction=-0.00103;
+        airFriction=-0.0010435;
         caliber=1.5;
         hit=14;
         typicalSpeed=900;
@@ -250,7 +250,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={330.2, 406.4, 508.0};
     };
     class ACE_762x51_Ball_M993_AP : B_762x51_Ball {
-        airFriction=-0.00103;
+        airFriction=-0.0010914;
         caliber=2.2;
         hit=11;
         typicalSpeed=910;
@@ -266,7 +266,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={330.2, 406.4, 508.0};
     };
     class ACE_762x51_Ball_Subsonic : B_762x51_Ball {
-        airFriction=-0.000535;
+        airFriction=-0.0004145;
         caliber=1;
         hit=6;
         typicalSpeed=320;
@@ -282,7 +282,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
     class ACE_30_06_M1_Ball : B_762x51_Ball {
-        airFriction=-0.0009;
+        airFriction=-0.0008290;
         typicalSpeed=800;
         caliber=2.0;
         hit=10;
@@ -298,7 +298,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
     class ACE_7_Remington_Magnum_Ball : B_762x51_Ball {
-        airFriction=-0.0008;
+        airFriction=-0.0005809;
         typicalSpeed=820;
         caliber=2.1;
         hit=8;
@@ -314,7 +314,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
     class ACE_243_Winchester_Ball : B_762x51_Ball {
-        airFriction=-0.00095;
+        airFriction=-0.0007010;
         typicalSpeed=915;
         caliber=2.3;
         hit=6;
@@ -330,7 +330,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
     class ACE_762x67_Ball_Mk248_Mod_0 : B_762x51_Ball {
-        airFriction=-0.000830;
+        airFriction=-0.00073045;
         caliber=1.8;
         hit=17;
         typicalSpeed=900;
@@ -346,7 +346,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
     class ACE_762x67_Ball_Mk248_Mod_1 : B_762x51_Ball {
-        airFriction=-0.000815;
+        airFriction=-0.0006326;
         caliber=1.9;
         hit=18;
         typicalSpeed=867;
@@ -362,7 +362,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
     class ACE_762x67_Ball_Berger_Hybrid_OTM : B_762x51_Ball {
-        airFriction=-0.00076;
+        airFriction=-0.0005271;
         caliber=2.0;
         hit=19;
         typicalSpeed=853;
@@ -378,7 +378,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
     class B_762x54_Ball: B_762x51_Ball {
-        airFriction=-0.001023;
+        airFriction=-0.0010165;
         typicalSpeed=820;
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
@@ -409,12 +409,12 @@ class CfgAmmo {
     };
     class B_762x54_Tracer_Green;
     class ACE_762x54_Ball_7T2 : B_762x54_Tracer_Green {
-        airFriction=-0.001023;
+        airFriction=-0.0010369;
         caliber=1.5;
         hit=15;
         typicalSpeed=800;
-        tracerStartTime = 0.073;            //Based on the 7T2 which burns three seconds
-        tracerEndTime = 3;
+        tracerStartTime=0.073;  // Based on the 7T2 which burns three seconds
+        tracerEndTime=3;
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.6552;
@@ -427,7 +427,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
     class ACE_762x35_Ball : B_762x51_Ball {
-        airFriction=-0.000821;
+        airFriction=-0.0012406;
         caliber=1.5;
         hit=11;
         typicalSpeed=790;
@@ -443,7 +443,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={228.6, 406.4, 508.0};
     };
     class ACE_762x39_Ball : B_762x51_Ball {
-        airFriction=-0.0015168;
+        airFriction=-0.0014519;
         hit=12;
         caliber=1.5;
         typicalSpeed=716;
@@ -477,7 +477,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
     class B_9x21_Ball : BulletBase {
-        airFriction=-0.00125;
+        airFriction=-0.0021165;
         typicalSpeed=390;
         hit=6;
         ACE_caliber=9.042;
@@ -493,7 +493,7 @@ class CfgAmmo {
     };
     class ACE_9x18_Ball_57N181S : B_9x21_Ball {
         hit=5;
-        airFriction=-0.001234;
+        airFriction=-0.0015655;
         typicalSpeed=298;
         ACE_caliber=9.271;
         ACE_bulletLength=15.494;
@@ -507,7 +507,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
     class ACE_9x19_Ball : B_9x21_Ball {
-        airFriction=-0.001234;
+        airFriction=-0.0015833;
         typicalSpeed=370;
         hit=6;
         ACE_caliber=9.017;
@@ -537,7 +537,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={101.6, 117.094, 228.6};
     };
     class ACE_765x17_Ball: B_9x21_Ball {
-        airFriction=-0.001213;
+        airFriction=-0.001410;
         typicalSpeed=282;
         hit=7;
         ACE_caliber=7.938;
@@ -552,7 +552,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
     class ACE_303_Ball : ACE_762x51_Ball_M118LR {
-        airFriction=-0.00083;
+        airFriction=-0.0008410;
         typicalSpeed=761;
         caliber=2.0;
         ACE_caliber=7.899;
@@ -567,7 +567,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
     class B_93x64_Ball : BulletBase {
-        airFriction=-0.00106;
+        airFriction=-0.0010921;
         typicalSpeed=880;
         ACE_caliber=9.296;
         ACE_bulletLength=34.29;
@@ -582,7 +582,7 @@ class CfgAmmo {
     };
     class B_408_Ball : BulletBase {
         timeToLive=10;
-        airFriction=-0.000395;
+        airFriction=-0.0003958;
         typicalSpeed=910;
         ACE_caliber=10.363;
         ACE_bulletLength=54.0;
@@ -611,7 +611,7 @@ class CfgAmmo {
     };
     class B_338_Ball : BulletBase {
         timeToLive=10;
-        airFriction=-0.000606;
+        airFriction=-0.0006234;
         typicalSpeed=915;
         ACE_caliber=8.585;
         ACE_bulletLength=39.573;
@@ -625,7 +625,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={508.0, 660.4, 711.2};
     };
     class B_338_NM_Ball : BulletBase {
-        airFriction=-0.000537;
+        airFriction=-0.0005434;
         typicalSpeed=820;
         ACE_caliber=8.585;
         ACE_bulletLength=43.18;
@@ -640,7 +640,7 @@ class CfgAmmo {
     };
     class ACE_338_Ball : B_338_Ball {
         timeToLive=10;
-        airFriction=-0.000535;
+        airFriction=-0.0005397;
         typicalSpeed=826;
         ACE_caliber=8.585;
         ACE_bulletLength=43.18;
@@ -655,7 +655,7 @@ class CfgAmmo {
     };
     class ACE_338_Ball_API526 : B_338_Ball {
         timeToLive=10;
-        airFriction=-0.000673;
+        airFriction=-0.0007120;
         caliber=2.8;
         typicalSpeed=895;
         ACE_caliber=8.585;
@@ -670,7 +670,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={508.0, 660.4, 711.2};
     };
     class B_127x54_Ball : BulletBase {
-        airFriction=-0.00014;
+        airFriction=-0.0001877;
         typicalSpeed=300;
         ACE_caliber=12.954;
         ACE_bulletLength=64.516;
@@ -685,7 +685,7 @@ class CfgAmmo {
     };
     class B_127x99_Ball : BulletBase {
         timeToLive=10;
-        airFriction=-0.0006;
+        airFriction=-0.0005942;
         typicalSpeed=900;
         ACE_caliber=12.954;
         ACE_bulletLength=58.674;
@@ -700,7 +700,7 @@ class CfgAmmo {
     };
     class ACE_127x99_API : BulletBase {
         timeToLive=10;
-        airFriction=-0.0006;
+        airFriction=-0.0005886;
         typicalSpeed=900;
         hit=25;
         caliber=4.0;
@@ -717,7 +717,7 @@ class CfgAmmo {
     };
     class ACE_127x99_Ball_AMAX : B_127x99_Ball {
         timeToLive=10;
-        airFriction=-0.000374;
+        airFriction=-0.0003722;
         typicalSpeed=860;
         caliber=3.0;
         ACE_caliber=12.954;
@@ -733,7 +733,7 @@ class CfgAmmo {
     };
     class B_127x108_Ball : BulletBase {
         timeToLive=10;
-        airFriction=-0.00064;
+        airFriction=-0.0006469;
         typicalSpeed=820;
         ACE_caliber=12.979;
         ACE_bulletLength=64.008;
@@ -747,7 +747,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={728.98};
     };
     class B_45ACP_Ball : BulletBase {
-        airFriction=-0.0007182;
+        airFriction=-0.0007312;
         typicalSpeed=250;
         ACE_caliber=11.481;
         ACE_bulletLength=17.272;
