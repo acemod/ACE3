@@ -50,7 +50,7 @@ if !(group _target == group _player) then {
     _color = +GVAR(defaultNametagColor); //Make a copy, then multiply both alpha values (allows client to decrease alpha in settings)
     _color set [3, (_color select 3) * _alpha];
 } else {
-    _color = [[1, 1, 1, _alpha], [1, 0, 0, _alpha], [0, 1, 0, _alpha], [0, 0, 1, _alpha], [1, 1, 0, _alpha]] select (["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find (if (_target == _player) then {0} else {assignedTeam _target})) max 0
+    _color = [[1, 1, 1, _alpha], [1, 0, 0, _alpha], [0, 1, 0, _alpha], [0, 0, 1, _alpha], [1, 1, 0, _alpha]] select ((["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find (assignedTeam _target)) max 0);
 };
 
 // Convert position to ASLW (expected by drawIcon3D) and add height offsets
