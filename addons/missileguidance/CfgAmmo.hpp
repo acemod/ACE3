@@ -94,47 +94,59 @@ class CfgAmmo {
     };
     
     // Titan
-    class M_Titan_AT : MissileBase {
+    class M_Titan_AT : MissileBase {};
+
+    class ACE_Javelin_FGM148: M_Titan_AT {
         irLock = 0;
         laserLock = 0;
         airLock = 0;
 
         // Turn off arma crosshair-guidance
         manualControl = 0;
-        
+
         hit = 1400;         // default: 800
         indirectHit = 20;
         indirectHitRange = 2;
         // ACE uses these values
         //trackOversteer = 1;
         //trackLead = 0;
-       
+
+        initTime = 2;
+
         // Begin ACE guidance Configs
         class ADDON {
             enabled = 1;
-            
+
             minDeflection = 0.00005;      // Minium flap deflection for guidance
             maxDeflection = 0.025;       // Maximum flap deflection for guidance
             incDeflection = 0.00005;      // The incrmeent in which deflection adjusts.
-            
+
             canVanillaLock = 0;
-            
+
             // Guidance type for munitions
             defaultSeekerType = "Optic";
-            seekerTypes[] = { "Optic" };   
-            
+            seekerTypes[] = { "Optic" };
+
             defaultSeekerLockMode = "LOBL";
             seekerLockModes[] = { "LOBL" };
-            
+
             seekerAngle = 180;           // Angle in front of the missile which can be searched
             seekerAccuracy = 1;         // seeker accuracy multiplier
-            
+
             seekerMinRange = 0;
             seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
-            
+
             // Attack profile type selection
             defaultAttackProfile = "JAV_TOP";
             attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
+        };
+    };
+    class ACE_Javelin_FGM148_static: ACE_Javelin_FGM148 {
+        //Take config changes from (M_Titan_AT_static: M_Titan_AT)
+        initTime = 0.25;  //"How long (in seconds) the projectile waits before starting it's engine.", - but doesn't seem to do anything
+        effectsMissileInit = "RocketBackEffectsStaticRPG";
+        class ADDON: ADDON {
+            enabled = 1;
         };
     };
 };
