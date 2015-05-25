@@ -27,7 +27,7 @@ if (([_target] call cse_fnc_isAwake)) exitwith {};
 if ([_target] call EFUNC(common,unloadPerson)) then {
     if (_drag) then {
         if ((vehicle _caller) == _caller) then {
-            [[_caller, _target, true], QUOTE(DFUNC(actionDragUnit)), _caller, false] call EFUNC(common,execRemoteFnc); // TODO replace by event
+            [[_caller, _target], QUOTE(EFUNC(common,unloadPerson)), _caller, false] call EFUNC(common,execRemoteFnc); // TODO replace by event
         };
     };
 };
