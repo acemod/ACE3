@@ -78,6 +78,8 @@ PREP(treatmentAdvanced_fullHeal);
 PREP(treatmentAdvanced_fullHealLocal);
 PREP(treatmentAdvanced_medication);
 PREP(treatmentAdvanced_medicationLocal);
+PREP(treatmentAdvanced_surgicalKit);
+PREP(treatmentAdvanced_surgicalKitLocal);
 PREP(treatmentBasic_bandage);
 PREP(treatmentBasic_bloodbag);
 PREP(treatmentBasic_bloodbagLocal);
