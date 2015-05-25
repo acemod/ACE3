@@ -63,7 +63,7 @@
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_Master_Description">
             <English>A Master Key will open any lock, no matter what!</English>
-            <German>Ein Generalschlüssel der jedes Schloss öffnet...</German>
+            <German>Ein Generalschlüssel der jedes Schloss öffnet!</German>
             <Spanish>Una llave maestra abrirá cualquier cierre, no importa cual!</Spanish>
             <French>Un passe-partout qui ouvrira n'importe quelle serrure.</French>
             <Polish>Uniwersalny klucz, który otworzy każdy zamek.</Polish>
@@ -75,7 +75,7 @@
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_Lockpick_Description">
             <English>A lockpick set that can pick the locks of most vehicles.</English>
-            <German>Ein Dietrich der die meisten Fahrzeugschlösser knacken kann...</German>
+            <German>Ein Dietrich der die meisten Fahrzeugschlösser knacken kann.</German>
             <Spanish>Un set de ganzúas que puede abrir las cerraduras de la mayoría vehículos.</Spanish>
             <French>Un crochet qui ouvrira la plupart des véhicules.</French>
             <Polish>Zestaw wytrychów, dzięki któremu można otworzyć zamki w większości pojazdów.</Polish>
@@ -87,7 +87,7 @@
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_West_Description">
             <English>A key that should open most WEST vehicles.</English>
-            <German>Ein Schlüssel der die meisten westlichen Fahrzeuge öffnen sollte...</German>
+            <German>Ein Schlüssel der die meisten westlichen Fahrzeuge öffnen sollte.</German>
             <Spanish>Una llave que abrirá la mayoría de vehículos occidentales.</Spanish>
             <French>Une clé qui ouvrira la plupart des véhicules OUEST.</French>
             <Polish>Klucz, który powinien otworzyć większość pojazdów ZACHODU.</Polish>
@@ -99,7 +99,7 @@
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_East_Description">
             <English>A key that should open most EAST vehicle.</English>
-            <German>Ein Schlüssel der die meisten östlichen Fahrzeuge öffnen sollte...</German>
+            <German>Ein Schlüssel der die meisten östlichen Fahrzeuge öffnen sollte.</German>
             <Spanish>Una llave que abrirá la mayoría de vehículos orientales.</Spanish>
             <French>Une clé qui ouvrira la plupart des véhicules EST.</French>
             <Polish>Klucz, który powinien otworzyć większość pojazdów WSCHODU.</Polish>
@@ -111,7 +111,7 @@
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_Indp_Description">
             <English>A key that should open most INDEP vehicle.</English>
-            <German>Ein Schlüssel der die meisten Fahrzeuge der Aufständischen öffnen sollte...</German>
+            <German>Ein Schlüssel der die meisten Fahrzeuge der Aufständischen öffnen sollte.</German>
             <Spanish>Una llave que abrirá la mayoría de vehículos independientes.</Spanish>
             <French>Une clé qui ouvrira la plupart des véhicules INDEP.</French>
             <Polish>Klucz, który powinien otworzyć większość pojazdów INDFOR.</Polish>
@@ -123,7 +123,7 @@
         </Key>
         <Key ID="STR_ACE_Vehicle_Item_Civ_Description">
             <English>A key that should open most CIV vehicle.</English>
-            <German>Ein Schlüssel der die meisten zivilen Fahrzeuge öffnen sollte...</German>
+            <German>Ein Schlüssel der die meisten zivilen Fahrzeuge öffnen sollte.</German>
             <Spanish>Una llave que abrirá la mayoría de vehículos civiles.</Spanish>
             <French>Une clé qui ouvrira la plupart des véhicules CIV.</French>
             <Polish>Klucz, który powinien otworzyć większość pojazdów CYWILNYCH.</Polish>

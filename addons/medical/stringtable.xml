@@ -2091,7 +2091,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
-            <German>Schwer verwundet:</German>
+            <German>Schwer verwundet</German>
             <Polish>Ciężko ranny</Polish>
             <Russian>Тяжелые ранения</Russian>
             <Italian>Gravemente ferito</Italian>
@@ -2103,7 +2103,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_LightlyWounded">
             <English>Lightly wounded</English>
-            <German>Leicht verwundet:</German>
+            <German>Leicht verwundet</German>
             <Polish>Lekko ranny</Polish>
             <Russian>Легкие ранения</Russian>
             <Italian>Leggermente ferito</Italian>
@@ -2115,7 +2115,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_VeryLightlyWounded">
             <English>Very lightly wounded</English>
-            <German>Sehr leicht verwundet:</German>
+            <German>Sehr leicht verwundet</German>
             <Polish>B. lekko ranny</Polish>
             <Russian>Царапины</Russian>
             <Italian>Ferito lievemente</Italian>
@@ -2583,7 +2583,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Minor">
             <English>Smal Velocity Wound</English>
-            <German>Kleines Ballistisches Trauma</German>
+            <German>Kleines ballistisches Trauma</German>
             <Italian>Lenta Velocità Ferita</Italian>
             <Russian>Малая огнестрельная рана</Russian>
             <Polish>Pomniejsza rana postrzałowa</Polish>
@@ -2595,7 +2595,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Medium">
             <English>Medium Velocity Wound</English>
-            <German>Mittleres Ballistisches Trauma</German>
+            <German>Mittleres ballistisches Trauma</German>
             <Italian>Media Velocità Ferita</Italian>
             <Russian>Средняя огнестрельная рана</Russian>
             <Polish>Średnia rana postrzałowa</Polish>
@@ -2607,7 +2607,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Large">
             <English>Large Velocity Wound</English>
-            <German>Großes Ballistisches Trauma</German>
+            <German>Großes ballistisches Trauma</German>
             <Italian>Alta Velocità Ferita</Italian>
             <Russian>Большая огнестрельная рана</Russian>
             <Polish>Duża rana postrzałowa</Polish>

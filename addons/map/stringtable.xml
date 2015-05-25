@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Map_Module_DisplayName">
             <English>Map</English>
             <Polish>Mapa</Polish>
+            <German>Karte</German>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_DisplayName">
             <English>Map illumination?</English>
@@ -44,6 +45,7 @@
         <Key ID="STR_ACE_Map_BFT_Module_DisplayName">
             <English>Blue Force Tracking</English>
             <Polish>Blue Force Tracking</Polish>
+            <German>Blue Force Tracking</German>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_DisplayName">
             <English>Interval</English>
@@ -56,6 +58,7 @@
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_DisplayName">
             <English>Hide AI groups?</English>
             <Polish>Ukryj grupy AI</Polish>
+            <German>KI-Gruppen verstecken</German>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_Description">
             <English>Hide markers for 'AI only' groups?</English>
