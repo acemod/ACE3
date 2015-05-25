@@ -20,7 +20,7 @@ class CfgAmmo {
     };
     
     class B_556x45_Ball : BulletBase {
-        airFriction=-0.001306;
+        airFriction=-0.0013685;
         hit=8;
         typicalSpeed=750;
         tracerStartTime=0.073;  // M856 tracer burns out to 800m
@@ -37,7 +37,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
     class ACE_556x45_Ball_Mk262 : B_556x45_Ball {
-        airFriction=-0.001125;
+        airFriction=-0.0011287;
         caliber=0.8;
         deflecting=18;
         hit=11;
@@ -54,7 +54,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={190.5, 368.3, 457.2, 508.0};
     };
     class ACE_556x45_Ball_Mk318 : B_556x45_Ball {
-        airFriction=-0.001292;
+        airFriction=-0.0013064;
         caliber=0.8;
         deflecting=18;
         hit=9;
@@ -71,7 +71,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={254.0, 393.7, 508.0};
     };
     class ACE_556x45_Ball_M995_AP : B_556x45_Ball {
-        airFriction=-0.001299;
+        airFriction=-0.0012972;
         caliber=1.6;
         deflecting=18;
         hit=6;
@@ -129,7 +129,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
     class B_65x39_Caseless : BulletBase {
-        airFriction=-0.000779;
+        airFriction=-0.0007728;
         typicalSpeed=800;
         ACE_caliber=6.706;
         ACE_bulletLength=32.893;
@@ -330,7 +330,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
     class ACE_762x67_Ball_Mk248_Mod_0 : B_762x51_Ball {
-        airFriction=-0.00073045;
+        airFriction=-0.0007305;
         caliber=1.8;
         hit=17;
         typicalSpeed=900;
@@ -392,7 +392,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
     class ACE_762x54_Ball_7N14 : B_762x51_Ball {
-        airFriction=-0.001023;
+        airFriction=-0.0010165;
         caliber=1.5;
         hit=15;
         typicalSpeed=820;
