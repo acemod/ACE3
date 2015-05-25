@@ -10,7 +10,7 @@
             <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
             <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
             <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
-            <Italian>Mostra sempre il cursore per le interazioni su se stessi</Italian>
+            <Italian>Mostra sempre il cursore delle autointerazioni</Italian>
             <Portuguese>Sempre mostrar cursor para interação pessoal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorInteraction">
