@@ -39,6 +39,7 @@ Only use the optional components that correspond with your mod-pack.
 ### 4.3 How to install these components?
 - Inside your `Arma 3/@ace/` folder, you'll find the `optionals` and `addons` folders.
 - Copy and paste the relevant `.pbo` and `.bisign` files from the `optionals` folder into the `addons` folder.
+- Copy and paste the `userconfig` folder from the `optionals` folder into root `Arma 3` folder.
 
 ## 5. Launch Arma 3 with ACE3
 - Launch Arma 3 to start the official game Launcher.
