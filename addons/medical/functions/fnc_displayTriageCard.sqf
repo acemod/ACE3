@@ -13,10 +13,9 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_show"];
+private ["_target", "_show", "_amount", "_item", "_log", "_message", "_triageCardTexts", "_triageStatus"];
 _target = _this select 0;
 _show = if (count _this > 1) then {_this select 1} else {true};
-GVAR(currentSelectedSelectionN) = if (count _this > 2) then {_this select 2} else {0};
 
 GVAR(TriageCardTarget) = if (_show) then {_target} else {ObjNull};
 
@@ -25,7 +24,7 @@ if (_show) then {
     createDialog QGVAR(triageCard);
 
     [{
-        private ["_target", "_display", "_alphaLevel", "_damaged", "_availableSelections", "_openWounds", "_selectionBloodLoss", "_red", "_green", "_blue", "_alphaLevel", "_allInjuryTexts", "_lbCtrl", "_genericMessages"];
+        private ["_target", "_display", "_alphaLevel", "_alphaLevel", "_lbCtrl"];
         _target = (_this select 0) select 0;
         if (GVAR(TriageCardTarget) != _target) exitwith {
             [_this select 1] call CBA_fnc_removePerFrameHandler;
@@ -59,7 +58,7 @@ if (_show) then {
         }foreach _log;
 
         if (count _triageCardTexts == 0) then {
-            _lbCtrl lbAdd "No entries on this triage card..";
+            _lbCtrl lbAdd (localize "STR_ACE_Medical_TriageCard_NoEntry");
         };
         {
             _lbCtrl lbAdd _x;

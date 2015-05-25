@@ -15,7 +15,7 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_className", "_currentInSystem", "_medicationConfig", "_painReduce", "_hrIncreaseLow", "_hrIncreaseNorm", "_hrIncreaseHigh", "_maxDose", "_inCompatableMedication", "_timeInSystem", "_heartRate", "_pain", "_resistance", "_hrCallback"];
+private ["_target", "_className", "_currentInSystem", "_medicationConfig", "_painReduce", "_hrIncreaseLow", "_hrIncreaseNorm", "_hrIncreaseHigh", "_maxDose", "_inCompatableMedication", "_timeInSystem", "_heartRate", "_pain", "_resistance", "_hrCallback", "_varName", "_viscosityChange"];
 _target = _this select 0;
 _className = _this select 1;
 
@@ -71,15 +71,17 @@ if (alive _target) then {
     };
 };
 
-// Reduce the pain level
-_pain = _target getvariable [QGVAR(pain), 0];
-_target setvariable [QGVAR(pain), (_pain - _painReduce) max 0];
+if (_painReduce > 0) then {
+    // Reduce the pain level
+    _painSuppress = _target getvariable [QGVAR(painSuppress), 0];
+    _target setvariable [QGVAR(painSuppress), (_painSuppress + _painReduce) max 0];
+};
 
-_resistance = _unit getvariable [QGVAR(peripheralResistance), 100];
+_resistance = _target getvariable [QGVAR(peripheralResistance), 100];
 _resistance = _resistance + _viscosityChange;
-_unit setvariable [QGVAR(peripheralResistance), _resistance max 0];
+_target setvariable [QGVAR(peripheralResistance), _resistance max 0];
 
-// Call back to ensure that the medication is decreased over time
-[_target, _classname, _varName, _maxDose, _timeInSystem, _inCompatableMedication, _viscosityChange] call FUNC(onMedicationUsage);
+// Call back to ensure that the medication is decreased over ACE_time
+[_target, _classname, _varName, _maxDose, _timeInSystem, _inCompatableMedication, _viscosityChange, _painReduce] call FUNC(onMedicationUsage);
 
 true

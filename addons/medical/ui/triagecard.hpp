@@ -49,7 +49,7 @@ class GVAR(triageCard) {
             font = "PuristaMedium";
             colorText[] = {0,0,0,1};
             colorBackground[] = {0,0,0,0};
-            text = "TRIAGE CARD";
+            text = "$STR_ACE_Medical_Actions_TriageCard";
         };
         class TriageList: ACE_gui_listBoxBase {
             idc = 200;
@@ -103,7 +103,7 @@ class GVAR(triageCard) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_MEDICAL_TRIAGE_STATUS_NONE;
+            text = $STR_ACE_Medical_Triage_Status_None;
             style = 0x02;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -121,7 +121,7 @@ class GVAR(triageCard) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_MEDICAL_TRIAGE_STATUS_MINOR;
+            text = $STR_ACE_Medical_Triage_Status_Minor;
             style = 0x02;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -139,7 +139,7 @@ class GVAR(triageCard) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_MEDICAL_TRIAGE_STATUS_DELAYED;
+            text = $STR_ACE_Medical_Triage_Status_Delayed;
             style = 0x02;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -157,7 +157,7 @@ class GVAR(triageCard) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_MEDICAL_TRIAGE_STATUS_IMMEDIATE;
+            text = $STR_ACE_Medical_Triage_Status_Immediate;
             style = 0x02;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -175,7 +175,7 @@ class GVAR(triageCard) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_MEDICAL_TRIAGE_STATUS_DECEASED;
+            text = $STR_ACE_Medical_Triage_Status_Deceased;
             style = 0x02;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";

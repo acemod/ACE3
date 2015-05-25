@@ -11,9 +11,7 @@
  */
 #include "script_component.hpp"
 
-private "_function";
-
-_function = _this select 0;
+PARAMS_1(_function);
 
 if (typeName _function == "STRING") exitWith {_function};
 

@@ -48,11 +48,11 @@ if (_state) then {
         if (_unit getVariable [QGVAR(isSurrendering), false] && {(vehicle _unit) == _unit}) then {
             //Adds an animation changed eh
             //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
+            private "_animChangedEHID";
             _animChangedEHID = _unit addEventHandler ["AnimChanged", {
                 PARAMS_2(_unit,_newAnimation);
                 if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
-                    ERROR("Surrender animation interrupted");
-                    systemChat format ["debug %2: new %1", _newAnimation, time];
+                    TRACE_1("Surrender animation interrupted",_newAnimation);
                     [_unit, "ACE_AmovPercMstpSsurWnonDnon", 1] call EFUNC(common,doAnimation);
                 };
             }];
@@ -64,6 +64,7 @@ if (_state) then {
     [_unit, QGVAR(Surrendered), false] call EFUNC(common,setCaptivityStatus);
 
     //remove AnimChanged EH
+    private "_animChangedEHID";
     _animChangedEHID = _unit getVariable [QGVAR(surrenderAnimEHID), -1];
     _unit removeEventHandler ["AnimChanged", _animChangedEHID];
     _unit setVariable [QGVAR(surrenderAnimEHID), -1];
@@ -88,7 +89,7 @@ if (_state) then {
             PARAMS_2(_args,_pfID);
             EXPLODE_2_PVT(_args,_unit,_maxTime);
             //If waited long enough or they re-surrendered or they are unconscious, exit loop
-            if ((time > _maxTime) || {_unit getVariable [QGVAR(isSurrendering), false]} || {_unit getVariable ["ACE_isUnconscious", false]}) exitWith {
+            if ((ACE_time > _maxTime) || {_unit getVariable [QGVAR(isSurrendering), false]} || {_unit getVariable ["ACE_isUnconscious", false]}) exitWith {
                 [_pfID] call CBA_fnc_removePerFrameHandler;
             };
             //Only break animation if they are actualy the "hands up" animation (because we are using switchmove there won't be an transition)
@@ -97,6 +98,6 @@ if (_state) then {
                 //Break out of hands up animation loop
                 [_unit, "ACE_AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
             };
-        }, 0, [_unit, (time + 20)]] call CBA_fnc_addPerFrameHandler;
+        }, 0, [_unit, (ACE_time + 20)]] call CBA_fnc_addPerFrameHandler;
     };
 };

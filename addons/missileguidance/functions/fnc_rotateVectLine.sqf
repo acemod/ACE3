@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+private["_d", "_map", "_p", "_theta", "_u"];
 
 _map = _this select 0;
 _theta = _this select 1;

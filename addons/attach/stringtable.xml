@@ -1,179 +1,209 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-01-31 -->
 <Project name="ACE">
-  <Package name="Attach">
-    <Key ID="STR_ACE_Attach_AttachDetach">
-      <English>Attach item &gt;&gt;</English>
-      <German>Gegenstand befestigen &gt;&gt;</German>
-      <Spanish>Acoplar objeto &gt;&gt;</Spanish>
-      <Polish>Przyczep przedmiot &gt;&gt;</Polish>
-      <French>Attacher l'objet &gt;&gt;</French>
-      <Czech>Připnout předmět &gt;&gt;</Czech>
-      <Portuguese>Acoplar item &gt;&gt;</Portuguese>
-      <Italian>Attacca l'oggetto &gt;&gt;</Italian>
-      <Hungarian>Tárgy hozzácsatolása &gt;&gt;</Hungarian>
-      <Russian>Добавить приспособления</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_Attach">
-      <English>Attach</English>
-      <German>Befestigen</German>
-      <Spanish>Acoplar</Spanish>
-      <Polish>Przyczep</Polish>
-      <French>Attacher</French>
-      <Czech>Připnout</Czech>
-      <Portuguese>Acoplar</Portuguese>
-      <Italian>Attacca</Italian>
-      <Hungarian>Hozzácsatolás</Hungarian>
-      <Russian>Присоединить</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_Detach">
-      <English>Detach item</English>
-      <German>Gegenstand entfernen</German>
-      <Spanish>Quitar objeto</Spanish>
-      <Polish>Odczep przedmiot</Polish>
-      <French>Détacher l'objet</French>
-      <Czech>Odepnout předmět</Czech>
-      <Portuguese>Separar item</Portuguese>
-      <Italian>Stacca l'oggetto</Italian>
-      <Hungarian>Tárgy lecsatolása</Hungarian>
-      <Russian>Отсоединить</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_IrStrobe_Attached">
-      <English>IR Strobe Attached</English>
-      <German>IR-Stroboskop befestigt</German>
-      <Spanish>Marcador IR acoplado</Spanish>
-      <Polish>Przyczepiono stroboskop IR</Polish>
-      <French>Strobe IR attaché</French>
-      <Czech>IR Značkovač Připnutý</Czech>
-      <Portuguese>Marcador IV Acoplado</Portuguese>
-      <Italian>Strobo IR attaccata</Italian>
-      <Hungarian>Infravörös jeladó hozzácsatolva</Hungarian>
-      <Russian>ИК строб присоединён</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_IrStrobe_Detached">
-      <English>IR Strobe Detached</English>
-      <German>IR-Stroboskop entfernt</German>
-      <Spanish>Marcador IR quitado</Spanish>
-      <Polish>Odczepiono stroboskop IR</Polish>
-      <French>Strobe IR détaché</French>
-      <Czech>IR Značkovač Odepnutý</Czech>
-      <Portuguese>Marcador IV Separado</Portuguese>
-      <Italian>Strobo IR staccata</Italian>
-      <Hungarian>Infravörös jeladó lecsatolva</Hungarian>
-      <Russian>ИК строб отсоединён</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_IrGrenade_Attached">
-      <English>IR Grenade Attached</English>
-      <German>IR-Granate befestigt</German>
-      <Spanish>Granada IR acoplada</Spanish>
-      <Polish>Przyczepiono granat IR</Polish>
-      <French>Grenade IR attachée</French>
-      <Czech>IR Granát Připnutý</Czech>
-      <Portuguese>Granada IV Acoplada</Portuguese>
-      <Italian>Granata IR attaccata</Italian>
-      <Hungarian>Infravörös gránát hozzácsatolva</Hungarian>
-      <Russian>ИК граната присоединена</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_IrGrenade_Detached">
-      <English>IR Grenade Detached</English>
-      <German>IR-Granate entfernt</German>
-      <Spanish>Granada IR quitada</Spanish>
-      <Polish>Odczepiono granat IR</Polish>
-      <French>Grenade IR détachée</French>
-      <Czech>IR Granát Odepnutý</Czech>
-      <Portuguese>Granada IV Separada</Portuguese>
-      <Italian>Granata IR staccata</Italian>
-      <Hungarian>Infravörös gránát lecsatolva</Hungarian>
-      <Russian>ИК граната отсоединена</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_Chemlight_Attached">
-      <English>Chemlight Attached</English>
-      <German>Leuchtstab befestigt</German>
-      <Spanish>Barra de luz acoplada</Spanish>
-      <Polish>Przyczepiono światło chemiczne</Polish>
-      <French>Chemlight attaché</French>
-      <Czech>Chemické světlo Připnuto</Czech>
-      <Portuguese>Chemlight Acoplada</Portuguese>
-      <Italian>Chemlight attaccata</Italian>
-      <Hungarian>Chemlight hozzácsatolva</Hungarian>
-      <Russian>Химсвет присоединён</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_Chemlight_Detached">
-      <English>Chemlight Detached</English>
-      <German>Leuchtstab entfernt</German>
-      <Spanish>Barra de luz quitada</Spanish>
-      <Polish>Odczepiono światło chemiczne</Polish>
-      <French>Chemlight détaché</French>
-      <Czech>Chemické světlo Odepnuto</Czech>
-      <Portuguese>Chemlight Separada</Portuguese>
-      <Italian>Chemlight staccata</Italian>
-      <Hungarian>Chemlight hozzácsatolva</Hungarian>
-      <Russian>Химсвет отсоединён</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_Inventory_Full">
-      <English>No inventory space</English>
-      <German>Kein Platz im Inventar</German>
-      <Spanish>Sin espacio en inventario</Spanish>
-      <Polish>Brak miejsca w ekwipunku</Polish>
-      <French>Pas de place dans l'inventaire</French>
-      <Czech>Není místo v inventáři</Czech>
-      <Portuguese>Sem espaço no inventário</Portuguese>
-      <Italian>Non hai più spazio</Italian>
-      <Hungarian>Nincs több hely</Hungarian>
-      <Russian>В инвентаре нет места</Russian>
-    </Key>
-    <Key ID="STR_ACE_IrStrobe_Name">
-      <English>IR Strobe</English>
-      <German>IR-Stroboskop</German>
-      <Spanish>Marcador IR</Spanish>
-      <Polish>Stroboskop IR</Polish>
-      <French>Strobe IR</French>
-      <Czech>IR Značkovač</Czech>
-      <Portuguese>Marcador IV</Portuguese>
-      <Italian>Strobo IR</Italian>
-      <Hungarian>Infravörös jeladó</Hungarian>
-      <Russian>ИК строб</Russian>
-    </Key>
-    <Key ID="STR_ACE_IrStrobe_Description">
-      <English>IR Strobe allows you to signal your position through a pulsating beacon only visible with NVGs.</English>
-      <German>Das IR-Stroboskop erlaubt es dir deine Position mit einem blinkenden Leuchtfeuer zu signalisieren, welches nur mit Nachtsichtgerät zu erkennen ist.</German>
-      <Polish>Stroboskop światła podczerwieni umożliwia oznaczenie swojej pozycji pulsacyjnym światłem widocznym tylko przez optykę noktowizyjną i gogle noktowizyjne.</Polish>
-      <Spanish>El Marcador IR permite señalizar su posisición a través de una baliza visible solo a través de dispositivos de visión nocturna. </Spanish>
-      <French>Le Strobe IR permet de signaler votre position grace à un clignotement visible par des JVN.</French>
-      <Czech>IR Značkovač je Infračerveně zářící stroboskop umožňující signalizaci vaší pozice díky blikajícímu světlu, které je vidět pouze při užití noktovizoru.</Czech>
-      <Portuguese>O Marcador IV permite que você sinalize sua posição através de um pulso visível somente com equipamento de visão noturna.</Portuguese>
-      <Italian>La Strobo IR è una luce stroboscopica che ti permette di segnalare la tua posizione grazie all'emissione di impulsi ad infrarossi visibili solo con i visori notturni.</Italian>
-      <Hungarian>Az infravörös jeladóval megjelölheted a helyzetedet úgy, hogy annak pulzáló fénye csak éjjellátó készülékkel látható.</Hungarian>
-      <Russian>ИК строб позволяет сигнализировать свое местоположение через пульсирующий маяк, видимый только через ПНВ.</Russian>
-    </Key>
-    <Key ID="STR_ACE_Attach_PlaceAction">
-      <English>Place</English>
-      <German>Platzieren</German>
-      <Spanish>Colocar</Spanish>
-      <Polish>Umieść</Polish>
-      <French>Placer</French>
-      <Czech>Položit</Czech>
-      <Portuguese>Colocar</Portuguese>
-      <Italian>Posiziona</Italian>
-      <Hungarian>Elhelyez</Hungarian>
-    </Key>
-    <Key ID="STR_ACE_Attach_CancelAction">
-      <English>Cancel</English>
-      <German>Abbrechen</German>
-      <Spanish>Cancelar</Spanish>
-      <Polish>Anuluj</Polish>
-      <French>Annuler</French>
-      <Czech>Zrušit</Czech>
-      <Portuguese>Cancelar</Portuguese>
-      <Italian>Annulla</Italian>
-      <Hungarian>Mégse</Hungarian>
-    </Key>
-    <Key ID="STR_ACE_Attach_Failed">
-      <English>Attach Failed</English>
-      <French>Échec du Attacher</French>
-      <German>Befestigen Fehlgeschlagen</German>
-      <Russian>Присоединить Ошибка</Russian>
-      <Spanish>Error en Acoplar</Spanish>
-    </Key>
-  </Package>
+    <Package name="Attach">
+        <Key ID="STR_ACE_Attach_AttachDetach">
+            <English>Attach item &gt;&gt;</English>
+            <German>Gegenstand befestigen &gt;&gt;</German>
+            <Spanish>Acoplar objeto &gt;&gt;</Spanish>
+            <Polish>Przyczep przedmiot &gt;&gt;</Polish>
+            <French>Attacher l'objet &gt;&gt;</French>
+            <Czech>Připnout předmět &gt;&gt;</Czech>
+            <Portuguese>Fixar item &gt;&gt;</Portuguese>
+            <Italian>Attacca l'oggetto &gt;&gt;</Italian>
+            <Hungarian>Tárgy hozzácsatolása &gt;&gt;</Hungarian>
+            <Russian>Прикрепить предмет</Russian>
+        </Key>
+        <Key ID="STR_ACE_Attach_Attach">
+            <English>Attach</English>
+            <German>Befestigen</German>
+            <Spanish>Acoplar</Spanish>
+            <Polish>Przyczep</Polish>
+            <French>Attacher</French>
+            <Czech>Připnout</Czech>
+            <Portuguese>Fixar</Portuguese>
+            <Italian>Attacca</Italian>
+            <Hungarian>Hozzácsatolás</Hungarian>
+            <Russian>Прикрепить</Russian>
+        </Key>
+        <Key ID="STR_ACE_Attach_Detach">
+            <English>Detach item</English>
+            <German>Gegenstand entfernen</German>
+            <Spanish>Quitar objeto</Spanish>
+            <Polish>Odczep przedmiot</Polish>
+            <French>Détacher l'objet</French>
+            <Czech>Odepnout předmět</Czech>
+            <Portuguese>Separar item</Portuguese>
+            <Italian>Stacca l'oggetto</Italian>
+            <Hungarian>Tárgy lecsatolása</Hungarian>
+            <Russian>Отсоединить</Russian>
+        </Key>
+        <Key ID="STR_ACE_Attach_IrStrobe_Attached">
+            <English>IR Strobe Attached</English>
+            <German>IR-Stroboskop befestigt</German>
+            <Spanish>Marcador IR acoplado</Spanish>
+            <Polish>Przyczepiono stroboskop IR</Polish>
+            <French>Balise IR attachée</French>
+            <Czech>IR Značkovač připnutý</Czech>
+            <Portuguese>Marcador IV Fixado</Portuguese>
+            <Italian>Strobo IR attaccata</Italian>
+            <Hungarian>Infravörös jeladó hozzácsatolva</Hungarian>
+            <Russian>ИК-маяк прикреплён</Russian>
+        </Key>
+        <Key ID="STR_ACE_Attach_IrStrobe_Detached">
+            <English>IR Strobe Detached</English>
+            <German>IR-Stroboskop entfernt</German>
+            <Spanish>Marcador IR quitado</Spanish>
+            <Polish>Odczepiono stroboskop IR</Polish>
+            <French>Balise IR détachée</French>
+            <Czech>IR Značkovač odepnutý</Czech>
+            <Portuguese>Marcador IV Separado</Portuguese>
+            <Italian>Strobo IR staccata</Italian>
+            <Hungarian>Infravörös jeladó lecsatolva</Hungarian>
+            <Russian>ИК-маяк отсоединён</Russian>
+        </Key>
+        <Key ID="STR_ACE_Attach_IrGrenade_Attached">
+            <English>IR Grenade Attached</English>
+            <German>IR-Granate befestigt</German>
+            <Spanish>Granada IR acoplada</Spanish>
+            <Polish>Przyczepiono granat IR</Polish>
+            <French>Grenade IR attachée</French>
+            <Czech>IR Granát připnutý</Czech>
+            <Portuguese>Granada IV Fixada</Portuguese>
+            <Italian>Granata IR attaccata</Italian>
+            <Hungarian>Infravörös gránát hozzácsatolva</Hungarian>
+            <Russian>ИК-граната прикреплена</Russian>
+        </Key>
+        <Key ID="STR_ACE_Attach_IrGrenade_Detached">
+            <English>IR Grenade Detached</English>
+            <German>IR-Granate entfernt</German>
+            <Spanish>Granada IR quitada</Spanish>
+            <Polish>Odczepiono granat IR</Polish>
+            <French>Grenade IR détachée</French>
+            <Czech>IR Granát odepnutý</Czech>
+            <Portuguese>Granada IV Separada</Portuguese>
+            <Italian>Granata IR staccata</Italian>
+            <Hungarian>Infravörös gránát lecsatolva</Hungarian>
+            <Russian>ИК-граната отсоединена</Russian>
+        </Key>
+        <Key ID="STR_ACE_Attach_Chemlight_Attached">
+            <English>Chemlight Attached</English>
+            <German>Leuchtstab befestigt</German>
+            <Spanish>Barra de luz acoplada</Spanish>
+            <Polish>Przyczepiono światło chemiczne</Polish>
+            <French>Chemlight attachée</French>
+            <Czech>Chemické světlo připnuto</Czech>
+            <Portuguese>Chemlight Fixada</Portuguese>
+            <Italian>Chemlight attaccata</Italian>
+            <Hungarian>Chemlight hozzácsatolva</Hungarian>
+            <Russian>Химсвет прикреплён</Russian>
+        </Key>
+        <Key ID="STR_ACE_Attach_Chemlight_Detached">
+            <English>Chemlight Detached</English>
+            <German>Leuchtstab entfernt</German>
+            <Spanish>Barra de luz quitada</Spanish>
+            <Polish>Odczepiono światło chemiczne</Polish>
+            <French>Chemlight détachée</French>
+            <Czech>Chemické světlo odepnuto</Czech>
+            <Portuguese>Chemlight Separada</Portuguese>
+            <Italian>Chemlight staccata</Italian>
+            <Hungarian>Chemlight hozzácsatolva</Hungarian>
+            <Russian>Химсвет отсоединён</Russian>
+        </Key>
+        <Key ID="STR_ACE_Attach_Inventory_Full">
+            <English>No inventory space</English>
+            <German>Kein Platz im Inventar</German>
+            <Spanish>Sin espacio en inventario</Spanish>
+            <Polish>Brak miejsca w ekwipunku</Polish>
+            <French>Pas de place dans l'inventaire</French>
+            <Czech>Není místo v inventáři</Czech>
+            <Portuguese>Sem espaço no inventário</Portuguese>
+            <Italian>Non hai più spazio</Italian>
+            <Hungarian>Nincs több hely</Hungarian>
+            <Russian>В инвентаре нет места</Russian>
+        </Key>
+        <Key ID="STR_ACE_IrStrobe_Name">
+            <English>IR Strobe</English>
+            <German>IR-Stroboskop</German>
+            <Spanish>Marcador IR</Spanish>
+            <Polish>Stroboskop IR</Polish>
+            <French>Balise IR</French>
+            <Czech>IR Značkovač</Czech>
+            <Portuguese>Marcador IV</Portuguese>
+            <Italian>Strobo IR</Italian>
+            <Hungarian>Infravörös jeladó</Hungarian>
+            <Russian>ИК-маяк</Russian>
+        </Key>
+        <Key ID="STR_ACE_IrStrobe_Description">
+            <English>IR Strobe allows you to signal your position through a pulsating beacon only visible with NVGs.</English>
+            <German>Das IR-Stroboskop erlaubt es dir deine Position mit einem blinkenden Leuchtfeuer zu signalisieren, welches nur mit Nachtsichtgerät zu erkennen ist.</German>
+            <Polish>Stroboskop światła podczerwieni umożliwia oznaczenie swojej pozycji pulsacyjnym światłem widocznym tylko przez optykę noktowizyjną i gogle noktowizyjne.</Polish>
+            <Spanish>El Marcador IR permite señalizar su posisición a través de una baliza visible solo a través de dispositivos de visión nocturna. </Spanish>
+            <French>La balise IR permet de signaler votre position grace à un clignotement visible par des JVN.</French>
+            <Czech>IR Značkovač je Infračerveně zářící stroboskop umožňující signalizaci vaší pozice díky blikajícímu světlu, které je vidět pouze při užití noktovizoru.</Czech>
+            <Portuguese>O Marcador IV permite que você sinalize sua posição através de um pulso visível somente com equipamento de visão noturna.</Portuguese>
+            <Italian>La Strobo IR è una luce stroboscopica che ti permette di segnalare la tua posizione grazie all'emissione di impulsi ad infrarossi visibili solo con i visori notturni.</Italian>
+            <Hungarian>Az infravörös jeladóval megjelölheted a helyzetedet úgy, hogy annak pulzáló fénye csak éjjellátó készülékkel látható.</Hungarian>
+            <Russian>ИК-маяк позволяет сигнализировать о своём местоположении через пульсирующий свет, видимый только через ПНВ.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Attach_PlaceAction">
+            <English>Place</English>
+            <German>Platzieren</German>
+            <Spanish>Colocar</Spanish>
+            <Polish>Umieść</Polish>
+            <French>Placer</French>
+            <Czech>Položit</Czech>
+            <Portuguese>Colocar</Portuguese>
+            <Italian>Posiziona</Italian>
+            <Hungarian>Elhelyez</Hungarian>
+            <Russian>Установить</Russian>
+        </Key>
+        <Key ID="STR_ACE_Attach_CancelAction">
+            <English>Cancel</English>
+            <German>Abbrechen</German>
+            <Spanish>Cancelar</Spanish>
+            <Polish>Anuluj</Polish>
+            <French>Annuler</French>
+            <Czech>Zrušit</Czech>
+            <Portuguese>Cancelar</Portuguese>
+            <Italian>Annulla</Italian>
+            <Hungarian>Mégse</Hungarian>
+            <Russian>Отмена</Russian>
+        </Key>
+        <Key ID="STR_ACE_Attach_Failed">
+            <English>Attach Failed</English>
+            <French>Impossible d'attacher</French>
+            <German>Befestigen fehlgeschlagen</German>
+            <Russian>Не удалось присоединить</Russian>
+            <Spanish>Error al acoplar</Spanish>
+            <Czech>Připnutí selhalo</Czech>
+            <Portuguese>Erro ao fixar</Portuguese>
+            <Polish>Przyczepianie nie powiodło się</Polish>
+            <Hungarian>Hozzácsatolás sikertelen</Hungarian>
+            <Italian>Non si attacca</Italian>
+        </Key>
+        <Key ID="STR_ACE_Attach_Item_Attached">
+            <English>%1&lt;br/&gt;Attached</English>
+            <German>%1&lt;br/&gt;befestigt</German>
+            <Spanish>%1&lt;br/&gt;acoplada</Spanish>
+            <Polish>%1&lt;br/&gt;przyczepiono</Polish>
+            <French>%1&lt;br/&gt;attachée</French>
+            <Czech>%1&lt;br/&gt;Připnutý</Czech>
+            <Portuguese>%1&lt;br/&gt;Fixada</Portuguese>
+            <Italian>%1&lt;br/&gt;attaccata</Italian>
+            <Hungarian>%1&lt;br/&gt;hozzácsatolva</Hungarian>
+            <Russian>%1&lt;br/&gt;присоединен(-а)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Attach_Item_Detached">
+            <English>%1&lt;br/&gt;Detached</English>
+            <German>%1&lt;br/&gt;entfernt</German>
+            <Spanish>%1&lt;br/&gt;quitada</Spanish>
+            <Polish>%1&lt;br/&gt;odczepiono</Polish>
+            <French>%1&lt;br/&gt;détachée</French>
+            <Czech>%1&lt;br/&gt;Odepnutý</Czech>
+            <Portuguese>%1&lt;br/&gt;Separada</Portuguese>
+            <Italian>%1&lt;br/&gt;staccata</Italian>
+            <Hungarian>%1&lt;br/&gt;lecsatolva</Hungarian>
+            <Russian>%1&lt;br/&gt;отсоединен(-а)</Russian>
+        </Key>
+    </Package>
 </Project>

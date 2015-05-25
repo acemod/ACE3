@@ -2,55 +2,59 @@
 
 import os
 import sys
+
+import xml.dom
 from xml.dom import minidom
 
-# STRINGTABLE DUPLICATE FINDER
+# STRINGTABLE DIAG TOOL
 # Author: KoffeinFlummi
-# ----------------------------
-# Counts duplicate stringtable entries
+# ---------------------
+# Counts duplicates stringtable entries
 
-def main():
-  scriptpath = os.path.realpath(__file__)
-  projectpath = os.path.dirname(os.path.dirname(scriptpath))
-  projectpath = os.path.join(projectpath, "addons")
 
-  entries = {}
+def check_module(projectpath, module):
+    """ Checks the given module for all the different languages. """
+    localized = []
 
-  for module in os.listdir(projectpath):
-    if module[0] == ".":
-      continue
     stringtablepath = os.path.join(projectpath, module, "stringtable.xml")
     try:
-      xmldoc = minidom.parse(stringtablepath)
-    except:
-      continue
+        xmldoc = minidom.parse(stringtablepath)
+    except IOError:
+        return 0
+    keys = xmldoc.getElementsByTagName("Key")
 
-    keys = xmldoc.getElementsByTagName("English")
+    duplicates = 0
     for key in keys:
-      text = key.firstChild.wholeText
-      parentid = key.parentNode.getAttribute("ID")
-      if text in entries:
-        entries[text].append(parentid)
-      else:
-        entries[text] = [parentid]
+        children = key.childNodes
+        entries = []
+        for c in range(children.length):
+            entries.append(children.item(c))
+        entries = list(filter(lambda x: x.nodeType == x.ELEMENT_NODE, entries))
+        entries = list(map(lambda x: str(x.nodeName).lower(), entries))
+        diff = len(entries) - len(list(set(entries)))
+        duplicates += diff
+        if diff > 0:
+            print(key.getAttribute("ID"))
 
-  entries = {k: v for k, v in entries.items() if len(v) > 1}
-  output = list([[k, v] for k, v in entries.items()])
-  output = sorted(output, key=lambda x: len(x[1])*-1)
+    return duplicates
 
-  print("Potential duplicate stringtable entries:\n")
-  for l in output:
-    k, v = l
-    print(k.ljust(50), end=" ")
-    print("Listed %i times in: %s" % (len(v), ", ".join(v)))
+def main():
+    scriptpath = os.path.realpath(__file__)
+    projectpath = os.path.dirname(os.path.dirname(scriptpath))
+    projectpath = os.path.join(projectpath, "addons")
 
-  print("\n# MARKDOWN\n")
+    print("###############################")
+    print("# Stringtable Duplicates Tool #")
+    print("###############################\n")
 
-  print("| Text | # Occurences | Containing Entries |")
-  print("|------|-------------:|--------------------|")
+    duplicates = 0
+    for module in os.listdir(projectpath):
+        d = check_module(projectpath, module)
 
-  for l in output:
-    print("| %s | %i | %s |" % (l[0], len(l[1]), ", ".join(l[1])))
+        print("# {} {}".format(module.ljust(20), d))
+        duplicates += d
+
+    print("\nTotal number of duplicates: {}".format(duplicates))
 
 if __name__ == "__main__":
-  main()
+    main()

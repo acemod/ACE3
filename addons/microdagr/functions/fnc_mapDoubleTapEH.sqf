@@ -20,6 +20,8 @@
 
 PARAMS_4(_theMap,_mouseButton,_xPos,_yPos);
 
+private ["_worldPos"];
+
 //Only handle LMB
 if (_mouseButton != 0) exitWith {};
 

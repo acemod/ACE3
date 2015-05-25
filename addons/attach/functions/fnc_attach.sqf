@@ -25,35 +25,19 @@ _itemClassname = [_args, 0, ""] call CBA_fnc_defaultParam;
 //Sanity Check (_unit has item in inventory, not over attach limit)
 if ((_itemClassname == "") || {!(_this call FUNC(canAttach))}) exitWith {ERROR("Tried to attach, but check failed");};
 
-_itemVehClass = "";
-_onAtachText = "";
 _selfAttachPosition = [_unit, [-0.05, 0, 0.12], "rightshoulder"];
 
-switch (true) do {
-case (_itemClassname == "ACE_IR_Strobe_Item"): {
-        _itemVehClass = "ACE_IR_Strobe_Effect";
-        _onAtachText = localize "STR_ACE_Attach_IrStrobe_Attached";
-        //_selfAttachPosition = [_unit, [0, -0.11, 0.16], "pilot"];  //makes it attach to the head a bit better, shoulder is not good for visibility - eRazeri
-    };
-case (_itemClassname == "B_IR_Grenade"): {
-        _itemVehClass = "B_IRStrobe";
-        _onAtachText = localize "STR_ACE_Attach_IrGrenade_Attached";
-    };
-case (_itemClassname == "O_IR_Grenade"): {
-        _itemVehClass = "O_IRStrobe";
-        _onAtachText = localize "STR_ACE_Attach_IrGrenade_Attached";
-    };
-case (_itemClassname == "I_IR_Grenade"): {
-        _itemVehClass = "I_IRStrobe";
-        _onAtachText = localize "STR_ACE_Attach_IrGrenade_Attached";
-    };
-case (toLower _itemClassname in ["chemlight_blue", "chemlight_green", "chemlight_red", "chemlight_yellow"]): {
-        _itemVehClass = _itemClassname;
-        _onAtachText = localize "STR_ACE_Attach_Chemlight_Attached";
-    };
+_itemVehClass = getText (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_Attachable");
+_onAtachText = getText (configFile >> "CfgWeapons" >> _itemClassname >> "displayName");
+
+if (_itemVehClass == "") then {
+    _itemVehClass = getText (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_Attachable");
+    _onAtachText = getText (configFile >> "CfgMagazines" >> _itemClassname >> "displayName");
 };
 
-if (_itemVehClass == "") exitWith {ERROR("no _itemVehClass for Item");};
+if (_itemVehClass == "") exitWith {ERROR("no ACE_Attachable for Item");};
+
+_onAtachText = format [localize "STR_ACE_Attach_Item_Attached", _onAtachText];
 
 if (_unit == _attachToVehicle) then {  //Self Attachment
     _unit removeItem _itemClassname;  // Remove item
@@ -78,6 +62,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize "STR_ACE_Attach_CancelAction"], {GVAR(placeAction) = 0}];
 
     [{
+        private "_startingPosition";
         PARAMS_2(_args,_pfID);
         EXPLODE_7_PVT(_args,_unit,_attachToVehicle,_itemClassname,_itemVehClass,_tempObject,_onAtachText,_actionID);
 

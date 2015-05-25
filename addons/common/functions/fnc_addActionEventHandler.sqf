@@ -15,6 +15,7 @@
 #include "script_component.hpp"
 
 private ["_unit", "_action", "_condition", "_statement", "_name", "_actionsVar", "_actionID", "_actions", "_id", "_actionIDs"];
+//IGNORE_PRIVATE_WARNING("_count", "_index", "_return", "_target");
 
 _unit = _this select 0;
 _action = _this select 1;
@@ -31,7 +32,11 @@ if (typeName _statement == "STRING") then {
 
 _name = format ["ACE_Action_%1", _action];
 
-_actionsVar = _unit getVariable [_name, [-1, [-1, [], []]]];
+_actionsVar = _unit getVariable [_name, [-1, [-1, [], []], objNull]];
+
+if (_unit != _actionsVar select 2) then {  // check if the unit is still valid, fixes respawn issues
+  _actionsVar = [-1, [-1, [], []], objNull];
+};
 
 _actionID = _actionsVar select 0;
 _actions = _actionsVar select 1;
@@ -65,6 +70,6 @@ if (_actionID == -1) then {
   _actionID = _unit addAction _addAction;
 };
 
-_unit setVariable [_name, [_actionID, [_id, _actionIDs, _actions]], false];
+_unit setVariable [_name, [_actionID, [_id, _actionIDs, _actions], _unit], false];
 
 _id

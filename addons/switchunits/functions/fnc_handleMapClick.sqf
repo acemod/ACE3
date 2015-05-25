@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_unit, _sides] call FUNC(handleMapClick)
+ * [unit, _sides] call FUNC(handleMapClick)
  *
  * Public: No
  */
@@ -28,14 +28,9 @@ _sideNearest = [];
     if ([_x] call FUNC(isValidAi) && (side group _x in _sides)) then {
         _sideNearest pushBack _x;
     };
-} forEach (nearestObjects [_pos, ["Man"], 20]);
-
+} forEach (nearestObjects [_pos, ["Man"], 15]);
 
 if (count _sideNearest > 0) then {
-    private ["_switchUnit"];
-
-    _switchUnit = _sideNearest select 0;
-    [ACE_player, _switchUnit] call FUNC(switchUnit);
-
+    [_sideNearest select 0] call FUNC(switchUnit);
     openMap false;
 };

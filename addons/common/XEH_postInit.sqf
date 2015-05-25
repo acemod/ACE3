@@ -1,17 +1,19 @@
 // ACE - Common
 #include "script_component.hpp"
 
+//IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
+
 // Load settings from profile
 if (hasInterface) then {
     call FUNC(loadSettingsFromProfile);
+    call FUNC(loadSettingsLocalizedText);
 };
 
 // Listens for global "SettingChanged" events, to update the force status locally
 ["SettingChanged", {
-
     PARAMS_2(_name,_value);
     if !(count _this > 2) exitWith {};
-
+    private ["_force", "_settingData"];
     _force = _this select 2;
     if (_force) then {
         _settingData = [_name] call FUNC(getSettingData);
@@ -35,10 +37,11 @@ if (hasInterface) then {
 
 ["setDir", {(_this select 0) setDir (_this select 1)}] call FUNC(addEventhandler);
 ["setFuel", {(_this select 0) setFuel (_this select 1)}] call FUNC(addEventhandler);
+["setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call FUNC(addEventhandler);
 
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
-    if (time > 0) exitWith {
+    if (ACE_time > 0) exitWith {
         [QGVAR(onBriefingPFH), "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
     };
 
@@ -52,6 +55,7 @@ QGVAR(remoteFnc) addPublicVariableEventHandler {
 
 [missionNamespace] call FUNC(executePersistent);
 
+private ["_currentVersion", "_previousVersion"];
 // check previous version number from profile
 _currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
 _previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
@@ -62,10 +66,31 @@ if (_currentVersion != _previousVersion) then {
     profileNamespace setVariable ["ACE_VersionNumberString", _currentVersion];
 };
 
-0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber);
-
+// ACE events
 "ACEg" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
 "ACEc" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
+
+// Synced ACE events
+// Handle JIP scenario
+if(!isServer) then {
+    ["PlayerJip", {
+        diag_log text format["[ACE] * JIP event synchronization initialized"];
+        ["SEH_all", [player]] call FUNC(serverEvent);
+    }] call FUNC(addEventHandler);
+} else {
+    ["SEH_all", FUNC(_handleRequestAllSyncedEvents)] call FUNC(addEventHandler);
+};
+["SEH", FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
+["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
+[FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
+
+call FUNC(checkFiles);
+
+/***************************************************************/
+/***************************************************************/
+/***************************************************************/
+/***************************************************************/
+/***************************************************************/
 
 // everything that only player controlled machines need, goes below this
 if (!hasInterface) exitWith {};
@@ -73,14 +98,16 @@ if (!hasInterface) exitWith {};
 call COMPILE_FILE(scripts\assignedItemFix);
 call COMPILE_FILE(scripts\initScrollWheel);
 
-0 spawn {
-    while {true} do {
-        waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
-        findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call GVAR(onScrollWheel) )];
-        [false] call FUNC(disableUserInput);
-        waitUntil {isNull (findDisplay 46)};
-    };
+DFUNC(mouseZHandler) = {
+    waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
+    findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call GVAR(onScrollWheel) )];
+    [false] call FUNC(disableUserInput);
 };
+
+addMissionEventHandler ["Loaded", {[] spawn FUNC(mouseZHandler)}];
+[] spawn FUNC(mouseZHandler);
+
+
 enableCamShake true;
 
 // Set the name for the current player
@@ -106,7 +133,7 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 
 // PFH to raise varios events
 [{
-
+    private ["_newCameraView", "_newInventoryDisplayIsOpen", "_newPlayerInventory", "_newPlayerTurret", "_newPlayerVehicle", "_newPlayerVisionMode", "_newPlayerWeapon", "_newZeusDisplayIsOpen"];
     // "playerInventoryChanged" event
     _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
     if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
@@ -173,10 +200,37 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 
 }, 0, []] call cba_fnc_addPerFrameHandler;
 
+
+// PFH to raise camera created event. Only works on these cams by BI.
+#define ALL_CAMERAS [ \
+    missionNamespace getVariable ["BIS_DEBUG_CAM", objNull], \
+    missionNamespace getVariable ["BIS_fnc_camera_cam", objNull], \
+    uiNamespace getVariable ["BIS_fnc_arsenal_cam", objNull], \
+    uiNamespace getVariable ["BIS_fnc_animViewer_cam", objNull], \
+    missionNamespace getVariable ["BIS_fnc_establishingShot_fakeUAV", objNull] \
+]
+
+GVAR(OldIsCamera) = false;
+
+[{
+
+    // "activeCameraChanged" event
+    private ["_isCamera"];
+    _isCamera = {!isNull _x} count ALL_CAMERAS > 0;
+    if !(_isCamera isEqualTo GVAR(OldIsCamera)) then {
+        // Raise ACE event locally
+        GVAR(OldIsCamera) = _isCamera;
+        ["activeCameraChanged", [ACE_player, _isCamera]] call FUNC(localEvent);
+    };
+
+}, 1, []] call cba_fnc_addPerFrameHandler; // feel free to decrease the sleep ACE_time if you need it.
+
+
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
 
 ["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
 ["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
+["medical_onUnconscious", {if (local (_this select 0) && {!(_this select 1)}) then {[ _this select 0, false, QUOTE(FUNC(loadPerson)), west /* dummy side */] call FUNC(switchToGroupSide);};}] call FUNC(addEventhandler);
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
 ["isNotInside", {
@@ -187,3 +241,15 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
     // Players can always interact with passengers of the same vehicle
     {!((_this select 0) isEqualTo (_this select 1)) && {vehicle (_this select 0) == vehicle (_this select 1)}}
 }] call FUNC(addCanInteractWithCondition);
+
+// Lastly, do JIP events
+// JIP Detection and event trigger. Run this at the very end, just in case anything uses it
+if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
+    // We are jipping! Get ready and wait, and throw the event
+    [{
+        if(!(isNull player)) then {
+            ["PlayerJip", [player] ] call FUNC(localEvent);
+            [(_this select 1)] call cba_fnc_removePerFrameHandler;
+        };
+    }, 0, []] call cba_fnc_addPerFrameHandler;
+};

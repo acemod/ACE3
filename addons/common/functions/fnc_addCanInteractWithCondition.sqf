@@ -14,6 +14,8 @@
 #include "script_component.hpp"
 
 private ["_conditionName", "_conditionFunc"];
+//IGNORE_PRIVATE_WARNING("_player", "_target");
+
 
 _conditionName = toLower (_this select 0);
 _conditionFunc = _this select 1;
@@ -29,7 +31,7 @@ private "_index";
 _index = _conditionNames find _conditionName;
 
 if (_index == -1) then {
-	_index = count _conditionNames;
+    _index = count _conditionNames;
 };
 
 _conditionNames set [_index, _conditionName];

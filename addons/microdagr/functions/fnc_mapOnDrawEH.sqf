@@ -17,7 +17,8 @@
 
 PARAMS_1(_theMap);
 
-_theMap = _this select 0;
+private ["_mapSize", "_waypoints", "_size", "_targetPos", "_relBearing", "_wpName", "_wpPos", "_alpha"];
+
 _mapSize = (ctrlPosition _theMap) select 3;
 
 _waypoints = [] call FUNC(deviceGetWaypoints);
@@ -48,11 +49,11 @@ if (GVAR(currentApplicationPage) == 1) then {
 
 } else { //Map Mode:
     if (GVAR(mapAutoTrackPosition)) then {
-        _theMap ctrlMapAnimAdd [0, (GVAR(mapZoom)/_mapSize), GVAR(gpsPositionASL)];
+        _theMap ctrlMapAnimAdd [0, (GVAR(mapZoom)/_mapSize), (getPosASL ace_player)];
         ctrlMapAnimCommit _theMap;
     };
     _size = 48 * _mapSize;
-    _theMap drawIcon [QUOTE(PATHTO_R(images\icon_self.paa)), [0.533,0.769,0.76,0.75], GVAR(gpsPositionASL), _size, _size, (getDir ace_player), '', 0 ];
+    _theMap drawIcon [QUOTE(PATHTO_R(images\icon_self.paa)), [0.533,0.769,0.76,0.75], (getPosASL ace_player), _size, _size, (getDir ace_player), '', 0 ];
 
     if (GVAR(settingShowAllWaypointsOnMap)) then {
         _size = 32 * _mapSize;

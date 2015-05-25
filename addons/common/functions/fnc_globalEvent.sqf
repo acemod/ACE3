@@ -11,11 +11,9 @@
  * Nothing
  */
 #include "script_component.hpp"
-private ["_eventName", "_eventArgs"];
+//IGNORE_PRIVATE_WARNING("_handleNetEvent");
 
-_eventName = _this select 0;
-_eventArgs = _this select 1;
-
+PARAMS_2(_eventName,_eventArgs);
 
 ACEg = [_eventName, _eventArgs];
 publicVariable "ACEg";

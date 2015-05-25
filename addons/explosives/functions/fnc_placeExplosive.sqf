@@ -7,55 +7,68 @@
  * 1: Position to place explosive <POSITION>
  * 2: Rotation <NUMBER>
  * 3: Magazine class <STRING>
- * 4: Config of trigger <CONFIG>
+ * 4: Config of trigger <STRING>
  * 5: Variables required for the trigger type <ARRAY>
- * 6: Should direction be set <BOOL>
+ * 6: Explosive placeholder <OBJECT> <OPTIONAL>
  *
  * Return Value:
  * Placed explosive <OBJECT>
  *
  * Example:
  * _explosive = [player, player modelToWorldVisual [0,0.5, 0.1], 134,
- * 	"SatchelCharge_Remote_Mag", "Command", []] call ACE_Explosives_fnc_placeExplosive;
+ *  "SatchelCharge_Remote_Mag", "Command", []] call ACE_Explosives_fnc_placeExplosive;
  *
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_pos", "_dir", "_magazineClass", "_ammo", "_triggerSpecificVars", "_unit", "_triggerConfig", "_explosive"];
-_unit = _this select 0;
-_pos = _this select 1;
-_dir = _this select 2;
-_magazineClass = _this select 3;
-_triggerConfig = _this select 4;
-_triggerSpecificVars = _this select 5;
-_setDir = true;
-if (count _this > 6) then {
-	_setDir = _this select 6;
+private ["_ammo", "_explosive", "_attachedTo", "_expPos", "_magazineTrigger"];
+EXPLODE_6_PVT(_this,_unit,_pos,_dir,_magazineClass,_triggerConfig,_triggerSpecificVars);
+DEFAULT_PARAM(6,_setupPlaceholderObject,objNull);
+
+_unit playActionNow "PutDown";
+
+_attachedTo = objNull;
+if (!isNull _setupPlaceholderObject) then {
+    _attachedTo = attachedTo _setupPlaceholderObject;
+    deleteVehicle _setupPlaceholderObject;
 };
 
 if (isNil "_triggerConfig") exitWith {
-	diag_log format ["ACE_Explosives: Error config not passed to PlaceExplosive: %1", _this];
-	objNull
+    diag_log format ["ACE_Explosives: Error config not passed to PlaceExplosive: %1", _this];
+    objNull
 };
 
 _magazineTrigger = ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> _triggerConfig;
-_triggerConfig = ConfigFile >> "CfgACE_Triggers" >> _triggerConfig;
+_triggerConfig = ConfigFile >> "ACE_Triggers" >> _triggerConfig;
 
 if (isNil "_triggerConfig") exitWith {
-	diag_log format ["ACE_Explosives: Error config not found in PlaceExplosive: %1", _this];
-	objNull
+    diag_log format ["ACE_Explosives: Error config not found in PlaceExplosive: %1", _this];
+    objNull
 };
 
 _ammo = getText(ConfigFile >> "CfgMagazines" >> _magazineClass >> "ammo");
 if (isText(_magazineTrigger >> "ammo")) then {
-	_ammo = getText (_magazineTrigger >> "ammo");
+    _ammo = getText (_magazineTrigger >> "ammo");
 };
 _triggerSpecificVars pushBack _triggerConfig;
+private ["_defuseHelper"];
+_defuseHelper = createVehicle ["ACE_DefuseObject", _pos, [], 0, "NONE"];
+_defuseHelper setPosATL _pos;
+
 _explosive = createVehicle [_ammo, _pos, [], 0, "NONE"];
-if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_triggerSpecificVars]
-	call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {_explosive};
-if (_setDir) then {
-	[[_explosive, _dir, getNumber (_magazineTrigger >> "pitch")], QFUNC(setPosition)]
-		call EFUNC(common,execRemoteFnc);
+_defuseHelper attachTo [_explosive, [0,0,0], ""];
+_defuseHelper setVariable [QGVAR(Explosive),_explosive,true];
+
+_expPos = getPosATL _explosive;
+_defuseHelper setPosATL (((getPosATL _defuseHelper) vectorAdd (_pos vectorDiff _expPos)));
+_explosive setPosATL _pos;
+
+if (!isNull _attachedTo) then {
+    TRACE_1("Attaching Live Explosive",_attachedTo);
+    _explosive attachTo [_attachedTo];
 };
+
+if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_triggerSpecificVars]
+    call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {_explosive};
+[[_explosive, _dir, getNumber (_magazineTrigger >> "pitch")], QFUNC(setPosition)] call EFUNC(common,execRemoteFnc);
 _explosive

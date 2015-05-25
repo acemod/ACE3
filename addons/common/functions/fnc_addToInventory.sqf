@@ -4,9 +4,10 @@
  * or places it in a weaponHolder if no space.
  *
  * Arguments:
- * 0: Unit (OBJECT)
- * 1: Classname (String)
- * 2: Container (String, Optional) uniform, vest, backpack
+ * 0: Unit <OBJECT>
+ * 1: Classname <STRING>
+ * 2: Container (uniform, vest, backpack) <STRING><OPTIONAL>
+ * 3: Magazine Ammo Count <NUMBER><OPTIONAL>
  *
  * Return Value:
  * Array:
@@ -18,38 +19,28 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_unit,_classname);
-private "_addedToPlayer";
-private "_container";
-private "_canAdd";
-private "_type";
+PARAMS_2(_unit,_classname);
+DEFAULT_PARAM(2,_container,"");
+DEFAULT_PARAM(3,_ammoCount,-1);
+
+private ["_addedToPlayer", "_canAdd", "_type", "_pos"];
 
 _canAdd = false;
 _addedToPlayer = true;
 
-if((count _this) > 2) then {
-    _container = _this select 2;
-} else {
-    _container = nil;
-};
-
 _type = [_classname] call EFUNC(common,getItemType);
 
-if(!isNil "_container") then {
-    switch (_container) do {
-        case "vest": { _canAdd = _unit canAddItemToVest _classname; };
-        case "backpack": { _canAdd = _unit canAddItemToBackpack _classname; };
-        case "uniform": { _canAdd = _unit canAddItemToUniform _classname; };
-    };
-} else {
-    _container = "";
-    _canAdd = _unit canAdd _classname;
+switch (_container) do {
+    case "vest": { _canAdd = _unit canAddItemToVest _classname; };
+    case "backpack": { _canAdd = _unit canAddItemToBackpack _classname; };
+    case "uniform": { _canAdd = _unit canAddItemToUniform _classname; };
+    default {_canAdd = _unit canAdd _classname;};
 };
 
 switch ((_type select 0)) do {
     case "weapon": {
         if (_canAdd) then {
-             switch (_container) do {
+            switch (_container) do {
                 case "vest": {  (vestContainer _unit) addWeaponCargoGlobal [_classname, 1]; };
                 case "backpack": {  (backpackContainer _unit) addWeaponCargoGlobal [_classname, 1]; };
                 case "uniform": {  (uniformContainer _unit) addWeaponCargoGlobal [_classname, 1]; };
@@ -64,24 +55,25 @@ switch ((_type select 0)) do {
         };
     };
     case "magazine": {
+        if (_ammoCount == -1) then {_ammoCount = getNumber (configFile >> "CfgMagazines" >> _classname >> "count");};
         if (_canAdd) then {
             switch (_container) do {
-                case "vest": {  (vestContainer _unit) addMagazineCargoGlobal [_classname, 1]; };
-                case "backpack": {  (backpackContainer _unit) addMagazineCargoGlobal [_classname, 1]; };
-                case "uniform": {  (uniformContainer _unit) addMagazineCargoGlobal [_classname, 1]; };
-                default { _unit addMagazineGlobal _classname; };
+                case "vest": {  (vestContainer _unit) addMagazineCargoGlobal [_classname, _ammoCount]; };
+                case "backpack": {  (backpackContainer _unit) addMagazineCargoGlobal [_classname, _ammoCount]; };
+                case "uniform": {  (uniformContainer _unit) addMagazineCargoGlobal [_classname, _ammoCount]; };
+                default {_unit addMagazine [_classname, _ammoCount]; };
             };
         } else {
             _addedToPlayer = false;
             _pos = _unit modelToWorldVisual [0,1,0.05];
             _unit = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
-            _unit addMagazineCargoGlobal [_classname, 1];
+            _unit addMagazineCargoGlobal [_classname, _ammoCount];
             _unit setPosATL _pos;
         };
     };
     case "item": {
         if (_canAdd) then {
-           switch (_container) do {
+            switch (_container) do {
                 case "vest": { _unit addItemToVest _classname; };
                 case "backpack": { _unit addItemToBackpack _classname; };
                 case "uniform": { _unit addItemToUniform _classname; };

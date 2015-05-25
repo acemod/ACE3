@@ -14,7 +14,7 @@
 
 BEGIN_COUNTER(fnc_render);
 
-private ["_cursorPos1", "_cursorPos2", "_cursorVec", "_p1", "_p2", "_p", "_v", "_cp", "_forEachIndex", "_renderTargets", "_x", "_cursorScreenPos", "_closestDistance", "_closestSelection", "_pos", "_sPos", "_disSq", "_closest", "_cTime", "_delta", "_foundTarget", "_misMatch", "_hoverPath", "_i"];
+private ["_cursorPos1", "_cursorPos2", "_p1", "_p2", "_forEachIndex", "_x", "_cursorScreenPos", "_closestDistance", "_closestSelection", "_sPos", "_disSq", "_closest", "_cTime", "_delta", "_foundTarget", "_misMatch", "_hoverPath", "_i", "_actionData", "_player", "_target"];
 _foundTarget = false;
 _cursorPos1 = positionCameraToWorld [0, 0, 0];
 _cursorPos2 = positionCameraToWorld [0, 0, 2];
@@ -48,7 +48,7 @@ if (GVAR(openedMenuType) >= 0) then {
     _closest = GVAR(currentOptions) select _closestSelection;
 
     _sPos = _closest select 1;
-    _cTime = diag_tickTime;
+    _cTime = ACE_diagTime;
     _delta = _cTime - GVAR(lastTime);
     GVAR(lastTime) = _cTime;
 
@@ -73,17 +73,17 @@ if (GVAR(openedMenuType) >= 0) then {
         } forEach GVAR(lastPath);
     };
 
-    if(_misMatch && {diag_tickTime-GVAR(expandedTime) > 0.25}) then {
-        GVAR(startHoverTime) = diag_tickTime;
+    if(_misMatch && {ACE_diagTime-GVAR(expandedTime) > 0.25}) then {
+        GVAR(startHoverTime) = ACE_diagTime;
         GVAR(lastPath) = _hoverPath;
         GVAR(expanded) = false;
     } else {
-        if(!GVAR(expanded) && diag_tickTime-GVAR(startHoverTime) > 0.25) then {
+        if(!GVAR(expanded) && ACE_diagTime-GVAR(startHoverTime) > 0.25) then {
             GVAR(expanded) = true;
 
             // Start the expanding menu animation only if the user is not going up the menu
             if !([GVAR(menuDepthPath),GVAR(lastPath)] call FUNC(isSubPath)) then {
-                GVAR(expandedTime) = diag_tickTime;
+                GVAR(expandedTime) = ACE_diagTime;
             };
             GVAR(menuDepthPath) = +GVAR(lastPath);
 
@@ -119,6 +119,7 @@ if(!_foundTarget && GVAR(actionSelected)) then {
 };
 for "_i" from GVAR(iconCount) to (count GVAR(iconCtrls))-1 do {
     ctrlDelete (GVAR(iconCtrls) select _i);
+    GVAR(ParsedTextCached) set [_i, ""];
 };
 GVAR(iconCtrls) resize GVAR(iconCount);
 GVAR(iconCount) = 0;

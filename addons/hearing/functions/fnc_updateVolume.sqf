@@ -18,6 +18,8 @@
 #define STRENGHTODEAFNESS 3
 #define MAXDEAFNESS 1.1
 
+private ["_recoverRate", "_volume"];
+
 // Exit if combat deafness is disabled
 if !(GVAR(enableCombatDeafness)) exitWith {};
 
@@ -36,7 +38,7 @@ if (GVAR(currentDeafness) > 0.7) then {
     };
 };
 
-// Deafness recovers with time
+// Deafness recovers with ACE_time
 GVAR(currentDeafness) = GVAR(currentDeafness) - _recoverRate max 0;
 
 // needed until Bohemia fixes playSound to actually use the second argument
@@ -56,7 +58,7 @@ if (!(missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false])) then {
     0.1 fadeSound _volume;
     0.1 fadeSpeech _volume;
     ACE_player setVariable ["tf_globalVolume", _volume];
-    if (!isNil "acre_api_fnc_setGlobalVolume") then {[_volume] call acre_api_fnc_setGlobalVolume;};
+    if (!isNil "acre_api_fnc_setGlobalVolume") then {[_volume^(0.33)] call acre_api_fnc_setGlobalVolume;};
 };
 
 //hintSilent format ["GVAR(currentDeafness), _Volume = %1, %2", GVAR(currentDeafness), _volume];

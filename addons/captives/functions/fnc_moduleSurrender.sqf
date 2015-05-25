@@ -18,6 +18,7 @@
 #include "script_component.hpp"
 
 PARAMS_3(_logic,_units,_activated);
+private ["_bisMouseOver", "_mouseOverObject"];
 
 if (!_activated) exitWith {};
 
@@ -38,7 +39,7 @@ if (local _logic) then {
                     ["STR_ACE_Captives_Zeus_OnlyAlive"] call EFUNC(common,displayTextStructured);
                 };
             } else {
-                ["STR_ACE_Captives_Zeus_OnlyInfentry"] call EFUNC(common,displayTextStructured);
+                ["STR_ACE_Captives_Zeus_OnlyInfantry"] call EFUNC(common,displayTextStructured);
             };
         } else {
             ["STR_ACE_Captives_Zeus_NothingSelected"] call EFUNC(common,displayTextStructured);

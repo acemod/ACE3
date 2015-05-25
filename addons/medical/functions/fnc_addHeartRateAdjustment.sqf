@@ -5,7 +5,7 @@
  * Arguments:
  * 0: The unit <OBJECT>
  * 1: value <NUMBER>
- * 2: time in seconds <NUMBER>
+ * 2: ACE_time in seconds <NUMBER>
  * 3: callback <CODE>
  *
  * Return Value:

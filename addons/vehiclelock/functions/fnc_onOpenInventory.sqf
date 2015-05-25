@@ -21,6 +21,7 @@ PARAMS_2(_unit,_container);
 //Only check for player:
 if (_unit != ace_player) exitWith {false};
 
+private "_handeled";
 _handeled = false;
 
 if (GVAR(LockVehicleInventory) && //if setting not enabled
@@ -33,7 +34,7 @@ if (GVAR(LockVehicleInventory) && //if setting not enabled
     playSound "ACE_Sound_Click";
     //don't open the vehicles inventory
     _handeled = true;
-    //Just opens a dummy groundContainer
+    //Just opens a dummy groundContainer (so the player can still see their own inventory)
     ACE_player action ["Gear", objNull];
 };
 

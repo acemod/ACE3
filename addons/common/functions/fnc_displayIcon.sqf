@@ -2,7 +2,7 @@
 * Author: Glowbal
 *
 * Draw progress bar and execute given function if succesful.
-* Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
+* Finish/Failure/Conditional are all passed [args, elapsedTime, totalTime, errorCode]
 *
 * Argument:
 * 0: icon ID <STRING>
@@ -34,87 +34,86 @@
 #define Y_POS_ICONS_SECOND (TOP_SIDE + (1.1 * ICON_WIDTH))
 
 // setting values
-#define TOP_RIGHT_DOWN	1
-#define TOP_RIGHT_LEFT	2
-#define TOP_LEFT_DOWN	3
-#define TOP_LEFT_RIGHT	4
+#define TOP_RIGHT_DOWN    1
+#define TOP_RIGHT_LEFT    2
+#define TOP_LEFT_DOWN    3
+#define TOP_LEFT_RIGHT    4
 
 // other constants
-#define DEFAULT_TIME	6
+#define DEFAULT_TIME    6
 
-private ["_iconId", "_show", "_icon", "_allControls", "_refresh", "_timeAlive", "_list", "_color"];
-_iconId = _this select 0;
-_show = _this select 1;
-_icon = _this select 2;
-_color = _this select 3;
+private ["_allControls", "_refresh", "_timeAlive", "_list"];
+
+PARAMS_4(_iconId,_show,_icon,_color);
+
 _timeAlive = if (count _this > 4) then {_this select 4} else {DEFAULT_TIME};
 
 disableSerialization;
 _list = missionNamespace getvariable [QGVAR(displayIconList),[]];
 
 _refresh = {
-	private ["_allControls"];
-	// Refreshing of all icons..
-	_allControls = missionNamespace getvariable [QGVAR(displayIconListControls), []];
-	{
-		ctrlDelete _x;
-	}foreach _allControls;
+    private ["_allControls"];
+    // Refreshing of all icons..
+    _allControls = missionNamespace getvariable [QGVAR(displayIconListControls), []];
+    {
+        ctrlDelete _x;
+    }foreach _allControls;
 
-	_allControls = [];
+    _allControls = [];
 
-	private ["_ctrl", "_setting"];
-	_setting = missionNamespace getvariable[QGVAR(settingFeedbackIcons), 0];
-	if (_setting > 0) then {
-		{
-			// +19000 because we want to make certain we are using free IDCs..
-			_ctrl = ((findDisplay 46) ctrlCreate ["RscPicture", _foreachIndex + 19000]);
-			_position = switch (_setting) do {
-				case TOP_RIGHT_DOWN: {[X_POS_ICONS, Y_POS_ICONS + (_foreachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
-				case TOP_RIGHT_LEFT: {[X_POS_ICONS_SECOND - ((_foreachIndex+3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND - (ICON_WIDTH / 2), ICON_WIDTH, ICON_WIDTH]};
-				case TOP_LEFT_DOWN: {[LEFT_SIDE + (0.5 * ICON_WIDTH), Y_POS_ICONS + (_foreachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
-				case TOP_LEFT_RIGHT: {[LEFT_SIDE + (0.5 * ICON_WIDTH) - ((_foreachIndex+3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND, ICON_WIDTH, ICON_WIDTH]};
-				default {[X_POS_ICONS, Y_POS_ICONS + (_foreachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
-			};
-			_ctrl ctrlSetPosition _position;
-			_ctrl ctrlsetText (_x select 1);
-			_ctrl ctrlSetTextColor (_x select 2);
-			_ctrl ctrlCommit 0;
-			_allControls pushback _ctrl;
-		}foreach (missionNamespace getvariable [QGVAR(displayIconList),[]]);
-	};
-	missionNamespace setvariable [QGVAR(displayIconListControls), _allControls];
+    private ["_ctrl", "_setting", "_position"];
+    _setting = missionNamespace getvariable[QGVAR(settingFeedbackIcons), 0];
+    if (_setting > 0) then {
+        {
+            // +19000 because we want to make certain we are using free IDCs..
+            _ctrl = ((findDisplay 46) ctrlCreate ["RscPicture", _foreachIndex + 19000]);
+            _position = switch (_setting) do {
+                case TOP_RIGHT_DOWN: {[X_POS_ICONS, Y_POS_ICONS + (_foreachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
+                case TOP_RIGHT_LEFT: {[X_POS_ICONS_SECOND - ((_foreachIndex+3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND - (ICON_WIDTH / 2), ICON_WIDTH, ICON_WIDTH]};
+                case TOP_LEFT_DOWN: {[LEFT_SIDE + (0.5 * ICON_WIDTH), Y_POS_ICONS + (_foreachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
+                case TOP_LEFT_RIGHT: {[LEFT_SIDE + (0.5 * ICON_WIDTH) - ((_foreachIndex+3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND, ICON_WIDTH, ICON_WIDTH]};
+                default {[X_POS_ICONS, Y_POS_ICONS + (_foreachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
+            };
+            _ctrl ctrlSetPosition _position;
+            _ctrl ctrlsetText (_x select 1);
+            _ctrl ctrlSetTextColor (_x select 2);
+            _ctrl ctrlCommit 0;
+            _allControls pushback _ctrl;
+        }foreach (missionNamespace getvariable [QGVAR(displayIconList),[]]);
+    };
+    missionNamespace setvariable [QGVAR(displayIconListControls), _allControls];
 };
 
 if (_show) then {
-	if ({(_x select 0 == _iconId)} count _list == 0) then {
-		_list pushback [_iconId, _icon, _color, time];
-	} else {
-		{
-			if (_x select 0 == _iconId) exitwith {
-				_list set [_foreachIndex, [_iconId, _icon, _color, time]];
-			};
-		}foreach _list;
-	};
-	missionNamespace setvariable [QGVAR(displayIconList), _list];
-	call _refresh;
+    if ({(_x select 0 == _iconId)} count _list == 0) then {
+        _list pushback [_iconId, _icon, _color, ACE_time];
+    } else {
+        {
+            if (_x select 0 == _iconId) exitwith {
+                _list set [_foreachIndex, [_iconId, _icon, _color, ACE_time]];
+            };
+        } forEach _list;
+    };
+    missionNamespace setvariable [QGVAR(displayIconList), _list];
+    call _refresh;
 
-	if (_timeAlive >= 0) then {
-		[{
+    if (_timeAlive >= 0) then {
+        [{
              [_this select 0, false, "", [0,0,0], 0] call FUNC(displayIcon);
          }, [_iconId], _timeAlive, _timeAlive] call EFUNC(common,waitAndExecute);
-	};
+    };
 
 } else {
-	if ({(_x select 0 == _iconId)} count _list == 1) then {
-		private "_newList";
-		_newList = [];
-		{
-			if (_x select 0 != _iconId) then {
-				_newList pushback _x;
-			};
-		}foreach _list;
+    if ({(_x select 0 == _iconId)} count _list == 1) then {
+        private "_newList";
+        _newList = [];
+        {
+            if (_x select 0 != _iconId) then {
+                _newList pushback _x;
+            };
+        } forEach _list;
 
-		missionNamespace setvariable [QGVAR(displayIconList), _newList];
-		call _refresh;
-	};
+        missionNamespace setvariable [QGVAR(displayIconList), _newList];
+        call _refresh;
+    };
 };

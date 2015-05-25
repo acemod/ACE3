@@ -153,3 +153,5 @@ switch (_this select 0) do {
         (_dlgVector displayCtrl 1324) ctrlSetText "";
     };
 };
+
+[GVAR(illuminate)] call FUNC(illuminate);

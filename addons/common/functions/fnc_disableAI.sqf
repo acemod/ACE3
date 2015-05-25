@@ -1,23 +1,37 @@
-/**
- * fn_disableAI_f.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal, KoffeinFlummi
+ * Disables/Enables AI
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Disable AI <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob, true] call ace_common_fnc_disableAI;
+ *
+ * Public: No
  */
 #include "script_component.hpp"
-private ["_unit","_disable"];
-_unit = [_this, 0,ObjNull,[ObjNull]] call BIS_fnc_Param;
-_disable = [_this, 1,false,[false]] call BIS_fnc_Param;
 
-if (local _unit && !(IsPlayer _unit)) then {
+PARAMS_2(_unit,_disable);
+
+if ((local _unit) && {!([_unit] call EFUNC(common,isPlayer))}) then {
     if (_disable) then {
-        _unit disableAI "Move";
+        _unit disableAI "MOVE";
         _unit disableAI "TARGET";
+        _unit disableAI "AUTOTARGET";
+        _unit disableAI "FSM";
+        _unit disableConversation true;
     } else {
-        _unit enableAI "Move";
+        //Sanity check to make sure we don't enable unconsious AI
+        if (_unit getVariable ["ace_isunconscious", false] && alive _unit) exitWith {ERROR("Enabling AI for unconsious unit");};
+        _unit enableAI "MOVE";
         _unit enableAI "TARGET";
+        _unit enableAI "AUTOTARGET";
+        _unit enableAI "FSM";
+        _unit disableConversation false;
     };
 };

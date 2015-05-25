@@ -35,7 +35,7 @@ _maxSpeed = speed _vehicle max 10;
     _speed = speed _vehicle;
 
     if (_speed > _maxSpeed) then {
-        _vehicle setVelocity ((velocity _vehicle) vectorMultiply (_maxSpeed / _speed));
+        _vehicle setVelocity ((velocity _vehicle) vectorMultiply ((_maxSpeed / _speed) - 0.00001));  // fix 1.42-hotfix PhysX libraries applying force in previous direction when turning
     };
 
 } , 0, [_driver, _vehicle, _maxSpeed]] call CBA_fnc_addPerFrameHandler;

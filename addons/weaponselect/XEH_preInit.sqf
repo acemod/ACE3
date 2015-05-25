@@ -26,6 +26,7 @@ GVAR(CurrentGrenadeMuzzleOther)  = "";
 
 // Collect frag and other muzzles separately
 with uiNamespace do {
+    private ["_magazines", "_magazine", "_ammo", "_explosive"];
     if (isNil QGVAR(FragMuzzles)) then {
         GVAR(FragMuzzles)    = [];
         GVAR(NonFragMuzzles) = [];

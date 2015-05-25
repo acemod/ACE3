@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-private ["_vehicle", "_turret", "_turretConfig", "_distance", "_magazines", "_userChange"];
+private ["_vehicle", "_turret", "_turretConfig", "_distance", "_weapons", "_magazines", "_showHint", "_playSound", "_i"];
 
 _vehicle = _this select 0;
 _turret = _this select 1;
@@ -21,6 +21,7 @@ _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call E
 
 _distance = call FUNC(getRange);
 
+_weapons = _vehicle weaponsTurret _turret;
 _magazines = _vehicle magazinesTurret _turret;
 
 if (_distance == 0) then {
@@ -31,9 +32,9 @@ if (_distance == 0) then {
     ] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision
 };
 
-private ["_weaponDirection", "_angleTarget"];
-
-_weaponDirection = _vehicle weaponDirection (_vehicle currentWeaponTurret _turret); // @todo doesn't work for sub turrets
+private ["_weapon", "_weaponDirection", "_angleTarget"];
+_weapon = _vehicle currentWeaponTurret _turret;
+_weaponDirection = _vehicle weaponDirection _weapon; // @todo doesn't work for sub turrets
 
 if (_turret isEqualTo ([_vehicle] call EFUNC(common,getTurretCommander))) then {
     _weaponDirection = eyeDirection _vehicle;
@@ -55,11 +56,11 @@ if (!(isNil QGVAR(backgroundCalculation)) and {!(scriptDone GVAR(backgroundCalcu
     terminate GVAR(backgroundCalculation);
 };
 
-private "_movingAzimuth";
+private ["_movingAzimuth", "_posTarget", "_velocityTarget"];
 
 // MOVING TARGETS
 _movingAzimuth = 0;
-if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
+if (ACE_time - GVAR(ACE_time) > 1 and GVAR(ACE_time) != -1 and count _this < 3) then {
     // calculate speed of target
     _posTarget = [
         (getPos _vehicle select 0) + _distance * (_weaponDirection select 0),
@@ -67,14 +68,14 @@ if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
         (getPos _vehicle select 2) + _distance * (_weaponDirection select 2)
     ];
     _velocityTarget = [
-        ((_posTarget select 0) - (GVAR(position) select 0)) / (time - GVAR(time)),
-        ((_posTarget select 1) - (GVAR(position) select 1)) / (time - GVAR(time)),
-        ((_posTarget select 2) - (GVAR(position) select 2)) / (time - GVAR(time))
+        ((_posTarget select 0) - (GVAR(position) select 0)) / (ACE_time - GVAR(ACE_time)),
+        ((_posTarget select 1) - (GVAR(position) select 1)) / (ACE_time - GVAR(ACE_time)),
+        ((_posTarget select 2) - (GVAR(position) select 2)) / (ACE_time - GVAR(ACE_time))
     ];
 
-    private ["_magazineType", "_ammoType", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep"];
+    private ["_magazineType", "_ammoType", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_initSpeedCoef", "_velocityMagnitude"];
 
-    // estimate time to target
+    // estimate ACE_time to target
     _magazineType = _vehicle currentMagazineTurret _turret;
     _ammoType       = getText   (configFile >> "CfgMagazines" >> _magazineType >> "ammo");
     _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _magazineType >> "initSpeed");
@@ -82,6 +83,14 @@ if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
     _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "timeToLive");
     _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "simulationStep");
 
+    _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
+    if (_initSpeedCoef < 0) then {
+        _initSpeed = _initSpeed * -_initSpeedCoef;
+    };
+    if (_initSpeedCoef > 0) then {
+        _initSpeed = _initSpeedCoef;
+    };
+    
     if (_simulationStep != 0) then {
         private ["_posX", "_velocityX", "_velocityY", "_timeToTarget"];
 
@@ -121,7 +130,7 @@ if (time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
     };
 };
 GVAR(enabled) = false;
-GVAR(time) = -1;
+GVAR(ACE_time) = -1;
 
 private ["_viewDiff", "_FCSAzimuth", "_FCSMagazines", "_FCSElevation"];
 
@@ -138,21 +147,43 @@ _FCSMagazines = [];
 _FCSElevation = [];
 
 {
-    private "_ammoType";
-
-    _ammoType = getText (configFile >> "CfgMagazines" >> _x >> "ammo");
+    private ["_magazine", "_ammoType"];
+    _magazine = _x;
+    _ammoType = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
 
     if !(getText (configFile >> "CfgAmmo" >> _ammoType >> "simulation") == "shotMissile") then {
         private ["_maxElev", "_initSpeed", "_airFriction", "_offset"];
 
         _maxElev     = getNumber (_turretConfig >> "maxElev");
-        _initSpeed   = getNumber (configFile >> "CfgMagazines" >> _x >> "initSpeed");
+        _initSpeed   = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
         _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
-
+        
+        {
+            private ["_weapon", "_muzzles", "_weaponMagazines", "_muzzleMagazines"];
+            _weapon = _x;
+            _muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
+            _weaponMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines");
+            {
+                if (_x != "this") then {
+                    _muzzleMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> _x >> "magazines");
+                    _weaponMagazines append _muzzleMagazines;
+                };
+            } forEach _muzzles;
+            if (_magazine in _weaponMagazines) exitWith {
+                _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
+                if (_initSpeedCoef < 0) then {
+                    _initSpeed = _initSpeed * -_initSpeedCoef;
+                };
+                if (_initSpeedCoef > 0) then {
+                    _initSpeed = _initSpeedCoef;
+                };
+            };
+        } forEach _weapons;
+        
         _offset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, _angleTarget, _distance];
         _offset = parseNumber _offset;
 
-        _FCSMagazines = _FCSMagazines + [_x];
+        _FCSMagazines = _FCSMagazines + [_magazine];
         _FCSElevation = _FCSElevation + [_offset];
     };
 } forEach _magazines;
@@ -162,11 +193,20 @@ _FCSElevation = [];
 [_vehicle, format ["%1_%2", QGVAR(Elevation), _turret], _FCSElevation] call EFUNC(common,setVariablePublic);
 [_vehicle, format ["%1_%2", QGVAR(Azimuth), _turret],     _FCSAzimuth] call EFUNC(common,setVariablePublic);
 
-_userChange = true;
+_showHint = false;
 if( (count _this) > 3) then {
-    _userChange = _this select 3;
+    _showHint = _this select 3;
 };
 
-if(_userChange) then {
+_playSound = true;
+if( (count _this) > 3) then {
+    _playSound = _this select 4;
+};
+
+if(_playSound) then {
+    playSound "ACE_Sound_Click";
+};
+
+if(_showHint) then {
     [format ["%1: %2", localize "STR_ACE_FCS_ZeroedTo", _distance]] call EFUNC(common,displayTextStructured);
 };

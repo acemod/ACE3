@@ -10,10 +10,11 @@
 
 #include "script_component.hpp"
 
-private ["_id", "_settings", "_add", "_exists", "_map", "_lowestVolume"];
-_id       = _this select 0;
-_settings = _this select 1;
-_add      = true;
+private ["_add", "_exists", "_map", "_lowestVolume"];
+
+PARAMS_2(_id,_settings);
+
+_add = true;
 if (count _this > 2) then {
     _add = _this select 2;
 };
@@ -52,4 +53,4 @@ _lowestVolume = 1;
 
 // Set Radio mod variables.
 player setVariable ["tf_globalVolume", _lowestVolume];
-player setVariable ["acre_sys_core_globalVolume", _lowestVolume];
+if (!isNil "acre_api_fnc_setGlobalVolume") then { [_lowestVolume^0.33] call acre_api_fnc_setGlobalVolume; };

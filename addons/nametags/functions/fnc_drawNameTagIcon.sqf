@@ -27,12 +27,12 @@
     "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa" \
     ]
 
-private ["_height", "_position", "_color", "_name", "_rank", "_size"];
+private ["_height", "_position", "_color", "_name", "_rank", "_size", "_icon"];
 
 PARAMS_5(_player,_target,_alpha,_heightOffset,_iconType);
 
-if (_alpha < 0) exitWith {}; //Don't waste time if not visable
-if (_iconType == ICON_NONE) exitWith {}; //Don't waste time if not visable
+if (_alpha < 0) exitWith {}; //Don't waste ACE_time if not visable
+if (_iconType == ICON_NONE) exitWith {}; //Don't waste ACE_time if not visable
 
 
 //Set Text:

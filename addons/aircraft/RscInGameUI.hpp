@@ -8,13 +8,16 @@ class RscOpticsValue;
 class VScrollbar;
 class HScrollbar;
 class RscLadderPicture;
+class RscControlsGroupNoScrollbars;
+
+
 class RscInGameUI
 {
     class RscUnitInfo;
     class Rsc_ACE_Helo_UI_Turret: RscUnitInfo
     {
         idd = 300;
-        controls[] = {"CA_Zeroing","CA_IGUI_elements_group","CA_VehicleToggles"};
+        controls[] = {"CA_IGUI_elements_group","CA_VehicleToggles"};
         class VScrollbar;
         class HScrollbar;
         class CA_IGUI_elements_group: RscControlsGroup

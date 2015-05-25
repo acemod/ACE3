@@ -15,7 +15,7 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_bandage", "_part", "_selectionName", "_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact", "_exit"];
+private ["_target", "_bandage", "_part", "_selectionName", "_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact", "_exit", "_specificClass", "_classID", "_effectivenessFound", "_className", "_hitPoints", "_hitSelections", "_point", "_woundTreatmentConfig"];
 _target = _this select 0;
 _bandage = _this select 1;
 _selectionName = _this select 2;
@@ -96,8 +96,11 @@ if (_impact > 0 && {GVAR(enableAdvancedWounds)}) then {
 };
 
 // If all wounds have been bandaged, we will reset all damage to 0, so the unit is not showing any blood on the model anymore.
-if (count _openWounds == 0) then {
-    _target setDamage 0;
+if (GVAR(healHitPointAfterAdvBandage) && {{(_x select 2) == _part && {_x select 3 > 0}}count _openWounds == 0}) then {
+    _hitSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
+    _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
+    _point = _hitPoints select (_hitSelections find _selectionName);
+    [_target, _point, 0] call FUNC(setHitPointDamage);
     // _target setvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
 };
 

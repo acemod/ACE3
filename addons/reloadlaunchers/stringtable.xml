@@ -1,24 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-16 -->
 <Project name="ACE">
     <Package name="ReloadLaunchers">
         <Key ID="STR_ACE_ReloadLaunchers_LoadLauncher">
             <English>Load launcher</English>
             <German>Panzerabwehr laden</German>
+            <Spanish>Cargar lanzador</Spanish>
+            <Russian>Зарядить ПУ</Russian>
+            <Czech>Nabít odpalovač</Czech>
+            <Polish>Załaduj wyrzutnię</Polish>
+            <French>Charger lanceur</French>
+            <Hungarian>Kilövö betöltése</Hungarian>
+            <Italian>Carica lanciamissili</Italian>
+            <Portuguese>Recarregar lançador</Portuguese>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
             <English>Loading launcher ...</English>
+            <French>Chargement du lanceur ...</French>
             <German>Panzerabwehr wird geladen ...</German>
+            <Spanish>Cargando lanzador ...</Spanish>
+            <Russian>Зарядка ПУ ...</Russian>
+            <Czech>Nabíjím odpalovač  ...</Czech>
+            <Polish>Ładowanie wyrzutni ...</Polish>
+            <Hungarian>Kilövő betöltés alatt ...</Hungarian>
+            <Italian>Carico il lanciamissili ...</Italian>
+            <Portuguese>Recarregando lançador...</Portuguese>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LauncherLoaded">
             <English>Launcher loaded</English>
+            <French>Lanceur chargé</French>
             <German>Panzerabwehr geladen</German>
+            <Spanish>Lanzador cargado</Spanish>
+            <Russian>ПУ заряжена</Russian>
+            <Czech>Odpalovač nabit</Czech>
+            <Polish>Wyrzutnia załadowana</Polish>
+            <Hungarian>Kilövő betöltve</Hungarian>
+            <Italian>Lanciamissili caricato</Italian>
+            <Portuguese>Lançador Carregado</Portuguese>
         </Key>
-
         <Key ID="STR_ACE_ReloadLaunchers_LoadMagazine">
             <English>Load %1</English>
+            <French>Charge %1</French>
             <German>Lade %1</German>
+            <Spanish>Cargar %1</Spanish>
+            <Russian>Загрузка %1</Russian>
+            <Czech>Nabít %1</Czech>
+            <Polish>Załadowano %1</Polish>
+            <Hungarian>%1 betöltése</Hungarian>
+            <Italian>Caricato %1</Italian>
+            <Portuguese>Recarregar %1</Portuguese>
         </Key>
     </Package>
-
 </Project>

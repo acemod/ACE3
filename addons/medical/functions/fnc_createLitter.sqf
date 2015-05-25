@@ -16,7 +16,7 @@
 
 #define MIN_ENTRIES_LITTER_CONFIG 3
 
-private ["_target", "_className", "_config", "_litter", "_createLitter", "_litterObject", "_position", "_createdLitter"];
+private ["_target", "_className", "_config", "_litter", "_createLitter", "_position", "_createdLitter", "_caller", "_selectionName", "_usersOfItems"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -37,21 +37,27 @@ if !(isArray (_config >> "litter")) exitwith {};
 _litter = getArray (_config >> "litter");
 
 _createLitter = {
-    _position = getPos (_this select 0);
+    private["_position", "_litterClass", "_direction"];
+    
+    // @TODO: handle carriers over water
+    // For now, don't spawn litter if we are over water to avoid floating litter
+    if(surfaceIsWater (getPos (_this select 0))) exitWith { false };
+    
+    _position = getPosATL (_this select 0);
+    _position = [_position select 0, _position select 1, 0];
     _litterClass = _this select 1;
-    _litterObject = createVehicle [_litterClass, _position, [], 0, "NONE"];
     if (random(1) >= 0.5) then {
-        _litterObject setPos [(_position select 0) + random 2, (_position select 1) + random 2, _position select 2];
+        _position = [(_position select 0) + random 1, (_position select 1) + random 1, _position select 2];
     } else {
-        _litterObject setPos [(_position select 0) - random 2, (_position select 1) - random 2, _position select 2];
+       _position =  [(_position select 0) - random 1, (_position select 1) - random 1, _position select 2];
     };
-    _litterObject setDir (random 360);
-    _litterObject;
-};
+    _direction = (random 360);
 
-if (isnil QGVAR(allCreatedLitter)) then {
-    GVAR(allCreatedLitter) = [];
-    GVAR(litterPFHRunning) = false;
+    // Create the litter, and timeout the event based on the cleanup delay
+    // The cleanup delay for events in MP is handled by the server side
+    [QGVAR(createLitter), [_litterClass,_position,_direction], 0] call EFUNC(common,syncedEvent);
+
+    true
 };
 
 _createdLitter = [];
@@ -68,6 +74,7 @@ _createdLitter = [];
                 _litterCondition = if (_litterCondition != "") then {compile _litterCondition} else {{true}};
             } else {
                 _litterCondition = missionNamespace getvariable _litterCondition;
+                if (typeName _litterCondition != "CODE") then {_litterCondition = {false}};
             };
             if !([_caller, _target, _selectionName, _className, _usersOfItems] call _litterCondition) exitwith {};
 
@@ -75,37 +82,13 @@ _createdLitter = [];
                 // Loop through through the litter options and place the litter
                 {
                     if (typeName _x == "ARRAY" && {(count _x > 0)}) then {
-                        _createdLitter pushback ([_target, _x select (floor(random(count _x)))] call _createLitter);
+                        [_target, _x select (floor(random(count _x)))] call _createLitter;
                     };
                     if (typeName _x == "STRING") then {
-                        _createdLitter pushback ([_target, _x] call _createLitter);
+                        [_target, _x] call _createLitter;
                     };
                 }foreach _litterOptions;
             };
         };
     };
 }foreach _litter;
-
-if (GVAR(litterCleanUpDelay) >= 0) then {
-    GVAR(allCreatedLitter) pushback [time, GVAR(litterCleanUpDelay), _createdLitter];
-};
-
-if !(GVAR(litterPFHRunning)) then {
-    GVAR(litterPFHRunning) = true;
-    [{
-        {
-            if (time - (_x select 0) >= (_x select 1)) then {
-                {
-                    deleteVehicle _x;
-                }foreach (_this select 2);
-                GVAR(allCreatedLitter) set[_foreachIndex, objNull];
-            };
-        }foreach GVAR(allCreatedLitter);
-        GVAR(allCreatedLitter) = GVAR(allCreatedLitter) - [objNull];
-
-        if (count GVAR(allCreatedLitter) == 0) exitwith {
-            GVAR(litterPFHRunning) = false;
-            [_this select 1] call CBA_fnc_removePerFrameHandler;
-        };
-    }, 30, []] call CBA_fnc_addPerFrameHandler;
-};

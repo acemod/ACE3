@@ -9,17 +9,17 @@
  * The rating [0-3] <NUMBER>
  *
  * Example:
- * _rating = 0.05 call ace_goggles_fnc_getExplosionIndex;
+ * 0.05 call ace_goggles_fnc_getExplosionIndex;
  *
  * Public: No
  */
 private ["_effectIndex"];
 
 _effectIndex = switch true do {
-   	case (_this <= 0.04): {0};
-   	case (_this <= 0.06): {1};
-   	case (_this <= 0.09): {2};
-   	default {3};
+       case (_this <= 0.04): {0};
+       case (_this <= 0.06): {1};
+       case (_this <= 0.09): {2};
+       default {3};
 };
 
 _effectIndex

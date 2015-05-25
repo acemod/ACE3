@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-private ["_oldBody","_newUnit","_class","_group","_position","_side","_allVariables"];
+private ["_oldBody","_newUnit","_class","_group","_position","_side", "_caller", "_name"];
 _oldBody = _this select 0;
 _caller = _this select 1;
 
@@ -67,9 +67,9 @@ _newUnit selectWeapon (primaryWeapon _newUnit);
 // We are attaching the old unit and hiding it, so we can keep the original unit until later.
 _oldBody attachTo [_newUnit, [0,0,0]];
 if (isMultiplayer) then {
-	hideObjectGlobal _oldBody;
+    hideObjectGlobal _oldBody;
 } else {
-	hideObject _oldBody;
+    hideObject _oldBody;
 };
 
 _newUnit setvariable [QGVAR(copyOfUnit), _oldBody, true];

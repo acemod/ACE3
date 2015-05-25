@@ -14,9 +14,7 @@
 
 if !(hasInterface) exitWith {};
 
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+PARAMS_3(_logic,_units,_activated);
 
 if !(_activated) exitWith {};
 

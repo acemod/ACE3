@@ -22,6 +22,7 @@ class CfgPatches {
 #include "CfgActions.hpp"
 #include "CfgMoves.hpp"
 #include "CfgVoice.hpp"
+#include "CfgUnitInsignia.hpp"
 
 class ACE_Rsc_Display_Base {
     idd = -1;
@@ -69,9 +70,9 @@ class ACE_Settings {
     *    force = 0;
     *
     * Does it appear on the options menu?
-    *    isClientSetable = 1;
+    *    isClientSettable = 1;
     *
-    * The following settings only apply when isClientSetable == 1
+    * The following settings only apply when isClientSettable == 1
     * Stringtable entry with the setting name
     *    displayName = "$STR_ACE_Common_SettingName";
     *
@@ -90,38 +91,38 @@ class ACE_Settings {
     /*class GVAR(enableNumberHotkeys) {
         value = 1;
         typeName = "BOOL";
-        isClientSetable = 1;
+        isClientSettable = 1;
         displayName = "$STR_ACE_Common_EnableNumberHotkeys";
     };*/
     class GVAR(settingFeedbackIcons) {
         value = 1;
         typeName = "SCALAR";
         force = 0;
-        isClientSetable = 1;
+        isClientSettable = 1;
         displayName = "$STR_ACE_Common_SettingFeedbackIconsName";
         description = "$STR_ACE_Common_SettingFeedbackIconsDesc";
-        values[] = {"Hide", "Top right, downwards", "Top right, to the left", "Top left, downwards", "Top left, to the right"};
+        values[] = {"$STR_ACE_Common_Hide", "$STR_ACE_Common_TopRightDown", "$STR_ACE_Common_TopRightLeft", "$STR_ACE_Common_TopLeftDown", "$STR_ACE_Common_TopLeftRight"};
     };
     class GVAR(SettingProgressBarLocation) {
         value = 0;
         typeName = "SCALAR";
         force = 0;
-        isClientSetable = 1;
+        isClientSettable = 1;
         displayName = "$STR_ACE_Common_SettingProgressbarLocationName";
         description = "$STR_ACE_Common_SettingProgressbarLocationDesc";
-        values[] = {"Top", "Bottom"};
+        values[] = {"$STR_ACE_Common_Top", "$STR_ACE_Common_Bottom"};
     };
     class GVAR(displayTextColor) {
         value[] = {0,0,0,0.1};
         typeName = "COLOR";
-        isClientSetable = 1;
+        isClientSettable = 1;
         displayName = "$STR_ACE_Common_SettingDisplayTextColorName";
         description = "$STR_ACE_Common_SettingDisplayTextColorDesc";
     };
     class GVAR(displayTextFontColor) {
         value[] = {1,1,1,1};
         typeName = "COLOR";
-        isClientSetable = 1;
+        isClientSettable = 1;
         displayName = "$STR_ACE_Common_SettingDisplayTextFontColorName";
         description = "$STR_ACE_Common_SettingDisplayTextFontColorDesc";
     };
@@ -151,4 +152,16 @@ class CfgUIGrids {
             };
         };
     };
+};
+
+/*
+// check dll
+class RscStandardDisplay;
+class RscDisplayMain: RscStandardDisplay {
+    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDisplayMain"",'GUI')] call  (uinamespace getvariable 'BIS_fnc_initDisplay'); [ARR_5('header','tail',{0},{},_this select 0)] call COMPILE_FILE(functions\fnc_errorMessage));
+};
+*/
+
+class ACE_Extensions {
+    extensions[] = {};
 };

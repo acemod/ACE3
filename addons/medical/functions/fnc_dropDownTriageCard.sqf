@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_show"];
+private ["_show", "_ctrl", "_display", "_idc", "_pos"];
 _show = _this select 0;
 disableSerialization;
 
@@ -22,11 +22,11 @@ if (isnil "_display") exitwith {};
 
 _pos = [0,0,0,0];
 if (_show) then {
-	_pos = ctrlPosition (_display displayCtrl 2001);
+    _pos = ctrlPosition (_display displayCtrl 2001);
 };
 for "_idc" from 2002 to 2006 step 1 do {
-	_pos set [1, (_pos select 1) + (_pos select 3)];
-	_ctrl = (_display displayCtrl _idc);
-	_ctrl ctrlSetPosition _pos;
-	_ctrl ctrlCommit 0;
+    _pos set [1, (_pos select 1) + (_pos select 3)];
+    _ctrl = (_display displayCtrl _idc);
+    _ctrl ctrlSetPosition _pos;
+    _ctrl ctrlCommit 0;
 };

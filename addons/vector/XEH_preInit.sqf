@@ -31,14 +31,6 @@ PREP(showText);
 PREP(nextMode);
 PREP(adjustBrightness);
 PREP(showReticle);
-
-GVAR(holdKeyHandler) = -1;
-GVAR(isKeyDownAzimuth) = false;
-GVAR(isKeyDownDistance) = false;
-GVAR(keyDownTimeAzimuth) = -1;
-GVAR(keyDownTimeDistance) = -1;
-GVAR(useMil) = false;
-GVAR(useFeet) = false;
-GVAR(modeReticle) = 0;
+PREP(illuminate);
 
 ADDON = true;

@@ -48,7 +48,7 @@ if (_target isKindOf "CAManBase") then {
     [_target, "AinjPpneMrunSnonWnonDb_grab", 2, true] call EFUNC(common,doAnimation);
 };
 
-// prevents draging and carrying at the same time
+// prevents draging and carrying at the same ACE_time
 _unit setVariable [QGVAR(isDragging), true, true];
 
-[FUNC(startDragPFH), 0.2, [_unit, _target, time + 5]] call CBA_fnc_addPerFrameHandler;
+[FUNC(startDragPFH), 0.2, [_unit, _target, ACE_time + 5]] call CBA_fnc_addPerFrameHandler;

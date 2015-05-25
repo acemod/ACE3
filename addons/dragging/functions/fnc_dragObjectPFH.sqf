@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 
 #ifdef DEBUG_ENABLED_DRAGGING
-    systemChat format ["%1 dragObjectPFH running", time];
+    systemChat format ["%1 dragObjectPFH running", ACE_time];
 #endif
 
 private ["_unit", "_target"];

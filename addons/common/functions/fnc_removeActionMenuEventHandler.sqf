@@ -13,11 +13,9 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_action", "_id", "_name", "_actionsVar", "_currentID", "_actionIDs", "_actions", "_actionID", "_nameVar"];
+private ["_name", "_actionsVar", "_currentID", "_actionIDs", "_actions", "_actionID", "_nameVar"];
 
-_unit = _this select 0;
-_action = _this select 1;
-_id = _this select 2;
+PARAMS_3(_unit,_action,_id);
 
 if (_id == -1) exitWith {};
 

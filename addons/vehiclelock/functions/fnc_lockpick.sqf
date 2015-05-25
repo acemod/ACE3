@@ -27,6 +27,9 @@ PARAMS_3(_unit,_veh,_funcType);
 if (isNull _unit) exitWith {ERROR("null unit"); false};
 if (isNull _veh) exitWith {ERROR("null vehicle"); false};
 
+//Exit if vehicle unlocked:
+if ((locked _veh) == 0) exitWith {false};
+
 //need lockpick item
 if (!("ACE_key_lockpick" in (items _unit))) exitWith {false};
 

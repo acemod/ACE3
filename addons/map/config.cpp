@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common", "ace_interaction"};
+        requiredAddons[] = {"ace_interaction"};
         author[] = {"KoffeinFlummi","Rocko","esteldunedain"};
         authorUrl = "https://github.com/KoffeinFlummi/";
         VERSION_CONFIG;
@@ -23,33 +23,7 @@ class RscButtonMenuCancel;
 class RscButtonMenu;
 class RscEdit;
 
-class ACE_Settings {
-    class GVAR(BFT_Interval) {
-        value = 1.0;
-        typeName = "SCALAR";
-    };
-    class GVAR(BFT_Enabled) {
-        value = 0;
-        typeName = "BOOL";
-    };
-    class GVAR(BFT_HideAiGroups) {
-        value = 0;
-        typeName = "BOOL";
-    };
-    class GVAR(mapIllumination) {
-        value = 1;
-        typeName = "BOOL";
-    };
-    class GVAR(mapShake) {
-        value = 1;
-        typeName = "BOOL";
-    };
-    class GVAR(mapLimitZoom) {
-        value = 0;
-        typeName = "BOOL";
-    };
-};
-
+#include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgMarkers.hpp"
 #include "CfgVehicles.hpp"
@@ -58,13 +32,15 @@ class RscMapControl {
     maxSatelliteAlpha = 0.5;
 
     // From Arma 2
-    colorTracks[] = {1.0,0.0,0.0,1};
-    colorTracksFill[] = {1.0,1.0,0.0,1};
-    colorRoads[] = {0.0,0.0,0.0,1};
-    colorRoadsFill[] = {1,1,0,1};
+    colorTracks[] = {0.2,0.13,0,1};
+    colorTracksFill[] = {1,0.88,0.65,0.3};
+    colorRoads[] = {0.2,0.13,0,1};
+    colorRoadsFill[] = {1,0.88,0.65,1};
     colorMainRoads[] = {0.0,0.0,0.0,1};
-    colorMainRoadsFill[] = {1,0.6,0.4,1};
+    colorMainRoadsFill[] = {0.94,0.69,0.2,1};
     colorRailWay[] = {0.8,0.2,0,1};
+    colorGrid[] = {0.05,0.1,0,0.6};
+    colorGridMap[] = {0.05,0.1,0,0.4};
 
     // From ACE2
     colorBackground[] = {0.929412, 0.929412, 0.929412, 1.0};
@@ -81,11 +57,28 @@ class RscMapControl {
     sizeExGrid = 0.032;
 };
 
+class RscMap;
+class RscDisplayArcadeMap_Layout_2: RscMap { //"Traditional" Editor:
+    class controlsBackground {
+        class CA_Map: RscMapControl {
+            #include "MapTweaks.hpp"
+        };
+    };
+};
+class RscDisplayArcadeMap_Layout_6: RscMap { //"Streamlined" Editor:
+    class controlsBackground {
+        class CA_Map: RscMapControl {
+            #include "MapTweaks.hpp"
+        };
+    };
+};
+
 // REGULAR MAP
 class RscDisplayMainMap {
     // Tweak map styling
     class controlsBackground {
-        class CA_Map : RscMapControl {
+        class CA_Map: RscMapControl {
+            onDraw = QUOTE([ctrlParent (_this select 0)] call DFUNC(onDrawMap));
             #include "MapTweaks.hpp"
         };
     };
@@ -143,6 +136,13 @@ class RscDisplayDiary {
 
 // BRIEFING SCREEN
 class RscDisplayGetReady: RscDisplayMainMap {
+    // Tweak map styling
+    class controlsBackground {
+        class CA_Map: RscMapControl {
+            onDraw = QUOTE([ctrlParent (_this select 0)] call DFUNC(onDrawMap));
+            #include "MapTweaks.hpp"
+        };
+    };
     // get rid of the "center to player position" - button (as it works even on elite)
     class controls {
         class TopRight: RscControlsGroup {

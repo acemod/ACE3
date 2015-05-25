@@ -4,4 +4,4 @@ if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) ex
 if !((!GVAR(enabled) && FUNC(canUseFCS)) || FUNC(canUseRangefinder)) exitWith {false};
 
 [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), -1, false] call FUNC(keyDown);
-[vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), -1, false] call FUNC(keyUp);
+[vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), -1, false, false] call FUNC(keyUp);

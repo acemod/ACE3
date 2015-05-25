@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Weather">
+        <Key ID="STR_ACE_Weather_WindInfoKey">
+            <English>Show Wind Info</English>
+            <Polish>Pokaż inf. o wietrze</Polish>
+            <Russian>Показать информацию о ветре</Russian>
+            <French>Afficher information sur le vent</French>
+            <Spanish>Mostrar información del viento</Spanish>
+            <Italian>Mostra informazioni sul vento</Italian>
+            <German>Zeige Windinformationen</German>
+            <Hungarian>Széladatok mutatása</Hungarian>
+            <Czech>Zobrazit informace o větru</Czech>
+            <Portuguese>Mostrar informação do vento</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Weather_Module_DisplayName">
+            <English>Weather</English>
+            <Polish>Pogoda</Polish>
+        </Key>
+        <Key ID="STR_ACE_Weather_Module_Description">
+            <English>Multiplayer synchronized ACE weather module</English>
+            <Polish>Synchronizowana pogoda ACE</Polish>
+        </Key>
+        <Key ID="STR_ACE_Weather_enableServerController_DisplayName">
+            <English>Weather propagation</English>
+            <Polish>Zmiany pogody</Polish>
+        </Key>
+        <Key ID="STR_ACE_Weather_enableServerController_Description">
+            <English>Enables server side weather propagation</English>
+            <Polish>Aktywuje zmiany pogody po stronie serwera</Polish>
+        </Key>
+        <Key ID="STR_ACE_Weather_useACEWeather_DisplayName">
+            <English>ACE Weather</English>
+            <Polish>Pogoda ACE</Polish>
+        </Key>
+        <Key ID="STR_ACE_Weather_useACEWeather_Description">
+            <English>Overrides the default weather (editor, mission settings) with ACE weather (map based)</English>
+            <Polish>Nadpisuje domyślne ustawienia pogody (edytor, wywiad) przy użyciu pogody ACE (zależna od mapy)</Polish>
+        </Key>
+        <Key ID="STR_ACE_Weather_syncRain_DisplayName">
+            <English>Sync Rain</English>
+            <Polish>Synchronizuj deszcz</Polish>
+        </Key>
+        <Key ID="STR_ACE_Weather_syncRain_Description">
+            <English>Synchronizes rain</English>
+            <Polish>Synchronizuje deszcz</Polish>
+        </Key>
+        <Key ID="STR_ACE_Weather_syncWind_DisplayName">
+            <English>Sync Wind</English>
+            <Polish>Synchronizuj wiatr</Polish>
+        </Key>
+        <Key ID="STR_ACE_Weather_syncWind_Description">
+            <English>Synchronizes wind</English>
+            <Polish>Synchronizuje wiatr</Polish>
+        </Key>
+        <Key ID="STR_ACE_Weather_syncMisc_DisplayName">
+            <English>Sync Misc</English>
+            <Polish>Synchronizuj różne</Polish>
+        </Key>
+        <Key ID="STR_ACE_Weather_syncMisc_Description">
+            <English>Synchronizes lightnings, rainbow, fog, ...</English>
+            <Polish>Synchronizuje pioruny, tęcze, mgłę, ...</Polish>
+        </Key>
+        <Key ID="STR_ACE_Weather_serverUpdateInterval_DisplayName">
+            <English>Update Interval</English>
+            <Polish>Interwał aktualizacji</Polish>
+        </Key>
+        <Key ID="STR_ACE_Weather_serverUpdateInterval_Description">
+            <English>Defines the interval (seconds) between weather updates</English>
+            <Polish>Określa interwał (sekundy) pomiędzy aktualizacjami pogody</Polish>
+        </Key>
+    </Package>
+</Project>

@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target","_selectionName","_className","_config","_callback"];
+private ["_args", "_caller", "_target","_selectionName","_className","_config","_callback", "_weaponSelect"];
 _args = _this select 0;
 _caller = _args select 0;
 _target = _args select 1;
@@ -28,9 +28,16 @@ if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
 };
 if (vehicle _caller == _caller) then {
-	[_caller, _caller getvariable [QGVAR(treatmentPrevAnimCaller), ""], 1] call EFUNC(common,doAnimation);
+    [_caller, _caller getvariable [QGVAR(treatmentPrevAnimCaller), ""], 1] call EFUNC(common,doAnimation);
 };
 _caller setvariable [QGVAR(treatmentPrevAnimCaller), nil];
+
+_weaponSelect = (_caller getvariable [QGVAR(selectedWeaponOnTreatment), ""]);
+if (_weaponSelect != "") then {
+    _caller selectWeapon _weaponSelect;
+} else {
+    _caller action ["SwitchWeapon", _caller, _caller, 99];
+};
 
 // Record specific callback
 _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
@@ -45,6 +52,11 @@ if (isNil _callback) then {
     _callback = missionNamespace getvariable _callback;
 };
 
+_args call _callback;
+
 _args call FUNC(createLitter);
 
-_args call _callback;
+//If we're not already tracking vitals, start:
+if (!(_target getvariable [QGVAR(addedToUnitLoop),false])) then {
+    [_target] call FUNC(addToInjuredCollection);
+};

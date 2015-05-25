@@ -1,33 +1,89 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-  <Package name="Laserpointer">
-
-    <Key ID="STR_ACE_Laserpointer_red">
-      <English>Laser Pointer (red)</English>
-      <German>Laserpointer (rot)</German>
-    </Key>
-    <Key ID="STR_ACE_Laserpointer_green">
-      <English>Laser Pointer (green)</English>
-      <German>Laserpointer (grün)</German>
-    </Key>
-
-    <Key ID="STR_ACE_Laserpointer_Description">
-      <English>Emits visible light. </English>
-      <German>Strahlt sichtbares Licht aus. </German>
-    </Key>
-
-    <Key ID="STR_ACE_Laserpointer_useLaser">
-      <Original>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</Original>
-      <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</English>
-      <Czech>&lt;t color='#9cf953'&gt;Použití: &lt;/t&gt;Zapnout/vypnout laser</Czech>
-      <French>&lt;t color='#9cf953'&gt;Utiliser : &lt;/t&gt;laser on/off</French>
-      <German>&lt;t color='#9cf953'&gt;Benutzen: &lt;/t&gt;Laser EIN/AUS</German>
-      <Italian>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Laser ON/OFF</Italian>
-      <Polish>&lt;t color='#9cf953'&gt;Użyj: &lt;/t&gt;wł./wył. lasera</Polish>
-      <Portuguese>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Ativar/Desativar laser</Portuguese>
-      <Russian>&lt;t color='#9cf953'&gt;Использовать: &lt;/t&gt;вкл/выкл лазер</Russian>
-      <Spanish>&lt;t color='#9cf953'&gt;Usar: &lt;/t&gt;encender/apagar láser</Spanish>
-    </Key>
-
-  </Package>
+    <Package name="Laserpointer">
+        <Key ID="STR_ACE_Laserpointer_red">
+            <English>Laser Pointer (red)</English>
+            <French>Pointeur laser (rouge)</French>
+            <German>Laserpointer (rot)</German>
+            <Russian>Лазерный прицел (красный)</Russian>
+            <Czech>Laserové ukazovátko (červené)</Czech>
+            <Polish>Wskaźnik laserowy (czerwony)</Polish>
+            <Hungarian>Lézer-pointer (piros)</Hungarian>
+            <Spanish>Puntero láser (rojo)</Spanish>
+            <Italian>Puntatore laser (rosso)</Italian>
+            <Portuguese>Laser (vermelho)</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Laserpointer_green">
+            <English>Laser Pointer (green)</English>
+            <French>Pointeur laser (vert)</French>
+            <German>Laserpointer (grün)</German>
+            <Russian>Лазерный прицел (зелёный)</Russian>
+            <Czech>Laserové ukazovátko (zelené)</Czech>
+            <Polish>Wskaźnik laserowy (zielony)</Polish>
+            <Hungarian>Lézer-pointer (zöld)</Hungarian>
+            <Spanish>Puntero láser (verde)</Spanish>
+            <Italian>Puntatore laser (verde)</Italian>
+            <Portuguese>Laser (verde)</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Laserpointer_Description">
+            <English>Emits visible light. </English>
+            <French>Emettre de la lumière visible</French>
+            <German>Strahlt sichtbares Licht aus. </German>
+            <Russian>Испускает узкий пучок видимого света.</Russian>
+            <Czech>Vyzařuje viditelné světlo.</Czech>
+            <Polish>Wydziela widzialne światło.</Polish>
+            <Hungarian>Látható fényt bocsát ki.</Hungarian>
+            <Spanish>Emite luz visible.</Spanish>
+            <Italian>Emette luce visibile.</Italian>
+            <Portuguese>Emite luz visível. </Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Laserpointer_useLaser">
+            <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</English>
+            <Czech>&lt;t color='#9cf953'&gt;Použití: &lt;/t&gt;Zapnout/vypnout laser</Czech>
+            <French>&lt;t color='#9cf953'&gt;Utiliser : &lt;/t&gt;laser allumé/éteint</French>
+            <German>&lt;t color='#9cf953'&gt;Benutzen: &lt;/t&gt;Laser EIN/AUS</German>
+            <Italian>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Laser ON/OFF</Italian>
+            <Polish>&lt;t color='#9cf953'&gt;Użyj: &lt;/t&gt;wł./wył. laser</Polish>
+            <Portuguese>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Ativar/Desativar laser</Portuguese>
+            <Russian>&lt;t color='#9cf953'&gt;Использовать: &lt;/t&gt;ВКЛ/ВЫКЛ лазер</Russian>
+            <Spanish>&lt;t color='#9cf953'&gt;Usar: &lt;/t&gt;Encender/Apagar láser</Spanish>
+            <Hungarian>&lt;t color='#9cf953'&gt;Használat: &lt;/t&gt;Lézer BE/KI kapcsolása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Laserpointer_Laser">
+            <English>Laser</English>
+            <German>Laser</German>
+            <Polish>Laser</Polish>
+            <Russian>Лазер</Russian>
+            <French>Laser</French>
+            <Spanish>Láser</Spanish>
+            <Italian>Laser</Italian>
+            <Hungarian>Lézer</Hungarian>
+            <Czech>Laser</Czech>
+            <Portuguese>Laser</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Laserpointer_IRLaser">
+            <English>IR Laser</English>
+            <German>IR-Laser</German>
+            <Polish>Laser IR</Polish>
+            <Russian>ИК-лазер</Russian>
+            <French>Laser IR</French>
+            <Spanish>Láser IR</Spanish>
+            <Italian>Laser IR</Italian>
+            <Hungarian>Infravörös Lézer</Hungarian>
+            <Czech>IR Laser</Czech>
+            <Portuguese>Laser IV</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Laserpointer_switchLaserLight">
+            <English>Switch Laser / IR Laser</English>
+            <German>Umschalten Laser / IR-Laser</German>
+            <Polish>Przełącz Laser / Laser IR</Polish>
+            <Russian>Изменить режим Лазер / ИК-лазер</Russian>
+            <French>Changer Laser / Laser IR</French>
+            <Italian>Alterna Laser / IR Laser</Italian>
+            <Spanish>Cambiar láser / Láser IR</Spanish>
+            <Hungarian>Lézer / Infravörös Lézer váltása</Hungarian>
+            <Czech>Přepnout Laser / Infračervený Laser</Czech>
+            <Portuguese>Alternar entre Laser / Laser IV</Portuguese>
+        </Key>
+    </Package>
 </Project>

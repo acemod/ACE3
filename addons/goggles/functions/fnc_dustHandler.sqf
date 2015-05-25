@@ -24,11 +24,11 @@ if (rain > 0.1) exitWith {true};
 if ((stance _unit) != "PRONE") exitWith {true};
 
 if (isClass(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "FirstEffect")) then {
-	_cloudType = getText(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "FirstEffect" >> "effectName");
+    _cloudType = getText(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "FirstEffect" >> "effectName");
 } else {
-	if (isClass(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "effect1")) then {
-		_cloudType = getText(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "effect1" >> "effectName");
-	};
+    if (isClass(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "effect1")) then {
+        _cloudType = getText(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "effect1" >> "effectName");
+    };
 };
 
 if (_cloudType == "") exitWith {true};
@@ -48,24 +48,24 @@ if (!_found) exitWith {};
 
 _bullets = GETDUSTT(DBULLETS);
 
-if ((diag_tickTime - GETDUSTT(DTIME)) > 1) then {
-	_bullets = 0;
+if ((ACE_diagTime - GETDUSTT(DTIME)) > 1) then {
+    _bullets = 0;
 };
 
 _bullets = _bullets + 1;
 SETDUST(DBULLETS,_bullets);
-SETDUST(DTIME,diag_tickTime);
+SETDUST(DTIME,ACE_diagTime);
 
 if (GETDUSTT(DAMOUNT) < 2) then {
-	private "_bulletsRequired";
-	_bulletsRequired = 100;
-	if (isNumber (ConfigFile >> _cloudType >> "ACE_Goggles_BulletCount")) then {
-		_bulletsRequired = getNumber (ConfigFile >> _cloudType >> "ACE_Goggles_BulletCount");
-	};
+    private "_bulletsRequired";
+    _bulletsRequired = 100;
+    if (isNumber (ConfigFile >> _cloudType >> "ACE_Goggles_BulletCount")) then {
+        _bulletsRequired = getNumber (ConfigFile >> _cloudType >> "ACE_Goggles_BulletCount");
+    };
 
-	if (_bulletsRequired <= _bullets) then {
-		SETDUST(DACTIVE,true);
-		call FUNC(applyDust);
-	};
+    if (_bulletsRequired <= _bullets) then {
+        SETDUST(DACTIVE,true);
+        call FUNC(applyDust);
+    };
 };
 true

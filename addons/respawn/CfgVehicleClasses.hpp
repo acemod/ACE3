@@ -1,5 +1,5 @@
 class CfgVehicleClasses {
     class GVAR(Rallypoints) {
-        displayName = "ACE Respawn";
+        displayName = "$STR_ACE_Respawn_EditorCategory";
     };
 };

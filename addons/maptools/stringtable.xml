@@ -1,148 +1,149 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-22 -->
 <Project name="ACE">
-  <Package name="Map">
-    <Key ID="STR_ACE_MapTools_Name">
-      <English>Map Tools</English>
-      <Spanish>Herramientas de mapa</Spanish>
-      <French>Outils de navigation</French>
-      <Polish>Narzędzia nawigacyjne</Polish>
-      <German>Kartenwerkzeug</German>
-      <Czech>Pomůcky k Mapě</Czech>
-      <Italian>Strumenti Cartografici</Italian>
-      <Portuguese>Ferramentas de Mapa</Portuguese>
-      <Hungarian>Térképészeti eszközök</Hungarian>
-      <Russian>Инструменты карты</Russian>
-    </Key>
-    <Key ID="STR_ACE_MapTools_Description">
-      <English>The Map Tools allow you to measure distances and angles on the map.</English>
-      <Spanish>Las herramientas de mapa permiten medir distancias y ángulos en el mapa.</Spanish>
-      <French>Les outils de navigation permettent de mesurer des distances et des angles sur la carte.</French>
-      <Polish>Narzędzia nawigacyjne pozwalają na mierzenie odległości i kątów na mapie.</Polish>
-      <German>Das Kartenwerkzeug erlaubt es dir, Distanzen und Winkel zu messen.</German>
-      <Czech>Pomůcky k mapě slouží k měření vzdáleností a úhlů na mapě.</Czech>
-      <Italian>Gli Strumenti Cartografici ti consentono di misurare distanze ed angoli sulla mappa.</Italian>
-      <Portuguese>As Ferramentas de Mapa permitem que você meça distâncias e ângulos no mapa.</Portuguese>
-      <Hungarian>A térképészeti eszközökkel távolságokat és szögeket tud mérni a térképen.</Hungarian>
-      <Russian>Картографические инструменты позволяют измерять расстояния и углы на карте.</Russian>
-    </Key>
-    <Key ID="STR_ACE_MapTools_MapTools_Menu">
-      <English>Map Tools</English>
-      <Spanish>Herramientas de mapa</Spanish>
-      <French>Outils de navigation</French>
-      <Polish>Narzędzia nawigacyjne</Polish>
-      <German>Kartenwerkzeug</German>
-      <Czech>Pomůcky k Mapě</Czech>
-      <Italian>Strumenti Cartografici</Italian>
-      <Portuguese>Ferramentas de Mapa</Portuguese>
-      <Hungarian>Térképészeti eszközök</Hungarian>
-      <Russian>Инструменты карты</Russian>
-    </Key>
-    <Key ID="STR_ACE_MapTools_MapToolsHide">
-      <English>Hide Map Tool</English>
-      <German>Verstecke Kartenwerkzeug</German>
-      <Spanish>Ocultar herr. de mapa</Spanish>
-      <French>Ranger les outils</French>
-      <Italian>Nascondi Strumenti Cartografici</Italian>
-      <Portuguese>Ocultar Ferramenta de Mapa</Portuguese>
-      <Hungarian>Térképészeti eszközök elrejtése</Hungarian>
-      <Polish>Ukryj narzędzia nawigacyjne</Polish>
-      <Czech>Schovat pomůcku k mapě</Czech>
-      <Russian>Скрыть инструменты</Russian>
-    </Key>
-    <Key ID="STR_ACE_MapTools_MapToolsShowNormal">
-      <English>Show Normal Map Tool</English>
-      <German>Zeige Kartenwerkzeug (normal)</German>
-      <Spanish>Mostrar herr. de mapa normal</Spanish>
-      <French>Montrer outils normaux</French>
-      <Italian>Visualizza Strumenti Cartografici standard</Italian>
-      <Portuguese>Mostrar Ferramenta de Mapa Padrão</Portuguese>
-      <Hungarian>Térképészeti eszköz megjelenítése (normál méret)</Hungarian>
-      <Polish>Pokaż normalne narzędzia nawigacyjne</Polish>
-      <Czech>Zobrazit normální pomůcku k mapě</Czech>
-      <Russian>Показать инструменты (средн. размер)</Russian>
-    </Key>
-    <Key ID="STR_ACE_MapTools_MapToolsShowSmall">
-      <English>Show Small Map Tool</English>
-      <German>Zeige Kartenwerkzeug (klein)</German>
-      <Spanish>Mostrar herr. de mapa pequeñas</Spanish>
-      <French>Montrer petits outils</French>
-      <Italian>Visualizza Strumenti Cartografici piccoli</Italian>
-      <Portuguese>Mostrar Ferramenta de Mapa Pequena</Portuguese>
-      <Hungarian>Térképészeti eszköz megjelenítése (kicsinyített)</Hungarian>
-      <Polish>Pokaż pomniejszone narzędzia nawigacyjne</Polish>
-      <Czech>Zobrazit malou pomůcku k mapě</Czech>
-      <Russian>Показать инструменты (малый размер)</Russian>
-    </Key>
-    <Key ID="STR_ACE_MapTools_MapToolsAlignNorth">
-      <English>Align Map Tool to North</English>
-      <German>Kartenwerkzeug nach Norden ausrichten</German>
-      <Spanish>Alinear herr. de mapa al norte</Spanish>
-      <French>Aligner au nord</French>
-      <Italian>Allinea gli Strumenti Cartografici con il Nord</Italian>
-      <Portuguese>Alinhar Ferramenta de Mapa com o Norte</Portuguese>
-      <Hungarian>Térképészeti eszköz Északhoz állítása</Hungarian>
-      <Polish>Wyrównaj linijkę do północy</Polish>
-      <Czech>Srovnat pomůcku k mapě na sever</Czech>
-      <Russian>Выровнять инструменты на север</Russian>
-    </Key>
-    <Key ID="STR_ACE_MapTools_MapToolsAlignCompass">
-      <English>Align Map Tool to Compass</English>
-      <German>Kartenwerkzeug am Kompass ausrichten</German>
-      <Spanish>Alinear herr. de mapa a la brújula</Spanish>
-      <French>Aligner sur la boussole</French>
-      <Italian>Allinea gli Strumenti Cartografici con la bussola</Italian>
-      <Portuguese>Alinhar Ferramenta de Mapa com a Bússola</Portuguese>
-      <Hungarian>Térképészeti eszköz iránytűhöz állítása</Hungarian>
-      <Polish>Wyrównaj linijkę do kompasu</Polish>
-      <Czech>Srovnat pomůcku k mapě ke kompasu</Czech>
-      <Russian>Выровнять инструменты по компасу</Russian>
-    </Key>
-    <Key ID="STR_ACE_MapTools_MapGpsShow">
-      <English>Show GPS on Map</English>
-      <German>Zeige GPS auf der Karte</German>
-      <Spanish>Mostrar el GPS sobre el mapa</Spanish>
-      <French>Ranger le GPS</French>
-      <Italian>Visualizza il GPS sulla mappa</Italian>
-      <Portuguese>Mostrar GPS no Mapa</Portuguese>
-      <Hungarian>GPS megjelnítése a térképen</Hungarian>
-      <Polish>Pokaż GPS na mapie</Polish>
-      <Czech>Zobrazit GPS na mapě</Czech>
-      <Russian>Показать GPS на карте</Russian>
-    </Key>
-    <Key ID="STR_ACE_MapTools_MapGpsHide">
-      <English>Hide GPS on Map</English>
-      <German>Verstecke GPS auf der Karte</German>
-      <Spanish>Ocultar el GPS del mapa</Spanish>
-      <French>Montrer le GPS</French>
-      <Italian>Nascondi il GPS sulla mappa</Italian>
-      <Portuguese>Ocultar GPS no Mapa</Portuguese>
-      <Hungarian>GPS elrejtése térképről</Hungarian>
-      <Polish>Ukryj GPS na mapie</Polish>
-      <Czech>Schovat GPS na mapě</Czech>
-      <Russian>Скрыть GPS на карте</Russian>
-    </Key>
-    <Key ID="STR_ACE_MapTools_CopyMap">
-      <English>Copy Map</English>
-      <German>Karte kopieren</German>
-      <Spanish>Copiar mapa</Spanish>
-      <Russian>Скопировать карту</Russian>
-      <Polish>Kopiuj oznaczenia mapy</Polish>
-      <French>Copier la carte</French>
-      <Czech>Zkopírovat mapu</Czech>
-      <Italian>Copiare Carta</Italian>
-      <Hungarian>Térkép másolása</Hungarian>
-      <Portuguese>Copiar Mapa</Portuguese>
-    </Key>
-    <Key ID="STR_ACE_MapTools_MarkerDirection">
-      <English>Direction: %1°</English>
-      <German>Drehung: %1°</German>
-      <French>Direction: %1°</French>
-      <Czech>Směr: %1°</Czech>
-      <Polish>Kierunek: %1°</Polish>
-      <Spanish>Dirección: %1°</Spanish>
-      <Hungarian>Irány: %1</Hungarian>
-      <Russian>Направление:%1</Russian>
-    </Key>
-  </Package>
+    <Package name="Map">
+        <Key ID="STR_ACE_MapTools_Name">
+            <English>Map Tools</English>
+            <Spanish>Herramientas de mapa</Spanish>
+            <French>Outils de navigation</French>
+            <Polish>Narzędzia nawigacyjne</Polish>
+            <German>Kartenwerkzeug</German>
+            <Czech>Pomůcky k mapě</Czech>
+            <Italian>Strumenti cartografici</Italian>
+            <Portuguese>Ferramentas de Mapa</Portuguese>
+            <Hungarian>Térképészeti eszközök</Hungarian>
+            <Russian>Инструменты карты</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_Description">
+            <English>The Map Tools allow you to measure distances and angles on the map.</English>
+            <Spanish>Las herramientas de mapa permiten medir distancias y ángulos en el mapa.</Spanish>
+            <French>Les outils de navigation permettent de mesurer des distances et des angles sur la carte.</French>
+            <Polish>Narzędzia nawigacyjne pozwalają na mierzenie odległości i kątów na mapie.</Polish>
+            <German>Das Kartenwerkzeug ermöglicht es dir Distanzen und Winkel zu messen.</German>
+            <Czech>Pomůcky k mapě slouží k měření vzdáleností a úhlů na mapě.</Czech>
+            <Italian>Gli strumenti cartografici ti consentono di misurare distanze ed angoli sulla mappa.</Italian>
+            <Portuguese>As Ferramentas de Mapa permitem que você meça distâncias e ângulos no mapa.</Portuguese>
+            <Hungarian>A térképészeti eszközökkel távolságokat és szögeket tudsz mérni a térképen.</Hungarian>
+            <Russian>Картографические инструменты позволяют измерять расстояния и углы на карте.</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_MapTools_Menu">
+            <English>Map Tools</English>
+            <Spanish>Herramientas de mapa</Spanish>
+            <French>Outils de navigation</French>
+            <Polish>Narzędzia nawigacyjne</Polish>
+            <German>Kartenwerkzeug</German>
+            <Czech>Pomůcky k mapě</Czech>
+            <Italian>Strumenti cartografici</Italian>
+            <Portuguese>Ferramentas de Mapa</Portuguese>
+            <Hungarian>Térképészeti eszközök</Hungarian>
+            <Russian>Инструменты карты</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_MapToolsHide">
+            <English>Hide Map Tool</English>
+            <German>Verstecke Kartenwerkzeug</German>
+            <Spanish>Ocultar herr. de mapa</Spanish>
+            <French>Ranger les outils</French>
+            <Italian>Nascondi Strumenti Cartografici</Italian>
+            <Portuguese>Ocultar Ferramenta de Mapa</Portuguese>
+            <Hungarian>Térképészeti eszközök elrejtése</Hungarian>
+            <Polish>Ukryj narzędzia nawigacyjne</Polish>
+            <Czech>Schovat pomůcku k mapě</Czech>
+            <Russian>Скрыть инструменты</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_MapToolsShowNormal">
+            <English>Show Normal Map Tool</English>
+            <German>Zeige Kartenwerkzeug (normal)</German>
+            <Spanish>Mostrar herr. de mapa normal</Spanish>
+            <French>Montrer outils normaux</French>
+            <Italian>Visualizza Strumenti Cartografici standard</Italian>
+            <Portuguese>Mostrar Ferramenta de Mapa Padrão</Portuguese>
+            <Hungarian>Térképészeti eszköz megjelenítése (normál méret)</Hungarian>
+            <Polish>Pokaż normalne narzędzia nawigacyjne</Polish>
+            <Czech>Zobrazit normální pomůcku k mapě</Czech>
+            <Russian>Показать инструменты (средн. размер)</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_MapToolsShowSmall">
+            <English>Show Small Map Tool</English>
+            <German>Zeige Kartenwerkzeug (klein)</German>
+            <Spanish>Mostrar herr. de mapa pequeñas</Spanish>
+            <French>Montrer petits outils</French>
+            <Italian>Visualizza Strumenti Cartografici piccoli</Italian>
+            <Portuguese>Mostrar Ferramenta de Mapa Pequena</Portuguese>
+            <Hungarian>Térképészeti eszköz megjelenítése (kicsinyített)</Hungarian>
+            <Polish>Pokaż pomniejszone narzędzia nawigacyjne</Polish>
+            <Czech>Zobrazit malou pomůcku k mapě</Czech>
+            <Russian>Показать инструменты (малый размер)</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_MapToolsAlignNorth">
+            <English>Align Map Tool to North</English>
+            <German>Kartenwerkzeug nach Norden ausrichten</German>
+            <Spanish>Alinear herr. de mapa al norte</Spanish>
+            <French>Aligner au nord</French>
+            <Italian>Allinea gli Strumenti Cartografici con il Nord</Italian>
+            <Portuguese>Alinhar Ferramenta de Mapa com o Norte</Portuguese>
+            <Hungarian>Térképészeti eszköz Északhoz állítása</Hungarian>
+            <Polish>Wyrównaj linijkę do północy</Polish>
+            <Czech>Srovnat pomůcku k mapě na sever</Czech>
+            <Russian>Выровнять инструменты на север</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_MapToolsAlignCompass">
+            <English>Align Map Tool to Compass</English>
+            <German>Kartenwerkzeug am Kompass ausrichten</German>
+            <Spanish>Alinear herr. de mapa a la brújula</Spanish>
+            <French>Aligner sur la boussole</French>
+            <Italian>Allinea gli Strumenti Cartografici con la bussola</Italian>
+            <Portuguese>Alinhar Ferramenta de Mapa com a Bússola</Portuguese>
+            <Hungarian>Térképészeti eszköz iránytűhöz állítása</Hungarian>
+            <Polish>Wyrównaj linijkę do kompasu</Polish>
+            <Czech>Srovnat pomůcku k mapě ke kompasu</Czech>
+            <Russian>Выровнять инструменты по компасу</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_MapGpsShow">
+            <English>Show GPS on Map</English>
+            <German>Zeige GPS auf der Karte</German>
+            <Spanish>Mostrar el GPS sobre el mapa</Spanish>
+            <French>Ranger le GPS</French>
+            <Italian>Visualizza il GPS sulla mappa</Italian>
+            <Portuguese>Mostrar GPS no Mapa</Portuguese>
+            <Hungarian>GPS megjelenítése a térképen</Hungarian>
+            <Polish>Pokaż GPS na mapie</Polish>
+            <Czech>Zobrazit GPS na mapě</Czech>
+            <Russian>Показать GPS на карте</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_MapGpsHide">
+            <English>Hide GPS on Map</English>
+            <German>Verstecke GPS auf der Karte</German>
+            <Spanish>Ocultar el GPS del mapa</Spanish>
+            <French>Montrer le GPS</French>
+            <Italian>Nascondi il GPS sulla mappa</Italian>
+            <Portuguese>Ocultar GPS no Mapa</Portuguese>
+            <Hungarian>GPS elrejtése a térképről</Hungarian>
+            <Polish>Ukryj GPS na mapie</Polish>
+            <Czech>Schovat GPS na mapě</Czech>
+            <Russian>Скрыть GPS на карте</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_CopyMap">
+            <English>Copy Map</English>
+            <German>Karte kopieren</German>
+            <Spanish>Copiar mapa</Spanish>
+            <Russian>Скопировать карту</Russian>
+            <Polish>Kopiuj oznaczenia mapy</Polish>
+            <French>Copier la carte</French>
+            <Czech>Zkopírovat mapu</Czech>
+            <Italian>Copiare Carta</Italian>
+            <Hungarian>Térkép másolása</Hungarian>
+            <Portuguese>Copiar Mapa</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_MapTools_MarkerDirection">
+            <English>Direction: %1°</English>
+            <German>Drehung: %1°</German>
+            <French>Direction: %1°</French>
+            <Czech>Směr: %1°</Czech>
+            <Polish>Kierunek: %1°</Polish>
+            <Spanish>Dirección: %1°</Spanish>
+            <Hungarian>Irány: %1</Hungarian>
+            <Russian>Направление: %1°</Russian>
+            <Italian>Direzione: %1°</Italian>
+            <Portuguese>Direção: %1</Portuguese>
+        </Key>
+    </Package>
 </Project>

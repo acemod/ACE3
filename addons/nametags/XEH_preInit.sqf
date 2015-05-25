@@ -9,9 +9,6 @@ PREP(getVehicleData);
 PREP(initIsSpeaking);
 PREP(moduleNameTags);
 PREP(onDraw3d);
-PREP(onMouseZChanged);
 PREP(setText);
-
-GVAR(ShowNamesTime) = -10;
 
 ADDON = true;

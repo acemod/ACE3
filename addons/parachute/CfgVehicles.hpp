@@ -20,9 +20,9 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         scope = 2;
         displayName = "$STR_ACE_Parachute_NonSteerableParachute";
-        //picture = "\A3\Characters_F\data\ui\icon_b_parachute_ca.paa";	// @todo
-        //model = "\A3\Weapons_F\Ammoboxes\Bags\Backpack_Parachute";	// @todo
-        // backpackSimulation = "ParachuteNonSteerable";	//ParachuteSteerable  //Bis broke this in 1.40
+        //picture = "\A3\Characters_F\data\ui\icon_b_parachute_ca.paa";    // @todo
+        //model = "\A3\Weapons_F\Ammoboxes\Bags\Backpack_Parachute";    // @todo
+        // backpackSimulation = "ParachuteNonSteerable";    //ParachuteSteerable  //Bis broke this in 1.40
         ParachuteClass = "NonSteerable_Parachute_F";
         maximumLoad = 0;
         mass = 100;

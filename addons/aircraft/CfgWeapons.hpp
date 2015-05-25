@@ -54,24 +54,24 @@ class CfgWeapons {
 
         class manual: manual {
             reloadTime = 0.04;
-            dispersion = 0.0022;
+            dispersion = 0.006;
             displayName = "$STR_ACE_Aircraft_gatling_20mm_Name";
         };
         class close: close {
             reloadTime = 0.04;
-            dispersion = 0.0022;
+            dispersion = 0.006;
         };
         class short: short {
             reloadTime = 0.04;
-            dispersion = 0.0022;
+            dispersion = 0.006;
         };
         class medium: medium {
             reloadTime = 0.04;
-            dispersion = 0.0022;
+            dispersion = 0.006;
         };
         class far: far {
             reloadTime = 0.04;
-            dispersion = 0.0022;
+            dispersion = 0.006;
         };
     };
 

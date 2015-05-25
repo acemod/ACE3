@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_forceRemove", "_body"];
+private ["_forceRemove", "_body", "_uid"];
 
 _forceRemove = _this select 0;
 

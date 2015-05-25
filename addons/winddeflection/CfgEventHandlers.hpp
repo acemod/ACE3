@@ -5,7 +5,7 @@ class Extended_PreInit_EventHandlers {
 };
 
 class Extended_FiredBIS_EventHandlers {
-    class CAManBase {
+    class AllVehicles {
         class ADDON {
             firedBIS = QUOTE(_this call FUNC(handleFired));
         };

@@ -18,30 +18,30 @@ _type =  [_this, 3, 0,[0]] call BIS_fnc_Param;
 _parameters = [_this, 4, [], [[]]] call BIS_fnc_Param;
 
 if (isPlayer _reciever) then {
-	if (!local _reciever) then {
-		[_this, QUOTE(FUNC(sendDisplayInformationTo)), _reciever, false] call EFUNC(common,execRemoteFnc);
-	} else {
-		if (isLocalized _title) then {
-			_title = localize _title;
-		};
-		_localizationArray = [_title];
-		{
-			_localizationArray pushback _x;
-		}foreach _parameters;
-		_title = format _localizationArray;
+    if (!local _reciever) then {
+        [_this, QUOTE(FUNC(sendDisplayInformationTo)), _reciever, false] call EFUNC(common,execRemoteFnc);
+    } else {
+        if (isLocalized _title) then {
+            _title = localize _title;
+        };
+        _localizationArray = [_title];
+        {
+            _localizationArray pushback _x;
+        } forEach _parameters;
+        _title = format _localizationArray;
 
-		{
-			if (isLocalized _x) then {
-				_localizationArray = [localize _x];
-				{
-					_localizationArray pushback _x;
-				}foreach _parameters;
+        {
+            if (isLocalized _x) then {
+                _localizationArray = [localize _x];
+                {
+                    _localizationArray pushback _x;
+                } forEach _parameters;
 
-				_content set [_foreachIndex, format _localizationArray];
-			};
+                _content set [_foreachIndex, format _localizationArray];
+            };
 
-		}foreach _content;
+        }foreach _content;
 
-		[_title,_content,_type] call EFUNC(common,displayInformation);
-	};
+        [_title,_content,_type] call EFUNC(common,displayInformation);
+    };
 };
