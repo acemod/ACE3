@@ -65,42 +65,52 @@
             <Key ID="STR_ACE_Weather_windDeflection_DisplayName">
                 <English>Wind Deflection</English>
                 <Polish>Wpływ wiatru</Polish>
+                <German>Windböen</German>
             </Key>
             <Key ID="STR_ACE_Weather_deflectionModule_DisplayName">
                 <English>Wind Deflection</English>
                 <Polish>Wpływ wiatru</Polish>
+                <German>Windböen</German>
             </Key>
             <Key ID="STR_ACE_Weather_deflectionModule_Description">
                 <English>Enables wind deflection</English>
                 <Polish>Aktywuje wpływ wiatru na trajektorię lotu pocisków</Polish>
+                <German>Aktiviert Windböen</German>
             </Key>
             <Key ID="STR_ACE_Weather_vehicleEnabled_DisplayName">
                 <English>Vehicle Enabled</English>
                 <Polish>Włączone dla pojazdów</Polish>
+                <German>Fahrzeuge aktiviert</German>
             </Key>
             <Key ID="STR_ACE_Weather_vehicleEnabled_Description">
                 <English>Enables wind deflection for static/vehicle gunners</English>
                 <Polish>Aktywuje wpływ wiatru na trajektorię lotu pocisków dla broni statycznej i na pojazdach</Polish>
+                <German>Aktiviere Windböen für statische oder Fahrzeugschützen</German>
             </Key>
             <Key ID="STR_ACE_Weather_simulationInterval_DisplayName">
                 <English>Simulation Interval</English>
                 <Polish>Interwał symulacji</Polish>
+                <German>Simulationsintervall</German>
             </Key>
             <Key ID="STR_ACE_Weather_simulationInterval_Description">
                 <English>Defines the interval between every calculation step</English>
                 <Polish>Określa interwał pomiędzy każdym krokiem kalkulacji</Polish>
+                <German>Definiert das Intervall zwischen jedem Berechnungsschritt</German>
             </Key>
             <Key ID="STR_ACE_Weather_simulationRadius_DisplayName">
                 <English>Simulation Radius</English>
                 <Polish>Zasięg symulacji</Polish>
+                <German>Simulationsradius</German>
             </Key>
             <Key ID="STR_ACE_Weather_simulationRadius_Description">
                 <English>Defines the radius around the player (in meters) at which projectiles are wind deflected</English>
                 <Polish>Określa obszar naokoło gracza (w metrach), na którym pociski są znoszone przez wiatr</Polish>
+                <German>Gibt den Radius um den Spieler (in Metern) an, bei der Projektile vom Wind beeinflusst werden</German>
             </Key>
             <Key ID="STR_ACE_Weather_windDeflection_Description">
                 <English>Wind influence on projectiles trajectory</English>
                 <Polish>Wpływ wiatru na trajektorię lotu pocisków</Polish>
+                <German>Wind hat Einfluss auf Projektilflugbahn</German>
             </Key>
         </Container>
     </Package>

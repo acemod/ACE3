@@ -196,10 +196,12 @@
         <Key ID="STR_ACE_Captives_ModuleSurrender_DisplayName">
             <English>Make Unit Surrender</English>
             <Polish>Poddaj się!</Polish>
+            <German>Einheit aufgeben lassen</German>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
             <English>Sync a unit to make them surrender.&lt;br /&gt;Source: ace_captives</English>
             <Polish>Zsynchronizuj z jednostką aby sprawić by się poddała&lt;br /&gt;Źródło: ace_captives</Polish>
+            <German>Einheit synchronisieren, um sie aufgeben zu lassen.&lt;br /&gt;Quelle: ace_captives</German>
         </Key>
     </Package>
 </Project>

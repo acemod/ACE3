@@ -39,7 +39,7 @@
         </Key>
         <Key ID="STR_ACE_Common_Options">
             <English>ACE Options</English>
-            <German>ACE Optionen</German>
+            <German>ACE-Optionen</German>
             <Spanish>Opciones ACE</Spanish>
             <Polish>Ustawienia ACE</Polish>
             <Czech>Nastavení ACE</Czech>
@@ -473,6 +473,7 @@
         <Key ID="STR_ACE_Common_CheckPBO_DisplayName">
             <English>Check PBOs</English>
             <Polish>Sprawdzaj PBO</Polish>
+            <German>Überprüfe PBOs</German>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Description">
             <English></English>
@@ -481,46 +482,57 @@
         <Key ID="STR_ACE_Common_CheckPBO_Action_DisplayName">
             <English>Action</English>
             <Polish>Akcja</Polish>
+            <German>Aktion</German>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Description">
             <English>What to do with people who do not have the right PBOs?</English>
             <Polish>Co zrobić z graczami, którzy nie mają właściwych PBO?</Polish>
+            <German>Was soll mit Leuten passieren, die nicht die richtigen PBOs haben?</German>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnOnce">
             <English>Warn once</English>
             <Polish>Ostrzeż raz</Polish>
+            <German>Einmal verwarnen</German>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnPerm">
             <English>Warn (permanent)</English>
             <Polish>Ostrzeżenie (permanentne)</Polish>
+            <German>Immer verwarnen</German>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Kick">
             <English>Kick</English>
             <Polish>Kick</Polish>
+            <German>Kicken</German>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_DisplayName">
             <English>Check all addons</English>
             <Polish>Sprawdź wsz. addony</Polish>
+            <German>Alle Addons überprüfen</German>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_Description">
             <English>Check all addons instead of only those of ACE?</English>
             <Polish>Sprawdzaj wszystkie addony czy tylko te z ACE?</Polish>
+            <German>Alle Addons anstatt nur ACE überprüfen?</German>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_DisplayName">
             <English>Whitelist</English>
             <Polish>Biała lista</Polish>
+            <German>Whitelist</German>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_Description">
             <English>What addons are allowed regardless?</English>
             <Polish>Jakie addony są dozwolone?</Polish>
+            <German>Welche Addons werden dennoch erlaubt?</German>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_DisplayName">
             <English>LSD Vehicles</English>
             <Polish>Pojazdy LSD</Polish>
+            <German>LSD-Fahrzeuge</German>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_Description">
             <English>Adds LSD effect to synchronized vehicle</English>
             <Polish>Dodaje efekt LSD pod zsynchronizowany pojazd</Polish>
+            <German>Fügt einen LSD-Effekt zum synchronisierten Fahrzeug hinzu</German>
         </Key>
     </Package>
 </Project>

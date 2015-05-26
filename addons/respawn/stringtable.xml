@@ -148,22 +148,27 @@
         <Key ID="STR_ACE_Respawn_Module_DisplayName">
             <English>Respawn System</English>
             <Polish>System odrodzenia</Polish>
+            <German>Respawn-System</German>
         </Key>
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_DisplayName">
             <English>Save Gear?</English>
             <Polish>Zapisać ekwipunek?</Polish>
+            <German>Ausrüstung speichern?</German>
         </Key>
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_Description">
             <English>Respawn with the gear a soldier had just before his death?</English>
             <Polish>Odradzaj z ekwipunkiem jaki żołnierz miał tuż przed swoją śmiercią?</Polish>
+            <German>Mit der Ausrüstung, die ein Soldat vor seinem Tod hatte, respawnen?</German>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName">
             <English>Remove bodies?</English>
             <Polish>Usuwać ciała?</Polish>
+            <German>Körper entfernen?</German>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description">
             <English>Remove player bodies after disconnect?</English>
             <Polish>Usuwaj ciała graczy po rozłączeniu z serwera?</Polish>
+            <German>Entferne Spielerkörper nach dem Trennen einer Verbindung?</German>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English></English>
@@ -172,6 +177,7 @@
         <Key ID="STR_ACE_FriendlyFire_Module_DisplayName">
             <English>Friendly Fire Messages</English>
             <Polish>Wiadomości Friendly Fire</Polish>
+            <German>Freundbeschuss-Nachrichten</German>
         </Key>
         <Key ID="STR_ACE_FriendlyFire_Module_Description">
             <English></English>
@@ -180,18 +186,21 @@
         <Key ID="STR_ACE_Rallypoint_Module_DisplayName">
             <English>Rallypoint System</English>
             <Polish>System punktu zbiórki</Polish>
+            <German>Rallypoint-System</German>
         </Key>
         <Key ID="STR_ACE_Rallypoint_Module_Description">
             <English></English>
-            <Polish>Moduł ten pozwala zastosować na misji "punkt zbiórki", do którego można szybko przeteleportować się z "bazy". Wymaga postawienia odpowiednich obiektów na mapie - bazy oraz flagi. Obydwa dostępne są w kategorii Puste -> ACE Odrodzenie.</Polish>
+            <Polish>Moduł ten pozwala zastosować na misji "punkt zbiórki", do którego można szybko przeteleportować się z "bazy". Wymaga postawienia odpowiednich obiektów na mapie - bazy oraz flagi. Obydwa dostępne są w kategorii Puste -&gt; ACE Odrodzenie.</Polish>
         </Key>
         <Key ID="STR_ACE_Rallypoint_MoveRallypoint">
             <English>Move Rallypoint</English>
             <Polish>Przenieś punkt zbiórki</Polish>
+            <German>Bewege Rallypoint</German>
         </Key>
         <Key ID="STR_ACE_Respawn_EditorCategory">
             <English>ACE Respawn</English>
             <Polish>ACE Odrodzenie</Polish>
+            <German>ACE-Respawn</German>
         </Key>
     </Package>
 </Project>

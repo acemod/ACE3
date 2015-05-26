@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Explosives">
         <Key ID="STR_ACE_Explosives_Menu">
@@ -508,22 +508,27 @@
         <Key ID="STR_ACE_Explosive_Module_DisplayName">
             <English>Explosive System</English>
             <Polish>System ładunków wybuchowych</Polish>
+            <German>Sprengstoffsystem</German>
         </Key>
         <Key ID="STR_ACE_Explosive_RequireSpecialist_DisplayName">
             <English>Require specialists?</English>
             <Polish>Wymagaj specjalistów?</Polish>
+            <German>Benötigt Experten?</German>
         </Key>
         <Key ID="STR_ACE_Explosive_RequireSpecialist_Description">
             <English>Require explosive specialists to disable explosives? Default: No</English>
             <Polish>Wymagać saperów do rozbrajania ładunków wybuchowych? Domyślnie: Nie</Polish>
+            <German>Benötige Sprengstoffexperte um Sprengladungen zu entschärfen? Standard: Nein</German>
         </Key>
         <Key ID="STR_ACE_Explosive_PunishNonSpecialists_DisplayName">
             <English>Punish non-specialists?</English>
             <Polish>Karaj nie-specjalistów?</Polish>
+            <German>Bestrafe Nicht-Experten?</German>
         </Key>
         <Key ID="STR_ACE_Explosive_PunishNonSpecialists_Description">
             <English>Increase the time it takes to complete actions for non-specialists? Default: Yes</English>
             <Polish>Zwiększyć ilość wymaganego czasu do ukończenia akcji dla nie-specjalistów? Domyślnie: Tak</Polish>
+            <German>Entschärfungszeit für Nicht-Experten erhöhen? Standard: Ja</German>
         </Key>
         <Key ID="STR_ACE_Explosive_Module_Description">
             <English></English>
