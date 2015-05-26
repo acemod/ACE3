@@ -94,6 +94,8 @@ HASH_SET(_tempHash,"mapType","SAT");
 HASH_SET(_tempHash,"uavCam","");
 HASH_SET(_tempHash,"hCam","");
 HASH_SET(_tempHash,"mapTools",true);
+HASH_SET(_tempHash,"nightMode",2);
+HASH_SET(_tempHash,"brightness",0.9);
 HASH_SET(GVAR(settings),"DK10",_tempHash);
 
 // GD300 settings

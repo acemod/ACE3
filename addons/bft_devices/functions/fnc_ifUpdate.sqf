@@ -104,6 +104,13 @@ if (isNil "_mode") then {
                         QUOTE(PATHTOF(UI\images\MicroDAGR_background_ca.paa))
                     };
                 };
+                if (_displayName in [QGVAR(DK10_dlg)]) exitWith {
+                    if (_nightMode) then {
+                        QUOTE(PATHTOF(UI\images\DK10_background_night_ca.paa))
+                    } else {
+                        QUOTE(PATHTOF(UI\images\DK10_background_ca.paa))
+                    };
+                };
                 ""
             };
             if (_background != "") then {

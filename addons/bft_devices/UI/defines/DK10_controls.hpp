@@ -32,7 +32,7 @@ class GVAR(DK10_RscButton): GVAR(RscButton) {
 };
 class GVAR(DK10_background): GVAR(RscPicture) {
     idc = IDC_BACKGROUND;
-    text = QUOTE(PATHTOF(UI\images\DK10_background_ca.paa));
+    text = "";
     x = GUI_GRID_X;
     y = GUI_GRID_Y;
     w = GUI_GRID_W;
